@@ -1,35 +1,30 @@
 ---
-title: DOMRect()
+title: "DOMRect: DOMRect() コンストラクター"
+short-title: DOMRect()
 slug: Web/API/DOMRect/DOMRect
-tags:
-  - API
-  - コンストラクター
-  - DOM リファレンス
-  - DOMRect
-  - 位置
-  - リファレンス
-browser-compat: api.DOMRect.DOMRect
-translation_of: Web/API/DOMRect/DOMRect
+l10n:
+  sourceCommit: dc82e604c805cd2eae887a371111e902c8c52241
 ---
-{{APIRef("Geometry Interfaces")}}
+
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 **`DOMRect()`** コンストラクターは、新しい {{domxref("DOMRect")}} オブジェクトを作成します。
 
 ## 構文
 
-```js
-new DOMRect(x, y, width, height);
+```js-nolint
+new DOMRect(x, y, width, height)
 ```
 
 ### 引数
 
-- `x`
+- {{domxref("DOMRect.x", "x")}}
   - : この `DOMRect` の原点の `x` 座標です。
-- `y`
+- {{domxref("DOMRect.y", "y")}}
   - : この `DOMRect` の原点の `y` 座標です。
-- `width`
+- {{domxref("DOMRect.width", "width")}}
   - : この `DOMRect` の幅です。
-- `height`
+- {{domxref("DOMRect.height", "height")}}
   - : この `DOMRect` の高さです。
 
 ### 返値
@@ -48,4 +43,4 @@ new DOMRect(x, y, width, height);
 
 - {{domxref("DOMPoint")}}
 - {{domxref("DOMRect")}}
-- {{domxref("DOMRect.fromRect()")}}
+- {{domxref("DOMRect.fromRect_static", "DOMRect.fromRect()")}}

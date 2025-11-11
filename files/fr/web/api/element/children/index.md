@@ -1,9 +1,8 @@
 ---
 title: Element.children
 slug: Web/API/Element/children
-translation_of: Web/API/Element/children
-browser-compat: api.Element.children
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`children`** renvoie une collection dynamique [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) qui contient les [éléments](/fr/docs/Web/API/Element) enfants de l'élément courant (celui sur lequel elle a été appelée).
@@ -19,7 +18,7 @@ Si l'élément n'a pas d'enfant, `children` sera une liste vide avec `length` qu
 ## Exemples
 
 ```js
-const monElement = document.getElementById('toto');
+const monElement = document.getElementById("toto");
 for (let i = 0; i < monElement.children.length; i++) {
   console.log(monElement.children[i].tagName);
 }

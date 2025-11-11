@@ -1,9 +1,8 @@
 ---
 title: Intl.NumberFormat.prototype.formatRangeToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRangeToParts
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRangeToParts
-browser-compat: javascript.builtins.Intl.NumberFormat.formatRangeToParts
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.Numberformat.prototype.formatRangeToParts()`** permet de formater des chaînes de caractères produites par des objets `NumberFormat` en tenant compte de la locale.
@@ -11,8 +10,8 @@ La méthode **`Intl.Numberformat.prototype.formatRangeToParts()`** permet de for
 ## Syntaxe
 
 ```js
-formatRangeToParts()
-formatRangeToParts(debutIntervalle, finIntervalle)
+formatRangeToParts();
+formatRangeToParts(debutIntervalle, finIntervalle);
 ```
 
 ### Paramètres
@@ -37,9 +36,8 @@ La méthode `formatRangeToParts()` est utile lorsqu'on souhaite construire des c
   { type: "literal", value: "-", source: "shared" },
   { type: "integer", value: "5", source: "endRange" },
   { type: "literal", value: " ", source: "shared" },
-  { type: "currency", value: "€", source: "shared" }
-]
-
+  { type: "currency", value: "€", source: "shared" },
+];
 ```
 
 Les types de valeur possibles pour les fragments sont&nbsp;:
@@ -79,12 +77,12 @@ Les types de valeur possibles pour les fragments sont&nbsp;:
 const debutIntervalle = 3500;
 const finIntervalle = 9500;
 
-const formateur = new Intl.NumberFormat('de-DE', {
-  style: 'currency',
-  currency: 'EUR'
+const formateur = new Intl.NumberFormat("de-DE", {
+  style: "currency",
+  currency: "EUR",
 });
 
-formateur.formatRange(debutIntervalle, finIntervalle)
+formateur.formatRange(debutIntervalle, finIntervalle);
 // "3.500,00–9.500,00 €"
 ```
 

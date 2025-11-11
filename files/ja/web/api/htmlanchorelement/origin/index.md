@@ -1,17 +1,11 @@
 ---
-title: HTMLAnchorElement.origin
+title: "HTMLAnchorElement: origin プロパティ"
+short-title: origin
 slug: Web/API/HTMLAnchorElement/origin
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.HTMLAnchorElement.origin
-translation_of: Web/API/HTMLAnchorElement/origin
-original_slug: Web/API/HTMLHyperlinkElementUtils/origin
+l10n:
+  sourceCommit: 59a92ab5609f0a021602f11843f3b00b16e67e6d
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLAnchorElement.origin`** は読み取り専用プロパティで、表現している URL のオリジンを Unicode シリアル化した文字列です。
@@ -29,7 +23,7 @@ original_slug: Web/API/HTMLHyperlinkElementUtils/origin
 ## 例
 
 ```js
-// <a id="myAnchor" href="https://developer.mozilla.org/en-US/HTMLAnchorElement"> 要素が文書にあったとします
+// <a id="myAnchor" href="https://developer.mozilla.org/ja/HTMLAnchorElement"> 要素が文書にあったとします
 const anchor = document.getElementById("myAnchor");
 anchor.origin; // 'https://developer.mozilla.org' を返す
 ```

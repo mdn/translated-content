@@ -1,22 +1,14 @@
 ---
-title: HTMLTrackElement.src
+title: "HTMLTrackElement: src プロパティ"
+short-title: src
 slug: Web/API/HTMLTrackElement/src
-page-type: web-api-instance-property
-tags:
-  - HTML
-  - HTML DOM
-  - HTMLTrackElement
-  - Property
-  - Reference
-  - Web
-  - WebVTT
-  - src
-browser-compat: api.HTMLTrackElement.src
-translation_of: Web/API/HTMLTrackElement/src
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
+
 {{APIRef("HTML DOM")}}
 
-**HTMLTrackElement.src`**プロパティは、テキストトラックのデータの URL を示す {{HTMLElement("track")}} 要素の {{htmlattrxref("src", "track")}} 属性の値を反映したものです。
+**`HTMLTrackElement.src`** プロパティは、テキストトラックのデータの URL を示す {{HTMLElement("track")}} 要素の [`src`](/ja/docs/Web/HTML/Reference/Elements/track#src) 属性の値を反映したものです。
 
 ## 値
 
@@ -38,5 +30,5 @@ translation_of: Web/API/HTMLTrackElement/src
 
 ## 関連情報
 
-- 定義元のインターフェイスである {{domxref("HTMLTrackElement")}}。
+- `HTMLTrackElement.src` プロパティの定義に使われるインターフェイスである {{domxref("HTMLTrackElement")}}
 - {{HTMLElement("track")}}

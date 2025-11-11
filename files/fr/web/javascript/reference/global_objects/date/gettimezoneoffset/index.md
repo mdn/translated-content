@@ -1,25 +1,30 @@
 ---
 title: Date.prototype.getTimezoneOffset()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getTimezoneOffset
 ---
+
 {{JSRef}}
 
 La méthode **`getTimezoneOffset()`** retourne la différence en minutes entre le fuseau horaire UTC, et celui de l'heure locale.
 
-{{EmbedInteractiveExample("pages/js/date-gettimezoneoffset.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getTimezoneOffset()")}}
+
+```js interactive-example
+const date1 = new Date("August 19, 1975 23:15:30 GMT+07:00");
+const date2 = new Date("August 19, 1975 23:15:30 GMT-02:00");
+
+console.log(date1.getTimezoneOffset());
+// Expected output: your local timezone offset in minutes
+// (e.g., -120). NOT the timezone offset of the date object.
+
+console.log(date1.getTimezoneOffset() === date2.getTimezoneOffset());
+// Expected output: true
+```
 
 ## Syntaxe
 
 ```js
-dateObj.getTimezoneOffset()
+dateObj.getTimezoneOffset();
 ```
 
 ### Valeur de retour
@@ -47,13 +52,8 @@ var decalage = travail.getTimezoneOffset() / 60;
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.26', 'Date.prototype.getTimezoneOffset')}}                                 | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-date.prototype.gettimezoneoffset', 'Date.prototype.getTimezoneOffset')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-date.prototype.gettimezoneoffset', 'Date.prototype.getTimezoneOffset')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.getTimezoneOffset")}}
+{{Compat}}

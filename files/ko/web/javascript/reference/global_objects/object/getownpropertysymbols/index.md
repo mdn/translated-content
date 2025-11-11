@@ -1,25 +1,32 @@
 ---
 title: Object.getOwnPropertySymbols()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Object
-  - Polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
 ---
 
 {{JSRef}}
 
 **`Object.getOwnPropertySymbols()`** 메서드는 주어진 객체에서 직접 찾은 모든 심볼 속성들의 배열을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/object-getownpropertysymbols.html")}}
+{{InteractiveExample("JavaScript Demo: Object.getOwnPropertySymbols()")}}
+
+```js interactive-example
+const object1 = {};
+const a = Symbol("a");
+const b = Symbol.for("b");
+
+object1[a] = "localSymbol";
+object1[b] = "globalSymbol";
+
+const objectSymbols = Object.getOwnPropertySymbols(object1);
+
+console.log(objectSymbols.length);
+// Expected output: 2
+```
 
 ## 구문
 
 ```js
-Object.getOwnPropertySymbols(obj)
+Object.getOwnPropertySymbols(obj);
 ```
 
 ### 매개변수
@@ -42,18 +49,18 @@ Object.getOwnPropertySymbols(obj)
 ### getOwnPropertySymbols 사용하기
 
 ```js
-var obj = {}
-var a = Symbol('a')
-var b = Symbol.for('b')
+var obj = {};
+var a = Symbol("a");
+var b = Symbol.for("b");
 
-obj[a] = 'localSymbol'
-obj[b] = 'globalSymbol'
+obj[a] = "localSymbol";
+obj[b] = "globalSymbol";
 
-var objectSymbols = Object.getOwnPropertySymbols(obj)
+var objectSymbols = Object.getOwnPropertySymbols(obj);
 
-console.log(objectSymbols.length) // 2
-console.log(objectSymbols) // [Symbol(a), Symbol(b)]
-console.log(objectSymbols[0]) // Symbol(a)
+console.log(objectSymbols.length); // 2
+console.log(objectSymbols); // [Symbol(a), Symbol(b)]
+console.log(objectSymbols[0]); // Symbol(a)
 ```
 
 ## 명세서

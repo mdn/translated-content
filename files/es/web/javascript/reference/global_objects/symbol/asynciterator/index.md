@@ -1,12 +1,10 @@
 ---
 title: Symbol.asyncIterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
-original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
-browser-compat: javascript.builtins.Symbol.asyncIterator
 l10n:
   sourceCommit: 12da8f89b59995a777e13d518ffd39c331fb95d4
 ---
+
 {{JSRef}}
 
 El símbolo conocido **`Symbol.asyncIterator`** especifica el AsyncIterator por defecto para un objeto. Si se establece esta propiedad en un objeto, es un iterable asíncrono y puede utilizarse en un bucle [`for await...of`](/es/docs/Web/JavaScript/Reference/Statements/for-await...of).
@@ -25,11 +23,11 @@ Puedes definir tu propio iterable asíncrono estableciendo la propiedad `[Symbol
 
 ```js
 const myAsyncIterable = {
-  async* [Symbol.asyncIterator]() {
+  async *[Symbol.asyncIterator]() {
     yield "hello";
     yield "async";
     yield "iteration!";
-  }
+  },
 };
 
 (async () => {

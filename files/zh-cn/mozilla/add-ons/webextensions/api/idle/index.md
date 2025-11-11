@@ -1,19 +1,11 @@
 ---
 title: idle
 slug: Mozilla/Add-ons/WebExtensions/API/idle
-tags:
-  - API
-  - Idle
-  - WebExtensions
-  - requestIdleCallback
-  - 性能优化
-translation_of: Mozilla/Add-ons/WebExtensions/API/idle
 ---
-{{AddonSidebar}}
 
 找出用户系统何时处于空闲，锁定或活动状态。
 
-要使用此 API，您需要具有“空闲”[权限](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
+要使用此 API，你需要具有“空闲”[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
 ## 类型
 
@@ -34,15 +26,15 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/idle
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.idle")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.idle`](https://developer.chrome.com/extensions/idle) API。本文档源自 Chromium 代码中的 [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) 。
->
-> Microsoft Edge 兼容性数据由 Microsoft Corporation 提供，并包含在 Creative Commons Attribution 3.0 United States License 下。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.idle`](https://developer.chrome.google.cn/docs/extensions/reference/api/idle) API。该文档衍生自 Chromium 代码中的 [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json)。
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -69,8 +61,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/idle
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->
 
 ### 了解更多：
 
-[https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestIdleCallback](/zh-CN/docs/Web/API/Window/requestIdleCallback)...
+[requestIdleCallback](/zh-CN/docs/Web/API/Window/requestIdleCallback)...

@@ -1,17 +1,11 @@
 ---
-title: PannerNode.coneInnerAngle
+title: "PannerNode: coneInnerAngle プロパティ"
+short-title: coneInnerAngle
 slug: Web/API/PannerNode/coneInnerAngle
-page-type: web-api-instance-property
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - coneInnerAngle
-browser-compat: api.PannerNode.coneInnerAngle
-translation_of: Web/API/PannerNode/coneInnerAngle
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `coneInnerAngle` は {{ domxref("PannerNode") }} インターフェイスのプロパティで、倍精度実数値で音量が低減しない範囲を内側にもつ円錐体の角度を示します。
@@ -36,5 +30,5 @@ translation_of: Web/API/PannerNode/coneInnerAngle
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [ウェブ音声空間化の基礎知識](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ空間化の基礎知識](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)

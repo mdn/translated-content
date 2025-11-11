@@ -1,21 +1,24 @@
 ---
 title: TypedArray.prototype.reduce()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduce
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/reduce
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/reduce
 ---
+
 {{JSRef}}
 
-La méthode **`reduce()`** applique une fonction sur un accumulateur et chaque valeur du tableau typé (de la gauche vers la droite) afin de réduire le tableau en une seule valeur. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.reduce()")}}. Dans le reste de cet article _TypedArray_ correspond à un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
+La méthode **`reduce()`** applique une fonction sur un accumulateur et chaque valeur du tableau typé (de la gauche vers la droite) afin de réduire le tableau en une seule valeur. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.reduce()")}}. Dans le reste de cet article _TypedArray_ correspond à un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
 
-{{EmbedInteractiveExample("pages/js/typedarray-reduce.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.reduce()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([0, 1, 2, 3]);
+
+function sum(accumulator, currentValue) {
+  return accumulator + currentValue;
+}
+
+console.log(uint8.reduce(sum));
+// Expected output: 6
+```
 
 ## Syntaxe
 
@@ -26,9 +29,7 @@ typedarray.reduce(callback[, valeurInitiale])
 ### Paramètres
 
 - `callback`
-
   - : La fonction à exécuter sur chaque valeur du tableau typé. Elle utilise quatre arguments :
-
     - `valeurPrécédente`
       - : La valeur renvoyée précédemment par l'appel précédent à `callback`. Dans le cadre du premier élément, ce sera `valeurInitiale` si ce paramètre est fourni (voir ci-après).
     - `valeurCourante`
@@ -56,7 +57,7 @@ Si le tableau typé est vide et que le paramètre `valeurInitiale` n'a pas été
 ## Exemples
 
 ```js
-var total = new Uint8Array([0, 1, 2, 3]).reduce(function(a, b) {
+var total = new Uint8Array([0, 1, 2, 3]).reduce(function (a, b) {
   return a + b;
 });
 // total == 6
@@ -64,14 +65,11 @@ var total = new Uint8Array([0, 1, 2, 3]).reduce(function(a, b) {
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-%typedarray%.prototype.reduce', '%TypedArray%.prototype.reduce')}}     | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.reduce', '%TypedArray%.prototype.reduce')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.reduce")}}
+{{Compat}}
 
 ## Voir aussi
 

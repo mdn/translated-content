@@ -1,25 +1,11 @@
 ---
 title: cookies
 slug: Mozilla/Add-ons/WebExtensions/API/cookies
-tags:
-  - API
-  - Add-ons
-  - Cookies
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - 介面
-  - 參考文件
-  - 擴充套件
-  - 附加元件
-  - 非標準
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
 ---
-{{AddonSidebar}}讓擴充套件可以取得、設定 cookies 資訊，並監控其變動。
 
-使用此 API 前，必須先在 [manifest.json ](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json)檔案中加入「cookies」這項 [API 權限宣告](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)，也必須以 [host 權限宣告](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)將要存取 Cookies 的網站列入。參見 [Cookie 權限](/en-US/Add-ons/WebExtensions/API/cookies#Permissions)一節。
+讓擴充套件可以取得、設定 cookies 資訊，並監控其變動。
+
+使用此 API 前，必須先在 [manifest.json](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 檔案中加入「cookies」這項 [API 權限宣告](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)，也必須以 [host 權限宣告](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)將要存取 Cookies 的網站列入。參見 [Cookie 權限](#權限)一節。
 
 ## 型別
 
@@ -50,37 +36,29 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
 
 ## 權限
 
-使用此 API 前，擴充套件應於 manifest.json 設定檔中指明需要「cookies」[API 權限](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)，亦須以 [host 權限宣告](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)指明需要存取 cookies 的網站清單。此後，符合 host 權限宣告的 URL 所能讀寫的任何 cookies，該擴充套件即可讀取。比方說：
+使用此 API 前，擴充套件應於 manifest.json 設定檔中指明需要「cookies」[API 權限](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)，亦須以 [host 權限宣告](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)指明需要存取 cookies 的網站清單。此後，符合 host 權限宣告的 URL 所能讀寫的任何 cookies，該擴充套件即可讀取。比方說：
 
 - `http://*.example.com/`
-
   - : 若套件有這樣的 host 權限宣告，即可：
-
     - 讀取 `www.example.com` 任何路徑下的非安全 cookie。
     - 寫入 `www.example.com` 任何路徑下的安全或非安全 cookie。
 
     但*不能*：
-
     - 讀取 `www.example.com` 下的安全 cookie。
 
 - `http://www.example.com/`
-
   - : 若套件有這樣的 host 權限宣告，即可：
-
     - 讀取 `www.example.com` 任何路徑下的非安全 cookie。
     - 讀取 `.example.com` 任何路徑下的非安全 cookie。
     - 寫入 `www.example.com` 任何路徑下的安全或非安全 cookie。
     - 寫入 `.example.com` 任何路徑下的安全或非安全 cookie。
 
     但*不能*：
-
     - 寫入 `foo.example.com` 的 cookie。
     - 寫入 `foo.www.example.com` 的 cookie。
 
 - `*://*.example.com/`
-
   - : 若套件有這樣的 host 權限宣告，即可：
-
     - 讀、寫 `www.example.com` 任何路徑下的安全或非安全 cookie。
 
 ## 瀏覽器相容性
@@ -93,11 +71,11 @@ Edge 不支援 promises，請使用回呼（callback）函式處理。
 
 {{WebExtExamples("h2")}}
 
-> **備註：** 此 API 基於 Chromium 的 [`chrome.cookies`](https://developer.chrome.com/extensions/cookies) API 而來，文件改作自 Chromium 程式碼裡的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json)。
->
-> Microsoft Edge 的相容資訊來自微軟公司，原文以創用 CC 姓名標示 3.0 美國版條款授權大眾使用。
+> [!NOTE]
+> 此 API 基於 Chromium 的 [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies) API 而來，文件改作自 Chromium 程式碼裡的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json)。
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -124,4 +102,4 @@ Edge 不支援 promises，請使用回呼（callback）函式處理。
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

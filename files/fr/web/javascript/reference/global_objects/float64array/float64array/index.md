@@ -1,9 +1,8 @@
 ---
 title: Constructeur Float64Array()
 slug: Web/JavaScript/Reference/Global_Objects/Float64Array/Float64Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Float64Array/Float64Array
-browser-compat: javascript.builtins.Float64Array.Float64Array
 ---
+
 {{JSRef}}
 
 Le **constructeur `Float64Array()`** permet de créer un nouveau tableau typé [`Float64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float64Array) dont les éléments sont des nombres flottants représentés sur 64 bits (ce qui correspond au type de données `double` du langage C), utilisant le boutisme de la plateforme. S'il est nécessaire de contrôler l'ordre des octets, on utilisera un objet [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView) à la place. Lors de la construction, les éléments du tableau sont initialisés avec la valeur `0`. Une fois le tableau construit, on peut faire référence aux éléments du tableau à l'aide des méthodes de l'objet ou en utilisant la notation avec les crochets et l'indice voulu.
@@ -45,7 +44,7 @@ console.log(float64.length); // 2
 console.log(float64.BYTES_PER_ELEMENT); // 8
 
 // À partir d'un tableau
-const arr = new Float64Array([21,31]);
+const arr = new Float64Array([21, 31]);
 console.log(arr[1]); // 31
 
 // À partir d'un autre tableau typé
@@ -58,7 +57,9 @@ const buffer = new ArrayBuffer(32);
 const z = new Float64Array(buffer, 0, 4);
 
 // À partir d'un itérable
-const iterable = function*(){ yield* [1,2,3]; }();
+const iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 const float64 = new Float64Array(iterable);
 // Float64Array[1, 2, 3]
 ```
@@ -88,6 +89,6 @@ let dv = new Float64Array([1, 2, 3]);
 ## Voir aussi
 
 - [Prothèse d'émulation pour `Float64Array` avec la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Typed_arrays)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
 - [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView)

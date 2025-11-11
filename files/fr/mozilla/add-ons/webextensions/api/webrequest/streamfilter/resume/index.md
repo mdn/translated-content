@@ -1,26 +1,18 @@
 ---
 title: webRequest.StreamFilter.resume()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/resume
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - StreamFilter.resume()
-  - WebExtensions
-  - webRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/resume
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Reprend une requête qui a été précédemment suspendue par un appel à {{WebExtAPIRef("webRequest.StreamFilter.suspend()", "suspend()")}}.
 
-Vous ne pouvez pas appeler cette fonction avant que l'événement  {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}} ne soit déclenché.
+Vous ne pouvez pas appeler cette fonction avant que l'événement {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}} ne soit déclenché.
 
 ## Syntaxe
 
 ```js
-filter.suspend()
+filter.suspend();
 ```
 
 ### Paramètres
@@ -31,9 +23,9 @@ None.
 
 None.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.StreamFilter.suspend", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -43,21 +35,20 @@ Cet exemple utilise la _suspend/resume_ pour retarder une requête web
 function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
-  filter.onstart = event => {
+  filter.onstart = (event) => {
     filter.suspend();
 
     setTimeout(() => {
       filter.resume();
       filter.disconnect();
     }, 1000);
-
-  }
+  };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["https://example.org/"], types: ["main_frame"]},
-  ["blocking"]
+  { urls: ["https://example.org/"], types: ["main_frame"] },
+  ["blocking"],
 );
 ```
 

@@ -1,17 +1,11 @@
 ---
-title: Document.elementFromPoint()
+title: "Document: elementFromPoint() メソッド"
+short-title: elementFromPoint()
 slug: Web/API/Document/elementFromPoint
-tags:
-  - API
-  - 座標
-  - Document
-  - メソッド
-  - リファレンス
-browser-compat: api.Document.elementFromPoint
-translation_of: Web/API/DocumentOrShadowRoot/elementFromPoint
-translation_of_original: Web/API/Document/elementFromPoint
-original_slug: Web/API/DocumentOrShadowRoot/elementFromPoint
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
+
 {{APIRef("DOM")}}
 
 **`elementFromPoint()`** メソッドは {{domxref("Document")}} オブジェクト上で利用可能で、指定した座標（ビューポートからの相対座標）における最上位の要素 ({{domxref("Element")}}) を返します。
@@ -28,7 +22,7 @@ original_slug: Web/API/DocumentOrShadowRoot/elementFromPoint
 
 ## 構文
 
-```js
+```js-nolint
 elementFromPoint(x, y)
 ```
 
@@ -66,7 +60,7 @@ function changeColor(newColor) {
 <button onclick="changeColor('red');">赤</button>
 ```
 
-HTMLには、色を変更する段落と、色を青に変更するボタン、色を赤に変更するボタンの 2 つが用意されています。
+HTML には、色を変更する段落と、色を青に変更するボタン、色を赤に変更するボタンの 2 つが用意されています。
 
 ### 結果
 

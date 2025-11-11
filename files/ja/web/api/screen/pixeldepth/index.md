@@ -1,16 +1,11 @@
 ---
-title: Screen.pixelDepth
+title: "Screen: pixelDepth プロパティ"
+short-title: pixelDepth
 slug: Web/API/Screen/pixelDepth
-page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - Property
-  - Reference
-browser-compat: api.Screen.pixelDepth
-translation_of: Web/API/Screen/pixelDepth
+l10n:
+  sourceCommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
 ---
+
 {{APIRef("CSSOM")}}
 
 画面のビット深度を返します。 CSSOM により、互換性の理由から `24` を返す実装もあります。そうでないものについては、[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください。
@@ -24,11 +19,7 @@ translation_of: Web/API/Screen/pixelDepth
 ```js
 // ビット深度が十分でない場合、
 // より簡単な色を選択します。
-if ( window.screen.pixelDepth > 8 ) {
-  document.style.color = "#FAEBD7";
-} else {
-  document.style.color = "#FFFFFF";
-}
+document.style.color = window.screen.pixelDepth > 8 ? "#FAEBD7" : "#FFFFFF";
 ```
 
 ## 仕様書

@@ -1,15 +1,8 @@
 ---
 title: ReadableStreamDefaultReader.closed
 slug: Web/API/ReadableStreamDefaultReader/closed
-tags:
-  - API
-  - Property
-  - ReadableStreamDefaultReader
-  - Reference
-  - Streams
-  - closed
-translation_of: Web/API/ReadableStreamDefaultReader/closed
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStreamDefaultReader")}} 接口的只读属性 **`closed`** 返回一个 {{jsxref("Promise")}}，这个 promise 在流关闭时兑现，而在流抛出错误或者 reader 的锁被释放时拒绝。该属性使你能够编写在一个流结束时响应的代码。
@@ -24,8 +17,8 @@ translation_of: Web/API/ReadableStreamDefaultReader/closed
 
 ```js
 reader.closed.then(() => {
-  console.log('reader closed');
-})
+  console.log("reader closed");
+});
 ```
 
 ## 规范
@@ -35,3 +28,8 @@ reader.closed.then(() => {
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("ReadableStreamDefaultReader.ReadableStreamDefaultReader", "ReadableStreamDefaultReader()")}} 构造函数
+- [使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)

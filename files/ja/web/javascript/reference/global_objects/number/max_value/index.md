@@ -1,25 +1,41 @@
 ---
 title: Number.MAX_VALUE
+short-title: MAX_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
-tags:
-  - JavaScript
-  - Number
-  - プロパティ
-  - リファレンス
-browser-compat: javascript.builtins.Number.MAX_VALUE
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-{{JSRef}}
 
-**`Number.MAX_VALUE`** プロパティは、 JavaScript において表すことが可能な最大の数値です。
+**`Number.MAX_VALUE`** は静的データプロパティで、 JavaScript において表すことが可能な最大の数値を表します。
 
-{{EmbedInteractiveExample("pages/js/number-maxvalue.html")}}{{js_property_attributes(0, 0, 0)}}
+{{InteractiveExample("JavaScript デモ: Number.MAX_VALUE")}}
+
+```js interactive-example
+function multiply(x, y) {
+  if (x * y > Number.MAX_VALUE) {
+    return "Process as Infinity";
+  }
+  return x * y;
+}
+
+console.log(multiply(1.7976931348623157e308, 1));
+// 予想される結果: 1.7976931348623157e+308
+
+console.log(multiply(1.7976931348623157e308, 2));
+// 予想される結果: "Process as Infinity"
+```
+
+## 値
+
+2<sup>1024</sup> - 2<sup>971</sup>、およそ `1.7976931348623157E+308` です。
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## 解説
 
-`MAX_VALUE` プロパティはおよそ `1.79E+308`、または 2^1024 の値です。`MAX_VALUE` よりも大きな数値は {{jsxref("Infinity")}} で表されます。
+`MAX_VALUE` よりも大きな数値は {{jsxref("Infinity")}} で表され、正確な値が失われます。
 
-`MAX_VALUE` は {{jsxref("Number")}} オブジェクトの静的なプロパティですので、 生成した {{jsxref("Number")}} オブジェクトのプロパティとしてではなく、常に `Number.MAX_VALUE` として使用してください。
+`MAX_VALUE` は {{jsxref("Number")}} の静的プロパティですので、 数値のプロパティとしてではなく、常に `Number.MAX_VALUE` として使用してください。
 
 ## 例
 
@@ -46,4 +62,4 @@ if (num1 * num2 <= Number.MAX_VALUE) {
 ## 関連情報
 
 - {{jsxref("Number.MIN_VALUE")}}
-- 所属先の {{jsxref("Number")}} オブジェクト
+- {{jsxref("Number")}}

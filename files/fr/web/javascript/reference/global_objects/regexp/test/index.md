@@ -1,25 +1,40 @@
 ---
 title: RegExp.prototype.test()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/test
 ---
+
 {{JSRef}}
 
 La méthode **`test()`** vérifie s'il y a une correspondance entre un texte et une expression rationnelle. Elle retourne `true` en cas de succès et `false` dans le cas contraire.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-test.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.test", "taller")}}
+
+```js interactive-example
+const str = "table football";
+
+const regex = new RegExp("foo*");
+const globalRegex = new RegExp("foo*", "g");
+
+console.log(regex.test(str));
+// Expected output: true
+
+console.log(globalRegex.lastIndex);
+// Expected output: 0
+
+console.log(globalRegex.test(str));
+// Expected output: true
+
+console.log(globalRegex.lastIndex);
+// Expected output: 9
+
+console.log(globalRegex.test(str));
+// Expected output: false
+```
 
 ## Syntaxe
 
 ```js
-regexObj.test(chaîne)
+regexObj.test(chaîne);
 ```
 
 ### Paramètres
@@ -50,18 +65,18 @@ console.log(resultat); // true
 L'exemple ci-dessous affiche un message qui dépend du succès du test :
 
 ```js
-function testinput(regex, chaine){
-    var midstring;
-    if (regex.test(chaine)) {
-        midstring = " contient ";
-    } else {
-        midstring = " ne contient pas ";
-    }
-    console.log(str + midstring + re.source);
+function testinput(regex, chaine) {
+  var midstring;
+  if (regex.test(chaine)) {
+    midstring = " contient ";
+  } else {
+    midstring = " ne contient pas ";
+  }
+  console.log(str + midstring + re.source);
 }
 
 testinput(/^coucou/, "coucou le monde"); // coucou le monde contient coucou
-testinput(/^coucou/, "salut le monde") // salut le monde ne contient pas coucou
+testinput(/^coucou/, "salut le monde"); // salut le monde ne contient pas coucou
 ```
 
 ### Utiliser `test()` avec le marqueur global (`/g`)
@@ -91,22 +106,13 @@ console.log(compterMots("Ah que coucou Bob")); // 4
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires                                          |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                     | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.10.6.3', 'RegExp.test')}}                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-regexp.prototype.test', 'RegExp.test')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-regexp.prototype.test', 'RegExp.test')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.test")}}
-
-## Notes spécifiques à Firefox
-
-Pour les versions antérieures à Firefox 8.0, l'implémentation de `test()` était erronée. Quand la méthode était appelée sans aucun paramètre, elle effectuait son test par rapport à la dernière entrée (la propriété `RegExp.input`) et non par rapport à la chaîne `"undefined"`. Ce comportement a été corrigé  ; désormais `/undefined/.test()` retourne bien `true` au lieu d'une erreur.
+{{Compat}}
 
 ## Voir aussi
 
-- Le chapitre sur [les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Expressions_régulières) du [guide JavaScript](/fr/docs/Web/JavaScript/Guide)
+- Le chapitre sur [les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions) du [guide JavaScript](/fr/docs/Web/JavaScript/Guide)
 - {{jsxref("RegExp")}}

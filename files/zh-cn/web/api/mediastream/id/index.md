@@ -1,8 +1,8 @@
 ---
 title: MediaStream.id
 slug: Web/API/MediaStream/id
-translation_of: Web/API/MediaStream/id
 ---
+
 {{APIRef("WebRTC")}}
 
 **`MediaStream.id`** 只读属性，一个包含 36 个字符的 {{domxref("DOMString")}} ，用来作为这个对象的唯一标识符 (GUID) 。
@@ -29,7 +29,7 @@ p.then(function(stream) {
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaStream.id")}}
+{{Compat}}
 
 ## 相关链接
 

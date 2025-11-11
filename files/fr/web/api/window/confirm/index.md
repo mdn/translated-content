@@ -1,9 +1,10 @@
 ---
-title: Window.confirm()
+title: "Window : méthode confirm()"
 slug: Web/API/Window/confirm
-translation_of: Web/API/Window/confirm
-browser-compat: api.Window.confirm
+l10n:
+  sourceCommit: 70b1b8ac18d3e3346645d4ee5155f654c83d96e0
 ---
+
 {{ApiRef("Window")}}
 
 `window.confirm()` indique au navigateur d'afficher une boîte de dialogue avec un message optionnel et d'attendre que la personne confirme ou annule la boîte de dialogue.
@@ -12,7 +13,7 @@ Sous certaines conditions, par exemple au changement d'onglet, le navigateur pou
 
 ## Syntaxe
 
-```js
+```js-nolint
 confirm(message)
 ```
 
@@ -28,8 +29,8 @@ Un booléen qui indique si l'option «&nbsp;OK&nbsp;» (`true`) ou «&nbsp;Annul
 ## Exemples
 
 ```js
-if (window.confirm("Do you really want to leave?")) {
-  window.open("exit.html", "Thanks for Visiting!");
+if (window.confirm("Souhaitez-vous vraiment quitter le site ?")) {
+  window.open("exit.html", "Merci de votre visite !");
 }
 ```
 
@@ -43,7 +44,7 @@ Ces boîtes de dialogue sont des fenêtres modales qui empêchent d'accéder au 
 
 Il y a également d'autres raisons [d'éviter les boîtes de dialogue pour demander une confirmation](https://alistapart.com/article/neveruseawarning/).
 
-Une autre méthode consiste à utiliser l'élément [`<dialog>`](/fr/docs/Web/HTML/Element/dialog) afin d'afficher des demandes de confirmation.
+Une autre méthode consiste à utiliser l'élément HTML [`<dialog>`](/fr/docs/Web/HTML/Reference/Elements/dialog) afin d'afficher des demandes de confirmation.
 
 ## Spécifications
 
@@ -55,6 +56,6 @@ Une autre méthode consiste à utiliser l'élément [`<dialog>`](/fr/docs/Web/HT
 
 ## Voir aussi
 
-- L'élément [`<dialog>`](/fr/docs/Web/HTML/Element/dialog)
+- L'élément [`<dialog>`](/fr/docs/Web/HTML/Reference/Elements/dialog)
 - [`window.alert()`](/fr/docs/Web/API/Window/alert)
 - [`window.prompt()`](/fr/docs/Web/API/Window/prompt)

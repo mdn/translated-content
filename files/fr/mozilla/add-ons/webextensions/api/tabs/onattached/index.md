@@ -1,28 +1,18 @@
 ---
 title: tabs.onAttached
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onAttached
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onAttached
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onAttached
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Lancé lorsqu'un onglet est attaché à une fenêtre, par exemple parce qu'il a été déplacé entre les fenêtres.
 
 ## Syntaxe
 
 ```js
-browser.tabs.onAttached.addListener(listener)
-browser.tabs.onAttached.removeListener(listener)
-browser.tabs.onAttached.hasListener(listener)
+browser.tabs.onAttached.addListener(listener);
+browser.tabs.onAttached.removeListener(listener);
+browser.tabs.onAttached.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -39,16 +29,13 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `tabId`
       - : `integer`. ID de l'onglet qui a été attaché à une nouvelle fenêtre..
 
     <!---->
-
     - `attachInfo`
-      - : [`object`](#attachInfo). ID de la nouvelle fenêtre, et index de l'onglet à l'intérieur.
+      - : [`object`](#attachinfo). ID de la nouvelle fenêtre, et index de l'onglet à l'intérieur.
 
 ## Objets supplémentaires
 
@@ -75,17 +62,16 @@ browser.tabs.onAttached.addListener(handleAttached);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.onAttached")}}
+{{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -112,4 +98,4 @@ browser.tabs.onAttached.addListener(handleAttached);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

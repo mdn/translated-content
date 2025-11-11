@@ -1,99 +1,139 @@
 ---
-title: Array.prototype.length
+title: "Array : propriété length"
+short-title: length
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
-tags:
-  - Array
-  - JavaScript
-  - Propriété
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/length
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/length
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-{{JSRef}}
 
-La propriété **`length`** (longueur) est un entier non-signé de 32 bits qui indique le nombre d'éléments présents dans le tableau. Elle est toujours supérieure au plus grand indice du tableau.
+La propriété de données **`length`** d'une instance de {{JSxRef("Array")}} représente le nombre d'éléments dans ce tableau. Sa valeur est un entier non signé sur 32 bits qui est toujours numériquement supérieur au plus grand indice du tableau.
 
-{{EmbedInteractiveExample("pages/js/array-length.html")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Array.length", "shorter")}}
+
+```js interactive-example
+const clothing = ["chaussures", "chemises", "chaussettes", "pulls"];
+
+console.log(clothing.length);
+// Résultat attendu : 4
+```
+
+## Valeur
+
+Un entier positif inférieur à 2<sup>32</sup>.
+
+{{js_property_attributes(1, 0, 0)}}
 
 ## Description
 
-La valeur de la propriété `length` est un entier de signe positif dont la valeur est inférieure à 2 à la puissance 32 (2^32).
+La valeur de la propriété `length` est un entier positif dont la valeur est inférieure à 2<sup>32</sup>.
 
 ```js
-var tableauA = new Array(4294967296); // 2 à la puissance 32 = 4294967296
-var tableauC = new Array(-100) // une valeur négative
+const listeA = [1, 2, 3];
+const listeB = new Array(6);
 
-console.log(tableauA.length); // RangeError: Invalid array length
-console.log(tableauC.length); // RangeError: Invalid array length
+console.log(listeA.length);
+// Résultat attendu : 3
 
-var tableauB = [];
-tableauB.length = Math.pow(2,32)-1; // On déclare une longueur inférieure à 2 puissance 32
-console.log(tableauB.length); // 4294967295
+console.log(listeB.length);
+// Résultat attendu : 6
+
+listeB.length = 2 ** 32; // 4294967296
+// RangeError : Invalid array length
+
+const listeC = new Array(-100); // Les nombres négatifs ne sont pas autorisés
+// RangeError : Invalid array length
 ```
 
-Vous pouvez modifier la propriété `length` d'un tableau à loisir pour le tronquer. Quand vous étendez un tableau en modifiant la valeur de sa propriété `length`, le nombre d'éléments réellement présents dans ce tableau n'augmente pas : par exemple, si vous affectez la valeur 3 à la propriété `length` d'un tableau alors qu'elle vaut 2, le tableau contiendra toujours seulement 2 éléments. La troisième « case » ne sera pas itérable. De ce fait, la propriété `length` d'un tableau ne renseigne en rien sur le nombre de valeurs définies dans le tableau. Voir aussi [la relation entre longueur et propriétés numériques](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array#Relation_entre_length_et_les_propri.C3.A9t.C3.A9s_num.C3.A9riques).
+L'objet tableau observe la propriété `length` et synchronise automatiquement la valeur de `length` avec le contenu du tableau. Cela signifie&nbsp;:
+
+- Définir la propriété `length` à une valeur inférieure à la longueur actuelle tronque le tableau — les éléments au-delà de la nouvelle valeur de `length` sont supprimés.
+- Définir un indice de tableau (un entier positif inférieur à 2<sup>32</sup>) au-delà de la valeur actuelle de `length` étend le tableau — la propriété `length` est augmentée pour refléter le nouvel indice le plus élevé.
+- Définir la propriété `length` à une valeur invalide (par exemple, un nombre négatif ou un nombre non entier) lève une exception `RangeError`.
+
+Lorsque la propriété `length` est définie à une valeur supérieure à la longueur actuelle, le tableau est étendu en ajoutant des [emplacements vides](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux), et non des valeurs `undefined` réelles. Les emplacements vides ont des interactions particulières avec les méthodes de tableau&nbsp;: voir [méthodes de tableau et emplacements vides](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_tableau_et_emplacements_vides).
 
 ```js
-const arr = [1, 2, 3];
-console.table(arr);
-// [1, 2]
+const tableau = [1, 2];
+console.log(tableau);
+// [ 1, 2 ]
 
-arr.length = 5; // On définit une longueur à 5
-console.table(arr);
-// [1, 2, <3 éléments vides>]
+tableau.length = 5; // On définit la longueur du tableau à 5 alors qu'elle vaut 2.
+console.log(tableau);
+// [ 1, 2, <3 éléments vides> ]
 
-arr.forEach(element => console.log(element));
+tableau.forEach((élément) => console.log(élément));
 // 1
 // 2
 ```
 
-{{js_property_attributes(1,0,0)}}
+Voir aussi [la relation entre longueur et propriétés numériques](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#relation_entre_length_et_les_propriétés_numériques).
 
 ## Exemples
 
-### Renvoyer la longueur d'un tableau
-
-```js
-var items = ["chaise", "bureau", "table", "sac"];
-items.length; // 4
-```
-
 ### Parcourir un tableau
 
-Dans l'exemple suivant, on itère sur le tableau `nombres` en utilisant la propriété `length` afin de connaître son nombre d'élément. La valeur de chaque élément est ensuite multipliée par deux :
+Dans l'exemple suivant, on itère sur le tableau `nombres` en utilisant la propriété `length` afin de connaître son nombre d'éléments. La valeur de chaque élément est ensuite multipliée par deux&nbsp;:
 
 ```js
-var nombres = [1,2,3,4,5];
-
-for (var i = 0; i < nombres.length; i++) {
+const nombres = [1, 2, 3, 4, 5];
+const longueur = nombres.length;
+for (let i = 0; i < longueur; i++) {
   nombres[i] *= 2;
 }
-// nombres vaut maintenant [2,4,6,8,10];
+// nombres vaut maintenant [2, 4, 6, 8, 10]
 ```
 
 ### Tronquer un tableau
 
-L'exemple suivant raccourcit le tableau `etatsUS` à 50 si sa longueur actuelle est supérieure à 50.
+L'exemple suivant raccourcit le tableau `nombres` à une longueur de 3 si sa longueur actuelle est supérieure à 3.
 
 ```js
-if (etatsUS.length > 50) {
-   etatsUS.length = 50;
+const nombres = [1, 2, 3, 4, 5];
+
+if (nombres.length > 3) {
+  nombres.length = 3;
 }
+
+console.log(nombres); // [1, 2, 3]
+console.log(nombres.length); // 3
+console.log(nombres[3]); // undefined ; les éléments supplémentaires sont supprimés
 ```
 
-## Specifications
+### Créer un tableau vide de longueur fixe
 
-| Spécification                                                                                                    | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.4.5.2', 'Array.length')}}                                         | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-properties-of-array-instances-length', 'Array.length')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-properties-of-array-instances-length', 'Array.length')}} | {{Spec2('ESDraft')}} |                      |
+Définir la propriété `length` à une valeur supérieure à la longueur actuelle crée un [tableau creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux).
+
+```js
+const nombres = [];
+nombres.length = 3;
+console.log(nombres); // [vide x 3]
+```
+
+### Tableau avec une propriété `length` non modifiable
+
+La propriété `length` est automatiquement mise à jour par le tableau lorsque des éléments sont ajoutés au-delà de la longueur actuelle. Si la propriété `length` est rendue non modifiable, le tableau ne pourra pas la mettre à jour. Cela provoque une erreur en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
+
+```js
+"use strict";
+
+const nombres = [1, 2, 3, 4, 5];
+Object.defineProperty(nombres, "length", { writable: false });
+nombres[5] = 6; // TypeError : Cannot assign to read only property 'length' of object '[object Array]'
+nombres.push(5); // TypeError : Cannot assign to read only property 'length' of object '[object Array]'
+```
+
+## Spécifications
+
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.length")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{jsxref("Array")}}
+- [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
+- L'objet global {{JSxRef("Array")}}
+- La propriété {{JSxRef("TypedArray.prototype.length")}}
+- La propriété {{JSxRef("String.length")}}
+- [RangeError&nbsp;: longueur de tableau invalide](/fr/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)

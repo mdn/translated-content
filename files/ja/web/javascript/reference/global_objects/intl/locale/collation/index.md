@@ -1,18 +1,8 @@
 ---
 title: Intl.Locale.prototype.collation
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - プロパティ
-  - Locale
-  - ローカライズ
-  - プロトタイプ
-  - リファレンス
-browser-compat: javascript.builtins.Intl.Locale.collation
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation
 ---
+
 {{JSRef}}
 
 **`Intl.Locale.prototype.collation`** プロパティは、 `Locale` の[照合種別](https://www.unicode.org/reports/tr35/tr35-collation.html#CLDR_Collation)を返すアクセサープロパティです。

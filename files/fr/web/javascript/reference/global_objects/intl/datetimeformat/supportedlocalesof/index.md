@@ -1,22 +1,22 @@
 ---
 title: Intl.DateTimeFormat.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocalesOf
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - i18n
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocalesOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/DateTimeFormat/supportedLocalesOf
 ---
+
 {{JSRef}}
 
 À partir d'une locale ou d'un tableau de locales **`Intl.DateTimeFormat.supportedLocalesOf()`** renvoie un tableau qui contient les locales supportées pour le formatage des dates et des heures qui ne nécessitent pas d'avoir recours à la locale par défaut de l'environnement.
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-supportedlocalesof.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.supportedLocalesOf")}}
+
+```js interactive-example
+const locales1 = ["ban", "id-u-co-pinyin", "de-ID"];
+const options1 = { localeMatcher: "lookup" };
+
+console.log(Intl.DateTimeFormat.supportedLocalesOf(locales1, options1));
+// Expected output: Array ["id-u-co-pinyin", "de-ID"]
+// (Note: the exact output may be browser-dependent)
+```
 
 ## Syntaxe
 
@@ -29,9 +29,7 @@ Intl.DateTimeFormat.supportedLocalesOf(locales[, options])
 - `locales`
   - : Un chaîne de caractères au format d'une balise de langue BCP 47 ou bien un tableau de telles chaînes. Pour plus d'informations sur le format de l'argument `locales`, voir la page {{jsxref("Intl", "Intl", "#L'identification_et_le_choix_de_la_locale")}}.
 - `options`
-
   - : Paramètre optionnel, un objet pouvant avoir la propriété suivante :
-
     - `localeMatcher`
       - : L'algorithme de correspondance entre locales à utiliser. Les valeurs possibles sont "lookup" et "best fit". Pour plus d'informations sur ce sujet, voir la page {{jsxref("Intl", "Intl", "#Choix_de_la_locale")}}.
 
@@ -47,26 +45,24 @@ Renvoie un tableau qui est un sous-ensemble de `locales`. Les balises de langues
 
 ### Utiliser `supportedLocalesOf`
 
-Si on dispose d'un environnement qui supporte les locales indonésienne et allemande mais pas balinaise pour le formatage des dates et des heures,  `supportedLocalesOf` renverra les balises BCP 47 pour l'indonésien et l'allemand (bien que la collation pinyin ne soit pas pertinente pour les dates ni pour l'indonésien et qu'il soit peu probable qu'une variante indonésienne existe pour l'allemand). Pour l'exemple, on l'utilise l'algorithme `"lookup"`. Si on utilisait `"best fit"`, on pourrait considérer que l'indonésien est adéquat pour la locale balinaise (sachant que la plupart des balinais comprend l'indonésien) et donc également renvoyer la balise balinaise.
+Si on dispose d'un environnement qui supporte les locales indonésienne et allemande mais pas balinaise pour le formatage des dates et des heures, `supportedLocalesOf` renverra les balises BCP 47 pour l'indonésien et l'allemand (bien que la collation pinyin ne soit pas pertinente pour les dates ni pour l'indonésien et qu'il soit peu probable qu'une variante indonésienne existe pour l'allemand). Pour l'exemple, on l'utilise l'algorithme `"lookup"`. Si on utilisait `"best fit"`, on pourrait considérer que l'indonésien est adéquat pour la locale balinaise (sachant que la plupart des balinais comprend l'indonésien) et donc également renvoyer la balise balinaise.
 
 ```js
 var locales = ["ban", "id-u-co-pinyin", "de-ID"];
-var options = {localeMatcher: "lookup"};
-console.log(Intl.DateTimeFormat.supportedLocalesOf(locales, options).join(", "));
+var options = { localeMatcher: "lookup" };
+console.log(
+  Intl.DateTimeFormat.supportedLocalesOf(locales, options).join(", "),
+);
 // → "id-u-co-pinyin, de-ID"
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                                                | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('ES Int 1.0', '#sec-12.2.2', 'Intl.DateTimeFormat.supportedLocalesOf')}}                                             | {{Spec2('ES Int 1.0')}} | Définition initiale. |
-| {{SpecName('ES Int 2.0', '#sec-12.2.2', 'Intl.DateTimeFormat.supportedLocalesOf')}}                                             | {{Spec2('ES Int 2.0')}} |                      |
-| {{SpecName('ES Int Draft', '#sec-Intl.DateTimeFormat.supportedLocalesOf', 'Intl.DateTimeFormat.supportedLocalesOf')}} | {{Spec2('ES Int Draft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.DateTimeFormat.supportedLocalesOf")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,15 +1,11 @@
 ---
-title: Screen.colorDepth
+title: "Screen: colorDepth プロパティ"
+short-title: colorDepth
 slug: Web/API/Screen/colorDepth
-page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - Property
-  - Reference
-browser-compat: api.Screen.colorDepth
-translation_of: Web/API/Screen/colorDepth
+l10n:
+  sourceCommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
 ---
+
 {{APIRef("CSSOM")}}
 
 **`Screen.colorDepth`** は読み取り専用プロパティで、画面の色震度を返します。 CSSOM により、互換性の理由から `24` を返す実装もあります。そうでないものについては、ブラウザーの互換性の節を参照してください。
@@ -22,7 +18,7 @@ translation_of: Web/API/Screen/colorDepth
 
 ```js
 // 画面の色深度を確認
-if ( window.screen.colorDepth < 8) {
+if (window.screen.colorDepth < 8) {
   // 少色版のページを使用
 } else {
   // 通常の多色のページを使用

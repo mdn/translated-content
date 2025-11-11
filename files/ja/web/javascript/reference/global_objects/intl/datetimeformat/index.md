@@ -1,22 +1,36 @@
 ---
 title: Intl.DateTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
-tags:
-  - Class
-  - DateTimeFormat
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
-browser-compat: javascript.builtins.Intl.DateTimeFormat
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-{{JSRef}}
 
 **`Intl.DateTimeFormat`** オブジェクトは、言語に応じた日付と時刻の書式化を可能にします。
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat.html")}}
+{{InteractiveExample("JavaScript デモ: Intl.DateTimeFormat")}}
+
+```js interactive-example
+const date = new Date(Date.UTC(2020, 11, 20, 3, 23, 16, 738));
+// 以下の結果は UTC タイムゾーンを想定 - 実行時の結果は異なる可能性がある
+
+// Specify default date formatting for language (locale)
+console.log(new Intl.DateTimeFormat("en-US").format(date));
+// 予想される結果: "12/20/2020"
+
+// 代替言語（この場合はインドネシア語）を持つ言語の既定の形式を指定する
+console.log(new Intl.DateTimeFormat(["ban", "id"]).format(date));
+// 予想される結果: "20/12/2020"
+
+// "style" オプションを使用して日付と時刻の形式を指定します（例: full, long, medium, short）
+console.log(
+  new Intl.DateTimeFormat("en-GB", {
+    dateStyle: "full",
+    timeStyle: "long",
+    timeZone: "Australia/Sydney",
+  }).format(date),
+);
+// 予想される結果: "Sunday, 20 December 2020 at 14:23:16 GMT+11"
+```
 
 ## コンストラクター
 
@@ -28,18 +42,27 @@ browser-compat: javascript.builtins.Intl.DateTimeFormat
 - {{jsxref("Intl/DateTimeFormat/supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}
   - : 指定されたロケールのうち、実行時の既定のロケールにフォールバックせずに対応されるものを配列に収めて返します。
 
+## インスタンスプロパティ
+
+これらのプロパティは `Intl.DateTimeFormat.prototype` 上で定義され、すべての `Intl.DateTimeFormat` インスタンスで共有されます。
+
+- {{jsxref("Object/constructor", "Intl.DateTimeFormat.prototype.constructor")}}
+  - : このインスタンスオブジェクトを作成したコンストラクター関数。`Intl.DateTimeFormat` インスタンスの場合、初期値は {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat")}} コンストラクターです。
+- `Intl.DateTimeFormat.prototype[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値で、文字列 `"Intl.DateTimeFormat"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。
+
 ## インスタンスメソッド
 
 - {{jsxref("Intl/DateTimeFormat/format", "Intl.DateTimeFormat.prototype.format()")}}
-  - : ロケールおよびこの {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}} オブジェクトの書式化オプションに則って日付を書式化するゲッター関数です。
+  - : ロケールおよびこの `DateTimeFormat` オブジェクトの書式化オプションに則って日付を書式化するゲッター関数です。
+- {{jsxref("Intl/DateTimeFormat/formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}}
+  - : このメソッドは 2 つの [Date](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date) を受け取り、この `DateTimeFormat` インスタンスを生成する際に指定されたロケールとオプションに基づいて、最も簡潔な方法で日付の範囲を書式化します。
+- {{jsxref("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}}
+  - : このメソッドは 2 つの [Date](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date) を受け取り、書式化された日付の範囲の各部分を表すロケール固有のトークンを含むオブジェクトの配列を返します。
 - {{jsxref("Intl/DateTimeFormat/formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}
   - : オブジェクトの {{jsxref("Array")}} を返し、これは専用のロケールを意識した書式で使用することができる部品内の数値文字列を表します。
 - {{jsxref("Intl/DateTimeFormat/resolvedOptions", "Intl.DateTimeFormat.prototype.resolvedOptions()")}}
-  - : ローケルを反映しているプロパティとオブジェクトの初期化中に計算された照合オプションをもった新しいオブジェクトを返します。
-- {{jsxref("Intl/DateTimeFormat/formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}}
-  - : このメソッドは 2 つの [Date](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date) を受け取り、 {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}} インスタンスを生成する際に指定されたロケールとオプションに基づいて、最も簡潔な方法で日付の範囲を書式化します。
-- {{jsxref("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}}
-  - : このメソッドは 2 つの [Date](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date) を受け取り、書式化された日付の範囲の各部分を表すロケール固有のトークンを含むオブジェクトの配列を返します。
+  - : ロケールを反映しているプロパティとオブジェクトの初期化中に計算された照合オプションをもった新しいオブジェクトを返します。
 
 ## 例
 
@@ -48,12 +71,12 @@ browser-compat: javascript.builtins.Intl.DateTimeFormat
 基本的に、ロケールを指定せずに使用すると、 `DateTimeFormat` は既定のロケールとオプションを使用します。
 
 ```js
-var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
-// toLocaleString without arguments depends on the implementation,
-// the default locale, and the default time zone
+// 引数無しの toLocaleString は実装に依存します。
+// 既定のロケール、既定のタイムゾーンです。
 console.log(new Intl.DateTimeFormat().format(date));
-// → "12/19/2012" if run with en-US locale (language) and time zone America/Los_Angeles (UTC-0800)
+// "12/19/2012" は、 en-US ろおけーる（言語）で America/Los_Angeles (UTC-0800) タイムゾーンの場合
 ```
 
 ### locales の使用
@@ -61,35 +84,33 @@ console.log(new Intl.DateTimeFormat().format(date));
 この例では、ローカライズされた日付と時刻の形式のバリエーションの一部示しています。アプリケーションのユーザーインターフェイスで使用される言語のフォーマットを取得するには、 `locales` 引数を使用して、その言語 (およびおそらくいくつかのフォールバック言語) を指定してください。
 
 ```js
-var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
-// Results below use the time zone of America/Los_Angeles (UTC-0800, Pacific Standard Time)
+// 以下の結果は、タイムゾーンに America/Los_Angeles (UTC-0800, 太平洋標準時) を使用した場合
 
-// US English uses month-day-year order
-console.log(new Intl.DateTimeFormat('en-US').format(date));
-// → "12/19/2012"
+// アメリカ英語では 月-日-年 の順を使用
+console.log(new Intl.DateTimeFormat("en-US").format(date));
+// "12/19/2012"
 
-// British English uses day-month-year order
-console.log(new Intl.DateTimeFormat('en-GB').format(date));
+// イギリス英語では 日-月-年 の順を使用
+console.log(new Intl.DateTimeFormat("en-GB").format(date));
 // → "19/12/2012"
 
-// Korean uses year-month-day order
-console.log(new Intl.DateTimeFormat('ko-KR').format(date));
-// → "2012. 12. 19."
+// 韓国では 年-月-日 の順を使用
+console.log(new Intl.DateTimeFormat("ko-KR").format(date));
+// "2012. 12. 19."
 
-// Arabic in most Arabic speaking countries uses real Arabic digits
-console.log(new Intl.DateTimeFormat('ar-EG').format(date));
-// → "١٩‏/١٢‏/٢٠١٢"
+// アラビア語圏の大半の国では、アラビア数字を使用している
+console.log(new Intl.DateTimeFormat("ar-EG").format(date));
+// "١٩‏/١٢‏/٢٠١٢"
 
-// for Japanese, applications may want to use the Japanese calendar,
-// where 2012 was the year 24 of the Heisei era
-console.log(new Intl.DateTimeFormat('ja-JP-u-ca-japanese').format(date));
-// → "24/12/19"
+// 日本語の場合、アプリケーションでは日本の暦を使用することが望ましい場合があり、 2012 年は平成 24 年に相当
+console.log(new Intl.DateTimeFormat("ja-JP-u-ca-japanese").format(date));
+// "24/12/19"
 
-// when requesting a language that may not be supported, such as
-// Balinese, include a fallback language, in this case Indonesian
-console.log(new Intl.DateTimeFormat(['ban', 'id']).format(date));
-// → "19/12/2012"
+// 対応していない可能性のある言語（例：バリ語）をリクエストする際は、代替言語（この場合はインドネシア語）を指定する
+console.log(new Intl.DateTimeFormat(["ban", "id"]).format(date));
+// "19/12/2012"
 ```
 
 ### options の使用
@@ -97,73 +118,80 @@ console.log(new Intl.DateTimeFormat(['ban', 'id']).format(date));
 日付と時刻の書式は `options` 引数を使用してカスタマイズできます。
 
 ```js
-var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0, 200));
+const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0, 200));
 
-// request a weekday along with a long date
-var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-console.log(new Intl.DateTimeFormat('de-DE', options).format(date));
-// → "Donnerstag, 20. Dezember 2012"
-
-// an application may want to use UTC and make that visible
-options.timeZone = 'UTC';
-options.timeZoneName = 'short';
-console.log(new Intl.DateTimeFormat('en-US', options).format(date));
-// → "Thursday, December 20, 2012, GMT"
-
-// sometimes you want to be more precise
-options = {
-  hour: 'numeric', minute: 'numeric', second: 'numeric',
-  timeZone: 'Australia/Sydney',
-  timeZoneName: 'short'
+// 曜日と長い日付を指定してリクエストする
+let options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
 };
-console.log(new Intl.DateTimeFormat('en-AU', options).format(date));
-// → "2:00:00 pm AEDT"
+console.log(new Intl.DateTimeFormat("de-DE", options).format(date));
+// "Donnerstag, 20. Dezember 2012"
 
-// sometimes you want to be very precise
-options.fractionalSecondDigits = 3; //number digits for fraction-of-seconds
-console.log(new Intl.DateTimeFormat('en-AU', options).format(date));
-// → "2:00:00.200 pm AEDT"
+// アプリケーションは UTC を使用し、それを可視化したい場合がある
+options.timeZone = "UTC";
+options.timeZoneName = "short";
+console.log(new Intl.DateTimeFormat("en-US", options).format(date));
+// "Thursday, December 20, 2012, GMT"
 
-// sometimes even the US needs 24-hour time
+// 時にはより正確に表現したくなるときもある
 options = {
-  year: 'numeric', month: 'numeric', day: 'numeric',
-  hour: 'numeric', minute: 'numeric', second: 'numeric',
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
+  timeZone: "Australia/Sydney",
+  timeZoneName: "short",
+};
+console.log(new Intl.DateTimeFormat("en-AU", options).format(date));
+// "2:00:00 pm AEDT"
+
+// 時には極めて正確でありたいと思うこともある
+options.fractionalSecondDigits = 3; // 秒以下の小数点以下の桁数
+console.log(new Intl.DateTimeFormat("en-AU", options).format(date));
+// "2:00:00.200 pm AEDT"
+
+// 時にはアメリカでも 24 時間表記が必要だ
+options = {
+  year: "numeric",
+  month: "numeric",
+  day: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
   hour12: false,
-  timeZone: 'America/Los_Angeles'
+  timeZone: "America/Los_Angeles",
 };
-console.log(new Intl.DateTimeFormat('en-US', options).format(date));
-// → "12/19/2012, 19:00:00"
+console.log(new Intl.DateTimeFormat("en-US", options).format(date));
+// "12/19/2012, 19:00:00"
 
-// to specify options but use the browser's default locale, use 'default'
-console.log(new Intl.DateTimeFormat('default', options).format(date));
-// → "12/19/2012, 19:00:00"
+// オプションを指定せずブラウザーの既定のロケールを使用するには、　undefined を使用する
+console.log(new Intl.DateTimeFormat(undefined, options).format(date));
+// "12/19/2012, 19:00:00"
 
-// sometimes it's helpful to include the period of the day
-options = {hour: "numeric", dayPeriod: "short"};
-console.log(new Intl.DateTimeFormat('en-US', options).format(date));
-// → 10 at night
+// 時には時間帯を含めることが役立つこともある
+options = { hour: "numeric", dayPeriod: "short" };
+console.log(new Intl.DateTimeFormat("en-US", options).format(date));
+// 10 at night
 ```
 
-The used calendar and numbering formats can also be set independently via `options` arguments:
+使用されるカレンダーと番号付けの形式は、`options` 引数を通じて個別に設定することも可能です。
 
 ```js
-var options = {calendar: 'chinese', numberingSystem: 'arab'};
-var dateFormat = new Intl.DateTimeFormat('default', options);
-var usedOptions = dateFormat.resolvedOptions();
+const options = { calendar: "chinese", numberingSystem: "arab" };
+const dateFormat = new Intl.DateTimeFormat(undefined, options);
+const usedOptions = dateFormat.resolvedOptions();
 
 console.log(usedOptions.calendar);
-// → "chinese"
+// "chinese"
 
 console.log(usedOptions.numberingSystem);
-// → "arab"
+// "arab"
 
 console.log(usedOptions.timeZone);
-// → "America/New_York" (the users default timezone)
+// "America/New_York" （ユーザーの既定のタイムゾーン）
 ```
-
-## ポリフィル
-
-[formatjs Intl.DateTimeFormat polyfill](https://formatjs.io/docs/polyfills/intl-datetimeformat)
 
 ## 仕様書
 
@@ -175,4 +203,15 @@ console.log(usedOptions.timeZone);
 
 ## 関連情報
 
+- [`Intl.DateTimeFormat` のポリフィル (FormatJS)](https://formatjs.github.io/docs/polyfills/intl-datetimeformat/)
 - {{jsxref("Intl")}}
+- {{jsxref("Date.prototype.toLocaleString()")}}
+- {{jsxref("Date.prototype.toLocaleDateString()")}}
+- {{jsxref("Date.prototype.toLocaleTimeString()")}}
+- {{jsxref("Temporal/Instant/toLocaleString", "Temporal.Instant.prototype.toLocaleString()")}}
+- {{jsxref("Temporal/PlainDate/toLocaleString", "Temporal.PlainDate.prototype.toLocaleString()")}}
+- {{jsxref("Temporal/PlainDateTime/toLocaleString", "Temporal.PlainDateTime.prototype.toLocaleString()")}}
+- {{jsxref("Temporal/PlainTime/toLocaleString", "Temporal.PlainTime.prototype.toLocaleString()")}}
+- {{jsxref("Temporal/PlainYearMonth/toLocaleString", "Temporal.PlainYearMonth.prototype.toLocaleString()")}}
+- {{jsxref("Temporal/PlainMonthDay/toLocaleString", "Temporal.PlainMonthDay.prototype.toLocaleString()")}}
+- {{jsxref("Temporal/ZonedDateTime/toLocaleString", "Temporal.ZonedDateTime.prototype.toLocaleString()")}}

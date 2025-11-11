@@ -1,40 +1,47 @@
 ---
 title: String.prototype.trimEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
-tags:
-- JavaScript
-- Method
-- Prototype
-- Reference
-- String
-- Polyfill
-browser-compat: javascript.builtins.String.trimEnd
-translation_of: Web/JavaScript/Reference/Global_Objects/String/trimEnd
+l10n:
+  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
+
 {{JSRef}}
 
-**`trimEnd()`** 메서드는 문자열 끝부분의 공백을 제거합니다.
-또 해당 메서드는 `trimRight()` 라는 별칭으로 호출이 가능합니다.
+{{jsxref("String")}} 값의 **`trimEnd()`** 메서드는 해당 문자열 마지막의 공백을 제거하고 원본 문자열의 수정 없이 새로운 문자열을 반환합니다. `trimRight()`은 이 메서드의 별칭입니다.
 
-{{EmbedInteractiveExample("pages/js/string-trimend.html")}}
+{{InteractiveExample("JavaScript Demo: String.trimEnd()")}}
+
+```js interactive-example
+const greeting = "   Hello world!   ";
+
+console.log(greeting);
+// Expected output: "   Hello world!   ";
+
+console.log(greeting.trimEnd());
+// Expected output: "   Hello world!";
+```
 
 ## 구문
 
-```js
+```js-nolint
 trimEnd()
 
 trimRight()
 ```
 
-### 반환값
+### 매개변수
 
-`str` 에서 (오른쪽)끝 공백이 제거된 새 문자열을 반환합니다.  
-`str` 에 공백이 없을시에도 에러가 발생하지 않고 여전히 새 문자열(본질적으로 `str` 의 복사본)이 반환됩니다.
+없음.
+
+### 반환 값
+
+끝 부분(오른쪽)에서 공백이 제거된 `str`을 나타내는 새 문자열입니다. 공백은 [공백](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#white_space) 문자에 [줄 종결자](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#line_terminators)를 더한 값으로 정의됩니다.
+
+`str`의 끝 부분에 공백이 없는 경우도 새 문자열이 반환됩니다(기본적으로 `str`의 복사본입니다).
 
 ### 별칭
 
-{{jsxref("String.prototype.padEnd")}} 표준 메서드 이름과 같은 함수의 일관성을 위해서 `trimEnd` 가 되었습니다. 그러나,  
-웹 호환성을 위해서 `trimEnd` 는 `trimRight` 이라는 별칭을 가집니다. 일부 엔진에서 이것은 다음 예시를 의미합니다.
+{{jsxref("String/trim", "trim()")}}가 표준화된 후, 엔진은 비표준 메서드인 `trimRight`도 구현했습니다. 그러나 {{jsxref("String/padEnd", "padEnd()")}}와의 일관성을 위해 이 메서드가 표준화되었을 때 그 이름은 `trimEnd`로 선택되었습니다. 웹 호환성을 위해 `trimRight`는 `trimEnd`의 별칭으로 남아 있으며, 완전히 동일한 함수 객체를 참조합니다. 일부 엔진에서는 이것이 의미하는 바가 있습니다.
 
 ```js
 String.prototype.trimRight.name === "trimEnd";
@@ -42,18 +49,18 @@ String.prototype.trimRight.name === "trimEnd";
 
 ## 예제
 
-### trimEnd() 사용
+### trimEnd() 사용하기
 
-다음 예제는 `'   foo'` 문자열을 표시합니다.
+다음 예제는 `str`의 끝 부분에 있는 공백을 제거하지만, 시작 부분의 공백은 제거하지 않습니다.
 
 ```js
-var str = '   foo  ';
+let str = "   foo  ";
 
 console.log(str.length); // 8
 
 str = str.trimEnd();
 console.log(str.length); // 6
-console.log(str);        // '   foo'
+console.log(str); // '   foo'
 ```
 
 ## 명세
@@ -66,6 +73,6 @@ console.log(str);        // '   foo'
 
 ## 같이 보기
 
-- `String.prototype.trimEnd` 의 폴리필은 여기를 [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp) 참고하세요.
+- [`core-js`에서의 `String.prototype.trimEnd` 폴리필](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.trim()")}}
 - {{jsxref("String.prototype.trimStart()")}}

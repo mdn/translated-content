@@ -1,10 +1,8 @@
 ---
 title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set
-original_slug: Web/JavaScript/Reference/Objets_globaux/Set
-browser-compat: javascript.builtins.Set
 ---
+
 {{JSRef}}
 
 Un objet **`Set`** permet de stocker un ensemble de valeurs uniques de n'importe quel type, qu'il s'agisse de [valeurs primitives](/fr/docs/Glossary/Primitive) ou d'objets.
@@ -30,7 +28,7 @@ Chaque valeur d'un `Set` doit être unique, il faut donc tester l'égalité des 
 
 ## Propriétés statiques
 
-- [`get Set[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/@@species)
+- [`get Set[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.species)
   - : La fonction de construction utilisée pour créer des objets dérivés.
 
 ## Propriétés des instances
@@ -51,7 +49,7 @@ Chaque valeur d'un `Set` doit être unique, il faut donc tester l'égalité des 
 
 ### Méthodes d'itération
 
-- [`Set.prototype[@@iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator)
+- [`Set.prototype[@@iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator)
   - : Renvoie un nouvel itérateur fournissant les **valeurs** de chaque élément de l'objet `Set`, selon leur ordre d'insertion.
 - [`Set.prototype.values()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/values)
   - : Renvoie un nouvel itérateur fournissant les **valeurs** de chaque élément de l'objet `Set`, selon leur ordre d'insertion.
@@ -72,29 +70,29 @@ Chaque valeur d'un `Set` doit être unique, il faut donc tester l'égalité des 
 ```js
 const monSet = new Set();
 
-monSet.add(1);          // { 1 }
-monSet.add(5);          // { 1, 5 }
-monSet.add(5);          // { 1, 5 }
-monSet.add('du texte'); // { 1, 5, 'du texte' }
+monSet.add(1); // { 1 }
+monSet.add(5); // { 1, 5 }
+monSet.add(5); // { 1, 5 }
+monSet.add("du texte"); // { 1, 5, 'du texte' }
 
-const o = {a: 1, b: 2};
+const o = { a: 1, b: 2 };
 monSet.add(o);
 
-monSet.add({a: 1, b: 2});
+monSet.add({ a: 1, b: 2 });
 // o fait référence à un objet différent
 // il n'y a pas de problème pour cet ajout
 
 monSet.has(1); // true
 monSet.has(3); // false, 3 n'a pas été ajouté à l'ensemble
-monSet.has(5);              // true
-monSet.has(Math.sqrt(25));  // true
-monSet.has('Du Texte'.toLowerCase()); // true
+monSet.has(5); // true
+monSet.has(Math.sqrt(25)); // true
+monSet.has("Du Texte".toLowerCase()); // true
 monSet.has(o); // true
 
 monSet.size; // 5
 
 monSet.delete(5); // retire 5 du set
-monSet.has(5);    // false, 5 a été retiré de l'ensemble
+monSet.has(5); // false, 5 a été retiré de l'ensemble
 
 monSet.size; // 4, on a retiré une valeur de l'ensemble
 console.log(monSet);
@@ -120,11 +118,11 @@ for (let item of monSet.values()) console.log(item);
 for (let [clé, valeur] of monSet.entries()) console.log(clé);
 
 // Une méthode de conversion avec Array.from
-const monTableau = Array.from(monSet);    // [1, "du texte", {"a": 1, "b": 2}, {"a": 1, "b": 2}]
+const monTableau = Array.from(monSet); // [1, "du texte", {"a": 1, "b": 2}, {"a": 1, "b": 2}]
 
 // Cela fonctionnera également dans un document HTML
 monSet.add(document.body);
-monSet.has(document.querySelector('body')); // true
+monSet.has(document.querySelector("body")); // true
 
 // convertir un tableau (Array) en ensemble (Set) et vice versa
 const monSet2 = new Set([1, 2, 3, 4]);
@@ -132,13 +130,13 @@ monSet2.size; // 4
 [...monSet2]; // [1, 2, 3, 4]
 
 // L'intersection peut être calculée avec
-const intersection = new Set([...set1].filter(x => set2.has(x)));
+const intersection = new Set([...set1].filter((x) => set2.has(x)));
 
 // La différence pourra être simulée avec
-const différence = new Set([...set1].filter(x => !set2.has(x)));
+const différence = new Set([...set1].filter((x) => !set2.has(x)));
 
 // On peut itérer sur les entrées d'un ensemble avec forEach
-mySet.forEach(function(value) {
+mySet.forEach(function (value) {
   console.log(value);
 });
 
@@ -203,11 +201,11 @@ const setA = new Set([1, 2, 3, 4]);
 const setB = new Set([2, 3]);
 const setC = new Set([3, 4, 5, 6]);
 
-isSuperset(setA, setB);          // => true
-union(setA, setC);               // => Set [1, 2, 3, 4, 5, 6]
-intersection(setA, setC);        // => Set [3, 4]
+isSuperset(setA, setB); // => true
+union(setA, setC); // => Set [1, 2, 3, 4, 5, 6]
+intersection(setA, setC); // => Set [3, 4]
 symmetricDifference(setA, setC); // => Set {1, 2, 5, 6}
-difference(setA, setC);          // => Set [1, 2]
+difference(setA, setC); // => Set [1, 2]
 ```
 
 ### Relations avec les objets `Array`
@@ -219,9 +217,9 @@ let monTableau = ["valeur1", "valeur2", "valeur3"];
 // un Array en Set
 let monSet = new Set(monTableau);
 
-monSet.has('valeur1'); // renvoie true
+monSet.has("valeur1"); // renvoie true
 
-// Et utiliser l'opérateur de décomposition pour 
+// Et utiliser l'opérateur de décomposition pour
 // transformer un Set en Array.
 console.log([...monSet]); // affichera la même chose que monTableau
 ```
@@ -229,7 +227,7 @@ console.log([...monSet]); // affichera la même chose que monTableau
 ### Dédoublonner un tableau
 
 ```js
-const nombres = [2,3,4,4,2,2,2,4,4,5,5,6,6,7,5,32,3,4,5];
+const nombres = [2, 3, 4, 4, 2, 2, 2, 4, 4, 5, 5, 6, 6, 7, 5, 32, 3, 4, 5];
 
 console.log([...new Set(nombres)]);
 
@@ -239,7 +237,7 @@ console.log([...new Set(nombres)]);
 ### Les relations avec les objets `String`
 
 ```js
-let texte = 'India';
+let texte = "India";
 
 const monSet = new Set(texte);
 // Set(5) {'I', 'n', 'd', 'i', 'a'}
@@ -248,21 +246,19 @@ monSet.size;
 // 5
 
 // Sensibilité à la casse
-new Set('Firefox');
+new Set("Firefox");
 // Set(7) { "F", "i", "r", "e", "f", "o", "x" }
 
-new Set('firefox');
+new Set("firefox");
 // Set(6) { "f", "i", "r", "e", "o", "x" }
 ```
 
 ### Utilisation de `Set` pour vérifier l'unicité des valeurs d'une liste
 
 ```js
-const tableau = Array
-  .from(document.querySelectorAll('[id]'))
-  .map(function(e) {
-      return e.id;
-  });
+const tableau = Array.from(document.querySelectorAll("[id]")).map(function (e) {
+  return e.id;
+});
 
 const set = new Set(tableau);
 console.assert(set.size == tableau.length);

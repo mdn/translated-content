@@ -1,8 +1,8 @@
 ---
 title: WebSocket()
 slug: Web/API/WebSocket/WebSocket
-browser-compat: api.WebSocket.WebSocket
 ---
+
 {{APIRef("Web Sockets API")}}
 
 Le constructeur **`WebSocket()`** renvoie un nouvel objet [`WebSocket`](/fr/docs/Web/API/WebSocket).

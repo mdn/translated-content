@@ -1,29 +1,35 @@
 ---
 title: Intl.Locale.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - Locale
-  - Method
-  - プロトタイプ
-  - リファレンス
-browser-compat: javascript.builtins.Intl.Locale.toString
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
 ---
+
 {{JSRef}}
 
 **`Intl.Locale.prototype.toString()`** は、このロケールの完全な[ロケール識別子文字列](https://www.unicode.org/reports/tr35/#Unicode_locale_identifier)を返します。
 
-{{EmbedInteractiveExample("pages/js/intl-locale-prototype-tostring.html")}}
+{{InteractiveExample("JavaScript デモ: Intl.Locale.prototype.toString()")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
+```js interactive-example
+const french = new Intl.Locale("fr-Latn-FR", {
+  calendar: "gregory",
+  hourCycle: "h12",
+});
+const korean = new Intl.Locale("ko-Kore-KR", {
+  numeric: true,
+  caseFirst: "upper",
+});
+
+console.log(french.toString());
+// Expected output: "fr-Latn-FR-u-ca-gregory-hc-h12"
+
+console.log(korean.toString());
+// Expected output: "ko-Kore-KR-u-kf-upper-kn"
+```
 
 ## 構文
 
 ```js
-toString()
+toString();
 ```
 
 ### 返値
@@ -39,7 +45,10 @@ toString()
 ### toString の使用
 
 ```js
-let myLocale = new Intl.Locale("ja-Jpan-JP", {hourCycle: "h24", calendar: "gregory"});
+let myLocale = new Intl.Locale("ja-Jpan-JP", {
+  hourCycle: "h24",
+  calendar: "gregory",
+});
 console.log(myLocale.baseName); // "ja-Jpan-JP" と表示
 console.log(myLocale.toString()); // "ja-Jpan-JP-u-ca-gregory-hc-h24" と表示
 ```

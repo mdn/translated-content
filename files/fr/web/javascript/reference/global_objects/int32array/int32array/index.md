@@ -1,9 +1,8 @@
 ---
 title: Constructeur Int32Array()
 slug: Web/JavaScript/Reference/Global_Objects/Int32Array/Int32Array
-translation_of:  Web/JavaScript/Reference/Global_Objects/Int32Array/Int32Array
-browser-compat: javascript.builtins.Int32Array.Int32Array
 ---
+
 {{JSRef}}
 
 Le **constructeur `Int32Array()`** permet de créer un nouveau tableau typé [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array) dont les éléments sont des nombres entiers signés en complément à deux, représentés sur 32 bits et utilisant le boutisme de la plateforme. S'il est nécessaire de contrôler l'ordre des octets, on utilisera un objet [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView) à la place. Lors de la construction, les éléments du tableau sont initialisés avec la valeur `0`. Une fois le tableau construit, on peut faire référence aux éléments du tableau à l'aide des méthodes de l'objet ou en utilisant la notation avec les crochets et l'indice voulu.
@@ -44,7 +43,7 @@ console.log(int32.length); // 2
 console.log(int32.BYTES_PER_ELEMENT); // 4
 
 // À partir d'un tableau
-const arr = new Int32Array([21,31]);
+const arr = new Int32Array([21, 31]);
 console.log(arr[1]); // 31
 
 // À partir d'un autre tableau typé
@@ -57,7 +56,9 @@ const buffer = new ArrayBuffer(16);
 const z = new Int32Array(buffer, 0, 4);
 
 // À partir d'un itérable
-const iterable = function*(){ yield* [1,2,3]; }();
+const iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 const int32_from_iterable = new Int32Array(iterable);
 // Int32Array[1, 2, 3]
 ```
@@ -87,6 +88,6 @@ const dv = new Int32Array([1, 2, 3]);
 ## Voir aussi
 
 - [Prothèse d'émulation pour `Int32Array` avec la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Typed_arrays)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
 - [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView)

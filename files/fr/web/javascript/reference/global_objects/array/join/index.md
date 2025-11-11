@@ -1,82 +1,130 @@
 ---
-title: Array.prototype.join()
+title: "Array : méthode join()"
+short-title: join()
 slug: Web/JavaScript/Reference/Global_Objects/Array/join
-tags:
-  - Array
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/join
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/join
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-{{JSRef}}
 
-La méthode **`join()`** crée et renvoie une nouvelle chaîne de caractères en concaténant tous les éléments d'un tableau (ou d'[un objet semblable à un tableau](/fr/docs/Web/JavaScript/Guide/Collections_indexées#Manipuler_des_objets_semblables_à_des_tableaux)). La concaténation utilise la virgule ou une autre chaîne, fournie en argument, comme séparateur.
+La méthode **`join()`** des instances de {{JSxRef("Array")}} crée et retourne une nouvelle chaîne de caractères en concaténant tous les éléments de ce tableau, séparés par des virgules ou par une chaîne de séparation définie. Si le tableau ne contient qu'un seul élément, cet élément est retourné sans utiliser le séparateur.
 
-{{EmbedInteractiveExample("pages/js/array-join.html")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Array.prototype.join()")}}
+
+```js interactive-example
+const elements = ["Feu", "Air", "Eau"];
+
+console.log(elements.join());
+// Résultat attendu : « Feu,Air,Eau »
+
+console.log(elements.join(""));
+// Résultat attendu : « FeuAirEau »
+
+console.log(elements.join("-"));
+// Résultat attendu : « Feu-Air-Eau »
+```
 
 ## Syntaxe
 
-```js
-arr.join()
-arr.join(séparateur)
+```js-nolint
+join()
+join(separator)
 ```
 
 ### Paramètres
 
-- `séparateur` {{optional_inline}}
-  - : Ce paramètre optionnel indique une chaine de caractères pour séparer chaque élément du tableau. Le séparateur est converti en une chaine de caractères si nécessaire. Si ce paramètre n'est pas utilisé, les éléments du tableau seront séparés par une virgule (,). Si ce paramètre est la chaîne vide, les éléments seront accolés les uns aux autres sans espace entre. La valeur par défaut de ce paramètre est `","`.
+- `separator` {{Optional_Inline}}
+  - : Une chaîne de caractères utilisée pour séparer chaque paire d'éléments adjacents du tableau. Si ce paramètre est omis, les éléments du tableau sont séparés par une virgule (",").
 
 ### Valeur de retour
 
-Une chaîne de caractères composée de tous les éléments du tableau joints les uns aux autres. Si la longueur du tableau (`arr.length`) vaut `0`, c'est la chaîne vide qui est renvoyée. Si le tableau ne contient qu'un élément, sa version texte sera renvoyée sans être suivie du séparateur.
+Une chaîne de caractères contenant tous les éléments du tableau fusionnés. Si `array.length` vaut 0, une chaîne de caractères vide est retournée.
 
 ## Description
 
-Les différents éléments du tableau sont convertis en une chaîne de caractères puis fusionnés en une seule chaîne. Si un élément vaut `undefined` ou `null`, il sera converti en la chaîne vide. Cette fonction est générique et peut donc être utilisée avec [les objets semblables aux tableaux](/fr/docs/Web/JavaScript/Guide/Collections_indexées#Manipuler_des_objets_semblables_à_des_tableaux).
+Les conversions en chaîne de caractères de tous les éléments du tableau sont jointes en une seule chaîne de caractères. Si un élément vaut `undefined` ou `null`, il est converti en chaîne de caractères vide au lieu de la chaîne de caractères `"null"` ou `"undefined"`.
+
+La méthode `join` est utilisée en interne par [`Array.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) sans argument. Redéfinir `join` sur une instance de tableau redéfinit aussi son comportement `toString`.
+
+`Array.prototype.join` convertit récursivement chaque élément, y compris les tableaux imbriqués, en chaînes de caractères. Comme la chaîne retournée par `Array.prototype.toString` (équivalent à `join()`) ne contient pas de séparateurs, les tableaux imbriqués semblent aplatis. Vous ne pouvez contrôler que le séparateur du premier niveau, les niveaux plus profonds utilisent toujours la virgule par défaut.
+
+```js
+const matrice = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+
+console.log(matrice.join()); // 1,2,3,4,5,6,7,8,9
+console.log(matrice.join(";")); // 1,2,3;4,5,6;7,8,9
+```
+
+Si un tableau est cyclique (il contient un élément qui fait référence à lui-même), les navigateurs évitent la récursion infinie en ignorant la référence cyclique.
+
+```js
+const arr = [];
+arr.push(1, [3, arr, 4], 2);
+console.log(arr.join(";")); // 1;3,,4;2
+```
+
+Lorsqu'elle est utilisée sur un [tableau creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux), la méthode `join()` itère sur les emplacements vides comme s'ils avaient la valeur `undefined`.
+
+La méthode `join()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_tableau_génériques). Elle attend uniquement que la valeur de `this` possède une propriété `length` et des propriétés à clés entières.
 
 ## Exemples
 
 ### Fusionner un tableau de quatre façons différentes
 
-L'exemple suivant crée un tableau, `a`, avec trois éléments, puis joint le tableau à trois reprises : en utilisant le séparateur par défaut, une virgule et un espace, puis un plus, puis avec la chaîne vide.
+L'exemple suivant crée un tableau, `a`, avec trois éléments, puis joint le tableau à trois reprises&nbsp;: en utilisant le séparateur par défaut, une virgule et un espace, puis un plus, puis avec la chaîne vide.
 
 ```js
-var a = new Array("Vent","Pluie","Feu");
-a.join();      // "Vent,Pluie,Feu"
-a.join(", ");  // "Vent, Pluie, Feu"
+const a = new Array("Vent", "Pluie", "Feu");
+a.join(); // "Vent,Pluie,Feu"
+a.join(", "); // "Vent, Pluie, Feu"
 a.join(" + "); // "Vent + Pluie + Feu"
-a.join("");    // "VentPluieFeu"
+a.join(""); // "VentPluieFeu"
 ```
 
-### Fusionner un objet semblable à un tableau
+### Utiliser `join()` sur un tableau creux
 
-Dans l'exemple suivant, on effectue la fusion sur un objet semblable à un tableau ([`arguments`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments)) en appelant {{jsxref("Function.prototype.call")}} sur `Array.prototype.join`.
+`join()` traite les emplacements vides comme des valeurs `undefined` et produit un séparateur supplémentaire&nbsp;:
 
 ```js
-function f(a, b, c) {
-  var s = Array.prototype.join.call(arguments);
-  console.log(s);
-}
-f(1, 'a', true); // '1,a,true'
+console.log([1, , 3].join()); // '1,,3'
+console.log([1, undefined, 3].join()); // '1,,3'
+```
+
+### Appeler `join()` sur des objets qui ne sont pas des tableaux
+
+La méthode `join()` lit la propriété `length` de `this` puis accède à chaque propriété dont la clé est un entier non négatif inférieur à `length`.
+
+```js
+const objetSimilaireTableau = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+  3: 5, // ignoré par join() car length vaut 3
+};
+console.log(Array.prototype.join.call(objetSimilaireTableau));
+// 2,3,4
+console.log(Array.prototype.join.call(objetSimilaireTableau, "."));
+// 2.3.4
 ```
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.4.4.5', 'Array.prototype.join')}}                 | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-array.prototype.join', 'Array.prototype.join')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-array.prototype.join', 'Array.prototype.join')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.join")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{jsxref("String.prototype.split()")}}
-- {{jsxref("Array.prototype.toString()")}}
-- {{jsxref("TypedArray.prototype.join()")}}
+- [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
+- L'objet global {{JSxRef("Array")}}
+- La méthode {{JSxRef("String.prototype.split()")}}
+- La méthode {{JSxRef("Array.prototype.toString()")}}
+- La méthode {{JSxRef("TypedArray.prototype.join()")}}
+- [Prothèse d'émulation de `Array.prototype.join` dans core-js <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
+- [Prothèse d'émulation es-shims de `Array.prototype.join` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.join)

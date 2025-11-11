@@ -1,16 +1,8 @@
 ---
 title: IntersectionObserver.observe()
 slug: Web/API/IntersectionObserver/observe
-tags:
-  - API
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserver
-  - Method
-  - Reference
-browser-compat: api.IntersectionObserver.observe
-translation_of: Web/API/IntersectionObserver/observe
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 {{domxref("IntersectionObserver")}}의 **`observe()`** 메서드는 `IntersectionObserver`의 주시 대상 목록에 요소를 추가합니다. 하나의 감지기는 하나의 루트와 하나의 역치 목록만 가질 수 있지만, 동시에 여러 요소를 주시할 수 있습니다.
@@ -38,24 +30,24 @@ IntersectionObserver.observe(targetElement);
 
 ```js
 // IntersectionObserver 등록
-const io = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
     // 주시 대상이 뷰포트 안으로 들어오면 active 클래스 추가
     if (entry.intersectionRatio > 0) {
-      entry.target.classList.add('active');
+      entry.target.classList.add("active");
     }
     // 아니면 active 클래스 제거
     else {
-      entry.target.classList.remove('active');
+      entry.target.classList.remove("active");
     }
-  })
-})
+  });
+});
 
 // 주시 대상 선언, 주시 시작
-const boxElList = document.querySelectorAll('.box');
+const boxElList = document.querySelectorAll(".box");
 boxElList.forEach((el) => {
   io.observe(el);
-})
+});
 ```
 
 ## 명세

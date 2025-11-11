@@ -1,33 +1,22 @@
 ---
 title: idle.onStateChanged
 slug: Mozilla/Add-ons/WebExtensions/API/idle/onStateChanged
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Idle
-  - Inactif
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onStateChanged
-translation_of: Mozilla/Add-ons/WebExtensions/API/idle/onStateChanged
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Lancé lorsque le système change passe à l'état actif, inactif ou vérouillé. L'écouteur d'événement reçoit une chaîne qui a l'une des trois valeurs suivantes :
 
 - "vérouillé" si l'écran est vérouillé ou si l'économisateur d'écran s'active
-- "inactif" si le système est vérouillé ou si l'économisateur n'a généré aucune entrée pendant un nombre de secondes spécifié. Ce nombre est défini par défaut sur 60, mais peut-être défini à l'aide de  {{WebExtAPIRef("idle.setDetectionInterval()")}}.
+- "inactif" si le système est vérouillé ou si l'économisateur n'a généré aucune entrée pendant un nombre de secondes spécifié. Ce nombre est défini par défaut sur 60, mais peut-être défini à l'aide de {{WebExtAPIRef("idle.setDetectionInterval()")}}.
 - "actif" quand l'utilisateur génère une entrée sur un système inactif.
 
 ## Syntaxe
 
 ```js
-browser.idle.onStateChanged.addListener(listener)
-browser.idle.onStateChanged.removeListener(listener)
-browser.idle.onStateChanged.hasListener(listener)
+browser.idle.onStateChanged.addListener(listener);
+browser.idle.onStateChanged.removeListener(listener);
+browser.idle.onStateChanged.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -44,15 +33,13 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `newState`
       - : {{WebExtAPIRef('idle.IdleState')}}. Le nouvel état est inactif.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.idle.onStateChanged")}}
+{{Compat}}
 
 ## Exemples
 
@@ -66,13 +53,12 @@ browser.idle.onStateChanged.addListener(newState);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.idle`](https://developer.chrome.com/extensions/idle). Cette documentation est dérivée de [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> Cette API est basée sur l'API Chromium [`chrome.idle`](https://developer.chrome.com/docs/extensions/reference/api/idle). Cette documentation est dérivée de [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) dans le code Chromium.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -99,4 +85,4 @@ browser.idle.onStateChanged.addListener(newState);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

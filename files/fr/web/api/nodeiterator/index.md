@@ -1,13 +1,8 @@
 ---
 title: NodeIterator
 slug: Web/API/NodeIterator
-tags:
-  - API
-  - DOM
-  - Itérateur
-  - Noeuds
-translation_of: Web/API/NodeIterator
 ---
+
 {{APIRef("DOM")}}
 
 L'interface **`NodeIterator`** représente un itérateur pour les membres d'une liste des nœuds dans un sous-arbre du DOM. Les nœuds seront renvoyés dans l'ordre du document.
@@ -25,7 +20,6 @@ _L'interface n'hérite d'aucune propriété._
 - {{domxref("NodeIterator.root")}} {{readonlyInline}}
   - : Renvoie un {{domxref("Node")}} (_noeud_) représentant le noeud racine comme spécifié lors de la création du `NodeIterator`.
 - {{domxref("NodeIterator.whatToShow")}} {{readonlyInline}}
-
   - : Renvoie un `unsigned long` (_long non signé_), celui-ci étant un masque constitué de constantes décrivant les types de {{domxref("Node")}} (_noeud_) et devant être présenté. Les nœuds non correspondants sont ignorés, mais leurs enfants peuvent être inclus, le cas échéant. Les valeurs possibles sont :
 
     <table class="standard-table">
@@ -158,14 +152,11 @@ _Cette interface n'hérite d'aucune méthode._
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                                       | Commentaire                                                                                                                                                                                                                                                                   |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#nodeiterator', 'NodeIterator')}}                                     | {{Spec2('DOM WHATWG')}}             | Ajout des propriétés `referenceNode` et `pointerBeforeReferenceNode`. Suppression de la propriété `expandEntityReferences`. La méthode `detach()` a été modifiée pour être une non opération. Les méthodes `previousNode()` et `nextNode()` ne déclenchent plus d'exceptions. |
-| {{SpecName('DOM2 Traversal_Range', 'traversal.html#Iterator-overview', 'NodeIterator')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale.                                                                                                                                                                                                                                                          |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.NodeIterator")}}
+{{Compat}}
 
 ## Voir aussi
 

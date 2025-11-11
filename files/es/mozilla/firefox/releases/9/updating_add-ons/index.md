@@ -1,10 +1,7 @@
 ---
 title: Actualizar add-ons para Firefox 9
 slug: Mozilla/Firefox/Releases/9/Updating_add-ons
-translation_of: Mozilla/Firefox/Releases/9/Updating_add-ons
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 9 no tiene grandes cambios que vayan a resultar en problemas de compatibilidad para los desarrolladores de complementos. Sin embargo, hay algunos elementos que pueden ser problematicos, así que vamos a echarles un vistazo.
 
@@ -14,7 +11,8 @@ Si tu complemento se distribuye en [addons.mozilla.org](https://addons.mozilla.o
 
 Así que puedes empezar visitando AMO para comprobar si tu complemento requiere trabajo.
 
-> **Nota:** Todavía debes testear tu complemento en Firefox 9, incluso si ha sido actualizado automáticamente. Existen casos extremos que pueden no ser automáticamente detectados.
+> [!NOTE]
+> Todavía debes testear tu complemento en Firefox 9, incluso si ha sido actualizado automáticamente. Existen casos extremos que pueden no ser automáticamente detectados.
 
 ## Los componentes de inicio pueden remover scripts con carga retrasada
 
@@ -24,7 +22,7 @@ Empezando en Firefox 9, tu debes llamar al nuevo método `nsIChromeFrameMessageM
 
 ```js
 browser.messageManager.removeDelayedFrameScript(
-  "chrome://myextension/content/somescript.js"
+  "chrome://myextension/content/somescript.js",
 );
 ```
 
@@ -61,4 +59,3 @@ Estos cambios son notables, pudiendo afectar a los componentes binarios XPCOM. D
 El atributo `pending` ha sido añadido al elemento `tab`. Si este atributo está presente, la pestaña está en el proceso de ser restaurada por el servicio de almacenamiento de sesión. Tú puedes usar esto para dar estilos a la pestaña miestras dura el proceso de restauración. No importa si el usuario ha activado en preferencia la opción "No cargar las pestañas hasta que sean seleccionadas", el atributo `pending` se establece en las pestañas hasta que se cargan.
 
 Similarmente, las pestañas también ahora tienen un atributo `unread`. Esta propiedad, si esta presente, indica que la pestaña ha cambiado desde el último momento en que estuvo activa. Tú puedes usarlo para dar diferentes estilos a las pestañas cuando hayan cambiado desde la última vez que el usuario las abrió. Este atributo también está presente en las pestañas que no han sido vistas durante la sesión actual.
-

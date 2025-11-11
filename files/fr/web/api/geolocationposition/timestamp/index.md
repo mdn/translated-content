@@ -1,8 +1,8 @@
 ---
 title: GeolocationPosition.timestamp
 slug: Web/API/GeolocationPosition/timestamp
-translation_of: Web/API/GeolocationPosition/timestamp
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 La propriété en lecture seule **`GeolocationPosition.timestamp`** retourne un objet {{domxref("DOMTimeStamp")}} représentant la date et l'heure de la création de l'objet {{domxref("GeolocationPosition")}} auquel il appartient. La précision est de l'ordre de la milliseconde.
@@ -10,24 +10,22 @@ La propriété en lecture seule **`GeolocationPosition.timestamp`** retourne un 
 ## Syntaxe
 
 ```js
-var timestamp = geolocationPositionInstance.timestamp
+var timestamp = geolocationPositionInstance.timestamp;
 ```
 
 ### Valeur
 
 Un objet {{domxref("DOMTimeStamp")}}.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                                        | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('Geolocation', '#dom-geolocationposition-timestamp', 'GeolocationPosition.timestamp')}} | {{Spec2('Geolocation')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.GeolocationPosition.timestamp")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Utiliser l'API de Geolocation](/fr/docs/Web/API/Geolocation_API/Using)
+- [Utiliser l'API de Geolocation](/fr/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
 - {{domxref("GeolocationPosition")}}

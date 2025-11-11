@@ -1,22 +1,8 @@
 ---
 title: AudioWorklet
 slug: Web/API/AudioWorklet
-tags:
-  - API
-  - Audio
-  - AudioWorklet
-  - Background
-  - Custom
-  - Interface
-  - Low-latency
-  - Reference
-  - Web Audio API
-  - Worklet
-  - Zero-latency
-  - latency
-  - sound
-translation_of: Web/API/AudioWorklet
 ---
+
 {{APIRef("Web Audio API")}}{{securecontext_header}}
 
 L'interface **`AudioWorklet`** dans l'[API Web Audio](/fr/docs/Web/API/Web_Audio_API) est utilisée pour fournir des scripts de traitement audio personnalisés qui s'exécutent dans un thread séparé afin de fournir un traitement audio à très faible latence. Le code du worklet est exécuté dans le contexte d'exécution global {{domxref("AudioWorkletGlobalScope")}}, en utilisant un thread audio web séparé qui est partagé par le worklet et les autres nœuds audio.
@@ -25,7 +11,7 @@ L'accès à distance d'`AudioWorklet` du contexte audio se fait par la propriét
 
 ## Propriétés
 
-*L'interface `AudioWorklet` ne définit pas de propriétés propres, mais hérite des propriétés de [`Worklet`](/fr/docs/Web/API/Worklet).*
+_L'interface `AudioWorklet` ne définit pas de propriétés propres, mais hérite des propriétés de [`Worklet`](/fr/docs/Web/API/Worklet)._
 
 ## Méthodes
 
@@ -33,7 +19,7 @@ Cette interface hérite des méthodes de *{{domxref('Worklet')}}. L'interface `A
 
 ## Evénements
 
-*L'interface `AudioWorklet` n'a pas d'évènements auxquels elle répond.*
+_L'interface `AudioWorklet` n'a pas d'évènements auxquels elle répond._
 
 ## Exemples
 
@@ -41,13 +27,11 @@ Voir {{domxref("AudioWorkletNode")}} pour des exemples complets de création de 
 
 ## Spécifications
 
-| Spécification                                                                    | Status                               | Commentaire         |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Web Audio API','#audioworklet','AudioWorklet')}} | {{Spec2('Web Audio API')}} | Définition intiale. |
+{{Specifications}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioWorklet")}}
+{{Compat}}
 
 ## Voir aussi
 

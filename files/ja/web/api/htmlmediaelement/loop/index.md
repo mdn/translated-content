@@ -1,19 +1,14 @@
 ---
-title: HTMLMediaElement.loop
+title: "HTMLMediaElement: loop プロパティ"
+short-title: loop
 slug: Web/API/HTMLMediaElement/loop
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Web
-browser-compat: api.HTMLMediaElement.loop
-translation_of: Web/API/HTMLMediaElement/loop
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
+
 {{APIRef("HTML DOM")}}
 
-**`HTMLMediaElement.loop`** プロパティは、 HTML の {{htmlattrxref("loop", "video")}} 属性を反映し、メディア要素が最後に到達したときに最初からやり直すかどうかを制御します。
+**`HTMLMediaElement.loop`** プロパティは、 HTML の [`loop`](/ja/docs/Web/HTML/Reference/Elements/video#loop) 属性を反映し、メディア要素が最後に到達したときに最初からやり直すかどうかを制御します。
 
 ## 値
 
@@ -22,7 +17,7 @@ translation_of: Web/API/HTMLMediaElement/loop
 ## 例
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement("video");
 obj.loop = true; // true
 ```
 
@@ -36,4 +31,4 @@ obj.loop = true; // true
 
 ## 関連情報
 
-- 定義している {{domxref("HTMLMediaElement")}} インターフェイス
+- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.loop` プロパティを定義しているインターフェイス

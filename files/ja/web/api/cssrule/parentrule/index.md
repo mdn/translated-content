@@ -1,15 +1,11 @@
 ---
-title: CSSRule.parentRule
+title: "CSSRule: parentRule プロパティ"
+short-title: parentRule
 slug: Web/API/CSSRule/parentRule
-tags:
-  - API
-  - CSSOM
-  - CSSRule
-  - プロパティ
-  - リファレンス
-browser-compat: api.CSSRule.parentRule
-translation_of: Web/API/CSSRule/parentRule
+l10n:
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`parentRule`** は {{domxref("CSSRule")}} インターフェイスのプロパティで、現在のルールを内包するルールがあれば、それを返します。なければ null を返します。

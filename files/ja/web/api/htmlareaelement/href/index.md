@@ -1,20 +1,14 @@
 ---
-title: HTMLAreaElement.href
+title: "HTMLAreaElement: href プロパティ"
+short-title: href
 slug: Web/API/HTMLAreaElement/href
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAreaElement
-  - Location
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAreaElement.href
-translation_of: Web/API/HTMLAreaElement/href
-original_slug: Web/API/HTMLHyperlinkElementUtils/href
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
+
 {{ApiRef("HTML DOM")}}
 
-**`HTMLAreaElement.href`** は{{Glossary("stringifier", "文字列化")}}プロパティで、URL 全体を含む文字列を返し、 href を更新することもできます。
+**`HTMLAreaElement.href`** は{{Glossary("stringifier", "文字列化")}}プロパティで、URL 全体を含む文字列を返し、href を更新することができます。
 
 ## 値
 
@@ -23,9 +17,9 @@ original_slug: Web/API/HTMLHyperlinkElementUtils/href
 ## 例
 
 ```js
-// <area id="myArea" href="https://developer.mozilla.org/en-US/HTMLAreaElement"> 要素が文書にあったとします
+// <area id="myArea" href="https://developer.mozilla.org/ja/HTMLAreaElement"> 要素が文書にあったとします
 const area = document.getElementById("myArea");
-area.href; // 'https://developer.mozilla.org/en-US/HTMLAreaElement' を返す
+area.href; // 'https://developer.mozilla.org/ja/HTMLAreaElement' を返す
 ```
 
 ## 仕様書

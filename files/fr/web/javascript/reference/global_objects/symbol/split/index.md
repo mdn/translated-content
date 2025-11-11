@@ -1,33 +1,42 @@
 ---
 title: Symbol.split
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Propriété
-  - Reference
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/split
-original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/split
 ---
+
 {{JSRef}}
 
 Le symbole connu **`Symbol.split`** définit la méthode qui est utilisée pour découper une chaîne de caractères à l'emplacement où une correspondance a été trouvée grâce à une expression rationnelle. Cette fonction est appelée par la méthode {{jsxref("String.prototype.split()")}}.
 
 Pour plus d'informations, se référer aux pages sur {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}} et {{jsxref("String.prototype.split()")}}.
 
-{{EmbedInteractiveExample("pages/js/symbol-split.html")}}{{js_property_attributes(0,0,0)}}
+{{InteractiveExample("JavaScript Demo: Symbol.split")}}
+
+```js interactive-example
+class Split1 {
+  constructor(value) {
+    this.value = value;
+  }
+  [Symbol.split](string) {
+    const index = string.indexOf(this.value);
+    return `${this.value}${string.substring(0, index)}/${string.substring(
+      index + this.value.length,
+    )}`;
+  }
+}
+
+console.log("foobar".split(new Split1("foo")));
+// Expected output: "foo/bar"
+```
+
+{{js_property_attributes(0,0,0)}}
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires         |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-symbol.split', 'Symbol.split')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.split', 'Symbol.split')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.split")}}
+{{Compat}}
 
 ## Voir aussi
 

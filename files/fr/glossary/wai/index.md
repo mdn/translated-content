@@ -1,17 +1,15 @@
 ---
 title: WAI
 slug: Glossary/WAI
-tags:
-  - Accessibilité
-  - Glossaire
-translation_of: Glossary/WAI
-original_slug: Glossaire/WAI
 ---
+
+{{GlossarySidebar}}
+
 La WAI ou Web Accessibility Initiative a été lancée par le World Wide Web Consortium (W3C) pour rendre le web plus accessibie aux personnes handicapées, celles-ci pouvant avoir besoin d'un {{Glossary("navigateur")}} ou d'appareils non standards.
 
-## Pour approfondir
+## Voir aussi
 
 ### Culture générale
 
-- [Site web de la WAI](http://www.w3.org/WAI/)
-- {{Interwiki("wikipedia", "Web Accessibility Initiative")}} sur Wikipédia
+- [Site web de la WAI](https://www.w3.org/WAI/)
+- [WAI](https://fr.wikipedia.org/wiki/Web_Accessibility_Initiative) sur Wikipédia

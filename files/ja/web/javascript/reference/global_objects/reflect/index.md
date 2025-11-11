@@ -1,15 +1,8 @@
 ---
 title: Reflect
 slug: Web/JavaScript/Reference/Global_Objects/Reflect
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - 名前空間
-  - 概要
-  - Reflect
-browser-compat: javascript.builtins.Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 ---
+
 {{JSRef}}
 
 **`Reflect`** は、JavaScript 操作を受け付けるためのメソッドを提供する組み込みオブジェクトです。メソッドは[プロキシーハンドラー](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)のメソッドと同じです。`Reflect` は関数オブジェクトではありませんので、構築することはできません。
@@ -20,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 
 `Reflect` オブジェクトは[プロキシーハンドラーのメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)と同じ名前をもつ、下記の関数を提供します。
 
-これらのメソッドの一部は {{jsxref("Object")}} の対応するメソッドとも同じですが、これらの間には[いくらか微妙な違い](/ja/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods)があります。
+これらのメソッドの一部は {{jsxref("Object")}} の対応するメソッドとも同じですが、これらの間には[いくらか微妙な違い](/ja/docs/Web/JavaScript/Reference/Global_Objects/Reflect)があります。
 
 ## 静的メソッド
 
@@ -57,16 +50,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 
 ```js
 const duck = {
-  name: 'Maurice',
-  color: 'white',
-  greeting: function() {
+  name: "Maurice",
+  color: "white",
+  greeting: function () {
     console.log(`Quaaaack! My name is ${this.name}`);
-  }
-}
+  },
+};
 
-Reflect.has(duck, 'color');
+Reflect.has(duck, "color");
 // true
-Reflect.has(duck, 'haircut');
+Reflect.has(duck, "haircut");
 // false
 ```
 
@@ -80,7 +73,7 @@ Reflect.ownKeys(duck);
 ### オブジェクトへの新しいプロパティの追加
 
 ```js
-Reflect.set(duck, 'eyes', 'black');
+Reflect.set(duck, "eyes", "black");
 // 成功した場合は "true" を返します。
 // "duck" には "eyes: 'black'" プロパティが設定されました。
 ```

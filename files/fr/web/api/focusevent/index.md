@@ -1,17 +1,11 @@
 ---
 title: FocusEvent
 slug: Web/API/FocusEvent
-tags:
-  - API
-  - DOM
-  - Evènement
-  - Focus
-  - Interface
-translation_of: Web/API/FocusEvent
 ---
-{{APIRef("DOM Events")}}{{SeeCompatTable}}
 
-L'interface **`FocusEvent`** représente les événements liés au focus tels que {{event("focus")}}, {{event("blur")}}, {{event("focusin")}} ou {{event("focusout")}}.
+{{APIRef("UI Events")}}
+
+L'interface **`FocusEvent`** représente les événements liés au focus tels que [`focus`](/fr/docs/Web/API/Element/focus_event), [`blur`](/fr/docs/Web/API/Element/blur_event), [`focusin`](/fr/docs/Web/API/Element/focusin_event) ou [`focusout`](/fr/docs/Web/API/Element/focusout_event).
 
 ## Constructeur
 
@@ -27,17 +21,15 @@ _Hértite des propriétés de son parent domxref("UIEvent")}} et indirectement d
 
 ## Méthodes
 
-*Aucune méthode spécifique&nbsp;; hérite des propriétés de son parent [`UIEvent`](/fr/docs/Web/API/UIEvent) et indirectement de [`Event`](/fr/docs/Web/API/Event).*
+_Aucune méthode spécifique&nbsp;; hérite des propriétés de son parent [`UIEvent`](/fr/docs/Web/API/UIEvent) et indirectement de [`Event`](/fr/docs/Web/API/Event)._
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('DOM3 Events', '#interface-FocusEvent', 'FocusEvent')}} | {{Spec2('DOM3 Events')}} | Première définition. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FocusEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

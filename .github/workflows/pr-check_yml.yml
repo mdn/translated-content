@@ -1,0 +1,40 @@
+name: Lint YAML
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .nvmrc
+      - yarn.lock
+      - "**/*.yml"
+      - .github/workflows/pr-check_yml.yml
+
+permissions: {}
+
+jobs:
+  docs:
+    # do not run on PRs in forks
+    if: github.repository == 'mdn/translated-content'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
+        with:
+          node-version-file: ".nvmrc"
+          cache: yarn
+
+      - name: Install all yarn packages
+        run: yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Lint markdown files
+        run: yarn lint:yml

@@ -1,23 +1,17 @@
 ---
 title: HTMLBodyElement
 slug: Web/API/HTMLBodyElement
-page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - NeedsNewLayout
-  - リファレンス
-browser-compat: api.HTMLBodyElement
-translation_of: Web/API/HTMLBodyElement
+l10n:
+  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
+
 {{APIRef("HTML DOM")}}
 
-**`HTMLBodyElement`** インターフェイスは、（通常のオブジェクトである {{domxref("HTMLElement")}} が継承によって利用できるもの以外に） {{HtmlElement("body")}} 要素を操作するための特別なプロパティとメソッドを提供します。
+**`HTMLBodyElement`** インターフェイスは、（通常の {{domxref("HTMLElement")}} インターフェイスから継承されるもの以外に） {{HtmlElement("body")}} 要素を操作するための特別なプロパティとメソッドを提供します。
 
 {{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
 
 _親インターフェイスである {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
@@ -34,17 +28,18 @@ _親インターフェイスである {{domxref("HTMLElement")}} からプロパ
 - {{domxref("HTMLBodyElement.vLink")}} {{deprecated_inline}}
   - : 文字列で、訪問済みのリンクの色を表します。
 
-## メソッド
+## インスタンスメソッド
 
-_固有のメソッドはありません。 インターフェイスである {{domxref("HTMLElement")}} からメソッドを継承します。_
+_固有のメソッドはありません。 インターフェイスである {{domxref("HTMLElement")}} からメソッドを継承しています。_
 
 ## イベントハンドラー
 
 {{domxref("HTMLElement")}} のイベントを継承しています。
 
-以下の {{domxref("Window")}} の `onXYZ` イベントハンドラープロパティも、 `window` オブジェクトをターゲットとした別名として利用可能です。しかし、これらの情報は `HTMLBodyElement` ではなく、 `window` オブジェクトで直接聞くことをお勧めします。
+以下の {{domxref("Window")}} の `onXYZ` イベントハンドラープロパティも、 `window` オブジェクトをターゲットとした別名として利用可能です。しかし、これらは `HTMLBodyElement` ではなく、 `window` オブジェクトで直接待ち受けすることをお勧めします。
 
-> **Note:** `addEventListener()` を `HTMLBodyElement` に対して使用しても、以下に示す `onXYZ` イベントハンドラーを動作させることができません。代わりに {{domxref("window")}} オブジェクトのイベントを待ち受けしてください。
+> [!NOTE]
+> `addEventListener()` を `HTMLBodyElement` に対して使用しても、以下に示す `onXYZ` イベントハンドラーを動作させることができません。代わりに {{domxref("window")}} オブジェクトのイベントを待ち受けしてください。
 
 - {{domxref("window.afterprint_event", "HTMLBodyElement.onafterprint")}}
   - : 文書の印刷を開始した後、または印刷プレビューが閉じられた後に発行されます。

@@ -1,39 +1,52 @@
 ---
 title: Number.NaN
+short-title: NaN
 slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
-tags:
-  - JavaScript
-  - Number
-  - プロパティ
-browser-compat: javascript.builtins.Number.NaN
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/NaN
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-{{JSRef}}
 
-**`Number.NaN`** は非数 (Not-A-Number) を表す値です。 {{jsxref("NaN")}} と同じです。
+**`Number.NaN`** 静的データプロパティは非数 (Not-A-Number) を表す値であり、{{jsxref("NaN")}} と同じです。`NaN` の動作についての詳しい情報は、[グローバルプロパティの説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN)を参照してください。
 
-{{EmbedInteractiveExample("pages/js/number-nan.html")}}
+{{InteractiveExample("JavaScript デモ: Number.NaN", "taller")}}
 
-この静的プロパティにアクセスするために {{jsxref("Number")}} オブジェクトを生成する必要はありません (`Number.NaN` を使用してください)。
+```js interactive-example
+function clean(x) {
+  if (x === Number.NaN) {
+    // true になることはない
+    return null;
+  }
+  if (isNaN(x)) {
+    return 0;
+  }
+}
+
+console.log(clean(Number.NaN));
+// 予想される結果: 0
+```
+
+## 値
+
+数値 {{jsxref("NaN")}} です。
 
 {{js_property_attributes(0, 0, 0)}}
+
+## 解説
+
+`NaN` は {{jsxref("Number")}} の静的プロパティですので、数値のプロパティとしてではなく、常に `Number.NaN` として使用してください。
 
 ## 例
 
 ### 値が数値であるかどうかのチェック
 
 ```js
-function sanitise(x) {
+function sanitize(x) {
   if (isNaN(x)) {
     return Number.NaN;
   }
   return x;
 }
 ```
-
-### NaN に対するテスト
-
-[NaN に対するテスト](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN#testing_against_nan)を `NaN` のページで参照してください。
 
 ## 仕様書
 
@@ -45,5 +58,5 @@ function sanitise(x) {
 
 ## 関連情報
 
-- グローバル {{jsxref("NaN")}} オブジェクト
-- 所属先の {{jsxref("Number")}} オブジェクト
+- {{jsxref("NaN")}}
+- {{jsxref("Number.isNaN()")}}

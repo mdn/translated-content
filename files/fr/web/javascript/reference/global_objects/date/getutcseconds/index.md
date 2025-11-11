@@ -1,25 +1,25 @@
 ---
 title: Date.prototype.getUTCSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getUTCSeconds
 ---
+
 {{JSRef}}
 
 La méthode **`getUTCSeconds()`** renvoie les secondes de la date renseignée, d'après UTC.
 
-{{EmbedInteractiveExample("pages/js/date-getutcseconds.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getUTCSeconds()")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 1969, 20:18:04 UTC");
+
+console.log(moonLanding.getUTCSeconds());
+// Expected output: 4
+```
 
 ## Syntaxe
 
 ```js
-dateObj.getUTCSeconds()
+dateObj.getUTCSeconds();
 ```
 
 ### Valeur de retour
@@ -39,16 +39,11 @@ var secondes = aujourdhui.getUTCSeconds();
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.9.5.23', 'Date.prototype.getUTCSeconds')}}                             | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-date.prototype.getutcseconds', 'Date.prototype.getUTCSeconds')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-date.prototype.getutcseconds', 'Date.prototype.getUTCSeconds')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.getUTCSeconds")}}
+{{Compat}}
 
 ## Voir aussi
 

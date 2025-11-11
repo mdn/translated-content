@@ -1,8 +1,8 @@
 ---
 title: Clients.openWindow()
 slug: Web/API/Clients/openWindow
-translation_of: Web/API/Clients/openWindow
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 La méthode **`openWindow()`** de l'interface {{domxref("Clients")}} crée un nouveau niveau de contexte de navigation et charge une URL donnée. Si le script d'origine n'a pas la permission d'ouvrir une popup, **`openWindow()`** lèvera une InvalidAccessError.
@@ -12,7 +12,7 @@ Dans Firefox, une méthode est authorisée d'ouvrir une popup seulement lorsqu'e
 ## Syntaxe
 
 ```js
-ServiceWorkerClients.openWindow(url).then(function(WindowClient) {
+ServiceWorkerClients.openWindow(url).then(function (WindowClient) {
   // Faire quelque chose avec le WindowClient
 });
 ```
@@ -31,9 +31,9 @@ Une {{jsxref("Promise")}} qui résoud un objet {{domxref("WindowClient")}} si l'
 ```js
 // Quand l'utilisateur click sur une notification, focus sur la fenêtre si elle existe,
 // ou ouvre en une autre.
-onotificationclick = function(event) {
+onotificationclick = function (event) {
   var found = false;
-  clients.matchAll().then(function(clients) {
+  clients.matchAll().then(function (clients) {
     for (i = 0; i < clients.length; i++) {
       if (clients[i].url === event.data.url) {
         // La fenêtre existe, focus dessus.
@@ -44,7 +44,7 @@ onotificationclick = function(event) {
     }
     if (!found) {
       // Crée une nouvelle fenêtre
-      clients.openWindow(event.data.url).then(function(windowClient) {
+      clients.openWindow(event.data.url).then(function (windowClient) {
         // Faire quelque chose avec le WindowClient
       });
     }
@@ -54,10 +54,8 @@ onotificationclick = function(event) {
 
 ## Spécifications
 
-| Spécification                                                            | Statut                               | Commentaire         |
-| ------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#clients', 'Clients')}} | {{Spec2('Service Workers')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Clients.openWindow")}}
+{{Compat}}

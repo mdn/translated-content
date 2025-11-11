@@ -1,16 +1,8 @@
 ---
 title: Uint16Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint16Array
-tags:
-  - クラス
-  - JavaScript
-  - TypedArray
-  - 型付き配列
-  - Uint16Array
-  - ポリフィル
-browser-compat: javascript.builtins.Uint16Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Uint16Array
 ---
+
 {{JSRef}}
 
 **`Uint16Array`** は型付き配列で、プラットフォームのバイト順による 16 ビット符号なし整数値の配列を表します。バイト順の制御が必要な場合は、代わりに {{jsxref("DataView")}} を使用してください。中身は `0` で初期化されます。生成されると、配列内の要素はそのオブジェクトのメソッドを使用するか、配列の標準的な添字の構文 (すなわち、ブラケット記法) を使用するかして参照することができます。
@@ -97,7 +89,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Uint16Array
   - : 配列とその要素を表すローカライズされた文字列を返します。{{jsxref("Array.prototype.toLocaleString()")}} も参照してください。
 - {{jsxref("TypedArray.toString", "Uint16Array.prototype.toString()")}}
   - : 配列とその要素を表す文字列を返します。{{jsxref("Array.prototype.toString()")}} も参照してください。
-- {{jsxref("TypedArray.@@iterator", "Uint16Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray.@@iterator", "Uint16Array.prototype[Symbol.iterator]()")}}
   - : 配列内ですべての位置における値を提供する新しい*配列イテレーター*を返します。
 
 ## 例
@@ -113,7 +105,7 @@ console.log(uint16.length); // 2
 console.log(uint16.BYTES_PER_ELEMENT); // 2
 
 // 配列から
-var arr = new Uint16Array([21,31]);
+var arr = new Uint16Array([21, 31]);
 console.log(arr[1]); // 31
 
 // From another TypedArray
@@ -126,7 +118,9 @@ var buffer = new ArrayBuffer(8);
 var z = new Uint16Array(buffer, 0, 4);
 
 // 反復可能オブジェクトから
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var uint16 = new Uint16Array(iterable);
 // Uint16Array[1, 2, 3]
 ```
@@ -142,6 +136,6 @@ var uint16 = new Uint16Array(iterable);
 ## 関連情報
 
 - `Uint16Array` のポリフィルが [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays) で利用できます
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

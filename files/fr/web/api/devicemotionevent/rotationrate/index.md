@@ -1,20 +1,14 @@
 ---
 title: DeviceMotionEvent.rotationRate
 slug: Web/API/DeviceMotionEvent/rotationRate
-tags:
-  - API
-  - DOM
-  - Mobile
-  - Orientation
-  - Propriété
-  - Vitesse
-translation_of: Web/API/DeviceMotionEvent/rotationRate
 ---
+
 {{ ApiRef("Device Orientation Events") }}
 
 La propriété **`rotationRate`** renvoie la vitesse de rotation de l'appareil autour de chacun de ses axes en degrés par seconde.
 
-> **Note :** Si le matériel n'est pas capable de fournir cette information, la propriété renvoie `null`.
+> [!NOTE]
+> Si le matériel n'est pas capable de fournir cette information, la propriété renvoie `null`.
 
 ## Syntaxe
 
@@ -35,20 +29,17 @@ La propriété `rotationRates` est un objet en lecture seule décrivant la vites
 
 ## Spécifications
 
-| Spécification                                | État                                     | Commentaires         |
-| -------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Device Orientation')}} | {{Spec2('Device Orientation')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DeviceMotionEvent.rotationRate")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{ domxref("DeviceMotionEvent") }}
-- {{ event("devicemotion") }}
-- {{ domxref("window.ondevicemotion") }}
-- {{ event("deviceorientation") }}
-- {{ domxref("DeviceOrientationEvent") }}
-- [Détecter l'orientation de l'appareil](/fr/docs/WebAPI/Detecting_device_orientation)
-- [Les données d'orientation et de mouvement expliquées](/fr/docs/Web/Guide/DOM/Events/Les_donn%C3%A9es_d_orientation_et_de_mouvement_expliqu%C3%A9es)
+- [`DeviceMotionEvent`](/fr/docs/Web/API/DeviceMotionEvent)
+- L'évènement [`devicemotion`](/fr/docs/Web/API/Window/devicemotion_event)
+- L'évènement [`deviceorientation`](/fr/docs/Web/API/Window/deviceorientation_event)
+- [`DeviceOrientationEvent`](/fr/docs/Web/API/DeviceOrientationEvent)
+- [Détection de l'orientation de l'appareil](/fr/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
+- [Explication des données d'orientation et de mouvement](/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)

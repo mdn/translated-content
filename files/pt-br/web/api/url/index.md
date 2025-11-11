@@ -1,24 +1,6 @@
 ---
 title: URL
 slug: Web/API/URL
-page-type: web-api-interface
-tags:
-  - API
-  - Address
-  - Domain
-  - Interface
-  - Location
-  - Networking
-  - Reference
-  - URI
-  - URL
-  - URL API
-  - Web
-  - hostname
-  - href
-  - origin
-  - Polyfill
-browser-compat: api.URL
 ---
 
 {{APIRef("URL API")}}
@@ -116,7 +98,7 @@ O método {{domxref("URL.toString", "toString()")}} de `URL` apenas retorna o va
 
 ```js
 const response = await fetch(
-  new URL("http://www.example.com/démonstration.html")
+  new URL("http://www.example.com/démonstration.html"),
 );
 ```
 
@@ -132,6 +114,6 @@ const response = await fetch(
 
 - [Polyfill de `URL` em `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
 - [URL API](/pt-BR/docs/Web/API/URL_API)
-- [O que é uma URL](/pt-BR/docs/Learn/Common_questions/What_is_a_URL)
+- [O que é uma URL](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
 - A propriedade contem uma `URL` objeto: {{domxref("URL")}}.
 - {{domxref("URLSearchParams")}}.

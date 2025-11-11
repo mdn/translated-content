@@ -1,8 +1,8 @@
 ---
 title: DOMTokenList
 slug: Web/API/DOMTokenList
-translation_of: Web/API/DOMTokenList
 ---
+
 {{APIRef("DOM")}}
 
 L'interface **`DOMTokenList`** représente un ensemble de marques («&nbsp;<i lang="en">token</i>&nbsp;») séparées par un espace. On obtient un tel ensemble grâce aux propriétés [`Element.classList`](/fr/docs/Web/API/Element/classList), [`HTMLLinkElement.relList`](/fr/docs/Web/API/HTMLLinkElement/relList), [`HTMLAnchorElement.relList`](/fr/docs/Web/API/HTMLAnchorElement/relList) ou [`HTMLAreaElement.relList`](/fr/docs/Web/API/HTMLAreaElement/relList). Les positions de cette liste sont numérotées à partir de 0. `DOMTokenList` est toujours sensible à la casse.
@@ -12,7 +12,7 @@ L'interface **`DOMTokenList`** représente un ensemble de marques («&nbsp;<i la
 - {{domxref("DOMTokenList.length")}} {{ReadOnlyInline}}
   - : Un entier qui représente le nombre d'objets qui sont stockés dans l'objet.
 - {{domxref("DOMTokenList.value")}} {{ReadOnlyInline}}
-  - : retourne la valeur de la liste comme une {{domxref("DOMString")}}  _(chaîne de caractères)._
+  - : retourne la valeur de la liste comme une {{domxref("DOMString")}} _(chaîne de caractères)._
 
 ## Méthodes
 
@@ -41,7 +41,7 @@ L'interface **`DOMTokenList`** représente un ensemble de marques («&nbsp;<i la
 
 ## Exemples
 
-Dans l'exemple suivant, nous récupérons la liste d'un ensemble de classes définies sur un élément [`<p>`](/fr/docs/Web/HTML/Element/p) en tant que `DOMTokenList` en utilisant [`Element.classList`](/fr/docs/Web/API/Element/classList), ajoutons une classe en utilisant [`DOMTokenList.add()`](/fr/docs/Web/API/DOMTokenList/add), puis mettons à jour le [`Node.textContent`](/fr/docs/Web/API/Node/textContent) du `<p>` pour qu'il soit égal à la `DOMTokenList`.
+Dans l'exemple suivant, nous récupérons la liste d'un ensemble de classes définies sur un élément [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p) en tant que `DOMTokenList` en utilisant [`Element.classList`](/fr/docs/Web/API/Element/classList), ajoutons une classe en utilisant [`DOMTokenList.add()`](/fr/docs/Web/API/DOMTokenList/add), puis mettons à jour le [`Node.textContent`](/fr/docs/Web/API/Node/textContent) du `<p>` pour qu'il soit égal à la `DOMTokenList`.
 
 D'abord HTML :
 
@@ -83,13 +83,11 @@ La sortie ressemble à ceci :
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("DOM WHATWG", "#interface-domtokenlist", "DOMTokenList")}} | {{Spec2("DOM WHATWG")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMTokenList")}}
+{{Compat}}
 
 ## Voir aussi
 

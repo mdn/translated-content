@@ -1,20 +1,16 @@
 ---
-title: HTMLMediaElement.playbackRate
+title: "HTMLMediaElement: playbackRate プロパティ"
+short-title: playbackRate
 slug: Web/API/HTMLMediaElement/playbackRate
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-browser-compat: api.HTMLMediaElement.playbackRate
-translation_of: Web/API/HTMLMediaElement/playbackRate
+l10n:
+  sourceCommit: ed9ebd794add41de1f2e759502b73e8650afe56b
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.playbackRate`** プロパティは、メディアが再生されるレートを設定します。これはユーザーが早送りやスローモーションなどのユーザー制御を実装するために使用されます。通常の再生レートにこの値を掛けて現在のレートが求められるため、 1.0 の値が通常の速度です。
 
-`playbackRate` が負の数であれば、メディアは逆方向に再生されます。
+`playbackRate` が負の値である場合、メディアを逆再生することを示しますが、これはまだ広く対応していません。（詳しくは[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。）
 
 音声は、逆方向の再生であったり、早送りやスロー再生が実用的な範囲を外れていた場合（例えば、 Gecko では `0.25` から `4.0` の範囲であれば）ミュートされます。
 
@@ -27,8 +23,8 @@ translation_of: Web/API/HTMLMediaElement/playbackRate
 ## 例
 
 ```js
-var obj = document.createElement('video');
-console.log(obj.playbackRate); // Expected Output: 1
+const obj = document.createElement("video");
+console.log(obj.playbackRate); // 予想される結果: 1
 ```
 
 ## 仕様書
@@ -41,4 +37,6 @@ console.log(obj.playbackRate); // Expected Output: 1
 
 ## 関連情報
 
-- 定義している {{domxref("HTMLMediaElement")}} インターフェイス
+- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.playbackRate` プロパティを定義しているインターフェイス
+- 負の `playbackRate` に対応するバグ報告（[Firefox](https://bugzil.la/1468019) および [Blink](https://crbug.com/40410591)（Chrome など）
+- The Web Hypertext Application Technology Working Group (WHATWG) [issue to require support for negative `playbackRate`](https://github.com/whatwg/html/issues/3754)

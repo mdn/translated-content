@@ -1,19 +1,9 @@
 ---
 title: downloads.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/onCreated
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downlaods
-  - onCreated
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/onCreated
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 L'événement **`onCreated()`** de l'API {{WebExtAPIRef("downloads")}} se déclenche lorsqu'un téléchargement commence, c'est à dire lorsque quand {{WebExtAPIRef("downloads.download()")}} est appelé avec succès.
 
@@ -22,9 +12,9 @@ L'écouteur reçoit l'objet {{WebExtAPIRef('downloads.DownloadItem')}} en questi
 ## Syntaxe
 
 ```js
-browser.downloads.onCreated.addListener(listener)
-browser.downloads.onCreated.removeListener(listener)
-browser.downloads.onCreated.hasListener(listener)
+browser.downloads.onCreated.addListener(listener);
+browser.downloads.onCreated.removeListener(listener);
+browser.downloads.onCreated.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -41,15 +31,13 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `function`
-
   - : Une fonction de rappel qui sera appelée lorsque cet événement se produira. Cette fonction recevra les arguments suivants :
-
     - `downloadItem`
       - : L'objet {{WebExtAPIRef('downloads.DownloadItem')}} en question.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.onCreated")}}
+{{Compat}}
 
 ## Exemples
 
@@ -65,13 +53,12 @@ browser.downloads.onCreated.addListener(handleCreated);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -98,4 +85,4 @@ browser.downloads.onCreated.addListener(handleCreated);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

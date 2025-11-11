@@ -1,29 +1,31 @@
 ---
 title: String.prototype.replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
-tags:
-  - Chaîne
-  - Expression
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - Régulière
-translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/replace
 ---
+
 {{JSRef}}
 
 La méthode **`replace()`** renvoie une nouvelle chaîne de caractères dans laquelle tout ou partie des correspondances à un `modèle` sont remplacées par un `remplacement`. Le `modèle` utilisé peut être une {{jsxref("RegExp")}} et le remplacement peut être une chaîne ou une fonction à appeler pour chaque correspondance. Si `modèle` est une chaîne de caractères, seule la première correspondance sera remplacée.
 
 La chaîne de caractère originale reste inchangée.
 
-{{EmbedInteractiveExample("pages/js/string-replace.html")}}
+{{InteractiveExample("JavaScript Demo: String.replace()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+console.log(paragraph.replace("Ruth's", "my"));
+// Expected output: "I think my dog is cuter than your dog!"
+
+const regex = /Dog/i;
+console.log(paragraph.replace(regex, "ferret"));
+// Expected output: "I think Ruth's ferret is cuter than your dog!"
+```
 
 ## Syntaxe
 
 ```js
-chn.replace(regexp|souschn, nouvSouschn|fonction)
+chn.replace(regexp | souschn, nouvSouschn | fonction);
 ```
 
 ### Paramètres
@@ -33,9 +35,9 @@ chn.replace(regexp|souschn, nouvSouschn|fonction)
 - `souschn` (modèle)
   - : Une {{jsxref("String")}} qui est à remplacer par `nouvSouschn`. Elle est traitée comme une chaîne de caractères verbatim et elle n'est _pas_ interprétée comme une expression régulière. Seule la première occurrence sera remplacée.
 - `nouvSouschn` (remplacement)
-  - : La {{jsxref("String")}} qui remplace la chaîne de caractères indiquée par le paramètre `regexp` ou `souschn`. Un certain nombre de modèles de remplacement spéciaux sont supportés ; voir la section "[Indiquer une chaîne de caractères comme paramètre](#Indiquer_une_chaîne_de_caractère_comme_paramètre)" ci-dessous.
+  - : La {{jsxref("String")}} qui remplace la chaîne de caractères indiquée par le paramètre `regexp` ou `souschn`. Un certain nombre de modèles de remplacement spéciaux sont supportés ; voir la section "[Indiquer une chaîne de caractères comme paramètre](#indiquer_une_chaîne_de_caractère_comme_paramètre)" ci-dessous.
 - `fonction` (remplacement)
-  - : Une fonction à appeler pour créer la nouvelle sous-chaîne de caractères à utiliser pour remplacer la `regexp` ou la `souschn` donnée. Les arguments passés à cette fonction sont décrits dans la section "[Indiquer une fonction comme paramètre](#Indiquer_une_fonction_comme_paramètre)" ci-dessous.
+  - : Une fonction à appeler pour créer la nouvelle sous-chaîne de caractères à utiliser pour remplacer la `regexp` ou la `souschn` donnée. Les arguments passés à cette fonction sont décrits dans la section "[Indiquer une fonction comme paramètre](#indiquer_une_fonction_comme_paramètre)" ci-dessous.
 
 ### Valeur retournée
 
@@ -151,9 +153,12 @@ L'exemple suivant affectera `'abc - 12345 - #$*%'` à la variable `nouvelleChain
 ```js
 function remplaceur(correspondance, p1, p2, p3, decalage, chaine) {
   // p1 est non numérique, p2 numérique, et p3 non-alphanumérique
-  return [p1, p2, p3].join(' - ');
+  return [p1, p2, p3].join(" - ");
 }
-var nouvelleChaine = 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, remplaceur);
+var nouvelleChaine = "abc12345#$*%".replace(
+  /([^\d]*)(\d*)([^\w]*)/,
+  remplaceur,
+);
 console.log(nouvelleChaine); // abc - 12345 - #$*%
 ```
 
@@ -164,14 +169,15 @@ console.log(nouvelleChaine); // abc - 12345 - #$*%
 Dans l'exemple suivant, l'expression régulière est définie dans `replace()` et inclut l'indicateur d'indifférence à la casse.
 
 ```js
-var chn = 'Twas the night before Xmas...';
-var nouvChn = chn.replace(/xmas/i, 'Christmas');
+var chn = "Twas the night before Xmas...";
+var nouvChn = chn.replace(/xmas/i, "Christmas");
 console.log(nouvChn); // Twas the night before Christmas...
 ```
 
 Cela affiche 'Twas the night before Christmas...'.
 
-> **Note :** Voir [ce guide](/fr/docs/Web/JavaScript/Guide/Expressions_r%C3%A9guli%C3%A8res) pour plus d'explications concernant les expressions régulières.
+> [!NOTE]
+> Voir [ce guide](/fr/docs/Web/JavaScript/Guide/Regular_expressions) pour plus d'explications concernant les expressions régulières.
 
 ### Utilisation de `global` et `ignore` avec `replace()`
 
@@ -179,8 +185,8 @@ Le remplacement global ne peut être fait qu'avec une expression régulière. Da
 
 ```js
 var re = /pommes/gi;
-var chn = 'Les pommes sont rondes, et les pommes sont juteuses.';
-var nouvChn = chn.replace(re, 'oranges');
+var chn = "Les pommes sont rondes, et les pommes sont juteuses.";
+var nouvChn = chn.replace(re, "oranges");
 console.log(nouvChn); // Les oranges sont rondes, et les oranges sont juteuses.
 ```
 
@@ -192,7 +198,7 @@ Le script suivant intervertit les mots dans la chaîne de caractères. Pour le t
 
 ```js
 var re = /(\w+)\s(\w+)/;
-var chn = 'Jean Martin';
+var chn = "Jean Martin";
 var nouvChn = chn.replace(re, "$2, $1");
 console.log(nouvChn); // Martin, Jean
 ```
@@ -208,18 +214,18 @@ La fonction de remplacement accepte le fragment en correspondance comme paramèt
 ```js
 function styleFormatTiret(nomPropriete) {
   function majusculesEnTiretMinuscules(correspondance, decalage, chaine) {
-    return (decalage > 0 ? '-' : '') + correspondance.toLowerCase();
+    return (decalage > 0 ? "-" : "") + correspondance.toLowerCase();
   }
   return nomPropriete.replace(/[A-Z]/g, majusculesEnTiretMinuscules);
 }
 ```
 
-Avec ` styleFormatTiret(``'borderTop') `, cela renvoie 'border-top'.
+Avec `styleFormatTiret('borderTop')`, cela renvoie 'border-top'.
 
 Du fait que nous voulons transformer davantage le résultat de la correspondance avant la substitution finale, nous devons utiliser une fonction. Cela force l'évaluation de la correspondance avant la méthode {{jsxref ("String.prototype.toLowerCase()", "toLowerCase()")}}. Si nous avions essayé de le faire en utilisant la correspondance sans fonction, le {{jsxref ("String.prototype.toLowerCase()", "toLowerCase()")}} n'aurait eu aucun effet.
 
 ```js
-var nouvChn = nomPropriete.replace(/[A-Z]/g, '-' + '$&'.toLowerCase()); // ne fonctionne pas
+var nouvChn = nomPropriete.replace(/[A-Z]/g, "-" + "$&".toLowerCase()); // ne fonctionne pas
 ```
 
 Ceci est dû au fait que `'$&'.toLowerCase()` serait d'abord évalué comme un littéral de chaîne (résultant en le même `'$&'`) avant d'utiliser les caractères comme modèle.
@@ -233,7 +239,7 @@ L'expression régulière `test` vérifie tout nombre se terminant par F. Le nomb
 ```js
 function f2c(x) {
   function convertir(chn, p1, decalage, s) {
-    return ((p1-32) * 5/9) + 'C';
+    return ((p1 - 32) * 5) / 9 + "C";
   }
   var s = String(x);
   var test = /(-?\d+(?:\.\d*)?)F\b/g;
@@ -249,16 +255,17 @@ L'exemple suivant accepte un modèle chaîne et le convertit en un tableau d'obj
 
 Une chaîne de caractères composée des caractères `x`, `-` et `_`
 
-```js
+```plain
 x-x_
 x---x---x---x---
+
 x-xxx-xx-x-
 x_x_x___x___x___
 ```
 
-**Sortie :**Un tableau d'objets. Un `'x'` dénote un état `'marche'`, un `'-'` symbolise un état '`arret`' et un  `'_'` (blanc souligné) symbolise la longueur d'un état `'marche'`.
+**Sortie :**Un tableau d'objets. Un `'x'` dénote un état `'marche'`, un `'-'` symbolise un état '`arret`' et un `'_'` (blanc souligné) symbolise la longueur d'un état `'marche'`.
 
-```json
+```js
 [
   { marche: true, longueur: 1 },
   { marche: false, longueur: 1 },
@@ -270,11 +277,11 @@ x_x_x___x___x___
 **Fragment :**
 
 ```js
-var chn = 'x-x_';
+var chn = "x-x_";
 var tabRet = [];
-chn.replace(/(x_*)|(-)/g, function(correspondance, $1, $2){
-  if($1) tabRet.push({ marche: true, longueur: $1.length });
-  if($2) tabRet.push({ marche: false, longueur: 1 });
+chn.replace(/(x_*)|(-)/g, function (correspondance, $1, $2) {
+  if ($1) tabRet.push({ marche: true, longueur: $1.length });
+  if ($2) tabRet.push({ marche: false, longueur: 1 });
 });
 
 console.log(tabRet);
@@ -284,24 +291,11 @@ Ce fragment génère un tableau de 3 objets au format désiré sans utiliser de 
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                       | Commentaire                                        |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                         | {{Spec2('ES3')}}         | Définition initiale. Implémentée en JavaScript 1.2 |
-| {{SpecName('ES5.1', '#sec-15.5.4.11', 'String.prototype.replace')}}                         | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-string.prototype.replace', 'String.prototype.replace')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-string.prototype.replace', 'String.prototype.replace')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.replace")}}
-
-## Notes spécifiques à Firefox
-
-- `flags` était un troisième argument non standard disponible uniquement dans Gecko : *str*.replace(_regexp_|_substr_, _newSubStr_|_function, flags_)
-- À partir de Gecko 27 {{geckoRelease(27)}}, cette méthode a été modifiée pour être conforme à la spécification ECMAScript. Lorsque `replace()` est appelée avec une expression régulière globale, la propriété {{jsxref("RegExp.lastIndex")}} (si elle est définie) sera remise à `0` ({{bug(501739)}}).
-- À partir de Gecko 39 {{geckoRelease(39)}}, l'argument non-standard `flags` est désapprouvé et déclenche un avertissement dans la console ({{bug(1142351)}}).
-- À partir de Gecko 47 {{geckoRelease(47)}}, l'argument non-standard `flags` n'est plus supporté dans les versions non distribution et sera bientôt retiré complètement ({{bug(1245801)}}).
-- À partir de Gecko 49 {{geckoRelease(49)}}, l'argument non-standard `flags` n'est plus supporté ({{bug(1108382)}}).
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,9 +1,8 @@
 ---
 title: BatteryManager.charging
 slug: Web/API/BatteryManager/charging
-translation_of: Web/API/BatteryManager/charging
-browser-compat: api.BatteryManager.charging
 ---
+
 {{APIRef("Battery API")}}
 
 La propriété **`BatteryManager.charging`** est une valeur booléenne indiquant si la batterie de l'équipement est en train d'être chargée. Lorsque sa valeur change, l'évènement [`chargingchange`](/fr/docs/Web/API/BatteryManager/chargingchange_event) est déclenché.
@@ -21,10 +20,10 @@ Si la batterie est en charge, la variable a la valeur `true`. Sinon, dans le cas
 ### JavaScript
 
 ```js
-navigator.getBattery().then(battery => {
+navigator.getBattery().then((battery) => {
   const charging = battery.charging;
 
-  document.querySelector('#charging').textContent = charging;
+  document.querySelector("#charging").textContent = charging;
 });
 ```
 

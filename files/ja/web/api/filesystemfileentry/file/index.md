@@ -1,18 +1,8 @@
 ---
 title: FileSystemFileEntry.file()
 slug: Web/API/FileSystemFileEntry/file
-page-type: web-api-instance-method
-tags:
-  - API
-  - File
-  - ファイルとディレクトリー項目 API
-  - FileSystemFileEntry
-  - ファイル
-  - メソッド
-  - リファレンス
-browser-compat: api.FileSystemFileEntry.file
-translation_of: Web/API/FileSystemFileEntry/file
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 {{domxref("FileSystemFileEntry")}} インターフェイスの **`file()`** メソッドは、子のディレクトリー項目が表現しているファイルからデータを読むために使用できる {{domxref("File")}} オブジェクトを返します。
@@ -20,8 +10,8 @@ translation_of: Web/API/FileSystemFileEntry/file
 ## 構文
 
 ```js
-file(successCallback)
-file(successCallback, errorCallback)
+file(successCallback);
+file(successCallback, errorCallback);
 ```
 
 ### 引数
@@ -41,16 +31,16 @@ file(successCallback, errorCallback)
 
 ```js
 function readFile(entry, successCallback, errorCallback) {
-  entry.file(function(file) {
+  entry.file(function (file) {
     let reader = new FileReader();
 
-    reader.onload = function() {
+    reader.onload = function () {
       successCallback(reader.result);
     };
 
-    reader.onerror = function() {
+    reader.onerror = function () {
       errorCallback(reader.error);
-    }
+    };
 
     reader.readAsText(file);
   }, errorCallback);
@@ -70,4 +60,4 @@ function readFile(entry, successCallback, errorCallback) {
 ## 関連情報
 
 - [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
-- [ファイルとディレクトリー項目 API の紹介](/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [ファイルとディレクトリー項目 API の紹介](/ja/docs/Web/API/File_System_API)

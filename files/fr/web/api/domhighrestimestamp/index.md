@@ -1,8 +1,8 @@
 ---
 title: DOMHighResTimeStamp
 slug: Web/API/DOMHighResTimeStamp
-translation_of: Web/API/DOMHighResTimeStamp
 ---
+
 {{APIRef("High Resolution Time")}}
 
 Le type **`DOMHighResTimeStamp`** est un `double` et est utilisé pour stocker une valeur temporelle. La valeur peut représenter un point dans le temps ou la différence entre deux points dans le temps.
@@ -18,12 +18,11 @@ Dans Firefox, l'option `privacy.reduceTimerPrecision` est activée par défaut e
 
 ```js
 // précision temporelle réduite (2ms) dans Firefox 60
-event.timeStamp
+event.timeStamp;
 // 1519211809934
 // 1519211810362
 // 1519211811670
 // ...
-
 
 // précision temporelle réduite avec `privacy.resistFingerprinting` activé
 event.timeStamp;
@@ -37,7 +36,7 @@ Dans Firefox, vous pouvez aussi activer `privacy.resistFingerprinting`, la préc
 
 ## Propriétés
 
-*Ce type n'a pas de propriétés. C'est une valeur à virgule flottante double précision.*
+_Ce type n'a pas de propriétés. C'est une valeur à virgule flottante double précision._
 
 ### Valeur
 
@@ -48,7 +47,6 @@ La valeur d'un `DOMHighResTimeStamp` est un nombre flottant double précision qu
 L'**origine temporelle** est une heure qui est considéré comme l'heure de commencement de la vie du document. Elle est calculée comme suit :
 
 - Si l'{{Glossary("objet global")}} du script est {{domxref("Window")}}, l'origine temporelle est déterminée comme suit :
-
   - Si le {{domxref("Document")}} courant est le premier à être chargé dans la fenêtre, l'origine temporelle est l'heure à laquelle le contexte du navigateur a été créé.
   - Si pendant le processus de déchargement du document précédemment chargé dans la fenêtre, un dialogue de confirmation a été affiché pour demander à l'utilisateur de confirmer s'il souhaite quitter la page précédente, l'origine temporelle est l'heure à laquelle l'utilisateur a confirmé que naviguer vers la nouvelle page était acceptable.
   - Si aucun des points ci-dessus ne détermine l'origine temporelle, celle-ci est l'heure à laquelle la navigation responsable de la création du `Document` courant de la fenêtre a eu lieu.
@@ -62,16 +60,13 @@ _Ce type n'a pas de méthodes._
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                                       | Commentaire                                            |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------ |
-| {{SpecName('Highres Time Level 2', '#dom-domhighrestimestamp', 'DOMHighResTimeStamp')}} | {{Spec2('Highres Time Level 2')}} | Définitions plus strictes des interfaces et des types. |
-| {{SpecName('Highres Time', '#sec-DOMHighResTimeStamp', 'DOMHighResTimeStamp')}}             | {{Spec2('Highres Time')}}             | Définition initiale.                                   |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMHighResTimestamp")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Navigation Timing API](/en-US/docs/Navigation_timing)
-- [performance.now()](/en-US/docs/Web/API/Performance/now)
+- [Navigation Timing API](/fr/docs/Web/API/Performance_API/Navigation_timing)
+- [performance.now()](/fr/docs/Web/API/Performance/now)

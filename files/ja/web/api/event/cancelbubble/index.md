@@ -1,17 +1,14 @@
 ---
-title: Event.cancelBubble
+title: "Event: cancelBubble プロパティ"
+short-title: cancelBubble
 slug: Web/API/Event/cancelBubble
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - リファレンス
-  - 非推奨
-browser-compat: api.Event.cancelBubble
-translation_of: Web/API/Event/cancelBubble
+l10n:
+  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
-{{APIRef("DOM")}} {{Deprecated_Header}}
 
-**`cancelBubble`** は {{domxref("Event")}} インターフェイスのプロパティで、非推奨です。代わりに替わりに {{domxref("Event.stopPropagation()")}} を使用してください。
+{{APIRef("DOM")}}{{Deprecated_Header}}{{AvailableInWorkers}}
+
+**`cancelBubble`** は {{domxref("Event")}} インターフェイスのプロパティで、非推奨です。代わりに {{domxref("Event.stopPropagation()")}} を使用してください。
 イベントハンドラーから戻る前にこの値を `true` に設定すると、イベントの伝播を防ぐことができます。それ以降の実装では、この値を `false` に設定しても何も起こりません。
 詳しくは[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
 
@@ -22,10 +19,10 @@ translation_of: Web/API/Event/cancelBubble
 ## 例
 
 ```js
-elem.onclick = function(event) {
+elem.onclick = (event) => {
   // Do cool things here
   event.cancelBubble = true;
-}
+};
 ```
 
 ## 仕様書

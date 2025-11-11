@@ -1,20 +1,19 @@
 ---
 title: Window.open()
 slug: Web/API/Window/open
-translation_of: Web/API/Window/open
-browser-compat: api.Window.open
 ---
+
 {{APIRef}}
 
-La méthode **`open()`**, rattachée à l'interface [`Window`](/fr/docs/Web/API/Window), charge une ressource indiquée dans un contexte de navigation (onglet, fenêtre ou [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)) nouveau ou existant, avec un nom donné.
+La méthode **`open()`**, rattachée à l'interface [`Window`](/fr/docs/Web/API/Window), charge une ressource indiquée dans un contexte de navigation (onglet, fenêtre ou [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe)) nouveau ou existant, avec un nom donné.
 
 ## Syntaxe
 
 ```js
-open()
-open(url)
-open(url, target)
-open(url, target, windowFeatures)
+open();
+open(url);
+open(url, target);
+open(url, target, windowFeatures);
 ```
 
 ### Paramètres
@@ -23,9 +22,9 @@ open(url, target, windowFeatures)
   - : Une chaîne de caractères indiquant l'URL ou le chemin de la ressource à charger. S'il s'agit d'une chaîne de caractères vide (`""`) ou que ce paramètre est absent, une page blanche est chargée dans le contexte de navigation ciblé.
 
 - `target` {{optional_inline}}
-  - : Une chaîne de caractères sans espace qui indique le nom ([`Window.name`](/fr/docs/Web/API/Window/name)) du contexte de navigation dans lequel la ressource est chargée. Si le nom ne correspond pas à un contexte déjà existant, un nouveau contexte est créé avec ce nom. [Les mots-clés spécifiques pour `target`](/fr/docs/Web/HTML/Element/a#attr-target), `_self`, `_blank`, `_parent`, et `_top`, peuvent également être utilisés.
+  - : Une chaîne de caractères sans espace qui indique le nom ([`Window.name`](/fr/docs/Web/API/Window/name)) du contexte de navigation dans lequel la ressource est chargée. Si le nom ne correspond pas à un contexte déjà existant, un nouveau contexte est créé avec ce nom. [Les mots-clés spécifiques pour `target`](/fr/docs/Web/HTML/Reference/Elements/a#attr-target), `_self`, `_blank`, `_parent`, et `_top`, peuvent également être utilisés.
 
-    Le nom pourra être utilisé comme valeur pour l'attribut `target` d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a#attr-target) ou [`<form>`](/fr/docs/Web/HTML/Element/Form#attr-target).
+    Le nom pourra être utilisé comme valeur pour l'attribut `target` d'un élément [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a#attr-target) ou [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form#attr-target).
 
 - `windowFeatures` {{optional_inline}}
   - : Une chaîne de caractères contenant une liste de fonctionnalités de fenêtre, séparées par des virgules, de la forme `nom=valeur`, ou pour les fonctionnalités booléennes `nom` uniquement. Ces fonctionnalités incluent des options comme la taille et le positionnement par défaut de la fenêtre, s'il faut ouvrir une fenêtre popup minimale, etc. Les options suivantes sont prises en charge&nbsp;:
@@ -34,13 +33,15 @@ open(url, target, windowFeatures)
 
         Si `popup` n'est pas activée et qu'il n'y a pas d'autres fonctionnalités déclarées avec ce paramètre, le nouveau contexte de navigation sera un onglet.
 
-        > **Note :** Indiquer n'importe quelle fonctionnalité avec `windowFeatures`, en dehors de `noopener` ou `noreferrer`, aura pour effet de demander l'ouverture d'une popup.
+        > [!NOTE]
+        > Indiquer n'importe quelle fonctionnalité avec `windowFeatures`, en dehors de `noopener` ou `noreferrer`, aura pour effet de demander l'ouverture d'une popup.
 
         Pour activer cette fonctionnalité, on indiquera simplement le nom `popup` sans valeur ou avec les valeurs `yes`, `1`, ou `true`.
 
         Par exemple&nbsp;: `popup=yes`, `popup=1`, `popup=true`, et `popup` produiront le même résultat.
 
-        > **Note :** [La valeur `true` a été introduite en mars 2022](https://github.com/whatwg/html/pull/7425). Pour une meilleure compatibilité avec les anciens navigateurs, on utilisera une des autres valeurs.
+        > [!NOTE]
+        > [La valeur `true` a été introduite en mars 2022](https://github.com/whatwg/html/pull/7425). Pour une meilleure compatibilité avec les anciens navigateurs, on utilisera une des autres valeurs.
 
     - `width` ou `innerWidth`
       - : Indique la largeur de la zone de contenu, incluant les barres de défilement. La valeur minimale requise est 100.
@@ -60,7 +61,7 @@ open(url, target, windowFeatures)
         Lorsque `noopener` est utilisé, les noms de cibles qui ne sont pas vides et qui ne sont pas `_top`, `_self`, et `_parent`, sont traités comme `_blank` lorsqu'il s'agit de décider s'il faut ouvrir un nouveau contexte de navigation.
 
     - `noreferrer`
-      - : Si cette fonctionnalité est utilisée, le navigateur ne fournira pas d'en-tête [`Referer`](/fr/docs/Web/HTTP/Headers/Referer) et fixera d'office `noopener` à `true`. Voir [`rel="noreferrer"`](/fr/docs/Web/HTML/Link_types#noreferrer) pour plus d'informations.
+      - : Si cette fonctionnalité est utilisée, le navigateur ne fournira pas d'en-tête [`Referer`](/fr/docs/Web/HTTP/Reference/Headers/Referer) et fixera d'office `noopener` à `true`. Voir [`rel="noreferrer"`](/fr/docs/Web/HTML/Reference/Attributes/rel#noreferrer) pour plus d'informations.
 
 ### Valeur de retour
 
@@ -81,7 +82,11 @@ let windowObjectReference;
 let windowFeatures = "popup";
 
 function openRequestedPopup() {
-  windowObjectReference = window.open("https://www.mozilla.org/", "mozillaWindow", windowFeatures);
+  windowObjectReference = window.open(
+    "https://www.mozilla.org/",
+    "mozillaWindow",
+    windowFeatures,
+  );
 }
 ```
 
@@ -92,7 +97,11 @@ let windowObjectReference;
 let windowFeatures = "left=100,top=100,width=320,height=320";
 
 function openRequestedPopup() {
-  windowObjectReference = window.open("https://www.mozilla.org/", "mozillaWindow", windowFeatures);
+  windowObjectReference = window.open(
+    "https://www.mozilla.org/",
+    "mozillaWindow",
+    windowFeatures,
+  );
 }
 ```
 
@@ -110,110 +119,127 @@ function openRequestedPopup() {
 
 ```html
 <script type="text/javascript">
-var windowObjectReference = null; // variable globale
-function openMozillaPopup() {
-  if(windowObjectReference == null || windowObjectReference.closed)
-  /* si le pointeur vers l'objet window n'existe pas
+  var windowObjectReference = null; // variable globale
+  function openMozillaPopup() {
+    if (windowObjectReference == null || windowObjectReference.closed) {
+      /* si le pointeur vers l'objet window n'existe pas
      ou s'il existe mais que la fenêtre a été fermée */
-  {
-    windowObjectReference = window.open("https://www.mozilla.org/",
-   "MozillaWindowName", "popup");
-    /* on le crée. La nouvelle fenêtre sera créée et affichée
+      windowObjectReference = window.open(
+        "https://www.mozilla.org/",
+        "MozillaWindowName",
+        "popup",
+      );
+      /* on le crée. La nouvelle fenêtre sera créée et affichée
        par-dessus les éventuelles autres fenêtres. */
-  }
-  else
-  {
-    windowObjectReference.focus();
-    /* sinon la référence existe et la fenêtre n'est pas fermée
+    } else {
+      windowObjectReference.focus();
+      /* sinon la référence existe et la fenêtre n'est pas fermée
        on peut donc l'amener devant avec la méthode focus()
        sans avoir à recréer la fenêtre ou à recharger la 
        ressource référencée. */
-  };
-}
+    }
+  }
 </script>
 (...)
-<p><a
- href="https://www.mozilla.org/"
- target="MozillaWindowName"
- onclick="openMozillaPopup(); return false;"
- title="Ce lien créera une nouvelle fenêtre ou réutilisera une fenêtre déjà ouverte"
->Site Mozilla</a></p>
+<p>
+  <a
+    href="https://www.mozilla.org/"
+    target="MozillaWindowName"
+    onclick="openMozillaPopup(); return false;"
+    title="Ce lien créera une nouvelle fenêtre ou réutilisera une fenêtre déjà ouverte"
+    >Site Mozilla</a
+  >
+</p>
 ```
 
 Le fragment de code qui précède corrige certains problèmes relatifs aux liens ouvrants des fenêtres secondaires. L'instruction `return false;` présente dans l'attribut `onclick` permet d'annuler l'action par défaut du lien. Toutefois, si la prise en charge de JavaScript est désactivée ou inexistante, ce gestionnaire d'évènement est ignoré et le navigateur charge la ressource référencée avec le nom "MozillaWindowName" si elle existe ou, dans le cas contraire, crée une nouvelle fenêtre et l'appelle "MozillaWindowName".
 
 Pour en savoir plus sur l'attribut `target`, voir&nbsp;:
 
-- [La page de référence pour l'élément `<a>`](/fr/docs/Web/HTML/Element/a#target)
-- [La page de référence pour l'élément `<form>`](/fr/docs/Web/HTML/Element/Form#target)
+- [La page de référence pour l'élément `<a>`](/fr/docs/Web/HTML/Reference/Elements/a#target)
+- [La page de référence pour l'élément `<form>`](/fr/docs/Web/HTML/Reference/Elements/form#target)
 
 La fonction présentée ci-avant peut être réécrite pour qu'on puisse la réutiliser dans plusieurs situations&nbsp;:
 
 ```html
 <script type="text/javascript">
-var windowObjectReference = null; // variable globale
-function openRequestedPopup(url, windowName) {
-  if(windowObjectReference == null || windowObjectReference.closed) {
-    windowObjectReference = window.open(url, windowName, "popup");
-  } else {
-    windowObjectReference.focus();
-  };
-}
+  var windowObjectReference = null; // variable globale
+  function openRequestedPopup(url, windowName) {
+    if (windowObjectReference == null || windowObjectReference.closed) {
+      windowObjectReference = window.open(url, windowName, "popup");
+    } else {
+      windowObjectReference.focus();
+    }
+  }
 </script>
 (...)
-<p><a
- href="https://www.mozilla.org/"
- target="MozillaWindowName"
- onclick="openRequestedPopup(this.href, this.target); return false;"
- title="Ce lien créera une nouvelle fenêtre ou réutilisera une fenêtre déjà ouverte"
->Site Mozilla</a></p>
+<p>
+  <a
+    href="https://www.mozilla.org/"
+    target="MozillaWindowName"
+    onclick="openRequestedPopup(this.href, this.target); return false;"
+    title="Ce lien créera une nouvelle fenêtre ou réutilisera une fenêtre déjà ouverte"
+    >Site Mozilla</a
+  >
+</p>
 ```
 
 On peut aussi n'utiliser qu'une seule fenêtre secondaire et la réutiliser pour les autres liens&nbsp;:
 
 ```html
 <script type="text/javascript">
-var windowObjectReference = null; // variable globale
-var PreviousUrl; /* une variable globale qui stockera l'URL
+  var windowObjectReference = null; // variable globale
+  var PreviousUrl; /* une variable globale qui stockera l'URL
                     courante de la fenêtre secondaire */
-function openRequestedSinglePopup(url) {
-  if(windowObjectReference == null || windowObjectReference.closed) {
-    windowObjectReference = window.open(url, "SingleSecondaryWindowName",
-         "popup");
-  } else if(PreviousUrl != url) {
-    windowObjectReference = window.open(url, "SingleSecondaryWindowName",
-      "popup");
-    /* Si la ressource à charger est différente, on la charge dans
+  function openRequestedSinglePopup(url) {
+    if (windowObjectReference == null || windowObjectReference.closed) {
+      windowObjectReference = window.open(
+        url,
+        "SingleSecondaryWindowName",
+        "popup",
+      );
+    } else if (PreviousUrl != url) {
+      windowObjectReference = window.open(
+        url,
+        "SingleSecondaryWindowName",
+        "popup",
+      );
+      /* Si la ressource à charger est différente, on la charge dans
        la fenêtre secondaire déjà ouverte puis on place la nouvelle
        fenêtre au premier plan */
-    windowObjectReference.focus();
-  } else {
-    windowObjectReference.focus();
-  };
-  PreviousUrl = url;
-  /* On stocke l'URL courante afin de pouvoir la comparer dans 
+      windowObjectReference.focus();
+    } else {
+      windowObjectReference.focus();
+    }
+    PreviousUrl = url;
+    /* On stocke l'URL courante afin de pouvoir la comparer dans 
      le cas d'un autre appel à cette fonction. */
-}
+  }
 </script>
 (...)
-<p><a
- href="https://www.mozilla.org/"
- target="SingleSecondaryWindowName"
- onclick="openRequestedSinglePopup(this.href); return false;"
- title="Ce lien créera une nouvelle fenêtre ou réutilisera une fenêtre déjà ouverte"
->Site Mozilla</a></p>
-<p><a
- href="https://support.mozilla.org/fr/products/firefox"
- target="SingleSecondaryWindowName"
- onclick="openRequestedSinglePopup(this.href); return false;"
- title="Ce lien créera une nouvelle fenêtre ou réutilisera une fenêtre déjà ouverte"
->Assistance Firefox</a></p>
+<p>
+  <a
+    href="https://www.mozilla.org/"
+    target="SingleSecondaryWindowName"
+    onclick="openRequestedSinglePopup(this.href); return false;"
+    title="Ce lien créera une nouvelle fenêtre ou réutilisera une fenêtre déjà ouverte"
+    >Site Mozilla</a
+  >
+</p>
+<p>
+  <a
+    href="https://support.mozilla.org/fr/products/firefox"
+    target="SingleSecondaryWindowName"
+    onclick="openRequestedSinglePopup(this.href); return false;"
+    title="Ce lien créera une nouvelle fenêtre ou réutilisera une fenêtre déjà ouverte"
+    >Assistance Firefox</a
+  >
+</p>
 ```
 
 ## FAQ
 
 - Comment empêcher le message de confirmation demandant si on veut fermer la fenêtre&nbsp;?
-
   - : Ce n'est pas possible. **Les nouvelles fenêtres qui ne sont pas ouvertes par JavaScript ne peuvent pas être fermées par JavaScript.** Pour Firefox, la console JavaScript affichera le message d'avertissement suivant&nbsp;: `"Scripts may not close windows that were not opened by script."`. Dans le cas contraire, il serait trop facile de manipuler l'historique des sites visités.
 
     Voir la documentation de la méthode [`window.close()`](/fr/docs/Web/API/Window/close) pour en savoir plus.
@@ -225,7 +251,6 @@ function openRequestedSinglePopup(url) {
 - Comment désactiver la possibilité de redimensionner la fenêtre ou comment masquer les barres d'outils&nbsp;?
   - : Il n'est pas possible de forcer ce comportement. Ce sont les utilisatrices et utilisateurs du navigateur qui contrôlent ces fonctionnalités. Aussi, il est recommandé de toujours activer (si besoin) la possibilité de redimensionner et la présence des barres de défilement afin de respecter l'accessibilité du contenu et l'utilisabilité des fenêtres, dans l'intérêt de tout le monde.
 - Comment redimensionner une fenêtre afin que sa taille corresponde à celle de son contenu&nbsp;?
-
   - : On ne peut pas être certain que cela fonctionne, car les utilisatrices et utilisateurs peuvent empêcher le redimensionnement de la fenêtre (par exemple dans Firefox, la préférence `dom.disable_window_move_resize` vaut `true` par défaut).
 
 - Comment savoir qu'une fenêtre précédemment ouverte est toujours ouverte&nbsp;?
@@ -235,7 +260,6 @@ function openRequestedSinglePopup(url) {
 - Quelle relation JavaScript existe-t-il entre la fenêtre principale et la fenêtre secondaire&nbsp;?
   - : La méthode `window.open()` fournit à la fenêtre principale une référence vers la fenêtre secondaire. La propriété [`opener`](/fr/docs/Web/API/Window/opener) fournit à la fenêtre secondaire une référence vers la fenêtre principale.
 - Impossible d'accéder aux propriétés de la fenêtre secondaire en raison d'une exception JavaScript "Error: uncaught exception: Permission denied to get property blablabla". Pourquoi&nbsp;?
-
   - : Des raisons de sécurité, en l'occurrence la règle de même origine, empêche un script chargé dans une fenêtre depuis une autre origine **d'accéder ou de modifier** les propriétés d'une autre fenêtre ou les propriétés des objets HTML provenant d'une autre origine. Avant d'exécuter un script ciblant une fenêtre secondaire, le navigateur vérifiera depuis la fenêtre principale que la fenêtre secondaire partage bien la même origine.
 
     Pour en savoir plus, voir [la page de documentation quant à la règle de même origine](/fr/docs/Web/Security/Same-origin_policy)
@@ -277,7 +301,7 @@ Cela permet d'avertir correctement les personnes qui utilisent le site et de ré
 
 À ce sujet, on pourra lire&nbsp;:
 
-- [La section Accessibilité de la page de référence sur `<a>`](/fr/docs/Web/HTML/Element/a#accessibilité)
+- [La section Accessibilité de la page de référence sur `<a>`](/fr/docs/Web/HTML/Reference/Elements/a#accessibilité)
 - [G200 : Ouvrir de nouvelles fenêtres et onglets à partir d'un lien lorsque c'est strictement nécessaire - WCAG 2.0 (en anglais)](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
 - [G201 : Fournir un avertissement aux utilisateurs lorsqu'ils ouvrent une nouvelle fenêtre WCAG 2.0 (en anglais)](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
 
@@ -319,7 +343,7 @@ Pour plus de détails sur la détermination, voir [la section correspondante de 
 
 ### Notes sur les barres de défilement
 
-Lorsque le contenu dépasse de la zone d'affichage (<i lang="en">viewport</i>), des barres de défilement sont nécessaires pour s'assurer que le contenu puisse être accessible. Le contenu peut dépasser des dimensions de la fenêtre pour plusieurs raisons. Pour plus de détails, voir [le dépassement du contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content).
+Lorsque le contenu dépasse de la zone d'affichage (<i lang="en">viewport</i>), des barres de défilement sont nécessaires pour s'assurer que le contenu puisse être accessible. Le contenu peut dépasser des dimensions de la fenêtre pour plusieurs raisons. Pour plus de détails, voir [le dépassement du contenu](/fr/docs/Learn_web_development/Core/Styling_basics/Overflow).
 
 ### Note sur les corrections de position et de dimensions
 

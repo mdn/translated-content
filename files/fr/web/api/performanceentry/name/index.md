@@ -1,16 +1,8 @@
 ---
 title: PerformanceEntry.name
 slug: Web/API/PerformanceEntry/name
-tags:
-  - API
-  - Performance Timeline API
-  - PerformanceEntry
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
-translation_of: Web/API/PerformanceEntry/name
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 La propriété **`name`** de l'interface [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) renvoie une valeur qui précise davantage la valeur renvoyée par la propriété [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType). Cette propriété est en lecture seule.
@@ -27,13 +19,13 @@ var name = entry.name;
 
 La valeur de retour dépend du sous-type de l'objet `PerformanceEntry` et de la valeur de [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType), comme le montre le tableau ci-dessous.
 
-| Type de valeur pour `name`                | Sous-type                                                                                                                                          | Type (`entryType`)    | Description                                                                                                   |
-| ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------- |
-| [`URL`](/fr/docs/Web/API/URL)             | [`PerformanceFrameTiming`](/fr/docs/Web/API/PerformanceFrameTiming), [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) | `frame`, `navigation` | L'adresse du document.                                                                                        |
-| [`URL`](/fr/docs/Web/API/URL)             | [`PerformanceResourceTiming`](/fr/docs/Web/API/PerformanceResourceTiming)                                                                          | `resource`            | L'URL résolue de la ressource demandée. Cette valeur ne change pas même si la demande est redirigée.          |
-| [`DOMString`](/fr/docs/Web/API/DOMString) | [`PerformanceMark`](/fr/docs/Web/API/PerformanceMark)                                                                                              | `mark`                | Le nom utilisé lorsque le marqueur a été créé en appelant [`mark()`](/fr/docs/Web/API/Performance/mark).      |
-| [`DOMString`](/fr/docs/Web/API/DOMString) | [`PerformanceMeasure`](/fr/docs/Web/API/PerformanceMeasure)                                                                                        | `measure`             | Le nom utilisé lorsque la mesure a été créée en appelant [`measure()`](/fr/docs/Web/API/Performance/measure). |
-| [`DOMString`](/fr/docs/Web/API/DOMString) | [`PerformancePaintTiming`](/fr/docs/Web/API/PerformancePaintTiming)                                                                                | `paint`               | Soit `'first-paint'` ou `'first-contentful-paint'`.                                                           |
+| Type de valeur pour `name`                                             | Sous-type                                                                                                                                          | Type (`entryType`)    | Description                                                                                                   |
+| ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------- |
+| [`URL`](/fr/docs/Web/API/URL)                                          | [`PerformanceFrameTiming`](/fr/docs/Web/API/PerformanceFrameTiming), [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) | `frame`, `navigation` | L'adresse du document.                                                                                        |
+| [`URL`](/fr/docs/Web/API/URL)                                          | [`PerformanceResourceTiming`](/fr/docs/Web/API/PerformanceResourceTiming)                                                                          | `resource`            | L'URL résolue de la ressource demandée. Cette valeur ne change pas même si la demande est redirigée.          |
+| [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) | [`PerformanceMark`](/fr/docs/Web/API/PerformanceMark)                                                                                              | `mark`                | Le nom utilisé lorsque le marqueur a été créé en appelant [`mark()`](/fr/docs/Web/API/Performance/mark).      |
+| [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) | [`PerformanceMeasure`](/fr/docs/Web/API/PerformanceMeasure)                                                                                        | `measure`             | Le nom utilisé lorsque la mesure a été créée en appelant [`measure()`](/fr/docs/Web/API/Performance/measure). |
+| [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) | [`PerformancePaintTiming`](/fr/docs/Web/API/PerformancePaintTiming)                                                                                | `paint`               | Soit `'first-paint'` ou `'first-contentful-paint'`.                                                           |
 
 ## Exemple
 
@@ -69,8 +61,7 @@ function check_PerformanceEntry(obj) {
     let supported = properties[i] in obj;
     if (supported)
       console.log("..." + properties[i] + " = " + obj[properties[i]]);
-    else
-      console.log("..." + properties[i] + " = Not supported");
+    else console.log("..." + properties[i] + " = Not supported");
   }
   for (let i = 0; i < methods.length; i++) {
     // Vérifie chaque méthode
@@ -87,11 +78,8 @@ function check_PerformanceEntry(obj) {
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                                                   | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | -------------------- |
-| {{SpecName('Performance Timeline Level 2', '#dom-performanceentry-name', 'name')}} | {{Spec2('Performance Timeline Level 2')}} |                      |
-| {{SpecName('Performance Timeline', '#dom-performanceentry-name', 'name')}}             | {{Spec2('Performance Timeline')}}             | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceEntry.name")}}
+{{Compat}}

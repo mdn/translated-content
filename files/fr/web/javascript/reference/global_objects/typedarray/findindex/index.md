@@ -1,24 +1,26 @@
 ---
 title: TypedArray.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/findIndex
 ---
+
 {{JSRef}}
 
 La méthode **`findIndex()`** renvoie un **indice** d'un élément d'un tableau typé si cet élément remplit une condition définie par une fonction de test donnée. S'il n'y a aucun élément satisfaisant, -1 sera renvoyé.
 
 Voir aussi la méthode {{jsxref("TypedArray.find", "find()")}} qui renvoie la **valeur** de l'élément trouvé (au lieu de son indice).
 
-{{EmbedInteractiveExample("pages/js/typedarray-findindex.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.findIndex()")}}
+
+```js interactive-example
+function isNegative(element, index, array) {
+  return element < 0;
+}
+
+const int8 = new Int8Array([10, -20, 30, -40, 50]);
+
+console.log(int8.findIndex(isNegative));
+// Expected output: 1
+```
 
 ## Syntaxe
 
@@ -29,9 +31,7 @@ typedarray.findIndex(callback[, thisArg])
 ### Paramètres
 
 - `callback`
-
   - : La fonction à exécuter pour chaque valeur du tableau typé. Elle prend trois arguments :
-
     - `élément`
       - : L'élément du tableau typé en cours de traitement.
     - `index`
@@ -82,14 +82,11 @@ console.log(uint16.findIndex(estPremier)); // 2
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.findindex', '%TypedArray%.prototype.findIndex')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.findindex', '%TypedArray%.prototype.findIndex')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.findIndex")}}
+{{Compat}}
 
 ## Voir aussi
 

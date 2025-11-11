@@ -1,12 +1,11 @@
 ---
 title: Window.length
 slug: Web/API/Window/length
-translation_of: Web/API/Window/length
-browser-compat: api.Window.length
 ---
+
 {{ApiRef}}
 
-Renvoie le nombre de <i lang="en">frames</i> (que ce soit des éléments [`<frame>`](/fr/docs/Web/HTML/Element/frame) ou [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)) dans la fenêtre.
+Renvoie le nombre de <i lang="en">frames</i> (que ce soit des éléments [`<frame>`](/fr/docs/Web/HTML/Reference/Elements/frame) ou [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe)) dans la fenêtre.
 
 ## Valeur
 

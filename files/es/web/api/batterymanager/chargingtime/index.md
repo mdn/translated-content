@@ -1,16 +1,16 @@
 ---
 title: BatteryManager.chargingTime
 slug: Web/API/BatteryManager/chargingTime
-translation_of: Web/API/BatteryManager/chargingTime
-browser-compat: api.BatteryManager.chargingTime
 ---
+
 {{deprecated_header}}
 
 {{APIRef("Battery API")}}
 
 Indica la cantidad de tiempo, en segundos, que faltan para que la batería esté completamente cargada.
 
-> **Nota:** Incluso si el tiempo devuelto es exacto al segundo, los navegadores los redondean a un intervalo más alto (típicamente a los 15 minutos más cercanos) por razones de privacidad.
+> [!NOTE]
+> Incluso si el tiempo devuelto es exacto al segundo, los navegadores los redondean a un intervalo más alto (típicamente a los 15 minutos más cercanos) por razones de privacidad.
 
 ## Sintaxis
 
@@ -33,7 +33,7 @@ Si la batería está descargándose el valor es [`Infinity`](/es/docs/Web/JavaSc
 ### Contenido JavaScript
 
 ```js
-navigator.getBattery().then(function(battery) {
+navigator.getBattery().then(function (battery) {
   var time = battery.chargingTime;
 
   document.querySelector("#chargingTime").textContent = battery.chargingTime;

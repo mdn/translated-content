@@ -1,8 +1,8 @@
 ---
 title: CanvasRenderingContext2D.imageSmoothingEnabled
 slug: Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
-translation_of: Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
 ---
+
 {{APIRef}} {{SeeCompatTable}}
 
 La propriété `CanvasRenderingContext2D.imageSmoothingEnabled` de l'API Canvas 2D peut être affectée pour changer le fait que les images soient lissées (`true`, par défaut) ou non (`false`). Lors de la récupération de la propriété `imageSmoothingEnabled`, la dernière valeur à laquelle elle a été définie est renvoyée.
@@ -35,26 +35,26 @@ Dans cet exemple, on compare trois images. La première image est dessinée avec
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
+const canvas = document.getElementById("canvas");
 
-const ctx = canvas.getContext('2d');
-ctx.font = '16px sans-serif';
-ctx.textAlign = 'center';
+const ctx = canvas.getContext("2d");
+ctx.font = "16px sans-serif";
+ctx.textAlign = "center";
 
 const img = new Image();
-img.src = 'https://interactive-examples.mdn.mozilla.net/media/examples/star.png';
-img.onload = function() {
+img.src = "/shared-assets/images/examples/big-star.png";
+img.onload = function () {
   const w = img.width,
-        h = img.height;
+    h = img.height;
 
-  ctx.fillText('Source', w * .5, 20);
+  ctx.fillText("Source", w * 0.5, 20);
   ctx.drawImage(img, 0, 24, w, h);
 
-  ctx.fillText('Smoothing = TRUE', w * 2.5, 20);
+  ctx.fillText("Smoothing = TRUE", w * 2.5, 20);
   ctx.imageSmoothingEnabled = true;
   ctx.drawImage(img, w, 24, w * 3, h * 3);
 
-  ctx.fillText('Smoothing = FALSE', w * 5.5, 20);
+  ctx.fillText("Smoothing = FALSE", w * 5.5, 20);
   ctx.imageSmoothingEnabled = false;
   ctx.drawImage(img, w * 4, 24, w * 3, h * 3);
 };
@@ -66,13 +66,11 @@ img.onload = function() {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                    | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-imagesmoothingenabled", "CanvasRenderingContext2D.imageSmoothingEnabled")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.imageSmoothingEnabled")}}
+{{Compat}}
 
 ## Voir aussi
 

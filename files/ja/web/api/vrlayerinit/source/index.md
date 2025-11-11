@@ -1,25 +1,14 @@
 ---
 title: VRLayerInit.source
 slug: Web/API/VRLayerInit/source
-page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRLayerInit
-  - Virtual Reality
-  - WebVR
-  - source
-translation_of: Web/API/VRLayerInit/source
-original_slug: Web/API/VRLayer/source
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`source`** は {{domxref("VRLayerInit")}} インターフェイス（辞書）のプロパティで、 {{domxref("VRDisplay")}} によってコンテンツが表示されるキャンバスを定義します。
 
-> **Note:** このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> [!NOTE]
+> このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 ## 値
 
@@ -37,5 +26,4 @@ original_slug: Web/API/VRLayer/source
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

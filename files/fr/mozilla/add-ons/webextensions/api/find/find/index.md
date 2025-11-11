@@ -1,17 +1,9 @@
 ---
 title: find.find()
 slug: Mozilla/Add-ons/WebExtensions/API/find/find
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - find
-translation_of: Mozilla/Add-ons/WebExtensions/API/find/find
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Recherche du texte dans un onglet.
 
@@ -19,19 +11,19 @@ Vous pouvez utiliser cette fonction pour rechercher des pages Web HTTP(S) normal
 
 Vous pouvez rendre la recherche sensible à la casse et la faire correspondre uniquement à des mots entiers.
 
-Par défaut, la fonction renvoie juste le nombre de correspondances trouvées. En transmettant les options `includeRangeData` et  `includeRectData`, vous pouvez obtenir plus d'informations sur l'emplacement des correspondances dans l'onglet cible.
+Par défaut, la fonction renvoie juste le nombre de correspondances trouvées. En transmettant les options `includeRangeData` et `includeRectData`, vous pouvez obtenir plus d'informations sur l'emplacement des correspondances dans l'onglet cible.
 
 Cette fonction stocke les résultats en interne, donc la prochaine fois qu'une extension appelle {{WebExtAPIRef("find.highlightResults()")}}, alors les résultats de cet appel _find_ seront mis en surbrillance, jusqu'à ce que quelqu'un appelle `find()`.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 browser.find.find(
-  queryphrase,       // string
-  options            // optional object
-)
+  queryphrase, // string
+  options, // optional object
+);
 ```
 
 ### Paramètres
@@ -39,13 +31,11 @@ browser.find.find(
 - `queryphrase`
   - : `string`. Le texte à rechercher
 - `options`{{optional_inline}}
-
   - : `object`. Un objet spécifiant des options supplémentaires. Il peut prendre l'une des propriétés suivantes, toutes facultatives :
-
     - `tabId`
       - : `integer`. ID de l'onglet à rechercher. Par défaut à l'onglet actif
     - `caseSensitive`
-      - : `boolean`. Si true, la recherche est sensible à la casse. Par défault à  `false`.
+      - : `boolean`. Si true, la recherche est sensible à la casse. Par défault à `false`.
     - `entireWord`
       - : `boolean`. Comparaison seulement entre les mots entiers : ainsi "Tok" ne sera pas comparé dans "Tokyo". Par défaut à `false`.
     - `includeRangeData`
@@ -55,20 +45,18 @@ browser.find.find(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet contenant jusqu'à trois propriétés :
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet contenant jusqu'à trois propriétés :
 
 - `count`
   - : `integer`. Le nombre de résultat trouvés.
 - `rangeData`{{optional_inline}}
+  - : `array`. Si `includeRangeData` a été donné dans le paramètre `options`, cette propriété sera incluse. Il est fourni sous la forme d'un tableau d'objets `RangeData`, un pour chaque correspondance. Chaque objet `RangeData` décrit où la correspondance a été trouvée dans l'arborescence DOM. Cela permettrait, par exemple, une extension pour obtenir le texte entourant chaque correspondance, afin d'afficher le contexte pour les correspondances.
 
-  - : `array`. Si `includeRangeData` a été donné dans le paramètre  `options`, cette propriété sera incluse. Il est fourni sous la forme d'un tableau d'objets `RangeData`, un pour chaque correspondance. Chaque objet `RangeData` décrit où la correspondance a été trouvée dans l'arborescence DOM. Cela permettrait, par exemple, une extension pour obtenir le texte entourant chaque correspondance, afin d'afficher le contexte pour les correspondances.
-
-    Les élements correspondent aux éléments données dans `rectData`, donc `rangeData[i]` décrit la même correspondance que  `rectData[i]`.
+    Les élements correspondent aux éléments données dans `rectData`, donc `rangeData[i]` décrit la même correspondance que `rectData[i]`.
 
     Chaque `RangeData` contient les propriétés suivantes :
-
     - `framePos`
-      - : L'index de l'image contenant la correspondance. 0 correspond à une fenêtre parente. Notez que l'ordre des objets dans un tableau  `rangeData` s'alignera séquentiellement avec l'ordre des index d'images : par exemple, `framePos` pour la première séquence d'objets `rangeData` sera 0, `framePos` pour la séquence suivante sera 1, et ainsi de suite.
+      - : L'index de l'image contenant la correspondance. 0 correspond à une fenêtre parente. Notez que l'ordre des objets dans un tableau `rangeData` s'alignera séquentiellement avec l'ordre des index d'images : par exemple, `framePos` pour la première séquence d'objets `rangeData` sera 0, `framePos` pour la séquence suivante sera 1, et ainsi de suite.
     - `startTextNodePos`
       - : La position ordinale du noeud de texte dans lequel la correspondance a démarrée.
     - `endTextNodePos`
@@ -79,33 +67,28 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
       - : La position de la chaîne de caractères ordinale de la fin du mot trouvé dans le nœud de texte final.
 
 - `rectData`{{optional_inline}}
-
   - : `array`. Si `includeRectData` a été donné dans les paramètres des `options`, cette propriété sera incluse. C'est un tableau d'objets `RectData` . Il contient des rectangles clients pour tout le texte correspondant à la recherche, par rapport à la partie supérieure gauche de la fenêtre. Les extensions peuvent l'utiliser pour fournir une mise en évidence personnalisée les résultats..
 
     Chaque objet `RectData` contient des données rectangle pour une seule correspondance. Il a deux propriétés :
-
     - `rectsAndTexts`
-
       - : Un objet contenant deux propriétés, les deux tableaux :
-
         - `rectList`: un tableau d'objets ayant chacun quatre propriétés entières : `top`, `left`, `bottom`, `right`. Ceux-ci décrivent un rectangle par rapport à la partie supérieure gauche de la fenêtre.
-        - `textList`:  un tableau de chaînes, correspondant au tableau  `rectList`. L'entrée de `textList[i]` contient la partie du match délimitée par le rectangle de `rectList[i]`.
+        - `textList`: un tableau de chaînes, correspondant au tableau `rectList`. L'entrée de `textList[i]` contient la partie du match délimitée par le rectangle de `rectList[i]`.
 
         Par exemple, considérons une partie d'une page Web qui ressemble à ceci :
 
         ![](rects-1.png)Si vous recherchez "You may", la comparaison doit être décrit par deux rectangles :
 
         ![](rects-2.png)Dans le cas, dans le `RectData` qui décrit cette correspondance, `rectsAndTexts.rectList` et `rectsAndTexts.textList` auront chacun 2 éléments.
-
         - `textList[0]` contiendra "You ", et `rectList[0]` contiendra son rectangle de délimitation.
         - `textList[1]` contiendra "may", et `rectList[1]` contiendra son rectangle de délimitation.
 
     - `text`
       - : Le texte complet de comparaison, "You may" dans l'exemple ci-dessus.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.find.find", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -124,13 +107,13 @@ function found(results) {
 browser.find.find("banana").then(found);
 ```
 
-Rechercher "banana" dans tous les onglets (notez que cela nécessite la  [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "tabs", car il accède à `tab.url`):
+Rechercher "banana" dans tous les onglets (notez que cela nécessite la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "tabs", car il accède à `tab.url`):
 
 ```js
 async function findInAllTabs(allTabs) {
   for (let tab of allTabs) {
-    let results = await browser.find.find("banana", {tabId: tab.id});
-    console.log(`In page "${tab.url}": ${results.count} matches.`)
+    let results = await browser.find.find("banana", { tabId: tab.id });
+    console.log(`In page "${tab.url}": ${results.count} matches.`);
   }
 }
 
@@ -139,7 +122,7 @@ browser.tabs.query({}).then(findInAllTabs);
 
 ### Utilisation de rangeData
 
-Dans cet exemple, l'extension utilise `rangeData` pour obtenir le contexte dans lequel la correspondance a été trouvée. Le contexte est le  `textContent` complet du noeud dans lequel la correspondance a été trouvée. Si la correspondance s'étend sur des noeuds, le contexte est la concaténation du `textContent` de tous les noeuds étendus.
+Dans cet exemple, l'extension utilise `rangeData` pour obtenir le contexte dans lequel la correspondance a été trouvée. Le contexte est le `textContent` complet du noeud dans lequel la correspondance a été trouvée. Si la correspondance s'étend sur des noeuds, le contexte est la concaténation du `textContent` de tous les noeuds étendus.
 
 Notez que pour des raisons de simplicité, cet exemple ne gère pas les pages contenant des cadres. Pour cela, vous devez divisez `rangeData` en groupes, un par frame, et executer le script dans chaque image.
 
@@ -149,27 +132,26 @@ Le script d'arrière plan :
 // background.js
 
 async function getContexts(matches) {
-
   // get the active tab ID
   let activeTabArray = await browser.tabs.query({
-    active: true, currentWindow: true
+    active: true,
+    currentWindow: true,
   });
   let tabId = activeTabArray[0].id;
 
   // execute the content script in the active tab
-  await browser.tabs.executeScript(tabId, {file: "get-context.js"});
+  await browser.tabs.executeScript(tabId, { file: "get-context.js" });
   // ask the content script to get the contexts for us
   let contexts = await browser.tabs.sendMessage(tabId, {
-    ranges: matches.rangeData
+    ranges: matches.rangeData,
   });
   for (let context of contexts) {
     console.log(context);
   }
-
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  browser.find.find("example", {includeRangeData: true}).then(getContexts);
+  browser.find.find("example", { includeRangeData: true }).then(getContexts);
 });
 ```
 
@@ -180,9 +162,14 @@ Le script de contenu :
  * Get all the text nodes into a single array
  */
 function getNodes() {
-  let walker = document.createTreeWalker(document, window.NodeFilter.SHOW_TEXT, null, false);
+  let walker = document.createTreeWalker(
+    document,
+    window.NodeFilter.SHOW_TEXT,
+    null,
+    false,
+  );
   let nodes = [];
-  while(node = walker.nextNode()) {
+  while ((node = walker.nextNode())) {
     nodes.push(node);
   }
 
@@ -196,7 +183,6 @@ function getNodes() {
  * of each node.
  */
 function getContexts(ranges) {
-
   let contexts = [];
   let nodes = getNodes();
 
@@ -229,21 +215,21 @@ Le script d'arrière-plan :
 // background.js
 
 async function redact(matches) {
-
   // get the active tab ID
   let activeTabArray = await browser.tabs.query({
-    active: true, currentWindow: true
+    active: true,
+    currentWindow: true,
   });
   let tabId = activeTabArray[0].id;
 
   // execute the content script in the active tab
-  await browser.tabs.executeScript(tabId, {file: "redact.js"});
+  await browser.tabs.executeScript(tabId, { file: "redact.js" });
   // ask the content script to redact matches for us
-  await browser.tabs.sendMessage(tabId, {rects: matches.rectData});
+  await browser.tabs.sendMessage(tabId, { rects: matches.rectData });
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  browser.find.find("banana", {includeRectData: true}).then(redact);
+  browser.find.find("banana", { includeRectData: true }).then(redact);
 });
 ```
 
@@ -261,8 +247,8 @@ function redactRect(rect) {
   redaction.style.position = "absolute";
   redaction.style.top = `${rect.top}px`;
   redaction.style.left = `${rect.left}px`;
-  redaction.style.width = `${rect.right-rect.left}px`;
-  redaction.style.height = `${rect.bottom-rect.top}px`;
+  redaction.style.width = `${rect.right - rect.left}px`;
+  redaction.style.height = `${rect.bottom - rect.top}px`;
   document.body.appendChild(redaction);
 }
 

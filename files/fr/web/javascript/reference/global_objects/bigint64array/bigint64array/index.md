@@ -1,9 +1,8 @@
 ---
 title: Constructeur BigInt64Array()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt64Array/BigInt64Array
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt64Array/BigInt64Array
-browser-compat: javascript.builtins.BigInt64Array.BigInt64Array
 ---
+
 {{JSRef}}
 
 Le **constructeur `BigInt64Array()`** permet de créer un nouveau tableau typé [`BigInt64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array) dont les éléments sont des entiers signés sur 64 bits, utilisant le boutisme de la plateforme. S'il est nécessaire de contrôler l'ordre des octets, on utilisera un objet [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView) à la place. Lors de la construction, les éléments du tableau sont initialisés avec la valeur `0n`. Une fois le tableau construit, on peut faire référence aux éléments du tableau à l'aide des méthodes de l'objet ou en utilisant la notation avec les crochets et l'indice voulu.
@@ -45,7 +44,7 @@ console.log(bigint64.length); // 2
 console.log(bigint64.BYTES_PER_ELEMENT); // 8
 
 // À partir d'un tableau
-const arr = new BigInt64Array([21n,31n]);
+const arr = new BigInt64Array([21n, 31n]);
 console.log(arr[1]); // 31n
 
 // À partir d'un autre tableau typé
@@ -58,7 +57,9 @@ const buffer = new ArrayBuffer(32);
 const z = new BigInt64Array(buffer, 0, 4);
 
 // À partir d'un itérable
-const iterable = function*(){ yield* [1n, 2n, 3n]; }();
+const iterable = (function* () {
+  yield* [1n, 2n, 3n];
+})();
 const bigint64 = new BigInt64Array(iterable);
 // BigInt64Array[1n, 2n, 3n]
 ```
@@ -73,6 +74,6 @@ const bigint64 = new BigInt64Array(iterable);
 
 ## Voir aussi
 
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Typed_arrays)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - [`BigUint64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array)
 - [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView)

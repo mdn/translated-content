@@ -1,10 +1,8 @@
 ---
 title: window.closed
 slug: Web/API/Window/closed
-tags:
-  - Référence_du_DOM_Gecko
-translation_of: Web/API/Window/closed
 ---
+
 {{ ApiRef() }}
 
 ### Résumé

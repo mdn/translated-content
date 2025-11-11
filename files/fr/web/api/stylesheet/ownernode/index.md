@@ -1,8 +1,8 @@
 ---
 title: StyleSheet.ownerNode
 slug: Web/API/StyleSheet/ownerNode
-translation_of: Web/API/StyleSheet/ownerNode
 ---
+
 {{APIRef ("CSSOM")}}
 
 **OwnerNode** renvoie le noeud qui associe cette feuille de style au document.
@@ -10,25 +10,25 @@ translation_of: Web/API/StyleSheet/ownerNode
 ## Syntaxe
 
 ```js
-ObjRef = stylesheet.ownerNode
+objref = stylesheet.ownerNode;
 ```
 
 ## Exemple
 
 ```html
-<Html>
- <Head>
-  <Link rel = "StyleSheet" href = "example.css" type = "text / css" />
-  <Script>
-   Function stilo () {
-    Alerte (document.styleSheets [0] .ownerNode);
-   }
-  </ Script>
- </ Head>
- <Body>
-   <Button onclick = "stilo ()"> ss </ button>
- </ Body>
-</ Html>
+<html>
+  <head>
+    <link rel="stylesheet" href="example.css" type="text/css" />
+    <script>
+      function stilo() {
+        alert(document.styleSheets[0].ownerNode);
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="stilo()">ss</button>
+  </body>
+</html>
 // affiche "objet HTMLLinkElement"
 ```
 

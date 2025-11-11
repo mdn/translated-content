@@ -1,23 +1,22 @@
 ---
 title: Préprocesseur CSS
 slug: Glossary/CSS_preprocessor
-tags:
-  - CSS
-  - Glossaire
-translation_of: Glossary/CSS_preprocessor
-original_slug: Glossaire/preprocesseur_CSS
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-Un **préprocesseur** **CSS** est un programme qui vous permet de générer des {{Glossary("CSS")}} à partir d'un unique préprocesseur propriétaire {{Glossary("Syntax")}}. Il y a de nombreux préprocesseurs CSS au choix, mais la plupart des préprocesseurs CSS ajoutent quelques fonctionnalités qui n'existent pas en CSS pur, telles que {{Glossary("Variable","variable")}}, mixin, sélecteur d'imbrication, etc. Ces fonctionnalités rendent la structure CSS plus lisible et plus facile à maintenir.
 
-Pour utiliser un préprocesseur CSS, vous devez installer un compilateur CSS sur votre {{Glossary("Server","serveur")}} web.
+Un **préprocesseur** **CSS** est un programme qui vous permet de générer des {{Glossary("CSS")}} à partir d'un unique préprocesseur propriétaire {{Glossary("Syntax")}}.
 
-## En apprendre plus
+Il existe de nombreux préprocesseurs CSS, mais la plupart ajoutent des fonctionnalités qui n'existent pas en CSS pur, comme les mixins, les sélecteurs imbriqués, les sélecteurs d'héritage, etc. Ces fonctionnalités rendent la structure CSS plus lisible et plus facile à maintenir.
 
-### Culture générale
+Pour utiliser un préprocesseur CSS, vous devez installer un compilateur CSS sur votre {{Glossary("server", "serveur")}} web&nbsp;; ou utiliser le préprocesseur CSS pour compiler dans l'environnement de développement, puis téléverser le fichier CSS compilé sur le serveur web.
 
-Ici certains des préprocesseurs CSS les plus populaires:
+## Voir aussi
 
-- [SASS](http://sass-lang.com/)
-- [LESS](http://lesscss.org/)
-- [Stylus](http://stylus-lang.com/)
-- [PostCSS](http://postcss.org/)
+- Certains des préprocesseurs CSS les plus populaires:
+  - [SASS <sup>(angl.)</sup>](https://sass-lang.com/)
+  - [LESS <sup>(angl.)</sup>](https://lesscss.org/)
+  - [Stylus <sup>(angl.)</sup>](http://stylus-lang.com/)
+
+- Terme associé du glossaire&nbsp;:
+  - {{Glossary("CSS")}}

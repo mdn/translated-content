@@ -1,16 +1,8 @@
 ---
 title: Request.json()
 slug: Web/API/Request/json
-page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch
-  - JSON
-  - Method
-  - Reference
-  - Request
-translation_of: Web/API/Request/json
 ---
+
 {{APIRef("Fetch API")}}
 
 {{domxref("Request")}} 接口的 **`json()`** 方法读取请求体并将其作为一个 promise 返回，该 promise 将兑现一个由响应体的文本解析得到的 {{JSxRef("JSON")}}。
@@ -19,7 +11,7 @@ translation_of: Web/API/Request/json
 
 ## 语法
 
-```js
+```js-nolint
 json()
 ```
 
@@ -34,14 +26,14 @@ json()
 ## 示例
 
 ```js
-const obj = {hello: 'world'};
+const obj = { hello: "world" };
 
-const request = new Request('/myEndpoint', {
-  method: 'POST',
-  body: JSON.stringify(obj)
- });
+const request = new Request("/myEndpoint", {
+  method: "POST",
+  body: JSON.stringify(obj),
+});
 
-request.json().then(function(data) {
+request.json().then(function (data) {
   // do something with the data sent in the request
 });
 ```

@@ -1,15 +1,11 @@
 ---
-title: CSSRule.parentStyleSheet
+title: "CSSRule: parentStyleSheet プロパティ"
+short-title: parentStyleSheet
 slug: Web/API/CSSRule/parentStyleSheet
-tags:
-  - API
-  - CSSOM
-  - CSSRule
-  - プロパティ
-  - リファレンス
-browser-compat: api.CSSRule.parentStyleSheet
-translation_of: Web/API/CSSRule/parentStyleSheet
+l10n:
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`parentStyleSheet`** は {{domxref("CSSRule")}} インターフェイスのプロパティで、現在のルールを定義している {{domxref("StyleSheet")}} オブジェクトを返します。
@@ -21,8 +17,8 @@ translation_of: Web/API/CSSRule/parentStyleSheet
 ## 例
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules.parentStyleSheet);
+const docRules = document.styleSheets[0].cssRules;
+console.log(docRules[0].parentStyleSheet == document.styleSheets[0]); // returns true
 ```
 
 ## 仕様書

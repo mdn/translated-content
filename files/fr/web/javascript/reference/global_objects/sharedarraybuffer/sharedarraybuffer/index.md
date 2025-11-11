@@ -1,22 +1,30 @@
 ---
 title: Constructeur SharedArrayBuffer()
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer
-translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer
-browser-compat: javascript.builtins.SharedArrayBuffer.SharedArrayBuffer
 ---
+
 {{JSRef}}
 
-> **Note :** `SharedArrayBuffer` a été désactivé par défaut pour l'ensemble des navigateurs principaux le 5 janvier 2018 en réponse à la faille [Spectre](https://meltdownattack.com/). Chrome [a réactivé cette fonctionnalité à partir de la version 67](https://bugs.chromium.org/p/chromium/issues/detail?id=821270) sur les plateformes où la fonctionnalité d'isolation des sites est activée et protège des vulnérabilités analogues à Spectre.
+> [!NOTE]
+> `SharedArrayBuffer` a été désactivé par défaut pour l'ensemble des navigateurs principaux le 5 janvier 2018 en réponse à la faille [Spectre](https://meltdownattack.com/). Chrome [a réactivé cette fonctionnalité à partir de la version 67](https://bugs.chromium.org/p/chromium/issues/detail?id=821270) sur les plateformes où la fonctionnalité d'isolation des sites est activée et protège des vulnérabilités analogues à Spectre.
 
 Le **constructeur `SharedArrayBuffer()`** permet de créer un objet [`SharedArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) qui représente un tampon de mémoire binaire brute de taille fixe, similaire à un objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
 
-{{EmbedInteractiveExample("pages/js/sharedarraybuffer-constructor.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: SharedArrayBuffer Constructor", "shorter")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(8);
+
+console.log(buffer.byteLength);
+// Expected output: 8
+```
 
 ## Syntaxe
 
 ```js
-new SharedArrayBuffer()
-new SharedArrayBuffer(longueur)
+new SharedArrayBuffer();
+new SharedArrayBuffer(longueur);
 ```
 
 ### Paramètres
@@ -56,4 +64,4 @@ const sab = new SharedArrayBuffer(1024);
 
 - [`Atomics`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Atomics)
 - [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Typed_arrays)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)

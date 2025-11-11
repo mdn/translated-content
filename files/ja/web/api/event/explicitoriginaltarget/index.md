@@ -1,22 +1,18 @@
 ---
-title: Event.explicitOriginalTarget
+title: "Event: explicitOriginalTarget プロパティ"
+short-title: explicitOriginalTarget
 slug: Web/API/Event/explicitOriginalTarget
-page-type: web-api-instance-property
-tags:
-  - Non-standard
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.Event.explicitOriginalTarget
-translation_of: Web/API/Event/explicitOriginalTarget
+l10n:
+  sourceCommit: c20c12fab32381b983b4148d712fda227d34e2bd
 ---
-{{APIRef("DOM")}}{{Non-standard_Header}}
+
+{{APIRef("DOM")}}{{Non-standard_Header}}{{AvailableInWorkers}}
 
 **`explicitOriginalTarget`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、このイベントの無名ではない元のターゲットを返します。
 
 イベントが無名境界通過以外の何らかの理由で再ターゲットされた場合、再ターゲットが発生する前にターゲットに設定されます。
 
-例えば、マウスイベントがテキストノードの上で発生した場合、その親ノードに再ターゲットされます（{{Bug(185889)}} 参照）。この場合、 [`currentTarget`](/ja/docs/Web/API/Event/currentTarget) は親ノードを表示し、このプロパティはテキストノードを表示することになります。
+例えば、マウスイベントがテキストノードの上で発生した場合、その親ノードに再ターゲットされます（[Firefox バグ 185889](https://bugzil.la/185889) 参照）。この場合、 [`currentTarget`](/ja/docs/Web/API/Event/currentTarget) は親ノードを表示し、このプロパティはテキストノードを表示することになります。
 
 このプロパティは [`originalTarget`](/ja/docs/Web/API/Event/originalTarget) とも異なり、無名のコンテンツを含むことはありません。
 
@@ -51,7 +47,3 @@ _これは Mozilla 固有のプロパティであり、現在のどの仕様に�
 ## ブラウザーの互換性
 
 {{Compat}}
-
-## 関連情報
-
-- [イベントターゲットの比較](/ja/docs/Web/API/Event/Comparison_of_Event_Targets)

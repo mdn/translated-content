@@ -1,20 +1,13 @@
 ---
 title: DelayNode
 slug: Web/API/DelayNode
-page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - DelayNode
-  - Interface
-  - Reference
-  - Web Audio API
-browser-compat: api.DelayNode
-translation_of: Web/API/DelayNode
+l10n:
+  sourceCommit: fa1301aead2cee37516b7ad5a5ec2fb21e004227
 ---
+
 {{APIRef("Web Audio API")}}
 
-**`DelayNode`** は[信号遅延](http://en.wikipedia.org/wiki/Digital_delay_line)を表します。 {{domxref("AudioNode")}} の一種で、入力されたデータを指定された時間遅延して、出力します。
+**`DelayNode`** は[信号遅延](https://en.wikipedia.org/wiki/Digital_delay_line)を表します。 {{domxref("AudioNode")}} の一種で、入力されたデータを指定された時間遅延して、出力します。
 
 `DelayNode` の入力と出力は常に 1 つで、入力のチャンネル数と出力のチャンネル数は同じです。
 
@@ -52,16 +45,16 @@ translation_of: Web/API/DelayNode
 ## コンストラクター
 
 - {{domxref("DelayNode.DelayNode", "DelayNode()")}}
-  - : DelayNode オブジェクトのインスタンスを新規に作成します。別の方法として、 {{domxref("BaseAudioContext.createDelay()")}} ファクトリーメソッドを使用することもできます。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
+  - : DelayNode オブジェクトのインスタンスを新規に作成します。別の方法として、 {{domxref("BaseAudioContext.createDelay()")}} ファクトリーメソッドを使用することもできます。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
 
-## プロパティ
+## インスタンスプロパティ
 
 _親である {{domxref("AudioNode")}} からプロパティを継承しています。_
 
-- {{domxref("DelayNode.delayTime")}} {{readonlyInline}}
+- {{domxref("DelayNode.delayTime")}} {{ReadOnlyInline}}
   - : [a-rate](/ja/docs/Web/API/AudioParam#a-rate) の {{domxref("AudioParam")}} で、遅延させる時間を秒単位で指定します。
 
-## メソッド
+## インスタンスメソッド
 
 _固有のメソッドはありません。親である {{domxref("AudioNode")}} からメソッドを継承しています。_
 
@@ -79,4 +72,4 @@ _固有のメソッドはありません。親である {{domxref("AudioNode")}}
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

@@ -1,13 +1,8 @@
 ---
 title: SVGDescElement
 slug: Web/API/SVGDescElement
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVG DOM
-translation_of: Web/API/SVGDescElement
 ---
+
 {{APIRef("SVG")}}
 
 L'interface **`SVGDescElement`** correspond à l'élément {{SVGElement("desc")}}.
@@ -24,14 +19,11 @@ _Cette interface n'a pas de méthode propre mais hérite des méthodes de son pa
 
 ## Spécifications
 
-| Spécification                                                                                            | État                     | Commentaires                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | --------------------------------------------------------------------------------------------------------- |
-| {{SpecName("SVG2", "struct.html#InterfaceSVGDescElement", "SVGDescElement")}} | {{Spec2("SVG2")}} | Retrait de l'héritage depuis {{domxref("SVGLangSpace")}} et {{domxref("SVGStylable")}} |
-| {{SpecName("SVG1.1", "struct.html#InterfaceSVGDescElement", "SVGDescElement")}} | {{Spec2("SVG1.1")}} | Définition initiale.                                                                                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.SVGDescElement")}}
+{{Compat}}
 
 ## Voir aussi
 

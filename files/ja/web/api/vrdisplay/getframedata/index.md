@@ -1,32 +1,21 @@
 ---
 title: VRDisplay.getFrameData()
 slug: Web/API/VRDisplay/getFrameData
-page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Method
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - getFrameData
-browser-compat: api.VRDisplay.getFrameData
-translation_of: Web/API/VRDisplay/getFrameData
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`getFrameData()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、 {{domxref("VRFrameData")}} オブジェクトを受け取り、現在のフレームをレンダリングするために必要な情報を入力します。
 
-> **Note:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> [!NOTE]
+> このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 現在のフレームの {{domxref("VRPose")}} とビューおよび投影行列が含まれます。
 
 ## 構文
 
 ```js
-getFrameData(frameData)
+getFrameData(frameData);
 ```
 
 ### 引数
@@ -102,7 +91,8 @@ function drawVRScene() {
 }
 ```
 
-> **Note:** この完全なコードは [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js) で見ることができます。
+> [!NOTE]
+> この完全なコードは [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js) で見ることができます。
 
 ## 仕様書
 
@@ -116,5 +106,4 @@ function drawVRScene() {
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

@@ -1,14 +1,8 @@
 ---
 title: WebGLRenderingContext.vertexAttribPointer()
 slug: Web/API/WebGLRenderingContext/vertexAttribPointer
-tags:
-  - API
-  - Méthode
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/vertexAttribPointer
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode **`WebGLRenderingContext.vertexAttribPointer()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) spécifie la disposition en mémoire de l'objet de tampon vertex. Elle doit être appelée une fois pour chaque attribut de sommet.
@@ -26,22 +20,17 @@ void gl.vertexAttribPointer(indice, taille, type, normalise, pas, decalage);
 - `taille`
   - : Un {{domxref("GLint")}} indiquant le nombre de composantes par attribut de sommet. Doit être 1, 2, 3 ou 4.
 - `type`
-
   - : Un {{domxref ("GLenum")}} spécifiant le type de données de chaque composante dans le tableau. Valeurs possibles :
-
     - `gl.BYTE` : entier signé sur 8 bits, à valeurs dans \[-128, 127]
     - `gl.SHORT` : entier signé sur 16 bits, à valeurs dans \[-32768, 32767]
     - `gl.UNSIGNED_BYTE` : entier non signé sur 8 bits, à valeurs dans \[0, 255]
     - `gl.UNSIGNED_SHORT` : entier non signé sur 16 bits, à valeurs dans \[0, 65535]
     - `gl.FLOAT` : nombre flottant IEEE 32 bits
     - lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL context 2", "", 1)}}, la valeur suivante est en outre disponible :
-
       - `gl.HALF_FLOAT` : nombre flottant IEEE 16 bits
 
 - `normalise`
-
   - : Un {{domxref("GLboolean")}} indiquant si les valeurs des données entières doivent être normalisées dans une certaine plage lorsqu'elles sont converties en flottant.
-
     - Pour les types `gl.BYTE` et `gl.SHORT`, normalise les valeurs à \[-1, 1] si `true`.
     - Pour les types `gl.UNSIGNED_BYTE` et `gl.UNSIGNED_SHORT`, normalise les valeurs à \[0, 1] si `true`.
     - Pour les types `gl.FLOAT` et `gl.HALF_FLOAT`, ce paramètre est sans effet.
@@ -58,9 +47,9 @@ Aucune.
 ### Exceptions
 
 - Une erreur `gl.INVALID_VALUE` est déclenchée si `decalage` est négatif.
-- Une erreur `gl.INVALID_OPERATION` est déclenchée si  `pas` et `decalage` ne sont pas des multiples de la taille du type de données.
-- Une erreur  `gl.INVALID_OPERATION` est déclenchée si aucun WebGLBuffer n'est lié à la cible ARRAY_BUFFER.
-- Lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, une erreur  `gl.INVALID_OPERATION` est déclenchée si l'attribut du sommet est défini comme entier dans le shader de sommet (par ex., `uvec4` or `ivec4`, iau lieu de `vec4`).
+- Une erreur `gl.INVALID_OPERATION` est déclenchée si `pas` et `decalage` ne sont pas des multiples de la taille du type de données.
+- Une erreur `gl.INVALID_OPERATION` est déclenchée si aucun WebGLBuffer n'est lié à la cible ARRAY_BUFFER.
+- Lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, une erreur `gl.INVALID_OPERATION` est déclenchée si l'attribut du sommet est défini comme entier dans le shader de sommet (par ex., `uvec4` or `ivec4`, iau lieu de `vec4`).
 
 ## Description
 
@@ -138,7 +127,7 @@ Tout d'abord, nous créons dynamiquement le tampon des tableaux à partir de don
 
 ```js
 // Charger la géometrie avec fetch() et Response.json()
-const response = await fetch('assets/geometry.json');
+const response = await fetch("assets/geometry.json");
 const sommets = await response.json();
 
 // Créer le tampon des tableaux
@@ -149,19 +138,19 @@ for (let i = 0; i < sommets.length; i++) {
   dv.setFloat32(20 * i, sommets[i].position[0], true);
   dv.setFloat32(20 * i + 4, sommets[i].position[1], true);
   dv.setFloat32(20 * i + 8, sommets[i].position[2], true);
-  dv.setInt8(20 * i + 12, sommets[i].normale[0] * 0x7F);
-  dv.setInt8(20 * i + 13, sommets[i].normale[1] * 0x7F);
-  dv.setInt8(20 * i + 14, sommets[i].normale[2] * 0x7F);
+  dv.setInt8(20 * i + 12, sommets[i].normale[0] * 0x7f);
+  dv.setInt8(20 * i + 13, sommets[i].normale[1] * 0x7f);
+  dv.setInt8(20 * i + 14, sommets[i].normale[2] * 0x7f);
   dv.setInt8(20 * i + 15, 0);
-  dv.setUint16(20 * i + 16, sommets[i].coordTex[0] * 0xFFFF, true);
-  dv.setUint16(20 * i + 18, sommets[i].coordTex[1] * 0xFFFF, true);
+  dv.setUint16(20 * i + 16, sommets[i].coordTex[0] * 0xffff, true);
+  dv.setUint16(20 * i + 18, sommets[i].coordTex[1] * 0xffff, true);
 }
 ```
 
 Pour de meilleures performances, nous pourrions également effectuer la conversion JSON vers ArrayBuffer précédente du côté serveur, par ex. avec Node.js. Nous pourrions alors charger le fichier binaire et l'interpréter comme un tampon de tableaux :
 
 ```js
-const response = await fetch('assets/geometry.bin');
+const response = await fetch("assets/geometry.bin");
 const tampon = await response.arrayBuffer();
 ```
 
@@ -191,9 +180,9 @@ gl.vertexAttribPointer(2, 2, gl.UNSIGNED_SHORT, true, 20, 16);
 gl.enableVertexAttribArray(2);
 
 // Définir les attributs dans le shader de sommet aux mêmes indices
-gl.bindAttribLocation(shaderProgram, 0, 'position');
-gl.bindAttribLocation(shaderProgram, 1, 'normal');
-gl.bindAttribLocation(shaderProgram, 2, 'texUV');
+gl.bindAttribLocation(shaderProgram, 0, "position");
+gl.bindAttribLocation(shaderProgram, 1, "normal");
+gl.bindAttribLocation(shaderProgram, 2, "texUV");
 // Du fait que indices des attributs ont changé, nous devons refaire l'édition de liens du shader
 // Noter que cela réinitialisera tous les uniforms qui avaient été précédemment définis.
 gl.linkProgram(shaderProgram);
@@ -202,48 +191,26 @@ gl.linkProgram(shaderProgram);
 soit en utilisant l'indice fourni par la carte graphique, au lieu de le définir nous-mêmes ; cela évite la réédition des liens du programme shader.
 
 ```js
-const positionLoc = gl.getAttribLocation(shaderProgram, 'position');
+const positionLoc = gl.getAttribLocation(shaderProgram, "position");
 gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, 20, 0);
 gl.enableVertexAttribArray(positionLoc);
 
-const normalLoc = gl.getAttribLocation(shaderProgram, 'normal');
+const normalLoc = gl.getAttribLocation(shaderProgram, "normal");
 gl.vertexAttribPointer(normalLoc, 4, gl.BYTE, true, 20, 12);
 gl.enableVertexAttribArray(normalLoc);
 
-const texUVLoc = gl.getAttribLocation(shaderProgram, 'texUV');
+const texUVLoc = gl.getAttribLocation(shaderProgram, "texUV");
 gl.vertexAttribPointer(texUVLoc, 2, gl.UNSIGNED_SHORT, true, 20, 16);
 gl.enableVertexAttribArray(texUVLoc);
 ```
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('WebGL', "#5.14.10", "vertexAttribPointer")}}
-      </td>
-      <td>{{Spec2('WebGL')}}</td>
-      <td><p>Définition initiale.</p></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('OpenGL ES 2.0', "glVertexAttribPointer.xml", "glVertexAttribPointer")}}
-      </td>
-      <td>{{Spec2('OpenGL ES 2.0')}}</td>
-      <td><p>Page man de l’API OpenGL.</p></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.vertexAttribPointer")}}
+{{Compat}}
 
 ## Voir aussi
 

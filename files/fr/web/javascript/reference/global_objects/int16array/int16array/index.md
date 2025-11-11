@@ -1,9 +1,8 @@
 ---
 title: Constructeur Int16Array()
 slug: Web/JavaScript/Reference/Global_Objects/Int16Array/Int16Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Int16Array/Int16Array
-browser-compat: javascript.builtins.Int16Array.Int16Array
 ---
+
 {{JSRef}}
 
 Le **constructeur `Int16Array()`** permet de créer un nouveau tableau typé [`Int16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int16Array) dont les éléments sont des nombres entiers signés en complément à deux, représentés sur 16 bits et utilisant le boutisme de la plateforme. S'il est nécessaire de contrôler l'ordre des octets, on utilisera un objet [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView) à la place. Lors de la construction, les éléments du tableau sont initialisés avec la valeur `0`. Une fois le tableau construit, on peut faire référence aux éléments du tableau à l'aide des méthodes de l'objet ou en utilisant la notation avec les crochets et l'indice voulu.
@@ -45,7 +44,7 @@ console.log(int16.length); // 2
 console.log(int16.BYTES_PER_ELEMENT); // 2
 
 // À partir d'un tableau
-const arr = new Int16Array([21,31]);
+const arr = new Int16Array([21, 31]);
 console.log(arr[1]); // 31
 
 // À partir d'un autre tableau typé
@@ -58,7 +57,9 @@ const buffer = new ArrayBuffer(8);
 const z = new Int16Array(buffer, 0, 4);
 
 // À partir d'un itérable
-const iterable = function*(){ yield* [1,2,3]; }();
+const iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 const int16 = new Int16Array(iterable);
 // Int16Array[1, 2, 3]
 ```
@@ -88,6 +89,6 @@ const dv = new Int16Array([1, 2, 3]);
 ## Voir aussi
 
 - [Prothèse d'émulation pour `Int16Array` avec la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Typed_arrays)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
 - [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView)

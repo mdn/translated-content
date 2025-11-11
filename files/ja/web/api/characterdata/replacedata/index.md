@@ -1,19 +1,17 @@
 ---
-title: CharacterData.replaceData()
+title: "CharacterData: replaceData() メソッド"
 slug: Web/API/CharacterData/replaceData
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.CharacterData.replaceData
-translation_of: Web/API/CharacterData/replaceData
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
+
 {{APIRef("DOM")}}
 
 **`replaceData()`** は {{domxref("CharacterData")}} インターフェイスのメソッドで、この `CharacterData` ノードにある既存のテキストの特定の数の文字を取り除き、指定されたテキストの文字で置き換えます。
 
 ## 構文
 
-```js
+```js-nolint
 characterData.replaceData(offset, count, data)
 ```
 
@@ -29,7 +27,7 @@ characterData.replaceData(offset, count, data)
 
 ### 返値
 
-None.
+なし。
 
 ## 例外
 
@@ -43,8 +41,8 @@ None.
 ```
 
 ```js
-let span = document.getElementsByTagName("span")[0];
-let textnode = span.nextSibling;
+const span = document.querySelector("span");
+const textnode = span.nextSibling;
 
 textnode.replaceData(2, 4, "replaced");
 ```

@@ -1,31 +1,22 @@
 ---
 title: devtools.panels.create()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/create
-tags:
-  - API
-  - Add-ons
-  - Create
-  - Extensions
-  - Reference
-  - WebExtensions
-  - devtools.panels
-translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.panels/create
-original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels/create
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Ajoute un nouveau panneau aux devtools.
 
-Cette fonction prend : un titre, une URL vers un fichier d'icône et une URL vers un fichier HTML. Il crée un nouveau panneau dans les devtools, dont le contenu est spécifié par le fichier HTML. Il renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui résout un objet [`ExtensionPanel`](/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionPanel) représentant le nouveau panneau.
+Cette fonction prend : un titre, une URL vers un fichier d'icône et une URL vers un fichier HTML. Il crée un nouveau panneau dans les devtools, dont le contenu est spécifié par le fichier HTML. Il renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui résout un objet [`ExtensionPanel`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel) représentant le nouveau panneau.
 
 ## Syntaxe
 
 ```js
 var creating = browser.devtools.panels.create(
-  title,       // string
-  iconPath,    // string
-  pagePath     // string
-)
+  title, // string
+  iconPath, // string
+  pagePath, // string
+);
 ```
 
 ### Parametères
@@ -39,11 +30,11 @@ var creating = browser.devtools.panels.create(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet [`ExtensionPanel`](/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionPanel) représentant le nouveau panneau.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet [`ExtensionPanel`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel) représentant le nouveau panneau.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.panels.create")}}
+{{Compat}}
 
 ## Exemples
 
@@ -58,25 +49,26 @@ function handleHidden() {
   console.log("panel is being hidden");
 }
 
-browser.devtools.panels.create(
-  "My Panel",                 // title
-  "/icons/star.png",           // icon
-  "/devtools/panel/panel.html" // content
-).then((newPanel) => {
-  newPanel.onShown.addListener(handleShown);
-  newPanel.onHidden.addListener(handleHidden);
-});
+browser.devtools.panels
+  .create(
+    "My Panel", // title
+    "/icons/star.png", // icon
+    "/devtools/panel/panel.html", // content
+  )
+  .then((newPanel) => {
+    newPanel.onShown.addListener(handleShown);
+    newPanel.onHidden.addListener(handleHidden);
+  });
 ```
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -103,4 +95,4 @@ browser.devtools.panels.create(
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

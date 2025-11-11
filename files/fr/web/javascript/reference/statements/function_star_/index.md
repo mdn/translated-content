@@ -1,22 +1,28 @@
 ---
 title: function*
 slug: Web/JavaScript/Reference/Statements/function*
-tags:
-  - ECMAScript 2015
-  - Function
-  - Generator
-  - Instruction
-  - Iterator
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Statements/function*
-original_slug: Web/JavaScript/Reference/Instructions/function*
 ---
+
 {{jsSidebar("Statements")}}
 
 La déclaration **`function*`** (le mot-clé `function` suivi par un astérisque) permet de définir un générateur (aussi appelé une fonction génératrice) (un générateur est un objet {{jsxref("Generator")}}).
 
-{{EmbedInteractiveExample("pages/js/statement-functionasterisk.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Function*")}}
+
+```js interactive-example
+function* generator(i) {
+  yield i;
+  yield i + 10;
+}
+
+const gen = generator(10);
+
+console.log(gen.next().value);
+// Expected output: 10
+
+console.log(gen.next().value);
+// Expected output: 20
+```
 
 Il est également possible de définir un générateur en utilisant le constructeur {{jsxref("GeneratorFunction")}} et une expression {{jsxref("Opérateurs/function*", "function*")}}.
 
@@ -39,7 +45,7 @@ function* nom([param1[, param2[, … paramN]]]) {
 
 Les générateurs sont des fonctions qu'il est possible de quitter puis de reprendre. Le contexte d'un générateur (les liaisons avec ses variables) est sauvegardé entre les reprises successives.
 
-Les générateurs, combinés avec [les promesses](/fr/docs/Web/JavaScript/Guide/Utiliser_les_promesses), sont des outils de programmation asynchrones puissants qui permettent de réduire les inconvénients causés par les _callbacks_ (fonctions de rappel) et [l'inversion de contrôle](https://frontendmasters.com/courses/rethinking-async-js/callback-problems-inversion-of-control/).
+Les générateurs, combinés avec [les promesses](/fr/docs/Web/JavaScript/Guide/Using_promises), sont des outils de programmation asynchrones puissants qui permettent de réduire les inconvénients causés par les _callbacks_ (fonctions de rappel) et [l'inversion de contrôle](https://frontendmasters.com/courses/rethinking-async-js/callback-problems-inversion-of-control/).
 
 Lorsqu'on appelle une fonction génératrice, son corps n'est pas exécuté immédiatement, c'est un {{jsxref("Les_protocoles_iteration","itérateur","#Le_protocole_.C2.AB_it.C3.A9rateur_.C2.BB",1)}} qui est renvoyé pour la fonction. Lorsque la méthode `next()` de l'itérateur est appelée, le corps de la fonction génératrice est utilisé jusqu'à ce que la première expression {{jsxref("Opérateurs/yield", "yield")}} soit trouvée. Cette expression définira la valeur à renvoyer pour l'itérateur. Si on utilise {{jsxref("Opérateurs/yield*", "yield*")}}, on pourra déléguer la génération des valeurs à une autre fonction génératrice. La méthode `next()` renvoie un objet dont la propriété `value` contient la valeur générée et une propriété `done` qui indique si le générateur a produit sa dernière valeur ou non. Lorsqu'on appelle la méthode `next()` avec un argument, cela reprendra l'exécution de la fonction génératrice et remplacera la valeur de l'expression `yield` (là où l'exécution avait été interrompue) avec la valeur de l'argument passé à `next()`.
 
@@ -52,7 +58,7 @@ On peut utiliser une instruction `return` dans un générateur. Lorsque cette in
 ### Exemple simple
 
 ```js
-function* creerID(){
+function* creerID() {
   var index = 0;
   while (true) {
     yield index++;
@@ -81,12 +87,12 @@ var gen = logGenerator();
 // le premier appel à next exécute la fonction depuis son
 // début jusqu'au premier yield rencontré
 gen.next();
-gen.next('bretzel');    // bretzel
-gen.next('california'); // california
-gen.next('mayonnaise'); // mayonnaise
+gen.next("bretzel"); // bretzel
+gen.next("california"); // california
+gen.next("mayonnaise"); // mayonnaise
 ```
 
-### Exemple utilisant `yield*`
+### Exemple utilisant yield\*
 
 ```js
 function* autreGenerateur(i) {
@@ -94,7 +100,7 @@ function* autreGenerateur(i) {
   yield i + 2;
   yield i + 3;
 }
-function* generateur(i){
+function* generateur(i) {
   yield i;
   yield* autreGenerateur(i);
   yield i + 10;
@@ -129,11 +135,11 @@ console.log(gen.next()); // { value: undefined, done: true }
 
 ```js
 const monObj = {
-  *generator () {
+  *generator() {
     yield "a";
     yield "b";
-  }
-}
+  },
+};
 
 const gen = monObj.generator();
 
@@ -146,28 +152,28 @@ console.log(gen.next()); // { value: undefined, done: true }
 
 ```js
 class Toto {
-  *[Symbol.iterator] () {
+  *[Symbol.iterator]() {
     yield 1;
     yield 2;
   }
 }
 
 const monObj = {
-  *[Symbol.iterator] () {
+  *[Symbol.iterator]() {
     yield "a";
     yield "b";
-  }
-}
+  },
+};
 
-console.log(Array.from(new Toto)); // [1, 2]
-console.log(Array.from(monObj));   // [ "a", "b"]
+console.log(Array.from(new Toto())); // [1, 2]
+console.log(Array.from(monObj)); // [ "a", "b"]
 ```
 
 ### Les générateurs ne sont pas constructibles
 
 ```js example-bad
 function* f() {}
-var obj = new f; // lève une TypeError: f n'est pas un constructeur
+var obj = new f(); // lève une TypeError: f n'est pas un constructeur
 ```
 
 ### Générateur défini avec une expression
@@ -183,25 +189,11 @@ console.log(truc.next()); // {value: 10, done: false}
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires                                                                                                             |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ES2015', '#sec-generator-function-definitions', 'function*')}} | {{Spec2('ES2015')}}     | Définition initiale                                                                                                      |
-| {{SpecName('ES2016', '#sec-generator-function-definitions', 'function*')}} | {{Spec2('ES2016')}}     | Les générateurs ne doivent pas gérer la trappe [[Construct]] et déclencher une exception s'ils sont utilisés avec `new`. |
-| {{SpecName('ESDraft', '#sec-generator-function-definitions', 'function*')}} | {{Spec2('ESDraft')}} |                                                                                                                          |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.generator_function")}}
-
-## Notes spécifiques à Firefox
-
-### Les générateurs et itérateurs dans Firefox pour les versions antérieures à Firefox 26
-
-Les anciennes versions de Firefox implémentaient une ancienne version de la proposition pour les générateurs. Dans cette version, les générateurs étaient définis avec le mot-clé `function` (sans astérisque) et étaient différents selon d'autres aspects. Voir [la page sur les générateurs historiques](/fr/docs/Web/JavaScript/Reference/Instructions/Fonction_génératrice_historique) pour plus d'informations.
-
-### `IteratorResult` au lieu d'une exception
-
-À partir de Gecko 29 {{geckoRelease(29)}}, lorsqu'un générateur est terminé, il ne renvoie plus une exception {{jsxref("TypeError")}} « generator has already finished ». Il renvoie désormais un objet `IteratorResult` comme `{ value: undefined, done: true }` ({{bug(958951)}}).
+{{Compat}}
 
 ## Voir aussi
 
@@ -215,8 +207,7 @@ Les anciennes versions de Firefox implémentaient une ancienne version de la pro
 - {{jsxref("Opérateurs/L_opérateur_function", "Les expressions de fonction","",1)}}
 - {{jsxref("Fonctions", "Les fonctions","",1)}}
 - D'autres ressources disponibles sur le Web :
-
   - [Regenerator](https://facebook.github.io/regenerator/) un compilateur permettant de traduire des générateurs ES2015 en du code JavaScript basé sur ES5
-  - [Forbes Lindesay: Promises and Generators: control flow utopia -- JSConf EU 2013](https://www.youtube.com/watch?v=qbKWsbJ76-s) (vidéo en anglais)
+  - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](https://www.youtube.com/watch?v=qbKWsbJ76-s) (vidéo en anglais)
   - [Task.js](https://github.com/mozilla/task.js)
   - [Itérer de façon asynchrone sur des générateurs](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch4.md#iterating-generators-asynchronously)

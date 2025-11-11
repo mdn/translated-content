@@ -1,17 +1,8 @@
 ---
 title: DataTransfer.setDragImage()
 slug: Web/API/DataTransfer/setDragImage
-page-type: web-api-instance-method
-tags:
-  - API
-  - H5 DnD
-  - HTML DOM
-  - Method
-  - Reference
-  - drag and drop
-browser-compat: api.DataTransfer.setDragImage
-translation_of: Web/API/DataTransfer/setDragImage
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 ドラッグが発生すると、ドラッグ対象（{{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントが発生した要素）から半透明の画像が生成され、ドラッグ中にマウスポインターに沿って移動します。この画像は自動的に作成されるので、自分で作成する必要はありません。ただし、カスタム画像が必要な場合は、**`DataTransfer.setDragImage()`** メソッドを使用して、使用するカスタム画像を設定することができます。画像は通常、 {{HTMLElement("image")}} 要素になりますが、 {{HTMLElement("canvas")}} やその他の可視要素であっても構いません。
@@ -23,13 +14,12 @@ translation_of: Web/API/DataTransfer/setDragImage
 ## 構文
 
 ```js
-setDragImage(imgElement, xOffset, yOffset)
+setDragImage(imgElement, xOffset, yOffset);
 ```
 
 ### 引数
 
 - `imgElement`
-
   - : ドラッグのフィードバック画像に使用する画像 {{domxref("Element")}} 要素です。
 
     もし {{domxref("Element")}} が img 要素であれば、ドラッグデータストアのビットマップを （その要素に固有のサイズで）その要素の画像に設定します。そうでなければ、ドラッグデータストアのビットマップを、与えられた要素から生成された画像に設定します（そのための正確なメカニズムは現在のところ指定されていません）。
@@ -118,6 +108,6 @@ function drop_handler(ev) {
 
 - [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
 - [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [複数の項目のドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
+- [複数の項目のドラッグ＆ドロップ](/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

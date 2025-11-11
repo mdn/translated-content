@@ -1,30 +1,40 @@
 ---
 title: Boolean.prototype.valueOf()
+short-title: valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
-tags:
-  - Boolean
-  - JavaScript
-  - メソッド
-  - Prototype
-  - リファレンス
-browser-compat: javascript.builtins.Boolean.valueOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-{{JSRef}}
 
-**`valueOf()`** メソッドは、{{jsxref("Boolean")}} オブジェクトのプリミティブ値を返します。
+**`valueOf()`** は {{jsxref("Boolean")}} 値のメソッドで、 {{jsxref("Boolean")}} オブジェクトのプリミティブ値を返します。
 
-{{EmbedInteractiveExample("pages/js/boolean-valueof.html")}}
+{{InteractiveExample("JavaScript デモ: Boolean.prototype.valueOf()")}}
+
+```js interactive-example
+const x = new Boolean();
+
+console.log(x.valueOf());
+// 予想される結果: false
+
+const y = new Boolean("Mozilla");
+
+console.log(y.valueOf());
+// 予想される結果: true
+```
 
 ## 構文
 
-```js
+```js-nolint
 valueOf()
 ```
 
+### 引数
+
+なし。
+
 ### 返値
 
-この {{jsxref("Boolean")}} オブジェクトのプリミティブ値です。
+指定された {{jsxref("Boolean")}} オブジェクトのプリミティブ値です。
 
 ## 解説
 
@@ -37,8 +47,8 @@ valueOf()
 ### `valueOf()` の使用
 
 ```js
-x = new Boolean();
-myVar = x.valueOf(); // false を myVar に代入
+const x = new Boolean();
+const myVar = x.valueOf(); // false を myVar に代入
 ```
 
 ## 仕様書

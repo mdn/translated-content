@@ -1,19 +1,11 @@
 ---
 title: DOMImplementation.createHTMLDocument()
 slug: Web/API/DOMImplementation/createHTMLDocument
-tags:
-  - API
-  - DOM
-  - DOM Référence(2)
-  - DOM implémentation
-  - Expérimental(2)
-  - Méthode
-  - Référence(2)
-translation_of: Web/API/DOMImplementation/createHTMLDocument
 ---
+
 {{ApiRef("DOM")}}{{SeeCompatTable}}
 
-La méthode **`DOMImplementation.createHTMLDocument()`**  crée un nouveau {{domxref("Document")}} HTML.
+La méthode **`DOMImplementation.createHTMLDocument()`** crée un nouveau {{domxref("Document")}} HTML.
 
 ## Syntaxe
 
@@ -23,7 +15,7 @@ newDoc = document.implementation.createHTMLDocument(titre);
 
 ### Paramètres
 
-- *title*  {{optional_inline}}  (excepté dans IE)
+- _title_ {{optional_inline}} (excepté dans IE)
   - : C'est une {{domxref("DOMString")}} qui contient le titre à donner au nouveau document HTML.
 
 ## Exemple
@@ -34,7 +26,10 @@ Ci-dessous, le code HTML pour cet exemple:
 
 ```html
 <body>
-  <p>Cliquez <a href="javascript:makeDocument()">ici</a> pour créer un nouveau document et l'insérer au dessous.</p>
+  <p>
+    Cliquez <a href="javascript:makeDocument()">ici</a> pour créer un nouveau
+    document et l'insérer au dessous.
+  </p>
   <iframe id="laFrame" src="about:blank" />
 </body>
 ```
@@ -51,7 +46,7 @@ function makeDocument() {
 
   try {
     doc.body.appendChild(p);
-  } catch(e) {
+  } catch (e) {
     console.log(e);
   }
 
@@ -69,30 +64,27 @@ Le code des lignes 4 à 12 permet la création du nouveau document HTML et l'ins
 
 La ligne 16 récupère le `contentDocument` _(contenu du document)_ du cadre ; c'est le document dans lequel nous allons injecter le nouveau contenu. Les deux lignes suivantes permettent d'importer le contenu du nouveau document dans le nouveau contexte du document. Pour finir, la ligne 20 remplace le contenu du cadre par le contenu du nouveau document.
 
-[Voir l'exemple sur une page](/samples/domref/createHTMLDocument.html)
+[Voir l'exemple sur une page](https://mdn.dev/archives/media/samples/domref/createHTMLDocument.html)
 
 Le document retourné est préconstruit avec le code HTML suivant :
 
 ```html
 <!doctype html>
 <html>
-<head>
-<title>titre</title>
-</head>
-<body>
-</body>
+  <head>
+    <title>titre</title>
+  </head>
+  <body></body>
 </html>
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG', '#dom-domimplementation-createhtmldocument', 'DOMImplementation.createHTMLDocument')}} | {{Spec2('DOM WHATWG')}} | Première définition. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMImplementation.createHTMLDocument")}}
+{{Compat}}
 
 ## Voir aussi
 

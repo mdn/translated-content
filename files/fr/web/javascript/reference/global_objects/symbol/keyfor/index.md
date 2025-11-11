@@ -1,20 +1,28 @@
 ---
 title: Symbol.keyFor()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Reference
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
-original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/keyFor
 ---
+
 {{JSRef}}
 
 La méthode **`Symbol.keyFor(sym)`** permet de récupérer la clé d'un symbole donné qui est partagé via le registre global des symboles.
 
-{{EmbedInteractiveExample("pages/js/symbol-keyfor.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.keyFor()")}}
+
+```js interactive-example
+const globalSym = Symbol.for("foo"); // Global symbol
+
+console.log(Symbol.keyFor(globalSym));
+// Expected output: "foo"
+
+const localSym = Symbol(); // Local symbol
+
+console.log(Symbol.keyFor(localSym));
+// Expected output: undefined
+
+console.log(Symbol.keyFor(Symbol.iterator));
+// Expected output: undefined
+```
 
 ## Syntaxe
 
@@ -47,14 +55,11 @@ Symbol.keyFor(Symbol.iterator); // undefined
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-symbol.keyfor', 'Symbol.keyFor')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.keyfor', 'Symbol.keyFor')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.keyFor")}}
+{{Compat}}
 
 ## Voir aussi
 

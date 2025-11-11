@@ -1,20 +1,23 @@
 ---
 title: 字符类
-slug: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
-tags:
-  - 指南
-  - JavaScript
-  - 参考
-  - RegExp
-  - 正则表达式
-  - 字符类
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
+slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
 ---
-{{JSSidebar("JavaScript Guide")}}
 
 字符类可以区分各种字符，例如区分字母和数字。
 
-{{EmbedInteractiveExample("pages/js/regexp-character-classes.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp Character classes")}}
+
+```js interactive-example
+const chessStory = "He played the King in a8 and she moved her Queen in c2.";
+const regexpCoordinates = /\w\d/g;
+console.log(chessStory.match(regexpCoordinates));
+// Expected output: Array [ 'a8', 'c2']
+
+const moods = "happy 🙂, confused 😕, sad 😢";
+const regexpEmoticons = /[\u{1F600}-\u{1F64F}]/gu;
+console.log(moods.match(regexpEmoticons));
+// Expected output: Array ['🙂', '😕', '😢']
+```
 
 ## 类型
 
@@ -48,7 +51,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
    <td>
     <p>一个否定或补充的字符类。也就是说，它匹配未包含在方括号中的任何字符。你可以使用连字符指定字符范围，但如果连字符出现在<code>^</code>后的第一个字符或方括号中的或最后一个字符，则将其视为字面连字符，作为普通字符包含在字符类中。例如，<code>[^abc]</code> 与 <code>[^a-c]</code> 相同。它们首先匹配“bacon”中的“o”和“chop”中的“h”。</p>
     <div class="notecard note">
-     <p><strong>备注：</strong> ^ 字符也可以表示<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">输入的开始</a>。</p>
+     <p><strong>备注：</strong> ^ 字符也可以表示<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions">输入的开始</a>。</p>
     </div>
    </td>
   </tr>
@@ -57,17 +60,17 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
    <td>
     <p>有下列含义之一：</p>
     <ul>
-     <li>匹配除行终止符之外的任何单个字符：<code>\n</code>, <code>\r</code>, <code>\u2028</code> or <code>\u2029</code>. 例如，<code>/.y/</code> 在“yes make my day”中匹配“my”和“ay”，而不是“yes”。</li>
+     <li>匹配除行终止符之外的任何单个字符：<code>\n</code>, <code>\r</code>, <code>\u2028</code> or <code>\u2029</code>. 例如，<code>/.y/</code> 在“yes make my day”中匹配“my”和“ay”，而不是“yes”。</li>
      <li>在字符集内，点失去了它的特殊意义，并与文字点匹配。</li>
     </ul>
     <p>需要注意的是，<code>m</code> multiline 标志不会改变点的行为。因此，要跨多行匹配一个模式，可以使用字符集<code>[^]</code>—它将匹配任何字符，包括新行。</p>
-    <p>ES2018 添加了 <code>s</code>“dotAll”标志，它允许点也匹配行终止符。</p>
+    <p><code>s</code>“dotAll”标志允许点也匹配行终止符。</p>
    </td>
   </tr>
   <tr>
    <td><code>\d</code></td>
    <td>
-    <p>匹配任何数字 (阿拉伯数字)。相当于 <code>[0-9]</code>。例如，<code>/\d/</code> 或 <code>/[0-9]/</code> 匹配“B2is the suite number”中的“2”。</p>
+    <p>匹配任何数字 (阿拉伯数字)。相当于 <code>[0-9]</code>。例如，<code>/\d/</code> 或 <code>/[0-9]/</code> 匹配“B2is the suite number”中的“2”。</p>
    </td>
   </tr>
   <tr>
@@ -79,7 +82,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
   <tr>
    <td><code>\w</code></td>
    <td>
-    <p>匹配基本拉丁字母中的任何字母数字字符，包括下划线。相当于 <code>[A-Za-z0-9_]</code>。例如，<code>/\w/</code> 匹配“apple”中的“a”，匹配“$5.28”中的“5”，匹配“3D”中的“3”，以及匹配“Émanuel”中的“m”。</p>
+    <p>匹配基本拉丁字母中的任何字母数字字符，包括下划线。相当于 <code>[A-Za-z0-9_]</code>。例如，<code>/\w/</code> 匹配“apple”中的“a”，匹配“$5.28”中的“5”，匹配“3D”中的“3”，以及匹配“Émanuel”中的“m”。</p>
    </td>
   </tr>
   <tr>
@@ -91,13 +94,17 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
   <tr>
    <td><code>\s</code></td>
    <td>
-    <p>匹配单个空白字符，包括空格、制表符、换页符、换行符和其他 Unicode 空格。相当于 <code>[ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>。例如，<code>/\s\w*/</code> 匹配“foo bar”中的“ bar”。</p>
+    <p>匹配单个空白字符，包括空格、制表符、换页符、换行符和其他 Unicode 空格。相当于
+      <code>[\f\n\r\t\v\u0020\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>。例如，<code>\s\w*/</code> 匹配“foo bar”中的“bar”。
+    </p>
    </td>
   </tr>
   <tr>
    <td><code>\S</code></td>
    <td>
-    <p>匹配除空格以外的单个字符。相当于 <code>[^ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>。例如，<code>/\S\w*/</code> 匹配“foo bar”中的“foo”。</p>
+    <p>匹配除空格以外的单个字符。相当于
+      <code>[^\f\n\r\t\v\u0020\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>。例如，<code>/\S\w*/</code> 匹配“foo bar”中的“foo”。
+    </p>
    </td>
   </tr>
   <tr>
@@ -122,7 +129,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
   </tr>
   <tr>
    <td><code>[\b]</code></td>
-   <td>匹配退格键。如果您正在寻找单词边界字符（<code>\b</code>），请参阅<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">断言</a>。</td>
+   <td>匹配退格键。如果你正在寻找单词边界字符（<code>\b</code>），请参阅<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions">断言</a>。</td>
   </tr>
   <tr>
    <td><code>\0</code></td>
@@ -131,16 +138,16 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
   <tr>
    <td><code>\c<em>X</em></code></td>
    <td>
-    <p>使用<a href="https://en.wikipedia.org/wiki/Caret_notation">插入符号</a>匹配控制字符，其中“X”是 A–Z 中的一个字母（对应于代码点 <code>U+0001</code><em>–</em><code>U+001F</code>）。例如，<code>/\cM\cJ/</code>匹配“\r\n”。</p>
+    <p>使用<a href="https://zh.wikipedia.org/wiki/脱字符表示法">插入符号</a>匹配控制字符，其中“X”是 A–Z 中的一个字母（对应于码位 <code>U+0001</code><em>–</em><code>U+001A</code>）。例如，<code>/\cM\cJ/</code> 匹配“\r\n”。</p>
    </td>
   </tr>
   <tr>
    <td><code>\x<em>hh</em></code></td>
-   <td>匹配与代码 <code><em>hh</em></code>（两个十六进制数字）对应的字符。</td>
+   <td>匹配与 <code><em>hh</em></code>（两个十六进制数字）对应的字符。</td>
   </tr>
   <tr>
    <td><code>\u<em>hhhh</em></code></td>
-   <td>匹配与值 <code><em>hhhh</em></code>（四个十六进制数字）对应的 UTF-16 代码单元。</td>
+   <td>匹配与 <code><em>hhhh</em></code>（四个十六进制数字）对应的 UTF-16 码元。</td>
   </tr>
   <tr>
    <td><code>\u<em>{hhhh}</em> 或 <em>\u{hhhhh}</em></code></td>
@@ -151,7 +158,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
       <code>\p{<em>UnicodeProperty</em>}</code>，<code>\P{<em>UnicodeProperty</em>}</code>
     </td>
     <td>
-      根据字符的 <a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes">Unicode 字符属性</a>匹配字符（例如，仅匹配表情符号字符、日文<em>片假名</em>字符、中文汉字字符或日文汉字字符等）。
+      根据字符的 <a href="/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape">Unicode 字符属性</a>匹配字符（例如，仅匹配表情符号字符、日文<em>片假名</em>字符、中文汉字字符或日文汉字字符等）。
     </td>
   </tr>
   <tr>
@@ -177,7 +184,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
     </p>
     <div class="notecard note">
      <p>
-      <strong>备注：</strong> 析取是指定“一组选择”的另一种方式，但它不是字符类。析取不是原子的——你需要使用<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences">组</a>使其成为一个更大的模式的一部分。<code>[abc]</code> 在功能上等同于 <code>(?:a|b|c)</code>。
+      <strong>备注：</strong> 析取是指定“一组选择”的另一种方式，但它不是字符类。析取不是原子的——你需要使用<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences">组</a>使其成为一个更大的模式的一部分。<code>[abc]</code> 在功能上等同于 <code>(?:a|b|c)</code>。
      </p>
     </div>
    </td>
@@ -203,7 +210,8 @@ console.table(randomData.match(regexpFourDigits));
 ### 寻找以 A 开头的拉丁字母单词
 
 ```js
-const aliceExcerpt = "I'm sure I'm not Ada,' she said, 'for her hair goes in such long ringlets, and mine doesn't go in ringlets at all.";
+const aliceExcerpt =
+  "I'm sure I'm not Ada,' she said, 'for her hair goes in such long ringlets, and mine doesn't go in ringlets at all.";
 const regexpWordStartingWithA = /\b[aA]\w+/g;
 // \b 表示边界（即不要在单词中间开始匹配）
 // [aA] 表示字母 a 或 A
@@ -223,13 +231,14 @@ const regexpBMPWord = /([\u0000-\u0019\u0021-\uFFFF])+/gu;
 // 基本多文种平面范围是 U+0000 到 U+FFFF 但空格是 U+0020
 
 console.table(nonEnglishText.match(regexpBMPWord));
-[ '爱丽丝', '梦游', '仙境' ]
+["爱丽丝", "梦游", "仙境"];
 ```
 
 ### 计算元音个数
 
 ```js
-const aliceExcerpt = "There was a long silence after this, and Alice could only hear whispers now and then.";
+const aliceExcerpt =
+  "There was a long silence after this, and Alice could only hear whispers now and then.";
 const regexpVowels = /[AEIOUYaeiouy]/g;
 
 console.log("元音数：", aliceExcerpt.match(regexpVowels).length);
@@ -238,12 +247,11 @@ console.log("元音数：", aliceExcerpt.match(regexpVowels).length);
 
 ## 参见
 
-- [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
-
-  - [断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
-  - [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
-  - [Unicode 属性转义](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
-  - [组和后向引用](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)
+- [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
+  - [断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
+  - [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
+  - [Unicode 属性转义](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
+  - [组和后向引用](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
 
 - [`RegExp()` 构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 - [CharacterClass in the ECMAScript specification](https://tc39.es/ecma262/multipage/text-processing.html#sec-characterclass)

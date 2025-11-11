@@ -1,21 +1,24 @@
 ---
 title: DataView.prototype.getInt16()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt16
-tags:
-  - DataView
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getInt16
-original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/getInt16
 ---
+
 {{JSRef}}
 
 La méthode **`getInt16()`** permet de lire un entier signé sur 16 bits (type _short_ par analogie avec C) à l'octet donné par rapport au début de {{jsxref("DataView")}}.
 
-{{EmbedInteractiveExample("pages/js/dataview-getint16.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.getInt16()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setInt16(1, 32767); // Max signed 16-bit integer
+
+console.log(view.getInt16(1));
+// Expected output: 32767
+```
 
 ## Syntaxe
 
@@ -55,15 +58,11 @@ dataview.getInt16(1); // 0
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                             | Commentaires                                    |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                                                     | {{Spec2('Typed Array')}} | Remplacée dans ECMAScript 2015.                 |
-| {{SpecName('ES2015', '#sec-dataview.prototype.getint16', 'DataView.prototype.getInt16')}} | {{Spec2('ES2015')}}         | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.getint16', 'DataView.prototype.getInt16')}} | {{Spec2('ESDraft')}}     |                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.DataView.getInt16")}}
+{{Compat}}
 
 ## Voir aussi
 

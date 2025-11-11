@@ -1,23 +1,31 @@
 ---
-title: 不等価 (!=)
+title: 不等価演算子 (!=)
 slug: Web/JavaScript/Reference/Operators/Inequality
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.inequality
-translation_of: Web/JavaScript/Reference/Operators/Inequality
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-{{jsSidebar("Operators")}}
 
 不等価演算子 (`!=`) は、2 つのオペランドが等しくないことを検査し、論理値で結果を返します。[厳密不等価](/ja/docs/Web/JavaScript/Reference/Operators/Strict_inequality)演算子とは異なり、異なる型のオペランドを変換して比較を行おうとします。
 
-{{EmbedInteractiveExample("pages/js/expressions-inequality.html")}}
+{{InteractiveExample("JavaScript デモ: 不等価演算子 (!=)")}}
+
+```js interactive-example
+console.log(1 != 1);
+// 予想される結果: false
+
+console.log("hello" != "hello");
+// 予想される結果: false
+
+console.log("1" != 1);
+// 予想される結果: false
+
+console.log(0 != false);
+// 予想される結果: false
+```
 
 ## 構文
 
-```js
+```js-nolint
 x != y
 ```
 
@@ -26,9 +34,9 @@ x != y
 不等価演算子は、そのオペランドが等しくないことを検査します。これは[等価](/ja/docs/Web/JavaScript/Reference/Operators/Equality)演算子の逆に当たるので、以下の 2 行は常に同じ結果になります。
 
 ```js
-x != y
+x != y;
 
-!(x == y)
+!(x == y);
 ```
 
 比較アルゴリズムの詳細については、[等価](/ja/docs/Web/JavaScript/Reference/Operators/Equality)演算子のページを参照して下さい。
@@ -50,39 +58,44 @@ x != y
 ### 型変換がない場合の比較
 
 ```js
-1 != 2;              // true
-"hello" != "hola";   // true
+1 != 2; // true
+"hello" != "hola"; // true
 
-1 != 1;              // false
-"hello" != "hello";  // false
+1 != 1; // false
+"hello" != "hello"; // false
 ```
 
 ### 型変換がある場合の比較
 
 ```js
-"1" !=  1;            // false
-1 != "1";             // false
-0 != false;           // false
-0 != null;            // true
-0 != undefined;       // true
-0 != !!null;          // false (論理 NOT 演算子を参照)
-0 != !!undefined;     // false (論理 NOT 演算子を参照)
-null != undefined;    // false
+"1" != 1; // false
+1 != "1"; // false
+0 != false; // false
+0 != null; // true
+0 != undefined; // true
+0 != !!null; // false (論理 NOT 演算子を参照)
+0 != !!undefined; // false (論理 NOT 演算子を参照)
+null != undefined; // false
 
 const number1 = new Number(3);
 const number2 = new Number(3);
-number1 != 3;         // false
-number1 != number2;   // true
+number1 != 3; // false
+number1 != number2; // true
 ```
 
 ### オブジェクトの比較
 
 ```js
-const object1 = {"key": "value"}
-const object2 = {"key": "value"};
+const object1 = {
+  key: "value",
+};
 
-object1 != object2 // true
-object2 != object2 // false
+const object2 = {
+  key: "value",
+};
+
+console.log(object1 != object2); // true
+console.log(object1 != object1); // false
 ```
 
 ## 仕様書
@@ -95,6 +108,6 @@ object2 != object2 // false
 
 ## 関連情報
 
-- [等価演算子](/ja/docs/Web/JavaScript/Reference/Operators/Equality)
-- [厳密等価演算子](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality)
-- [厳密不等価演算子](/ja/docs/Web/JavaScript/Reference/Operators/Strict_inequality)
+- [等価演算子 (`==`)](/ja/docs/Web/JavaScript/Reference/Operators/Equality)
+- [厳密等価演算子 (`===`)](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+- [厳密不等価演算子 (`!==`)](/ja/docs/Web/JavaScript/Reference/Operators/Strict_inequality)

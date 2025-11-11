@@ -1,53 +1,59 @@
 ---
-title: element.dispatchEvent
+title: "EventTarget : méthode dispatchEvent()"
+short-title: dispatchEvent()
 slug: Web/API/EventTarget/dispatchEvent
-tags:
-  - API
-  - DOM
-  - Méthodes
-  - Traitement
-  - évènements
-translation_of: Web/API/EventTarget/dispatchEvent
+l10n:
+  sourceCommit: f4c0e822eb6a1ea438c7342f43a3e4809adbd56a
 ---
-{{APIRef("DOM Events")}}
 
-Envoie un {{domxref("Event")}} (_évènement_) à la {{domxref("EventTarget")}} (_cible_) spécifiée (synchrone) en appelant les {{domxref("EventListener")}} (_écouteurs_)  dans l'ordre approprié. Le processus normal de traitement de l'évènement (y compris les phases de capture et l'éventuelle propagation) s'applique aussi aux évènements diffusés manuellement avec `dispatchEvent()`.
+{{APIRef("DOM")}}{{AvailableInWorkers}}
+
+Les événements déclenchés manuellement avec `dispatchEvent()` suivent les mêmes règles de gestion que les événements natifs, y compris la phase de capture et, éventuellement, de propagation.
+
+La méthode **`dispatchEvent()`** de l'interface {{domxref("EventTarget")}} envoie un objet {{domxref("Event")}} à la cible, invoquant (de façon synchrone) les écouteurs d'événements concernés dans l'ordre approprié. Les règles normales de gestion des événements (y compris la phase de capture et, éventuellement, de propagation) s'appliquent aussi aux événements déclenchés manuellement avec `dispatchEvent()`.
+
+Appeler `dispatchEvent()` est la dernière étape pour _déclencher un événement_. L'événement doit déjà avoir été créé et initialisé à l'aide d'un constructeur {{domxref("Event/Event", "Event()")}}.
+
+> [!NOTE]
+> Lors de l'appel à cette méthode, la propriété {{domxref("Event.target")}} est initialisée à la valeur de l'`EventTarget` courant.
+
+Contrairement aux événements « natifs », qui sont déclenchés par le navigateur et invoquent les gestionnaires d'événements de façon asynchrone via la [boucle d'événements](/fr/docs/Web/JavaScript/Reference/Execution_model), `dispatchEvent()` invoque les gestionnaires d'événements _de façon synchrone_. Tous les gestionnaires concernés sont appelés et terminent leur exécution avant que `dispatchEvent()` ne retourne.
 
 ## Syntaxe
 
-```js
-cancelled = !target.dispatchEvent(event)
+```js-nolint
+dispatchEvent(event)
 ```
 
 ### Paramètres
 
-- `event` est un objet {{domxref("Event")}} à envoyer.
-- `target` (_cible_) est utilisée pour initialiser la {{domxref("Event", "", "target")}} et déterminer quels écouteurs d'évènements doivent être invoqués.
+- `event`
+  - : L'objet {{domxref("Event")}} à déclencher. Sa propriété {{domxref("Event.target")}} sera définie sur la valeur de l'{{domxref("EventTarget")}} courant.
 
-### Valeur retournée
+### Valeur de retour
 
-- La valeur de retour est  `false` (_faux_) si l'évènement est annulable et au moins l'un des gestionnaires d'événements qui ont géré cet événement appelé {{domxref ("Event.preventDefault ()")}}. Sinon, elle est `true` (_vrai_).
+Retourne `false` si `event` est annulable et qu'au moins un des gestionnaires d'événements ayant reçu `event` ayant appelé {{domxref("Event.preventDefault()")}}. Sinon, retourne `true`.
 
-La méthode `dispatchEvent` lance une exception `UNSPECIFIED_EVENT_TYPE_ERR` si le type de l'évènement n'a pas été spécifié par son initialisation avant l'appel de la méthode ou s'il est `null` ou une chaîne vide. Les exceptions lancées par les gestionnaires d'évènements sont signalées comme exceptions non interceptées ; les gestionnaires d'événements s'exécutent sur une pile d'appels imbriquée : ils bloquent l'appelant jusqu'à ce qu'ils se terminent, mais les exceptions ne se propagent pas à l'appelant.
+### Exceptions
 
-## Notes
+- `InvalidStateError` {{domxref("DomException")}}
+  - : Levée si le type de l'événement n'a pas été spécifié lors de l'initialisation de l'événement.
 
-Contrairement aux événements "natifs", qui sont déclenchés par le DOM et invoquent les gestionnaires d'événements de manière asynchrone via la [boucle des événements](/fr/docs/Web/JavaScript/Concurrence_et_boucle_des_%C3%A9v%C3%A9nements), `dispatchEvent` appelle les gestionnaires d'événements de manière synchrone. Tous les gestionnaires d'événements applicables s'exécuteront et retourneront avant que le code ne continue après l'appel à `dispatchEvent`.
-
-Comme montré dans l'exemple qui précède, `dispatchEvent` est la dernière étape du processus création-initialisation-envoi, qui est utilisé pour envoyer des évènements dans le modèle de l'implémentation des évènements. Ceux-ci peuvent être créés en utilisant le [constructeur d'évènements](/fr/docs/Web/API/Event/Event).
-
-Voir aussi [Objet Event référence](/fr/docs/Web/API/Event).
+> [!WARNING]
+> Les exceptions levées par les gestionnaires d'événements sont signalées comme des exceptions non interceptées. Les gestionnaires d'événements s'exécutent sur une pile d'appels imbriquée&nbsp;: ils bloquent l'appelant jusqu'à leur achèvement, mais les exceptions ne sont pas propagées à l'appelant.
 
 ## Exemple
 
-Voir [Création et déclenchement d'évènements](/fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events).
+Voir [Créer et déclencher des événements](/fr/docs/Web/API/Document_Object_Model/Events#créer_et_déclencher_des_événements).
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                            | Statut                           | Commentaire                                                           |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-eventtarget-dispatchevent', 'EventTarget.dispatchEvent()')}} | {{ Spec2('DOM WHATWG') }} | Définition initiale dans la spécification DOM 2 Events (_évènements_) |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.EventTarget.dispatchEvent")}}
+{{Compat}}
+
+## Voir aussi
+
+- [Référence de l'objet Event](/fr/docs/Web/API/Event)

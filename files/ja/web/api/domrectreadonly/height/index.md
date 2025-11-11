@@ -1,17 +1,12 @@
 ---
-title: DOMRectReadOnly.height
+title: "DOMRectReadOnly: height プロパティ"
+short-title: height
 slug: Web/API/DOMRectReadOnly/height
-tags:
-  - API
-  - DOM
-  - DOMRectReadOnly
-  - 位置
-  - プロパティ
-  - リファレンス
-browser-compat: api.DOMRectReadOnly.height
-translation_of: Web/API/DOMRectReadOnly/height
+l10n:
+  sourceCommit: 3652cfa9c036cf3ceebb1384bdc7edfd549251f3
 ---
-{{APIRef("Geometry Interfaces")}}
+
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 **`height`** は **`DOMRectReadOnly`** インターフェイスの読み取り専用プロパティで、この `DOMRect` の高さを表します。
 

@@ -1,18 +1,9 @@
 ---
 title: <color>
 slug: Web/CSS/color_value
-tags:
-  - CSS
-  - CSS Data Type
-  - Reference
-  - Web
-browser-compat: css.types.color
-translation_of: Web/CSS/color_value
 ---
 
-{{CSSRef}}
-
-[CSS](/ko/docs/Web/CSS) **`<color>`** [자료형](/ko/docs/Web/CSS/CSS_Types)은 색을 나타냅니다. `<color>`는 이 색이 배경과 [어떻게 합성되어야 하는지](https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending) 나타내는 [알파 채널](https://ko.wikipedia.org/wiki/%EC%95%8C%ED%8C%8C_%EC%B1%84%EB%84%90) 투명도 값도 가질 수 있습니다.
+[CSS](/ko/docs/Web/CSS) **`<color>`** [자료형](/ko/docs/Web/CSS/CSS_values_and_units/CSS_data_types)은 색을 나타냅니다. `<color>`는 이 색이 배경과 [어떻게 합성되어야 하는지](https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending) 나타내는 [알파 채널](https://ko.wikipedia.org/wiki/%EC%95%8C%ED%8C%8C_%EC%B1%84%EB%84%90) 투명도 값도 가질 수 있습니다.
 
 `<color>`는 다음 방법으로 정의할 수 있습니다.
 
@@ -20,13 +11,15 @@ translation_of: Web/CSS/color_value
 - RGB 3차원 좌표계 사용 (# + 16진수 표기법 또는 `rgb()`, `rgba()`의 함수형 표기법)
 - HSL 실린더형 좌표계 사용 (`hsl()`, `hsla()`의 함수형 표기법)
 
-> **참고:** 이 글은 `<color>` 자료형에 대해 상세히 기술합니다. HTML에서 실제로 색을 쓰는 법이 더 알고 싶으시면 [CSS로 HTML 요소에 색 입히기](/ko/docs/Web/HTML/Applying_color)를 참고하세요.
+> [!NOTE]
+> 이 글은 `<color>` 자료형에 대해 상세히 기술합니다. HTML에서 실제로 색을 쓰는 법이 더 알고 싶으시면 [CSS로 HTML 요소에 색 입히기](/ko/docs/Web/CSS/CSS_colors/Applying_color)를 참고하세요.
 
 ## 구문
 
 `<color>` 자료형은 아래 나열된 선택지 중 하나를 사용해 지정합니다.
 
-> **참고:** `<color>` 값은 정확하게 정의할 수 있지만 실제로 화면에 표시될 때는 기기별로 차이가 있을 수도 있습니다. 대부분의 화면 색이 제대로 조정되지 않았으며 일부 브라우저는 기기의 [색상 프로필](https://ko.wikipedia.org/wiki/ICC_%ED%94%84%EB%A1%9C%ED%8C%8C%EC%9D%BC)을 지원하지 않기 때문입니다.
+> [!NOTE]
+> `<color>` 값은 정확하게 정의할 수 있지만 실제로 화면에 표시될 때는 기기별로 차이가 있을 수도 있습니다. 대부분의 화면 색이 제대로 조정되지 않았으며 일부 브라우저는 기기의 [색상 프로필](https://ko.wikipedia.org/wiki/ICC_%ED%94%84%EB%A1%9C%ED%8C%8C%EC%9D%BC)을 지원하지 않기 때문입니다.
 
 ### 색상 키워드
 
@@ -38,7 +31,6 @@ translation_of: Web/CSS/color_value
 - HTML과 달리 CSS는 알 수 없는 키워드를 완전히 무시합니다.
 - 모든 색상 키워드는 투명도 없는 단일 색상을 표현합니다.
 - 어떤 키워드는 다른 키워드의 다른 이름입니다.
-
   - `aqua` / `cyan`
   - `fuchsia` / `magenta`
   - `darkgray` / `darkgrey`
@@ -51,7 +43,8 @@ translation_of: Web/CSS/color_value
 
 - 많은 키워드를 [X11](https://ko.wikipedia.org/wiki/X_%EC%9C%88%EB%8F%84_%EC%8B%9C%EC%8A%A4%ED%85%9C)에서 가져오긴 했지만, 제조사들이 X11 색상을 특정 하드웨어에 맞춰 조절한 경우도 있었기에 RGB값은 차이가 존재할 수 있습니다.
 
-> **참고:** CSS의 진화와 함께 색상 키워드도 많은 변화를 겪었습니다.
+> [!NOTE]
+> CSS의 진화와 함께 색상 키워드도 많은 변화를 겪었습니다.
 >
 > - CSS Level 1은 16개의 기본 색상만 지니고 있었습니다. VGA 그래픽 카드가 표현할 수 있는 색에서 가져온 것이기에 [VGA](https://ko.wikipedia.org/wiki/%EB%B9%84%EB%94%94%EC%98%A4_%EA%B7%B8%EB%9E%98%ED%94%BD%EC%8A%A4_%EC%96%B4%EB%A0%88%EC%9D%B4) 색상이라고 칭했습니다.
 > - CSS Level 2에서는 `orange` 키워드를 추가했습니다.
@@ -69,7 +62,7 @@ translation_of: Web/CSS/color_value
   </thead>
   <tbody>
     <tr style="position: relative">
-      <td rowspan="16">{{SpecName("CSS1")}}</td>
+      <td rowspan="16">CSS1</td>
       <td style="text-align: center"><code>black</code></td>
       <td><code>#000000</code></td>
       <td style="background: black"></td>
@@ -150,13 +143,13 @@ translation_of: Web/CSS/color_value
       <td style="background: aqua"></td>
     </tr>
     <tr>
-      <td>{{SpecName("CSS2.1")}}</td>
+      <td>CSS2.1</td>
       <td style="text-align: center"><code>orange</code></td>
       <td><code>#ffa500</code></td>
       <td style="background: orange"></td>
     </tr>
     <tr>
-      <td rowspan="130">{{SpecName("CSS3 Colors")}}</td>
+      <td rowspan="130">CSS3 Colors</td>
       <td style="text-align: center"><code>aliceblue</code></td>
       <td><code>#f0f8ff</code></td>
       <td style="background: aliceblue"></td>
@@ -811,7 +804,7 @@ translation_of: Web/CSS/color_value
       <td style="background: yellowgreen"></td>
     </tr>
     <tr>
-      <td>{{SpecName("CSS4 Colors")}}</td>
+      <td>CSS4 Colors</td>
       <td style="text-align: center">
         <a href="https://en.wikipedia.org/wiki/Eric_A._Meyer#Personal_life"
           ><code>rebeccapurple</code></a
@@ -827,9 +820,11 @@ translation_of: Web/CSS/color_value
 
 `transparent` 키워드는 완전히 투명한 색으로, "색"을 입힌 항목의 뒷편이 모두 보입니다. 기술적으로 `transparent`는 `rgba(0,0,0,0)`의 짧은 이름입니다.
 
-> **참고:** {{cssxref("gradient")}} 등 특정 상황에서 의도하지 않은 결과를 피하기 위해, 현재 CSS 명세에선 `transparent`를 [투명도를 미리 곱한 색 공간](https://www.w3.org/TR/2012/CR-css3-images-20120417/#color-stop-syntax)에서 계산하도록 명시하고 있습니다. 그러나 오래된 브라우저에서는 투명도 0의 검정으로 취급할 수 있다는 점을 주의하세요.
+> [!NOTE]
+> {{cssxref("gradient")}} 등 특정 상황에서 의도하지 않은 결과를 피하기 위해, 현재 CSS 명세에선 `transparent`를 [투명도를 미리 곱한 색 공간](https://www.w3.org/TR/2012/CR-css3-images-20120417/#color-stop-syntax)에서 계산하도록 명시하고 있습니다. 그러나 오래된 브라우저에서는 투명도 0의 검정으로 취급할 수 있다는 점을 주의하세요.
 
-> **참고:** `transparent`는 CSS Level 2 (Revision 1) 전까지 실제 색상이 아니었습니다. 대신 {{cssxref("background")}}와 {{cssxref("border")}}의 `<color>` 자리에 사용하는 특별한 키워드로, 상속받은 단색을 덮어 쓸 수 있도록 추가됐었습니다. CSS Colors Level 3에서 알파 채널이 추가되면서 `transparent`도 실제 색상으로 재정의되었습니다. 덕분에 `<color>` 값 어디에나 사용할 수 있습니다.
+> [!NOTE]
+> `transparent`는 CSS Level 2 (Revision 1) 전까지 실제 색상이 아니었습니다. 대신 {{cssxref("background")}}와 {{cssxref("border")}}의 `<color>` 자리에 사용하는 특별한 키워드로, 상속받은 단색을 덮어 쓸 수 있도록 추가됐었습니다. CSS Colors Level 3에서 알파 채널이 추가되면서 `transparent`도 실제 색상으로 재정의되었습니다. 덕분에 `<color>` 값 어디에나 사용할 수 있습니다.
 
 ### currentColor 키워드
 
@@ -857,7 +852,8 @@ RGB 색상 모델은 빨강, 초록, 파랑을 통해 특정 색을 표현합니
 
 RGB 색상은 # 뒤의 16진수 표기법이나 함수형 표기법(`rgb()`, `rgba()`)으로 표현할 수 있습니다.
 
-> **참고:** CSS Colors Level 4부터 `rgba()`는 `rgb()`의 다른 이름입니다. Level 4 표준을 구현한 브라우저에서는 같은 매개변수를 받고 동일하게 행동합니다.
+> [!NOTE]
+> CSS Colors Level 4부터 `rgba()`는 `rgb()`의 다른 이름입니다. Level 4 표준을 구현한 브라우저에서는 같은 매개변수를 받고 동일하게 행동합니다.
 
 - 16진수 표기법: `#RRGGBB[AA]`
   - : `R`(빨강), `G`(초록), `B`(파랑), `A`(알파)는 16진수 문자(0-9, A-F)입니다. `A`는 선택사항입니다. 예를 들어 `#ff0000`은 `#ff0000ff`와 같습니다.
@@ -950,10 +946,11 @@ HSL 색상 모델은 색상, 채도, 명도를 통해 특정 색상을 표현합
 
 HSL 색상은 함수형 <a id="hsl()" name="hsl()"><code>hsl()</code></a>과 <a id="hsla()" name="hsla()"><code>hsla()</code></a> 표기법을 사용합니다.
 
-> **참고:** CSS Colors Level 4부터 `hsla()`는 `hsl()`의 다른 이름입니다. Level 4 표준을 구현한 브라우저에서는 같은 매개변수를 받고 동일하게 행동합니다.
+> [!NOTE]
+> CSS Colors Level 4부터 `hsla()`는 `hsl()`의 다른 이름입니다. Level 4 표준을 구현한 브라우저에서는 같은 매개변수를 받고 동일하게 행동합니다.
 
 - 함수형 포기법: `hsl(H, S, L[, A])` 또는 `hsla(H, S, L, A)`
-  - : `H`(색상)는 색상원에서의 {{cssxref("&lt;angle&gt;")}}로 {{SpecName("CSS4 Colors","#the-hsl-notation")}} 기준 `deg`, `rad`, `grad`, `turn`을 사용할 수 있습니다. 단위 없이 {{cssxref("&lt;number&gt;")}}로 표현할 경우 {{SpecName("CSS3 Colors", "#hsl-color")}}에 명시된 것과 같이 각도로 해석합니다. 정의에 따르면 빨강=`0deg`=`360deg`이며 다른 색은 (초록=`120deg`, 파랑=`240deg` 등) 원을 따라 분포하고 있습니다. `<angle>`이라면 암묵적으로 원의 주위를 한 바퀴 돕니다. 예컨대 `-120deg`=`240deg`, `480deg`=`120deg`, `-1turn`=`1turn` 입니다.
+  - : `H`(색상)는 색상원에서의 {{cssxref("&lt;angle&gt;")}}로 #the-hsl-notation 기준 `deg`, `rad`, `grad`, `turn`을 사용할 수 있습니다. 단위 없이 {{cssxref("&lt;number&gt;")}}로 표현할 경우 hsl-color에 명시된 것과 같이 각도로 해석합니다. 정의에 따르면 빨강=`0deg`=`360deg`이며 다른 색은 (초록=`120deg`, 파랑=`240deg` 등) 원을 따라 분포하고 있습니다. `<angle>`이라면 암묵적으로 원의 주위를 한 바퀴 돕니다. 예컨대 `-120deg`=`240deg`, `480deg`=`120deg`, `-1turn`=`1turn` 입니다.
 
     `S`(채도)와 `L`(명도)은 {{cssxref("&lt;percentage&gt;")}}입니다. `100%` 채도는 제일 진한 색이며 `0%`는 회색입니다. `100%` 명도는 흰색, `0%` 명도는 검은색, `50%` 명도는 "보통" 색입니다.
 
@@ -1201,11 +1198,11 @@ hsla(240 100% 50% / 5%)   /*   5% opaque blue */
 
 ## 보간
 
-애니메이션과 [그레이디언트](/ko/docs/Web/CSS/CSS_Images/Using_CSS_gradients)는 `<color>` 값의 빨강, 초록, 파랑 각 구성 성분을 부동소수점 실수를 사용해 보간합니다. 보간 중 예상하지 못한 무채색이 등장하는걸 방지하기 위해 계산은 [알파 채널을 미리 곱한 sRGBA 색 공간](https://www.gimp.org/docs/plug-in/appendix-alpha.html)에서 수행합니다. 애니메이션에서 보간의 속도는 [타이밍 함수](/ko/docs/Web/CSS/single-transition-timing-function)가 결정합니다.
+애니메이션과 [그레이디언트](/ko/docs/Web/CSS/CSS_images/Using_CSS_gradients)는 `<color>` 값의 빨강, 초록, 파랑 각 구성 성분을 부동소수점 실수를 사용해 보간합니다. 보간 중 예상하지 못한 무채색이 등장하는걸 방지하기 위해 계산은 [알파 채널을 미리 곱한 sRGBA 색 공간](https://www.gimp.org/docs/plug-in/appendix-alpha.html)에서 수행합니다. 애니메이션에서 보간의 속도는 [타이밍 함수](/ko/docs/Web/CSS/easing-function)가 결정합니다.
 
 ## 접근성 고려사항
 
-색을 구별하기 어려운 사람도 있으므로, [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) 권고안은 특정 메시지, 행동, 또는 결과를 나타내는 방법으로 오직 색만 사용하는걸 강력히 반대하고 있습니다. [색과 색상 대비](/ko/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast)를 참고하세요.
+색을 구별하기 어려운 사람도 있으므로, [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) 권고안은 특정 메시지, 행동, 또는 결과를 나타내는 방법으로 오직 색만 사용하는걸 강력히 반대하고 있습니다. [색과 색상 대비](/ko/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#color_and_color_contrast)를 참고하세요.
 
 ## 명세
 
@@ -1219,4 +1216,4 @@ hsla(240 100% 50% / 5%)   /*   5% opaque blue */
 
 - {{Cssxref("opacity")}} 속성으로 요소 자체의 투명도를 바꿀 수 있습니다.
 - `<color>`를 지정할 수 있는 흔히 쓰이는 속성: {{Cssxref("color")}}, {{Cssxref("background-color")}}, {{Cssxref("border-color")}}, {{Cssxref("box-shadow")}}, {{Cssxref("outline-color")}}, {{Cssxref("text-shadow")}}
-- [CSS로 HTML 요소에 색 입히기](/ko/docs/Web/HTML/Applying_color)
+- [CSS로 HTML 요소에 색 입히기](/ko/docs/Web/CSS/CSS_colors/Applying_color)

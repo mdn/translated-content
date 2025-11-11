@@ -1,23 +1,18 @@
 ---
-title: KeyboardEvent()
+title: "KeyboardEvent: KeyboardEvent() コンストラクター"
+short-title: KeyboardEvent()
 slug: Web/API/KeyboardEvent/KeyboardEvent
-page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM
-  - KeyboardEvent
-  - Reference
-browser-compat: api.KeyboardEvent.KeyboardEvent
-translation_of: Web/API/KeyboardEvent/KeyboardEvent
+l10n:
+  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
+
 {{APIRef("UI Events")}}
 
 **`KeyboardEvent()`** コンストラクターは、新しい {{domxref("KeyboardEvent")}} オブジェクトを生成します。
 
 ## 構文
 
-```js
+```js-nolint
 new KeyboardEvent(type)
 new KeyboardEvent(type, options)
 ```

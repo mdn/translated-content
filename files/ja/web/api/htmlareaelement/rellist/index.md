@@ -1,39 +1,32 @@
 ---
-title: HTMLAreaElement.relList
+title: "HTMLAreaElement: relList プロパティ"
+short-title: relList
 slug: Web/API/HTMLAreaElement/relList
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLAreaElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAreaElement.relList
-translation_of: Web/API/HTMLAreaElement/relList
+l10n:
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
+
 {{APIRef("HTML DOM")}}
 
-**`HTMLAreaElement.relList`** 読み取り専用プロパティは、{{htmlattrxref("rel", "area")}} 属性を反映しています。これは生きた {{domxref("DOMTokenList")}} で、 {{HTMLElement("area")}} 要素で表されるリソースと現在の文書との間の関係を示す[リンク種別](/ja/docs/Web/HTML/Link_types)のセットが入ります。
+**`HTMLAreaElement.relList`** 読み取り専用プロパティは、[`rel`](/ja/docs/Web/HTML/Reference/Attributes/rel) 属性を反映しています。これは生きた {{domxref("DOMTokenList")}} で、 {{HTMLElement("area")}} 要素で表されるリソースと現在の文書との間の関係を示すリンク種別のセットが入ります。
 
 このプロパティ自体は読み取り専用です。 つまり、 {{domxref("DOMTokenList")}} を別のものに置き換えることはできませんが、その内容は変更できます。
 
 ## 値
 
-文字列です。
+生きた文字列の {{domxref("DOMTokenList")}} です。
 
 ## 例
 
 ```js
-var areas = document.getElementsByTagName("area");
-var length = areas.length;
+const areas = document.getElementsByTagName("area");
+const length = areas.length;
 
-for (var i = 0; i < length; i++) {
-  var list = areas[i].relList;
-  var listLength = list.length;
+for (const area of areas) {
   console.log("新しい領域が見つかりました。");
-  for (var j = 0; j < listLength; j++) {
-    console.log(list[j]);
-  }
+  area.relList.forEach((relValue) => {
+    console.log(relValue);
+  });
 }
 ```
 

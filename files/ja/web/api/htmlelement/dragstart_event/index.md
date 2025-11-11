@@ -1,45 +1,39 @@
 ---
-title: 'HTMLElement: dragstart イベント'
+title: "HTMLElement: dragstart イベント"
+short-title: dragstart
 slug: Web/API/HTMLElement/dragstart_event
-page-type: web-api-event
-tags:
-  - DOM
-  - Event
-  - Reference
-  - drag and drop
-browser-compat: api.HTMLElement.dragstart_event
-translation_of: Web/API/HTMLElement/dragstart_event
+l10n:
+  sourceCommit: ea4425b74ae0dc1ec17737b4e28d8df2b73f1eae
 ---
+
 {{APIRef}}
 
 `dragstart` イベントは、ユーザーが要素や選択されたテキストをドラッグし始めたときに発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>あり</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>あり</td>
-    </tr>
-    <tr>
-      <th scope="row">既定のアクション</th>
-      <td>ドラッグ＆ドロップ操作を始める。</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("DragEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>
-        {{domxref("GlobalEventHandlers/ondragstart", "ondragstart")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+このイベントはキャンセル可能で、{{domxref("Document")}} オブジェクトと {{domxref("Window")}} オブジェクトまでバブルアップする可能性があります。
+
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかします。
+
+```js
+addEventListener("dragstart", (event) => {});
+
+ondragstart = (event) => {};
+```
+
+## イベント型
+
+{{domxref("DragEvent")}} です。 {{domxref("Event")}} を継承しています。
+
+{{InheritanceDiagram("DragEvent")}}
+
+## イベントプロパティ
+
+_以下に挙げたプロパティに加えて、親である {{domxref("Event")}} から継承したプロパティもあります。_
+
+- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
+  - : ドラッグ＆ドロップ操作の間に転送されるデータです。
 
 ## 例
 
@@ -49,15 +43,13 @@ translation_of: Web/API/HTMLElement/dragstart_event
 
 `dragstart` イベントを待ち受けすることで、ドラッグしている間、要素を半透明にします。
 
-ドラッグ＆ドロップのより完全な例については、[`drag`](/ja/docs/Web/API/HTMLElement/drag_event) イベントのページを参照してください。
+ドラッグ＆ドロップの完全な例については、[`drag`](/ja/docs/Web/API/HTMLElement/drag_event) イベントのページを参照してください。
 
 #### HTML
 
 ```html
 <div id="container">
-  <div id="draggable" draggable="true">
-    この div はドラッグ可
-  </div>
+  <div id="draggable" draggable="true">この div はドラッグ可</div>
 </div>
 <div class="dropzone"></div>
 ```
@@ -83,7 +75,7 @@ body {
 }
 
 .dragging {
-  opacity: .5;
+  opacity: 0.5;
 }
 ```
 
@@ -91,12 +83,12 @@ body {
 
 ```js
 const source = document.getElementById("draggable");
-source.addEventListener("dragstart", event => {
+source.addEventListener("dragstart", (event) => {
   // 半透明にする
   event.target.classList.add("dragging");
 });
 
-source.addEventListener("dragend", event => {
+source.addEventListener("dragend", (event) => {
   // 透明度を解除
   event.target.classList.remove("dragging");
 });
@@ -117,16 +109,9 @@ source.addEventListener("dragend", event => {
 ## 関連情報
 
 - その他のドラッグ＆ドロップイベント:
-
   - {{domxref("HTMLElement/drag_event", "drag")}}
   - {{domxref("HTMLElement/dragend_event", "dragend")}}
   - {{domxref("HTMLElement/dragover_event", "dragover")}}
   - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
   - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
   - {{domxref("HTMLElement/drop_event", "drop")}}
-
-- 他を対象としたこのイベント
-
-  - {{domxref("Window")}}: {{domxref("Window/dragstart_event", "dragstart")}} イベント
-  - {{domxref("Document")}}: {{domxref("Document/dragstart_event", "dragstart")}} イベント
-  - {{domxref("SVGElement")}}: {{domxref("SVGElement/dragstart_event", "dragstart")}} イベント

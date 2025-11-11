@@ -1,28 +1,24 @@
 ---
-title: CSSGroupingRule.deleteRule()
+title: "CSSGroupingRule: deleteRule() メソッド"
+short-title: deleteRule()
 slug: Web/API/CSSGroupingRule/deleteRule
-tags:
-  - API
-  - CSSOM
-  - CSSGroupingRule
-  - メソッド
-  - リファレンス
-browser-compat: api.CSSGroupingRule.deleteRule
-translation_of: Web/API/CSSGroupingRule/deleteRule
+l10n:
+  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`deleteRule()`** は {{domxref("CSSGroupingRule")}} インターフェイスのメソッドで、子 CSS ルールの一覧からある CSS ルールを取り除きます。
 
 ## 構文
 
-```js
+```js-nolint
 deleteRule(index)
 ```
 
 ### 引数
 
-- index
+- `index`
   - : 削除するルールの位置です。
 
 ### 返値
@@ -40,7 +36,7 @@ deleteRule(index)
 
 ```js
 let myRules = document.styleSheets[0].cssRules;
-myRules[0].deleteRule(2); /* deletes the rule at index 2 */
+myRules[0].deleteRule(2); /* インデックス 2 にあるルールを削除 */
 ```
 
 ## 仕様書

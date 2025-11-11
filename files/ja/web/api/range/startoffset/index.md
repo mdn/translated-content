@@ -1,15 +1,11 @@
 ---
-title: Range.startOffset
+title: "Range: startOffset プロパティ"
+short-title: startOffset
 slug: Web/API/Range/startOffset
-page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Range
-browser-compat: api.Range.startOffset
-translation_of: Web/API/Range/startOffset
+l10n:
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
+
 {{ApiRef("DOM")}}
 
 **`Range.startOffset`** は読み取り専用プロパティで、 `startContainer` の `Range` の開始位置を表す数値を返します。
@@ -26,8 +22,8 @@ translation_of: Web/API/Range/startOffset
 
 ```js
 const range = document.createRange();
-range.setStart(startNode,startOffset);
-range.setEnd(endNode,endOffset);
+range.setStart(startNode, startOffset);
+range.setEnd(endNode, endOffset);
 const startRangeOffset = range.startOffset;
 ```
 

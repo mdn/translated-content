@@ -1,18 +1,14 @@
 ---
-title: Range.endContainer
+title: "Range: endContainer プロパティ"
+short-title: endContainer
 slug: Web/API/Range/endContainer
-page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Range
-browser-compat: api.Range.endContainer
-translation_of: Web/API/Range/endContainer
+l10n:
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
+
 {{ApiRef("DOM")}}
 
-**`Range.endContainer`** は読み取り専用プロパティで、 {{domxref("Range")}} の終了位置にあるノード ({{domxref("Node")}}) を返します。ノードの終了位置を変更するために {{domxref("Range.setEnd()")}} または同様のメソッドを利用します。
+**`Range.endContainer`** は読み取り専用プロパティで、 {{domxref("Range")}} の終了位置にあるノード ({{domxref("Node")}}) を返します。ノードの終了位置を変更するために {{domxref("Range.setEnd()")}} または同様のメソッドを利用します。
 
 ## 値
 
@@ -23,8 +19,8 @@ translation_of: Web/API/Range/endContainer
 ```js
 const range = document.createRange();
 
-range.setStart(startNode,startOffset);
-range.setEnd(endNode,endOffset);
+range.setStart(startNode, startOffset);
+range.setEnd(endNode, endOffset);
 endRangeNode = range.endContainer;
 ```
 

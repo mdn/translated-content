@@ -1,16 +1,11 @@
 ---
-title: HTMLElement.lang
+title: "HTMLElement: lang プロパティ"
+short-title: lang
 slug: Web/API/HTMLElement/lang
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - NeedsUpdate
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLElement.lang
-translation_of: Web/API/HTMLElement/lang
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.lang`** プロパティは、要素の属性値とテキストコンテンツの基本言語を取得または設定します。

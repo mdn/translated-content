@@ -1,249 +1,278 @@
 ---
-title: Array.prototype.forEach()
+title: "Array : méthode forEach()"
+short-title: forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/forEach
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/forEach
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-{{JSRef}}
 
-La méthode **`forEach()`** permet d'exécuter une fonction donnée sur chaque élément du tableau.
+La méthode **`forEach()`** des instances de {{JSxRef("Array")}} exécute une fonction fournie une fois pour chaque élément du tableau.
 
-{{EmbedInteractiveExample("pages/js/array-foreach.html")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Array.prototype.forEach()")}}
+
+```js interactive-example
+const array = ["a", "b", "c"];
+
+array.forEach((element) => console.log(element));
+
+// Sortie attendue : "a"
+// Sortie attendue : "b"
+// Sortie attendue : "c"
+```
 
 ## Syntaxe
 
-```js
-arr.forEach(callback);
-arr.forEach(callback, thisArg);
+```js-nolint
+forEach(callbackFn)
+forEach(callbackFn, thisArg)
 ```
 
 ### Paramètres
 
-- `callback`
-
-  - : La fonction à utiliser pour chaque élément du tableau. Elle prend en compte trois arguments :
-
-    - `valeurCourante`
-      - : La valeur de l'élément du tableau en cours de traitement.
-    - `index` {{optional_inline}}
-      - : L'indice de l'élément du tableau en cours de traitement.
-    - `array` {{optional_inline}}
-      - : Le tableau sur lequel la méthode `forEach` est appliquée.
-
-- `thisArg` {{optional_inline}}
-  - : Paramètre optionnel. La valeur à utiliser pour `this` lors de l'exécution de `callback`.
+- `callbackFn`
+  - : La fonction à exécuter pour chaque élément du tableau. Sa valeur de retour est ignorée. La fonction est appelée avec les arguments suivants&nbsp;:
+    - `element`
+      - : L'élément en cours de traitement dans le tableau.
+    - `index`
+      - : L'indice de l'élément en cours de traitement dans le tableau.
+    - `array`
+      - : Le tableau sur lequel la méthode `forEach()` a été appelée.
+- `thisArg` {{Optional_Inline}}
+  - : La valeur à utiliser comme `this` lors de l'exécution de la fonction `callbackFn`. Voir [les méthodes itératives](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives).
 
 ### Valeur de retour
 
-{{jsxref("undefined")}}.
+Aucune ({{JSxRef("undefined")}}).
 
 ## Description
 
-`forEach()` exécute la fonction `callback` une fois pour chaque élément du tableau, dans l'ordre croissant des indices. Cette fonction n'est pas appelée pour les indices pour lesquels les éléments ont été supprimés ou qui n'ont pas été définis. Attention, en revanche elle est appelée pour les éléments qui sont présents et qui valent {{jsxref("undefined")}}.
+La méthode `forEach()` est une [méthode itérative](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives). Elle appelle la fonction `callbackFn` fournie une fois pour chaque élément du tableau, dans l'ordre croissant des indices. Contrairement à {{JSxRef("Array/map", "map()")}}, `forEach()` renvoie toujours {{JSxRef("undefined")}} et n'est pas chaînable. L'usage typique est d'exécuter des effets de bord à la fin d'une chaîne. Consultez la section [méthodes itératives](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives) pour plus d'informations sur le fonctionnement général de ces méthodes.
 
-`callback` est appelé avec trois arguments :
+La fonction `callbackFn` est appelée uniquement pour les indices du tableau qui ont une valeur attribuée. Elle n'est pas appelée pour les cases vides dans [un tableau creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux).
 
-- la valeur de l'élément
-- l'index de l'élément
-- le tableau utilisé
+La méthode `forEach()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_génériques_sur_les_tableaux). Elle attend seulement que la valeur de `this` possède une propriété `length` et des propriétés à clés entières.
 
-Si un paramètre `thisArg` est fourni à la méthode `forEach`, il sera utilisé en tant que valeur `this` pour chaque appel de `callback`. Sinon, ce sera la valeur `undefined` qui sera utilisée comme valeur `this`. La valeur `this` finalement prise en compte par la fonction `callback` est déterminée selon [les règles usuelles pour déterminer la valeur de `this` utilisée dans une fonction](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this).
+Il n'existe aucun moyen d'arrêter ou de sortir d'une boucle `forEach()` autrement qu'en lançant une exception. Si vous avez besoin de ce comportement, la méthode `forEach()` n'est pas adaptée.
 
-L'ensemble des éléments traités par `forEach` est défini avant le premier appel à `callback`. Les éléments ajoutés au tableau après que l'appel à `forEach` ait commencé ne seront pas visités par `callback`. Si des éléments déjà présents dans le tableau sont modifiés, leur valeur telle qu'elle est passée au `callback` sera la valeur au moment du passage du `forEach` ; les éléments supprimés ne sont pas parcourus. Voir [l'exemple ci-après](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/forEach#Attention_aux_modifications_en_cours).
+L'arrêt anticipé peut être réalisé avec des instructions de boucle comme [`for`](/fr/docs/Web/JavaScript/Reference/Statements/for), [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of) et [`for...in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in). Les méthodes de tableau comme {{JSxRef("Array/every", "every()")}}, {{JSxRef("Array/some", "some()")}}, {{JSxRef("Array/find", "find()")}}, et {{JSxRef("Array/findIndex", "findIndex()")}} arrêtent aussi l'itération dès que ce n'est plus nécessaire.
 
-`forEach()` exécute la fonction `callback` une fois pour chaque élément. À la différence de {{jsxref("Array.prototype.map()", "map()")}} ou de {{jsxref("Array.prototype.reduce()", "reduce()")}} il renvoie toujours la valeur {{jsxref("undefined")}} et ne peut donc pas être « enchaîné ». Généralement, l'effet voulu est de déclencher des effets de bord en fin de chaîne.
+`forEach()` attend une fonction synchrone — elle n'attend pas les promesses. Veillez à bien comprendre les implications de l'utilisation de promesses (ou de fonctions asynchrones) comme fonctions de rappel de `forEach`.
 
-`forEach()` ne modifie pas le tableau sur lequel elle est appelée, en revanche, la fonction de retour (_callback_) utilisée peut modifier le tableau.
+```js
+const notes = [5, 4, 5];
+let somme = 0;
 
-> **Note :** Il n'existe aucun moyen d'arrêter une boucle `forEach` en dehors de lever une exception. Si vous avez besoin d'arrêter la boucle, étudiez plutôt :
->
-> - Une boucle [`for`](/fr/docs/Web/JavaScript/Reference/Instructions/for) classique
-> - Une boucle [`for...in`](/fr/docs/Web/JavaScript/Reference/Instructions/for...in) ou [`for...of`](/fr/docs/Web/JavaScript/Reference/Instructions/for...of)
-> - {{jsxref("Array.prototype.every()")}}
-> - {{jsxref("Array.prototype.some()")}}
-> - {{jsxref("Array.prototype.find()")}}
-> - {{jsxref("Array.prototype.findIndex()")}}
->
-> Les autres méthodes associées aux tableaux ({{jsxref("Array.prototype.every()")}}, {{jsxref("Array.prototype.some()")}}, {{jsxref("Array.prototype.find()")}}, {{jsxref("Array.prototype.findIndex()")}}) utilisent une fonction de texte qui permet de renvoyer une valeur équivalente à `true` si besoin de poursuivre la boucle.
+const fonctionSommeAsync = async (a, b) => a + b;
 
-`forEach` exécute la fonction `callback` une fois pour chaque élément ; contrairement à `every` et `some`, cette méthode renvoie toujours `undefined` et ne peut pas être enchaînée.
+notes.forEach(async (note) => {
+  somme = await fonctionSommeAsync(somme, note);
+});
+
+console.log(somme);
+// Sortie attendue : 14
+// Sortie réelle : 0
+```
+
+Pour exécuter une série d'opérations asynchrones séquentiellement ou en concurrence, voir la section [composition de promesses](/fr/docs/Web/JavaScript/Guide/Using_promises#composition).
 
 ## Exemples
 
-### Équivalence entre une boucle `for` et une boucle `forEach`
-
-Voici un fragment de code simple qui utilise une boucle `for`
+### Conversion d'une boucle `for` en `forEach`
 
 ```js
-var items = ["item1", "item2", "item3"];
-var copie = [];
+const elements = ["élément 1", "élément 2", "élément 3"];
+const elementsCopie = [];
 
-for (var i = 0; i < items.length; i++) {
-  copie.push(items[i]);
+// avant
+for (let i = 0; i < elements.length; i++) {
+  elementsCopie.push(elements[i]);
 }
-```
 
-Et voici un fragment de code équivalent qui utilise `forEach` :
-
-```js
-var items = ["item1", "item2", "item3"]
-var copie = [];
-
-items.forEach(function(item){
-  copie.push(item);
+// après
+elements.forEach((element) => {
+  elementsCopie.push(element);
 });
 ```
 
 ### Afficher le contenu d'un tableau
 
-> **Note :** Pour afficher le contenu d'un tableau, on pourra utiliser [`console.table()`](/fr/docs/Web/API/Console/table) qui met en forme les éléments du tableau. L'exemple suivant est laissé à titre d'illustration pour `forEach()`.
+> [!NOTE]
+> Pour afficher le contenu d'un tableau dans la console,
+> vous pouvez utiliser {{DOMxRef("console/table_static", "console.table()")}}, qui affiche une version mise en forme du tableau.
+>
+> L'exemple suivant illustre une autre approche, utilisant
+> `forEach()`.
 
-Le code suivant affiche une ligne pour chaque élément du tableau :
+Le code suivant affiche une ligne pour chaque élément d'un tableau&nbsp;:
 
 ```js
-function logArrayElements(element, index, array) {
-    console.log("a[" + index + "] = " + element);
-}
+const logArrayElements = (element, index /*, array */) => {
+  console.log(`a[${index}] = ${element}`);
+};
+
+// Remarquez que l'indice 2 est ignoré, car il n'y a pas d'élément à cette position dans le tableau.
 [2, 5, , 9].forEach(logArrayElements);
-// logs:
+// Affiche :
 // a[0] = 2
 // a[1] = 5
 // a[3] = 9
 ```
 
-### Utiliser l'argument pour `this`
+### Utilisation de `thisArg`
 
-Dans l'exemple qui suit, on met à jour les propriétés d'un objet à partir des éléments d'un tableau :
+L'exemple (artificiel) suivant met à jour les propriétés d'un objet à partir de chaque entrée du tableau&nbsp;:
 
 ```js
-function Compteur() {
-  this.somme = 0;
-  this.compte = 0;
+class Compteur {
+  constructor() {
+    this.somme = 0;
+    this.compte = 0;
+  }
+  ajouter(tableau) {
+    // Seules les expressions de fonction possèdent leur propre liaison this.
+    tableau.forEach(function compterEntree(entree) {
+      this.somme += entree;
+      ++this.compte;
+    }, this);
+  }
 }
 
-Compteur.prototype.ajouter = function(tableau) {
-  tableau.forEach(function(element) {
-    this.somme += element;
-    ++this.compte;
-  },  this);
-  //  ^---- On a ajouté l'argument this ici.
-};
-
-var obj = new Compteur();
+const obj = new Compteur();
 obj.ajouter([2, 5, 9]);
 console.log(obj.compte); // 3
-console.log(obj.somme);  // 16
+console.log(obj.somme); // 16
 ```
 
-> **Note :** Le paramètre pour `this` est passé à la méthode `forEach()`, à chaque appel du callback, celui-ci sera utilisé comme valeur pour `this`.
+Puisque le paramètre `thisArg` (`this`) est fourni à
+`forEach()`, il est transmis à `callback` à chaque appel.
+La fonction de rappel l'utilise comme valeur de `this`.
 
-> **Note :** Si la fonction passée en argument est [une fonction fléchée](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées), il n'est pas nécessaire d'ajouter le paramètre `this` car les fonctions fléchées utilisent le [`this`](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this) fourni par le contexte lexical.
+> [!NOTE]
+> Si la fonction de rappel passée était une
+> [fonction fléchée](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions),
+> le paramètre `thisArg` pourrait être omis,
+> car toutes les fonctions fléchées lient lexicalement la valeur de {{JSxRef("Operators/this", "this")}}.
 
-### Stopper une boucle
+### Fonction de copie d'objet
 
-Le code qui suit utilise la méthode {{jsxref("Array.prototype.every")}} pour afficher le contenu d'un tableau et s'arrêter lorsqu'il atteint une valeur supérieure à `SEUIL_MAX`.
+Le code suivant crée une copie d'un objet donné.
 
-```js
-var SEUIL_MAX = 12;
-var v = [5, 2, 16, 4, 3, 18, 20];
-var res;
-
-res = v.every(function(element, index, array) {
-  console.log('élément :', element);
-  if (element >= SEUIL_MAX) {
-    return false;
-  }
-
-  return true;
-});
-console.log('res:', res);
-// affiche :
-// élément : 5
-// élément : 2
-// élément : 16
-// res : false
-
-res = v.some(function(element, index, array) {
-  console.log('élément:', element);
-  if (element >= SEUIL_MAX) {
-    return true;
-  }
-
-  return false;
-});
-console.log('res:', res);
-// affiche :
-// élément : 5
-// élément : 2
-// élément : 16
-// res: true
-```
-
-### Une fonction de copie d'objet
-
-Le code qui suit permet de créer une copie d'un objet donné. Il existe différentes façons pour créer une copie d'un objet. L'exemple suivant illustre une de ces façons afin d'expliquer le fonctionnement d'`Array.prototype.forEach` et d'utiliser les fonctions ECMAScript 5 `Object.*`.
+Il existe différentes manières de copier un objet. Ce qui suit n'est qu'une façon de faire et est présenté pour expliquer le fonctionnement de `Array.prototype.forEach()` en utilisant les fonctions utilitaires `Object.*`.
 
 ```js
-function copie(obj) {
-  var copie = Object.create(Object.getPrototypeOf(obj));
-  var propNames = Object.getOwnPropertyNames(obj);
-
-  propNames.forEach(function(nom) {
-    var desc = Object.getOwnPropertyDescriptor(obj, nom);
+const copie = (objet) => {
+  const copie = Object.create(Object.getPrototypeOf(objet));
+  const nomsProp = Object.getOwnPropertyNames(objet);
+  nomsProp.forEach((nom) => {
+    const desc = Object.getOwnPropertyDescriptor(objet, nom);
     Object.defineProperty(copie, nom, desc);
   });
-
   return copie;
-}
+};
 
-var obj1 = { a: 1, b: 2 };
-var obj2 = copie(obj1); // obj2 ressemble désormais à obj1
+const obj1 = { a: 1, b: 2 };
+const obj2 = copie(obj1); // obj2 est identique à obj1 maintenant
 ```
 
-### Attention aux modifications en cours
+### Aplatir un tableau
 
-Dans l'exemple qui suit, on utilise un tableau qui contient quatre élément : `"un"`, `"deux"`, `"trois"`, `"quatre"`. Lorsque le parcours du tableau arrive à l'élément `"deux"`, on décale le tableau d'un cran vers les premiers éléments. Aussi, l'élément `"quatre"` est décalé à la place de `"trois"` et `"trois"` est déplacé à la place de `"deux"`. Pour cette raison, lorsque `forEach` poursuit son parcours, elle saute la valeur "trois". Autrement dit, `forEach` n'utilise pas une copie du tableau au moment où elle est appelée, elle manipule le tableau directement. On voit aussi dans cet exemple que les éléments non initialisés ne sont pas traités par la fonction de rappel.
+L'exemple suivant est uniquement présent à des fins d'apprentissage. Si vous souhaitez aplatir un tableau en utilisant des méthodes intégrées, vous pouvez utiliser {{JSxRef("Array.prototype.flat()")}}.
 
 ```js
-var mots = ["un", "deux", "trois", "quatre"];
-mots.forEach(function(mot) {
-  console.log(mot);
-  if (mot === "deux") {
-    mots.shift();
-  }
+const aplatir = (arr) => {
+  const resultat = [];
+  arr.forEach((item) => {
+    if (Array.isArray(item)) {
+      resultat.push(...aplatir(item));
+    } else {
+      resultat.push(item);
+    }
+  });
+  return resultat;
+};
+
+// Utilisation
+const imbrique = [1, 2, 3, [4, 5, [6, 7], 8, 9]];
+console.log(aplatir(imbrique)); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+### Utilisation du troisième argument de `callbackFn`
+
+L'argument `array` est utile si vous souhaitez accéder à un autre élément du tableau, en particulier lorsque vous n'avez pas de variable existante qui fait référence au tableau. L'exemple suivant utilise d'abord `filter()` pour extraire les valeurs positives, puis utilise `forEach()` pour afficher ses voisins.
+
+```js
+const nombres = [3, -1, 1, 4, 1, 5];
+nombres
+  .filter((num) => num > 0)
+  .forEach((num, idx, arr) => {
+    // Sans l'argument arr, il n'y a aucun moyen d'accéder facilement au tableau intermédiaire sans le stocker dans une variable.
+    console.log(arr[idx - 1], num, arr[idx + 1]);
+  });
+// undefined 3 1
+// 3 1 4
+// 1 4 1
+// 4 1 5
+// 1 5 undefined
+```
+
+### Utilisation de `forEach()` sur les tableaux creux
+
+```js-nolint
+const tableauCreux = [1, 3, /* vide */, 7];
+let nombreAppelsCallback = 0;
+
+tableauCreux.forEach((element) => {
+  console.log({ element });
+  nombreAppelsCallback++;
 });
-// un
-// deux
-// quatre
+
+console.log({ nombreAppelsCallback });
+
+// { element: 1 }
+// { element: 3 }
+// { element: 7 }
+// { nombreAppelsCallback: 3 }
+```
+
+La fonction de rappel n'est pas appelée pour la valeur manquante à l'indice 2.
+
+### Appel de `forEach()` sur des objets ressemblant à des tableaux
+
+La méthode `forEach()` lit la propriété `length` de `this` puis accède à chaque propriété dont la clé est un entier non négatif inférieur à `length`.
+
+```js
+const objetSimilaireTableau = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+  3: 5, // ignoré par forEach() car length vaut 3
+};
+Array.prototype.forEach.call(objetSimilaireTableau, (x) => console.log(x));
+// 2
+// 3
+// 4
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.18', 'Array.prototype.forEach')}}                     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.foreach', 'Array.prototype.forEach')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-array.prototype.foreach', 'Array.prototype.forEach')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.forEach")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{jsxref("Array.prototype.filter()")}}
-- {{jsxref("Array.prototype.find()")}}
-- {{jsxref("Array.prototype.findIndex()")}}
-- {{jsxref("Array.prototype.map()")}}
-- {{jsxref("Array.prototype.every()")}}
-- {{jsxref("Array.prototype.some()")}}
-- {{jsxref("Map.prototype.forEach()")}}
-- {{jsxref("Set.prototype.forEach()")}}
+- [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
+- L'objet global {{JSxRef("Array")}}
+- La méthode {{JSxRef("Array.prototype.find()")}}
+- La méthode {{JSxRef("Array.prototype.map()")}}
+- La méthode {{JSxRef("Array.prototype.filter()")}}
+- La méthode {{JSxRef("Array.prototype.every()")}}
+- La méthode {{JSxRef("Array.prototype.some()")}}
+- La méthode {{JSxRef("TypedArray.prototype.forEach()")}}
+- La méthode {{JSxRef("Map.prototype.forEach()")}}
+- La méthode {{JSxRef("Set.prototype.forEach()")}}
+- [Prothèse d'émulation de `Array.prototype.forEach` dans core-js <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
+- [Prothèse d'émulation es-shims de `Array.prototype.forEach` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.foreach)

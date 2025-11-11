@@ -1,19 +1,17 @@
 ---
-title: CharacterData.substringData()
+title: "CharacterData: substringData() メソッド"
 slug: Web/API/CharacterData/substringData
-tags:
-  - メソッド
-  - リファレンス
-browser-compat: api.CharacterData.substringData
-translation_of: Web/API/CharacterData/substringData
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
+
 {{APIRef("DOM")}}
 
 **`substringData()`** は {{domxref("CharacterData")}} インターフェイスのメソッドで、既存のデータの一部を、指定した位置から始まり、指定した文字数分のデータを返します。
 
 ## 構文
 
-```js
+```js-nolint
   domString = characterData.substringData(offset, count)
 ```
 

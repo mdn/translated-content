@@ -1,19 +1,14 @@
 ---
 title: Document.forms
 slug: Web/API/Document/forms
-tags:
-  - API
-  - DOM
-  - Document
-  - Formulaires
-  - Propriétés
-translation_of: Web/API/Document/forms
 ---
+
 {{APIRef("DOM")}}
 
 La propriété `forms` de {{domxref("Document")}} retourne une collection ({{domxref("HTMLCollection")}}) des éléments {{HTMLElement("form")}} présents dans le document actuel.
 
-> **Note :** De même, vous pouvez accéder à une liste des éléments d'entrée utilisateur d'un formulaire à l'aide de la propriété {{domxref ("HTMLFormElement.elements")}}.
+> [!NOTE]
+> De même, vous pouvez accéder à une liste des éléments d'entrée utilisateur d'un formulaire à l'aide de la propriété {{domxref ("HTMLFormElement.elements")}}.
 
 ## Syntaxe
 
@@ -30,28 +25,34 @@ Un objet {{domxref("HTMLCollection")}} listant tous les formulaires du document.
 ### Récupérer les informations d'un formulaire
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <title>document.forms example</title>
+  </head>
 
-<head>
-<title>document.forms example</title>
-</head>
+  <body>
+    <form id="robby">
+      <input
+        type="button"
+        onclick="alert(document.forms[0].id);"
+        value="robby's form" />
+    </form>
 
-<body>
+    <form id="dave">
+      <input
+        type="button"
+        onclick="alert(document.forms[1].id);"
+        value="dave's form" />
+    </form>
 
-<form id="robby">
-  <input type="button" onclick="alert(document.forms[0].id);" value="robby's form" />
-</form>
-
-<form id="dave">
-  <input type="button" onclick="alert(document.forms[1].id);" value="dave's form" />
-</form>
-
-<form id="paul">
-  <input type="button" onclick="alert(document.forms[2].id);" value="paul's form" />
-</form>
-
-</body>
+    <form id="paul">
+      <input
+        type="button"
+        onclick="alert(document.forms[2].id);"
+        value="paul's form" />
+    </form>
+  </body>
 </html>
 ```
 
@@ -65,37 +66,33 @@ var selectFormElement = document.forms[index].elements[index];
 ### Accéder aux formulaires nommés
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <title>document.forms example</title>
-</head>
+  <head>
+    <title>document.forms example</title>
+  </head>
 
-<body>
+  <body>
+    <form name="login">
+      <input name="email" type="email" />
+      <input name="password" type="password" />
+      <button type="submit">Log in</button>
+    </form>
 
-<form name="login">
-  <input name="email" type="email">
-  <input name="password" type="password">
-  <button type="submit">Log in</button>
-</form>
-
-<script>
-  var loginForm = document.forms.login; // Ou document.forms['login']
-  loginForm.elements.email.placeholder = 'test@example.com';
-  loginForm.elements.password.placeholder = 'password';
-</script>
-</body>
+    <script>
+      var loginForm = document.forms.login; // Ou document.forms['login']
+      loginForm.elements.email.placeholder = "test@example.com";
+      loginForm.elements.password.placeholder = "password";
+    </script>
+  </body>
 </html>
 ```
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                               | Commentaire          |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('HTML WHATWG', '#dom-document-forms', 'Document.forms')}} | {{ Spec2('HTML WHATWG') }} |                      |
-| {{SpecName('DOM2 HTML', 'html.html#ID-1689064', 'Document.forms')}}     | {{ Spec2('DOM2 Events') }} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 
-- [Formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires)
+- [Formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\)
 - {{HTMLElement("form")}} et l'interface {{domxref("HTMLFormElement")}}

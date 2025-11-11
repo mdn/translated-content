@@ -1,19 +1,16 @@
 ---
-title: HTMLAreaElement.pathname
+title: "HTMLAreaElement: pathname プロパティ"
+short-title: pathname
 slug: Web/API/HTMLAreaElement/pathname
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAreaElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAreaElement.pathname
-translation_of: Web/API/HTMLAreaElement/pathname
-original_slug: Web/API/HTMLHyperlinkElementUtils/pathname
+l10n:
+  sourceCommit: 8cc63f7e6619446ea38f6a38c457a597a9af564b
 ---
+
 {{ApiRef("HTML DOM")}}
 
-**`HTMLAreaElement.pathname`** プロパティは、最初の `'/'` とその後に続く URL のパスが入った文字列（または、パスがない場合は空の文字列）です。
+**`HTMLAreaElement.pathname`** プロパティは、最初の `'/'` とその後に続く URL のパスから、クエリー文字列またはフラグメントを除外したもの入った文字列（または、パスがない場合は空文字列）です。
+
+パス名は設定時に{{Glossary("Percent-encoding", "パーセントエンコード")}}されますが、読み取り時にはパーセントデコードされません。
 
 ## 値
 
@@ -22,9 +19,9 @@ original_slug: Web/API/HTMLHyperlinkElementUtils/pathname
 ## 例
 
 ```js
-// <area id="myArea" href="/en-US/docs/HTMLAreaElement"> 要素が文書にあったとします
+// <area id="myArea" href="/ja/docs/HTMLAreaElement"> 要素が文書にあったとします
 const area = document.getElementById("myArea");
-area.pathname; // '/en-US/docs/HTMLAreaElement' を返す
+area.pathname; // '/ja/docs/HTMLAreaElement' を返す
 ```
 
 ## 仕様書

@@ -1,28 +1,24 @@
 ---
-title: Screen.unlockOrientation()
+title: "Screen: unlockOrientation() メソッド"
+short-title: unlockOrientation()
 slug: Web/API/Screen/unlockOrientation
-page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Deprecated
-  - Method
-  - NeedsMarkupWork
-  - Screen Orientation
-browser-compat: api.Screen.unlockOrientation
-translation_of: Web/API/Screen/unlockOrientation
+l10n:
+  sourceCommit: 4f35a8237ee0842beb9cfef3354e05464ad7ce1a
 ---
+
 {{APIRef("Screen Orientation API")}}{{Deprecated_Header}}
 
 **`Screen.unlockOrientation()`** メソッドは、ページやアプリによって設定されているすべての画面のロックを除去します。代わりに {{DOMxRef("ScreenOrientation.unlock()")}} を使用してください。
 
-> **Warning:** この機能は非推奨であり、代わりに {{DOMxRef("ScreenOrientation.unlock()")}} メソッドを使用してください。
+> [!WARNING]
+> この機能は非推奨であり、代わりに {{DOMxRef("ScreenOrientation.unlock()")}} メソッドを使用してください。
 
-> **Note:** このメソッドはインストールされたウェブアプリまたは[全画面モード](/ja/docs/Web/Guide/DOM/Using_full_screen_mode)のウェブページでのみ動作します。
+> [!NOTE]
+> このメソッドはインストールされたウェブアプリまたは[全画面モード](/ja/docs/Web/API/Fullscreen_API)のウェブページでのみ動作します。
 
 ## 構文
 
-```js
+```js-nolint
 unlockOrientation()
 ```
 
@@ -37,7 +33,11 @@ unlockOrientation()
 ## 例
 
 ```js
-var unlockOrientation = screen.unlockOrientation || screen.mozUnlockOrientation || screen.msUnlockOrientation || (screen.orientation && screen.orientation.unlock);
+const unlockOrientation =
+  screen.unlockOrientation ||
+  screen.mozUnlockOrientation ||
+  screen.msUnlockOrientation ||
+  (screen.orientation && screen.orientation.unlock);
 
 if (unlockOrientation()) {
   // 向きのロックが解除されました
@@ -50,7 +50,7 @@ if (unlockOrientation()) {
 
 この機能は、どの仕様書にも含まれていません。標準化される予定はありません。
 
-代わりに {{domxref("ScreenOrientation.lock()")}} を使用してください。
+代わりに {{domxref("ScreenOrientation.unlock()")}} を使用してください。
 
 ## ブラウザーの互換性
 
@@ -61,4 +61,4 @@ if (unlockOrientation()) {
 - {{DOMxRef("Screen.orientation")}}
 - {{DOMxRef("Screen.lockOrientation()")}}
 - {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} イベント
-- [画面の向きの制御](/ja/docs/Managing_screen_orientation)
+- [画面の向きの制御](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)

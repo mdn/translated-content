@@ -1,9 +1,10 @@
 ---
 title: W3C
 slug: Glossary/W3C
-translation_of: Glossary/W3C
-original_slug: Glossaire/W3C
 ---
+
+{{GlossarySidebar}}
+
 Le _World Wide Web Consortium_ (W3C) est un organisme international qui maintient les règles en {{Glossary("World Wide Web", "relation avec le Web")}} et les frameworks.
 
 Il est constitué de plus de 350 organisations qui développent conjointement les standards du Web, conduisent des programmes de sensibilisation et gèrent des forums ouverts pour dialoguer autour du Web. Le W3C coordonne les entreprises pour s'assurer qu'elles implémentent les mêmes standards.
@@ -14,5 +15,5 @@ Chaque standard passe à travers quatre étapes de maturation : _Working Draft_ 
 
 ### Connaissances générales
 
-- [Site web du W3C](http://www.w3.org/)
-- {{Interwiki("wikipedia", "World Wide Web Consortium", "W3C")}} sur Wikipedia
+- [Site web du W3C](https://www.w3.org/)
+- [W3C](https://fr.wikipedia.org/wiki/World_Wide_Web_Consortium) sur Wikipédia

@@ -1,17 +1,11 @@
 ---
-title: HTMLAnchorElement.href
+title: "HTMLAnchorElement: href プロパティ"
+short-title: href
 slug: Web/API/HTMLAnchorElement/href
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - Location
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAnchorElement.href
-translation_of: Web/API/HTMLAnchorElement/href
-original_slug: Web/API/HTMLHyperlinkElementUtils/href
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`HTMLAnchorElement.href`** は{{Glossary("stringifier", "文字列化")}}プロパティで、URL 全体を含む文字列を返し、 href を更新することもできます。
@@ -23,9 +17,9 @@ original_slug: Web/API/HTMLHyperlinkElementUtils/href
 ## 例
 
 ```js
-// <a id="myAnchor" href="https://developer.mozilla.org/en-US/HTMLAnchorElement"> 要素が文書にあったとします
+// <a id="myAnchor" href="https://developer.mozilla.org/ja/HTMLAnchorElement"> 要素が文書にあったとします
 const anchor = document.getElementById("myAnchor");
-anchor.href; // returns 'https://developer.mozilla.org/en-US/HTMLAnchorElement'
+anchor.href; // returns 'https://developer.mozilla.org/ja/HTMLAnchorElement'
 ```
 
 ## 仕様書

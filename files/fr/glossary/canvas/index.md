@@ -1,30 +1,19 @@
 ---
 title: Canvas
 slug: Glossary/Canvas
-tags:
-  - Glossaire
-  - Graphismes
-  - HTML
-  - JavaScript
-  - scripts
-translation_of: Glossary/Canvas
-original_slug: Glossaire/Canvas
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-L'élément {{Glossary("HTML")}} _{{HTMLElement("canvas")}}_ fournit une zone graphique vide sur laquelle des {{Glossary("API","API")}} {{Glossary("JavaScript")}} spécifiques peuvent dessiner (telles que des Canvas 2D ou du {{Glossary("WebGL")}}) .
 
-## En savoir plus
+L'**élément canvas** fait partie de [HTML5](https://fr.wikipedia.org/wiki/HTML5) et permet le rendu dynamique et [scriptable](https://fr.wikipedia.org/wiki/Langage_de_script) de formes 2D et 3D, ainsi que d'images [bitmap](https://fr.wikipedia.org/wiki/Bitmap).
 
-### Culture Générale
+C'est un modèle procédural de bas niveau qui met à jour un [bitmap](https://fr.wikipedia.org/wiki/Bitmap) et ne possède pas de [graphe de scène](https://fr.wikipedia.org/wiki/Graphe_de_sc%C3%A8ne) intégré. Il fournit une zone graphique vide sur laquelle des {{Glossary("JavaScript")}} {{Glossary("API")}} peuvent dessiner (comme Canvas 2D ou {{Glossary("WebGL")}}).
 
-- {{Interwiki("wikipedia", "Canvas element", "Canvas")}} sur Wikipedia
+## Voir aussi
 
-### Apprentissage
-
-- [Tutoriel Canvas](/fr/docs/Tutoriel_canvas) sur MDN
-
-### Informations techniques
-
-- L'élément {{HTMLElement("canvas")}} sur MDN
-- [La documentation générale des Canvas](/fr/docs/Web/HTML/Canvas) sur MDN
-- {{domxref("CanvasRenderingContext2D")}}: l'API pour dessiner des canvas 2D
-- [Spécification API Canvas 2D](http://www.w3.org/TR/2dcontext/)
+- [Tutoriel Canvas](/fr/docs/Web/API/Canvas_API/Tutorial)
+- L'élément HTML {{HTMLElement("canvas")}}
+- L'API {{DOMxRef("CanvasRenderingContext2D")}} pour dessiner des canvas 2D
+- [L'API Canvas](/fr/docs/Web/API/Canvas_API)
+- [L'élément `<canvas>`](<https://fr.wikipedia.org/wiki/Canvas_(HTML)>) sur Wikipédia
+- [Spécification API Canvas 2D <sup>(angl.)</sup>](https://www.w3.org/TR/2dcontext/)

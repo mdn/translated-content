@@ -1,16 +1,19 @@
 ---
-title: Error.prototype.fileName
+title: "Error: fileName"
 slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
-tags:
-  - JavaScript
-  - Non-standard
-  - Property
-  - Prototype
-browser-compat: javascript.builtins.Error.fileName
+l10n:
+  sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
 ---
-{{JSRef}} {{non-standard_header}}
 
-**`fileName`** 속성은 이 오류가 발생한 파일의 경로를 포함합니다.
+{{JSRef}} {{Non-standard_Header}}
+
+{{jsxref("Error")}} 인스턴스의 **`fileName`** 데이터 속성은 이 오류가 발생한 파일의 경로를 포함합니다.
+
+## 값
+
+문자열.
+
+{{js_property_attributes(1, 0, 1)}}
 
 ## 설명
 
@@ -21,9 +24,9 @@ browser-compat: javascript.builtins.Error.fileName
 ### fileName 사용하기
 
 ```js
-var e = new Error('Could not parse input');
+const e = new Error("Could not parse input");
 throw e;
-// e.fileName could look like "file:///C:/example.html"
+// e.fileName은 "file:///C:/example.html" 처럼 보일 수 있습니다.
 ```
 
 ## 명세

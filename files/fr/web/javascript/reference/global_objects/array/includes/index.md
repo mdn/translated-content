@@ -1,112 +1,142 @@
 ---
-title: Array.prototype.includes()
+title: "Array : méthode includes()"
+short-title: includes()
 slug: Web/JavaScript/Reference/Global_Objects/Array/includes
-tags:
-  - Array
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/includes
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/includes
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-{{JSRef}}
 
-La méthode **`includes()`** permet de déterminer si un tableau contient une valeur et renvoie `true` si c'est le cas, `false` sinon.
+La méthode **`includes()`** des instances de {{JSxRef("Array")}} détermine si un tableau contient une certaine valeur parmi ses éléments, et retourne `true` ou `false` selon le cas.
 
-{{EmbedInteractiveExample("pages/js/array-includes.html")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Array.prototype.includes()")}}
 
-> **Note :** Cette méthode utilise l'algorithme de comparaison _[SameValueZero](/fr/docs/Web/JavaScript/Les_différents_tests_d_égalité#Un_modèle_pour_mieux_comprendre)_ qui fonctionne comme l'égalité stricte, à la différence que `NaN` est ici égal à lui même.
+```js interactive-example
+const array1 = [1, 2, 3];
+
+console.log(array1.includes(2));
+// Résultat attendu : true
+
+const pets = ['chat', 'chien', 'chauve-souris'];
+
+console.log(pets.includes('chat'));
+// Résultat attendu : true
+
+console.log(pets.includes('at'));
+// Résultat attendu : false
+```
 
 ## Syntaxe
 
-```js
-array.includes(élémentRecherché)
-array.includes(élémentRecherché, indiceDépart)
+```js-nolint
+includes(searchElement)
+includes(searchElement, fromIndex)
 ```
 
 ### Paramètres
 
-- `élémentRecherché`
-  - : La valeur qu'on souhaite trouver dans le tableau (lorsqu'on manipule des caractères et des chaînes, la comparaison est sensible à la casse).
-- `indiceDépart` {{optional_inline}}
-  - : La position du tableau à partir de laquelle commencer à chercher `élémentRecherché`. Si on utilise une valeur négative, la recherche commencera à partir de la fin du tableau (autrement dit à l'indice `array.length - indiceDépart`). La valeur par défaut est 0.
+- `searchElement`
+  - : La valeur à rechercher.
+- `fromIndex` {{Optional_Inline}}
+  - : La position (en partant de 0) dans le tableau à partir de laquelle commencer la recherche. Cette valeur est [convertie en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière).
+    - Un indice négatif compte à rebours depuis la fin du tableau — si `-array.length <= fromIndex < 0`, `fromIndex + array.length` est utilisé. Cependant, le tableau est tout de même parcouru de l'avant vers l'arrière dans ce cas.
+    - Si `fromIndex < -array.length` ou si `fromIndex` est omis, `0` est utilisé, ce qui fait que tout le tableau est parcouru.
+    - Si `fromIndex >= array.length`, le tableau n'est pas parcouru et `false` est retourné.
 
 ### Valeur de retour
 
-Un {{jsxref("Boolean","booléen","",1)}} qui vaut `true` si `élémentRecherché` est trouvé dans le tableau (à partir de l'`indiceDépart` si celui-ci est indiqué). Les valeurs -0, +0 et 0 sont considérées comme équivalentes mais `false` n'est pas considéré comme équivalent à 0.
+Une valeur booléenne qui vaut `true` si la valeur `searchElement` est trouvée dans le tableau (ou dans la partie du tableau indiquée par l'indice `fromIndex`, si précisé).
 
-> **Note :** Pour être tout à fait précis, `includes()` utilise l'algorithme _[SameValueZero](/fr/docs/Web/JavaScript/Les_différents_tests_d_égalité#Un_modèle_pour_mieux_comprendre)_ afin de déterminer si un élément donné est trouvé.
+## Description
+
+La méthode `includes()` compare un `searchElement` aux éléments du tableau en utilisant l'algorithme [SameValueZero](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#égalité_de_valeurs_nulles). Les valeurs nulles sont toutes considérées comme égales, quel que soit leur signe&nbsp;: ainsi, `-0` est égal à `0`, mais `false` n'est _pas_ considéré comme équivalent à `0`. [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN) peut être recherché correctement.
+
+Lorsqu'elle est utilisée sur un [tableau creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux), la méthode `includes()` parcourt les emplacements vides comme s'ils avaient la valeur `undefined`.
+
+La méthode `includes()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthode_générique)&nbsp;: elle attend uniquement que la valeur de `this` possède une propriété `length` et des propriétés à clés entières.
 
 ## Exemples
 
+### Utilisation d'`includes()`
+
 ```js
-[1, 2, 3].includes(2);     // true
-[1, 2, 3].includes(4);     // false
-[1, 2, 3].includes(3, 3);  // false
+[1, 2, 3].includes(2); // true
+[1, 2, 3].includes(4); // false
+[1, 2, 3].includes(3, 3); // false
 [1, 2, 3].includes(3, -1); // true
 [1, 2, NaN].includes(NaN); // true
-
-['a', 'b', 'c'].includes('c', 5);    // false
-['a', 'b', 'c'].includes('c', -100); // true
+["1", "2", "3"].includes(3); // false
 ```
 
-### `indiceDépart` supérieur ou égal à la longueur du tableau
+### `fromIndex` supérieur ou égal à la longueur du tableau
 
-SI `indiceDépart` est supérieur ou égal à la longueur du tableau, la méthode retourne `false`. Le tableau n'est pas parcouru.
+Si `fromIndex` est supérieur ou égal à la longueur du tableau, `false` est retourné. Le tableau ne sera pas parcouru.
 
 ```js
-var arr = ['a', 'b', 'c'];
+const arr = ["a", "b", "c"];
 
-arr.includes('c', 3);   // false
-arr.includes('c', 100); // false
+arr.includes("c", 3); // false
+arr.includes("c", 100); // false
 ```
 
-### `indiceDépart` strictement négatif
+### L'indice calculé est inférieur à 0
 
-Si `indiceDépart` est strictement négatif, l'indice de départ effectif est la somme entre la taille du tableau et `indiceDépart`. Si cette somme est toujours négative, le tableau est intégralement parcouru.
+Si `fromIndex` est négatif, l'indice calculé est utilisé comme position dans le tableau à partir de laquelle commencer la recherche de `searchElement`. Si l'indice calculé est inférieur ou égal à `0`, tout le tableau sera parcouru.
 
 ```js
-// Le tableau a une taille de 3
-// indiceDépart vaut -2
-// L'indice de départ effectif vaut is 3 + (-2) = 1
+// la longueur du tableau est 3
+// fromIndex vaut -100
+// l'indice calculé vaut 3 + (-100) = -97
 
-var arr = ['a', 'b', 'c'];
+const arr = ["a", "b", "c"];
 
-arr.includes('a', -2); // false
-arr.includes('b', -2); // true
-arr.includes('c', -100); // true
+arr.includes("a", -100); // true
+arr.includes("b", -100); // true
+arr.includes("c", -100); // true
+arr.includes("a", -2); // false
 ```
 
-### Utilisation d'`includes()` comme méthode générique
+### Utilisation de `includes()` sur un tableau creux
 
-`includes()` est une méhtode générique : l'objet sur lequel elle est appelée ne doit pas nécessairement être un tableau. On peut l'utiliser sur des objets semblables à des tableaux (ex. [`arguments`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments) ou des chaînes de caractères) :
+Vous pouvez rechercher `undefined` dans un tableau creux et obtenir `true`.
 
 ```js
-function argumentsContientA(){
-  return [].includes.call(arguments, 'a');
-}
+console.log([1, , 3].includes(undefined)); // true
+```
 
-console.log(argumentsContientA('a','b','c')); // true
-console.log(argumentsContientA('d','e','f')); // false
+### Appel de `includes()` sur des objets qui ne sont pas des tableaux
+
+La méthode `includes()` lit la propriété `length` de `this` puis accède à chaque propriété dont la clé est un entier non négatif inférieur à `length`.
+
+```js
+const objetSimilaireTableau = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+  3: 1, // ignoré par includes() car length vaut 3
+};
+console.log(Array.prototype.includes.call(objetSimilaireTableau, 2));
+// true
+console.log(Array.prototype.includes.call(objetSimilaireTableau, 1));
+// false
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES7', '#sec-array.prototype.includes', 'Array.prototype.includes')}}     | {{Spec2('ES7')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-array.prototype.includes', 'Array.prototype.includes')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.includes")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{jsxref("TypedArray.prototype.includes()")}}
-- {{jsxref("String.prototype.includes()")}}
-- {{jsxref("Array.prototype.indexOf()")}}
-- {{jsxref("Array.prototype.find()")}}
-- {{jsxref("Array.prototype.findIndex()")}}
+- [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
+- L'objet global {{JSxRef("Array")}}
+- La méthode {{JSxRef("Array.prototype.indexOf()")}}
+- La méthode {{JSxRef("Array.prototype.find()")}}
+- La méthode {{JSxRef("Array.prototype.findIndex()")}}
+- La méthode {{JSxRef("TypedArray.prototype.includes()")}}
+- La méthode {{JSxRef("String.prototype.includes()")}}
+- [Prothèse d'émulation de `Array.prototype.includes` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
+- [Prothèse d'émulation es-shims de `Array.prototype.includes` <sup>(angl.)</sup>](https://www.npmjs.com/package/array-includes)

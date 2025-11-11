@@ -1,8 +1,8 @@
 ---
 title: Element.scrollTop
 slug: Web/API/Element/scrollTop
-translation_of: Web/API/Element/scrollTop
 ---
+
 {{APIRef("DOM")}}
 
 La propriété **`Element.scrollTop`** permet d'obtenir ou de définir le nombre de pixels sur lesquels le contenu a défilé verticalement.
@@ -11,7 +11,8 @@ La valeur `scrollTop` d'un élément correspond à la distance entre le haut de 
 
 Lorsque `scrollTop` est utilisé sur l'élément racine (c'est-à-dire l'élément `<html>`), c'est la valeur de `scrollY` pour la fenêtre qui est renvoyée. [Il s'agit d'un cas aux limites pour `scrollTop`](https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-scrolltop).
 
-> **Attention :** Pour les systèmes qui utilisent un affichage mis à l'échelle (_display scaling_), `scrollTop` peut fournir une valeur décimale.
+> [!WARNING]
+> Pour les systèmes qui utilisent un affichage mis à l'échelle (_display scaling_), `scrollTop` peut fournir une valeur décimale.
 
 ## Syntaxe
 
@@ -39,7 +40,27 @@ element.scrollTop = intValue;
 
 ```html
 <div id="container">
-  <div id="content">Utilisez le bouton :) Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam, incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi, distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam, incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi, distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam, incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi, distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam, incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi, distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam, incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi, distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam, incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi, distinctio repellat!!</div>
+  <div id="content">
+    Utilisez le bouton :) Lorem ipsum dolor sit amet consectetur adipisicing
+    elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam,
+    incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi,
+    distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing
+    elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam,
+    incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi,
+    distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing
+    elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam,
+    incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi,
+    distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing
+    elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam,
+    incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi,
+    distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing
+    elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam,
+    incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi,
+    distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing
+    elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam,
+    incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi,
+    distinctio repellat!!
+  </div>
 </div>
 
 <button id="slide" type="button">Défilez vers le bas</button>
@@ -62,10 +83,10 @@ element.scrollTop = intValue;
 ### JavaScript
 
 ```js
-const button = document.getElementById('slide');
+const button = document.getElementById("slide");
 
 button.onclick = function () {
-  document.getElementById('container').scrollTop += 20;
+  document.getElementById("container").scrollTop += 20;
 };
 ```
 
@@ -75,13 +96,11 @@ button.onclick = function () {
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('CSSOM View', '#dom-element-scrolltop', 'scrollTop')}} | {{Spec2("CSSOM View")}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.scrollTop")}}
+{{Compat}}
 
 ## Voir aussi
 

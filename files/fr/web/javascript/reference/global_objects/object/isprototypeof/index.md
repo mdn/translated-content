@@ -1,28 +1,35 @@
 ---
 title: Object.prototype.isPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
-tags:
-  - JavaScript
-  - Méthode
-  - Object
-  - Prototype
-  - Reference
-  - isPrototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/isPrototypeOf
 ---
+
 {{JSRef}}
 
 La méthode **`isPrototypeOf()`** permet de tester si un objet existe dans la chaîne de prototypes d'un autre objet.
 
-{{EmbedInteractiveExample("pages/js/object-prototype-isprototypeof.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.isPrototypeOf()")}}
 
-> **Note :** `isPrototypeOf()` est différent de l'opérateur {{jsxref("Opérateurs/instanceof", "instanceof")}}. Dans l'expression "`object instanceof AFunction`", on compare la chaîne de prototypes d'`object` avec `AFunction.prototype` et non avec `AFunction`.
+```js interactive-example
+function Foo() {}
+function Bar() {}
+
+Bar.prototype = Object.create(Foo.prototype);
+
+const bar = new Bar();
+
+console.log(Foo.prototype.isPrototypeOf(bar));
+// Expected output: true
+console.log(Bar.prototype.isPrototypeOf(bar));
+// Expected output: true
+```
+
+> [!NOTE]
+> `isPrototypeOf()` est différent de l'opérateur {{jsxref("Opérateurs/instanceof", "instanceof")}}. Dans l'expression "`object instanceof AFunction`", on compare la chaîne de prototypes d'`object` avec `AFunction.prototype` et non avec `AFunction`.
 
 ## Syntaxe
 
 ```js
-prototypeObj.isPrototypeOf(objet)
+prototypeObj.isPrototypeOf(objet);
 ```
 
 ### Paramètres
@@ -75,20 +82,15 @@ if (Toto.prototype.isPrototypeOf(bidule)) {
 
 ## Spécifications
 
-| Spécification                                                                                                                        | Statut                       | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES3')}}                                                                                                             | {{Spec2('ES3')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.2.4.5', 'Object.prototype.hasOwnProperty')}}                                     | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}}         | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.isPrototypeOf")}}
+{{Compat}}
 
 ## Voir aussi
 
 - {{jsxref("Opérateurs/instanceof", "instanceof")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
-- {{jsxref("Object.prototype.proto","Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)

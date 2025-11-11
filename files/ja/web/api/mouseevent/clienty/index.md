@@ -1,17 +1,12 @@
 ---
-title: MouseEvent.clientY
+title: "MouseEvent: clientY プロパティ"
+short-title: clientY
 slug: Web/API/MouseEvent/clientY
-tags:
-  - API
-  - CSSOM View
-  - DOM イベント
-  - MouseEvent
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.MouseEvent.clientY
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
-{{APIRef("DOM Events")}}
+
+{{APIRef("UI Events")}}
 
 **`clientY`** は {{domxref("MouseEvent")}} の読み取り専用のプロパティで、このイベントが発生した時点のアプリケーションの{{glossary("viewport", "ビューポート")}}における垂直座標を定義します（ページにおける座標ではありません）。
 
@@ -35,8 +30,8 @@ browser-compat: api.MouseEvent.clientY
 ### JavaScript
 
 ```js
-let screenLog = document.querySelector('#screen-log');
-document.addEventListener('mousemove', logKey);
+let screenLog = document.querySelector("#screen-log");
+document.addEventListener("mousemove", logKey);
 
 function logKey(e) {
   screenLog.innerText = `
@@ -47,7 +42,7 @@ function logKey(e) {
 
 ### 結果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## 仕様書
 

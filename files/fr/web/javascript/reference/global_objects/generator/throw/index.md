@@ -1,16 +1,8 @@
 ---
 title: Generator.prototype.throw()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/throw
-tags:
-  - ECMAScript 2015
-  - Generator
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator/throw
-original_slug: Web/JavaScript/Reference/Objets_globaux/Generator/throw
 ---
+
 {{JSRef}}
 
 La méthode **`throw()`** lève une erreur dans un générateur.
@@ -18,7 +10,7 @@ La méthode **`throw()`** lève une erreur dans un générateur.
 ## Syntaxe
 
 ```js
-gen.throw(exception)
+gen.throw(exception);
 ```
 
 ### Paramètres
@@ -31,7 +23,6 @@ gen.throw(exception)
 Un {{jsxref("Object")}} avec deux propriétés :
 
 - `done` (un booléen)
-
   - Qui vaut `true` lorsque l'itérateur a fini de parcourir la suite. Dans ce cas, `value` correspondra éventuellement à la valeur de retour de l'itérateur.
   - Qui vaut `false` si l'itérateur a pu produire la prochaine valeur de la série.
 
@@ -45,10 +36,10 @@ Dans l'exemple suivant, on utilise un générateur simple et on génère une exc
 
 ```js
 function* gen() {
-  while(true) {
+  while (true) {
     try {
-       yield 42;
-    } catch(e) {
+      yield 42;
+    } catch (e) {
       console.log("Erreur interceptée !");
     }
   }
@@ -64,14 +55,11 @@ g.throw(new Error("Quelque chose s'est mal passé"));
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                       | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-generator.prototype.throw', 'Generator.prototype.throw')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-generator.prototype.throw', 'Generator.prototype.throw')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Generator.throw")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,19 +1,9 @@
 ---
 title: webRequest.onHeadersReceived
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onHeadersReceived
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onHeadersReceived
-  - webRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onHeadersReceived
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Lancé lorsque les en-têtes de réponse HTTP associés à une requête ont été reçus. Vous pouvez utiliser cet événement pour modifier les en-têtes de réponse HTTP.
 
@@ -23,7 +13,7 @@ Pour modifier les en-têtes, passez `"blocking"` dans `extraInfoSpec`. Ensuite, 
 
 A partir de Firefox 52, au lieu de renvoyer `BlockingResponse`, l'auditeur peut renvoyer une Promesse qui est résolue avec un `BlockingResponse`. Ceci permet à l'auditeur de traiter la demande de manière asynchrone.
 
-Si vous utilisez le `"blocking"`, vous devez avoir la [permission de l'API "webRequestBlocking"](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) dans votre manifest.json.
+Si vous utilisez le `"blocking"`, vous devez avoir la [permission de l'API "webRequestBlocking"](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) dans votre manifest.json.
 
 Notez qu'il est possible que des extensions entrent en conflit ici. Si deux extensions écoutent `onHeadersReceived` pour la même requête et retournent `responseHeaders` essayant de définir le même en-tête (par exemple, `Content-Security-Policy`), seule une des modifications sera réussie. Si vous voulez voir les en-têtes qui sont effectivement traités par le système, sans risque qu'une autre extension les modifie par la suite, utilisez {{WebExtAPIRef("webRequest.onResponseStarted", "onResponseStarted", "onResponseStarted")}}, mais vous ne pouvez pas modifier les entêtes sur cet événement
 
@@ -31,12 +21,12 @@ Notez qu'il est possible que des extensions entrent en conflit ici. Si deux exte
 
 ```js
 browser.webRequest.onHeadersReceived.addListener(
-  listener,             // function
-  filter,               //  object
-  extraInfoSpec         //  optional array of strings
-)
-browser.webRequest.onHeadersReceived.removeListener(listener)
-browser.webRequest.onHeadersReceived.hasListener(listener)
+  listener, // function
+  filter, //  object
+  extraInfoSpec, //  optional array of strings
+);
+browser.webRequest.onHeadersReceived.removeListener(listener);
+browser.webRequest.onHeadersReceived.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -53,9 +43,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :
-
     - `details`
       - : [`object`](#details). Détails de la demande. Ceci inclura les en-têtes de réponse si vous avez inclus `"responseHeaders"` dans `extraInfoSpec`.
 
@@ -64,11 +52,9 @@ Les événements ont trois fonctions :
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. Un ensemble de filtres qui restreint les événements qui seront envoyés à cet auditeur.
 - `extraInfoSpec`{{optional_inline}}
-
   - : `array` de `string`. Options supplémentaires pour l'événement. Vous pouvez passer n'importe laquelle des valeurs suivantes :
-
     - `"blocking"` pour rendre la requête synchrone, de sorte que vous pouvez modifier les en-têtes de requête et réponse.
-    - `"responseHeaders"` pour inclure les en-têtes de réponse dans l'objet  `détails` transmis à l'auditeur
+    - `"responseHeaders"` pour inclure les en-têtes de réponse dans l'objet `détails` transmis à l'auditeur
 
 ## Objets supplémentaires
 
@@ -81,7 +67,6 @@ Les événements ont trois fonctions :
 - `method`
   - : `string`. Méthode HTTP standard : par exemple, "GET" ou "POST".
 - `originUrl`
-
   - : `string`. URL de la ressource qui a déclenché la requête. Par exemple, si "https\://example.com" contient un lien, et que l'utilisateur clique sur le lien, alors `originUrl` de la requête résultante est "https\://example.com".
 
     L'`originUrl` est souvent mais pas toujours la même chose que `documentUrl`.Par exemple, si une page contient une iframe, et que l'iframe contient un lien qui charge un nouveau document dans l'iframe, alors le `documentUrl` pour la requête résultante sera le document parent de l'iframe, mais l'`originUrl` sera l'URL du document dans l'iframe qui contenait le lien.
@@ -89,17 +74,13 @@ Les événements ont trois fonctions :
 - `parentFrameId`
   - : `integer`. de la trame qui contient la trame qui a envoyé la requête. Réglé à -1 s'il n'existe pas de l'iframe parent.
 - `proxyInfo`
-
   - : `object`. Cette propriété n'est présente que si la demande est proxied. Il contient les propriétés suivantes :
-
     - `host`
       - : `string`. Le nom d'hôte du serveur proxy.
     - `port`
       - : `integer`. Le numéro de port du serveur proxy.
     - `type`
-
       - : `string`. Le type de serveur proxy. L'un des :
-
         - "http": proxy HTTP (ou SSL CONNECT pour HTTPS)
         - "https": proxy HTTP sur connexion TLS vers proxy
         - "socks": SOCKS v5 proxy
@@ -131,41 +112,43 @@ Les événements ont trois fonctions :
 - `url`
   - : `string`. Cible de la demande.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.onHeadersReceived", 10)}}
+{{Compat}}
 
 ## Exemples
 
 Ce code définit un cookie supplémentaire lors de la demande d'une ressource à partir de l'URL cible :
 
 ```js
-var targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
+var targetPage =
+  "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
 
 // Add the new header to the original array,
 // and return it.
 function setCookie(e) {
   var setMyCookie = {
     name: "Set-Cookie",
-    value: "my-cookie1=my-cookie-value1"
+    value: "my-cookie1=my-cookie-value1",
   };
   e.responseHeaders.push(setMyCookie);
-  return {responseHeaders: e.responseHeaders};
+  return { responseHeaders: e.responseHeaders };
 }
 
 // Listen for onHeaderReceived for the target page.
 // Set "blocking" and "responseHeaders".
 browser.webRequest.onHeadersReceived.addListener(
   setCookie,
-  {urls: [targetPage]},
-  ["blocking", "responseHeaders"]
+  { urls: [targetPage] },
+  ["blocking", "responseHeaders"],
 );
 ```
 
-Ce code fait la même chose que l'exemple précédent, sauf que l'auditeur est asynchrone, retournant une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est résolue avec les nouveaux en-têtes :
+Ce code fait la même chose que l'exemple précédent, sauf que l'auditeur est asynchrone, retournant une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est résolue avec les nouveaux en-têtes :
 
 ```js
-var targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
+var targetPage =
+  "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
 
 // Return a Promise that sets a timer.
 // When the timer fires, resolve the promise with
@@ -175,10 +158,10 @@ function setCookieAsync(e) {
     window.setTimeout(() => {
       var setMyCookie = {
         name: "Set-Cookie",
-        value: "my-cookie1=my-cookie-value1"
+        value: "my-cookie1=my-cookie-value1",
       };
       e.responseHeaders.push(setMyCookie);
-      resolve({responseHeaders: e.responseHeaders});
+      resolve({ responseHeaders: e.responseHeaders });
     }, 2000);
   });
 
@@ -189,20 +172,19 @@ function setCookieAsync(e) {
 // Set "blocking" and "responseHeaders".
 browser.webRequest.onHeadersReceived.addListener(
   setCookieAsync,
-  {urls: [targetPage]},
-  ["blocking", "responseHeaders"]
+  { urls: [targetPage] },
+  ["blocking", "responseHeaders"],
 );
 ```
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -229,4 +211,4 @@ browser.webRequest.onHeadersReceived.addListener(
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

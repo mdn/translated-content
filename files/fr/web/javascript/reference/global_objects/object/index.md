@@ -1,13 +1,11 @@
 ---
 title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object
-browser-compat: javascript.builtins.Object
 ---
+
 {{JSRef}}
 
-Le type **`Object`** est l'un [des types de données JavaScript](/fr/docs/Web/JavaScript/Data_structures). Il est utilisé pour stocker des ensembles de clés/valeurs et des entités plus complexes. Les objets peuvent être créés avec le constructeur [`Object()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/Object) ou avec [la syntaxe d'initialisation d'objet littérale](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer).
+Le type **`Object`** est l'un [des types de données JavaScript](/fr/docs/Web/JavaScript/Guide/Data_structures). Il est utilisé pour stocker des ensembles de clés/valeurs et des entités plus complexes. Les objets peuvent être créés avec le constructeur [`Object()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/Object) ou avec [la syntaxe d'initialisation d'objet littérale](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 
 ## Description
 
@@ -17,7 +15,7 @@ Les modifications apportées à l'objet prototype de `Object` seront captées pa
 
 Le constructeur `Object` crée une enveloppe objet de la valeur passée en argument.
 
-- Si la valeur est [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null) ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), il créera et renverra un objet vide.
+- Si la valeur est [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), il créera et renverra un objet vide.
 - Si la valeur est déjà un objet, il renverra la valeur.
 - Sinon, il renverra un objet dont le type objet correspond au type primitif de la valeur fournie.
 
@@ -61,7 +59,7 @@ Il n'existe pas de méthode pour `Object` qui permette de supprimer une proprié
 - [`Object.getPrototypeOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf)
   - : Retourne le prototype de l'objet indiqué.
 - [`Object.is()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/is)
-  - : Détermine si deux valeurs sont la même valeur. Considère comme égales toutes les valeurs NaN (ce qui diffère à la fois de la *comparaison d'égalité abstraite* et de la *comparaison d'égalité stricte*).
+  - : Détermine si deux valeurs sont la même valeur. Considère comme égales toutes les valeurs NaN (ce qui diffère à la fois de la _comparaison d'égalité abstraite_ et de la _comparaison d'égalité stricte_).
 - [`Object.isExtensible()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible)
   - : Détermine si l'extension d'un objet est permise.
 - [`Object.isFrozen()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/isFrozen)
@@ -101,7 +99,7 @@ Il n'existe pas de méthode pour `Object` qui permette de supprimer une proprié
 - [`Object.prototype.isPrototypeOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf)
   - : Renvoie un booléen indiquant si l'objet courant (pour lequel est appelé cette méthode) fait partie de la chaîne de prototypes de l'objet passé en argument.
 - [`Object.prototype.propertyIsEnumerable()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable)
-  - : Renvoie un booléen indiquant si [l'attribut interne ECMAScript `[[Enumerable]]`](/fr/docs/Web/JavaScript/Data_structures#propriétés) est fixé.
+  - : Renvoie un booléen indiquant si [l'attribut interne ECMAScript `[[Enumerable]]`](/fr/docs/Web/JavaScript/Guide/Data_structures#propriétés) est fixé.
 - [`Object.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString)
   - : Appelle la méthode [`toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString).
 - [`Object.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString)

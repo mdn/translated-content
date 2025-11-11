@@ -1,9 +1,8 @@
 ---
 title: NodeList.prototype.forEach()
 slug: Web/API/NodeList/forEach
-translation_of: Web/API/NodeList/forEach
-browser-compat: api.NodeList.forEach
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`forEach()`** de l'interface {{domxref("NodeList")}} appelle le rappel donné en paramètre une fois pour chaque paire de valeurs dans la liste, dans l'ordre d'insertion.
@@ -17,9 +16,7 @@ nodeList.forEach(callback[, thisArg]);
 ### Paramètres
 
 - `callback`
-
   - : Fonction à exécuter pour chaque élément, contenant éventuellement 3 arguments :
-
     - _`currentValue`_
       - : L'élément en cours de traitement dans la NodeList.
     - `currentIndex`
@@ -52,12 +49,9 @@ node.appendChild(kid3);
 
 var list = node.childNodes;
 
-list.forEach(
-  function(currentValue, currentIndex, listObj) {
-    console.log(currentValue + ', ' + currentIndex + ', ' + this);
-  },
-  'myThisArg'
-);
+list.forEach(function (currentValue, currentIndex, listObj) {
+  console.log(currentValue + ", " + currentIndex + ", " + this);
+}, "myThisArg");
 ```
 
 résultat :
@@ -74,12 +68,12 @@ Ce {{Glossary("Polyfill","polyfill")}} ajoute une compatibilité à tous les nav
 
 ```js
 if (window.NodeList && !NodeList.prototype.forEach) {
-    NodeList.prototype.forEach = function (callback, thisArg) {
-        thisArg = thisArg || window;
-        for (var i = 0; i < this.length; i++) {
-            callback.call(thisArg, this[i], i, this);
-        }
-    };
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) {
+      callback.call(thisArg, this[i], i, this);
+    }
+  };
 }
 ```
 

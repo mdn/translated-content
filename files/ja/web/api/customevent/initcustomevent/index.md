@@ -1,14 +1,11 @@
 ---
-title: CustomEvent.initCustomEvent()
+title: "CustomEvent: initCustomEvent() メソッド"
+short-title: initCustomEvent()
 slug: Web/API/CustomEvent/initCustomEvent
-page-type: web-api-instance-method
-tags:
-  - 非推奨
-  - メソッド
-  - リファレンス
-browser-compat: api.CustomEvent.initCustomEvent
-translation_of: Web/API/CustomEvent/initCustomEvent
+l10n:
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
+
 {{APIRef("DOM")}}{{Deprecated_header}}
 
 **`CustomEvent.initCustomEvent()`** メソッドは {{domxref("CustomEvent")}} オブジェクトを初期化します。
@@ -18,15 +15,16 @@ translation_of: Web/API/CustomEvent/initCustomEvent
 このメソッドは、 {{ domxref("EventTarget.dispatchEvent()") }} を使ってイベントが配信される前に、イベントを設定するために呼び出す必要があります。
 配信された後は、何もしません。
 
-> **Note:** **このメソッドは非推奨なので、使用しないでください。**
+> [!NOTE]
+> **このメソッドは非推奨なので、使用しないでください。**
 >
 > この機能を使用するのではなく、代わりに {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}} のような特定のイベントのコンストラクターを使用してください。
-> [イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events)のページに、これらの使用方法についての詳細が記載されています。
+> [イベントの作成と起動](/ja/docs/Web/API/Document_Object_Model/Events)のページに、これらの使用方法についての詳細が記載されています。
 
 ## 構文
 
-```js
-event.initCustomEvent(type, canBubble, cancelable, detail);
+```js-nolint
+event.initCustomEvent(type, canBubble, cancelable, detail)
 ```
 
 ### 引数

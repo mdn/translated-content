@@ -1,14 +1,8 @@
 ---
 title: Window.scrollBy()
 slug: Web/API/Window/scrollBy
-tags:
-  - API
-  - CSSOM View
-  - メソッド
-  - リファレンス
-browser-compat: api.Window.scrollBy
-translation_of: Web/API/Window/scrollBy
 ---
+
 {{ APIRef() }}
 
 **`Window.scrollBy()`** メソッドは、ウィンドウ内の文書を指定された量だけスクロールさせます。
@@ -16,14 +10,14 @@ translation_of: Web/API/Window/scrollBy
 ## 構文
 
 ```js
-scrollBy(x-coord, y-coord)
-scrollBy(options)
+scrollBy(x_coord, y_coord);
+scrollBy(options);
 ```
 
 ### 引数
 
-- `x-coord` はスクロールさせたい水平方向のピクセル数です。
-- `y-coord` はスクロールさせたい垂直方向のピクセル数です。
+- `x_coord` はスクロールさせたい水平方向のピクセル数です。
+- `y_coord` はスクロールさせたい垂直方向のピクセル数です。
 
 \- または -
 
@@ -60,7 +54,7 @@ window.scrollBy(0, -window.innerHeight);
 window.scrollBy({
   top: 100,
   left: 100,
-  behavior: 'smooth'
+  behavior: "smooth",
 });
 ```
 

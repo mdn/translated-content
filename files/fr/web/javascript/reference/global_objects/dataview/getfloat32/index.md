@@ -1,21 +1,24 @@
 ---
 title: DataView.prototype.getFloat32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getFloat32
-tags:
-  - DataView
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getFloat32
-original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/getFloat32
 ---
+
 {{JSRef}}
 
 La méthode **`getFloat32()`** permet de lire un nombre flottant signé sur 32 bits à l'octet donné par rapport au début de {{jsxref("DataView")}}.
 
-{{EmbedInteractiveExample("pages/js/dataview-getfloat32.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.getFloat32()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setFloat32(1, Math.PI);
+
+console.log(view.getFloat32(1));
+// Expected output: 3.1415927410125732
+```
 
 ## Syntaxe
 
@@ -55,15 +58,11 @@ dataview.getFloat32(1); // 0
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                             | Commentaires                                    |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                                                         | {{Spec2('Typed Array')}} | Remplacée dans ECMAScript 2015.                 |
-| {{SpecName('ES2015', '#sec-dataview.prototype.getfloat32', 'DataView.prototype.getFloat32')}} | {{Spec2('ES2015')}}         | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.getfloat32', 'DataView.prototype.getFloat32')}} | {{Spec2('ESDraft')}}     |                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.DataView.getFloat32")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,11 +1,8 @@
 ---
 title: Référence des erreurs JavaScript
 slug: Web/JavaScript/Reference/Errors
-tags:
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Errors
-original_slug: Web/JavaScript/Reference/Erreurs
 ---
+
 {{jsSidebar("Errors")}}
 
 _Errare ECMAScript est_…
@@ -19,4 +16,4 @@ D'un point de vue technique, chaque erreur est un objet {{jsxref("Error")}} et p
 
 ## Voir aussi
 
-- [Qu'est-ce qui a cloché ? Diagnostiquer un problème JavaScript](/fr/docs/Learn/JavaScript/First_steps/What_went_wrong) : un tutoriel introductif pour réparer les erreurs JavaScript
+- [Qu'est-ce qui a cloché ? Diagnostiquer un problème JavaScript](/fr/docs/Learn_web_development/Core/Scripting/What_went_wrong) : un tutoriel introductif pour réparer les erreurs JavaScript

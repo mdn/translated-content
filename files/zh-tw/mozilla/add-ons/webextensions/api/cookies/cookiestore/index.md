@@ -1,9 +1,7 @@
 ---
 title: cookies.CookieStore
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
 ---
-{{AddonSidebar()}}
 
 {{WebExtAPIRef("cookies")}} API 的 `CookieStore` 型別代表瀏覽器中的 cookie 存放空間。
 
@@ -20,7 +18,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
 
 ## 瀏覽器相容性
 
-{{Compat("webextensions.api.cookies.CookieStore")}}
+{{Compat}}
 
 ## 示例
 
@@ -28,7 +26,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
 
 ```js
 function logStores(cookieStores) {
-  for(store of cookieStores) {
+  for (store of cookieStores) {
     console.log(`Cookie store: ${store.id}\n Tab IDs: ${store.tabIds}`);
   }
 }
@@ -39,11 +37,11 @@ getting.then(logStores);
 
 {{WebExtExamples}}
 
-> **備註：** 此 API 基於 Chromium 的 [`chrome.cookies`](https://developer.chrome.com/extensions/cookies) API 而來，文件改作自 Chromium 程式碼裡的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json)。
->
-> Microsoft Edge 的相容資訊來自微軟公司，原文以創用 CC 姓名標示 3.0 美國版條款授權大眾使用。
+> [!NOTE]
+> 此 API 基於 Chromium 的 [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies) API 而來，文件改作自 Chromium 程式碼裡的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json)。
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -70,4 +68,4 @@ getting.then(logStores);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

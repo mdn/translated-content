@@ -1,19 +1,9 @@
 ---
 title: topSites.get()
 slug: Mozilla/Add-ons/WebExtensions/API/topSites/get
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - get
-  - topSites
-translation_of: Mozilla/Add-ons/WebExtensions/API/topSites/get
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Obtient un tableau contenant des informations sur les pages que l'utilisateur a visitées souvent et récemment.
 
@@ -25,31 +15,29 @@ Le navigateur peut ensuite appliquer un filtrage supplémentaire à cette liste 
 
 L'API `topSites.get()` permet à une extension d'accéder à cette liste. Appelé sans aucune option, il fournira la liste filtrée des pages, c'est-à-dire celle qui apparaît dans la page "Nouvel onglet". Cependant, en fournissant diverses options, il est possible pour une extension d'obtenir la liste non filtrée des pages.
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-Pour utiliser l'API topSites, vous devez avoir la [permission de l'API](fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "topSites"
+Pour utiliser l'API topSites, vous devez avoir la [permission de l'API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "topSites"
 
 ## Syntaxe
 
 ```js
-var gettingTopSites = browser.topSites.get()
+var gettingTopSites = browser.topSites.get();
 ```
 
 ### Paramètres
 
 - `options`
-
   - : `object`. Options pour modifier la liste des pages retournées. Il peut s'agir de l'une des propriétés suivantes :
-
     - `includeBlocked` {{optional_inline}}
       - : `Boolean`. Inclure les pages que l'utilisateur a supprimées de la page "Nouvel onglet". La valeur par défaut est `false`.
     - `includeFavicon` {{optional_inline}}
-      - : `Boolean`.  Inclure les favicons dans les résultats, pour les pages où ils sont disponibles. La valeur par défaut est `false`.
+      - : `Boolean`. Inclure les favicons dans les résultats, pour les pages où ils sont disponibles. La valeur par défaut est `false`.
     - `includePinned` {{optional_inline}}
       - : `Boolean`. inclure les sites que l'utilisateur a épinglés dans le nouvel onglet Firefox.
         Par défaut à `false`.
     - `includeSearchShortcuts` {{optional_inline}}
-      - : `Boolean`.  Inclut les raccourcis de recherche qui apparaissent dans le nouvel onglet Firefox.
+      - : `Boolean`. Inclut les raccourcis de recherche qui apparaissent dans le nouvel onglet Firefox.
         Par défaut à `false`.
     - `limit` {{optional_inline}}
       - : `Integer`. Le nombre de pages à retourner. Ce chiffre doit être compris entre 1 et 100 inclusivement. La valeur par défaut est 12.
@@ -58,11 +46,11 @@ var gettingTopSites = browser.topSites.get()
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Ceci sera réalisé avec un tableau d'objets  {{WebExtAPIRef("topSites.MostVisitedURL", "MostVisitedURL")}}, un pour chaque site listé dans la page "Nouvel onglet" du navigateur. Si une erreur se produit, la presse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Ceci sera réalisé avec un tableau d'objets {{WebExtAPIRef("topSites.MostVisitedURL", "MostVisitedURL")}}, un pour chaque site listé dans la page "Nouvel onglet" du navigateur. Si une erreur se produit, la presse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.topSites.get")}}
+{{Compat}}
 
 ## Exemples
 
@@ -98,7 +86,7 @@ function onError(error) {
 
 var gettingTopSites = browser.topSites.get({
   includeBlocked: true,
-  onePerDomain: false
+  onePerDomain: false,
 });
 
 gettingTopSites.then(logTopSites, onError);
@@ -106,11 +94,12 @@ gettingTopSites.then(logTopSites, onError);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.topSites`](https://developer.chrome.com/extensions/topSites).
+> Cette API est basée sur l'API Chromium [`chrome.topSites`](https://developer.chrome.com/docs/extensions/reference/api/topSites).
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -137,4 +126,4 @@ gettingTopSites.then(logTopSites, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

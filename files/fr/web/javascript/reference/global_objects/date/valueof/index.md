@@ -1,25 +1,30 @@
 ---
 title: Date.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Date/valueOf
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/valueOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/valueOF
 ---
+
 {{JSRef}}
 
 La méthode **`valueOf()`** renvoie la valeur primitive d'un objet {{jsxref("Date")}}.
 
-{{EmbedInteractiveExample("pages/js/date-valueof.html")}}
+{{InteractiveExample("JavaScript Demo: Date.valueOf()")}}
+
+```js interactive-example
+const date1 = new Date(Date.UTC(96, 1, 2, 3, 4, 5));
+
+console.log(date1.valueOf());
+// Expected output: 823230245000
+
+const date2 = new Date("02 Feb 1996 03:04:05 GMT");
+
+console.log(date2.valueOf());
+// Expected output: 823230245000
+```
 
 ## Syntaxe
 
 ```js
-date.valueOf()
+date.valueOf();
 ```
 
 ### Valeur de retour
@@ -40,21 +45,16 @@ Cette méthode est souvent appelée en interne par le moteur JavaScript et n'est
 
 ```js
 var x = new Date(56, 6, 17);
-var maVar = x.valueOf();      // maVar vaut -424713600000
+var maVar = x.valueOf(); // maVar vaut -424713600000
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.9.5.8', 'Date.prototype.valueOf')}}                         | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-date.prototype.valueof', 'Date.prototype.valueOf')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-date.prototype.valueof', 'Date.prototype.valueOf')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.valueOf")}}
+{{Compat}}
 
 ## Voir aussi
 

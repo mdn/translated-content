@@ -1,20 +1,9 @@
 ---
 title: browsingData.removeFormData()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeFormData
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browsingData
-  - removeDownloads
-browser-compat: webextensions.api.browsingData.removeFormData
-translation-of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeFormData
-
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Limpa os dados que o navegador salvou para formulários com preenchimento automático.
 
@@ -29,8 +18,8 @@ Esta é uma função assíncrona que retorna uma [`Promise`](/pt-BR/docs/Web/Jav
 
 ```js
 let removing = browser.browsingData.removeFormData(
-  removalOptions            // objeto RemovalOptions
-)
+  removalOptions, // objeto RemovalOptions
+);
 ```
 
 ### Parâmetros
@@ -59,11 +48,11 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-let oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+let oneWeekAgo = new Date().getTime() - weekInMilliseconds();
 
-browser.browsingData.removeFormData(
-  {since: oneWeekAgo}).
-then(onRemoved, onError);
+browser.browsingData
+  .removeFormData({ since: oneWeekAgo })
+  .then(onRemoved, onError);
 ```
 
 Remove todos os dados de formulário salvos:
@@ -77,8 +66,7 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.removeFormData({}).
-then(onRemoved, onError);
+browser.browsingData.removeFormData({}).then(onRemoved, onError);
 ```
 
 ## Compatibilidade com navegadores
@@ -87,12 +75,13 @@ then(onRemoved, onError);
 
 {{WebExtExamples}}
 
-
-> **Note:** Esta API é baseada na API do Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/).
+> [!NOTE]
+> Esta API é baseada na API do Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
 >
 > A compatibilidade dos dados do Microsoft Edge é fornecida pela Microsoft Corporation e é incluída aqui sob a licença Creative Commons Attribution 3.0 United States.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -119,4 +108,4 @@ then(onRemoved, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

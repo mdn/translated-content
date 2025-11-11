@@ -1,32 +1,23 @@
 ---
 title: bookmarks.removeTree()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/removeTree
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - removeTree
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/removeTree
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 La méthode **`bookmarks.removeTree()`** supprime récursivement un dossier de signets et tout son contenu.
 
-> **Attention :** Si votre extension tente de supprimer une arborescence de signets du nœud racine de cette dernière, l'appel déclenche une erreur avec le message suivant: "La racine de signet ne peut pas être modifiée" et le signet ne sera pas supprimé.
+> [!WARNING]
+> Si votre extension tente de supprimer une arborescence de signets du nœud racine de cette dernière, l'appel déclenche une erreur avec le message suivant: "La racine de signet ne peut pas être modifiée" et le signet ne sera pas supprimé.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var removingTree = browser.bookmarks.removeTree(
-  id                // string
-)
+  id, // string
+);
 ```
 
 ### Paramètres
@@ -36,7 +27,7 @@ var removingTree = browser.bookmarks.removeTree(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments lorsque l'arbre a été retiré.Si le noeud correspondant au paramètre `id` ne peut pas être trouvé, la promesse est rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans arguments lorsque l'arbre a été retiré.Si le noeud correspondant au paramètre `id` ne peut pas être trouvé, la promesse est rejetée avec un message d'erreur.
 
 ## Exemples
 
@@ -64,17 +55,16 @@ searchingBookmarks.then(removeMDN, onRejected);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.bookmarks.removeTree")}}
+{{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de  [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -101,4 +91,4 @@ searchingBookmarks.then(removeMDN, onRejected);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

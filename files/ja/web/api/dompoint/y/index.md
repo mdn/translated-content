@@ -1,21 +1,11 @@
 ---
-title: DOMPoint.y
+title: "DOMPoint: y プロパティ"
+short-title: y
 slug: Web/API/DOMPoint/y
-page-type: web-api-instance-property
-tags:
-  - API
-  - Coordinate
-  - DOM
-  - DOMPoint
-  - Geometry
-  - Geometry Interfaces
-  - Point
-  - Property
-  - Reference
-  - 'y'
-browser-compat: api.DOMPoint.y
-translation_of: Web/API/DOMPoint/y
+l10n:
+  sourceCommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMPoint`** インターフェイスの **`y`** プロパティは、空間内の点の垂直座標 _y_ を保持します。
@@ -37,5 +27,4 @@ translation_of: Web/API/DOMPoint/y
 ## 関連情報
 
 - その他の座標プロパティ: {{domxref("DOMPoint.x", "x")}},
-  {{domxref("DOMPoint.z", "z")}}, および視点位置である {{domxref("DOMPoint.w",
-    "w")}}
+  {{domxref("DOMPoint.z", "z")}}, および視点位置である {{domxref("DOMPoint.w", "w")}}

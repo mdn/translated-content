@@ -1,20 +1,28 @@
 ---
 title: Date.now()
 slug: Web/JavaScript/Reference/Global_Objects/Date/now
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/now
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/now
 ---
+
 {{JSRef}}
 
 La méthode **`Date.now()`** renvoie le nombre de millisecondes écoulées depuis le 1er Janvier 1970 00:00:00 UTC.
 
-{{EmbedInteractiveExample("pages/js/date-now.html")}}
+{{InteractiveExample("JavaScript Demo: Date.now()")}}
+
+```js interactive-example
+// This example takes 2 seconds to run
+const start = Date.now();
+
+console.log("starting timer...");
+// Expected output: "starting timer..."
+
+setTimeout(() => {
+  const millis = Date.now() - start;
+
+  console.log(`seconds elapsed = ${Math.floor(millis / 1000)}`);
+  // Expected output: "seconds elapsed = 2"
+}, 2000);
+```
 
 ## Syntaxe
 
@@ -56,7 +64,6 @@ new Date().getTime();
 // 1519211811670
 // ...
 
-
 // précision temporelle avec `privacy.resistFingerprinting` activé
 new Date().getTime();
 // 1519129853500
@@ -69,15 +76,11 @@ Pour Firefox, il est également possible d'activer `privacy.resistFingerprinting
 
 ## Spécifications
 
-| Spécification                                                        | État                         | Commentaires                                          |
-| -------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.9.4.4', 'Date.now')}} | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.5. |
-| {{SpecName('ES6', '#sec-date.now', 'Date.now')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-date.now', 'Date.now')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.now")}}
+{{Compat}}
 
 ## Voir aussi
 

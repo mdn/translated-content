@@ -1,16 +1,22 @@
 ---
 title: Variable locale
 slug: Glossary/Local_variable
-tags:
-  - Encodage
-  - Glossaire
-translation_of: Glossary/Local_variable
-original_slug: Glossaire/Variable_locale
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-Une {{glossary("Variable","variable")}} dont le nom est associé à sa {{glossary("Value","valeur")}} uniquement dans une {{Glossary("Local scope","portée locale")}}.
 
-## Pour approfondir
+Une {{Glossary("Variable", "variable")}} dont le nom est associé à sa {{Glossary("Value", "valeur")}} uniquement dans une {{Glossary("Local scope", "portée locale")}}.
 
-### Culture générale
+## Exemple
 
-- {{interwiki("wikipedia", "Variable locale", "Variable locale")}} sur Wikipédia
+```js
+let global = 5; // Une variable globale
+
+function fun() {
+  let local = 10; // Une variable locale
+}
+```
+
+## Voir aussi
+
+- [Variable locale](https://fr.wikipedia.org/wiki/Variable_locale) sur Wikipédia

@@ -1,19 +1,12 @@
 ---
-title: 'Screen: orientationchange イベント'
+title: "Screen: orientationchange イベント"
+short-title: orientationchange
 slug: Web/API/Screen/orientationchange_event
-page-type: web-api-event
-tags:
-  - API
-  - CSSOM View
-  - Deprecated
-  - Event Handler
-  - Property
-  - Screen Orientation
-browser-compat: api.Screen.orientationchange_event
-translation_of: Web/API/Screen/orientationchange_event
-original_slug: Web/API/Screen/onorientationchange
+l10n:
+  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
 ---
-{{APIRef("Screen Orientation API")}}{{Deprecated_Header}}
+
+{{APIRef("Screen Orientation API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 `orientationchange` イベントは、端末の向きが変化したときに発行されます。
 
@@ -21,10 +14,10 @@ original_slug: Web/API/Screen/onorientationchange
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-```js
-addEventListener('orientationchange', event => { });
+```js-nolint
+addEventListener("orientationchange", (event) => { })
 
-onorientationchange = event => { };
+onorientationchange = (event) => { }
 ```
 
 ## イベント型
@@ -35,7 +28,7 @@ onorientationchange = event => { };
 
 この機能は、どの仕様にも含まれていません。標準化の予定はありません。
 
-代わりに {{domxref("ScreenOrientation.onchange")}} を使用してください。
+代わりに `ScreenOrientation` の {{domxref("ScreenOrientation.change_event", "change")}} イベントを使用してください。
 
 ## ブラウザーの互換性
 
@@ -43,4 +36,4 @@ onorientationchange = event => { };
 
 ## 関連情報
 
-- [画面の向きの管理](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
+- [画面の向きの制御](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)

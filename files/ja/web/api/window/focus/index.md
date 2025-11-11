@@ -1,15 +1,8 @@
 ---
 title: Window.focus()
 slug: Web/API/Window/focus
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - メソッド
-  - Window
-browser-compat: api.Window.focus
-translation_of: Web/API/Window/focus
 ---
+
 {{APIRef}}
 
 ウィンドウを最前面にするようリクエストします。ユーザー設定によっては失敗する可能性があり、このメソッドが返される前にウィンドウが最前面になることは保証されません。
@@ -17,7 +10,7 @@ translation_of: Web/API/Window/focus
 ## 構文
 
 ```js
-focus()
+focus();
 ```
 
 ### 引数
@@ -31,7 +24,9 @@ focus()
 ## 例
 
 ```js
-if (clicked) { window.focus(); }
+if (clicked) {
+  window.focus();
+}
 ```
 
 ## 仕様書

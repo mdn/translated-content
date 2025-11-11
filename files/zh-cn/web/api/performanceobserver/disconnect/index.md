@@ -1,25 +1,15 @@
 ---
 title: PerformanceObserver.disconnect()
 slug: Web/API/PerformanceObserver/disconnect
-page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Performance Observer API
-  - PerformanceObserver
-  - Reference
-  - Web Performance
-  - disconnect()
-  - observers
-translation_of: Web/API/PerformanceObserver/disconnect
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 {{domxref('PerformanceObserver')}} 接口的 **`disconnect()`** 方法用于阻止性能观察者接收任何 {{domxref("PerformanceEntry","性能条目", '', 'true')}} 事件。
 
 ## 语法
 
-```js
+```js-nolint
 disconnect()
 ```
 
@@ -34,13 +24,13 @@ disconnect()
 ## 示例
 
 ```js
-var observer = new PerformanceObserver(function(list, obj) {
+var observer = new PerformanceObserver(function (list, obj) {
   var entries = list.getEntries();
-  for (var i=0; i < entries.length; i++) {
+  for (var i = 0; i < entries.length; i++) {
     // Process "mark" and "frame" events
   }
 });
-observer.observe({entryTypes: ["mark", "frame"]});
+observer.observe({ entryTypes: ["mark", "frame"] });
 
 function perf_observer(list, observer) {
   // Process the "measure" event
@@ -49,7 +39,7 @@ function perf_observer(list, observer) {
   observer.disconnect();
 }
 var observer2 = new PerformanceObserver(perf_observer);
-observer2.observe({entryTypes: ["measure"]});
+observer2.observe({ entryTypes: ["measure"] });
 ```
 
 ## 规范

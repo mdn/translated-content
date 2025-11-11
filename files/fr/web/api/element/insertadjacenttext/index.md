@@ -1,15 +1,8 @@
 ---
 title: Element.insertAdjacentText()
 slug: Web/API/Element/insertAdjacentText
-tags:
-  - API
-  - DOM
-  - Element
-  - Insertion
-  - Méthodes
-  - Texte
-translation_of: Web/API/Element/insertAdjacentText
 ---
+
 {{APIRef("DOM")}}
 
 La méthode `insertAdjacentText()` insère un noeud texte donné à une position donnée par rapport à l'élément sur lequel elle est appelé.
@@ -23,9 +16,7 @@ element.insertAdjacentText(position, element);
 ### Paramètres
 
 - position
-
   - : Une {{domxref("DOMString")}} (_chaîne de caractères_) représentant la position par rapport à l'`element` ; elle doit être l'une des chaînes suivantes :
-
     - `'beforebegin'` : avant l'`element` lui-même ;
     - `'afterbegin'` : à l'intérieur de l'`element`, avant son premier enfant ;
     - `'beforeend'` : à l'intérieur de l'`element`, avant son dernier enfant ;
@@ -49,24 +40,25 @@ Vide.
 ```html
 <!-- beforebegin -->
 <p>
-<!-- afterbegin> -->
-machin
-<!-- beforeend -->
+  <!-- afterbegin> -->
+  machin
+  <!-- beforeend -->
 </p>
 <!-- afterend -->
 ```
 
-> **Note :** Les positions `beforebegin` et `afterend` ne fonctionnent que si le noeud est dans l'arbre et possède un élément parent.
+> [!NOTE]
+> Les positions `beforebegin` et `afterend` ne fonctionnent que si le noeud est dans l'arbre et possède un élément parent.
 
 ## Exemple
 
 ```js
-beforeBtn.addEventListener('click', function() {
-  para.insertAdjacentText('afterbegin',textInput.value);
+beforeBtn.addEventListener("click", function () {
+  para.insertAdjacentText("afterbegin", textInput.value);
 });
 
-afterBtn.addEventListener('click', function() {
-  para.insertAdjacentText('beforeend',textInput.value);
+afterBtn.addEventListener("click", function () {
+  para.insertAdjacentText("beforeend", textInput.value);
 });
 ```
 
@@ -78,25 +70,23 @@ Vous pouvez utiliser une émulation de la méthode `insertAdjacentText()` dans I
 
 ```js
 if (!Element.prototype.insertAdjacentText)
-  Element.prototype.insertAdjacentText = function(type, txt){
+  Element.prototype.insertAdjacentText = function (type, txt) {
     this.insertAdjacentHTML(
       type,
-      (txt+'') // convertir en chaîne de caractères
-        .replace(/&/g, '&amp;') // intégrer des symboles d'esperluette
-        .replace(/</g, '&lt;') // intégrer les symboles "plus petit que"
-    )
-  }
+      (txt + "") // convertir en chaîne de caractères
+        .replace(/&/g, "&amp;") // intégrer des symboles d'esperluette
+        .replace(/</g, "&lt;"), // intégrer les symboles "plus petit que"
+    );
+  };
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG', '#dom-element-insertadjacenttext', 'insertAdjacentText()')}} | {{ Spec2('DOM WHATWG') }} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.insertAdjacentText")}}
+{{Compat}}
 
 ## Voir aussi
 

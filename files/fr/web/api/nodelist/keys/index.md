@@ -1,14 +1,8 @@
 ---
 title: NodeList.keys()
 slug: Web/API/NodeList/keys
-tags:
-  - API
-  - DOM
-  - Liste
-  - Méthodes
-  - Noeuds
-translation_of: Web/API/NodeList/keys
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`NodeList.keys()`** renvoie un {{jsxref("Les_protocoles_iteration",'itérateur')}} permettant de parcourir toutes les clés contenues dans cet objet. Les clés sont des `unsigned integer` (_entier non signé_).
@@ -38,8 +32,8 @@ node.appendChild(kid3);
 var list = node.childNodes;
 
 // Utilisation de for..of
-for(var key of list.keys()) {
-   console.log(key);
+for (var key of list.keys()) {
+  console.log(key);
 }
 ```
 
@@ -53,13 +47,11 @@ Le résultat est :
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG','#interface-nodelist','keys() (as iterable)')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.NodeList.keys")}}
+{{Compat}}
 
 ## Voir aussi
 

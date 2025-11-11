@@ -1,38 +1,37 @@
 ---
 title: Grille
 slug: Glossary/Grid
-tags:
-  - CSS
-  - Glossaire
-  - Grilles
-translation_of: Glossary/Grid
-original_slug: Glossaire/Grid
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-Une grille _CSS_ est définie en utilisant la valeur `grid` de la propriété `display` ; vous pouvez définir les colonnes et les lignes de votre grille en utilisant les propriétés {{cssxref("grid-template-rows")}} et {{cssxref("grid-template-columns")}}.
+
+Une **grille CSS** est définie en utilisant la valeur `grid` de la propriété {{CSSxRef("display")}}&nbsp;; vous pouvez définir les colonnes et les lignes de votre grille en utilisant les propriétés {{CSSxRef("grid-template-rows")}} et {{CSSxRef("grid-template-columns")}}.
 
 La grille que vous définissez avec ces propriétés est décrite comme une _grille explicite_.
 
-Si vous placez du contenu en dehors de cette grille explicite, ou si vous comptez sur le placement automatique, l'algorithme de grille doit créer une {{glossary("grid tracks", "piste")}} (_track_) de ligne ou de colonne supplémentaire pour contenir {{glossary("grid item", "éléments de grille")}} (_grid items_), des pistes supplémentaires seront alors créées dans la grille implicite. La grille implicite est la grille créée automatiquement en raison de l'ajout de contenu en dehors des pistes définies.
+Si vous placez du contenu en dehors de cette grille explicite, ou si vous comptez sur le placement automatique, l'algorithme de grille doit créer une {{Glossary("grid tracks", "piste")}} (_track_) de ligne ou de colonne supplémentaire pour contenir des {{Glossary("grid cell", "cellules de grille")}} (_grid cells_), des pistes supplémentaires seront alors créées dans la grille implicite. La grille implicite est la grille créée automatiquement en raison de l'ajout de contenu en dehors des pistes définies.
 
-Dans l'exemple ci-dessous, nous avons créé une grille explicite de 3 colonnes et 2 lignes. La troisième ligne de la grille est une piste de ligne de grille implicite, formée en raison des 2 éléments en plus, par rapport aux 6 qui remplissent les pistes explicites.
+Dans l'exemple ci-dessous, nous avons créé une _grille explicite_ de 3 colonnes et 2 lignes. La _troisième_ ligne de la grille est une piste de ligne de _grille implicite_, formée en raison des 2 éléments en plus, par rapport aux 6 qui remplissent les pistes explicites.
 
 ## Exemple
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -46,28 +45,24 @@ Dans l'exemple ci-dessous, nous avons créé une grille explicite de 3 colonnes 
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
-   <div>Six</div>
-   <div>Seven</div>
-   <div>Eight</div>
+  <div>Un</div>
+  <div>Deux</div>
+  <div>Trois</div>
+  <div>Quatre</div>
+  <div>Cinq</div>
+  <div>Six</div>
+  <div>Sept</div>
+  <div>Huit</div>
 </div>
 ```
 
 {{ EmbedLiveSample('Exemple', '500', '330') }}
 
-## En apprendre plus
+## Voir aussi
 
-### Références de la propriété
-
-- {{cssxref("grid-template-columns")}}
-- {{cssxref("grid-template-rows")}}
-- {{cssxref("grid")}}
-- {{cssxref("grid-template")}}
-
-### En lire plus
-
-- Guide des grilles CSS : _[Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base)_
+- [Les concepts de base des grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+- Références de la propriété&nbsp;:
+  - {{CSSxRef("grid-template-columns")}}
+  - {{CSSxRef("grid-template-rows")}}
+  - {{CSSxRef("grid")}}
+  - {{CSSxRef("grid-template")}}

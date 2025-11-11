@@ -1,20 +1,8 @@
 ---
 title: ImageCapture.getPhotoCapabilities()
 slug: Web/API/ImageCapture/getPhotoCapabilities
-tags:
-  - API
-  - Experimental
-  - Image
-  - Image Capture
-  - ImageCapture
-  - Media
-  - MediaStream Image Capture API
-  - Method
-  - Reference
-  - getPhotoCapabilities
-browser-compat: api.ImageCapture.getPhotoCapabilities
-translation_of: Web/API/ImageCapture/getPhotoCapabilities
 ---
+
 {{APIRef("MediaStream Image")}}
 
 {{domxref("ImageCapture")}} 인터페이스의 **`getPhotoCapabilities()`** 메서드는 사용 가능한 설정 옵션을 담은 {{domxref("PhotoCapabilities")}} 객체로 이행하는 {{jsxref("Promise")}}를 반환합니다.
@@ -22,7 +10,7 @@ translation_of: Web/API/ImageCapture/getPhotoCapabilities
 ## 구문
 
 ```js
-const capabilitiesPromise = imageCaptureObj.getPhotoCapabilities()
+const capabilitiesPromise = imageCaptureObj.getPhotoCapabilities();
 ```
 
 ### 반환 값
@@ -47,28 +35,29 @@ const input = document.querySelector('input[type="range"]');
 
 var imageCapture;
 
-navigator.mediaDevices.getUserMedia({video: true})
-.then(mediaStream => {
-  document.querySelector('video').srcObject = mediaStream;
+navigator.mediaDevices
+  .getUserMedia({ video: true })
+  .then((mediaStream) => {
+    document.querySelector("video").srcObject = mediaStream;
 
-  const track = mediaStream.getVideoTracks()[0];
-  imageCapture = new ImageCapture(track);
+    const track = mediaStream.getVideoTracks()[0];
+    imageCapture = new ImageCapture(track);
 
-  return imageCapture.getPhotoCapabilities();
-})
-.then(photoCapabilities => {
-  const settings = imageCapture.track.getSettings();
+    return imageCapture.getPhotoCapabilities();
+  })
+  .then((photoCapabilities) => {
+    const settings = imageCapture.track.getSettings();
 
-  input.min = photoCapabilities.imageWidth.min;
-  input.max = photoCapabilities.imageWidth.max;
-  input.step = photoCapabilities.imageWidth.step;
+    input.min = photoCapabilities.imageWidth.min;
+    input.max = photoCapabilities.imageWidth.max;
+    input.step = photoCapabilities.imageWidth.step;
 
-  return imageCapture.getPhotoSettings();
-})
-.then(photoSettings => {
-  input.value = photoSettings.imageWidth;
-})
-.catch(error => console.log('Argh!', error.name || error));
+    return imageCapture.getPhotoSettings();
+  })
+  .then((photoSettings) => {
+    input.value = photoSettings.imageWidth;
+  })
+  .catch((error) => console.log("Argh!", error.name || error));
 ```
 
 ## 명세

@@ -1,33 +1,18 @@
 ---
-title: Element.children
+title: "Element: children プロパティ"
+short-title: children
 slug: Web/API/Element/children
-tags:
-  - API
-  - DOM
-  - Element
-  - HTMLCollection
-  - プロパティ
-  - children
-browser-compat: api.Element.children
-translation_of: Web/API/Element/children
-original_slug: Web/API/ParentNode/children
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
+
 {{ APIRef("DOM") }}
 
 **`children`** は読み取り専用のプロパティで、生きた {{domxref("HTMLCollection")}} で呼び出された要素の子{{domxref("Element", "要素", "", 1)}}をすべて返します。
 
 `Element.children` は要素のノードしか含みません。すべての子ノード、例えばテキストやコメントノードなどを取得するには、 {{domxref("Node.childNodes")}} を使用してください。
 
-## 構文
-
-```js
-// ゲッター
-collection = myElement.children;
-
-// セッターはありません。読み取り専用プロパティです。
-```
-
-### 返値
+## 値
 
 生きた {{ domxref("HTMLCollection") }} で、 `node` の子の DOM 要素の順序付きコレクションを返します。コレクションの {{domxref("HTMLCollection.item()", "item()")}} メソッドか、 JavaScript の配列スタイルの記法を使って、コレクション内の個々の子ノードにアクセスすることができます。
 
@@ -36,9 +21,9 @@ collection = myElement.children;
 ## 例
 
 ```js
-const myElement = document.getElementById('foo');
-for (let i = 0; i < myElement.children.length; i++) {
-  console.log(myElement.children[i].tagName);
+const myElement = document.getElementById("foo");
+for (const child of myElement.children) {
+  console.log(child.tagName);
 }
 ```
 

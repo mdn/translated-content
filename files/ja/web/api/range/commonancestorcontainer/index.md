@@ -1,15 +1,11 @@
 ---
-title: Range.commonAncestorContainer
+title: "Range: commonAncestorContainer プロパティ"
+short-title: commonAncestorContainer
 slug: Web/API/Range/commonAncestorContainer
-page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Range
-browser-compat: api.Range.commonAncestorContainer
-translation_of: Web/API/Range/commonAncestorContainer
+l10n:
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
+
 {{ApiRef("DOM")}}
 
 **`Range.commonAncestorContainer`** は読み取り専用のプロパティで、この {{domxref("Range")}} の両方の[境界点](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-Position-h3)を含む、最も深い — または文書ツリー内で最も遠い — ノード ({{domxref("Node")}}) を返します。つまり、{{domxref("Range.startContainer")}} と {{domxref("Range.endContainer")}} 両方が同じノードを参照する場合は、このノードは**共通の祖先コンテナー**です。
@@ -24,16 +20,18 @@ translation_of: Web/API/Range/commonAncestorContainer
 
 ## 例
 
-この例では、リスト上の {{domxref("Document/pointerup_event", "pointerup")}} イベントを取り扱うためイベントリスナーを作ります。このリスナーは選択したテキストの共通の祖先を取得して、それらを強調するアニメーションを起動します。
+この例では、リスト上の {{domxref("Element/pointerup_event", "pointerup")}} イベントを取り扱うためイベントリスナーを作ります。このリスナーは選択したテキストの共通の祖先を取得して、それらを強調するアニメーションを起動します。
 
 ### HTML
 
 ```html
 <ul>
-  <li>Strings
+  <li>
+    Strings
     <ul>
       <li>Cello</li>
-      <li>Violin
+      <li>
+        Violin
         <ul>
           <li>First Chair</li>
           <li>Second Chair</li>
@@ -41,7 +39,8 @@ translation_of: Web/API/Range/commonAncestorContainer
       </li>
     </ul>
   </li>
-  <li>Woodwinds
+  <li>
+    Woodwinds
     <ul>
       <li>Clarinet</li>
       <li>Oboe</li>
@@ -60,8 +59,12 @@ translation_of: Web/API/Range/commonAncestorContainer
 }
 
 @keyframes highlight {
-  from { outline: 1px solid #f00f; }
-  to   { outline: 1px solid #f000; }
+  from {
+    outline: 1px solid #f00f;
+  }
+  to {
+    outline: 1px solid #f000;
+  }
 }
 ```
 
@@ -74,10 +77,10 @@ body {
 ### JavaScript
 
 ```js
-document.addEventListener('pointerup', e => {
+document.addEventListener("pointerup", (e) => {
   const selection = window.getSelection();
 
-  if (selection.type === 'Range') {
+  if (selection.type === "Range") {
     for (let i = 0; i < selection.rangeCount; i++) {
       const range = selection.getRangeAt(i);
       playAnimation(range.commonAncestorContainer);
@@ -90,9 +93,9 @@ function playAnimation(el) {
     el = el.parentNode;
   }
 
-  el.classList.remove('highlight');
+  el.classList.remove("highlight");
   setTimeout(() => {
-    el.classList.add('highlight');
+    el.classList.add("highlight");
   }, 0);
 }
 ```

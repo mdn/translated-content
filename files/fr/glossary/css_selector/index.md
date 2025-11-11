@@ -1,88 +1,83 @@
 ---
-title: Sélecteur CSS
+title: Sélecteur (CSS)
 slug: Glossary/CSS_Selector
-tags:
-  - CSS
-  - Glossaire
-  - HTML
-  - Programmation
-  - Sélecteur
-  - Sélecteur CSS
-translation_of: Glossary/CSS_Selector
-original_slug: Glossaire/Sélecteur_CSS
+l10n:
+  sourceCommit: 7615562a3689a3e23a2b6b623597f4391740a53e
 ---
-Un **sélecteur CSS** est la partie de la règle CSS qui désigne les éléments d'un document concernés par la règle. Les éléments correspondants auront le style spécifié par la règle qui leur est appliqué.
+
+Un **sélecteur CSS** est la partie de la règle CSS qui désigne les éléments d'un document ciblés par cette règle. Les éléments correspondants se verront appliquer la mise en forme indiquée par la règle.
 
 ## Exemple
 
-Considérez ce code CSS :
+Prenons comme exemple ce fragment de code CSS&nbsp;:
 
 ```css
 p {
   color: green;
 }
 
-div.warning {
+div.avertissement {
   width: 100%;
   border: 2px solid yellow;
   color: white;
   background-color: darkred;
-  padding:  0.8em 0.8em 0.6em;
+  padding: 0.8em 0.8em 0.6em;
 }
 
-#customized {
-  font: 16px Lucida Grande, Arial, Helvetica, sans-serif;
+#personnalise {
+  font:
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
+    sans-serif;
 }
 ```
 
-Les sélecteurs sont ici `"p"` (qui applique la couleur verte au texte de tout élément {{HTMLElement ("p")}}), `"div.warning"` (qui fait que tout élément {{HTMLElement ("div")}} appartenant à la {{Glossary ("Class", "classe CSS")}} `"warning"` ressemble à une boîte d'avertissement) et `"#customized"`, qui définit la police de base de l'élément avec l'ID `"customized"` à 16 -pixel Lucida Grande ou l'une des polices de secours.
+Les sélecteurs ici sont `"p"` (qui applique la couleur verte au texte à l'intérieur de tout élément {{HTMLElement("p")}}), `"div.warning"` (qui fait ressembler tout élément {{HTMLElement("div")}} avec la [classe](/fr/docs/Web/HTML/Reference/Global_attributes/class) `"warning"` à une boîte d'avertissement), et `"#customized"`, qui définit la police de base de l'élément avec l'ID `"customized"` à Lucida Grande de 16 pixels de haut ou à l'une des polices de secours.
 
-Nous pouvons ensuite appliquer ce CSS à du HTML, tel que :
+Nous pouvons ensuite appliquer ce CSS à du HTML, comme&nbsp;:
 
 ```html
-<p>This is happy text.</p>
+<p>Un texte heureux.</p>
 
-<div class="warning">
-  Be careful! There are wizards present, and they are quick to anger!
+<div class="avertissement">
+  Attention&nbsp;! Il y a des sorciers pas loin&nbsp;!
 </div>
 
-<div id="customized">
-  <p>This is happy text.</p>
+<div id="personnalise">
+  <p>Un texte heureux.</p>
 
-  <div class="warning">
-    Be careful! There are wizards present, and they are quick to anger!
+  <div class="avertissement">
+    Attention&nbsp;! Il y a des sorciers pas loin&nbsp;!
   </div>
 </div>
 ```
 
 Le contenu de la page résultant ressemble à ceci:
 
-{{EmbedLiveSample("Exemple", 640, 210)}}
+{{EmbedLiveSample("Exemple", 640, 240)}}
 
-## Pour approfondir
+## Voir aussi
 
-### Culture générale
+- [En apprendre plus sur les sélecteurs CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) dans l'introduction à CSS
 
-- [Apprendre sur les sélecteurs CSS](/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Les_s%C3%A9lecteurs) dans notre introduction à CSS.
-- Sélecteurs de base
+- Les sélecteurs simples
+  - [Les sélecteurs de type](/fr/docs/Web/CSS/Reference/Selectors/Type_selectors) `nomelement`
+  - [Les sélecteurs de classe](/fr/docs/Web/CSS/Reference/Selectors/Class_selectors) `.nomclasse`
+  - [Les sélecteurs d'identifiant](/fr/docs/Web/CSS/Reference/Selectors/ID_selectors) `#nomid`
+  - [Les sélecteurs universels](/fr/docs/Web/CSS/Reference/Selectors/Universal_selectors) `* ns|* *|*`
+  - [Les sélecteurs d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) `[attr=valeur]`
+  - [Les sélecteurs d'état](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) `a:active, a:visited`
 
-  - [Sélecteurs de type](/fr/docs/Web/CSS/S%C3%A9lecteurs_de_type) `elementname`
-  - [Sélecteurs de classe](/fr/docs/Web/CSS/Sélecteurs_de_classe) `.classname`
-  - [Sélecteurs d'ID](/fr/docs/Web/CSS/Reference/Sélecteurs_d'ID) `#idname`
-  - [Sélecteurs universels](/fr/docs/Web/CSS/Sélecteurs_universels) `* ns|* *|*`
-  - [Sélecteurs d'attribut](/fr/docs/Web/CSS/Reference/Sélecteurs_d'attribut) `[attr=value]`
-  - [`Sélecteurs d'état`](/fr/docs/Web/CSS/Pseudo-classes) `a:active, a:visited`
+- Les sélecteurs composites
+  - [Liste de sélecteurs](/fr/docs/Web/CSS/Reference/Selectors/Selector_list) `A, B`
 
-- Combinaisons
+- Les combinateurs
+  - [Sélecteurs de voisins directs](/fr/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator) `A + B`
+  - [Sélecteurs de voisins généraux](/fr/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator) `A ~ B`
+  - [Sélecteurs d'enfant direct](/fr/docs/Web/CSS/Reference/Selectors/Child_combinator) `A > B`
+  - [Sélecteurs de descendants](/fr/docs/Web/CSS/Reference/Selectors/Descendant_combinator) `A B`
 
-  - [Sélecteurs de frère adjacent](/fr/docs/Web/CSS/Adjacent_sibling_selectors) `A + B`
-  - [Sélecteurs de voisins généraux](/fr/docs/Web/CSS/Sélecteurs_de_voisins_généraux) `A ~ B`
-  - [Sélecteurs d'enfant](/fr/docs/Web/CSS/Sélecteurs_enfant) `A > B`
-  - [Sélecteurs descendants](/fr/docs/Web/CSS/Sélecteurs_descendant) `A B`
-
-- [Pseudo-éléments](/fr/docs/Web/CSS/Pseudo-éléments)
-- [Pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes)
-
-### Référence technique
-
-{{SpecName("CSS3 Selectors")}}
+- Pseudo
+  - [Pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) `:`
+  - [Pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) `::`

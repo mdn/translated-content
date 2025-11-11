@@ -1,19 +1,20 @@
 ---
-title: FileReaderSync.readAsDataURL()
+title: "FileReaderSync: readAsDataURL() メソッド"
+short-title: readAsDataURL()
 slug: Web/API/FileReaderSync/readAsDataURL
-page-type: web-api-instance-method
-browser-compat: api.FileReaderSync.readAsDataURL
-translation_of: Web/API/FileReaderSync/readAsDataURL
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
+
 {{APIRef("File API")}}
 
 `readAsDataURL()` は {{DOMxRef("FileReaderSync")}} インターフェイスのメソッドで、{{DOMxRef("File")}} または {{DOMxRef("Blob")}} オブジェクトを同期的にデータ URL を表す文字列に読み込むことができます。このインターフェイスは、ブロックが発生する可能性のある同期 I/O を可能にするため、[ワーカー](/ja/docs/Web/API/Worker)で[のみ利用可能](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)です。
 
 ## 構文
 
-```js
-readAsDataURL(File);
-readAsDataURL(Blob);
+```js-nolint
+readAsDataURL(File)
+readAsDataURL(Blob)
 ```
 
 ### 引数
@@ -51,8 +52,8 @@ readAsDataURL(Blob);
 
 ## 関連情報
 
-- [ファイル API](/ja/docs/Web/API/File_API)
+- [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
 - {{DOMxRef("File")}}
 - {{DOMxRef("FileReaderSync")}}
 - {{DOMxRef("FileReader")}}
-- {{DOMxRef("BlobBuilder")}}, {{ domxref("Blob") }}
+- {{ domxref("Blob") }}

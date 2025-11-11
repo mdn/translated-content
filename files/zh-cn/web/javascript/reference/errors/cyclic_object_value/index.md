@@ -1,15 +1,7 @@
 ---
-title: 'TypeError: cyclic object value'
+title: "TypeError: cyclic object value"
 slug: Web/JavaScript/Reference/Errors/Cyclic_object_value
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Cyclic_object_value
 ---
-
-{{jsSidebar("Errors")}}
 
 在[JSON](https://www.json.org/)中出现循环引用时，JavaScript 会抛出 "cyclic object value" 的异常。{{jsxref("JSON.stringify()")}}并不会尝试解决这个问题，因此导致运行失败。
 
@@ -55,7 +47,7 @@ JSON.stringify(circularReference);
 const getCircularReplacer = () => {
   const seen = new WeakSet();
   return (key, value) => {
-    if (typeof value === 'object' && value !== null) {
+    if (typeof value === "object" && value !== null) {
       if (seen.has(value)) {
         return;
       }

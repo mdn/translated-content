@@ -1,20 +1,26 @@
 ---
 title: Date.prototype.setSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setSeconds
 ---
+
 {{JSRef}}
 
 La méthode **`setSeconds()`** définit les secondes pour la date, selon l'heure locale.
 
-{{EmbedInteractiveExample("pages/js/date-setseconds.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setSeconds()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+event.setSeconds(42);
+
+console.log(event.getSeconds());
+// Expected output: 42
+
+console.log(event);
+// Expected output: "Sat Apr 19 1975 23:15:42 GMT+0100 (CET)"
+// Note: your timezone may vary
+```
 
 ## Syntaxe
 
@@ -25,7 +31,7 @@ dateObj.setSeconds(valeurSecondes[, valeurMs])
 ### Versions antérieures à JavaScript 1.3
 
 ```js
-dateObj.setSeconds(valeurSecondes)
+dateObj.setSeconds(valeurSecondes);
 ```
 
 ### Paramètres
@@ -51,21 +57,16 @@ Si un paramètre utilisé est en dehors des limites attendues, `setSeconds()` te
 
 ```js
 var leGrandJour = new Date();
-leGrandJour.setSeconds(30)
+leGrandJour.setSeconds(30);
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires                                          |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.30', 'Date.prototype.setSeconds')}}                         | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-date.prototype.setseconds', 'Date.prototype.setSeconds')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-date.prototype.setseconds', 'Date.prototype.setSeconds')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.setSeconds")}}
+{{Compat}}
 
 ## Voir aussi
 

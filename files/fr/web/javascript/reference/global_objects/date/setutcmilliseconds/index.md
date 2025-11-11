@@ -1,25 +1,30 @@
 ---
 title: Date.prototype.setUTCMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMilliseconds
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCMilliseconds
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setUTCMilliseconds
 ---
+
 {{JSRef}}
 
 La méthode **`setUTCMilliseconds()`** définit les millièmes de secondes pour la date, selon UTC.
 
-{{EmbedInteractiveExample("pages/js/date-setutcmilliseconds.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setUTCMilliseconds()")}}
+
+```js interactive-example
+const date1 = new Date("2018-01-24T12:38:29.069Z");
+
+console.log(date1.getUTCMilliseconds());
+// Expected output: 69
+
+date1.setUTCMilliseconds(420);
+
+console.log(date1.getUTCMilliseconds());
+// Expected output: 420
+```
 
 ## Syntaxe
 
 ```js
-dateObj.setUTCMilliseconds(valeurMs)
+dateObj.setUTCMilliseconds(valeurMs);
 ```
 
 ### Paramètres
@@ -46,16 +51,11 @@ leGrandJour.setUTCMilliseconds(500);
 
 ## Spécifications
 
-| Spécification                                                                                                                            | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                                 | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.9.5.29', 'Date.prototype.setUTCMilliseconds')}}                                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-date.prototype.setutcmilliseconds', 'Date.prototype.setUTCMilliseconds')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-date.prototype.setutcmilliseconds', 'Date.prototype.setUTCMilliseconds')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.setUTCMilliseconds")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,30 +1,21 @@
 ---
 title: windows.onFocusChanged
 slug: Mozilla/Add-ons/WebExtensions/API/windows/onFocusChanged
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - Windows
-  - onFocusChanged
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows/onFocusChanged
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Attiré lorsque la fenêtre actuellement change. Sera {{WebExtAPIRef('windows.WINDOW_ID_NONE')}} si toutes les fenêtres du navigateur ont perdu le focus.
 
-> **Note :** Sur certains gestionnaires de fenêtres Linux, WINDOW_ID_NONE sera toujours envoyé immédiatement avant un passage d'une fenêtre de navigateur à l'autre.
+> [!NOTE]
+> Sur certains gestionnaires de fenêtres Linux, WINDOW_ID_NONE sera toujours envoyé immédiatement avant un passage d'une fenêtre de navigateur à l'autre.
 
 ## Syntaxe
 
 ```js
-browser.windows.onFocusChanged.addListener(listener)
-browser.windows.onFocusChanged.removeListener(listener)
-browser.windows.onFocusChanged.hasListener(listener)
+browser.windows.onFocusChanged.addListener(listener);
+browser.windows.onFocusChanged.removeListener(listener);
+browser.windows.onFocusChanged.hasListener(listener);
 ```
 
 Les événements ont trois événements :
@@ -41,15 +32,13 @@ Les événements ont trois événements :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lors de l'événement. La fonction passera les arguments suivants :
-
     - `windowId`
       - : `integer`. ID de la fenêtre nouvellement localisée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.onFocusChanged")}}
+{{Compat}}
 
 ## Exemples
 
@@ -63,13 +52,12 @@ browser.windows.onFocusChanged.addListener((windowId) => {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/extensions/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
->
-> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
+> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -96,4 +84,4 @@ browser.windows.onFocusChanged.addListener((windowId) => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

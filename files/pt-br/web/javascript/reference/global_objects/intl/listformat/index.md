@@ -1,24 +1,35 @@
 ---
 title: Intl.ListFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
-tags:
-  - Classe
-  - Experimental
-  - Internacionalização
-  - Intl
-  - JavaScript
-  - ListFormat
-  - Referência
-browser-compat: javascript.builtins.Intl.ListFormat
 ---
 
 {{JSRef}}
 
 O objeto **`Intl.ListFormat`** habilita a formatação de lista de acordo com o idioma.
 
-{{EmbedInteractiveExample("pages/js/intl-listformat.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.ListFormat", "taller")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
+```js interactive-example
+const vehicles = ["Motorcycle", "Bus", "Car"];
+
+const formatter = new Intl.ListFormat("en", {
+  style: "long",
+  type: "conjunction",
+});
+console.log(formatter.format(vehicles));
+// Expected output: "Motorcycle, Bus, and Car"
+
+const formatter2 = new Intl.ListFormat("de", {
+  style: "short",
+  type: "disjunction",
+});
+console.log(formatter2.format(vehicles));
+// Expected output: "Motorcycle, Bus oder Car"
+
+const formatter3 = new Intl.ListFormat("en", { style: "narrow", type: "unit" });
+console.log(formatter3.format(vehicles));
+// Expected output: "Motorcycle Bus Car"
+```
 
 ## Construtor
 
@@ -48,20 +59,20 @@ const list = ["Moto", "Ônibus", "Carro"];
 
 console.log(
   new Intl.ListFormat("pt-BR", { style: "long", type: "conjunction" }).format(
-    list
-  )
+    list,
+  ),
 );
 // > Moto, Ônibus e Carro
 
 console.log(
   new Intl.ListFormat("pt-BR", { style: "short", type: "disjunction" }).format(
-    list
-  )
+    list,
+  ),
 );
 // > Moto, Ônibus ou Carro
 
 console.log(
-  new Intl.ListFormat("pt-BR", { style: "narrow", type: "unit" }).format(list)
+  new Intl.ListFormat("pt-BR", { style: "narrow", type: "unit" }).format(list),
 );
 // > Moto Ônibus Carro
 ```
@@ -76,7 +87,7 @@ console.log(
   new Intl.ListFormat("pt-BR", {
     style: "long",
     type: "conjunction",
-  }).formatToParts(list)
+  }).formatToParts(list),
 );
 
 // [ { "type": "element", "value": "Moto" },

@@ -1,19 +1,14 @@
 ---
-title: HTMLAreaElement.rel
+title: "HTMLAreaElement: rel プロパティ"
+short-title: rel
 slug: Web/API/HTMLAreaElement/rel
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLAreaElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAreaElement.rel
-translation_of: Web/API/HTMLAreaElement/rel
+l10n:
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
+
 {{APIRef("HTML DOM")}}
 
-**`HTMLAreaElement.rel`** プロパティは {{htmlattrxref("rel", "area")}} 属性を反映しています。これは、空白で区切られた[リンク種別](/ja/docs/Web/HTML/Link_types)のリストの入った文字列であり、{{HTMLElement("area")}} 要素で表されるリソースと現在の文書との関係を示します。
+**`HTMLAreaElement.rel`** プロパティは [`rel`](/ja/docs/Web/HTML/Reference/Attributes/rel) 属性を反映しています。これは、空白で区切られたリンク種別のリストの入った文字列であり、{{HTMLElement("area")}} 要素で表されるリソースと現在の文書との関係を示します。
 
 ## 値
 
@@ -22,10 +17,9 @@ translation_of: Web/API/HTMLAreaElement/rel
 ## 例
 
 ```js
-var areas = document.getElementsByTagName("area");
-var length = areas.length;
-for (var i = 0; i < length; i++) {
-  alert("Rel: " + areas[i].rel);
+const areas = document.getElementsByTagName("area");
+for (const area of areas) {
+  console.log(`Rel: ${area.rel}`);
 }
 ```
 

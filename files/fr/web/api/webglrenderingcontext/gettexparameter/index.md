@@ -1,18 +1,11 @@
 ---
 title: WebGLRenderingContext.getTexParameter()
 slug: Web/API/WebGLRenderingContext/getTexParameter
-tags:
-  - API
-  - Méthode
-  - Reference
-  - Textures
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/getTexParameter
 ---
+
 {{APIRef("WebGL")}}
 
-La méthode **`WebGLRenderingContext.getTexParameter()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) retourne des informations concernant la texture indiquée.
+La méthode **`WebGLRenderingContext.getTexParameter()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) retourne des informations concernant la texture indiquée.
 
 ## Syntaxe
 
@@ -23,18 +16,14 @@ quelconque gl.getTexParameter(cible, nomp);
 ### Paramètres
 
 - cible
-
   - : Un {{domxref("GLenum")}} indiquant le point de liaison (cible). Valeurs possibles :
-
     - `gl.TEXTURE_2D`&nbsp;: une texture bi-dimensionnelle.
     - `gl.TEXTURE_CUBE_MAP`&nbsp;: une texture appliquée à un cube.
     - Lorsqu' un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} est utilisé, les valeurs suivantes sont en outre disponibles :
-
       - `gl.TEXTURE_3D`&nbsp;: une texture tri-dimensionnelle.
       - `gl.TEXTURE_2D_ARRAY`&nbsp;: une texture bi-dimensionnelle en tableau.
 
 - nomp
-
   - : Un {{domxref("Glenum")}} indiquant l'information à obtenir. Valeurs possibles :
 
     <table class="standard-table">
@@ -165,7 +154,7 @@ quelconque gl.getTexParameter(cible, nomp);
           <td><code>gl.TEXTURE_WRAP_R</code></td>
           <td>{{domxref("GLenum")}}</td>
           <td>
-            Fonction d'emballage pour la coordonnée de texture  <code>r</code>
+            Fonction d'emballage pour la coordonnée de texture <code>r</code>
           </td>
           <td>
             <code>gl.REPEAT</code> (valeur par défaut),
@@ -187,16 +176,11 @@ gl.getTexParameter(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER);
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                               | Commentaire                                  |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------- |
-| {{SpecName('WebGL', "#5.14.8", "getTexParameter")}}                                     | {{Spec2('WebGL')}}             | Définition initiale pour WebGL.              |
-| {{SpecName('OpenGL ES 2.0', "glGetTexParameter.xml", "glGetTexParameter")}}     | {{Spec2('OpenGL ES 2.0')}} | Page man de l'API OpenGL ES 2.0 (similaire). |
-| {{SpecName('WebGL2', "#3.7.6", "getTexParameter")}}                                     | {{Spec2('WebGL2')}}             | Définition mise à jour pour WebGL.           |
-| {{SpecName('OpenGL ES 3.0', "glGetTexParameter.xhtml", "glGetTexParameter")}} | {{Spec2('OpenGL ES 3.0')}} | Page man de l'API OpenGL ES 3.0 (similaire). |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.getTexParameter")}}
+{{Compat}}
 
 ## Voir aussi
 

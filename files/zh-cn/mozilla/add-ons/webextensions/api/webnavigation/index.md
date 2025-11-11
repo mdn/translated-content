@@ -1,115 +1,98 @@
 ---
 title: webNavigation
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - NeedsTranslation
-  - Non-standard
-  - Reference
-  - TopicStub
-  - WebExtensions
-  - webNavigation
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation
+l10n:
+  sourceCommit: e92bec809ea0bef618f7e604d7a7457f50aa0127
 ---
-{{AddonSidebar}}
 
-Add event listeners for the various stages of a navigation. A navigation consists of a frame in the browser transitioning from one URL to another, usually (but not always) in response to a user action like clicking a link or entering a URL in the location bar.
+为导航的各个阶段添加事件监听器。导航是指浏览器中的某个框架从一个 URL 跳转到另一个 URL，通常是（但不总是）用户操作（如点击链接或在地址栏输入 URL）引起的。
 
-Compared with the {{WebExtAPIRef("webRequest")}} API: navigations usually result in the browser making web requests, but the webRequest API is concerned with the lower-level view from the HTTP layer, while the webNavigation API is more concerned with the view from the browser UI itself.
+与 {{WebExtAPIRef("webRequest")}} API 相比：导航通常会导致浏览器发起 Web 请求，但 webRequest API 关注的是 HTTP 层的底层视角，而 webNavigation API 更侧重于浏览器 UI 本身的视角。
 
-Each event corresponds to a particular stage in the navigation. The sequence of events is like this:
+每个事件对应导航中的其中一个特定阶段。事件顺序如下：
 
-![](we-flow.png)
+![主流程和下文描述的附加流程的可视化。](we-flow.png)
 
-- The primary flow is:
+- 主流程为：
+  - {{WebExtAPIRef("webNavigation.onBeforeNavigate", "onBeforeNavigate")}}
+  - {{WebExtAPIRef("webNavigation.onCommitted", "onCommitted")}}
+  - {{WebExtAPIRef("webNavigation.onDOMContentLoaded", "onDOMContentLoaded")}}
+  - {{WebExtAPIRef("webNavigation.onCompleted", "onCompleted")}}
 
-  - `{{WebExtAPIRef("webNavigation.onBeforeNavigate", "onBeforeNavigate")}}`
-  - `{{WebExtAPIRef("webNavigation.onCommitted", "onCommitted")}}`
-  - `{{WebExtAPIRef("webNavigation.onDOMContentLoaded", "onDOMContentLoaded")}}`
-  - `{{WebExtAPIRef("webNavigation.onCompleted", "onCompleted")}}`.
+- 此外：
+  - 如果浏览器需要为导航创建新标签页或新窗口（例如，用户在新标签页中打开链接），则 {{WebExtAPIRef("webNavigation.onCreatedNavigationTarget", "onCreatedNavigationTarget")}} 会在 `onBeforeNavigate` 之前触发。
+  - 如果页面使用 [history API](/zh-CN/docs/Web/API/History_API) 更新了浏览器地址栏中的 URL，则会触发 {{WebExtAPIRef("webNavigation.onHistoryStateUpdated", "onHistoryStateUpdated")}}。
+  - 如果页面的[片段标识符](/zh-CN/docs/Web/URI/Reference/Fragment)发生变化，则会触发 {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated", "onReferenceFragmentUpdated")}}。
+  - {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} 可以在任何阶段触发。
 
-- Additionally:
+每次导航都是特定浏览器框架中的 URL 过渡。浏览器框架由标签页 ID 和框架 ID 标识。框架可以是标签页中的顶级浏览上下文，也可以是作为 [iframe](/zh-CN/docs/Web/HTML/Reference/Elements/iframe) 实现的嵌套浏览上下文。
 
-  - `{{WebExtAPIRef("webNavigation.onCreatedNavigationTarget", "onCreatedNavigationTarget")}}` is fired before `onBeforeNavigate` if the browser needed to create a new tab or window for the navigation (for example, because the user opened a link in a new tab).
-  - {{WebExtAPIRef("webNavigation.onHistoryStateUpdated", "onHistoryStateUpdated")}} is fired if a page uses the [history API](http://diveintohtml5.info/history.html) to update the URL displayed in the browser's location bar.
-  - {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated", "onReferenceFragmentUpdated")}} is fired if the [fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier) for a page is changed.
-  - {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} can be fired at any point.
+每个事件的 `addListener()` 调用接受一个可选的过滤器参数。过滤器将指定一个或多个 URL 模式，然后仅当目标 URL 匹配其中一个模式时才会触发事件。
 
-Each navigation is a URL transition in a particular browser frame. The browser frame is identified by a tab ID and a frame ID. The frame may be the top-level browsing context in the tab, or may be a nested browsing context implemented as an [iframe](/en-US/docs/Web/HTML/Element/iframe).
+`onCommitted` 事件监听器额外接受两个属性：指示导航的原因（例如，因为用户点击了链接，或者因为用户选择了书签）的 {{WebExtAPIRef("webNavigation.TransitionType","TransitionType")}}，以及提供有关导航的更多信息的 {{WebExtAPIRef("webNavigation.TransitionQualifier","TransitionQualifier")}}。
 
-Each event's `addListener()` call accepts an optional filter parameter. The filter will specify one or more URL patterns, and the event will then only be fired for navigations in which the target URL matches one of the patterns.
+要使用此 API，你需要取得“webNavigation”[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
-The `onCommitted` event listener is passed two additional properties: a {{WebExtAPIRef("webNavigation.TransitionType","TransitionType")}} indicating the cause of the navigation (for example, because the user clicked a link, or because the user selected a bookmark), and a {{WebExtAPIRef("webNavigation.TransitionQualifier","TransitionQualifier")}} providing further information about the navigation.
-
-To use this API you need to have the "webNavigation" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
-
-## Types
+## 类型
 
 - {{WebExtAPIRef("webNavigation.TransitionType")}}
-  - : Cause of the navigation: for example, the user clicked a link, or typed an address, or clicked a bookmark.
+  - : 导航的原因：例如，用户点击了链接，输入了地址，或点击了书签。
 - {{WebExtAPIRef("webNavigation.TransitionQualifier")}}
-  - : Extra information about a transition.
+  - : 有关过渡的额外信息。
 
-## Functions
+## 函数
 
 - {{WebExtAPIRef("webNavigation.getFrame()")}}
-  - : Retrieves information about a particular frame. A frame may be the top-level frame in a tab or a nested [iframe](/en-US/docs/Web/HTML/Element/iframe), and is uniquely identified by a tab ID and a frame ID.
+  - : 检索有关特定框架的信息。框架可以是标签页中的顶级框架，也可以是嵌套的 [iframe](/zh-CN/docs/Web/HTML/Reference/Elements/iframe)，并由标签页 ID 和框架 ID 唯一标识。
 - {{WebExtAPIRef("webNavigation.getAllFrames()")}}
-  - : Given a tab ID, retrieves information about all the frames it contains.
+  - : 给定一个标签页 ID，检索其包含的所有框架的信息。
 
-## Events
+## 事件
 
 - {{WebExtAPIRef("webNavigation.onBeforeNavigate")}}
-  - : Fired when the browser is about to start a navigation event.
+  - : 当浏览器即将开始导航事件时触发。
 - {{WebExtAPIRef("webNavigation.onCommitted")}}
-  - : Fired when a navigation is committed. At least part of the new document has been received from the server and the browser has decided to switch to the new document.
+  - : 当导航被提交时触发。此时至少已经从服务器接收了部分的新文档，浏览器已决定切换到新文档。
 - {{WebExtAPIRef("webNavigation.onDOMContentLoaded")}}
-  - : Fired when the [DOMContentLoaded](/en-US/docs/Web/Events/DOMContentLoaded) event is fired in the page.
+  - : 当页面触发 [DOMContentLoaded](/zh-CN/docs/Web/API/Document/DOMContentLoaded_event) 事件时触发。
 - {{WebExtAPIRef("webNavigation.onCompleted")}}
-  - : Fired when a document, including the resources it refers to, is completely loaded and initialized. This is equivalent to the DOM [`load`](/en-US/docs/Web/Events/load) event.
+  - : 当文档及其引用的资源完全加载并初始化时触发。这相当于 DOM 的 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件。
 - {{WebExtAPIRef("webNavigation.onErrorOccurred")}}
-  - : Fired when an error occurs and the navigation is aborted. This can happen if either a network error occurred, or the user aborted the navigation.
+  - : 当发生错误并且导航被中止时触发。这可能是由于网络错误或用户中止导航导致的。
 - {{WebExtAPIRef("webNavigation.onCreatedNavigationTarget")}}
-  - : Fired when a new window, or a new tab in an existing window, is created to host a navigation: for example, if the user opens a link in a new tab.
+  - : 当创建一个新窗口或现有窗口中的新标签页以承载导航时触发：例如，如果用户在新标签页中打开链接。
 - {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated")}}
-  - : Fired if the [fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier) for a page is changed.
+  - : 当页面的[片段标识符](https://zh.wikipedia.org/wiki/URI片段)发生更改时触发。
 - {{WebExtAPIRef("webNavigation.onTabReplaced")}}
-  - : Fired when the contents of the tab is replaced by a different (usually previously pre-rendered) tab.
+  - : 当标签页的内容被另一个（通常是之前预渲染的）标签页替换时触发。
 - {{WebExtAPIRef("webNavigation.onHistoryStateUpdated")}}
-  - : Fired when the page used the [history API](http://diveintohtml5.info/history.html) to update the URL displayed in the browser's location bar.
+  - : 当页面使用 [history API](/zh-CN/docs/Web/API/History_API) 更新浏览器地址栏中显示的 URL 时触发。
 
-## Browser compatibility
+## 浏览器兼容性
 
-{{Compat("webextensions.api.webNavigation")}}
-
-### Edge incompatibilities
-
-Promises are not supported in Edge. Use callbacks instead.
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **备注：** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.webNavigation`](https://developer.chrome.google.cn/docs/extensions/reference/api/webNavigation) API。该文档衍生自 Chromium 代码中的 [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json)。
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved。
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
 // met:
 //
 //    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
+// notice, this list of conditions and the following disclaimer。
 //    * Redistributions in binary form must reproduce the above
 // copyright notice, this list of conditions and the following disclaimer
 // in the documentation and/or other materials provided with the
-// distribution.
+// distribution。
 //    * Neither the name of Google Inc. nor the names of its
 // contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+// this software without specific prior written permission。
 //
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
 // "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
@@ -121,5 +104,5 @@ Promises are not supported in Edge. Use callbacks instead.
 // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE。
+-->

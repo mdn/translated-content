@@ -1,26 +1,31 @@
 ---
-title: ビット論理和代入 (|=)
+title: ビット論理和代入演算子 (|=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_OR_assignment
-tags:
-  - 代入演算子
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.bitwise_or_assignment
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_OR_assignment
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-{{jsSidebar("Operators")}}
 
 ビット論理和代入演算子 (`|=`) は、両方のオペランドの二進表現を使用し、それらに対してビット単位の OR 演算を実行して、結果を変数に代入します。
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-or-assignment.html")}}
+{{InteractiveExample("JavaScript デモ: ビット論理和代入演算子 (|=)")}}
+
+```js interactive-example
+let a = 5; // 00000000000000000000000000000101
+a |= 3; // 00000000000000000000000000000011
+
+console.log(a); // 00000000000000000000000000000111
+// 予想される結果: 7
+```
 
 ## 構文
 
-```js
-x |= y // x = x | y
+```js-nolint
+x |= y
 ```
+
+## 解説
+
+`x |= y` は `x = x | y` と同等である（ただし、式 `x` は一度だけ評価されます）。
 
 ## 例
 
@@ -45,6 +50,6 @@ a |= 2; // 7
 
 ## 関連情報
 
-- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#代入演算子)
+- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#代入演算子)
 - [ビット論理和演算子](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_OR)
 - [論理 OR 代入 (`||=`)](/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)

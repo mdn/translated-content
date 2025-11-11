@@ -1,14 +1,8 @@
 ---
 title: Encoding API 编码
 slug: Web/API/Encoding_API/Encodings
-page-type: guide
-tags:
-  - API
-  - Encoding
-  - Overview
-  - Reference
-translation-of: Web/API/Encoding_API/Encodings
 ---
+
 {{DefaultAPISidebar("Encoding API")}}
 
 {{domxref("TextDecoder")}} 和 {{domxref("TextDecoderStream")}} 构造函数可以传递一个可选的 `label`，表示使用的编码。默认是 `UTF-8`。
@@ -35,7 +29,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          ><a href="https://zh.wikipedia.org/wiki/Code_page_866">'ibm866'</a></code
+          ><a href="https://en.wikipedia.org/wiki/Code_page_866">'ibm866'</a></code
         >
       </td>
     </tr>
@@ -115,7 +109,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          ><a href="https://zh.wikipedia.org/wiki/ISO-8859-8-I">'iso-8859-8i'</a></code
+          ><a href="https://en.wikipedia.org/wiki/ISO-8859-8-I">'iso-8859-8i'</a></code
         >
       </td>
     </tr>
@@ -201,7 +195,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          ><a href="https://zh.wikipedia.org/wiki/Windows-874">'windows-874'</a></code
+          ><a href="https://en.wikipedia.org/wiki/Windows-874">'windows-874'</a></code
         >
       </td>
     </tr>
@@ -211,7 +205,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          ><a href="https://zh.wikipedia.org/wiki/Windows-1250">'windows-1250'</a></code
+          ><a href="https://en.wikipedia.org/wiki/Windows-1250">'windows-1250'</a></code
         >
       </td>
     </tr>
@@ -221,7 +215,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          ><a href="https://zh.wikipedia.org/wiki/Windows-1251">'windows-1251'</a></code
+          ><a href="https://en.wikipedia.org/wiki/Windows-1251">'windows-1251'</a></code
         >
       </td>
     </tr>
@@ -241,7 +235,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          ><a href="https://zh.wikipedia.org/wiki/Windows-1253">'windows-1253'</a></code
+          ><a href="https://en.wikipedia.org/wiki/Windows-1253">'windows-1253'</a></code
         >
       </td>
     </tr>
@@ -251,7 +245,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          ><a href="https://zh.wikipedia.org/wiki/Windows-1254">'windows-1254'</a></code
+          ><a href="https://en.wikipedia.org/wiki/Windows-1254">'windows-1254'</a></code
         >
       </td>
     </tr>
@@ -261,7 +255,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          ><a href="https://zh.wikipedia.org/wiki/Windows-1255">'windows-1255'</a></code
+          ><a href="https://en.wikipedia.org/wiki/Windows-1255">'windows-1255'</a></code
         >
       </td>
     </tr>
@@ -271,7 +265,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          ><a href="https://zh.wikipedia.org/wiki/Windows-1256">'windows-1256'</a></code
+          ><a href="https://en.wikipedia.org/wiki/Windows-1256">'windows-1256'</a></code
         >
       </td>
     </tr>
@@ -281,7 +275,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          ><a href="https://zh.wikipedia.org/wiki/Windows-1257">'windows-1257'</a></code
+          ><a href="https://en.wikipedia.org/wiki/Windows-1257">'windows-1257'</a></code
         >
       </td>
     </tr>
@@ -291,7 +285,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          ><a href="https://zh.wikipedia.org/wiki/Windows-1258">'windows-1258'</a></code
+          ><a href="https://en.wikipedia.org/wiki/Windows-1258">'windows-1258'</a></code
         >
       </td>
     </tr>
@@ -299,7 +293,7 @@ translation-of: Web/API/Encoding_API/Encodings
       <td>"<code>x-mac-cyrillic</code>"、"<code>x-mac-ukrainian</code>"</td>
       <td>
         <code
-          ><a href="https://zh.wikipedia.org/wiki/Macintosh_Cyrillic_encoding">'x-mac-cyrillic'</a></code
+          ><a href="https://en.wikipedia.org/wiki/Mac_OS_Cyrillic_encoding">'x-mac-cyrillic'</a></code
         >
       </td>
     </tr>
@@ -323,7 +317,7 @@ translation-of: Web/API/Encoding_API/Encodings
       <td>"<code>hz-gb-2312</code>"</td>
       <td>
         <code
-          ><a href="https://zh.wikipedia.org/wiki/HZ_(character_encoding)">'hz-gb-2312'</a></code
+          ><a href="https://en.wikipedia.org/wiki/HZ_(character_encoding)">'hz-gb-2312'</a></code
         >
       </td>
     </tr>
@@ -343,7 +337,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          ><a href="https://zh.wikipedia.org/wiki/Extended_Unix_Code#EUC-JP">'euc-jp'</a></code
+          ><a href="https://zh.wikipedia.org/wiki/EUC#EUC-JP">'euc-jp'</a></code
         >
       </td>
     </tr>
@@ -371,7 +365,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          ><a href="https://zh.wikipedia.org/wiki/Extended_Unix_Code#EUC-KR">'euc-kr'</a></code
+          ><a href="https://zh.wikipedia.org/wiki/EUC#EUC-KR">'euc-kr'</a></code
         >
       </td>
     </tr>
@@ -387,7 +381,7 @@ translation-of: Web/API/Encoding_API/Encodings
       <td>"<code>utf-16be</code>"</td>
       <td>
         <code
-          ><a href="https://zh.wikipedia.org/wiki/UTF-16#Byte_order_encoding_schemes">'utf-16be'</a></code
+          ><a href="https://zh.wikipedia.org/wiki/UTF-16#UTF-16的編碼模式">'utf-16be'</a></code
         >
       </td>
     </tr>
@@ -395,7 +389,7 @@ translation-of: Web/API/Encoding_API/Encodings
       <td>"<code>utf-16</code>"、"<code>utf-16le</code>"</td>
       <td>
         <code
-          ><a href="https://zh.wikipedia.org/wiki/UTF-16#Byte_order_encoding_schemes">'utf-16le'</a></code
+          ><a href="https://zh.wikipedia.org/wiki/UTF-16#UTF-16的編碼模式">'utf-16le'</a></code
         >
       </td>
     </tr>

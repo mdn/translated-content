@@ -1,62 +1,86 @@
 ---
-title: GlobalEventHandlers.onfocus
+title: "Window : évènement focus"
+short-title: focus
 slug: Web/API/Window/focus_event
-translation_of: Web/API/GlobalEventHandlers/onfocus
-original_slug: Web/API/GlobalEventHandlers/onfocus
-browser-compat: api.GlobalEventHandlers.onfocus
+l10n:
+  sourceCommit: 6ba4f3b350be482ba22726f31bbcf8ad3c92a9c6
 ---
-{{ApiRef("HTML DOM")}}
 
-La propriété **`onfocus`**, , rattachée au mixin [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers), est [un gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui permet de traiter les évènements [`focus`](/fr/docs/Web/API/Element/focus_event).
+{{APIRef}}
 
-L'évènement `focus` est déclenché lorsque la personne active le focus sur un élément.
+L'évènement **`focus`** est déclenché lorsqu'un élément reçoit la sélection.
 
-Afin que `onfocus` soit déclenché sur les éléments qui ne sont pas des éléments `<input>`, il faut que ces derniers aient un attribut [`tabindex`](/fr/docs/Web/HTML/Global_attributes#attr-tabindex). Voir la section [Remettre l'accessibilité au clavier](/fr/docs/Learn/Accessibility/HTML#remettre_laccessibilité_au_clavier) pour plus de détails.
+L'opposé de `focus` est {{domxref("Window/blur_event", "blur")}}.
 
-> **Note :** Le gestionnaire d'évènement opposé à `onfocus` est [`onblur`](/fr/docs/Web/API/GlobalEventHandlers/onblur).
+Cet évènement n'est pas annulable et ne se propage pas.
 
 ## Syntaxe
 
-```js
-cible.onfocus = refFonction;
+Utiliser le nom de l'évènement dans des méthodes comme {{domxref("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété gestionnaire d'évènement.
+
+```js-nolint
+addEventListener("focus", (event) => { })
+
+onfocus = (event) => { }
 ```
 
-### Value
+## Type d'évènement
 
-`refFonction` est un nom de fonction ou une [expression de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function). La fonction reçoit un objet [`FocusEvent`](/fr/docs/Web/API/FocusEvent) comme unique argument.
+Un {{domxref("FocusEvent")}}. Hérite de {{domxref("UIEvent")}} et {{domxref("Event")}}.
 
-## Exemple
+{{InheritanceDiagram("FocusEvent")}}
 
-Cet exemple utilise [`onblur`](/fr/docs/Web/API/GlobalEventHandlers/onblur) et `onfocus` pour changer le texte au sein d'un élément [`<input>`](/fr/docs/Web/HTML/Element/Input).
+## Propriétés de l'évènement
 
-### HTML
+_Cette interface hérite aussi des propriétés de son parent {{domxref("UIEvent")}}, et indirectement de {{domxref("Event")}}._
+
+- {{domxref("FocusEvent.relatedTarget")}}
+  - : Un {{domxref("EventTarget")}} représentant une cible secondaire pour cet évènement. Dans certains cas (comme lors d'un passage par tabulation dans ou hors d'une page), cette propriété peut être définie sur `null` pour des raisons de sécurité.
+
+## Exemples
+
+### Exemple interactif
+
+Cet exemple modifie l'apparence d'un document lorsqu'il perd la sélection. Il utilise {{domxref("EventTarget.addEventListener()", "addEventListener()")}} pour surveiller les évènements `focus` et {{domxref("Window/blur_event", "blur")}}.
+
+#### HTML
 
 ```html
-<input type="text" value="Cliquez ici">
+<p id="log">Cliquez sur ce document pour lui donner la sélection.</p>
 ```
 
-### JavaScript
+#### CSS
+
+```css
+.paused {
+  background: #dddddd;
+  color: #555555;
+}
+```
+
+#### JavaScript
 
 ```js
-let input = document.querySelector('input');
+const log = document.getElementById("log");
 
-input.onblur = inputBlur;
-input.onfocus = inputFocus;
-
-function inputBlur() {
-  input.value = 'Le focus a été perdu';
+function pause() {
+  document.body.classList.add("paused");
+  log.textContent = "SÉLECTION PERDUE !";
 }
 
-function inputFocus() {
-  input.value = 'Le focus est là';
+function play() {
+  document.body.classList.remove("paused");
+  log.textContent =
+    "Ce document a la sélection. Cliquez en dehors du document pour la perdre.";
 }
+
+window.addEventListener("blur", pause);
+window.addEventListener("focus", play);
 ```
 
-### Résultat
+#### Résultat
 
-Essayez de cliquer à l'intérieur et en dehors du champ pour voir son contenu être modifié.
-
-{{EmbedLiveSample('')}}
+{{EmbedLiveSample("Exemple interactif")}}
 
 ## Spécifications
 
@@ -68,5 +92,5 @@ Essayez de cliquer à l'intérieur et en dehors du champ pour voir son contenu �
 
 ## Voir aussi
 
-- L'évènement [`focus`](/fr/docs/Web/API/Element/focus_event)
-- Le gestionnaire d'évènement dual&nbsp;: [`GlobalEventHandlers.onblur`](/fr/docs/Web/API/GlobalEventHandlers/onblur)
+- Évènement associé&nbsp;: {{domxref("Window/blur_event", "blur")}}
+- Cet évènement sur les cibles `Element`&nbsp;: évènement {{domxref("Element/focus_event", "focus")}}

@@ -1,13 +1,7 @@
 ---
 title: Firefox 12 pour les développeurs
 slug: Mozilla/Firefox/Releases/12
-tags:
-  - Firefox
-  - Firefox 12
-translation_of: Mozilla/Firefox/Releases/12
-original_slug: Mozilla/Firefox/Versions/12
 ---
-{{FirefoxSidebar}}
 
 Firefox 12, basé sur Gecko 12.0, est sorti le 24 avril 2012. Cette page résume les principaux changements dans Firefox 12 qui sont utiles aux développeurs.
 
@@ -16,7 +10,7 @@ Firefox 12, basé sur Gecko 12.0, est sorti le 24 avril 2012. Cette page résume
 ### HTML
 
 - L'attribut `title` supporte désormais les caractères de saut de ligne pour permettre des multi-lignes dans les info-bulles.
-- Si JavaScript est désactivé, l'élément {{HTMLElement("canvas")}} était rendu au lieu d'afficher le contenu de secours selon la [spécification](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html). Désormais, c'est le contenu de secours qui est rendu.
+- Si JavaScript est désactivé, l'élément {{HTMLElement("canvas")}} était rendu au lieu d'afficher le contenu de secours selon la [spécification](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html). Désormais, c'est le contenu de secours qui est rendu.
 - L'attribut `crossorigin` est à présent supporté par {{HTMLElement("video")}}.
 
 ### CSS
@@ -31,14 +25,14 @@ Firefox 12, basé sur Gecko 12.0, est sorti le 24 avril 2012. Cette page résume
 
 - {{domxref("DOMParser")}} supporte désormais l'analyse de fragments de documents HTML.
 - {{domxref("XMLHttpRequest")}} supporte désormais des délais d'attente en utilisant la propriété `timeout` et l'évènement "timeout", ainsi que le gestionnaire d'évènements `ontimeout` de l'interface {{domxref("XMLHttpRequestEventTarget")}}.
-- {{domxref("XMLHttpRequest")}} peut désormais se charger à partir des [URIs `data:`](/fr/docs/data_URIs).
+- {{domxref("XMLHttpRequest")}} peut désormais se charger à partir des [URIs `data:`](/fr/docs/Web/URI/Reference/Schemes/data).
 - Lors du téléchargement de grandes quantités de données, les gestionnaires d'événements {{domxref("XMLHttpRequest")}} de progression sont désormais appelés régulièrement avec l'ensemble `responseType` vers "moz-blob" et la réponse étant un {{domxref("Blob")}} contenant toutes les données reçues jusqu'ici. Cela permet aux gestionnaires de progression de commencer le traitement des données sans avoir à tout attendre.
-- Gecko supporte désormais le [multi-touch](/fr/docs/DOM/Touch_events) (au lieu d'une touche à la fois) sur Android.
+- Gecko supporte désormais le [multi-touch](/fr/docs/Web/API/Touch_events) (au lieu d'une touche à la fois) sur Android.
 - Lorsque vous éditez du texte à l'aide d'un IME, l'événement `input` est à présent envoyé chaque fois que le contenu de l'élément en cours d'édition a été changé, ce qui se passe après l'événement `compositionupdate` est envoyé pour indiquer que le texte de l'IME a été modifié. Vous pouvez donc utiliser le gestionnaire d'événements `input`, pour suivre l'évolution du contenu réel de l'élément.
 - {{domxref("DOMError")}} a été implémenté selon la spécification DOM 4.
 - La méthode {{domxref("Document.createNodeIterator()")}} a été mise à jour suivant la spécification DOM4. Cela rend les paramètres `whatToShow` et `filter` facultatifs et supprime le quatrième paramètre non-standard, `entityReferenceExpansion`.
 - La méthode `slice()` de l'interface {{domxref("Blob")}} a été touché par un bug qui l'empêchait d'accepter correctement le début et la fin des valeurs hors de la portée d'un entier de 64 bits signé, cela a été corrigé.
-- La méthode {{domxref("element.getBoundingClientRect()")}} considère désormais l'effet des [transformations CSS](/fr-/docs/CSS/Utilisation_des_transformations_CSS) lors du calcul des délimitations du rectangle de l'élément.
+- La méthode {{domxref("element.getBoundingClientRect()")}} considère désormais l'effet des [transformations CSS](/fr/docs/Web/CSS/Guides/Transforms/Using) lors du calcul des délimitations du rectangle de l'élément.
 - La propriété `crossOrigin` est à présent supportée par {{domxref("HTMLMediaElement")}}.
 
 #### Nouvelles WebAPIs
@@ -50,12 +44,12 @@ Firefox 12, basé sur Gecko 12.0, est sorti le 24 avril 2012. Cette page résume
 
 ### SVG
 
-- Firefox implémente désormais l'API DOM {{domxref("SVGTests")}}, voir {{bug(607854)}}
-- L'interface DOM {{domxref("SVGStringList")}} supporte la propriété non-standard `length`, voir {{bug(711958)}}
+- Firefox implémente désormais l'API DOM {{domxref("SVGTests")}}, voir [bug Firefox 607854](https://bugzil.la/607854)
+- L'interface DOM {{domxref("SVGStringList")}} supporte la propriété non-standard `length`, voir [bug Firefox 711958](https://bugzil.la/711958)
 
 ### MathML
 
-- Pour contrôler la directionnalité des formules de MathML, l'attribut `dir` est désormais supporté par les éléments {{MathMLElement("math")}}, {{MathMLElement("mrow")}} et {{MathMLElement("mstyle")}} ainsi que par les [éléments MathML Token](/Special:Tags?tag=MathML:Token+Elements). C'est particulièrement important pour certaines [notations mathématiques Arabes](http://www.w3.org/TR/arabic-math/).
+- Pour contrôler la directionnalité des formules de MathML, l'attribut `dir` est désormais supporté par les éléments {{MathMLElement("math")}}, {{MathMLElement("mrow")}} et {{MathMLElement("mstyle")}} ainsi que par les [éléments MathML Token](/fr/docs/Web/MathML/Reference/Element#éléments_textuels). C'est particulièrement important pour certaines [notations mathématiques Arabes](https://www.w3.org/TR/arabic-math/).
 - L'attribut d'alignement `align` definit dans MathML3 a été implementé pour {{MathMLElement("munder")}}, {{MathMLElement("mover")}} et {{MathMLElement("munderover")}}.
 
 ### Réseau
@@ -64,12 +58,12 @@ Firefox 12, basé sur Gecko 12.0, est sorti le 24 avril 2012. Cette page résume
 
 ### Outils de développement
 
-- La [console Web](/fr/docs/Tools/Web_Console) met à présent en cache les message d'erreurs et les entrées du journal ajoutés grâce à {{domxref("console.log()")}} si la console n'est pas ouverte actuellement, et les affichent lorsque qu'elle s'ouvre.
-- Vous pouvez désormais réinitialiser le niveau de zoom, panoramique et de rotation dans la [vue 3D](/fr/docs/Tools/Page_Inspector/3D_view) en appuyant sur la touche "r".
-- Vous pouvez désormais masquer les nœuds dans la [vue 3D](/fr/docs/Tools/Page_Inspector/3D_view) en appuyant sur la touche "x" après les avoir sélectionnés.
-- L'[éditeur de source](/fr/docs/Tools/Using_the_Source_Editor) a plusieurs nouvelles fonctionnalités d'édition et de raccourcis clavier, voir [Utilisation de l'éditeur de source](/fr/docs/Tools/Using_the_Source_Editor) pour plus de détails
+- La [console Web](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) met à présent en cache les message d'erreurs et les entrées du journal ajoutés grâce à {{domxref("console.log()")}} si la console n'est pas ouverte actuellement, et les affichent lorsque qu'elle s'ouvre.
+- Vous pouvez désormais réinitialiser le niveau de zoom, panoramique et de rotation dans la [vue 3D](https://firefox-source-docs.mozilla.org/devtools-user/3d_view/index.html) en appuyant sur la touche "r".
+- Vous pouvez désormais masquer les nœuds dans la [vue 3D](https://firefox-source-docs.mozilla.org/devtools-user/3d_view/index.html) en appuyant sur la touche "x" après les avoir sélectionnés.
+- L'[éditeur de source](https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#Source_editor) a plusieurs nouvelles fonctionnalités d'édition et de raccourcis clavier, voir [Utilisation de l'éditeur de source](https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#Source_editor) pour plus de détails
 
-Mozilla travaille sur l'intégration des ses propres outils de développement Web qui complètent l'add-on populaire [Firebug](http://getfirebug.com/). Vous pouvez obtenir plus d'informations sur ces outils et également voir une liste de ressources externes à Firefox qui vous aideront dans le développement Web. La liste se trouve dans les [outils de développement Web](/fr/docs/Outils).
+Mozilla travaille sur l'intégration des ses propres outils de développement Web qui complètent l'add-on populaire [Firebug](https://getfirebug.com/). Vous pouvez obtenir plus d'informations sur ces outils et également voir une liste de ressources externes à Firefox qui vous aideront dans le développement Web. La liste se trouve dans les [outils de développement Web](https://firefox-source-docs.mozilla.org/devtools-user/index.html).
 
 ### Changements divers
 
@@ -86,7 +80,7 @@ Mozilla travaille sur l'intégration des ses propres outils de développement We
 
 ### XUL
 
-- La définition des valeurs pour l'attribut {{XULAttr("chromemargin")}} a été légèrement modifié, pour que ce soit plus facile de faire du code XUL multi-plateforme qui rend bien sur les plateformes avec des largeurs par défaut des bordures de fenêtres différentes.
+- La définition des valeurs pour l'attribut `chromemargin` a été légèrement modifié, pour que ce soit plus facile de faire du code XUL multi-plateforme qui rend bien sur les plateformes avec des largeurs par défaut des bordures de fenêtres différentes.
 
 ### XPCOM
 
@@ -122,6 +116,6 @@ Mozilla travaille sur l'intégration des ses propres outils de développement We
 
 - Le composant d'édition (appelé [Midas](/fr/docs/Midas)) [n'accepte désormais que les évènements](/fr/docs/Using_the_Editor_from_XUL#Editor_event_handling) provenant du code privilégié.
 
-## Voir également
+## Voir aussi
 
 {{Firefox_for_developers('11')}}

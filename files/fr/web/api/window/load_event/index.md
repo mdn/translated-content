@@ -1,13 +1,10 @@
 ---
-title: 'Window : évènement load'
+title: "Window : évènement load"
 slug: Web/API/Window/load_event
-page-type: web-api-event
-translation_of: Web/API/Window/load_event
-original_slug: Web/Events/load
-browser-compat: api.Window.load_event
 l10n:
   sourceCommit: 95d6c222f9aba9a60dee4adc738d741a28c8b83a
 ---
+
 {{APIRef}}
 
 L'évènement **`load`** est déclenché lorsque la page et toutes ses ressources dépendantes (telles que des feuilles de style et des images) sont complètement chargées. Cela contraste avec [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event), qui est déclenché lorsque le <i lang="en">DOM</i> de la page est chargé sans attendre la fin du chargement des ressources.
@@ -19,9 +16,9 @@ Cet évènement n'est pas annulable et ne bouillonne pas.
 Utilisez cet évènement dans des méthodes telles que [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener), ou définissez un gestionnaire d'évènement.
 
 ```js
-addEventListener('load', (event) => {});
+addEventListener("load", (event) => {});
 
-onload = (event) => { };
+onload = (event) => {};
 ```
 
 ## Type d'évènement
@@ -33,8 +30,8 @@ Un [`Event`](/fr/docs/Web/API/Event) générique.
 Le code suivant affiche un message dans la console lorsque que la page est complètement chargée&nbsp;:
 
 ```js
-window.addEventListener('load', (event) => {
-  console.log('La page est complètement chargée');
+window.addEventListener("load", (event) => {
+  console.log("La page est complètement chargée");
 });
 ```
 
@@ -42,7 +39,7 @@ Voici un exemple similaire qui utilise un gestionnaire d'évènement `onload`&nb
 
 ```js
 window.onload = (event) => {
-  console.log('La page est complètement chargée');
+  console.log("La page est complètement chargée");
 };
 ```
 
@@ -57,7 +54,12 @@ window.onload = (event) => {
 
 <div class="event-log">
   <label for="eventLog">Journal d'évènements :</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="30" id="eventLog"></textarea>
+  <textarea
+    readonly
+    class="event-log-contents"
+    rows="8"
+    cols="30"
+    id="eventLog"></textarea>
 </div>
 ```
 
@@ -78,7 +80,8 @@ body {
 .event-log-contents {
   resize: none;
 }
-label, button {
+label,
+button {
   display: block;
 }
 #reload {
@@ -89,25 +92,25 @@ label, button {
 #### JavaScript
 
 ```js
-const log = document.querySelector('.event-log-contents');
+const log = document.querySelector(".event-log-contents");
 
-const reload = document.querySelector('#reload');
-reload.addEventListener('click', () => {
-  log.textContent ='';
+const reload = document.querySelector("#reload");
+reload.addEventListener("click", () => {
+  log.textContent = "";
   window.setTimeout(() => {
-      window.location.reload(true);
+    window.location.reload(true);
   }, 200);
 });
 
-window.addEventListener('load', (event) => {
-  log.textContent += 'load\n';
+window.addEventListener("load", (event) => {
+  log.textContent += "load\n";
 });
 
-document.addEventListener('readystatechange', (event) => {
+document.addEventListener("readystatechange", (event) => {
   log.textContent += `readystate : ${document.readyState}\n`;
 });
 
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener("DOMContentLoaded", (event) => {
   log.textContent += `DOMContentLoaded\n`;
 });
 ```
@@ -127,7 +130,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 ## Voir aussi
 
 - Évènements liés&nbsp;:
-  - [`DOMContentLoaded`](/fr/docs/Web/API/Window/DOMContentLoaded_event)
+  - [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event)
   - [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event)
   - [`beforeunload`](/fr/docs/Web/API/Window/beforeunload_event)
   - [`unload`](/fr/docs/Web/API/Window/unload_event)

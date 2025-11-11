@@ -1,25 +1,26 @@
 ---
 title: Date.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toString
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toString
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/toString
 ---
+
 {{JSRef}}
 
 La méthode **`toString()`** renvoie une chaîne de caractères représentant l'objet {{jsxref("Date")}}.
 
-{{EmbedInteractiveExample("pages/js/date-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toString()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+console.log(event.toString());
+// Expected output: "Tue Aug 19 1975 23:15:30 GMT+0200 (CEST)"
+// Note: your timezone may vary
+```
 
 ## Syntaxe
 
 ```js
-dateObj.toString()
+dateObj.toString();
 ```
 
 ### Valeur de retour
@@ -48,14 +49,12 @@ La méthode `toString()` renvoie toujours une chaîne de caractères représenta
 - Un espace
 - La chaîne de caractères « GMT »
 - Le signe du décalage horaire par rapport à GMT :
-
   - La chaîne "+" pour les décalages positifs (0 ou plus)
   - La chaîne "-" pour les décalages strictement négatifs
 
 - L'heure de décalage sur deux chiffres
 - Les minutes de décalage sur deux chiffres
 - Et, éventuellement, le nom du fuseau horaire avec
-
   - Un espace
   - Une parenthèse ouvrante (« ( »)
   - Une chaîne de caractères, pouvant varier selon l'implémentation, qui désigne le fuseau horaire. Ce peut être une abréviation ou un nom complet.
@@ -81,17 +80,11 @@ var maVar = x.toString(); // assigne une valeur à maVar similaire à :
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                                      |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0.             |
-| {{SpecName('ES5.1', '#sec-15.9.5.2', 'Date.prototype.toLocaleTimeString')}}         | {{Spec2('ES5.1')}}     |                                                                   |
-| {{SpecName('ES6', '#sec-date.prototype.tostring', 'Date.prototype.toString')}}     | {{Spec2('ES6')}}         |                                                                   |
-| {{SpecName('ES2018', '#sec-date.prototype.tostring', 'Date.prototype.toString')}} | {{Spec2('ES2018')}}     | Standardisation du format produit par `Date.prototype.toString()` |
-| {{SpecName('ESDraft', '#sec-date.prototype.tostring', 'Date.prototype.toString')}} | {{Spec2('ESDraft')}} |                                                                   |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.toString")}}
+{{Compat}}
 
 ## Voir aussi
 

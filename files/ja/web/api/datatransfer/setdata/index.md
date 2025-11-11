@@ -1,16 +1,8 @@
 ---
 title: DataTransfer.setData()
 slug: Web/API/DataTransfer/setData
-page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - drag and drop
-browser-compat: api.DataTransfer.setData
-translation_of: Web/API/DataTransfer/setData
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataTransfer.setData()`** メソッドは、ドラッグ操作の {{domxref("DataTransfer","drag data")}} に指定したデータと型を設定します。与えられた型のデータが存在しない場合、このデータはドラッグデータストアの末尾に加えられ、このような {{domxref("DataTransfer.types","types")}} リストの最後の項目は新しい型になります。与えられた型のデータが存在する場合、既存のデータが同じ位置で置き換えられます。同じ型のデータが置き換えられる時、{{domxref("DataTransfer.types","types")}} リストの並び順は変更されません。
@@ -20,7 +12,7 @@ translation_of: Web/API/DataTransfer/setData
 ## 構文
 
 ```js
-setData(format, data)
+setData(format, data);
 ```
 
 ### 引数
@@ -103,6 +95,6 @@ function drop_handler(ev) {
 
 - [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
 - [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [複数の項目のドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
+- [複数の項目のドラッグ＆ドロップ](/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

@@ -1,15 +1,8 @@
 ---
 title: AudioNode.context
 slug: Web/API/AudioNode/context
-tags:
-  - API
-  - AudioNode
-  - Context
-  - Property
-  - Reference
-  - Web Audio API
-browser-compat: api.AudioNode.context
 ---
+
 {{APIRef("Web Audio API")}}
 
 {{domxref("AudioNode")}} 인터페이스의 읽기 전용 `context` 속성은 연관된 {{domxref("BaseAudioContext")}}를 반환하는데, BaseAudioContext는 이 노드가 관여하고 있는 프로세싱 그래프를 나타내는 객체입니다.

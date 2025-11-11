@@ -1,14 +1,8 @@
 ---
 title: DocumentFragment
 slug: Web/API/DocumentFragment
-tags:
-  - API
-  - DOM
-  - DocumentFragment
-  - 参考
-  - 接口
-translation_of: Web/API/DocumentFragment
 ---
+
 {{ APIRef("DOM") }}
 
 **`DocumentFragment`**，文档片段接口，表示一个没有父对象的最小文档对象。
@@ -69,18 +63,18 @@ _该接口继承 {{domxref("Node")}} 的全部方法。_
 ### JavaScript
 
 ```js
-const list = document.querySelector('#list')
-const fruits = ['Apple', 'Orange', 'Banana', 'Melon']
+const list = document.querySelector("#list");
+const fruits = ["Apple", "Orange", "Banana", "Melon"];
 
-const fragment = new DocumentFragment()
+const fragment = new DocumentFragment();
 
 fruits.forEach((fruit) => {
-  const li = document.createElement('li')
-  li.textContent = fruit
-  fragment.appendChild(li)
-})
+  const li = document.createElement("li");
+  li.textContent = fruit;
+  fragment.appendChild(li);
+});
 
-list.appendChild(fragment)
+list.appendChild(fragment);
 ```
 
 ### 结果

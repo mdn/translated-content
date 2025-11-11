@@ -1,13 +1,8 @@
 ---
-title: 'SyntaxError: missing } after function body'
+title: "SyntaxError: missing } after function body"
 slug: Web/JavaScript/Reference/Errors/Missing_curly_after_function_body
-tags:
-  - Erreurs
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Missing_curly_after_function_body
-original_slug: Web/JavaScript/Reference/Erreurs/Missing_curly_after_function_body
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
@@ -43,7 +38,7 @@ var charge = function() {
 La forme correcte est :
 
 ```js example-good
-var charge = function() {
+var charge = function () {
   if (soleil) {
     utiliserPanneauSolaire();
   } else {
@@ -52,7 +47,7 @@ var charge = function() {
 };
 ```
 
-Une erreur de ce type peut être moins visible lorsqu'on utilise les fonctions qui sont appelées immédiatement, [les fermetures](/fr/docs/Web/JavaScript/Closures) ou d'autres formes qui utilisent de nombreuses parenthèses et/ou accolades comme par exemple :
+Une erreur de ce type peut être moins visible lorsqu'on utilise les fonctions qui sont appelées immédiatement, [les fermetures](/fr/docs/Web/JavaScript/Guide/Closures) ou d'autres formes qui utilisent de nombreuses parenthèses et/ou accolades comme par exemple :
 
 ```js example-bad
 (function() { if (true) { return false; } );
@@ -61,7 +56,7 @@ Une erreur de ce type peut être moins visible lorsqu'on utilise les fonctions q
 Généralement, mettre en forme et vérifier l'indentation permet de repérer ces erreurs.
 
 ```js example-good
-(function() {
+(function () {
   if (true) {
     return false;
   }
@@ -70,4 +65,4 @@ Généralement, mettre en forme et vérifier l'indentation permet de repérer ce
 
 ## Voir aussi
 
-- [Les fonctions](/fr/docs/Web/JavaScript/Guide/Fonctions)
+- [Les fonctions](/fr/docs/Web/JavaScript/Guide/Functions)

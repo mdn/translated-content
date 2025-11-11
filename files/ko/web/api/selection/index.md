@@ -1,116 +1,124 @@
 ---
 title: Selection
 slug: Web/API/Selection
-tags:
-  - API
-  - Interface
-  - Reference
-  - Selection
-browser-compat: api.Selection
-translation_of: Web/API/Selection
+l10n:
+  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
 ---
-{{ ApiRef("Selection API") }}
 
-A **`Selection`** object represents the range of text selected by the user or the current position of the caret. To obtain a `Selection` object for examination or manipulation, call {{DOMxRef("window.getSelection()")}}.
+{{ApiRef("Selection API")}}
 
-A user may make a selection from left to right (in document order) or right to left (reverse of document order). The **_anchor_** is where the user began the selection and the **_focus_** is where the user ends the selection. If you make a selection with a desktop mouse, the anchor is placed where you pressed the mouse button, and the focus is placed where you released the mouse button.
+**`Selection`** 객체는 사용자가 선택한 텍스트 범위 또는 현재 캐럿의 위치를 나타냅니다.
+각 {{domxref("document")}}는 고유한 Selection 객체와 연결되며, 이 객체는 {{DOMxRef("document.getSelection()")}} 또는 {{domxref("window.getSelection()")}}을 통해 가져온 다음 확인하거나 수정할 수 있습니다.
 
-> **Note:** _Anchor_ and _focus_ should not be confused with the _start_ and _end_ positions of a selection. The anchor can be placed before the focus or vice-versa, depending on the direction you made your selection.
+사용자는 왼쪽에서 오른쪽(문서 순서대로) 혹은 오른쪽에서 왼쪽(문서 순서의 반대)으로 선택을 만들 수 있습니다. 선택에서 **앵커**는 사용자가 선택을 시작한 위치이고, **포커스**는 사용자가 선택을 끝낸 위치입니다. 예를 들어 데스크톱 마우스로 텍스트를 드래그하여 선택하면, 마우스 버튼을 처음 누른 위치가 앵커이고, 버튼을 놓은 위치가 포커스가 됩니다.
 
-## Properties
+> [!NOTE]
+> 앵커와 포커스는 선택의 시작점과 끝점과 혼동해서는 안 됩니다.
+> 선택 방향에 따라 앵커가 포커스 앞에 올 수도 있고, 반대로 포커스가 앵커 앞에 올 수도 있습니다.
 
-- {{DOMxRef("Selection.anchorNode")}}{{ReadOnlyInline}}
-  - : Returns the {{DOMxRef("Node")}} in which the selection begins. Can return `null` if selection never existed in the document (e.g., an iframe that was never clicked on).
-- {{DOMxRef("Selection.anchorOffset")}}{{ReadOnlyInline}}
-  - : Returns a number representing the offset of the selection's anchor within the `anchorNode`. If `anchorNode` is a text node, this is the number of characters within anchorNode preceding the anchor. If `anchorNode` is an element, this is the number of child nodes of the `anchorNode` preceding the anchor.
-- {{DOMxRef("Selection.focusNode")}}{{ReadOnlyInline}}
-  - : Returns the {{DOMxRef("Node")}} in which the selection ends. Can return `null` if selection never existed in the document (for example, in an `iframe` that was never clicked on).
-- {{DOMxRef("Selection.focusOffset")}}{{ReadOnlyInline}}
-  - : Returns a number representing the offset of the selection's anchor within the `focusNode`. If `focusNode` is a text node, this is the number of characters within `focusNode` preceding the focus. If `focusNode` is an element, this is the number of child nodes of the `focusNode` preceding the focus.
-- {{DOMxRef("Selection.isCollapsed")}}{{ReadOnlyInline}}
-  - : Returns a Boolean indicating whether the selection's start and end points are at the same position.
-- {{DOMxRef("Selection.rangeCount")}}{{ReadOnlyInline}}
-  - : Returns the number of ranges in the selection.
-- {{DOMxRef("Selection.type")}}{{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("DOMString")}} describing the type of the current selection.
+## 인스턴스 속성
 
-## Methods
+- {{DOMxRef("Selection.anchorNode")}} {{ReadOnlyInline}}
+  - : 선택 영역이 시작되는 {{DOMxRef("Node")}}를 반환합니다. 문서에서 한 번도 선택이 이루어진 적이 없다면(예: 클릭되지 않은 iframe 안) `null`을 반환할 수 있습니다.
+- {{DOMxRef("Selection.anchorOffset")}} {{ReadOnlyInline}}
+  - : 선택 영역의 앵커(anchor)가 위치한 `anchorNode` 내에서의 오프셋을 나타내는 숫자를 반환합니다. `anchorNode`가 텍스트 노드인 경우에는 앵커 앞에 위치한 문자 수를 의미하며, `anchorNode`가 요소 노드인 경우에는 앵커 앞에 위치한 자식 노드의 수를 의미합니다.
+- {{DOMxRef("Selection.direction")}} {{ReadOnlyInline}}
+  - : 현재 선택 영역의 방향을 설명하는 문자열을 반환합니다.
+- {{DOMxRef("Selection.focusNode")}} {{ReadOnlyInline}}
+  - : 선택 영역이 끝나는 {{DOMxRef("Node")}}를 반환합니다. 문서에서 한 번도 선택이 이루어진 적이 없다면(예: 클릭되지 않은 iframe 안) `null`을 반환할 수 있습니다.
+- {{DOMxRef("Selection.focusOffset")}} {{ReadOnlyInline}}
+  - : 선택 영역의 포커스가 위치한 `focusNode` 내에서의 오프셋을 나타내는 숫자를 반환합니다. `focusNode`가 텍스트 노드인 경우에는 포커스 앞에 위치한 문자 수를 의미하며, `focusNode`가 요소 노드인 경우에는 포커스 앞에 위치한 자식 노드의 수를 의미합니다.
+- {{DOMxRef("Selection.isCollapsed")}} {{ReadOnlyInline}}
+  - : 선택 영역의 시작 지점과 끝 지점이 동일한 위치에 있는지를 나타내는 불리언을 반환합니다.
+- {{DOMxRef("Selection.rangeCount")}} {{ReadOnlyInline}}
+  - : 선택 영역에 포함된 범위의 개수를 반환합니다.
+- {{DOMxRef("Selection.type")}} {{ReadOnlyInline}}
+  - : 현재 선택 영역의 유형을 설명하는 문자열을 반환합니다.
+
+## 인스턴스 메서드
 
 - {{DOMxRef("Selection.addRange()")}}
-  - : A {{DOMxRef("Range")}} object that will be added to the selection.
+  - : 선택 영역에 추가할 {{DOMxRef("Range")}} 객체를 지정합니다.
 - {{DOMxRef("Selection.collapse()")}}
-  - : Collapses the current selection to a single point.
+  - : 현재 선택 영역을 단일 지점으로 축소합니다.
 - {{DOMxRef("Selection.collapseToEnd()")}}
-  - : Collapses the selection to the end of the last range in the selection.
+  - : 선택 영역을 마지막 범위의 끝 지점으로 축소합니다.
 - {{DOMxRef("Selection.collapseToStart()")}}
-  - : Collapses the selection to the start of the first range in the selection.
+  - : 선택 영역을 첫 번째 범위의 시작 지점으로 축소합니다.
 - {{DOMxRef("Selection.containsNode()")}}
-  - : Indicates if a certain node is part of the selection.
+  - : 특정 노드가 선택 영역의 일부인지 여부를 나타냅니다.
 - {{DOMxRef("Selection.deleteFromDocument()")}}
-  - : Deletes the selection's content from the document.
+  - : 선택된 콘텐츠를 문서에서 삭제합니다.
+- {{DOMxRef("Selection.empty()")}}
+  - : 선택 영역에서 모든 범위를 제거하여 아무것도 선택되지 않은 상태로 만듭니다. 이때 {{DOMxRef("Selection.anchorNode", "anchorNode")}}와 {{DOMxRef("Selection.focusNode","focusNode")}} 속성은 `null`이 됩니다.
 - {{DOMxRef("Selection.extend()")}}
-  - : Moves the focus of the selection to a specified point.
+  - : 선택 영역의 포커스를 지정한 위치로 이동합니다.
+- {{DOMxRef("Selection.getComposedRanges()")}}
+  - : 선택 영역을 나타내는 {{DOMxRef("StaticRange")}} 객체 배열을 반환합니다. 이 배열의 각 요소는 Shadow DOM 경계를 넘을 수 있는 선택 영역을 표현합니다.
 - {{DOMxRef("Selection.getRangeAt()")}}
-  - : Returns a {{DOMxRef("Range")}} object representing one of the ranges currently selected.
-- {{DOMxRef("Selection.modify()")}}{{Non-standard_Inline}}
-  - : Changes the current selection.
+  - : 현재 선택된 범위 중 하나를 나타내는 {{DOMxRef("Range")}} 객체를 반환합니다.
+- {{DOMxRef("Selection.modify()")}}
+  - : 현재 선택 영역을 변경합니다.
 - {{DOMxRef("Selection.removeRange()")}}
-  - : Removes a range from the selection.
+  - : 선택 영역에서 특정 범위를 제거합니다.
 - {{DOMxRef("Selection.removeAllRanges()")}}
-  - : Removes all ranges from the selection.
+  - : 선택 영역에서 모든 범위를 제거합니다.
 - {{DOMxRef("Selection.selectAllChildren()")}}
-  - : Adds all the children of the specified node to the selection.
+  - : 지정한 노드의 모든 자식 노드를 선택 영역에 추가합니다.
 - {{DOMxRef("Selection.setBaseAndExtent()")}}
-  - : Sets the selection to be a range including all or parts of two specified DOM nodes, and any content located between them.
+  - : 선택 영역을 두 개의 지정된 DOM 노드와 그 사이에 위치한 모든 콘텐츠를 포함하는 범위로 설정합니다.
+- {{DOMxRef("Selection.setPosition()")}}
+  - : 현재 선택 영역을 단일 지점으로 축소합니다.
 - {{DOMxRef("Selection.toString()")}}
-  - : Returns a string currently being represented by the selection object, i.e. the currently selected text.
+  - : 선택 객체가 현재 표현하는 문자열, 즉 현재 선택된 텍스트를 반환합니다.
 
-## Notes
+## 참고
 
-### String representation of a selection
+### 선택 영역의 문자열 표현
 
-Calling the {{DOMxRef("Selection.toString()")}} method returns the text contained within the selection, e.g.:
+{{DOMxRef("Selection.toString()")}} 메서드를 호출하면 선택된 영역에 포함된 텍스트를 반환합니다. 예시는 다음과 같습니다.
 
 ```js
-var selObj = window.getSelection();
+const selObj = window.getSelection();
 window.alert(selObj);
 ```
 
-Note that using a selection object as the argument to `window.alert` will call the object's `toString` method.
+선택 객체를 `window.alert`의 인수로 전달하면, 해당 객체의 `toString` 메서드가 호출된다는 점에 유의해야 합니다.
 
-### Multiple ranges in a selection
+### 여러 개의 범위를 가지는 선택 영역
 
-A selection object represents the {{DOMxRef("Range")}}s that the user has selected. Typically, it holds only one range, accessed as follows:
+선택 객체는 사용자가 선택한 {{DOMxRef("Range")}}들을 나타냅니다. 일반적으로는 단일 범위만 포함하며, 다음과 같이 접근할 수 있습니다.
 
 ```js
-var selObj = window.getSelection();
-var range  = selObj.getRangeAt(0);
+const selObj = window.getSelection();
+const range = selObj.getRangeAt(0);
 ```
 
-- `selObj` is a Selection object
-- `range` is a {{DOMxRef("Range")}} object
+- `selObj`는 Selection 객체입니다.
+- `range`는 {{DOMxRef("Range")}} 객체입니다.
 
-As the [Selection API specification notes](https://www.w3.org/TR/selection-api/#h_note_15), the Selection API was initially created by Netscape and allowed multiple ranges (for instance, to allow the user to select a column from a {{HTMLElement("table")}}). However, browsers other than Gecko did not implement multiple ranges, and the specification also requires the selection to always have a single range.
+[Selection API 명세에서 언급하듯이](https://w3c.github.io/selection-api/#h-note-13), Selection API는 원래 Netscape에 의해 만들어졌으며 여러 개의 범위를 허용했습니다. (예를 들어, {{HTMLElement("table")}}의 열을 사용자가 선택할 수 있도록 하기 위함이었습니다.) 그러나 Gecko 이외의 브라우저들은 다중 범위를 구현하지 않았으며, 현재 명세에서는 선택 영역이 항상 단일 범위만 가지도록 규정하고 있습니다.
 
-### Selection and input focus
+### 선택 영역과 입력 포커스
 
-Selection and input focus (indicated by {{DOMxRef("Document.activeElement")}}) have a complex relationship that varies by browser. In cross-browser compatible code, it's better to handle them separately.
+선택 영역과 입력 포커스({{DOMxRef("Document.activeElement")}}로 표시됨)는 브라우저마다 다른 복잡한 관계를 가지고 있습니다. 크로스 브라우저 호환 코드를 작성할 때는 이 둘을 별도로 다루는 것이 더 좋습니다.
 
-Safari and Chrome (unlike Firefox) currently focus the element containing selection when modifying the selection programmatically; it's possible that this may change in the future (see [W3C bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383) and {{WebKitBug("38696")}}).
+Safari와 Chrome은 (Firefox와 달리) 현재 선택 영역을 프로그래밍 방식으로 수정할 때 선택 영역을 포함하는 요소에 포커스를 맞춥니다. 다만, 이는 향후 변경될 수 있습니다. (관련 내용은 [W3C bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383)과 [WebKit bug 38696](https://webkit.org/b/38696) 참고)
 
-### Behavior of Selection API in terms of editing host focus changes
+### 편집 호스트 포커스 변경과 관련된 Selection API의 동작
 
-The Selection API has a common behavior (i.e., shared between browsers) that governs how focus behavior changes for _editing hosts_ after certain methods are called.
+Selection API는 공통된 동작(브라우저 간에 동일하게 적용되는 동작)을 가지며, 이는 특정 메서드가 호출된 이후 편집 호스트의 포커스 동작이 어떻게 바뀌는지를 정의합니다.
 
-The behavior is as follows:
+동작은 다음과 같습니다.
 
-1. An editing host gains focus if the previous selection was outside of it.
-2. A Selection API method is called, causing a new selection to be made with the selection range inside the editing host.
-3. Focus then moves to the editing host.
+1. 이전 선택 영역이 편집 호스트 바깥에 있었다면, 편집 호스트는 포커스를 얻게 됩니다.
+2. Selection API 메서드가 호출되어 선택 범위가 해당 편집 호스트 안에 새롭게 설정됩니다.
+3. 포커스는 편집 호스트로 이동합니다.
 
-> **Note:** The Selection API methods may only move focus to an editing host, not to other focusable elements (e.g., {{HTMLElement("a")}}).
+> [!NOTE]
+> Selection API 메서드는 포커스를 편집 호스트로만 옮길 수 있으며, 다른 포커스 가능한 요소(예: {{HTMLElement("a")}})로는 이동할 수 없습니다.
 
-The above behavior applies to selections made using the following methods:
+위 동작은 다음 메서드를 사용하여 생성된 선택 영역에 적용됩니다.
 
 - {{DOMxRef("Selection.collapse()")}}
 - {{DOMxRef("Selection.collapseToStart()")}}
@@ -120,7 +128,7 @@ The above behavior applies to selections made using the following methods:
 - {{DOMxRef("Selection.addRange()")}}
 - {{DOMxRef("Selection.setBaseAndExtent()")}}
 
-And when the {{DOMxRef("Range")}} is modified using the following methods:
+그리고 다음 메서드들을 사용하여 {{DOMxRef("Range")}} 를 수정할 때에도 적용됩니다.
 
 - {{DOMxRef("Range.setStart()")}}
 - {{DOMxRef("Range.setEnd()")}}
@@ -132,35 +140,34 @@ And when the {{DOMxRef("Range")}} is modified using the following methods:
 - {{DOMxRef("Range.selectNode()")}}
 - {{DOMxRef("Range.selectNodeContents()")}}
 
-### Glossary
+### 용어 사전
 
-Other key terms used in this section.
+이 구획에서 사용되는 주요 용어들입니다.
 
-- anchor
-  - : The anchor of a selection is the beginning point of the selection. When making a selection with a mouse, the anchor is where in the document the mouse button is initially pressed. As the user changes the selection using the mouse or the keyboard, the anchor does not move.
-- editing host
-  - : An editable element (e.g., an HTML element with {{htmlattrxref("contenteditable")}} set, or the HTML child of a document that has {{DOMxRef("Document.designMode", "designMode")}} enabled).
-- focus of a selection
+- 앵커
+  - : 선택 영역의 앵커는 선택의 시작 지점을 의미합니다. 마우스를 이용해 선택할 때 앵커는 문서에서 마우스 버튼을 처음 눌렀던 위치가 됩니다. 사용자가 마우스나 키보드로 선택 영역을 변경하더라도 앵커는 움직이지 않습니다.
+- 편집 호스트
+  - : 편집 가능한 요소를 의미합니다. (예를 들어, [`contenteditable`](/ko/docs/Web/HTML/Reference/Global_attributes/contenteditable) 속성이 설정된 HTML 요소나, {{DOMxRef("Document.designMode", "designMode")}}가 활성화된 문서의 HTML 자식 요소가 편집 호스트에 해당합니다.)
+- 선택 영역의 포커스
+  - : 선택 영역의 포커스는 선택의 끝 지점을 의미합니다. 마우스로 선택할 때 포커스는 문서에서 마우스 버튼을 놓은 위치가 됩니다. 사용자가 마우스나 키보드를 이용해 선택 영역을 변경하면, 포커스는 이동하는 선택의 끝 부분이 됩니다.
 
-  - : The _focus_ of a selection is the end point of the selection. When making a selection with a mouse, the focus is where in the document the mouse button is released. As the user changes the selection using the mouse or the keyboard, the focus is the end of the selection that moves.
+    > [!NOTE]
+    > 이는 {{DOMxRef("document.activeElement")}}가 반환하는 문서의 포커스된 요소와는 동일하지 않습니다.
 
-    > **Note:** This is not the same as the focused _element_ of the document, as returned by {{DOMxRef("document.activeElement")}}.
+- 범위
+  - : 범위는 문서의 연속된 일부를 의미합니다. 범위에는 전체 노드뿐만 아니라 노드의 일부(예: 텍스트 노드의 일부)도 포함될 수 있습니다. 일반적으로 사용자는 한 번에 하나의 범위만 선택하지만, 컨트롤 키를 이용하면 여러 범위를 선택할 수도 있습니다. 선택 영역에서 범위를 가져오면 {{DOMxRef("Range")}} 객체로 반환되며, Range 객체는 DOM을 통해 생성하거나 프로그래밍 방식으로 선택 영역에 추가하거나 제거할 수도 있습니다.
 
-- range
-
-  - : A _range_ is a contiguous part of a document. A range can contain entire nodes as well as portions of nodes (such as a portion of a text node). A user will normally only select a single range at a time, but it's possible for a user to select multiple ranges (e.g., by using the <kbd>Control</kbd> key). A range can be retrieved from a selection as a {{DOMxRef("range")}} object. Range objects can also be created via the DOM and programmatically added or removed from a selection.
-
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
-## See also
+## 같이보기
 
 - {{DOMxRef("Window.getSelection")}}, {{DOMxRef("Document.getSelection")}}, {{DOMxRef("Range")}}
-- Selection-related events: {{Event("selectionchange")}} and {{Event("selectstart")}}
-- HTML inputs provide simpler helper APIs for working with selection (see {{DOMxRef("HTMLInputElement.setSelectionRange()")}})
-- {{DOMxRef("Document.activeElement")}}, {{DOMxRef("HTMLElement.focus")}}, and {{DOMxRef("HTMLElement.blur")}}
+- 선택 영역과 관련된 이벤트는 {{domxref("Document/selectionchange_event", "selectionchange")}}, {{domxref("Node/selectstart_event", "selectstart")}}
+- HTML 입력 요소는 선택 영역을 다루기 위한 더 단순한 보조 API를 제공합니다 (예: {{DOMxRef("HTMLInputElement.setSelectionRange()")}})
+- {{DOMxRef("Document.activeElement")}}, {{DOMxRef("HTMLElement.focus")}}, {{DOMxRef("HTMLElement.blur")}}

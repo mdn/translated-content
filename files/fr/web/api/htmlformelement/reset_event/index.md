@@ -1,18 +1,11 @@
 ---
 title: GlobalEventHandlers.onreset
 slug: Web/API/HTMLFormElement/reset_event
-tags:
-  - API
-  - DOM
-  - Gestionnaires d'évènements
-  - Propriété
-  - évènements
-translation_of: Web/API/GlobalEventHandlers/onreset
-original_slug: Web/API/GlobalEventHandlers/onreset
 ---
+
 {{ ApiRef() }}
 
-La propriété **`GlobalEventHandlers.onreset`** contient un {{event("Event_handlers", "event handler")}} (_gestionnaire d'évènements_) déclenché quand un évènement {{event("reset")}} est reçu.
+La propriété **`GlobalEventHandlers.onreset`** contient Un gestionnaire d'évènement déclenché quand un évènement `reset` est reçu.
 
 ## Syntaxe
 
@@ -28,23 +21,23 @@ window.onreset = funcRef;
 
 ```html
 <html>
-<script>
-function reg() {
-  window.captureEvents(Event.RESET);
-  window.onreset = hit;
-}
+  <script>
+    function reg() {
+      window.captureEvents(Event.RESET);
+      window.onreset = hit;
+    }
 
-function hit() {
- alert('hit');
-}
-</script>
+    function hit() {
+      alert("hit");
+    }
+  </script>
 
-<body onload="reg();">
- <form>
-   <input type="reset" value="reset" />
- </form>
- <div id="d"> </div>
-</body>
+  <body onload="reg();">
+    <form>
+      <input type="reset" value="reset" />
+    </form>
+    <div id="d"></div>
+  </body>
 </html>
 ```
 
@@ -52,12 +45,10 @@ function hit() {
 
 L'évènement `reset` est déclenché quand l'utilisateur clique sur le bouton de réinitialisation dans un formulaire (`<input type="reset"/>`).
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onreset','onreset')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.GlobalEventHandlers.onreset")}}
+{{Compat}}

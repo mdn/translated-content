@@ -1,15 +1,11 @@
 ---
-title: Range.startContainer
+title: "Range: startContainer プロパティ"
+short-title: startContainer
 slug: Web/API/Range/startContainer
-page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Range
-browser-compat: api.Range.startContainer
-translation_of: Web/API/Range/startContainer
+l10n:
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
+
 {{ApiRef("DOM")}}
 
 **`Range.startContainer`** は読み取り専用プロパティで、この `Range` が開始するノード ({{domxref("Node")}}) を返します。ノードの開始位置を変更するには、 {{domxref("Range.setStart()")}} 系メソッドのいずれかを使用してください。
@@ -22,8 +18,8 @@ translation_of: Web/API/Range/startContainer
 
 ```js
 range = document.createRange();
-range.setStart(startNode,startOffset);
-range.setEnd(endNode,endOffset);
+range.setStart(startNode, startOffset);
+range.setEnd(endNode, endOffset);
 startRangeNode = range.startContainer;
 ```
 

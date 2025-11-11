@@ -1,25 +1,33 @@
 ---
 title: Number.prototype.toExponential()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toExponential
-tags:
-  - JavaScript
-  - Méthode
-  - Number
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toExponential
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/toExponential
 ---
+
 {{JSRef}}
 
 La méthode **`toExponential()`** renvoie une chaîne de caractères, représentant l'objet Number en notation exponentielle.
 
-{{EmbedInteractiveExample("pages/js/number-toexponential.html")}}
+{{InteractiveExample("JavaScript Demo: Number.toExponential()")}}
+
+```js interactive-example
+function expo(x, f) {
+  return Number.parseFloat(x).toExponential(f);
+}
+
+console.log(expo(123456, 2));
+// Expected output: "1.23e+5"
+
+console.log(expo("123456"));
+// Expected output: "1.23456e+5"
+
+console.log(expo("oink"));
+// Expected output: "NaN"
+```
 
 ## Syntaxe
 
 ```js
-numObj.toExponential([nbChiffresDécimaux])
+numObj.toExponential([nbChiffresDécimaux]);
 ```
 
 ### Paramètre
@@ -53,25 +61,20 @@ Si un nombre possède plus de chiffres décimaux que `nbChiffresDécimaux`, le n
 ```js
 var numObj = 77.1234;
 
-console.log(numObj.toExponential());  // affiche 7.71234e+1
+console.log(numObj.toExponential()); // affiche 7.71234e+1
 console.log(numObj.toExponential(4)); // affiche 7.7123e+1
 console.log(numObj.toExponential(2)); // affiche 7.71e+1
-console.log(77.1234.toExponential()); // affiche 7.71234e+1
-console.log(77 .toExponential());     // affiche 7.7e+1
+console.log((77.1234).toExponential()); // affiche 7.71234e+1
+console.log((77).toExponential()); // affiche 7.7e+1
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                    | État                         | Commentaires                                          |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                                         | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.5. |
-| {{SpecName('ES5.1', '#sec-15.7.4.6', 'Number.prototype.toExponential')}}                                 | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-number.prototype.toexponential', 'Number.prototype.toExponential')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-number.prototype.toexponential', 'Number.prototype.toExponential')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Number.toExponential")}}
+{{Compat}}
 
 ## Voir aussi
 

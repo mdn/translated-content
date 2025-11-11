@@ -1,0 +1,62 @@
+name: "[via MDN pages only // es]"
+description: Issue filed via "Report a problem with this content on GitHub" link on MDN pages.
+labels: ["l10n-es", "needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Antes de comenzar
+
+        **¿Quiere cambiar esta página usted mismo?** ¡Este contenido es de código abierto!
+        ↩ Regrese a la página y use el enlace _Editar en GitHub_.
+
+        **¿El problema es acerca de la tabla de compatibilidad con los navegadores?**
+        ↩ Regrese a la página y use el enlace _Reportar problemas con los datos de compatibilidad en GitHub_.
+
+        **¿Necesita ayuda con su navegador?**
+        🙋 Para obtener ayuda con [Firefox](https://support.mozilla.org/en-US/kb/file-bug-report-or-feature-request-mozilla), [Chrome](https://support.google.com/chrome/answer/95315?hl=en-GB&ref_topic=7439544), [Safari](https://www.apple.com/feedback/safari.html), o algún otro navegador, visite la página de soporte del navegador.
+
+        ---
+  - type: input
+    id: mdn-url
+    attributes:
+      label: MDN URL
+      description: Se establece automáticamente. No modificar.
+    validations:
+      required: true
+  - type: input
+    id: section
+    attributes:
+      label: ¿De qué sección específica o titular trata este problema?
+  - type: textarea
+    id: problem
+    attributes:
+      label: ¿Qué información es incorrecta, inútil o incompleta?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: ¿Qué esperaba ver?
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: ¿Tiene algún enlace de apoyo, referencias o citas?
+      description: Enlace a información que nos ayude a confirmar el problema.
+  - type: textarea
+    id: more-info
+    attributes:
+      label: ¿Tiene algo más que quiera compartir?
+      description: Por ejemplo, pasos para reproducir el error, capturas, grabaciones de pantalla, o algún código de ejemplo.
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ¡Haz terminado! Los siguientes campos están prellenados. Por favor haga clic en **Submit new issue**.
+  - type: textarea
+    id: metadata
+    attributes:
+      label: MDN metadata
+      description: Se establece automáticamente. No modificar.

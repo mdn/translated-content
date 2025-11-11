@@ -1,47 +1,36 @@
 ---
 title: contextualIdentities.query()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/query
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Reference
-  - WebExtensions
-  - contextualIdentities
-  - query
-translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/query
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Obtient des informations sur toutes les identités contextuelles ou sur les identités contextuelles correspondant à un argument de filtre donné.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var getContext = browser.contextualIdentities.query(
-  details                  // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
 
 - `details`
-
   - : `object`. Un objet qui peut être utilisé pour filtrer les identités contextuelles renvoyées. Cela peut contenir l'une des propriétés suivantes :
-
     - `name` {{optional_inline}}
       - : `string`. Renvoie uniquement les identités contextuelles avec ce nom.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un tableau d'objets  {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} chacun décrivant une seule identité. Si la fonctionnalité d'identités contextuelles n'est pas activée, la promesse est rejetée.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un tableau d'objets {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} chacun décrivant une seule identité. Si la fonctionnalité d'identités contextuelles n'est pas activée, la promesse est rejetée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.contextualIdentities.query")}}
+{{Compat}}
 
 ## Exemples
 
@@ -74,9 +63,11 @@ function onError(e) {
   console.error(e);
 }
 
-browser.contextualIdentities.query({
-  name: "my-thing"
-}).then(onGot, onError);
+browser.contextualIdentities
+  .query({
+    name: "my-thing",
+  })
+  .then(onGot, onError);
 ```
 
 {{WebExtExamples}}

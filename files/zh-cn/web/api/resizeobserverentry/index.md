@@ -1,19 +1,8 @@
 ---
 title: ResizeObserverEntry
 slug: Web/API/ResizeObserverEntry
-page-type: web-api-interface
-tags:
-  - API
-  - Bounding Box
-  - Interface
-  - Reference
-  - Resize Observer API
-  - ResizeObserver
-  - ResizeObserverEntry
-  - content box
-  - observers
-translation_of: Web/API/ResizeObserverEntry
 ---
+
 {{APIRef("Resize Observer API")}}
 
 **`ResizeObserverEntry`** 接口是传递给 {{domxref('ResizeObserver.ResizeObserver','ResizeObserver()')}} 构造函数中的回调函数参数的对象，它允许你获取真正在观察的 {{domxref("Element")}} 或 {{domxref("SVGElement")}} 最新的大小。
@@ -31,7 +20,8 @@ translation_of: Web/API/ResizeObserverEntry
 - {{domxref('ResizeObserverEntry.target')}} {{readonlyinline}}
   - : 对正在观察 {{domxref('Element')}} 或 {{domxref("SVGElement")}} 的引用。
 
-> **备注：** 内容盒是放置内容的盒子，即边框盒减去内边距盒边框宽度。边框盒包含内容、内边距和边框。更多解释参见[盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)。
+> [!NOTE]
+> 内容盒是放置内容的盒子，即边框盒减去内边距和边框宽度。边框盒包含内容、内边距和边框。更多解释参见[盒模型](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model)。
 
 ## 方法
 
@@ -44,11 +34,20 @@ translation_of: Web/API/ResizeObserverEntry
 ```js
 const resizeObserver = new ResizeObserver((entries) => {
   for (let entry of entries) {
-    if(entry.contentBoxSize) {
-      h1Elem.style.fontSize = `${Math.max(1.5, entry.contentBoxSize.inlineSize / 200)}rem`;
-      pElem.style.fontSize = `${Math.max(1, entry.contentBoxSize.inlineSize / 600)}rem`;
+    if (entry.contentBoxSize) {
+      h1Elem.style.fontSize = `${Math.max(
+        1.5,
+        entry.contentBoxSize.inlineSize / 200,
+      )}rem`;
+      pElem.style.fontSize = `${Math.max(
+        1,
+        entry.contentBoxSize.inlineSize / 600,
+      )}rem`;
     } else {
-      h1Elem.style.fontSize = `${Math.max(1.5, entry.contentRect.width / 200)}rem`;
+      h1Elem.style.fontSize = `${Math.max(
+        1.5,
+        entry.contentRect.width / 200,
+      )}rem`;
       pElem.style.fontSize = `${Math.max(1, entry.contentRect.width / 600)}rem`;
     }
   }

@@ -1,13 +1,8 @@
 ---
 title: FileReader
 slug: Web/API/FileReader
-tags:
-  - API
-  - File
-  - Interface
-  - Référence(2)
-translation_of: Web/API/FileReader
 ---
+
 {{APIRef("File API")}}
 
 L'objet **`FileReader`** permet à des applications web de lire le contenu de fichiers (ou de tampons de mémoire brute) de façon asynchrone. On peut ainsi lire le contenu des objets {{domxref("File")}} ou {{domxref("Blob")}} (qui représentent respectivement un fichier ou des données).
@@ -21,14 +16,13 @@ Les objets qui sont des fichiers peuvent être obtenus à partir d'un objet {{do
 - {{domxref("FileReader.FileReader", "FileReader()")}}
   - : Ce constructeur renvoie un nouvel objet `FileReader`.
 
-Pour plus d'informations et d'exemples, consulter [utiliser des fichiers depuis des applications web](/fr/docs/Using_files_from_web_applications).
+Pour plus d'informations et d'exemples, consulter [utiliser des fichiers depuis des applications web](/fr/docs/Web/API/File_API/Using_files_from_web_applications).
 
 ## Propriétés
 
 - {{domxref("FileReader.error")}} {{readonlyinline}}
   - : Un objet {{domxref("DOMError")}} qui représente l'erreur qui s'est produite lors de la lecture du fichier.
 - {{domxref("FileReader.readyState")}} {{readonlyinline}}
-
   - : Un nombre qui indique l'état du `FileReader`. Cette valeur est l'une des suivantes :
 
     <table class="standard-table">
@@ -57,19 +51,20 @@ Pour plus d'informations et d'exemples, consulter [utiliser des fichiers depuis 
 ### Gestionnaire d'évènements
 
 - {{domxref("FileReader.onabort")}}
-  - : Un gestionnaire pour l'évènement {{event("abort")}}. Cet évènement est déclenché à chaque fois que l'opération de lecture est interrompue.
+  - : Un gestionnaire pour l'évènement [`abort`](/fr/docs/Web/API/FileReader/abort_event). Cet évènement est déclenché à chaque fois que l'opération de lecture est interrompue.
 - {{domxref("FileReader.onerror")}}
-  - : Un gestionnaire pour l'évènement {{event("error")}}. Cet évènement est déclenché à chaque fois qu'il y a une erreur pendant l'opération de lecture.
+  - : Un gestionnaire pour l'évènement [`error`](/fr/docs/Web/API/FileReader/error_event). Cet évènement est déclenché à chaque fois qu'il y a une erreur pendant l'opération de lecture.
 - {{domxref("FileReader.onload")}}
-  - : Un gestionnaire pour l'évènement {{event("load")}}. Cet évènement est déclenché à chaque fois qu'une opération de lecture est menée à bien.
+  - : Un gestionnaire pour l'évènement [`load`](/fr/docs/Web/API/FileReader/load_event). Cet évènement est déclenché à chaque fois qu'une opération de lecture est menée à bien.
 - {{domxref("FileReader.onloadstart")}}
-  - : Un gestionnaire pour l'évènement {{event("loadstart")}}. Cet évènement est déclenché chaque fois qu'une opération de lecture commence.
+  - : Un gestionnaire pour l'évènement [`loadstart`](/fr/docs/Web/API/FileReader/loadstart_event). Cet évènement est déclenché chaque fois qu'une opération de lecture commence.
 - {{domxref("FileReader.onloadend")}}
-  - : Un gestionnaire pour l'évènement {{event("loadend")}}. Cet évènement est déclenché chaque fois qu'une opération de lecture est terminée (que ce soit un succès ou un échec).
+  - : Un gestionnaire pour l'évènement [`loadend`](/fr/docs/Web/API/FileReader/loadend_event). Cet évènement est déclenché chaque fois qu'une opération de lecture est terminée (que ce soit un succès ou un échec).
 - {{domxref("FileReader.onprogress")}}
-  - : Un gestionnaire pour l'évènement {{event("progress")}}. Cet évènement est déclenché lorsque la lecture du {{domxref("Blob")}} est en cours.
+  - : Un gestionnaire pour l'évènement [`progress`](/fr/docs/Web/API/FileReader/progress_event). Cet évènement est déclenché lorsque la lecture du {{domxref("Blob")}} est en cours.
 
-> **Note :** `FileReader` hérite de l'interface {{domxref("EventTarget")}} et tout ces évènements peuvent donc être « écoutés » grâce à la méthode {{domxref("EventTarget.addEventListener()","addEventListener")}}.
+> [!NOTE]
+> `FileReader` hérite de l'interface {{domxref("EventTarget")}} et tout ces évènements peuvent donc être « écoutés » grâce à la méthode {{domxref("EventTarget.addEventListener()","addEventListener")}}.
 
 ## Méthodes
 
@@ -86,16 +81,14 @@ Pour plus d'informations et d'exemples, consulter [utiliser des fichiers depuis 
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("File API", "#dfn-filereader", "FileReader")}} | {{Spec2("File API")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FileReader")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Manipuler des fichiers depuis des applications web](/fr/docs/Using_files_from_web_applications)
+- [Manipuler des fichiers depuis des applications web](/fr/docs/Web/API/File_API/Using_files_from_web_applications)
 - {{domxref("File")}}
 - {{domxref("Blob")}}

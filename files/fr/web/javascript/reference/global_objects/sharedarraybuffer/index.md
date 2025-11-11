@@ -1,13 +1,11 @@
 ---
 title: SharedArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
-translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
-original_slug: Web/JavaScript/Reference/Objets_globaux/SharedArrayBuffer
-browser-compat: javascript.builtins.SharedArrayBuffer
 ---
+
 {{JSRef}}
 
-L'objet **`SharedArrayBuffer`** est utilisé afin de représenter un tampon de données binaires brutes générique de longueur fixe. Il est semblable à l'objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), mais peut ici être utilisé pour créer différentes vues sur une même mémoire partagée. À la différence d'un `ArrayBuffer`, un `SharedArrayBuffer` n'est pas [un objet transférable](/fr/docs/Glossary/Transferable_objects).
+L'objet **`SharedArrayBuffer`** est utilisé afin de représenter un tampon de données binaires brutes générique de longueur fixe. Il est semblable à l'objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), mais peut ici être utilisé pour créer différentes vues sur une même mémoire partagée. À la différence d'un `ArrayBuffer`, un `SharedArrayBuffer` n'est pas [un objet transférable](/fr/docs/Web/API/Web_Workers_API/Transferable_objects).
 
 ## Description
 
@@ -16,7 +14,7 @@ L'objet **`SharedArrayBuffer`** est utilisé afin de représenter un tampon de d
 Pour partager une zone mémoire entre plusieurs objets
 `SharedArrayBuffer` d'un agent à un autre (ici un agent correspond au programme principal de la page web ou à l'un de ses <i lang="en">web workers</i>), on utilisera [`postMessage()`](/fr/docs/Web/API/Worker/postMessage) et [le clonage structuré](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 
-L'algorithme de clonage structuré permet d'envoyer des objets `SharedArrayBuffers` et `TypedArrays` vers des objets `SharedArrayBuffer`. Dans les deux cas, l'objet `SharedArrayBuffer` est transmis au récepteur, ce qui crée un nouvel objet `SharedArrayBuffer`, privé, au sein de l'agent qui reçoit (comme avec  [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)). Cependant, le bloc de mémoire référencé par les deux objets `SharedArrayBuffer` est bien le même bloc. Aussi, si un agent interagit avec cette zone, l'autre agent pourra voir les modifications.
+L'algorithme de clonage structuré permet d'envoyer des objets `SharedArrayBuffers` et `TypedArrays` vers des objets `SharedArrayBuffer`. Dans les deux cas, l'objet `SharedArrayBuffer` est transmis au récepteur, ce qui crée un nouvel objet `SharedArrayBuffer`, privé, au sein de l'agent qui reçoit (comme avec [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)). Cependant, le bloc de mémoire référencé par les deux objets `SharedArrayBuffer` est bien le même bloc. Aussi, si un agent interagit avec cette zone, l'autre agent pourra voir les modifications.
 
 ```js
 let sab = new SharedArrayBuffer(1024);
@@ -35,7 +33,7 @@ La mémoire partagée peut être créée et mise à jour de façon simultanée e
 
 ### Contraintes de sécurité
 
-La mémoire partagée et les chronomètres de haute précision ont été [désactivés début 2018](https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/) suite à la vulnérabilité [Spectre](https://fr.wikipedia.org/wiki/Spectre_(vuln%C3%A9rabilit%C3%A9)). En 2020, une nouvelle approche, sécurisée, a été mise en place afin de réactiver la mémoire partagée. En suivant quelques règles de sécurité, [`postMessage()`](/fr/docs/Web/API/Window/postMessage) ne lève plus d'exception pour les objets `SharedArrayBuffer` et une mémoire partagée entre les <i lang="en">threads</i> est disponible.
+La mémoire partagée et les chronomètres de haute précision ont été [désactivés début 2018](https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/) suite à la vulnérabilité [Spectre](<https://fr.wikipedia.org/wiki/Spectre_(vulnérabilité)>). En 2020, une nouvelle approche, sécurisée, a été mise en place afin de réactiver la mémoire partagée. En suivant quelques règles de sécurité, [`postMessage()`](/fr/docs/Web/API/Window/postMessage) ne lève plus d'exception pour les objets `SharedArrayBuffer` et une mémoire partagée entre les <i lang="en">threads</i> est disponible.
 
 Pour commencer, le document doit être mis à disposition dans [un contexte sécurisé](/fr/docs/Web/Security/Secure_Contexts).
 
@@ -49,7 +47,7 @@ Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 ```
 
-Pour vérifier si l'isolation envers les origines tierces a réussi, vous pouvez vérifier la propriété [`crossOriginIsolated`](/fr/docs/Web/API/crossOriginIsolated) qui est disponible dans les contextes de la fenêtre et des <i lang="en">workers</i>&nbsp;:
+Pour vérifier si l'isolation envers les origines tierces a réussi, vous pouvez vérifier la propriété [`crossOriginIsolated`](/fr/docs/Web/API/Window/crossOriginIsolated) qui est disponible dans les contextes de la fenêtre et des <i lang="en">workers</i>&nbsp;:
 
 ```js
 if (crossOriginIsolated) {
@@ -59,7 +57,7 @@ if (crossOriginIsolated) {
 }
 ```
 
-Voir aussi [les changements prévus quant à la mémoire partagée](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned_changes) pour les différents navigateurs.
+Voir aussi [les changements prévus quant à la mémoire partagée](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) pour les différents navigateurs.
 
 ### Obligation d'utiliser l'opérateur `new`
 
@@ -101,17 +99,17 @@ let sab = new SharedArrayBuffer(1024);
 ### Découper un objet `SharedArrayBuffer`
 
 ```js
-sab.slice();     // SharedArrayBuffer { byteLength: 1024 }
-sab.slice(2);    // SharedArrayBuffer { byteLength: 1022 }
-sab.slice(-2);   // SharedArrayBuffer { byteLength: 2 }
+sab.slice(); // SharedArrayBuffer { byteLength: 1024 }
+sab.slice(2); // SharedArrayBuffer { byteLength: 1022 }
+sab.slice(-2); // SharedArrayBuffer { byteLength: 2 }
 sab.slice(0, 1); // SharedArrayBuffer { byteLength: 1 }
 ```
 
 ### Utiliser un tampon WebGL
 
 ```js
-const canvas = document.querySelector('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.querySelector("canvas");
+const gl = canvas.getContext("webgl");
 const buffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
 gl.bufferData(gl.ARRAY_BUFFER, sab, gl.STATIC_DRAW);
@@ -129,7 +127,7 @@ gl.bufferData(gl.ARRAY_BUFFER, sab, gl.STATIC_DRAW);
 
 - [`Atomics`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Atomics)
 - [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Typed_arrays)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - [Les <i lang="en">Web Workers</i>](/fr/docs/Web/API/Web_Workers_API)
 - [`parlib-simple`](https://github.com/lars-t-hansen/parlib-simple) — une bibliothèque qui fournit des abstractions pour synchroniser et distribuer des tâches
 - [La mémoire partagée — un rapide tutoriel (en anglais)](https://github.com/tc39/proposal-ecmascript-sharedmem/blob/main/TUTORIAL.md)

@@ -1,23 +1,17 @@
 ---
 title: Map() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Map/Map
-tags:
-  - Constructor
-  - JavaScript
-  - Map
-  - Reference
-  - Polyfill
-browser-compat: javascript.builtins.Map.Map
 ---
+
 {{JSRef}}
 
-O **construtor `Map()`** cria objetos {{jsxref("Map")}}.  
+O **construtor `Map()`** cria objetos {{jsxref("Map")}}.
 
 ## Sintaxe
 
 ```js
-new Map()
-new Map(iterable)
+new Map();
+new Map(iterable);
 ```
 
 ### Parâmetros
@@ -34,10 +28,10 @@ new Map(iterable)
 
 ```js
 let myMap = new Map([
-  [1, 'one'],
-  [2, 'two'],
-  [3, 'three'],
-])
+  [1, "one"],
+  [2, "two"],
+  [3, "three"],
+]);
 ```
 
 ## Especificações

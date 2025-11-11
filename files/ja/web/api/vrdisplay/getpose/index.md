@@ -1,33 +1,21 @@
 ---
 title: VRDisplay.getPose()
 slug: Web/API/VRDisplay/getPose
-page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Method
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - getPose()
-browser-compat: api.VRDisplay.getPose
-translation_of: Web/API/VRDisplay/getPose
-original_slug: Web/API/VRDevice/getPose
 ---
+
 {{APIRef("WebVR API")}}{{deprecated_header}}
 
 **`getPose()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、現在のフレームが実際に描画される時点の未来の `VRDisplay` の予測ポーズを決める {{domxref("VRPose")}} オブジェクトを返します。
 
-> **Note:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> [!NOTE]
+> このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 >
 > こちらでも非推奨でした。 — 代わりに {{domxref("VRDisplay.getFrameData()")}} で {{domxref("VRPose")}} オブジェクトを受け取ってください。
 
 ## 構文
 
 ```js
-getPose()
+getPose();
 ```
 
 ### 引数
@@ -76,5 +64,4 @@ if(navigator.getVRDisplays) {
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

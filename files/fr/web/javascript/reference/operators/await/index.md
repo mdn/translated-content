@@ -1,13 +1,8 @@
 ---
 title: await
 slug: Web/JavaScript/Reference/Operators/await
-tags:
-  - JavaScript
-  - Opérateur
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/await
-original_slug: Web/JavaScript/Reference/Opérateurs/await
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur **`await`** permet d'attendre la résolution d'une promesse ({{jsxref("Promise")}}). Il ne peut être utilisé qu'au sein d'une fonction asynchrone (définie avec l'instruction {{jsxref("Instructions/async_function", "async function")}}).
@@ -35,7 +30,7 @@ Si on passe une promesse à une expression `await`, celle-ci attendra jusqu'à l
 
 ```js
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
@@ -54,9 +49,9 @@ Les objets dotés d'une méthode `then()` (_thenable_ en anglais) seront égalem
 ```js
 async function f0() {
   const thenable = {
-    then: function(resolve, _reject) {
+    then: function (resolve, _reject) {
       resolve("résolu :)");
-    }
+    },
   };
   console.log(await thenable); // résolu :)
 }
@@ -89,24 +84,18 @@ f3();
 On peut également gérer le cas où la promesse est rejetée grâce à {{jsxref("Promise.prototype.catch()")}} :
 
 ```js
-var response = await maFonctionPromesse().catch(
-  (err) => {
-    console.log(err);
-  }
-);
+var response = await maFonctionPromesse().catch((err) => {
+  console.log(err);
+});
 ```
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("ESDraft", "#sec-async-function-definitions", "async functions")}} | {{Spec2("ESDraft")}} |                      |
-| {{SpecName("ES2018", "#sec-async-function-definitions", "async functions")}}     | {{Spec2('ES2018')}}     |                      |
-| {{SpecName("ES2017", "#sec-async-function-definitions", "async functions")}}     | {{Spec2('ES2017')}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.await")}}
+{{Compat}}
 
 ## Voir aussi
 

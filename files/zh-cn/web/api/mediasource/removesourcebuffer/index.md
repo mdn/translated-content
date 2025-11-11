@@ -1,27 +1,15 @@
 ---
 title: MediaSource.removeSourceBuffer()
 slug: Web/API/MediaSource/removeSourceBuffer
-page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - MediaSource
-  - Method
-  - Reference
-  - Video
-  - removeSourceBuffer
-translation_of: Web/API/MediaSource/removeSourceBuffer
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-{{domxref("MediaSource")}} 接口的 **`removeSourceBuffer()`** 方法从与 `MediaSource` 对象关联的  {{domxref("SourceBuffers")}} 列表中移除给定的 {{domxref("SourceBuffer")}}。
+{{domxref("MediaSource")}} 接口的 **`removeSourceBuffer()`** 方法从与 `MediaSource` 对象关联的 {{domxref("SourceBuffers")}} 列表中移除给定的 {{domxref("SourceBuffer")}}。
 
 ## 语法
 
-```js
+```js-nolint
 removeSourceBuffer(sourceBuffer)
 ```
 

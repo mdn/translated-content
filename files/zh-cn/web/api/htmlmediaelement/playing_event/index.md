@@ -1,8 +1,8 @@
 ---
-title: 'HTMLMediaElement: playing'
+title: "HTMLMediaElement: playing"
 slug: Web/API/HTMLMediaElement/playing_event
-translation_of: Web/API/HTMLMediaElement/playing_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `playing` 事件在播放准备开始时（之前被暂停或者由于数据缺乏被暂缓）被触发。
@@ -43,20 +43,20 @@ translation_of: Web/API/HTMLMediaElement/playing_event
 使用 `addEventListener()`：
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('playing', (event) => {
-  console.log('Video is no longer paused');
+video.addEventListener("playing", (event) => {
+  console.log("Video is no longer paused");
 });
 ```
 
 使用 `onplaying` 事件处理器属性：
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onplaying = (event) => {
-  console.log('Video is no longer paused.');
+  console.log("Video is no longer paused.");
 };
 ```
 

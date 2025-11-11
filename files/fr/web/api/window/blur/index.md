@@ -1,39 +1,42 @@
 ---
-title: Window.blur()
+title: "Window : méthode blur()"
+short-title: blur()
 slug: Web/API/Window/blur
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Méthode
-translation_of: Web/API/Window/blur
+l10n:
+  sourceCommit: 44c4ec928281dc2d7c5ea42b7d2c74a2013f16ac
 ---
-{{APIRef}}
 
-Éloigne la mise au point de la fenêtre.
+{{APIRef}}{{deprecated_header}}
+
+La méthode **`blur()`** ne fait rien.
+
+> [!NOTE]
+> Historiquement, cette méthode était l'équivalent programmatique du fait que l'utilisateur·ice retire la sélection de la fenêtre courante. Ce comportement a été supprimé à cause d'abus par des sites hostiles. Sous Firefox, il est possible de réactiver l'ancien comportement avec la préférence `dom.disable_window_flip`.
 
 ## Syntaxe
 
-```js
-window.blur()
+```js-nolint
+blur()
 ```
 
-## Exemple
+### Paramètres
+
+Aucun.
+
+### Valeur de retour
+
+Aucune ({{jsxref("undefined")}}).
+
+## Exemples
 
 ```js
 window.blur();
 ```
 
-## Notes
+## Spécifications
 
-La méthode `window.blur()` est l'équivalent programmatique du déplacement du focus de l'utilisateur loin de la fenêtre courante.
-
-## Spécification
-
-| Spécification                                                                                            | Statut                           | Commentair |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG','interaction.html#dom-window-blur','Window.blur()')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.blur")}}
+{{Compat}}

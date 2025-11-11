@@ -1,16 +1,14 @@
 ---
-title: Robot d'indexation
+title: Robot d'indexation (crawler)
 slug: Glossary/Crawler
-tags:
-  - Glossaire
-  - Infrastructure
-  - Navigateur
-  - Robot d'indexation
-translation_of: Glossary/Crawler
-original_slug: Glossaire/Robot_d_indexation
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-Un robot d'indexation est un programme, souvent appelé bot ou robot, qui parcourt de manière systématique le {{glossary("World Wide Web","Web")}} pour collecter des données à partir des pages web. Les moteurs de recherche utilisent généralement des robots d'indexation pour construire leurs index.
 
-## Pour approfondir
+Un **robot d'indexation** est un programme, souvent appelé bot ou robot, qui parcourt de manière systématique le {{Glossary("World Wide Web", "Web")}} pour collecter des données à partir des pages web. Les moteurs de recherche utilisent généralement des robots d'indexation pour construire leurs index.
 
-- {{Interwiki("wikipedia", "Robot d'indexation")}} sur Wikipédia
+## Voir aussi
+
+- Terme associé du glossaire&nbsp;:
+  - {{Glossary("Search engine")}}
+- [Robot d'indexation](https://fr.wikipedia.org/wiki/Robot_d'indexation) sur Wikipédia

@@ -1,14 +1,13 @@
 ---
 title: MathML
 slug: Web/MathML
-translation_of: Web/MathML
-browser-compat: mathml.elements.math
 ---
+
 {{MathMLRef}}
 
 **Mathematical Markup Language (MathML)** est un langage basé sur [XML](/fr/docs/Web/XML) permettant de décrire des formules mathématiques.
 
-[MathML](https://w3c.github.io/mathml/) était à l'origine conçu comme une spécification générique pour les navigateurs, les suites bureautiques, [les systèmes de calcul formel](https://fr.wikipedia.org/wiki/Syst%C3%A8me_de_calcul_formel), les lecteurs [EPUB](https://www.w3.org/publishing/epub32/), les générateurs vers [LaTeX](https://fr.wikipedia.org/wiki/LaTeX)… Toutefois, cette approche n'était pas adaptée au Web&nbsp;: [le sous-ensemble concernant la sémantique](https://w3c.github.io/mathml/#contm) n'a jamais été implémenté dans les navigateurs tandis que [le sous-ensemble sur la disposition mathématique](https://w3c.github.io/mathml/#presm) a conduit à des implémentations incomplètes et/ou incohérentes par les navigateurs.
+[MathML](https://w3c.github.io/mathml/) était à l'origine conçu comme une spécification générique pour les navigateurs, les suites bureautiques, [les systèmes de calcul formel](https://fr.wikipedia.org/wiki/Système_de_calcul_formel), les lecteurs [EPUB](https://www.w3.org/publishing/epub32/), les générateurs vers [LaTeX](https://fr.wikipedia.org/wiki/LaTeX)… Toutefois, cette approche n'était pas adaptée au Web&nbsp;: [le sous-ensemble concernant la sémantique](https://w3c.github.io/mathml/#contm) n'a jamais été implémenté dans les navigateurs tandis que [le sous-ensemble sur la disposition mathématique](https://w3c.github.io/mathml/#presm) a conduit à des implémentations incomplètes et/ou incohérentes par les navigateurs.
 
 [<i lang="en">MathML Core</i>](https://w3c.github.io/mathml-core/) est un sous-ensemble avec des détails d'implémentation plus précis, basés sur des règles provenant de [LaTeX](https://en.wikipedia.org/wiki/LaTeX) et du [format Open Font](https://docs.microsoft.com/en-us/typography/opentype/spec/math). Il est conçu pour les navigateurs et pour fonctionner en accord avec les autres standards du Web que sont [HTML](/fr/docs/Web/HTML), [CSS](/fr/docs/Web/CSS), [DOM](/fr/docs/Web/API/Document_Object_Model), et [JavaScript](/fr/docs/Web/JavaScript).
 
@@ -16,13 +15,13 @@ Vous trouverez ici des liens vers la documentation, les exemples et les outils p
 
 ## Référence MathML
 
-- [Référence des éléments MathML](/fr/docs/Web/MathML/Element)
+- [Référence des éléments MathML](/fr/docs/Web/MathML/Reference/Element)
   - : Des informations précises sur chaque élément MathML et leurs compatibilités avec les différents navigateurs.
-- [Référence des attributs MathML](/fr/docs/Web/MathML/Attribute)
+- [Référence des attributs MathML](/fr/docs/Web/MathML/Reference/Attribute)
   - : Des informations sur les attributs MathML qui modifient l'apparence ou le comportement des éléments.
-- [Exemples MathML](/fr/docs/Web/MathML/Examples)
+- [Exemples MathML](/fr/docs/Web/MathML/Guides)
   - : Des fragments de code MathML ainsi que des exemples pour comprendre son fonctionnement.
-- [Éditer du MathML](/fr/docs/Web/MathML/Authoring)
+- [Éditer du MathML](/fr/docs/Web/MathML/Guides/Authoring)
   - : Des conseils sur l'édition de document en MathML&nbsp;: les éditeurs à utiliser et comment intégrer le code produit dans du contenu web.
 
 ## Obtenir de l'aide de la communauté

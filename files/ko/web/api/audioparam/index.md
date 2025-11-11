@@ -1,17 +1,8 @@
 ---
 title: AudioParam
 slug: Web/API/AudioParam
-tags:
-  - API
-  - Audio
-  - AudioParam
-  - Interface
-  - Parameter
-  - Reference
-  - Web Audio API
-  - sound
-browser-compat: api.AudioParam
 ---
+
 {{APIRef("Web Audio API")}}
 
 Web Audio API의 `AudioParam` 인터페이스는 오디오에 관련된 파라미터를 나타내는데, 보통 ({{ domxref("GainNode.gain") }}과 같은) {{domxref("AudioNode")}}의 파라미터입니다.
@@ -36,7 +27,7 @@ _k-rate_ `AudioParam` 은 처리되는 전체 블럭에 대해 같은 초기 오
 
 - {{domxref("AudioParam.defaultValue")}} {{readonlyInline}}
   - : `AudioParam` 을 생성하는 특정한 {{domxref("AudioNode")}}에 의해 정의되는 특성의 초기 값을 나타냅니다.
-- {{domxref("AudioParam.maxValue")}} {{readonlyInline}}
+- {{domxref("AudioParam.maxValue")}} {{readonlyInline}}
   - : 파라미터의 명목상의 (효과적인) 범위에 대한 최대로 가능한 값을 나타냅니다.
 - {{domxref("AudioParam.minValue")}} {{readonlyinline}}
   - : 파라미터의 명목상의 (효과적인) 범위에 대한 최소로 가능한 값을 나타냅니다.

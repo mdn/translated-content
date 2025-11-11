@@ -1,12 +1,8 @@
 ---
 title: EventSource
 slug: Web/API/EventSource
-tags:
-  - API
-  - Interface
-  - Reference
-translation_of: Web/API/EventSource
 ---
+
 {{APIRef("Websockets API")}}
 
 L'interface **`EventSource`** est utilisée afin de recevoir des évènements envoyés par le serveur. Elle se connecte à un serveur via HTTP et reçoit des évènements au format `text/event-stream` avant de clôturer la connexion.
@@ -30,11 +26,11 @@ _Cette interface hérite également des propriétés fournies par l'objet parent
 ### Gestionnaires d'évènement
 
 - {{domxref("EventSource.onerror")}}
-  - : Un objet {{event("Event_handlers", "event handler")}} qui est appelé lorsqu'une erreur se produit et que l'évènement {{event("error")}} est envoyé à l'objet `EventSource`.
+  - : Un gestionnaire d'évènement qui est appelé lorsqu'une erreur se produit et que l'évènement [`error`](/fr/docs/Web/API/EventSource/error_event) est envoyé à l'objet `EventSource`.
 - {{domxref("EventSource.onmessage")}}
-  - : Un objet {{event("Event_handlers", "event handler")}} qui est appelé lorsqu'un évènement {{event("message")}} est reçu (ce qui signifie qu'on a reçu un message de la source).
+  - : Un gestionnaire d'évènement qui est appelé lorsqu'un évènement [`message`](/fr/docs/Web/API/EventSource/message_event) est reçu (ce qui signifie qu'on a reçu un message de la source).
 - {{domxref("EventSource.onopen")}}
-  - : Un objet {{event("Event_handlers", "event handler")}} qui est appelé lorsqu'un évènement {{event("open")}} est reçu, ce qui indique que la connexion vient d'être ouverte.
+  - : Un gestionnaire d'évènement qui est appelé lorsqu'un évènement [`open`](/fr/docs/Web/API/EventSource/open_event) est reçu, ce qui indique que la connexion vient d'être ouverte.
 
 ## Méthodes
 
@@ -46,29 +42,28 @@ _Cette interface hérite également de méthodes grâce à son objet parent : {{
 ## Exemples
 
 ```js
-var evtSource = new EventSource('sse.php');
-var eventList = document.querySelector('ul');
+var evtSource = new EventSource("sse.php");
+var eventList = document.querySelector("ul");
 
-evtSource.onmessage = function(e) {
+evtSource.onmessage = function (e) {
   var newElement = document.createElement("li");
 
   newElement.textContent = "message: " + e.data;
   eventList.appendChild(newElement);
-}
+};
 ```
 
-> **Note :** Un exemple complet est disponible sur GitHub, [voir la démonstration SSE avec PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events).
+> [!NOTE]
+> Un exemple complet est disponible sur GitHub, [voir la démonstration SSE avec PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events).
 
 ## Spécifications
 
-| Spécification                                                                                                | État                             | Commentaires |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', "comms.html#the-eventsource-interface", "EventSource")}} | {{Spec2('HTML WHATWG')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.EventSource")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Utiliser les évènements générés par le serveur](/fr/docs/Server-sent_events/Using_server-sent_events)
+- [Utiliser les évènements générés par le serveur](/fr/docs/Web/API/Server-sent_events/Using_server-sent_events)

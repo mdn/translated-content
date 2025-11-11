@@ -1,14 +1,8 @@
 ---
 title: DOMParser
 slug: Web/API/DOMParser
-tags:
-  - API
-  - DOM
-  - HTML
-  - SVG
-  - XML
-translation_of: Web/API/DOMParser
 ---
+
 {{APIRef("DOM")}}
 
 L'interface **`DOMParser`** permet d'analyser le code source {{Glossary("XML")}} ou {{Glossary("HTML")}} d'une chaîne de caractères dans le DOM {{domxref("Document")}}.
@@ -42,7 +36,7 @@ const xmlString = "<warning>Attention au tigre</warning>";
 const doc1 = parser.parseFromString(xmlString, "application/xml");
 // XMLDocument
 
-const svgString = "<circle cx=\"50\" cy=\"50\" r=\"50\"/>";
+const svgString = '<circle cx="50" cy="50" r="50"/>';
 const doc2 = parser.parseFromString(svgString, "image/svg+xml");
 // XMLDocument
 
@@ -50,7 +44,7 @@ const htmlString = "<strong>Attention au léopard</strong>";
 const doc3 = parser.parseFromString(htmlString, "text/html");
 // HTMLDocument
 
-console.log(doc1.documentElement.textContent)
+console.log(doc1.documentElement.textContent);
 // "Attention au tigre"
 
 console.log(doc2.firstChild.tagName);
@@ -62,17 +56,15 @@ console.log(doc3.body.firstChild.textContent);
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', '#dom-parsing-and-serialization', 'DOM parsing')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMParser", 3)}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Analyse syntaxique et sérialisation du XML](/efr/docs/Web/Guide/Parsing_and_serializing_XML)
+- [Analyse syntaxique et sérialisation du XML](/fr/docs/Web/XML/Parsing_and_serializing_XML)
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("XMLSerializer")}}
 - {{jsxref("JSON.parse()")}} - contrepartie pour les documents {{jsxref("JSON")}}.

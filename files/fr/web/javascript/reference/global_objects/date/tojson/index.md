@@ -1,25 +1,30 @@
 ---
 title: Date.prototype.toJSON()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toJSON
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toJSON
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/toJSON
 ---
+
 {{JSRef}}
 
 La méthode **`toJSON()`** renvoie une chaîne représentant l'objet {{jsxref("Date")}} sous forme {{Glossary("JSON")}}
 
-{{EmbedInteractiveExample("pages/js/date-tojson.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toJSON()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30 UTC");
+
+const jsonDate = event.toJSON();
+
+console.log(jsonDate);
+// Expected output: "1975-08-19T23:15:30.000Z"
+
+console.log(new Date(jsonDate).toUTCString());
+// Expected output: "Tue, 19 Aug 1975 23:15:30 GMT"
+```
 
 ## Syntaxe
 
 ```js
-dateObj.toJSON()
+dateObj.toJSON();
 ```
 
 ### Valeur de retour
@@ -35,7 +40,7 @@ Les instances de {{jsxref("Date")}} identifient un instant précis dans le temps
 ### Utiliser `toJSON()`
 
 ```js
-var jsonDate = (new Date()).toJSON();
+var jsonDate = new Date().toJSON();
 var retourVersDate = new Date(jsonDate);
 
 console.log(jsonDate); //2015-10-26T07:46:36.611Z
@@ -43,15 +48,11 @@ console.log(jsonDate); //2015-10-26T07:46:36.611Z
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires                                            |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.9.5.44', 'Date.prototype.toJSON')}}                     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-date.prototype.tojson', 'Date.prototype.toJSON')}}     | {{Spec2('ES6')}}         |                                                         |
-| {{SpecName('ESDraft', '#sec-date.prototype.tojson', 'Date.prototype.toJSON')}} | {{Spec2('ESDraft')}} |                                                         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.toJSON")}}
+{{Compat}}
 
 ## Voir aussi
 

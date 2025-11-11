@@ -1,24 +1,33 @@
 ---
 title: Number.prototype.toExponential()
+short-title: toExponential()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toExponential
-tags:
-  - JavaScript
-  - メソッド
-  - Number
-  - Prototype
-  - ポリフィル
-browser-compat: javascript.builtins.Number.toExponential
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toExponential
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-{{JSRef}}
 
-**`toExponential()`** メソッドは {{jsxref("Number")}} オブジェクトを指数表記で表した文字列を返します。
+**`toExponential()`** は {{jsxref("Number")}} 値のメソッドで、この数値をを指数表記で表した文字列を返します。
 
-{{EmbedInteractiveExample("pages/js/number-toexponential.html")}}
+{{InteractiveExample("JavaScript デモ: Number.prototype.toExponential()")}}
+
+```js interactive-example
+function expo(x, f) {
+  return Number.parseFloat(x).toExponential(f);
+}
+
+console.log(expo(123456, 2));
+// 予想される結果: "1.23e+5"
+
+console.log(expo("123456"));
+// 予想される結果: "1.23456e+5"
+
+console.log(expo("oink"));
+// 予想される結果: "NaN"
+```
 
 ## 構文
 
-```js
+```js-nolint
 toExponential()
 toExponential(fractionDigits)
 ```
@@ -26,7 +35,8 @@ toExponential(fractionDigits)
 ### 引数
 
 - `fractionDigits` {{optional_inline}}
-  - : 任意です。小数点の後の桁数を指定する整数です。既定値はその数を表すのに必要な数の桁です。
+  - : オプションです。小数点の後の桁数を指定する整数です。
+    既定値はその数を表すのに必要な数の桁です。
 
 ### 返値
 
@@ -35,9 +45,9 @@ toExponential(fractionDigits)
 ### 例外
 
 - {{jsxref("RangeError")}}
-  - : `fractionDigits` が小さすぎたり大きすぎたりした場合。 `0` 以上 `20` 以下の値では {{jsxref("RangeError")}} が発生しません。実装によっては、より大きな値や小さな値に対応しているかもしれません。
+  - : `fractionDigits` が `0` 以上 `100` 以下ではない場合に発生します。
 - {{jsxref("TypeError")}}
-  - : このメソッドが {{jsxref("Number")}} ではないオブジェクトに対して呼び出された場合。
+  - : このメソッドが {{jsxref("Number")}} ではないオブジェクトに対して呼び出された場合に発生します。
 
 ## 解説
 
@@ -45,20 +55,20 @@ toExponential(fractionDigits)
 
 `toExponential` メソッドを 1 つの数値リテラル、または、指数も小数点もない数値リテラルに対して使用する場合、ドットが小数点として解釈されることを防ぐために、メソッド呼び出しに先立つドットの前に空白を置いてください。
 
-引数 `fractionDigits` で指定された桁よりも多くの桁を持っている数の場合、その数は、`fractionDigits` の桁で表すことができる最も近い数で表されます。{{jsxref("Number.prototype.toFixed", "toFixed()")}} メソッドの説明における概数表現の説明を参照してください。それは、`toExponential` メソッドにも適用されます。
+引数 `fractionDigits` で指定された桁よりも多くの桁を持っている数の場合、その数は、`fractionDigits` の桁で表すことができる最も近い数で表されます。{{jsxref("Number/toFixed", "toFixed()")}} メソッドの説明における概数表現の説明を参照してください。それは、`toExponential` メソッドにも適用されます。
 
 ## 例
 
 ### toExponential の使用
 
 ```js
-var numObj = 77.1234;
+const numObj = 77.1234;
 
-console.log(numObj.toExponential());  // 7.71234e+1 を表示
-console.log(numObj.toExponential(4)); // 7.7123e+1 を表示
-console.log(numObj.toExponential(2)); // 7.71e+1 を表示
-console.log(77.1234.toExponential()); // 7.71234e+1 を表示
-console.log(77 .toExponential());     // 7.7e+1 を表示
+console.log(numObj.toExponential()); // 7.71234e+1 と表示
+console.log(numObj.toExponential(4)); // 7.7123e+1 と表示
+console.log(numObj.toExponential(2)); // 7.71e+1 と表示
+console.log((77.1234).toExponential()); // 7.71234e+1 と表示
+console.log((77).toExponential()); // 7.7e+1 と表示
 ```
 
 ## 仕様書
@@ -71,7 +81,8 @@ console.log(77 .toExponential());     // 7.7e+1 を表示
 
 ## 関連情報
 
-- [`Number.prototype.toExponential`](https://github.com/zloirock/core-js) のポリフィルが [`core-js`](https://github.com/zloirock/core-js) で利用できます
+- [`Number.prototype.toExponential` の多くのバグ修正を含んだポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-number)
+- [es-shims による `Number.prototype.toExponential` のポリフィル](https://www.npmjs.com/package/number.prototype.toexponential)
 - {{jsxref("Number.prototype.toFixed()")}}
 - {{jsxref("Number.prototype.toPrecision()")}}
 - {{jsxref("Number.prototype.toString()")}}

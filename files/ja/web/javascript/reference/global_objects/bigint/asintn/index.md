@@ -1,20 +1,28 @@
 ---
 title: BigInt.asIntN()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/asIntN
-tags:
-  - BigInt
-  - JavaScript
-  - メソッド
-  - リファレンス
-  - asIntN
-browser-compat: javascript.builtins.BigInt.asIntN
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/asIntN
 ---
+
 {{JSRef}}
 
 **`BigInt.asIntN`** は静的メソッドで、 BigInt 値を符号付き整数値に丸め、その値を返します。
 
-{{EmbedInteractiveExample("pages/js/bigint-asintn.html", "taller")}}
+{{InteractiveExample("JavaScript デモ: BigInt.asIntN()", "taller")}}
+
+```js interactive-example
+const I64_CEIL = 2n ** 63n;
+
+console.log(BigInt.asIntN(64, I64_CEIL - 1n));
+// 9223372036854775807n (2n ** 64n - 1n, the maximum non-wrapping value)
+console.log(BigInt.asIntN(64, I64_CEIL));
+// -9223372036854775808n (wraps to min value)
+console.log(BigInt.asIntN(64, I64_CEIL + 1n));
+// -9223372036854775807n (min value + 1n)
+console.log(BigInt.asIntN(64, I64_CEIL * 2n));
+// 0n (wrapped around to zero)
+console.log(BigInt.asIntN(64, -I64_CEIL * -42n));
+// 0n (also wraps on negative multiples)
+```
 
 ## 構文
 

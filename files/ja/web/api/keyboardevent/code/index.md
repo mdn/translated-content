@@ -1,20 +1,11 @@
 ---
-title: KeyboardEvent.code
+title: "KeyboardEvent: code プロパティ"
+short-title: code
 slug: Web/API/KeyboardEvent/code
-page-type: web-api-instance-property
-tags:
-  - API
-  - Code
-  - DOM
-  - DOM Events
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
-  - UI Events
-browser-compat: api.KeyboardEvent.code
-translation_of: Web/API/KeyboardEvent/code
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
+
 {{APIRef("UI Events")}}
 
 `KeyboardEvent.code` プロパティは、（キー入力によって入力された文字ではなく）キーボード上の物理的なキーを表します。つまり、このプロパティはキーボードレイアウトや修飾キーの状態によって変更される前の値を返します。
@@ -25,7 +16,7 @@ translation_of: Web/API/KeyboardEvent/code
 
 例えば、返ってきた `code` が "`KeyQ`" は QWERTY レイアウトのキーボードでは <kbd>Q</kbd> キーですが、同じ Dvorak キーボードでは同じ `code` の値が <kbd>'</kbd> キーを表し、 AZERTY キーボードでは <kbd>A</kbd> キーを表すものでもあります。したがって、すべてのユーザーが特定のキーボードレイアウトを使用しているわけではないため、 `code` の値を用いてユーザーが認識しているキーの名前が何であるかを特定することはできません。
 
-キーイベントに対応する文字が何であるかを判別するには、、代わりに{{domxref("KeyboardEvent.key")}} プロパティを使用してください。
+キーイベントに対応する文字が何であるかを判別するには、代わりに {{domxref("KeyboardEvent.key")}} プロパティを使用してください。
 
 ## 値
 
@@ -35,11 +26,13 @@ Windows, Linux, macOS におけるコード値は、 [KeyboardEvent: コード�
 
 ### KeyboardEvent の使用例
 
-```html
-<p>Press keys on the keyboard to see what the KeyboardEvent's key and code
-   values are for each one.</p>
-<div id="output" tabindex="0">
-</div>
+#### HTML
+
+```html-nolint
+<p>
+  キーボードのキーを押して、 KeyboardEvent のキーとコードの値がそれぞれどうなっているかを確認しましょう。
+</p>
+<div id="output" tabindex="0"></div>
 ```
 
 #### CSS
@@ -59,12 +52,16 @@ Windows, Linux, macOS におけるコード値は、 [KeyboardEvent: コード�
 #### JavaScript
 
 ```js
-window.addEventListener("keydown", function(event) {
-  const p = document.createElement("p");
-  p.textContent = `KeyboardEvent: key='${event.key}' | code='${event.code}'`;
-  document.getElementById("output").appendChild(p);
-  window.scrollTo(0, document.body.scrollHeight);
-}, true);
+window.addEventListener(
+  "keydown",
+  (event) => {
+    const p = document.createElement("p");
+    p.textContent = `KeyboardEvent: key='${event.key}' | code='${event.code}'`;
+    document.getElementById("output").appendChild(p);
+    window.scrollTo(0, document.body.scrollHeight);
+  },
+  true,
+);
 ```
 
 #### 試してみましょう
@@ -80,9 +77,16 @@ window.addEventListener("keydown", function(event) {
 #### HTML
 
 ```html
-<p>WASD キー（AZERTY キーボードでは ZQSD）を使って移動したり方向を変えたりしましょう。</p>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="world" tabindex="0">
-  <polygon id="spaceship" points="15,0 0,30 30,30"/>
+<p>
+  WASD キー（AZERTY キーボードでは
+  ZQSD）を使って移動したり方向を変えたりしましょう。
+</p>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1"
+  class="world"
+  tabindex="0">
+  <polygon id="spaceship" points="15,0 0,30 30,30" />
 </svg>
 ```
 
@@ -108,17 +112,17 @@ window.addEventListener("keydown", function(event) {
 
 #### JavaScript
 
-この JavaScript のコードの最初の部分では、これから使用するいくつかの変数を定義しています。 `shipSize` にはプレイヤーが移動する船の大きさが入ります。 `position` はプレイフィールド内での船の位置を追跡するために使用します。 `moveRate` と `turnRate` は、キーを押すごとに船を前後に何ピクセル動かすか、キーを押すごとに左右の操舵コントロールで何度回転させるかを表します。 angle は現在船に適用されている回転の量を度数で表し、 0 度（真上向き）から始まります。最後に、 `spaceship` は ID `"spaceship"` の要素を指すように設定されています。これは、プレイヤーが操作する船を表す SVG ポリゴンを指します。
+この JavaScript のコードの最初の部分では、これから使用するいくつかの変数を定義しています。 `shipSize` にはプレイヤーが移動する船の大きさが入ります。 `position` はプレイフィールド内での船の位置を追跡するために使用します。 `moveRate` はキーを押すごとに船を前後に何ピクセル動かすかを表し、 `turnRate` はキーを押すごとに左右の操舵コントロールで何度回転させるかを表します。 `angle` は現在船に適用されている回転の量を度数で表し、 0 度（真上向き）から始まります。最後に、 `spaceship` は ID `"spaceship"` の要素を指すように設定されています。これは、プレイヤーが操作する船を表す SVG ポリゴンを指します。
 
 ```js
 let shipSize = {
   width: 30,
-  height: 30
+  height: 30,
 };
 
 let position = {
   x: 200,
-  y: 200
+  y: 200,
 };
 
 let moveRate = 9;
@@ -133,9 +137,9 @@ let spaceship = document.getElementById("spaceship");
 
 ```js
 function updatePosition(offset) {
-  let rad = angle * (Math.PI/180);
-  position.x += (Math.sin(rad) * offset);
-  position.y -= (Math.cos(rad) * offset);
+  let rad = angle * (Math.PI / 180);
+  position.x += Math.sin(rad) * offset;
+  position.y -= Math.cos(rad) * offset;
 
   if (position.x < 0) {
     position.x = 399;
@@ -151,13 +155,13 @@ function updatePosition(offset) {
 }
 ```
 
-`refresh()` 関数は [SVG の transform](/ja/docs/Web/SVG/Attribute/transform) を使用して、向きと位置を適用する処理を行います。
+`refresh()` 関数は [SVG の transform](/ja/docs/Web/SVG/Reference/Attribute/transform) を使用して、向きと位置を適用する処理を行います。
 
 ```js
 function refresh() {
-  let x = position.x - (shipSize.width/2);
-  let y = position.y - (shipSize.height/2);
-  let transform = "translate(" + x + " " + y + ") rotate(" + angle + " 15 15) ";
+  let x = position.x - shipSize.width / 2;
+  let y = position.y - shipSize.height / 2;
+  let transform = `translate(${x} ${y}) rotate(${angle} 15 15) `;
 
   spaceship.setAttribute("transform", transform);
 }
@@ -167,46 +171,49 @@ refresh();
 最後に、`addEventListener()` メソッドを使用して {{domxref("Element/keydown_event", "keydown")}} イベントの待ち受けを開始します。それぞれのイベントで船の位置と回転角を更新し、 `refresh()` を呼び出して新しい位置と角度で船を描画するように動作します。
 
 ```js
-window.addEventListener("keydown", function(event) {
-  if (event.defaultPrevented) {
-    return; // Do nothing if event already handled
-  }
+window.addEventListener(
+  "keydown",
+  (event) => {
+    if (event.defaultPrevented) {
+      return; // Do nothing if event already handled
+    }
 
-  switch(event.code) {
-    case "KeyS":
-    case "ArrowDown":
-      // Handle "back"
-      updatePosition(-moveRate);
-      break;
-    case "KeyW":
-    case "ArrowUp":
-      // Handle "forward"
-      updatePosition(moveRate);
-      break;
-    case "KeyA":
-    case "ArrowLeft":
-      // Handle "turn left"
-      angle -= turnRate;
-      break;
-    case "KeyD":
-    case "ArrowRight":
-      // Handle "turn right"
-      angle += turnRate;
-      break;
-  }
+    switch (event.code) {
+      case "KeyS":
+      case "ArrowDown":
+        // Handle "back"
+        updatePosition(-moveRate);
+        break;
+      case "KeyW":
+      case "ArrowUp":
+        // Handle "forward"
+        updatePosition(moveRate);
+        break;
+      case "KeyA":
+      case "ArrowLeft":
+        // Handle "turn left"
+        angle -= turnRate;
+        break;
+      case "KeyD":
+      case "ArrowRight":
+        // Handle "turn right"
+        angle += turnRate;
+        break;
+    }
 
-  refresh();
+    refresh();
 
-  if (event.code !== "Tab")
-  {
-    // Consume the event so it doesn't get handled twice,
-    // as long as the user isn't trying to move focus away
-    event.preventDefault();
-  }
-}, true);
+    if (event.code !== "Tab") {
+      // Consume the event so it doesn't get handled twice,
+      // as long as the user isn't trying to move focus away
+      event.preventDefault();
+    }
+  },
+  true,
+);
 ```
 
-#### やってみましょう
+#### 試してみましょう
 
 キー入力が確実にサンプルコードに反映されるように、キーを押す前に下の黒いゲームプレイフィールドをクリックまたはフォーカスしてください。
 

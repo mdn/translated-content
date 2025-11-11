@@ -1,17 +1,8 @@
 ---
 title: PerformanceObserver.takeRecords()
 slug: Web/API/PerformanceObserver/takeRecords
-page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Performance Observer API
-  - PerformanceObserver
-  - Reference
-  - observers
-  - takeRecords()
-translation_of: Web/API/PerformanceObserver/takeRecords
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 {{domxref('PerformanceObserver')}} 接口的 **`takeRecords()`** 方法返回当前存储在性能观察器中的{{domxref("PerformanceEntry","性能条目")}}列表，并将其清空。
@@ -33,13 +24,13 @@ var PerformanceEntry[] = performanceObserver.takeRecords();
 ## 例子
 
 ```js
-var observer = new PerformanceObserver(function(list, obj) {
+var observer = new PerformanceObserver(function (list, obj) {
   var entries = list.getEntries();
-  for (var i=0; i < entries.length; i++) {
+  for (var i = 0; i < entries.length; i++) {
     // Process "mark" and "frame" events
   }
 });
-observer.observe({entryTypes: ["mark", "frame"]});
+observer.observe({ entryTypes: ["mark", "frame"] });
 var records = observer.takeRecords();
 console.log(records[0].name);
 console.log(records[0].startTime);

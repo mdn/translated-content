@@ -1,13 +1,6 @@
 ---
 title: Number() 생성자
 slug: Web/JavaScript/Reference/Global_Objects/Number/Number
-tags:
-  - Constructor
-  - JavaScript
-  - Number
-  - Reference
-  - Polyfill
-browser-compat: javascript.builtins.Number.Number
 ---
 
 {{JSRef}}
@@ -30,8 +23,8 @@ new Number(value);
 ### Number 객체 만들기
 
 ```js
-const a = new Number('123'); // a === 123 은 거짓
-const b = Number('123'); // b === 123 은 참
+const a = new Number("123"); // a === 123 은 거짓
+const b = Number("123"); // b === 123 은 참
 a instanceof Number; // 참
 b instanceof Number; // 참
 ```

@@ -1,19 +1,14 @@
 ---
-title: HTMLAreaElement.referrerPolicy
+title: "HTMLAreaElement: referrerPolicy プロパティ"
+short-title: referrerPolicy
 slug: Web/API/HTMLAreaElement/referrerPolicy
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAreaElement
-  - プロパティ
-  - リファレンス
-  - Referrer Policy
-browser-compat: api.HTMLAreaElement.referrerPolicy
-translation_of: Web/API/HTMLAreaElement/referrerPolicy
+l10n:
+  sourceCommit: 874ad29df9150037acb8a4a3e7550a302c90a080
 ---
+
 {{APIRef}}
 
-**`HTMLAreaElement.referrerPolicy`** プロパティは、リソースの取得時に送信されるリファラーを定義する {{HTMLElement("area")}} 要素の HTML {{htmlattrxref("referrerpolicy","area")}} 属性を反映します。
+**`HTMLAreaElement.referrerPolicy`** プロパティは、リソースの取得時に送信されるリファラーを定義する {{HTMLElement("area")}} 要素の HTML [`referrerpolicy`](/ja/docs/Web/HTML/Reference/Elements/area#referrerpolicy) 属性を反映します。
 
 ## 値
 
@@ -42,16 +37,16 @@ translation_of: Web/API/HTMLAreaElement/referrerPolicy
 
 ```html
 <img usemap="#mapAround" width="100" height="100" src="/img/logo@2x.png" />
-<map id="myMap" name="mapAround" />>
+<map id="myMap" name="mapAround"></map>
 ```
 
 ```js
-var elt = document.createElement("area");
+const elt = document.createElement("area");
 elt.href = "/img2.png";
 elt.shape = "rect";
 elt.referrerPolicy = "no-referrer";
 elt.coords = "0,0,100,100";
-var map = document.getElementById("myMap");
+const map = document.getElementById("myMap");
 
 map.appendChild(elt);
 // クリックしても、領域のリンクはリファラーヘッダーを送信しません。
@@ -70,4 +65,3 @@ map.appendChild(elt);
 - {{domxref("HTMLImageElement.referrerPolicy")}},
   {{domxref("HTMLAnchorElement.referrerPolicy")}},
   {{domxref("HTMLIFrameElement.referrerPolicy")}}
-

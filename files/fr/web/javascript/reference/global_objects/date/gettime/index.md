@@ -1,27 +1,28 @@
 ---
 title: Date.prototype.getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getTime
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getTime
 ---
+
 {{JSRef}}
 
 La méthode **`getTime()`** renvoie la valeur numérique correspondant au temps pour la date renseignée, d'après le temps universel (c'est-à-dire relative à UTC, une mesure donnée par `getTime()` sera indépendante du fuseau horaire sur lequel on se trouve). Cette valeur numérique est le nombre de millisecondes écoulées depuis le premier janvier 1970 à minuit UTC.
 
 Vous pouvez utiliser cette méthode pour vous affecter une date et un temps à une autre instance de `Date`. Cette méthode est fonctionnellement équivalente à la méthode {{jsxref("Date.valueof", "valueOf()")}}.
 
-{{EmbedInteractiveExample("pages/js/date-gettime.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getTime()")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 69 20:17:40 GMT+00:00");
+
+// Milliseconds since Jan 1, 1970, 00:00:00.000 GMT
+console.log(moonLanding.getTime());
+// Expected output: -14182940000
+```
 
 ## Syntaxe
 
 ```js
-dateObj.getTime()
+dateObj.getTime();
 ```
 
 ### Valeur de retour
@@ -35,7 +36,7 @@ La valeur renvoyée par la méthode `getTime()` est le nombre de millièmes de s
 L'exemple qui suit assigne la valeur de `anniversaire` à `copie` :
 
 ```js
-var anniversaire = new Date(1994 , 11, 10); // 10 décembre 1994
+var anniversaire = new Date(1994, 11, 10); // 10 décembre 1994
 var copie = new Date();
 copie.setTime(anniversaire.getTime());
 ```
@@ -53,7 +54,9 @@ for (var i = 0; i < 1000; i++) {
 }
 fin = new Date();
 
-console.log('Durée de cette opération : ' + (fin.getTime() - début.getTime()) + ' msec');
+console.log(
+  "Durée de cette opération : " + (fin.getTime() - début.getTime()) + " msec",
+);
 ```
 
 ## Précision temporelle réduite
@@ -68,7 +71,6 @@ new Date().getTime();
 // 1519211811670
 // ...
 
-
 // précision temporelle avec `privacy.resistFingerprinting` activé
 new Date().getTime();
 // 1519129853500
@@ -81,16 +83,11 @@ Pour Firefox, il est également possible d'activer `privacy.resistFingerprinting
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.9', 'Date.prototype.getTime')}}                         | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-date.prototype.gettime', 'Date.prototype.getTime')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-date.prototype.gettime', 'Date.prototype.getTime')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.getTime")}}
+{{Compat}}
 
 ## Voir aussi
 

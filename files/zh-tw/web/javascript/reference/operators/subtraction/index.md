@@ -1,22 +1,29 @@
 ---
-title: 相減運算子 (-)
+title: 相減運算子（-）
 slug: Web/JavaScript/Reference/Operators/Subtraction
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.subtraction
 ---
-{{jsSidebar("Operators")}}
 
-相減運算子 (`-`) 是用來將兩個值進行相減，並得出它們的差值。
+相減運算子（`-`）是用來將兩個值進行相減，並得出它們的差值。
 
-{{EmbedInteractiveExample("pages/js/expressions-subtraction.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Subtraction operator")}}
+
+```js interactive-example
+console.log(5 - 3);
+// Expected output: 2
+
+console.log(3.5 - 5);
+// Expected output: -1.5
+
+console.log(5 - "hello");
+// Expected output: NaN
+
+console.log(5 - true);
+// Expected output: 4
+```
 
 ## 語法
 
-```js
+```js-nolint
 x - y
 ```
 
@@ -25,14 +32,14 @@ x - y
 ### 數字相減
 
 ```js
-5 - 3     // 2
-3 - 5     // -2
+5 - 3; // 2
+3 - 5; // -2
 ```
 
 ### 非數字之間的相減
 
 ```js
-'foo' - 3 // NaN
+"foo" - 3; // NaN
 ```
 
 ## 規範

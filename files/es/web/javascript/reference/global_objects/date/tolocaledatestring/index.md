@@ -1,8 +1,8 @@
 ---
 title: Date.prototype.toLocaleDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
-browser-compat: javascript.builtins.Date.toLocaleDateString
 ---
+
 {{JSRef}}
 
 El método **`toLocaleDateString()`** devuelve una cadena con una representación sensible al idioma de la parte de la fecha especificada en la zona horaria del agente de usuario.
@@ -10,14 +10,33 @@ El método **`toLocaleDateString()`** devuelve una cadena con una representació
 Los argumentos `locales` y `options` permiten a las aplicaciones especificar el idioma cuyas convenciones de formato deben utilizarse y permiten personalizar el comportamiento de la función.
 En las implementaciones más antiguas, que ignoran los argumentos `locales` y `options`, la configuración regional utilizada y la forma de la cadena devuelta dependen totalmente de la implementación.
 
-{{EmbedInteractiveExample("pages/js/date-tolocaledatestring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toLocaleDateString()")}}
+
+```js interactive-example
+const event = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+
+console.log(event.toLocaleDateString("de-DE", options));
+// Expected output (varies according to local timezone): Donnerstag, 20. Dezember 2012
+
+console.log(event.toLocaleDateString("ar-EG", options));
+// Expected output (varies according to local timezone): الخميس، ٢٠ ديسمبر، ٢٠١٢
+
+console.log(event.toLocaleDateString(undefined, options));
+// Expected output (varies according to local timezone and default locale): Thursday, December 20, 2012
+```
 
 ## Sintaxis
 
 ```js
-toLocaleDateString()
-toLocaleDateString(locales)
-toLocaleDateString(locales, options)
+toLocaleDateString();
+toLocaleDateString(locales);
+toLocaleDateString(locales, options);
 ```
 
 ### Parámetros
@@ -61,9 +80,9 @@ Para comprobar si una implementación ya los soporta, puede utilizar el requisit
 ```js
 function toLocaleDateStringSupportsLocales() {
   try {
-    new Date().toLocaleDateString('i');
+    new Date().toLocaleDateString("i");
   } catch (e) {
-    return e.name === 'RangeError';
+    return e.name === "RangeError";
   }
   return false;
 }
@@ -81,33 +100,33 @@ var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 // América/Los_Angeles para los Estados Unidos
 
 // El inglés estadounidense utiliza el orden mes-día-año
-console.log(date.toLocaleDateString('en-US'));
+console.log(date.toLocaleDateString("en-US"));
 // → "12/20/2012"
 
 // El inglés británico utiliza el orden día-mes-año
-console.log(date.toLocaleDateString('en-GB'));
+console.log(date.toLocaleDateString("en-GB"));
 // → "20/12/2012"
 
 // El coreano utiliza el orden año-mes-día
-console.log(date.toLocaleDateString('ko-KR'));
+console.log(date.toLocaleDateString("ko-KR"));
 // → "2012. 12. 20."
 
 // Evento para persas, es difícil convertir manualmente la fecha a Solar Hijri
-console.log(date.toLocaleDateString('fa-IR'));
+console.log(date.toLocaleDateString("fa-IR"));
 // → "۱۳۹۱/۹/۳۰"
 
 // En la mayoría de los países de habla árabe se utilizan dígitos árabes reales
-console.log(date.toLocaleDateString('ar-EG'));
+console.log(date.toLocaleDateString("ar-EG"));
 // → "٢٠‏/١٢‏/٢٠١٢"
 
 // para los japoneses, las aplicaciones pueden querer utilizar el calendario
 // japonés, donde 2012 fue el año 24 de la era Heisei
-console.log(date.toLocaleDateString('ja-JP-u-ca-japanese'));
+console.log(date.toLocaleDateString("ja-JP-u-ca-japanese"));
 // → "24/12/20"
 
 // cuando se solicita un idioma que puede no estar soportado
 // como el balinés, incluir un idioma de reserva, en este caso el indonesio
-console.log(date.toLocaleDateString(['ban', 'id']));
+console.log(date.toLocaleDateString(["ban", "id"]));
 // → "20/12/2012"
 ```
 
@@ -119,14 +138,19 @@ Los resultados proporcionados por `toLocaleDateString()` pueden personalizarse u
 var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // solicitar un día de la semana junto con una fecha larga
-var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-console.log(date.toLocaleDateString('de-DE', options));
+var options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+console.log(date.toLocaleDateString("de-DE", options));
 // → "Donnerstag, 20. Dezember 2012"
 
 // una aplicación puede querer utilizar el UTC y hacerlo visible
-options.timeZone = 'UTC';
-options.timeZoneName = 'short';
-console.log(date.toLocaleDateString('en-US', options));
+options.timeZone = "UTC";
+options.timeZoneName = "short";
+console.log(date.toLocaleDateString("en-US", options));
 // → "Thursday, December 20, 2012, UTC"
 ```
 

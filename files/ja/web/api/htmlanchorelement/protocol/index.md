@@ -1,15 +1,11 @@
 ---
-title: HTMLAnchorElement.protocol
+title: "HTMLAnchorElement: protocol プロパティ"
+short-title: protocol
 slug: Web/API/HTMLAnchorElement/protocol
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - プロパティ
-browser-compat: api.HTMLAnchorElement.protocol
-translation_of: Web/API/HTMLAnchorElement/protocol
-original_slug: Web/API/HTMLHyperlinkElementUtils/protocol
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`HTMLAnchorElement.protocol`** プロパティは、 URL のプロトコルスキームを表す文字列で、最後の `':'` を含みます。
@@ -23,7 +19,7 @@ original_slug: Web/API/HTMLHyperlinkElementUtils/protocol
 ### アンカーリンクのプロトコルを取得
 
 ```js
-// <a id="myAnchor" href="https://developer.mozilla.org/en-US/HTMLAnchorElement"> 要素が文書にあったとします。
+// <a id="myAnchor" href="https://developer.mozilla.org/ja/HTMLAnchorElement"> 要素が文書にあったとします。
 const anchor = document.getElementById("myAnchor");
 anchor.protocol; // 'https:' を返す
 ```

@@ -1,16 +1,8 @@
 ---
 title: RegExp.prototype.compile()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/compile
-tags:
-  - Deprecated
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/compile
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/compile
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 La méthode dépréciée **`compile()`** est utilisée afin de (re)compiler une expression rationnelle lors de l'exécution d'un script. Cette méthode effectue essentiellement les mêmes actions que le constructeur `RegExp`.
@@ -18,7 +10,7 @@ La méthode dépréciée **`compile()`** est utilisée afin de (re)compiler une 
 ## Syntaxe
 
 ```js
-regexObj.compile(motif, flags)
+regexObj.compile(motif, flags);
 ```
 
 ### Paramètres
@@ -26,9 +18,7 @@ regexObj.compile(motif, flags)
 - `motif`
   - : Le texte de l'expression rationnelle.
 - `flags`
-
   - : S'ils sont utilisés, les drapeaux (_flags_) peuvent être combinés avec les valeurs suivantes :
-
     - `g`
       - : correspondance globale
     - `i`
@@ -53,14 +43,11 @@ regexObj.compile("nouveau toto", "g");
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                       | Commentaires                                                                                                                 |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES6', '#sec-regexp.prototype.compile', 'RegExp.prototype.compile')}}     | {{Spec2('ES6')}}         | Définition initiale dans l'annexe B (normative) pour les fonctionnalités ECMAScript additionnelles pour les navigateurs web. |
-| {{SpecName('ESDraft', '#sec-regexp.prototype.compile', 'RegExp.prototype.compile')}} | {{Spec2('ESDraft')}} | Définition initiale dans l'annexe B (normative) pour les fonctionnalités ECMAScript additionnelles pour les navigateurs web. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.compile")}}
+{{Compat}}
 
 ## Voir aussi
 

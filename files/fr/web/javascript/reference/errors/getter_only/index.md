@@ -1,14 +1,8 @@
 ---
-title: 'TypeError: setting a property that has only a getter'
+title: "TypeError: setting a property that has only a getter"
 slug: Web/JavaScript/Reference/Errors/Getter_only
-tags:
-  - Erreurs
-  - JavaScript
-  - Mode strict
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Getter_only
-original_slug: Web/JavaScript/Reference/Erreurs/Getter_only
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
@@ -21,26 +15,26 @@ TypeError: Cannot set property "prop" of #<Object> which has only a getter (Chro
 
 ## Type d'erreur
 
-{{jsxref("TypeError")}}, uniquement en [mode strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
+{{jsxref("TypeError")}}, uniquement en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
 
 ## Quel est le problème ?
 
-On essaie de fournir une nouvelle valeur pour une propriété qui ne dispose que d'un [accesseur](/fr/docs/Web/JavaScript/Reference/Fonctions/get). Ceci échouera en mode non-strict mais lèvera une exception {{jsxref("TypeError")}} en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
+On essaie de fournir une nouvelle valeur pour une propriété qui ne dispose que d'un [accesseur](/fr/docs/Web/JavaScript/Reference/Functions/get). Ceci échouera en mode non-strict mais lèvera une exception {{jsxref("TypeError")}} en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
 
 ## Exemples
 
-Dans l'exemple qui suit, on voit comment créer un accesseur sur une propriété. En revanche, dans la définition de l'objet, on n'inclut aucun [mutateur](/fr/docs/Web/JavaScript/Reference/Fonctions/set) et une exception `TypeError` sera déclenchée lorsqu'on voudra modifier la propriété `temperature` pour la passer à `30`. Pour plus de détails, on pourra consulter la page {{jsxref("Object.defineProperty()")}}.
+Dans l'exemple qui suit, on voit comment créer un accesseur sur une propriété. En revanche, dans la définition de l'objet, on n'inclut aucun [mutateur](/fr/docs/Web/JavaScript/Reference/Functions/set) et une exception `TypeError` sera déclenchée lorsqu'on voudra modifier la propriété `temperature` pour la passer à `30`. Pour plus de détails, on pourra consulter la page {{jsxref("Object.defineProperty()")}}.
 
 ```js example-bad
 "use strict";
 
 function Archiver() {
   var temperature = null;
-  Object.defineProperty(this, 'temperature', {
-    get: function() {
-      console.log('get!');
+  Object.defineProperty(this, "temperature", {
+    get: function () {
+      console.log("get!");
       return temperature;
-    }
+    },
   });
 }
 
@@ -60,18 +54,20 @@ function Archiver() {
   var temperature = null;
   var archive = [];
 
-  Object.defineProperty(this, 'temperature', {
-    get: function() {
-      console.log('get!');
+  Object.defineProperty(this, "temperature", {
+    get: function () {
+      console.log("get!");
       return temperature;
     },
-    set: function(value) {
+    set: function (value) {
       temperature = value;
       archive.push({ val: temperature });
-    }
+    },
   });
 
-  this.getArchive = function() { return archive; };
+  this.getArchive = function () {
+    return archive;
+  };
 }
 
 var arc = new Archiver();

@@ -1,9 +1,8 @@
 ---
 title: Notification.icon
 slug: Web/API/Notification/icon
-translation_of: Web/API/Notification/icon
-browser-compat: api.Notification.icon
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 La propiedad de solo lectura **`icon`** de la interfaz
@@ -20,13 +19,13 @@ var icon = Notification.icon;
 
 ### Valor
 
-Un [`USVString`](/es/docs/Web/API/USVString).
+Un [`USVString`](/es/docs/Web/JavaScript/Reference/Global_Objects/String).
 
 ## Ejemplos
 
 En nuestra
-[aplicación de lista de tareas pendientes](https://github.com/mdn/to-do-notifications/tree/gh-pages)
-([ver la aplicación ejecutándose en vivo](https://mdn.github.io/to-do-notifications/)),
+[aplicación de lista de tareas pendientes](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)
+([ver la aplicación ejecutándose en vivo](https://mdn.github.io/dom-examples/to-do-notifications/)),
 usamos el constructor
 [`Notification()`](/es/docs/Web/API/Notification/Notification) para disparar una
 notificación, pasandole los argumentos que especifican el cuerpo, ícono y

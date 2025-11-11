@@ -1,18 +1,21 @@
 ---
 title: ARIA
 slug: Web/Accessibility/ARIA
-translation_of: Web/Accessibility/ARIA
 ---
+
+{{AccessibilitySidebar}}
 
 Accessible Rich Internet Applications **(<abbr>ARIA</abbr>)** es una colección de atributos que definen como realizar contenido y aplicaciónes web (especialmente las desarrolladas con Javascript) más accesibles para las personas con discapacidades.
 
 Complementa HTML para que las interacciones y los widgets que se usan comúnmente en las aplicaciones puedan ser correctamente interpretadas por las tecnologías de asistencia cuando no existe otro mecanismo. Por ejemplo, ARIA habilita accesibilidad a widgets de JavaScript, sugerencias de formularios, mensajes de error, actualizaciones de contenido en vivo y más.
 
-> **Advertencia:** Muchos de estos widgets se incorporaron posteriormente a HTML5, y **los desarrolladores deberían preferir usar el elemento HTML semántico correcto en lugar de usar ARIA**, si tal elemento existe. Por ejemplo, los elementos nativos tienen incorporado [accesibilidad de teclado](/es/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets), roles y estados. Sin embargo, si elige usar ARIA, es responsable de imitar el comportamiento equivalente del navegador en la secuencia de comandos.
+> [!WARNING]
+> Muchos de estos widgets se incorporaron posteriormente a HTML5, y **los desarrolladores deberían preferir usar el elemento HTML semántico correcto en lugar de usar ARIA**, si tal elemento existe. Por ejemplo, los elementos nativos tienen incorporado [accesibilidad de teclado](/es/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets), roles y estados. Sin embargo, si elige usar ARIA, es responsable de imitar el comportamiento equivalente del navegador en la secuencia de comandos.
 
 [La primera regla de ARIA](https://www.w3.org/TR/using-aria/#rule1) es "Si puede usar un elemento o atributo HTML nativo con la semántica y el comportamiento que necesita ya integrado, en lugar de reutilizar un elemento y agregar un rol, estado o propiedad de ARIA para hacerlo accesible, hágalo".
 
-> **Nota:** Hay un dicho "No utilizar ARIA es mejor que utilizar una mala ARIA". En [la encuesta de WebAim de más de un millón de páginas de inicio](https://webaim.org/projects/million#aria), encontraron que las páginas de inicio con ARIA presentes promediaron un 41 % más de errores detectados que aquellas sin ARIA. Si bien ARIA está diseñado para hacer que las páginas web sean más accesibles, si se usa incorrectamente, puede hacer más daño que bien.
+> [!NOTE]
+> Hay un dicho "No utilizar ARIA es mejor que utilizar una mala ARIA". En [la encuesta de WebAim de más de un millón de páginas de inicio](https://webaim.org/projects/million#aria), encontraron que las páginas de inicio con ARIA presentes promediaron un 41 % más de errores detectados que aquellas sin ARIA. Si bien ARIA está diseñado para hacer que las páginas web sean más accesibles, si se usa incorrectamente, puede hacer más daño que bien.
 
 Aquí está el marcado para una barra de progreso:
 
@@ -22,8 +25,7 @@ Aquí está el marcado para una barra de progreso:
   role="progressbar"
   aria-valuenow="75"
   aria-valuemin="0"
-  aria-valuemax="100"
-></div>
+  aria-valuemax="100"></div>
 ```
 
 Esta barra de progreso se construye usando un {{HTMLElement("div")}}, que no tiene significado. Incluimos roles y propiedades de ARIA para agregar significado. En este ejemplo, el atributo [`role="progressbar"`](/es/docs/Web/Accessibility/ARIA/Roles/progressbar_role) informa al navegador que este elemento es en realidad un widget de barra de progreso impulsado por JavaScript. [`aria-valuemin`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) y [`aria-valuemax`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) especifican los valores mínimo y máximo para la barra de progreso, y [`aria-valuenow`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) describe el actual estado del mismo y por lo tanto debe mantenerse actualizado con JavaScript.
@@ -55,15 +57,17 @@ Habría sido mucho más simple usar el elemento nativo {{HTMLElement('progress')
 <progress id="percent-loaded" value="75" max="100">75 %</progress>
 ```
 
-> **Nota:** El atributo `min` no está permitido para el elemento {{HTMLElement('progress')}}; su valor mínimo es siempre `0`.
+> [!NOTE]
+> El atributo `min` no está permitido para el elemento {{HTMLElement('progress')}}; su valor mínimo es siempre `0`.
 
-> **Nota:** Los elementos de referencia HTML ({{HTMLElement("main")}}, {{HTMLElement("header")}}, {{HTMLElement("nav")}} etc.) tienen roles ARIA implícitos, por lo que no es necesario duplicarlos.
+> [!NOTE]
+> Los elementos de referencia HTML ({{HTMLElement("main")}}, {{HTMLElement("header")}}, {{HTMLElement("nav")}} etc.) tienen roles ARIA implícitos, por lo que no es necesario duplicarlos.
 
 ## Soporte
 
 Como cualquier otra tecnología web, existen diversos grados de soporte para ARIA. El soporte se basa en el sistema operativo y el navegador que se utiliza, así como en el tipo de tecnología de asistencia que interactúa con él. Además, la versión del sistema operativo, el navegador y la tecnología de asistencia son factores que contribuyen. Es posible que las versiones de software anteriores no admitan ciertas funciones de ARIA, solo tengan compatibilidad parcial o informen incorrectamente su funcionalidad.
 
-También es importante reconocer que algunas personas que confían en la tecnología de asistencia son reacias a actualizar su software por temor a perder la capacidad de interactuar con su computadora y navegador. Debido a esto, es importante [usar elementos HTML semánticos](/es/docs/Learn/Accessibility/HTML) siempre que sea posible, ya que el HTML semántico es mucho más compatible con la tecnología de asistencia.
+También es importante reconocer que algunas personas que confían en la tecnología de asistencia son reacias a actualizar su software por temor a perder la capacidad de interactuar con su computadora y navegador. Debido a esto, es importante [usar elementos HTML semánticos](/es/docs/Learn_web_development/Core/Accessibility/HTML) siempre que sea posible, ya que el HTML semántico es mucho más compatible con la tecnología de asistencia.
 
 También es importante probar su ARIA creado con tecnología de asistencia real. Así como los emuladores y simuladores de navegador no son una solución efectiva para probar el soporte completo, las soluciones de tecnología de asistencia de emuladas no son suficientes para garantizar completamente la funcionalidad.
 
@@ -80,13 +84,13 @@ También es importante probar su ARIA creado con tecnología de asistencia real.
 
 - [Mejora de la navegación de páginas con referencias de ARIA](https://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
   - : Una buena introducción al uso de los puntos de referencia de ARIA para mejorar la navegación de la página web para los usuarios de lectores de pantalla. [Consulte también las notas de implementación históricas de ARIA](https://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/) y ejemplos en sitios reales (actualizado en julio de 2011).
-- [Mejorando la accesibilidad de los formularios](/es/docs/Web/Accessibility/ARIA/forms)
+- [Mejorando la accesibilidad de los formularios](/es/docs/conflicting/Web/Accessibility/ARIA_44f49c8e1fe8e4c12920395d890bd793)
   - : ¡ARIA no es solo para contenido dinámico! Aprenda a mejorar la accesibilidad de los formularios HTML utilizando atributos ARIA adicionales.
 
 ## ARIA para widgets con scripts
 
 - [Escribir widgets JavaScript navegables por teclado](/es/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
-  -: Elementos integrados como {{HTMLElement("input")}}, {{HTMLElement("button")}} etc. tienen accesibilidad de teclado integrado. Si 'falsifica' estos con {{HTMLElement("div")}}s y ARIA, debe asegurarse de que sus widgets sean accesibles desde el teclado.
+  - : Elementos integrados como {{HTMLElement("input")}}, {{HTMLElement("button")}} etc. tienen accesibilidad de teclado integrado. Si 'falsifica' estos con {{HTMLElement("div")}}s y ARIA, debe asegurarse de que sus widgets sean accesibles desde el teclado.
 - [Regiones en vivo](/es/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
   - : Las regiones activas brindan sugerencias a los lectores de pantalla sobre cómo manejar los cambios en el contenido de una página.
 - [Uso de regiones en vivo de ARIA para anunciar cambios de contenido](https://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm)
@@ -96,7 +100,7 @@ También es importante probar su ARIA creado con tecnología de asistencia real.
 
 - [Funciones ARIA](/es/docs/Web/Accessibility/ARIA/Roles)
   - : Páginas de referencia que cubren todos los roles de WAI-ARIA discutidos en MDN.
-- [Estados y propiedades de ARIA](/es/docs/Web/Accessibility/ARIA/Attributes)
+- [Estados y propiedades de ARIA](/es/docs/Web/Accessibility/ARIA/Reference/Attributes)
   - : Páginas de referencia que cubren todos los estados y propiedades de WAI-ARIA discutidos en MDN.rted por NVDA con Firefox y VoiceOver con Safari.
 
 ## Esfuerzos de estandarización
@@ -118,4 +122,4 @@ Las siguientes charlas son una excelente manera de entender ARIA:
 
 ## Temas relacionados
 
-[Accesibilidad](/es/docs/Web/Accessibility), [AJAX](/es/docs/Web/Guide/AJAX), [JavaScript](/es/docs/Web/JavaScript)
+[Accesibilidad](/es/docs/Web/Accessibility), [AJAX](/es/docs/Learn_web_development/Core/Scripting/Network_requests), [JavaScript](/es/docs/Web/JavaScript)

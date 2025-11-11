@@ -1,16 +1,27 @@
 ---
 title: String.prototype.replaceAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
-translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/replaceAll
 ---
+
 {{JSRef}}
 
 La méthode **`replaceAll()`** retourne une nouvelle chaîne de caractères dans laquelle toutes les occurrences d'un motif donné ont été remplacées par une chaîne de remplacement. L'argument `pattern` fournit pour décrire le motif peut être une chaîne de caractères ou une expression rationnelle ([`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp)), l'argument `replacement` peut être une chaîne de caractères ou une fonction qui sera appelée pour chaque correspondance.
 
 La chaîne de caractères initiale restera inchangée.
 
-{{EmbedInteractiveExample("pages/js/string-replaceall.html")}}
+{{InteractiveExample("JavaScript Demo: String.replaceAll()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+console.log(paragraph.replaceAll("dog", "monkey"));
+// Expected output: "I think Ruth's monkey is cuter than your monkey!"
+
+// Global flag required when calling replaceAll with regex
+const regex = /Dog/gi;
+console.log(paragraph.replaceAll(regex, "ferret"));
+// Expected output: "I think Ruth's ferret is cuter than your ferret!"
+```
 
 ## Syntaxe
 
@@ -18,7 +29,8 @@ La chaîne de caractères initiale restera inchangée.
 const newStr = str.replaceAll(regexp|substr, newSubstr|function)
 ```
 
-> **Note :** Quand on utilise une expression rationnelle, il est nécessaire d'utiliser le marqueur global ("g"); autrement, l'exception `TypeError`: _"replaceAll must be called with a global RegExp"_ sera levée.
+> [!NOTE]
+> Quand on utilise une expression rationnelle, il est nécessaire d'utiliser le marqueur global ("g"); autrement, l'exception `TypeError`: _"replaceAll must be called with a global RegExp"_ sera levée.
 
 ### Paramètres
 
@@ -112,7 +124,7 @@ Le nombre d'arguments exact dépend du premier argument de `replaceAll()` : si c
 ### Utiliser replaceAll()
 
 ```js
-'aabbcc'.replaceAll('b', '.');
+"aabbcc".replaceAll("b", ".");
 // 'aa..cc'
 ```
 
@@ -128,19 +140,17 @@ TypeError: replaceAll must be called with a global RegExp
 L'exemple suivant, utilisant le marqueur `g`, fonctionnera :
 
 ```js example-good
-'aabbcc'.replaceAll(/b/g, '.');
-"aa..cc"
+"aabbcc".replaceAll(/b/g, ".");
+("aa..cc");
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.replaceall', 'String.prototype.replaceAll')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.replaceAll")}}
+{{Compat}}
 
 ## Voir aussi
 

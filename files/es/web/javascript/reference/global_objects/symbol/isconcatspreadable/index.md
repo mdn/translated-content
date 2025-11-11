@@ -1,17 +1,30 @@
 ---
 title: Symbol.isConcatSpreadable
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
-original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
-browser-compat: javascript.builtins.Symbol.isConcatSpreadable
 l10n:
   sourceCommit: 88508ebe5c73264be2cf03f1a949d8099d68d1ea
 ---
+
 {{JSRef}}
 
 El símbolo conocido como **`Symbol.isConcatSpreadable`** se utiliza para configurar si un objeto debe ser aplanado a sus elementos del array cuando se utiliza el método {{jsxref("Array.prototype.concat()")}}.
 
-{{EmbedInteractiveExample("pages/js/symbol-isconcatspreadable.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.isConcatSpreadable")}}
+
+```js interactive-example
+const alpha = ["a", "b", "c"];
+const numeric = [1, 2, 3];
+let alphaNumeric = alpha.concat(numeric);
+
+console.log(alphaNumeric);
+// Expected output: Array ["a", "b", "c", 1, 2, 3]
+
+numeric[Symbol.isConcatSpreadable] = false;
+alphaNumeric = alpha.concat(numeric);
+
+console.log(alphaNumeric);
+// Expected output: Array ["a", "b", "c", Array [1, 2, 3]]
+```
 
 ## Descripción
 
@@ -40,13 +53,13 @@ console.log(alphaNumeric)  // Resultado: ['a', 'b', 'c', 1, 2, 3]
 Al establecer el valor de `Symbol.isConcatSpreadable` a `false`, puedes desactivar el comportamiento por defecto:
 
 ```js
-let alpha = ['a', 'b', 'c']
-let numeric = [1, 2, 3]
+let alpha = ["a", "b", "c"];
+let numeric = [1, 2, 3];
 
-numeric[Symbol.isConcatSpreadable] = false
-let alphaNumeric = alpha.concat(numeric)
+numeric[Symbol.isConcatSpreadable] = false;
+let alphaNumeric = alpha.concat(numeric);
 
-console.log(alphaNumeric)  // Resultado: ['a', 'b', 'c', [1, 2, 3] ]
+console.log(alphaNumeric); // Resultado: ['a', 'b', 'c', [1, 2, 3] ]
 ```
 
 ### Objetos tipo array
@@ -54,16 +67,16 @@ console.log(alphaNumeric)  // Resultado: ['a', 'b', 'c', [1, 2, 3] ]
 Para los objetos tipo array, el valor por defecto es no extender. `Symbol.isConcatSpreadable` necesita ser establecido a `true` para obtener un array aplanado:
 
 ```js
-let x = [1, 2, 3]
+let x = [1, 2, 3];
 
 let fakeArray = {
   [Symbol.isConcatSpreadable]: true,
   length: 2,
-  0: 'hello',
-  1: 'world'
-}
+  0: "hello",
+  1: "world",
+};
 
-x.concat(fakeArray)  // [1, 2, 3, "hello", "world"]
+x.concat(fakeArray); // [1, 2, 3, "hello", "world"]
 ```
 
 **Nota:** La propiedad `length` se utiliza para controlar el número de propiedades del objeto a añadir. En el ejemplo anterior, `length:2` indica que hay que añadir dos propiedades.

@@ -1,30 +1,26 @@
 ---
 title: Manipulation vidéo avec la balise canvas
 slug: Web/API/Canvas_API/Manipulating_video_using_canvas
-tags:
-  - Canvas
-  - Video
-translation_of: Web/API/Canvas_API/Manipulating_video_using_canvas
-original_slug: HTML/Manipulating_video_using_canvas
 ---
-{{CanvasSidebar}}
 
-En combinant les possibilités de l'élément [`video`](/En/HTML/Element/Video) avec celles de l'élément [`canvas`](/en/HTML/Canvas), vous pouvez manipuler les données vidéos en temps réel, et y incorporer une variété d'effets visuels. Ce tutoriel explique comment réaliser un travail d'incrustation "chroma-keying" (_fond vert_) en utilisant JavaScript.
+{{DefaultAPISidebar("Canvas API")}}
 
-[Voir l'exemple](/samples/video/chroma-key/index.xhtml).
+En combinant les possibilités de l'élément [`video`](/fr/docs/Web/HTML/Reference/Elements/video) avec celles de l'élément [`canvas`](/fr/docs/Web/HTML/Reference/Elements/canvas), vous pouvez manipuler les données vidéos en temps réel, et y incorporer une variété d'effets visuels. Ce tutoriel explique comment réaliser un travail d'incrustation "chroma-keying" (_fond vert_) en utilisant JavaScript.
+
+[Voir l'exemple](https://mdn.dev/archives/media/samples/video/chroma-key/index.xhtml).
 
 ## Le contenu du document
 
 Le document XHTML utilisé pour rendre ce contenu est montré ci-dessous :
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <style>
       body {
         background: black;
-        color:#CCCCCC;
+        color: #cccccc;
       }
       #c2 {
         background-image: url(foo.png);
@@ -32,10 +28,10 @@ Le document XHTML utilisé pour rendre ce contenu est montré ci-dessous :
       }
       div {
         float: left;
-        border :1px solid #444444;
-        padding:10px;
+        border: 1px solid #444444;
+        padding: 10px;
         margin: 10px;
-        background:#3B3B3B;
+        background: #3b3b3b;
       }
     </style>
     <script type="text/javascript" src="main.js"></script>
@@ -43,7 +39,7 @@ Le document XHTML utilisé pour rendre ce contenu est montré ci-dessous :
 
   <body onload="processor.doLoad()">
     <div>
-      <video id="video" src="video.ogv" controls="true"/>
+      <video id="video" src="video.ogv" controls="true" />
     </div>
     <div>
       <canvas id="c1" width="160" height="96"></canvas>
@@ -55,7 +51,7 @@ Le document XHTML utilisé pour rendre ce contenu est montré ci-dessous :
 
 Les éléments clés à retenir sont :
 
-1. Ce document dispose de deux balises [`canvas`](/fr/docs/Web/HTML/Element/canvas), avec les identifiants `c1` et `c2`&nbsp; l'élément `c1` est utilisé pour afficher l'image courante de la vidéo originale, pendant que `c2` est utilisé pour afficher la vidéo après application de l'effet d'incrustation&nbsp;; `c2` est préchargé avec la même image que celle qui sera utilisée pour le remplacement du fond vert.
+1. Ce document dispose de deux balises [`canvas`](/fr/docs/Web/HTML/Reference/Elements/canvas), avec les identifiants `c1` et `c2`&nbsp; l'élément `c1` est utilisé pour afficher l'image courante de la vidéo originale, pendant que `c2` est utilisé pour afficher la vidéo après application de l'effet d'incrustation&nbsp;; `c2` est préchargé avec la même image que celle qui sera utilisée pour le remplacement du fond vert.
 2. Le code JavaScript est importé dans le script nommé `main.js` ; Ce script utilise les fonctionnalités propres à la version 1.8, aussi cette version est précisée, à la ligne 22, quand le script est importé.
 3. Quand le document se charge, la méthode `processor.doLoad()`, dans le script `main.js`, est exécutée.
 
@@ -118,20 +114,19 @@ La méthode `computeFrame()` , présentée ci-dessous, est en charge de récupé
 
 ```js
 processor.computeFrame = function computeFrame() {
-    this.ctx1.drawImage(this.video, 0, 0, this.width, this.height);
-    let frame = this.ctx1.getImageData(0, 0, this.width, this.height);
-    let l = frame.data.length / 4;
+  this.ctx1.drawImage(this.video, 0, 0, this.width, this.height);
+  let frame = this.ctx1.getImageData(0, 0, this.width, this.height);
+  let l = frame.data.length / 4;
 
-    for (let i = 0; i < l; i++) {
-      let r = frame.data[i * 4 + 0];
-      let g = frame.data[i * 4 + 1];
-      let b = frame.data[i * 4 + 2];
-      if (g > 100 && r > 100 && b < 43)
-        frame.data[i * 4 + 3] = 0;
-    }
-    this.ctx2.putImageData(frame, 0, 0);
-    return;
+  for (let i = 0; i < l; i++) {
+    let r = frame.data[i * 4 + 0];
+    let g = frame.data[i * 4 + 1];
+    let b = frame.data[i * 4 + 2];
+    if (g > 100 && r > 100 && b < 43) frame.data[i * 4 + 3] = 0;
   }
+  this.ctx2.putImageData(frame, 0, 0);
+  return;
+};
 ```
 
 ²
@@ -156,8 +151,8 @@ L'image résultante ressemble à ceci :
 
 Cela se fait de façon répétée au fur et à mesure que la vidéo est lue, de sorte que, image après image, la vidéo est traitée et affichée avec l'effet de chrominance.
 
-[Voyez cet exemple réel](/samples/video/chroma-key/index.xhtml).
+[Voyez cet exemple réel](https://mdn.dev/archives/media/samples/video/chroma-key/index.xhtml).
 
 ## Voir aussi
 
-- [Using audio and video](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [Using audio and video](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)

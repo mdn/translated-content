@@ -1,25 +1,29 @@
 ---
 title: Date.prototype.getUTCMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getUTCMinutes
 ---
+
 {{JSRef}}
 
 La méthode **`getUTCMinutes()`** renvoie les minutes de la date renseignée, d'après UTC.
 
-{{EmbedInteractiveExample("pages/js/date-getutcminutes.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getUTCMinutes()")}}
+
+```js interactive-example
+const date1 = new Date("1 January 2000 03:15:30 GMT+07:00");
+const date2 = new Date("1 January 2000 03:15:30 GMT+03:30");
+
+console.log(date1.getUTCMinutes()); // 31 Dec 1999 20:15:30 GMT
+// Expected output: 15
+
+console.log(date2.getUTCMinutes()); // 31 Dec 1999 23:45:30 GMT
+// Expected output: 45
+```
 
 ## Syntaxe
 
 ```js
-dateObj.getUTCMinutes()
+dateObj.getUTCMinutes();
 ```
 
 ### Valeur de retour
@@ -39,16 +43,11 @@ var minutes = aujourdhui.getUTCMinutes();
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.9.5.21', 'Date.prototype.getUTCMinutes')}}                             | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-date.prototype.getutcminutes', 'Date.prototype.getUTCMinutes')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-date.prototype.getutcminutes', 'Date.prototype.getUTCMinutes')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.getUTCMinutes")}}
+{{Compat}}
 
 ## Voir aussi
 

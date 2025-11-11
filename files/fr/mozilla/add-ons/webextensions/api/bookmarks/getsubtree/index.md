@@ -1,32 +1,22 @@
 ---
 title: bookmarks.getSubTree()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getSubTree
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getSubTree
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/getSubTree
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 La méthode **`bookmarks.getSubTree()`** récupère de façon asynchrone un {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}, étant donné son ID.
 
 Si l'élément est un dossier, vous pouvez accéder à tous ses descendants de manière récursive en utilisant sa propriété `children` et la propriété `children` de ses descendants, s'ils sont eux-mêmes des dossiers.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var gettingSubTree = browser.bookmarks.getSubTree(
-  id                     // string
-)
+  id, // string
+);
 ```
 
 ### Paramètres
@@ -36,7 +26,7 @@ var gettingSubTree = browser.bookmarks.getSubTree(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un tableau contenant un objet unique, un objet {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}, représentant l'élément avec l'ID donné.Si un nœud correspondant à `id` n'a pas pu être trouvé, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un tableau contenant un objet unique, un objet {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}, représentant l'élément avec l'ID donné.Si un nœud correspondant à `id` n'a pas pu être trouvé, la promesse sera rejetée avec un message d'erreur.
 
 ## Exemples
 
@@ -77,17 +67,16 @@ gettingSubTree.then(logSubTree, onRejected);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.bookmarks.getSubTree")}}
+{{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de  [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -114,4 +103,4 @@ gettingSubTree.then(logSubTree, onRejected);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

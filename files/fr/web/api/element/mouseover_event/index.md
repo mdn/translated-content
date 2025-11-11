@@ -1,15 +1,8 @@
 ---
-title: 'Element : évènement mouseover'
+title: "Element : évènement mouseover"
 slug: Web/API/Element/mouseover_event
-tags:
-  - API
-  - DOM
-  - Event
-  - Interface
-  - Reference
-  - mouseover
-translation_of: Web/API/Element/mouseover_event
 ---
+
 {{APIRef}}
 
 L'évènement **`mouseover`** est déclenché à partir d'un {{domxref("Element")}} lorsqu'un dispositif de pointage (une souris par exemple) déplace le curseur sur l'élément ou sur l'un de ses éléments fils.
@@ -39,7 +32,7 @@ L'évènement **`mouseover`** est déclenché à partir d'un {{domxref("Element"
 
 ## Exemples
 
-L'exemple suivant illustre la différence entre les évènements `mouseover` et [`mouseenter`](/fr/docs/Web/Events/mouseenter).
+L'exemple suivant illustre la différence entre les évènements `mouseover` et [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event).
 
 ### HTML
 
@@ -58,27 +51,35 @@ let test = document.getElementById("test");
 
 // Ce gestionnaire ne sera exécuté qu'une fois
 // lorsque le curseur se déplace sur la liste
-test.addEventListener("mouseenter", function( event ) {
-  // on met l'accent sur la cible de mouseenter
-  event.target.style.color = "purple";
+test.addEventListener(
+  "mouseenter",
+  function (event) {
+    // on met l'accent sur la cible de mouseenter
+    event.target.style.color = "purple";
 
-  // on réinitialise la couleur après quelques instants
-  setTimeout(function() {
-    event.target.style.color = "";
-  }, 500);
-}, false);
+    // on réinitialise la couleur après quelques instants
+    setTimeout(function () {
+      event.target.style.color = "";
+    }, 500);
+  },
+  false,
+);
 
 // Ce gestionnaire sera exécuté à chaque fois que le curseur
 // se déplacera sur un autre élément de la liste
-test.addEventListener("mouseover", function( event ) {
-  // on met l'accent sur la cible de mouseover
-  event.target.style.color = "orange";
+test.addEventListener(
+  "mouseover",
+  function (event) {
+    // on met l'accent sur la cible de mouseover
+    event.target.style.color = "orange";
 
-  // on réinitialise la couleur après quelques instants
-  setTimeout(function() {
-    event.target.style.color = "";
-  }, 500);
-}, false);
+    // on réinitialise la couleur après quelques instants
+    setTimeout(function () {
+      event.target.style.color = "";
+    }, 500);
+  },
+  false,
+);
 ```
 
 ### Résultat
@@ -87,20 +88,16 @@ test.addEventListener("mouseover", function( event ) {
 
 ## Spécifications
 
-| Spécification                                                                            | État                             |
-| ---------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('UI Events', '#event-type-mouseover', 'mouseover')}}     | {{Spec2('UI Events')}}     |
-| {{SpecName('DOM3 Events', '#event-type-mouseover', 'mouseover')}} | {{Spec2('DOM3 Events')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.mouseover_event")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Une introduction aux évènements](/fr/docs/Apprendre/JavaScript/Building_blocks/Evènements)
+- [Une introduction aux évènements](/fr/docs/Learn_web_development/Core/Scripting/Events)
 - D'autres évènements connexes
-
   - [`mousedown`](/fr/docs/Web/API/Element/mousedown_event)
   - [`mouseup`](/fr/docs/Web/API/Element/mouseup_event)
   - [`mousemove`](/fr/docs/Web/API/Element/mousemove_event)

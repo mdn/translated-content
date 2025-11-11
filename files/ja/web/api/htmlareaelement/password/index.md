@@ -1,20 +1,20 @@
 ---
-title: HTMLAreaElement.password
+title: "HTMLAreaElement: password プロパティ"
+short-title: password
 slug: Web/API/HTMLAreaElement/password
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAreaElement
-  - プロパティ
-browser-compat: api.HTMLAreaElement.password
-translation_of: Web/API/HTMLAreaElement/password
-original_slug: Web/API/HTMLHyperlinkElementUtils/password
+l10n:
+  sourceCommit: 8cc63f7e6619446ea38f6a38c457a597a9af564b
 ---
+
 {{ApiRef("HTML DOM")}}
 
-**`HTMLAnchorElement.password`** プロパティは、ドメイン名の前で指定されたパスワードが入った文字列です。
+**`password`** は {{domxref("HTMLAreaElement")}} インターフェイスのプロパティで、 `<area>` 要素の `href` のパスワード成分が入った文字列です。 URL にパスワードが存在しなかった場合、このプロパティには空文字列 (`""`) が入ります。
 
-先に [`username`](/ja/docs/Web/API/HTMLAreaElement/username) プロパティを設定せずに設定しようとすると、暗黙のうちに失敗します。
+このプロパティを設定すると、URL のパスワードを変更することができます。URL に{{domxref("HTMLAreaElement.host", "ホスト名")}}が存在しない場合、またはそのスキームが `file:` の場合、このプロパティを設定しても効果はありません。
+
+パスワードは設定時に{{Glossary("Percent-encoding", "パーセントエンコード")}}されますが、読み取り時にはパーセントデコードされません。
+
+詳細については、 {{domxref("URL.password")}} を参照してください。
 
 ## 値
 
@@ -23,7 +23,7 @@ original_slug: Web/API/HTMLHyperlinkElementUtils/password
 ## 例
 
 ```js
-// <area id="myArea" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLAreaElement"> 要素が文書にあったとします
+// <area id="myArea" href="https://anonymous:flabada@developer.mozilla.org/ja/docs/HTMLAreaElement"> 要素が文書にあったとします
 const area = document.getElementByID("myArea");
 area.password; // 'flabada' を返す
 ```

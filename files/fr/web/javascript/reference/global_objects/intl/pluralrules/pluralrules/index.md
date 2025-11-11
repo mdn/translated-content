@@ -1,8 +1,8 @@
 ---
 title: Constructeur Intl.PluralRules()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules
-browser-compat: javascript.builtins.Intl.PluralRules.PluralRules
 ---
+
 {{JSRef}}
 
 Le constructeur **`Intl.PluralRules()`** permet de créer des objets [`Intl.PluralRules`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules).
@@ -10,9 +10,9 @@ Le constructeur **`Intl.PluralRules()`** permet de créer des objets [`Intl.Plur
 ## Syntaxe
 
 ```js
-new Intl.PluralRules()
-new Intl.PluralRules(locales)
-new Intl.PluralRules(locales, options)
+new Intl.PluralRules();
+new Intl.PluralRules(locales);
+new Intl.PluralRules(locales, options);
 ```
 
 ### Parameters
@@ -20,20 +20,15 @@ new Intl.PluralRules(locales, options)
 - `locales` {{optional_inline}}
   - : Une chaîne de caractères représentant une balise de langue BCP 47 ou un tableau de telles balises. Pour la forme générale et l'interprétation de cet argument, voir la page [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl#identification_et_choix_de_la_locale).
 - `options` {{optional_inline}}
-
   - : Un objet avec une ou plusieurs des propriétés suivantes&nbsp;:
-
     - `localeMatcher`
       - : L'algorithme de correspondance des locales à utiliser. Les valeurs possibles sont "`lookup`" et "`best fit`"&nbsp;; la valeur par défaut est "`best fit`". Pour plus d'information, voir la page [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl#négociation_de_la_locale).
     - `type`
-
       - : Le type à utiliser. Les valeurs possibles sont&nbsp;:
-
         - "`cardinal`" pour les nombres cardinaux (qui indiquent une quantité de choses). C'est la valeur par défaut.
         - "`ordinal`" pour les nombres ordinaux (qui indiquent un ordre ou un classement comme "1er", "2e", "3e").
 
     Les propriétés suivantes appartiennent à deux groupes distincts&nbsp;: `minimumIntegerDigits`, `minimumFractionDigits`, et `maximumFractionDigits` pour le premier et `minimumSignificantDigits` et `maximumSignificantDigits` dans l'autre. Si au moins une des propriétés du second groupe est définie, le premier groupe est ignoré.
-
     - `minimumIntegerDigits`
       - : Le nombre minimal de chiffres à utiliser. Les valeurs possibles vont de 1 à 21&nbsp;; la valeur par défaut est 1.
     - `minimumFractionDigits`
@@ -66,13 +61,13 @@ pr.select(2);
 Les résultats peuvent être personnalisés avec l'argument `options` qui possède une propriété `type` qu'on peut fixer à `ordinal`. Cela s'avère utile pour déterminer l'indicateur ordinal (par exemple en anglais où il y a des variations entre "1st", "2nd", "3rd", "4th", "42nd" et ainsi de suite).
 
 ```js
-var pr = new Intl.PluralRules('en-US', { type: 'ordinal' });
+var pr = new Intl.PluralRules("en-US", { type: "ordinal" });
 
 const suffixes = new Map([
-  ['one',   'st'],
-  ['two',   'nd'],
-  ['few',   'rd'],
-  ['other', 'th'],
+  ["one", "st"],
+  ["two", "nd"],
+  ["few", "rd"],
+  ["other", "th"],
 ]);
 const formatOrdinals = (n) => {
   const rule = pr.select(n);
@@ -80,14 +75,14 @@ const formatOrdinals = (n) => {
   return `${n}${suffix}`;
 };
 
-formatOrdinals(0);   // '0th'
-formatOrdinals(1);   // '1st'
-formatOrdinals(2);   // '2nd'
-formatOrdinals(3);   // '3rd'
-formatOrdinals(4);   // '4th'
-formatOrdinals(11);  // '11th'
-formatOrdinals(21);  // '21st'
-formatOrdinals(42);  // '42nd'
+formatOrdinals(0); // '0th'
+formatOrdinals(1); // '1st'
+formatOrdinals(2); // '2nd'
+formatOrdinals(3); // '3rd'
+formatOrdinals(4); // '4th'
+formatOrdinals(11); // '11th'
+formatOrdinals(21); // '21st'
+formatOrdinals(42); // '42nd'
 formatOrdinals(103); // '103rd'
 ```
 

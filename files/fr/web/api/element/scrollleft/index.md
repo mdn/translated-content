@@ -1,14 +1,13 @@
 ---
 title: Element.scrollLeft
 slug: Web/API/Element/scrollLeft
-translation_of: Web/API/Element/scrollLeft
-browser-compat: api.Element.scrollLeft
 ---
+
 {{APIRef("DOM")}}
 
 La propriété **`Element.scrollLeft`** permet de lire ou de modifier le nombre de pixels le long desquels le contenu d'un élément a défilé depuis son bord gauche.
 
-Si la propriété [`direction`](/fr/docs/Web/CSS/direction) de l'élément vaut `rtl` (pour une écriture de droite à gauche), `scrollLeft` est à `0` lorsque la barre de défilement est à la position la plus à droite possible (ce qui correspond au début du contenu à faire défiler) et elle devient de plus en plus négative lors du défilement vers la fin du contenu.
+Si la propriété [`direction`](/fr/docs/Web/CSS/Reference/Properties/direction) de l'élément vaut `rtl` (pour une écriture de droite à gauche), `scrollLeft` est à `0` lorsque la barre de défilement est à la position la plus à droite possible (ce qui correspond au début du contenu à faire défiler) et elle devient de plus en plus négative lors du défilement vers la fin du contenu.
 
 Cette propriété peut être définie avec n'importe quelle valeur entière. Toutefois&nbsp;:
 
@@ -16,7 +15,8 @@ Cette propriété peut être définie avec n'importe quelle valeur entière. Tou
 - Si la valeur fournie est inférieure à `0` (ou supérieure à `0` pour les éléments écrits de droite à gauche), `scrollLeft` sera fixée à `0`.
 - Si la valeur fournie est supérieure au défilement maximal possible pour le contenu, `scrollLeft` sera fixée à la valeur maximale possible.
 
-> **Attention :** Pour les systèmes qui utilisent une mise à l'échelle pour l'affichage (<i lang="en">display scaling</i>), `scrollLeft` pourra fournir une valeur décimale.
+> [!WARNING]
+> Pour les systèmes qui utilisent une mise à l'échelle pour l'affichage (<i lang="en">display scaling</i>), `scrollLeft` pourra fournir une valeur décimale.
 
 ## Valeur
 
@@ -53,10 +53,10 @@ Un nombre
 ### JavaScript
 
 ```js
-const button = document.getElementById('slide');
+const button = document.getElementById("slide");
 
 button.onclick = function () {
-  document.getElementById('container').scrollLeft += 20;
+  document.getElementById("container").scrollLeft += 20;
 };
 ```
 

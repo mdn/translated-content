@@ -1,21 +1,24 @@
 ---
 title: Map.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Map/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/has
-original_slug: Web/JavaScript/Reference/Global_Objects/Map/has
 ---
+
 {{JSRef}}
 
 La méthode **`has()`** renvoie un booléen permettant de déterminer si l'objet `Map` en question contient la clé donnée.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-has.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.has()")}}
+
+```js interactive-example
+const map1 = new Map();
+map1.set("bar", "foo");
+
+console.log(map1.has("bar"));
+// Expected output: true
+
+console.log(map1.has("baz"));
+// Expected output: false
+```
 
 ## Syntaxe
 
@@ -38,20 +41,17 @@ Cette méthode renvoie un booléen : `true` si un élément avec cette clé exis
 var maMap = new Map();
 maMap.set("truc", "toto");
 
-maMap.has("truc");  // renvoie true
-maMap.has("machin");// renvoie false
+maMap.has("truc"); // renvoie true
+maMap.has("machin"); // renvoie false
 ```
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-map.prototype.has', 'Map.prototype.has')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-map.prototype.has', 'Map.prototype.has')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Map.has")}}
+{{Compat}}
 
 ## Voir aussi
 

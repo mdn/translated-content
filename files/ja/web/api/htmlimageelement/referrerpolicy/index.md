@@ -1,23 +1,19 @@
 ---
-title: HTMLImageElement.referrerPolicy
+title: "HTMLImageElement: referrerPolicy プロパティ"
+short-title: referrerPolicy
 slug: Web/API/HTMLImageElement/referrerPolicy
-page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - HTMLImageElement
-  - プロパティ
-  - Referrer Policy
-browser-compat: api.HTMLImageElement.referrerPolicy
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLImageElement.referrerPolicy`** プロパティは、
- HTML の {{HTMLElement("img")}} 要素の {{htmlattrxref("referrerpolicy","img")}} 属性を反映し、リソースの取得時に送信されるリファラーを定義します。
+HTML の {{HTMLElement("img")}} 要素の [`referrerpolicy`](/ja/docs/Web/HTML/Reference/Elements/img#referrerpolicy) 属性を反映し、リソースの取得時に送信されるリファラーを定義します。
 
 ## 値
 
-文字列で、以下のうちの一つです。
+文字列で、以下の何れかです。
 
 - `no-referrer`
   - : {{HTTPHeader("Referer")}} ヘッダーは完全に省略されます。リクエストと共に送信されるリファラー情報はありません。
@@ -41,11 +37,11 @@ browser-compat: api.HTMLImageElement.referrerPolicy
 ## 例
 
 ```js
-var img = new Image();
-img.src = 'img/logo.png';
-img.referrerPolicy = 'origin';
+const img = new Image();
+img.src = "img/logo.png";
+img.referrerPolicy = "origin";
 
-var div = document.getElementById('divAround');
+const div = document.getElementById("divAround");
 div.appendChild(img); // オリジンをリファラーとして画像を取得する
 ```
 

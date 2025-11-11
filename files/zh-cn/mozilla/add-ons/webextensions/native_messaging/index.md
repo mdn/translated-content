@@ -1,9 +1,7 @@
 ---
 title: 与本地应用通信
 slug: Mozilla/Add-ons/WebExtensions/Native_messaging
-translation_of: Mozilla/Add-ons/WebExtensions/Native_messaging
 ---
-{{AddonSidebar}}
 
 Native messaging 可以让 extension 与安装在用户计算机上的原生应用交换信息。原生应用仅需给 extension 提供服务，而无需在网页中可访问。一个常见的例子是密码管理器：原生应用负责存储和加密你的密码，并且和 extension 通信来填充网页中的表单字段。Native messaging 可以让 extension 拥有那些 WebExtensions APIs 所没有的功能，比如访问某些特定的硬件。
 
@@ -20,7 +18,7 @@ extension 必须在 manifest.json 中获得"nativeMessaging" [权限](/zh-CN/doc
 - 在 WebExtensions 中，原生应用的清单中的 "allowed_extensions" 字段是一个由 extension ID 组成的数组，而在 Chrome 中，清单中的 "allowed_origins" 字段是一个由 "chrome-extension" URLs 组成的数组
 - 原生应用清单的存储位置不一样
 
-Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensions-examples)有一个[完整的关于 native messaging 的例子](https://github.com/mdn/webextensions-examples/tree/master/native-messaging)，文章中的大部分代码片段均出于此。
+Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensions-examples)有一个[完整的关于 native messaging 的例子](https://github.com/mdn/webextensions-examples/tree/main/native-messaging)，文章中的大部分代码片段均出于此。
 
 ## 安装
 
@@ -35,7 +33,6 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
 
 ```json
 {
-
   "description": "Native messaging example extension",
   "manifest_version": 2,
   "name": "Native messaging example",
@@ -60,7 +57,6 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
   },
 
   "permissions": ["nativeMessaging"]
-
 }
 ```
 
@@ -70,9 +66,10 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
 
 原生应用清单需要与原生应用一起安装，浏览器仅会查阅清单而不会安装或管理原生应用。因此，何时采用何种方式来安装或更新这些文件的安全模型比起使用 WebExtensions APIs 更像原生应用。（我也搞不懂这句啥意思，原文：Thus the security model for when and how these files are installed and updated is much more like that for native applications than that for extensions using WebExtension APIs.）
 
-关于原生应用清单的详细语法和路径规则，可参考 [原生应用清单](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests)。
+关于原生应用清单的详细语法和路径规则，可参考 [原生应用清单](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Native_manifests)。
 
-> **警告：** 除清单外，原生应用还**必需**配置路径规则，你可以参考 [原生应用清单 ](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests)来配置路径。
+> [!WARNING]
+> 除清单外，原生应用还**必需**配置路径规则，你可以参考 [原生应用清单](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Native_manifests) 来配置路径。
 
 这有一个例子，是关于 "ping_pong" 原生应用的清单：
 
@@ -82,7 +79,7 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
   "description": "Example host for native messaging",
   "path": "/path/to/native-messaging/app/ping_pong.py",
   "type": "stdio",
-  "allowed_extensions": [ "ping_pong@example.org" ]
+  "allowed_extensions": ["ping_pong@example.org"]
 }
 ```
 
@@ -91,7 +88,8 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
 - 这个原生应用允许 ID 为 "ping_pong\@example.org" 的 extension 连接，并通过{{WebExtAPIRef("runtime")}} API 来传入信息
 - 这个原生应用本身存放在本机的 "/path/to/native-messaging/app/ping_pong.py" 中
 
-> **备注：** 对于 Windows：在上面的例子中，原生应用是一个 Python 脚本，它在 Windows 下可能是无法运行的。一个代替方案是提供一个 .bat 文件，并且在清单中指向这个 .bat 文件：
+> [!NOTE]
+> 对于 Windows：在上面的例子中，原生应用是一个 Python 脚本，它在 Windows 下可能是无法运行的。一个代替方案是提供一个 .bat 文件，并且在清单中指向这个 .bat 文件：
 >
 > ```json
 > {
@@ -99,7 +97,7 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
 >   "description": "Example host for native messaging",
 >   "path": "c:\\path\\to\\native-messaging\\app\\ping_pong_win.bat",
 >   "type": "stdio",
->   "allowed_extensions": [ "ping_pong@example.org" ]
+>   "allowed_extensions": ["ping_pong@example.org"]
 > }
 > ```
 >
@@ -117,7 +115,7 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
 
 ### Extension 端
 
-你使用过 [messaging APIs](/zh-CN/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts) 与 content script 通信，与原生应用通信你应该非常熟悉，有 2 种方式：
+你使用过 [messaging APIs](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts) 与 content script 通信，与原生应用通信你应该非常熟悉，有 2 种方式：
 
 - 基于连接的通信
 - 无连接的通信（请求/响应 模式）
@@ -129,7 +127,7 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
 当原生应用启动后，它被会传入 2 个参数：
 
 - 到原生应用清单的完整路径
-- （Firefox 55+）启动它的[ extension ID](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications)
+- （Firefox 55+）启动它的 [extension ID](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings)
 
 原生应用会一直保持运行，直到 extension 调用 `Port.disconnect()` 或连接它的记录被结束。
 
@@ -170,7 +168,7 @@ browser.browserAction.onClicked.addListener(() => {
 每个消息都会创建一个新的原生应用实例。当原生应用启动时会被传入 2 个参数：
 
 - 到原生应用清单的完整路径
-- （Firefox 55+）启动它的[ extension ID](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications)
+- （Firefox 55+）启动它的 [extension ID](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings)
 
 原生应用发送的第一条消息将会被作为对 `sendNativeMessage()` 响应，将会被传入回调函数中。
 
@@ -190,9 +188,7 @@ function onError(error) {
 */
 browser.browserAction.onClicked.addListener(() => {
   console.log("Sending:  ping");
-  var sending = browser.runtime.sendNativeMessage(
-    "ping_pong",
-    "ping");
+  var sending = browser.runtime.sendNativeMessage("ping_pong", "ping");
   sending.then(onResponse, onError);
 });
 ```
@@ -253,7 +249,7 @@ while True:
 
 ## 常见问题 Troubleshooting
 
-如果有什么地方出错，可以检查[浏览器控制台](/en-US/Add-ons/WebExtensions/Debugging#Viewing_log_output)。原生应用发送的任何 stderr 都会被反应在浏览器控制台中。所以如果你已经运行了原生应用，你可以看到原生应用发出的所有错误信息。
+如果有什么地方出错，可以检查[浏览器控制台](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Debugging#viewing_log_output)。原生应用发送的任何 stderr 都会被反应在浏览器控制台中。所以如果你已经运行了原生应用，你可以看到原生应用发出的所有错误信息。
 
 如果你没有配置好原生应用，你应该会看到一些错误信息。
 
@@ -308,4 +304,4 @@ while True:
 
 ## 与 Chrome 的兼容问题
 
-{{Page("Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities", "Native_messaging")}}
+浏览器之间存在许多影响 Web 扩展与本地应用通信的差异，包括到本地应用的参数传递、清单文件的位置，等等。这些差异在 [Chrome 不兼容情况 > Native messaging](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#native_messaging) 进行了讨论。

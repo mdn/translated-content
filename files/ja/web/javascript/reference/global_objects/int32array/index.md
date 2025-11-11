@@ -1,15 +1,8 @@
 ---
 title: Int32Array
 slug: Web/JavaScript/Reference/Global_Objects/Int32Array
-tags:
-  - クラス
-  - JavaScript
-  - TypedArray
-  - 型付き配列
-  - ポリフィル
-browser-compat: javascript.builtins.Int32Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Int32Array
 ---
+
 {{JSRef}}
 
 **`Int32Array`** は型付き配列で、プラットフォームのバイト順による 2 の補数形式の 32 ビット符号付き整数値の配列を表します。バイト順の制御が必要な場合は、代わりに {{jsxref("DataView")}} を使用してください。中身は `0` で初期化されます。生成されると、配列内の要素はそのオブジェクトのメソッドを使用するか、配列の標準的な添字の構文 (すなわち、ブラケット記法) を使用するかして参照することができます。
@@ -96,7 +89,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Int32Array
   - : 配列とその要素を表すローカライズされた文字列を返します。{{jsxref("Array.prototype.toLocaleString()")}} も参照してください。
 - {{jsxref("TypedArray.toString", "Int32Array.prototype.toString()")}}
   - : 配列とその要素を表す文字列を返します。{{jsxref("Array.prototype.toString()")}} も参照してください。
-- {{jsxref("TypedArray.@@iterator", "Int32Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray.@@iterator", "Int32Array.prototype[Symbol.iterator]()")}}
   - : 配列内ですべての位置における値を提供する新しい*配列イテレーター*を返します。
 
 ## 例
@@ -112,7 +105,7 @@ console.log(int16.length); // 2
 console.log(int16.BYTES_PER_ELEMENT); // 4
 
 // 配列から
-var arr = new Int32Array([21,31]);
+var arr = new Int32Array([21, 31]);
 console.log(arr[1]); // 31
 
 // From another TypedArray
@@ -125,7 +118,9 @@ var buffer = new ArrayBuffer(16);
 var z = new Int32Array(buffer, 0, 4);
 
 // 反復可能オブジェクトから
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var int16 = new Int32Array(iterable);
 // Int32Array[1, 2, 3]
 ```
@@ -141,6 +136,6 @@ var int16 = new Int32Array(iterable);
 ## 関連情報
 
 - `Int32Array` のポリフィルが [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays) で利用できます
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

@@ -1,28 +1,19 @@
 ---
 title: sidebarAction.setPanel()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setPanel
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - setPanel
-  - sidebarAction
-translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setPanel
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Définit le panneau de la barre latérale: c'est-à-dire le document HTML qui définit le contenu de cette barre latérale.
 
 ## Types de panneau
 
-Les barres latérales ont toujours un _"panneau manifest"_, qui est le panneau défini dans la clé de manifest [`sidebar_action`](/fr/Add-ons/WebExtensions/manifest.json/sidebar_action).
+Les barres latérales ont toujours un _"panneau manifest"_, qui est le panneau défini dans la clé de manifest [`sidebar_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action).
 
-Si vous définissez un nouveau panneau à l'aide de `setPanel()`, et incluez l'option `tabId` le panneau est défini uniquement pour l'onglet donné. Ce panneau est appelé "tab-specific panel"_.
+Si vous définissez un nouveau panneau à l'aide de `setPanel()`, et incluez l'option `tabId` le panneau est défini uniquement pour l'onglet donné. Ce panneau est appelé "tab-specific panel".
 
-Si vous définissez un nouveau panneau en utilisant `setPanel()`, et incluez l'option `windowId`, alors le panneau n'est défini que pour la fenêtre donnée.  Ce panneau est appelé _"panneau spécifique à la fenêtre"_, et apparaîtra dans tous les onglets de cette fenêtre qui n'ont pas d'ensemble de panneaux spécifiques aux onglets.
+Si vous définissez un nouveau panneau en utilisant `setPanel()`, et incluez l'option `windowId`, alors le panneau n'est défini que pour la fenêtre donnée. Ce panneau est appelé _"panneau spécifique à la fenêtre"_, et apparaîtra dans tous les onglets de cette fenêtre qui n'ont pas d'ensemble de panneaux spécifiques aux onglets.
 
 Si vous définissez un nouveau panneau en utilisant `setPanel()`, et omettez les options `tabId` et `windowId`, alors ceci définit le _"panneau global"_. Le panneau global apparaîtra alors dans tous les onglets qui n'ont pas d'ensemble de panneaux spécifiques aux onglets et dont la fenêtre n'a pas de panneau spécifique à une fenêtre.
 
@@ -30,24 +21,20 @@ Si vous définissez un nouveau panneau en utilisant `setPanel()`, et omettez les
 
 ```js
 browser.sidebarAction.setPanel(
-  details // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
 
 - `details`
-
   - : `object`. Un objet avec les propriétés suivantes :
-
     - `panel`
-
       - : `string` ou `null`. Le panneau à charger dans la barre latérale, spécifié comme une URL pointant vers un document HTML, ou `null`, ou une chaîne vide.
 
         Ceci peut pointer vers un fichier empaqueté dans l'extension (for exemple, créé à l'aide de {{WebExtAPIRef("runtime.getURL")}}), ou un document distant (par exemple `https://example.org/`). Il doit s'agir d'une URL valide.
 
         Si `panel` est `null` ou `""`,alors un panneau précédemment défini sera supprimé, de sorte que :
-
         - Si `tabId` est spécifié, et que l'onglet a un jeu de panneaux spécifiques aux onglets, alors l'onglet héritera du panneau à partir de la fenêtre à laquelle il appartient.
         - Si `windowId` est spécifié, et que la fenêtre a un jeu de panneaux spécifiques à la fenêtre, alors la fenêtre héritera du panneau global.
         - Sinon, le panneau global sera réinitialisé au panneau manifest.
@@ -72,9 +59,9 @@ var thatPanel = browser.runtime.getURL("/that.html");
 
 function toggle(panel) {
   if (panel === thisPanel) {
-    browser.sidebarAction.setPanel({panel: thatPanel});
+    browser.sidebarAction.setPanel({ panel: thatPanel });
   } else {
-    browser.sidebarAction.setPanel({panel: thisPanel});
+    browser.sidebarAction.setPanel({ panel: thisPanel });
   }
 }
 
@@ -83,19 +70,18 @@ browser.browserAction.onClicked.addListener(() => {
 });
 ```
 
+## Compatibilité des navigateurs
+
+{{Compat}}
+
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.sidebarAction.setPanel",2)}}
-
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Opera [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -122,4 +108,4 @@ browser.browserAction.onClicked.addListener(() => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

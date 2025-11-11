@@ -1,15 +1,8 @@
 ---
 title: AudioContext
 slug: Web/API/AudioContext
-tags:
-  - API
-  - Audio
-  - Buffer
-  - Experimental
-  - Reference
-  - Web Audio API
-translation_of: Web/API/AudioContext
 ---
+
 {{APIRef("Web Audio API")}}
 
 L'interface AudioContext représente un graphe de traitement audio fait de modules audio reliés entre eux, chaque module correspondant à un {{domxref ("AudioNode")}}. Un contexte audio contrôle à la fois la création des nœuds qu'il contient et l'exécution du traitement audio, ou du décodage. On commence toujours par créer un contexte audio, et tout ce qui va se passer ensuite se situera dans ce contexte.
@@ -47,7 +40,7 @@ Un contexte audio peut être la cible d'événements, par conséquent il implém
 ### Event handlers
 
 - {{domxref("AudioContext.onstatechange")}}
-  - : Un gestionnaire d'évènement déclenché par un évènement du type {{event("statechange")}}. Cela a lieu quand l'état du contexte audio change, en raison de l'appel des méthodes de changement d'état ({{domxref("AudioContext.suspend")}}, {{domxref("AudioContext.resume")}}, ou {{domxref("AudioContext.close")}}.)
+  - : Un gestionnaire d'évènement déclenché par un évènement du type `statechange`. Cela a lieu quand l'état du contexte audio change, en raison de l'appel des méthodes de changement d'état ({{domxref("AudioContext.suspend")}}, {{domxref("AudioContext.resume")}}, ou {{domxref("AudioContext.close")}}.)
 
 ## Méthodes
 
@@ -122,7 +115,7 @@ _Met également en œuvre des méthodes de l'interface {{domxref("EventTarget")}
 Déclaration basique d'un audio context :
 
 ```js
-var contexteAudio = new AudioContext;
+var contexteAudio = new AudioContext();
 ```
 
 Variante avec gestion de la compatibilité navigateur:
@@ -139,15 +132,13 @@ var finish = contexteAudio.destination;
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                               | Commentaire |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#AudioContext-section', 'AudioNode')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.AudioContext")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Utiliser la Web Audio API](/fr/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - {{domxref("OfflineAudioContext")}}

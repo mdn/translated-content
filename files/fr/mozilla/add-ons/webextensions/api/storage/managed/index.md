@@ -1,19 +1,9 @@
 ---
 title: storage.managed
 slug: Mozilla/Add-ons/WebExtensions/API/storage/managed
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Property
-  - Reference
-  - Storage
-  - WebExtensions
-  - managed
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage/managed
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Un objet {{WebExtAPIRef("storage.StorageArea")}} qui représente la zone de stockage gérée. Les éléments de stockage `géré` sont définis par l'administrateur du domaine ou d'autres applications natives installées sur l'ordinateur de l'utilisateur et sont en lecture seule pour l'extension. Essayer de modifier cette zone de stockage entraîne une erreur.
 
@@ -23,7 +13,7 @@ La procédure de provisionnement du stockage géré est différente selon les na
 
 ### manifestes natives
 
-Pour Firefox, vous devez créer un fichier manifest JSON dans un format spécifique, dans un emplacement spécifique. Pour plus de détails sur la syntaxe et l'emplacement du manifeste, voir [manifests natifs](/fr/Add-ons/WebExtensions/Native_manifests).
+Pour Firefox, vous devez créer un fichier manifest JSON dans un format spécifique, dans un emplacement spécifique. Pour plus de détails sur la syntaxe et l'emplacement du manifeste, voir [manifests natifs](/fr/docs/Mozilla/Add-ons/WebExtensions/Native_manifests).
 
 Voici un exemple de manifest :
 
@@ -32,8 +22,7 @@ Voici un exemple de manifest :
   "name": "favourite-color-examples@mozilla.org",
   "description": "ignored",
   "type": "storage",
-  "data":
-  {
+  "data": {
     "color": "management thinks it should be blue!"
   }
 }
@@ -42,7 +31,7 @@ Voici un exemple de manifest :
 Compte tenu de ce manifeste, l'extension "favourite-color-examples\@mozilla.org" pourrait accéder aux données en utilisant un code comme celui-ci :
 
 ```js
-var storageItem = browser.storage.managed.get('color');
+var storageItem = browser.storage.managed.get("color");
 storageItem.then((res) => {
   console.log(`Managed colur is: ${res.color}`);
 });
@@ -98,17 +87,18 @@ Le fichier json ressemblerait à ceci :
 
 Pour plus d'informations, voir l'article de Chrome pour les zones de stockage [Manifeste pour les zones de stockage](https://developer.chrome.com/extensions/manifest/storage).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.storage.managed")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/extensions/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -135,4 +125,4 @@ Pour plus d'informations, voir l'article de Chrome pour les zones de stockage [M
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

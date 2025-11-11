@@ -1,30 +1,22 @@
 ---
-title: 'HTMLElement: lostpointercapture イベント'
+title: "Document: lostpointercapture イベント"
 slug: conflicting/Web/API/Element/lostpointercapture_event
-tags:
-  - イベント
-  - HTML DOM
-  - HTMLElement
-  - NeedsSpecTable
-  - PointerEvent
-  - リファレンス
-translation_of: Web/API/HTMLElement/lostpointercapture_event
-original_slug: Web/API/HTMLElement/lostpointercapture_event
-browser-compat: api.HTMLElement.lostpointercapture_event
+original_slug: Web/API/Document/lostpointercapture_event
 ---
+
 {{APIRef}}
 
-**`lostpointercapture`** イベントは、[キャプチャされたポインター](/ja/docs/Web/API/Pointer_events#pointer_capture)が解放されたときに発行されます。
+**`lostpointercapture`** イベントは、[ポインターのキャプチャ](/ja/docs/Web/API/Pointer_events#pointer_capture)が解放されたときに発生します。
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">バブリング</th>
-      <td>あり</td>
+      <td>なし</td>
     </tr>
     <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
+      <th scope="row">キャンセル可能</th>
+      <td>いいえ</td>
     </tr>
     <tr>
       <th scope="row">インターフェイス</th>
@@ -33,12 +25,7 @@ browser-compat: api.HTMLElement.lostpointercapture_event
     <tr>
       <th scope="row">イベントハンドラープロパティ</th>
       <td>
-        <code
-          ><a
-            href="/ja/docs/Web/API/GlobalEventHandlers/onlostpointercapture"
-            >onlostpointercapture</a
-          ></code
-        >
+        {{domxref("GlobalEventHandlers/onlostpointercapture", "onlostpointercapture")}}
       </td>
     </tr>
   </tbody>
@@ -46,30 +33,30 @@ browser-compat: api.HTMLElement.lostpointercapture_event
 
 ## 例
 
-この例では、要素の `lostpointercapture` イベントを待ち受けし、`pointerdown` で要素のポインターをキャプチャします。 その後ユーザーがポインターを離すと、`lostpointercapture` イベントが発行されます。
+この例は `lostpointercapture` イベントを待ち受けし、 `pointerdown` でその要素のためにポインターをキャプチャします。後でユーザーがポインターを解放したとき、 `lostpointercapture` イベントが発生します。
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('lostpointercapture', () => {
-  console.log('解放されました！')
+document.addEventListener("lostpointercapture", () => {
+  console.log("I've been released!");
 });
 
-para.addEventListener('pointerdown', (event) => {
+para.addEventListener("pointerdown", (event) => {
   para.setPointerCapture(event.pointerId);
 });
 ```
 
-同じ例ですが、 `onlostpointercapture` イベントハンドラープロパティを使用した例です。
+同じ例ですが、 `onlostpointercapture` イベントハンドラーを使用して行います。
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.onlostpointercapture = () => {
-  console.log('解放されました！')
+document.onlostpointercapture = () => {
+  console.log("I've been released!");
 };
 
-para.addEventListener('pointerdown', (event) => {
+para.addEventListener("pointerdown", (event) => {
   para.setPointerCapture(event.pointerId);
 });
 ```
@@ -86,15 +73,15 @@ para.addEventListener('pointerdown', (event) => {
 
 - 関連イベント
 
-  - [`gotpointercapture`](/ja/docs/Web/API/HTMLElement/gotpointercapture_event)
-  - [`pointerover`](/ja/docs/Web/API/HTMLElement/pointerover_event)
-  - [`pointerenter`](/ja/docs/Web/API/HTMLElement/pointerenter_event)
-  - [`pointerdown`](/ja/docs/Web/API/HTMLElement/pointerdown_event)
-  - [`pointermove`](/ja/docs/Web/API/HTMLElement/pointermove_event)
-  - [`pointerup`](/ja/docs/Web/API/HTMLElement/pointerup_event)
-  - [`pointercancel`](/ja/docs/Web/API/HTMLElement/pointercancel_event)
-  - [`pointerout`](/ja/docs/Web/API/HTMLElement/pointerout_event)
-  - [`pointerleave`](/ja/docs/Web/API/HTMLElement/pointerleave_event)
+  - {{domxref("Document/lostpointercapture_event", "lostpointercapture")}}
+  - {{domxref("Document/pointerover_event", "pointerover")}}
+  - {{domxref("Document/pointerenter_event", "pointerenter")}}
+  - {{domxref("Document/pointerdown_event", "pointerdown")}}
+  - {{domxref("Document/pointermove_event", "pointermove")}}
+  - {{domxref("Document/pointerup_event", "pointerup")}}
+  - {{domxref("Document/pointercancel_event", "pointercancel")}}
+  - {{domxref("Document/pointerout_event", "pointerout")}}
+  - {{domxref("Document/pointerleave_event", "pointerleave")}}
 
-- [`onlostpointercapture`](/ja/docs/Web/API/GlobalEventHandlers/onlostpointercapture) イベントハンドラープロパティ
-- `Document` を対象とするこのイベント: [`lostpointercapture`](/ja/docs/Web/API/Document/lostpointercapture_event) イベント
+- {{domxref("GlobalEventHandlers.onlostpointercapture")}} イベントハンドラープロパティ
+- `HTMLElement` を対象としたこのイベント: {{domxref("HTMLElement/lostpointercapture_event", "lostpointercapture")}} イベント

@@ -1,9 +1,9 @@
 ---
 title: DOMException
-slug: Web/API/DomException
-page-type: web-api-instance-method
-browser-compat: api.Notification.close
+slug: Web/API/DOMException
 ---
+
+{{ APIRef("DOM") }}
 
 La interfaz **`DOMException`** representa un evento anormal (llamado **excepción**) que ocurre como el resultado de llamar a un método o acceder a una propiedad de una API web. Asi es como las condiciones de error se describen en las API web.
 
@@ -35,7 +35,8 @@ Tenga en cuenta que los siguientes errores históricos obsoletos no tienen un no
 - Valor de código heredado: `6`, nombre de constante heredado: `NO_DATA_ALLOWED_ERR`
 - Valor de código heredado: `16`, nombre de constante heredado: `VALIDATION_ERR`
 
-> **Nota:** Debido a que históricamente los errores estaban identificados por un valor numérico que correspondía con un nombre de variable definida para tener ese valor, algunas de las entradas a continuación indican el valor de código heredado y el nombre constante que se usó en el pasado.
+> [!NOTE]
+> Debido a que históricamente los errores estaban identificados por un valor numérico que correspondía con un nombre de variable definida para tener ese valor, algunas de las entradas a continuación indican el valor de código heredado y el nombre constante que se usó en el pasado.
 
 - `IndexSizeError`
   - : El índice no está en el rango permitido. Por ejemplo, esto podría ser arrojado por el objeto {{ domxref("Range") }}. (Valor de código heradado: `1` y nombre de constante heredado: `INDEX_SIZE_ERR`)

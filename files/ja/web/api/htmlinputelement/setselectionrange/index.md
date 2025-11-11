@@ -1,16 +1,11 @@
 ---
-title: HTMLInputElement.setSelectionRange()
+title: "HTMLInputElement: setSelectionRange() メソッド"
+short-title: setSelectionRange()
 slug: Web/API/HTMLInputElement/setSelectionRange
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - メソッド
-  - リファレンス
-  - テキスト欄選択 API
-browser-compat: api.HTMLInputElement.setSelectionRange
-translation_of: Web/API/HTMLInputElement/setSelectionRange
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLInputElement.setSelectionRange()`** メソッドは、 {{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素の中で現在のテキストの選択範囲の開始位置と終了位置を設定します。
@@ -25,8 +20,9 @@ input 要素の**すべて**のテキストを選択したい場合は、代わ�
 
 ## 構文
 
-```js
-element.setSelectionRange(selectionStart, selectionEnd [, selectionDirection]);
+```js-nolint
+setSelectionRange(selectionStart, selectionEnd)
+setSelectionRange(selectionStart, selectionEnd, selectionDirection)
 ```
 
 ### 引数
@@ -38,12 +34,14 @@ element.setSelectionRange(selectionStart, selectionEnd [, selectionDirection]);
 - `selectionEnd`
   - : 選択する最後の文字の*次の* 0 から始まる位置です。位置が要素の長さよりも大きい場合は、要素の値の末尾の位置と見なされます。
 - `selectionDirection` {{optional_inline}}
-
   - : 選択が行われたと見なされる方向を示す文字列です。取りうる値は次の通りです。
-
     - `"forward"`
     - `"backward"`
     - `"none"` 選択方向が不明または無関係な場合です。既定値です。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
@@ -52,7 +50,7 @@ element.setSelectionRange(selectionStart, selectionEnd [, selectionDirection]);
 ### HTML
 
 ```html
-<input type="text" id="text-box" size="20" value="Mozilla">
+<input type="text" id="text-box" size="20" value="Mozilla" />
 <button onclick="selectText()">テキストを選択</button>
 ```
 
@@ -60,7 +58,7 @@ element.setSelectionRange(selectionStart, selectionEnd [, selectionDirection]);
 
 ```js
 function selectText() {
-  const input = document.getElementById('text-box');
+  const input = document.getElementById("text-box");
   input.focus();
   input.setSelectionRange(2, 5);
 }
@@ -68,7 +66,7 @@ function selectText() {
 
 ### 結果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## 仕様書
 

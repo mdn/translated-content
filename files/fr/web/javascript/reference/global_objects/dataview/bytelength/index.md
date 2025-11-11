@@ -1,26 +1,29 @@
 ---
 title: DataView.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/DataView/byteLength
-tags:
-  - DataView
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/byteLength
-original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/byteLength
 ---
+
 {{JSRef}}
 
 L'accesseur **`byteLength`** est une propriété représentant la longueur, exprimée en octets, de cette vue depuis le début de l'objet {{jsxref("ArrayBuffer")}} ou {{jsxref("SharedArrayBuffer")}} correspondant.
 
-{{EmbedInteractiveExample("pages/js/dataview-bytelength.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.byteLength")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view1 = new DataView(buffer);
+const view2 = new DataView(buffer, 12, 4); // From byte 12 for the next 4 bytes
+
+console.log(view1.byteLength + view2.byteLength); // 16 + 4
+// Expected output: 20
+```
 
 ## Syntaxe
 
 ```js
-dataview.byteLength
+dataview.byteLength;
 ```
 
 ## Description
@@ -45,14 +48,11 @@ dataview3.byteLength; // 6 (en raison du décalage (offset) pour la construction
 
 ## Spécifications
 
-| Spécification                                                                                                                        | Statut                       | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-get-dataview.prototype.bytelength', 'DataView.prototype.byteLength')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-get-dataview.prototype.bytelength', 'DataView.prototype.byteLength')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.DataView.byteLength")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,17 +1,12 @@
 ---
-title: MouseEvent.screenY
+title: "MouseEvent: screenY プロパティ"
+short-title: screenY
 slug: Web/API/MouseEvent/screenY
-tags:
-  - API
-  - DOM イベント
-  - MouseEvent
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.MouseEvent.screenY
-translation_of: Web/API/MouseEvent/screenY
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
-{{APIRef("DOM Events")}}
+
+{{APIRef("UI Events")}}
 
 **`screenY`** は {{domxref("MouseEvent")}} インターフェイスの読み取り専用プロパティで、グローバル（スクリーン）座標における、マウスポインターの垂直方向の座標（オフセット）を示します。
 
@@ -35,8 +30,8 @@ translation_of: Web/API/MouseEvent/screenY
 ### JavaScript
 
 ```js
-let screenLog = document.querySelector('#screen-log');
-document.addEventListener('mousemove', logKey);
+let screenLog = document.querySelector("#screen-log");
+document.addEventListener("mousemove", logKey);
 
 function logKey(e) {
   screenLog.innerText = `
@@ -47,7 +42,7 @@ function logKey(e) {
 
 ### 結果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## 仕様書
 

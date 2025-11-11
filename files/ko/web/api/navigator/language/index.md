@@ -1,16 +1,8 @@
 ---
 title: Navigator.language
 slug: Web/API/Navigator/language
-tags:
-  - API
-  - Language
-  - Navigator
-  - Property
-  - Read-only
-  - Reference
-browser-compat: api.Navigator.language
-translation_of: Web/API/Navigator/language
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`Navigator.language`** 읽기 전용 속성은 사용자의 선호 언어(일반적으로 브라우저 UI의 언어)를 나타내는 문자열을 반환합니다.
@@ -18,7 +10,7 @@ translation_of: Web/API/Navigator/language
 ## 구문
 
 ```js
-const lang = navigator.language
+const lang = navigator.language;
 ```
 
 ### 값

@@ -1,18 +1,9 @@
 ---
 title: browsingData.removeDownloads()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeDownloads
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browsingData
-  - removeDownloads
-translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeDownloads
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Efface l'historique de téléchargement du navigateur. Notez que cela ne supprime pas les objets téléchargés eux-mêmes, seulement les enregistrements de téléchargements dans l'historique du navigateur.
 
@@ -21,14 +12,14 @@ Vous pouvez utiliser le paramètre `removalOptions`, qui est un objet {{WebExtAP
 - Efface les enregistrements des élements téléchargés après un temps donné
 - contrôle si vous souhaitez effacer uniquement les enregistrements d'éléments téléchargés à partir de pages Web normales ou pour supprimer également les enregistrements des applications hébergées et des extensions.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
 ```js
 var removing = browser.browsingData.removeDownloads(
-  removalOptions            // RemovalOptions object
-)
+  removalOptions, // RemovalOptions object
+);
 ```
 
 ### Paramètres
@@ -38,11 +29,11 @@ var removing = browser.browsingData.removeDownloads(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans argument lorsque la suppression est terminée. Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans argument lorsque la suppression est terminée. Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browsingData.removeDownloads")}}
+{{Compat}}
 
 ## Exemples
 
@@ -61,11 +52,11 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-var oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+var oneWeekAgo = new Date().getTime() - weekInMilliseconds();
 
-browser.browsingData.removeDownloads(
-  {since: oneWeekAgo}).
-then(onRemoved, onError);
+browser.browsingData
+  .removeDownloads({ since: oneWeekAgo })
+  .then(onRemoved, onError);
 ```
 
 Supprime tous les enregistrements d'objets téléchargés :
@@ -79,19 +70,17 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.removeDownloads({}).
-then(onRemoved, onError);
+browser.browsingData.removeDownloads({}).then(onRemoved, onError);
 ```
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -118,4 +107,4 @@ then(onRemoved, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

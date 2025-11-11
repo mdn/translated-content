@@ -1,29 +1,24 @@
 ---
 title: Geolocation
 slug: Web/API/Geolocation
-tags:
-  - API
-  - Advanced
-  - 位置情報 API
-  - インターフェイス
-  - リファレンス
-  - 安全なコンテキスト
-browser-compat: api.Geolocation
-translation_of: Web/API/Geolocation
+l10n:
+  sourceCommit: 5e98fd9cfbec6e28044a27c58bffca5ae464ec8b
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 **`Geolocation`** インターフェイスは、端末の位置をプログラムから取得することができるオブジェクトを表します。ウェブコンテンツが端末の位置情報にアクセスすることができるようにします。これにより、ウェブサイトやアプリがユーザーの位置に応じてカスタマイズされた結果を提供できるようになります。
 
 このインターフェイスを持つオブジェクトは、 {{domxref("Navigator")}} オブジェクトの {{domxref("navigator.geolocation")}} プロパティを使って得ることができます。
 
-> **Note:** セキュリティ上の理由により、ウェブページが位置情報にアクセスしようとする時、ユーザーにアクセス許可が求められます。その方法やポリシーはブラウザーによって異なることに注意してください。
+> [!NOTE]
+> セキュリティ上の理由により、ウェブページが位置情報にアクセスしようとする時、ユーザーにアクセス許可が求められます。その方法やポリシーはブラウザーによって異なることに注意してください。
 
-## プロパティ
+## インスタンスプロパティ
 
 _`Geolocation` インターフェイスが実装・継承しているプロパティはありません。_
 
-## メソッド
+## インスタンスメソッド
 
 _`Geolocation` インターフェイスが継承しているプロパティはありません。_
 

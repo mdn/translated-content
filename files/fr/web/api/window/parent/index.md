@@ -1,20 +1,19 @@
 ---
 title: Window.parent
 slug: Web/API/Window/parent
-translation_of: Web/API/Window/parent
-browser-compat: api.Window.parent
 ---
+
 {{APIRef}}
 
 La propriété **`Window.parent`** est une référence au parent de la fenêtre ou du cadre embarqué (<i lang="en">subframe</i>).
 
 Si une fenêtre n'a pas de parent, la propriété `parent` sera une référence à elle-même.
 
-Lorsqu'une fenêtre est chargée dans un élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe), [`<object>`](/fr/docs/Web/HTML/Element/object), ou [`<frame>`](/fr/docs/Web/HTML/Element/frame), son parent correspond à la fenêtre de l'élément qui embarque la fenêtre.
+Lorsqu'une fenêtre est chargée dans un élément [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe), [`<object>`](/fr/docs/Web/HTML/Reference/Elements/object), ou [`<frame>`](/fr/docs/Web/HTML/Reference/Elements/frame), son parent correspond à la fenêtre de l'élément qui embarque la fenêtre.
 
 ## Valeur
 
-Un objet `Window` ou [`<iframe>`](/fr/docs/Web/HTML/Element/iframe).
+Un objet `Window` ou [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe).
 
 ## Exemples
 

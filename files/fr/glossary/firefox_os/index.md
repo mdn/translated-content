@@ -1,24 +1,10 @@
 ---
 title: Firefox OS
 slug: Glossary/Firefox_OS
-tags:
-  - Firefox OS
-  - Glossaire
-  - Infrastructure
-  - Introduction
-translation_of: Glossary/Firefox_OS
-original_slug: Glossaire/Firefox_OS
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-## Résumé
 
-Firefox OS est le système d'exploitation mobile de Mozilla, basé sur Linux et le puissant moteur de rendu {{glossary("Gecko")}} de {{glossary("Mozilla Firefox","Firefox")}} . Firefox OS se compose principalement de {{glossary("Gaia")}}, {{glossary("Gecko")}} et {{glossary("Gonk")}}.
+Firefox OS est un système d'exploitation mobile <i lang="en">open source</i> qui a été développé par Mozilla et qui a maintenant été arrêté. Voir [Firefox OS](https://fr.wikipedia.org/wiki/Firefox_OS) pour plus de détails.
 
-## En apprendre plus
-
-### Culture générale
-
-- {{interwiki("wikipedia", "Firefox_OS")}} sur Wikipedia
-
-### Référence technique
-
-- En savoir plus sur Firefox OS dans le MDN [Firefox OS Zone](/fr/docs/Archive/B2G_OS) !
+Firefox OS fut également appelé «&nbsp;Boot2Gecko&nbsp;» avant que le projet ait un nom officiel.

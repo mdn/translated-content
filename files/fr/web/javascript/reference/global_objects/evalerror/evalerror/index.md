@@ -1,9 +1,8 @@
 ---
 title: Constructeur EvalError()
 slug: Web/JavaScript/Reference/Global_Objects/EvalError/EvalError
-translation_of: Web/JavaScript/Reference/Global_Objects/EvalError/EvalError
-browser-compat: javascript.builtins.EvalError.EvalError
 ---
+
 {{JSRef}}
 
 Le **constructeur `EvalError()`** permet de créer un objet représentant une erreur concernant la fonction globale [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Cette exception n'est plus déclenchée par les moteurs JavaScript désormais, toutefois l'objet `EvalError` reste présent à des fins de compatibilité.
@@ -11,10 +10,10 @@ Le **constructeur `EvalError()`** permet de créer un objet représentant une er
 ## Syntaxe
 
 ```js
-new EvalError()
-new EvalError(message)
-new EvalError(message, nomFichier)
-new EvalError(message, nomFichier, numeroLigne)
+new EvalError();
+new EvalError(message);
+new EvalError(message, nomFichier);
+new EvalError(message, nomFichier, numeroLigne);
 ```
 
 ### Paramètres
@@ -34,15 +33,15 @@ new EvalError(message, nomFichier, numeroLigne)
 
 ```js
 try {
-  throw new EvalError('Coucou', 'unFichier.js', 10);
+  throw new EvalError("Coucou", "unFichier.js", 10);
 } catch (e) {
   console.log(e instanceof EvalError); // true
-  console.log(e.message);              // "Coucou"
-  console.log(e.name);                 // "EvalError"
-  console.log(e.fileName);             // "unFichier.js"
-  console.log(e.lineNumber);           // 10
-  console.log(e.columnNumber);         // 0
-  console.log(e.stack);                // "@Scratchpad/2:2:9\n"
+  console.log(e.message); // "Coucou"
+  console.log(e.name); // "EvalError"
+  console.log(e.fileName); // "unFichier.js"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // "@Scratchpad/2:2:9\n"
 }
 ```
 

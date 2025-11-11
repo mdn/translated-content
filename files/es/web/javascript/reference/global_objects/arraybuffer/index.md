@@ -1,13 +1,11 @@
 ---
 title: ArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
-original_slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
-browser-compat: javascript.builtins.ArrayBuffer
 ---
+
 {{JSRef}}
 
-El objeto **`ArrayBuffer`** se usa para representar un buffer genérico, de datos binarios brutos con una longitud específica.
+El objeto **`ArrayBuffer`** se usa para representar un buffer genérico, de datos binarios brutos con una longitud específica.
 
 Es un arreglo de bytes, frecuentemente llamado de esta forma en otros lenguajes de programación. No se puede manipular directamente el contenido de un `ArrayBuffer`; en su lugar, se crea uno de los [objetos de arreglos tipados](/es/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) o un objeto {{jsxref("DataView")}} que representa el buffer en un formato específico, y se usa para leer y escribir el contenido del buffer.
 
@@ -60,6 +58,6 @@ const view = new Int32Array(buffer);
 ## Véase también
 
 - Un polyfill de `ArrayBuffer` está disponible en [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [Arraglos tipados en JavaScript](/es/docs/Web/JavaScript/Typed_arrays)
+- [Arraglos tipados en JavaScript](/es/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("SharedArrayBuffer")}}
 - [RangeError: longitud de array invalida](/es/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)

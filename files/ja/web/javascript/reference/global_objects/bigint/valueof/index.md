@@ -1,25 +1,26 @@
 ---
 title: BigInt.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/valueOf
-tags:
-  - BigInt
-  - JavaScript
-  - メソッド
-  - プロトタイプ
-  - valueOf()
-browser-compat: javascript.builtins.BigInt.valueOf
-translate_of: Web/JavaScript/Reference/Global_Objects/BigInt/valueOf
 ---
+
 {{JSRef}}
 
 **`valueOf()`** メソッドは、 {{jsxref("BigInt")}} オブジェクトにラップされたプリミティブ値を返します。
 
-{{EmbedInteractiveExample("pages/js/bigint-valueof.html","shorter")}}
+{{InteractiveExample("JavaScript デモ: BigInt.valueOf()", "shorter")}}
+
+```js interactive-example
+console.log(typeof Object(1n));
+// Expected output: "object"
+
+console.log(typeof Object(1n).valueOf());
+// Expected output: "bigint"
+```
 
 ## 構文
 
 ```js
-bigIntObj.valueOf()
+bigIntObj.valueOf();
 ```
 
 ### 返値

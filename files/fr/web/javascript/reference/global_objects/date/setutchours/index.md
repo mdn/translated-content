@@ -1,20 +1,28 @@
 ---
 title: Date.prototype.setUTCHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCHours
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCHours
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setUTCHours
 ---
+
 {{JSRef}}
 
 La méthode **`setUTCHours()`** définit les heures pour la date, selon UTC, et renvoie le nombre de millièmes de secondes écoulées entre le 1er janvier 1970 00:00:00 UTC et cette nouvelle date.
 
-{{EmbedInteractiveExample("pages/js/date-setutchours.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setUTCHours()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30 GMT-3:00");
+
+console.log(event.toUTCString());
+// Expected output: "Wed, 20 Aug 1975 02:15:30 GMT"
+
+console.log(event.getUTCHours());
+// Expected output: 2
+
+event.setUTCHours(23);
+
+console.log(event.toUTCString());
+// Expected output: "Wed, 20 Aug 1975 23:15:30 GMT"
+```
 
 ## Syntaxe
 
@@ -54,16 +62,11 @@ leGrandJour.setUTCHours(8);
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires                                          |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.9.5.35', 'Date.prototype.setUTCHours')}}                         | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-date.prototype.setutchours', 'Date.prototype.setUTCHours')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-date.prototype.setutchours', 'Date.prototype.setUTCHours')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.setUTCHours")}}
+{{Compat}}
 
 ## Voir aussi
 

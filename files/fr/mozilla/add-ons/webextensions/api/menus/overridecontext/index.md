@@ -1,16 +1,8 @@
 ---
 title: overrideContext()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/overrideContext
-tags:
-  - API
-  - Add-ons
-  - Create
-  - Extensions
-  - Method
-  - WebExtensions
-  - contextMenus
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/overrideContext
 ---
+
 {{AddonSidebar}}
 
 Masquer tous les éléments de menu par défaut de Firefox en faveur d'un menu contextuel personnalisé.
@@ -23,16 +15,14 @@ Pour appeler cette méthode, votre extension doit avoir la permission `menus.ove
 
 ```js
 browser.menus.overrideContext(
-  contextOptions // object
-)
+  contextOptions, // object
+);
 ```
 
 ### Paramètres
 
 - `contextOptions`
-
   - : `object`. Options sur la façon dont les menus contextuels seront remplacés.
-
     - `showDefaults` {{optional_inline}}
       - : `boolean`. S'il faut également inclure les éléments de menu par défaut dans le menu.
     - `context` {{optional_inline}}

@@ -1,27 +1,21 @@
 ---
-title: HTMLMediaElement.fastSeek()
+title: "HTMLMediaElement: fastSeek() メソッド"
+short-title: fastSeek()
 slug: Web/API/HTMLMediaElement/fastSeek
-page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - HTMLMediaElement
-  - Media
-  - Method
-  - Reference
-  - fastSeek
-browser-compat: api.HTMLMediaElement.fastSeek
-translation_of: Web/API/HTMLMediaElement/fastSeek
+l10n:
+  sourceCommit: d16706e4e930c57161d473287374a9286c663147
 ---
-{{APIRef("HTML DOM")}} {{SeeCompatTable}}
+
+{{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.fastSeek()`** メソッドは、精度と引き換えにで新しい時間へのメディアを迅速にシークします。
 
-> **Note:** 正確にシークする必要がある場合は、代わりに [`HTMLMediaElement.currentTime`](/ja/docs/Web/API/HTMLMediaElement/currentTime) を設定してください。
+> [!NOTE]
+> 正確にシークする必要がある場合は、代わりに [`HTMLMediaElement.currentTime`](/ja/docs/Web/API/HTMLMediaElement/currentTime) を設定してください。
 
 ## 構文
 
-```js
+```js-nolint
 fastSeek(time)
 ```
 
@@ -55,4 +49,4 @@ myVideo.fastSeek(20);
 ## 関連情報
 
 - [HTMLMediaElement.currentTime](/ja/docs/Web/API/HTMLMediaElement/currentTime):
- 精度を犠牲にすることなくシークを行う
+  精度を犠牲にすることなくシークを行う

@@ -1,30 +1,29 @@
 ---
-title: ArrayBuffer.prototype.byteLength
+title: "ArrayBuffer : propriété byteLength"
+short-title: byteLength
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
-tags:
-  - ArrayBuffer
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
-original_slug: Web/JavaScript/Reference/Objets_globaux/ArrayBuffer/byteLength
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-{{JSRef}}
 
-L'accesseur **`byteLength`** est une propriété représentant la longueur d'un {{jsxref("ArrayBuffer")}} en octets.
+La propriété d'accesseur **`byteLength`** des instances de {{JSxRef("ArrayBuffer")}} retourne la longueur (en octets) de ce tableau de mémoire tampon.
 
-{{EmbedInteractiveExample("pages/js/arraybuffer-bytelength.html")}}
+{{InteractiveExample("JavaScript Demo: ArrayBuffer.prototype.byteLength")}}
 
-## Syntaxe
+```js interactive-example
+// Crée un objet ArrayBuffer avec une taille en octets
+const buffer = new ArrayBuffer(8);
 
-```js
-arraybuffer.byteLength
+// Utilise byteLength pour vérifier la taille
+const bytes = buffer.byteLength;
+
+console.log(bytes);
+// Résultat attendu : 8
 ```
 
 ## Description
 
-La propriété `byteLength` est un accesseur dont le mutateur associé vaut `undefined`. Cela signifie que cette propriété est en lecture seule. La valeur est déterminée lors de la construction du tableau et ne peut pas être changée par la suite. Cette propriété renvoie 0 si ce `ArrayBuffer` a été détaché.
+La propriété `byteLength` est un accesseur dont le mutateur associé vaut `undefined`. Cela signifie que cette propriété est en lecture seule. La valeur est déterminée lors de la construction du tableau et ne peut pas être changée par la suite. Cette propriété retourne 0 si ce `ArrayBuffer` a été détaché.
 
 ## Exemples
 
@@ -35,16 +34,12 @@ buffer.byteLength; // 8
 
 ## Spécifications
 
-| Spécification                                                                                                                                | Statut                           | Commentaires                                    |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                                                                         | {{Spec2('Typed Array')}} | Remplacée dans ECMAScript 2015.                 |
-| {{SpecName('ES2015', '#sec-get-arraybuffer.prototype.bytelength', 'ArrayBuffer.prototype.byteLength')}}     | {{Spec2('ES2015')}}         | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-get-arraybuffer.prototype.bytelength', 'ArrayBuffer.prototype.byteLength')}} | {{Spec2('ESDraft')}}     |                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.ArrayBuffer.byteLength")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{jsxref("ArrayBuffer")}}
+- L'objet global {{JSxRef("ArrayBuffer")}}

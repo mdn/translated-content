@@ -1,12 +1,8 @@
 ---
 title: XMLHttpRequest.response
 slug: Web/API/XMLHttpRequest/response
-tags:
-  - AJAX
-  - Reference
-  - XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest/response
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 La propriété `XMLHttpRequest.response` contient le corps de la réponse. Elle peut être de type ArrayBuffer, Blob, Document, un objet JavaScript ou une DOMString en fonction de la valeur de la propriété `XMLHttpRequest.responseType`. La réponse ( `Value of response` ) est nulle si la requête est incomplète ou n'as pas été effectué avec succès. Cependant, si `responseType` est "text" ou une chaine vide et tant que la requête est en cours ( dans l'état _loading_ ), `response` peut contenir la réponse partielle.
@@ -106,46 +102,44 @@ La propriété `XMLHttpRequest.response` contient le corps de la réponse. Elle 
   </tbody>
 </table>
 
-> **Note :** À partir de Gecko 11.0 {{geckoRelease("11.0")}} et de WebKit build 528, ces navigateurs ne permettent plus l'utilisation de l'attribut `responseType` lors des requêtes synchrones. Cela renvoi l'erreur `NS_ERROR_DOM_INVALID_ACCESS_ERR`. Ce changement a été proposé au W3C afin d'être standardisé.
+> [!NOTE]
+> À partir de Gecko 11.0 et de WebKit build 528, ces navigateurs ne permettent plus l'utilisation de l'attribut `responseType` lors des requêtes synchrones. Cela renvoi l'erreur `NS_ERROR_DOM_INVALID_ACCESS_ERR`. Ce changement a été proposé au W3C afin d'être standardisé.
 
 ## Example
 
 ```js
-var url = 'somePage.html'; // une page locale
+var url = "somePage.html"; // une page locale
 
 function load(url, callback) {
   var xhr = new XMLHttpRequest();
 
-  xhr.onreadystatechange = function() {
+  xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {
       console.log(xhr.response); // Par défault une DOMString
     }
-  }
+  };
 
-  xhr.open('GET', url, true);
-  xhr.send('');
+  xhr.open("GET", url, true);
+  xhr.send("");
 }
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                                | Status                               | Comment                |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest', '#the-response-attribute')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.XMLHttpRequest")}}
+{{Compat}}
 
 ## Voir aussi
 
 - {{domxref("XMLSerializer")}} : Sérialisation d'un arbre DOM en XML
 - Tutoriels MDN couvrant le `XMLHttpRequest` :
-
-  - [Ajax — Pour commencer](/fr/docs/Web/Guide/AJAX/Getting_Started)
-  - [Utilisation de XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-  - [HTML dans XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+  - [Ajax — Pour commencer](/fr/docs/Learn_web_development/Core/Scripting/Network_requests)
+  - [Utilisation de XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+  - [HTML dans XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
   - [Fetch API](/fr/docs/Web/API/Fetch_API)
 
-- [HTML5 Rocks — New Tricks in XMLHttpRequest2](http://www.html5rocks.com/en/tutorials/file/xhr2/)
+- [HTML5 Rocks — New Tricks in XMLHttpRequest2](https://www.html5rocks.com/en/tutorials/file/xhr2/)
 - Directive Feature-Policy {{httpheader("Feature-Policy/sync-xhr", "sync-xhr")}}

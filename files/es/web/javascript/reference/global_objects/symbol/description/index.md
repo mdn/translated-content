@@ -1,17 +1,29 @@
 ---
 title: Symbol.prototype.description
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/description
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/description
-original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/description
-browser-compat: javascript.builtins.Symbol.description
 l10n:
   sourceCommit: 88508ebe5c73264be2cf03f1a949d8099d68d1ea
 ---
+
 {{JSRef}}
 
 La propiedad **`description`** de sólo lectura es una cadena que devuelve la descripción opcional de los objetos {{JSxRef("Symbol")}}.
 
-{{EmbedInteractiveExample("pages/js/symbol-prototype-description.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.prototype.description")}}
+
+```js interactive-example
+console.log(Symbol("desc").description);
+// Expected output: "desc"
+
+console.log(Symbol.iterator.description);
+// Expected output: "Symbol.iterator"
+
+console.log(Symbol.for("foo").description);
+// Expected output: "foo"
+
+console.log(`${Symbol("foo").description}bar`);
+// Expected output: "foobar"
+```
 
 ## Descripción
 
@@ -22,18 +34,18 @@ Los objetos {{JSxRef("Symbol")}} pueden ser creados con una descripción opciona
 ### Uso de description
 
 ```js
-Symbol('desc').toString();   // "Symbol(desc)"
-Symbol('desc').description;  // "desc"
-Symbol('').description;      // ""
-Symbol().description;        // undefined
+Symbol("desc").toString(); // "Symbol(desc)"
+Symbol("desc").description; // "desc"
+Symbol("").description; // ""
+Symbol().description; // undefined
 
 // well-known symbols
-Symbol.iterator.toString();  // "Symbol(Symbol.iterator)"
+Symbol.iterator.toString(); // "Symbol(Symbol.iterator)"
 Symbol.iterator.description; // "Symbol.iterator"
 
 // global symbols
-Symbol.for('foo').toString();  // "Symbol(foo)"
-Symbol.for('foo').description; // "foo"
+Symbol.for("foo").toString(); // "Symbol(foo)"
+Symbol.for("foo").description; // "foo"
 ```
 
 ## Especificaciones

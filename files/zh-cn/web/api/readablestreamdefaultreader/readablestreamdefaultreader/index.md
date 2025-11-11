@@ -1,23 +1,18 @@
 ---
 title: ReadableStreamDefaultReader()
 slug: Web/API/ReadableStreamDefaultReader/ReadableStreamDefaultReader
-tags:
-  - API
-  - Constructor
-  - ReadableStreamDefaultReader
-  - Reference
-  - Streams
-translation_of: api/ReadableStreamDefaultReader/ReadableStreamDefaultReader
 ---
+
 {{APIRef("Streams")}}
 
 **`ReadableStreamDefaultReader()`** 构造函数创建并返回一个 `ReadableStreamDefaultReader` 实例对象。
 
-> **备注：** 你通常不需要手动创建，可以使用 {{domxref("ReadableStream.getReader()")}} 方法代替。
+> [!NOTE]
+> 你通常不需要手动创建，可以使用 {{domxref("ReadableStream.getReader()")}} 方法代替。
 
 ## 语法
 
-```js
+```js-nolint
 new ReadableStreamDefaultReader(stream)
 ```
 
@@ -45,7 +40,7 @@ function fetchStream() {
   let charsReceived = 0;
   // read() 返回一个 promise，其会在接收到数据时被兑现
   reader.read().then(function processText({ done, value }) {
-    // 结果包含两个属性:
+    // 结果包含两个属性：
     // done  - 如果为 true，表示流已经返回所有的数据。
     // value - 一些数据，done 为 true 时，其值始终为 undefined。
     if (done) {
@@ -56,8 +51,12 @@ function fetchStream() {
     // 从流中获取的数据是一个 Uint8Array
     charsReceived += value.length;
     const chunk = value;
-    let listItem = document.createElement('li');
-    listItem.textContent = 'Received ' + charsReceived + ' characters so far. Current chunk = ' + chunk;
+    let listItem = document.createElement("li");
+    listItem.textContent =
+      "Received " +
+      charsReceived +
+      " characters so far. Current chunk = " +
+      chunk;
     list2.appendChild(listItem);
     result += chunk;
     // 再次调用该函数以读取更多数据
@@ -73,3 +72,10 @@ function fetchStream() {
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- [Stream API 概念](/zh-CN/docs/Web/API/Streams_API)
+- [使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)
+- {{domxref("ReadableStream")}}
+- {{domxref("ReadableStreamDefaultController")}}

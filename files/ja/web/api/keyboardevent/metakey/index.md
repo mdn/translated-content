@@ -1,24 +1,20 @@
 ---
-title: KeyboardEvent.metaKey
+title: "KeyboardEvent: metaKey プロパティ"
+short-title: metaKey
 slug: Web/API/KeyboardEvent/metaKey
-page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
-browser-compat: api.KeyboardEvent.metaKey
-translation_of: Web/API/KeyboardEvent/metaKey
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
+
 {{APIRef("UI Events")}}
 
 **`KeyboardEvent.metaKey`** は読み取り専用のプロパティで、 プロパティは、イベントが発生したときに <kbd>Meta</kbd> キーが押されていたか (`true`) あるいは押されていなかった (`false`) かを示す論理値を返します。オペレーティングシステムによっては、キーが検出されないように遮蔽されることがあります。
 
-> **Note:** Macintosh のキーボードでは、これは <kbd>⌘ Command</kbd> キーです。
+> [!NOTE]
+> Macintosh のキーボードでは、これは <kbd>⌘ Command</kbd> キーです。
 
-> **Warning:** 少なくとも Firefox 48 の時点では、 <kbd>⊞ Windows</kbd> キーは "Meta" キーとみなされなくなりました。<kbd>⊞ Windows</kbd> キーが押されたとき `KeyboardEvent.metaKey` は `false` になります。
+> [!WARNING]
+> 少なくとも Firefox 48 の時点で、 <kbd>⊞ Windows</kbd> キーは "Meta" キーとみなされなくなりました。<kbd>⊞ Windows</kbd> キーが押されたとき `KeyboardEvent.metaKey` は `false` になります。
 
 ## 値
 
@@ -34,7 +30,8 @@ translation_of: Web/API/KeyboardEvent/metaKey
 
 ```js
 function ismetaKey(e) {
-  document.querySelector("#output").textContent = "metaKey pressed? " + e.metaKey;
+  document.querySelector("#output").textContent =
+    `metaKey pressed? ${e.metaKey}`;
 }
 ```
 

@@ -1,20 +1,13 @@
 ---
 title: SVGRect
 slug: Web/API/SVGRect
-page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVG DOM
-browser-compat: api.SVGRect
-translation_of: Web/API/SVGRect
 ---
+
 {{APIRef("SVG")}}
 
 **`SVGRect`** 인터페이스는 직사각형을 나타냅니다. 직사각형은 최소 `x` 값과 최소 `y` 값을 가리키는 좌표쌍, 그리고 양수인 `width`와 `height` 값으로 구성됩니다.
 
-**`SVGRect`** 객체는 읽기 전용으로 지정될 수 있습니다. 읽기 전용일 경우 객체를 수정하려고 시도하면 예외가 발생합니다.
+**`SVGRect`** 객체는 읽기 전용으로 지정될 수 있습니다. 읽기 전용일 경우 객체를 수정하려고 시도하면 예외가 발생합니다.
 
 ## 속성
 

@@ -1,11 +1,11 @@
 ---
-title: 'HTMLMediaElement: loadeddata'
+title: "HTMLMediaElement: loadeddata"
 slug: Web/API/HTMLMediaElement/loadeddata_event
-translation_of: Web/API/HTMLMediaElement/loadeddata_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
-**`loadeddata`** 事件在媒体当前播放位置的视频帧（通常是第一帧）加载完成后触发。
+**`loadeddata`** 事件在媒体当前播放位置的视频帧（通常是第一帧）加载完成后触发。
 
 ## 基本信息
 
@@ -38,7 +38,8 @@ translation_of: Web/API/HTMLMediaElement/loadeddata_event
   </tbody>
 </table>
 
-> **备注：** 若在移动/平板设备的浏览器设置中开启了流量节省（data-saver）模式，该事件则不会被触发。
+> [!NOTE]
+> 若在移动/平板设备的浏览器设置中开启了流量节省（data-saver）模式，该事件则不会被触发。
 
 ## 示例
 
@@ -47,22 +48,26 @@ translation_of: Web/API/HTMLMediaElement/loadeddata_event
 使用 `addEventListener()`：
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('loadeddata', (event) => {
-  console.log('Yay! readyState just increased to  ' +
-      'HAVE_CURRENT_DATA or greater for first time.');
+video.addEventListener("loadeddata", (event) => {
+  console.log(
+    "Yay! readyState just increased to  " +
+      "HAVE_CURRENT_DATA or greater for first time.",
+  );
 });
 ```
 
 使用 `onloadeddata` 事件处理器属性：
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onloadeddata = (event) => {
-  console.log('Yay! readyState just increased to  ' +
-      'HAVE_CURRENT_DATA or greater for first time.');
+  console.log(
+    "Yay! readyState just increased to  " +
+      "HAVE_CURRENT_DATA or greater for first time.",
+  );
 };
 ```
 

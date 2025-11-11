@@ -1,14 +1,12 @@
 ---
-title: 缓存区
-slug: Glossary/buffer
-tags:
-  - 缓冲区
-translation_of: Glossary/buffer
+title: 缓冲区
+slug: Glossary/Buffer
+l10n:
+  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
-缓冲区是一块物理内存中的存储区，当数据进行转移时用来临时存放数据。
 
-## Learn more
+**缓冲区**是物理内存中用于在数据进行转移时临时存放数据的存储区域。
 
-### General knowledge
+## 参见
 
-- [Data buffer](https://en.wikipedia.org/wiki/Data_buffer) on Wikipedia
+- 维基百科上的[缓冲器](https://zh.wikipedia.org/wiki/缓冲器)

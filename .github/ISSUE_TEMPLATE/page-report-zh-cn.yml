@@ -1,0 +1,62 @@
+name: "[仅通过 MDN 页面报告问题 // zh-cn]"
+description: 通过 MDN 页面上的“Report the content issue”链接提交议题。
+labels: ["l10n-zh", "needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 在提交议题前
+
+        **想要自行修改页面？** 文档内容是开源的！
+        ↩ 返回，并点击页面中的 _Edit the page on Github_ 链接。
+
+        **你的议题与浏览器兼容性表格有关？**
+        ↩ 返回，并点击页面中的 _Report problems with this compatibility data on GitHub_ 链接。
+
+        **需要与浏览器相关的帮助？**
+        🙋 请访问浏览器支持站点，以获取有关 [Firefox](https://support.mozilla.org/zh-CN/kb/file-bug-report-or-feature-request-mozilla)、[Chrome](https://support.google.com/chrome/answer/95315?ref_topic=7439544)、[Safari](https://www.apple.com/feedback/safari.html) 或其它浏览器的帮助信息。
+
+        ---
+  - type: input
+    id: mdn-url
+    attributes:
+      label: MDN URL
+      description: 此内容自动生成。请勿修改。
+    validations:
+      required: true
+  - type: input
+    id: section
+    attributes:
+      label: 与此议题相关的小节或标题？
+  - type: textarea
+    id: problem
+    attributes:
+      label: 哪些信息是错误、无用或不完善的？
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 你期望看到什么？
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: 你有什么支持的链接、参考或引用？
+      description: 有助于我们确认你的议题的相关内容（链接）。
+  - type: textarea
+    id: more-info
+    attributes:
+      label: 你还想补充什么内容？
+      description: 例如，复现 bug 的步骤、截图、录屏或示例代码
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        你已完成了所有内容！以下字段已被预填充。请点击 **Submit new issue** 按钮。
+  - type: textarea
+    id: metadata
+    attributes:
+      label: MDN metadata
+      description: 此内容自动生成。请勿修改。

@@ -1,19 +1,12 @@
 ---
 title: Instance
 slug: Glossary/Instance
-tags:
-  - CodingScripting
-  - Débutant
-  - Glossaire
-  - JavaScript
-  - NeedsContent
-translation_of: Glossary/Instance
-original_slug: Glossaire/Instance
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-Un {{glossary("objet")}} créé par un {{glossary("constructeur")}} est une instance de ce constructeur.
 
-## Pour approfondir
+Un {{Glossary("object", "objet")}} créé par un {{Glossary("constructor", "constructeur")}} est une **instance** de ce constructeur.
 
-### Culture générale
+## Voir aussi
 
-- {{interwiki("wikipedia", "Instance (programmation)", "Instance")}} sur Wikipédia
+- [Instance](<https://fr.wikipedia.org/wiki/Instance_(programmation)>) sur Wikipédia

@@ -1,20 +1,28 @@
 ---
 title: Date.prototype.setUTCFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCFullYear
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCFullYear
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setUTCFullYear
 ---
+
 {{JSRef}}
 
 La méthode **`setUTCFullYear()`** définit l'année complête pour la date, selon UTC.
 
-{{EmbedInteractiveExample("pages/js/date-setutcfullyear.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setUTCFullYear()")}}
+
+```js interactive-example
+const event = new Date("December 31, 1975 23:15:30 GMT-3:00");
+
+console.log(event.getUTCFullYear());
+// Expected output: 1976
+
+console.log(event.toUTCString());
+// Expected output: "Thu, 01 Jan 1976 02:15:30 GMT"
+
+event.setUTCFullYear(1975);
+
+console.log(event.toUTCString());
+// Expected output: "Wed, 01 Jan 1975 02:15:30 GMT"
+```
 
 ## Syntaxe
 
@@ -52,16 +60,11 @@ leGrandJour.setUTCFullYear(1997);
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.9.5.41', 'Date.prototype.setUTCFullYear')}}                             | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-date.prototype.setutcfullyear', 'Date.prototype.setUTCFullYear')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-date.prototype.setutcfullyear', 'Date.prototype.setUTCFullYear')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.setUTCFullYear")}}
+{{Compat}}
 
 ## Voir aussi
 

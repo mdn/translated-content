@@ -1,30 +1,11 @@
 ---
-title: 'HTMLTrackElement: cuechange event'
+title: "HTMLTrackElement: cuechange イベント"
+short-title: cuechange
 slug: Web/API/HTMLTrackElement/cuechange_event
-page-type: web-api-event
-tags:
-  - API
-  - Accessibility
-  - Audio
-  - Chapters
-  - Descriptions
-  - HTMLTextTrack
-  - Media
-  - Reference
-  - Text
-  - TextTrack
-  - Video
-  - WebVTT
-  - a11y
-  - captions
-  - cuechange
-  - events
-  - oncuechange
-  - track
-  - vtt
-browser-compat: api.HTMLTrackElement.cuechange_event
-translation_of: Web/API/HTMLTrackElement/cuechange_event
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
+
 {{APIRef("WebVTT")}}
 
 **`cuechange`** イベントは {{domxref("TextTrack")}} が現在表示しているキューを変更した際に発生します。このイベントは `TextTrack` と、それが表示されている {{domxref("HTMLTrackElement")}} があれば、その両方で発生します。
@@ -34,9 +15,9 @@ translation_of: Web/API/HTMLTrackElement/cuechange_event
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用したり、イベントハンドラープロパティを設定したりしてください。
 
 ```js
-addEventListener('cuechange', (event) => { })
+addEventListener("cuechange", (event) => {});
 
-oncuechange = (event) => { }
+oncuechange = (event) => {};
 ```
 
 ## イベント型

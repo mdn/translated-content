@@ -1,18 +1,9 @@
 ---
 title: contextualIdentitities.ContextualIdentity
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/ContextualIdentity
-tags:
-  - API
-  - Add-ons
-  - ContextualIdentity
-  - Extensions
-  - Reference
-  - Type
-  - WebExtensions
-  - contextalIdentities
-translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/ContextualIdentity
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Le type **`contextualIdentities.ContextualIdentity`** décrit une identité contextuelle unique.
 
@@ -23,9 +14,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `cookieStoreId`
   - : `string`. L'ID du magasin de cookies pour l'identité. Puisque les identités contextuelles ne partagent pas les banques de cookies, elles servent d'identificateur unique.
 - `color`
-
   - : `string`. La couleur pour l'identité. Cela sera montré dans les onglets appartenant à cette identité. Les valeurs suivantes sont valides :
-
     - "blue"
     - "turquoise"
     - "green"
@@ -41,9 +30,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `colorCode`
   - : `string`. Un code hexadécimal représentant la couleur exacte utilisée pour l'identité. Par exemple : `"#37adff"`. Dans le cas particulier de la couleur "toolbar", `colorCode` est toujours `"#7c7c7d"`, quelle que soit la couleur affichée.
 - `icon`
-
   - : `string`. Le nom d'une icône pour l'identité. Cela s'affichera dans la barre d'URL pour les onglets appartenant à cette identité. Les valeurs suivantes sont valides :
-
     - "fingerprint"
     - "briefcase"
     - "dollar"
@@ -63,6 +50,6 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `name`
   - : `string`. Nom de l'identité. Cela s'affichera dans la barre d'URL pour les onglets appartenant à cette identité. Notez que les noms ne doivent pas nécessairement être uniques .
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.contextualIdentities.ContextualIdentity")}}
+{{Compat}}

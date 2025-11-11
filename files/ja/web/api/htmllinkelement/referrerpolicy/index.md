@@ -1,19 +1,14 @@
 ---
-title: HTMLLinkElement.referrerPolicy
+title: "HTMLLinkElement: referrerPolicy プロパティ"
+short-title: referrerPolicy
 slug: Web/API/HTMLLinkElement/referrerPolicy
-page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - HTMLLinkElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLLinkElement.referrerPolicy
-translation_of: Web/API/HTMLLinkElement/referrerPolicy
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
+
 {{APIRef}}
 
-**`HTMLLinkElement.referrerPolicy`** プロパティは、リソースの取得時に送信されるリファラーを定義する {{HTMLElement("link")}} 要素の HTML {{htmlattrxref("referrerpolicy","link")}} 属性を反映します。
+**`HTMLLinkElement.referrerPolicy`** プロパティは、リソースの取得時に送信されるリファラーを定義する {{HTMLElement("link")}} 要素の HTML [`referrerpolicy`](/ja/docs/Web/HTML/Reference/Elements/link#referrerpolicy) 属性を反映します。
 
 詳しくは HTTP の {{HTTPHeader("Referrer-Policy")}} ヘッダーを参照してください。
 
@@ -43,7 +38,7 @@ translation_of: Web/API/HTMLLinkElement/referrerPolicy
 ## 例
 
 ```js
-var links = document.getElementsByTagName("link");
+const links = document.getElementsByTagName("link");
 links[0].referrerPolicy; // "no-referrer"
 ```
 

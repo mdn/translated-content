@@ -1,12 +1,8 @@
 ---
 title: AudioBufferSourceNode.buffer
 slug: Web/API/AudioBufferSourceNode/buffer
-tags:
-  - API
-  - AudioBufferSourceNode
-  - Web Audio API
-translation_of: Web/API/AudioBufferSourceNode/buffer
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioBufferSourceNode") }} 接口的 **`buffer`** 属性提供了重复播放音频的能力，该音频使用 {{domxref("AudioBuffer")}} 作为声音文件的来源。
@@ -19,7 +15,8 @@ translation_of: Web/API/AudioBufferSourceNode/buffer
 
 ## 示例
 
-> **备注：** 完整的示例请查看[演示示例](https://mdn.github.io/webaudio-examples/audio-buffer/)，或[查看源代码](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html)。
+> [!NOTE]
+> 完整的示例请查看[演示示例](https://mdn.github.io/webaudio-examples/audio-buffer/)，或[查看源代码](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html)。
 
 ```js
 const myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);

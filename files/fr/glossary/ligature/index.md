@@ -1,19 +1,14 @@
 ---
 title: Ligature
 slug: Glossary/Ligature
-tags:
-  - CSS
-  - Design
-  - Glossaire
-translation_of: Glossary/Ligature
-original_slug: Glossaire/Ligature
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-Une **ligature** est une fusion de deux caractères en un seul nouveau caractère. Par exemple, en français, "œ" est une ligature de "oe".
 
-Vous pouvez implémenter les ligatures dans vos pages web avec {{cssxref("font-variant-ligatures")}}.
+Une **ligature** est une fusion de deux caractères en un seul nouveau caractère. Par exemple, en français, «&nbsp;œ&nbsp;» est une ligature de «&nbsp;oe&nbsp;».
 
-## Pour approfondir
+Vous pouvez implémenter les ligatures dans vos pages web avec {{CSSxRef("font-variant-ligatures")}}.
 
-### Culture générale
+## Voir aussi
 
-- {{interwiki("wikipedia", "Ligature (écriture)", "Ligature")}} sur Wikipédia
+- [Ligature](<https://fr.wikipedia.org/wiki/Ligature_(écriture)>) sur Wikipédia

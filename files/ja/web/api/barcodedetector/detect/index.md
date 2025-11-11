@@ -1,16 +1,8 @@
 ---
 title: BarcodeDetector.detect()
 slug: Web/API/BarcodeDetector/detect
-tags:
-  - バーコード検出 API
-  - BarcodeDetector
-  - メソッド
-  - バーコード
-  - 形状認識
-  - 実験的
-browser-compat: api.BarcodeDetector.detect
-translation_of: Web/API/BarcodeDetector/detect
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}
 
 **`detect()`** は {{domxref("BarcodeDetector")}} インターフェイスのメソッドで、画像内に検出されたバーコードの配列 ({{jsxref('Array')}}) で履行されるプロミス ({{jsxref('Promise')}}) を返します。
@@ -45,13 +37,14 @@ var detectedBarcode = BarcodeDetector.detect(ImageBitmapSource);
 この例では、 `detect()` メソッドを使用して、与えられた画像内のバーコードを検出しています。これらは繰り返し処理され、バーコードのデータはコンソールに記録されます。
 
 ```js
-barcodeDetector.detect(imageEl)
-  .then(barcodes => {
-    barcodes.forEach(barcode => console.log(barcode.rawData));
-  }
-  .catch(err => {
-    console.log(err);
+barcodeDetector
+  .detect(imageEl)
+  .then((barcodes) => {
+    barcodes.forEach((barcode) => console.log(barcode.rawValue));
   })
+  .catch((err) => {
+    console.error(err);
+  });
 ```
 
 ## 仕様書

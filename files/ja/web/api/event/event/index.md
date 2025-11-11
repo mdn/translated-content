@@ -1,20 +1,18 @@
 ---
-title: Event()
+title: "Event: Event() コンストラクター"
+short-title: Event()
 slug: Web/API/Event/Event
-page-type: web-api-constructor
-tags:
-  - コンストラクター
-  - リファレンス
-browser-compat: api.Event.Event
-translation_of: Web/API/Event/Event
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
+
 {{APIRef("DOM")}}
 
-**`Event()`** コンストラクターは、新しい {{domxref("Event")}} を生成します。この方法で作成されたイベントは*合成イベント*と呼ばれ、ブラウザーによって発行されたイベントとは対照的となっており、スクリプトから[配信](/ja/docs/Web/Events/Creating_and_triggering_events)することができます。
+**`Event()`** コンストラクターは、新しい {{domxref("Event")}} を生成します。この方法で作成されたイベントは*合成イベント*と呼ばれ、ブラウザーによって発行されたイベントとは対照的となっており、スクリプトから[配信](/ja/docs/Web/API/Document_Object_Model/Events)することができます。
 
 ## 構文
 
-```js
+```js-nolint
 new Event(type)
 new Event(type, options)
 ```
@@ -39,12 +37,12 @@ new Event(type, options)
 ## 例
 
 ```js
-// create a look event that bubbles up and cannot be canceled
+// バブルアップし、キャンセルできない look イベントを作成
 
-const evt = new Event("look", {"bubbles":true, "cancelable":false});
+const evt = new Event("look", { bubbles: true, cancelable: false });
 document.dispatchEvent(evt);
 
-// event can be dispatched from any element, not only the document
+// イベントは文書だけでなく、あらゆる要素から配信することができる
 myDiv.dispatchEvent(evt);
 ```
 
@@ -60,4 +58,4 @@ myDiv.dispatchEvent(evt);
 
 - {{domxref("Event")}}
 - {{domxref("EventTarget.dispatchEvent()")}}
-- [イベントの作成とトリガー](/ja/docs/Web/Events/Creating_and_triggering_events)
+- [イベントの作成とトリガー](/ja/docs/Web/API/Document_Object_Model/Events)

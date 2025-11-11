@@ -1,21 +1,16 @@
 ---
-title: HTMLAreaElement.hash
+title: "HTMLAreaElement: hash プロパティ"
+short-title: hash
 slug: Web/API/HTMLAreaElement/hash
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAreaElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAreaElement.hash
-translation_of: Web/API/HTMLAnchorElement/hash
-original_slug: Web/API/HTMLHyperlinkElementUtils/hash
+l10n:
+  sourceCommit: 8cc63f7e6619446ea38f6a38c457a597a9af564b
 ---
+
 {{ APIRef("HTML DOM") }}
 
-**`HTMLAreaElement.hash`** プロパティは、`'#'` の後に URL のフラグメント識別子が続く文字列を返します。
+**`hash`** は {{domxref("HTMLAreaElement")}} インターフェイスのプロパティで、この `<area>` 要素の `href` における、 `"#"` に続くフラグメント識別子の文字列を返します。 URL にフラグメント識別子がない場合、このプロパティには空の文字列 `""` が入ります。
 
-フラグメントは[パーセントデコード](/ja/docs/Glossary/percent-encoding)されません。 URL にフラグメント識別子がない場合、このプロパティには空の文字列 `""` が含まれます。
+詳しくは {{domxref("URL.hash")}} を参照してください。
 
 ## 値
 
@@ -29,18 +24,25 @@ original_slug: Web/API/HTMLHyperlinkElementUtils/hash
 
 ```html
 <map name="infographic">
-  <area id="mdn-circle" shape="circle" coords="130,136,60"
-  href="https://developer.mozilla.org/#ExampleSection" alt="MDN" />
+  <area
+    id="mdn-circle"
+    shape="circle"
+    coords="130,136,60"
+    href="https://developer.mozilla.org/#ExampleSection"
+    alt="MDN" />
 </map>
 
-<img usemap="#infographic" src="/media/examples/mdn-info.png" alt="MDN infographic" />
+<img
+  usemap="#infographic"
+  src="/media/examples/mdn-info.png"
+  alt="MDN infographic" />
 ```
 
 このようにすると、アンカーのハッシュを取得することができます。
 
 ```js
 const area = document.getElementById("mdn-circle");
-area.hash; // returns '#ExampleSection'
+area.hash; // '#ExampleSection'
 ```
 
 ## 仕様書

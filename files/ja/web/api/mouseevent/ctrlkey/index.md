@@ -1,22 +1,16 @@
 ---
-title: MouseEvent.ctrlKey
+title: "MouseEvent: ctrlKey プロパティ"
+short-title: ctrlKey
 slug: Web/API/MouseEvent/ctrlKey
-tags:
-  - API
-  - DOM
-  - DOM イベント
-  - MouseEvent
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.MouseEvent.ctrlKey
-translation_of: Web/API/MouseEvent/ctrlKey
+l10n:
+  sourceCommit: 192bb8c0fd91f451c69303a431971c1937c4feca
 ---
-{{APIRef("DOM Events")}}
 
-**`MouseEvent.ctrlKey`** は読み取り専用のプロパティで、このマウスイベントが発生した際に <kbd>ctrl</kbd> キーが押されていたかどうかを示す論理値です。
+{{APIRef("UI Events")}}
 
-> **Note:** Macintosh のキーボードでは、このキーは <kbd>control</kbd> キーです。
+**`MouseEvent.ctrlKey`** は読み取り専用のプロパティで、このマウスイベントが発生した際に <kbd>Ctrl</kbd> キーが押されていたかどうかを示す論理値です。
+
+Macintosh のキーボードでは、このキーは <kbd>control</kbd> キーと表記されています。また、 Mac では <kbd>control</kbd> キーと組み合わせたクリックは、オペレーティングシステムに拾われてコンテキストメニューを開くのに使われるので、 `ctrlKey` はクリックイベントで検出されないことに注意してください。
 
 ## 値
 
@@ -24,29 +18,28 @@ translation_of: Web/API/MouseEvent/ctrlKey
 
 ## 例
 
-この例では、 {{Event("click")}} イベントを発生させた際に `ctrlKey` プロパティを記録します。
+この例では、 {{domxref("Element/mousemove_event", "mousemove")}} イベントを発生させた際に `ctrlKey` プロパティを記録します。
 
 ### HTML
 
 ```html
-<p><code>ctrlKey</code> プロパティを試験するためにどこかをクリックしてください。</p>
-<p id="log"></p>
+<p id="log">カーソルが動いていたときに Ctrl キーが押されていた: false</p>
 ```
 
 ### JavaScript
 
 ```js
-let log = document.querySelector('#log');
-document.addEventListener('click', logKey);
+const log = document.querySelector("#log");
+window.addEventListener("mousemove", logKey);
 
 function logKey(e) {
-  log.textContent = `Ctrl キーの押下状態: ${e.ctrlKey}`;
+  log.textContent = `カーソルが動いていたときに Ctrl キーが押されていた: ${e.ctrlKey}`;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## 仕様書
 

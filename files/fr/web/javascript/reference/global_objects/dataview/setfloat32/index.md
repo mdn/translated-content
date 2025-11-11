@@ -1,21 +1,24 @@
 ---
 title: DataView.prototype.setFloat32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setFloat32
-tags:
-  - DataView
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setFloat32
-original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/setFloat32
 ---
+
 {{JSRef}}
 
 La méthode **`setFloat32()`** permet d'enregistrer un nombre flottant signé sur 32 bits (type _float_ par analogie avec C) à l'octet indiqué par rapport au début de la {{jsxref("DataView")}}.
 
-{{EmbedInteractiveExample("pages/js/dataview-setfloat32.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.setFloat32()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setFloat32(1, Math.PI);
+
+console.log(view.getFloat32(1));
+// Expected output: 3.1415927410125732
+```
 
 ## Syntaxe
 
@@ -54,15 +57,11 @@ dataview.getFloat32(1); // 3
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                             | Commentaires                                    |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                                                         | {{Spec2('Typed Array')}} | Remplacée dans ECMAScript 2015.                 |
-| {{SpecName('ES2015', '#sec-dataview.prototype.setfloat32', 'DataView.prototype.setFloat32')}} | {{Spec2('ES2015')}}         | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.setfloat32', 'DataView.prototype.setFloat32')}} | {{Spec2('ESDraft')}}     |                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.DataView.setFloat32")}}
+{{Compat}}
 
 ## Voir aussi
 

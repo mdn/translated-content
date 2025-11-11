@@ -1,74 +1,64 @@
 ---
 title: bookmarks.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Method
-  - remove
-  - 书签
-  - 参考文档
-  - 扩展
-  - 方法
-  - 移除
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
+l10n:
+  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
-{{AddonSidebar()}}
 
 **`bookmarks.remove()`** 方法用于删除单个书签或一个空的书签文件夹。
 
-> **警告：** 如果你的扩展尝试从书签树的根节点中移除一个书签，该调用将会引发一个“书签根不能被修改的”的错误信息并且这个书签不会被移除。
+> [!WARNING]
+> 如果你的扩展尝试从书签树的根节点中移除一个书签，该调用将会引发一个“书签根不能被修改的”的错误信息并且这个书签不会被移除。
 
-`这是一个异步方法，返回Promise对象。`
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
 ## 语法
 
-```js
+```js-nolint
 var removingBookmark = browser.bookmarks.remove(
-  id                 // 字符串
-)
+  id, // 字符串
+);
 ```
 
 ### 参数
 
 - `id`
-  - : {{jsxref("string")}} 要删除的书签或空书签文件夹的 id 标识
+  - : 一个指定要移除的书签或空文件夹的 ID 的{{jsxref("string", "字符串", "", 1)}}。
 
 ### 返回值
 
-若方法执行完成，返回一个无参的 `Promise对象。`
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其不会兑现任何参数。
 
-若未找到该书签或该空书签文件夹，将返回一个带有错误信息的`Promise对象。`
+如果与 `id` 参数对应的节点找不到或者是一个非空文件夹，则该 Promise 会以错误消息拒绝。
 
-## 浏览器兼容性
-
-{{Compat("webextensions.api.bookmarks.remove")}}
-
-## 例子
+## 示例
 
 ```js
 function onRemoved() {
-  console.log("Removed!");
+  console.log("已移除！");
 }
 
 function onRejected(error) {
-  console.log(`An error: ${error}`);
+  console.log(`出现错误：${error}`);
 }
 
-var bookmarkId = "abcdefghijkl";
+let bookmarkId = "abcdefghijkl";
 
-var removingBookmark = browser.bookmarks.remove(bookmarkId);
+let removingBookmark = browser.bookmarks.remove(bookmarkId);
 removingBookmark.then(onRemoved, onRejected);
 ```
 
 {{WebExtExamples}}
 
-> **备注：** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-remove) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+## 浏览器兼容性
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+{{Compat}}
+
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.bookmarks`](https://developer.chrome.google.cn/docs/extensions/reference/api/bookmarks#method-remove) API。该文档衍生自 Chromium 代码中的 [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json)。
+
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -95,4 +85,4 @@ removingBookmark.then(onRemoved, onRejected);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

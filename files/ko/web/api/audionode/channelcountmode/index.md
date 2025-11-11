@@ -1,15 +1,8 @@
 ---
 title: AudioNode.channelCountMode
 slug: Web/API/AudioNode/channelCountMode
-tags:
-  - API
-  - AudioNode
-  - Property
-  - Reference
-  - Web Audio API
-  - channelCountMode
-browser-compat: api.AudioNode.channelCountMode
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioNode") }} 인터페이스의 `channelCountMode` 프로퍼티는 노드의 입력과 출력 사이에서 채널들이 반드시 일치되어야만 하는 방법을 기술하는 열거형 값을 나타냅니다.
@@ -64,13 +57,14 @@ browser-compat: api.AudioNode.channelCountMode
   </tbody>
 </table>
 
-> **참고:** 명세서의 구 버전에서는, {{domxref("ChannelSplitterNode")}}의 기본값은 max였습니다.
+> [!NOTE]
+> 명세서의 구 버전에서는, {{domxref("ChannelSplitterNode")}}의 기본값은 max였습니다.
 
 ## 구문
 
 ```js
 var oscillator = audioCtx.createOscillator();
-oscillator.channelCountMode = 'explicit';
+oscillator.channelCountMode = "explicit";
 ```
 
 ### 값
@@ -90,7 +84,7 @@ var gainNode = audioCtx.createGain();
 oscillator.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 
-oscillator.channelCountMode = 'explicit';
+oscillator.channelCountMode = "explicit";
 ```
 
 ## 명세서

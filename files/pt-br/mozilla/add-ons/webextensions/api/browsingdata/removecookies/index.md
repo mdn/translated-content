@@ -1,19 +1,9 @@
 ---
 title: browsingData.removeCookies()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCookies
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browsingData
-  - removeCookies
-browser-compat: webextensions.api.browsingData.removeCookies
-translation-of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCookies
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Limpa os cookies do navegador.
 
@@ -28,8 +18,8 @@ Esta é uma função assíncrona que retorna uma [`Promise`](/pt-BR/docs/Web/Jav
 
 ```js
 let removing = browser.browsingData.removeCookies(
-  removalOptions            // objeto RemovalOptions
-)
+  removalOptions, // objeto RemovalOptions
+);
 ```
 
 ### Parâmetros
@@ -58,16 +48,17 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-let oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+let oneWeekAgo = new Date().getTime() - weekInMilliseconds();
 
-browser.browsingData.removeCookies(
-  {since: oneWeekAgo}).
-then(onRemoved, onError);
+browser.browsingData
+  .removeCookies({ since: oneWeekAgo })
+  .then(onRemoved, onError);
 ```
 
 Remove todos os cookies:
 
-> **Warning:** Usar a API para remover todos os cookies irá, simultâneamente, limpar todos os objetos local storage (incluindo aqueles de outras extensões)
+> [!WARNING]
+> Usar a API para remover todos os cookies irá, simultâneamente, limpar todos os objetos local storage (incluindo aqueles de outras extensões)
 >
 > Se você quer limpar todos os cookies sem alterar as informações do local storage, use [browser.cookies](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/cookies) para percorrer and remover os conteúdos de todos os cookies armazenados
 
@@ -80,8 +71,7 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.removeCookies({}).
-then(onRemoved, onError);
+browser.browsingData.removeCookies({}).then(onRemoved, onError);
 ```
 
 ## Compatibilidade com navegadores
@@ -90,12 +80,13 @@ then(onRemoved, onError);
 
 {{WebExtExamples}}
 
-
-> **Note:** Esta API é baseada na API do Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/).
+> [!NOTE]
+> Esta API é baseada na API do Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
 >
 > A compatibilidade dos dados do Microsoft Edge é fornecida pela Microsoft Corporation e é incluída aqui sob a licença Creative Commons Attribution 3.0 United States.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -122,4 +113,4 @@ then(onRemoved, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

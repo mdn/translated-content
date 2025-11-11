@@ -1,35 +1,38 @@
 ---
 title: SharedArrayBuffer.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice
-tags:
-  - JavaScript
-  - Mémoire partagée
-  - Méthode
-  - Prototype
-  - Reference
-  - SharedArrayBuffer
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice
-original_slug: Web/JavaScript/Reference/Objets_globaux/SharedArrayBuffer/slice
 ---
+
 {{JSRef}}
 
 La méthode **`SharedArrayBuffer.prototype.slice()`** renvoie un nouvel objet {{jsxref("SharedArrayBuffer")}} dont le contenu est une copie des octets de l'objet `SharedArrayBuffer` courant entre un indice de début (inclus) et un indice de fin (exclus) (autrement dit, on copie une « tranche » du tampon courant). Si l'indice de début ou de fin est négatif, la position sera comptée à partir de la fin du tableau plutôt qu'à partir du début. L'algorithme appliqué est le même que {{jsxref("Array.prototype.slice()")}}_._
 
-{{EmbedInteractiveExample("pages/js/sharedarraybuffer-slice.html")}}
+{{InteractiveExample("JavaScript Demo: SharedArrayBuffer.slice()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const int32View = new Int32Array(buffer); // Create the view
+// Produces Int32Array [0, 0, 0, 0]
+
+int32View[1] = 42;
+const sliced = new Int32Array(buffer.slice(4, 12));
+
+console.log(sliced);
+// Expected output: Int32Array [42, 0]
+```
 
 ## Syntaxe
 
 ```js
-sab.slice()
-sab.slice(début)
-sab.slice(début, fin)
+sab.slice();
+sab.slice(début);
+sab.slice(début, fin);
 ```
 
 ### Paramètres
 
 - `début` {{optional_inline}}
-
   - : L'indice auquel commencer l'extraction (le début du tableau se situe à l'indice 0).
 
     Si la valeur est négative, `début` indique le décalage à partir de la fin du tableau. Ainsi `slice(-2)` permettra d'extraire les deux derniers éléments du tableau.
@@ -37,7 +40,6 @@ sab.slice(début, fin)
     Si `début` est absent, `slice` commencera l'extraction à partir de l'indice 0.
 
 - `fin` {{optional_inline}}
-
   - : L'indice auquel finir l'extraction. Attention, la valeur du tableau pour cet indice n'est pas incluse dans l'extraction.
 
     Ainsi, `slice(1,4)` permettra d'extraire entre le deuxième et le quatrième élément (c'est-à-dire les trois éléments dont les indices sont respectivement 1, 2 et 3).
@@ -54,21 +56,19 @@ Un nouvel objet {{jsxref("SharedArrayBuffer")}} qui contient les éléments extr
 
 ```js
 var sab = new SharedArrayBuffer(1024);
-sab.slice();    // SharedArrayBuffer { byteLength: 1024 }
-sab.slice(2);   // SharedArrayBuffer { byteLength: 1022 }
-sab.slice(-2);  // SharedArrayBuffer { byteLength: 2 }
-sab.slice(0,1); // SharedArrayBuffer { byteLength: 1 }
+sab.slice(); // SharedArrayBuffer { byteLength: 1024 }
+sab.slice(2); // SharedArrayBuffer { byteLength: 1022 }
+sab.slice(-2); // SharedArrayBuffer { byteLength: 2 }
+sab.slice(0, 1); // SharedArrayBuffer { byteLength: 1 }
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                            | État                         | Commentaires                     |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------- |
-| {{SpecName('ESDraft', '#sec-sharedarraybuffer.prototype.slice', 'SharedArrayBuffer.prototype.slice')}} | {{Spec2('ESDraft')}} | Définition initiale avec ES2017. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.SharedArrayBuffer.slice")}}
+{{Compat}}
 
 ## Voir aussi
 

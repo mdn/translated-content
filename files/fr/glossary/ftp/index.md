@@ -1,19 +1,15 @@
 ---
 title: FTP
 slug: Glossary/FTP
-tags:
-  - Encodage
-  - FTP
-  - Glossaire
-  - protocole
-translation_of: Glossary/FTP
-original_slug: Glossaire/FTP
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-**FTP** (file transfer protocol) est un {{glossary("Protocol","protocole")}} réseau standard utilisé pour transférer des fichiers d'un {{glossary("Host","hôte")}} à un autre par Internet. De plus en plus, cependant, les équipes et les comptes d'hébergement n'autorisent pas le FTP et s'appuient plutôt sur un système de contrôle de version comme Git. Vous le trouverez toujours utilisé sur les anciens comptes d'hébergement, mais il est sûr de dire que FTP n'est plus considéré comme la meilleure pratique.
 
-## En apprendre plus
+**FTP** (file transfer protocol) est un {{Glossary("Protocol","protocole")}} réseau standard utilisé pour transférer des fichiers d'un {{Glossary("Host", "hôte")}} à un autre par Internet.
 
-### Connaissances générales
+Pendant de nombreuses années, c'était le standard _de facto_ pour le transfert de fichiers, mais comme il est intrinsèquement peu sûr, il n'est plus pris en charge par de nombreux comptes d'hébergement. À la place, vous devriez utiliser SFTP (une version sécurisée et cryptée de FTP) ou une autre méthode sécurisée pour transférer des fichiers, comme Rsync sur SSH.
 
-- [Guide du débutant pour mettre en ligne des fichiers via FTP](/fr/Apprendre/Transf%C3%A9rer_des_fichiers_vers_un_serveur_web)
-- {{interwiki("wikipedia", "File_Transfer_Protocol","FTP")}} on Wikipedia
+## Voir aussi
+
+- [Guide du débutant pour mettre en ligne des fichiers via FTP](/fr/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)
+- [FTP](https://fr.wikipedia.org/wiki/File_Transfer_Protocol) sur Wikipédia

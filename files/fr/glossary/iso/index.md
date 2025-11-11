@@ -1,19 +1,12 @@
 ---
 title: ISO
 slug: Glossary/ISO
-tags:
-  - Glossaire
-  - ISO
-  - Infrastructure
-  - Standards du Web
-  - spécifications web
-translation_of: Glossary/ISO
-original_slug: Glossaire/ISO
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-**ISO** (International Organization for Standardization) est une organisation internationale qui développe des critères uniformisés coordonnant les entreprises de chaque principal secteur.
 
-## Pour approfondir
+**ISO** (<i lang="en">International Organization for Standardization</i> en anglais) est une organisation internationale qui développe des critères uniformisés coordonnant les entreprises de chaque principal secteur.
 
-### Culture générale
+## Voir aussi
 
-- [Site web officiel](http://www.iso.org/iso/fr/home.html)
+- [Site web officiel <sup>(angl.)</sup>](http://www.iso.org/iso/fr/home.html)

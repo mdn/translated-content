@@ -1,73 +1,90 @@
 ---
-title: Array.prototype.indexOf()
+title: "Array : méthode indexOf()"
+short-title: indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
-tags:
-  - Array
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/indexOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/indexOf
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-{{JSRef}}
 
-La méthode **`indexOf()`** renvoie le premier indice pour lequel on trouve un élément donné dans un tableau. Si l'élément cherché n'est pas présent dans le tableau, la méthode renverra -1.
+La méthode **`indexOf()`** des instances de {{JSxRef("Array")}} retourne le premier indice auquel un élément donné peut être trouvé dans le tableau, ou -1 s'il n'est pas présent.
 
-> **Note :** pour la méthode associée aux chaînes de caractères, voir la page {{jsxref("String.prototype.indexOf()")}}.
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Array.prototype.indexOf()")}}
 
-{{EmbedInteractiveExample("pages/js/array-indexof.html")}}
+```js interactive-example
+const beasts = ["fourmi", "bison", "chameau", "canard", "bison"];
+
+console.log(beasts.indexOf("bison"));
+// Résultat attendu : 1
+
+// À partir de l'indice 2
+console.log(beasts.indexOf("bison", 2));
+// Résultat attendu : 4
+
+console.log(beasts.indexOf("girafe"));
+// Résultat attendu : -1
+```
 
 ## Syntaxe
 
-```js
-arr.indexOf(élémentRecherché)
-arr.indexOf(élémentRecherché, indiceDébut)
+```js-nolint
+indexOf(searchElement)
+indexOf(searchElement, fromIndex)
 ```
 
 ### Paramètres
 
-- `élémentRecherché`
-  - : L'élément qu'on cherche dans le tableau
-- `indiceDébut` {{optional_inline}}
-  - : L'index à partir duquel commencer la recherche. La valeur par défaut est 0 (le tableau sera parcouru dans sa totalité). Si l'index est plus grand ou égal à la longueur du tableau, la méthode renverra -1. Si l'index est négatif, la recherche commencera d'autant d'éléments, à partir de la fin du tableau. À noter que même si l'index est négatif, la recherche s'effectue toujours du début jusqu'à la fin du tableau. Si l'index fourni est inférieur à 0, le tableau sera entièrement parcouru.
+- `searchElement`
+  - : L'élément à rechercher dans le tableau.
+- `fromIndex` {{Optional_Inline}}
+  - : L'indice à partir duquel commencer la recherche, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière).
+    - Un indice négatif compte à rebours depuis la fin du tableau — si `-array.length <= fromIndex < 0`, `fromIndex + array.length` est utilisé. À noter&nbsp;: le tableau est toujours parcouru de l'avant vers l'arrière dans ce cas.
+    - Si `fromIndex < -array.length` ou si `fromIndex` est omis, `0` est utilisé, ce qui fait que tout le tableau est parcouru.
+    - Si `fromIndex >= array.length`, le tableau n'est pas parcouru et `-1` est retourné.
 
 ### Valeur de retour
 
-Le premier index de l'élément dans le tableau ou -1 si la valeur n'est pas trouvée.
+Le premier indice de `searchElement` dans le tableau&nbsp;; `-1` si la valeur n'est pas trouvée.
 
 ## Description
 
-`indexOf` compare `élémentRecherché` aux éléments contenus dans le tableau en utilisant une [égalité stricte](</fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_comparaison#.C3.89galit.C3.A9_stricte_(.3D.3D.3D)>) (la même méthode utilisée par l'opérateur `===`).
+La méthode `indexOf()` compare `searchElement` aux éléments du tableau en utilisant une [égalité stricte](/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality) (le même algorithme que celui utilisé par l'opérateur `===`). Les valeurs [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN) ne sont jamais considérées comme égales, donc `indexOf()` retourne toujours `-1` lorsque `searchElement` vaut `NaN`.
+
+La méthode `indexOf()` ignore les emplacements vides dans les [tableaux creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux).
+
+La méthode `indexOf()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_tableau_génériques). Elle attend seulement que la valeur de `this` possède une propriété `length` et des propriétés à clés entières.
 
 ## Exemples
 
 ### Utiliser `indexOf()`
 
-Dans l'exemple qui suit, on peut utiliser `indexOf` afin de trouver l'emplacement d'un élément dans un tableau.
+L'exemple suivant utilise `indexOf()` pour localiser des valeurs dans un tableau.
 
 ```js
-var tableau = [2, 9, 9];
-tableau.indexOf(2);     // 0
-tableau.indexOf(7);     // -1
-tableau.indexOf(9, 2);  // 2
+const tableau = [2, 9, 9];
+tableau.indexOf(2); // 0
+tableau.indexOf(7); // -1
+tableau.indexOf(9, 2); // 2
 tableau.indexOf(2, -1); // -1
 tableau.indexOf(2, -3); // 0
 ```
 
-### Trouver toutes les occurences d'un élément
-
-Dans l'exemple qui suit, on utilise `indexOf()` afin de trouver tous les indices d'un élément dans un tableau. On peut utiliser la méthode {{jsxref("Array.prototype.push", "push")}} afin d'ajouter ces indices dans un autre tableau.
+Vous ne pouvez pas utiliser `indexOf()` pour rechercher `NaN`.
 
 ```js
-var indices = [];
-var tableau = ['a', 'b', 'a', 'c', 'a', 'd'];
-var élément = 'a';
-var idx = tableau.indexOf(élément);
-while (idx != -1) {
+const tableau = [NaN];
+tableau.indexOf(NaN); // -1
+```
+
+### Trouver toutes les occurences d'un élément
+
+```js
+const indices = [];
+const tableau = ["a", "b", "a", "c", "a", "d"];
+const element = "a";
+let idx = tableau.indexOf(element);
+while (idx !== -1) {
   indices.push(idx);
-  idx = tableau.indexOf(élément, idx + 1);
+  idx = tableau.indexOf(element, idx + 1);
 }
 console.log(indices);
 // [0, 2, 4]
@@ -76,116 +93,65 @@ console.log(indices);
 ### Trouver si un élément existe et l'ajouter dans le tableau si ce n'est pas le cas
 
 ```js
-function mettreAJourLegumes(tabLégumes, légume) {
-    if (tabLégumes.indexOf(légume) === -1) {
-        tabLégumes.push(légume);
-        console.log('Le nouveau tableau est : ' + tabLégumes);
-    } else if (tabLégumes.indexOf(légume) > -1) {
-        console.log(légume + ' existe déjà dans le tableau.');
-    }
+function mettreAJourLegumes(legumes, legume) {
+  if (legumes.indexOf(legume) === -1) {
+    legumes.push(legume);
+    console.log("Le nouveau tableau est : " + legumes);
+  } else if (legumes.indexOf(legume) > -1) {
+    console.log(legume + " existe déjà dans le tableau.");
+  }
 }
 
-var tabLégumes = ['pomme de terre', 'tomate', 'poivron'];
+const legumes = ["pomme de terre", "tomate", "poivron"];
 
-mettreAJourLegumes(tabLégumes, 'épinard');
+mettreAJourLegumes(legumes, "épinard");
 // Le nouveau tableau est : pomme de terre,tomate,poivron,épinard
-mettreAJourLegumes(tabLégumes, 'épinard');
+mettreAJourLegumes(legumes, "épinard");
 // épinard existe déjà dans le tableau.
 ```
 
-## Prothèse d'émulation (_polyfill_)
+### Utiliser `indexOf()` sur des tableaux creux
 
-`indexOf` fut ajouté avec la cinquième édition du standard ECMA-262 ; il peut donc ne pas être présent dans tous les navigateurs web. Vous pouvez contourner ce problème en insérant le code suivant au début de vos scripts. Il permet d'utiliser `indexOf` dans les environnements qui ne le supportent pas nativement. L'algorithme est le même que celui spécifié dans ECMAScript 5 si on a bien {{jsxref("TypeError", "TypeError")}} et {{jsxref("Math.abs")}} qui ont leurs valeurs originales :
+Vous ne pouvez pas utiliser `indexOf()` pour rechercher des emplacements vides dans des tableaux creux.
 
 ```js
-// Production steps of ECMA-262, Edition 5, 15.4.4.14
-// Référence : http://es5.github.io/#x15.4.4.14
-if (!Array.prototype.indexOf) {
-  Array.prototype.indexOf = function(searchElement, fromIndex) {
+console.log([1, , 3].indexOf(undefined)); // -1
+```
 
-    var k;
+### Appeler `indexOf()` sur des objets ressemblant à des tableaux
 
-    // 1. Soit O le résultat de l'appel à ToObject avec
-    //    this en argument.
-    if (this == null) {
-      throw new TypeError('"this" vaut null ou n est pas défini');
-    }
+La méthode `indexOf()` lit la propriété `length` de `this` puis accède à chaque propriété dont la clé est un entier non négatif inférieur à `length`.
 
-    var O = Object(this);
-
-    // 2. Soit lenValue le résultat de l'appel de la
-    //    méthode interne Get de O avec l'argument
-    //    "length".
-    // 3. Soit len le résultat de ToUint32(lenValue).
-    var len = O.length >>> 0;
-
-    // 4. Si len vaut 0, on renvoie -1.
-    if (len === 0) {
-      return -1;
-    }
-
-    // 5. Si l'argument fromIndex a été utilisé, soit
-    //    n le résultat de ToInteger(fromIndex)
-    //    0 sinon
-    var n = +fromIndex || 0;
-
-    if (Math.abs(n) === Infinity) {
-      n = 0;
-    }
-
-    // 6. Si n >= len, on renvoie -1.
-    if (n >= len) {
-      return -1;
-    }
-
-    // 7. Si n >= 0, soit k égal à n.
-    // 8. Sinon, si n<0, soit k égal à len - abs(n).
-    //    Si k est inférieur à 0, on ramène k égal à 0.
-    k = Math.max(n >= 0 ? n : len - Math.abs(n), 0);
-
-    // 9. On répète tant que k < len
-    while (k < len) {
-      // a. Soit Pk égal à ToString(k).
-      //    Ceci est implicite pour l'opérande gauche de in
-      // b. Soit kPresent le résultat de l'appel de la
-      //    méthode interne HasProperty de O avec Pk en
-      //    argument. Cette étape peut être combinée avec
-      //    l'étape c
-      // c. Si kPresent vaut true, alors
-      //    i.  soit elementK le résultat de l'appel de la
-      //        méthode interne Get de O avec ToString(k) en
-      //        argument
-      //   ii.  Soit same le résultat de l'application de
-      //        l'algorithme d'égalité stricte entre
-      //        searchElement et elementK.
-      //  iii.  Si same vaut true, on renvoie k.
-      if (k in O && O[k] === searchElement) {
-        return k;
-      }
-      k++;
-    }
-    return -1;
-  };
-}
+```js
+const objetSimilaireTableau = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+  3: 5, // ignoré par indexOf() car length vaut 3
+};
+console.log(Array.prototype.indexOf.call(objetSimilaireTableau, 2));
+// 0
+console.log(Array.prototype.indexOf.call(objetSimilaireTableau, 5));
+// -1
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.14', 'Array.prototype.indexOf')}}                     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.indexof', 'Array.prototype.indexOf')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-array.prototype.indexof', 'Array.prototype.indexOf')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.indexOf")}}
-
-## Notes de compatibilité
-
-- À partir de Firefox 47 ({{geckoRelease(47)}}), cette méthode ne renverra plus `-0`. Ainsi, `[0].indexOf(0, -0)` renverra toujours `+0` (cf. {{bug(1242043)}}).
+{{Compat}}
 
 ## Voir aussi
 
-- {{jsxref("Array.prototype.lastIndexOf()")}}
-- {{jsxref("TypedArray.prototype.indexOf()")}}
+- [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
+- L'objet global {{JSxRef("Array")}}
+- La méthode {{JSxRef("Array.prototype.findIndex()")}}
+- La méthode {{JSxRef("Array.prototype.findLastIndex()")}}
+- La méthode {{JSxRef("Array.prototype.lastIndexOf()")}}
+- La méthode {{JSxRef("TypedArray.prototype.indexOf()")}}
+- La méthode {{JSxRef("String.prototype.indexOf()")}}
+- [Prothèse d'émulation de `Array.prototype.indexOf` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
+- [Prothèse d'émulation es-shims de `Array.prototype.indexOf` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.indexof)

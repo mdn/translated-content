@@ -1,15 +1,8 @@
 ---
 title: Document.enableStyleSheetsForSet()
 slug: Web/API/Document/enableStyleSheetsForSet
-tags:
-  - API
-  - Activation
-  - CSS
-  - DOM
-  - Feuilles de styles
-  - Méthode
-translation_of: Web/API/Document/enableStyleSheetsForSet
 ---
+
 {{ APIRef("DOM") }}
 
 Active les feuilles de styles correspondant au nom spécifié dans l'ensemble de feuilles de styles en cours et désactive toutes les autres (à l'exception de celles sans titre qui sont toujours activées).
@@ -17,7 +10,7 @@ Active les feuilles de styles correspondant au nom spécifié dans l'ensemble de
 ## Syntaxe
 
 ```js
-document.enableStyleSheetsForSet(name)
+document.enableStyleSheetsForSet(name);
 ```
 
 ### Paramètres
@@ -28,7 +21,7 @@ document.enableStyleSheetsForSet(name)
 ## Notes
 
 - Les correspondances de titre sont sensibles à la casse.
-- L'appel de cette méthode avec un `name`  `null` n'a pas d'effet ; si vous voulez désactiver toutes les feuilles de styles alternatives et préférées, vous **devez** utiliser "",  la chaîne vide.
+- L'appel de cette méthode avec un `name` `null` n'a pas d'effet ; si vous voulez désactiver toutes les feuilles de styles alternatives et préférées, vous **devez** utiliser "", la chaîne vide.
 - Les feuilles de styles qui n'ont pas de titre ne sont jamais affectées par cette méthode.
 - Cette méthode n'affecte jamais les valeurs de {{ domxref("document.lastStyleSheetSet") }} ou {{ domxref("document.preferredStyleSheetSet") }}.
 
@@ -40,7 +33,7 @@ document.enableStyleSheetsForSet("Some style sheet set name");
 
 ## Spécifications
 
-- [HTML5 : Alternate Style Sheets](http://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)
+- [HTML5 : Alternate Style Sheets](https://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)
 
 ## Voir aussi
 

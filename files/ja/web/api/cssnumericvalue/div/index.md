@@ -1,18 +1,8 @@
 ---
 title: CSSNumericValue.div()
 slug: Web/API/CSSNumericValue/div
-tags:
-  - API
-  - CSS 型付きオブジェクトモデル API
-  - CSSNumericValue
-  - 実験的
-  - Houdini
-  - メソッド
-  - リファレンス
-  - div()
-browser-compat: api.CSSNumericValue.div
-translation_of: Web/API/CSSNumericValue/div
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 **`div()`** は {{domxref("CSSNumericValue")}} インターフェイスのメソッドで、 `CSSNumericValue` を指定された値で除算します。
@@ -20,7 +10,7 @@ translation_of: Web/API/CSSNumericValue/div
 ## 構文
 
 ```js
-div(number)
+div(number);
 ```
 
 ### 引数

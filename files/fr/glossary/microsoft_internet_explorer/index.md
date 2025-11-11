@@ -1,19 +1,10 @@
 ---
 title: Microsoft Internet Explorer
 slug: Glossary/Microsoft_Internet_Explorer
-tags:
-  - Glossaire
-  - Internet Explorer
-  - Microsoft
-  - Microsoft Internet Explorer
-  - Navigateur
-  - Navigateur Web
-  - Navigation
-  - Système d'exploitation Windows
-  - Windows
-translation_of: Glossary/Microsoft_Internet_Explorer
-original_slug: Glossaire/Microsoft_Internet_Explorer
 ---
+
+{{GlossarySidebar}}
+
 Internet Explorer (ou IE) est un {{glossary("navigateur")}} graphique gratuit maintenu par Microsoft pour conserver une compatibilité avec son utilisation en entreprise. {{glossary("Microsoft Edge")}} est actuellement le navigateur par défaut sous Windows.
 
 Microsoft a d'abord inclus IE dans Windows en 1995 en tant que composant de l'extension appelée "Microsoft Plus!". Aux alentours de 2002, Internet Explorer est devenu le navigateur le plus utilisé au monde, mais a depuis perdu du poids face à Chrome, Firefox, Edge et Safari.
@@ -24,9 +15,9 @@ IE a évolué au fur et à mesure de nombreuses versions et en est actuellement 
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "Internet Explorer", "Internet Explorer")}} sur Wikipédia
-- {{interwiki("wikipedia", "Internet Explorer#Historique", "Historique d'Internet Explorer")}} sur Wikipédia
-- {{interwiki("wikipedia", "Internet Explorer#Versions", "Versions d'Internet Explorer")}} sur Wikipédia
+- [Internet Explorer](https://fr.wikipedia.org/wiki/Internet_Explorer) sur Wikipédia
+- [Historique d'Internet Explorer](https://fr.wikipedia.org/wiki/Internet_Explorer#Historique) sur Wikipédia
+- [Versions d'Internet Explorer](https://fr.wikipedia.org/wiki/Internet_Explorer#Versions) sur Wikipédia
 
 ### À propos d'Internet Explorer
 

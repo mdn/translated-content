@@ -1,21 +1,25 @@
 ---
 title: Map.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Map/delete
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/delete
-original_slug: Web/JavaScript/Reference/Global_Objects/Map/delete
 ---
+
 {{JSRef}}
 
 La méthode **`delete()`** permet de retirer un élément donné d'un objet `Map` grâce à sa clé.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-delete.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.delete()")}}
+
+```js interactive-example
+const map1 = new Map();
+map1.set("bar", "foo");
+
+console.log(map1.delete("bar"));
+// Expected result: true
+// True indicates successful removal
+
+console.log(map1.has("bar"));
+// Expected result: false
+```
 
 ## Syntaxe
 
@@ -39,19 +43,16 @@ var maMap = new Map();
 maMap.set("truc", "toto");
 
 maMap.delete("truc"); // Renvoie true. La suppression est OK.
-maMap.has("truc");    // Renvoie false. "truc" n'est plus présent.
+maMap.has("truc"); // Renvoie false. "truc" n'est plus présent.
 ```
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-map.prototype.delete', 'Map.prototype.delete')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-map.prototype.delete', 'Map.prototype.delete')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Map.delete")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,25 +1,28 @@
 ---
 title: String.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/String/toString
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toString
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/toString
 ---
+
 {{JSRef}}
 
 La méthode **`toString()`** renvoie une chaine de caractères représentant l'objet renseigné.
 
-{{EmbedInteractiveExample("pages/js/string-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: String.toString()")}}
+
+```js interactive-example
+const stringObj = new String("foo");
+
+console.log(stringObj);
+// Expected output: String { "foo" }
+
+console.log(stringObj.toString());
+// Expected output: "foo"
+```
 
 ## Syntaxe
 
 ```js
-str.toString()
+str.toString();
 ```
 
 ### Valeur de retour
@@ -32,7 +35,7 @@ L'objet {{jsxref("String")}} surcharge la méthode `toString()` de l'objet {{jsx
 
 ## Exemples
 
-L'exemple suivant affiche la valeur textuelle d'un objet  {{jsxref("String")}} :
+L'exemple suivant affiche la valeur textuelle d'un objet {{jsxref("String")}} :
 
 ```js
 var x = new String("coucou monde");
@@ -41,16 +44,11 @@ console.log(x.toString()); // affiche "coucou monde"
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires                                          |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                             | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.5.4.2', 'String.prototype.toString')}}                             | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-string.prototype.tostring', 'String.prototype.toString')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-string.prototype.tostring', 'String.prototype.toString')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.toString")}}
+{{Compat}}
 
 ## Voir aussi
 

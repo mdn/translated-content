@@ -1,13 +1,8 @@
 ---
 title: Element.remove()
 slug: Web/API/Element/remove
-tags:
-  - API
-  - Element
-  - DOM
-  - Method
-browser-compat: api.Element.remove
 ---
+
 {{APIRef("DOM")}}
 
 Метод **`Element.remove()`** удаляет элемент из DOM-дерева, в котором он находится.
@@ -15,7 +10,7 @@ browser-compat: api.Element.remove
 ## Синтаксис
 
 ```js
-remove()
+remove();
 ```
 
 ## Примеры
@@ -29,7 +24,7 @@ remove()
 ```
 
 ```js
-var el = document.getElementById('div-02');
+var el = document.getElementById("div-02");
 el.remove(); // Удалит элемент div с идентификатором 'div-02'
 ```
 
@@ -39,7 +34,7 @@ el.remove(); // Удалит элемент div с идентификаторо�
 Подробнее читайте в справке по {{jsxref("Symbol.unscopables")}}.
 
 ```js
-with(node) {
+with (node) {
   remove();
 }
 // ReferenceError: remove is not defined
@@ -49,7 +44,7 @@ with(node) {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

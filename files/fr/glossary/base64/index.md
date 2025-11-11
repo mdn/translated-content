@@ -1,325 +1,69 @@
 ---
-title: Décoder et encoder en base64
+title: Base64
 slug: Glossary/Base64
-tags:
-  - Advanced
-  - Base64
-  - JavaScript
-  - Reference
-  - Typed Arrays
-  - URI
-  - URL
-  - Unicode Problem
-  - atob()
-  - btoa()
-translation_of: Glossary/Base64
-original_slug: Web/API/WindowBase64/Décoder_encoder_en_base64
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-**Base64** est un groupe de schéma pour encoder des données binaires sous forme d'un texte au format ASCII grâce à la représentation de ces données en base 64. Le terme base64 vient à l'origine de l'encodage utilisé pour transférer certains [contenus MIME](https://fr.wikipedia.org/wiki/Multipurpose_Internet_Mail_Extensions#Content-Transfer-Encoding).
 
-Les schémas d'encodage en base64 sont principalement utilisés lorsqu'il s'agit d'enregistrer ou d'envoyer des données binaires via un media qui a été conçu pour gérer du texte. Cette transformation permet de conserver l'intégrité et la véracité des données envoyées lors du transport. Base64 est utilisé par plusieurs applications, notamment celles qui gèrent les courriels avec [MIME](https://fr.wikipedia.org/wiki/MIME), et le stockage de données complexes en [XML](/fr/docs/XML).
+**Base64** est un groupe de schémas pour [encoder des données binaires sous forme d'un texte](https://fr.wikipedia.org/wiki/Conversion_du_binaire_en_texte) au format ASCII grâce à la représentation de ces données en base 64. Le terme _base64_ vient à l'origine de l'encodage utilisé pour transférer certains [contenus MIME](https://fr.wikipedia.org/wiki/Multipurpose_Internet_Mail_Extensions#Content-Transfer-Encoding).
 
-Pour JavaScript, il existe deux fonctions utilisées pour encoder et décoder des chaînes en base64 :
+Les schémas d'encodage Base64 sont couramment utilisés pour encoder des données binaires afin de les stocker ou de les transférer sur des supports qui ne peuvent gérer que du texte ASCII (ou un sur-ensemble d'ASCII qui n'accepte pas les données binaires arbitraires). Cela garantit que les données restent intactes sans modification lors du transport. Les applications courantes de Base64 incluent&nbsp;:
 
-- {{domxref("window.atob","atob()")}}
-- {{domxref("window.btoa","btoa()")}}
+- L'envoi d'e-mails via le [MIME](https://fr.wikipedia.org/wiki/Multipurpose_Internet_Mail_Extensions)
+- Le stockage de données complexes dans [XML](/fr/docs/Web/XML)
+- L'encodage de données binaires pour qu'elles puissent être incluses dans une [URL `data:`](/fr/docs/Web/URI/Reference/Schemes/data)
 
-La fonction `atob()` permet de décoder des données encodées en une chaîne de caractères en base 64. La fonction `btoa()`, quant à elle, permet de créer une chaîne ASCII en base64 à partir d'une « chaîne » de données binaires.
+## Caractères en Base64
 
-Les deux méthodes, `atob()` et `btoa()`, fonctionnent sur des chaînes de caractères. Si vous voulez utiliser des [`ArrayBuffers`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/ArrayBuffer), lisez [ce paragraphe](#Solution_.232_.E2.80.93_rewriting_atob%28%29_and_btoa%28%29_using_TypedArrays_and_UTF-8).
+Lorsque le terme «&nbsp;Base64&nbsp;» est utilisé seul pour désigner un {{Glossary("algorithm", "algorithme")}}, il fait généralement référence à la version de Base64 décrite dans le {{RFC("4648", "", 4)}}, qui utilise l'alphabet suivant pour représenter les chiffres en base 64, ainsi que `=` comme caractère de remplissage&nbsp;:
 
-## Documentation
-
-- [URIs de données](/fr/docs/Web/HTTP/data_URIs)
-  - : Les URIs de données, définies par la [RFC 2397](http://tools.ietf.org/html/rfc2397), permettent aux créateurs de contenus d'intégrer des fichiers en ligne dans des documents.
-- [Base64](https://fr.wikipedia.org/wiki/Base_64)
-  - : Article Wikipédia sur l'encodage en base64.
-- {{domxref("window.atob","atob()")}}
-  - : Méthode permettant de décoder une chaîne de donnée qui a été encodée en base64.
-- {{domxref("window.btoa","btoa()")}}
-  - : Méthode permettant de créer une chaîne ASCII en base64 à partir d'une « chaîne » de données binaires.
-- [Le « problème Unicode »](#The_.22Unicode_Problem.22)
-  - : Pour la plupart des navigateurs, l'utilisation de `btoa()` sur une chaîne de caractères Unicode entraînera une exception `Character Out Of Range`. Ce paragraphe indique quelques solutions.
-- [URIScheme](/fr/docs/URIScheme)
-  - : Une liste de schémas URI supportés par Mozilla.
-- [`StringView`](/fr/Add-ons/Code_snippets/StringView)
-
-  - : Dans cet article, nous publions une bibliothèque dont les buts sont :
-
-    - de créer une interface pour les chaînes de caractères à la façon du langage [C](https://fr.wikipedia.org/wiki/C_%28langage%29) (i.e. un tableau de code de caractères — [`ArrayBufferView`](/fr/docs/Web/API/ArrayBufferView) en JavaScript) basée sur l'interface JavaScript [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/ArrayBuffer),
-    - de créer un ensemble de méthodes pour ces objets qui fonctionnent **sur des tableaux de nombres** plutôt que sur chaînes de caractères JavaScript immuables,
-    - de travailler avec d'autres encodages Unicode, y compris ceux différent d'UTF-16 qui est l'encodage par défaut de JavaScript pour les [`DOMString`](/fr/docs/Web/API/DOMString).
-
-## Outils
-
-- [Réécrire `atob()`et `btoa()` en utilisant des `TypedArray`s et l'UTF-8](<#Solution_.232_.E2.80.93_rewriting_atob()_and_btoa()_using_TypedArrays_and_UTF-8>)
-- [`StringView` – une représentation des chaînes de caractères semblable à celle du langage C, basée sur les tableaux typés.](/fr/docs/Web/JavaScript/Typed_arrays/StringView)
-
-## Sujets connexes
-
-- [`ArrayBuffer`](/fr/docs/Web/JavaScript/Typed_arrays/ArrayBuffer)
-- [Les tableaux typés](/fr/docs/Web/JavaScript/Tableaux_typés)
-- [ArrayBufferView](/fr/docs/Web/API/ArrayBufferView)
-- [`Uint8Array`](/fr/docs/Web/API/Uint8Array)
-- [`StringView` – une représentation des chaînes de caractères semblable à celle du langage C, basée sur les tableaux typés](/fr/docs/Web/JavaScript/Typed_arrays/StringView)
-- [`DOMString`](/fr/docs/Web/API/DOMString)
-- [`URI`](/fr/docs/Glossary/URI)
-- [`encodeURI()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/encodeURI)
-
-## Le « problème Unicode »
-
-Les objets [`DOMString`](/fr/docs/Web/API/DOMString) sont des chaînes de caractères encodées sur 16 bits. Pour la plupart des navigateurs, lorsqu'on appelle `window.btoa` sur une chaîne Unicode, cela entraîne une exception `Character Out Of Range` si la représentation du caractère dépasse les 8 bits ASCII. Deux méthodes existent pour résoudre le problème :
-
-- échapper la chaîne dans son intégralité puis l'encoder,
-- convertir la chaîne UTF-16 [`DOMString`](/fr/docs/Web/API/DOMString) en un tableau UTF-8 de caractères puis l'encoder.
-
-Voici ces deux méthodes :
-
-### Première solution  – échapper la chaîne avant de l'encoder
-
-```js
-function utf8_to_b64( str ) {
-  return window.btoa(unescape(encodeURIComponent( str )));
-}
-
-function b64_to_utf8( str ) {
-  return decodeURIComponent(escape(window.atob( str )));
-}
-
-// Usage:
-utf8_to_b64('✓ à la mode'); // "4pyTIMOgIGxhIG1vZGU="
-b64_to_utf8('4pyTIMOgIGxhIG1vZGU='); // "✓ à la mode"
+```plain
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 ```
 
-Cette solution a été proposée dans un article de [Johan Sundström](http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html).
+## Base64 sûr pour les URL et noms de fichiers
 
-### Seconde solution – réécrire `atob()` et `btoa()` en utilisant des `TypedArray` avec de l'UTF-8
+Une variante courante de cette définition n'autorise que les caractères sûrs à utiliser dans les noms de fichiers et les valeurs de {{Glossary("URL")}}.
+Cette version, définie dans {{RFC("4648", "", 5)}}, omet le remplissage et remplace `+` et `/` par `-` et `_`.
 
-> **Note :** Le code suivant peut également être utilisé pour obtenir un [ArrayBuffer](/fr/docs/Web/JavaScript/Reference/Objets_globaux/ArrayBuffer) depuis une chaîne en base 64 (et vice-versa, voir ci-après). **Pour un article concernant une bibliothèque complète sur les tableaux typés, voir [cet article](/fr/Add-ons/Code_snippets/StringView)**.
+Vous n'avez pas besoin de cet encodage si vous n'insérez pas les données dans un segment de chemin ou un paramètre de requête — par exemple, les [URL de type data](/fr/docs/Web/URI/Reference/Schemes/data) n'ont ni l'un ni l'autre et peuvent utiliser l'encodage Base64 standard.
 
-```js
-"use strict";
+## Augmentation de la taille encodée
 
-/*\
-|*|
-|*|  utilitairezs de manipulations de chaînes base 64 / binaires / UTF-8
-|*|
-|*|  https://developer.mozilla.org/fr/docs/Décoder_encoder_en_base64
-|*|
-\*/
+Chaque chiffre Base64 représente 6 bits de données (64 = 2<sup>6</sup>). Ainsi, trois octets de 8 bits de la chaîne ou du fichier binaire d'entrée (3×8 bits = 24 bits) peuvent être représentés par quatre chiffres Base64 de 6 bits (4×6 = 24 bits).
 
-/* Décoder un tableau d'octets depuis une chaîne en base64 */
+Cela signifie que la version Base64 d'une chaîne ou d'un fichier est généralement environ un tiers plus grande que sa source (l'augmentation exacte dépend de divers facteurs, comme la longueur absolue de la chaîne, sa longueur modulo 3 et la présence ou non de caractères de remplissage).
 
-function b64ToUint6 (nChr) {
+## Dernier bloc
 
-  return nChr > 64 && nChr < 91 ?
-      nChr - 65
-      nChr > 96 && nChr < 123 ?
-      nChr - 71
-       : nChr > 47 && nChr < 58
-         nChr + 4
-       : nChr === 43 ?
-      62
-    : nChr === 47 ?
-      63
-    :
-      0;
+La chaîne base64 peut être découpée en blocs de 4 caractères, le dernier bloc pouvant contenir moins de 4 caractères. Ce dernier bloc peut être complété par des caractères `=` pour atteindre exactement 4 caractères. Hors caractères de remplissage, le dernier bloc peut être&nbsp;:
 
-}
+- 2 caractères&nbsp;: encode 12 bits représentant 1 octet (8 bits) de données
+- 3 caractères&nbsp;: encode 18 bits représentant 2 octets (16 bits) de données
+- 4 caractères&nbsp;: encode 24 bits représentant 3 octets (24 bits) de données
 
-function base64DecToArr (sBase64, nBlocksSize) {
+Dans les deux premiers cas, les caractères peuvent avoir 4 ou 2 bits de fin supplémentaires qui ne représentent aucune donnée. Dans ce cas, le [RFC 4648 <sup>(angl.)</sup>](https://datatracker.ietf.org/doc/html/rfc4648#section-3.5) exige que les encodeurs mettent ces bits à zéro et que les décodeurs puissent éventuellement lever une erreur s'ils ne sont pas à zéro. Par exemple, si les données encodées correspondent à un seul octet `0b01010101`, il faut deux caractères `0b010101` (`V`) et `0b010000` (`Q`), où le second caractère a 4 bits de fin à zéro. Décoder `VR==` (où le second caractère représente `0b010001`) donne techniquement le même octet `0b01010101`, mais le décodeur peut lever une erreur si les bits de fin ne sont pas à zéro.
 
-  var
-    sB64Enc = sBase64.replace(/[^A-Za-z0-9\+\/]/g, ""), nInLen = sB64Enc.length,
-    nOutLen = nBlocksSize ? Math.ceil((nInLen * 3 + 1 >> 2) / nBlocksSize) * nBlocksSize : nInLen * 3 + 1 >> 2, taBytes = new Uint8Array(nOutLen);
+## Prise en charge JavaScript
 
-  for (var nMod3, nMod4, nUint24 = 0, nOutIdx = 0, nInIdx = 0; nInIdx < nInLen; nInIdx++) {
-    nMod4 = nInIdx & 3;
-    nUint24 |= b64ToUint6(sB64Enc.charCodeAt(nInIdx)) << 18 - 6 * nMod4;
-    if (nMod4 === 3 || nInLen - nInIdx === 1) {
-      for (nMod3 = 0; nMod3 < 3 && nOutIdx < nOutLen; nMod3++, nOutIdx++) {
-        taBytes[nOutIdx] = nUint24 >>> (16 >>> nMod3 & 24) & 255;
-      }
-      nUint24 = 0;
-      
-    }
-  }
+La classe {{JSxRef("Uint8Array")}} fournit les méthodes {{JSxRef("Uint8Array.fromBase64()")}}, {{JSxRef("Uint8Array.prototype.toBase64()")}} et {{JSxRef("Uint8Array.prototype.setFromBase64()")}} pour la conversion vers/depuis des chaînes de caractères en base64.
 
-  return taBytes;
-}
+Les navigateurs proposent également nativement deux fonctions JavaScript pour décoder et encoder des chaînes de caractères en Base64&nbsp;:
 
-/* encodage d'un tableau en une chaîne en base64 */
+- {{DOMxRef("Window.btoa()")}} (aussi {{DOMxRef("WorkerGlobalScope.btoa()", "disponible dans les workers", "", "nocode")}})&nbsp;: crée une chaîne de caractères ASCII encodée en Base64 à partir d'une chaîne de données binaires («&nbsp;btoa&nbsp;» signifie «&nbsp;binary to ASCII&nbsp;»).
+- {{DOMxRef("Window.atob()")}} (aussi {{DOMxRef("WorkerGlobalScope.atob()", "disponible dans les workers", "", "nocode")}})&nbsp;: décode une chaîne de caractères encodée en Base64 («&nbsp;atob&nbsp;» signifie «&nbsp;ASCII to binary&nbsp;»).
 
-function uint6ToB64 (nUint6) {
-
-  return nUint6 < 26 ?
-      nUint6 + 65
-      nUint6 < 52 ?
-      nUint6 + 71
-       : nUint6 < 62 ?
-         nUint6 -
-       : nUint6 === 62 ?
-      43
-    : nUint6 === 63 ?
-      47
-    :
-      65;
-
-}
-
-function base64EncArr (aBytes) {
-
-  var nMod3 = 2, sB64Enc = "";
-
-  for (var nLen = aBytes.length, nUint24 = 0, nIdx = 0; nIdx < nLen; nIdx++) {
-    nMod3 = nIdx % 3;
-    if (nIdx > 0 && (nIdx * 4 / 3) % 76 === 0) { sB64Enc += "\r\n"; }
-    nUint24 |= aBytes[nIdx] << (16 >>> nMod3 & 24);
-    if (nMod3 === 2 || aBytes.length - nIdx === 1) {
-      sB64Enc += String.fromCharCode(uint6ToB64(nUint24 >>> 18 & 63), uint6ToB64(nUint24 >>> 12 & 63), uint6ToB64(nUint24 >>> 6 & 63), uint6ToB64(nUint24 & 63));
-      nUint24 = 0;
-    }
-  }
-
-  return sB64Enc.substr(0, sB64Enc.length - 2 + nMod3) + (nMod3 === 2 ? '' : nMod3 === 1 ? '=' : '==');
-
-}
-
-/* Tableau UTF-8 en DOMString et vice versa */
-
-function UTF8ArrToStr (aBytes) {
-
-  var sView = "";
-
-  for (var nPart, nLen = aBytes.length, nIdx = 0; nIdx < nLen; nIdx++) {
-    nPart = aBytes[nIdx];
-    sView += String.fromCharCode(
-      nPart > 251 && nPart < 254 && nIdx + 5 < nLen ? /* six bytes */
-        /* (nPart - 252 << 32) n'est pas possible pour ECMAScript donc, on utilise un contournement... : */
-        (nPart - 252) * 1073741824 + (aBytes[++nIdx] - 128 << 24) + (aBytes[++nIdx] - 128 << 18) + (aBytes[++nIdx] - 128 << 12) + (aBytes[++nIdx] - 128 << 6) + aBytes[++nIdx] - 128
-      : nPart > 247 && nPart < 252 && nIdx + 4 < nLen ? /* five bytes */
-        (nPart - 248 << 24) + (aBytes[++nIdx] - 128 << 18) + (aBytes[++nIdx] - 128 << 12) + (aBytes[++nIdx] - 128 << 6) + aBytes[++nIdx] - 128
-      : nPart > 239 && nPart < 248 && nIdx + 3 < nLen ? /* four bytes */
-        (nPart - 240 << 18) + (aBytes[++nIdx] - 128 << 12) + (aBytes[++nIdx] - 128 << 6) + aBytes[++nIdx] - 128
-      : nPart > 223 && nPart < 240 && nIdx + 2 < nLen ? /* three bytes */
-        (nPart - 224 << 12) + (aBytes[++nIdx] - 128 << 6) + aBytes[++nIdx] - 128
-      : nPart > 191 && nPart < 224 && nIdx + 1 < nLen ? /* two bytes */
-        (nPart - 192 << 6) + aBytes[++nIdx] - 128
-      : /* nPart < 127 ? */ /* one byte */
-        nPart
-    );
-  }
-
-  return sView;
-
-}
-
-function strToUTF8Arr (sDOMStr) {
-
-  var aBytes, nChr, nStrLen = sDOMStr.length, nArrLen = 0;
-
-  /* mapping... */
-
-  for (var nMapIdx = 0; nMapIdx < nStrLen; nMapIdx++) {
-    nChr = sDOMStr.charCodeAt(nMapIdx);
-    nArrLen += nChr < 0x80 ? 1 : nChr < 0x800 ? 2 : nChr < 0x10000 ? 3 : nChr < 0x200000 ? 4 : nChr < 0x4000000 ? 5 : 6;
-  }
-
-  aBytes = new Uint8Array(nArrLen);
-
-  /* transcription... */
-
-  for (var nIdx = 0, nChrIdx = 0; nIdx < nArrLen; nChrIdx++) {
-    nChr = sDOMStr.charCodeAt(nChrIdx);
-    if (nChr < 128) {
-      /* one byte */
-      aBytes[nIdx++] = nChr;
-      else if (nChr <
-      /* two bytes */
-      aBytes[nIdx++] = 192 + (nChr >>> 6);
-      aBytes[nIdx++] = 
-      else if (nChr < 0x10000) {
-      /* three bytes *
-      aBytes[nIdx++] = 224 + (nChr >>> 12);
-      aBytes[nIdx++] =
-      aBytes[nIdx++] = 128 + (nChr & 63);
-      else if (nChr < 
-      /* four bytes */
-      aBytes[nIdx++] = 240 + (nChr >>> 18);
-      aBytes[nIdx++] =
-      aBytes[nIdx++] = 128 + (nChr >>> 6 & 
-      aBytes[nIdx++] 
-      else if (nChr < 0x4000000) {
-      /* five bytes */
-      aBytes[nIdx++] = 248 + (nChr >>> 24);
-      aBytes[nIdx++] 
-      aBytes[nIdx++] = 128 + (nChr >>> 12 & 63);
-         aBytes[nIdx++] = 128 + (nChr >>> 6 & 63);
-         aBytes[nIdx++] = 128 + (nChr & 63);
-       } else /* if (nChr <= 0x7fffffff) */ {
-         /* six bytes */
-         aBytes[nIdx++] = 252 + /* (nChr >>> 32) is not possible in ECMAScript! So...: */ (nChr / 1073741824);
-      aBytes[nIdx++] = 128 + (nChr >>> 24 & 63);
-      aBytes[nIdx++] = 128 + (nChr >>> 18 & 63);
-      aBytes[nIdx++] = 128 + (nChr >>> 12 & 63);
-      aBytes[nIdx++] = 128 + (nChr >>> 6 & 63);
-      aBytes[nIdx++] = 128 + (nChr & 63);
-    }
-  }
-
-  return aBytes;
-
-}
-```
-
-#### Tests
-
-```js
-/* Tests */
-
-var entréeChaîne = "base64 \u2014 Mozilla Developer Network";
-
-var entréeUTF8 = strToUTF8Arr(entréeChaîne);
-
-var base64 = base64EncArr(entréeUTF8);
-
-alert(base64);
-
-var sortieUT8 = base64DecToArr(base64);
-
-var sortieChaîne = UTF8ArrToStr(sortieUT8);
-
-alert(sortieChaîne);
-```
-
-#### Annexe : Décoder une chaîne en base64 en un objet [Uint8Array](/fr/docs/Web/API/Uint8Array) ou [ArrayBuffer](/fr/docs/Web/JavaScript/Reference/Objets_globaux/ArrayBuffer)
-
-Ces fonctions permettent de créer des objets [uint8Arrays](/fr/docs/Web/API/Uint8Array) ou [arrayBuffers](/fr/docs/Web/JavaScript/Reference/Objets_globaux/ArrayBuffer) à partir de chaînes en base64 :
-
-```js
-var monTableau = base64DecToArr("QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw=="); // "Base 64 \u2014 Mozilla Developer Network"
-
-var monBuffer = base64DecToArr("QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw==").buffer; // "Base 64 \u2014 Mozilla Developer Network"
-
-alert(monBuffer.byteLength);
-```
-
-> **Note :** La fonction `base64DecToArr(sBase64[, nTailleBloc])` renvoie un [`uint8Array`](/fr/docs/Web/JavaScript/Typed_arrays/Uint8Array) d'octets. Si vous souhaitez utiliser un tampon mémoire de 16 bits, 32 bits, 64 bits pour les données brutes, utilisez l'argument `nTailleBloc`, qui représente le nombre d'octets dont la propriété `uint8Array.buffer.bytesLength` doit être un multiple (`1` ou pas de paramètre pour l'ASCII, [les chaînes binaires](/fr/docs/Web/API/DOMString/Binary) ou les chaînes encodées UTF-8, `2` pour les chaînes UTF-16, `4` pour les chaînes UTF-32).
-
-Pour une bibliothèque plus complète, voir [`StringView` – une représentation des chaînes de caractères semblable à celle du langage C, basée sur les tableaux typés](/fr/docs/Web/JavaScript/Typed_arrays/StringView)
+> [!NOTE]
+> Base64 est un encodage binaire et non un encodage texte, mais `btoa` et `atob` ont été ajoutées à la plateforme web avant la prise en charge des types de données binaires. En conséquence, ces deux fonctions utilisent des chaînes pour représenter des données binaires, le {{Glossary("code point", "point de code")}} de chaque caractère représentant la valeur de chaque octet. Cela a mené à la croyance erronée que `btoa` peut être utilisé pour encoder n'importe quelle donnée textuelle — par exemple, pour créer une URL `data:` Base64 d'un document texte ou HTML.
+>
+> Cependant, la correspondance octet/point de code n'est fiable que pour les points de code jusqu'à `0x7f`. De plus, les points de code supérieurs à `0xff` feront lever une erreur par `btoa` car ils dépassent la valeur maximale pour 1 octet. La section suivante détaille comment contourner cette limitation lors de l'encodage de texte Unicode arbitraire.
 
 ## Voir aussi
 
-- {{domxref("window.atob","atob()")}}
-- {{domxref("window.btoa","btoa()")}}
-- [URIs de données](/fr/docs/Web/HTTP/data_URIs)
-- [ArrayBuffer](/fr/docs/Web/JavaScript/Reference/Objets_globaux/ArrayBuffer)
-- [Tableaux typés](/fr/docs/Web/JavaScript/Tableaux_typés)
-- [ArrayBufferView](/fr/docs/Web/API/ArrayBufferView)
-- [Uint8Array](/fr/docs/Web/API/Uint8Array)
-- [`StringView` – une représentation des chaînes, basée sur les tableaux typés](/fr/docs/Web/JavaScript/Typed_arrays/StringView)
-- [DOMString](/fr/docs/Web/API/DOMString)
-- [`URI`](/fr/docs/Glossary/URI)
-- [`encodeURI()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/encodeURI)
-- [`nsIURIFixup()`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURIFixup)
-- [Article sur la base64 sur Wikipédia](https://fr.wikipedia.org/wiki/Base64)
+- Les API JavaScript&nbsp;:
+  - {{DOMxRef("Window.atob()")}} (aussi {{DOMxRef("WorkerGlobalScope.atob()", "disponible dans les workers", "", "nocode")}})
+  - {{DOMxRef("Window.btoa()")}} (aussi {{DOMxRef("WorkerGlobalScope.btoa()", "disponible dans les workers", "", "nocode")}})
+  - {{JSxRef("Uint8Array")}}
+- [URLs de données](/fr/docs/Web/URI/Reference/Schemes/data)
+- [Base64](https://fr.wikipedia.org/wiki/Base64) sur Wikipédia
+- Algorithme Base64 décrit dans le [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648)

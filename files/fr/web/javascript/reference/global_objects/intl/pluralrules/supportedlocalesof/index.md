@@ -1,16 +1,8 @@
 ---
 title: Intl.PluralRules.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/supportedLocalesOf
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Méthode
-  - PluralRules
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/supportedLocalesOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/PluralRules/supportedLocalesOf
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.PluralRules.supportedLocalesOf()`** renvoie un tableau contenant les locales prises en charge, parmi celles passées en argument, pour les règles de nombre (sans avoir à utiliser la locale par défaut du système d'exécution).
@@ -26,9 +18,7 @@ Intl.PluralRules.supportedLocalesOf(locales[, options])
 - `locales`
   - : Une chaîne de caractères représentant une balise de langue BCP 47 ou bien un tableau de telles chaînes. Pour la forme générale de l'argument `locales`, se référer à la page {{jsxref("Intl", "Intl", "#Identification_et_choix_de_la_locale", 1)}}.
 - `options` {{optional_inline}}
-
   - : Optionnel. Un objet pouvant contenir la propriété suivante :
-
     - `localeMatcher`
       - : L'algorithme de correspondance à utiliser pour la locale. Les valeurs possibles sont `"lookup"` et `"best fit"` ; le défaut est `"best fit"`. Pour des informations sur cette option, voir la page {{jsxref("Objets_globaux/Intl","Intl","##Choix_de_la_locale")}}.
 
@@ -45,21 +35,19 @@ Cette méthode renvoie un tableau contenant un sous-ensemble des balises de lang
 Dans l'hypothèse où on utilise un système prenant en charge l'indonésien, l'allemand mais pas le balinais pour le formatage avec les règles de nombre, `supportedLocalesOf` renvoie les balises de langue indonésienne et allemande inchangées bien que la collation `pinyin` ne soit pas pertinente ni utilisée avec l'indonésien (et qu'il est peu probable qu'une variante indonésienne pour l'allemand soit prise en charge). On notera que l'algorithme de correspondance `"lookup"` est utilisé ici. L'algorithme `"best fit"` aurait pu déterminer que l'indonésien aurait pu remplacer le balinais car la plupart des personnes parlant le balinais comprend également l'indonésien, la fonction aurait alors pu remplacer la balise de langue balinaise.
 
 ```js
-var locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
-var options = { localeMatcher: 'lookup' };
-console.log(Intl.PluralRules.supportedLocalesOf(locales, options).join(', '));
+var locales = ["ban", "id-u-co-pinyin", "de-ID"];
+var options = { localeMatcher: "lookup" };
+console.log(Intl.PluralRules.supportedLocalesOf(locales, options).join(", "));
 // → "id-u-co-pinyin, de-ID"
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                         | État                             | Commentaires         |
-| --------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| [Brouillon pour les règles de nombre avec `Intl`](https://rawgit.com/caridy/intl-plural-rules-spec/master/index.html) | {{Spec2('ES Int Draft')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.PluralRules.supportedLocalesOf")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,41 +1,33 @@
 ---
-title: XMLHttpRequest.timeout
+title: "XMLHttpRequest: timeout プロパティ"
+short-title: timeout
 slug: Web/API/XMLHttpRequest/timeout
-tags:
-  - AJAX
-  - 非同期 XHR
-  - 非同期 XMLHttpRequest
-  - プロパティ
-  - リファレンス
-  - XHR
-  - XMLHttpRequest
-  - timeout
-browser-compat: api.XMLHttpRequest.timeout
-translation_of: Web/API/XMLHttpRequest/timeout
+l10n:
+  sourceCommit: 0cc63ce1d7f43eb98746a908a9aba68ef6a36f7b
 ---
-{{APIRef('XMLHttpRequest')}}
 
-**`XMLHttpRequest.timeout`** は `unsigned long` 型で、リクエストが自動的に終了するまでの時間をミリ秒で示します。既定値は 0 で、タイムアウトが無いことを示します。 timeout は{{Glossary('document environment', '文書環境')}}で利用される同期 XMLHttpRequest や `InvalidAccessError` の例外を投げるものに使用することはできません。タイムアウトとなった場合、 [timeout](/ja/docs/Web/API/XMLHttpRequest/timeout_event) イベントが発行されます。
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
-> **Note:** ウィンドウを持つ同期リクエストでは、タイムアウトを使用することはできません。
+**`XMLHttpRequest.timeout`** は `unsigned long` 型で、リクエストが自動的に終了するまでの時間をミリ秒で示します。既定値は 0 で、タイムアウトが無いことを示します。 timeout は{{Glossary('document environment', '文書環境')}}で利用される同期 XMLHttpRequest や `InvalidAccessError` の例外を投げるものに使用することはできません。タイムアウトとなった場合、 [timeout](/ja/docs/Web/API/XMLHttpRequestEventTarget/timeout_event) イベントが発行されます。
 
-[非同期リクエストでのタイムアウトの使用](/ja/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests#example_using_a_timeout)
+> [!NOTE]
+> ウィンドウを持つ同期リクエストでは、タイムアウトを使用することはできません。
 
-Internet Explorer においては、 timeout プロパティは [open()](/ja/docs/Web/API/XMLHttpRequest/open) メソッドを呼び出してから [send()](/ja/docs/Web/API/XMLHttpRequest/send) メソッドを呼び出すまでの間しか設定することはできません。
+[タイムアウトは非同期リクエストで使用してください](/ja/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests#例_タイムアウトの利用)。
 
 ## 例
 
 ```js
-var xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+const xhr = new XMLHttpRequest();
+xhr.open("GET", "/server", true);
 
 xhr.timeout = 2000; // ミリ秒単位の時間
 
-xhr.onload = function () {
+xhr.onload = () => {
   // リクエスト完了。ここで処理を行います。
 };
 
-xhr.ontimeout = function (e) {
+xhr.ontimeout = (e) => {
   // XMLHttpRequest がタイムアウト。ここで何かを行います。
 };
 

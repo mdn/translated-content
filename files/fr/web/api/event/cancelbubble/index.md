@@ -1,16 +1,11 @@
 ---
 title: Event.cancelBubble
 slug: Web/API/Event/cancelBubble
-tags:
-  - API
-  - Annulation
-  - DOM
-  - Evènement
-  - Propagation
-  - Propriétés
-translation_of: Web/API/Event/cancelBubble
 ---
-{{APIRef("DOM Events")}}
+
+{{Deprecated_Header}}
+
+{{APIRef("DOM")}}
 
 La propriété **`Event.cancelBubble`** est un alias historique de {{domxref("Event.stopPropagation()")}}. Définir sa valeur à `true` (vrai) avant le renvoi à partir d'un gestionnaire d'évènements empêche la propagation de l'évènement. Dans les implémentations les plus tardives, cette définition à false (_faux_) ne fait rien. Voir [Compatibilité des navigateurs](#compatibilité_des_navigateurs) pour plus de détails.
 
@@ -24,18 +19,16 @@ var bool = event.cancelBubble;
 ## Exemple
 
 ```js
-elem.onclick = function(e) {
+elem.onclick = function (e) {
   // fais des choses sympas ici
   e.cancelBubble = true;
-}
+};
 ```
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG', '#dom-event-cancelbubble', 'cancelBubble')}} | {{Spec2('DOM WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Event.cancelBubble")}}
+{{Compat}}

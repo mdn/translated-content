@@ -1,20 +1,16 @@
 ---
 title: Adresse IP
 slug: Glossary/IP_Address
-tags:
-  - Débutant
-  - Glossaire
-  - Infrastructure
-  - Web
-translation_of: Glossary/IP_Address
-original_slug: Glossaire/IP_Address
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-Une adresse IP est une série de chiffres assignée à chaque appareil connecté à un réseau qui utilise le protocole Internet.
 
-Le terme "Adresse IP" se réfère généralement à des adresses IPv4 sur 32 bits. L'IPv6 n'est pas encore très répandu.
+Une **adresse IP** est un nombre utilisé pour identifier de façon unique chaque appareil sur un réseau IP.
 
-## Pour approfondir
+_<abbr>IP</abbr>_ signifie <i lang="en">Internet Protocol</i> («&nbsp;protocole Internet&nbsp;»), qui est la [couche de protocole <sup>(angl.)</sup>](https://docs.oracle.com/cd/E19683-01/806-4075/ipov-7/index.html) à laquelle l'adresse est associée.
 
-### Culture générale
+Le terme «&nbsp;adresse IP&nbsp;» fait généralement référence aux adresses IPv4 sur 32 bits, tant que l'IPv6 n'est pas déployé plus largement.
+
+## Voir aussi
 
 - [Adresse IP](https://fr.wikipedia.org/wiki/Adresse_IP) sur Wikipédia

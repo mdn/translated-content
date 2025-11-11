@@ -1,9 +1,8 @@
 ---
 title: Element.firstElementChild
 slug: Web/API/Element/firstElementChild
-translation_of: Web/API/Element/firstElementChild
-browser-compat: api.Element.firstElementChild
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`Element.firstElementChild`** renvoie le premier nœud enfant de type [`Element`](/fr/docs/Web/API/Element) d'un élément, ou `null` s'il n'en a pas.
@@ -24,9 +23,9 @@ Un objet [`Element`](/fr/docs/Web/API/Element) ou `null`.
 </ul>
 
 <script>
-const liste = document.getElementById('liste');
-console.log(liste.firstElementChild.textContent);
-// affiche "Premier (1)" dans la console
+  const liste = document.getElementById("liste");
+  console.log(liste.firstElementChild.textContent);
+  // affiche "Premier (1)" dans la console
 </script>
 ```
 

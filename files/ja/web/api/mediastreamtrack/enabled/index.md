@@ -1,20 +1,11 @@
 ---
-title: MediaStreamTrack.enabled
+title: "MediaStreamTrack: enabled プロパティ"
+short-title: enabled
 slug: Web/API/MediaStreamTrack/enabled
-page-type: web-api-instance-property
-tags:
-  - Media
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - Muting a Media Track
-  - Muting a Track
-  - Property
-  - Reference
-  - WebRTC
-  - enabled
-browser-compat: api.MediaStreamTrack.enabled
-translation_of: Web/API/MediaStreamTrack/enabled
+l10n:
+  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`enabled`** は {{domxref("MediaStreamTrack")}} インターフェイスのプロパティで、このトラックがソースストリームから出力が許可されている場合は `true`、そうでない場合は `false` となる論理値です。これは意図的にトラックをミュートするために使用することができます。
@@ -25,7 +16,8 @@ translation_of: Web/API/MediaStreamTrack/enabled
 
 一方 {{domxref("MediaStreamTrack.muted", "muted")}} プロパティは、トラックが一時的にデータを出力できない状態（転送中にフレームが失われた場合など）を示しています。
 
-> **Note:** トラックが接続されていない場合でも、このプロパティの値は変更可能ですが、効果はありません。
+> [!NOTE]
+> トラックが接続されていない場合でも、このプロパティの値は変更可能ですが、効果はありません。
 
 ## 値
 
@@ -33,7 +25,8 @@ translation_of: Web/API/MediaStreamTrack/enabled
 
 空のオーディオフレームは、すべてのサンプルの値が 0 に設定されます。空のビデオフレームは、すべてのピクセルが黒に設定されます。
 
-> **Note:** ミュート/ミュート解除機能を実装する場合は、 `enabled` プロパティを使用してください。
+> [!NOTE]
+> ミュート/ミュート解除機能を実装する場合は、 `enabled` プロパティを使用してください。
 
 ## 使用上のメモ
 
@@ -44,12 +37,12 @@ translation_of: Web/API/MediaStreamTrack/enabled
 この例では、一時停止ボタンの {{domxref("Element/click_event", "click")}} イベントハンドラーの使用例を示しています。
 
 ```js
-pauseButton.onclick = function(evt) {
+pauseButton.onclick = (evt) => {
   const newState = !myAudioTrack.enabled;
 
   pauseButton.innerHTML = newState ? "&#x25B6;&#xFE0F;" : "&#x23F8;&#xFE0F;";
   myAudioTrack.enabled = newState;
-}
+};
 ```
 
 これは、現在の `enabled` の値と逆の値である `newState` という変数を作成し、それを使用して、一時停止ボタンの要素の新しい {{domxref("Element.innerHTML", "innerHTML")}} として "play" アイコンまたは "pause" アイコン用の絵文字を選択するものです。
@@ -66,7 +59,7 @@ pauseButton.onclick = function(evt) {
 
 ## 関連情報
 
-- [MediaStream API](/ja/docs/Web/API/Media_Streams_API)
+- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaStream")}}
 - {{domxref("MediaStreamTrack")}}
 - [WebRTC](/ja/docs/Web/API/WebRTC_API)

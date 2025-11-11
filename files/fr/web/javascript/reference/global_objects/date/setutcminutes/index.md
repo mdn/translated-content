@@ -1,20 +1,25 @@
 ---
 title: Date.prototype.setUTCMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMinutes
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCMinutes
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setUTCMinutes
 ---
+
 {{JSRef}}
 
 La méthode **`setUTCMinutes()`** définit les minutes pour la date, selon UTC.
 
-{{EmbedInteractiveExample("pages/js/date-setutcminutes.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setUTCMinutes()")}}
+
+```js interactive-example
+const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
+
+console.log(date1.getUTCMinutes());
+// Expected output: 15
+
+date1.setUTCMinutes(25);
+
+console.log(date1.getUTCMinutes());
+// Expected output: 25
+```
 
 ## Syntaxe
 
@@ -52,16 +57,11 @@ leGrandJour.setUTCMinutes(43);
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.9.5.33', 'Date.prototype.setUTCMinutes')}}                             | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-date.prototype.setutcminutes', 'Date.prototype.setUTCMinutes')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-date.prototype.setutcminutes', 'Date.prototype.setUTCMinutes')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.setUTCMinutes")}}
+{{Compat}}
 
 ## Voir aussi
 

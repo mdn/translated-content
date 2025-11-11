@@ -1,9 +1,8 @@
 ---
 title: Window.alert()
 slug: Web/API/Window/alert
-translation_of: Web/API/Window/alert
-browser-compat: api.Window.alert
 ---
+
 {{APIRef}}
 
 `window.alert()` indique au navigateur d'afficher une boîte de dialogue avec un message optionnel, et d'attendre que la personne ferme cette boîte de dialogue.
@@ -13,8 +12,8 @@ Sous certaines conditions, par exemple au changement d'onglet, le navigateur pou
 ## Syntaxe
 
 ```js
-alert()
-alert(message)
+alert();
+alert(message);
 ```
 
 ### Paramètres
@@ -43,7 +42,7 @@ Les boîtes de dialogue créées avec `alert()` ne doivent pas nécessiter de r�
 
 Ces boîtes de dialogue sont des fenêtres modales qui empêchent d'accéder au reste de l'interface utilisateur du programme, à moins que la boîte de dialogue soit fermée. Aussi, il ne faut pas abuser de cette fonction.
 
-Une autre méthode consiste à utiliser l'élément [`<dialog>`](/fr/docs/Web/HTML/Element/dialog) afin d'afficher des alertes.
+Une autre méthode consiste à utiliser l'élément [`<dialog>`](/fr/docs/Web/HTML/Reference/Elements/dialog) afin d'afficher des alertes.
 
 ## Spécifications
 
@@ -55,6 +54,6 @@ Une autre méthode consiste à utiliser l'élément [`<dialog>`](/fr/docs/Web/HT
 
 ## Voir aussi
 
-- L'élément [`<dialog>`](/fr/docs/Web/HTML/Element/dialog)
+- L'élément [`<dialog>`](/fr/docs/Web/HTML/Reference/Elements/dialog)
 - [`confirm`](/fr/docs/Web/API/Window/confirm)
 - [`prompt`](/fr/docs/Web/API/Window/prompt)

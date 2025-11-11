@@ -1,25 +1,30 @@
 ---
 title: Date.prototype.setUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCDate
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCDate
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setUTCDate
 ---
+
 {{JSRef}}
 
 La méthode **`setUTCDate()`** définit le jour du mois pour la date, selon UTC.
 
-{{EmbedInteractiveExample("pages/js/date-setutcdate.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setUTCDate()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30 GMT-3:00");
+
+console.log(event.getUTCDate());
+// Expected output: 20
+
+event.setUTCDate(19);
+
+console.log(event.getUTCDate());
+// Expected output: 19
+```
 
 ## Syntaxe
 
 ```js
-dateObj.setUTCDate(valeurJour)
+dateObj.setUTCDate(valeurJour);
 ```
 
 ### Paramètres
@@ -46,16 +51,11 @@ leGrandJour.setUTCDate(20);
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires                                          |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.9.5.37', 'Date.prototype.setUTCDate')}}                         | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-date.prototype.setutcdate', 'Date.prototype.setUTCDate')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-date.prototype.setutcdate', 'Date.prototype.setUTCDate')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.setUTCDate")}}
+{{Compat}}
 
 ## Voir aussi
 

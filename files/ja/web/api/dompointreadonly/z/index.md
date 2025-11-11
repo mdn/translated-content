@@ -1,23 +1,11 @@
 ---
-title: DOMPointReadOnly.z
+title: "DOMPointReadOnly: z プロパティ"
+short-title: z
 slug: Web/API/DOMPointReadOnly/z
-page-type: web-api-instance-property
-tags:
-  - API
-  - Coordinates
-  - DOM
-  - DOMPointReadOnly
-  - Depth
-  - Geometry
-  - Geometry Interfaces
-  - Point
-  - Property
-  - Read-only
-  - Reference
-  - z
-browser-compat: api.DOMPointReadOnly.z
-translation_of: Web/API/DOMPointReadOnly/z
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMPointReadOnly`** インターフェイスの **`z`** プロパティは、空間の読み取り専用の点における置く息座標 z を保持します。

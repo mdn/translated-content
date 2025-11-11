@@ -1,20 +1,27 @@
 ---
 title: Date.prototype.setHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setHours
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setHours
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setHours
 ---
+
 {{JSRef}}
 
 La méthode **`setHours()`** définit les heures pour une date donnée, selon l'heure locale, et renvoie le nombre de millièmes de secondes écoulées entre le 1er janvier 1970 00:00:00 UTC et la nouvelle date mise à jour.
 
-{{EmbedInteractiveExample("pages/js/date-sethours.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setHours()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+event.setHours(20);
+
+console.log(event);
+// Expected output: "Tue Aug 19 1975 20:15:30 GMT+0200 (CEST)"
+// Note: your timezone may vary
+
+event.setHours(20, 21, 22);
+
+console.log(event);
+// Expected output: "Tue Aug 19 1975 20:21:22 GMT+0200 (CEST)"
+```
 
 ## Syntaxe
 
@@ -25,7 +32,7 @@ dateObj.setHours(valeurHeures[, valeurMinutes[, valeurSecondes[, valeurMs]]])
 ### Versions antérieures à JavaScript 1.3
 
 ```js
-dateObj.setHours(valeurHeures)
+dateObj.setHours(valeurHeures);
 ```
 
 ### Paramètres
@@ -60,16 +67,11 @@ leGrandJour.setHours(7);
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0 |
-| {{SpecName('ES5.1', '#sec-15.9.5.34', 'Date.prototype.setHours')}}                     | {{Spec2('ES5.1')}}     |                                                      |
-| {{SpecName('ES6', '#sec-date.prototype.sethours', 'Date.prototype.setHours')}}     | {{Spec2('ES6')}}         |                                                      |
-| {{SpecName('ESDraft', '#sec-date.prototype.sethours', 'Date.prototype.setHours')}} | {{Spec2('ESDraft')}} |                                                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.setHours")}}
+{{Compat}}
 
 ## Voir aussi
 

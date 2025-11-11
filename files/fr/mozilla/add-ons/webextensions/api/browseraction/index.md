@@ -1,24 +1,15 @@
 ---
 title: browserAction
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction
 ---
+
 {{AddonSidebar}}
 
 Ajoute un bouton à la barre d'outils du navigateur.
 
-Une [action du navigateur](/fr/Add-ons/WebExtensions/Browser_action) est un bouton dans la barre d'outils du navigateur.
+Une [action du navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_action) est un bouton dans la barre d'outils du navigateur.
 
-Vous pouvez associer une fenêtre contextuelle au bouton. La fenêtre contextuelle est spécifée en utilisant HTML, CSS et JavaScript, tout comme une page Web normale. JavaScript en cours d'exécution dans le popup accède à toutes les mêmes API WebExtension que vos scripts de fond, mais son contexte global est le popup, et non la page courrante affichée dans le navigateur. Pour effectuer les pages Web, vous devez communiquer avec eux par des [messages](/fr/Add-ons/WebExtensions/Modify_a_web_page#Messaging).
+Vous pouvez associer une fenêtre contextuelle au bouton. La fenêtre contextuelle est spécifée en utilisant HTML, CSS et JavaScript, tout comme une page Web normale. JavaScript en cours d'exécution dans le popup accède à toutes les mêmes API WebExtension que vos scripts de fond, mais son contexte global est le popup, et non la page courrante affichée dans le navigateur. Pour effectuer les pages Web, vous devez communiquer avec eux par des [messages](/fr/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page#messaging).
 
 Si vous spécifiez une fenêtre contextuelle, elle sera affichée — et le contenu sera chargé — quand l'utilisateur clique sur l'icône. Si vous ne spécifiez pas de fenêtre contextuelle, alors lorsque l'utilisateur clique sur l'icône, un événement est envoyé à votre extension.
 
@@ -74,19 +65,18 @@ Quand l'API `browserAction`, vous pouvez :
 - {{WebExtAPIRef("browserAction.onClicked")}}
   - : Action quand l'icone d'action du navigateur est cliqué. Cet événement ne déclenchera pas si l'action du navigateur comporte une fenêtre contextuelle.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserAction")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -113,4 +103,4 @@ Quand l'API `browserAction`, vous pouvez :
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

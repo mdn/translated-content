@@ -1,56 +1,48 @@
 ---
-title: クラス式
+title: class 式
 slug: Web/JavaScript/Reference/Operators/class
-tags:
-  - クラス
-  - ECMAScript 2015
-  - 式
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - リファレンス
-browser-compat: javascript.operators.class
-translation_of: Web/JavaScript/Reference/Operators/class
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-{{jsSidebar("Operators")}}
 
-**クラス式**は、 ECMAScript 2015 でクラスを定義する方法の 1 つです。{{jsxref("Operators/function", "関数式", "", "true")}}と同じように、クラス式は名前を付けることも付けないこともできます。名前を付けた場合、クラス名はクラス内部のみのローカルです。
+**`class`** キーワードを使用すると、式内でクラスを定義することができます。
 
-JavaScript のクラスはプロトタイプベースの継承が使われます。
+クラスは、 [`class` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/class) を使用して定義することもできます。
 
-{{EmbedInteractiveExample("pages/js/expressions-classexpression.html")}}
+{{InteractiveExample("JavaScript デモ: class 式")}}
+
+```js interactive-example
+const Rectangle = class {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+  area() {
+    return this.height * this.width;
+  }
+};
+
+console.log(new Rectangle(5, 8).area());
+// 予想される結果: 40
+```
 
 ## 構文
 
-```js
-const MyClass = class [className] [extends otherClassName] {
+```js-nolint
+class {
+  // クラス本体
+}
+class name {
   // クラス本体
 }
 ```
 
+> [!NOTE]
+> [式文](/ja/docs/Web/JavaScript/Reference/Statements/Expression_statement) は、[`class` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/class) との曖昧さを避けるため、キーワード `class` で始めてはなりません。`class` キーワードは、文を受け入れないコンテキストで現れた場合にのみ、式を開始します。
+
 ## 解説
 
-クラス式の構文は、{{jsxref("Statements/class", "クラス宣言（文）", "", "true")}} と似ています。 `class` 文では、 `class` 式の本体が{{jsxref("Strict_mode", "厳格モード", "", 1)}}で実行されます。
-
-しかし、クラス式と{{jsxref("Statements/class", "クラス文", "", "true")}}ではいくつかの相違点があります。
-
-- クラス式ではクラス名（「束縛識別子」 (binding identifier)）を省略できますが、{{jsxref("Statements/class", "クラス文", "", "true")}}では省略できません。
-- クラス式は {{jsxref("Global_Objects/SyntaxError", "SyntaxError")}} を**発生させずに**クラスを再宣言することができます。これは{{jsxref("Statements/class", "クラス文", "", "true")}}の場合はできません。
-
-`constructor` メソッドは省略可能です。クラス式で生成されたクラスは、常に {{jsxref("Operators/typeof", "typeof")}} が "`function`" の値を返します。
-
-```js
-'use strict';
-let Foo = class {};  // コンストラクタープロパティは省略可能
-Foo = class {};      // 再宣言が可能
-
-typeof Foo;             // "function" を返す
-typeof class {};        // "function" を返す
-
-Foo instanceof Object;   // true
-Foo instanceof Function; // true
-class Foo {}            // SyntaxError が発生 (クラス宣言は再宣言ができない)
-```
+`class` 式は、[`class` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/class)とよく似ており、構文もほぼ同じです。 `class` 宣言と同様に、 `class` 式の本体は[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)で実行されます。 `class` 式と `class` 宣言の主な違いは、クラス名です。 `class` 式ではこのクラス名を省略できるため、無名クラスを作成することができます。クラス式はクラスを再定義できますが、 `class` 宣言を使用してクラスを再宣言すると、 {{jsxref("SyntaxError")}} が発生します。詳細については、[クラス](/ja/docs/Web/JavaScript/Reference/Classes)の章を参照してください。
 
 ## 例
 
@@ -62,18 +54,18 @@ class Foo {}            // SyntaxError が発生 (クラス宣言は再宣言が
 const Foo = class {
   constructor() {}
   bar() {
-    return 'Hello World!';
+    return "Hello World!";
   }
 };
 
 const instance = new Foo();
-instance.bar();  // "Hello World!"
-Foo.name;        // "Foo"
+instance.bar(); // "Hello World!"
+Foo.name; // "Foo"
 ```
 
 ### 名前付きクラス式
 
-クラス内部で現在のクラスを参照したい場合は、*名前付きクラス式*を作成してください。この名前は、そのクラス式自身のスコープ内だけで見ることができます。
+クラス内部で現在のクラスを参照したい場合は、名前付きクラス式を作成してください。この名前は、そのクラス式自身のスコープ内だけで見ることができます。
 
 ```js
 const Foo = class NamedFoo {
@@ -81,11 +73,11 @@ const Foo = class NamedFoo {
   whoIsThere() {
     return NamedFoo.name;
   }
-}
+};
 const bar = new Foo();
-bar.whoIsThere();  // "NamedFoo"
-NamedFoo.name;     // ReferenceError: NamedFoo is not defined
-Foo.name;          // "NamedFoo"
+bar.whoIsThere(); // "NamedFoo"
+NamedFoo.name; // ReferenceError: NamedFoo is not defined
+Foo.name; // "NamedFoo"
 ```
 
 ## 仕様書
@@ -98,6 +90,5 @@ Foo.name;          // "NamedFoo"
 
 ## 関連情報
 
-- {{jsxref("Operators/function", "関数式", "", "true")}}
-- {{jsxref("Statements/class", "クラス宣言", "", "true")}}
-- {{jsxref("Classes", "クラス", "", "true")}}
+- {{jsxref("Statements/class", "class")}}
+- {{jsxref("Classes", "クラス", "", 1)}}

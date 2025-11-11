@@ -1,23 +1,32 @@
 ---
 title: Object.getOwnPropertyDescriptor()
+short-title: getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Object
-browser-compat: javascript.builtins.Object.getOwnPropertyDescriptor
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-{{JSRef}}
 
-**`Object.getOwnPropertyDescriptor()`** メソッドは、与えられたオブジェクトの特定のプロパティ (すなわち、あるオブジェクトの直接の表現であり、オブジェクトのプロトタイプチェーン内のものではない) の構成を記述したオブジェクトを返します。返されるオブジェクトは変更可能ですが、変更しても元のプロパティの構成には影響を与えません。
+**`Object.getOwnPropertyDescriptor()`** は静的メソッドで、与えられたオブジェクトの特定のプロパティ (すなわち、あるオブジェクトの直接の表現であり、オブジェクトのプロトタイプチェーン内のものではない) の構成を記述したオブジェクトを返します。返されるオブジェクトは変更可能ですが、変更しても元のプロパティの構成には影響を与えません。
 
-{{EmbedInteractiveExample("pages/js/object-getownpropertydescriptor.html")}}
+{{InteractiveExample("JavaScript デモ: Object.getOwnPropertyDescriptor()")}}
+
+```js interactive-example
+const object = {
+  foo: 42,
+};
+
+const descriptor = Object.getOwnPropertyDescriptor(object, "foo");
+
+console.log(descriptor.configurable);
+// 予想される結果: true
+
+console.log(descriptor.value);
+// 予想される結果: 42
+```
 
 ## 構文
 
-```js
+```js-nolint
 Object.getOwnPropertyDescriptor(obj, prop)
 ```
 
@@ -53,32 +62,39 @@ Object.getOwnPropertyDescriptor(obj, prop)
 
 ## 例
 
-### Object.getOwnPropertyDescriptor の使用
+### Object.getOwnPropertyDescriptor() の使用
 
 ```js
-var o, d;
+let o, d;
 
-o = { get foo() { return 17; } };
-d = Object.getOwnPropertyDescriptor(o, 'foo');
-// d is {
+o = {
+  get foo() {
+    return 17;
+  },
+};
+d = Object.getOwnPropertyDescriptor(o, "foo");
+console.log(d);
+// {
 //   configurable: true,
 //   enumerable: true,
-//   get: /*the getter function*/,
+//   get: [Function: get foo],
 //   set: undefined
 // }
 
 o = { bar: 42 };
-d = Object.getOwnPropertyDescriptor(o, 'bar');
-// d is {
+d = Object.getOwnPropertyDescriptor(o, "bar");
+console.log(d);
+// {
 //   configurable: true,
 //   enumerable: true,
 //   value: 42,
 //   writable: true
 // }
 
-o = { [Symbol.for('baz')]: 73 }
-d = Object.getOwnPropertyDescriptor(o, Symbol.for('baz'));
-// d is {
+o = { [Symbol.for("baz")]: 73 };
+d = Object.getOwnPropertyDescriptor(o, Symbol.for("baz"));
+console.log(d);
+// {
 //   configurable: true,
 //   enumerable: true,
 //   value: 73,
@@ -86,13 +102,14 @@ d = Object.getOwnPropertyDescriptor(o, Symbol.for('baz'));
 // }
 
 o = {};
-Object.defineProperty(o, 'qux', {
+Object.defineProperty(o, "qux", {
   value: 8675309,
   writable: false,
-  enumerable: false
+  enumerable: false,
 });
-d = Object.getOwnPropertyDescriptor(o, 'qux');
-// d is {
+d = Object.getOwnPropertyDescriptor(o, "qux");
+console.log(d);
+// {
 //   value: 8675309,
 //   writable: false,
 //   enumerable: false,
@@ -100,15 +117,15 @@ d = Object.getOwnPropertyDescriptor(o, 'qux');
 // }
 ```
 
-<h3 id="Non-object_coercion" name="Non-object_coercion">オブジェクト以外の型変換</h3>
+### オブジェクト以外の型変換
 
 ECMAScript 5 では、このメソッドへの最初の引数がオブジェクトでない (プリミティブである) 場合は、 {{jsxref("TypeError")}} が発生します。 ECMAScript 2015 では、最初の引数がオブジェクトでなくても、最初に強制的にオブジェクトに変換します。
 
 ```js
-Object.getOwnPropertyDescriptor('foo', 0);
+Object.getOwnPropertyDescriptor("foo", 0);
 // TypeError: "foo" is not an object  // ES5 code
 
-Object.getOwnPropertyDescriptor('foo', 0);
+Object.getOwnPropertyDescriptor("foo", 0);
 // Object returned by ES2015 code: {
 //   configurable: false,
 //   enumerable: true,

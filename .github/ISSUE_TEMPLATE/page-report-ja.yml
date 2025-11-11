@@ -1,0 +1,62 @@
+name: "[MDN ページからの報告 // ja]"
+description: MDN ページの "Report a problem with this content on GitHub" リンクで報告された問題
+labels: ["l10n-ja", "needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 始める前に
+
+        **このページを自分自身で修正するなら** このコンテンツはオープンソースです。
+        ↩ 戻ってページ内の _Edit on GitHub_ リンクを使用してください。
+
+        **ブラウザーの互換性に関する問題なら**
+        ↩ 戻ってページ内の _Report problems with this compatibility data on GitHub_ リンクを使用してください。
+
+        **ブラウザーについて知りたいなら**
+        🙋 ヘルプを得るには [Firefox](https://support.mozilla.org/ja/kb/file-bug-report-or-feature-request-mozilla), [Chrome](https://support.google.com/chrome/answer/95315?hl=en-GB&ref_topic=7439544), [Safari](https://www.apple.com/feedback/safari.html), またはその他のブラウザーについて、ブラウザーのサポートサイトをご覧ください。
+
+        ---
+  - type: input
+    id: mdn-url
+    attributes:
+      label: MDN URL
+      description: 自動的に設定されます。変更しないでください。
+    validations:
+      required: true
+  - type: input
+    id: section
+    attributes:
+      label: この問題に関する節や見出しはどこですか。
+  - type: textarea
+    id: problem
+    attributes:
+      label: 不完全、不親切、不完全であった情報は何ですか。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: どう表示されるべきだと思いますか。
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: 補足情報となるリンク、参考資料、引用文献はありますか。
+      description: 問題を確認するための情報へのリンク。
+  - type: textarea
+    id: more-info
+    attributes:
+      label: 他に共有したいことはありますか。
+      description: 例えば、バグを再現する手順、スクリーンショット、画面録画、サンプルコードなど
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        これで完了です。次のフィールドはあらかじめ記入されています。 **Submit new issue** を押してください。
+  - type: textarea
+    id: metadata
+    attributes:
+      label: MDN metadata
+      description: 自動的に設定されます。変更しないでください。

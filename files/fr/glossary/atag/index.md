@@ -1,24 +1,24 @@
 ---
 title: ATAG
 slug: Glossary/ATAG
-tags:
-  - ATAG
-  - Accessibilité
-  - Conception accessibilité
-  - Glossaire
-  - Règles de création d'outils accessibles
-translation_of: Glossary/ATAG
-original_slug: Glossaire/ATAG
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-_Authoring Tool Accessibility Guidelines_ (ATAG) est une recommandation {{Glossary("W3C")}} pour construire des outils de création-accessibilité qui produisent des contenus accessibles.
 
-## Pour approfondir
+Les **Règles pour l'accessibilité des outils d'édition (ATAG)** (pour <i lang="en">Authoring Tool {{Glossary("Accessibility")}} Guidelines</i> en anglais) sont une recommandation du {{Glossary("W3C")}} pour la création d'outils d'édition accessibles qui produisent des contenus accessibles.
 
-### Culture générale
+Les outils d'édition sont des applications logicielles utilisées pour créer du contenu web. ATAG explique comment&nbsp;:
 
-- [ATAG dans le cadre de la Web Accessibility Initiative](https://fr.wikipedia.org/wiki/Accessibilit%C3%A9_du_web#Recommandations_pour_les_outils_de_production_de_contenu) sur Wikipédia
+- rendre les outils d'édition eux-mêmes **accessibles**, afin que les personnes en situation de handicap puissent créer du contenu web&nbsp;;
+- aider les auteur·ice·s à créer des contenus web plus accessibles — en particulier&nbsp;: permettre, soutenir et promouvoir la production de contenus conformes aux {{Glossary("WCAG", "Règles pour l'accessibilité des contenus Web")}} (WCAG).
 
-### Informations techniques
+## Voir aussi
 
-- [Présentation d'ATAG](http://www.w3.org/WAI/intro/atag.php) sur le site du W3C (en)
-- [La recommandation ATAG 2.0](http://www.w3.org/TR/ATAG20/) sur le site du W3C (en)
+- [ATAG dans le cadre de l'Initiative pour l'accessibilité du Web (WAI)](<https://fr.wikipedia.org/wiki/Web_Accessibility_Initiative#Authoring_Tool_Accessibility_Guidelines_(ATAG)>) sur Wikipédia
+- [Présentation des Authoring Tool Accessibility Guidelines (ATAG) <sup>(angl.)</sup>](https://www.w3.org/WAI/standards-guidelines/atag/)
+- [Recommandation ATAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/ATAG20/)
+- Termes associés du glossaire&nbsp;:
+  - {{Glossary("Accessibility", "Accessibilité")}}
+  - {{Glossary("WAI")}}
+  - {{Glossary("WCAG")}}
+  - {{Glossary("UAAG")}}

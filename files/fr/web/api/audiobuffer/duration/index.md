@@ -1,16 +1,20 @@
 ---
 title: AudioBuffer.duration
 slug: Web/API/AudioBuffer/duration
-translation_of: Web/API/AudioBuffer/duration
 ---
+
 {{ APIRef("Web Audio API") }}
 
-La propriéré `duration`  de l'interface {{ domxref("AudioBuffer") }} renvoie un nombre flottant à double précision représentant la durée, en secondes, des données PCM stockées dans le buffer.
+La propriéré `duration` de l'interface {{ domxref("AudioBuffer") }} renvoie un nombre flottant à double précision représentant la durée, en secondes, des données PCM stockées dans le buffer.
 
 ## Syntaxe
 
 ```js
-var tableauTampon = audioCtx.createBuffer(nombreCanaux, nombreFrames, contexteAudio.sampleRate);
+var tableauTampon = audioCtx.createBuffer(
+  nombreCanaux,
+  nombreFrames,
+  contexteAudio.sampleRate,
+);
 tableauTampon.duration;
 ```
 
@@ -27,9 +31,13 @@ var nombreCanaux = 2;
 // Crée une mémoire tampon vide de 2 secondes
 // à la fréquence d'échantillonage du contexte AudioContext
 var nombreFrames = contexteAudio.sampleRate * 2.0;
-var tableauDonnees = audioCtx.createBuffer(nombreCanaux, nombreFrames, contexteAudio.sampleRate);
+var tableauDonnees = audioCtx.createBuffer(
+  nombreCanaux,
+  nombreFrames,
+  contexteAudio.sampleRate,
+);
 
-bouton.onclick = function() {
+bouton.onclick = function () {
   // remplit la mémoire tampon avec du bruit blanc
   // valeurs aléatoires entre -1.0 et 1.0
   for (var canal = 0; canal < nombreCanaux; canal++) {
@@ -42,18 +50,16 @@ bouton.onclick = function() {
     }
   }
   console.log(tableauDonnees.duration);
-}
+};
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                    | Statut                               | Commentaire |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioBuffer-duration', 'duration')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioBuffer.duration")}}
+{{Compat}}
 
 ## Voir aussi
 

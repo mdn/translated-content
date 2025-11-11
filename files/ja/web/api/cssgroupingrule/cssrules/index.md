@@ -1,15 +1,11 @@
 ---
-title: CSSGroupingRule.cssRules
+title: "CSSGroupingRule: cssRules プロパティ"
+short-title: cssRules
 slug: Web/API/CSSGroupingRule/cssRules
-tags:
-  - API
-  - CSSOM
-  - CSSGroupingRule
-  - プロパティ
-  - リファレンス
-browser-compat: api.CSSGroupingRule.cssRules
-translation_of: Web/API/CSSGroupingRule/cssRules
+l10n:
+  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`cssRules`** は {{domxref("CSSGroupingRule")}} インターフェイスのプロパティで、 {{domxref("CSSRuleList")}} 型で {{domxref("CSSRule")}} オブジェクトのコレクションを返します。

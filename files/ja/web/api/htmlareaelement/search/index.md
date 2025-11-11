@@ -1,21 +1,22 @@
 ---
-title: HTMLAreaElement.search
+title: "HTMLAreaElement: search プロパティ"
+short-title: search
 slug: Web/API/HTMLAreaElement/search
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAreaElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAreaElement.search
-translation_of: Web/API/HTMLAreaElement/search
-original_slug: Web/API/HTMLHyperlinkElementUtils/search
+l10n:
+  sourceCommit: 1eabc08d295e60d7d8eab6bce858d2fb0833be2b
 ---
+
 {{ApiRef("HTML DOM")}}
 
-**`HTMLAnchorElement.search`** プロパティは、*クエリー文字列*とも呼ばれる検索文字列、つまり `'?'` とその後に続く URL の引数の入った文字列です。
+**`search`** は {{domxref("HTMLAreaElement")}} インターフェイスのプロパティで、検索文字列、またの名をクエリー文字列、 `"?"` に続いて `<area>` 要素の `href` の引数を含む文字列です。URL に検索クエリーがない場合、このプロパティには空文字列 (`""`) が入ります。
 
-最新のブラウザーでは、[`URLSearchParams`](/ja/docs/Web/API/URLSearchParams/get#examples) と [`URL.searchParams`](/ja/docs/Web/API/URL/searchParams#examples) を提供して、クエリー文字列から引数を簡単に解析できるようにしています。
+このプロパティを設定して、 URL のクエリ文字列を変更することができます。設定すると、指定された値に、まだ存在しない場合は 1 つの `"?"` 接頭辞が追加されます。このプロパティを `""` に設定すると、クエリー文字列が除去されます。
+
+クエリーは、設定時には{{Glossary("Percent-encoding", "パーセントエンコード")}}されますが、読み取り時にはパーセントデコードされません。
+
+最新のブラウザーでは、[`URLSearchParams`](/ja/docs/Web/API/URLSearchParams/get#例) と [`URL.searchParams`](/ja/docs/Web/API/URL/searchParams#例) を提供して、クエリー文字列から引数を簡単に解析できるようにしています。
+
+詳しくは {{domxref("URL.search")}} を参照してください。
 
 ## 値
 
@@ -26,14 +27,14 @@ original_slug: Web/API/HTMLHyperlinkElementUtils/search
 ### エリアのリンクから検索文字列を取得
 
 ```js
-// <area id="myArea" href="/en-US/docs/HTMLAreaElement?q=123"> 要素が文書内にあったとします
+// <area id="myArea" href="/ja/docs/HTMLAreaElement?q=123"> 要素が文書内にあったとします
 const area = document.getElementById("myArea");
 area.search; // '?q=123' を返す
 ```
 
 ### URLSearchParams を使用した高度な解釈
 
-他にも、 [`URLSearchParams`](/ja/docs/Web/API/URLSearchParams/get#examples) が使われる場面があります。
+他にも、 [`URLSearchParams`](/ja/docs/Web/API/URLSearchParams/get#例) が使われる場面があります。
 
 ```js
 let params = new URLSearchParams(queryString);

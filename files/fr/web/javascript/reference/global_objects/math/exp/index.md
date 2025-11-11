@@ -1,24 +1,32 @@
 ---
 title: Math.exp()
 slug: Web/JavaScript/Reference/Global_Objects/Math/exp
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/exp
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/exp
 ---
+
 {{JSRef}}
 
 La fonction **`Math.exp()`** renvoie l'exponentielle d'un nombre (donnée par `e^x`, où `x` est la valeur passée en argument et `e` la valeur du {{jsxref("Objets_globaux/Math/E","nombre d'Euler (parfois appelé constante de Napier)","",1)}}.
 
-{{EmbedInteractiveExample("pages/js/math-exp.html")}}
+{{InteractiveExample("JavaScript Demo: Math.exp()")}}
+
+```js interactive-example
+console.log(Math.exp(0));
+// Expected output: 1
+
+console.log(Math.exp(1));
+// Expected output: 2.718281828459 (approximately)
+
+console.log(Math.exp(-1));
+// Expected output: 0.36787944117144233
+
+console.log(Math.exp(2));
+// Expected output: 7.38905609893065
+```
 
 ## Syntaxe
 
 ```js
-Math.exp(x)
+Math.exp(x);
 ```
 
 ### Paramètres
@@ -40,22 +48,17 @@ L'exponentielle du nombre passé en argument (`e^x`).
 
 ```js
 Math.exp(-1); // 0.36787944117144233
-Math.exp(0);  // 1
-Math.exp(1);  // 2.718281828459045
+Math.exp(0); // 1
+Math.exp(1); // 2.718281828459045
 ```
 
 ## Spécifications
 
-| Spécification                                                        | État                         | Commentaires                                          |
-| -------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.8', 'Math.exp')}} | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-math.exp', 'Math.exp')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-math.exp', 'Math.exp')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.exp")}}
+{{Compat}}
 
 ## Voir aussi
 

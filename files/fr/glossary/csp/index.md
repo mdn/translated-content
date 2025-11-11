@@ -1,24 +1,15 @@
 ---
 title: CSP
 slug: Glossary/CSP
-tags:
-  - Glossaire
-  - HTTP
-  - Infrastructure
-  - Sécurité
-translation_of: Glossary/CSP
-original_slug: Glossaire/CSP
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-Un CSP (Content Security Policy) est utilisé pour détecter et restreindre certains types d'attaques visant des sites web comme les failles {{Glossary("Cross-site scripting")}} et les injections de données.
 
-L'implémentation est basée sur un en-tête {{Glossary("HTTP")}} appelé `Content-Security-Policy`.
+Un CSP ([Content Security Policy](/fr/docs/Web/HTTP/Guides/CSP) pour Politique de sécurité du contenu en français) est utilisé pour détecter et restreindre certains types d'attaques visant des sites web comme les failles {{Glossary("Cross-site scripting")}}, [détournement de clics](/fr/docs/Web/Security/Attacks/Clickjacking) et les injections de données.
 
-## Pour approfondir
+L'implémentation est basée sur un en-tête {{Glossary("HTTP")}} appelé {{HTTPHeader("Content-Security-Policy")}}.
 
-### Culture générale
+## Voir aussi
 
-- [Content Security Policy sur Wikipédia](https://fr.wikipedia.org/wiki/Content_Security_Policy)
-
-### Connaissances techniques
-
-- [Documentation Content Security Policy sur MDN](/fr/docs/Web/HTTP/CSP)
+- [Documentation Content Security Policy](/fr/docs/Web/HTTP/Guides/CSP)
+- [Content Security Policy](https://fr.wikipedia.org/wiki/Content_Security_Policy) sur Wikipédia

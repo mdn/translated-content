@@ -1,8 +1,8 @@
 ---
 title: element.offsetWidth
 slug: Web/API/HTMLElement/offsetWidth
-translation_of: Web/API/HTMLElement/offsetWidth
 ---
+
 {{ ApiRef() }}
 
 ### Résumé

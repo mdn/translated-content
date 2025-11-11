@@ -1,23 +1,16 @@
 ---
 title: console
 slug: Web/API/console
-tags:
-  - API
-  - Debugging
-  - Interface
-  - Reference
-  - web console
-browser-compat: api.console
-translation_of: Web/API/Console
 ---
+
 {{APIRef("Console API")}}
 
-**`console`** 객체는 브라우저의 디버깅 콘솔(Firefox [웹 콘솔](/ko/docs/Tools/Web_Console) 등)에 접근할 수 있는 메서드를 제공합니다. 동작 방식은 브라우저마다 다르지만, 사실상 표준으로 여겨지는 기능도 여럿 있습니다.
+**`console`** 객체는 브라우저의 디버깅 콘솔(Firefox [웹 콘솔](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) 등)에 접근할 수 있는 메서드를 제공합니다. 동작 방식은 브라우저마다 다르지만, 사실상 표준으로 여겨지는 기능도 여럿 있습니다.
 
 `console` 객체는 아무 전역 객체에서나 접근할 수 있습니다. 브라우징 문맥에선 {{domxref("Window")}}, 워커에서는 {{domxref("WorkerGlobalScope")}}이 속성으로 포함하고 있습니다. {{domxref("Window.console")}}의 형태로 노출되어 있으므로 간단하게 `console`로 참조할 수 있습니다.
 
 ```js
-console.log("링크를 열 수 없습니다")
+console.log("링크를 열 수 없습니다");
 ```
 
 이 문서는 콘솔 객체에서 사용할 수 있는 [메서드](#메서드)와 몇 가지 [예제](#예제)를 다룹니다.
@@ -55,9 +48,9 @@ console.log("링크를 열 수 없습니다")
 - {{domxref("console.log()")}}
   - : 일반 메시지를 출력합니다. 추가 매개변수와 함께 [문자열 치환](#문자열_치환_사용하기)을 사용할 수 있습니다.
 - {{domxref("console.profile()")}}
-  - : 브라우저의 내장 프로파일러([Firefox 성능 측정 도구](/ko/docs/Tools/Performance) 등)를 실행합니다. 선택 사항으로 프로파일에 이름을 붙일 수 있습니다.
+  - : 브라우저의 내장 프로파일러([Firefox 성능 측정 도구](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html) 등)를 실행합니다. 선택 사항으로 프로파일에 이름을 붙일 수 있습니다.
 - {{domxref("console.profileEnd()")}}
-  - : 프로파일러를 멈춥니다. 프로파일 결과는 브라우저의 성능 측정 도구([Firefox 성능 측정 도구](/ko/docs/Tools/Performance) 등)에서 확인할 수 있습니다.
+  - : 프로파일러를 멈춥니다. 프로파일 결과는 브라우저의 성능 측정 도구([Firefox 성능 측정 도구](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html) 등)에서 확인할 수 있습니다.
 - {{domxref("console.table()")}}
   - : 표 형태의 데이터를 표에 그립니다.
 - {{domxref("console.time()")}}
@@ -65,7 +58,7 @@ console.log("링크를 열 수 없습니다")
 - {{domxref("console.timeEnd()")}}
   - : 지정한 [타이머](#타이머)를 멈추고, 소요시간을 출력합니다.
 - {{domxref("console.timeStamp()")}} {{non-standard_inline}}
-  - : 브라우저의 [타임라인](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/timeline-tool)이나 [워터폴](/ko/docs/Tools/Performance/Waterfall)에 마커를 추가합니다.
+  - : 브라우저의 [타임라인](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/timeline-tool)이나 [워터폴](https://profiler.firefox.com/docs/)에 마커를 추가합니다.
 - {{domxref("console.trace()")}}
   - : [스택 추적](#스택_추적)을 출력합니다.
 - {{domxref("console.warn()")}}
@@ -100,7 +93,7 @@ console.log(someObject);
 
 ```js
 var car = "Dodge Charger";
-var someObject = {str:"Some text", id:5};
+var someObject = { str: "Some text", id: 5 };
 console.info("My first car was a", car, ". The object is: ", someObject);
 ```
 
@@ -123,13 +116,14 @@ console.info("My first car was a", car, ". The object is: ", someObject);
 - `%f`
   - : 부동소수점 수를 출력합니다. 서식도 지원합니다. 예를 들어 `console.log("Foo %.2f", "1.1")`은 소수부를 두 자리로 표현하므로 `Foo 1.10`을 출력합니다.
 
-> **참고:** Chrome은 숫자 서식을 지원하지 않습니다
+> [!NOTE]
+> Chrome은 숫자 서식을 지원하지 않습니다
 
 각각의 치환 문자열은 이후 매개변수에서 값을 가져옵니다. 예를 들어...
 
 ```js
-for (var i=0; i<5; i++) {
-  console.log("Hello, %s. You've called me %d times.", "Bob", i+1);
+for (var i = 0; i < 5; i++) {
+  console.log("Hello, %s. You've called me %d times.", "Bob", i + 1);
 }
 ```
 
@@ -148,7 +142,10 @@ for (var i=0; i<5; i++) {
 `"%c"` 명령을 사용해 콘솔 출력에 CSS 스타일을 적용할 수 있습니다.
 
 ```js
-console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue;padding: 2px");
+console.log(
+  "This is %cMy stylish message",
+  "color: yellow; font-style: italic; background-color: blue;padding: 2px",
+);
 ```
 
 명령 이전의 텍스트는 영향을 받지 않고, 이후의 텍스트는 매개변수로 제공한 CSS 선언을 적용합니다.
@@ -158,7 +155,12 @@ console.log("This is %cMy stylish message", "color: yellow; font-style: italic; 
 `"%c"` 명령을 여러 번 사용할 수도 있습니다.
 
 ```js
-console.log("Multiple styles: %cred %corange", "color: red", "color: orange", "Additional unformatted message");
+console.log(
+  "Multiple styles: %cred %corange",
+  "color: red",
+  "color: orange",
+  "Additional unformatted message",
+);
 ```
 
 `%c` 구문과 함께 사용할 수 있는 CSS 속성은 다음과 같습니다. (Firefox 기준, 브라우저마다 다를 수 있음)
@@ -182,7 +184,8 @@ console.log("Multiple styles: %cred %corange", "color: red", "color: orange", "A
 - {{cssxref("word-spacing")}}, {{cssxref("word-break")}}
 - {{cssxref("writing-mode")}}
 
-> **참고:** 콘솔 메시지는 인라인 요소처럼 행동합니다. `padding`, `margin`등의 효과를 보려면 `display: inline-block` 등을 지정해야 합니다.
+> [!NOTE]
+> 콘솔 메시지는 인라인 요소처럼 행동합니다. `padding`, `margin`등의 효과를 보려면 `display: inline-block` 등을 지정해야 합니다.
 
 ### 콘솔 그룹 사용하기
 
@@ -227,7 +230,8 @@ console.timeEnd("answer time");
 
 시작할 때와 끝낼 때 모두 타이머의 이름이 표시됨을 알 수 있습니다.
 
-> **참고:** 타이머를 네트워크 트래픽 소요시간 측정에 사용하는 경우, 타이머는 총 소요시간을 보여주지만 네트워크 패널에 표시되는 시간은 헤더에 소모한 시간만 나타낸다는 것을 알아야 합니다.
+> [!NOTE]
+> 타이머를 네트워크 트래픽 소요시간 측정에 사용하는 경우, 타이머는 총 소요시간을 보여주지만 네트워크 패널에 표시되는 시간은 헤더에 소모한 시간만 나타낸다는 것을 알아야 합니다.
 > 응답 본문 로깅을 활성화한 경우, 응답 헤더와 본문의 시간을 합한 값이 타이머의 콘솔 출력과 비슷해야 합니다.
 
 ### 스택 추적
@@ -263,9 +267,9 @@ foo();
 
 ## 같이 보기
 
-- [Firefox 개발자 도구](/ko/docs/Tools)
-- [웹 콘솔](/ko/docs/Tools/Web_Console): Firefox의 웹 콘솔이 콘솔 API 호출을 처리하는 방법
-- [원격 디버깅](/ko/docs/Tools/Remote_Debugging): 디버깅 대상이 모바일 장치일 때 콘솔 출력을 보는 방법
+- [Firefox 개발자 도구](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+- [웹 콘솔](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html): Firefox의 웹 콘솔이 콘솔 API 호출을 처리하는 방법
+- [원격 디버깅](https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/index.html): 디버깅 대상이 모바일 장치일 때 콘솔 출력을 보는 방법
 
 ### 다른 구현체
 

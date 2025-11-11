@@ -1,8 +1,10 @@
 ---
 title: Partage de domaine
 slug: Glossary/Domain_sharding
-translation_of: Glossary/Domain_sharding
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
+
 Les navigateurs limitent le nombre de connexions actives pour chaque domaine. Pour permettre des téléchargements simultanés de ressources dépassant cette limite, le **partage de domaine**(ou <i lang="en">domain_sharding</i> en anglais) divise le contenu sur plusieurs sous-domaines. Lorsque plusieurs domaines sont utilisés pour servir plusieurs actifs, les navigateurs peuvent télécharger plus de ressources simultanément, ce qui accélère le temps de chargement des pages et améliore l'expérience utilisateur.
 
 Le problème avec le partage de domaine, en termes de performances, est le coût des recherches DNS supplémentaires pour chaque domaine et la surcharge liée à l'établissement de chaque connexion TCP.
@@ -13,6 +15,7 @@ Le protocole HTTP2 prend en charge un nombre illimité de requêtes simultanées
 
 ## Voir aussi
 
-- [TLS](/fr/docs/Glossary/TLS)
-- [DNS](/fr/docs/Glossary/DNS)
-- [HTTP/2](/fr/docs/Glossary/HTTP_2)
+- Termes associés du glossaire&nbsp;:
+  - {{Glossary("TLS")}}
+  - {{Glossary("DNS")}}
+  - {{Glossary("HTTP 2", "HTTP/2")}}

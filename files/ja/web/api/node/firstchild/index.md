@@ -1,19 +1,18 @@
 ---
-title: Node.firstChild
+title: "Node: firstChild プロパティ"
 slug: Web/API/Node/firstChild
-tags:
-  - プロパティ
-  - リファレンス
-browser-compat: api.Node.firstChild
-translation_of: Web/API/Node/firstChild
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
+
 {{APIRef("DOM")}}
 
 **`firstChild`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティで、ツリー内におけるこのノードの最初の子、またはこのノードに子がない場合は `null` を返します。
 
 このノードが {{domxref("Document")}} であった場合は、このプロパティは直接のこのリスト内で最初のノードを返します。
 
-> **Note:** このプロパティはこのノードの最初の子であれば、あらゆる種類のノードを返します。
+> [!NOTE]
+> このプロパティはこのノードの最初の子であれば、あらゆる種類のノードを返します。
 > {{domxref("Text")}} または {{domxref("Comment")}} ノードになることがあります。
 > 他の要素の子である最初の {{domxref("Element")}} を取得したい場合は、 {{domxref("Element.firstElementChild")}} を使用することを検討してください。
 
@@ -31,12 +30,12 @@ translation_of: Web/API/Node/firstChild
 </p>
 
 <script>
-  const p01 = document.getElementById('para-01');
+  const p01 = document.getElementById("para-01");
   console.log(p01.firstChild.nodeName);
 </script>
 ```
 
-上記の例では[コンソール](/ja/docs/Web/API/console)に '#text' と表示されます。開始タグ `<p>` の末尾と `<span>` タグとの間にある空白を調整するためにテキストノードが挿入されているためです。**あらゆる**[ホワイトスペース](/ja/docs/Web/API/Document_Object_Model/Whitespace)は、単一の空白から複数のスペース、改行、タブに至るまで、 1 つの `#text` ノードを生成します。
+上記の例では[コンソール](/ja/docs/Web/API/console)に '#text' と表示されます。開始タグ `<p>` の末尾と `<span>` タグとの間にある空白を調整するためにテキストノードが挿入されているためです。**あらゆる**[ホワイトスペース](/ja/docs/Web/CSS/Guides/Text/Whitespace)は、単一の空白から複数のスペース、改行、タブに至るまで、 1 つの `#text` ノードを生成します。
 
 `#text` ノードはもう 1 つ、閉じタグ `</span>` と `</p>` の間に挿入されます。
 
@@ -46,7 +45,7 @@ translation_of: Web/API/Node/firstChild
 <p id="para-01"><span>最初の span</span></p>
 
 <script>
-  const p01 = document.getElementById('para-01');
+  const p01 = document.getElementById("para-01");
   console.log(p01.firstChild.nodeName);
 </script>
 ```

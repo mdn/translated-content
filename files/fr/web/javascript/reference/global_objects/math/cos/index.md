@@ -1,24 +1,33 @@
 ---
 title: Math.cos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cos
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/cos
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/cos
 ---
+
 {{JSRef}}
 
 La fonction **`Math.cos()`** retourne le [cosinus](https://fr.wikipedia.org/wiki/Cosinus) d'un angle dont la valeur est exprimée en [radians](https://fr.wikipedia.org/wiki/Radian).
 
-{{EmbedInteractiveExample("pages/js/math-cos.html")}}
+{{InteractiveExample("JavaScript Demo: Math.cos()")}}
+
+```js interactive-example
+function getCircleX(radians, radius) {
+  return Math.cos(radians) * radius;
+}
+
+console.log(getCircleX(1, 10));
+// Expected output: 5.403023058681398
+
+console.log(getCircleX(2, 10));
+// Expected output: -4.161468365471424
+
+console.log(getCircleX(Math.PI, 10));
+// Expected output: -10
+```
 
 ## Syntaxe
 
 ```js
-Math.cos(x)
+Math.cos(x);
 ```
 
 ### Paramètres
@@ -41,25 +50,20 @@ La méthode `Math.cos()` renvoie une valeur numérique comprise entre -1 et 1. C
 ### Utiliser `Math.cos()`
 
 ```js
-Math.cos(0);           // 1
-Math.cos(1);           // 0.5403023058681398
+Math.cos(0); // 1
+Math.cos(1); // 0.5403023058681398
 
-Math.cos(Math.PI);     // -1
+Math.cos(Math.PI); // -1
 Math.cos(2 * Math.PI); // 1
 ```
 
 ## Spécifications
 
-| Spécification                                                        | État                         | Commentaires                                          |
-| -------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.7', 'Math.cos')}} | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-math.cos', 'Math.cos')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-math.cos', 'Math.cos')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.cos")}}
+{{Compat}}
 
 ## Voir aussi
 

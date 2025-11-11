@@ -1,19 +1,9 @@
 ---
 title: runtime.id
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/id
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Property
-  - Reference
-  - WebExtensions
-  - runtime
-  - §ID
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/id
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 L'ID de l'extension
 
@@ -25,19 +15,20 @@ var myAddonId = browser.runtime.id;
 
 ### Value
 
-Une `chaîne` représentant l'ID du module complémentaire. Si l'extension a spécifié un ID dans la clé manifest.json de ses [applications](/fr/Add-ons/WebExtensions/manifest.json/applications), `runtime.id` contiendra la valeur. SInon `runtime.id` contiendra l'ID généré pour l'extension.
+Une `chaîne` représentant l'ID du module complémentaire. Si l'extension a spécifié un ID dans la clé manifest.json de ses [applications](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings), `runtime.id` contiendra la valeur. SInon `runtime.id` contiendra l'ID généré pour l'extension.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.id")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -64,4 +55,4 @@ Une `chaîne` représentant l'ID du module complémentaire. Si l'extension a sp�
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

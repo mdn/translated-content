@@ -1,180 +1,232 @@
 ---
 title: Date.parse()
+short-title: parse()
 slug: Web/JavaScript/Reference/Global_Objects/Date/parse
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/parse
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-{{JSRef}}
 
-La méthode **`Date.parse()`** analyse la représentation textuelle d'une date, et renvoie le nombre de millisecondes depuis le 1er janvier 1970, 00:00:00 UTC jusqu'à cette date ou `NaN` si la chaîne n'est pas reconnue ou décrit une date invalide (par exemple 2015-02-31).
+La méthode statique **`Date.parse()`** analyse la représentation sous forme de chaîne de caractères d'une date et renvoie l'[horodatage](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#le_format_epoch_les_horodatages_et_les_dates_invalides) correspondant.
 
-> **Note :** Pour les anciennes implémentations (avant ES5), le résultat de ` Date.``parse ` variait d'une implémentation à l'autre. Attention donc à la compatibilité avec ces anciennes versions.
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Date.parse()")}}
 
-{{EmbedInteractiveExample("pages/js/date-parse.html")}}
+```js interactive-example
+// Format de chaîne de caractères de date-heure standard
+const unixTimeZero = Date.parse("1970-01-01T00:00:00Z");
+// Format non standard ressemblant à toUTCString()
+const javaScriptRelease = Date.parse("04 Dec 1995 00:12:00 GMT");
+
+console.log(unixTimeZero);
+// Résultat attendu : 0
+
+console.log(javaScriptRelease);
+// Résultat attendu : 818035920000
+```
 
 ## Syntaxe
 
-Appel direct :
-
-```js
+```js-nolint
 Date.parse(dateString)
-```
-
-Appel implicite :
-
-```js
-new Date(dateString)
 ```
 
 ### Paramètres
 
 - `dateString`
-  - : Une chaine de caractères représentant une date dans une version simplifiéee d'ISO 8601 (d'autres formats peuvent être utilisés mais les résultats ne sont pas garantis).
+  - : Une chaîne de caractères (`string`) au [format date-heure](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#format_de_chaîne_de_date_et_heure). Voir la référence liée pour les précautions concernant l'utilisation de différents formats.
 
 ### Valeur de retour
 
-Un nombre correspondant au nombre de millisecondes écoulées entre le premier janvier 1970 à minuit UTC et la date indiquée en argument sous la forme d'une chaîne de caractères. Si l'argument ne permet pas de décrire une date valide, c'est {{jsxref("NaN")}} qui sera renvoyé.
+Un nombre représentant l'[horodatage (<i lang="en">timestamp</i> en anglais)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#le_format_epoch_les_horodatages_et_les_dates_invalides) de la date donnée. Si `dateString` ne peut pas être analysé comme une date valide, {{jsxref("NaN")}} est renvoyé.
 
 ## Description
 
-La méthode `parse` prend en argument une chaine de caractères contenant une date en paramètre (comme "`Dec 25, 1995`") et renvoie le nombre de millièmes de secondes depuis le 1er janvier 1970, 00:00:00 UTC. Cette fonction est utile pour définir des valeurs de dates à partir de représentations textuelles, par exemple en conjonction avec la méthode {{jsxref("Objets_globaux/Date/setTime", "setTime()")}} et l'objet {{jsxref("Objets_globaux/Date", "Date")}}.
+Cette fonction est utile pour définir des valeurs de date à partir de chaînes de caractères, par exemple en combinaison avec la méthode {{jsxref("Date/setTime", "setTime()")}}.
 
-### Format de la chaîne de caractères
+Les formats que `parse()` peut traiter ne sont pas explicitement spécifiés, mais il existe quelques {{Glossary("invariant", "invariants")}}&nbsp;:
 
-À partir d'une chaine de caractères représentant une date, `parse` renvoie une valeur de temps. La syntaxe acceptée est un format simplifié de la norme ISO 8601. On pourra par exemple utiliser `"2011-10-10"` (date uniquement), `"2011-10-10T14:48:00"` (date et heure) ou `"2011-10-10T14:48:00.000+09:00"` (date, heure, millisecondes et fuseau horaire).
+- Le [format de chaîne de caractères date-heure](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#format_de_chaîne_de_date_et_heure) (produit par {{jsxref("Date/toISOString", "toISOString()")}}) doit être pris en charge.
+- Si `x` est un objet Date dont la valeur en millisecondes est zéro, alors `x.valueOf()` doit être égal à l'une des valeurs suivantes&nbsp;: `Date.parse(x.toString())`, `Date.parse(x.toUTCString())`, `Date.parse(x.toISOString())`. Cela signifie que les formats produits par {{jsxref("Date/toString", "toString()")}} et {{jsxref("Date/toUTCString", "toUTCString()")}} doivent aussi être pris en charge.
+- La spécification _n'exige pas_ la prise en charge du format produit par {{jsxref("Date/toLocaleString", "toLocaleString()")}}. Cependant, les principaux moteurs essaient tous de prendre en charge le format `toLocaleString("en-US")`.
 
-Si aucun fuseau horaire n'est spécifié, les chaînes représentant uniquement des dates seront considérées comme UTC et les dates / heures seront considérées comme locales.
+Les autres formats dépendent de l'implémentation et peuvent ne pas fonctionner sur tous les navigateurs. Une bibliothèque peut être utile si de nombreux formats différents doivent être pris en charge. En fait, le manque de fiabilité de `Date.parse()` est l'une des raisons de l'introduction de l'API {{jsxref("Temporal")}}.
 
-Lorsque des indicateurs de fuseau horaire sont utilisés, la valeur renvoyée correspondra toujours au nombre de millisecondes écoulées entre l'argument et le premier janvier 1970 à minuit UTC.
-
-`parse()` est une méthode statique de {{jsxref("Date")}} et on invoquera ainsi `Date.parse()` plutôt que `parse()` sur une instance d'un objet `Date`.
-
-### Différences entre les fuseaux horaires supposés
-
-Avec une chaîne comme `"March 7, 2014"`, `parse()` supposera un fuseau horaire local, avec une chaîne au format ISO comme `"2014-03-07"`, la méthode supposera un fuseau horaire UTC en ES5 et un fuseau horaire local pour ECMAScript 2015. Ainsi les objets {{jsxref("Date")}} construits avec ces chaînes représenteront des instants différents, sauf si le fuseau horaire local du système utilisé correspond à UTC. Cela signifie que deux dates représentées de façon textuelles semblables peuvent donner des dates différentes (ce comportement doit être corrigé avec ECMAScript 6 afin que les deux dates soient traitées de façon locale).
-
-### Traitement laissé libre à l'implémentation
-
-Le standard ECMAScript dicte que si la chaîne utilisée n'est pas conforme au format standard, alors la fonction peut utiliser une heuristique et/ou un algorithme d'analyse de texte propre à l'implémentation. Les chaînes impossibles à décoder et/ou qui contiennent des éléments non-conformes aux formats ISO doivent renvoyer {{jsxref("NaN")}} lors de l'appel à `Date.parse()`.
-
-Cependant, les valeurs invalides qui ne sont pas reconnues dans un format ISO pris en charge par ECMA-262 peuvent ou non engendrer la valeur {{jsxref("NaN")}} selon le navigateur et les valeurs utilisées. Par exemple :
-
-```js
-// Chaîne non ISO avec des valeurs invalides
-new Date('23/25/2014');
-```
-
-sera traitée comme la date locale du 25 novembre 2015 avec Firefox 30 et comme invalide avec Safari 7. Cependant, si la chaîne est reconnue dans un format ISO mais contient des valeurs invalides, la méthode renverra {{jsxref("NaN")}} pour tous les navigateurs conformes à ES5 (ou aux versions ultérieures) :
-
-```js
-// Chaîne ISO avec des valeurs invalides new
-Date('2014-25-23').toISOString();
-// renvoie "RangeError: invalid date" pour les navigateurs ES5
-```
-
-L'implémentation spécifique de SpiderMonkey peut être trouvée dans le fichier [`jsdate.cpp`](https://dxr.mozilla.org/mozilla-central/source/js/src/jsdate.cpp?rev=64553c483cd1#889). La chaîne `"10 06 2014"` est un exemple de chaîne non ISO, utiliser parse() sur cette chaîne entraînera le moteur JavaScript à utiliser son implémentation de recours. Voir ce [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1023155#c6) pour une explication rapide de la façon dont est faite l'analyse de la chaîne.
-
-```js
-new Date('10 06 2014');
-```
-
-sera traitée comme la date locale du 6 octobre 2014 et non comme le 10 juin 2014. D'autres exemples :
-
-```js
-new Date('toto-truc 2014').toString();
-// renvoie : "Invalid Date"
-Date.parse('toto-truc 2014');
-// renvoie : NaN
-```
+Comme `parse()` est une méthode statique de `Date`, vous l'utilisez toujours comme `Date.parse()`, et non comme une méthode d'un objet `Date` que vous avez créé.
 
 ## Exemples
 
-### Utiliser `Date.parse()`
+### Utilisation de Date.parse()
 
-Les appels suivants renvoient tous `1546300800000`. Dans le premier appel, on indique uniquement la date (et donc le fuseau UTC implicite). Les chaînes qui suivent utilisent une indication de fuseau horaire selon la norme ISO (`Z` et `+00:00`)
-
-```js
-Date.parse("2019-01-01")
-Date.parse("2019-01-01T00:00:00.000Z")
-Date.parse("2019-01-01T00:00:00.000+00:00")
-```
-
-L'appel suivant, qui ne précise pas le fuseau horaire, fournira le nombre de millisecondes écoulées entre le premier janvier 1970 minuit UTC et le premier janvier 2019 à minuit selon l'heure locale du système utilisé.
+Les appels suivants renvoient tous `1546300800000`. Le premier impliquera l'heure UTC car il s'agit uniquement d'une date, et les autres spécifient explicitement le fuseau horaire UTC.
 
 ```js
-Date.parse("2019-01-01T00:00:00")
+Date.parse("2019-01-01");
+Date.parse("2019-01-01T00:00:00.000Z");
+Date.parse("2019-01-01T00:00:00.000+00:00");
 ```
 
-### Chaînes de caractères non-standard
-
-> **Note :** Cette section contient des exemples qui reposent sur des comportements spécifiques aux implémentations et on peut donc avoir des incohérences entre les moteurs utilisés.
-
-Si `IPOdate` est un objet {{jsxref("Date")}}, on peut définir sa valeur au 9 août 1995 (heure locale), de la façon suivante :
+L'appel suivant, qui ne précise pas de fuseau horaire, sera interprété comme le 2019-01-01 à 00:00:00 dans le fuseau horaire local du système, car il contient à la fois une date et une heure.
 
 ```js
-IPOdate.setTime(Date.parse('Aug 9, 1995'));
+Date.parse("2019-01-01T00:00:00");
 ```
 
-Voici un autre exemple avec une chaîne qui ne suit pas le format standard.
+### Formats toString() et toUTCString()
+
+En plus du format standard de chaîne de caractères date et heure, les formats {{jsxref("Date/toString", "toString()")}} et {{jsxref("Date/toUTCString", "toUTCString()")}} sont pris en charge&nbsp;:
 
 ```js
-Date.parse('Aug 9, 1995');
+// format toString()
+Date.parse("Thu Jan 01 1970 00:00:00 GMT-0500 (Eastern Standard Time)");
+// 18000000 dans toutes les implémentations dans tous les fuseaux horaires
+
+// format toUTCString()
+Date.parse("Thu, 01 Jan 1970 00:00:00 GMT");
+// 0 dans toutes les implémentations dans tous les fuseaux horaires
 ```
 
-Cette méthode renverra `807937200000` pour le fuseau horaire GMT-0300 et d'autres valeurs pour d'autres fuseaux car la chaîne n'indique pas le fuseau horaire et ne respecte pas le format ISO (le fuseau considéré par défaut est donc le fuseau local).
+### Chaînes de date non standard
 
-```js
-Date.parse('Wed, 09 Aug 1995 00:00:00 GMT');
-```
+> [!NOTE]
+> Cette section décrit des comportements spécifiques à chaque implémentation, qui peuvent varier selon les navigateurs ou leurs versions. Il ne s'agit pas d'un tableau de compatibilité exhaustif et vous devez toujours effectuer vos propres tests avant d'utiliser un format dans votre code.
 
-Renvoie `807926400000` quel que soit le fuseau local car on indique GMT.
+Les implémentations utilisent généralement le fuseau horaire local lorsque la chaîne de date n'est pas standard. Par cohérence, nous supposerons que l'environnement d'exécution utilise le fuseau horaire UTC, et sauf indication contraire, le résultat dépendra du fuseau horaire de l'appareil. [L'heure d'été (DST) du fuseau local peut aussi avoir un effet](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset#résultats_variés_dans_les_régions_appliquant_lheure_dété_dst).
 
-```js
-Date.parse('Wed, 09 Aug 1995 00:00:00');
-```
+Voici d'autres exemples de chaînes de date non standard. Les navigateurs sont très tolérants lors de l'analyse des chaînes de date et peuvent ignorer toute partie d'une chaîne qu'ils ne parviennent pas à analyser. Pour des raisons de compatibilité, les navigateurs copient souvent le comportement les uns des autres, ce qui fait que ces schémas de gestion se propagent d'un navigateur à l'autre. Comme indiqué précédemment, les exemples suivants sont donnés à titre d'illustration uniquement et ne sont en aucun cas exhaustifs&nbsp;:
 
-Renvoie `807937200000` dans le fuseau GMT-0300 et d'autres valeurs pour d'autres fuseaux car aucune indication de fuseau n'est fournie et que la chaîne n'est pas au format ISO, elle est donc traitée comme un temps local.
-
-```js
-Date.parse('Thu, 01 Jan 1970 00:00:00 GMT');
-```
-
-Renvoie `0` quel que soit le fuseau local car l'indicateur GMT est fourni.
-
-```js
-Date.parse('Thu, 01 Jan 1970 00:00:00');
-```
-
-Renvoie `14400000` pour le fuseau GMT-0400 et d'autres valeurs dans d'autres fuseaux car aucune indication de fuseau n'est fournie et la chaîne n'est pas au format ISO, elle est donc traitée comme un temps local.
-
-```js
-Date.parse('Thu, 01 Jan 1970 00:00:00 GMT-0400');
-```
-
-Renvoie `14400000` quel que soit le fuseau car l'indicateur GMT est fourni.
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Exemple</th>
+      <th>Chrome</th>
+      <th>Firefox</th>
+      <th>Safari</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="3">Nombre seul</td>
+      <td><code>0</code> (un seul chiffre)</td>
+      <td colspan="2">946684800000 (01 janv. 2000)&nbsp;; NaN dans Firefox ≤122</td>
+      <td>-62167219200000 (01 janv. 0000)</td>
+    </tr>
+    <tr>
+      <td><code>31</code> (deux chiffres)</td>
+      <td colspan="2">NaN</td>
+      <td>-61188912000000 (01 janv. 0031)</td>
+    </tr>
+    <tr>
+      <td><code>999</code> (trois/quatre chiffres)</td>
+      <td colspan="3">-30641733102000 (01 janv. 0999)</td>
+    </tr>
+    <tr>
+      <td rowspan="4">Chaînes de date utilisant différents séparateurs</td>
+      <td><code>1970-01-01</code> (standard)</td>
+      <td colspan="3">0 dans tous les fuseaux horaires</td>
+    </tr>
+    <tr>
+      <td><code>1970/01/01</code></td>
+      <td colspan="3">0</td>
+    </tr>
+    <tr>
+      <td><code>1970,01,01</code></td>
+      <td colspan="2">0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td><code>1970 01 01</code></td>
+      <td colspan="2">0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Chaînes de caractères ressemblant à <code>toString()</code></td>
+      <td>
+        <code>Thu&nbsp;Jan&nbsp;01&nbsp;1970&nbsp;00:00:00</code><br>
+        <code>Thu Jan 01 1970</code><br>
+        <code>Jan 01 1970 00:00:00</code><br>
+        <code>Jan 01 1970</code>
+      </td>
+      <td colspan="3">0</td>
+    </tr>
+    <tr>
+      <td>Chaînes de caractères ressemblant à <code>toUTCString()</code></td>
+      <td>
+        <code>Thu, 01 Jan 1970 00:00:00</code><br>
+        <code>Thu, 01 Jan 1970</code><br>
+        <code>01 Jan 1970 00:00:00</code><br>
+        <code>01 Jan 1970</code>
+      </td>
+      <td colspan="3">0</td>
+    </tr>
+    <tr>
+      <td rowspan="4">Premier composant de date à 2 chiffres</td>
+      <td><code>01-02-03</code> (le premier segment peut être un mois valide)</td>
+      <td colspan="2">1041465600000 (02 janv. 2003)</td>
+      <td>
+        -62132745600000 (03 févr. 0001)<br>
+        Remarque&nbsp;: Safari suppose toujours AA-MM-JJ, mais MM/JJ/AA.
+      </td>
+    </tr>
+    <tr>
+      <td><code>27-02-03</code> (le premier segment peut être un jour valide mais pas un mois)</td>
+      <td colspan="2">NaN</td>
+      <td>-61312291200000 (03 févr. 0027)</td>
+    </tr>
+    <tr>
+      <td><code>49-02-03</code> (le premier segment ne peut pas être un jour valide et est &lt;50)</td>
+      <td colspan="2">2495923200000 (03 févr. 2049)</td>
+      <td>-60617980800000 (03 févr. 0049)</td>
+    </tr>
+    <tr>
+      <td><code>50-02-03</code> (le premier segment ne peut pas être un jour valide et est ≥50)</td>
+      <td colspan="2">-628300800000 (03 févr. 1950)</td>
+      <td>-60586444800000 (03 févr. 0050)</td>
+    </tr>
+    <tr>
+      <td rowspan="3">Composants de date hors limites</td>
+      <td>
+        <code>2014-25-23</code><br>
+        <code>Mar 32, 2014</code><br>
+        <code>2014/25/23</code>
+      </td>
+      <td colspan="3">NaN</td>
+    </tr>
+    <tr>
+      <td><code>2014-02-30</code></td>
+      <td colspan="2">1393718400000 (02 mars 2014)</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td><code>02/30/2014</code></td>
+      <td colspan="3">1393718400000</td>
+    </tr>
+    <tr>
+      <td rowspan="5">Caractères superflus après le nom du mois</td>
+      <td><code>04 Dec 1995</code><br><code>04 Decem 1995</code><br><code>04 December 1995</code></td>
+      <td colspan="3">818031600000</td>
+    </tr>
+    <tr>
+      <td><code>04 DecFoo 1995</code></td>
+      <td colspan="3">
+        818031600000<br>
+        Seuls les trois premiers caractères sont lus.<br>
+        Firefox ≤121 lit jusqu'au nom de mois valide, et retourne donc NaN lorsqu'il rencontre «&nbsp;F&nbsp;».
+      </td>
+    </tr>
+    <tr>
+      <td><code>04 De 1995</code></td>
+      <td colspan="3">NaN</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.4.2', 'Date.parse')}}         | {{Spec2('ES5.1')}}     | Ajout du format ISO 8601 simplifié.                   |
-| {{SpecName('ES6', '#sec-date.parse', 'Date.parse')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-date.parse', 'Date.parse')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.parse")}}
-
-## Notes de compatibilité
-
-- À partir de Firefox 49 ({{geckoRelease(49)}}, l'interprétation des années exprimées sur deux chiffres est alignée avec Google Chrome (et non plus avec Internet Explorer). Désormais, les années exprimées sur deux chiffres et strictement inférieures à 50 seront considérées comme des années du XXIe siècle. Ainsi, `04/16/17` correspondait avant au 16 avril 1917 et correspond désormais au 16 avril 2017. Cela évite des problèmes d'interopérabilité et d'ambiguïté et cette méthode est recommandée par le format ISO 8601 (cf. {{bug(1265136)}}).
-- Google Chrome acceptera une chaîne de caractères avec un nombre pour le paramètre `dateString`. Ainsi, si on exécute `!!Date.parse("42")` dans Firefox, on obtiendra `false` tandis que que Google Chrome donnera `true` car `"42"` sera interprété comme la date du premier janvier 2042.
+{{Compat}}
 
 ## Voir aussi
 

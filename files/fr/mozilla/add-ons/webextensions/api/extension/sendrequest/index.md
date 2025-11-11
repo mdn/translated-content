@@ -1,21 +1,12 @@
 ---
 title: extension.sendRequest()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/sendRequest
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - sendRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/extension/sendRequest
 ---
+
 {{AddonSidebar}}{{Deprecated_Header}}
 
-> **Attention :** Cette méthode est dépréciée. utilisez {{WebExtAPIRef("runtime.sendMessage")}} à la place.
+> [!WARNING]
+> Cette méthode est dépréciée. utilisez {{WebExtAPIRef("runtime.sendMessage")}} à la place.
 
 Envoie une seule requête aux autres écouteurs de l'extension. Similaire à {{WebExtAPIRef('runtime.connect')}},mais envoie seulement une seule requête avec une réponse optionnelle. L'événement {{WebExtAPIRef('extension.onRequest')}} est déclenché dans chaque page de l'extension
 
@@ -29,7 +20,7 @@ chrome.extension.sendRequest(
 )
 ```
 
-Cette API est également disponible en tant que `browser.extension.sendRequest()` dans une [version qui renvoie une promise](/fr/Add-ons/WebExtensions/API#Callbacks_and_promises).
+Cette API est également disponible en tant que `browser.extension.sendRequest()` dans une [version qui renvoie une promise](/fr/docs/Mozilla/Add-ons/WebExtensions/API#callbacks_and_promises).
 
 ### Paramètres
 
@@ -38,25 +29,22 @@ Cette API est également disponible en tant que `browser.extension.sendRequest()
 - `request`
   - : `any`.
 - `responseCallback`{{Optional_Inline}}
-
   - : `function`. La fonction est passée les arguments suivants :
-
     - `response`
-      - : `any`. Objet de réponse JSON envoyé par le gestionnaire de la requête. Si une erreur survient lors de la connexion à l'extension, le rappel sera appelé sans arguments et  {{WebExtAPIRef('runtime.lastError')}} sera défini sur le message d'erreur.
+      - : `any`. Objet de réponse JSON envoyé par le gestionnaire de la requête. Si une erreur survient lors de la connexion à l'extension, le rappel sera appelé sans arguments et {{WebExtAPIRef('runtime.lastError')}} sera défini sur le message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extension.sendRequest")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/extensions/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -83,4 +71,4 @@ Cette API est également disponible en tant que `browser.extension.sendRequest()
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -1,18 +1,23 @@
 ---
 title: try...catch
 slug: Web/JavaScript/Reference/Statements/try...catch
-tags:
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/try...catch
-original_slug: Web/JavaScript/Reference/Instructions/try...catch
 ---
+
 {{jsSidebar("Statements")}}
 
 L'instruction **`try...catch`** regroupe des instructions à exécuter et définit une réponse si l'une de ces instructions provoque une exception.
 
-{{EmbedInteractiveExample("pages/js/statement-trycatch.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Try...Catch")}}
+
+```js interactive-example
+try {
+  nonExistentFunction();
+} catch (error) {
+  console.error(error);
+  // Expected output: ReferenceError: nonExistentFunction is not defined
+  // (Note: the exact output may be browser-dependent)
+}
+```
 
 ## Syntaxe
 
@@ -57,7 +62,7 @@ La clause `finally` s'exécute après le bloc `try` et après le bloc `catch` (s
 
 Il est possible d'imbriquer plusieurs instructions `try`. Si un `try` imbriqué ne possède pas de clause `catch`, la clause `catch` du `try` du niveau supérieur sera utilisée (et ainsi de suite).
 
-Pour plus d'informations sur les exceptions et les erreurs en JavaScript, voir le chapitre du [Guide JavaScript](/fr/docs/Web/JavaScript/Guide/Instructions#Les_instructions_utilis.C3.A9es_pour_les_exceptions) correspondant.
+Pour plus d'informations sur les exceptions et les erreurs en JavaScript, voir le chapitre du [Guide JavaScript](/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#les_instructions_utilis.c3.a9es_pour_les_exceptions) correspondant.
 
 ### Clause `catch` inconditionnelle
 
@@ -65,13 +70,12 @@ Lorsqu'une seule clause `catch` inconditionnelle est utilisée, le bloc `catch` 
 
 ```js
 try {
-   throw "monException"; // génère une exception
-}
-catch (e) {
-   // les instructions utilisées pour gérer les
-   // exceptions
-   logErreurs(e); // on transfère l'objet de l'exception à une méthode
-                  // gestionnaire
+  throw "monException"; // génère une exception
+} catch (e) {
+  // les instructions utilisées pour gérer les
+  // exceptions
+  logErreurs(e); // on transfère l'objet de l'exception à une méthode
+  // gestionnaire
 }
 ```
 
@@ -103,26 +107,26 @@ Dans le fragment de code qui suit, on aura le même fonctionnement mais en utili
 
 ```js
 try {
-    maRoutine(); // may throw three types of exceptions
+  maRoutine(); // may throw three types of exceptions
 } catch (e) {
-    if (e instanceof TypeError) {
-        // les instructions pour gérer TypeError
-    } else if (e instanceof RangeError) {
-        // les instructions pour gérer RangeError
-    } else if (e instanceof EvalError) {
-        // les instructions pour gérer EvalError
-    } else {
-       // les instructions pour gérer les autres exceptions
-    }
+  if (e instanceof TypeError) {
+    // les instructions pour gérer TypeError
+  } else if (e instanceof RangeError) {
+    // les instructions pour gérer RangeError
+  } else if (e instanceof EvalError) {
+    // les instructions pour gérer EvalError
+  } else {
+    // les instructions pour gérer les autres exceptions
+  }
 }
 ```
 
 ### L'identifiant de l'exception
 
-Lorsqu'une exception est levée dans le bloc `try`, _`exception_var`_ (par exemple le `e` dans « `catch (e)` ») contient la valeur définie par l'instruction {{jsxref("Instructions/throw","throw")}}. Cet identifiant peut être utilisé pour accéder aux propriétés de l'objet et ainsi obtenir des informations sur l'exception qui a eu lieu. Cet identifiant est local à la clause `catch`, il est créé lorsqu'on rentre dans la clause `catch` et n'est plus disponible une fois que la clause a fini son exécution.
+Lorsqu'une exception est levée dans le bloc `try`, `exception_var` (par exemple le `e` dans « `catch (e)` ») contient la valeur définie par l'instruction {{jsxref("Instructions/throw","throw")}}. Cet identifiant peut être utilisé pour accéder aux propriétés de l'objet et ainsi obtenir des informations sur l'exception qui a eu lieu. Cet identifiant est local à la clause `catch`, il est créé lorsqu'on rentre dans la clause `catch` et n'est plus disponible une fois que la clause a fini son exécution.
 
 ```js
-function isValidJSON(txt){
+function isValidJSON(txt) {
   try {
     JSON.parse(txt);
     return true;
@@ -141,13 +145,12 @@ Cela peut paraître étrange qu'un bloc de code qui s'exécute même lorsqu'il y
 La clause `finally` peut être utilisée afin d'exécuter les actions nécessaires pour que le script « échoue correctement » en cas d'erreur. On peut par exemple tirer parti de `finally` pour fermer un flux, libérer une ressource, etc. Dans l'exemple suivant, exécuté côté serveur, le script accède à un fichier. Si une exception se produit lorsque le fichier est ouvert, la clause `finally` permet de fermer le fichier avant que le script échoue. Le code contenu dans le bloc `finally` sera exécuté même si on a une instruction `return` dans la section `try` ou dans la section `catch`.
 
 ```js
-ouvrirMonFichier()
+ouvrirMonFichier();
 try {
-   // on utilise une ressource
-   écrireDansMonFichier(mesDonnées);
-}
-finally {
-   fermerMonFichier(); // on ferme toujours la ressource
+  // on utilise une ressource
+  écrireDansMonFichier(mesDonnées);
+} finally {
+  fermerMonFichier(); // on ferme toujours la ressource
 }
 ```
 
@@ -161,12 +164,10 @@ Tout d'abord, on utilise ce fragment de code, qui produit le résultat suivant :
 try {
   try {
     throw new Error("oups");
-  }
-  finally {
+  } finally {
     console.log("finally");
   }
-}
-catch (ex) {
+} catch (ex) {
   console.error("externe", ex.message);
 }
 
@@ -181,15 +182,12 @@ Et maintenant, si on a déjà intercepté l'exception avec une clause `catch` da
 try {
   try {
     throw new Error("oups");
-  }
-  catch (ex) {
+  } catch (ex) {
     console.error("interne", ex.message);
-  }
-  finally {
+  } finally {
     console.log("finally");
   }
-}
-catch (ex) {
+} catch (ex) {
   console.error("externe", ex.message);
 }
 
@@ -204,16 +202,13 @@ Ensuite, si on propage l'erreur à nouveau :
 try {
   try {
     throw new Error("oups");
-  }
-  catch (ex) {
+  } catch (ex) {
     console.error("interne", ex.message);
     throw ex;
-  }
-  finally {
+  } finally {
     console.log("finally");
   }
-}
-catch (ex) {
+} catch (ex) {
   console.error("externe", ex.message);
 }
 
@@ -233,17 +228,14 @@ Lorsque le bloc `finally` renvoie une valeur, c'est cette valeur qui devient la 
 try {
   try {
     throw new Error("oups");
-  }
-  catch (ex) {
+  } catch (ex) {
     console.error("interne", ex.message);
     throw ex;
-  }
-  finally {
+  } finally {
     console.log("finally");
     return;
   }
-}
-catch (ex) {
+} catch (ex) {
   console.error("externe", ex.message);
 }
 
@@ -256,16 +248,11 @@ Le "oups" externe n'est pas renvoyé car l'instruction `return` est utilisée da
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires                                                                                                                                                                                               |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES3')}}                                                             | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.4                                                                                                                                                       |
-| {{SpecName('ES5.1', '#sec-12.14', 'instruction try')}}             | {{Spec2('ES5.1')}}     |                                                                                                                                                                                                            |
-| {{SpecName('ES6', '#sec-try-statement', 'Instruction try')}}     | {{Spec2('ES6')}}         |                                                                                                                                                                                                            |
-| {{SpecName('ESDraft', '#sec-try-statement', 'try statement')}} | {{Spec2('ESDraft')}} | Points ne faisant pas partie du standard ECMA-262 actuel : utilisation de plusieurs clauses catch et de plusieurs clauses conditionnelles (extension liée à SpiderMonkey, correspondant à JavaScript 1.5). |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.try_catch")}}
+{{Compat}}
 
 ## Voir aussi
 

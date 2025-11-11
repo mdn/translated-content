@@ -1,31 +1,26 @@
 ---
 title: Axe de grille
 slug: Glossary/Grid_Axis
-tags:
-  - CSS
-  - Glossaire
-  - Grilles
-translation_of: Glossary/Grid_Axis
-original_slug: Glossaire/Axe_de_grille
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-La grille CSS est une méthode de mise en page bidimensionnelle permettant une présentation du contenu en lignes et colonnes. Par conséquent, dans toute grille, nous avons deux axes. L'axe du "bloc" ou de la colonne et l'axe "en ligne" ou de la ligne.
 
-C'est sur ces axes que les items peuvent être alignés et justifiés en utilisant les propriétés définies dans [les spécifications de l'alignement des boîtes](/fr/docs/Web/CSS/CSS_Grid_Layout/Alignement_des_bo%C3%AEtes_avec_les_grilles_CSS).
+La mise en page en grille CSS (<i lang="en">CSS grid layout</i> en anglais) est une méthode de disposition bidimensionnelle permettant de disposer le contenu en _lignes_ et en _colonnes_. Ainsi, dans toute grille, nous avons deux axes. L'_axe de bloc_ ou axe des colonnes, et l'_axe en ligne_ ou axe des lignes.
 
-En CSS l'axe des colonnes (ou des blocs) est l'axe utilisé lors de la disposition des blocs de texte . Si vous avez 2 paragraphes et travaillez de droite à gauche, du haut vers le bas, ils s'alignent les uns au-dessus des autres, sur l'axe du bloc.
+C'est le long de ces axes que les éléments peuvent être alignés et justifiés à l'aide des propriétés définies dans la [spécification Box Alignment](/fr/docs/Web/CSS/Guides/Box_alignment).
 
-![Diagram showing the block axis in CSS Grid Layout.](7_block_axis.png)
+L'_axe en ligne_ (aussi appelé axe des lignes ou axe principal) correspond à la direction dans laquelle le texte s'écoule normalement. L'_axe de bloc_ (aussi appelé axe des colonnes ou axe secondaire) est l'axe utilisé pour disposer les blocs de texte. La direction physique de ces axes peut changer selon le [mode d'écriture](/fr/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes) du document.
 
-L'axe de la ligne (ou en ligne) parcourt l'axe des blocs et représente la direction dans laquelle le texte est déployé. Ce sont nos lignes dans la mise en page des grilles CSS.
+Par exemple, si vous écrivez de gauche à droite et de haut en bas (comme dans la prose française ou anglaise), les caractères individuels sont placés le long de l'axe en ligne, qui va de la gauche vers la droite.
 
-![Diagram showing the inline axis in CSS Grid Layout.](7_inline_axis.png)
+![Diagramme montrant l'axe en ligne dans une grille CSS.](7_inline_axis.png)
 
-La direction physique de ces axes peut changer en fonction du [mode d'écriture](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_%C3%A9criture) du document.
+Et, si le texte contient plusieurs lignes, celles-ci sont placées le long de l'axe de bloc, qui va du haut vers le bas.
 
-## En apprendre plus
+![Diagramme montrant l'axe de bloc dans une grille CSS.](7_block_axis.png)
 
-### En lire plus
+## Voir aussi
 
-- Guide des grilles CSS : _[Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base)_
-- Guide des grilles CSS : _[L'alignement des boîtes avec les grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Alignement_des_bo%C3%AEtes_avec_les_grilles_CSS)_
-- Guide des grilles CSS : _[Les grilles CSS, les valeurs logiques et les modes d'écriture](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_%C3%A9criture)_
+- [Les concepts de base des grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+- [L'alignement des boîtes avec une grille CSS](/fr/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
+- [Grilles, valeurs logiques et modes d'écriture](/fr/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes)

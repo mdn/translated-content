@@ -1,15 +1,8 @@
 ---
 title: Uint8ClampedArray
 slug: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
-tags:
-  - クラス
-  - JavaScript
-  - TypedArray
-  - 型付き配列
-  - ポリフィル
-browser-compat: javascript.builtins.Uint8ClampedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
 ---
+
 {{JSRef}}
 
 **`Uint8ClampedArray`** は型付き配列で、 0-255 に制約される 8 ビット符号なし整数値の配列を表します。指定された値が \[0,255] の範囲を超えた場合、 0 または 255 が代わりに設定されます。整数以外を指定しようとすると、最も近い整数が設定されます。中身は `0` で初期化されます。生成されると、配列内の要素はそのオブジェクトのメソッドを使用するか、配列の標準的な添字の構文 (すなわち、ブラケット記法) を使用するかして参照することができます。
@@ -96,7 +89,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
   - : 配列とその要素を表すローカライズされた文字列を返します。{{jsxref("Array.prototype.toLocaleString()")}} も参照してください。
 - {{jsxref("TypedArray.toString", "Uint8ClampedArray.prototype.toString()")}}
   - : 配列とその要素を表す文字列を返します。{{jsxref("Array.prototype.toString()")}} も参照してください。
-- {{jsxref("TypedArray.@@iterator", "Uint8ClampedArray.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray.@@iterator", "Uint8ClampedArray.prototype[Symbol.iterator]()")}}
   - : 配列内ですべての位置における値を提供する新しい*配列イテレーター*を返します。
 
 ## 例
@@ -114,7 +107,7 @@ console.log(uintc8.length); // 2
 console.log(uintc8.BYTES_PER_ELEMENT); // 1
 
 // 配列から
-var arr = new Uint8ClampedArray([21,31]);
+var arr = new Uint8ClampedArray([21, 31]);
 console.log(arr[1]); // 31
 
 // From another TypedArray
@@ -127,7 +120,9 @@ var buffer = new ArrayBuffer(8);
 var z = new Uint8ClampedArray(buffer, 1, 4);
 
 // 反復可能オブジェクトから
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var uintc8 = new Uint8ClampedArray(iterable);
 // Uint8ClampedArray[1, 2, 3]
 ```
@@ -143,6 +138,6 @@ var uintc8 = new Uint8ClampedArray(iterable);
 ## 関連情報
 
 - `Uint8ClampedArray` のポリフィルが [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays) で利用できます
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

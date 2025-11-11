@@ -1,31 +1,20 @@
 ---
-title: HTMLImageElement.longDesc
+title: "HTMLImageElement: longDesc プロパティ"
+short-title: longDesc
 slug: Web/API/HTMLImageElement/longDesc
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Long description
-  - プロパティ
-  - リファレンス
-  - description
-  - img
-  - longDesc
-  - 非推奨
-browser-compat: api.HTMLImageElement.longDesc
-translation_of: Web/API/HTMLImageElement/longDesc
+l10n:
+  sourceCommit: 816cc4d4a5a318a23222946b6981bb92b499aebb
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
-**`longDesc`** は {{domxref("HTMLImageElement")}} インターフェイスの*非推奨の*プロパティで、この画像の長い説明のテキストまたは HTML ファイルの URL を指定します。これは、 {{htmlattrxref("title")}} 属性で提供される短い説明の他に、オプションで追加された詳細を提供するために使用することができます。
+**`longDesc`** は {{domxref("HTMLImageElement")}} インターフェイスの*非推奨の*プロパティで、この画像の長い説明のテキストまたは HTML ファイルの URL を指定します。これは、[`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title) 属性で提供される短い説明の他に、オプションで追加された詳細を提供するために使用することができます。
 
 ## 値
 
 空文字列（長い説明文がないことを示す）または、画像の内容の長い形式の説明文を含むファイルの URL のいずれかを指定します。
 
-例えば、画像がフローチャートの [PNG](/ja/docs/Web/Media/Formats/Image_types#png_portable_network_graphics) であった場合、 
+例えば、画像がフローチャートの [PNG](/ja/docs/Web/Media/Guides/Formats/Image_types#png_portable_network_graphics) であった場合、
 `longDesc` プロパティは、チャートで表現された制御の流れについて、テキストのみの説明を提供するために使用することができます。これは、読者が使用する説明としてだけでなく、視覚障碍者のための代替表現として使用することもできます。
 
 ## 使用上の注意
@@ -35,7 +24,10 @@ translation_of: Web/API/HTMLImageElement/longDesc
 以下の古い HTML があったとします。
 
 ```html
-<img src="taco-tuesday.jpg" alt="Taco Tuesday" longDesc="image-descriptions/taco-tuesday.html">
+<img
+  src="taco-tuesday.jpg"
+  alt="Taco Tuesday"
+  longdesc="image-descriptions/taco-tuesday.html" />
 ```
 
 ここでは `longDesc` を使って、画像 `taco-tuesday.jpg` の詳細な説明を HTML ファイル `image-descriptions/taco-tuesday.html` で参照できるようにすることを指定しています。
@@ -44,7 +36,7 @@ translation_of: Web/API/HTMLImageElement/longDesc
 
 ```html
 <a href="image-descriptions/taco-tuesday.html">
-  <img src="taco-tuesday.jpg" alt="Taco Tuesday" >
+  <img src="taco-tuesday.jpg" alt="Taco Tuesday" />
 </a>
 ```
 
@@ -52,7 +44,7 @@ translation_of: Web/API/HTMLImageElement/longDesc
 
 ## 仕様書
 
-この機能は、現在のどの仕様にも含まれていません。標準化される予定はありません。
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -60,4 +52,4 @@ translation_of: Web/API/HTMLImageElement/longDesc
 
 ## 関連情報
 
-- [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-details)
+- [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details)

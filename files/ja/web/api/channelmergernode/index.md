@@ -1,26 +1,17 @@
 ---
 title: ChannelMergerNode
 slug: Web/API/ChannelMergerNode
-page-type: web-api-interface
-tags:
-  - API
-  - ChannelMergerNode
-  - Interface
-  - Reference
-  - Web Audio API
-browser-compat: api.ChannelMergerNode
-translation_of: Web/API/ChannelMergerNode
 ---
 
 {{APIRef("Web Audio API")}}
 
-`ChannelMergerNode` インターフェイスは、反対の機能の {{domxref("ChannelSplitterNode")}} と組み合わせて使用されることが多く、さまざまなモノラル入力を単一の出力に再結合します。 各入力は、出力のチャンネルを埋めるために使用されます。 これは各チャンネルに別々にアクセスするのに便利です、つまり 各チャンネルでゲインを別々に制御する必要がある場合にミキシングするのに有効です。
+`ChannelMergerNode` インターフェイスは、反対の機能の {{domxref("ChannelSplitterNode")}} と組み合わせて使用されることが多く、さまざまなモノラル入力を単一の出力に再結合します。 各入力は、出力のチャンネルを埋めるために使用されます。 これは各チャンネルに別々にアクセスするのに便利です、つまり 各チャンネルでゲインを別々に制御する必要がある場合にミキシングするのに有効です。
 
 ![](webaudiomerger.png)
 
 もし `ChannelMergerNode` の出力が 1 つであるが、マージするチャンネルと同じ数の入力がある場合、入力数はそのコンストラクターおよび {{domxref("AudioContext.createChannelMerger()")}} の呼び出しの引数で指定されただけの数になります。値が指定されていない場合は、既定の `6` になります。
 
- `ChannelMergerNode` を使用すると、レンダリングハードウェアが処理できるよりも多くのチャンネルで出力を作成することが可能です。その場合、シグナルが{{domxref("AudioContext.listener")}} オブジェクトに送信されると、余分なチャンネルは無視されます。
+`ChannelMergerNode` を使用すると、レンダリングハードウェアが処理できるよりも多くのチャンネルで出力を作成することが可能です。その場合、シグナルが{{domxref("AudioContext.listener")}} オブジェクトに送信されると、余分なチャンネルは無視されます。
 
 {{InheritanceDiagram}}
 
@@ -76,4 +67,4 @@ _特有のメソッドはありません。 親である {{domxref("AudioNode")}
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

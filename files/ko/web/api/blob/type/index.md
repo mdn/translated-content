@@ -1,21 +1,8 @@
 ---
 title: Blob.type
 slug: Web/API/Blob/type
-tags:
-  - API
-  - Blob
-  - DOM
-  - File
-  - File API
-  - Format
-  - MIME
-  - MIME Type
-  - Property
-  - Reference
-  - Type
-browser-compat: api.Blob.type
-translation_of: Web/API/Blob/type
 ---
+
 {{APIRef("File API")}}
 
 {{domxref("Blob")}} 객체의 **`type`** 속성은 데이터의 {{Glossary("MIME type", "MIME 유형")}}을 반환합니다.
@@ -31,7 +18,7 @@ translation_of: Web/API/Blob/type
 ### HTML
 
 ```html
-<input type="file" id="input" multiple>
+<input type="file" id="input" multiple />
 <output id="output">이미지 파일 선택...</output>
 ```
 
@@ -48,21 +35,21 @@ output {
 // 우리 애플리케이션에서는 GIF, PNG, JPEG 이미지만 허용
 const allowedFileTypes = ["image/png", "image/jpeg", "image/gif"];
 
-const input = document.getElementById('input');
-const output = document.getElementById('output');
+const input = document.getElementById("input");
+const output = document.getElementById("output");
 
-input.addEventListener('change', (event) => {
+input.addEventListener("change", (event) => {
   const files = event.target.files;
 
   if (files.length === 0) {
-    output.innerText = '이미지 파일 선택...';
+    output.innerText = "이미지 파일 선택...";
     return;
   }
 
   if (Array.from(files).every((file) => allowedFileTypes.includes(file.type))) {
-    output.innerText = '모든 파일 사용 가능!';
+    output.innerText = "모든 파일 사용 가능!";
   } else {
-    output.innerText = '이미지 파일만 선택하세요.';
+    output.innerText = "이미지 파일만 선택하세요.";
   }
 });
 ```
@@ -82,4 +69,4 @@ input.addEventListener('change', (event) => {
 ## 같이 보기
 
 - {{domxref("Blob")}}
-- [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File/Using_files_from_web_applications)
+- [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File_API/Using_files_from_web_applications)

@@ -1,23 +1,33 @@
 ---
 title: isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/isFinite
-tags:
-  - Fonction
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/isFinite
-original_slug: Web/JavaScript/Reference/Objets_globaux/isFinite
 ---
+
 {{jsSidebar("Objects")}}
 
 La fonction globale **`isFinite()`** détermine si la valeur passée en argument est un nombre fini. Si nécessaire, le paramètre est d'abord converti en nombre.
 
-{{EmbedInteractiveExample("pages/js/globalprops-isfinite.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - isFinite()")}}
+
+```js interactive-example
+function div(x) {
+  if (isFinite(1000 / x)) {
+    return "Number is NOT Infinity.";
+  }
+  return "Number is Infinity!";
+}
+
+console.log(div(0));
+// Expected output: "Number is Infinity!""
+
+console.log(div(1));
+// Expected output: "Number is NOT Infinity."
+```
 
 ## Syntaxe
 
 ```js
-isFinite(valeurÀTester)
+isFinite(valeurÀTester);
 ```
 
 ### Paramètres
@@ -38,33 +48,27 @@ Cette fonction peut être utilisée pour déterminer si un nombre est fini ou no
 ## Exemples
 
 ```js
-isFinite(Infinity);  // false
-isFinite(NaN);       // false
+isFinite(Infinity); // false
+isFinite(NaN); // false
 isFinite(-Infinity); // false
 
-isFinite(0);         // true
-isFinite(2e64);      // true
-isFinite(910);       // true
-isFinite(null);      // true, ce qui aurait été false
-                     // avec la méthode Number.isFinite(null)
+isFinite(0); // true
+isFinite(2e64); // true
+isFinite(910); // true
+isFinite(null); // true, ce qui aurait été false
+// avec la méthode Number.isFinite(null)
 
-
-isFinite("0");       // true ce qui aurait été false
-                     // avec la méthode Number.isFinite("0")
+isFinite("0"); // true ce qui aurait été false
+// avec la méthode Number.isFinite("0")
 ```
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires         |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2')}}                                                         | {{Spec2('ES3')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.1.2.5', 'isFinite')}}             | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-isfinite-number', 'isFinite')}}         | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-isfinite-number', 'isFinite')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.isFinite")}}
+{{Compat}}
 
 ## Voir aussi
 

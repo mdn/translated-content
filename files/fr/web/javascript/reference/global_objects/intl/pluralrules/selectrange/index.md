@@ -1,9 +1,8 @@
 ---
 title: Intl.PluralRules.selectRange()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange
-browser-compat: javascript.builtins.Intl.PluralRules.selectRange
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.PluralRules.prototype.selectRange()`** reçoit deux valeurs en arguments et renvoie une chaîne de caractères qui indique la règle de nombre (pluriel) à utiliser pour un formatage tenant compte de la locale.
@@ -11,7 +10,7 @@ La méthode **`Intl.PluralRules.prototype.selectRange()`** reçoit deux valeurs 
 ## Syntaxe
 
 ```js
-formatRange(debutIntervalle, finIntervalle)
+selectRange(debutIntervalle, finIntervalle);
 ```
 
 ### Valeur de retour
@@ -27,10 +26,10 @@ Cette fonction sélectionne une catégorie de nombre selon les options de locale
 ### Utiliser `selectRange()`
 
 ```js
- new Intl.PluralRules('sl').selectRange(102, 201);
+new Intl.PluralRules("sl").selectRange(102, 201);
 // → 'few'
 
- new Intl.PluralRules('pt').selectRange(102, 102);
+new Intl.PluralRules("pt").selectRange(102, 102);
 // → 'other'
 ```
 

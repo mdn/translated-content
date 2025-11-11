@@ -1,13 +1,8 @@
 ---
-title: 'TypeError: More arguments needed'
+title: "TypeError: More arguments needed"
 slug: Web/JavaScript/Reference/Errors/More_arguments_needed
-tags:
-  - Erreurs
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/More_arguments_needed
-original_slug: Web/JavaScript/Reference/Erreurs/More_arguments_needed
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
@@ -49,4 +44,4 @@ var obj = Object.setPrototypeOf({}, null);
 
 ## Voir aussi
 
-- [Les fonctions](/fr/docs/Web/JavaScript/Guide/Fonctions)
+- [Les fonctions](/fr/docs/Web/JavaScript/Guide/Functions)

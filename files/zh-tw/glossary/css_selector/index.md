@@ -1,28 +1,24 @@
 ---
 title: CSS 選擇器
 slug: Glossary/CSS_Selector
-tags:
-  - 樣式表
-  - 超文本標記語言
-  - 選擇器
-translation_of: Glossary/CSS_Selector
 ---
+
 **CSS 選擇器**是 CSS 規則的一部分。它能讓你選定要調整哪個（或哪些）元素的樣式。
 
 ## 範例
 
 ```html
-<div> I am inside of a div element. </div>
-<p> I am inside of a paragraph element. </p>
+<div>I am inside of a div element.</div>
+<p>I am inside of a paragraph element.</p>
 ```
 
 ```css
 div {
- color: green;
+  color: green;
 }
 
 p {
- color: red;
+  color: red;
 }
 ```
 
@@ -35,24 +31,18 @@ p {
 ### 基本知識
 
 - 基本選擇器
-
-  - [類型選擇器](/zh-TW/docs/Web/CSS/Type_selectors) `elementname`
-  - [Class 選擇器](/zh-TW/docs/Web/CSS/Class_selectors) `.classname`
-  - [ID 選擇器](/zh-TW/docs/Web/CSS/ID_selectors) `#idname`
-  - [通用選擇器](/zh-TW/docs/Web/CSS/Universal_selectors)` * ns|* *|*`
-  - [屬性選擇器](/zh-TW/docs/Web/CSS/Attribute_selectors)` [attr=value]`
-  - [狀態選擇器](/zh-TW/docs/Web/CSS/Pseudo-classes) `a:active, a:visited`
+  - [類型選擇器](/zh-TW/docs/Web/CSS/Reference/Selectors/Type_selectors) `elementname`
+  - [Class 選擇器](/zh-TW/docs/Web/CSS/Reference/Selectors/Class_selectors) `.classname`
+  - [ID 選擇器](/zh-TW/docs/Web/CSS/Reference/Selectors/ID_selectors) `#idname`
+  - [通用選擇器](/zh-TW/docs/Web/CSS/Reference/Selectors/Universal_selectors) `* ns|* *|*`
+  - [屬性選擇器](/zh-TW/docs/Web/CSS/Reference/Selectors/Attribute_selectors) `[attr=value]`
+  - [狀態選擇器](/zh-TW/docs/Web/CSS/Reference/Selectors/Pseudo-classes) `a:active, a:visited`
 
 - 複合選擇器
+  - [鄰接同層選擇器](/zh-TW/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator) `A + B`
+  - [通用同層選擇器](/zh-TW/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator) `A ~ B`
+  - [直屬選擇器](/zh-TW/docs/Web/CSS/Reference/Selectors/Child_combinator) `A > B`
+  - [後代選擇器](/zh-TW/docs/Web/CSS/Reference/Selectors/Descendant_combinator) `A B`
 
-  - [鄰接同層選擇器](/zh-TW/docs/Web/CSS/Adjacent_sibling_selectors) `A + B`
-  - [通用同層選擇器](/zh-TW/docs/Web/CSS/General_sibling_selectors) `A ~ B`
-  - [直屬選擇器](/zh-TW/docs/Web/CSS/Child_selectors) `A > B`
-  - [後代選擇器](/zh-TW/docs/Web/CSS/Descendant_selectors) `A B`
-
-- [虛擬元素](/zh-TW/docs/Web/CSS/Pseudo-elements)
-- [虛擬類別](/zh-TW/docs/Web/CSS/Pseudo-classes)
-
-### 技術指南
-
-{{SpecName("CSS3 Selectors")}}
+- [虛擬元素](/zh-TW/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
+- [虛擬類別](/zh-TW/docs/Web/CSS/Reference/Selectors/Pseudo-classes)

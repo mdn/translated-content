@@ -1,56 +1,61 @@
 ---
 title: Set.prototype.has()
+short-title: has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - メソッド
-  - プロトタイプ
-  - set
-browser-compat: javascript.builtins.Set.has
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/has
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-{{JSRef}}
 
-**`has()`** メソッドは、特定の値をもつ要素が `Set` オブジェクト内に存在するかどうかを示す論理値を返します。
+**`has()`** は {{jsxref("Set")}} インターフェイスのメソッドで、指定された値をもつ要素がこの集合内に存在するかどうかを示す論理値を返します。
 
-{{EmbedInteractiveExample("pages/js/set-prototype-has.html")}}
+{{InteractiveExample("JavaScript デモ: Set.prototype.has()")}}
+
+```js interactive-example
+const set = new Set([1, 2, 3, 4, 5]);
+
+console.log(set.has(1));
+// 予想される結果: true
+
+console.log(set.has(5));
+// 予想される結果: true
+
+console.log(set.has(6));
+// 予想される結果: false
+```
 
 ## 構文
 
-```js
+```js-nolint
 has(value)
 ```
 
 ### 引数
 
 - `value`
-  - : `Set` オブジェクトに存在するか検査する値です。
+  - : この `Set` オブジェクトに存在するかを検査する値です。
 
 ### 返値
 
-`Set` オブジェクト内に特定の値をもつ要素が存在していたら `true` を返します。さもなければ `false` を返します。
-
-> **Note:** 技術的に言えば、`has()` は [Same-value-zero](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) アルゴリズムを使用して、指定された要素が見つかったかどうかを判断します。
+この `Set` オブジェクト内に指定された値をもつ要素が存在していたら `true` を返します。さもなければ `false` を返します。
 
 ## 例
 
 ### has() メソッドの使用
 
 ```js
-var mySet = new Set();
-mySet.add('foo');
+const mySet = new Set();
+mySet.add("foo");
 
-mySet.has('foo');  // returns true
-mySet.has('bar');  // returns false
+console.log(mySet.has("foo")); // true
+console.log(mySet.has("bar")); // false
 
-var set1 = new Set();
-var obj1 = {'key1': 1};
-set1.add(obj1);
+const set = new Set();
+const obj1 = { key1: 1 };
+set.add(obj1);
 
-set1.has(obj1);        // returns true
-set1.has({'key1': 1}); // オブジェクト参照が異なるため false を返す
-set1.add({'key1': 1}); // set1 には 2 つの項目が含まれるようになる
+console.log(set.has(obj1)); // true
+console.log(set.has({ key1: 1 })); // オブジェクト参照が異なるため false を返す
+console.log(set.add({ key1: 1 })); // set には 2 つの項目が含まれるようになる
 ```
 
 ## 仕様書

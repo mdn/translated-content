@@ -1,52 +1,44 @@
 ---
-title: 'HTMLDialogElement: close event'
+title: "HTMLDialogElement : événement close"
+short-title: close
 slug: Web/API/HTMLDialogElement/close_event
-tags:
-  - API
-  - DOM HTML
-  - Evènement
-  - HTMLDialogElement
-  - Reference
-  - close
-  - fermeture
-translation_of: Web/API/HTMLDialogElement/close_event
+l10n:
+  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
 ---
-{{ APIRef() }}
 
-L'événement **`close`** est déclenché sur un objet {{domxref ("HTMLDialogElement")}} lorsque la boîte de dialogue qu'il représente a été fermée.
+{{APIRef("HTML DOM")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bouillonnant</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété du gestionnaire d'événements</th>
-      <td>
-        {{domxref ("GlobalEventHandlers/onclose", "onclose")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+L'événement `close` est déclenché sur un objet `HTMLDialogElement` lorsque l'élément {{HTMLElement("dialog")}} qu'il représente a été fermé.
+
+Cet événement n'est pas annulable et ne remonte pas dans la chaîne d'événements (ne se «&nbsp;propage&nbsp;» pas).
+
+## Syntaxe
+
+Utilisez le nom de l'événement dans des méthodes comme {{domxref("EventTarget.addEventListener", "addEventListener()")}}, ou affectez une fonction à la propriété gestionnaire d'événement.
+
+```js-nolint
+addEventListener("close", (event) => { })
+
+onclose = (event) => { }
+```
+
+## Type d'événement
+
+Un événement {{domxref("Event")}} générique.
 
 ## Exemples
 
-### Exemple concret
+### Exemple interactif
 
 #### HTML
 
 ```html
 <dialog class="example-dialog">
-  <button class="close" type="reset">Close</button>
+  <form method="dialog">
+    <button>Fermer via method="dialog"</button>
+  </form>
+  <button class="close">Fermer via la méthode .close()</button>
+  <p>Ou appuyez sur la touche <kbd>Échap</kbd></p>
 </dialog>
 
 <button class="open-dialog">Open dialog</button>
@@ -55,51 +47,47 @@ L'événement **`close`** est déclenché sur un objet {{domxref ("HTMLDialogEle
 ```
 
 ```css hidden
-button, div {
-  margin: .5rem;
+button,
+div {
+  margin: 0.5rem;
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
-const result = document.querySelector('.result')
+const result = document.querySelector(".result");
 
-const dialog = document.querySelector('.example-dialog')
-dialog.addEventListener('close', (event) => {
-  result.textContent = 'dialog was closed'
-})
+const dialog = document.querySelector(".example-dialog");
+dialog.addEventListener("close", (event) => {
+  result.textContent = "La boîte de dialogue a été fermée";
+});
 
-const openDialog = document.querySelector('.open-dialog')
-openDialog.addEventListener('click', () => {
-  if (typeof dialog.showModal === 'function') {
-    dialog.showModal()
-    result.textContent = ''
-  } else {
-    result.textContent = 'The dialog API is not supported by this browser'
-  }
-})
+const openDialog = document.querySelector(".open-dialog");
+openDialog.addEventListener("click", () => {
+  dialog.showModal();
+  result.textContent = "";
+});
 
-const closeButton = document.querySelector('.close')
-closeButton.addEventListener('click', () => {
-  dialog.close()
-})
+const closeButton = document.querySelector(".close");
+closeButton.addEventListener("click", () => {
+  dialog.close();
+});
 ```
 
 #### Résultat
 
-{{ EmbedLiveSample('Exemple_concret', '100%', '100px') }}
+{{ EmbedLiveSample('Live_example', '100%', '200px') }}
 
 ## Spécifications
 
-| Spécification                                                                            | État                             |
-| ---------------------------------------------------------------------------------------- | -------------------------------- |
-| {{ SpecName('HTML WHATWG', 'indices.html#event-close', 'close') }} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLDialogElement.close_event")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
-- Élément HTML [`<dialog>`](/en-US/docs/Web/HTML/Element/dialog)
+- L'élément HTML {{HTMLElement("dialog")}}
+- L'interface {{domxref("Event")}}

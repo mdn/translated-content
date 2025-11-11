@@ -1,30 +1,28 @@
 ---
 title: Intl.Collator.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/supportedLocalesOf
-tags:
-  - Collator
-  - 国際化
-  - Intl
-  - JavaScript
-  - ローカライズ
-  - メソッド
-  - リファレンス
-browser-compat: javascript.builtins.Intl.Collator.supportedLocalesOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/supportedLocalesOf
 ---
+
 {{JSRef}}
 
 **`Intl.Collator.supportedLocalesOf()`** メソッドは、ランタイムの既定のロケールで代替しなくても照合で対応するロケールを含む配列を返します。
 
-{{EmbedInteractiveExample("pages/js/intl-collator-prototype-supportedlocalesof.html","shorter")}}
+{{InteractiveExample("JavaScript デモ: Intl.Collator.supportedLocalesOf", "shorter")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
+```js interactive-example
+const locales1 = ["ban", "id-u-co-pinyin", "de-ID"];
+const options1 = { localeMatcher: "lookup" };
+
+console.log(Intl.Collator.supportedLocalesOf(locales1, options1));
+// Expected output: Array ["id-u-co-pinyin", "de-ID"]
+// (Note: the exact output may be browser-dependent)
+```
 
 ## 構文
 
 ```js
-Intl.Collator.supportedLocalesOf(locales)
-Intl.Collator.supportedLocalesOf(locales, options)
+Intl.Collator.supportedLocalesOf(locales);
+Intl.Collator.supportedLocalesOf(locales, options);
 ```
 
 ### 引数
@@ -32,9 +30,7 @@ Intl.Collator.supportedLocalesOf(locales, options)
 - `locales`
   - : BCP 47 言語タグを持つ文字列、またはそのような文字列の配列です。 `locales` 引数の一般的な形式については、 {{jsxref("Intl", "Intl", "#ロケールの識別とネゴシエーション", 1)}} のページを参照してください。
 - `options` {{optional_inline}}
-
   - : 省略可能です。以下のプロパティを持つことがあるオブジェクトです。
-
     - `localeMatcher`
       - : 使用するロケールの照合アルゴリズムです。指定可能な値は "`lookup`" および "`best fit`" で、既定値は "`best fit`" です。このオプションの詳細は、 {{jsxref("Intl", "Intl", "#ロケールネゴシエーション", 1)}} のページを参照してください。
 
@@ -53,9 +49,9 @@ Intl.Collator.supportedLocalesOf(locales, options)
 インドネシア語とドイツ語に対応しているもの、バリ語に対応していないランタイムを想定すると、ピンインの照合がインドネシア語では使用されておらず、インドネシアに特化したドイツ語に対応している可能性が低いとしても、 `supportedLocalesOf` はインドネシア語とドイツ語の言語タグを変更せずに返します。これは "`lookup`" アルゴリズムの仕様であることに注意してください。 "`best fit`" マッチャーは、ほとんどのバリ語話者がインドネシア語も理解しているので、インドネシア語がバリ語に適切であると判断し、バリ語の言語タグも返すかもしれません。
 
 ```js
-const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
-const options = { localeMatcher: 'lookup' };
-console.log(Intl.Collator.supportedLocalesOf(locales, options).join(', '));
+const locales = ["ban", "id-u-co-pinyin", "de-ID"];
+const options = { localeMatcher: "lookup" };
+console.log(Intl.Collator.supportedLocalesOf(locales, options).join(", "));
 // → "id-u-co-pinyin, de-ID"
 ```
 

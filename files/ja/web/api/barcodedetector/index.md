@@ -1,16 +1,8 @@
 ---
 title: BarcodeDetector
 slug: Web/API/BarcodeDetector
-tags:
-  - バーコード検出 API
-  - BarcodeDetector
-  - インターフェイス
-  - バーコード
-  - バーコード検出器
-  - 実験的
-browser-compat: api.BarcodeDetector
-translation_of: Web/API/BarcodeDetector
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}
 
 **`BarcodeDetector`** は{{domxref('Barcode Detection API', 'バーコード検出 API', '', 1)}} のインターフェイスで、画像内から線形および二次元バーコードを検出できるようにします。
@@ -23,9 +15,7 @@ translation_of: Web/API/BarcodeDetector
 ## メソッド
 
 - {{domxref('BarcodeDetector.detect', 'detect()')}}
-
   - : {{jsxref('Promise')}} で、以下のプロパティを持つ `detectedBarcode` オブジェクトの配列で履行されます。
-
     - `boundingBox`: {{domxref('DOMRectReadOnly')}} で、画像内にある検出されたバーコードの範囲を表す矩形の寸法を返します。
     - `cornerPoints`: 検出されたバーコードの四隅の点の、画像に対する X および Y 座標で、左上から時計回りに算出されます。画像内の遠近感の歪みにより、正方形にならない場合があります。
     - `format`: 検出されたバーコードの形式。（形式の完全な一覧については{{domxref('Barcode Detection API', 'バーコード検出 API 概要ページ', '', 1)}}を参照してください。）
@@ -42,13 +32,15 @@ translation_of: Web/API/BarcodeDetector
 
 ```js
 // 新しい検出器の生成
-var barcodeDetector = new BarcodeDetector({formats: ['code_39', 'codabar', 'ean_13']});
+var barcodeDetector = new BarcodeDetector({
+  formats: ["code_39", "codabar", "ean_13"],
+});
 
 // 互換性のチェック
 if (barcodeDetector) {
-  console.log('Barcode Detector に対応しています。');
+  console.log("Barcode Detector に対応しています。");
 } else {
-  console.log('Barcode Detector はこのブラウザーでは対応していません。');
+  console.log("Barcode Detector はこのブラウザーでは対応していません。");
 }
 ```
 
@@ -58,10 +50,9 @@ if (barcodeDetector) {
 
 ```js
 // check supported types
-BarcodeDetector.getSupportedFormats()
-  .then(supportedFormats => {
-    supportedFormats.forEach(format => console.log(format));
-  });
+BarcodeDetector.getSupportedFormats().then((supportedFormats) => {
+  supportedFormats.forEach((format) => console.log(format));
+});
 ```
 
 ### バーコードの検出
@@ -69,14 +60,14 @@ BarcodeDetector.getSupportedFormats()
 この例では、 `detect()` メソッドを使用して、与えられた画像内のバーコードを検出しています。これらは繰り返し処理され、バーコードのデータはコンソールに記録されます。
 
 ```js
-  barcodeDetector.detect(imageEl)
-    .then(barcodes => {
-      barcodes.forEach(barcode => console.log(barcode.rawData));
-    })
-    .catch(err => {
-      console.log(err);
-    })
-
+barcodeDetector
+  .detect(imageEl)
+  .then((barcodes) => {
+    barcodes.forEach((barcode) => console.log(barcode.rawData));
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 ```
 
 ## 仕様書

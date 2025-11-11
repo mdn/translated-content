@@ -1,30 +1,36 @@
 ---
-title: 左シフト代入 (<<=)
+title: 左シフト代入演算子 (<<=)
 slug: Web/JavaScript/Reference/Operators/Left_shift_assignment
-tags:
-  - 代入演算子
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.left_shift_assignment
-translation_of: Web/JavaScript/Reference/Operators/Left_shift_assignment
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-{{jsSidebar("Operators")}}
 
-左シフト代入演算子 (`<<=`) は、指定された数だけビットを左に移動し、結果を変数に代入します。
+**左シフト代入演算子 (`<<=`)** は、 2 つのオペランドで[左シフト](/ja/docs/Web/JavaScript/Reference/Operators/Left_shift)を実行し、その結果を左オペランドに代入します。
 
-{{EmbedInteractiveExample("pages/js/expressions-left-shift-assignment.html")}}
+{{InteractiveExample("JavaScript デモ: 左シフト代入演算子 (<<=)", "shorter")}}
+
+```js interactive-example
+let a = 5; // 00000000000000000000000000000101
+
+a <<= 2; // 00000000000000000000000000010100
+
+console.log(a);
+// 予想される結果: 20
+```
 
 ## 構文
 
-```js
-x <<= y // x = x << y
+```js-nolint
+x <<= y
 ```
+
+## 解説
+
+`x <<= y` は `x = x << y` と同等ですが、式 `x` が一度だけ評価される点が異なります。
 
 ## 例
 
-### 左シフト代入の使用
+### 左シフト代入演算子の使用
 
 ```js
 let a = 5;
@@ -32,6 +38,9 @@ let a = 5;
 
 a <<= 2; // 20
 // 00000000000000000000000000010100
+
+let b = 5n;
+b <<= 2n; // 20n
 ```
 
 ## 仕様書
@@ -44,5 +53,5 @@ a <<= 2; // 20
 
 ## 関連情報
 
-- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#代入演算子)
-- [左シフト演算子](/ja/docs/Web/JavaScript/Reference/Operators/Left_shift)
+- [代入演算子（JavaScript ガイド）](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#代入演算子)
+- [左シフト演算子 (`<<`)](/ja/docs/Web/JavaScript/Reference/Operators/Left_shift)

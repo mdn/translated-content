@@ -1,116 +1,149 @@
 ---
-title: Array.prototype.push()
+title: "Array : méthode push()"
+short-title: push()
 slug: Web/JavaScript/Reference/Global_Objects/Array/push
-tags:
-  - Array
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/push
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/push
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-{{JSRef}}
 
-La méthode **`push()`** ajoute un ou plusieurs éléments à la fin d'un tableau et retourne la nouvelle taille du tableau.
+La méthode **`push()`** des instances {{JSxRef("Array")}} ajoute les éléments définis à la fin d'un tableau et retourne la nouvelle longueur du tableau.
 
-{{EmbedInteractiveExample("pages/js/array-push.html")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Array.prototype.push()")}}
+
+```js interactive-example
+const animals = ["cochons", "chèvres", "moutons"];
+
+const count = animals.push("vaches");
+console.log(count);
+// Résultat attendu : 4
+console.log(animals);
+// Résultat attendu : Array ["cochons", "chèvres", "moutons", "vaches"]
+
+animals.push("poules", "chats", "chiens");
+console.log(animals);
+// Résultat attendu : Array ["cochons", "chèvres", "moutons", "vaches", "poules", "chats", "chiens"]
+```
 
 ## Syntaxe
 
-```js
-arr.push(élément1, ..., élémentN)
+```js-nolint
+push()
+push(element1)
+push(element1, element2)
+push(element1, element2, /* …, */ elementN)
 ```
 
 ### Paramètres
 
-- `élément1, ...,élémentN`
+- `element1`, …, `elementN`
   - : Les éléments à ajouter à la fin du tableau.
 
 ### Valeur de retour
 
-La nouvelle valeur de la propriété {{jsxref("Array.length", "length")}} de l'objet sur lequel la méthode a été appelée.
+La nouvelle propriété {{JSxRef("Array/length", "length")}} de l'objet sur lequel la méthode a été appelée.
 
 ## Description
 
-La méthode `push` permet d'ajouter des valeurs à un tableau.
+La méthode `push()` ajoute des valeurs à un tableau.
 
-`push` est une méthode générique. Cette méthode peut ainsi être utilisée avec les méthodes {{jsxref("Function.call()")}} ou {{jsxref("Function.apply()")}} sur des objets similaires aux tableaux.
+{{JSxRef("Array.prototype.unshift()")}} a un comportement similaire à `push()`, mais appliqué au début d'un tableau.
 
-La méthode `push` se base sur la propriété `length` pour déterminer à partir de quel index les valeurs données doivent être insérées. Si la propriété `length` ne peut pas être convertie en nombre, l'index utilisé est 0. Si la propriété `length` n'est pas définie, elle est alors créée.
+La méthode `push()` est une [méthode de mutation](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_copie_et_méthodes_de_mutation). Elle modifie la longueur et le contenu de `this`. Si vous souhaitez que la valeur de `this` reste identique mais retourner un nouveau tableau avec des éléments ajoutés à la fin, vous pouvez utiliser [`arr.concat([element0, element1, /* ... ,*/ elementN])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) à la place. Remarquez que les éléments sont placés dans un tableau supplémentaire — sinon, si l'élément est lui-même un tableau, il serait décomposé au lieu d'être ajouté comme un seul élément à cause du comportement de `concat()`.
 
-Bien que `push` soit une méthode générique, elle ne peut pas être utilisée sur les chaînes de caractères ou sur l'objet `arguments` car ils sont immuables.
+La méthode `push()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_génériques_de_tableau). Elle attend seulement que la valeur de `this` possède une propriété `length` et des propriétés à clés entières. Bien que les chaînes de caractères ressemblent aussi à des tableaux, cette méthode ne leur convient pas car elles sont immuables.
 
 ## Exemples
 
 ### Ajouter des éléments à un tableau
 
-Le code suivant crée un tableau `sports` contenant à sa création deux éléments, auxquels sont ajoutés deux nouveaux éléments. La variable `total` contient la nouvelle taille du tableau.
+Le code suivant crée un tableau `sports` contenant deux éléments, puis ajoute deux éléments supplémentaires. La variable `total` contient la nouvelle longueur du tableau.
 
 ```js
-var sports = ["plongée", "baseball"];
-var total = sports.push("football", "tennis");
+const sports = ["football", "baseball"];
+const total = sports.push("tennis", "natation");
 
-console.log(sports); // ["plongée", "baseball", "football", "tennis"]
-console.log(total);  // 4
+console.log(sports); // ['football', 'baseball', 'tennis', 'natation']
+console.log(total); // 4
 ```
 
 ### Fusionner deux tableaux
 
-Dans l'exemple qui suit, on utilise la méthode {{jsxref("Function.apply()")}} pour ajouter les différents éléments d'un second tableau
+Cet exemple utilise la {{JSxRef("Operators/Spread_syntax", "syntaxe de décomposition", "", 1)}} pour ajouter tous les éléments d'un second tableau au premier.
 
 ```js
-var legumes = ['navet', 'pomme de terre'];
-var autresLegumes = ['céleri', 'radis'];
+const legumes = ["panais", "pomme de terre"];
+const autresLegumes = ["céleri", "betterave"];
 
-// On fusionne les deux tableaux
-// Équivalent à legumes.push('céleri', 'radis');
-Array.prototype.push.apply(legumes, autresLegumes);
+// On fusionne le second tableau dans le premier
+legumes.push(...autresLegumes);
 
-console.log(legumes); // ['navet', 'pomme de terre', 'céleri', 'radis']
+console.log(legumes); // ['panais', 'pomme de terre', 'céleri', 'betterave']
 ```
 
-> **Note :** Attention à ne pas utiliser cette méthode lorsque les tableaux sont très grands car une fonction n'accepte qu'un nombre limité d'arguments. Voir {{jsxref("Function.apply","apply()")}} pour plus d'informations sur ces limites.
+La fusion de deux tableaux peut aussi se faire avec la méthode {{JSxRef("Array/concat", "concat()")}}.
 
-### Utiliser un objet comme on utiliserait un tableau
+### Appeler `push()` sur des objets non tableaux
 
-Comme nous l'avons vu auparavant, `push` est une méthode générique et nous pouvons donc utiliser `Array.prototype.push` sur les objets. On notera qu'il n'est pas nécessaire de stocker un ensemble d'objets. En fait, on enregistre l'ensemble dans l'objet et on utilise `call` sur `Array.prototype.push` :
+La méthode `push()` lit la propriété `length` de `this`. Elle définit ensuite chaque index de `this` à partir de `length` avec les arguments passés à `push()`. Enfin, elle définit la propriété `length` à l'ancienne valeur plus le nombre d'éléments ajoutés.
 
 ```js
-var obj = {
-    length: 0,
+const objetSimilaireTableau = {
+  length: 3,
+  sansRapport: "toto",
+  2: 4,
+};
+Array.prototype.push.call(objetSimilaireTableau, 1, 2);
+console.log(objetSimilaireTableau);
+// { '2': 4, '3': 1, '4': 2, length: 5, sansRapport: 'toto' }
 
-    ajoutElem: function ajoutElem (elem) {
-        // obj.length est automatiquement incrémenté
-        // quand on ajoute un élément
-        [].push.call(this, elem);
-    }
+const objetSimple = {};
+// Il n'y a pas de propriété length, donc la longueur est 0
+Array.prototype.push.call(objetSimple, 1, 2);
+console.log(objetSimple);
+// { '0': 1, '1': 2, length: 2 }
+```
+
+### Utiliser un objet comme un tableau
+
+Comme mentionné précédemment, `push` est volontairement générique, ce qui peut être utilisé à notre avantage. `Array.prototype.push` fonctionne très bien sur un objet, comme le montre cet exemple.
+
+Notez que nous ne créons pas un tableau pour stocker une collection d'objets. À la place, nous stockons la collection sur l'objet lui-même et utilisons `call` sur `Array.prototype.push` pour faire croire à la méthode que nous manipulons un tableau — et cela fonctionne, grâce à la façon dont JavaScript permet d'établir le contexte d'exécution comme on le souhaite.
+
+```js
+const obj = {
+  length: 0,
+
+  ajoutElem(elem) {
+    // obj.length est automatiquement incrémenté
+    // à chaque ajout d'un élément.
+    [].push.call(this, elem);
+  },
 };
 
-// Ajoutons quelques objets vides pour illustrer
-// l'exemple.
+// Ajoutons quelques objets vides pour illustrer.
 obj.ajoutElem({});
 obj.ajoutElem({});
-console.log(obj.length);
-// → 2
+console.log(obj.length); // 2
 ```
+
+Notez que même si `obj` n'est pas un tableau, la méthode `push` a bien incrémenté la propriété `length` de `obj` comme si nous manipulions un véritable tableau.
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                             | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.4.4.7', 'Array.prototype.push')}}                 | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-array.prototype.push', 'Array.prototype.push')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-array.prototype.push', 'Array.prototype.push')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.push")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{jsxref("Array.prototype.pop()")}}
-- {{jsxref("Array.prototype.shift()")}}
-- {{jsxref("Array.prototype.unshift()")}}
-- {{jsxref("Array.prototype.concat()")}}
+- [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
+- L'objet global {{JSxRef("Array")}}
+- La méthode {{JSxRef("Array.prototype.pop()")}}
+- La méthode {{JSxRef("Array.prototype.shift()")}}
+- La méthode {{JSxRef("Array.prototype.unshift()")}}
+- La méthode {{JSxRef("Array.prototype.concat()")}}
+- La méthode {{JSxRef("Array.prototype.splice()")}}
+- [Prothèse d'émulation de `Array.prototype.push` dans `core-js` avec corrections de cette méthode <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
+- [Prothèse d'émulation es-shims de `Array.prototype.push` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.push)

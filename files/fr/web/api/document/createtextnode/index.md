@@ -1,13 +1,8 @@
 ---
 title: document.createTextNode
 slug: Web/API/Document/createTextNode
-tags:
-  - API
-  - DOM
-  - Méthodes
-  - Reference
-translation_of: Web/API/Document/createTextNode
 ---
+
 {{APIRef("DOM")}}
 
 Crée un nouveau nœud de texte.
@@ -24,39 +19,36 @@ var text = document.createTextNode(données);
 ## Exemple
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<title>createTextNode example</title>
-<script>
-function addTextNode(text) {
-  var newtext = document.createTextNode(text),
-      p1 = document.getElementById("p1");
+  <head>
+    <title>createTextNode example</title>
+    <script>
+      function addTextNode(text) {
+        var newtext = document.createTextNode(text),
+          p1 = document.getElementById("p1");
 
-  p1.appendChild(newtext);
-}
-</script>
-</head>
+        p1.appendChild(newtext);
+      }
+    </script>
+  </head>
 
-<body>
-  <button onclick="addTextNode('YES! ');">YES!</button>
-  <button onclick="addTextNode('NO! ');">NO!</button>
-  <button onclick="addTextNode('WE CAN! ');">WE CAN!</button>
+  <body>
+    <button onclick="addTextNode('YES! ');">YES!</button>
+    <button onclick="addTextNode('NO! ');">NO!</button>
+    <button onclick="addTextNode('WE CAN! ');">WE CAN!</button>
 
-  <hr />
+    <hr />
 
-  <p id="p1">First line of paragraph.</p>
-</body>
+    <p id="p1">First line of paragraph.</p>
+  </body>
 </html>
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                       | Commentaire         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName("DOM3 Core", "core.html#ID-1975348127", "Document.createTextNode()")}} | {{Spec2("DOM3 Core")}} | Pas de changement   |
-| {{SpecName("DOM2 Core", "core.html#ID-1975348127", "Document.createTextNode()")}} | {{Spec2("DOM2 Core")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.createTextNode")}}
+{{Compat}}

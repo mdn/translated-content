@@ -1,18 +1,6 @@
 ---
 title: 제어 흐름과 오류 처리
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
-tags:
-  - Beginner
-  - Decision making
-  - Error Handling
-  - Flow control
-  - Guide
-  - JavaScript
-  - Logic
-  - control
-  - l10n:priority
-  - statements
-translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 ---
 
 {{jsSidebar("JavaScript Guide")}}
@@ -22,7 +10,7 @@ JavaScript는 애플리케이션에 다양한 상호작용을 추가하기 위�
 
 여기서 다룬 명령문들의 자세한 설명은 [JavaScript 참고서](/ko/docs/Web/JavaScript/Reference/Statements)에서 읽을 수 있습니다. 세미콜론(`;`)은 두 명령문을 분리하기 위해 사용했습니다.
 
-모든 JavaScript 표현식은 명령문이기도 합니다. 표현식에 대한 자세한 정보는 [표현식과 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators)에서 확인하세요.
+모든 JavaScript 표현식은 명령문이기도 합니다. 표현식에 대한 자세한 정보는 [표현식과 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators)에서 확인하세요.
 
 ## 블록문
 
@@ -49,7 +37,8 @@ while (x < 10) {
 
 여기서 `{ x++; }`가 블록문입니다.
 
-> **참고:** ECMA2015 (제6판) 이전의 JavaScript에는 블록 스코프가 **없었습니다**! 구형 JavaScript 코드에서는 블록 내에 정의한 변수의 스코프를 그 블록이 아니라, 변수 선언을 포함한 함수 또는 스크립트로 설정합니다. 때문에 변수 할당의 영향은 블록을 넘어서도 확인할 수 있습니다. 즉, 블록문이 스코프를 정의하지 않습니다.
+> [!NOTE]
+> ECMA2015 (제6판) 이전의 JavaScript에는 블록 스코프가 **없었습니다**! 구형 JavaScript 코드에서는 블록 내에 정의한 변수의 스코프를 그 블록이 아니라, 변수 선언을 포함한 함수 또는 스크립트로 설정합니다. 때문에 변수 할당의 영향은 블록을 넘어서도 확인할 수 있습니다. 즉, 블록문이 스코프를 정의하지 않습니다.
 >
 > JavaScript의 "독립 블록"은 C나 Java에서 기대할 수 있는 것과는 완전히 다른 결과를 낳습니다. 예를 들어,
 >
@@ -140,7 +129,8 @@ if ((x = y)) {
 
 객체를 포함해 다른 모든 값은 조건문에 전달했을 때 `true`로 평가됩니다.
 
-> **참고:** `true`와 `false` 원시 값을 {{jsxref("Boolean")}} 객체의 참과 거짓 값과 혼동하지 마세요!
+> [!NOTE]
+> `true`와 `false` 원시 값을 {{jsxref("Boolean")}} 객체의 참과 거짓 값과 혼동하지 마세요!
 >
 > 예를 들어,
 >
@@ -160,8 +150,9 @@ function checkData() {
     return true;
   } else {
     alert(
-      '정확히 세 글자를 입력하세요. ' +
-      `${document.form1.threeChar.value}은(는) 유효하지 않습니다.`);
+      "정확히 세 글자를 입력하세요. " +
+        `${document.form1.threeChar.value}은(는) 유효하지 않습니다.`,
+    );
     return false;
   }
 }
@@ -205,36 +196,36 @@ JavaScript는 위의 `switch` 문을 다음의 과정으로 평가합니다.
 
 ```js
 switch (fruittype) {
-  case '오렌지':
-    console.log('오렌지는 파운드 당 $0.59입니다.');
+  case "오렌지":
+    console.log("오렌지는 파운드 당 $0.59입니다.");
     break;
-  case '사과':
-    console.log('사과는 파운드 당 $0.32입니다.');
+  case "사과":
+    console.log("사과는 파운드 당 $0.32입니다.");
     break;
-  case '바나나':
-    console.log('바나나는 파운드 당 $0.48입니다.');
+  case "바나나":
+    console.log("바나나는 파운드 당 $0.48입니다.");
     break;
-  case '체리':
-    console.log('체리는 파운드 당 $3.00입니다.');
+  case "체리":
+    console.log("체리는 파운드 당 $3.00입니다.");
     break;
-  case '망고':
-    console.log('망고는 파운드 당 $0.56입니다.');
+  case "망고":
+    console.log("망고는 파운드 당 $0.56입니다.");
     break;
-  case '파파야':
-    console.log('망고와 파파야는 파운드 당 $2.79입니다.');
+  case "파파야":
+    console.log("망고와 파파야는 파운드 당 $2.79입니다.");
     break;
   default:
     console.log(`죄송합니다. ${fruitType}은 품절입니다.`);
 }
-console.log('더 필요한게 있으신가요?');
+console.log("더 필요한게 있으신가요?");
 ```
 
 ## 예외 처리 명령문
 
 `throw` 문을 사용하면 예외를 던질 수 있고, 던진 예외는 `try...catch` 문으로 처리할 수 있습니다.
 
-- [`throw` 문](#throw_문)
-- [`try...catch` 문](#try...catch_문)
+- [`throw` 문](#throw_문)
+- [`try...catch` 문](#try...catch_문)
 
 ### 예외 유형
 
@@ -243,7 +234,7 @@ JavaScript에서는 모든 것을 `throw`로 던질 수 있습니다. 그래서 
 - [ECMAScript 예외](/ko/docs/Web/JavaScript/Reference/Global_Objects/Error#오류_유형)
 - [`DOMException`](/ko/docs/Web/API/DOMException), [`DOMError`](/ko/docs/Web/API/DOMError)
 
-### `throw` 문
+### `throw` 문
 
 예외를 던질 땐 `throw` 문을 사용하세요. `throw`에 던질 값을 지정하면 됩니다.
 
@@ -254,12 +245,12 @@ throw expression;
 특정 타입의 표현식이 아니라 무엇이든 던질 수 있습니다. 아래 코드에서 다양한 타입을 예외로 던지는 모습을 볼 수 있습니다.
 
 ```js
-throw 'Error2'; // String
+throw "Error2"; // String
 throw 42; // Number
 throw true; // Boolean
 throw {
   toString: function () {
-    return '저는 객체예요';
+    return "저는 객체예요";
   },
 };
 ```
@@ -277,11 +268,24 @@ throw {
 ```js
 function getMonthName(mo) {
   mo = mo - 1; // 배열 인덱스에 맞춰 월 조절 (1 = Jan, 12 = Dec)
-  let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
   if (months[mo]) {
     return months[mo];
   } else {
-    throw 'InvalidMonthNo'; // 여기서 throw 키워드 사용
+    throw "InvalidMonthNo"; // 여기서 throw 키워드 사용
   }
 }
 
@@ -289,7 +293,7 @@ try {
   // 시도할 명령문
   monthName = getMonthName(myMonth); // 예외가 발생할 수 있는 함수
 } catch (e) {
-  monthName = 'unknown';
+  monthName = "unknown";
   logMyErrors(e); // 오류 처리기에 예외 객체 전달
 }
 ```
@@ -312,14 +316,15 @@ JavaScript는 `catch` 블록에 진입해야 예외의 식별자를 생성하고
 
 ```js
 try {
-  throw 'myException'; // 예외 생성
+  throw "myException"; // 예외 생성
 } catch (e) {
   // 모든 예외를 처리하기 위한 명령문
   logMyErrors(e); // 오류 처리기에 예외 객체 전달
 }
 ```
 
-> **참고:** `catch` 블록 안에서 오류를 기록할 땐 `console.log()`보다 `console.error()`를 사용하는 것을 추천합니다. `console.error()`는 출력 형식도 오류에 적합하고, 현재 페이지에서 발생한 오류의 목록도 업데이트합니다.
+> [!NOTE]
+> `catch` 블록 안에서 오류를 기록할 땐 `console.log()`보다 `console.error()`를 사용하는 것을 추천합니다. `console.error()`는 출력 형식도 오류에 적합하고, 현재 페이지에서 발생한 오류의 목록도 업데이트합니다.
 
 #### `finally` 블록
 
@@ -348,7 +353,7 @@ try {
 function f() {
   try {
     console.log(0);
-    throw 'bogus';
+    throw "bogus";
   } catch (e) {
     console.log(1);
     return true; // finally 블록의 실행이 끝날 때까지 중단됨
@@ -369,7 +374,7 @@ console.log(f()); // 0, 1, 3, false
 ```js
 function f() {
   try {
-    throw '예외';
+    throw "예외";
   } catch (e) {
     console.log('내부 "예외" 포획');
     throw e; // finally 블록의 실행이 끝날 때까지 중단
@@ -430,5 +435,4 @@ catch (e) {
 }
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Grammar_and_types",
-  "Web/JavaScript/Guide/Loops_and_iteration")}}
+{{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}

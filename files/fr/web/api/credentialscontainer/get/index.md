@@ -1,16 +1,8 @@
 ---
 title: CredentialsContainer.get()
 slug: Web/API/CredentialsContainer/get
-tags:
-  - API
-  - Credential Management API
-  - CredentialsContainer
-  - Méthode
-  - Reference
-  - Web Authentication API
-  - WebAuthn
-translation_of: Web/API/CredentialsContainer/get
 ---
+
 {{APIRef("Credential Management")}}{{SeeCompatTable}}
 
 La méthode **`get()`**, rattachée à l'interface {{domxref("CredentialsContainer")}}, renvoie une promesse ({{jsxref("Promise")}}) qui est résolue en une instance de {{domxref("Credential")}} correspondant aux paramètres fournis. Si aucune correspondance n'est trouvée, la promesse sera résolue avec la valeur {{jsxref("null")}}.
@@ -19,23 +11,21 @@ Cette méthode collecte l'ensemble des informations d'authentification stockées
 
 Cette méthode récupère les informations d'authentification en appelant la méthode `CollectFromCredentialStore` pour chaque type d'authentification permis par l'argument **`options`**. Ainsi, si la propriété `options.password` existe dans l'argument passé, {{domxref("PasswordCredential")}}`.[[CollectFromCredentialStore]]` sera appelée.
 
-> **Note :** Cette méthode ne peut être utilisé que pour les contextes de navigation les plus hauts. Les appels lancés depuis une {{HTMLElement("iframe")}} résoudront la promesse sans aucun effet.
+> [!NOTE]
+> Cette méthode ne peut être utilisé que pour les contextes de navigation les plus hauts. Les appels lancés depuis une {{HTMLElement("iframe")}} résoudront la promesse sans aucun effet.
 
 ## Syntaxe
 
 ```js
-var promise = CredentialsContainer.get([options])
+var promise = CredentialsContainer.get([options]);
 ```
 
 ### Paramètres
 
 - `options` {{optional_inline}}
-
   - : Un objet de type {{domxref("CredentialRequestOptions")}} qui contient les critères de la requête. et les options d'interaction avec l'utilisateur. Cet objet peut contenir les propriétés suivantes :
-
     - `password` : un booléen ({{jsxref("Boolean")}}) qui indique que l'instance {{domxref("Credential")}} renvoyée devrait contenir les informations sur l'utilisateur (contrairement aux informations d'authentification fédérées).
     - `federated` : un objet {{domxref("FederatedCredentialRequestOptions")}} qui contient les critères que doivent respecter les informations d'authentification fédérées. Les options disponibles sont :
-
       - `providers` : un tableau de chaînes de caractères {{domxref("DOMString")}} listant les fournisseurs d'identité potentiels
       - `protocols` : un tableau de chaînes de caractères {{domxref("DOMString")}} listant les protocoles de fédération à rechercher.
 
@@ -49,11 +39,8 @@ Une promesse ({{jsxref("Promise")}}) qui est résolue avec une instance {{domxre
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('Credential Management','#dom-credentialscontainer-get','get()')}} | {{Spec2('Credential Management')}} | Définition initiale. |
-| {{SpecName('WebAuthn')}}                                                                         | {{Spec2('WebAuthn')}}                 | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CredentialsContainer.get")}}
+{{Compat}}
