@@ -1,9 +1,8 @@
 ---
 title: text-decoration-thickness
 slug: Web/CSS/Reference/Properties/text-decoration-thickness
-original_slug: Web/CSS/text-decoration-thickness
 l10n:
-  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`text-decoration-thickness`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素内のテキストに用いられる装飾線、例えば取り消し線、下線、上線の太さを設定します。
@@ -37,7 +36,7 @@ font-size: 2rem;
 ```css interactive-example
 p {
   font: 1.5em sans-serif;
-  text-decoration-color: #ff0000;
+  text-decoration-color: red;
 }
 ```
 
