@@ -25,40 +25,40 @@ Dans Manifest V2, les scripts d'arrière-plan ou une page peuvent être persista
 
 Si vous avez des scripts d'arrière-plan persistants ou une page dans Manifest V2 et que vous souhaitez préparer votre extension à la migration vers Manifest V3, [Convertir en non persistant](#convert_to_non-persistent) fournit des conseils sur la transition des scripts ou de la page vers le modèle non persistant.
 
-## Background script environment
+## Environnement des scripts d'arrière-plan
 
-### DOM APIs
+### API DOM
 
-Background scripts run in the context of a special page called a background page. This gives them a [`window`](/en-US/docs/Web/API/Window) global, along with all the standard DOM APIs provided by that object.
+Les scripts d'arrière-plan s'exécutent dans le contexte d'une page spéciale appelée page d'arrière-plan. Cela leur donne accès à une [`Fenêtre`](/fr/docs/Web/API/Window) globale, ainsi qu'à toutes les API DOM standard fournies par cet objet.
 
 > [!WARNING]
-> In Firefox, background pages do not support the use of [`alert()`](/en-US/docs/Web/API/Window/alert), [`confirm()`](/en-US/docs/Web/API/Window/confirm), or [`prompt()`](/en-US/docs/Web/API/Window/prompt).
+> Dans Firefox, les pages d'arrière-plan ne prennent pas en charge l'utilisation de [`alert()`](/fr/docs/Web/API/Window/alert), [`confirm()`](/fr/docs/Web/API/Window/confirm) ou [`prompt()`](/fr/docs/Web/API/Window/prompt).
 
-### WebExtension APIs
+### API WebExtension
 
-Background scripts can use any [WebExtension APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API), as long as their extension has the necessary [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
+Les scripts d'arrière-plan peuvent utiliser n'importe quelle [API WebExtension](/fr/docs/Mozilla/Add-ons/WebExtensions/API), à condition que leur extension dispose des [permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) nécessaires.
 
-### Cross-origin access
+### Accès Cross-origin
 
-Background scripts can make XHR requests to hosts they have [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) for.
+Les scripts d'arrière-plan peuvent envoyer des requêtes XHR aux hôtes pour lesquels ils disposent des [permissions d'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-### Web content
+### Contenu Web
 
-Background scripts do not get direct access to web pages. However, they can load [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) into web pages and [communicate with these content scripts using a message-passing API](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts).
+Les scripts d'arrière-plan n'ont pas directement accès aux pages Web. Cependant, ils peuvent charger des [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) dans les pages Web et [communiquer avec ces scripts de contenu à l'aide d'une API de transmission de messages](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts).
 
-### Content security policy
+### Politique de sécurité du contenu
 
-Background scripts are restricted from certain potentially dangerous operations, such as the use of [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), through a Content Security Policy.
+Les scripts d'arrière-plan sont soumis à certaines restrictions concernant certaines opérations potentiellement dangereuses, telles que l'utilisation de [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval), par le biais d'une politique de sécurité du contenu.
 
-See [Content Security Policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy) for more details.
+Pour plus d'informations, consultez la section [Politique de sécurité du contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy).
 
-## Implementing background scripts
+## Implémentation de scripts en arrière-plan
 
-This section describes how to implement a non-persistent background script.
+Cette section décrit comment implémenter un script en arrière-plan non persistant.
 
-### Specify the background scripts
+### Spécifiez les scripts d'arrière-plan
 
-In your extension, you include a background script or scripts, if you need them, using the [`"background"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) key in `manifest.json`. For Manifest V2 extensions, the `persistent` property must be `false` to create a non-persistent script. It can be omitted for Manifest V3 extensions or must be set to `false`, as script are always non-persistent in Manifest V3. Including `"type": "module"` loads the background scripts as ES modules.
+Dans votre extension, vous incluez un ou plusieurs scripts d'arrière-plan, si vous en avez besoin, en utilisant la clé [`"background"`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) dans `manifest.json`. Pour les extensions Manifest V2, la propriété `persistent` doit être définie sur `false` pour créer un script non persistant. Elle peut être omise pour les extensions Manifest V3 ou doit être définie sur `false`, car les scripts sont toujours non persistants dans Manifest V3. L'inclusion de `"type": "module"` charge les scripts d'arrière-plan en tant que modules ES.
 
 ```json
 "background": {
@@ -68,9 +68,9 @@ In your extension, you include a background script or scripts, if you need them,
 }
 ```
 
-These scripts execute in the extension's background page, so they run in the same context, like scripts loaded into a web page.
+Ces scripts s'exécutent dans la page d'arrière-plan de l'extension, donc dans le même contexte que les scripts chargés dans une page Web.
 
-However, if you need certain content in the background page, you can specify one. You then specify your script from the page rather than using the `"scripts"` property. Before the introduction of the `"type"` property to the `"background"` key, this was the only option to include ES modules. You specify a background page like this:
+Toutefois, si vous avez besoin d'un contenu particulier dans la page d'arrière-plan, vous pouvez en spécifier un. Vous spécifiez ensuite votre script à partir de la page plutôt que d'utiliser la propriété `"scripts"`. Avant l'introduction de la propriété `"type"` dans la clé `"background"`, c'était la seule option permettant d'inclure des modules ES. Vous spécifiez une page d'arrière-plan comme suit :
 
 - manifest.json
 
@@ -93,13 +93,13 @@ However, if you need certain content in the background page, you can specify one
   </html>
   ```
 
-You cannot specify background scripts and a background page.
+Vous ne pouvez pas spécifier de scripts d'arrière-plan ni de page d'arrière-plan.
 
-### Initialize the extension
+### Initialiser l'extension
 
-Listen to {{WebExtAPIRef("runtime.onInstalled")}} to initialize an extension on installation. Use this event to set a state or for one-time initialization.
+Écoutez {{WebExtAPIRef("runtime.onInstalled")}} pour initialiser une extension lors de l'installation. Utilisez cet événement pour définir un état ou pour une initialisation unique.
 
-For extensions with event pages, this is where stateful APIs, such as a context menu created using {{WebExtAPIRef("menus.create")}}, should be used. This is because stateful APIs don't need to be run each time the event page reloads; they only need to run when the extension is installed.
+Pour les extensions avec des pages d'événements, c'est ici que les API avec état, telles que le menu contextuel créé à l'aide de {{WebExtAPIRef("menus.create")}}, doivent être utilisées. En effet, les API avec état n'ont pas besoin d'être exécutées à chaque rechargement de la page d'événements ; elles ne doivent être exécutées que lorsque l'extension est installée.
 
 ```js
 browser.runtime.onInstalled.addListener(() => {
@@ -111,11 +111,11 @@ browser.runtime.onInstalled.addListener(() => {
 });
 ```
 
-### Add listeners
+### Ajouter des écouteurs
 
-Structure background scripts around events the extension depends on. Defining relevant events enables background scripts to lie dormant until those events are fired and prevents the extension from missing essential triggers.
+Structurez les scripts d'arrière-plan autour des événements dont dépend l'extension. La définition d'événements pertinents permet aux scripts d'arrière-plan de rester inactifs jusqu'à ce que ces événements se produisent et empêche l'extension de manquer des déclencheurs essentiels.
 
-Listeners must be registered synchronously from the start of the page.
+Les écouteurs doivent être enregistrés de manière synchrone dès le début de la page.
 
 ```js
 browser.runtime.onInstalled.addListener(() => {
@@ -132,7 +132,7 @@ browser.bookmarks.onCreated.addListener(() => {
 });
 ```
 
-Do not register listeners asynchronously, as they will not be properly triggered. So, rather than:
+N'enregistrez pas les écouteurs de manière asynchrone, car ils ne seront pas déclenchés correctement. Donc, plutôt que :
 
 ```js example-bad
 window.onload = () => {
@@ -143,7 +143,7 @@ window.onload = () => {
 };
 ```
 
-Do this:
+Procédez comme suit :
 
 ```js
 browser.tabs.onUpdated.addListener(() => {
@@ -162,9 +162,9 @@ browser.runtime.onMessage.addListener(
 );
 ```
 
-### Filter events
+### Filtrer les événements
 
-Use APIs that support event filters to restrict listeners to the cases the extension cares about. If an extension is listening for {{WebExtAPIRef("tabs.onUpdated")}}, use the {{WebExtAPIRef("webNavigation.onCompleted")}} event with filters instead, as the tabs API does not support filters.
+Utilisez des API qui prennent en charge les filtres d'événements pour limiter les écouteurs aux cas qui intéressent l'extension. Si une extension écoute {{WebExtAPIRef("tabs.onUpdated")}}, utilisez plutôt l'événement {{WebExtAPIRef("webNavigation.onCompleted")}} avec des filtres, car l'API des onglets ne prend pas en charge les filtres.
 
 ```js
 browser.webNavigation.onCompleted.addListener(
@@ -175,13 +175,13 @@ browser.webNavigation.onCompleted.addListener(
 );
 ```
 
-### React to listeners
+### Réagir aux écouteurs
 
-Listeners exist to trigger functionality once an event has fired. To react to an event, structure the desired reaction inside the listener event.
+Les écouteurs existent pour déclencher une fonctionnalité une fois qu'un événement s'est produit. Pour réagir à un événement, structurez la réaction souhaitée dans l'événement de l'écouteur.
 
-When responding to events in the context of a specific tab or frame, use the `tabId` and `frameId` from the event details instead of relying on the "current tab". Specifying the target ensures your extension does not invoke an extension API on the wrong target when the "current tab" changes while waking the event page.
+Lorsque vous répondez à des événements dans le contexte d'un onglet ou d'un cadre spécifique, utilisez les identifiants `tabId` et `frameId` provenant des détails de l'événement au lieu de vous fier à l'"onglet actuel". En spécifiant la cible, vous vous assurez que votre extension n'appelle pas une API d'extension sur la mauvaise cible lorsque l'"onglet actuel" change pendant le réveil de la page d'événement.
 
-For example, {{WebExtAPIRef("runtime.onMessage")}} can respond to {{WebExtAPIRef("runtime.sendMessage")}} calls as follows:
+Par exemple, {{WebExtAPIRef("runtime.onMessage")}} peut répondre aux appels {{WebExtAPIRef("runtime.sendMessage")}} comme suit :
 
 ```js
 browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
@@ -209,16 +209,16 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 ```
 
-### Unload background scripts
+### Décharger les scripts d'arrière-plan
 
-Data should be persisted periodically to not lose important information if an extension crashes without receiving {{WebExtAPIRef("runtime.onSuspend")}}. Use the storage API to assist with this.
+Les données doivent être sauvegardées régulièrement afin de ne pas perdre d'informations importantes si une extension plante sans recevoir {{WebExtAPIRef("runtime.onSuspend")}}. Utilisez l'API de stockage pour vous aider dans cette tâche.
 
 ```js
 // Or storage.session if the variable does not need to persist pass browser shutdown.
 browser.storage.local.set({ variable: variableInformation });
 ```
 
-Message ports cannot prevent an event page from shutting down. If an extension uses message passing, the ports are closed when the event page idles. Listening to the {{WebExtAPIRef("runtime.Port")}} `onDisconnect` lets you discover when open ports are closing, however the listener is under the same time constraints as {{WebExtAPIRef("runtime.onSuspend")}}.
+Les ports de message ne peuvent pas empêcher la fermeture d'une page d'événement. Si une extension utilise le passage de messages, les ports sont fermés lorsque la page d'événement est inactive. L'écoute de {{WebExtAPIRef("runtime.Port")}} `onDisconnect` vous permet de détecter la fermeture des ports ouverts, mais l'écouteur est soumis aux mêmes contraintes de temps que {{WebExtAPIRef("runtime.onSuspend")}}.
 
 ```js
 browser.runtime.onConnect.addListener((port) => {
@@ -237,7 +237,7 @@ browser.runtime.onConnect.addListener((port) => {
 });
 ```
 
-Background scripts unload after a few seconds of inactivity. However, if during the suspension of a background script another event wakes the background script, {{WebExtAPIRef("runtime.onSuspendCanceled")}} is called and the background script continues running. If any cleanup is required, listen to {{WebExtAPIRef("runtime.onSuspend")}}.
+Les scripts d'arrière-plan se déchargent après quelques secondes d'inactivité. Cependant, si pendant la suspension d'un script d'arrière-plan, un autre événement réveille le script d'arrière-plan, {{WebExtAPIRef("runtime.onSuspendCanceled")}} est appelé et le script d'arrière-plan continue à s'exécuter. Si un nettoyage est nécessaire, écoutez {{WebExtAPIRef("runtime.onSuspend")}}.
 
 ```js
 browser.runtime.onSuspend.addListener(() => {
@@ -246,15 +246,16 @@ browser.runtime.onSuspend.addListener(() => {
 });
 ```
 
-However, persisting data should be preferred rather than relying on {{WebExtAPIRef("runtime.onSuspend")}}. It doesn't allow for as much cleanup as may be needed and does not help in case of a crash.
+Cependant, il est préférable d'utiliser des données persistantes plutôt que de se fier à {{WebExtAPIRef("runtime.onSuspend")}}. Cela ne permet pas d'effectuer autant de nettoyage que nécessaire et n'est d'aucune aide en cas de plantage.
 
-## Convert to non-persistent
+## Conversion en non persistant
 
-If you've a persistent background script, this section provides instructions on converting it to the non-persistent model.
+Si vous disposez d'un script d'arrière-plan persistant, cette section fournit des instructions pour le convertir en non persistant.
 
-### Update your manifest.json file
+### Mettez à jour votre fichier manifest.json
 
-In your extension's `manifest.json` file, change the persistent property of [`"background"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) key to `false` for your script or page.
+Dans votre fichier de votre extension `manifest.json`, modifiez la propriété persistante de la clé [`"background"`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) et définissez-la sur `false` pour votre script ou votre page.
+
 
 ```json
 "background": {
@@ -263,9 +264,9 @@ In your extension's `manifest.json` file, change the persistent property of [`"b
 }
 ```
 
-### Move event listeners
+### Déplacer les écouteurs d'événements
 
-Listeners must be at the top-level to activate the background script if an event is triggered. Registered listeners may need to be restructured to the synchronous pattern and moved to the top-level.
+Les écouteurs doivent se trouver au niveau supérieur pour activer le script d'arrière-plan si un événement est déclenché. Les écouteurs enregistrés peuvent devoir être restructurés selon le modèle synchrone et déplacés au niveau supérieur.
 
 ```js
 browser.runtime.onStartup.addListener(() => {
@@ -273,9 +274,9 @@ browser.runtime.onStartup.addListener(() => {
 });
 ```
 
-### Record state changes
+### Enregistrer les changements d'état
 
-Scripts now open and close as needed. So, do not rely on global variables.
+Les scripts s'ouvrent et se ferment désormais selon les besoins. Ne vous fiez donc pas aux variables globales.
 
 ```js example-bad
 var count = 101;
@@ -287,10 +288,10 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 ```
 
-Instead, use the storage API to set and return states and values:
+Utilisez plutôt l'API de stockage pour définir et renvoyer les états et les valeurs :
 
-- Use {{WebExtAPIRef("storage.session")}} for in-memory storage that is cleared when the extension or browser shuts down. By default, `storage.session` is only available to extension contexts and not to content scripts.
-- Use {{WebExtAPIRef("storage.local")}} for a larger storage area that persists across browser and extension restarts.
+- Utilisez {{WebExtAPIRef("storage.session")}} pour le stockage en mémoire qui est effacé lorsque l'extension ou le navigateur est fermé. Par défaut, `storage.session` n'est disponible que pour les contextes d'extension et non pour les scripts de contenu.
+- Utilisez {{WebExtAPIRef("storage.local")}} pour une zone de stockage plus grande qui persiste après le redémarrage du navigateur et de l'extension.
 
 ```js
 browser.runtime.onMessage.addListener(async (message, sender) => {
@@ -304,8 +305,8 @@ browser.runtime.onMessage.addListener(async (message, sender) => {
 });
 ```
 
-The preceding example [sends an asynchronous response using a promise](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_a_promise), which is not supported in Chrome until [Chrome bug 1185241](https://crbug.com/1185241) is resolved.
-A cross-browser alternative is to [return true and use `sendResponse`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_sendresponse).
+L'exemple précédent [envoie une réponse asynchrone à l'aide d'une promesse](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_a_promise), qui n'est pas pris en charge dans Chrome tant que le [bug 1185241 de Chrome](https://crbug.com/1185241) n'est pas pris en charge dans Chrome.
+Une alternative multi-navigateurs consiste à [renvoyer true et utiliser `sendResponse`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_sendresponse).
 
 ```js
 browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
@@ -321,9 +322,9 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 ```
 
-### Change timers into alarms
+### Transformer les minuteries en alarmes
 
-DOM-based timers, such as {{domxref("Window.setTimeout", "setTimeout()")}}, do not remain active after an event page has idled. Instead, use the {{WebExtAPIRef("alarms")}} API if you need a timer to wake an event page.
+Les minuteries basées sur DOM, telles que {{domxref("Window.setTimeout", "setTimeout()")}}, ne restent pas actives après la mise en veille d'une page d'événement. Utilisez plutôt l'API {{WebExtAPIRef("alarms")}} si vous avez besoin d'une minuterie pour réactiver une page d'événement.
 
 ```js
 browser.alarms.create({ delayInMinutes: 3.0 });
@@ -337,20 +338,20 @@ browser.alarms.onAlarm.addListener(() => {
 });
 ```
 
-### Update calls for background script functions
+### Mise à jour des appels aux fonctions du script d'arrière-plan
 
-Extensions commonly host their primary functionality in the background script. Some extensions access functions and variables defined in the background page through the `window` returned by {{WebExtAPIRef("extension.getBackgroundPage")}}.
-The method returns `null` when:
+Les extensions hébergent généralement leurs fonctionnalités principales dans le script d'arrière-plan. Certaines extensions accèdent aux fonctions et variables définies dans la page d'arrière-plan via la variable `window` renvoyée par {{WebExtAPIRef("extension.getBackgroundPage")}}.
+La méthode renvoie `null` lorsque :
 
-- extension pages are isolated, such as extension pages in Private Browsing mode or container tabs.
-- the background page is not running. This is uncommon with persistent background pages but very likely when using an Event Page, as an Event Page can be suspended.
+- les pages d'extension sont isolées, comme les pages d'extension en mode de navigation privée ou les onglets conteneurs.
+- la page d'arrière-plan n'est pas en cours d'exécution. Cela est rare avec les pages d'arrière-plan persistantes, mais très probable lors de l'utilisation d'une page d'événement, car une page d'événement peut être suspendue.
 
 > [!NOTE]
-> The recommended way to invoke functionality in the background script is to communicate with it through {{WebExtAPIRef("runtime.sendMessage","runtime.sendMessage()")}} or {{WebExtAPIRef("runtime.connect","runtime.connect()")}}.
-> The `getBackgroundPage()` methods discussed in this section cannot be used in a cross-browser extension, because Manifest Version 3 extensions in Chrome cannot use background or event pages.
+> La méthode recommandée pour invoquer une fonctionnalité dans le script d'arrière-plan consiste à communiquer avec celui-ci via {{WebExtAPIRef("runtime.sendMessage","runtime.sendMessage()")}} ou {{WebExtAPIRef("runtime.connect","runtime.connect()")}}.
+> Les méthodes `getBackgroundPage()` décrites dans cette section ne peuvent pas être utilisées dans une extension multi-navigateurs, car les extensions Manifest Version 3 dans Chrome ne peuvent pas utiliser les pages d'arrière-plan ou d'événement.
 
-If your extension requires a reference to the `window` of the background page, use {{WebExtAPIRef("runtime.getBackgroundPage")}} to ensure the event page is running.
-If the call is optional (that is, only needed if the event page is alive) then use {{WebExtAPIRef("extension.getBackgroundPage")}}.
+Si votre extension nécessite une référence à la fenêtre (`window`) de la page d'arrière-plan, utilisez {{WebExtAPIRef("runtime.getBackgroundPage")}} pour vous assurer que la page d'événement est en cours d'exécution.
+Si l'appel est facultatif (c'est-à-dire nécessaire uniquement si la page d'événement est active), utilisez {{WebExtAPIRef("extension.getBackgroundPage")}}.
 
 ```js example-bad
 document.getElementById("target").addEventListener("click", async () => {
