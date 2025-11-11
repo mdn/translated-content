@@ -269,6 +269,6 @@ un-element::after {
 
 ## Voir aussi
 
-- {{CSSxRef(":where", ":where()")}}&nbsp;: comme `:is()`, mais avec [une spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity) qui vaut 0.
+- {{CSSxRef(":where", ":where()")}}&nbsp;: comme `:is()`, mais avec [une spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity) qui vaut 0.
 - [Liste de sélecteurs](/fr/docs/Web/CSS/Reference/Selectors/Selector_list)
 - [Composants web](/fr/docs/Web/API/Web_components)

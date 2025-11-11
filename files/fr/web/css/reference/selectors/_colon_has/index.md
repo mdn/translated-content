@@ -253,5 +253,5 @@ De même, dans le cas de la recherche négative, dans l'expression régulière `
 - [Sélecteurs et combinateurs CSS](/fr/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
 - [Structure du sélecteur CSS](/fr/docs/Web/CSS/CSS_selectors/Selector_structure)
 - [Liste des sélecteurs](/fr/docs/Web/CSS/Reference/Selectors/Selector_list)
-- [Sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors)
+- [Sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors)
 - [Sélection et parcours de l'arbre DOM](/fr/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)

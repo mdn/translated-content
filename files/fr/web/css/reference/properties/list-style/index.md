@@ -6,7 +6,7 @@ original_slug: Web/CSS/list-style
 
 {{CSSRef}}
 
-La propriété **`list-style`** est une [propriété raccourcie](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties) qui permet de définir [`list-style-type`](/fr/docs/Web/CSS/Reference/Properties/list-style-type), [`list-style-image`](/fr/docs/Web/CSS/Reference/Properties/list-style-image) et [`list-style-position`](/fr/docs/Web/CSS/Reference/Properties/list-style-position).
+La propriété **`list-style`** est une [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) qui permet de définir [`list-style-type`](/fr/docs/Web/CSS/Reference/Properties/list-style-type), [`list-style-image`](/fr/docs/Web/CSS/Reference/Properties/list-style-image) et [`list-style-position`](/fr/docs/Web/CSS/Reference/Properties/list-style-position).
 
 {{InteractiveExample("CSS Demo: list-style")}}
 

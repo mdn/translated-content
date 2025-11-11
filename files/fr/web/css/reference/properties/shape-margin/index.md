@@ -141,8 +141,8 @@ section {
 
 ## Voir aussi
 
-- [Les formes CSS](/fr/docs/Web/CSS/CSS_shapes)
-- [Un aperçu des formes CSS](/fr/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
+- [Les formes CSS](/fr/docs/Web/CSS/Guides/Shapes)
+- [Un aperçu des formes CSS](/fr/docs/Web/CSS/Guides/Shapes/Overview)
 - {{cssxref("shape-outside")}}
 - {{cssxref("shape-image-threshold")}}
 - {{cssxref("&lt;basic-shape&gt;")}}
