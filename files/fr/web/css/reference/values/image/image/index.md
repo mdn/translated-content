@@ -169,7 +169,7 @@ Actuellement, aucun navigateur ne prend en charge cette fonctionnalité.
 
 ## Voir aussi
 
-- Le module des [images CSS](/fr/docs/Web/CSS/CSS_images)
+- Le module des [images CSS](/fr/docs/Web/CSS/Guides/Images)
 - Le type de donnée {{CSSxRef("&lt;image&gt;")}}
 - Le type de donnée {{cssxref("url_value", "&lt;url&gt;")}}
 - Le type de donnée {{CSSxRef("&lt;gradient&gt;")}}

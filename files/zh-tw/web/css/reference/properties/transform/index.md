@@ -41,10 +41,10 @@ transform: scale(0.5) translate(-100%, -100%);
 </section>
 ```
 
-如果這個屬性的值不是 `none`，將會建立一個 [stacking context](/zh-TW/docs/Web/CSS/CSS_positioned_layout/Stacking_context)。在這個情況下，此元素將被其所包含的 `position: fixed` 元素當成一個 containing block。
+如果這個屬性的值不是 `none`，將會建立一個 [stacking context](/zh-TW/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)。在這個情況下，此元素將被其所包含的 `position: fixed` 元素當成一個 containing block。
 
 > [!WARNING]
-> 只有可以變形的元素可以被變形，這包括所有被 CSS box model 掌管輸出的元素，除了[視覺格式化模型](/zh-TW/docs/Web/CSS/Visual_formatting_model#Inline-level_elements_and_inline_boxes), [table-column box](/zh-TW/docs/Web/HTML/Reference/Elements/col) 和 [table-colunm-group box](/zh-TW/docs/Web/HTML/Reference/Elements/colgroup)。
+> 只有可以變形的元素可以被變形，這包括所有被 CSS box model 掌管輸出的元素，除了[視覺格式化模型](/zh-TW/docs/Web/CSS/Guides/Display/Visual_formatting_model#Inline-level_elements_and_inline_boxes), [table-column box](/zh-TW/docs/Web/HTML/Reference/Elements/col) 和 [table-colunm-group box](/zh-TW/docs/Web/HTML/Reference/Elements/colgroup)。
 
 ## 語法
 
@@ -92,7 +92,7 @@ transform: unset;
 ### 值
 
 - {{cssxref("&lt;transform-function&gt;")}}
-  - : 可使用一個或多個 [CSS transform 函數](/zh-TW/docs/Web/CSS/transform-function)。複合的 transform 會由左至右的順序來套用。
+  - : 可使用一個或多個 [CSS transform 函數](/zh-TW/docs/Web/CSS/Reference/Values/transform-function)。複合的 transform 會由左至右的順序來套用。
 - `none`
   - : 設定為沒有套用任何 transform。
 
@@ -100,7 +100,7 @@ transform: unset;
 
 改變尺寸和伸縮的動畫會影響網頁普遍的可使用性，因為它們可能促發一些頭痛的問題。如果你想要在網頁中提供這樣的功能，最好在網頁中放上給使用者關閉這些功能的控制開關。
 
-另外也可考慮使用 {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} 這個媒體功能來寫一個在系統設定端的[媒體查詢](/zh-TW/docs/Web/CSS/CSS_media_queries)，讓使用者在減少了動畫偏好之後可以關閉該使用者網頁的動畫功能。
+另外也可考慮使用 {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} 這個媒體功能來寫一個在系統設定端的[媒體查詢](/zh-TW/docs/Web/CSS/Guides/Media_queries)，讓使用者在減少了動畫偏好之後可以關閉該使用者網頁的動畫功能。
 
 瞭解更多:
 
@@ -142,7 +142,7 @@ div {
 
 ### 更多範例
 
-請參考[使用 CSS transform](/zh-TW/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) 以及 {{cssxref("&lt;transform-function&gt;")}} 的更多範例。
+請參考[使用 CSS transform](/zh-TW/docs/Web/CSS/Guides/Transforms/Using) 以及 {{cssxref("&lt;transform-function&gt;")}} 的更多範例。
 
 ## 規範
 
@@ -154,6 +154,6 @@ div {
 
 ## 參見
 
-- [使用 CSS transform](/zh-TW/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [使用 CSS transform](/zh-TW/docs/Web/CSS/Guides/Transforms/Using)
 - {{cssxref("&lt;transform-function&gt;")}} data type
 - A cross-browser 2D [transform plugin for jQuery](https://louisremi.github.io/jquery.transform.js/)

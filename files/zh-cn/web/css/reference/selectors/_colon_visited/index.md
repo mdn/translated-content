@@ -52,7 +52,7 @@ a:visited {
 - [`<link>`](/zh-CN/docs/Web/HTML/Reference/Elements/link) 元素永远不会被 `:visited` 匹配。
 
 > [!NOTE]
-> 有关这些限制及其背后原因的更多信息，请参阅[隐私和 :visited 选择器](/zh-CN/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)。
+> 有关这些限制及其背后原因的更多信息，请参阅[隐私和 :visited 选择器](/zh-CN/docs/Web/CSS/Guides/Selectors/Privacy_and_:visited)。
 
 ## 语法
 
@@ -103,5 +103,5 @@ a:visited {
 
 ## 参见
 
-- [隐私和 :visited 选择器](/zh-CN/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)
+- [隐私和 :visited 选择器](/zh-CN/docs/Web/CSS/Guides/Selectors/Privacy_and_:visited)
 - 链接相关伪类：{{cssxref(":link")}}、{{cssxref(":active")}} 和 {{cssxref(":hover")}}

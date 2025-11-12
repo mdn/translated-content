@@ -62,8 +62,8 @@ place-content: end;
 
 이 속성은 다음 CSS의 단축형입니다.
 
-- [`align-content`](/ko/docs/Web/CSS/align-content)
-- [`justify-content`](/ko/docs/Web/CSS/justify-content)
+- [`align-content`](/ko/docs/Web/CSS/Reference/Properties/align-content)
+- [`justify-content`](/ko/docs/Web/CSS/Reference/Properties/justify-content)
 
 ## 구문
 

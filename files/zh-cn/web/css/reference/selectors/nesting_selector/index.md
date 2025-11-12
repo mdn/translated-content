@@ -5,7 +5,7 @@ l10n:
   sourceCommit: c6b772b874485e67bb8cf8eff8c1874deb2e66c3
 ---
 
-CSS **`&` 嵌套选择器**明确指示在使用 [CSS 嵌套](/zh-CN/docs/Web/CSS/CSS_nesting)时，父规则和子规则的关系。它使得内嵌子规则的选择器*相对于其父元素*。若没有 `&` 嵌套选择器，则子规则将选择子元素。子选择器的[优先级](/zh-CN/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)和它们被包含在 {{cssxref(":is", ":is()")}} 伪类内的情况一样。
+CSS **`&` 嵌套选择器**明确指示在使用 [CSS 嵌套](/zh-CN/docs/Web/CSS/Guides/Nesting)时，父规则和子规则的关系。它使得内嵌子规则的选择器*相对于其父元素*。若没有 `&` 嵌套选择器，则子规则将选择子元素。子选择器的[优先级](/zh-CN/docs/Web/CSS/Guides/Nesting/Nesting_and_specificity)和它们被包含在 {{cssxref(":is", ":is()")}} 伪类内的情况一样。
 
 > [!NOTE]
 > *子规则*不等于*子元素选择器*。子规则可以根据 `&` 嵌套选择器的使用与否来选择父元素或子元素。
@@ -48,7 +48,7 @@ parentRule {
 }
 ```
 
-当嵌套规则需要被附加（无空格）到父规则上时，例如当使用[伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)，或者创建[组合选择器](/zh-CN/docs/Web/CSS/CSS_selectors/Selector_structure#组合选择器)时，`&` 嵌套选择器必须紧贴在子选择器之前。
+当嵌套规则需要被附加（无空格）到父规则上时，例如当使用[伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)，或者创建[组合选择器](/zh-CN/docs/Web/CSS/Guides/Selectors/Selector_structure#组合选择器)时，`&` 嵌套选择器必须紧贴在子选择器之前。
 
 考虑以下示例。我们想要为一个元素添加样式，一些是需要永久应用的，而另一些嵌套样式则仅当鼠标悬停时才被应用。如果不添加 `&` 嵌套选择器，浏览器会添加空格，最终我们得到的将是一个匹配*任意被悬停的子元素*的选择器。当然，这才不是我们想要的结果。
 
@@ -237,6 +237,6 @@ parentRule {
 
 ## 参见
 
-- [使用 CSS 嵌套](/zh-CN/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
-- [CSS 嵌套](/zh-CN/docs/Web/CSS/CSS_nesting)模块
-- [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)模块
+- [使用 CSS 嵌套](/zh-CN/docs/Web/CSS/Guides/Nesting/Using)
+- [CSS 嵌套](/zh-CN/docs/Web/CSS/Guides/Nesting)模块
+- [CSS 选择器](/zh-CN/docs/Web/CSS/Guides/Selectors)模块

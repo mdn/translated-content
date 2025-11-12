@@ -3,7 +3,7 @@ title: :right
 slug: Web/CSS/Reference/Selectors/:right
 ---
 
-**`:right`** [CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics) [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)必须与[@规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules) {{cssxref("@page")}} 一起配套使用，表示打印文档的所有右页。
+**`:right`** [CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics) [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)必须与[@规则](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules) {{cssxref("@page")}} 一起配套使用，表示打印文档的所有右页。
 
 ```css
 /* 当打印时会选择所有文档右页 */

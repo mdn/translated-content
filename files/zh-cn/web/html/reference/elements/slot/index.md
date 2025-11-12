@@ -140,4 +140,4 @@ l10n:
 - HTML [`slot`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/slot) 属性
 - CSS {{CSSXref("::slotted")}} 伪元素
 - CSS {{cssxref(":has-slotted")}} 伪类
-- [CSS 域](/zh-CN/docs/Web/CSS/CSS_scoping)模块
+- [CSS 域](/zh-CN/docs/Web/CSS/Guides/Scoping)模块

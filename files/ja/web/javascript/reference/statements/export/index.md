@@ -2,10 +2,8 @@
 title: export
 slug: Web/JavaScript/Reference/Statements/export
 l10n:
-  sourceCommit: eb7cf694c19b31ee8826f22eaac6c12e808b1e50
+  sourceCommit: b6a36de3428f4b42c7707c8f190a349db13bf531
 ---
-
-{{jsSidebar("Statements")}}
 
 **`export`** 宣言は、JavaScript モジュールから値をエクスポートするために使用されます。エクスポートされた値は {{jsxref("Statements/import", "import")}} 宣言や[ダイナミックインポート](/ja/docs/Web/JavaScript/Reference/Operators/import)によって、他のプログラムにインポートすることができます。インポートされたバインディングの値は、それをエクスポートするモジュールの変更の対象となります。モジュールがエクスポートするバインディングの値を更新すると、その更新はインポートされた値として見えます。
 
@@ -70,6 +68,16 @@ export function myFunction() {
 
 `export` キーワードの後には、 `let`, `const`, `var` 宣言や、関数、クラス宣言を使用することができます。また、 `export { name1, name2 }` 構文を使用すると、他の場所で宣言された名前のリストをエクスポートすることができます。`export {}` は空のオブジェクトをエクスポートするわけではないことに注意してください。これは何もエクスポートしない（空の名前のリストをエクスポートする）ノーオペレーション宣言です。
 
+`export` は、{{jsxref("Statements/using", "using")}} または {{jsxref("Statements/await_using", "await using")}} 宣言では使用できません。ただし、`using` または `await using` で宣言された変数をエクスポートすることは可能です。ただし、この方法は極力避けるべきです。変数はモジュールの実行が終了するとすぐに破棄されるため、インポート元はすべて既に破棄された値を受け取ることになるからです。
+
+```js-nolint example-bad
+export using resource1 = getResource(); // SyntaxError
+
+// 構文場は許されるが、避けるべき
+using resource2 = getResource();
+export { resource2 };
+```
+
 エクスポート宣言は[一時的なデッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#一時的なデッドゾーン_tdz)のルールには従いません。`X` という名前自体が宣言される前に、そのモジュールが `X` をエクスポートすることを宣言することができます。
 
 ```js
@@ -128,6 +136,7 @@ export default k;
 ```js
 // 他のファイル
 import m from "./test"; // k がデフォルトエクスポートなので、インポートする k の代わりに m を使用することができる点に注意してください
+
 console.log(m); // 12
 ```
 
@@ -157,6 +166,7 @@ export { default as function1, function2 } from "bar.js";
 
 ```js
 import { default as function1, function2 } from "bar.js";
+
 export { function1, function2 };
 ```
 
@@ -183,6 +193,7 @@ export * from "./mod2.js";
 
 // -- main.js --
 import * as ns from "./barrel.js";
+
 console.log(ns.a); // undefined
 ```
 
@@ -266,10 +277,10 @@ console.log(foo); // 4.555806215962888
 
 ### デフォルトエクスポートの使用
 
-値をひとつエクスポートしたい、あるいはモジュールでフォールバック先の値を持ちたい場合は、デフォルトエクスポートを使用するとよいでしょう。
+モジュール全体を表す単一の値をエクスポートしたい場合は、デフォルトエクスポートが使用できます。
 
 ```js
-// module "my-module.js"
+// module "cube.js"
 
 export default function cube(x) {
   return x * x * x;
@@ -279,7 +290,8 @@ export default function cube(x) {
 別のスクリプトからの、デフォルトエクスポートのインポートは直観的です。
 
 ```js
-import cube from "./my-module.js";
+import cube from "./cube.js";
+
 console.log(cube(3)); // 27
 ```
 

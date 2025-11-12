@@ -27,5 +27,5 @@ Voir la documentation pour {{cssxref("angle")}} et {{cssxref("percentage")}} pou
 ## Voir aussi
 
 - [Types de données CSS](/fr/docs/Web/CSS/Reference/Values/Data_types)
-- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/Guides/Images/Using_gradients)
 - Les fonctions CSS [`conic-gradient()`](/fr/docs/Web/CSS/Reference/Values/gradient/conic-gradient) et [`repeating-conic-gradient()`](/fr/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient)

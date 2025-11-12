@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 925b2bd8beeae6ce8237863637bcd28ccbb8d47f
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`max-height`** 设置元素的最大高度。它防止 {{cssxref("height")}} 属性的[应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)大于 `max-height` 指定的值。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`max-height`** 设置元素的最大高度。它防止 {{cssxref("height")}} 属性的[应用值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#应用值)大于 `max-height` 指定的值。
 
 {{InteractiveExample("CSS Demo: max-height")}}
 
@@ -124,6 +124,6 @@ form {
 
 ## 参见
 
-- [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)、{{cssxref("box-sizing")}}
+- [盒模型](/zh-CN/docs/Web/CSS/Guides/Box_model/Introduction)、{{cssxref("box-sizing")}}
 - {{Cssxref("height")}}、{{Cssxref("min-height")}}
 - 映射的逻辑属性：{{cssxref("max-inline-size")}}、{{cssxref("max-block-size")}}

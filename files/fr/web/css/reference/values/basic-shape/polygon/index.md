@@ -69,7 +69,7 @@ Remarque&nbsp;: l'élément SVG [`<polygon>`](/fr/docs/Web/SVG/Reference/Element
 - [`<fill-rule>`](/fr/docs/Web/SVG/Reference/Attribute/fill-rule) {{optional_inline}}
   - : Valeur optionnelle `nonzero` (par défaut si omise) ou `evenodd`, qui définit la règle de remplissage.
 - {{cssxref("length-percentage")}}
-  - : Chaque sommet du polygone est représenté par une paire de valeurs `<length-percentage>`, qui donne les coordonnées x/y du sommet par rapport à la [boîte de référence](/fr/docs/Web/CSS/CSS_shapes/Basic_shapes#the_reference_box) de la forme.
+  - : Chaque sommet du polygone est représenté par une paire de valeurs `<length-percentage>`, qui donne les coordonnées x/y du sommet par rapport à la [boîte de référence](/fr/docs/Web/CSS/Guides/Shapes/Using_shape-outside#the_reference_box) de la forme.
 
 ### Valeur de retour
 
@@ -194,4 +194,4 @@ p {
 ## Voir aussi
 
 - Propriétés utilisant ce type de données&nbsp;: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
-- [Guide des formes de base](/fr/docs/Web/CSS/CSS_shapes/Basic_shapes)
+- [Guide des formes de base](/fr/docs/Web/CSS/Guides/Shapes/Using_shape-outside)

@@ -5,7 +5,7 @@ slug: Web/API/Element/transitionend_event
 
 {{APIRef}}
 
-**`transitionend`** 事件会在 [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)完成的时候触发。如果过渡在完成前就被移除，比如删除 {{cssxref("transition-property")}} 或者将 {{cssxref("display")}} 设置为 `none`，那么该事件就不会生成。
+**`transitionend`** 事件会在 [CSS 过渡](/zh-CN/docs/Web/CSS/Guides/Transitions/Using)完成的时候触发。如果过渡在完成前就被移除，比如删除 {{cssxref("transition-property")}} 或者将 {{cssxref("display")}} 设置为 `none`，那么该事件就不会生成。
 
 `transitionend` 事件在两个方向上触发：当它完成从初始状态到过渡状态的过渡时，以及当它完全恢复到默认或非过渡状态时。如果没有设置过渡延迟或持续时间，或者两者都是 0 秒或都没有声明，则没有过渡，且不会触发任何过渡事件。如果触发了 `transitioncancel` 事件，`transitionend` 事件就不会触发。
 

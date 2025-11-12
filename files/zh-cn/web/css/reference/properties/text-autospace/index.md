@@ -174,5 +174,5 @@ chose.addEventListener("change", (e) => {
 ## 参见
 
 - {{cssxref('text-spacing-trim')}}
-- [`ic`](/zh-CN/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#local_font-relative_lengths) 和 [`ric`](/zh-CN/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#root_font-relative_lengths) 单位
-- [CSS 文本](/zh-CN/docs/Web/CSS/CSS_text)模块
+- [`ic`](/zh-CN/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#local_font-relative_lengths) 和 [`ric`](/zh-CN/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#root_font-relative_lengths) 单位
+- [CSS 文本](/zh-CN/docs/Web/CSS/Guides/Text)模块
