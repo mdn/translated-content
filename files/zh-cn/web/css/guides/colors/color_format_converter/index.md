@@ -392,15 +392,13 @@ function rgbaToXYZD50Text(color) {
 }
 
 function rgbaToXYZD65(color) {
-  r = rgbToLinear(r / 255);
-  g = rgbToLinear(g / 255);
-  b = rgbToLinear(b / 255);
-  const lms = multiplyByMatrix(LRGB_LMS_MATRIX, [r, g, b]).map((v) =>
-    Math.cbrt(v),
-  );
+  let { r, g, b, alpha } = color;
+  r = rgbToLinear(r / 255) * 255;
+  g = rgbToLinear(g / 255) * 255;
+  b = rgbToLinear(b / 255) * 255;
 
-  const oklab = multiplyByMatrix(LMS_LAB_MATRIX, lms);
-  return { l: oklab[0], a: oklab[1], b: oklab[2], alpha };
+  const xyz = multiplyByMatrix(LRGB_XYZ_D65_MATRIX, [r, g, b]);
+  return { x: xyz[0] / 255, y: xyz[1] / 255, z: xyz[2] / 255, alpha };
 }
 
 function rgbaToXYZD65Text(color) {
