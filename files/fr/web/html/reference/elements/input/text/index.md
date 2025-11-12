@@ -141,7 +141,7 @@ Un attribut booléen qui, lorsqu'il est présent, indique que le champ ne peut p
 
 ### `size`
 
-L'attribut `size` est un nombre positif qui indique le nombre de caractères affichés à l'écran et qui définit donc la largeur du champ. La valeur par défaut de cet attribut est 20. Étant donné que la largeur des caractères peut varier cet attribut ne permet de définir une largeur exacte mais approximative — le champ affiché peut être plus étroit ou plus large que la taille (`size`) spécifiée en fonction des caractères saisis et des paramètres de police ([`font`](/fr/docs/Web/CSS/font)) utilisés.
+L'attribut `size` est un nombre positif qui indique le nombre de caractères affichés à l'écran et qui définit donc la largeur du champ. La valeur par défaut de cet attribut est 20. Étant donné que la largeur des caractères peut varier cet attribut ne permet de définir une largeur exacte mais approximative — le champ affiché peut être plus étroit ou plus large que la taille (`size`) spécifiée en fonction des caractères saisis et des paramètres de police ([`font`](/fr/docs/Web/CSS/Reference/Properties/font)) utilisés.
 
 Cet attribut _ne_ définit _pas_ la limite du nombre de caractères saisissables dans le champ mais uniquement, et approximativement, le nombre de caractères qui peuvent être affichés à l'écran simultanément. Pour fixer une taille maximale sur la valeur du champ, on utilisera plutôt l'attribut [`maxlength`](#maxlength).
 
@@ -264,7 +264,7 @@ Les éléments `<input>` de type `text` ne possède pas de mécanisme de validat
 
 ### Un aparté sur la mise en forme
 
-Les pseudo-classes CSS [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) sont utiles pour mettre en forme les éléments qui ne respectent pas les contraintes de validation. Dans la suite de cette section, nous utiliserons cette feuille de style afin d'afficher une coche ou une croix après les valeurs valides ou invalides.
+Les pseudo-classes CSS [`:valid`](/fr/docs/Web/CSS/Reference/Selectors/:valid) et [`:invalid`](/fr/docs/Web/CSS/Reference/Selectors/:invalid) sont utiles pour mettre en forme les éléments qui ne respectent pas les contraintes de validation. Dans la suite de cette section, nous utiliserons cette feuille de style afin d'afficher une coche ou une croix après les valeurs valides ou invalides.
 
 ```css
 div {
@@ -462,7 +462,7 @@ Vous trouverez de bons exemples de champs texte utilisés en contexte dans les a
 
 ## Voir aussi
 
-- [Les formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms)
+- [Les formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\)
 - L'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) et l'interface DOM [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) qui le porte
 - [`<input type="search">`](/fr/docs/Web/HTML/Reference/Elements/input/search)
 - [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea)&nbsp;: un élément qui permet de saisir du texte sur plusieurs lignes

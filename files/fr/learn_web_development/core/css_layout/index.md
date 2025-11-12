@@ -4,8 +4,6 @@ slug: Learn_web_development/Core/CSS_layout
 original_slug: Learn/CSS/CSS_layout
 ---
 
-{{LearnSidebar}}
-
 À ce stade, les principes fondamentaux du CSS ont été vus : comment composer le texte et comment mettre en forme et manipuler les boîtes dans lesquelles se trouve votre contenu. Il est maintenant temps de regarder comment placer vos boîtes au bon endroit dans la vue et par rapport aux autres boîtes. Les prérequis nécessaires ont été examinés, nous pouvons maintenant nous plonger profondément dans la mise en page avec CSS, en regardant les différents paramètres d'affichage, les outils modernes tels que «&nbsp;flexbox&nbsp;», les grilles CSS et le positionnement, ainsi que quelques méthodes traditionnelles qu'il est encore bon de connaître.
 
 > [!CALLOUT]
@@ -21,8 +19,8 @@ original_slug: Learn/CSS/CSS_layout
 Avant de commencer ce module, vous devriez déjà :
 
 1. Connaître les bases du HTML, telles qu'exposées dans le module [Introduction au HTML.](/fr/docs/Learn_web_development/Core/Structuring_content)
-2. Être à l'aise avec les fondamentaux du CSS, telles qu'exposés dans [Introduction à CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics_beefded63afe2ba224c92b0dbe0482e175dee799d9c2519eae043aaa448c950f).
-3. Savoir [mettre en forme les boîtes.](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics)
+2. Être à l'aise avec les fondamentaux du CSS, telles qu'exposés dans [Introduction à CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started).
+3. Savoir [mettre en forme les boîtes.](/fr/docs/Learn_web_development/Core/Styling_basics)
 
 > [!NOTE]
 > Si vous travaillez sur un ordinateur, une tablette ou autre périphérique sur lequel vous ne pouvez pas créer vos propres fichiers, vous pourrez essayer (la plupart) les exemples de code dans des sites de développement en ligne tels que [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/)
@@ -32,17 +30,17 @@ Avant de commencer ce module, vous devriez déjà :
 Ces articles fourniront des instructions sur les outils et techniques de mise en page fondamentaux disponibles dans CSS. À la fin des leçons, un exercice vous permettra de vérifier la compréhension des méthodes de mise en page en créant votre propre page web.
 
 - [Introduction à la mise en page en CSS](/fr/docs/Learn_web_development/Core/CSS_layout/Introduction)
-  - : Cet article récapitule quelques-unes des fonctionnalités de mise en page CSS que nous avons déjà abordées dans les modules précédents — telles que les diverses valeurs de [`display`](/fr/docs/Web/CSS/display) — et présente certains des concepts que nous couvrirons dans de ce module.
-- [Flux normal des éléments](/fr/docs/conflicting/Learn_web_development/Core/CSS_layout/Introduction)
+  - : Cet article récapitule quelques-unes des fonctionnalités de mise en page CSS que nous avons déjà abordées dans les modules précédents — telles que les diverses valeurs de [`display`](/fr/docs/Web/CSS/Reference/Properties/display) — et présente certains des concepts que nous couvrirons dans de ce module.
+- [Flux normal des éléments](/fr/docs/Learn_web_development/Core/CSS_layout/Introduction)
   - : Les éléments se placent d'eux‑même sur les pages web selon un _flux normal_ sauf à ce que nous modifions la disposition avec CSS. Cet article explique les fondamentaux du flux normal pour permettre de comprendre comment le modifier.
 - [Flexbox](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox)
   - : [Flexbox](/fr/docs/Glossary/Flexbox) est une méthode de mise en page unidimensionnelle pour disposer les éléments en lignes ou en colonnes. Les éléments s'adaptent pour remplir de l'espace supplémentaire et se rétractent pour s'insérer dans des espaces plus petits. Cet article explique les bases de cet outil CSS.
 - [Grilles](/fr/docs/Learn_web_development/Core/CSS_layout/Grids)
   - : Les grilles CSS permettent de composer un document avec une mise en page bidimensionnelle. Elles permettent de disposer le contenu en lignes et en colonnes, et possèdent de nombreuses fonctionnalités qui simplifient la construction de mises en page complexes. Cet article vous fournira l'ensemble des informations pour commencer avec la mise en page via les grilles CSS.
 - [Le flottement](/fr/docs/Learn_web_development/Core/CSS_layout/Floats)
-  - : À l'origine destinée aux images flottantes à l'intérieur de blocs de texte, la propriété [`float`](/fr/docs/Web/CSS/float) fut pendant un moment l'un des outils les plus utilisés pour créer des mises en page sur plusieurs colonnes sur des pages web. Avec l'avènement de flexbox et des grilles, cette propriété retrouve son usage initial. Nous verrons ce qu'il en est dans cet article.
+  - : À l'origine destinée aux images flottantes à l'intérieur de blocs de texte, la propriété [`float`](/fr/docs/Web/CSS/Reference/Properties/float) fut pendant un moment l'un des outils les plus utilisés pour créer des mises en page sur plusieurs colonnes sur des pages web. Avec l'avènement de flexbox et des grilles, cette propriété retrouve son usage initial. Nous verrons ce qu'il en est dans cet article.
 - [Le positionnement](/fr/docs/Learn_web_development/Core/CSS_layout/Positioning)
-  - : Le positionnement vous permet d'extraire des éléments du flux de mise en page normal du document et de les faire se comporter différemment, par exemple en se mettant l'un sur l'autre ou en les positionnant toujours au même endroit dans la fenêtre du navigateur. Cet article indique les différentes valeurs pour la propriété CSS [`position`](/fr/docs/Web/CSS/position) et comment les utiliser.
+  - : Le positionnement vous permet d'extraire des éléments du flux de mise en page normal du document et de les faire se comporter différemment, par exemple en se mettant l'un sur l'autre ou en les positionnant toujours au même endroit dans la fenêtre du navigateur. Cet article indique les différentes valeurs pour la propriété CSS [`position`](/fr/docs/Web/CSS/Reference/Properties/position) et comment les utiliser.
 - [Disposition en colonnes](/fr/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
   - : Ce type de disposition permet d'organiser le contenu en colonnes, comme dans un journal papier. Cet article explique comment utiliser cette fonctionnalité.
 - [_Responsive design_](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)

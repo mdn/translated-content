@@ -49,7 +49,7 @@ HTML と CSS を使った作業ですでに経験したように、要素内の�
 - **テキストのレイアウトスタイル**: テキストの間隔やその他のレイアウト機能に影響するプロパティで、例えば、行間や文字間のスペースや、コンテンツボックス内でのテキストの配置方法などを操作できます。
 
 > [!NOTE]
-> 要素内のテキストはすべて単一の実体として影響を受けることに注意してください。 テキストの一部分を（{{htmlelement("span")}} や {{htmlelement("strong")}} など）適切な要素で囲んだり、[::first-letter](/ja/docs/Web/CSS/::first-letter)（要素のテキストの最初の文字を選択）、[::first-line](/ja/docs/Web/CSS/::first-line)（要素のテキストの最初の行を選択）、[::selection](/ja/docs/Web/CSS/::selection)（現在カーソルで強調表示されているテキストを選択）のようなテキスト固有の擬似要素を使用しない限り、テキストの一部分を選択して装飾することはできません。
+> 要素内のテキストはすべて単一の実体として影響を受けることに注意してください。 テキストの一部分を（{{htmlelement("span")}} や {{htmlelement("strong")}} など）適切な要素で囲んだり、[::first-letter](/ja/docs/Web/CSS/Reference/Selectors/::first-letter)（要素のテキストの最初の文字を選択）、[::first-line](/ja/docs/Web/CSS/Reference/Selectors/::first-line)（要素のテキストの最初の行を選択）、[::selection](/ja/docs/Web/CSS/Reference/Selectors/::selection)（現在カーソルで強調表示されているテキストを選択）のようなテキスト固有の擬似要素を使用しない限り、テキストの一部分を選択して装飾することはできません。
 
 ## フォント
 
@@ -421,7 +421,7 @@ text-shadow: 4px 4px 5px red;
 1. 元のテキストからの影の水平方向のオフセット。これは、ほとんどの CSS の[長さとサイズの単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#長さ)を取ることができますが、最も一般的には `px` を使用します。この値は含める必要があります。
 2. 元のテキストからの影の垂直方向のオフセット。基本的に水平方向のオフセットと同じようにふるまいますが、影を左右ではなく上下に移動する点が異なります。 この値は含める必要があります。
 3. ぼかし半径。値が大きいほど、影はより広く拡散されます。 この値が含まれていない場合、既定値は 0 になり、ぼかしは行われません。 これは、ほとんどの CSS の[長さとサイズの単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#長さ)を取ることができます。
-4. 影のベースカラー — 任意の [CSS カラー単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#colors) を取ります。含まれていない場合、既定値は [`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_keyword) であり、影の色は要素の [`color`](/ja/docs/Web/CSS/color) プロパティから導かれます。
+4. 影のベースカラー — 任意の [CSS カラー単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#colors) を取ります。含まれていない場合、既定値は [`currentcolor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) であり、影の色は要素の [`color`](/ja/docs/Web/CSS/Reference/Properties/color) プロパティから導かれます。
 
 #### 複数の影
 

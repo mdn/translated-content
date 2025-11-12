@@ -41,7 +41,7 @@ slug: Learn_web_development/Core/Text_styling/Fundamentals
 - **文本布局风格**: 作用于文本的间距以及其他布局功能的属性，比如，允许操纵行与字之间的空间，以及在内容框中，文本如何对齐。
 
 > [!NOTE]
-> 请记住，包含在元素中的文本是作为一个单一的实体。你不能将文字其中一部分选中或添加样式，如果你要这么做，那么你必须要用适合的元素来包装它们，比如 ( {{htmlelement("span")}} 或者 {{htmlelement("strong")}}), 或者使用伪元素，像[::first-letter](/zh-CN/docs/Web/CSS/::first-letter) (选中元素文本的第一个字母), [::first-line](/zh-CN/docs/Web/CSS/::first-line) (选中元素文本的第一行), 或者 [::selection](/zh-CN/docs/Web/CSS/::selection) (当前光标双击选中的文本)
+> 请记住，包含在元素中的文本是作为一个单一的实体。你不能将文字其中一部分选中或添加样式，如果你要这么做，那么你必须要用适合的元素来包装它们，比如 ( {{htmlelement("span")}} 或者 {{htmlelement("strong")}}), 或者使用伪元素，像[::first-letter](/zh-CN/docs/Web/CSS/Reference/Selectors/::first-letter) (选中元素文本的第一个字母), [::first-line](/zh-CN/docs/Web/CSS/Reference/Selectors/::first-line) (选中元素文本的第一行), 或者 [::selection](/zh-CN/docs/Web/CSS/Reference/Selectors/::selection) (当前光标双击选中的文本)
 
 ## 字体
 

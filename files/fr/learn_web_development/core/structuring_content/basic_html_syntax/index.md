@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Basic_HTML_syntax
 original_slug: Learn/HTML/Introduction_to_HTML/Getting_started
 ---
 
-{{LearnSidebar}}{{NextMenu("Apprendre/HTML/Introduction_à_HTML/The_head_metadata_in_HTML", "Apprendre/HTML/Introduction_à_HTML")}}
+{{NextMenu("Apprendre/HTML/Introduction_à_HTML/The_head_metadata_in_HTML", "Apprendre/HTML/Introduction_à_HTML")}}
 
 Cet article porte sur les fondements du HTML, pour prendre un bon départ — nous définissons les éléments, les attributs et tout autre terme important que vous avez peut‑être entendu, ainsi que leur emplacement adéquat dans le langage. Nous montrons comment un élément HTML est structuré, comment une page HTML classique est structurée et expliquons les autres importants traits de base du langage. Dans ce parcours, nous jouons avec certains HTML pour exciter votre intérêt.
 
@@ -231,7 +231,7 @@ Prenez l'exemple suivant :
 <p>sixième</p>
 ```
 
-{{htmlelement("em")}} est un élément en ligne et, comme vous pouvez le voir ci-dessous, les trois premiers éléments s'affichent sur la même ligne sans qu'il n'y ait d'espace entre eux. Par contre, {{htmlelement("p")}} est un élément de niveau bloc, donc chaque élément apparaît sur une nouvelle ligne et un espace apparaît au-dessus et au-dessous de chacun d'eux (l'espacement est dû au [style CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics_beefded63afe2ba224c92b0dbe0482e175dee799d9c2519eae043aaa448c950f) par défaut du navigateur qui s'applique aux paragraphes).
+{{htmlelement("em")}} est un élément en ligne et, comme vous pouvez le voir ci-dessous, les trois premiers éléments s'affichent sur la même ligne sans qu'il n'y ait d'espace entre eux. Par contre, {{htmlelement("p")}} est un élément de niveau bloc, donc chaque élément apparaît sur une nouvelle ligne et un espace apparaît au-dessus et au-dessous de chacun d'eux (l'espacement est dû au [style CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started) par défaut du navigateur qui s'applique aux paragraphes).
 
 {{ EmbedLiveSample('Éléments_bloc_vs_en_ligne', 700, 200) }}
 
@@ -765,6 +765,6 @@ Vous avez atteint la fin de l'article — nous espérons que vous avez appréci�
 
 ## Voir aussi
 
-- [Appliquer une couleur aux éléments HTML avec les CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
+- [Appliquer une couleur aux éléments HTML avec les CSS](/fr/docs/Web/CSS/Guides/Colors/Applying_color)
 
 {{NextMenu("Apprendre/HTML/Introduction_à_HTML/The_head_metadata_in_HTML", "Apprendre/HTML/Introduction_à_HTML")}}

@@ -54,7 +54,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 ## Note d'utilisation
 
-En général, les éléments d'une liste ordonnée s'affichent avec un [marqueur](/fr/docs/Web/CSS/::marker) précédant l'élément, tel qu'un chiffre ou une lettre.
+En général, les éléments d'une liste ordonnée s'affichent avec un [marqueur](/fr/docs/Web/CSS/Reference/Selectors/::marker) précédant l'élément, tel qu'un chiffre ou une lettre.
 
 Les éléments `<ol>` et {{HTMLElement("ul")}} (ou le synonyme {{HTMLElement("menu")}}) peuvent s'imbriquer aussi profondément que vous le souhaitez, alternant entre `<ol>` et `<ul>` (ou `<menu>`) comme vous le souhaitez.
 
@@ -256,6 +256,6 @@ Pour déterminer la liste à utiliser, essayez de modifier l'ordre des élément
 - Les autres éléments HTML relatifs aux listes&nbsp;: {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}
 - Les propriétés CSS pouvant servir à la mise en forme de l'élément `<ol>`&nbsp;:
   - {{CSSxRef("list-style")}} permet de choisir la façon dont les nombres ordinaux sont affichés,
-  - [Les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) sont utiles pour gérer les listes imbriquées complexes,
+  - [Les compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters) sont utiles pour gérer les listes imbriquées complexes,
   - {{CSSxRef("line-height")}} permet d'obtenir le même effet que l'attribut `compact` qui est déprécié,
   - {{CSSxRef("margin")}} permet de contrôler l'indentation de la liste.

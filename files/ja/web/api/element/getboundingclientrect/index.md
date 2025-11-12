@@ -27,7 +27,7 @@ getBoundingClientRect()
 
 ![要素全体を格納する最小の長方形である DOMRect オブジェクト。](element-box-diagram.png)
 
-このメソッドが返す {{domxref("DOMRect")}} オブジェクトの `width` と `height` プロパティは、内容物の幅や高さだけでなく、 `padding` と `border-width` も含まれます。標準的なボックスモデルでは、これは要素の `width` または `height` プロパティ + `padding` + `border-width` と同じになります。しかし、もし [`box-sizing: border-box`](/ja/docs/Web/CSS/box-sizing) が要素に設定されていれば、これは `width` または `height` と等しくなります。
+このメソッドが返す {{domxref("DOMRect")}} オブジェクトの `width` と `height` プロパティは、内容物の幅や高さだけでなく、 `padding` と `border-width` も含まれます。標準的なボックスモデルでは、これは要素の `width` または `height` プロパティ + `padding` + `border-width` と同じになります。しかし、もし [`box-sizing: border-box`](/ja/docs/Web/CSS/Reference/Properties/box-sizing) が要素に設定されていれば、これは `width` または `height` と等しくなります。
 
 返される値は、その要素に対して {{domxref("Element.getClientRects", "getClientRects()")}} が返す矩形の和、つまり、その要素に関連する CSS の border-box と見なすことができます。
 

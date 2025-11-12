@@ -1,0 +1,65 @@
+---
+title: セレクターでの :target 擬似クラスの使い方
+short-title: :target の使い方
+slug: Web/CSS/Guides/Selectors/Using_:target
+original_slug: Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+---
+
+URL が [URL フラグメント識別子](/ja/docs/Web/URI/Reference/Fragment#fragment)を使用して文書内の特定の箇所を指している場合、ユーザーにはそのことがわかりにくい場合があります。このガイドでは、CSS を使用して URL のターゲットに注意を向け、使いやすさを向上させる方法について説明します。
+
+## ターゲットの選択
+
+{{cssxref(":target")}} [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)は、 URL フラグメント識別子を使用して識別される文書の対象要素のスタイル設定に使用されます。例えば、 `https://developer.mozilla.org/ja/docs/Web/CSS#reference` という URL はフラグメント識別子 `#reference` を含んでいます。 HTML では、 `id` および `name` 属性が名前空間を共用しているので、識別子はどちらかの値として見つかります。したがって、この例の URL は、その文書内で id `reference` を持つ要素を参照します。
+
+URL の対象である `h2` 要素にスタイルを設定し、他の種類の要素には対象スタイルを取得する効果を与えないようにするには、[型セレクター](/ja/docs/Web/CSS/Reference/Selectors/Type_selectors)とともに `:target` 擬似クラスを使用します。
+
+```css
+h2:target {
+  outline: 2px solid;
+}
+```
+
+文書の特定のフラグメントに特化してスタイルを作成することもできます。これは URI に見られる値と同じ識別子を使用することで実現できます。つまり、 `#reference` フラグメントに背景色を追加するには、以下のように書きます。
+
+```css
+#reference:target {
+  background-color: yellow;
+}
+```
+
+## すべての要素を対象にする
+
+インテントを「ブランケット」スタイルで作成すれば、すべての対象となる要素に適用されますので、全称セレクターの代わりになります。
+
+```css
+:target {
+  color: red;
+}
+```
+
+## 例
+
+以下の例には、同じ文書内で要素を指す 5 つのリンクがあります。例えば "First" のリンクを選択すると、 `<h1 id="one">` がターゲットの要素になります。なお、ターゲット要素は可能であればブラウザーウィンドウの先頭に配置されるため、文書は新しいスクロール位置へ移動する可能性があります。
+
+```html
+<h4 id="one">…</h4>
+<p id="two">…</p>
+<div id="three">…</div>
+<a id="four">…</a> <em id="five">…</em>
+
+<a href="#one">First</a>
+<a href="#two">Second</a>
+<a href="#three">Third</a>
+<a href="#four">Fourth</a>
+<a href="#five">Fifth</a>
+```
+
+## まとめ
+
+フラグメント識別子が文書の一部を指している場合、文書のどの部分を読むことを想定しているのか、読み手が分からなくなることがあります。 URI の対象をスタイル付けすることで、読み手の混乱を縮小したり除いたりすることができます。
+
+## 関連情報
+
+- {{cssxref(":target")}}

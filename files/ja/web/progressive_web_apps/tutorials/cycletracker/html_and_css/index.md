@@ -83,7 +83,7 @@ HTML ファイルを作成し、見出しにメタデータを含め、ユーザ
 
 {{HTMLelement("head")}} コンテナー内には、ウェブアプリケーションに関する読み取り可能な情報が含まれていますが、ブラウザーのタブの見出しとして表示される `<title>` を除いて、読者には表示されません。
 
-`<head>` には、すべての[メタデータ](/ja/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)が記載されています。 `<head>` の最初の 2 つの情報として、[文字エンコード方式](/ja/docs/Glossary/Character_encoding)を定義する文字セット定義と、ビューポートの幅でページがレンダリングされるように確保し、とても小さな画面へ読み込まれた際に縮小されないようにする [viewport](/ja/docs/Web/HTML/Guides/Viewport_meta_element) {{HTMLelement("meta")}} タグを、常に記載する必要があります。
+`<head>` には、すべての[メタデータ](/ja/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)が記載されています。 `<head>` の最初の 2 つの情報として、[文字エンコード方式](/ja/docs/Glossary/Character_encoding)を定義する文字セット定義と、ビューポートの幅でページがレンダリングされるように確保し、とても小さな画面へ読み込まれた際に縮小されないようにする [viewport](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport) {{HTMLelement("meta")}} タグを、常に記載する必要があります。
 
 ```html
 <head>
@@ -243,7 +243,7 @@ li:nth-of-type(even) {
 
 {{CSSXref("background-color")}} プロパティを使用して、 `body` の背景色を薄い緑色 (`#efe`) に設定します。次に、順序なしリスト、フィールドセット、凡例では、白色 (`#fff`) の背景色を使用し、 {{CSSXref("border")}} プロパティで追加した細い実線の境界線と組み合わせています。凡例の `background-color` を上書きし、凡例とリストアイテムを濃い緑色 (`#cfc`) にします。
 
-[`:nth-of-type(even)`](/ja/docs/Web/CSS/:nth-of-type) 擬似クラス[セレクター](/ja/docs/Web/CSS/CSS_selectors)を使用して、偶数番号のリストアイテムすべてに、その親の背景色を{{CSSXref("inherit", "継承")}}させるように設定します。この場合、 `#fff` の背景色を順序なしリストから継承します。
+[`:nth-of-type(even)`](/ja/docs/Web/CSS/Reference/Selectors/:nth-of-type) 擬似クラス[セレクター](/ja/docs/Web/CSS/Guides/Selectors)を使用して、偶数番号のリストアイテムすべてに、その親の背景色を{{CSSXref("inherit", "継承")}}させるように設定します。この場合、 `#fff` の背景色を順序なしリストから継承します。
 
 ```css
 body {
@@ -275,7 +275,7 @@ li {
 }
 ```
 
-`body` の {{CSSXref("margin")}} を、 `vw` と `vh` の[ビューポート単位](/ja/docs/Web/CSS/length#ビューポートに基づく相対的な長さの単位)を使用して設定することで、少しの余白を追加し、アプリの外側の余白がビューポートのサイズに比例するようにしています。また、 `li` と `legend` にも少しの空白を追加しています。最後に、修正はできても修正されたわけではない過去のデータの配置を改善するために、 `ul` の結果セクションのフォントファミリーを `monospace` フォントに設定し、各グリフが同じ固定された幅を持つようにしています。
+`body` の {{CSSXref("margin")}} を、 `vw` と `vh` の[ビューポート単位](/ja/docs/Web/CSS/Reference/Values/length#ビューポートに基づく相対的な長さの単位)を使用して設定することで、少しの余白を追加し、アプリの外側の余白がビューポートのサイズに比例するようにしています。また、 `li` と `legend` にも少しの空白を追加しています。最後に、修正はできても修正されたわけではない過去のデータの配置を改善するために、 `ul` の結果セクションのフォントファミリーを `monospace` フォントに設定し、各グリフが同じ固定された幅を持つようにしています。
 
 ```css
 body {
@@ -318,7 +318,7 @@ li:nth-of-type(even) {
 }
 ```
 
-上記 CSS がまだよくわからない場合は、 [CSS プロパティ](/ja/docs/Glossary/Property/CSS)と[セレクター](/ja/docs/Web/CSS/CSS_selectors)を見ていくか、 [CSS スタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)モジュールを読み終えている場合は、そちらを参照してください。
+上記 CSS がまだよくわからない場合は、 [CSS プロパティ](/ja/docs/Glossary/Property/CSS)と[セレクター](/ja/docs/Web/CSS/Guides/Selectors)を見ていくか、 [CSS スタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)モジュールを読み終えている場合は、そちらを参照してください。
 
 上記をそのまま使用する場合も、上記を編集して環境設定を行う場合も、あるいは自分自身でゼロから CSS を記述する場合も、すべての CSS を新しいファイルに記載し、 [`style.css`](https://github.com/mdn/pwa-examples/blob/main/cycletracker/html_and_css/style.css) として `index.html` ファイルと同じディレクトリーに保存してください。
 

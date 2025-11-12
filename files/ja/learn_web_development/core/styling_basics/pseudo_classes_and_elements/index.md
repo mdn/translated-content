@@ -98,9 +98,9 @@ article p:first-child {
 
 すべての擬似クラスは、この同じ方法で動作します。特定の状態にある文書の一部を対象にして、 HTML にクラスを追加したかのように動作します。 MDN の他の例をいくつか見てみましょう。
 
-- [`:last-child`](/ja/docs/Web/CSS/:last-child)
-- [`:only-child`](/ja/docs/Web/CSS/:only-child)
-- [`:invalid`](/ja/docs/Web/CSS/:invalid)
+- [`:last-child`](/ja/docs/Web/CSS/Reference/Selectors/:last-child)
+- [`:only-child`](/ja/docs/Web/CSS/Reference/Selectors/:only-child)
+- [`:invalid`](/ja/docs/Web/CSS/Reference/Selectors/:invalid)
 
 > [!NOTE]
 > 擬似クラスや要素の前に要素セレクターを書かずに書くことは有効です。この例では、 `:first-child` と書けば、段落の最初の子要素だけでなく、 `<article>` 要素の最初の子要素であるすべての要素に適用されます。 `:first-child` は `*:first-child` と等価だからです。しかし、通常は複数の要素を制御したいので、より詳細度を上げる必要があります。
@@ -109,8 +109,8 @@ article p:first-child {
 
 一部の擬似クラスは、ユーザーが何らかの方法で文書を操作したときにのみ適用されます。これらの**ユーザー操作の**擬似クラスは、**動的擬似クラス**と呼ばれることもあり、ユーザーが要素を操作したときに、要素にクラスが追加されたかのように動作します。例は次のとおりです。
 
-- [`:hover`](/ja/docs/Web/CSS/:hover) — 前述の通りです。これは、ユーザーが要素（通常はリンク）の上にポインターを載せた場合にのみ適用されます。
-- [`:focus`](/ja/docs/Web/CSS/:focus) — ユーザーがキーボードコントロールを使用して要素にフォーカスした場合にのみ適用されます。
+- [`:hover`](/ja/docs/Web/CSS/Reference/Selectors/:hover) — 前述の通りです。これは、ユーザーが要素（通常はリンク）の上にポインターを載せた場合にのみ適用されます。
+- [`:focus`](/ja/docs/Web/CSS/Reference/Selectors/:focus) — ユーザーがキーボードコントロールを使用して要素にフォーカスした場合にのみ適用されます。
 
 ```html live-sample___hover
 <p><a href="">ここにカーソルを当ててください</a></p>
@@ -184,7 +184,7 @@ article p:first-child::first-line {
 
 ## ::before および ::after を使用したコンテンツの生成
 
-CSS を使用してコンテンツを文書に挿入するための [`content`](/ja/docs/Web/CSS/content) プロパティと共に使用される特別な擬似要素がいくつかあります。
+CSS を使用してコンテンツを文書に挿入するための [`content`](/ja/docs/Web/CSS/Reference/Properties/content) プロパティと共に使用される特別な擬似要素がいくつかあります。
 
 以下のライブ例のように、これらを使用してテキストの文字列を挿入できます。{{cssxref("content")}} プロパティのテキスト値を変更してみて、出力でそれを確認してください。 `::before` 擬似要素を `::after` に変更して、要素の最初ではなく最後に挿入されたテキストを表示することもできます。
 
@@ -249,7 +249,7 @@ CSS からテキストを挿入することは、ウェブ上で実に多く使�
 
 ## 関連情報
 
-- [擬似クラスリファレンス](/ja/docs/Web/CSS/Pseudo-classes)
-- [擬似要素リファレンス](/ja/docs/Web/CSS/Pseudo-elements)
+- [擬似クラスリファレンス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
+- [擬似要素リファレンス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics")}}

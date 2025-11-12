@@ -14,6 +14,6 @@ CSS **物理属性**根据物理方向或元素边界定义位置。例如：
 
 ## 参见
 
-- [CSS 定位布局](/zh-CN/docs/Web/CSS/CSS_positioned_layout)模块
-- [CSS 盒模型](/zh-CN/docs/Web/CSS/CSS_box_model)模块
-- [CSS 盒子大小设置](/zh-CN/docs/Web/CSS/CSS_box_sizing)模块
+- [CSS 定位布局](/zh-CN/docs/Web/CSS/Guides/Positioned_layout)模块
+- [CSS 盒模型](/zh-CN/docs/Web/CSS/Guides/Box_model)模块
+- [CSS 盒子大小设置](/zh-CN/docs/Web/CSS/Guides/Box_sizing)模块

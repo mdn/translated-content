@@ -3,25 +3,27 @@ title: "HTML : HyperText Markup Language"
 short-title: HTML
 slug: Web/HTML
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 04158640487c17d515de8078c9307a2f906377d0
 ---
 
-**HTML** signifie « _HyperText Markup Language_ » qu'on peut traduire par « langage de balises pour l'hypertexte ». Il est utilisé afin de créer et de représenter le contenu d'une page web et sa structure. D'autres technologies sont utilisées avec HTML pour décrire la présentation d'une page ([CSS](/fr/docs/Web/CSS)) et/ou ses fonctionnalités interactives ([JavaScript](/fr/docs/Web/JavaScript)).
+**HTML** signifie «&nbsp;_HyperText Markup Language_&nbsp;» qu'on peut traduire par «&nbsp;langage de balises pour l'hypertexte&nbsp;». Il est utilisé afin de créer et de représenter le contenu d'une page web et sa structure. D'autres technologies sont utilisées avec HTML pour décrire la présentation d'une page ([CSS](/fr/docs/Web/CSS)) et/ou ses fonctionnalités interactives ([JavaScript](/fr/docs/Web/JavaScript)).
 
-L'« hypertexte » désigne les liens qui relient les pages web entre elles, que ce soit au sein d'un même site web ou entre différents sites web. Les liens sont un aspect fondamental du Web. Ce sont eux qui forment cette « toile » (ce mot est traduit par _web_ en anglais). En téléchargeant du contenu sur l'Internet et en le reliant à des pages créées par d'autres personnes, vous devenez un participant actif du World Wide Web.
+L'«&nbsp;hypertexte&nbsp;» désigne les liens qui relient les pages web entre elles, que ce soit au sein d'un même site web ou entre différents sites web. Les liens sont un aspect fondamental du Web. Ce sont eux qui forment cette «&nbsp;toile&nbsp;» (ce mot est traduit par _web_ en anglais). En téléchargeant du contenu sur l'Internet et en le reliant à des pages créées par d'autres personnes, vous devenez un participant actif du World Wide Web.
 
-Le langage HTML utilise des « balises » pour annoter du texte, des images et d'autres contenus afin de les afficher dans un navigateur web. Le balisage HTML comprend des « éléments » spéciaux tels que {{HTMLElement("head")}}, {{HTMLElement("title")}}, {{HTMLElement("body")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("p")}}, {{HTMLElement("div")}}, {{HTMLElement("span")}}, {{HTMLElement("img")}}, {{HTMLElement("aside")}}, {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("datalist")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("nav")}}, {{HTMLElement("search")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("video")}}, {{HTMLElement("ul")}}, {{HTMLElement("ol")}}, {{HTMLElement("li")}} et bien d'autres.
+Le langage HTML utilise des «&nbsp;balises&nbsp;» pour annoter du texte, des images et d'autres contenus afin de les afficher dans un navigateur web. Le balisage HTML comprend des «&nbsp;éléments&nbsp;» spéciaux tels que {{HTMLElement("head")}}, {{HTMLElement("title")}}, {{HTMLElement("body")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("p")}}, {{HTMLElement("div")}}, {{HTMLElement("span")}}, {{HTMLElement("img")}}, {{HTMLElement("aside")}}, {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("datalist")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("nav")}}, {{HTMLElement("search")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("video")}}, {{HTMLElement("ul")}}, {{HTMLElement("ol")}}, {{HTMLElement("li")}} et bien d'autres.
 
 En HTML, les balises sont insensibles à la casse et peuvent aussi bien être écrites en minuscules, en majuscules voire avec un mélange des deux. Autrement dit, la balise `<title>` pourrait très bien être écrite comme `<Title>`, `<TiTle>` ou d'une autre façon.
 
 Les articles suivants fournissent des éléments de référence utiles au développement web.
 
-## Tutoriels pour les débutants
+## Tutoriels pour les débutant·e·s
+
+Nos [modules de base pour apprendre le développement web](/fr/docs/Learn_web_development/Core) proposent des tutoriels modernes et à jour couvrant les fondamentaux de HTML.
 
 - [Votre premier site web&nbsp;: création du contenu](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)
   - : Cet article propose une brève introduction à ce qu'est HTML et à son utilisation, destiné aux personnes totalement débutantes en développement web.
 - [Structurer le contenu avec HTML](/fr/docs/Learn_web_development/Core/Structuring_content)
-  - : Le module HTML de notre section [Apprendre le développement web](/fr/docs/Learn_web_development) enseigne toutes les bases de HTML depuis le début.
+  - : Ce module aborde les bases du langage HTML, puis les domaines clés comme la structure des documents, les liens, les listes, les images, les formulaires et plus encore.
 
 ## Guides
 
@@ -61,5 +63,5 @@ Les [guides HTML](/fr/docs/Web/HTML/Guides) vous aident à construire avec HTML 
 
 ## Sujets associés
 
-- [Appliquer de la couleur aux éléments HTML avec CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
+- [Appliquer de la couleur aux éléments HTML avec CSS](/fr/docs/Web/CSS/Guides/Colors/Applying_color)
   - : Cet article présente la plupart des façons d'utiliser CSS pour ajouter de la couleur au contenu HTML, en listant les parties des documents HTML qui peuvent être colorées et les propriétés CSS à utiliser.

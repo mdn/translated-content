@@ -3858,37 +3858,11 @@
       "Channy"
     ]
   },
-  "Web/API/Document_Object_Model/Examples": {
-    "modified": "2020-05-26T14:45:03.340Z",
-    "contributors": [
-      "alattalatta",
-      "chrisdavidmills",
-      "jswisher",
-      "jsx",
-      "Netaras"
-    ]
-  },
-  "Web/API/Document_Object_Model/Introduction": {
-    "modified": "2020-02-10T04:12:58.179Z",
-    "contributors": [
-      "sungik-choi",
-      "jswisher",
-      "cs09g",
-      "2circumflex",
-      "dakeshi"
-    ]
-  },
-  "Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors": {
+  "Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree": {
     "modified": "2019-05-29T17:36:17.250Z",
     "contributors": [
       "jswisher",
       "alattalatta"
-    ]
-  },
-  "Web/API/Document_Object_Model/Using_the_Document_Object_Model": {
-    "modified": "2020-03-10T10:48:51.010Z",
-    "contributors": [
-      "kimploo"
     ]
   },
   "Web/API/DragEvent": {
@@ -7006,239 +6980,6 @@
       "Channy"
     ]
   },
-  "Web/CSS/::after": {
-    "modified": "2020-10-15T21:37:38.967Z",
-    "contributors": [
-      "alattalatta",
-      "samee",
-      "DeadIntegral",
-      "pelly_ryu",
-      "kuil09"
-    ]
-  },
-  "Web/CSS/::before": {
-    "modified": "2020-10-15T22:26:07.120Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/::placeholder": {
-    "modified": "2020-10-15T22:33:58.412Z",
-    "contributors": [
-      "dusehrla6432"
-    ]
-  },
-  "Web/CSS/:active": {
-    "modified": "2020-10-15T21:55:14.047Z",
-    "contributors": [
-      "alattalatta",
-      "chatoo2412",
-      "LeeJunyeol"
-    ]
-  },
-  "Web/CSS/:checked": {
-    "modified": "2020-10-15T22:28:37.272Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/:default": {
-    "modified": "2020-10-15T22:32:39.937Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/:defined": {
-    "modified": "2020-10-15T22:32:39.359Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/:disabled": {
-    "modified": "2020-10-15T22:27:45.878Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/:enabled": {
-    "modified": "2020-10-15T22:27:45.360Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/:first": {
-    "modified": "2020-10-15T21:46:53.912Z",
-    "contributors": [
-      "alattalatta",
-      "Abbey100"
-    ]
-  },
-  "Web/CSS/:first-child": {
-    "modified": "2020-10-15T21:49:44.106Z",
-    "contributors": [
-      "alattalatta",
-      "ShihwanKim"
-    ]
-  },
-  "Web/CSS/:first-of-type": {
-    "modified": "2020-10-15T22:32:33.323Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/:focus": {
-    "modified": "2020-10-15T22:32:53.126Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/:focus-within": {
-    "modified": "2020-10-15T22:04:40.850Z",
-    "contributors": [
-      "alattalatta",
-      "dragmove"
-    ]
-  },
-  "Web/CSS/:fullscreen": {
-    "modified": "2020-10-15T22:33:29.162Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/:hover": {
-    "modified": "2020-10-15T22:18:47.333Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/:link": {
-    "modified": "2020-10-15T22:18:48.344Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/:not": {
-    "modified": "2020-10-15T21:46:19.378Z",
-    "contributors": [
-      "alattalatta",
-      "Netaras"
-    ]
-  },
-  "Web/CSS/:nth-child": {
-    "modified": "2020-10-15T21:53:08.514Z",
-    "contributors": [
-      "alattalatta",
-      "kewlbear"
-    ]
-  },
-  "Web/CSS/:root": {
-    "modified": "2020-10-15T22:26:34.640Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/:visited": {
-    "modified": "2020-10-15T22:15:47.141Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/@charset": {
-    "modified": "2020-10-15T21:45:47.461Z",
-    "contributors": [
-      "alattalatta",
-      "Netaras"
-    ]
-  },
-  "Web/CSS/@font-face": {
-    "modified": "2019-03-23T23:36:07.738Z",
-    "contributors": [
-      "fscholz",
-      "teoli",
-      "mirinae312"
-    ]
-  },
-  "Web/CSS/@font-face/font-display": {
-    "modified": "2020-10-15T22:30:54.274Z",
-    "contributors": [
-      "DeadIntegral"
-    ]
-  },
-  "Web/CSS/@import": {
-    "modified": "2020-10-15T21:45:49.357Z",
-    "contributors": [
-      "alattalatta",
-      "Netaras"
-    ]
-  },
-  "Web/CSS/@keyframes": {
-    "modified": "2020-10-15T21:48:02.411Z",
-    "contributors": [
-      "alattalatta",
-      "joshua1988"
-    ]
-  },
-  "Web/CSS/@media": {
-    "modified": "2020-10-15T21:46:08.753Z",
-    "contributors": [
-      "alattalatta",
-      "Netaras"
-    ]
-  },
-  "Web/CSS/@media/prefers-color-scheme": {
-    "modified": "2020-10-15T22:16:57.718Z",
-    "contributors": [
-      "lifeisnovel"
-    ]
-  },
-  "Web/CSS/@namespace": {
-    "modified": "2020-10-15T21:45:48.598Z",
-    "contributors": [
-      "alattalatta",
-      "Netaras"
-    ]
-  },
-  "Web/CSS/@page": {
-    "modified": "2020-10-15T21:45:49.203Z",
-    "contributors": [
-      "alattalatta",
-      "Netaras"
-    ]
-  },
-  "Web/CSS/@supports": {
-    "modified": "2020-10-15T21:39:41.961Z",
-    "contributors": [
-      "alattalatta",
-      "fscholz",
-      "epicsaga"
-    ]
-  },
-  "Web/CSS/Attribute_selectors": {
-    "modified": "2020-10-15T21:50:30.795Z",
-    "contributors": [
-      "alattalatta",
-      "young-gratia"
-    ]
-  },
-  "Web/CSS/CSS_Values_and_Units": {
-    "modified": "2020-11-29T04:33:10.671Z",
-    "contributors": [
-      "alanhchoi"
-    ]
-  },
-  "Web/CSS/CSS_Values_and_Units/CSS_data_types": {
-    "modified": "2020-08-06T04:37:09.952Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/CSS_Values_and_Units/Value_definition_syntax": {
-    "modified": "2020-08-14T12:47:43.592Z",
-    "contributors": [
-      "alattalatta",
-      "ChanMyeong"
-    ]
-  },
   "Web/CSS/CSS_animated_properties": {
     "modified": "2019-03-23T22:32:22.661Z",
     "contributors": [
@@ -7252,232 +6993,10 @@
       "MexieAndCo"
     ]
   },
-  "Web/CSS/CSS_animations/Using_CSS_animations": {
-    "modified": "2019-03-23T23:37:34.998Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "jaemin_jo"
-    ]
-  },
-  "Web/CSS/CSS_backgrounds_and_borders": {
-    "modified": "2020-08-10T06:40:27.369Z",
-    "contributors": [
-      "alattalatta",
-      "Sheppy"
-    ]
-  },
-  "Web/CSS/CSS_backgrounds_and_borders/Border-image_generator": {
-    "modified": "2019-03-20T10:30:55.489Z",
-    "contributors": [
-      "alattalatta",
-      "young-gratia"
-    ]
-  },
-  "Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator": {
-    "modified": "2019-03-20T10:29:25.952Z",
-    "contributors": [
-      "alattalatta",
-      "young-gratia"
-    ]
-  },
-  "Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator": {
-    "modified": "2019-03-20T10:32:14.015Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images": {
-    "modified": "2019-04-08T10:28:17.719Z",
-    "contributors": [
-      "alattalatta",
-      "jyqry"
-    ]
-  },
-  "Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds": {
-    "modified": "2019-05-02T02:39:15.426Z",
-    "contributors": [
-      "alattalatta",
-      "yangtaeho"
-    ]
-  },
-  "Web/CSS/CSS_basic_user_interface": {
-    "modified": "2020-08-22T11:32:19.551Z",
-    "contributors": [
-      "alattalatta",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/CSS_box_model": {
-    "modified": "2019-04-11T11:38:24.806Z",
-    "contributors": [
-      "alattalatta",
-      "Netaras",
-      "Sebastianz"
-    ]
-  },
-  "Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model": {
-    "modified": "2020-08-04T05:49:04.204Z",
-    "contributors": [
-      "alattalatta",
-      "KwangseokWon",
-      "Netaras"
-    ]
-  },
-  "Web/CSS/CSS_box_model/Mastering_margin_collapsing": {
-    "modified": "2020-08-04T05:48:58.017Z",
-    "contributors": [
-      "alattalatta",
-      "ahnjungho",
-      "Netaras"
-    ]
-  },
-  "Web/CSS/CSS_cascade/Inheritance": {
-    "modified": "2019-03-18T21:13:04.690Z",
-    "contributors": [
-      "alattalatta",
-      "Netaras"
-    ]
-  },
-  "Web/CSS/CSS_cascade/Shorthand_properties": {
-    "modified": "2020-08-19T13:35:44.001Z",
-    "contributors": [
-      "alattalatta",
-      "Netaras"
-    ]
-  },
-  "Web/CSS/CSS_cascade/Specificity": {
-    "modified": "2020-03-13T15:56:02.613Z",
-    "contributors": [
-      "EatChangmyeong",
-      "alattalatta",
-      "Netaras"
-    ]
-  },
-  "Web/CSS/CSS_cascade/Value_processing": {
-    "modified": "2020-01-07T13:09:25.646Z",
-    "contributors": [
-      "alattalatta",
-      "Netaras",
-      "teoli",
-      "Pastelgrim"
-    ]
-  },
-  "Web/CSS/CSS_cascading_variables": {
-    "modified": "2019-11-14T21:10:56.947Z",
-    "contributors": [
-      "so4869"
-    ]
-  },
-  "Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties": {
-    "modified": "2020-11-10T06:07:11.739Z",
-    "contributors": [
-      "hKa2020",
-      "alattalatta",
-      "chrisdavidmills",
-      "springday1023",
-      "stitchworkingonthecode"
-    ]
-  },
-  "Web/CSS/CSS_colors": {
-    "modified": "2020-10-15T22:04:24.231Z",
-    "contributors": [
-      "alattalatta",
-      "hyeran2"
-    ]
-  },
   "Web/CSS/CSS_colors/Applying_color": {
     "modified": "2020-01-20T08:56:57.750Z",
     "contributors": [
       "alattalatta"
-    ]
-  },
-  "Web/CSS/CSS_colors/Color_format_converter": {
-    "modified": "2019-03-18T21:24:14.300Z",
-    "contributors": [
-      "darim"
-    ]
-  },
-  "Web/CSS/CSS_conditional_rules": {
-    "modified": "2019-04-26T08:57:56.325Z",
-    "contributors": [
-      "alattalatta",
-      "Netaras"
-    ]
-  },
-  "Web/CSS/CSS_containment": {
-    "modified": "2020-10-16T09:12:34.130Z",
-    "contributors": [
-      "DeadIntegral"
-    ]
-  },
-  "Web/CSS/CSS_counter_styles/Using_CSS_counters": {
-    "modified": "2020-06-15T04:03:26.893Z",
-    "contributors": [
-      "lee.juyoung.1978",
-      "citrus.alice"
-    ]
-  },
-  "Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow": {
-    "modified": "2019-09-26T08:28:44.702Z",
-    "contributors": [
-      "Hwan-Woong-Lee"
-    ]
-  },
-  "Web/CSS/CSS_display/Containing_block": {
-    "modified": "2020-01-07T10:38:47.261Z",
-    "contributors": [
-      "alattalatta",
-      "nyxchung"
-    ]
-  },
-  "Web/CSS/CSS_display/Flow_layout": {
-    "modified": "2020-10-25T09:14:50.404Z",
-    "contributors": [
-      "DeadIntegral",
-      "Hwan-Woong-Lee",
-      "cybaj"
-    ]
-  },
-  "Web/CSS/CSS_display/Flow_layout_and_overflow": {
-    "modified": "2020-03-10T09:52:12.477Z",
-    "contributors": [
-      "EricByHPHK",
-      "Hwan-Woong-Lee"
-    ]
-  },
-  "Web/CSS/CSS_display/Flow_layout_and_writing_modes": {
-    "modified": "2019-09-17T21:10:09.773Z",
-    "contributors": [
-      "Hwan-Woong-Lee"
-    ]
-  },
-  "Web/CSS/CSS_display/In_flow_and_out_of_flow": {
-    "modified": "2019-09-24T15:45:35.513Z",
-    "contributors": [
-      "Hwan-Woong-Lee"
-    ]
-  },
-  "Web/CSS/CSS_display/Introduction_to_formatting_contexts": {
-    "modified": "2019-09-25T06:26:34.609Z",
-    "contributors": [
-      "Hwan-Woong-Lee",
-      "cybaj"
-    ]
-  },
-  "Web/CSS/CSS_filter_effects": {
-    "modified": "2020-10-15T22:33:03.965Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/CSS_flexible_box_layout": {
-    "modified": "2020-08-04T05:49:54.665Z",
-    "contributors": [
-      "alattalatta",
-      "beowolf9",
-      "ljb7977",
-      "Netaras"
     ]
   },
   "Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container": {
@@ -7488,7 +7007,244 @@
       "beowolf9"
     ]
   },
-  "Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox": {
+  "Web/CSS/CSS_transforms": {
+    "modified": "2019-05-25T01:16:56.674Z",
+    "contributors": [
+      "alattalatta",
+      "Sebastianz",
+      "fscholz"
+    ]
+  },
+  "Web/CSS/Cascade": {
+    "modified": "2019-03-23T22:13:24.690Z",
+    "contributors": [
+      "alattalatta",
+      "hoony"
+    ]
+  },
+  "Web/CSS/Guides/Animations/Using": {
+    "modified": "2019-03-23T23:37:34.998Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "jaemin_jo"
+    ]
+  },
+  "Web/CSS/Guides/Backgrounds_and_borders": {
+    "modified": "2020-08-10T06:40:27.369Z",
+    "contributors": [
+      "alattalatta",
+      "Sheppy"
+    ]
+  },
+  "Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator": {
+    "modified": "2019-03-20T10:30:55.489Z",
+    "contributors": [
+      "alattalatta",
+      "young-gratia"
+    ]
+  },
+  "Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator": {
+    "modified": "2019-03-20T10:29:25.952Z",
+    "contributors": [
+      "alattalatta",
+      "young-gratia"
+    ]
+  },
+  "Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator": {
+    "modified": "2019-03-20T10:32:14.015Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images": {
+    "modified": "2019-04-08T10:28:17.719Z",
+    "contributors": [
+      "alattalatta",
+      "jyqry"
+    ]
+  },
+  "Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds": {
+    "modified": "2019-05-02T02:39:15.426Z",
+    "contributors": [
+      "alattalatta",
+      "yangtaeho"
+    ]
+  },
+  "Web/CSS/Guides/Basic_user_interface": {
+    "modified": "2020-08-22T11:32:19.551Z",
+    "contributors": [
+      "alattalatta",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Guides/Box_model": {
+    "modified": "2019-04-11T11:38:24.806Z",
+    "contributors": [
+      "alattalatta",
+      "Netaras",
+      "Sebastianz"
+    ]
+  },
+  "Web/CSS/Guides/Box_model/Introduction": {
+    "modified": "2020-08-04T05:49:04.204Z",
+    "contributors": [
+      "alattalatta",
+      "KwangseokWon",
+      "Netaras"
+    ]
+  },
+  "Web/CSS/Guides/Box_model/Margin_collapsing": {
+    "modified": "2020-08-04T05:48:58.017Z",
+    "contributors": [
+      "alattalatta",
+      "ahnjungho",
+      "Netaras"
+    ]
+  },
+  "Web/CSS/Guides/Cascade/Inheritance": {
+    "modified": "2019-03-18T21:13:04.690Z",
+    "contributors": [
+      "alattalatta",
+      "Netaras"
+    ]
+  },
+  "Web/CSS/Guides/Cascade/Property_value_processing": {
+    "modified": "2020-01-07T13:09:25.646Z",
+    "contributors": [
+      "alattalatta",
+      "Netaras",
+      "teoli",
+      "Pastelgrim"
+    ]
+  },
+  "Web/CSS/Guides/Cascade/Shorthand_properties": {
+    "modified": "2020-08-19T13:35:44.001Z",
+    "contributors": [
+      "alattalatta",
+      "Netaras"
+    ]
+  },
+  "Web/CSS/Guides/Cascade/Specificity": {
+    "modified": "2020-03-13T15:56:02.613Z",
+    "contributors": [
+      "EatChangmyeong",
+      "alattalatta",
+      "Netaras"
+    ]
+  },
+  "Web/CSS/Guides/Cascading_variables": {
+    "modified": "2019-11-14T21:10:56.947Z",
+    "contributors": [
+      "so4869"
+    ]
+  },
+  "Web/CSS/Guides/Cascading_variables/Using_custom_properties": {
+    "modified": "2020-11-10T06:07:11.739Z",
+    "contributors": [
+      "hKa2020",
+      "alattalatta",
+      "chrisdavidmills",
+      "springday1023",
+      "stitchworkingonthecode"
+    ]
+  },
+  "Web/CSS/Guides/Colors": {
+    "modified": "2020-10-15T22:04:24.231Z",
+    "contributors": [
+      "alattalatta",
+      "hyeran2"
+    ]
+  },
+  "Web/CSS/Guides/Colors/Color_format_converter": {
+    "modified": "2019-03-18T21:24:14.300Z",
+    "contributors": [
+      "darim"
+    ]
+  },
+  "Web/CSS/Guides/Conditional_rules": {
+    "modified": "2019-04-26T08:57:56.325Z",
+    "contributors": [
+      "alattalatta",
+      "Netaras"
+    ]
+  },
+  "Web/CSS/Guides/Containment": {
+    "modified": "2020-10-16T09:12:34.130Z",
+    "contributors": [
+      "DeadIntegral"
+    ]
+  },
+  "Web/CSS/Guides/Counter_styles/Using_counters": {
+    "modified": "2020-06-15T04:03:26.893Z",
+    "contributors": [
+      "lee.juyoung.1978",
+      "citrus.alice"
+    ]
+  },
+  "Web/CSS/Guides/Display/Block_and_inline_layout": {
+    "modified": "2019-09-26T08:28:44.702Z",
+    "contributors": [
+      "Hwan-Woong-Lee"
+    ]
+  },
+  "Web/CSS/Guides/Display/Containing_block": {
+    "modified": "2020-01-07T10:38:47.261Z",
+    "contributors": [
+      "alattalatta",
+      "nyxchung"
+    ]
+  },
+  "Web/CSS/Guides/Display/Flow_layout": {
+    "modified": "2020-10-25T09:14:50.404Z",
+    "contributors": [
+      "DeadIntegral",
+      "Hwan-Woong-Lee",
+      "cybaj"
+    ]
+  },
+  "Web/CSS/Guides/Display/Flow_layout_and_overflow": {
+    "modified": "2020-03-10T09:52:12.477Z",
+    "contributors": [
+      "EricByHPHK",
+      "Hwan-Woong-Lee"
+    ]
+  },
+  "Web/CSS/Guides/Display/Flow_layout_and_writing_modes": {
+    "modified": "2019-09-17T21:10:09.773Z",
+    "contributors": [
+      "Hwan-Woong-Lee"
+    ]
+  },
+  "Web/CSS/Guides/Display/Formatting_contexts": {
+    "modified": "2019-09-25T06:26:34.609Z",
+    "contributors": [
+      "Hwan-Woong-Lee",
+      "cybaj"
+    ]
+  },
+  "Web/CSS/Guides/Display/In_flow_and_out_of_flow": {
+    "modified": "2019-09-24T15:45:35.513Z",
+    "contributors": [
+      "Hwan-Woong-Lee"
+    ]
+  },
+  "Web/CSS/Guides/Filter_effects": {
+    "modified": "2020-10-15T22:33:03.965Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Guides/Flexible_box_layout": {
+    "modified": "2020-08-04T05:49:54.665Z",
+    "contributors": [
+      "alattalatta",
+      "beowolf9",
+      "ljb7977",
+      "Netaras"
+    ]
+  },
+  "Web/CSS/Guides/Flexible_box_layout/Basic_concepts": {
     "modified": "2019-03-18T20:55:20.567Z",
     "contributors": [
       "5JJ",
@@ -7500,57 +7256,41 @@
       "Latera"
     ]
   },
-  "Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox": {
+  "Web/CSS/Guides/Flexible_box_layout/Use_cases": {
     "modified": "2019-10-04T18:40:14.389Z",
     "contributors": [
       "Hwan-Woong-Lee"
     ]
   },
-  "Web/CSS/CSS_fonts": {
+  "Web/CSS/Guides/Fonts": {
     "modified": "2019-04-25T10:51:28.269Z",
     "contributors": [
       "alattalatta",
       "Netaras"
     ]
   },
-  "Web/CSS/CSS_generated_content": {
+  "Web/CSS/Guides/Generated_content": {
     "modified": "2019-04-24T12:43:29.904Z",
     "contributors": [
       "alattalatta",
       "Netaras"
     ]
   },
-  "Web/CSS/CSS_grid_layout": {
+  "Web/CSS/Guides/Grid_layout": {
     "modified": "2019-03-23T22:19:44.989Z",
     "contributors": [
       "miname",
       "techhtml"
     ]
   },
-  "Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout": {
+  "Web/CSS/Guides/Grid_layout/Basic_concepts": {
     "modified": "2019-10-10T16:32:21.410Z",
     "contributors": [
       "alattalatta",
       "dbwodlf3"
     ]
   },
-  "Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement": {
-    "modified": "2019-03-23T22:01:04.533Z",
-    "contributors": [
-      "chrisdavidmills",
-      "dbwodlf3",
-      "miname"
-    ]
-  },
-  "Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines": {
-    "modified": "2019-03-23T22:00:52.287Z",
-    "contributors": [
-      "chrisdavidmills",
-      "dbwodlf3",
-      "miname"
-    ]
-  },
-  "Web/CSS/CSS_grid_layout/Grid_template_areas": {
+  "Web/CSS/Guides/Grid_layout/Grid_template_areas": {
     "modified": "2019-10-10T16:54:35.246Z",
     "contributors": [
       "chrisdavidmills",
@@ -7558,7 +7298,23 @@
       "miname"
     ]
   },
-  "Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods": {
+  "Web/CSS/Guides/Grid_layout/Line-based_placement": {
+    "modified": "2019-03-23T22:01:04.533Z",
+    "contributors": [
+      "chrisdavidmills",
+      "dbwodlf3",
+      "miname"
+    ]
+  },
+  "Web/CSS/Guides/Grid_layout/Named_grid_lines": {
+    "modified": "2019-03-23T22:00:52.287Z",
+    "contributors": [
+      "chrisdavidmills",
+      "dbwodlf3",
+      "miname"
+    ]
+  },
+  "Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods": {
     "modified": "2019-03-23T22:01:05.023Z",
     "contributors": [
       "chrisdavidmills",
@@ -7567,14 +7323,14 @@
       "sarojaba"
     ]
   },
-  "Web/CSS/CSS_images": {
+  "Web/CSS/Guides/Images": {
     "modified": "2020-08-05T10:48:34.252Z",
     "contributors": [
       "alattalatta",
       "Netaras"
     ]
   },
-  "Web/CSS/CSS_images/Implementing_image_sprites_in_CSS": {
+  "Web/CSS/Guides/Images/Implementing_image_sprites": {
     "modified": "2020-08-05T10:28:13.719Z",
     "contributors": [
       "alattalatta",
@@ -7582,7 +7338,7 @@
       "ingee.kim"
     ]
   },
-  "Web/CSS/CSS_images/Replaced_element_properties": {
+  "Web/CSS/Guides/Images/Replaced_element_properties": {
     "modified": "2020-08-05T01:03:55.719Z",
     "contributors": [
       "alattalatta",
@@ -7592,21 +7348,21 @@
       "Netaras"
     ]
   },
-  "Web/CSS/CSS_images/Using_CSS_gradients": {
+  "Web/CSS/Guides/Images/Using_gradients": {
     "modified": "2020-08-05T10:27:39.634Z",
     "contributors": [
       "alattalatta",
       "albertkang1004"
     ]
   },
-  "Web/CSS/CSS_lists": {
+  "Web/CSS/Guides/Lists": {
     "modified": "2019-04-24T12:48:26.621Z",
     "contributors": [
       "alattalatta",
       "Netaras"
     ]
   },
-  "Web/CSS/CSS_lists/Consistent_list_indentation": {
+  "Web/CSS/Guides/Lists/Indenting": {
     "modified": "2019-03-18T21:13:02.657Z",
     "contributors": [
       "alattalatta",
@@ -7614,28 +7370,28 @@
       "Ioseph"
     ]
   },
-  "Web/CSS/CSS_logical_properties_and_values": {
+  "Web/CSS/Guides/Logical_properties_and_values": {
     "modified": "2019-04-25T12:25:18.617Z",
     "contributors": [
       "alattalatta",
       "Netaras"
     ]
   },
-  "Web/CSS/CSS_masking": {
+  "Web/CSS/Guides/Masking": {
     "modified": "2019-04-26T08:55:40.990Z",
     "contributors": [
       "alattalatta",
       "Netaras"
     ]
   },
-  "Web/CSS/CSS_media_queries": {
+  "Web/CSS/Guides/Media_queries": {
     "modified": "2019-05-30T11:03:40.194Z",
     "contributors": [
       "alattalatta",
       "Seonghui"
     ]
   },
-  "Web/CSS/CSS_media_queries/Using_media_queries": {
+  "Web/CSS/Guides/Media_queries/Using": {
     "modified": "2020-11-10T11:07:52.526Z",
     "contributors": [
       "hKa2020",
@@ -7652,20 +7408,20 @@
       "jhonghee"
     ]
   },
-  "Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility": {
+  "Web/CSS/Guides/Media_queries/Using_for_accessibility": {
     "modified": "2019-04-29T00:53:50.949Z",
     "contributors": [
       "qwqw312x"
     ]
   },
-  "Web/CSS/CSS_multicol_layout": {
+  "Web/CSS/Guides/Multicol_layout": {
     "modified": "2019-04-11T11:34:08.500Z",
     "contributors": [
       "alattalatta",
       "Netaras"
     ]
   },
-  "Web/CSS/CSS_multicol_layout/Using_multicol_layouts": {
+  "Web/CSS/Guides/Multicol_layout/Using": {
     "modified": "2019-10-11T18:26:42.559Z",
     "contributors": [
       "escattone",
@@ -7674,28 +7430,28 @@
       "Ioseph"
     ]
   },
-  "Web/CSS/CSS_namespaces": {
+  "Web/CSS/Guides/Namespaces": {
     "modified": "2019-04-26T08:57:19.875Z",
     "contributors": [
       "alattalatta",
       "Netaras"
     ]
   },
-  "Web/CSS/CSS_paged_media": {
+  "Web/CSS/Guides/Paged_media": {
     "modified": "2019-04-24T12:50:22.680Z",
     "contributors": [
       "alattalatta",
       "Netaras"
     ]
   },
-  "Web/CSS/CSS_positioned_layout": {
+  "Web/CSS/Guides/Positioned_layout": {
     "modified": "2019-04-21T01:25:04.626Z",
     "contributors": [
       "alattalatta",
       "Netaras"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Stacking_context": {
+  "Web/CSS/Guides/Positioned_layout/Stacking_context": {
     "modified": "2020-11-23T02:40:41.896Z",
     "contributors": [
       "degurii",
@@ -7706,7 +7462,7 @@
       "jaemin_jo"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1": {
+  "Web/CSS/Guides/Positioned_layout/Stacking_context/Example_1": {
     "modified": "2020-02-05T05:13:02.108Z",
     "contributors": [
       "SphinxKnight",
@@ -7714,7 +7470,7 @@
       "jaemin_jo"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2": {
+  "Web/CSS/Guides/Positioned_layout/Stacking_context/Example_2": {
     "modified": "2020-02-05T05:13:02.229Z",
     "contributors": [
       "SphinxKnight",
@@ -7722,7 +7478,7 @@
       "jaemin_jo"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3": {
+  "Web/CSS/Guides/Positioned_layout/Stacking_context/Example_3": {
     "modified": "2020-02-05T05:13:02.358Z",
     "contributors": [
       "SphinxKnight",
@@ -7730,7 +7486,7 @@
       "jaemin_jo"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Stacking_floating_elements": {
+  "Web/CSS/Guides/Positioned_layout/Stacking_floating_elements": {
     "modified": "2020-02-05T05:13:01.825Z",
     "contributors": [
       "SphinxKnight",
@@ -7738,7 +7494,7 @@
       "jaemin_jo"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Stacking_without_z-index": {
+  "Web/CSS/Guides/Positioned_layout/Stacking_without_z-index": {
     "modified": "2020-02-05T05:13:01.179Z",
     "contributors": [
       "SphinxKnight",
@@ -7746,7 +7502,7 @@
       "jaemin_jo"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index": {
+  "Web/CSS/Guides/Positioned_layout/Understanding_z-index": {
     "modified": "2020-02-05T05:13:01.140Z",
     "contributors": [
       "SphinxKnight",
@@ -7754,7 +7510,7 @@
       "jaemin_jo"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Using_z-index": {
+  "Web/CSS/Guides/Positioned_layout/Using_z-index": {
     "modified": "2020-02-05T05:13:01.975Z",
     "contributors": [
       "SphinxKnight",
@@ -7762,27 +7518,27 @@
       "jaemin_jo"
     ]
   },
-  "Web/CSS/CSS_ruby_layout": {
+  "Web/CSS/Guides/Ruby_layout": {
     "modified": "2019-04-25T10:56:54.378Z",
     "contributors": [
       "alattalatta",
       "Netaras"
     ]
   },
-  "Web/CSS/CSS_scroll_snap": {
+  "Web/CSS/Guides/Scroll_snap": {
     "modified": "2019-04-14T23:39:58.448Z",
     "contributors": [
       "alattalatta",
       "Netaras"
     ]
   },
-  "Web/CSS/CSS_selectors": {
+  "Web/CSS/Guides/Selectors": {
     "modified": "2020-08-22T11:28:21.089Z",
     "contributors": [
       "alattalatta"
     ]
   },
-  "Web/CSS/CSS_shapes": {
+  "Web/CSS/Guides/Shapes": {
     "modified": "2019-04-25T10:46:18.309Z",
     "contributors": [
       "alattalatta",
@@ -7790,14 +7546,14 @@
       "Netaras"
     ]
   },
-  "Web/CSS/CSS_syntax": {
+  "Web/CSS/Guides/Syntax": {
     "modified": "2019-04-25T11:04:17.063Z",
     "contributors": [
       "alattalatta",
       "Netaras"
     ]
   },
-  "Web/CSS/CSS_syntax/At-rule": {
+  "Web/CSS/Guides/Syntax/At-rules": {
     "modified": "2019-03-18T20:41:39.547Z",
     "contributors": [
       "alattalatta",
@@ -7806,13 +7562,13 @@
       "Netaras"
     ]
   },
-  "Web/CSS/CSS_syntax/Comments": {
+  "Web/CSS/Guides/Syntax/Comments": {
     "modified": "2019-12-27T06:34:39.339Z",
     "contributors": [
       "alattalatta"
     ]
   },
-  "Web/CSS/CSS_syntax/Syntax": {
+  "Web/CSS/Guides/Syntax/Introduction": {
     "modified": "2020-08-04T07:19:16.823Z",
     "contributors": [
       "alattalatta",
@@ -7820,36 +7576,28 @@
       "Netaras"
     ]
   },
-  "Web/CSS/CSS_table": {
+  "Web/CSS/Guides/Table": {
     "modified": "2020-08-14T07:19:40.233Z",
     "contributors": [
       "alattalatta",
       "Netaras"
     ]
   },
-  "Web/CSS/CSS_text": {
+  "Web/CSS/Guides/Text": {
     "modified": "2020-08-14T07:07:31.180Z",
     "contributors": [
       "alattalatta",
       "Netaras"
     ]
   },
-  "Web/CSS/CSS_text_decoration": {
+  "Web/CSS/Guides/Text_decoration": {
     "modified": "2019-04-26T09:11:17.686Z",
     "contributors": [
       "alattalatta",
       "Netaras"
     ]
   },
-  "Web/CSS/CSS_transforms": {
-    "modified": "2019-05-25T01:16:56.674Z",
-    "contributors": [
-      "alattalatta",
-      "Sebastianz",
-      "fscholz"
-    ]
-  },
-  "Web/CSS/CSS_transforms/Using_CSS_transforms": {
+  "Web/CSS/Guides/Transforms/Using": {
     "modified": "2020-08-10T09:38:37.563Z",
     "contributors": [
       "alattalatta",
@@ -7859,14 +7607,14 @@
       "jaemin_jo"
     ]
   },
-  "Web/CSS/CSS_transitions": {
+  "Web/CSS/Guides/Transitions": {
     "modified": "2019-04-24T12:25:03.824Z",
     "contributors": [
       "alattalatta",
       "teoli"
     ]
   },
-  "Web/CSS/CSS_transitions/Using_CSS_transitions": {
+  "Web/CSS/Guides/Transitions/Using": {
     "modified": "2019-04-24T12:31:27.840Z",
     "contributors": [
       "alattalatta",
@@ -7875,60 +7623,21 @@
       "sbnet21"
     ]
   },
-  "Web/CSS/CSS_writing_modes": {
+  "Web/CSS/Guides/Values_and_units": {
+    "modified": "2020-11-29T04:33:10.671Z",
+    "contributors": [
+      "alanhchoi"
+    ]
+  },
+  "Web/CSS/Guides/Values_and_units/Value_definition_syntax": {
+    "modified": "2020-08-14T12:47:43.592Z",
+    "contributors": [
+      "alattalatta",
+      "ChanMyeong"
+    ]
+  },
+  "Web/CSS/Guides/Writing_modes": {
     "modified": "2019-04-24T12:41:55.322Z",
-    "contributors": [
-      "alattalatta",
-      "Netaras"
-    ]
-  },
-  "Web/CSS/Cascade": {
-    "modified": "2019-03-23T22:13:24.690Z",
-    "contributors": [
-      "alattalatta",
-      "hoony"
-    ]
-  },
-  "Web/CSS/Child_combinator": {
-    "modified": "2020-10-15T22:25:55.183Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/Class_selectors": {
-    "modified": "2020-10-15T22:15:58.108Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/Descendant_combinator": {
-    "modified": "2020-10-15T22:25:55.745Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/ID_selectors": {
-    "modified": "2020-10-15T22:16:17.946Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/Next-sibling_combinator": {
-    "modified": "2020-10-15T21:53:17.801Z",
-    "contributors": [
-      "alattalatta",
-      "neatnet"
-    ]
-  },
-  "Web/CSS/Pseudo-classes": {
-    "modified": "2020-08-13T04:55:02.947Z",
-    "contributors": [
-      "alattalatta",
-      "Netaras"
-    ]
-  },
-  "Web/CSS/Pseudo-elements": {
-    "modified": "2019-12-27T05:53:33.945Z",
     "contributors": [
       "alattalatta",
       "Netaras"
@@ -7948,30 +7657,1276 @@
       "Pastelgrim"
     ]
   },
-  "Web/CSS/Selector_list": {
+  "Web/CSS/Reference/At-rules/@charset": {
+    "modified": "2020-10-15T21:45:47.461Z",
+    "contributors": [
+      "alattalatta",
+      "Netaras"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@font-face": {
+    "modified": "2019-03-23T23:36:07.738Z",
+    "contributors": [
+      "fscholz",
+      "teoli",
+      "mirinae312"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@font-face/font-display": {
+    "modified": "2020-10-15T22:30:54.274Z",
+    "contributors": [
+      "DeadIntegral"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@import": {
+    "modified": "2020-10-15T21:45:49.357Z",
+    "contributors": [
+      "alattalatta",
+      "Netaras"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@keyframes": {
+    "modified": "2020-10-15T21:48:02.411Z",
+    "contributors": [
+      "alattalatta",
+      "joshua1988"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@media": {
+    "modified": "2020-10-15T21:46:08.753Z",
+    "contributors": [
+      "alattalatta",
+      "Netaras"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@media/prefers-color-scheme": {
+    "modified": "2020-10-15T22:16:57.718Z",
+    "contributors": [
+      "lifeisnovel"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@namespace": {
+    "modified": "2020-10-15T21:45:48.598Z",
+    "contributors": [
+      "alattalatta",
+      "Netaras"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@page": {
+    "modified": "2020-10-15T21:45:49.203Z",
+    "contributors": [
+      "alattalatta",
+      "Netaras"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@supports": {
+    "modified": "2020-10-15T21:39:41.961Z",
+    "contributors": [
+      "alattalatta",
+      "fscholz",
+      "epicsaga"
+    ]
+  },
+  "Web/CSS/Reference/Properties/align-content": {
+    "modified": "2020-10-15T22:09:15.263Z",
+    "contributors": [
+      "alattalatta",
+      "qvil",
+      "dbwodlf3"
+    ]
+  },
+  "Web/CSS/Reference/Properties/all": {
+    "modified": "2020-10-15T22:32:31.638Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/animation": {
+    "modified": "2020-10-15T21:21:11.163Z",
+    "contributors": [
+      "alattalatta",
+      "JJapShe",
+      "teoli",
+      "mirinae312"
+    ]
+  },
+  "Web/CSS/Reference/Properties/animation-delay": {
+    "modified": "2020-10-15T21:54:53.073Z",
+    "contributors": [
+      "alattalatta",
+      "JJapShe",
+      "gobyoungil"
+    ]
+  },
+  "Web/CSS/Reference/Properties/animation-direction": {
+    "modified": "2019-03-23T22:11:02.480Z",
+    "contributors": [
+      "JJapShe",
+      "gobyoungil"
+    ]
+  },
+  "Web/CSS/Reference/Properties/animation-duration": {
+    "modified": "2019-03-23T22:10:47.889Z",
+    "contributors": [
+      "JJapShe"
+    ]
+  },
+  "Web/CSS/Reference/Properties/animation-fill-mode": {
+    "modified": "2019-03-23T22:09:41.257Z",
+    "contributors": [
+      "JJapShe"
+    ]
+  },
+  "Web/CSS/Reference/Properties/backdrop-filter": {
+    "modified": "2020-10-15T22:32:42.698Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/backface-visibility": {
+    "modified": "2020-10-15T22:32:52.334Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/background": {
+    "modified": "2020-10-15T21:12:39.561Z",
+    "contributors": [
+      "alattalatta",
+      "teoli",
+      "SphinxKnight",
+      "hoony",
+      "Yuichiro",
+      "Pastelgrim"
+    ]
+  },
+  "Web/CSS/Reference/Properties/background-attachment": {
+    "modified": "2020-10-15T22:32:54.714Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/background-clip": {
+    "modified": "2020-10-15T22:26:03.561Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/background-color": {
+    "modified": "2020-10-15T21:20:19.568Z",
+    "contributors": [
+      "alattalatta",
+      "Sebastianz",
+      "teoli",
+      "SphinxKnight",
+      "fscholz",
+      "jaemin_jo"
+    ]
+  },
+  "Web/CSS/Reference/Properties/background-image": {
+    "modified": "2020-10-15T21:20:20.479Z",
+    "contributors": [
+      "alattalatta",
+      "Sebastianz",
+      "teoli",
+      "SphinxKnight",
+      "fscholz",
+      "jaemin_jo"
+    ]
+  },
+  "Web/CSS/Reference/Properties/background-origin": {
+    "modified": "2020-10-15T22:32:47.629Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/background-repeat": {
+    "modified": "2020-10-15T22:26:01.543Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border": {
+    "modified": "2020-10-15T22:10:27.959Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-bottom": {
+    "modified": "2020-10-15T22:18:08.650Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-bottom-color": {
+    "modified": "2020-10-15T22:17:59.886Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-bottom-style": {
+    "modified": "2020-10-15T22:16:16.852Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-bottom-width": {
+    "modified": "2020-10-15T22:16:03.984Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-collapse": {
+    "modified": "2020-10-15T21:47:33.161Z",
+    "contributors": [
+      "alattalatta",
+      "wbamberg",
+      "Netaras"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-color": {
+    "modified": "2020-10-15T22:10:26.965Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-image": {
+    "modified": "2020-10-15T22:15:54.372Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-image-outset": {
+    "modified": "2020-10-15T22:15:54.055Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-image-repeat": {
+    "modified": "2020-10-15T22:16:03.730Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-image-slice": {
+    "modified": "2020-10-15T22:15:32.458Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-image-source": {
+    "modified": "2020-10-15T22:15:59.508Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-image-width": {
+    "modified": "2020-10-15T22:15:53.843Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-left": {
+    "modified": "2020-10-15T22:18:07.361Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-left-color": {
+    "modified": "2020-10-15T22:17:54.423Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-left-style": {
+    "modified": "2020-10-15T22:16:15.619Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-left-width": {
+    "modified": "2020-10-15T22:16:04.408Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-radius": {
+    "modified": "2020-10-15T21:20:45.447Z",
+    "contributors": [
+      "alattalatta",
+      "Rav",
+      "Sebastianz",
+      "teoli",
+      "mirinae312"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-right": {
+    "modified": "2020-10-15T22:18:04.205Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-right-color": {
+    "modified": "2020-10-15T22:17:54.896Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-right-style": {
+    "modified": "2020-10-15T22:16:16.865Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-right-width": {
+    "modified": "2020-10-15T22:16:06.914Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-spacing": {
+    "modified": "2020-10-15T21:47:58.573Z",
+    "contributors": [
+      "alattalatta",
+      "wbamberg",
+      "Netaras"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-style": {
+    "modified": "2020-10-15T21:59:05.590Z",
+    "contributors": [
+      "alattalatta",
+      "flavono123"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-top": {
+    "modified": "2020-10-15T22:18:08.761Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-top-color": {
+    "modified": "2020-10-15T22:18:01.555Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-top-style": {
+    "modified": "2020-10-15T22:16:17.811Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-top-width": {
+    "modified": "2020-10-15T22:16:04.734Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-width": {
+    "modified": "2020-10-15T22:15:52.859Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/box-sizing": {
+    "modified": "2020-10-15T21:33:10.536Z",
+    "contributors": [
+      "alattalatta",
+      "Sebastianz",
+      "epicsaga",
+      "dochoul"
+    ]
+  },
+  "Web/CSS/Reference/Properties/clear": {
+    "modified": "2020-10-15T21:47:42.826Z",
+    "contributors": [
+      "alattalatta",
+      "Netaras"
+    ]
+  },
+  "Web/CSS/Reference/Properties/clip": {
+    "modified": "2020-10-15T21:37:53.434Z",
+    "contributors": [
+      "alattalatta",
+      "teoli",
+      "wjsskanyo"
+    ]
+  },
+  "Web/CSS/Reference/Properties/clip-path": {
+    "modified": "2020-10-15T22:25:44.725Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/color": {
+    "modified": "2020-10-15T22:10:33.905Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/contain": {
+    "modified": "2020-10-15T22:32:50.422Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/content": {
+    "modified": "2020-10-15T22:26:10.769Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/cursor": {
+    "modified": "2020-10-15T21:27:31.761Z",
+    "contributors": [
+      "alattalatta",
+      "mrstork",
+      "Sebastianz",
+      "teoli",
+      "claudepache"
+    ]
+  },
+  "Web/CSS/Reference/Properties/filter": {
+    "modified": "2020-10-15T21:40:35.758Z",
+    "contributors": [
+      "alattalatta",
+      "EatChangmyeong",
+      "chatoo2412",
+      "AshtonYoon",
+      "Sebastianz",
+      "hoony"
+    ]
+  },
+  "Web/CSS/Reference/Properties/flex": {
+    "modified": "2020-10-15T22:09:18.729Z",
+    "contributors": [
+      "alattalatta",
+      "dbwodlf3"
+    ]
+  },
+  "Web/CSS/Reference/Properties/flex-basis": {
+    "modified": "2020-10-15T22:09:16.564Z",
+    "contributors": [
+      "alattalatta",
+      "limjungmok",
+      "dbwodlf3"
+    ]
+  },
+  "Web/CSS/Reference/Properties/flex-direction": {
+    "modified": "2020-10-15T22:09:14.650Z",
+    "contributors": [
+      "alattalatta",
+      "limjungmok",
+      "dbwodlf3"
+    ]
+  },
+  "Web/CSS/Reference/Properties/flex-flow": {
+    "modified": "2020-10-15T22:09:17.941Z",
+    "contributors": [
+      "alattalatta",
+      "limjungmok",
+      "dbwodlf3"
+    ]
+  },
+  "Web/CSS/Reference/Properties/flex-grow": {
+    "modified": "2020-10-15T22:09:15.124Z",
+    "contributors": [
+      "limjungmok",
+      "dbwodlf3"
+    ]
+  },
+  "Web/CSS/Reference/Properties/flex-shrink": {
+    "modified": "2020-10-15T22:09:11.292Z",
+    "contributors": [
+      "limjungmok",
+      "dbwodlf3"
+    ]
+  },
+  "Web/CSS/Reference/Properties/flex-wrap": {
+    "modified": "2020-10-15T22:09:11.421Z",
+    "contributors": [
+      "limjungmok",
+      "dbwodlf3"
+    ]
+  },
+  "Web/CSS/Reference/Properties/float": {
+    "modified": "2020-10-15T21:44:47.428Z",
+    "contributors": [
+      "alattalatta",
+      "Netaras"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font": {
+    "modified": "2020-10-15T22:11:39.217Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font-feature-settings": {
+    "modified": "2020-11-04T06:31:19.905Z",
+    "contributors": [
+      "hyunwoong.kang"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font-size": {
+    "modified": "2020-10-15T21:48:25.426Z",
+    "contributors": [
+      "Anonymous",
+      "alattalatta",
+      "Hanjae-Jea"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font-synthesis": {
+    "modified": "2020-10-15T22:32:51.283Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font-weight": {
+    "modified": "2019-03-23T22:40:06.260Z",
+    "contributors": [
+      "naduhy2",
+      "jisoon",
+      "maytree"
+    ]
+  },
+  "Web/CSS/Reference/Properties/gap": {
+    "modified": "2020-10-15T22:26:03.670Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/height": {
+    "modified": "2020-10-15T21:47:39.134Z",
+    "contributors": [
+      "alattalatta",
+      "DeadIntegral"
+    ]
+  },
+  "Web/CSS/Reference/Properties/hyphens": {
+    "modified": "2020-10-15T22:32:51.304Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/image-rendering": {
+    "modified": "2020-10-15T21:40:19.155Z",
+    "contributors": [
+      "alattalatta",
+      "Hmmim"
+    ]
+  },
+  "Web/CSS/Reference/Properties/isolation": {
+    "modified": "2020-10-15T22:25:56.295Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/letter-spacing": {
+    "modified": "2020-10-15T22:18:00.636Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/line-break": {
+    "modified": "2020-10-15T22:32:46.075Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/line-clamp": {
+    "modified": "2020-10-15T22:25:56.637Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/margin": {
+    "modified": "2020-10-15T21:55:14.551Z",
+    "contributors": [
+      "alattalatta",
+      "kidkkr"
+    ]
+  },
+  "Web/CSS/Reference/Properties/margin-bottom": {
+    "modified": "2020-10-15T22:14:17.582Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/margin-left": {
+    "modified": "2020-10-15T22:14:20.259Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/margin-right": {
+    "modified": "2020-10-15T22:14:17.893Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/margin-top": {
+    "modified": "2020-10-15T21:45:27.749Z",
+    "contributors": [
+      "alattalatta",
+      "Jinhyuk"
+    ]
+  },
+  "Web/CSS/Reference/Properties/mask": {
+    "modified": "2020-10-15T21:53:40.995Z",
+    "contributors": [
+      "alattalatta",
+      "hoony"
+    ]
+  },
+  "Web/CSS/Reference/Properties/max-height": {
+    "modified": "2020-10-15T22:15:32.957Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/max-width": {
+    "modified": "2020-10-15T22:05:31.476Z",
+    "contributors": [
+      "alattalatta",
+      "MyeonghwanCho"
+    ]
+  },
+  "Web/CSS/Reference/Properties/min-height": {
+    "modified": "2020-10-15T22:15:30.962Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/min-width": {
+    "modified": "2020-10-15T22:05:30.663Z",
+    "contributors": [
+      "alattalatta",
+      "MyeonghwanCho"
+    ]
+  },
+  "Web/CSS/Reference/Properties/mix-blend-mode": {
+    "modified": "2020-10-15T21:49:53.526Z",
+    "contributors": [
+      "alattalatta",
+      "dragmove"
+    ]
+  },
+  "Web/CSS/Reference/Properties/object-fit": {
+    "modified": "2020-10-15T22:32:41.251Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/object-position": {
+    "modified": "2020-10-15T22:26:30.597Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/opacity": {
+    "modified": "2020-10-15T22:11:31.577Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/order": {
+    "modified": "2020-10-15T22:09:17.253Z",
+    "contributors": [
+      "alattalatta",
+      "limjungmok",
+      "dbwodlf3"
+    ]
+  },
+  "Web/CSS/Reference/Properties/outline": {
+    "modified": "2020-10-15T22:33:02.884Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/outline-style": {
+    "modified": "2020-10-15T22:33:03.744Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/outline-width": {
+    "modified": "2020-10-15T22:33:06.385Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/overflow": {
+    "modified": "2020-10-15T21:53:39.024Z",
+    "contributors": [
+      "alattalatta",
+      "LeeJunyeol",
+      "nugurejeil"
+    ]
+  },
+  "Web/CSS/Reference/Properties/overflow-wrap": {
+    "modified": "2020-10-15T21:48:38.411Z",
+    "contributors": [
+      "Kaben",
+      "joshua1988"
+    ]
+  },
+  "Web/CSS/Reference/Properties/padding": {
+    "modified": "2020-10-15T22:14:23.019Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/padding-bottom": {
+    "modified": "2020-10-15T22:15:32.533Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/padding-left": {
+    "modified": "2020-10-15T22:15:30.214Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/padding-right": {
+    "modified": "2020-10-15T22:15:32.316Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/padding-top": {
+    "modified": "2020-10-15T22:14:26.029Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/paint-order": {
+    "modified": "2020-10-15T22:32:44.393Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/pointer-events": {
+    "modified": "2020-10-15T22:11:48.556Z",
+    "contributors": [
+      "alattalatta",
+      "limjungmok"
+    ]
+  },
+  "Web/CSS/Reference/Properties/position": {
+    "modified": "2020-10-15T21:55:47.858Z",
+    "contributors": [
+      "alattalatta",
+      "EatChangmyeong",
+      "huusz"
+    ]
+  },
+  "Web/CSS/Reference/Properties/tab-size": {
+    "modified": "2020-10-15T21:37:17.868Z",
+    "contributors": [
+      "alattalatta",
+      "Sebastianz",
+      "hyeonseok"
+    ]
+  },
+  "Web/CSS/Reference/Properties/text-align": {
+    "modified": "2020-10-15T22:27:00.842Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/text-decoration": {
+    "modified": "2020-10-15T22:18:03.446Z",
+    "contributors": [
+      "limkukhyun",
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/transform": {
+    "modified": "2020-10-15T21:20:53.479Z",
+    "contributors": [
+      "alattalatta",
+      "Sebastianz",
+      "fscholz",
+      "teoli",
+      "mirinae312"
+    ]
+  },
+  "Web/CSS/Reference/Properties/transition": {
+    "modified": "2019-03-23T22:28:21.926Z",
+    "contributors": [
+      "fasdgoc"
+    ]
+  },
+  "Web/CSS/Reference/Properties/user-select": {
+    "modified": "2020-10-15T22:33:14.947Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/vertical-align": {
+    "modified": "2020-10-15T21:55:16.951Z",
+    "contributors": [
+      "alattalatta",
+      "kidkkr"
+    ]
+  },
+  "Web/CSS/Reference/Properties/visibility": {
+    "modified": "2020-10-15T22:15:38.851Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/white-space": {
+    "modified": "2020-10-15T21:52:50.149Z",
+    "contributors": [
+      "alattalatta",
+      "maytree"
+    ]
+  },
+  "Web/CSS/Reference/Properties/width": {
+    "modified": "2020-10-15T22:11:19.772Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/will-change": {
+    "modified": "2019-03-23T22:34:40.134Z",
+    "contributors": [
+      "stitchworkingonthecode"
+    ]
+  },
+  "Web/CSS/Reference/Properties/word-break": {
+    "modified": "2020-10-15T22:15:08.918Z",
+    "contributors": [
+      "alattalatta",
+      "compctive"
+    ]
+  },
+  "Web/CSS/Reference/Properties/word-spacing": {
+    "modified": "2020-10-15T22:33:03.458Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/z-index": {
+    "modified": "2020-10-15T21:20:31.595Z",
+    "contributors": [
+      "alattalatta",
+      "teoli",
+      "jaemin_jo"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::after": {
+    "modified": "2020-10-15T21:37:38.967Z",
+    "contributors": [
+      "alattalatta",
+      "samee",
+      "DeadIntegral",
+      "pelly_ryu",
+      "kuil09"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::before": {
+    "modified": "2020-10-15T22:26:07.120Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::placeholder": {
+    "modified": "2020-10-15T22:33:58.412Z",
+    "contributors": [
+      "dusehrla6432"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:active": {
+    "modified": "2020-10-15T21:55:14.047Z",
+    "contributors": [
+      "alattalatta",
+      "chatoo2412",
+      "LeeJunyeol"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:checked": {
+    "modified": "2020-10-15T22:28:37.272Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:default": {
+    "modified": "2020-10-15T22:32:39.937Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:defined": {
+    "modified": "2020-10-15T22:32:39.359Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:disabled": {
+    "modified": "2020-10-15T22:27:45.878Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:enabled": {
+    "modified": "2020-10-15T22:27:45.360Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:first": {
+    "modified": "2020-10-15T21:46:53.912Z",
+    "contributors": [
+      "alattalatta",
+      "Abbey100"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:first-child": {
+    "modified": "2020-10-15T21:49:44.106Z",
+    "contributors": [
+      "alattalatta",
+      "ShihwanKim"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:first-of-type": {
+    "modified": "2020-10-15T22:32:33.323Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:focus": {
+    "modified": "2020-10-15T22:32:53.126Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:focus-within": {
+    "modified": "2020-10-15T22:04:40.850Z",
+    "contributors": [
+      "alattalatta",
+      "dragmove"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:fullscreen": {
+    "modified": "2020-10-15T22:33:29.162Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:hover": {
+    "modified": "2020-10-15T22:18:47.333Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:link": {
+    "modified": "2020-10-15T22:18:48.344Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:not": {
+    "modified": "2020-10-15T21:46:19.378Z",
+    "contributors": [
+      "alattalatta",
+      "Netaras"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:nth-child": {
+    "modified": "2020-10-15T21:53:08.514Z",
+    "contributors": [
+      "alattalatta",
+      "kewlbear"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:root": {
+    "modified": "2020-10-15T22:26:34.640Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:visited": {
+    "modified": "2020-10-15T22:15:47.141Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/Attribute_selectors": {
+    "modified": "2020-10-15T21:50:30.795Z",
+    "contributors": [
+      "alattalatta",
+      "young-gratia"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/Child_combinator": {
+    "modified": "2020-10-15T22:25:55.183Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/Class_selectors": {
+    "modified": "2020-10-15T22:15:58.108Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/Descendant_combinator": {
+    "modified": "2020-10-15T22:25:55.745Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/ID_selectors": {
+    "modified": "2020-10-15T22:16:17.946Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/Next-sibling_combinator": {
+    "modified": "2020-10-15T21:53:17.801Z",
+    "contributors": [
+      "alattalatta",
+      "neatnet"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/Pseudo-classes": {
+    "modified": "2020-08-13T04:55:02.947Z",
+    "contributors": [
+      "alattalatta",
+      "Netaras"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/Pseudo-elements": {
+    "modified": "2019-12-27T05:53:33.945Z",
+    "contributors": [
+      "alattalatta",
+      "Netaras"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/Selector_list": {
     "modified": "2020-10-15T22:28:27.701Z",
     "contributors": [
       "alattalatta"
     ]
   },
-  "Web/CSS/Subsequent-sibling_combinator": {
+  "Web/CSS/Reference/Selectors/Subsequent-sibling_combinator": {
     "modified": "2020-10-15T22:25:59.669Z",
     "contributors": [
       "alattalatta"
     ]
   },
-  "Web/CSS/Type_selectors": {
+  "Web/CSS/Reference/Selectors/Type_selectors": {
     "modified": "2020-10-15T21:47:13.300Z",
     "contributors": [
       "alattalatta",
       "pelly_ryu"
     ]
   },
-  "Web/CSS/Universal_selectors": {
+  "Web/CSS/Reference/Selectors/Universal_selectors": {
     "modified": "2020-10-15T21:46:22.060Z",
     "contributors": [
       "alattalatta",
       "Netaras"
+    ]
+  },
+  "Web/CSS/Reference/Values/Data_types": {
+    "modified": "2020-08-06T04:37:09.952Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Values/angle": {
+    "modified": "2020-10-15T22:10:53.294Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Values/angle-percentage": {
+    "modified": "2020-10-15T22:17:18.525Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Values/blend-mode": {
+    "modified": "2020-10-15T22:25:55.632Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Values/calc": {
+    "modified": "2020-11-04T09:08:57.096Z",
+    "contributors": [
+      "chrisdavidmills",
+      "alattalatta",
+      "mrstork",
+      "prayash",
+      "teoli",
+      "."
+    ]
+  },
+  "Web/CSS/Reference/Values/color_value": {
+    "modified": "2020-10-15T22:10:31.590Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Values/display-internal": {
+    "modified": "2020-11-29T06:46:46.662Z",
+    "contributors": [
+      "alanhchoi"
+    ]
+  },
+  "Web/CSS/Reference/Values/filter-function": {
+    "modified": "2020-08-14T06:59:41.785Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Values/filter-function/blur": {
+    "modified": "2020-11-05T09:45:44.250Z",
+    "contributors": [
+      "chrisdavidmills",
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Values/filter-function/brightness": {
+    "modified": "2020-11-05T09:57:22.993Z",
+    "contributors": [
+      "chrisdavidmills",
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Values/filter-function/contrast": {
+    "modified": "2020-11-09T07:21:09.691Z",
+    "contributors": [
+      "chrisdavidmills",
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Values/frequency": {
+    "modified": "2020-10-15T22:17:20.180Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Values/gradient": {
+    "modified": "2020-10-15T22:11:21.903Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Values/image": {
+    "modified": "2020-10-15T22:15:55.155Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Values/inherit": {
+    "modified": "2020-10-15T21:44:46.933Z",
+    "contributors": [
+      "alattalatta",
+      "Netaras"
+    ]
+  },
+  "Web/CSS/Reference/Values/initial": {
+    "modified": "2020-10-15T21:45:36.803Z",
+    "contributors": [
+      "alattalatta",
+      "Netaras"
+    ]
+  },
+  "Web/CSS/Reference/Values/integer": {
+    "modified": "2020-10-15T22:10:29.443Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Values/length": {
+    "modified": "2020-10-15T22:10:30.645Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Values/length-percentage": {
+    "modified": "2020-10-15T22:18:00.322Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Values/number": {
+    "modified": "2020-10-15T22:10:27.997Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Values/percentage": {
+    "modified": "2020-10-15T22:10:31.553Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Values/position_value": {
+    "modified": "2020-10-15T22:32:44.745Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Values/revert": {
+    "modified": "2020-10-15T22:32:20.027Z",
+    "contributors": [
+      "oinochoe"
+    ]
+  },
+  "Web/CSS/Reference/Values/time": {
+    "modified": "2020-10-15T22:14:17.158Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function": {
+    "modified": "2020-10-15T21:51:13.494Z",
+    "contributors": [
+      "alattalatta",
+      "Sebastianz"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/matrix": {
+    "modified": "2020-11-16T08:59:50.359Z",
+    "contributors": [
+      "chrisdavidmills",
+      "DeadIntegral"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/scaleX": {
+    "modified": "2020-11-30T10:20:51.450Z",
+    "contributors": [
+      "chrisdavidmills",
+      "genzuby"
+    ]
+  },
+  "Web/CSS/Reference/Values/unset": {
+    "modified": "2020-10-15T21:45:37.546Z",
+    "contributors": [
+      "alattalatta",
+      "Netaras"
+    ]
+  },
+  "Web/CSS/Reference/Values/url_value": {
+    "modified": "2020-10-15T22:10:55.121Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Values/var": {
+    "modified": "2020-11-04T09:10:36.975Z",
+    "contributors": [
+      "chrisdavidmills",
+      "alattalatta"
     ]
   },
   "Web/CSS/Visual_formatting_model": {
@@ -7993,137 +8948,6 @@
       "Netaras"
     ]
   },
-  "Web/CSS/align-content": {
-    "modified": "2020-10-15T22:09:15.263Z",
-    "contributors": [
-      "alattalatta",
-      "qvil",
-      "dbwodlf3"
-    ]
-  },
-  "Web/CSS/all": {
-    "modified": "2020-10-15T22:32:31.638Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/angle": {
-    "modified": "2020-10-15T22:10:53.294Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/angle-percentage": {
-    "modified": "2020-10-15T22:17:18.525Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/animation": {
-    "modified": "2020-10-15T21:21:11.163Z",
-    "contributors": [
-      "alattalatta",
-      "JJapShe",
-      "teoli",
-      "mirinae312"
-    ]
-  },
-  "Web/CSS/animation-delay": {
-    "modified": "2020-10-15T21:54:53.073Z",
-    "contributors": [
-      "alattalatta",
-      "JJapShe",
-      "gobyoungil"
-    ]
-  },
-  "Web/CSS/animation-direction": {
-    "modified": "2019-03-23T22:11:02.480Z",
-    "contributors": [
-      "JJapShe",
-      "gobyoungil"
-    ]
-  },
-  "Web/CSS/animation-duration": {
-    "modified": "2019-03-23T22:10:47.889Z",
-    "contributors": [
-      "JJapShe"
-    ]
-  },
-  "Web/CSS/animation-fill-mode": {
-    "modified": "2019-03-23T22:09:41.257Z",
-    "contributors": [
-      "JJapShe"
-    ]
-  },
-  "Web/CSS/backdrop-filter": {
-    "modified": "2020-10-15T22:32:42.698Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/backface-visibility": {
-    "modified": "2020-10-15T22:32:52.334Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/background": {
-    "modified": "2020-10-15T21:12:39.561Z",
-    "contributors": [
-      "alattalatta",
-      "teoli",
-      "SphinxKnight",
-      "hoony",
-      "Yuichiro",
-      "Pastelgrim"
-    ]
-  },
-  "Web/CSS/background-attachment": {
-    "modified": "2020-10-15T22:32:54.714Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/background-clip": {
-    "modified": "2020-10-15T22:26:03.561Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/background-color": {
-    "modified": "2020-10-15T21:20:19.568Z",
-    "contributors": [
-      "alattalatta",
-      "Sebastianz",
-      "teoli",
-      "SphinxKnight",
-      "fscholz",
-      "jaemin_jo"
-    ]
-  },
-  "Web/CSS/background-image": {
-    "modified": "2020-10-15T21:20:20.479Z",
-    "contributors": [
-      "alattalatta",
-      "Sebastianz",
-      "teoli",
-      "SphinxKnight",
-      "fscholz",
-      "jaemin_jo"
-    ]
-  },
-  "Web/CSS/background-origin": {
-    "modified": "2020-10-15T22:32:47.629Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/background-repeat": {
-    "modified": "2020-10-15T22:26:01.543Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
   "Web/CSS/background-size": {
     "modified": "2020-10-15T22:21:52.000Z",
     "contributors": [
@@ -8133,195 +8957,6 @@
   },
   "Web/CSS/basic-shape": {
     "modified": "2020-10-15T22:25:46.167Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/blend-mode": {
-    "modified": "2020-10-15T22:25:55.632Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border": {
-    "modified": "2020-10-15T22:10:27.959Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-bottom": {
-    "modified": "2020-10-15T22:18:08.650Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-bottom-color": {
-    "modified": "2020-10-15T22:17:59.886Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-bottom-style": {
-    "modified": "2020-10-15T22:16:16.852Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-bottom-width": {
-    "modified": "2020-10-15T22:16:03.984Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-collapse": {
-    "modified": "2020-10-15T21:47:33.161Z",
-    "contributors": [
-      "alattalatta",
-      "wbamberg",
-      "Netaras"
-    ]
-  },
-  "Web/CSS/border-color": {
-    "modified": "2020-10-15T22:10:26.965Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-image": {
-    "modified": "2020-10-15T22:15:54.372Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-image-outset": {
-    "modified": "2020-10-15T22:15:54.055Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-image-repeat": {
-    "modified": "2020-10-15T22:16:03.730Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-image-slice": {
-    "modified": "2020-10-15T22:15:32.458Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-image-source": {
-    "modified": "2020-10-15T22:15:59.508Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-image-width": {
-    "modified": "2020-10-15T22:15:53.843Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-left": {
-    "modified": "2020-10-15T22:18:07.361Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-left-color": {
-    "modified": "2020-10-15T22:17:54.423Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-left-style": {
-    "modified": "2020-10-15T22:16:15.619Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-left-width": {
-    "modified": "2020-10-15T22:16:04.408Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-radius": {
-    "modified": "2020-10-15T21:20:45.447Z",
-    "contributors": [
-      "alattalatta",
-      "Rav",
-      "Sebastianz",
-      "teoli",
-      "mirinae312"
-    ]
-  },
-  "Web/CSS/border-right": {
-    "modified": "2020-10-15T22:18:04.205Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-right-color": {
-    "modified": "2020-10-15T22:17:54.896Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-right-style": {
-    "modified": "2020-10-15T22:16:16.865Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-right-width": {
-    "modified": "2020-10-15T22:16:06.914Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-spacing": {
-    "modified": "2020-10-15T21:47:58.573Z",
-    "contributors": [
-      "alattalatta",
-      "wbamberg",
-      "Netaras"
-    ]
-  },
-  "Web/CSS/border-style": {
-    "modified": "2020-10-15T21:59:05.590Z",
-    "contributors": [
-      "alattalatta",
-      "flavono123"
-    ]
-  },
-  "Web/CSS/border-top": {
-    "modified": "2020-10-15T22:18:08.761Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-top-color": {
-    "modified": "2020-10-15T22:18:01.555Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-top-style": {
-    "modified": "2020-10-15T22:16:17.811Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-top-width": {
-    "modified": "2020-10-15T22:16:04.734Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-width": {
-    "modified": "2020-10-15T22:15:52.859Z",
     "contributors": [
       "alattalatta"
     ]
@@ -8336,81 +8971,6 @@
       "mirinae312"
     ]
   },
-  "Web/CSS/box-sizing": {
-    "modified": "2020-10-15T21:33:10.536Z",
-    "contributors": [
-      "alattalatta",
-      "Sebastianz",
-      "epicsaga",
-      "dochoul"
-    ]
-  },
-  "Web/CSS/calc": {
-    "modified": "2020-11-04T09:08:57.096Z",
-    "contributors": [
-      "chrisdavidmills",
-      "alattalatta",
-      "mrstork",
-      "prayash",
-      "teoli",
-      "."
-    ]
-  },
-  "Web/CSS/clear": {
-    "modified": "2020-10-15T21:47:42.826Z",
-    "contributors": [
-      "alattalatta",
-      "Netaras"
-    ]
-  },
-  "Web/CSS/clip": {
-    "modified": "2020-10-15T21:37:53.434Z",
-    "contributors": [
-      "alattalatta",
-      "teoli",
-      "wjsskanyo"
-    ]
-  },
-  "Web/CSS/clip-path": {
-    "modified": "2020-10-15T22:25:44.725Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/color": {
-    "modified": "2020-10-15T22:10:33.905Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/color_value": {
-    "modified": "2020-10-15T22:10:31.590Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/contain": {
-    "modified": "2020-10-15T22:32:50.422Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/content": {
-    "modified": "2020-10-15T22:26:10.769Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/cursor": {
-    "modified": "2020-10-15T21:27:31.761Z",
-    "contributors": [
-      "alattalatta",
-      "mrstork",
-      "Sebastianz",
-      "teoli",
-      "claudepache"
-    ]
-  },
   "Web/CSS/display": {
     "modified": "2020-10-15T22:17:25.714Z",
     "contributors": [
@@ -8418,166 +8978,11 @@
       "dbwodlf3"
     ]
   },
-  "Web/CSS/display-internal": {
-    "modified": "2020-11-29T06:46:46.662Z",
-    "contributors": [
-      "alanhchoi"
-    ]
-  },
-  "Web/CSS/filter": {
-    "modified": "2020-10-15T21:40:35.758Z",
-    "contributors": [
-      "alattalatta",
-      "EatChangmyeong",
-      "chatoo2412",
-      "AshtonYoon",
-      "Sebastianz",
-      "hoony"
-    ]
-  },
-  "Web/CSS/filter-function": {
-    "modified": "2020-08-14T06:59:41.785Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/filter-function/blur": {
-    "modified": "2020-11-05T09:45:44.250Z",
-    "contributors": [
-      "chrisdavidmills",
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/filter-function/brightness": {
-    "modified": "2020-11-05T09:57:22.993Z",
-    "contributors": [
-      "chrisdavidmills",
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/filter-function/contrast": {
-    "modified": "2020-11-09T07:21:09.691Z",
-    "contributors": [
-      "chrisdavidmills",
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/flex": {
-    "modified": "2020-10-15T22:09:18.729Z",
-    "contributors": [
-      "alattalatta",
-      "dbwodlf3"
-    ]
-  },
-  "Web/CSS/flex-basis": {
-    "modified": "2020-10-15T22:09:16.564Z",
-    "contributors": [
-      "alattalatta",
-      "limjungmok",
-      "dbwodlf3"
-    ]
-  },
-  "Web/CSS/flex-direction": {
-    "modified": "2020-10-15T22:09:14.650Z",
-    "contributors": [
-      "alattalatta",
-      "limjungmok",
-      "dbwodlf3"
-    ]
-  },
-  "Web/CSS/flex-flow": {
-    "modified": "2020-10-15T22:09:17.941Z",
-    "contributors": [
-      "alattalatta",
-      "limjungmok",
-      "dbwodlf3"
-    ]
-  },
-  "Web/CSS/flex-grow": {
-    "modified": "2020-10-15T22:09:15.124Z",
-    "contributors": [
-      "limjungmok",
-      "dbwodlf3"
-    ]
-  },
-  "Web/CSS/flex-shrink": {
-    "modified": "2020-10-15T22:09:11.292Z",
-    "contributors": [
-      "limjungmok",
-      "dbwodlf3"
-    ]
-  },
-  "Web/CSS/flex-wrap": {
-    "modified": "2020-10-15T22:09:11.421Z",
-    "contributors": [
-      "limjungmok",
-      "dbwodlf3"
-    ]
-  },
-  "Web/CSS/float": {
-    "modified": "2020-10-15T21:44:47.428Z",
-    "contributors": [
-      "alattalatta",
-      "Netaras"
-    ]
-  },
-  "Web/CSS/font": {
-    "modified": "2020-10-15T22:11:39.217Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
   "Web/CSS/font-family": {
     "modified": "2020-10-15T21:48:51.338Z",
     "contributors": [
       "alattalatta",
       "naduhy2"
-    ]
-  },
-  "Web/CSS/font-feature-settings": {
-    "modified": "2020-11-04T06:31:19.905Z",
-    "contributors": [
-      "hyunwoong.kang"
-    ]
-  },
-  "Web/CSS/font-size": {
-    "modified": "2020-10-15T21:48:25.426Z",
-    "contributors": [
-      "Anonymous",
-      "alattalatta",
-      "Hanjae-Jea"
-    ]
-  },
-  "Web/CSS/font-synthesis": {
-    "modified": "2020-10-15T22:32:51.283Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/font-weight": {
-    "modified": "2019-03-23T22:40:06.260Z",
-    "contributors": [
-      "naduhy2",
-      "jisoon",
-      "maytree"
-    ]
-  },
-  "Web/CSS/frequency": {
-    "modified": "2020-10-15T22:17:20.180Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/gap": {
-    "modified": "2020-10-15T22:26:03.670Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/gradient": {
-    "modified": "2020-10-15T22:11:21.903Z",
-    "contributors": [
-      "alattalatta"
     ]
   },
   "Web/CSS/grid": {
@@ -8592,315 +8997,6 @@
       "dbwodlf3"
     ]
   },
-  "Web/CSS/height": {
-    "modified": "2020-10-15T21:47:39.134Z",
-    "contributors": [
-      "alattalatta",
-      "DeadIntegral"
-    ]
-  },
-  "Web/CSS/hyphens": {
-    "modified": "2020-10-15T22:32:51.304Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/image": {
-    "modified": "2020-10-15T22:15:55.155Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/image-rendering": {
-    "modified": "2020-10-15T21:40:19.155Z",
-    "contributors": [
-      "alattalatta",
-      "Hmmim"
-    ]
-  },
-  "Web/CSS/inherit": {
-    "modified": "2020-10-15T21:44:46.933Z",
-    "contributors": [
-      "alattalatta",
-      "Netaras"
-    ]
-  },
-  "Web/CSS/initial": {
-    "modified": "2020-10-15T21:45:36.803Z",
-    "contributors": [
-      "alattalatta",
-      "Netaras"
-    ]
-  },
-  "Web/CSS/integer": {
-    "modified": "2020-10-15T22:10:29.443Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/isolation": {
-    "modified": "2020-10-15T22:25:56.295Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/length": {
-    "modified": "2020-10-15T22:10:30.645Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/length-percentage": {
-    "modified": "2020-10-15T22:18:00.322Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/letter-spacing": {
-    "modified": "2020-10-15T22:18:00.636Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/line-break": {
-    "modified": "2020-10-15T22:32:46.075Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/line-clamp": {
-    "modified": "2020-10-15T22:25:56.637Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/margin": {
-    "modified": "2020-10-15T21:55:14.551Z",
-    "contributors": [
-      "alattalatta",
-      "kidkkr"
-    ]
-  },
-  "Web/CSS/margin-bottom": {
-    "modified": "2020-10-15T22:14:17.582Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/margin-left": {
-    "modified": "2020-10-15T22:14:20.259Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/margin-right": {
-    "modified": "2020-10-15T22:14:17.893Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/margin-top": {
-    "modified": "2020-10-15T21:45:27.749Z",
-    "contributors": [
-      "alattalatta",
-      "Jinhyuk"
-    ]
-  },
-  "Web/CSS/mask": {
-    "modified": "2020-10-15T21:53:40.995Z",
-    "contributors": [
-      "alattalatta",
-      "hoony"
-    ]
-  },
-  "Web/CSS/max-height": {
-    "modified": "2020-10-15T22:15:32.957Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/max-width": {
-    "modified": "2020-10-15T22:05:31.476Z",
-    "contributors": [
-      "alattalatta",
-      "MyeonghwanCho"
-    ]
-  },
-  "Web/CSS/min-height": {
-    "modified": "2020-10-15T22:15:30.962Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/min-width": {
-    "modified": "2020-10-15T22:05:30.663Z",
-    "contributors": [
-      "alattalatta",
-      "MyeonghwanCho"
-    ]
-  },
-  "Web/CSS/mix-blend-mode": {
-    "modified": "2020-10-15T21:49:53.526Z",
-    "contributors": [
-      "alattalatta",
-      "dragmove"
-    ]
-  },
-  "Web/CSS/number": {
-    "modified": "2020-10-15T22:10:27.997Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/object-fit": {
-    "modified": "2020-10-15T22:32:41.251Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/object-position": {
-    "modified": "2020-10-15T22:26:30.597Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/opacity": {
-    "modified": "2020-10-15T22:11:31.577Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/order": {
-    "modified": "2020-10-15T22:09:17.253Z",
-    "contributors": [
-      "alattalatta",
-      "limjungmok",
-      "dbwodlf3"
-    ]
-  },
-  "Web/CSS/outline": {
-    "modified": "2020-10-15T22:33:02.884Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/outline-style": {
-    "modified": "2020-10-15T22:33:03.744Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/outline-width": {
-    "modified": "2020-10-15T22:33:06.385Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/overflow": {
-    "modified": "2020-10-15T21:53:39.024Z",
-    "contributors": [
-      "alattalatta",
-      "LeeJunyeol",
-      "nugurejeil"
-    ]
-  },
-  "Web/CSS/overflow-wrap": {
-    "modified": "2020-10-15T21:48:38.411Z",
-    "contributors": [
-      "Kaben",
-      "joshua1988"
-    ]
-  },
-  "Web/CSS/padding": {
-    "modified": "2020-10-15T22:14:23.019Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/padding-bottom": {
-    "modified": "2020-10-15T22:15:32.533Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/padding-left": {
-    "modified": "2020-10-15T22:15:30.214Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/padding-right": {
-    "modified": "2020-10-15T22:15:32.316Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/padding-top": {
-    "modified": "2020-10-15T22:14:26.029Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/paint-order": {
-    "modified": "2020-10-15T22:32:44.393Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/percentage": {
-    "modified": "2020-10-15T22:10:31.553Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/pointer-events": {
-    "modified": "2020-10-15T22:11:48.556Z",
-    "contributors": [
-      "alattalatta",
-      "limjungmok"
-    ]
-  },
-  "Web/CSS/position": {
-    "modified": "2020-10-15T21:55:47.858Z",
-    "contributors": [
-      "alattalatta",
-      "EatChangmyeong",
-      "huusz"
-    ]
-  },
-  "Web/CSS/position_value": {
-    "modified": "2020-10-15T22:32:44.745Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/revert": {
-    "modified": "2020-10-15T22:32:20.027Z",
-    "contributors": [
-      "oinochoe"
-    ]
-  },
-  "Web/CSS/tab-size": {
-    "modified": "2020-10-15T21:37:17.868Z",
-    "contributors": [
-      "alattalatta",
-      "Sebastianz",
-      "hyeonseok"
-    ]
-  },
-  "Web/CSS/text-align": {
-    "modified": "2020-10-15T22:27:00.842Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/text-decoration": {
-    "modified": "2020-10-15T22:18:03.446Z",
-    "contributors": [
-      "limkukhyun",
-      "alattalatta"
-    ]
-  },
   "Web/CSS/text-shadow": {
     "modified": "2020-10-15T21:21:02.822Z",
     "contributors": [
@@ -8911,132 +9007,10 @@
       "mirinae312"
     ]
   },
-  "Web/CSS/time": {
-    "modified": "2020-10-15T22:14:17.158Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/transform": {
-    "modified": "2020-10-15T21:20:53.479Z",
-    "contributors": [
-      "alattalatta",
-      "Sebastianz",
-      "fscholz",
-      "teoli",
-      "mirinae312"
-    ]
-  },
-  "Web/CSS/transform-function": {
-    "modified": "2020-10-15T21:51:13.494Z",
-    "contributors": [
-      "alattalatta",
-      "Sebastianz"
-    ]
-  },
-  "Web/CSS/transform-function/matrix": {
-    "modified": "2020-11-16T08:59:50.359Z",
-    "contributors": [
-      "chrisdavidmills",
-      "DeadIntegral"
-    ]
-  },
-  "Web/CSS/transform-function/scaleX": {
-    "modified": "2020-11-30T10:20:51.450Z",
-    "contributors": [
-      "chrisdavidmills",
-      "genzuby"
-    ]
-  },
-  "Web/CSS/transition": {
-    "modified": "2019-03-23T22:28:21.926Z",
-    "contributors": [
-      "fasdgoc"
-    ]
-  },
   "Web/CSS/transition-delay": {
     "modified": "2019-03-23T22:28:17.012Z",
     "contributors": [
       "fasdgoc"
-    ]
-  },
-  "Web/CSS/unset": {
-    "modified": "2020-10-15T21:45:37.546Z",
-    "contributors": [
-      "alattalatta",
-      "Netaras"
-    ]
-  },
-  "Web/CSS/url_value": {
-    "modified": "2020-10-15T22:10:55.121Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/user-select": {
-    "modified": "2020-10-15T22:33:14.947Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/var": {
-    "modified": "2020-11-04T09:10:36.975Z",
-    "contributors": [
-      "chrisdavidmills",
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/vertical-align": {
-    "modified": "2020-10-15T21:55:16.951Z",
-    "contributors": [
-      "alattalatta",
-      "kidkkr"
-    ]
-  },
-  "Web/CSS/visibility": {
-    "modified": "2020-10-15T22:15:38.851Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/white-space": {
-    "modified": "2020-10-15T21:52:50.149Z",
-    "contributors": [
-      "alattalatta",
-      "maytree"
-    ]
-  },
-  "Web/CSS/width": {
-    "modified": "2020-10-15T22:11:19.772Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/will-change": {
-    "modified": "2019-03-23T22:34:40.134Z",
-    "contributors": [
-      "stitchworkingonthecode"
-    ]
-  },
-  "Web/CSS/word-break": {
-    "modified": "2020-10-15T22:15:08.918Z",
-    "contributors": [
-      "alattalatta",
-      "compctive"
-    ]
-  },
-  "Web/CSS/word-spacing": {
-    "modified": "2020-10-15T22:33:03.458Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/z-index": {
-    "modified": "2020-10-15T21:20:31.595Z",
-    "contributors": [
-      "alattalatta",
-      "teoli",
-      "jaemin_jo"
     ]
   },
   "Web/Events": {
@@ -16215,6 +16189,32 @@
     "contributors": [
       "wbamberg",
       "zziuni"
+    ]
+  },
+  "conflicting/Web/API/Document_Object_Model": {
+    "modified": "2020-05-26T14:45:03.340Z",
+    "contributors": [
+      "alattalatta",
+      "chrisdavidmills",
+      "jswisher",
+      "jsx",
+      "Netaras"
+    ]
+  },
+  "conflicting/Web/API/Document_Object_Model_73827e330a6d9b2a25fe17acee5f6c48ee67e6f83a44f672e71afbaf429d69ee": {
+    "modified": "2020-03-10T10:48:51.010Z",
+    "contributors": [
+      "kimploo"
+    ]
+  },
+  "conflicting/Web/API/Document_Object_Model_a0b90593de4c5cb214690e823be115a18d605d4bc7719ba296e212da2abe18ef": {
+    "modified": "2020-02-10T04:12:58.179Z",
+    "contributors": [
+      "sungik-choi",
+      "jswisher",
+      "cs09g",
+      "2circumflex",
+      "dakeshi"
     ]
   },
   "conflicting/Web/API/Fetch_API/Using_Fetch_c0ca150deec7d78cb1d4462e8542019b": {

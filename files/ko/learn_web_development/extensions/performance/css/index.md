@@ -134,9 +134,9 @@ CSSOM 생성을 최적화 하고 페이지 성능을 향상시키기 위해, 현
 
 다음으로, 애니메이션 성능은 애니메이션을 적용하는 속성에 크게 의존합니다. 애니메이션을 적용할 때, 특정 속성은 [리플로우](/ko/docs/Glossary/Reflow)와 [리페인트](/ko/docs/Glossary/Repaint)를 일으키므로 피해야 합니다. 이러한 속성은 다음과 같습니다.
 
-- 요소의 크기 변경, [`width`](/ko/docs/Web/CSS/width), [`height`](/ko/docs/Web/CSS/height), [`border`](/ko/docs/Web/CSS/border), [`padding`](/ko/docs/Web/CSS/padding)이 있습니다.
-- 요소 위치 변경, [`margin`](/ko/docs/Web/CSS/margin), [`top`](/ko/docs/Web/CSS/top), [`bottom`](/ko/docs/Web/CSS/bottom), [`left`](/ko/docs/Web/CSS/left), [`right`](/ko/docs/Web/CSS/right)가 있습니다.
-- 요소 레이아웃 조정, [`align-content`](/ko/docs/Web/CSS/align-content), [`align-items`](/ko/docs/Web/CSS/align-items), [`flex`](/ko/docs/Web/CSS/flex)가 있습니다.
+- 요소의 크기 변경, [`width`](/ko/docs/Web/CSS/Reference/Properties/width), [`height`](/ko/docs/Web/CSS/Reference/Properties/height), [`border`](/ko/docs/Web/CSS/Reference/Properties/border), [`padding`](/ko/docs/Web/CSS/Reference/Properties/padding)이 있습니다.
+- 요소 위치 변경, [`margin`](/ko/docs/Web/CSS/Reference/Properties/margin), [`top`](/ko/docs/Web/CSS/top), [`bottom`](/ko/docs/Web/CSS/bottom), [`left`](/ko/docs/Web/CSS/left), [`right`](/ko/docs/Web/CSS/right)가 있습니다.
+- 요소 레이아웃 조정, [`align-content`](/ko/docs/Web/CSS/Reference/Properties/align-content), [`align-items`](/ko/docs/Web/CSS/Reference/Properties/align-items), [`flex`](/ko/docs/Web/CSS/Reference/Properties/flex)가 있습니다.
 - 요소 시각적 효과 추가, [`box-shadow`](/ko/docs/Web/CSS/box-shadow)가 있습니다.
 
 현대 브라우저는 전체 페이지보다 문서의 변경된 부분만 리페인트 하는데 충분히 똑똑합니다. 결과적으로 더 큰 애니메이션은 성능에 더 큰 부담을 줍니다.
@@ -144,23 +144,23 @@ CSSOM 생성을 최적화 하고 페이지 성능을 향상시키기 위해, 현
 가능하다면, 리플로우나 리페인트를 일으키지 않는 속성으로 애니메이션을 하는 것이 더 좋습니다. 다음과 같습니다.
 
 - [Transforms](/ko/docs/Web/CSS/CSS_transforms)
-- [`opacity`](/ko/docs/Web/CSS/opacity)
-- [`filter`](/ko/docs/Web/CSS/filter)
+- [`opacity`](/ko/docs/Web/CSS/Reference/Properties/opacity)
+- [`filter`](/ko/docs/Web/CSS/Reference/Properties/filter)
 
 ### GPU에서 애니메이션 적용하기
 
 더 나아가 성능을 향상시키기 위해, 애니메이션을 메인 스레드에서 벗어나게 하고 합성과 관련된 GPU에서 처리하도록 옮기는 것을 고려해야 합니다. 이를 위해 브라우저가 자동으로 GPU에서 처리하도록 특정 애니메이션 유형을 선택해야 합니다. 다음과 같습니다.
 
-- [`transform: translateZ()`](/ko/docs/Web/CSS/transform), [`rotate3d()`](/ko/docs/Web/CSS/transform-function/rotate3d)와 같은 3D 변환 애니메이션
-- [`position: fixed`](/ko/docs/Web/CSS/position)와 같은 특정 속성이 적용된 애니메이션 요소
-- [`will-change`](/ko/docs/Web/CSS/will-change) 속성이 적용된 요소. 아래서 자세히 살펴봅니다.
+- [`transform: translateZ()`](/ko/docs/Web/CSS/Reference/Properties/transform), [`rotate3d()`](/ko/docs/Web/CSS/transform-function/rotate3d)와 같은 3D 변환 애니메이션
+- [`position: fixed`](/ko/docs/Web/CSS/Reference/Properties/position)와 같은 특정 속성이 적용된 애니메이션 요소
+- [`will-change`](/ko/docs/Web/CSS/Reference/Properties/will-change) 속성이 적용된 요소. 아래서 자세히 살펴봅니다.
 - 자신의 레이어에서 렌더링되는 특정 요소, [`<video>`](/ko/docs/Web/HTML/Reference/Elements/video), [`<canvas>`](/ko/docs/Web/HTML/Reference/Elements/canvas), [`<iframe>`](/ko/docs/Web/HTML/Element/iframe)이 있습니다.
 
 GPU에서 애니메이션을 실행하면 특히 모바일에서 성능이 향상될 수 있습니다. 하지만, 애니메이션을 GPU로 옮기는 과정은 항상 간단한 것은 아닙니다. 이에 대한 유용하고 자세한 분석은 [CSS GPU 애니메이션: 올바르게 하기](https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/) smashingmagazine.com, 2016에서 확인해보세요.
 
 ## `will-change`로 요소 변경 최적화 하기
 
-브라우저는 요소가 실제로 변경되기 전에 미리 최적화를 수행할 수도 있습니다. 이러한 최적화는 성능 부담이 큰 작업을 미리 수행함으로써 페이지 응답성을 향상시킬 수 있습니다. CSS [`will-change`](/ko/docs/Web/CSS/will-change) 속성은 요소가 어떻게 변경될지 브라우저에게 미리 알려줍니다.
+브라우저는 요소가 실제로 변경되기 전에 미리 최적화를 수행할 수도 있습니다. 이러한 최적화는 성능 부담이 큰 작업을 미리 수행함으로써 페이지 응답성을 향상시킬 수 있습니다. CSS [`will-change`](/ko/docs/Web/CSS/Reference/Properties/will-change) 속성은 요소가 어떻게 변경될지 브라우저에게 미리 알려줍니다.
 
 > **주의** `will-change`는 기존 성능 문제를 해결하기 위한 최후의 수단으로 사용해야 합니다. 성능 문제가 발생할 것을 예상하고 사용하는 것은 권장되지 않습니다.
 

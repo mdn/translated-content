@@ -8,7 +8,7 @@ l10n:
 **`alternate stylesheet`** 关键字对在作为 [`rel`](/zh-CN/docs/Web/HTML/Reference/Elements/link#rel) 属性值用于 {{HTMLElement("link")}} 元素时，表示目标资源为*替代样式表*。在网页中指定**替代样式表**可让用户根据自身需求或偏好查看页面的多个版本。
 
 > [!NOTE]
-> 该功能在未安装扩展的浏览器中支持不佳。若需提供与用户现有偏好兼容的替代呈现方式，参见 CSS {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} 和 {{cssxref("@media/prefers-contrast","prefers-contrast")}} [媒体特性](/zh-CN/docs/Web/CSS/@media#媒体特性)。
+> 该功能在未安装扩展的浏览器中支持不佳。若需提供与用户现有偏好兼容的替代呈现方式，参见 CSS {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} 和 {{cssxref("@media/prefers-contrast","prefers-contrast")}} [媒体特性](/zh-CN/docs/Web/CSS/Reference/At-rules/@media#媒体特性)。
 
 Firefox 允许用户通过*视图 > 页面样式*子菜单选择替代{{glossary("stylesheet", "样式表")}}，该菜单会显示 [`title`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/title) 属性的值。其他浏览器需要安装扩展才能启用此功能。网页还可以提供自己的用户界面，让用户切换样式。
 

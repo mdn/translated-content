@@ -46,7 +46,7 @@ label {
 }
 ```
 
-Il est possible d'utiliser les pseudo-classes CSS [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) pour mettre en forme un élément `<form>` selon que le contenu des éléments du formulaire est valide ou non.
+Il est possible d'utiliser les pseudo-classes CSS [`:valid`](/fr/docs/Web/CSS/Reference/Selectors/:valid) et [`:invalid`](/fr/docs/Web/CSS/Reference/Selectors/:invalid) pour mettre en forme un élément `<form>` selon que le contenu des éléments du formulaire est valide ou non.
 
 <table class="properties">
   <tbody>
@@ -239,7 +239,7 @@ Les attributs suivants contrôlent le comportement pendant l'envoi du formulaire
 
 ## Voir aussi
 
-- [Guide des formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms)
+- [Guide des formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\)
 - D'autres éléments qui sont utilisés lors de la création de formulaires : [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button), [`<datalist>`](/fr/docs/Web/HTML/Reference/Elements/datalist), [`<fieldset>`](/fr/docs/Web/HTML/Reference/Elements/fieldset), [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input), [`<label>`](/fr/docs/Web/HTML/Reference/Elements/label), [`<legend>`](/fr/docs/Web/HTML/Reference/Elements/legend), [`<meter>`](/fr/docs/Web/HTML/Reference/Elements/meter), [`<optgroup>`](/fr/docs/Web/HTML/Reference/Elements/optgroup), [`<option>`](/fr/docs/Web/HTML/Reference/Elements/option), [`<output>`](/fr/docs/Web/HTML/Reference/Elements/output), [`<progress>`](/fr/docs/Web/HTML/Reference/Elements/progress), [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select), [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea).
 - Obtenir une liste des éléments du formulaire : [`HTMLFormElement.elements`](/fr/docs/Web/API/HTMLFormElement/elements)
 - [ARIA : rôle `form`](/fr/docs/Web/Accessibility/ARIA/Roles/Form_Role)

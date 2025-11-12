@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Testing/HTML_and_CSS
 original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 Maintenant que les bases sont posées, nous allons nous concentrer sur les problèmes courants en navigateur croisé que vous allez rencontrer en code HTML et CSS, et quels outils peuvent être utilisés pour prévenir l'arrivée de ces problèmes, ou résoudre les problèmes qui surviennent. Cela inclut le [linting code](https://stackoverflow.com/questions/8503559/what-is-linting), la gestion des préfixes CSS, l'utilisation des outils de dev des navigateurs pour localiser les problèmes, utiliser des [polyfills](/fr/docs/Glossary/Polyfill) pour apporter du support dans les navigateurs, se confronter aux problèmes de responsive design et plus encore.
 
@@ -267,14 +267,14 @@ button:active {
 }
 ```
 
-Ici on fournit un {{cssxref("background-color")}} [RGBA](</fr/docs/Web/CSS/color_value#rgba()>) qui modifie l'opacité au survol afin de donner à l'utilisateur l'information que le bouton est interactif, et une ombre {{cssxref("box-shadow")}} interne semi-transparente pour donner au bouton un peu de texture et de profondeur. Le problème est que les couleurs RGBA et les box shadows ne fonctionnent pas sur les versions d'IE plus vieilles que la 9 — dans les versions plus anciennes le background ne sera juste pas visible du tout et le texte sera illisible, pas bon du tout !
+Ici on fournit un {{cssxref("background-color")}} [RGBA](</fr/docs/Web/CSS/Reference/Values/color_value#rgba()>) qui modifie l'opacité au survol afin de donner à l'utilisateur l'information que le bouton est interactif, et une ombre {{cssxref("box-shadow")}} interne semi-transparente pour donner au bouton un peu de texture et de profondeur. Le problème est que les couleurs RGBA et les box shadows ne fonctionnent pas sur les versions d'IE plus vieilles que la 9 — dans les versions plus anciennes le background ne sera juste pas visible du tout et le texte sera illisible, pas bon du tout !
 
 ![](unreadable-button.png)
 
 Pour résoudre ce problème, nous avons ajouté une deuxième déclaration `background-color`, qui précise juste une couleur hex — c'est un recours supporté par les vieux navigateurs, et agit en tant que solution de repli si les fonctionnalités belles et brillantes ne fonctionnent pas. Ce qui se passe c'est que le navigateur parcourant cette page applique pour commencer la première valeur `background-color` ; lorsqu'il sélectionne la deuxième déclaration `background-color`, il remplace la valeur initiale avec cette valeur s'il supporte les couleurs RGBA. S'il ne supporte pas, il ignorera juste toute la déclaration et continuera à avancer.
 
 > [!NOTE]
-> Il se produit la même chose pour les autres caractéristiques de CSS comme les blocs [media queries](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries), [`@font-face`](/fr/docs/Web/CSS/@font-face) et [`@supports`](/fr/docs/Web/CSS/@supports) — s'ils ne sont pas supportés, le navigateur va juste les ignorer.
+> Il se produit la même chose pour les autres caractéristiques de CSS comme les blocs [media queries](/fr/docs/Web/CSS/Guides/Media_queries/Using), [`@font-face`](/fr/docs/Web/CSS/Reference/At-rules/@font-face) et [`@supports`](/fr/docs/Web/CSS/Reference/At-rules/@supports) — s'ils ne sont pas supportés, le navigateur va juste les ignorer.
 
 #### Les commentaires conditionnels d'IE
 
@@ -317,7 +317,7 @@ Cela paraît assez compliqué à gérer, mais heureusement il y a un {{glossary(
 
 #### Support de sélecteur
 
-Naturellement, aucune caractéristiques CSS ne s'appliquera si vous n'utilisez pas les bons [sélecteurs](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors) pour sélectionner l'élément que vous voulez styler ! Si vous écrivez juste mal un sélecteur alors le style ne sera juste pas celui attendu sur aucun navigateur, vous devez juste résoudre le problème et trouver ce qui ne va pas avec votre sélecteur. Nous trouvons utile d'inspecter l'élément que vous essayez de styler en utilisant l'outil de dev de votre navigateur, ensuite regarder l'arborescence du fil d'Ariane du DOM que les inspecteurs du DOM fournissent en général afin de voir si votre sélecteur est pertinent par rapport à ce fil d'Ariane.
+Naturellement, aucune caractéristiques CSS ne s'appliquera si vous n'utilisez pas les bons [sélecteurs](/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) pour sélectionner l'élément que vous voulez styler ! Si vous écrivez juste mal un sélecteur alors le style ne sera juste pas celui attendu sur aucun navigateur, vous devez juste résoudre le problème et trouver ce qui ne va pas avec votre sélecteur. Nous trouvons utile d'inspecter l'élément que vous essayez de styler en utilisant l'outil de dev de votre navigateur, ensuite regarder l'arborescence du fil d'Ariane du DOM que les inspecteurs du DOM fournissent en général afin de voir si votre sélecteur est pertinent par rapport à ce fil d'Ariane.
 
 Par exemple, dans l'outil de dev de Firefox, vous obtenez ce genre rendement en bas de l'inspecteur du DOM :
 
@@ -331,7 +331,7 @@ form > #date
 
 (L'input `date` du formulaire n'est pas directement dans le `<form>` ; vous feriez mieux d'utiliser un sélecteur descendant général plutôt qu'un sélecteur d'enfant).
 
-Il y a néanmoins un autre problème qui apparaît sur les versions d'IE plus anciennes que la 9 c'est qu'il n'y a aucun nouveau sélecteur (principalement les pseudo-classes et les pseudo-éléments comme [`:nth-of-type`](/fr/docs/Web/CSS/:nth-of-type), [`:not`](/fr/docs/Web/CSS/:not), [`::selection`](/fr/docs/Web/CSS/::selection), etc.) qui marche. Si vous voulez les utiliser dans votre CSS et que vous devez supporter les anciennes versions d'IE, une bonne initiative et d'utiliser la librairie [Selectivizr](http://selectivizr.com/) de Keith Clark — c'est une petite librairie Javascript qui s'exécute au-dessus d'une librairie Javascript existante comme [jQuery](https://jquery.com/) ou [MooTools](http://mootools.net/).
+Il y a néanmoins un autre problème qui apparaît sur les versions d'IE plus anciennes que la 9 c'est qu'il n'y a aucun nouveau sélecteur (principalement les pseudo-classes et les pseudo-éléments comme [`:nth-of-type`](/fr/docs/Web/CSS/Reference/Selectors/:nth-of-type), [`:not`](/fr/docs/Web/CSS/Reference/Selectors/:not), [`::selection`](/fr/docs/Web/CSS/Reference/Selectors/::selection), etc.) qui marche. Si vous voulez les utiliser dans votre CSS et que vous devez supporter les anciennes versions d'IE, une bonne initiative et d'utiliser la librairie [Selectivizr](http://selectivizr.com/) de Keith Clark — c'est une petite librairie Javascript qui s'exécute au-dessus d'une librairie Javascript existante comme [jQuery](https://jquery.com/) ou [MooTools](http://mootools.net/).
 
 1. Afin de tester cet exemple, faites une copie locale de [selectivizr-example-start.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html). Si vous le regarder s'exécuter en direct, vous verrez qu'il contient deux paragraphes, dont l'un est stylé. Nous avons sélectionné le paragraphe avec `p:first-child`, qui ne fonctionne pas sur les anciennes versions d'IE.
 2. Maintenant télécharger [MooTools](http://mootools.net/) et [Selectivizr](http://selectivizr.com/), et placez-les dans le même répertoire que votre fichier HTML.
@@ -374,7 +374,7 @@ background-image: linear-gradient(to right, green, yellow);
 
 La première ligne déclare une propriété {{cssxref("transform")}} avec un préfixe `-webkit-` — c'était nécessaire pour que la transformation fonctionne sur Chrome, etc jusqu'à ce que la fonctionnalité soit finalisée et beaucoup de navigateurs ont ajouté une version de la propriété sans préfixes (au moment de la rédaction, Chrome supportait les deux versions).
 
-Les trois dernières images montrent trois versions différentes de la fonction [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient), qui est utilisée pour générer un dégradé linéaire dans la background d'un élément :
+Les trois dernières images montrent trois versions différentes de la fonction [`linear-gradient()`](/fr/docs/Web/CSS/Reference/Values/gradient/linear-gradient), qui est utilisée pour générer un dégradé linéaire dans la background d'un élément :
 
 1. La première a un préfixe `-moz-`, et montre une version plutôt ancienne de la syntaxe (Firefox)
 2. La seconde a un préfixe `-webkit-`, et montre encore une vieille version de la syntaxe de la propriété (également issue d'une vraiment vieille version du moteur Wekkit)
@@ -479,11 +479,11 @@ Les fonctionnalités de disposition ne sont pas aussi simples pour fournir des s
 Par exemple, vous pourriez appliquer une disposition flexbox sur les navigateurs modernes, et aussi appliquer une disposition en float pour les plus vieux navigateurs qui ne supportent pas flexbox.
 
 > [!NOTE]
-> Il y a une fonctionnalité assez récente en CSS appelé [`@supports`](/fr/docs/Web/CSS/@supports), qui vous permet d'implémenter des tests de détection de fonctionnalités natives.
+> Il y a une fonctionnalité assez récente en CSS appelé [`@supports`](/fr/docs/Web/CSS/Reference/At-rules/@supports), qui vous permet d'implémenter des tests de détection de fonctionnalités natives.
 
 #### Les problèmes de responsive design
 
-Le design responsive est la pratique de créer des dispositions web qui s'adaptent en fonction des facteurs de formes de l'appareil — par exemple différentes tailles d'écran, l'orientation (portait ou paysage), ou la résolution. Une disposition pour ordinateur de bureau par exemple paraîtra atroce lorsqu'elle sera affichée sur un appareil mobile, vous allez donc devoir fournir une disposition appropriée aux mobiles en utilisant les [media queries](/fr/docs/Web/CSS/CSS_media_queries), et assurez-vous qu'il est appliqué correctement en utilisant [viewport](/fr/docs/Mozilla/Mobile/Viewport_meta_tag). Vous pouvez trouver un bilan précis de telles pratiques dans [The building blocks of responsive design](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
+Le design responsive est la pratique de créer des dispositions web qui s'adaptent en fonction des facteurs de formes de l'appareil — par exemple différentes tailles d'écran, l'orientation (portait ou paysage), ou la résolution. Une disposition pour ordinateur de bureau par exemple paraîtra atroce lorsqu'elle sera affichée sur un appareil mobile, vous allez donc devoir fournir une disposition appropriée aux mobiles en utilisant les [media queries](/fr/docs/Web/CSS/Guides/Media_queries), et assurez-vous qu'il est appliqué correctement en utilisant [viewport](/fr/docs/Mozilla/Mobile/Viewport_meta_tag). Vous pouvez trouver un bilan précis de telles pratiques dans [The building blocks of responsive design](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
 
 La résolution est également très préoccupante — par exemple, les appareils mobiles sont moins susceptibles d'avoir besoin de grosses images lourdes que des ordinateurs de bureau, et ont davantage tendance à avoir des connexions internet plus lentes et sans doute un échange de données coûteux qui gaspille la bande passante qui est un problème supplémentaire. De plus, certains appareils peuvent avoir une gamme de plusieurs résolutions, ce qui veut dire que des petites images peuvent s'afficher pixelisées. Il y a un nombre de techniques qui vous permette de travailler autour de tels problèmes, des simples [mobile first media queries](/fr/docs/Web/Apps/Progressive/Responsive/Mobile_first), aux plus complexes [responsive image techniques](/fr/docs/Web/HTML/Guides/Responsive_images#resolution_switching_different_sizes).
 

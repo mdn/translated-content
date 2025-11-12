@@ -30,7 +30,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 
 - {{cssxref(":focus-within")}} 擬似クラスを追加しました ([Firefox バグ 1176997](https://bugzil.la/1176997))。
 - {{HTMLElement("button")}} 要素内で `display:flex/grid` および段組みレイアウトをサポートしました ([Firefox バグ 984869](https://bugzil.la/984869))。
-- 数値で表した色と [currentcolor](/ja/docs/Web/CSS/color_value#currentcolor_keyword) との間の補完処理を実装しました ([Firefox バグ 1299741](https://bugzil.la/1299741))。
+- 数値で表した色と [currentcolor](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) との間の補完処理を実装しました ([Firefox バグ 1299741](https://bugzil.la/1299741))。
 - `{{cssxref("justify-content")}}: space-evenly` および `{{cssxref("align-content")}}: space-evenly` 向けに flexbox レイアウトを実装しました ([Firefox バグ 1235922](https://bugzil.la/1235922))。
 - CSS {{cssxref("mask")}} / {{cssxref("clip-path")}} でサブピクセルアンチエイリアシングをサポートしました ([Firefox バグ 1305259](https://bugzil.la/1305259))。
 - CSS Text 3 の、区分分断の変換規則を実装しました ([Firefox バグ 1081858](https://bugzil.la/1081858))。
@@ -38,7 +38,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 - {{cssxref("align-self")}} および {{cssxref("justify-self")}} 向けのフレックスボックスレイアウトを実装しました ([Firefox バグ 1221524](https://bugzil.la/1221524))。
 - {{cssxref("touch-action")}} プロパティを、すべてのプラットフォームにおいてデフォルトで有効にしました。(詳しくは [intent to ship mail #1](https://groups.google.com/forum/#!topic/mozilla.dev.platform/6CGjsm1XpD4) および [intent to ship mail #2](https://groups.google.com/forum/#!topic/mozilla.dev.platform/SYEzvXJKw9M) をご覧ください)
 - Flexbox の {{cssxref("align-content")}} の処理および単一ラインのサイズ調整が、ラインの数ではなく {{cssxref("flex-wrap")}} に依存するようになりました ([Firefox バグ 1090031](https://bugzil.la/1090031))。
-- 補間処理ができないプロパティのアニメーションに [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)を使用できるようになりました ([Firefox バグ 1064937](https://bugzil.la/1064937))。
+- 補間処理ができないプロパティのアニメーションに [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)を使用できるようになりました ([Firefox バグ 1064937](https://bugzil.la/1064937))。
 - `baseline|last-baseline` を `[ first | last ]? baseline` に変更しました ([Firefox バグ 1313254](https://bugzil.la/1313254)).
 - block-axis について、`left`/`right` の使用値を `start` にしました ([Firefox バグ 1221565](https://bugzil.la/1221565))。
 - 包含ブロックの長さが不定である、flexible tracks を伸長する際に、最小サイズや最大サイズを重視するようになりました ([Firefox バグ 1309407](https://bugzil.la/1309407))。
@@ -54,7 +54,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 
 #### CSS グリッド
 
-- [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout) を実装しました。
+- [CSS グリッド](/ja/docs/Web/CSS/Guides/Grid_layout) を実装しました。
 
 #### 変更および削除
 
@@ -63,8 +63,8 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 - グリッドコンテナーのベースラインを実装しました。 ([Firefox バグ 1151204](https://bugzil.la/1151204))。
 - スタイルシステムから、`<flex>` 値を最小値として使用する箇所を削除しました ([Firefox バグ 1305244](https://bugzil.la/1305244))。
 - 設定項目 `layout.css.masking.enabled` を削除しました ([Firefox バグ 1308239](https://bugzil.la/1308239))。
-- 独自の `-moz-images-in-menus` および `-moz-images-in-buttons` [メディア特性](/ja/docs/Web/CSS/@media#メディア特性)を削除しました ([Firefox バグ 1302157](https://bugzil.la/1302157))。
-- 色のプロパティから `-moz-use-text-color` を削除しました。代わりに [`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_keyword) を使用してください ([Firefox バグ 1306214](https://bugzil.la/1306214))。
+- 独自の `-moz-images-in-menus` および `-moz-images-in-buttons` [メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)を削除しました ([Firefox バグ 1302157](https://bugzil.la/1302157))。
+- 色のプロパティから `-moz-use-text-color` を削除しました。代わりに [`currentcolor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) を使用してください ([Firefox バグ 1306214](https://bugzil.la/1306214))。
 - \[css-grid] グリッドアイテムに 'max-width' を設定するとテキストがはみ出す問題を修正しました ([Firefox バグ 1330380](https://bugzil.la/1330380))。
 
 ### JavaScript

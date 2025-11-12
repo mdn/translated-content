@@ -6,7 +6,7 @@ original_slug: Learn/CSS/CSS_layout/Floats
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
 
-À l'origine conçue pour faire flotter des images à l'intérieur d'un bloc de texte, la propriété [`float`](/fr/docs/Web/CSS/float) est devenue un des outils les plus communément utilisés pour créer des dispositions sur plusieurs colonnes dans des pages web. Avec la venue de Flexbox et des grilles CSS, cette propriété est maintenant revenue à sa destination initiale, comme l'explique l'article.
+À l'origine conçue pour faire flotter des images à l'intérieur d'un bloc de texte, la propriété [`float`](/fr/docs/Web/CSS/Reference/Properties/float) est devenue un des outils les plus communément utilisés pour créer des dispositions sur plusieurs colonnes dans des pages web. Avec la venue de Flexbox et des grilles CSS, cette propriété est maintenant revenue à sa destination initiale, comme l'explique l'article.
 
 <table class="standard-table">
   <tbody>
@@ -32,7 +32,7 @@ original_slug: Learn/CSS/CSS_layout/Floats
 
 ## Contexte de boîtes flottantes
 
-La propriété [`float`](/fr/docs/Web/CSS/float) a été introduite pour permettre aux développeurs web d'implémenter des dispositions simples comme une image flottant dans une colonne de texte, le texte se développant autour de cette image sur la gauche ou sur la droite. Le genre de choses que vous pourriez avoir dans une mise en page de journal.
+La propriété [`float`](/fr/docs/Web/CSS/Reference/Properties/float) a été introduite pour permettre aux développeurs web d'implémenter des dispositions simples comme une image flottant dans une colonne de texte, le texte se développant autour de cette image sur la gauche ou sur la droite. Le genre de choses que vous pourriez avoir dans une mise en page de journal.
 
 Mais les développeuses et développeurs web se sont vite rendu compte que tout élément pouvait flotter, pas seulement les images — c'est ainsi que l'utilisation de `float` s'est élargie pour créer des mises en page amusantes telles qu'une [lettrine](https://css-tricks.com/snippets/css/drop-caps/).
 
@@ -104,7 +104,7 @@ Si vous enregistrez et actualisez maintenant, vous verrez quelque chose qui ress
 
 ### Faire flotter la boîte
 
-Pour faire flotter la boîte, on ajoutera les propriétés [`float`](/fr/docs/Web/CSS/float) et [`margin-right`](/fr/docs/Web/CSS/margin-right) à la règle ciblant `.box`&nbsp;:
+Pour faire flotter la boîte, on ajoutera les propriétés [`float`](/fr/docs/Web/CSS/Reference/Properties/float) et [`margin-right`](/fr/docs/Web/CSS/Reference/Properties/margin-right) à la règle ciblant `.box`&nbsp;:
 
 ```html hidden
 <h1>Exemple simple de boîte flottante</h1>
@@ -156,7 +156,7 @@ Enregistrez et actualisez à nouveau et vous verrez quelque chose comme ce qui s
 
 Voyons comment fonctionne la boîte flottante — l'élément possédant la propriété `float` (l'élément [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) dans notre cas) est retiré du cours normal de la mise en page du document et collé du côté gauche (`left`) de son conteneur parent ([`<body>`](/fr/docs/Web/HTML/Reference/Elements/body), dans ce cas). Tout contenu disposé après l'élément flottant dans le cours normal de la mise en page (c'est-à-dire disposé à la suite dans le code source) va maintenant l'envelopper en remplissant l'espace sur sa droite sur toute sa hauteur. Là, ça s'arrête.
 
-Faire flotter le contenu sur la droite a exactement le même effet, mais inversé — l'élément flottant se plaque sur la droite du conteneur et le contenu l'enveloppera en se plaçant à gauche. Donnez la valeur `right` à la propriété `float` et remplacez [`margin-right`](/fr/docs/Web/CSS/margin-right) par [`margin-left`](/fr/docs/Web/CSS/margin-left) dans le dernier jeu de règles, et observez le résultat.
+Faire flotter le contenu sur la droite a exactement le même effet, mais inversé — l'élément flottant se plaque sur la droite du conteneur et le contenu l'enveloppera en se plaçant à gauche. Donnez la valeur `right` à la propriété `float` et remplacez [`margin-right`](/fr/docs/Web/CSS/Reference/Properties/margin-right) par [`margin-left`](/fr/docs/Web/CSS/Reference/Properties/margin-left) dans le dernier jeu de règles, et observez le résultat.
 
 ### Visualiser le flottement
 
@@ -236,11 +236,11 @@ body {
 
 {{EmbedLiveSample('', '100%', 500)}}
 
-Les [lignes du paragraphe](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model) suivant la boîte flottante ont été raccourcies pour que le texte entoure cette boîte, mais comme elle a été sortie du cours normal, la boîte du contenu du paragraphe reste sur toute la largeur du conteneur.
+Les [lignes du paragraphe](/fr/docs/Web/CSS/Guides/Display/Visual_formatting_model) suivant la boîte flottante ont été raccourcies pour que le texte entoure cette boîte, mais comme elle a été sortie du cours normal, la boîte du contenu du paragraphe reste sur toute la largeur du conteneur.
 
 ## Dégagement des boîtes flottantes
 
-Nous avons vu que la boîte flottante est retirée du cours normal de l'affichage et que les autres éléments se placent à côté, donc si nous voulons empêcher un élément à la suite de remonter pour se placer à côté, nous devons le _dégager_. Cette opération se réalise à l'aide de la propriété [`clear`](/fr/docs/Web/CSS/clear).
+Nous avons vu que la boîte flottante est retirée du cours normal de l'affichage et que les autres éléments se placent à côté, donc si nous voulons empêcher un élément à la suite de remonter pour se placer à côté, nous devons le _dégager_. Cette opération se réalise à l'aide de la propriété [`clear`](/fr/docs/Web/CSS/Reference/Properties/clear).
 
 Dans le HTML de l'exemple précédent, donnez la classe `cleared` au second paragraphe sous l'élément destiné à être placé à côté de la boîte flottante. Puis, ajoutez ceci à la CSS&nbsp;:
 
@@ -502,7 +502,7 @@ body {
 
 ### Utilisation du débordement
 
-Une autre méthode consiste à fixer la valeur de la propriété [`overflow`](/fr/docs/Web/CSS/overflow) de `wrapper` à autre chose que `visible`.
+Une autre méthode consiste à fixer la valeur de la propriété [`overflow`](/fr/docs/Web/CSS/Reference/Properties/overflow) de `wrapper` à autre chose que `visible`.
 
 Supprimez de la CSS les éléments `clearfix` que vous avez ajoutés dans la section précédente et, à la place, ajoutez `overflow: auto` aux règles pour `wrapper`. À nouveau, la boîte devrait être dégagée.
 
@@ -582,7 +582,7 @@ Cet exemple fonctionne en créant ce que l'on appelle un **contexte de formatage
 
 ### `display: flow-root`
 
-La solution moderne de ce problème consiste à utiliser la valeur `flow-root` pour la propriété `display`. Elle n'existe que pour créer des BFC sans recourir à des astuces — il n'y a pas de conséquences imprévisibles à son utilisation. Supprimez `overflow: auto` de la règle `.wrapper` et ajoutez `display: flow-root`. En supposant que [votre navigateur le prenne en charge](/fr/docs/Web/CSS/display#compatibilité_des_navigateurs), la boîte sera dégagée.
+La solution moderne de ce problème consiste à utiliser la valeur `flow-root` pour la propriété `display`. Elle n'existe que pour créer des BFC sans recourir à des astuces — il n'y a pas de conséquences imprévisibles à son utilisation. Supprimez `overflow: auto` de la règle `.wrapper` et ajoutez `display: flow-root`. En supposant que [votre navigateur le prenne en charge](/fr/docs/Web/CSS/Reference/Properties/display#compatibilité_des_navigateurs), la boîte sera dégagée.
 
 ```css
 .wrapper {

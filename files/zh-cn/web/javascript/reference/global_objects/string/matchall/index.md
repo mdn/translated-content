@@ -3,8 +3,6 @@ title: String.prototype.matchAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
 ---
 
-{{JSRef}}
-
 **`matchAll()`** 方法返回一个迭代器，该迭代器包含了检索字符串与[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)进行匹配的所有结果（包括[捕获组](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)）。
 
 {{InteractiveExample("JavaScript Demo: String.matchAll()")}}
