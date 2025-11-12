@@ -62,10 +62,10 @@ La propriété **`-webkit-mask-box-image`** permet de définir l'image de masque
 
 ## Définition formelle
 
-- [Valeur initiale](/fr/docs/Web/CSS/CSS_cascade/Value_processing#initial_value)&nbsp;: `none`
+- [Valeur initiale](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value)&nbsp;: `none`
 - Appliqué à&nbsp;: tous les éléments
-- [Hérité](/fr/docs/Web/CSS/CSS_cascade/Inheritance)&nbsp;: non
-- [Valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_calculée)&nbsp;: comme la valeur définie
+- [Hérité](/fr/docs/Web/CSS/Guides/Cascade/Inheritance)&nbsp;: non
+- [Valeur calculée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_calculée)&nbsp;: comme la valeur définie
 
 ## Syntaxe formelle
 
