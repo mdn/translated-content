@@ -59,11 +59,11 @@ float: inline-end;
 }
 ```
 
-Un **élément flottant** est un élément pour lequel [la valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing) de `float` est différente de `none`.
+Un **élément flottant** est un élément pour lequel [la valeur calculée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing) de `float` est différente de `none`.
 
 `float` implique l'utilisation d'une disposition en bloc, cette propriété modifie donc la valeur de [`display`](/fr/docs/Web/CSS/Reference/Properties/display) dans certains cas&nbsp;:
 
-| [Valeur définie](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_définie) | [Valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_calculée) |
+| [Valeur définie](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_définie) | [Valeur calculée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_calculée) |
 | ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
 | `inline`                                                                       | `block`                                                                          |
 | `inline-block`                                                                 | `block`                                                                          |
@@ -196,5 +196,5 @@ Parfois, on veut forcer le déplacement d'un élément sous les éléments flott
 
 ## Voir aussi
 
-- [Le contexte de formatage des blocs](/fr/docs/Web/CSS/CSS_display/Block_formatting_context)
+- [Le contexte de formatage des blocs](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context)
 - La propriété [`clear`](/fr/docs/Web/CSS/Reference/Properties/clear) qui permet de forcer le déplacement d'un élément sous un élément flottant
