@@ -28,7 +28,7 @@ l10n:
 
 異なる単位型を単一の式で使用することができます。例えば、`calc(100% - 10px)` のように `%` から `px` を引くのも有効な式です。
 
-[CSS 変数](/ja/docs/Web/CSS/CSS_cascading_variables) を `calc-sum` 式に含めることもできます。以下のコード `calc(10px + var(--variable))` は有効な式です。
+[CSS 変数](/ja/docs/Web/CSS/Guides/Cascading_variables) を `calc-sum` 式に含めることもできます。以下のコード `calc(10px + var(--variable))` は有効な式です。
 
 `+` および `-` 演算子は、**{{Glossary("whitespace", "ホワイトスペース")}}で囲む必要があります**。例えば、 `calc(50% -8px)` はパーセント値に負の長さが続くものとして解釈され、不正な式となります。同様に、 `calc(8px + -50%)` は長さの後に加算演算子と負のパーセント値が続くものとして処理されます。
 

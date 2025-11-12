@@ -116,7 +116,7 @@ h3::before {
 {{cssxref("counter", "counter()")}} 関数にも、 `counters(<カウンター名>, <セパレーター>)` と `counters(<カウンター名>, <セパレーター>, <カウンタースタイル>)` の 2 つの形があります。生成される文字列は、その擬似要素のスコープにある指定された名前のすべてのカウンター値が、外側から内側に向けて、指定された文字列 (`<セパレーター>`) で区切られたものになります。
 
 どちらのメソッドでも、カウンターは指定された `<カウンタースタイル>` で表示されます（既定では `decimal` です）。
-{{cssxref("list-style-type")}} の値のいずれか、または[カスタムスタイル](/ja/docs/Web/CSS/CSS_counter_styles)を使用することができます。
+{{cssxref("list-style-type")}} の値のいずれか、または[カスタムスタイル](/ja/docs/Web/CSS/Guides/Counter_styles)を使用することができます。
 
 `counter()` と `counter()` の使用方法を示す例は、それぞれ下記の[基本的な例](#基本的な例)と[入れ子になったカウンターの例](#入れ子になったカウンターの例)です。
 
@@ -471,5 +471,5 @@ li::before {
 - {{cssxref("counter-set")}}
 - {{cssxref("counter-increment")}}
 - {{cssxref("@counter-style")}}
-- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)モジュール
-- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)モジュール
+- [CSS リストとカウンター](/ja/docs/Web/CSS/Guides/Lists)モジュール

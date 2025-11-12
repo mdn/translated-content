@@ -479,7 +479,7 @@ background-position:
 ```
 
 > [!NOTE]
-> top, right, bottom, left の各方向の境界線を指定するプロパティには、HTML 文書の書字方向 (writing mode) と結びついた[論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values#プロパティ)が割り当てられています（書字方向は、左から右、右から左、上から下といったテキストの方向を制御するものです）。次回のレッスンでは、[テキスト方向の扱い](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)に応じたこれらの方法を探ります。
+> top, right, bottom, left の各方向の境界線を指定するプロパティには、HTML 文書の書字方向 (writing mode) と結びついた[論理的プロパティ](/ja/docs/Web/CSS/Guides/Logical_properties_and_values#プロパティ)が割り当てられています（書字方向は、左から右、右から左、上から下といったテキストの方向を制御するものです）。次回のレッスンでは、[テキスト方向の扱い](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)に応じたこれらの方法を探ります。
 
 境界線にはさまざまなスタイルを指定できます。以下の例では、ボックスの 4 辺にそれぞれ異なる境界線スタイルを使用しています。境界線の色、幅、スタイルを試して、境界線の動作を確認しましょう。
 
@@ -531,9 +531,9 @@ h2 {
 ```
 
 > [!NOTE]
-> 上記の境界線プロパティと同様に、これらの border-radius プロパティも割り当てられた[論理的 border-radius プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values#プロパティ)もあります。
+> 上記の境界線プロパティと同様に、これらの border-radius プロパティも割り当てられた[論理的 border-radius プロパティ](/ja/docs/Web/CSS/Guides/Logical_properties_and_values#プロパティ)もあります。
 
-以下の例では、はじめに 4 つの角すべてについて角の丸みを設定したのち、右上角を他と異なる値に変更しました。値を変えて試してみましょう。使用できる構文は {{cssxref("border-radius")}} プロパティのページを見て確認してください。[境界角丸ジェネレーター](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator)を使用して、角丸値を出力することができます。
+以下の例では、はじめに 4 つの角すべてについて角の丸みを設定したのち、右上角を他と異なる値に変更しました。値を変えて試してみましょう。使用できる構文は {{cssxref("border-radius")}} プロパティのページを見て確認してください。[境界角丸ジェネレーター](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator)を使用して、角丸値を出力することができます。
 
 ```html live-sample___corners
 <div class="box">

@@ -343,7 +343,7 @@ BEM 在大些的 Web 项目中被广泛使用，许多人用这种方式写他�
 
 #### 定义变量
 
-CSS 现在有原生的[自定义属性](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)，所以这个功能越来越没那么重要了，但是你使用 Sass 的可能原因之一为，能够作为设置定义用于一个项目的所有颜色和字体，之后这些变量在项目中可用。这意味着如果你意识到你用了错误的蓝色阴影，你只需要在一个地方修改。
+CSS 现在有原生的[自定义属性](/zh-CN/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)，所以这个功能越来越没那么重要了，但是你使用 Sass 的可能原因之一为，能够作为设置定义用于一个项目的所有颜色和字体，之后这些变量在项目中可用。这意味着如果你意识到你用了错误的蓝色阴影，你只需要在一个地方修改。
 
 如果我们创建了在下面的第一行里面叫做 `$base-color` 的变量，我们之后可以在样式表的任何需要这一颜色的地方使用它。
 
@@ -382,4 +382,4 @@ $base-color: #c6538c;
 
 欲了解更多关于 CSS 布局的事情，查看[学习 CSS 布局](/zh-CN/docs/Learn_web_development/Core/CSS_layout)这节课。
 
-你应该也有了探索 [MDN CSS](/zh-CN/docs/Web/CSS) 学习材料的剩余部分的技能。你可以查阅属性和值，探索我们的 [CSS 指导手册](/zh-CN/docs/Web/CSS/How_to/Layout_cookbook)来了解可用的布局模式，或继续阅读如 [CSS 网格布局指南](/zh-CN/docs/Web/CSS/CSS_grid_layout)等更加专门的指南。
+你应该也有了探索 [MDN CSS](/zh-CN/docs/Web/CSS) 学习材料的剩余部分的技能。你可以查阅属性和值，探索我们的 [CSS 指导手册](/zh-CN/docs/Web/CSS/How_to/Layout_cookbook)来了解可用的布局模式，或继续阅读如 [CSS 网格布局指南](/zh-CN/docs/Web/CSS/Guides/Grid_layout)等更加专门的指南。

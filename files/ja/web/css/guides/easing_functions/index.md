@@ -39,11 +39,11 @@ l10n:
 
 ## 関連概念
 
-- [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)モジュール
+- [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)モジュール
   - {{cssxref("animation-timing-function")}}
   - {{cssxref("animation")}} 一括指定
 
-- [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)モジュール
+- [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)モジュール
   - {{cssxref("transition-timing-function")}}
   - {{cssxref("transition")}} 一括指定
 

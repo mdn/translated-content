@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e050b876063f44bde9bf011a2dfc94c0d90ca863
 ---
 
-**`flex`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、{{glossary("flex item","フレックスアイテム")}}をフレックスコンテナーの領域に収めるために、どのように伸長・収縮させるかを指定します。
+**`flex`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、{{glossary("flex item","フレックスアイテム")}}をフレックスコンテナーの領域に収めるために、どのように伸長・収縮させるかを指定します。
 
 {{InteractiveExample("CSS デモ: flex")}}
 
@@ -315,6 +315,6 @@ flexAutoItem.addEventListener("click", () => {
 
 ## 関連情報
 
-- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
-- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)モジュール

@@ -16,7 +16,7 @@ slug: Web/CSS/Reference/At-rules/@font-face
 
 ## 概述
 
-这是一个叫做`@font-face` 的[CSS](/zh-CN/docs/Web/CSS) [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)，它允许网页开发者为其网页指定在线字体。通过这种作者自备字体的方式，`@font-face` 可以消除对用户电脑字体的依赖。`@font-face` 不仅可以放在在 CSS 的最顶层，也可以放在 @规则 的[条件规则组](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules#条件规则组)中。
+这是一个叫做`@font-face` 的[CSS](/zh-CN/docs/Web/CSS) [@ 规则](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules)，它允许网页开发者为其网页指定在线字体。通过这种作者自备字体的方式，`@font-face` 可以消除对用户电脑字体的依赖。`@font-face` 不仅可以放在在 CSS 的最顶层，也可以放在 @规则 的[条件规则组](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules#条件规则组)中。
 
 ## 语法
 
@@ -123,7 +123,7 @@ slug: Web/CSS/Reference/At-rules/@font-face
 
 ## 参考
 
-- [About WOFF](/zh-CN/docs/Web/CSS/CSS_fonts/WOFF)
+- [About WOFF](/zh-CN/docs/Web/CSS/Guides/Fonts/WOFF)
 - [FontSquirrel @font-face generator](https://www.fontsquirrel.com/fontface/generator)
 - [Beautiful fonts with @font-face](https://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/)
 - [Open Font Library](https://openfontlibrary.org/)

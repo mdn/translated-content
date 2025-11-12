@@ -58,4 +58,4 @@ l10n:
 
 ## 関連情報
 
-- [CSS グラデーションの利用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [CSS グラデーションの利用](/ja/docs/Web/CSS/Guides/Images/Using_gradients)

@@ -166,10 +166,10 @@ animation-fill-mode: unset;
   - : 動畫將同時遵循 `forwards` 和 `backwards` 的規則，從而將動畫屬性在兩個方向上延伸。
 
 > [!NOTE]
-> 當你在一個 `animation-*` 屬性上指定多個以逗號分隔的值時，它們會按照 {{cssxref("animation-name")}} 出現的順序應用於動畫。關於動畫數量與 `animation-*` 屬性值數量不匹配的情況，請參見[設定多個動畫屬性值](/zh-TW/docs/Web/CSS/CSS_animations/Using_CSS_animations#設定多個動畫屬性值)。
+> 當你在一個 `animation-*` 屬性上指定多個以逗號分隔的值時，它們會按照 {{cssxref("animation-name")}} 出現的順序應用於動畫。關於動畫數量與 `animation-*` 屬性值數量不匹配的情況，請參見[設定多個動畫屬性值](/zh-TW/docs/Web/CSS/Guides/Animations/Using#設定多個動畫屬性值)。
 
 > [!NOTE]
-> 在建立 [CSS 滾動驅動動畫](/zh-TW/docs/Web/CSS/CSS_scroll-driven_animations)時，`animation-fill-mode` 的效果與常規的基於時間的動畫相同。
+> 在建立 [CSS 滾動驅動動畫](/zh-TW/docs/Web/CSS/Guides/Scroll-driven_animations)時，`animation-fill-mode` 的效果與常規的基於時間的動畫相同。
 
 ## 形式定義
 
@@ -228,7 +228,7 @@ animation-fill-mode: unset;
 
 {{EmbedLiveSample('設定填充模式',700,300)}}
 
-更多範例請參見 [CSS 動畫](/zh-TW/docs/Web/CSS/CSS_animations/Using_CSS_animations)。
+更多範例請參見 [CSS 動畫](/zh-TW/docs/Web/CSS/Guides/Animations/Using)。
 
 ## 規範
 
@@ -240,6 +240,6 @@ animation-fill-mode: unset;
 
 ## 參見
 
-- [使用 CSS 動畫](/zh-TW/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [使用 CSS 動畫](/zh-TW/docs/Web/CSS/Guides/Animations/Using)
 - JavaScript {{domxref("AnimationEvent")}} API
 - 其他相關的動畫屬性：{{cssxref("animation")}}、{{cssxref("animation-composition")}}、{{cssxref("animation-delay")}}、{{cssxref("animation-direction")}}、{{cssxref("animation-duration")}}、{{cssxref("animation-iteration-count")}}、{{cssxref("animation-name")}}、{{cssxref("animation-play-state")}}、{{cssxref("animation-timeline")}}、{{cssxref("animation-timing-function")}}

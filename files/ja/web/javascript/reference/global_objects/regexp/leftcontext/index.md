@@ -1,11 +1,12 @@
 ---
 title: RegExp.leftContext ($`)
+short-title: leftContext ($`)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/leftContext
 l10n:
-  sourceCommit: 05218bd05ab482d49ca659473851a285bcb104b0
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{Deprecated_Header}}
 
 > [!NOTE]
 > グローバルに最後の一致状態を公開する `RegExp` の静的プロパティは、すべて非推奨です。詳しくは[非推奨の RegExp 機能](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)を参照してください。
@@ -20,7 +21,7 @@ l10n:
 
 ドットプロパティアクセサー (``RegExp.$` ``) で短縮エイリアスを使用することはできません。`` ` `` は識別子の一部として有効ではないので、{{jsxref("SyntaxError")}} が発生します。代わりに[ブラケット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)を使用してください。
 
-``$` `` は {{jsxref("String.prototype.replace()")}} の置換文字列でも使用できますが、``RegExp["$`"]`` の古いプロパティとは無関係です。
+`` $` `` は {{jsxref("String.prototype.replace()")}} の置換文字列でも使用できますが、``RegExp["$`"]`` の古いプロパティとは無関係です。
 
 ## 例
 
@@ -43,8 +44,8 @@ RegExp["$`"]; // "hello "
 
 ## 関連情報
 
-- {{jsxref("RegExp.input", "RegExp.input ($_)")}}
-- {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}
-- {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
-- {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
-- {{jsxref("RegExp/n", "RegExp.$1, …, RegExp.$9")}}
+- [`RegExp.input` (`$_`)](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/input)
+- [`RegExp.lastMatch` (`$&`)](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch)
+- [`RegExp.lastParen` (`$+`)](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastParen)
+- [`RegExp.rightContext` (`$'`)](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/rightContext)
+- [`RegExp.$1`, …, `RegExp.$9`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/n)

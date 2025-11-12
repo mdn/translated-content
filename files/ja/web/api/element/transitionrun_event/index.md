@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef}}
 
-**`transitionrun`** イベントは、 [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)が最初に生成されたとき、すなわち {{cssxref("transition-delay")}} が始まる前に発生します。
+**`transitionrun`** イベントは、 [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions/Using)が最初に生成されたとき、すなわち {{cssxref("transition-delay")}} が始まる前に発生します。
 
 このイベントはキャンセルできません。
 

@@ -21,7 +21,7 @@ l10n:
   - 無名ビュー進行タイムラインとは、 {{cssxref("animation-timeline/view", "view()")}} 関数を `animation-timeline` 値として指定され、最も近い親スクローラー内の位置に基づいてアニメーションが発生させられるものです。
 
 > [!NOTE]
-> `animation-timeline` はリセット専用の値として {{cssxref("animation")}} 一括指定に含められています。これは、 `animation` を記載することで、前回宣言した `animation-timeline` の値を `auto` にリセットすることは意味していますが、 `animation` によって固有の値を設定することはできません。[CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を作成する際には、 `animation` の一括指定を宣言した後に、 `animation-timeline` を宣言しなければ、その値が有効になりません。
+> `animation-timeline` はリセット専用の値として {{cssxref("animation")}} 一括指定に含められています。これは、 `animation` を記載することで、前回宣言した `animation-timeline` の値を `auto` にリセットすることは意味していますが、 `animation` によって固有の値を設定することはできません。[CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)を作成する際には、 `animation` の一括指定を宣言した後に、 `animation-timeline` を宣言しなければ、その値が有効になりません。
 
 <!-- {{EmbedInteractiveExample("pages/css/animation-name.html")}} -->
 
@@ -468,5 +468,5 @@ p {
 - {{cssxref("timeline-scope")}}
 - {{cssxref("view-timeline-name")}}, {{cssxref("view-timeline-axis")}}, {{cssxref("view-timeline")}}, {{cssxref("view-timeline-inset")}}
 - JavaScript で相当するもの: `timeline` プロパティが {{domxref("Element.animate()")}} 呼び出しで利用できます
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)

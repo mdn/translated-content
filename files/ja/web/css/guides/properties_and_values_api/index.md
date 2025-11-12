@@ -7,11 +7,11 @@ l10n:
 ---
 
 **CSS プロパティと値 API** (CSS properties and values API) モジュールは、モジュールは、新しい CSS プロパティを登録するための方法を定義し、プロパティのデータ型、継承動作、そしてオプションとして初期値を定義します。
-この API は、 [CSS 変数のカスケードのためのカスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables)モジュールにおける、 CSS において[二重ダッシュ構文 (`--`)](/ja/docs/Web/CSS/Reference/Properties/--*) を使用したカスタムプロパティが定義できる機能をを拡張します。
-CSS プロパティと値 API は API における [CSS Houdini](/ja/docs/Web/CSS/CSS_properties_and_values_API/Houdini) の傘下にあります。
+この API は、 [CSS 変数のカスケードのためのカスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables)モジュールにおける、 CSS において[二重ダッシュ構文 (`--`)](/ja/docs/Web/CSS/Reference/Properties/--*) を使用したカスタムプロパティが定義できる機能をを拡張します。
+CSS プロパティと値 API は API における [CSS Houdini](/ja/docs/Web/CSS/Guides/Properties_and_values_API/Houdini) の傘下にあります。
 
 カスタムプロパティを使用すると、プロジェクト全体で値を再利用できるため、複雑なスタイルシートや繰り返しの多いスタイルシートを簡素化できます。
-基本的なカスタムプロパティは、 [CSS 変数のカスケードのためのカスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables)モジュールで定義されています。
+基本的なカスタムプロパティは、 [CSS 変数のカスケードのためのカスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables)モジュールで定義されています。
 CSS プロパティと値 API はこのモジュールを拡張し、このモジュールを拡張し、 CSS で [`@property`](/ja/docs/Web/CSS/Reference/At-rules/@property) アットルールを使用したり、 JavaScript で {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}} メソッドを使用したりして、カスタムプロパティにメタデータを追加できるようにします。
 
 登録が CSS であれ JavaScript であれ、カスタムプロパティにメタデータを設定することで、ブラウザーがコンテキストに応じて使用できる期待されるデータ型を提供し、初期値を定義し、継承を制御することができます。
@@ -90,7 +90,7 @@ CSS.registerProperty({
 - {{cssxref("var")}}
 - [CSSRule](/ja/docs/Web/API/CSSRule)
 - [CSSStyleValue](/ja/docs/Web/API/CSSStyleValue)
-- [CSS スコープ](/ja/docs/Web/CSS/CSS_scoping)
+- [CSS スコープ](/ja/docs/Web/CSS/Guides/Scoping)
 - [シャドウ DOM の使用](/ja/docs/Web/API/Web_components/Using_shadow_DOM)
 - [CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Typed_OM_API)
 - [CSS 描画 API](/ja/docs/Web/API/CSS_Painting_API)
@@ -102,8 +102,8 @@ CSS.registerProperty({
 
 ## 関連情報
 
-- [CSS カスケードと継承](/ja/docs/Web/CSS/CSS_cascade)
-- [CSS スコープ](/ja/docs/Web/CSS/CSS_scoping)モジュール
+- [CSS カスケードと継承](/ja/docs/Web/CSS/Guides/Cascade)
+- [CSS スコープ](/ja/docs/Web/CSS/Guides/Scoping)モジュール
 - [シャドウ DOM の使用](/ja/docs/Web/API/Web_components/Using_shadow_DOM)
 - [CSS 描画 API](/ja/docs/Web/API/CSS_Painting_API)
 - [Worklet](/ja/docs/Web/API/Worklet) インターフェイス

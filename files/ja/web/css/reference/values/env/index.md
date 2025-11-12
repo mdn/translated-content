@@ -208,9 +208,9 @@ main {
 ## 関連情報
 
 - {{CSSxRef("var()", "var(…)")}}
-- [CSS カスタムプロパティと変数のカスケード](/ja/docs/Web/CSS/CSS_cascading_variables)
+- [CSS カスタムプロパティと変数のカスケード](/ja/docs/Web/CSS/Guides/Cascading_variables)
 - [カスタムプロパティ (--\*)](/ja/docs/Web/CSS/Reference/Properties/--*)
-- [CSS カスタムプロパティ (変数) の使用](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
+- [CSS カスタムプロパティ (変数) の使用](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)
 - [Customize the window controls overlay of your PWA's title bar](https://web.dev/window-controls-overlay/)
 - [Display content in the title bar](https://docs.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/window-controls-overlay)
 - [Breaking Out of the Box](https://alistapart.com/article/breaking-out-of-the-box/)

@@ -139,6 +139,6 @@ h2 {
 
 ## 関連情報
 
-- [段抜きと段の均衡](/ja/docs/Web/CSS/CSS_multicol_layout/Spanning_balancing_columns)
+- [段抜きと段の均衡](/ja/docs/Web/CSS/Guides/Multicol_layout/Spanning_balancing_columns)
 - [インラインレベル要素](/ja/docs/Glossary/Inline-level_content)
 - {{domxref("HTMLSpanElement")}}

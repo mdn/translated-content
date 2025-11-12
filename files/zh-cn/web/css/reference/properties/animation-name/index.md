@@ -102,7 +102,7 @@ animation-name: unset;
   - : 一个标识动画的名称。该标识符由区分大小写的字母 `a` 到 `z`、数字 `0` 到 `9`、下划线（`_`）和/或破折号（`-`）组成。第一个非破折号字符必须是一个字母。此外，在标识符开头不能有两个破折号。此外，标识符不能为 `none`、`unset`、`initial` 或 `inherit`。
 
 > [!NOTE]
-> 当你在 `animation-*` 属性上指定多个以逗号分隔的值时，它们将根据值的数量以不同的方式分配给 {{cssxref("animation-name")}} 属性中指定的动画。有关更多信息，请参阅[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values)。
+> 当你在 `animation-*` 属性上指定多个以逗号分隔的值时，它们将根据值的数量以不同的方式分配给 {{cssxref("animation-name")}} 属性中指定的动画。有关更多信息，请参阅[设置多个动画属性值](/zh-CN/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values)。
 
 ## 形式定义
 
@@ -155,7 +155,7 @@ animation-name: unset;
 
 {{EmbedLiveSample("为动画命名","100%","250")}}
 
-参见 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)以获取示例。
+参见 [CSS 动画](/zh-CN/docs/Web/CSS/Guides/Animations/Using)以获取示例。
 
 ## 规范
 
@@ -167,6 +167,6 @@ animation-name: unset;
 
 ## 参见
 
-- [使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [使用 CSS 动画](/zh-CN/docs/Web/CSS/Guides/Animations/Using)
 - JavaScript {{domxref("AnimationEvent")}} API
 - 其他相关的动画属性：{{cssxref("animation")}}、{{cssxref("animation-composition")}}、{{cssxref("animation-delay")}}、{{cssxref("animation-direction")}}、{{cssxref("animation-duration")}}、{{cssxref("animation-fill-mode")}}、{{cssxref("animation-iteration-count")}}、{{cssxref("animation-play-state")}}、{{cssxref("animation-timeline")}}、{{cssxref("animation-timing-function")}}

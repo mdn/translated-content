@@ -513,4 +513,4 @@ tbody tr :nth-child(3) {
 - {{ Cssxref(":nth-last-child", ":nth-last-child()") }}
 - {{ Cssxref(":has", ":has()") }}: 親要素を選択する擬似クラス
 - [ツリー構造擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes#ツリー構造擬似クラス)
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュール
+- [CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors)モジュール

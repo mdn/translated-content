@@ -120,6 +120,6 @@ transform: rotate(1.75turn);
 - [CSS データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)
 - [`<gradient>`](/ja/docs/Web/CSS/Reference/Values/gradient) 型
 - CSS 回転変換: [`rotate()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotate), [`rotate3d()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotate3d), [`rotateX()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotateX), [`rotateY()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotateY), [`rotateZ()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotateZ)
-- [CSS 変換](/ja/docs/Web/CSS/CSS_transforms)
-- [CSS 変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
-- [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [CSS 変換](/ja/docs/Web/CSS/Guides/Transforms)
+- [CSS 変換の使用](/ja/docs/Web/CSS/Guides/Transforms/Using)
+- [CSS グラデーションの使用](/ja/docs/Web/CSS/Guides/Images/Using_gradients)

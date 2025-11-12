@@ -55,11 +55,11 @@ l10n:
 
 CSS 可用于网页外观相关的多种用途，例如：
 
-- 文本样式，包括更改标题和链接的[颜色](/zh-CN/docs/Web/CSS/color_value)和[大小](/zh-CN/docs/Web/CSS/Reference/Properties/font-size)
+- 文本样式，包括更改标题和链接的[颜色](/zh-CN/docs/Web/CSS/Reference/Values/color_value)和[大小](/zh-CN/docs/Web/CSS/Reference/Properties/font-size)
 - 创建布局，如[网格布局](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Grids)或[多列布局](/zh-CN/docs/Web/CSS/How_to/Layout_cookbook/Column_layouts)
-- 特效，如[动画](/zh-CN/docs/Web/CSS/CSS_animations)
+- 特效，如[动画](/zh-CN/docs/Web/CSS/Guides/Animations)
 
-CSS 语言按*模块*组织，每个模块包含相关功能。例如，你可以查阅[背景与边框模块](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders)的 MDN 参考页面，了解其用途及包含的属性和功能。在我们的模块页面中，你还可以找到定义这些技术的*规范*链接。
+CSS 语言按*模块*组织，每个模块包含相关功能。例如，你可以查阅[背景与边框模块](/zh-CN/docs/Web/CSS/Guides/Backgrounds_and_borders)的 MDN 参考页面，了解其用途及包含的属性和功能。在我们的模块页面中，你还可以找到定义这些技术的*规范*链接。
 
 ## CSS 语法基础
 

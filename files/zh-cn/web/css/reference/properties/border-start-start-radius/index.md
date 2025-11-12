@@ -3,7 +3,7 @@ title: border-start-start-radius
 slug: Web/CSS/Reference/Properties/border-start-start-radius
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`border-start-start-radius`** 定义了元素的逻辑边框半径，并根据元素的书写模式、行内方向和文本朝向对应至实体边框半径。此属性便于构建适应各种[文本朝向](/zh-CN/docs/Web/CSS/Reference/Properties/text-orientation)和[书写模式](/zh-CN/docs/Web/CSS/CSS_writing_modes)的样式。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`border-start-start-radius`** 定义了元素的逻辑边框半径，并根据元素的书写模式、行内方向和文本朝向对应至实体边框半径。此属性便于构建适应各种[文本朝向](/zh-CN/docs/Web/CSS/Reference/Properties/text-orientation)和[书写模式](/zh-CN/docs/Web/CSS/Guides/Writing_modes)的样式。
 
 {{InteractiveExample("CSS Demo: border-start-start-radius")}}
 
@@ -125,6 +125,6 @@ div {
 
 ## 参见
 
-- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)
+- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/Guides/Logical_properties_and_values)
 - 对应的实体属性：{{CSSXref("border-top-left-radius")}}
 - {{CSSXref("writing-mode")}}、{{CSSXref("direction")}}、{{CSSXref("text-orientation")}}

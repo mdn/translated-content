@@ -179,7 +179,7 @@ customElements.define(
 - {{cssxref(":host")}}
 - {{cssxref(":host_function", ":host()")}}
 - {{cssxref(":host-context", ":host-context()")}}
-- [CSS スコープ](/ja/docs/Web/CSS/CSS_scoping)モジュール
+- [CSS スコープ](/ja/docs/Web/CSS/Guides/Scoping)モジュール
 - HTML [`slot`](/ja/docs/Web/HTML/Reference/Global_attributes/slot) 属性
 - HTML {{HTMLElement("slot")}} 要素
 - HTML {{HTMLElement("template")}} 要素

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 9b9086cf753e2d5721fe1229ff6f767ccf512f97
 ---
 
-この記事の最初の部分、 [`z-index` なしの重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index)は、既定でどのように重ね合わせが行われるのかを説明します。独自の重ね合わせ順を定義したい場合は、 {{cssxref("z-index")}} プロパティを[位置指定](/ja/docs/Web/CSS/Reference/Properties/position#位置の種類)要素に使用して行うことができます。
+この記事の最初の部分、 [`z-index` なしの重ね合わせ](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_without_z-index)は、既定でどのように重ね合わせが行われるのかを説明します。独自の重ね合わせ順を定義したい場合は、 {{cssxref("z-index")}} プロパティを[位置指定](/ja/docs/Web/CSS/Reference/Properties/position#位置の種類)要素に使用して行うことができます。
 
 `z-index` プロパティは整数値（正の数、ゼロ、負の数）で指定することができ、想像上の Z 軸方向の要素の位置を表します。もし「Z 軸」という言葉になじみがないのであれば、重ね合わされたレイヤーがあって、それぞれに番号が付いていることを想像してください。レイヤーは番号順に、より大きな番号はより小さな番号の上に描画されます（_X_ は任意の正の整数を示します）。
 
@@ -21,7 +21,7 @@ l10n:
 > [!NOTE]
 >
 > - `z-index` プロパティが定義されていなければ、要素は既定の描画レイヤー 0 (ゼロ) に描画されます。
-> - 同じ `z-index` 値を持つ要素が複数あれば (＝同じレイヤー上にある場合)、 [`z-index` なしの重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index)で説明した重ね合わせ規則が当てはまります。
+> - 同じ `z-index` 値を持つ要素が複数あれば (＝同じレイヤー上にある場合)、 [`z-index` なしの重ね合わせ](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_without_z-index)で説明した重ね合わせ規則が当てはまります。
 
 ## 例
 
@@ -127,9 +127,9 @@ strong {
 
 ## 関連情報
 
-- [`z-index` なしの重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index) : 既定の重ね合わせ規則
-- [浮動ボックスの重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements): 浮動ボックスが重ね合わせでどのように扱われるか
-- [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context): 重ね合わせコンテキストについてのメモ
-- [重ね合わせコンテキストの例 1](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1): 2 階層の HTML 構造で、最終階層の `z-index`
-- [重ね合わせコンテキストの例 2](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2): 2 階層の HTML 構造、全階層の `z-index`
-- [重ね合わせコンテキストの例 3](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3): 3 階層の HTML 構造、第 2 階層の `z-index`
+- [`z-index` なしの重ね合わせ](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_without_z-index) : 既定の重ね合わせ規則
+- [浮動ボックスの重ね合わせ](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_floating_elements): 浮動ボックスが重ね合わせでどのように扱われるか
+- [重ね合わせコンテキスト](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context): 重ね合わせコンテキストについてのメモ
+- [重ね合わせコンテキストの例 1](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_1): 2 階層の HTML 構造で、最終階層の `z-index`
+- [重ね合わせコンテキストの例 2](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_2): 2 階層の HTML 構造、全階層の `z-index`
+- [重ね合わせコンテキストの例 3](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_3): 3 階層の HTML 構造、第 2 階層の `z-index`

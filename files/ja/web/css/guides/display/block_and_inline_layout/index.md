@@ -20,7 +20,7 @@ l10n:
 
 > "インライン整形コンテキストでは、ボックスは包含ブロックの上から次々と水平に、レイアウトされます。これらのボックスの間では、水平マージン、境界、パディングが尊重されます。ボックスは垂直方向には様々な方法で配置されます。下や上に配置されたり、テキストのベースラインに配置されたりします。1 行を形成するボックスを含む矩形の領域は行ボックスと呼ばれます。" - 9.4.2
 
-なお、 CSS 2.1 仕様書では、横書きで上から下へ向かう書字方向の文書を説明しています。例えば、ブロックボックス間を垂直距離によって説明しています。ブロックおよびインライン要素の動作は、縦書きの書字方向でも同様に動作するものです。[フローレイアウトと書字方向のガイド](/ja/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)で詳しく見ていきます。
+なお、 CSS 2.1 仕様書では、横書きで上から下へ向かう書字方向の文書を説明しています。例えば、ブロックボックス間を垂直距離によって説明しています。ブロックおよびインライン要素の動作は、縦書きの書字方向でも同様に動作するものです。[フローレイアウトと書字方向のガイド](/ja/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes)で詳しく見ていきます。
 
 ## ブロック整形コンテキストに参加する要素
 
@@ -153,7 +153,7 @@ p {
 
 {{EmbedLiveSample("normal-flow-collapsing", "", "230px")}}
 
-マージンの相殺については、[マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)の記事で詳しく解説しています。
+マージンの相殺については、[マージンの相殺](/ja/docs/Web/CSS/Guides/Box_model/Margin_collapsing)の記事で詳しく解説しています。
 
 > [!NOTE]
 > マージンが相殺されているかどうか分からない場合は、ブラウザーのの DevTools でボックスモデルの値を確認してください。これにより、マージンの実際のサイズが表示されるので、何が起こっているかを特定するのに役立ちます。
@@ -196,7 +196,7 @@ strong {
 
 {{EmbedLiveSample("line-box")}}
 
-ブロックボックスとインラインボックスの動作についての詳細は、[視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)のガイドを参照してください。
+ブロックボックスとインラインボックスの動作についての詳細は、[視覚整形モデル](/ja/docs/Web/CSS/Guides/Display/Visual_formatting_model)のガイドを参照してください。
 
 ## display プロパティとフローレイアウト
 
@@ -260,7 +260,7 @@ strong {
 
 ## 関連情報
 
-- [CSS 基本ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)
+- [CSS 基本ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model)
 - [学習: 通常フロー](/ja/docs/Learn_web_development/Core/CSS_layout/Introduction#通常フロー)
 - [インライン要素](/ja/docs/Glossary/Inline-level_content)
 - [ブロックレベル要素](/ja/docs/Glossary/Block-level_content)

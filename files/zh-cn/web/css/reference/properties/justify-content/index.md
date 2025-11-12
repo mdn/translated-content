@@ -57,7 +57,7 @@ justify-content: space-evenly;
 }
 ```
 
-当 length 属性和自动外边距属性生效之后，对齐已经完成了。也就是说，如果[弹性布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)中存在至少一个弹性元素，而且这个元素的 {{cssxref("flex-grow")}} 属性不等于 `0`，那么对齐方式不会生效，就像没有多余空间的情况。
+当 length 属性和自动外边距属性生效之后，对齐已经完成了。也就是说，如果[弹性布局](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout)中存在至少一个弹性元素，而且这个元素的 {{cssxref("flex-grow")}} 属性不等于 `0`，那么对齐方式不会生效，就像没有多余空间的情况。
 
 ## 语法
 
@@ -199,4 +199,4 @@ justifyContent.addEventListener("change", function (evt) {
 
 ## 参考
 
-- [使用 CSS 弹性元素](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [使用 CSS 弹性元素](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)

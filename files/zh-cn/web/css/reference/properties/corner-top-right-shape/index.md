@@ -111,5 +111,5 @@ div {
 - {{cssxref("corner-start-start-shape")}}、{{cssxref("corner-start-end-shape")}}、{{cssxref("corner-end-start-shape")}} 和 {{cssxref("corner-end-end-shape")}}
 - {{cssxref("border-radius")}} 简写属性
 - {{cssxref("border-top-right-radius")}}
-- [CSS 边框和盒子装饰](/zh-CN/docs/Web/CSS/CSS_borders_and_box_decorations)模块
-- [CSS 背景和边框](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders)模块
+- [CSS 边框和盒子装饰](/zh-CN/docs/Web/CSS/Guides/Borders_and_box_decorations)模块
+- [CSS 背景和边框](/zh-CN/docs/Web/CSS/Guides/Backgrounds_and_borders)模块

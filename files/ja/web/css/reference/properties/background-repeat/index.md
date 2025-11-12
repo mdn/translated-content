@@ -228,6 +228,6 @@ div {
 ## 関連情報
 
 - 他の {{cssxref("background")}} 一括指定の成分: {{cssxref("background-attachment")}}, {{cssxref("background-clip")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}, {{cssxref("background-position")}} ({{cssxref("background-position-x")}} と {{cssxref("background-position-y")}}), {{cssxref("background-size")}}
-- [複数の背景画像の利用](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
-- [CSS 背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)モジュール
-- [アスペクト比の理解](/ja/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
+- [複数の背景画像の利用](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
+- [CSS 背景と境界](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)モジュール
+- [アスペクト比の理解](/ja/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)

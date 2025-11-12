@@ -8,7 +8,7 @@ l10n:
 
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:where()`** prend une liste de sélecteurs en argument et cible tout élément qui peut être sélectionné par l'un des sélecteurs de la liste.
 
-La différence entre `:where()` et {{CSSxRef(":is", ":is()")}} réside dans le fait que `:where()` a toujours une [spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity) de 0, tandis que `:is()` prend la spécificité du sélecteur le plus spécifique parmi ses arguments.
+La différence entre `:where()` et {{CSSxRef(":is", ":is()")}} réside dans le fait que `:where()` a toujours une [spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity) de 0, tandis que `:is()` prend la spécificité du sélecteur le plus spécifique parmi ses arguments.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :where", "tabbed-shorter")}}
 

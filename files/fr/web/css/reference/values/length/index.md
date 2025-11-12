@@ -18,7 +18,7 @@ Le type de données `<length>` consiste en un nombre ({{cssxref("&lt;number&gt;"
 > [!NOTE]
 > Certaines propriétés autorisent des valeurs `<length>` négatives, d'autres non.
 
-La [valeur définie](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_définie) d'une longueur (_longueur définie_) est représentée par sa quantité et son unité. La [valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_calculée) d'une longueur (_longueur calculée_) est la longueur spécifiée résolue en une longueur absolue, et son unité n'est pas distinguée.
+La [valeur définie](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_définie) d'une longueur (_longueur définie_) est représentée par sa quantité et son unité. La [valeur calculée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_calculée) d'une longueur (_longueur calculée_) est la longueur spécifiée résolue en une longueur absolue, et son unité n'est pas distinguée.
 
 Les unités `<length>` peuvent être relatives ou absolues. Les longueurs relatives représentent une mesure en fonction d'une autre distance. Selon l'unité, cette distance peut être la taille d'un caractère spécifique, la [hauteur de ligne](/fr/docs/Web/CSS/Reference/Properties/line-height), ou la taille de la {{Glossary("viewport", "zone d'affichage")}}. Les feuilles de style qui utilisent des unités de longueur relatives peuvent plus facilement s'adapter d'un environnement de sortie à un autre.
 
@@ -99,18 +99,18 @@ Les **unités de longueur en pourcentage de la zone d'affichage** sont basées s
     > [!NOTE]
     > Par exemple, un navigateur peut implémenter l'unité par défaut pour la hauteur (`vh`) comme équivalente à l'unité de hauteur pour grande zone d'affichage (`lvh`). Cela peut masquer du contenu sur un affichage en pleine page lorsque l'interface du navigateur est étendue. Actuellement, toutes les unités par défaut (`vh`, `vw`, etc.) sont équivalentes à leurs homologues pour grande zone d'affichage (`lvh`, `lvw`, etc.).
 
-Les longueurs en pourcentage de la zone d'affichage définissent des valeurs `<length>` en pourcentage par rapport à la taille du [bloc englobant initial](/fr/docs/Web/CSS/CSS_display/Containing_block), qui dépend soit de la taille de la {{Glossary("viewport", "zone d'affichage")}}, soit de la zone de page, c'est-à-dire la partie visible du document. Lorsque la hauteur ou la largeur du bloc englobant initial change, les éléments dimensionnés en fonction de celui-ci sont redimensionnés en conséquence. Il existe une variante d'unité de longueur en pourcentage de la zone d'affichage pour chacune des tailles décrites ci-dessus.
+Les longueurs en pourcentage de la zone d'affichage définissent des valeurs `<length>` en pourcentage par rapport à la taille du [bloc englobant initial](/fr/docs/Web/CSS/Guides/Display/Containing_block), qui dépend soit de la taille de la {{Glossary("viewport", "zone d'affichage")}}, soit de la zone de page, c'est-à-dire la partie visible du document. Lorsque la hauteur ou la largeur du bloc englobant initial change, les éléments dimensionnés en fonction de celui-ci sont redimensionnés en conséquence. Il existe une variante d'unité de longueur en pourcentage de la zone d'affichage pour chacune des tailles décrites ci-dessus.
 
 > [!NOTE]
 > Les longueurs de la zone d'affichage sont invalides dans les blocs de déclaration {{cssxref("@page")}}.
 
 - `vh`
-  - : Représente un pourcentage de la hauteur du [bloc englobant initial](/fr/docs/Web/CSS/CSS_display/Containing_block) de la zone d'affichage. `1vh` correspond à 1% de la hauteur de la zone d'affichage. Par exemple, si la hauteur de la zone d'affichage est de `300px`, une valeur de `70vh` pour une propriété donnera `210px`.
+  - : Représente un pourcentage de la hauteur du [bloc englobant initial](/fr/docs/Web/CSS/Guides/Display/Containing_block) de la zone d'affichage. `1vh` correspond à 1% de la hauteur de la zone d'affichage. Par exemple, si la hauteur de la zone d'affichage est de `300px`, une valeur de `70vh` pour une propriété donnera `210px`.
 
     Les unités respectives pour petite, grande et dynamique zone d'affichage sont `svh`, `lvh` et `dvh`. `vh` est équivalent à `lvh`, c'est-à-dire l'unité basée sur la grande zone d'affichage.
 
 - `vw`
-  - : Représente un pourcentage de la largeur du [bloc englobant initial](/fr/docs/Web/CSS/CSS_display/Containing_block) de la zone d'affichage. `1vw` correspond à 1% de la largeur de la zone d'affichage. Par exemple, si la largeur de la zone d'affichage est de `800px`, une valeur de `50vw` pour une propriété donnera `400px`.
+  - : Représente un pourcentage de la largeur du [bloc englobant initial](/fr/docs/Web/CSS/Guides/Display/Containing_block) de la zone d'affichage. `1vw` correspond à 1% de la largeur de la zone d'affichage. Par exemple, si la largeur de la zone d'affichage est de `800px`, une valeur de `50vw` pour une propriété donnera `400px`.
 
     Pour les zones d'affichage petite, grande et dynamique, les unités respectives sont `svw`, `lvw` et `dvw`. `vw` est équivalent à `lvw`, c'est-à-dire l'unité basée sur la grande zone d'affichage.
 
@@ -125,12 +125,12 @@ Les longueurs en pourcentage de la zone d'affichage définissent des valeurs `<l
     Pour les zones d'affichage petite, grande et dynamique, les unités respectives sont `svmin`, `lvmin` et `dvmin`. `vmin` est équivalent à `lvmin`, c'est-à-dire l'unité basée sur la grande zone d'affichage.
 
 - `vb`
-  - : Représente le pourcentage de la taille du [bloc englobant initial](/fr/docs/Web/CSS/CSS_display/Containing_block), dans la direction de l'[axe de bloc](/fr/docs/Web/CSS/CSS_logical_properties_and_values) de l'élément racine.
+  - : Représente le pourcentage de la taille du [bloc englobant initial](/fr/docs/Web/CSS/Guides/Display/Containing_block), dans la direction de l'[axe de bloc](/fr/docs/Web/CSS/Guides/Logical_properties_and_values) de l'élément racine.
 
     Pour les zones d'affichage petite, grande et dynamique, les unités respectives sont `svb`, `lvb` et `dvb`. `vb` est équivalent à `lvb`, c'est-à-dire l'unité basée sur la grande zone d'affichage.
 
 - `vi`
-  - : Représente un pourcentage de la taille du [bloc englobant initial](/fr/docs/Web/CSS/CSS_display/Containing_block), dans la direction de l'[axe en ligne](/fr/docs/Web/CSS/CSS_logical_properties_and_values) de l'élément racine.
+  - : Représente un pourcentage de la taille du [bloc englobant initial](/fr/docs/Web/CSS/Guides/Display/Containing_block), dans la direction de l'[axe en ligne](/fr/docs/Web/CSS/Guides/Logical_properties_and_values) de l'élément racine.
 
     Pour les zones d'affichage petite, grande et dynamique, les unités respectives sont `svi`, `lvi` et `dvi`. `vi` est équivalent à `lvi`, c'est-à-dire l'unité basée sur la grande zone d'affichage.
 
@@ -308,5 +308,5 @@ inputElem.addEventListener("change", () => {
 ## Voir aussi
 
 - [Tutoriel sur les unités et valeurs CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-- [Référence des unités et valeurs en CSS](/fr/docs/Web/CSS/CSS_values_and_units)
-- [Modèle de boîtes CSS](/fr/docs/Web/CSS/CSS_box_model)
+- [Référence des unités et valeurs en CSS](/fr/docs/Web/CSS/Guides/Values_and_units)
+- [Modèle de boîtes CSS](/fr/docs/Web/CSS/Guides/Box_model)

@@ -18,7 +18,7 @@ l10n:
 > [!NOTE]
 > 負の `<length>` 値を許容するプロパティとそうでないプロパティがあります。
 
-長さの[指定値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#指定値) (_specified length_) は、その量と単位で表します。長さの[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値) (_computed length_) は、指定した長さを絶対長に分解したもので、単位は判別されません。
+長さの[指定値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#指定値) (_specified length_) は、その量と単位で表します。長さの[計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値) (_computed length_) は、指定した長さを絶対長に分解したもので、単位は判別されません。
 
 `<length>` の単位には相対的なものと絶対的なものがあります。相対的な長さは、他の距離から見た長さを表します。単位によって、この距離は特定の文字の大きさであったり、[行の高さ](/ja/docs/Web/CSS/Reference/Properties/line-height)であったり、{{Glossary("viewport", "ビューポート")}}の大きさであったりします。
 相対的な長さの単位を使用するスタイルシートは、ある出力環境から別の出力環境へ、より簡単に変倍することができます。
@@ -100,18 +100,18 @@ CSS の相対的な長さの単位は、フォント、コンテナー、ビュ�
     > [!NOTE]
     > 例えば、あるブラウザーは既定で高さのビューポートパーセント値の単位 (`vh`) を実装しているかもしれませんが、これは大ビューポートパーセント値の高さ単位 (`lvh`) と同じです。といった具合に、ブラウザーインターフェイスが展開されている間、全ページ表示のコンテンツが見えなくなる可能性があります。
 
-ビューポートパーセント値の長さは、 `<length>` を初期[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)のサイズに対するパーセント値で定義し、この値は{{Glossary("viewport", "ビューポート")}}またはページ領域、つまり文書内の可視部分のサイズに基づいています。初期包含ブロックの高さや幅が変更されると、それに基づいてサイズ調整される要素はそれに応じて変倍されます。下記のように、ビューポートサイズのそれぞれに対応するビューポートパーセント値の長さの単位が変化します。
+ビューポートパーセント値の長さは、 `<length>` を初期[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)のサイズに対するパーセント値で定義し、この値は{{Glossary("viewport", "ビューポート")}}またはページ領域、つまり文書内の可視部分のサイズに基づいています。初期包含ブロックの高さや幅が変更されると、それに基づいてサイズ調整される要素はそれに応じて変倍されます。下記のように、ビューポートサイズのそれぞれに対応するビューポートパーセント値の長さの単位が変化します。
 
 > [!NOTE]
 > ビューポートの長さは {{cssxref("@page")}} 宣言ブロックでは無効になります。
 
 - `vh`
-  - : ビューポートの初期[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)の高さのパーセント値を表します。 `1vh` はビューポートの高さの 1% です。例えば、ビューポートの高さが `300px` の場合、プロパティで `70vh` の値を指定すると `210px` になります。
+  - : ビューポートの初期[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)の高さのパーセント値を表します。 `1vh` はビューポートの高さの 1% です。例えば、ビューポートの高さが `300px` の場合、プロパティで `70vh` の値を指定すると `210px` になります。
 
     小、大、動的ビューポートサイズのそれぞれのビューポートパーセント値の単位は `svh`、`lvh`、`dvh` です。 `vh` はブラウザー既定ビューポートサイズに基づくビューポートパーセント値の長さの単位を表します。
 
 - `vw`
-  - : ビューポートの初期[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)の幅のパーセント値を表します。 `1vw` はビューポートの幅の 1% です。例えば、ビューポートの幅が `800px` の場合、プロパティで `50vw` の値を指定すると `400px` になります。
+  - : ビューポートの初期[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)の幅のパーセント値を表します。 `1vw` はビューポートの幅の 1% です。例えば、ビューポートの幅が `800px` の場合、プロパティで `50vw` の値を指定すると `400px` になります。
 
     小、大、動的ビューポートサイズのそれぞれのビューポートパーセント値の単位は `svw`、`lvw`、`dvw` です。
     `vw` はブラウザー既定ビューポートサイズに基づくビューポートパーセント値の長さの単位を表します。
@@ -129,13 +129,13 @@ CSS の相対的な長さの単位は、フォント、コンテナー、ビュ�
     `vmin` はブラウザー既定ビューポートサイズに基づくビューポートパーセント値の長さの単位を表します。
 
 - `vb`
-  - : 初期[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)における、ルート要素の[ブロック軸](/ja/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline)方向のパーセント値を表します。
+  - : 初期[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)における、ルート要素の[ブロック軸](/ja/docs/Web/CSS/Guides/Logical_properties_and_values#block_vs._inline)方向のパーセント値を表します。
 
     小、大、動的ビューポートサイズのそれぞれのビューポートパーセント値の単位は `svb`, `lvb`, `dvb` です。
     `vb` はブラウザー既定ビューポートサイズに基づくビューポートパーセント値の長さの単位を表します。
 
 - `vi`
-  - : 初期[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)における、ルート要素の[インライン軸](/ja/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline)方向のパーセント値を表します。
+  - : 初期[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)における、ルート要素の[インライン軸](/ja/docs/Web/CSS/Guides/Logical_properties_and_values#block_vs._inline)方向のパーセント値を表します。
 
     小、大、動的ビューポートサイズのそれぞれのビューポートパーセント値の単位は `svi`, `lvi`, `dvi` です。
     `vi` はブラウザー既定ビューポートサイズに基づくビューポートパーセント値の長さの単位を表します。
@@ -145,7 +145,7 @@ CSS の相対的な長さの単位は、フォント、コンテナー、ビュ�
 コンテナークエリーを用いてコンテナーにスタイルを設定する場合、コンテナークエリーの長さの単位を使用することができます。
 この単位は、クエリーコンテナーの寸法関連の長さを指定します。
 コンテナーに対して相対的な長さの単位を使用する部品は、具体的な長さの値を再計算することなく、様々なコンテナーで柔軟に使用することができます。
-詳しい情報は、[コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)を参照してください。
+詳しい情報は、[コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)を参照してください。
 
 - `cqw`
   - : クエリーコンテナーの幅のパーセント値を表します。 `1cqw` はコンテナーの幅の 1% です。例えば、クエリーコンテナーの幅が `800px` の場合、プロパティに `50cqw` の値を指定すると `400px` となります。
@@ -309,5 +309,5 @@ inputElem.addEventListener("change", () => {
 ## 関連情報
 
 - [CSS 値と単位チュートリアル](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-- [CSS 値と単位リファレンス](/ja/docs/Web/CSS/CSS_values_and_units)
-- [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)
+- [CSS 値と単位リファレンス](/ja/docs/Web/CSS/Guides/Values_and_units)
+- [ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model)

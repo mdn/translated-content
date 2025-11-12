@@ -19,7 +19,7 @@ l10n:
 - CSS {{cssxref("offset-position")}} 属性现在默认可用。它定义了元素在路径上的初始位置。（[Firefox bug 1598152](https://bugzil.la/1598152)）
 - 用于定义 CSS {{cssxref("offset-path")}} 的多个方法——包括 [`<basic-shape>`](/zh-CN/docs/Web/CSS/Reference/Properties/offset-path#basic-shape)、[`<coord-box>`](/zh-CN/docs/Web/CSS/Reference/Properties/offset-path#coord-box) 和 [`url()`](/zh-CN/docs/Web/CSS/Reference/Properties/offset-path#url)——现在默认可用。（[Firefox bug 1598159](https://bugzil.la/1598159)）
 - CSS {{cssxref("ray")}} 函数现在默认可用。你可以使用该函数来将 {{cssxref("offset-path")}} 定义为从 {{cssxref("offset-position")}} 开始并沿指定角度延伸的线段。（[Firefox bug 1598151](https://bugzil.la/1598151)）
-- {{CSSxref("clip-path")}} 和 {{CSSxref("offset-path")}} 属性现在支持 [`rect()`](/zh-CN/docs/Web/CSS/basic-shape/rect) 和 [`xywh()`](/zh-CN/docs/Web/CSS/basic-shape/xywh) 形状函数。这些 {{CSSXref("basic-shape")}} 值允许使用离元素边缘的距离定义的矩形（`rect()`）或坐标和尺寸（`xywh()`）来裁剪和偏移元素。（[Firefox bug 1868722](https://bugzil.la/1868722)）。
+- {{CSSxref("clip-path")}} 和 {{CSSxref("offset-path")}} 属性现在支持 [`rect()`](/zh-CN/docs/Web/CSS/Reference/Values/basic-shape/rect) 和 [`xywh()`](/zh-CN/docs/Web/CSS/Reference/Values/basic-shape/xywh) 形状函数。这些 {{CSSXref("basic-shape")}} 值允许使用离元素边缘的距离定义的矩形（`rect()`）或坐标和尺寸（`xywh()`）来裁剪和偏移元素。（[Firefox bug 1868722](https://bugzil.la/1868722)）。
 
 ### JavaScript
 

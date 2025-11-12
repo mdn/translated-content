@@ -69,7 +69,7 @@ polygon(evenodd, 0% 0%, 50% 50%, 0% 100%)
 - [`<fill-rule>`](/ja/docs/Web/SVG/Reference/Attribute/fill-rule) {{optional_inline}}
   - : オプションで `nonzero` （省略時の既定値）または `evenodd` のどちらかであり、塗りつぶしルールを指定します。
 - {{cssxref("length-percentage")}}
-  - : 多角形の各頂点は `<length-percentage>` の値の組で表します。この値は図形の[参照ボックス](/ja/docs/Web/CSS/CSS_shapes/Basic_shapes#参照ボックス)からの相対座標で頂点の x/y 座標を表します。
+  - : 多角形の各頂点は `<length-percentage>` の値の組で表します。この値は図形の[参照ボックス](/ja/docs/Web/CSS/Guides/Shapes/Using_shape-outside#参照ボックス)からの相対座標で頂点の x/y 座標を表します。
 
 ### 返値
 
@@ -194,4 +194,4 @@ p {
 ## 関連情報
 
 - このデータ型を使用するプロパティ: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
-- [基本シェイプのガイド](/ja/docs/Web/CSS/CSS_shapes/Basic_shapes)
+- [基本シェイプのガイド](/ja/docs/Web/CSS/Guides/Shapes/Using_shape-outside)

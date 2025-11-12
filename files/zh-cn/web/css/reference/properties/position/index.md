@@ -113,22 +113,22 @@ position: unset;
 - `relative`
   - : 元素根据文档的正常流程定位，然后根据 `top`、`right`、`bottom` 和 `left` 的值*相对*于*自身*偏移。偏移量不会影响任何其他元素的位置；因此，在页面布局中为该元素提供的空间与位置为 `static` 时相同。
 
-    当 `z-index` 的值不是 `auto` 时，该值会创建一个新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)。它对 `table-*-group`、`table-row`、`table-column`、`table-cell` 和 `table-caption` 元素的影响未定义。
+    当 `z-index` 的值不是 `auto` 时，该值会创建一个新的[层叠上下文](/zh-CN/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)。它对 `table-*-group`、`table-row`、`table-column`、`table-cell` 和 `table-caption` 元素的影响未定义。
 
 - `absolute`
-  - : 该元素将从正常文档流中移除，页面布局中不会为该元素创建任何空间。元素的位置是相对于其位置最近的祖先（如果有）或初始[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block#确定包含块)。其最终位置由 `top`、`right`、`bottom` 和 `left` 的值决定。
+  - : 该元素将从正常文档流中移除，页面布局中不会为该元素创建任何空间。元素的位置是相对于其位置最近的祖先（如果有）或初始[包含块](/zh-CN/docs/Web/CSS/Guides/Display/Containing_block#确定包含块)。其最终位置由 `top`、`right`、`bottom` 和 `left` 的值决定。
 
-    当 `z-index` 的值不是 `auto` 时，该值会创建一个新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)。绝对定位盒子的边距不会与其他边距[折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)。
+    当 `z-index` 的值不是 `auto` 时，该值会创建一个新的[层叠上下文](/zh-CN/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)。绝对定位盒子的边距不会与其他边距[折叠](/zh-CN/docs/Web/CSS/Guides/Box_model/Margin_collapsing)。
 
 - `fixed`
-  - : 元素会被移出正常文档流，并不为元素预留空间。元素的位置是相对于其初始[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block#确定包含块)，也就是视觉媒体的视口。其最终位置由 `top`、`right`、`bottom` 和 `left` 的值决定。
+  - : 元素会被移出正常文档流，并不为元素预留空间。元素的位置是相对于其初始[包含块](/zh-CN/docs/Web/CSS/Guides/Display/Containing_block#确定包含块)，也就是视觉媒体的视口。其最终位置由 `top`、`right`、`bottom` 和 `left` 的值决定。
 
-    该值总会创建一个新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)。在打印的文档中，该元素在*每一页*上的位置都是相同的。
+    该值总会创建一个新的[层叠上下文](/zh-CN/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)。在打印的文档中，该元素在*每一页*上的位置都是相同的。
 
 - `sticky`
-  - : 元素根据正常文档流进行定位，然后相对它的*最近滚动祖先*和[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)（最近块级祖先），包括表格相关元素，基于 `top`、`right`、`bottom` 和 `left` 的值进行偏移。偏移值不会影响任何其他元素的位置。
+  - : 元素根据正常文档流进行定位，然后相对它的*最近滚动祖先*和[包含块](/zh-CN/docs/Web/CSS/Guides/Display/Containing_block)（最近块级祖先），包括表格相关元素，基于 `top`、`right`、`bottom` 和 `left` 的值进行偏移。偏移值不会影响任何其他元素的位置。
 
-    该值总是创建一个新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)。注意，一个 sticky 元素会“固定”在离它最近的一个拥有“滚动机制”的祖先上（当该祖先的 `overflow` 是 `hidden`、`scroll`、`auto` 或 `overlay` 时），即便这个祖先不是最近的真实可滚动祖先。
+    该值总是创建一个新的[层叠上下文](/zh-CN/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)。注意，一个 sticky 元素会“固定”在离它最近的一个拥有“滚动机制”的祖先上（当该祖先的 `overflow` 是 `hidden`、`scroll`、`auto` 或 `overlay` 时），即便这个祖先不是最近的真实可滚动祖先。
 
     > [!NOTE]
     > 至少有一个 [inset](/zh-CN/docs/Web/CSS/Reference/Properties/inset) 属性（{{cssxref("top")}}、{{cssxref("inset-block-start")}}、{{cssxref("right")}}、{{cssxref("inset-inline-end")}} 等）需要设置为非 `auto` 值。如果某个轴的两个 `inset` 属性都设置为 `auto`，则该轴上的 `sticky` 值将表现为 `relative`。
@@ -137,10 +137,10 @@ position: unset;
 
 ### 定位类型
 
-- **定位元素**（positioned element）是其[计算后](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值) `position` 属性为 `relative`、`absolute`、`fixed` 或 `sticky` 的一个元素（换句话说，除 `static` 以外的任何东西）。
-- **相对定位元素**（relatively positioned element）是[计算后](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值) `position` 属性为 `relative` 的元素。{{Cssxref("top")}} 和 {{Cssxref("bottom")}} 属性指定了与正常位置的垂直偏移；{{Cssxref("left")}} 和 {{Cssxref("right")}} 指定了水平偏移。
-- **绝对定位元素**（absolutely positioned element）是[计算后](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值) `position` 属性为 `absolute` 或 `fixed` 的元素。{{Cssxref("top")}}、{{Cssxref("right")}}、{{Cssxref("bottom")}} 和 {{Cssxref("left")}} 属性指定了从元素[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)边缘的偏移量。(包含块是相对于该元素定位的祖先块）。如果元素有边距，则边距会添加到偏移量中。该元素将为其内容建立一个新的[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)（BFC）。
-- **粘性定位元素**（stickily positioned element）是[计算后](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值) `position` 属性为 `sticky` 的元素。在其[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)在其流根（或其滚动的容器）内越过指定临界值（例如将 {{Cssxref("top")}} 设置为 auto 以外的值）之前，它被视为相对定位，此时它被视为“卡住”，直到遇到其[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)的对边。
+- **定位元素**（positioned element）是其[计算后](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#计算值) `position` 属性为 `relative`、`absolute`、`fixed` 或 `sticky` 的一个元素（换句话说，除 `static` 以外的任何东西）。
+- **相对定位元素**（relatively positioned element）是[计算后](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#计算值) `position` 属性为 `relative` 的元素。{{Cssxref("top")}} 和 {{Cssxref("bottom")}} 属性指定了与正常位置的垂直偏移；{{Cssxref("left")}} 和 {{Cssxref("right")}} 指定了水平偏移。
+- **绝对定位元素**（absolutely positioned element）是[计算后](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#计算值) `position` 属性为 `absolute` 或 `fixed` 的元素。{{Cssxref("top")}}、{{Cssxref("right")}}、{{Cssxref("bottom")}} 和 {{Cssxref("left")}} 属性指定了从元素[包含块](/zh-CN/docs/Web/CSS/Guides/Display/Containing_block)边缘的偏移量。(包含块是相对于该元素定位的祖先块）。如果元素有边距，则边距会添加到偏移量中。该元素将为其内容建立一个新的[区块格式化上下文](/zh-CN/docs/Web/CSS/Guides/Display/Block_formatting_context)（BFC）。
+- **粘性定位元素**（stickily positioned element）是[计算后](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#计算值) `position` 属性为 `sticky` 的元素。在其[包含块](/zh-CN/docs/Web/CSS/Guides/Display/Containing_block)在其流根（或其滚动的容器）内越过指定临界值（例如将 {{Cssxref("top")}} 设置为 auto 以外的值）之前，它被视为相对定位，此时它被视为“卡住”，直到遇到其[包含块](/zh-CN/docs/Web/CSS/Guides/Display/Containing_block)的对边。
 
 大多数情况下，{{Cssxref("height")}} 和 {{Cssxref("width")}} 被设定为 `auto` 的绝对定位元素，按其内容大小调整尺寸。但是，非[可替换](/zh-CN/docs/Glossary/Replaced_elements)绝对定位元素可以通过指定 {{Cssxref("top")}} 和 {{Cssxref("bottom")}}，保留 {{Cssxref("height")}} 未指定（即 `auto`），来填充可用的垂直空间。它们同样可以通过指定 {{Cssxref("left")}} 和 {{Cssxref("right")}} 并将 {{Cssxref("width")}} 指定为 `auto` 来填充可用的水平空间。
 
@@ -273,7 +273,7 @@ span {
 
 ### 固定定位
 
-固定定位与绝对定位类似，但元素的[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)是*视口*建立的初始包含块，除非任何祖先的 `transform`、`perspective` 或 `filter` 属性设置为除 `none` 以外的其他属性（请参阅[固定定位包含块](https://drafts.csswg.org/css-position/#fixed-positioning-containing-block)），这样就会使该祖先取代元素[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)。这可以用来创建一个“浮动”元素，无论滚动与否，它都会保持在同一位置。在下面的示例中，盒子“一”被固定在距离页面顶部 80 像素和左侧 10 像素的位置。即使滚动后，它也会保持在相对于视口的同一位置。此外，当 [`will-change`](/zh-CN/docs/Web/CSS/Reference/Properties/will-change) 属性设置为 `transform` 时，会建立一个新的包含块。
+固定定位与绝对定位类似，但元素的[包含块](/zh-CN/docs/Web/CSS/Guides/Display/Containing_block)是*视口*建立的初始包含块，除非任何祖先的 `transform`、`perspective` 或 `filter` 属性设置为除 `none` 以外的其他属性（请参阅[固定定位包含块](https://drafts.csswg.org/css-position/#fixed-positioning-containing-block)），这样就会使该祖先取代元素[包含块](/zh-CN/docs/Web/CSS/Guides/Display/Containing_block)。这可以用来创建一个“浮动”元素，无论滚动与否，它都会保持在同一位置。在下面的示例中，盒子“一”被固定在距离页面顶部 80 像素和左侧 10 像素的位置。即使滚动后，它也会保持在相对于视口的同一位置。此外，当 [`will-change`](/zh-CN/docs/Web/CSS/Reference/Properties/will-change) 属性设置为 `transform` 时，会建立一个新的包含块。
 
 #### HTML
 
@@ -492,5 +492,5 @@ div {
 
 - {{glossary("Inset properties", "Inset 属性")}}
 - [学习 CSS：定位](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Positioning)
-- [定位布局的 Inset 属性](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning#示例：定位布局的偏移属性)
-- [CSS 定位布局](/zh-CN/docs/Web/CSS/CSS_positioned_layout)模块
+- [定位布局的 Inset 属性](/zh-CN/docs/Web/CSS/Guides/Logical_properties_and_values/Floating_and_positioning#示例：定位布局的偏移属性)
+- [CSS 定位布局](/zh-CN/docs/Web/CSS/Guides/Positioned_layout)模块

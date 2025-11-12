@@ -71,7 +71,7 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
 
 ### シェイプ関数
 
-以下のシェイプに対応しています。`<basic-shape>` 値はすべて関数表記であり、[値定義構文](/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)で定義されます。
+以下のシェイプに対応しています。`<basic-shape>` 値はすべて関数表記であり、[値定義構文](/ja/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)で定義されます。
 
 - `{{cssxref("basic-shape/inset","inset()")}}`
   - : 内部の長方形を定義します。
@@ -261,6 +261,6 @@ div {
 ## 関連情報
 
 - このデータ型を使用するプロパティ: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
-- [CSS シェイプ](/ja/docs/Web/CSS/CSS_shapes)モジュール
-- [CSS シェイプの概要](/ja/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
+- [CSS シェイプ](/ja/docs/Web/CSS/Guides/Shapes)モジュール
+- [CSS シェイプの概要](/ja/docs/Web/CSS/Guides/Shapes/Overview)
 - [CSS シェイプのパスを編集する — Firefox 開発者ツール](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html)

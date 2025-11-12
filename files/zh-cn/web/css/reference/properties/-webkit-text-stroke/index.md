@@ -3,7 +3,7 @@ title: -webkit-text-stroke
 slug: Web/CSS/Reference/Properties/-webkit-text-stroke
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`-webkit-text-stroke`** 指定了文本字符的笔触[宽度](/zh-CN/docs/Web/CSS/length)和笔触[颜色](/zh-CN/docs/Web/CSS/color_value)。此属性为全称属性 {{CSSXref("-webkit-text-stroke-width")}} 和 {{CSSXref("-webkit-text-stroke-color")}} 的简写属性。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`-webkit-text-stroke`** 指定了文本字符的笔触[宽度](/zh-CN/docs/Web/CSS/Reference/Values/length)和笔触[颜色](/zh-CN/docs/Web/CSS/Reference/Values/color_value)。此属性为全称属性 {{CSSXref("-webkit-text-stroke-width")}} 和 {{CSSXref("-webkit-text-stroke-color")}} 的简写属性。
 
 ```css
 /* 宽度和颜色值 */

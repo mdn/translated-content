@@ -10,7 +10,7 @@ l10n:
 
 リストアイテムのマーカー、つまり箇条書き記号や番号付きカウンターが、定義する機能です。 リストアイテムは、 {{HTMLElement("ol")}} または {{HTMLElement("ul")}} 要素内にある {{HTMLElement("li")}} 要素に制限されません。 `display: list-item` を設定した要素すべてを指します。
 
-このモジュールは、 CSS でリストのカウンターを設定およびリセットする機能、マーカーとして使用する[カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)または記号を設定する機能、それらのマーカーの位置を指定する機能などを定義します。また、開発者がカスタマイズしたマーカーを作成する機能も提供します。
+このモジュールは、 CSS でリストのカウンターを設定およびリセットする機能、マーカーとして使用する[カウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)または記号を設定する機能、それらのマーカーの位置を指定する機能などを定義します。また、開発者がカスタマイズしたマーカーを作成する機能も提供します。
 
 ## リファレンス
 
@@ -43,15 +43,15 @@ l10n:
 
 ## ガイド
 
-- [一貫したリストのインデント](/ja/docs/Web/CSS/CSS_lists/Consistent_list_indentation)
+- [一貫したリストのインデント](/ja/docs/Web/CSS/Guides/Lists/Indenting)
   - : 異なるブラウザー同士でも一貫したリストのインデントを実現する方法を説明します。
 
-- [CSS カウンターの使用](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
+- [CSS カウンターの使用](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters)
   - : リストのカウンターを制御するために CSS カウンタープロパティを使用する方法を説明します。
 
 ## 関連概念
 
-- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)
   - {{cssxref("@counter-style")}} アットルール
   - [`<counter-style-name>`](/ja/docs/Web/CSS/Reference/At-rules/@counter-style#counter-style-name) データ型
   - [`<symbol>`](/ja/docs/Web/CSS/Reference/At-rules/@counter-style/symbols#値) データ型
@@ -67,6 +67,6 @@ l10n:
 
 ## 関連情報
 
-- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)モジュール
-- [CSS 擬似要素](/ja/docs/Web/CSS/CSS_pseudo-elements)モジュール
-- [CSS 生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content)モジュール
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)モジュール
+- [CSS 擬似要素](/ja/docs/Web/CSS/Guides/Pseudo-elements)モジュール
+- [CSS 生成コンテンツ](/ja/docs/Web/CSS/Guides/Generated_content)モジュール

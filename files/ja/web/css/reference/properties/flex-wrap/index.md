@@ -74,7 +74,7 @@ flex-wrap: unset;
 - `nowrap`
   - : フレックスアイテムは単一行に配置され、フレックスコンテナーからはみ出すこともあります。交差軸の先頭は、 {{cssxref("flex-direction")}} の値に応じて、[インラインの先頭またはブロックの先頭](/ja/docs/Glossary/Flow_relative_values)のどちらかと等しくなります。
 - `wrap`
-  - : フレックスアイテムは複数行に分割されます。交差軸の先頭は、現在の[書字方向](/ja/docs/Web/CSS/CSS_writing_modes)および {{cssxref("flex-direction")}} の値に応じて、[インラインの先頭またはブロックの先頭](/ja/docs/Glossary/Flow_relative_values)のどちらかと等しくなります。
+  - : フレックスアイテムは複数行に分割されます。交差軸の先頭は、現在の[書字方向](/ja/docs/Web/CSS/Guides/Writing_modes)および {{cssxref("flex-direction")}} の値に応じて、[インラインの先頭またはブロックの先頭](/ja/docs/Glossary/Flow_relative_values)のどちらかと等しくなります。
 - `wrap-reverse`
   - : `wrap` と同様に動作しますが、交差軸の先頭と末尾が入れ替わります。
 
@@ -174,6 +174,6 @@ flex-wrap: unset;
 
 - {{CSSXRef("flex-direction")}}
 - {{CSSXRef("flex-flow")}} 一括指定
-- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [フレックスアイテムの折り返しをマスターする](/ja/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
-- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [フレックスアイテムの折り返しをマスターする](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items)
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)モジュール

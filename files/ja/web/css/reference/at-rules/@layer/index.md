@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 33a12980eb49cc795a41f15ec7a0181270ad3048
 ---
 
-**`@layer`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)で、カスケードレイヤーを宣言するために使用し、また複数のカスケードレイヤーがある場合に、優先順位を定義するためにも使用することができます。
+**`@layer`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、カスケードレイヤーを宣言するために使用し、また複数のカスケードレイヤーがある場合に、優先順位を定義するためにも使用することができます。
 
 {{InteractiveExample("CSS Demo: @layer", "tabbed-standard")}}
 
@@ -236,7 +236,7 @@ p {
 - {{domxref("CSSLayerStatementRule")}}
 - [`!important`](/ja/docs/Web/CSS/Reference/Values/important)
 - [`revert-layer`](/ja/docs/Web/CSS/Reference/Values/revert-layer)
-- [CSS カスケード入門](/ja/docs/Web/CSS/CSS_cascade/Cascade)
+- [CSS カスケード入門](/ja/docs/Web/CSS/Guides/Cascade/Introduction)
 - [学習: 競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [学習: カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [The future of CSS: Cascade layers](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/) (bram.us (2021))

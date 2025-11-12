@@ -166,5 +166,5 @@ grid-template-areas: unset; /* 未设置 */
 ## 参见
 
 - 相关 CSS 属性：{{cssxref("grid-template-rows")}}、{{cssxref("grid-template-columns")}}、{{cssxref("grid-template")}}
-- Grid Layout 指南：_[Grid template areas](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)_
+- Grid Layout 指南：_[Grid template areas](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)_
 - 视频教程：_[Grid Template Areas](https://gridbyexample.com/video/grid-template-areas/)_

@@ -68,33 +68,33 @@ body {
 
 ## ガイド
 
-- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
   - : フレックスボックスの機能の概要です。
-- [フレックスボックスと他のレイアウト方法の関係](/ja/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
+- [フレックスボックスと他のレイアウト方法の関係](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods)
   - : フレックスボックスが他のレイアウト方法や他の CSS 仕様書とどのように関係しているかです。
-- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
   - : ボックス配置プロパティがどのようにフレックスボックスに働くかです。
-- [フレックスアイテムの順序](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
+- [フレックスアイテムの順序](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)
   - : アイテムの順序や向きを変更する様々な方法を説明し、その上での潜在的な問題を紹介します。
-- [主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
+- [主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)
   - : flex-grow, flex-shrink, flex-basis の各プロパティについての説明です。
-- [フレックスアイテムの折り返しをマスターする](/ja/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
+- [フレックスアイテムの折り返しをマスターする](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items)
   - : 複数行のフレックスコンテナーを作成する方法と、それらの行内でのアイテムの表示方法の制御。
-- [フレックスボックスの典型的な用途](/ja/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
+- [フレックスボックスの典型的な用途](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases)
   - : 典型的なフレックスボックスの用途の一般的なデザインパターン。
 - [CSS レイアウト: フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)
   - : フレックスボックスレイアウトを使用してウェブレイアウトを作成する方法を学びます。
-- [フレックスボックスのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
-  - : [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)の詳細機能のうち、フレックスボックスに特有のものです。
+- [フレックスボックスのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_flexbox)
+  - : [CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)の詳細機能のうち、フレックスボックスに特有のものです。
 
 ## 関連概念
 
-[CSS 表示方法](/ja/docs/Web/CSS/CSS_display)モジュール
+[CSS 表示方法](/ja/docs/Web/CSS/Guides/Display)モジュール
 
 - {{cssxref("display")}}
 - {{cssxref("order")}}
 
-[CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)モジュール
+[CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)モジュール
 
 - {{cssxref("align-content")}}
 - {{cssxref("align-items")}}
@@ -106,7 +106,7 @@ body {
 - {{cssxref("place-items")}}
 - {{cssxref("row-gap")}}
 
-[CSS ボックスサイズ指定](/ja/docs/Web/CSS/CSS_box_sizing)モジュール
+[CSS ボックスサイズ指定](/ja/docs/Web/CSS/Guides/Box_sizing)モジュール
 
 - {{cssxref("aspect-ratio")}}
 - {{cssxref("max-content")}} 値
@@ -120,5 +120,5 @@ body {
 
 ## 関連情報
 
-- [CSS 書字方向](/ja/docs/Web/CSS/CSS_writing_modes)モジュール
-- [CSS display の複数キーワード構文の使用](/ja/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display)
+- [CSS 書字方向](/ja/docs/Web/CSS/Guides/Writing_modes)モジュール
+- [CSS display の複数キーワード構文の使用](/ja/docs/Web/CSS/Guides/Display/Multi-keyword_syntax)

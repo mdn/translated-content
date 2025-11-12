@@ -36,7 +36,7 @@ l10n:
 
 色を印刷する場合、お使いのプリンターにはシアン、マゼンタ、黄、黒 (CMYK) のインクカートリッジがあるでしょう。 CMYK は減法混色モデルで、 4 つのインクが固有の波長の光を除去し、それぞれが関連する狭い範囲のみを反映します。 RGB は加法混色モデルで、赤、緑、青の光をさまざまな割合で追加します。
 
-現在、ウェブ開発者が作業する空間としては {{glossary("RGB", "RGB 色空間")}}が主流です。 HEX、RGB、HSL 色空間は異なる形で表記されますが、ブラウザーはこれらの色表記間の値を自動的に変換します。 [CSS カラーモジュール](/ja/docs/Web/CSS/CSS_colors) は追加の色空間を提供します。それでも、色出力を測定する上で RGB 色空間が現在支配的であるため、この文書内のほとんどの計算では RGB 色空間、そしてとても特殊な場合には sRGB 色空間での計算を想定しています。
+現在、ウェブ開発者が作業する空間としては {{glossary("RGB", "RGB 色空間")}}が主流です。 HEX、RGB、HSL 色空間は異なる形で表記されますが、ブラウザーはこれらの色表記間の値を自動的に変換します。 [CSS カラーモジュール](/ja/docs/Web/CSS/Guides/Colors) は追加の色空間を提供します。それでも、色出力を測定する上で RGB 色空間が現在支配的であるため、この文書内のほとんどの計算では RGB 色空間、そしてとても特殊な場合には sRGB 色空間での計算を想定しています。
 
 ## sRGB 色空間
 
@@ -121,7 +121,7 @@ RGB は CRT を使用することを反映したハードウェア指向のも�
 
 ![HSL と RGB、色のコントラスト値を持つカラーピッカー。](microcolorsc.jpg)
 
-前述のように、 [CSS 色モジュール](/ja/docs/Web/CSS/CSS_colors)には、 [`lch()`](/ja/docs/Web/CSS/Reference/Values/color_value/lch) および [`oklch()`](/ja/docs/Web/CSS/Reference/Values/color_value/oklch) の色関数記法や、 [`lab()`](/ja/docs/Web/CSS/Reference/Values/color_value/lab) および [`oklab()`](/ja/docs/Web/CSS/Reference/Values/color_value/oklab) 色座標系を含む色空間の追加を含んでいます。とはいえ、 sRGB は普遍的なものであるため、アクセシビリティのための既定で推奨する色空間であることに変わりはありません。
+前述のように、 [CSS 色モジュール](/ja/docs/Web/CSS/Guides/Colors)には、 [`lch()`](/ja/docs/Web/CSS/Reference/Values/color_value/lch) および [`oklch()`](/ja/docs/Web/CSS/Reference/Values/color_value/oklch) の色関数記法や、 [`lab()`](/ja/docs/Web/CSS/Reference/Values/color_value/lab) および [`oklab()`](/ja/docs/Web/CSS/Reference/Values/color_value/oklab) 色座標系を含む色空間の追加を含んでいます。とはいえ、 sRGB は普遍的なものであるため、アクセシビリティのための既定で推奨する色空間であることに変わりはありません。
 
 しかし、アクセシビリティに関する標準と規格の作成は、特に色のコントラスト比に適用される sRGB 色空間を主に使用しています。
 
@@ -130,7 +130,7 @@ RGB は CRT を使用することを反映したハードウェア指向のも�
 
 ### 色値の問い合わせ
 
-{{domxref('Window.getComputedStyle()')}} メソッドは、 RGB 10 進参照スケールを使用するか、 `color(srgb...)` によって値を返します。例えば、 `Window.getComputedStyle()` を `<div>` に `background-color: #ff0000` を設定したものに対して呼び出すと、背景色の計算値を `rgb(255 0 0)` — RGB 10 進参照として返します。しかし、[相対色を使用する](/ja/docs/Web/CSS/CSS_colors/Relative_colors)（例えば `background-color: rgb(from blue 255 0 0)` の）場合、`Window.getComputedStyle()` を呼び出すと、計算された背景色が `color(srgb 1 0 0)` として返されます。コンピューターのハードウェアに関連しているため、 `Window.getComputedStyle()` は人間の目がどのように色を知覚するかではなく、 RGB の観点から色を測定します。
+{{domxref('Window.getComputedStyle()')}} メソッドは、 RGB 10 進参照スケールを使用するか、 `color(srgb...)` によって値を返します。例えば、 `Window.getComputedStyle()` を `<div>` に `background-color: #ff0000` を設定したものに対して呼び出すと、背景色の計算値を `rgb(255 0 0)` — RGB 10 進参照として返します。しかし、[相対色を使用する](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)（例えば `background-color: rgb(from blue 255 0 0)` の）場合、`Window.getComputedStyle()` を呼び出すと、計算された背景色が `color(srgb 1 0 0)` として返されます。コンピューターのハードウェアに関連しているため、 `Window.getComputedStyle()` は人間の目がどのように色を知覚するかではなく、 RGB の観点から色を測定します。
 
 ### 赤緑色覚障碍
 

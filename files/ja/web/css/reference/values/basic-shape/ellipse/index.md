@@ -90,4 +90,4 @@ shape-outside: ellipse(closest-side farthest-side at 30%);
 ## 関連情報
 
 - このデータ型を使用するプロパティ: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
-- [基本シェイプのガイド](/ja/docs/Web/CSS/CSS_shapes/Basic_shapes)
+- [基本シェイプのガイド](/ja/docs/Web/CSS/Guides/Shapes/Using_shape-outside)

@@ -110,9 +110,9 @@ lch(from aquamarine l c calc(h + 180))
 
 ### 相対色における色チャンネルの計算の対応
 
-`calc()` 関数は、[相対色](/ja/docs/Web/CSS/CSS_colors/Relative_colors)のコンテキスト内で色チャンネルを直接操作するために使用することができます。これにより、[`rgb()`](/ja/docs/Web/CSS/Reference/Values/color_value/rgb)、[`hsl()`](/ja/docs/Web/CSS/Reference/Values/color_value/hsl)、[`lch()`](/ja/docs/Web/CSS/Reference/Values/color_value/lch) などの色モデルにおける色チャンネルの動的な調整が可能になります。
+`calc()` 関数は、[相対色](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)のコンテキスト内で色チャンネルを直接操作するために使用することができます。これにより、[`rgb()`](/ja/docs/Web/CSS/Reference/Values/color_value/rgb)、[`hsl()`](/ja/docs/Web/CSS/Reference/Values/color_value/hsl)、[`lch()`](/ja/docs/Web/CSS/Reference/Values/color_value/lch) などの色モデルにおける色チャンネルの動的な調整が可能になります。
 
-相対色の構文は、いくつかの色チャンネルキーワードを定義しています。それぞれのキーワードは、色チャンネルの値を {{cssxref("&lt;number&gt;")}} として表します（詳細については、[チャンネル値は `<number>` 値に解決される](/ja/docs/Web/CSS/CSS_colors/Relative_colors#number_値に解決するチャンネル値)を参照してください）。 `calc()` 関数では、これらの色チャンネルキーワードを使用して、色チャンネルを動的に調整することができます。例えば、 `calc(r + 10)` などです。
+相対色の構文は、いくつかの色チャンネルキーワードを定義しています。それぞれのキーワードは、色チャンネルの値を {{cssxref("&lt;number&gt;")}} として表します（詳細については、[チャンネル値は `<number>` 値に解決される](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors#number_値に解決するチャンネル値)を参照してください）。 `calc()` 関数では、これらの色チャンネルキーワードを使用して、色チャンネルを動的に調整することができます。例えば、 `calc(r + 10)` などです。
 
 ### 形式文法
 
@@ -194,7 +194,7 @@ input {
 
 ### 入れ子の `calc()` と CSS 変数
 
-`calc()` で [CSS 変数](/ja/docs/Web/CSS/CSS_cascading_variables) を使用することもできます。以下のコードを見てみてください。</p>
+`calc()` で [CSS 変数](/ja/docs/Web/CSS/Guides/Cascading_variables) を使用することもできます。以下のコードを見てみてください。</p>
 
 ```css
 .foo {
@@ -209,7 +209,7 @@ input {
 
 ### 相対色における色チャンネルの調整
 
-`calc()` 関数を使用すると、色チャンネル値を変数として格納する必要なく、[相対色](/ja/docs/Web/CSS/CSS_colors/Relative_colors)の個々の色チャンネルを調整することができます。
+`calc()` 関数を使用すると、色チャンネル値を変数として格納する必要なく、[相対色](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)の個々の色チャンネルを調整することができます。
 
 例えば、下記では最初の段落で [`<named-color>`](/ja/docs/Web/CSS/Reference/Values/named-color) を使用しています。
 その後の段落では `calc()` を [`rgb()`](/ja/docs/Web/CSS/Reference/Values/color_value/rgb) および [`hsl()`](/ja/docs/Web/CSS/Reference/Values/color_value/hsl) 関数と組み合わせて使用することで、元の名前付き色に対する各色チャンネルの値を相対的に調整しています。
@@ -248,7 +248,7 @@ p {
 
 {{EmbedLiveSample('Adjusting color channels in relative colors', '700', '300')}}
 
-相対色を導き出すために `calc()` 関数を使用する例については、相対色を使用するページの「[数学関数の使用](/ja/docs/Web/CSS/CSS_colors/Relative_colors#数学関数の使用)」の節を参照してください。
+相対色を導き出すために `calc()` 関数を使用する例については、相対色を使用するページの「[数学関数の使用](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors#数学関数の使用)」の節を参照してください。
 
 ## 仕様書
 

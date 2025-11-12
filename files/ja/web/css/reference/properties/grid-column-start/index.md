@@ -212,5 +212,5 @@ grid-column-start: unset;
 - {{cssxref("grid-row-start")}}
 - {{cssxref("grid-row-end")}}
 - {{cssxref("grid-row")}}
-- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
 - 動画: [Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)

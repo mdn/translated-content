@@ -17,7 +17,7 @@ l10n:
 ### 值
 
 - {{cssxref("&lt;number&gt;")}}
-  - : 用于表示每个 CSS [`px`](/zh-CN/docs/Web/CSS/length#绝对长度单位) 所对应的设备像素数量。虽然该值是一个 `<number>`（因此在语法上不允许带单位），但它的隐含单位是 [`dppx`](/zh-CN/docs/Web/CSS/resolution#单位)。
+  - : 用于表示每个 CSS [`px`](/zh-CN/docs/Web/CSS/Reference/Values/length#绝对长度单位) 所对应的设备像素数量。虽然该值是一个 `<number>`（因此在语法上不允许带单位），但它的隐含单位是 [`dppx`](/zh-CN/docs/Web/CSS/Reference/Values/resolution#单位)。
 
 ## 实现
 
@@ -88,7 +88,7 @@ l10n:
 
 ## 参见
 
-- [使用媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [使用媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using)
 - {{cssxref("resolution")}}
 - [`-webkit-transform-2d`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/-webkit-transform-2d)
 - [`-webkit-transform-3d`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/-webkit-transform-3d)

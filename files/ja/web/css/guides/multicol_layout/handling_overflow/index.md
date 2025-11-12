@@ -138,7 +138,7 @@ body {
 
 ウェブでの段組みの問題の一つに、段がビューポートより高い場合、読み手は読むのに上下にスクロールしなければならなくなるので使い勝手が悪くなるというものがあります。これを防ぐ一つの方法が、十分な高さがあると分かった時にだけ段組みプロパティを適用することです。
 
-以下の例では、 `height` の [@media クエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)を使用して、段組みプロパティを適用する前に高さを検査します。
+以下の例では、 `height` の [@media クエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)を使用して、段組みプロパティを適用する前に高さを検査します。
 
 ```html hidden live-sample___min-height
 <div class="container">
@@ -176,4 +176,4 @@ body {
 
 ## 次のステップ
 
-このシリーズの最後のガイドでは、[断片化が段組みでどのように動作するか](/ja/docs/Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol_layout)を見て、段をまたいでコンテンツが分割される方法を制御します。
+このシリーズの最後のガイドでは、[断片化が段組みでどのように動作するか](/ja/docs/Web/CSS/Guides/Multicol_layout/Handling_content_breaks)を見て、段をまたいでコンテンツが分割される方法を制御します。

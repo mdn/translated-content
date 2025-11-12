@@ -113,6 +113,6 @@ h.onchange = h.oninput = () => {
 
 ## 関連情報
 
-- [`aspect-ratio` の理解](/ja/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
-- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [`aspect-ratio` の理解](/ja/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/Guides/Media_queries/Using)
 - [@media](/ja/docs/Web/CSS/Reference/At-rules/@media)

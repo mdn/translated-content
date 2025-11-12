@@ -76,6 +76,6 @@ mobile 版 Firefox は CSS3 準拠のため、[MDN](/ja/docs/Web/CSS/Reference/V
 ## 参考
 
 ・CSS グラデーションの利用 - Web developer guide | MDN
-　　[https://developer.mozilla.org/ja/docs/Web/Guide/CSS/Using_CSS_gradients](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+　　[https://developer.mozilla.org/ja/docs/Web/Guide/CSS/Using_CSS_gradients](/ja/docs/Web/CSS/Guides/Images/Using_gradients)
 
 [戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

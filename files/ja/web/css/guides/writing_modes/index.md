@@ -21,7 +21,7 @@ l10n:
 
 ## ガイド
 
-- [垂直フォームコントロールの作成](/ja/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
+- [垂直フォームコントロールの作成](/ja/docs/Web/CSS/Guides/Writing_modes/Vertical_controls)
   - : この記事では、CSS の {{cssxref("writing-mode")}} および {{cssxref("direction")}} プロパティを使用して縦書きのフォームコントロールを作成および構成する方法を説明しています。
 
 ## 仕様書

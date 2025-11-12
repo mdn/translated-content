@@ -3,7 +3,7 @@ title: outline
 slug: Web/CSS/Reference/Properties/outline
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) 的 `outline` 属性是在一条声明中设置多个轮廓属性的[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) ，例如 {{cssxref("outline-style")}}, {{cssxref("outline-width")}} 和 {{cssxref("outline-color")}}。
+[CSS](/zh-CN/docs/Web/CSS) 的 `outline` 属性是在一条声明中设置多个轮廓属性的[简写属性](/zh-CN/docs/Web/CSS/Guides/Cascade/Shorthand_properties) ，例如 {{cssxref("outline-style")}}, {{cssxref("outline-width")}} 和 {{cssxref("outline-color")}}。
 
 {{InteractiveExample("CSS Demo: outline")}}
 
@@ -44,7 +44,7 @@ border-radius: 2rem;
 }
 ```
 
-与其他简写属性一样，忽略的子属性会被设为 [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)。
+与其他简写属性一样，忽略的子属性会被设为 [初始值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#初始值)。
 
 ### border 和 outline
 

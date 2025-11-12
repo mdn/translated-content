@@ -138,13 +138,13 @@ div:first-of-type {
 
 ## ガイド
 
-- [複数の背景の使用](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [複数の背景の使用](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
   - : 要素に 1 つ以上の背景を設定します。
-- [背景画像の拡大縮小](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
+- [背景画像の拡大縮小](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images)
   - : 背景画像のサイズや繰り返しの動作を変更する方法を説明します。
-- [SVG の背景の拡大縮小](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds)
+- [SVG の背景の拡大縮小](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds)
   - : SVG のアスペクト比、SVG の寸法値、 CSS の `background-size` プロパティが、 SVG 背景画像の拡大縮小に与える影響について説明します。
-- [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [CSS グラデーションの使用](/ja/docs/Web/CSS/Guides/Images/Using_gradients)
   - : CSS でグラデーションの背景画像を作成する方法を説明します。
 - [CSS の学習: 背景と境界](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
   - : CSS の背景画像を使用して装飾的な画像を実装する方法を学びます。
@@ -191,6 +191,6 @@ div:first-of-type {
 - {{cssxref("filter")}}
 - {{cssxref("backdrop-filter")}}
 - [`drop-shadow()`](/ja/docs/Web/CSS/Reference/Values/filter-function/drop-shadow) フィルター関数
-- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)
-- [境界画像作成ツール](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator)
-- [境界角丸作成ツール](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator)
+- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color)
+- [境界画像作成ツール](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator)
+- [境界角丸作成ツール](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator)

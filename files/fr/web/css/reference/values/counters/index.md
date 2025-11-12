@@ -161,7 +161,7 @@ li::before {
 
 ## Voir aussi
 
-- [Utiliser les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
+- [Utiliser les compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters)
 - {{cssxref("counter-reset")}}
 - {{cssxref("counter-increment")}}
 - {{cssxref("@counter-style")}}

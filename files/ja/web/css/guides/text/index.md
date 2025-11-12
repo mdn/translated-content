@@ -39,7 +39,7 @@ l10n:
 
 ### ガイド
 
-- [テキストの分割と折り返し](/ja/docs/Web/CSS/CSS_text/Wrapping_breaking_text)
+- [テキストの分割と折り返し](/ja/docs/Web/CSS/Guides/Text/Wrapping_breaking_text)
   - : あふれたテキストを CSS で管理する、さまざまな方法についてのガイドです。
 
 ## 関連概念
@@ -74,8 +74,8 @@ l10n:
 
 ## 関連情報
 
-- [CSS 書字方向](/ja/docs/Web/CSS/CSS_writing_modes)モジュール
-- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
-- [CSS フォント](/ja/docs/Web/CSS/CSS_fonts)モジュール
-- [CSS ルビレイアウト](/ja/docs/Web/CSS/CSS_ruby_layout)モジュール
-- [CSS テキスト装飾](/ja/docs/Web/CSS/CSS_text_decoration)モジュール
+- [CSS 書字方向](/ja/docs/Web/CSS/Guides/Writing_modes)モジュール
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
+- [CSS フォント](/ja/docs/Web/CSS/Guides/Fonts)モジュール
+- [CSS ルビレイアウト](/ja/docs/Web/CSS/Guides/Ruby_layout)モジュール
+- [CSS テキスト装飾](/ja/docs/Web/CSS/Guides/Text_decoration)モジュール

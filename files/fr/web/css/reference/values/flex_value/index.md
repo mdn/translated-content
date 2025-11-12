@@ -40,4 +40,4 @@ Le type de donnée `<flex>` est défini par un nombre ({{cssxref("&lt;number&gt;
 
 ## Voir aussi
 
-- [Le mode de disposition en grille (CSS Grid)](/fr/docs/Web/CSS/CSS_grid_layout)
+- [Le mode de disposition en grille (CSS Grid)](/fr/docs/Web/CSS/Guides/Grid_layout)

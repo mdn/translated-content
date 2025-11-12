@@ -14,7 +14,7 @@ l10n:
 > [!NOTE]
 > 如果各个颜色分量由不同的位数表示，则取其中最小的位数。例如，如果显示器对蓝色和红色使用 5 位，而对绿色使用 6 位，那么该设备被视为每个颜色分量使用 5 位。如果设备使用索引颜色，则取颜色表中每个颜色分量的最小位数。
 
-请参阅[使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)以进一步了解如何使用 CSS 为 HTML 应用颜色。
+请参阅[使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/Guides/Colors/Applying_color)以进一步了解如何使用 CSS 为 HTML 应用颜色。
 
 ## 示例
 

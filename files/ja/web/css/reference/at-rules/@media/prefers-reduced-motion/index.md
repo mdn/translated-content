@@ -44,7 +44,7 @@ Firefox では、 `reduce` の要求は以下の場合に尊重されます。
 
 ## 例
 
-この例では、 `prefers-reduced-motion` を実証するために、拡大縮小アニメーションを使用しています。端末のアクセシビリティ設定でモーションの削減を有効にすると、 `prefers-reduced-motion` メディアクエリーがユーザーの意向を検出し、同じ[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)で [CSS ソースの順序](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#ソース順)では後方に位置する、モーション削減ルール内の CSS が優先されます。その結果、ボックスの[アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)は、前庭運動を誘発しない、より控えめなアニメーションである `dissolve` アニメーションにトーンダウンします。
+この例では、 `prefers-reduced-motion` を実証するために、拡大縮小アニメーションを使用しています。端末のアクセシビリティ設定でモーションの削減を有効にすると、 `prefers-reduced-motion` メディアクエリーがユーザーの意向を検出し、同じ[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)で [CSS ソースの順序](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#ソース順)では後方に位置する、モーション削減ルール内の CSS が優先されます。その結果、ボックスの[アニメーション](/ja/docs/Web/CSS/Guides/Animations/Using)は、前庭運動を誘発しない、より控えめなアニメーションである `dissolve` アニメーションにトーンダウンします。
 
 ### アニメーションの拡大縮小のトーンダウン
 

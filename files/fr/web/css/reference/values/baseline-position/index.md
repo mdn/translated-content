@@ -49,6 +49,6 @@ Le type de valeur énumérée `<baseline-position>` s'utilise avec un modificate
   - {{cssxref("content-position")}}
   - {{cssxref("overflow-position")}}
   - {{cssxref("self-position")}}
-- Le module [d'alignement de boîte CSS](/fr/docs/Web/CSS/CSS_box_alignment)
-- Le module [de disposition flexible CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout)
-- Le module [de disposition en grille CSS](/fr/docs/Web/CSS/CSS_grid_layout)
+- Le module [d'alignement de boîte CSS](/fr/docs/Web/CSS/Guides/Box_alignment)
+- Le module [de disposition flexible CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout)
+- Le module [de disposition en grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout)

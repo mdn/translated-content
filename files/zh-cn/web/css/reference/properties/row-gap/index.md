@@ -175,4 +175,4 @@ row-gap: unset;
 ## 参见
 
 - 相关 CSS 属性：{{cssxref("column-gap")}}、{{cssxref("gap")}}
-- 网格布局指南：_[网格布局基本概念——网格间距](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#网格间距)_
+- 网格布局指南：_[网格布局基本概念——网格间距](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#网格间距)_

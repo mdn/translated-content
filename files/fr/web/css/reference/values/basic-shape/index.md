@@ -282,8 +282,8 @@ div {
 
 - Propriétés utilisant ce type&nbsp;: {{cssxref("clip-path")}}, {{cssxref("offset-path")}}, {{cssxref("shape-outside")}}
 - Éléments SVG&nbsp;: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
-- [Présentation des formes CSS](/fr/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
-- Le module de [formes CSS](/fr/docs/Web/CSS/CSS_shapes)
+- [Présentation des formes CSS](/fr/docs/Web/CSS/Guides/Shapes/Overview)
+- Le module de [formes CSS](/fr/docs/Web/CSS/Guides/Shapes)
 - [Introduction au masquage CSS](/fr/docs/Web/CSS/CSS_masking/Masking)
-- Le module de [masquage CSS](/fr/docs/Web/CSS/CSS_masking)
+- Le module de [masquage CSS](/fr/docs/Web/CSS/Guides/Masking)
 - [Modifier les chemins de forme dans Firefox Developer Tools <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html)

@@ -114,4 +114,4 @@ div {
 - Le type de donnée {{cssxref("&lt;color&gt;")}}
 - Le type de donnée {{cssxref("named-color")}}
 - La fonction couleur {{cssxref("color_value/rgb","rgb()")}}
-- Le module [Couleur CSS](/fr/docs/Web/CSS/CSS_colors)
+- Le module [Couleur CSS](/fr/docs/Web/CSS/Guides/Colors)

@@ -100,5 +100,5 @@ clip-path: xywh(1px 2% 3px 4em round 0 1% 2px 3em);
 - {{cssxref("clip-path")}} プロパティ
 - {{cssxref("offset-path")}} プロパティ
 - {{cssxref("&lt;basic-shape&gt;")}} データ型
-- [CSS シェイプ](/ja/docs/Web/CSS/CSS_shapes)モジュール
-- [基本シェイプのガイド](/ja/docs/Web/CSS/CSS_shapes/Basic_shapes)
+- [CSS シェイプ](/ja/docs/Web/CSS/Guides/Shapes)モジュール
+- [基本シェイプのガイド](/ja/docs/Web/CSS/Guides/Shapes/Using_shape-outside)

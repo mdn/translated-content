@@ -53,8 +53,8 @@ justify-self: end;
 
 - 在块级布局中，它将项目在其包含块的行向轴上对齐。
 - 对于绝对定位的元素，它将项目在其包含块的行向轴上对齐，同时考虑顶部、左侧、底部和右侧的偏移值。
-- 在表格布局中，这个属性被*忽略*。了解更多关于[区块、绝对定位以及表格布局中的对齐方式](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)
-- 在弹性布局中，这个属性被*忽略*。了解更多关于[弹性布局中的对齐方式](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- 在表格布局中，这个属性被*忽略*。了解更多关于[区块、绝对定位以及表格布局中的对齐方式](/zh-CN/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables)
+- 在弹性布局中，这个属性被*忽略*。了解更多关于[弹性布局中的对齐方式](/zh-CN/docs/Web/CSS/Guides/Box_alignment/In_flexbox)
 - 在栅格布局中，它将项目在其网格区域内沿内联轴对齐。了解更多关于[栅格布局中的对齐方式](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_Alignment_In_Grid_Layout)
 
 ## 语法
@@ -229,6 +229,6 @@ article {
 
 ## 参见
 
-- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
-- [CSS Box Alignment](/zh-CN/docs/Web/CSS/CSS_box_alignment)
+- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Box_alignment)_
+- [CSS Box Alignment](/zh-CN/docs/Web/CSS/Guides/Box_alignment)
 - The {{CSSxRef("justify-items")}} property

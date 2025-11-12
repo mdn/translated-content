@@ -304,4 +304,4 @@ span {
 - {{cssxref("font-family")}}
 - {{cssxref("font-style")}}
 - [基本的なテキストとフォントのスタイル設定](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)
-- [CSS フォント](/ja/docs/Web/CSS/CSS_fonts)モジュール
+- [CSS フォント](/ja/docs/Web/CSS/Guides/Fonts)モジュール

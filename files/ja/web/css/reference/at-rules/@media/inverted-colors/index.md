@@ -81,5 +81,5 @@ p {
 ## 関連情報
 
 - [@media](/ja/docs/Web/CSS/Reference/At-rules/@media)
-- [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)モジュール
-- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [CSS メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)モジュール
+- [メディアクエリーの使用](/ja/docs/Web/CSS/Guides/Media_queries/Using)

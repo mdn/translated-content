@@ -6,9 +6,9 @@ l10n:
   sourceCommit: f3d3298130d8e22fb89ba123a0648ad3cb7b3655
 ---
 
-[CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)モジュールは、さまざまな CSS ボックスレイアウトモデルにおけるボックスの配置に関連する CSS 機能を指定します。このモジュールは、 CSS 全体で一貫した整列方法を作成することを目的としています。 CSS ボックス配置プロパティは、完全な水平方向と垂直方向の配置機能を提供します。
+[CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)モジュールは、さまざまな CSS ボックスレイアウトモデルにおけるボックスの配置に関連する CSS 機能を指定します。このモジュールは、 CSS 全体で一貫した整列方法を作成することを目的としています。 CSS ボックス配置プロパティは、完全な水平方向と垂直方向の配置機能を提供します。
 
-このガイドでは、このモジュールにある一般的な概念について詳しく説明します。その他のガイドでは、[フレックスボックス](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)、[グリッドレイアウト](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)、[段組みレイアウト](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_multi-column_layout)、[ブロック、絶対配置、テーブルレイアウト](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)でのボックスの配置について詳しく説明します。テキストの配置については、 [CSS テキスト](/ja/docs/Web/CSS/CSS_text)モジュールと [CSS インラインレイアウト](/ja/docs/Web/CSS/CSS_inline_layout)モジュールで扱っています。
+このガイドでは、このモジュールにある一般的な概念について詳しく説明します。その他のガイドでは、[フレックスボックス](/ja/docs/Web/CSS/Guides/Box_alignment/In_flexbox)、[グリッドレイアウト](/ja/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)、[段組みレイアウト](/ja/docs/Web/CSS/Guides/Box_alignment/In_multi-column_layout)、[ブロック、絶対配置、テーブルレイアウト](/ja/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables)でのボックスの配置について詳しく説明します。テキストの配置については、 [CSS テキスト](/ja/docs/Web/CSS/Guides/Text)モジュールと [CSS インラインレイアウト](/ja/docs/Web/CSS/Guides/Inline_layout)モジュールで扱っています。
 
 ## 主要概念と用語
 
@@ -113,7 +113,7 @@ l10n:
 
 ### 基本的な例
 
-次の例では、[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)と[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)でボックス配置プロパティがどのように適用されるかを示します。
+次の例では、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)と[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)でボックス配置プロパティがどのように適用されるかを示します。
 
 #### CSS グリッドレイアウト配置の例
 
@@ -273,16 +273,16 @@ body {
 
 CSS のボックス配置プロパティは、操作する仕様によって異なる実装がなされるため、各レイアウトの種類における配置プロパティの使用方法の詳細については、次のガイドを参照してください。
 
-- [フレックスボックスでのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
-- [CSS グリッドレイアウトでのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
-- [段組みレイアウトでのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_multi-column_layout)
-- [ブロック、絶対位置指定、表レイアウトのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)
+- [フレックスボックスでのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_flexbox)
+- [CSS グリッドレイアウトでのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
+- [段組みレイアウトでのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_multi-column_layout)
+- [ブロック、絶対位置指定、表レイアウトのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables)
 
 ## 関連情報
 
-- [CSS 表示方法](/ja/docs/Web/CSS/CSS_display)モジュール
-- [CSS フレックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール
-- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [フレックスこてなーでのアイテム配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout) module
-- [グリッドレイアウトでのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
+- [CSS 表示方法](/ja/docs/Web/CSS/Guides/Display)モジュール
+- [CSS フレックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)モジュール
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [フレックスこてなーでのアイテム配置](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+- [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout) module
+- [グリッドレイアウトでのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)

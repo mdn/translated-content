@@ -4,12 +4,12 @@ slug: Web/CSS/Reference/Values/initial
 original_slug: Web/CSS/initial
 ---
 
-Le mot-clé **`initial`** applique la valeur initiale d'une propriété à un élément. La valeur initiale est fournie par le navigateur et peut être utilisée pour chaque propriété CSS. Cette propriété prendra alors [la valeur initiale](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_initiale) définie pour cette la propriété.
+Le mot-clé **`initial`** applique la valeur initiale d'une propriété à un élément. La valeur initiale est fournie par le navigateur et peut être utilisée pour chaque propriété CSS. Cette propriété prendra alors [la valeur initiale](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale) définie pour cette la propriété.
 
 La propriété {{cssxref("all")}} peut être utilisée avec cette valeur afin de réinitialiser l'ensemble des propriétés CSS.
 
 > [!NOTE]
-> Pour [les propriétés héritées](/fr/docs/Web/CSS/CSS_cascade/Inheritance#propriétés_héritées), la valeur initiale peut donner des résultats étranges et mieux vaudra utiliser les mots-clés {{cssxref("inherit")}}, {{cssxref("unset")}} ou {{cssxref("revert")}}. Attention également à ne pas confondre la valeur initiale avec la valeur décrite dans la feuille de style portée par le navigateur.
+> Pour [les propriétés héritées](/fr/docs/Web/CSS/Guides/Cascade/Inheritance#propriétés_héritées), la valeur initiale peut donner des résultats étranges et mieux vaudra utiliser les mots-clés {{cssxref("inherit")}}, {{cssxref("unset")}} ou {{cssxref("revert")}}. Attention également à ne pas confondre la valeur initiale avec la valeur décrite dans la feuille de style portée par le navigateur.
 
 ## Exemples
 
@@ -53,7 +53,7 @@ La propriété {{cssxref("all")}} peut être utilisée avec cette valeur afin de
 
 ## Voir aussi
 
-- [La notion de valeur initiale](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_initiale)
+- [La notion de valeur initiale](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale)
 - {{cssxref("inherit")}}
 - {{cssxref("unset")}}
 - {{cssxref("revert")}}

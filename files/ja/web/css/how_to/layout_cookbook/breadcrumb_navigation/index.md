@@ -45,6 +45,6 @@ l10n:
 
 ## 関連情報
 
-- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)
 - [パンくずリストの提供](https://www.w3.org/TR/WCAG20-TECHS/G65.html)（英語）
 - [`aria-current` 属性の使用](https://tink.uk/using-the-aria-current-attribute/)（英語）

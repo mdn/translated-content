@@ -109,8 +109,8 @@ scrollbar-color: unset;
 
 ## 参见
 
-- [CSS 溢出](/zh-CN/docs/Web/CSS/CSS_overflow)模块
-- [CSS 滚动条样式](/zh-CN/docs/Web/CSS/CSS_scrollbars_styling)模块
+- [CSS 溢出](/zh-CN/docs/Web/CSS/Guides/Overflow)模块
+- [CSS 滚动条样式](/zh-CN/docs/Web/CSS/Guides/Scrollbars_styling)模块
 - {{CSSxRef("overflow")}}
 - {{CSSxRef("scrollbar-gutter")}}
 - {{CSSxRef("scrollbar-width")}}

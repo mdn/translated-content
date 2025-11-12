@@ -211,6 +211,6 @@ td {
 
 ## 參見
 
-- [多重背景](/zh-TW/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [多重背景](/zh-TW/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
 - {{cssxref("&lt;color&gt;")}} 資料型別
 - 其他與顏色相關的屬性：{{cssxref("color")}}、{{cssxref("border-color")}}、{{cssxref("outline-color")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-emphasis-color")}}、{{cssxref("text-shadow")}}、{{cssxref("caret-color")}} 和 {{cssxref("column-rule-color")}}

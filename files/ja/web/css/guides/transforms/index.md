@@ -72,7 +72,7 @@ l10n:
 
 ## ガイド
 
-- [CSS 座標変換の利用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [CSS 座標変換の利用](/ja/docs/Web/CSS/Guides/Transforms/Using)
   - : CSS でスタイル付けされた要素をどのように座標変換するかについての手順を追ったチュートリアルです。
 - [座標系](/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems)
   - : CSS オブジェクトモデルでピクセル位置を定義する方法を説明します。
@@ -122,5 +122,5 @@ l10n:
 ## 関連情報
 
 - [基本的な SVG 座標変換](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations)のチュートリアル
-- [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)モジュール
-- [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)モジュール
+- [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)モジュール
+- [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)モジュール

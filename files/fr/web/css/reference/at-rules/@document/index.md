@@ -8,7 +8,7 @@ l10n:
 
 {{Deprecated_header}}{{Non-standard_header}}
 
-La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@document`** restreint les règles qu'elle contient en fonction de l'URL du document. Elle est principalement conçue pour les feuilles de style utilisateur, bien qu'elle puisse être également utilisée pour les feuilles de style d'auteur.
+La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@document`** restreint les règles qu'elle contient en fonction de l'URL du document. Elle est principalement conçue pour les feuilles de style utilisateur, bien qu'elle puisse être également utilisée pour les feuilles de style d'auteur.
 
 ## Syntaxe
 
