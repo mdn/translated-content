@@ -9,7 +9,7 @@ l10n:
 
 **XMLHttpRequest API** 使 web 应用能够通过 JavaScript 向 web 服务器发起 HTTP 请求并接收响应。这使得网站能够仅更新页面中的部分内容（使用服务器返回的数据），而无需跳转至全新页面。这种做法有时也被称为 {{glossary("AJAX")}}。
 
-[Fetch API](/zh-CN/docs/Web/API/Fetch_API) 是取代 XMLHttpRequest API 的更灵活、更强大的方案。Fetch API 使用 {{jsxref("Promise", "promise", "", 1)}} 替代事件机制处理异步响应，对 [service worker](/zh-CN/docs/Web/API/Service_Worker_API) 支持良好，并支持 HTTP 的高级特性，如[跨源资源共享控制](/zh-CN/docs/Web/HTTP/Guides/CORS)。基于这些优势，现代 Web 应用通常采用 Fetch API 替代 {{domxref("XMLHttpRequest")}}。
+[Fetch API](/zh-CN/docs/Web/API/Fetch_API) 是取代 XMLHttpRequest API 的更灵活、更强大的方案。Fetch API 使用 {{jsxref("Promise", "promise", "", 1)}} 替代事件机制处理异步响应，对 [service worker](/zh-CN/docs/Web/API/Service_Worker_API) 支持良好，并支持 HTTP 的高级特性，如[跨源资源共享控制](/zh-CN/docs/Web/HTTP/Guides/CORS)。基于这些优势，现代 web 应用通常采用 Fetch API 替代 {{domxref("XMLHttpRequest")}}。
 
 ## 概念与用法
 
