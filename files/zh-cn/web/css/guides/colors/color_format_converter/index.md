@@ -403,6 +403,46 @@ function rgbaToXYZD65(color) {
   return { l: oklab[0], a: oklab[1], b: oklab[2], alpha };
 }
 
+function rgbaToXYZD65Text(color) {
+  let { alpha } = color;
+  const xyz = rgbaToXYZD65(color);
+  return `color(xyz-d65 ${xyz.x.toFixed(5)} ${xyz.y.toFixed(5)} ${xyz.z.toFixed(
+    5,
+  )}${alpha < 1.0 ? ` / ${alpha.toFixed(3)}` : ""})`;
+}
+
+const D65 = [0.3457 / 0.3585, 1, 0.2958 / 0.3585];
+function xyzToLab(color) {
+  let { x, y, z, alpha } = color;
+  [x, y, z] = [x, y, z].map((v, i) => {
+    v /= D65[i];
+    return v > 0.0088564516 ? Math.cbrt(v) : v * 903.2962962962963 + 16 / 116;
+  });
+  return { l: 116 * y - 16, a: 500 * (x - y), b: 200 * (y - z), alpha };
+}
+
+function rgbaToLabText(color) {
+  let { alpha } = color;
+  const xyz = rgbaToXYZD50(color);
+  const lab = xyzToLab(xyz);
+  return `lab(${lab.l.toFixed(3)} ${lab.a.toFixed(3)} ${lab.b.toFixed(3)}${
+    alpha < 1.0 ? ` / ${alpha.toFixed(3)}` : ""
+  })`;
+}
+
+function rgbToOklab(color) {
+  let { r, g, b, alpha } = color;
+  r = rgbToLinear(r / 255);
+  g = rgbToLinear(g / 255);
+  b = rgbToLinear(b / 255);
+  const lms = multiplyByMatrix(LRGB_LMS_MATRIX, [r, g, b]).map((v) =>
+    Math.cbrt(v),
+  );
+
+  const oklab = multiplyByMatrix(LMS_LAB_MATRIX, lms);
+  return { l: oklab[0], a: oklab[1], b: oklab[2], alpha };
+}
+
 function toOkLabText(color) {
   let { alpha } = color;
   const oklab = rgbToOklab(color);
