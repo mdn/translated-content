@@ -39,7 +39,7 @@ arguments[1]; // 第二个参数
 arguments[2]; // 第三个参数
 ```
 
-`arguments` 对象适用于接收的参数数量超过其形式声明数量的函数，即[*可变参数函数*](https://zh.wikipedia.org/wiki/可變參數函數)，例如  {{jsxref("Math.min()")}}。此示例函数可接收任意数量的字符串参数，并返回其中最长的字符串：
+`arguments` 对象适用于接收的参数数量超过其形式声明数量的函数，即[_可变参数函数_](https://zh.wikipedia.org/wiki/可變參數函數)，例如 {{jsxref("Math.min()")}}。此示例函数可接收任意数量的字符串参数，并返回其中最长的字符串：
 
 ```js
 function longestString() {
