@@ -1,5 +1,5 @@
 ---
-title: "HTML readonly 속성"
+title: HTML readonly 속성
 short-title: readonly
 slug: Web/HTML/Reference/Attributes/readonly
 l10n:
