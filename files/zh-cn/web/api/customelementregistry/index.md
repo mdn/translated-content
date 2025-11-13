@@ -18,7 +18,7 @@ slug: Web/API/CustomElementRegistry
 - {{domxref("CustomElementRegistry.upgrade()")}}
   - : 直接更新一个自定义元素，即使在它尚未连接到其影子根之前。
 - {{domxref("CustomElementRegistry.whenDefined()")}}
-  - : 返回当使用给定名称定义自定义元素时将会执行的 {{jsxref("Promise", "promise")}}。如果已经定义了这样一个自定义元素，那么立即兑现返回的 promise。
+  - : 返回当使用给定名称定义自定义元素时将会兑现的 {{jsxref("Promise")}}。如果已经定义了这样一个自定义元素，那么立即兑现返回的 promise。
 
 ## 示例
 
