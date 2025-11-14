@@ -6,7 +6,7 @@ slug: Web/CSS/Reference/Values/attr
 ## 概述
 
 > [!NOTE]
-> `attr()` 理论上能用于所有的 CSS 属性但目前支持的仅有伪元素的 {{CSSxRef("content")}} 属性，其他的属性和高级特性目前是实验性的
+> `attr()` 理论上能用于所有的 CSS 属性，但目前支持的仅有伪元素的 {{CSSxRef("content")}} 属性，其他的属性和高级特性目前是实验性的
 >
 > 译者注：如果发现浏览器兼容表里 attr() 的高级用法依旧没有良好的支持的话，本文大部分内容都是纸上谈兵
 
@@ -17,48 +17,53 @@ CSS 表达式 `attr()` 用来获取选择到的元素的某一 HTML 属性值，
 ## 语法
 
 ```css
+/** 语法表示 */
+attr(<attr-name> <attr-type>? , <fallback-value>?)
+
 /* 简单用法 */
 attr(data-count);
 attr(title);
 
-/* 带类型 */
-attr(src url);
-attr(data-count number);
+/** 带单位 */
 attr(data-width px);
+attr(data-font-size rem);
+attr(data-height %);
+
+/* 带类型 */
+attr(data-count number);
+attr(id type(<custom-ident>))
+attr(src type(<url>));
+attr(data-size type(<length> | <percentage>))
 
 /* 带回退值 */
-attr(data-count number, 0);
-attr(src url, "");
-attr(data-width px, inherit);
+attr(data-count type(<number>), 0);
+attr(src type(<url>), "");
+attr(data-width type(<length>), inherit);
 attr(data-something, "default");
 ```
 
 ### 解释
 
-- `attribute-name`
+- `<attr-name>`
   - : 是 CSS 所引用的 HTML 属性名称。
-- `<type-or-unit>`
-  - : 表示所引用的属性值的单位。如果该单位相对于所引用的属性值不合法，那么`attr()`表达式也不合法。若省略，则默认值为`string`。其合法值包括：
-
-    | 关键字                                                                                                           | 类型                              | 备注                                                                                                                                                                                                                                                                                     | 默认值                                                   |
-    | ---------------------------------------------------------------------------------------------------------------- | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
-    | `string`                                                                                                         | {{cssxref("&lt;string&gt;")}}     | 属性值将被解析为 {{cssxref("&lt;string&gt;")}}                                                                                                                                                                                                                                           | 空字符串                                                 |
-    | `color` {{ experimental_inline() }}                                                                              | {{cssxref("&lt;color&gt;")}}      | 属性值将被解析为#xxx、#xxxxxx 或关键字的形式，且必须为合法 CSS {{cssxref("&lt;string&gt;")}} 值。前缀与后缀空格将被截掉。                                                                                                                                                                | 当前颜色                                                 |
-    | `url` {{ experimental_inline() }}                                                                                | {{ cssxref("&lt;uri&gt;") }}      | 属性值将被解析为可用于`url()`函数的字符串。相对 URL 是根据 HTML 文档的路径解析，而不是样式文件所在的路径。前缀与后缀空格将被截掉。                                                                                                                                                       | URL `about:invalid`，表示资源不存在。                    |
-    | `integer` {{ experimental_inline() }}                                                                            | {{cssxref("&lt;integer&gt;")}}    | 属性值将被解析为 CSS {{cssxref("&lt;integer&gt;")}}。若不是合法值（不是整数或超出 CSS 属性规定的数字范围），则使用默认值。前缀与后缀空格将被截掉。                                                                                                                                       | `0`，或该属性允许的最小值（如果 0 是不合法的值）。       |
-    | `number` {{ experimental_inline() }}                                                                             | {{cssxref("&lt;number&gt;")}}     | 属性值将被解析为 CSS {{cssxref("&lt;number&gt;")}}。若不是合法值（不是数字或超出 CSS 属性规定的数字范围），则使用默认值。前缀与后缀空格将被截掉。                                                                                                                                        | `0`，或该属性允许的最小值（如果 0 是不合法的值）。       |
-    | `length` {{ experimental_inline() }}                                                                             | {{cssxref("&lt;length&gt;")}}     | 属性值将被解析为 CSS {{cssxref("&lt;length&gt;")}}，带单位，比如 `12.5em`。若不是合法值（不是长度值或超出 CSS 属性规定的范围），则使用默认值。若属性值是一个相对长度， `attr()`会将其计算为绝对长度。前缀与后缀空格将被截掉。                                                            | `0`，或该属性允许的最小值（如果 0 是不合法的值）。       |
-    | `em`, `ex`, `px`, `rem`, `vw`, `vh`, `vmin`, `vmax`, `mm`, `cm`, `in`, `pt`, or `pc` {{ experimental_inline() }} | {{cssxref("&lt;length&gt;")}}     | 属性值将被解析为 CSS {{cssxref("&lt;number&gt;")}}，不带单位，如 `12.5`，并被解释为带有所规定单位的 {{cssxref("&lt;length&gt;")}} 值。若不是合法值（不是长度值或超出 CSS 属性规定的范围），则使用默认值。若属性值是一个相对长度， `attr()`会将其计算为绝对长度。前缀与后缀空格将被截掉。 | `0`，或该属性允许的最小值（如果 0 是不合法的值）。       |
-    | `angle` {{ experimental_inline() }}                                                                              | {{ cssxref("&lt;angle&gt;") }}    | 属性值将被解析为 CSS {{ cssxref("&lt;angle&gt;") }}，带单位，如`30.5deg`。若不是合法值（不是角度值或超出 CSS 属性规定的范围），则使用默认值。前缀与后缀空格将被截掉。                                                                                                                    | `0deg`，或该属性允许的最小值（如果 0deg 是不合法的值）。 |
-    | `deg`, `grad`, `rad` {{ experimental_inline() }}                                                                 | {{ cssxref("&lt;angle&gt;") }}    | 属性值将被解析为 CSS {{cssxref("&lt;number&gt;")}}，不带单位，如`12.5`)，并被解释为带有所规定单位的 {{ cssxref("&lt;angle&gt;") }} 值。若不是合法值（不是角度值或超出 CSS 属性规定的范围），则使用默认值。前缀与后缀空格将被截掉。                                                       | `0deg`，或该属性允许的最小值（如果 0deg 是不合法的值）。 |
-    | `time` {{ experimental_inline() }}                                                                               | {{cssxref("&lt;time&gt;")}}       | 属性值将被解析为 CSS {{cssxref("&lt;time&gt;")}}，带单位，如`30.5ms`。若不是合法值（不是时间值或超出 CSS 属性规定的范围），则使用默认值。前缀与后缀空格将被截掉。                                                                                                                        | `0s`，或该属性允许的最小值（如果 0s 是不合法的值）。     |
-    | `s`, `ms` {{ experimental_inline() }}                                                                            | {{cssxref("&lt;time&gt;")}}       | 属性值将被解析为 CSS {{cssxref("&lt;time&gt;")}}，不带单位，如`30.5`，并被解释为带有所规定单位的 {{cssxref("&lt;time&gt;")}} 值。若不是合法值（不是时间值或超出 CSS 属性规定的范围），则使用默认值。前缀与后缀空格将被截掉。                                                             | `0s`，或该属性允许的最小值（如果 0s 是不合法的值）。     |
-    | `frequency` {{ experimental_inline() }}                                                                          | {{cssxref("&lt;frequency&gt;")}}  | 属性值将被解析为 CSS {{cssxref("&lt;frequency&gt;")}}，带单位，如`12.5kHz`)。若不是合法值（不是频率值或超出 CSS 属性规定的范围），则使用默认值。前缀与后缀空格将被截掉。                                                                                                                 | `0Hz`，或该属性允许的最小值（如果 0Hz 是不合法的值）。   |
-    | `Hz`, `kHz` {{ experimental_inline() }}                                                                          | {{cssxref("&lt;frequency&gt;")}}  | 属性值将被解析为 CSS {{cssxref("&lt;frequency&gt;")}}，不带单位，如`12.5`)，并被解释为带有所规定单位的{{cssxref("&lt;frequency&gt;")}}值。若不是合法值（不是频率值或超出 CSS 属性规定的范围），则使用默认值。前缀与后缀空格将被截掉。                                                    | `0Hz`，或该属性允许的最小值（如果 0Hz 是不合法的值）。   |
-    | `%` {{ experimental_inline() }}                                                                                  | {{cssxref("&lt;percentage&gt;")}} | 属性值将被解析为 CSS {{cssxref("&lt;number&gt;")}}，不带单位，如`12.5`)，并被解释为带有所规定单位的 {{cssxref("&lt;percentage&gt;")}}值。若不是合法值（不是数字或超出 CSS 属性规定的范围），则使用默认值。若属性值用作长度，`attr()`将其计算为绝对长度。前缀与后缀空格将被截掉。         | `0%`，或该属性允许的最小值（如果 0% 是不合法的值）。     |
-
-- `<fallback>`
-  - : 如果 HTML 元素缺少所规定的属性值或属性值不合法，则使用`fallback`值。该值必须合法，且不能包含另一个`attr()`表达式。如果`attr()`不是所在 CSS 属性值的唯一值，其`<fallback>`值必须为`<type-or-unit>`所指定的类型，否则 CSS 会使用相应`<type-or-unit>`定义的默认值（见上表）。
+  - : 如果在应用在元素的属性上使用，会引用该元素上给定的属性名称；如果应用于伪元素，则会在原始元素上查找。
+- `<attr-type>`
+  - : 指定如何解析获取的 HTML 属性，可以是 {{cssxref("type()")}}、{{cssxref("number")}} 或属性单位。默认为 `raw-string`。
+  - : 如果使用 {{cssxref("type()")}}，将依照传递类型对属性进行解析。无法进行解析将触发回退。
+    > [!NOTE]
+    > 需要注意：因为 {{CSSxRef("url_value", "&lt;url&gt;")}} 可以引用未应用于样式，且包含敏感信息的属性。
+    > 如果页面允许第三方 CSS，那么 CSS 可以随意发送存储在属性当中的任何信息，因此不能用于 `attr` 进行动态构造 URL。
+  - : 如果使用 {{cssxref("number")}}，将去除前导与尾随空格，作为数字解析。无法解析将触发回退。
+  - : 如果使用属性单位，如 `px`、`rem`、`%`、`deg` 等，将根据单位进行解析。无法解析将触发回退。
+  - : 默认为 `raw-string`，将属性值作为字符串处理而不进行 CSS 解析。
+    > [!NOTE]
+    > 这个属性最初在 Chromium 浏览器中被命名为 `string` 得到支持，出于向后兼容考虑，两者都将被短暂支持。
+- `<fallback-value>`
+  - : 指定在属性值解析失败或无法解析为指定类型时的回退值。
+  - : 如果省略 `<attr-type>` ，默认返回空字符串；如指定 `<attr-type>` ，则默认返回一个 {{cssxref("guaranteed_invalid_value", "保证无效值")}} 。
+  - : 不能是另一个 `attr()` 表达式。
+  - : 默认值可以不是 `attr()` 指定的类型，例如给定 `type(<length>)`，仍可以使用 `auto`。
+  - : `attr(foo)` 和 `attr(foo,)` 是不一样的，前者表示省略回退值，后者表示传递一个空回退值。
 
 ## 示例
 
@@ -104,7 +109,7 @@ hello world
 
 ```html
 <div class="background" data-background="lime">
-  颜色应该是红色而不是绿色因为浏览器并不支持 attr() 的高级用法
+  如果浏览器并不支持 attr() 的高级用法，那么颜色将是红色而不是绿色
 </div>
 ```
 
@@ -122,7 +127,7 @@ hello world
 }
 
 .background[data-background] {
-  background-color: attr(data-background color, red);
+  background-color: attr(data-background type(<color>), red);
 }
 ```
 
