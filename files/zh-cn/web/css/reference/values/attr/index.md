@@ -60,7 +60,7 @@ attr(data-something, "default");
     > 这个属性最初在 Chromium 浏览器中被命名为 `string` 得到支持，出于向后兼容考虑，两者都将被短暂支持。
 - `<fallback-value>`
   - : 指定在属性值解析失败或无法解析为指定类型时的回退值。
-  - : 如果省略 `<attr-type>` ，默认返回空字符串；如指定 `<attr-type>` ，则默认返回一个 {{cssxref("guaranteed_invalid_value", "保证无效值")}} 。
+  - : 如果省略 `<attr-type>` ，默认返回空字符串；如指定 `<attr-type>` ，则默认返回一个 {{glossary("guaranteed_invalid_value", "保证无效值")}} 。
   - : 不能是另一个 `attr()` 表达式。
   - : 默认值可以不是 `attr()` 指定的类型，例如给定 `type(<length>)`，仍可以使用 `auto`。
   - : `attr(foo)` 和 `attr(foo,)` 是不一样的，前者表示省略回退值，后者表示传递一个空回退值。
