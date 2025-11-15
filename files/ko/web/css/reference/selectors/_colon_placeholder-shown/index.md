@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
 ---
 
-**`:placeholder-shown`** [CSS](/ko/docs/Web/CSS) [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes) 는 현재 [플레이스홀더 텍스트](/ko/docs/Web/HTML/Element/input#placeholder)를 표시 중인 모든 {{HTMLElement("input")}} 또는 {{HTMLElement("textarea")}} 요소를 나타냅니다.
+**`:placeholder-shown`** [CSS](/ko/docs/Web/CSS) [의사 클래스](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes) 는 현재 [플레이스홀더 텍스트](/ko/docs/Web/HTML/Element/input#placeholder)를 표시 중인 모든 {{HTMLElement("input")}} 또는 {{HTMLElement("textarea")}} 요소를 나타냅니다.
 
 {{InteractiveExample("CSS Demo: :placeholder-shown", "tabbed-shorter")}}
 
