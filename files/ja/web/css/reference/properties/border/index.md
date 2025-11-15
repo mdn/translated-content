@@ -1,9 +1,8 @@
 ---
 title: border
 slug: Web/CSS/Reference/Properties/border
-original_slug: Web/CSS/border
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`border`** は [一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties) の [CSS](/ja/docs/Web/CSS) プロパティで、要素の境界を設定します。これは {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}} の値を設定します。
@@ -27,21 +26,21 @@ border: thick double #32a1ce;
 ```
 
 ```css interactive-example-choice
-border: 4mm ridge rgba(211, 220, 50, 0.6);
+border: 4mm ridge rgb(211 220 50 / 0.6);
 ```
 
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これは周囲に境界線があるボックスです。
   </div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #8b008b;
+  background-color: #eeeeee;
+  color: darkmagenta;
   padding: 0.75em;
   width: 80%;
   height: 100px;
@@ -66,7 +65,7 @@ border: solid;
 border: 2px dotted;
 
 /* 種類 | 色 */
-border: outset #f33;
+border: outset #ff3333;
 
 /* 幅 | 種類 | 色 */
 border: medium dashed green;
@@ -87,11 +86,11 @@ border: unset;
 ### 値
 
 - `<line-width>`
-  - : 境界線の太さを設定します。指定されなかった場合は既定値の `medium` になります。 {{Cssxref("border-width")}} を参照してください。
+  - : 境界線の太さを設定します。指定されなかった場合はデフォルトで `medium` になります。 {{Cssxref("border-width")}} を参照してください。
 - {{cssxref("&lt;line-style&gt;")}}
-  - : 境界線の種類を設定します。指定されなかった場合は既定値の `none` になります。 {{cssxref("border-style")}} を参照してください。
+  - : 境界線の種類を設定します。指定されなかった場合はデフォルトで `none` になります。 {{Cssxref("border-style")}} を参照してください。
 - {{cssxref("&lt;color&gt;")}}
-  - : 境界線の色を設定します。指定されなかった場合は既定値で要素の {{cssxref("color")}} プロパティになります。 {{cssxref("border-color")}} を参照してください。
+  - : 境界線の色を設定します。指定されなかった場合はデフォルトで `currentColor` になります。 {{Cssxref("border-color")}} を参照してください。
 
 ## 解説
 
@@ -120,13 +119,13 @@ border: unset;
 
 #### HTML
 
-```html-nolint live-sample___setting_a_pink_outset_border
-<div>ここには境界線、概要、ボックスシャドウがあります！すごいと思いませんか？</div>
+```html-nolint
+<div>ここには境界線、輪郭線、ボックスシャドウがあります！すごいと思いませんか？</div>
 ```
 
 #### CSS
 
-```css live-sample___setting_a_pink_outset_border
+```css
 div {
   border: 0.5rem outset pink;
   outline: 0.5rem solid khaki;
@@ -141,7 +140,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample('Setting_a_pink_outset_border')}}
+{{EmbedLiveSample('ピンク色の出っ張った境界の設定')}}
 
 ## 仕様書
 
