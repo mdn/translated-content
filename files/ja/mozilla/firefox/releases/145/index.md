@@ -38,7 +38,7 @@ Firefox 145 は、米国時間 [2025 年 11 月 11 日](https://whattrainisitnow
 ### セキュリティ
 
 - Bounce Tracking Protection (BTP) が有効なとき、デフォルトで "stateless" モードで動作するようになりました。
-  "stateless" モードでは、ブラウザーは "bounce" の一部であるサイトでステート情報 (Cookie など) を設定するサイトだけにフラグをつけるのではなく、"bounce" の一部である_すべて_のサイトにフラグをつけます。BTP がどのように動作するかについて、詳しくは [Bounce tracking mitigations](/ja/docs/Web/Privacy/Guides/Bounce_tracking_mitigations) をご覧ください ([Firefox bug 1990831](https://bugzil.la/1990831))。
+  "stateless" モードでは、ブラウザーは "bounce" の一部であるサイトでステート情報 (Cookie など) を設定するサイトだけにフラグをつけるのではなく、"bounce" の一部である _すべて_ のサイトにフラグをつけます。BTP がどのように動作するかについて、詳しくは [Bounce tracking mitigations](/ja/docs/Web/Privacy/Guides/Bounce_tracking_mitigations) をご覧ください ([Firefox bug 1990831](https://bugzil.la/1990831))。
 
 ### API
 
