@@ -6,7 +6,7 @@ l10n:
   sourceCommit: c72b86b3d6818ec6c8df1d52a77513d769f4164e
 ---
 
-**`::spelling-error`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 {{glossary("user agent", "사용자 에이전트")}}가 철자가 틀린 것으로 표기한 텍스트 세그먼트를 나타냅니다.
+**`::spelling-error`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-elements)는 {{glossary("user agent", "사용자 에이전트")}}가 철자가 틀린 것으로 표기한 텍스트 세그먼트를 나타냅니다.
 
 ## 허용되는 속성
 

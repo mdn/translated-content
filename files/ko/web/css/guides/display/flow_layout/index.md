@@ -6,7 +6,7 @@ original_slug: Web/CSS/CSS_display/Flow_layout
 
 _일반적인 흐름 Normal Flow_, 또는 흐름 레이아웃 Flow Layout 은 그 레이아웃 변화가 있기 전까지 페이지 안의 블록 요소와 인라인 요소가 보여지는 방식 입니다. 흐름이란 본질적으로 레이아웃 아래 서로 같이 동작하고 서로에게 서로가 알려지는 것들의 집합 입니다. 만약에 어느 하나가 _흐름에서 벗어나면_ 그것은 독립적으로 동작하게 됩니다.
 
-*일반적인 흐름*에서, **인라인** 요소들은 한줄러 늘어서 보여지게 되는데, 이는 문서의 [Writing Mode](/ko/docs/Web/CSS/CSS_writing_modes) 에 따라 문장 안의 단어들이 보여지는 방향을 따르게 됩니다. **블록** 요소들은 문서의 Writing Mode 에서의 단락이 하나씩 나눠져 보여지듯이 나타납니다. 그래서 영어에서는, 인라인 요소들은 왼쪽에서 시작하여 하나씩 보여지고, 블록 요소들은 맨 위에서부터 페이지를 따라 아래로 보여집니다.
+*일반적인 흐름*에서, **인라인** 요소들은 한줄러 늘어서 보여지게 되는데, 이는 문서의 [Writing Mode](/ko/docs/Web/CSS/Guides/Writing_modes) 에 따라 문장 안의 단어들이 보여지는 방향을 따르게 됩니다. **블록** 요소들은 문서의 Writing Mode 에서의 단락이 하나씩 나눠져 보여지듯이 나타납니다. 그래서 영어에서는, 인라인 요소들은 왼쪽에서 시작하여 하나씩 보여지고, 블록 요소들은 맨 위에서부터 페이지를 따라 아래로 보여집니다.
 
 ## 기본적인 예
 
@@ -18,11 +18,11 @@ _일반적인 흐름 Normal Flow_, 또는 흐름 레이아웃 Flow Layout 은 �
 
 ## Guides
 
-- [Block and Inline Layout in Normal Flow](/ko/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
-- [In Flow and Out of Flow](/ko/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow)
-- [Formatting Contexts Explained](/ko/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
-- [Flow Layout and Writing Modes](/ko/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)
-- [Flow Layout and Overflow](/ko/docs/Web/CSS/CSS_display/Flow_layout_and_overflow)
+- [Block and Inline Layout in Normal Flow](/ko/docs/Web/CSS/Guides/Display/Block_and_inline_layout)
+- [In Flow and Out of Flow](/ko/docs/Web/CSS/Guides/Display/In_flow_and_out_of_flow)
+- [Formatting Contexts Explained](/ko/docs/Web/CSS/Guides/Display/Formatting_contexts)
+- [Flow Layout and Writing Modes](/ko/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes)
+- [Flow Layout and Overflow](/ko/docs/Web/CSS/Guides/Display/Flow_layout_and_overflow)
 
 ## Reference
 

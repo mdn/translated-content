@@ -64,7 +64,7 @@ CSS 쓰기 모드 수준 3 규격은 문서의 쓰기 모드가 대열 레이아
 
 {{EmbedGHLiveSample("css-examples/flow/writing-modes/inline-size.html", '100%', 720)}}
 
-[CSS 논리적 속성](/ko/docs/Web/CSS/CSS_logical_properties_and_values) 규격은 여백, 패딩 및 테두리를 제어하는 속성의 논리적 버전뿐만 아니라 일반적으로 물리적 방향 지정을 위해 대상 요소에 전형적으로 사용되는 다른 매핑을 포함하고 있다.
+[CSS 논리적 속성](/ko/docs/Web/CSS/Guides/Logical_properties_and_values) 규격은 여백, 패딩 및 테두리를 제어하는 속성의 논리적 버전뿐만 아니라 일반적으로 물리적 방향 지정을 위해 대상 요소에 전형적으로 사용되는 다른 매핑을 포함하고 있다.
 
 ## 요약정리
 
@@ -72,7 +72,7 @@ CSS 쓰기 모드 수준 3 규격은 문서의 쓰기 모드가 대열 레이아
 
 ## 참조 항목
 
-- [쓰기 모드](/ko/docs/Web/CSS/CSS_writing_modes)
+- [쓰기 모드](/ko/docs/Web/CSS/Guides/Writing_modes)
 
 ## 외부 리소스
 

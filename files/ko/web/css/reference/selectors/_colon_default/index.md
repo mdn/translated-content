@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:default
 original_slug: Web/CSS/:default
 ---
 
-[CSS](/ko/docs/Web/CSS) **`:default`** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 연관 요소 내에서의 기본값인 요소를 선택합니다.
+[CSS](/ko/docs/Web/CSS) **`:default`** [의사 클래스](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes)는 연관 요소 내에서의 기본값인 요소를 선택합니다.
 
 이 선택자는 [HTML Standard §4.16.3 Pseudo-classes](https://html.spec.whatwg.org/multipage/semantics-other.html#selector-default)에 정의되어 있듯 {{htmlelement("button")}}, [`<input type="checkbox">`](/ko/docs/Web/HTML/Reference/Elements/input/checkbox), [`<input type="radio">`](/ko/docs/Web/HTML/Element/input/radio), {{htmlelement("option")}} 요소를 아래와 같은 경우에 선택합니다.
 

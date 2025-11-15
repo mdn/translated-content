@@ -4,7 +4,7 @@ slug: Web/CSS/Guides/Grid_layout/Grid_template_areas
 original_slug: Web/CSS/CSS_grid_layout/Grid_template_areas
 ---
 
-[이전 가이드](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)에서 우리는 그리드 라인에 대해서 살펴보았으며, 이 라인을 기준으로 어떻게 아이템들을 배치하는지 알아보았습니다. CSS 그리드 레이아웃으로 작업할 땐 거기엔 항상 라인이 있을 것이고, 이것은 아이템들을 그리드에 배치할 때 사용할 수 있는 아주 직관적인 방법이 될 수 있습니다. 그렇지만, 아이템을 그리드에 배치할 때 사용할 수 있는 또 다른 방법이 있는데, 이것은 독자적으로 혹은 라인 기준 배치 방법과 함께 혼용해서 사용할 수 있습니다. 이 방법은 이름이 지명된 템플릿 영역을 사용하여 아이템을 배치하는 작업과 연관돼 있으며, 이 방법이 정확히 어떻게 작동하는지 알아보겠습니다. 이것이 때때로 왜 그리드 레이아웃의 ascii-art 방식이라고 일컬어지는지 쉽게 눈치채실 수 있을 겁니다!
+[이전 가이드](/ko/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)에서 우리는 그리드 라인에 대해서 살펴보았으며, 이 라인을 기준으로 어떻게 아이템들을 배치하는지 알아보았습니다. CSS 그리드 레이아웃으로 작업할 땐 거기엔 항상 라인이 있을 것이고, 이것은 아이템들을 그리드에 배치할 때 사용할 수 있는 아주 직관적인 방법이 될 수 있습니다. 그렇지만, 아이템을 그리드에 배치할 때 사용할 수 있는 또 다른 방법이 있는데, 이것은 독자적으로 혹은 라인 기준 배치 방법과 함께 혼용해서 사용할 수 있습니다. 이 방법은 이름이 지명된 템플릿 영역을 사용하여 아이템을 배치하는 작업과 연관돼 있으며, 이 방법이 정확히 어떻게 작동하는지 알아보겠습니다. 이것이 때때로 왜 그리드 레이아웃의 ascii-art 방식이라고 일컬어지는지 쉽게 눈치채실 수 있을 겁니다!
 
 ## 그리드 영역의 이름 짓기
 
@@ -489,13 +489,13 @@ original_slug: Web/CSS/CSS_grid_layout/Grid_template_areas
 
 1. [**CSS**](/ko/docs/Web/CSS)
 2. [**CSS Reference**](/ko/docs/Web/CSS/Reference)
-3. [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout)
+3. [CSS 그리드 레이아웃](/ko/docs/Web/CSS/Guides/Grid_layout)
 4. **가이드**
-   1. [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-   2. [다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
-   3. [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-   4. [그리드 템플릿 영역](/ko/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-   5. [이름이 주어진 그리드 라인을 이용한 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+   1. [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+   2. [다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods)
+   3. [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+   4. [그리드 템플릿 영역](/ko/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)
+   5. [이름이 주어진 그리드 라인을 이용한 레이아웃](/ko/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)
    6. [Auto-placement in grid layout](/ko/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
    7. [Box alignment in grid layout](/ko/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
    8. [Grids, logical values and writing modes](/ko/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)

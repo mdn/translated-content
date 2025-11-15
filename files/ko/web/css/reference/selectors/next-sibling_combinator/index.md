@@ -53,4 +53,4 @@ li:first-of-type + li {
 
 ## 같이 보기
 
-- [일반 형제 결합자](/ko/docs/Web/CSS/Subsequent-sibling_combinator)
+- [일반 형제 결합자](/ko/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator)

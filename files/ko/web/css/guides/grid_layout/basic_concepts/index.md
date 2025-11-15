@@ -4,7 +4,7 @@ slug: Web/CSS/Guides/Grid_layout/Basic_concepts
 original_slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 ---
 
-[CSS 그리드 레이아웃(Grid Layout)](/ko/docs/Web/CSS/CSS_grid_layout)은 CSS에 2차원의 그리드 시스템을 도입했습니다. 그리드는 주요 페이지 영역을 설계하거나 작은 사용자 인터페이스 요소를 배치하는 데 사용할 수 있습니다. 이 문서에서는 CSS 그리드 레이아웃 및 CSS 그리드 레이아웃 레벨 1 명세서에 포함된 새로운 기술 용어를 소개합니다. 이번 개요에 소개된 기능은 나머지 안내 문서에서 자세히 설명합니다.
+[CSS 그리드 레이아웃(Grid Layout)](/ko/docs/Web/CSS/Guides/Grid_layout)은 CSS에 2차원의 그리드 시스템을 도입했습니다. 그리드는 주요 페이지 영역을 설계하거나 작은 사용자 인터페이스 요소를 배치하는 데 사용할 수 있습니다. 이 문서에서는 CSS 그리드 레이아웃 및 CSS 그리드 레이아웃 레벨 1 명세서에 포함된 새로운 기술 용어를 소개합니다. 이번 개요에 소개된 기능은 나머지 안내 문서에서 자세히 설명합니다.
 
 ## 그리드가 무엇인가요?
 
@@ -30,7 +30,7 @@ original_slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 
 그리드 셀에 하나 이상의 아이템을 배치하거나 그리드 영역을 부분적으로 서로 겹치게 할 수 있습니다. 이렇게 생긴 중첩의 우선순위는 나중에 {{cssxref("z-index")}} 프로퍼티로 제어할 수 있습니다.
 
-그리드는 아주 강력한 기능을 담은 표준이라서 [플랙스박스(flexbox)](/ko/docs/Web/CSS/CSS_flexible_box_layout)와 같은 CSS의 다른 부분과 결합하면, 이전에는 CSS에서 불가능했던 레이아웃을 만들 수 있도록 도와줍니다. 이 모든 것은 **그리드 컨테이너**에서 그리드를 생성하는 것부터 시작합니다.
+그리드는 아주 강력한 기능을 담은 표준이라서 [플랙스박스(flexbox)](/ko/docs/Web/CSS/Guides/Flexible_box_layout)와 같은 CSS의 다른 부분과 결합하면, 이전에는 CSS에서 불가능했던 레이아웃을 만들 수 있도록 도와줍니다. 이 모든 것은 **그리드 컨테이너**에서 그리드를 생성하는 것부터 시작합니다.
 
 ## 그리드 컨테이너
 
@@ -730,17 +730,17 @@ Firefox 개발자 도구에 있는 [Grid Inspector](https://firefox-source-docs.
 
 ## 다음 단계
 
-이 글에서는 Grid 레이아웃 표준 문서에 나와 있는 내용을 아주 간단히 살펴보았습니다. 코드 예제를 좀 더 연구해 보시고, [안내서의 다음 부분으로 넘어가서 CSS 그리드 레이아웃의 세부 사항을 조금 더 심도 있게 살펴보시기 바랍니다](/ko/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods).
+이 글에서는 Grid 레이아웃 표준 문서에 나와 있는 내용을 아주 간단히 살펴보았습니다. 코드 예제를 좀 더 연구해 보시고, [안내서의 다음 부분으로 넘어가서 CSS 그리드 레이아웃의 세부 사항을 조금 더 심도 있게 살펴보시기 바랍니다](/ko/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods).
 
 1. [**CSS**](/ko/docs/Web/CSS)
 2. [**CSS Reference**](/ko/docs/Web/CSS/Reference)
-3. [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout)
+3. [CSS 그리드 레이아웃](/ko/docs/Web/CSS/Guides/Grid_layout)
 4. **가이드**
-   1. [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-   2. [다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
-   3. [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-   4. [그리드 템플릿 영역](/ko/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-   5. [이름이 주어진 그리드 라인을 이용한 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+   1. [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+   2. [다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods)
+   3. [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+   4. [그리드 템플릿 영역](/ko/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)
+   5. [이름이 주어진 그리드 라인을 이용한 레이아웃](/ko/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)
    6. [Auto-placement in grid layout](/ko/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
    7. [Box alignment in grid layout](/ko/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
    8. [Grids, logical values and writing modes](/ko/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)

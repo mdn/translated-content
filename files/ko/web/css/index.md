@@ -71,23 +71,23 @@ MDN [CSS 학습지](/ko/docs/conflicting/Learn_web_development/Core/Styling_basi
 
 - [CSS 참고서](/ko/docs/Web/CSS/Reference): 숙련된 웹 개발자를 위해 CSS의 모든 속성과 개념을 설명합니다.
 - CSS 핵심 개념
-  - [언어 구문과 형태](/ko/docs/Web/CSS/CSS_syntax/Syntax)
-  - [명시도](/ko/docs/Web/CSS/CSS_cascade/Specificity), [상속](/ko/docs/Web/CSS/CSS_cascade/Inheritance),
+  - [언어 구문과 형태](/ko/docs/Web/CSS/Guides/Syntax/Introduction)
+  - [명시도](/ko/docs/Web/CSS/Guides/Cascade/Specificity), [상속](/ko/docs/Web/CSS/Guides/Cascade/Inheritance),
     [종속](/ko/docs/Web/CSS/Cascade)
-  - [CSS 단위와 값](/ko/docs/Web/CSS/CSS_values_and_units),
+  - [CSS 단위와 값](/ko/docs/Web/CSS/Guides/Values_and_units),
     [CSS 함수 표기법](/ko/docs/Web/CSS/CSS_Functions)
-  - [박스 모델](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)과
-    [여백 상쇄](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - [컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block)
-  - [쌓임 맥락](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_context)과
+  - [박스 모델](/ko/docs/Web/CSS/Guides/Box_model/Introduction)과
+    [여백 상쇄](/ko/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
+  - [컨테이닝 블록](/ko/docs/Web/CSS/Guides/Display/Containing_block)
+  - [쌓임 맥락](/ko/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)과
     [블록 서식 맥락](/ko/docs/Web/CSS/CSS_display/Block_formatting_context)
-  - [초기 값](/ko/docs/Web/CSS/CSS_cascade/Value_processing), [계산 값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4129c9bf28ee4c2570fe2528f20c4b2cd9a30d9cf2ec4e75fb56fe903059e63e),
+  - [초기 값](/ko/docs/Web/CSS/Guides/Cascade/Property_value_processing), [계산 값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4129c9bf28ee4c2570fe2528f20c4b2cd9a30d9cf2ec4e75fb56fe903059e63e),
     [사용 값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2), [실제 값](/ko/docs/Web/CSS/actual_value)
-  - [CSS 단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [CSS 플렉스박스 레이아웃](/ko/docs/Web/CSS/CSS_flexible_box_layout)
-  - [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout)
-  - [CSS 선택자](/ko/docs/Web/CSS/CSS_selectors)
-  - [미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries)
+  - [CSS 단축 속성](/ko/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
+  - [CSS 플렉스박스 레이아웃](/ko/docs/Web/CSS/Guides/Flexible_box_layout)
+  - [CSS 그리드 레이아웃](/ko/docs/Web/CSS/Guides/Grid_layout)
+  - [CSS 선택자](/ko/docs/Web/CSS/Guides/Selectors)
+  - [미디어 쿼리](/ko/docs/Web/CSS/Guides/Media_queries)
   - [애니메이션](/ko/docs/Web/CSS/Reference/Properties/animation)
 
 ## 쿡북

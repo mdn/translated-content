@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
 ---
 
-**`::placeholder`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 {{HTMLElement("input")}} 혹은 {{HTMLElement("textarea")}} 요소 안에 있는 [플레이스홀더 텍스트](/ko/docs/Web/HTML/Element/input#placeholder)를 나타냅니다.
+**`::placeholder`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-elements)는 {{HTMLElement("input")}} 혹은 {{HTMLElement("textarea")}} 요소 안에 있는 [플레이스홀더 텍스트](/ko/docs/Web/HTML/Element/input#placeholder)를 나타냅니다.
 
 {{InteractiveExample("CSS Demo: ::placeholder", "tabbed-shorter")}}
 
