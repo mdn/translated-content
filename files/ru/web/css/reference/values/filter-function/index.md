@@ -6,7 +6,7 @@ original_slug: Web/CSS/filter-function
 
 {{cssref}}
 
-[Тип данных](/ru/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/ru/docs/Web/CSS) **`<filter-function>`** представляет собой графический эффект, который может изменить внешний вид входного изображения. Он используется в свойствах {{cssxref("filter")}} и {{cssxref("backdrop-filter")}}.
+[Тип данных](/ru/docs/Web/CSS/Reference/Values/Data_types) [CSS](/ru/docs/Web/CSS) **`<filter-function>`** представляет собой графический эффект, который может изменить внешний вид входного изображения. Он используется в свойствах {{cssxref("filter")}} и {{cssxref("backdrop-filter")}}.
 
 ## Синтаксис
 

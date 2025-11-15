@@ -57,4 +57,4 @@ img + span.caption {
 
 ## Смотрите также
 
-- [Селекторы следующего элемента](/ru/docs/Web/CSS/Subsequent-sibling_combinator)
+- [Селекторы следующего элемента](/ru/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator)

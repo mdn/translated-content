@@ -14,9 +14,9 @@ slug: Web/MathML/Reference/Element/menclose
 - href
   - : Используется для установки гиперссылки на указанный URI.
 - mathbackground
-  - : Цвет фона. Вы можете использовать `#rgb`, `#rrggbb` и [HTML-имена цветов](/ru/docs/Web/CSS/color_value#color_keywords).
+  - : Цвет фона. Вы можете использовать `#rgb`, `#rrggbb` и [HTML-имена цветов](/ru/docs/Web/CSS/Reference/Values/color_value#color_keywords).
 - mathcolor
-  - : Цвет текста. Вы можете использовать `#rgb`, `#rrggbb` и [HTML-имена цветов](/ru/docs/Web/CSS/color_value#color_keywords).
+  - : Цвет текста. Вы можете использовать `#rgb`, `#rrggbb` и [HTML-имена цветов](/ru/docs/Web/CSS/Reference/Values/color_value#color_keywords).
 - notation
   - : Список нотаций, разделённых пробелами, применяемых к дочерним элементам. Изображённые символы могут перекрываться. Возможные значения:
 

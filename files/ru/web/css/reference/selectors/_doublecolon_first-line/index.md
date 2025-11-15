@@ -6,7 +6,7 @@ original_slug: Web/CSS/::first-line
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS) [псевдоэлемент](/ru/docs/Web/CSS/Pseudo-elements) **`::first-line`** применяет стили к первой строке [блочного элемента](/ru/docs/Web/CSS/CSS_display/Visual_formatting_model#block-level_elements_and_block_boxes). Обратите внимание, что длина первой строки зависит от многих факторов, включая ширину элемента, ширину документа и размер шрифта текста.
+[CSS](/ru/docs/Web/CSS) [псевдоэлемент](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-elements) **`::first-line`** применяет стили к первой строке [блочного элемента](/ru/docs/Web/CSS/CSS_display/Visual_formatting_model#block-level_elements_and_block_boxes). Обратите внимание, что длина первой строки зависит от многих факторов, включая ширину элемента, ширину документа и размер шрифта текста.
 
 ```css
 /* Стили для первой строки элемента <p> */
@@ -16,7 +16,7 @@ p::first-line {
 ```
 
 > [!NOTE]
-> В CSS3 появилась запись `::first-line` (с двумя двоеточиями) для различения [псевдоклассов](/ru/docs/Web/CSS/Pseudo-classes) и [псевдоэлементов](/ru/docs/Web/CSS/Pseudo-elements). Браузеры также поддерживают запись `:first-line`, введённую в CSS2.
+> В CSS3 появилась запись `::first-line` (с двумя двоеточиями) для различения [псевдоклассов](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-classes) и [псевдоэлементов](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-elements). Браузеры также поддерживают запись `:first-line`, введённую в CSS2.
 
 ## Разрешённые свойства
 

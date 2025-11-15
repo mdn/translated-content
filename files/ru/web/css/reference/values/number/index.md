@@ -6,7 +6,7 @@ original_slug: Web/CSS/number
 
 {{CSSRef}}
 
-**`<number>`** - [тип хранения данных](/ru/docs/Web/CSS/CSS_values_and_units/CSS_data_types) в [CSS](/ru/docs/Web/CSS) представляющий собой число: либо целое, либо с дробной частью.
+**`<number>`** - [тип хранения данных](/ru/docs/Web/CSS/Reference/Values/Data_types) в [CSS](/ru/docs/Web/CSS) представляющий собой число: либо целое, либо с дробной частью.
 
 ## Синтаксис
 
