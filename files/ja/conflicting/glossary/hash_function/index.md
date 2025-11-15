@@ -1,6 +1,7 @@
 ---
 title: 脆弱な署名アルゴリズム
-slug: Web/Security/Weak_Signature_Algorithm
+slug: conflicting/Glossary/Hash_function
+original_slug: Web/Security/Weak_Signature_Algorithm
 l10n:
   sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---
