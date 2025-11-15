@@ -19,8 +19,7 @@ Firefox 145 は、米国時間 [2025 年 11 月 11 日](https://whattrainisitnow
 
 - {{cssxref("text-autospace")}} プロパティをサポートしました。これは、異なる文字体系の文字の間の空白を自動調整できます ([Firefox bug 1981086](https://bugzil.la/1981086)、[Firefox bug 1869577](https://bugzil.la/1869577))。
 
-- [`math`](/ja/docs/Web/CSS/Reference/Properties/font-family#math) 総称フォントファミリーを、`font-family` プロパティの値としてサポートしました。これにより、数式で適切なフォントを使用できます 
-  ([Firefox bug 1788937](https://bugzil.la/1788937))。
+- [`math`](/ja/docs/Web/CSS/Reference/Properties/font-family#math) 総称フォントファミリーを、`font-family` プロパティの値としてサポートしました。これにより、数式で適切なフォントを使用できます ([Firefox bug 1788937](https://bugzil.la/1788937))。
 
 - {{htmlelement("select")}} の内部の {{htmlelement("hr")}} で、`<select>` メニューに区切り線を表示できる機能を実装していました。
   これを Android 版 Firefox でもサポートしました ([Firefox bug 1867045](https://bugzil.la/1867045)、[Firefox bug 1830909](https://bugzil.la/1830909))。
@@ -28,8 +27,7 @@ Firefox 145 は、米国時間 [2025 年 11 月 11 日](https://whattrainisitnow
 ### JavaScript
 
 - Firefox で {{jsxref("Atomics.waitAsync()")}} 静的メソッドをサポートしました。これは、共有メモリの位置の値に基づいてスレッドを同期することができます。
-  このメソッドは値を非同期的に待機して、操作の結果を表すオブジェクトを返します。このメソッドはブロッキングせず、メインスレッドで使用できます 
-  ([Firefox bug 1884148](https://bugzil.la/1884148))。
+  このメソッドは値を非同期的に待機して、操作の結果を表すオブジェクトを返します。このメソッドはブロッキングせず、メインスレッドで使用できます ([Firefox bug 1884148](https://bugzil.la/1884148))。
 
 ### HTTP
 
@@ -40,16 +38,13 @@ Firefox 145 は、米国時間 [2025 年 11 月 11 日](https://whattrainisitnow
 ### セキュリティ
 
 - Bounce Tracking Protection (BTP) が有効なとき、デフォルトで "stateless" モードで動作するようになりました。
-  "stateless" モードでは、ブラウザーは "bounce" の一部であるサイトでステート情報 (Cookie など) を設定するサイトだけにフラグをつけるのではなく、"bounce" の一部である_すべて_のサイトにフラグをつけます。BTP がどのように動作するかについて、詳しくは [Bounce tracking mitigations](/ja/docs/Web/Privacy/Guides/Bounce_tracking_mitigations) をご覧ください 
-  ([Firefox bug 1990831](https://bugzil.la/1990831))。
+  "stateless" モードでは、ブラウザーは "bounce" の一部であるサイトでステート情報 (Cookie など) を設定するサイトだけにフラグをつけるのではなく、"bounce" の一部である_すべて_のサイトにフラグをつけます。BTP がどのように動作するかについて、詳しくは [Bounce tracking mitigations](/ja/docs/Web/Privacy/Guides/Bounce_tracking_mitigations) をご覧ください ([Firefox bug 1990831](https://bugzil.la/1990831))。
 
 ### API
 
 - {{domxref("ToggleEvent")}} インターフェイスの {{domxref("ToggleEvent/source", "source")}} プロパティをサポートしました。
-  {{htmlelement("button")}} などの HTML 要素によって [ポップオーバー](/ja/docs/Web/API/Popover_API) を表示したり閉じたりする動作が発生すると、ポップオーバーを動作させた要素がイベントの `source` プロパティに入ります 
-  ([Firefox bug 1968987](https://bugzil.la/1968987))。
-- {{domxref("HTMLElement.style", "HTMLElement")}}、{{domxref("MathMLElement.style", "MathMLElement")}}、{{domxref("SVGElement.style", "SVGElement")}}、{{domxref("CSSStyleRule.style", "CSSStyleRule")}} の `style` プロパティの値、および {{domxref("Window.getComputedStyle()")}} メソッドの戻り値が {{domxref("CSSStyleProperties")}} のインスタンスになりました。以前は {{domxref("CSSStyleDeclaration")}} のインスタンスが返りました 
-  ([Firefox bug 1989925](https://bugzil.la/1989925))。
+  {{htmlelement("button")}} などの HTML 要素によって [ポップオーバー](/ja/docs/Web/API/Popover_API) を表示したり閉じたりする動作が発生すると、ポップオーバーを動作させた要素がイベントの `source` プロパティに入ります ([Firefox bug 1968987](https://bugzil.la/1968987))。
+- {{domxref("HTMLElement.style", "HTMLElement")}}、{{domxref("MathMLElement.style", "MathMLElement")}}、{{domxref("SVGElement.style", "SVGElement")}}、{{domxref("CSSStyleRule.style", "CSSStyleRule")}} の `style` プロパティの値、および {{domxref("Window.getComputedStyle()")}} メソッドの戻り値が {{domxref("CSSStyleProperties")}} のインスタンスになりました。以前は {{domxref("CSSStyleDeclaration")}} のインスタンスが返りました ([Firefox bug 1989925](https://bugzil.la/1989925))。
 
 #### Media、WebRTC、Web Audio
 
@@ -82,8 +77,7 @@ Firefox 145 は、米国時間 [2025 年 11 月 11 日](https://whattrainisitnow
 - **CSS アンカー位置指定** (Nightly): `layout.css.anchor-positioning.enabled`
 
   Nightly ビルドで [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning) をデフォルトでサポートしました。これは要素を互いに結びつけることができます。
-  アンカー位置指定された要素は自身のサイズや位置を、結びつけられたアンカー要素のサイズや位置に対して相対的に設定できます 
-  (総合: [Firefox bug 1988224](https://bugzil.la/1988224)、{{cssxref("position-area")}}: [Firefox bug 1924086](https://bugzil.la/1924086)、{{cssxref("@position-try")}} カスタムフォールバック: [Firefox bug 1962598](https://bugzil.la/1962598))。
+  アンカー位置指定された要素は自身のサイズや位置を、結びつけられたアンカー要素のサイズや位置に対して相対的に設定できます (総合: [Firefox bug 1988224](https://bugzil.la/1988224)、{{cssxref("position-area")}}: [Firefox bug 1924086](https://bugzil.la/1924086)、{{cssxref("@position-try")}} カスタムフォールバック: [Firefox bug 1962598](https://bugzil.la/1962598))。
 
 - **CSS モジュールスクリプト:** (Nightly) および `layout.css.module-scripts.enabled`
 
