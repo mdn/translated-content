@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7f460077d6f16c939718e9482a8270166f6d9abd
 ---
 
-La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@starting-style`** est utilisée pour définir les valeurs de départ des propriétés appliquées à un élément, à partir desquelles vous souhaitez effectuer une transition lors de la première mise à jour de style de l'élément, c'est-à-dire lorsqu'un élément est affiché pour la première fois sur une page déjà chargée.
+La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@starting-style`** est utilisée pour définir les valeurs de départ des propriétés appliquées à un élément, à partir desquelles vous souhaitez effectuer une transition lors de la première mise à jour de style de l'élément, c'est-à-dire lorsqu'un élément est affiché pour la première fois sur une page déjà chargée.
 
 ## Syntaxe
 
@@ -35,12 +35,12 @@ La règle `@starting-style` peut être utilisée de deux façons&nbsp;:
 
 ## Description
 
-Pour éviter un comportement inattendu, les [transitions CSS](/fr/docs/Web/CSS/CSS_transitions) ne sont pas déclenchées par défaut lors de la première mise à jour de style d'un élément, ou lorsque son type {{CSSxRef("display")}} passe de `none` à une autre valeur. Pour activer les transitions sur le premier style, il faut utiliser des règles `starting-style`. Elles fournissent des styles de départ pour les éléments qui n'ont pas d'état précédent, en définissant les valeurs de propriété à partir desquelles effectuer la transition.
+Pour éviter un comportement inattendu, les [transitions CSS](/fr/docs/Web/CSS/Guides/Transitions) ne sont pas déclenchées par défaut lors de la première mise à jour de style d'un élément, ou lorsque son type {{CSSxRef("display")}} passe de `none` à une autre valeur. Pour activer les transitions sur le premier style, il faut utiliser des règles `starting-style`. Elles fournissent des styles de départ pour les éléments qui n'ont pas d'état précédent, en définissant les valeurs de propriété à partir desquelles effectuer la transition.
 
 `@starting-style` est particulièrement utile pour créer des transitions d'entrée et de sortie pour les éléments affichés dans la {{glossary("top layer", "couche supérieure")}} (comme les [popovers](/fr/docs/Web/API/Popover_API) et les boîtes de dialogue modales {{htmlelement("dialog")}}), les éléments qui changent vers ou depuis `display: none`, et les éléments ajoutés ou retirés du DOM pour la première fois.
 
 > [!NOTE]
-> `@starting-style` ne concerne que les transitions CSS. Lorsque vous utilisez des [animations CSS](/fr/docs/Web/CSS/CSS_animations) pour réaliser de tels effets, `@starting-style` n'est pas nécessaire. Voir [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations) pour un exemple.
+> `@starting-style` ne concerne que les transitions CSS. Lorsque vous utilisez des [animations CSS](/fr/docs/Web/CSS/Guides/Animations) pour réaliser de tels effets, `@starting-style` n'est pas nécessaire. Voir [Utiliser les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using) pour un exemple.
 
 Il existe deux façons d'utiliser `@starting-style`&nbsp;: comme règle autonome ou imbriquée dans un ensemble de règles.
 
@@ -65,7 +65,7 @@ Pour spécifier les valeurs de départ des propriétés du popover à animer ave
 ```
 
 > [!NOTE]
-> La règle `@starting-style` et la «&nbsp;règle originale&nbsp;» ont la même [spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity). Pour garantir l'application des styles de départ, placez la règle `@starting-style` _après_ la «&nbsp;règle originale&nbsp;». Si vous la placez avant, les styles originaux écraseront les styles de départ.
+> La règle `@starting-style` et la «&nbsp;règle originale&nbsp;» ont la même [spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity). Pour garantir l'application des styles de départ, placez la règle `@starting-style` _après_ la «&nbsp;règle originale&nbsp;». Si vous la placez avant, les styles originaux écraseront les styles de départ.
 
 Pour spécifier le style de départ du popover avec la méthode imbriquée, vous pouvez imbriquer le bloc `@starting-style` dans la «&nbsp;règle originale&nbsp;»&nbsp;:
 
@@ -210,7 +210,7 @@ Le code s'affiche ainsi&nbsp;:
 
 ### Animation d'un popover
 
-Dans cet exemple, un [popover](/fr/docs/Web/API/Popover_API) est animé à l'aide des [transitions CSS](/fr/docs/Web/CSS/CSS_transitions). Des animations d'entrée et de sortie basiques sont fournies via la propriété {{CSSxRef("transition")}}.
+Dans cet exemple, un [popover](/fr/docs/Web/API/Popover_API) est animé à l'aide des [transitions CSS](/fr/docs/Web/CSS/Guides/Transitions). Des animations d'entrée et de sortie basiques sont fournies via la propriété {{CSSxRef("transition")}}.
 
 #### HTML
 
@@ -464,7 +464,7 @@ Le résultat final ressemble à ceci&nbsp;:
 
 ## Voir aussi
 
-- Le module des [transitions CSS](/fr/docs/Web/CSS/CSS_transitions)
+- Le module des [transitions CSS](/fr/docs/Web/CSS/Guides/Transitions)
 - {{cssxref("overlay")}}
 - {{cssxref("transition-behavior")}}
 - {{domxref("CSSStartingStyleRule")}}

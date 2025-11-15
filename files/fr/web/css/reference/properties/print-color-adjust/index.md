@@ -100,7 +100,7 @@ Dans cet exemple, on a une boîte qui utilise [`background-image`](/fr/docs/Web/
 
 ## Voir aussi
 
-- [Appliquer des couleurs aux éléments HTML en utilisant CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
+- [Appliquer des couleurs aux éléments HTML en utilisant CSS](/fr/docs/Web/CSS/Guides/Colors/Applying_color)
 - Les autres propriétés relatives aux couleurs&nbsp;:
   - [`color`](/fr/docs/Web/CSS/Reference/Properties/color)
   - [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color)

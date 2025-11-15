@@ -1,12 +1,11 @@
 ---
 title: border-top
 slug: Web/CSS/Reference/Properties/border-top
-original_slug: Web/CSS/border-top
 l10n:
-  sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`border-top`** は[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の[境界](/ja/docs/Web/CSS/Reference/Properties/border)のプロパティをすべて設定します。</span>
+**`border-top`** は[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) プロパティで、要素の上側の[境界](/ja/docs/Web/CSS/Reference/Properties/border)のプロパティをすべて設定します。
 
 {{InteractiveExample("CSS デモ: border-top")}}
 
@@ -27,21 +26,21 @@ border-top: thick double #32a1ce;
 ```
 
 ```css interactive-example-choice
-border-top: 4mm ridge rgba(211, 220, 50, 0.6);
+border-top: 4mm ridge rgb(211 220 50 / 0.6);
 ```
 
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これは周囲に境界線があるボックスです。
   </div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #8b008b;
+  background-color: #eeeeee;
+  color: darkmagenta;
   padding: 0.75em;
   width: 80%;
   height: 100px;

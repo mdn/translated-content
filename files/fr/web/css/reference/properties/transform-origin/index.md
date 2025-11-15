@@ -249,7 +249,7 @@ Les mots-clés sont des raccourcis qui correspondent aux valeurs {{cssxref("&lt;
 
 ## Exemples
 
-Voir la page sur [l'utilisation des transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) pour des exemples supplémentaires.
+Voir la page sur [l'utilisation des transformations CSS](/fr/docs/Web/CSS/Guides/Transforms/Using) pour des exemples supplémentaires.
 
 ### Illustrations des différentes valeurs de transform
 
@@ -452,5 +452,5 @@ transform-origin: 100% -30%;
 
 ## Voir aussi
 
-- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [Utiliser les transformations CSS](/fr/docs/Web/CSS/Guides/Transforms/Using)
 - <https://css-tricks.com/almanac/properties/t/transform-origin/>

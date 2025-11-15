@@ -61,4 +61,4 @@ Cette fonctionnalité est une proposition intégrée dans la spécification. Act
   - {{cssxref(":visited")}}
   - {{cssxref(":hover")}}
   - {{cssxref(":active")}}
-- Le module des [sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors)
+- Le module des [sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors)

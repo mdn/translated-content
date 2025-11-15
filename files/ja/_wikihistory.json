@@ -42381,18 +42381,18 @@
       "silverskyvicto"
     ]
   },
-  "Web/Security/Certificate_Transparency": {
-    "modified": "2020-10-24T06:27:55.333Z",
-    "contributors": [
-      "silverskyvicto"
-    ]
-  },
-  "Web/Security/Insecure_passwords": {
+  "Web/Security/Authentication/Passwords": {
     "modified": "2020-09-24T14:12:23.139Z",
     "contributors": [
       "mfuji09",
       "horichiyo",
       "hashedhyphen"
+    ]
+  },
+  "Web/Security/Certificate_Transparency": {
+    "modified": "2020-10-24T06:27:55.333Z",
+    "contributors": [
+      "silverskyvicto"
     ]
   },
   "Web/Security/Mixed_content": {
@@ -42478,14 +42478,6 @@
     "contributors": [
       "silverskyvicto",
       "pcw",
-      "mfuji09",
-      "hashedhyphen"
-    ]
-  },
-  "Web/Security/Weak_Signature_Algorithm": {
-    "modified": "2020-10-23T09:55:17.907Z",
-    "contributors": [
-      "silverskyvicto",
       "mfuji09",
       "hashedhyphen"
     ]
@@ -43534,6 +43526,14 @@
       "mfuji09",
       "dskmori",
       "kadokura"
+    ]
+  },
+  "conflicting/Glossary/Hash_function": {
+    "modified": "2020-10-23T09:55:17.907Z",
+    "contributors": [
+      "silverskyvicto",
+      "mfuji09",
+      "hashedhyphen"
     ]
   },
   "conflicting/Learn/JavaScript/Client-side_web_APIs/Fetching_data": {

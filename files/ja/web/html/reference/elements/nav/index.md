@@ -9,7 +9,7 @@ l10n:
 
 {{InteractiveExample("HTML デモ: &lt;nav&gt;", "tabbed-standard")}}
 
-```html interactive-example
+```html-nolint interactive-example
 <nav class="crumbs">
   <ol>
     <li class="crumb"><a href="#">Bikes</a></li>
@@ -76,7 +76,7 @@ nav {
 
 `nav` 要素の意味づけはリンクを提供することです。しかし、`nav` 要素はリストを格納する必要はなく、他の種類のコンテンツを格納することもできます。このナビゲーションブロックでは、リンクは散文で指定されています。
 
-```html live-sample___prose
+```html-nolint live-sample___prose
 <nav>
   <h2>ナビゲーション</h2>
   <p>

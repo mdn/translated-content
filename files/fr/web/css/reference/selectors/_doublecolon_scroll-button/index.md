@@ -51,7 +51,7 @@ Vous pouvez générer jusqu'à quatre boutons de défilement par conteneur, qui 
 
 Les boutons générés se comportent comme de véritables éléments {{htmlelement("button")}}, y compris leurs styles par défaut spécifiques au navigateur. Ils sont focalisables, accessibles et peuvent être activés comme des boutons classiques. Lorsqu'un bouton de défilement est activé, le contenu du conteneur est défilé dans la direction spécifiée d'une «&nbsp;page&nbsp;», soit environ la dimension du conteneur, de manière similaire à la pression des touches <kbd>PgUp</kbd> et <kbd>PgDn</kbd>.
 
-Il est recommandé de configurer le [verrouillage du défilement CSS](/fr/docs/Web/CSS/CSS_scroll_snap) sur le conteneur de défilement et de définir chaque élément de contenu que vous souhaitez défiler comme une [cible d'ancrage](/fr/docs/Glossary/Scroll_snap#cible_dancrage). Ainsi, l'activation d'un bouton de défilement fera défiler le contenu jusqu'à la cible d'ancrage située à une «&nbsp;page&nbsp;» de distance. Bien que les boutons de défilement fonctionnent sans verrouillage du défilement, l'effet obtenu risque de ne pas être optimal.
+Il est recommandé de configurer le [verrouillage du défilement CSS](/fr/docs/Web/CSS/Guides/Scroll_snap) sur le conteneur de défilement et de définir chaque élément de contenu que vous souhaitez défiler comme une [cible d'ancrage](/fr/docs/Glossary/Scroll_snap#cible_dancrage). Ainsi, l'activation d'un bouton de défilement fera défiler le contenu jusqu'à la cible d'ancrage située à une «&nbsp;page&nbsp;» de distance. Bien que les boutons de défilement fonctionnent sans verrouillage du défilement, l'effet obtenu risque de ne pas être optimal.
 
 Lorsqu'il n'est pas possible de défiler davantage dans une direction donnée, le bouton correspondant est automatiquement désactivé, sinon il est activé. Vous pouvez mettre en évidence les boutons de défilement dans leurs états activé et désactivé en utilisant les pseudo-classes {{cssxref(":enabled")}} et {{cssxref(":disabled")}}.
 
@@ -222,6 +222,6 @@ ul::scroll-button(right) {
 - {{cssxref("::column")}}
 - {{cssxref(":target-current")}}
 - [Créer des carrousels en CSS](/fr/docs/Web/CSS/CSS_overflow/CSS_carousels)
-- Le module de [débordement CSS](/fr/docs/Web/CSS/CSS_overflow)
+- Le module de [débordement CSS](/fr/docs/Web/CSS/Guides/Overflow)
 - Le module de [positionnement par ancrage CSS](/fr/docs/Web/CSS/CSS_anchor_positioning)
 - [Galerie de carrousels CSS <sup>(angl.)</sup>](https://chrome.dev/carousel/) par chrome.dev (2025)

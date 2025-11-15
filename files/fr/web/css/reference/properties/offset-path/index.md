@@ -122,7 +122,7 @@ offset-path: unset;
 - `url()`
   - : Cette notation fonctionnelle permet de faire référence à l'identifiant d'une forme SVG : `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline` ou `rect` et d'utiliser la géométrie de la forme visée pour construire le chemin.
 - `<basic-shape>`
-  - : Cette valeur indique une [forme CSS](/fr/docs/Web/CSS/CSS_shapes/Basic_shapes) en utilisant les notations fonctionnelles `circle()`, `ellipse()`, `inset()`, `polygon()` ou `path()`.
+  - : Cette valeur indique une [forme CSS](/fr/docs/Web/CSS/Guides/Shapes/Using_shape-outside) en utilisant les notations fonctionnelles `circle()`, `ellipse()`, `inset()`, `polygon()` ou `path()`.
     - `path()`
       - : Une chaîne de caractères qui définit un chemin avec la syntaxe des coordonnées SVG. À l'heure actuelle (16 novembre 2018), c'est la seule valeur qui est prise en charge.
 

@@ -6,7 +6,7 @@ original_slug: Web/CSS/transition-property
 
 {{CSSRef}}
 
-La propriété **`transition-property`** désigne les noms des propriétés CSS sur lesquelles [un effet de transition](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) devrait être appliqué.
+La propriété **`transition-property`** désigne les noms des propriétés CSS sur lesquelles [un effet de transition](/fr/docs/Web/CSS/Guides/Transitions/Using) devrait être appliqué.
 
 {{InteractiveExample("CSS Demo: transition-property")}}
 
@@ -51,7 +51,7 @@ transition-property: none;
 ```
 
 > [!NOTE]
-> [L'ensemble des propriétés CSS qui peuvent être animées](/fr/docs/Web/CSS/CSS_animated_properties) évolue. Vous devriez donc éviter de lister ici des propriétés qui, actuellement, ne sont pas animées car elles pourraient l'être demain et cela pourrait affecter votre document.
+> [L'ensemble des propriétés CSS qui peuvent être animées](/fr/docs/Web/CSS/Guides/Animations/Animatable_properties) évolue. Vous devriez donc éviter de lister ici des propriétés qui, actuellement, ne sont pas animées car elles pourraient l'être demain et cela pourrait affecter votre document.
 
 Si vous définissez une propriété raccourcie (par exemple {{cssxref("background")}}), toutes les propriétés détaillées correspondantes seront animées de la même façon.
 
@@ -102,7 +102,7 @@ transition-property: unset;
 
 ## Exemples
 
-Il y a plusieurs exemples sur les transitions CSS qui se trouvent dans [l'article sur les transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
+Il y a plusieurs exemples sur les transitions CSS qui se trouvent dans [l'article sur les transitions CSS](/fr/docs/Web/CSS/Guides/Transitions/Using).
 
 ## Spécifications
 
@@ -114,5 +114,5 @@ Il y a plusieurs exemples sur les transitions CSS qui se trouvent dans [l'articl
 
 ## Voir aussi
 
-- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Utiliser les transitions CSS](/fr/docs/Web/CSS/Guides/Transitions/Using)
 - {{domxref("TransitionEvent")}}

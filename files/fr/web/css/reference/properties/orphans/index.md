@@ -6,7 +6,7 @@ original_slug: Web/CSS/orphans
 
 {{CSSRef}}
 
-La propriété **`orphans`** définit le nombre _minimum_ de lignes qui doivent rester en bas d'une [page](/fr/docs/Web/CSS/CSS_paged_media), d'une région ou d'une [colonne](/fr/docs/Web/CSS/CSS_multicol_layout) dans un conteneur de bloc.
+La propriété **`orphans`** définit le nombre _minimum_ de lignes qui doivent rester en bas d'une [page](/fr/docs/Web/CSS/Guides/Paged_media), d'une région ou d'une [colonne](/fr/docs/Web/CSS/Guides/Multicol_layout) dans un conteneur de bloc.
 
 ```css
 /* Valeur numérique entière */
@@ -85,4 +85,4 @@ orphans: unset;
 ## Voir aussi
 
 - {{cssxref("widows")}}
-- [Média paginés](/fr/docs/Web/CSS/CSS_paged_media)
+- [Média paginés](/fr/docs/Web/CSS/Guides/Paged_media)

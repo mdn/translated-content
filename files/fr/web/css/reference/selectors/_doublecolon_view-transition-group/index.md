@@ -51,7 +51,7 @@ De plus, la transformation de l'élément est animée de la transformation de l'
 - `<pt-class-selector>`
   - : Le {{cssxref("custom-ident")}} défini comme valeur de la propriété {{cssxref("view-transition-class")}}, précédé d'un point (`.`).
 
-La {{cssxref("specificity")}} du pseudo-élément de transition de vue nommé est égale à la [spécificité du sélecteur de type](/fr/docs/Web/CSS/CSS_cascade/Specificity#type_column), à moins que le sélecteur universel ne soit utilisé, auquel cas la spécificité est nulle.
+La {{cssxref("specificity")}} du pseudo-élément de transition de vue nommé est égale à la [spécificité du sélecteur de type](/fr/docs/Web/CSS/Guides/Cascade/Specificity#type_column), à moins que le sélecteur universel ne soit utilisé, auquel cas la spécificité est nulle.
 
 ## Exemples
 

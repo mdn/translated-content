@@ -9,7 +9,7 @@ l10n:
 
 {{InteractiveExample("HTML デモ: &lt;hr&gt;", "tabbed-shorter")}}
 
-```html interactive-example
+```html-nolint interactive-example
 <p>§1: ファイトクラブの第一のルール：ファイトクラブについて話してはならない。</p>
 
 <hr />

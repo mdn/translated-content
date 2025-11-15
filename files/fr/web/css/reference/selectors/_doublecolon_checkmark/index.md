@@ -103,7 +103,7 @@ select,
 }
 ```
 
-En considérant que [flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) est utilisé pour disposer les éléments `<option>` (ce qui est vrai dans **les implémentations actuelles** des sélections personnalisables), vous pourriez alors déplacer la coche du début de la ligne à la fin en définissant une valeur {{cssxref("order")}} supérieure à `0`, et en l'alignant à la fin de la ligne en utilisant une valeur {{cssxref("margin-left")}} `auto` (voir l'[Alignement et les marges automatiques](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox#alignement_et_marges_automatiques)).
+En considérant que [flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) est utilisé pour disposer les éléments `<option>` (ce qui est vrai dans **les implémentations actuelles** des sélections personnalisables), vous pourriez alors déplacer la coche du début de la ligne à la fin en définissant une valeur {{cssxref("order")}} supérieure à `0`, et en l'alignant à la fin de la ligne en utilisant une valeur {{cssxref("margin-left")}} `auto` (voir l'[Alignement et les marges automatiques](/fr/docs/Web/CSS/Guides/Box_alignment/In_flexbox#alignement_et_marges_automatiques)).
 
 La valeur de la propriété {{cssxref("content")}} pourrait également être définie sur un emoji différent pour changer l'icône affichée.
 

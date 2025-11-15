@@ -118,7 +118,7 @@ Enfin, nous mettons en évidence différemment le marqueur de l'élément actuel
 
 ### Numérotation et style personnalisés des marqueurs de défilement
 
-Cet exemple est identique au précédent, sauf que nous avons appliqué un style différent aux marqueurs de défilement et utilisé des [compteurs CSS](/fr/docs/Web/CSS/CSS_lists) pour incrémenter le numéro affiché sur chaque marqueur. Les différences CSS sont expliquées dans la section suivante.
+Cet exemple est identique au précédent, sauf que nous avons appliqué un style différent aux marqueurs de défilement et utilisé des [compteurs CSS](/fr/docs/Web/CSS/Guides/Lists) pour incrémenter le numéro affiché sur chaque marqueur. Les différences CSS sont expliquées dans la section suivante.
 
 ### CSS
 
@@ -191,6 +191,6 @@ Pour améliorer l'expérience utilisateur, nous appliquons une couleur différen
 - {{cssxref("::scroll-marker-group")}}
 - {{cssxref(":target-current")}}
 - [Créer des carrousels en CSS](/fr/docs/Web/CSS/CSS_overflow/CSS_carousels)
-- Le module de [listes et compteurs CSS](/fr/docs/Web/CSS/CSS_lists)
-- Le module de [débordement CSS](/fr/docs/Web/CSS/CSS_overflow)
+- Le module de [listes et compteurs CSS](/fr/docs/Web/CSS/Guides/Lists)
+- Le module de [débordement CSS](/fr/docs/Web/CSS/Guides/Overflow)
 - [Galerie de carrousels CSS <sup>(angl.)</sup>](https://chrome.dev/carousel/) par chrome.dev (2025)

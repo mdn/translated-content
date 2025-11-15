@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 27e3d279057ebbb559f4725641b1c431914de7b1
 ---
 
-La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@container`** est une règle conditionnelle de groupe qui applique des styles à un [contexte de conteneur](/fr/docs/Web/CSS/CSS_containment/Container_queries#nommer_les_contextes_de_conteneur).
+La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@container`** est une règle conditionnelle de groupe qui applique des styles à un [contexte de conteneur](/fr/docs/Web/CSS/CSS_containment/Container_queries#nommer_les_contextes_de_conteneur).
 Les déclarations de style sont filtrées par une condition et appliquées au conteneur si la condition est vraie.
 La condition est évaluée lorsque la taille du conteneur interrogé, le [`<style-feature>`](#requêtes_de_style_de_conteneur) ou l'état de défilement changent.
 
@@ -217,7 +217,7 @@ Les mots-clés pris en charge pour les descripteurs d'état de défilement inclu
     ```
 
 - `snapped`
-  - : Vérifie si le conteneur va être aligné («&nbsp;snapped&nbsp;») sur un conteneur parent de type [scroll snap](/fr/docs/Web/CSS/CSS_scroll_snap) selon l'axe donné. Les valeurs valides pour `snapped` incluent&nbsp;:
+  - : Vérifie si le conteneur va être aligné («&nbsp;snapped&nbsp;») sur un conteneur parent de type [scroll snap](/fr/docs/Web/CSS/Guides/Scroll_snap) selon l'axe donné. Les valeurs valides pour `snapped` incluent&nbsp;:
     - `none`
       - : Le conteneur n'est pas une [cible d'accrochage](/fr/docs/Glossary/Scroll_snap#cible_daccrochage) pour son conteneur parent. Si on utilise `snapped: none`, les conteneurs qui _sont_ des cibles d'accrochage n'auront _pas_ les styles `@container`, tandis que les non-cibles _les auront_.
     - `x`
@@ -406,7 +406,7 @@ La requête suivante s'applique si le conteneur nommé `summary` fait plus de `4
 
 ### Requêtes de style de conteneur
 
-Les requêtes de conteneur peuvent aussi évaluer le style calculé de l'élément conteneur. Une _requête de style de conteneur_ est une requête `@container` qui utilise une ou plusieurs notations fonctionnelles `style()`. La syntaxe booléenne et la logique de combinaison des fonctionnalités de style dans une requête de style sont les mêmes que pour les [requêtes de fonctionnalités CSS](/fr/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries).
+Les requêtes de conteneur peuvent aussi évaluer le style calculé de l'élément conteneur. Une _requête de style de conteneur_ est une requête `@container` qui utilise une ou plusieurs notations fonctionnelles `style()`. La syntaxe booléenne et la logique de combinaison des fonctionnalités de style dans une requête de style sont les mêmes que pour les [requêtes de fonctionnalités CSS](/fr/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries).
 
 ```css
 @container style(<style-feature>),
@@ -417,7 +417,7 @@ Les requêtes de conteneur peuvent aussi évaluer le style calculé de l'éléme
 }
 ```
 
-Le paramètre de chaque `style()` est un seul `<style-feature>`. Un **`<style-feature>`** est une [déclaration CSS](/fr/docs/Web/CSS/CSS_syntax/Syntax#css_declarations) valide, une propriété CSS ou un [`<custom-property-name>`](/fr/docs/Web/CSS/Reference/Values/var#values).
+Le paramètre de chaque `style()` est un seul `<style-feature>`. Un **`<style-feature>`** est une [déclaration CSS](/fr/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations) valide, une propriété CSS ou un [`<custom-property-name>`](/fr/docs/Web/CSS/Reference/Values/var#values).
 
 ```css
 @container style(--themeBackground),
@@ -432,7 +432,7 @@ Une fonctionnalité de style sans valeur est vraie si la valeur calculée est di
 
 Si le `<style-feature>` passé en argument à la fonction `style()` est une déclaration, la requête de style est vraie si la valeur de la déclaration est identique à la valeur calculée de cette propriété pour le conteneur interrogé. Sinon, elle est fausse.
 
-La requête suivante vérifie si la [valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_calculée) de la propriété `--accent-color` du conteneur est `blue`&nbsp;:
+La requête suivante vérifie si la [valeur calculée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_calculée) de la propriété `--accent-color` du conteneur est `blue`&nbsp;:
 
 ```css
 @container style(--accent-color: blue) {
@@ -468,5 +468,5 @@ Voir [Utiliser les requêtes d'état de défilement de conteneur](/fr/docs/Web/C
 - {{Cssxref("container-type")}}
 - {{Cssxref("contain")}}
 - {{Cssxref("content-visibility")}}
-- Le module de [Compartimentation CSS](/fr/docs/Web/CSS/CSS_containment)
+- Le module de [Compartimentation CSS](/fr/docs/Web/CSS/Guides/Containment)
 - [Fonctions de règles @ CSS](/fr/docs/Web/CSS/CSS_syntax/At-rule_functions)

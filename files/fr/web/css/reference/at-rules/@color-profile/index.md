@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bc761c19c07b875eb889d4aad87b18d8443da339
 ---
 
-La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@color-profile`** définit et nomme un profil de couleur qui peut être utilisé ensuite avec la fonction {{cssxref("color_value/color", "color()")}} afin d'indiquer une couleur.
+La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@color-profile`** définit et nomme un profil de couleur qui peut être utilisé ensuite avec la fonction {{cssxref("color_value/color", "color()")}} afin d'indiquer une couleur.
 
 ## Syntaxe
 
@@ -68,4 +68,4 @@ Actuellement, aucun navigateur ne prend en charge cette fonctionnalité.
 
 ## Voir aussi
 
-- Le module des [couleurs CSS](/fr/docs/Web/CSS/CSS_colors)
+- Le module des [couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)

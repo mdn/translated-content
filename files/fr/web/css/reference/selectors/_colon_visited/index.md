@@ -54,7 +54,7 @@ Pour des raisons de vie privée, les navigateurs limitent les propriétés qui p
 - Bien qu'on puisse modifier la couleur d'un lien, la méthode {{domxref("window.getComputedStyle")}} mentira et indiquera toujours la valeur de la couleur de la règle pour les liens non-visités.
 
 > [!NOTE]
-> Pour d'autres informations sur ces limitations et leurs raisons d'être, se référer à l 'article [Vie privée et le sélecteur `:visited`](/fr/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector).
+> Pour d'autres informations sur ces limitations et leurs raisons d'être, se référer à l 'article [Vie privée et le sélecteur `:visited`](/fr/docs/Web/CSS/Guides/Selectors/Privacy_and_:visited).
 
 ## Syntaxe
 
@@ -108,7 +108,7 @@ a:visited {
 
 ## Voir aussi
 
-- [Vie privée et le sélecteur `:visited`](/fr/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)
+- [Vie privée et le sélecteur `:visited`](/fr/docs/Web/CSS/Guides/Selectors/Privacy_and_:visited)
 - Les pseudo-classes relatives aux liens&nbsp;:
   - {{cssxref(":link")}},
   - {{cssxref(":visited")}},

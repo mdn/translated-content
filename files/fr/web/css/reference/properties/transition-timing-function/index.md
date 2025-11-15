@@ -6,7 +6,7 @@ original_slug: Web/CSS/transition-timing-function
 
 {{CSSRef}}
 
-La propriété **`transition-timing-function`** décrit la façon dont les valeurs intermédiaires des propriétés CSS affectées par un [effet de transition](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) sont calculées. Ceci permet donc de définir une courbe d'accelération, de manière à ce que la vitesse de la transition varie au cours de sa durée.
+La propriété **`transition-timing-function`** décrit la façon dont les valeurs intermédiaires des propriétés CSS affectées par un [effet de transition](/fr/docs/Web/CSS/Guides/Transitions/Using) sont calculées. Ceci permet donc de définir une courbe d'accelération, de manière à ce que la vitesse de la transition varie au cours de sa durée.
 
 {{InteractiveExample("CSS Demo: transition-timing-function")}}
 
@@ -298,5 +298,5 @@ Toutefois, certaines animations s'avèrent problématiques pour les personnes so
 
 ## Voir aussi
 
-- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Utiliser les transitions CSS](/fr/docs/Web/CSS/Guides/Transitions/Using)
 - {{domxref("TransitionEvent")}}

@@ -70,7 +70,7 @@ Ces pseudo-éléments se comportent comme des éléments normaux, s'intégrant p
 - {{CSSxRef("::after")}}
   - : Crée un pseudo-élément qui est le dernier enfant de l'élément sélectionné.
 - {{CSSxRef("::column")}}
-  - : Chaque fragment de colonne d'une [mise en page multi-colonnes](/fr/docs/Web/CSS/CSS_multicol_layout).
+  - : Chaque fragment de colonne d'une [mise en page multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout).
 - {{CSSxRef("::marker")}}
   - : La boîte de marqueur générée automatiquement d'un élément de liste.
 - {{CSSxRef("::backdrop")}}
@@ -190,7 +190,7 @@ Consultez les pages de référence des pseudo-éléments individuels pour des ex
 
 ## Héritage des pseudo-éléments de mise en évidence
 
-[Les pseudo-éléments de mise en évidence](#les_pseudo-éléments_de_mise_en_évidence), tels que {{CSSxref("::selection")}}, {{CSSxref("::target-text")}}, {{CSSxref("::highlight()")}}, {{CSSxref("::spelling-error")}}, et {{CSSxref("::grammar-error")}}, suivent un modèle d'héritage cohérent qui diffère de [l'héritage des éléments réguliers](/fr/docs/Web/CSS/CSS_cascade/Inheritance).
+[Les pseudo-éléments de mise en évidence](#les_pseudo-éléments_de_mise_en_évidence), tels que {{CSSxref("::selection")}}, {{CSSxref("::target-text")}}, {{CSSxref("::highlight()")}}, {{CSSxref("::spelling-error")}}, et {{CSSxref("::grammar-error")}}, suivent un modèle d'héritage cohérent qui diffère de [l'héritage des éléments réguliers](/fr/docs/Web/CSS/Guides/Cascade/Inheritance).
 
 Lorsque vous appliquez des styles aux pseudo-éléments de mise en évidence, ils héritent à la fois de&nbsp;:
 
@@ -248,7 +248,7 @@ Essayez de sélectionner le texte dans les éléments parent et enfant. Remarque
 
 Cela démontre comment le pseudo-élément mise en évidence de l'enfant hérite à la fois de son élément parent et du pseudo-élément mise en évidence du parent.
 
-[Les propriétés CSS personnalisées (variables)](/fr/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) dans les pseudo-éléments mise en évidence héritent de leur élément d'origine (l'élément auquel elles sont appliquées), et non par le biais de la chaîne d'héritage des surlignages. Par exemple&nbsp;:
+[Les propriétés CSS personnalisées (variables)](/fr/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) dans les pseudo-éléments mise en évidence héritent de leur élément d'origine (l'élément auquel elles sont appliquées), et non par le biais de la chaîne d'héritage des surlignages. Par exemple&nbsp;:
 
 ```css
 :root {
@@ -286,6 +286,6 @@ Lorsque vous utilisez le sélecteur universel avec des pseudo-éléments mise en
 
 - Le module des [pseudo-éléments CSS](/fr/docs/Web/CSS/CSS_pseudo-elements)
 - Les [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
-- Le module des [sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors)
+- Le module des [sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors)
 - [Apprendre&nbsp;: Pseudo-classes et pseudo-éléments](/fr/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
 - [Changements d'héritage pour le style de sélection CSS <sup>(angl.)</sup>](https://developer.chrome.com/blog/selection-styling) — Explication détaillée des changements du modèle d'héritage des pseudo-éléments mise en évidence dans Chrome 134
