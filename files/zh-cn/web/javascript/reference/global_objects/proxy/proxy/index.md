@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
 ---
 
-{{JSRef}}
-
 **`Proxy()`** 构造函数用于创建 {{jsxref("Proxy")}} 对象。
 
 ## 语法

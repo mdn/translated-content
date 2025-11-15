@@ -9,7 +9,7 @@ l10n:
 
 术语*屏幕方向*指的是浏览器[视口](/zh-CN/docs/Glossary/Viewport)是处于横向模式（即视口的宽度大于其高度），还是纵向模式（视口的高度大于其宽度）。
 
-CSS 提供了 [`orientation`](/zh-CN/docs/Web/CSS/@media/orientation) 媒体特性，允许根据屏幕方向调整布局。
+CSS 提供了 [`orientation`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/orientation) 媒体特性，允许根据屏幕方向调整布局。
 
 [屏幕方向 API](/zh-CN/docs/Web/API/Screen_Orientation_API) 提供了一个用于处理屏幕方向的 JavaScript 编程接口——包括将视口锁定到特定方向的能力。
 
@@ -172,4 +172,4 @@ screen.orientation.lock();
 - {{domxref("Screen.orientation", "screen.orientation")}}
 - {{domxref("ScreenOrientation")}}
 - {{DOMxRef("ScreenOrientation.change_event", "change")}} 事件的 {{domxref("ScreenOrientation")}}
-- [orientation 媒体查询](/zh-CN/docs/Web/CSS/@media/orientation)
+- [orientation 媒体查询](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/orientation)

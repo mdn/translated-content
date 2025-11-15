@@ -117,7 +117,7 @@ l10n:
 - `popovertarget`
   - : `<button>` 要素をポップオーバーの制御ボタンに変換します。制御するポップオーバー要素の ID を値として受け取ります。 `popovertarget` 属性を使用してポップオーバーとその呼び出し元ボタンとの関連付けを設定すると、2 つの有益な効果が追加されます。
     - ブラウザーは、ポップオーバーと呼び出し元との間に暗黙の [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) および [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) の関係を作成し、ポップオーバーが表示されたときに、キーボードフォーカスナビゲーションの順序で論理的な位置にポップオーバーを配置します。これにより、キーボードおよび支援技術 (AT) のユーザーもポップオーバーにアクセスしやすくなります （「[ポップオーバーのアクセシビリティ機能](/ja/docs/Web/API/Popover_API/Using#popover_accessibility_features)」も参照してください）。
-    - ブラウザーは、2 つの間に暗黙のアンカー参照を作成するため、[CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)を使用して、コントロールを基準にしてポップオーバーを相対的に位置指定することがとても便利です。詳細については、「[ポップオーバーのアンカー位置指定](/ja/docs/Web/API/Popover_API/Using#popover_anchor_positioning)」を参照してください。
+    - ブラウザーは、2 つの間に暗黙のアンカー参照を作成するため、[CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)を使用して、コントロールを基準にしてポップオーバーを相対的に位置指定することがとても便利です。詳細については、「[ポップオーバーのアンカー位置指定](/ja/docs/Web/API/Popover_API/Using#popover_anchor_positioning)」を参照してください。
 
 - `popovertargetaction`
   - : 制御用 `<button>` によって制御されているポップオーバー要素に対して実行される動作を指定します。使用可能な値は以下の通りです。
@@ -147,7 +147,7 @@ l10n:
 
 `<button type="button">` には既定の動作がありませんが、イベントハンドラーを記述して動作を起動することができます。起動されたボタンは [JavaScript](/ja/docs/Learn_web_development/Core/Scripting) を用いてプログラム可能なアクションを実行することができます。例えばアイテムをリストから削除するなどです。
 
-既定では、ユーザーエージェントはボタンを `display: flow-root` としてスタイル設定します。これにより、新しい[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)が確立され、ボタンがオーバーフローしない限り、ボタンの中の子要素が水平方向と垂直方向の両方で中央に配置されます。ボタンがフレックスまたはグリッドコンテナーとして定義されている場合、子要素はフレックスまたはグリッドアイテムとして動作します。 `display: inline` に設定されたボタンは、値が `display: inline-block` に設定されているかのようにスタイル設定されます。
+既定では、ユーザーエージェントはボタンを `display: flow-root` としてスタイル設定します。これにより、新しい[ブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context)が確立され、ボタンがオーバーフローしない限り、ボタンの中の子要素が水平方向と垂直方向の両方で中央に配置されます。ボタンがフレックスまたはグリッドコンテナーとして定義されている場合、子要素はフレックスまたはグリッドアイテムとして動作します。 `display: inline` に設定されたボタンは、値が `display: inline-block` に設定されているかのようにスタイル設定されます。
 
 ## アクセシビリティ
 
@@ -209,7 +209,7 @@ l10n:
 
 フォーカスを持つ要素の既定のフォーカスリングは上書きしないことが望ましいです。ボタンスタイルが上書きされる場合、視覚障碍のあるユーザーが認識でき、認知能力に違いのあるユーザーも理解できるように、**フォーカス状態のコントラストが十分であることを保証**することが重要です。
 
-{{cssxref(":focus-visible")}} 擬似クラスを使用すると、ユーザーエージェントのヒューリスティックがフォーカスを強調表示すべきであると判断した場合（たとえば、`<button>` がキーボードのフォーカスを受け取った場合など）にのみ、 {{cssxref(":focus")}} を保有する要素にスタイルを適用することができます。詳細については、[:focus と :focus-visible](/ja/docs/Web/CSS/:focus-visible#focus_vs_focus-visible) を参照してください。
+{{cssxref(":focus-visible")}} 擬似クラスを使用すると、ユーザーエージェントのヒューリスティックがフォーカスを強調表示すべきであると判断した場合（たとえば、`<button>` がキーボードのフォーカスを受け取った場合など）にのみ、 {{cssxref(":focus")}} を保有する要素にスタイルを適用することができます。詳細については、[:focus と :focus-visible](/ja/docs/Web/CSS/Reference/Selectors/:focus-visible#focus_vs_focus-visible) を参照してください。
 
 色のコントラスト比は、テキスト及び背景色の明度の値を比較することで決定されます。現在の[ウェブコンテンツアクセシビリティガイドライン (Web Content Accessibility Guidelines, WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/) によれば、文字列コンテンツで 4.5:1 以上、大きめの文字列で 3:1 以上のコントラスト比が求められています。 (大きめの文字列とは、 {{cssxref("font-weight", "bold")}} の 18.66px 以上、または 24px 以上と定義されています。)
 

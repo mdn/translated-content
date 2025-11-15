@@ -3,8 +3,6 @@ title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
 ---
 
-{{JSRef}}
-
 当运行时错误产生时，`Error` 对象会被抛出。`Error` 对象也可用于用户自定义的异常的基础对象。下面列出了各种内建的标准错误类型。
 
 ## 描述

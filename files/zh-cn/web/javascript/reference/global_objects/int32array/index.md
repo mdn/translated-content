@@ -3,8 +3,6 @@ title: Int32Array
 slug: Web/JavaScript/Reference/Global_Objects/Int32Array
 ---
 
-{{JSRef}}
-
 该 **`Int32Array`** 类型表示在平台顺序字节中一个双补码 32 位有符号的整型数组。如果需要控制字节顺序，请改用 {{jsxref("DataView")}}。此内容的初始化为 `0`。一旦创建，你可以使用对象的方法或者标准数组索引的语法 (即使用括号表示法)。
 
 ## 语法

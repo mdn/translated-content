@@ -236,7 +236,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 この例には、`<iframe>` の使用に必要な基本的な要素が含まれています。
 
-- [`border: none`](/ja/docs/Web/CSS/border)
+- [`border: none`](/ja/docs/Web/CSS/Reference/Properties/border)
   - : 使用した場合、`<iframe>` は周囲の境界線なしで表示されます。そうでない場合、既定では、ブラウザーは `<iframe>` を境界線付きで表示します（これは一般的に望ましくありません）。
 - [`allowfullscreen`](/ja/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)
   - : 設定されている場合、`<iframe>` は、[全画面 API](/ja/docs/Web/API/Fullscreen_API) を使用して全画面モードにすることができます（この記事の範囲外です）。

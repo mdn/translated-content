@@ -5,7 +5,7 @@ l10n:
   sourceCommit: cb6a4b1a19536df4c5bcaaf0e74605e3a14d49ec
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 {{jsxref("Iterator")}} 实例的 **`find()`** 方法与 {{jsxref("Array.prototype.find()")}} 类似：它返回迭代器生成的第一个满足提供的测试函数的元素。如果没有值满足测试函数，则返回 {{jsxref("undefined")}}。
 

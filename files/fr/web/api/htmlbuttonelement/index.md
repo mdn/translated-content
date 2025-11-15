@@ -69,7 +69,7 @@ _Hérite des méthodes de son parent, [`HTMLElement`](/fr/docs/Web/API/HTMLEleme
 | `reportValidity()`                      | Booléen          | Non prise en charge pour les éléments bouton ou de réinitialisation. |
 | `setCustomValidity(in DOMString error)` | `void`           | Non prise en charge pour les éléments bouton ou de réinitialisation. |
 
-Pour les navigateurs utilisant Gecko, la pseudo-classe non standard [`:-moz-submit-invalid`](/fr/docs/Web/CSS/:-moz-submit-invalid) permet de mettre en forme les boutons d'envoi de formulaire selon la validation du formulaire.
+Pour les navigateurs utilisant Gecko, la pseudo-classe non standard [`:-moz-submit-invalid`](/fr/docs/Web/CSS/Reference/Selectors/:-moz-submit-invalid) permet de mettre en forme les boutons d'envoi de formulaire selon la validation du formulaire.
 
 ## Spécifications
 

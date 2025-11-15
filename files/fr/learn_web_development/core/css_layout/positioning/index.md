@@ -81,7 +81,7 @@ Si vous sauvegardez et actualisez à ce stade, vous ne verrez aucun changement d
 
 ### Présentation de `top`, `bottom`, `left` et `right`
 
-{{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}} sont utilisés conjointement à [`position`](/fr/docs/Web/CSS/position) pour définir exactement là où placer l'élément positionné. Pour le tester, ajoutez les déclarations suivantes à la règle `.positioned` dans le CSS&nbsp;:
+{{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}} sont utilisés conjointement à [`position`](/fr/docs/Web/CSS/Reference/Properties/position) pour définir exactement là où placer l'élément positionné. Pour le tester, ajoutez les déclarations suivantes à la règle `.positioned` dans le CSS&nbsp;:
 
 ```css
 top: 30px;
@@ -255,7 +255,7 @@ Ensuite, notez que la position de l'élément a changé. {{cssxref("top")}}, {{c
 
 ### Contextes de positionnement
 
-Quel élément est «&nbsp;le conteneur&nbsp;» d'un élément positionné de manière absolue&nbsp;? Cela dépend en grande partie de la propriété `position` des éléments qui sont les ancêtres de l'élément positionné (voir [Identifier le bloc englobant](/fr/docs/Web/CSS/CSS_display/Containing_block#identifier_le_bloc_englobant)).
+Quel élément est «&nbsp;le conteneur&nbsp;» d'un élément positionné de manière absolue&nbsp;? Cela dépend en grande partie de la propriété `position` des éléments qui sont les ancêtres de l'élément positionné (voir [Identifier le bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block#identifier_le_bloc_englobant)).
 
 Si aucun élément ancêtre ne voit sa propriété `position` explicitement définie, par défaut, tous les éléments ancêtres auront une position statique et par conséquent, l'élément positionné de façon absolue sera contenu dans **le bloc englobant initial**. Ce bloc englobant initial a les dimensions de la zone d'affichage (<i lang="en">viewport</i>) et est aussi le bloc qui contient l'élément {{htmlelement("html")}}. Autrement dit, l'élément positionné de façon absolue sera affiché en dehors de l'élément {{htmlelement("html")}} et positionné relativement à la zone d'affichage.
 
@@ -663,7 +663,7 @@ Une utilisation courante et pleine d'intérêt de `position: sticky` consiste à
 </dl>
 ```
 
-Le CSS pourrait ressembler à ce qui suit. Dans le flux normal, les éléments [`<dt>`](/fr/docs/Web/HTML/Reference/Elements/dt) défilent avec le contenu. Quand on ajoute `position: sticky` à l'élément [`<dt>`](/fr/docs/Web/HTML/Reference/Elements/dt) avec une valeur [`top`](/fr/docs/Web/CSS/top) de 0, les navigateurs prenant en charge ce positionnement colleront les titres au sommet de la vue de la fenêtre au fur et à mesure qu'ils atteignent cette position. Chaque en-tête suivant remplacera l'en-tête précédent au fur et à mesure que le contenu défile.
+Le CSS pourrait ressembler à ce qui suit. Dans le flux normal, les éléments [`<dt>`](/fr/docs/Web/HTML/Reference/Elements/dt) défilent avec le contenu. Quand on ajoute `position: sticky` à l'élément [`<dt>`](/fr/docs/Web/HTML/Reference/Elements/dt) avec une valeur [`top`](/fr/docs/Web/CSS/Reference/Properties/top) de 0, les navigateurs prenant en charge ce positionnement colleront les titres au sommet de la vue de la fenêtre au fur et à mesure qu'ils atteignent cette position. Chaque en-tête suivant remplacera l'en-tête précédent au fur et à mesure que le contenu défile.
 
 ```css
 dt {
@@ -687,7 +687,7 @@ body {
 
 {{EmbedLiveSample('index_déroulant', '100%', 200)}}
 
-Les éléments ainsi positionnés «&nbsp;adhèrent&nbsp;» au plus proche ancêtre qui dispose d'un mécanisme de défilement, ce qui est déterminé d'après la propriété [position](/fr/docs/Web/CSS/position) de ses ancêtres.
+Les éléments ainsi positionnés «&nbsp;adhèrent&nbsp;» au plus proche ancêtre qui dispose d'un mécanisme de défilement, ce qui est déterminé d'après la propriété [position](/fr/docs/Web/CSS/Reference/Properties/position) de ses ancêtres.
 
 > [!NOTE]
 > À ce stade de l'article, vous pouvez voir un exemple en direct ici [`7_sticky-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/7_sticky-positioning.html)).

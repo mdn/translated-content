@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Headers/Content-Security-Policy/font-src
 original_slug: Web/HTTP/Headers/Content-Security-Policy/font-src
 ---
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) **`font-src`** spécifie les sources valides pour les polices de caractères chargées avec [`@font-face`](/fr/docs/Web/CSS/@font-face).
+La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) **`font-src`** spécifie les sources valides pour les polices de caractères chargées avec [`@font-face`](/fr/docs/Web/CSS/Reference/At-rules/@font-face).
 
 <table class="properties">
   <tbody>
@@ -75,4 +75,4 @@ Cette définition de police sera bloquée et ne se chargera pas&nbsp;:
 ## Voir aussi
 
 - [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)
-- [`@font-face`](/fr/docs/Web/CSS/@font-face)
+- [`@font-face`](/fr/docs/Web/CSS/Reference/At-rules/@font-face)

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
-
 {{jsxref("Generator")}} 实例的 **`next()`** 方法返回一个包含属性 `done` 和 `value` 的对象。你也可以通过向 `next` 方法传入一个参数来向生成器传一个值。
 
 ## 语法

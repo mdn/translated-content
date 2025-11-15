@@ -39,8 +39,8 @@ l10n:
 当以下情况发生时，不应添加 `aria-hidden="true"`：
 
 - HTML 中存在 [`hidden`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/hidden) 属性
-- 使用 [`display: none`](/zh-CN/docs/Web/CSS/display) 隐藏了元素或元素的祖先元素
-- 使用 [`visibility: hidden`](/zh-CN/docs/Web/CSS/visibility) 隐藏了元素或元素的祖先元素
+- 使用 [`display: none`](/zh-CN/docs/Web/CSS/Reference/Properties/display) 隐藏了元素或元素的祖先元素
+- 使用 [`visibility: hidden`](/zh-CN/docs/Web/CSS/Reference/Properties/visibility) 隐藏了元素或元素的祖先元素
 
 在这三种情况下，添加此属性是不必要的，因为元素已经从无障碍树中移除了。使用 `display` 或 `visibility` 隐藏元素会使其在屏幕和辅助技术中不可见。
 

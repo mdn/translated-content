@@ -120,7 +120,7 @@ Comme pour tous les éléments HTML, on peut utiliser [les attributs universels]
 
 ## Notes d'utilisation
 
-Pour changer l'indentation de `<blockquote>`, on utilisera la propriété [CSS](/fr/docs/Glossary/CSS) [`margin-left`](/fr/docs/Web/CSS/margin-left) ou [`margin-right`](/fr/docs/Web/CSS/margin-right) (ou encore la propriété raccourcie [`margin`](/fr/docs/Web/CSS/margin))
+Pour changer l'indentation de `<blockquote>`, on utilisera la propriété [CSS](/fr/docs/Glossary/CSS) [`margin-left`](/fr/docs/Web/CSS/Reference/Properties/margin-left) ou [`margin-right`](/fr/docs/Web/CSS/Reference/Properties/margin-right) (ou encore la propriété raccourcie [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin))
 
 Pour les citations courtes, on pourra utiliser l'élément [`<q>`](/fr/docs/Web/HTML/Reference/Elements/q).
 

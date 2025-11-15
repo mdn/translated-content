@@ -186,7 +186,7 @@ En complément de l'attribut `type` mentionné ci-avant, les attributs suivants 
 
 En complément de la validation native effectuée par le navigateur, on peut manipuler la validation des contraintes en JavaScript à l'aide de l'API <i lang="en">Constraint Validation</i>, sur un élément du formulaire ou sur le formulaire ([`<form>`](/fr/docs/Web/HTML/Reference/Elements/form)). La validation des contraintes a lieu quand&nbsp;:
 
-- On appelle la méthode `checkValidity()` ou `reportValidity()` depuis une instance d'une interface du DOM correspondant à un élément de formulaire, ([`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement), [`HTMLSelectElement`](/fr/docs/Web/API/HTMLSelectElement), [`HTMLButtonElement`](/fr/docs/Web/API/HTMLButtonElement), [`HTMLOutputElement`](/fr/docs/Web/API/HTMLOutputElement) ou [`HTMLTextAreaElement`](/fr/docs/Web/API/HTMLTextAreaElement)). Dans ce cas, seules les contraintes de l'élément correspondant sont évaluées et permettent au script d'obtenir l'état de validité. La méthode `checkValidity()` renvoie un booléen qui indique si la valeur de l'élément respecte les contraintes (c'est généralement ce qui est fait par l'agent utilisateur pour déterminer quelle pseudo-classe CSS s'applique entre [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid)). La méthode `reportValidity()` renvoie quant à elle le détail des contraintes qui ne sont pas respectées.
+- On appelle la méthode `checkValidity()` ou `reportValidity()` depuis une instance d'une interface du DOM correspondant à un élément de formulaire, ([`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement), [`HTMLSelectElement`](/fr/docs/Web/API/HTMLSelectElement), [`HTMLButtonElement`](/fr/docs/Web/API/HTMLButtonElement), [`HTMLOutputElement`](/fr/docs/Web/API/HTMLOutputElement) ou [`HTMLTextAreaElement`](/fr/docs/Web/API/HTMLTextAreaElement)). Dans ce cas, seules les contraintes de l'élément correspondant sont évaluées et permettent au script d'obtenir l'état de validité. La méthode `checkValidity()` renvoie un booléen qui indique si la valeur de l'élément respecte les contraintes (c'est généralement ce qui est fait par l'agent utilisateur pour déterminer quelle pseudo-classe CSS s'applique entre [`:valid`](/fr/docs/Web/CSS/Reference/Selectors/:valid) et [`:invalid`](/fr/docs/Web/CSS/Reference/Selectors/:invalid)). La méthode `reportValidity()` renvoie quant à elle le détail des contraintes qui ne sont pas respectées.
 - On appelle la méthode `checkValidity()` ou `reportValidity()` de l'objet [`HTMLFormElement`](/fr/docs/Web/API/HTMLFormElement) correspondant au formulaire.
 - On envoie le formulaire.
 
@@ -342,15 +342,15 @@ L'aspect des éléments peut être personnalisé grâce aux pseudo-classes CSS s
 
 #### `:required` et `:optional`
 
-Les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) [`:required`](/fr/docs/Web/CSS/:required) et [`:optional`](/fr/docs/Web/CSS/:optional) permettent d'écrire des sélecteurs pour cibler les éléments qui ont ou non l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required).
+Les [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [`:required`](/fr/docs/Web/CSS/Reference/Selectors/:required) et [`:optional`](/fr/docs/Web/CSS/Reference/Selectors/:optional) permettent d'écrire des sélecteurs pour cibler les éléments qui ont ou non l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required).
 
 #### `:placeholder-shown`
 
-Voir [`:placeholder-shown`](/fr/docs/Web/CSS/:placeholder-shown).
+Voir [`:placeholder-shown`](/fr/docs/Web/CSS/Reference/Selectors/:placeholder-shown).
 
 #### `:valid` et `:invalid`
 
-Les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) sont utilisées pour représenter des éléments `<input>` dont le contenu est valide (respectivement invalide) par rapport au type de champ. Ces classes permettent de mettre en forme les éléments de formulaire valides ou invalides afin d'en faciliter l'identification.
+Les [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [`:valid`](/fr/docs/Web/CSS/Reference/Selectors/:valid) et [`:invalid`](/fr/docs/Web/CSS/Reference/Selectors/:invalid) sont utilisées pour représenter des éléments `<input>` dont le contenu est valide (respectivement invalide) par rapport au type de champ. Ces classes permettent de mettre en forme les éléments de formulaire valides ou invalides afin d'en faciliter l'identification.
 
 ### Contrôler le texte utilisé pour la validation des contraintes
 

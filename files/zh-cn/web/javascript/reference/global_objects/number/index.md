@@ -3,8 +3,6 @@ title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
 ---
 
-{{JSRef}}
-
 **`Number`** 值表示像 `37` 或 `-9.25` 这样的浮点数。
 
 `Number` 构造函数包含常量和处理数值的方法。其他类型的值可以使用 `Number()` 函数转换为数字。

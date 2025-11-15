@@ -1,18 +1,17 @@
 ---
 title: Symbol.toPrimitive
+short-title: toPrimitive
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
 l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
-
-**`Symbol.toPrimitive`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)である `Symbol.toPrimitive` を表します。すべての[型変換](/ja/docs/Web/JavaScript/Guide/Data_structures#型変換)アルゴリズムにおいて、すべての型変換アルゴリズムにおいて、オブジェクト上でこのシンボルを使って、その `valueOf()` や `toString()` メソッドを使用する前に、望ましい型を受け入れ、オブジェクトのプリミティブ表現を返すメソッドを調べます。
+**`Symbol.toPrimitive`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)の `Symbol.toPrimitive` を表します。すべての[型変換](/ja/docs/Web/JavaScript/Guide/Data_structures#型変換)アルゴリズムにおいて、オブジェクト上でこのシンボルを使って、その `valueOf()` や `toString()` メソッドを使用する前に、望ましい型を受け入れ、オブジェクトのプリミティブ表現を返すメソッドを調べます。
 
 {{InteractiveExample("JavaScript デモ: Symbol.toPrimitive")}}
 
 ```js interactive-example
-const object1 = {
+const object = {
   [Symbol.toPrimitive](hint) {
     if (hint === "number") {
       return 42;
@@ -21,8 +20,8 @@ const object1 = {
   },
 };
 
-console.log(+object1);
-// Expected output: 42
+console.log(+object);
+// 予想される結果: 42
 ```
 
 ## 値

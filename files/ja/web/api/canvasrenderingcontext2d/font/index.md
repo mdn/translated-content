@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.font`** はキャンバス 2D API のプロパティで、テキストを描画するときに用いられる現在のテキストスタイルを指定します。この文字列は [CSS の font](/ja/docs/Web/CSS/font) の記述子と同じ構文を用います。
+**`CanvasRenderingContext2D.font`** はキャンバス 2D API のプロパティで、テキストを描画するときに用いられる現在のテキストスタイルを指定します。この文字列は [CSS の font](/ja/docs/Web/CSS/Reference/Properties/font) の記述子と同じ構文を用います。
 
 ## 値
 
