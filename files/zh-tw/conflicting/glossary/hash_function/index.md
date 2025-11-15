@@ -1,6 +1,7 @@
 ---
 title: 弱簽章演算法
-slug: Web/Security/Weak_Signature_Algorithm
+slug: conflicting/Glossary/Hash_function
+original_slug: Web/Security/Weak_Signature_Algorithm
 ---
 
 {{QuickLinksWithSubpages("/zh-TW/docs/Web/Security")}}
