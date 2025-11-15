@@ -8,7 +8,7 @@ l10n:
 
 {{CSSRef}}
 
-CSS [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) **`:only-of-type`** выбирает элемент, который является единственным потомком своего типа.
+CSS [псевдокласс](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:only-of-type`** выбирает элемент, который является единственным потомком своего типа.
 
 {{InteractiveExample("CSS Demo: :only-of-type", "tabbed-shorter")}}
 

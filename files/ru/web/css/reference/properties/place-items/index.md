@@ -58,8 +58,8 @@ place-items: end center;
 
 Это свойство является сокращением для следующих CSS-свойств:
 
-- [`align-items`](/ru/docs/Web/CSS/align-items)
-- [`justify-items`](/ru/docs/Web/CSS/justify-items)
+- [`align-items`](/ru/docs/Web/CSS/Reference/Properties/align-items)
+- [`justify-items`](/ru/docs/Web/CSS/Reference/Properties/justify-items)
 
 ## Синтаксис
 

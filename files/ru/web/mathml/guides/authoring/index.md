@@ -104,7 +104,7 @@ m|math {
 }
 ```
 
-Затем вы можете использовать правило [@font-face](/ru/docs/Web/CSS/@font-face), как обычно, для обеспечения выбора WOFF для Latin Modern и Latin Modern Math. Смотрите [репозиторий GitHub с WOFF шрифтами и примерами таблиц стилей CSS](https://github.com/fred-wang/MathFonts) для использования на вашем Web-сайте, а также этот [ресурс с тестами](http://fred-wang.github.io/MathFonts/).
+Затем вы можете использовать правило [@font-face](/ru/docs/Web/CSS/Reference/At-rules/@font-face), как обычно, для обеспечения выбора WOFF для Latin Modern и Latin Modern Math. Смотрите [репозиторий GitHub с WOFF шрифтами и примерами таблиц стилей CSS](https://github.com/fred-wang/MathFonts) для использования на вашем Web-сайте, а также этот [ресурс с тестами](http://fred-wang.github.io/MathFonts/).
 
 #### MathML в документах XML (XHTML, EPUB, и т.д.)
 

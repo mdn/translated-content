@@ -6,7 +6,7 @@ original_slug: Web/CSS/:nth-last-of-type
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) **`:nth-last-of-type()`** находит один или более элементов с заданным тегом, основываясь на их позиции среди группы соседних элементов, считая с конца.
+[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:nth-last-of-type()`** находит один или более элементов с заданным тегом, основываясь на их позиции среди группы соседних элементов, считая с конца.
 
 ```css
 /* Выбирает каждый четвёртый элемент <p>

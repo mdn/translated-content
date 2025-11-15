@@ -60,7 +60,7 @@ See [CSS selectors](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_sel
 
 Initially CSS didn't provide a "default" keyword and the only way to restore the default value of a property is to explicitly re-declare that property.
 
-This has changed with CSS 2; the keyword [initial](/ru/docs/Web/CSS/initial) is now a valid value for a CSS property. It resets it to its default value, which is defined in the CSS specification of the given property.
+This has changed with CSS 2; the keyword [initial](/ru/docs/Web/CSS/Reference/Values/initial) is now a valid value for a CSS property. It resets it to its default value, which is defined in the CSS specification of the given property.
 
 ## How do I derive one style from another?
 

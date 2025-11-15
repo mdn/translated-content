@@ -14,14 +14,14 @@ original_slug: Web/CSS/CSS_cascade/initial_value
 
 Для [ненаследуемых свойств](/ru/docs/Web/CSS/CSS_cascade/Inheritance#non-inherited_properties) используется начальное значение для **каждого** элемента, даже когда значение для элемента не указано.
 
-Ключевое слово [`initial`](/ru/docs/Web/CSS/initial) добавлено в CSS3, чтобы предоставить авторам возможность явно указывать это первоначальное значение.
+Ключевое слово [`initial`](/ru/docs/Web/CSS/Reference/Values/initial) добавлено в CSS3, чтобы предоставить авторам возможность явно указывать это первоначальное значение.
 
 ## Смотрите также
 
 - [CSS документация](/ru/docs/Web/CSS/Reference)
 - Ключевые концепции CSS
   - [Синтаксис CSS](/ru/docs/Web/CSS/CSS_syntax/Syntax)
-  - [@-правила](/ru/docs/Web/CSS/CSS_syntax/At-rule)
+  - [@-правила](/ru/docs/Web/CSS/CSS_syntax/At-rules)
   - [комментарии](/ru/docs/Web/CSS/CSS_syntax/Comments)
   - [специфичность](/ru/docs/Web/CSS/CSS_cascade/Specificity)
   - [наследование](/ru/docs/Web/CSS/CSS_cascade/Inheritance)
@@ -37,4 +37,4 @@ original_slug: Web/CSS/CSS_cascade/initial_value
   - [Синтаксис определения значений](/ru/docs/Web/CSS/Value_definition_syntax)
   - [Сокращённые свойства](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [Замещаемые элементы](/ru/docs/Web/CSS/CSS_images/Replaced_element_properties)
-- [`initial`](/ru/docs/Web/CSS/initial)
+- [`initial`](/ru/docs/Web/CSS/Reference/Values/initial)
