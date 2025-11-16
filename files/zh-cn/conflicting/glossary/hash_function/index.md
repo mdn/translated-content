@@ -1,6 +1,7 @@
 ---
 title: 弱签名算法
-slug: Web/Security/Weak_Signature_Algorithm
+slug: conflicting/Glossary/Hash_function
+original_slug: Web/Security/Weak_Signature_Algorithm
 l10n:
   sourceCommit: ade8d870ed7e18a71dc51fe25aa13d812fb82558
 ---
