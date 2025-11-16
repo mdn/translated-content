@@ -163,7 +163,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 
 ### セキュリティ
 
-- ログインページ (すなわち [`<input type="password">`](/ja/docs/Web/HTML/Reference/Elements/input/password) フィールドを含むページ) でログイン情報が安全でない方法で送信されると思われる場合に、Firefox はユーザーに警告するため、ページ内のパスワードフィールドの下に警告メッセージを表示します ([Firefox バグ 1319119](https://bugzil.la/1319119))。また、安全でないログインフォームではオートフィルが無効になります ([Firefox バグ 1217152](https://bugzil.la/1217152))。詳しくは [安全でないパスワード](/ja/docs/Web/Security/Insecure_passwords) をご覧ください。
+- ログインページ (すなわち [`<input type="password">`](/ja/docs/Web/HTML/Reference/Elements/input/password) フィールドを含むページ) でログイン情報が安全でない方法で送信されると思われる場合に、Firefox はユーザーに警告するため、ページ内のパスワードフィールドの下に警告メッセージを表示します ([Firefox バグ 1319119](https://bugzil.la/1319119))。また、安全でないログインフォームではオートフィルが無効になります ([Firefox バグ 1217152](https://bugzil.la/1217152))。詳しくは [安全でないパスワード](/ja/docs/Web/Security/Authentication/Passwords) をご覧ください。
 - SHA-1 SSL 証明書のサポートを廃止しました。SHA-1 証明書を使用する安全なページに移動すると、 `Untrusted Connection` エラーが発生します ([Firefox バグ 1330043](https://bugzil.la/1330043))。
 
 ## プラグイン
