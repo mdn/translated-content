@@ -6004,7 +6004,7 @@
       "jackblackevo"
     ]
   },
-  "Web/Security/Insecure_passwords": {
+  "Web/Security/Authentication/Passwords": {
     "modified": "2019-03-20T14:57:01.510Z",
     "contributors": [
       "BaseChipmunk4",
@@ -6032,16 +6032,6 @@
       "foxbrush"
     ]
   },
-  "Web/Security/Weak_Signature_Algorithm": {
-    "modified": "2019-04-23T04:20:20.884Z",
-    "contributors": [
-      "jackblackevo",
-      "15182254444",
-      "KINGKKALING",
-      "Sbabey",
-      "leVirve"
-    ]
-  },
   "Web/XML/Guides/OpenSearch": {
     "modified": "2019-03-23T22:00:23.747Z",
     "contributors": [
@@ -6057,6 +6047,16 @@
     "modified": "2020-10-15T22:04:56.309Z",
     "contributors": [
       "Aries0d0f"
+    ]
+  },
+  "conflicting/Glossary/Hash_function": {
+    "modified": "2019-04-23T04:20:20.884Z",
+    "contributors": [
+      "jackblackevo",
+      "15182254444",
+      "KINGKKALING",
+      "Sbabey",
+      "leVirve"
     ]
   }
 }
