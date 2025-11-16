@@ -2,10 +2,8 @@
 title: Color space (色空間)
 slug: Glossary/Color_space
 l10n:
-  sourceCommit: 530c1f54e63834411aa38789b1ac82e3831c4dfa
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
-
-{{GlossarySidebar}}
 
 **色空間** (Color spaces) とは、座標ベースの色配置の基本となる色モデルにおける色の名前付きの組織を指します。色モデルは、色の構成要素（例えば、[`hwb()`](/ja/docs/Web/CSS/Reference/Values/color_value/hwb) 色の `h`、`w`、`b` チャンネル）が色空間とどのように関連するかを定義します。ほとんどの色空間は、色を表す 3 次元または 4 次元のグリッドです。各次元（または軸）は、異なるチャンネルに対応します。色は複数の色空間で表現でき、ある色空間から別の色空間に変換しても、見た目は同じままです。
 
@@ -27,7 +25,7 @@ Adobe RGB 色空間など、 sRGB 色空間よりも広い{{glossary("gamut","�
 
 CSS の sRGB 色における `<color>` の値 sRGB 色空間には、{{cssxref("hex-color")}}、{{cssxref("named-color")}}、{{cssxref("color_value/rgb", "rgb()")}}、{{cssxref("color_value/hsl", "hsl()")}}（色相、彩度、明度）や {{cssxref("color_value/hwb", "hwb()")}} （色相、白色度、黒色度）があります。また、`srgb`、`srgb-linear`、`a98-rgb`、`prophoto-rgb` 色空間が [`color()`](/ja/docs/Web/CSS/Reference/Values/color_value/color) 関数のためにあります。
 
-HSV （色相、彩度、明度）の色空間および同義語である HSB （色相、彩度、輝度）は、 CSS では [`hwb()`](/ja/docs/Web/CSS/Reference/Values/color_value/hwb) として表されます。名前付きの色は、特定の 16 進数値にマッピングされた単なるキーワードです。これらのさまざまな色表記を sRGB に変換するのは、数学的には簡単です。なお、 {{cssxref("&lt;color&gt;","currentcolor","#currentcolor_keyword")}} は任意の色を使用でき、 sRGB に限定されるものではありません。
+HSV （色相、彩度、明度）の色空間および同義語である HSB （色相、彩度、輝度）は、 CSS では [`hwb()`](/ja/docs/Web/CSS/Reference/Values/color_value/hwb) として表されます。名前付きの色は、特定の 16 進数値にマッピングされた単なるキーワードです。これらのさまざまな色表記を sRGB に変換するのは、数学的には簡単です。なお、 {{cssxref("&lt;color&gt;","currentColor","#currentcolor_キーワード")}} は任意の色を使用でき、 sRGB に限定されるものではありません。
 
 `rgb()` 色関数は、sRGB色空間を表現できる唯一の色関数ではありません。 [`HSL`](/ja/docs/Web/CSS/Reference/Values/color_value/hsl) （色相-彩度-明度）や [`HWB`](/ja/docs/Web/CSS/Reference/Values/color_value/hwb) （色相-白色度-黒度）のような円筒座標系も、ウェブ上で sRGB 色を表現するために使用されています。
 
@@ -38,7 +36,7 @@ HSV （色相、彩度、明度）の色空間および同義語である HSB �
   - : 定義済みの線形光の sRGB 色空間である `srgb-linear` は、ガンマエンコード方式ではなく、線形光の伝達関数を使用している点を除いては、 `srgb` と同じです。 `srgb-linear` 色空間では、 3 つの `r`、`g`、`b` 値が数値パラメーターとして受け入れられ、色域内の色は `0` から `1` の範囲となります。白色点は D65 です。
 
 - `display-p3` 色空間
-  - : Apple が定義した **Display P3** 色空間は、 DCI-P3 色域、 D65 ホワイトポイント、 sRGB ガンマ曲線を結合したものです。これは、現在の広色域モニターに典型的な広色域空間であり、sRGB色域よりも鮮やかな緑や赤を実現します。 `display-p3` は、`r`、`g`、`b` を基にしており、色域内の値の範囲は `0` から `1` です。ホワイトポイントは D65 です。
+  - : Apple が定義した [**Display P3**](https://www.color.org/chardata/rgb/DisplayP3.xalter) 色空間は、 DCI-P3 色域、 D65 ホワイトポイント、 sRGB ガンマ曲線を結合したものです。これは、現在の広色域モニターに典型的な広色域空間であり、sRGB色域よりも鮮やかな緑や赤を実現します。 `display-p3` は、`r`、`g`、`b` を基にしており、色域内の値の範囲は `0` から `1` です。ホワイトポイントは D65 です。
 
 - `a98-rgb` 色空間
   - : `a98-rgb` は、 CMYK のすべての色をRGBで表すように設計された Adobe® 1998 RGB 色空間です。 [CIELab 色空間](#cielab_色空間)で指定された可視色の約 50% を再現でき、他にも複数の RGB 色空間よりもシアン・グリーン系の色相を網羅しています。色域内の `r`、`g`、`b` 値の範囲は `0` から `1` です。伝達曲線はガンマ関数であり、 1/2.2 に非常に近い値です。 白色点は D65 です。
@@ -62,7 +60,7 @@ CIELab 色空間関数には、 {{CSSXref("color_value/lab", "lab()")}} （明�
 
 > **Note:** `lch()` と `oklch` における色相と明度は、 {{cssxref("color_value/hsl", "hsl()")}} やその他の sRGB 色空間における同名の値とは異なります。
 
-CIELab 色空間（Lab、Lch、Oklab、Oklch など）は、端末に依存しない色空間です。
+CIELab 色空間（Lab、LCH、Oklab、OkLCh など）は、端末に依存しない色空間です。
 
 - `lab-d50` 色空間
   - : L は `0` から `100` の範囲で色を表現し、 `a` と `b` は `-125` から `125` の範囲で色を表現します。 `a` 軸と `b` 軸は、これらの範囲値によって制限されているわけではありません。これらは、 `Display P3` 色空間におけるパーセント値の入出力値を定義する際に参照する値です。ホワイトポイントは D50 です。
