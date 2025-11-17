@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Invoker Commands API")}}
 
-**`CommandEvent`** 接口表示一个事件，当拥有有效的 {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}} 和 {{domxref("HTMLButtonElement.command", "command")}} 属性的 {{domxref("HTMLButtonElement", "button")}} 元素即将调用一个交互元素时触发该事件。
+**`CommandEvent`** 接口表示一个事件，当拥有有效的 {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}} 和 {{domxref("HTMLButtonElement.command", "command")}} 属性的 {{domxref("HTMLButtonElement", "button")}} 元素即将调用一个交互元素时，该事件会通知用户。
 
 它是 `HTMLElement` 的 {{domxref("HTMLElement.command_event", "command")}} 事件的事件对象，表示当调用者控件被激活时的操作（例如点击或按下）。
 
