@@ -47,7 +47,7 @@
 /*.md                @mdn/content-team @mdn/engineering 
 /CONTRIBUTING.md     @mdn/content-team          
 /PEERS_GUIDELINES.md @mdn/content-team
+/SECURITY.md @mdn/engineering
 
 # Reset until https://github.com/prettier/prettier/issues/11828 is fixed
 /.prettierignore
-/SECURITY.md @mdn/engineering
