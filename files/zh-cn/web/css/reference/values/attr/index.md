@@ -235,8 +235,8 @@ if (!CSS.supports("x: attr(x type(*))")) {
 #### HTML
 
 ```html
-<p data-browser="Firefox">我喜欢的浏览器是:</p>
-<p>你喜欢的浏览器是:</p>
+<p data-browser="Firefox">我喜欢的浏览器是：</p>
+<p>你喜欢的浏览器是：</p>
 ```
 
 #### CSS
