@@ -63,7 +63,7 @@ Picture-in-Picture 창을 닫을수도 있습니다. (브라우저에서 제공�
 
 전체 동작 데모를 [Document Picture-in-Picture API 예시](https://mdn.github.io/dom-examples/document-picture-in-picture/)에서 확인할 수 있습니다. (전체 [소스 코드](https://github.com/mdn/dom-examples/tree/main/document-picture-in-picture) 또한 확인할 수 있습니다).
 
-## 사양
+## 명세서
 
 {{Specifications}}
 
