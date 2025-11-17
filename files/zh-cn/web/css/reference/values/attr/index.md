@@ -30,7 +30,7 @@ blockquote::after {
 
 ```html interactive-example
 <blockquote cite="https://mozilla.org/en-US/about/">
-  Mozilla makes browsers, apps, code, and tools that put people before profit.。
+  Mozilla makes browsers, apps, code, and tools that put people before profit..
 </blockquote>
 
 <blockquote cite="https://web.dev/about/">
