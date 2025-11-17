@@ -186,7 +186,7 @@ div::before {
 }
 ```
 
-也可以在 JavaScript 中使用 [`CSS.supports()`](/zh-CN/docs/Web/API/CSS/supports_static) 进行相同检查:
+也可以在 JavaScript 中使用 [`CSS.supports()`](/zh-CN/docs/Web/API/CSS/supports_static) 进行相同检查：
 
 ```js
 if (CSS.supports("x: attr(x type(*))")) {
