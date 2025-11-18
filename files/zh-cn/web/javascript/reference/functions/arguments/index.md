@@ -82,7 +82,7 @@ function func2(a) {
 func2(10); // 99
 ```
 
-非严格函数若传递了[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)，[默认值](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)或[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)参数，不会将函数体中赋予参数的新值同步到 `arguments` 对象。相反，在具有复杂参数的非严格函数中，`arguments` 对象始终反映函数调用时传递的值。
+非严格函数若传递了[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[默认值](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)或[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)参数，不会将函数体中赋予参数的新值同步到 `arguments` 对象。相反，在具有复杂参数的非严格函数中，`arguments` 对象始终反映函数调用时传递的值。
 
 ```js
 function funcWithDefault(a = 55) {
