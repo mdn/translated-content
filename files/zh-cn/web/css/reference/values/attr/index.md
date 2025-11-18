@@ -12,7 +12,7 @@ l10n:
 
 `attr()` 表达式可以用于任何 CSS 属性。 {{ experimental_inline() }}
 
-{{InteractiveExample("CSS Demo: attr()")}}
+{{InteractiveExample("CSS attr() 演示")}}
 
 ```css interactive-example
 blockquote {
@@ -75,12 +75,19 @@ attr(<attr-name> <attr-type>? , <fallback-value>?)
   - : 指定如何解析获取的 HTML 属性，可以是关键字 `raw-string`、 {{cssxref("type()")}} 或 CSS 属性单位。默认为 `raw-string`。
     - `raw-string`
       - : 是 `<attr-type>` 的默认值，会使属性字面量被视为 CSS 字符串，不进行 CSS 解析（如 CSS 转义、空白移除、注释等）。如果设为空值则无法触发回退行为。
+
+        ```css
+        attr(data-name raw-string, "stranger")
+        ```
+
         > [!NOTE]
         > 这个关键字最初在 Chromium 浏览器中被命名为 `string` 得到支持，出于向后兼容考虑，两者都将被短暂支持。
+
     - {{cssxref("type()")}}
       - : 使用 `<syntax>` 作为参数来指定解析的类型。无法进行解析将触发回退。
         > [!NOTE]
         > 因[安全原因](#限制与安全性)，不允许将 {{CSSxRef("url_value", "&lt;url&gt;")}} 用于 `attr()`。
+
     - `<attr-unit>`
       - : 指定一个数值可能的单位，例如可以是 `%` 字符或 [CSS 单位](/zh-CN/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#distance_units)，如 `px`, `rem`, `deg`, `s` 等。
 
@@ -99,15 +106,15 @@ attr(<attr-name> <attr-type>? , <fallback-value>?)
 
 如果设置 `<attr-type>`，`attr()` 会尝试解析为指定类型，若无法解析为给定的 `<attr-type>`，则返回 `<fallback-value>`。若没有设置，则会解析为 CSS 字符串。
 
-如果没有设置 `<fallback-value>`，且没有设置 `<attr-type>`，默认返回空字符串，若设置 `<attr-type>` 将默认返回一个 [保证无效值](/zh-CN/docs/Glossary/guaranteed_invalid_value)。
+如果没有设置 `<fallback-value>`，且没有设置 `<attr-type>`，默认返回空字符串，若设置 `<attr-type>` 将默认返回一个[保证无效值](/zh-CN/docs/Glossary/guaranteed_invalid_value)。
 
 ## 解释
 
 ### 限制与安全性
 
-因为 `attr()` 可以引用未应用于样式，可能包含敏感信息的属性（例如页面中引用的脚本 Token 等）。
+因为 `attr()` 可以引用未应用于样式，可能包含敏感信息的属性（例如页面中引用的脚本 Token 等），一般而言，这并没有什么问题。
 
-如果用于 `url()` 则可能造成安全风险，因此不能用于 `attr()` 进行动态构造 URL。
+但如果用于 `url()` 则可能造成安全风险，因此不能用于 `attr()` 进行动态构造 URL。
 
 ```html
 <!-- 这将不会生效 -->
@@ -268,7 +275,7 @@ p::after {
 
 #### CSS
 
-```css
+```css hidden
 .background {
   height: 100vh;
 }
@@ -432,11 +439,18 @@ div {
 
 在每张卡片上、`attr()` 会获取 `id` 属性并解析为 {{CSSxRef("&lt;custom-ident&gt;")}} 作为 {{cssxref("view-transition-name")}} 的值。当未设置 `id` 时，使用回退值 `none`。
 
+```css
+.card {
+  view-transition-name: attr(id type(<custom-ident>), none);
+  view-transition-class: card;
+}
+```
+
 #### JavaScript
 
 当按下按钮时，会进行洗牌。这是通过随机化对存放所有卡片引用的数组顺序，然后更新每张卡片的 {{CSSxRef("order")}} 更新为新的索引进行的。
 
-通过[视图过渡 API](/zh-CN/docs/Web/API/View_Transition_API/Using) 可以让卡片移动到新位置时产生动画效果。
+通过[视图过渡 API](/zh-CN/docs/Web/API/View_Transition_API/Using)可以让卡片移动到新位置时产生动画效果。
 
 具体做法为将更新 `order` 的操作包裹在 [`document.startViewTransition`](/zh-CN/docs/Web/API/Document/startViewTransition) 调用中。
 
