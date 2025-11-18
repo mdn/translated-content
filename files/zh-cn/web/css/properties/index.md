@@ -3,7 +3,7 @@ title: CSS 属性
 slug: Web/CSS/Properties
 ---
 
-在 [CSS 声明](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax#css_声明) 中，[CSS](/zh-CN/docs/Web/CSS) **_属性_**用于设置选中元素某些样式参数的内容。例如，{{CSSxRef("opacity")}} 属性用于设置选中元素的不透明度，从而可以控制该元素后面的内容是否可见：
+在 [CSS 声明](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax#css_声明) 中，[CSS](/zh-CN/docs/Web/CSS) ***属性***用于设置选中元素某些样式参数的内容。例如，{{CSSxRef("opacity")}} 属性用于设置选中元素的不透明度，从而可以控制该元素后面的内容是否可见：
 
 ```css
 /* 设置 <img> 元素的不透明度为 0.8 */
