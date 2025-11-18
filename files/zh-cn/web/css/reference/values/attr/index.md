@@ -358,7 +358,7 @@ div {
 </div>
 ```
 
-#### css
+#### CSS
 
 ```css
 .cards {
