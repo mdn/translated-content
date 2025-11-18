@@ -2,18 +2,16 @@
 title: Type énuméré
 slug: Glossary/Enumerated
 l10n:
-  sourceCommit: cdb0dad4aeabda32b85c397f5e45304f95edc0d1
+  sourceCommit: 1d5f6ed5785d8a222ea9cfb0a4d9bd6c941e01d8
 ---
-
-{{GlossarySidebar}}
 
 En informatique, un type **énuméré** est un type de données qui consiste en un ensemble restreint de valeurs nommées.
 
 ## Les attributs HTML énumérés
 
-En HTML, [les attributs énumérés (parfois appelés à valeur contrainte)](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#enumerated-attribute) sont des attributs dont les valeurs possibles sont un ensemble prédéfini de chaînes de caractères. Ainsi, l'attribut HTML universel [`dir`](/fr/docs/Web/HTML/Reference/Global_attributes/dir) possède trois valeurs valides&nbsp;: `ltr`, `rtl`, et `auto`.
+En HTML, [les attributs énumérés (parfois appelés à valeur contrainte) <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#enumerated-attribute) sont des attributs dont les valeurs possibles sont un ensemble prédéfini de chaînes de caractères. Contrairement aux attributs HTML {{Glossary("Boolean/HTML", "booléens")}} — qui valent toujours vrai lorsque l'attribut est présent, que la valeur soit présente, omise ou invalide — avec les attributs HTML énumérés, la valeur par défaut pour une valeur omise peut être différente de la valeur par défaut pour une valeur invalide. Par exemple, l'attribut HTML global [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable) possède deux mots-clés valides&nbsp;: `true` et `false`. Si l'attribut est présent mais qu'aucune valeur n'est définie, la valeur est `true`. Si une valeur est définie mais invalide, comme `contenteditable="contenteditable"`, la valeur correspond à un troisième état, `inherit`.
 
-Chaque attribut énuméré possède une valeur par défaut lorsque l'attribut est présent sans sa valeur et une valeur par défaut lorsqu'une valeur invalide lui est associée. À la différence des attributs HTML [booléens](/fr/docs/Glossary/Boolean) qui valent toujours vrai que la valeur soit présente, omise ou invalide, les attributs HTML énumérés peuvent avoir une valeur par défaut différente en fonction que la valeur est omise ou invalide. Par exemple, l'attribut HTML universel [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable) n'a que deux valeurs valides&nbsp;: `true` et `false`. Si l'attribut est présent, mais qu'aucune valeur n'est indiquée, la valeur par défaut sera `true`. En revanche, si une valeur invalide est utilisée (par exemple `contenteditable="contenteditable"`), la valeur utilisée effectivement correspondra à un troisième état, `inherit`.
+Chaque attribut énuméré possède une valeur par défaut lorsque l'attribut est présent sans sa valeur et une valeur par défaut lorsqu'une valeur invalide lui est associée. À la différence des {{Glossary("Boolean/HTML", "attributs booléens HTML")}} qui valent toujours vrai que la valeur soit présente, omise ou invalide, les attributs HTML énumérés peuvent avoir une valeur par défaut différente en fonction que la valeur est omise ou invalide. Par exemple, l'attribut HTML universel [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable) n'a que deux valeurs valides&nbsp;: `true` et `false`. Si l'attribut est présent, mais qu'aucune valeur n'est indiquée, la valeur par défaut sera `true`. En revanche, si une valeur invalide est utilisée (par exemple `contenteditable="contenteditable"`), la valeur utilisée effectivement correspondra à un troisième état, `inherit`.
 
 ## Les attributs ARIA énumérés
 
@@ -23,10 +21,11 @@ L'attribut `aria-current` accepte par exemple une liste de valeurs limitée qui 
 
 ## Les propriétés JavaScript énumérables
 
-En JavaScript, les propriétés énumérables sont les propriétés dont le marqueur interne `enumerable` est vrai (ce qui est le comportement par défaut pour les propriétés créées avec une affectation simple ou un initialisateur de propriétés. La plupart des mécanismes d'itération (comme les boucles [`for…in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in) ou la méthode [`Object.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)) ne parcourent que les clés énumérables.
+En JavaScript, les propriétés énumérables sont les propriétés dont le marqueur interne `enumerable` est vrai (ce qui est le comportement par défaut pour les propriétés créées avec une affectation simple ou un initialisateur de propriétés. La plupart des mécanismes d'itération (comme les boucles [`for…in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in) ou la méthode [`Object.keys`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)) ne parcourent que les clés énumérables.
 
 ## Voir aussi
 
-- [Booléen](/fr/docs/Glossary/Boolean)
+- {{Glossary("Boolean", "Booléen")}}
 - [Les types et structures de données en JavaScript](/fr/docs/Web/JavaScript/Guide/Data_structures)
-- [Les attributs énumérés HTML dans le standard HTML (en anglais)](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#enumerated-attribute)
+- [Réflexion des attributs](/fr/docs/Web/API/Document_Object_Model/Reflected_attributes)
+- [Les attributs énumérés HTML dans le standard HTML <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#enumerated-attribute)

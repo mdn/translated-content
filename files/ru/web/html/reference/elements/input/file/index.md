@@ -252,7 +252,8 @@ var preview = document.querySelector(".preview");
 input.style.opacity = 0;
 ```
 
-> **Примечание:** [`opacity`](/ru/docs/Web/CSS/opacity) is used to hide the file input instead of [`visibility: hidden`](/ru/docs/Web/CSS/visibility) or [`display: none`](/ru/docs/Web/CSS/display), because assistive technology interprets the latter two styles to mean the file input isn't interactive.
+> [!NOTE]
+> [`opacity`](/ru/docs/Web/CSS/opacity) is used to hide the file input instead of [`visibility: hidden`](/ru/docs/Web/CSS/visibility) or [`display: none`](/ru/docs/Web/CSS/display), because assistive technology interprets the latter two styles to mean the file input isn't interactive.
 
 Next, we add an [event listener](/ru/docs/Web/API/EventTarget/addEventListener) to the input to listen for changes to its selected value changes (in this case, when files are selected). The event listener invokes our custom `updateImageDisplay()` function.
 
