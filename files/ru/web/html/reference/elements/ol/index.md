@@ -56,7 +56,7 @@ li {
 
 ## Примечания по использованию
 
-Обычно, элементы списка отображены с [маркером](/ru/docs/Web/CSS/::marker), предшествующим цифрам или буквам.
+Обычно, элементы списка отображены с [маркером](/ru/docs/Web/CSS/Reference/Selectors/::marker), предшествующим цифрам или буквам.
 
 `Элементы <ol>` и {{HTMLElement("ul")}} могут быть вложены (nested) на любом уровне, чередуясь между элементами `<ol>` и `<ul>`.
 
@@ -175,5 +175,5 @@ li {
 - CSS-свойства, которые могут быть полезны для стилизации `<ol>` элемента:
   - свойство {{CSSxRef("list-style")}}, для порядковых показов
   - [CSS счётчики](/ru/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), для более сложных вложенных списков
-  - свойство [line-height](/ru/docs/Web/CSS/line-height), для замены убранного свойства `compact`
-  - Свойство [margin](/ru/docs/Web/CSS/margin), для контроля отступа в списке
+  - свойство [line-height](/ru/docs/Web/CSS/Reference/Properties/line-height), для замены убранного свойства `compact`
+  - Свойство [margin](/ru/docs/Web/CSS/Reference/Properties/margin), для контроля отступа в списке

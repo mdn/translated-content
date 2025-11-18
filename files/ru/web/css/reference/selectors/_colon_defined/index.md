@@ -6,7 +6,7 @@ original_slug: Web/CSS/:defined
 
 {{ CSSRef }}
 
-[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) **`:defined`** находит любой элемент, который был определён, включая любой стандартный элемент, встроенный в браузер, и [пользовательские элементы](/ru/docs/Web/API/Web_components/Using_custom_elements) (то есть определённые с помощью метода {{domxref("CustomElementRegistry.define()")}}).
+[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:defined`** находит любой элемент, который был определён, включая любой стандартный элемент, встроенный в браузер, и [пользовательские элементы](/ru/docs/Web/API/Web_components/Using_custom_elements) (то есть определённые с помощью метода {{domxref("CustomElementRegistry.define()")}}).
 
 ```css
 /* Находит любой элемент, который был определён */

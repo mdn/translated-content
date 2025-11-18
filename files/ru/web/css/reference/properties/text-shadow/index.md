@@ -85,7 +85,7 @@ text-shadow: unset;
 
 Если определены больше чем одна тень, тени накладываются друг на друга в порядке обратном порядку их определения, что значит, первая тень окажется поверх последующих.
 
-Это свойство можно применить к [псевдо-элементам](/ru/docs/Web/CSS/Pseudo-elements) {{cssxref("::first-line")}} и {{cssxref("::first-letter")}}.
+Это свойство можно применить к [псевдо-элементам](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-elements) {{cssxref("::first-line")}} и {{cssxref("::first-letter")}}.
 
 ### Значения
 
