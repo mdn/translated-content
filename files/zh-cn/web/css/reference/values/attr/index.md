@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4cc24f96aebd031e636185532c6310601c3b5926
 ---
 
-## 概述
-
 > [!NOTE]
 > `attr()` 可以和任意 CSS 属性使用，但对于 {{CSSxRef("content")}} 之外的属性的支持都是实验性的。
 
@@ -113,7 +111,7 @@ attr(<attr-name> <attr-type>? , <fallback-value>?)
 
 ```html
 <!-- 这将不会生效 -->
-如果浏览器并不支持 attr() 的高级用法，那么颜色将是红色
+<span data-icon="https://example.org/icons/question-mark.svg">help</span>
 ```
 
 ```css
