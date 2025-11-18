@@ -1,5 +1,5 @@
 ---
-title: 网格布局中的盒模型对齐
+title: 网格布局中的元素对齐
 slug: Web/CSS/Guides/Grid_layout/Box_alignment
 ---
 
