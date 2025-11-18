@@ -5,11 +5,11 @@ l10n:
   sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-此工具可输入或选择颜色，并复制其对应的任何 CSS [颜色格式](/zh-CN/docs/Web/CSS/Reference/Values/color_value)中的值。生成的颜色值可在 CSS 中支持 {{cssxref("color_value", "&lt;color&gt;")}} 数据类型的任何位置使用。本工具还能帮助你理解不同颜色表示法的语法规则。
+此工具可输入或选择颜色，并复制其对应的任何 CSS [颜色格式](/zh-CN/docs/Web/CSS/Reference/Values/color_value)的值。生成的颜色值可在 CSS 中支持 {{cssxref("color_value", "&lt;color&gt;")}} 数据类型的任何位置使用。本工具还能帮助你理解不同颜色表示法的语法规则。
 
 ## 如何使用工具
 
-输入任意格式的颜色值，或从 sRGB {{glossary("color space", "色彩空间")}}中选择颜色，还可以调整不透明度（Alpha 通道）。
+输入任意格式的颜色值，或从 sRGB {{glossary("color space", "色彩空间")}}中选择颜色，还可以调整不透明度（alpha 通道）。
 
 点击对应颜色格式旁的**复制**按钮可快速复制其值。点击颜色格式名称可查看详细说明。
 
@@ -38,7 +38,7 @@ l10n:
     <hr />
     <table id="output-colors">
       <caption>
-        不同格式下的颜色：
+        颜色的不同格式：
       </caption>
       <tbody>
         <tr id="rgb-function">
