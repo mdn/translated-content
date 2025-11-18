@@ -202,6 +202,6 @@ li li {
 - 其他列表相关的 HTML 元素：{{HTMLElement("ol")}}、{{HTMLElement("li")}} 和 {{HTMLElement("menu")}}
 - 可能对 `<ul>` 元素的样式特别有用的 CSS 属性：
   - {{CSSxRef("list-style")}} 属性，用于选择显示序数的方法。
-  - [CSS 计数器](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)，用于操作复杂的嵌套列表。
+  - [CSS 计数器](/zh-CN/docs/Web/CSS/Guides/Counter_styles/Using_counters)，用于操作复杂的嵌套列表。
   - {{CSSxRef("line-height")}} 属性，用于模拟过时的 [`compact`](#compact) 属性。
   - {{CSSxRef("margin")}} 属性，用于控制列表的缩进。

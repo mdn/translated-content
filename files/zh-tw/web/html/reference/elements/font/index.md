@@ -8,7 +8,7 @@ slug: Web/HTML/Reference/Elements/font
 **`<font>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於定義其內容的字型大小、顏色和字型。
 
 > [!WARNING]
-> 請勿使用此元素。請使用 CSS 的 [Font](/zh-TW/docs/Web/CSS/CSS_fonts) 為文本添加樣式。
+> 請勿使用此元素。請使用 CSS 的 [Font](/zh-TW/docs/Web/CSS/Guides/Fonts) 為文本添加樣式。
 
 ## 屬性
 

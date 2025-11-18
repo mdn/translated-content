@@ -11,4 +11,4 @@ slug: Glossary/Pseudo-element
 
 ### Техническая справка
 
-- [Pseudo-elements](/ru/docs/Web/CSS/Pseudo-elements)
+- [Pseudo-elements](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-elements)

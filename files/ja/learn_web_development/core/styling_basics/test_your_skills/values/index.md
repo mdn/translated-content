@@ -59,7 +59,7 @@ li {
 <details>
 <summary>ここをクリックすると、模範解答を表示します。</summary>
 
-[色変換ツール](https://convertingcolors.com/hex-color-86DEFA.html)を使用することで、異なる[色関数](/ja/docs/Web/CSS/color_value#構文)を使用して同じ色を異なる方法で定義できるようになります。
+[色変換ツール](https://convertingcolors.com/hex-color-86DEFA.html)を使用することで、異なる[色関数](/ja/docs/Web/CSS/Reference/Values/color_value#構文)を使用して同じ色を異なる方法で定義できるようになります。
 
 ```css
 .hex {
