@@ -2,7 +2,7 @@
 title: display
 slug: Web/CSS/Reference/Properties/display
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 63f170e5fae51f67b7e4759b495aba41f6f5a767
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) **`display`** 属性设置元素是否被视为[块级或行级盒子](/zh-CN/docs/Web/CSS/Guides/Display/Flow_layout)以及用于子元素的布局，例如[流式布局](/zh-CN/docs/Web/CSS/Guides/Display/Flow_layout)、[网格布局](/zh-CN/docs/Web/CSS/Guides/Grid_layout)或[弹性布局](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout)。
@@ -311,7 +311,7 @@ CSS `display` 属性使用关键字值指定。
 - 当将 `display` 动画设置为从 `none` 到 `block`（或另一个可见的 `display` 值）时，该值将在动画持续时间的 `0%` 处切换到 `block`，从而使其始终可见。
 - 当将 `display` 动画设置为从 `block`（或另一个可见的 `display` 值）到 `none`时，该值将在动画持续时间的 `100%` 处切换到 `none`，从而使其始终可见。
 
-此行为对于创建入场/出场动画非常有用，例如，你想要使用 `display: none` 从 DOM 中删除一个容器，但又同时使用 [`opacity`](/zh-CN/docs/Web/CSS/Reference/Properties/opacity) 将其淡出（而不是立即消失）。
+此行为对于创建入场/出场动画非常有用，例如，你想要使用 `display: none` 从 DOM 中删除一个容器，但又同时使用 {{cssxref("opacity")}} 将其淡出（而不是立即消失）。
 
 在使用 [CSS 动画](/zh-CN/docs/Web/CSS/Guides/Animations)为 `display` 设置动画时，需要在明确的关键帧（例如使用 `0%` 或 `from`）中提供开始的 `display` 值。有关示例，请参见[使用 CSS 动画](/zh-CN/docs/Web/CSS/Guides/Animations/Using)。
 
