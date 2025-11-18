@@ -2,7 +2,7 @@
 title: attr
 slug: Web/CSS/Reference/Values/attr
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 4cc24f96aebd031e636185532c6310601c3b5926
 ---
 
 ## 概述
@@ -30,11 +30,13 @@ blockquote::after {
 
 ```html interactive-example
 <blockquote cite="https://mozilla.org/en-US/about/">
-  Mozilla makes browsers, apps, code, and tools that put people before profit..
+  Mozilla is working to put control of the internet back in the hands of the
+  people using it.
 </blockquote>
 
 <blockquote cite="https://web.dev/about/">
-  Google believes in an open, accessible, private, and secure web.
+  Build beautiful, accessible, fast, and secure websites that work
+  cross-browser.
 </blockquote>
 ```
 
