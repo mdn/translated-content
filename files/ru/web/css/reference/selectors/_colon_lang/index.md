@@ -6,7 +6,7 @@ original_slug: Web/CSS/:lang
 
 {{CSSRef}}
 
-[Псевдо-класс](/ru/docs/Web/CSS/Pseudo-classes) [CSS](/ru/docs/Web/CSS) **`:lang()`** выбирает элементы основываясь на языке, на котором они определены.
+[Псевдо-класс](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/ru/docs/Web/CSS) **`:lang()`** выбирает элементы основываясь на языке, на котором они определены.
 
 ```css
 /* Выбирает все <p>, что на английском (en) */
@@ -31,7 +31,7 @@ p:lang(en) {
 
 ## Пример
 
-In this example, the `:lang()` pseudo-class is used to match the parents of quote elements ({{htmlElement("q")}}) using [child combinators](/ru/docs/Web/CSS/Child_combinator). Note that this doesn't illustrate the only way to do this, and that the best method to use depends on the type of document. Also note that {{glossary("Unicode")}} values are used to specify some of the special quote characters.
+In this example, the `:lang()` pseudo-class is used to match the parents of quote elements ({{htmlElement("q")}}) using [child combinators](/ru/docs/Web/CSS/Reference/Selectors/Child_combinator). Note that this doesn't illustrate the only way to do this, and that the best method to use depends on the type of document. Also note that {{glossary("Unicode")}} values are used to specify some of the special quote characters.
 
 ### HTML
 
