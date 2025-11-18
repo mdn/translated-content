@@ -85,7 +85,7 @@ display: grid;
 display: inline-grid;
 display: flow-root;
 
-/* 生成盒子 */
+/* 盒子抑制 */
 display: none;
 display: contents;
 
@@ -101,7 +101,7 @@ display: inline grid;
 
 /* 其他值 */
 display: table;
-display: table-row; /* 所有的 table 元素 都有等效的 CSS display 值 */
+display: table-row; /* 所有的 table 元素都有等效的 CSS display 值 */
 display: list-item;
 
 /* 全局值 */
@@ -227,7 +227,7 @@ CSS `display` 属性使用关键字值指定。
         它等同于 `inline flow-root`。
 
     - `inline-table`
-      - : `inline-table` 值在 HTML 中没有直接的映射。它行为类似于 HTML 的 {{HTMLElement("table")}} 元素，但实际是行级盒，而不是块级盒子。table 盒内部具有块级上下文。
+      - : `inline-table` 值在 HTML 中没有直接的映射。它行为类似于 HTML 的 {{HTMLElement("table")}} 元素，但实际是行级盒子，而不是块级盒子。table 盒内部具有块级上下文。
 
         它等同于 `inline table`。
 
