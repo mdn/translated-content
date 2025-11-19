@@ -234,7 +234,7 @@ if (!CSS.supports("x: attr(x type(*))")) {
 
 {{SeeCompatTable}}
 
-在此示例中，我们将 `data-browser` 这个 [`data-*`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/data-*) [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)的值添加到 {{HTMLElement("p")}} 元素的内容后。如果 {{HTMLElement("p")}} 缺失 `data-browser` 属性 ，则使用回退值 "**Unknown**"。
+在此示例中，我们将 `data-browser` 这个 [`data-*`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/data-*) [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)的值添加到 {{HTMLElement("p")}} 元素的内容后。如果 {{HTMLElement("p")}} 缺失 `data-browser` 属性，则使用回退值 "**Unknown**"。
 
 #### HTML
 
