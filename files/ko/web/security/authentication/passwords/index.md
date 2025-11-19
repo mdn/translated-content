@@ -1,6 +1,7 @@
 ---
 title: 안전하지 않은 비밀번호
-slug: Web/Security/Insecure_passwords
+slug: Web/Security/Authentication/Passwords
+original_slug: Web/Security/Insecure_passwords
 l10n:
   sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---

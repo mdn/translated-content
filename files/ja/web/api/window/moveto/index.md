@@ -1,6 +1,9 @@
 ---
-title: Window.moveTo()
+title: "Window: moveTo() メソッド"
+short-title: moveTo()
 slug: Web/API/Window/moveTo
+l10n:
+  sourceCommit: 20c51db7895b1b6f41d4fa90e71830f4b6678eea
 ---
 
 {{APIRef}}
@@ -12,14 +15,16 @@ slug: Web/API/Window/moveTo
 
 ## 構文
 
-```js
-moveTo(x, y);
+```js-nolint
+moveTo(x, y)
 ```
 
 ### 引数
 
-- `x` は移動先の水平座標です。
-- `y` は移動先の垂直座標です。
+- `x`
+  - : 移動先の水平座標です。
+- `y`
+  - : 移動先の垂直座標です。
 
 ### 返値
 
@@ -43,10 +48,14 @@ function origin() {
 
 {{Compat}}
 
-Firefox 7 より、ウェブサイトは[以下の場合](https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24)にブラウザーウィンドウを移動できなくなりました。
+Firefox 7 より、ウェブサイトは[以下の場合](https://bugzil.la/565541#c24)にブラウザーウィンドウを移動できなくなりました。
 
 1. {{domxref("Window.open()")}} で作成されたものではないウィンドウやタブを移動することはできません。
 2. ウィンドウに複数のタブがある場合は、ウィンドウやタブを移動することができません。
+
+> [!NOTE]
+> この関数はウィンドウを同期的に移動しない可能性があります。
+> 一部の環境（Wayland やモバイルなど）では、ウィンドウが全く移動しない可能性があります。現在、移動イベントを監視する方法は存在しません。詳細は [CSS ワーキンググループ課題 #7693](https://github.com/w3c/csswg-drafts/issues/7693) を参照してください。
 
 ## 関連情報
 

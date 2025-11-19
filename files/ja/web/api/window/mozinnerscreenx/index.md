@@ -1,13 +1,14 @@
 ---
-title: Window.mozInnerScreenX
+title: "Window: mozInnerScreenX プロパティ"
+short-title: mozInnerScreenX
 slug: Web/API/Window/mozInnerScreenX
+l10n:
+  sourceCommit: e561fa67af347b9770b359ba93e8579d2a540682
 ---
 
-{{APIRef}}
+{{APIRef}}{{Non-standard_Header}}
 
-## 概要
-
-ウィンドウのビューポートの左上隅のX座標を、スクリーン座標で返します。
+ウィンドウのビューポートの左上隅の X 座標を、スクリーン座標で返します。
 
 > [!NOTE]
 > この座標は CSS ピクセルで報告され、ハードウェアピクセルではありません。つまり、ズームレベルによって影響を受ける可能性があります。実際の物理的な画面のピクセル数を計算するには、 `nsIDOMWindowUtils.screenPixelsPerCSSPixel` プロパティを使用する必要があります。
