@@ -1,7 +1,6 @@
 ---
 title: loadend
 slug: Web/API/XMLHttpRequestEventTarget/loadend_event
-original_slug: Web/API/XMLHttpRequest/loadend_event
 ---
 
 {{APIRef("XMLHttpRequest API")}}

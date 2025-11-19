@@ -15,7 +15,7 @@ l10n:
 
 ### CSS
 
-- 现已支持在使用 [`conic-gradient()`](/zh-CN/docs/Web/CSS/gradient/conic-gradient)、[`linear-gradient()`](/zh-CN/docs/Web/CSS/gradient/linear-gradient) 和 [`radial-gradient()`](/zh-CN/docs/Web/CSS/gradient/radial-gradient) 函数创建渐变时，以及在使用 [`repeating-conic-gradient()`](/zh-CN/docs/Web/CSS/gradient/repeating-conic-gradient)、[`repeating-linear-gradient()`](/zh-CN/docs/Web/CSS/gradient/repeating-linear-gradient) 和 [`repeating-radial-gradient()`](/zh-CN/docs/Web/CSS/gradient/repeating-radial-gradient) 函数创建重复渐变时，使用 [`<color-interpolation-method>`](/zh-CN/docs/Web/CSS/color-interpolation-method)。（[Firefox bug 1861363](https://bugzil.la/1861363)）。
+- 现已支持在使用 [`conic-gradient()`](/zh-CN/docs/Web/CSS/Reference/Values/gradient/conic-gradient)、[`linear-gradient()`](/zh-CN/docs/Web/CSS/Reference/Values/gradient/linear-gradient) 和 [`radial-gradient()`](/zh-CN/docs/Web/CSS/Reference/Values/gradient/radial-gradient) 函数创建渐变时，以及在使用 [`repeating-conic-gradient()`](/zh-CN/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient)、[`repeating-linear-gradient()`](/zh-CN/docs/Web/CSS/Reference/Values/gradient/repeating-linear-gradient) 和 [`repeating-radial-gradient()`](/zh-CN/docs/Web/CSS/Reference/Values/gradient/repeating-radial-gradient) 函数创建重复渐变时，使用 [`<color-interpolation-method>`](/zh-CN/docs/Web/CSS/Reference/Values/color-interpolation-method)。（[Firefox bug 1861363](https://bugzil.la/1861363)）。
 
 ### JavaScript
 
@@ -80,7 +80,7 @@ l10n:
 
 - **`calc()` 相对颜色的色彩通道支持**：`layout.css.relative-color-syntax.enabled`。
 
-  CSS [`calc()`](/zh-CN/docs/Web/CSS/calc) 函数现在可以以[相对颜色](/zh-CN/docs/Web/CSS/CSS_colors/Relative_colors#使用_math_函数)解析色彩通道。
+  CSS [`calc()`](/zh-CN/docs/Web/CSS/Reference/Values/calc) 函数现在可以以[相对颜色](/zh-CN/docs/Web/CSS/Guides/Colors/Using_relative_colors#使用_math_函数)解析色彩通道。
 
 - **JavaScript `Float16Array` 类型化数组**：`javascript.options.experimental.float16array`。
 

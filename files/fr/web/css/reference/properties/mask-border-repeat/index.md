@@ -1,0 +1,59 @@
+---
+title: mask-border-repeat
+slug: Web/CSS/Reference/Properties/mask-border-repeat
+original_slug: Web/CSS/mask-border-repeat
+---
+
+{{CSSRef}}{{SeeCompatTable}}
+
+La propriété CSS **`mask-border-repeat`** indique la façon dont les régions du bord du [masque](/fr/docs/Web/CSS/Reference/Properties/mask-border) sont ajustées pour correspondre aux dimensions de la bordure de l'élément.
+
+## Syntaxe
+
+```css
+/* Valeurs avec un mot-clé */
+mask-border-repeat: stretch;
+mask-border-repeat: repeat;
+mask-border-repeat: round;
+mask-border-repeat: space;
+
+/* vertical | horizontal */
+mask-border-repeat: round stretch;
+
+/* Valeurs globales */
+mask-border-repeat: inherit;
+mask-border-repeat: initial;
+mask-border-repeat: unset;
+```
+
+La propriété `mask-border-repeat` peut être utilisée avec une ou deux valeurs parmi celles de la liste ci-après.
+
+- Lorsqu'une seule valeur est fournie, le même comportement est utilisé pour les quatre côtés.
+- Lorsque deux valeurs sont indiquées, la première valeur s'applique aux côtés haut et bas et la deuxième aux côtés gauche et droit.
+
+### Values
+
+- `stretch`
+  - : Les bords de l'image source sont étirés afin de remplir l'espace entre chaque bordure.
+- `repeat`
+  - : Les bords de l'image source sont répétés afin de remplir l'espace entre chaque bordure. Les fragments répétés peuvent être rognés afin que le remplissage soit exact.
+- `round`
+  - : Les bords de l'image source sont répétés afin de remplir l'espace entre chaque bordure. Les fragments peuvent être étirés afin que le remplissage soit exact.
+- `space`
+  - : Les bords de l'image source sont répétés afin de remplir l'espace entre chaque bordure. L'espace supplémentaire est réparti entre les fragments répétés pour que le remplissage soit exact.
+
+## Définition formelle
+
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
+
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}

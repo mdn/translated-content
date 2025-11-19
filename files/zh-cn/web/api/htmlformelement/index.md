@@ -68,7 +68,7 @@ _此接口还从其父接口 {{domxref("HTMLElement")}} 继承方法。_
 
 ### 获得表单元素对象
 
-要获取 `HTMLFormElement` 对象，你可以使用 [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)和 {{domxref("Document.querySelector", "querySelector()")}}，或者使用文档的 {{domxref("Document.forms", "forms")}} 属性获取文档中所有表单的列表。
+要获取 `HTMLFormElement` 对象，你可以使用 [CSS 选择器](/zh-CN/docs/Web/CSS/Guides/Selectors)和 {{domxref("Document.querySelector", "querySelector()")}}，或者使用文档的 {{domxref("Document.forms", "forms")}} 属性获取文档中所有表单的列表。
 
 {{domxref("Document.forms")}} 返回 `HTMLFormElement` 对象数组，其中列出了页面上的每个表单。然后，你可以使用以下任何语法来获取单个表单：
 

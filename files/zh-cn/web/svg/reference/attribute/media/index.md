@@ -39,10 +39,10 @@ svg {
 
 ## Usage notes
 
-| Value         | [`<media-query-list>`](/zh-CN/docs/Web/CSS/@media#media-query-list) |
-| ------------- | ------------------------------------------------------------------- |
-| Default value | `all`                                                               |
-| Animatable    | Yes                                                                 |
+| Value         | [`<media-query-list>`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media#media-query-list) |
+| ------------- | -------------------------------------------------------------------------------------- |
+| Default value | `all`                                                                                  |
+| Animatable    | Yes                                                                                    |
 
 - `<media-query-list>`
   - : This value holds a media query that needs to match in order for the style sheet to be applied.如果没有指定，样式表就会被应用。

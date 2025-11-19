@@ -48,7 +48,7 @@ l10n:
   </tbody>
 </table>
 
-値の説明については、 [CSS の `font-style`](/ja/docs/Web/CSS/font-style#値) プロパティを参照してください。
+値の説明については、 [CSS の `font-style`](/ja/docs/Web/CSS/Reference/Properties/font-style#値) プロパティを参照してください。
 
 ## 仕様書
 

@@ -10,7 +10,7 @@ Le rôle `scrollbar` est un objet graphique qui contrôle le défilement du cont
 
 ## Description
 
-Une `scrollbar` est une plage (<i lang="en">range</i>) qui contrôle quelle partie du contenu d'une zone d'affichage est actuellement visible dans le cadre de cette zone&nbsp;; que la zone d'affichage soit la fenêtre entière du navigateur, une `iframe`, ou le [contexte de formatage en bloc (<i lang="en">block formatting context</i>)](/fr/docs/Web/CSS/CSS_display/Block_formatting_context).
+Une `scrollbar` est une plage (<i lang="en">range</i>) qui contrôle quelle partie du contenu d'une zone d'affichage est actuellement visible dans le cadre de cette zone&nbsp;; que la zone d'affichage soit la fenêtre entière du navigateur, une `iframe`, ou le [contexte de formatage en bloc (<i lang="en">block formatting context</i>)](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context).
 
 ### Qu'est‑ce qu'une barre de défilement
 
@@ -24,7 +24,7 @@ Si vous ne voyez pas de barre de défilement actuellement, c'est peut‑être pa
 
 ### Rôle ARIA `scrollbar`
 
-Il est toujours préférable d'utiliser les barres de défilement natives. Vous pouvez utiliser la propriété CSS {{CSSXref('overflow')}} pour garantir l'apparition des barres de défilement natives. Une [spécification CSS pour les barres de défilement <sup>(angl.)</sup>](https://drafts.csswg.org/css-scrollbars/) est en cours d'élaboration. Certains navigateurs autorisent [le style des barres via des pseudo-éléments préfixés](/fr/docs/Web/CSS/::-webkit-scrollbar).
+Il est toujours préférable d'utiliser les barres de défilement natives. Vous pouvez utiliser la propriété CSS {{CSSXref('overflow')}} pour garantir l'apparition des barres de défilement natives. Une [spécification CSS pour les barres de défilement <sup>(angl.)</sup>](https://drafts.csswg.org/css-scrollbars/) est en cours d'élaboration. Certains navigateurs autorisent [le style des barres via des pseudo-éléments préfixés](/fr/docs/Web/CSS/Reference/Selectors/::-webkit-scrollbar).
 
 Comme le style des barres natives a historiquement été limité, vous pouvez rencontrer des barres de défilement implémentées en JavaScript que vous devez prendre en charge et rendre totalement accessibles. Pour cela, vous pouvez utiliser le rôle `scrollbar` afin d'indiquer aux technologies d'assistance qu'un contrôle d'interface utilisateur est une barre de défilement interactive.
 

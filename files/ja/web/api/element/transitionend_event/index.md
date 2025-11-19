@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef}}
 
-**`transitionend`** イベントは、 [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)が完了したときに発生します。トランジションが完了前に削除された場合、例えば {{cssxref("transition-property")}} が削除されたり、 {{cssxref("display")}} が `none` に設定されたりした場合、イベントは生成されません。
+**`transitionend`** イベントは、 [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions/Using)が完了したときに発生します。トランジションが完了前に削除された場合、例えば {{cssxref("transition-property")}} が削除されたり、 {{cssxref("display")}} が `none` に設定されたりした場合、イベントは生成されません。
 
 `transitionend` イベントは二つの方向で発生します。トランジション終了の状態まで遷移し終わったときと、既定またはトランジションがない状態まで完全に戻ったときです。トランジションに待ち時間や実行時間がない場合、両方が 0 秒またはどちらも宣言されていなかった場合、トランジションは発生せず、トランジションイベントは発生しません。 `transitioncancel` イベントが発生すると、 `transitionend` イベントは発生しません。
 
@@ -39,7 +39,7 @@ _親である {{domxref("Event")}} から継承したプロパティもありま
 - {{domxref("TransitionEvent.elapsedTime")}} {{ReadOnlyInline}}
   - : float` で、このイベントが発行されたときにトランジションが実行されていた時間を秒単位で表します。この値は {{cssxref("transition-delay")}} プロパティの影響を受けません。
 - {{domxref("TransitionEvent.pseudoElement")}} {{ReadOnlyInline}}
-  - : 文字列で、アニメーションが実行する[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)の名前が入ります。トランジションが擬似要素上で実行されず、要素上で実行される場合は空文字列 (`''`) です。
+  - : 文字列で、アニメーションが実行する[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)の名前が入ります。トランジションが擬似要素上で実行されず、要素上で実行される場合は空文字列 (`''`) です。
 
 ## 例
 

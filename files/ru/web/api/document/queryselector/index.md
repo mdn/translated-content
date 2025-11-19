@@ -39,7 +39,7 @@ element = document.querySelector(selectors);
 
 Если указанный селектор соответствует идентификатору, который неправильно используется более одного раза в документе, возвращается первый элемент с этим идентификатором.
 
-[Псевдо-элементы CSS](/ru/docs/Web/CSS/Pseudo-elements) никогда не вернут никаких элементов, как указано в [API селекторов](https://www.w3.org/TR/selectors-api/#grammar).
+[Псевдо-элементы CSS](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-elements) никогда не вернут никаких элементов, как указано в [API селекторов](https://www.w3.org/TR/selectors-api/#grammar).
 
 ### Экранирование специальных символов
 

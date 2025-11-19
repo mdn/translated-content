@@ -14,9 +14,9 @@ slug: Web/MathML/Reference/Element/merror
 - href
   - : Используется для установки гиперссылки на указанный URI.
 - mathbackground
-  - : Цвет фона. Ты можешь использовать `#rgb`, `#rrggbb` и [имена цветов HTML](/ru/docs/Web/CSS/color_value#color_keywords).
+  - : Цвет фона. Ты можешь использовать `#rgb`, `#rrggbb` и [имена цветов HTML](/ru/docs/Web/CSS/Reference/Values/color_value#color_keywords).
 - mathcolor
-  - : Цвет текста, а также цвет линии дроби. Вы можете использовать `#rgb`, `#rrggbb` и [имена цветов HTML](/ru/docs/Web/CSS/color_value#color_keywords).
+  - : Цвет текста, а также цвет линии дроби. Вы можете использовать `#rgb`, `#rrggbb` и [имена цветов HTML](/ru/docs/Web/CSS/Reference/Values/color_value#color_keywords).
 
 ## Примеры
 

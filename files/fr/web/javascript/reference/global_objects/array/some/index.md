@@ -1,90 +1,173 @@
 ---
-title: Array.prototype.some()
+title: "Array : méthode some()"
+short-title: some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
+l10n:
+  sourceCommit: 4bfeb5a89c1528da7cb7847a9ccb93f9b00290f0
 ---
 
-{{JSRef}}
+La méthode **`some()`** des instances {{JSxRef("Array")}} retourne `true` si elle trouve un élément dans le tableau qui satisfait la fonction de test fournie. Sinon, elle retourne `false`.
 
-La méthode **`some()`** teste si au moins un élément du tableau passe le test implémenté par la fonction fournie. Elle renvoie un booléen indiquant le résultat du test.
-
-> [!NOTE]
-> Cette méthode renverra `false`, quelle que soit la condition, si elle est utilisée sur un tableau vide.
-
-{{InteractiveExample("JavaScript Demo: Array.some()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Array.prototype.some()")}}
 
 ```js interactive-example
 const array = [1, 2, 3, 4, 5];
 
-// Checks whether an element is even
+// Vérifie si un élément est pair
 const even = (element) => element % 2 === 0;
 
 console.log(array.some(even));
-// Expected output: true
+// Résultat attendu : true
 ```
 
 ## Syntaxe
 
-```js
-arr.some(callback[, objetThis])
+```js-nolint
+some(callbackFn)
+some(callbackFn, thisArg)
 ```
 
 ### Paramètres
 
-- `callback`
-  - : La fonction à tester pour chaque élément du tableau. Cette fonction utilise trois arguments :
-    - `valeurCourante`
-      - : L'élément du tableau à traiter par la fonction.
-    - `index` {{optional_inline}}
-      - : L'indice de l'élément qui est traité par la fonction.
-    - `array` {{optional_inline}}
-      - : Le tableau sur lequel on a appelé la méthode `some`.
-
-- `objetThis` {{optional_inline}}
-  - : Paramètre optionnel. Il correspond à la valeur à utiliser pour `this` lors de l'exécution de la fonction `callback`.
+- `callbackFn`
+  - : Une fonction à exécuter pour chaque élément du tableau. Elle doit retourner une valeur [équivalente à vrai](/fr/docs/Glossary/Truthy) pour indiquer que l'élément passe le test, et une valeur [équivalente à faux](/fr/docs/Glossary/Falsy) sinon. La fonction est appelée avec les arguments suivants&nbsp;:
+    - `element`
+      - : L'élément courant traité dans le tableau.
+    - `index`
+      - : L'indice de l'élément courant traité dans le tableau.
+    - `array`
+      - : Le tableau sur lequel `some()` a été appelé.
+- `thisArg` {{Optional_Inline}}
+  - : Une valeur à utiliser comme `this` lors de l'exécution de `callbackFn`. Voir [méthodes itératives](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives).
 
 ### Valeur de retour
 
-`true` si la fonction `callback` renvoie une valeur équivalente à `true` pour au moins un des éléments du tableau, sinon elle renvoie `false`.
+`false` si `callbackFn` ne retourne pas une valeur {{Glossary("truthy", "équivalente à vrai")}} pour un élément du tableau&nbsp;; dans le cas contraire, `true` est retourné immédiatement.
 
 ## Description
 
-La méthode `some()` exécute la fonction `callback` une seule fois pour chaque élément présent dans le tableau jusqu'à ce qu'elle en trouve un pour lequel `callback` renvoie une valeur équivalente à `true` dans un contexte booléen. Si un tel élément est trouvé, `some()` renvoie immédiatement `true`. Dans le cas contraire, `some` renvoie `false`. `callback` n'est invoquée que pour les indices du tableau auxquels des valeurs sont assignées&nbsp;; elle n'est pas invoquée pour les indices qui ont été supprimés ou auxquels aucune valeur n'a jamais été assignée.
+La méthode `some()` est une [méthode itérative](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives). Elle appelle la fonction fournie `callbackFn` une fois pour chaque élément d'un tableau, jusqu'à ce que `callbackFn` retourne une valeur [équivalente à vrai](/fr/docs/Glossary/Truthy). Si un tel élément est trouvé, `some()` retourne immédiatement `true` et cesse d'itérer sur le tableau. Dans le cas contraire, si `callbackFn` retourne une valeur [équivalente à faux](/fr/docs/Glossary/Falsy) pour tous les éléments, `some()` retourne `false`. Consultez la section [méthodes itératives](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives) pour plus d'informations sur le fonctionnement général de ces méthodes.
 
-La fonction `callback` est invoquée avec trois paramètres&nbsp;: la valeur de l'élément, l'indice de l'élément et l'objet `Array` parcouru.
+`some()` correspond à «&nbsp;il existe&nbsp;» en logique mathématique. En particulier, pour un tableau vide, elle retourne `false` pour toute condition.
 
-Si un paramètre `objetThis` est fourni à `some()`, il sera utilisé comme valeur de `this` pour chaque invocation du `callback`. Sinon, la valeur {{jsxref("undefined")}} sera passée pour utilisation comme valeur `this`. La valeur `this` finalement utilisée par `callback` est déterminée en fonction [des règles habituelles pour déterminer `this` pour une fonction](/fr/docs/Web/JavaScript/Reference/Operators/this).
+`callbackFn` n'est invoqué que pour les indices du tableau auxquels des valeurs sont assignées. Il n'est pas invoqué pour les emplacements vides dans les [tableaux creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux).
 
-La méthode `some()` ne modifie pas le tableau sur lequel elle est appelée.
+`some()` ne modifie pas le tableau sur lequel elle est appelée, mais la fonction fournie en tant que `callbackFn` peut le faire. Notez toutefois que la longueur du tableau est enregistrée _avant_ la première invocation de `callbackFn`. Par conséquent&nbsp;:
 
-La liste des éléments traités par `some()` est définie avant la première invocation du `callback`. Les éléments qui sont ajoutés au tableau après le début de l'appel à `some` ne seront pas visités par `callback`. Si un élément existant non encore visité est modifié par `callback`, sa valeur passée à `callback` sera sa valeur au moment où `some` visite l'indice de cet élément&nbsp;; les éléments supprimés ne seront pas visités.
+- `callbackFn` ne visitera aucun élément ajoutés au-delà de la longueur initiale du tableau au moment où l'appel à `some()` a commencé.
+- Les modifications apportées aux indices déjà visités ne provoquent pas que `callbackFn` soit invoquée de nouveau pour ces indices.
+- Si un élément existant, mais pas encore visité, du tableau est modifié par `callbackFn`, la valeur qui est passée à `callbackFn` sera la valeur au moment où cet élément est visité. Les éléments [supprimés](/fr/docs/Web/JavaScript/Reference/Operators/delete) ne sont pas visités.
+
+> [!WARNING]
+> Les modifications concurrentes du type décrit ci‑dessus conduisent souvent à un code difficile à comprendre et doivent généralement être évitées (sauf dans des cas particuliers).
+
+La méthode `some()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_tableau_génériques). Elle suppose seulement que la valeur `this` possède une propriété `length` et des propriétés indexées par des entiers.
 
 ## Exemples
 
 ### Tester la valeur des éléments d'un tableau
 
-L'exemple suivant teste si certains éléments d'un tableau sont plus grands que 10.
+L'exemple suivant teste si un élément du tableau est supérieur à 10.
 
 ```js
-function estAssezGrand(element, indice, array) {
-  return element >= 10;
+function isBiggerThan10(element, index, array) {
+  return element > 10;
 }
-var resultat = [2, 5, 8, 1, 4].some(estAssezGrand);
-// resultat vaut false
-passed = [12, 5, 8, 1, 4].some(estAssezGrand);
-// passed vaut true
+
+[2, 5, 8, 1, 4].some(isBiggerThan10); // false
+[12, 5, 8, 1, 4].some(isBiggerThan10); // true
 ```
 
-### Tester la valeur des éléments avec les fonctions fléchées
+### Tester les éléments du tableau avec des fonctions fléchées
 
-[Les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) permettent d'utiliser une syntaxe plus concise pour réaliser la même opération que l'exemple précédent.
+[Les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) offrent une syntaxe plus concise pour le même test.
 
 ```js
-[2, 5, 8, 1, 4].some((elem) => elem > 10); // false
-[12, 5, 8, 1, 4].some((elem) => elem > 10); // true
+[2, 5, 8, 1, 4].some((x) => x > 10); // false
+[12, 5, 8, 1, 4].some((x) => x > 10); // true
 ```
 
-> [!NOTE]
-> Si on veut vérifier qu'un élément est dans un tableau, on pourra utiliser la méthode {{jsxref("Array.prototype.includes()")}}.
+### Vérifier si une valeur est présente dans un tableau
+
+Pour reproduire le comportement de la méthode `includes()`, cette fonction personnalisée retourne `true` si la valeur est présente dans le tableau&nbsp;:
+
+```js
+const fruits = ["apple", "banana", "mango", "guava"];
+
+function checkAvailability(arr, val) {
+  return arr.some((arrVal) => val === arrVal);
+}
+
+checkAvailability(fruits, "grapefruit"); // false
+checkAvailability(fruits, "banana"); // true
+```
+
+### Convertir une valeur en booléen
+
+```js
+const TRUTHY_VALUES = [true, "true", 1];
+
+function getBoolean(value) {
+  if (typeof value === "string") {
+    value = value.toLowerCase().trim();
+  }
+
+  return TRUTHY_VALUES.some((t) => t === value);
+}
+
+getBoolean(false); // false
+getBoolean("false"); // false
+getBoolean(1); // true
+getBoolean("true"); // true
+```
+
+### Utiliser le troisième argument `callbackFn`
+
+L'argument `array` est utile si vous souhaitez accéder à un autre élément du tableau, en particulier lorsque vous n'avez pas de variable qui référence déjà le tableau. L'exemple suivant utilise d'abord `filter()` pour extraire les valeurs positives, puis `some()` pour vérifier si le tableau est strictement croissant.
+
+```js
+const numbers = [3, -1, 1, 4, 1, 5];
+const isIncreasing = !numbers
+  .filter((num) => num > 0)
+  .some((num, idx, arr) => {
+    // Sans l'argument arr, il est difficile d'accéder
+    // au tableau intermédiaire sans le sauvegarder dans une variable.
+    if (idx === 0) return false;
+    return num <= arr[idx - 1];
+  });
+console.log(isIncreasing); // false
+```
+
+### Utiliser `some()` sur des tableaux creux
+
+`some()` n'exécutera pas son prédicat sur les emplacements vides.
+
+```js
+console.log([1, , 3].some((x) => x === undefined)); // false
+console.log([1, , 1].some((x) => x !== 1)); // false
+console.log([1, undefined, 1].some((x) => x !== 1)); // true
+```
+
+### Appeler `some()` sur des objets non-tableaux
+
+La méthode `some()` lit la propriété `length` de `this` puis accède à chaque propriété dont la clé est un entier non négatif inférieur à `length`, jusqu'à ce qu'elles aient toutes été consultées ou que `callbackFn` retourne `true`.
+
+```js
+const objetSimilaireTableau = {
+  length: 3,
+  0: "a",
+  1: "b",
+  2: "c",
+  3: 3, // ignoré par some() car length vaut 3
+};
+console.log(
+  Array.prototype.some.call(
+    objetSimilaireTableau,
+    (x) => typeof x === "number",
+  ),
+);
+// false
+```
 
 ## Spécifications
 
@@ -96,8 +179,12 @@ passed = [12, 5, 8, 1, 4].some(estAssezGrand);
 
 ## Voir aussi
 
-- {{jsxref("Array.prototype.find()")}}
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Array.prototype.every()")}}
-- {{jsxref("Array.prototype.includes()")}}
-- {{jsxref("TypedArray.prototype.some()")}}
+- [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
+- L'objet global {{JSxRef("Array")}}
+- La méthode {{JSxRef("Array.prototype.every()")}}
+- La méthode {{JSxRef("Array.prototype.forEach()")}}
+- La méthode {{JSxRef("Array.prototype.find()")}}
+- La méthode {{JSxRef("Array.prototype.includes()")}}
+- La méthode {{JSxRef("TypedArray.prototype.some()")}}
+- [Prothèse d'émulation de `Array.prototype.some` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
+- [Prothèse d'émulation es-shims de `Array.prototype.some` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.some)

@@ -76,7 +76,7 @@ _hidden until found_ の状態では、要素は非表示になりますが、�
 - この要素はページレイアウトに参加します
 - 要素の margin, borders, padding, background がレンダリングされます
 
-また、その要素を明らかにするためには、[レイアウトコンテインメント](/ja/docs/Web/CSS/CSS_containment)の影響を受けている必要があります。これは、_hidden until found_ 状態の要素の `display` 値が `none`、`contents`、`inline` の何れかである場合、その要素はページまたはフラグメントナビゲーションでの検索によって明らかにされないことを意味しています。
+また、その要素を明らかにするためには、[レイアウトコンテインメント](/ja/docs/Web/CSS/Guides/Containment)の影響を受けている必要があります。これは、_hidden until found_ 状態の要素の `display` 値が `none`、`contents`、`inline` の何れかである場合、その要素はページまたはフラグメントナビゲーションでの検索によって明らかにされないことを意味しています。
 
 ## 使用上のメモ
 

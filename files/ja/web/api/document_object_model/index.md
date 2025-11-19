@@ -57,7 +57,7 @@ alert(paragraphs[0].nodeName);
 
 ![ルートとコンテンツを含むノード要素を保有する文書のツリー状表現としての DOM](using_the_w3c_dom_level_1_core-doctree.jpg)
 
-なお、上位のツリーは上記の文書の DOM ツリーと似ていますが、同じではありません。実際の DOM ツリーは[ホワイトスペース](/ja/docs/Web/CSS/CSS_text/Whitespace)を温存するからです。
+なお、上位のツリーは上記の文書の DOM ツリーと似ていますが、同じではありません。実際の DOM ツリーは[ホワイトスペース](/ja/docs/Web/CSS/Guides/Text/Whitespace)を温存するからです。
 
 ウェブブラウザーが HTML 文書を解釈するとき、ブラウザーは DOM ツリーを構築し、文書を表示するために使用します。
 

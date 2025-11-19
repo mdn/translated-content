@@ -178,14 +178,14 @@ Les attributs suivants sont dépréciés et ne doivent pas être utilisés. Ils 
 
     > [!NOTE]
     >
-    > - N'essayez pas de définir la propriété [`text-align`](/fr/docs/Web/CSS/text-align) sur un sélecteur donnant un élément [`<colgroup>`](/fr/docs/Web/HTML/Reference/Elements/colgroup). Comme les éléments [`<td>`](/fr/docs/Web/HTML/Reference/Elements/td) ne sont pas des descendants de l'élément [`<colgroup>`](/fr/docs/Web/HTML/Reference/Elements/colgroup), ils n'en hériteront pas.
+    > - N'essayez pas de définir la propriété [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align) sur un sélecteur donnant un élément [`<colgroup>`](/fr/docs/Web/HTML/Reference/Elements/colgroup). Comme les éléments [`<td>`](/fr/docs/Web/HTML/Reference/Elements/td) ne sont pas des descendants de l'élément [`<colgroup>`](/fr/docs/Web/HTML/Reference/Elements/colgroup), ils n'en hériteront pas.
     > - Si le tableau n'utilise pas d'attribut [code>colspan](/fr/docs/Web/HTML/Reference/Elements/td#attr-colspan), utilisez un `td:nth-child(an+b)` sélecteur CSS par colonne, où a est le nombre total de colonnes du tableau et b est la position ordinale de cette colonne dans le tableau. Ce n'est qu'après ce sélecteur que la propriété `text-align` peut être utilisée.
     > - Si le tableau utilise bien un attribut [`colspan`](/fr/docs/Web/HTML/Reference/Elements/td#attr-colspan), l'effet peut être obtenu en combinant des sélecteurs d'attributs CSS adéquats comme `[colspan=n]`, bien que cela ne soit pas trivial.
 
 - **`bgcolor`** {{deprecated_inline}}
-  - : La couleur de fond du tableau. Il s'agit d'un [code RVB hexadécimal à 6 chiffres](/fr/docs/Web/CSS/color_value#rgb_colors), préfixé par un «&nbsp;`#`&nbsp;». L'un des [mots-clés de couleur](/fr/docs/Web/CSS/color_value#color_keywords) prédéfinis peut également être utilisé.
+  - : La couleur de fond du tableau. Il s'agit d'un [code RVB hexadécimal à 6 chiffres](/fr/docs/Web/CSS/Reference/Values/color_value#rgb_colors), préfixé par un «&nbsp;`#`&nbsp;». L'un des [mots-clés de couleur](/fr/docs/Web/CSS/Reference/Values/color_value#color_keywords) prédéfinis peut également être utilisé.
 
-    Pour obtenir un effet similaire, utilisez la propriété CSS [`background-color`](/fr/docs/Web/CSS/background-color).
+    Pour obtenir un effet similaire, utilisez la propriété CSS [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color).
 
 - **`char`** {{deprecated_inline}}
   - : Cet attribut spécifie l'alignement du contenu d'un groupe de colonnes sur un caractère. Les valeurs typiques de cet attribut comprennent un point (.) lorsqu'on tente d'aligner des chiffres ou des valeurs monétaires. Si [`align`](#attr-align) n'est pas défini sur `char`, cet attribut est ignoré, bien qu'il sera toujours utilisé comme valeur par défaut pour le [`align`](/fr/docs/Web/HTML/Reference/Elements/col#attr-align) du [`<col>`](/fr/docs/Web/HTML/Reference/Elements/col) qui sont membres de ce groupe de colonnes.
@@ -200,7 +200,7 @@ Les attributs suivants sont dépréciés et ne doivent pas être utilisés. Ils 
 
     > [!NOTE]
     >
-    > - N'essayez pas de définir la propriété [`vertical-align`](/fr/docs/Web/CSS/vertical-align) sur un sélecteur donnant un élément `<col>`. Comme les éléments [`<td>`](/fr/docs/Web/HTML/Reference/Elements/td) ne sont pas des descendants de l'élément `<col>`, ils n'en hériteront pas.
+    > - N'essayez pas de définir la propriété [`vertical-align`](/fr/docs/Web/CSS/Reference/Properties/vertical-align) sur un sélecteur donnant un élément `<col>`. Comme les éléments [`<td>`](/fr/docs/Web/HTML/Reference/Elements/td) ne sont pas des descendants de l'élément `<col>`, ils n'en hériteront pas.
     > - Si le tableau n'utilise pas d'attribut [`colspan`](/fr/docs/Web/HTML/Reference/Elements/td#attr-colspan), utilisez le sélecteur CSS `td:nth-child(an+b)` où a est le nombre total de colonnes du tableau et b la position ordinale de la colonne dans le tableau. Ce n'est qu'après ce sélecteur que la propriété `vertical-align` peut être utilisée.
     > - Si le tableau utilise bien un attribut [`colspan`](/fr/docs/Web/HTML/Reference/Elements/td#attr-colspan), l'effet peut être obtenu en combinant des sélecteurs d'attributs CSS adéquats comme `[colspan=n]`, bien que cela ne soit pas trivial.
 
@@ -219,6 +219,6 @@ Veuillez consulter la page [`<table>`](/fr/docs/Web/HTML/Reference/Elements/tabl
 ## Voir aussi
 
 - Les propriétés et pseudo-classes CSS notamment utiles pour mettre en forme l'élément `<col>` :
-  - la propriété [`width`](/fr/docs/Web/CSS/width) pour contrôler la largeur de la colonne ;
-  - la pseudo-classe [`:nth-child`](/fr/docs/Web/CSS/:nth-child) pour définir l'alignement des cellules de la colonne ;
-  - la propriété [`text-align`](/fr/docs/Web/CSS/text-align) pour aligner le contenu de toutes les cellules sur le même caractère, comme « . ».
+  - la propriété [`width`](/fr/docs/Web/CSS/Reference/Properties/width) pour contrôler la largeur de la colonne ;
+  - la pseudo-classe [`:nth-child`](/fr/docs/Web/CSS/Reference/Selectors/:nth-child) pour définir l'alignement des cellules de la colonne ;
+  - la propriété [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align) pour aligner le contenu de toutes les cellules sur le même caractère, comme « . ».

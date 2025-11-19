@@ -54,12 +54,12 @@ l10n:
     </tr>
     <tr>
       <td>{{HTMLElement("input/number", "number")}}</td>
-      <td><a href="/zh-CN/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/zh-CN/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
       <td><code>&#x3C;input type="number" min="0" step="5" max="100"></code></td>
     </tr>
     <tr>
       <td>{{HTMLElement("input/range", "range")}}</td>
-      <td><a href="/zh-CN/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/zh-CN/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
       <td><code>&#x3C;input type="range" min="60" step="5" max="100"></code></td>
     </tr>
   </tbody>
@@ -88,7 +88,7 @@ l10n:
   <tbody>
     <tr>
       <td>{{HTMLElement("meter")}}</td>
-      <td><a href="/zh-CN/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/zh-CN/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
       <td><code>&#x3C;meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="40"> at 40/100&#x3C;/meter></code></td>
     </tr>
   </tbody>

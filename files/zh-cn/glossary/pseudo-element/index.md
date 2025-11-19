@@ -9,4 +9,4 @@ l10n:
 
 ## 参见
 
-- [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)
+- [伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
