@@ -101,7 +101,7 @@ CSS 2.0 defined only _computed value_ as the last step in a property's calculati
 - {{domxref("window.getComputedStyle")}}
 - Ключевые концепции CSS
   - [Синтаксис CSS](/ru/docs/Web/CSS/CSS_syntax/Syntax)
-  - [@-правила](/ru/docs/Web/CSS/CSS_syntax/At-rule)
+  - [@-правила](/ru/docs/Web/CSS/CSS_syntax/At-rules)
   - [комментарии](/ru/docs/Web/CSS/CSS_syntax/Comments)
   - [специфичность](/ru/docs/Web/CSS/CSS_cascade/Specificity)
   - [наследование](/ru/docs/Web/CSS/CSS_cascade/Inheritance)

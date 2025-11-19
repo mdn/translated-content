@@ -6004,7 +6004,7 @@
       "jackblackevo"
     ]
   },
-  "Web/Security/Insecure_passwords": {
+  "Web/Security/Authentication/Passwords": {
     "modified": "2019-03-20T14:57:01.510Z",
     "contributors": [
       "BaseChipmunk4",
@@ -6030,16 +6030,6 @@
       "MashKao",
       "teoli",
       "foxbrush"
-    ]
-  },
-  "Web/Security/Weak_Signature_Algorithm": {
-    "modified": "2019-04-23T04:20:20.884Z",
-    "contributors": [
-      "jackblackevo",
-      "15182254444",
-      "KINGKKALING",
-      "Sbabey",
-      "leVirve"
     ]
   },
   "Web/XML/Guides/OpenSearch": {

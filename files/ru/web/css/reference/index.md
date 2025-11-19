@@ -5,7 +5,7 @@ slug: Web/CSS/Reference
 
 {{CSSRef}}
 
-Данный _справочник по CSS_ перечисляет все стандартные свойства, [псевдоклассы](/ru/docs/Web/CSS/Pseudo-classes) и [псевдоэлементы](/ru/docs/Web/CSS/Pseudo-elements), [@-правила](/ru/docs/Web/CSS/CSS_syntax/At-rule), единицы измерения и селекторы [CSS](/ru/docs/Web/CSS) в алфавитном порядке. Справочник позволит вам быстро найти подробную информацию о каждом из них. Он не только перечисляет свойства CSS 1 и CSS 2.1, но является и справочником по CSS3 со ссылками на описание каждого стандартизированного или уже стабилизированного свойства [CSS3](/ru/docs/Web/CSS/CSS3). Также включает в себя краткое руководство [DOM-CSS / CSSOM](#DOM_CSS).
+Данный _справочник по CSS_ перечисляет все стандартные свойства, [псевдоклассы](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-classes) и [псевдоэлементы](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-elements), [@-правила](/ru/docs/Web/CSS/CSS_syntax/At-rules), единицы измерения и селекторы [CSS](/ru/docs/Web/CSS) в алфавитном порядке. Справочник позволит вам быстро найти подробную информацию о каждом из них. Он не только перечисляет свойства CSS 1 и CSS 2.1, но является и справочником по CSS3 со ссылками на описание каждого стандартизированного или уже стабилизированного свойства [CSS3](/ru/docs/Web/CSS/CSS3). Также включает в себя краткое руководство [DOM-CSS / CSSOM](#DOM_CSS).
 
 Заметьте, что определения CSS-правил полностью (ASCII) [текста-ориентированы](https://www.w3.org/TR/css-syntax-3/#intro), в то время как определения правил DOM-CSS / CSSOM [объектно-ориентированы](https://www.w3.org/TR/cssom/#introduction).
 
@@ -40,7 +40,7 @@ div.menu-bar li:hover > ul {
 
 ### @-правила
 
-Так как у них есть много различных структурных форматов, смотрите нужный синтаксис [@-правил](/ru/docs/Web/CSS/CSS_syntax/At-rule).
+Так как у них есть много различных структурных форматов, смотрите нужный синтаксис [@-правил](/ru/docs/Web/CSS/CSS_syntax/At-rules).
 
 ## Справочный указатель
 
@@ -49,19 +49,19 @@ div.menu-bar li:hover > ul {
 ## Селекторы
 
 - Базовые селекторы
-  - [По тегу](/ru/docs/Web/CSS/Type_selectors) `elementname`
-  - [По классу](/ru/docs/Web/CSS/Class_selectors) `.classname`
-  - [По ID](/ru/docs/Web/CSS/ID_selectors) `#idname`
-  - [Универсальные](/ru/docs/Web/CSS/Universal_selectors) `* ns|* *|*`
-  - [По атрибутам](/ru/docs/Web/CSS/Attribute_selectors) `[attr=value]`
+  - [По тегу](/ru/docs/Web/CSS/Reference/Selectors/Type_selectors) `elementname`
+  - [По классу](/ru/docs/Web/CSS/Reference/Selectors/Class_selectors) `.classname`
+  - [По ID](/ru/docs/Web/CSS/Reference/Selectors/ID_selectors) `#idname`
+  - [Универсальные](/ru/docs/Web/CSS/Reference/Selectors/Universal_selectors) `* ns|* *|*`
+  - [По атрибутам](/ru/docs/Web/CSS/Reference/Selectors/Attribute_selectors) `[attr=value]`
 
 - Комбинационные
-  - [смежный селектор](/ru/docs/Web/CSS/Next-sibling_combinator) `A + B`
-  - [следующего элемента](/ru/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
-  - [дочерних элементов](/ru/docs/Web/CSS/Child_combinator) `A > B`
-  - [потомков](/ru/docs/Web/CSS/Descendant_combinator) `A B`
+  - [смежный селектор](/ru/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator) `A + B`
+  - [следующего элемента](/ru/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator) `A ~ B`
+  - [дочерних элементов](/ru/docs/Web/CSS/Reference/Selectors/Child_combinator) `A > B`
+  - [потомков](/ru/docs/Web/CSS/Reference/Selectors/Descendant_combinator) `A B`
 
-- Псевдоэлементы [(больше информации)](/ru/docs/Web/CSS/Pseudo-elements)
+- Псевдоэлементы [(больше информации)](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
   - {{ Cssxref("::after") }}
   - {{ Cssxref("::before") }}
   - {{ Cssxref("::first-letter") }}
@@ -73,7 +73,7 @@ div.menu-bar li:hover > ul {
   - {{ Cssxref("::spelling-error") }} {{experimental_inline}}
   - {{ Cssxref("::grammar-error") }} {{experimental_inline}}
 
-- Псевдоклассы [(больше информации)](/ru/docs/Web/CSS/Pseudo-classes)
+- Псевдоклассы [(больше информации)](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
   - {{ Cssxref(":active") }}
   - {{ cssxref(':any')}}
   - {{ Cssxref(":checked") }}
@@ -134,7 +134,7 @@ div.menu-bar li:hover > ul {
 ## Концепции
 
 - [CSS синтаксис](/ru/docs/Web/CSS/CSS_syntax/Syntax)
-- [@-правила](/ru/docs/Web/CSS/CSS_syntax/At-rule)
+- [@-правила](/ru/docs/Web/CSS/CSS_syntax/At-rules)
 - [Комментарии](/ru/docs/Web/CSS/CSS_syntax/Comments)
 - [Специфичность](/ru/docs/Web/CSS/CSS_cascade/Specificity)
 - [Начальное значение](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)

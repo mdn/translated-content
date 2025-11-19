@@ -8,7 +8,7 @@ l10n:
 
 {{CSSRef}}
 
-CSS-свойство **`outline-offset`** задаёт расстояние между [обводкой](/ru/docs/Web/CSS/outline) и краем или рамкой элемента.
+CSS-свойство **`outline-offset`** задаёт расстояние между [обводкой](/ru/docs/Web/CSS/Reference/Properties/outline) и краем или рамкой элемента.
 
 {{InteractiveExample("CSS Demo: outline-offset")}}
 
