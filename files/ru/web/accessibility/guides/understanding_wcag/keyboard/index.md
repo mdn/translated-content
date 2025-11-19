@@ -1,76 +1,74 @@
 ---
-title: Русский
+title: Доступность для управления с клавиатуры
 slug: Web/Accessibility/Guides/Understanding_WCAG/Keyboard
 ---
 
-{{AccessibilitySidebar}}
+Чтобы веб-страница была полностью доступна, ею должен управлять тот, кто использует для доступа к ней только клавиатуру . Сюда входят пользователи скринридеров, но также могут входить пользователи, у которых возникают проблемы с управлением указывающим устройством, таким как мышь или трекбол, или у которых мышь в данный момент не работает, или которые предпочитают использовать клавиатуру , когда это возможно.
 
-Чтобы веб-страница была полностью доступной, она должна быть управляема кем-то, кто использует только клавиатуру для доступа к ней и управления ею. Сюда входят пользователи программ чтения с экрана, но также могут быть пользователи, у которых есть проблемы с использованием указывающего устройства, такого как мышь или трекбол, или у которых мышь не работает в данный момент, или которые просто предпочитают использовать клавиатуру для ввода, когда это возможно.
+## Фокусируемые элементы должны иметь интерактивную семантику
 
-Фокусируемые элементы должны иметь интерактивную семантику
+Если элемент можно сфокусировать с помощью клавиатуры, то он должен быть интерактивным; то есть пользователь должен иметь возможность что-то с ним сделать и произвести какое-либо изменение (например, активировать ссылку или изменить параметр).
 
-Если элемент можно сфокусировать с помощью клавиатуры, он должен быть интерактивным; то есть пользователь должен иметь возможность что-то сделать с ним и произвести какое-либо изменение (например, активировать ссылку или изменить параметр).
+> [!ПРИМЕЧАНИЕ]
+> Одним из важных исключений из этого правила является случай, когда к элементу применяется `role="document"`, \*внутри \*\* интерактивного контекста (например `role="application"`). В таком случае фокусировка на вложенном документе является единственным способом вернуть вспомогательную технологию в неинтерактивное состояние (часто называемое «режим обзора»).
 
-> [!NOTE]
-> One important exception to this rule is if the element has `role="document"` applied to it, **inside** an interactive context (such as `role="application"`). In such a case, focusing the nested document is the only way of returning assistive technology to a non-interactive state (often called "browse mode").
+Большинство интерактивных элементов по умолчанию являются фокусируемыми; вы можете сделать элемент фокусируемым, добавив к нему значение атрибута `tabindex=0`. Однако вам следует добавлять `tabindex` только в том случае, если вы также сделали элемент интерактивным, например, определив соответствующие обработчики событий клавиатуры.
 
-Most interactive elements are focusable by default; you can make an element focusable by adding a `tabindex=0` attribute value to it. However, you should only add `tabindex` if you have also made the element interactive, for example, by defining appropriate event handlers keyboard events.
+### Смотрите также
 
-### See also
+- [tabindex](/ru/docs/Web/HTML/Reference/Global_attributes/tabindex) глобальный атрибут HTML
+- Элемент: [событие onkeydown](/ru/docs/Web/API/Element/keydown_event)
+- Элемент: [событие onkeyup](/ru/docs/Web/API/Element/keyup_event)
 
-- [tabindex](/ru/docs/Web/HTML/Reference/Global_attributes/tabindex) global HTML attribute
-- Global event handlers: [onkeydown](/ru/docs/Web/API/Element/keydown_event)
-- Global event handlers: [onkeyup](/ru/docs/Web/API/Element/keyup_event)
+## Избегайте использования положительных значений атрибута `tabindex`
 
-## Avoid using `tabindex` attribute greater than zero
+Атрибут `tabindex` указывает на то, что элемент можно сфокусировать с помощью клавиатуры. Нулевое значение указывает на то, что элемент является частью порядка фокусировки по умолчанию, который основан на порядке расположения элементов в HTML-документе. Положительное значение ставит элемент перед элементами в порядке по умолчанию; элементы с положительными значениями фокусируются в порядке значений атрибута `tabindex` (1, затем 2, затем 3 и т.д.).
 
-The `tabindex` attribute indicates that an element is focusable using the keyboard. A value of zero indicates that the element is part of the default focus order, which is based on the ordering of elements in the HTML document. A positive value puts the element ahead of those in the default ordering; elements with positive values are focused in the order of their `tabindex` values (1, then 2, then 3, etc.).
+Это создаёт путаницу для пользователей, использующих только клавиатуру, когда порядок фокусировки отличается от логического порядка страницы. Лучшей стратегией является структурирование HTML-документа таким образом, чтобы фокусируемые элементы располагались в логическом порядке, без необходимости изменять их порядок при помощи положительных значений атрибута `tabindex`.
 
-This creates confusion for keyboard-only users when the focus order differs from the logical order of the page. A better strategy is to structure the HTML document so that focusable elements are in a logical order, without the need to re-order them with positive `tabindex` values.
+### Смотрите также
 
-### See also
+- [tabindex](/ru/docs/Web/HTML/Reference/Global_attributes/tabindex) глобальный атрибут HTML
+- [Понимание порядка фокусировки](https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html) (англ.)
+- [Не используйте значение tabindex больше 0](https://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html) (англ.)
 
-- [tabindex](/ru/docs/Web/HTML/Reference/Global_attributes/tabindex) global HTML attribute
-- [Understanding focus order](https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html)
-- [Don't use tabindex greater than 0](https://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html)
+## Элементы, на которые можно нажимать, должны быть фокусируемыми и иметь интерактивную семантику
 
-## Clickable elements must be focusable and should have interactive semantics
+Если на элементе можно щёлкнуть с помощью указывающего устройства, такого как мышь, то он также должен быть фокусируемым с помощью клавиатуры, и пользователь должен иметь возможность что-то делать, взаимодействуя с ним.
 
-If an element can be clicked with a pointing device, such as a mouse, then it should also be focusable using the keyboard, and the user should be able to do something by interacting with it.
+Элемент управляем с помощью указывающих устройств, если для него определён обработчик события `onclick`. Вы можете сделать его фокусируемым, добавив к нему значение атрибута `tabindex=0`. Вы можете сделать его доступным для работы с клавиатуры, определив обработчик событий `onkeydown`; в большинстве случаев действие, выполняемое обработчиком событий, должно быть одинаковым для обоих типов событий.
 
-An element is clickable if it has an `onclick` event handler defined. You can make it focusable by adding a `tabindex=0` attribute value to it. You can make it operable with the keyboard by defining an `onkeydown` event handler; in most cases, the action taken by event handler should be the same for both types of events.
+### Смотрите также
 
-### See also
+- [tabindex](/ru/docs/Web/HTML/Reference/Global_attributes/tabindex) глобальный атрибут HTML
+- Элемент: [событие onkeydown](/ru/docs/Web/API/Element/keydown_event)
+- Элемент: [событие onkeyup](/ru/docs/Web/API/Element/keyup_event)
 
-- [tabindex](/ru/docs/Web/HTML/Reference/Global_attributes/tabindex) global HTML attribute
-- Global event handlers: [onkeydown](/ru/docs/Web/API/Element/keydown_event)
-- Global event handlers: [onkeyup](/ru/docs/Web/API/Element/keyup_event)
+## Интерактивные элементы должны активироваться с помощью клавиатуры
 
-## Interactive elements must be able to be activated using a keyboard
+Если пользователь может взаимодействовать с элементом с помощью сенсорного интерфейса или указывающего устройства, то элемент также должен поддерживать взаимодействие с клавиатуры. То есть, если вы определили обработчики событий для касания или щелчка, вы также должны определить их для событий клавиатуры. Обработчики событий клавиатуры должны обеспечивать то же взаимодействие, что и обработчики касания или щелчка.
 
-If the user can interact with an element using touch or a pointing device, then the element should also support interacting using the keyboard. That is, if you have defined event handlers for touch or click events, you should also define them for keyboard events. The keyboard event handlers should enable the effectively the same interaction as the touch or click handlers.
+### Смотрите также
 
-### See also
+- Элемент: [событие onkeydown](/ru/docs/Web/API/Element/keydown_event)
+- Элемент: [событие onkeyup](/ru/docs/Web/API/Element/keyup_event)
 
-- Global event handlers: [onkeydown](/ru/docs/Web/API/Element/keydown_event)
-- Global event handlers: [onkeyup](/ru/docs/Web/API/Element/keyup_event)
+## Интерактивные элементы должны быть фокусируемыми
 
-## Interactive elements must be focusable
+Если пользователь может взаимодействовать с элементом (например, с помощью сенсорного интерфейса или указывающего устройства), то он должен быть фокусируемым с помощью клавиатуры. Вы можете сделать его фокусируемым, добавив к нему значение атрибута `tabindex=0`. Это добавит элемент в список элементов, которые можно сфокусировать, нажав клавишу <kbd>Tab</kbd>, в последовательности, определённой в HTML-документе.
 
-If the user can interact with an element (for example, using touch or a pointing device), then it should be focusable using the keyboard. You can make it focusable by adding a `tabindex=0` attribute value to it. That will add the element to the list of elements that can be focused by pressing the <kbd>Tab</kbd> key, in the sequence of such elements as defined in the HTML document.
+### Смотрите также
 
-### See also
+- [tabindex](/ru/docs/Web/HTML/Reference/Global_attributes/tabindex) глобальный атрибут HTML
 
-- [tabindex](/ru/docs/Web/HTML/Reference/Global_attributes/tabindex) global HTML attribute
+## Фокусируемый элемент должен иметь стиль фокусировки
 
-## Focusable element must have focus styling
+Любой элемент, который может получать фокусировку с клавиатуры, должен иметь видимый стиль, указывающий, когда элемент находится в фокусе. Вы можете сделать это с помощью псевдокласса CSS [`:focus`](/ru/docs/Web/CSS/:focus).
 
-Any element that can receive keyboard focus should have visible styling that indicates when the element is focused. You can do this with the [`:focus`](/ru/docs/Web/CSS/Reference/Selectors/:focus) CSS pseudo-class.
+Стандартным фокусируемым элементам, таким как ссылки и поля редактирования, браузер по умолчанию присваивает специальный стиль, поэтому вам может не понадобиться указывать стиль фокусировки для таких элементов, если только вы не хотите, чтобы стиль фокусировки был более характерным.
 
-Standard focusable elements such as links and input fields are given special styling by the browser by default, so you might not need to specify focus styling for such elements, unless you want the focus styling to be more distinctive.
+Если вы создаёте свои собственные фокусируемые компоненты, убедитесь, что вы также определили для них стиль фокусировки.
 
-If you create your own focusable components, be sure that you also define focus styling for them.
+### Смотрите также
 
-### See also
-
-- [Using CSS to change the presentation of a UI component when it receives focus](https://www.w3.org/WAI/WCAG21/Techniques/css/C15.html)
+- [Использование CSS для изменения представления компонента пользовательского интерфейса, когда он получает фокус](https://www.w3.org/WAI/WCAG21/Techniques/css/C15.html) (англ.)
