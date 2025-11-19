@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b30a10c08b986ebabd44733fb62f67667350403e
 ---
 
-{{AddonSidebar}}
-
 如果浏览器操作已启用，则返回 `true`。
 
 > [!NOTE]

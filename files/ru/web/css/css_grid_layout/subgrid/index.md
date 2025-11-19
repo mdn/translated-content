@@ -5,7 +5,7 @@ slug: Web/CSS/CSS_grid_layout/Subgrid
 
 {{CSSRef}}
 
-2 уровень спецификации CSS Grid включает в себя значение `subgrid` для свойств [grid-template-columns](/ru/docs/Web/CSS/grid-template-columns) и [grid-template-rows](/ru/docs/Web/CSS/grid-template-rows). Это руководство содержит описание принципа работы subgrid и показывает некоторые примеры использования этой функции.
+2 уровень спецификации CSS Grid включает в себя значение `subgrid` для свойств [grid-template-columns](/ru/docs/Web/CSS/Reference/Properties/grid-template-columns) и [grid-template-rows](/ru/docs/Web/CSS/Reference/Properties/grid-template-rows). Это руководство содержит описание принципа работы subgrid и показывает некоторые примеры использования этой функции.
 
 ## Введение в subgrid
 
@@ -15,7 +15,7 @@ slug: Web/CSS/CSS_grid_layout/Subgrid
 
 Если вы устанавливаете значение `subgrid` для свойства `grid-template-columns`, `grid-template-rows`, или для обоих, вместо создания новых треков, вложенная сетка использует треки, определённые для родителя.
 
-Например, если вы используете `grid-template-columns: subgrid` и вложенная сетка охватывает три колоночных трека родителя, её треки будут такого же размера, как и у родительской сетки. Промежутки ([gap](/ru/docs/Web/CSS/gap)) наследуются, но могут быть переопределены другими значениями. Имена линий могут быть переданы от родителя в subgrid, но можно объявить также и свои собственные.
+Например, если вы используете `grid-template-columns: subgrid` и вложенная сетка охватывает три колоночных трека родителя, её треки будут такого же размера, как и у родительской сетки. Промежутки ([gap](/ru/docs/Web/CSS/Reference/Properties/gap)) наследуются, но могут быть переопределены другими значениями. Имена линий могут быть переданы от родителя в subgrid, но можно объявить также и свои собственные.
 
 ## Subgrid для колонок
 
@@ -55,7 +55,7 @@ slug: Web/CSS/CSS_grid_layout/Subgrid
 
 ## Subgrid и свойства gap
 
-Если у родителя задан [gap](/ru/docs/Web/CSS/gap), [column-gap](/ru/docs/Web/CSS/column-gap) или [row-gap](/ru/docs/Web/CSS/row-gap), это будет передано и в subgrid, поэтому он будет иметь такие же промежутки между треками, как и родитель. Тем не менее, в определённых ситуациях вы можете захотеть, чтобы промежутки между треками в subgrid отличались или отсутствовали вовсе. Этого можно достичь, определяя свойства `gap–*` непосредственно в subgrid.
+Если у родителя задан [gap](/ru/docs/Web/CSS/Reference/Properties/gap), [column-gap](/ru/docs/Web/CSS/Reference/Properties/column-gap) или [row-gap](/ru/docs/Web/CSS/Reference/Properties/row-gap), это будет передано и в subgrid, поэтому он будет иметь такие же промежутки между треками, как и родитель. Тем не менее, в определённых ситуациях вы можете захотеть, чтобы промежутки между треками в subgrid отличались или отсутствовали вовсе. Этого можно достичь, определяя свойства `gap–*` непосредственно в subgrid.
 
 Вы можете видеть это в примере ниже. Родительский grid имеет промежутки 20px для строк и колонок. Subgrid имеет `row-gap` со значением `0`.
 

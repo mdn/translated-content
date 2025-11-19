@@ -3,8 +3,6 @@ title: <table>：表格元素
 slug: Web/HTML/Reference/Elements/table
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<table>`** 元素表示表格数据——即在一个由包含数据的行和列组成的二维表格中呈现的信息。
 
 {{InteractiveExample("HTML Demo: &lt;table&gt;", "tabbed-standard")}}
@@ -174,7 +172,7 @@ tfoot td {
     设置 {{cssxref("margin-left")}}、{{cssxref("margin-right")}} 为 `auto`，或者将 {{cssxref("margin")}} 设置为 `0 auto` 来实现类似于 align 属性的效果。
 
 - `bgcolor` {{Deprecated_inline}}
-  - : 表格的背景颜色。它是一个 [6 位的十六进制 RGB 编码](/zh-CN/docs/Web/CSS/hex-color)，以 `'#'` 作为前缀。当然也可以使用下面已经被预先定义的[颜色关键字](/zh-CN/docs/Web/CSS/named-color)。
+  - : 表格的背景颜色。它是一个 [6 位的十六进制 RGB 编码](/zh-CN/docs/Web/CSS/Reference/Values/hex-color)，以 `'#'` 作为前缀。当然也可以使用下面已经被预先定义的[颜色关键字](/zh-CN/docs/Web/CSS/Reference/Values/named-color)。
 
     为了实现相似的效果，可以使用 CSS 属性 {{cssxref("background-color")}}。
 
@@ -242,12 +240,12 @@ tfoot td {
     <th>名</th>
   </tr>
   <tr>
-    <td>John</td>
     <td>Doe</td>
+    <td>John</td>
   </tr>
   <tr>
-    <td>Jane</td>
     <td>Doe</td>
+    <td>Jane</td>
   </tr>
 </table>
 

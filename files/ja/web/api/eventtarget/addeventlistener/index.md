@@ -42,7 +42,7 @@ addEventListener(type, listener, useCapture)
 ### 引数
 
 - `type`
-  - : 対象とする[イベントの種類](/ja/docs/Web/Events)を表す文字列です。
+  - : 対象とする[イベントの種類](/ja/docs/Web/API/Document_Object_Model/Events)を表す文字列です。
 - `listener`
   - : 指定された種類のイベントが発生するときに通知（{{domxref("Event")}} インターフェイスを実装しているオブジェクト）を受け取るオブジェクト。これは `null` であるか、`handleEvent()` メソッドのあるオブジェクトか、JavaScript の[関数](/ja/docs/Web/JavaScript/Guide/Functions)のいずれかでなければなりません。コールバックについて詳しくは、[イベントリスナーのコールバック](#イベントリスナーのコールバック)を参照してください。
 - `options` {{optional_inline}}
@@ -759,5 +759,5 @@ function wheelHandler() {
 ## 関連情報
 
 - {{domxref("EventTarget.removeEventListener()")}}
-- [イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events)
+- [イベントの作成と起動](/ja/docs/Web/API/Document_Object_Model/Events)
 - [イベントハンドラー内での `this` の使用方法のさらに詳細な解説](https://www.quirksmode.org/js/this.html)

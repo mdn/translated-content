@@ -66,7 +66,7 @@ fetch("example.xml")
 
 ### 把 DOM 树序列化成字符串
 
-首先，使用[使用文档对象模型](/zh-CN/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model)中的方法构建一个 DOM 树。也可以使用从 {{domxref("fetch()")}} 中获得的 DOM 树。
+首先，使用[使用文档对象模型](/zh-CN/docs/Web/API/Document_Object_Model)中的方法构建一个 DOM 树。也可以使用从 {{domxref("fetch()")}} 中获得的 DOM 树。
 
 为了将 DOM 树 `doc` 序列化为 XML 文本，调用 {{domxref("XMLSerializer.serializeToString()")}}：
 

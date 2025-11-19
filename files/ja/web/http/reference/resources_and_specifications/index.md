@@ -1,9 +1,8 @@
 ---
 title: HTTP のリソースと仕様書
 slug: Web/HTTP/Reference/Resources_and_specifications
-original_slug: Web/HTTP/Resources_and_specifications
 l10n:
-  sourceCommit: eb9eef29f1ccdaf1c8a464dbe4483c78f7a13b2a
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 HTTP が最初に規定されたのは 1990 年代初頭のことです。拡張性を念頭に置いて設計されていますが、何年にもわたって何度も追加されてきました。このため、その仕様は多くの仕様書に散在しています (実験的に放棄された拡張の中に埋もれています)。このページでは、 HTTP に関連するリソースをリストアップしています。
@@ -27,7 +26,6 @@ HTTP が最初に規定されたのは 1990 年代初頭のことです。拡張
 | {{rfc(2397)}}                                                                              | The "data" URL scheme                                                                                                                                                                                                                                 | 標準化への提唱                 |
 | {{rfc(3986)}}                                                                              | Uniform Resource Identifier (URI): Generic Syntax                                                                                                                                                                                                     | インターネット標準             |
 | {{rfc(5988)}}                                                                              | Web Linking _Defines the {{HTTPHeader("Link")}} header_                                                                                                                                                                                               | 標準化への提唱                 |
-| [Experimental spec](https://tools.ietf.org/id/draft-thomson-hybi-http-timeout-01.html)     | Hypertext Transfer Protocol (HTTP) Keep-Alive Header                                                                                                                                                                                                  | 情報提供 (古いもの)            |
 | [Draft spec](https://wicg.github.io/client-hints-infrastructure/)                          | HTTP Client Hints                                                                                                                                                                                                                                     | IETF 草稿                      |
 | {{rfc(7578)}}                                                                              | Returning Values from Forms: multipart/form-data                                                                                                                                                                                                      | 標準化への提唱                 |
 | {{rfc(6266)}}                                                                              | Use of the Content-Disposition Header Field in the Hypertext Transfer Protocol (HTTP)                                                                                                                                                                 | 標準化への提唱                 |
@@ -45,7 +43,7 @@ HTTP が最初に規定されたのは 1990 年代初頭のことです。拡張
 | {{rfc(7034)}}                                                                              | HTTP Header Field X-Frame-Options                                                                                                                                                                                                                     | 情報提供                       |
 | {{rfc(6797)}}                                                                              | HTTP Strict Transport Security (HSTS)                                                                                                                                                                                                                 | 標準化への提唱                 |
 | [Upgrade Insecure Requests](https://w3c.github.io/webappsec-upgrade-insecure-requests/)    | Upgrade Insecure Requests                                                                                                                                                                                                                             | 勧告候補                       |
-| [Content Security Policy 1.0](https://www.w3.org/TR/CSP1/)                                 | Content Security Policy 1.0 _CSP 1.1 and CSP 3.0 doesn't extend the HTTP standard_                                                                                                                                                                    | 廃止                           |
+| [Content Security Policy specification](https://w3c.github.io/webappsec-csp/)              | Content Security Policy 1.0 _CSP 1.1 and CSP 3.0 doesn't extend the HTTP standard_                                                                                                                                                                    | 廃止                           |
 | [Microsoft document](<https://msdn.microsoft.com/library/jj676915(v=vs.85).aspx>)          | Specifying legacy document modes\* _Defines X-UA-Compatible_                                                                                                                                                                                          | メモ                           |
 | {{rfc(5689)}}                                                                              | HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV) _These extensions of the Web, as well as CardDAV and CalDAV, are out-of-scope for HTTP on the Web. Modern APIs for application are defines using the RESTful pattern nowadays._ | 標準化への提唱                 |
 | {{rfc(2324)}}                                                                              | Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0)                                                                                                                                                                                                   | エイプリルフールのジョーク仕様 |
@@ -53,3 +51,13 @@ HTTP が最初に規定されたのは 1990 年代初頭のことです。拡張
 | [HTML Living Standard](https://html.spec.whatwg.org/multipage/)                            | HTML _Defines extensions of HTTP for Server-Sent Events_                                                                                                                                                                                              | ライブ標準                     |
 | [Reporting API](https://wicg.github.io/reporting/)                                         | `Report-To` header                                                                                                                                                                                                                                    | 草稿                           |
 | [Draft spec](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-expect-ct-01)        | Expect-CT Extension for HTTP                                                                                                                                                                                                                          | IETF 草稿                      |
+| {{rfc(7486)}}                                                                              | HTTP Origin-Bound Auth (HOBA)                                                                                                                                                                                                                         | 実験的                         |
+
+## 関連情報
+
+- [HTTP の進化](/ja/docs/Web/HTTP/Guides/Evolution_of_HTTP)
+- 用語集:
+  - {{glossary('HTTP')}}
+  - {{glossary('HTTP_2', 'HTTP/2')}}
+  - {{glossary('QUIC')}}
+  - {{glossary('TCP')}}

@@ -35,18 +35,22 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          persist-credentials: false
 
       - name: Checkout (content)
-        uses: actions/checkout@v4
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
         with:
           repository: mdn/content
           path: mdn/content
+          persist-credentials: false
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
           node-version-file: mdn/content/.nvmrc
+          package-manager-cache: false
 
       - name: Install all yarn packages
         working-directory: ${{ github.workspace }}/mdn/content
@@ -104,7 +108,10 @@ jobs:
           title: "[${{ matrix.lang }}] sync translated content"
           author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
           committer: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
-          body: "Rari generated sync. Related upstream commits:\n\n${{ steps.gather.outputs.COMMIT_URLS }}"
+          body: "Rari generated sync. Related upstream commits:
+
+
+            ${{ steps.gather.outputs.COMMIT_URLS }}"
           labels: |
             automated pr
           token: ${{ secrets.AUTOMERGE_TOKEN }}

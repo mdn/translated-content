@@ -1,14 +1,66 @@
 ---
 title: "Attribut HTML : for"
+short-title: for
 slug: Web/HTML/Reference/Attributes/for
 original_slug: Web/HTML/Attributes/for
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+L'attribut **`for`** est un attribut autorisé pour les éléments HTML {{HTMLElement("label")}} et {{HTMLElement("output")}}. Lorsqu'il est utilisé sur un élément `<label>`, il indique l'élément de formulaire que ce label décrit. Lorsqu'il est utilisé sur un élément `<output>`, il permet une relation explicite entre les éléments, qui représentent les valeurs, qui sont utilisées dans le résultat représenté par `<output>`.
 
-L'attribut **`for`** est un attribut autorisé pour [`<label>`](/fr/docs/Web/HTML/Element/label) et [`<output>`](/fr/docs/Web/HTML/Element/output). Lorsqu'il est utilisé sur un élément `<label>`, il indique l'élément de formulaire que ce label décrit. Lorsqu'il est utilisé sur un élément `<output>`, il permet une relation explicite entre les éléments, qui représentent les valeurs, qui sont utilisées dans le résultat représenté par `<output>`.
+{{InteractiveExample("Démonstration HTML&nbsp;: for", "tabbed-shorter")}}
 
-## Utilisation
+```html interactive-example
+<p>
+  <label>Prénom (sans attribut «&nbsp;for&nbsp;»)&nbsp;:</label>
+  <input id="first" type="text" value="Jeanne" />
+</p>
+<p>
+  <label for="last">Nom (avec attribut «&nbsp;for&nbsp;»)&nbsp;:</label>
+  <input id="last" type="text" value="Dupont" />
+</p>
+<p id="result">
+  <strong id="result-label">Nom complet&nbsp;:</strong>
+  <output for="first last" aria-labelledby="result-label" id="output"></output>
+</p>
+```
+
+```css interactive-example
+label[for="paragraph"] {
+  color: rebeccapurple;
+}
+
+#result {
+  text-align: center;
+}
+
+#result-label {
+  font-size: 16pt;
+}
+
+#result-label,
+#output {
+  display: block;
+}
+```
+
+```js interactive-example
+const firstNameEl = document.getElementById("first");
+const lastNameEl = document.getElementById("last");
+const outputEl = document.getElementById("output");
+
+function updateOutput() {
+  const value = `${firstNameEl.value} ${lastNameEl.value}`;
+  outputEl.innerText = value;
+}
+
+updateOutput();
+firstNameEl.addEventListener("input", updateOutput);
+lastNameEl.addEventListener("input", updateOutput);
+```
+
+## Notes d'utilisation
 
 Lorsqu'il est utilisé comme attribut de `<label>`, l'attribut `for` a une valeur qui est l'`id` de l'élément de formulaire, auquel il se rapporte.
 
@@ -26,7 +78,7 @@ Lorsqu'il est utilisé comme attribut de `<output>`, l'attribut `for` a une vale
 
 ## Exemples
 
-Voir des exemples d'utilisation sur les pages des éléments pour [`<label>`](/fr/docs/Web/HTML/Element/label) et [`<output>`](/fr/docs/Web/HTML/Element/output).
+Voir des exemples d'utilisation sur les pages des éléments pour {{HTMLElement("label")}} et {{HTMLElement("output")}}.
 
 ## Spécifications
 

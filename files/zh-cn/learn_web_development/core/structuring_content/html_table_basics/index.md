@@ -3,7 +3,7 @@ title: HTML 表格基础
 slug: Learn_web_development/Core/Structuring_content/HTML_table_basics
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Splash_page", "Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content")}}
 
 本文将从 HTML 表格开始，介绍一些基本的内容，如行和单元格、标题、使单元格跨越多个列和行，以及如何将列中的所有单元组合在一起进行样式化。
 
@@ -447,7 +447,7 @@ th {
 在继续阅读之前，我们将在本文介绍最后一个特性。HTML 有一种为整列数据的定义样式信息的方法：就是 **[`<col>`](/zh-CN/docs/Web/HTML/Reference/Elements/col)** 和 **[`<colgroup>`](/zh-CN/docs/Web/HTML/Reference/Elements/colgroup)** 元素。它们存在是因为如果你想让一列中的每个数据的样式都一样，那么你就要为每个数据都添加一个样式，这样的做法是令人厌烦和低效的。你通常需要在列中的每个 `<td>` 或 `<th>` 上定义样式，或者使用一个复杂的选择器，比如 {{cssxref(":nth-child()")}}。
 
 > [!NOTE]
-> 这样设计列的样式[仅限于几个属性](https://www.w3.org/TR/CSS22/tables.html#columns)：[`border`](/zh-CN/docs/Web/CSS/border)、[`background`](/zh-CN/docs/Web/CSS/background)、[`width`](/zh-CN/docs/Web/CSS/width) 和 [`visibility`](/zh-CN/docs/Web/CSS/visibility)。要设置其他属性，必须对列中的每个 `<td>` 或 `<th>` 进行样式设置，或者使用复杂的选择器，如 {{cssxref(":nth-child")}}。
+> 这样设计列的样式[仅限于几个属性](https://www.w3.org/TR/CSS22/tables.html#columns)：[`border`](/zh-CN/docs/Web/CSS/Reference/Properties/border)、[`background`](/zh-CN/docs/Web/CSS/Reference/Properties/background)、[`width`](/zh-CN/docs/Web/CSS/Reference/Properties/width) 和 [`visibility`](/zh-CN/docs/Web/CSS/Reference/Properties/visibility)。要设置其他属性，必须对列中的每个 `<td>` 或 `<th>` 进行样式设置，或者使用复杂的选择器，如 {{cssxref(":nth-child")}}。
 
 下面是一个简单的示例：
 
@@ -539,4 +539,4 @@ th {
 
 本章节仅仅包含了 HTML 表格的基础。在下一篇文章中，我们将介绍一些[表格进阶特性](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Table_accessibility)，并开始考虑方便视力障碍的人士的访问。
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Splash_page", "Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content")}}

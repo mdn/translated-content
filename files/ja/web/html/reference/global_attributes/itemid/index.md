@@ -1,12 +1,10 @@
 ---
-title: itemid
+title: HTML itemid グローバル属性
+short-title: itemid
 slug: Web/HTML/Reference/Global_attributes/itemid
-original_slug: Web/HTML/Global_attributes/itemid
 l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 **`itemid`** は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)で、アイテムの固有でグローバルな識別子の形でマイクロデータを提供します。
 
@@ -73,10 +71,6 @@ l10n:
 ## 仕様書
 
 {{Specifications}}
-
-## ブラウザーの互換性
-
-{{Compat}}
 
 ## 関連情報
 

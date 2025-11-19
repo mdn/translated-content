@@ -182,7 +182,8 @@ Para cada página você aplica vários tipos de etiquetas, por exemplo:
 
 Filtros de busca não vão funcionar apropriadamente, a não ser que marquemos as páginas da MDN corretamente. Aqui está uma tabela dos filtros de pesquisa e sua busca correspondente.
 
-> **Nota:** **Observação:** Se várias etiquetas estiverem listadas abaixo de "Nome da etiqueta", isso significa que, pelo menos, uma delas precisa estar presente para o artigo estar propriamente marcado.
+> [!NOTE]
+> Se várias etiquetas estiverem listadas abaixo de "Nome da etiqueta", isso significa que, pelo menos, uma delas precisa estar presente para o artigo estar propriamente marcado.
 
 | Grupo do filtro     | Nome do filtro de pesquisa | Nome da _etiqueta_                                                                                   |
 | ------------------- | -------------------------- | ---------------------------------------------------------------------------------------------------- |

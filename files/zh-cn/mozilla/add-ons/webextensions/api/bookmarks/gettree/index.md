@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 **`bookmarks.getTree()`** 返回一个数组，其中包含书签树的根节点，该节点是一个 {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} 对象。
 
 如果它们是文件夹的话，你可以通过其 `children` 属性及其后代的 `children` 属性递归地访问整个树。

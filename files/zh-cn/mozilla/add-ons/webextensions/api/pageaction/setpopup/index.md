@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 设置当用户点击页面操作图标时打开的弹窗的 HTML 文档。
 
 ## 语法

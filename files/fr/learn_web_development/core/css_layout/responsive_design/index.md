@@ -62,7 +62,7 @@ Dans la suite de cet article, nous verrons les différentes fonctionnalités de 
 
 ## Les requêtes média (<i lang="en>media queries</i>)
 
-[Les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) permettent d'effectuer différents tests (par exemple pour déterminer si l'écran utilisé dépasse une largeur ou une résolution donnée) et d'appliquer du CSS en fonction pour mettre en forme la page.
+[Les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using) permettent d'effectuer différents tests (par exemple pour déterminer si l'écran utilisé dépasse une largeur ou une résolution donnée) et d'appliquer du CSS en fonction pour mettre en forme la page.
 
 Dans l'exemple qui suit, la requête média teste si la page web est affichée sur un écran (plutôt que d'être imprimée) et si la largeur de la zone d'affichage est supérieure ou égale à `80rem`. Le fragment CSS pour le sélecteur `.container` s'appliquera uniquement si ces deux critères sont vérifiés.
 
@@ -78,11 +78,11 @@ Il est possible d'ajouter plusieurs requêtes média dans une feuille de styles 
 
 Une approche fréquente consiste à créer une disposition simple sur une colonne pour les appareils avec un écran étroit (par exemple les téléphones), puis de tester les tailles plus larges et d'implémenter une disposition sur plusieurs colonnes lorsque l'espace est suffisant. Concevoir un site pour répondre d'abord aux besoins mobiles est parfois qualifié de conception <i lang="en">mobile first</i>.
 
-Lorsqu'on utilise des points d'arrêts, une bonne pratique consiste à utiliser [des unités relatives plutôt que des unités absolues](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#relative_length_units) pour un format d'appareil donné.
+Lorsqu'on utilise des points d'arrêts, une bonne pratique consiste à utiliser [des unités relatives plutôt que des unités absolues](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units#relative_length_units) pour un format d'appareil donné.
 
-Il existe différentes approches pour les styles définis à l'intérieur d'un bloc d'une requête média. On peut utiliser des requêtes média, ou des feuilles de styles pointées par des éléments [`<link>`](/fr/docs/Web/HTML/Element/link) selon les caractéristiques du navigateur pour inclure uniquement des variables de propriétés personnalisés contenant les valeurs associées à chaque point d'arrêt.
+Il existe différentes approches pour les styles définis à l'intérieur d'un bloc d'une requête média. On peut utiliser des requêtes média, ou des feuilles de styles pointées par des éléments [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link) selon les caractéristiques du navigateur pour inclure uniquement des variables de propriétés personnalisés contenant les valeurs associées à chaque point d'arrêt.
 
-Pour en savoir plus sur les requêtes média, voir [la documentation MDN à ce sujet](/fr/docs/Web/CSS/CSS_media_queries).
+Pour en savoir plus sur les requêtes média, voir [la documentation MDN à ce sujet](/fr/docs/Web/CSS/Guides/Media_queries).
 
 Les requêtes média peuvent aider au <i lang="en">responsive design</i>, mais elles ne sont pas strictement nécessaires. Les grilles flexibles, les unités relatives, les valeurs minimales et maximales des unités peuvent très bien être utilisées sans requêtes média.
 
@@ -90,9 +90,9 @@ Les requêtes média peuvent aider au <i lang="en">responsive design</i>, mais e
 
 Les sites adaptatifs sont construits sur la base d'une grille flexible, pour éviter de cibler toutes les tailles d'appareils possibles et d'essayer d'avoir des dispositions parfaitement alignées au pixel près dans tous les cas.
 
-En utilisant une grille flexible, on peut modifier une partie de la mise en page ou ajouter un point d'arrêt et modifier la disposition à partir du moment où le contenu est mal agencé. Par exemple, afin de s'assurer que les lignes ne deviennent trop longues et difficilement lisibles lorsque la largeur s'accroît, on peut utiliser [`columns`](/fr/docs/Web/CSS/columns), et si une boîte devient alors trop étroite, avec deux mots par ligne, on peut alors placer un point d'arrêt.
+En utilisant une grille flexible, on peut modifier une partie de la mise en page ou ajouter un point d'arrêt et modifier la disposition à partir du moment où le contenu est mal agencé. Par exemple, afin de s'assurer que les lignes ne deviennent trop longues et difficilement lisibles lorsque la largeur s'accroît, on peut utiliser [`columns`](/fr/docs/Web/CSS/Reference/Properties/columns), et si une boîte devient alors trop étroite, avec deux mots par ligne, on peut alors placer un point d'arrêt.
 
-Plusieurs méthodes de disposition comme [la disposition multi-colonnes](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout), [les boîtes flexibles (<i lang="en">flexbox</i>)](/fr/docs/Learn/CSS/CSS_layout/Flexbox), et [les grilles CSS](/fr/docs/Learn/CSS/CSS_layout/Grids) sont adaptatives par défaut. Ces méthodes permettent de créer plus simplement une grille flexible.
+Plusieurs méthodes de disposition comme [la disposition multi-colonnes](/fr/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout), [les boîtes flexibles (<i lang="en">flexbox</i>)](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox), et [les grilles CSS](/fr/docs/Learn_web_development/Core/CSS_layout/Grids) sont adaptatives par défaut. Ces méthodes permettent de créer plus simplement une grille flexible.
 
 ### Multi-colonnes
 
@@ -112,13 +112,13 @@ Si on utilise la propriété `column-width` à la place, on indiquera une largeu
 }
 ```
 
-La propriété raccourcie [`columns`](/fr/docs/Web/CSS/columns) permet d'indiquer un nombre maximum de colonne et une largeur minimale de colonne. Ces propriétés permettent de s'assurer que les lignes ne deviennent pas trop longues sur un écran large, ou trop étroite dans le cas contraire.
+La propriété raccourcie [`columns`](/fr/docs/Web/CSS/Reference/Properties/columns) permet d'indiquer un nombre maximum de colonne et une largeur minimale de colonne. Ces propriétés permettent de s'assurer que les lignes ne deviennent pas trop longues sur un écran large, ou trop étroite dans le cas contraire.
 
 ### Boîtes flexibles
 
 Avec les boîtes flexibles (<i lang="en">flexbox</i>), les éléments flexibles s'agrandissent ou rétrécissent, distribuant l'espace disponible dans le conteneur entre les éléments. En adaptant les valeurs des propriétés `flex-grow` et `flex-shrink` on indique comment un élément peut consommer plus ou moins d'espace.
 
-Dans l'exemple qui suit, les éléments flexibles prendront le même espace dans le conteneur flexible. On utilise la forme raccourcie `flex: 1` (décrite dans [la section sur le dimensionnement flexible](/fr/docs/Learn/CSS/CSS_layout/Flexbox#taille_modulable_des_éléments_flex)).
+Dans l'exemple qui suit, les éléments flexibles prendront le même espace dans le conteneur flexible. On utilise la forme raccourcie `flex: 1` (décrite dans [la section sur le dimensionnement flexible](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox#taille_modulable_des_éléments_flex)).
 
 ```css
 .container {
@@ -131,13 +131,13 @@ Dans l'exemple qui suit, les éléments flexibles prendront le même espace dans
 ```
 
 > [!NOTE]
-> Nous avons également construit un exemple plus concret d'une disposition adaptative utilisant les boîtes flexibles. Dans celui-ci, nous utilisons un point d'arrêt pour passer sur plusieurs colonnes lorsque l'écran est suffisamment large et nous limitons la taille du contenu principal à l'aide de la propriété [`max-width`](/fr/docs/Web/CSS/max-width). Voir [l'exemple en <i lang="en">live</i>](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html), et [le code source correspondant sur GitHub](https://github.com/mdn/css-examples/blob/main/learn/rwd/flex-based-rwd.html).
+> Nous avons également construit un exemple plus concret d'une disposition adaptative utilisant les boîtes flexibles. Dans celui-ci, nous utilisons un point d'arrêt pour passer sur plusieurs colonnes lorsque l'écran est suffisamment large et nous limitons la taille du contenu principal à l'aide de la propriété [`max-width`](/fr/docs/Web/CSS/Reference/Properties/max-width). Voir [l'exemple en <i lang="en">live</i>](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html), et [le code source correspondant sur GitHub](https://github.com/mdn/css-examples/blob/main/learn/rwd/flex-based-rwd.html).
 
 ### Grilles CSS
 
 Les dispositions créées avec les grilles CSS utilisent l'unité `fr` pour répartir l'espace disponible entre les pistes de la grille. Dans l'exemple suivant, on crée un conteneur de grille avec trois pistes dimensionnées avec `1fr`. Cela créera trois pistes de colonnes, chacune occupant une partie égale du conteneur.
 
-Pour en savoir plus sur cette approche utilisant les grilles, voir [les grilles flexibles avec l'unité `fr`](/fr/docs/Learn/CSS/CSS_layout/Grids#trames_adaptables_avec_lunité_fr).
+Pour en savoir plus sur cette approche utilisant les grilles, voir [les grilles flexibles avec l'unité `fr`](/fr/docs/Learn_web_development/Core/CSS_layout/Grids#trames_adaptables_avec_lunité_fr).
 
 ```css
 .container {
@@ -163,17 +163,17 @@ video {
 
 Ainsi, le média est redimensionné pour ne jamais dépasser du conteneur. En revanche, utiliser une seule image très grande et la redimensionner ainsi sur les appareils avec un petit écran revient à gaspiller de la bande passante et à télécharger des images plus grandes que ce qui est nécessaire.
 
-À l'aide de l'élément [`<picture>`](/fr/docs/Web/HTML/Element/picture) et des attributs [`srcset` et `sizes` de l'élément `<img>`](/fr/docs/Web/HTML/Element/img), on peut servir des images adaptées à la résolution et à la taille de la zone d'affichage de l'appareil utilisé. Ainsi, on pourra utiliser une image carrée à destination des mobiles et privilégier une image au format paysage pour la même scène sur un ordinateur.
+À l'aide de l'élément [`<picture>`](/fr/docs/Web/HTML/Reference/Elements/picture) et des attributs [`srcset` et `sizes` de l'élément `<img>`](/fr/docs/Web/HTML/Reference/Elements/img), on peut servir des images adaptées à la résolution et à la taille de la zone d'affichage de l'appareil utilisé. Ainsi, on pourra utiliser une image carrée à destination des mobiles et privilégier une image au format paysage pour la même scène sur un ordinateur.
 
 L'élément `<picture>` permet de fournir plusieurs tailles d'images à l'aide d'indications (des métadonnées qui décrivent la taille de l'écran et la résolution pour lesquelles l'image est la mieux adaptée). C'est le navigateur qui choisira l'image la plus pertinente pour l'appareil, s'assurant ainsi qu'une image de taille appropriée à l'appareil est téléchargée. Utiliser `<picture>` avec `max-width` permet de se passer des requêtes média pour le dimensionnement des images. Cela permet de cibler des images avec différentes proportions en fonction des tailles des zones d'affichage.
 
-[Le guide sur les images adaptatives de MDN](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) est utile pour en savoir plus.
+[Le guide sur les images adaptatives de MDN](/fr/docs/Web/HTML/Guides/Responsive_images) est utile pour en savoir plus.
 
 Quelques conseils complémentaires&nbsp;:
 
 - Assurez vous d'utiliser un format d'image approprié pour les images de votre site (comme PNG ou JPG), et d'optimiser la taille des fichiers à l'aide d'un éditeur graphique avant de publier les images sur votre site web.
-- Vous pouvez utiliser [des dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients) ou [des ombres CSS](/fr/docs/Web/CSS/box-shadow) afin d'implémenter des effets visuels sans recourir à des images.
-- Il est possible d'utiliser des requêtes média grâce à l'attribut `media` des éléments [`<source>`](/fr/docs/Web/HTML/Element/source) dans les éléments [`<video>`](/fr/docs/Web/HTML/Element/video)/[`<audio>`](/fr/docs/Web/HTML/Element/audio) afin de servir des fichiers pertinents selon l'appareil utilisé.
+- Vous pouvez utiliser [des dégradés CSS](/fr/docs/Web/CSS/Guides/Images/Using_gradients) ou [des ombres CSS](/fr/docs/Web/CSS/Reference/Properties/box-shadow) afin d'implémenter des effets visuels sans recourir à des images.
+- Il est possible d'utiliser des requêtes média grâce à l'attribut `media` des éléments [`<source>`](/fr/docs/Web/HTML/Reference/Elements/source) dans les éléments [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video)/[`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio) afin de servir des fichiers pertinents selon l'appareil utilisé.
 
 ## Typographie adaptative
 
@@ -226,7 +226,7 @@ h1 {
 
 Le problème avec l'approche précédente est qu'elle empêche de zoomer le texte dimensionné à l'aide de l'unité `vw` (car la taille du texte est toujours relative à celle de la zone d'affichage). **Aussi, il ne faut jamais dimensionner du texte en utilisant uniquement des unités relatives à la zone d'affichage.**
 
-Une solution consiste à utiliser [`calc()`](/fr/docs/Web/CSS/calc). En ajoutant la valeur exprimée `vw` à une valeur exprimée dans une unité fixe (comme `em` ou `rem`), on pourra zoomer sur le texte. La valeur en unité `vw` sera ajoutée à la valeur zoomée&nbsp;:
+Une solution consiste à utiliser [`calc()`](/fr/docs/Web/CSS/Reference/Values/calc). En ajoutant la valeur exprimée `vw` à une valeur exprimée dans une unité fixe (comme `em` ou `rem`), on pourra zoomer sur le texte. La valeur en unité `vw` sera ajoutée à la valeur zoomée&nbsp;:
 
 ```css
 h1 {
@@ -241,13 +241,13 @@ Avec cette approche, on peut définir à un seul endroit la taille de la police 
 
 ## La balise méta `viewport`
 
-En regardant le code source HTML d'une page <i lang="en">responsive</i>, vous rencontrerez probablement la balise [`<meta>`](/fr/docs/Web/HTML/Element/meta) suivante dans l'élément `<head>` du document.
+En regardant le code source HTML d'une page <i lang="en">responsive</i>, vous rencontrerez probablement la balise [`<meta>`](/fr/docs/Web/HTML/Reference/Elements/meta) suivante dans l'élément `<head>` du document.
 
 ```html
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
-La balise méta [`viewport`](/fr/docs/Web/HTML/Viewport_meta_tag) indique aux navigateurs mobiles de fixer la largeur de la zone d'affichage sur la largeur de l'appareil et de mettre à l'échelle le document à 100% de sa taille voulue, permettant d'afficher le document sous sa forme optimisée pour mobile, comme voulu.
+La balise méta [`viewport`](/fr/docs/Web/HTML/Reference/Elements/meta/name/viewport) indique aux navigateurs mobiles de fixer la largeur de la zone d'affichage sur la largeur de l'appareil et de mettre à l'échelle le document à 100% de sa taille voulue, permettant d'afficher le document sous sa forme optimisée pour mobile, comme voulu.
 
 Pourquoi est-ce nécessaire&nbsp;? Eh bien parce que les navigateurs mobiles ont tendance à mentir à propos de la largeur de leur zone d'affichage.
 
@@ -267,7 +267,7 @@ Il est également plus facile d'obtenir des dispositions adaptatives en employan
 
 - Prendre en charge les appareils tactiles&nbsp;:
   - [L'API des évènements tactiles](/fr/docs/Web/API/Touch_events) permet d'interpréter l'activité du doigt ou du stylet sur les écrans ou surfaces tactiles, pour implémenter des interfaces utilisateurs tactiles complexes.
-  - Les caractéristiques média [`pointer`](/fr/docs/Web/CSS/@media/pointer) et [`any-pointer`](/fr/docs/Web/CSS/@media/any-pointer) permettent d'appliquer du CSS différent en fonction de la prise en charge tactile de l'appareil.
+  - Les caractéristiques média [`pointer`](/fr/docs/Web/CSS/Reference/At-rules/@media/pointer) et [`any-pointer`](/fr/docs/Web/CSS/Reference/At-rules/@media/any-pointer) permettent d'appliquer du CSS différent en fonction de la prise en charge tactile de l'appareil.
 - [Le guide CSS Tricks sur les requêtes média (en anglais)](https://css-tricks.com/a-complete-guide-to-css-media-queries/)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}

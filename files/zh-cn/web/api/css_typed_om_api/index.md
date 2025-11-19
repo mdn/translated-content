@@ -64,7 +64,7 @@ CSS 类型对象模型 API 的 {{domxref('CSSUnparsedValue')}} 接口创建一�
 {{domxref('CSSStyleValue')}} 接口是所有可通过类型对象模型访问 CSS 值的基类。子类包括：
 
 - {{domxref('CSSImageValue')}}
-  - : 表示采用图像的属性值的接口，例如：[`background-image`](/zh-CN/docs/Web/CSS/background-image)、[`list-style-image`](/zh-CN/docs/Web/CSS/list-style-image) 或 [`border-image-source`](/zh-CN/docs/Web/CSS/border-image-source)。
+  - : 表示采用图像的属性值的接口，例如：[`background-image`](/zh-CN/docs/Web/CSS/Reference/Properties/background-image)、[`list-style-image`](/zh-CN/docs/Web/CSS/Reference/Properties/list-style-image) 或 [`border-image-source`](/zh-CN/docs/Web/CSS/Reference/Properties/border-image-source)。
 - {{domxref('CSSKeywordValue')}}
   - : 用于创建一个表示 CSS 关键字和其他标识符的对象的接口。当在需要字符串的地方使用时，它将返回 `CSSKeyword.value` 的值。
 - {{domxref('CSSMathValue')}}
@@ -93,11 +93,11 @@ CSS 类型对象模型 API 的 {{domxref('CSSUnparsedValue')}} 接口创建一�
 - {{domxref('CSSPositionValue')}}
   - : 表示采用某个位置的属性（例如 object-position）的值。
 - {{domxref('CSSTransformValue')}}
-  - : 表示 [`transform`](/zh-CN/docs/Web/CSS/transform) 列表值的接口。“包含”一个或多个表示 `transform` 函数值的 {{domxref('CSSTransformComponent')}}。
+  - : 表示 [`transform`](/zh-CN/docs/Web/CSS/Reference/Properties/transform) 列表值的接口。“包含”一个或多个表示 `transform` 函数值的 {{domxref('CSSTransformComponent')}}。
 - {{domxref('CSSUnitValue')}}
   - : 表示可以表示为单个单位或具名数字和百分比的数值的接口。
 - {{domxref('CSSUnparsedValue')}}
-  - : 表示引用[自定义属性](/zh-CN/docs/Web/CSS/--*)的属性值。它由字符串片段和变量引用的列表组成。
+  - : 表示引用[自定义属性](/zh-CN/docs/Web/CSS/Reference/Properties/--*)的属性值。它由字符串片段和变量引用的列表组成。
 
 ## 规范
 

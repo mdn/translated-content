@@ -11,7 +11,7 @@ slug: orphaned/Web/Compatibility_FAQ/Tips_Default_Style_Difference.html
 ## 例
 
 1. **デフォルトのフォントが異なる**
-    ブラウザー毎でデフォルトのフォントが異なる場合があります。[font-style](/ja/docs/Web/CSS/font-style)プロパティを明示的に指定すると統一できますが、[font-style](/ja/docs/Web/CSS/font-style): normal; で指定した場合は、表示が多少異なります。
+    ブラウザー毎でデフォルトのフォントが異なる場合があります。[font-style](/ja/docs/Web/CSS/Reference/Properties/font-style)プロパティを明示的に指定すると統一できますが、[font-style](/ja/docs/Web/CSS/Reference/Properties/font-style): normal; で指定した場合は、表示が多少異なります。
     部分的に細かい px 指定をしていると、稀にレイアウトの崩れを起こすことがありますので、その場合は、明示的に指定を行う必要があります。
 
     ```css

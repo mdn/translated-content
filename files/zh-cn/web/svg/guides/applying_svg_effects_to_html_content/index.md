@@ -5,7 +5,7 @@ slug: Web/SVG/Guides/Applying_SVG_effects_to_HTML_content
 
 现代浏览器支持在 [CSS](/zh-CN/docs/Web/CSS) 样式中使用 [SVG](/zh-CN/docs/Web/SVG) 来对 HTML 内容应用图像效果。
 
-你可以在同一文件中使用 SVG 样式，也可以通过外部样式表引入。有三个属性可以使用： [`mask`](/zh-CN/docs/Web/CSS/mask), [`clip-path`](/zh-CN/docs/Web/CSS/clip-path), 和 `filter`。
+你可以在同一文件中使用 SVG 样式，也可以通过外部样式表引入。有三个属性可以使用： [`mask`](/zh-CN/docs/Web/CSS/Reference/Properties/mask), [`clip-path`](/zh-CN/docs/Web/CSS/Reference/Properties/clip-path), 和 `filter`。
 
 > [!NOTE]
 > 在外部文件引入的 SVG 必须与原始文件 [同源](/zh-CN/docs/Web/Security/Same-origin_policy) 。
@@ -127,7 +127,7 @@ function toggleRadius() {
 
 ### 示例：Filtering
 
-这个例子演示了如何使用 SVG 对 HTML 内容进行过滤。它建立了几个过滤器，这些过滤器与 CSS 一起作用于正常和鼠标悬停状态 [hover](/zh-CN/docs/Web/CSS/:hover) 下的三个元素。
+这个例子演示了如何使用 SVG 对 HTML 内容进行过滤。它建立了几个过滤器，这些过滤器与 CSS 一起作用于正常和鼠标悬停状态 [hover](/zh-CN/docs/Web/CSS/Reference/Selectors/:hover) 下的三个元素。
 
 ```html
 <p class="target" style="background: lime;">
@@ -227,7 +227,7 @@ pre.target:hover {
 
 ### 示例：Blurred Text
 
-为了模糊文本，基于 Webkit 的浏览器有一个名为 blur 的（前缀）CSS 过滤器，（另见 [CSS filter](/zh-CN/docs/Web/CSS/filter#blur%28%29_2)）。你可以使用 SVG 过滤器获得相同的效果。
+为了模糊文本，基于 Webkit 的浏览器有一个名为 blur 的（前缀）CSS 过滤器，（另见 [CSS filter](/zh-CN/docs/Web/CSS/Reference/Properties/filter#blur%28%29_2)）。你可以使用 SVG 过滤器获得相同的效果。
 
 ```html
 <p class="blur">Time to clean my glasses</p>

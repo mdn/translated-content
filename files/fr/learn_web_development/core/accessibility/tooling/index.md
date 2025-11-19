@@ -53,9 +53,9 @@ Toutefois, ce serait faux de réduire l'accessibilité uniquement aux handicaps.
 - Les utilisateurs de vieux appareils qui n'ont pas les derniers navigateurs.
 - Les utilisateurs avec des appareils aux caractéristiques basses qui peuvent avoir des processeurs lents.
 
-D'une certaine manière, la totalité de ce module concerne l'accessibilité — le test en navigateur croisé assure que vos sites peuvent être utilisé par le plus de personne possible. [Qu'est-ce que l'accessibilité ?](/fr/docs/Learn/Accessibility/What_is_accessibility) décrit plus largement et précisément l'accessibilité que cet article ne le fait.
+D'une certaine manière, la totalité de ce module concerne l'accessibilité — le test en navigateur croisé assure que vos sites peuvent être utilisé par le plus de personne possible. [Qu'est-ce que l'accessibilité ?](/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility) décrit plus largement et précisément l'accessibilité que cet article ne le fait.
 
-Cela dit, cet article couvrira les problèmes en navigateur croisé et de test entourant les personnes avec des handicaps, et comment ils utilisent le Web. Nous avons déjà parlé des autres domaines comme le [responsive design](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#les_problèmes_de_responsive_design) et la [performance](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#les_problèmes_de_performance) à d'autres endroits dans ce module.
+Cela dit, cet article couvrira les problèmes en navigateur croisé et de test entourant les personnes avec des handicaps, et comment ils utilisent le Web. Nous avons déjà parlé des autres domaines comme le [responsive design](/fr/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS#les_problèmes_de_responsive_design) et la [performance](/fr/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript#les_problèmes_de_performance) à d'autres endroits dans ce module.
 
 > [!NOTE]
 > Comme beaucoup de choses dans le développement web, l'accessibilité ne concerne pas la totale réussite ou échec ; l'accessibilité à 100% est quasiment impossible à atteindre pour tous les contenus, spécialement quand les sites deviennent plus complexes. Il s'agit plutôt de faire un effort pour rendre votre contenu accessible au plus grand nombre de personnes possible, avec du code de prévention, et se tenir aux meilleures pratiques.
@@ -65,7 +65,7 @@ Cela dit, cet article couvrira les problèmes en navigateur croisé et de test e
 Dans cette section nous détaillerons certains des problèmes principaux qui se manifestent autour de l'accessibilité, liée à des technologies spécifiques, avec les bonnes pratiques à adopter, et quelques tests rapides que vous pouvez faire pour voir si vos sites vont dans le bon sens.
 
 > [!NOTE]
-> L'accessibilité est moralement la bonne chose à faire, est bonne pour les affaires (nombre élevé d'utilisateurs handicapés, utilisateurs sur des appareils mobiles, etc. représentent un segment du marché signifiant), mais c'est aussi illégal dans de nombreuses régions de la planète de ne pas rendre les propriétés du web accessibles aux personnes avec des handicaps. Pour plus d'informations, lisez [Accessibility guidlines and the law](/fr/docs/Learn/Accessibility/What_is_accessibility#accessibility_guidelines_and_the_law).
+> L'accessibilité est moralement la bonne chose à faire, est bonne pour les affaires (nombre élevé d'utilisateurs handicapés, utilisateurs sur des appareils mobiles, etc. représentent un segment du marché signifiant), mais c'est aussi illégal dans de nombreuses régions de la planète de ne pas rendre les propriétés du web accessibles aux personnes avec des handicaps. Pour plus d'informations, lisez [Accessibility guidlines and the law](/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_guidelines_and_the_law).
 
 ### HTML
 
@@ -143,7 +143,7 @@ Notez que différents navigateurs peuvent avoir différentes options de contrôl
 
 Cet exemple souligne l'importance de l'utilisation de la sémantique correcte d'élément pour le travail correct. C'est possible de styler _n'importe quel_ élément pour qu'il ressemble à un lien ou un bouton avec le CSS, et de le faire se comporter comme un lien ou un bouton avec JavaScript, mais ils ne seront toujours pas des liens ou des boutons, et vous perdrez beaucoup de l'accessibilité que ces éléments vous fournissent pour rien. Donc ne le faîte pas si vous pouvez l'éviter.
 
-Un autre conseil — comme vu dans notre exemple, vous pouvez contrôler comment vos éléments focalisables paraissent quand ils sont focalisés, en utilisant la pseudo-class [:focus](/fr/docs/Web/CSS/:focus). C'est une bonne idée de doubler les styles focus et hover, comme ça vos utilisateurs auront un indice visuel qu'un contrôle fera quelque chose lorsqu'il sera activé, qu'ils utilisent la souris ou le clavier :
+Un autre conseil — comme vu dans notre exemple, vous pouvez contrôler comment vos éléments focalisables paraissent quand ils sont focalisés, en utilisant la pseudo-class [:focus](/fr/docs/Web/CSS/Reference/Selectors/:focus). C'est une bonne idée de doubler les styles focus et hover, comme ça vos utilisateurs auront un indice visuel qu'un contrôle fera quelque chose lorsqu'il sera activé, qu'ils utilisent la souris ou le clavier :
 
 ```css
 a:hover,
@@ -188,7 +188,7 @@ Parfois ça n'est pas possible d'éviter la perte de l'accessibilité clavier. V
 Les textes alternatifs sont très importants pour l'accessibilité — si une personne a un trouble visuel ou auditif qui l'empêche de voir ou d'entendre un contenu, alors c'est un problème. Le texte alternatif le plus simple disponible est le modeste attribut `alt`, que nous devrions inclure dans toutes les images qui contiennent un contenu pertinent. Il peut contenir une description de l'image qui transmet clairement son sens et son contenu sur la page, pour être récupéré par un lecteur d'écran et lu à l'utilisateur.
 
 > [!NOTE]
-> Pour plus d'informations, lisez [Text alternatives](/fr/docs/Learn/Accessibility/HTML#text_alternatives).
+> Pour plus d'informations, lisez [Text alternatives](/fr/docs/Learn_web_development/Core/Accessibility/HTML#text_alternatives).
 
 L'oubli de texte alt peut être testé de bien des façons, par exemple en utilisant [les outils d'audit](#les_outils_daudit) d'accessibilité.
 
@@ -203,14 +203,14 @@ La solution pour les textes de type lien c'est que les personnes utilisant des l
 Le suivant sur notre liste, l'élément de formulaire {{htmlelement("label")}} est une des fonctionnalités centrales qui nous permet de rendre les formulaires accessibles. Le problème avec les formulaires c'est que vous avez besoin de libellés pour dire quelle donnée doit être entrée dans chaque champs du formulaire. Chaque libellé doit être inclus dans un {{htmlelement("label")}} pour le relier clairement à son champs partenaire (chaque valeur de l'attribut `for` de `<label>` doit aller avec la valeur de l'`id` de l'élément du formulaire), et cela aura du sens même si le code source n'est pas totalement logique (ce qui pour être tout à fait juste devrait être fait).
 
 > [!NOTE]
-> Lisez [Meaningful text labels](/fr/docs/Learn/Accessibility/HTML#meaningful_text_labels), pour plus d'information à propos des textes de type lien et les libellés des formulaires.
+> Lisez [Meaningful text labels](/fr/docs/Learn_web_development/Core/Accessibility/HTML#meaningful_text_labels), pour plus d'information à propos des textes de type lien et les libellés des formulaires.
 
 Pour terminer, un mot rapide sur les tableaux de données. Un tableau de données basique peut être écrit avec des indications très simples (voir `bad-table.html` [en direct](https://mdn.github.io/learning-area/accessibility/html/bad-table.html), et [la source](https://github.com/mdn/learning-area/blob/master/accessibility/html/bad-table.html)), mais il y a des problèmes — il n'y a aucun moyen pour un utilisateur de lecteur d'écran d'associer des lignes ou des colonnes ensembles comme un groupe de données — pour faire cela vous devez connaître les lignes d'en-têtes, et si elles se dirigent en lignes, colonnes, etc. Cela ne peut être fait qu'en visuel pour un tel tableau.
 
 Si vous regardez plutôt notre exemple `punk-band-complete.html` ([direct](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html), [source](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-complete.html)), vous pouvez voir plusieurs aides à l'accessibilité en place, comme les entêtes de tableau ({{htmlelement("th")}} et les attributs `scope`), l'élément {{htmlelement("caption")}}, etc.
 
 > [!NOTE]
-> Lisez [Accessible data tables](/fr/docs/Learn/Accessibility/HTML#accessible_data_tables), pour plus d'information à propos des tableaux accessibles.
+> Lisez [Accessible data tables](/fr/docs/Learn_web_development/Core/Accessibility/HTML#accessible_data_tables), pour plus d'information à propos des tableaux accessibles.
 
 ### CSS
 
@@ -233,7 +233,7 @@ Une autre astuce est de ne pas compter sur une couleur seule pour les indication
 
 #### Cacher du contenu
 
-Il y a plusieurs cas où un design visuel requerra que tout le contenu ne soit pas montré d'un seul coup. Par exemple, dans notre [Exemple de boîte d'info avec onglets](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)) nous avons trois panneau d'information, mais nous les [positionnons](/fr/docs/Learn/CSS/CSS_layout/Positioning) les uns sur les autres et fournissons des onglets qui peuvent être cliqués pour montrer chacun d'entre eux (c'est aussi accessible au clavier — vous pouvez utiliser alternativement Tab et Entrée/Retour pour les sélectionner).
+Il y a plusieurs cas où un design visuel requerra que tout le contenu ne soit pas montré d'un seul coup. Par exemple, dans notre [Exemple de boîte d'info avec onglets](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)) nous avons trois panneau d'information, mais nous les [positionnons](/fr/docs/Learn_web_development/Core/CSS_layout/Positioning) les uns sur les autres et fournissons des onglets qui peuvent être cliqués pour montrer chacun d'entre eux (c'est aussi accessible au clavier — vous pouvez utiliser alternativement Tab et Entrée/Retour pour les sélectionner).
 
 ![](tabbed-info-box.png)
 
@@ -241,7 +241,8 @@ Les utilisateurs de lecteur d'écran ne se soucient pas vraiment de cela — ils
 
 D'un autre côté, vous ne devriez pas utiliser {{cssxref("visibility")}}`:hidden` ou {{cssxref("display")}}`:none`, parce qu'il cache le contenu aux lecteurs d'écran. A moins que, bien entendu, il y est une bonne raison qui justifie que ce contenu soit caché aux lecteurs d'écran.
 
-> **Note :** [Invisible Content Just for Screen Reader Users](https://webaim.org/techniques/css/invisiblecontent/) vous décrira beaucoup de détails utilesà propos de ce sujet.
+> [!NOTE]
+> [Invisible Content Just for Screen Reader Users](https://webaim.org/techniques/css/invisiblecontent/) vous décrira beaucoup de détails utilesà propos de ce sujet.
 
 ### JavaScript
 
@@ -254,7 +255,8 @@ Normalement, une fonctionnalité simple doit marcher uniquement avec le HTML en 
 - Fournir une validation de formulaire côté client, qui informe rapidement les utilisateurs des problèmes avec leurs entrées dans le formulaire, sans qu'ils aient à attendre que le serveur vérifie les données. Si ça n'est pas disponible, le formulaire marchera toujours, mais la validation sera peut-être plus lente.
 - Fournir des contrôles personnalisés pour les `<video>`s HTML5 qui sont accessibles pour les utilisateurs uniquement au clavier (comme nous l'avons dit auparavant, les contrôles par défaut de navigateur ne sont pas accessibles au clavier dans la plupart des navigateurs).
 
-> **Note :** [Accessible JavaScript](https://webaim.org/techniques/javascript/) de WebAIM fourni des renseignements approfondis à propos des considérations pour du JavaScript accessible.
+> [!NOTE]
+> [Accessible JavaScript](https://webaim.org/techniques/javascript/) de WebAIM fourni des renseignements approfondis à propos des considérations pour du JavaScript accessible.
 
 Les implémentations JavaScript plus complexes peuvent mener à des problèmes avec l'accessibilité — vous devez faire ce que vous pouvez. par exemple, cela ne serait pas raisonnable d'attendre de vous que vous fassiez un jeu complexe 3D écrit avec [WebGL](/fr/docs/Apprendre/WebGL) accessible à 100% pour une personne aveugle, mais vous pouvez implémenter des [contrôles clavier](/fr/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard) pour qu'il soit utilisable pour un utilisateur sans souris, et réaliser une palette de couleurs suffisamment contrastée pour être utilisable par les personnes avec des lacunes pour percevoir les couleurs.
 
@@ -287,7 +289,7 @@ Voici un exemple :
 
 Vous pouvez voir un exemple en action sur l'exemple [ARIA (Accessible Rich Internet Applications) Live Regions](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm) de Freedom Scientific — le paragraphe surligné doit mettre à jour son contenu toutes les 10 secondes, et un lecteur d'écran doit le lire à l'utilisateur. [ARIA Live Regions - Atomic](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegionsAtomic.htm) apporte un autre exemple utile.
 
-Nous n'avons pas de place pour couvrir WAI-ARIA en détail ici, vous pouvez en apprendre beaucoup plus à ce propos sur [WAI-ARIA basics](/fr/docs/Learn/Accessibility/WAI-ARIA_basics).
+Nous n'avons pas de place pour couvrir WAI-ARIA en détail ici, vous pouvez en apprendre beaucoup plus à ce propos sur [WAI-ARIA basics](/fr/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics).
 
 ## Les outils d'accessibilité
 
@@ -339,7 +341,8 @@ La plupart du temps, les lecteurs d'écran sont des applis séparées, qui s'ex�
 
 Commençons à effectuer quelques tests avec deux lecteurs d'écran différents pour vous donner une idée générale de comment ils fonctionnent et de comment tester avec eux.
 
-> **Note :** [Designing for Screen Reader Compatibility](https://webaim.org/techniques/screenreader/) de WebAIM fournit des informations utiles à propos de l'utilisation des lecteurs d'écran et qu'est-ce qui est le plus efficace pour les lecteurs d'écran. Aller également voir [Screen Reader User Survey #6 Results](https://webaim.org/projects/screenreadersurvey6/#used) pour des statistiques intéressantes concernant l'utilisation de lecteur d'écran.
+> [!NOTE]
+> [Designing for Screen Reader Compatibility](https://webaim.org/techniques/screenreader/) de WebAIM fournit des informations utiles à propos de l'utilisation des lecteurs d'écran et qu'est-ce qui est le plus efficace pour les lecteurs d'écran. Aller également voir [Screen Reader User Survey #6 Results](https://webaim.org/projects/screenreadersurvey6/#used) pour des statistiques intéressantes concernant l'utilisation de lecteur d'écran.
 
 #### VoiceOver
 
@@ -671,13 +674,13 @@ Maintenant que vous vous êtes habitué à utiliser un lecteur d'écran, nous ai
 
 ### Test utilisateur
 
-Comme mentionné plus haut, vous ne pouvez pas uniquement compter sur les outils automatisés pour déterminer les problèmes d'accessibilité sur votre site. Il est recommandé que lorsque vous établissez votre plan de test, vous devez inclure quelques groupes d'utilisateur d'accessibilité si c'est possible (voir notre section [Test Utilisateur](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#les_tests_utilisateurs) plus tôt dans ce cours pour plus de contexte). Essayez d'inclure des utilisateurs de lecteur d'écran, des utilisateurs exclusifs au clavier, des utilisateurs malentendants, et peut-être d'autres groupes encore, selon vos besoins.
+Comme mentionné plus haut, vous ne pouvez pas uniquement compter sur les outils automatisés pour déterminer les problèmes d'accessibilité sur votre site. Il est recommandé que lorsque vous établissez votre plan de test, vous devez inclure quelques groupes d'utilisateur d'accessibilité si c'est possible (voir notre section [Test Utilisateur](/fr/docs/Learn_web_development/Extensions/Testing/Testing_strategies#les_tests_utilisateurs) plus tôt dans ce cours pour plus de contexte). Essayez d'inclure des utilisateurs de lecteur d'écran, des utilisateurs exclusifs au clavier, des utilisateurs malentendants, et peut-être d'autres groupes encore, selon vos besoins.
 
 ## Checklist de tests d'accessibilité
 
 La liste suivante vous fournit une checklist à suivre pour vous assurer de mener à bien les tests d'accessibilité recommandés pour votre projet :
 
-1. Assurez-vous que votre HTML est sémantiquement correct au possible. [Le valider](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#la_validation) est un bon début, comme utiliser un [outil d'Audit](#Auditing_tools).
+1. Assurez-vous que votre HTML est sémantiquement correct au possible. [Le valider](/fr/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS#la_validation) est un bon début, comme utiliser un [outil d'Audit](#Auditing_tools).
 2. Vérifiez que votre contenu a du sens lorsque le CSS est désactivé.
 3. Assurez-vous que votre fonctionnalité est [accessible au clavier](#Using_native_keyboard_accessibility). Testez en utilisant Tab, Retour/Entrée, etc.
 4. Assurez-vous que votre contenu non-textuel a un [texte alternatif](#Text_alternatives). Un [Outil d'audit](#Auditing_tools) est bien pour repérer ce type de problèmes.

@@ -23,7 +23,7 @@ CORS 机制允许 Web 应用服务器进行跨源访问控制，从而使跨源�
 - Web 字体（CSS 中通过 `@font-face` 使用跨源字体资源），[因此，网站就可以发布 TrueType 字体资源，并只允许已授权网站进行跨站调用](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)。
 - [WebGL 贴图](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)。
 - 使用 {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}} 将图片或视频画面绘制到 canvas。
-- [来自图像的 CSS 图形](/zh-CN/docs/Web/CSS/CSS_shapes/Shapes_from_images)。
+- [来自图像的 CSS 图形](/zh-CN/docs/Web/CSS/Guides/Shapes/From_images)。
 
 本文概述了跨源资源共享机制及其所涉及的 HTTP 标头。
 
@@ -340,11 +340,10 @@ CORS 预检请求不能包含凭据。预检请求的*响应*必须指定 `Acces
 
 在响应附带身份凭证的请求时：
 
-- 服务器**不能**将 `Access-Control-Allow-Origin` 的值设为通配符“`*`”，而应将其设置为特定的域，如：`Access-Control-Allow-Origin: https://example.com`。
-
-- 服务器**不能**将 `Access-Control-Allow-Headers` 的值设为通配符“`*`”，而应将其设置为标头名称的列表，如：`Access-Control-Allow-Headers: X-PINGOTHER, Content-Type`
-
-- 服务器**不能**将 `Access-Control-Allow-Methods` 的值设为通配符“`*`”，而应将其设置为特定请求方法名称的列表，如：`Access-Control-Allow-Methods: POST, GET`
+- 服务器**不能**将 `Access-Control-Allow-Origin` 的值设为通配符（`*`），而应将其设置为特定的域，如：`Access-Control-Allow-Origin: https://example.com`。
+- 服务器**不能**将 `Access-Control-Allow-Headers` 的值设为通配符（`*`），而应将其设置为特定标头名称的列表，如：`Access-Control-Allow-Headers: X-PINGOTHER, Content-Type`
+- 服务器**不能**将 `Access-Control-Allow-Methods` 的值设为通配符（`*`），而应将其设置为特定请求方法名称的列表，如：`Access-Control-Allow-Methods: POST, GET`
+- 服务器**不能**将 `Access-Control-Expose-Headers` 的值设为通配符（`*`），而应将其设置为特定标头名称的列表，如：`Access-Control-Expose-Headers: Content-Encoding, Kuma-Revision`
 
 对于附带身份凭证的请求（通常是 `Cookie`），
 
@@ -381,7 +380,7 @@ Access-Control-Allow-Origin: https://mozilla.org
 Vary: Origin
 ```
 
-如果服务端指定了具体的单个源（作为允许列表的一部分，可能会根据请求的来源而动态改变）而非通配符“`*`”，那么响应标头中的 {{HTTPHeader("Vary")}} 字段的值必须包含 `Origin`。这将告诉客户端：服务器对不同的 {{HTTPHeader("Origin")}} 返回不同的内容。
+如果服务端指定了具体的单个源（作为允许列表的一部分，可能会根据请求的来源而动态改变）而非通配符（`*`），那么响应标头中的 {{HTTPHeader("Vary")}} 字段的值必须包含 `Origin`。这将告诉客户端：服务器对不同的 {{HTTPHeader("Origin")}} 返回不同的内容。
 
 ### Access-Control-Expose-Headers
 

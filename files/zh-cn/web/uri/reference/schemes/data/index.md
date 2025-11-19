@@ -113,5 +113,5 @@ lots of text…
 - [百分号编码](/zh-CN/docs/Glossary/Percent-encoding)
 - {{domxref("WindowBase64.atob","atob()")}}
 - {{domxref("WindowBase64.btoa","btoa()")}}
-- [CSS `url()`](/zh-CN/docs/Web/CSS/url_value)
+- [CSS `url()`](/zh-CN/docs/Web/CSS/Reference/Values/url_value)
 - [URI](/zh-CN/docs/Glossary/URI)

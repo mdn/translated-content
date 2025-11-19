@@ -1,151 +1,146 @@
 ---
-title: Notions de base en HTML
+title: "HTML : Créer le contenu"
+short-title: Créer le contenu
 slug: Learn_web_development/Getting_started/Your_first_website/Creating_the_content
 original_slug: Learn/Getting_started_with_the_web/HTML_basics
 l10n:
-  sourceCommit: 34a34bee83fb4accf073ebc0c8cfc8eff956dc9b
+  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
 
-HTML (pour <i lang="en">HyperText Markup Language</i>, qu'on peut traduire en «&nbsp;langage de balisage hypertexte&nbsp;») est le langage utilisé pour structurer une page web et son contenu. On peut par exemple organiser le contenu en un ensemble de paragraphes, une liste d'éléments, utiliser des images ou des tableaux de données. Dans cet article, nous verrons les notions de base pour comprendre HTML et ses fonctionnalités.
+HTML (pour <i lang="en">HyperText Markup Language</i> en anglais, qu'on peut traduire en «&nbsp;langage de balisage hypertexte&nbsp;») est le langage utilisé pour structurer une page web et son contenu. On peut par exemple organiser le contenu en un ensemble de paragraphes, une liste d'éléments, utiliser des images ou des tableaux de données. Dans cet article, nous verrons les notions de base pour comprendre HTML et ses fonctionnalités.
+
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">Prérequis&nbsp;:</th>
+      <td>
+        Connaissance de base de votre système d'exploitation, des logiciels essentiels pour créer un site web, et du système de fichiers.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objectifs d'apprentissage&nbsp;:</th>
+      <td>
+        <ul>
+          <li>Le but et la fonction de HTML.</li>
+          <li>Les parties de base de la syntaxe HTML&nbsp;: balises ouvrantes et fermantes, éléments, attributs, head, body.</li>
+          <li>Les éléments HTML courants, y compris les paragraphes, titres, images, listes et liens.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Qu'est-ce que HTML&nbsp;?
 
-HTML est _un langage de balisage_ qui définit la structure du contenu. Un document HTML est une suite d'[éléments](/fr/docs/Glossary/Element) utilisés pour encadrer différentes parties du contenu afin de les faire apparaître ou se comporter d'une certaine façon. Les [balises](/fr/docs/Glossary/Tag) autour du contenu permettent de transformer une image ou un texte pour obtenir un lien vers une autre page, de créer des titres, etc. Prenons comme exemple le contenu qui suit&nbsp;:
+HTML est _un langage de balisage_ qui définit la structure du contenu. Un document HTML est une suite d'{{Glossary("element", "éléments")}} utilisés pour encadrer (ou envelopper) le contenu textuel afin de définir sa structure et de lui faire adopter un certain comportement.
 
-```text
-Mon chat est très grincheux.
+Prenons un exemple — le contenu suivant sera affiché sur la même ligne lorsqu'il sera affiché sur une page web, car il n'est pas structuré de quelque manière que ce soit&nbsp;:
+
+```plain
+Instructions de la vie :
+Manger
+Dormir
+Répéter
 ```
 
-Si on veut que la ligne ait son propre paragraphe, on peut utiliser les balises correspondantes (`<p>`) pour encadrer le contenu&nbsp;:
+Si nous enveloppons ce contenu avec les éléments HTML suivants, nous pouvons transformer cette seule ligne en un paragraphe ({{htmlelement("p")}}) et trois puces ({{htmlelement("li")}})&nbsp;:
 
-```html
-<p>Mon chat est très grincheux.</p>
+```html live-sample___basic-html
+<p>Instructions de la vie&nbsp;:</p>
+
+<ul>
+  <li>Manger</li>
+  <li>Dormir</li>
+  <li>Recommencer</li>
+</ul>
 ```
 
-### Anatomie d'un élément HTML
+Ce code HTML s'affichera ainsi dans un navigateur web&nbsp;:
 
-Voyons cet élément de paragraphe plus en détails.
+{{EmbedLiveSample("basic-html", "100%", "140px")}}
 
-![Un élément de paragraphe avec une balise ouvrante, le contenu 'Mon chat est très grincheux.', puis une balise fermante](grumpy-cat-small.png)
+En plus de structurer du texte, HTML a de nombreux autres usages&nbsp;: faire en sorte que du texte ou des images mènent à d'autres pages web, intégrer des images ou des vidéos, créer des tableaux de données, etc.
 
-Les parties principales de notre élément sont&nbsp;:
+## Créer votre premier document HTML
 
-1. **La balise ouvrante**&nbsp;: celle-ci se compose du nom de l'élément (ici `p`), entre deux **chevrons** (le premier ouvrant `<` et le second fermant `>`). Cela indique le début de l'élément, ici cela indique où le paragraphe commence.
-2. **La balise fermante**&nbsp;: à la différence de la balise ouvrante, une _barre oblique_ (<i lang="en">slash</i>) est ajoutée avant le nom de l'élément. Cela indique la fin de l'élément. Dans notre exemple, c'est l'endroit où le paragraphe s'arrête. Oublier cette balise fermante est une erreur qu'on fait souvent au début et qui peut déclencher des effets étranges et indésirables.
-3. **Le contenu**&nbsp;: le contenu de l'élément. Pour cet exemple, il s'agit uniquement de texte.
-4. **L'élément**&nbsp;: l'ensemble formé par la balise ouvrante, la balise fermante et le contenu constitue l'élément.
+Voyons comment les éléments individuels sont combinés pour former une page HTML. Dans cette section, vous allez créer un fichier HTML de base et examiner sa composition.
 
-Les éléments peuvent aussi avoir des attributs comme ceci&nbsp;:
+1. Dans votre dossier `projets-web`, créez un nouveau dossier nommé `mon-premier-site`.
+2. À l'intérieur de `mon-premier-site`, créez un nouveau fichier appelé `index.html`, et insérez-y le code suivant exactement comme indiqué&nbsp;:
 
-![La balise ouvrante du paragraphe possède un attribut class mis en avant et qui contient class=class-css](grumpy-cat-attribute-small.png)
+   ```html
+   <!doctype html>
+   <html lang="fr">
+     <head>
+       <meta charset="utf-8" />
+       <meta name="viewport" content="width=device-width" />
+       <title>Ma page de test</title>
+     </head>
+     <body>
+       <img src="" alt="Mon image de test" />
+     </body>
+   </html>
+   ```
 
-Les attributs contiennent des informations supplémentaires à propos de l'élément et qui ne sont pas affichées avec le contenu. Ici, `class` correspond au _nom_ de l'attribut et `editor-note` correspond à la _valeur_ de l'attribut. L'attribut `class` permet de donner un identifiant non unique qui peut être utilisé pour cibler l'élément (et tous les autres éléments qui partagent la même valeur d'attribut pour `class`), notamment pour la mise en forme ou la manipulation avec des scripts.
+Voici ce que nous avons&nbsp;:
 
-Certains attributs n'ont pas de valeur, comme [`required`](/fr/docs/Web/HTML/Attributes/required).
-
-Les attributs qui ont une valeur observent ces règles&nbsp;:
-
-1. Il y a un espace entre le nom de l'attribut et le nom de l'élément (ou le précédent attribut si l'élément a déjà un ou plusieurs attributs).
-2. Le nom de l'attribut est suivi par un signe égal (`=`).
-3. La valeur de l'attribut est délimitée par des doubles (`"`) ou simples (`'`) quotes.
+- `<!doctype html>`&nbsp;: Le [doctype](/fr/docs/Glossary/Doctype) est un préambule obligatoire. Aux débuts de HTML (vers 1991/92), les doctypes servaient de liens vers des ensembles de règles qu'une page HTML devait suivre pour être considérée comme correcte, ce qui pouvait permettre une vérification automatique des erreurs et d'autres fonctionnalités utiles. Aujourd'hui, ils ne servent plus à grand-chose et sont simplement nécessaires pour que votre document se comporte correctement. C'est tout ce que vous devez savoir pour l'instant.
+- `<html></html>`&nbsp;: L'élément {{htmlelement("html")}} englobe tout le contenu de la page et est parfois appelé **élément racine**. Il inclut aussi l'{{glossary("attribute", "attribut")}} `lang`, qui définit la langue principale du document.
+- `<head></head>`&nbsp;: L'élément {{htmlelement("head")}} sert de conteneur pour tout ce que vous souhaitez inclure dans la page HTML qui _n'est pas_ du contenu affiché aux visiteur·euse·s. Cela inclut par exemple des {{Glossary("keyword", "mots-clés")}} et une description de la page pour les résultats de recherche, du {{glossary("CSS")}} pour la mise en forme, des déclarations d'encodage de caractères, etc.
+- `<meta charset="utf-8">`&nbsp;: Cet élément définit l'encodage de caractères que votre document doit utiliser, à savoir [UTF-8](/fr/docs/Glossary/UTF-8), qui inclut la plupart des caractères de la grande majorité des langues écrites. Il peut donc gérer tout contenu textuel que vous pourriez y placer. Il n'y a aucune raison de ne pas le définir, cela permet d'éviter certains problèmes plus tard.
+- `<meta name="viewport" content="width=device-width">`&nbsp;: Cet [élément viewport](/fr/docs/Web/CSS/Guides/CSSOM_view/Viewport_concepts#zones_daffichage_sur_mobiles) garantit que la page s'affiche à la largeur de la zone d'affichage du navigateur, empêchant les navigateurs mobiles d'afficher des pages plus larges que la zone d'affichage puis de les réduire.
+- `<title></title>`&nbsp;: L'élément {{htmlelement("title")}} définit le titre de votre page, qui apparaît dans l'onglet du navigateur où la page est chargée. Il sert aussi à décrire la page lorsqu'on l'ajoute aux favoris.
+- `<body></body>`&nbsp;: L'élément {{htmlelement("body")}} contient _tout_ le contenu que vous souhaitez afficher aux utilisateur·ice·s web lorsqu'ils visitent votre page, qu'il s'agisse de texte, d'images, de vidéos, de jeux, de pistes audio, etc. Pour l'instant, il ne contient qu'un seul élément `<img>`, mais nous ajouterons plus de contenu par la suite.
 
 > [!NOTE]
-> Les valeurs d'attribut qui ne contiennent pas de blancs ASCII (ou l'un des caractères parmi `"` `'` `` ` `` `=` `<` `>`) peuvent ne pas être encadrées de quotes. Malgré tout, il est recommandé d'utiliser des quotes pour toutes les valeurs d'attribut afin que le code soit cohérent et compréhensible.
-
-### Imbrication d'éléments
-
-On peut également placer des éléments à l'intérieur d'autres éléments&nbsp;: c'est ce qu'on appelle **l'imbrication**. Si on souhaitait indiquer que le chat était **très** grincheux, on pourrait placer le mot «&nbsp;très&nbsp;» dans un élément [`<strong>`](/fr/docs/Web/HTML/Element/strong), indiquant l'accentuation sur ce mot&nbsp;:
-
-```html
-<p>Mon chat est <strong>très</strong> grincheux.</p>
-```
-
-Il faut en revanche s'assurer que les éléments sont correctement imbriqués. Dans l'exemple précédent, on commence par ouvrir l'élément [`<p>`](/fr/docs/Web/HTML/Element/p), puis l'élément [`<strong>`](/fr/docs/Web/HTML/Element/strong). Il faut donc commencer par fermer l'élément `<strong>`, puis l'élément `<p>`. Ce qui suit est incorrect&nbsp;:
-
-```html-nolint example-bad
-<p>Mon chat est <strong>très grincheux.</p></strong>
-```
-
-Les éléments doivent être ouverts et fermés correctement pour contenir ou être contenu. S'ils se chevauchent l'un sur l'autre, votre navigateur web essaiera au mieux de deviner l'intention, mais cela pourra entraîner des résultats inattendus&nbsp;: mieux vaut éviter&nbsp;!
-
-### Éléments vides
-
-Certains éléments n'ont pas de contenu, on les qualifie d'[éléments vides](/fr/docs/Glossary/Void_element). Prenons l'exemple de l'élément [`<img>`](/fr/docs/Web/HTML/Element/img) que nous avons sur notre page HTML&nbsp;:
-
-```html
-<img src="images/firefox-icon.png" alt="Mon image de test" />
-```
-
-Cet élément contient deux attributs (`src` et `alt`) mais n'a pas de contenu et il n'y a pas de balise fermante. En effet, un élément d'image n'encadre pas du contenu pour avoir un effet sur celui-ci. Son but est d'intégrer une image dans un document HTML à l'endroit où il est placé.
-
-### Anatomie d'un document HTML
-
-Voilà ce qu'on peut dire individuellement sur les éléments HTML. En revanche, un élément HTML seul n'a pas vraiment d'intérêt. Nous allons donc voir comment sont assemblés les éléments pour former une page HTML complète. Reprenons le code que nous avions mis dans le fichier d'exemple `index.html` (voir l'article [Manipuler les fichiers](/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files))&nbsp;:
-
-```html
-<!doctype html>
-<html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Ma page de test</title>
-  </head>
-  <body>
-    <img src="images/firefox-icon.png" alt="Mon image de test" />
-  </body>
-</html>
-```
-
-Voici ce qu'on y trouve&nbsp;:
-
-- `<!DOCTYPE html>`
-  - : [Le «&nbsp;<i lang="en">doctype</i>&nbsp;»](/fr/docs/Glossary/Doctype). Il s'agit d'un préambule obligatoire. Aux débuts de HTML (en 1991/1992), les <i lang="en">doctypes</i> servaient de liens vers des ensembles de règles qu'une page HTML devait suivre pour être considérée valides (avec des fonctionnalités de vérifications d'erreur et autres). Aujourd'hui, ils ne sont plus utilisés ainsi et ce marqueur sert uniquement au bon comportement du document. C'est tout ce qu'il y a à savoir là-dessus pour le moment.
-- `<html></html>`
-  - : L'élément [`<html>`](/fr/docs/Web/HTML/Element/html) est celui qui contient tout le reste de la page. On l'appelle aussi l'élément racine. Il contient ici l'attribut `lang` qui indique la langue principale du contenu du document.
-- `<head></head>`
-  - : L'élément [`<head>`](/fr/docs/Web/HTML/Element/head) sert de conteneur pour tout ce qu'on veut inclure dans une page HTML qui n'est _pas_ du contenu à afficher à l'écran. Cela inclut [les mots-clés](/fr/docs/Glossary/Keyword) et une description de la page destinée aux moteurs de recherches, les liens vers le CSS qui mettra en forme notre contenu, les déclarations pour les jeux de caractères utilisés, etc.
-- `<meta charset="utf-8">`
-  - : Cet élément définit le jeu de caractères utilisé pour le document, ici UTF-8 (qui inclut la plupart des caractères pour un grand nombre de langues écrites). Ce jeu de caractères permettra de gérer n'importe quel contenu textuel placé dans le document. Inclure cette information ne coûte rien et permet d'éviter des problèmes d'encodage par la suite.
-- `<meta name="viewport" content="width=device-width">`
-  - : Cet [élément `viewport`](/fr/docs/Web/CSS/Viewport_concepts#zones_daffichage_sur_mobiles) permet que la page soit affichée avec la bonne largeur par rapport à la zone d'affichage, empêchant les navigateurs sur mobile d'afficher la page plus largement que la zone d'affichage avant de la réduire.
-- `<title></title>`
-  - : L'élément [`<title>`](/fr/docs/Web/HTML/Element/title) définit le titre de la page, qui apparaîtra dans l'onglet sur lequel la page est chargée. Il sert aussi à décrire la page lorsqu'on l'ajoute aux favoris ou qu'elle est listée dans les résultats d'un moteur de recherche.
-- `<body></body>`
-  - : L'élément [`<body>`](/fr/docs/Web/HTML/Element/body) contient _tout_ le contenu qu'on veut afficher aux utilisatrices et utilisateurs web lorsqu'ils visitent la page, que ce soit du texte, des vidéos, des jeux, des pistes audio, etc.
+> La plupart des éléments HTML se composent d'une **balise ouvrante** (par exemple, `<body>`), suivie du contenu de l'élément, puis d'une **balise fermante** (par exemple, `</body>`). Certains éléments HTML possèdent aussi des **attributs**, qui contiennent des réglages ou des informations supplémentaires sur l'élément — voyez par exemple `charset`, `name` et `src` dans notre exemple de code.
 
 ## Images
 
-Revenons sur l'élément [`<img>`](/fr/docs/Web/HTML/Element/img)&nbsp;:
+Revenons sur l'élément {{htmlelement("img")}}&nbsp;:
 
 ```html
-<img src="images/firefox-icon.png" alt="Mon image de test" />
+<img src="" alt="Mon image de test" />
 ```
 
-Comme mentionné auparavant, cet élément permet d'intégrer une image dans la page là où l'élément est placé. L'image à afficher est désignée par l'attribut `src` (source) qui contient le chemin vers le fichier image.
+Cela permet d'intégrer une image dans notre page à l'endroit où elle apparaît. Cela se fait via l'attribut `src` (source), qui contient le chemin vers le fichier image à intégrer.
 
-Nous avons également inclus un attribut `alt` (pour texte alternatif). [L'attribut `alt`](/fr/docs/Web/HTML/Element/img#écrire_des_descriptions_alternatives_significatives), permet d'indiquer un texte descriptif pour les personnes qui ne peuvent pas voir l'image&nbsp;:
+Nous avons également inclus un attribut `alt` (alternatif). Dans l'[attribut `alt`](/fr/docs/Web/HTML/Reference/Elements/img#rédiger_des_descriptions_alternatives_pertinentes), vous indiquez un texte descriptif pour les personnes qui ne peuvent pas voir l'image, pour les raisons suivantes&nbsp;:
 
-1. À cause d'un handicap visuel. Les personnes avec un handicap visuel utilisent généralement des logiciels appelés lecteurs d'écran qui lisent le texte alternatif à haute voix.
-2. Un problème a empêché le chargement de l'image. Vous pouvez voir ce cas en modifiant le chemin de l'attribut `src` pour le rendre incorrect. Si vous sauvegardez le document HTML et rechargez la page, vous pourrez voir un résultat comme ceci&nbsp;:
+1. Elles sont en situation de handicap visuel. Les utilisateur·ice·s avec un handicap visuel important utilisent souvent des outils appelés lecteurs d'écran qui lisent le texte alternatif à voix haute.
+2. Un problème empêche l'affichage de l'image. Si l'attribut `src` ne contient pas un chemin valide vers une image, le texte alternatif sera affiché à la place&nbsp;:
 
-![Les mots qui sont affichés : mon image de test](alt-text-example.png)
+![Les mots : mon image de test](alt-text-example.png)
 
-Les mots-clés utilisés pour le texte alternatif forment un texte descriptif. Le texte alternatif devrait fournir suffisamment d'informations à la lectrice ou au lecteur pour avoir une bonne idée de ce que l'image contient. Dans cet exemple, notre texte est «&nbsp;Mon image de test&nbsp;». Ce texte n'est vraiment pas idéal, il ne renseigne en rien sur ce que contient l'image. Une bien meilleure alternative décrivant le logo serait «&nbsp;Le logo de Firefox&nbsp;: un renard enflammé entourant la Terre&nbsp;».
-
-Essayez maintenant d'utiliser un meilleur texte alternatif pour votre image.
+Le texte alternatif que vous écrivez doit fournir suffisamment d'informations à la lectrice ou au lecteur pour qu'il·elle comprenne ce que l'image représente. Dans cet exemple, notre texte actuel «&nbsp;Mon image de test&nbsp;» n'est pas idéal car il n'apporte aucune information descriptive sur l'image. Une bien meilleure alternative pour notre logo Firefox serait «&nbsp;Le logo de Firefox&nbsp;: un renard enflammé entourant la Terre&nbsp;».
 
 > [!NOTE]
-> Pour en savoir plus sur l'accessibilité, n'hésitez pas à consulter [notre module d'apprentissage sur l'accessibilité](/fr/docs/Learn/Accessibility).
+> Les éléments comme `<img>` n'ont pas de contenu ni de balise fermante, on les appelle donc des éléments **vides** (ou **{{glossary("void element")}}**). Ils sont parfois écrits avec une **barre oblique finale** à la fin de leur unique balise (`<img />`), mais cela reste optionnel.
+
+Affichons maintenant votre image.
+
+1. Dans le dossier `mon-premier-site`, créez un nouveau dossier appelé `images` et placez-y l'image que vous avez choisie à l'étape précédente.
+2. Dans la valeur de l'attribut `src` de la balise `<img>`, indiquez le chemin vers votre image. Elle se trouve dans un dossier appelé `images`, qui est dans le même répertoire que votre fichier `index.html`, donc le chemin sera `images/` suivi du nom de votre image. Par exemple, si votre image s'appelle `firefox-icon.png`, votre attribut `src` ressemblera à ceci&nbsp;: `src="images/firefox-icon.png"`.
+3. Remplacez la valeur de l'attribut `alt` — «&nbsp;Mon image de test&nbsp;» — par un texte qui décrit mieux votre image.
+4. Ouvrez votre fichier `index.html` dans un navigateur web. Vous devriez voir votre image s'afficher. Si ce n'est pas le cas, vérifiez votre élément `<img>` avec notre code&nbsp;: assurez-vous qu'il ne manque aucune partie de la syntaxe, comme les guillemets. Vérifiez aussi que le nom du fichier image est correct.
+
+Si l'image est très grande et ne rentre pas à l'écran, ne vous inquiétez pas. Nous corrigerons ce problème dans l'article suivant.
+
+> [!NOTE]
+> Pour en savoir plus sur l'utilisation de l'attribut `alt` pour les images dans différentes situations, consultez notre [tutoriel sur l'accessibilité des contenus multimédias](/fr/docs/Learn_web_development/Core/Accessibility/Multimedia) et [l'arbre de décision pour l'attribut alt <sup>(angl.)</sup>](https://www.w3.org/WAI/tutorials/images/decision-tree/).
 
 ## Baliser du texte
 
 Cette section décrira certains des éléments HTML essentiels pour baliser et structurer le texte d'un document.
 
+> [!NOTE]
+> Le parcours Scrimba [Les bases du langage HTML sémantique <sup>(angl.)</sup>](https://scrimba.com/the-frontend-developer-career-path-c0j/~0xid?via=mdn) de Scrimba <sup>[partenaire d'apprentissage MDN](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations)</sup> est une leçon interactive qui fournit une description utile de HTML, en insistant particulièrement sur l'importance de l'aspect _sémantique_.
+
 ### Titres
 
-Les éléments de titre permettent d'indiquer les parties du contenu qui sont des titres ou des sous-titres. De la même façon qu'un livre peut avoir un titre principal, des titres de chapitre, des sous-titres, un document HTML peut en avoir également. HTML contient 6 niveaux de titre [`<h1> - <h6>`](/fr/docs/Web/HTML/Element/Heading_Elements), même si on en utilisera généralement 3 à 4 au plus&nbsp;:
+Les éléments de titre permettent d'indiquer les parties du contenu qui sont des titres ou des sous-titres. De la même façon qu'un livre peut avoir un titre principal, des titres de chapitre, des sous-titres, un document HTML peut en avoir également. HTML contient 6 niveaux de titre {{htmlelement("Heading_Elements", "&lt;h1&gt;-&lt;h6&gt;")}}, même si on en utilisera généralement 3 à 4 au plus&nbsp;:
 
 ```html
 <!-- 4 niveaux de titres : -->
@@ -158,31 +153,26 @@ Les éléments de titre permettent d'indiquer les parties du contenu qui sont de
 > [!NOTE]
 > En HTML, tout ce qui est écrit entre `<!--` et `-->` est un **commentaire HTML**. Le navigateur ignore les commentaires lorsqu'il affiche le document. Autrement dit, ce qui est écrit en commentaire est uniquement visible dans le code et pas sur la page. Les commentaires permettent d'ajouter des notes utiles à propos du code ou de la logique.
 
-Essayez maintenant d'ajouter un titre pertinent à votre page HTML avant l'élément [`<img>`](/fr/docs/Web/HTML/Element/img).
-
-> [!NOTE]
-> Vous pourrez voir que le titre de niveau 1 possède une mise en forme implicite, mais il ne faut pas utiliser ces éléments pour uniquement afficher du texte en gras ou plus grand. En effet, les éléments ont un sens, utilisé pour [l'accessibilité](/fr/docs/Learn/Accessibility/HTML#contenus_textuels) et [le référencement](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#pourquoi_faut-il_structurer_un_document). Essayez de créer une structure de titres pertinente pour vos pages, sans sauter de niveaux intermédiaires.
+Essayez maintenant d'ajouter un titre pertinent à votre page HTML avant l'élément {{htmlelement("img")}}. Sauvegardez le fichier et observez le dans un navigateur pour voir l'effet.
 
 ### Paragraphes
 
-Comme expliqué plus tôt, les éléments [`<p>`](/fr/docs/Web/HTML/Element/p) forment des paragraphes de texte. Cet élément est souvent utilisé pour baliser du texte normal du contenu d'une page&nbsp;:
+Les éléments {{htmlelement("p")}} servent à contenir des paragraphes de texte&nbsp;; vous les utiliserez fréquemment pour baliser le contenu textuel ordinaire&nbsp;:
 
 ```html
 <p>Voici un paragraphe simple</p>
 ```
 
-Ajoutez votre texte d'échantillon (celui créé à la lecture de [_À quoi ressemblera votre site web&nbsp;?_](/fr/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)) dans un ou plusieurs paragraphes, juste après l'élément [`<img>`](/fr/docs/Web/HTML/Element/img).
+Ajoutez votre texte d'exemple du précédent chapitre dans un ou plusieurs paragraphes, placés juste en dessous de votre élément {{htmlelement("img")}}. Enregistrez et affichez votre page dans un navigateur.
 
 ### Listes
 
 Une bonne partie du contenu web prend la forme de listes. HTML possède des éléments dédiés. Baliser une liste se fait toujours avec au moins deux éléments. Les types de liste les plus fréquemment utilisés sont les listes ordonnées et les listes non-ordonnées&nbsp;:
 
-- Les listes non-ordonnées
-  - : Utilisées pour les listes où l'ordre des éléments n'a pas d'importance, comme une liste de courses. Pour celles-ci, on utilise un élément [`<ul>`](/fr/docs/Web/HTML/Element/ul).
-- Les listes ordonnées
-  - : Utilisées pour les listes où l'ordre des éléments est important, comme une recette de cuisine. Pour celles-ci, on utilise un élément [`<ol>`](/fr/docs/Web/HTML/Element/ol).
+1. **Listes non ordonnées**&nbsp;: utilisées pour les listes où l'ordre des éléments n'a pas d'importance, comme une liste de courses. Celles-ci sont enveloppées dans un élément {{htmlelement("ul")}}.
+2. **Listes ordonnées**&nbsp;: utilisées pour les listes où l'ordre des éléments a de l'importance, comme une liste d'instructions de cuisine dans une recette. Celles-ci sont enveloppées dans un élément {{htmlelement("ol")}}.
 
-Chaque élément d'une liste est placé dans un élément [`<li>`](/fr/docs/Web/HTML/Element/li).
+Chaque élément d'une liste est placé dans un élément {{htmlelement("li")}}.
 
 Ainsi, si on veut qu'une partie de notre paragraphe devienne une liste, à la place de&nbsp;:
 
@@ -209,18 +199,18 @@ On pourra écrire&nbsp;:
 
 Essayez d'ajouter une liste ordonnée ou non-ordonnée à votre page d'exemple.
 
-## Liens
+## Créer des liens
 
-Les liens sont importants, ce sont eux qui forment la toile qu'est le Web&nbsp;! Pour ajouter un lien, on utilisera un élément [`<a>`](/fr/docs/Web/HTML/Element/a) («&nbsp;a&nbsp;» correspondant à «&nbsp;ancre&nbsp;»). Pour placer un lien dans votre paragraphe, suivez les étapes suivantes&nbsp;:
+Les liens sont importants, ce sont eux qui forment la toile qu'est le Web&nbsp;! Pour ajouter un lien, on utilisera un élément {{htmlelement("a")}} («&nbsp;a&nbsp;» correspondant à «&nbsp;ancre&nbsp;»). Pour placer un lien dans votre paragraphe, suivez les étapes suivantes&nbsp;:
 
 1. Identifiez le texte voulu (ici nous prendrons le texte «&nbsp;Manifeste Mozilla&nbsp;»).
-2. Entourez-le avec les balises ouvrantes et fermantes d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a) comme suit&nbsp;:
+2. Entourez-le avec les balises ouvrantes et fermantes d'un élément {{htmlelement("a")}} comme suit&nbsp;:
 
    ```html
    <a>Manifeste Mozilla</a>
    ```
 
-3. Ajoutez un attribut `href` à l'élément [`<a>`](/fr/docs/Web/HTML/Element/a)&nbsp;:
+3. Ajoutez un attribut `href` à l'élément {{htmlelement("a")}}&nbsp;:
 
    ```html
    <a href="">Manifeste Mozilla</a>
@@ -234,18 +224,24 @@ Les liens sont importants, ce sont eux qui forment la toile qu'est le Web&nbsp;!
 
 Attention, vous pourriez obtenir des résultats inattendus si vous omettez la partie `https://` ou `http://`, qui indique le _protocole_, au début de l'adresse. Après avoir créé un lien, cliquez dessus pour vous assurer qu'il pointe à l'endroit voulu.
 
-> **Note :** `href` peut sembler un peu obscure comme nom d'attribut&nbsp;: il signifie <i lang="en">hypertext reference</i> soit «**réf**érence **h**ypertexte ».
+> [!NOTE]
+> `href` peut sembler un peu obscure comme nom d'attribut&nbsp;: il signifie <i lang="en">hypertext reference</i> soit «**réf**érence **h**ypertexte ».
 
 Ajoutez un lien à votre page si ça n'est pas déjà fait.
 
 ## Conclusion
 
-Si vous avez suivi l'ensemble des instructions de cet article, vous devriez obtenir une page qui ressemble à celle-ci (vous pouvez aussi [la voir ici (en anglais)](https://mdn.github.io/beginner-html-site/))&nbsp;:
+Si vous avez suivi l'ensemble des instructions de cet article, vous devriez obtenir une page qui ressemble à celle-ci (vous pouvez aussi [la voir ici <sup>(angl)</sup>](https://mdn.github.io/beginner-html-site/))&nbsp;:
 
 ![Une capture d'écran d'une page web avec le logo de Firefox, un titre qui dit "Mozilla est cool" en anglais et deux paragraphes de texte de remplissage.](finished-test-page-small.png)
 
-Si vous coincez, vous pouvez toujours comparer votre travail avec [le code de notre exemple finalisé sur GitHub](https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html).
+Si vous coincez, vous pouvez toujours comparer votre travail avec [le code de notre exemple finalisé sur GitHub <sup>(angl)</sup>](https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html).
 
-Nous n'avons fait qu'effleurer la surface de HTML. Pour approfondir, n'hésitez pas à consulter la thématique [Apprendre HTML](/fr/docs/Learn/HTML).
+Nous n'avons fait qu'effleurer la surface de HTML. Vous en apprendrez beaucoup plus dans notre module principal [Structurer le contenu avec HTML](/fr/docs/Learn_web_development/Core/Structuring_content) plus loin dans le cours.
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
+## Voir aussi
+
+- [Apprendre HTML et CSS <sup>(angl.)</sup>](https://scrimba.com/learn-html-and-css-c0p?via=mdn) sur Scrimba <sup>[Partenaire d'apprentissage MDN](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations)</sup>
+  - : Le cours [_Apprendre HTML et CSS_ <sup>(angl.)</sup>](https://scrimba.com?via=mdn) de Scrimba vous enseigne HTML et CSS à travers la création et la mise en ligne de cinq projets concrets, avec des leçons interactives et des défis ludiques animés par des formateur·ice·s expérimenté·e·s.
+
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website")}}

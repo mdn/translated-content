@@ -3,7 +3,7 @@ title: <dir>：目錄元素
 slug: Web/HTML/Reference/Elements/dir
 ---
 
-{{HTMLSidebar}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 **`<dir>`** [HTML](/zh-TW/docs/Web/HTML) 元素被用來作為文件和/或資料夾的目錄容器，可能會由{{Glossary("user agent", "使用者代理")}}應用樣式和圖示。請不要使用這個已過時的元素；相反地，你應該使用 {{HTMLElement("ul")}} 元素來建立列表，包括文件列表。
 
@@ -34,6 +34,6 @@ slug: Web/HTML/Reference/Elements/dir
 - 其他與列表相關的 HTML 元素：{{HTMLElement("ol")}}、{{HTMLElement("ul")}}、{{HTMLElement("li")}} 和 {{HTMLElement("menu")}}；
 - 可能特別有用於樣式化 `<dir>` 元素的 CSS 屬性：
   - {{cssxref('list-style')}} 屬性，用於選擇序數的顯示方式。
-  - [CSS 計數器](/zh-TW/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)，用於處理複雜的巢狀列表。
+  - [CSS 計數器](/zh-TW/docs/Web/CSS/Guides/Counter_styles/Using_counters)，用於處理複雜的巢狀列表。
   - {{Cssxref('line-height')}} 屬性，用於模擬已棄用的 [`compact`](#compact) 屬性。
   - {{cssxref('margin')}} 屬性，用於控制列表的縮排。

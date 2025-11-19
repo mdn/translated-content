@@ -3,8 +3,6 @@ title: "CSS: Cascading Style Sheets"
 slug: Web/CSS
 ---
 
-{{CSSRef}}
-
 **Cascading Style Sheets**(**CSS**)는 [HTML](/ko/docs/Web/HTML)이나
 [XML](/ko/docs/Web/XML)(XML의 방언인 [SVG](/ko/docs/Web/SVG),
 [XHTML](/ko/docs/Glossary/XHTML) 포함)로 작성된 문서의 표시 방법을 기술하기 위한
@@ -76,7 +74,7 @@ MDN [CSS 학습지](/ko/docs/conflicting/Learn_web_development/Core/Styling_basi
   - [언어 구문과 형태](/ko/docs/Web/CSS/CSS_syntax/Syntax)
   - [명시도](/ko/docs/Web/CSS/CSS_cascade/Specificity), [상속](/ko/docs/Web/CSS/CSS_cascade/Inheritance),
     [종속](/ko/docs/Web/CSS/Cascade)
-  - [CSS 단위와 값](/ko/docs/Web/CSS/CSS_Values_and_Units),
+  - [CSS 단위와 값](/ko/docs/Web/CSS/CSS_values_and_units),
     [CSS 함수 표기법](/ko/docs/Web/CSS/CSS_Functions)
   - [박스 모델](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)과
     [여백 상쇄](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
@@ -90,7 +88,7 @@ MDN [CSS 학습지](/ko/docs/conflicting/Learn_web_development/Core/Styling_basi
   - [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout)
   - [CSS 선택자](/ko/docs/Web/CSS/CSS_selectors)
   - [미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries)
-  - [애니메이션](/ko/docs/Web/CSS/animation)
+  - [애니메이션](/ko/docs/Web/CSS/Reference/Properties/animation)
 
 ## 쿡북
 

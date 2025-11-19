@@ -36,7 +36,7 @@ l10n:
   - : JavaScript 是 Web 的原生编程语言。
 - [WebAssembly](/zh-CN/docs/WebAssembly)
   - : 用 WebAssembly 在 Web 上运行使用 C、C++、Rust、Swift、C#、Go 等语言编写的程序。
-- [事件](/zh-CN/docs/Web/Events)
+- [事件](/zh-CN/docs/Web/API/Document_Object_Model/Events)
   - : Web 应用中，可响应的内容称作事件；例如，当一个网页完成加载，或者用户选择什么、按下一个键、调整一个窗口的大小、提交一个表单或暂停一个视频。
 - [HTTP](/zh-CN/docs/Web/HTTP)
   - : HTTP 是通过 Web 来获取文档、样式表、脚本、图像、视频、字体和其他资源——并将数据发送回 Web 服务器的基础互联网协议。

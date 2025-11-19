@@ -2,17 +2,15 @@
 title: constructor
 slug: Web/JavaScript/Reference/Classes/constructor
 l10n:
-  sourceCommit: 1b2c87c20466d2a3eec9b3551c269f9aff8f5762
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{jsSidebar("Classes")}}
 
 **`constructor`** メソッドは、[クラス](/ja/docs/Web/JavaScript/Reference/Classes)で作成されたオブジェクトインスタンスの生成と初期化を行うための特殊なメソッドです。
 
 > [!NOTE]
 > このページでは `constructor` の構文を紹介します。すべてのオブジェクトに存在する `constructor` プロパティについては、 {{jsxref("Object.prototype.constructor")}} を参照してください。
 
-{{InteractiveExample("JavaScript デモ: Classes Constructor")}}
+{{InteractiveExample("JavaScript デモ: クラスのコンストラクター")}}
 
 ```js interactive-example
 class Polygon {
@@ -24,7 +22,7 @@ class Polygon {
 const poly1 = new Polygon();
 
 console.log(poly1.name);
-// Expected output: "Polygon"
+// 予想される結果: "Polygon"
 ```
 
 ## 構文
@@ -196,11 +194,11 @@ const person = new Person();
 person.introduce(); // こんにちは、私は名無し
 ```
 
-コンストラクターはリテラル名でなければなりません。[計算プロパティ名](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#計算プロパティ名)はコンストラクターにはなれません。
+コンストラクターはリテラル名でなければなりません。[算出プロパティ名](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#算出プロパティ名)はコンストラクターにはなれません。
 
 ```js
 class Foo {
-  // これは計算プロパティ名です。コンストラクターとしてピックアップされることはありません。
+  // これは算出プロパティ名です。コンストラクターとしてピックアップされることはありません。
   ["constructor"]() {
     console.log("called");
     this.a = 1;

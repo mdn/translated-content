@@ -21,11 +21,11 @@ La syntaxe est la suivante : `<mfrac>numérateur dénominateur</mfrac>`.
 - href
   - : Un hyperlien pointant vers un URI donné.
 - linethickness
-  - : L'épaisseur de la ligne de fraction horizontale. La valeur par défaut est `medium`, mais l'attribut peut prendre d'autres valeurs comme `thin`, `thick`, et [autres](/fr/docs/Web/CSS/length).
+  - : L'épaisseur de la ligne de fraction horizontale. La valeur par défaut est `medium`, mais l'attribut peut prendre d'autres valeurs comme `thin`, `thick`, et [autres](/fr/docs/Web/CSS/Reference/Values/length).
 - mathbackground
-  - : La couleur de fond. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#mots-cl.c3.a9s).
+  - : La couleur de fond. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/Reference/Values/color_value#mots-cl.c3.a9s).
 - mathcolor
-  - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#mots-cl.c3.a9s).
+  - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/Reference/Values/color_value#mots-cl.c3.a9s).
 - numalign
   - : L'alignement du numérateur au dessus de la barre de fraction. Les valeurs possibles sont : `left`, `center` (la valeur par défaut), et `right`.
 

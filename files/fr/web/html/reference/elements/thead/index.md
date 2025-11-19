@@ -118,7 +118,7 @@ td {
 
 ## Attributs
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ### Attributs dépréciés ou obsolètes
 
@@ -140,19 +140,19 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
     > [!WARNING]
     > Cet attribut est devenu obsolète dans le dernier standard.
     >
-    > - Pour réaliser le même effet qu'avec les valeurs `left`, `center`, `right` ou `justify`, utilisez la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align) sur cet élément.
-    > - Pour réaliser le même effet qu'avec `char`, vous pouvez utiliser la valeur de `char` comme valeur pour la propriété [`text-align`](/fr/docs/Web/CSS/text-align).
+    > - Pour réaliser le même effet qu'avec les valeurs `left`, `center`, `right` ou `justify`, utilisez la propriété CSS [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align) sur cet élément.
+    > - Pour réaliser le même effet qu'avec `char`, vous pouvez utiliser la valeur de `char` comme valeur pour la propriété [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align).
 
 - `bgcolor` {{Non-standard_inline}}
-  - : Cet attribut définit la couleur d'arrière-plan de chaque cellule dans une colonne. Sa valeur est [un code hexadécimal RGB sur 6 chiffres](/fr/docs/Web/CSS/color_value#les_couleurs_rgb), préfixé d'un '`#`' ou un des [mots-clés de couleurs prédéfinis](/fr/docs/Web/CSS/color_value#les_mots-clés).
+  - : Cet attribut définit la couleur d'arrière-plan de chaque cellule dans une colonne. Sa valeur est [un code hexadécimal RGB sur 6 chiffres](/fr/docs/Web/CSS/Reference/Values/color_value#les_couleurs_rgb), préfixé d'un '`#`' ou un des [mots-clés de couleurs prédéfinis](/fr/docs/Web/CSS/Reference/Values/color_value#les_mots-clés).
 
-    Pour réaliser un effet équivalent, on utilisera plutôt la propriété CSS [`background-color`](/fr/docs/Web/CSS/background-color).
+    Pour réaliser un effet équivalent, on utilisera plutôt la propriété CSS [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color).
 
 - `char` {{Deprecated_inline}}
   - : Cet attribut est utilisé pour définir le caractère sur lequel aligner les cellules d'une colonne. Les valeurs de cet attribut contiennent généralement un point (.) pour aligner des nombres ou des valeurs monétaires. Si l'attribut `align` ne vaut pas `char`, l'attribut est ignoré.
 
     > [!NOTE]
-    > Cet attribut est obsolète et il est donc fortement déconseillé de l'utiliser. De fait, il n'est pas supporté par le dernier standard. Pour réaliser le même effet qu'avec `char`, on peut utiliser la même valeur sur la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align).
+    > Cet attribut est obsolète et il est donc fortement déconseillé de l'utiliser. De fait, il n'est pas supporté par le dernier standard. Pour réaliser le même effet qu'avec `char`, on peut utiliser la même valeur sur la propriété CSS [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align).
 
 - `charoff` {{Deprecated_inline}}
   - : Cet attribut est utilisé pour indiquer le décalage, en nombre de caractères, depuis le caractère définit par l'attribut `char` à appliquer au contenu des cellules.
@@ -172,11 +172,11 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
       - : Place le texte au plus haut de la cellule.
 
     > [!NOTE]
-    > Cet attribut étant maintenant obsolète (et n'étant plus supporté), il est fortement déconseillé de l'utiliser. La propriété CSS [`vertical-align`](/fr/docs/Web/CSS/vertical-align) doit être utilisée à la place.
+    > Cet attribut étant maintenant obsolète (et n'étant plus supporté), il est fortement déconseillé de l'utiliser. La propriété CSS [`vertical-align`](/fr/docs/Web/CSS/Reference/Properties/vertical-align) doit être utilisée à la place.
 
 ## Exemples
 
-Consulter la page [`<table>`](/fr/docs/Web/HTML/Element/table) pour des exemples d'utilisation de l'élément `<thead>`.
+Consulter la page [`<table>`](/fr/docs/Web/HTML/Reference/Elements/table) pour des exemples d'utilisation de l'élément `<thead>`.
 
 ## Spécifications
 
@@ -189,15 +189,15 @@ Consulter la page [`<table>`](/fr/docs/Web/HTML/Element/table) pour des exemples
 ## Voir aussi
 
 - Les autres éléments HTML liés aux tableaux&nbsp;:
-  - [`<caption>`](/fr/docs/Web/HTML/Element/caption)
-  - [`<col>`](/fr/docs/Web/HTML/Element/col)
-  - [`<colgroup>`](/fr/docs/Web/HTML/Element/colgroup)
-  - [`<table>`](/fr/docs/Web/HTML/Element/table)
-  - [`<tbody>`](/fr/docs/Web/HTML/Element/tbody)
-  - [`<td>`](/fr/docs/Web/HTML/Element/td)
-  - [`<tfoot>`](/fr/docs/Web/HTML/Element/tfoot)
-  - [`<th>`](/fr/docs/Web/HTML/Element/th)
-  - [`<tr>`](/fr/docs/Web/HTML/Element/tr)
+  - [`<caption>`](/fr/docs/Web/HTML/Reference/Elements/caption)
+  - [`<col>`](/fr/docs/Web/HTML/Reference/Elements/col)
+  - [`<colgroup>`](/fr/docs/Web/HTML/Reference/Elements/colgroup)
+  - [`<table>`](/fr/docs/Web/HTML/Reference/Elements/table)
+  - [`<tbody>`](/fr/docs/Web/HTML/Reference/Elements/tbody)
+  - [`<td>`](/fr/docs/Web/HTML/Reference/Elements/td)
+  - [`<tfoot>`](/fr/docs/Web/HTML/Reference/Elements/tfoot)
+  - [`<th>`](/fr/docs/Web/HTML/Reference/Elements/th)
+  - [`<tr>`](/fr/docs/Web/HTML/Reference/Elements/tr)
 - Les propriétés et pseudo-classes CSS particulièrement utiles pour mettre en forme l'élément `<thead>`&nbsp;:
-  - La pseudo-classe [`:nth-child`](/fr/docs/Web/CSS/:nth-child) qui permet de définir l'alignement des cellules de la colonne
-  - La propriété [`text-align`](/fr/docs/Web/CSS/text-align) qui permet d'aligner le contenu des différentes cellules par rapport à un même caractère (par exemple le point ou la virgule)
+  - La pseudo-classe [`:nth-child`](/fr/docs/Web/CSS/Reference/Selectors/:nth-child) qui permet de définir l'alignement des cellules de la colonne
+  - La propriété [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align) qui permet d'aligner le contenu des différentes cellules par rapport à un même caractère (par exemple le point ou la virgule)

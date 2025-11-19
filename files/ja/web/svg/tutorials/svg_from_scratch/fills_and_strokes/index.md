@@ -1,14 +1,11 @@
 ---
 title: 塗りつぶしとストローク
 slug: Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes
-original_slug: Web/SVG/Tutorial/Fills_and_Strokes
 l10n:
-  sourceCommit: 4c45276e195ba339f038ffbfdb3de7ab65424ed5
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}
-
-{{ PreviousNext("Web/SVG/Tutorial/Paths", "Web/SVG/Tutorial/Gradients") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Paths", "Web/SVG/Tutorials/SVG_from_scratch/Gradients") }}
 
 図形に色を付ける方法としては (オブジェクトに属性を指定することを含む)、インライン [CSS](/ja/docs/Glossary/CSS)、埋め込み CSS セクション、外部 CSS ファイルなどいくつかの方法があります。ほとんどに [SVG](/ja/docs/Glossary/SVG) ではインライン CSS を使用していますが、どの方法にも利点と欠点があります。
 
@@ -16,17 +13,27 @@ l10n:
 
 ### 塗りつぶし
 
-基本的な色付けは、ノードに `fill` と `stroke` という 2 つの属性を設定することで行うことができます。 `fill` を使用するとオブジェクトの内部の色を設定し、 `stroke` はオブジェクトを囲む線の色を設定します。色名 (例えば `red`)、RGB 値 (例えば `rgb(255 0 0)`)、16 進数値、RGBA 値など、HTML で用いる CSS の色名と同じ仕組みを用いることができます。
+基本的な色付けは、ノードに `fill` と `stroke` という 2 つの属性を設定することで行うことができます。 `fill` を使用するとオブジェクトの内部の色を設定し、 `stroke` はオブジェクトを囲む線の色を設定します。色名 (例えば `red`)、RGB 値 (例えば `rgb(255 0 0)`)、16 進数値など、HTML で用いる CSS の色名と同じ仕組みを用いることができます。
 
-```xml
- <rect x="10" y="10" width="100" height="100" stroke="blue" fill="purple"
-       fill-opacity="0.5" stroke-opacity="0.8"/>
+```html
+<?xml version="1.0" standalone="no"?>
+<svg width="160" height="140" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <rect
+    x="10"
+    y="10"
+    width="100"
+    height="100"
+    stroke="blue"
+    fill="purple"
+    fill-opacity="0.5"
+    stroke-opacity="0.8"
+    stroke-width="15" />
+</svg>
 ```
 
-さらに、 SVG では `fill` と `stroke` の透明度を別々に指定することができます。これらは `fill-opacity` 属性と `stroke-opacity` 属性で制御されます。
+{{EmbedLiveSample("Painting", "100%", 150)}}
 
-> [!NOTE]
-> Firefox 3+ 以降では、 `rgba` の値も許可されており、同じ効果が得られます。しかし、他のビューアーとの互換性を考慮すると、 `fill`/`stroke` の透明度を個別に指定したほうがよい場合があります。 `rgba` 値と `fill`/`stroke` opacity 値の両方を指定した場合、両方が適用されます。
+さらに、 SVG では `fill` と `stroke` の透明度を別々に指定することができます。これらは `fill-opacity` 属性と `stroke-opacity` 属性で制御されます。
 
 ### ストローク
 
@@ -92,14 +99,42 @@ l10n:
 
 最初の数字は塗りつぶされた部分の長さを、 2 番目の数字は塗りつぶされていない部分の長さを指定します。上の例では、 2 番目のパスで 5 ピクセル単位を埋め、 5 単位の次のダッシュまで 5 単位の空白を作ります。もっと複雑なダッシュパターンにしたい場合は、より多くの数字を指定することができます。最初の例では 3 つの数字を指定していますが、この場合、レンダラーは数字を 2 回ループさせて偶数のパターンを作ります。つまり、最初のパスでは、 5 個の塗りつぶし、 10 個の空、 5 個の塗りつぶしがレンダリングされ、さらにループして、 5 個の空、 10 個の塗りつぶし、 5 個の空が作成されます。このパターンが繰り返されます。
 
-`stroke` および `fill` プロパティは他にもあります。例えば、 [`fill-rule`](/ja/docs/Web/SVG/Reference/Attribute/fill-rule) は自身が重なり合っている図形でどのように色をつけるかを指定します。 [`stroke-miterlimit`](/ja/docs/Web/SVG/Reference/Attribute/stroke-miterlimit) はストロークが miter を描画するかどうかを指定します。そして [stroke-dashoffset](/ja/docs/Web/SVG/Reference/Attribute/stroke-dashoffset) は、線上で波線の列をどこから始めるかを指定します。
+`stroke` および `fill` プロパティは他にもあります。例えば、 `fill-rule` は自身が重なり合っている図形でどのように色をつけるかを指定します。 [`stroke-miterlimit`](/ja/docs/Web/SVG/Reference/Attribute/stroke-miterlimit) はストロークが miter を描画するかどうかを指定します。そして [stroke-dashoffset](/ja/docs/Web/SVG/Reference/Attribute/stroke-dashoffset) は、線上で波線の列をどこから始めるかを指定します。
+
+### 描画順
+
+塗りつぶしとストロークの描画順序は、 [`paint-order`](/ja/docs/Web/SVG/Reference/Attribute/paint-order) 属性を使用して制御できます。
+
+```html
+<?xml version="1.0" standalone="no"?>
+<svg width="400" height="180" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <polyline
+    points="40 80 80 40 120 80"
+    stroke-width="15"
+    stroke="black"
+    fill="coral"
+    paint-order="fill" />
+
+  <polyline
+    points="40 140 80 100 120 140"
+    stroke-width="15"
+    stroke="black"
+    fill="coral"
+    paint-order="stroke" />
+</svg>
+```
+
+{{EmbedLiveSample("Paint order", "100%", 180)}}
+
+最初の図形の場合、ストロークの前に塗りつぶしがレンダリングされているため、塗りつぶしの上に黒いストロークが現れます。
+2 つ目の図形の場合、塗りつぶしの前にストロークがレンダリングされています。
 
 ## CSS の使用
 
 オブジェクトに属性を設定するだけでなく、 CSS を使って塗りつぶしやストロークのスタイルを設定することもできます。すべての属性を CSS で設定できるわけではありません。ふつうは描画や塗りつぶしを行う属性が利用できます。 `fill`, `stroke`, `stroke-dasharray` などは、グラデーションや後述するパターン版に追加することで、すべてこの方法で設定できます。 `width`, `height`, {{SVGElement("path")}} コマンドなどの属性は、 CSS では設定できません。何が使えて、何が使えないのかは、テストしてみるのが一番簡単です。
 
 > [!NOTE]
-> [SVG 仕様書](https://www.w3.org/TR/SVG/propidx.html) では*プロパティ*とその他の属性を厳密に区別しています。前者は CSS で変更できますが、後者はできません。
+> [SVG 仕様書](https://svgwg.org/svg2-draft/propidx.html) ではプロパティとその他の属性を厳密に区別しています。前者は CSS で変更できますが、後者はできません。
 
 CSS は要素に `style` 属性を用いることで、インラインで挿入することができます。
 
@@ -119,6 +154,7 @@ CSS は要素に `style` 属性を用いることで、インラインで挿入�
        #MyRect {
          stroke: black;
          fill: red;
+         paint-order: stroke;
        }
     ]]></style>
   </defs>
@@ -155,4 +191,4 @@ CSS ルールを外部スタイルシートで指定するのに、[ふつうの
 }
 ```
 
-{{ PreviousNext("Web/SVG/Tutorial/Paths", "Web/SVG/Tutorial/Gradients") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Paths", "Web/SVG/Tutorials/SVG_from_scratch/Gradients") }}
