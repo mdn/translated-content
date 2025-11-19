@@ -10,8 +10,6 @@ l10n:
 
 `attr()` 用于检索所选元素的属性值并应用于 CSS 属性，类似 {{cssxref("var", "var()")}} 替换自定义属性值的方式。可以在[伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)上使用，采用伪元素的原始元素上的属性值。
 
-`attr()` 表达式可以用于任何 CSS 属性。 {{ experimental_inline() }}
-
 {{InteractiveExample("CSS attr() 演示")}}
 
 ```css interactive-example
