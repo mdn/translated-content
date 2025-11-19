@@ -11,4 +11,4 @@ En CSS, un sélecteur de **pseudo-classe** cible des éléments en fonction de l
 
 ### Référence technique
 
-- [Documentation sur les pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes)
+- [Documentation sur les pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes)

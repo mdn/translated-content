@@ -1,13 +1,12 @@
 ---
 title: Symbol.hasInstance
+short-title: hasInstance
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
 l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`Symbol.hasInstance`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)である `Symbol.hasInstance` を表します。{{jsxref("Operators/instanceof", "instanceof")}} 演算子は右辺オペランドに対して、コンストラクターオブジェクトがオブジェクトをそのインスタンスとして認識するかどうかを判断する際に使用されるメソッドを、このシンボルで探します。
+**`Symbol.hasInstance`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)の `Symbol.hasInstance` を表します。{{jsxref("Operators/instanceof", "instanceof")}} 演算子は右辺オペランドに対して、コンストラクターオブジェクトがオブジェクトをそのインスタンスとして認識するかどうかを判断する際に使用されるメソッドを、このシンボルで探します。
 
 {{InteractiveExample("JavaScript デモ: Symbol.hasInstance")}}
 
@@ -19,7 +18,7 @@ class Array1 {
 }
 
 console.log([] instanceof Array1);
-// Expected output: true
+// 予想される結果: true
 ```
 
 ## 値

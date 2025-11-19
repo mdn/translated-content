@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("CSS Containment")}}
 
-`skipped` は {{ domxref("ContentVisibilityAutoStateChangeEvent") }} インターフェイスの読み取り専用プロパティで、ユーザーエージェントが[要素のコンテンツをスキップする](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment#コンテンツのスキップ)場合は `true` を返し、そうでない場合は `false` を返します。
+`skipped` は {{ domxref("ContentVisibilityAutoStateChangeEvent") }} インターフェイスの読み取り専用プロパティで、ユーザーエージェントが[要素のコンテンツをスキップする](/ja/docs/Web/CSS/Guides/Containment/Using#コンテンツのスキップ)場合は `true` を返し、そうでない場合は `false` を返します。
 
 ## 値
 
@@ -52,6 +52,6 @@ function stopCanvasUpdates(canvas) {
 ## 関連情報
 
 - {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} イベント
-- [CSS コンテナー](/ja/docs/Web/CSS/CSS_containment)
+- [CSS コンテナー](/ja/docs/Web/CSS/Guides/Containment)
 - {{cssxref("content-visibility")}} プロパティ
 - {{cssxref("contain")}} プロパティ

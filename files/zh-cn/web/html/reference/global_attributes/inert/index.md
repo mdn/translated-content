@@ -28,7 +28,7 @@ l10n:
 `inert` 属性还可以添加到应处于屏幕外或隐藏状态的元素上。当元素处于 `inert` 状态时，该元素及其所有后代元素将从标签顺序和无障碍树中移除。
 
 > [!NOTE]
-> 虽然 `inert` 是一个全局属性，可应用于任何元素，但通常用于内容部分。要使单个控件“惰性”，请考虑使用 [`disabled`](/zh-CN/docs/Web/HTML/Reference/Attributes/disabled) 属性，以及 CSS [`:disabled`](/zh-CN/docs/Web/CSS/:disabled) 样式。
+> 虽然 `inert` 是一个全局属性，可应用于任何元素，但通常用于内容部分。要使单个控件“惰性”，请考虑使用 [`disabled`](/zh-CN/docs/Web/HTML/Reference/Attributes/disabled) 属性，以及 CSS [`:disabled`](/zh-CN/docs/Web/CSS/Reference/Selectors/:disabled) 样式。
 
 ## 无障碍考虑
 

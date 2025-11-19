@@ -42,12 +42,12 @@ Firefox 8 は 2011 年 11 月 8 日にリリースされました。このペー
 
 ### CSS
 
-- [`<resolution>`](/ja/docs/Web/CSS/resolution) が仕様に従い、[`<integer>`](/ja/docs/Web/CSS/integer) だけでなく [`<number>`](/ja/docs/Web/CSS/number) もサポートしました。
-- [`hyphens`](/ja/docs/Web/CSS/hyphens) 利用時のハイフネーション規則がより多くの言語でサポートされました。
-- [`background-size`](/ja/docs/Web/CSS/background-size) の処理が仕様により従ったものになりました。
-- これまで Quriks モードでの [`text-decoration`](/ja/docs/Web/CSS/text-decoration) は、太い線で描画され、また子孫要素のテキストに沿って描画されていました。Firefox 8 からは、標準モードにより近い表示になります。
+- [`<resolution>`](/ja/docs/Web/CSS/Reference/Values/resolution) が仕様に従い、[`<integer>`](/ja/docs/Web/CSS/Reference/Values/integer) だけでなく [`<number>`](/ja/docs/Web/CSS/Reference/Values/number) もサポートしました。
+- [`hyphens`](/ja/docs/Web/CSS/Reference/Properties/hyphens) 利用時のハイフネーション規則がより多くの言語でサポートされました。
+- [`background-size`](/ja/docs/Web/CSS/Reference/Properties/background-size) の処理が仕様により従ったものになりました。
+- これまで Quriks モードでの [`text-decoration`](/ja/docs/Web/CSS/Reference/Properties/text-decoration) は、太い線で描画され、また子孫要素のテキストに沿って描画されていました。Firefox 8 からは、標準モードにより近い表示になります。
 - 要素の水平方向への配置がより仕様に沿った実装になりました。この件に関するドキュメントを準備中ですが、今は [バグ 682780](https://bugzilla.mozilla.org/show_bug.cgi?id=682780) のコメント 23 をお読みください。
-- [SVG 画像の拡大縮小](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds) が背景画像においても適切に処理されるようになりました。
+- [SVG 画像の拡大縮小](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds) が背景画像においても適切に処理されるようになりました。
 
 ### Network
 

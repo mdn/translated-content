@@ -47,7 +47,7 @@ l10n:
 さらに、`<select>` 要素とそのドロップダウンピッカーには、以下の動作が自動的に割り当てられます。
 
 - [ポップオーバー API](/ja/docs/Web/API/Popover_API) で指定されているように、呼び出し元/ポップオーバーの関係を持ちます。これにより、{{cssxref(":popover-open")}} 擬似クラスを使ってピッカーが開いているときに選択できます。ポップオーバーの動作の詳細は [ポップオーバー API の使用](/ja/docs/Web/API/Popover_API/Using) を参照してください。
-- 暗黙的なアンカー参照を持ち、[CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning) を介してピッカーが自動的に `<select>` 要素に関連付けられます。ブラウザーのデフォルトスタイルは、ピッカーをボタン（アンカー）に対して位置指定し、[CSS アンカー位置指定の使用](/ja/docs/Web/CSS/CSS_anchor_positioning/Using#positioning_elements_relative_to_their_anchor) で説明されているように、この位置をカスタマイズできます。また、ビューポートからはみ出しそうな場合にピッカーを再配置するポジション・トライ・フォールバックも定義されています。詳細は [オーバーフローの処理: トライ・フォールバックと条件付き非表示](/ja/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) を参照してください。
+- 暗黙的なアンカー参照を持ち、[CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning) を介してピッカーが自動的に `<select>` 要素に関連付けられます。ブラウザーのデフォルトスタイルは、ピッカーをボタン（アンカー）に対して位置指定し、[CSS アンカー位置指定の使用](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#positioning_elements_relative_to_their_anchor) で説明されているように、この位置をカスタマイズできます。また、ビューポートからはみ出しそうな場合にピッカーを再配置するポジション・トライ・フォールバックも定義されています。詳細は [オーバーフローの処理: トライ・フォールバックと条件付き非表示](/ja/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) を参照してください。
 
 > [!NOTE]
 > カスタマイズ可能な `<select>` のブラウザー対応状況は、{{htmlelement("selectedcontent")}}、{{cssxref("::picker()", "::picker(select)")}}、{{cssxref("::checkmark")}} など関連機能のリファレンスページの互換性表で確認できます。
@@ -217,7 +217,7 @@ select:open::picker-icon {
 }
 ```
 
-次に、`<option>` 要素をスタイル設定します。[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout) でレイアウトし、すべてをフレックスコンテナーの先頭に揃え、各要素の間に `20px` の {{cssxref("gap")}} を設けます。各 `<option>` には `<select>` と同じ {{cssxref("border")}}、{{cssxref("background")}}、{{cssxref("padding")}}、{{cssxref("transition")}} を設定し、統一感を持たせます。
+次に、`<option>` 要素をスタイル設定します。[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout) でレイアウトし、すべてをフレックスコンテナーの先頭に揃え、各要素の間に `20px` の {{cssxref("gap")}} を設けます。各 `<option>` には `<select>` と同じ {{cssxref("border")}}、{{cssxref("background")}}、{{cssxref("padding")}}、{{cssxref("transition")}} を設定し、統一感を持たせます。
 
 ```css live-sample___third-render live-sample___fourth-render live-sample___full-render
 option {
@@ -305,7 +305,7 @@ option:checked {
 
 ピッカーを開いて選択すると、現在選択されている `<option>` の行頭にチェックマークが表示されます。このチェックマークは {{cssxref("::checkmark")}} 擬似要素でターゲットにできます。例えば、このチェックマークを（`display: none` などを用いて）非表示にしたいことがあるでしょう　。
 
-また、より面白いこともできます。以前、`<option>`要素はフレックスボックスを使って水平方向に配置され、フレックスアイテムは行の先頭に揃えられていました。以下のルールでは、チェックマークの {{cssxref("order")}} を `0` より大きい値に設定し、`auto` の {{cssxref("margin-left")}} で行末に移動します（[alignment と auto のマージン](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox#alignment_および_auto_のマージン) 参照）。
+また、より面白いこともできます。以前、`<option>`要素はフレックスボックスを使って水平方向に配置され、フレックスアイテムは行の先頭に揃えられていました。以下のルールでは、チェックマークの {{cssxref("order")}} を `0` より大きい値に設定し、`auto` の {{cssxref("margin-left")}} で行末に移動します（[alignment と auto のマージン](/ja/docs/Web/CSS/Guides/Box_alignment/In_flexbox#alignment_および_auto_のマージン) 参照）。
 
 最後に、{{cssxref("content")}} プロパティの値を別の絵文字に設定し、表示するアイコンを変更します。
 
@@ -347,7 +347,7 @@ option::checkmark {
   - : ポップオーバーが非表示から表示に変わるとき、`overlay` の値が `none` から `auto` に変わり、トップレイヤーに昇格し、非表示になったときに再び戻って削除されます。これはトランジションが完了するまでトップレイヤーからのポップオーバーの削除が延期され、トランジションが確実に見えるように、アニメーションする必要があります。
 
 > [!NOTE]
-> [`allow-discrete`](/ja/docs/Web/CSS/transition-behavior#allow-discrete) 値は離散プロパティのアニメーションを有効にするために必要です。
+> [`allow-discrete`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior#allow-discrete) 値は離散プロパティのアニメーションを有効にするために必要です。
 
 次に、`::picker(select):popover-open` で表示状態のピッカーを選択し、`opacity` を `1` にします。これがトランジションの終了状態です。
 
@@ -371,9 +371,9 @@ option::checkmark {
 
 ## アンカー位置指定によるピッカーの位置指定
 
-カスタマイズ可能な `<select>` の選択ボタンとドロップダウンピッカーは暗黙的なアンカー参照を持ち、ピッカーは [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning) を介して選択ボタンに自動的に関連付けられます。これにより、{{cssxref("anchor-name")}} や {{cssxref("position-anchor")}} プロパティによる明示的な関連付けを指定する必要はありません。
+カスタマイズ可能な `<select>` の選択ボタンとドロップダウンピッカーは暗黙的なアンカー参照を持ち、ピッカーは [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning) を介して選択ボタンに自動的に関連付けられます。これにより、{{cssxref("anchor-name")}} や {{cssxref("position-anchor")}} プロパティによる明示的な関連付けを指定する必要はありません。
 
-また、[ブラウザーの既定のスタイルで既定の位置](/ja/docs/Web/CSS/::picker#ピッカーのアンカー位置指定) が提供されており、[要素をアンカーから相対的に配置](/ja/docs/Web/CSS/CSS_anchor_positioning/Using#要素をアンカーから相対的に配置) で説明されているようにカスタマイズできます。
+また、[ブラウザーの既定のスタイルで既定の位置](/ja/docs/Web/CSS/Reference/Selectors/::picker#ピッカーのアンカー位置指定) が提供されており、[要素をアンカーから相対的に配置](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#要素をアンカーから相対的に配置) で説明されているようにカスタマイズできます。
 
 デモでは、ピッカーの位置をアンカーに対して {{cssxref("anchor()")}} 関数を使い、{{cssxref("top")}} と {{cssxref("left")}} プロパティで指定しています。
 

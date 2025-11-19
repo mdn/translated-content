@@ -253,7 +253,7 @@ p {
 
 가장 기본적인 수준에서, CSS 는 두 가지 요소로 구성됩니다:
 
-- **속성 (Properties)**: 변경할 스타일 기능 (예: [`font-size`](/ko/docs/Web/CSS/font-size), [`width`](/ko/docs/Web/CSS/width), [`background-color`](/ko/docs/Web/CSS/background-color)) 을 나타내는 식별자입니다.
+- **속성 (Properties)**: 변경할 스타일 기능 (예: [`font-size`](/ko/docs/Web/CSS/Reference/Properties/font-size), [`width`](/ko/docs/Web/CSS/Reference/Properties/width), [`background-color`](/ko/docs/Web/CSS/Reference/Properties/background-color)) 을 나타내는 식별자입니다.
 - **값 (Values)**: 지정된 각 속성에는 값이 지정되어 있으며, 이는 해당 스타일 기능을 변경하는 방법 (예: 글꼴, 너비 또는 배경색을 변경하려는 항목) 을 나타냅니다.
 
 아래 이미지는 단일 속성과 값을 강조 표시합니다. 속성 이름은 `color` 이고 값은 `blue` 입니다.

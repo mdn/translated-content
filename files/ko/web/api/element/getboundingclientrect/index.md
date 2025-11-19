@@ -30,7 +30,7 @@ domRect = element.getBoundingClientRect();
 프로퍼티는 콘텐츠의 width/height뿐만 아니라 `padding`과 `border-width`도
 포함합니다. 표준 박스 모델에서, 이는 엘리먼트 + `padding` + `border-width`의
 `width` 또는 `height` 프로퍼티와 동일합니다. 하지만
-[`box-sizing: border-box`](/ko/docs/Web/CSS/box-sizing)가
+[`box-sizing: border-box`](/ko/docs/Web/CSS/Reference/Properties/box-sizing)가
 해당 엘리먼트에 설정되어 있으면 이는 `width` 또는 `height`와 직접적으로 동일합니다.
 
 반환 값은 해당 엘리먼트의 {{domxref("Element.getClientRects", "getClientRects()")}}가 반환한

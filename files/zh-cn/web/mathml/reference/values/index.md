@@ -7,9 +7,9 @@ l10n:
 
 ## MathML 特定类型
 
-除了 [CSS 数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)外，一些 MathML 属性还接受以下类型：
+除了 [CSS 数据类型](/zh-CN/docs/Web/CSS/Reference/Values/Data_types)外，一些 MathML 属性还接受以下类型：
 
-- `<unsigned-integer>`：一个不以 U+002D HYPHEN-MINUS 字符（-）或 U+002B PLUS SIGN（+）开头的 [`<integer>`](/zh-CN/docs/Web/CSS/integer)，例如 `1234`。
+- `<unsigned-integer>`：一个不以 U+002D HYPHEN-MINUS 字符（-）或 U+002B PLUS SIGN（+）开头的 [`<integer>`](/zh-CN/docs/Web/CSS/Reference/Values/integer)，例如 `1234`。
 - `<boolean>`：表示布尔值的字符串 `true` 或 `false`。
 
 ## 旧版 MathML 长度
@@ -30,17 +30,17 @@ veryverythickmathspace => 0.3888888888888889em
 
 ### 单位
 
-| 单位 | 描述                                                                                                             |
-| ---- | ---------------------------------------------------------------------------------------------------------------- |
-| `em` | {{Cssxref("font-size", "Font-relative")}} 单位                                                                   |
-| `ex` | [与字体相关的](/zh-CN/docs/Web/CSS/font-size)单位。（表示元素的 x-高度，在许多字体中大约等于 `em` 单位的一半。） |
-| `px` | 像素                                                                                                             |
-| `in` | 英寸（1 英寸 = 2.54 厘米）                                                                                       |
-| `cm` | 厘米                                                                                                             |
-| `mm` | 厘米                                                                                                             |
-| `pt` | 点（1 点 = 1/72 英寸）                                                                                           |
-| `pc` | 派卡（1 派卡 = 12 点）                                                                                           |
-| `%`  | 默认值的百分比                                                                                                   |
+| 单位 | 描述                                                                                                                                  |
+| ---- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `em` | {{Cssxref("font-size", "Font-relative")}} 单位                                                                                        |
+| `ex` | [与字体相关的](/zh-CN/docs/Web/CSS/Reference/Properties/font-size)单位。（表示元素的 x-高度，在许多字体中大约等于 `em` 单位的一半。） |
+| `px` | 像素                                                                                                                                  |
+| `in` | 英寸（1 英寸 = 2.54 厘米）                                                                                                            |
+| `cm` | 厘米                                                                                                                                  |
+| `mm` | 厘米                                                                                                                                  |
+| `pt` | 点（1 点 = 1/72 英寸）                                                                                                                |
+| `pc` | 派卡（1 派卡 = 12 点）                                                                                                                |
+| `%`  | 默认值的百分比                                                                                                                        |
 
 ### 常数
 

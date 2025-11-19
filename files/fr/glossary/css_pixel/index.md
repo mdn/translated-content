@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-Le terme **pixel CSS** est synonyme de l'unité CSS de longueur absolue _px_ — qui est [définie de façon normative](/fr/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#absolute_length_units) comme étant exactement 1/96<sup>e</sup> d'un pouce CSS (_in_).
+Le terme **pixel CSS** est synonyme de l'unité CSS de longueur absolue _px_ — qui est [définie de façon normative](/fr/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#absolute_length_units) comme étant exactement 1/96<sup>e</sup> d'un pouce CSS (_in_).
 
 ## Voir aussi
 

@@ -22,7 +22,7 @@ l10n:
 - [`accesskey`](/ja/docs/Web/HTML/Reference/Global_attributes/accesskey)
   - : 現在の要素に対するキーボードショートカットを生成するヒントを与えます。この属性の値は、空白区切りの文字のリストです。ブラウザーは、この文字リストの中から、コンピューターのキーボードレイアウトに存在する最初の文字を使用します。
 - [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) {{non-standard_inline}}
-  - : 位置指定要素をアンカー要素に関連付けます。この属性の値は、位置指定要素をアンカーする要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 値です。これにより、 [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning/Using)を使用して要素を位置指定することができます。
+  - : 位置指定要素をアンカー要素に関連付けます。この属性の値は、位置指定要素をアンカーする要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 値です。これにより、 [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using)を使用して要素を位置指定することができます。
 - [`autocapitalize`](/ja/docs/Web/HTML/Reference/Global_attributes/autocapitalize)
   - : 入力されたテキストを自動的に大文字にするかどうか、大文字にする場合はその方法を制御します。
 - [`autocorrect`](/ja/docs/Web/HTML/Reference/Global_attributes/autocorrect)
@@ -31,7 +31,7 @@ l10n:
 - [`autofocus`](/ja/docs/Web/HTML/Reference/Global_attributes/autofocus)
   - : ページの読み込み時、またはその一部である {{HTMLElement("dialog")}} が表示された時点で、その要素がフォーカスされるようにすることを示す。この属性は論理値で、初期値は false です。
 - [`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class)
-  - : 要素のクラスの空白区切りリストです。 CSS の [クラスセレクター](/ja/docs/Web/CSS/Class_selectors) や JavaScript の {{DOMxRef("Document.getElementsByClassName()")}} メソッドのような関数を使えば、特定の要素を選択したりアクセスしたりすることができます。
+  - : 要素のクラスの空白区切りリストです。 CSS の [クラスセレクター](/ja/docs/Web/CSS/Reference/Selectors/Class_selectors) や JavaScript の {{DOMxRef("Document.getElementsByClassName()")}} メソッドのような関数を使えば、特定の要素を選択したりアクセスしたりすることができます。
 - [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable)
   - : ユーザーによる要素の編集が可能かどうかを示す[列挙型](/ja/docs/Glossary/Enumerated)属性です。編集可能な場合、ブラウザーはその要素を編集可能なものに変更します。この属性の値は、以下のどちらかでなければなりません。
     - `true` または 空文字列: 要素が編集可能であることを示す

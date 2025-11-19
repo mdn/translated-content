@@ -31,11 +31,11 @@ l10n:
 > - **title**
 >   - : `title` の値はページの先頭に表示されます。
 >     これは "CSS" のテキストに続くモジュールの名前です。
->     例えば、[グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)モジュールのランディングページは _CSS グリッドレイアウト_ です。
+>     例えば、[グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)モジュールのランディングページは _CSS グリッドレイアウト_ です。
 > - **slug**
 >   - : `slug` の値は`https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。
 >     これは `Web/CSS/CSS_NameOfTheModule` のような書式です。
->     例えば、 [グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout) モジュールのランディングページは `Web/CSS/CSS_grid_layout` です。
+>     例えば、 [グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout) モジュールのランディングページは `Web/CSS/CSS_grid_layout` です。
 > - **sourceCommit**
 >   - : （翻訳記事のみ）この記事の翻訳元となる英語版記事を GitHub にコミットした際のコミット ID を記述します。 GitHub 上で英語版記事のコミット ID を確認してください。
 >

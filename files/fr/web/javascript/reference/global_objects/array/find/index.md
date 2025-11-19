@@ -1,60 +1,65 @@
 ---
-title: Array.prototype.find()
+title: "Array : méthode find()"
+short-title: find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+La méthode **`find()`** des instances de {{JSxRef("Array")}} retourne le premier élément du tableau fourni qui satisfait la fonction de test donnée.
+Si aucune valeur ne satisfait la fonction de test, {{JSxRef("undefined")}} est retourné.
 
-La méthode **`find()`** renvoie la **valeur** du **premier élément trouvé** dans le tableau qui respecte la condition donnée par la fonction de test passée en argument. Sinon, la valeur {{jsxref("undefined")}} est renvoyée.
+- Si vous avez besoin de l'**indice** de l'élément trouvé dans le tableau, utilisez {{JSxRef("Array/findIndex", "findIndex()")}}.
+- Si vous souhaitez trouver l'**indice d'une valeur**, utilisez {{JSxRef("Array/indexOf", "indexOf()")}}.
+  (C'est similaire à {{JSxRef("Array/findIndex", "findIndex()")}}, mais chaque élément est comparé à la valeur pour l'égalité, au lieu d'utiliser une fonction de test.)
+- Si vous souhaitez savoir si une valeur **existe** dans un tableau, utilisez {{JSxRef("Array/includes", "includes()")}}.
+  Là encore, chaque élément est comparé à la valeur pour l'égalité, au lieu d'utiliser une fonction de test.
+- Si vous souhaitez savoir si au moins un élément satisfait la fonction de test, utilisez {{JSxRef("Array/some", "some()")}}.
+- Si vous souhaitez obtenir tous les éléments qui satisfont la fonction de test, utilisez {{JSxRef("Array/filter", "filter()")}}.
 
-{{InteractiveExample("JavaScript Demo: Array.find()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Array.prototype.find()", "shorter")}}
 
 ```js interactive-example
-const array1 = [5, 12, 8, 130, 44];
+const array = [5, 12, 8, 130, 44];
 
-const found = array1.find((element) => element > 10);
+const found = array.find((element) => element > 10);
 
 console.log(found);
-// Expected output: 12
+// Résultat attendu : 12
 ```
-
-Voir aussi la méthode {{jsxref("Array.findIndex", "findIndex()")}} qui renvoie l'**index** de l'élément trouvé et non sa valeur. Si on souhaite repérer la position d'un élément donné dans le tableau, on pourra utiliser {{jsxref("Array.prototype.indexOf()")}}. Si on souhaite déterminer si un tableau contient un élément donné, on pourra utiliser la méthode {{jsxref("Array.prototype.includes()")}}.
 
 ## Syntaxe
 
-```js
-arr.find(callback(element[, index[, tableau]])[, thisArg])
+```js-nolint
+find(callbackFn)
+find(callbackFn, thisArg)
 ```
 
 ### Paramètres
 
-- `callback`
-  - : Fonction à exécuter sur chaque valeur du tableau, elle prend 3 arguments&nbsp;:
+- `callbackFn`
+  - : Une fonction à exécuter pour chaque élément du tableau. Elle doit retourner une valeur [vraie](/fr/docs/Glossary/Truthy) pour indiquer qu'un élément correspondant a été trouvé, et une valeur [fausse](/fr/docs/Glossary/Falsy) sinon. La fonction est appelée avec les arguments suivants&nbsp;:
     - `element`
       - : L'élément actuellement traité dans le tableau.
-    - `index`{{optional_inline}}
-      - : L'index de l'élément actuellement traité dans le tableau
-    - `array`{{optional_inline}}
-      - : Le tableau pour lequel la méthode `find` a été appelée.
-
-- `thisArg` {{optional_inline}}
-  - : Ce paramètre est optionnel. Objet à utiliser en tant que `this` lorsque la fonction `callback` est exécutée.
+    - `index`
+      - : L'indice de l'élément actuellement traité dans le tableau.
+    - `array`
+      - : Le tableau sur lequel la méthode `find()` a été appelée.
+- `thisArg` {{Optional_Inline}}
+  - : Une valeur à utiliser comme `this` lors de l'exécution de `callbackFn`. Voir [méthodes itératives](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives).
 
 ### Valeur de retour
 
-La valeur du premier élément du tableau qui réussit le test, sinon {{jsxref("undefined")}}.
+Le premier élément du tableau qui satisfait la fonction de test fournie.
+Sinon, {{JSxRef("undefined")}} est retourné.
 
 ## Description
 
-La méthode `find` exécute la fonction `callback` une fois pour chaque élément présent dans le tableau jusqu'à ce qu'elle retourne une valeur vraie (qui peut être convertie en `true`). Si un élément est trouvé, `find` retourne immédiatement la valeur de l'élément. Autrement, `find` retourne `undefined`. La méthode `callback` est seulement appelée pour les index du tableau pour lesquels on dispose d'une valeur. Elle n'est pas appelée pour les index supprimés ou pour ceux qui n'ont pas de valeur.
+La méthode `find()` est une [méthode itérative](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives). Elle appelle la fonction `callbackFn` fournie une fois pour chaque élément du tableau, dans l'ordre croissant des indices, jusqu'à ce que `callbackFn` retourne une [valeur vraie](/fr/docs/Glossary/Truthy). `find()` retourne alors cet élément et arrête l'itération. Si `callbackFn` ne retourne jamais de valeur vraie, `find()` retourne {{JSxRef("undefined")}}. Consultez la section [méthodes itératives](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives) pour plus d'informations sur le fonctionnement général de ces méthodes.
 
-La méthode `callback` est appelée avec trois arguments&nbsp;: la valeur de l'élément, l'index de l'élément, et l'objet correspondant au tableau traversé.
+`callbackFn` est appelée pour chaque indice du tableau, pas seulement ceux qui ont une valeur assignée. Les cases vides dans les [tableaux creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux) se comportent comme si leur valeur était `undefined`.
 
-Si le paramètre `thisArg` est fourni à `find`, il sera utilisé comme le `this` pour chaque exécution de la fonction `callback`. S'il n'est pas fourni, alors {{jsxref("undefined")}} sera utilisé.
-
-`find` ne modifie pas le tableau à partir duquel elle est appelée.
-
-L'intervalle des éléments inspectés par `find` est défini avant la première exécution de `callback`. Les éléments ajoutés au tableau après l'appel à `find` ne seront pas inspectés par la fonction `callback`. Si un élément existant est modifié avant le passage du `callback`, alors la valeur traitée par le `callback` sera celle présente lors du passage de `find` sur son index. Les éléments supprimés ne seront pas traités.
+La méthode `find()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_tableau_génériques). Elle attend seulement que la valeur de `this` possède une propriété `length` et des propriétés à clé entière.
 
 ## Exemples
 
@@ -91,19 +96,107 @@ console.log(resultat);
 
 ### Trouver un nombre premier dans un tableau
 
-Dans l'exemple suivant, on cherche un nombre premier parmi les éléments d'un tableau (ou retourne `undefined` s'il n'y en a pas ).
+L'exemple suivant retourne le premier élément du tableau qui est un nombre premier, ou {{JSxRef("undefined")}} s'il n'y en a pas.
 
 ```js
-function estPremier(element, index, array) {
-  let début = 2;
-  while (début <= Math.sqrt(element)) {
-    if (element % début++ < 1) return false;
+function estPremier(n) {
+  if (n < 2) {
+    return false;
   }
-  return element > 1;
+  if (n % 2 === 0) {
+    return n === 2;
+  }
+  for (let facteur = 3; facteur * facteur <= n; facteur += 2) {
+    if (n % facteur === 0) {
+      return false;
+    }
+  }
+  return true;
 }
 
 console.log([4, 6, 8, 12].find(estPremier)); // undefined, rien trouvé
 console.log([4, 5, 8, 12].find(estPremier)); // 5
+```
+
+> [!NOTE]
+> L'implémentation de `estPremier()` est uniquement destinée à la démonstration. Pour une utilisation réelle, il est préférable d'utiliser un algorithme fortement mémoïsé, comme le [crible d'Ératosthène](https://fr.wikipedia.org/wiki/Crible_d%27%C3%89ratosth%C3%A8ne), afin d'éviter des calculs répétés.
+
+### Utiliser le troisième argument de `callbackFn`
+
+L'argument `array` est utile si vous souhaitez accéder à un autre élément du tableau, en particulier lorsque vous n'avez pas de variable existante qui fait référence au tableau. L'exemple suivant utilise d'abord `filter()` pour extraire les valeurs positives, puis `find()` pour trouver le premier élément qui est inférieur à ses voisins.
+
+```js
+const nombres = [3, -1, 1, 4, 1, 5, 9, 2, 6];
+const premierCreux = nombres
+  .filter((num) => num > 0)
+  .find((num, idx, arr) => {
+    // Sans l'argument arr, il n'y a aucun moyen simple d'accéder
+    // au tableau intermédiaire sans le stocker dans une variable.
+    if (idx > 0 && num >= arr[idx - 1]) return false;
+    if (idx < arr.length - 1 && num >= arr[idx + 1]) return false;
+    return true;
+  });
+console.log(premierCreux); // 1
+```
+
+### Utiliser `find()` sur des tableaux creux
+
+Les cases vides dans les tableaux creux _sont_ parcourues et sont traitées comme si leur valeur était `undefined`.
+
+```js
+// Déclare un tableau sans éléments aux indices 2, 3 et 4
+const array = [0, 1, , , , 5, 6];
+
+// Affiche tous les indices, pas seulement ceux avec une valeur assignée
+array.find((value, index) => {
+  console.log("Indice visité", index, "avec la valeur", value);
+  return false;
+});
+// Indice visité 0 avec la valeur 0
+// Indice visité 1 avec la valeur 1
+// Indice visité 2 avec la valeur undefined
+// Indice visité 3 avec la valeur undefined
+// Indice visité 4 avec la valeur undefined
+// Indice visité 5 avec la valeur 5
+// Indice visité 6 avec la valeur 6
+
+// Affiche tous les indices, y compris ceux supprimés
+array.find((value, index) => {
+  // Supprime l'élément 5 lors de la première itération
+  if (index === 0) {
+    console.log("Suppression de array[5] avec la valeur", array[5]);
+    delete array[5];
+  }
+  // L'élément 5 est tout de même visité même après suppression
+  console.log("Indice visité", index, "avec la valeur", value);
+  return false;
+});
+// Suppression de array[5] avec la valeur 5
+// Indice visité 0 avec la valeur 0
+// Indice visité 1 avec la valeur 1
+// Indice visité 2 avec la valeur undefined
+// Indice visité 3 avec la valeur undefined
+// Indice visité 4 avec la valeur undefined
+// Indice visité 5 avec la valeur undefined
+// Indice visité 6 avec la valeur 6
+```
+
+### Appeler `find()` sur des objets qui ne sont pas des tableaux
+
+La méthode `find()` lit la propriété `length` de `this` puis accède à chaque propriété dont la clé est un entier non négatif inférieur à `length`.
+
+```js
+const objetSimilaireTableau = {
+  length: 3,
+  "-1": 0.1, // ignoré par find() car -1 < 0
+  0: 2,
+  1: 7.3,
+  2: 4,
+};
+console.log(
+  Array.prototype.find.call(objetSimilaireTableau, (x) => !Number.isInteger(x)),
+);
+// 7.3
 ```
 
 ## Spécifications
@@ -116,8 +209,15 @@ console.log([4, 5, 8, 12].find(estPremier)); // 5
 
 ## Voir aussi
 
-- {{jsxref("Array.prototype.findIndex()")}} – trouver et renvoyer un index
-- {{jsxref("Array.prototype.includes()")}} – tester si une valeur existe dans le tableau
-- {{jsxref("Array.prototype.filter()")}} – trouver tous les éléments correspondants
-- {{jsxref("Array.prototype.every()")}} – tester l'ensemble des éléments d'un tableau
-- {{jsxref("Array.prototype.some()")}} – tester si au moins un élément du tableau respecte un critère
+- [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
+- L'objet global {{JSxRef("Array")}}
+- La méthode {{JSxRef("Array.prototype.findIndex()")}}
+- La méthode {{JSxRef("Array.prototype.findLast()")}}
+- La méthode {{JSxRef("Array.prototype.findLastIndex()")}}
+- La méthode {{JSxRef("Array.prototype.includes()")}}
+- La méthode {{JSxRef("Array.prototype.filter()")}}
+- La méthode {{JSxRef("Array.prototype.every()")}}
+- La méthode {{JSxRef("Array.prototype.some()")}}
+- La méthode {{JSxRef("TypedArray.prototype.find()")}}
+- [Prothèse d'émulation core-js pour `Array.prototype.find` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
+- [Prothèse d'émulation es-shims pour `Array.prototype.find` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.find)
