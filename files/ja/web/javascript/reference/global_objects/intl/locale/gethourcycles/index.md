@@ -1,39 +1,54 @@
 ---
-title: Intl.Locale.prototype.hourCycles
+title: Intl.Locale.prototype.getHourCycles()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getHourCycles
 ---
 
-{{JSRef}}
+{{jsxref("Intl.Locale")}} インスタンスの **`getHourCycles()`** メソッドは、`Locale` の 1 つ以上の固有の時制識別子の配列を返します。
 
-**`Intl.Locale.prototype.hourCycles`** プロパティは、この `Locale` に固有の時制識別子のリストを返すアクセサープロパティです。
+> [!NOTE]
+> 一部のブラウザーのあるバージョンでは、このメソッドが `hourCycles` と呼ばれるアクセサープロパティとして実装されていました。しかしこの実装ではアクセスするたびに新しい配列を返すため、`locale.hourCycles === locale.hourCycles` が常に `false` を返してしまい、この状況を防ぐために、現在はメソッドとして実装されています。詳細については、[ブラウザーの互換性](#browser_compatibility)の表を確認してください。
 
-## 解説
+## 構文
 
-世界中で使用されている時刻保持規則（時制）には、主に 12 時制と 24 時制の 2 つの種類があります。 `hourCycles` プロパティを使用すると、特定のロケールで利用できるすべての時制に簡単にアクセスできるようになります。他の追加ロケールデータと同様に、時制種別は[拡張サブタグ](https://www.unicode.org/reports/tr35/#u_Extension)であり、ロケール文字列に含まれるデータを拡張したものです。時制種別には、以下の表にある通り、いくつかの異なる値を設定することができます。
+```js-nolint
+getHourCycles()
+```
 
-### 有効な時制種別
+### 引数
 
-| 時制種別 | 説明                                                                                              |
-| -------- | ------------------------------------------------------------------------------------------------- |
-| `h12`    | 1–12 を使用する時制で、パターンの 'h' に対応します。 12 時制で、正子は午前 12:00 から始まります。 |
-| `h23`    | 0–23 を使用する時制で、パターンの 'H' に対応します。 24 時制で、正子は 0:00 から始まります。      |
-| `h11`    | 0–11 を使用する時制で、パターンの 'K' に対応します。 12 時制で、正子は午前 0:00 から始まります。  |
-| `h24`    | 1–24 を使用する時制で、パターンの 'k' に対応します。 24 時制で、正子は 24:00 から始まります。     |
+なし。
+
+### 返値
+
+`Locale` で一般的に使用されるすべての時制種別を、優先度の高い順に並べた文字列の配列。`Locale` にすでに [`hourCycle`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle) が設定されている場合、返される配列はその値のみになります。
+
+以下は対応している時制種別の一覧です。
+
+### 対応している時制種別
+
+- `h12`
+  - : 1–12 を使用する時制で、パターンの 'h' に対応します。 12 時制で、正子は午前 12:00 から始まります。例えば、アメリカ合衆国で使用されています。
+- `h23`
+  - : 0–23 を使用する時制で、パターンの 'H' に対応します。 24 時制で、正子は 0:00 から始まります。
+- `h11`
+  - : 0–11 を使用する時制で、パターンの 'K' に対応します。 12 時制で、正子は午前 0:00 から始まります。主に日本で使用されています。
+- `h24`
+  - : 1–24 を使用する時制で、パターンの 'k' に対応します。 24 時制で、正子は 24:00 から始まります。どこでも使用されていません。
 
 ## 例
 
-### 対応しているカレンダーを取得
+### 対応している時制を取得
 
-指定された `Locale` で対応している時制のリストを出力します。
+`Locale` オブジェクトに `hourCycle` が設定されていない場合、`getHourCycles()` は指定された `Locale` で一般的に使用されるすべての時制識別子をリストアップします。`hourCycle` を明示的に設定する例については、[`hourCycle` の例](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle#examples) を参照してください。
 
 ```js
-let arEG = new Intl.Locale("ar-EG");
-console.log(arEG.hourCycles); // logs ["h12"]
+const arEG = new Intl.Locale("ar-EG");
+console.log(arEG.getHourCycles()); // ["h12"]
 ```
 
 ```js
-let jaJP = new Intl.Locale("ja-JP");
-console.log(jaJP.hourCycles); // logs ["h23"]
+const jaJP = new Intl.Locale("ja-JP");
+console.log(jaJP.getHourCycles()); // ["h23"]
 ```
 
 ## 仕様書
@@ -47,4 +62,5 @@ console.log(jaJP.hourCycles); // logs ["h23"]
 ## 関連情報
 
 - {{jsxref("Intl.Locale")}}
-- [Unicode 時制拡張キー仕様書](https://www.unicode.org/reports/tr35/#UnicodeHourCycleIdentifier)
+- [`Intl.Locale.prototype.hourCycle`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle)
+- [Unicode 時制識別子](https://www.unicode.org/reports/tr35/#UnicodeHourCycleIdentifier)
