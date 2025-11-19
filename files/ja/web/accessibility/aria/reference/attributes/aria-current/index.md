@@ -89,4 +89,4 @@ l10n:
 
 - [`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected)
 - {{cssxref(':local-link')}}
-- [`aria-current` とパンくずナビゲーション](/ja/docs/Web/CSS/Layout_cookbook/Breadcrumb_Navigation)
+- [`aria-current` とパンくずナビゲーション](/ja/docs/Web/CSS/How_to/Layout_cookbook/Breadcrumb_navigation)

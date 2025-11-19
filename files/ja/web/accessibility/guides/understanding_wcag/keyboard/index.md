@@ -65,7 +65,7 @@ l10n:
 
 ## フォーカス可能な要素はフォーカスのスタイルが必要
 
-キーボードフォーカスを受け取れる要素は、フォーカス状態を示す可視的なスタイルを持つべきです。これには CSS 擬似クラス [`:focus`](/ja/docs/Web/CSS/:focus) と [`:focus-visible`](/ja/docs/Web/CSS/:focus-visible) が使用できます。
+キーボードフォーカスを受け取れる要素は、フォーカス状態を示す可視的なスタイルを持つべきです。これには CSS 擬似クラス [`:focus`](/ja/docs/Web/CSS/Reference/Selectors/:focus) と [`:focus-visible`](/ja/docs/Web/CSS/Reference/Selectors/:focus-visible) が使用できます。
 
 リンクや入力フィールドなどの標準的なフォーカス可能な要素は、デフォルトでブラウザーによって特別なスタイルが適用されます。そのため、フォーカス時のスタイルをより際立たせたい場合を除き、こうした要素に対してフォーカス時のスタイルを指定する必要はないかもしれません。
 

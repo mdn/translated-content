@@ -1,0 +1,70 @@
+---
+title: :nth-last-of-type()
+slug: Web/CSS/Reference/Selectors/:nth-last-of-type
+original_slug: Web/CSS/:nth-last-of-type
+---
+
+{{CSSRef}}
+
+[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:nth-last-of-type()`** находит один или более элементов с заданным тегом, основываясь на их позиции среди группы соседних элементов, считая с конца.
+
+```css
+/* Выбирает каждый четвёртый элемент <p>
+   среди любой группы соседних элементов,
+   отсчёт начинается с последнего элемента */
+p:nth-last-of-type(4n) {
+  color: lime;
+}
+```
+
+> [!NOTE]
+> Этот псевдокласс практически такой же как {{Cssxref(":nth-of-type")}}, за исключением того, что счёт элементов производится в обратном порядке начиная с _конца_, а не в обычном порядке с начала.
+
+## Синтаксис
+
+Псевдокласс `nth-last-of-type` указывается с единственным аргументом, описывающим паттерн для выбирания элементов, начиная с конца.
+
+Более детальное описание синтаксиса может быть найдено на странице псевдокласса {{Cssxref(":nth-last-child")}}.
+
+### Формальный синтаксис
+
+{{csssyntax}}
+
+## Пример
+
+### HTML
+
+```html
+<div>
+  <span>Это span.</span>
+  <span>Это другой span.</span>
+  <em>Это текст будет подчёркнут.</em>
+  <span>Круто, этот span лаймовый!!!</span>
+  <strike>Это вообще не span.</strike>
+  <span>Это ещё один последний span.</span>
+</div>
+```
+
+### CSS
+
+```css
+span:nth-last-of-type(2) {
+  background-color: lime;
+}
+```
+
+### Результат
+
+{{EmbedLiveSample('Пример')}}
+
+## Спецификации
+
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{Cssxref(":nth-last-child")}}, {{Cssxref(":nth-of-type")}}

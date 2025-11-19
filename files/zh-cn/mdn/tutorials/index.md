@@ -57,7 +57,7 @@ l10n:
 - [选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
   - : 用 CSS 定位 HTML 元素，其中包含带状态的元素。
 
-- [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
+- [优先级](/zh-CN/docs/Web/CSS/Guides/Cascade/Specificity)
   - : 通过[优先级测验](https://estelle.github.io/CSS/selectors/exercises/specificity.html)了解浏览器算法在遇到存在冲突的 CSS 声明时会决定将哪个声明应用到元素上。
 
 - [层叠与继承](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
@@ -81,9 +81,9 @@ l10n:
 
 ### 高级
 
-- [使用 CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [使用 CSS 变换](/zh-CN/docs/Web/CSS/Guides/Transforms/Using)
   - : 用 CSS 实现旋转、倾斜、缩放和平移。
-- [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [CSS 过渡](/zh-CN/docs/Web/CSS/Guides/Transitions/Using)
   - : CSS 过渡提供一种以动画的形式来改变 CSS 属性的方式，而非让改变立即生效。
 - [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)
   - : 学习如何使用画布元素和脚本绘制图形。

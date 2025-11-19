@@ -45,13 +45,13 @@ Le support de la version préfixée est généralement abandonné par la suite, 
 - {{CSSxRef("backface-visibility", "-moz-backface-visibility")}} {{deprecated_inline}}&nbsp;: Version préfixée toujours prise en charge.
 - `-moz-background-clip` {{deprecated_inline}}&nbsp;: N'est plus prise en charge&nbsp;; utilisez {{CSSxRef("background-clip")}}.
 - `-moz-background-origin` {{deprecated_inline}}&nbsp;: N'est plus prise en charge&nbsp;; utilisez {{CSSxRef("background-origin")}}.
-- `-moz-box-align` {{deprecated_inline}}&nbsp;: Utilisez [CSS flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec {{CSSxRef("align-items")}}.
+- `-moz-box-align` {{deprecated_inline}}&nbsp;: Utilisez [CSS flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) avec {{CSSxRef("align-items")}}.
 - `-moz-background-inline-policy` {{deprecated_inline}}&nbsp;: N'est plus prise en charge&nbsp;; utilisez {{CSSxRef("box-decoration-break")}}.
-- `-moz-box-direction` {{deprecated_inline}}&nbsp;: Utilisez [CSS flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec {{CSSxRef("flex-direction")}}.
-- `-moz-box-flex` {{deprecated_inline}}&nbsp;: Utilisez [CSS flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec {{CSSxRef("flex-grow")}}.
-- `-moz-box-ordinal-group` {{deprecated_inline}}&nbsp;: Utilisez [CSS flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec {{CSSxRef("order")}}.
-- `-moz-box-orient` {{deprecated_inline}}&nbsp;: Utilisez [CSS flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec {{CSSxRef("flex-direction")}}.
-- `-moz-box-pack` {{deprecated_inline}}&nbsp;: Utilisez [CSS flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec {{CSSxRef("justify-content")}}.
+- `-moz-box-direction` {{deprecated_inline}}&nbsp;: Utilisez [CSS flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) avec {{CSSxRef("flex-direction")}}.
+- `-moz-box-flex` {{deprecated_inline}}&nbsp;: Utilisez [CSS flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) avec {{CSSxRef("flex-grow")}}.
+- `-moz-box-ordinal-group` {{deprecated_inline}}&nbsp;: Utilisez [CSS flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) avec {{CSSxRef("order")}}.
+- `-moz-box-orient` {{deprecated_inline}}&nbsp;: Utilisez [CSS flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) avec {{CSSxRef("flex-direction")}}.
+- `-moz-box-pack` {{deprecated_inline}}&nbsp;: Utilisez [CSS flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) avec {{CSSxRef("justify-content")}}.
 - `-moz-background-size` {{deprecated_inline}}&nbsp;: N'est plus prise en charge&nbsp;; utilisez {{CSSxRef("background-size")}}.
 - `-moz-border-end` {{deprecated_inline}}&nbsp;: N'est plus prise en charge&nbsp;; utilisez {{CSSxRef("border-inline-end")}}.
 - `-moz-border-end-color` {{deprecated_inline}}&nbsp;: N'est plus prise en charge&nbsp;; utilisez {{CSSxRef("border-inline-end-color")}}.
@@ -173,7 +173,7 @@ Le support de la version préfixée est généralement abandonné par la suite, 
 
 **Propriété&nbsp;:** {{CSSxRef("image-rendering")}}
 
-- `-moz-crisp-edges` {{deprecated_inline}}&nbsp;: Utilisez [`crisp-edges`](/fr/docs/Web/CSS/image-rendering#crisp-edges).
+- `-moz-crisp-edges` {{deprecated_inline}}&nbsp;: Utilisez [`crisp-edges`](/fr/docs/Web/CSS/Reference/Properties/image-rendering#crisp-edges).
 
 ### &lt;length&gt;
 
@@ -186,7 +186,7 @@ Le support de la version préfixée est généralement abandonné par la suite, 
 **Propriété&nbsp;:** {{CSSxRef("list-style-type")}}
 
 De nombreuses valeurs avec préfixe de fournisseur pour `list-style-type` sont désormais prises en charge en tant que valeurs standard sans préfixe `-moz-`, sauf pour celles de la liste suivante.
-Voir la [Compatibilité des navigateurs](/fr/docs/Web/CSS/list-style-type#compatibilité_des_navigateurs) pour plus de détails.
+Voir la [Compatibilité des navigateurs](/fr/docs/Web/CSS/Reference/Properties/list-style-type#compatibilité_des_navigateurs) pour plus de détails.
 
 - `-moz-ethiopic-halehame`
 - `-moz-ethiopic-halehame-am`
@@ -211,7 +211,7 @@ Voir la [Compatibilité des navigateurs](/fr/docs/Web/CSS/list-style-type#compat
 - `-moz-min-content`&nbsp;: Voir {{CSSxRef("min-content")}}.
 - `-moz-fit-content`&nbsp;: Voir {{CSSxRef("fit-content")}}.
 - `-moz-max-content`&nbsp;: Voir {{CSSxRef("max-content")}}.
-- `-moz-available`&nbsp;: Voir [`stretch`](/fr/docs/Web/CSS/width#stretch).
+- `-moz-available`&nbsp;: Voir [`stretch`](/fr/docs/Web/CSS/Reference/Properties/width#stretch).
 
 ## Pseudo-classes
 
