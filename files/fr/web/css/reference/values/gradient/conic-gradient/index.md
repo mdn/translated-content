@@ -3,10 +3,10 @@ title: conic-gradient()
 slug: Web/CSS/Reference/Values/gradient/conic-gradient
 original_slug: Web/CSS/gradient/conic-gradient
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`conic-gradient()`** crée une image composée d'un dégradé dont les transitions de couleur tournent autour d'un point central (plutôt que de rayonner à partir du centre). Les dégradés coniques sont utilisés, par exemple, pour les graphiques en camembert et les {{glossary("color wheel", "roues chromatiques")}}. Le résultat de la fonction `conic-gradient()` est un objet du type de donnée {{CSSxRef("&lt;gradient&gt;")}}, qui est une forme particulière de {{CSSxRef("&lt;image&gt;")}}.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`conic-gradient()`** crée une image composée d'un dégradé dont les transitions de couleur tournent autour d'un point central (plutôt que de rayonner à partir du centre). Les dégradés coniques sont utilisés, par exemple, pour les graphiques en camembert et les {{Glossary("color wheel", "roues chromatiques")}}. Le résultat de la fonction `conic-gradient()` est un objet du type de donnée {{CSSxRef("&lt;gradient&gt;")}}, qui est une forme particulière de {{CSSxRef("&lt;image&gt;")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: conic-gradient()")}}
 
@@ -162,7 +162,7 @@ On voit avec l'exemple précédent qu'il est aussi possible de mélanger différ
 
 ### Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Accessibilité
 
@@ -326,11 +326,11 @@ Voir la page [Utiliser des dégradés CSS](/fr/docs/Web/CSS/Guides/Images/Using_
 ## Voir aussi
 
 - [Utiliser des dégradés CSS](/fr/docs/Web/CSS/Guides/Images/Using_gradients)
-- Autres fonctions de dégradé&nbsp;: {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
-- Le type de donnée {{cssxref("&lt;hue-interpolation-method&gt;")}}
-- Le type de donnée {{cssxref("&lt;color-interpolation-method&gt;")}}
-- Le type de donnée {{cssxref("&lt;image&gt;")}}
-- La fonction {{cssxref("image/image","image()")}}
-- La fonction {{cssxref("element", "element()")}}
-- La fonction {{cssxref("image/image-set","image-set()")}}
-- La fonction {{cssxref("cross-fade", "cross-fade()")}}
+- Autres fonctions de dégradé&nbsp;: {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}, {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}, {{CSSxRef("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{CSSxRef("gradient/radial-gradient", "radial-gradient()")}}, {{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
+- Le type de donnée {{CSSxRef("&lt;hue-interpolation-method&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;color-interpolation-method&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;image&gt;")}}
+- La fonction {{CSSxRef("image/image","image()")}}
+- La fonction {{CSSxRef("element", "element()")}}
+- La fonction {{CSSxRef("image/image-set","image-set()")}}
+- La fonction {{CSSxRef("cross-fade", "cross-fade()")}}

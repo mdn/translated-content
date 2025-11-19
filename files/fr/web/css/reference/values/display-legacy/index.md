@@ -3,7 +3,7 @@ title: <display-legacy>
 slug: Web/CSS/Reference/Values/display-legacy
 original_slug: Web/CSS/display-legacy
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
 Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<display-legacy>`** décrit les valeurs de la propriété `display` dans CSS 2. Utilisant une syntaxe avec un seul mot-clé comme valeur pour la propriété `display`, il fallait plusieurs mots-clés pour les différentes variantes bloc/en ligne d'un même mode. Cette page décrit ces valeurs.
