@@ -1,16 +1,16 @@
 ---
-title: attr
+title: attr()
 slug: Web/CSS/Reference/Values/attr
 l10n:
   sourceCommit: 4cc24f96aebd031e636185532c6310601c3b5926
 ---
 
 > [!NOTE]
-> `attr()` 可以和任意 CSS 属性使用，但对于 {{CSSxRef("content")}} 之外的属性的支持都是实验性的。
+> `attr()` 函数可以和任意 CSS 属性使用，但对于 {{CSSxRef("content")}} 之外的属性的支持都是实验性的。
 
-`attr()` 用于检索所选元素的属性值并应用于 CSS 属性，类似 {{cssxref("var", "var()")}} 替换自定义属性值的方式。可以在[伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)上使用，采用伪元素的原始元素上的属性值。
+`attr()` [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/Reference/Values/Functions)用于检索所选元素的属性值并应用于属性值，类似 {{cssxref("var", "var()")}} 替换自定义属性值的方式。可以在[伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)上使用，在这种情况下，将返回伪元素的源元素上的属性值。
 
-{{InteractiveExample("CSS attr() 演示")}}
+{{InteractiveExample("CSS 演示：attr()", "tabbed-shorter")}}
 
 ```css interactive-example
 blockquote {
@@ -19,20 +19,18 @@ blockquote {
 
 blockquote::after {
   display: block;
-  content: " (source: " attr(cite) ") ";
+  content: "（来源：" attr(cite) "）";
   color: hotpink;
 }
 ```
 
 ```html interactive-example
-<blockquote cite="https://mozilla.org/en-US/about/">
-  Mozilla is working to put control of the internet back in the hands of the
-  people using it.
+<blockquote cite="https://mozilla.org/zh-CN/about/">
+  Mozilla 正致力于让网民重掌互联网。
 </blockquote>
 
 <blockquote cite="https://web.dev/about/">
-  Build beautiful, accessible, fast, and secure websites that work
-  cross-browser.
+  构建美观、无障碍、快速、安全且跨浏览器运行的网站。
 </blockquote>
 ```
 
@@ -59,18 +57,18 @@ attr(data-something, "default")
 
 ### 参数
 
-`attr()` 的语法表示如下：
+`attr()` 函数的语法表示如下：
 
 ```plain
 attr(<attr-name> <attr-type>? , <fallback-value>?)
 ```
 
-参数说明：
+参数：
 
 - `<attr-name>`
-  - : 会从选择的 HTML 元素上选取使用的属性名称。
+  - : 要从选定的 HTML 元素中检索其值的属性名称。
 - `<attr-type>`
-  - : 指定如何解析获取的 HTML 属性，可以是关键字 `raw-string`、 {{cssxref("type()")}} 或 CSS 属性单位。默认为 `raw-string`。
+  - : 指定如何将属性值解析为 CSS 值。可以是 `raw-string` 关键字、{{cssxref("type()")}} 函数或 CSS 尺寸单位。省略时默认为 `raw-string`。
     - `raw-string`
       - : 是 `<attr-type>` 的默认值，会使属性字面量被视为 CSS 字符串，不进行 CSS 解析（如 CSS 转义、空白移除、注释等）。如果设为空值则无法触发回退行为。
 
