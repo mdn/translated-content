@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
-
 **`Int16Array`** 类型化数组表示按平台字节顺序排列的 16 位有符号整数数组。如果需要控制字节顺序，请使用 {{jsxref("DataView")}} 代替。数组内容初始化为 `0`。建立后，可以使用对象的方法或标准数组索引语法（即使用方括号表示法）引用数组中的元素。
 
 `Int16Array` 是隐藏类 {{jsxref("TypedArray")}} 的子类。

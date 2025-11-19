@@ -6,7 +6,7 @@ original_slug: Learn/Forms/Advanced_form_styling
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
 
-Dans cet article, nous verrons comment utiliser CSS pour mettre en forme les contrôles de formulaires qui sont les plus compliqués à mettre en forme. Comme abordé [dans l'article précédent](/fr/docs/Learn/Forms/Styling_web_forms), les champs texte et les boutons sont plutôt simples à mettre en forme. Nous verrons ici le changement de style pour les éléments de formulaire plus problématiques.
+Dans cet article, nous verrons comment utiliser CSS pour mettre en forme les contrôles de formulaires qui sont les plus compliqués à mettre en forme. Comme abordé [dans l'article précédent](/fr/docs/Learn_web_development/Extensions/Forms/Styling_web_forms), les champs texte et les boutons sont plutôt simples à mettre en forme. Nous verrons ici le changement de style pour les éléments de formulaire plus problématiques.
 
 <table>
   <tbody>
@@ -31,24 +31,24 @@ Pour résumer ce que nous avons vu dans l'article précédent, nous avons&nbsp;:
 
 - Les cases à cocher (<i lang="en">checkbox</i>)
 - Les boutons radio
-- [`<input type="search">`](/fr/docs/Web/HTML/Element/input/search)
+- [`<input type="search">`](/fr/docs/Web/HTML/Reference/Elements/input/search)
 
 **Le truand**&nbsp;: certains éléments ne peuvent pas être complètement mis en forme à l'aide CSS. Parmi ceux-là, nous avons&nbsp;:
 
-- Les éléments qui créent des menus déroulants dont [`<select>`](/fr/docs/Web/HTML/Element/select), [`<option>`](/fr/docs/Web/HTML/Element/option), [`<optgroup>`](/fr/docs/Web/HTML/Element/optgroup) et [`<datalist>`](/fr/docs/Web/HTML/Element/datalist)
-- [`<input type="color">`](/fr/docs/Web/HTML/Element/input/color)
-- Les contrôles pour les dates comme [`<input type="datetime-local">`](/fr/docs/Web/HTML/Element/input/datetime-local)
-- [`<input type="range">`](/fr/docs/Web/HTML/Element/input/range)
-- [`<input type="file">`](/fr/docs/Web/HTML/Element/input/file)
-- [`<progress>`](/fr/docs/Web/HTML/Element/progress) et [`<meter>`](/fr/docs/Web/HTML/Element/meter)
+- Les éléments qui créent des menus déroulants dont [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select), [`<option>`](/fr/docs/Web/HTML/Reference/Elements/option), [`<optgroup>`](/fr/docs/Web/HTML/Reference/Elements/optgroup) et [`<datalist>`](/fr/docs/Web/HTML/Reference/Elements/datalist)
+- [`<input type="color">`](/fr/docs/Web/HTML/Reference/Elements/input/color)
+- Les contrôles pour les dates comme [`<input type="datetime-local">`](/fr/docs/Web/HTML/Reference/Elements/input/datetime-local)
+- [`<input type="range">`](/fr/docs/Web/HTML/Reference/Elements/input/range)
+- [`<input type="file">`](/fr/docs/Web/HTML/Reference/Elements/input/file)
+- [`<progress>`](/fr/docs/Web/HTML/Reference/Elements/progress) et [`<meter>`](/fr/docs/Web/HTML/Reference/Elements/meter)
 
-Pour commencer, abordons la propriété [`appearance`](/fr/docs/Web/CSS/appearance) qui s'avère plutôt utile pour simplifier la mise en forme de l'ensemble des éléments listés ci-avant.
+Pour commencer, abordons la propriété [`appearance`](/fr/docs/Web/CSS/Reference/Properties/appearance) qui s'avère plutôt utile pour simplifier la mise en forme de l'ensemble des éléments listés ci-avant.
 
 ## `appearance`&nbsp;: contrôler la mise en forme liée au système d'exploitation
 
 Dans l'article précédent, nous avons vu que la mise en forme des contrôles de formulaire provenait historiquement du système d'exploitation sous-jacent, ce qui explique en partie la difficulté à personnaliser l'aspect de ces contrôles.
 
-La propriété [`appearance`](/fr/docs/Web/CSS/appearance) a été créée comme une méthode pour contrôler les styles provenant du système d'exploitation et qui étaient appliqués aux contrôles de formulaire. Malheureusement, le comportement de cette propriété avec les implémentations initiales variait grandement d'un navigateur à l'autre, elle n'était donc que peu utilisable. Les implémentations plus récentes sont plus cohérentes et les différents navigateurs (que ce soit ceux basés sur Chromium comme Chrome, Opera, et Edge&nbsp;; Safari&nbsp;; et Firefox) prennent en charge la version préfixée avec `-webkit-` (`-webkit-appearance`).
+La propriété [`appearance`](/fr/docs/Web/CSS/Reference/Properties/appearance) a été créée comme une méthode pour contrôler les styles provenant du système d'exploitation et qui étaient appliqués aux contrôles de formulaire. Malheureusement, le comportement de cette propriété avec les implémentations initiales variait grandement d'un navigateur à l'autre, elle n'était donc que peu utilisable. Les implémentations plus récentes sont plus cohérentes et les différents navigateurs (que ce soit ceux basés sur Chromium comme Chrome, Opera, et Edge&nbsp;; Safari&nbsp;; et Firefox) prennent en charge la version préfixée avec `-webkit-` (`-webkit-appearance`).
 
 Si on consulte la page de référence, on verra que `-webkit-appearance` peut prendre de nombreuses valeurs différentes. Toutefois, la valeur la plus utile et celle que vous utiliserez probablement est `none`. Cela empêche, autant que possible, l'utilisation des styles provenant du système, vous permettant ainsi de construire vos propres styles avec CSS.
 
@@ -101,7 +101,7 @@ Dans la plupart des cas, l'effet correspond au retrait de la mise en forme de la
 
 ### Dompter les champs de recherche
 
-[`<input type="search">`](/fr/docs/Web/HTML/Element/input/search) prend généralement la forme d'un champ texte, pourquoi donc `appearance: none;` devient-il utile ici&nbsp;? En fait, sur macOS, les navigateurs basés sur Chromium ont des restrictions quant aux styles des boîtes de recherche&nbsp;: par exemple, on ne peut pas ajuster librement leur hauteur (`height`) ou la taille de la police (`font-size`). Cela est dû [au fait que les navigateurs basés sur Chromium n'utilisent plus le moteur de rendu WebKit](https://www.wired.com/2013/04/blink/), ce qui a activé l'apparence «&nbsp;Aqua&nbsp;» par défaut pour certains contrôles de formulaires. Avec Aqua activé, certains contrôles de formulaire ne sont plus [redimensionnables](https://webkit.org/blog/28/buttons/).
+[`<input type="search">`](/fr/docs/Web/HTML/Reference/Elements/input/search) prend généralement la forme d'un champ texte, pourquoi donc `appearance: none;` devient-il utile ici&nbsp;? En fait, sur macOS, les navigateurs basés sur Chromium ont des restrictions quant aux styles des boîtes de recherche&nbsp;: par exemple, on ne peut pas ajuster librement leur hauteur (`height`) ou la taille de la police (`font-size`). Cela est dû [au fait que les navigateurs basés sur Chromium n'utilisent plus le moteur de rendu WebKit](https://www.wired.com/2013/04/blink/), ce qui a activé l'apparence «&nbsp;Aqua&nbsp;» par défaut pour certains contrôles de formulaires. Avec Aqua activé, certains contrôles de formulaire ne sont plus [redimensionnables](https://webkit.org/blog/28/buttons/).
 
 Cela peut être corrigé avec `appearance: none;`, qui désactive cette apparence Aqua par défaut&nbsp;:
 
@@ -158,7 +158,7 @@ Les différents navigateurs gèrent cela différemment, et souvent avec un résu
 
 #### Utiliser `appearance: none` sur les boutons radio et les cases à cocher
 
-Comme nous l'avons vu, il est possible de retirer l'apparence par défaut d'une case à cocher ou d'un bouton radio avec [`appearance`](/fr/docs/Web/CSS/appearance)`:none;`. Prenons cet exemple en HTML:
+Comme nous l'avons vu, il est possible de retirer l'apparence par défaut d'une case à cocher ou d'un bouton radio avec [`appearance`](/fr/docs/Web/CSS/Reference/Properties/appearance)`:none;`. Prenons cet exemple en HTML:
 
 ```html
 <form>
@@ -196,7 +196,7 @@ input[type="checkbox"] {
 }
 ```
 
-Nous pouvons ensuite utiliser les pseudo-classes [`:checked`](/fr/docs/Web/CSS/:checked) et [`:disabled`](/fr/docs/Web/CSS/:disabled) pour changer l'apparence de nos cases à cocher lorsque leur état change&nbsp;:
+Nous pouvons ensuite utiliser les pseudo-classes [`:checked`](/fr/docs/Web/CSS/Reference/Selectors/:checked) et [`:disabled`](/fr/docs/Web/CSS/Reference/Selectors/:disabled) pour changer l'apparence de nos cases à cocher lorsque leur état change&nbsp;:
 
 ```css
 input[type="checkbox"] {
@@ -233,7 +233,7 @@ input[type="checkbox"]:disabled {
 }
 ```
 
-Nous en verrons plus sur les pseudo-classes [dans le prochain article](/fr/docs/Learn/Forms/UI_pseudo-classes). Voyons celles qui sont utilisées ici&nbsp;:
+Nous en verrons plus sur les pseudo-classes [dans le prochain article](/fr/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes). Voyons celles qui sont utilisées ici&nbsp;:
 
 - `:checked` permet d'appliquer une mise en forme lorsque la case à cocher ou le bouton radio est dans un état sélectionné.
 - `:disabled` permet d'appliquer une mise en forme lorsque la case à cocher ou le bouton radio est désactivé et qu'on ne peut pas interagir avec.
@@ -247,14 +247,14 @@ Voici quelques autres exemples pour vous donner d'autres idées&nbsp;
 - [Mise en forme de boutons radio](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html)&nbsp;: avec une mise en forme personnalisée pour des boutons radio
 - [Exemple d'interrupteur](https://mdn.github.io/learning-area/html/forms/toggle-switch-example/)&nbsp;: une case à cocher mise en forme afin de ressembler à un interrupteur.
 
-Si vous consultez ces exemples dans un navigateur qui ne prend pas en charge [`appearance`](/fr/docs/Web/CSS/appearance), votre conception ne sera pas visible, mais les éléments ressembleront à des cases à cocher et seront utilisables.
+Si vous consultez ces exemples dans un navigateur qui ne prend pas en charge [`appearance`](/fr/docs/Web/CSS/Reference/Properties/appearance), votre conception ne sera pas visible, mais les éléments ressembleront à des cases à cocher et seront utilisables.
 
 > [!NOTE]
 > Bien qu'Internet Explorer ne prenne pas en charge `appearance`, `input[type=checkbox]::-ms-check` permet de cibler les cases à cocher dans IE. Cette technique fonctionne également pour les boutons radio malgré le nom `-ms-check`.
 
 ## Quid des éléments dans la catégorie des «&nbsp;truands&nbsp;»&nbsp;?
 
-Voyons maintenant les contrôles qui tombent dans la catégorie des «&nbsp;truands&nbsp;» et qui sont très difficiles à mettre en forme. Il s'agit des contrôles avec des listes déroulantes ou de contrôles complexes comme [`color`](/fr/docs/Web/HTML/Element/input/color), [`datetime-local`](/fr/docs/Web/HTML/Element/input/datetime-local), et des contrôles de <i lang="en">feedback</i> comme [`<progress>`](/fr/docs/Web/HTML/Element/progress) et [`<meter>`](/fr/docs/Web/HTML/Element/meter).
+Voyons maintenant les contrôles qui tombent dans la catégorie des «&nbsp;truands&nbsp;» et qui sont très difficiles à mettre en forme. Il s'agit des contrôles avec des listes déroulantes ou de contrôles complexes comme [`color`](/fr/docs/Web/HTML/Reference/Elements/input/color), [`datetime-local`](/fr/docs/Web/HTML/Reference/Elements/input/datetime-local), et des contrôles de <i lang="en">feedback</i> comme [`<progress>`](/fr/docs/Web/HTML/Reference/Elements/progress) et [`<meter>`](/fr/docs/Web/HTML/Reference/Elements/meter).
 
 Le problème est que ces éléments ont des apparences bien différentes entre les navigateurs et bien que certaines parties soient personnalisables, d'autres parties internes sont purement impossibles à mettre en forme.
 
@@ -331,7 +331,7 @@ button {
 > [!NOTE]
 > Si vous souhaitez tester ces exemples sur différents navigateurs en même temps, vous pouvez [les retrouver ici](https://mdn.github.io/learning-area/html/forms/styling-examples/ugly-controls.html) (vous pouvez également [voir leur code source](https://github.com/mdn/learning-area/blob/main/html/forms/styling-examples/ugly-controls.html)).
 >
-> Il faut également garder à l'esprit que nous avons ajouté du JavaScript à la page qui liste les fichiers sélectionnés par le sélecteur de fichier (directement après le contrôle). Il s'agit d'une version simplifiée de l'exemple trouvé sur la page de référence pour [`<input type="file">`](/fr/docs/Web/HTML/Element/input/file#exemples).
+> Il faut également garder à l'esprit que nous avons ajouté du JavaScript à la page qui liste les fichiers sélectionnés par le sélecteur de fichier (directement après le contrôle). Il s'agit d'une version simplifiée de l'exemple trouvé sur la page de référence pour [`<input type="file">`](/fr/docs/Web/HTML/Reference/Elements/input/file#exemples).
 
 Comme vous pouvez le voir, on arrive à avoir un aspect relativement uniforme pour les différents navigateurs modernes.
 
@@ -386,7 +386,7 @@ select {
 }
 ```
 
-Nous allons créer notre propre icone à l'aide de contenu généré. On place un élément contenant le contrôle afin que [`::before`](/fr/docs/Web/CSS/::before)/[`::after`](/fr/docs/Web/CSS/::after) puissent fonctionner (en effet, ils n'ont pas d'effet sur les éléments `<select>`, car le contenu généré est placé relativement à la boîte de formatage d'un élément et que les champs de formulaires fonctionnent comme des éléments remplacés et ils n'ont donc pas de boîte de formatage)&nbsp;:
+Nous allons créer notre propre icone à l'aide de contenu généré. On place un élément contenant le contrôle afin que [`::before`](/fr/docs/Web/CSS/Reference/Selectors/::before)/[`::after`](/fr/docs/Web/CSS/Reference/Selectors/::after) puissent fonctionner (en effet, ils n'ont pas d'effet sur les éléments `<select>`, car le contenu généré est placé relativement à la boîte de formatage d'un élément et que les champs de formulaires fonctionnent comme des éléments remplacés et ils n'ont donc pas de boîte de formatage)&nbsp;:
 
 ```html
 <div class="select-wrapper">
@@ -414,7 +414,7 @@ On utilise alors du contenu généré afin de créer une flèche qui pointe vers
 }
 ```
 
-Le deuxième problème rencontré est l'absence de contrôle sur la boîte de choix qui apparaît lorsqu'on clique sur le sélecteur. Vous pourrez voir que les options de choix n'héritent pas de la police de leur parent. Il est également impossible de définir de façon cohérente l'espacement et les couleurs. Ainsi, Firefox appliquera [`color`](/fr/docs/Web/CSS/color) et [`background-color`](/fr/docs/Web/CSS/background-color) sur [`<option>`](/fr/docs/Web/HTML/Element/option), mais Chrome ne le fera pas. Aucun n'appliquera d'espacement (par exemple celui-ci créé avec [`padding`](/fr/docs/Web/CSS/padding)). Il en va de même pour la liste de suggestion pour l'autocomplétion qui apparaît sur une liste de données.
+Le deuxième problème rencontré est l'absence de contrôle sur la boîte de choix qui apparaît lorsqu'on clique sur le sélecteur. Vous pourrez voir que les options de choix n'héritent pas de la police de leur parent. Il est également impossible de définir de façon cohérente l'espacement et les couleurs. Ainsi, Firefox appliquera [`color`](/fr/docs/Web/CSS/Reference/Properties/color) et [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color) sur [`<option>`](/fr/docs/Web/HTML/Reference/Elements/option), mais Chrome ne le fera pas. Aucun n'appliquera d'espacement (par exemple celui-ci créé avec [`padding`](/fr/docs/Web/CSS/Reference/Properties/padding)). Il en va de même pour la liste de suggestion pour l'autocomplétion qui apparaît sur une liste de données.
 
 Si vous avez besoin de contrôler complètement la mise en forme, il vous faudra utiliser une bibliothèque tierce ou construire votre propre contrôle. Une autre alternative pour l'élément `<select>` consiste à utiliser l'attribut `multiple` qui fait apparaître l'ensemble des options sur la page, contournant ainsi le problème&nbsp;:
 
@@ -426,16 +426,16 @@ Si vous avez besoin de contrôler complètement la mise en forme, il vous faudra
 
 ### Les champs de date
 
-Les champs pour les dates et heures ([`datetime-local`](/fr/docs/Web/HTML/Element/input/datetime-local), [`time`](/fr/docs/Web/HTML/Element/input/time), [`week`](/fr/docs/Web/HTML/Element/input/week), [`month`](/fr/docs/Web/HTML/Element/input/month)) partagent le même problème. La boîte englobante et le texte sont assez simples à mettre en forme et ce que nous avons jusqu'à présent est suffisant.
+Les champs pour les dates et heures ([`datetime-local`](/fr/docs/Web/HTML/Reference/Elements/input/datetime-local), [`time`](/fr/docs/Web/HTML/Reference/Elements/input/time), [`week`](/fr/docs/Web/HTML/Reference/Elements/input/week), [`month`](/fr/docs/Web/HTML/Reference/Elements/input/month)) partagent le même problème. La boîte englobante et le texte sont assez simples à mettre en forme et ce que nous avons jusqu'à présent est suffisant.
 
 Toutefois, les parties internes du contrôle (le calendrier qui s'affiche pour sélectionner la date, le sélecteur pour incrémenter/décrémenter les valeurs) ne sont pas du tout personnalisables et on ne peut pas s'en débarrasser avec `appearance: none;`. Si vous devez maîtriser la forme de 1 à Z, vous devrez utiliser une bibliothèque tierce ou construire votre propre contrôle.
 
 > [!NOTE]
-> On notera que [`<input type="number">`](/fr/docs/Web/HTML/Element/input/number) peut souffrir du même problème quant au mécanisme d'incrémentation/décrémentation. Toutefois, on peut contourner certains problèmes, lorsque les données collectées par le contrôle sont simples, en utilisant un champ de type `text` à la place.
+> On notera que [`<input type="number">`](/fr/docs/Web/HTML/Reference/Elements/input/number) peut souffrir du même problème quant au mécanisme d'incrémentation/décrémentation. Toutefois, on peut contourner certains problèmes, lorsque les données collectées par le contrôle sont simples, en utilisant un champ de type `text` à la place.
 
 ### Les champs d'intervalle
 
-[`<input type="range">`](/fr/docs/Web/HTML/Element/input/range) est plutôt embêtant à mettre en forme. Vous pouvez utiliser ce qui suit pour retirer la piste par défaut et la remplacer avec une mise en forme personnalisée (ici une fine ligne rouge)&nbsp;:
+[`<input type="range">`](/fr/docs/Web/HTML/Reference/Elements/input/range) est plutôt embêtant à mettre en forme. Vous pouvez utiliser ce qui suit pour retirer la piste par défaut et la remplacer avec une mise en forme personnalisée (ici une fine ligne rouge)&nbsp;:
 
 ```css
 input[type="range"] {
@@ -508,18 +508,18 @@ Vous pouvez voir le résultat de la mise en forme précédente dans l'exemple qu
 
 ### Les curseurs et indicateurs de progression
 
-[`<meter>`](/fr/docs/Web/HTML/Element/meter) et [`<progress>`](/fr/docs/Web/HTML/Element/progress) sont potentiellement les pires. Comme nous l'avons vu précédemment, on peut définir leur largeur, mais au-delà de ça, il est très difficile de modifier la mise en forme. Le paramétrage de la hauteur varie d'un navigateur à l'autre, on peut changer la couleur de l'arrière-plan mais la barre au premier plan et `appearance: none` fera empirer les choses plutôt que le contraire.
+[`<meter>`](/fr/docs/Web/HTML/Reference/Elements/meter) et [`<progress>`](/fr/docs/Web/HTML/Reference/Elements/progress) sont potentiellement les pires. Comme nous l'avons vu précédemment, on peut définir leur largeur, mais au-delà de ça, il est très difficile de modifier la mise en forme. Le paramétrage de la hauteur varie d'un navigateur à l'autre, on peut changer la couleur de l'arrière-plan mais la barre au premier plan et `appearance: none` fera empirer les choses plutôt que le contraire.
 
 Si vous souhaitez être capable de contrôler la mise en forme, il sera plus simple de créer votre propre contrôle.
 
 ## Testez vos compétences&nbsp;!
 
-Vous avez fini cet article, mais vous rappelez-vous des informations essentielles&nbsp;? Pour vous évaluer et vérifier que vous avez retenu ce qu'il fallait avant de poursuivre, voyez [l'évaluation sur la mise en forme avancée](/fr/docs/Learn/Forms/Test_your_skills:_Advanced_styling). Attention, cette évaluation utilise également des notions abordées [dans le prochain article](/fr/docs/Learn/Forms/UI_pseudo-classes), n'hésitez pas à commencer par cette lecture avant l'évaluation.
+Vous avez fini cet article, mais vous rappelez-vous des informations essentielles&nbsp;? Pour vous évaluer et vérifier que vous avez retenu ce qu'il fallait avant de poursuivre, voyez [l'évaluation sur la mise en forme avancée](/fr/docs/Learn/Forms/Test_your_skills:_Advanced_styling). Attention, cette évaluation utilise également des notions abordées [dans le prochain article](/fr/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes), n'hésitez pas à commencer par cette lecture avant l'évaluation.
 
 ## Résumé
 
 Bien qu'il existe encore des difficultés pour utiliser CSS avec les formulaires HTML, il existe différentes façons de contourner les problèmes. Il n'existe pas de solution propre et universelle, mais les navigateurs récents offrent de nouvelles possibilités. La meilleure des solutions consiste à connaître les différences et la compatibilité des navigateurs pour le CSS qui porte sur les contrôles de formulaire.
 
-Dans le prochain article de ce module, nous aborderons [les différentes pseudo-classes relatives à l'interface utilisateur](/fr/docs/Learn/Forms/UI_pseudo-classes) qui peuvent être utilisées dans les navigateurs modernes afin d'adapter la mise en forme d'un formulaire à différents états.
+Dans le prochain article de ce module, nous aborderons [les différentes pseudo-classes relatives à l'interface utilisateur](/fr/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes) qui peuvent être utilisées dans les navigateurs modernes afin d'adapter la mise en forme d'un formulaire à différents états.
 
 {{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}

@@ -202,7 +202,7 @@ l10n:
 - `integrity`
   - : 包含内联元数据——（你要求浏览器获取的）资源（文件）的以 base64 编码的密码散列值。浏览器可以使用这一点来验证所获取的资源是否已被传输且没有遭到意外的修改。该属性只有在指定了 `rel` 属性为 `stylesheet`、`preload` 或 `modulepreload` 时才能指定。参见[子资源完整性](/zh-CN/docs/Web/Security/Subresource_Integrity)。
 - `media`
-  - : 该属性指定链接资源适用的媒体。其值必须是媒体类型或[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)。该属性主要用于链接外部样式表——它允许用户代理选择最适合其运行设备的样式表。
+  - : 该属性指定链接资源适用的媒体。其值必须是媒体类型或[媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries)。该属性主要用于链接外部样式表——它允许用户代理选择最适合其运行设备的样式表。
 
 - `referrerpolicy`
   - : 一个字符串，表示在获取资源时使用哪个 referrer：

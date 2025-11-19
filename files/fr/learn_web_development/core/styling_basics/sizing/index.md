@@ -43,7 +43,7 @@ Si vous placez une image dans une page sans modifier sa hauteur ni sa largeur (q
 
 {{EmbedGHLiveSample("css-examples/learn/sizing/intrinsic-image.html", '100%', 600)}}
 
-Un élément [`<div>`](/fr/docs/Web/HTML/Element/div) vide en revanche, n'a pas de taille en soi. Si vous ajouter une [`<div>`](/fr/docs/Web/HTML/Element/div) à votre HTML sans aucun contenu à l'intérieur, et que vous lui ajouter une bordure comme nous l'avons fait avec l'image ci-dessus, vous verrez une ligne s'afficher sur la page. Cette ligne résulte de la juxtaposition des bordures horizontales, car il n'y a aucun contenu entre les deux. De plus les bordures s'étendent sur toute la largeur disponible du conteneur, car il s'agit d'un élément de bloc. Un comportement avec lequel vous devriez déjà être familiarisé. Cet élément n'a pas de hauteur (ou plutôt pas de taille dans l'axe de bloc), car il n'y a pas de contenu à l'intérieur de celui-ci.
+Un élément [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) vide en revanche, n'a pas de taille en soi. Si vous ajouter une [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) à votre HTML sans aucun contenu à l'intérieur, et que vous lui ajouter une bordure comme nous l'avons fait avec l'image ci-dessus, vous verrez une ligne s'afficher sur la page. Cette ligne résulte de la juxtaposition des bordures horizontales, car il n'y a aucun contenu entre les deux. De plus les bordures s'étendent sur toute la largeur disponible du conteneur, car il s'agit d'un élément de bloc. Un comportement avec lequel vous devriez déjà être familiarisé. Cet élément n'a pas de hauteur (ou plutôt pas de taille dans l'axe de bloc), car il n'y a pas de contenu à l'intérieur de celui-ci.
 
 {{EmbedGHLiveSample("css-examples/learn/sizing/intrinsic-text.html", '100%', 500)}}
 
@@ -51,7 +51,7 @@ Dans l'exemple ci-dessus; essayez d'ajouter du texte à l'intérieur de l'élém
 
 ## Spécifier une taille
 
-Nous pouvons bien entendu donner une taille spécifique aux éléments. Quand une taille est ainsi donnée à un élément (et que son contenu est adapté à cette taille), nous parlons de **taille extrinsèque**. Reprenons notre `<div>` de l'exemple précédent — nous pouvons lui donner une [`width`](/fr/docs/Web/CSS/width) spécifique et une [`height`](/fr/docs/Web/CSS/height) spécifique, l'élément a désormais une taille définie peu importe ce qui est placé à l'intérieur de celui-ci. Comme nous l'avons appris dans [notre précédente leçon sur le concept d'overflow,](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content) une hauteur définie peut générer un débordement du contenu si celui-ci a plus de contenu que l'espace alloué par son conteneur.
+Nous pouvons bien entendu donner une taille spécifique aux éléments. Quand une taille est ainsi donnée à un élément (et que son contenu est adapté à cette taille), nous parlons de **taille extrinsèque**. Reprenons notre `<div>` de l'exemple précédent — nous pouvons lui donner une [`width`](/fr/docs/Web/CSS/Reference/Properties/width) spécifique et une [`height`](/fr/docs/Web/CSS/Reference/Properties/height) spécifique, l'élément a désormais une taille définie peu importe ce qui est placé à l'intérieur de celui-ci. Comme nous l'avons appris dans [notre précédente leçon sur le concept d'overflow,](/fr/docs/Learn_web_development/Core/Styling_basics/Overflow) une hauteur définie peut générer un débordement du contenu si celui-ci a plus de contenu que l'espace alloué par son conteneur.
 
 {{EmbedGHLiveSample("css-examples/learn/sizing/height.html", '100%', 600)}}
 
@@ -59,7 +59,7 @@ Du fait de ce comportement parfois inattendu, fixer la hauteur d'un élément av
 
 ### Avec les pourcentages
 
-De bien des manières, les pourcentages agissent de la même manière que les unités de longueur, et comme nous l'avons vu dans [la leçon sur les valeurs et unités en CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units), ils peuvent souvent être utilisés de manière interchangeable avec les unités de longueur. Lorsque vous utilisez les pourcentages vous devez seulement être conscient de la valeur à laquelle se réfère le pourcentage. Si vous donnez à un bloc enfant une largeur définie en pourcentage, celui-ci correspond à un pourcentage de la largeur du conteneur parent.
+De bien des manières, les pourcentages agissent de la même manière que les unités de longueur, et comme nous l'avons vu dans [la leçon sur les valeurs et unités en CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units), ils peuvent souvent être utilisés de manière interchangeable avec les unités de longueur. Lorsque vous utilisez les pourcentages vous devez seulement être conscient de la valeur à laquelle se réfère le pourcentage. Si vous donnez à un bloc enfant une largeur définie en pourcentage, celui-ci correspond à un pourcentage de la largeur du conteneur parent.
 
 {{EmbedGHLiveSample("css-examples/learn/sizing/percent-width.html", '100%', 600)}}
 
@@ -67,7 +67,7 @@ En effet, les pourcentages sont déterminés en fonction de la taille de l'élé
 
 ### Marges et remplissage en pourcentages
 
-Si vous définissez les `margins` (marges extérieures) et les `paddings` (marges intérieurs) avec des pourcentages, vous noterez un comportement inattendu. Dans l'exemple ci-dessous nous avons une boite. Nous avons défini la propriété [`margin`](/fr/docs/Web/CSS/margin) à 10% et la propriété [`padding`](/fr/docs/Web/CSS/padding) à 10% également. Les marges intérieures et extérieures sur le haut et le bas de la boite ont la même taille que les marges extérieures sur la gauche et la droite.
+Si vous définissez les `margins` (marges extérieures) et les `paddings` (marges intérieurs) avec des pourcentages, vous noterez un comportement inattendu. Dans l'exemple ci-dessous nous avons une boite. Nous avons défini la propriété [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin) à 10% et la propriété [`padding`](/fr/docs/Web/CSS/Reference/Properties/padding) à 10% également. Les marges intérieures et extérieures sur le haut et le bas de la boite ont la même taille que les marges extérieures sur la gauche et la droite.
 
 {{EmbedGHLiveSample("css-examples/learn/sizing/percent-mp.html", '100%', 700)}}
 
@@ -77,7 +77,7 @@ Lorsque vous utilisez des marges et des remplissages définis en pourcentages, l
 
 ## Tailles min- et max-
 
-En plus de donner aux choses une taille fixe, nous pouvons demander à CSS de donner à un élément une taille minimale ou maximale. Si vous avez une boîte qui pourrait contenir une quantité variable de contenu, et que vous voulez toujours qu'elle ait _au moins_ une certaine hauteur, vous pourriez lui attribuer la propriété [`min-height`](/fr/docs/Web/CSS/min-height). La boîte sera toujours, au minimum, de cette hauteur, mais deviendra plus grande s'il y a plus de contenu que la boîte que sa hauteur minimale.
+En plus de donner aux choses une taille fixe, nous pouvons demander à CSS de donner à un élément une taille minimale ou maximale. Si vous avez une boîte qui pourrait contenir une quantité variable de contenu, et que vous voulez toujours qu'elle ait _au moins_ une certaine hauteur, vous pourriez lui attribuer la propriété [`min-height`](/fr/docs/Web/CSS/Reference/Properties/min-height). La boîte sera toujours, au minimum, de cette hauteur, mais deviendra plus grande s'il y a plus de contenu que la boîte que sa hauteur minimale.
 
 Dans l'exemple ci-dessous, vous pouvez voir deux boîtes, toutes deux ayant une hauteur définie de 150 pixels. La boîte de gauche a une hauteur de 150 pixels ; la boîte de droite a un contenu qui a besoin de plus d'espace, et elle est donc devenue plus haute que 150 pixels.
 
@@ -85,7 +85,7 @@ Dans l'exemple ci-dessous, vous pouvez voir deux boîtes, toutes deux ayant une 
 
 C'est très utile pour traiter des quantités variables de contenu tout en évitant les débordements.
 
-Une utilisation courante de [`max-width`](/fr/docs/Web/CSS/max-width) consiste à faire en sorte que les images soient réduites si l'espace est insuffisant pour les afficher à leur largeur intrinsèque, tout en s'assurant qu'elles ne deviennent pas plus grandes que cette largeur.
+Une utilisation courante de [`max-width`](/fr/docs/Web/CSS/Reference/Properties/max-width) consiste à faire en sorte que les images soient réduites si l'espace est insuffisant pour les afficher à leur largeur intrinsèque, tout en s'assurant qu'elles ne deviennent pas plus grandes que cette largeur.
 
 À titre d'exemple, si vous définissiez `width: 100%` sur une image, et que sa largeur intrinsèque était inférieure à son conteneur, l'image serait forcée de s'étirer et de s'agrandir, ce qui lui donnerait un aspect pixelisé. Si sa largeur intrinsèque était supérieure à celle de son conteneur, elle le déborderait. Aucun des deux cas n'est susceptible de correspondre à ce que vous souhaitez.
 
@@ -98,13 +98,13 @@ Dans l'exemple ci-dessous, nous avons utilisé trois fois la même image. La pre
 Cette technique est utilisée pour rendre les images _responsive_, de sorte que lorsqu'elles sont visualisées sur un appareil plus petit, elles sont réduites de manière appropriée. Vous ne devez cependant pas utiliser cette technique pour charger des images vraiment grandes et les réduire ensuite dans le navigateur. Les images doivent être correctement dimensionnées pour ne pas être plus grandes qu'elles ne doivent l'être pour la plus grande taille à laquelle elles sont affichées dans la conception. Le téléchargement d'images trop grandes ralentira votre site et peut coûter plus cher aux utilisateurs s'ils disposent d'une connexion limitée.
 
 > [!NOTE]
-> En savoir plus sur [les techniques d'images responsives](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
+> En savoir plus sur [les techniques d'images responsives](/fr/docs/Web/HTML/Guides/Responsive_images).
 
 ## Unités de la fenêtre d'affichage
 
 La fenêtre — la surface de la page montrée par le navigateur lorsqu'on navigue sur un site — a aussi des dimensions. Certaines unités CSS sont dédiées à la description des dimensions de la fenêtre — `vw` pour _viewport width_ (largeur de la fenêtre), et `vh` pour _viewport height_ (hauteur de la fenêtre). Grâce à ces unités vous pouvez dimensionner un objet en fonction de la fenêtre de l'utilisateur.
 
-`1vh` correspond à 1% de la hauteur de la fenêtre, `1vw` à 1% sa largeur. Avec ces unités, on peut dimensionner des boîtes aussi bien que du texte. Dans l'exemple ci-dessous, la boîte a pour dimensions 20vh et 20vw. Elle contient la lettre `A`, de [`font-size`](/fr/docs/Web/CSS/font-size) 10vh.
+`1vh` correspond à 1% de la hauteur de la fenêtre, `1vw` à 1% sa largeur. Avec ces unités, on peut dimensionner des boîtes aussi bien que du texte. Dans l'exemple ci-dessous, la boîte a pour dimensions 20vh et 20vw. Elle contient la lettre `A`, de [`font-size`](/fr/docs/Web/CSS/Reference/Properties/font-size) 10vh.
 
 {{EmbedGHLiveSample("css-examples/learn/sizing/vw-vh.html", '100%', 600)}}
 
@@ -118,6 +118,6 @@ Nous avons abordé beaucoup de choses dans cet article, mais pouvez-vous vous so
 
 ## Résumé
 
-Cette leçon a voulu vous sensibiliser aux difficultés principales qu'on rencontre dès qu'on veut donner une dimension aux objets sur le Web. Lorsque vous verrez [les dispositions en CSS](/fr/docs/Learn/CSS/CSS_layout), le dimensionnement deviendra crucial pour maîtriser les différents modes de disposition : autant en comprendre les concepts avant d'aller plus loin.
+Cette leçon a voulu vous sensibiliser aux difficultés principales qu'on rencontre dès qu'on veut donner une dimension aux objets sur le Web. Lorsque vous verrez [les dispositions en CSS](/fr/docs/Learn_web_development/Core/CSS_layout), le dimensionnement deviendra crucial pour maîtriser les différents modes de disposition : autant en comprendre les concepts avant d'aller plus loin.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}

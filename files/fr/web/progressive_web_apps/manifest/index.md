@@ -128,7 +128,7 @@ Les valeurs valides sont :
 | `browser`        | L'application s'ouvre dans un nouvel onglet ou une nouvelle fenêtre du navigateur, en fonction du navigateur et de la plateforme. C'est la valeur par défaut.                                                                                                                                                                                                                           | (None)                  |
 
 > [!NOTE]
-> Vous pouvez appliquer les CSS de manière séléctive pour votre application en fonction du mode d'affichage en utilisant la fonction [display-mode](/fr/docs/Web/CSS/@media/display-mode). Cela peut être utilisé pour fournir une expérience utilisateur cohérente entre le lancement à partir d'une URL et le lancement à partir d'une icône de bureau.
+> Vous pouvez appliquer les CSS de manière séléctive pour votre application en fonction du mode d'affichage en utilisant la fonction [display-mode](/fr/docs/Web/CSS/Reference/At-rules/@media/display-mode). Cela peut être utilisé pour fournir une expérience utilisateur cohérente entre le lancement à partir d'une URL et le lancement à partir d'une icône de bureau.
 
 ### `icons`
 

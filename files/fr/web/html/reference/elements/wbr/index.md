@@ -30,7 +30,7 @@ L'élément HTML **`<wbr>`** permet de représenter un emplacement où casser la
 
 ## Attributs
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes
 
@@ -52,7 +52,8 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
 {{EmbedLiveSample("Exemples","100%","120")}}
 
-> **Note :** _[Le guide stylistique de Yahoo](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/)_ recommande de [casser une URL avant la ponctuation](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses) afin d'éviter toute ambiguïté sur la fin de l'URL (l'utilisateur pourrait croire que l'URL se finit en fin de ligne alors qu'elle se poursuit plus loin).
+> [!NOTE]
+> _[Le guide stylistique de Yahoo](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/)_ recommande de [casser une URL avant la ponctuation](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses) afin d'éviter toute ambiguïté sur la fin de l'URL (l'utilisateur pourrait croire que l'URL se finit en fin de ligne alors qu'elle se poursuit plus loin).
 
 ## Résumé technique
 

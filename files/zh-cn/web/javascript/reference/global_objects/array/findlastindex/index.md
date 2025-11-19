@@ -3,8 +3,6 @@ title: Array.prototype.findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLastIndex
 ---
 
-{{JSRef}}
-
 **`findLastIndex()`** 方法反向迭代数组，并返回满足所提供的测试函数的第一个元素的索引。若没有找到对应元素，则返回 -1。
 
 另请参见 {{jsxref("Array.findLast()", "findLast()")}} 方法，该方法返回最后一个满足测试函数的元素的值（而不是它的索引）。

@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**色空間** (Color spaces) とは、座標ベースの色配置の基本となる色モデルにおける色の名前付きの組織を指します。色モデルは、色の構成要素（例えば、[`hwb()`](/ja/docs/Web/CSS/color_value/hwb) 色の `h`、`w`、`b` チャンネル）が色空間とどのように関連するかを定義します。ほとんどの色空間は、色を表す 3 次元または 4 次元のグリッドです。各次元（または軸）は、異なるチャンネルに対応します。色は複数の色空間で表現でき、ある色空間から別の色空間に変換しても、見た目は同じままです。
+**色空間** (Color spaces) とは、座標ベースの色配置の基本となる色モデルにおける色の名前付きの組織を指します。色モデルは、色の構成要素（例えば、[`hwb()`](/ja/docs/Web/CSS/Reference/Values/color_value/hwb) 色の `h`、`w`、`b` チャンネル）が色空間とどのように関連するかを定義します。ほとんどの色空間は、色を表す 3 次元または 4 次元のグリッドです。各次元（または軸）は、異なるチャンネルに対応します。色は複数の色空間で表現でき、ある色空間から別の色空間に変換しても、見た目は同じままです。
 
 色空間は、特定の色範囲を分類し定義します。それぞれの色空間は、数学モデルと関連するルールセットによって定義されます。それぞれの色空間には、表現可能な色範囲を示す定義された{{glossary("Gamut", "色域")}}があります。これらのルールにより、異なる機器やソフトウェア間でも、一貫性のある再現可能な色表現が可能になります。
 
@@ -23,13 +23,13 @@ sRGB 色空間（標準の赤、緑、青）はウェブ用に作成されまし
 
 RGBは、赤、緑、青の 3 つの基本要素の混合色として色を表現する色モデルです。これらの要素が組み合わさると、さまざまな色合いが生まれます。 sRGB または「標準 RGB」は、 RGB 色の基本となる色空間です。 sRGB は、 PC や {{glossary("world wide web", "ウェブ")}}ベースの画像システムの表示仕様を標準化することを目的としています。現在では、タグ付けされていない、または埋め込みカラープロファイルのないものについては、通常、この色空間が想定されています。
 
-Adobe RGB 色空間など、 sRGB 色空間よりも広い{{glossary("gamut","色域")}}を表現できる RGB 色空間がいくつかあります。 sRGB と Adobe RGB (`a98-rgb`) の座標は異なります。 色の RGB 要素を表現する方法は数多くあります。 {{Glossary("CSS")}} では、 16 進数表記の 24 ビット整数（例えば、 `#add8e6` は水色）で表すか、 [`rgb()`](/ja/docs/Web/CSS/color_value/rgb) 関数記法で 0 から 255 までの 3 つの別々の数値（例えば、 `rgb(46 139.5 87)`）として表すことができます。
+Adobe RGB 色空間など、 sRGB 色空間よりも広い{{glossary("gamut","色域")}}を表現できる RGB 色空間がいくつかあります。 sRGB と Adobe RGB (`a98-rgb`) の座標は異なります。 色の RGB 要素を表現する方法は数多くあります。 {{Glossary("CSS")}} では、 16 進数表記の 24 ビット整数（例えば、 `#add8e6` は水色）で表すか、 [`rgb()`](/ja/docs/Web/CSS/Reference/Values/color_value/rgb) 関数記法で 0 から 255 までの 3 つの別々の数値（例えば、 `rgb(46 139.5 87)`）として表すことができます。
 
-CSS の sRGB 色における `<color>` の値 sRGB 色空間には、{{cssxref("hex-color")}}、{{cssxref("named-color")}}、{{cssxref("color_value/rgb", "rgb()")}}、{{cssxref("color_value/hsl", "hsl()")}}（色相、彩度、明度）や {{cssxref("color_value/hwb", "hwb()")}} （色相、白色度、黒色度）があります。また、`srgb`、`srgb-linear`、`a98-rgb`、`prophoto-rgb` 色空間が [`color()`](/ja/docs/Web/CSS/color_value/color) 関数のためにあります。
+CSS の sRGB 色における `<color>` の値 sRGB 色空間には、{{cssxref("hex-color")}}、{{cssxref("named-color")}}、{{cssxref("color_value/rgb", "rgb()")}}、{{cssxref("color_value/hsl", "hsl()")}}（色相、彩度、明度）や {{cssxref("color_value/hwb", "hwb()")}} （色相、白色度、黒色度）があります。また、`srgb`、`srgb-linear`、`a98-rgb`、`prophoto-rgb` 色空間が [`color()`](/ja/docs/Web/CSS/Reference/Values/color_value/color) 関数のためにあります。
 
-HSV （色相、彩度、明度）の色空間および同義語である HSB （色相、彩度、輝度）は、 CSS では [`hwb()`](/ja/docs/Web/CSS/color_value/hwb) として表されます。名前付きの色は、特定の 16 進数値にマッピングされた単なるキーワードです。これらのさまざまな色表記を sRGB に変換するのは、数学的には簡単です。なお、 {{cssxref("&lt;color&gt;","currentcolor","#currentcolor_keyword")}} は任意の色を使用でき、 sRGB に限定されるものではありません。
+HSV （色相、彩度、明度）の色空間および同義語である HSB （色相、彩度、輝度）は、 CSS では [`hwb()`](/ja/docs/Web/CSS/Reference/Values/color_value/hwb) として表されます。名前付きの色は、特定の 16 進数値にマッピングされた単なるキーワードです。これらのさまざまな色表記を sRGB に変換するのは、数学的には簡単です。なお、 {{cssxref("&lt;color&gt;","currentcolor","#currentcolor_keyword")}} は任意の色を使用でき、 sRGB に限定されるものではありません。
 
-`rgb()` 色関数は、sRGB色空間を表現できる唯一の色関数ではありません。 [`HSL`](/ja/docs/Web/CSS/color_value/hsl) （色相-彩度-明度）や [`HWB`](/ja/docs/Web/CSS/color_value/hwb) （色相-白色度-黒度）のような円筒座標系も、ウェブ上で sRGB 色を表現するために使用されています。
+`rgb()` 色関数は、sRGB色空間を表現できる唯一の色関数ではありません。 [`HSL`](/ja/docs/Web/CSS/Reference/Values/color_value/hsl) （色相-彩度-明度）や [`HWB`](/ja/docs/Web/CSS/Reference/Values/color_value/hwb) （色相-白色度-黒度）のような円筒座標系も、ウェブ上で sRGB 色を表現するために使用されています。
 
 - `srgb` 色空間
   - : sRGB カラー空間、または「標準 RGB」は標準 RGB（赤、緑、青）色空間です。 モニター、プリンター、ウェブで使用するために作成されました。 最も広く使用されている色空間であり、ほとんどのオペレーティングシステム、ソフトウェアプログラム、モニター、プリンターが対応しています。 sRGB は `r`、`g`、`b` をベースにしており、色域内の値は `0` から `1` の範囲です。 白色点は D65 です。
@@ -88,7 +88,7 @@ CIELab 色空間（Lab、Lch、Oklab、Oklch など）は、端末に依存し�
 ## 関連情報
 
 - `@media` の {{cssxref("@media/color-gamut", "color-gamut")}} 特性
-- [CSS データ型: `<color>`](/ja/docs/Web/CSS/color_value)
+- [CSS データ型: `<color>`](/ja/docs/Web/CSS/Reference/Values/color_value)
 - [sRGB 色空間](https://webstore.iec.ch/en/publication/6168)
 - [CIELAB 色空間](https://ja.wikipedia.org/wiki/Lab色空間) (Wikipedia)
 - [CIE 1931 色空間](https://ja.wikipedia.org/wiki/CIE_1931_色空間) (Wikipedia)

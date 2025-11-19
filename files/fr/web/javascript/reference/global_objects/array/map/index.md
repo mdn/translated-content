@@ -1,43 +1,44 @@
 ---
-title: Array.prototype.map()
+title: "Array : méthode map()"
+short-title: map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+La méthode **`map()`** des instances de {{JSxRef("Array")}} crée un nouveau tableau rempli avec les résultats de l'appel d'une fonction fournie sur chaque élément du tableau appelant.
 
-La méthode **`map()`** crée un nouveau tableau avec les résultats de l'appel d'une fonction fournie sur chaque élément du tableau appelant.
-
-{{InteractiveExample("JavaScript Demo: Array.map()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Array.prototype.map()")}}
 
 ```js interactive-example
-const array1 = [1, 4, 9, 16];
+const array = [1, 4, 9, 16];
 
-// Pass a function to map
-const map1 = array1.map((x) => x * 2);
+// Passer une fonction à map
+const mapped = array.map((x) => x * 2);
 
-console.log(map1);
-// Expected output: Array [2, 8, 18, 32]
+console.log(mapped);
+// Résultat attendu : Array [2, 8, 18, 32]
 ```
 
 ## Syntaxe
 
-```js
-var nouveauTableau = arr.map(callback [, thisArg])
+```js-nolint
+map(callbackFn)
+map(callbackFn, thisArg)
 ```
 
 ### Paramètres
 
-- `callback`
-  - : La fonction qui est utilisée pour créer un élément du nouveau tableau. Elle utilise trois arguments :
-    - `valeurCourante`
-      - : La valeur de l'élément du tableau à traiter.
-    - `index`{{optional_inline}}
-      - : L'index de l'élément qui est traité par la fonction.
-    - `tableau`{{optional_inline}}
-      - : Le tableau sur lequel on a appelé la méthode `map`.
-
-- `thisArg` {{optional_inline}}
-  - : La valeur à utiliser pour `this` lors de l'exécution de `callback`. La valeur par défaut est l'objet global de l'environnement (`Window` pour un navigateur).
+- `callbackFn`
+  - : Une fonction à exécuter pour chaque élément du tableau. Sa valeur de retour est ajoutée comme un élément du nouveau tableau. La fonction est appelée avec les arguments suivants&nbsp;:
+    - `element`
+      - : L'élément en cours de traitement dans le tableau.
+    - `index`
+      - : L'indice de l'élément en cours de traitement dans le tableau.
+    - `array`
+      - : Le tableau sur lequel `map()` a été appelée.
+- `thisArg` {{Optional_Inline}}
+  - : Une valeur à utiliser comme `this` lors de l'exécution de `callbackFn`. Voir [méthodes itératives](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives).
 
 ### Valeur de retour
 
@@ -45,138 +46,233 @@ Un nouveau tableau composé des images de la fonction de rappel.
 
 ## Description
 
-Lorsqu'on utilise `map`, la fonction `callback` fournie en argument est exécutée une fois pour chacun des éléments du tableau, dans l'ordre du tableau. Chaque résultat de l'opération sur un élément sera un élément du nouveau tableau. La fonction `callback` est appelée uniquement pour les indices du tableau pour lesquels il y a des valeurs affectées (y compris si cette valeur est {{jsxref("undefined")}}). Si les valeurs ont été supprimées ou qu'elles n'ont jamais été initialisées, la fonction ne sera pas appelée.
+La méthode `map()` est une [méthode itérative](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives). Elle appelle la fonction `callbackFn` fournie une fois pour chaque élément du tableau et construit un nouveau tableau à partir des résultats. Consultez la section [méthodes itératives](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives) pour plus d'informations sur le fonctionnement général de ces méthodes.
 
-`callback` est appelée avec trois arguments : la valeur de l'élément du tableau, l'index de cet élément et l'objet {{jsxref("Array")}} qui est parcouru.
+`callbackFn` n'est appelée que pour les indices du tableau qui ont des valeurs affectées. Elle n'est pas appelée pour les cases vides dans les [tableaux creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux).
 
-> **Attention :** `map()` construit un nouveau tableau. Si on utilise cette méthode sans utiliser le résultat, mieux vaudra utiliser [`forEach`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) ou [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of). Pour mieux décider si `map()` est adéquat, regardez si vous utilisez la valeur de retour et/ou si vous renvoyez une valeur avec la fonction `callback` : si ce n'est pas le cas, il ne faut pas utiliser `map()`.
+La méthode `map()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_tableau_génériques). Elle attend seulement que la valeur de `this` possède une propriété `length` et des propriétés à clés entières.
 
-Si le paramètre `thisArg` est utilisé, il sera utilisé en tant que `this` par la fonction `callback` lorsqu'elle sera appelée. S'il n'est pas utilisé, ce sera la valeur {{jsxref("undefined")}} qui sera utilisée pour définir `this`. La valeur `this` finalement prise en compte par la fonction `callback` est définie [selon les règles usuelles qui déterminent la valeur `this` observée par une fonction](/fr/docs/Web/JavaScript/Reference/Operators/this).
-
-`map` ne modifie pas le tableau sur lequel elle est appelée (bien que la fonction `callback`, si elle est appelée, puisse modifier le tableau).
-
-La liste des éléments à traiter lors de l'opération `map` est définie avant le premier appel à `callback`. Les éléments qui sont ajoutés au tableau après que l'appel à `map` ait été initié ne seront pas traités par la fonction `callback`. Si des éléments ont été modifiés, la valeur utilisée par la fonction `callback` sera celle au moment où `map` est utilisée. Les éléments qui sont supprimés ne sont pas traités. De la même façon, si on applique `map` sur un tableau dont certains éléments sont indéfinis, le résultat possèdera également les mêmes éléments indéfinis.
+Puisque `map` construit un nouveau tableau, l'appeler sans utiliser le tableau retourné est une mauvaise pratique&nbsp;: utilisez plutôt {{JSxRef("Array/forEach", "forEach")}} ou {{JSxRef("Statements/for...of", "for...of")}}.
 
 ## Exemples
 
-### Créer un tableau des racines carrées d'un tableau de nombre
+### Créer un tableau des racines carrées d'un tableau de nombres
 
-Dans l'exemple suivant, on crée un tableau composé des racines carrées des éléments d'un premier tableau :
+Le code suivant prend un tableau de nombres et crée un nouveau tableau contenant les racines carrées des nombres du premier tableau.
 
 ```js
-var nombres = [1, 4, 9];
-var racines = nombres.map(Math.sqrt);
-// racines vaut désormais [1, 2, 3]
-// nombres vaut toujours [1, 4, 9]
+const numbers = [1, 4, 9];
+const roots = numbers.map((num) => Math.sqrt(num));
+
+// roots vaut désormais  [1, 2, 3]
+// numbers vaut toujours [1, 4, 9]
 ```
 
-### Créer un tableau de nombres avec une fonction à un argument
+### Utiliser `map` pour reformater des objets dans un tableau
 
-Ici, on illustre le fonctionnement de `map` avec une fonction à un argument. Cet argument sera automatiquement remplacé par chaque élément du tableau au fur et à mesure que `map` parcourt le tableau :
-
-```js
-var nombres = [1, 4, 9];
-var doubles = nombres.map(function (num) {
-  return num * 2;
-});
-// doubles vaut désormais [2, 8, 18].
-// nombres vaut toujours [1, 4, 9]
-```
-
-### Utiliser `map` pour changer le format d'objets dans un tableau
-
-Dans le code qui suit, on utilise un tableau d'objets pour créer un autre tableau contenant de nouveaux objets dans un autre format :
+Le code suivant prend un tableau d'objets et crée un nouveau tableau contenant les objets nouvellement reformatés.
 
 ```js
-var tableauOrig = [
-  { clé: 1, valeur: 10 },
-  { clé: 2, valeur: 20 },
-  { clé: 3, valeur: 30 },
+const kvArray = [
+  { key: 1, value: 10 },
+  { key: 2, value: 20 },
+  { key: 3, value: 30 },
 ];
-var tableauFormaté = tableauOrig.map((obj) => {
-  var rObj = {};
-  rObj[obj.clé] = obj.valeur;
-  return rObj;
-});
-// tableauFormaté vaut maintenant [{1:10}, {2:20}, {3:30}],
-// tableauOrig vaut toujours
-// [{clé:1, valeur:10},
-//  {clé:2, valeur:20},
-//  {clé:3, valeur: 30}
+
+const reformattedArray = kvArray.map(({ key, value }) => ({ [key]: value }));
+
+console.log(reformattedArray); // [{ 1: 10 }, { 2: 20 }, { 3: 30 }]
+console.log(kvArray);
+// [
+//   { key: 1, value: 10 },
+//   { key: 2, value: 20 },
+//   { key: 3, value: 30 }
 // ]
 ```
 
-### Utiliser `map` de façon générique
+### Utiliser `parseInt()` avec `map()`
 
-Dans cet exemple, on voit comment utiliser la fonction `map` sur une chaîne de caractères pour obtenir un tableau contenant les codes ASCII des valeurs encodées :
-
-```js
-var map = Array.prototype.map;
-var a = map.call("Hello World", function (x) {
-  return x.charCodeAt(0);
-});
-// a vaut désormais [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
-```
-
-### Utiliser `map` avec `querySelectorAll`
-
-Dans cet exemple, on illustre comment utiliser la méthode map de façon générique, sur un tableau d'objets collectés grâce à `querySelectorAll` :
+Il est courant d'utiliser la fonction de rappel avec un seul argument (l'élément parcouru). Certaines fonctions sont également souvent utilisées avec un seul argument, même si elles acceptent des arguments optionnels supplémentaires. Ces habitudes peuvent conduire à des comportements déroutants. Considérez&nbsp;:
 
 ```js
-var elems = document.querySelectorAll("select option:checked");
-var values = Array.prototype.map.call(elems, function (obj) {
-  return obj.value;
-});
-```
-
-On aurait également pu utiliser la méthode {{jsxref("Array.from()")}} qui permet de produire un tableau à partir d'un objet itérable.
-
-### Un résultat inattendu
-
-[Exemple inspiré par ce billet](https://www.wirfs-brock.com/allen/posts/166) (en anglais)
-
-Il est fréquent d'utiliser la fonction `callback` avec un seul argument (l'élément en cours). Certaines fonctions natives sont également souvent appelées avec un unique argument même si elles peuvent prendre en compte plusieurs arguments. En combinant ces deux « habitudes », on peut obtenir certains résultats inattendus :
-
-```js
-// Si on utilise :
 ["1", "2", "3"].map(parseInt);
-// On s'attend à obtenir [1, 2, 3]
-// Le résultat qu'on obtient est en fait [1, NaN, NaN]
-
-// parseInt est souvent utilisé avec un argument mais il
-// peut être utilisé avec deux arguments
-// Le premier correspond à l'expression à parser et le second
-// à la base dans laquelle convertir
-// Array.prototype.map passe 3 arguments à callback :
-// l'élément, l'index et le tableau
-// Le troisième argument sera ignoré par parseInt mais pas le
-// deuxième, ce qui donnera ce résultat étrange
-
-function returnInt(element) {
-  return parseInt(element, 10);
-}
-
-["1", "2", "3"].map(returnInt); // [1, 2, 3]
-// Le résultat qu'on obtient avec la fonction auxiliaire
-
-["1", "2", "3"].map(parseInt); // [1, NaN, NaN]
-// car map passe trois argument à la fonction et que parseInt
-// considère le second argument comme base.
-// En détails :
-// Premier élément :   "1" à l'indice 0 : parseInt("1",0); donne 1
-// Deuxième élément :  "2" à l'indice 1 : parseInt("2",1); donne NaN
-// Troisième élément : "3" à l'indice 2 : parseInt("3",2); donne NaN
-
-// Formulation équivalente plus concise avec
-// une fonction fléchée
-["1", "2", "3"].map((str) => parseInt(str));
-
-// Une autre méthode, plus simple
-["1", "2", "3"].map(Number); // [1, 2, 3]
-// à la différence de parseInt, cela fonctionnera pour les
-// nombres décimaux ou en notation exponentielle
-["1.1", "2.2e2", "3e300"].map(Number); // [1.1, 220, 3e+300]
 ```
+
+On pourrait s'attendre à obtenir `[1, 2, 3]`, mais le résultat réel est `[1, NaN, NaN]`.
+
+{{JSxRef("parseInt")}} est souvent utilisée avec un argument, mais en accepte deux. Le premier est une expression et le second est la base. La fonction de rappel de `Array.prototype.map` reçoit 3 arguments&nbsp;: l'élément, l'indice et le tableau. Le troisième argument est ignoré par {{JSxRef("parseInt")}} — mais _pas_ le second&nbsp;! C'est la source de la confusion possible.
+
+Voici un exemple concis des étapes d'itération&nbsp;:
+
+```js
+/* première itération  (index vaut 0) : */ parseInt("1", 0); // 1
+/* deuxième itération (index vaut 1) : */ parseInt("2", 1); // NaN
+/* troisième itération  (index vaut 2) : */ parseInt("3", 2); // NaN
+```
+
+Pour résoudre ce problème, définissez une autre fonction qui ne prend qu'un seul argument&nbsp;:
+
+```js
+["1", "2", "3"].map((str) => parseInt(str, 10)); // [1, 2, 3]
+```
+
+Vous pouvez aussi utiliser la fonction {{JSxRef("Number")}}, qui ne prend qu'un seul argument&nbsp;:
+
+```js
+["1", "2", "3"].map(Number); // [1, 2, 3]
+
+// Mais contrairement à parseInt(), Number() retournera aussi un flottant ou une notation exponentielle résolue :
+["1.1", "2.2e2", "3e300"].map(Number); // [1.1, 220, 3e+300]
+
+// Pour comparaison, si on utilise parseInt() sur le tableau ci-dessus :
+["1.1", "2.2e2", "3e300"].map((str) => parseInt(str, 10)); // [1, 2, 3]
+```
+
+Voir le sujet de discussion [Un problème d'argument optionnel en JavaScript <sup>(angl.)</sup>](https://wirfs-brock.com/allen/posts/166) par Allen Wirfs-Brock.
+
+### Le tableau mappé contient `undefined`
+
+Lorsque {{JSxRef("undefined")}} ou rien n'est retourné, le tableau résultant contient `undefined`. Si vous souhaitez supprimer l'élément à la place, chaînez une méthode {{JSxRef("Array/filter", "filter()")}}, ou utilisez la méthode {{JSxRef("Array/flatMap", "flatMap()")}} et retournez un tableau vide pour signifier la suppression.
+
+```js
+const nombres = [1, 2, 3, 4];
+const nombresFiltres = nombres.map((num, index) => {
+  if (index < 3) {
+    return num;
+  }
+});
+
+// l'index commence à 0, donc nombresFiltres vaut 1, 2, 3 et undefined.
+// nombresFiltres vaut [1, 2, 3, undefined]
+// nombres vaut toujours [1, 2, 3, 4]
+```
+
+### Mapping avec effets de bord
+
+La fonction de rappel peut avoir des effets de bord.
+
+```js
+const cart = [5, 15, 25];
+let total = 0;
+const withTax = cart.map((cost) => {
+  total += cost;
+  return cost * 1.2;
+});
+console.log(withTax); // [6, 18, 30]
+console.log(total); // 45
+```
+
+Ce n'est pas recommandé, car les méthodes de copie sont à utiliser de préférence avec des fonctions pures. Dans ce cas, il vaut mieux parcourir le tableau deux fois.
+
+```js
+const cart = [5, 15, 25];
+const total = cart.reduce((acc, cost) => acc + cost, 0);
+const withTax = cart.map((cost) => cost * 1.2);
+```
+
+Parfois, ce schéma va à l'extrême et la seule chose utile que fait `map()` est de provoquer des effets de bord.
+
+```js
+const products = [
+  { name: "sports car" },
+  { name: "laptop" },
+  { name: "phone" },
+];
+
+products.map((product) => {
+  product.price = 100;
+});
+```
+
+Comme mentionné précédemment, c'est une mauvaise pratique. Si vous n'utilisez pas la valeur de retour de `map()`, utilisez `forEach()` ou une boucle `for...of` à la place.
+
+```js
+products.forEach((product) => {
+  product.price = 100;
+});
+```
+
+Ou, si vous souhaitez créer un nouveau tableau&nbsp;:
+
+```js
+const productsWithPrice = products.map((product) => ({
+  ...product,
+  price: 100,
+}));
+```
+
+### Utiliser le troisième argument de `callbackFn`
+
+L'argument `array` est utile si vous souhaitez accéder à un autre élément du tableau, en particulier lorsque vous n'avez pas de variable existante qui fait référence au tableau. L'exemple suivant utilise d'abord `filter()` pour extraire les valeurs positives puis utilise `map()` pour créer un nouveau tableau où chaque élément est la moyenne de ses voisins et de lui-même.
+
+```js
+const nombres = [3, -1, 1, 4, 1, 5, 9, 2, 6];
+const moyennes = nombres
+  .filter((num) => num > 0)
+  .map((num, idx, arr) => {
+    // Sans l'argument arr, il n'y a aucun moyen d'accéder facilement
+    // au tableau intermédiaire sans le stocker dans une variable.
+    const precedent = arr[idx - 1];
+    const suivant = arr[idx + 1];
+    let compte = 1;
+    let total = num;
+    if (precedent !== undefined) {
+      compte++;
+      total += precedent;
+    }
+    if (suivant !== undefined) {
+      compte++;
+      total += suivant;
+    }
+    const moyenne = total / compte;
+    // Arrondir à deux décimales
+    return Math.round(moyenne * 100) / 100;
+  });
+console.log(moyennes); // [2, 2.67, 2, 3.33, 5, 5.33, 5.67, 4]
+```
+
+L'argument `array` n'est pas le tableau en cours de construction — il n'est pas possible d'accéder au tableau en cours de construction depuis la fonction de rappel.
+
+### Utiliser `map()` sur des tableaux creux
+
+Un tableau creux reste creux après `map()`. Les indices des cases vides restent vides dans le tableau retourné, et la fonction de rappel ne sera pas appelée pour elles.
+
+```js
+console.log(
+  [1, , 3].map((x, index) => {
+    console.log(`Visite ${index}`);
+    return x * 2;
+  }),
+);
+// Visite 0
+// Visite 2
+// [2, empty, 6]
+```
+
+### Appeler `map()` sur des objets qui ne sont pas des tableaux
+
+La méthode `map()` lit la propriété `length` de `this` puis accède à chaque propriété dont la clé est un entier non négatif inférieur à `length`.
+
+```js
+const objetSimilaireTableau = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+  3: 5, // ignoré par map() car length vaut 3
+};
+console.log(Array.prototype.map.call(objetSimilaireTableau, (x) => x ** 2));
+// [ 4, 9, 16 ]
+```
+
+Cet exemple montre comment parcourir une collection d'objets collectés par `querySelectorAll`. Cela fonctionne car `querySelectorAll` retourne un `NodeList` (qui est une collection d'objets). Dans ce cas, on retourne toutes les valeurs des `option` sélectionnées à l'écran&nbsp;:
+
+```js
+const elems = document.querySelectorAll("select option:checked");
+const values = Array.prototype.map.call(elems, ({ value }) => value);
+```
+
+Vous pouvez aussi utiliser {{JSxRef("Array.from()")}} pour transformer `elems` en tableau, puis accéder à la méthode `map()`.
 
 ## Spécifications
 
@@ -188,6 +284,11 @@ function returnInt(element) {
 
 ## Voir aussi
 
-- {{jsxref("Array.prototype.forEach()")}}
-- L'objet {{jsxref("Map")}}
-- {{jsxref("Array.from()")}}
+- [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
+- L'objet global {{JSxRef("Array")}}
+- La méthode {{JSxRef("Array.prototype.forEach()")}}
+- La méthode {{JSxRef("Array.from()")}}
+- La méthode {{JSxRef("TypedArray.prototype.map()")}}
+- L'objet global {{JSxRef("Map")}}
+- [Prothèse d'émulation de `Array.prototype.map` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
+- [Prothèse d'émulation es-shims de `Array.prototype.map` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.map)

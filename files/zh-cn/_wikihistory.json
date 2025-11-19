@@ -3592,17 +3592,6 @@
       "Boot95"
     ]
   },
-  "Learn_web_development/Core/Structuring_content/Mozilla_splash_page": {
-    "modified": "2020-07-16T22:25:08.878Z",
-    "contributors": [
-      "Roy-Tian",
-      "FantasqueX",
-      "codeofjackie",
-      "lihaoyuan",
-      "superkuang",
-      "nbhaohao"
-    ]
-  },
   "Learn_web_development/Core/Structuring_content/Planet_data_table": {
     "modified": "2020-07-16T22:25:31.394Z",
     "contributors": [
@@ -3610,6 +3599,17 @@
       "WoodCube",
       "Undecyce",
       "lihaoyuan",
+      "nbhaohao"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/Splash_page": {
+    "modified": "2020-07-16T22:25:08.878Z",
+    "contributors": [
+      "Roy-Tian",
+      "FantasqueX",
+      "codeofjackie",
+      "lihaoyuan",
+      "superkuang",
       "nbhaohao"
     ]
   },
@@ -3779,44 +3779,12 @@
       "SirnoChan"
     ]
   },
-  "Learn_web_development/Core/Styling_basics/Cool-looking_box": {
-    "modified": "2020-07-16T22:28:27.701Z",
-    "contributors": [
-      "grape",
-      "Lohoyo",
-      "lihaoyuan"
-    ]
-  },
   "Learn_web_development/Core/Styling_basics/Debugging_CSS": {
     "modified": "2020-07-16T22:29:30.454Z",
     "contributors": [
       "fish-inu",
       "SirnoChan",
       "blateyang"
-    ]
-  },
-  "Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper": {
-    "modified": "2020-07-16T22:28:25.559Z",
-    "contributors": [
-      "codeofjackie",
-      "ziyunfei",
-      "Yee",
-      "lihaoyuan"
-    ]
-  },
-  "Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension": {
-    "modified": "2020-10-09T04:34:43.547Z",
-    "contributors": [
-      "benniks",
-      "blateyang",
-      "grape",
-      "LeoB-O",
-      "codeofjackie",
-      "allan_simon",
-      "phiwyc",
-      "yydzxz",
-      "ddtyjmyjm",
-      "nbhaohao"
     ]
   },
   "Learn_web_development/Core/Styling_basics/Getting_started": {
@@ -4528,6 +4496,13 @@
       "yangchongduo"
     ]
   },
+  "Learn_web_development/Extensions/Performance/Best_practices": {
+    "modified": "2020-07-16T22:40:42.886Z",
+    "contributors": [
+      "shuiRong",
+      "creative_fish"
+    ]
+  },
   "Learn_web_development/Extensions/Performance/CSS": {
     "modified": "2020-07-16T22:40:41.520Z",
     "contributors": [
@@ -4541,13 +4516,6 @@
     "modified": "2020-07-16T22:40:43.760Z",
     "contributors": [
       "biqing"
-    ]
-  },
-  "Learn_web_development/Extensions/Performance/Web_Performance_Basics": {
-    "modified": "2020-07-16T22:40:42.886Z",
-    "contributors": [
-      "shuiRong",
-      "creative_fish"
     ]
   },
   "Learn_web_development/Extensions/Server-side": {
@@ -5439,13 +5407,6 @@
     "contributors": [
       "kuailekai",
       "Chor"
-    ]
-  },
-  "Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine": {
-    "modified": "2020-07-16T22:35:52.536Z",
-    "contributors": [
-      "DaniellaAngel",
-      "sky5454"
     ]
   },
   "Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost": {
@@ -7824,6 +7785,12 @@
       "teoli",
       "ziyunfei",
       "Anonymous"
+    ]
+  },
+  "Web/API/CSSOM_view_API/Coordinate_systems": {
+    "modified": "2019-03-18T21:28:19.895Z",
+    "contributors": [
+      "1Cr18Ni9"
     ]
   },
   "Web/API/CSSPageRule": {
@@ -10680,46 +10647,7 @@
       "Xagq123456"
     ]
   },
-  "Web/API/Document_Object_Model/Examples": {
-    "modified": "2019-03-24T00:15:45.643Z",
-    "contributors": [
-      "LianJilu",
-      "Ke.shidong",
-      "Ende93",
-      "khalid32",
-      "ziyunfei"
-    ]
-  },
-  "Web/API/Document_Object_Model/Introduction": {
-    "modified": "2019-07-17T11:05:34.542Z",
-    "contributors": [
-      "JiLiangLai",
-      "locknono",
-      "ddtyjmyjm",
-      "YyzclYang",
-      "LiXin",
-      "Noly1990",
-      "lon",
-      "lazurey",
-      "gavinkwoe",
-      "huozicheng",
-      "leunggamciu",
-      "arunpandianp",
-      "ziyunfei",
-      "ReyCG_sub",
-      "Darrel.Hsu"
-    ]
-  },
-  "Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors": {
-    "modified": "2019-03-23T22:45:22.118Z",
-    "contributors": [
-      "xgqfrms-GitHub",
-      "ZhuYonglin",
-      "gavinkwoe",
-      "liurenxingyu"
-    ]
-  },
-  "Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces": {
+  "Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree": {
     "modified": "2020-10-08T06:13:28.865Z",
     "contributors": [
       "ruiyang0012",
@@ -10736,13 +10664,13 @@
       "Heagle"
     ]
   },
-  "Web/API/Document_Object_Model/Using_the_Document_Object_Model": {
-    "modified": "2019-12-13T21:06:35.933Z",
+  "Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree": {
+    "modified": "2019-03-23T22:45:22.118Z",
     "contributors": [
-      "wbamberg",
-      "alwxkxk",
-      "xhlsrj",
-      "EugeneZeng"
+      "xgqfrms-GitHub",
+      "ZhuYonglin",
+      "gavinkwoe",
+      "liurenxingyu"
     ]
   },
   "Web/API/DragEvent": {
@@ -14084,6 +14012,13 @@
       "yola0316"
     ]
   },
+  "Web/API/HTML_Drag_and_Drop_API/Drag_data_store": {
+    "modified": "2019-03-23T22:11:24.812Z",
+    "contributors": [
+      "plter",
+      "xgqfrms-GitHub"
+    ]
+  },
   "Web/API/HTML_Drag_and_Drop_API/Drag_operations": {
     "modified": "2020-06-11T05:30:04.210Z",
     "contributors": [
@@ -14097,13 +14032,6 @@
     "contributors": [
       "Sherr_Y",
       "suvyme"
-    ]
-  },
-  "Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types": {
-    "modified": "2019-03-23T22:11:24.812Z",
-    "contributors": [
-      "plter",
-      "xgqfrms-GitHub"
     ]
   },
   "Web/API/HashChangeEvent": {
@@ -21819,18 +21747,6 @@
       "holynewbie"
     ]
   },
-  "Web/API/XMLHttpRequest/abort_event": {
-    "modified": "2020-10-15T22:23:57.824Z",
-    "contributors": [
-      "shaodahong"
-    ]
-  },
-  "Web/API/XMLHttpRequest/error_event": {
-    "modified": "2020-10-15T22:19:47.705Z",
-    "contributors": [
-      "lnh"
-    ]
-  },
   "Web/API/XMLHttpRequest/getAllResponseHeaders": {
     "modified": "2019-05-07T04:02:32.986Z",
     "contributors": [
@@ -21845,29 +21761,6 @@
       "wsico",
       "winson",
       "xgqfrms-GitHub"
-    ]
-  },
-  "Web/API/XMLHttpRequest/load_event": {
-    "modified": "2020-10-15T22:18:39.683Z",
-    "contributors": [
-      "logTXT",
-      "hzy"
-    ]
-  },
-  "Web/API/XMLHttpRequest/loadend_event": {
-    "modified": "2019-03-23T22:16:58.948Z",
-    "contributors": [
-      "fscholz",
-      "wudexiang",
-      "xgqfrms-GitHub"
-    ]
-  },
-  "Web/API/XMLHttpRequest/loadstart_event": {
-    "modified": "2019-03-23T22:29:32.098Z",
-    "contributors": [
-      "fscholz",
-      "faremax",
-      "Lxxyx"
     ]
   },
   "Web/API/XMLHttpRequest/open": {
@@ -21885,16 +21778,6 @@
       "Reveur",
       "651291702",
       "xchenGitHub"
-    ]
-  },
-  "Web/API/XMLHttpRequest/progress_event": {
-    "modified": "2020-10-15T21:49:44.294Z",
-    "contributors": [
-      "Ende93",
-      "957398123",
-      "fscholz",
-      "roberthow",
-      "fengfu"
     ]
   },
   "Web/API/XMLHttpRequest/readyState": {
@@ -22003,13 +21886,6 @@
       "holynewbie"
     ]
   },
-  "Web/API/XMLHttpRequest/timeout_event": {
-    "modified": "2019-04-08T08:24:47.314Z",
-    "contributors": [
-      "irenesmith",
-      "kameii"
-    ]
-  },
   "Web/API/XMLHttpRequest/upload": {
     "modified": "2019-04-19T09:12:27.378Z",
     "contributors": [
@@ -22036,6 +21912,58 @@
     "contributors": [
       "RainSlide",
       "rubyisapm"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/abort_event": {
+    "modified": "2020-10-15T22:23:57.824Z",
+    "contributors": [
+      "shaodahong"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/error_event": {
+    "modified": "2020-10-15T22:19:47.705Z",
+    "contributors": [
+      "lnh"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/load_event": {
+    "modified": "2020-10-15T22:18:39.683Z",
+    "contributors": [
+      "logTXT",
+      "hzy"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/loadend_event": {
+    "modified": "2019-03-23T22:16:58.948Z",
+    "contributors": [
+      "fscholz",
+      "wudexiang",
+      "xgqfrms-GitHub"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/loadstart_event": {
+    "modified": "2019-03-23T22:29:32.098Z",
+    "contributors": [
+      "fscholz",
+      "faremax",
+      "Lxxyx"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/progress_event": {
+    "modified": "2020-10-15T21:49:44.294Z",
+    "contributors": [
+      "Ende93",
+      "957398123",
+      "fscholz",
+      "roberthow",
+      "fengfu"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/timeout_event": {
+    "modified": "2019-04-08T08:24:47.314Z",
+    "contributors": [
+      "irenesmith",
+      "kameii"
     ]
   },
   "Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest": {
@@ -22498,1022 +22426,7 @@
       "Bloggercat"
     ]
   },
-  "Web/CSS/--*": {
-    "modified": "2020-10-15T21:52:54.202Z",
-    "contributors": [
-      "zhangchen",
-      "Ende93",
-      "yisibl",
-      "Huooo"
-    ]
-  },
-  "Web/CSS/-moz-image-rect": {
-    "modified": "2020-10-15T22:24:48.334Z",
-    "contributors": [
-      "yangzhitong918"
-    ]
-  },
-  "Web/CSS/-moz-user-input": {
-    "modified": "2019-03-23T22:17:53.560Z",
-    "contributors": [
-      "xgqfrms-GitHub"
-    ]
-  },
-  "Web/CSS/-webkit-border-before": {
-    "modified": "2020-10-15T22:25:58.369Z",
-    "contributors": [
-      "Jackjun724"
-    ]
-  },
-  "Web/CSS/-webkit-tap-highlight-color": {
-    "modified": "2019-03-23T22:22:56.346Z",
-    "contributors": [
-      "smilewalker"
-    ]
-  },
-  "Web/CSS/-webkit-text-stroke": {
-    "modified": "2020-11-09T04:48:30.804Z",
-    "contributors": [
-      "sideshowbarker",
-      "codingdudecom",
-      "wr20060926",
-      "Die4passion",
-      "wangyi96",
-      "Vera0707"
-    ]
-  },
-  "Web/CSS/-webkit-touch-callout": {
-    "modified": "2019-03-23T22:50:15.755Z",
-    "contributors": [
-      "charlie",
-      "FredWe"
-    ]
-  },
-  "Web/CSS/:-moz-only-whitespace": {
-    "modified": "2020-10-15T22:10:00.132Z",
-    "contributors": [
-      "ExE-Boss",
-      "LoveofRedMoon"
-    ]
-  },
-  "Web/CSS/:-moz-window-inactive": {
-    "modified": "2019-03-18T21:33:22.659Z",
-    "contributors": [
-      "teoli",
-      "Lim",
-      "apple1juice"
-    ]
-  },
-  "Web/CSS/::-moz-progress-bar": {
-    "modified": "2020-07-10T07:07:20.466Z",
-    "contributors": [
-      "YexuanXiao",
-      "NoobxzZhang"
-    ]
-  },
-  "Web/CSS/::-moz-range-progress": {
-    "modified": "2020-11-18T23:08:06.930Z",
-    "contributors": [
-      "jimmy_kmi",
-      "jcplus"
-    ]
-  },
-  "Web/CSS/::-webkit-progress-bar": {
-    "modified": "2020-07-09T14:05:36.446Z",
-    "contributors": [
-      "YexuanXiao",
-      "teoli",
-      "smilewalker"
-    ]
-  },
-  "Web/CSS/::-webkit-progress-inner-element": {
-    "modified": "2020-10-15T22:31:38.757Z",
-    "contributors": [
-      "YexuanXiao"
-    ]
-  },
-  "Web/CSS/::-webkit-progress-value": {
-    "modified": "2020-10-15T22:31:18.416Z",
-    "contributors": [
-      "YexuanXiao",
-      "Roger_Chi"
-    ]
-  },
-  "Web/CSS/::-webkit-scrollbar": {
-    "modified": "2019-03-23T22:08:23.176Z",
-    "contributors": [
-      "Sally-he",
-      "LoveofRedMoon",
-      "Messiah"
-    ]
-  },
-  "Web/CSS/::-webkit-slider-runnable-track": {
-    "modified": "2019-03-18T21:28:09.437Z",
-    "contributors": [
-      "Songyakang"
-    ]
-  },
-  "Web/CSS/::-webkit-slider-thumb": {
-    "modified": "2019-03-18T21:28:12.932Z",
-    "contributors": [
-      "Songyakang"
-    ]
-  },
-  "Web/CSS/::after": {
-    "modified": "2020-10-15T21:21:09.850Z",
-    "contributors": [
-      "HayashiMei",
-      "wink",
-      "xgqfrms-GitHub",
-      "liubobuzhidao",
-      "lixinxin93",
-      "shuihuo",
-      "LichMscy",
-      "FredWe",
-      "fskuok",
-      "teoli",
-      "ziyunfei"
-    ]
-  },
-  "Web/CSS/::backdrop": {
-    "modified": "2020-10-15T21:55:05.681Z",
-    "contributors": [
-      "tabunnnn",
-      "RainSlide",
-      "nDos",
-      "old2sun"
-    ]
-  },
-  "Web/CSS/::before": {
-    "modified": "2020-10-15T21:33:30.692Z",
-    "contributors": [
-      "Mookiepiece",
-      "LeonWuV",
-      "tanshaobo",
-      "nDos",
-      "xiaokk06",
-      "AutumnFish",
-      "zhengxinxin",
-      "noiron",
-      "johncido",
-      "FredWe",
-      "Fadeoc"
-    ]
-  },
-  "Web/CSS/::cue": {
-    "modified": "2020-10-15T21:55:37.580Z",
-    "contributors": [
-      "Render"
-    ]
-  },
-  "Web/CSS/::first-letter": {
-    "modified": "2019-03-23T22:49:07.025Z",
-    "contributors": [
-      "nDos",
-      "guonanci",
-      "lizhihua"
-    ]
-  },
-  "Web/CSS/::first-line": {
-    "modified": "2019-03-23T22:21:01.435Z",
-    "contributors": [
-      "skywalker_z",
-      "maoyumaoxun",
-      "myfreeer",
-      "nDos",
-      "xiaojunjor",
-      "MinimalistYing",
-      "876843240"
-    ]
-  },
-  "Web/CSS/::grammar-error": {
-    "modified": "2019-03-23T22:07:07.087Z",
-    "contributors": [
-      "JewelYueng"
-    ]
-  },
-  "Web/CSS/::marker": {
-    "modified": "2020-10-15T22:30:50.099Z",
-    "contributors": [
-      "conorzhong"
-    ]
-  },
-  "Web/CSS/::part": {
-    "modified": "2020-11-30T21:33:51.481Z",
-    "contributors": [
-      "seawaywen",
-      "jcplus"
-    ]
-  },
-  "Web/CSS/::placeholder": {
-    "modified": "2019-03-23T22:12:08.952Z",
-    "contributors": [
-      "Adashuai5",
-      "maoyumaoxun",
-      "nDos",
-      "Colin.Go",
-      "LiuYuan"
-    ]
-  },
-  "Web/CSS/::selection": {
-    "modified": "2020-10-15T21:33:48.415Z",
-    "contributors": [
-      "greyyyyy",
-      "zhangchen",
-      "ziyunfei",
-      "Serifx",
-      "ranwu",
-      "johncido",
-      "vagusX",
-      "monjer",
-      "hikarievo"
-    ]
-  },
-  "Web/CSS/::slotted": {
-    "modified": "2020-10-15T22:09:58.940Z",
-    "contributors": [
-      "LoveofRedMoon"
-    ]
-  },
-  "Web/CSS/::spelling-error": {
-    "modified": "2020-10-15T22:00:46.705Z",
-    "contributors": [
-      "nDos"
-    ]
-  },
-  "Web/CSS/:active": {
-    "modified": "2020-10-15T21:34:14.296Z",
-    "contributors": [
-      "yclup",
-      "RainSlide",
-      "HayashiMei",
-      "fskuok",
-      "psychebb"
-    ]
-  },
-  "Web/CSS/:any-link": {
-    "modified": "2020-10-15T21:56:20.733Z",
-    "contributors": [
-      "walacewang",
-      "anjia"
-    ]
-  },
-  "Web/CSS/:blank": {
-    "modified": "2020-10-15T22:21:57.411Z",
-    "contributors": [
-      "RainSlide",
-      "karma2014"
-    ]
-  },
-  "Web/CSS/:checked": {
-    "modified": "2020-10-15T21:42:35.145Z",
-    "contributors": [
-      "Ritr",
-      "hiyangguo",
-      "FrontENG",
-      "WarriorWu",
-      "wktdh"
-    ]
-  },
-  "Web/CSS/:default": {
-    "modified": "2019-03-23T22:20:32.874Z",
-    "contributors": [
-      "NorthWind",
-      "nDos",
-      "NoobxzZhang",
-      "eddiexxxx",
-      "dongchaoge",
-      "faremax"
-    ]
-  },
-  "Web/CSS/:defined": {
-    "modified": "2020-10-15T22:04:25.058Z",
-    "contributors": [
-      "sisibeloved",
-      "forever_youyou"
-    ]
-  },
-  "Web/CSS/:dir": {
-    "modified": "2019-03-23T22:58:41.550Z",
-    "contributors": [
-      "nick-ChenZe",
-      "fskuok"
-    ]
-  },
-  "Web/CSS/:disabled": {
-    "modified": "2019-03-23T21:45:44.263Z",
-    "contributors": [
-      "zxsunrise",
-      "AlexChao"
-    ]
-  },
-  "Web/CSS/:empty": {
-    "modified": "2020-10-15T21:37:28.617Z",
-    "contributors": [
-      "xgqfrms",
-      "zhuangyin",
-      "xgqfrms-GitHub",
-      "DaPanda",
-      "FredWe"
-    ]
-  },
-  "Web/CSS/:enabled": {
-    "modified": "2020-10-15T21:32:21.465Z",
-    "contributors": [
-      "RainSlide",
-      "AlexChao"
-    ]
-  },
-  "Web/CSS/:first": {
-    "modified": "2019-03-23T22:15:57.420Z",
-    "contributors": [
-      "xingkongs"
-    ]
-  },
-  "Web/CSS/:first-child": {
-    "modified": "2020-10-15T21:22:57.317Z",
-    "contributors": [
-      "Ritr",
-      "silhouettesia",
-      "xgqfrms-GitHub",
-      "FredWe",
-      "teoli",
-      "ziyunfei"
-    ]
-  },
-  "Web/CSS/:first-of-type": {
-    "modified": "2020-10-15T21:38:15.943Z",
-    "contributors": [
-      "Ende93",
-      "Ritr",
-      "zhangchen",
-      "xgqfrms-GitHub",
-      "ZackBee",
-      "sgzzy",
-      "Orange-C",
-      "sudo2015"
-    ]
-  },
-  "Web/CSS/:focus": {
-    "modified": "2020-10-15T21:34:35.352Z",
-    "contributors": [
-      "Ritr",
-      "zhangchen",
-      "Harvesty",
-      "Fadeoc",
-      "FredWe",
-      "Gaohaoyang"
-    ]
-  },
-  "Web/CSS/:focus-visible": {
-    "modified": "2020-10-15T22:10:22.689Z",
-    "contributors": [
-      "AlphaGo88"
-    ]
-  },
-  "Web/CSS/:focus-within": {
-    "modified": "2020-10-15T21:58:43.977Z",
-    "contributors": [
-      "RainSlide",
-      "Ritr",
-      "nDos",
-      "qdlaoyao",
-      "15207108156"
-    ]
-  },
-  "Web/CSS/:fullscreen": {
-    "modified": "2019-03-18T20:54:18.077Z",
-    "contributors": [
-      "LeonDWong"
-    ]
-  },
-  "Web/CSS/:has": {
-    "modified": "2020-10-15T22:01:57.515Z",
-    "contributors": [
-      "kidonng",
-      "LoveofRedMoon"
-    ]
-  },
-  "Web/CSS/:host": {
-    "modified": "2020-10-15T22:16:15.558Z",
-    "contributors": [
-      "zhangchen"
-    ]
-  },
-  "Web/CSS/:host-context": {
-    "modified": "2020-10-15T22:22:18.002Z",
-    "contributors": [
-      "jhjocelyn"
-    ]
-  },
-  "Web/CSS/:host_function": {
-    "modified": "2020-10-15T22:16:54.122Z",
-    "contributors": [
-      "karma2014",
-      "no1xsyzy",
-      "764777472"
-    ]
-  },
-  "Web/CSS/:hover": {
-    "modified": "2019-03-23T23:09:30.132Z",
-    "contributors": [
-      "JacksonSui",
-      "shifengchen",
-      "liuhanru",
-      "HIS"
-    ]
-  },
-  "Web/CSS/:in-range": {
-    "modified": "2020-10-15T22:01:15.650Z",
-    "contributors": [
-      "Ritr",
-      "ShirelyGong"
-    ]
-  },
-  "Web/CSS/:indeterminate": {
-    "modified": "2020-10-15T21:53:09.179Z",
-    "contributors": [
-      "Ritr",
-      "nDos",
-      "holynewbie"
-    ]
-  },
-  "Web/CSS/:invalid": {
-    "modified": "2020-10-15T21:49:18.604Z",
-    "contributors": [
-      "Ritr",
-      "ShirelyGong",
-      "liyongleihf2006",
-      "King."
-    ]
-  },
-  "Web/CSS/:is": {
-    "modified": "2020-10-15T22:11:21.465Z",
-    "contributors": [
-      "Ende93",
-      "ExE-Boss",
-      "Ritr"
-    ]
-  },
-  "Web/CSS/:lang": {
-    "modified": "2020-10-15T21:38:56.937Z",
-    "contributors": [
-      "Ritr",
-      "ShirelyGong",
-      "DongyaGe",
-      "L520"
-    ]
-  },
-  "Web/CSS/:last-child": {
-    "modified": "2020-10-15T21:51:06.148Z",
-    "contributors": [
-      "Ritr",
-      "FrontENG",
-      "AlexChao"
-    ]
-  },
-  "Web/CSS/:last-of-type": {
-    "modified": "2020-10-15T21:37:08.616Z",
-    "contributors": [
-      "Ritr",
-      "FrontENG",
-      "FredWe"
-    ]
-  },
-  "Web/CSS/:left": {
-    "modified": "2020-10-15T22:01:55.037Z",
-    "contributors": [
-      "LoveofRedMoon"
-    ]
-  },
-  "Web/CSS/:link": {
-    "modified": "2020-10-15T21:45:58.577Z",
-    "contributors": [
-      "leoxiao2012",
-      "Ritr",
-      "lixinxin93",
-      "FuckingChestnut",
-      "w0wbin",
-      "gengsinan"
-    ]
-  },
-  "Web/CSS/:not": {
-    "modified": "2020-10-15T21:37:03.676Z",
-    "contributors": [
-      "skywalker_z",
-      "jaredhan418",
-      "RainSlide",
-      "Ritr",
-      "ly525",
-      "nick-ChenZe",
-      "FredWe"
-    ]
-  },
-  "Web/CSS/:nth-child": {
-    "modified": "2019-09-08T12:03:00.754Z",
-    "contributors": [
-      "DingZehua",
-      "Ritr",
-      "km-c",
-      "tsukimiya",
-      "yusan77",
-      "kensz66",
-      "genezx",
-      "ShinningFire",
-      "PoppinL",
-      "xgqfrms-GitHub",
-      "BiggerCheng",
-      "hstarorg",
-      "FredWe",
-      "hutuxu"
-    ]
-  },
-  "Web/CSS/:nth-last-child": {
-    "modified": "2020-10-15T21:33:53.402Z",
-    "contributors": [
-      "happyWang",
-      "Ritr",
-      "PoppinL",
-      "hutuxu"
-    ]
-  },
-  "Web/CSS/:nth-last-of-type": {
-    "modified": "2020-10-15T21:54:40.871Z",
-    "contributors": [
-      "Ritr",
-      "PoppinL"
-    ]
-  },
-  "Web/CSS/:nth-of-type": {
-    "modified": "2020-10-15T21:36:59.567Z",
-    "contributors": [
-      "xiumingxu",
-      "parabolazz",
-      "Ritr",
-      "PythonVsJava",
-      "infinite-knowledge",
-      "genezx",
-      "RainSlide",
-      "liwenkang",
-      "xgqfrms-GitHub",
-      "PoppinL",
-      "Pandapm",
-      "PageYe",
-      "sudo2015",
-      "FredWe"
-    ]
-  },
-  "Web/CSS/:only-child": {
-    "modified": "2020-10-15T21:22:55.479Z",
-    "contributors": [
-      "aute",
-      "Jiang-Xuan",
-      "teoli",
-      "ziyunfei"
-    ]
-  },
-  "Web/CSS/:only-of-type": {
-    "modified": "2019-05-09T23:53:55.894Z",
-    "contributors": [
-      "Ritr",
-      "maoyumaoxun",
-      "FredWe"
-    ]
-  },
-  "Web/CSS/:optional": {
-    "modified": "2019-03-23T22:20:45.289Z",
-    "contributors": [
-      "maoyumaoxun",
-      "liyongleihf2006"
-    ]
-  },
-  "Web/CSS/:out-of-range": {
-    "modified": "2020-10-15T22:05:19.472Z",
-    "contributors": [
-      "maoyumaoxun"
-    ]
-  },
-  "Web/CSS/:placeholder-shown": {
-    "modified": "2020-10-15T22:01:57.789Z",
-    "contributors": [
-      "LoveofRedMoon"
-    ]
-  },
-  "Web/CSS/:read-only": {
-    "modified": "2020-10-15T22:00:12.983Z",
-    "contributors": [
-      "fscholz",
-      "maoyumaoxun",
-      "King."
-    ]
-  },
-  "Web/CSS/:read-write": {
-    "modified": "2020-10-15T22:05:20.778Z",
-    "contributors": [
-      "maoyumaoxun"
-    ]
-  },
-  "Web/CSS/:required": {
-    "modified": "2020-07-04T13:27:54.236Z",
-    "contributors": [
-      "mdn_idealist",
-      "liyongleihf2006"
-    ]
-  },
-  "Web/CSS/:right": {
-    "modified": "2020-10-15T22:18:16.757Z",
-    "contributors": [
-      "7NZ",
-      "LittleBearForCode",
-      "LeonZou",
-      "vaynewang"
-    ]
-  },
-  "Web/CSS/:root": {
-    "modified": "2019-09-20T05:29:11.272Z",
-    "contributors": [
-      "mingzhang6",
-      "PoppinL",
-      "keqingrong",
-      "movinghorse"
-    ]
-  },
-  "Web/CSS/:scope": {
-    "modified": "2020-10-15T21:54:59.545Z",
-    "contributors": [
-      "cuixiping",
-      "saifeiLee",
-      "zhaoqize"
-    ]
-  },
-  "Web/CSS/:target": {
-    "modified": "2020-10-15T21:37:32.170Z",
-    "contributors": [
-      "zhangchen",
-      "LasyIsLazy",
-      "ShirelyGong",
-      "gqqnbig",
-      "Le-Fu",
-      "FredWe"
-    ]
-  },
-  "Web/CSS/:valid": {
-    "modified": "2020-10-15T21:51:30.912Z",
-    "contributors": [
-      "Ende93",
-      "xgqfrms-GitHub",
-      "liyongleihf2006"
-    ]
-  },
-  "Web/CSS/:visited": {
-    "modified": "2019-09-22T23:26:27.997Z",
-    "contributors": [
-      "hhxxhg",
-      "Adashuai5",
-      "FredWe"
-    ]
-  },
-  "Web/CSS/:where": {
-    "modified": "2020-10-15T22:12:05.129Z",
-    "contributors": [
-      "RainSlide",
-      "zhangchizi"
-    ]
-  },
-  "Web/CSS/@charset": {
-    "modified": "2020-10-15T21:52:27.106Z",
-    "contributors": [
-      "Ritr",
-      "xgqfrms-GitHub",
-      "frankfang1990",
-      "yofine"
-    ]
-  },
-  "Web/CSS/@counter-style": {
-    "modified": "2019-03-23T22:52:04.265Z",
-    "contributors": [
-      "lixinxin93",
-      "FredWe"
-    ]
-  },
-  "Web/CSS/@counter-style/additive-symbols": {
-    "modified": "2020-10-15T21:55:56.428Z",
-    "contributors": [
-      "liuruiqi1993",
-      "HayashiMei",
-      "lixinxin93"
-    ]
-  },
-  "Web/CSS/@counter-style/pad": {
-    "modified": "2020-10-15T22:03:38.361Z",
-    "contributors": [
-      "LoveofRedMoon"
-    ]
-  },
-  "Web/CSS/@counter-style/speak-as": {
-    "modified": "2020-10-15T22:25:44.554Z",
-    "contributors": [
-      "kmokidd"
-    ]
-  },
-  "Web/CSS/@document": {
-    "modified": "2020-10-15T21:19:42.707Z",
-    "contributors": [
-      "RainSlide",
-      "fsx950223",
-      "fscholz",
-      "teoli",
-      "ziyunfei"
-    ]
-  },
-  "Web/CSS/@font-face": {
-    "modified": "2020-10-15T21:22:05.346Z",
-    "contributors": [
-      "symant233",
-      "1v9",
-      "fengzhineng2",
-      "codedrinker",
-      "Howard.Chen",
-      "AozakiOrenji",
-      "mozhs",
-      "gqqnbig",
-      "TiaossuP",
-      "King.",
-      "fscholz",
-      "Go7hic",
-      "teoli",
-      "xcffl"
-    ]
-  },
-  "Web/CSS/@font-face/font-display": {
-    "modified": "2020-10-15T22:05:45.748Z",
-    "contributors": [
-      "suyanhanx",
-      "RainSlide",
-      "littlee",
-      "Lim",
-      "tiger102010"
-    ]
-  },
-  "Web/CSS/@font-face/font-family": {
-    "modified": "2019-03-23T22:16:12.530Z",
-    "contributors": [
-      "mozhs"
-    ]
-  },
-  "Web/CSS/@font-face/font-style": {
-    "modified": "2019-03-23T22:16:15.746Z",
-    "contributors": [
-      "mozhs"
-    ]
-  },
-  "Web/CSS/@font-face/src": {
-    "modified": "2020-10-15T22:12:37.602Z",
-    "contributors": [
-      "Capchen"
-    ]
-  },
-  "Web/CSS/@font-feature-values": {
-    "modified": "2020-09-21T04:47:20.263Z",
-    "contributors": [
-      "xiaoman",
-      "xgqfrms-GitHub"
-    ]
-  },
-  "Web/CSS/@import": {
-    "modified": "2019-03-23T22:41:07.257Z",
-    "contributors": [
-      "xgqfrms-GitHub",
-      "seed-fe",
-      "Guillaume-Heras",
-      "mrstork",
-      "gqqnbig"
-    ]
-  },
-  "Web/CSS/@keyframes": {
-    "modified": "2020-10-30T00:35:27.014Z",
-    "contributors": [
-      "uxk0587",
-      "RainSlide",
-      "Lim",
-      "codeofjackie",
-      "haocity",
-      "pot-code",
-      "LiuXiangyu",
-      "Sebastianz",
-      "zhangqiong",
-      "codert",
-      "fscholz",
-      "xiaodongzai",
-      "Sheppy",
-      "fannie-z",
-      "zmh_w",
-      "ziyunfei",
-      "qinmudi"
-    ]
-  },
-  "Web/CSS/@media": {
-    "modified": "2020-10-15T21:15:45.575Z",
-    "contributors": [
-      "wallena3",
-      "KeBaob",
-      "zjffun",
-      "Gwokhou",
-      "SphinxKnight",
-      "JulesWang",
-      "1060881984",
-      "Ray-Eldath",
-      "maicss",
-      "eeeeeeeason",
-      "xgqfrms-GitHub",
-      "bear-x",
-      "xuwenyuan",
-      "VdoG",
-      "Ende93",
-      "ziyunfei",
-      "Mgjbot",
-      "TigerSoldier"
-    ]
-  },
-  "Web/CSS/@media/-webkit-device-pixel-ratio": {
-    "modified": "2019-03-23T22:17:04.750Z",
-    "contributors": [
-      "charlie"
-    ]
-  },
-  "Web/CSS/@media/any-hover": {
-    "modified": "2020-10-19T22:47:55.316Z",
-    "contributors": [
-      "cuishuo"
-    ]
-  },
-  "Web/CSS/@media/any-pointer": {
-    "modified": "2020-10-19T06:15:19.281Z",
-    "contributors": [
-      "cuishuo"
-    ]
-  },
-  "Web/CSS/@media/aspect-ratio": {
-    "modified": "2020-10-15T22:29:41.881Z",
-    "contributors": [
-      "huyuqiong",
-      "wallena3"
-    ]
-  },
-  "Web/CSS/@media/device-height": {
-    "modified": "2020-10-15T22:18:00.176Z",
-    "contributors": [
-      "houzp"
-    ]
-  },
-  "Web/CSS/@media/hover": {
-    "modified": "2020-10-15T22:04:18.656Z",
-    "contributors": [
-      "fscholz",
-      "sdc37h"
-    ]
-  },
-  "Web/CSS/@media/orientation": {
-    "modified": "2020-10-15T22:15:58.369Z",
-    "contributors": [
-      "RainSlide"
-    ]
-  },
-  "Web/CSS/@media/prefers-color-scheme": {
-    "modified": "2020-10-15T22:17:29.903Z",
-    "contributors": [
-      "RainSlide",
-      "ZZES_REN",
-      "urusai-me",
-      "SimGenius"
-    ]
-  },
-  "Web/CSS/@media/prefers-reduced-motion": {
-    "modified": "2020-10-15T22:26:02.459Z",
-    "contributors": [
-      "kmokidd"
-    ]
-  },
-  "Web/CSS/@media/width": {
-    "modified": "2019-03-26T01:54:43.033Z",
-    "contributors": [
-      "sdc37h"
-    ]
-  },
-  "Web/CSS/@namespace": {
-    "modified": "2019-03-23T22:25:10.485Z",
-    "contributors": [
-      "gardenia",
-      "TiaossuP"
-    ]
-  },
-  "Web/CSS/@page": {
-    "modified": "2020-10-15T21:53:43.116Z",
-    "contributors": [
-      "RainSlide",
-      "Boringboy"
-    ]
-  },
-  "Web/CSS/@supports": {
-    "modified": "2020-11-15T05:35:58.924Z",
-    "contributors": [
-      "RolkerMan",
-      "mailwwc",
-      "RainSlide",
-      "gucong",
-      "fscholz",
-      "teoli",
-      "ziyunfei"
-    ]
-  },
-  "Web/CSS/Attribute_selectors": {
-    "modified": "2020-10-15T21:22:08.999Z",
-    "contributors": [
-      "Lucy",
-      "imwangpan",
-      "juzco",
-      "RainSlide",
-      "littleostar",
-      "Ende93",
-      "zy343134464",
-      "xgqfrms-GitHub",
-      "win5do",
-      "AnnAngela",
-      "fzhw88",
-      "fscholz",
-      "teoli",
-      "alimon"
-    ]
-  },
-  "Web/CSS/CSSOM_view": {
-    "modified": "2019-03-23T22:13:17.107Z",
-    "contributors": [
-      "Pada"
-    ]
-  },
-  "Web/CSS/CSSOM_view/Coordinate_systems": {
-    "modified": "2019-03-18T21:28:19.895Z",
-    "contributors": [
-      "1Cr18Ni9"
-    ]
-  },
-  "Web/CSS/CSSOM_view/Viewport_concepts": {
-    "modified": "2020-04-19T23:11:40.286Z",
-    "contributors": [
-      "PerfectVirgo",
-      "244462375",
-      "Hew007",
-      "delbertbeta",
-      "kioyang"
-    ]
-  },
-  "Web/CSS/CSS_Values_and_Units": {
-    "modified": "2020-07-17T05:52:14.158Z",
-    "contributors": [
-      "bdawn",
-      "Owen-Tsai"
-    ]
-  },
-  "Web/CSS/CSS_Values_and_Units/CSS_Value_Functions": {
-    "modified": "2020-11-20T07:10:42.861Z",
-    "contributors": [
-      "xgqfrms"
-    ]
-  },
-  "Web/CSS/CSS_Values_and_Units/CSS_data_types": {
-    "modified": "2019-03-23T22:08:42.415Z",
-    "contributors": [
-      "Ende93",
-      "h2x"
-    ]
-  },
-  "Web/CSS/CSS_Values_and_Units/Value_definition_syntax": {
-    "modified": "2020-03-13T13:15:23.549Z",
-    "contributors": [
-      "AchooLuv",
-      "zjffun",
-      "wjp5826",
-      "Tankunpeng",
-      "Sebastianz",
-      "Guillaume-Heras",
-      "prayash",
-      "uolcano",
-      "ljwrer",
-      "teoli",
-      "Jimmie_Felidae"
-    ]
-  },
-  "Web/CSS/CSS_animated_properties": {
-    "modified": "2019-04-01T03:31:52.769Z",
-    "contributors": [
-      "xgqfrms-GitHub",
-      "Sebastianz",
-      "teoli",
-      "ziyunfei",
-      "feiwen8772"
-    ]
-  },
-  "Web/CSS/CSS_animations": {
+  "Web/CSS/Guides/Animations": {
     "modified": "2020-10-15T21:40:13.943Z",
     "contributors": [
       "1v9",
@@ -23523,7 +22436,17 @@
       "teoli"
     ]
   },
-  "Web/CSS/CSS_animations/Using_CSS_animations": {
+  "Web/CSS/Guides/Animations/Animatable_properties": {
+    "modified": "2019-04-01T03:31:52.769Z",
+    "contributors": [
+      "xgqfrms-GitHub",
+      "Sebastianz",
+      "teoli",
+      "ziyunfei",
+      "feiwen8772"
+    ]
+  },
+  "Web/CSS/Guides/Animations/Using": {
     "modified": "2019-08-08T07:19:41.823Z",
     "contributors": [
       "xgqfrms-GitHub",
@@ -23534,7 +22457,7 @@
       "hutuxu"
     ]
   },
-  "Web/CSS/CSS_backgrounds_and_borders": {
+  "Web/CSS/Guides/Backgrounds_and_borders": {
     "modified": "2019-03-18T21:45:20.317Z",
     "contributors": [
       "PythonVsJava",
@@ -23542,14 +22465,14 @@
       "Sheppy"
     ]
   },
-  "Web/CSS/CSS_backgrounds_and_borders/Border-image_generator": {
+  "Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator": {
     "modified": "2019-03-18T21:15:13.389Z",
     "contributors": [
       "Ende93",
       "yellowstar1992"
     ]
   },
-  "Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator": {
+  "Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator": {
     "modified": "2019-03-23T22:42:48.406Z",
     "contributors": [
       "FrontENG",
@@ -23557,7 +22480,7 @@
       "regiondavid"
     ]
   },
-  "Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator": {
+  "Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator": {
     "modified": "2019-03-18T20:43:42.671Z",
     "contributors": [
       "BychekRU",
@@ -23565,45 +22488,45 @@
       "charlie"
     ]
   },
-  "Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images": {
+  "Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images": {
     "modified": "2019-03-18T21:38:07.175Z",
     "contributors": [
       "Aaron_Zhung"
     ]
   },
-  "Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds": {
+  "Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds": {
     "modified": "2020-05-06T01:51:11.555Z",
     "contributors": [
       "vvian00",
       "rguanghui"
     ]
   },
-  "Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds": {
+  "Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds": {
     "modified": "2019-03-18T21:45:25.619Z",
     "contributors": [
       "HHUchenmin"
     ]
   },
-  "Web/CSS/CSS_basic_user_interface": {
+  "Web/CSS/Guides/Basic_user_interface": {
     "modified": "2020-09-16T00:31:43.061Z",
     "contributors": [
       "namklaw"
     ]
   },
-  "Web/CSS/CSS_box_alignment": {
+  "Web/CSS/Guides/Box_alignment": {
     "modified": "2020-02-11T06:02:03.390Z",
     "contributors": [
       "HareInWeed",
       "mfuji09"
     ]
   },
-  "Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox": {
+  "Web/CSS/Guides/Box_alignment/In_flexbox": {
     "modified": "2019-03-18T20:34:13.411Z",
     "contributors": [
       "DecadeCode"
     ]
   },
-  "Web/CSS/CSS_box_model": {
+  "Web/CSS/Guides/Box_model": {
     "modified": "2019-05-21T23:58:20.696Z",
     "contributors": [
       "celdr",
@@ -23613,7 +22536,7 @@
       "ziyunfei"
     ]
   },
-  "Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model": {
+  "Web/CSS/Guides/Box_model/Introduction": {
     "modified": "2019-10-01T21:50:12.174Z",
     "contributors": [
       "123456zzz",
@@ -23633,7 +22556,7 @@
       "yan"
     ]
   },
-  "Web/CSS/CSS_box_model/Mastering_margin_collapsing": {
+  "Web/CSS/Guides/Box_model/Margin_collapsing": {
     "modified": "2020-07-05T13:43:32.769Z",
     "contributors": [
       "mdn_idealist",
@@ -23659,16 +22582,23 @@
       "yan"
     ]
   },
-  "Web/CSS/CSS_cascade/Cascade": {
-    "modified": "2020-04-12T01:15:48.713Z",
+  "Web/CSS/Guides/CSSOM_view": {
+    "modified": "2019-03-23T22:13:17.107Z",
     "contributors": [
-      "laizenan",
-      "zjffun",
-      "Seize-cf",
-      "distums"
+      "Pada"
     ]
   },
-  "Web/CSS/CSS_cascade/Inheritance": {
+  "Web/CSS/Guides/CSSOM_view/Viewport_concepts": {
+    "modified": "2020-04-19T23:11:40.286Z",
+    "contributors": [
+      "PerfectVirgo",
+      "244462375",
+      "Hew007",
+      "delbertbeta",
+      "kioyang"
+    ]
+  },
+  "Web/CSS/Guides/Cascade/Inheritance": {
     "modified": "2020-05-20T07:33:19.452Z",
     "contributors": [
       "AlenYing",
@@ -23684,7 +22614,24 @@
       "yan"
     ]
   },
-  "Web/CSS/CSS_cascade/Shorthand_properties": {
+  "Web/CSS/Guides/Cascade/Introduction": {
+    "modified": "2020-04-12T01:15:48.713Z",
+    "contributors": [
+      "laizenan",
+      "zjffun",
+      "Seize-cf",
+      "distums"
+    ]
+  },
+  "Web/CSS/Guides/Cascade/Property_value_processing": {
+    "modified": "2019-03-23T22:33:27.273Z",
+    "contributors": [
+      "ziyunfei",
+      "songpj",
+      "Soy"
+    ]
+  },
+  "Web/CSS/Guides/Cascade/Shorthand_properties": {
     "modified": "2020-07-31T21:45:47.905Z",
     "contributors": [
       "Ende93",
@@ -23694,7 +22641,7 @@
       "anjia"
     ]
   },
-  "Web/CSS/CSS_cascade/Specificity": {
+  "Web/CSS/Guides/Cascade/Specificity": {
     "modified": "2020-10-31T01:29:03.940Z",
     "contributors": [
       "syt-honey",
@@ -23725,15 +22672,7 @@
       "alimon"
     ]
   },
-  "Web/CSS/CSS_cascade/Value_processing": {
-    "modified": "2019-03-23T22:33:27.273Z",
-    "contributors": [
-      "ziyunfei",
-      "songpj",
-      "Soy"
-    ]
-  },
-  "Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties": {
+  "Web/CSS/Guides/Cascading_variables/Using_custom_properties": {
     "modified": "2020-10-15T21:34:42.532Z",
     "contributors": [
       "kingfree",
@@ -23749,20 +22688,20 @@
       "ReyCG_sub"
     ]
   },
-  "Web/CSS/CSS_colors": {
+  "Web/CSS/Guides/Colors": {
     "modified": "2020-11-28T00:06:47.995Z",
     "contributors": [
       "xusy"
     ]
   },
-  "Web/CSS/CSS_colors/Applying_color": {
+  "Web/CSS/Guides/Colors/Applying_color": {
     "modified": "2020-07-22T05:27:42.410Z",
     "contributors": [
       "WinterCicada",
       "Dorence"
     ]
   },
-  "Web/CSS/CSS_colors/Color_picker_tool": {
+  "Web/CSS/Guides/Colors/Color_format_converter": {
     "modified": "2019-09-28T22:09:24.320Z",
     "contributors": [
       "smnet1999",
@@ -23773,25 +22712,25 @@
       "nalanrola"
     ]
   },
-  "Web/CSS/CSS_conditional_rules/Using_feature_queries": {
+  "Web/CSS/Guides/Conditional_rules/Using_feature_queries": {
     "modified": "2020-10-22T05:31:37.700Z",
     "contributors": [
       "SDUTWSL"
     ]
   },
-  "Web/CSS/CSS_containment": {
+  "Web/CSS/Guides/Containment": {
     "modified": "2020-10-23T12:43:13.528Z",
     "contributors": [
       "AielloChan"
     ]
   },
-  "Web/CSS/CSS_counter_styles": {
+  "Web/CSS/Guides/Counter_styles": {
     "modified": "2019-03-18T21:38:16.217Z",
     "contributors": [
       "ZZES_REN"
     ]
   },
-  "Web/CSS/CSS_counter_styles/Using_CSS_counters": {
+  "Web/CSS/Guides/Counter_styles/Using_counters": {
     "modified": "2019-03-23T23:28:24.261Z",
     "contributors": [
       "Ende93",
@@ -23800,7 +22739,7 @@
       "Nightingale"
     ]
   },
-  "Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow": {
+  "Web/CSS/Guides/Display/Block_and_inline_layout": {
     "modified": "2020-09-10T14:45:56.661Z",
     "contributors": [
       "MmmmHeee",
@@ -23812,7 +22751,7 @@
       "sunkaila"
     ]
   },
-  "Web/CSS/CSS_display/Block_formatting_context": {
+  "Web/CSS/Guides/Display/Block_formatting_context": {
     "modified": "2020-12-09T10:24:24.921Z",
     "contributors": [
       "xmasuhai",
@@ -23855,7 +22794,7 @@
       "yan"
     ]
   },
-  "Web/CSS/CSS_display/Containing_block": {
+  "Web/CSS/Guides/Display/Containing_block": {
     "modified": "2020-10-09T00:31:23.855Z",
     "contributors": [
       "Chellyyy",
@@ -23871,25 +22810,32 @@
       "ucev"
     ]
   },
-  "Web/CSS/CSS_display/Flow_layout": {
+  "Web/CSS/Guides/Display/Flow_layout": {
     "modified": "2019-03-18T20:48:13.355Z",
     "contributors": [
       "Bpeanut"
     ]
   },
-  "Web/CSS/CSS_display/Flow_layout_and_overflow": {
+  "Web/CSS/Guides/Display/Flow_layout_and_overflow": {
     "modified": "2019-08-24T06:48:49.998Z",
     "contributors": [
       "xunzhonglee"
     ]
   },
-  "Web/CSS/CSS_display/Flow_layout_and_writing_modes": {
+  "Web/CSS/Guides/Display/Flow_layout_and_writing_modes": {
     "modified": "2019-08-24T07:10:58.090Z",
     "contributors": [
       "xunzhonglee"
     ]
   },
-  "Web/CSS/CSS_display/In_flow_and_out_of_flow": {
+  "Web/CSS/Guides/Display/Formatting_contexts": {
+    "modified": "2020-10-09T02:26:15.552Z",
+    "contributors": [
+      "Chellyyy",
+      "xunzhonglee"
+    ]
+  },
+  "Web/CSS/Guides/Display/In_flow_and_out_of_flow": {
     "modified": "2019-08-26T05:12:18.778Z",
     "contributors": [
       "xuduotom",
@@ -23898,14 +22844,7 @@
       "feaswcy"
     ]
   },
-  "Web/CSS/CSS_display/Introduction_to_formatting_contexts": {
-    "modified": "2020-10-09T02:26:15.552Z",
-    "contributors": [
-      "Chellyyy",
-      "xunzhonglee"
-    ]
-  },
-  "Web/CSS/CSS_display/Visual_formatting_model": {
+  "Web/CSS/Guides/Display/Visual_formatting_model": {
     "modified": "2019-03-18T21:10:31.376Z",
     "contributors": [
       "guangzai",
@@ -23919,7 +22858,7 @@
       "yan"
     ]
   },
-  "Web/CSS/CSS_flexible_box_layout": {
+  "Web/CSS/Guides/Flexible_box_layout": {
     "modified": "2019-09-20T14:46:03.892Z",
     "contributors": [
       "Heaan",
@@ -23935,7 +22874,7 @@
       "teoli"
     ]
   },
-  "Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container": {
+  "Web/CSS/Guides/Flexible_box_layout/Aligning_items": {
     "modified": "2020-08-31T23:01:11.688Z",
     "contributors": [
       "lmislm",
@@ -23948,7 +22887,7 @@
       "zhang-hongwei"
     ]
   },
-  "Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox": {
+  "Web/CSS/Guides/Flexible_box_layout/Basic_concepts": {
     "modified": "2020-08-28T05:40:29.406Z",
     "contributors": [
       "ysqzhang",
@@ -23964,7 +22903,7 @@
       "imgss"
     ]
   },
-  "Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis": {
+  "Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios": {
     "modified": "2020-05-17T05:12:56.231Z",
     "contributors": [
       "YangYaPing",
@@ -23978,14 +22917,7 @@
       "helloyong"
     ]
   },
-  "Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items": {
-    "modified": "2020-10-21T03:55:55.262Z",
-    "contributors": [
-      "Riemann",
-      "qwertty"
-    ]
-  },
-  "Web/CSS/CSS_flexible_box_layout/Ordering_flex_items": {
+  "Web/CSS/Guides/Flexible_box_layout/Ordering_items": {
     "modified": "2020-10-15T23:39:20.262Z",
     "contributors": [
       "huanggm",
@@ -23993,14 +22925,14 @@
       "youcanping"
     ]
   },
-  "Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods": {
+  "Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods": {
     "modified": "2020-07-03T00:45:14.544Z",
     "contributors": [
       "jin_wang",
       "Wulakaka"
     ]
   },
-  "Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox": {
+  "Web/CSS/Guides/Flexible_box_layout/Use_cases": {
     "modified": "2020-06-21T23:26:55.230Z",
     "contributors": [
       "cell",
@@ -24011,21 +22943,28 @@
       "xieminjie"
     ]
   },
-  "Web/CSS/CSS_fonts": {
+  "Web/CSS/Guides/Flexible_box_layout/Wrapping_items": {
+    "modified": "2020-10-21T03:55:55.262Z",
+    "contributors": [
+      "Riemann",
+      "qwertty"
+    ]
+  },
+  "Web/CSS/Guides/Fonts": {
     "modified": "2019-03-23T22:13:50.386Z",
     "contributors": [
       "xiaoxiangwendao",
       "Ryogiazaka"
     ]
   },
-  "Web/CSS/CSS_fonts/OpenType_fonts_guide": {
+  "Web/CSS/Guides/Fonts/OpenType_fonts": {
     "modified": "2019-06-08T12:32:17.386Z",
     "contributors": [
       "Zhuikang",
       "WangLeto"
     ]
   },
-  "Web/CSS/CSS_fonts/Variable_fonts_guide": {
+  "Web/CSS/Guides/Fonts/Variable_fonts": {
     "modified": "2020-09-10T07:44:15.006Z",
     "contributors": [
       "CelestialPhineas",
@@ -24033,7 +22972,7 @@
       "ldwformat"
     ]
   },
-  "Web/CSS/CSS_fonts/WOFF": {
+  "Web/CSS/Guides/Fonts/WOFF": {
     "modified": "2020-10-15T21:07:54.753Z",
     "contributors": [
       "zhangchen",
@@ -24042,20 +22981,20 @@
       "ziyunfei"
     ]
   },
-  "Web/CSS/CSS_fragmentation": {
+  "Web/CSS/Guides/Fragmentation": {
     "modified": "2019-12-03T13:06:14.108Z",
     "contributors": [
       "pans9"
     ]
   },
-  "Web/CSS/CSS_generated_content": {
+  "Web/CSS/Guides/Generated_content": {
     "modified": "2020-10-15T22:02:59.653Z",
     "contributors": [
       "Jack.Works",
       "BlackBirch"
     ]
   },
-  "Web/CSS/CSS_grid_layout": {
+  "Web/CSS/Guides/Grid_layout": {
     "modified": "2019-09-04T22:46:50.423Z",
     "contributors": [
       "xgqfrms",
@@ -24075,13 +23014,19 @@
       "Slayer1986"
     ]
   },
-  "Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout": {
+  "Web/CSS/Guides/Grid_layout/Accessibility": {
+    "modified": "2019-09-04T22:47:22.673Z",
+    "contributors": [
+      "comehope"
+    ]
+  },
+  "Web/CSS/Guides/Grid_layout/Auto-placement": {
     "modified": "2019-03-23T22:03:41.100Z",
     "contributors": [
       "comehope"
     ]
   },
-  "Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout": {
+  "Web/CSS/Guides/Grid_layout/Basic_concepts": {
     "modified": "2019-10-10T16:32:12.515Z",
     "contributors": [
       "L9m",
@@ -24099,20 +23044,29 @@
       "1986slayer"
     ]
   },
-  "Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout": {
+  "Web/CSS/Guides/Grid_layout/Box_alignment": {
     "modified": "2020-06-17T09:42:12.785Z",
     "contributors": [
       "lmx-Hexagram",
       "comehope"
     ]
   },
-  "Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility": {
-    "modified": "2019-09-04T22:47:22.673Z",
+  "Web/CSS/Guides/Grid_layout/Common_grid_layouts": {
+    "modified": "2019-09-04T22:46:41.081Z",
     "contributors": [
+      "zhangchen",
+      "Juvon",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Guides/Grid_layout/Grid_template_areas": {
+    "modified": "2019-03-18T20:53:31.538Z",
+    "contributors": [
+      "xuqighub",
       "comehope"
     ]
   },
-  "Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement": {
+  "Web/CSS/Guides/Grid_layout/Line-based_placement": {
     "modified": "2019-05-31T04:50:27.843Z",
     "contributors": [
       "chentao106",
@@ -24121,35 +23075,20 @@
       "fskuok"
     ]
   },
-  "Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines": {
+  "Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes": {
+    "modified": "2019-03-18T21:44:18.420Z",
+    "contributors": [
+      "comehope"
+    ]
+  },
+  "Web/CSS/Guides/Grid_layout/Named_grid_lines": {
     "modified": "2019-03-23T22:13:51.803Z",
     "contributors": [
       "comehope",
       "1986slayer"
     ]
   },
-  "Web/CSS/CSS_grid_layout/Grid_template_areas": {
-    "modified": "2019-03-18T20:53:31.538Z",
-    "contributors": [
-      "xuqighub",
-      "comehope"
-    ]
-  },
-  "Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes": {
-    "modified": "2019-03-18T21:44:18.420Z",
-    "contributors": [
-      "comehope"
-    ]
-  },
-  "Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids": {
-    "modified": "2019-09-04T22:46:41.081Z",
-    "contributors": [
-      "zhangchen",
-      "Juvon",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods": {
+  "Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods": {
     "modified": "2019-09-10T12:32:25.247Z",
     "contributors": [
       "Hermedius",
@@ -24162,7 +23101,7 @@
       "ucev"
     ]
   },
-  "Web/CSS/CSS_images/Implementing_image_sprites_in_CSS": {
+  "Web/CSS/Guides/Images/Implementing_image_sprites": {
     "modified": "2019-03-23T23:22:22.347Z",
     "contributors": [
       "RainSlide",
@@ -24171,7 +23110,7 @@
       "Wenbin"
     ]
   },
-  "Web/CSS/CSS_images/Replaced_element_properties": {
+  "Web/CSS/Guides/Images/Replaced_element_properties": {
     "modified": "2019-04-23T06:58:57.516Z",
     "contributors": [
       "Lulu-Xue",
@@ -24182,7 +23121,7 @@
       "yaway"
     ]
   },
-  "Web/CSS/CSS_images/Using_CSS_gradients": {
+  "Web/CSS/Guides/Images/Using_gradients": {
     "modified": "2020-08-08T22:22:01.317Z",
     "contributors": [
       "funicular",
@@ -24201,45 +23140,45 @@
       "anjianshi"
     ]
   },
-  "Web/CSS/CSS_inline_layout/Inline_formatting_context": {
+  "Web/CSS/Guides/Inline_layout/Inline_formatting_context": {
     "modified": "2020-07-05T02:58:59.465Z",
     "contributors": [
       "ylc395"
     ]
   },
-  "Web/CSS/CSS_lists/Consistent_list_indentation": {
+  "Web/CSS/Guides/Lists/Indenting": {
     "modified": "2019-03-23T23:22:24.362Z",
     "contributors": [
       "freshSep",
       "Wenbin"
     ]
   },
-  "Web/CSS/CSS_logical_properties_and_values": {
+  "Web/CSS/Guides/Logical_properties_and_values": {
     "modified": "2020-10-12T22:45:52.532Z",
     "contributors": [
       "RainSlide",
       "Ende93"
     ]
   },
-  "Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values": {
+  "Web/CSS/Guides/Logical_properties_and_values/Basic_concepts": {
     "modified": "2019-03-28T00:11:41.934Z",
     "contributors": [
       "Aamperor"
     ]
   },
-  "Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning": {
+  "Web/CSS/Guides/Logical_properties_and_values/Floating_and_positioning": {
     "modified": "2020-12-09T23:54:16.957Z",
     "contributors": [
       "bernie-ning"
     ]
   },
-  "Web/CSS/CSS_masking": {
+  "Web/CSS/Guides/Masking": {
     "modified": "2019-03-18T21:28:40.615Z",
     "contributors": [
       "xgqfrms"
     ]
   },
-  "Web/CSS/CSS_media_queries": {
+  "Web/CSS/Guides/Media_queries": {
     "modified": "2020-10-15T21:56:18.732Z",
     "contributors": [
       "RainSlide",
@@ -24247,7 +23186,7 @@
       "Charley-Hsu"
     ]
   },
-  "Web/CSS/CSS_media_queries/Testing_media_queries": {
+  "Web/CSS/Guides/Media_queries/Testing": {
     "modified": "2020-10-15T21:25:42.378Z",
     "contributors": [
       "RainSlide",
@@ -24256,7 +23195,7 @@
       "Wenbin"
     ]
   },
-  "Web/CSS/CSS_media_queries/Using_media_queries": {
+  "Web/CSS/Guides/Media_queries/Using": {
     "modified": "2020-05-17T23:15:16.911Z",
     "contributors": [
       "wallena3",
@@ -24286,7 +23225,7 @@
       "Nightingale"
     ]
   },
-  "Web/CSS/CSS_multicol_layout": {
+  "Web/CSS/Guides/Multicol_layout": {
     "modified": "2020-09-13T09:14:37.310Z",
     "contributors": [
       "SolidBlock",
@@ -24296,19 +23235,19 @@
       "Sebastianz"
     ]
   },
-  "Web/CSS/CSS_multicol_layout/Basic_concepts": {
+  "Web/CSS/Guides/Multicol_layout/Basic_concepts": {
     "modified": "2019-03-18T21:22:33.531Z",
     "contributors": [
       "userkang"
     ]
   },
-  "Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout": {
+  "Web/CSS/Guides/Multicol_layout/Handling_overflow": {
     "modified": "2019-12-09T22:59:53.171Z",
     "contributors": [
       "maicss"
     ]
   },
-  "Web/CSS/CSS_multicol_layout/Using_multicol_layouts": {
+  "Web/CSS/Guides/Multicol_layout/Using": {
     "modified": "2019-03-23T23:28:24.667Z",
     "contributors": [
       "Bayes",
@@ -24317,20 +23256,20 @@
       "Nightingale"
     ]
   },
-  "Web/CSS/CSS_paged_media": {
+  "Web/CSS/Guides/Paged_media": {
     "modified": "2020-03-18T05:04:22.843Z",
     "contributors": [
       "RainSlide",
       "Princess_Knight"
     ]
   },
-  "Web/CSS/CSS_positioned_layout": {
+  "Web/CSS/Guides/Positioned_layout": {
     "modified": "2019-03-23T22:16:58.595Z",
     "contributors": [
       "ZZES_REN"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Stacking_context": {
+  "Web/CSS/Guides/Positioned_layout/Stacking_context": {
     "modified": "2020-01-02T04:20:32.161Z",
     "contributors": [
       "Sl0v3C",
@@ -24352,27 +23291,27 @@
       "tzyeah"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1": {
+  "Web/CSS/Guides/Positioned_layout/Stacking_context/Example_1": {
     "modified": "2020-04-09T03:35:06.982Z",
     "contributors": [
       "liuyibo",
       "VickyJin"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2": {
+  "Web/CSS/Guides/Positioned_layout/Stacking_context/Example_2": {
     "modified": "2019-03-23T22:25:59.868Z",
     "contributors": [
       "Skyrelu"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3": {
+  "Web/CSS/Guides/Positioned_layout/Stacking_context/Example_3": {
     "modified": "2020-01-19T10:58:58.576Z",
     "contributors": [
       "zenHeart",
       "Skyrelu"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Stacking_floating_elements": {
+  "Web/CSS/Guides/Positioned_layout/Stacking_floating_elements": {
     "modified": "2019-03-23T23:29:39.696Z",
     "contributors": [
       "lixuguang",
@@ -24382,7 +23321,7 @@
       "sunnylost"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Stacking_without_z-index": {
+  "Web/CSS/Guides/Positioned_layout/Stacking_without_z-index": {
     "modified": "2019-08-23T06:42:17.114Z",
     "contributors": [
       "allan_simon",
@@ -24392,7 +23331,7 @@
       "endlesswind"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index": {
+  "Web/CSS/Guides/Positioned_layout/Understanding_z-index": {
     "modified": "2019-03-23T23:33:08.995Z",
     "contributors": [
       "zhangchen",
@@ -24403,7 +23342,7 @@
       "ArthasTree"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Using_z-index": {
+  "Web/CSS/Guides/Positioned_layout/Using_z-index": {
     "modified": "2019-03-23T23:21:48.784Z",
     "contributors": [
       "ziyunfei",
@@ -24411,20 +23350,20 @@
       "ArthasTree"
     ]
   },
-  "Web/CSS/CSS_scroll_snap": {
+  "Web/CSS/Guides/Scroll_snap": {
     "modified": "2020-11-30T06:24:22.073Z",
     "contributors": [
       "SphinxKnight",
       "y-z-ui"
     ]
   },
-  "Web/CSS/CSS_scrollbars_styling": {
+  "Web/CSS/Guides/Scrollbars_styling": {
     "modified": "2020-10-15T22:16:38.483Z",
     "contributors": [
       "kioyang"
     ]
   },
-  "Web/CSS/CSS_selectors": {
+  "Web/CSS/Guides/Selectors": {
     "modified": "2020-09-07T23:56:18.761Z",
     "contributors": [
       "aaazz47",
@@ -24440,14 +23379,14 @@
       "wy-ei"
     ]
   },
-  "Web/CSS/CSS_selectors/Privacy_and_the_visited_selector": {
+  "Web/CSS/Guides/Selectors/Privacy_and_:visited": {
     "modified": "2019-03-23T23:07:40.024Z",
     "contributors": [
       "tiansh",
       "599316527"
     ]
   },
-  "Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors": {
+  "Web/CSS/Guides/Selectors/Using_:target": {
     "modified": "2019-03-23T22:52:16.056Z",
     "contributors": [
       "Ende93",
@@ -24455,25 +23394,25 @@
       "FredWe"
     ]
   },
-  "Web/CSS/CSS_shapes": {
+  "Web/CSS/Guides/Shapes": {
     "modified": "2019-07-30T22:05:51.456Z",
     "contributors": [
       "xgqfrms-GitHub"
     ]
   },
-  "Web/CSS/CSS_shapes/From_box_values": {
+  "Web/CSS/Guides/Shapes/From_box_values": {
     "modified": "2019-08-22T06:52:09.530Z",
     "contributors": [
       "xunzhonglee"
     ]
   },
-  "Web/CSS/CSS_shapes/Overview_of_shapes": {
+  "Web/CSS/Guides/Shapes/Overview": {
     "modified": "2020-03-21T05:15:07.734Z",
     "contributors": [
       "linuxbckp"
     ]
   },
-  "Web/CSS/CSS_syntax/At-rule": {
+  "Web/CSS/Guides/Syntax/At-rules": {
     "modified": "2019-08-08T06:46:40.777Z",
     "contributors": [
       "xgqfrms-GitHub",
@@ -24482,7 +23421,7 @@
       "alimon"
     ]
   },
-  "Web/CSS/CSS_syntax/Comments": {
+  "Web/CSS/Guides/Syntax/Comments": {
     "modified": "2020-06-11T09:14:45.384Z",
     "contributors": [
       "Carllllo",
@@ -24491,7 +23430,7 @@
       "ziyunfei"
     ]
   },
-  "Web/CSS/CSS_syntax/Syntax": {
+  "Web/CSS/Guides/Syntax/Introduction": {
     "modified": "2020-01-08T04:59:07.628Z",
     "contributors": [
       "flowfire",
@@ -24503,13 +23442,13 @@
       "yan"
     ]
   },
-  "Web/CSS/CSS_table": {
+  "Web/CSS/Guides/Table": {
     "modified": "2020-12-01T03:09:38.045Z",
     "contributors": [
       "suvyme"
     ]
   },
-  "Web/CSS/CSS_text": {
+  "Web/CSS/Guides/Text": {
     "modified": "2020-09-16T00:45:53.626Z",
     "contributors": [
       "namklaw",
@@ -24518,7 +23457,7 @@
       "LuXuanqing"
     ]
   },
-  "Web/CSS/CSS_text/Whitespace": {
+  "Web/CSS/Guides/Text/Whitespace": {
     "modified": "2020-01-30T13:21:03.275Z",
     "contributors": [
       "chrisdavidmills",
@@ -24526,13 +23465,13 @@
       "ziyunfei"
     ]
   },
-  "Web/CSS/CSS_text_decoration": {
+  "Web/CSS/Guides/Text_decoration": {
     "modified": "2019-04-19T11:09:51.086Z",
     "contributors": [
       "zjffun"
     ]
   },
-  "Web/CSS/CSS_transforms": {
+  "Web/CSS/Guides/Transforms": {
     "modified": "2019-09-28T03:26:55.908Z",
     "contributors": [
       "CharCat",
@@ -24541,7 +23480,7 @@
       "fscholz"
     ]
   },
-  "Web/CSS/CSS_transforms/Using_CSS_transforms": {
+  "Web/CSS/Guides/Transforms/Using": {
     "modified": "2019-12-12T06:29:17.372Z",
     "contributors": [
       "WangYiCong",
@@ -24558,14 +23497,14 @@
       "xcffl"
     ]
   },
-  "Web/CSS/CSS_transitions": {
+  "Web/CSS/Guides/Transitions": {
     "modified": "2019-03-23T22:44:13.456Z",
     "contributors": [
       "MingxunBai",
       "teoli"
     ]
   },
-  "Web/CSS/CSS_transitions/Using_CSS_transitions": {
+  "Web/CSS/Guides/Transitions/Using": {
     "modified": "2019-09-29T00:37:10.013Z",
     "contributors": [
       "SingularityXD",
@@ -24582,59 +23521,36 @@
       "yan"
     ]
   },
-  "Web/CSS/CSS_writing_modes": {
+  "Web/CSS/Guides/Values_and_units": {
+    "modified": "2020-07-17T05:52:14.158Z",
+    "contributors": [
+      "bdawn",
+      "Owen-Tsai"
+    ]
+  },
+  "Web/CSS/Guides/Values_and_units/Value_definition_syntax": {
+    "modified": "2020-03-13T13:15:23.549Z",
+    "contributors": [
+      "AchooLuv",
+      "zjffun",
+      "wjp5826",
+      "Tankunpeng",
+      "Sebastianz",
+      "Guillaume-Heras",
+      "prayash",
+      "uolcano",
+      "ljwrer",
+      "teoli",
+      "Jimmie_Felidae"
+    ]
+  },
+  "Web/CSS/Guides/Writing_modes": {
     "modified": "2019-08-24T07:12:47.677Z",
     "contributors": [
       "xunzhonglee"
     ]
   },
-  "Web/CSS/Child_combinator": {
-    "modified": "2019-03-23T23:32:26.113Z",
-    "contributors": [
-      "ExE-Boss",
-      "fscholz",
-      "teoli",
-      "alimon"
-    ]
-  },
-  "Web/CSS/Class_selectors": {
-    "modified": "2019-03-23T23:32:32.359Z",
-    "contributors": [
-      "fscholz",
-      "teoli",
-      "alimon"
-    ]
-  },
-  "Web/CSS/Column_combinator": {
-    "modified": "2020-10-15T22:20:12.960Z",
-    "contributors": [
-      "karma2014",
-      "laguarage",
-      "woshisbb43"
-    ]
-  },
-  "Web/CSS/Descendant_combinator": {
-    "modified": "2020-11-23T07:09:12.864Z",
-    "contributors": [
-      "zhuangyin",
-      "ExE-Boss",
-      "RainSlide",
-      "fscholz",
-      "teoli",
-      "alimon"
-    ]
-  },
-  "Web/CSS/ID_selectors": {
-    "modified": "2020-10-15T21:22:13.845Z",
-    "contributors": [
-      "RainSlide",
-      "zhangqiangoffice",
-      "fscholz",
-      "teoli",
-      "alimon"
-    ]
-  },
-  "Web/CSS/Layout_cookbook": {
+  "Web/CSS/How_to/Layout_cookbook": {
     "modified": "2020-11-06T10:41:23.256Z",
     "contributors": [
       "Verahuan",
@@ -24643,88 +23559,46 @@
       "creative_fish"
     ]
   },
-  "Web/CSS/Layout_cookbook/Breadcrumb_Navigation": {
+  "Web/CSS/How_to/Layout_cookbook/Breadcrumb_navigation": {
     "modified": "2020-10-15T22:29:06.501Z",
     "contributors": [
       "Mirai-explorer"
     ]
   },
-  "Web/CSS/Layout_cookbook/Card": {
+  "Web/CSS/How_to/Layout_cookbook/Card": {
     "modified": "2020-10-15T22:28:29.154Z",
     "contributors": [
       "fanyuedong"
     ]
   },
-  "Web/CSS/Layout_cookbook/Center_an_element": {
+  "Web/CSS/How_to/Layout_cookbook/Center_an_element": {
     "modified": "2020-10-15T22:27:08.549Z",
     "contributors": [
       "HareInWeed"
     ]
   },
-  "Web/CSS/Layout_cookbook/Column_layouts": {
+  "Web/CSS/How_to/Layout_cookbook/Column_layouts": {
     "modified": "2020-10-15T22:20:32.590Z",
     "contributors": [
       "creative_fish"
     ]
   },
-  "Web/CSS/Layout_cookbook/Contribute_a_recipe": {
+  "Web/CSS/How_to/Layout_cookbook/Contribute_a_recipe": {
     "modified": "2020-04-13T12:50:05.549Z",
     "contributors": [
       "Mirai-explorer"
     ]
   },
-  "Web/CSS/Layout_cookbook/Media_objects": {
+  "Web/CSS/How_to/Layout_cookbook/Media_objects": {
     "modified": "2020-10-15T22:18:51.901Z",
     "contributors": [
       "wre232114"
     ]
   },
-  "Web/CSS/Layout_cookbook/Split_Navigation": {
+  "Web/CSS/How_to/Layout_cookbook/Split_navigation": {
     "modified": "2020-10-15T22:27:06.538Z",
     "contributors": [
       "HareInWeed"
-    ]
-  },
-  "Web/CSS/Next-sibling_combinator": {
-    "modified": "2020-10-15T21:22:13.249Z",
-    "contributors": [
-      "peterbe",
-      "XiangHongAi",
-      "tss1006",
-      "ExE-Boss",
-      "zhangqiangoffice",
-      "Ricardo-Ke",
-      "fscholz",
-      "teoli",
-      "alimon"
-    ]
-  },
-  "Web/CSS/Pseudo-classes": {
-    "modified": "2019-04-12T03:53:10.441Z",
-    "contributors": [
-      "Soyaine",
-      "RainSlide",
-      "Ende93",
-      "xgqfrms-GitHub",
-      "teoli",
-      "alimon"
-    ]
-  },
-  "Web/CSS/Pseudo-elements": {
-    "modified": "2019-04-06T09:41:11.172Z",
-    "contributors": [
-      "RainSlide",
-      "StudentMain",
-      "anderson_liu",
-      "linyang4",
-      "nDos",
-      "xgqfrms-GitHub",
-      "lizhihua",
-      "FredWe",
-      "xiaowtz",
-      "Fadeoc",
-      "teoli",
-      "alimon"
     ]
   },
   "Web/CSS/Reference": {
@@ -24761,62 +23635,298 @@
       "Mickeyboy"
     ]
   },
-  "Web/CSS/Selector_list": {
-    "modified": "2020-10-15T22:25:15.562Z",
+  "Web/CSS/Reference/At-rules/@charset": {
+    "modified": "2020-10-15T21:52:27.106Z",
+    "contributors": [
+      "Ritr",
+      "xgqfrms-GitHub",
+      "frankfang1990",
+      "yofine"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@counter-style": {
+    "modified": "2019-03-23T22:52:04.265Z",
+    "contributors": [
+      "lixinxin93",
+      "FredWe"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@counter-style/additive-symbols": {
+    "modified": "2020-10-15T21:55:56.428Z",
+    "contributors": [
+      "liuruiqi1993",
+      "HayashiMei",
+      "lixinxin93"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@counter-style/pad": {
+    "modified": "2020-10-15T22:03:38.361Z",
+    "contributors": [
+      "LoveofRedMoon"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@counter-style/speak-as": {
+    "modified": "2020-10-15T22:25:44.554Z",
+    "contributors": [
+      "kmokidd"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@document": {
+    "modified": "2020-10-15T21:19:42.707Z",
     "contributors": [
       "RainSlide",
-      "Cherrison"
-    ]
-  },
-  "Web/CSS/Subsequent-sibling_combinator": {
-    "modified": "2020-10-15T21:22:20.373Z",
-    "contributors": [
-      "Shiner",
-      "XiangHongAi",
-      "ExE-Boss",
-      "xlaoyu",
+      "fsx950223",
       "fscholz",
-      "teoli",
-      "alimon"
-    ]
-  },
-  "Web/CSS/Tutorials": {
-    "modified": "2019-03-23T23:32:32.218Z",
-    "contributors": [
-      "teoli",
-      "jtyjty99999"
-    ]
-  },
-  "Web/CSS/Type_selectors": {
-    "modified": "2019-03-23T23:32:35.434Z",
-    "contributors": [
-      "funnyChinese",
-      "fscholz",
-      "teoli",
-      "alimon"
-    ]
-  },
-  "Web/CSS/Universal_selectors": {
-    "modified": "2019-04-23T23:13:42.979Z",
-    "contributors": [
-      "HomeLH",
-      "fscholz",
-      "xiaolong",
-      "iwillbe",
       "teoli",
       "ziyunfei"
     ]
   },
-  "Web/CSS/WebKit_Extensions": {
-    "modified": "2019-03-24T00:17:24.198Z",
+  "Web/CSS/Reference/At-rules/@font-face": {
+    "modified": "2020-10-15T21:22:05.346Z",
     "contributors": [
-      "ExE-Boss",
-      "ziyunfei",
+      "symant233",
+      "1v9",
+      "fengzhineng2",
+      "codedrinker",
+      "Howard.Chen",
+      "AozakiOrenji",
+      "mozhs",
+      "gqqnbig",
+      "TiaossuP",
+      "King.",
+      "fscholz",
+      "Go7hic",
       "teoli",
-      "OoOoOoOo"
+      "xcffl"
     ]
   },
-  "Web/CSS/align-content": {
+  "Web/CSS/Reference/At-rules/@font-face/font-display": {
+    "modified": "2020-10-15T22:05:45.748Z",
+    "contributors": [
+      "suyanhanx",
+      "RainSlide",
+      "littlee",
+      "Lim",
+      "tiger102010"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@font-face/font-family": {
+    "modified": "2019-03-23T22:16:12.530Z",
+    "contributors": [
+      "mozhs"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@font-face/font-style": {
+    "modified": "2019-03-23T22:16:15.746Z",
+    "contributors": [
+      "mozhs"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@font-face/src": {
+    "modified": "2020-10-15T22:12:37.602Z",
+    "contributors": [
+      "Capchen"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@font-feature-values": {
+    "modified": "2020-09-21T04:47:20.263Z",
+    "contributors": [
+      "xiaoman",
+      "xgqfrms-GitHub"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@import": {
+    "modified": "2019-03-23T22:41:07.257Z",
+    "contributors": [
+      "xgqfrms-GitHub",
+      "seed-fe",
+      "Guillaume-Heras",
+      "mrstork",
+      "gqqnbig"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@keyframes": {
+    "modified": "2020-10-30T00:35:27.014Z",
+    "contributors": [
+      "uxk0587",
+      "RainSlide",
+      "Lim",
+      "codeofjackie",
+      "haocity",
+      "pot-code",
+      "LiuXiangyu",
+      "Sebastianz",
+      "zhangqiong",
+      "codert",
+      "fscholz",
+      "xiaodongzai",
+      "Sheppy",
+      "fannie-z",
+      "zmh_w",
+      "ziyunfei",
+      "qinmudi"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@media": {
+    "modified": "2020-10-15T21:15:45.575Z",
+    "contributors": [
+      "wallena3",
+      "KeBaob",
+      "zjffun",
+      "Gwokhou",
+      "SphinxKnight",
+      "JulesWang",
+      "1060881984",
+      "Ray-Eldath",
+      "maicss",
+      "eeeeeeeason",
+      "xgqfrms-GitHub",
+      "bear-x",
+      "xuwenyuan",
+      "VdoG",
+      "Ende93",
+      "ziyunfei",
+      "Mgjbot",
+      "TigerSoldier"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@media/-webkit-device-pixel-ratio": {
+    "modified": "2019-03-23T22:17:04.750Z",
+    "contributors": [
+      "charlie"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@media/any-hover": {
+    "modified": "2020-10-19T22:47:55.316Z",
+    "contributors": [
+      "cuishuo"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@media/any-pointer": {
+    "modified": "2020-10-19T06:15:19.281Z",
+    "contributors": [
+      "cuishuo"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@media/aspect-ratio": {
+    "modified": "2020-10-15T22:29:41.881Z",
+    "contributors": [
+      "huyuqiong",
+      "wallena3"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@media/device-height": {
+    "modified": "2020-10-15T22:18:00.176Z",
+    "contributors": [
+      "houzp"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@media/hover": {
+    "modified": "2020-10-15T22:04:18.656Z",
+    "contributors": [
+      "fscholz",
+      "sdc37h"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@media/orientation": {
+    "modified": "2020-10-15T22:15:58.369Z",
+    "contributors": [
+      "RainSlide"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@media/prefers-color-scheme": {
+    "modified": "2020-10-15T22:17:29.903Z",
+    "contributors": [
+      "RainSlide",
+      "ZZES_REN",
+      "urusai-me",
+      "SimGenius"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@media/prefers-reduced-motion": {
+    "modified": "2020-10-15T22:26:02.459Z",
+    "contributors": [
+      "kmokidd"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@media/width": {
+    "modified": "2019-03-26T01:54:43.033Z",
+    "contributors": [
+      "sdc37h"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@namespace": {
+    "modified": "2019-03-23T22:25:10.485Z",
+    "contributors": [
+      "gardenia",
+      "TiaossuP"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@page": {
+    "modified": "2020-10-15T21:53:43.116Z",
+    "contributors": [
+      "RainSlide",
+      "Boringboy"
+    ]
+  },
+  "Web/CSS/Reference/At-rules/@supports": {
+    "modified": "2020-11-15T05:35:58.924Z",
+    "contributors": [
+      "RolkerMan",
+      "mailwwc",
+      "RainSlide",
+      "gucong",
+      "fscholz",
+      "teoli",
+      "ziyunfei"
+    ]
+  },
+  "Web/CSS/Reference/Properties/--*": {
+    "modified": "2020-10-15T21:52:54.202Z",
+    "contributors": [
+      "zhangchen",
+      "Ende93",
+      "yisibl",
+      "Huooo"
+    ]
+  },
+  "Web/CSS/Reference/Properties/-moz-user-input": {
+    "modified": "2019-03-23T22:17:53.560Z",
+    "contributors": [
+      "xgqfrms-GitHub"
+    ]
+  },
+  "Web/CSS/Reference/Properties/-webkit-border-before": {
+    "modified": "2020-10-15T22:25:58.369Z",
+    "contributors": [
+      "Jackjun724"
+    ]
+  },
+  "Web/CSS/Reference/Properties/-webkit-tap-highlight-color": {
+    "modified": "2019-03-23T22:22:56.346Z",
+    "contributors": [
+      "smilewalker"
+    ]
+  },
+  "Web/CSS/Reference/Properties/-webkit-text-stroke": {
+    "modified": "2020-11-09T04:48:30.804Z",
+    "contributors": [
+      "sideshowbarker",
+      "codingdudecom",
+      "wr20060926",
+      "Die4passion",
+      "wangyi96",
+      "Vera0707"
+    ]
+  },
+  "Web/CSS/Reference/Properties/-webkit-touch-callout": {
+    "modified": "2019-03-23T22:50:15.755Z",
+    "contributors": [
+      "charlie",
+      "FredWe"
+    ]
+  },
+  "Web/CSS/Reference/Properties/align-content": {
     "modified": "2020-10-15T21:34:12.754Z",
     "contributors": [
       "liuruiqi1993",
@@ -24838,7 +23948,7 @@
       "fskuok"
     ]
   },
-  "Web/CSS/align-items": {
+  "Web/CSS/Reference/Properties/align-items": {
     "modified": "2020-10-15T21:37:09.798Z",
     "contributors": [
       "淡空醉花",
@@ -24856,7 +23966,7 @@
       "FredWe"
     ]
   },
-  "Web/CSS/align-self": {
+  "Web/CSS/Reference/Properties/align-self": {
     "modified": "2020-10-15T21:37:32.750Z",
     "contributors": [
       "淡空醉花",
@@ -24872,7 +23982,7 @@
       "FredWe"
     ]
   },
-  "Web/CSS/all": {
+  "Web/CSS/Reference/Properties/all": {
     "modified": "2020-10-15T21:34:09.929Z",
     "contributors": [
       "zhangchen",
@@ -24882,22 +23992,7 @@
       "fskuok"
     ]
   },
-  "Web/CSS/angle": {
-    "modified": "2020-10-15T21:49:53.373Z",
-    "contributors": [
-      "LZM",
-      "ZackBee",
-      "mozhs",
-      "zhichao"
-    ]
-  },
-  "Web/CSS/angle-percentage": {
-    "modified": "2020-10-15T22:17:42.224Z",
-    "contributors": [
-      "TrumanGu"
-    ]
-  },
-  "Web/CSS/animation": {
+  "Web/CSS/Reference/Properties/animation": {
     "modified": "2020-10-15T21:26:29.276Z",
     "contributors": [
       "zhaoshouxin",
@@ -24915,7 +24010,7 @@
       "fishenal"
     ]
   },
-  "Web/CSS/animation-delay": {
+  "Web/CSS/Reference/Properties/animation-delay": {
     "modified": "2020-10-15T21:34:12.178Z",
     "contributors": [
       "HayashiMei",
@@ -24926,7 +24021,7 @@
       "fskuok"
     ]
   },
-  "Web/CSS/animation-direction": {
+  "Web/CSS/Reference/Properties/animation-direction": {
     "modified": "2020-10-15T21:26:25.868Z",
     "contributors": [
       "HayashiMei",
@@ -24937,7 +24032,7 @@
       "fishenal"
     ]
   },
-  "Web/CSS/animation-duration": {
+  "Web/CSS/Reference/Properties/animation-duration": {
     "modified": "2020-09-17T08:27:58.494Z",
     "contributors": [
       "sclchic",
@@ -24946,7 +24041,7 @@
       "hutuxu"
     ]
   },
-  "Web/CSS/animation-fill-mode": {
+  "Web/CSS/Reference/Properties/animation-fill-mode": {
     "modified": "2020-10-15T21:26:17.373Z",
     "contributors": [
       "zjffun",
@@ -24957,7 +24052,7 @@
       "fishenal"
     ]
   },
-  "Web/CSS/animation-iteration-count": {
+  "Web/CSS/Reference/Properties/animation-iteration-count": {
     "modified": "2019-08-16T04:38:38.286Z",
     "contributors": [
       "AlisaLiCn",
@@ -24965,7 +24060,7 @@
       "seven-lh"
     ]
   },
-  "Web/CSS/animation-name": {
+  "Web/CSS/Reference/Properties/animation-name": {
     "modified": "2019-06-21T05:37:24.111Z",
     "contributors": [
       "chengkai",
@@ -24976,7 +24071,7 @@
       "hutuxu"
     ]
   },
-  "Web/CSS/animation-play-state": {
+  "Web/CSS/Reference/Properties/animation-play-state": {
     "modified": "2020-07-13T06:32:25.611Z",
     "contributors": [
       "Joker09",
@@ -24984,7 +24079,7 @@
       "lushen"
     ]
   },
-  "Web/CSS/animation-timing-function": {
+  "Web/CSS/Reference/Properties/animation-timing-function": {
     "modified": "2020-10-15T21:34:13.075Z",
     "contributors": [
       "HayashiMei",
@@ -24996,7 +24091,7 @@
       "fskuok"
     ]
   },
-  "Web/CSS/appearance": {
+  "Web/CSS/Reference/Properties/appearance": {
     "modified": "2020-10-15T21:50:06.957Z",
     "contributors": [
       "ExE-Boss",
@@ -25005,33 +24100,20 @@
       "ThomasSoloist"
     ]
   },
-  "Web/CSS/aspect-ratio": {
+  "Web/CSS/Reference/Properties/aspect-ratio": {
     "modified": "2020-10-30T10:24:33.576Z",
     "contributors": [
       "jcplus"
     ]
   },
-  "Web/CSS/attr": {
-    "modified": "2020-11-04T08:52:10.558Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Mookiepiece",
-      "mrstork",
-      "prayash",
-      "duXing",
-      "cuixiping",
-      "teoli",
-      "Jimmie_Felidae"
-    ]
-  },
-  "Web/CSS/backdrop-filter": {
+  "Web/CSS/Reference/Properties/backdrop-filter": {
     "modified": "2020-10-15T22:06:19.969Z",
     "contributors": [
       "RainSlide",
       "lyz810"
     ]
   },
-  "Web/CSS/backface-visibility": {
+  "Web/CSS/Reference/Properties/backface-visibility": {
     "modified": "2020-10-15T21:27:34.015Z",
     "contributors": [
       "zjffun",
@@ -25041,7 +24123,7 @@
       "hutuxu"
     ]
   },
-  "Web/CSS/background": {
+  "Web/CSS/Reference/Properties/background": {
     "modified": "2020-10-15T21:12:34.014Z",
     "contributors": [
       "Bob_Liu",
@@ -25063,7 +24145,7 @@
       "Mickeyboy"
     ]
   },
-  "Web/CSS/background-attachment": {
+  "Web/CSS/Reference/Properties/background-attachment": {
     "modified": "2020-10-15T21:16:23.273Z",
     "contributors": [
       "XiuYingLingFeng",
@@ -25078,7 +24160,7 @@
       "Mickeyboy"
     ]
   },
-  "Web/CSS/background-blend-mode": {
+  "Web/CSS/Reference/Properties/background-blend-mode": {
     "modified": "2019-03-23T22:58:36.469Z",
     "contributors": [
       "mrstork",
@@ -25087,7 +24169,7 @@
       "fskuok"
     ]
   },
-  "Web/CSS/background-clip": {
+  "Web/CSS/Reference/Properties/background-clip": {
     "modified": "2020-10-15T21:22:12.968Z",
     "contributors": [
       "conorzhong",
@@ -25106,7 +24188,7 @@
       "yan"
     ]
   },
-  "Web/CSS/background-color": {
+  "Web/CSS/Reference/Properties/background-color": {
     "modified": "2019-09-03T10:56:38.354Z",
     "contributors": [
       "litmonw",
@@ -25120,7 +24202,7 @@
       "Mickeyboy"
     ]
   },
-  "Web/CSS/background-image": {
+  "Web/CSS/Reference/Properties/background-image": {
     "modified": "2020-12-13T07:47:08.515Z",
     "contributors": [
       "BuluGuy",
@@ -25143,7 +24225,7 @@
       "Mickeyboy"
     ]
   },
-  "Web/CSS/background-origin": {
+  "Web/CSS/Reference/Properties/background-origin": {
     "modified": "2019-09-04T03:33:45.849Z",
     "contributors": [
       "zhuangshq",
@@ -25156,7 +24238,7 @@
       "xiaoho"
     ]
   },
-  "Web/CSS/background-position": {
+  "Web/CSS/Reference/Properties/background-position": {
     "modified": "2020-10-15T21:16:21.352Z",
     "contributors": [
       "bigbird231",
@@ -25182,20 +24264,20 @@
       "Mickeyboy"
     ]
   },
-  "Web/CSS/background-position-x": {
+  "Web/CSS/Reference/Properties/background-position-x": {
     "modified": "2020-10-15T21:52:12.312Z",
     "contributors": [
       "maicss"
     ]
   },
-  "Web/CSS/background-position-y": {
+  "Web/CSS/Reference/Properties/background-position-y": {
     "modified": "2020-10-15T21:56:17.113Z",
     "contributors": [
       "codeofjackie",
       "AugustEchoStone"
     ]
   },
-  "Web/CSS/background-repeat": {
+  "Web/CSS/Reference/Properties/background-repeat": {
     "modified": "2020-10-15T21:16:19.803Z",
     "contributors": [
       "zjffun",
@@ -25209,7 +24291,7 @@
       "Mickeyboy"
     ]
   },
-  "Web/CSS/background-size": {
+  "Web/CSS/Reference/Properties/background-size": {
     "modified": "2020-10-15T21:22:10.968Z",
     "contributors": [
       "leverglowh",
@@ -25227,28 +24309,13 @@
       "yan"
     ]
   },
-  "Web/CSS/basic-shape": {
-    "modified": "2020-10-15T22:00:24.491Z",
-    "contributors": [
-      "Mookiepiece",
-      "ScaredKitty"
-    ]
-  },
-  "Web/CSS/blend-mode": {
-    "modified": "2020-10-15T21:52:17.089Z",
-    "contributors": [
-      "RainSlide",
-      "ziyunfei",
-      "1986slayer"
-    ]
-  },
-  "Web/CSS/block-size": {
+  "Web/CSS/Reference/Properties/block-size": {
     "modified": "2020-10-15T22:16:46.814Z",
     "contributors": [
       "Aamperor"
     ]
   },
-  "Web/CSS/border": {
+  "Web/CSS/Reference/Properties/border": {
     "modified": "2020-10-15T21:15:55.859Z",
     "contributors": [
       "dlnb526",
@@ -25261,20 +24328,20 @@
       "Zmylxb"
     ]
   },
-  "Web/CSS/border-block": {
+  "Web/CSS/Reference/Properties/border-block": {
     "modified": "2020-10-27T03:40:42.303Z",
     "contributors": [
       "SphinxKnight",
       "nxqlzhk"
     ]
   },
-  "Web/CSS/border-block-end": {
+  "Web/CSS/Reference/Properties/border-block-end": {
     "modified": "2020-10-15T22:12:06.538Z",
     "contributors": [
       "avrinfly"
     ]
   },
-  "Web/CSS/border-bottom": {
+  "Web/CSS/Reference/Properties/border-bottom": {
     "modified": "2020-10-15T21:40:15.103Z",
     "contributors": [
       "RainSlide",
@@ -25282,13 +24349,13 @@
       "SolitudeRA"
     ]
   },
-  "Web/CSS/border-bottom-color": {
+  "Web/CSS/Reference/Properties/border-bottom-color": {
     "modified": "2019-03-23T22:36:23.158Z",
     "contributors": [
       "xhlsrj"
     ]
   },
-  "Web/CSS/border-bottom-left-radius": {
+  "Web/CSS/Reference/Properties/border-bottom-left-radius": {
     "modified": "2020-06-30T13:48:43.752Z",
     "contributors": [
       "mdn_idealist",
@@ -25296,19 +24363,19 @@
       "luyouxin84"
     ]
   },
-  "Web/CSS/border-bottom-style": {
+  "Web/CSS/Reference/Properties/border-bottom-style": {
     "modified": "2019-03-23T22:07:06.056Z",
     "contributors": [
       "CJWbiu"
     ]
   },
-  "Web/CSS/border-bottom-width": {
+  "Web/CSS/Reference/Properties/border-bottom-width": {
     "modified": "2020-10-15T22:00:36.171Z",
     "contributors": [
       "Tamce"
     ]
   },
-  "Web/CSS/border-collapse": {
+  "Web/CSS/Reference/Properties/border-collapse": {
     "modified": "2020-10-15T21:40:09.855Z",
     "contributors": [
       "RainSlide",
@@ -25319,7 +24386,7 @@
       "sweetliu"
     ]
   },
-  "Web/CSS/border-color": {
+  "Web/CSS/Reference/Properties/border-color": {
     "modified": "2019-10-17T03:43:04.222Z",
     "contributors": [
       "yzbas123",
@@ -25328,7 +24395,7 @@
       "Howard.Chen"
     ]
   },
-  "Web/CSS/border-image": {
+  "Web/CSS/Reference/Properties/border-image": {
     "modified": "2020-10-15T21:22:13.418Z",
     "contributors": [
       "RoXoM",
@@ -25342,7 +24409,7 @@
       "yan"
     ]
   },
-  "Web/CSS/border-image-outset": {
+  "Web/CSS/Reference/Properties/border-image-outset": {
     "modified": "2019-03-23T22:58:28.037Z",
     "contributors": [
       "jdk137",
@@ -25353,7 +24420,7 @@
       "fskuok"
     ]
   },
-  "Web/CSS/border-image-repeat": {
+  "Web/CSS/Reference/Properties/border-image-repeat": {
     "modified": "2019-03-23T23:32:24.337Z",
     "contributors": [
       "yangxiaoqiao",
@@ -25362,7 +24429,7 @@
       "yan"
     ]
   },
-  "Web/CSS/border-image-slice": {
+  "Web/CSS/Reference/Properties/border-image-slice": {
     "modified": "2020-10-15T21:54:34.521Z",
     "contributors": [
       "oubinke",
@@ -25371,7 +24438,7 @@
       "sqchenxiyuan"
     ]
   },
-  "Web/CSS/border-image-source": {
+  "Web/CSS/Reference/Properties/border-image-source": {
     "modified": "2020-10-15T21:51:15.043Z",
     "contributors": [
       "monkey-king",
@@ -25379,43 +24446,43 @@
       "goblinZxc"
     ]
   },
-  "Web/CSS/border-image-width": {
+  "Web/CSS/Reference/Properties/border-image-width": {
     "modified": "2020-10-15T22:34:45.274Z",
     "contributors": [
       "TrenlinHuang"
     ]
   },
-  "Web/CSS/border-inline-color": {
+  "Web/CSS/Reference/Properties/border-inline-color": {
     "modified": "2020-10-15T22:33:03.476Z",
     "contributors": [
       "Electronics"
     ]
   },
-  "Web/CSS/border-left": {
+  "Web/CSS/Reference/Properties/border-left": {
     "modified": "2019-03-23T22:08:44.943Z",
     "contributors": [
       "Huooo"
     ]
   },
-  "Web/CSS/border-left-color": {
+  "Web/CSS/Reference/Properties/border-left-color": {
     "modified": "2020-10-15T22:00:38.609Z",
     "contributors": [
       "Tamce"
     ]
   },
-  "Web/CSS/border-left-style": {
+  "Web/CSS/Reference/Properties/border-left-style": {
     "modified": "2020-10-15T22:02:34.648Z",
     "contributors": [
       "catherinejing"
     ]
   },
-  "Web/CSS/border-left-width": {
+  "Web/CSS/Reference/Properties/border-left-width": {
     "modified": "2020-10-15T22:04:55.496Z",
     "contributors": [
       "ZZES_REN"
     ]
   },
-  "Web/CSS/border-radius": {
+  "Web/CSS/Reference/Properties/border-radius": {
     "modified": "2020-10-15T21:22:13.979Z",
     "contributors": [
       "RainSlide",
@@ -25429,31 +24496,31 @@
       "yan"
     ]
   },
-  "Web/CSS/border-right": {
+  "Web/CSS/Reference/Properties/border-right": {
     "modified": "2019-03-23T22:08:44.488Z",
     "contributors": [
       "Huooo"
     ]
   },
-  "Web/CSS/border-right-color": {
+  "Web/CSS/Reference/Properties/border-right-color": {
     "modified": "2020-10-15T22:10:25.194Z",
     "contributors": [
       "javazsh"
     ]
   },
-  "Web/CSS/border-right-style": {
+  "Web/CSS/Reference/Properties/border-right-style": {
     "modified": "2020-10-15T22:08:48.922Z",
     "contributors": [
       "Bob_Liu"
     ]
   },
-  "Web/CSS/border-right-width": {
+  "Web/CSS/Reference/Properties/border-right-width": {
     "modified": "2020-10-15T22:12:50.170Z",
     "contributors": [
       "graybin"
     ]
   },
-  "Web/CSS/border-spacing": {
+  "Web/CSS/Reference/Properties/border-spacing": {
     "modified": "2019-06-18T01:24:16.700Z",
     "contributors": [
       "Aaron-Bird",
@@ -25464,7 +24531,7 @@
       "FredWe"
     ]
   },
-  "Web/CSS/border-style": {
+  "Web/CSS/Reference/Properties/border-style": {
     "modified": "2020-10-15T21:31:41.486Z",
     "contributors": [
       "Mookiepiece",
@@ -25473,26 +24540,26 @@
       "Breezewish"
     ]
   },
-  "Web/CSS/border-top": {
+  "Web/CSS/Reference/Properties/border-top": {
     "modified": "2020-10-15T21:55:50.134Z",
     "contributors": [
       "dlnb526",
       "Huooo"
     ]
   },
-  "Web/CSS/border-top-color": {
+  "Web/CSS/Reference/Properties/border-top-color": {
     "modified": "2020-10-15T22:07:32.349Z",
     "contributors": [
       "eeewl1250"
     ]
   },
-  "Web/CSS/border-top-left-radius": {
+  "Web/CSS/Reference/Properties/border-top-left-radius": {
     "modified": "2019-01-16T21:53:03.397Z",
     "contributors": [
       "liusw"
     ]
   },
-  "Web/CSS/border-top-right-radius": {
+  "Web/CSS/Reference/Properties/border-top-right-radius": {
     "modified": "2019-03-23T23:03:23.652Z",
     "contributors": [
       "Sebastianz",
@@ -25501,7 +24568,7 @@
       "finder"
     ]
   },
-  "Web/CSS/border-top-style": {
+  "Web/CSS/Reference/Properties/border-top-style": {
     "modified": "2020-10-15T22:15:15.802Z",
     "contributors": [
       "LoveofRedMoon",
@@ -25509,13 +24576,13 @@
       "shawbena"
     ]
   },
-  "Web/CSS/border-top-width": {
+  "Web/CSS/Reference/Properties/border-top-width": {
     "modified": "2020-10-15T22:03:25.052Z",
     "contributors": [
       "peppermintCode"
     ]
   },
-  "Web/CSS/border-width": {
+  "Web/CSS/Reference/Properties/border-width": {
     "modified": "2020-10-15T21:41:30.420Z",
     "contributors": [
       "Mookiepiece",
@@ -25524,7 +24591,7 @@
       "uolcano"
     ]
   },
-  "Web/CSS/bottom": {
+  "Web/CSS/Reference/Properties/bottom": {
     "modified": "2020-10-15T21:41:13.711Z",
     "contributors": [
       "Zhang-Junzhi",
@@ -25537,21 +24604,21 @@
       "Gavin_Yang"
     ]
   },
-  "Web/CSS/box-decoration-break": {
+  "Web/CSS/Reference/Properties/box-decoration-break": {
     "modified": "2020-10-15T22:31:12.535Z",
     "contributors": [
       "Oliverz",
       "阮若凡"
     ]
   },
-  "Web/CSS/box-orient": {
+  "Web/CSS/Reference/Properties/box-orient": {
     "modified": "2020-10-15T22:17:32.483Z",
     "contributors": [
       "litmonw",
       "callmezhenzhen"
     ]
   },
-  "Web/CSS/box-shadow": {
+  "Web/CSS/Reference/Properties/box-shadow": {
     "modified": "2020-10-15T21:19:36.093Z",
     "contributors": [
       "losT1995",
@@ -25585,7 +24652,7 @@
       "guirong"
     ]
   },
-  "Web/CSS/box-sizing": {
+  "Web/CSS/Reference/Properties/box-sizing": {
     "modified": "2020-10-15T21:23:39.228Z",
     "contributors": [
       "litmonw",
@@ -25611,7 +24678,7 @@
       "damon"
     ]
   },
-  "Web/CSS/break-after": {
+  "Web/CSS/Reference/Properties/break-after": {
     "modified": "2020-10-15T21:53:35.128Z",
     "contributors": [
       "RainSlide",
@@ -25619,7 +24686,7 @@
       "xgqfrms-GitHub"
     ]
   },
-  "Web/CSS/break-inside": {
+  "Web/CSS/Reference/Properties/break-inside": {
     "modified": "2020-10-15T21:54:57.296Z",
     "contributors": [
       "bershanskiy",
@@ -25628,30 +24695,7 @@
       "SheltonDong"
     ]
   },
-  "Web/CSS/calc": {
-    "modified": "2020-11-04T09:08:38.821Z",
-    "contributors": [
-      "chrisdavidmills",
-      "RainSlide",
-      "xunzhonglee",
-      "AnthonyWang",
-      "YWithT",
-      "LeonZou",
-      "JethroChiang",
-      "SphinxKnight",
-      "9aoyang",
-      "xgqfrms-GitHub",
-      "JohannLai",
-      "ihewro",
-      "jdk137",
-      "TiaossuP",
-      "Prinz_Rana",
-      "cuixiping",
-      "teoli",
-      "ziyunfei"
-    ]
-  },
-  "Web/CSS/caption-side": {
+  "Web/CSS/Reference/Properties/caption-side": {
     "modified": "2020-10-15T22:00:44.246Z",
     "contributors": [
       "RainSlide",
@@ -25659,21 +24703,14 @@
       "alongite"
     ]
   },
-  "Web/CSS/caret-color": {
+  "Web/CSS/Reference/Properties/caret-color": {
     "modified": "2020-10-15T21:55:42.268Z",
     "contributors": [
       "hit1205",
       "ziyunfei"
     ]
   },
-  "Web/CSS/clamp": {
-    "modified": "2020-11-05T09:58:52.297Z",
-    "contributors": [
-      "chrisdavidmills",
-      "natee"
-    ]
-  },
-  "Web/CSS/clear": {
+  "Web/CSS/Reference/Properties/clear": {
     "modified": "2020-10-15T21:29:32.788Z",
     "contributors": [
       "XSun771",
@@ -25690,7 +24727,7 @@
       "Hey-Ray"
     ]
   },
-  "Web/CSS/clip": {
+  "Web/CSS/Reference/Properties/clip": {
     "modified": "2019-03-23T23:29:44.055Z",
     "contributors": [
       "Yelmor",
@@ -25700,7 +24737,7 @@
       "sunnylost"
     ]
   },
-  "Web/CSS/clip-path": {
+  "Web/CSS/Reference/Properties/clip-path": {
     "modified": "2020-10-15T21:50:48.819Z",
     "contributors": [
       "Kingbultsea",
@@ -25717,7 +24754,7 @@
       "smilewalker"
     ]
   },
-  "Web/CSS/color": {
+  "Web/CSS/Reference/Properties/color": {
     "modified": "2020-10-15T21:37:30.633Z",
     "contributors": [
       "SolidBlock",
@@ -25726,25 +24763,7 @@
       "FredWe"
     ]
   },
-  "Web/CSS/color_value": {
-    "modified": "2020-10-15T21:36:48.886Z",
-    "contributors": [
-      "SolidBlock",
-      "yangyun",
-      "Swordying",
-      "PYGC",
-      "redoc",
-      "xgqfrms-GitHub",
-      "Soyaine",
-      "xhlsrj",
-      "Sebastianz",
-      "liweimin",
-      "fscholz",
-      "KwenString",
-      "FredWe"
-    ]
-  },
-  "Web/CSS/column-count": {
+  "Web/CSS/Reference/Properties/column-count": {
     "modified": "2019-03-23T22:54:20.989Z",
     "contributors": [
       "xgqfrms-GitHub",
@@ -25755,7 +24774,7 @@
       "FredWe"
     ]
   },
-  "Web/CSS/column-gap": {
+  "Web/CSS/Reference/Properties/column-gap": {
     "modified": "2020-10-15T21:37:26.470Z",
     "contributors": [
       "narol",
@@ -25766,7 +24785,7 @@
       "FredWe"
     ]
   },
-  "Web/CSS/column-rule": {
+  "Web/CSS/Reference/Properties/column-rule": {
     "modified": "2020-10-11T05:38:08.650Z",
     "contributors": [
       "淡空醉花",
@@ -25776,7 +24795,7 @@
       "FredWe"
     ]
   },
-  "Web/CSS/column-rule-color": {
+  "Web/CSS/Reference/Properties/column-rule-color": {
     "modified": "2019-03-23T22:52:25.809Z",
     "contributors": [
       "Bayes",
@@ -25785,7 +24804,7 @@
       "FredWe"
     ]
   },
-  "Web/CSS/column-rule-style": {
+  "Web/CSS/Reference/Properties/column-rule-style": {
     "modified": "2019-03-23T22:52:25.404Z",
     "contributors": [
       "Bayes",
@@ -25794,7 +24813,7 @@
       "FredWe"
     ]
   },
-  "Web/CSS/column-rule-width": {
+  "Web/CSS/Reference/Properties/column-rule-width": {
     "modified": "2020-08-10T10:51:03.635Z",
     "contributors": [
       "windqyoung",
@@ -25804,7 +24823,7 @@
       "FredWe"
     ]
   },
-  "Web/CSS/column-span": {
+  "Web/CSS/Reference/Properties/column-span": {
     "modified": "2019-03-23T22:54:23.106Z",
     "contributors": [
       "lyqandy",
@@ -25814,7 +24833,7 @@
       "FredWe"
     ]
   },
-  "Web/CSS/columns": {
+  "Web/CSS/Reference/Properties/columns": {
     "modified": "2020-10-15T21:36:49.737Z",
     "contributors": [
       "fscholz",
@@ -25824,7 +24843,7 @@
       "FredWe"
     ]
   },
-  "Web/CSS/contain": {
+  "Web/CSS/Reference/Properties/contain": {
     "modified": "2020-10-23T17:48:25.808Z",
     "contributors": [
       "RainSlide",
@@ -25834,7 +24853,7 @@
       "Gaohaoyang"
     ]
   },
-  "Web/CSS/content": {
+  "Web/CSS/Reference/Properties/content": {
     "modified": "2019-03-23T23:16:18.537Z",
     "contributors": [
       "fengchunsgit",
@@ -25848,16 +24867,7 @@
       "Darrel.Hsu"
     ]
   },
-  "Web/CSS/counter": {
-    "modified": "2020-11-09T07:18:40.908Z",
-    "contributors": [
-      "chrisdavidmills",
-      "SphinxKnight",
-      "David-C0pperfield",
-      "sanxun515"
-    ]
-  },
-  "Web/CSS/counter-increment": {
+  "Web/CSS/Reference/Properties/counter-increment": {
     "modified": "2019-08-19T00:47:39.500Z",
     "contributors": [
       "cheerylong",
@@ -25866,7 +24876,7 @@
       "FredWe"
     ]
   },
-  "Web/CSS/counter-reset": {
+  "Web/CSS/Reference/Properties/counter-reset": {
     "modified": "2020-10-15T21:37:30.285Z",
     "contributors": [
       "RoXoM",
@@ -25875,14 +24885,7 @@
       "FredWe"
     ]
   },
-  "Web/CSS/counters": {
-    "modified": "2020-11-09T07:19:47.276Z",
-    "contributors": [
-      "chrisdavidmills",
-      "sanxun515"
-    ]
-  },
-  "Web/CSS/cursor": {
+  "Web/CSS/Reference/Properties/cursor": {
     "modified": "2020-10-15T21:22:03.463Z",
     "contributors": [
       "淡空醉花",
@@ -25900,27 +24903,13 @@
       "teoli"
     ]
   },
-  "Web/CSS/custom-ident": {
-    "modified": "2020-02-13T02:01:31.997Z",
-    "contributors": [
-      "knightyun",
-      "lingziyu",
-      "greeneryhu"
-    ]
-  },
-  "Web/CSS/dimension": {
-    "modified": "2020-10-15T22:16:57.387Z",
-    "contributors": [
-      "StudentMain"
-    ]
-  },
-  "Web/CSS/direction": {
+  "Web/CSS/Reference/Properties/direction": {
     "modified": "2020-10-15T22:16:11.539Z",
     "contributors": [
       "fe.wuqian"
     ]
   },
-  "Web/CSS/display": {
+  "Web/CSS/Reference/Properties/display": {
     "modified": "2020-11-25T05:45:07.247Z",
     "contributors": [
       "zhuangyin",
@@ -25952,60 +24941,13 @@
       "TigerSoldier"
     ]
   },
-  "Web/CSS/display-box": {
-    "modified": "2020-10-15T22:26:55.789Z",
-    "contributors": [
-      "frankzhang718"
-    ]
-  },
-  "Web/CSS/display-internal": {
-    "modified": "2020-10-15T22:17:18.162Z",
-    "contributors": [
-      "nuo2000"
-    ]
-  },
-  "Web/CSS/display-legacy": {
-    "modified": "2020-10-15T22:16:15.339Z",
-    "contributors": [
-      "btconfig"
-    ]
-  },
-  "Web/CSS/display-outside": {
-    "modified": "2020-11-07T04:35:35.050Z",
-    "contributors": [
-      "urusai-me"
-    ]
-  },
-  "Web/CSS/easing-function": {
-    "modified": "2020-10-15T22:28:49.856Z",
-    "contributors": [
-      "ran"
-    ]
-  },
-  "Web/CSS/element": {
-    "modified": "2020-11-10T11:07:35.733Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Witaya1978",
-      "RainSlide",
-      "wizAmit",
-      "cuixiping"
-    ]
-  },
-  "Web/CSS/empty-cells": {
+  "Web/CSS/Reference/Properties/empty-cells": {
     "modified": "2020-10-15T22:00:47.715Z",
     "contributors": [
       "alongite"
     ]
   },
-  "Web/CSS/env": {
-    "modified": "2020-11-10T11:12:04.536Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Ocean-ZH"
-    ]
-  },
-  "Web/CSS/filter": {
+  "Web/CSS/Reference/Properties/filter": {
     "modified": "2020-12-09T06:15:03.712Z",
     "contributors": [
       "RoXoM",
@@ -26023,66 +24965,7 @@
       "lzf0402"
     ]
   },
-  "Web/CSS/filter-function": {
-    "modified": "2019-03-18T21:39:39.661Z",
-    "contributors": [
-      "lyz810",
-      "mfluehr"
-    ]
-  },
-  "Web/CSS/filter-function/blur": {
-    "modified": "2020-11-05T09:45:54.071Z",
-    "contributors": [
-      "chrisdavidmills",
-      "qq2009",
-      "cheetooo"
-    ]
-  },
-  "Web/CSS/filter-function/brightness": {
-    "modified": "2020-11-05T09:57:28.957Z",
-    "contributors": [
-      "chrisdavidmills",
-      "shirlay-Chang",
-      "cheetooo"
-    ]
-  },
-  "Web/CSS/filter-function/contrast": {
-    "modified": "2020-11-09T07:21:22.300Z",
-    "contributors": [
-      "chrisdavidmills",
-      "shirlay-Chang"
-    ]
-  },
-  "Web/CSS/filter-function/drop-shadow": {
-    "modified": "2020-11-10T10:59:15.589Z",
-    "contributors": [
-      "chrisdavidmills",
-      "HJrookie",
-      "deajax"
-    ]
-  },
-  "Web/CSS/filter-function/grayscale": {
-    "modified": "2020-11-10T11:21:16.375Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Longxi",
-      "MichealXie"
-    ]
-  },
-  "Web/CSS/filter-function/opacity": {
-    "modified": "2020-11-16T09:08:21.720Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Pedestrian93"
-    ]
-  },
-  "Web/CSS/fit-content_function": {
-    "modified": "2020-10-15T22:25:14.593Z",
-    "contributors": [
-      "xgqfrms"
-    ]
-  },
-  "Web/CSS/flex": {
+  "Web/CSS/Reference/Properties/flex": {
     "modified": "2020-12-14T06:27:23.036Z",
     "contributors": [
       "KazooTTT",
@@ -26109,7 +24992,7 @@
       "fskuok"
     ]
   },
-  "Web/CSS/flex-basis": {
+  "Web/CSS/Reference/Properties/flex-basis": {
     "modified": "2020-10-15T21:37:30.128Z",
     "contributors": [
       "rollinhup",
@@ -26127,7 +25010,7 @@
       "FredWe"
     ]
   },
-  "Web/CSS/flex-direction": {
+  "Web/CSS/Reference/Properties/flex-direction": {
     "modified": "2019-03-23T22:52:11.932Z",
     "contributors": [
       "hackingzhang",
@@ -26142,7 +25025,7 @@
       "FredWe"
     ]
   },
-  "Web/CSS/flex-flow": {
+  "Web/CSS/Reference/Properties/flex-flow": {
     "modified": "2019-03-23T22:54:55.390Z",
     "contributors": [
       "dongyu_-_",
@@ -26153,7 +25036,7 @@
       "f2ebill"
     ]
   },
-  "Web/CSS/flex-grow": {
+  "Web/CSS/Reference/Properties/flex-grow": {
     "modified": "2020-10-15T21:25:06.814Z",
     "contributors": [
       "teaware",
@@ -26167,7 +25050,7 @@
       "Ribery"
     ]
   },
-  "Web/CSS/flex-shrink": {
+  "Web/CSS/Reference/Properties/flex-shrink": {
     "modified": "2019-03-23T22:53:05.874Z",
     "contributors": [
       "Ende93",
@@ -26179,7 +25062,7 @@
       "FredWe"
     ]
   },
-  "Web/CSS/flex-wrap": {
+  "Web/CSS/Reference/Properties/flex-wrap": {
     "modified": "2019-07-05T05:32:21.200Z",
     "contributors": [
       "xgqfrms",
@@ -26193,14 +25076,7 @@
       "FredWe"
     ]
   },
-  "Web/CSS/flex_value": {
-    "modified": "2020-10-15T21:58:42.376Z",
-    "contributors": [
-      "fscholz",
-      "huasheng"
-    ]
-  },
-  "Web/CSS/float": {
+  "Web/CSS/Reference/Properties/float": {
     "modified": "2020-11-29T04:21:18.185Z",
     "contributors": [
       "Nyaasu",
@@ -26222,7 +25098,7 @@
       "ziyunfei"
     ]
   },
-  "Web/CSS/font": {
+  "Web/CSS/Reference/Properties/font": {
     "modified": "2020-10-15T21:37:13.316Z",
     "contributors": [
       "yangyun",
@@ -26234,7 +25110,7 @@
       "FredWe"
     ]
   },
-  "Web/CSS/font-family": {
+  "Web/CSS/Reference/Properties/font-family": {
     "modified": "2020-11-15T03:59:22.343Z",
     "contributors": [
       "Felicity",
@@ -26250,7 +25126,7 @@
       "FredWe"
     ]
   },
-  "Web/CSS/font-feature-settings": {
+  "Web/CSS/Reference/Properties/font-feature-settings": {
     "modified": "2020-10-15T22:00:50.177Z",
     "contributors": [
       "Carllllo",
@@ -26259,14 +25135,14 @@
       "yuyx91"
     ]
   },
-  "Web/CSS/font-kerning": {
+  "Web/CSS/Reference/Properties/font-kerning": {
     "modified": "2020-10-15T22:14:32.296Z",
     "contributors": [
       "clark_liu",
       "WangLeto"
     ]
   },
-  "Web/CSS/font-language-override": {
+  "Web/CSS/Reference/Properties/font-language-override": {
     "modified": "2020-10-15T22:30:35.406Z",
     "contributors": [
       "benniks",
@@ -26274,7 +25150,7 @@
       "GeorgeMiao219"
     ]
   },
-  "Web/CSS/font-size": {
+  "Web/CSS/Reference/Properties/font-size": {
     "modified": "2019-04-29T02:45:12.346Z",
     "contributors": [
       "ye125440",
@@ -26286,7 +25162,7 @@
       "fskuok"
     ]
   },
-  "Web/CSS/font-size-adjust": {
+  "Web/CSS/Reference/Properties/font-size-adjust": {
     "modified": "2019-03-23T22:58:28.499Z",
     "contributors": [
       "wbamberg",
@@ -26295,7 +25171,7 @@
       "fskuok"
     ]
   },
-  "Web/CSS/font-smooth": {
+  "Web/CSS/Reference/Properties/font-smooth": {
     "modified": "2019-03-23T23:25:47.948Z",
     "contributors": [
       "teoli",
@@ -26306,70 +25182,70 @@
       "Wenbin"
     ]
   },
-  "Web/CSS/font-stretch": {
+  "Web/CSS/Reference/Properties/font-stretch": {
     "modified": "2019-03-23T22:16:13.390Z",
     "contributors": [
       "gnepnaiL-oahZ",
       "mozhs"
     ]
   },
-  "Web/CSS/font-style": {
+  "Web/CSS/Reference/Properties/font-style": {
     "modified": "2020-10-15T21:44:29.481Z",
     "contributors": [
       "RainSlide",
       "xhlsrj"
     ]
   },
-  "Web/CSS/font-synthesis": {
+  "Web/CSS/Reference/Properties/font-synthesis": {
     "modified": "2020-10-15T22:22:32.457Z",
     "contributors": [
       "RainSlide"
     ]
   },
-  "Web/CSS/font-variant": {
+  "Web/CSS/Reference/Properties/font-variant": {
     "modified": "2020-10-15T22:03:38.932Z",
     "contributors": [
       "Carllllo",
       "Lael"
     ]
   },
-  "Web/CSS/font-variant-alternates": {
+  "Web/CSS/Reference/Properties/font-variant-alternates": {
     "modified": "2020-10-15T22:33:30.278Z",
     "contributors": [
       "Mext"
     ]
   },
-  "Web/CSS/font-variant-caps": {
+  "Web/CSS/Reference/Properties/font-variant-caps": {
     "modified": "2020-10-15T22:20:47.141Z",
     "contributors": [
       "CapriceLi"
     ]
   },
-  "Web/CSS/font-variant-ligatures": {
+  "Web/CSS/Reference/Properties/font-variant-ligatures": {
     "modified": "2020-11-26T05:42:25.721Z",
     "contributors": [
       "cheetooo"
     ]
   },
-  "Web/CSS/font-variant-numeric": {
+  "Web/CSS/Reference/Properties/font-variant-numeric": {
     "modified": "2020-11-24T00:06:10.318Z",
     "contributors": [
       "snovey"
     ]
   },
-  "Web/CSS/font-variant-position": {
+  "Web/CSS/Reference/Properties/font-variant-position": {
     "modified": "2020-10-15T22:24:51.623Z",
     "contributors": [
       "LanShiLiang"
     ]
   },
-  "Web/CSS/font-variation-settings": {
+  "Web/CSS/Reference/Properties/font-variation-settings": {
     "modified": "2020-10-15T22:25:30.354Z",
     "contributors": [
       "xgqfrms-GitHub"
     ]
   },
-  "Web/CSS/font-weight": {
+  "Web/CSS/Reference/Properties/font-weight": {
     "modified": "2020-10-15T21:37:06.874Z",
     "contributors": [
       "infinnie",
@@ -26385,14 +25261,7 @@
       "FredWe"
     ]
   },
-  "Web/CSS/frequency": {
-    "modified": "2020-10-15T21:52:26.520Z",
-    "contributors": [
-      "RainSlide",
-      "xgqfrms-GitHub"
-    ]
-  },
-  "Web/CSS/gap": {
+  "Web/CSS/Reference/Properties/gap": {
     "modified": "2020-10-15T22:08:12.728Z",
     "contributors": [
       "淡空醉花",
@@ -26400,18 +25269,7 @@
       "narol"
     ]
   },
-  "Web/CSS/gradient": {
-    "modified": "2020-12-13T08:12:36.524Z",
-    "contributors": [
-      "BuluGuy",
-      "ScaredKitty",
-      "Sebastianz",
-      "Quilljou",
-      "fscholz",
-      "sclchic"
-    ]
-  },
-  "Web/CSS/grid": {
+  "Web/CSS/Reference/Properties/grid": {
     "modified": "2020-10-15T21:58:07.893Z",
     "contributors": [
       "zhangchen",
@@ -26419,7 +25277,7 @@
       "BingqiChen"
     ]
   },
-  "Web/CSS/grid-area": {
+  "Web/CSS/Reference/Properties/grid-area": {
     "modified": "2020-02-13T01:00:18.242Z",
     "contributors": [
       "knightyun",
@@ -26427,14 +25285,14 @@
       "huasheng"
     ]
   },
-  "Web/CSS/grid-auto-columns": {
+  "Web/CSS/Reference/Properties/grid-auto-columns": {
     "modified": "2020-10-15T22:09:30.310Z",
     "contributors": [
       "knightyun",
       "Bayes"
     ]
   },
-  "Web/CSS/grid-auto-flow": {
+  "Web/CSS/Reference/Properties/grid-auto-flow": {
     "modified": "2020-10-15T22:03:09.210Z",
     "contributors": [
       "Ende93",
@@ -26443,13 +25301,13 @@
       "L9m"
     ]
   },
-  "Web/CSS/grid-auto-rows": {
+  "Web/CSS/Reference/Properties/grid-auto-rows": {
     "modified": "2020-10-15T22:19:20.997Z",
     "contributors": [
       "chentao106"
     ]
   },
-  "Web/CSS/grid-column": {
+  "Web/CSS/Reference/Properties/grid-column": {
     "modified": "2020-10-15T22:23:34.678Z",
     "contributors": [
       "MmmmHeee",
@@ -26457,13 +25315,13 @@
       "liminjun"
     ]
   },
-  "Web/CSS/grid-row": {
+  "Web/CSS/Reference/Properties/grid-row": {
     "modified": "2020-10-15T22:27:14.412Z",
     "contributors": [
       "knightyun"
     ]
   },
-  "Web/CSS/grid-template": {
+  "Web/CSS/Reference/Properties/grid-template": {
     "modified": "2020-10-15T21:54:38.799Z",
     "contributors": [
       "DFFZMXJ",
@@ -26471,7 +25329,7 @@
       "xgqfrms-GitHub"
     ]
   },
-  "Web/CSS/grid-template-areas": {
+  "Web/CSS/Reference/Properties/grid-template-areas": {
     "modified": "2020-10-15T21:58:14.904Z",
     "contributors": [
       "VacantThinker",
@@ -26479,14 +25337,14 @@
       "TommyFu"
     ]
   },
-  "Web/CSS/grid-template-columns": {
+  "Web/CSS/Reference/Properties/grid-template-columns": {
     "modified": "2020-10-15T22:05:18.097Z",
     "contributors": [
       "narol",
       "Alone88"
     ]
   },
-  "Web/CSS/grid-template-rows": {
+  "Web/CSS/Reference/Properties/grid-template-rows": {
     "modified": "2020-10-15T21:53:37.639Z",
     "contributors": [
       "narol",
@@ -26496,7 +25354,7 @@
       "1986slayer"
     ]
   },
-  "Web/CSS/hanging-punctuation": {
+  "Web/CSS/Reference/Properties/hanging-punctuation": {
     "modified": "2020-07-15T04:15:54.866Z",
     "contributors": [
       "SphinxKnight",
@@ -26505,7 +25363,7 @@
       "LJJ1996"
     ]
   },
-  "Web/CSS/height": {
+  "Web/CSS/Reference/Properties/height": {
     "modified": "2020-10-15T21:25:05.161Z",
     "contributors": [
       "riino",
@@ -26520,29 +25378,14 @@
       "yan"
     ]
   },
-  "Web/CSS/hyphens": {
+  "Web/CSS/Reference/Properties/hyphens": {
     "modified": "2019-09-20T10:45:31.993Z",
     "contributors": [
       "geallean",
       "luobotang"
     ]
   },
-  "Web/CSS/image": {
-    "modified": "2020-12-13T07:56:40.616Z",
-    "contributors": [
-      "BuluGuy",
-      "familyuu",
-      "mozhs",
-      "Sebastianz",
-      "mrstork",
-      "fscholz",
-      "ziyunfei",
-      "MoYuLing",
-      "vicvinc",
-      "FredWe"
-    ]
-  },
-  "Web/CSS/image-orientation": {
+  "Web/CSS/Reference/Properties/image-orientation": {
     "modified": "2020-10-15T21:24:56.385Z",
     "contributors": [
       "fscholz",
@@ -26552,7 +25395,7 @@
       "ziyunfei"
     ]
   },
-  "Web/CSS/image-rendering": {
+  "Web/CSS/Reference/Properties/image-rendering": {
     "modified": "2020-10-15T21:44:11.450Z",
     "contributors": [
       "RainSlide",
@@ -26560,35 +25403,13 @@
       "L9m"
     ]
   },
-  "Web/CSS/inherit": {
-    "modified": "2020-10-15T22:03:05.362Z",
-    "contributors": [
-      "zhangchen",
-      "kongdanchen"
-    ]
-  },
-  "Web/CSS/initial": {
-    "modified": "2020-10-15T21:59:31.745Z",
-    "contributors": [
-      "zhangchen",
-      "beyondbycyx"
-    ]
-  },
-  "Web/CSS/inline-size": {
+  "Web/CSS/Reference/Properties/inline-size": {
     "modified": "2020-10-15T22:26:53.209Z",
     "contributors": [
       "Mookiepiece"
     ]
   },
-  "Web/CSS/integer": {
-    "modified": "2019-09-04T12:55:55.655Z",
-    "contributors": [
-      "xunzhonglee",
-      "ziyunfei",
-      "singi2016cn"
-    ]
-  },
-  "Web/CSS/isolation": {
+  "Web/CSS/Reference/Properties/isolation": {
     "modified": "2020-01-14T06:27:58.234Z",
     "contributors": [
       "117sparta",
@@ -26598,7 +25419,7 @@
       "fskuok"
     ]
   },
-  "Web/CSS/justify-content": {
+  "Web/CSS/Reference/Properties/justify-content": {
     "modified": "2020-09-01T23:23:58.569Z",
     "contributors": [
       "Thinker-z",
@@ -26621,20 +25442,20 @@
       "FredWe"
     ]
   },
-  "Web/CSS/justify-items": {
+  "Web/CSS/Reference/Properties/justify-items": {
     "modified": "2020-10-15T22:25:38.763Z",
     "contributors": [
       "Hokori23",
       "daibor"
     ]
   },
-  "Web/CSS/justify-self": {
+  "Web/CSS/Reference/Properties/justify-self": {
     "modified": "2020-11-16T07:59:55.098Z",
     "contributors": [
       "SDUTWSL"
     ]
   },
-  "Web/CSS/left": {
+  "Web/CSS/Reference/Properties/left": {
     "modified": "2020-10-15T21:49:54.700Z",
     "contributors": [
       "Zhang-Junzhi",
@@ -26646,42 +25467,7 @@
       "zhengxinxin"
     ]
   },
-  "Web/CSS/length": {
-    "modified": "2020-11-07T12:34:52.744Z",
-    "contributors": [
-      "sidWang",
-      "ezirmusitua",
-      "mdn_idealist",
-      "luolei",
-      "RainSlide",
-      "sabrinaluo",
-      "zhangchen",
-      "yijie_sun",
-      "gai871013",
-      "Phoebe-choi",
-      "WynnChen",
-      "fukaWestin",
-      "hiyangguo",
-      "_da",
-      "liyongleihf2006",
-      "Sebastianz",
-      "Serifx",
-      "zbinlin",
-      "feeldesignstudio.com",
-      "fscholz",
-      "ziyunfei",
-      "lttxzmj",
-      "sartrey",
-      "FredWe"
-    ]
-  },
-  "Web/CSS/length-percentage": {
-    "modified": "2020-10-15T22:22:39.552Z",
-    "contributors": [
-      "xunzhonglee"
-    ]
-  },
-  "Web/CSS/letter-spacing": {
+  "Web/CSS/Reference/Properties/letter-spacing": {
     "modified": "2020-10-15T21:37:11.260Z",
     "contributors": [
       "RainSlide",
@@ -26694,7 +25480,7 @@
       "FredWe"
     ]
   },
-  "Web/CSS/line-break": {
+  "Web/CSS/Reference/Properties/line-break": {
     "modified": "2020-10-15T21:46:26.028Z",
     "contributors": [
       "RainSlide",
@@ -26704,7 +25490,7 @@
       "luobotang"
     ]
   },
-  "Web/CSS/line-clamp": {
+  "Web/CSS/Reference/Properties/line-clamp": {
     "modified": "2020-10-15T22:24:06.241Z",
     "contributors": [
       "liuruiqi1993",
@@ -26712,7 +25498,7 @@
       "litaoAurora"
     ]
   },
-  "Web/CSS/line-height": {
+  "Web/CSS/Reference/Properties/line-height": {
     "modified": "2020-10-15T21:32:56.594Z",
     "contributors": [
       "RainSlide",
@@ -26732,7 +25518,7 @@
       "NicoleBear"
     ]
   },
-  "Web/CSS/list-style": {
+  "Web/CSS/Reference/Properties/list-style": {
     "modified": "2019-03-18T20:46:34.398Z",
     "contributors": [
       "chenqingyue",
@@ -26741,13 +25527,13 @@
       "paddingme"
     ]
   },
-  "Web/CSS/list-style-image": {
+  "Web/CSS/Reference/Properties/list-style-image": {
     "modified": "2019-03-23T22:34:08.478Z",
     "contributors": [
       "Laurensesss"
     ]
   },
-  "Web/CSS/list-style-position": {
+  "Web/CSS/Reference/Properties/list-style-position": {
     "modified": "2020-11-14T11:17:42.275Z",
     "contributors": [
       "DingGuangbo",
@@ -26755,7 +25541,7 @@
       "ranwu"
     ]
   },
-  "Web/CSS/list-style-type": {
+  "Web/CSS/Reference/Properties/list-style-type": {
     "modified": "2020-10-15T21:26:52.961Z",
     "contributors": [
       "ziiyan",
@@ -26768,7 +25554,7 @@
       "guoyunhebrave"
     ]
   },
-  "Web/CSS/margin": {
+  "Web/CSS/Reference/Properties/margin": {
     "modified": "2020-10-15T21:31:25.387Z",
     "contributors": [
       "PaperFlu",
@@ -26784,19 +25570,19 @@
       "carwestsam"
     ]
   },
-  "Web/CSS/margin-block": {
+  "Web/CSS/Reference/Properties/margin-block": {
     "modified": "2020-10-15T22:13:44.517Z",
     "contributors": [
       "avrinfly"
     ]
   },
-  "Web/CSS/margin-block-start": {
+  "Web/CSS/Reference/Properties/margin-block-start": {
     "modified": "2020-10-15T22:09:58.357Z",
     "contributors": [
       "haizhuling"
     ]
   },
-  "Web/CSS/margin-bottom": {
+  "Web/CSS/Reference/Properties/margin-bottom": {
     "modified": "2019-03-23T22:35:35.268Z",
     "contributors": [
       "laijunjie",
@@ -26808,7 +25594,7 @@
       "johncido"
     ]
   },
-  "Web/CSS/margin-left": {
+  "Web/CSS/Reference/Properties/margin-left": {
     "modified": "2019-03-18T20:34:35.706Z",
     "contributors": [
       "victyyh",
@@ -26817,20 +25603,20 @@
       "MidLinn"
     ]
   },
-  "Web/CSS/margin-right": {
+  "Web/CSS/Reference/Properties/margin-right": {
     "modified": "2019-03-23T22:23:02.943Z",
     "contributors": [
       "VictorDu",
       "ChuckZhang"
     ]
   },
-  "Web/CSS/margin-top": {
+  "Web/CSS/Reference/Properties/margin-top": {
     "modified": "2019-03-23T22:21:22.508Z",
     "contributors": [
       "lijim"
     ]
   },
-  "Web/CSS/mask": {
+  "Web/CSS/Reference/Properties/mask": {
     "modified": "2020-10-15T21:51:09.203Z",
     "contributors": [
       "ZouYj",
@@ -26840,39 +25626,39 @@
       "smilewalker"
     ]
   },
-  "Web/CSS/mask-border": {
+  "Web/CSS/Reference/Properties/mask-border": {
     "modified": "2019-03-18T21:18:31.471Z",
     "contributors": [
       "BingLee1994"
     ]
   },
-  "Web/CSS/mask-border-mode": {
+  "Web/CSS/Reference/Properties/mask-border-mode": {
     "modified": "2019-06-12T22:50:29.174Z",
     "contributors": [
       "kangour",
       "ragnar-document"
     ]
   },
-  "Web/CSS/mask-border-repeat": {
+  "Web/CSS/Reference/Properties/mask-border-repeat": {
     "modified": "2019-06-12T22:48:51.074Z",
     "contributors": [
       "kangour"
     ]
   },
-  "Web/CSS/mask-border-slice": {
+  "Web/CSS/Reference/Properties/mask-border-slice": {
     "modified": "2020-12-04T03:01:08.346Z",
     "contributors": [
       "SphinxKnight",
       "Jade-beads"
     ]
   },
-  "Web/CSS/mask-border-width": {
+  "Web/CSS/Reference/Properties/mask-border-width": {
     "modified": "2019-03-26T04:03:28.139Z",
     "contributors": [
       "luchao"
     ]
   },
-  "Web/CSS/mask-image": {
+  "Web/CSS/Reference/Properties/mask-image": {
     "modified": "2020-04-28T23:32:28.192Z",
     "contributors": [
       "nyz123",
@@ -26881,34 +25667,26 @@
       "sqhtiamo"
     ]
   },
-  "Web/CSS/mask-mode": {
+  "Web/CSS/Reference/Properties/mask-mode": {
     "modified": "2020-10-15T22:25:07.362Z",
     "contributors": [
       "wjeek"
     ]
   },
-  "Web/CSS/mask-repeat": {
+  "Web/CSS/Reference/Properties/mask-repeat": {
     "modified": "2020-10-15T21:51:09.262Z",
     "contributors": [
       "RainSlide",
       "smilewalker"
     ]
   },
-  "Web/CSS/max": {
-    "modified": "2020-11-16T09:03:04.400Z",
-    "contributors": [
-      "chrisdavidmills",
-      "shugen002",
-      "webprogamar"
-    ]
-  },
-  "Web/CSS/max-height": {
+  "Web/CSS/Reference/Properties/max-height": {
     "modified": "2020-10-15T22:31:17.352Z",
     "contributors": [
       "mdn_idealist"
     ]
   },
-  "Web/CSS/max-width": {
+  "Web/CSS/Reference/Properties/max-width": {
     "modified": "2019-03-23T22:51:11.243Z",
     "contributors": [
       "kankk",
@@ -26916,15 +25694,7 @@
       "monsuns"
     ]
   },
-  "Web/CSS/min": {
-    "modified": "2020-11-16T09:04:41.929Z",
-    "contributors": [
-      "chrisdavidmills",
-      "cinob",
-      "RogerShen"
-    ]
-  },
-  "Web/CSS/min-height": {
+  "Web/CSS/Reference/Properties/min-height": {
     "modified": "2020-10-19T04:58:30.402Z",
     "contributors": [
       "aca14rh",
@@ -26932,7 +25702,7 @@
       "FreyaOne"
     ]
   },
-  "Web/CSS/min-width": {
+  "Web/CSS/Reference/Properties/min-width": {
     "modified": "2020-10-15T21:23:59.128Z",
     "contributors": [
       "BayouBao",
@@ -26943,14 +25713,7 @@
       "sunnylost"
     ]
   },
-  "Web/CSS/minmax": {
-    "modified": "2020-11-16T09:06:57.403Z",
-    "contributors": [
-      "chrisdavidmills",
-      "chentao106"
-    ]
-  },
-  "Web/CSS/mix-blend-mode": {
+  "Web/CSS/Reference/Properties/mix-blend-mode": {
     "modified": "2020-10-15T21:37:38.925Z",
     "contributors": [
       "sqchenxiyuan",
@@ -26962,18 +25725,7 @@
       "FredWe"
     ]
   },
-  "Web/CSS/number": {
-    "modified": "2020-10-13T03:42:11.118Z",
-    "contributors": [
-      "CyanCherry",
-      "ssttii",
-      "zhazhjie",
-      "Sebastianz",
-      "fscholz",
-      "fskuok"
-    ]
-  },
-  "Web/CSS/object-fit": {
+  "Web/CSS/Reference/Properties/object-fit": {
     "modified": "2020-10-15T21:49:53.632Z",
     "contributors": [
       "RainSlide",
@@ -26984,7 +25736,7 @@
       "jingqianduan"
     ]
   },
-  "Web/CSS/object-position": {
+  "Web/CSS/Reference/Properties/object-position": {
     "modified": "2020-10-15T21:58:34.045Z",
     "contributors": [
       "mailwwc",
@@ -26993,14 +25745,14 @@
       "Ahhaha233"
     ]
   },
-  "Web/CSS/offset": {
+  "Web/CSS/Reference/Properties/offset": {
     "modified": "2020-10-15T22:07:46.289Z",
     "contributors": [
       "congyuandong",
       "yichengxian"
     ]
   },
-  "Web/CSS/opacity": {
+  "Web/CSS/Reference/Properties/opacity": {
     "modified": "2020-11-07T00:12:19.854Z",
     "contributors": [
       "liguorain",
@@ -27012,7 +25764,7 @@
       "FredWe"
     ]
   },
-  "Web/CSS/order": {
+  "Web/CSS/Reference/Properties/order": {
     "modified": "2019-05-15T04:32:30.587Z",
     "contributors": [
       "dongyu_-_",
@@ -27023,7 +25775,7 @@
       "FredWe"
     ]
   },
-  "Web/CSS/outline": {
+  "Web/CSS/Reference/Properties/outline": {
     "modified": "2020-11-13T02:40:48.637Z",
     "contributors": [
       "lins1105",
@@ -27036,20 +25788,20 @@
       "FredWe"
     ]
   },
-  "Web/CSS/outline-color": {
+  "Web/CSS/Reference/Properties/outline-color": {
     "modified": "2020-10-15T22:07:00.554Z",
     "contributors": [
       "hhxxhg"
     ]
   },
-  "Web/CSS/outline-offset": {
+  "Web/CSS/Reference/Properties/outline-offset": {
     "modified": "2019-05-22T11:15:45.877Z",
     "contributors": [
       "merelydust",
       "xgqfrms-GitHub"
     ]
   },
-  "Web/CSS/outline-style": {
+  "Web/CSS/Reference/Properties/outline-style": {
     "modified": "2020-10-15T21:53:59.469Z",
     "contributors": [
       "hhxxhg",
@@ -27057,13 +25809,13 @@
       "xgqfrms-GitHub"
     ]
   },
-  "Web/CSS/outline-width": {
+  "Web/CSS/Reference/Properties/outline-width": {
     "modified": "2020-10-15T22:23:11.714Z",
     "contributors": [
       "HDC"
     ]
   },
-  "Web/CSS/overflow": {
+  "Web/CSS/Reference/Properties/overflow": {
     "modified": "2020-01-20T23:51:06.208Z",
     "contributors": [
       "Cocoa",
@@ -27084,19 +25836,19 @@
       "TigerSoldier"
     ]
   },
-  "Web/CSS/overflow-anchor": {
+  "Web/CSS/Reference/Properties/overflow-anchor": {
     "modified": "2020-10-15T22:29:02.711Z",
     "contributors": [
       "xgqfrms"
     ]
   },
-  "Web/CSS/overflow-block": {
+  "Web/CSS/Reference/Properties/overflow-block": {
     "modified": "2020-10-15T22:33:25.455Z",
     "contributors": [
       "MarkShawn2020"
     ]
   },
-  "Web/CSS/overflow-wrap": {
+  "Web/CSS/Reference/Properties/overflow-wrap": {
     "modified": "2020-10-15T21:32:14.809Z",
     "contributors": [
       "litmonw",
@@ -27110,7 +25862,7 @@
       "paddingme"
     ]
   },
-  "Web/CSS/overflow-x": {
+  "Web/CSS/Reference/Properties/overflow-x": {
     "modified": "2020-10-15T21:24:21.061Z",
     "contributors": [
       "sukka",
@@ -27119,7 +25871,7 @@
       "Jimmie_Felidae"
     ]
   },
-  "Web/CSS/overflow-y": {
+  "Web/CSS/Reference/Properties/overflow-y": {
     "modified": "2020-05-30T07:59:13.148Z",
     "contributors": [
       "bytetown",
@@ -27129,7 +25881,7 @@
       "Jimmie_Felidae"
     ]
   },
-  "Web/CSS/overscroll-behavior": {
+  "Web/CSS/Reference/Properties/overscroll-behavior": {
     "modified": "2020-10-15T22:04:14.564Z",
     "contributors": [
       "PaulHan",
@@ -27138,19 +25890,19 @@
       "JanWing1995"
     ]
   },
-  "Web/CSS/overscroll-behavior-x": {
+  "Web/CSS/Reference/Properties/overscroll-behavior-x": {
     "modified": "2020-10-15T22:18:49.252Z",
     "contributors": [
       "boxu-zhang"
     ]
   },
-  "Web/CSS/overscroll-behavior-y": {
+  "Web/CSS/Reference/Properties/overscroll-behavior-y": {
     "modified": "2020-10-15T22:25:04.290Z",
     "contributors": [
       "fsxitutu"
     ]
   },
-  "Web/CSS/padding": {
+  "Web/CSS/Reference/Properties/padding": {
     "modified": "2020-10-15T21:37:13.722Z",
     "contributors": [
       "PaperFlu",
@@ -27166,31 +25918,31 @@
       "FredWe"
     ]
   },
-  "Web/CSS/padding-bottom": {
+  "Web/CSS/Reference/Properties/padding-bottom": {
     "modified": "2019-03-23T22:08:45.109Z",
     "contributors": [
       "Huooo"
     ]
   },
-  "Web/CSS/padding-inline-start": {
+  "Web/CSS/Reference/Properties/padding-inline-start": {
     "modified": "2019-03-23T22:24:26.412Z",
     "contributors": [
       "xgqfrms"
     ]
   },
-  "Web/CSS/padding-left": {
+  "Web/CSS/Reference/Properties/padding-left": {
     "modified": "2020-10-30T10:10:04.473Z",
     "contributors": [
       "imyMuyang"
     ]
   },
-  "Web/CSS/padding-right": {
+  "Web/CSS/Reference/Properties/padding-right": {
     "modified": "2019-03-23T22:08:46.043Z",
     "contributors": [
       "Huooo"
     ]
   },
-  "Web/CSS/padding-top": {
+  "Web/CSS/Reference/Properties/padding-top": {
     "modified": "2019-03-18T20:45:40.154Z",
     "contributors": [
       "WangLeto",
@@ -27198,33 +25950,20 @@
       "Huooo"
     ]
   },
-  "Web/CSS/page-break-after": {
+  "Web/CSS/Reference/Properties/page-break-after": {
     "modified": "2020-06-16T04:33:57.554Z",
     "contributors": [
       "wangxu",
       "xgqfrms-GitHub"
     ]
   },
-  "Web/CSS/paint-order": {
+  "Web/CSS/Reference/Properties/paint-order": {
     "modified": "2020-10-15T22:10:30.071Z",
     "contributors": [
       "guoguangkun"
     ]
   },
-  "Web/CSS/percentage": {
-    "modified": "2020-10-15T21:36:50.696Z",
-    "contributors": [
-      "StudentMain",
-      "yangmei123",
-      "RainSlide",
-      "The-End-Hero",
-      "xhlsrj",
-      "mrstork",
-      "fscholz",
-      "FredWe"
-    ]
-  },
-  "Web/CSS/perspective": {
+  "Web/CSS/Reference/Properties/perspective": {
     "modified": "2020-10-15T21:25:04.557Z",
     "contributors": [
       "1259364843",
@@ -27239,7 +25978,7 @@
       "luommingzhong"
     ]
   },
-  "Web/CSS/perspective-origin": {
+  "Web/CSS/Reference/Properties/perspective-origin": {
     "modified": "2020-10-15T21:27:26.630Z",
     "contributors": [
       "zjffun",
@@ -27249,20 +25988,20 @@
       "hutuxu"
     ]
   },
-  "Web/CSS/place-content": {
+  "Web/CSS/Reference/Properties/place-content": {
     "modified": "2020-10-15T22:24:19.967Z",
     "contributors": [
       "chrimer",
       "yunng"
     ]
   },
-  "Web/CSS/place-items": {
+  "Web/CSS/Reference/Properties/place-items": {
     "modified": "2020-10-15T22:32:41.625Z",
     "contributors": [
       "natee"
     ]
   },
-  "Web/CSS/pointer-events": {
+  "Web/CSS/Reference/Properties/pointer-events": {
     "modified": "2020-10-15T21:26:15.711Z",
     "contributors": [
       "Jeff.w",
@@ -27276,7 +26015,7 @@
       "hutuxu"
     ]
   },
-  "Web/CSS/position": {
+  "Web/CSS/Reference/Properties/position": {
     "modified": "2020-10-15T21:16:00.419Z",
     "contributors": [
       "mdn_idealist",
@@ -27316,55 +26055,21 @@
       "TigerSoldier"
     ]
   },
-  "Web/CSS/position_value": {
-    "modified": "2019-03-23T22:53:52.651Z",
-    "contributors": [
-      "xhlsrj",
-      "xgqfrms-GitHub",
-      "mrstork",
-      "fscholz",
-      "zhujun24"
-    ]
-  },
-  "Web/CSS/quotes": {
+  "Web/CSS/Reference/Properties/quotes": {
     "modified": "2020-10-15T22:18:29.221Z",
     "contributors": [
       "RoXoM",
       "silkwromzf"
     ]
   },
-  "Web/CSS/ratio": {
-    "modified": "2020-10-15T22:08:11.112Z",
-    "contributors": [
-      "YouHeng",
-      "The-great-Lord",
-      "SphinxKnight",
-      "BKHK"
-    ]
-  },
-  "Web/CSS/repeat": {
-    "modified": "2020-11-18T14:44:47.276Z",
-    "contributors": [
-      "chrisdavidmills",
-      "JC-Ge",
-      "xgqfrms"
-    ]
-  },
-  "Web/CSS/resize": {
+  "Web/CSS/Reference/Properties/resize": {
     "modified": "2019-03-23T22:21:07.833Z",
     "contributors": [
       "xgqfrms-GitHub",
       "LuXuanqing"
     ]
   },
-  "Web/CSS/resolution": {
-    "modified": "2020-10-15T22:19:42.217Z",
-    "contributors": [
-      "loveloki",
-      "jason-guo"
-    ]
-  },
-  "Web/CSS/right": {
+  "Web/CSS/Reference/Properties/right": {
     "modified": "2020-10-15T21:41:28.939Z",
     "contributors": [
       "Zhang-Junzhi",
@@ -27374,7 +26079,7 @@
       "omega4github"
     ]
   },
-  "Web/CSS/rotate": {
+  "Web/CSS/Reference/Properties/rotate": {
     "modified": "2020-11-12T04:21:26.220Z",
     "contributors": [
       "yisibl",
@@ -27382,13 +26087,13 @@
       "lppking"
     ]
   },
-  "Web/CSS/row-gap": {
+  "Web/CSS/Reference/Properties/row-gap": {
     "modified": "2020-10-15T22:08:22.925Z",
     "contributors": [
       "narol"
     ]
   },
-  "Web/CSS/scale": {
+  "Web/CSS/Reference/Properties/scale": {
     "modified": "2020-10-15T22:11:31.472Z",
     "contributors": [
       "RainSlide",
@@ -27396,7 +26101,7 @@
       "Zoey"
     ]
   },
-  "Web/CSS/scroll-behavior": {
+  "Web/CSS/Reference/Properties/scroll-behavior": {
     "modified": "2020-10-15T21:50:40.323Z",
     "contributors": [
       "RainSlide",
@@ -27404,20 +26109,20 @@
       "lunix01"
     ]
   },
-  "Web/CSS/scroll-margin": {
+  "Web/CSS/Reference/Properties/scroll-margin": {
     "modified": "2020-10-15T22:22:51.470Z",
     "contributors": [
       "demongodYY",
       "srq18211"
     ]
   },
-  "Web/CSS/scroll-margin-top": {
+  "Web/CSS/Reference/Properties/scroll-margin-top": {
     "modified": "2020-11-27T01:35:52.693Z",
     "contributors": [
       "EryouHao"
     ]
   },
-  "Web/CSS/scroll-snap-type": {
+  "Web/CSS/Reference/Properties/scroll-snap-type": {
     "modified": "2020-10-15T21:40:51.208Z",
     "contributors": [
       "suyanhanx",
@@ -27425,32 +26130,32 @@
       "rockywen"
     ]
   },
-  "Web/CSS/scrollbar-color": {
+  "Web/CSS/Reference/Properties/scrollbar-color": {
     "modified": "2020-10-28T05:53:46.146Z",
     "contributors": [
       "SDUTWSL",
       "Johnny-yellowboy"
     ]
   },
-  "Web/CSS/scrollbar-width": {
+  "Web/CSS/Reference/Properties/scrollbar-width": {
     "modified": "2020-10-15T22:21:53.614Z",
     "contributors": [
       "luxin88"
     ]
   },
-  "Web/CSS/shape-image-threshold": {
+  "Web/CSS/Reference/Properties/shape-image-threshold": {
     "modified": "2020-10-15T22:27:34.354Z",
     "contributors": [
       "Carllllo"
     ]
   },
-  "Web/CSS/shape-margin": {
+  "Web/CSS/Reference/Properties/shape-margin": {
     "modified": "2020-10-15T22:27:34.408Z",
     "contributors": [
       "Carllllo"
     ]
   },
-  "Web/CSS/shape-outside": {
+  "Web/CSS/Reference/Properties/shape-outside": {
     "modified": "2020-10-15T21:58:42.005Z",
     "contributors": [
       "superadmin",
@@ -27459,13 +26164,7 @@
       "Ahhaha233"
     ]
   },
-  "Web/CSS/string": {
-    "modified": "2019-03-18T21:46:27.858Z",
-    "contributors": [
-      "LiuYuan"
-    ]
-  },
-  "Web/CSS/tab-size": {
+  "Web/CSS/Reference/Properties/tab-size": {
     "modified": "2020-10-15T21:46:28.486Z",
     "contributors": [
       "RainSlide",
@@ -27473,7 +26172,7 @@
       "luobotang"
     ]
   },
-  "Web/CSS/table-layout": {
+  "Web/CSS/Reference/Properties/table-layout": {
     "modified": "2020-10-15T21:39:24.700Z",
     "contributors": [
       "Wulakaka",
@@ -27482,7 +26181,7 @@
       "Serifx"
     ]
   },
-  "Web/CSS/text-align": {
+  "Web/CSS/Reference/Properties/text-align": {
     "modified": "2020-08-11T23:14:09.267Z",
     "contributors": [
       "niices",
@@ -27497,14 +26196,14 @@
       "ziyunfei"
     ]
   },
-  "Web/CSS/text-align-last": {
+  "Web/CSS/Reference/Properties/text-align-last": {
     "modified": "2020-10-15T21:56:50.948Z",
     "contributors": [
       "AchooLuv",
       "Miss-violet"
     ]
   },
-  "Web/CSS/text-decoration": {
+  "Web/CSS/Reference/Properties/text-decoration": {
     "modified": "2020-10-15T21:35:29.312Z",
     "contributors": [
       "Zshining",
@@ -27519,40 +26218,40 @@
       "Deguang"
     ]
   },
-  "Web/CSS/text-decoration-color": {
+  "Web/CSS/Reference/Properties/text-decoration-color": {
     "modified": "2020-10-15T22:00:19.428Z",
     "contributors": [
       "RainSlide",
       "comehope"
     ]
   },
-  "Web/CSS/text-decoration-line": {
+  "Web/CSS/Reference/Properties/text-decoration-line": {
     "modified": "2020-10-15T22:00:17.031Z",
     "contributors": [
       "comehope"
     ]
   },
-  "Web/CSS/text-decoration-skip": {
+  "Web/CSS/Reference/Properties/text-decoration-skip": {
     "modified": "2020-10-15T22:05:17.788Z",
     "contributors": [
       "allen0815"
     ]
   },
-  "Web/CSS/text-decoration-style": {
+  "Web/CSS/Reference/Properties/text-decoration-style": {
     "modified": "2020-10-15T22:00:19.174Z",
     "contributors": [
       "Ende93",
       "comehope"
     ]
   },
-  "Web/CSS/text-decoration-thickness": {
+  "Web/CSS/Reference/Properties/text-decoration-thickness": {
     "modified": "2020-10-15T22:25:42.153Z",
     "contributors": [
       "tanapok",
       "Zshining"
     ]
   },
-  "Web/CSS/text-indent": {
+  "Web/CSS/Reference/Properties/text-indent": {
     "modified": "2020-10-15T21:22:18.269Z",
     "contributors": [
       "Mookiepiece",
@@ -27565,7 +26264,7 @@
       "sunorry"
     ]
   },
-  "Web/CSS/text-justify": {
+  "Web/CSS/Reference/Properties/text-justify": {
     "modified": "2020-10-22T00:21:44.611Z",
     "contributors": [
       "baiheng",
@@ -27573,14 +26272,14 @@
       "Miss-violet"
     ]
   },
-  "Web/CSS/text-orientation": {
+  "Web/CSS/Reference/Properties/text-orientation": {
     "modified": "2020-10-15T22:35:18.905Z",
     "contributors": [
       "SphinxKnight",
       "SDUTWSL"
     ]
   },
-  "Web/CSS/text-overflow": {
+  "Web/CSS/Reference/Properties/text-overflow": {
     "modified": "2020-08-08T07:20:32.903Z",
     "contributors": [
       "litmonw",
@@ -27596,7 +26295,7 @@
       "FredWe"
     ]
   },
-  "Web/CSS/text-rendering": {
+  "Web/CSS/Reference/Properties/text-rendering": {
     "modified": "2019-03-23T23:28:52.791Z",
     "contributors": [
       "billcz",
@@ -27608,7 +26307,7 @@
       "fakefish"
     ]
   },
-  "Web/CSS/text-shadow": {
+  "Web/CSS/Reference/Properties/text-shadow": {
     "modified": "2020-10-15T21:22:12.615Z",
     "contributors": [
       "tfcx-th",
@@ -27622,7 +26321,7 @@
       "yan"
     ]
   },
-  "Web/CSS/text-size-adjust": {
+  "Web/CSS/Reference/Properties/text-size-adjust": {
     "modified": "2020-10-15T21:53:18.468Z",
     "contributors": [
       "RainSlide",
@@ -27631,7 +26330,7 @@
       "Kongwsh"
     ]
   },
-  "Web/CSS/text-transform": {
+  "Web/CSS/Reference/Properties/text-transform": {
     "modified": "2019-10-10T16:36:19.881Z",
     "contributors": [
       "Bayes",
@@ -27641,27 +26340,14 @@
       "Hbjswj"
     ]
   },
-  "Web/CSS/text-underline-position": {
+  "Web/CSS/Reference/Properties/text-underline-position": {
     "modified": "2020-10-15T22:04:29.701Z",
     "contributors": [
       "zxsunrise",
       "maoyumaoxun"
     ]
   },
-  "Web/CSS/time": {
-    "modified": "2020-10-15T21:58:38.356Z",
-    "contributors": [
-      "zhangchen",
-      "huasheng"
-    ]
-  },
-  "Web/CSS/time-percentage": {
-    "modified": "2020-10-15T22:19:41.820Z",
-    "contributors": [
-      "jason-guo"
-    ]
-  },
-  "Web/CSS/top": {
+  "Web/CSS/Reference/Properties/top": {
     "modified": "2020-10-15T21:37:12.500Z",
     "contributors": [
       "btea",
@@ -27674,7 +26360,7 @@
       "FredWe"
     ]
   },
-  "Web/CSS/touch-action": {
+  "Web/CSS/Reference/Properties/touch-action": {
     "modified": "2020-10-15T21:39:05.097Z",
     "contributors": [
       "xgqfrms",
@@ -27686,7 +26372,7 @@
       "TooBug"
     ]
   },
-  "Web/CSS/transform": {
+  "Web/CSS/Reference/Properties/transform": {
     "modified": "2020-10-15T21:04:54.257Z",
     "contributors": [
       "cracdic",
@@ -27707,158 +26393,14 @@
       "leeli"
     ]
   },
-  "Web/CSS/transform-box": {
+  "Web/CSS/Reference/Properties/transform-box": {
     "modified": "2019-06-13T02:11:00.164Z",
     "contributors": [
       "yangnaiyue",
       "WarriorWu"
     ]
   },
-  "Web/CSS/transform-function": {
-    "modified": "2020-02-27T11:59:15.845Z",
-    "contributors": [
-      "skywalker_z",
-      "baylin87",
-      "lbwa",
-      "Miss-violet",
-      "Ende93",
-      "LeoEatle",
-      "xgqfrms-GitHub",
-      "leafdog",
-      "lijim",
-      "mrstork",
-      "prayash",
-      "FredWe"
-    ]
-  },
-  "Web/CSS/transform-function/matrix": {
-    "modified": "2020-11-16T09:00:25.677Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wc5858",
-      "mdn_idealist",
-      "Sinosaurus",
-      "zsirfs",
-      "Kujoto",
-      "mrstork",
-      "tonnylyz"
-    ]
-  },
-  "Web/CSS/transform-function/matrix3d": {
-    "modified": "2020-11-16T09:01:45.264Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mdn_idealist"
-    ]
-  },
-  "Web/CSS/transform-function/perspective": {
-    "modified": "2020-11-16T09:11:13.696Z",
-    "contributors": [
-      "chrisdavidmills",
-      "eeeeeeeason"
-    ]
-  },
-  "Web/CSS/transform-function/rotate": {
-    "modified": "2020-11-19T16:06:30.046Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fish-inu",
-      "zhangchen",
-      "DaiZhiTao",
-      "FlowingRiver"
-    ]
-  },
-  "Web/CSS/transform-function/rotate3d": {
-    "modified": "2020-11-19T16:07:52.729Z",
-    "contributors": [
-      "chrisdavidmills",
-      "hardo",
-      "AngelName",
-      "zhangchen",
-      "AozakiOrenji",
-      "xgqfrms-GitHub",
-      "Serifx"
-    ]
-  },
-  "Web/CSS/transform-function/rotateX": {
-    "modified": "2020-11-19T16:09:23.631Z",
-    "contributors": [
-      "chrisdavidmills",
-      "CharCat"
-    ]
-  },
-  "Web/CSS/transform-function/rotateY": {
-    "modified": "2020-11-19T16:10:17.879Z",
-    "contributors": [
-      "chrisdavidmills",
-      "CharCat"
-    ]
-  },
-  "Web/CSS/transform-function/rotateZ": {
-    "modified": "2020-11-30T10:07:54.353Z",
-    "contributors": [
-      "chrisdavidmills",
-      "CharCat"
-    ]
-  },
-  "Web/CSS/transform-function/scale": {
-    "modified": "2020-11-30T10:16:03.265Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Chaslee",
-      "Jack-Q"
-    ]
-  },
-  "Web/CSS/transform-function/scaleX": {
-    "modified": "2020-11-30T10:21:00.840Z",
-    "contributors": [
-      "chrisdavidmills",
-      "xgqfrms-GitHub"
-    ]
-  },
-  "Web/CSS/transform-function/skew": {
-    "modified": "2020-11-30T10:26:15.757Z",
-    "contributors": [
-      "chrisdavidmills",
-      "CharCat",
-      "HuangXin",
-      "fr1ee"
-    ]
-  },
-  "Web/CSS/transform-function/skewX": {
-    "modified": "2020-11-30T10:27:30.549Z",
-    "contributors": [
-      "chrisdavidmills",
-      "CharCat"
-    ]
-  },
-  "Web/CSS/transform-function/translate": {
-    "modified": "2020-11-30T10:30:52.319Z",
-    "contributors": [
-      "chrisdavidmills",
-      "jiang-hr"
-    ]
-  },
-  "Web/CSS/transform-function/translate3d": {
-    "modified": "2020-11-30T12:59:28.646Z",
-    "contributors": [
-      "chrisdavidmills",
-      "codeyu",
-      "litmonw",
-      "pluwen",
-      "kino0o",
-      "zxk7516"
-    ]
-  },
-  "Web/CSS/transform-function/translateY": {
-    "modified": "2020-11-30T13:01:20.573Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fish-inu",
-      "LangDonHJJ"
-    ]
-  },
-  "Web/CSS/transform-origin": {
+  "Web/CSS/Reference/Properties/transform-origin": {
     "modified": "2020-10-15T21:34:19.804Z",
     "contributors": [
       "Niefee",
@@ -27872,7 +26414,7 @@
       "fskuok"
     ]
   },
-  "Web/CSS/transform-style": {
+  "Web/CSS/Reference/Properties/transform-style": {
     "modified": "2020-10-15T21:27:25.289Z",
     "contributors": [
       "zjffun",
@@ -27884,7 +26426,7 @@
       "hutuxu"
     ]
   },
-  "Web/CSS/transition": {
+  "Web/CSS/Reference/Properties/transition": {
     "modified": "2020-10-15T21:22:27.680Z",
     "contributors": [
       "zjffun",
@@ -27905,14 +26447,14 @@
       "yan"
     ]
   },
-  "Web/CSS/transition-delay": {
+  "Web/CSS/Reference/Properties/transition-delay": {
     "modified": "2019-03-23T22:44:46.901Z",
     "contributors": [
       "xiaoyueyue",
       "byr-gdp"
     ]
   },
-  "Web/CSS/transition-duration": {
+  "Web/CSS/Reference/Properties/transition-duration": {
     "modified": "2019-03-23T22:38:53.651Z",
     "contributors": [
       "jiahui",
@@ -27920,13 +26462,13 @@
       "luneice"
     ]
   },
-  "Web/CSS/transition-property": {
+  "Web/CSS/Reference/Properties/transition-property": {
     "modified": "2019-03-23T22:32:24.273Z",
     "contributors": [
       "jiahui"
     ]
   },
-  "Web/CSS/transition-timing-function": {
+  "Web/CSS/Reference/Properties/transition-timing-function": {
     "modified": "2019-05-31T06:03:55.883Z",
     "contributors": [
       "mrstork",
@@ -27935,38 +26477,21 @@
       "jtyjty99999"
     ]
   },
-  "Web/CSS/translate": {
+  "Web/CSS/Reference/Properties/translate": {
     "modified": "2020-10-15T22:07:45.438Z",
     "contributors": [
       "Carllllo",
       "Bayes"
     ]
   },
-  "Web/CSS/unicode-bidi": {
+  "Web/CSS/Reference/Properties/unicode-bidi": {
     "modified": "2020-10-15T22:00:46.664Z",
     "contributors": [
       "RainSlide",
       "anjia"
     ]
   },
-  "Web/CSS/unset": {
-    "modified": "2020-10-15T21:48:47.329Z",
-    "contributors": [
-      "FS-Luo",
-      "zhangchen",
-      "luna666",
-      "FE_dev",
-      "willard",
-      "LiNengNeng"
-    ]
-  },
-  "Web/CSS/url_function": {
-    "modified": "2019-03-23T22:25:44.664Z",
-    "contributors": [
-      "zhyupe"
-    ]
-  },
-  "Web/CSS/user-select": {
+  "Web/CSS/Reference/Properties/user-select": {
     "modified": "2020-10-15T21:24:21.697Z",
     "contributors": [
       "RainSlide",
@@ -27980,17 +26505,7 @@
       "MrFish"
     ]
   },
-  "Web/CSS/var": {
-    "modified": "2020-11-04T09:10:48.035Z",
-    "contributors": [
-      "chrisdavidmills",
-      "RoXoM",
-      "AnnAngela",
-      "xgqfrms-GitHub",
-      "hiyangguo"
-    ]
-  },
-  "Web/CSS/vertical-align": {
+  "Web/CSS/Reference/Properties/vertical-align": {
     "modified": "2020-10-15T21:21:34.903Z",
     "contributors": [
       "yuhengshen",
@@ -28008,7 +26523,7 @@
       "zbinlin"
     ]
   },
-  "Web/CSS/visibility": {
+  "Web/CSS/Reference/Properties/visibility": {
     "modified": "2019-05-04T04:36:17.525Z",
     "contributors": [
       "hddhyq",
@@ -28019,7 +26534,7 @@
       "TigerSoldier"
     ]
   },
-  "Web/CSS/white-space": {
+  "Web/CSS/Reference/Properties/white-space": {
     "modified": "2020-10-15T21:32:04.890Z",
     "contributors": [
       "linxz_",
@@ -28036,13 +26551,13 @@
       "szmtcjm"
     ]
   },
-  "Web/CSS/widows": {
+  "Web/CSS/Reference/Properties/widows": {
     "modified": "2020-10-15T22:31:59.036Z",
     "contributors": [
       "Oliverz"
     ]
   },
-  "Web/CSS/width": {
+  "Web/CSS/Reference/Properties/width": {
     "modified": "2020-10-15T21:25:05.066Z",
     "contributors": [
       "RainSlide",
@@ -28059,7 +26574,7 @@
       "evantre"
     ]
   },
-  "Web/CSS/will-change": {
+  "Web/CSS/Reference/Properties/will-change": {
     "modified": "2019-03-23T23:05:58.730Z",
     "contributors": [
       "Sebastianz",
@@ -28067,7 +26582,7 @@
       "TooBug"
     ]
   },
-  "Web/CSS/word-break": {
+  "Web/CSS/Reference/Properties/word-break": {
     "modified": "2020-10-15T21:24:17.045Z",
     "contributors": [
       "litmonw",
@@ -28083,7 +26598,7 @@
       "yan"
     ]
   },
-  "Web/CSS/word-spacing": {
+  "Web/CSS/Reference/Properties/word-spacing": {
     "modified": "2019-03-23T23:32:25.736Z",
     "contributors": [
       "Sebastianz",
@@ -28094,7 +26609,7 @@
       "sunorry"
     ]
   },
-  "Web/CSS/writing-mode": {
+  "Web/CSS/Reference/Properties/writing-mode": {
     "modified": "2020-10-15T22:00:00.250Z",
     "contributors": [
       "liuruiqi1993",
@@ -28105,7 +26620,7 @@
       "virgil66"
     ]
   },
-  "Web/CSS/z-index": {
+  "Web/CSS/Reference/Properties/z-index": {
     "modified": "2020-11-23T06:27:46.896Z",
     "contributors": [
       "chrisdavidmills",
@@ -28122,6 +26637,1413 @@
       "FredWe",
       "teoli",
       "TimZhao"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:-moz-only-whitespace": {
+    "modified": "2020-10-15T22:10:00.132Z",
+    "contributors": [
+      "ExE-Boss",
+      "LoveofRedMoon"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:-moz-window-inactive": {
+    "modified": "2019-03-18T21:33:22.659Z",
+    "contributors": [
+      "teoli",
+      "Lim",
+      "apple1juice"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::-moz-progress-bar": {
+    "modified": "2020-07-10T07:07:20.466Z",
+    "contributors": [
+      "YexuanXiao",
+      "NoobxzZhang"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::-moz-range-progress": {
+    "modified": "2020-11-18T23:08:06.930Z",
+    "contributors": [
+      "jimmy_kmi",
+      "jcplus"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::-webkit-progress-bar": {
+    "modified": "2020-07-09T14:05:36.446Z",
+    "contributors": [
+      "YexuanXiao",
+      "teoli",
+      "smilewalker"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::-webkit-progress-inner-element": {
+    "modified": "2020-10-15T22:31:38.757Z",
+    "contributors": [
+      "YexuanXiao"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::-webkit-progress-value": {
+    "modified": "2020-10-15T22:31:18.416Z",
+    "contributors": [
+      "YexuanXiao",
+      "Roger_Chi"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::-webkit-scrollbar": {
+    "modified": "2019-03-23T22:08:23.176Z",
+    "contributors": [
+      "Sally-he",
+      "LoveofRedMoon",
+      "Messiah"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::-webkit-slider-runnable-track": {
+    "modified": "2019-03-18T21:28:09.437Z",
+    "contributors": [
+      "Songyakang"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::-webkit-slider-thumb": {
+    "modified": "2019-03-18T21:28:12.932Z",
+    "contributors": [
+      "Songyakang"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::after": {
+    "modified": "2020-10-15T21:21:09.850Z",
+    "contributors": [
+      "HayashiMei",
+      "wink",
+      "xgqfrms-GitHub",
+      "liubobuzhidao",
+      "lixinxin93",
+      "shuihuo",
+      "LichMscy",
+      "FredWe",
+      "fskuok",
+      "teoli",
+      "ziyunfei"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::backdrop": {
+    "modified": "2020-10-15T21:55:05.681Z",
+    "contributors": [
+      "tabunnnn",
+      "RainSlide",
+      "nDos",
+      "old2sun"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::before": {
+    "modified": "2020-10-15T21:33:30.692Z",
+    "contributors": [
+      "Mookiepiece",
+      "LeonWuV",
+      "tanshaobo",
+      "nDos",
+      "xiaokk06",
+      "AutumnFish",
+      "zhengxinxin",
+      "noiron",
+      "johncido",
+      "FredWe",
+      "Fadeoc"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::cue": {
+    "modified": "2020-10-15T21:55:37.580Z",
+    "contributors": [
+      "Render"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::first-letter": {
+    "modified": "2019-03-23T22:49:07.025Z",
+    "contributors": [
+      "nDos",
+      "guonanci",
+      "lizhihua"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::first-line": {
+    "modified": "2019-03-23T22:21:01.435Z",
+    "contributors": [
+      "skywalker_z",
+      "maoyumaoxun",
+      "myfreeer",
+      "nDos",
+      "xiaojunjor",
+      "MinimalistYing",
+      "876843240"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::grammar-error": {
+    "modified": "2019-03-23T22:07:07.087Z",
+    "contributors": [
+      "JewelYueng"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::marker": {
+    "modified": "2020-10-15T22:30:50.099Z",
+    "contributors": [
+      "conorzhong"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::part": {
+    "modified": "2020-11-30T21:33:51.481Z",
+    "contributors": [
+      "seawaywen",
+      "jcplus"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::placeholder": {
+    "modified": "2019-03-23T22:12:08.952Z",
+    "contributors": [
+      "Adashuai5",
+      "maoyumaoxun",
+      "nDos",
+      "Colin.Go",
+      "LiuYuan"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::selection": {
+    "modified": "2020-10-15T21:33:48.415Z",
+    "contributors": [
+      "greyyyyy",
+      "zhangchen",
+      "ziyunfei",
+      "Serifx",
+      "ranwu",
+      "johncido",
+      "vagusX",
+      "monjer",
+      "hikarievo"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::slotted": {
+    "modified": "2020-10-15T22:09:58.940Z",
+    "contributors": [
+      "LoveofRedMoon"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::spelling-error": {
+    "modified": "2020-10-15T22:00:46.705Z",
+    "contributors": [
+      "nDos"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:active": {
+    "modified": "2020-10-15T21:34:14.296Z",
+    "contributors": [
+      "yclup",
+      "RainSlide",
+      "HayashiMei",
+      "fskuok",
+      "psychebb"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:any-link": {
+    "modified": "2020-10-15T21:56:20.733Z",
+    "contributors": [
+      "walacewang",
+      "anjia"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:blank": {
+    "modified": "2020-10-15T22:21:57.411Z",
+    "contributors": [
+      "RainSlide",
+      "karma2014"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:checked": {
+    "modified": "2020-10-15T21:42:35.145Z",
+    "contributors": [
+      "Ritr",
+      "hiyangguo",
+      "FrontENG",
+      "WarriorWu",
+      "wktdh"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:default": {
+    "modified": "2019-03-23T22:20:32.874Z",
+    "contributors": [
+      "NorthWind",
+      "nDos",
+      "NoobxzZhang",
+      "eddiexxxx",
+      "dongchaoge",
+      "faremax"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:defined": {
+    "modified": "2020-10-15T22:04:25.058Z",
+    "contributors": [
+      "sisibeloved",
+      "forever_youyou"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:dir": {
+    "modified": "2019-03-23T22:58:41.550Z",
+    "contributors": [
+      "nick-ChenZe",
+      "fskuok"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:disabled": {
+    "modified": "2019-03-23T21:45:44.263Z",
+    "contributors": [
+      "zxsunrise",
+      "AlexChao"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:empty": {
+    "modified": "2020-10-15T21:37:28.617Z",
+    "contributors": [
+      "xgqfrms",
+      "zhuangyin",
+      "xgqfrms-GitHub",
+      "DaPanda",
+      "FredWe"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:enabled": {
+    "modified": "2020-10-15T21:32:21.465Z",
+    "contributors": [
+      "RainSlide",
+      "AlexChao"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:first": {
+    "modified": "2019-03-23T22:15:57.420Z",
+    "contributors": [
+      "xingkongs"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:first-child": {
+    "modified": "2020-10-15T21:22:57.317Z",
+    "contributors": [
+      "Ritr",
+      "silhouettesia",
+      "xgqfrms-GitHub",
+      "FredWe",
+      "teoli",
+      "ziyunfei"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:first-of-type": {
+    "modified": "2020-10-15T21:38:15.943Z",
+    "contributors": [
+      "Ende93",
+      "Ritr",
+      "zhangchen",
+      "xgqfrms-GitHub",
+      "ZackBee",
+      "sgzzy",
+      "Orange-C",
+      "sudo2015"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:focus": {
+    "modified": "2020-10-15T21:34:35.352Z",
+    "contributors": [
+      "Ritr",
+      "zhangchen",
+      "Harvesty",
+      "Fadeoc",
+      "FredWe",
+      "Gaohaoyang"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:focus-visible": {
+    "modified": "2020-10-15T22:10:22.689Z",
+    "contributors": [
+      "AlphaGo88"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:focus-within": {
+    "modified": "2020-10-15T21:58:43.977Z",
+    "contributors": [
+      "RainSlide",
+      "Ritr",
+      "nDos",
+      "qdlaoyao",
+      "15207108156"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:fullscreen": {
+    "modified": "2019-03-18T20:54:18.077Z",
+    "contributors": [
+      "LeonDWong"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:has": {
+    "modified": "2020-10-15T22:01:57.515Z",
+    "contributors": [
+      "kidonng",
+      "LoveofRedMoon"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:host": {
+    "modified": "2020-10-15T22:16:15.558Z",
+    "contributors": [
+      "zhangchen"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:host-context": {
+    "modified": "2020-10-15T22:22:18.002Z",
+    "contributors": [
+      "jhjocelyn"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:host_function": {
+    "modified": "2020-10-15T22:16:54.122Z",
+    "contributors": [
+      "karma2014",
+      "no1xsyzy",
+      "764777472"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:hover": {
+    "modified": "2019-03-23T23:09:30.132Z",
+    "contributors": [
+      "JacksonSui",
+      "shifengchen",
+      "liuhanru",
+      "HIS"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:in-range": {
+    "modified": "2020-10-15T22:01:15.650Z",
+    "contributors": [
+      "Ritr",
+      "ShirelyGong"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:indeterminate": {
+    "modified": "2020-10-15T21:53:09.179Z",
+    "contributors": [
+      "Ritr",
+      "nDos",
+      "holynewbie"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:invalid": {
+    "modified": "2020-10-15T21:49:18.604Z",
+    "contributors": [
+      "Ritr",
+      "ShirelyGong",
+      "liyongleihf2006",
+      "King."
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:is": {
+    "modified": "2020-10-15T22:11:21.465Z",
+    "contributors": [
+      "Ende93",
+      "ExE-Boss",
+      "Ritr"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:lang": {
+    "modified": "2020-10-15T21:38:56.937Z",
+    "contributors": [
+      "Ritr",
+      "ShirelyGong",
+      "DongyaGe",
+      "L520"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:last-child": {
+    "modified": "2020-10-15T21:51:06.148Z",
+    "contributors": [
+      "Ritr",
+      "FrontENG",
+      "AlexChao"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:last-of-type": {
+    "modified": "2020-10-15T21:37:08.616Z",
+    "contributors": [
+      "Ritr",
+      "FrontENG",
+      "FredWe"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:left": {
+    "modified": "2020-10-15T22:01:55.037Z",
+    "contributors": [
+      "LoveofRedMoon"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:link": {
+    "modified": "2020-10-15T21:45:58.577Z",
+    "contributors": [
+      "leoxiao2012",
+      "Ritr",
+      "lixinxin93",
+      "FuckingChestnut",
+      "w0wbin",
+      "gengsinan"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:not": {
+    "modified": "2020-10-15T21:37:03.676Z",
+    "contributors": [
+      "skywalker_z",
+      "jaredhan418",
+      "RainSlide",
+      "Ritr",
+      "ly525",
+      "nick-ChenZe",
+      "FredWe"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:nth-child": {
+    "modified": "2019-09-08T12:03:00.754Z",
+    "contributors": [
+      "DingZehua",
+      "Ritr",
+      "km-c",
+      "tsukimiya",
+      "yusan77",
+      "kensz66",
+      "genezx",
+      "ShinningFire",
+      "PoppinL",
+      "xgqfrms-GitHub",
+      "BiggerCheng",
+      "hstarorg",
+      "FredWe",
+      "hutuxu"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:nth-last-child": {
+    "modified": "2020-10-15T21:33:53.402Z",
+    "contributors": [
+      "happyWang",
+      "Ritr",
+      "PoppinL",
+      "hutuxu"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:nth-last-of-type": {
+    "modified": "2020-10-15T21:54:40.871Z",
+    "contributors": [
+      "Ritr",
+      "PoppinL"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:nth-of-type": {
+    "modified": "2020-10-15T21:36:59.567Z",
+    "contributors": [
+      "xiumingxu",
+      "parabolazz",
+      "Ritr",
+      "PythonVsJava",
+      "infinite-knowledge",
+      "genezx",
+      "RainSlide",
+      "liwenkang",
+      "xgqfrms-GitHub",
+      "PoppinL",
+      "Pandapm",
+      "PageYe",
+      "sudo2015",
+      "FredWe"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:only-child": {
+    "modified": "2020-10-15T21:22:55.479Z",
+    "contributors": [
+      "aute",
+      "Jiang-Xuan",
+      "teoli",
+      "ziyunfei"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:only-of-type": {
+    "modified": "2019-05-09T23:53:55.894Z",
+    "contributors": [
+      "Ritr",
+      "maoyumaoxun",
+      "FredWe"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:optional": {
+    "modified": "2019-03-23T22:20:45.289Z",
+    "contributors": [
+      "maoyumaoxun",
+      "liyongleihf2006"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:out-of-range": {
+    "modified": "2020-10-15T22:05:19.472Z",
+    "contributors": [
+      "maoyumaoxun"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:placeholder-shown": {
+    "modified": "2020-10-15T22:01:57.789Z",
+    "contributors": [
+      "LoveofRedMoon"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:read-only": {
+    "modified": "2020-10-15T22:00:12.983Z",
+    "contributors": [
+      "fscholz",
+      "maoyumaoxun",
+      "King."
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:read-write": {
+    "modified": "2020-10-15T22:05:20.778Z",
+    "contributors": [
+      "maoyumaoxun"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:required": {
+    "modified": "2020-07-04T13:27:54.236Z",
+    "contributors": [
+      "mdn_idealist",
+      "liyongleihf2006"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:right": {
+    "modified": "2020-10-15T22:18:16.757Z",
+    "contributors": [
+      "7NZ",
+      "LittleBearForCode",
+      "LeonZou",
+      "vaynewang"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:root": {
+    "modified": "2019-09-20T05:29:11.272Z",
+    "contributors": [
+      "mingzhang6",
+      "PoppinL",
+      "keqingrong",
+      "movinghorse"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:scope": {
+    "modified": "2020-10-15T21:54:59.545Z",
+    "contributors": [
+      "cuixiping",
+      "saifeiLee",
+      "zhaoqize"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:target": {
+    "modified": "2020-10-15T21:37:32.170Z",
+    "contributors": [
+      "zhangchen",
+      "LasyIsLazy",
+      "ShirelyGong",
+      "gqqnbig",
+      "Le-Fu",
+      "FredWe"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:valid": {
+    "modified": "2020-10-15T21:51:30.912Z",
+    "contributors": [
+      "Ende93",
+      "xgqfrms-GitHub",
+      "liyongleihf2006"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:visited": {
+    "modified": "2019-09-22T23:26:27.997Z",
+    "contributors": [
+      "hhxxhg",
+      "Adashuai5",
+      "FredWe"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:where": {
+    "modified": "2020-10-15T22:12:05.129Z",
+    "contributors": [
+      "RainSlide",
+      "zhangchizi"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/Attribute_selectors": {
+    "modified": "2020-10-15T21:22:08.999Z",
+    "contributors": [
+      "Lucy",
+      "imwangpan",
+      "juzco",
+      "RainSlide",
+      "littleostar",
+      "Ende93",
+      "zy343134464",
+      "xgqfrms-GitHub",
+      "win5do",
+      "AnnAngela",
+      "fzhw88",
+      "fscholz",
+      "teoli",
+      "alimon"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/Child_combinator": {
+    "modified": "2019-03-23T23:32:26.113Z",
+    "contributors": [
+      "ExE-Boss",
+      "fscholz",
+      "teoli",
+      "alimon"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/Class_selectors": {
+    "modified": "2019-03-23T23:32:32.359Z",
+    "contributors": [
+      "fscholz",
+      "teoli",
+      "alimon"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/Column_combinator": {
+    "modified": "2020-10-15T22:20:12.960Z",
+    "contributors": [
+      "karma2014",
+      "laguarage",
+      "woshisbb43"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/Descendant_combinator": {
+    "modified": "2020-11-23T07:09:12.864Z",
+    "contributors": [
+      "zhuangyin",
+      "ExE-Boss",
+      "RainSlide",
+      "fscholz",
+      "teoli",
+      "alimon"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/ID_selectors": {
+    "modified": "2020-10-15T21:22:13.845Z",
+    "contributors": [
+      "RainSlide",
+      "zhangqiangoffice",
+      "fscholz",
+      "teoli",
+      "alimon"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/Next-sibling_combinator": {
+    "modified": "2020-10-15T21:22:13.249Z",
+    "contributors": [
+      "peterbe",
+      "XiangHongAi",
+      "tss1006",
+      "ExE-Boss",
+      "zhangqiangoffice",
+      "Ricardo-Ke",
+      "fscholz",
+      "teoli",
+      "alimon"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/Pseudo-classes": {
+    "modified": "2019-04-12T03:53:10.441Z",
+    "contributors": [
+      "Soyaine",
+      "RainSlide",
+      "Ende93",
+      "xgqfrms-GitHub",
+      "teoli",
+      "alimon"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/Pseudo-elements": {
+    "modified": "2019-04-06T09:41:11.172Z",
+    "contributors": [
+      "RainSlide",
+      "StudentMain",
+      "anderson_liu",
+      "linyang4",
+      "nDos",
+      "xgqfrms-GitHub",
+      "lizhihua",
+      "FredWe",
+      "xiaowtz",
+      "Fadeoc",
+      "teoli",
+      "alimon"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/Selector_list": {
+    "modified": "2020-10-15T22:25:15.562Z",
+    "contributors": [
+      "RainSlide",
+      "Cherrison"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/Subsequent-sibling_combinator": {
+    "modified": "2020-10-15T21:22:20.373Z",
+    "contributors": [
+      "Shiner",
+      "XiangHongAi",
+      "ExE-Boss",
+      "xlaoyu",
+      "fscholz",
+      "teoli",
+      "alimon"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/Type_selectors": {
+    "modified": "2019-03-23T23:32:35.434Z",
+    "contributors": [
+      "funnyChinese",
+      "fscholz",
+      "teoli",
+      "alimon"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/Universal_selectors": {
+    "modified": "2019-04-23T23:13:42.979Z",
+    "contributors": [
+      "HomeLH",
+      "fscholz",
+      "xiaolong",
+      "iwillbe",
+      "teoli",
+      "ziyunfei"
+    ]
+  },
+  "Web/CSS/Reference/Values/-moz-image-rect": {
+    "modified": "2020-10-15T22:24:48.334Z",
+    "contributors": [
+      "yangzhitong918"
+    ]
+  },
+  "Web/CSS/Reference/Values/Data_types": {
+    "modified": "2019-03-23T22:08:42.415Z",
+    "contributors": [
+      "Ende93",
+      "h2x"
+    ]
+  },
+  "Web/CSS/Reference/Values/Functions": {
+    "modified": "2020-11-20T07:10:42.861Z",
+    "contributors": [
+      "xgqfrms"
+    ]
+  },
+  "Web/CSS/Reference/Values/angle": {
+    "modified": "2020-10-15T21:49:53.373Z",
+    "contributors": [
+      "LZM",
+      "ZackBee",
+      "mozhs",
+      "zhichao"
+    ]
+  },
+  "Web/CSS/Reference/Values/angle-percentage": {
+    "modified": "2020-10-15T22:17:42.224Z",
+    "contributors": [
+      "TrumanGu"
+    ]
+  },
+  "Web/CSS/Reference/Values/attr": {
+    "modified": "2020-11-04T08:52:10.558Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Mookiepiece",
+      "mrstork",
+      "prayash",
+      "duXing",
+      "cuixiping",
+      "teoli",
+      "Jimmie_Felidae"
+    ]
+  },
+  "Web/CSS/Reference/Values/basic-shape": {
+    "modified": "2020-10-15T22:00:24.491Z",
+    "contributors": [
+      "Mookiepiece",
+      "ScaredKitty"
+    ]
+  },
+  "Web/CSS/Reference/Values/blend-mode": {
+    "modified": "2020-10-15T21:52:17.089Z",
+    "contributors": [
+      "RainSlide",
+      "ziyunfei",
+      "1986slayer"
+    ]
+  },
+  "Web/CSS/Reference/Values/calc": {
+    "modified": "2020-11-04T09:08:38.821Z",
+    "contributors": [
+      "chrisdavidmills",
+      "RainSlide",
+      "xunzhonglee",
+      "AnthonyWang",
+      "YWithT",
+      "LeonZou",
+      "JethroChiang",
+      "SphinxKnight",
+      "9aoyang",
+      "xgqfrms-GitHub",
+      "JohannLai",
+      "ihewro",
+      "jdk137",
+      "TiaossuP",
+      "Prinz_Rana",
+      "cuixiping",
+      "teoli",
+      "ziyunfei"
+    ]
+  },
+  "Web/CSS/Reference/Values/clamp": {
+    "modified": "2020-11-05T09:58:52.297Z",
+    "contributors": [
+      "chrisdavidmills",
+      "natee"
+    ]
+  },
+  "Web/CSS/Reference/Values/color_value": {
+    "modified": "2020-10-15T21:36:48.886Z",
+    "contributors": [
+      "SolidBlock",
+      "yangyun",
+      "Swordying",
+      "PYGC",
+      "redoc",
+      "xgqfrms-GitHub",
+      "Soyaine",
+      "xhlsrj",
+      "Sebastianz",
+      "liweimin",
+      "fscholz",
+      "KwenString",
+      "FredWe"
+    ]
+  },
+  "Web/CSS/Reference/Values/counter": {
+    "modified": "2020-11-09T07:18:40.908Z",
+    "contributors": [
+      "chrisdavidmills",
+      "SphinxKnight",
+      "David-C0pperfield",
+      "sanxun515"
+    ]
+  },
+  "Web/CSS/Reference/Values/counters": {
+    "modified": "2020-11-09T07:19:47.276Z",
+    "contributors": [
+      "chrisdavidmills",
+      "sanxun515"
+    ]
+  },
+  "Web/CSS/Reference/Values/custom-ident": {
+    "modified": "2020-02-13T02:01:31.997Z",
+    "contributors": [
+      "knightyun",
+      "lingziyu",
+      "greeneryhu"
+    ]
+  },
+  "Web/CSS/Reference/Values/dimension": {
+    "modified": "2020-10-15T22:16:57.387Z",
+    "contributors": [
+      "StudentMain"
+    ]
+  },
+  "Web/CSS/Reference/Values/display-box": {
+    "modified": "2020-10-15T22:26:55.789Z",
+    "contributors": [
+      "frankzhang718"
+    ]
+  },
+  "Web/CSS/Reference/Values/display-internal": {
+    "modified": "2020-10-15T22:17:18.162Z",
+    "contributors": [
+      "nuo2000"
+    ]
+  },
+  "Web/CSS/Reference/Values/display-legacy": {
+    "modified": "2020-10-15T22:16:15.339Z",
+    "contributors": [
+      "btconfig"
+    ]
+  },
+  "Web/CSS/Reference/Values/display-outside": {
+    "modified": "2020-11-07T04:35:35.050Z",
+    "contributors": [
+      "urusai-me"
+    ]
+  },
+  "Web/CSS/Reference/Values/easing-function": {
+    "modified": "2020-10-15T22:28:49.856Z",
+    "contributors": [
+      "ran"
+    ]
+  },
+  "Web/CSS/Reference/Values/element": {
+    "modified": "2020-11-10T11:07:35.733Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Witaya1978",
+      "RainSlide",
+      "wizAmit",
+      "cuixiping"
+    ]
+  },
+  "Web/CSS/Reference/Values/env": {
+    "modified": "2020-11-10T11:12:04.536Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Ocean-ZH"
+    ]
+  },
+  "Web/CSS/Reference/Values/filter-function": {
+    "modified": "2019-03-18T21:39:39.661Z",
+    "contributors": [
+      "lyz810",
+      "mfluehr"
+    ]
+  },
+  "Web/CSS/Reference/Values/filter-function/blur": {
+    "modified": "2020-11-05T09:45:54.071Z",
+    "contributors": [
+      "chrisdavidmills",
+      "qq2009",
+      "cheetooo"
+    ]
+  },
+  "Web/CSS/Reference/Values/filter-function/brightness": {
+    "modified": "2020-11-05T09:57:28.957Z",
+    "contributors": [
+      "chrisdavidmills",
+      "shirlay-Chang",
+      "cheetooo"
+    ]
+  },
+  "Web/CSS/Reference/Values/filter-function/contrast": {
+    "modified": "2020-11-09T07:21:22.300Z",
+    "contributors": [
+      "chrisdavidmills",
+      "shirlay-Chang"
+    ]
+  },
+  "Web/CSS/Reference/Values/filter-function/drop-shadow": {
+    "modified": "2020-11-10T10:59:15.589Z",
+    "contributors": [
+      "chrisdavidmills",
+      "HJrookie",
+      "deajax"
+    ]
+  },
+  "Web/CSS/Reference/Values/filter-function/grayscale": {
+    "modified": "2020-11-10T11:21:16.375Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Longxi",
+      "MichealXie"
+    ]
+  },
+  "Web/CSS/Reference/Values/filter-function/opacity": {
+    "modified": "2020-11-16T09:08:21.720Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Pedestrian93"
+    ]
+  },
+  "Web/CSS/Reference/Values/fit-content_function": {
+    "modified": "2020-10-15T22:25:14.593Z",
+    "contributors": [
+      "xgqfrms"
+    ]
+  },
+  "Web/CSS/Reference/Values/flex_value": {
+    "modified": "2020-10-15T21:58:42.376Z",
+    "contributors": [
+      "fscholz",
+      "huasheng"
+    ]
+  },
+  "Web/CSS/Reference/Values/frequency": {
+    "modified": "2020-10-15T21:52:26.520Z",
+    "contributors": [
+      "RainSlide",
+      "xgqfrms-GitHub"
+    ]
+  },
+  "Web/CSS/Reference/Values/gradient": {
+    "modified": "2020-12-13T08:12:36.524Z",
+    "contributors": [
+      "BuluGuy",
+      "ScaredKitty",
+      "Sebastianz",
+      "Quilljou",
+      "fscholz",
+      "sclchic"
+    ]
+  },
+  "Web/CSS/Reference/Values/image": {
+    "modified": "2020-12-13T07:56:40.616Z",
+    "contributors": [
+      "BuluGuy",
+      "familyuu",
+      "mozhs",
+      "Sebastianz",
+      "mrstork",
+      "fscholz",
+      "ziyunfei",
+      "MoYuLing",
+      "vicvinc",
+      "FredWe"
+    ]
+  },
+  "Web/CSS/Reference/Values/inherit": {
+    "modified": "2020-10-15T22:03:05.362Z",
+    "contributors": [
+      "zhangchen",
+      "kongdanchen"
+    ]
+  },
+  "Web/CSS/Reference/Values/initial": {
+    "modified": "2020-10-15T21:59:31.745Z",
+    "contributors": [
+      "zhangchen",
+      "beyondbycyx"
+    ]
+  },
+  "Web/CSS/Reference/Values/integer": {
+    "modified": "2019-09-04T12:55:55.655Z",
+    "contributors": [
+      "xunzhonglee",
+      "ziyunfei",
+      "singi2016cn"
+    ]
+  },
+  "Web/CSS/Reference/Values/length": {
+    "modified": "2020-11-07T12:34:52.744Z",
+    "contributors": [
+      "sidWang",
+      "ezirmusitua",
+      "mdn_idealist",
+      "luolei",
+      "RainSlide",
+      "sabrinaluo",
+      "zhangchen",
+      "yijie_sun",
+      "gai871013",
+      "Phoebe-choi",
+      "WynnChen",
+      "fukaWestin",
+      "hiyangguo",
+      "_da",
+      "liyongleihf2006",
+      "Sebastianz",
+      "Serifx",
+      "zbinlin",
+      "feeldesignstudio.com",
+      "fscholz",
+      "ziyunfei",
+      "lttxzmj",
+      "sartrey",
+      "FredWe"
+    ]
+  },
+  "Web/CSS/Reference/Values/length-percentage": {
+    "modified": "2020-10-15T22:22:39.552Z",
+    "contributors": [
+      "xunzhonglee"
+    ]
+  },
+  "Web/CSS/Reference/Values/max": {
+    "modified": "2020-11-16T09:03:04.400Z",
+    "contributors": [
+      "chrisdavidmills",
+      "shugen002",
+      "webprogamar"
+    ]
+  },
+  "Web/CSS/Reference/Values/min": {
+    "modified": "2020-11-16T09:04:41.929Z",
+    "contributors": [
+      "chrisdavidmills",
+      "cinob",
+      "RogerShen"
+    ]
+  },
+  "Web/CSS/Reference/Values/minmax": {
+    "modified": "2020-11-16T09:06:57.403Z",
+    "contributors": [
+      "chrisdavidmills",
+      "chentao106"
+    ]
+  },
+  "Web/CSS/Reference/Values/number": {
+    "modified": "2020-10-13T03:42:11.118Z",
+    "contributors": [
+      "CyanCherry",
+      "ssttii",
+      "zhazhjie",
+      "Sebastianz",
+      "fscholz",
+      "fskuok"
+    ]
+  },
+  "Web/CSS/Reference/Values/percentage": {
+    "modified": "2020-10-15T21:36:50.696Z",
+    "contributors": [
+      "StudentMain",
+      "yangmei123",
+      "RainSlide",
+      "The-End-Hero",
+      "xhlsrj",
+      "mrstork",
+      "fscholz",
+      "FredWe"
+    ]
+  },
+  "Web/CSS/Reference/Values/position_value": {
+    "modified": "2019-03-23T22:53:52.651Z",
+    "contributors": [
+      "xhlsrj",
+      "xgqfrms-GitHub",
+      "mrstork",
+      "fscholz",
+      "zhujun24"
+    ]
+  },
+  "Web/CSS/Reference/Values/ratio": {
+    "modified": "2020-10-15T22:08:11.112Z",
+    "contributors": [
+      "YouHeng",
+      "The-great-Lord",
+      "SphinxKnight",
+      "BKHK"
+    ]
+  },
+  "Web/CSS/Reference/Values/repeat": {
+    "modified": "2020-11-18T14:44:47.276Z",
+    "contributors": [
+      "chrisdavidmills",
+      "JC-Ge",
+      "xgqfrms"
+    ]
+  },
+  "Web/CSS/Reference/Values/resolution": {
+    "modified": "2020-10-15T22:19:42.217Z",
+    "contributors": [
+      "loveloki",
+      "jason-guo"
+    ]
+  },
+  "Web/CSS/Reference/Values/string": {
+    "modified": "2019-03-18T21:46:27.858Z",
+    "contributors": [
+      "LiuYuan"
+    ]
+  },
+  "Web/CSS/Reference/Values/time": {
+    "modified": "2020-10-15T21:58:38.356Z",
+    "contributors": [
+      "zhangchen",
+      "huasheng"
+    ]
+  },
+  "Web/CSS/Reference/Values/time-percentage": {
+    "modified": "2020-10-15T22:19:41.820Z",
+    "contributors": [
+      "jason-guo"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function": {
+    "modified": "2020-02-27T11:59:15.845Z",
+    "contributors": [
+      "skywalker_z",
+      "baylin87",
+      "lbwa",
+      "Miss-violet",
+      "Ende93",
+      "LeoEatle",
+      "xgqfrms-GitHub",
+      "leafdog",
+      "lijim",
+      "mrstork",
+      "prayash",
+      "FredWe"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/matrix": {
+    "modified": "2020-11-16T09:00:25.677Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wc5858",
+      "mdn_idealist",
+      "Sinosaurus",
+      "zsirfs",
+      "Kujoto",
+      "mrstork",
+      "tonnylyz"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/matrix3d": {
+    "modified": "2020-11-16T09:01:45.264Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mdn_idealist"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/perspective": {
+    "modified": "2020-11-16T09:11:13.696Z",
+    "contributors": [
+      "chrisdavidmills",
+      "eeeeeeeason"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/rotate": {
+    "modified": "2020-11-19T16:06:30.046Z",
+    "contributors": [
+      "chrisdavidmills",
+      "fish-inu",
+      "zhangchen",
+      "DaiZhiTao",
+      "FlowingRiver"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/rotate3d": {
+    "modified": "2020-11-19T16:07:52.729Z",
+    "contributors": [
+      "chrisdavidmills",
+      "hardo",
+      "AngelName",
+      "zhangchen",
+      "AozakiOrenji",
+      "xgqfrms-GitHub",
+      "Serifx"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/rotateX": {
+    "modified": "2020-11-19T16:09:23.631Z",
+    "contributors": [
+      "chrisdavidmills",
+      "CharCat"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/rotateY": {
+    "modified": "2020-11-19T16:10:17.879Z",
+    "contributors": [
+      "chrisdavidmills",
+      "CharCat"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/rotateZ": {
+    "modified": "2020-11-30T10:07:54.353Z",
+    "contributors": [
+      "chrisdavidmills",
+      "CharCat"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/scale": {
+    "modified": "2020-11-30T10:16:03.265Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Chaslee",
+      "Jack-Q"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/scaleX": {
+    "modified": "2020-11-30T10:21:00.840Z",
+    "contributors": [
+      "chrisdavidmills",
+      "xgqfrms-GitHub"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/skew": {
+    "modified": "2020-11-30T10:26:15.757Z",
+    "contributors": [
+      "chrisdavidmills",
+      "CharCat",
+      "HuangXin",
+      "fr1ee"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/skewX": {
+    "modified": "2020-11-30T10:27:30.549Z",
+    "contributors": [
+      "chrisdavidmills",
+      "CharCat"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/translate": {
+    "modified": "2020-11-30T10:30:52.319Z",
+    "contributors": [
+      "chrisdavidmills",
+      "jiang-hr"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/translate3d": {
+    "modified": "2020-11-30T12:59:28.646Z",
+    "contributors": [
+      "chrisdavidmills",
+      "codeyu",
+      "litmonw",
+      "pluwen",
+      "kino0o",
+      "zxk7516"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/translateY": {
+    "modified": "2020-11-30T13:01:20.573Z",
+    "contributors": [
+      "chrisdavidmills",
+      "fish-inu",
+      "LangDonHJJ"
+    ]
+  },
+  "Web/CSS/Reference/Values/unset": {
+    "modified": "2020-10-15T21:48:47.329Z",
+    "contributors": [
+      "FS-Luo",
+      "zhangchen",
+      "luna666",
+      "FE_dev",
+      "willard",
+      "LiNengNeng"
+    ]
+  },
+  "Web/CSS/Reference/Values/url_function": {
+    "modified": "2019-03-23T22:25:44.664Z",
+    "contributors": [
+      "zhyupe"
+    ]
+  },
+  "Web/CSS/Reference/Values/var": {
+    "modified": "2020-11-04T09:10:48.035Z",
+    "contributors": [
+      "chrisdavidmills",
+      "RoXoM",
+      "AnnAngela",
+      "xgqfrms-GitHub",
+      "hiyangguo"
+    ]
+  },
+  "Web/CSS/Reference/Webkit_extensions": {
+    "modified": "2019-03-24T00:17:24.198Z",
+    "contributors": [
+      "ExE-Boss",
+      "ziyunfei",
+      "teoli",
+      "OoOoOoOo"
+    ]
+  },
+  "Web/CSS/Tutorials": {
+    "modified": "2019-03-23T23:32:32.218Z",
+    "contributors": [
+      "teoli",
+      "jtyjty99999"
     ]
   },
   "Web/HTML": {

@@ -1,16 +1,19 @@
 ---
-title: Lignes directrices des exemples de lignes de commande
+title: Guide pour rédiger des exemples de commandes shell
+short-title: Exemples de scripts shell
 slug: MDN/Writing_guidelines/Code_style_guide/Shell
 original_slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell
+l10n:
+  sourceCommit: 0e7eafea05cd771c86e77947639f3396e7a59b2b
 ---
 
-{{MDNSidebar}}
+Les consignes suivantes expliquent comment rédiger des exemples de lignes de commande (_shell_) pour MDN Web Docs.
 
-Les directives suivantes expliquent comment rédiger des exemples de lignes de commande sur MDN.
+## Qu'est-ce qu'un « shell »
 
-## Les commandes Shell en bref
+Un shell est un programme qui attend que vous saisissiez une commande puis appuyiez sur la touche Entrée. Pour indiquer quelles commandes vous devez saisir, le contenu sur MDN Web Docs les présente dans un bloc de code, comme pour les autres exemples de code.
 
-Un _shell_ est un programme qui attend que vous tapiez une commande et que vous appuyiez sur la touche retour. Pour indiquer les commandes que vous devez taper, la documentation MDN les répertorie dans un bloc de code, similaire aux exemples de code. Un tel bloc ressemble à ceci :
+Un tel bloc ressemble à ceci&nbsp;:
 
 ```bash example-good
 # Cela peut prendre un certain temps…
@@ -18,14 +21,24 @@ git clone https://github.com/mdn/content
 cd content
 ```
 
-## Directives
+## General guidelines for shell prompt code examples
 
-Il existe quelques directives à suivre lors de l'écriture d'un bloc de code shell :
+### Choisir un format
 
-- N'incluez pas de "$" ou de ">" au début d'une instruction shell. Cela perturbe plus qu'il n'aide et n'est pas utile pour copier les instructions.
-- Les commentaires commencent par "#".
-- Choisissez la coloration syntaxique "bash".
+Les opinions sur l'indentation correcte, les espaces et la longueur des lignes ont toujours été controversées. Les discussions sur ces sujets détournent de la création et de la maintenance du contenu.
 
-## De bons exemples de commandes shell sur le MDN
+Sur MDN Web Docs, nous utilisons [Prettier <sup>(angl.)</sup>](https://prettier.io/) comme formateur de code pour garder un style cohérent (et éviter les discussions hors sujet). Vous pouvez consulter notre [fichier de configuration <sup>(angl.)</sup>](https://github.com/mdn/content/blob/main/.prettierrc.json) pour connaître les règles actuelles, et lire la [documentation de Prettier <sup>(angl.)</sup>](https://prettier.io/docs/index.html).
 
-Nos [Documents de développement côté serveur de Django](/fr/docs/Learn/Server-side/Django) montrent une bonne pratique de présentation des commandes de l'invite shell, etc. sur le MDN. Regardez [Configurer un environnement de développement Django](/fr/docs/Learn/Server-side/Django/development_environment) par exemple.
+Prettier formate tout le code et maintient un style cohérent. Cependant, il existe quelques règles supplémentaires à suivre.
+
+### Rédiger des blocs de code shell
+
+Lorsque vous rédigez un bloc de code shell&nbsp;:
+
+- N'incluez pas de «&nbsp;$&nbsp;» ou de «&nbsp;>&nbsp;» au début d'une instruction shell. Cela perturbe plus qu'il n'aide et n'est pas utile pour copier les instructions.
+- Les commentaires commencent par «&nbsp;#&nbsp;».
+- Choisissez «&nbsp;bash&nbsp;» pour indiquer le langage dans le markdown.
+
+## Voir aussi
+
+Les [documents de développement côté serveur Django](/fr/docs/Learn_web_development/Extensions/Server-side/Django) montrent une bonne pratique de présentation des commandes de l'invite shell sur le MDN.

@@ -222,7 +222,8 @@ Links são muito importantes — eles são o que faz da web ser de fato uma REDE
 
 Você pode obter resultados inesperados se omitir a parte `https://` ou o `http://`, o chamado _protocolo_, no começo do endereço web. Então depois de criar um link, clique nele para ter certeza de que ele está indo para onde você deseja.
 
-> **Nota:** `href` pode parecer, numa primeira impressão, uma escolha obscura para um nome de atributo. Se você está tendo problemas para lembrar do nome, lembre que significa _**h**ypertext **ref**erence_. (referência em hipertexto)
+> [!NOTE]
+> `href` pode parecer, numa primeira impressão, uma escolha obscura para um nome de atributo. Se você está tendo problemas para lembrar do nome, lembre que significa _**h**ypertext **ref**erence_. (referência em hipertexto)
 
 Adicione um link em sua página agora, se ainda não tiver feito isso.
 

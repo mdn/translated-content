@@ -14,10 +14,10 @@ l10n:
 文書の端をそのまま基準とするため、このプロパティは、ページの水平方向のスクロールを加味します。
 例えば、文書の左側 200 ピクセルが隠れるようにページがスクロールされ、ビューの左端から 100 ピクセル内側でマウスがクリックされた場合、 `pageX` が返す値は 300 となります。
 
-元々、このプロパティは `long` 型の整数として定義されていましたが、 [CSSOM View モジュール](/ja/docs/Web/CSS/CSSOM_view) では、 `double` 型の浮動小数点値として再定義しています。
+元々、このプロパティは `long` 型の整数として定義されていましたが、 [CSSOM View モジュール](/ja/docs/Web/CSS/Guides/CSSOM_view) では、 `double` 型の浮動小数点値として再定義しています。
 詳しくは[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください。
 
-この方法で指定された座標について詳しくは、[座標系](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems#%e3%83%9a%e3%83%bc%e3%82%b8)を参照してください。
+この方法で指定された座標について詳しくは、[座標系](/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems#%e3%83%9a%e3%83%bc%e3%82%b8)を参照してください。
 
 ## 値
 
@@ -98,7 +98,7 @@ JavaScript では、 {{domxref("EventTarget.addEventListener", "addEventListener
 
 ### その他の例
 
-利用可能なすべての座標系における情報を示す例は、[マウス位置へのアクセス方法](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems#%e4%be%8b)で見ることができます。
+利用可能なすべての座標系における情報を示す例は、[マウス位置へのアクセス方法](/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems#%e4%be%8b)で見ることができます。
 
 ## 仕様書
 

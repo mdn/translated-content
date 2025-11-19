@@ -4,8 +4,6 @@ slug: Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
 original_slug: Learn/CSS/Howto/CSS_FAQ
 ---
 
-{{LearnSidebar}}
-
 ## Pourquoi mon CSS, pourtant valide, ne fournit pas un rendu correct ?
 
 Pour afficher un document, les navigateurs utilisent le `DOCTYPE` - contraction de l'anglais _document type_, littéralement «&nbsp;type de document&nbsp;». Ils utilisent un mode qui est compatible avec les standards du Web et avec les bugs des vieux navigateurs. Utiliser un `DOCTYPE` correct et moderne dès le début de votre code HTML améliorera la conformité aux standards du navigateur.
@@ -46,13 +44,13 @@ Quand vous voulez appliquer un style à plusieurs blocs ou éléments dans la m�
 
 Les feuilles de style avec le moins de règles sont les plus performantes. Par conséquent, il est recommandé d'utiliser le plus possible les classes et de réserver les id à des usages spécifiques - comme connecter des éléments de type `label` et `form` ou pour décorer des éléments qui doivent être sémantiquement uniques.
 
-Voire [Les sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors).
+Voire [Les sélecteurs CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors).
 
 ## Comment revenir à la valeur par défaut d'un propriété ?
 
 Jadis, il n'y avait pas de valeur nommée "default", par exemple. Le seul moyen de retrouver la valeur par défaut d'une propriété était de déclarer à nouveau cette propriété avec sa valeur par défaut.
 
-Ce comportement est différent depuis CSS2. Une propriété CSS peut maintenant prendre la valeur [`initial`](/fr/docs/Web/CSS/initial). C'est la valeur par défaut de cette propriété, valeur définie dans les spécifications de la propriété.
+Ce comportement est différent depuis CSS2. Une propriété CSS peut maintenant prendre la valeur [`initial`](/fr/docs/Web/CSS/Reference/Values/initial). C'est la valeur par défaut de cette propriété, valeur définie dans les spécifications de la propriété.
 
 ## Comment créer un style dérivant d'un autre ?
 
@@ -210,7 +208,7 @@ Le sélecteur `*` doit être utilisé aussi peu que possible car il s'agit d'un 
 
 ### La spécificité en CSS
 
-Lorsque plusieurs règles s'applique à un même élément. La règle choisie dépend de la [spécificité](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance). Les styles _inline_ (ceux déclarés via l'attribut HTML `style`) sont pris en compte en priorité, suivis par ceux manipulés avec les sélecteurs d'identifiant, suivis ceux associés aux sélecteurs de classe et éventuellement par ceux associés aux sélecteurs de nom.
+Lorsque plusieurs règles s'applique à un même élément. La règle choisie dépend de la [spécificité](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts). Les styles _inline_ (ceux déclarés via l'attribut HTML `style`) sont pris en compte en priorité, suivis par ceux manipulés avec les sélecteurs d'identifiant, suivis ceux associés aux sélecteurs de classe et éventuellement par ceux associés aux sélecteurs de nom.
 
 ```css
 div {
@@ -232,7 +230,7 @@ div {
 </div>
 ```
 
-Les règles exactes sont plus complexes lorsque le sélecteur contient plusieurs composants. Pour plus de détails sur la façon dont la spécificité d'un sélecteur est calculé, on pourra lire [le chapitre de la spécification CSS 2.1](https://www.w3.org/TR/CSS21/cascade.html#specificity) ou [le chapitre correspondant de la section Apprendre](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).
+Les règles exactes sont plus complexes lorsque le sélecteur contient plusieurs composants. Pour plus de détails sur la façon dont la spécificité d'un sélecteur est calculé, on pourra lire [le chapitre de la spécification CSS 2.1](https://www.w3.org/TR/CSS21/cascade.html#specificity) ou [le chapitre correspondant de la section Apprendre](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts).
 
 ## Quid des propriétés -moz-\*, -ms-\*, -webkit-\*, -o-\* et -khtml-\* ?
 
@@ -240,7 +238,7 @@ Ces propriétés, appelées _propriétés préfixées_, sont des extensions au s
 
 Il n'est pas recommandé d'utilier ces propriétés pour des sites web en production. Si cela reste nécessaire, il est conseillé de prévoir une stratégie au cas où ces propriétés préfixées soient retirées. En effet, elles peuvent être modifiées voire supprimées lorsque le standard évolue.
 
-Pour plus d'informations [sur les extensions CSS de Mozilla, vous pouvez consulter la page associée](/fr/docs/Web/CSS/Mozilla_Extensions).
+Pour plus d'informations [sur les extensions CSS de Mozilla, vous pouvez consulter la page associée](/fr/docs/Web/CSS/Reference/Mozilla_extensions).
 
 ## Quel est l'impact de `z-index` sur le positionnement des éléments ?
 

@@ -1,17 +1,15 @@
 ---
-title: <li>
+title: "<li> : l'élément dans une liste"
 slug: Web/HTML/Reference/Elements/li
 original_slug: Web/HTML/Element/li
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<li>`** est utilisé pour représenter un élément dans une liste. Il doit être contenu dans un élément parent&nbsp;: une liste ordonnée ({{HTMLElement("ol")}}), une liste non ordonnée ({{HTMLElement("ul")}}) ou un menu ({{HTMLElement("menu")}}). Dans les menus et les listes non ordonnées, les éléments de liste sont habituellement affichés avec des puces. Dans les listes ordonnées, ils sont habituellement affichés avec un compteur croissant à gauche, tel qu'un nombre ou une lettre.
 
-L'élément HTML **`<li>`** est utilisé pour représenter un élément dans une liste. Il doit être contenu dans un élément parent : une liste ordonnée ({{HTMLElement("ol")}}), une liste non ordonnée ({{HTMLElement("ul")}}) ou un menu ({{HTMLElement("menu")}}). Dans les menus et les listes non ordonnées, les éléments de liste sont habituellement affichés en utilisant des puces. Dans les listes ordonnées, ils sont habituellement affichés avec compteur croissant à gauche, tel qu'un nombre ou une lettre.
-
-{{InteractiveExample("HTML Demo: &lt;li&gt;", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;li&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
-<p>Apollo astronauts:</p>
+<p>Astronautes d'Apollo&nbsp;:</p>
 
 <ul>
   <li>Neil Armstrong</li>
@@ -37,19 +35,12 @@ p {
 
 ## Attributs
 
-Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `value`
   - : Cette valeur entière indique la valeur ordinale en cours de l'élément de liste tel que défini par l'élément {{HTMLElement("ol")}}. La seule valeur autorisée pour cet attribut est un nombre, même si la liste est affichée avec des chiffres romains ou des lettres. Les éléments de la liste qui suivent celui-ci continueront la numérotation à partir de la valeur indiquée. L'attribut **value** n'a pas de signification pour les listes non ordonnées ({{HTMLElement("ul")}}) ou pour les menus ({{HTMLElement("menu")}}).
-
-    > [!NOTE]
-    > Cet attribut a été déprécié en HTML4 mais a été réintroduit en HTML5.
-
-    > [!NOTE]
-    > Avant Gecko 9.0, des valeurs négatives étaient incorrectement converties en 0. A partir de Gecko 9.0, toutes les valeurs entières ont été correctement analysées.
-
-- `type` {{Deprecated_inline}}
-  - : Cet attribut de caractère indique le type de numérotation utilisé pour la liste :
+- `type` {{Deprecated_Inline}}
+  - : Cet attribut de caractère indique le type de numérotation utilisé pour la liste&nbsp;:
     - `a` : lettres minuscules
     - `A` : lettres majuscules
     - `i` : chiffres romains en minuscules
@@ -59,7 +50,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
     Ce type surcharge celui utilisé par son élément parent {{HTMLElement("ol")}} si présent.
 
     > [!NOTE]
-    > Cet attribut a été déprécié : utilisez la propriété CSS {{cssxref("list-style-type")}} à la place.
+    > Cet attribut a été déprécié&nbsp;: utilisez la propriété CSS {{cssxref("list-style-type")}} à la place.
 
 ## Exemples
 
@@ -77,7 +68,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
 #### Résultat
 
-{{EmbedLiveSample("Liste_ordonnée")}}
+{{EmbedLiveSample("liste_ordonnée")}}
 
 ### Liste ordonnée démarrant avec un indice donné
 
@@ -93,7 +84,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
 #### Résultat
 
-{{EmbedLiveSample("Liste_ordonnée_démarrant_avec_un_indice_donné")}}
+{{EmbedLiveSample("liste_ordonnée_démarrant_avec_un_indice_donné")}}
 
 ### Liste non ordonnée
 
@@ -109,10 +100,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
 #### Résultat
 
-{{EmbedLiveSample("Liste_non_ordonnée")}}
-
-> [!NOTE]
-> Pour d'autres exemples plus détaillés, voir les pages {{HTMLElement("ol")}} et {{HTMLElement("ul")}}.
+{{EmbedLiveSample("liste_non_ordonnée")}}
 
 ## Résumé technique
 
@@ -120,18 +108,14 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-          >Catégories de contenu</a
-        >
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories">Catégories de contenu</a>
       </th>
       <td>Aucune.</td>
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
-        >.
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux">Contenu de flux</a>.
       </td>
     </tr>
     <tr>
@@ -152,14 +136,24 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
       </td>
     </tr>
     <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role">listitem</a></code>
+        lorsque enfant d'un élément
+        <code><a href="/fr/docs/Web/HTML/Reference/Elements/ol">ol</a></code>,
+        <code><a href="/fr/docs/Web/HTML/Reference/Elements/ul">ul</a></code> ou
+        <code><a href="/fr/docs/Web/HTML/Reference/Elements/menu">menu</a></code>
+      </td>
+    </tr>
+    <tr>
       <th scope="row">Rôles ARIA autorisés</th>
       <td>
-        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/menuitem_role">menuitem</a></code>,
-        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role">menuitemcheckbox</a></code>,
-        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role">menuitemradio</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/option_role">option</a></code>,
-        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/radio_role">radio</a></code>,
-        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/separator_role">separator</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/tab_role">tab</a></code>,
-        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/treeitem_role">treeitem</a></code>.
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role"><code>menuitem</code></a>,
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role"><code>menuitemradio</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/option_role"><code>option</code></a>,
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role"><code>radio</code></a>,
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role"><code>separator</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role"><code>tab</code></a>,
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role"><code>treeitem</code></a>.
       </td>
     </tr>
     <tr>
@@ -179,8 +173,8 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
 ## Voir aussi
 
-- Les autres éléments liés aux listes : {{HTMLElement("ul")}}, {{HTMLElement("ol")}}, {{HTMLElement("menu")}} et {{HTMLElement("dir")}} (obsolète) ;
-- Les propriétés CSS qui peuvent être particulièrement utiles pour mettre en forme l'élément `<li>` :
-  - la propriété {{cssxref("list-style")}}, pour choisir la manière d'afficher l'ordinal,
-  - les [compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), pour gérer des listes imbriquées complexes,
+- Les autres éléments liés aux listes&nbsp;: {{HTMLElement("ul")}}, {{HTMLElement("ol")}}, {{HTMLElement("menu")}} et {{HTMLElement("dir")}} (obsolète)&nbsp;;
+- Les propriétés CSS qui peuvent être particulièrement utiles pour mettre en forme l'élément `<li>`&nbsp;:
+  - la propriété {{cssxref("list-style")}}, pour choisir la manière d'afficher l'ordinal&nbsp;;
+  - les [compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters), pour gérer des listes imbriquées complexes&nbsp;;
   - la propriété {{cssxref("margin")}}, pour contrôler l'indentation de l'élément de liste.

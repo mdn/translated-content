@@ -1,15 +1,16 @@
 ---
 title: String.prototype.italics()
+short-title: italics()
 slug: Web/JavaScript/Reference/Global_Objects/String/italics
 l10n:
-  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{Deprecated_Header}}
 
-**`italics()`** メソッドは、文字列を {{HTMLElement("i")}} 要素に埋め込んだ文字列 (`<i>str</i>`) を生成し、文字列がイタリック体で表示されるようにします。
+**`italics()`** は {{jsxref("String")}} 値のメソッドで、この文字列を {{HTMLElement("i")}} 要素に埋め込んだ文字列 (`<i>str</i>`) を生成し、この文字列がイタリック体で表示されるようにします。
 
-> [!WARNING]
+> [!NOTE]
 > [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_ラッパーメソッド)はすべて非推奨となっており、互換性目的のみで標準化されています。代わりに [DOM API](/ja/docs/Web/API/Document_Object_Model) の [`document.createElement()`](/ja/docs/Web/API/Document/createElement) などを使用してください。
 
 ## 構文
@@ -17,6 +18,10 @@ l10n:
 ```js-nolint
 italics()
 ```
+
+### 引数
+
+なし。
 
 ### 返値
 
@@ -30,14 +35,27 @@ italics()
 
 ### italics() の使用
 
-以下の例では文字列のメソッドを使用して、文字列を整形しています。
+以下のコードは、HTML 文字列を生成し、それで文書の本文を置き換えます。
 
 ```js
-const worldString = "Hello, world";
-console.log(worldString.blink()); // <blink>Hello, world</blink>
-console.log(worldString.bold()); // <b>Hello, world</b>
-console.log(worldString.italics()); // <i>Hello, world</i>
-console.log(worldString.strike()); // <strike>Hello, world</strike>
+const contentString = "Hello, world";
+
+document.body.innerHTML = contentString.italics();
+```
+
+これにより、次の HTML が生成されます。
+
+```html
+<i>Hello, world</i>
+```
+
+`italics()` を使用して HTML テキストを直接作成する代わりに、[`document.createElement()`](/ja/docs/Web/API/Document/createElement) などの DOM API を使用すべきです。例を示します。
+
+```js
+const contentString = "Hello, world";
+const elem = document.createElement("i");
+elem.innerText = contentString;
+document.body.appendChild(elem);
 ```
 
 ## 仕様書
@@ -51,6 +69,6 @@ console.log(worldString.strike()); // <strike>Hello, world</strike>
 ## 関連情報
 
 - [`String.prototype.italics` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.blink()")}}
-- {{jsxref("String.prototype.bold()")}}
-- {{jsxref("String.prototype.strike()")}}
+- [es-shims による `String.prototype.italics` のポリフィル](https://www.npmjs.com/package/es-string-html-methods)
+- [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_ラッパーメソッド)
+- {{HTMLElement("i")}}

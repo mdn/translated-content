@@ -3,8 +3,6 @@ title: RegExp.prototype[Symbol.matchAll]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll
 ---
 
-{{JSRef}}
-
 {{jsxref("RegExp")}} 实例的 **`[Symbol.matchAll]`** 方法指定了 [`String.prototype.matchAll`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) 的行为。
 
 {{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.matchAll]()", "taller")}}

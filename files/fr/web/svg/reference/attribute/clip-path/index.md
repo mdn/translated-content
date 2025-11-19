@@ -8,7 +8,8 @@ original_slug: Web/SVG/Attribute/clip-path
 
 L'attribut **`clip-path`** permet d'appliquer un détourage à un élément.
 
-> **Note :** `clip-path` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
+> [!NOTE]
+> `clip-path` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
 
 Cet attribut peut être appliqué sur tous les éléments, en revanche il n'aura d'effet que sur les éléments suivants: {{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('ellipse')}}, {{SVGElement('g')}}, {{SVGElement('glyph')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('marker')}}, {{SVGElement('mask')}}, {{SVGElement('path')}}, {{SVGElement('pattern')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('svg')}}, {{SVGElement('symbol')}}, {{SVGElement('text')}}, {{SVGElement('use')}}
 

@@ -1,51 +1,63 @@
 ---
-title: DOMTokenList.add()
+title: DOMTokenList：add() 方法
+short-title: add()
 slug: Web/API/DOMTokenList/add
+l10n:
+  sourceCommit: bd4e8bce64f6e5d3d07ddf8c1cbb5aaffe060d0c
 ---
 
 {{APIRef("DOM")}}
 
-{{domxref("DOMTokenList")}} 接口的 **`add()`** 方法将给定的标记添加到列表中。
+{{domxref("DOMTokenList")}} 接口的 **`add()`** 方法用于将指定的标记添加到列表中，已存在的标记会被自动忽略。
 
 ## 语法
 
-```plain
-tokenList.add(token1[, token2[, ...tokenN]]);
+```js-nolint
+add(token1)
+add(token1, token2)
+add(token1, token2, /* …, */ tokenN)
 ```
 
 ### 参数
 
-- token*N*
-  - : 一个 {{domxref("DOMString")}}，表示你要添加到列表里的标记。
+- `tokenN`
+  - : 表示要添加到 `DOMTokenList` 中的一个或多个标记的字符串。
 
 ### 返回值
 
-`undefined`
+无。
+
+### 异常
+
+- `SyntaxError` {{domxref("DOMException")}}
+  - : 当任意参数为空字符串时抛出。
+- `InvalidCharacterError` {{domxref("DOMException")}}
+  - : 当标记中包含 ASCII 空白字符时抛出。
 
 ## 示例
 
-在下面的例子中，我们使用 {{domxref("Element.classList")}} 将 {{htmlelement("span")}} 元素上设置的类列表检索为 `DOMTokenList`。然后，我们将新标记添加到列表中，并将列表写入 `<span>` 元素的{{domxref("Node.textContent")}}。
+在以下示例中，我们使用 {{domxref("Element.classList")}} 获取设置在 {{htmlelement("span")}} 元素上的类列表（即一个 `DOMTokenList`）。随后，我们向该列表中添加一个新的标记，并将更新后的列表写入 `<span>` 元素的 {{domxref("Node.textContent")}} 中。
 
-HTML:
+首先是 HTML：
 
 ```html
 <span class="a b c"></span>
 ```
 
-JavaScript:
+接着是 JavaScript：
 
 ```js
-var span = document.querySelector("span");
-var classes = span.classList;
+const span = document.querySelector("span");
+const classes = span.classList;
 classes.add("d");
 span.textContent = classes;
 ```
 
-结果如下：
+输出结果如下所示：
 
 {{ EmbedLiveSample('示例', '100%', 60) }}
 
-你也可以添加多个标记：
+你也可以一次性添加多个标记：
 
 ```js
 span.classList.add("d", "e", "f");

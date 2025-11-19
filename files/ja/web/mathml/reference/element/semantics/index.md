@@ -13,7 +13,7 @@ l10n:
 - 注釈を付けるべき MathML 式である最初の子。
 - 続く `<annotation>` または `<annotation-xml>` 要素。後者は [OpenMath](https://en.wikipedia.org/wiki/OpenMath) のような XML 形式のために予約されています。
 
-既定では、`<semantics>`要素の最初の子要素だけがレンダリングされ、他の子要素は [display](/ja/docs/Web/CSS/display) に `none` を設定した状態で保有されます。
+既定では、`<semantics>`要素の最初の子要素だけがレンダリングされ、他の子要素は [display](/ja/docs/Web/CSS/Reference/Properties/display) に `none` を設定した状態で保有されます。
 
 > [!NOTE]
 > 古い MathML 仕様では、レンダラーが利用できる注釈に従って既定のレンダリングを決定することができました。可視の子を決定する以下のルールは、いくつかのブラウザーで実装されています。表示する MathML とコンテンツ MathML の区別については、 [MathML 4](https://w3c.github.io/mathml/) を参照してください。

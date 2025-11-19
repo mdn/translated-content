@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef}}
 
-**`animationcancel`** イベントは、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)が予期せず中断されたときに発生します。言い換えれば、 {{domxref("Element/animationend_event", "animationend")}} イベントを送出せずに実行が停止するときはいつでもです。これは {{cssxref("animation-name")}} が変更されてアニメーションが削除されたり、動いているノードが CSS を使用して非表示にされた場合などに起こることがあります。したがって、直接または原因として、その包含ノードのいずれかが隠されています。
+**`animationcancel`** イベントは、 [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)が予期せず中断されたときに発生します。言い換えれば、 {{domxref("Element/animationend_event", "animationend")}} イベントを送出せずに実行が停止するときはいつでもです。これは {{cssxref("animation-name")}} が変更されてアニメーションが削除されたり、動いているノードが CSS を使用して非表示にされた場合などに起こることがあります。したがって、直接または原因として、その包含ノードのいずれかが隠されています。
 
 このイベントのイベントハンドラーは `onanimationcancel` プロパティを設定するか、 {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用することにより追加することができます。
 
@@ -37,7 +37,7 @@ _親である {{domxref("Event")}} から継承したプロパティもありま
 - {{domxref("AnimationEvent.elapsedTime")}} {{ReadOnlyInline}}
   - : `float` で、このイベントが発行されたときにアニメーションが実行されていた時間（アニメーションが一時停止していた時間を除く）を秒単位で指定します。 `animationstart` イベントの場合、 `elapsedTime` は `0.0` です。ただし、{{cssxref("animation-delay")}} に負の値を指定した場合は、 `(-1 * delay)` を含む `elapsedTime` としてイベントが発行されます。
 - {{domxref("AnimationEvent.pseudoElement")}} {{ReadOnlyInline}}
-  - : `'::'` で始まる文字列で、アニメーションを実行する[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)の名前を指定します。です。アニメーションが擬似要素上で動作しておらず、要素上で動作している場合は、空文字列 `''` となります。
+  - : `'::'` で始まる文字列で、アニメーションを実行する[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)の名前を指定します。です。アニメーションが擬似要素上で動作しておらず、要素上で動作している場合は、空文字列 `''` となります。
 
 ## 例
 
@@ -165,7 +165,7 @@ applyAnimation.addEventListener("click", () => {
 
 ## 関連情報
 
-- [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)
 - {{domxref("AnimationEvent")}}
 - 関連イベント: {{domxref("Element/animationstart_event", "animationstart")}}, {{domxref("Element/animationend_event", "animationend")}}, {{domxref("Element/animationiteration_event", "animationiteration")}}

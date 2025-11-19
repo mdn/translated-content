@@ -2613,13 +2613,6 @@
       "Shiyou"
     ]
   },
-  "Web/API/Document_Object_Model/Examples": {
-    "modified": "2019-04-22T07:31:11.966Z",
-    "contributors": [
-      "jackblackevo",
-      "PJCHENder"
-    ]
-  },
   "Web/API/DragEvent": {
     "modified": "2020-02-27T01:36:51.610Z",
     "contributors": [
@@ -3684,52 +3677,7 @@
       "BobChao"
     ]
   },
-  "Web/CSS/::first-letter": {
-    "modified": "2019-03-23T22:31:14.643Z",
-    "contributors": [
-      "iigmir"
-    ]
-  },
-  "Web/CSS/:first-child": {
-    "modified": "2019-03-23T22:28:52.270Z",
-    "contributors": [
-      "mgrn"
-    ]
-  },
-  "Web/CSS/:first-of-type": {
-    "modified": "2019-03-23T22:10:08.926Z",
-    "contributors": [
-      "nyngwang"
-    ]
-  },
-  "Web/CSS/:lang": {
-    "modified": "2020-10-15T22:13:50.122Z",
-    "contributors": [
-      "oooooo"
-    ]
-  },
-  "Web/CSS/:target": {
-    "modified": "2019-03-23T22:49:40.294Z",
-    "contributors": [
-      "alk03073135"
-    ]
-  },
-  "Web/CSS/@font-face": {
-    "modified": "2019-03-23T23:28:16.382Z",
-    "contributors": [
-      "fscholz",
-      "teoli",
-      "carl_tw"
-    ]
-  },
-  "Web/CSS/@media/height": {
-    "modified": "2019-03-23T22:21:21.278Z",
-    "contributors": [
-      "MashKao",
-      "yvonne6344"
-    ]
-  },
-  "Web/CSS/CSS_animations/Using_CSS_animations": {
+  "Web/CSS/Guides/Animations/Using": {
     "modified": "2019-03-24T00:13:58.706Z",
     "contributors": [
       "SphinxKnight",
@@ -3738,7 +3686,7 @@
       "sailplaneTW"
     ]
   },
-  "Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds": {
+  "Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds": {
     "modified": "2019-03-23T22:48:53.708Z",
     "contributors": [
       "sss63232",
@@ -3747,7 +3695,7 @@
       "alk03073135"
     ]
   },
-  "Web/CSS/CSS_box_model/Mastering_margin_collapsing": {
+  "Web/CSS/Guides/Box_model/Margin_collapsing": {
     "modified": "2020-08-17T06:43:18.638Z",
     "contributors": [
       "osk2",
@@ -3756,14 +3704,14 @@
       "MOSapeizer"
     ]
   },
-  "Web/CSS/CSS_cascade/Inheritance": {
+  "Web/CSS/Guides/Cascade/Inheritance": {
     "modified": "2019-03-23T22:48:52.230Z",
     "contributors": [
       "jackblackevo",
       "alk03073135"
     ]
   },
-  "Web/CSS/CSS_cascade/Shorthand_properties": {
+  "Web/CSS/Guides/Cascade/Shorthand_properties": {
     "modified": "2019-03-23T23:05:17.353Z",
     "contributors": [
       "fscholz",
@@ -3771,14 +3719,14 @@
       "wildsky"
     ]
   },
-  "Web/CSS/CSS_colors/Color_picker_tool": {
+  "Web/CSS/Guides/Colors/Color_format_converter": {
     "modified": "2019-03-23T22:44:42.147Z",
     "contributors": [
       "Shiyou",
       "alk03073135"
     ]
   },
-  "Web/CSS/CSS_flexible_box_layout": {
+  "Web/CSS/Guides/Flexible_box_layout": {
     "modified": "2020-07-30T05:18:51.473Z",
     "contributors": [
       "klareh",
@@ -3787,7 +3735,7 @@
       "WynnChen"
     ]
   },
-  "Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox": {
+  "Web/CSS/Guides/Flexible_box_layout/Basic_concepts": {
     "modified": "2020-05-11T23:59:37.780Z",
     "contributors": [
       "wildsky",
@@ -3795,14 +3743,14 @@
       "1986slayer"
     ]
   },
-  "Web/CSS/CSS_fonts/WOFF": {
+  "Web/CSS/Guides/Fonts/WOFF": {
     "modified": "2019-03-23T23:28:22.570Z",
     "contributors": [
       "fscholz",
       "carl_tw"
     ]
   },
-  "Web/CSS/CSS_grid_layout": {
+  "Web/CSS/Guides/Grid_layout": {
     "modified": "2020-02-01T05:41:13.615Z",
     "contributors": [
       "SvampK",
@@ -3811,7 +3759,7 @@
       "jackblackevo"
     ]
   },
-  "Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout": {
+  "Web/CSS/Guides/Grid_layout/Basic_concepts": {
     "modified": "2019-10-24T13:10:33.813Z",
     "contributors": [
       "akccakcctw",
@@ -3819,13 +3767,13 @@
       "1986slayer"
     ]
   },
-  "Web/CSS/CSS_images/Replaced_element_properties": {
+  "Web/CSS/Guides/Images/Replaced_element_properties": {
     "modified": "2019-03-23T22:59:51.482Z",
     "contributors": [
       "MashKao"
     ]
   },
-  "Web/CSS/CSS_lists/Consistent_list_indentation": {
+  "Web/CSS/Guides/Lists/Indenting": {
     "modified": "2019-03-24T00:14:02.326Z",
     "contributors": [
       "jackblackevo",
@@ -3833,21 +3781,21 @@
       "sailplaneTW"
     ]
   },
-  "Web/CSS/CSS_media_queries/Testing_media_queries": {
+  "Web/CSS/Guides/Media_queries/Testing": {
     "modified": "2019-03-23T22:55:57.771Z",
     "contributors": [
       "jackblackevo",
       "foxbrush"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1": {
+  "Web/CSS/Guides/Positioned_layout/Stacking_context/Example_1": {
     "modified": "2019-03-23T22:55:03.379Z",
     "contributors": [
       "jackblackevo",
       "h140100"
     ]
   },
-  "Web/CSS/CSS_selectors": {
+  "Web/CSS/Guides/Selectors": {
     "modified": "2020-10-24T16:00:38.628Z",
     "contributors": [
       "NekoChan-2851",
@@ -3858,7 +3806,7 @@
       "jackblackevo"
     ]
   },
-  "Web/CSS/CSS_syntax/Syntax": {
+  "Web/CSS/Guides/Syntax/Introduction": {
     "modified": "2020-06-01T00:28:11.978Z",
     "contributors": [
       "bensontobeicsc",
@@ -3866,7 +3814,7 @@
       "xuan0123"
     ]
   },
-  "Web/CSS/CSS_text/Whitespace": {
+  "Web/CSS/Guides/Text/Whitespace": {
     "modified": "2020-01-30T13:21:14.453Z",
     "contributors": [
       "chrisdavidmills",
@@ -3876,39 +3824,34 @@
       "BobChao"
     ]
   },
-  "Web/CSS/Descendant_combinator": {
-    "modified": "2019-03-23T22:47:36.182Z",
+  "Web/CSS/Reference/At-rules/@font-face": {
+    "modified": "2019-03-23T23:28:16.382Z",
     "contributors": [
-      "ExE-Boss",
-      "changbenny"
+      "fscholz",
+      "teoli",
+      "carl_tw"
     ]
   },
-  "Web/CSS/Pseudo-classes": {
-    "modified": "2019-03-23T22:25:22.712Z",
+  "Web/CSS/Reference/At-rules/@media/height": {
+    "modified": "2019-03-23T22:21:21.278Z",
     "contributors": [
-      "iigmir"
+      "MashKao",
+      "yvonne6344"
     ]
   },
-  "Web/CSS/Type_selectors": {
-    "modified": "2020-10-15T22:16:41.850Z",
-    "contributors": [
-      "a1178961372",
-      "YvonneYu"
-    ]
-  },
-  "Web/CSS/animation-fill-mode": {
+  "Web/CSS/Reference/Properties/animation-fill-mode": {
     "modified": "2019-03-18T21:42:33.553Z",
     "contributors": [
       "yoonasy"
     ]
   },
-  "Web/CSS/background-attachment": {
+  "Web/CSS/Reference/Properties/background-attachment": {
     "modified": "2020-10-15T22:23:27.829Z",
     "contributors": [
       "ayugioh2003"
     ]
   },
-  "Web/CSS/background-color": {
+  "Web/CSS/Reference/Properties/background-color": {
     "modified": "2020-10-15T21:39:17.646Z",
     "contributors": [
       "SphinxKnight",
@@ -3917,7 +3860,7 @@
       "Shiyou"
     ]
   },
-  "Web/CSS/border-image": {
+  "Web/CSS/Reference/Properties/border-image": {
     "modified": "2019-03-24T00:08:26.325Z",
     "contributors": [
       "wbamberg",
@@ -3925,7 +3868,7 @@
       "Kennyluck"
     ]
   },
-  "Web/CSS/box-shadow": {
+  "Web/CSS/Reference/Properties/box-shadow": {
     "modified": "2020-09-11T09:09:21.899Z",
     "contributors": [
       "slivenred",
@@ -3935,7 +3878,7 @@
       "alk03073135"
     ]
   },
-  "Web/CSS/box-sizing": {
+  "Web/CSS/Reference/Properties/box-sizing": {
     "modified": "2020-10-15T21:47:19.062Z",
     "contributors": [
       "chih-hsi-chen",
@@ -3948,31 +3891,31 @@
       "YuCheng"
     ]
   },
-  "Web/CSS/clip": {
+  "Web/CSS/Reference/Properties/clip": {
     "modified": "2019-03-23T22:33:08.119Z",
     "contributors": [
       "Jerry-Hong"
     ]
   },
-  "Web/CSS/grid-template": {
+  "Web/CSS/Reference/Properties/grid-template": {
     "modified": "2020-10-15T22:30:52.332Z",
     "contributors": [
       "blueanger31"
     ]
   },
-  "Web/CSS/height": {
+  "Web/CSS/Reference/Properties/height": {
     "modified": "2019-03-23T22:21:15.320Z",
     "contributors": [
       "yvonne6344"
     ]
   },
-  "Web/CSS/ruby-position": {
+  "Web/CSS/Reference/Properties/ruby-position": {
     "modified": "2020-10-15T21:51:03.131Z",
     "contributors": [
       "iigmir"
     ]
   },
-  "Web/CSS/transform": {
+  "Web/CSS/Reference/Properties/transform": {
     "modified": "2020-10-15T21:38:21.566Z",
     "contributors": [
       "allchangechallenge",
@@ -3984,48 +3927,98 @@
       "alk03073135"
     ]
   },
-  "Web/CSS/transform-function/translate3d": {
-    "modified": "2020-11-30T13:00:00.920Z",
-    "contributors": [
-      "chrisdavidmills",
-      "iigmir"
-    ]
-  },
-  "Web/CSS/transform-origin": {
+  "Web/CSS/Reference/Properties/transform-origin": {
     "modified": "2020-10-15T22:05:18.550Z",
     "contributors": [
       "willynpi"
     ]
   },
-  "Web/CSS/transition": {
+  "Web/CSS/Reference/Properties/transition": {
     "modified": "2020-10-15T22:08:09.027Z",
     "contributors": [
       "willynpi"
     ]
   },
-  "Web/CSS/transition-duration": {
+  "Web/CSS/Reference/Properties/transition-duration": {
     "modified": "2020-10-15T22:08:04.691Z",
     "contributors": [
       "willynpi"
     ]
   },
-  "Web/CSS/transition-timing-function": {
+  "Web/CSS/Reference/Properties/transition-timing-function": {
     "modified": "2020-10-15T22:02:01.243Z",
     "contributors": [
       "flyinglimao"
     ]
   },
-  "Web/CSS/white-space": {
+  "Web/CSS/Reference/Properties/white-space": {
     "modified": "2019-03-23T22:06:04.997Z",
     "contributors": [
       "ymcheung",
       "leannechen"
     ]
   },
-  "Web/CSS/width": {
+  "Web/CSS/Reference/Properties/width": {
     "modified": "2020-10-15T22:01:32.599Z",
     "contributors": [
       "yutzuch"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/::first-letter": {
+    "modified": "2019-03-23T22:31:14.643Z",
+    "contributors": [
+      "iigmir"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:first-child": {
+    "modified": "2019-03-23T22:28:52.270Z",
+    "contributors": [
+      "mgrn"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:first-of-type": {
+    "modified": "2019-03-23T22:10:08.926Z",
+    "contributors": [
+      "nyngwang"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:lang": {
+    "modified": "2020-10-15T22:13:50.122Z",
+    "contributors": [
+      "oooooo"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:target": {
+    "modified": "2019-03-23T22:49:40.294Z",
+    "contributors": [
+      "alk03073135"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/Descendant_combinator": {
+    "modified": "2019-03-23T22:47:36.182Z",
+    "contributors": [
+      "ExE-Boss",
+      "changbenny"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/Pseudo-classes": {
+    "modified": "2019-03-23T22:25:22.712Z",
+    "contributors": [
+      "iigmir"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/Type_selectors": {
+    "modified": "2020-10-15T22:16:41.850Z",
+    "contributors": [
+      "a1178961372",
+      "YvonneYu"
+    ]
+  },
+  "Web/CSS/Reference/Values/transform-function/translate3d": {
+    "modified": "2020-11-30T13:00:00.920Z",
+    "contributors": [
+      "chrisdavidmills",
+      "iigmir"
     ]
   },
   "Web/HTML": {
@@ -6011,7 +6004,7 @@
       "jackblackevo"
     ]
   },
-  "Web/Security/Insecure_passwords": {
+  "Web/Security/Authentication/Passwords": {
     "modified": "2019-03-20T14:57:01.510Z",
     "contributors": [
       "BaseChipmunk4",
@@ -6037,16 +6030,6 @@
       "MashKao",
       "teoli",
       "foxbrush"
-    ]
-  },
-  "Web/Security/Weak_Signature_Algorithm": {
-    "modified": "2019-04-23T04:20:20.884Z",
-    "contributors": [
-      "jackblackevo",
-      "15182254444",
-      "KINGKKALING",
-      "Sbabey",
-      "leVirve"
     ]
   },
   "Web/XML/Guides/OpenSearch": {

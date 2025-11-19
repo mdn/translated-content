@@ -2,10 +2,8 @@
 title: Proxy
 slug: Web/JavaScript/Reference/Global_Objects/Proxy
 l10n:
-  sourceCommit: 2c762771070a207d410a963166adf32213bc3a45
+  sourceCommit: 79fdc26fea835d65c9361541bb8ab1896f307475
 ---
-
-{{JSRef}}
 
 **`Proxy`** オブジェクトにより別なオブジェクトのプロキシーを作成することができ、そのオブジェクトの基本的な操作に介入したり再定義したりすることができます。
 
@@ -57,7 +55,7 @@ const proxy2 = new Proxy(target, handler2);
 
 ここで {{jsxref("Proxy/Proxy/get", "get()")}} ハンドラーを実装し、ターゲットのプロパティへのアクセスに介入します。
 
-ハンドラー関数は*トラップ*と呼ばれることがありますが、これはおそらくターゲットオブジェクトへの呼び出しをトラップするからでしょう。上記の `handler2` のとても単純なトラップは、すべてのプロパティアクセサーを再定義します。
+ハンドラー関数は*トラップ*と呼ばれることがありますが、これはおそらくターゲットオブジェクトへの呼び出しをトラップするからでしょう。上記の `handler2` のトラップは、すべてのプロパティアクセサーを再定義します。
 
 ```js
 console.log(proxy2.message1); // world
@@ -99,7 +97,7 @@ console.log(proxy3.message2); // world
   - : 対応する[オブジェクト内部メソッド](#オブジェクト内部メソッド)の振る舞いを定義する関数です。（これは、オペレーティングシステムにおける「トラップ」の概念に似ています。）
 - ターゲット
   - : プロキシーが仮想化するオブジェクト。プロキシーのストレージバックエンドとして多く使用されます。オブジェクトの非拡張性または設定不可能なプロパティに関するインバリアント（変更されない意味づけ）は、対象に対して検証されます。
-- 不変条件
+- {{Glossary("invariant", "不変条件")}}
   - : カスタム処理を実装しても変わらない意味づけ。トラップの実装がハンドラーの不変条件に違反する場合、{{jsxref("TypeError")}}が発生します。
 
 ### オブジェクト内部メソッド
@@ -208,17 +206,17 @@ class Secret {
   }
 }
 
-const aSecret = new Secret("123456");
-console.log(aSecret.secret); // [REDACTED]
+const secret = new Secret("123456");
+console.log(secret.secret); // [REDACTED]
 // 何もしない転送のように見える
-const proxy = new Proxy(aSecret, {});
+const proxy = new Proxy(secret, {});
 console.log(proxy.secret); // TypeError: Cannot read private member #secret from an object whose class did not declare it
 ```
 
 これは、プロキシーの `get` トラップを呼び出すと、`this` の値が元の `secret` ではなく `proxy` になるため、`#secret` にはアクセスできないためです。これを修正するには、元の `secret` を `this` として使用してください。
 
 ```js
-const proxy = new Proxy(aSecret, {
+const proxy = new Proxy(secret, {
   get(target, prop, receiver) {
     // 既定では、Reflect.get(target, prop, receiver) のようになり、
     // `this` の値が異なるようになります。
@@ -238,8 +236,8 @@ class Secret {
   }
 }
 
-const aSecret = new Secret();
-const proxy = new Proxy(aSecret, {
+const secret = new Secret();
+const proxy = new Proxy(secret, {
   get(target, prop, receiver) {
     const value = target[prop];
     if (value instanceof Function) {
@@ -404,66 +402,6 @@ console.log(products.browsers);
 
 console.log(products.latestBrowser);
 //  'Edge'
-```
-
-### 完全なトラップリストの例
-
-ここで、教育的な目的のために、完全なサンプル `traps` リストを作成するために、この種の処理に特に適している _ネイティブ_ オブジェクト、すなわち[単純な Cookie のフレームワーク](https://reference.codeproject.com/dom/document/cookie/simple_document.cookie_framework)が作成した `docCookies` グローバルオブジェクトをプロキシー化してみることにしましょう。
-
-```js
-/*
-  const docCookies = ... "docCookies" オブジェクトは下記から取得しています。
-  https://reference.codeproject.com/dom/document/cookie/simple_document.cookie_framework
-*/
-
-const docCookies = new Proxy(docCookies, {
-  get(target, key) {
-    return target[key] ?? target.getItem(key) ?? undefined;
-  },
-  set(target, key, value) {
-    if (key in target) {
-      return false;
-    }
-    return target.setItem(key, value);
-  },
-  deleteProperty(target, key) {
-    if (!(key in target)) {
-      return false;
-    }
-    return target.removeItem(key);
-  },
-  ownKeys(target) {
-    return target.keys();
-  },
-  has(target, key) {
-    return key in target || target.hasItem(key);
-  },
-  defineProperty(target, key, descriptor) {
-    if (descriptor && "value" in descriptor) {
-      target.setItem(key, descriptor.value);
-    }
-    return target;
-  },
-  getOwnPropertyDescriptor(target, key) {
-    const value = target.getItem(key);
-    return value
-      ? {
-          value,
-          writable: true,
-          enumerable: true,
-          configurable: false,
-        }
-      : undefined;
-  },
-});
-
-/* Cookie のテスト */
-
-console.log((docCookies.myCookie1 = "First value"));
-console.log(docCookies.getItem("myCookie1"));
-
-docCookies.setItem("myCookie1", "Changed value");
-console.log(docCookies.myCookie1);
 ```
 
 ## 仕様書

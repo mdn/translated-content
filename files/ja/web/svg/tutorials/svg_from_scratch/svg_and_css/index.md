@@ -13,7 +13,7 @@ l10n:
 以下では、ブラウザーで実行するデモを作成します。
 
 > [!NOTE]
-> {{SVGElement("use")}} 要素によって参照される要素は、その要素のスタイルを継承します。したがって、それらに異なるスタイルを適用するには、 [CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables)を使用しましょう。
+> {{SVGElement("use")}} 要素によって参照される要素は、その要素のスタイルを継承します。したがって、それらに異なるスタイルを適用するには、 [CSS カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables)を使用しましょう。
 
 ## 例
 
@@ -413,7 +413,7 @@ SVG 対応のブラウザーで `doc8.svg` 文書を開いてください。マ�
 
 外側の花びらが動作する方法は変えずに、内側の花びらのどれかにマウスポインターが重なったときに内側の花びらがすべてピンクになるようにスタイルシートを変更しましょう。
 
-[この練習の解答を見る](/ja/docs/Learn_web_development/Core/Challenges#svg_and_css)
+[この練習の解答を見る](/ja/docs/Learn_web_development/Core#svg_and_css)
 
 ## 構造の簡略化
 

@@ -19,7 +19,7 @@ PWA マニフェストで `theme_color` と `background_color` メンバーを�
 
 この色はスタイルシートが読み込まれる前に表示されるため、その値をアプリケーションのスタイルシート内の `background-color` プロパティと同じ色値に設定してください。これにより、ウェブアプリケーションの起動とコンテンツの読み込みの間でスムーズな視覚的な移行が確保されます。
 
-値は有効な CSS の [`<color>`](/ja/docs/Web/CSS/color_value) です。このウェブアプリのマニフェストファイルの例では、アプリケーションの背景色は[名前付き色](/ja/docs/Web/CSS/named-color)である `peachpuff` に設定されています。
+値は有効な CSS の [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) です。このウェブアプリのマニフェストファイルの例では、アプリケーションの背景色は[名前付き色](/ja/docs/Web/CSS/Reference/Values/named-color)である `peachpuff` に設定されています。
 
 ```json
 {
@@ -60,7 +60,7 @@ PWA マニフェスト内の [`theme_color`](/ja/docs/Web/Progressive_web_apps/M
 
 `theme_color` は、 PWA の全体的なデザインとブランドイメージに調和し、さまざまな端末やプラットフォームで一貫したユーザー体験を提供できるように、適切に選択してください。
 
-`background_color` と同様に、任意の [`<color>`](/ja/docs/Web/CSS/color_value) 値が有効です。このウェブアプリマニフェストファイルの例では、 `theme_color` は `rgb(255 218 185)` に設定されており、これは `peachpuff` の [RGB](/ja/docs/Web/CSS/color_value/rgb) 相当値です。
+`background_color` と同様に、任意の [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) 値が有効です。このウェブアプリマニフェストファイルの例では、 `theme_color` は `rgb(255 218 185)` に設定されており、これは `peachpuff` の [RGB](/ja/docs/Web/CSS/Reference/Values/color_value/rgb) 相当値です。
 
 ```json
 {
