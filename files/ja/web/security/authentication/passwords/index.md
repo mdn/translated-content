@@ -1,6 +1,7 @@
 ---
 title: 安全でないパスワード
-slug: Web/Security/Insecure_passwords
+slug: Web/Security/Authentication/Passwords
+original_slug: Web/Security/Insecure_passwords
 l10n:
   sourceCommit: 83f30ecaaeb6227dc0d4551f71eb8be1cacb8e94
 ---

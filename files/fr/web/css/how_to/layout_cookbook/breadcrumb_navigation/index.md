@@ -69,7 +69,7 @@ body {
 
 ## Choix effectués
 
-Pour afficher les éléments de la liste en ligne, nous utilisons la [mise en page flexbox](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox), montrant ainsi comment une ligne de CSS peut fournir notre navigation. Les séparateurs sont ajoutés via le [contenu généré CSS](/fr/docs/Web/CSS/CSS_generated_content). Vous pouvez les remplacer par n'importe quel séparateur de votre choix.
+Pour afficher les éléments de la liste en ligne, nous utilisons la [mise en page flexbox](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox), montrant ainsi comment une ligne de CSS peut fournir notre navigation. Les séparateurs sont ajoutés via le [contenu généré CSS](/fr/docs/Web/CSS/Guides/Generated_content). Vous pouvez les remplacer par n'importe quel séparateur de votre choix.
 
 ## Problèmes d'accessibilité
 
@@ -77,12 +77,12 @@ Nous utilisons les attributs [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Refe
 
 Notez que les flèches séparatrices `→` ajoutées via la propriété CSS {{CSSxRef("content")}} dans l'exemple ci‑dessus sont exposées aux technologies d'assistance (TA), y compris les lecteurs d'écran et les afficheurs braille. Pour une solution moins intrusive, utilisez une {{HTMLElement("img")}} décorative dans votre HTML avec un attribut `alt` vide. Un [`role`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles) ARIA défini sur [`none`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/none_role) ou [`presentation`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) évitera également que l'image soit exposée aux TA.
 
-Alternativement, rendez muet le [contenu généré CSS](/fr/docs/Web/CSS/CSS_generated_content) en incluant une chaîne vide comme texte alternatif, précédée d'un slash (`/`)&nbsp;; par exemple&nbsp;: `content: url("arrow.png") / "";`.
+Alternativement, rendez muet le [contenu généré CSS](/fr/docs/Web/CSS/Guides/Generated_content) en incluant une chaîne vide comme texte alternatif, précédée d'un slash (`/`)&nbsp;; par exemple&nbsp;: `content: url("arrow.png") / "";`.
 
 Si vous incluez des séparateurs générés qui seront exposés aux TA, optez pour la création du contenu généré en utilisant le sélecteur pseudo-élément {{CSSxRef("::after")}} au lieu de {{CSSxRef("::before")}}, afin que le contenu du séparateur soit annoncé après le contenu HTML plutôt qu'avant.
 
 ## Voir aussi
 
-- [Les boîtes flexibles CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout)
+- [Les boîtes flexibles CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout)
 - [Fournir un fil d'Ariane <sup>(angl.)</sup>](https://www.w3.org/TR/WCAG20-TECHS/G65.html)
 - [Utiliser l'attribut `aria-current` <sup>(angl.)</sup>](https://tink.uk/using-the-aria-current-attribute/)

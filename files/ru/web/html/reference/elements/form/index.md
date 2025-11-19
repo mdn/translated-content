@@ -45,7 +45,7 @@ label {
 }
 ```
 
-Можно использовать CSS [псевдоклассы](/ru/docs/Web/CSS/Pseudo-classes) {{cssxref(':valid')}} и {{cssxref(':invalid')}} для стилизации элемента `<form>`, в зависимости от того, валидны или нет {{domxref("HTMLFormElement.elements", "элементы")}} внутри формы.
+Можно использовать CSS [псевдоклассы](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-classes) {{cssxref(':valid')}} и {{cssxref(':invalid')}} для стилизации элемента `<form>`, в зависимости от того, валидны или нет {{domxref("HTMLFormElement.elements", "элементы")}} внутри формы.
 
 ## Атрибуты
 

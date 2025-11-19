@@ -1,6 +1,7 @@
 ---
 title: 약한 서명 알고리즘
-slug: Web/Security/Weak_Signature_Algorithm
+slug: conflicting/Glossary/Hash_function_86dd22ef183473ac9a504997ad1c9553d207746e3362848f8271069c8e9f3614
+original_slug: Web/Security/Weak_Signature_Algorithm
 l10n:
   sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---

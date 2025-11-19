@@ -1,12 +1,12 @@
 ---
 title: CSS 座標変換の使用
+short-title: 座標変換の使用
 slug: Web/CSS/Guides/Transforms/Using
-original_slug: Web/CSS/CSS_transforms/Using_CSS_transforms
 l10n:
-  sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**CSS 座標変換** (CSS transforms) は、座標空間を編集することで、通常の文書フローを混乱させずに影響下にあるコンテンツの形状や位置を変えることができます。このガイドは座標変換の使用についての解説を行ないます。
+**CSS 座標変換** (CSS transforms) は、座標空間を変更することで、通常の文書フローを混乱させずに影響下にあるコンテンツの形状や位置を変えることができます。このガイドは座標変換の使用についての解説を行ないます。
 
 CSS 座標変換は、アフィン線形変換を HTML 要素に対して適用する一連の CSS プロパティによって実現されます。座標変換には、回転 (rotation)、歪め (skewing)、変倍 (scaling)、平行移動 (translation) などがあり、平面と 3D 空間の両方で行われます。
 
@@ -18,7 +18,7 @@ CSS 座標変換は、アフィン線形変換を HTML 要素に対して適用�
 CSS 座標変換の定義に使われる主なプロパティが 2 つあります。 {{cssxref("transform")}} （または独立した {{cssxref('translate')}}, {{cssxref('rotate')}}, {{cssxref('scale')}} の各プロパティ）と {{cssxref("transform-origin")}} です。
 
 - {{cssxref("transform-origin")}}
-  - : 原点位置を指定します。既定では、これは要素の中央ですが、移動することができます。特定の点を引数として必要とする回転、拡大縮小や傾斜などの座標変換で使用されます。
+  - : 原点位置を指定します。デフォルトでは、これは要素の中央ですが、移動することができます。特定の点を引数として必要とする回転、変倍、歪めなどの座標変換で使用されます。
 - {{cssxref("transform")}}
   - : 要素に適用する座標変換を指定します。座標変換の空白区切りのリストで、合成操作の要求された順番で適用されます。座標変換の合成は右から左の順に適用されます。
 
@@ -33,11 +33,14 @@ CSS 座標変換の定義に使われる主なプロパティが 2 つありま�
 ここでは MDN ロゴを、左下の角から 90 度回転させます。
 
 ```html
-<img
-  style="rotate: 90deg;
-      transform-origin: bottom left;"
-  src="logo.png"
-  alt="MDN ロゴ" />
+<img src="logo.png" alt="MDN Logo" />
+```
+
+```css
+img {
+  rotate: 90deg;
+  transform-origin: bottom left;
+}
 ```
 
 {{EmbedLiveSample('Rotating', 'auto', 240) }}
@@ -47,11 +50,14 @@ CSS 座標変換の定義に使われる主なプロパティが 2 つありま�
 この例は div 要素を 10 度歪め、 X 軸に沿って 150 ピクセル平行移動します。
 
 ```html
-<img
-  style="transform: skewX(10deg) translateX(150px);
-            transform-origin: bottom left;"
-  src="logo.png"
-  alt="MDN logo" />
+<img src="logo.png" alt="MDN logo" />
+```
+
+```css
+img {
+  transform: skewX(10deg) translateX(150px);
+  transform-origin: bottom left;
+}
 ```
 
 {{EmbedLiveSample('Skewing_and_translating') }}
@@ -82,7 +88,7 @@ CSS 座標変換の定義に使われる主なプロパティが 2 つありま�
     <tr>
       <td>
         <div class="container">
-          <div class="cube pers250">
+          <div class="cube perspective-250">
             <div class="face front">1</div>
             <div class="face back">2</div>
             <div class="face right">3</div>
@@ -94,7 +100,7 @@ CSS 座標変換の定義に使われる主なプロパティが 2 つありま�
       </td>
       <td>
         <div class="container">
-          <div class="cube pers350">
+          <div class="cube perspective-350">
             <div class="face front">1</div>
             <div class="face back">2</div>
             <div class="face right">3</div>
@@ -112,7 +118,7 @@ CSS 座標変換の定義に使われる主なプロパティが 2 つありま�
     <tr>
       <td>
         <div class="container">
-          <div class="cube pers500">
+          <div class="cube perspective-500">
             <div class="face front">1</div>
             <div class="face back">2</div>
             <div class="face right">3</div>
@@ -124,7 +130,7 @@ CSS 座標変換の定義に使われる主なプロパティが 2 つありま�
       </td>
       <td>
         <div class="container">
-          <div class="cube pers650">
+          <div class="cube perspective-650">
             <div class="face front">1</div>
             <div class="face back">2</div>
             <div class="face right">3</div>
@@ -144,20 +150,20 @@ CSS 座標変換の定義に使われる主なプロパティが 2 つありま�
 様々な距離の遠近法を設定するために使用することができる CSS のクラスです。コンテナーボックスや立方体自身、それぞれの面のためのクラスも含みます。
 
 ```css
-/* さまざまな perspective の値のためのショートハンドクラス */
-.pers250 {
+/* さまざまな perspective の値のための略記用クラス */
+.perspective-250 {
   perspective: 250px;
 }
 
-.pers350 {
+.perspective-350 {
   perspective: 350px;
 }
 
-.pers500 {
+.perspective-500 {
   perspective: 500px;
 }
 
-.pers650 {
+.perspective-650 {
   perspective: 650px;
 }
 
@@ -197,7 +203,7 @@ CSS 座標変換の定義に使われる主なプロパティが 2 つありま�
 }
 
 .back {
-  background: rgb(0 255 0 / 100%);
+  background: lime;
   color: black;
   transform: rotateY(180deg) translateZ(50px);
 }
@@ -237,7 +243,7 @@ td {
 
 {{EmbedLiveSample('Setting_perspective', 660, 700)}}
 
-二つ目の設定要素は見る人の位置で、 {{cssxref("perspective-origin")}} プロパティを使います。既定では視点は見る人の中央に合わせられますが、いつも妥当であるとは限りません。
+2 つ目の設定要素は見る人の位置で、 {{cssxref("perspective-origin")}} プロパティを使います。デフォルトでは視点は見る人の中央に合わせられますが、いつも妥当であるとは限りません。
 
 #### 視点の変更
 
@@ -250,7 +256,7 @@ td {
   <figure>
     <figcaption><code>perspective-origin: top left;</code></figcaption>
     <div class="container">
-      <div class="cube potl">
+      <div class="cube po-tl">
         <div class="face front">1</div>
         <div class="face back">2</div>
         <div class="face right">3</div>
@@ -264,7 +270,7 @@ td {
   <figure>
     <figcaption><code>perspective-origin: top;</code></figcaption>
     <div class="container">
-      <div class="cube potm">
+      <div class="cube po-tm">
         <div class="face front">1</div>
         <div class="face back">2</div>
         <div class="face right">3</div>
@@ -278,7 +284,7 @@ td {
   <figure>
     <figcaption><code>perspective-origin: top right;</code></figcaption>
     <div class="container">
-      <div class="cube potr">
+      <div class="cube po-tr">
         <div class="face front">1</div>
         <div class="face back">2</div>
         <div class="face right">3</div>
@@ -292,7 +298,7 @@ td {
   <figure>
     <figcaption><code>perspective-origin: left;</code></figcaption>
     <div class="container">
-      <div class="cube poml">
+      <div class="cube po-ml">
         <div class="face front">1</div>
         <div class="face back">2</div>
         <div class="face right">3</div>
@@ -306,7 +312,7 @@ td {
   <figure>
     <figcaption><code>perspective-origin: 50% 50%;</code></figcaption>
     <div class="container">
-      <div class="cube pomm">
+      <div class="cube po-mm">
         <div class="face front">1</div>
         <div class="face back">2</div>
         <div class="face right">3</div>
@@ -320,7 +326,7 @@ td {
   <figure>
     <figcaption><code>perspective-origin: right;</code></figcaption>
     <div class="container">
-      <div class="cube pomr">
+      <div class="cube po-mr">
         <div class="face front">1</div>
         <div class="face back">2</div>
         <div class="face right">3</div>
@@ -334,7 +340,7 @@ td {
   <figure>
     <figcaption><code>perspective-origin: bottom left;</code></figcaption>
     <div class="container">
-      <div class="cube pobl">
+      <div class="cube po-bl">
         <div class="face front">1</div>
         <div class="face back">2</div>
         <div class="face right">3</div>
@@ -348,7 +354,7 @@ td {
   <figure>
     <figcaption><code>perspective-origin: bottom;</code></figcaption>
     <div class="container">
-      <div class="cube pobm">
+      <div class="cube po-bm">
         <div class="face front">1</div>
         <div class="face back">2</div>
         <div class="face right">3</div>
@@ -362,7 +368,7 @@ td {
   <figure>
     <figcaption><code>perspective-origin: bottom right;</code></figcaption>
     <div class="container">
-      <div class="cube pobr">
+      <div class="cube po-br">
         <div class="face front">1</div>
         <div class="face back">2</div>
         <div class="face right">3</div>
@@ -376,7 +382,7 @@ td {
   <figure>
     <figcaption><code>perspective-origin: -200% -200%;</code></figcaption>
     <div class="container">
-      <div class="cube po200200neg">
+      <div class="cube po-200200neg">
         <div class="face front">1</div>
         <div class="face back">2</div>
         <div class="face right">3</div>
@@ -390,7 +396,7 @@ td {
   <figure>
     <figcaption><code>perspective-origin: 200% 200%;</code></figcaption>
     <div class="container">
-      <div class="cube po200200pos">
+      <div class="cube po-200200pos">
         <div class="face front">1</div>
         <div class="face back">2</div>
         <div class="face right">3</div>
@@ -404,7 +410,7 @@ td {
   <figure>
     <figcaption><code>perspective-origin: 200% -200%;</code></figcaption>
     <div class="container">
-      <div class="cube po200200">
+      <div class="cube po-200200">
         <div class="face front">1</div>
         <div class="face back">2</div>
         <div class="face right">3</div>
@@ -421,40 +427,40 @@ td {
 
 ```css
 /* perspective-origin の値（例ごとに異なる） */
-.potl {
+.po-tl {
   perspective-origin: top left;
 }
-.potm {
+.po-tm {
   perspective-origin: top;
 }
-.potr {
+.po-tr {
   perspective-origin: top right;
 }
-.poml {
+.po-ml {
   perspective-origin: left;
 }
-.pomm {
+.po-mm {
   perspective-origin: 50% 50%;
 }
-.pomr {
+.po-mr {
   perspective-origin: right;
 }
-.pobl {
+.po-bl {
   perspective-origin: bottom left;
 }
-.pobm {
+.po-bm {
   perspective-origin: bottom;
 }
-.pobr {
+.po-br {
   perspective-origin: bottom right;
 }
-.po200200neg {
+.po-200200neg {
   perspective-origin: -200% -200%;
 }
-.po200200pos {
+.po-200200pos {
   perspective-origin: 200% 200%;
 }
-.po200200 {
+.po-200200 {
   perspective-origin: 200% -200%;
 }
 
@@ -493,7 +499,7 @@ td {
   transform: translateZ(50px);
 }
 .back {
-  background: rgb(0 255 0 / 100%);
+  background: lime;
   color: black;
   transform: rotateY(180deg) translateZ(50px);
 }
@@ -516,7 +522,7 @@ td {
 
 /* レイアウトの見栄えをよくする */
 section {
-  background-color: #eee;
+  background-color: #eeeeee;
   padding: 10px;
   font-family: sans-serif;
   text-align: left;

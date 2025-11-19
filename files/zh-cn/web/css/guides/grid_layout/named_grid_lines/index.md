@@ -1,5 +1,5 @@
 ---
-title: 使用命名线布局
+title: 使用具名网格线布局
 slug: Web/CSS/Guides/Grid_layout/Named_grid_lines
 ---
 
