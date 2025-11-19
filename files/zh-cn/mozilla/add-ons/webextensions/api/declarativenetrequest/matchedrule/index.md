@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 描述匹配规则的对象。此类型可能由 {{WebExtAPIRef("declarativeNetRequest.getMatchedRules")}} 或 {{WebExtAPIRef("declarativeNetRequest.testMatchOutcome")}} 方法返回，也可以通过 {{WebExtAPIRef("declarativeNetRequest.onRuleMatchedDebug")}} 事件观察到。
 
 ## 类型

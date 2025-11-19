@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0b0cac4814d37f8a62d69de1b0d76dbe20d085ec
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
+{{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 
 本章讨论 JavaScript 的基本语法、变量声明、数据类型和字面量。
 
@@ -376,7 +376,8 @@ const myList = [, "home", , "school"];
 const myList = ["home", , "school", ,];
 ```
 
-> **备注：** [尾后逗号](/zh-CN/docs/Web/JavaScript/Reference/Trailing_commas)在多行数组中能保持 git diff 整洁，因为向末尾添加元素只需要添加一行，而不需要修改前面的行。
+> [!NOTE]
+> [尾后逗号](/zh-CN/docs/Web/JavaScript/Reference/Trailing_commas)在多行数组中能保持 git diff 整洁，因为向末尾添加元素只需要添加一行，而不需要修改前面的行。
 >
 > ```diff
 > const myList = [

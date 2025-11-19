@@ -3,8 +3,6 @@ title: Firefox 62 для разработчиков
 slug: Mozilla/Firefox/Releases/62
 ---
 
-{{FirefoxSidebar}}
-
 В этой статье перечислены ключевые изменения, которые касаются разработчиков. Firefox 62 был выпущен 5 сентября 2018 года.
 
 ## Изменения для веб-разработчиков
@@ -50,7 +48,7 @@ _Без изменений._
 
 #### Удалено
 
-- Из документов, отличных от XUL, удалены все [XUL-значения `display`](/ru/docs/Web/CSS/display#xul_values) за исключением `-moz-box` и `-moz-inline-box` ([Firefox bug 1288572](https://bugzil.la/1288572)).
+- Из документов, отличных от XUL, удалены все [XUL-значения `display`](/ru/docs/Web/CSS/Reference/Properties/display#xul_values) за исключением `-moz-box` и `-moz-inline-box` ([Firefox bug 1288572](https://bugzil.la/1288572)).
 
 ### SVG
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
-
 この記事では、開発者に影響を与える Firefox 65 の変更点について説明します。Firefox 65 は 2019 年 1 月 29 日に出荷されました。
 
 ## ウェブ開発者のための変更
@@ -39,7 +37,7 @@ l10n:
   - {{cssxref("page-break-inside")}} は {{cssxref("break-inside")}} の別名になりました。
 
 - {{cssxref("overflow-wrap")}} プロパティの値 `anywhere` を実装しました ([Firefox バグ 1505786](https://bugzil.la/1505786))。
-- 新しいステップ位置のキーワードである `jump-start`、`jump-end`、`jump-none`、`jump-both` ([`steps()` イージング関数](</ja/docs/Web/CSS/easing-function#the_steps()_class_of_timing_functions>) 内で使用可能) を実装しました ([Firefox バグ 1496619](https://bugzil.la/1496619))。これは `frames()` イージング関数の削除と同時に行いました。この関数は過去に同様の機能を実装していたものであり、非推奨になりました。
+- 新しいステップ位置のキーワードである `jump-start`、`jump-end`、`jump-none`、`jump-both` ([`steps()` イージング関数](</ja/docs/Web/CSS/Reference/Values/easing-function#the_steps()_class_of_timing_functions>) 内で使用可能) を実装しました ([Firefox バグ 1496619](https://bugzil.la/1496619))。これは `frames()` イージング関数の削除と同時に行いました。この関数は過去に同様の機能を実装していたものであり、非推奨になりました。
 - ほかのブラウザーとの互換性のために、{{cssxref("appearance", "-webkit-appearance")}} で新しい値をいくつか追加しました。特に、以下の値です。
   - `meter`。これはユーザーエージェントのスタイルシートで、{{htmlelement("meter")}} 要素のデフォルトの値として使用されます。既存の値 `meterbar` は、`meter` の別名になりました ([Firefox バグ 1501483](https://bugzil.la/1501483))。
   - `progress-bar`。これはユーザーエージェントのスタイルシートで、{{htmlelement("progress")}} 要素のデフォルトの値として使用されます。既存の値 `progressbar` は、`progress-bar` の別名になりました ([Firefox バグ 1501506](https://bugzil.la/1501506))。

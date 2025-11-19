@@ -5,8 +5,6 @@ l10n:
   sourceCommit: edb606222736c292c412a4373b88df91c18c50ac
 ---
 
-{{GlossarySidebar}}
-
 **Bun** 是一个快速且现代的 {{Glossary("JavaScript")}} 运行时环境，专注于性能和开发者工具。
 
 与 [Node.js](https://nodejs.org/) 和 [Deno](https://deno.com/) 不同，Bun 基于 Apple 的 [JavaScriptCore](https://trac.webkit.org/wiki/JavaScriptCore) 构建。Bun 的主要特性包括：

@@ -99,7 +99,8 @@ Emscripten SDK를 설치하기 위해, 아래 설명을 참고하세요.
 
 4. 예제를 실행해 봅니다. 위 명령어를 실행하면 `hello2.html`파일을 생성합니다. 생성된 Wasm을 로드하고 실행할 때 추가되는 접착제 코드가 있는 템플릿과 거의 동일한 내용을 갖습니다. 브라우저에서 열면 마지막 예제와 같은 결과를 볼 수 있습니다.
 
-> **참고:** `-o` 플래그에 HTML 파일 대신 .js 파일을 지정하여 전체 HTML이 아닌 JavaScript "접착제" 파일\* 만 출력하도록 지정할 수 있습니다(예, `emcc -o hello2.js hello2.c -O3`). 이 고급 방법으로, 사용자 정의 HTML을 처음부터 완전히 빌드 할 수 있습니다. 제공된 HTML 템플릿을 사용하는 것이 보통 더 쉽습니다.
+> [!NOTE]
+> `-o` 플래그에 HTML 파일 대신 .js 파일을 지정하여 전체 HTML이 아닌 JavaScript "접착제" 파일\* 만 출력하도록 지정할 수 있습니다(예, `emcc -o hello2.js hello2.c -O3`). 이 고급 방법으로, 사용자 정의 HTML을 처음부터 완전히 빌드 할 수 있습니다. 제공된 HTML 템플릿을 사용하는 것이 보통 더 쉽습니다.
 >
 > Emscripten은 메모리 할당, 메모리 누수 및 기타 여러가지 문제를 처리하기 위해 다양한 JavaScript "접착제" 코드가 필요합니다.
 
@@ -131,7 +132,8 @@ JavaScript에서 C 코드에 정의된 함수를 쓰고 싶은 경우 Emscripten
 
    기본적으로, Emscripten에서 생성된 코드는 항상 `main()` 함수를 호출하고 다른 함수는 불필요한 코드로 제거됩니다. 함수 이름 앞에 `EMSCRIPTEN_KEEPALIVE`를 쓰면 제거되지 않습니다. `EMSCRIPTEN_KEEPALIVE`를 사용하려면 `emscripten.h` 라이브러리를 가져와야 합니다.
 
-   > **참고:** `#ifdef` 블록을 포함하여 C++ 코드에 이 코드를 포함 시켜도 이 예제는 계속 작동합니다. C코드를 넣으면 C와 C++ name mangling 규칙으로 인해 문제가 생길 수 있지만, C++를 사용하는 경우 외부 C 함수를 사용하여 이 문제를 해결하면 됩니다.
+   > [!NOTE]
+   > `#ifdef` 블록을 포함하여 C++ 코드에 이 코드를 포함 시켜도 이 예제는 계속 작동합니다. C코드를 넣으면 C와 C++ name mangling 규칙으로 인해 문제가 생길 수 있지만, C++를 사용하는 경우 외부 C 함수를 사용하여 이 문제를 해결하면 됩니다.
 
 2. 편리성을 위해 `\{\{{ SCRIPT }}}`가 포함된 `html_template/shell_minimal.html`을 이 새로운 폴더에 콘텐츠로 추가하십시오(개발환경에 넣고 개발하는 것이 편합니다).
 3. 이제 컴파일 단계를 다시 실행해 봅시다. 최신 폴더 내부(Emscripten 컴파일러 환경 터미널 창 내부)에서 다음 명령으로 C 코드를 컴파일하십시오. `NO_EXIT_RUNTIME`으로 컴파일해야 합니다. `main()`이 종료될 때 런타임이 종료 및 컴파일된 코드를 호출하는 게 유효하지 않게 됩니다. 이 방법은 적절한 C 에뮬레이션에 필요합니다. 예를 들어, [`atexit()`](https://en.cppreference.com/w/c/program/atexit) 함수가 호출되는지 확인하는 데 필요합니다.
@@ -171,4 +173,4 @@ JavaScript에서 C 코드에 정의된 함수를 쓰고 싶은 경우 Emscripten
 - [ccall/cwrap을 사용하여 JavaScript에서 컴파일된 C 함수 호출](https://kripken.github.io/emscripten-site/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html#calling-compiled-c-functions-from-javascript-using-ccall-cwrap)
 - [JavaScript로 컴파일할 때 C/C++ 소스 코드의 함수가 사라지거나, 처리할 함수가 없다는 메시지가 나타나는 이유는 무엇인가요?](https://kripken.github.io/emscripten-site/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process)
 - [Mozilla Research의 WebAssembly](https://research.mozilla.org/webassembly/)
-- [기존 C 모듈을 WebAssembly로 컴파일](/ko/docs/WebAssembly/existing_C_to_Wasm)
+- [기존 C 모듈을 WebAssembly로 컴파일](/ko/docs/WebAssembly/Guides/Existing_C_to_Wasm)

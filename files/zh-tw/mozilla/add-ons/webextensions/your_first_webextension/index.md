@@ -3,8 +3,6 @@ title: 你的第一個 WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 ---
 
-{{AddonSidebar}}
-
 我們會在這篇文章詳細講解 Firefox 的 WebExtension 的製作。這支附加元件會在 "mozilla.org" 網域底下的所有網頁，增加紅色外框。
 
 範例的原始碼也放在 GitHub 喔：<https://github.com/mdn/webextensions-examples/tree/main/borderify>。
@@ -54,7 +52,8 @@ cd borderify
 - [深入理解 content script](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
 - [深入理解 about match pattern](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
 
-> **警告：** [某些情況下，你需要給附加元件指定 ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/#when_do_you_need_an_add-on_id)。如果需要指定附加元件 ID，請在 `manifest.json` 引入 [`applications`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key，並設定 `gecko.id` 屬性：
+> [!WARNING]
+> [某些情況下，你需要給附加元件指定 ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/#when_do_you_need_an_add-on_id)。如果需要指定附加元件 ID，請在 `manifest.json` 引入 [`applications`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key，並設定 `gecko.id` 屬性：
 >
 > ```json
 > "applications": {
@@ -66,11 +65,11 @@ cd borderify
 
 ### icons/border-48.png
 
-附加元件要有一個圖標。它會在附加元件管理員的附加元件清單旁邊列出來。我們的 manifest.json 已經說好了，要在 "icons/border-48.png" 那邊會有個圖標。
+附加元件要有一個圖示。它會在附加元件管理員的附加元件清單旁邊列出來。我們的 manifest.json 已經說好了，要在「icons/border-48.png」那邊會有個圖示。
 
-在 "borderify" 目錄下直接建立 "icons" 目錄，並儲存一個叫 "border-48.png" 的圖標檔。你可以用[範例的這張圖標](https://github.com/mdn/webextensions-examples/blob/master/borderify/icons/border-48.png)，它是從 Google Material Design 圖標集抓下來的，並使用[創用 CC：姓名標示-相同方式分享](https://creativecommons.org/licenses/by-sa/3.0/deed.zh_TW)授權。
+在「borderify」目錄下直接建立「icons」目錄，並儲存一個叫「border-48.png」的圖示檔。你可以用[範例的這張圖示](https://github.com/mdn/webextensions-examples/blob/master/borderify/icons/border-48.png)，它是從 Google Material Design 圖示集抓下來的，並使用[創用 CC：姓名標示-相同方式分享](https://creativecommons.org/licenses/by-sa/3.0/deed.zh_TW)授權。
 
-如果你要用自己的圖標，它應該是 48x48 像素。你也可以針對高解析度提供 96x96 像素的圖標，這樣的話它在 manifest.json 會被指定為 `icons` 物件內的 `96` property：
+如果你要用自己的圖示，它應該是 48x48 像素。你也可以針對高解析度提供 96x96 像素的圖示，這樣的話它在 manifest.json 會被指定為 `icons` 物件內的 `96` property：
 
 ```json
 "icons": {
@@ -81,7 +80,7 @@ cd borderify
 
 要不然，你也能提供 SVG 檔，它就會等比縮放。
 
-- [深入理解指定圖標。](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons)
+- [深入理解指定圖示。](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons)
 
 ### borderify.js
 

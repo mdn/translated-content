@@ -1,30 +1,29 @@
 ---
 title: RegExp() コンストラクター
+short-title: RegExp()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 l10n:
-  sourceCommit: fc67640f3545c1a5db42c878d1f0de71313349bc
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`RegExp()`** コンストラクターは {{jsxref("RegExp")}} オブジェクトを生成します。
 
-正規表現について詳しく知りたい方は [JavaScript ガイド](/ja/docs/Web/JavaScript/Guide) の [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions) を参照してください。
+正規表現について詳しく知りたい方は [JavaScript ガイド](/ja/docs/Web/JavaScript/Guide)の[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)を参照してください。
 
-{{InteractiveExample("JavaScript Demo: RegExp Constructor")}}
+{{InteractiveExample("JavaScript デモ: RegExp() コンストラクター")}}
 
 ```js interactive-example
 const regex1 = /\w+/;
 const regex2 = new RegExp("\\w+");
 
 console.log(regex1);
-// Expected output: /\w+/
+// 予想される結果: /\w+/
 
 console.log(regex2);
-// Expected output: /\w+/
+// 予想される結果: /\w+/
 
 console.log(regex1 === regex2);
-// Expected output: false
+// 予想される結果: false
 ```
 
 ## 構文
@@ -36,7 +35,8 @@ RegExp(pattern)
 RegExp(pattern, flags)
 ```
 
-> **メモ:** `RegExp()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) があってもなくても呼び出すことができますが、効果が異なることがあります。[返値](#返値)を参照してください。
+> [!NOTE]
+> `RegExp()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) があってもなくても呼び出すことができますが、効果が異なることがあります。[返値](#返値)を参照してください。
 
 ### 引数
 
@@ -78,7 +78,7 @@ RegExp(pattern, flags)
 ### 例外
 
 - {{jsxref("SyntaxError")}}
-  - : 以下のいずれかが成立すると発生します。
+  - : 以下のいずれかの場合に発生します。
     - `pattern` が有効な正規表現として解釈できない場合
     - `flags` に繰り返して使われた文字や、許可されている文字以外が含まれていた場合。
 
@@ -86,7 +86,7 @@ RegExp(pattern, flags)
 
 ### リテラル記法とコンストラクター
 
-`RegExp` オブジェクトを生成するのに*リテラル記法*と*コンストラクター*の 2 つの方法があります。
+`RegExp` オブジェクトを生成するのに「リテラル記法」と「コンストラクター」の 2 つの方法があります。
 
 - **リテラル記法**はパターンを 2 本のスラッシュの間に取り、2 番目のスラッシュの後にオプションのフラグが続くものです。
 - **コンストラクター関数**は文字列または `RegExp` オブジェクトを最初の引数として取り、2 番目の引数としてオプションのフラグの文字列を取ります。
@@ -126,6 +126,6 @@ order.match(new RegExp(`\\b(${breakfasts.join("|")})\\b`, "g"));
 ## 関連情報
 
 - [多くの現代的な `RegExp` 機能（`dotAll`、`sticky` フラグ、名前付きキャプチャグループなど）のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- [JavaScript ガイド](/ja/docs/Web/JavaScript/Guide)内の[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)の章
+- [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)ガイド
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("String.prototype.replace()")}}

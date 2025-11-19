@@ -10,7 +10,7 @@ l10n:
 
 **`<tbody>`** は [HTML](/ja/docs/Web/HTML) の要素で、表の一連の行（{{HTMLElement("tr")}} 要素）を内包し、その部分が表（{{HTMLELement("table")}}）の本体部分を構成することを表します。
 
-{{InteractiveExample("HTML Demo: &lt;tbody&gt;", "tabbed-taller")}}
+{{InteractiveExample("HTML デモ: &lt;tbody&gt;", "tabbed-taller")}}
 
 ```html interactive-example
 <table>
@@ -145,10 +145,11 @@ td {
 
     この属性は非推奨であるため、代わりに CSS の {{cssxref("text-align")}} プロパティを使用してください。
 
-    > **メモ:** `text-align` プロパティには、 `align="char"` と同等の機能がどのブラウザーでも実装されていません。 [`text-align` のブラウザーの互換性の節](/ja/docs/Web/CSS/text-align#ブラウザーの互換性) で `<string>` の値を確認してください。
+    > [!NOTE]
+    > `text-align` プロパティには、 `align="char"` と同等の機能がどのブラウザーでも実装されていません。 [`text-align` のブラウザーの互換性の節](/ja/docs/Web/CSS/Reference/Properties/text-align#ブラウザーの互換性) で `<string>` の値を確認してください。
 
 - `bgcolor` {{Deprecated_inline}}
-  - : 表の背景色です。 [6 桁の 16 進 RGB コード](/ja/docs/Web/CSS/hex-color)の先頭に '`#`' をつけたものです。定義済みの[色キーワード](/ja/docs/Web/CSS/named-color)のうちの一つを利用することもできます。
+  - : 表の背景色です。 [6 桁の 16 進 RGB コード](/ja/docs/Web/CSS/Reference/Values/hex-color)の先頭に '`#`' をつけたものです。定義済みの[色キーワード](/ja/docs/Web/CSS/Reference/Values/named-color)のうちの一つを利用することもできます。
 
     この属性は非推奨であり、代わりに CSS の {{cssxref("background-color")}} プロパティを使用してください。
 
@@ -376,6 +377,6 @@ tbody > tr > th {
 
 ## 関連情報
 
-- `<tbody>` 要素のスタイル設定に役立つであろう CSS プロパティと[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes):
+- `<tbody>` 要素のスタイル設定に役立つであろう CSS プロパティと[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes):
   - {{ cssxref(":nth-child") }} 擬似クラス: 列内のセルの配置を設定するため
   - {{ cssxref("text-align") }} プロパティ: すべてのセル内コンテンツを '.' などの同一文字で揃えるための

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a5c7f9bfb294da287c1877c5eeec69a42638be0e
 ---
 
-{{jsSidebar("Classes")}}
-
 **`constructor`** 是一种用于创建和初始化 [`class`](/zh-CN/docs/Web/JavaScript/Reference/Statements/class) 对象实例的特殊方法。
 
 > [!NOTE]
@@ -176,7 +174,7 @@ class ChildClass extends ParentClass {
 console.log(new ChildClass()); TypeError: Derived constructors may only return object or undefined
 ```
 
-如果父类构造函数返回一个对象，则该对象将被用作 `this` 值，派生类的[类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)将在该值上定义。这种技巧被称为[“返回重载”](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties#返回重写对象)，它允许在无关对象上定义派生类的字段（包括[私有](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)字段）。
+如果父类构造函数返回一个对象，则该对象将被用作 `this` 值，派生类的[类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)将在该值上定义。这种技巧被称为[“返回重载”](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements#返回重写对象)，它允许在无关对象上定义派生类的字段（包括[私有](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)字段）。
 
 `constructor` 遵循正常的[方法](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions)语法，因此[参数默认值](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)等都可以使用。
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 692015f089ff03699f0fe58814502b157c3e92ea
 ---
 
-{{FirefoxSidebar}}
-
 本文提供了有关 Firefox 120 中影响开发者的变更信息。Firefox 120 于 [2023 年 11 月 21 日](https://whattrainisitnow.com/release/?version=120)发布。
 
 ## 为 Web 开发者带来的变化

@@ -26,6 +26,7 @@ obj.__defineSetter__(prop, fun);
     ```js
     function(val) { . . . }
     ```
+
     - `val`
       - : Un alias pour la variable contenant la nouvelle valeur qu'on souhaite affecter à `prop`.
 

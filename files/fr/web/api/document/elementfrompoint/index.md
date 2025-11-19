@@ -7,9 +7,9 @@ slug: Web/API/Document/elementFromPoint
 
 La méthode **`elementFromPoint()`**, rattachée à l'interface [`Document`](/fr/docs/Web/API/Document), renvoie un objet [`Element`](/fr/docs/Web/API/Element) correspondant à l'élément de plus haut niveau situé aux coordonnées indiquées en arguments (relativement à la zone d'affichage (<i lang="en">viewport</i>)).
 
-Si l'élément placé au point indiqué appartient à un autre document (par exemple le document situé dans un élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)), c'est l'élément parent (par exemple l'élément `<iframe>` même) qui est renvoyé. Si l'élément situé au point indiqué est du contenu anonyme (par exemple les barres de défilement d'une boîte de texte), c'est le premier élément ancêtre non anonyme (par exemple la boîte de texte) qui est renvoyée.
+Si l'élément placé au point indiqué appartient à un autre document (par exemple le document situé dans un élément [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe)), c'est l'élément parent (par exemple l'élément `<iframe>` même) qui est renvoyé. Si l'élément situé au point indiqué est du contenu anonyme (par exemple les barres de défilement d'une boîte de texte), c'est le premier élément ancêtre non anonyme (par exemple la boîte de texte) qui est renvoyée.
 
-Les éléments pour lesquels [`pointer-events`](/fr/docs/Web/CSS/pointer-events) vaut `none` seront ignorés et ce sera l'élément situé en dessous sera renvoyé.
+Les éléments pour lesquels [`pointer-events`](/fr/docs/Web/CSS/Reference/Properties/pointer-events) vaut `none` seront ignorés et ce sera l'élément situé en dessous sera renvoyé.
 
 Si la méthode est exécutée sur un autre document (par exemple dans le sous-document chargé dans un élément `<iframe>`), les coordonnées seront relatives au document où la méthode est appelée.
 
@@ -47,7 +47,7 @@ function changeColor(nouvelleCouleur) {
 }
 ```
 
-La méthode `changeColor()` récupère l'élément situé au point indiqué puis modifie la valeur de la propriété [`color`](/fr/docs/Web/CSS/color) avec la nouvelle couleur passée en argument.
+La méthode `changeColor()` récupère l'élément situé au point indiqué puis modifie la valeur de la propriété [`color`](/fr/docs/Web/CSS/Reference/Properties/color) avec la nouvelle couleur passée en argument.
 
 ### HTML
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d1a9b34e50b4b9e84b51f8fadc585ae1afe75069
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 121 の変更点をまとめています。Firefox 121 は、米国時間 [2023 年 12 月 19 日](https://whattrainisitnow.com/release/?version=121) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -20,7 +18,7 @@ l10n:
 
 - {{CSSXRef("text-wrap")}} プロパティを、値 `balance` および `stable` をサポートするように更新しました。値 `balance` は見出しなど短いブロックのコンテンツで使用するもので、コンテンツが複数行にまたがるときにバランスがとれて読みやすくなります。値 `stable` は、編集可能なコンテンツをユーザーが編集するときにリフローしなくなります ([Firefox bug 1731541](https://bugzil.la/1731541))。
 - よく親セレクターと呼ばれる、{{cssxref(":has", ":has()")}} セレクターをサポートしました。これは開発者が、関連する要素に基づいて要素にスタイルを適用することを可能にします。たとえば `li:has(ul)` はサブリストをを持つリストに、`h1:has(+ p)` は直後に段落を持つ見出しにマッチします。
-- [`text-indent`](/ja/docs/Web/CSS/text-indent) CSS プロパティで、値 [`each-line`](/ja/docs/Web/CSS/text-indent#each-line) および [`hanging`](/ja/docs/Web/CSS/text-indent#hanging) をサポートしました ([Firefox bug 784648](https://bugzil.la/784648))。開発者は、特定のテキストインデントスタイルをより簡単に指定できます。また開発者はより創造的に、`text-indent` プロパティで複数の値を組み合わせることが可能になりました。例: `text-indent: 3em hanging each-line`
+- [`text-indent`](/ja/docs/Web/CSS/Reference/Properties/text-indent) CSS プロパティで、値 [`each-line`](/ja/docs/Web/CSS/Reference/Properties/text-indent#each-line) および [`hanging`](/ja/docs/Web/CSS/Reference/Properties/text-indent#hanging) をサポートしました ([Firefox bug 784648](https://bugzil.la/784648))。開発者は、特定のテキストインデントスタイルをより簡単に指定できます。また開発者はより創造的に、`text-indent` プロパティで複数の値を組み合わせることが可能になりました。例: `text-indent: 3em hanging each-line`
 
 ### JavaScript
 

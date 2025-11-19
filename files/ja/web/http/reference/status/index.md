@@ -2,10 +2,8 @@
 title: HTTP レスポンスステータスコード
 slug: Web/HTTP/Reference/Status
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
-
-{{HTTPSidebar}}
 
 HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/Web/HTTP) リクエストが正常に完了したどうかを示します。
 レスポンスは 5 つに分類されています。
@@ -18,7 +16,8 @@ HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/W
 
 下記の一覧は [RFC 9110](https://httpwg.org/specs/rfc9110.html#overview.of.status.codes) で定義されているステータスコードです。
 
-> **メモ:** この一覧にないレスポンスを受け取った場合、それは標準外のレスポンスであり、おそらくそのサーバーソフトウェアに固有のものです。
+> [!NOTE]
+> この一覧にないレスポンスを受け取った場合、それは標準外のレスポンスであり、おそらくそのサーバーソフトウェアに固有のものです。
 
 ## 情報レスポンス
 

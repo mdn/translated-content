@@ -5,8 +5,6 @@ l10n:
   sourceCommit: aa0ae01fcb69a07b099406e5d6ce907ee9b2f929
 ---
 
-{{GlossarySidebar}}
-
 CSS **逻辑属性**提供了一种基于文档的书写模式和方向而不是视口的物理尺寸来布局内容的方法。这使得设计更加灵活和易于维护，尤其是对那些支持多语言的网站。
 
 {{glossary("physical properties", "物理属性")}}（如 {{cssxref("top")}}、{{cssxref("right")}}、{{cssxref("padding-bottom")}} 和 {{cssxref("border-bottom-left-radius")}}）定义基于物理方向的位置和特性、引用元素的特定边，逻辑属性（如 {{cssxref("inset-block-start")}}、{{cssxref("inset-inline-end")}}、{{cssxref("padding-block-end")}} 和 {{cssxref("border-end-end-radius")}}）则使用相对于块向和行向轴的内容流的逻辑方向关键字。
@@ -25,4 +23,4 @@ CSS **逻辑属性**提供了一种基于文档的书写模式和方向而不是
 
 ## 参见
 
-- [CSS 逻辑属性和值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)模块
+- [CSS 逻辑属性和值](/zh-CN/docs/Web/CSS/Guides/Logical_properties_and_values)模块

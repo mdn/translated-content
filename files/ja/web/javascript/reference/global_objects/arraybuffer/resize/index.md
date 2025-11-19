@@ -9,7 +9,7 @@ l10n:
 
 **`resize()`** は {{jsxref("ArrayBuffer")}} インスタンスのメソッドで、この `ArrayBuffer` を指定されたサイズ（バイト単位）にサイズ変更します。
 
-{{InteractiveExample("JavaScript Demo: ArrayBuffer.resize()")}}
+{{InteractiveExample("JavaScript デモ: ArrayBuffer.resize()")}}
 
 ```js interactive-example
 const buffer = new ArrayBuffer(8, { maxByteLength: 16 });

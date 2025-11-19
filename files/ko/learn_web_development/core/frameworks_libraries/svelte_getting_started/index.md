@@ -276,7 +276,7 @@ CSS 작업 경험이 있는 경우 다음 스니펫을 쉽게 이해할 수 있�
 </style>
 ```
 
-[`<h1>`](/ko/docs/Web/HTML/Element/Heading_Elements) 요소에 스타일을 적용하고 있습니다. `<h1>` 요소가 포함된 다른 컴포넌트는 어떻게 될까요?
+[`<h1>`](/ko/docs/Web/HTML/Reference/Elements/Heading_Elements) 요소에 스타일을 적용하고 있습니다. `<h1>` 요소가 포함된 다른 컴포넌트는 어떻게 될까요?
 
 Svelte에서 컴포넌트의 `<style>` 블록 내부 CSS는 해당 컴포넌트로만 범위가 지정됩니다. 이는 컴포넌트 스타일의 해시를 기반으로 하는 선택한 요소에 클래스를 추가하여 작동합니다.
 

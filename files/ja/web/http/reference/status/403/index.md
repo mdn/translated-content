@@ -2,10 +2,8 @@
 title: 403 Forbidden
 slug: Web/HTTP/Reference/Status/403
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`403 Forbidden`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、サーバーがリクエストを理解したものの、処理を拒否したことを示します。
 このステータスは {{HTTPStatus("401")}} と似ていますが、 **`403 Forbidden`** レスポンスが異なるのは、認証または再認証を行っても違いがないことです。

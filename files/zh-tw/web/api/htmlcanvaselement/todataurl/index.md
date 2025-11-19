@@ -15,7 +15,8 @@ l10n:
 
 對於支援編碼解析度中繼資料的檔案格式，創建的影像數據將有 96dpi 的解析度。
 
-> **警告：** `toDataURL()` 會將整個影像編碼為一個內存字串。對於較大的影像，這可能會帶來效能問題，甚至在指定給 {{domxref("HTMLImageElement.src")}} 時超過瀏覽器的 URL 長度限制。建議一般使用 [`toBlob()`](/zh-TW/docs/Web/API/HTMLCanvasElement/toBlob)，並搭配 {{domxref("URL/createObjectURL_static", "URL.createObjectURL()")}}。
+> [!WARNING]
+> `toDataURL()` 會將整個影像編碼為一個內存字串。對於較大的影像，這可能會帶來效能問題，甚至在指定給 {{domxref("HTMLImageElement.src")}} 時超過瀏覽器的 URL 長度限制。建議一般使用 [`toBlob()`](/zh-TW/docs/Web/API/HTMLCanvasElement/toBlob)，並搭配 {{domxref("URL/createObjectURL_static", "URL.createObjectURL()")}}。
 
 ## 語法
 

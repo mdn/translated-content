@@ -3,8 +3,6 @@ title: HTML 属性：rel
 slug: Web/HTML/Reference/Attributes/rel
 ---
 
-{{HTMLSidebar}}
-
 **`rel`** 属性定义了所链接的资源与当前文档的关系，在 {{HTMLElement("a")}}、{{HTMLElement("area")}} 和 {{HTMLElement("link")}} 元素上有效。支持的值取决于拥有该属性的元素。
 
 关系的类型是由 `rel` 属性的值给出的，如果存在的话，它的值必须是一组无序的、唯一的、用空格隔开的关键字。与不表达语义的 `class` 名称不同，`rel` 属性必须使用对机器和人类都有语义的标记。目前关于 `rel` 属性的可能值的注册表是 [IANA 链接关系注册表](https://www.iana.org/assignments/link-relations/link-relations.xhtml)、[HTML 现行标准](https://html.spec.whatwg.org/multipage/links.html#linkTypes)和 microformats wiki 中可自由编辑的 [existing-rel-values 页面](https://microformats.org/wiki/existing-rel-values)（根据现行标准的[建议](https://html.spec.whatwg.org/multipage/links.html#other-link-types)）。如果使用一个不存在于上述三个来源之一的 `rel` 属性，一些 HTML 验证器（如 [W3C Markup Validation Service](https://validator.w3.org/)）会产生一个警告。
@@ -129,7 +127,8 @@ slug: Web/HTML/Reference/Attributes/rel
     > [!NOTE]
     > 苹果的 iOS 系统不使用这种链接类型，也不像其他移动浏览器那样使用 [`sizes`](/zh-CN/docs/Web/HTML/Reference/Elements/link#sizes) 属性，来选择网页夹或启动占位符的网页图标。相反，它分别使用非标准的 [`apple-touch-icon`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) 和 [`apple-touch-starttup-image`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6)。
 
-    > **备注：** `shortcut` 链接类型经常出现在 `icon` 之前，但这种链接类型是不符合规定的，该类型会被忽略，且**网站作者不得再使用它**。
+    > [!NOTE]
+    > `shortcut` 链接类型经常出现在 `icon` 之前，但这种链接类型是不符合规定的，该类型会被忽略，且**网站作者不得再使用它**。
 
 - `license`
   - : 在 {{HTMLElement("a")}}、{{HTMLElement("area")}}、{{HTMLElement("form")}}、 {{HTMLElement("link")}} 元素上有效，`license` 值表示该超链接指向描述许可信息的文件；当前文件的主要内容被引用文件描述的版权许可所覆盖。如果不在 {{HTMLElement("head")}} 元素内，标准并不区分适用于文档特定部分的超链接还是适用于整个文档的超链接。只有页面上的数据可以表明这一点。

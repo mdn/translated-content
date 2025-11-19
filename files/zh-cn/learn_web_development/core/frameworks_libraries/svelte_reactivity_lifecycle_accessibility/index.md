@@ -346,7 +346,8 @@ const checkAllTodos = (completed) => {
 
    `addTodo()` 现在直接接收新待办事项的名称，因此我们不再需要 `newTodoName` 变量来提供值。这部分由我们的 `NewTodo` 组件处理。
 
-   > **备注：** `{ name }` 的语法只是 `{ name: name }` 的简写形式。它来自 JavaScript 本身，与 Svelte 无关，只是为 Svelte 的缩写语法提供了一些灵感。
+   > [!NOTE]
+   > `{ name }` 的语法只是 `{ name: name }` 的简写形式。它来自 JavaScript 本身，与 Svelte 无关，只是为 Svelte 的缩写语法提供了一些灵感。
 
 5. 最后，在此部分中，将 NewTodo 表单标记替换为对 `NewTodo` 组件的调用，如下所示：
 

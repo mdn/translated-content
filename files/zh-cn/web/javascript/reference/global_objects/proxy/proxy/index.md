@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
 ---
 
-{{JSRef}}
-
 **`Proxy()`** 构造函数用于创建 {{jsxref("Proxy")}} 对象。
 
 ## 语法
@@ -15,7 +13,8 @@ l10n:
 new Proxy(target, handler)
 ```
 
-> **备注：** `Proxy()` 只能通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 关键字来调用。如果不使用 `new` 关键字调用，则会抛出 {{jsxref("TypeError")}}。
+> [!NOTE]
+> `Proxy()` 只能通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 关键字来调用。如果不使用 `new` 关键字调用，则会抛出 {{jsxref("TypeError")}}。
 
 ### 参数
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e6fcda9d35359bbfec32ddb42086468701f57ee5
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 126 の変更点をまとめています。Firefox 126 は、米国時間 [2024 年 5 月 14 日](https://whattrainisitnow.com/release/?version=126) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -49,12 +47,12 @@ l10n:
 
   ([Firefox bug 1322186](https://bugzil.la/1322186))
 
-- 要素で有効な CSS [zoom](/ja/docs/Web/CSS/zoom) を取得する、読み取り専用の {{domxref("Element.currentCSSZoom")}} プロパティをサポートしました ([Firefox bug 1880189](https://bugzil.la/1880189))。
+- 要素で有効な CSS [zoom](/ja/docs/Web/CSS/Reference/Properties/zoom) を取得する、読み取り専用の {{domxref("Element.currentCSSZoom")}} プロパティをサポートしました ([Firefox bug 1880189](https://bugzil.la/1880189))。
 
 #### DOM
 
 - カスタム要素の状態を定義して、CSS セレクターを使用してそれらをマッチさせる機能をサポートしました。
-  カスタム状態は要素の {{domxref("ElementInternals.states")}} プロパティ ({{domxref("CustomStateSet")}}) で追加または削除できる、カスタム識別子として表されます。CSS の [`:state()`](/ja/docs/Web/CSS/:state) 擬似クラスはカスタム識別子を引数として持ち、識別子が状態セットに含まれているカスタム要素にマッチします ([Firefox bug 1887543](https://bugzil.la/1887543))。
+  カスタム状態は要素の {{domxref("ElementInternals.states")}} プロパティ ({{domxref("CustomStateSet")}}) で追加または削除できる、カスタム識別子として表されます。CSS の [`:state()`](/ja/docs/Web/CSS/Reference/Selectors/:state) 擬似クラスはカスタム識別子を引数として持ち、識別子が状態セットに含まれているカスタム要素にマッチします ([Firefox bug 1887543](https://bugzil.la/1887543))。
 - 選択範囲の方向を示す {{domxref("Selection.direction")}} プロパティをサポートしました ([Firefox bug 1867058](https://bugzil.la/1867058))。
 
 #### Media、WebRTC、Web Audio

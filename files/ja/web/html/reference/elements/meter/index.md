@@ -10,7 +10,7 @@ l10n:
 
 **`<meter>`** は [HTML](/ja/docs/Web/HTML) の要素で、既知の範囲内のスカラー値、または小数値を表します。
 
-{{InteractiveExample("HTML Demo: &lt;meter&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;meter&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <label for="fuel">Fuel level:</label>
@@ -34,7 +34,8 @@ label {
 - `value`
   - : 現在の数値。これは指定されている場合、最小値と最大値（`min` 属性と `max` 属性）の間でなければなりません。この `value` 属性が未定義、あるいは不正な値であった場合は、その値は `0` となります。指定されている値が `min` 属性と `max` 属性が示す範囲の範囲外の値である場合、その範囲の内のもっとも近い値が適用されます。
 
-    > **メモ:** `value` 属性の値が `0` を下限、`1` を上限とするものでない限り、`min` 属性および `max` 属性で `value` 属性の下限および上限を定義しなくてはなりません。
+    > [!NOTE]
+    > `value` 属性の値が `0` を下限、`1` を上限とするものでない限り、`min` 属性および `max` 属性で `value` 属性の下限および上限を定義しなくてはなりません。
 
 - [`min`](/ja/docs/Web/HTML/Reference/Attributes/min)
   - : 範囲全体の下限。 `max` 属性により上限が設定されている場合は、それより小さい値でなくてはなりません。未設定の場合、下限値は `0` となります。
@@ -148,6 +149,6 @@ label {
 
 ## 関連情報
 
-- [垂直フォームコントロールの作成](/ja/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
+- [垂直フォームコントロールの作成](/ja/docs/Web/CSS/Guides/Writing_modes/Vertical_controls)
 - {{HTMLElement("progress")}}
 - {{cssxref("::-webkit-meter-bar")}}, {{cssxref("::-webkit-meter-inner-element") }}, {{cssxref("::-webkit-meter-even-less-good-value")}}, {{cssxref("::-webkit-meter-optimum-value")}}, {{cssxref("::-webkit-meter-suboptimum-value")}}: 非標準の疑似要素

@@ -2,10 +2,8 @@
 title: theme_color
 slug: Web/Progressive_web_apps/Manifest/Reference/theme_color
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: fbee1ad6d6add1319ce3e8e977033385a915c635
 ---
-
-{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 `theme_color` メンバーは、ウェブアプリケーションのユーザーインターフェイスの既定色を指定するために使用します。
 この色は、ツールバー、アドレスバー、ステータスバーなど、さまざまなブラウザー UI 要素に適用されます。
@@ -27,7 +25,7 @@ l10n:
 ### 値
 
 - `theme_color`
-  - : 有効な[色値](/ja/docs/Web/CSS/color_value)を指定する文字列。
+  - : 有効な[色値](/ja/docs/Web/CSS/Reference/Values/color_value)を指定する文字列。
 
     > [!NOTE]
     > ブラウザーは、コンテキストに応じて、色のアルファ成分を無視することがあります。
@@ -65,7 +63,7 @@ l10n:
 これらの上書きメソッドは、特定のページやユーザー環境設定に合わせてアプリの外観を柔軟に指定できるようにし、全体的なユーザー体験を向上させます。
 
 また、ブラウザーはユーザーの環境設定に基づいて適用されたテーマカラーを調整する場合もあります。
-ユーザーが環境設定でライトモードまたはダークモードにしている場合、ブラウザーはマニフェストの `theme_color` の値を上書きして、アプリの CSS で定義された任意の [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) メディアクエリーに対応する場合があります。
+ユーザーが環境設定でライトモードまたはダークモードにしている場合、ブラウザーはマニフェストの `theme_color` の値を上書きして、アプリの CSS で定義された任意の [`prefers-color-scheme`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) メディアクエリーに対応する場合があります。
 
 ```css
 body {
@@ -95,7 +93,7 @@ body {
 
 ```json
 {
-  "theme_color": "rgb(66, 133, 244)"
+  "theme_color": "rgb(66 133 244)"
 }
 ```
 

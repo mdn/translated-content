@@ -3,8 +3,6 @@ title: Firefox 11 for developers
 slug: Mozilla/Firefox/Releases/11
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 11 は米国時間 2012 年 3 月 13 日にリリースされました。この記事はウェブ開発者とアドオン開発者向けに、今回のリリースにおける新機能と修正された重要なバグについての情報とより詳細なドキュメントへのリンクをまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -34,8 +32,8 @@ Firefox 11 は米国時間 2012 年 3 月 13 日にリリースされました�
 
 ### CSS
 
-- [`text-size-adjust`](/ja/docs/Web/CSS/text-size-adjust) プロパティがサポートされました。
-- [CSS3](/ja/docs/CSS/CSS3) [Conditional Rules](/ja/docs/CSS/CSS3#Conditional_Rules) のサポートが向上しました: [@media](/ja/docs/Web/CSS/@media)、[@-moz-document](/ja/docs/Web/CSS/@document) に入れ子構文を追加できます ([CSS Syntax](/ja/docs/Web/CSS/CSS_syntax/Syntax) および [CSS at-rules](/ja/docs/Web/CSS/CSS_syntax/At-rule) をご覧ください)。
+- [`text-size-adjust`](/ja/docs/Web/CSS/Reference/Properties/text-size-adjust) プロパティがサポートされました。
+- [CSS3](/ja/docs/CSS/CSS3) [Conditional Rules](/ja/docs/CSS/CSS3#Conditional_Rules) のサポートが向上しました: [@media](/ja/docs/Web/CSS/Reference/At-rules/@media)、[@-moz-document](/ja/docs/Web/CSS/Reference/At-rules/@document) に入れ子構文を追加できます ([CSS Syntax](/ja/docs/Web/CSS/Guides/Syntax/Introduction) および [CSS at-rules](/ja/docs/Web/CSS/Guides/Syntax/At-rules) をご覧ください)。
 
 ### SVG
 

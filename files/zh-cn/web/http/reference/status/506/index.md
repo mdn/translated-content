@@ -5,8 +5,6 @@ l10n:
   sourceCommit: dae4a066bdf3900056bb4e8e6af85f50e4d1fd71
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`506 Variant Also Negotiates`** [服务端错误响应](/zh-CN/docs/Web/HTTP/Reference/Status#服务端错误响应)状态码在内容协商过程中，当选择资源的过程中出现递归循环时返回。
 
 [代理驱动型内容协商](/zh-CN/docs/Web/HTTP/Guides/Content_negotiation#代理驱动型内容协商机制)使客户端和服务器能够在服务器拥有多个资源变体时，共同决定最佳的资源变体。由于服务器配置错误导致在创建响应时出现循环引用，服务器发送了 `506` 状态码。

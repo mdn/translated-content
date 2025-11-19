@@ -318,7 +318,8 @@ multiply(20, 20);
 multiply(0.5, 3);
 ```
 
-> **備註：** [`return`](/zh-TW/docs/Web/JavaScript/Reference/Statements/return) 陳述式會要求瀏覽器將 `result`變數回傳，以利後續使用。這是必要的，不然在函式內定義的變數就只能在函式內使用。這個現象叫作變數的有效使用範圍（{{Glossary("Scope", "scoping")}}）（請參閱[這篇文章以了解變數的有效使用範圍](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#變數範圍)）
+> [!NOTE]
+> [`return`](/zh-TW/docs/Web/JavaScript/Reference/Statements/return) 陳述式會要求瀏覽器將 `result`變數回傳，以利後續使用。這是必要的，不然在函式內定義的變數就只能在函式內使用。這個現象叫作變數的有效使用範圍（{{Glossary("Scope", "scoping")}}）（請參閱[這篇文章以了解變數的有效使用範圍](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#變數範圍)）
 
 ### 事件（Events）
 

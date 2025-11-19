@@ -3,8 +3,6 @@ title: <meta>：元数据元素
 slug: Web/HTML/Reference/Elements/meta
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<meta>`** 元素表示那些不能由其他 HTML 元相关（meta-related）元素表示的{{Glossary("Metadata","元数据")}}信息。如：{{HTMLElement("base")}}、{{HTMLElement("link")}}、{{HTMLElement("script")}}、{{HTMLElement("style")}} 或 {{HTMLElement("title")}}。
 
 <table class="properties">
@@ -92,7 +90,8 @@ slug: Web/HTML/Reference/Elements/meta
 
 此元素包括[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
-> **备注：** [`name`](#name) 属性在 `<meta>` 元素中具有特殊的语义；另外，当一个 `<meta>` 标签中，有 [`name`](#name)、[`http-equiv`](#http-equiv) 或者 [`charset`](#charset) 三者中任何一个属性时，[`itemprop`](#itemprop) 属性不能被使用。
+> [!NOTE]
+> [`name`](#name) 属性在 `<meta>` 元素中具有特殊的语义；另外，当一个 `<meta>` 标签中，有 [`name`](#name)、[`http-equiv`](#http-equiv) 或者 [`charset`](#charset) 三者中任何一个属性时，[`itemprop`](#itemprop) 属性不能被使用。
 
 - `charset`
   - : 该属性声明了文档的字符编码。如果存在该属性，则其值必须是字符串 `"utf-8"` 的不区分 ASCII 大小写的匹配，因为 UTF-8 是 HTML5 文档的唯一有效编码。声明字符编码的 `<meta>` 元素必须完全位于文档的前 1024 个字节内。
@@ -153,4 +152,3 @@ slug: Web/HTML/Reference/Elements/meta
 
 - [标准元数据名称](/zh-CN/docs/Web/HTML/Reference/Elements/meta/name)
 - [学习：`<meta>`](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#元数据：meta_元素)
-- [viewport 元标签](/zh-CN/docs/Web/HTML/Guides/Viewport_meta_element)

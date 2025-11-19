@@ -7,7 +7,8 @@ slug: Web/API/Window/screenLeft
 
 **`Window.screenLeft`** 是一个只读属性，它返回浏览器左边框到左边屏幕边缘的 CSS 像素数。
 
-> **备注：** `screenLeft` 只是 {{domxref("Window.screenX")}} 属性的别名，最初只被 IE 浏览器所支持。现在主流的浏览器都已支持该属性。
+> [!NOTE]
+> `screenLeft` 只是 {{domxref("Window.screenX")}} 属性的别名，最初只被 IE 浏览器所支持。现在主流的浏览器都已支持该属性。
 
 ## 值
 

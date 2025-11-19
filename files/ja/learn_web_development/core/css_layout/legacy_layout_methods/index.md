@@ -428,7 +428,8 @@ CSS のすぐ内側で {{cssxref("calc", "calc()")}} 関数を使って数学を
 }
 ```
 
-> **メモ:** [fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-calc.html) で完成版を見ることができます（[ライブでも見られます](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)）。
+> [!NOTE]
+> [fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-calc.html) で完成版を見ることができます（[ライブでも見られます](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)）。
 
 ### 意味論的グリッドシステム対「意味論的でない」グリッドシステム
 
@@ -442,7 +443,8 @@ CSS のすぐ内側で {{cssxref("calc", "calc()")}} 関数を使って数学を
 }
 ```
 
-> **メモ:** [Sass](https://sass-lang.com/) などのプリプロセッサーを使用する場合は、単純な mixin を作成してその値を挿入することができます。
+> [!NOTE]
+> [Sass](https://sass-lang.com/) などのプリプロセッサーを使用する場合は、単純な mixin を作成してその値を挿入することができます。
 
 ### グリッドでオフセットしたコンテナーを使えるようにする
 
@@ -565,7 +567,8 @@ body {
 
 Skeleton にはグリッドシステム以上のものが含まれています — タイポグラフィや、出発点として使用できるその他のページ要素の CSS も含んでいます。 ただし、これらはデフォルトのままにします — ここで本当に関心があるのはグリッドです。
 
-> **メモ:** [Normalize](https://necolas.github.io/normalize.css/) は Nicolas Gallagher によって書かれた本当に便利で小さな CSS ライブラリーです。 これは基本的ないくつかの基本的なレイアウトの修正を自動的に行い、ブラウザー間でデフォルトの要素のスタイル設定をより一貫させます。
+> [!NOTE]
+> [Normalize](https://necolas.github.io/normalize.css/) は Nicolas Gallagher によって書かれた本当に便利で小さな CSS ライブラリーです。 これは基本的ないくつかの基本的なレイアウトの修正を自動的に行い、ブラウザー間でデフォルトの要素のスタイル設定をより一貫させます。
 
 前の例と同様の HTML を使用します。 HTML の `body` に次を追加してください。
 

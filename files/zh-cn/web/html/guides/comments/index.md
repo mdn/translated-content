@@ -6,8 +6,6 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{HTMLSidebar}}
-
 HTML **注释**主要用于为标记添加解释性说明，或防止浏览器解释文档的特定部分。
 
 注释以字符串 `<!--` 开始，字符串 `-->` 结束，其中间是一些文本。这些文本不能以字符串 `>` 或 `->` 开头，不能包含字符串 `-->` 或 `--!>`，也不能以字符串 `<!-` 结束，但允许字符串 `<!` 出现。
@@ -66,5 +64,5 @@ HTML 注释只能作为内容使用。不能在标签中使用，例如在 HTML 
 ## 参见
 
 - [JavaScript 中的注释](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#注释)
-- [CSS 中的注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
+- [CSS 中的注释](/zh-CN/docs/Web/CSS/Guides/Syntax/Comments)
 - {{domxref("Comment")}} API（`Comment` 继承自 {{domxref("Node")}}）

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: aa55b6b6768e0250b52703f26d44ea3291f725f3
 ---
 
-{{HTMLSidebar}}
-
 **`<col>`** [HTML](/zh-CN/docs/Web/HTML) 元素在其父 {{HTMLElement("colgroup")}} 元素所代表的列组中定义一列或多列。`<col>` 元素只有作为没有定义 [`span`](/zh-CN/docs/Web/HTML/Reference/Elements/colgroup#span) 属性的 {{HTMLElement("colgroup")}} 元素的子元素才有效。
 
 {{InteractiveExample("HTML Demo: &lt;col&gt;", "tabbed-taller")}}
@@ -93,7 +91,7 @@ td {
     > 如果表格使用了 [`colspan`](/zh-CN/docs/Web/HTML/Reference/Elements/td#colspan) 属性，则可以通过组合适当的 CSS 属性选择器（如 `[colspan=n]`）来达到效果，不过这并非易事。
 
 - `bgcolor` {{deprecated_inline}}
-  - : 定义每列单元格的背景颜色。该值是 HTML 颜色；可以是以“`#`”为前缀的 [6 位十六进制 RGB 代码](/zh-CN/docs/Web/CSS/hex-color)，也可以是[颜色关键字](/zh-CN/docs/Web/CSS/named-color)。不支持其他 CSS {{cssxref("color_value", "&lt;color&gt;")}} 值。请使用 {{cssxref("background-color")}} CSS 属性代替，因为该属性已被弃用。
+  - : 定义每列单元格的背景颜色。该值是 HTML 颜色；可以是以“`#`”为前缀的 [6 位十六进制 RGB 代码](/zh-CN/docs/Web/CSS/Reference/Values/hex-color)，也可以是[颜色关键字](/zh-CN/docs/Web/CSS/Reference/Values/named-color)。不支持其他 CSS {{cssxref("color_value", "&lt;color&gt;")}} 值。请使用 {{cssxref("background-color")}} CSS 属性代替，因为该属性已被弃用。
 
 - `char` {{deprecated_inline}}
   - : 没有任何作用。其最初目的是指定内容与每列单元格中的一个字符对齐。当试图对齐数字或货币值时，其典型值包括句号（`.`）。如果 [`align`](#align) 未设置为 `char`，该属性将被忽略，但仍将覆盖其 {{HTMLElement("colgroup")}} 父元素指定的 [`char`](/zh-CN/docs/Web/HTML/Reference/Elements/colgroup#char)。

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7a81d16fadbe5cbee1ad2f8d0ddccda846f4034c
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 116 の変更点をまとめています。Firefox 116 は、2023 年 8 月 1 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -18,7 +16,7 @@ l10n:
 
 ### CSS
 
-- 要素がたどる経路を定義するために使用する {{cssxref("offset-path")}} プロパティの構文を更新しました。新しい構文では `none`、または `<offset-path>` か `<coord-box>` のいずれかの値を設定できます。新しい `<offset-path>` の値は `<ray()>`、`<url>`、`<basic-shape>` を指定できます。[`<coord-box>`](/ja/docs/Web/CSS/box-edge) の値は旧来の `<geometry-box>` の値を置き換えるもので、要素のボックスモデルに基づく経路の形状を指定できます。`<basic-shape>` および `<coord-box>` の値を使用するには、それぞれ `layout.css.motion-path-basic-shapes.enabled` および `layout.css.motion-path-coord-box.enabled` の設定を有効にすることが必要です ([Firefox bug 1598156](https://bugzil.la/1598156))、([Firefox bug 1837305](https://bugzil.la/1837305))。
+- 要素がたどる経路を定義するために使用する {{cssxref("offset-path")}} プロパティの構文を更新しました。新しい構文では `none`、または `<offset-path>` か `<coord-box>` のいずれかの値を設定できます。新しい `<offset-path>` の値は `<ray()>`、`<url>`、`<basic-shape>` を指定できます。[`<coord-box>`](/ja/docs/Web/CSS/Reference/Values/box-edge) の値は旧来の `<geometry-box>` の値を置き換えるもので、要素のボックスモデルに基づく経路の形状を指定できます。`<basic-shape>` および `<coord-box>` の値を使用するには、それぞれ `layout.css.motion-path-basic-shapes.enabled` および `layout.css.motion-path-coord-box.enabled` の設定を有効にすることが必要です ([Firefox bug 1598156](https://bugzil.la/1598156))、([Firefox bug 1837305](https://bugzil.la/1837305))。
 
 ### Accessibility (ARIA)
 

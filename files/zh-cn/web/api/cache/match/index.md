@@ -19,7 +19,8 @@ cache.match(request, { options }).then(function (response) {
 
 一个 {{jsxref("Promise")}} 对象，该对象解析为第一个匹配请求的 {{domxref("Response")}} 对象，如果没有匹配到，则解析到 {{jsxref("undefined")}} 。
 
-> **备注：** `Cache.match()` 基本上和 {{domxref("Cache.matchAll()")}} 一样，只不过 `Cache.match()` 只解析为 `response[0]` （第一个匹配的响应 (response) 对象）而不是 `response[]` （所有响应对象组成的数组）。
+> [!NOTE]
+> `Cache.match()` 基本上和 {{domxref("Cache.matchAll()")}} 一样，只不过 `Cache.match()` 只解析为 `response[0]` （第一个匹配的响应 (response) 对象）而不是 `response[]` （所有响应对象组成的数组）。
 
 ### 参数
 

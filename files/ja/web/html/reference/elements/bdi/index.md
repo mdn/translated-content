@@ -9,7 +9,7 @@ l10n:
 
 **`<bdi>`** は [HTML](/ja/docs/Web/HTML) の要素で、ブラウザーの書字方向アルゴリズムに、このテキストが周囲のテキストから独立しているものと扱うよう指示します。これは特に、ウェブサイトがテキストを動的に挿入するとき、挿入されるテキストの書字方向が不明な場合に便利です。
 
-{{InteractiveExample("HTML Demo: &lt;bdi&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;bdi&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <h1>世界レスリングチャンピオン</h1>

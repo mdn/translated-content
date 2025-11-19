@@ -3,8 +3,6 @@ title: Array.prototype.findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLastIndex
 ---
 
-{{JSRef}}
-
 **`findLastIndex()`** 方法反向迭代数组，并返回满足所提供的测试函数的第一个元素的索引。若没有找到对应元素，则返回 -1。
 
 另请参见 {{jsxref("Array.findLast()", "findLast()")}} 方法，该方法返回最后一个满足测试函数的元素的值（而不是它的索引）。
@@ -70,12 +68,15 @@ findLastIndex(callbackFn, thisArg)
 下面的示例返回数组中作为素数的最后一个元素的索引，如果没有素数，则返回 `-1`。
 
 ```js
-function isPrime(element) {
-  if (element % 2 === 0 || element < 2) {
+function isPrime(n) {
+  if (n < 2) {
     return false;
   }
-  for (let factor = 3; factor <= Math.sqrt(element); factor += 2) {
-    if (element % factor === 0) {
+  if (n % 2 === 0) {
+    return n === 2;
+  }
+  for (let factor = 3; factor * factor <= n; factor += 2) {
+    if (n % factor === 0) {
       return false;
     }
   }
@@ -85,6 +86,9 @@ function isPrime(element) {
 console.log([4, 6, 8, 12].findLastIndex(isPrime)); // -1，没有找到
 console.log([4, 5, 7, 8, 9, 11, 12].findLastIndex(isPrime)); // 5
 ```
+
+> [!NOTE]
+> `isPrime()` 实现仅供演示。在实际应用中，为了避免重复计算，会使用大量记忆化的算法，例如[埃拉托斯特尼筛法](https://zh.wikipedia.org/wiki/埃拉托斯特尼筛法)。
 
 ### 在稀疏数组上使用 findLastIndex()
 

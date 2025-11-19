@@ -11,7 +11,8 @@ slug: Web/API/CacheStorage/match
 
 会按 `Cache` 对象的创建顺序进行查询。
 
-> **备注：** {{domxref("CacheStorage.match()", "caches.match()")}} 是一个便捷方法。其作用等同于在每个缓存上调用 {{domxref("cache.match()")}} 方法（按照{{domxref("CacheStorage.keys()", "caches.keys()")}}返回的顺序）直到返回{{domxref("Response")}} 对象。
+> [!NOTE]
+> {{domxref("CacheStorage.match()", "caches.match()")}} 是一个便捷方法。其作用等同于在每个缓存上调用 {{domxref("cache.match()")}} 方法（按照{{domxref("CacheStorage.keys()", "caches.keys()")}}返回的顺序）直到返回{{domxref("Response")}} 对象。
 
 ## 语法
 

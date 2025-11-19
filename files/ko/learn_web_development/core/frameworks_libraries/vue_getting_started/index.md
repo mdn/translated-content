@@ -47,7 +47,7 @@ Vue는 애플리케이션에 Vue를 점진적으로 통합시킬 수 있도록 �
 
 ## 설치하기
 
-기존 사이트에서 Vue를 사용하려면 아래 [`<script>`](/ko/docs/Web/HTML/Element/script) 요소 중 하나를 페이지에 추가하면 됩니다. 이 한 줄을 추가하는 것만으로 기존의 사이트에서 Vue를 사용할 수 있습니다. Vue가 자칭 '프로그레시브 프레임워크'임을 강조하는 이유가 바로 이것입니다. JQuery 등의 라이브러리를 사용하는 기존 프로젝트를 Vue로 마이그레이션하려고 할 때 아주 좋은 옵션입니다. 이 방식으로 속성, 커스텀 컴포넌트, 데이터 관리 등 수많은 Vue의 핵심 기능을 사용할 수 있게 됩니다.
+기존 사이트에서 Vue를 사용하려면 아래 [`<script>`](/ko/docs/Web/HTML/Reference/Elements/script) 요소 중 하나를 페이지에 추가하면 됩니다. 이 한 줄을 추가하는 것만으로 기존의 사이트에서 Vue를 사용할 수 있습니다. Vue가 자칭 '프로그레시브 프레임워크'임을 강조하는 이유가 바로 이것입니다. JQuery 등의 라이브러리를 사용하는 기존 프로젝트를 Vue로 마이그레이션하려고 할 때 아주 좋은 옵션입니다. 이 방식으로 속성, 커스텀 컴포넌트, 데이터 관리 등 수많은 Vue의 핵심 기능을 사용할 수 있게 됩니다.
 
 - 개발 스크립트 (최적화되지 않음. 콘솔 경고 포함. 개발용으로 좋음.)
 
@@ -177,7 +177,8 @@ Vue의 다양한 기능을 알아보기 위해, 예제로 할 일 목록(todo li
 
 `<template>` 은 컴포넌트의 모든 마크업 구조와 디스플레이 로직을 포함합니다. 이 템플릿은 HTML 구문은 물론이고, 일부 Vue에 특화된 구문도 포함할 수 있습니다. Vue 관련 구문은 나중에 더 자세히 알아보겠습니다.
 
-> **참고:** `<template>` 태그에 `lang` 속성을 지정해 표준 HTML 대신 Pug 템플릿을 사용할 수 있습니다: `<template lang="pug">`. 이 튜토리얼에서는 표준 HTML을 계속 사용할 예정이지만, 이렇게 Pug 등의 다른 템플릿을 사용할 수도 있다는 걸 소개해보았습니다.
+> [!NOTE]
+> `<template>` 태그에 `lang` 속성을 지정해 표준 HTML 대신 Pug 템플릿을 사용할 수 있습니다: `<template lang="pug">`. 이 튜토리얼에서는 표준 HTML을 계속 사용할 예정이지만, 이렇게 Pug 등의 다른 템플릿을 사용할 수도 있다는 걸 소개해보았습니다.
 
 `<script>`는 컴포넌트 화면에 표시되지 않는 모든 로직을 포함하고 있습니다. 가장 중요한 것은 `<script>` 태그 안에 반드시 기본으로 export되는 (하단 코드의 export default 구문 참고) JS 오브젝트가 있어야 한다는 것입니다. 이 오브젝트에서 로컬 컴포넌트 등록, 컴포넌트 인풋(props) 정의, 로컬 상태 관리, 메서드 정의 등 작업이 이루어집니다. 빌드 단계에서 이 오브젝트가 처리되고, 템플릿과 함께 `render()` 함수를 통해 Vue 컴포넌트로 변환됩니다.
 
@@ -195,7 +196,8 @@ export default {
 };
 ```
 
-> **참고:** [TypeScript](https://www.typescriptlang.org/) 문법을 사용하고 싶다면, `<script>` 태그 안에 `lang` 속성을 설정해 컴파일러에게 TypeScript를 사용하고 있다고 알려주세요: `<script lang="ts">`
+> [!NOTE]
+> [TypeScript](https://www.typescriptlang.org/) 문법을 사용하고 싶다면, `<script>` 태그 안에 `lang` 속성을 설정해 컴파일러에게 TypeScript를 사용하고 있다고 알려주세요: `<script lang="ts">`
 
 `<style>` 에는 컴포넌트에서 사용할 CSS를 포함합니다. `<style scoped>`와 같이 `scoped` 속성을 추가하면 Vue는 그 안의 내용을 SFC(단일 파일 컴포넌트) 내부 범위에서만 적용합니다. CSS-in-JS 방식과 비슷하게 동작하지만, 여기서는 일반 CSS 구문을 작성할 수 있다는 차이점이 있습니다.
 
@@ -228,7 +230,7 @@ INFO  Starting development server...
 
 ## 약간의 변경 사항 적용하기
 
-일단 Vue 로고를 제거합시다. `App.vue` 파일을 열고, 템플릿 섹션에서 [`<img>`](/ko/docs/Web/HTML/Element/img) 요소를 지워보세요.
+일단 Vue 로고를 제거합시다. `App.vue` 파일을 열고, 템플릿 섹션에서 [`<img>`](/ko/docs/Web/HTML/Reference/Elements/img) 요소를 지워보세요.
 
 ```vue
 <img alt="Vue logo" src="./assets/logo.png" />

@@ -3,8 +3,6 @@ title: <details>：揭露細節元素
 slug: Web/HTML/Reference/Elements/details
 ---
 
-{{HTMLSidebar}}
-
 **`<details>`** [HTML](/zh-TW/docs/Web/HTML) 元素創建了一個揭露小部件，在小部件被切換為「開啟」狀態時，信息只有可見。必須使用 {{HTMLElement("summary")}} 元素提供摘要或標籤。
 
 通常，揭露小部件在螢幕上以小三角形呈現，該三角形旋轉（或扭曲）以指示開啟/關閉狀態，並帶有三角形旁邊的標籤。`<summary>` 元素的內容用作揭露小部件的標籤。`<details>` 的內容提供了 `<summary>` 的{{glossary("accessible description", "無障礙描述")}}。
@@ -66,7 +64,8 @@ details[open] summary {
 
     `name` 屬性指定一個組名——給多個 `<details>` 元素相同的 `name` 值以將它們分組。只能同時打開組中的一個 `<details>` 元素——打開一個將導致另一個關閉。如果多個分組的 `<details>` 元素都具有 `open` 屬性，則僅在源順序中的第一個元素會呈現為打開狀態。
 
-    > **備註：** `<details>` 元素不必在源中相鄰以成為同一組的一部分。
+    > [!NOTE]
+    > `<details>` 元素不必在源中相鄰以成為同一組的一部分。
 
 ## 事件
 

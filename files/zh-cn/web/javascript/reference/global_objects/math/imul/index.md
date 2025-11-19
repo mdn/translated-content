@@ -3,8 +3,6 @@ title: Math.imul()
 slug: Web/JavaScript/Reference/Global_Objects/Math/imul
 ---
 
-{{JSRef}}
-
 该函数将两个参数分别转换为 32 位整数，相乘后返回 32 位结果，类似 C 语言的 32 位整数相乘。
 
 {{InteractiveExample("JavaScript Demo: Math.imul()")}}

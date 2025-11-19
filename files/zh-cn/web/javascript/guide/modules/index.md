@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5f76b99045f87349ed030bbd6a3c2e43badb3c22
 ---
 
-{{jsSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}
+{{Previous("Web/JavaScript/Guide/Meta_programming")}}
 
 这篇指南会给你入门 JavaScript 模块的全部信息。
 
@@ -659,7 +659,8 @@ export { Circle } from "./shapes/circle.js";
 
 它们从各个子模块中获取导出，并有效地从 `shapes.js` 模块中获取它们。
 
-> **备注：** `shapes.js` 中引用的导出基本上通过文件重定向，并且实际上并不存在，因此你将无法在同一文件中编写任何有用的相关代码。
+> [!NOTE]
+> `shapes.js` 中引用的导出基本上通过文件重定向，并且实际上并不存在，因此你将无法在同一文件中编写任何有用的相关代码。
 
 所以现在在 `main.js` 文件中，我们可以通过替换来访问所有三个模块类
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 92b03e46cef6be37de60799363e3e33e3415b491
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`Content-Length`** 标头表示发送给接收方的消息体的大小（以字节为单位）。
 
 <table class="properties">

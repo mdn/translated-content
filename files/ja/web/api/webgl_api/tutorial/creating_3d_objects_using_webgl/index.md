@@ -165,7 +165,8 @@ return {
 
 次に、立方体のインデックスバッファーを使用して描画するコードを `drawScene()` 関数に追加し、新しい {{domxref("WebGLRenderingContext.bindBuffer()", "gl.bindBuffer()")}} と {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}} 呼び出しを追加する必要があります。
 
-> **メモ:** `drawScene()` 関数の中で、 `gl.useProgram` の行の直前に以下のコードを追加しましょう。
+> [!NOTE]
+> `drawScene()` 関数の中で、 `gl.useProgram` の行の直前に以下のコードを追加しましょう。
 
 ```js
 // どのインデックスを頂点のインデックスに使用するかを WebGL に指示する
@@ -202,7 +203,8 @@ let cubeRotation = 0.0;
 function drawScene(gl, programInfo, buffers, cubeRotation) {
 ```
 
-> **メモ:** `drawScene()` 関数の `mat4.rotate` 呼び出しを以下のコードに置き換えましょう。
+> [!NOTE]
+> `drawScene()` 関数の `mat4.rotate` 呼び出しを以下のコードに置き換えましょう。
 
 ```js
 mat4.rotate(
@@ -225,7 +227,8 @@ mat4.rotate(
 ); // 回転軸 (X)
 ```
 
-> **メモ:** `main()` 関数内で、 `drawScene()` を呼び出して `squareRotation` を更新するコードを、代わりに `cubeRotation` を渡して更新するように置き換えます。
+> [!NOTE]
+> `main()` 関数内で、 `drawScene()` を呼び出して `squareRotation` を更新するコードを、代わりに `cubeRotation` を渡して更新するように置き換えます。
 
 ```js
 drawScene(gl, programInfo, buffers, cubeRotation);

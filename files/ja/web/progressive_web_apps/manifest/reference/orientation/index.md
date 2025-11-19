@@ -2,10 +2,8 @@
 title: orientation
 slug: Web/Progressive_web_apps/Manifest/Reference/orientation
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
-
-{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 `orientation` はマニフェストのメンバーで、ウェブアプリケーションの既定の方向を指定します。
 アプリが起動時および使用中にどのように表示されるべきかを、端末の画面の向きに関連して定義します。特に、複数の方向に対応している端末で具体的な内容が定義されます。
@@ -308,5 +306,5 @@ l10n:
 
 - [画面方向 API](/ja/docs/Web/API/Screen_Orientation_API)
 - [画面の向きの制御](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
-- [端末の方向のためのメディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [端末の方向のためのメディアクエリーの使用](/ja/docs/Web/CSS/Guides/Media_queries/Using)
 - [学習: レスポンシブデザイン](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)

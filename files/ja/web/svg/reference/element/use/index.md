@@ -47,7 +47,8 @@ svg {
 - {{SVGAttr("height")}}
   - : この use 要素の高さです。<br/>_値の型_: [**`<length>`**](/ja/docs/Web/SVG/Guides/Content_type#length); _既定値_: `0`; _アニメーション_: **可**
 
-> **メモ:** `width` および `height` は `use` 要素では効果がありません。ただし、参照される要素に [viewBox](/ja/docs/Web/SVG/Reference/Attribute/viewBox) がある場合を除きます。 すなわち、 `use` が `svg` または `symbol` 要素を参照していた時だけ効果があります。
+> [!NOTE]
+> `width` および `height` は `use` 要素では効果がありません。ただし、参照される要素に [viewBox](/ja/docs/Web/SVG/Reference/Attribute/viewBox) がある場合を除きます。 すなわち、 `use` が `svg` または `symbol` 要素を参照していた時だけ効果があります。
 
 > [!NOTE]
 > SVG2 から、 `x`, `y`, `width`, `height` は*位置プロパティ*となり、すなわちこれらの属性がその要素への CSS プロパティとしても使用することができるようになりました。
@@ -57,7 +58,7 @@ svg {
 `use` のほとんどの属性は、 `use` から*参照*される要素に既にある属性を上書き**しません**。 (これは CSS のスタイル属性がカスケードで「以前」に設定されたものを上書きする方法とは異なります)。
 参照された要素が対応する属性をすでに定義している場合、 `use` 要素の {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}, {{SVGAttr("href")}} の各属性**のみ**、後述するする効果を持つ、あるいは持つ可能性があります。ただし、参照された要素に設定されていないその他の属性は、 `use` 要素に適用される**可能性があります**。
 
-クローンされたノードは公開されないので、 [CSS](/ja/docs/Web/CSS) を使って `use` 要素とその隠れた子孫要素にスタイル付けをする場合は注意が必要です。[CSS の継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)を使用して明示的に要求しない限り、CSS 属性は隠された複製の DOM によって継承されることが保証されません。
+クローンされたノードは公開されないので、 [CSS](/ja/docs/Web/CSS) を使って `use` 要素とその隠れた子孫要素にスタイル付けをする場合は注意が必要です。[CSS の継承](/ja/docs/Web/CSS/Guides/Cascade/Inheritance)を使用して明示的に要求しない限り、CSS 属性は隠された複製の DOM によって継承されることが保証されません。
 
 セキュリティ上の理由で、ブラウザーは[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)を `use` 要素に適用して、 {{SVGAttr("href")}} 属性にあるオリジンをまたがる URL を読み込むことを拒否することがあります。現在のところ、 `use` 要素の同一オリジンポリシーを設定する方法は定義されていません。
 

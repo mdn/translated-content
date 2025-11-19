@@ -3,8 +3,6 @@ title: 典型的 HTTP 会话
 slug: Web/HTTP/Guides/Session
 ---
 
-{{HTTPSidebar}}
-
 在像 HTTP 这样的客户端——服务器（Client-Server）协议中，会话分为三个阶段：
 
 1. 客户端建立一条 TCP 连接（如果传输层不是 TCP，也可以是其他适合的连接）。

@@ -2,14 +2,12 @@
 title: 502 Bad Gateway
 slug: Web/HTTP/Reference/Status/502
 l10n:
-  sourceCommit: 8ec1d24d4f935e73f39df9a7d69e58c098ebb003
+  sourceCommit: dd0fe980a26938d585691d1429c8a941fa6824ff
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`502 Bad Gateway`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)ステータスコードで、ゲートウェイまたは{{Glossary("Proxy_server", "プロキシー")}}として機能しているサーバーが上流のサーバーから不正なレスポンスを受け取ったことを示しています。
 
-このレスポンスは、サーバーエラーの一般的な「例外処理」という意味では、{{HTTPStatus("500", "500 Internal Server Error")}} レスポンスと似ています。
+このレスポンスは、サーバーエラーの一般的な "catch-all" という意味では、{{HTTPStatus("500", "500 Internal Server Error")}} レスポンスと似ています。
 違いは、エラーが発生したリクエストチェーンのポイントが特定されている点です。
 元のサーバーがゲートウェイに有効な HTTP エラーレスポンスを送信した場合、`502` をクライアントに渡すのではなく、レスポンスを渡すべきです。
 これにより、失敗の理由が明確になります。プロキシーまたはゲートウェイが元のサーバーから HTTP レスポンスを受信していない場合、代わりに {{HTTPStatus("504", "504 Gateway Timeout")}} をクライアントに送信します。

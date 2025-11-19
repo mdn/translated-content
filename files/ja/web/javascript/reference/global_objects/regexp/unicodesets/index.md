@@ -1,13 +1,25 @@
 ---
 title: RegExp.prototype.unicodeSets
+short-title: unicodeSets
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets
 l10n:
-  sourceCommit: 3c33463072905e81ac620dd9780313369029b498
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
 **`unicodeSets`** は {{jsxref("RegExp")}} インスタンスのアクセサープロパティで、この正規表現に `v` フラグが使用されているかどうかを返します。
+
+{{InteractiveExample("JavaScript デモ: RegExp.prototype.unicodeSets")}}
+
+```js interactive-example
+const regex1 = /[\p{Lowercase}&&\p{Script=Greek}]/;
+const regex2 = /[\p{Lowercase}&&\p{Script=Greek}]/v;
+
+console.log(regex1.unicodeSets);
+// 予想される結果: false
+
+console.log(regex2.unicodeSets);
+// 予想される結果: true
+```
 
 ## 解説
 
@@ -19,7 +31,8 @@ l10n:
 
 一部の `u` モードの正規表現は `v` モードで無効になることがあります。具体的には、文字クラスの構文が異なり、文字通りに表示できない文字があります。詳しくは [`v` モード文字クラス](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v_モード文字クラス)を参照してください。
 
-> **メモ:** `v`モードは書記素クラスターを 1 文字として解釈しません。例えば、`/[🇺🇳]/v` は `"🇺"` に一致します。
+> [!NOTE]
+> `v`モードは書記素クラスターを 1 文字として解釈しません。例えば、`/[🇺🇳]/v` は `"🇺"` に一致します。
 
 `unicodeSets` の設定アクセサーは `undefined` です。このプロパティを直接変更することはできません。
 
@@ -44,12 +57,12 @@ console.log(regex.unicodeSets); // true
 ## 関連情報
 
 - {{jsxref("RegExp.prototype.lastIndex")}}
-- {{JSxRef("RegExp.prototype.dotAll")}}
-- {{JSxRef("RegExp.prototype.global")}}
-- {{JSxRef("RegExp.prototype.hasIndices")}}
-- {{JSxRef("RegExp.prototype.ignoreCase")}}
-- {{JSxRef("RegExp.prototype.multiline")}}
-- {{JSxRef("RegExp.prototype.source")}}
-- {{JSxRef("RegExp.prototype.sticky")}}
-- {{JSxRef("RegExp.prototype.unicode")}}
+- {{jsxref("RegExp.prototype.dotAll")}}
+- {{jsxref("RegExp.prototype.global")}}
+- {{jsxref("RegExp.prototype.hasIndices")}}
+- {{jsxref("RegExp.prototype.ignoreCase")}}
+- {{jsxref("RegExp.prototype.multiline")}}
+- {{jsxref("RegExp.prototype.source")}}
+- {{jsxref("RegExp.prototype.sticky")}}
+- {{jsxref("RegExp.prototype.unicode")}}
 - [RegExp v flag with set notation and properties of strings](https://v8.dev/features/regexp-v-flag) on v8.dev (2022)

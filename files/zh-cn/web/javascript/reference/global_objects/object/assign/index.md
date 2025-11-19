@@ -3,8 +3,6 @@ title: Object.assign()
 slug: Web/JavaScript/Reference/Global_Objects/Object/assign
 ---
 
-{{JSRef}}
-
 **`Object.assign()`** 静态方法将一个或者多个*源对象*中所有{{jsxref("Object/propertyIsEnumerable", "可枚举", "", 1)}}的{{jsxref("Object/hasOwn", "自有属性", "", 1)}}复制到*目标对象*，并返回修改后的目标对象。
 
 {{InteractiveExample("JavaScript Demo: Object.assign()")}}
@@ -51,7 +49,8 @@ Object.assign(target, ...sources)
 
 如果赋值期间出错，例如如果属性不可写，则会抛出 {{jsxref("TypeError")}}；如果在抛出异常之前已经添加了一些属性，则这些属性会被保留，而 `target` 对象也会被修改。
 
-> **备注：** `Object.assign()` 不会在源对象值为 {{jsxref("null")}} 或 {{jsxref("undefined")}} 时抛出错误。
+> [!NOTE]
+> `Object.assign()` 不会在源对象值为 {{jsxref("null")}} 或 {{jsxref("undefined")}} 时抛出错误。
 
 ## 示例
 

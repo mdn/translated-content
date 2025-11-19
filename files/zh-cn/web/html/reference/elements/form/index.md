@@ -3,8 +3,6 @@ title: <form>：表单元素
 slug: Web/HTML/Reference/Elements/form
 ---
 
-{{HTMLSidebar}}
-
 **HTML `<form>` 元素**表示文档中的一个区域，此区域包含交互控件，用于向 Web 服务器提交信息。
 
 {{InteractiveExample("HTML Demo: &lt;form&gt;", "tabbed-standard")}}
@@ -54,7 +52,8 @@ label {
 - `accept`{{Deprecated_Inline}}
   - : 一个逗号分隔的列表，包括服务器能接受的内容类型。
 
-    > **备注：** **此属性已在 HTML5 中被移除并且不再被使用**。作为替代，可以使用 `<input type=file>` 元素中的 [`accept`](/zh-CN/docs/Web/HTML/Reference/Elements/input#accept) 属性。
+    > [!NOTE]
+    > **此属性已在 HTML5 中被移除并且不再被使用**。作为替代，可以使用 `<input type=file>` 元素中的 [`accept`](/zh-CN/docs/Web/HTML/Reference/Elements/input#accept) 属性。
 
 - `accept-charset`
   - : 服务器接受的{{Glossary("character encoding", "字符编码")}}。规范允许使用单个不区分大小写的值——`"UTF-8"`，反应了这种编码的普遍性（历史上，可以以逗号分隔列表或空格分隔列表的形式指定多个字符编码）。

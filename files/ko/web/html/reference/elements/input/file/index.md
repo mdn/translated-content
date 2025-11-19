@@ -81,7 +81,9 @@ label {
 
 파일 입력 칸의 [`value`](/ko/docs/Web/HTML/Element/input#value) 특성은 선택한 파일의 경로를 나타내는 {{domxref("DOMString")}}을 담습니다. 사용자가 여러 개의 파일을 선택한 경우 `value`는 파일 목록의 첫 번째 파일을 가리키며, 나머지 파일은 요소의 {{domxref("HTMLInputElement.files")}} 속성으로 가져올 수 있습니다.
 
-> **참고:**1. 아직 아무런 파일도 선택하지 않은 경우 빈 문자열(`""`)을 사용합니다. 2. 악의적인 소프트웨어가 사용자의 파일 구조를 알아내는 것을 방지하기 위해, 값 문자열은 항상 [C:\fakepath\를 앞에 포함](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly)합니다.
+> [!NOTE]
+>
+> 1. 아직 아무런 파일도 선택하지 않은 경우 빈 문자열(`""`)을 사용합니다. 2. 악의적인 소프트웨어가 사용자의 파일 구조를 알아내는 것을 방지하기 위해, 값 문자열은 항상 [C:\fakepath\를 앞에 포함](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly)합니다.
 
 ## 추가 특성
 
@@ -111,7 +113,8 @@ label {
 
 [`accept`](/ko/docs/Web/HTML/Attributes/accept) 특성이 이미지나 비디오 캡처 데이터를 요구할 경우, [`capture`](/ko/docs/Web/HTML/Attributes/capture) 특성으로는 어떤 카메라를 사용할지 지정할 수 있습니다. `user` 값은 전면 카메라(사용자를 향한 카메라)와 마이크를, `environment` 값은 후면 카메라와 마이크를 사용해야 함을 나타냅니다. `capture` 특성을 누락한 경우 {{Glossary("user agent", "사용자 에이전트")}}가 어떤 쪽을 선택할지 스스로 결정합니다. 요청한 방향의 카메라를 사용할 수 없는 경우 사용자 에이전트는 자신이 선호하는 기본 모드로 대체할 수 있습니다.
 
-> **참고:** `capture`는 과거 불리언 특성이었으며, 존재할 경우 파일 선택 창을 요청하는 대신 장치의 카메라나 마이크 등 미디어 캡처 장치를 요청했었습니다.
+> [!NOTE]
+> `capture`는 과거 불리언 특성이었으며, 존재할 경우 파일 선택 창을 요청하는 대신 장치의 카메라나 마이크 등 미디어 캡처 장치를 요청했었습니다.
 
 ### `files`
 
@@ -133,7 +136,8 @@ label {
 
 `webkitdirectory` 불리언 특성이 존재할 경우 사용자의 파일 선택 창에서 디렉토리만 선택 가능해야 함을 나타냅니다. {{domxref("HTMLInputElement.webkitdirectory")}} 문서를 방문해 보다 자세한 정보와 예제를 알아보세요.
 
-> **참고:** `webkitdirectory`는 원래 WebKit 기반 브라우저에서만 구현했었으나, Microsoft Edge와 Firefox(50 이상)도 지원합니다. 그러나, 비록 상대적으로 널리 지원하고는 있으나, 여전히 비표준 특성이므로 대안이 없는 경우에만 사용해야 합니다.
+> [!NOTE]
+> `webkitdirectory`는 원래 WebKit 기반 브라우저에서만 구현했었으나, Microsoft Edge와 Firefox(50 이상)도 지원합니다. 그러나, 비록 상대적으로 널리 지원하고는 있으나, 여전히 비표준 특성이므로 대안이 없는 경우에만 사용해야 합니다.
 
 ## 고유 파일 유형 지정자
 
@@ -199,7 +203,7 @@ div {
 - `size`
   - : 파일의 크기를 바이트 단위로 나타낸 값.
 - `type`
-  - : 파일의 [MIME 유형](/ko/docs/Web/HTTP/MIME_types).
+  - : 파일의 [MIME 유형](/ko/docs/Web/HTTP/Guides/MIME_types).
 - `webkitRelativePath` {{non-standard_inline}}
   - : [`webkitdirectory`](#webkitdirectory) 특성을 사용한 경우, 기준 디렉토리에 대한 파일의 상대적인 경로. 비표준 특성이므로 사용에 주의가 필요합니다.
 
@@ -368,7 +372,8 @@ var preview = document.querySelector(".preview");
 input.style.opacity = 0;
 ```
 
-> **참고:** {{cssxref("visibility", "visibility: hidden")}}, {{cssxref("display", "display: none")}}로 숨길 경우 접근성 보조 기술이 파일 입력 칸을 상호작용 할 수 없는 상태라고 인식하기 때문에 {{cssxref("opacity")}}를 대신 사용합니다.
+> [!NOTE]
+> {{cssxref("visibility", "visibility: hidden")}}, {{cssxref("display", "display: none")}}로 숨길 경우 접근성 보조 기술이 파일 입력 칸을 상호작용 할 수 없는 상태라고 인식하기 때문에 {{cssxref("opacity")}}를 대신 사용합니다.
 
 그 다음으로는 입력 칸에 [이벤트 수신기](/ko/docs/Web/API/EventTarget/addEventListener)를 부착해 그 값이 달라지는지(예제의 경우, 파일을 선택할 때) 지켜봅니다. 이벤트 수신기는 밑에서 만들 `updateImageDisplay()` 함수를 호출하게 됩니다.
 
@@ -385,7 +390,7 @@ input.addEventListener("change", updateImageDisplay);
 - 뒤에서 작성할 `validFileType()` 함수를 사용해 순회 중인 파일이 올바른 유형, 즉 `accept` 특성에 속한 파일인지 판별합니다.
 - 올바른 파일이라면,
   - `<div>` 안의 목록에 해당 파일의 이름과 크기를 항목으로 추가합니다. 이름은 `file.name`과 `file.size`로 가져옵니다. 또 다른 함수인 `returnFileSize()`는 파일 크기를 보기 좋게 바이트/KB/MB로 서식해 출력합니다. (브라우저는 바이트 크기로만 알려줍니다)
-  - {{domxref("URL.createObjectURL", "URL.createObjectURL(curFiles[i])")}}를 호출해 이미지 미리보기 썸네일을 생성하고, 새로 만든 {{htmlelement("img")}} 태그의 [`src`](/ko/docs/Web/HTML/Element/img#src)에 지정한 후, 이미지도 목록의 항목에 추가합니다.
+  - {{domxref("URL.createObjectURL", "URL.createObjectURL(curFiles[i])")}}를 호출해 이미지 미리보기 썸네일을 생성하고, 새로 만든 {{htmlelement("img")}} 태그의 [`src`](/ko/docs/Web/HTML/Reference/Elements/img#src)에 지정한 후, 이미지도 목록의 항목에 추가합니다.
 
 - 파일 유형이 유효하지 않은 경우 사용자에게 다른 파일을 선택해야 한다고 알려주는 메시지를 표시합니다.
 

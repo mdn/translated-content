@@ -60,6 +60,8 @@ slug: Web/Accessibility/Guides/Mobile_accessibility_checklist
 - 觸控事件處理器**必須**只有在`touchend`事件上觸發。
 - 觸控目標**必須**提供使用者足夠大的互動操作(有用的觸控目標大小指引請參見[BBC Mobile Accessibility Guidelines](https://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size))。
 
-> **備註：** [Tanaguru 自動無障礙測試服務](http://www.tanaguru.com/)提供有用的方法去發現一些發生於網頁或安裝的網頁應用程式(如 Firefox OS)無障礙錯誤。你可在[tanaguru.org](http://tanaguru.org/)找到更多關於 Tanaguru 技術開發，以及貢獻該專案的資訊。
+> [!NOTE]
+> [Tanaguru 自動無障礙測試服務](http://www.tanaguru.com/)提供有用的方法去發現一些發生於網頁或安裝的網頁應用程式(如 Firefox OS)無障礙錯誤。你可在[tanaguru.org](http://tanaguru.org/)找到更多關於 Tanaguru 技術開發，以及貢獻該專案的資訊。
 
-> **備註：** [本文件原始版本](https://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html)由 [Yura Zenevich](https://yzen.github.io/) 撰寫。
+> [!NOTE]
+> [本文件原始版本](https://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html)由 [Yura Zenevich](https://yzen.github.io/) 撰寫。

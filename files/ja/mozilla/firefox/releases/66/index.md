@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 66 は、米国時間 2019 年 3 月 19 日 にリリースされました。このページでは、開発者に影響する Firefox 66 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -28,8 +26,8 @@ Firefox 66 は、米国時間 2019 年 3 月 19 日 にリリースされまし�
 ### CSS
 
 - [スクロールアンカリング](https://drafts.csswg.org/css-scroll-anchoring/)を、デスクトップ版 Firefox に実装しました (モバイル版は未実装です)。{{cssxref("overflow-anchor")}} プロパティを含みます ([Firefox バグ 1305957](https://bugzil.la/1305957))。
-- [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors) で、大文字・小文字の区別に関する修飾子 `s` をサポートしました ([Firefox バグ 1512386](https://bugzil.la/1512386))。
-- いくつかの [論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values) ショートハンドと、フローに関係する border radius プロパティを実装しました:
+- [属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors) で、大文字・小文字の区別に関する修飾子 `s` をサポートしました ([Firefox バグ 1512386](https://bugzil.la/1512386))。
+- いくつかの [論理的プロパティ](/ja/docs/Web/CSS/Guides/Logical_properties_and_values) ショートハンドと、フローに関係する border radius プロパティを実装しました:
   - {{cssxref("padding-block")}} および {{cssxref("padding-inline")}} ([Firefox バグ 1519847](https://bugzil.la/1519847))。
   - {{cssxref("margin-block")}} および {{cssxref("margin-inline")}} ([Firefox バグ 1519944](https://bugzil.la/1519944))。
   - {{cssxref("inset")}}、{{cssxref("inset-block")}}、{{cssxref("inset-inline")}} ([Firefox バグ 1520229](https://bugzil.la/1520229))。

@@ -6,9 +6,10 @@ original_slug: Web/HTML/Global_attributes/contextmenu
 
 {{HTMLSidebar("Global_attributes")}}
 
-> **경고:** [contextmenu 특성은 폐기되었으며](https://html.spec.whatwg.org/multipage/obsolete.html#contextmenu), 모든 브라우저에서 제거될 것입니다.
+> [!WARNING]
+> [contextmenu 특성은 폐기되었으며](https://html.spec.whatwg.org/multipage/obsolete.html#contextmenu), 모든 브라우저에서 제거될 것입니다.
 
-**`contextmenu`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 이 요소의 컨텍스트 메뉴로 사용될 {{HTMLElement("menu")}}의 [`id`](/ko/docs/Web/HTML/Global_attributes/id)입니다.
+**`contextmenu`** [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)은 이 요소의 컨텍스트 메뉴로 사용될 {{HTMLElement("menu")}}의 [`id`](/ko/docs/Web/HTML/Reference/Global_attributes/id)입니다.
 
 컨텍스트 메뉴는 마우스의 우클릭(right-click)과 같은 사용자 상호작용 중에 나타나는 메뉴를 말합니다. HTML5에서는 이 메뉴를 커스터마이징할 수 있습니다. 다음은 계층 메뉴(nested menu)를 포함한 구현 예제입니다.
 
@@ -100,5 +101,5 @@ function changeImage() {
 
 ## See also
 
-- All [global attributes](/ko/docs/Web/HTML/Global_attributes)
+- All [global attributes](/ko/docs/Web/HTML/Reference/Global_attributes)
 - {{domxref("HTMLElement.contextMenu")}}

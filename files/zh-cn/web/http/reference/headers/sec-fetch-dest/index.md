@@ -3,8 +3,6 @@ title: Sec-Fetch-Dest
 slug: Web/HTTP/Reference/Headers/Sec-Fetch-Dest
 ---
 
-{{HTTPSidebar}}
-
 **`Sec-Fetch-Dest`** {{Glossary("Fetch metadata request header", "Fetch 元数据请求标头")}}指示请求的目标，即数据的来源以及如何使用这些获取到的数据。
 
 这允许服务器根据请求是否采用了适当的使用方式来确定是否为请求提供服务。例如，具有 `audio` 目标的请求应请求音频数据，而不是其他类型的资源（例如，包含敏感用户信息的文档）。

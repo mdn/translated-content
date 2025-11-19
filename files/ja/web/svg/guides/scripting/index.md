@@ -61,13 +61,15 @@ const svgDoc = document.getElementById("iframe_element").contentDocument;
 
 また、 `document.getElementById("svg_elem_name").getSVGDocument()` を用いても同じ結果を得ることができます。
 
-> **メモ:** `SVGDocument` インターフェイスに言及しているドキュメントを見かけることがあります。 SVG 2 より前は、 SVG 文書はこのインターフェイスを使って表現されていました。しかし、現在では SVG 文書は代わりに {{domxref("XMLDocument")}} インターフェイスを用いて表現されています。
+> [!NOTE]
+> `SVGDocument` インターフェイスに言及しているドキュメントを見かけることがあります。 SVG 2 より前は、 SVG 文書はこのインターフェイスを使って表現されていました。しかし、現在では SVG 文書は代わりに {{domxref("XMLDocument")}} インターフェイスを用いて表現されています。
 
 ### 文書をまたがるスクリプト処理 - JavaScript 関数の呼び出し
 
 HTML 文書に埋め込まれた SVG ファイルから HTML ファイルの中にある JavaScript 関数を呼び出すとき、その関数を参照するには `parent.functionName()` を使うべきです。Adobe SVG viewer プラグインは `functionName()` の利用を許可していますが、このようなことを行うには適していません。
 
-> **メモ:** [SVG wiki](https://web.archive.org/web/20100223210744/http://wiki.svg.org/Inter-Document_Communication) によると、 JavaScript の変数 `"parent"` は Adobe の SVG バージョン 6 プレビュープラグインでは壊れているとのことです。回避策として、`"parent"`の代わりに`"top"`を使用することが提案されています。このプラグインはベータ版なので、おそらく無視しても大丈夫でしょう。
+> [!NOTE]
+> [SVG wiki](https://web.archive.org/web/20100223210744/http://wiki.svg.org/Inter-Document_Communication) によると、 JavaScript の変数 `"parent"` は Adobe の SVG バージョン 6 プレビュープラグインでは壊れているとのことです。回避策として、`"parent"`の代わりに`"top"`を使用することが提案されています。このプラグインはベータ版なので、おそらく無視しても大丈夫でしょう。
 
 更なる情報といくつかの例は [SVG wiki inter-document scripting page](https://web.archive.org/web/20100223210744/http://wiki.svg.org/Inter-Document_Communication) で見つかります。
 

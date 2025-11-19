@@ -6,10 +6,10 @@ original_slug: WebAssembly/Using_the_JavaScript_API
 
 {{WebAssemblySidebar}}
 
-[Emscripten과 같은 도구를 사용하여 다른 언어의 모듈을 컴파일](/ko/docs/WebAssembly/C_to_Wasm)했거나 [코드를 직접로드하여 실행](/ko/docs/WebAssembly/Loading_and_running) 해봤다면 다음 단계에서는 WebAssembly JavaScript API의 다른 기능을 사용하는 방법에 대해 자세히 알아 봅니다.
+[Emscripten과 같은 도구를 사용하여 다른 언어의 모듈을 컴파일](/ko/docs/WebAssembly/Guides/C_to_Wasm)했거나 [코드를 직접로드하여 실행](/ko/docs/WebAssembly/Guides/Loading_and_running) 해봤다면 다음 단계에서는 WebAssembly JavaScript API의 다른 기능을 사용하는 방법에 대해 자세히 알아 봅니다.
 
 > [!NOTE]
-> 여기에서 언급한 기본 개념에 익숙하지 않거나 더 많은 설명이 필요한 경우 [WebAssembly concepts](/ko/docs/WebAssembly/Concepts)를 먼저 읽어보세요.
+> 여기에서 언급한 기본 개념에 익숙하지 않거나 더 많은 설명이 필요한 경우 [WebAssembly concepts](/ko/docs/WebAssembly/Guides/Concepts)를 먼저 읽어보세요.
 
 ## 몇가지 간단한 예제
 
@@ -22,7 +22,7 @@ WebAssembly JavaScript API를 사용하는 방법과 웹 페이지에서 wasm �
 
 1. 먼저 wasm 모듈이 필요합니다! [simple.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm) 파일을 로컬 컴퓨터의 새 디렉토리에 저장하세요.
 2. 다음으로, wasm 파일과 동일한 디렉토리에 index.html이라는 간단한 HTML 파일을 작성해보세요 ([simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)을 참고하면 쉽습니다.)
-3. 이제 여기서 무슨 일이 벌어지는지 이해하기 쉽도록 하기위해 wasm 모듈 ([Converting WebAssembly format to wasm](/ko/docs/WebAssembly/Text_format_to_Wasm#a_first_look_at_the_text_format)을 참고)의 텍스트 표현을 살펴 보겠습니다.
+3. 이제 여기서 무슨 일이 벌어지는지 이해하기 쉽도록 하기위해 wasm 모듈 ([Converting WebAssembly format to wasm](/ko/docs/WebAssembly/Guides/Text_format_to_Wasm#a_first_look_at_the_text_format)을 참고)의 텍스트 표현을 살펴 보겠습니다.
 
    ```rust
    (module
@@ -138,7 +138,8 @@ memory.grow(1);
 
 1. `memory.wasm`을 이전과 같이 같은 폴더에 복사합니다.
 
-   > **참고:** [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat)에서 모듈의 텍스트 표현을 볼 수 있습니다.
+   > [!NOTE]
+   > [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat)에서 모듈의 텍스트 표현을 볼 수 있습니다.
 
 2. `memory.html` 샘플 파일로 돌아가서 이전처럼 wasm 모듈을 가져 와서 컴파일하고 인스턴스화합니다. - 스크립트의 맨 아래에 다음을 추가하세요.
 
@@ -170,7 +171,8 @@ Memory 객체의 버퍼 ([`Memory.prototype.buffer`](/ko/docs/WebAssembly/JavaSc
 - 그것들은 자바 스크립트가 모듈 컴파일 이전에 또는 모듈 컴파일과 동시에 메모리의 초기 내용을 가져오고 생성 할 수 있도록합니다.
 - WebAssembly에서 동적 연결을 구현하는 데 중요한 구성 요소인 multiple module instances에서 단일 Memory 객체를 가져올 수 있습니다.
 
-> **참고:** [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html)에서 완전히 동작하는 예제를 확인할 수 있습니다. ([see it live also](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html))
+> [!NOTE]
+> [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html)에서 완전히 동작하는 예제를 확인할 수 있습니다. ([see it live also](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html))
 
 ## 테이블 인스턴스
 
@@ -190,7 +192,8 @@ WebAssembly 테이블은 JavaScript 및 WebAssembly 코드로 액세스 할 수 
 
 1. 새로운 디렉토리에 `table.wasm`을 복사하여 만듭니다.
 
-   > **참고:** [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat)에서 모듈의 텍스트 표현(text representation)을 확인할 수 있습니다.
+   > [!NOTE]
+   > [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat)에서 모듈의 텍스트 표현(text representation)을 확인할 수 있습니다.
 
 2. [HTML template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)를 같은 디렉토리에 복사하여 `table.html`라는 파일명으로 저장합니다.
 3. wasm 모듈을 fetch, compile, instantiate하기 전 다음의 코드를 HTML body아래의 {{htmlelement("script")}} 요소안에 넣습니다.
@@ -271,7 +274,8 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 );
 ```
 
-> **참고:** [running live on GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html)에서 라이브 예제를 확인하고 에서 [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html) 소스코드를 확인 할 수 있습니다.
+> [!NOTE]
+> [running live on GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html)에서 라이브 예제를 확인하고 에서 [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html) 소스코드를 확인 할 수 있습니다.
 
 ## Multiplicity
 
@@ -282,7 +286,7 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 - 하나의 모듈 인스턴스는 0-1 테이블 인스턴스를 사용할 수 있습니다. 이것은 C 함수 포인터를 구현하는 데 사용되는 인스턴스의 "함수 주소 공간"입니다. WebAssembly의 향후 버전에서는 향후 모듈 인스턴스 당 0-N 테이블 인스턴스를 허용 할 수 있습니다.
 - 하나의 메모리 또는 테이블 인스턴스는 0-N 모듈 인스턴스에서 사용할 수 있습니다.이 인스턴스는 모두 동일한 주소 공간을 공유하므로 [dynamic linking](http://webassembly.org/docs/dynamic-linking)이 가능합니다.
 
-Understanding text format에서 multiplicity in action를 확인 할 수있습니다. - [Mutating tables and dynamic linking section](/ko/docs/WebAssembly/Understanding_the_text_format#mutating_tables_and_dynamic_linking)을 참조하십시오.
+Understanding text format에서 multiplicity in action를 확인 할 수있습니다. - [Mutating tables and dynamic linking section](/ko/docs/WebAssembly/Guides/Understanding_the_text_format#mutating_tables_and_dynamic_linking)을 참조하십시오.
 
 ## 요약
 
@@ -291,5 +295,5 @@ Understanding text format에서 multiplicity in action를 확인 할 수있습�
 ## 바깥 고리
 
 - [webassembly.org](http://webassembly.org/)
-- [WebAssembly concepts](/ko/docs/WebAssembly/Concepts)
+- [WebAssembly concepts](/ko/docs/WebAssembly/Guides/Concepts)
 - [WebAssembly on Mozilla Research](https://research.mozilla.org/webassembly/)

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: cb8143261f5cd54788285574ab0c427ba3f01a04
 ---
 
-{{HTTPSidebar}}
-
 オリジン間リソース共有 (Cross-Origin Resource Sharing, {{Glossary("CORS")}}) は、 {{Glossary("HTTP")}} ヘッダーベースの仕組みを使用して、ある{{glossary("Origin", "オリジン")}}で動作しているウェブアプリケーションに、異なるオリジンにある選択されたリソースへのアクセス権を与えるようブラウザーに指示するための仕組みです。ウェブアプリケーションは、自分とは異なるオリジン (ドメイン、プロトコル、ポート番号) にあるリソースをリクエストするとき、オリジン間 HTTP リクエストを実行します。
 
 オリジン間リクエストとは、例えば `https://domain-a.com` で提供されているウェブアプリケーションのフロントエンド JavaScript コードが {{domxref("Window/fetch", "fetch()")}} を使用して `https://domain-b.com/data.json` へリクエストを行うようなものです。
@@ -25,7 +23,7 @@ CORS の仕組みは、安全なオリジン間のリクエストとブラウザ
 - ウェブフォント（CSS の `@font-face` で別ドメインのフォントを利用するため）。[これによりサーバーは、許可したウェブサイトのみからオリジンをまたがって読み込んで利用できる TrueType フォントを提供することができます。](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
 - [WebGL テクスチャ](/ja/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)。
 - {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}} を使用してキャンバスへ描かれた画像や映像のフレーム
-- [画像から生成する CSS シェイプ](/ja/docs/Web/CSS/CSS_shapes/Shapes_from_images)。
+- [画像から生成する CSS シェイプ](/ja/docs/Web/CSS/Guides/Shapes/From_images)。
 
 この記事では、 HTTP ヘッダーの要件を含むオリジン間リソース共有の全般的な説明を行います。
 
@@ -136,7 +134,8 @@ Access-Control-Allow-Origin: *
 Access-Control-Allow-Origin: https://foo.example
 ```
 
-> **メモ:** [資格情報を含むリクエスト](#資格情報を含むリクエスト)に応答する場合、サーバーは `Access-Control-Allow-Origin` ヘッダーにオリジンを値として指定する必要があり、`*` ワイルドカードを指定することはできません。
+> [!NOTE]
+> [資格情報を含むリクエスト](#資格情報を含むリクエスト)に応答する場合、サーバーは `Access-Control-Allow-Origin` ヘッダーにオリジンを値として指定する必要があり、`*` ワイルドカードを指定することはできません。
 
 ### プリフライトリクエスト
 
@@ -455,7 +454,8 @@ Origin: <origin>
 
 origin は、リクエストを開始したサーバーを示す URL です。ここにパス情報は含めず、サーバー名だけにします。
 
-> **メモ:** `origin` の値は `null` にすることができます。
+> [!NOTE]
+> `origin` の値は `null` にすることができます。
 
 なお、すべてのアクセス制御リクエストにおいて、 {{HTTPHeader("Origin")}} ヘッダーは**常に**送信されます。
 

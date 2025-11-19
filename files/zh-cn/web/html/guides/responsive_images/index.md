@@ -5,8 +5,6 @@ l10n:
   sourceCommit: dee5effadcb82cf2de9b50c128f7a050919ed523
 ---
 
-{{HTMLSidebar}}
-
 在本文中我们将学习响应式图片（一种在不同的屏幕尺寸、分辨率或具有其他类似特性的设备上都呈现良好的图片），并且探究 HTML 提供的一些帮助实现它们的工具，这有助于提升（网页在）不同设备上的性能。响应式图片仅是[响应式设计](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)的一部分，你在学习 CSS 的过程中将学到相关的知识。
 
 <table class="standard-table">
@@ -102,7 +100,7 @@ web 刚面世时，这样的问题并不存在，在上世纪 90 年代早期至
 3. 当媒体条件为真时，图像将填充的**插槽的宽度**（`480px`）
 
 > [!NOTE]
-> 在 `sizes` 中，可以使用任何[长度值](/zh-CN/docs/Web/CSS/length)。例如，与其提供绝对宽度（如 `480px`），不如提供相对于视口的宽度（如 `50vw`），但不能提供百分比。你也许已经注意到最后一个插槽的宽度是没有媒体条件的（当没有任何一个媒体条件为真时，它默认生效）。在浏览器成功匹配某一个媒体条件之后，剩下所有的条件都会被忽略，所以要注意媒体条件的顺序。
+> 在 `sizes` 中，可以使用任何[长度值](/zh-CN/docs/Web/CSS/Reference/Values/length)。例如，与其提供绝对宽度（如 `480px`），不如提供相对于视口的宽度（如 `50vw`），但不能提供百分比。你也许已经注意到最后一个插槽的宽度是没有媒体条件的（当没有任何一个媒体条件为真时，它默认生效）。在浏览器成功匹配某一个媒体条件之后，剩下所有的条件都会被忽略，所以要注意媒体条件的顺序。
 
 有了这些属性后，浏览器会：
 
@@ -204,7 +202,7 @@ img {
 - **美术设计**：当你想为不同布局提供不同剪裁的图片——比如在桌面布局上显示完整的、横向图片，而在手机布局上显示一张剪裁过的、突出重点的纵向图片，可以用 {{htmlelement("picture")}} 元素来实现。
 - **分辨率切换**：当你想要为窄屏提供更小的图片时（因为小屏幕不需要像桌面端显示那么大的图片）；以及你想为高/低分辨率屏幕提供不同分辨率的图片时，都可以通过[矢量图](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)（SVG 图片）或者 [`srcset`](/zh-CN/docs/Web/HTML/Reference/Elements/img#srcset) 以及 [`sizes`](/zh-CN/docs/Web/HTML/Reference/Elements/img#sizes) 属性来实现。
 
-此时整个[多媒体与嵌入](/zh-CN/docs/Learn_web_development/Core/Structuring_content)模块接近尾声！在继续下一个模块之前，你现在唯一要做的就是进行一次[多媒体与嵌入的测试](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page)，看看你学得怎样。希望你玩得开心！
+此时整个[多媒体与嵌入](/zh-CN/docs/Learn_web_development/Core/Structuring_content)模块接近尾声！在继续下一个模块之前，你现在唯一要做的就是进行一次[多媒体与嵌入的测试](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Splash_page)，看看你学得怎样。希望你玩得开心！
 
 ## 参见
 

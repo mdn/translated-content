@@ -10,7 +10,7 @@ l10n:
 
 **`<td>`** は [HTML](/ja/docs/Web/HTML) の要素で、表でデータを包含するセルを定義します。これは*モデル*に関与します。
 
-{{InteractiveExample("HTML Demo: &lt;td&gt;", "tabbed-taller")}}
+{{InteractiveExample("HTML デモ: &lt;td&gt;", "tabbed-taller")}}
 
 ```html interactive-example
 <table>
@@ -115,7 +115,7 @@ caption {
 - `axis` {{deprecated_inline}}
   - : この属性は、空白文字で区切られた文字列のリストを持ちます。各文字列は、このヘッダーを適用するセルグループの `id` です。
 - `bgcolor` {{deprecated_inline}}
-  - : この属性は、列の各セルの背景色を定義します。値は [6 桁の 16 進数による RGB コード](/ja/docs/Web/CSS/hex-color)で、先頭に '`#`' が付きます。定義済みの[色キーワード](/ja/docs/Web/CSS/named-color)の一つを使うこともできます。
+  - : この属性は、列の各セルの背景色を定義します。値は [6 桁の 16 進数による RGB コード](/ja/docs/Web/CSS/Reference/Values/hex-color)で、先頭に '`#`' が付きます。定義済みの[色キーワード](/ja/docs/Web/CSS/Reference/Values/named-color)の一つを使うこともできます。
 
     同様の効果を与えるには、 CSS の {{ cssxref("background-color") }} プロパティを使用してください。
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 311a791dde7caf8039bbc09bd81347a747f703b2
 ---
 
-{{AddonSidebar}}
-
 WebExtension API 的目标是提供对所有主要浏览器的兼容性，因此扩展程序只需最小的改动即可在任何浏览器上运行。
 
 不过，Chrome 浏览器（以及基于 Chromium 的浏览器）、Firefox 浏览器和 Safari 浏览器之间存在很大差异。特别是：
@@ -76,7 +74,8 @@ WebExtension API 的目标是提供对所有主要浏览器的兼容性，因此
 
 作为一种移植辅助工具，WebExtensions 的 Firefox 实现支持使用回调的 `chrome` 和使用 Promise 的 `browser`。这意味着许多 Chrome 扩展无需更改即可在 Firefox 中运行。
 
-> **备注：** `browser` 命名空间由 Firefox 和 Safari 支持。在 [Chrome bug 798169](https://crbug.com/798169) 解决之前，Chrome 浏览器不提供 `browser` 命名空间。
+> [!NOTE]
+> `browser` 命名空间由 Firefox 和 Safari 支持。在 [Chrome bug 798169](https://crbug.com/798169) 解决之前，Chrome 浏览器不提供 `browser` 命名空间。
 
 如果你在编写 WebExtension 时确实要用到 `browser` 和 promise，我们也开发了 polyfill 来保证扩展可以在 Chrome 里运行：<https://github.com/mozilla/webextension-polyfill>。
 

@@ -12,9 +12,10 @@ original_slug: Web/HTML/Attributes/autocomplete
 
 {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 요소에 `autocomplete` 특성을 지정하지 않은 경우, 브라우저는 요소의 양식 소유자, 즉 조상 {{HTMLElement("form")}} 요소 또는 [`form`](/ko/docs/Web/HTML/Element/input#form) 특성의 값을 `id` 특성으로 사용하는 `<form>` 요소의 `autocomplete` 특성을 사용합니다.
 
-더 많은 정보는 {{HTMLElement("form")}} 요소의 [`autocomplete`](/ko/docs/Web/HTML/Element/form#autocomplete) 특성을 참고하세요.
+더 많은 정보는 {{HTMLElement("form")}} 요소의 [`autocomplete`](/ko/docs/Web/HTML/Reference/Elements/form#autocomplete) 특성을 참고하세요.
 
-> **참고:** `<input>`/`<select>`/`<textarea>` 요소가 다음 조건을 만족해야 사용자 에이전트가 자동완성을 제공할 수도 있습니다.
+> [!NOTE]
+> `<input>`/`<select>`/`<textarea>` 요소가 다음 조건을 만족해야 사용자 에이전트가 자동완성을 제공할 수도 있습니다.
 >
 > 1. `name` 또는 `id` 특성 존재
 > 2. `<form>` 요소의 자손일 것
@@ -183,7 +184,8 @@ original_slug: Web/HTML/Attributes/autocomplete
 - `address-line2`
   - : 상세주소. 아파트의 경우 동/호를 작성합니다.
 
-    > **참고:** `street-address`를 사용하는 경우 도로명, 건물번호와 상세주소를 같이 작성합니다.
+    > [!NOTE]
+    > `street-address`를 사용하는 경우 도로명, 건물번호와 상세주소를 같이 작성합니다.
 
 우편번호 찾기 기능을 사용하는 경우 행정구역과 도로명, 건물번호까지는 사용자가 직접 입력하지 않는 점도 유의하세요.
 
@@ -215,4 +217,4 @@ Exampleville CA 95555
 - {{htmlelement("textarea")}} 요소.
 - {{htmlelement("form")}} 요소.
 - [HTML 양식](/ko/docs/Learn_web_development/Extensions/Forms)
-- 모든 [전역 특성](/ko/docs/Web/HTML/Global_attributes).
+- 모든 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes).

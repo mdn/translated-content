@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 57 (別名 Firefox Quantum) は、米国時間 2017 年 11 月 14 日にリリースされました。このページでは、開発者に影響する Firefox 57 の変更点をまとめています。
 
 ## Firefox 57 === Firefox Quantum
@@ -30,7 +28,7 @@ _変更なし。_
 
 ### CSS
 
-- [`display-mode`](/ja/docs/Web/CSS/@media/display-mode) メディアクエリーの値 `minimal-ui` および `standalone` をサポートしました ([Firefox バグ 1369815](https://bugzil.la/1369815))。[ウェブアプリマニフェストの `display` フィールド](/ja/docs/Web/Progressive_web_apps/Manifest#display) もご覧ください。
+- [`display-mode`](/ja/docs/Web/CSS/Reference/At-rules/@media/display-mode) メディアクエリーの値 `minimal-ui` および `standalone` をサポートしました ([Firefox バグ 1369815](https://bugzil.la/1369815))。[ウェブアプリマニフェストの `display` フィールド](/ja/docs/Web/Progressive_web_apps/Manifest#display) もご覧ください。
 - `grid-row-gap` および `grid-column-gap` プロパティが、{{CSSxRef("grid")}} ショートハンドプロパティでリセットされないようになりました ([Firefox バグ 1387410](https://bugzil.la/1387410))。
 - 設定項目 `layout.css.clip-path-shapes.enabled` を削除しました ([Firefox バグ 1399767](https://bugzil.la/1399767))。この設定項目で、{{CSSxRef("clip-path")}} の {{cssxref("&lt;basic-shape&gt;")}} のサポートを無効化できました。これは Firefox 54 で導入されたものであり、今後は無効化できません。
 

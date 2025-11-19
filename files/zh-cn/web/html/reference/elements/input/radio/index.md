@@ -3,8 +3,6 @@ title: <input type="radio">
 slug: Web/HTML/Reference/Elements/input/radio
 ---
 
-{{HTMLSidebar}}
-
 **`radio`** 类型的 {{htmlelement("input")}} 元素通常用于一个**单选组**中，其中包含一组描述一系列相关选项的单选按钮。
 
 在给定单选组中，同时只可以选择一个选项。单选按钮通常渲染为小圆圈，当选中该选项时，圆圈被填充或高亮。
@@ -49,7 +47,8 @@ input {
 
 ![旧时收音机上的按钮。](old-radio.jpg)
 
-> **备注：** [复选框](/zh-CN/docs/Web/HTML/Reference/Elements/input/checkbox)类似于单选按钮，但是有个重要的区别——单选按钮为选择集合中的其中一项而设计，然而复选框允许决定单个值的选定情况。当多个控件存在时，单选按钮允许选择其中的一个，而多选按钮允许选择其中多个。
+> [!NOTE]
+> [复选框](/zh-CN/docs/Web/HTML/Reference/Elements/input/checkbox)类似于单选按钮，但是有个重要的区别——单选按钮为选择集合中的其中一项而设计，然而复选框允许决定单个值的选定情况。当多个控件存在时，单选按钮允许选择其中的一个，而多选按钮允许选择其中多个。
 
 ## 值
 

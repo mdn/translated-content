@@ -10,7 +10,7 @@ l10n:
 
 **`<style>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書あるいは文書の一部分のスタイル情報を含みます。 `<style>` 要素を含んでいる文書のコンテンツに適用される CSS を含みます。
 
-{{InteractiveExample("HTML Demo: &lt;style&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;style&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <style>
@@ -42,20 +42,20 @@ p {
 
 文書に複数の `<style>` および `<link>` が含まれている場合、これらは含まれている文書の DOM 上の順序で適用されます。 — 予期しないカスケード問題を防ぐために、含まれている順序が正しいことを確認してください。
 
-`<link>` 要素と同じ方法で、 `<style>` 要素に `media` 属性を付けて[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)を含めると、ビューポートの幅などのメディア特性に依存して内部スタイルシートを選択的に適用することができます。
+`<link>` 要素と同じ方法で、 `<style>` 要素に `media` 属性を付けて[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)を含めると、ビューポートの幅などのメディア特性に依存して内部スタイルシートを選択的に適用することができます。
 
 ## 属性
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `media`
-  - : この属性はスタイルを適用するメディアを定義します。値は[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)であり、省略した場合の既定値は `all` です。
+  - : この属性はスタイルを適用するメディアを定義します。値は[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)であり、省略した場合の既定値は `all` です。
 - `nonce`
   - : [style-src コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src)内のインラインスクリプトをホワイトリストに入れるために使われる暗号ノンス（ワンタイム番号）です。サーバーはポリシーを送信するたびに一意のノンス値を生成する必要があります。それ以外の方法でリソースのポリシーのバイパスとして推測できないノンスを提供することが重要です。
 - `title`
   - : この属性は[代替スタイルシート](/ja/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet)のセットを指定します。
 - `blocking` {{Experimental_Inline}}
-  - : この属性は、クリティカルなサブリソースの取得時に、特定の処理をブロックすべきであることを明示的に示します。[`@import`](/ja/docs/Web/CSS/@import) でインポートされたスタイルシートは、ふつうクリティカルなサブリソースと見なされますが、一方で [`background-image`](/ja/docs/Web/CSS/background-image) やフォントはそうとはみなされません。
+  - : この属性は、クリティカルなサブリソースの取得時に、特定の処理をブロックすべきであることを明示的に示します。[`@import`](/ja/docs/Web/CSS/Reference/At-rules/@import) でインポートされたスタイルシートは、ふつうクリティカルなサブリソースと見なされますが、一方で [`background-image`](/ja/docs/Web/CSS/Reference/Properties/background-image) やフォントはそうとはみなされません。
     - `render`: 画面へのコンテンツの描画がブロックされます。
 
 ### 非推奨の属性
@@ -93,7 +93,7 @@ p {
 
 ### 複数の style 要素
 
-この例には、2 つの `<style>` 要素が含まれています。 — 競合する宣言は、[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)が同じであれば、後の `<style>` 要素が優先されることに注意してください。
+この例には、2 つの `<style>` 要素が含まれています。 — 競合する宣言は、[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)が同じであれば、後の `<style>` 要素が優先されることに注意してください。
 
 ```html
 <!doctype html>

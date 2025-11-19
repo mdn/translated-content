@@ -2,7 +2,7 @@
 title: Web API
 slug: Web/API
 l10n:
-  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
+  sourceCommit: f4c0e822eb6a1ea438c7342f43a3e4809adbd56a
 ---
 
 ウェブのコードを書く時は、数多くの Web API が利用できます。以下に、ウェブアプリやサイトを開発する際に利用することができる可能性があるすべてのインターフェイス（オブジェクト型）のリストを挙げます。
@@ -14,6 +14,7 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 ### ア
 
 - [位置情報 API](/ja/docs/Web/API/Geolocation_API)
+- [インク API](/ja/docs/Web/API/Ink_API)
 - [IndexedDB](/ja/docs/Web/API/IndexedDB_API)
 - [ウィンドウ制御 API](/ja/docs/Web/API/Window_Management_API)
 - [ウィンドウ制御オーバーレイ API](/ja/docs/Web/API/Window_Controls_Overlay_API)
@@ -38,7 +39,7 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 
 - [サーバー送信イベント](/ja/docs/Web/API/Server-sent_events)
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)
 - [CSS カスタムハイライト API](/ja/docs/Web/API/CSS_Custom_Highlight_API)
 - [ストレージ API](/ja/docs/Web/API/Storage_API)
 - [ストレージアクセス API](/ja/docs/Web/API/Storage_Access_API)
@@ -83,7 +84,3 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 利用可能なすべてのインターフェイス (すなわちオブジェクトの型) の一覧です。
 
 {{APIListAlpha}}
-
-## ブラウザーの互換性
-
-- [Web API イベントリファレンス](/ja/docs/Web/Events)

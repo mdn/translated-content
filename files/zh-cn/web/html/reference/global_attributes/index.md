@@ -3,8 +3,6 @@ title: 全局属性
 slug: Web/HTML/Reference/Global_attributes
 ---
 
-{{HTMLSidebar("Global_attributes")}}
-
 **全局属性**是所有 HTML 元素共有的属性；它们可以用于所有元素，即使属性可能对某些元素不起作用。
 
 我们可以在所有的 [HTML 元素](/zh-CN/docs/Web/HTML/Reference/Elements)，*甚至是在标准里没有指定的元素*上指定全局属性。这意味着任何非标准元素仍必须能够允许应用这些属性，即使使用这些元素意味着文档不再是 HTML5 兼容的。例如，虽然 `<foo>` 不是一个有效的 HTML 元素，但是 HTML5 兼容的浏览器隐藏了标记为 `<foo hidden>…</foo>` 的内容。
@@ -29,7 +27,7 @@ slug: Web/HTML/Reference/Global_attributes
 - [`autofocus`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/autofocus)
   - : 表示一个元素将在页面加载时自动聚焦，或者在其所属的 {{HTMLElement("dialog")}} 显示时被聚焦。该属性是一个布尔值，初始化为 false。
 - [`class`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/class)
-  - : 一个以空格分隔的元素的类名列表，它允许 CSS 和 Javascript 通过[类选择器](/zh-CN/docs/Web/CSS/Class_selectors)或 DOM 方法 {{DOMxRef("Document.getElementsByClassName()")}} 来选择和访问特定的元素。
+  - : 一个以空格分隔的元素的类名列表，它允许 CSS 和 Javascript 通过[类选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Class_selectors)或 DOM 方法 {{DOMxRef("Document.getElementsByClassName()")}} 来选择和访问特定的元素。
 - [`contenteditable`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/contenteditable)
   - : 一个[枚举](/zh-CN/docs/Glossary/Enumerated)属性，表示元素是否可被用户编辑。如果可以，浏览器会调整元素的部件以允许编辑。该属性必须是下列值之一：
     - `true` 或者*空字符串*，表明元素是可被编辑的；
@@ -63,7 +61,8 @@ slug: Web/HTML/Reference/Global_attributes
 - [`is`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/is)
   - : 允许指定标准 HTML 元素的行为如同已注册的自定义内置元素一样（有关更多详细信息，请参阅[使用自定义元素](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)）。
 
-    > **备注：** `item*` 属性是 [WHATWG HTML 微数据特性](https://html.spec.whatwg.org/multipage/microdata.html#microdata)的一部分。
+    > [!NOTE]
+    > `item*` 属性是 [WHATWG HTML 微数据特性](https://html.spec.whatwg.org/multipage/microdata.html#microdata)的一部分。
 
 - [`itemid`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/itemid)
   - : 项的唯一全局标识符。

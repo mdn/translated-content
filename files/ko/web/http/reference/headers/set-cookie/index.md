@@ -6,14 +6,13 @@ l10n:
   sourceCommit: a86c551ce8f5c6936b14640357eaa4da71a857d7
 ---
 
-{{HTTPSidebar}}
-
 **`Set-Cookie`** HTTP 응답 헤더는 서버에서 사용자 에이전트로 쿠키를 보내는데 사용되며, 사용자 에이전트가 나중에 서버로 쿠키를 보낼 수 있습니다.
 여러 개의 쿠키를 보내기 위해서는 같은 응답에 여러 개의 **`Set-Cookie`** 헤더를 보내야 합니다.
 
-> **경고:** `Set-Cookie`는 프론트엔드 코드에 노출된 모든 응답으로부터 [필터링해야 하는](https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0) [금지된 응답 헤더 이름](https://fetch.spec.whatwg.org/#forbidden-response-header-name)에 정의된 Fetch 명세의 요구에 따라, 브라우저는 `Set-Cookie` 헤더에 접근하는 프론트엔드 JavaScript 코드를 차단합니다.
+> [!WARNING]
+> `Set-Cookie`는 프론트엔드 코드에 노출된 모든 응답으로부터 [필터링해야 하는](https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0) [금지된 응답 헤더 이름](https://fetch.spec.whatwg.org/#forbidden-response-header-name)에 정의된 Fetch 명세의 요구에 따라, 브라우저는 `Set-Cookie` 헤더에 접근하는 프론트엔드 JavaScript 코드를 차단합니다.
 
-더 많은 정보는 [HTTP 쿠키](/ko/docs/Web/HTTP/Cookies) 안내서를 참고하세요.
+더 많은 정보는 [HTTP 쿠키](/ko/docs/Web/HTTP/Guides/Cookies) 안내서를 참고하세요.
 
 <table class="properties">
   <tbody>
@@ -138,12 +137,14 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
         This Set-Cookie was blocked because it had the "SameSite=None" attribute but did not have the "Secure" attribute, which is required in order to use "SameSite=None".
         ```
 
-        > **참고:** [`Secure`](#secure) 쿠키는 HTTPS 프로토콜을 통해 암호화된 요청에서만 서버로 전송합니다. 안전하지 않은 사이트(`http:`)는 `Secure` 지시어로 쿠키를 설정할 수 없으므로 `SameSite=None`을 사용할 수 없습니다.
+        > [!NOTE]
+        > [`Secure`](#secure) 쿠키는 HTTPS 프로토콜을 통해 암호화된 요청에서만 서버로 전송합니다. 안전하지 않은 사이트(`http:`)는 `Secure` 지시어로 쿠키를 설정할 수 없으므로 `SameSite=None`을 사용할 수 없습니다.
 
 - `Secure` {{optional_inline}}
   - : 쿠키가 localhost를 제외한 `https:` 스키마에서 요청할 때만 쿠키가 전송되는걸 나타냅니다. 따라서 [중간자](/ko/docs/Glossary/MitM) 공격에 더 강합니다.
 
-    > **참고:** `Secure`가 쿠키 안에 있는 세션 키, 로그인 정보 등과 같은 민감한 정보에 대한 모든 접근을 예방한다고 가정하지 마십시오. 이 속성이 있는 쿠키는 클라이언트의 하드디스크에 접근하거나, `HttpOnly` 쿠키 속성이 설정되지 않은 경우 JavaScirpt를 통해 여전히 읽기/수정이 모두 가능합니다.
+    > [!NOTE]
+    > `Secure`가 쿠키 안에 있는 세션 키, 로그인 정보 등과 같은 민감한 정보에 대한 모든 접근을 예방한다고 가정하지 마십시오. 이 속성이 있는 쿠키는 클라이언트의 하드디스크에 접근하거나, `HttpOnly` 쿠키 속성이 설정되지 않은 경우 JavaScirpt를 통해 여전히 읽기/수정이 모두 가능합니다.
     >
     > 안전하지 않은 사이트(`http:`)는 Chrome 52, Firefox 52 이후로 `Secure` 속성을 설정할 수 없습니다. Chrome 89, Firefox 75이후로 로컬 호스트에서 `Secure` 속성을 설정할 때 `https:` 요구 사항은 무시합니다.
 
@@ -234,7 +235,7 @@ Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 
 ## 같이 보기
 
-- [HTTP 쿠키](/ko/docs/Web/HTTP/Cookies)
+- [HTTP 쿠키](/ko/docs/Web/HTTP/Guides/Cookies)
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
 - [Samesite cookies 설명](https://web.dev/articles/samesite-cookies-explained) (web.dev blog)

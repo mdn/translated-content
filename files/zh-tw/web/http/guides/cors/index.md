@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3c29ffa78c551ea6a61bbb795a5f97a66c6868c0
 ---
 
-{{HTTPSidebar}}
-
 **跨來源資源共享**（{{Glossary("CORS")}}）是一種基於 {{Glossary("HTTP")}} 標頭的機制，允許伺服器指示瀏覽器允許從除其自身以外的任何{{glossary("origin", "來源")}}（域名、協定或通訊埠）加載資源。CORS 還依賴於瀏覽器向承載跨來源資源的伺服器發出「預檢」請求，以檢查伺服器是否允許實際請求。在預檢請求中，瀏覽器會發送標頭，指示將在實際請求中使用的 HTTP 方法和標頭。
 
 一個跨來源請求的範例：從 `https://domain-a.com` 提供的前端 JavaScript 代碼使用 {{domxref("fetch()")}} 請求 `https://domain-b.com/data.json`。
@@ -25,7 +23,7 @@ CORS 機制支持瀏覽器和伺服器之間的安全跨來源請求和數據傳
 - Web 字體（在 CSS 中使用 `@font-face` 進行跨域字體使用），[以便伺服器可以部署僅允許跨來源加載並由被允許的網站使用的 TrueType 字體。](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
 - [WebGL 紋理](/zh-TW/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)。
 - 使用 {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}} 繪製到畫布上的圖像/影片幀。
-- [從圖像生成的 CSS 形狀。](/zh-TW/docs/Web/CSS/CSS_shapes/Shapes_from_images)
+- [從圖像生成的 CSS 形狀。](/zh-TW/docs/Web/CSS/Guides/Shapes/From_images)
 
 這是一篇關於跨來源資源共享的通用文章，包含對必要 HTTP 標頭的討論。
 
@@ -459,7 +457,8 @@ Origin: <origin>
 
 來源是一個 URL，指示發起請求的伺服器。它不包含任何路徑訊息，只有伺服器名稱。
 
-> **備註：** `origin` 值可以是 `null`。
+> [!NOTE]
+> `origin` 值可以是 `null`。
 
 請注意，在任何訪問控制請求中，{{HTTPHeader("Origin")}} 標頭**始終**會被發送。
 

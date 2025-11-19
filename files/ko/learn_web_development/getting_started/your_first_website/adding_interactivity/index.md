@@ -30,7 +30,8 @@ JavaScript 그 자체는 상당히 작지만 아주 유연합니다. 개발자�
 
 하지만, JavaScript에 익숙해지는 것은 HTML과 CSS에 익숙해지는 것보다는 조금 더 어렵습니다. 여러분은 간단한 것부터 시작해 조금씩 지속적으로 꾸준히 나가야 할 것입니다. 시작하기에 앞서 "Hello world!" 예제([기본적인 프로그래밍 예제의 표준](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program))를 작성해 봄으로써 어떻게 페이지에 기본적인 JavaScript를 추가할 수 있는지를 보여드릴 것입니다.
 
-> **경고:** **중요**: 여러분이 우리의 나머지 코스를 따라오지 않으셨다면, [이 예제 코드를 다운](https://github.com/mdn/beginner-html-site-styled/archive/gh-pages.zip) 받으시고 이것을 시작점으로 사용하세요.
+> [!WARNING]
+> **중요**: 여러분이 우리의 나머지 코스를 따라오지 않으셨다면, [이 예제 코드를 다운](https://github.com/mdn/beginner-html-site-styled/archive/gh-pages.zip) 받으시고 이것을 시작점으로 사용하세요.
 
 1. 먼저, 여러분의 테스트 사이트로 가서 `scripts`라는 새로운 폴더를 생성하세요. 다음으로 방금 만든 스크립트 폴더 내에 `main.js` 라는 새 파일을 생성하세요. 그 파일을 `scripts` 폴더에 저장하시면 됩니다.
 2. 다음은, `index.html` 파일로 가서 닫는 `</body>` 태그의 바로 앞에 새로운 줄을 추가하고 다음 요소를 입력하세요:
@@ -49,7 +50,8 @@ JavaScript 그 자체는 상당히 작지만 아주 유연합니다. 개발자�
 
 5. 끝으로, HTML과 JavaScript 파일이 저장되었는지 확인하시고, 브라우저에서 `index.html`를 열어보세요. 여러분은 다음과 같은 것을 보게 될 것입니다:![](hello-world.png)
 
-> **참고:** {{htmlelement("script")}} 요소를 HTML 파일의 맨 아래쪽 근처에 둔 이유는 HTML은 파일 내에 나타나는 순서대로 브라우저에 로드(load)되기 때문입니다. 만약 JavaScript가 먼저 로드되고 자신의 아래 쪽에 있는 HTML에 영향을 준다고 하면, 영향을 줄 HTML 보다 먼저 JavaScript가 로드되기 때문에 작동하지 않을 것입니다. 따라서, HTML 페이지의 맨 아래쪽 근처에 JavaScript를 두는 것이 최고의 전략입니다.
+> [!NOTE]
+> {{htmlelement("script")}} 요소를 HTML 파일의 맨 아래쪽 근처에 둔 이유는 HTML은 파일 내에 나타나는 순서대로 브라우저에 로드(load)되기 때문입니다. 만약 JavaScript가 먼저 로드되고 자신의 아래 쪽에 있는 HTML에 영향을 준다고 하면, 영향을 줄 HTML 보다 먼저 JavaScript가 로드되기 때문에 작동하지 않을 것입니다. 따라서, HTML 페이지의 맨 아래쪽 근처에 JavaScript를 두는 것이 최고의 전략입니다.
 
 ### 무슨 일이 발생했나요?
 
@@ -64,7 +66,8 @@ JavaScript를 이용하여 본문 제목 텍스트를 "Hello world!"로 변경�
 
 이 모든 것이 작동하는 방식에 대해 더 잘 이해할 수 있도록 JavaScript 언어의 핵심적인 특징을 몇 가지 설명드리겠습니다. 이런 특징은 모든 프로그래밍 언어에서 공통적으로 나타나는 것에 불과하므로 이런 원칙을 숙지한다면 어떤 것이라도 프로그램할 수 있게 될 것입니다!
 
-> **경고:** **중요**: 이 글에서는, 어떤 일이 발생하는지 확인 할 수 있게 JavaScript 콘솔에 예제 코드를 입력합니다. JavaScript 콘솔에 대한 더 자세한 사항은, [브라우저 개발 도구 탐험하기](/ko/docs/Learn/Discover_browser_developer_tools)를 보세요.
+> [!WARNING]
+> **중요**: 이 글에서는, 어떤 일이 발생하는지 확인 할 수 있게 JavaScript 콘솔에 예제 코드를 입력합니다. JavaScript 콘솔에 대한 더 자세한 사항은, [브라우저 개발 도구 탐험하기](/ko/docs/Learn/Discover_browser_developer_tools)를 보세요.
 
 ### 변수
 
@@ -83,7 +86,8 @@ let myVariable;
 > [!NOTE]
 > JavaScript는 대소문자를 구분합니다 — `myVariable`은 `myvariable`과는 다른 변수입니다. 만약 코드에 문제가 생겼다면, 대소문자를 확인해보세요!
 
-> **참고:** `var` 와 `let` 의 차이에 대한 자세한 사항은 [The difference between var and let](/ko/docs/Learn_web_development/Core/Scripting/Variables#the_difference_between_var_and_let)를 참고하세요.
+> [!NOTE]
+> `var` 와 `let` 의 차이에 대한 자세한 사항은 [The difference between var and let](/ko/docs/Learn_web_development/Core/Scripting/Variables#the_difference_between_var_and_let)를 참고하세요.
 
 변수를 선언한 후에, 값을 할당할 수 있습니다:
 
@@ -110,7 +114,7 @@ let myVariable = 'Bob';
 myVariable = 'Steve';
 ```
 
-변수는 여러 [자료형](/ko/docs/Web/JavaScript/Data_structures)을 가질 수 있다는 점을 기억하세요:
+변수는 여러 [자료형](/ko/docs/Web/JavaScript/Guide/Data_structures)을 가질 수 있다는 점을 기억하세요:
 
 | 변수                    | 설명                                                                                                                            | 예시                                                                                                                                  |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -205,7 +209,8 @@ multiply(20, 20);
 multiply(0.5, 3);
 ```
 
-> **참고:** [`return`](/ko/docs/Web/JavaScript/Reference/Statements/return) 문은 브라우저에게 함수로부터 나오는 `result` 변수를 반환하게 함으로써 그 변수를 사용할 수 있게 합니다. 이것은 필수적인 것으로 함수 안에서 정의된 변수는 오직 그 함수 내부에서만 사용 가능하기 때문입니다. 이것을 변수 {{Glossary("Scope", "scoping")}}이라고 합니다. ([변수 영역에 대한 더 많은 것](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#variable_scope) 을 여기서 읽어보세요.)
+> [!NOTE]
+> [`return`](/ko/docs/Web/JavaScript/Reference/Statements/return) 문은 브라우저에게 함수로부터 나오는 `result` 변수를 반환하게 함으로써 그 변수를 사용할 수 있게 합니다. 이것은 필수적인 것으로 함수 안에서 정의된 변수는 오직 그 함수 내부에서만 사용 가능하기 때문입니다. 이것을 변수 {{Glossary("Scope", "scoping")}}이라고 합니다. ([변수 영역에 대한 더 많은 것](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#variable_scope) 을 여기서 읽어보세요.)
 
 ### 이벤트
 

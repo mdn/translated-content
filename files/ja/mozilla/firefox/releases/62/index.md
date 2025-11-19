@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 62 は、米国時間 2018 年 9 月 5 日 にリリースされました。このページでは、開発者に影響する Firefox 62 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -46,7 +44,7 @@ _変更なし。_
 
 #### 廃止
 
-- `-moz-box` および `-moz-inline-box` を除く、[XUL の `display` の値](/ja/docs/Web/CSS/display#xul_values) を、XUL 以外のドキュメントでは廃止しました ([Firefox バグ 1288572](https://bugzil.la/1288572))。
+- `-moz-box` および `-moz-inline-box` を除く、[XUL の `display` の値](/ja/docs/Web/CSS/Reference/Properties/display#xul_values) を、XUL 以外のドキュメントでは廃止しました ([Firefox バグ 1288572](https://bugzil.la/1288572))。
 
 ### SVG
 

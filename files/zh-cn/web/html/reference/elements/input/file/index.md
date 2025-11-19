@@ -3,8 +3,6 @@ title: <input type="file">
 slug: Web/HTML/Reference/Elements/input/file
 ---
 
-{{HTMLSidebar("Input_types")}}
-
 带有 **`type="file"`** 的 {{HTMLElement("input")}} 元素允许用户可以从他们的设备中选择一个或多个文件。选择后，这些文件可以使用[提交表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)的方式上传到服务器上，或者通过 Javascript 代码和[文件 API](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications) 对文件进行操作。
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;file&quot;&gt;", "tabbed-shorter")}}
@@ -96,7 +94,8 @@ label {
 
 [`capture`](/zh-CN/docs/Web/HTML/Reference/Attributes/capture) 属性是一个字符串，如果 [`accept`](/zh-CN/docs/Web/HTML/Reference/Attributes/accept) 属性指出了 input 是图片或者视频类型，则它指定了使用哪个摄像头去获取这些数据。值 `user` 表示应该使用前置摄像头和（或）麦克风。值 `environment` 表示应该使用后置摄像头和（或）麦克风。如果缺少此属性，则{{Glossary("user agent","用户代理")}}可以自由决定做什么。如果请求的前置模式不可用，则用户代理可能退回到其首选的默认模式。
 
-> **备注：** `capture` 以前是一个布尔类型的属性，如果存在，则请求使用设备的媒体捕获设备（如：摄像机），而不是请求一个文件输入。
+> [!NOTE]
+> `capture` 以前是一个布尔类型的属性，如果存在，则请求使用设备的媒体捕获设备（如：摄像机），而不是请求一个文件输入。
 
 ### multiple
 

@@ -253,7 +253,7 @@ p {
 
 가장 기본적인 수준에서, CSS 는 두 가지 요소로 구성됩니다:
 
-- **속성 (Properties)**: 변경할 스타일 기능 (예: [`font-size`](/ko/docs/Web/CSS/font-size), [`width`](/ko/docs/Web/CSS/width), [`background-color`](/ko/docs/Web/CSS/background-color)) 을 나타내는 식별자입니다.
+- **속성 (Properties)**: 변경할 스타일 기능 (예: [`font-size`](/ko/docs/Web/CSS/Reference/Properties/font-size), [`width`](/ko/docs/Web/CSS/Reference/Properties/width), [`background-color`](/ko/docs/Web/CSS/Reference/Properties/background-color)) 을 나타내는 식별자입니다.
 - **값 (Values)**: 지정된 각 속성에는 값이 지정되어 있으며, 이는 해당 스타일 기능을 변경하는 방법 (예: 글꼴, 너비 또는 배경색을 변경하려는 항목) 을 나타냅니다.
 
 아래 이미지는 단일 속성과 값을 강조 표시합니다. 속성 이름은 `color` 이고 값은 `blue` 입니다.
@@ -278,9 +278,11 @@ CSS 속성을 특정 값으로 설정하는 것은 CSS 언어의 핵심 기능�
 - **{{cssxref("color")}}**
 - **{{cssxref("border")}}**
 
-> **경고:** **중요**: 속성을 알 수 없거나 지정된 속성에 대해 값이 유효하지 않은 경우, 선언이 유효하지 않은 것으로 간주되어 브라우저의 CSS 엔진에서 완전히 무시됩니다.
+> [!WARNING]
+> **중요**: 속성을 알 수 없거나 지정된 속성에 대해 값이 유효하지 않은 경우, 선언이 유효하지 않은 것으로 간주되어 브라우저의 CSS 엔진에서 완전히 무시됩니다.
 
-> **경고:** **중요**: CSS (및 기타 웹 표준) 에서, 언어의 불확실성이 발생하는 경우, 미국 맞춤법이 표준으로 합의 되었습니다. 예를 들어, `color` 는 _항상_ `color` 여야 합니다. `colour` 는 작동하지 않습니다.
+> [!WARNING]
+> **중요**: CSS (및 기타 웹 표준) 에서, 언어의 불확실성이 발생하는 경우, 미국 맞춤법이 표준으로 합의 되었습니다. 예를 들어, `color` 는 _항상_ `color` 여야 합니다. `colour` 는 작동하지 않습니다.
 
 ### 함수 (function)
 
@@ -337,7 +339,7 @@ CSS 속성을 특정 값으로 설정하는 것은 CSS 언어의 핵심 기능�
 
 ## @rules
 
-아직, 우리는 [`@rules`](/ko/docs/Web/CSS/At-rule) ("at-rules" 로 발음) 가 발생하지 않았습니다. 이것들은 CSS 에 행동 방법에 대한 지침을 제공하는 특수 규칙입니다. 일부 `@rules` 는 규칙 이름과 값으로 단순합니다. 예를 들어, 추가 스타일 시트를 기본 CSS 스타일 시트로 가져오려면 `@import` 를 사용할 수 있습니다:
+아직, 우리는 [`@rules`](/ko/docs/Web/CSS/CSS_syntax/At-rule) ("at-rules" 로 발음) 가 발생하지 않았습니다. 이것들은 CSS 에 행동 방법에 대한 지침을 제공하는 특수 규칙입니다. 일부 `@rules` 는 규칙 이름과 값으로 단순합니다. 예를 들어, 추가 스타일 시트를 기본 CSS 스타일 시트로 가져오려면 `@import` 를 사용할 수 있습니다:
 
 ```css
 @import "styles2.css";
@@ -564,7 +566,8 @@ margin: 0auto;
 padding- left: 10px;
 ```
 
-> **경고:** `0auto` 는 `margin` 속성 (`0` 과 `auto` 는 두 개의 개별 값임)에 유효한 값으로 인식되지 않으며, 브라우저는 `padding-` 을 유효한 속성으로 인식하지 않습니다. 따라서 항상 공백으로 구분된 값을 구분해야 하지만 속성 이름과 속성 값을 하나의 끊김 없는 문자열로 유지해야 합니다.
+> [!WARNING]
+> `0auto` 는 `margin` 속성 (`0` 과 `auto` 는 두 개의 개별 값임)에 유효한 값으로 인식되지 않으며, 브라우저는 `padding-` 을 유효한 속성으로 인식하지 않습니다. 따라서 항상 공백으로 구분된 값을 구분해야 하지만 속성 이름과 속성 값을 하나의 끊김 없는 문자열로 유지해야 합니다.
 
 **CSS 내부에서 공백을 사용하여 문제를 해결하고 그렇지 않은 것을 확인하십시오.**
 

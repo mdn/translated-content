@@ -150,7 +150,8 @@ legend {
 
 {{HTMLElement("legend")}} 要素はアクセシビリティにとってとても重要です。フィールドセット内の各フォーム要素のラベルの一部として支援技術によって読み上げられます。しかし、上記のようなテクニックを使用しても問題ありません。 legend の内容はこれまでと同じように読み上げられます。見た目の位置が変更されただけです。
 
-> **メモ:** {{cssxref("transform")}} プロパティを使用して `<legend>` の位置指定に役立てることもできます。しかし、例えば `transform: translateY();` を使って配置すると、移動はするものの `<fieldset>` の枠に醜い隙間ができて、簡単には除去できません。
+> [!NOTE]
+> {{cssxref("transform")}} プロパティを使用して `<legend>` の位置指定に役立てることもできます。しかし、例えば `transform: translateY();` を使って配置すると、移動はするものの `<fieldset>` の枠に醜い隙間ができて、簡単には除去できません。
 
 ## 具体的なスタイル設定の例
 
@@ -255,7 +256,7 @@ form {
 }
 ```
 
-注意として、フォームのレイアウトに [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout)と[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout) を使っています。これで、タイトルやフォーム要素といった各要素を配置できます。
+注意として、フォームのレイアウトに [CSS グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)と[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout) を使っています。これで、タイトルやフォーム要素といった各要素を配置できます。
 
 ```css
 h1 {
@@ -338,7 +339,7 @@ textarea {
 
 #### 送信ボタンにスタイル設定する
 
-{{HTMLElement("button")}} 要素は、 CSS によってより便利になります。[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を含めて、行いたいことが何でもできます。
+{{HTMLElement("button")}} 要素は、 CSS によってより便利になります。[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)を含めて、行いたいことが何でもできます。
 
 ```css
 button {
@@ -373,7 +374,7 @@ button:focus {
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: スタイル設定の基本](/ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Styling_basics)をご覧ください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: スタイル設定の基本](/ja/docs/Learn_web_development/Extensions/Forms)をご覧ください。
 
 ## まとめ
 

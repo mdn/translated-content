@@ -46,7 +46,8 @@ _该接口继承了父接口 {{domxref("MouseEvent")}}、{{domxref("UIEvent")}} 
 - {{DOMxRef("WheelEvent.wheelDeltaY")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : 返回一个整数，表示垂直滚动量。
 
-> **备注：** [元素：mousewheel 事件](/zh-CN/docs/Web/API/Element/mousewheel_event)有关于已弃用的属性（`wheelDelta`、`wheelDeltaX` 和 `wheelDeltaY`）的额外说明。
+> [!NOTE]
+> [元素：mousewheel 事件](/zh-CN/docs/Web/API/Element/mousewheel_event)有关于已弃用的属性（`wheelDelta`、`wheelDeltaX` 和 `wheelDeltaY`）的额外说明。
 
 ## 方法
 

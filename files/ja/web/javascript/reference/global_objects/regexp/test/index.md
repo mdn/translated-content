@@ -1,17 +1,16 @@
 ---
 title: RegExp.prototype.test()
+short-title: test()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
 l10n:
-  sourceCommit: 5bdcf72ed6ffc7d4fa878060a548869ed6ae149b
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`test()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、正規表現と指定された文字列を照合するための検索を実行します。一致があった場合は `true` を、それ以外の場合は `false` を返します。
 
 JavaScript の {{jsxref("RegExp")}} オブジェクトは {{jsxref("RegExp/global", "global")}} または {{jsxref("RegExp/sticky", "sticky")}} フラグ（`/foo/g` や `/foo/y` など）を設定すると**ステートフル**になります。これらは前回一致したときの {{jsxref("RegExp/lastIndex", "lastIndex")}} を格納します。これを内部的に使用することで、 `test()` を使用して文字列の複数の照合を反復処理することができます（キャプチャグループを使用）。
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.test", "taller")}}
+{{InteractiveExample("JavaScript デモ: RegExp.prototype.test", "taller")}}
 
 ```js interactive-example
 const str = "table football";
@@ -20,19 +19,19 @@ const regex = new RegExp("foo*");
 const globalRegex = new RegExp("foo*", "g");
 
 console.log(regex.test(str));
-// Expected output: true
+// 予想される結果: true
 
 console.log(globalRegex.lastIndex);
-// Expected output: 0
+// 予想される結果: 0
 
 console.log(globalRegex.test(str));
-// Expected output: true
+// 予想される結果: true
 
 console.log(globalRegex.lastIndex);
-// Expected output: 9
+// 予想される結果: 9
 
 console.log(globalRegex.test(str));
-// Expected output: false
+// 予想される結果: false
 ```
 
 ## 構文
@@ -86,7 +85,8 @@ function testInput(re, str) {
 
 その後にさらに `test(str)` を呼び出すと、 `str` を `lastIndex` から検索します。 `lastIndex` プロパティは `test()` が `true` を返すたびに増え続けます。
 
-> **メモ:** `test()` が `true` を返す限り、 `lastIndex` は別な文字列をテストした場合であっても、リセット*されません*。
+> [!NOTE]
+> `test()` が `true` を返す限り、 `lastIndex` は別な文字列をテストした場合であっても、リセット*されません*。
 
 `test()` が `false` を返した場合、正規表現の `lastIndex` プロパティを呼び出すと `0` にリセットされます。
 

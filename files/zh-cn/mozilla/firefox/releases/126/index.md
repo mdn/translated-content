@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e6fcda9d35359bbfec32ddb42086468701f57ee5
 ---
 
-{{FirefoxSidebar}}
-
 本文提供了有关 Firefox 126 中影响开发者的变更信息。Firefox 126 于 [2024 年 5 月 14 日](https://whattrainisitnow.com/release/?version=126)发布。
 
 ## 为 Web 开发者带来的变化
@@ -49,11 +47,11 @@ l10n:
 
   （[Firefox bug 1322186](https://bugzil.la/1322186)）。
 
-- 现已支持 {{domxref("Element.currentCSSZoom")}} 只读属性，其用于获取元素的实际 CSS [zoom](/zh-CN/docs/Web/CSS/zoom)（[Firefox bug 1880189](https://bugzil.la/1880189)）。
+- 现已支持 {{domxref("Element.currentCSSZoom")}} 只读属性，其用于获取元素的实际 CSS [zoom](/zh-CN/docs/Web/CSS/Reference/Properties/zoom)（[Firefox bug 1880189](https://bugzil.la/1880189)）。
 
 #### DOM
 
-- 定义自定义元素的状态并使用 CSS 选择器进行匹配的特性现已默认可用。自定义状态被表示为可以添加到或从元素的 {{domxref("ElementInternals.states")}} 属性（{{domxref("CustomStateSet")}}）中移除的自定义标识符。CSS [`:state()`](/zh-CN/docs/Web/CSS/:state) 伪类以自定义标识符为参数，并在自定义元素的状态集中存在该标识符时匹配该元素（[Firefox bug 1887543](https://bugzil.la/1887543)）。
+- 定义自定义元素的状态并使用 CSS 选择器进行匹配的特性现已默认可用。自定义状态被表示为可以添加到或从元素的 {{domxref("ElementInternals.states")}} 属性（{{domxref("CustomStateSet")}}）中移除的自定义标识符。CSS [`:state()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:state) 伪类以自定义标识符为参数，并在自定义元素的状态集中存在该标识符时匹配该元素（[Firefox bug 1887543](https://bugzil.la/1887543)）。
 - 现已支持 {{domxref("Selection.direction")}} 属性，其用于指示范围的方向（[Firefox bug 1867058](https://bugzil.la/1867058)）。
 
 #### 媒体、WebRTC 和 Web 音频
@@ -92,7 +90,7 @@ l10n:
 
 - **CSS `shape()` 函数**：`layout.css.basic-shape-shape.enabled`。
 
-  你可以在 {{cssxref("clip-path")}} 和 {{cssxref("offset-path")}} 属性中使用 [`shape()`](/zh-CN/docs/Web/CSS/basic-shape/shape) 函数来定义形状。此函数使你可以更精细地控制可被定义的形状，并提供了比 {{cssxref("path","path()")}} 函数更多的优点（参见 [Firefox bug 1823463](https://bugzil.la/1823463) 以了解 `shape()` 函数在 `clip-path` 中的支持；参见 [Firefox bug 1884424](https://bugzil.la/1884424) 以了解 `shape()` 函数在 `offset-path` 中的支持；参见 [Firefox bug 1884425](https://bugzil.la/1884425) 以了解 `shape()` 的插值支持）。
+  你可以在 {{cssxref("clip-path")}} 和 {{cssxref("offset-path")}} 属性中使用 [`shape()`](/zh-CN/docs/Web/CSS/Reference/Values/basic-shape/shape) 函数来定义形状。此函数使你可以更精细地控制可被定义的形状，并提供了比 {{cssxref("path","path()")}} 函数更多的优点（参见 [Firefox bug 1823463](https://bugzil.la/1823463) 以了解 `shape()` 函数在 `clip-path` 中的支持；参见 [Firefox bug 1884424](https://bugzil.la/1884424) 以了解 `shape()` 函数在 `offset-path` 中的支持；参见 [Firefox bug 1884425](https://bugzil.la/1884425) 以了解 `shape()` 的插值支持）。
 
 ## 更早期的版本
 

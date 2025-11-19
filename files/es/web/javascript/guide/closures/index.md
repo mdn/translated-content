@@ -166,7 +166,7 @@ Ejecuta el código usando [JSFiddle](https://jsfiddle.net/hotae160/).
 
 Los lenguajes como Java le permiten declarar métodos como privados, lo que significa que solo pueden ser llamados por otros métodos de la misma clase.
 
-JavaScript, antes de [clases](/es/docs/Web/JavaScript/Reference/Classes), no tenía una forma nativa de declarar [métodos privados](/es/docs/Web/JavaScript/Reference/Classes/Private_properties#private_methods), pero era posible emular métodos privados usando _closures_. Los métodos privados no solo son útiles para restringir el acceso al código. También proporcionan una forma poderosa de gestionar su espacio de nombres global.
+JavaScript, antes de [clases](/es/docs/Web/JavaScript/Reference/Classes), no tenía una forma nativa de declarar [métodos privados](/es/docs/Web/JavaScript/Reference/Classes/Private_elements#private_methods), pero era posible emular métodos privados usando _closures_. Los métodos privados no solo son útiles para restringir el acceso al código. También proporcionan una forma poderosa de gestionar su espacio de nombres global.
 
 El siguiente código ilustra cómo usar _closures_ para definir funciones públicas que pueden acceder a funciones y variables privadas. Tenga en cuenta que estos _closures_ siguen el [Patrón de diseño de módulo](https://www.google.com/search?q=javascript+module+pattern).
 

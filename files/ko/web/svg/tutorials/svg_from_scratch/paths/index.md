@@ -6,9 +6,9 @@ original_slug: Web/SVG/Tutorial/Paths
 
 {{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
 
-[`<path>`](/ko/docs/Web/SVG/Element/path) 엘리먼트는 SVG [기본 도형](/ko/docs/Web/SVG/Tutorial/Basic_Shapes) 라이브러리에서 가장 강력한 엘리먼트이다. 선과 곡선, 호 등 다양한 형태를 그릴 수 있다.
+[`<path>`](/ko/docs/Web/SVG/Element/path) 엘리먼트는 SVG [기본 도형](/ko/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes) 라이브러리에서 가장 강력한 엘리먼트이다. 선과 곡선, 호 등 다양한 형태를 그릴 수 있다.
 
-패스는 여러 개의 직선과 곡선을 합쳐서 복잡한 도형을 그릴 수 있게 해준다. 직선으로만 이루어진 복잡한 도형은 [polylines](/ko/docs/Web/SVG/Tutorial/Basic_Shapes#polyline)으로도 그릴 수 있지만, 곡선을 묘사할 때 polylines은 패스로 그린 도형에 비해 더 많은 직선이 필요에 확대가 잘 되지 않을 수 있다. 그렇기에 SVG를 그릴 때 패스에 대해 이해하는 것은 매우 중요하다고 할 수 있다. 복잡한 패스를 XML 편집기 또는 일반적인 텍스트 에디터로 그리는 것은 권장하지 않지만, SVG가 표시될 때 문제점을 찾고 고치는 데는 충분히 도움이 될 것이다.
+패스는 여러 개의 직선과 곡선을 합쳐서 복잡한 도형을 그릴 수 있게 해준다. 직선으로만 이루어진 복잡한 도형은 [polylines](/ko/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes#polyline)으로도 그릴 수 있지만, 곡선을 묘사할 때 polylines은 패스로 그린 도형에 비해 더 많은 직선이 필요에 확대가 잘 되지 않을 수 있다. 그렇기에 SVG를 그릴 때 패스에 대해 이해하는 것은 매우 중요하다고 할 수 있다. 복잡한 패스를 XML 편집기 또는 일반적인 텍스트 에디터로 그리는 것은 권장하지 않지만, SVG가 표시될 때 문제점을 찾고 고치는 데는 충분히 도움이 될 것이다.
 
 패스의 모양은 {{ SVGAttr("d") }} 속성 하나로 정의된다([basic shapes](/ko/docs/Web) 참조). `"d"` 속성은 여러 개의 명령어와 그 파라미터들로 이루어진다.
 
@@ -194,7 +194,7 @@ SVG로 그릴 수 있는 다른 형태의 곡선으로는 A라고 부르는 호(
  a rx ry x축-회전각 큰-호-플래그 쓸기-방향-플래그 dx dy
 ```
 
-A 명령어는 일단 x축, y축 반지름을 매개변수로 받는다. 혹시 필요하다면 [ellipse](/ko/docs/Web/SVG/Element/ellipse) 문서에서 두 매개변수가 어떻게 작동하는지 확인해볼 수 있다. 세 번째 매개변수는 호의 회전각을 기술한다. 이는 아래 예제에서 잘 확인할 수 있다.
+A 명령어는 일단 x축, y축 반지름을 매개변수로 받는다. 혹시 필요하다면 [ellipse](/ko/docs/Web/SVG/Reference/Element/ellipse) 문서에서 두 매개변수가 어떻게 작동하는지 확인해볼 수 있다. 세 번째 매개변수는 호의 회전각을 기술한다. 이는 아래 예제에서 잘 확인할 수 있다.
 
 ![SVGArcs_XAxisRotation_with_grid](svgarcs_xaxisrotation_with_grid.png)
 

@@ -3,8 +3,6 @@ title: Expect-CT
 slug: Web/HTTP/Reference/Headers/Expect-CT
 ---
 
-{{HTTPSidebar}}
-
 `Expect-CT` 标头允许站点选择性地报告和/或执行[证书透明度（Certificate Transparency）](/zh-CN/docs/Web/Security/Certificate_Transparency)要求，来防止错误签发的网站证书的使用不被察觉。
 
 证书透明的要求可以通过以下任意一种方式来满足：
@@ -19,7 +17,8 @@ slug: Web/HTTP/Reference/Headers/Expect-CT
 > [!NOTE]
 > 浏览器会**忽略** HTTP 连接的 `Expect-CT` 标头；该标头仅在 HTTPS 连接中有效。
 
-> **备注：** `Expect-CT` 标头可能会在 2021 年 6 月废弃。从 2018 年 5 月起，新的证书默认支持证书签署时间戳（SCT）。2018 年 3 月之前的证书的有效期为 39 个月，这些证书都会在 2021 年 6 月前过期。
+> [!NOTE]
+> `Expect-CT` 标头可能会在 2021 年 6 月废弃。从 2018 年 5 月起，新的证书默认支持证书签署时间戳（SCT）。2018 年 3 月之前的证书的有效期为 39 个月，这些证书都会在 2021 年 6 月前过期。
 
 <table class="properties">
  <tbody>

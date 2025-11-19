@@ -3,8 +3,6 @@ title: Firefox 64 for developers
 slug: Mozilla/Firefox/Releases/64
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 64 は、米国時間 2018 年 12 月 11 日 にリリースされました。このページでは、開発者に影響する Firefox 64 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -33,9 +31,9 @@ _変更なし。_
 
 ### CSS
 
-- [CSS Scrollbars](/ja/docs/Web/CSS/CSS_scrollbars_styling) 仕様の機能をデフォルトで有効化しました ([Firefox バグ 1492012](https://bugzil.la/1492012))。
-- [`pointer:coarse`](/ja/docs/Web/CSS/@media/pointer) を含む、Interaction Media Features を実装しました ([Firefox バグ 1035774](https://bugzil.la/1035774))。[`any-pointer`](/ja/docs/Web/CSS/@media/any-pointer) および [`any-hover`](/ja/docs/Web/CSS/@media/any-hover) の実装については、[Firefox バグ 1483111](https://bugzil.la/1483111) をご覧ください。
-- [`prefers-reduced-motion`](/ja/docs/Web/CSS/@media/prefers-reduced-motion) メディア特性を Android 版 Firefox でサポートしました ([Firefox バグ 1478505](https://bugzil.la/1478505))。
+- [CSS Scrollbars](/ja/docs/Web/CSS/Guides/Scrollbars_styling) 仕様の機能をデフォルトで有効化しました ([Firefox バグ 1492012](https://bugzil.la/1492012))。
+- [`pointer:coarse`](/ja/docs/Web/CSS/Reference/At-rules/@media/pointer) を含む、Interaction Media Features を実装しました ([Firefox バグ 1035774](https://bugzil.la/1035774))。[`any-pointer`](/ja/docs/Web/CSS/Reference/At-rules/@media/any-pointer) および [`any-hover`](/ja/docs/Web/CSS/Reference/At-rules/@media/any-hover) の実装については、[Firefox バグ 1483111](https://bugzil.la/1483111) をご覧ください。
+- [`prefers-reduced-motion`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) メディア特性を Android 版 Firefox でサポートしました ([Firefox バグ 1478505](https://bugzil.la/1478505))。
 - CSS の {{cssxref("&lt;gradient&gt;")}} 値で複数の color stop を持つ構文をサポートしました。例えば `yellow 25%, yellow 50%` を `yellow 25% 50%` と書くことができます ([Firefox バグ 1352643](https://bugzil.la/1352643))。
 - {{cssxref("text-transform")}} プロパティで `full-size-kana` 値を受け入れるようになりました ([Firefox バグ 1498148](https://bugzil.la/1498148))。
 - ウェブ互換性の問題を緩和するため、{{cssxref("appearance", "-webkit-appearance")}} をサポートしました ([Firefox バグ 1368555](https://bugzil.la/1368555))。
@@ -47,8 +45,8 @@ _変更なし。_
 #### 廃止
 
 - {{CSSxRef("display")}} の非標準の値である [`-moz-box` および `-moz-inline-box`](/ja/docs/Mozilla/Gecko/Chrome/CSS/display-xul) が、ウェブコンテンツで使用できなくなりました ([Firefox バグ 1496961](https://bugzil.la/1496961))。
-- 非標準の {{CSSxRef("::-moz-tree")}} [擬似要素](/ja/docs/Web/CSS/Pseudo-elements) が、ウェブコンテンツで使用できなくなりました ([Firefox バグ 1496961](https://bugzil.la/1496961))。
-- 設定項目 `layout.css.filters.enabled` を削除しました。[CSS filters](/ja/docs/Web/CSS/CSS_filter_effects) は無効化できません ([Firefox バグ 1408841](https://bugzil.la/1408841))。
+- 非標準の {{CSSxRef("::-moz-tree")}} [擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements) が、ウェブコンテンツで使用できなくなりました ([Firefox バグ 1496961](https://bugzil.la/1496961))。
+- 設定項目 `layout.css.filters.enabled` を削除しました。[CSS filters](/ja/docs/Web/CSS/Guides/Filter_effects) は無効化できません ([Firefox バグ 1408841](https://bugzil.la/1408841))。
 - {{cssxref("overflow")}} の 2 値構文で block を 1 番目、inline を 2 番目に入れ替えた変更 ([Firefox バグ 1481866](https://bugzil.la/1481866)) を元に戻しました ([Firefox バグ 1492567](https://bugzil.la/1492567))。理由は [Bug 1481866 の comment 14](https://bugzilla.mozilla.org/show_bug.cgi?id=1481866#c14) をご覧ください。
 
 ### SVG

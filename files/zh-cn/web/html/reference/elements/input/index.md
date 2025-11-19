@@ -3,8 +3,6 @@ title: <input>：输入（表单输入）元素
 slug: Web/HTML/Reference/Elements/input
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<input>`** 元素用于为基于 Web 的表单创建交互式控件，以便接受来自用户的数据。取决于设备和{{Glossary("user agent", "用户代理")}}不同，表单可以使用各种类型的输入数据和控件。`<input>` 元素是目前 HTML 中最强大、最复杂的元素之一，因为它有大量的输入类型和属性组合。
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;text&quot;&gt;", "tabbed-shorter")}}
@@ -491,7 +489,8 @@ label {
 - `placeholder`
   - : 对 `text`、`search`、`url`、`tel`、`email`、`password` 和 `number` 有效。`placeholder` 属性可向用户提供有关该字段中需要什么样的信息的简短提示。它应该是一个单词或短语来说明预期的数据类型，而不是说明性消息。文本中*不得*包含回车符或换行符。例如，某个字段需要收集用户的姓氏，其标签为“First Name”，一个适合的占位文字可能是“如 Mustafa”。
 
-    > **备注：** `placeholder` 属性在语义上不如其他解释表单的方式有用，而且会对你的内容造成意想不到的技术问题。参见[标签](#标签)以获得更多信息。
+    > [!NOTE]
+    > `placeholder` 属性在语义上不如其他解释表单的方式有用，而且会对你的内容造成意想不到的技术问题。参见[标签](#标签)以获得更多信息。
 
 - `readonly`
   - : 一个布尔属性，如果存在，则表示该字段不能由用户编辑。`readonly` 属性支持 `text`、`search`、`url`、`tel`、`email`、`date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `password` 输入类型。
@@ -504,7 +503,7 @@ label {
     参见[客户端验证](#客户端验证)和 [HTML 属性：`required`](/zh-CN/docs/Web/HTML/Reference/Attributes/required)以了解更多信息。
 
 - `size`
-  - : 对 `email`、`password`、`tel`、`url` 和 `text` 有效。`size` 属性指示显示输入控件的多少。基本上创建了与设置 CSS [`width`](/zh-CN/docs/Web/CSS/width)属性相同的结果，但有一些特殊性，值的具体单位取决于输入类型。对于 `password` 和 `text`，它是字符数量（或 `em` 单位大小），默认值是 `20`。对于其他情况，是像素值（或 `px` 单位大小）。CSS `width` 的优先级会高于 `size` 属性。
+  - : 对 `email`、`password`、`tel`、`url` 和 `text` 有效。`size` 属性指示显示输入控件的多少。基本上创建了与设置 CSS [`width`](/zh-CN/docs/Web/CSS/Reference/Properties/width)属性相同的结果，但有一些特殊性，值的具体单位取决于输入类型。对于 `password` 和 `text`，它是字符数量（或 `em` 单位大小），默认值是 `20`。对于其他情况，是像素值（或 `px` 单位大小）。CSS `width` 的优先级会高于 `size` 属性。
 
 - `src`
   - : 仅对 `image` 输入按钮有效。指定将要在提交按钮上显示的图像的 URL。参见 {{HTMLElement("input/image", "image")}} 输入类型。
@@ -846,7 +845,7 @@ input.custom {
 
 关于在 HTML 中为元素添加颜色的更多信息，参见：
 
-- [使用 CSS 为 HTML 元素添加颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)。
+- [使用 CSS 为 HTML 元素添加颜色](/zh-CN/docs/Web/CSS/Guides/Colors/Applying_color)。
 
 还可以参考：
 

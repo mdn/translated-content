@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c5849bd1313be60afdf4126aacd587c52bace335
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 135 の変更点をまとめています。Firefox 135 は、米国時間 [2025 年 2 月 4 日](https://whattrainisitnow.com/release/?version=135) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -19,7 +17,7 @@ l10n:
 
 #### 廃止
 
-- [`-moz-user-input`](/ja/docs/Web/CSS/-moz-user-input) CSS プロパティで、入力フィールドを無効化できました。このプロパティが非推奨になり、削除されました ([Firefox bug 1935198](https://bugzil.la/1935198))。
+- [`-moz-user-input`](/ja/docs/Web/CSS/Reference/Properties/-moz-user-input) CSS プロパティで、入力フィールドを無効化できました。このプロパティが非推奨になり、削除されました ([Firefox bug 1935198](https://bugzil.la/1935198))。
 
 ### JavaScript
 

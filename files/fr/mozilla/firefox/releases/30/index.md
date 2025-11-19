@@ -3,8 +3,6 @@ title: Firefox 30 for developers
 slug: Mozilla/Firefox/Releases/30
 ---
 
-{{FirefoxSidebar}}
-
 ## Changements pour les développeurs Web
 
 ### Outils de développement

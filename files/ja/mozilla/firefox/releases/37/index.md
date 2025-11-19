@@ -3,8 +3,6 @@ title: Firefox 37 for developers
 slug: Mozilla/Firefox/Releases/37
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 37 は、米国時間 2015 年 3 月 31 日にリリースされました。このページでは、開発者に影響する Firefox 37 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -22,7 +20,7 @@ Firefox 37 は、米国時間 2015 年 3 月 31 日にリリースされまし�
 ### CSS
 
 - {{cssxref("display")}}`: contents` をデフォルトで有効にしました ([Firefox バグ 1102374](https://bugzil.la/1102374) および [Firefox バグ 1105369](https://bugzil.la/1105369))。
-- [CSS マルチカラムレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)が、{{cssxref("display")}}`: table-caption` を適用した要素で動作するようになりました ([Firefox バグ 1109571](https://bugzil.la/1109571))。
+- [CSS マルチカラムレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout/Using)が、{{cssxref("display")}}`: table-caption` を適用した要素で動作するようになりました ([Firefox バグ 1109571](https://bugzil.la/1109571))。
 - テーブルセルの相対配置 ({{cssxref("position")}}`: relative`) を実装しました ([Firefox バグ 35168](https://bugzil.la/35168))。
 - Quirks モードで、{{cssxref("empty-cells")}} の動作を削除しました。Standard モードと同様に、デフォルトが `show` になります ([Firefox バグ 1020400](https://bugzil.la/1020400))。
 

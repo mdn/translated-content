@@ -54,7 +54,8 @@ second.onchange = () => {
 
 有关完整的示例，请参阅我们的[简单 worker 示例](https://github.com/mdn/simple-web-worker)和（[运行示例](https://mdn.github.io/simple-web-worker/)）。
 
-> **备注：** `postMessage()` 一次只能发送一个对象。如上所示，如果你想传递多个值，可以使用数组。
+> [!NOTE]
+> `postMessage()` 一次只能发送一个对象。如上所示，如果你想传递多个值，可以使用数组。
 
 ### 转移示例
 

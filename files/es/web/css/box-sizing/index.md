@@ -3,8 +3,6 @@ title: box-sizing
 slug: Web/CSS/box-sizing
 ---
 
-{{CSSRef}}
-
 La propiedad CSS **`box-sizing`** como el {{glossary("user agent")}} debe calcular el ancho y alto total de un elemento.
 
 {{InteractiveExample("CSS Demo: box-sizing")}}

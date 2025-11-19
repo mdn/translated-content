@@ -69,9 +69,9 @@ for (let i = "start" in window ? window.start : 0; i < 9; i++) {
 // SyntaxError: 'for-in' loop variable declaration may not have an initializer.
 ```
 
-```js example-good
+```js-nolint example-good
 // Все выражение инициализации переменной взято в скобки
-for (let i = ("start" in window) ? window.start : 0; i < 9; i++) {
+for (let i = ("start" in window ? window.start : 0); i < 9; i++) {
   console.log(i);
 }
 

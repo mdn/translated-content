@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
 
-{{HTMLSidebar}}
-
 **`<figcaption>`** [HTML](/zh-CN/docs/Web/HTML) 元素是用来描述其父节点 {{HTMLElement("figure")}} 元素里的其余内容的标题或说明。为 `<figure>` 提供一个{{glossary("accessible description", "无障碍描述")}}。
 
 {{InteractiveExample("HTML Demo: &lt;figcaption&gt;", "tabbed-shorter")}}

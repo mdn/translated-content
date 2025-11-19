@@ -3,8 +3,6 @@ title: 字符类
 slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
 ---
 
-{{JSSidebar("JavaScript Guide")}}
-
 字符类可以区分各种字符，例如区分字母和数字。
 
 {{InteractiveExample("JavaScript Demo: RegExp Character classes")}}
@@ -140,16 +138,16 @@ console.log(moods.match(regexpEmoticons));
   <tr>
    <td><code>\c<em>X</em></code></td>
    <td>
-    <p>使用<a href="https://en.wikipedia.org/wiki/Caret_notation">插入符号</a>匹配控制字符，其中“X”是 A–Z 中的一个字母（对应于代码点 <code>U+0001</code><em>–</em><code>U+001F</code>）。例如，<code>/\cM\cJ/</code>匹配“\r\n”。</p>
+    <p>使用<a href="https://zh.wikipedia.org/wiki/脱字符表示法">插入符号</a>匹配控制字符，其中“X”是 A–Z 中的一个字母（对应于码位 <code>U+0001</code><em>–</em><code>U+001A</code>）。例如，<code>/\cM\cJ/</code> 匹配“\r\n”。</p>
    </td>
   </tr>
   <tr>
    <td><code>\x<em>hh</em></code></td>
-   <td>匹配与代码 <code><em>hh</em></code>（两个十六进制数字）对应的字符。</td>
+   <td>匹配与 <code><em>hh</em></code>（两个十六进制数字）对应的字符。</td>
   </tr>
   <tr>
    <td><code>\u<em>hhhh</em></code></td>
-   <td>匹配与值 <code><em>hhhh</em></code>（四个十六进制数字）对应的 UTF-16 代码单元。</td>
+   <td>匹配与 <code><em>hhhh</em></code>（四个十六进制数字）对应的 UTF-16 码元。</td>
   </tr>
   <tr>
    <td><code>\u<em>{hhhh}</em> 或 <em>\u{hhhhh}</em></code></td>

@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/delete
 
 JavaScript の **`delete` 演算子**は、オブジェクトからプロパティを削除します。同じプロパティへの参照がそれ以上保持されていない場合は、自動的に解放されます。
 
-{{InteractiveExample("JavaScript Demo: Expressions - delete operator")}}
+{{InteractiveExample("JavaScript デモ: Expressions - delete operator")}}
 
 ```js interactive-example
 const Employee = {

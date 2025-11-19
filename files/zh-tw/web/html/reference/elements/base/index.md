@@ -3,8 +3,6 @@ title: <base>：文件基礎 URL 元素
 slug: Web/HTML/Reference/Elements/base
 ---
 
-{{HTMLSidebar}}
-
 **`<base>`** [HTML](/zh-TW/docs/Web/HTML) 元素指定用於文件中所有*相對* URL 的基礎 URL。一個文件中只能有一個 `<base>` 元素。
 
 腳本可以使用 {{domxref('Node.baseURI')}} 存取文件的已使用基礎 URL。如果文件中沒有 `<base>` 元素，則 `baseURI` 默認為 {{domxref("location.href")}}。
@@ -13,7 +11,8 @@ slug: Web/HTML/Reference/Elements/base
 
 此元素的屬性包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
-> **警告：** `<base>` 元素必須具有 `href` 屬性、`target` 屬性或兩者都有。如果這些屬性中至少有一個被指定，則 `<base>` 元素**必須**出現在具有 URL 屬性值的其他元素之前，例如 {{HTMLElement("link")}} 的 `href` 屬性。
+> [!WARNING]
+> `<base>` 元素必須具有 `href` 屬性、`target` 屬性或兩者都有。如果這些屬性中至少有一個被指定，則 `<base>` 元素**必須**出現在具有 URL 屬性值的其他元素之前，例如 {{HTMLElement("link")}} 的 `href` 屬性。
 
 - `href`
   - : 用於整個文件中相對 URL 的基礎 URL。

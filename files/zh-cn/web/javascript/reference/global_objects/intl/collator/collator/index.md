@@ -3,8 +3,6 @@ title: Intl.Collator() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator
 ---
 
-{{JSRef}}
-
 **`Intl.Collator()`** 构造函数用于创建
 {{jsxref("Intl/Collator", "Intl.Collator")}} 对象，此类对象用于语言敏感的字符串比较。
 
@@ -37,7 +35,8 @@ Intl.Collator(locales)
 Intl.Collator(locales, options)
 ```
 
-> **备注：** `Intl.Collator()` 可以在使用或不适用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 的情况下调用。两者均能创建一个新的 `Intl.Collator` 实例。
+> [!NOTE]
+> `Intl.Collator()` 可以在使用或不适用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 的情况下调用。两者均能创建一个新的 `Intl.Collator` 实例。
 
 ### 参数
 

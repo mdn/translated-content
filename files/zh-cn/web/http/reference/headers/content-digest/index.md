@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a8f881645d776d1303a0a25bd884f95e1b2805e1
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`Content-Digest`** {{Glossary("request header", "请求")}}和{{Glossary("response header", "响应标头")}}提供一个使用散列算法计算的消息内容{{Glossary("digest", "摘要")}}。接收者可以使用 `Content-Digest` 来验证 HTTP 消息内容的完整性。
 
 {{HTTPHeader("Want-Content-Digest")}} 字段允许发送者请求 `Content-Digest` 及其散列算法偏好。内容摘要会根据 {{HTTPHeader("Content-Encoding")}} 和 {{HTTPHeader("Content-Range")}} 而有所不同，但不会受到 {{HTTPHeader("Transfer-Encoding")}} 的影响。

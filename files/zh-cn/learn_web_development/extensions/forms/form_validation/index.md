@@ -245,7 +245,8 @@ div {
 
 {{EmbedLiveSample("限制输入的长度", "100%", 70)}}
 
-> **备注：** `<input type="number">` (或者其他类型，像 `range`) 也可以获取到一个[`step`](/zh-CN/docs/Web/HTML/Reference/Elements/input#step) 属性，指定了值在增减过程固定改变的值 (如向上增加和向下减少的按钮).
+> [!NOTE]
+> `<input type="number">` (或者其他类型，像 `range`) 也可以获取到一个[`step`](/zh-CN/docs/Web/HTML/Reference/Elements/input#step) 属性，指定了值在增减过程固定改变的值 (如向上增加和向下减少的按钮).
 
 ### 完整的例子
 

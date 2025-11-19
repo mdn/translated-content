@@ -3,8 +3,6 @@ title: 协议升级机制
 slug: Web/HTTP/Guides/Protocol_upgrade_mechanism
 ---
 
-{{HTTPSidebar}}
-
 [HTTP/1.1 协议](/zh-CN/docs/Web/HTTP)提供了一种使用 {{HTTPHeader("Upgrade")}} 标头字段的特殊机制，这一机制允许将一个已建立的连接升级成新的、不相容的协议。
 
 这个机制是可选的；它并不能强制协议的更改（通常来说这一机制总是由客户端发起的）。如果它们支持新协议，实现甚至可以不利用 upgrade，在实践中，这种机制主要用于引导 WebSocket 连接。

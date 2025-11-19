@@ -21,7 +21,7 @@ original_slug: Learn_web_development/Core/Scripting/Test_your_skills:_Loops
 
 ## 반복문 1
 
-우리의 첫 반복문 과제에서 우리는 여러분이 제공된 `myArray` 내의 모든 요소를 순회하고, 제공된 `list`에 추가될 리스트 아이템 (예: [`<li>`](/ko/docs/Web/HTML/Element/li) 요소) 내에서 화면에 그것들을 출력하는 간단한 반복문을 만듦으로써 시작하기를 원합니다.
+우리의 첫 반복문 과제에서 우리는 여러분이 제공된 `myArray` 내의 모든 요소를 순회하고, 제공된 `list`에 추가될 리스트 아이템 (예: [`<li>`](/ko/docs/Web/HTML/Reference/Elements/li) 요소) 내에서 화면에 그것들을 출력하는 간단한 반복문을 만듦으로써 시작하기를 원합니다.
 
 > [!NOTE]
 > 여러분의 에디터나 온라인 에디터에서 작업하기 위해서 [이 과제의 시작점을 다운로드](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/loops/loops1-download.html)하세요.

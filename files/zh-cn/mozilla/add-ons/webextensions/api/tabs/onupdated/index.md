@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 934dace5fd2f456fb9178b687ad0abb6e4b0a049
 ---
 
-{{AddonSidebar}}
-
 标签页更新时触发。
 
 当用户在标签页中导航到新 URL 时，通常会生成多个 `onUpdated` 事件，因为 {{WebExtAPIRef("tabs.Tab")}} 对象的各种属性会被更新。这包括 `url`，但也可能包括 `title` 和 `favIconUrl` 属性。`status` 属性会在 `"loading"` 和 `"complete"` 之间循环。
@@ -68,7 +66,8 @@ browser.tabs.onUpdated.hasListener(listener)
         - `"title"`
         - `"url"`
 
-        > **备注：** `"url"` 值自 Firefox 88 起支持。在 Firefox 87 及更早版本中，可以通过过滤“status”来观察 `"url"` 的更改。
+        > [!NOTE]
+        > `"url"` 值自 Firefox 88 起支持。在 Firefox 87 及更早版本中，可以通过过滤“status”来观察 `"url"` 的更改。
 
     - `tabId`
       - : `Integer`。仅针对此 ID 标识的标签页触发该事件。
@@ -250,5 +249,3 @@ browser.tabs.onUpdated.addListener(handleUpdated, filter);
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
-
-{{AddonSidebar}}

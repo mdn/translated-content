@@ -3,7 +3,7 @@ title: Загрузка ресурсов и их вывод
 slug: Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen
 ---
 
-{{GamesSidebar}}{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Scaling", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Move_the_ball")}}
+{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Scaling", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Move_the_ball")}}
 
 Это 3-й урок из 16 в руководстве [2D игра на Phaser](/ru/docs/Games/Tutorials/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_2D_Breakout_%D0%B8%D0%B3%D1%80%D1%8B_%D0%BD%D0%B0_Phaser). Весь исходный код из этого урока вы можете найти на [Gamedev-Phaser-Content-Kit/demos/lesson03.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson03.html).
 
@@ -17,7 +17,8 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_
 var ball;
 ```
 
-> **Примечание:**В этом уроке мы для удобства будем использовать глобальные переменные, потому что цель урока - научить пользоваться Phaser для создания игр, а не хорошим практикам разработки.
+> [!NOTE]
+> В этом уроке мы для удобства будем использовать глобальные переменные, потому что цель урока - научить пользоваться Phaser для создания игр, а не хорошим практикам разработки.
 
 ## Загрузка спрайта мяча
 

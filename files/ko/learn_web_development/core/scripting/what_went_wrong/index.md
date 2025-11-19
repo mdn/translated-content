@@ -60,6 +60,7 @@ l10n:
    Uncaught TypeError: guessSubmit.addeventListener is not a function
    number-game-errors.html:86:15
    ```
+
    - 첫 번째 부분인 `Uncaught TypeError: guessSubmit.addeventListener is not a function`에서 무엇이 잘못되었는지를 알 수 있습니다.
    - 두 번째 부분인 `number-game-errors.html:86:15`는 코드에서 오류가 발생한 위치를 알려줍니다. "number-game-errors.html" 파일의 86번째 줄, 15번째 문자입니다.
 

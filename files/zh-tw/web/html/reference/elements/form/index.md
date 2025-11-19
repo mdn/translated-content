@@ -3,8 +3,6 @@ title: <form>：表單元素
 slug: Web/HTML/Reference/Elements/form
 ---
 
-{{HTMLSidebar}}
-
 **`<form>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表了一個包含用於提交信息的交互式控制項的文件章節。
 
 {{InteractiveExample("HTML Demo: &lt;form&gt;", "tabbed-standard")}}
@@ -45,7 +43,7 @@ label {
 }
 ```
 
-可以使用 {{cssxref(':valid')}} 和 {{cssxref(':invalid')}} CSS [偽類](/zh-TW/docs/Web/CSS/Pseudo-classes)根據表單內的{{domxref("HTMLFormElement.elements", "元素", "", 1)}}是否有效來設置 `<form>` 元素的樣式。
+可以使用 {{cssxref(':valid')}} 和 {{cssxref(':invalid')}} CSS [偽類](/zh-TW/docs/Web/CSS/Reference/Selectors/Pseudo-classes)根據表單內的{{domxref("HTMLFormElement.elements", "元素", "", 1)}}是否有效來設置 `<form>` 元素的樣式。
 
 ## 屬性
 
@@ -54,7 +52,8 @@ label {
 - `accept` {{deprecated_inline}}
   - : 伺服器接受的逗號分隔的[內容類型](/zh-TW/docs/Web/SVG/Guides/Content_type)。
 
-    > **備註：** **此屬性已被廢棄，不應再使用**。請改用 `<input type=file>` 元素上的 [`accept`](/zh-TW/docs/Web/HTML/Reference/Elements/input#accept) 屬性。
+    > [!NOTE]
+    > **此屬性已被廢棄，不應再使用**。請改用 `<input type=file>` 元素上的 [`accept`](/zh-TW/docs/Web/HTML/Reference/Elements/input#accept) 屬性。
 
 - `accept-charset`
   - : 伺服器接受的{{Glossary("character encoding", "字元編碼")}}。該規範允許使用單一不區分大小寫的值——`"UTF-8"`，反映了這種編碼的普遍性（歷史上，可以以逗號分隔或空格分隔的清單指定多個字元編碼）。

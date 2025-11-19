@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
-
 [Firefox の最新の開発者向け機能を試すには、Firefox Developer Edition をインストールしてください。](https://www.mozilla.org/firefox/developer/) Firefox 48 は、米国時間 2016 年 8 月 2 日にリリースされました。このページでは、開発者に影響する Firefox 48 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -53,7 +51,7 @@ l10n:
   - `-webkit-box-direction`、`-webkit-box-orient` ([Firefox バグ 1262049](https://bugzil.la/1262049).
   - {{cssxref("display")}} プロパティの値 `-webkit-inline-box` を、`inline-flex` の別名としてサポートしました ([Firefox バグ 1257661](https://bugzil.la/1257661))。
   - `-webkit-flex-direction`、`-webkit-flex-wrap`、`-webkit-flex-flow`、`-webkit-order`、`-webkit-flex`、`-webkit-flex-grow`、`-webkit-flex-shrink`、`-webkit-flex-basis`、`-webkit-justify-content`、`-webkit-align-items`、`-webkit-align-self`、`-webkit-align-content` を接頭辞なしプロパティの別名として、また {{cssxref("display")}} プロパティの値 `-webkit-flex` および `-webkit-inline-flex` を接頭辞なし値の別名として追加しました ([Firefox バグ 1274096](https://bugzil.la/1274096))。
-  - `-webkit-box-flex`、`-webkit-box-ordinal-group`、`-webkit-box-align`、`-webkit-box-pack` プロパティおよび {{cssxref("display")}} プロパティの値 `-webkit-box` を、最新の [CSS フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox) の別名として追加しました ([Firefox バグ 1208635](https://bugzil.la/1208635))。
+  - `-webkit-box-flex`、`-webkit-box-ordinal-group`、`-webkit-box-align`、`-webkit-box-pack` プロパティおよび {{cssxref("display")}} プロパティの値 `-webkit-box` を、最新の [CSS フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases) の別名として追加しました ([Firefox バグ 1208635](https://bugzil.la/1208635))。
 
 - {{cssxref("background-clip")}} の値 `text` が、(Release 以外のビルドだけでなく) すべてのタイプの Firefox で使用可能になりました ([Firefox バグ 1263516](https://bugzil.la/1263516))。
 - {{cssxref("position")}} プロパティの値 `absolute` を、最上位レイヤーの要素でサポートしました ([Firefox バグ 1236828](https://bugzil.la/1236828))。

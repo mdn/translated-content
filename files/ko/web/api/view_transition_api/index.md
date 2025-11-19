@@ -30,7 +30,7 @@ View Transitions API는 필요한 DOM 변경 및 전환 애니메이션을 훨�
 
 ### 기본적인 뷰 전환 만들기
 
-예를 들어, SPA에는 탐색 링크가 클릭되거나 서버에서 업데이트가 푸시되는 등의 이벤트에 대한 응답으로 새 콘텐츠를 가져오고 DOM을 업데이트하는 기능이 포함될 수 있습니다. [기본 뷰 전환 데모](https://mdn.github.io/dom-examples/view-transitions/)에서는 클릭한 섬네일을 기반으로 새로운 전체 크기 이미지를 표시하는 `displayNewImage()` 함수로 이 기능을 단순화했습니다. 브라우저에서 지원하는 경우에만 View Transition API를 호출하는 `updateView()` 함수 안에 이 기능을 캡슐화했습니다.
+예를 들어, SPA에는 탐색 링크가 클릭되거나 서버에서 업데이트가 푸시되는 등의 이벤트에 대한 응답으로 새 콘텐츠를 가져오고 DOM을 업데이트하는 기능이 포함될 수 있습니다. [기본 뷰 전환 SPA 데모](https://mdn.github.io/dom-examples/view-transitions/spa/)에서는 클릭한 섬네일을 기반으로 새로운 전체 크기 이미지를 표시하는 `displayNewImage()` 함수로 이 기능을 단순화했습니다. 브라우저에서 지원하는 경우에만 View Transition API를 호출하는 `updateView()` 함수 안에 이 기능을 캡슐화했습니다.
 
 ```js
 function updateView(event) {
@@ -74,6 +74,7 @@ function updateView(event) {
          ├─ ::view-transition-old(root)
          └─ ::view-transition-new(root)
    ```
+
    - {{cssxref("::view-transition")}}은 모든 뷰 전환을 포함하고 다른 모든 페이지 콘텐츠 위에 위치하는 뷰 전환 오버레이의 루트입니다.
    - {{cssxref("::view-transition-old")}}는 이전 페이지 뷰의 스크린샷이고, {{cssxref("::view-transition-new")}}는 새 페이지 뷰의 실시간 표현입니다. 이 두 가지 모두 {{htmlelement("img")}} 또는 {{htmlelement("video")}}와 같은 방식으로 대체된 콘텐츠로 렌더링되므로 {{cssxref("object-fit")}} 및 {{cssxref("object-position")}}과 같은 편리한 속성을 사용하여 스타일을 지정할 수 있습니다.
 
@@ -112,7 +113,8 @@ figcaption {
 
 `view-transition-name`의 값은 `none`을 제외한 모든 값을 사용할 수 있으며, 특히 `none` 값은 해당 요소가 뷰 전환에 참여하지 않음을 의미합니다.
 
-> **참고:** `view-transition-name`은 고유해야 합니다. 만약 렌더링된 두 요소의 `view-transition-name`이 같으면, {{domxref("ViewTransition.ready")}}가 거부되고 전환이 건너뛰어집니다.
+> [!NOTE]
+> `view-transition-name`은 고유해야 합니다. 만약 렌더링된 두 요소의 `view-transition-name`이 같으면, {{domxref("ViewTransition.ready")}}가 거부되고 전환이 건너뛰어집니다.
 
 ### 애니메이션 사용자 지정하기
 
@@ -186,7 +188,8 @@ figcaption {
 
 기본적으로 `::view-transition-group` 은 이전 뷰와 새 뷰 간에 너비와 높이를 전환하기 때문에 이 방법이 작동합니다. 두 상태 모두에 고정된 `높이`를 설정하기만 하면 작동합니다.
 
-> **참고:** [View Transitions API를 사용한 부드럽고 간단한 전환](https://developer.chrome.com/docs/web-platform/view-transitions/)에는 몇 가지 다른 사용자 지정 예제가 포함되어 있습니다.
+> [!NOTE]
+> [View Transitions API를 사용한 부드럽고 간단한 전환](https://developer.chrome.com/docs/web-platform/view-transitions/)에는 몇 가지 다른 사용자 지정 예제가 포함되어 있습니다.
 
 ### JavaScript로 애니메이션 제어하기
 
@@ -288,7 +291,8 @@ function spaNavigate(data) {
 
 ## 예제
 
-- [기본 뷰 전환 데모](https://mdn.github.io/dom-examples/view-transitions/): 이전 이미지와 새 이미지, 이전 캡션과 새 캡션 간에 별도의 전환이 있는 기본 이미지 갤러리 데모입니다.
+- [기본 뷰 전환 SPA 데모](https://mdn.github.io/dom-examples/view-transitions/spa/): 이전 이미지와 새 이미지, 이전 캡션과 새 캡션 간에 별도의 전환이 있는 기본 이미지 갤러리 데모입니다.
+- [기본 뷰 전환 MPA 데모](https://mdn.github.io/dom-examples/view-transitions/mpa/): 두 페이지 사이트 간 전환(MPA)의 사용법을 보여주는 샘플로, 두 페이지 사이를 이동할 때 사용자 지정 "위로 스와이프" 전환을 제공합니다.
 - [HTTP 203 playlist](https://http203-playlist.netlify.app/): 다양한 뷰 전환을 제공하는 보다 정교한 동영상 플레이어 데모 앱으로, [View Transitions API를 사용한 부드럽고 간단한 전환](https://developer.chrome.com/docs/web-platform/view-transitions/)에 대해 설명합니다.
 
 ## 명세서

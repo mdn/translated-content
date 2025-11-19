@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status
 original_slug: Web/HTTP/Status
 ---
 
-{{HTTPSidebar}}
-
 HTTP 응답 상태 코드는 특정 HTTP 요청이 성공적으로 완료되었는지 알려줍니다. 응답은 5개의 그룹으로 나누어집니다: 정보를 제공하는 응답, 성공적인 응답, 리다이렉트, 클라이언트 에러, 그리고 서버 에러. 상태 코드는 [section 10 of RFC 2616](https://tools.ietf.org/html/rfc2616#section-10)에 정의되어 있습니다.
 
 ## 정보 응답
@@ -18,7 +16,7 @@ HTTP 응답 상태 코드는 특정 HTTP 요청이 성공적으로 완료되었�
   - : 이 코드는 서버가 요청을 수신하였으며 이를 처리하고 있지만, 아직 제대로 된 응답을 알려줄 수 없음을 알려줍니다.
 
 - {{HTTPStatus(103, "103 Early Hints")}}
-  - : 이 상태 코드는 주로 {{HTTPHeader("Link")}} 헤더와 함께 사용되어 서버가 응답을 준비하는 동안 사용자 에이전트가(user agent) 사전 로딩([preloading](/ko/docs/Web/HTML/Attributes/rel/preload))을 시작할 수 있도록 한다.
+  - : 이 상태 코드는 주로 {{HTTPHeader("Link")}} 헤더와 함께 사용되어 서버가 응답을 준비하는 동안 사용자 에이전트가(user agent) 사전 로딩([preloading](/ko/docs/Web/HTML/Reference/Attributes/rel/preload))을 시작할 수 있도록 한다.
 
 ## 성공 응답
 
@@ -43,7 +41,7 @@ HTTP 응답 상태 코드는 특정 HTTP 요청이 성공적으로 완료되었�
   - : 이 응답 코드는 클라이언트에서 복수의 스트림을 분할 다운로드를 하고자 범위 헤더를 전송했기 때문에 사용됩니다.
 - {{HTTPStatus(207, "207 Multi-Status")}} ({{Glossary("WebDAV")}})
   - : 멀티-상태 응답은 여러 리소스가 여러 상태 코드인 상황이 적절한 경우에 해당되는 정보를 전달합니다.
-- {{HTTPStatus(208, "208 Multi-Status")}} ({{Glossary("WebDAV")}})
+- {{HTTPStatus(208, "208 Already Reported")}} ({{Glossary("WebDAV")}})
   - : DAV에서 사용됩니다: propstat(property와 status의 합성어) 응답 속성으로 동일 컬렉션으로 바인드된 복수의 내부 멤버를 반복적으로 열거하는 것을 피하기 위해 사용됩니다.
 
 - {{HTTPStatus(226, "226 IM Used")}} ([HTTP Delta encoding](https://tools.ietf.org/html/rfc3229))
@@ -86,7 +84,7 @@ HTTP 응답 상태 코드는 특정 HTTP 요청이 성공적으로 완료되었�
 - {{HTTPStatus(405, "405 Method Not Allowed")}}
   - : 요청한 메소드는 서버에서 알고 있지만, 제거되었고 사용할 수 없습니다. 예를 들어, 어떤 API에서 리소스를 삭제하는 것을 금지할 수 있습니다. 필수적인 메소드인 `GET`과 `HEAD`는 제거될 수 없으며 이 에러 코드를 리턴할 수 없습니다.
 - {{HTTPStatus(406, "406 Not Acceptable")}}
-  - : 이 응답은 서버가 [서버 주도 콘텐츠 협상](/ko/docs/Web/HTTP/Content_negotiation#%EC%84%9C%EB%B2%84_%EC%A3%BC%EB%8F%84_%EC%BB%A8%ED%85%90%EC%B8%A0_%ED%98%91%EC%83%81) 을 수행한 이후, 사용자 에이전트에서 정해준 규격에 따른 어떠한 콘텐츠도 찾지 않았을 때, 웹서버가 보냅니다.
+  - : 이 응답은 서버가 [서버 주도 콘텐츠 협상](/ko/docs/Web/HTTP/Guides/Content_negotiation#%EC%84%9C%EB%B2%84_%EC%A3%BC%EB%8F%84_%EC%BB%A8%ED%85%90%EC%B8%A0_%ED%98%91%EC%83%81) 을 수행한 이후, 사용자 에이전트에서 정해준 규격에 따른 어떠한 콘텐츠도 찾지 않았을 때, 웹서버가 보냅니다.
 - {{HTTPStatus(407, "407 Proxy Authentication Required")}}
   - : 이것은 401과 비슷하지만 프록시에 의해 완료된 인증이 필요합니다.
 - {{HTTPStatus(408, "408 Request Timeout")}}

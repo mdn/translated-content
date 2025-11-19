@@ -4,13 +4,12 @@ slug: Web/HTTP/Reference/Headers/X-Frame-Options
 original_slug: Web/HTTP/Headers/X-Frame-Options
 ---
 
-{{HTTPSidebar}}
-
 The **`X-Frame-Options`** [HTTP](/ko/docs/Web/HTTP) 응답 헤더는 해당 페이지를 {{HTMLElement("frame")}} 또는{{HTMLElement("iframe")}}, {{HTMLElement("object")}} 에서 렌더링할 수 있는지 여부를 나타내는데 사용됩니다. 사이트 내 콘텐츠들이 다른 사이트에 포함되지 않도록 하여 [clickjacking](https://en.wikipedia.org/wiki/Clickjacking) 공격을 막기 위해 이 헤더를 사용합니다.
 
 이 설정은 사용자가 `X-Frame-Options`를 지원하는 브라우저를 통해 페이지에 접근할 경우에만 보안됩니다.
 
-> **참고:** {{HTTPHeader("Content-Security-Policy")}} HTTP 헤더에는 브라우저를 지원하기 위해 이 헤더를 [사용하지 않도록 하는](https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options) {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} 지시문이 있습니다.
+> [!NOTE]
+> {{HTTPHeader("Content-Security-Policy")}} HTTP 헤더에는 브라우저를 지원하기 위해 이 헤더를 [사용하지 않도록 하는](https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options) {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} 지시문이 있습니다.
 
 <table class="properties">
   <tbody>

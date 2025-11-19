@@ -3,8 +3,6 @@ title: Firefox 46 for developers
 slug: Mozilla/Firefox/Releases/46
 ---
 
-{{FirefoxSidebar}}
-
 [Firefox の最新の開発者向け機能を試すには、 Firefox Developer Edition をインストールしてください。](https://www.mozilla.org/firefox/developer/)Firefox 46 は、米国時間 2016 年 4 月 26 日にリリースされました。この記事では、ウェブ開発者だけでなく、 Firefox や Gecko の開発者、アドオン開発者にとっても有用な主な変更点を挙げています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -33,7 +31,7 @@ slug: Mozilla/Firefox/Releases/46
 - {{cssxref("text-emphasis")}}、{{cssxref("text-emphasis-style")}}、{{cssxref("text-emphasis-color")}}、{{cssxref("text-emphasis-position")}} の各プロパティを、既定で有効にしました ([Firefox バグ 1231485](https://bugzil.la/1231485))。
 - Gecko が、`-webkit-` 接頭辞を付加した [数種類のプロパティ](https://wiki.mozilla.org/Compatibility/Mobile/Non_Standard_Compatibility) を受け入れるようになりました。ただし `layout.css.prefixes.webkit` を `true` に切り替えなければなりません ([Firefox バグ 1213126](https://bugzil.la/1213126))。
 - ({{cssxref("@font")}} の) {{cssxref("@font/font-display", "font-display")}} 記述子を実験的に実装しました。使用するには `layout.css.font-display.enabled` を `true` に切り替えなければなりません ([Firefox バグ 1157064](https://bugzil.la/1157064))。
-- 3D Transform のサポートを表すメディアクエリーとして [`@media (-webkit-transform-3d)`](/ja/docs/Web/CSS/@media/-webkit-transform-3d) に対応しました。ただし about:config の設定 `layout.css.prefixes.webkit` を `true` に切り替えなければなりません ([Firefox バグ 1239799](https://bugzil.la/1239799))。
+- 3D Transform のサポートを表すメディアクエリーとして [`@media (-webkit-transform-3d)`](/ja/docs/Web/CSS/Reference/At-rules/@media/-webkit-transform-3d) に対応しました。ただし about:config の設定 `layout.css.prefixes.webkit` を `true` に切り替えなければなりません ([Firefox バグ 1239799](https://bugzil.la/1239799))。
 - {{cssxref("gradient/linear-gradient", "linear-gradient()")}} で、`0deg` の単位を省略した表記に対応しました ([Firefox バグ 1239153](https://bugzil.la/1239153))。
 - ウェブ互換性のため、`-webkit-filter` を追加しました。設定項目 `layout.css.prefixes.webkit` で制御しており、既定値は `false` です ([Firefox バグ 1236506](https://bugzil.la/1236506))。
 - \[css-align] "unsafe start" (以前は "true start") を "start" などにシリアライズするようになりました ([Firefox バグ 1230398](https://bugzil.la/1230398))。

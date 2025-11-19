@@ -18,7 +18,7 @@ l10n:
 
 랜드마크 역할을 만들려면 `<section>`, `<nav>`, `<main>`과 같은 의미론적 요소를 사용하거나 [`role="banner"`](/ko/docs/Web/Accessibility/ARIA/Roles/banner_role), [`role="complementary"`](/ko/docs/Web/Accessibility/ARIA/Roles/complementary_role), [`role="region"`](/ko/docs/Web/Accessibility/ARIA/Roles/region_role)과 같은 `landmark` 역할의 하위 클래스인 ARIA 역할을 추가하여 콘텐츠의 목적을 정의하세요. `role="landmark"`는 사용하지 마세요.
 
-가시적인 레이블을 제공하고 [`aria-labelledby`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)로 참조해야 합니다. 필요한 경우 [`aria-label`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-label)을 사용하여 간단하고 설명적인 레이블을 제공할 수 있습니다.
+가시적인 레이블을 제공하고 [`aria-labelledby`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)로 참조해야 합니다. 필요한 경우 [`aria-label`](/ko/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)을 사용하여 간단하고 설명적인 레이블을 제공할 수 있습니다.
 
 스크린 리더 사용자의 경우, 랜드마크 역할을 추가하면 효과적으로 '건너뛰기 링크'가 생성되지만 페이지 내 탐색을 대체하지는 않습니다. 랜드마크 역할은 다른 방식으로 표면화되지 않기 때문입니다.
 

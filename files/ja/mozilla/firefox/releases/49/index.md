@@ -5,8 +5,6 @@ l10n:
   sourceCommit: dd08ec8cf78926a7854d8f5f7793bf7ae199484e
 ---
 
-{{FirefoxSidebar}}
-
 [Firefox の最新の開発者向け機能を試すには、 Firefox Developer Edition をインストールしてください。](https://www.mozilla.org/firefox/developer/) Firefox 49 は、米国時間 2016 年 9 月 20 日にリリースされました。このページでは、開発者に影響する Firefox 49 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -46,18 +44,18 @@ l10n:
 - 背景画像を描画する位置のオフセットを水平方向および垂直方向に分けて指定できる、{{cssxref("background-position-x")}} プロパティおよび {{cssxref("background-position-y")}} プロパティをサポートしました。これらは {{cssxref("background-position")}} を構成します ([Firefox バグ 550426](https://bugzil.la/550426))。
 - {{cssxref("background-repeat")}} で、キーワード `round` および `space` をサポートしました ([Firefox バグ 548372](https://bugzil.la/548372))。
 - {{cssxref("background-clip")}} で、キーワード `text` をデフォルトで有効化しました ([Firefox バグ 1264905](https://bugzil.la/1264905))。
-- 4 桁および 8 桁の 16 進数による CSS [色](/ja/docs/Web/CSS/color_value) の値 (#RRGGBBAA や #RGBA) による、アルファチャンネルを含む色の指定をサポートしました ([Firefox バグ 567283](https://bugzil.la/567283))。
+- 4 桁および 8 桁の 16 進数による CSS [色](/ja/docs/Web/CSS/Reference/Values/color_value) の値 (#RRGGBBAA や #RGBA) による、アルファチャンネルを含む色の指定をサポートしました ([Firefox バグ 567283](https://bugzil.la/567283))。
 - {{cssxref(":dir()")}} 擬似クラスの接頭辞を外しました ([Firefox バグ 859301](https://bugzil.la/859301))。
 - {{cssxref("clip-path")}} の実験的な実装 (デフォルトで有効化していません) で、複数の {{cssxref("&lt;basic-shape&gt;")}} 値の間で補間処理が可能になりました ([Firefox バグ 1110460](https://bugzil.la/1110460))。
-- [長さの単位 `q`](/ja/docs/Web/CSS/length#q) をサポートしました ([Firefox バグ 1274526](https://bugzil.la/1274526))。
+- [長さの単位 `q`](/ja/docs/Web/CSS/Reference/Values/length#q) をサポートしました ([Firefox バグ 1274526](https://bugzil.la/1274526))。
 - {{cssxref("text-align-last")}} プロパティの接頭辞を削除しました ([Firefox バグ 1039541](https://bugzil.la/1039541))。
 - {{cssxref("overflow-wrap")}} をサポートしました。 `word-wrap` を置き換えるものですが、こちらも別名としてサポートを続けます ([Firefox バグ 955857](https://bugzil.la/955857))。
-- [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout) の実験的な実装が進展しました。
+- [CSS グリッド](/ja/docs/Web/CSS/Guides/Grid_layout) の実験的な実装が進展しました。
   - {{cssxref("&lt;percentage&gt;")}} を `grid-gap`、`grid-row-gap`、`grid-column-gap` プロパティで対応しました ([Firefox バグ 1266268](https://bugzil.la/1266268))。
   - {{cssxref("align")}}、{{cssxref("justify-self")}}`:baseline`、`last-baseline` ("baseline self-alignment" として知られる) でグリッドレイアウトをサポートしました ([Firefox バグ 1221525](https://bugzil.la/1221525))。
   - グリッドアイテムの Baseline Content Alignment を実装しました ([Firefox バグ 1256429](https://bugzil.la/1256429))。
 
-- [CSS マスク](/ja/docs/Web/CSS/CSS_masking) の実験的な実装が進展しました。
+- [CSS マスク](/ja/docs/Web/CSS/Guides/Masking) の実験的な実装が進展しました。
   - {{cssxref("mask-origin")}} プロパティの初期値を、仕様書に合わせて `padding-box` から `border-box` に変更しました ([Firefox バグ 1258286](https://bugzil.la/1258286))。
   - {{cssxref("mask-repeat")}} プロパティで値 `space` および `round` をサポートしました ([Firefox バグ 1258626](https://bugzil.la/1258626))。
   - {{cssxref("mask-position")}} 属性でアニメーションを行えない問題を修正しました ([Firefox バグ 1273804](https://bugzil.la/1273804))。
@@ -260,9 +258,9 @@ Firefox 49 より、サイトが正しく機能するために必要ではない
 
 - `WebKitCSSMatrix` インターフェイスを {{domxref("DOMMatrix")}} の別名にしました。
 - 以下のメディアクエリー特性を実装しました:
-  - `-webkit-min-device-pixel-ratio` を [`min-resolution`](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#resolution) の別名として、同じ値 (`dppx`) で実装しました。ただし、この機能は [デフォルトで無効](https://bugzilla.mozilla.org/show_bug.cgi?id=1237720) です (about:config の設定 `layout.css.prefixes.device-pixel-ratio-webkit` で制御)。
-  - `-webkit-max-device-pixel-ratio` を [`max-resolution`](/ja/docs/Web/CSS/@media/resolution) の別名として、同じ値 (`dppx`) で実装しました。この機能も about:config の同じ設定で、デフォルトで無効にしています。
-  - [`-webkit-transform-3d`](/ja/docs/Web/CSS/@media/-webkit-transform-3d) がマッチするようになりました。3D Transform をサポートすることを示します。
+  - `-webkit-min-device-pixel-ratio` を [`min-resolution`](/ja/docs/Web/CSS/Guides/Media_queries/Using#resolution) の別名として、同じ値 (`dppx`) で実装しました。ただし、この機能は [デフォルトで無効](https://bugzilla.mozilla.org/show_bug.cgi?id=1237720) です (about:config の設定 `layout.css.prefixes.device-pixel-ratio-webkit` で制御)。
+  - `-webkit-max-device-pixel-ratio` を [`max-resolution`](/ja/docs/Web/CSS/Reference/At-rules/@media/resolution) の別名として、同じ値 (`dppx`) で実装しました。この機能も about:config の同じ設定で、デフォルトで無効にしています。
+  - [`-webkit-transform-3d`](/ja/docs/Web/CSS/Reference/At-rules/@media/-webkit-transform-3d) がマッチするようになりました。3D Transform をサポートすることを示します。
 
 ## アドオン開発者と Mozilla 開発者向けの変更点
 
