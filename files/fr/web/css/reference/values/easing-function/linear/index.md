@@ -3,11 +3,11 @@ title: linear()
 slug: Web/CSS/Reference/Values/easing-function/linear
 original_slug: Web/CSS/easing-function/linear
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`linear()`** crée une courbe de transition qui progresse de façon uniforme entre les points.
-En tant que fonction de {{cssxref("&lt;easing-function&gt;")}}, elle crée des transitions où l'{{Glossary("interpolation")}} se fait à un rythme constant du début à la fin.
+En tant que fonction de {{CSSxRef("&lt;easing-function&gt;")}}, elle crée des transitions où l'{{Glossary("interpolation")}} se fait à un rythme constant du début à la fin.
 
 ## Syntaxe
 
@@ -22,13 +22,13 @@ linear(0, 0.5 25% 75%, 1)
 
 La fonction accepte deux valeurs ou plus parmi les suivantes, qui représentent des points de progression dans la chronologie de l'animation&nbsp;:
 
-- {{cssxref("&lt;number&gt;")}}
+- {{CSSxRef("&lt;number&gt;")}}
   - : Représente un point dans le temps sur la durée de l'animation ou de la transition.
     Au moins deux valeurs doivent être spécifiées.
     La valeur `0` représente le début de la transition, et `1` la fin.
     Les valeurs en dehors de l'intervalle `0` à `1` sont également autorisées.
 
-- {{cssxref("&lt;percentage&gt;")}} {{optional_inline}}
+- {{CSSxRef("&lt;percentage&gt;")}} {{Optional_Inline}}
   - : Indique à quel moment la progression `<number>` est atteinte pendant la chronologie de l'animation.
     Elle peut être spécifiée après n'importe quelle valeur `<number>` sauf la première et la dernière, et peut en prendre jusqu'à deux.
     Si deux valeurs de pourcentage sont spécifiées, elles définissent la longueur de l'arrêt&nbsp;: la première indique le point de départ et la seconde le point d'arrivée pour ce segment dans l'animation ou la transition. Si aucun `<percentage>` n'est défini, les valeurs de progression sont réparties uniformément sur la chronologie.
@@ -53,7 +53,7 @@ Pour la même animation, si la fonction d'assouplissement est spécifiée comme 
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -92,6 +92,6 @@ linear(start, middle, end)
 
 ## Voir aussi
 
-- Autres fonctions d'assouplissement&nbsp;: {{cssxref("easing-function/cubic-bezier", "cubic-bezier()")}} et {{cssxref("easing-function/steps", "steps()")}}
+- Autres fonctions d'assouplissement&nbsp;: {{CSSxRef("easing-function/cubic-bezier", "cubic-bezier()")}} et {{CSSxRef("easing-function/steps", "steps()")}}
 - Le module des [fonctions d'assouplissement CSS](/fr/docs/Web/CSS/CSS_easing_functions)
 - [Générateur d'assouplissement `linear()` <sup>(angl.)</sup>](https://linear-easing-generator.netlify.app/) par Jake Archibald
