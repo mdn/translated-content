@@ -2,7 +2,7 @@
 title: text-rendering
 slug: Web/CSS/Reference/Properties/text-rendering
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: e316a03cc74a78004dbba837c9d5df297e2eb0aa
 ---
 
 **`text-rendering`** [CSS](/zh-CN/docs/Web/CSS) 属性向渲染引擎提供信息，说明在渲染文本时应针对哪些方面进行优化。
@@ -34,7 +34,7 @@ text-rendering: unset;
 ### 值
 
 - `auto`
-  - : 浏览器依照某些根据去推测在绘制文本时，何时该优化速度，易读性或者几何精度。对于该值在不同浏览器中解释的差异，请看兼容性表。
+  - : 浏览器在绘制文本时，会根据经验判断何时该优化速度、易读性和几何精度。对于该值在不同浏览器中解释的差异，请看兼容性表。
 
     `auto` 值是平衡质量与性能的良好默认选择，尤其适用于较长的纯文本内容。
 
