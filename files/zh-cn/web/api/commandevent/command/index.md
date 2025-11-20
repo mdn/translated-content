@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Invoker Commands API")}}
 
-{{domxref("CommandEvent")}} 接口的只读属性 **`command`** 返回一个字符串，表示派发该事件的元素的 {{domxref("HTMLButtonElement.command", "command")}} 属性的值。
+{{domxref("CommandEvent")}} 接口的只读属性 **`command`** 返回一个表示派发该事件的元素的 {{domxref("HTMLButtonElement.command", "command")}} 属性值的字符串。
 
 ## 值
 
@@ -15,7 +15,7 @@ l10n:
 
 ## 示例
 
-在下面的简单示例中，我们设置了一个事件监听器来监听 `show-modal` 命令：
+在下面的简单示例中，我们设置了一个事件监听器来监听“show-modal”命令：
 
 ```js
 document.body.addEventListener(
@@ -24,7 +24,7 @@ document.body.addEventListener(
     const theAction = event.command;
 
     if (theAction === "show-modal") {
-      console.log("Showing modal dialog");
+      console.log("展示模态对话框");
     }
   },
   { capture: true },
