@@ -5,7 +5,7 @@ slug: Web/CSS/Reference/Values/element
 
 {{SeeCompatTable}}
 
-[CSS](/zh-CN/docs/Web/CSS) 函数 **`element()`** 定义了一个从任意的 HTML 元素中生成的图像 {{cssxref("&lt;image&gt;")}} 值。该图像值是实时的，这意味着如果被指定的 HTML 元素被更改，the CSS properties using the resulting value are automatically updated.
+[CSS](/zh-CN/docs/Web/CSS) 函数 **`element()`** 定义了一个从任意的 HTML 元素中生成的图像 {{cssxref("&lt;image&gt;")}} 值。该图像值是实时的，这意味着如果被指定的 HTML 元素被更改，则使用结果值的 CSS 属性会自动更新。
 
 一个特别实用的应用场景是，在某个 HTML {{HTMLElement("canvas")}} 元素中渲染图像，然后将其用作背景。
 
@@ -21,6 +21,7 @@ element(id)
 
 - _id_
   - : The ID of an element to use as the background, specified using the HTML attribute #_id_ on the element.
+  - : 用作背景的元素 ID，使用元素上的 HTML 属性 #_id_ 指定。
 
 ## 示例
 
@@ -49,7 +50,7 @@ element(id)
 
 {{EmbedLiveSample("一个比较现实的例子")}}
 
-The {{HTMLElement("div")}} element with the ID "myBackground1" is used as the background for the content including the paragraph "This box uses the element with the #myBackground1 ID as its background!".
+ID为“myBackground1”的 {{HTMLElement("div")}} 元素被包含段落“This box uses the element with the #myBackground1 ID as its background!”的内容用作背景。
 
 ### 页面预览
 
