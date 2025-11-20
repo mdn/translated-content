@@ -50,7 +50,7 @@ element(id)
 
 {{EmbedLiveSample("一个比较现实的例子")}}
 
-ID为“myBackground1”的 {{HTMLElement("div")}} 元素被包含段落“This box uses the element with the #myBackground1 ID as its background!”的内容用作背景。
+ID 为“myBackground1”的 {{HTMLElement("div")}} 元素被包含段落“This box uses the element with the #myBackground1 ID as its background!”的内容用作背景。
 
 ### 页面预览
 
