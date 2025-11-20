@@ -1,6 +1,7 @@
 ---
 title: 可视视口 API
-slug: Web/API/Visual_Viewport_API
+slug: conflicting/Web/API/VisualViewport
+original_slug: Web/API/Visual_Viewport_API
 l10n:
   sourceCommit: 4b5b3e16c8260a429db07dd54420ae40794b96c2
 ---
