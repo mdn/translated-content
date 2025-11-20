@@ -1,9 +1,8 @@
 ---
 title: border-block-start-color
 slug: Web/CSS/Reference/Properties/border-block-start-color
-original_slug: Web/CSS/border-block-start-color
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`border-block-start-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なブロックの先頭側の境界色を定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界色に対応づけられます。これは {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-left-color")}} の何れかに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。
@@ -21,12 +20,12 @@ writing-mode: vertical-rl;
 ```
 
 ```css interactive-example-choice
-border-block-start-color: rgb(170, 50, 220, 0.6);
+border-block-start-color: rgb(170 50 220 / 0.6);
 writing-mode: horizontal-tb;
 ```
 
 ```css interactive-example-choice
-border-block-start-color: hsl(60, 90%, 50%, 0.8);
+border-block-start-color: hsl(60 90% 50% / 0.8);
 writing-mode: vertical-lr;
 ```
 
@@ -40,8 +39,8 @@ writing-mode: vertical-lr;
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #000;
+  background-color: #eeeeee;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;

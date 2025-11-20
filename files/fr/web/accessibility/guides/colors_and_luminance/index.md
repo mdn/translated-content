@@ -36,7 +36,7 @@ Lorsque vous travaillez avec la couleur, il est important de savoir dans quel «
 
 En impression couleur, votre imprimante utilise probablement des cartouches cyan, magenta, jaune et noir (<abbr>CMJN</abbr>). Le modèle CMJN est soustractif&nbsp;: les quatre encres _retirent_ certaines longueurs d'onde de la lumière, ne réfléchissant que la plage étroite qui leur est associée. Le modèle RVB est additif et ajoute différentes proportions de lumières rouge, verte et bleue.
 
-Actuellement, l'espace {{glossary("RGB", "RVB")}} domine dans le développement web. Bien que les espaces HEX, RVB et HSL aient des notations différentes, les navigateurs convertissent automatiquement les valeurs entre ces notations. Les [modules de couleurs CSS](/fr/docs/Web/CSS/CSS_colors) fournissent d'autres espaces colorimétriques. Cependant, en raison de la domination actuelle de l'espace RVB pour mesurer la couleur à l'écran, la plupart des calculs de ce document sont supposés être en RVB, et plus précisément en sRGB.
+Actuellement, l'espace {{glossary("RGB", "RVB")}} domine dans le développement web. Bien que les espaces HEX, RVB et HSL aient des notations différentes, les navigateurs convertissent automatiquement les valeurs entre ces notations. Les [modules de couleurs CSS](/fr/docs/Web/CSS/Guides/Colors) fournissent d'autres espaces colorimétriques. Cependant, en raison de la domination actuelle de l'espace RVB pour mesurer la couleur à l'écran, la plupart des calculs de ce document sont supposés être en RVB, et plus précisément en sRGB.
 
 ## L'espace colorimétrique sRGB
 
@@ -121,7 +121,7 @@ Outre les outils de développement, de nombreux utilitaires peuvent convertir le
 
 ![Sélecteur de couleurs avec HSL et RGB et valeurs de contraste.](microcolorsc.jpg)
 
-Comme indiqué précédemment, le [module de couleurs CSS](/fr/docs/Web/CSS/CSS_colors) intègre d'autres espaces colorimétriques, notamment la notation fonctionnelle {{CSSXRef("color_value/lch", "lch()")}} et{{CSSXRef("color_value/oklch", "oklch()")}}, ainsi que les systèmes de coordonnées de couleur {{CSSXRef("color_value/lab", "lab()")}} et {{CSSXRef("color_value/oklab", "oklab()")}}, qui peuvent décrire n'importe quelle couleur visible. Cela dit, sRGB reste l'espace colorimétrique par défaut et préféré pour l'accessibilité en raison de sa large diffusion.
+Comme indiqué précédemment, le [module de couleurs CSS](/fr/docs/Web/CSS/Guides/Colors) intègre d'autres espaces colorimétriques, notamment la notation fonctionnelle {{CSSXRef("color_value/lch", "lch()")}} et{{CSSXRef("color_value/oklch", "oklch()")}}, ainsi que les systèmes de coordonnées de couleur {{CSSXRef("color_value/lab", "lab()")}} et {{CSSXRef("color_value/oklab", "oklab()")}}, qui peuvent décrire n'importe quelle couleur visible. Cela dit, sRGB reste l'espace colorimétrique par défaut et préféré pour l'accessibilité en raison de sa large diffusion.
 
 En matière d'accessibilité, les normes et recommandations sont cependant rédigées majoritairement en se basant sur l'espace colorimétrique sRGB, en particulier pour les rapports de contraste de couleur.
 

@@ -15209,7 +15209,7 @@
       "Sheppy"
     ]
   },
-  "Web/Security/Insecure_passwords": {
+  "Web/Security/Authentication/Passwords": {
     "modified": "2019-07-20T05:09:42.530Z",
     "contributors": [
       "shefollowme"

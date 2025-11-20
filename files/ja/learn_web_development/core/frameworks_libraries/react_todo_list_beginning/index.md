@@ -1,11 +1,10 @@
 ---
-title: React で ToDo リストを始める
+title: React で ToDo アプリを始める
+short-title: React の ToDo アプリ
 slug: Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 9f7e7e9075e9f2b1937d2c8000f52a8ff76bff52
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_getting_started","Learn_web_development/Core/Frameworks_libraries/React_components", "Learn_web_development/Core/Frameworks_libraries")}}
 
@@ -182,7 +181,7 @@ export default App;
 
 ブラウザーを再読み込みすると、次のように表示されます。
 
-![todo-matic アプリ、スタイルなし、乱雑なラベル、入力、ボタンの混乱を表示](unstyled-app.png)
+![todo-matic アプリ、スタイル設定されておらず、ラベル、入力、ボタンがごちゃごちゃに表示されている](unstyled-app.png)
 
 まだ見た目が整っていなくて、機能もしていませんが、一旦問題はありません。すぐにスタイルを設定します。まず現在の JSX と、それがユーザーストーリーにどのように対応しているかを考えてみます。
 
@@ -211,7 +210,7 @@ export default App;
 
 さらに下には、次のような [`<ul>`](/ja/docs/Web/HTML/Reference/Elements/ul) 要素があります。
 
-```html
+```jsx
 <ul
   role="list"
   className="todo-list stack-large stack-exception"
@@ -227,13 +226,15 @@ export default App;
 最後に、リスト項目のラベルと入力には、JSX 特有の属性がいくつかあります。
 
 ```jsx
-<input id="todo-0" type="checkbox" defaultChecked />
-<label className="todo-label" htmlFor="todo-0">
-  Eat
-</label>
+<div className="c-cb">
+  <input id="todo-0" type="checkbox" defaultChecked />
+  <label className="todo-label" htmlFor="todo-0">
+    Eat
+  </label>
+</div>
 ```
 
-`<input　/>` タグの `defaultChecked` 属性は、React にこのチェックボックスを最初にチェックするように指示します。通常の HTML のように `checked` を使用した場合、React はチェックボックスのイベント処理に関連する警告をブラウザーコンソールに表示させます。今のところは気にしないで大丈夫です。後ほどイベントを使用するときにこれについては説明します。
+`<input />` タグの `defaultChecked` 属性は、React にこのチェックボックスを最初にチェックするように指示します。通常の HTML のように `checked` を使用した場合、React はチェックボックスのイベント処理に関連する警告をブラウザーコンソールに表示させます。今のところは気にしないで大丈夫です。後ほどイベントを使用するときにこれについては説明します。
 
 また `htmlFor` 属性は、HTML で使用されている `for` 属性に対応しています。 JSX では `for` は予約語であるため、属性として使用できません。そのため React は `for` の代わりに `htmlFor` を使用します。
 
@@ -241,9 +242,9 @@ export default App;
 
 この節の前回で説明した `defaultChecked` 属性は、論理属性です。つまり、値が `true` または `false` である属性です。 HTML と同様に、論理属性は存在すれば `true`、存在しなければ `false` となります。 式の右辺に割り当てることはオプションです。 例えば、`defaultChecked={true}` や `defaultChecked={false}` のように、波括弧で囲んで渡すと、その値を明示的に設定することができます。
 
-JSX は JavaScript なので、論理属性には注意すべき点があります。 `defaultChecked="false"` と記述すると、論理値ではなく文字列値として `false` が設定されます。 空文字列以外の文字列は[真値](/ja/docs/Glossary/Truthy)とみなされるため、 React は `defaultChecked` を `true` と見なし、既定ではチェックボックスにチェックが入った状態になります。 これは望む状態ではないため、避けるべきです。
+JSX は JavaScript なので、論理属性には注意すべき点があります。 `defaultChecked="false"` と記述すると、論理値ではなく文字列値として `"false"` が設定されます。 空文字列以外の文字列は[真値](/ja/docs/Glossary/Truthy)とみなされるため、 React は `defaultChecked` を `true` と見なし、既定ではチェックボックスにチェックが入った状態になります。 これは望む状態ではないため、避けるべきです。
 
-よければ、ページに要素がレンダリングされないようにする、hiddenという別の属性を使って、論理属性を書く練習をしてみましょう。 [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) を `<h1>` 要素に追加して何が現れるか確認し、その値を `{false}` に明示的に設定してみてください。 `hidden="false"` と記述すると真値となるため、 `<h1>` は非表示になります。 作業が完了したら、このコードを除去することをお忘れなく。
+よければ、ページに要素がレンダリングされないようにする [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) という別の属性を使って、論理属性を書く練習をしてみましょう。 `hidden` を `<h1>` 要素に追加して何が現れるか確認し、その値を `{false}` に明示的に設定してみてください。 `hidden="false"` と記述すると真値となるため、 `<h1>` は非表示になります。 作業が完了したら、このコードを除去することをお忘れなく。
 
 > [!NOTE]
 > 先ほどのコードスニペットで使用した `aria-pressed` 属性は、`"true"` の値を持っています。 `aria-pressed` は `checked` のような真の論理値属性ではないからです。
@@ -309,16 +310,16 @@ input[type="text"] {
   border-radius: 0;
 }
 body {
-  background-color: #f5f5f5;
+  background-color: whitesmoke;
   color: #4d4d4d;
   font:
-    1.6rem/1.25 Arial,
+    1.6rem/1.25 "Arial",
     sans-serif;
   margin: 0 auto;
   max-width: 68rem;
   width: 100%;
 }
-@media screen and (min-width: 620px) {
+@media screen and (width >= 620px) {
   body {
     font-size: 1.9rem;
     line-height: 1.31579;
@@ -337,7 +338,7 @@ body {
   text-transform: capitalize;
 }
 .btn.toggle-btn {
-  border-color: #d3d3d3;
+  border-color: lightgray;
   border-width: 1px;
 }
 .btn.toggle-btn[aria-pressed="true"] {
@@ -347,14 +348,14 @@ body {
 .btn__danger {
   background-color: #ca3c3c;
   border-color: #bd2130;
-  color: #fff;
+  color: white;
 }
 .btn__filter {
   border-color: lightgrey;
 }
 .btn__primary {
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
 }
 .btn-group {
   display: flex;
@@ -372,7 +373,6 @@ body {
   text-align: center;
 }
 .visually-hidden {
-  clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   overflow: hidden;
@@ -390,7 +390,7 @@ body {
 .stack-large > * + * {
   margin-top: 2.5rem;
 }
-@media screen and (min-width: 550px) {
+@media screen and (width >= 550px) {
   .stack-small > * + * {
     margin-top: 1.4rem;
   }
@@ -404,7 +404,7 @@ body {
 /* グローバルスタイル終了 */
 /* アプリスタイル全般 */
 .todoapp {
-  background: #fff;
+  background: white;
   box-shadow:
     0 2px 4px 0 rgb(0 0 0 / 20%),
     0 2.5rem 5rem 0 rgb(0 0 0 / 10%);
@@ -412,7 +412,7 @@ body {
   padding: 1rem;
   position: relative;
 }
-@media screen and (min-width: 550px) {
+@media screen and (width >= 550px) {
   .todoapp {
     padding: 4rem;
   }
@@ -440,7 +440,7 @@ body {
   text-align: center;
 }
 .input__lg {
-  border: 2px solid #000;
+  border: 2px solid black;
   padding: 2rem;
 }
 .input__lg:focus-visible {
@@ -455,7 +455,7 @@ body {
 [class*="__lg"]:not(:last-child) {
   margin-bottom: 1rem;
 }
-@media screen and (min-width: 620px) {
+@media screen and (width >= 620px) {
   [class*="__lg"] {
     font-size: 2.4rem;
   }
@@ -486,9 +486,9 @@ body {
   box-sizing: border-box;
   clear: left;
   display: block;
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1.25;
   min-height: 44px;
   padding-left: 40px;
@@ -522,7 +522,7 @@ body {
 }
 .c-cb > label::before {
   background: transparent;
-  border: 2px solid currentcolor;
+  border: 2px solid currentColor;
   content: "";
   position: absolute;
 }
@@ -555,6 +555,6 @@ body {
 
 ## まとめ
 
-これで、私達の todo リストアプリは実際のアプリのようになりました。ただし、まだ実際には何も動きません。次の章で修正をしていきます。
+これで、私たちの todo リストアプリは実際のアプリのようになりました。ただし、まだ実際には何も動きません。次の章で修正をしていきます。
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_getting_started","Learn_web_development/Core/Frameworks_libraries/React_components", "Learn_web_development/Core/Frameworks_libraries")}}
