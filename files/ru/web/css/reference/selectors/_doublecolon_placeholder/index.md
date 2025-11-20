@@ -6,7 +6,7 @@ original_slug: Web/CSS/::placeholder
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS) [псевдоэлемент](/ru/docs/Web/CSS/Pseudo-elements) **`::placeholder`** представляет собой [текст placeholder](/ru/docs/Learn_web_development/Extensions/Forms#the_placeholder_attribute) в {{HTMLElement("input")}} или {{HTMLElement("textarea")}} элементах.
+[CSS](/ru/docs/Web/CSS) [псевдоэлемент](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-elements) **`::placeholder`** представляет собой [текст placeholder](/ru/docs/Learn_web_development/Extensions/Forms#the_placeholder_attribute) в {{HTMLElement("input")}} или {{HTMLElement("textarea")}} элементах.
 
 ```css
 ::placeholder {

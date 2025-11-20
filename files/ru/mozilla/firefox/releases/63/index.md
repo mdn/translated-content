@@ -35,7 +35,7 @@ slug: Mozilla/Firefox/Releases/63
 - Реализована функция `path` для {{CSSxRef("offset-path")}} ([Firefox bug 1429298](https://bugzil.la/1429298)).
 - Внесены [улучшения синтаксиса из спецификации Media Queries Level 4](/ru/docs/Web/JavaScript/Reference/Errors/Unexpected_type) ([Firefox bug 1472843](https://bugzil.la/1472843)).
 - Свойства `offset-*` переименованы в {{CSSxRef("inset-block-start")}}, {{CSSxRef("inset-block-end")}}, {{CSSxRef("inset-inline-start")}} и {{CSSxRef("inset-inline-end")}} ([Firefox bug 1464782](https://bugzil.la/1464782)).
-- Добавлена поддержка [prefers-reduced-motion](/ru/docs/Web/CSS/@media/prefers-reduced-motion) ([Firefox bug 1365045](https://bugzil.la/1365045), [Firefox bug 1475462](https://bugzil.la/1475462)).
+- Добавлена поддержка [prefers-reduced-motion](/ru/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) ([Firefox bug 1365045](https://bugzil.la/1365045), [Firefox bug 1475462](https://bugzil.la/1475462)).
 - Свойство {{CSSxRef("resize")}} обзавелось относительно-направленными значениями (`block`, `inline`) ([Firefox bug 1464786](https://bugzil.la/1464786)).
 - Реализована flexbox-раскладка для значений `safe` и `unsafe` в {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}} и {{CSSxRef("justify-content")}} ([Firefox bug 1297774](https://bugzil.la/1297774)).
 - [Логические свойства](/ru/docs/Web/CSS/CSS_logical_properties_and_values) (там, где это необходимо) стали анимируемыми ([Firefox bug 1309752](https://bugzil.la/1309752)).

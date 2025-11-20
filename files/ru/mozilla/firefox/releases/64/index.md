@@ -33,7 +33,7 @@ _Без изменений._
 
 - Включена по умолчанию поддержка [полос прокрутки CSS](/ru/docs/Web/CSS/CSS_scrollbars_styling) ([Firefox bug 1492012](https://bugzil.la/1492012)).
 - Реализована поддержка Interaction Media Features, включающая [`pointer:coarse`](/ru/docs/Web/CSS/@media/pointer) ([Firefox bug 1035774](https://bugzil.la/1035774)). Подробности реализации [`any-pointer`](/ru/docs/Web/CSS/@media/any-pointer) и [`any-hover`](/ru/docs/Web/CSS/@media/any-hover) см в [Firefox bug 1483111](https://bugzil.la/1483111).
-- Android-версия обзавелась поддержкой [`prefers-reduced-motion`](/ru/docs/Web/CSS/@media/prefers-reduced-motion) ([Firefox bug 1478505](https://bugzil.la/1478505)).
+- Android-версия обзавелась поддержкой [`prefers-reduced-motion`](/ru/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) ([Firefox bug 1478505](https://bugzil.la/1478505)).
 - Значения {{cssxref("&lt;gradient&gt;")}} теперь поддерживают мультипозиционный синтаксис остановки цвета, например, `yellow 25%, yellow 50%` можно записать в виде `yellow 25% 50%` ([Firefox bug 1352643](https://bugzil.la/1352643)).
 - Свойство {{cssxref("text-transform")}} теперь принимает значение `full-size-kana` ([Firefox bug 1498148](https://bugzil.la/1498148)).
 - Из-за проблем веб-совместимости добавлена поддержка {{cssxref("appearance", "-webkit-appearance")}} ([Firefox bug 1368555](https://bugzil.la/1368555)).
@@ -45,7 +45,7 @@ _Без изменений._
 #### Удалено
 
 - Нестандартные значения [`-moz-box` и `-moz-inline-box`](/ru/docs/Mozilla/Gecko/Chrome/CSS/display-xul) {{CSSxRef("display")}} скрыты от веб-содержимого ([Firefox bug 1496961](https://bugzil.la/1496961)).
-- Нестандартные [псевдоэлементы](/ru/docs/Web/CSS/Pseudo-elements) {{CSSxRef("::-moz-tree")}} скрыты от веб-содержимого ([Firefox bug 1496961](https://bugzil.la/1496961)).
+- Нестандартные [псевдоэлементы](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-elements) {{CSSxRef("::-moz-tree")}} скрыты от веб-содержимого ([Firefox bug 1496961](https://bugzil.la/1496961)).
 - Удалена настройка `layout.css.filters.enabled`; [CSS-фильтры](/ru/docs/Web/CSS/CSS_filter_effects) отныне нельзя отключить ([Firefox bug 1408841](https://bugzil.la/1408841)).
 - Отменено ([Firefox bug 1492567](https://bugzil.la/1492567)) изменение, сделанное в прошлом выпуске — перемена мест значений {{cssxref("overflow")}} ([Firefox bug 1481866](https://bugzil.la/1481866)). См. [причину](https://bugzilla.mozilla.org/show_bug.cgi?id=1481866#c14).
 

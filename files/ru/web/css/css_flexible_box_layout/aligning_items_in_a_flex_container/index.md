@@ -104,7 +104,7 @@ slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
 > [!NOTE]
 > Значение `space-evenly` не определено в спецификации flexbox и добавлено позже в спецификацию Box Alignment. Поддержка браузерами этого значение не так широка, как значений определённым в спецификации flexbox.
 
-В [документации по `justify-content` на MDN](/ru/docs/Web/CSS/justify-content) приведено больше деталей о всех значениях и поддержке браузерами.
+В [документации по `justify-content` на MDN](/ru/docs/Web/CSS/Reference/Properties/justify-content) приведено больше деталей о всех значениях и поддержке браузерами.
 
 ## Выравнивание содержимого по главной оси
 

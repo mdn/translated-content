@@ -6,7 +6,7 @@ original_slug: Web/CSS/var
 
 {{CSSRef}}
 
-[Функция](/ru/docs/Web/CSS/CSS_Functions) [CSS](/ru/docs/Web/CSS) **`var()`** используется для вставки значения [кастомного свойства](/ru/docs/Web/CSS/--*) (также известного как "CSS-переменная") в другое свойство.
+[Функция](/ru/docs/Web/CSS/CSS_Functions) [CSS](/ru/docs/Web/CSS) **`var()`** используется для вставки значения [кастомного свойства](/ru/docs/Web/CSS/Reference/Properties/--*) (также известного как "CSS-переменная") в другое свойство.
 
 {{InteractiveExample("CSS Demo: var()")}}
 

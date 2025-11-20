@@ -132,7 +132,7 @@ slug: Web/CSS/CSS_display/Block_formatting_context
 - {{ cssxref("float") }}, {{ cssxref("clear") }}
 - Ключевые концепции CSS
   - [Синтаксис CSS](/ru/docs/Web/CSS/CSS_syntax/Syntax)
-  - [@-правила](/ru/docs/Web/CSS/CSS_syntax/At-rule)
+  - [@-правила](/ru/docs/Web/CSS/CSS_syntax/At-rules)
   - [комментарии](/ru/docs/Web/CSS/CSS_syntax/Comments)
   - [специфичность](/ru/docs/Web/CSS/CSS_cascade/Specificity)
   - [наследование](/ru/docs/Web/CSS/CSS_cascade/Inheritance)

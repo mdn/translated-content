@@ -39,7 +39,7 @@ article.dataset.parent // "cars"
 
 ## Доступ в CSS
 
-Заметим, что `data`-атрибуты являются обычными HTML-атрибутами, к которым можно получить доступ в [CSS](/ru/docs/Web/CSS). Например, чтобы показать родительские данные о статье можно использовать [генерируемый контент](/ru/docs/Web/CSS/content) и CSS функцию {{cssxref("attr")}}:
+Заметим, что `data`-атрибуты являются обычными HTML-атрибутами, к которым можно получить доступ в [CSS](/ru/docs/Web/CSS). Например, чтобы показать родительские данные о статье можно использовать [генерируемый контент](/ru/docs/Web/CSS/Reference/Properties/content) и CSS функцию {{cssxref("attr")}}:
 
 ```css
 article::before {
@@ -47,7 +47,7 @@ article::before {
 }
 ```
 
-Также можно использовать [селекторы атрибутов](/ru/docs/Web/CSS/Attribute_selectors) в CSS для изменения стилей в соответствии с данным:
+Также можно использовать [селекторы атрибутов](/ru/docs/Web/CSS/Reference/Selectors/Attribute_selectors) в CSS для изменения стилей в соответствии с данным:
 
 ```css
 article[data-columns="3"] {

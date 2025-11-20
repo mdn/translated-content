@@ -429,7 +429,7 @@ window.onload = function () {
 
 #### CSS-псевдоклассы :required и :optional
 
-[Псевдоклассы](/ru/docs/Web/CSS/Pseudo-classes) {{cssxref(':required')}} и {{cssxref(':optional')}} позволяют писать селекторы, соответствующие элементам формы, которые имеют или не имеют атрибут [`required`](/ru/docs/Web/HTML/Reference/Global_attributes#required)
+[Псевдоклассы](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-classes) {{cssxref(':required')}} и {{cssxref(':optional')}} позволяют писать селекторы, соответствующие элементам формы, которые имеют или не имеют атрибут [`required`](/ru/docs/Web/HTML/Reference/Global_attributes#required)
 
 #### CSS-псевдокласс :placeholder-shown
 
@@ -437,7 +437,7 @@ window.onload = function () {
 
 #### CSS-псевдоклассы :valid и :invalid
 
-[Псевдоклассы](/ru/docs/Web/CSS/Pseudo-classes) {{cssxref(':valid')}} и {{cssxref(':invalid')}} используются для представления элементов \<input>, содержимое которых является валидным или не валидным соответственно. Эти классы позволяют пользователю оформлять валидные или не валидные элементы формы, чтобы облегчить определение элементов, которые имеют корректный или некорректный формат.
+[Псевдоклассы](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-classes) {{cssxref(':valid')}} и {{cssxref(':invalid')}} используются для представления элементов \<input>, содержимое которых является валидным или не валидным соответственно. Эти классы позволяют пользователю оформлять валидные или не валидные элементы формы, чтобы облегчить определение элементов, которые имеют корректный или некорректный формат.
 
 ### Управление текстом нарушения ограничений
 

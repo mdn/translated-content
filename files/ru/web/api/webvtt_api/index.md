@@ -587,4 +587,4 @@ Prior to Firefox 58, the `REGION` keyword was creating {{domxref("VTTRegion")}} 
 
 ## Смотрите также
 
-- The CSS [`::cue` and `::cue()`](/ru/docs/Web/CSS/::cue) pseudo-elements
+- The CSS [`::cue` and `::cue()`](/ru/docs/Web/CSS/Reference/Selectors/::cue) pseudo-elements

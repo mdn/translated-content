@@ -219,7 +219,7 @@ div {
 }
 ```
 
-[Les transitions CSS](/fr/docs/Web/CSS/CSS_transitions) peuvent être utilisées pour définir la durée à zéro pour l'étape initiale de l'animation.
+[Les transitions CSS](/fr/docs/Web/CSS/Guides/Transitions) peuvent être utilisées pour définir la durée à zéro pour l'étape initiale de l'animation.
 
 ```css
 div {
@@ -321,7 +321,7 @@ La propriété animation est déjà puissante seule, mais combinée à d'autres 
 
 JavaScript est souvent utilisé pour contrôler les éléments HTML {{HTMLElement('canvas')}} et SVG. La plupart du code JavaScript qui s'applique à la vidéo HTML s'applique aussi à l'audio. `HTMLMediaElement.playbackRate` permet de contrôler la vitesse de lecture pour la vidéo et l'audio. Une valeur de 1.0 est la vitesse normale&nbsp;; 0.5 est la moitié de la vitesse, 2.0 est deux fois plus rapide. Un nombre négatif lit la vidéo ou l'audio à l'envers. Définissez la propriété playback rate&nbsp;: `HTMLMediaElement.playbackRate = playbackSpeed`.
 
-{{DOMxRef("document.getAnimations()")}} est une technologie expérimentale, et inclut [Animations CSS](/fr/docs/Web/CSS/CSS_animations), [Transitions CSS](/fr/docs/Web/CSS/CSS_transitions) et [Web Animations](/fr/docs/Web/API/Web_Animations_API). La page MDN sur {{DOMxRef("Document.getAnimations()")}} propose l'exemple de code suivant pour ralentir toutes les animations d'une page à la moitié de la vitesse&nbsp;:
+{{DOMxRef("document.getAnimations()")}} est une technologie expérimentale, et inclut [Animations CSS](/fr/docs/Web/CSS/Guides/Animations), [Transitions CSS](/fr/docs/Web/CSS/Guides/Transitions) et [Web Animations](/fr/docs/Web/API/Web_Animations_API). La page MDN sur {{DOMxRef("Document.getAnimations()")}} propose l'exemple de code suivant pour ralentir toutes les animations d'une page à la moitié de la vitesse&nbsp;:
 
 ```js
 document.getAnimations().forEach((animation) => {

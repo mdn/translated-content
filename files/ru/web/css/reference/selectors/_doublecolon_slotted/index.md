@@ -6,7 +6,7 @@ original_slug: Web/CSS/::slotted
 
 {{ CSSRef }}
 
-[CSS](/ru/docs/Web/CSS) [псевдо-элемент](/ru/docs/Web/CSS/Pseudo-elements) **`::slotted()`** представляет собой любой элемент, помещённый в слот внутри HTML-шаблона (дополнительная информация в [Using templates and slots](/ru/docs/Web/API/Web_components/Using_templates_and_slots)).
+[CSS](/ru/docs/Web/CSS) [псевдо-элемент](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-elements) **`::slotted()`** представляет собой любой элемент, помещённый в слот внутри HTML-шаблона (дополнительная информация в [Using templates and slots](/ru/docs/Web/API/Web_components/Using_templates_and_slots)).
 
 Это работает только при использовании внутри CSS, помещённого в [shadow DOM](/ru/docs/Web/API/Web_components/Using_shadow_DOM). Обратите также внимание, что этот селектор не будет выбирать текстовый узел, помещённый в слот; он нацелен только на фактические элементы.
 

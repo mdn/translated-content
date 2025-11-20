@@ -39,7 +39,7 @@ flex-flow: unset;
 
 ### Значения
 
-Смотрите [`flex-direction`](/ru/docs/Web/CSS/flex-direction) и [`flex-wrap`](/ru/docs/Web/CSS/flex-wrap).
+Смотрите [`flex-direction`](/ru/docs/Web/CSS/Reference/Properties/flex-direction) и [`flex-wrap`](/ru/docs/Web/CSS/Reference/Properties/flex-wrap).
 
 ### Формальный синтаксис
 

@@ -6,7 +6,7 @@ original_slug: Web/CSS/::first-letter
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS) [псевдоэлемент](/ru/docs/Web/CSS/Pseudo-elements) **`::first-letter`** применяет стили к первой букве первой строки [блочного элемента](/ru/docs/Web/CSS/CSS_display/Visual_formatting_model#block-level_elements_and_block_boxes), но только если нету другого предшествующего содержимого (такого как изображения или инлайн таблицы).
+[CSS](/ru/docs/Web/CSS) [псевдоэлемент](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-elements) **`::first-letter`** применяет стили к первой букве первой строки [блочного элемента](/ru/docs/Web/CSS/CSS_display/Visual_formatting_model#block-level_elements_and_block_boxes), но только если нету другого предшествующего содержимого (такого как изображения или инлайн таблицы).
 
 ```css
 /* Стили для первой буквы элемента <p> */
@@ -22,7 +22,7 @@ p::first-letter {
 - Комбинация псевдоэлемента {{ cssxref("::before") }} и свойства {{ cssxref("content") }} может привести к добавлению некоторого текста в начало элемента. В этом случае псевдоэлементу `::first-letter` будет соответствовать первая буква добавленного содержимого.
 
 > [!NOTE]
-> В CSS3 появилась запись `::first-letter` (с двумя двоеточиями) для различения [псевдоклассов](/ru/docs/Web/CSS/Pseudo-classes) и [псевдоэлементов](/ru/docs/Web/CSS/Pseudo-elements). Браузеры также поддерживают запись `:first-letter`, введённую в CSS2.
+> В CSS3 появилась запись `::first-letter` (с двумя двоеточиями) для различения [псевдоклассов](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-classes) и [псевдоэлементов](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-elements). Браузеры также поддерживают запись `:first-letter`, введённую в CSS2.
 
 ## Разрешённые свойства
 

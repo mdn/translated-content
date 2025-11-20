@@ -17,7 +17,7 @@ p::first-line {
 ```
 
 > [!NOTE]
-> В отличие от псевдоэлементов, [псевдоклассы](/ru/docs/Web/CSS/Pseudo-classes) могут быть использованы для стилизации элемента на основе его _состояния_.
+> В отличие от псевдоэлементов, [псевдоклассы](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-classes) могут быть использованы для стилизации элемента на основе его _состояния_.
 
 ## Синтаксис
 
@@ -91,4 +91,4 @@ selector::pseudo-element {
 
 ## Смотрите также
 
-- [Псевдоклассы](/ru/docs/Web/CSS/Pseudo-classes)
+- [Псевдоклассы](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-classes)

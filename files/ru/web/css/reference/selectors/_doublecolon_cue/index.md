@@ -6,7 +6,7 @@ original_slug: Web/CSS/::cue
 
 {{CSSRef}}
 
-[Псевдоэлемент](/ru/docs/Web/CSS/Pseudo-elements) [CSS](/ru/docs/Web/CSS) **`::cue`** соответствует репликам [WebVTT](/ru/docs/Web/API/WebVTT_API) в выбранном элементе. Он может быть использован для задания [стилей титров и других реплик](/ru/docs/Web/API/WebVTT_API#styling_webtt_cues) в медиа с VTT треками.
+[Псевдоэлемент](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/ru/docs/Web/CSS) **`::cue`** соответствует репликам [WebVTT](/ru/docs/Web/API/WebVTT_API) в выбранном элементе. Он может быть использован для задания [стилей титров и других реплик](/ru/docs/Web/API/WebVTT_API#styling_webtt_cues) в медиа с VTT треками.
 
 ```css
 ::cue {

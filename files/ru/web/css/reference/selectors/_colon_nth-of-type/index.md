@@ -6,7 +6,7 @@ original_slug: Web/CSS/:nth-of-type
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) **`:nth-of-type()`** находит один или более элементов с заданным тегом, основываясь на их позиции среди группы соседних элементов.
+[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:nth-of-type()`** находит один или более элементов с заданным тегом, основываясь на их позиции среди группы соседних элементов.
 
 ```css
 /* Выбирает каждый четвёртый элемент <p>
