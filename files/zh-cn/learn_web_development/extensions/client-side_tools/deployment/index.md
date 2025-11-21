@@ -152,7 +152,7 @@ GitHub Actions 如同 ESLint 配置一样，是另一个值得深入探索的领
 
 若看到黄色圆点，表示操作正在运行；若看到红色叉号，则表示操作失败。点击图标即可查看构建操作（本例中名为“部署构建”）的状态和日志。
 
-稍等片刻后，访问您的 GitHub Pages 网址即可查看网站上线效果。链接格式为 `https://<你的用户名>.github.io/<仓库名称>`。本例中网址为 <https://mdn.github.io/client-toolchain-example/>。
+稍等片刻后，访问你的 GitHub Pages 网址即可查看网站上线效果。链接格式为 `https://<你的用户名>.github.io/<仓库名称>`。本例中网址为 <https://mdn.github.io/client-toolchain-example/>。
 
 现在进入工具链的最后一步：通过测试确保代码正常运行。
 
