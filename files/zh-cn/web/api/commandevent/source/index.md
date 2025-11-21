@@ -15,7 +15,7 @@ l10n:
 
 ## 示例
 
-在下面的简单示例中，我们设置了一个事件监听器，在发生 `CommandEvent` 时向按钮元素添加一个临时类：
+在下面的简单示例中，我们设置了一个事件监听器，在发生 CommandEvent 时向按钮元素添加一个临时类：
 
 ```js
 document.body.addEventListener(
