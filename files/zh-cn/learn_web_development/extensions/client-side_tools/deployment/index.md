@@ -67,7 +67,7 @@ GitHub 提供了一套流畅的工作流程，可将新代码转化为实时网�
 
 ## 将更改提交至 GitHub
 
-本节将帮助你将代码存储到 git 仓库，但它与 git 教程相去甚远。网络上有很多很棒的教程和书籍，我们的 [Git 和 GitHub](/zh-CN/docs/Learn_web_development/Core/Version_control)页面也是一个很好的开始。
+本节将帮助你将代码存储到 git 仓库，但它与 git 教程相去甚远。网络上有很多很棒的教程和书籍，我们的 [Git 和 GitHub](/zh-CN/docs/Learn_web_development/Core/Version_control) 页面也是一个很好的开始。
 
 前面我们将工作目录初始化为 git 工作目录。运行以下命令即可快速验证：
 
