@@ -18,9 +18,9 @@ using disposer = new DisposableStack();
 const reader = disposer.use(stream.getReader());
 ```
 
-Then, when the `disposer` goes out of scope, all resources registered to it are disposed in reverse order of registration, unless they have been moved out with `move()`.
+そして `disposer` がスコープ外になると、`move()` で移動されていない限り、登録されたすべてのリソースが登録の逆順で破棄されます。
 
-It is good practice to _not_ extract the resource acquisition expression to a separate statement, no matter how long the expression is. You should always wrap the `use()` or `adopt()` call around the resource acquisition expression to ensure that the resource is registered to the stack immediately.
+リソースを取得する式がどれほど長くても、別の文に _切り出さない_ ことが良い習慣です。`use()` または `adopt()` の呼び出しでリソースを取得する式を常にラップして、リソースが直ちにスタックに登録されることを保証する必要があります。
 
 ```js example-bad
 using disposer = new DisposableStack();
@@ -28,7 +28,7 @@ const reader = stream.getReader();
 disposer.use(reader);
 ```
 
-Functionally, these two code snippets are equivalent. However, the first one is less error-prone because the resource is declared and registered in a single line. If someone puts more code between the second and third lines of the second snippet, an error could occur, causing the resource to leak.
+これら二つのコードスニペットは機能的には同等です。しかし、最初の方がリソースが一行で宣言され登録されるため、エラーが起こりにくいです。もし誰かが二番目のスニペットにおいて二行目と三行目の間にさらにコードを追加した場合、エラーが発生しリソースがリークする可能性があります。
 
 ## Constructor
 
