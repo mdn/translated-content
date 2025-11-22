@@ -6,7 +6,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getTimeZones
 {{jsxref("Intl.Locale")}} インスタンスの **`getTimeZones()`** メソッドは、このロケールに対応しているタイムゾーンのリストを返します。
 
 > [!NOTE]
-> 一部のブラウザーのあるバージョンでは、このメソッドが `timeZones` と呼ばれるアクセサープロパティとして実装されていました。しかしこの実装ではアクセスするたびに新しい配列を返すため、`locale.timeZones === locale.timeZones` が `false` を返してしまい、この状況を防ぐために、現在はメソッドとして実装されています。詳細については、[ブラウザーの互換性](#browser_compatibility)の表を確認してください。
+> 一部のブラウザーのあるバージョンでは、このメソッドが `timeZones` と呼ばれるアクセサープロパティとして実装されていました。しかしこの実装ではアクセスするたびに新しい配列を返すため、`locale.timeZones === locale.timeZones` が `false` を返してしまい、この状況を防ぐために、現在はメソッドとして実装されています。詳細については、[ブラウザーの互換性](#ブラウザーの互換性y)の表を確認してください。
 
 ## 構文
 
