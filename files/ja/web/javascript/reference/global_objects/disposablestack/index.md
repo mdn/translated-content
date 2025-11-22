@@ -5,7 +5,7 @@ l10n:
   sourceCommit: b6a36de3428f4b42c7707c8f190a349db13bf531
 ---
 
-The **`DisposableStack`** object represents a stack of [disposers](/ja/docs/Web/JavaScript/Reference/Statements/using) to run when the stack itself is disposed. Disposer functions are executed in reverse order of registration, with strong error handling guarantees. Calling its `move()` method will transfer responsibility for calling the current registered disposers to a new `DisposableStack` and prevent registering any additional disposers.
+**`DisposableStack`** オブジェクトは、[ディスポーザー](/ja/docs/Web/JavaScript/Reference/Statements/using)のスタックを表します。スタックに登録したディスポーザーは、スタック自体が破棄される時に実行されます。ディスポーザーの関数は、強力なエラーハンドリングによる保証の元、登録した順番とは逆の順番で実行されます。ディスポーザーの `move()` メソッドを呼び出すと、現在登録しているディスポーザーを新しい `DisposableStack` に呼び出す責任を移譲し、追加のディスポーザーの登録を防止します。
 
 ## Description
 
