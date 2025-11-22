@@ -13,7 +13,7 @@ l10n:
 
 ここではドラッグや並べ替えの実演が主目的であるため、タスクの追加や削除といった実際のカンバンボードの動的な側面は省略します。代わりに、すべての列とタスクは HTML にハードコードされます。
 
-```html live-sample___kanban
+```html-nolint live-sample___kanban
 <div class="container">
   <div class="task-column">
     <h2>やること</h2>
