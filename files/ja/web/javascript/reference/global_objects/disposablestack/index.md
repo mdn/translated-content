@@ -35,16 +35,16 @@ disposer.use(reader);
 - {{jsxref("DisposableStack/DisposableStack", "DisposableStack()")}}
   - : 新しい `DisposableStack` オブジェクトを作成します。
 
-## Instance properties
+## インスタンスプロパティ
 
-These properties are defined on `DisposableStack.prototype` and shared by all `DisposableStack` instances.
+これらのプロパティは DisposableStack.prototype で定義されており、すべての DisposableStack インスタンスで共有されます。
 
 - {{jsxref("Object/constructor", "DisposableStack.prototype.constructor")}}
-  - : The constructor function that created the instance object. For `DisposableStack` instances, the initial value is the {{jsxref("DisposableStack/DisposableStack", "DisposableStack")}} constructor.
+  - : インスタンスオブジェクトを作成したコンストラクター関数。`DisposableStack` インスタンスの場合、初期値は {{jsxref("DisposableStack/DisposableStack", "DisposableStack")}} コンストラクターです。
 - {{jsxref("DisposableStack.prototype.disposed")}}
-  - : Read-only. Returns `true` if the `DisposableStack` has been disposed, or `false` if not.
+  - : 読み取り専用。`DisposableStack` が破棄されている場合は `true`、そうでない場合は `false` を返します。
 - `DisposableStack.prototype[Symbol.toStringTag]`
-  - : The initial value of the [`[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"DisposableStack"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+  - : [`[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は文字列 `"DisposableStack"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。
 
 ## Instance methods
 
