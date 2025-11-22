@@ -7,11 +7,11 @@ l10n:
 
 **`DisposableStack`** オブジェクトは、[ディスポーザー](/ja/docs/Web/JavaScript/Reference/Statements/using)のスタックを表します。スタックに登録したディスポーザーは、スタック自体が破棄される時に実行されます。ディスポーザーの関数は、強力なエラーハンドリングによる保証の元、登録した順番とは逆の順番で実行されます。ディスポーザーの `move()` メソッドを呼び出すと、現在登録しているディスポーザーを新しい `DisposableStack` に呼び出す責任を移譲し、追加のディスポーザーの登録を防止します。
 
-## Description
+## 解説
 
-A `DisposableStack` is not exactly a "stack" in terms of its interface. It has several methods for pushing disposers to it, but it has no way to pop one disposer off. Rather, _all_ disposers are popped and executed one-by-one when the stack is disposed.
+`DisposableStack` は、そのインターフェイスの観点から見ると、厳密には「スタック」ではありません。ディスポーザーをスタックにプッシュするためのメソッドはいくつかありますが、ディスポーザーを一つポップする方法はありません。それどころか、スタックが破棄されるときに _すべての_ ディスポーザーが一つずつポップされて実行されます。
 
-You register [disposable resources](/ja/docs/Web/JavaScript/Guide/Resource_management) to the `DisposableStack` using its {{jsxref("DisposableStack/use", "use()")}}, {{jsxref("DisposableStack/adopt", "adopt()")}}, or {{jsxref("DisposableStack/defer", "defer()")}} methods.
+`DisposableStack`に[処分可能なリソース](/ja/docs/Web/JavaScript/Guide/Resource_management)を登録するには、{{jsxref("DisposableStack/use", "use()")}}、{{jsxref("DisposableStack/adopt", "adopt()")}}、または{{jsxref("DisposableStack/defer", "defer()")}}メソッドを使用します。
 
 ```js
 using disposer = new DisposableStack();
