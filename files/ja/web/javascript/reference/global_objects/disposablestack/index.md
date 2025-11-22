@@ -30,10 +30,10 @@ disposer.use(reader);
 
 これら二つのコードスニペットは機能的には同等です。しかし、最初の方がリソースが一行で宣言され登録されるため、エラーが起こりにくいです。もし誰かが二番目のスニペットにおいて二行目と三行目の間にさらにコードを追加した場合、エラーが発生しリソースがリークする可能性があります。
 
-## Constructor
+## コンストラクター
 
 - {{jsxref("DisposableStack/DisposableStack", "DisposableStack()")}}
-  - : Creates a new `DisposableStack` object.
+  - : 新しい `DisposableStack` オブジェクトを作成します。
 
 ## Instance properties
 
