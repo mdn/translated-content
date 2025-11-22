@@ -1,21 +1,18 @@
 ---
-title: window.length
+title: "Window: length プロパティ"
+short-title: length
 slug: Web/API/Window/length
+l10n:
+  sourceCommit: 62cedc63226017e9e7d0718b6fea3529ca8dbf37
 ---
 
-{{ApiRef}}
-
-## 概要
+{{APIRef}}
 
 ウィンドウにおけるフレーム（{{HTMLElement("frame")}} か {{HTMLElement("iframe")}} 要素のいずれか）の数を返します。
 
-## 構文
+## 値
 
-```
-framesCount = window.length;
-```
-
-- `framesCount` はフレームの数です。
+数値です。
 
 ## 例
 
@@ -28,3 +25,7 @@ if (window.length) {
 ## 仕様書
 
 {{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
