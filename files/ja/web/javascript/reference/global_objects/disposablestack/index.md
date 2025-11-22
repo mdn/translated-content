@@ -61,15 +61,15 @@ disposer.use(reader);
 - [`DisposableStack.prototype[Symbol.dispose]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/DisposableStack/Symbol.dispose)
   - : `dispose()` メソッドのエイリアス。
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - [Polyfill of `DisposableStack` in `core-js`](https://github.com/zloirock/core-js#explicit-resource-management)
 - [JavaScript resource management](/ja/docs/Web/JavaScript/Guide/Resource_management)
