@@ -3,7 +3,7 @@ title: VisualViewport
 slug: Web/API/VisualViewport
 ---
 
-{{SeeCompatTable}}{{APIRef("Visual Viewport")}}
+{{APIRef("CSSOM view API")}}
 
 [CSSOM view API](/zh-CN/docs/Web/API/CSSOM_view_API) 的 **`VisualViewport`** 接口表示给定 window 的视觉视口。对于每个页面容器来说（如 iframe），都存在有一个独立的 window 对象。每个页面容器的 window 对象都有一个独立的 `VisualViewport` 属性。
 
