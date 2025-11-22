@@ -6,7 +6,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getHourCycles
 {{jsxref("Intl.Locale")}} インスタンスの **`getHourCycles()`** メソッドは、`Locale` の 1 つ以上の固有の時制識別子の配列を返します。
 
 > [!NOTE]
-> 一部のブラウザーのあるバージョンでは、このメソッドが `hourCycles` と呼ばれるアクセサープロパティとして実装されていました。しかしこの実装ではアクセスするたびに新しい配列を返すため、`locale.hourCycles === locale.hourCycles` が常に `false` を返してしまい、この状況を防ぐために、現在はメソッドとして実装されています。詳細については、[ブラウザーの互換性](#browser_compatibility)の表を確認してください。
+> 一部のブラウザーのあるバージョンでは、このメソッドが `hourCycles` と呼ばれるアクセサープロパティとして実装されていました。しかしこの実装ではアクセスするたびに新しい配列を返すため、`locale.hourCycles === locale.hourCycles` が常に `false` を返してしまい、この状況を防ぐために、現在はメソッドとして実装されています。詳細については、[ブラウザーの互換性](#ブラウザーの互換性)の表を確認してください。
 
 ## 構文
 
@@ -39,7 +39,7 @@ getHourCycles()
 
 ### 対応している時制を取得
 
-`Locale` オブジェクトに `hourCycle` が設定されていない場合、`getHourCycles()` は指定された `Locale` で一般的に使用されるすべての時制識別子をリストアップします。`hourCycle` を明示的に設定する例については、[`hourCycle` の例](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle#examples) を参照してください。
+`Locale` オブジェクトに `hourCycle` が設定されていない場合、`getHourCycles()` は指定された `Locale` で一般的に使用されるすべての時制識別子をリストアップします。`hourCycle` を明示的に設定する例については、[`hourCycle` の例](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle#例) を参照してください。
 
 ```js
 const arEG = new Intl.Locale("ar-EG");

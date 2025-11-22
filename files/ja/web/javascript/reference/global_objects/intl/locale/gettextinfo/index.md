@@ -6,7 +6,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getTextInfo
 {{jsxref("Intl.Locale")}} インスタンスの **`getTextInfo()`** メソッドは、ロケールに対して `ltr` (左書き) または `rtl` (右書き) で示される文字の並び順を返します。
 
 > [!NOTE]
-> 一部のブラウザーのあるバージョンでは、このメソッドが `textInfo` と呼ばれるアクセサープロパティとして実装されていました。しかしこの実装ではアクセスするたびに新しいオブジェクトを返すため、`locale.textInfo === locale.textInfo` が `false` を返してしまい、この状況を防ぐために、現在はメソッドとして実装されています。詳細については、[ブラウザーの互換性](#browser_compatibility)の表を確認してください。
+> 一部のブラウザーのあるバージョンでは、このメソッドが `textInfo` と呼ばれるアクセサープロパティとして実装されていました。しかしこの実装ではアクセスするたびに新しいオブジェクトを返すため、`locale.textInfo === locale.textInfo` が `false` を返してしまい、この状況を防ぐために、現在はメソッドとして実装されています。詳細については、[ブラウザーの互換性](#ブラウザーの互換性)の表を確認してください。
 
 ## 構文
 
