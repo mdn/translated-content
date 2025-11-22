@@ -34,7 +34,6 @@ Vamos começar pelo bloco de construção de qualquer linguagem: os tipos. Progr
 - strings (strings)
 - booleanos (booleans)
 - objetos (objects)
-
   - funções (functions)
   - vetores (arrays)
   - datas (dates)

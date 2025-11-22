@@ -3,8 +3,6 @@ title: HTTP 客户端提示（Client Hint）
 slug: Web/HTTP/Guides/Client_hints
 ---
 
-{{HTTPSidebar}}
-
 **客户端提示**是一组 [HTTP 请求标头](/zh-CN/docs/Web/HTTP/Reference/Headers)字段，服务器可以主动地用它来获取关于设备、网络、用户以及用户代理指定的首选项的信息。然后，服务器可以根据客户端选择提供的信息来确定发送哪些资源。
 
 “提示”（hint）标头集在 [HTTP 标头](/zh-CN/docs/Web/HTTP/Reference/Headers#客户端提示（client_hint）)话题中列出并[总结如下](#提示类型)。
@@ -96,7 +94,7 @@ Sec-CH-Prefers-Reduced-Motion: "reduce"
 
 ### 用户首选项媒体特性客户端提示
 
-用户首选项媒体特性客户端提示允许服务器基于用户代理对 [CSS 媒体特性](/zh-CN/docs/Web/CSS/@media#媒体特性)（例如配色方案或者减少动态效果）的首选项来改变响应。标头包括：{{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}、{{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}}。
+用户首选项媒体特性客户端提示允许服务器基于用户代理对 [CSS 媒体特性](/zh-CN/docs/Web/CSS/Reference/At-rules/@media#媒体特性)（例如配色方案或者减少动态效果）的首选项来改变响应。标头包括：{{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}、{{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}}。
 
 ### 设备客户端提示
 

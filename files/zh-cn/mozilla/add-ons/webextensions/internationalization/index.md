@@ -3,8 +3,6 @@ title: 国际化
 slug: Mozilla/Add-ons/WebExtensions/Internationalization
 ---
 
-{{AddonSidebar}}
-
 [WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) API 有一个相当方便的模块可用于附加组件的国际化（[i18n](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/i18n)）。我们将在本文中探讨其功能，并为它的运作方式提供一个实例。WebExtensions 的 i18n 系统类似常见的 i18n 用途 JavaScript 库，例如 [i18n.js](http://i18njs.com/)。
 
 > [!NOTE]
@@ -15,33 +13,24 @@ slug: Mozilla/Add-ons/WebExtensions/Internationalization
 一个国际化的 WebExtension 与其他 WebExtension 一样可以包含各类功能，如[后台脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#后台脚本)、[内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)等，但它也有些额外的部分，从而允许它适应不同的语言区域。目录树大致如下：
 
 - webextension-根目录/
-
   - \_locales
-
     - en
-
       - messages.json
-
         - 英语消息（字符串）
 
     - de
-
       - messages.json
-
         - 德语消息（字符串）
 
     - 等其他语言
 
   - manifest.json
-
     - 含按语言区域而定的元数据
 
   - myJavascript.js
-
     - 含用于检索浏览器语言区域、特定语言环境的消息等的 JavaScript。
 
   - myStyles.css
-
     - 含按语言区域而定的 CSS
 
 让我们逐项探讨这些新特性，因为下列每个章节都是你在国际化 WebExtension 时所要遵循的步骤。
@@ -233,25 +222,17 @@ var content = browser.i18n.getMessage("notificationContent", message.url);
 参见下列示例：
 
 - webextension-root-directory/
-
   - \_locales
-
     - en_GB
-
       - messages.json
-
         - `{ "colorLocalised": { "message": "colour", "description": "Color." }, ... }`
 
       en
-
       - messages.json
-
         - `{ "colorLocalised": { "message": "color", "description": "Color." }, ... }`
 
     - fr
-
       - messages.json
-
         - `{ "colorLocalised": { "message": "couleur", "description": "Color." }, ...}`
 
 假设 `default_locale` 是设为 `fr`，而浏览器的语言环境为 `en_GB`：

@@ -7,7 +7,8 @@ l10n:
 
 {{MDNSidebar}}
 
-> **Nota:** _Elimine toda esta nota explicativa antes de publicar_
+> [!NOTE]
+> _Elimine toda esta nota explicativa antes de publicar_
 >
 > ---
 >
@@ -40,7 +41,6 @@ l10n:
 > - **status**
 >   - : Incluye claves de estado de tecnología (apropiadas): [**experimental**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**obsoleto**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **no estándar** (si no está en una pista de estándares).
 > - **browser-compat**
->
 >   - : Reemplace el valor del marcador de posición `css.selectors.NameOfTheSelector` con la cadena de consulta para el selector en el [repositorio de datos de compatibilidad con los navegadores](https://github.com/mdn/browser-compat-data).
 >     La cadena de herramientas utiliza automáticamente la clave para rellenar las secciones de compatibilidad con los navegadores y especificaciones (reemplazando las macros `\{{Compat}}` y `\{{Specifications}}` en esas secciones, respectivamente).
 >
@@ -72,7 +72,7 @@ l10n:
 >
 > _Recuerde eliminar toda esta nota explicativa antes de publicar_
 
-{{CSSRef}}{{SeeCompatTable}}{{Deprecated_Header}}
+{{SeeCompatTable}}{{Deprecated_Header}}
 
 El párrafo de resumen: comience nombrando el selector y diciendo lo que hace. Idealmente, esto debería consistir en 1 o 2 oraciones cortas.
 

@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.forEach()
+short-title: forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 l10n:
   sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
@@ -9,7 +10,7 @@ l10n:
 
 {{jsxref("Array")}} 인스턴스의 **`forEach()`** 메서드는 각 배열 요소에 대해 제공된 함수를 한 번씩 실행합니다.
 
-{{InteractiveExample("JavaScript Demo: Array.forEach()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.forEach()")}}
 
 ```js interactive-example
 const array1 = ["a", "b", "c"];

@@ -20,9 +20,7 @@ takePhoto(photoSettings)
 ### 引数
 
 - `photoSettings` {{optional_inline}}
-
   - : 写真を撮るためのオプションを設定するオブジェクト。利用できるオプションは以下の通りです。
-
     - `fillLightMode`
       - : このキャプチャ機器のフラッシュ設定です。 `"auto"`、`"off"`、`"flash"` のいずれかです。
     - `imageHeight`

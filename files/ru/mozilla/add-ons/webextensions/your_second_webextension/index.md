@@ -13,7 +13,6 @@ slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 
 - **определим [browser action](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) - кнопку, прикреплённую к панели инструментов Firefox.**
   Для кнопки мы предоставим:
-
   - иконку с именем "beasts-32.png"
   - всплывающую панель, если кнопка нажата. Панель состоит из HTML, CSS, и JavaScript.
 
@@ -85,7 +84,6 @@ cd beastify
 - [`icons`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) необязательный, но рекомендуемый: позволяет вам определять иконку для дополнения, которая будет показана в Менеджере Дополнений.
 - [`permissions`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) перечисляет разрешения для нужд дополнения. Здесь мы просто спрашиваем разрешения для [`activeTab` permission](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
 - [`browser_action`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) задаёт кнопку на панели инструментов. Здесь мы предоставляем три вида информации:
-
   - `default_icon` это обязательная иконка для кнопки
   - `default_title` необязательный заголовок, будет показан в подсказке
   - `default_popup` используется, если вы хотите, чтобы всплывающая панель была показана когда пользователь кликает по кнопке. В нашем примере мы использовали этот ключ и он указывает на HTML файл, подключённый к дополнению.

@@ -3,8 +3,6 @@ title: Firefox 70 for developers
 slug: Mozilla/Firefox/Releases/70
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 70 は、米国時間 2019 年 10 月 22 日 にリリースされました。このページでは、開発者に影響する Firefox 70 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -32,7 +30,6 @@ Firefox 70 は、米国時間 2019 年 10 月 22 日 にリリースされまし
 ### HTML
 
 - 以下の状況で、安全に生成されたパスワードを Firefox がユーザーに提案できるようになりました:
-
   - `autocomplete="new-password"` 属性を設定した {{HTMLelement("input")}} 要素。
   - 新しいパスワードを意図したかにかかわらず、パスワード入力要素でユーザーがコンテキストメニューを開いた。
 
@@ -41,7 +38,6 @@ Firefox 70 は、米国時間 2019 年 10 月 22 日 にリリースされまし
 - {{cssxref("opacity")}} や {{SVGAttr("stop-opacity")}} の、不透明度の値をパーセンテージで指定できるようになりました ([Firefox バグ 1562086](https://bugzil.la/1562086))。
 - {{cssxref("grid-auto-columns")}} および {{cssxref("grid-auto-rows")}} が、複数のトラックサイズの値を受け入れるようになりました ([Firefox バグ 1339672](https://bugzil.la/1339672))。
 - いくつかのテキスト関連の CSS プロパティを、デフォルトで有効にしました ([Firefox バグ 1573631](https://bugzil.la/1573631)):
-
   - {{cssxref("text-decoration-thickness")}}。
   - {{cssxref("text-underline-offset")}}。
   - {{cssxref("text-decoration-skip-ink")}}。既定値は `auto` であり、下線や上線が {{Glossary("glyph", "グリフ")}} を横切る場所で途切れるようになりました。
@@ -95,7 +91,6 @@ Firefox 70 は、米国時間 2019 年 10 月 22 日 にリリースされまし
 - {{domxref("RTCPeerConnection.setRemoteDescription()")}} メソッドを引数なしで呼び出せるようになりました。これはもうひとつの "perfect negotiation" に関する更新です ([Firefox バグ 1568292](https://bugzil.la/1568292))。
 - {{domxref("MediaTrackSupportedConstraints.groupId")}} をサポートしました。また、{{domxref("MediaTrackConstraints.groupId")}} プロパティをサポートしましたので `true` を返すようになりました ([Firefox バグ 1561254](https://bugzil.la/1561254))。
 - 新たな Web Audio API 機能をいくつか実装および更新しました:
-
   - {{domxref("AudioContext.getOutputTimestamp()")}} を実装しました ([Firefox バグ 1324545](https://bugzil.la/1324545))。
   - {{domxref("AudioContext.baseLatency")}} および {{domxref("AudioContext.outputLatency")}} を実装しました ([Firefox バグ 1324552](https://bugzil.la/1324552))。
   - {{domxref("MediaElementAudioSourceNode.mediaElement")}} および {{domxref("MediaStreamAudioSourceNode.mediaStream")}} を実装しました ([Firefox バグ 1350973](https://bugzil.la/1350973))。
@@ -127,7 +122,6 @@ Firefox 70 は、米国時間 2019 年 10 月 22 日 にリリースされまし
 
 - [`topSites.get()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/topSites/get) メソッドに、ユーザーが新しいタブを開いたときに表示するページの一覧を返すようにするための新しい引数を追加しました ([Firefox バグ 1568617](https://bugzil.la/1568617))。
 - [`privacy.network`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/privacy/network) プロパティの `WebRTCIPHandlingPolicy` サブプロパティで許可される値を、Chrome で見られる動作に合うよう修正しました ([Firefox バグ 1452713](https://bugzil.la/1452713)):
-
   - 以前はプロキシーが設定されていない場合に、`disable_non_proxied_udp` が WebRTC の使用を妨げていました。現在は、プロキシーが設定されている場合は常にプロキシーを使います。設定されていない場合は、プロキシーを経由しない接続を許可するようになりました。
   - `proxy_only` を、古い動作を提供するために使用できるようになりました。これは、プロキシーを使用した TURN on TCP による ICE ネゴシエーションのみ許可する効果があります。これ以外の接続は許可されません。
 
@@ -136,10 +130,8 @@ Firefox 70 は、米国時間 2019 年 10 月 22 日 にリリースされまし
 #### 廃止
 
 - chromium ベースのブラウザーで使用するテーマキーの別名として提供された、以下の [theme](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) キープロパティを削除しました:
-
   - `images` プロパティの `headerURL`。今後は `theme_frame` を使用してください。
   - `colors` プロパティ:
-
     - `accentcolor`。今後は `frame` を使用してください。
     - `textcolor`。今後は `tab_background_text` を使用してください。
 

@@ -1,32 +1,37 @@
 ---
 title: "SyntaxError: return not in function"
 slug: Web/JavaScript/Reference/Errors/Bad_return
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Errors")}}
+JavaScript 的「return not in function」例外會在 [`return`](/zh-TW/docs/Web/JavaScript/Reference/Statements/return) 陳述式在[函式](/zh-TW/docs/Web/JavaScript/Guide/Functions)之外被呼叫時發生。
 
 ## 訊息
 
 ```plain
-SyntaxError: return not in function
-SyntaxError: yield not in function
+SyntaxError: Illegal return statement（基於 V8）
+SyntaxError: return not in function (Firefox)
+SyntaxError: Return statements are only valid inside functions. (Safari)
 ```
 
 ## 錯誤類型
 
-{{jsxref("SyntaxError")}}
+{{jsxref("SyntaxError")}}。
 
-## 哪裡錯了？
+## 哪裡出錯了？
 
-[`return`](/zh-TW/docs/Web/JavaScript/Reference/Statements/return) 或 [`yield`](/zh-TW/docs/Web/JavaScript/Reference/Operators/yield) 宣告在[函式](/zh-TW/docs/Web/JavaScript/Guide/Functions)以外的地方被呼叫。也許少寫了一個大括號？`return` 與 `yield` 宣告必須要寫在函式裡面，因為它們結束（或暫停並恢復）函式的執行，並且回傳了特定值。
+[`return`](/zh-TW/docs/Web/JavaScript/Reference/Statements/return) 陳述式在[函式](/zh-TW/docs/Web/JavaScript/Guide/Functions)之外被呼叫。也許是某處遺漏了大括號？`return` 陳述式必須在函式中，因為它會結束函式執行，並指定一個值回傳給函式呼叫者。
 
-## 實例
+## 範例
 
-```js example-bad
-var cheer = function(score) {
+### 遺漏大括號
+
+```js-nolint example-bad
+function cheer(score) {
   if (score === 147)
     return "Maximum!";
-  };
+  }
   if (score > 100) {
     return "Century!";
   }
@@ -35,20 +40,19 @@ var cheer = function(score) {
 // SyntaxError: return not in function
 ```
 
-乍看之下大括號寫對了，但其實在第一個 `if` 的後面，少了一個 `{`。正確的寫法應該是：
+乍看之下，大括號似乎是正確的，但這段程式碼在第一個 `if` 陳述式後遺漏了一個 `{`。正確的寫法應該是：
 
 ```js example-good
-var cheer = function (score) {
+function cheer(score) {
   if (score === 147) {
     return "Maximum!";
   }
   if (score > 100) {
     return "Century!";
   }
-};
+}
 ```
 
 ## 參見
 
 - [`return`](/zh-TW/docs/Web/JavaScript/Reference/Statements/return)
-- [`yield`](/zh-TW/docs/Web/JavaScript/Reference/Operators/yield)

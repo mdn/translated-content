@@ -9,7 +9,7 @@ web 动画 API 可以让我们用 JavaScript 写动画并且控制动画。本�
 
 ## 认识 Web 动画 API
 
-[Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)将浏览器动画引擎向开发者打开，并由 JavaScript 进行操作。这些 API 被设计成 [CSS Animations](/zh-CN/docs/Web/CSS/CSS_animations) and [CSS Transitions](/zh-CN/docs/Web/CSS/CSS_transitions)的接口，未来会对这些 API 做补充以丰富更多的功能。它是对网络上动画化的支持最有效的方式之一，让浏览器进行自己的内部，不需要 hacks，或者强迫，或者{{domxref("Window.requestAnimationFrame()")}}。
+[Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)将浏览器动画引擎向开发者打开，并由 JavaScript 进行操作。这些 API 被设计成 [CSS Animations](/zh-CN/docs/Web/CSS/Guides/Animations) and [CSS Transitions](/zh-CN/docs/Web/CSS/Guides/Transitions)的接口，未来会对这些 API 做补充以丰富更多的功能。它是对网络上动画化的支持最有效的方式之一，让浏览器进行自己的内部，不需要 hacks，或者强迫，或者{{domxref("Window.requestAnimationFrame()")}}。
 
 通过 Web 动画 API，我们可以将交互式动画从样式表移动到 JavaScript，将表现与行为分开。我们不再需要依赖 DOM 重的技术，如将 CSS 属性和范围类写入元素来控制播放方向。与纯粹的声明式 CSS 不同，JavaScript 还允许我们动态地将属性值设置为持续时间。对于构建自定义动画库和创建交互式动画，Web 动画 API 可能是完成工作的完美工具。让我们看看它能做什么！
 
@@ -92,7 +92,7 @@ const aliceTiming = {
 - 你会注意到的另一件事是，它是 `iterations`，而不是 `iteration-count`。
 
 > [!NOTE]
-> CSS 动画中使用的属性值与 Web 动画中使用的属性值存在一些小的差异。比如，Web 动画中不能使用字符串“infinite”，而是使用 Javascript 的关键字 Infinity。以及我们用 `easing` 来代替`timing-function`。我们不必在这列出`easing`的值，因为不像在 CSS 动画里，默认的"[animation-timing-function](/zh-CN/docs/Web/CSS/animation-timing-function)"是`ease`。页面动画 API 的默认 easing 是`linear`— 而这就是我们想要的。
+> CSS 动画中使用的属性值与 Web 动画中使用的属性值存在一些小的差异。比如，Web 动画中不能使用字符串“infinite”，而是使用 Javascript 的关键字 Infinity。以及我们用 `easing` 来代替`timing-function`。我们不必在这列出`easing`的值，因为不像在 CSS 动画里，默认的"[animation-timing-function](/zh-CN/docs/Web/CSS/Reference/Properties/animation-timing-function)"是`ease`。页面动画 API 的默认 easing 是`linear`— 而这就是我们想要的。
 
 #### 整合这些特性
 
@@ -336,7 +336,8 @@ const endGame = () => {
 };
 ```
 
-> **备注：** `getAnimations()` and `effect` are not fully supported as of this writing, but the polyfill does support them today.
+> [!NOTE]
+> `getAnimations()` and `effect` are not fully supported as of this writing, but the polyfill does support them today.
 
 ## 回调和 promise
 

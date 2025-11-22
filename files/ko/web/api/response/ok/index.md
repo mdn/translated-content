@@ -18,7 +18,8 @@ l10n:
 
 [Fetch 응답 예제](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-response)([Fetch 응답 라이브 참조](https://mdn.github.io/dom-examples/fetch/fetch-response/))에서 JPG 경로를 전달하면서 {{domxref("Request.Request","Request()")}} 생성자를 사용하여 새 {{domxref("Request")}} 객체를 생성합니다. 그 다음 {{domxref("fetch()")}}를 사용하여 이 요청을 가져오고, {{domxref("Response.blob")}}을 사용하여 응답으로부터 blob를 추출하고, {{domxref("URL.createObjectURL")}}을 사용하여 객체 URL을 생성한 다음 이를 {{htmlelement("img")}}에 표시합니다.
 
-> **참고:** `fetch()` 블록의 맨 위에는 응답 `ok` 값을 콘솔에 기록합니다.
+> [!NOTE]
+> `fetch()` 블록의 맨 위에는 응답 `ok` 값을 콘솔에 기록합니다.
 
 ```js
 const myImage = document.querySelector("img");
@@ -45,5 +46,5 @@ fetch(myRequest).then((response) => {
 ## 같이 보기
 
 - [ServiceWorker API](/ko/docs/Web/API/Service_Worker_API)
-- [교차 출처 리소스 공유 (CORS)](/ko/docs/Web/HTTP/CORS)
+- [교차 출처 리소스 공유 (CORS)](/ko/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ko/docs/Web/HTTP)

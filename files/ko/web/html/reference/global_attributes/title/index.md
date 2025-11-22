@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/title
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`title`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 요소와 관련된 추가 정보를 제공하는 텍스트를 나타냅니다.
+**`title`** [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)은 요소와 관련된 추가 정보를 제공하는 텍스트를 나타냅니다.
 
 {{InteractiveExample("HTML Demo: title", "tabbed-shorter")}}
 
@@ -107,5 +107,5 @@ multiline title"
 
 ## 같이 보기
 
-- All [global attributes](/ko/docs/Web/HTML/Global_attributes).
+- All [global attributes](/ko/docs/Web/HTML/Reference/Global_attributes).
 - {{domxref("HTMLElement.title")}} that reflects this attribute.

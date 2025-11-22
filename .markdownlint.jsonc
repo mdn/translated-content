@@ -15,6 +15,7 @@
     "spaces_per_tab": 2,
   },
   "line-length": false,
+  "table-column-style": false,
   "no-duplicate-heading": {
     "siblings_only": true,
   },
@@ -133,6 +134,8 @@
   },
   // Disabled, as yari generates link fragments by replacing spaces with underscores, not dashes.
   "link-fragments": false,
+  // TODO: enable
+  "descriptive-link-text": false,
   // XXX Fixed upstream, remove next line when fixed here
   "reference-links-images": false,
 

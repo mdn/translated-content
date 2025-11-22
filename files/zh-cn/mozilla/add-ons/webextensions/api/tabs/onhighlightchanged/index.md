@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 > [!WARNING]
 > 此事件已被弃用。请使用 {{WebExtAPIRef("tabs.onHighlighted")}} 代替。
 
@@ -34,9 +32,7 @@ browser.tabs.onHighlightChanged.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 此事件发生时调用的函数。该函数接收以下参数：
-
     - `selectInfo`
       - : `object`。详见 [selectInfo](#selectinfo_2) 部分。
 

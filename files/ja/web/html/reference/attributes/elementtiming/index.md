@@ -1,9 +1,9 @@
 ---
 title: "HTML 属性: elementtiming"
+short-title: elementtiming
 slug: Web/HTML/Reference/Attributes/elementtiming
-original_slug: Web/HTML/Attributes/elementtiming
 l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -32,9 +32,12 @@ DOM では、この属性は {{domxref("Element.elementTiming")}} として反�
 ## 例
 
 ```html
-<img alt="Alt for a main blog post image" src="my-massive-image.jpg" elementtiming="Main image">
+<img
+  alt="ブログ投稿画像の代替テキスト"
+  src="my-massive-image.jpg"
+  elementtiming="Main image" />
 
-<p elementtiming="important-text">Some very important information.</p">
+<p elementtiming="important-text">とても重要な情報。</p>
 ```
 
 ## 関連情報

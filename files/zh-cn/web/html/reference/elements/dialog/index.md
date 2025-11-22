@@ -3,8 +3,6 @@ title: <dialog>：对话框元素
 slug: Web/HTML/Reference/Elements/dialog
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<dialog>`** 元素表示一个对话框或其他交互式组件，例如一个可关闭警告、检查器或者窗口。
 
 <table class="properties">
@@ -66,7 +64,8 @@ slug: Web/HTML/Reference/Elements/dialog
 
 这个元素包含了[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
-> **警告：** `tabindex` 属性不能被使用在 `<dialog>` 元素上。
+> [!WARNING]
+> `tabindex` 属性不能被使用在 `<dialog>` 元素上。
 
 - `open`
   - : 指示这个对话框是激活的和能互动的。当没有设置 `open` 属性时，对话框*不应该*显示给用户。推荐使用 `.show()` 或 `.showModal()` 方法来渲染对话框，而不是使用 `open` 属性。

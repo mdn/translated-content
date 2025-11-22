@@ -41,7 +41,7 @@ slug: Learn_web_development/Core/Text_styling/Fundamentals
 - **文本布局风格**: 作用于文本的间距以及其他布局功能的属性，比如，允许操纵行与字之间的空间，以及在内容框中，文本如何对齐。
 
 > [!NOTE]
-> 请记住，包含在元素中的文本是作为一个单一的实体。你不能将文字其中一部分选中或添加样式，如果你要这么做，那么你必须要用适合的元素来包装它们，比如 ( {{htmlelement("span")}} 或者 {{htmlelement("strong")}}), 或者使用伪元素，像[::first-letter](/zh-CN/docs/Web/CSS/::first-letter) (选中元素文本的第一个字母), [::first-line](/zh-CN/docs/Web/CSS/::first-line) (选中元素文本的第一行), 或者 [::selection](/zh-CN/docs/Web/CSS/::selection) (当前光标双击选中的文本)
+> 请记住，包含在元素中的文本是作为一个单一的实体。你不能将文字其中一部分选中或添加样式，如果你要这么做，那么你必须要用适合的元素来包装它们，比如 ( {{htmlelement("span")}} 或者 {{htmlelement("strong")}}), 或者使用伪元素，像[::first-letter](/zh-CN/docs/Web/CSS/Reference/Selectors/::first-letter) (选中元素文本的第一个字母), [::first-line](/zh-CN/docs/Web/CSS/Reference/Selectors/::first-line) (选中元素文本的第一行), 或者 [::selection](/zh-CN/docs/Web/CSS/Reference/Selectors/::selection) (当前光标双击选中的文本)
 
 ## 字体
 
@@ -374,18 +374,15 @@ p {
 CSS 提供了 4 种常用的属性来改变文本的样子：
 
 - {{cssxref("font-style")}}: 用来打开和关闭文本 italic (斜体)。可能的值如下 (你很少会用到这个属性，除非你因为一些理由想将斜体文字关闭斜体状态)：
-
   - `normal`: 将文本设置为普通字体 (将存在的斜体关闭)
   - `italic`: 如果当前字体的斜体版本可用，那么文本设置为斜体版本；如果不可用，那么会利用 oblique 状态来模拟 italics。
   - `oblique`: 将文本设置为斜体字体的模拟版本，也就是将普通文本倾斜的样式应用到文本中。
 
 - {{cssxref("font-weight")}}: 设置文字的粗体大小。这里有很多值可选 (比如 _-light_, _-normal_, _-bold_, _-extrabold_, _-black_, 等等), 不过事实上你很少会用到 `normal` 和 `bold`以外的值：
-
   - `normal`, `bold`: 普通或者**加粗**的字体粗细
   - `lighter`, `bolder`: 将当前元素的粗体设置为比其父元素粗体更细或更粗一步。`100`–`900`: 数值粗体值，如果需要，可提供比上述关键字更精细的粒度控制。
 
 - {{cssxref("text-transform")}}: 允许你设置要转换的字体。值包括：
-
   - `none`: 防止任何转型。
   - `uppercase`: 将所有文本转为大写。
   - `lowercase`: 将所有文本转为小写。
@@ -393,7 +390,6 @@ CSS 提供了 4 种常用的属性来改变文本的样子：
   - `full-width`: 将所有字形转换成全角，即固定宽度的正方形，类似于等宽字体，允许拉丁字符和亚洲语言字形（如中文，日文，韩文）对齐。
 
 - {{cssxref("text-decoration")}}: 设置/取消字体上的文本装饰 (你将主要使用此方法在设置链接时取消设置链接上的默认下划线。) 可用值为：
-
   - `none`: 取消已经存在的任何文本装饰。
   - `underline`: 文本下划线。
   - `overline`: 文本上划线

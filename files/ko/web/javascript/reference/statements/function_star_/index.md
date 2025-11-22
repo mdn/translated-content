@@ -138,7 +138,6 @@ var obj = new f(); // throws "TypeError: f is not a constructor"
 - {{jsxref("Operators/function", "function expression")}}
 - {{jsxref("Functions_and_function_scope", "Functions and function scope")}}
 - Other web resources:
-
   - [Regenerator](http://facebook.github.io/regenerator/) an ES2015 generator compiler to ES5
   - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](https://www.youtube.com/watch?v=qbKWsbJ76-s)
   - [Hemanth.HM: The New gen of \*gen(){}](https://www.youtube.com/watch?v=ZrgEZykBHVo&list=PLuoyIZT5fPlG44bPq50Wgh0INxykdrYX7&index=1)

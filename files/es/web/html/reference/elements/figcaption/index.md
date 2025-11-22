@@ -91,7 +91,7 @@ figcaption {
 
 ## Atributos
 
-Este elemento sólo incluye los [global attributes](/es/docs/Web/HTML/Global_attributes).
+Este elemento sólo incluye los [global attributes](/es/docs/Web/HTML/Reference/Global_attributes).
 
 ## Ejemplos
 

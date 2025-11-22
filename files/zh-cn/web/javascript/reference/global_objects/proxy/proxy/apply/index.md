@@ -3,8 +3,6 @@ title: handler.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 ---
 
-{{JSRef}}
-
 **`handler.apply()`** 方法用于拦截函数的调用。
 
 {{InteractiveExample("JavaScript Demo: handler.apply()", "taller")}}

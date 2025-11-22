@@ -1,12 +1,9 @@
 ---
 title: 201 Created
 slug: Web/HTTP/Reference/Status/201
-original_slug: Web/HTTP/Status/201
 l10n:
-  sourceCommit: 3f68a9604259dfa862dd741dc88ebc8fb5fa10fe
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`201 Created`** は[成功レスポンス](/ja/docs/Web/HTTP/Reference/Status#成功レスポンス)ステータスコードで、 HTTP リクエストが成功してリソースの作成が完了したことを表します。
 このステータスコードの一般的な使用例は、 {{HTTPMethod("POST")}} リクエストの結果です。

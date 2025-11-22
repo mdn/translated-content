@@ -23,9 +23,7 @@ define(name, constructor, options)
 - `constructor`
   - : 新自訂元素的建構子。
 - `options` {{optional_inline}}
-
   - : 控制元素定義方式的物件。目前支援一個選項：
-
     - `extends`
       - : 指定要擴展的內建元素名稱的字串。用於建立自訂的內建元素。
 

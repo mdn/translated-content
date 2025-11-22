@@ -18,7 +18,6 @@ WebVTT 檔的結構中，有兩項必備資訊、四項選用資訊。
 - 選用：byte order mark (BOM)
 - 字串 `WEBVTT`
 - 選用：於 `WEBVTT` 右側可加上文字標題
-
   - 在 `WEBVTT` 之後至少要有一個空白字元
   - 可以藉此為檔案加上描述
   - 除了換行字元及`「-->`」字串外，可以是任何文字
@@ -175,7 +174,6 @@ Third
 - 「`-->」字串`
 - 一個以上的空白字元
 - 結束時間
-
   - 必須比開始時間晚
 
 時間的表示方式，可以是以下兩種：
@@ -186,20 +184,16 @@ Third
 其中的各元素說明如下：
 
 - `hh` - 小時
-
   - 至少要有兩個數字，不小於 01
   - 可以超過兩個數字（例如 9999:00:00.000）
 
 - `mm` - 分
-
   - 從 00 到 59
 
 - `ss` - 秒
-
   - 從 00 到 59
 
 - `ttt` - 毫秒
-
   - 從 000 到 999
 
 ##### Example 10 - Basic cue timing examples
@@ -235,7 +229,6 @@ Cue settings are optional components used to position where the cue payload text
 The cue settings are added to the right of the cue timings. There must be one or more spaces between the cue timing and the first setting and between each setting. A setting's name and value are separated by a colon. The settings are case sensitive so use lower case as shown. There are five cue settings:
 
 - **vertical**
-
   - 水平方向
 
   <table style="margin-left: 30px">
@@ -257,16 +250,13 @@ The cue settings are added to the right of the cue timings. There must be one or
   </table>
 
 - **line**
-
   - Specifies where text appears vertically. If vertical is set, line specifies where text appears horizontally.
   - Value can be a line number
-
     - The line height is the height of the first line of the cue as it appears on the video
     - Positive numbers indicate top down
     - Negative numbers indicate bottom up
 
   - Or value can be a percentage
-
     - Must be an integer (i.e. no decimals) between 0 and 100 inclusive
     - Must be followed by a percent sign (%)
 
@@ -311,7 +301,6 @@ The cue settings are added to the right of the cue timings. There must be one or
   </table>
 
 - **position**
-
   - Specifies where the text will appear horizontally. If vertical is set, position specifies where the text will appear vertically.
   - Value is a percentage
   - Must be an integer (no decimals) between 0 and 100 inclusive
@@ -346,7 +335,6 @@ The cue settings are added to the right of the cue timings. There must be one or
   </table>
 
 - **size**
-
   - Specifies the width of the text area. If vertical is set, size specifies the height of the text area.
   - Value is a percentage
   - Must be an integer (i.e. no decimals) between 0 and 100 inclusive
@@ -381,7 +369,6 @@ The cue settings are added to the right of the cue timings. There must be one or
   </table>
 
 - **align**
-
   - Specifies the alignment of the text. Text is aligned within the space given by the size cue setting if it is set.
 
   <table style="margin-left: 30px">

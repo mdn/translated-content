@@ -71,11 +71,9 @@ Estes são alguns dos aproximadamente 100 [elementos](/pt-BR/docs/Web/HTML/Eleme
 - [Using HTML sections and outlines](/pt-BR/docs/Web/HTML/Element/Heading_Elements#problems_solved_by_html5) on MDN
 - [The meaning of semantics in computer science](https://pt.wikipedia.org/wiki/Semantics) on Wikipedia
 - [MDN Web Docs Glossary](/pt-BR/docs/Glossary)
-
   - {{Glossary("SEO")}}
 
 - Some of semantic elements in HTML
-
   - {{htmlelement("article")}}
   - {{htmlelement("aside")}}
   - {{htmlelement("details")}}

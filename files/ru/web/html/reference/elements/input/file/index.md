@@ -252,7 +252,8 @@ var preview = document.querySelector(".preview");
 input.style.opacity = 0;
 ```
 
-> **Примечание:** [`opacity`](/ru/docs/Web/CSS/opacity) is used to hide the file input instead of [`visibility: hidden`](/ru/docs/Web/CSS/visibility) or [`display: none`](/ru/docs/Web/CSS/display), because assistive technology interprets the latter two styles to mean the file input isn't interactive.
+> [!NOTE]
+> [`opacity`](/ru/docs/Web/CSS/Reference/Properties/opacity) is used to hide the file input instead of [`visibility: hidden`](/ru/docs/Web/CSS/Reference/Properties/visibility) or [`display: none`](/ru/docs/Web/CSS/Reference/Properties/display), because assistive technology interprets the latter two styles to mean the file input isn't interactive.
 
 Next, we add an [event listener](/ru/docs/Web/API/EventTarget/addEventListener) to the input to listen for changes to its selected value changes (in this case, when files are selected). The event listener invokes our custom `updateImageDisplay()` function.
 
@@ -268,7 +269,6 @@ Whenever the `updateImageDisplay()` function is invoked, we:
 - If files _have_ been selected, we loop through each one, printing information about it into the preview `<div>`. Things to note here:
 - We use the custom `validFileType()` function to check whether the file is of the correct type (e.g. the image types specified in the `accept` attribute).
 - If it is, we:
-
   - Print out its name and file size into a list item inside the previous `<div>` (obtained from `curFiles[i].name` and `curFiles[i].size`). The custom `returnFileSize()` function returns a nicely-formatted version of the size in bytes/KB/MB (by default the browser reports the size in absolute bytes).
   - Generate a thumbnail preview of the image by calling `window.URL.createObjectURL(curFiles[i])` and reducing the image size in the CSS, then insert that image into the list item too.
 

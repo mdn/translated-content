@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Headers
 original_slug: Web/HTTP/Headers/Access-Control-Allow-Headers
 ---
 
-{{HTTPSidebar}}
-
 **`Access-Control-Allow-Headers`** 는 {{HTTPHeader("Access-Control-Request-Headers")}}를 포함하는 {{glossary("preflight request")}}의 응답에 사용되는 헤더로, 실제 요청때 사용할 수 있는 HTTP 헤더의 목록을 나열합니다.
 
 요청에 {{HTTPHeader("Access-Control-Request-Headers")}} 헤더가 포함되어 있을 경우, 이 헤더를 포함하여야 합니다.
@@ -35,7 +33,7 @@ Access-Control-Allow-Headers: *
 - `<header-name>`
   - : 지원하는 헤더의 이름입니다. 쉼표로 구분하여 원하는 만큼 헤더를 나열할 수 있습니다.
 - `*` (와일드카드)
-  - : "`*`" 값은 자격 증명이 없는 요청([쿠키](/ko/docs/Web/HTTP/Cookies) 혹은 HTTP 인증 정보가 없는 요청)일 경우 특수한 와일드 카드로 처리됩니다. 자격증명을 포함하는 경우 단순히 "`*`"라는 이름을 갖는 특별한 의미가 없는 헤더로 취급됩니다. 단, {{HTTPHeader("Authorization")}} 헤더는 와일드카드에 포함되지 않으며 명시적으로 나열해야 합니다.
+  - : "`*`" 값은 자격 증명이 없는 요청([쿠키](/ko/docs/Web/HTTP/Guides/Cookies) 혹은 HTTP 인증 정보가 없는 요청)일 경우 특수한 와일드 카드로 처리됩니다. 자격증명을 포함하는 경우 단순히 "`*`"라는 이름을 갖는 특별한 의미가 없는 헤더로 취급됩니다. 단, {{HTTPHeader("Authorization")}} 헤더는 와일드카드에 포함되지 않으며 명시적으로 나열해야 합니다.
 
 ## 예제
 

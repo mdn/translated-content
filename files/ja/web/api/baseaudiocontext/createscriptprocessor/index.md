@@ -22,7 +22,6 @@ createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels)
 ### 引数
 
 - `bufferSize`
-
   - : サンプルフレーム単位でのバッファーサイズ。指定する場合、 bufferSize は 256, 512, 1024, 2048, 4096, 8192, 16384 の値のいずれかでなければなりません。これが渡されなかった場合、あるいは値が 0 の場合、実装は与えられた環境に最適なバッファーサイズを選択し、それはノードの寿命を通じて 2 の一定乗となります。
 
     この値は、`audioprocess` イベントが配信される頻度と、各呼び出しで処理される必要があるサンプルフレームの数を制御します。 `bufferSize` の値を小さくすると、遅延は小さく（良く）なります。音声が中断したりグリッチを避けるためには、より高い値が必要です。作者はこのバッファーサイズを指定せず、遅延と音質のバランスをとるために、実装が適切なバッファーサイズを選択できるようにすることをお勧めします。
@@ -50,7 +49,8 @@ createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels)
 
 各チャンネルと各サンプルフレームに対して、スクリプトノードの {{domxref("ScriptProcessorNode.audioprocess_event", "audioprocess")}} イベントハンドラーが関連する `audioProcessingEvent` を使用し、入力バッファーの各チャンネルと各チャンネルの各サンプルを通してループし、少量のホワイトノイズを追加してからその結果を各ケースで出力サンプルとしてセットします。
 
-> **メモ:** [完全な例をライブで実行](https://mdn.github.io/webaudio-examples/script-processor-node/)したり、[ソースを表示](https://github.com/mdn/webaudio-examples/blob/main/script-processor-node/)したりすることができます。
+> [!NOTE]
+> [完全な例をライブで実行](https://mdn.github.io/webaudio-examples/script-processor-node/)したり、[ソースを表示](https://github.com/mdn/webaudio-examples/blob/main/script-processor-node/)したりすることができます。
 
 ```js
 const myScript = document.querySelector("script");

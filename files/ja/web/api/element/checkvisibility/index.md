@@ -12,11 +12,11 @@ l10n:
 
 このメソッドは以下のどちらかの場合に `false` を返します。
 
-- 例えば CSS の {{cssxref("display")}} プロパティが [`none`](/ja/docs/Web/CSS/display#none) または [`contents`](/ja/docs/Web/CSS/display#contents) に設定されている場合のように、要素に関連づけられたボックスがない場合。
-- 要素または祖先要素が {{cssxref("content-visibility")}} プロパティを [`hidden`](/ja/docs/Web/CSS/content-visibility#hidden) に設定しているため、要素が描画されない場合。
+- 例えば CSS の {{cssxref("display")}} プロパティが [`none`](/ja/docs/Web/CSS/Reference/Properties/display#none) または [`contents`](/ja/docs/Web/CSS/Reference/Properties/display#contents) に設定されている場合のように、要素に関連づけられたボックスがない場合。
+- 要素または祖先要素が {{cssxref("content-visibility")}} プロパティを [`hidden`](/ja/docs/Web/CSS/Reference/Properties/content-visibility#hidden) に設定しているため、要素が描画されない場合。
 
 オプションの引数を指定することで、「可視」の意味を他の解釈として検査することができます。
-例えば、要素の不透明度が `0` であるかどうか、要素の [`visibility`](/ja/docs/Web/CSS/visibility) プロパティの値が不可視であるかどうか、要素 {{cssxref("content-visibility")}} プロパティの値が [`auto`](/ja/docs/Web/CSS/content-visibility#auto) であり、現在その描画がスキップされているかどうかを追加で検査することができます。
+例えば、要素の不透明度が `0` であるかどうか、要素の [`visibility`](/ja/docs/Web/CSS/Reference/Properties/visibility) プロパティの値が不可視であるかどうか、要素 {{cssxref("content-visibility")}} プロパティの値が [`auto`](/ja/docs/Web/CSS/Reference/Properties/content-visibility#auto) であり、現在その描画がスキップされているかどうかを追加で検査することができます。
 
 ## 構文
 
@@ -27,23 +27,20 @@ checkVisibility(options)
 ### 引数
 
 - `options` {{optional_inline}}
-
   - : 実行する追加チェックを示すオブジェクト。
     可能なオプションは以下の通りです。
-
     - `contentVisibilityAuto`
-      - : `true` を指定すると、要素 {{cssxref("content-visibility")}} プロパティに値 [`auto`](/ja/docs/Web/CSS/content-visibility#auto) がある（または継承している）場合に、現在その描画がスキップされているかどうかを調べます。
+      - : `true` を指定すると、要素 {{cssxref("content-visibility")}} プロパティに値 [`auto`](/ja/docs/Web/CSS/Reference/Properties/content-visibility#auto) がある（または継承している）場合に、現在その描画がスキップされているかどうかを調べます。
         既定では `false` です。
     - `opacityProperty`
       - : `true` を指定すると、要素の {{cssxref("opacity")}} プロパティが `0` の値である（または継承している）かどうかを調べます。
         既定では `false` です。
     - `visibilityProperty`
-
       - : `true` を指定すると、{{cssxref("visibility")}} プロパティの値によって要素が不可視になっているかどうかを調べます。
         既定では `false` です。
 
         > [!NOTE]
-        > 不可視の要素には、[`visibility: hidden`](/ja/docs/Web/CSS/visibility#hidden) が設定された要素や、[`visibility: collapse`](/ja/docs/Web/CSS/visibility#collapse) が設定された要素が含まれます。
+        > 不可視の要素には、[`visibility: hidden`](/ja/docs/Web/CSS/Reference/Properties/visibility#hidden) が設定された要素や、[`visibility: collapse`](/ja/docs/Web/CSS/Reference/Properties/visibility#collapse) が設定された要素が含まれます。
 
     - `checkOpacity`
       - : [`opacityProperty`](#opacityproperty) の過去の別名です。
@@ -55,10 +52,10 @@ checkVisibility(options)
 以下の条件に当てはまる場合は `false`、当てはまらない場合は `true` となります。
 
 - 要素に関連づけられたボックスがない場合。
-- 要素の {{cssxref("content-visibility")}} プロパティが [`hidden`](/ja/docs/Web/CSS/visibility#hidden) の値である（または継承している）場合。
+- 要素の {{cssxref("content-visibility")}} プロパティが [`hidden`](/ja/docs/Web/CSS/Reference/Properties/visibility#hidden) の値である（または継承している）場合。
 - `opacityProperty`（または `checkOpacity`）が `true` で、要素 {{cssxref("opacity")}} プロパティの値が `0` である（または継承している）場合。
 - `visibilityProperty`（または `checkVisibilityCSS`）が `true` で、{{cssxref("visibility")}} プロパティの値によって要素が不可視になっている場合。
-- `contentVisibilityAuto` が `true` で、{{cssxref("content-visibility")}} プロパティの値が [`auto`](/ja/docs/Web/CSS/content-visibility#auto) の値で（または継承している）、要素の描画がスキップされている場合。
+- `contentVisibilityAuto` が `true` で、{{cssxref("content-visibility")}} プロパティの値が [`auto`](/ja/docs/Web/CSS/Reference/Properties/content-visibility#auto) の値で（または継承している）、要素の描画がスキップされている場合。
 
 ## 例
 

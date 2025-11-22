@@ -5,8 +5,6 @@ l10n:
   sourceCommit: da3834afbae2d4ceb209593458d5df3c1e2d2d20
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 115 の変更点をまとめています。Firefox 115 は、米国時間 2023 年 7 月 4 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -19,7 +17,7 @@ l10n:
 ### CSS
 
 - CSSの {{cssxref("animation-composition")}} プロパティを、デフォルトで有効にしました。このプロパティを使用して、複数のアニメーションが同じプロパティへ同時に影響を与えるときの合成処理を指定できます ([Firefox bug 1823862](https://bugzil.la/1823862))。
-- CSS {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule) の `supports()` で `supports-conditions` をデフォルトで有効にしました。この機能で、指定した機能がユーザーのブラウザーでサポートされている場合に限り、スタイルシートをインポートできます ([Firefox bug 1830779](https://bugzil.la/1830779))。
+- CSS {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules) の `supports()` で `supports-conditions` をデフォルトで有効にしました。この機能で、指定した機能がユーザーのブラウザーでサポートされている場合に限り、スタイルシートをインポートできます ([Firefox bug 1830779](https://bugzil.la/1830779))。
 
 ### JavaScript
 

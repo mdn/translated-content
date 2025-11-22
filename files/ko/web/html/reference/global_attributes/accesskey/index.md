@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/accesskey
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`accesskey`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 현재 요소에 대한 키보드 단축키를 생성할 때 사용할 힌트를 제공합니다. `accesskey` 속성의 값은 반드시 출력 가능한 단일 문자(키보드로 입력할 수 있는 글자)여야 합니다.
+**`accesskey`** [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)은 현재 요소에 대한 키보드 단축키를 생성할 때 사용할 힌트를 제공합니다. `accesskey` 속성의 값은 반드시 출력 가능한 단일 문자(키보드로 입력할 수 있는 글자)여야 합니다.
 
 {{InteractiveExample("HTML Demo: accesskey", "tabbed-shorter")}}
 
@@ -120,5 +120,5 @@ b {
 
 - {{domxref("Element.accessKey")}}
 - {{domxref("HTMLElement.accessKeyLabel")}}
-- 모든 [전역 특성](/ko/docs/Web/HTML/Global_attributes).
+- 모든 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes).
 - [`aria-keyshortcuts`](https://www.w3.org/TR/wai-aria-1.1/#aria-keyshortcuts)

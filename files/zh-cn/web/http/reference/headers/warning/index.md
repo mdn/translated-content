@@ -3,8 +3,6 @@ title: Warning
 slug: Web/HTTP/Reference/Headers/Warning
 ---
 
-{{HTTPSidebar}}
-
 **`Warning`** 是一个通用报文首部，包含报文当前状态可能存在的问题。在响应中可以出现多个 Warning 首部。
 
 一般来说，Warning 首部可以应用于任何类型的报文。然而一部分警告码（warn-code）是为缓存代理服务器定制的，并且只可以应用在响应报文中。
@@ -22,9 +20,7 @@ Warning: <warn-code> <warn-agent> <warn-text> [<warn-date>]
 ## 指令
 
 - \<warn-code>
-
   - : 三位数字警告码。第一位数字表示 Warning 信息在验证之后是否需要从已存储的响应中删除。
-
     - `1xx` 警告码描述了关于当前响应的有效期或者验证状态，并且将会在成功验证后被缓存服务器删除。
     - `2xx` 警告码描述了验证之后不会被修复的某些展现内容方面的警告信息，并且在验证之后不会被缓存服务器删除。
 

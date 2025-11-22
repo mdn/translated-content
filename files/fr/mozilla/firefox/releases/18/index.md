@@ -3,22 +3,20 @@ title: Firefox 18 pour les développeurs
 slug: Mozilla/Firefox/Releases/18
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 18, basé sur Gecko 18.0, est sorti le 8 janvier 2013. Cette page résume les principaux changements dans Firefox 18 qui sont utiles aux développeurs.
 
 ## Changements pour les développeurs Web
 
 ### HTML
 
-- L'attribut [`reversed`](/fr/docs/Web/HTML/Element/ol#reversed) de l'élément {{HTMLElement("ol")}} est à présent supporté. ([bug Firefox 601912](https://bugzil.la/601912))
-- L'attribut [`crossorigin`](/fr/docs/Web/HTML/Element/link#crossorigin) de l'élément {{HTMLElement("link")}} est à présent supporté. ([bug Firefox 786564](https://bugzil.la/786564))
-- L'attribut [`allowfullscreen`](/fr/docs/Web/HTML/Element/iframe#allowfullscreen) de {{HTMLElement("iframe")}} a été implémenté et son prédécesseur préfixé, [`mozallowfullscreen`](/fr/docs/Web/HTML/Element/iframe#mozallowfullscreen), est à présent obsolète.
+- L'attribut [`reversed`](/fr/docs/Web/HTML/Reference/Elements/ol#reversed) de l'élément {{HTMLElement("ol")}} est à présent supporté. ([bug Firefox 601912](https://bugzil.la/601912))
+- L'attribut [`crossorigin`](/fr/docs/Web/HTML/Reference/Elements/link#crossorigin) de l'élément {{HTMLElement("link")}} est à présent supporté. ([bug Firefox 786564](https://bugzil.la/786564))
+- L'attribut [`allowfullscreen`](/fr/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen) de {{HTMLElement("iframe")}} a été implémenté et son prédécesseur préfixé, [`mozallowfullscreen`](/fr/docs/Web/HTML/Reference/Elements/iframe#mozallowfullscreen), est à présent obsolète.
 
 ### CSS
 
 - {{cssxref("min-width")}} et {{cssxref("min-height")}} utilisent désormais le mot-clé `auto` comme _valeur initiale_ (Cela influe uniquement sur les éléments flexibles qui corrigeaient à `0`, la précédente valeur initiale, pour les autres éléments). ([bug Firefox 763689](https://bugzil.la/763689))
-- La cascade a été mise à jour : désormais l'auteur des règles `!important` prend le dessus sur les [animations CSS](/fr/docs/Web/CSS/CSS_animations). ([bug Firefox 783714](https://bugzil.la/783714))
+- La cascade a été mise à jour : désormais l'auteur des règles `!important` prend le dessus sur les [animations CSS](/fr/docs/Web/CSS/Guides/Animations). ([bug Firefox 783714](https://bugzil.la/783714))
 - La propriété raccourcie {{cssxref("background")}} reconnait à présent la propriété CSS3 {{cssxref("background-size")}}. ([bug Firefox 570326](https://bugzil.la/570326))
 - Le support initial du module CSS Flexbox a été lancé. Il est désactivé par défaut mais peut être activé en passant le paramètre `layout.css.flexbox.enabled` à `true`. ([bug Firefox 666041](https://bugzil.la/666041))
 
@@ -40,7 +38,7 @@ Firefox 18, basé sur Gecko 18.0, est sorti le 8 janvier 2013. Cette page résum
 ### Réseau
 
 - Les facteurs de qualité ("q-values") sont désormais fixés à 2 chiffres dans l'en-tête HTTP `Accept-Language`. ([bug Firefox 672448](https://bugzil.la/672448))
-- La syntaxe `ALLOW-FROM` de l'en-tête HTTP [`X-FRAME-OPTIONS`](/fr/docs/Web/HTTP/Headers/X-Frame-Options) Response est à présent supportée. ([bug Firefox 690168](https://bugzil.la/690168))
+- La syntaxe `ALLOW-FROM` de l'en-tête HTTP [`X-FRAME-OPTIONS`](/fr/docs/Web/HTTP/Reference/Headers/X-Frame-Options) Response est à présent supportée. ([bug Firefox 690168](https://bugzil.la/690168))
 
 ## Changements pour les développeurs de Mozilla et de modules complémentaires
 

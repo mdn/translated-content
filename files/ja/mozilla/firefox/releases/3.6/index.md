@@ -3,35 +3,33 @@ title: Firefox 3.6 for developers
 slug: Mozilla/Firefox/Releases/3.6
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 3.6 では新規あるいは開発中のウェブ標準のサポート、性能の向上、ウェブユーザーと開発者にとってより良い体験が提供されます。このページは Firefox 3.6 で新しく利用出来るようになった機能に関する記事のリンクを提供します。
 
 ## ウェブサイトとアプリケーション開発者向け
 
 ### CSS
 
-- [グラデーションの利用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-  - : Firefox 3.6 では [`background`](/ja/docs/Web/CSS/background) において、Mozilla が提案中の [`-moz-linear-gradient`](/ja/docs/Web/CSS/gradient/linear-gradient) と [`-moz-radial-gradient`](/ja/docs/Web/CSS/gradient/radial-gradient) プロパティのサポートが追加されました。
-- [複数の背景](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
-  - : [`background`](/ja/docs/Web/CSS/background) プロパティ（および [`background-color`](/ja/docs/Web/CSS/background-color)、[`background-image`](/ja/docs/Web/CSS/background-image)、[`background-position`](/ja/docs/Web/CSS/background-position)、[`background-repeat`](/ja/docs/Web/CSS/background-repeat)、[`background-attachment`](/ja/docs/Web/CSS/background-attachment)）が複数の背景をサポートしました。これによりひとつのレイヤーの中で他に重なるような背景を指定できます。
-- [Mozilla 独自のメディア特性](/ja/docs/Web/CSS/CSS_media_queries#mozilla-specific_media_features)
-  - : Mozilla 独自のシステムメトリックスに複数のメディア特性が追加されました。このメディア特性により、タッチサポートのような機能の有効性の確認を、[media queries](/ja/docs/Web/CSS/CSS_media_queries) を使用してより安全に行えるようになりました。
-- [背景画像のスケーリング](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
-  - : [CSS 3 Backgrounds and Borders 草案](https://dev.w3.org/csswg/css3-background/)の `background-size プロパティが` [`-moz-background-size`](/ja/docs/Web/CSS/background-size) としてサポートされました。
-- [WOFF フォントのサポート](/ja/docs/Web/CSS/CSS_fonts/WOFF)
-  - : [`@font-face`](/ja/docs/Web/CSS/@font-face) が新しい WOFF ウェブフォントファイルフォーマットをサポートしました。
-- [ポインターイベント](/ja/docs/Web/CSS/pointer-events)
-  - : [`pointer-events`](/ja/docs/Web/CSS/pointer-events) プロパティにより、要素がマウスポインターのイベントのターゲットであるかどうかをコンテンツが指定できるようになります。
+- [グラデーションの利用](/ja/docs/Web/CSS/Guides/Images/Using_gradients)
+  - : Firefox 3.6 では [`background`](/ja/docs/Web/CSS/Reference/Properties/background) において、Mozilla が提案中の [`-moz-linear-gradient`](/ja/docs/Web/CSS/Reference/Values/gradient/linear-gradient) と [`-moz-radial-gradient`](/ja/docs/Web/CSS/Reference/Values/gradient/radial-gradient) プロパティのサポートが追加されました。
+- [複数の背景](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
+  - : [`background`](/ja/docs/Web/CSS/Reference/Properties/background) プロパティ（および [`background-color`](/ja/docs/Web/CSS/Reference/Properties/background-color)、[`background-image`](/ja/docs/Web/CSS/Reference/Properties/background-image)、[`background-position`](/ja/docs/Web/CSS/Reference/Properties/background-position)、[`background-repeat`](/ja/docs/Web/CSS/Reference/Properties/background-repeat)、[`background-attachment`](/ja/docs/Web/CSS/Reference/Properties/background-attachment)）が複数の背景をサポートしました。これによりひとつのレイヤーの中で他に重なるような背景を指定できます。
+- [Mozilla 独自のメディア特性](/ja/docs/Web/CSS/Guides/Media_queries#mozilla-specific_media_features)
+  - : Mozilla 独自のシステムメトリックスに複数のメディア特性が追加されました。このメディア特性により、タッチサポートのような機能の有効性の確認を、[media queries](/ja/docs/Web/CSS/Guides/Media_queries) を使用してより安全に行えるようになりました。
+- [背景画像のスケーリング](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images)
+  - : [CSS 3 Backgrounds and Borders 草案](https://dev.w3.org/csswg/css3-background/)の `background-size プロパティが` [`-moz-background-size`](/ja/docs/Web/CSS/Reference/Properties/background-size) としてサポートされました。
+- [WOFF フォントのサポート](/ja/docs/Web/CSS/Guides/Fonts/WOFF)
+  - : [`@font-face`](/ja/docs/Web/CSS/Reference/At-rules/@font-face) が新しい WOFF ウェブフォントファイルフォーマットをサポートしました。
+- [ポインターイベント](/ja/docs/Web/CSS/Reference/Properties/pointer-events)
+  - : [`pointer-events`](/ja/docs/Web/CSS/Reference/Properties/pointer-events) プロパティにより、要素がマウスポインターのイベントのターゲットであるかどうかをコンテンツが指定できるようになります。
 
 #### その他の CSS の変更
 
-- [CSS3 Values and Units](https://www.w3.org/TR/css3-values/#lengths) で定義されている長さの単位 [`rem`](/ja/docs/Web/CSS/length#relative_length_units) がサポートされました。 [バグ 472195](https://bugzilla.mozilla.org/show_bug.cgi?id=472195)
-- [`image-rendering`](/ja/docs/Web/CSS/image-rendering) が画像、背景画像、ビデオ、canvas でサポートされました。 [バグ 423756](https://bugzilla.mozilla.org/show_bug.cgi?id=423756)
-- [`text-align`](/ja/docs/Web/CSS/text-align):end がサポートされました。[バグ 299837](https://bugzilla.mozilla.org/show_bug.cgi?id=299837)
-- table [`display`](/ja/docs/Web/CSS/display) タイプの要素に対する DOM の変更がより良く動作するようになりました。
-- `indeterminate` 属性が `true` である `checkbox` [`input`](/ja/docs/Web/HTML/Reference/Elements/input) 要素にマッチする [`:indeterminate`](/ja/docs/Web/CSS/:indeterminate) 擬似クラスのサポートが追加されました。
-- [`:-moz-locale-dir(ltr)`](/ja/docs/Web/CSS/:-moz-locale-dir_ltr 'CSS の :-moz-locale-dir(ltr) 擬似クラスは Mozilla 拡張であり、ユーザーインターフェイスが左から右へ向けて表示される要素に一致します。これは設定の intl.uidirection.locale (locale は現在のロケール) が "ltr" に設定されていることで特定されます。') と [`:-moz-locale-dir(rtl)`](/ja/docs/Web/CSS/:-moz-locale-dir_rtl 'CSS の :-moz-locale-dir(ltr) 擬似クラスは Mozilla 拡張であり、ユーザーインターフェイスが右から左へ向けて表示される要素に一致します。これは設定の intl.uidirection.locale (locale は現在のロケール) が "rtl" に設定されていることで特定されます。') が追加され、ユーザーインターフェイスが left-to-right または right-to-left のどちらで描画されるかに応じて、容易にレイアウトをカスタマイズできるようになりました。[バグ 478416](https://bugzilla.mozilla.org/show_bug.cgi?id=478416)
+- [CSS3 Values and Units](https://www.w3.org/TR/css3-values/#lengths) で定義されている長さの単位 [`rem`](/ja/docs/Web/CSS/Reference/Values/length#relative_length_units) がサポートされました。 [バグ 472195](https://bugzilla.mozilla.org/show_bug.cgi?id=472195)
+- [`image-rendering`](/ja/docs/Web/CSS/Reference/Properties/image-rendering) が画像、背景画像、ビデオ、canvas でサポートされました。 [バグ 423756](https://bugzilla.mozilla.org/show_bug.cgi?id=423756)
+- [`text-align`](/ja/docs/Web/CSS/Reference/Properties/text-align):end がサポートされました。[バグ 299837](https://bugzilla.mozilla.org/show_bug.cgi?id=299837)
+- table [`display`](/ja/docs/Web/CSS/Reference/Properties/display) タイプの要素に対する DOM の変更がより良く動作するようになりました。
+- `indeterminate` 属性が `true` である `checkbox` [`input`](/ja/docs/Web/HTML/Reference/Elements/input) 要素にマッチする [`:indeterminate`](/ja/docs/Web/CSS/Reference/Selectors/:indeterminate) 擬似クラスのサポートが追加されました。
+- [`:-moz-locale-dir(ltr)`](/ja/docs/Web/CSS/Reference/Selectors/:-moz-locale-dir_ltr 'CSS の :-moz-locale-dir(ltr) 擬似クラスは Mozilla 拡張であり、ユーザーインターフェイスが左から右へ向けて表示される要素に一致します。これは設定の intl.uidirection.locale (locale は現在のロケール) が "ltr" に設定されていることで特定されます。') と [`:-moz-locale-dir(rtl)`](/ja/docs/Web/CSS/Reference/Selectors/:-moz-locale-dir_rtl 'CSS の :-moz-locale-dir(ltr) 擬似クラスは Mozilla 拡張であり、ユーザーインターフェイスが右から左へ向けて表示される要素に一致します。これは設定の intl.uidirection.locale (locale は現在のロケール) が "rtl" に設定されていることで特定されます。') が追加され、ユーザーインターフェイスが left-to-right または right-to-left のどちらで描画されるかに応じて、容易にレイアウトをカスタマイズできるようになりました。[バグ 478416](https://bugzilla.mozilla.org/show_bug.cgi?id=478416)
 - ウィンドウ化されたプラグインは CSS transforms の中では表示されなくなりました。これはコンポジターによって正しく変換されないためです。
 
 ### HTML

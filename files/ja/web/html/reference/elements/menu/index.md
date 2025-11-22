@@ -10,7 +10,7 @@ l10n:
 
 **`<menu>`** は [HTML](/ja/docs/Web/HTML) の要素で、HTML 仕様書では {{HTMLElement("ul")}} とは異なる意味づけとして記述されていますが、ブラウザーでは {{HTMLElement("ul")}} と違いのないものとして扱われます（そしてアクセシビリティツリーで公開されます）。これは（{{HTMLElement("li")}} 要素で表現される）項目の順序のないリストを表します。
 
-{{InteractiveExample("HTML Demo: &lt;menu&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;menu&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <div class="news">

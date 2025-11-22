@@ -84,16 +84,15 @@ _该接口同样继承了其父级（{{domxref("UIEvent")}} 和 {{domxref("Event
 
 ### Internet Explorer
 
-IE 8 和 9 中存在一个错误，在将 {{cssxref("background-color")}} 的计算值为 [`transparent`](/zh-CN/docs/Web/CSS/color_value#transparent_关键字) 的元素覆盖在其他元素之上时，该元素不会收到 `click` 事件。`click` 事件将只会在底层元素上触发。参见[在线演示](https://jsfiddle.net/YUKma/show/)。
+IE 8 和 9 中存在一个错误，在将 {{cssxref("background-color")}} 的计算值为 [`transparent`](/zh-CN/docs/Web/CSS/Reference/Values/color_value#transparent_关键字) 的元素覆盖在其他元素之上时，该元素不会收到 `click` 事件。`click` 事件将只会在底层元素上触发。参见[在线演示](https://jsfiddle.net/YUKma/show/)。
 
 该错误的解决方案：
 
 - 仅适用于 IE 9：
-
   - 设置 {{cssxref("background-color")}}`: rgba(0,0,0,0)`
-  - 设置 {{cssxref("opacity")}}`: 0` 以及为 {{cssxref("background-color")}} 设置一个明确的、除 [`transparent`](/zh-CN/docs/Web/CSS/color_value#transparent_关键字) 以外的值。
+  - 设置 {{cssxref("opacity")}}`: 0` 以及为 {{cssxref("background-color")}} 设置一个明确的、除 [`transparent`](/zh-CN/docs/Web/CSS/Reference/Values/color_value#transparent_关键字) 以外的值。
 
-- 适用于 IE8 和 IE9：设置 `filter: alpha(opacity=0);` 以及为 {{cssxref("background-color")}} 设置一个明确的、除 [`transparent`](/zh-CN/docs/Web/CSS/color_value#transparent_关键字) 以外的值。
+- 适用于 IE8 和 IE9：设置 `filter: alpha(opacity=0);` 以及为 {{cssxref("background-color")}} 设置一个明确的、除 [`transparent`](/zh-CN/docs/Web/CSS/Reference/Values/color_value#transparent_关键字) 以外的值。
 
 ### Safari 手机版
 

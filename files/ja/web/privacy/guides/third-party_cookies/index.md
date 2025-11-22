@@ -90,7 +90,7 @@ Firefox では、ブラウザーの設定により、サードパーティのク
 Set-Cookie: widget_session=7yjgj57e4n3d; SameSite=None; Secure; HttpOnly
 ```
 
-`SameSite=None` が設定されている場合は、 `Secure` 属性も設定する必要があります。 `SameSite=None` は保護されたコンテキストを必要とします。上記の例では、 JavaScript がクッキーにアクセスできないように （{{domxref("Document.cookie")}} など）、 `HttpOnly` 属性も設定しています。機密情報を保持するクッキーには、常に `HttpOnly` 属性を設定してください。 JavaScript で利用可能にしてしまうと、非常に安全性が低下します。この予防措置により、クロスサイトスクリプティング ([XSS](/ja/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss)) 攻撃を緩和することができます。
+`SameSite=None` が設定されている場合は、 `Secure` 属性も設定する必要があります。 `SameSite=None` は保護されたコンテキストを必要とします。上記の例では、 JavaScript がクッキーにアクセスできないように （{{domxref("Document.cookie")}} など）、 `HttpOnly` 属性も設定しています。機密情報を保持するクッキーには、常に `HttpOnly` 属性を設定してください。 JavaScript で利用可能にしてしまうと、非常に安全性が低下します。この予防措置により、クロスサイトスクリプティング ([XSS](/ja/docs/Web/Security/Attacks#cross-site_scripting_xss)) 攻撃を緩和することができます。
 
 > [!NOTE]
 > 機密情報に使用されるクッキーも、[有効期間](/ja/docs/Web/HTTP/Guides/Cookies#削除_cookie_の持続時間の定義)を短く指定する必要があります。

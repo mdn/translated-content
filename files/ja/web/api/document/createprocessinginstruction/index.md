@@ -31,9 +31,7 @@ createProcessingInstruction(target, data)
 ### 例外
 
 - `InvalidCharacterError` {{domxref("DOMException")}}
-
   - : 以下の何れかが真になると例外が発生します。
-
     - 処理命令の [`target`](#target) の値が有効な [XML 名](https://www.w3.org/TR/REC-xml/#dt-name) ではない場合、例えば、数値、ハイフン、ピリオドなどで始まったり、英数字、アンダースコア、ハイフン、ピリオド以外の文字を含んでいたりする場合。
     - _closing processing instruction sequence_ (`?>`) が [`data`](#data) に含まれている場合。
 

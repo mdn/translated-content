@@ -3,7 +3,8 @@ title: Ajax 시작하기
 slug: conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e
 ---
 
-> **경고:** **중요**: 해당 문서는 2018/07/31 (원문 : 2018/04/23) 에 마지막으로 번역되었습니다. 원문의 변경이 잦아 내용이 다를 수 있으니 참고하십시오.
+> [!WARNING]
+> **중요**: 해당 문서는 2018/07/31 (원문 : 2018/04/23) 에 마지막으로 번역되었습니다. 원문의 변경이 잦아 내용이 다를 수 있으니 참고하십시오.
 
 본 문서는 AJAX의 기본을 익힐수 있도록 해주며, 두 가지 간단한 훈련용 예제를 제공합니다.
 
@@ -57,7 +58,7 @@ httpRequest.send(null);
 `open()` 메소드의 파라미터
 
 - 첫번째 파라미터는 HTTP 요구 방식(request method) ─ GET, POST, HEAD 중의 하나이거나 당신의 서버에서 지원하는 다른 방식 ─ 입니다. 이 파라미터는 HTTP 표준에 따라 모두 대문자로 표기해야합니다. 그렇지 않으면 (Firefox와 같은) 특정 브라우저는 이 요구를 처리하지 않을 수도 있습니다. HTTP 요구 방식의 보다 자세한 정보는 [W3C 명세](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html)를 참고하기 바랍니다.
-- 두번째 파라미터는 요구하고자하는 URL 입니다. 보안상의 이유로 서드 파티 도메인 상의 URL은 기본적으로 호출할 수 없습니다. 요구하는 모든 페이지에 정확한 도메인 네임을 사용하십시오. 그렇지 않으면 `open()` 메소드를 호출할 때 'permission denied' 에러가 발생할 수 있습니다. 일반적인 오류는 당신의 사이트에 `domain.tld` 와 같은 형태로 접근하는 것 입니다. 이러한 경우 `www.domain.tld` 와 같은 형태로 페이지를 요구하기 바랍니다. 만약 다른 도메인으로 요청을 보내고 싶다면 [HTTP 접근 제어 (CORS)](/ko/docs/Web/HTTP/CORS) 를 참고하기 바랍니다.
+- 두번째 파라미터는 요구하고자하는 URL 입니다. 보안상의 이유로 서드 파티 도메인 상의 URL은 기본적으로 호출할 수 없습니다. 요구하는 모든 페이지에 정확한 도메인 네임을 사용하십시오. 그렇지 않으면 `open()` 메소드를 호출할 때 'permission denied' 에러가 발생할 수 있습니다. 일반적인 오류는 당신의 사이트에 `domain.tld` 와 같은 형태로 접근하는 것 입니다. 이러한 경우 `www.domain.tld` 와 같은 형태로 페이지를 요구하기 바랍니다. 만약 다른 도메인으로 요청을 보내고 싶다면 [HTTP 접근 제어 (CORS)](/ko/docs/Web/HTTP/Guides/CORS) 를 참고하기 바랍니다.
 - 세번째 파라미터(생략 가능)는 요구가 비동기식(Asynchronous)으로 수행될 지를 결정합니다. 만약 이 파라미터가 `true`(기본값) 으로 설정된 경우에는 JavaScript 함수가 지속적으로 수행될 수 있어 서버로부터 응답을 받기 전에도 유저와 페이지의 상호작용이 계속 진행됩니다. 이것이 AJAX 의 첫번째 A (Asynchronous : 비동기성) 입니다.
 
   - `false`로 설정된 경우 동기적으로 작동합니다. (`send()` 함수에서 서버로부터 응답이 올 때까지 기다림)역자 덧붙임
@@ -104,7 +105,7 @@ if (httpRequest.readyState === XMLHttpRequest.DONE) {
 
 ([원문](/ko/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e#Step_2_%E2%80%93_Handling_the_server_response) 참고)
 
-그 다음에는 [HTTP 응답 상태 코드](/ko/docs/Web/HTTP/Status)를 검사해야 합니다. 가능한 모든 코드 값의 목록은 [W3C](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) 에서 확인할 수 있습니다. 아래 예제에서는 AJAX 요청이 정상적으로 처리되었는지 아닌지만을 검사하기 위해 응답 코드가 [200 OK](/ko/docs/Web/HTTP/Status#%EC%84%B1%EA%B3%B5_%EC%9D%91%EB%8B%B5) 인지 검사하는 예제입니다.
+그 다음에는 [HTTP 응답 상태 코드](/ko/docs/Web/HTTP/Reference/Status)를 검사해야 합니다. 가능한 모든 코드 값의 목록은 [W3C](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) 에서 확인할 수 있습니다. 아래 예제에서는 AJAX 요청이 정상적으로 처리되었는지 아닌지만을 검사하기 위해 응답 코드가 [200 OK](/ko/docs/Web/HTTP/Reference/Status#%EC%84%B1%EA%B3%B5_%EC%9D%91%EB%8B%B5) 인지 검사하는 예제입니다.
 
 ```js
 if (httpRequest.status === 200) {
@@ -167,11 +168,14 @@ if (httpRequest.status === 200) {
 - 브라우저는 서버로 요구를 보내고 `onreadystatechange` 에 설정된 `alertContents()` 함수가 수행됩니다;
 - `alertContents()` 함수는 서버로부터 응답을 받았는지와 정상적으로 처리된 응답인지를 검사하여 정상적인 경우 `test.html` 파일의 내용을 파라미터로 `alert()` 함수를 호출합니다.
 
-> **참고:** **주의**: Internet Explorer에서 정적 HTML 파일이 아닌 XML 파일을 받기 위한 request를 보내려면 응답 헤더를 반드시 설정해주어야 합니다. 헤더에 `Content-Type: application/xml`을 설정해주지 않으면 IE는 XML 요소에 접근하고자 할 때 "Object Expected" 예외에러를 발생시킵니다.
+> [!NOTE]
+> **주의**: Internet Explorer에서 정적 HTML 파일이 아닌 XML 파일을 받기 위한 request를 보내려면 응답 헤더를 반드시 설정해주어야 합니다. 헤더에 `Content-Type: application/xml`을 설정해주지 않으면 IE는 XML 요소에 접근하고자 할 때 "Object Expected" 예외에러를 발생시킵니다.
 
-> **참고:** **주의 2**: 헤더에 `Cache-Control: no-cache` 를 설정 하지 않는다면, 브라우저는 응답을 캐싱하고 다시 요청하지 않을 수 있습니다. 이는 디버깅하기 매우 어려워 질 수 있음을 기억하십시오. 또는 GET 파라미터로 timestamp(시간정보)나 난수를 추가하면 캐싱을 방지할 수 있습니다. ([캐싱 우회](/ko/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#bypassing_the_cache)를 참고하세요)
+> [!NOTE]
+> **주의 2**: 헤더에 `Cache-Control: no-cache` 를 설정 하지 않는다면, 브라우저는 응답을 캐싱하고 다시 요청하지 않을 수 있습니다. 이는 디버깅하기 매우 어려워 질 수 있음을 기억하십시오. 또는 GET 파라미터로 timestamp(시간정보)나 난수를 추가하면 캐싱을 방지할 수 있습니다. ([캐싱 우회](/ko/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#bypassing_the_cache)를 참고하세요)
 
-> **참고:** **주의 3**: 만약 `httpRequest` 변수가 전역적으로 사용되면, `makeRequest()` 함수를 호출하는 여러 함수들 사이에서 경쟁 상태(race condition)가 발생할 수 있으며, 이 경우 다른 데이터를 덮어쓰게 됩니다. `XMLHttpRequest` 인스턴스는 함수 내의 지역 변수로 선언하는 것을 권장합니다.
+> [!NOTE]
+> **주의 3**: 만약 `httpRequest` 변수가 전역적으로 사용되면, `makeRequest()` 함수를 호출하는 여러 함수들 사이에서 경쟁 상태(race condition)가 발생할 수 있으며, 이 경우 다른 데이터를 덮어쓰게 됩니다. `XMLHttpRequest` 인스턴스는 함수 내의 지역 변수로 선언하는 것을 권장합니다.
 
 통신 에러 (서버가 다운되는 상황 등) 상황에서, status 필드를 접근하려 하면 `onreadystatechange` 메서드에서 예외에러를 발생 시킬 것입니다. 이러한 문제를 예방하기 위해서 `if...then` 구문을 `try…catch` 구문으로 감싸주세요.
 

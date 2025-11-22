@@ -153,7 +153,6 @@ Para implementar o contador de pontuação, siga os seguintes passos:
    ```
 
 3. Em seu JavaScript, faça as seguintes atualizações:
-
    - Crie uma variável que armazene uma referência ao parágrafo.
    - Mantenha uma contagem do número de bolas na tela de alguma forma.
    - Incrementar a contagem e exibir o número atualizado de bolas cada vez que uma bola é adicionada à cena.

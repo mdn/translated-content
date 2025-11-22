@@ -3,8 +3,6 @@ title: Firefox 65 для разработчиков
 slug: Mozilla/Firefox/Releases/65
 ---
 
-{{FirefoxSidebar}}
-
 В этой статье перечислены ключевые изменения, которые касаются разработчиков. Firefox 64 был выпущен 29 января 2019 года.
 
 ## Изменения для веб-разработчиков
@@ -61,7 +59,6 @@ slug: Mozilla/Firefox/Releases/65
 - Убран префикс у значения `crisp-edges` свойства {{cssxref("image-rendering")}} ([Firefox bug 1496617](https://bugzil.la/1496617)).
 - Значение `auto` {{cssxref("scrollbar-color")}} теперь разрешается в `auto`, а не в два цвета ([Firefox bug 1501418](https://bugzil.la/1501418)).
 - Реализована поддержка свойств `break-*` ([Firefox bug 775618](https://bugzil.la/775618)):
-
   - {{cssxref("break-before")}} → {{cssxref("page-break-before")}}.
   - {{cssxref("break-after")}} → {{cssxref("page-break-after")}}.
   - {{cssxref("break-inside")}} → {{cssxref("page-break-inside")}}.
@@ -69,13 +66,11 @@ slug: Mozilla/Firefox/Releases/65
 - Реализована поддержка значения `anywhere` у свойства {{cssxref("overflow-wrap")}} ([Firefox bug 1505786](https://bugzil.la/1505786)).
 - Добавлены новые ключевые слова `jump-start`, `jump-end`, `jump-none` и `jump-both`, используемые внутри [временной функции steps()](</ru/docs/Web/CSS/single-transition-timing-function#The_steps()_class_of_timing_functions>) ([Firefox bug 1496619](https://bugzil.la/1496619)). Функция `frames()`, ранее использовавшаяся для этого, объявлена устаревшей.
 - Для совместимости с прочими браузерами добавлены несколько новых значений {{cssxref("appearance", "-webkit-appearance")}}. В частности:
-
   - `meter`, которое отныне используется в качестве значения по умолчанию для элементов {{htmlelement("meter")}}; существующее значение `meterbar` теперь является псевдонимом `meter` ([Firefox bug 1501483](https://bugzil.la/1501483)).
   - `progress-bar`, которое отныне используется в качестве значения по умолчанию для элементов {{htmlelement("progress")}}; существующее значение `progressbar` теперь является псевдонимом `progress-bar` ([Firefox bug 1501506](https://bugzil.la/1501506)).
   - `textarea`, которое отныне используется в качестве значения по умолчанию для элементов {{htmlelement("textarea")}}; существующее значение `textfield-multiline` теперь является псевдонимом `textarea` ([Firefox bug 1507905](https://bugzil.la/1507905))
 
 - Изменено поведение {{cssxref("user-select")}}, чтобы достичь сходства с прочими браузерами ([Firefox bug 1506547](https://bugzil.la/1506547)). Конкретно:
-
   - `user-select: all`, установленное на элемент, больше не перекрывает значения `user-select` дочерних элементов. Пример:
 
     ```html
@@ -206,8 +201,7 @@ _Без изменений._
 
 ### Прочее
 
-- Добавлена поддержка изображений в формате [WebP](/ru/docs/Glossary/webp) ([Firefox bug 1294490](https://bugzil.la/1294490)).
-
+- Добавлена поддержка изображений в формате [WebP](/ru/docs/Glossary/WebP) ([Firefox bug 1294490](https://bugzil.la/1294490)).
   - Кроме того, для улучшения кросс-браузерной совместимости MIME-тип WebP (`image/webp`) был добавлен в стандартный заголовок HTTP-запроса {{httpheader ("Accept")}} для файлов HTML ([Firefox bug 1507691](https://bugzil.la/1507691)).
 
 ## Изменения для разработчиков дополнений
@@ -217,7 +211,6 @@ _Без изменений._
 #### Вкладки
 
 - {{WebExtAPIRef("tabs", "tabs API", "", "1")}} обзавёлся поддержкой наследников вкладок — вкладке можно назначить ID вкладки-наследника, которая станет активной, когда первая вкладка закроется ([Firefox bug 1500479](https://bugzil.la/1500479), см. также [эту запись в блоге](https://qiita.com/piroor/items/ea7e727735631c45a366) для получения подробных сведений). В частности:
-
   - Тип {{WebExtAPIRef("tabs.Tab")}} получил свойство `successorId`, используемое для хранения/получения ID вкладки-наследника.
   - Колбэк обработчика событий {{WebExtAPIRef("tabs.onActivated")}} получил новый параметр, `previousTabId`, содержащий ID предыдущей активированной вкладки, если она всё ещё открыта.
   - Объект `updateProperties` функции {{WebExtAPIRef("tabs.update()")}} обзавёлся новым свойством `successorTabId`, которое служит для его обновления.

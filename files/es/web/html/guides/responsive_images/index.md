@@ -66,7 +66,7 @@ Podrías pensar que las imágenes vectoriales resolverían estos problemas, y lo
 Este tipo de problemas no existían cuando la web se creó por primera vez, a principios y mediados de los noventa — en ese entonces, los únicos dispositivos disponibles para navegar por la web eran los ordenadores de escritorio y laptops, por lo que los desarrolladores e ingenieros que programaban los navegadores ni siquiera pensaban en implementar estas soluciones. Las tecnologías de imagen adaptable se implementaron recientemente para resolver los problemas descritos anteriormente al permitirle ofrecer al navegador varias versiones de imágenes (en diferentes archivos), ya sea que muestren lo mismo pero contengan diferentes números de píxeles (cambio de resolución), o diferentes imágenes adecuadas para diferentes asignaciones de espacio (dirección de arte).
 
 > [!NOTE]
-> Las nuevas características discutidas en este artículo — [`srcset`](/es/docs/Web/HTML/Element/img#srcset)/[`sizes`](/es/docs/Web/HTML/Element/img#sizes)/{{htmlelement("picture")}} —son compatibles con las versiones de lanzamiento de los navegadores de escritorio y móviles modernos (incluido el navegador Edge de Microsoft, aunque no Internet Explorer).
+> Las nuevas características discutidas en este artículo — [`srcset`](/es/docs/Web/HTML/Reference/Elements/img#srcset)/[`sizes`](/es/docs/Web/HTML/Reference/Elements/img#sizes)/{{htmlelement("picture")}} —son compatibles con las versiones de lanzamiento de los navegadores de escritorio y móviles modernos (incluido el navegador Edge de Microsoft, aunque no Internet Explorer).
 
 ## ¿Cómo se crean las imágenes adaptables?
 
@@ -80,7 +80,7 @@ Entonces, ¿qué queremos solucionar con el cambio de resolución? Queremos most
 <img src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy" />
 ```
 
-Sin embargo, podemos utilizar dos nuevos atributos — [`srcset`](/es/docs/Web/HTML/Element/img#srcset) y [`sizes`](/es/docs/Web/HTML/Element/img#sizes) — para proporcionar varias imágenes de origen adicionales junto con sugerencias para ayudar al navegador a elegir el correcto. Puede ver el ejemplo [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) en Github (vea también [el código fuente](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html)):
+Sin embargo, podemos utilizar dos nuevos atributos — [`srcset`](/es/docs/Web/HTML/Reference/Elements/img#srcset) y [`sizes`](/es/docs/Web/HTML/Reference/Elements/img#sizes) — para proporcionar varias imágenes de origen adicionales junto con sugerencias para ayudar al navegador a elegir el correcto. Puede ver el ejemplo [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) en Github (vea también [el código fuente](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html)):
 
 ```html
 <img
@@ -125,7 +125,7 @@ Entonces, con estos atributos establecidos, el navegador:
 > [!NOTE]
 > Al probar esto con un navegador de escritorio, si el navegador no carga las imágenes más estrechas cuando tiene su ventana configurada en el ancho más estrecho, eche un vistazo a cuál es la ventana gráfica (puede aproximarla yendo a la **Consola JavaScript** del navegador y escribiendo `document.querySelector('html').clientWidth`). Los diferentes navegadores tienen tamaños mínimos a los que te permitirán reducir el ancho de la ventana y pueden ser más anchos de lo que piensas. Al probarlo con un navegador móvil, puede usar herramientas como la página de depuración de Firefox `about:debugging` para inspeccionar la página cargada en el dispositivo móvil usando las herramientas de desarrollo de escritorio. Para ver qué imágenes se cargaron, puede usar la pestaña [Monitor de red](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) en las herramientas del desarrollador de Firefox.
 
-Los navegadores más antiguos que no soportan estas características solo las ignorarán y seguirán adelante con la carga de la imagen referenciada en el atributo [`src`](/es/docs/Web/HTML/Element/img#src) como lo hacen habitualmente.
+Los navegadores más antiguos que no soportan estas características solo las ignorarán y seguirán adelante con la carga de la imagen referenciada en el atributo [`src`](/es/docs/Web/HTML/Reference/Elements/img#src) como lo hacen habitualmente.
 
 > [!NOTE]
 > En el {{htmlelement("head")}} del documento usted hallará la línea `<meta name="viewport" content="width=device-width">`: esto fuerza a los dispositivos móviles a adoptar su ancho real de ventana para cargar las páginas web (algunos navegadores móviles mienten sobre el ancho de su ventana gráfica y, en su lugar, cargan páginas con un ancho de ventana más grande y luego reducen la página cargada, lo que no es muy útil para imágenes o diseño receptivos).
@@ -224,7 +224,7 @@ For this active learning, we're expecting you to be brave and go it alone ... mo
 That's a wrap for responsive images — we hope you enjoyed playing with these new techniques. As a recap, there are two distinct problems we've been discussing here:
 
 - **Art direction**: The problem whereby you want to serve cropped images for different layouts — for example a landscape image showing a full scene for a desktop layout, and a portrait image showing the main subject zoomed in close for a mobile layout. This can be solved using the {{htmlelement("picture")}} element.
-- **Resolution switching**: The problem whereby you want to serve smaller image files to narrow screen devices, as they don't need huge images like desktop displays do — and also optionally that you want to serve different resolution images to high density/low density screens. This can be solved using [vector graphics](/es/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML) (SVG images), and the [`srcset`](/es/docs/Web/HTML/Element/img#srcset) and [`sizes`](/es/docs/Web/HTML/Element/img#sizes) attributes.
+- **Resolution switching**: The problem whereby you want to serve smaller image files to narrow screen devices, as they don't need huge images like desktop displays do — and also optionally that you want to serve different resolution images to high density/low density screens. This can be solved using [vector graphics](/es/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML) (SVG images), and the [`srcset`](/es/docs/Web/HTML/Reference/Elements/img#srcset) and [`sizes`](/es/docs/Web/HTML/Reference/Elements/img#sizes) attributes.
 
 This also draws to a close the entire [Multimedia and embedding](/es/docs/conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b) module! The only thing to do now before moving on is to try our multimedia assessment, and see how you get on. Have fun.
 

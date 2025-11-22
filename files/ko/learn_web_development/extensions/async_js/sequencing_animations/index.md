@@ -99,7 +99,6 @@ alice1.animate(aliceTumbling, aliceTiming);
 
 1. [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), 또는 [Glitch](https://glitch.com/)와 같이 코드를 공유할 수 있는 온라인 에디터에 여러분이 작성한 코드를 올립니다.
 2. [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250)에 평가 혹은 도움을 요청하는 게시물을 작성합니다. 게시물에는 다음이 포함되어야 합니다.
-
    - "애니메이션 시퀀싱 평가 질문"과 같이 설명적인 제목
    - 이미 시도한 내용과 원하는 작업에 대한 세부 정보 (예: 막히는 부분이 있어서 도움이 필요하거나 평가가 필요)
    - 온라인 편집기에서 도움이나 평가가 필요한 코드 링크(1단계에서 언급됨). 이는 답변에 매우 도움이 됩니다. 만약 코드를 볼 수 없다면 도움을 주기 상당히 어렵습니다.

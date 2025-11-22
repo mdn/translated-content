@@ -230,7 +230,6 @@ No exemplo acima, o texto interno do `<iframe>` será atualizado somente se o ob
 ## Métodos estáticos
 
 - {{JSxRef("Promise.all", "Promise.all(iterable)")}}
-
   - : Aguarde que todas as promises sejam cumpridas ou que alguma seja rejeitada.
 
     Se a promise retornada for cumprida, ela será cumprida com uma matriz de agregação dos valores das promises cumpridas, na mesma ordem definida no iterável de várias promises.
@@ -238,7 +237,6 @@ No exemplo acima, o texto interno do `<iframe>` será atualizado somente se o ob
     Se for rejeitado, será rejeitado com o motivo da primeira promise no iterável que foi rejeitada.
 
 - {{JSxRef("Promise.allSettled", "Promise.allSettled(iterable)")}}
-
   - : Aguarde até que todas as promises sejam resolvidas (cada uma pode cumprir ou rejeitar).
 
     Retorna uma Promise que cumpre depois que todas as promises fornecidas são cumpridas ou rejeitadas, com uma matriz de objetos que descrevem o resultado de cada promise.
@@ -246,7 +244,6 @@ No exemplo acima, o texto interno do `<iframe>` será atualizado somente se o ob
 - {{JSxRef("Promise.any", "Promise.any(iterable)")}}
   - : Pega um iterável de objetos Promise e, assim que uma das promises do iterável é cumprida, retorna uma única promise que cumpre com o valor dessa promise.
 - {{JSxRef("Promise.race", "Promise.race(iterable)")}}
-
   - : Aguarde até que alguma das promises seja cumprida ou rejeitada.
 
     Se a promise retornada for cumprida, ela será cumprida com o valor da primeira promise no iterável que foi cumprida.
@@ -256,7 +253,6 @@ No exemplo acima, o texto interno do `<iframe>` será atualizado somente se o ob
 - {{JSxRef("Promise.reject", "Promise.reject(reason)")}}
   - : Retorna um novo objeto `Promise` que é rejeitado com o motivo fornecido.
 - {{JSxRef("Promise.resolve", "Promise.resolve(value)")}}
-
   - : Retorna um novo objeto `Promise` que é resolvido com o valor fornecido. Se o valor for um thenable (ou seja, tem um método `then`), a promise retornada "seguirá" esse thenable, adotando seu estado eventual; caso contrário, a promise devolvida será cumprida com o valor.
 
     Geralmente, se você não sabe se um valor é uma promise ou não, {{JSxRef("Promise.resolve", "Promise.resolve(value)")}} e trabalhe com o valor de retorno como uma promise.

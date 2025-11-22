@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Connection_management_in_HTTP_1.x
 original_slug: Web/HTTP/Connection_management_in_HTTP_1.x
 ---
 
-{{HTTPSidebar}}
-
 커넥션 관리는 HTTP의 주요 주제입니다: 대규모로 커넥션을 열고 유지하는 것은 웹 사이트 혹은 웹 애플리케이션의 성능에 많은 영향을 줍니다. HTTP/1.x에는 몇 가지 모델이 존재합니다: 단기 커넥션, 영속적인 커넥션, 그리고 _HTTP 파이프라이닝._
 
 HTTP는 클라이언트와 서버 사이의 커넥션을 제공하는 TCP를 전송프로토콜로 주로 이용합니다. 초기에는, HTTP는 이런 커넥션들을 다루기 위해 단일 모델을 제공했습니다. 요청이 보내져야 할 때마다 커넥션들은 매번 새롭게 생성되었고 응답이 도착한 이후에 연결을 닫는 형태로 단기로만 유지되었습니다.
@@ -19,7 +17,7 @@ HTTP/1.1에서 두 가지 모델이 추가되었습니다. 영속적인 커넥�
 > [!NOTE]
 > HTTP/2는 커넥션 관리의 몇가지 모델을 더 추가합니다.
 
-명심해야 할 중요한 점은 HTTP 내 커넥션 관리가 [end-to-end](/ko/docs/Web/HTTP/Headers#e2e)가 아닌 [hop-by-hop](/ko/docs/Web/HTTP/Headers#hbh)인 두 개의 연속된 노드 사이의 커넥션에 적용된다는 것입니다. 클라이언트와 첫 번째 프록시 사이의 커넥션 모델은 프록시와 최종 목적 서버(혹은 중간 프록시들) 간의 것과는 다를 수도 있습니다. {{HTTPHeader("Connection")}}와 {{HTTPHeader("Keep-Alive")}}와 같이 커넥션 모델을 정의하는 데 관여하는 HTTP 헤더들은 [hop-by-hop](/ko/docs/Web/HTTP/Headers#hbh) 헤더이며, 중간 노드에 의해 그 값들이 변경될 수 있습니다.
+명심해야 할 중요한 점은 HTTP 내 커넥션 관리가 [end-to-end](/ko/docs/Web/HTTP/Reference/Headers#e2e)가 아닌 [hop-by-hop](/ko/docs/Web/HTTP/Reference/Headers#hbh)인 두 개의 연속된 노드 사이의 커넥션에 적용된다는 것입니다. 클라이언트와 첫 번째 프록시 사이의 커넥션 모델은 프록시와 최종 목적 서버(혹은 중간 프록시들) 간의 것과는 다를 수도 있습니다. {{HTTPHeader("Connection")}}와 {{HTTPHeader("Keep-Alive")}}와 같이 커넥션 모델을 정의하는 데 관여하는 HTTP 헤더들은 [hop-by-hop](/ko/docs/Web/HTTP/Reference/Headers#hbh) 헤더이며, 중간 노드에 의해 그 값들이 변경될 수 있습니다.
 
 HTTP/1.1 커넥션이 TLS/1.0이나 WebSocket, 혹은 평문 HTTP/2와 같은 다른 프로토콜로 업그레이드 되었다는 점에서 관련된 주제는 HTTP 커넥션 업그레이드의 개념입니다. 이 프로토콜 업그레이드 메커니즘은 다른 곳에서 더 자세히 설명되어 있습니다.
 

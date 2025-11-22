@@ -58,5 +58,3 @@ slug: Web/HTML/Reference/Elements/rt
 - {{HTMLElement("rp")}}
 - {{HTMLElement("rb")}}
 - {{HTMLElement("rtc")}}
-
-{{HTMLSidebar}}

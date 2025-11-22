@@ -22,9 +22,7 @@ new Error(message, nomFichier, numeroLigne);
 - `message` {{Optional_Inline}}
   - : Une description de l'erreur, compréhensible par un humain.
 - `options` {{Optional_Inline}}
-
   - : Un objet avec les propriétés suivantes&nbsp;:
-
     - `cause` {{Optional_Inline}}
       - : Une propriété qui indique la cause spécifique de l'erreur. Lors de l'interception puis du renvoi d'une erreur avec un autre message d'erreur, cette propriété devrait être utilisée afin de transmettre le message d'erreur original.
 

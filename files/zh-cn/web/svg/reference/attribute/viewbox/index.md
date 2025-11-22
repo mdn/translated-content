@@ -75,7 +75,8 @@ svg:not(:root) {
 
 这个属性会受到 {{ SVGAttr("preserveAspectRatio") }} 的影响。
 
-> **备注：** `width` 或者 `height` 的值，小于或等于 0 的情况下，这个元素将不会被渲染出来。
+> [!NOTE]
+> `width` 或者 `height` 的值，小于或等于 0 的情况下，这个元素将不会被渲染出来。
 
 有 {{SVGElement("marker")}}, {{SVGElement("pattern")}}, {{ SVGElement("svg") }}, {{ SVGElement("symbol") }}, 和 {{ SVGElement("view") }} 等五个 svg 元素可以有这个属性。
 

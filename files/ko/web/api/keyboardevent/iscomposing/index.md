@@ -7,8 +7,8 @@ l10n:
 
 {{APIRef("UI Events")}}
 
-**`KeyboardEvent.isComposing`** 는 읽기 전용 속성으로 {{domxref("Element/compositionstart_event",
-"compositionstart")}} 이후나
+**`KeyboardEvent.isComposing`** 는 읽기 전용 속성으로
+{{domxref("Element/compositionstart_event", "compositionstart")}} 이후나
 {{domxref("Element/compositionend_event", "compositionend")}} 이전과
 같은 합성 세션 내에서 이벤트가 발생하는지를 불리언 값으로 나타냅니다.
 

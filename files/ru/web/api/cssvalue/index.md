@@ -12,7 +12,6 @@ slug: Web/API/CSSValue
 - {{domxref("CSSValue.cssText")}}
   - : {{domxref("DOMString")}} возвращает текущее значение.
 - {{domxref("CSSValue.cssValueType")}} {{readonlyInline}}
-
   - : An `unsigned short` representing a code defining the type of the value. Возможные значения:
 
     | Константа             | Описание                                                                                                                                                                                                 |

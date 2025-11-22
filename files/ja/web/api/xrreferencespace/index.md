@@ -27,7 +27,6 @@ _`XRReferenceSpace` には以下のメソッド以外に、 {{domxref("EventTarg
 ## イベント
 
 - {{domxref("XRReferenceSpace.reset_event", "reset")}}
-
   - : `reset` イベントは、追跡対象オブジェクトの原点とユーザーの環境または場所の間で不連続性が発生したことをブラウザーが検出すると、 {{domxref("XRReferenceSpace")}} オブジェクトに送信されます。 これは、例えば、ユーザーが XR 機器を再調整した後や、追跡を失って回復した後に機器が原点を自動的に調整した場合に発生する可能性があります。
 
 ## 参照空間型

@@ -102,7 +102,6 @@ TalkBack 允许你使用全局和本地菜单，无论你已经导航到哪个�
 1. 打开浏览器。
 2. 激活地址栏。
 3. 进入一个大量标题的网页，如 bbc.co.uk 的首页。输入网址的文字：
-
    - 通过左右滑动来找到地址栏，然后双击它。
    - 手指按在虚拟键盘上，选择你想要的字符，松开手指输入它，重复上述操作输入完所有的字符。
    - 输入完之后，找到 Enter 键并按下
@@ -145,7 +144,6 @@ iOS 操作系统内置了移动版旁白（VoiceOver）。
 
 1. 像转动拨号盘一样在屏幕上扭动两根手指。当你扭动更多的时候，每个选项都会被朗读。你可以来回循环浏览选项。
 2. 一旦你找到你想要的选项：
-
    - 松开手指来选择它。
    - 如果你可以调整其至的大小（例如音量或语速），则可以通过上下滑动来控制所选项的值。
 
@@ -158,7 +156,6 @@ iOS 操作系统内置了移动版旁白（VoiceOver）。
 1. 打开你的浏览器。
 2. 激活地址栏。
 3. 进入一个有大量标题的网站，就像 bbc.co.uk 的首页。输入网址：
-
    - 通过向左右滑动来选择地址栏，找到之后双击选择它。
    - 对于每一个字符，手指在虚拟键盘上长按，直到找到你想要的字符，然后释放手指来选择它。双击即可输入。
    - 完成后，找到 Enter 键并按下。
@@ -166,7 +163,6 @@ iOS 操作系统内置了移动版旁白（VoiceOver）。
 4. 向左右滑动来在页面上切换不同的项目。你可以通过双击来选择它（例如，跟随链接）。
 5. 默认情况下，被选中的转子选项应该是语速，你可以通过上下滑动来增加或减少语速。
 6. 现在像拨号盘一样围绕屏幕转动两根手指，以显示转子并在其选项之间移动。以下是可用选项的一些示例：
-
    - _语速_：改变语速。
    - _容器_：在页面不同语义的容器间切换。
    - _标题_：在页面上的标题之间切换。
@@ -223,7 +219,7 @@ panel.ontouchend = stopMove;
 
 特别是，移动端设备需要解决的最常见的问题是：
 
-- 移动端设备布局的适用性。例如，在窄屏上多列布局不能很好的工作，需要增加文字大小以提高可读性。这些问题可以通过[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)、[视口](/zh-CN/docs/Web/HTML/Guides/Viewport_meta_element)、[弹性盒子](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Flexbox)来解决。
+- 移动端设备布局的适用性。例如，在窄屏上多列布局不能很好的工作，需要增加文字大小以提高可读性。这些问题可以通过[媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries)、[视口](/zh-CN/docs/Web/HTML/Reference/Elements/meta/name/viewport)、[弹性盒子](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Flexbox)来解决。
 - 节省下载的图片大小。一般来说，小屏幕设备不需要与桌面设备一样大的图像，而且它们将更可能在慢速网络连接上。因此，适当地缩小屏幕设备以缩小图像是明智的。你可以使用[响应式图像技术](/zh-CN/docs/Web/HTML/Guides/Responsive_images)处理此问题。
 - 考虑高分辨率。许多移动设备具有高分辨率屏幕，因此需要更高分辨率的图像，使得显示器可以继续看起来清晰和锐利。再次，你可以使用响应式图像技术来适当地提供图像。此外，使用 SVG 矢量图像格式可以满足许多图像要求，这些格式在目前的浏览器中得到了很好的支持。SVG 文件较小，且不论以何种大小显示，它都会保持清晰（请参阅[向网页中添加矢量图形](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)以了解更多的细节）。
 
@@ -236,7 +232,7 @@ panel.ontouchend = stopMove;
 
 #### 不禁用缩放
 
-使用[视口](/zh-CN/docs/Web/HTML/Guides/Viewport_meta_element)可能会禁用缩放。要始终启用缩放，请在 {{htmlelement("head")}} 中将宽度设置为设备宽度：
+使用[视口](/zh-CN/docs/Web/HTML/Reference/Elements/meta/name/viewport)可能会禁用缩放。要始终启用缩放，请在 {{htmlelement("head")}} 中将宽度设置为设备宽度：
 
 ```html
 <meta name="viewport" content="width=device-width; user-scalable=yes" />

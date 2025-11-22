@@ -55,7 +55,7 @@ Esta sección proporciona una breve descripción de cómo Firefox / Gecko contri
 
 ### Tecnologías web
 
-La plataforma web proporciona muchas herramientas, algunas más adecuadas para trabajos particulares que otras. Toda la lógica de la aplicación está escrita en JavaScript. Para mostrar gráficos, los desarrolladores pueden usar HTML o CSS (es decir, lenguajes declarativos de alto nivel), o usar interfaces imperativas de bajo nivel ofrecidas por el elemento [\<canvas>](/es/docs/Web/HTML/Element/canvas) (que incluye [WebGL](/es/docs/Web/API/WebGL_API)). En algún lugar "entre" HTML / CSS y Canvas está [SVG](/es/docs/Web/SVG), que ofrece algunos beneficios de ambos.
+La plataforma web proporciona muchas herramientas, algunas más adecuadas para trabajos particulares que otras. Toda la lógica de la aplicación está escrita en JavaScript. Para mostrar gráficos, los desarrolladores pueden usar HTML o CSS (es decir, lenguajes declarativos de alto nivel), o usar interfaces imperativas de bajo nivel ofrecidas por el elemento [\<canvas>](/es/docs/Web/HTML/Reference/Elements/canvas) (que incluye [WebGL](/es/docs/Web/API/WebGL_API)). En algún lugar "entre" HTML / CSS y Canvas está [SVG](/es/docs/Web/SVG), que ofrece algunos beneficios de ambos.
 
 HTML y CSS aumentan en gran medida la productividad, a veces a expensas de la frecuencia de cuadros o el control a nivel de píxeles de la renderización. El texto y las imágenes se vuelven a generar automáticamente, los elementos de la IU reciben automáticamente el tema del sistema, y el sistema proporciona soporte "integrado" para algunos casos de uso que los desarrolladores pueden no pensar inicialmente, como pantallas de diferente resolución o idiomas de derecha a izquierda.
 

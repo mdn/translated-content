@@ -9,13 +9,10 @@ original_slug: Web/HTML/Element/u
 ### Definición
 
 - Muestra el texto subrayado.
-
   - : **Sus etiquetas son**: \<u> y \</u> (Ambas obligatorias)
 
     **Crea una caja**: [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea).
-
     - **Está definido como**
-
       - : [de estilo de fuente](/es/docs/HTML/Elemento/Tipos_de_elementos#de_estilo_de_fuente).
 
         [Desaprobado](/es/docs/HTML/Elemento/Tipos_de_elementos#desaprobado)

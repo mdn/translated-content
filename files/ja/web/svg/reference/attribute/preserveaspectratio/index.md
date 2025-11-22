@@ -1,12 +1,9 @@
 ---
 title: preserveAspectRatio
 slug: Web/SVG/Reference/Attribute/preserveAspectRatio
-original_slug: Web/SVG/Attribute/preserveAspectRatio
 l10n:
-  sourceCommit: 4d4e7617f5d573bbf8f51333b959c73b10262d52
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
-
-{{SVGRef}}
 
 **`preserveAspectRatio`** 属性は、指定された{{glossary("aspect ratio", "アスペクト比")}}を提供するビューボックスを持つ要素が、異なるアスペクト比を持つビューポートにどのように収まるべきかを示します。
 
@@ -23,59 +20,49 @@ preserveAspectRatio="<align> [<meet or slice>]"
 配置値は均一な変倍を強制するかどうかを示し、もしそうなら {{ SVGAttr("viewBox") }} のアスペクト比がビューポートのアスペクト比と一致しない場合に使用する配置方法を示します。 `xMidYMid` が既定値です。配置値は以下のキーワード値のいずれかでなければなりません。
 
 - `none`
-
   - : 均等な変倍を強制しません。指定された要素のグラフィックコンテンツを、要素の外接ボックスがビューポートの長方形に正確に一致するように、必要に応じて不均一に変倍します。なお、 `<align>` が `none` の場合、オプションの `<meetOrSlice>` の値は無視されます。
 
 - `xMinYMin`
-
   - : 均等な変倍を強制します。
     要素の {{ SVGAttr("viewBox") }} の `<min-x>` をビューポートの最小 X 値に配置します。
     要素の {{ SVGAttr("viewBox") }} の `<min-y>` をビューポートの最小 Y 値に配置します。
 
 - `xMidYMin`
-
   - : 均等な変倍を強制します。
     要素の {{ SVGAttr("viewBox") }} の X の中央値をビューポートの X の中央値に配置します。
     要素の {{ SVGAttr("viewBox") }} の `<min-y>` をビューポートの最小 Y 値に配置します。
 
 - `xMaxYMin`
-
   - : 均等な変倍を強制します。
     要素の {{ SVGAttr("viewBox") }} の `<min-x>+<width>` をビューポートの最大 X 値に配置します。
     要素の {{ SVGAttr("viewBox") }} の `<min-y>` をビューポートの最小 Y 値に配置します。
 
 - `xMinYMid`
-
   - : 均等な変倍を強制します。
     要素の {{ SVGAttr("viewBox") }} の `<min-x>` をビューポートの最小 X 値に配置します。
     要素の {{ SVGAttr("viewBox") }} の Y の中央値をビューポートの Y の中央値に配置します。
 
 - `xMidYMid`
-
   - : 均等な変倍を強制します。
     要素の {{ SVGAttr("viewBox") }} の X の中央値をビューポートの X の中央値に配置します。
     要素の {{ SVGAttr("viewBox") }} の Y の中央値をビューポートの Y の中央値に配置します。 This is the default value.
 
 - `xMaxYMid`
-
   - : 均等な変倍を強制します。
     要素の {{ SVGAttr("viewBox") }} の `<min-x>+<width>` をビューポートの最大 X 値に配置します。
     要素の {{ SVGAttr("viewBox") }} の Y の中央値をビューポートの Y の中央値に配置します。
 
 - `xMinYMax`
-
   - : 均等な変倍を強制します。
     要素の {{ SVGAttr("viewBox") }} の `<min-x>` をビューポートの最小 X 値に配置します。
     要素の {{ SVGAttr("viewBox") }} の `<min-y>+<height>` をビューポートの最大 Y 値に配置します。
 
 - `xMidYMax`
-
   - : 均等な変倍を強制します。
     要素の {{ SVGAttr("viewBox") }} の X の中央値をビューポートの X の中央値に配置します。
     要素の {{ SVGAttr("viewBox") }} の `<min-y>+<height>` をビューポートの最大 Y 値に配置します。
 
 - `xMaxYMax`
-
   - : 均等な変倍を強制します。
     要素の {{ SVGAttr("viewBox") }} の `<min-x>+<width>` をビューポートの最大 X 値に配置します。
     要素の {{ SVGAttr("viewBox") }} の `<min-y>+<height>` をビューポートの最大 Y 値に配置します。
@@ -83,9 +70,7 @@ preserveAspectRatio="<align> [<meet or slice>]"
 以下の 2 つのキーワードは、コンテナー境界に対して SVG がどのように変倍すべきかを決定します。`meet` または `slice` 参照を指定することはオプションであり、指定する場合は 2 つのキーワードのうちいずれか 1 つだけでなければなりません。 `meet` が既定値です。
 
 - `meet`
-
   - : 次のようにグラフィックを変倍します。
-
     - アスペクト比を維持します。
     - {{ SVGAttr("viewBox") }} 全体がビューポート内に表示されます。
     - {{ SVGAttr("viewBox") }} は、他にも条件を満たしつつ、可能な限り拡大します。
@@ -93,9 +78,7 @@ preserveAspectRatio="<align> [<meet or slice>]"
     この場合、グラフィックのアスペクト比がビューポートと一致しないと、ビューポートの一部が {{ SVGAttr("viewBox") }} の境界からはみ出します（つまり、 {{ SVGAttr("viewBox") }} が描画する領域はビューポートより小さくなります）。
 
 - `slice`
-
   - : 次のようにグラフィックを変倍します。
-
     - アスペクト比を維持します。
     - ビューポート全体が {{ SVGAttr("viewBox") }} に応じたものになります。
     - {{ SVGAttr("viewBox") }} は、他にも条件を満たしつつ、可能な限り縮小します。
@@ -121,14 +104,13 @@ body {
 }
 ```
 
-```html
+```html-nolint
 <svg viewBox="-1 -1 202 40" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <path
       id="smiley"
       d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
   </defs>
-</svg>
 ```
 
 ```html
@@ -162,18 +144,21 @@ body {
 ```
 
 ```html
-  <rect x="140" y="0" width="60" height="30">
-    <title>xMaxYMid meet</title>
-  </rect>
-  <svg
-    viewBox="0 0 100 100"
-    width="60"
-    height="30"
-    preserveAspectRatio="xMaxYMid meet"
-    x="140"
-    y="0">
-    <use href="#smiley" />
-  </svg>
+<rect x="140" y="0" width="60" height="30">
+  <title>xMaxYMid meet</title>
+</rect>
+<svg
+  viewBox="0 0 100 100"
+  width="60"
+  height="30"
+  preserveAspectRatio="xMaxYMid meet"
+  x="140"
+  y="0">
+  <use href="#smiley" />
+</svg>
+```
+
+```html-nolint
 </svg>
 ```
 
@@ -212,14 +197,13 @@ body {
 }
 ```
 
-```html
+```html-nolint
 <svg viewBox="-1 -1 202 57" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <path
       id="smiley"
       d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
   </defs>
-</svg>
 ```
 
 ```html
@@ -253,18 +237,21 @@ body {
 ```
 
 ```html
-  <rect x="140" y="15" width="60" height="30">
-    <title>xMidYMax slice</title>
-  </rect>
-  <svg
-    viewBox="0 0 100 100"
-    width="60"
-    height="30"
-    preserveAspectRatio="xMidYMax slice"
-    x="140"
-    y="15">
-    <use href="#smiley" />
-  </svg>
+<rect x="140" y="15" width="60" height="30">
+  <title>xMidYMax slice</title>
+</rect>
+<svg
+  viewBox="0 0 100 100"
+  width="60"
+  height="30"
+  preserveAspectRatio="xMidYMax slice"
+  x="140"
+  y="15">
+  <use href="#smiley" />
+</svg>
+```
+
+```html-nolint
 </svg>
 ```
 
@@ -303,29 +290,28 @@ body {
 }
 ```
 
-```html
+```html-nolint
 <svg viewBox="-1 -1 202 80" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <path
       id="smiley"
       d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
   </defs>
-</svg>
 ```
 
 ```html
-  <rect x=0" y="0" width="30" height="75">
-    <title>xMidYMin meet</title>
-  </rect>
-  <svg
-    viewBox="0 0 100 100"
-    width="30"
-    height="75"
-    preserveAspectRatio="xMidYMin meet"
-    x="0"
-    y="0">
-    <use href="#smiley" />
-  </svg>
+<rect x="0" y="0" width="30" height="75">
+  <title>xMidYMin meet</title>
+</rect>
+<svg
+  viewBox="0 0 100 100"
+  width="30"
+  height="75"
+  preserveAspectRatio="xMidYMin meet"
+  x="0"
+  y="0">
+  <use href="#smiley" />
+</svg>
 ```
 
 ```html
@@ -344,18 +330,21 @@ body {
 ```
 
 ```html
-  <rect x="70" y="0" width="30" height="75">
-    <title>xMidYMax meet</title>
-  </rect>
-  <svg
-    viewBox="0 0 100 100"
-    width="30"
-    height="75"
-    preserveAspectRatio="xMidYMax meet"
-    x="70"
-    y="0">
-    <use href="#smiley" />
-  </svg>
+<rect x="70" y="0" width="30" height="75">
+  <title>xMidYMax meet</title>
+</rect>
+<svg
+  viewBox="0 0 100 100"
+  width="30"
+  height="75"
+  preserveAspectRatio="xMidYMax meet"
+  x="70"
+  y="0">
+  <use href="#smiley" />
+</svg>
+```
+
+```html-nolint
 </svg>
 ```
 
@@ -394,14 +383,13 @@ body {
 }
 ```
 
-```html
+```html-nolint
 <svg viewBox="-1 -1 202 80" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <path
       id="smiley"
       d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
   </defs>
-</svg>
 ```
 
 ```html
@@ -435,18 +423,21 @@ body {
 ```
 
 ```html
-  <rect x="70" y="0" width="30" height="75">
-    <title>xMaxYMid slice</title>
-  </rect>
-  <svg
-    viewBox="0 0 100 100"
-    width="30"
-    height="75"
-    preserveAspectRatio="xMaxYMid slice"
-    x="70"
-    y="0">
-    <use href="#smiley" />
-  </svg>
+<rect x="70" y="0" width="30" height="75">
+  <title>xMaxYMid slice</title>
+</rect>
+<svg
+  viewBox="0 0 100 100"
+  width="30"
+  height="75"
+  preserveAspectRatio="xMaxYMid slice"
+  x="70"
+  y="0">
+  <use href="#smiley" />
+</svg>
+```
+
+```html-nolint
 </svg>
 ```
 
@@ -485,30 +476,32 @@ body {
 }
 ```
 
-```html
+```html-nolint
 <svg viewBox="-1 -1 192 62" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <path
       id="smiley"
       d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
   </defs>
-</svg>
 ```
 
 ```html
-  <!-- none -->
-  <rect x="0" y="0" width="160" height="60">
-    <title>none</title>
-  </rect>
-  <svg
-    viewBox="0 0 100 100"
-    width="160"
-    height="60"
-    preserveAspectRatio="none"
-    x="0"
-    y="0">
-    <use href="#smiley" />
-  </svg>
+<!-- none -->
+<rect x="0" y="0" width="160" height="60">
+  <title>none</title>
+</rect>
+<svg
+  viewBox="0 0 100 100"
+  width="160"
+  height="60"
+  preserveAspectRatio="none"
+  x="0"
+  y="0">
+  <use href="#smiley" />
+</svg>
+```
+
+```html-nolint
 </svg>
 ```
 
@@ -544,7 +537,7 @@ rect:active {
 
 ### feImage
 
-{{SVGElement('feImage')}} の場合、 `preserveAspectRatio` は参照している画像が `<feImage>` 要素で定義した長方形に収まるように定義します。
+{{SVGElement('feImage')}} の場合、 `preserveAspectRatio` は参照している画像が `<feImage>` 要素で定義した矩形に収まるように定義します。
 
 <table class="properties">
   <tbody>
@@ -565,7 +558,7 @@ rect:active {
 
 ### image
 
-{{SVGElement('image')}} の場合、 `preserveAspectRatio` は参照している画像が `<feImage>` 要素で定義した長方形に収まるように定義します。
+{{SVGElement('image')}} の場合、 `preserveAspectRatio` は参照している画像が `<feImage>` 要素で定義した矩形に収まるように定義します。
 
 <table class="properties">
   <tbody>

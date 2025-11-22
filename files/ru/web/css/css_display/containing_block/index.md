@@ -31,24 +31,22 @@ slug: Web/CSS/CSS_display/Containing_block
 Определение содержащего блока элемента полностью зависит от значения свойства {{cssxref("position")}}:
 
 1. Если свойство `position` имеет значение **`static`**, **`relative`**, или **`sticky`**, то содержащий блок задаётся краем _content бокса_ ближайшего предка, который:
-
    - либо является **блочным контейнером** (block container), например, если его свойство display имеет значение inline-block, block или list-item.
    - либо **устанавливает контекст форматирования** (formatting context), например, контейнер таблицы (table container), flex-контейнер (flex container), grid-контейнер (grid container) или блочный контейнер (block container).
 
 2. Если свойство **`position`** имеет значение **`absolute`**, то содержащий блок задаётся краем _padding бокса_ ближайшего предка, у которого свойство **`position`** имеет значение отличное от `static` (`fixed`, `absolute`, `relative` или `sticky`).
 3. Если свойство **`position`** имеет значение **`fixed`**, то содержащий блок задаётся:
-
    - в случае непрерывного медиа (continuous media) областью просмотра (вьюпорт - {{glossary("viewport")}});
    - в случае страничного медиа (paged media) областью страницы.
 
 4. Если свойство **`position`** имеет значение **`absolute`** или **`fixed`**, то содержащий блок может также задаваться краем padding бокса ближайшего предка, у которого:
-
    1. Свойство {{cssxref("transform")}} или {{cssxref("perspective")}} имеет значение отличное от `none`.
    2. Свойство {{cssxref("will-change")}} имеет значение `transform` или `perspective`.
    3. Свойство {{cssxref("filter")}} имеет значение отличное от `none` или `will-change` value of `filter` (работает только в Firefox).
    4. Свойство {{cssxref("contain")}} имеет значение `paint` (например, `contain: paint;`).
 
-> **Примечание:**Содержащий блок в котором находится корневой элемент ({{HTMLElement("html")}}) представляет собой прямоугольник, который называется **начальный содержащий блок**. Он имеет размеры области просмотра (вьюпорт - viewport) для непрерывного медиа (continuous media) или области страницы (page area) для страничного медиа (paged media).
+> [!NOTE]
+> Содержащий блок в котором находится корневой элемент ({{HTMLElement("html")}}) представляет собой прямоугольник, который называется **начальный содержащий блок**. Он имеет размеры области просмотра (вьюпорт - viewport) для непрерывного медиа (continuous media) или области страницы (page area) для страничного медиа (paged media).
 
 ## Calculating percentage values from the containing block
 
@@ -255,7 +253,7 @@ p {
 
 - Ключевые концепции CSS
   - [Синтаксис CSS](/ru/docs/Web/CSS/CSS_syntax/Syntax)
-  - [@-правила](/ru/docs/Web/CSS/CSS_syntax/At-rule)
+  - [@-правила](/ru/docs/Web/CSS/CSS_syntax/At-rules)
   - [комментарии](/ru/docs/Web/CSS/CSS_syntax/Comments)
   - [специфичность](/ru/docs/Web/CSS/CSS_cascade/Specificity)
   - [наследование](/ru/docs/Web/CSS/CSS_cascade/Inheritance)

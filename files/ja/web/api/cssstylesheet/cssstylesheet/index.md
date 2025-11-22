@@ -24,9 +24,7 @@ new CSSStyleSheet(options)
 ### 引数
 
 - `options` {{optional_inline}}
-
   - : 以下のものを持つオブジェクトです。
-
     - `baseURL` {{optional_inline}}
       - : スタイルシートの相対 URL の解決に用いる `baseURL` を格納した文字列。
     - `media` {{optional_inline}}

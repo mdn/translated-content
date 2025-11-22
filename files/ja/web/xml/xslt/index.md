@@ -10,7 +10,6 @@ original_slug: Web/XSLT
 2. **[EXSLT](/ja/docs/Web/XML/EXSLT)**
 3. **[XPath](/ja/docs/Web/XML/XPath)**
 4. ガイド
-
    1. [よくある XSLT のエラー](/ja/docs/Web/XML/XSLT/Guides/Common_errors)
    2. [PI 引数](/ja/docs/Web/XML/XSLT/Guides/PI_Parameters)
    3. [Gecko の XSLT/JavaScript インターフェイス](/ja/docs/Web/API/XSLTProcessor)

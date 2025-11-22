@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 56 は、米国時間 2017 年 9 月 28 日にリリースされました。このページでは、開発者に影響する Firefox 56 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -23,7 +21,7 @@ Firefox 56 は、米国時間 2017 年 9 月 28 日にリリースされまし�
 
 ### CSS
 
-- Mozilla の独自仕様である {{cssxref("&lt;color&gt;")}} 値 `-moz-win-accentcolor` と `-moz-win-accentcolortext` ([Firefox バグ 1344910](https://bugzil.la/1344910))、および独自仕様のメディアクエリーである [`-moz-windows-accent-color-in-titlebar`](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-windows-accent-color-in-titlebar) を実装しました ([Firefox バグ 1379938](https://bugzil.la/1379938))。
+- Mozilla の独自仕様である {{cssxref("&lt;color&gt;")}} 値 `-moz-win-accentcolor` と `-moz-win-accentcolortext` ([Firefox バグ 1344910](https://bugzil.la/1344910))、および独自仕様のメディアクエリーである [`-moz-windows-accent-color-in-titlebar`](/ja/docs/Web/CSS/Guides/Media_queries/Using#-moz-windows-accent-color-in-titlebar) を実装しました ([Firefox バグ 1379938](https://bugzil.la/1379938))。
 
 ### SVG
 

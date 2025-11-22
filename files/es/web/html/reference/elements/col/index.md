@@ -9,7 +9,6 @@ original_slug: Web/HTML/Element/col
 ### Definición
 
 - Permite especificar propiedades para una columna o un grupo de ellas.
-
   - : **Sus etiquetas son**: `<col>` (solo tiene una).
 
     **Crea una caja**: No.

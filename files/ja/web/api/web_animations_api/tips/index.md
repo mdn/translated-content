@@ -4,13 +4,11 @@ slug: Web/API/Web_Animations_API/Tips
 original_slug: Web/CSS/CSS_animations/Tips
 ---
 
-{{CSSRef}}
-
 CSS アニメーションを使えば、文書やアプリを構成する要素に、驚くようなことができるようになります。しかし、当たり前のようで当たり前でないことや、すぐには思いつかないような賢い方法があるかもしれません。この記事では、止まってしまったアニメーションを再び動かす方法など、作業を楽にするために見つけたヒントをまとめています。
 
 ## 再度アニメーションを実行する
 
-[CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)の仕様書では再度アニメーションを実行する方法を提示していません。 要素に魔法の関数 `resetAnimation()` というものはなく、要素の {{cssxref("animation-play-state")}} を再び `"running"` に設定することさえもできません。その代わりに、停止したアニメーションをリプレイするための巧妙なトリックを使う必要があります。
+[CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)の仕様書では再度アニメーションを実行する方法を提示していません。 要素に魔法の関数 `resetAnimation()` というものはなく、要素の {{cssxref("animation-play-state")}} を再び `"running"` に設定することさえもできません。その代わりに、停止したアニメーションをリプレイするための巧妙なトリックを使う必要があります。
 
 ここでは、私たちが安定していて信頼性があると感じている方法をご紹介します。
 
@@ -158,5 +156,5 @@ watchme.addEventListener("click", () =>
 
 ## 関連情報
 
-- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [CSS トランジションの使用](/ja/docs/Web/CSS/Guides/Transitions/Using)
 - {{domxref("Window.requestAnimationFrame()")}}

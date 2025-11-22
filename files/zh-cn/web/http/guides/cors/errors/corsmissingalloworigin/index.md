@@ -3,8 +3,6 @@ title: 原因：CORS header 'Access-Control-Allow-Origin' missing
 slug: Web/HTTP/Guides/CORS/Errors/CORSMissingAllowOrigin
 ---
 
-{{HTTPSidebar}}
-
 ## 原因
 
 ```plain

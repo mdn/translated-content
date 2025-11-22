@@ -66,7 +66,6 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 - `form`
   - : Este atributo tem o valor do atributo **id** do elemento {{HTMLElement("form")}} com que se relaciona. Seu valor padrão é o **id** do elemento {{HTMLElement("form")}} mais próximo.
 - `name`
-
   - : O nome associado com o grupo.
 
     > [!NOTE]

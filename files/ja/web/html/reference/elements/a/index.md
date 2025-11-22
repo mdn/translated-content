@@ -11,7 +11,7 @@ l10n:
 
 `<a>` の内容は、リンク先を示すもの**であるべきです**。`href` 属性が存在する場合、`<a>` 要素にフォーカスがある状態で Enter キーを押すと起動します。
 
-{{InteractiveExample("HTML Demo: &lt;a&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;a&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>You can reach Michael at:</p>
@@ -34,13 +34,11 @@ li {
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `attributionsrc` {{experimental_inline}}
-
   - : ブラウザーが {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを送信することを指定します。サーバー側では、これはレスポンスで {{httpheader("Attribution-Reporting-Register-Source")}} ヘッダーの送信を開始し、[ナビゲーションベースのアトリビューションソース](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources)を登録するために使用します。
 
     ブラウザーは、ユーザーがリンクをクリックすると、ナビゲーションベースのアトリビューションソース（{{httpheader("Attribution-Reporting-Register-Source")}} レスポンスヘッダーで指定された）に関連付けられたソースデータを格納されます。詳細は[アトリビューション報告 API](/ja/docs/Web/API/Attribution_Reporting_API) を参照してください。
 
     この属性には設定することができる 2 つのバージョンがあります：
-
     - 論理値、つまり `attributionsrc` の名前だけです。これは、{{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを、`href` 属性がこの点を指すのと同じサーバーに送ることを指定します。同じサーバーでアトリビューションソースの登録を処理している場合は、これで問題ありません。
     - 1 つ以上の URL を格納する値。例えば、以下のようなものです。
 
@@ -57,11 +55,8 @@ li {
     `<a>` 要素はアトリビューショントリガーとして使用することはできず、ソースとしてのみです。
 
 - `download`
-
   - : ブラウザーがリンクされた URL をダウンロードとして扱うようにします。`filename` 値があってもなくても構いません。
-
     - 値がない場合は、ブラウザーは様々なソースから生成されたファイル名/拡張子を提案します。
-
       - HTTP の {{HTTPHeader("Content-Disposition")}} ヘッダー
       - URL の[パス](/ja/docs/Web/API/URL/pathname)の最後の部分
       - {{Glossary("MIME_type", "メディア種別")}}（{{HTTPHeader("Content-Type")}} ヘッダー、 [`data:` URL](/ja/docs/Web/URI/Reference/Schemes/data) の先頭、 [`blob:` URL](/ja/docs/Web/API/URL/createObjectURL_static) の {{domxref("Blob.type")}} から）
@@ -77,9 +72,7 @@ li {
     >   - ヘッダーが `inline` の処分を指定している場合、 Chrome や Firefox 82 以降のバージョンでは、属性を優先してダウンロードとして扱います。Firefox の（82 以前の）古い版では、ヘッダーが優先され、コンテンツがインラインで表示されます。
 
 - `href`
-
   - : ハイパーリンクが指す先の URL です。リンクは HTTP ベースの URL に限定されません。ブラウザーが対応するあらゆるプロトコルを使用することができます。
-
     - 電話番号を示す `tel:` URL
     - メールアドレスを示す `mailto:` URL
     - SMS テキストメッセージを示す `sms:` URL
@@ -87,7 +80,6 @@ li {
     - ウェブブラウザーがその他の URL スキームに対応していない可能性がある場合、ウェブサイトは [`registerProtocolHandler()`](/ja/docs/Web/API/Navigator/registerProtocolHandler) を使用することができます。
 
     他にも、次のようにして URL 機能でリソースの特定の部分を記載することができます。
-
     - ページの節を示すフラグメント URL
     - [テキストフラグメント](/ja/docs/Web/URI/Reference/Fragment/Text_fragments)で指定されたテキストの部分
     - メディアファイルの一部を示すメディアフラグメント
@@ -97,9 +89,7 @@ li {
 - `ping`
   - : 空白で区切られた URL のリストです。リンクをたどるとき、ブラウザーは {{HTTPMethod("POST")}} リクエストを指定された URL に、 `PING` を本文として送信します。通常、トラッキングに使用されます。
 - `referrerpolicy`
-
   - : リンクをたどるときにどれだけの[リファラー](/ja/docs/Web/HTTP/Reference/Headers/Referer)を送信するかです。
-
     - `no-referrer`: {{HTTPHeader("Referer")}} ヘッダーは送信されません。
     - `no-referrer-when-downgrade`: {{HTTPHeader("Referer")}} ヘッダーは{{Glossary("origin", "オリジン")}}に {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) がない場合は送信されません。
     - `origin`: 送信されるリファラーは、参照元ページのオリジンのみに限定されます。すなわち[スキーム](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host", "ホスト名")}}、{{Glossary("port", "ポート番号")}}です。
@@ -112,16 +102,15 @@ li {
 - [`rel`](/ja/docs/Web/HTML/Reference/Attributes/rel)
   - : リンク先の URL との関係を示す、空白で区切られたリンク種別のリストです。
 - `target`
-
   - : リンク先の URL を表示する場所、_閲覧コンテキスト_（タブ、ウィンドウ、{{HTMLElement("iframe")}}）の名前で指定します。以下のキーワードは URL の読み込み先について特別な意味を持ちます。
-
     - `_self`: 現在の閲覧コンテキストです。（既定値）
     - `_blank`: ふつうは新しいタブですが、新しいウィンドウを使用するようにブラウザーを設定できます。
     - `_parent`: 現在の親の閲覧コンテキストです。親がない場合は、 `_self` と同じ振る舞いをします。
     - `_top`: 最上位の閲覧コンテキスト（現在のコンテキストの祖先である "最上位" のコンテキスト）です。親の閲覧コンテキストがない場合は、 `_self` と同じ動作をします。
     - `_unfencedTop`: 埋め込まれた[フェンスフレーム](/ja/docs/Web/API/Fenced_frame_API)が最上位のフレームを移動できるようにします (つまり、他の予約された移動先とは異なり、フェンスフレームのルートを越えて移動します)。これがフェンスフレームのコンテキスト外で使用されてもナビゲーションは成功しますが、予約語のようには動作しないことに注意してください。
 
-    > **メモ:** `target="_blank"` を `<a>` 要素に設定すると、暗黙的に `rel` の動作は [`rel="noopener"`](/ja/docs/Web/HTML/Reference/Attributes/rel/noopener) が設定されたかのように動作し、 `window.opener` を設定しません。
+    > [!NOTE]
+    > `target="_blank"` を `<a>` 要素に設定すると、暗黙的に `rel` の動作は [`rel="noopener"`](/ja/docs/Web/HTML/Reference/Attributes/rel/noopener) が設定されたかのように動作し、 `window.opener` を設定しません。
 
 - `type`
   - : リンク先 URL の {{Glossary("MIME type", "MIME タイプ")}}の形式を表すヒントです。組み込まれている機能はありません。
@@ -129,7 +118,6 @@ li {
 ### 非推奨の属性
 
 - `charset` {{Deprecated_Inline}}
-
   - : リンク先 URL の{{Glossary("character encoding", "文字エンコーディング")}}のヒントでした。
 
     > [!NOTE]
@@ -138,7 +126,6 @@ li {
 - `coords` {{Deprecated_Inline}}
   - : [`shape` 属性](#shape)とともに使用されます。カンマ区切りの座標のリストです。
 - `name` {{Deprecated_Inline}}
-
   - : ページ内のリンク先の場所を定義するアンカーで必要でした。 HTML 4.01 では、値がまったく同じであれば `id` 属性と `name` 属性を `<a>` 要素内で同時に使用できました。
 
     > [!NOTE]
@@ -147,7 +134,6 @@ li {
 - `rev` {{Deprecated_Inline}}
   - : この属性は、逆方向のリンクを指定します。 [`rel` 属性](#rel)と逆の関係を定義していました。これはとても紛らわしいため、非推奨になりました。
 - `shape` {{Deprecated_Inline}}
-
   - : イメージマップ内のハイパーリンクの領域の形状です。
 
     > [!NOTE]
@@ -359,7 +345,8 @@ a {
 
 {{EmbedLiveSample('Linking to an element on the same page')}}
 
-> **メモ:** `href="#top"` または空のフラグメント (`href="#"`) を使用すると、現在のページの先頭にリンクすることができると、 [HTML 仕様書で定義されています](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier)（英語）。
+> [!NOTE]
+> `href="#top"` または空のフラグメント (`href="#"`) を使用すると、現在のページの先頭にリンクすることができると、 [HTML 仕様書で定義されています](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier)（英語）。
 
 ### メールアドレスへのリンク
 

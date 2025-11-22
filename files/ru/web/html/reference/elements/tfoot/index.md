@@ -21,23 +21,18 @@ HTML-элемент **`<tfoot>`** определяющий набор строк
 Этот элемент включает в себя [глобальные атрибуты](/ru/docs/Web/HTML/Reference/Global_attributes).
 
 - `align` {{ Deprecated_inline() }}
-
   - : Этот атрибут определяет горизонтальное выравнивание содержимого каждой ячейки. Возможные значения: `left`, `center`, `right`, `justify` и `char` (выравнивание текстового содержимого по специальному символу с минимальным смещением, определённым атрибутами [`char`](#char) и [`charoff`](#charoff)).
 
 - `bgcolor` {{ Non-standard_inline() }}
-
   - : Этот атрибут определяет цвет фона каждой ячейки столбца. Это один из 6-ти значного шестнадцатеричного кода определённого в [sRGB](https://www.w3.org/Graphics/Color/sRGB), предваряется '#'. Может быть использован один из шестнадцати предопределённых строк.
 
 - `char` {{ Deprecated_inline() }}
-
   - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If [`align`](#align) is not set to char, this attribute is ignored.
 
 - `charoff` {{ Deprecated_inline() }}
-
   - : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the **char** attribute.
 
 - `valign` {{ Deprecated_inline() }}
-
   - : Этот атрибут задаёт вертикальное выравнивание текста в каждой строке ячеек заголовка таблицы. Возможные значения для этого атрибута: `baseline`, `bottom`, `middle` и `top`.
 
 ## DOM интерфейс
@@ -56,6 +51,5 @@ HTML-элемент **`<tfoot>`** определяющий набор строк
 
 - Other table-related HTML Elements: {{ HTMLElement("caption") }}, {{ HTMLElement("col") }}, {{ HTMLElement("colgroup") }}, {{ HTMLElement("table") }}, {{ HTMLElement("tbody") }}, {{ HTMLElement("td") }}, {{ HTMLElement("th") }}, {{ HTMLElement("thead") }}, {{ HTMLElement("tr") }};
 - CSS properties and pseudo-classes that may be specially useful to style the \<tfoot> element:
-
   - the {{ cssxref(":nth-child") }} pseudo-class to set the alignment on the cells of the column;
   - the {{ cssxref("text-align") }} property to align all cells content on the same character, like '.'.

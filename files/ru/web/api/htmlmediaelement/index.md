@@ -16,7 +16,6 @@ _Этот интерфейс также наследует свойства от
 - {{domxref("HTMLMediaElement.audioTracks")}}
   - : {{Domxref ("AudioTrackList")}}, в котором перечислены объекты {{domxref ("AudioTrack")}}, содержащиеся в элементе.
 - {{domxref("HTMLMediaElement.autoplay")}}
-
   - : {{Jsxref ("Boolean")}}, который отражает атрибут HTML [`autoplay`](/ru/docs/Web/HTML/Reference/Elements/video#autoplay), указывающий, должно ли воспроизведение начинаться автоматически, как только будет доступно достаточно медиафайлов, чтобы сделать это без прерывания.
 
     > [!NOTE]
@@ -59,7 +58,6 @@ _Этот интерфейс также наследует свойства от
 - {{domxref("HTMLMediaElement.mozFragmentEnd")}} {{non-standard_inline}}
   - : Двойник, обеспечивающий доступ к времени окончания фрагмента, если медиа-элемент имеет URI-фрагмент для currentSrc, в противном случае он равен продолжительности медиа.
 - {{domxref("HTMLMediaElement.mozFrameBufferLength")}} {{non-standard_inline}} {{deprecated_inline}}
-
   - : Это unsigned long, который указывает число выборок, которые будут возвращены в кадровом буфере каждого события MozAudioAvailable. Это число является общим для всех каналов, и по умолчанию установлено количество каналов \* 1024 (например, 2 канала \* 1024 выборок = всего 2048).
 
     Для свойства mozFrameBufferLength может быть установлено новое значение для более низкой задержки, больших объёмов данных и т. Д. Указанный размер должен быть числом от 512 до 16384. Использование любого другого размера приводит к возникновению исключения. Лучшее время для установки новой длины - после того, как сработало событие загруженных метаданных, когда известна аудиоинформация, но до того, как аудио началось, или события MozAudioAvailable начали срабатывать.
@@ -95,7 +93,6 @@ _Этот интерфейс также наследует свойства от
 - {{domxref("HTMLMediaElement.textTracks")}} {{readonlyinline}}
   - : Возвращает список объектов {{domxref ("TextTrack")}}, содержащихся в элементе.
 - {{domxref("HTMLMediaElement.videoTracks")}} {{readonlyinline}}
-
   - : Возвращает список объектов {{domxref ("VideoTrack")}}, содержащихся в элементе.
 
 - {{domxref("HTMLMediaElement.volume")}}
@@ -222,12 +219,10 @@ _Наследует методы от своего родителя {{domxref ("
 ## Смотрите также
 
 - Рекомендации
-
   - {{HTMLElement("video")}} и {{HTMLElement("audio")}} HTML-элементы.
   - {{domxref("HTMLVideoElement")}} и {{domxref("HTMLAudioElement")}} интерфейсы, полученные из HTMLMediaElement.
 
 - Статьи
-
   - [Использование HTML5 аудио и видео](/ru/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
   - [Медиа форматы, поддерживаемые аудио и видео элементами](/ru/docs/Web/Media/Formats)
   - [API веб-аудио](/ru/docs/Web/API/Web_Audio_API)

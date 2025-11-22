@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`401 Unauthorized`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示請求未成功，因為缺乏有效的驗證憑證來訪問請求的資源。此狀態碼會與 HTTP {{HTTPHeader("WWW-Authenticate")}} 回應標頭一起發送，該標頭包含有關伺服器期望用戶端提供的[驗證方案](/zh-TW/docs/Web/HTTP/Guides/Authentication#驗證方案)的資訊，以便成功執行請求。
 
 `401 Unauthorized` 類似於 {{HTTPStatus("403", "403 Forbidden")}} 回應，不過當請求包含有效憑證但用戶端沒有執行特定操作的權限時，會返回 403。

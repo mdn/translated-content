@@ -247,7 +247,7 @@ const listHeadingRef = useRef(null);
 
 ### 제목 준비
 
-`<h2>`와 같은 제목 요소는 일반적으로 포커스를 맞출 수 없습니다. 이는 문제가 되지 않는데, [`tabindex="-1"`](/ko/docs/Web/HTML/Global_attributes/tabindex) 속성을 추가하여 프로그래밍 방식으로 모든 요소를 포커스 가능하게 만들 수 있습니다. 이는 JavaScript로만 포커스 가능함을 의미합니다. [`<button>`](/ko/docs/Web/HTML/Element/button) 또는 [`<a>`](/ko/docs/Web/HTML/Element/a) 요소로 할 수 있는 것과 같은 방식으로 탭 인덱스가 `-1`인 요소에 포커스를 맞추기 위해 <kbd>Tab</kbd>을 누를 수 없습니다. (`tabindex="0"`을 사용해서 해결할 수 있지만, 이 경우에는 적절하지 않습니다.)
+`<h2>`와 같은 제목 요소는 일반적으로 포커스를 맞출 수 없습니다. 이는 문제가 되지 않는데, [`tabindex="-1"`](/ko/docs/Web/HTML/Reference/Global_attributes/tabindex) 속성을 추가하여 프로그래밍 방식으로 모든 요소를 포커스 가능하게 만들 수 있습니다. 이는 JavaScript로만 포커스 가능함을 의미합니다. [`<button>`](/ko/docs/Web/HTML/Reference/Elements/button) 또는 [`<a>`](/ko/docs/Web/HTML/Reference/Elements/a) 요소로 할 수 있는 것과 같은 방식으로 탭 인덱스가 `-1`인 요소에 포커스를 맞추기 위해 <kbd>Tab</kbd>을 누를 수 없습니다. (`tabindex="0"`을 사용해서 해결할 수 있지만, 이 경우에는 적절하지 않습니다.)
 
 JSX에서 `tabIndex`로 작성된 `tabindex` 속성을 `headingRef`와 함께 할 일 목록 위 제목에 추가해 보겠습니다.
 
@@ -257,7 +257,8 @@ JSX에서 `tabIndex`로 작성된 `tabindex` 속성을 `headingRef`와 함께 �
 </h2>
 ```
 
-> **참고:** `tabindex` 속성은 접근성 한계 사례에 적합하지만, 남용하지 않도록 **매우 주의**해야 합니다. 포커스 가능하게 만드는 것이 어떤 식으로든 사용자에게 도움이 될 것이라고 절대적으로 확신하는 경우에만 요소에 `tabindex`를 적용하세요. 대부분의 경우, 버튼, anchor태그 및 입력(input)과 같이 자연스럽게 포커스를 받을 수 있는 요소를 활용해야 합니다. `tabindex`의 무책임한 사용은 키보드 및 스크린 리더 사용자에게 심각한 부정적인 영향을 미칠 수 있습니다.
+> [!NOTE]
+> `tabindex` 속성은 접근성 한계 사례에 적합하지만, 남용하지 않도록 **매우 주의**해야 합니다. 포커스 가능하게 만드는 것이 어떤 식으로든 사용자에게 도움이 될 것이라고 절대적으로 확신하는 경우에만 요소에 `tabindex`를 적용하세요. 대부분의 경우, 버튼, anchor태그 및 입력(input)과 같이 자연스럽게 포커스를 받을 수 있는 요소를 활용해야 합니다. `tabindex`의 무책임한 사용은 키보드 및 스크린 리더 사용자에게 심각한 부정적인 영향을 미칠 수 있습니다.
 
 ### 이전 상태를 가져오기
 

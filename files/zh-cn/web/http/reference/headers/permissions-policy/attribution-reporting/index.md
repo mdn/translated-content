@@ -5,7 +5,7 @@ l10n:
   sourceCommit: ba5f28ab10ef1af48a55f363c8facc04a1f94479
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP {{HTTPHeader("Permissions-Policy")}} 标头的 `attribution-reporting` 指令控制当前文档是否被允许使用 [Attribution Reporting API](/zh-CN/docs/Web/API/Attribution_Reporting_API)。
 

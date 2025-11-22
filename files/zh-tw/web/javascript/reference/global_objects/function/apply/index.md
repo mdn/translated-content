@@ -3,8 +3,6 @@ title: Function.prototype.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 ---
 
-{{JSRef}}
-
 `apply()` 方法會呼叫一個以 this 的代表值和一個陣列形式的值組（或是一個 [array-like object](/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)）為參數的函式。
 
 > [!NOTE]
@@ -104,7 +102,7 @@ var max = Math.max.apply(null, numbers);
 var min = Math.min.apply(null, numbers);
 
 // vs. simple loop based algorithm
-(max = -Infinity), (min = +Infinity);
+((max = -Infinity), (min = +Infinity));
 
 for (var i = 0; i < numbers.length; i++) {
   if (numbers[i] > max) {

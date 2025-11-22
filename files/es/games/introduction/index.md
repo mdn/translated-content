@@ -3,8 +3,6 @@ title: Introduccion para desarrollo de juegos para la Web
 slug: Games/Introduction
 ---
 
-{{GamesSidebar}}
-
 La Web rapidamente se ha convertido en una plataforma viable no solo para crear impresionantes juegos de alta calidad, sino también para distruibuirlos.El rango de juegos que pueden ser creados está a la par tanto de los juegos de escritorio como de SO nativos (Android, iOS). Con tecnologias Web modernas y un navegador reciente es totalmente posible hacer juegos de primera categoria para la Web. Y no estamos hablando sobre simples juegos de cartas o juegos sociales multijugadores que en tiempos anteriores se podian hacer con Flash®. Estamos hablando sobre juegos 3D _shooters_ de accion, RPGs, y más. Gracias a las masivas mejoras de rendimiento en [JavaScript](/es/docs/Web/JavaScript) con tecnologia de compilación _just-in-time_ y nuevas APIs, se pueden construir juegos que pueden correr en el navegador (o en dispositivos [HTML5](/es/docs/HTML/HTML5) como [Firefox OS](/es/docs/Mozilla/Firefox_OS)) sin problemas.
 
 ## La plataforma de juegos HTML5
@@ -71,7 +69,7 @@ Para la gente de tecnología, vamos a cavar en las API que la Web aporta a la me
   - : Si desea que sus usuarios puedan usar gamepads u otros controladores de juego para trabajar su juego, necesitará esta API.
 - [HTML](/es/docs/Web/HTML) y [CSS](/es/docs/Web/CSS)
   - : Juntas, estas dos tecnologías le permiten construir, diseñar y diseñar la interfaz de usuario de su juego.Parte de HTML es el elemento {{htmlelement("canvas")}}, que proporciona una forma de hacer gráficos 2D.
-- [Audio HTML](/es/docs/Web/HTML/Element/audio)
+- [Audio HTML](/es/docs/Web/HTML/Reference/Elements/audio)
   - : El elemento {{htmlelement("audio")}} te permite reproducir fácilmente efectos de sonido y música sencillos.Si sus necesidades están más involucradas, echa un vistazo a la [API de audio web](/es/docs/Web/API/Web_Audio_API) para obtener potencia de procesamiento de audio real.
 - [IndexedDB](/es/docs/Web/API/IndexedDB_API)
   - : Una poderosa API de almacenamiento de datos para mantener los datos del usuario en su propio ordenador o dispositivo. Una gran manera de guardar el estado del juego y otra información localmente para que no tenga que ser descargado cada vez que sea necesario. También es útil para ayudar a que su juego sea jugable incluso cuando el usuario no está conectado a la Web (por ejemplo, cuando están atrapados en un avión durante horas y horas ...).

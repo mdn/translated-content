@@ -22,7 +22,6 @@ The Web Performance API allows web pages access to certain functions for measuri
 - **`getEntriesByName()`**
   - : …
 - `clearMarks()`
-
   - : If the markName argument is not specified, this method removes all marks and their associated DOMHighResTimeStamp time values.
 
     If the markName argument is specified, this method removes all DOMHighResTimeStamp time values for the given mark name.

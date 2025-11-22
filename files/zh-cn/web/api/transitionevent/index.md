@@ -5,7 +5,7 @@ slug: Web/API/TransitionEvent
 
 {{APIRef("CSSOM")}} {{SeeCompatTable}}
 
-TransitonEvent 接口指那些提供了与[过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)有关信息的事件。
+TransitonEvent 接口指那些提供了与[过渡](/zh-CN/docs/Web/CSS/Guides/Transitions/Using)有关信息的事件。
 
 ## 属性
 
@@ -40,5 +40,5 @@ _同时也继承了父类 {{domxref("Event")}}_ 的属性。
 
 ## 参见
 
-- [使用 CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [使用 CSS 过渡](/zh-CN/docs/Web/CSS/Guides/Transitions/Using)
 - CSS 属性：{{cssxref("transition")}}、{{cssxref("transition-delay")}}、{{cssxref("transition-duration")}}、{{cssxref("transition-property")}}、{{cssxref("transition-timing-function")}}。

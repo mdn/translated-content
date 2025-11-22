@@ -3,7 +3,7 @@ title: Sec-CH-UA-Full-Version
 slug: Web/HTTP/Reference/Headers/Sec-CH-UA-Full-Version
 ---
 
-{{HTTPSidebar}} {{deprecated_header}} {{securecontext_header}}
+{{deprecated_header}} {{securecontext_header}}
 
 > [!NOTE]
 > 这个标头将被 {{HTTPHeader("Sec-CH-UA-Full-Version-List")}} 替代。

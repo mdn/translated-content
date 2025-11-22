@@ -36,7 +36,6 @@ slug: Web/API/Node
 - {{DOMxRef("Node.nodeName")}} {{ReadonlyInline}}
   - : 返回一个包含该节点名字的{{DOMxRef("DOMString")}}。节点的名字的结构和节点类型不同。比如{{DOMxRef("HTMLElement")}}的名字跟它所关联的标签对应，就比如{{DOMxRef("HTMLAudioElement")}}的就是 `'audio'` ，{{DOMxRef("Text")}}节点对应的是 `'#text'` 还有{{DOMxRef("Document")}}节点对应的是 `'#document'`。
 - {{DOMxRef("Node.nodeType")}}{{ReadonlyInline}}
-
   - : 返回一个与该节点类型对应的`无符号短整型`的值，可能的值如下：
 
     | Name                                          | Value |
@@ -70,14 +69,12 @@ slug: Web/API/Node
 ### 废弃的属性
 
 - {{DOMxRef("Node.localName")}} {{Deprecated_Inline}}{{readonlyInline}}
-
   - : 返回一个表示元素名称的本土化表示方法的 {{DOMxRef("DOMString")}} 。
 
     > [!NOTE]
     > 在 Firefox 3.5 以及更早的版本中，HTML 元素的 localName 属性的返回值都是大写的（XHTML 例外）。在后续版本中，这种情况就不存在了。无论是 HTML 还是 XHTML 中，均返回小写的 localName。
 
 - {{DOMxRef("Node.namespaceURI")}} {{Deprecated_Inline}}{{readonlyInline}}
-
   - : 该节点命名空间的`URL`，如果没有命名空间则为`null`。
 
     > [!NOTE]
@@ -131,7 +128,6 @@ slug: Web/API/Node
 - {{DOMxRef("Node.getFeature()")}} {{Deprecated_Inline}}
 
   {{DOMxRef("Node.getUserData()")}} {{Deprecated_Inline}}
-
   - : 允许用户从节点的 {{DOMxRef("DOMUserData")}} 获得数据。
 
 - {{DOMxRef("Node.hasAttributes()")}} {{Deprecated_Inline}}
@@ -221,7 +217,7 @@ eachNode(box, function (node) {
 用户终端上会显示如下字符：
 
 ```js
-"\n\t", "Foo", "\n\t", "Bar", "\n\t", "Baz";
+("\n\t", "Foo", "\n\t", "Bar", "\n\t", "Baz");
 ```
 
 > [!NOTE]

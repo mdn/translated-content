@@ -2,7 +2,7 @@
 title: IndexedDB の使用
 slug: Web/API/IndexedDB_API/Using_IndexedDB
 l10n:
-  sourceCommit: 1e0a2838cb7781245288eec60fbf7606bb6ac8dc
+  sourceCommit: 886f2641ae90a70858c5e7d0d20959c70ee44d9d
 ---
 
 {{DefaultAPISidebar("IndexedDB")}}
@@ -61,7 +61,7 @@ request.onsuccess = (event) => {
 };
 ```
 
-2 つの関数 `onsuccess()` と `onerror()` のどちらが呼び出されるのでしょう? すべてが成功すると成功イベント (すなわち `type` プロパティが `"success"` である DOM イベント) が、`request` を `target` として発生します。イベントが発生すると `request` の `onsuccess()` 関数が、success イベントを引数として呼び出されます。一方、何らかの問題がある場合はエラーイベント (すなわち `type` プロパティが `"error"` である DOM イベント) が `request` で発生します。これは、エラーイベントを引数として `onerror()` 関数を呼び出します。
+リクエストが成功した場合、{{domxref("IDBRequest.success_event", "success")}} イベントが発生し、`onsuccess` に代入された関数が呼び出されます。リクエストが失敗した場合、{{domxref("IDBRequest.error_event", "error")}} イベントが発生し、`onerror` に代入された関数が呼び出されます。
 
 IndexedDB API は必要なエラー処理を最小限にするよう設計されていますので、多くのエラーイベントを見ることはないでしょう (少なくとも、API に慣れていなければ)。しかしデータベースを開く場合は、エラーイベントが発生する一般的な状況があります。もっとも多いであろう問題は、データベースを作成する許可をユーザーがウェブアプリに与えなかったことです。IndexedDB の主要な設計目標のひとつが、オフラインで使用するために大量のデータを保存できるようにすることです。(各ブラウザーでどれだけの量のストレージを持てるかについては、[ブラウザーのストレージ制限と削除基準ページ内のどれだけのデータが格納できるか](/ja/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#どれだけのデータが格納できるか)をご覧ください)
 
@@ -255,7 +255,7 @@ request.onupgradeneeded = (event) => {
 };
 ```
 
-キージェネレーターについて詳しくは、["W3C Key Generators"](https://www.w3.org/TR/IndexedDB/#key-generator-concept) をご覧ください。
+キージェネレーターについて詳しくは、仕様書の [Key generators](https://w3c.github.io/IndexedDB/#key-generator-construct) をご覧ください。
 
 ## データの追加、読み取り、削除
 
@@ -266,7 +266,7 @@ request.onupgradeneeded = (event) => {
 既存のオブジェクトストアからレコードを読み出すには、トランザクションで `readonly` モードまたは `readwrite` モードを使用できます。既存のオブジェクトストアに変更処理を行うには、トランザクションを `readwrite` モードにしなければなりません。このようなトランザクションは {{domxref("IDBDatabase.transaction")}} で開きます。このメソッドの引数は 2 つあり、`storeNames` (アクセスしたいオブジェクトストアの配列で定義されるスコープ) とトランザクションの `mode` (`readonly` または `readwrite`) です。またこのメソッドは、{{domxref("IDBTransaction.objectStore")}} メソッドを持つトランザクションオブジェクトを返します。`objectStore` メソッドは、オブジェクトストアにアクセスするために使用できます。デフォルトでは、モードを指定しなければ `readonly` モードでトランザクションを開きます。
 
 > [!NOTE]
-> Firefox 40 で、IndexedDB トランザクションはパフォーマンスを向上させるために、永続性の保証を緩和しました ([Firefox バグ 1112702](https://bugzil.la/1112702) を参照)。以前は `readwrite` モードのトランザクションで、すべてのデータをディスク上に反映したことが保証された場合に限り {{domxref("IDBTransaction.complete_event", "complete")}} 発生しました。Firefox 40 以降では OS がデータの書き込みを指示した時点で `complete` が発生しており、実際にはデータがディスク上に反映されていない可能性があります。これにより `complete` イベントをより早く発生させられますが、データをディスク上に反映する前に OS のクラッシュや電源断が発生するとトランザクション全体を失う危険性が若干あります。このような破壊的な事象はまれですので、ほとんどの利用者は心配する必要がないでしょう。何らかの理由 (例えば、後で再計算できない重要なデータを保存する) で永続性を保証しなければならない場合は、実験的 (非標準) な `readwriteflush` モード ({{domxref("IDBDatabase.transaction")}} を参照) を使用してトランザクションを生成すると、`complete` イベントを発生させる前にディスクへの反映を強制させることができます。
+> Firefox 40 で、IndexedDB トランザクションはパフォーマンスを向上させるために、永続性の保証を緩和しました ([Firefox bug 1112702](https://bugzil.la/1112702) を参照)。以前は `readwrite` モードのトランザクションで、すべてのデータをディスク上に反映したことが保証された場合に限り {{domxref("IDBTransaction.complete_event", "complete")}} 発生しました。Firefox 40 以降では OS がデータの書き込みを指示した時点で `complete` が発生しており、実際にはデータがディスク上に反映されていない可能性があります。これにより `complete` イベントをより早く発生させられますが、データをディスク上に反映する前に OS のクラッシュや電源断が発生するとトランザクション全体を失う危険性が若干あります。このような破壊的な事象はまれですので、ほとんどの利用者は心配する必要がないでしょう。何らかの理由 (例えば、後で再計算できない重要なデータを保存する) で永続性を保証しなければならない場合は、実験的 (非標準) な `readwriteflush` モード ({{domxref("IDBDatabase.transaction")}} を参照) を使用してトランザクションを生成すると、`complete` イベントを発生させる前にディスクへの反映を強制させることができます。
 
 トランザクションで適切なスコープおよびモードを使用すると、データアクセスを高速化できます。ヒントを 2 つ紹介します。
 
@@ -356,11 +356,6 @@ db
 ```
 
 どのように動作するかわかりますか? オブジェクトストアが 1 つしかありませんので、トランザクションで必要とするオブジェクトストアのリストを渡さずに、名称を文字列で渡しています。また、データベースから読み出すだけですので、`"readwrite"` トランザクションは不要です。モードを指定せずに `transaction()` を呼び出すと、`"readonly"` トランザクションになります。さらに細かいことですが、実はリクエストオブジェクトを変数に保存していません。DOM イベントはターゲットとしてリクエストを持ちますので、`result` プロパティを得るためにイベントを使用できます。
-
-トランザクションでスコープやモードを制限することにより、データアクセスを高速化できることに留意してください。ヒントを 2 つ紹介します。
-
-- [スコープ](#スコープ)を定義するときは、必要なオブジェクトストアのみ指定します。これにより、同時にスコープが重なり合うことなく、複数のトランザクションを実行できます。
-- `readwrite` トランザクションモードは、必要な場合に限り指定します。`readonly` トランザクションはスコープが重なっても複数同時に実行できますが、`readwrite` トランザクションはオブジェクトストアに対して 1 個しか実行できません。詳しくは、[IndexedDB の主な特徴と基本用語](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology)の[基本的な概念の記事でトランザクション](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_transaction)の定義をご覧ください。
 
 ### データベース内の項目の更新
 
@@ -543,7 +538,7 @@ objectStore.openCursor(null, "prev").onsuccess = (event) => {
 };
 ```
 
-`"name"` インデックスは一意ではありませんので、`name` が同じ項目が複数存在する可能性があります。キーは常に一意でなければならないため、オブジェクトストアでこのような状況は発生できないことに注意してください。インデックスに対して反復処理を行う際に重複を取り除きたい場合は、方向の引数に `nextunique` (逆向きであれば `prevunique`) を指定します。`nextunique` または `prevunique` を使用すると、常にキーが最小の項目が返ります。
+"name" インデックスは一意ではありませんので、`name` が同じ項目が複数存在する可能性があります。キーは常に一意でなければならないため、オブジェクトストアでこのような状況は発生できないことに注意してください。インデックスに対して反復処理を行う際に重複を取り除きたい場合は、方向の引数に `nextunique` (逆向きであれば `prevunique`) を指定します。`nextunique` または `prevunique` を使用すると、常にキーが最小の項目が返ります。
 
 ```js
 index.openKeyCursor(null, "nextunique").onsuccess = (event) => {
@@ -579,7 +574,6 @@ openReq.onupgradeneeded = (event) => {
 openReq.onsuccess = (event) => {
   const db = event.target.result;
   useDatabase(db);
-  return;
 };
 
 function useDatabase(db) {
@@ -603,7 +597,7 @@ function useDatabase(db) {
 
 IndexedDB は同一生成元の原則を使用します。すなわち、ストアとサイトの生成元 (通常、サイトのドメインまたはサブドメイン) を紐づけますので、他の生成元からアクセスすることはできません。
 
-サードパーティの window コンテンツ (例えば {{htmlelement("iframe")}} のコンテンツ) は、ブラウザーが[サードパーティ Cookie を禁止していない](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection?redirectslug=disable-third-party-cookies&redirectlocale=en-US)限り、自身が埋め込まれている生成元の IndexedDB ストアにアクセスできます ([Firefox バグ 1147821](https://bugzil.la/1147821) をご覧ください)。
+サードパーティの window コンテンツ (例えば {{htmlelement("iframe")}} のコンテンツ) は、ブラウザーが[サードパーティ Cookie を禁止していない](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection)限り、自身が埋め込まれている生成元の IndexedDB ストアにアクセスできます（[Firefox bug 1147821](https://bugzil.la/1147821) をご覧ください）。
 
 ## ブラウザーの終了に関する警告
 
@@ -623,27 +617,9 @@ IndexedDB は同一生成元の原則を使用します。すなわち、スト�
 
 第二に、データベースのトランザクションと `unload` イベントを紐づけるべきではありません。ブラウザーを閉じることで `unload` イベントが発生した場合、`unload` イベントハンドラーで作成したトランザクションは完了しません。ブラウザーのセッションにわたって情報を管理するための直感的な方法は、ブラウザー (または特定のページ) を開いたときに情報を読み込んで、ユーザーとブラウザーとの対話に応じて更新して、ブラウザー (またはページ) を閉じるときに保存する流れです。しかし、これは動作しないでしょう。データベースのトランザクションは `unload` イベントハンドラーで作成されますが、これらは非同期処理ですので、実行できるようになる前に中止されるでしょう。
 
-実は通常のブラウザー終了であっても、IndexedDB のトランザクションが完了するよう保証する手段はありません。[Firefox バグ 870645](https://bugzil.la/870645) をご覧ください。通常の終了通知の回避策として、トランザクションの状況を追跡して、アンロード時にトランザクションが完了していないことをユーザーに警告するための `beforeunload` イベントを追加するとよいでしょう。
+実は通常のブラウザー終了であっても、IndexedDB のトランザクションが完了するよう保証する手段はありません。[Firefox bug 870645](https://bugzil.la/870645) をご覧ください。通常の終了通知の回避策として、トランザクションの状況を追跡して、アンロード時にトランザクションが完了していないことをユーザーに警告するための `beforeunload` イベントを追加するとよいでしょう。
 
 少なくとも中止通知と {{domxref("IDBDatabase.close_event", "IDBDatabase.onclose")}} を追加することで、いつ起こったのかがわかります。
-
-## ロケールを意識した並べ替え
-
-Mozilla は Firefox 43 以降に、IndexedDB のデータでロケールを意識した並べ替えを行う機能を実装しました。デフォルトでは、IndexedDB は文字列の並べ替えで国際化にまったく対処せず、すべてが英語のテキストであるかのように並べ替えられます。例えば b、á、z、a は以下のように並べ替えられます。
-
-- a
-- b
-- z
-- á
-
-これは明らかに、ユーザーが望むデータの並べ替えではありません。例えば Aaron と Áaron は、連絡先一覧で隣り合うべきです。従って適切な国際化並べ替えを実現するには、データセット全体をメモリーに読み込んで、クライアントサイド JavaScript で並べ替えを実行しなければならず、非効率的です。
-
-この新機能は、開発者が {{domxref("IDBObjectStore.createIndex()")}} を使用してインデックスを作成する際にロケールを指定できるようにします (引数を確認してください)。データセットに対して反復処理を行うためにカーソルを使用するときに、ロケールを意識した並べ替えを行いたい場合は、特化した {{domxref("IDBLocaleAwareKeyRange")}} を使用できます。
-
-また {{domxref("IDBIndex")}} には、ロケールが指定されているか、およびどのロケールが指定されているかを特定するために追加された新たなプロパティがあります。`locale` (指定されたロケール、または未指定であれば null を返します) と `isAutoLocale` (プラットフォームの既定のロケールを使用する自動ロケールでインデックスが作成されていれば `true`、そうでなければ `false` を返します) です。
-
-> [!NOTE]
-> 現在、この機能はフラグで隠されています。有効化して実験するには、about:config に移動して `dom.indexedDB.experimental` を有効化してください。
 
 ## 包括的な IndexedDB の例
 
@@ -659,8 +635,8 @@ IndexedDB API を使用した完全な例があります。この例では、出
 ### リファレンス
 
 - [IndexedDB API リファレンス](/ja/docs/Web/API/IndexedDB_API)
-- [Indexed Database API Specification](https://www.w3.org/TR/IndexedDB/)
-- IndexedDB [インターフェイスファイル](https://searchfox.org/mozilla-central/search?q=dom%2FindexedDB%2F.*%5C.idl&path=&case=false&regexp=true) (Firefox のソースコード内)
+- [Indexed Database API Specification](https://w3c.github.io/IndexedDB/)
+- IndexedDB [インターフェイスファイル](https://searchfox.org/firefox-main/search?q=dom%2FindexedDB%2F.*%5C.idl&path=&case=false&regexp=true) (Firefox のソースコード内)
 
 ### チュートリアルとガイド
 
@@ -672,7 +648,7 @@ IndexedDB API を使用した完全な例があります。この例では、出
 - [localForage](https://localforage.github.io/localForage/): クライアント側のデータストレージ向けに、シンプルな name:value 形式の構文を提供するポリフィルです。バックグラウンドで IndexedDB を使用しますが、IndexedDB をに対応していないブラウザーでは Web SQL （非推奨）や localStorage にフォールバックします。
 - [Dexie.js](https://dexie.org/): 優良でシンプルな構文により高速なコード開発を可能にする、IndexedDB のラッパーです。
 - [JsStore](https://jsstore.net/): SQL 風の構文による IndexedDB のラッパーです。
-- [MiniMongo](https://github.com/mWater/minimongo): クライアント側のインメモリーの Mongodb で localstorage と server sync over http を元にしたもの。MiniMongo は MeteorJS で使われています。
+- [MiniMongo](https://github.com/mWater/minimongo): クライアント側のインメモリーの MongoDB で localstorage と server sync over http を元にしたもの。 MiniMongo は MeteorJS で使われています。
 - [PouchDB](https://pouchdb.com/): クライアント側のブラウザー内の CouchDB 実装で IndexedDB を使っています。
 - [IDB](https://github.com/jakearchibald/idb): IndexedDB API をほぼ反映した小さなライブラリーですが、使いやすさを大きく変える小さな改良が加えられています。
 - [idb-keyval](https://www.npmjs.com/package/idb-keyval): IndexedDB で実装された超シンプルで小さな (\~600B) プロミスベースのキーバリューストア

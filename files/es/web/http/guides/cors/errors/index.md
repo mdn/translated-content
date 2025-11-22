@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 36001a269f4d7b2b3ac6de79e942a5f849bb87d8
 ---
 
-{{HTTPSidebar}}
-
 El [Intercambio de Recursos de Origen Cruzado](/es/docs/Web/HTTP/Guides/CORS) ({{Glossary("CORS")}}, por sus siglas en inglés) es un estándar que permite a un servidor relajar la [política del mismo origen](/es/docs/Web/Security/Same-origin_policy). Esto se usa para permitir explícitamente algunas solicitudes de origen cruzado mientras se rechazan otras. Por ejemplo, si un sitio ofrece un servicio integrable, puede ser necesario relajar ciertas restricciones. Establecer una configuración CORS de este tipo no es necesariamente fácil y puede presentar algunos desafíos. En estas páginas, veremos algunos mensajes de error comunes de CORS y cómo resolverlos.
 
 Si CORS no está configurado correctamente, la consola del navegador presentará un error como `"Solicitud desde otro origen bloqueada: la política de mismo origen impide leer el recurso remoto en $algunsitio"`, lo que indica que la solicitud fue bloqueada debido a la violación de la Reglas de seguridad CORS. Sin embargo, esto podría no ser necesariamente un error de configuración. Es posible que, de hecho, la aplicación web del usuario y el servicio externo remoto rechacen intencionalmente la solicitud. Sin embargo, si el punto final debe estar disponible, se necesita algo de depuración para tener éxito.
@@ -57,6 +55,6 @@ La consola de Firefox muestra mensajes en su consola cuando las solicitudes fall
 - Glosario: {{Glossary("CORS")}}
 - [Introducción a CORS](/es/docs/Web/HTTP/Guides/CORS)
 - [Configuración de CORS del lado del servidor](/es/docs/Web/HTTP/Guides/CORS)
-- [Imagen habilitada para CORS](/es/docs/Web/HTML/CORS_enabled_image)
-- [Atributos de configuración de CORS](/es/docs/Web/HTML/Attributes/crossorigin)
+- [Imagen habilitada para CORS](/es/docs/Web/HTML/How_to/CORS_enabled_image)
+- [Atributos de configuración de CORS](/es/docs/Web/HTML/Reference/Attributes/crossorigin)
 - <https://www.test-cors.org> – página para probar solicitudes CORS

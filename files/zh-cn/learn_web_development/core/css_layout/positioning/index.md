@@ -36,7 +36,7 @@ slug: Learn_web_development/Core/CSS_layout/Positioning
 
 内联元素表现不一样——它们不会出现在新行上；相反，它们互相之间以及任何相邻（或被包裹）的文本内容位于同一行上，只要在父块级元素的宽度内有空间可以这样做。如果没有空间，那么溢流的文本或元素将向下移动到新行。
 
-如果两个相邻元素都在其上设置外边距，并且两个外边距接触，则两个外边距中的较大者保留，较小的一个消失——这叫[外边距折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing), 我们之前也遇到过。
+如果两个相邻元素都在其上设置外边距，并且两个外边距接触，则两个外边距中的较大者保留，较小的一个消失——这叫[外边距折叠](/zh-CN/docs/Web/CSS/Guides/Box_model/Margin_collapsing), 我们之前也遇到过。
 
 让我们来看一个简单的例子来解析这一切：
 
@@ -65,7 +65,9 @@ slug: Learn_web_development/Core/CSS_layout/Positioning
   the same line. Overflowing inline elements will
   <span>wrap onto a new line if possible (like this one containing text)</span>,
   or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" />
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="snippet of cloth" />
 </p>
 ```
 
@@ -173,7 +175,9 @@ left: 30px;
   the same line. Overflowing inline elements
   <span>wrap onto a new line if possible — like this one containing text</span>,
   or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" />
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="snippet of cloth" />
 </p>
 ```
 
@@ -245,7 +249,9 @@ position: absolute;
   the same line. Overflowing inline elements
   <span>wrap onto a new line if possible — like this one containing text</span>,
   or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" />
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="snippet of cloth" />
 </p>
 ```
 
@@ -328,7 +334,9 @@ position: relative;
   the same line. Overflowing inline elements
   <span>wrap onto a new line if possible — like this one containing text</span>,
   or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" />
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="snippet of cloth" />
 </p>
 ```
 
@@ -419,7 +427,9 @@ z-index: 1;
   the same line. Overflowing inline elements
   <span>wrap onto a new line if possible — like this one containing text</span>,
   or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" />
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="snippet of cloth" />
 </p>
 ```
 
@@ -527,7 +537,9 @@ p:nth-of-type(1) {
   the same line. Overflowing inline elements
   <span>wrap onto a new line if possible — like this one containing text</span>,
   or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" />
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="snippet of cloth" />
 </p>
 ```
 

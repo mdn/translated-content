@@ -421,7 +421,7 @@ console.log(bird.species); // "Striated Caracara"
 
 ## 실력 테스트
 
-이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 장으로 넘어가기 전에 이 장의 내용을 잘 학습하고 이해하셨는지 확인할 수 있는 [실력 테스트: 변수](/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills:_variables)가 있습니다.
+이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 장으로 넘어가기 전에 이 장의 내용을 잘 학습하고 이해하셨는지 확인할 수 있는 [실력 테스트: 변수](/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills/Variables)가 있습니다.
 
 ## 요약
 

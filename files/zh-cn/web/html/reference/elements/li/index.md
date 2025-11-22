@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 829db137a01feb14af7beaec178a3ea0118b4777
 ---
 
-{{HTMLSidebar}}
-
 **`<li>`** [HTML](/zh-CN/docs/Web/HTML) 元素用于表示列表中的项目。它必须包含在一个父元素中：有序列表（{{HTMLElement("ol")}}）、无序列表（{{HTMLElement("ul")}}）或菜单（{{HTMLElement("menu")}}）。在菜单和无序列表中，列表项通常使用项目符号显示。在有序列表中，通常在左侧显示一个升序计数器，如数字或字母。
 
 {{InteractiveExample("HTML Demo: &lt;li&gt;", "tabbed-shorter")}}
@@ -43,9 +41,7 @@ p {
 - `value`
   - : 这个整数属性指示由 {{HTMLElement("ol")}} 元素定义的列表项当前序数值。该属性唯一允许的值是数字，即使列表以罗马数字或字母显示。后面的列表项从数值集开始继续编号。对于无序列表（{{HTMLElement("ul")}}）或菜单（{{HTMLElement("menu")}}），**value** 属性没有意义。
 - `type` {{Deprecated_inline}} {{Non-standard_Inline}}
-
   - : 该字符属性表示编号类型：
-
     - `a`: 小写字母
     - `A`: 大写字母
     - `i`: 小写罗马数字
@@ -166,7 +162,6 @@ p {
 
 - 其他与列表相关的 HTML 元素：{{HTMLElement("ul")}}、{{HTMLElement("ol")}}、{{HTMLElement("menu")}} 和过时的 {{HTMLElement("dir")}}；
 - 特别适用于为 `<li>` 元素添加样式的 CSS 属性：
-
   - {{cssxref("list-style")}} 属性，用于选择显示序号的方式；
-  - [CSS 计数器](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)，用于处理复杂的嵌套列表；
+  - [CSS 计数器](/zh-CN/docs/Web/CSS/Guides/Counter_styles/Using_counters)，用于处理复杂的嵌套列表；
   - {{cssxref("margin")}} 属性，用于控制列表项的缩进。

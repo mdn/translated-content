@@ -25,4 +25,4 @@ CSS에서 표준 순서는 별도의 값을 지정(또는 {{Glossary("parse", "�
 ## 같이 보기
 
 - StackOverflow의 유용한 추가 토론인 [CSS 속성과 관련해 "표준 순서"는 무엇을 의미하나요?](https://stackoverflow.com/questions/28963536/what-does-canonical-order-mean-with-respect-to-css-properties)
-- MDN의 [CSS 값에 사용되는 공식 문법에 대한 설명](/ko/docs/Web/CSS/Value_definition_syntax)
+- MDN의 [CSS 값에 사용되는 공식 문법에 대한 설명](/ko/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)

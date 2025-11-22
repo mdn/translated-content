@@ -418,7 +418,8 @@ svelte 还提供了一种非常直观的将 store 集成到其响应式系统中
    <Todos bind:todos />
    ```
 
-   > **备注：** `<Todos bind:todos />` 只是 `<Todos bind:todos={todos} />` 的简写形式。
+   > [!NOTE]
+   > `<Todos bind:todos />` 只是 `<Todos bind:todos={todos} />` 的简写形式。
 
 3. 返回到你的应用程序，尝试添加一些待办事项，然后转到开发者工具的 Web 控制台。你会看到，我们对待办事项进行的每个修改都会通过 `bind` 指令反映在 `App.svelte` 中定义的 `todos` 数组中。
 

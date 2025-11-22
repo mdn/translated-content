@@ -19,18 +19,14 @@ texImage3D(target, level, internalformat, width, height, depth, border, format, 
 ### 参数
 
 - `target`
-
   - : {{domxref("GLenum")}}指定绑定纹理图像类型。可能值：
-
     - `gl.TEXTURE_3D`: 一个 3D 贴图
     - `gl.TEXTURE_2D_ARRAY`: 一个 2D 数组贴图
 
 - `level`
   - : {{domxref("GLint")}}指定细节等级。level0 是基础图片等级，n 是第 n 个 mipmap 纹理衰减等级。（译者注：原文中衰减应该指像素，并且注意，webgl 的 Mipmapping 技术要求顶层图像的行和列的维数均为 2 的幂）
 - `internalformat`
-
   - : {{domxref("GLint")}}指定贴图的颜色组成，可能值为：
-
     - `gl.ALPHA`: 忽略红色，绿色，蓝色分量值只读取 alpha 信息。
     - `gl.RGB`: 忽略 alpha 信息，读取红绿蓝分量
     - `gl.RGBA`: 从颜色缓冲（colorBuffer）读取红色，绿色，蓝色和 alpha 分量
@@ -71,9 +67,7 @@ texImage3D(target, level, internalformat, width, height, depth, border, format, 
 - `format`
   - : {{domxref("GLenum")}}制定纹素的版本。正确的 `内部格式` 组合被列举在 [这个列表](https://www.khronos.org/registry/webgl/specs/latest/2.0/#TEXTURE_TYPES_FORMATS_FROM_DOM_ELEMENTS_TABLE)。
 - `type`
-
   - : A {{domxref("GLenum")}}指定纹素的数据类型，可能值：
-
     - `gl.UNSIGNED_BYTE`: 每个`gl.RGBA`对应 8 个字节
     - `gl.UNSIGNED_SHORT_5_6_5`: 红色占五个字节，绿色占六个字节，蓝色占五个字节
     - `gl.UNSIGNED_SHORT_4_4_4_4`: 红色占四个字节，绿色占 四 个字节，蓝色占 四 个字节
@@ -92,9 +86,7 @@ texImage3D(target, level, internalformat, width, height, depth, border, format, 
     - `gl.FLOAT_32_UNSIGNED_INT_24_8_REV` (pixels must be {{jsxref("null")}})
 
 - `source`
-
   - : 其中一个对象可以用作纹理对象的源：
-
     - {{domxref("ArrayBufferView")}},
     - {{domxref("ImageBitmap")}},
     - {{domxref("ImageData")}},

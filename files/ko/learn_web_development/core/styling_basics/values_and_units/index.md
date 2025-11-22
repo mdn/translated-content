@@ -8,7 +8,7 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
 
-CSS 규칙은 [선언](/ko/docs/Web/CSS/Syntax#css_declarations)으로 구성되어 있으며, 이는 다시 속성과 값으로 이루어져 있습니다.
+CSS 규칙은 [선언](/ko/docs/Web/CSS/CSS_syntax/Syntax#css_declarations)으로 구성되어 있으며, 이는 다시 속성과 값으로 이루어져 있습니다.
 CSS에서 사용되는 각 속성은 어떤 종류의 값을 가질 수 있는지를 설명하는 **값 유형을** 가지고 있습니다.
 이번 학습에서는 자주 사용되는 값 유형이 무엇인지, 그리고 그것이 어떻게 작동하는지를 살펴보겠습니다.
 
@@ -114,8 +114,8 @@ CSS에서 사용할 수 있는 다양한 숫자 데이터 형식이 있습니다
 | `rem`      | 루트 요소의 글꼴 크기.                                                                                                                                  |
 | `lh`       | 요소의 라인 높이.                                                                                                                                       |
 | `rlh`      | 루트 요소의 라인 높이. 루트 요소의 `font-size` 또는 `line-height` 속성에 사용될 때 속성의 초깃값을 참조합니다.                                          |
-| `vw`       | 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) 너비 1%와 같습니다.                                                                    |
-| `vh`       | 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) 높이 1%와 같습니다.                                                                    |
+| `vw`       | 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block) 너비 1%와 같습니다.                                                        |
+| `vh`       | 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block) 높이 1%와 같습니다.                                                        |
 | `vmin`     | viewport의 작은 치수의 1%.                                                                                                                              |
 | `vmax`     | viewport의 큰 치수의 1%.                                                                                                                                |
 | `vb`       | 초기 컨테이닝 블록의 [블록 축](/ko/docs/Web/CSS/CSS_logical_properties_and_values#%eb%b8%94%eb%a1%9d_%ec%b9%98%ec%88%98) 크기 1%와 같습니다.            |
@@ -620,7 +620,8 @@ RGB보다 약간 덜 지원되는 HSL 색상은 (이전 버전의 IE에서는 �
 
 {{EmbedLiveSample("image", "", "380px")}}
 
-> **참고:** `<image>` 에 대해 가능한 다른 값이 있지만 이 값은 최신이며 최신 브라우저 지원이 좋지 않습니다. \<image> 데이터 형식을 읽으려면 MDN 페이지에서 [`<image>`](/ko/docs/Web/CSS/image) 데이터 형식을 확인하세요.
+> [!NOTE]
+> `<image>` 에 대해 가능한 다른 값이 있지만 이 값은 최신이며 최신 브라우저 지원이 좋지 않습니다. \<image> 데이터 형식을 읽으려면 MDN 페이지에서 [`<image>`](/ko/docs/Web/CSS/image) 데이터 형식을 확인하세요.
 
 ## 위치 (Position)
 
@@ -711,7 +712,7 @@ CSS에서 문자열을 사용하는 장소가 있습니다. 예를 들면, [생�
 
 ## 요약
 
-지금까지 가장 일반적인 형식의 값과 단위를 빠르게 살펴보았습니다. [CSS 값 및 단위](/ko/docs/Web/CSS/CSS_Values_and_Units) 참조 페이지에서 다양한 유형을 모두 볼 수 있습니다. 이 수업을 진행하면서 사용 중인 많은 것들을 보게 될 것입니다.
+지금까지 가장 일반적인 형식의 값과 단위를 빠르게 살펴보았습니다. [CSS 값 및 단위](/ko/docs/Web/CSS/CSS_values_and_units) 참조 페이지에서 다양한 유형을 모두 볼 수 있습니다. 이 수업을 진행하면서 사용 중인 많은 것들을 보게 될 것입니다.
 
 기억해야 할 중요한 점은 각 속성에 정의된 값 목록이 있고 각 값에는 하윗값이 무엇인지 설명하는 정의가 있다는 것입니다. 그런 다음 MDN 에서 세부 사항을 찾을 수 있습니다. 예를 들어, [`<image>`](/ko/docs/Web/CSS/image) 를 사용하면 색상 gradient를 만들 수 있다는 점을 이해하는 것은 유용하지만 당연하지 않은 지식일 수 있습니다.
 

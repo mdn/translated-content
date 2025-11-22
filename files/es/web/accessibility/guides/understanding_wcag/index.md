@@ -35,13 +35,11 @@ WCAG 2.1 incluye:
 
 - Toda la normativa WCAG 2.0 (literal, palabra-por-palabra)
 - 17 nuevos Criterios de Conformidad en los niveles A / AA / AAA que se enfocan principalmente en las siguientes necesidades:
-
   - Accessbilidad móvil
   - Baja visión
   - Cognitivas
 
 - Lee más sobre WCAG 2.1 (en inglés):
-
   - Deque: [WCAG 2.1: What is Next for Accessibility Guidelines](https://www.deque.com/blog/wcag-2-1-what-is-next-for-accessibility-guidelines/)
   - TPG: [Web Content Accessibilituy Guidelines (WCAG) 2.1](https://developer.paciellogroup.com/blog/2018/06/web-content-accessibility-guidelines-wcag-2-1/)
 
@@ -49,4 +47,4 @@ WCAG 2.1 incluye:
 
 Esta guía tiene como objetivo proveer información para que puedas construir mejores sitios, más accesibles. Sin embargo, no somos abogados y nada de esto es un asesoramiento legal. Si estás preocupado/a por las implicaciones legales de la accesibilidad web recomendamos que investigues la legislación de tu país o que consultes a un abogado calificado.
 
-[¿Qué es la accesibilidad?](/es/docs/Learn/Accessibility/What_is_accessibility) y [guías de accesibilidad y sobre la ley](/es/docs/Learn/Accessibility/What_is_accessibility#accessibility_guidelines_and_the_law) proveen más información al respecto (en inglés).
+[¿Qué es la accesibilidad?](/es/docs/Learn_web_development/Core/Accessibility/What_is_accessibility) y [guías de accesibilidad y sobre la ley](/es/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_guidelines_and_the_law) proveen más información al respecto (en inglés).

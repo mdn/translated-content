@@ -22,7 +22,8 @@ slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Images
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/images/images1.html", '100%', 700)}}
 
-> **Примечание:** [Загрузите файл](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/tasks/images/images1-download.html) для этой задачи, чтобы работать в вашем редакторе или в онлайн-редакторе.
+> [!NOTE]
+> [Загрузите файл](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/tasks/images/images1-download.html) для этой задачи, чтобы работать в вашем редакторе или в онлайн-редакторе.
 
 ## Изображения в HTML №2
 
@@ -32,7 +33,8 @@ slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Images
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/images/images2.html", '100%', 700)}}
 
-> **Примечание:** [Загрузите файл](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/tasks/images/images2-download.html) для этой задачи, чтобы работать в вашем редакторе или в онлайн-редакторе.
+> [!NOTE]
+> [Загрузите файл](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/tasks/images/images2-download.html) для этой задачи, чтобы работать в вашем редакторе или в онлайн-редакторе.
 
 ## Изображения в HTML №3
 
@@ -42,7 +44,8 @@ slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Images
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/images/images3.html", '100%', 700)}}
 
-> **Примечание:** [Загрузите файл](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/tasks/images/images3-download.html) для этой задачи, чтобы работать в вашем редакторе или в онлайн-редакторе.
+> [!NOTE]
+> [Загрузите файл](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/tasks/images/images3-download.html) для этой задачи, чтобы работать в вашем редакторе или в онлайн-редакторе.
 
 ## Оценка или дополнительная помощь
 
@@ -52,7 +55,6 @@ slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Images
 
 1. Поместите свою работу в онлайн-редактор, например [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) или [Glitch](https://glitch.com/). Вы можете написать код самостоятельно или использовать файлы, ссылки на которые приведены в приведённых выше разделах.
 2. Напишите сообщение с просьбой об оценке и / или помощи в [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Ваш пост должен включать:
-
    - Описательный заголовок, например "Требуется оценка для проверки навыков 1 по основам изображений HTML".
    - Подробная информация о том, что вы уже пробовали, и что бы вы хотели, чтобы мы сделали, например если вы застряли и нуждаетесь в помощи или хотите пройти оценку.
    - Ссылка на пример, который вы хотите оценить или с которым вам нужна помощь, в онлайн-редакторе (как указано в шаге 1 выше). Это хорошая практика - очень сложно помочь кому-то с проблемой кодирования, если вы не видите его код.

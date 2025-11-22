@@ -19,9 +19,7 @@ open(options)
 ### 引数
 
 - `options`
-
   - : 以下の値のうち任意のものが入ったオブジェクトです。
-
     - `baudRate`
       - : シリアル通信を確立するボーレートを表す正の値です。
     - `bufferSize` {{Optional_Inline}}

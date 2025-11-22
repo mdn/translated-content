@@ -71,7 +71,8 @@ if (window.XMLHttpRequest) {
 
 - 确保在你试图使用[异步操作](/zh-CN/docs/Learn_web_development/Extensions/Async_JS)返回的值之前，其已经完成。这通常需要了解如何使用 _promise_：适当地使用 [`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/await) 或在 promise 的 {{jsxref("Promise.then()", "then()")}} 处理器中运行代码来处理异步调用的结果。有关此主题的介绍，请参见[如何使用 promise](/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Promises)。
 
-> **备注：** [JavaScript 代码中的 Bug：JavaScript 开发人员的 10 个最常见错误](https://www.toptal.com/javascript/10-most-common-javascript-mistakes)对这些常见错误及更多内容有很好的讨论。
+> [!NOTE]
+> [JavaScript 代码中的 Bug：JavaScript 开发人员的 10 个最常见错误](https://www.toptal.com/javascript/10-most-common-javascript-mistakes)对这些常见错误及更多内容有很好的讨论。
 
 ### Linter
 
@@ -197,7 +198,7 @@ fetch(requestURL).then((response) => {
 - 为了避免加载不必要的 JavaScript，建议使用 [Browserify](https://browserify.org/) 等工具将脚本打包成单个文件。总体而言，减少 HTTP 请求的数量可以很好地提升性能。
 - 在将文件部署到生产服务器之前，应通过极简化（minification）减小文件体积。极简化会将所有代码合并成一行，从而显著减少文件大小。虽然简化后的代码可读性较差，但你不需要直接阅读它！推荐使用 [Uglify](https://github.com/mishoo/UglifyJS) 等极简化工具（还有在线版本，请访问 [JSCompress.com](https://jscompress.com/)）。
 - 使用 API 时，请确保在不需要时关闭 API 特性；因为某些 API 调用在处理能力方面可能非常耗费资源。例如，在显示视频流时，如果视频不在视线范围内，请确保关闭它。在使用重复调用的地理位置 API 跟踪设备位置时，如果用户不再需要，也应及时关闭。
-- 动画可能会对性能造成重大影响。尽管许多 JavaScript 库提供了由 JavaScript 控制的动画功能，但使用浏览器原生特性（如 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)或新兴的 [Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)）执行动画通常更高效。建议阅读 Brian Birtles 的文章[使用 Element.animate 制作不重要的动画](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/)，了解动画成本高昂的原因、提升动画性能的技巧，以及 Web 动画 API 的相关信息。
+- 动画可能会对性能造成重大影响。尽管许多 JavaScript 库提供了由 JavaScript 控制的动画功能，但使用浏览器原生特性（如 [CSS 动画](/zh-CN/docs/Web/CSS/Guides/Animations/Using)或新兴的 [Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)）执行动画通常更高效。建议阅读 Brian Birtles 的文章[使用 Element.animate 制作不重要的动画](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/)，了解动画成本高昂的原因、提升动画性能的技巧，以及 Web 动画 API 的相关信息。
 
 > [!NOTE]
 > 阿迪—奥斯曼尼的[编写快速、内存效率高的 JavaScript 代码](https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/)包含了大量细节和一些有助于提高 JavaScript 性能的出色建议。
@@ -234,7 +235,7 @@ if ("geolocation" in navigator) {
 }
 ```
 
-你也可以为 CSS 特性编写这样的测试，例如通过测试 _[element.style.property](/zh-CN/docs/Web/API/HTMLElement/style)_ 的存在（比如 `paragraph.style.transform !== undefined`）。如果你希望在支持某个 CSS 特性的情况下应用样式，可以直接使用 [@supports](/zh-CN/docs/Web/CSS/@supports) 规则（也称为特性查询）。例如，要检查浏览器是否支持 CSS 容器查询，可以这样做：
+你也可以为 CSS 特性编写这样的测试，例如通过测试 _[element.style.property](/zh-CN/docs/Web/API/HTMLElement/style)_ 的存在（比如 `paragraph.style.transform !== undefined`）。如果你希望在支持某个 CSS 特性的情况下应用样式，可以直接使用 [@supports](/zh-CN/docs/Web/CSS/Reference/At-rules/@supports) 规则（也称为特性查询）。例如，要检查浏览器是否支持 CSS 容器查询，可以这样做：
 
 ```css
 @supports (container-type: inline-size) {

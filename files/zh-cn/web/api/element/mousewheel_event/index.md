@@ -31,19 +31,15 @@ onmousewheel = (event) => {};
 _该接口继承了其祖先接口 {{DOMxRef("MouseEvent")}}、{{DOMxRef("UIEvent")}} 和 {{DOMxRef("Event")}} 的属性。_
 
 - {{DOMxRef("WheelEvent.deltaX")}} {{ReadOnlyInline}}
-
   - : 返回一个表示水平滚动量的双精度浮点数（`double`）。
 
 - {{DOMxRef("WheelEvent.deltaY")}} {{ReadOnlyInline}}
-
   - : 返回一个表示垂直滚动量的双精度浮点数（`double`）。
 
 - {{DOMxRef("WheelEvent.deltaZ")}} {{ReadOnlyInline}}
-
   - : 返回一个表示 Z 轴滚动量的双精度浮点数（`double`）。
 
 - {{DOMxRef("WheelEvent.deltaMode")}} {{ReadOnlyInline}}
-
   - : 返回一个无符号长整型（`unsigned long`)，其表示 `delta*` 值的滚动数量的单位。允许的值如下：
 
     | 常量                         | 值     | 描述                                                                                    |
@@ -53,15 +49,12 @@ _该接口继承了其祖先接口 {{DOMxRef("MouseEvent")}}、{{DOMxRef("UIEven
     | `WheelEvent.DOM_DELTA_PAGE`  | `0x02` | `delta*` 值以页为单位指定。每次鼠标单击滚动一个页面的内容。                             |
 
 - {{DOMxRef("WheelEvent.wheelDelta")}} {{ReadOnlyInline}} {{deprecated_inline}}
-
   - : 返回一个表示像素距离的整数（32 位）。
 
 - {{DOMxRef("WheelEvent.wheelDeltaX")}} {{ReadOnlyInline}} {{deprecated_inline}}
-
   - : 返回一个表示水平滚动量的整数。
 
 - {{DOMxRef("WheelEvent.wheelDeltaY")}} {{ReadOnlyInline}} {{deprecated_inline}}
-
   - : 返回一个表示垂直滚动量的整数。
 
 ## 详细属性

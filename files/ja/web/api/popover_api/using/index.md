@@ -43,7 +43,8 @@ l10n:
 
 [基本的な宣言的ポップオーバーの例](https://mdn.github.io/dom-examples/popover-api/basic-declarative/)（[ソース](https://github.com/mdn/dom-examples/tree/main/popover-api/basic-declarative)）で、上記のコード片がどのように見えるかを確認できます。
 
-> **メモ:** `popovertargetaction` 属性が省略されると、制御ボタンで実行される既定のアクションは `"toggle"` になります。
+> [!NOTE]
+> `popovertargetaction` 属性が省略されると、制御ボタンで実行される既定のアクションは `"toggle"` になります。
 
 ポップオーバーが表示されると、`display: none`が削除されて{{glossary("top layer", "最上位レイヤー")}}に配置され、他のすべてのページのコンテンツの上に置かれるようになります。
 
@@ -55,7 +56,8 @@ l10n:
 - ポップオーバーは、 <kbd>Esc</kbd> キーを押すなど、ブラウザー依存の仕組みを使って閉じることもできます。
 - 通常、一度に表示できるポップオーバーは 1 つだけです。すでに 1 つのポップオーバーが表示されているとき に 2 つ目を表示すると、最初のポップオーバーが閉じてしまいます。このルールの例外は、入れ子のオートポップオーバーがある場合です。詳しくは、[入れ子のポップオーバー](#入れ子のポップオーバー)の節を参照してください。
 
-> **メモ:** `popover="auto"` ポップオーバーは、文書内の他の要素で {{domxref("HTMLDialogElement.showModal()")}} や {{domxref("Element.requestFullscreen()")}} の呼び出しが成功した場合にも閉じます。しかし、これらのメソッドを表示されているポップオーバーに対して呼び出すと失敗することに留意してください。しかし、現在表示されていない `popover` 属性を持つ要素に対してこれらのメソッドを呼び出すことはできます。
+> [!NOTE]
+> `popover="auto"` ポップオーバーは、文書内の他の要素で {{domxref("HTMLDialogElement.showModal()")}} や {{domxref("Element.requestFullscreen()")}} の呼び出しが成功した場合にも閉じます。しかし、これらのメソッドを表示されているポップオーバーに対して呼び出すと失敗することに留意してください。しかし、現在表示されていない `popover` 属性を持つ要素に対してこれらのメソッドを呼び出すことはできます。
 
 自動状態は、一度に単一のポップオーバーだけを示したい場合に有益な機能です。表示したいチュートリアルの UI メッセージが複数あるが、表示が乱雑になって混乱するのを避けたい場合や、新しい状態が前回の状態を上書きするようなステータスメッセージを表示する場合などに利用できます。
 
@@ -304,12 +306,13 @@ function moveToastsUp() {
 
 ## ポップオーバーのアニメーション
 
-ポップオーバーは{{glossary("top layer", "最上位レイヤー")}}と[アクセシビリティツリー](/ja/docs/Web/Performance/Guides/How_browsers_work#building_the_accessibility_tree)から除去されたり追加されたりするだけでなく、非表示時には `display: none;`、表示時には `display: block;` に設定されます。したがって、ポップオーバーをアニメーションさせるには、 {{cssxref("display")}} プロパティをアニメーション可能にする必要があります。[対応しているブラウザー](/ja/docs/Web/CSS/display#ブラウザーの互換性)では、`display` を[離散アニメーション型](/ja/docs/Web/CSS/CSS_animated_properties#離散)の変形でアニメーションさせます。具体的には、ブラウザーはアニメーションの再生時間全体にわたってコンテンツを表示させるように、 `none` と `display` の他の値を切り替えます。例えば、次のようになります。
+ポップオーバーは{{glossary("top layer", "最上位レイヤー")}}と[アクセシビリティツリー](/ja/docs/Web/Performance/Guides/How_browsers_work#building_the_accessibility_tree)から除去されたり追加されたりするだけでなく、非表示時には `display: none;`、表示時には `display: block;` に設定されます。したがって、ポップオーバーをアニメーションさせるには、 {{cssxref("display")}} プロパティをアニメーション可能にする必要があります。[対応しているブラウザー](/ja/docs/Web/CSS/Reference/Properties/display#ブラウザーの互換性)では、`display` を[離散アニメーション型](/ja/docs/Web/CSS/Guides/Animations/Animatable_properties#離散)の変形でアニメーションさせます。具体的には、ブラウザーはアニメーションの再生時間全体にわたってコンテンツを表示させるように、 `none` と `display` の他の値を切り替えます。例えば、次のようになります。
 
 - `display` を `none` から `block` （または他の表示可能な `display` 値）にアニメーションさせる場合、値はアニメーション時間の `0%` で `block` に切り替わり、ずっと表示されます。
 - `display` を `block` （または他の表示可能な `display` 値）から `none` にアニメーションさせる場合、値はアニメーション時間の `100%` で `none` に切り替わり、ずっと表示されます。
 
-> **メモ:** [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)を使用してアニメーションを行う場合、上記の動作を有効にするには [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/transition-behavior) を設定する必要があります。 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)でアニメーションさせる場合、既定では上記の動作が利用できます。
+> [!NOTE]
+> [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)を使用してアニメーションを行う場合、上記の動作を有効にするには [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior) を設定する必要があります。 [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)でアニメーションさせる場合、既定では上記の動作が利用できます。
 
 ### ポップオーバーのトランジション
 
@@ -337,7 +340,7 @@ CSSのトランジションでポップオーバーをアニメーションさ�
 
 #### CSS
 
-トランジションさせたいポップオーバーのプロパティは、 [`opacity`](/ja/docs/Web/CSS/opacity) と [`transform`](/ja/docs/Web/CSS/transform) の 2 つです。ポップオーバーが水平方向に拡大または縮小しながらフェードインまたはフェードアウトするようにします。これを実現するために、これらのプロパティの開始状態をポップオーバー要素の非表示状態（`[popover]` [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)で選択）に設定し、終了状態をポップオーバーの表示状態（[`:popover-open`](/ja/docs/Web/CSS/:popover-open) 擬似クラスで選択）に設定します。また、 [`transition`](/ja/docs/Web/CSS/transition) プロパティを使用して、ポップオーバーが表示されたり非表示になったりするときにアニメーションするプロパティとアニメーションの再生時間を定義します。
+トランジションさせたいポップオーバーのプロパティは、 [`opacity`](/ja/docs/Web/CSS/Reference/Properties/opacity) と [`transform`](/ja/docs/Web/CSS/Reference/Properties/transform) の 2 つです。ポップオーバーが水平方向に拡大または縮小しながらフェードインまたはフェードアウトするようにします。これを実現するために、これらのプロパティの開始状態をポップオーバー要素の非表示状態（`[popover]` [属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors)で選択）に設定し、終了状態をポップオーバーの表示状態（[`:popover-open`](/ja/docs/Web/CSS/Reference/Selectors/:popover-open) 擬似クラスで選択）に設定します。また、 [`transition`](/ja/docs/Web/CSS/Reference/Properties/transition) プロパティを使用して、ポップオーバーが表示されたり非表示になったりするときにアニメーションするプロパティとアニメーションの再生時間を定義します。
 
 ```css
 html {
@@ -408,9 +411,9 @@ html {
 - 開始状態の `transition` を `@starting-style` ブロック内に設定します。
 - トランジションする要素のリストに `display` を追加し、ポップオーバーの出現・消滅アニメーションを通じて、アニメーションする要素が見える（`display: block` に設定する）ようにしました。これがなければ、終了アニメーションは表示されません。結果的に、ポップオーバーはただ消えてしまいます。
 - トランジションする要素のリストに `overlay` を追加し、アニメーションが完了するまで最上位レイヤーからの要素の除去が延期されるようにします。この効果は、このような基本的なアニメーションでは気にならないかもしれませんが、より複雑なケースでは、このプロパティを省略すると、トランジションの完了前に要素がオーバーレイから除去されてしまう可能性があります。
-- 上記のトランジションの両方のプロパティに `allow-discrete` を設定し、[離散トランジション](/ja/docs/Web/CSS/CSS_animated_properties#離散)ができるようにします。
+- 上記のトランジションの両方のプロパティに `allow-discrete` を設定し、[離散トランジション](/ja/docs/Web/CSS/Guides/Animations/Animatable_properties#離散)ができるようにします。
 
-また、開くためのポップオーバーの背後に現れる [`::backdrop`](/ja/docs/Web/CSS/::backdrop) にトランジションを記述子、暗くなるアニメーションを指定していることに注意してください。
+また、開くためのポップオーバーの背後に現れる [`::backdrop`](/ja/docs/Web/CSS/Reference/Selectors/::backdrop) にトランジションを記述子、暗くなるアニメーションを指定していることに注意してください。
 
 #### 結果
 
@@ -421,7 +424,7 @@ html {
 > [!NOTE]
 > ポップオーバーは表示されるたびに `display: none` から `display: block` に変わるので、項目がトランジションするたびに `@starting-style` スタイルから `[popover]:popover-open` スタイルにトランジションします。ポップオーバーが閉じられたとき、 `[popover]:popover-open` 状態から既定の `[popover]` 状態にトランジションします。
 >
-> このような場合、出現時と消滅時のスタイル設定を異なる形にすることが可能です。このことの証明については、[開始スタイルを使用する場合のデモ](/ja/docs/Web/CSS/@starting-style#開始スタイルを使用する場合のデモ)の例を参照してください。
+> このような場合、出現時と消滅時のスタイル設定を異なる形にすることが可能です。このことの証明については、[開始スタイルを使用する場合のデモ](/ja/docs/Web/CSS/Reference/At-rules/@starting-style#開始スタイルを使用する場合のデモ)の例を参照してください。
 
 ### ポップオーバーのキーフレームアニメーション
 

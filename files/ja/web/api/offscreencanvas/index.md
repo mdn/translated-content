@@ -2,18 +2,18 @@
 title: OffscreenCanvas
 slug: Web/API/OffscreenCanvas
 l10n:
-  sourceCommit: 16ddaba6073a5e4022aecd2aca8893905a9dd5d0
+  sourceCommit: 32f1bfc28a0704c9a743bc971df1b2563cc4ccc6
 ---
 
 {{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
-{{HtmlElement("canvas")}} 要素、あるいは [Canvas API](/ja/docs/Web/API/Canvas_API) を使用すると、レンダリングとアニメーション、ユーザー操作は通常、ウェブアプリケーションのメインスレッドの実行で発生します。
+{{HtmlElement("canvas")}} 要素、あるいは[キャンバス API](/ja/docs/Web/API/Canvas_API) を使用すると、レンダリングとアニメーション、ユーザー操作は通常、ウェブアプリケーションのメインスレッドの実行で発生します。
 キャンバスのアニメーションとレンダリングに関連する計算はアプリケーションのパフォーマンスに影響を受ける場合があります。
 
-**OffscreenCanvas** インターフェイスは画面外にレンダリングできるキャンバスを提供し、 DOM と Canvas API を切り離すことで、 {{HtmlElement("canvas")}} 要素が完全に DOM に依存しなくなります。
-レンダリングの操作は [ワーカー](/ja/docs/Web/API/Web_Workers_API) コンテキストでも実行することができるので、一部のタスクを別のスレッドで実行させて、メインスレッドに負荷の高い処理を回避させることもできます。
+**OffscreenCanvas** インターフェイスは画面外にレンダリングできるキャンバスを提供し、 DOM とキャンバス API を切り離すことで、 {{HtmlElement("canvas")}} 要素が完全に DOM に依存しなくなります。
+レンダリングの操作は[ワーカー](/ja/docs/Web/API/Web_Workers_API)コンテキストでも実行することができるので、一部のタスクを別のスレッドで実行させて、メインスレッドに負荷の高い処理を回避させることもできます。
 
-`OffscreenCanvas` は [移譲可能オブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects) です。
+`OffscreenCanvas` は[移譲可能オブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects)です。
 
 {{InheritanceDiagram}}
 
@@ -25,22 +25,22 @@ l10n:
 ## インスタンスプロパティ
 
 - {{domxref("OffscreenCanvas.height")}}
-  - : オフスクリーンキャンバスの横幅を示します。
+  - : このオフスクリーンキャンバスの高さです。
 - {{domxref("OffscreenCanvas.width")}}
-  - : オフスクリーンキャンパスの高さを表します。
+  - : このオフスクリーンキャンパスの幅です。
 
 ## メソッド
 
 - {{domxref("OffscreenCanvas.getContext()")}}
-  - : オフスクリーンキャンバスのコンテキストを返します。
+  - : このオフスクリーンキャンバスの描画コンテキストを返します。コンテキスト識別子が対応していない場合、またはオフスクリーンキャンバスがすでに別のコンテキストモードに設定されている場合は [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を返します。
 - {{domxref("OffscreenCanvas.convertToBlob()")}}
   - : キャンバスに含まれる画像を {{domxref("Blob")}} オブジェクトにして生成します。
 - {{domxref("OffscreenCanvas.transferToImageBitmap()")}}
-  - : `OffscreenCanvas` で最後にレンダリングされたイメージを {{domxref("ImageBitmap")}} オブジェクトにして生成します。{{domxref("ImageBitmap")}} を管理する上で重要な注意事項については {{domxref("OffscreenCanvas.transferToImageBitmap()", "API 説明")}} からご参照ください。
+  - : `OffscreenCanvas` で最後にレンダリングされた画像を {{domxref("ImageBitmap")}} オブジェクトにして生成します。管理する上で重要な注意事項についてはリファレンスをして参照ください。
 
 ## イベント
 
-_親インターフェイスである {{domxref("EventTarget")}} からイベントを継承しています。_
+_親インターフェイスである {{domxref("EventTarget")}} から継承したイベントがあります。_
 
 これらのイベントを待ち受けするには、 {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} を使用するか、このインターフェイスの `oneventname` プロパティにイベントリスナーを代入するかしてください。
 
@@ -55,11 +55,9 @@ _親インターフェイスである {{domxref("EventTarget")}} からイベン
 
 `OffscreenCanvas` を使用する1つの方法は、 `OffscreenCanvas` オブジェクトからレンダリングコンテキストを使用してフレームを生成することです。このコンテキストで新しいフレームのレンダリングが完了したら、 {{domxref("OffscreenCanvas.transferToImageBitmap", "transferToImageBitmap()")}} メソッドを呼び出すことで、最後にレンダリングされた画像を保存できます。このメソッドは {{domxref("ImageBitmap")}} オブジェクトを返すので、さまざまな Web API で使用できるほか、転送コピーを作成しないでもう一つのキャンバスとして使用することもできます。
 
-`ImageBitmap` を表示するには {{domxref("ImageBitmapRenderingContext")}} コンテキストを使用します。このコンテキストは `canvas.getContext("bitmaprenderer")` を (表示されている) canvas 要素で呼び出すことで作成されます。キャンバスの内容を指定された `ImageBitmap` に置き換える機能のみを提供します。
+`ImageBitmap` を表示するには {{domxref("ImageBitmapRenderingContext")}} コンテキストを使用します。このコンテキストは `canvas.getContext("bitmaprenderer")` を (表示されている) canvas 要素で呼び出すことで作成されます。キャンバスの内容を指定された `ImageBitmap` に置き換える機能のみを提供します。オフスクリーンキャンバスから以前レンダリングされ保存された `ImageBitmap` を使用して {{domxref("ImageBitmapRenderingContext.transferFromImageBitmap()")}} を呼び出すと、 `ImageBitmap` がキャンバス上に表示されて、その所有権がキャンバスに移ります。単体の `OffscreenCanvas` は任意の数の他の `ImageBitmapRenderingContext` オブジェクトにフレームを転送することができます。
 
-`OffscreenCanvas` から以前レンダリングされ保存された `ImageBitmap` を使用して {{domxref("ImageBitmapRenderingContext.transferFromImageBitmap()")}} を呼び出すと、 `ImageBitmap` がキャンバス上に表示されて、その所有権がキャンバスに移ります。単体の `OffscreenCanvas` は任意の数の他の `ImageBitmapRenderingContext` オブジェクトにフレームを転送することができます。
-
-ここで2つの {{HTMLElement("canvas")}} 要素があるとします。
+ここで 2 つの {{HTMLElement("canvas")}} 要素があるとします。
 
 ```html
 <canvas id="one"></canvas> <canvas id="two"></canvas>
@@ -93,11 +91,11 @@ two.transferFromImageBitmap(bitmapTwo);
 const htmlCanvas = document.getElementById("canvas");
 const offscreen = htmlCanvas.transferControlToOffscreen();
 
-const worker = new Worker("offscreencanvas.js");
+const worker = new Worker("offscreen-canvas.js");
 worker.postMessage({ canvas: offscreen }, [offscreen]);
 ```
 
-一方で、 `offscreencanvas.js` スクリプト (ワーカースレッド) は次のようになります。
+一方で、 `offscreen-canvas.js` スクリプト (ワーカースレッド) は次のようになります。
 
 ```js
 onmessage = (evt) => {

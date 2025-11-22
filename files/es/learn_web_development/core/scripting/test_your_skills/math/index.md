@@ -29,7 +29,8 @@ Asi que intente realizar la actualización del código descrito abajo para crear
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math1.html", '100%', 400)}}
 
-> **Nota:** [Descargue el punto de partida para esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/math/math1-download.html) para trabajar en su propio editor o en un editor en línea.
+> [!NOTE]
+> [Descargue el punto de partida para esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/math/math1-download.html) para trabajar en su propio editor o en un editor en línea.
 
 ## Matemáticas 2
 
@@ -46,7 +47,8 @@ Intente actualizar el código en vivo a continuación para recrear el ejemplo te
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math2.html", '100%', 400)}}
 
-> **Nota:** [Descargue el punto de partida para esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/math/math2-download.html) para trabajar en su propio editor o en un editor en línea.
+> [!NOTE]
+> [Descargue el punto de partida para esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/math/math2-download.html) para trabajar en su propio editor o en un editor en línea.
 
 ## Matemáticas 3
 
@@ -54,7 +56,8 @@ En la tarea final de este artículo, queremos que escriba algunas pruebas. Tiene
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math3.html", '100%', 400)}}
 
-> **Nota:** [Descargue el punto de partida para esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/math/math3-download.html) para trabajar en su propio editor o en un editor en línea.
+> [!NOTE]
+> [Descargue el punto de partida para esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/math/math3-download.html) para trabajar en su propio editor o en un editor en línea.
 
 ## Evaluación o ayuda adicional
 
@@ -64,7 +67,6 @@ Si desea que se evalúe su trabajo, o está atascado y quiere pedir ayuda:
 
 1. Coloque su trabajo en un editor compartible en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) o [Glitch](https://glitch.com/). Puede escribir el código usted mismo o usar los archivos de punto de partida vinculados en las secciones anteriores.
 2. Escriba una publicación solicitando evaluación o ayuda en la [categoría de aprendizaje del foro de Discourse de MDN](https://discourse.mozilla.org/c/mdn/learn). Su publicación debe incluir:
-
    - Un título descriptivo como "Evaluación buscada para la prueba de habilidad de Matemáticas 1".
    - Detalles de lo que ya ha probado y lo que le gustaría que hiciéramos, por ejemplo si está atascado y necesita ayuda, o desea una evaluación.
    - Un enlace al ejemplo que desea evaluar o con el que necesita ayuda, en un editor compartible en línea (como se mencionó en el paso 1). Esta es una buena práctica para comenzar: es muy difícil ayudar a alguien con un problema de codificación si no puede ver su código.

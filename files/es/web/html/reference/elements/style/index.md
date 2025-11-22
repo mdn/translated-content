@@ -9,7 +9,6 @@ original_slug: Web/HTML/Element/style
 ### Definición
 
 - **style** - estilo. Es el elemento encargado de indicar la información de estilo.
-
   - : **Sus etiquetas son**: `<style>` y `</style>` (ambas obligatorias).
 
     **Está definido como**: Elemento [de cabecera](/es/docs/HTML/Elemento/Tipos_de_elementos#decabecera).

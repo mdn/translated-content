@@ -3,8 +3,6 @@ title: Firefox 68 for developers
 slug: Mozilla/Firefox/Releases/68
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 68 は、米国時間 2019 年 7 月 9 日 にリリースされました。このページでは、開発者に影響する Firefox 68 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -80,8 +78,7 @@ Firefox 68 は、米国時間 2019 年 7 月 9 日 にリリースされまし�
 
 ### CSS
 
-- [CSS Scroll Snapping](/ja/docs/Web/CSS/CSS_scroll_snap) を、最新バージョンの仕様書に更新しました ([Firefox バグ 1312163](https://bugzil.la/1312163)) および ([Firefox バグ 1544136](https://bugzil.la/1544136))。変更点は以下のとおりです:
-
+- [CSS Scroll Snapping](/ja/docs/Web/CSS/Guides/Scroll_snap) を、最新バージョンの仕様書に更新しました ([Firefox バグ 1312163](https://bugzil.la/1312163)) および ([Firefox バグ 1544136](https://bugzil.la/1544136))。変更点は以下のとおりです:
   - `scroll-padding` 関係のプロパティ ([Firefox バグ 1373832](https://bugzil.la/1373832))
   - `scroll-margin` 関係のプロパティ ([Firefox バグ 1373833](https://bugzil.la/1373833))
   - {{CSSxRef("scroll-snap-align")}} ([Firefox バグ 1373835](https://bugzil.la/1373835))
@@ -92,8 +89,8 @@ Firefox 68 は、米国時間 2019 年 7 月 9 日 にリリースされまし�
 - 長さの単位 'ch' を、仕様書に合うよう修正しました ('0' のグリフがない場合は高さにフォールバックする) ([Firefox バグ 282126](https://bugzil.la/282126))。
 - {{CSSxRef("counter-set")}} プロパティを実装しました ([Firefox バグ 1518201](https://bugzil.la/1518201))。
 - 内蔵の 'list-item' カウンターを使用したリストの番号付けを実装して、番号付けの不具合を修正しました ([Firefox バグ 288704](https://bugzil.la/288704))。
-- [`::part()`](/ja/docs/Web/CSS/::part) にセレクターのマッチングとパースを実装しました ([Firefox バグ 1545430](https://bugzil.la/1545430)) および ([Firefox バグ 1545425](https://bugzil.la/1545425))。
-- {{SVGElement("mask")}}、{{SVGElement("marker")}}、{{SVGElement("pattern")}}、{{SVGElement("clipPath")}} など、間接的に描画されるもので [CSS Transforms](/ja/docs/Web/CSS/CSS_transforms) をサポートしました ([Firefox バグ 1323962](https://bugzil.la/1323962))。
+- [`::part()`](/ja/docs/Web/CSS/Reference/Selectors/::part) にセレクターのマッチングとパースを実装しました ([Firefox バグ 1545430](https://bugzil.la/1545430)) および ([Firefox バグ 1545425](https://bugzil.la/1545425))。
+- {{SVGElement("mask")}}、{{SVGElement("marker")}}、{{SVGElement("pattern")}}、{{SVGElement("clipPath")}} など、間接的に描画されるもので [CSS Transforms](/ja/docs/Web/CSS/Guides/Transforms) をサポートしました ([Firefox バグ 1323962](https://bugzil.la/1323962))。
 - 互換性の理由でさまざまなグラデーションプロパティ ({{cssxref("linear-gradient")}}、{{cssxref("radial-gradient")}}、{{cssxref("repeating-radial-gradient")}}) の接頭辞がついたものを使用可能に維持していますが、接頭辞がないものにより似た形で扱うように処理を変更しました。これは、既存のスタイルの一部が正しく動作しなくなることを意味します。
 
   特に、角度と位置の両方を持つ複雑な構文は動作しません。また `<side-or-corner>` の `to` キーワードは、接頭辞があるグラデーションプロパティで必須ではありません。広くサポートされているため、接頭辞がない標準のグラデーションプロパティを使用することが推奨されます ([Firefox バグ 1547939](https://bugzil.la/1547939))。

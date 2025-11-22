@@ -92,5 +92,4 @@ td {
 
 - Другие связанные с таблицей HTML-элементы: {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};
 - CSS-свойства, которые могут быть применены для стилизации элемента {{HTMLElement("caption")}}:
-
   - {{cssxref("text-align")}}, {{cssxref("caption-side")}}.

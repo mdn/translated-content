@@ -1,11 +1,9 @@
 ---
-title: Sélecteur CSS
+title: Sélecteur (CSS)
 slug: Glossary/CSS_Selector
 l10n:
-  sourceCommit: 818941994eb1765f2196c9b588314b12e7b9f66f
+  sourceCommit: 7615562a3689a3e23a2b6b623597f4391740a53e
 ---
-
-{{GlossarySidebar}}
 
 Un **sélecteur CSS** est la partie de la règle CSS qui désigne les éléments d'un document ciblés par cette règle. Les éléments correspondants se verront appliquer la mise en forme indiquée par la règle.
 
@@ -28,20 +26,16 @@ div.avertissement {
 
 #personnalise {
   font:
-    16px Lucida Grande,
-    Arial,
-    Helvetica,
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
     sans-serif;
 }
 ```
 
-Les sélecteurs sont ici&nbsp;:
+Les sélecteurs ici sont `"p"` (qui applique la couleur verte au texte à l'intérieur de tout élément {{HTMLElement("p")}}), `"div.warning"` (qui fait ressembler tout élément {{HTMLElement("div")}} avec la [classe](/fr/docs/Web/HTML/Reference/Global_attributes/class) `"warning"` à une boîte d'avertissement), et `"#customized"`, qui définit la police de base de l'élément avec l'ID `"customized"` à Lucida Grande de 16 pixels de haut ou à l'une des polices de secours.
 
-- `p`, qui cible les éléments [`<p>`](/fr/docs/Web/HTML/Element/p) et qu'on utilise ici pour que le texte de ces éléments soit vert
-- `div.avertissement`, qui cible les éléments [`<div>`](/fr/docs/Web/HTML/Element/div) avec la [classe](/fr/docs/Web/HTML/Global_attributes/class) `avertissement` pour que ceux-ci ressemblent à une boîte d'avertissement)
-- `#personnalise`, qui cible l'élément avec l'identifiant `personnalise` pour appliquer une mise en forme utilisant une police de caractères de 16 pixels, Lucida Grande ou l'une des polices de secours.
-
-Nous pouvons ensuite appliquer ce CSS à du HTML, tel que&nbsp;:
+Nous pouvons ensuite appliquer ce CSS à du HTML, comme&nbsp;:
 
 ```html
 <p>Un texte heureux.</p>
@@ -61,25 +55,29 @@ Nous pouvons ensuite appliquer ce CSS à du HTML, tel que&nbsp;:
 
 Le contenu de la page résultant ressemble à ceci:
 
-{{EmbedLiveSample("", 640, 240)}}
+{{EmbedLiveSample("Exemple", 640, 240)}}
 
 ## Voir aussi
 
-- [En apprendre plus sur les sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors) dans l'introduction à CSS
+- [En apprendre plus sur les sélecteurs CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) dans l'introduction à CSS
+
 - Les sélecteurs simples
-  - [Les sélecteurs de type](/fr/docs/Web/CSS/Type_selectors) `nomelement`
-  - [Les sélecteurs de classe](/fr/docs/Web/CSS/Class_selectors) `.nomclasse`
-  - [Les sélecteurs d'identifiant](/fr/docs/Web/CSS/ID_selectors) `#nomid`
-  - [Les sélecteurs universels](/fr/docs/Web/CSS/Universal_selectors) `* ns|* *|*`
-  - [Les sélecteurs d'attribut](/fr/docs/Web/CSS/Attribute_selectors) `[attr=valeur]`
-  - [Les sélecteurs d'état](/fr/docs/Web/CSS/Pseudo-classes) `a:active, a:visited`
+  - [Les sélecteurs de type](/fr/docs/Web/CSS/Reference/Selectors/Type_selectors) `nomelement`
+  - [Les sélecteurs de classe](/fr/docs/Web/CSS/Reference/Selectors/Class_selectors) `.nomclasse`
+  - [Les sélecteurs d'identifiant](/fr/docs/Web/CSS/Reference/Selectors/ID_selectors) `#nomid`
+  - [Les sélecteurs universels](/fr/docs/Web/CSS/Reference/Selectors/Universal_selectors) `* ns|* *|*`
+  - [Les sélecteurs d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) `[attr=valeur]`
+  - [Les sélecteurs d'état](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) `a:active, a:visited`
+
 - Les sélecteurs composites
-  - [Liste de sélecteurs](/fr/docs/Web/CSS/Selector_list) `A, B`
+  - [Liste de sélecteurs](/fr/docs/Web/CSS/Reference/Selectors/Selector_list) `A, B`
+
 - Les combinateurs
-  - [Sélecteurs de voisins directs](/fr/docs/Web/CSS/Next-sibling_combinator) `A + B`
-  - [Sélecteurs de voisins généraux](/fr/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
-  - [Sélecteurs d'enfant direct](/fr/docs/Web/CSS/Child_combinator) `A > B`
-  - [Sélecteurs de descendants](/fr/docs/Web/CSS/Descendant_combinator) `A B`
+  - [Sélecteurs de voisins directs](/fr/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator) `A + B`
+  - [Sélecteurs de voisins généraux](/fr/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator) `A ~ B`
+  - [Sélecteurs d'enfant direct](/fr/docs/Web/CSS/Reference/Selectors/Child_combinator) `A > B`
+  - [Sélecteurs de descendants](/fr/docs/Web/CSS/Reference/Selectors/Descendant_combinator) `A B`
+
 - Pseudo
-  - [Pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) `:`
-  - [Pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) `::`
+  - [Pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) `:`
+  - [Pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) `::`

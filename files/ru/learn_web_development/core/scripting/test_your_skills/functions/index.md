@@ -29,7 +29,8 @@ slug: Learn_web_development/Core/Scripting/Test_your_skills/Functions
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/functions/functions1.html", '100%', 400)}}
 
-> **Примечание:** [Загрузите файл с исходным кодом для этой задачи](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/functions/functions1-download.html) для работы в собственном редакторе или в онлайн-редакторе.
+> [!NOTE]
+> [Загрузите файл с исходным кодом для этой задачи](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/functions/functions1-download.html) для работы в собственном редакторе или в онлайн-редакторе.
 
 ## Функции 2
 
@@ -47,7 +48,8 @@ slug: Learn_web_development/Core/Scripting/Test_your_skills/Functions
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/functions/functions2.html", '100%', 400)}}
 
-> **Примечание:** [Загрузите файл с исходным кодом для этой задачи](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/functions/functions2-download.html) для работы в собственном редакторе или в онлайн-редакторе.
+> [!NOTE]
+> [Загрузите файл с исходным кодом для этой задачи](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/functions/functions2-download.html) для работы в собственном редакторе или в онлайн-редакторе.
 
 ## Функции 3
 
@@ -61,7 +63,8 @@ slug: Learn_web_development/Core/Scripting/Test_your_skills/Functions
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/functions/functions3.html", '100%', 400)}}
 
-> **Примечание:** [Загрузите файл с исходным кодом для этой задачи](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/functions/functions3-download.html) для работы в собственном редакторе или в онлайн-редакторе.
+> [!NOTE]
+> [Загрузите файл с исходным кодом для этой задачи](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/functions/functions3-download.html) для работы в собственном редакторе или в онлайн-редакторе.
 
 ## Анализ или дальнейшая помощь
 
@@ -71,7 +74,6 @@ slug: Learn_web_development/Core/Scripting/Test_your_skills/Functions
 
 1. Поместите свой код в онлайн-редактор [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) или [Glitch](https://glitch.com/) с возможностью совместного использования. Вы можете написать код самостоятельно или использовать файлы с исходным кодом, ссылки на которые приведены в вышеприведённых разделах.
 2. Напишите сообщение с просьбой о проведении анализа и/или помощи в категории [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Ваше сообщение должно включать в себя следующие пункты:
-
    - Описательный заголовок, например "Анализ для теста навыков: Функции 1".
    - Детали того, что вы уже пробовали, и что бы вы хотели, чтобы мы сделали, например, если вы застряли и нуждаетесь в помощи, или хотите получить анализ проблемы.
    - Ссылка на пример, который вы хотели бы рассмотреть или с которым вам нужна помощь, в онлайн-редакторе, доступном для совместного использования (как упоминалось в шаге 1 выше). Это хорошая практика - очень сложно помочь кому-то с проблемой, если вы не видите его код.

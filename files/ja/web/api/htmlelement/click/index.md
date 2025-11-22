@@ -60,7 +60,6 @@ function myFunction() {
 ## 関連情報
 
 - 関連するイベントハンドラー
-
   - {{domxref("Element.click_event", "Element.onclick")}}
   - {{domxref("Element.dblclick_event", "Element.ondblclick")}}
   - {{domxref("Element.auxclick_event", "Element.onauxclick")}}

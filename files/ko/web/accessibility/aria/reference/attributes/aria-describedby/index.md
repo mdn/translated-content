@@ -10,7 +10,7 @@ l10n:
 
 ## 설명
 
-`aria-describedby` 속성은 객체를 설명하는 요소의 [`id`](/ko/docs/Web/HTML/Global_attributes#id)를 나열합니다. 위젯 또는 그룹과 이를 설명하는 텍스트 간의 관계를 설정하는데 사용됩니다.
+`aria-describedby` 속성은 객체를 설명하는 요소의 [`id`](/ko/docs/Web/HTML/Reference/Global_attributes#id)를 나열합니다. 위젯 또는 그룹과 이를 설명하는 텍스트 간의 관계를 설정하는데 사용됩니다.
 
 `aria-describedby` 속성은 폼 컨트롤에만 제한되지 않습니다. 정적 텍스트를 위젯, 요소 그룹, 제목이 있는 영역, 정의 등과 연결하는 데에도 사용할 수 있습니다. `aria-describedby` 속성은 시맨틱 HTML 요소와 ARIA [`role`](/ko/docs/Web/Accessibility/ARIA/Roles)이 있는 요소와 함께 사용될 수 있습니다.
 
@@ -20,7 +20,8 @@ l10n:
 
 `aria-describedby` 속성은 관련 콘텐츠에 일반 텍스트로 표시되는 설명이 포함되는 경우에 적절합니다. 콘텐츠에 많은 양의 콘텐츠, 유용한 시멘틱이 포함되어 있거나 사용자 탐색을 요구하는 복잡한 구조인 경우 [`aria-details`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-details)를 사용합니다. `aria-details`는 보조 기술 사용자에게 관련 구조화된 콘텐츠를 방문하고 추가 탐색 명령을 제공해서 구조를 더 쉽게 이해하거나 정보를 더 작은 조각으로 경험할 수 있게 해줍니다.
 
-> **참고:** `aria-describedby` 콘텐츠는 텍스트 문자열이어야 합니다. 콘텐츠에 중요한 기본 시멘틱이 있는 경우 [`aria-details`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-details)를 사용하는 것이 좋습니다.
+> [!NOTE]
+> `aria-describedby` 콘텐츠는 텍스트 문자열이어야 합니다. 콘텐츠에 중요한 기본 시멘틱이 있는 경우 [`aria-details`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-details)를 사용하는 것이 좋습니다.
 
 ## 예제
 
@@ -30,7 +31,8 @@ l10n:
 <p id="trash-desc">휴지통에 있는 항목은 30일 후에 영구적으로 삭제됩니다.</p>
 ```
 
-> **참고:** `aria-describedby` 속성은 외부 리소스로부터의 설명을 참조하도록 설계되지 않았습니다. 이 값은 하나 이상의 `id`(다수인 경우 공백으로 구분)이므로 동일한 DOM 문서에 있는 요소를 참조해야 합니다.
+> [!NOTE]
+> `aria-describedby` 속성은 외부 리소스로부터의 설명을 참조하도록 설계되지 않았습니다. 이 값은 하나 이상의 `id`(다수인 경우 공백으로 구분)이므로 동일한 DOM 문서에 있는 요소를 참조해야 합니다.
 
 ## 값
 

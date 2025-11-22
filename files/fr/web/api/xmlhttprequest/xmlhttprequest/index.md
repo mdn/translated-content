@@ -34,9 +34,7 @@ const request = new XMLHttpRequest(paramsDictionary);
 ### Paramètres (non standard)
 
 - `objParameters`
-
   - : Un drapeau qui peut être activé&nbsp;:
-
     - `mozAnon`
       - : Un booléen. Si ce drapeau vaut `true`, il empêchera le navigateur d'exposer [l'origine](/fr/docs/Glossary/Origin) et [des informations d'authentification](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials) lors de la récupération des ressources. Plus important encore, cela signifie que les [cookies](/fr/docs/Glossary/Cookie) ne seront pas envoyés, sauf s'ils sont ajoutés de façon explicite en utilisant la méthode `setRequestHeader()`.
 

@@ -21,7 +21,6 @@ slug: Web/API/DataTransfer
 - {{domxref("DataTransfer.dropEffect")}}
   - : 現在選択されているドラッグ&amp;ドロップ操作の種類を取得したり、新しい操作の種類をセットしたりします。値は `none`, `copy`, `link`, `move` のいずれかです。
 - {{domxref("DataTransfer.effectAllowed")}}
-
   - : とりうるすべての操作の種類を与えます。`none`, `copy`, `copyLink`, `copyMove`, `link`, `linkMove`, `move`, `all`, `uninitialized` のいずれかです。
 
 - {{domxref("DataTransfer.files")}}
@@ -100,6 +99,6 @@ slug: Web/API/DataTransfer
 
 - [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
 - [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
 - [複数の項目のドラッグ＆ドロップ](/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

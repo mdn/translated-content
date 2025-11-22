@@ -2,10 +2,8 @@
 title: import
 slug: Web/JavaScript/Reference/Statements/import
 l10n:
-  sourceCommit: eb7cf694c19b31ee8826f22eaac6c12e808b1e50
+  sourceCommit: 3d3046d13482ca979db8b98b6eb55927b9b3a51f
 ---
-
-{{jsSidebar("Statements")}}
 
 静的な **`import`** 宣言は、他のモジュールによって[エクスポート](/ja/docs/Web/JavaScript/Reference/Statements/export)された読み込み専用の動的{{glossary("binding", "バインド")}}をインポートするために使用します。インポートしたバインドは、バインドをエクスポートしたモジュールによって更新される一方、インポートしているモジュールによって再割り当てすることができないために、「_動的バインド_」と呼ばれています。
 
@@ -32,7 +30,7 @@ import "module-name";
 - `defaultExport`
   - : モジュールからのデフォルトエクスポートを参照する名前。JavaScript の識別子として有効な文字列でなければなりません。
 - `module-name`
-  - : インポートするモジュール。この指定子はホストが示した方法で評価されます。こちらはしばしばモジュールを含む `.js` ファイルへの相対または絶対 URL となっています。Node では、拡張子なしのインポートは `node_modules` におけるパッケージへの参照であることが多いです。バンドラーによっては、拡張子を省略してもよいことにしています。環境を確認してください。単一引用符や二重引用符で囲った文字列だけが使えます。
+  - : インポート元のモジュール。 単一引用符および二重引用符で囲まれた文字列リテラルのみが許可されます。 指定子の評価はホストによって規定されます。ほとんどのホストはブラウザーに準拠し、指定子を現在のモジュール URL（[`import.meta.url`](/ja/docs/Web/JavaScript/Reference/Operators/import.meta) 参照）に対する相対 URL として解決します。Node、bundlers、その他の非ブラウザー環境では、これに加えて独自の機能を定義していることが多いため、正確なルールを理解するにはそれらのドキュメントを参照する必要があります。[モジュール指定子の解決](#モジュール指定子の解決)の節にも詳細情報が記載されています。
 - `name`
   - : インポートを参照するとき名前空間のように用いられるモジュールオブジェクトの名前。JavaScript の識別子として有効な文字列でなければなりません。
 - `exportN`
@@ -93,11 +91,12 @@ export { a as "a-b" };
 import { "a-b" as a } from "/modules/my-module.js";
 ```
 
-> **メモ:** `import { x, y } from "mod"` は、 `import defaultExport from "mod"` して `defaultExport` から `x` と `y` を分割代入することと等価ではありません。名前付きのインポートとデフォルトのインポートは JavaScript のモジュールにおける別種の構文です。
+> [!NOTE]
+> `import { x, y } from "mod"` は、 `import defaultExport from "mod"` して `defaultExport` から `x` と `y` を構造分解することと等価ではありません。名前付きのインポートとデフォルトのインポートは JavaScript のモジュールにおける別種の構文です。
 
 #### デフォルトの import
 
-デフォルトエクスポートでエクスポートされた値は、対応するデフォルトのインポート構文を用いてインポートする必要があります。最も単純なバージョンでは、デフォルトの値を直接インポートします。
+デフォルトエクスポートでエクスポートされた値は、対応するデフォルトのインポート構文を用いてインポートする必要があります。このバージョンでは、デフォルトの値を直接インポートします。
 
 ```js
 import myDefault from "/modules/my-module.js";
@@ -138,9 +137,10 @@ import * as myModule from "/modules/my-module.js";
 myModule.doAllTheAmazingThings();
 ```
 
-`myModule` は[封印された](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed) [`null` プロトタイプ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null_プロトタイプオブジェクト)オブジェクトです。 デフォルトのエクスポートは `default` という名前のキーで利用できるようになっています。詳細は[モジュール名前空間オブジェクト](/ja/docs/Web/JavaScript/Reference/Operators/import#モジュール名前空間オブジェクト)をご覧ください。
+`myModule` は[封印された](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed) [`null` プロトタイプ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null_プロトタイプオブジェクト)オブジェクトです。 デフォルトエクスポートは `default` という名前のキーで利用できるようになっています。詳細は[モジュール名前空間オブジェクト](/ja/docs/Web/JavaScript/Reference/Operators/import#モジュール名前空間オブジェクト)をご覧ください。
 
-> **メモ:** JavaScript は `import * from "module-name"` のような、ワイルカードインポートを提供していません。名前の衝突が高確率で発生するためです。
+> [!NOTE]
+> JavaScript は `import * from "module-name"` のような、ワイルカードインポートを提供していません。名前の衝突が高確率で発生するためです。
 
 #### 副作用のためだけにモジュールをインポートする
 
@@ -162,11 +162,57 @@ myModule.doAllTheAmazingThings(); // myModule.doAllTheAmazingThings は次の行
 import * as myModule from "/modules/my-module.js";
 ```
 
+### モジュール指定子の解決
+
+ECMAScript 仕様書はモジュール指定子の解決方法を定義しておらず、ホスト環境（ブラウザー、Node.js、Deno など）に委ねています。ブラウザーの動作は [HTML 仕様書](https://html.spec.whatwg.org/multipage/webappapis.html#resolve-a-module-specifier)で規定されており、これがすべての環境における事実上の標準となっています。
+
+HTML 仕様書、Node、その他多くの実装で広く認知されている指定子には、主に以下の 3 種類があります。
+
+- `/`、`./`、`../` で始まる「相対指定子」は、現在のモジュール URL を基準に解決されます。
+- 「絶対指定子」は解析可能な URL であり、そのまま解決されます。
+- 上記に該当しない「素の指定子」。
+
+相対指定子に関する最も重要な注意点（特に [CommonJS](https://wiki.commonjs.org/wiki/CommonJS) の規約に慣れたユーザーにとって）は、ブラウザーでは 1 つの指定子が暗黙的に複数の候補に解決されることを禁止している点です。CommonJS では、`main.js` と `utils/index.js` が存在する場合、以下のいずれの記述も `utils/index.js` の「デフォルトエクスポート」をインポートします。
+
+```js
+// main.js
+const utils = require("./utils"); // "index.js" のファイル名を省略
+const utils = require("./utils/index"); // ".js" の拡張子のみを省略
+const utils = require("./utils/index.js"); // もっとも明示的
+```
+
+ウェブ上では、これはコストがかかります。なぜなら、`import x from "./utils"` と記述した場合、ブラウザーはインポート可能なモジュールが見つかるまで、`utils`、`utils/index.js`、`utils.js`、そしておそらく他にも多くの URL に対してリクエストを送信する必要があるからです。したがって、HTML 仕様書では、指定子はデフォルトで現在のモジュール URL を基準に解決される URL のみに制限されています。ファイル拡張子や `index.js` というファイル名を省略することはできません。この動作は Node.js の ESM 実装に継承されていますが、ECMAScript 仕様書には含まれていません。
+
+ただし、これは `import x from "./utils"` がウェブ上で全く機能しないという意味ではありません。 ブラウザーは依然としてその URL にリクエストを送信し、サーバーが正しいコンテンツで応答できればインポートは成功します。 通常、拡張子なしのリクエストは HTML ファイルへのリクエストとして解釈されるため、これを実現するにはサーバー側で独自の解決ロジックを実装する必要があります。
+
+絶対指定子は、インポート可能なソースコードに解決されるあらゆる種類の [URL](/ja/docs/Web/URI) です。特に以下のものが挙げられます。
+
+- [HTTP URL](/ja/docs/Web/HTTP) は、ほとんどのスクリプトが既に HTTP URL を使用しているため、ウェブ上では常に対応しています。Deno ではネイティブに対応してあります（Deno は当初、モジュールシステム全体を HTTP URL に依存させていました）。一方、Node では[カスタム HTTPS ローダー](https://nodejs.org/api/module.html#import-from-https)を介した実験的な対応のみとなっています。
+- `file:` URL は、Node などの多くのブラウザー以外のランタイムで利用でき、これらの環境ではスクリプトが既に `file:` URL を使用しています。しかし、セキュリティ上の理由から、ブラウザーでは利用できません。
+- [データ URL](/ja/docs/Web/URI/Reference/Schemes/data) は、ブラウザー、Node、Deno など多くのランタイムで使用可能です。小さなモジュールをソースコードに直接埋め込むのに便利です。対応する [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)は、インポート可能なソースコードを指定するものです。例えば、JavaScript 用の `text/javascript`、JSON モジュール用の `application/json`、WebAssembly モジュール用の `application/wasm` などです。（なお、 [import 属性](/ja/docs/Web/JavaScript/Reference/Statements/import/with)が必要となる場合があります。）
+
+  ```js
+  // HTTP URL
+  import x from "https://example.com/x.js";
+  // データ URL
+  import x from "data:text/javascript,export default 42;";
+  // JSON モジュールのデータ URL
+  import x from 'data:application/json,{"foo":42}' with { type: "json" };
+  ```
+
+  `text/javascript` データ URL であってもモジュールとして解釈されますが、相対インポートは使用できません。これは `data:` URL スキームが階層構造を持たないためです。つまり、`import x from "data:text/javascript,import y from './y.js';"` はエラーが発生します。相対指定子 `'./y.js'` を解決できないためです。
+
+- [`node:` URL](https://nodejs.org/api/esm.html#node-imports) は、Node.js の組み込みモジュールに解決されます。これらは Node および Bun など、Node との互換性を主張する他のランタイムで使用できます。
+
+CommonJS によって普及した素の指定子は、`node_modules` ディレクトリー内で解決されます。例えば、`import x from "foo"` がある場合、ランタイムは現在のモジュールの親ディレクトリー内にある任意の `node_modules` ディレクトリー内で `foo` パッケージを探します。この動作は、[import maps](/ja/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps) を使用することでブラウザーでも再現可能であり、他の方法で解決をカスタマイズすることもできます。
+
+モジュール解決アルゴリズムは、HTML仕様書で定義されている [`import.meta.resolve`](/ja/docs/Web/JavaScript/Reference/Operators/import.meta/resolve) 関数を使用して、プログラム的に実行することも可能です。
+
 ## 例
 
 ### 標準的なインポート
 
-こちらの例では、指定した範囲内におけるすべての素数を取得する関数をエクスポートする、再利用可能なモジュールを作ります。
+こちらの例では、指定した範囲内におけるすべての素数を取得する関数をエクスポートする、再使用可能なモジュールを作ります。
 
 ```js
 // getPrimes.js
@@ -223,6 +269,14 @@ setTimeout(() => {
   myValue = 3; // TypeError: Assignment to constant variable.
   // インポートしているモジュールができるのは値を読むことだけで、再代入はできません。
 }, 1000);
+```
+
+### JavaScript 以外のモジュールのインポート
+
+JavaScript 以外のモジュールも `import` 文でインポートできますが、その型は [import 属性](/ja/docs/Web/JavaScript/Reference/Statements/import/with)を使用して明示的に宣言する必要があります。例えば、JSON モジュールをインポートするには、`type: "json"` 属性を指定する必要があります。
+
+```js
+import data from "./data.json" with { type: "json" };
 ```
 
 ## 仕様書

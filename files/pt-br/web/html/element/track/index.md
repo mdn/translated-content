@@ -77,31 +77,24 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 - `default`
   - : This attribute indicates that the track should be enabled unless the user's preferences indicate that another track is more appropriate. This may only be used on one `track` element per media element.
 - `kind`
-
   - : How the text track is meant to be used. If omitted the default kind is `subtitles`. If the attribute is not present, it will use the `subtitles`. If the attribute contains an invalid value, it will use `metadata`. (Versions of Chrome earlier than 52 treated an invalid value as `subtitles`.) The following keywords are allowed:
-
     - `subtitles`
-
       - Subtitles provide translation of content that cannot be understood by the viewer. For example dialogue or text that is not English in an English language film.
       - Subtitles may contain additional content, usually extra background information. For example the text at the beginning of the Star Wars films, or the date, time, and location of a scene.
 
     - `captions`
-
       - Closed captions provide a transcription and possibly a translation of audio.
       - It may include important non-verbal information such as music cues or sound effects. It may indicate the cue's source (e.g. music, text, character).
       - Suitable for users who are deaf or when the sound is muted.
 
     - `descriptions`
-
       - Textual description of the video content.
       - Suitable for users who are blind or where the video cannot be seen.
 
     - `chapters`
-
       - Chapter titles are intended to be used when the user is navigating the media resource.
 
     - `metadata`
-
       - Tracks used by scripts. Not visible to the user.
 
 - `label`

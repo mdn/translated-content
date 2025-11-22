@@ -3,8 +3,6 @@ title: Firefox 79 for developers
 slug: Mozilla/Firefox/Releases/79
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 79 の変更点をまとめています。Firefox 79 は、2020 年 7 月 28 日にリリースされました。
 
 Mozilla hacks の記事「[Firefox 79: The safe return of shared memory, new tooling, and platform updates](https://hacks.mozilla.org/2020/07/firefox-79/)」もご覧ください。
@@ -60,21 +58,19 @@ Mozilla hacks の記事「[Firefox 79: The safe return of shared memory, new too
 
 #### 廃止
 
-- メディア特性 [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) の値 `no-preference` が、[media queries 仕様書](https://drafts.csswg.org/mediaqueries-5/#descdef-media-prefers-color-scheme) および Firefox から削除されました ([Firefox バグ 1643656](https://bugzil.la/1643656))。
+- メディア特性 [`prefers-color-scheme`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) の値 `no-preference` が、[media queries 仕様書](https://drafts.csswg.org/mediaqueries-5/#descdef-media-prefers-color-scheme) および Firefox から削除されました ([Firefox バグ 1643656](https://bugzil.la/1643656))。
 
 ### JavaScript
 
 - {{jsxref("SharedArrayBuffer")}} を、post-Spectre-safe な方法で再び有効化しました。クロスオリジン分離のサイトで使用できます ([Firefox バグ 1619649](https://bugzil.la/1619649))。
-
   - サイトをクロスオリジン分離にするには、新たに {{HTTPHeader("Cross-Origin-Embedder-Policy")}} (COEP) および {{HTTPHeader("Cross-Origin-Opener-Policy")}} (COOP) ヘッダーを設定することが必要です。
 
 - {{jsxref("Promise.any()")}} が使用可能になりました ([Firefox バグ 1599769](https://bugzil.la/1599769))。
 - {{jsxref("WeakRef")}} オブジェクトを実装しました ([Firefox バグ 1639246](https://bugzil.la/1639246))。
-- [Logical assignment operators](https://github.com/tc39/proposal-logical-assignment) をサポートしました ([Firefox バグ 1639591](https://bugzil.la/1639591))。
-
-  - [Logical nullish assignment (`??=`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
-  - [Logical AND assignment (`&&=`)](/ja/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)
-  - [Logical OR assignment (`||=`)](/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)
+- [論理代入演算子](https://github.com/tc39/proposal-logical-assignment) をサポートしました ([Firefox バグ 1639591](https://bugzil.la/1639591))。
+  - [論理ヌル代入演算子 (`??=`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
+  - [論理積代入演算子 (`&&=`)](/ja/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)
+  - [論理和代入演算子 (`||=`)](/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)
 
 - {{jsxref("Atomics")}} オブジェクトが、共有されていないメモリーでも動作するようになりました ([Firefox バグ 1630706](https://bugzil.la/1630706))。
 - [`Intl.DateTimeFormat()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) で、`dateStyle` および `timeStyle` オプションをサポートしました ([Firefox バグ 1557718](https://bugzil.la/1557718))。
