@@ -1,26 +1,27 @@
 ---
-title: window.scrollX
+title: "Window: scrollX プロパティ"
+short-title: scrollX
 slug: Web/API/Window/scrollX
+l10n:
+  sourceCommit: e561fa67af347b9770b359ba93e8579d2a540682
 ---
 
-{{APIRef("CSSOM View")}}
+{{ APIRef("CSSOM View") }}
 
-{{domxref("Window")}} インターフェイスの読み取り専用プロパティである **`scrollX`** は、文書が水平スクロールされているピクセル数を返します。現代のブラウザーではこの値がサブピクセル精度ですので、必ずしも整数であるとは限りません。文書が垂直スクロールされているピクセル数は、{{domxref("Window.scrollY", "scrollY")}} プロパティで取得できます。
+**`scrollX`** は {{domxref("Window")}} インターフェイスの読み取り専用プロパティで、文書が現在水平方向にスクロールしているピクセル数を返します。最近のブラウザーでは、この値はサブピクセル精度ですので、必ずしも整数であるとは限りません。文書が垂直方向にスクロールしているピクセル数は {{domxref("Window.scrollY", "scrollY")}} プロパティで取得できます。
 
-## 構文
+## 値
 
-```
-var x = window.scrollX;
-```
-
-### 値
-
-実際に返される値は、文書が原点から水平方向にスクロールされた量をピクセル数で表す倍精度浮動小数点数です。正の値は、内容物が左にスクロールされていることを表します。文書がサブピクセル精度のデバイスに表示されている場合は、戻り値も小数部を含むサブピクセル精度の値になります。文書が左にも右にもスクロールされていない場合の `scrollX` は 0 です。
+倍精度浮動小数点値で、文書が現在原点から水平方向にスクロールされているピクセル数を示します。正の値はコンテンツが右方向にスクロールされていることを意味します（右側にさらにコンテンツを表示するため）。より技術的に言えば、`scrollX` は現在の{{Glossary("viewport", "ビューポート")}}の左端の X 座標を返します。文書が左右どちらにもスクロールされていない場合、`scrollX` は 0 です。ビューポートが存在しない場合、返される値は 0 です。文書がサブピクセル精度の端末でレンダリングされている場合、返される値もサブピクセル精度となり、小数点以下の成分を含むことがあります。
 
 > [!NOTE]
-> 整数値が必要である場合は、{{jsxref("Math.round()")}} を使用して切り捨てできます。
+> 整数値が必要である場合は、{{jsxref("Math.round()")}} を使用して四捨五入してください。
 
-専門用語で説明すると `scrollX` は、現在の {{Glossary("viewport", "ビューポート")}} の左端の X 座標を返します。ビューポートがない場合の戻り値は 0 です。
+文書が最初のコンテナーブロックから左方向にスクロール可能な場合、`scrollX` が負の値になる可能性があります。例えば、文書が右から左方向で、コンテンツが左方向に拡大する場合などが該当します。
+
+Safari はオーバースクロールに対して、最大スクロール位置を超えて `scrollX` を更新することで応答します（デフォルトの「バウンス」効果が無効化されていない限り。例えば {{cssxref("overscroll-behavior")}} を `none` に設定した場合など）。一方、Chrome と Firefox はそうなりません。
+
+このプロパティは読み取り専用です。ウィンドウを特定の位置にスクロールするには、{{domxref("Window.scroll()")}} を使用してください。
 
 ## 例
 
@@ -32,29 +33,9 @@ if (window.scrollX > 400) {
 }
 ```
 
-## 注記
+## メモ
 
-`pageXOffset` プロパティは、`scrollX` プロパティのエイリアスです。:
-
-```js
-window.pageXOffset == window.scrollX; // 常に true
-```
-
-クロスブラウザー互換性のため、`window.scrollX` ではなく `window.pageXOffset` を使用します。_さらに_、古いバージョンの Internet Explorer (IE9 以前) はいずれもサポートしていないため、チェックの上、なければ他の非標準の方法で回避する必要があります。以下に互換性を確保した例を示します。
-
-```js
-var x =
-  window.pageXOffset !== undefined
-    ? window.pageXOffset
-    : (document.documentElement || document.body.parentNode || document.body)
-        .scrollLeft;
-
-var y =
-  window.pageYOffset !== undefined
-    ? window.pageYOffset
-    : (document.documentElement || document.body.parentNode || document.body)
-        .scrollTop;
-```
+`pageXOffset` プロパティは `scrollX` プロパティの別名です。つまり、いずれのプロパティも再割り当てしていない場合、`window.pageXOffset === window.scrollX` は常に真となります。
 
 ## 仕様書
 
@@ -66,4 +47,4 @@ var y =
 
 ## 関連情報
 
-- {{domxref("window.scrollY")}}
+- {{domxref("Window.scrollY")}}
