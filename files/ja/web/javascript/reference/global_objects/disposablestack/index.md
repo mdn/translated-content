@@ -46,20 +46,20 @@ disposer.use(reader);
 - `DisposableStack.prototype[Symbol.toStringTag]`
   - : [`[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は文字列 `"DisposableStack"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。
 
-## Instance methods
+## インスタンスメソッド
 
 - {{jsxref("DisposableStack.prototype.adopt()")}}
-  - : Registers a value that doesn't implement the disposable protocol to the stack by providing a custom disposer function.
+  - : スタックに破棄可能プロトコルを実装していない値を、カスタムのディスポーザー関数を提供することで登録します。
 - {{jsxref("DisposableStack.prototype.defer()")}}
-  - : Takes a callback function to be called when the stack is disposed.
+  - : スタックが破棄されるときに呼び出される、コールバック関数を受け取ります。
 - {{jsxref("DisposableStack.prototype.dispose()")}}
-  - : Disposes this stack by calling all disposers registered to it in reverse order of registration.
+  - : 登録された順番とは逆の順番で、スタックに登録されたすべてのディスポーザーを呼び出し、スタックを破棄します。
 - {{jsxref("DisposableStack.prototype.move()")}}
-  - : Creates a new `DisposableStack` instance that contains the same disposers as this stack, and then marks this stack as disposed, without calling any disposers.
+  - : スタック内に同じディスポーザーを含む新しい `DisposableStack` インスタンスを作成し、ディスポーザーをまったく呼び出すことなくスタックを破棄済みとしてマークします。
 - {{jsxref("DisposableStack.prototype.use()")}}
-  - : Registers a value that implements the disposable protocol to the stack.
+  - : 破棄可能プロトコルを実装している値をスタックに登録します。
 - [`DisposableStack.prototype[Symbol.dispose]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/DisposableStack/Symbol.dispose)
-  - : An alias for the `dispose()` method.
+  - : `dispose()` メソッドのエイリアス。
 
 ## Specifications
 
