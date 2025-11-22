@@ -28,7 +28,7 @@ Firefox 8 は 2011 年 11 月 8 日にリリースされました。この記事
 - {{ domxref("FileReaderSync") }} インターフェイス（ファイル API の一部）が実装されました。
 - 入れ子になった {{ HTMLElement("label") }} のイベントハンドリングが修正されました。
 - ウィンドウ間での {{ domxref("window.postMessage()") }} に {{ domxref("File") }} と {{ domxref("FileList") }} が使えるようになりました。
-- {{ domxref("HTMLelement.contenteditable", "contenteditable") }} な領域において、見出しで改行した際、もしくはリスト編集モードから 2 回開業して抜け出す際、段落が挿入されるようになりました。(これまでは {{ HTMLElement("br") }} でしたが、これからは {{ HTMLElement("p") }} が挿入されます。)
+- {{ domxref("HTMLelement.contenteditable", "contenteditable") }} な領域において、見出しで改行した際、もしくはリスト編集モードから 2 回改行して抜け出す際、段落が挿入されるようになりました。(これまでは {{ HTMLElement("br") }} でしたが、これからは {{ HTMLElement("p") }} が挿入されます。)
 - {{ domxref("HTMLelement.contenteditable", "contenteditable") }} な領域において、1 行目に均等割付を与えたときに適切な処理を妨げるバグを修正しました。
 - {{ domxref("HTMLelement.contenteditable", "contenteditable") }} な領域の最初で delete もしくは backspace を押した際に、前のブロックに影響するバグを修正しました。
 - {{ domxref("Document.getSelection()") }} が文字列化ではなく、{{ domxref("window.getSelection()") }} と同じ `Selection` オブジェクトを返すようになりました。
