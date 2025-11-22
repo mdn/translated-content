@@ -1,6 +1,9 @@
 ---
-title: DataTransfer.dropEffect
+title: "DataTransfer: dropEffect プロパティ"
+short-title: dropEffect
 slug: Web/API/DataTransfer/dropEffect
+l10n:
+  sourceCommit: 8285d415db211ae9efe04752d9dab1b574450ee8
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
@@ -36,16 +39,11 @@ slug: Web/API/DataTransfer/dropEffect
 
 ```html
 <div>
-  <p id="source" ondragstart="dragstart_handler(event);" draggable="true">
+  <p id="source" draggable="true">
     この要素を選択し、ドロップゾーンにドラッグして放すと、要素が移動します。
   </p>
 </div>
-<div
-  id="target"
-  ondrop="drop_handler(event);"
-  ondragover="dragover_handler(event);">
-  ドロップゾーン
-</div>
+<div id="target">ドロップゾーン</div>
 ```
 
 ### CSS
@@ -69,50 +67,42 @@ div {
 ### JavaScript
 
 ```js
-function dragstart_handler(ev) {
+const source = document.getElementById("source");
+const target = document.getElementById("target");
+
+source.addEventListener("dragstart", (ev) => {
   console.log(
-    "dragStart: dropEffect = " +
-      ev.dataTransfer.dropEffect +
-      " ; effectAllowed = " +
-      ev.dataTransfer.effectAllowed,
+    `dragStart: dropEffect = ${ev.dataTransfer.dropEffect} ; effectAllowed = ${ev.dataTransfer.effectAllowed}`,
   );
 
-  // この要素の id をドラッグ ペイロードに追加し、ドロップ ハンドラーが
+  // この要素の id をドラッグデータ本体に追加し、ドロップハンドラーが
   // どの要素をツリーに追加するかを知ることができるようにします。
   ev.dataTransfer.setData("text", ev.target.id);
   ev.dataTransfer.effectAllowed = "move";
-}
+});
 
-function drop_handler(ev) {
+target.addEventListener("drop", (ev) => {
   console.log(
-    "drop: dropEffect = " +
-      ev.dataTransfer.dropEffect +
-      " ; effectAllowed = " +
-      ev.dataTransfer.effectAllowed,
+    `drop: dropEffect = ${ev.dataTransfer.dropEffect} ; effectAllowed = ${ev.dataTransfer.effectAllowed}`,
   );
   ev.preventDefault();
 
   // ターゲットの ID を取得し、移動した要素をターゲットの DOM に追加します。
-  var data = ev.dataTransfer.getData("text");
+  const data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
-}
+});
 
-function dragover_handler(ev) {
+target.addEventListener("dragover", (ev) => {
   console.log(
-    "dragOver: dropEffect = " +
-      ev.dataTransfer.dropEffect +
-      " ; effectAllowed = " +
-      ev.dataTransfer.effectAllowed,
+    `dragOver: dropEffect = ${ev.dataTransfer.dropEffect} ; effectAllowed = ${ev.dataTransfer.effectAllowed}`,
   );
   ev.preventDefault();
   // dropEffect を移動するように設定します。
   ev.dataTransfer.dropEffect = "move";
-}
+});
 ```
 
-### 結果
-
-{{EmbedLiveSample('Example', 300, 250)}}
+{{EmbedLiveSample('例', 300, 250)}}
 
 ## 仕様書
 
@@ -126,6 +116,4 @@ function dragover_handler(ev) {
 
 - [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
 - [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
-- [複数の項目のドラッグ＆ドロップ](/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
-- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)
+- [ドラッグデータストアでの作業](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)

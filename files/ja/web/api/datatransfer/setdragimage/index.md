@@ -1,11 +1,14 @@
 ---
-title: DataTransfer.setDragImage()
+title: "DataTransfer: setDragImage() メソッド"
+short-title: setDragImage()
 slug: Web/API/DataTransfer/setDragImage
+l10n:
+  sourceCommit: 8285d415db211ae9efe04752d9dab1b574450ee8
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
 
-ドラッグが発生すると、ドラッグ対象（{{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントが発生した要素）から半透明の画像が生成され、ドラッグ中にマウスポインターに沿って移動します。この画像は自動的に作成されるので、自分で作成する必要はありません。ただし、カスタム画像が必要な場合は、**`DataTransfer.setDragImage()`** メソッドを使用して、使用するカスタム画像を設定することができます。画像は通常、 {{HTMLElement("image")}} 要素になりますが、 {{HTMLElement("canvas")}} やその他の可視要素であっても構いません。
+ドラッグが発生すると、ドラッグ対象（{{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントが発生した要素）から半透明の画像が生成され、ドラッグ中にマウスポインターに沿って移動します。この画像は自動的に作成されるので、自分で作成する必要はありません。ただし、カスタム画像が必要な場合は、**`DataTransfer.setDragImage()`** メソッドを使用して、使用するカスタム画像を設定することができます。画像は通常、 {{HTMLElement("img")}} 要素になりますが、 {{HTMLElement("canvas")}} やその他の可視要素であっても構いません。
 
 メソッドの `x` 座標と `y` 座標は、マウスポインターに対する画像の相対的な表示方法を定義します。これらの座標は、マウスカーソルがあるべき画像のオフセットを定義します。例えば、ポインターが中心に来るように画像を表示するには、画像の幅と高さの半分の値を使用します。
 
@@ -13,8 +16,8 @@ slug: Web/API/DataTransfer/setDragImage
 
 ## 構文
 
-```js
-setDragImage(imgElement, xOffset, yOffset);
+```js-nolint
+setDragImage(imgElement, xOffset, yOffset)
 ```
 
 ### 引数
@@ -37,64 +40,58 @@ setDragImage(imgElement, xOffset, yOffset);
 
 ## 例
 
-この例では、`setDragImage()` メソッドの使用方法を示します。この例では `example.gif` という名前の画像ファイルを参照していることに注意しましょう。そのファイルが存在する場合はそのファイルがドラッグ画像として使用され、そのファイルが存在しない場合はブラウザーが既定のドラッグ画像を使用します。
+### setDragImage() の使用
 
-[デモ](https://codepen.io/webgeeker/full/KBzrxE/)
+```html-nolint
+<div>
+  <p id="source" draggable="true">
+    この要素を選択し、ドロップゾーンにドラッグしてから放すと要素が移動します。
+  </p>
+</div>
+<div id="target">ドロップゾーン</div>
+```
+
+```css
+div {
+  margin: 0em;
+  padding: 2em;
+}
+#source {
+  color: blue;
+  border: 1px solid black;
+}
+#target {
+  border: 1px solid black;
+}
+```
 
 ```js
-<!DOCTYPE html>
-<html lang=en>
-<title>Example of DataTransfer.setDragImage()</title>
-<meta name="viewport" content="width=device-width">
-<style>
-  div {
-    margin: 0em;
-    padding: 2em;
-  }
-  #source {
-    color: blue;
-    border: 1px solid black;
-  }
-  #target {
-    border: 1px solid black;
-  }
-</style>
-<script>
-function dragstart_handler(ev) {
- console.log("dragStart");
- // ドラッグのフォーマットとデータを設定します。データにはイベントターゲットの ID を使用します。
- ev.dataTransfer.setData("text/plain", ev.target.id);
- // 画像を作成してドラッグ画像に使用する
- // 注意: "example.gif" を既存の画像に変更しないと画像が作成されず、
- // デフォルトのドラッグ画像が使用されます。
- const img = new Image();
- img.src = 'example.gif';
- ev.dataTransfer.setDragImage(img, 10, 10);
-}
+const source = document.getElementById("source");
+const target = document.getElementById("target");
 
-function dragover_handler(ev) {
- console.log("dragOver");
- ev.preventDefault();
-}
+// 画像を作成してドラッグ画像に使用します。好きな画像の URL を使用してください。
+const img = new Image();
+img.src = "/shared-assets/images/examples/favicon32.png";
 
-function drop_handler(ev) {
- console.log("Drop");
- ev.preventDefault();
- // ドロップ対象のIDであるデータを取得します。
- const data = ev.dataTransfer.getData("text");
- ev.target.appendChild(document.getElementById(data));
-}
-</script>
-<body>
-<h1>Example of <code>DataTransfer.setDragImage()</code></h1>
- <div>
-   <p id="source" ondragstart="dragstart_handler(event);" draggable="true">
-     この要素を選択し、ドロップゾーンにドラッグしてから放すと要素が移動します。</p>
- </div>
- <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">ドロップゾーン</div>
-</body>
-</html>
+source.addEventListener("dragstart", (ev) => {
+  // ドラッグの形式とデータを設定する。データにはイベントターゲットの ID を使用する
+  ev.dataTransfer.setData("text/plain", ev.target.id);
+  ev.dataTransfer.setDragImage(img, 10, 10);
+});
+
+target.addEventListener("dragover", (ev) => {
+  ev.preventDefault();
+});
+
+target.addEventListener("drop", (ev) => {
+  ev.preventDefault();
+  // ドロップ対象の ID であるデータを取得
+  const data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+});
 ```
+
+{{EmbedLiveSample("Using setDragImage", "", 300)}}
 
 ## 仕様書
 
@@ -108,6 +105,4 @@ function drop_handler(ev) {
 
 - [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
 - [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
-- [複数の項目のドラッグ＆ドロップ](/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
-- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)
+- [ドラッグデータストアでの作業](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
