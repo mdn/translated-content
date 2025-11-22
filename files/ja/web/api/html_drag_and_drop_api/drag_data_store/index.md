@@ -134,7 +134,7 @@ p1.addEventListener("drop", dropHandler);
 - `DataTransferItem.getAsString()` はコールバックを呼び出すことなく戻ります。
 - `DataTransferItem.getAsFile()` は常に `null` を返します。
 
-繰り返しますが、読み取り/書き込み保護は[ジョブ単位](/ja/docs/Web/JavaScript/Reference/Execution_model#job_queue_and_event_loop)で実施されます。つまり、`drop`ハンドラ内の_同期コード_のみがデータストアを読み取れます。非同期操作後にデータストアにアクセスしようとすると、書き込み権限は失われます。例えば、以下は動作しません:
+繰り返しますが、読み取り/書き込み保護は[ジョブ単位](/ja/docs/Web/JavaScript/Reference/Execution_model#job_queue_and_event_loop)で実施されます。つまり、`drop` ハンドラー内の同期コードのみがデータストアを読み取れます。非同期操作後にデータストアにアクセスしようとすると、書き込み権限は失われます。例えば、以下は動作しません。
 
 ```js example-bad
 function getDataPromise(item) {
