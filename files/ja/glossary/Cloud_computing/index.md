@@ -15,13 +15,13 @@ l10n:
 
 - サービスとしてのインフラストラクチャ（IaaS）
   - : IaaS（Infrastructure as a Service）は、サーバー、ストレージ、ネットワークといった仮想化されたコンピューティングリソースをインターネット経由で提供するサービスです。ユーザーは自らのインフラストラクチャを自由に管理できます。 そのため、リソースの柔軟な利用と詳細な制御が可能です。企業はIaaSを用いることで、物理的なサーバーを保有することなく、迅速にサーバーインフラストラクチャを拡張できます。
-  代表的なサービスとして、Amazon Web Services（AWS EC2）、Microsoft Azure Virtual Machines、そしてGoogle Compute Engine（GCE）などがあります。
+    代表的なサービスとして、Amazon Web Services（AWS EC2）、Microsoft Azure Virtual Machines、そしてGoogle Compute Engine（GCE）などがあります。
 - サービスとしてのプラットフォーム（PaaS）
   - : PaaS（Platform as a Service）は、顧客がサーバー、ストレージ、ネットワークといった基盤となるインフストラクチャを意識せずに、アプリケーションの開発、実行、管理を可能にするプラットフォームを提供するサービスです。PaaSによって開発者はサーバーやオペレーティングシステムを管理することなく、コードやアプリケーションロジックの作成に専念できます。
-  代表的なサービスとして、Google App Engine、Microsoft Azure App Service、Heroku、そしてAWS Elastic Beanstalkなどがあります。
+    代表的なサービスとして、Google App Engine、Microsoft Azure App Service、Heroku、そしてAWS Elastic Beanstalkなどがあります。
 - サービスとしてのソフトウェア（SaaS）
   - : SaaS（Software as a Service）はインターネット経由でソフトウェアアプリケーションを提供するサービスです。ユーザーはウェブブラウザを通じてこれらを利用できます. SaaSプロバイダーは、基盤となるインフラストラクチャ、プラットフォーム、データを含むすべての管理を担います。 SaaSを利用する企業はソフトウェアを自社の端末にインストールしたり管理したり必要がない代わりに、ウェブブラウザからメール、CRM、コラボレーションツールなどのソフトウェアに直接アクセスできます。
-  代表的なサービスとして、Google Workspace、Microsoft 365、Slack、Github、そしてChatGPTなどがあります。
+    代表的なサービスとして、Google Workspace、Microsoft 365、Slack、Github、そしてChatGPTなどがあります。
 
 ## 関連情報
 
