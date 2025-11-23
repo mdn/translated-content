@@ -2,12 +2,12 @@
 title: DragEvent
 slug: Web/API/DragEvent
 l10n:
-  sourceCommit: f45409ba2169ff05e433d21aa4ee0424079916b8
+  sourceCommit: 8285d415db211ae9efe04752d9dab1b574450ee8
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
 
-**`DragEvent`** インターフェイスは、ドラッグ＆ドロップ操作を表す {{domxref("Event","DOM イベント", "", 1)}}です。ユーザーはタッチ面でポインティングデバイス（マウスなど）を置くことによりドラッグを開始して、ポインターを新たな場所（別の DOM 要素など）にドラッグします。アプリケーションは独自の方法で、ドラッグ＆ドロップの操作を自由に解釈できます。
+**`DragEvent`** インターフェイスは、ドラッグ＆ドロップ操作を表す [DOM イベント](/ja/docs/Web/API/Event)です。ユーザーはタッチ面でポインティングデバイス（マウスなど）を置くことによりドラッグを開始して、ポインターを新たな場所（別の DOM 要素など）にドラッグします。アプリケーションは独自の方法で、ドラッグ＆ドロップの操作を自由に解釈できます。
 
 このインターフェイスは、{{domxref("MouseEvent")}} および {{domxref("Event")}} からプロパティを継承しています。
 
@@ -58,5 +58,4 @@ l10n:
 
 - [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
 - [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推奨されるドラッグの種類](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
-- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)
+- [ドラッグデータストアでの作業](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
