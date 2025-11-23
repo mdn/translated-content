@@ -2,9 +2,8 @@
 title: グリッドレイアウトのアイテムの配置
 short-title: アイテムの配置
 slug: Web/CSS/Guides/Grid_layout/Box_alignment
-original_slug: Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
 l10n:
-  sourceCommit: f79a491594ebb5634949ed31b26155973a39166e
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)は、[CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)を実装しています。これは、フレックスコンテナー内のアイテムの配置に使用される[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)と同じ標準です。配置モジュールでは、すべてのレイアウトメソッドで配置がどのように動作すべきかを詳しく説明しています。

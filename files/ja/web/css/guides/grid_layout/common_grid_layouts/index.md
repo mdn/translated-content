@@ -2,9 +2,8 @@
 title: グリッドを使用したよくあるレイアウトの実現
 short-title: よくあるグリッドレイアウト
 slug: Web/CSS/Guides/Grid_layout/Common_grid_layouts
-original_slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 [一連の CSS グリッドレイアウトガイド](/ja/docs/Web/CSS/Guides/Grid_layout#ガイド)の締めくくりとして、グリッドレイアウトを使ったデザインのテクニックをいくつか紹介します。ここでは、 {{cssxref("grid-template-areas")}} を使った例と、 12 列の可変グリッドシステム、そして自動配置を使ったアイテムリストを見ていきます。これらの例からわかるように、多くの場合、グリッドレイアウトで望む結果を得るためには複数の方法があります。自分が解決しようとしている問題や、実現しようとしているデザインに合わせて、最も参考になる方法を選んでください。
@@ -27,8 +26,8 @@ l10n:
   max-width: 1024px;
   margin: 0 auto;
   font:
-    1.2em Helvetica,
-    arial,
+    1.2em "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -165,8 +164,8 @@ CSS フレームワークやグリッドシステムでは、通常 12 列また
   max-width: 1024px;
   margin: 0 auto;
   font:
-    1.2em Helvetica,
-    arial,
+    1.2em "Helvetica",
+    "Arial",
     sans-serif;
 }
 .wrapper > * {
@@ -243,8 +242,8 @@ CSS フレームワークやグリッドシステムでは、通常 12 列また
   max-width: 1024px;
   margin: 0 auto;
   font:
-    1.2em Helvetica,
-    arial,
+    1.2em "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -437,8 +436,8 @@ img {
 }
 body {
   font:
-    1.2em Helvetica,
-    arial,
+    1.2em "Helvetica",
+    "Arial",
     sans-serif;
 }
 a:link,
@@ -500,7 +499,7 @@ h2 {
 
 ![2 トラックのアイテムをレイアウトする空間がないため、隙間のあるレイアウトになっています。](11-grid-auto-flow-sparse.png)
 
-グリッドコンテナーに {{cssxref("grid-auto-flow", "grid-auto-flow: dense")}} を設定することで、グリッドにこれらのギャップを埋め戻すことができます。この操作を行う場合は、アイテムが論理的なソースの順序から外れてしまう可能性があるため、注意してください。この操作は、アイテムに設定された順序がない場合にのみ実行してください。さらに、ソースの順序に従ってタブの順序が設定され、再配置した表示順序とは異なるため、[アクセシビリティと再配置に関する問題](/ja/docs/Web/CSS/Guides/Grid_layout/Accessibility#visual_not_logical_re-ordering)が発生する可能性があることに注意してください。
+グリッドコンテナーに {{cssxref("grid-auto-flow", "grid-auto-flow: dense")}} を設定することで、グリッドにこれらのギャップを埋め戻すことができます。この操作を行う場合は、アイテムが論理的なソースの順序から外れてしまう可能性があるため、注意してください。この操作は、アイテムに設定された順序がない場合にのみ実行してください。さらに、ソースの順序に従ってタブの順序が設定され、再配置した表示順序とは異なるため、[アクセシビリティと再配置に関する問題](/ja/docs/Web/CSS/Guides/Grid_layout/Accessibility#視覚的な、しかし論理的ではない並べ替え)が発生する可能性があることに注意してください。
 
 ```html hidden
 <ul class="listing">
@@ -547,8 +546,8 @@ img {
 }
 body {
   font:
-    1.2em Helvetica,
-    arial,
+    1.2em "Helvetica",
+    "Arial",
     sans-serif;
 }
 a:link,
