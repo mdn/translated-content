@@ -1,9 +1,8 @@
 ---
 title: グリッドレイアウトとアクセシビリティ
 slug: Web/CSS/Guides/Grid_layout/Accessibility
-original_slug: Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 HTML は、意味づけが明確で、よく構造化された文書を作成する、ウェブサイトのコンテンツ層です。CSS はプレゼンテーション層であり、CSS を適用して、コンテンツのレイアウトなどを作成します。2 次元グリッド構造は、[CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout) を使用して定義されます。
