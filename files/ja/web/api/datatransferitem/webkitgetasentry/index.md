@@ -1,8 +1,9 @@
 ---
-title: DataTransferItem.webkitGetAsEntry()
+title: "DataTransferItem: webkitGetAsEntry() メソッド"
+short-title: webkitGetAsEntry()
 slug: Web/API/DataTransferItem/webkitGetAsEntry
 l10n:
-  sourceCommit: 77b8cdb3a05999ade4a269d0ef2443618bb7cd66
+  sourceCommit: b5437b737639d6952d18b95ebd1045ed73e4bfa7
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
@@ -32,23 +33,23 @@ webkitGetAsEntry()
 
 この例では、ドロップゾーンが作成されており、 {{domxref("HTMLElement/drop_event", "drop")}} イベントに応答して、ドロップされたファイルとディレクトリーをスキャンし、階層的なディレクトリーリストを出力しています。
 
-### HTML コンテンツ
+### HTML
 
-HTMLは、ドロップゾーンそのものを、ID `"dropzone"` を持つ {{HTMLElement("div")}} 要素と、ID `"listing"` を持つ非順序リスト要素で確立しています。
+HTML は、ドロップゾーンそのものを、ID `"dropzone"` を持つ {{HTMLElement("div")}} 要素と、ID `"listing"` を持つ順序なしリスト要素で確立しています。
 
-```html
-<p>Drag files and/or directories to the box below!</p>
+```html-nolint
+<p>ファイルやディレクトリーを下のボックスにドラッグしてください！</p>
 
 <div id="dropzone">
-  <div id="boxtitle">Drop Files Here</div>
+  <div id="boxtitle">ここにファイルをドラッグ</div>
 </div>
 
-<h2>Directory tree:</h2>
+<h2>ディレクトリーツリー:</h2>
 
 <ul id="listing"></ul>
 ```
 
-### CSS コンテンツ
+### CSS
 
 例で使用されるスタイル設定を示します。
 
@@ -82,7 +83,7 @@ body {
 }
 ```
 
-### JavaScript コンテンツ
+### JavaScript
 
 最初に、再帰的な関数である `scanFiles()` を見ていきましょう。
 この関数は、スキャンして処理するファイルシステムの項目を表す {{domxref("FileSystemEntry")}} を入力として受け取り（`item` 引数）、その内容のリストを格納する要素（`container` 引数）を受け取ります。
@@ -129,36 +130,28 @@ function scanFiles(item, container) {
 次に、イベントハンドラーが決まります。まず、{{domxref("HTMLElement/dragover_event", "dragover")}} イベントが既定のハンドラーで処理されないようにして、ドロップゾーンがドロップを受け取れるようにします。
 
 ```js
-dropzone.addEventListener(
-  "dragover",
-  (event) => {
-    event.preventDefault();
-  },
-  false,
-);
+dropzone.addEventListener("dragover", (event) => {
+  event.preventDefault();
+});
 ```
 
 このコースのイベントハンドラーは、もちろん {{domxref("HTMLElement/drop_event", "drop")}} イベントに対するハンドラーであり、すべてを開始させます。
 
 ```js
-dropzone.addEventListener(
-  "drop",
-  (event) => {
-    let items = event.dataTransfer.items;
+dropzone.addEventListener("drop", (event) => {
+  let items = event.dataTransfer.items;
 
-    event.preventDefault();
-    listing.textContent = "";
+  event.preventDefault();
+  listing.textContent = "";
 
-    for (let i = 0; i < items.length; i++) {
-      let item = items[i].webkitGetAsEntry();
+  for (const item of items) {
+    const entry = item.webkitGetAsEntry();
 
-      if (item) {
-        scanFiles(item, listing);
-      }
+    if (entry) {
+      scanFiles(entry, listing);
     }
-  },
-  false,
-);
+  }
+});
 ```
 
 これは、ドロップされたアイテムを表す {{domxref("DataTransferItem")}} オブジェクトのリストを `event.dataTransfer.items` から取得します。
@@ -168,8 +161,8 @@ dropzone.addEventListener(
 これにより、ディレクトリー項目の挿入を始めるための空の {{HTMLElement("ul")}} が残ります。
 
 次に、削除された項目のリストにある項目を反復処理します。
-それぞれについて、{{domxref("DataTransferItem.webkitGetAsEntry", "webkitGetAsEntry()")}} メソッドを呼び出して、ファイルを表す {{domxref("FileSystemEntry")}} を取得します。
-これが成功したら、 `scanFiles()` を呼び出して項目を処理します。ファイルであればリストに追加し、ディレクトリーであれば追加してその中に入っていきます。
+それぞれについて、`webkitGetAsEntry()` メソッドを呼び出して、ファイルを表す {{domxref("FileSystemEntry")}} を取得します。
+これが成功したら、`scanFiles()` を呼び出して項目を処理します。ファイルであればリストに追加し、ディレクトリーであれば追加してその中に入っていきます。
 
 ### 結果
 
@@ -179,7 +172,7 @@ dropzone.addEventListener(
 
 ## 仕様書
 
-この API には W3C または WHATWG の公式な定義がありません。
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -188,7 +181,6 @@ dropzone.addEventListener(
 ## 関連情報
 
 - [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
-- [ファイルとディレクトリー項目 API の紹介](/ja/docs/Web/API/File_System_API)
 - {{domxref("DataTransferItem")}}
 - {{domxref("FileSystemEntry")}}, {{domxref("FileSystemFileEntry")}}, {{domxref("FileSystemDirectoryEntry")}}
 - イベント: {{domxref("HTMLElement/dragover_event", "dragover")}} および {{domxref("HTMLElement/drop_event", "drop")}}
