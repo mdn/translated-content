@@ -3,7 +3,7 @@ title: "DragEvent: DragEvent() コンストラクター"
 short-title: DragEvent()
 slug: Web/API/DragEvent/DragEvent
 l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
@@ -26,11 +26,10 @@ new DragEvent(type, dragEventInit)
 - `type`
   - : イベント名を表す文字列です（[DragEvent のイベントの種類](/ja/docs/Web/API/DragEvent#イベントの種類)を参照）。
 
-- `dragEventInit` {{optional_inline}}
-  - : `DragEventInit` 辞書で、以下のフィールドがあります。
-    - `"dataTransfer"`: オプションで既定値は `"null"` です。型は {{domxref("DataTransfer")}} です。
-
-`DragEventInit` 辞書は {{domxref("MouseEvent.MouseEvent","MouseEventInit 辞書", "", 1)}}から継承しています。
+- `eventInitDict` {{optional_inline}}
+  - : 以下のプロパティを持つオブジェクトです。
+    - `dataTransfer` {{optional_inline}}
+      - : {{domxref("DataTransfer")}} です。既定値は `null` です。
 
 ## 仕様書
 
