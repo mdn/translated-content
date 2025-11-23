@@ -95,7 +95,6 @@ CSS で要素をアンカーとして宣言するには、{{cssxref("anchor-name
 場合によっては、要素間の意味的な性質により、暗黙のアンカー参照が確立されることがあります。
 
 - [ポップオーバー API](/ja/docs/Web/API/Popover_API) を使用してポップオーバーがコントロールに関連付けられた場合、両者の間に暗黙のアンカー参照が生成されます。これは次のような状況で発生する可能性があります。
-
   - 宣言的にポップオーバーがコントロールに関連付けられるように、[`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget) 属性と [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性を使用する。
   - プログラム的にポップオーバーアクション（{{domxref("HTMLElement.showPopover", "showPopover()")}} など）を、`source` オプションを使用してコントロールに関連付けする。
 - {{htmlelement("select")}} 要素とそのドロップダウンピッカーは、 {{cssxref("appearance")}} プロパティの `base-select` 値により、[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)機能に組み込まれます。この場合、両者の間に暗黙のポップオーバー呼び出し元関係が作成され、同時に暗黙のアンカー参照であるということになります。
