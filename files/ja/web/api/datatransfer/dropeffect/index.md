@@ -75,7 +75,7 @@ source.addEventListener("dragstart", (ev) => {
     `dragStart: dropEffect = ${ev.dataTransfer.dropEffect} ; effectAllowed = ${ev.dataTransfer.effectAllowed}`,
   );
 
-  // この要素の id をドラッグ ペイロードに追加し、ドロップ ハンドラーが
+  // この要素の id をドラッグデータ本体に追加し、ドロップハンドラーが
   // どの要素をツリーに追加するかを知ることができるようにします。
   ev.dataTransfer.setData("text", ev.target.id);
   ev.dataTransfer.effectAllowed = "move";
