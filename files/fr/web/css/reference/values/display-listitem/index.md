@@ -3,10 +3,10 @@ title: <display-listitem>
 slug: Web/CSS/Reference/Values/display-listitem
 original_slug: Web/CSS/display-listitem
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
-Le mot-clé `list-item` permet à un élément de générer un pseudo-élément `::marker` dont le contenu est défini par les propriétés {{cssxref("list-style")}} (pour afficher une puce par exemple) avec une boîte principale du type indiquée pour organiser le contenu de l'élément.
+Le mot-clé `list-item` permet à un élément de générer un pseudo-élément `::marker` dont le contenu est défini par les propriétés {{CSSxRef("list-style")}} (pour afficher une puce par exemple) avec une boîte principale du type indiquée pour organiser le contenu de l'élément.
 
 ## Syntaxe
 

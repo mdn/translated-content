@@ -6,7 +6,7 @@ original_slug: Web/CSS/length
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS) [тип данных](/ru/docs/Web/CSS/CSS_values_and_units/CSS_data_types) `<length>` представляет единицу длины. Длина может быть использована в таких свойствах CSS как {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, {{Cssxref("border-width")}}, {{Cssxref("font-size")}}, и {{Cssxref("text-shadow")}}.
+[CSS](/ru/docs/Web/CSS) [тип данных](/ru/docs/Web/CSS/Reference/Values/Data_types) `<length>` представляет единицу длины. Длина может быть использована в таких свойствах CSS как {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, {{Cssxref("border-width")}}, {{Cssxref("font-size")}}, и {{Cssxref("text-shadow")}}.
 
 > [!NOTE]
 > Хоть значения {{cssxref("&lt;percentage&gt;")}} также определяют размеры и могут использоваться в некоторых свойствах, принимающих значения типа `<length>`, они не являются `<length>` значениями.
@@ -22,7 +22,7 @@ original_slug: Web/CSS/length
 
 #### Относительные единицы измерения
 
-Относительные единицы измерения представляют расстояние, определённое какой-либо другой величиной. В зависимости от единицы, это может быть размер определённого символа, [высота строки](/ru/docs/Web/CSS/line-height) или размер {{glossary("viewport")}}.
+Относительные единицы измерения представляют расстояние, определённое какой-либо другой величиной. В зависимости от единицы, это может быть размер определённого символа, [высота строки](/ru/docs/Web/CSS/Reference/Properties/line-height) или размер {{glossary("viewport")}}.
 
 ##### Единицы, зависящие от шрифта
 
@@ -32,7 +32,7 @@ original_slug: Web/CSS/length
 > Эти единицы, особенно `em` и `rem`, часто используются для создания адаптивных разметок, которые сохраняют [вертикальную структуру страницы](https://24ways.org/2006/compose-to-a-vertical-rhythm) даже если пользователь изменяет размер шрифта.
 
 - cap {{experimental_inline}}
-  - : Представляет высоту заглавных букв в [шрифте](/ru/docs/Web/CSS/font), применённом к элементу.
+  - : Представляет высоту заглавных букв в [шрифте](/ru/docs/Web/CSS/Reference/Properties/font), применённом к элементу.
 - ch
   - : Представляет ширину символа "`0`" (ноль, символ Юникод U+0030) в шрифте, применённом к элементу.
 - em
