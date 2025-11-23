@@ -1,9 +1,9 @@
 ---
 title: CSS スクロールバースタイル設定
+short-title: スクロールバースタイル設定
 slug: Web/CSS/Guides/Scrollbars_styling
-original_slug: Web/CSS/CSS_scrollbars_styling
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **CSS スクロールバースタイル設定** (CSS scrollbars styling) モジュールは、スクロールバーの視覚的なスタイル設定に使用できるプロパティを定義しています。必要に応じてスクロールバーの幅をカスタマイズできます。また、スクロールバーの背景であるスクロールバーのトラックの色、およびスクロールバーのドラッグ可能なハンドルであるスクロールバーのつまみの色もカスタマイズできます。
