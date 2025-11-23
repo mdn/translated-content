@@ -3,7 +3,7 @@ title: repeating-conic-gradient()
 slug: Web/CSS/Reference/Values/gradient/repeating-conic-gradient
 original_slug: Web/CSS/gradient/repeating-conic-gradient
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`repeating-conic-gradient()`** crée une image composée d'un dégradé conique répété (plutôt qu'un [dégradé unique](/fr/docs/Web/CSS/Reference/Values/gradient/conic-gradient)), avec des transitions de couleurs qui tournent autour d'un point central (plutôt que de [rayonner depuis le centre](/fr/docs/Web/CSS/Reference/Values/gradient/repeating-radial-gradient)).
@@ -77,11 +77,11 @@ Comme tout autre dégradé, un dégradé conique répété [ne possède pas de d
 Comme les `<gradient>` appartiennent au type de données `<image>`, ils ne peuvent être utilisés que là où des `<image>` sont acceptées. Pour cette raison, `repeating-conic-gradient()` ne fonctionnera pas avec {{CSSxRef("background-color")}} ni avec d'autres propriétés qui utilisent le type de données {{CSSxRef("&lt;color&gt;")}}.
 
 > [!NOTE]
-> Pour créer un dégradé conique qui ne se répète pas, effectuez une rotation complète de 360 degrés pour le dégradé, ou utilisez la fonction {{cssxref("gradient/conic-gradient", "conic-gradient()")}}.
+> Pour créer un dégradé conique qui ne se répète pas, effectuez une rotation complète de 360 degrés pour le dégradé, ou utilisez la fonction {{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}.
 
 ### Comprendre les dégradés coniques répétés
 
-La syntaxe de `repeating-conic-gradient` est similaire à celle de {{cssxref("gradient/conic-gradient", "conic-gradient()")}} et de {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}. Comme pour le dégradé conique non répété, les arrêts de couleur sont placés autour d'un arc de dégradé. Comme pour le dégradé radial répété, la taille de la section répétée correspond à l'angle du dernier arrêt de couleur auquel on soustrait l'angle du premier arrêt de couleur.
+La syntaxe de `repeating-conic-gradient` est similaire à celle de {{CSSxRef("gradient/conic-gradient", "conic-gradient()")}} et de {{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}. Comme pour le dégradé conique non répété, les arrêts de couleur sont placés autour d'un arc de dégradé. Comme pour le dégradé radial répété, la taille de la section répétée correspond à l'angle du dernier arrêt de couleur auquel on soustrait l'angle du premier arrêt de couleur.
 
 ![Comparaison des arrêts de couleur pour les dégradés coniques et radiaux, répétés et non répétés](repeatingconicgradient.png)
 
@@ -103,7 +103,7 @@ Dans un dégradé conique, les arrêts de couleur sont placés tout autour d'un 
 
 Pour créer un dégradé conique répété, il faut choisir un angle de rotation, un centre pour le dégradé, puis donner la liste des couleurs et leurs positions. Les positions des couleurs s'expriment avec un angle (par exemple `deg` pour degrés, `grad` pour grades, `rad` pour radians, ou `turn` pour tours). Un cercle complet fait 360 degrés, 400 grades, 2π radians ou 1 tour. Certains navigateurs acceptent aussi les pourcentages (100% = 360 degrés), mais ça ne fait pas partie de la spécification.
 
-Vous pouvez placer le centre du dégradé où vous voulez dans l'image, ou même en dehors. Pour cela, on utilise la même façon d'écrire la position que pour {{cssxref('background-position')}} avec deux valeurs.
+Vous pouvez placer le centre du dégradé où vous voulez dans l'image, ou même en dehors. Pour cela, on utilise la même façon d'écrire la position que pour {{CSSxRef('background-position')}} avec deux valeurs.
 
 L'arc du dégradé correspond à une partie du cercle. 0 degré est en haut (comme midi sur une horloge). Les couleurs du dégradé dépendent des arrêts de couleur, de leurs points de départ et d'arrivée, et éventuellement d'autres arrêts entre les deux. Vous pouvez aussi ajouter des indices pour contrôler comment les couleurs se mélangent entre deux arrêts.
 
@@ -124,7 +124,7 @@ Il est possible de mélanger différentes unités d'angle, mais il vaut mieux é
 
 ### Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Accessibilité
 
@@ -251,11 +251,11 @@ Voir [la page Utiliser les dégradés CSS](/fr/docs/Web/CSS/Guides/Images/Using_
 ## Voir aussi
 
 - [Utiliser les dégradés CSS](/fr/docs/Web/CSS/Guides/Images/Using_gradients)
-- Autres fonctions de dégradés&nbsp;: {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
-- Le type de donnée {{cssxref("&lt;hue-interpolation-method&gt;")}}
-- Le type de donnée {{cssxref("&lt;color-interpolation-method&gt;")}}
-- Le type de donnée {{cssxref("&lt;image&gt;")}}
-- La fonction {{cssxref("image/image","image()")}}
-- La fonction {{cssxref("element", "element()")}}
-- La fonction {{cssxref("image/image-set","image-set()")}}
-- La fonction {{cssxref("cross-fade", "cross-fade()")}}
+- Autres fonctions de dégradés&nbsp;: {{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}, {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}, {{CSSxRef("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{CSSxRef("gradient/radial-gradient", "radial-gradient()")}}, {{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
+- Le type de donnée {{CSSxRef("&lt;hue-interpolation-method&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;color-interpolation-method&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;image&gt;")}}
+- La fonction {{CSSxRef("image/image","image()")}}
+- La fonction {{CSSxRef("element", "element()")}}
+- La fonction {{CSSxRef("image/image-set","image-set()")}}
+- La fonction {{CSSxRef("cross-fade", "cross-fade()")}}

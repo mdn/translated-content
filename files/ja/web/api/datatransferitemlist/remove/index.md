@@ -1,8 +1,9 @@
 ---
-title: DataTransferItemList.remove()
+title: "DataTransferItemList: remove() メソッド"
+short-title: remove()
 slug: Web/API/DataTransferItemList/remove
 l10n:
-  sourceCommit: 77b8cdb3a05999ade4a269d0ef2443618bb7cd66
+  sourceCommit: f336c5b6795a562c64fe859aa9ee2becf223ad8a
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
@@ -40,11 +41,10 @@ remove(index)
 ```html
 <div>
   <p id="source" draggable="true">
-    Select this element, drag it to the Drop Zone and then release the selection
-    to move the element.
+    この要素を選択し、ドロップゾーンまでドラッグして、選択を解除すると要素が移動します。
   </p>
 </div>
-<div id="target">Drop Zone</div>
+<div id="target">ドロップゾーン</div>
 ```
 
 #### CSS
@@ -68,35 +68,35 @@ div {
 #### JavaScript
 
 ```js
-function dragstart_handler(ev) {
+function dragstartHandler(ev) {
   console.log("dragStart");
-  // Add this element's id to the drag payload so the drop handler will
-  // know which element to add to its tree
+  // この要素の ID をドラッグデータ本体に追加し、ドロップハンドラーが
+  // どの要素をツリーに追加すべきかを認識できるようにする
   const dataList = ev.dataTransfer.items;
   dataList.add(ev.target.id, "text/plain");
-  // Add some other items to the drag payload
-  dataList.add("<p>Paragraph…</p>", "text/html");
+  // ドラッグデータ本体に他のアイテムを追加する
+  dataList.add("<p>段落…</p>", "text/html");
   dataList.add("http://www.example.org", "text/uri-list");
 }
 
-function drop_handler(ev) {
+function dropHandler(ev) {
   console.log("Drop");
   ev.preventDefault();
   const data = event.dataTransfer.items;
-  // Loop through the dropped items and log their data
+  // ドロップされたアイテムをループ処理し、そのデータをログに記録
   for (const item of data) {
     if (item.kind === "string" && item.type.match("^text/plain")) {
-      // This item is the target node
+      // アイテムがターゲットノード
       item.getAsString((s) => {
         ev.target.appendChild(document.getElementById(s));
       });
     } else if (item.kind === "string" && item.type.match("^text/html")) {
-      // Drag data item is HTML
+      // ドラッグデータ項目が HTML
       item.getAsString((s) => {
         console.log(`… Drop: HTML = ${s}`);
       });
     } else if (item.kind === "string" && item.type.match("^text/uri-list")) {
-      // Drag data item is URI
+      // ドラッグデータ項目が URI
       item.getAsString((s) => {
         console.log(`… Drop: URI = ${s}`);
       });
@@ -104,33 +104,33 @@ function drop_handler(ev) {
   }
 }
 
-function dragover_handler(ev) {
+function dragoverHandler(ev) {
   console.log("dragOver");
   ev.preventDefault();
-  // Set the dropEffect to move
+  // dropEffect を「移動」に設定
   ev.dataTransfer.dropEffect = "move";
 }
 
-function dragend_handler(ev) {
+function dragendHandler(ev) {
   console.log("dragEnd");
   const dataList = ev.dataTransfer.items;
-  // Clear all the files. Iterate in reverse order to safely remove.
+  // すべてのファイルをクリア。安全に削除するため、逆順で反復処理を行う。
   for (let i = dataList.length - 1; i >= 0; i--) {
     if (dataList[i].kind === "file") {
       dataList.remove(i);
     }
   }
-  // Clear any remaining drag data
+  // 残っているドラッグデータをすべてクリア
   dataList.clear();
 }
 
 const source = document.querySelector("#source");
-source.addEventListener("dragstart", dragstart_handler);
-source.addEventListener("dragend", dragend_handler);
+source.addEventListener("dragstart", dragstartHandler);
+source.addEventListener("dragend", dragendHandler);
 
 const target = document.querySelector("#target");
-target.addEventListener("drop", drop_handler);
-target.addEventListener("dragover", dragover_handler);
+target.addEventListener("drop", dropHandler);
+target.addEventListener("dragover", dragoverHandler);
 ```
 
 #### 結果

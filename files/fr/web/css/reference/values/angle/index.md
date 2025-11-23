@@ -3,10 +3,10 @@ title: <angle>
 slug: Web/CSS/Reference/Values/angle
 original_slug: Web/CSS/angle
 l10n:
-  sourceCommit: 0fb61080baf21a3efd8f21911bd4554c14f75c17
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
-Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<angle>`** représente une valeur d'angle exprimée en degrés, grades, radians ou tours. Il est utilisé, par exemple, dans les {{cssxref("&lt;gradient&gt;")}} et dans certaines fonctions {{cssxref("transform")}}.
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<angle>`** représente une valeur d'angle exprimée en degrés, grades, radians ou tours. Il est utilisé, par exemple, dans les {{CSSxRef("&lt;gradient&gt;")}} et dans certaines fonctions {{CSSxRef("transform")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: &lt;angle&gt;")}}
 
@@ -46,9 +46,9 @@ transform: rotate(1.75turn);
 
 ## Syntaxe
 
-Le type **`<angle>`** se compose d'une valeur {{cssxref("&lt;number&gt;")}} suivie de l'une des unités listées ci-dessous. Comme pour toutes les dimensions, il n'y a pas d'espace entre le littéral de l'unité et le nombre. L'unité d'angle est facultative après le nombre `0`.
+Le type **`<angle>`** se compose d'une valeur {{CSSxRef("&lt;number&gt;")}} suivie de l'une des unités listées ci-dessous. Comme pour toutes les dimensions, il n'y a pas d'espace entre le littéral de l'unité et le nombre. L'unité d'angle est facultative après le nombre `0`.
 
-Il peut être précédé d'un seul signe `+` ou `-`. Les nombres positifs représentent des angles dans le sens horaire, tandis que les nombres négatifs représentent des angles dans le sens antihoraire. Pour les propriétés statiques d'une unité donnée, un angle peut être représenté par plusieurs valeurs équivalentes. Par exemple, `90deg` équivaut à `-270deg`, et `1turn` équivaut à `4turn`. Pour les propriétés dynamiques, comme lors de l'application d'une {{cssxref("animation")}} ou d'une {{cssxref("transition")}}, l'effet obtenu sera néanmoins différent.
+Il peut être précédé d'un seul signe `+` ou `-`. Les nombres positifs représentent des angles dans le sens horaire, tandis que les nombres négatifs représentent des angles dans le sens antihoraire. Pour les propriétés statiques d'une unité donnée, un angle peut être représenté par plusieurs valeurs équivalentes. Par exemple, `90deg` équivaut à `-270deg`, et `1turn` équivaut à `4turn`. Pour les propriétés dynamiques, comme lors de l'application d'une {{CSSxRef("animation")}} ou d'une {{CSSxRef("transition")}}, l'effet obtenu sera néanmoins différent.
 
 ### Unités
 

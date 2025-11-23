@@ -141,7 +141,7 @@ target.addEventListener("drop", (ev) => {
 - [ドラッグデータストアでの作業](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
   - : ドラッグ＆ドロップ操作中に、ドラッグデータストアへの読み書きを行う方法について説明します。
 - [ファイルのドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop)
-  - : ファイルのドラッグ＆ドロップ操作を受け付ける基本インターフェースの実装に関する実践ガイドです。
+  - : ファイルのドラッグ＆ドロップ操作を受け付ける基本インターフェイスの実装に関する実践ガイドです。
 - [ドラッグ＆ドロップのできるカンバンボード](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Kanban_board)
   - : ウェブページ内で要素をドラッグ＆ドロップする機能を備えたカンバンボードを実装するための実践ガイドです。
 

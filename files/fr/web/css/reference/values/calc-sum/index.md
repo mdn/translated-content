@@ -3,7 +3,7 @@ title: <calc-sum>
 slug: Web/CSS/Reference/Values/calc-sum
 original_slug: Web/CSS/calc-sum
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<calc-sum>`** représente une expression qui effectue un calcul dans n'importe quelle [fonction mathématique CSS](/fr/docs/Web/CSS/Reference/Values/Functions#les_fonctions_mathématiques). L'expression réalise une opération arithmétique d'addition ou de soustraction entre deux valeurs.
@@ -24,7 +24,7 @@ Le type `<calc-sum>` définit deux valeurs numériques et l'un des [opérateurs 
 
 ## Description
 
-Les opérandes de l'expression peuvent être n'importe quelle valeur de la syntaxe {{cssxref("&lt;length&gt;")}}. Vous pouvez utiliser {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}} ou {{cssxref("&lt;integer&gt;")}}.
+Les opérandes de l'expression peuvent être n'importe quelle valeur de la syntaxe {{CSSxRef("&lt;length&gt;")}}. Vous pouvez utiliser {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}} ou {{CSSxRef("&lt;integer&gt;")}}.
 
 Les deux opérandes doivent être du même type. Pour les longueurs, vous ne pouvez pas utiliser `0` pour dire `0px` (ou une autre unité de longueur). Il faut ajouter une unité explicite&nbsp;: `margin-top: calc(0px + 20px);` est valide, alors que `margin-top: calc(0 + 20px);` est invalide. Les types de valeurs en pourcentage sont résolus selon le contexte. Par exemple, `margin-top: calc(50% + 20px);` est valide car `margin-top` résout les pourcentages en longueurs.
 

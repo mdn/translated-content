@@ -3,10 +3,10 @@ title: <color-interpolation-method>
 slug: Web/CSS/Reference/Values/color-interpolation-method
 original_slug: Web/CSS/color-interpolation-method
 l10n:
-  sourceCommit: a6d1fd388b053e6fc6ce21003348f34d0ef8115f
+  sourceCommit: 3b34c98c3f1dcbeb35d56e40c003037c60888870
 ---
 
-Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<color-interpolation-method>`** représente l'espace colorimétrique utilisé pour l'interpolation entre des valeurs {{CSSXref("&lt;color&gt;")}}. Il peut être utilisé pour remplacer l'espace colorimétrique d'interpolation par défaut dans les notations fonctionnelles liées à la couleur comme {{CSSXref("color_value/color-mix", "color-mix()")}} et {{CSSXref("gradient/linear-gradient", "linear-gradient()")}}.
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<color-interpolation-method>`** représente l'espace colorimétrique utilisé pour l'interpolation entre des valeurs {{CSSxRef("&lt;color&gt;")}}. Il peut être utilisé pour remplacer l'espace colorimétrique d'interpolation par défaut dans les notations fonctionnelles liées à la couleur comme {{CSSxRef("color_value/color-mix", "color-mix()")}} et {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}.
 
 Lors de l'interpolation de valeurs `<color>`, l'espace colorimétrique d'interpolation par défaut est Oklab.
 
@@ -28,11 +28,11 @@ in <polar-color-space>[ <hue-interpolation method>]
 - `<polar-color-space>`
   - : L'un des mots-clés&nbsp;: `hsl`, `hwb`, `lch` ou `oklch`.
 
-- {{CSSXref("&lt;hue-interpolation-method&gt;")}} {{optional_inline}}
+- {{CSSxRef("&lt;hue-interpolation-method&gt;")}} {{Optional_Inline}}
   - : L'algorithme d'interpolation de la teinte. La valeur par défaut est `shorter hue`.
 
 - `<custom-color-space>`
-  - : Un {{CSSXref("&lt;dashed-ident&gt;")}} faisant référence à un {{CSSXref("@color-profile")}} personnalisé.
+  - : Un {{CSSxRef("&lt;dashed-ident&gt;")}} faisant référence à un {{CSSxRef("@color-profile")}} personnalisé.
 
 ## Syntaxe formelle
 
@@ -42,7 +42,7 @@ in <polar-color-space>[ <hue-interpolation method>]
 
 ### Comparaison des espaces colorimétriques d'interpolation avec des dégradés
 
-L'exemple suivant montre l'effet de l'utilisation de différents espaces colorimétriques d'interpolation pour {{CSSXref("gradient/linear-gradient", "linear-gradient()")}}.
+L'exemple suivant montre l'effet de l'utilisation de différents espaces colorimétriques d'interpolation pour {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}.
 
 #### HTML
 
@@ -80,9 +80,9 @@ L'exemple suivant montre l'effet de l'utilisation de différents espaces colorim
 ### Interpolation des couleurs dans les dégradés répétitifs
 
 L'exemple suivant montre comment spécifier un espace colorimétrique lors de l'interpolation des couleurs dans des dégradés répétitifs.
-Trois boîtes présentent différents types de dégradés répétitifs utilisant les fonctions {{CSSXref("repeating-conic-gradient()")}}, {{CSSXref("repeating-linear-gradient()")}} et {{CSSXref("repeating-radial-gradient()")}}.
+Trois boîtes présentent différents types de dégradés répétitifs utilisant les fonctions {{CSSxRef("repeating-conic-gradient()")}}, {{CSSxRef("repeating-linear-gradient()")}} et {{CSSxRef("repeating-radial-gradient()")}}.
 La première boîte utilise l'espace colorimétrique Lab pour interpoler entre deux valeurs de couleur.
-La deuxième et la troisième boîtes utilisent OkLCh et fournissent également un {{CSSXref("&lt;hue-interpolation-method&gt;")}} pour spécifier la méthode d'interpolation de la teinte.
+La deuxième et la troisième boîtes utilisent OkLCh et fournissent également un {{CSSxRef("&lt;hue-interpolation-method&gt;")}} pour spécifier la méthode d'interpolation de la teinte.
 
 #### HTML
 
@@ -94,7 +94,7 @@ La deuxième et la troisième boîtes utilisent OkLCh et fournissent également 
 
 #### CSS
 
-Nous avons utilisé les mêmes deux couleurs dans chaque dégradé pour illustrer les différents effets de {{CSSXref("&lt;hue-interpolation-method&gt;")}} et {{glossary("color space", "espace colorimétrique")}} sur l'interpolation des couleurs dans les dégradés.
+Nous avons utilisé les mêmes deux couleurs dans chaque dégradé pour illustrer les différents effets de {{CSSxRef("&lt;hue-interpolation-method&gt;")}} et {{Glossary("color space", "espace colorimétrique")}} sur l'interpolation des couleurs dans les dégradés.
 
 ```css hidden
 .gradient {
@@ -138,7 +138,7 @@ Nous avons utilisé les mêmes deux couleurs dans chaque dégradé pour illustre
 {{EmbedLiveSample("interpolation_des_couleurs_dans_les_dégradés_répétitifs", "100%", 250)}}
 
 La comparaison entre la première et la deuxième boîte montre la différence d'interpolation entre deux couleurs dans des espaces colorimétriques différents.
-La comparaison entre la deuxième et la troisième boîte met en évidence la différence entre les {{CSSXref("&lt;hue-interpolation-method&gt;")}}, la dégradé linéaire utilisant la méthode courte (par défaut) et la dégradé radiale utilisant la méthode longue.
+La comparaison entre la deuxième et la troisième boîte met en évidence la différence entre les {{CSSxRef("&lt;hue-interpolation-method&gt;")}}, la dégradé linéaire utilisant la méthode courte (par défaut) et la dégradé radiale utilisant la méthode longue.
 
 ## Spécifications
 
@@ -150,5 +150,5 @@ La comparaison entre la deuxième et la troisième boîte met en évidence la di
 
 ## Voir aussi
 
-- {{CSSXref("&lt;color&gt;")}}, {{CSSXref("&lt;gradient&gt;")}}
-- {{CSSXref("&lt;hue-interpolation-method&gt;")}}
+- {{CSSxRef("&lt;color&gt;")}}, {{CSSxRef("&lt;gradient&gt;")}}
+- {{CSSxRef("&lt;hue-interpolation-method&gt;")}}

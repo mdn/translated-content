@@ -3,7 +3,7 @@ title: <display-internal>
 slug: Web/CSS/Reference/Values/display-internal
 original_slug: Web/CSS/display-internal
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
 Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<display-internal>`** définit les modes de disposition tels que `table` et `ruby` possèdent une structure interne complexe avec différents roles pour les éléments enfants et descendants. Cette page décrit ces valeurs «&nbsp;internes&nbsp;» pour `display` et qui s'appliquent dans un mode donné.
@@ -39,7 +39,7 @@ Valeurs valides pour `<display-internal>`&nbsp;:
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 

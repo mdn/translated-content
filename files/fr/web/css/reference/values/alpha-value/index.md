@@ -3,14 +3,14 @@ title: <alpha-value>
 slug: Web/CSS/Reference/Values/alpha-value
 original_slug: Web/CSS/alpha-value
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
-Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<alpha-value>`** représente une valeur qui peut être soit un {{cssxref("&lt;number&gt;")}} soit un {{cssxref("&lt;percentage&gt;")}}, et qui définit le **canal alpha** (<i lang="en">alpha channel</i>) ou la **transparence** d'une couleur.
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<alpha-value>`** représente une valeur qui peut être soit un {{CSSxRef("&lt;number&gt;")}} soit un {{CSSxRef("&lt;percentage&gt;")}}, et qui définit le **canal alpha** (<i lang="en">alpha channel</i>) ou la **transparence** d'une couleur.
 
 ## Syntaxe
 
-La valeur d'un **`<alpha-value>`** s'exprime soit comme un [`<number>`](/fr/docs/Web/CSS/Reference/Values/number) soit comme un {{cssxref("percentage", "pourcentage")}}.
+La valeur d'un **`<alpha-value>`** s'exprime soit comme un [`<number>`](/fr/docs/Web/CSS/Reference/Values/number) soit comme un {{CSSxRef("percentage", "pourcentage")}}.
 
 Si la valeur est donnée comme un nombre, l'intervalle utile est de 0 (totalement transparent) à 1 (totalement opaque), avec des valeurs décimales possibles entre les deux. Par exemple, 0.5 indique que la couleur de premier plan est utilisée à 50&nbsp;% et celle d'arrière-plan à 50&nbsp;%. Les valeurs en dehors de l'intervalle 0 à 1 sont autorisées, mais elles sont écrêtées à 0 ou 1.
 
@@ -18,7 +18,7 @@ Si la valeur alpha est donnée en pourcentage, 0&nbsp;% correspond à une transp
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Interpolation
 

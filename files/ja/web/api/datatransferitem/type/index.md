@@ -1,8 +1,9 @@
 ---
-title: DataTransferItem.type
+title: "DataTransferItem: type プロパティ"
+short-title: type
 slug: Web/API/DataTransferItem/type
 l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+  sourceCommit: b5437b737639d6952d18b95ebd1045ed73e4bfa7
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
@@ -20,29 +21,25 @@ l10n:
 この例では、 `type` プロパティを使用しています。
 
 ```js
-function drop_handler(ev) {
+function dropHandler(ev) {
   console.log("Drop");
   ev.preventDefault();
-  const data = ev.dataTransfer.items;
-  for (let i = 0; i < data.length; i += 1) {
-    if (data[i].kind === "string" && data[i].type.match("^text/plain")) {
+  for (const item of ev.dataTransfer.items) {
+    if (item.kind === "string" && item.type.match("^text/plain")) {
       // This item is the target node
-      data[i].getAsString((s) => {
+      item.getAsString((s) => {
         ev.target.appendChild(document.getElementById(s));
       });
-    } else if (data[i].kind === "string" && data[i].type.match("^text/html")) {
+    } else if (item.kind === "string" && item.type.match("^text/html")) {
       // Drag data item is HTML
       console.log("… Drop: HTML");
-    } else if (
-      data[i].kind === "string" &&
-      data[i].type.match("^text/uri-list")
-    ) {
+    } else if (item.kind === "string" && item.type.match("^text/uri-list")) {
       // Drag data item is URI
       console.log("… Drop: URI");
-    } else if (data[i].kind === "file" && data[i].type.match("^image/")) {
+    } else if (item.kind === "file" && item.type.match("^image/")) {
       // Drag data item is an image file
-      const f = data[i].getAsFile();
-      console.log("… Drop: File ");
+      const f = item.getAsFile();
+      console.log("… Drop: File");
     }
   }
 }
@@ -59,4 +56,4 @@ function drop_handler(ev) {
 ## 関連情報
 
 - {{domxref("DataTransfer.type()")}}
-- [MIME タイプの不完全なリスト](/ja/docs/Web/HTTP/Guides/MIME_types/Common_types)
+- [一般的な MIME タイプの一覧](/ja/docs/Web/HTTP/Guides/MIME_types/Common_types)

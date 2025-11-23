@@ -3,10 +3,10 @@ title: xywh()
 slug: Web/CSS/Reference/Values/basic-shape/xywh
 original_slug: Web/CSS/basic-shape/xywh
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`xywh()`** crée un rectangle à partir des distances spécifiées depuis le bord gauche (`x`) et le bord supérieur (`y`) du bloc englobant, ainsi que la largeur (`w`) et la hauteur (`h`) du rectangle. Il s'agit d'une fonction de forme de base du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{cssxref("&lt;basic-shape&gt;")}}. Vous pouvez utiliser la fonction `xywh()` dans des propriétés CSS telles que {{cssxref("offset-path")}} pour créer le chemin rectangulaire le long duquel un élément se déplace, ou dans {{cssxref("clip-path")}} pour définir la forme de la région de découpe.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`xywh()`** crée un rectangle à partir des distances spécifiées depuis le bord gauche (`x`) et le bord supérieur (`y`) du bloc englobant, ainsi que la largeur (`w`) et la hauteur (`h`) du rectangle. Il s'agit d'une fonction de forme de base du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{CSSxRef("&lt;basic-shape&gt;")}}. Vous pouvez utiliser la fonction `xywh()` dans des propriétés CSS telles que {{CSSxRef("offset-path")}} pour créer le chemin rectangulaire le long duquel un élément se déplace, ou dans {{CSSxRef("clip-path")}} pour définir la forme de la région de découpe.
 
 ## Syntaxe
 
@@ -18,9 +18,9 @@ clip-path: xywh(1px 2% 3px 4em round 0 1% 2px 3em);
 ### Valeurs
 
 - `<length-percentage>`
-  - : Définit les valeurs {{cssxref("&lt;length-percentage&gt;")}} pour les coordonnées `x` et `y` du rectangle.
+  - : Définit les valeurs {{CSSxRef("&lt;length-percentage&gt;")}} pour les coordonnées `x` et `y` du rectangle.
 - `<length-percentage [0,∞]>`
-  - : Définit des valeurs {{cssxref("&lt;length-percentage&gt;")}} non négatives pour la largeur et la hauteur du rectangle. La valeur minimale peut être zéro, la valeur maximale n'a pas de limite.
+  - : Définit des valeurs {{CSSxRef("&lt;length-percentage&gt;")}} non négatives pour la largeur et la hauteur du rectangle. La valeur minimale peut être zéro, la valeur maximale n'a pas de limite.
 - `round <'border-radius'>`
   - : Définit le rayon des coins arrondis du rectangle en utilisant la même syntaxe que la propriété abrégée CSS [`border-radius`](/fr/docs/Web/CSS/Reference/Properties/border-radius). Ce paramètre est optionnel.
 
@@ -32,7 +32,7 @@ clip-path: xywh(1px 2% 3px 4em round 0 1% 2px 3em);
 
 ### Créer un offset-path avec xywh()
 
-Dans l'exemple ci-dessous, la propriété {{cssxref("offset-path")}} utilise la fonction `xywh()` pour définir la forme du chemin sur lequel l'élément (une boîte magenta ici) se déplace. Deux scénarios différents sont présentés, chacun avec des valeurs différentes pour la fonction `xywh()`. La flèche à l'intérieur des boîtes pointe vers le bord droit de la boîte.
+Dans l'exemple ci-dessous, la propriété {{CSSxRef("offset-path")}} utilise la fonction `xywh()` pour définir la forme du chemin sur lequel l'élément (une boîte magenta ici) se déplace. Deux scénarios différents sont présentés, chacun avec des valeurs différentes pour la fonction `xywh()`. La flèche à l'intérieur des boîtes pointe vers le bord droit de la boîte.
 
 ```html
 <div class="container">
@@ -99,10 +99,10 @@ Dans l'exemple ci-dessous, la propriété {{cssxref("offset-path")}} utilise la 
 
 ## Voir aussi
 
-- La fonction {{cssxref("basic-shape/inset","inset()")}}
-- La fonction {{cssxref("basic-shape/rect","rect()")}}
-- La propriété {{cssxref("clip-path")}}
-- La propriété {{cssxref("offset-path")}}
-- Le type de données {{cssxref("&lt;basic-shape&gt;")}}
+- La fonction {{CSSxRef("basic-shape/inset","inset()")}}
+- La fonction {{CSSxRef("basic-shape/rect","rect()")}}
+- La propriété {{CSSxRef("clip-path")}}
+- La propriété {{CSSxRef("offset-path")}}
+- Le type de données {{CSSxRef("&lt;basic-shape&gt;")}}
 - Le module des [formes CSS](/fr/docs/Web/CSS/Guides/Shapes)
 - [Guide des formes de base](/fr/docs/Web/CSS/Guides/Shapes/Using_shape-outside)

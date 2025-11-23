@@ -3,7 +3,7 @@ title: <calc-keyword>
 slug: Web/CSS/Reference/Values/calc-keyword
 original_slug: Web/CSS/calc-keyword
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<calc-keyword>`** représente des constantes bien définies comme `e` et `pi`. Plutôt que d'obliger les auteur·ice·s à saisir manuellement plusieurs chiffres de ces constantes mathématiques ou à les calculer, certaines d'entre elles sont directement fournies par CSS pour plus de commodité.
@@ -28,7 +28,7 @@ Le type `<calc-keyword>` définit des constantes numériques qui peuvent être u
 
 ### Notes
 
-La sérialisation des arguments à l'intérieur de {{cssxref("calc", "calc()")}} suit la norme IEEE-754 pour les calculs en virgule flottante, ce qui implique quelques cas particuliers à connaître concernant les constantes comme `infinity` et `NaN`&nbsp;:
+La sérialisation des arguments à l'intérieur de {{CSSxRef("calc", "calc()")}} suit la norme IEEE-754 pour les calculs en virgule flottante, ce qui implique quelques cas particuliers à connaître concernant les constantes comme `infinity` et `NaN`&nbsp;:
 
 - Une division par zéro renverra `infinity` positif ou négatif selon le signe du numérateur.
 - Ajouter, soustraire ou multiplier `infinity` à n'importe quelle valeur renverra `infinity`, sauf si cela produit `NaN` (voir ci-dessous).

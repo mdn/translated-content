@@ -3,7 +3,7 @@ title: linear-gradient()
 slug: Web/CSS/Reference/Values/gradient/linear-gradient
 original_slug: Web/CSS/gradient/linear-gradient
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`linear-gradient()`** crée une image qui est un dégradé entre deux ou plusieurs couleurs le long d'une ligne droite. Elle fournit une valeur de type [`<gradient>`](/fr/docs/Web/CSS/Reference/Values/gradient) qui est un type spécial d'image ([`<image>`](/fr/docs/Web/CSS/Reference/Values/image)).
@@ -103,7 +103,7 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);
 - `<linear-color-stop>`
   - : Un arrêt de couleur indiqué par une valeur {{CSSxRef("&lt;color&gt;")}} suivie d'une ou deux positions d'arrêt (chacune étant indiquée comme un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) ou une longueur ({{CSSxRef("&lt;length&gt;")}}) le long de l'axe du dégradé).
 - `<color-hint>`
-  - : Une indication d'{{glossary("interpolation")}} qui définit la progression du dégradé entre deux arrêts de couleur adjacents. La longueur définit à quel point entre les deux arrêts le dégradé doit atteindre la couleur intermédiaire. Si cette valeur est absente, la valeur intermédiaire sera atteinte à mi-parcours entre les deux arrêts.
+  - : Une indication d'{{Glossary("interpolation")}} qui définit la progression du dégradé entre deux arrêts de couleur adjacents. La longueur définit à quel point entre les deux arrêts le dégradé doit atteindre la couleur intermédiaire. Si cette valeur est absente, la valeur intermédiaire sera atteinte à mi-parcours entre les deux arrêts.
 
 > [!NOTE]
 > Le rendu des [arrêts de couleur pour les dégradés CSS](#dégradé_avec_plusieurs_arrêts_de_couleur) suit les mêmes règles que [celui des arrêts de couleur pour les dégradés SVG](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Gradients).
@@ -112,7 +112,7 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);
 
 Comme tout autre dégradé, un dégradé linéaire [ne possède pas de dimensions intrinsèques](/fr/docs/Web/CSS/Reference/Values/image#description)&nbsp;; c'est-à-dire qu'il n'a pas de taille naturelle ou préférée ni de ratio d'affichage préféré. Sa taille réelle correspondra à celle de l'élément auquel il s'applique.
 
-Pour créer un dégradé linéaire qui se répète jusqu'à remplir son conteneur, on utilisera plutôt la fonction {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}.
+Pour créer un dégradé linéaire qui se répète jusqu'à remplir son conteneur, on utilisera plutôt la fonction {{CSSxRef("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}.
 
 Comme les `<gradient>` appartiennent au type de données `<image>`, ils ne peuvent être utilisés que là où des {{CSSxRef("&lt;image&gt;")}} sont acceptées. Pour cette raison, `linear-gradient()` ne fonctionnera pas avec {{CSSxRef("background-color")}} ni avec d'autres propriétés qui utilisent le type de données {{CSSxRef("&lt;color&gt;")}}.
 
@@ -236,7 +236,7 @@ Voir la page [Utiliser les dégradés CSS](/fr/docs/Web/CSS/Guides/Images/Using_
 ## Voir aussi
 
 - [Utiliser les dégradés CSS](/fr/docs/Web/CSS/Guides/Images/Using_gradients)
-- Les autres fonctions de dégradés&nbsp;: {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
+- Les autres fonctions de dégradés&nbsp;: {{CSSxRef("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{CSSxRef("gradient/radial-gradient", "radial-gradient()")}}, {{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}, {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - Le type de donnée {{CSSxRef("&lt;hue-interpolation-method&gt;")}}
 - Le type de donnée {{CSSxRef("&lt;color-interpolation-method&gt;")}}
 - Le type de donnée {{CSSxRef("&lt;image&gt;")}}

@@ -3,10 +3,10 @@ title: ellipse()
 slug: Web/CSS/Reference/Values/basic-shape/ellipse
 original_slug: Web/CSS/basic-shape/ellipse
 l10n:
-  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`ellipse()`** fait partie du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{cssxref("&lt;basic-shape&gt;")}}.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`ellipse()`** fait partie du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{CSSxRef("&lt;basic-shape&gt;")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: ellipse()")}}
 
@@ -51,23 +51,23 @@ shape-outside: ellipse(40% 50% at left);
 shape-outside: ellipse(closest-side farthest-side at 30%);
 ```
 
-Une ellipse est essentiellement un cercle aplati&nbsp;; la fonction `ellipse()` agit de manière très similaire à {{cssxref("basic-shape/circle","circle()")}}, sauf qu'il faut préciser deux rayons&nbsp;: x puis y.
+Une ellipse est essentiellement un cercle aplati&nbsp;; la fonction `ellipse()` agit de manière très similaire à {{CSSxRef("basic-shape/circle","circle()")}}, sauf qu'il faut préciser deux rayons&nbsp;: x puis y.
 
 ### Valeurs
 
 - `<shape-radius>`
-  - : Deux rayons, x puis y, dans cet ordre. Ils peuvent être une longueur {{cssxref("length")}}, un pourcentage {{cssxref("percentage")}} ou les mots‑clés `closest-side` et `farthest-side`.
+  - : Deux rayons, x puis y, dans cet ordre. Ils peuvent être une longueur {{CSSxRef("length")}}, un pourcentage {{CSSxRef("percentage")}} ou les mots‑clés `closest-side` et `farthest-side`.
     - `closest-side`
       - : Utilise la distance entre le centre de la forme et le côté le plus proche de la boîte de référence. Pour les ellipses, il s'agit du côté le plus proche selon la dimension du rayon.
     - `farthest-side`
       - : Utilise la distance entre le centre de la forme et le côté le plus éloigné de la boîte de référence. Pour les ellipses, il s'agit du côté le plus éloigné selon la dimension du rayon.
 
 - `<position>`
-  - : Déplace le centre de l'ellipse. Il peut s'agir d'une longueur {{cssxref("length")}}, d'un pourcentage {{cssxref("percentage")}} ou de valeurs comme `left`. La valeur par défaut de `<position>` est center si elle est omise.
+  - : Déplace le centre de l'ellipse. Il peut s'agir d'une longueur {{CSSxRef("length")}}, d'un pourcentage {{CSSxRef("percentage")}} ou de valeurs comme `left`. La valeur par défaut de `<position>` est center si elle est omise.
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -154,5 +154,5 @@ body {
 
 ## Voir aussi
 
-- Propriétés qui utilisent ce type de données&nbsp;: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
+- Propriétés qui utilisent ce type de données&nbsp;: {{CSSxRef("clip-path")}}, {{CSSxRef("shape-outside")}}
 - [Guide des formes de base](/fr/docs/Web/CSS/Guides/Shapes/Using_shape-outside)

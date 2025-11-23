@@ -3,20 +3,20 @@ title: <corner-shape-value>
 slug: Web/CSS/Reference/Values/corner-shape-value
 original_slug: Web/CSS/corner-shape-value
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{SeeCompatTable}}
 
-Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<corner-shape-value>`** qui décrit la forme d'un coin de conteneur. Il est utilisé par la propriété abrégée {{cssxref("corner-shape")}} et ses [propriétés constitutives](/fr/docs/Web/CSS/corner-shape#propriétés_constitutives) pour définir la forme à appliquer aux coins concernés du conteneur.
+Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<corner-shape-value>`** qui décrit la forme d'un coin de conteneur. Il est utilisé par la propriété abrégée {{CSSxRef("corner-shape")}} et ses [propriétés constitutives](/fr/docs/Web/CSS/corner-shape#propriétés_constitutives) pour définir la forme à appliquer aux coins concernés du conteneur.
 
 ## Syntaxe
 
-Le type de donnée `<corner-shape-value>` peut prendre la fonction {{cssxref("superellipse()")}} qui définit une forme personnalisée, ou l'une des six valeurs-mots-clés qui correspondent à des valeurs courantes de `superellipse()`.
+Le type de donnée `<corner-shape-value>` peut prendre la fonction {{CSSxRef("superellipse()")}} qui définit une forme personnalisée, ou l'une des six valeurs-mots-clés qui correspondent à des valeurs courantes de `superellipse()`.
 
 ### Valeurs
 
-- {{cssxref("superellipse()")}}
+- {{CSSxRef("superellipse()")}}
   - : Définit une forme de superellipse personnalisée pour le coin. Un paramètre négatif crée une courbe vers l'intérieur (concave), tandis qu'un paramètre positif crée une courbe vers l'extérieur (convexe).
 - Mots-clés
   - : Les mots-clés disponibles sont&nbsp;:
@@ -25,7 +25,7 @@ Le type de donnée `<corner-shape-value>` peut prendre la fonction {{cssxref("su
     - `notch`
       - : Définit un coin carré concave à 90 degrés. Le mot-clé `notch` est équivalent à `superellipse(-infinity)`.
     - `round`
-      - : Définit une ellipse convexe ordinaire, qui correspond au coin arrondi standard créé par {{cssxref("border-radius")}} sans `corner-shape` appliqué. Le mot-clé `round` est équivalent à `superellipse(1)`. Il s'agit de la valeur initiale (par défaut) pour toutes les propriétés `corner-shape`.
+      - : Définit une ellipse convexe ordinaire, qui correspond au coin arrondi standard créé par {{CSSxRef("border-radius")}} sans `corner-shape` appliqué. Le mot-clé `round` est équivalent à `superellipse(1)`. Il s'agit de la valeur initiale (par défaut) pour toutes les propriétés `corner-shape`.
     - `scoop`
       - : Définit une ellipse concave ordinaire. Le mot-clé `scoop` est équivalent à `superellipse(-1)`.
     - `square`
@@ -38,15 +38,15 @@ Le type de donnée `<corner-shape-value>` peut prendre la fonction {{cssxref("su
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
 ### Comparaison des valeurs `<corner-shape-value>`
 
-Dans cet exemple, un menu déroulant permet de sélectionner différentes valeurs `<corner-shape-value>` et un curseur ajuste la valeur de {{cssxref("border-radius")}} du conteneur. Cela permet de visualiser l'effet des différents mots-clés et des paramètres de la fonction `superellipse()`.
+Dans cet exemple, un menu déroulant permet de sélectionner différentes valeurs `<corner-shape-value>` et un curseur ajuste la valeur de {{CSSxRef("border-radius")}} du conteneur. Cela permet de visualiser l'effet des différents mots-clés et des paramètres de la fonction `superellipse()`.
 
-La propriété `corner-shape` définit la forme des coins de la boîte, tandis que la zone à laquelle la forme s'applique est déterminée par la propriété `border-radius`. Le code est masqué pour plus de clarté, mais vous pouvez trouver [une explication complète des valeurs de `corner-shape`](/fr/docs/Web/CSS/corner-shape#comparaison_des_valeurs_corner-shape) ainsi que d'autres exemples sur la page de référence {{cssxref("corner-shape")}}.
+La propriété `corner-shape` définit la forme des coins de la boîte, tandis que la zone à laquelle la forme s'applique est déterminée par la propriété `border-radius`. Le code est masqué pour plus de clarté, mais vous pouvez trouver [une explication complète des valeurs de `corner-shape`](/fr/docs/Web/CSS/corner-shape#comparaison_des_valeurs_corner-shape) ainsi que d'autres exemples sur la page de référence {{CSSxRef("corner-shape")}}.
 
 ```html hidden live-sample___value-comparison
 <form>
@@ -163,7 +163,7 @@ setCorners();
 
 ## Voir aussi
 
-- La propriété {{cssxref("corner-shape")}}
-- La propriété {{cssxref("border-radius")}}
-- La fonction {{cssxref("superellipse()")}}
+- La propriété {{CSSxRef("corner-shape")}}
+- La propriété {{CSSxRef("border-radius")}}
+- La fonction {{CSSxRef("superellipse()")}}
 - Le module des [bordures et décorations de boîte CSS](/fr/docs/Web/CSS/CSS_borders_and_box_decorations)
