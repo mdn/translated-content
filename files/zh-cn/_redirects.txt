@@ -4835,6 +4835,7 @@
 /zh-CN/docs/WebAssembly/JavaScript_interface/validate	/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/validate_static
 /zh-CN/docs/WebAssembly/JavaScript_interface/validate_static	/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/validate_static
 /zh-CN/docs/WebAssembly/Loading_and_running	/zh-CN/docs/WebAssembly/Guides/Loading_and_running
+/zh-CN/docs/WebAssembly/Reference/Variables/Local_tee	/zh-CN/docs/WebAssembly/Reference/Variables/local.tee
 /zh-CN/docs/WebAssembly/Rust_to_Wasm	/zh-CN/docs/WebAssembly/Guides/Rust_to_Wasm
 /zh-CN/docs/WebAssembly/Text_format_to_Wasm	/zh-CN/docs/WebAssembly/Guides/Text_format_to_Wasm
 /zh-CN/docs/WebAssembly/Understanding_the_text_format	/zh-CN/docs/WebAssembly/Guides/Understanding_the_text_format
