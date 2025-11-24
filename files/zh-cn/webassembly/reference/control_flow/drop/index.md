@@ -1,6 +1,6 @@
 ---
 title: Drop
-slug: WebAssembly/Reference/Control_flow/Drop
+slug: WebAssembly/Reference/Control_flow/drop
 l10n:
   sourceCommit: c0fc8c988385a0ce8ff63887f9a3263caf55a1f9
 ---

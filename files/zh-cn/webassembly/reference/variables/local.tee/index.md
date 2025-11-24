@@ -1,6 +1,7 @@
 ---
 title: Local tee
-slug: WebAssembly/Reference/Variables/Local_tee
+slug: WebAssembly/Reference/Variables/local.tee
+original_slug: WebAssembly/Reference/Variables/Local_tee
 l10n:
   sourceCommit: c681ed89305afd56d54ba6671673680bea041670
 ---
