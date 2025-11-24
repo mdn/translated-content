@@ -28,7 +28,7 @@ slug: Web/HTML/Reference/Elements/meta/name/viewport
 "viewport" `<meta>` 标签的基本属性如下所示：
 
 - `width`
-  - : 控制视口的大小。这可以设置为特定像素数（如 `width=600`），也可以设置为特殊值`device-width`，即 [100vw](/zh-CN/docs/Web/CSS/Reference/Values/length#视口_viewport_比例的长度)，100% 的视口宽度。最小值为 `1`。最大值为 `10000`。负值会被忽略。
+  - : 控制视口的大小。这可以设置为特定像素数（如 `width=600`），也可以设置为特殊值`device-width`，即设备屏幕在 CSS 像素中的物理大小。此值确定了 `vw` 单位的值。最小值为 `1`。最大值为 `10000`。负值会被忽略。
 - `height`
   - : 控制视口的大小。这可以设置为特定像素数（如 `height=400`），也可以设置为特殊值 `device-height`，即 [100vh](/zh-CN/docs/Web/CSS/Reference/Values/length#视口_viewport_比例的长度)，100% 的视口高度。最小值为 `1`。最大值为 `10000`。负值会被忽略。
 - `initial-scale`
