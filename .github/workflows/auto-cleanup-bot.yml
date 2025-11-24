@@ -80,7 +80,7 @@ jobs:
 
       - name: Create PR with only fixable issues
         if: success()
-        uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8
+        uses: peter-evans/create-pull-request@84ae59a2cdc2258d6fa0732dd66352dddae2a412 # v7.0.9
         with:
           commit-message: "${{ matrix.lang }}: auto-fix content issues"
           branch: content-autofix-${{ matrix.lang }}
@@ -97,7 +97,7 @@ jobs:
 
       - name: Create PR with notice on unfixed issues
         if: failure()
-        uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8
+        uses: peter-evans/create-pull-request@84ae59a2cdc2258d6fa0732dd66352dddae2a412 # v7.0.9
         with:
           commit-message: "${{ matrix.lang }}: auto-fix content issues"
           branch: content-autofix-${{ matrix.lang }}
