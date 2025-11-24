@@ -1,13 +1,14 @@
 ---
-title: Drop
+title: drop：Wasm 文本指令
+short-title: drop
 slug: WebAssembly/Reference/Control_flow/drop
 l10n:
-  sourceCommit: c0fc8c988385a0ce8ff63887f9a3263caf55a1f9
+  sourceCommit: ebf92d37f836b490640a7881c4e5db5c1dea8fe7
 ---
 
 **`drop`** 指令，从栈中弹出一个值，并丢弃它。
 
-{{InteractiveExample("Wat Demo: drop", "tabbed-taller")}}
+{{InteractiveExample("Wat 演示：drop", "tabbed-taller")}}
 
 ```wat interactive-example
 (module

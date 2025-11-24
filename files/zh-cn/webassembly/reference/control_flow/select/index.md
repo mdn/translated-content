@@ -1,13 +1,14 @@
 ---
-title: Select
+title: select：Wasm 文本指令
+short-title: select
 slug: WebAssembly/Reference/Control_flow/select
 l10n:
-  sourceCommit: c0fc8c988385a0ce8ff63887f9a3263caf55a1f9
+  sourceCommit: ebf92d37f836b490640a7881c4e5db5c1dea8fe7
 ---
 
 **`select`** 指令，基于它的第三个操作数是否为 0 选择它的前两个操作数中的一个。与其他语言中的三元运算符（例如，`false ? 10 : 20`）有些相似，但不会[短路](https://zh.wikipedia.org/wiki/短路求值)。指令后面可能直接跟着值类型：`select (result T)`。`select (result T)` 使用的是不同的二进制操作码，它除了允许 WebAssembly MVP（`i32`、`i64`、`f32`、`f64`）所引入的类型外，还允许其他的类型，例如，允许在两个 `externref` 值之间进行选择。
 
-{{InteractiveExample("Wat Demo: select", "tabbed-taller")}}
+{{InteractiveExample("Wat 演示：select", "tabbed-taller")}}
 
 ```wat interactive-example
 (module
@@ -36,14 +37,14 @@ await WebAssembly.instantiateStreaming(fetch(url)).then((result) => {
   const { select_simple, select_externref } = result.instance.exports;
 
   console.log(select_simple());
-  // 期望的输出：20
+  // 期望输出：20
 
   // 如果第二个参数为 0，则返回第一个参数（其可能是任意的 JS 值）
   const map = new Map();
   console.log(select_externref(map, 0));
-  // 期望的输出：[object Map]
+  // 期望输出：[object Map]
   console.log(select_externref(map, -1));
-  // 期望的输出：null
+  // 期望输出：null
 });
 ```
 
