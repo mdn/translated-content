@@ -3,39 +3,39 @@ title: <filter-function>
 slug: Web/CSS/Reference/Values/filter-function
 original_slug: Web/CSS/filter-function
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
-Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<filter-function>`** représente un effet graphique qui peut modifier l'apparence d'une image. Il est notamment utilisé avec les propriétés {{cssxref("filter")}} et {{cssxref("backdrop-filter")}}.
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<filter-function>`** représente un effet graphique qui peut modifier l'apparence d'une image. Il est notamment utilisé avec les propriétés {{CSSxRef("filter")}} et {{CSSxRef("backdrop-filter")}}.
 
 ## Syntaxe
 
 Une valeur de type `<filter-function>` se construit avec l'une des fonctions listées ci-après. Chaque fonction utilise un argument et si celui-ci est invalide, aucun filtre n'est appliqué.
 
-- {{cssxref("filter-function/blur", "blur()")}}
+- {{CSSxRef("filter-function/blur", "blur()")}}
   - : Floute l'image.
-- {{cssxref("filter-function/brightness", "brightness()")}}
+- {{CSSxRef("filter-function/brightness", "brightness()")}}
   - : Rend l'image plus claire ou plus sombre.
-- {{cssxref("filter-function/contrast", "contrast()")}}
+- {{CSSxRef("filter-function/contrast", "contrast()")}}
   - : Augmente ou diminue le contraste de l'image.
-- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
+- {{CSSxRef("filter-function/drop-shadow", "drop-shadow()")}}
   - : Applique une ombre portée derrière l'image.
-- {{cssxref("filter-function/grayscale", "grayscale()")}}
+- {{CSSxRef("filter-function/grayscale", "grayscale()")}}
   - : Convertit l'image en niveaux de gris.
-- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
+- {{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}}
   - : Modifie la teinte globale de l'image.
-- {{cssxref("filter-function/invert", "invert()")}}
+- {{CSSxRef("filter-function/invert", "invert()")}}
   - : Inverse les couleurs de l'image.
-- {{cssxref("filter-function/opacity", "opacity()")}}
+- {{CSSxRef("filter-function/opacity", "opacity()")}}
   - : Rend l'image transparente.
-- {{cssxref("filter-function/saturate", "saturate()")}}
+- {{CSSxRef("filter-function/saturate", "saturate()")}}
   - : Sature ou désature fortement l'image.
-- {{cssxref("filter-function/sepia", "sepia()")}}
+- {{CSSxRef("filter-function/sepia", "sepia()")}}
   - : Convertit l'image en sépia.
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -208,5 +208,5 @@ setDiv(selectElem.value);
 ## Voir aussi
 
 - Les propriétés qui utilisent ce type de donnée&nbsp;:
-  - {{cssxref("filter")}}
-  - {{cssxref("backdrop-filter")}}
+  - {{CSSxRef("filter")}}
+  - {{CSSxRef("backdrop-filter")}}
