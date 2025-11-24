@@ -1,9 +1,8 @@
 ---
 title: anchor-name
 slug: Web/CSS/Reference/Properties/anchor-name
-original_slug: Web/CSS/anchor-name
 l10n:
-  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`anchor-name`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素に 1 つ以上の識別子となる**アンカー名**を付与することで、その要素を**アンカー要素**として定義できるようにします。それぞれの名前は、位置指定要素の {{cssxref("position-anchor")}} プロパティの値として設定することができ、アンカーと関連付けられた状態となります。
@@ -70,7 +69,7 @@ anchor-name: unset;
 
 2 つの {{htmlelement("div")}} 要素を設置します。クラス名 `anchor` を持つアンカー要素と、クラス名 `infobox` をつけた位置指定要素です。
 
-同時に、 2 つの`<div>`の周囲に埋め込みテキストを記載し、 {{htmlelement("body")}} の高さを増やしてスクロールできるようにします。
+同時に、 2 つの `<div>` の周囲に埋め込みテキストを記載し、 {{htmlelement("body")}} の高さを増やしてスクロールできるようにします。
 
 ```html
 <p>
@@ -103,7 +102,7 @@ anchor-name: unset;
 
 #### CSS
 
-まず、 `anchor-name` プロパティを使用してアンカー名を設定することで、`anchor` の `<div>`をアンカー要素として宣言します。
+まず、 `anchor-name` プロパティを使用してアンカー名を設定することで、`anchor` の `<div>` をアンカー要素として宣言します。
 
 ```css hidden
 body {
@@ -164,11 +163,11 @@ body {
 
 ### 複数の位置指定要素
 
-この例は、複数の位置指定要素を1つのアンカーに関連付けることができる方法を示しています。
+この例は、複数の位置指定要素を 1 つのアンカーに関連付けることができる方法を示しています。
 
 #### HTML
 
-HTMLは前の例と同じですが、この例では複数の位置指定された `<div>` 要素があり、それぞれを識別するために異なる [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) が設定されています。
+HTML は前の例と同じですが、この例では複数の位置指定された `<div>` 要素があり、それぞれを識別するために異なる [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) が設定されています。
 
 ```html
 <p>
