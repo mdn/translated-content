@@ -1,14 +1,13 @@
 ---
 title: rotateY()
 slug: Web/CSS/Reference/Values/transform-function/rotateY
-original_slug: Web/CSS/transform-function/rotateY
+l10n:
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
-{{CSSRef}}
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`rotateY()`** définit une transformation qui fait pivoter un élément autour de l'axe y (vertical) sans le déformer. Son résultat est un type de donnée {{CSSxRef("&lt;transform-function&gt;")}}.
 
-La fonction **`rotateY()`** définit une rotation, qui déplace l'élément autour de l'axe des ordonnées, sans le déformer. L'angle de rotation est défini par l'argument passé à la fonction. Si l'angle indiqué est positif, le mouvement sera appliqué dans le sens horaire et sinon il sera appliqué dans le sens inverse des aiguilles d'une montre.
-
-{{InteractiveExample("CSS Demo: rotateY()")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: rotateY()")}}
 
 ```css interactive-example-choice
 transform: rotateY(0);
@@ -36,16 +35,16 @@ transform: rotateY(3.142rad);
 </section>
 ```
 
-L'axe de la rotation passe par l'origine du repère, définie par la propriété [`transform-origin`](/fr/docs/Web/CSS/Reference/Properties/transform-origin).
-
-`rotateY(a)` est une notation raccourcie, équivalente à `rotate3D(0, 1, 0, a)`.
+L'axe de rotation passe par une origine, définie par la propriété CSS {{CSSxRef("transform-origin")}}.
 
 > [!NOTE]
-> Contrairement aux rotations appliquées dans le plan, la composition de rotations dans l'espace n'est pas commutative. Autrement dit, l'ordre dans lequel on applique les rotations est déterminant.
+> `rotateY(a)` est équivalent à
+> `rotate3d(0, 1, 0, a)`.
+
+> [!NOTE]
+> Contrairement aux rotations dans le plan 2D, la composition des rotations 3D n'est généralement pas commutative. Autrement dit, l'ordre dans lequel les rotations sont appliquées a un impact sur le résultat.
 
 ## Syntaxe
-
-L'angle de la rotation appliquée par `rotateY()` est fourni par une valeur [`<angle>`](/fr/docs/Web/CSS/Reference/Values/angle). Si cette valeur est positive, la rotation s'effectuera dans le sens horaire&nbsp;; si elle est négative, la rotation s'effectuera dans le sens anti-horaire.
 
 ```css
 rotateY(a)
@@ -54,56 +53,39 @@ rotateY(a)
 ### Valeurs
 
 - `a`
-  - : Une valeur de type [`<angle>`](/fr/docs/Web/CSS/Reference/Values/angle) qui représente l'angle de la rotation. Un angle positif indique une rotation appliquée dans le sens horaire, un angle négatif applique une rotation dans le sens anti-horaire.
+  - : Un {{CSSxRef("&lt;angle&gt;")}} représentant l'angle de la rotation. Un angle positif indique une rotation dans le sens horaire, un angle négatif dans le sens antihoraire.
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
+      <th scope="col"><a href="/fr/docs/Web/CSS/Reference/Values/transform-function#le_système_de_coordonnées_cartésiennes">Coordonnées cartésiennes</a> sur <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^2 <sup>(angl.)</sup></a></th>
+      <th scope="col"><a href="https://fr.wikipedia.org/wiki/Coordonn%C3%A9es_homog%C3%A8nes">Coordonnées homogènes</a> sur <a href="https://fr.wikipedia.org/wiki/Plan_projectif_r%C3%A9el">ℝℙ^2</a></th>
+      <th scope="col">Coordonnées cartésiennes sur <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^3 <sup>(angl.)</sup></a></th>
+      <th scope="col">Coordonnées homogènes sur <a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3 <sup>(angl.)</sup></a></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td colspan="2">
-        Cette transformation s'applique dans l'espace (3D) et ne peut pas être
-        représentée en deux dimensions.
+        Cette transformation s'applique à l'espace 3D et ne peut pas être représentée sur le plan.
       </td>
-      <td colspan="1">
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr><mtd>cos(a)</mtd><mtd>0</mtd><mtd>sin(a)</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>-sin(a)</mtd><mtd>0</mtd><mtd>cos(a)</mtd></mtr
-              ></mtable
-            ></mfenced
-          ></math
-        >
+      <td>
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mo>cos</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd><mtd><mn>0</mn></mtd><mtd><mo>sin</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mo>-</mo><mo>sin</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd><mtd><mn>0</mn></mtd><mtd><mo>cos</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{ccc} \cos(a) & 0 & \sin(a) \\ 0 & 1 & 0 \\ -\sin(a) & 0 & \cos(a) \end{array} \right)</annotation></semantics>
+        </math>
       </td>
-      <td colspan="1">
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr
-                ><mtd>cos(a)</mtd><mtd>0</mtd><mtd>sin(a)</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>-sin(a)</mtd><mtd>0</mtd><mtd>cos(a)</mtd
-                ><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
-            ></mfenced
-          ></math
-        >
+      <td>
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mo>cos</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd><mtd><mn>0</mn></mtd><mtd><mo>sin</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mo>-</mo><mo>sin</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd><mtd><mn>0</mn></mtd><mtd><mo>cos</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cccc} \cos(a) & 0 & \sin(a) & 0 \\ 0 & 1 & 0 & 0 \\ -\sin(a) & 0 & \cos(a) & 0 \\ 0 & 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
     </tr>
   </tbody>
 </table>
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -131,7 +113,7 @@ div {
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples","100%","200")}}
+{{EmbedLiveSample("Exemples", "auto", 180)}}
 
 ## Spécifications
 
@@ -143,5 +125,6 @@ div {
 
 ## Voir aussi
 
-- [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function)
+- La propriété {{CSSxRef("transform")}}
+- La propriété {{CSSxRef("rotate")}}
+- Le type de donnée {{CSSxRef("&lt;transform-function&gt;")}}
