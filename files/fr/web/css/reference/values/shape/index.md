@@ -1,49 +1,43 @@
 ---
 title: <shape>
 slug: Web/CSS/Reference/Values/shape
-original_slug: Web/CSS/shape
+l10n:
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
-{{CSSRef}}{{deprecated_header}}
+{{Deprecated_Header}}
 
-Le type de donnée CSS **`<shape>`** permet de représenter des formes. Ces formes (ou régions) sont utilisées pour définir les parties d'un élément sur lesquelles des propriétés comme {{cssxref("clip")}} s'appliquent. Ce type de donnée a été déprécié pour être remplacé par {{cssxref("&lt;basic-shape&gt;")}}.
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<shape>`** définit la forme précise d'une région. La région représente la partie d'un élément à laquelle s'applique la propriété {{CSSxRef("clip")}}.
 
 > [!NOTE]
-> `<shape>` et `rect()` fonctionnent avec la propriété {{cssxref("clip")}} qui a été dépréciée pour être remplacée par {{cssxref("clip-path")}}. Il est donc préférable d'utiliser cette dernière si possible avec une valeur de type {{cssxref("&lt;basic-shape&gt;")}} à la place.
+> `<shape>` et `rect()` fonctionnent en conjonction avec {{CSSxRef("clip")}}, qui est obsolète au profit de {{CSSxRef("clip-path")}}. Si possible, utilisez `clip-path` et le type de donnée {{CSSxRef("&lt;basic-shape&gt;")}} à la place.
 
 ## Syntaxe
 
 Les valeurs de type `<shape>` sont construites grâce à la notation fonctionnelle `rect()` qui permet de créer une zone en forme de rectangle.
 
+`rect()`
+
+```css
+rect(top, right, bottom, left)
 ```
-rect(haut, droite, bas, gauche)
-```
 
-#### Valeurs
+### Valeurs
 
-![rect.png](rect.png)
+![Un schéma montrant top, right, bottom et left, comme décrit ci‑dessous. Ces valeurs définissent la forme du rectangle. Le coin supérieur gauche est défini par les valeurs top et left. Le coin inférieur droit est défini par les valeurs bottom et right.](rect.png)
 
-- `haut`
-  - : Une valeur de type {{cssxref("&lt;length&gt;")}} qui représente le décalage entre le côté haut du rectangle et le côté haut de la bordure de l'élément.
-
-<!---->
-
-- `droite`
-  - : Une valeur de type {{cssxref("&lt;length&gt;")}} qui représente le décalage entre le côté droit du rectangle et le côté gauche de la bordure de l'élément.
-
-<!---->
-
-- `bas`
-  - : Une valeur de type {{cssxref("&lt;length&gt;")}} qui représente le décalage entre le côté bas du rectangle et le côté haut de la bordure de l'élément.
-
-<!---->
-
-- `gauche`
-  - : Une valeur de type {{cssxref("&lt;length&gt;")}} qui représente le décalage entre le côté gauche du rectangle et le côté gauche de la bordure de l'élément.
+- _top_
+  - : Une longueur ({{CSSxRef("length")}}) qui représente le décalage pour le côté haut du rectangle par rapport au bord supérieur de la boîte de l'élément.
+- _right_
+  - : Une longueur ({{CSSxRef("length")}}) qui représente le décalage pour le côté droit du rectangle par rapport au bord gauche de la boîte de l'élément.
+- _bottom_
+  - : Une longueur ({{CSSxRef("length")}}) qui représente le décalage pour le côté bas du rectangle par rapport au bord supérieur de la boîte de l'élément.
+- _left_
+  - : Une longueur ({{CSSxRef("length")}}) qui représente le décalage pour le côté gauche du rectangle par rapport au bord gauche de la boîte de l'élément.
 
 ## Interpolation
 
-Les valeurs de type `<shape>` sont des rectangles qui peuvent être interpolées lors des animations. Pour ces valeurs, l'interpolation s'effectue en interpolant chacune des valeurs `haut`, `droite`, `bas` et `gauche` comme des nombres réels (à virgule flottante). La vitesse de l'interpolation est définie grâce à [la fonction de temporisation](/fr/docs/Web/CSS/Reference/Values/easing-function) associée à l'animation.
+Les valeurs de type `<shape>` sont des rectangles qui peuvent être interpolées lors des animations. Pour ces valeurs, l'interpolation s'effectue en interpolant chacune des valeurs `top`, `right`, `bottom` et `left` comme des nombres réels (à virgule flottante). La vitesse de l'interpolation est définie grâce à [la fonction de temporisation](/fr/docs/Web/CSS/Reference/Values/easing-function) associée à l'animation.
 
 ## Exemples
 
@@ -65,5 +59,4 @@ img.clip04 {
 
 ## Voir aussi
 
-- {{cssxref("clip")}}
-- La fonction spécifique à Gecko {{cssxref("-moz-image-rect()")}}
+- La propriété {{CSSxRef("clip")}}

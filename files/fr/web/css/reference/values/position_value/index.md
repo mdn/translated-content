@@ -1,71 +1,64 @@
 ---
 title: <position>
 slug: Web/CSS/Reference/Values/position_value
-original_slug: Web/CSS/position_value
+l10n:
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
-{{CSSRef}}
-
-Le type de donnée [CSS](/fr/docs/Web/CSS) **`<position>`** (ou **`<bg-position>`**) définit une paire de coordonnées dans l'espace (bidimensionnel) afin de définir la position relative d'une boîte. Ce type de donnée est notamment utilisé avec les propriétés [`background-position`](/fr/docs/Web/CSS/Reference/Properties/background-position) et [`offset-anchor`](/fr/docs/Web/CSS/Reference/Properties/offset-anchor).
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<position>`** désigne une paire de coordonnées utilisée pour définir un emplacement par rapport à une boîte d'élément. Elle est utilisée dans les propriétés {{CSSxRef("background-position")}}, {{CSSxRef("object-position")}}, {{CSSxRef("mask-position")}}, {{CSSxRef("offset-position")}}, {{CSSxRef("offset-anchor")}} et {{CSSxRef("transform-origin")}}.
 
 > [!NOTE]
 > La position finale obtenue, décrite par la valeur `<position>`, n'est pas nécessairement située à l'intérieur de la boîte de l'élément.
 
 ## Syntaxe
 
-![](position_type.png)
+![Grille montrant le placement des différentes valeurs. 0 0 est le coin supérieur gauche. Les quatre valeurs right, right center, center left 100% et top 50% left 100% sont équivalentes : elles sont sur le bord droit, au milieu verticalement. Les deux valeurs top 75px left 100px et left 100px top 75px sont identiques. bottom left 25% est équivalent à top 100% left 25%.](position_type.png)
 
-On peut définir une position grâce à deux mots-clés avec chacun un décalage par rapport au côté correspondant à ce mot-clé.
+Le type de données `<position>` se définit par un ou deux mots-clés, éventuellement accompagnés de décalages.
 
-Un mot-clé représente un côté de la boîte ou la ligne du centre située entre les deux bords. Ce mot-clé sera `left`, `right`, `top`, `bottom` ou `center` (ce dernier représente le milieu entre les côtés droit et gauche ou le milieu entre les côtés haut et bas selon le contexte).
+Les mots-clés possibles sont `center`, `top`, `right`, `bottom` et `left`. Chaque mot-clé représente soit un bord de la boîte de l'élément, soit la ligne centrale située entre deux bords. Selon le contexte, `center` représente soit le centre entre les bords gauche et droit, soit le centre entre les bords haut et bas.
 
-Le décalage peut être une valeur relative, exprimée en pourcentages (valeur de type [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)) ou une valeur de longueur ([`<length>`](/fr/docs/Web/CSS/Reference/Values/length)). Les valeurs positives décalent vers la droite ou vers le bas. Les valeurs négatives décalent dans l'autre sens (vers la gauche ou vers le haut).
+Si un décalage est précisé, il peut être soit une valeur relative ({{CSSxRef("&lt;percentage&gt;")}}), soit une valeur absolue ({{CSSxRef("&lt;length&gt;")}}). Les valeurs positives déplacent vers la droite ou vers le bas, selon le cas. Les valeurs négatives déplacent dans la direction opposée.
 
-Si un seul décalage est indiqué, ce sera le décalage horizontal. Lorsqu'un seul décalage ou mot-clé est utilisé, la valeur par défaut pour l'autre axe est `center`.
-
-## Valeurs
+Si une seule valeur de décalage est présente, elle définit la coordonnée en abscisse (x), la valeur de l'autre axe prend par défaut `center`.
 
 ```css
-/* Syntaxe avec une valeur */
-mot-clé                  /* Le côté depuis lequel décaler, on centrera sur l'autre axe*/
-<length> ou <percentage> /* La position sur l'axe */
+/* Syntaxe à 1 valeur */
+keyword                  /* Position horizontale ou verticale : l'axe opposé
+                            vaut center */
+value                    /* La position sur l'axe x : l'axe y vaut 50% */
 
-/* Syntaxe avec deux valeurs */
-mot-clé mot-clé          /* Un mot-clé pour chaque direction, l'ordre n'est pas important */
-mot-clé valeur           /* La valeur indique le décalage par rapport au côté indiqué par le mot-clé */
-valeur mot-clé           /* Une valeur pour le décalage horizontal et un mot-clé pour le décalage vertical */
-valeur valeur            /* Une valeur pour chaque composante du décalage */
+/* Syntaxe à 2 valeurs */
+keyword keyword          /* Un mot-clé pour chaque direction (l'ordre est
+                            sans importance) */
+keyword value            /* Un mot-clé pour la position horizontale, une
+                            valeur pour la position verticale */
+value keyword            /* Une valeur pour la position horizontale, un
+                            mot-clé pour la position verticale */
+value value              /* Une valeur pour chaque direction (horizontal
+                            puis vertical) */
 
-/* Syntaxe avec quatre valeurs */
-mot-clé valeur mot-clé valeur /* Chaque valeur indique le décalage par rapport au mot-clé qui le précède */
-```
-
-### Syntaxe formelle
-
-```css
-[
- [ left | center | right ] || [ top | center | bottom ]
-|
- [ left | center | right | <length> | <percentage> ]
- [ top | center | bottom | <length> | <percentage> ]?
-|
- [ [ left | right ] [ <length> | <percentage> ] ] &&
- [ [ top | bottom ] [ <length> | <percentage> ] ]
-]
+/* Syntaxe à 4 valeurs */
+keyword value keyword value /* Chaque valeur est un décalage par rapport au
+                               mot-clé qui la précède */
 ```
 
 > [!NOTE]
-> La propriété [`background-position`](/fr/docs/Web/CSS/Reference/Properties/background-position) accepte également une syntaxe avec trois valeurs. Celle-ci n'est pas autorisée pour les autres propriétés qui utilisent une valeur `<position>`.
+> La propriété {{CSSxRef("background-position")}} accepte également une syntaxe à trois valeurs. Ceci n'est pas autorisé pour les autres propriétés qui utilisent `<position>`.
 
 ## Interpolation
 
 Les valeurs des coordonnées en abscisses et en ordonnées sont interpolées indépendamment. La vitesse de l'interpolation est définie par une unique fonction de temporisation ([`easing-function`](/fr/docs/Web/CSS/Reference/Values/easing-function)), le point se déplacera donc sur une ligne.
 
+### Syntaxe formelle
+
+{{CSSSyntax}}
+
 ## Exemples
 
 ### Positions valides
 
-```css example-good
+```plain example-good
 center
 left
 center top
@@ -79,7 +72,7 @@ bottom 12vmin right -6px
 
 ### Positions invalides
 
-```css example-bad
+```plain example-bad
 left right
 bottom top
 10px 15px 20px 15px
@@ -95,8 +88,8 @@ bottom top
 
 ## Voir aussi
 
-- [Valeurs et unités en CSS](/fr/docs/Web/CSS/Guides/Values_and_units)
-- [Tutoriel — Introduction aux valeurs et unités CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-- [`background-position`](/fr/docs/Web/CSS/Reference/Properties/background-position)
-- [`radial-gradient()`](</fr/docs/Web/CSS/gradient/radial-gradient()>)
-- [`conic-gradient()`](</fr/docs/Web/CSS/gradient/conic-gradient()>)
+- Le module de [Valeurs et unités CSS](/fr/docs/Web/CSS/Guides/Values_and_units)
+- [Apprendre&nbsp;: Valeurs et unités CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
+- La propriété {{CSSxRef("background-position")}}
+- La fonction {{CSSxRef("gradient/radial-gradient", "radial-gradient()")}}
+- La fonction {{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}
