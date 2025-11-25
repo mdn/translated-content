@@ -49,7 +49,7 @@ GitHub 提供了一套流畅的工作流程，可将新代码转化为实时网�
 
 - 将代码推送到 GitHub。
 - 定义一个 [GitHub Action](https://docs.github.com/zh/actions)，当主分支有新代码推送时触发该操作，它会构建代码并将其放置在特定位置。
-- GitHub Pages 随后通过特定网址提供代码服务。
+- GitHub Pages 随后通过特定网址提供这些代码。
 
 我们鼓励大家在决定自己的构建工具链时，寻找这类互联服务。我们可以提交代码并推送到 GitHub，更新后的代码会自动触发整个构建过程。如果一切顺利，我们就能自动部署实时变更。我们需要执行的*唯一*操作就是最初的“推送”。
 
@@ -124,6 +124,9 @@ git status
 
    将 URL 修改为你自己的存储库，并立即运行该命令。
 
+   > [!NOTE]
+   > 在你选择了仓库名称之后，确保你的 `vite.config.js` 文件中的 `base` 选项与你的仓库名称一致，就像[上一章](/zh-CN/docs/Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain#javascript_转换)中提到的那样。否则，JavaScript 和 CSS 资源将无法正确链接。
+
 6. 现在，我们可以将代码推送到 GitHub，请运行以下命令：
 
    ```bash
@@ -135,7 +138,7 @@ git status
 > [!NOTE]
 > 如果你有兴趣使用 SSH 选项，从而避免每次推送到 GitHub 时都要输入用户名和密码，[本教程将指导你如何操作](https://docs.github.com/zh/authentication/connecting-to-github-with-ssh)。
 
-最后这条命令指示 git 使用分支 `main` 将代码推送（也就是发布）到我们称之为 `github` 的“远程”位置（这是托管在 github.com 上的仓库，我们可以随便起名）。我们完全没有遇到过分支，但“main”分支是我们工作的默认位置，也是 git 的启动分支。这也是 Netlify 会查找的默认分支，非常方便。
+最后这条命令指示 git 使用分支 `main` 将代码推送（也就是发布）到我们称之为 `github` 的“远程”位置（这是托管在 github.com 上的仓库，我们可以随便起名）。我们完全没有遇到过分支，但“main”分支是我们工作的默认位置，也是 git 的启动分支。当我们定义用于构建网站的操作（action）时，我们也会让它监听“main”分支上的更改。
 
 > [!NOTE]
 > 在 2020 年 10 月之前，GitHub 上的默认分支一直是 `master`，后因各种社会原因改为了 `main`。你应该知道，在遇到的各种项目中可能会出现这个较早的默认分支，但我们建议你在自己的项目中使用 `main`。
@@ -150,7 +153,7 @@ GitHub Actions 如同 ESLint 配置一样，是另一个值得深入探索的领
 
 ![GitHub 截图，在提交标题后有一个绿色的对勾](build-action-pass.png)
 
-若看到黄色圆点，表示操作正在运行；若看到红色叉号，则表示操作失败。点击图标即可查看构建操作（本例中名为“部署构建”）的状态和日志。
+若看到黄色圆点，表示操作正在运行；若看到红色叉号，则表示操作失败。点击图标即可查看构建操作（本例中名为“Deploy build”）的状态和日志。
 
 稍等片刻后，访问你的 GitHub Pages 网址即可查看网站上线效果。链接格式为 `https://<你的用户名>.github.io/<仓库名称>`。本例中网址为 <https://mdn.github.io/client-toolchain-example/>。
 
