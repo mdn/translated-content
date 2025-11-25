@@ -2298,7 +2298,6 @@
 /fr/docs/JavaScript/Reference/Objets_globaux/Function/displayName	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/displayName
 /fr/docs/JavaScript/Reference/Objets_globaux/Function/length	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/length
 /fr/docs/JavaScript/Reference/Objets_globaux/Function/name	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/name
-/fr/docs/JavaScript/Reference/Objets_globaux/Function/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function
 /fr/docs/JavaScript/Reference/Objets_globaux/Function/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /fr/docs/JavaScript/Reference/Objets_globaux/Function/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /fr/docs/JavaScript/Reference/Objets_globaux/InternalError	/fr/docs/Web/JavaScript/Reference/Global_Objects/InternalError
@@ -2522,7 +2521,6 @@
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Function	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Function/caller	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/caller
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Function/length	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/length
-/fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Function/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Function/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Function/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Math	/fr/docs/Web/JavaScript/Reference/Global_Objects/Math
@@ -2745,7 +2743,6 @@
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Function	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Function/caller	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/caller
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Function/length	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/length
-/fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Function/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Function/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Function/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Math	/fr/docs/Web/JavaScript/Reference/Global_Objects/Math
@@ -6774,7 +6771,6 @@
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/toString
-/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/@@toStringTag	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendars	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCalendars
@@ -7098,7 +7094,6 @@
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/displayName	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/displayName
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/length	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/length
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/name	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/name
-/fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Generator	/fr/docs/Web/JavaScript/Reference/Global_Objects/Generator
@@ -7106,7 +7101,6 @@
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Generator/return	/fr/docs/Web/JavaScript/Reference/Global_Objects/Generator/return
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Generator/throw	/fr/docs/Web/JavaScript/Reference/Global_Objects/Generator/throw
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/GeneratorFunction	/fr/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction
-/fr/docs/Web/JavaScript/Reference/Objets_globaux/GeneratorFunction/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Infinity	/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Int16Array	/fr/docs/Web/JavaScript/Reference/Global_Objects/Int16Array
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Int32Array	/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array
