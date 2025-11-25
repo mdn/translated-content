@@ -100,6 +100,108 @@ console.log(carré.area);
 
 ### Méthodes statiques
 
+Le mot-clé [`static`](/fr/docs/Web/JavaScript/Reference/Classes/static) permet de définir une méthode statique pour une classe. Les méthodes statiques sont appelées par rapport---
+title: Classes
+slug: Web/JavaScript/Reference/Classes
+---
+
+{{JsSidebar("Classes")}}
+
+Les classes JavaScript ont été introduites avec ECMAScript 2015. Elles sont un « sucre syntaxique » par rapport à l'héritage prototypal. En effet, cette syntaxe n'introduit pas un nouveau modèle d'héritage dans JavaScript ! Elle fournit uniquement une syntaxe plus simple pour créer des objets et manipuler l'héritage.
+
+## Définir des classes
+
+En réalité, les classes sont juste des [fonctions](/fr/docs/Web/JavaScript/Reference/Functions) spéciales. Ainsi, les classes sont définies de la même façon que les fonctions : par déclaration, ou par expression.
+
+### Les déclarations de classes
+
+Pour utiliser une déclaration de classe simple, on utilisera le mot-clé `class`, suivi par le nom de la classe que l'on déclare (ici «&nbsp;Rectangle&nbsp;»).
+
+```js
+class Rectangle {
+  constructor(hauteur, largeur) {
+    this.hauteur = hauteur;
+    this.largeur = largeur;
+  }
+}
+```
+
+#### Remontée des déclarations (_hoisting_)
+
+[Les déclarations de fonctions](/fr/docs/Web/JavaScript/Reference/Statements/function) sont remontées dans le code. En revanche, ce n'est pas le cas pour les déclarations de classes. Ainsi, il est nécessaire de déclarer la classe avant de l'instancier. Dans le cas contraire, on obtient une {{jsxref("ReferenceError")}} :
+
+```js example-bad
+const p = new Rectangle(); // ReferenceError
+
+class Rectangle {}
+```
+
+### Les expressions de classes
+
+Il est possible d'utiliser des expressions de classes, nommées ou anonymes. Si on utilise un nom dans l'expression, ce nom ne sera accessible que depuis le corps de la classe via la propriété {{jsxref("Function.name", "name")}} (cette valeur ne sera pas directement accessible pour les instances).
+
+```js
+// anonyme
+let Rectangle = class {
+  constructor(hauteur, largeur) {
+    this.hauteur = hauteur;
+    this.largeur = largeur;
+  }
+};
+
+// nommée
+let Rectangle = class Rectangle {
+  constructor(hauteur, largeur) {
+    this.hauteur = hauteur;
+    this.largeur = largeur;
+  }
+};
+```
+
+> [!NOTE]
+> Les mêmes règles s'appliquent aux expressions de classes en ce qui concerne la remontée (_hoisting_) des classes (cf. le paragraphe précédent sur les remontées des déclarations de classe).
+
+## Corps d'une classe et définition des méthodes
+
+Le corps d'une classe est la partie contenue entre les accolades. C'est dans cette partie que l'on définit les propriétés d'une classe comme ses méthodes et son constructeur.
+
+### Mode strict
+
+Le corps des classes, pour les expressions et pour les déclarations de classes, est exécuté en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) (autrement dit, le constructeur, les méthodes statiques, le prototype, les accesseurs (_getters_) et mutateurs (_setters_) sont exécutés en mode strict).
+
+### Constructeur
+
+La méthode [`constructor`](/fr/docs/Web/JavaScript/Reference/Classes/constructor) est une méthode spéciale qui permet de créer et d'initialiser les objet créés avec une classe. Il ne peut y avoir qu'une seule méthode avec le nom "constructor" pour une classe donnée. Si la classe contient plusieurs occurences d'une méthode `constructor`, cela provoquera une exception {{jsxref("SyntaxError")}}.
+
+Le constructeur ainsi déclaré peut utiliser le mot-clé `super` afin d'appeler le constructeur de la classe parente.
+
+### Méthodes de prototype
+
+Voir aussi les définitions de méthode.
+
+```js
+class Rectangle {
+  constructor(hauteur, largeur) {
+    this.hauteur = hauteur;
+    this.largeur = largeur;
+  }
+
+  get area() {
+    return this.calcArea();
+  }
+
+  calcArea() {
+    return this.largeur * this.hauteur;
+  }
+}
+
+const carré = new Rectangle(10, 10);
+
+console.log(carré.area);
+```
+
+### Méthodes statiques
+
 Le mot-clé [`static`](/fr/docs/Web/JavaScript/Reference/Classes/static) permet de définir une méthode statique pour une classe. Les méthodes statiques sont appelées par rapport à la classe entière et non par rapport à une [instance](/fr/docs/Learn/JavaScript/Objects#l'instance) donnée (ces méthodes ne peuvent pas être appelées « depuis » une instance). Ces méthodes sont généralement utilisées sous formes d'utilitaires au sein d'applications.
 
 ```js

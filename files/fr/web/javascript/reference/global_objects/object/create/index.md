@@ -108,6 +108,116 @@ MaClasse.prototype.maMéthode = function () {
 };
 ```
 
+Ici, la méthode {{jsxref("Object.assign()")}} copie les propriétés du prototype de la classe parente (`ClassParente2`) sur le prototype de la classe fille (`MaClasse`), les rendant dis---
+title: Object.create()
+slug: Web/JavaScript/Reference/Global_Objects/Object/create
+---
+
+{{JSRef}}
+
+La méthode **`Object.create()`** crée un nouvel objet avec un prototype donné et des propriétés données.
+
+{{InteractiveExample("JavaScript Demo: Object.create()")}}
+
+```js interactive-example
+const person = {
+  isHuman: false,
+  printIntroduction: function () {
+    console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
+  },
+};
+
+const me = Object.create(person);
+
+me.name = "Matthew"; // "name" is a property set on "me", but not on "person"
+me.isHuman = true; // Inherited properties can be overwritten
+
+me.printIntroduction();
+// Expected output: "My name is Matthew. Am I human? true"
+```
+
+## Syntaxe
+
+```js
+Object.create(proto);
+Object.create(proto, objetPropriétés);
+```
+
+### Paramètres
+
+- `proto`
+  - : L'objet qui sera le prototype du nouvel objet créé.
+- `objetPropriétés`
+  - : Paramètre optionnel. S'il est fourni et qu'il ne vaut pas {{jsxref("undefined")}}, il sera utilisé comme un objet dont les propriétés propres (celles qui ne sont pas héritées par la chaîne de prototypes) et énumérables définiront des descripteurs pour les propriétés à ajouter au nouvel objet, avec les mêmes noms. Ces propriétés correspondent au deuxième argument de {{jsxref("Object.defineProperties()")}}.
+
+### Valeur de retour
+
+Un nouvel objet qui dispose du prototype et des propriétés indiquées.
+
+### Exceptions
+
+Cette méthode lève une exception {{jsxref("TypeError")}} si le paramètre `objetPropriétés` vaut {{jsxref("null")}} ou s'il ne décrit pas des propriétés d'un objet.
+
+## Exemples
+
+### L'héritage classique avec `Object.create()`
+
+Dans l'exemple ci-dessous, on utilise `Object.create()` afin de réaliser un héritage de classe. Ce modèle ne supporte que l'héritage unique (un objet hérite directement uniquement d'un autre objet) car JavaScript ne gère pas l'héritage multiple.
+
+```js
+// Forme, la classe parente
+function Forme() {
+  this.x = 0;
+  this.y = 0;
+}
+
+// Méthode de la classe parente
+Forme.prototype.déplacer = function (x, y) {
+  this.x += x;
+  this.y += y;
+  console.info("Forme déplacée.");
+};
+
+// Rectangle - classe fille
+function Rectangle() {
+  // on appelle le constructeur parent
+  Forme.call(this);
+}
+
+// La classe fille surcharge la classe parente
+Rectangle.prototype = Object.create(Forme.prototype);
+
+// Si on ne définit pas le constructeur avec Rectangle, il récupèrera le constructeur
+// Forme (le parent).
+Rectangle.prototype.constructor = Rectangle;
+
+var rect = new Rectangle();
+
+console.log("instance de Rectangle ? ", rect instanceof Rectangle);
+// true
+console.log("une instance de Forme ? ", rect instanceof Forme);
+// true
+rect.déplacer(1, 1);
+// Affiche 'Forme déplacée.'
+```
+
+Si on souhaite hériter de plusieurs objets, on peut utiliser des _mixins_.
+
+```js
+function MaClasse() {
+  ClasseParente1.call(this);
+  ClasseParente2.call(this);
+}
+
+MaClasse.prototype = Object.create(ClasseParente1.prototype); // héritage d'une classe
+Object.assign(MaClasse.prototype, ClasseParente2.prototype); // mixin pour une autre
+MaClasse.prototype.constructor = MaClasse; // On réaffecte le constructeur
+
+MaClasse.prototype.maMéthode = function () {
+  // faire quelque chose
+};
+```
+
 Ici, la méthode {{jsxref("Object.assign()")}} copie les propriétés du prototype de la classe parente (`ClassParente2`) sur le prototype de la classe fille (`MaClasse`), les rendant disponibles pour toutes les instances de `MaClasse`. `Object.assign()` a été introduit avec ES2015 et [une prothèse d'émulation (polyfill)](</fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/assign#Prothèse_d'émulation_(polyfill)>) est disponible. Si le support des navigateurs plus anciens est nécessaire, les méthodes [`jQuery.extend()`](https://api.jquery.com/jQuery.extend/) ou [`_.assign()`](https://lodash.com/docs/#assign) (Lodash) peuvent être utilisées.
 
 ### Utiliser l'argument `objetPropriétés` avec `Object.create()`
