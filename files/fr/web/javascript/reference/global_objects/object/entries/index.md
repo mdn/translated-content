@@ -1,139 +1,117 @@
 ---
-title: Object.entries()
+title: "Object : méthode statique entries()"
+short-title: entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+La méthode statique **`Object.entries()`** retourne un tableau contenant les paires clé-valeur des propriétés propres énumérables d'un objet, dont les clés sont des chaînes de caractères.
 
-La méthode **`Object.entries()`** renvoie un tableau des propriétés propres énumérables d'un objet dont la clé est une chaîne de caractères, sous la forme de paires `[clé, valeur]`, dans le même ordre qu'une boucle {{jsxref("Instructions/for...in", "for...in")}} (la boucle `for-in` est différente car elle parcourt la chaîne des prototypes).
-
-L'ordre du tableau renvoyé par cette méthode ne dépend pas de la façon dont l'objet est défini. S'il faut garantir un certain ordre, on pourra utiliser la méthode {{jsxref("Array.sort()")}}.
-
-{{InteractiveExample("JavaScript Demo: Object.entries()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Object.entries()")}}
 
 ```js interactive-example
-const object1 = {
-  a: "somestring",
+const object = {
+  a: "some string",
   b: 42,
 };
 
-for (const [key, value] of Object.entries(object1)) {
+for (const [key, value] of Object.entries(object)) {
   console.log(`${key}: ${value}`);
 }
 
-// Expected output:
-// "a: somestring"
+// Résultat attendu&nbsp;:
+// "a: some string"
 // "b: 42"
 ```
 
 ## Syntaxe
 
-```js
-Object.entries(obj);
+```js-nolint
+Object.entries(obj)
 ```
 
 ### Paramètres
 
 - `obj`
-  - : L'objet dont on souhaite connaître les propriétés propres énumérables dont la clé est une chaîne de caractères, sous la forme de paires `[clé, valeur]`.
+  - : Un objet.
 
 ### Valeur de retour
 
-Un tableau qui contient les propriétés énumérables propres de l'objet sous la forme de paires `[clé, valeur]`.
+Un tableau contenant les paires clé-valeur des propriétés propres énumérables de l'objet donné, dont les clés sont des chaînes de caractères. Chaque paire clé-valeur est un tableau de deux éléments&nbsp;: le premier élément est la clé (toujours une chaîne de caractères), le second est la valeur de la propriété.
 
 ## Description
 
-`Object.entries()` renvoie un tableau dont les éléments sont des paires (des tableaux à deux éléments) `[clé, valeur]` qui correspondent aux propriétés énumérables qui sont directement présentes sur l'objet passé en argument. L'ordre du tableau est le même que celui utilisé lorsqu'on parcourt les valeurs manuellement.
+`Object.entries()` retourne un tableau dont les éléments sont des tableaux correspondant aux paires clé-valeur des propriétés propres énumérables à clés de chaînes de caractères trouvées directement sur l'objet. Cela équivaut à itérer avec une boucle {{JSxRef("Statements/for...in", "for...in")}}, sauf qu'une boucle `for...in` énumère aussi les propriétés de la chaîne de prototypes. L'ordre du tableau retourné par `Object.entries()` est le même que celui fourni par une boucle {{JSxRef("Statements/for...in", "for...in")}}.
+
+Si vous n'avez besoin que des clés, utilisez {{JSxRef("Object.keys()")}}. Si vous n'avez besoin que des valeurs, utilisez {{JSxRef("Object.values()")}}.
 
 ## Exemples
 
+### Utilisation de `Object.entries()`
+
 ```js
-var obj = { toto: "truc", machin: 42 };
-console.log(Object.entries(obj)); // [ ['toto', 'truc'], ['machin', 42] ]
+const obj = { foo: "bar", baz: 42 };
+console.log(Object.entries(obj)); // [ ['foo', 'bar'], ['baz', 42] ]
 
-// Un objet semblable à un tableau
-var obj = { 0: "a", 1: "b", 2: "c" };
-console.log(Object.entries(obj)); // [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ]
+const arrayLike = { 0: "a", 1: "b", 2: "c" };
+console.log(Object.entries(arrayLike)); // [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ]
 
-// Un objet semblable à un tableau
-// dont les clés sont aléatoirement ordonnées
-var un_obj = { 100: "a", 2: "b", 7: "c" };
-console.log(Object.entries(un_obj)); // [ ['2', 'b'], ['7', 'c'], ['100', 'a'] ]
+const randomKeyOrder = { 100: "a", 2: "b", 7: "c" };
+console.log(Object.entries(randomKeyOrder)); // [ ['2', 'b'], ['7', 'c'], ['100', 'a'] ]
 
-// getToto est une propriété non énumérable
-var mon_obj = Object.create(
+// getFoo est une propriété non énumérable
+const myObj = Object.create(
   {},
   {
-    getToto: {
-      value: function () {
-        return this.toto;
+    getFoo: {
+      value() {
+        return this.foo;
       },
     },
   },
 );
-mon_obj.toto = "truc";
-console.log(Object.entries(mon_obj)); // [ ['toto', 'truc'] ]
+myObj.foo = "bar";
+console.log(Object.entries(myObj)); // [ ['foo', 'bar'] ]
+```
 
-// un argument de type primitif sera
-// converti en un objet
-console.log(Object.entries("toto")); // [ ['0', 't'], ['1', 'o'], ['2', 't'],  ['3', 'o'] ]
+### Utiliser `Object.entries()` sur des valeurs primitives
 
-// Un tableau vide pour les types primitifs qui n'ont pas de propriétés
-console.log(Object.entries(100)); // [ ]
+Les arguments qui ne sont pas des objets sont [convertis en objets](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object#coercition_dobjet). [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) et [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) ne peuvent pas être convertis en objets et lèvent immédiatement une {{JSxRef("TypeError")}}. Seules les chaînes de caractères peuvent avoir des propriétés propres énumérables, tandis que toutes les autres primitives retournent un tableau vide.
 
-// parcourir les clés-valeurs
-var autreObjet = { a: 5, b: 7, c: 9 };
+```js
+// Strings have indices as enumerable own properties
+console.log(Object.entries("foo")); // [ ['0', 'f'], ['1', 'o'], ['2', 'o'] ]
 
-for (var [cle, valeur] of Object.entries(autreObjet)) {
-  console.log(cle + " " + valeur);
-}
-
-// Ou encore, en utilisant les méthodes génériques
-Object.entries(autreObjet).forEach(([clé, valeur]) => {
-  console.log(clé + " " + valeur);
-});
+// Other primitives except undefined and null have no own properties
+console.log(Object.entries(100)); // []
 ```
 
 ### Convertir un objet en `Map`
 
-Le constructeur {{jsxref("Map", "new Map()")}} accepte un argument itérable pour décrire les entrées du tableau associatif. Grâce à `Object.entries`, il est possible de convertir simplement un objet {{jsxref("Object")}} en un objet {{jsxref("Map")}} :
+Le constructeur {{JSxRef("Map/Map", "Map()")}} accepte un itérable de paires d'entrées. Avec `Object.entries`, vous pouvez facilement convertir un {{JSxRef("Object")}} en {{JSxRef("Map")}}&nbsp;:
 
 ```js
-var obj = { toto: "truc", machin: 42 };
-var map = new Map(Object.entries(obj));
-console.log(map); // Map { toto: "truc", machin: 42 }
+const obj = { foo: "bar", baz: 42 };
+const map = new Map(Object.entries(obj));
+console.log(map); // Map(2) {"foo" => "bar", "baz" => 42}
 ```
 
-### Parcourir un objet
+### Itérer sur un objet
 
-En utilisant [la décomposition des tableaux](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#décomposition_d'un_tableau), on peut simplement parcourir les différentes propriétés d'un objet :
-
-```js
-const obj = { toto: "truc", bidule: 42 };
-Object.entries(obj).forEach(([clé, valeur]) =>
-  console.log(`${clé}: ${valeur}`),
-);
-// "toto: truc"
-// "bidule: 42"
-```
-
-## Prothèse d'émulation (_polyfill_)
-
-Afin d'ajouter le support pour `Object.entries` dans des environnements plus anciens qui ne supportent pas la méthode nativement, vous pouvez utiliser une prothèse comme celle proposée sur le dépôt [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) ou sur le dépôt [es-shims/Object.entries](https://github.com/es-shims/Object.entries).
-
-Vous pouvez également utiliser la prothèse suivante (qui nécessitera la prothèse pour `Object.prototype.keys()` si on souhaite être compatible avec IE 8 et les versions antérieures) :
+En utilisant la [décomposition de tableau](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring#décomposition_dun_tableau), vous pouvez itérer facilement sur les objets.
 
 ```js
-if (!Object.entries) {
-  Object.entries = function (obj) {
-    var ownProps = Object.keys(obj),
-      i = ownProps.length,
-      resArray = new Array(i);
-    while (i--) resArray[i] = [ownProps[i], obj[ownProps[i]]];
-
-    return resArray;
-  };
+// Avec une boucle for...of
+const obj = { a: 5, b: 7, c: 9 };
+for (const [key, value] of Object.entries(obj)) {
+  console.log(`${key} ${value}`); // "a 5", "b 7", "c 9"
 }
+
+// Avec les méthodes de tableau
+Object.entries(obj).forEach(([key, value]) => {
+  console.log(`${key} ${value}`); // "a 5", "b 7", "c 9"
+});
 ```
 
 ## Spécifications
@@ -146,13 +124,13 @@ if (!Object.entries) {
 
 ## Voir aussi
 
-- [Énumérabilité et rattachement des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
-- {{jsxref("Object.keys()")}}
-- {{jsxref("Object.values()")}}
-- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
-- {{jsxref("Object.create()")}}
-- {{jsxref("Object.fromEntries()")}}
-- {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Map.prototype.entries()")}}
-- {{jsxref("Map.prototype.keys()")}}
-- {{jsxref("Map.prototype.values()")}}
+- [Énumérabilité et appartenance des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
+- La méthode statique {{JSxRef("Object.keys()")}}
+- La méthode statique {{JSxRef("Object.values()")}}
+- La méthode {{JSxRef("Object.prototype.propertyIsEnumerable()")}}
+- La méthode statique {{JSxRef("Object.create()")}}
+- La méthode statique {{JSxRef("Object.fromEntries()")}}
+- La méthode statique {{JSxRef("Object.getOwnPropertyNames()")}}
+- La méthode {{JSxRef("Map.prototype.entries()")}}
+- [Prothèse d'émulation de `Object.entries` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
+- [Prothèse d'émulation es-shims de `Object.entries` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.entries)

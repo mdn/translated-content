@@ -1,5 +1,6 @@
 ---
-title: end
+title: end：Wasm 文本指令
+short-title: end
 slug: WebAssembly/Reference/Control_flow/end
 l10n:
   sourceCommit: c0fc8c988385a0ce8ff63887f9a3263caf55a1f9
@@ -7,7 +8,7 @@ l10n:
 
 **`end`** 用于终止 `block`、`loop`、`if` 或 `else`。在其他示例中，我们使用的是不需要 `end` 的 s 表达式，因此你不会在哪些示例中找到它。然而，了解它仍是有用的，因为浏览器的开发者工具是这样显示的。
 
-{{InteractiveExample("Wat Demo: end", "tabbed-taller")}}
+{{InteractiveExample("Wat 演示：end", "tabbed-taller")}}
 
 ```wat interactive-example
 (module

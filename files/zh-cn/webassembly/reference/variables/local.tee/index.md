@@ -1,27 +1,26 @@
 ---
-title: Local tee
-slug: WebAssembly/Reference/Variables/Local_tee
+title: local.tee：Wasm 文本指令
+short-title: local.tee
+slug: WebAssembly/Reference/Variables/local.tee
 l10n:
-  sourceCommit: c681ed89305afd56d54ba6671673680bea041670
+  sourceCommit: ebf92d37f836b490640a7881c4e5db5c1dea8fe7
 ---
-
-{{WebAssemblySidebar}}
 
 **`local.tee`** 指令用于设置局部变量的值，并将该值加载到栈上。
 
 该指令的名称来源于管道工程中使用的 T 型分流器。
 
-{{InteractiveExample("Wat Demo: local_tee", "tabbed-taller")}}
+{{InteractiveExample("Wat 演示：local_tee", "tabbed-taller")}}
 
 ```wat interactive-example
 (module
   (import "console" "log" (func $log (param i32)))
   (func $main
 
-    (local $var i32) ;; create a local variable named $var
-    (i32.const 10) ;; load `10` onto the stack
-    local.tee $var ;; set the $var to `10` and keep `10` on the stack
-    call $log ;; log the top item on the stack (10)
+    (local $var i32) ;; 创建本地变量 $var
+    (i32.const 10) ;; 将 `10` 加载到栈上
+    local.tee $var ;; 将 $var 设置为 `10` 并将 `10` 保留在栈上
+    call $log ;; 记录栈顶上的元素（10）
 
   )
   (start $main)

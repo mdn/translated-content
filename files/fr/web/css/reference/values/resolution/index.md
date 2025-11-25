@@ -1,20 +1,17 @@
 ---
 title: <resolution>
 slug: Web/CSS/Reference/Values/resolution
-original_slug: Web/CSS/resolution
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<resolution>`**, utilisé pour décrire les [résolutions](/fr/docs/Web/CSS/Reference/At-rules/@media/resolution) dans les [requêtes média](/fr/docs/Web/CSS/Guides/Media_queries), désigne la densité de pixels d'un périphérique de sortie, c'est‑à‑dire sa résolution.
 
-Le type de donnée CSS **`<resolution>`**, utilisé dans les _[media queries](/fr/docs/Web/CSS/Guides/Media_queries)_, décrit la densité de pixels d'un appareil d'affichage, c'est-à-dire sa résolution.
-
-Les dimensions font référence aux unités CSS (un pixel CSS, un centimètre CSS, etc.) et non aux dimensions physiques.
+Sur les écrans, les unités se réfèrent aux pouces, centimètres ou pixels _CSS_, et non à des valeurs physiques.
 
 ## Syntaxe
 
-Une valeur de ce type sera composée d'un nombre (une valeur de type {{cssxref("&lt;number&gt;")}}) immédiatement suivi d'une unité de résolution (`dpi`, `dpcm`, …). Comme pour les autres dimensions CSS, il n'y a aucun espace entre la valeur numérique et l'unité.
-
-Bien que toutes les unités représentent la même chose pour la valeur `0`, l'unité ne peut être omise dans ce cas puisque ce n'est pas une donnée de type {{cssxref("&lt;length&gt;")}} : `0` est invalide et ne représente pas `0dpi`, `0dpcm`, ni `0dppx`.
+Le type de donnée `<resolution>` est composé d'un {{CSSxRef("&lt;number&gt;")}} strictement positif, suivi de l'une des unités listées ci‑dessous. Comme pour toutes les dimensions CSS, il n'y a pas d'espace entre le littéral d'unité et le nombre.
 
 ### Unités
 
@@ -23,7 +20,7 @@ Bien que toutes les unités représentent la même chose pour la valeur `0`, l'u
 - `dpcm`
   - : Cette unité représente le nombre de [points par centimètre](https://fr.wikipedia.org/wiki/Point_par_pouce#Tableau_de_conversion). Puisque 1 pouce équivaut à 2.54 cm, `1dpcm ≈ 2,54 dpi`.
 - `dppx`
-  - : Cette unité représente le nombre de points par unité CSS `px`. Puisque le ratio entre les unités CSS `in` et CSS `px` vaut 1:96, `1 dppx` est équivalent à `96 dpi`, ce qui correspond à la résolution par défaut des images affichées en CSS tel que défini par {{cssxref("image-resolution")}}.
+  - : Cette unité représente le nombre de points par unité CSS `px`. Puisque le ratio entre les unités CSS `in` et CSS `px` vaut 1:96, `1 dppx` est équivalent à `96 dpi`, ce qui correspond à la résolution par défaut des images affichées en CSS tel que défini par {{CSSxRef("image-resolution")}}.
 - `x`
   - : Un alias pour `dppx`.
 
@@ -32,55 +29,41 @@ Bien que toutes les unités représentent la même chose pour la valeur `0`, l'u
 
 ## Exemples
 
-### Usage correct
-
-Voici quelques exemples d'utilisation correcte de données de type `<resolution>` :
+### Utilisation dans une requête média
 
 ```css
-96dpi                                              Usage correct : un {{cssxref("&lt;number&gt;")}} (ici un {{cssxref("&lt;integer&gt;")}}) suivi d'une unité.
-@media print and (min-resolution: 300dpi) { ... }  Usage correct dans le contexte d'une media query.
-```
-
-### Usages incorrects
-
-```css
-72 dpi    Incorrect : les espaces ne sont pas acceptés entre le {{cssxref("&lt;number&gt;")}} et l'unité.
-ten dpi   Incorrect : seules des expressions numériques sont acceptées.
-0         Incorrect : l'unité ne peut être omise que pour l'expression de la valeur 0 de type {{cssxref("&lt;length&gt;")}}.
-```
-
-### Exemple appliqué
-
-#### CSS
-
-```css
-/* Saurez-vous trouver votre résolution en dpi */
-/* via l'exemple live ?                        */
-@media screen and (min-resolution: 100dpi) {
-  .exemple {
-    background-color: palegreen;
-  }
+@media print and (resolution >= 300dpi) {
+  /* … */
 }
 
-@media screen and (max-resolution: 99dpi) {
-  .exemple {
-    background-color: orange;
-  }
+@media (resolution: 120dpcm) {
+  /* … */
+}
+
+@media (resolution >= 2dppx) {
+  /* … */
+}
+
+@media (resolution: 1x) {
+  /* … */
 }
 ```
 
-#### HTML
+### Résolutions valides
 
-```html
-<p class="exemple">
-  À ces mots le Chapelier ouvrit de grands yeux ; mais il se contenta de dire :
-  « Pourquoi une pie ressemble-t-elle à un pupitre ? »
-</p>
+```plain example-good
+96dpi
+50.82dpcm
+3dppx
 ```
 
-#### Résultat
+### Résolutions invalides
 
-{{EmbedLiveSample("Exemple_appliqué","200","200")}}
+```plain example-bad
+72 dpi     Les espaces ne sont pas autorisés entre le nombre et l'unité.
+ten dpi    Le nombre doit être composé uniquement de chiffres.
+0          L'unité est requise.
+```
 
 ## Spécifications
 
@@ -92,5 +75,6 @@ ten dpi   Incorrect : seules des expressions numériques sont acceptées.
 
 ## Voir aussi
 
-- [Les _media queries_ CSS](/fr/docs/Web/CSS/Guides/Media_queries)
-- [La caractéristique média `resolution`](/fr/docs/Web/CSS/Reference/At-rules/@media/resolution)
+- La caractéristique média {{CSSxRef("@media/resolution", "resolution")}}
+- La propriété {{CSSxRef("image-resolution")}}
+- [Utiliser les requêtes `@media`](/fr/docs/Web/CSS/Guides/Media_queries/Using)

@@ -1,6 +1,6 @@
 ---
 title: Drop
-slug: WebAssembly/Reference/Control_flow/Drop
+slug: WebAssembly/Reference/Control_flow/drop
 ---
 
 {{WebAssemblySidebar}}
