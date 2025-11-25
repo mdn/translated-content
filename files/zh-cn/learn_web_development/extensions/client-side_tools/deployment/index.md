@@ -100,15 +100,15 @@ git status
    > [!NOTE]
    > 尽管可以随意书写提交内容，但网上还是有一些关于如何写好提交信息的有用提示。保持短小、简洁和描述性，以便清楚地描述更改的内容。
 
-3. 最后，需要推送代码至 GitHub 托管的存储库。现在我们就来这样做。
+3. 最后，需要推送代码至 GitHub 托管的仓库。现在我们就来这样做。
 
    在 GitHub 中，访问 <https://github.com/new> 并创建托管自己代码的仓库。
 
-4. 给你的存储库取一个简短、好记的名字，不要有空格（用连字符分隔单词）和描述，然后点击页面底部的 _Create repository_。
+4. 给你的仓库取一个简短、好记的名字，不要有空格（用连字符分隔单词）和描述，然后点击页面底部的 _Create repository_。
 
-   现在，你应该有一个指向你新的 GitHub 存储库的“远程”URL 地址。
+   现在，你应该有一个指向你新的 GitHub 仓库的“远程”URL 地址。
 
-   ![GitHub 截图显示了可用于将代码部署到 GitHub 存储库的远程 URL](github-quick-setup.png)
+   ![GitHub 截图显示了可用于将代码部署到 GitHub 仓库的远程 URL](github-quick-setup.png)
 
 5. 在推送本地 Git 仓库之前，需要先将该远程位置添加到本地 Git 仓库，否则 Git 将无法找到它。你需要运行结构如下的命令（暂时使用提供的 HTTPS 选项——尤其是作为 GitHub 的新用户——而不是 SSH 选项）：
 
@@ -122,7 +122,7 @@ git status
    git remote add github https://github.com/remy/super-website.git
    ```
 
-   将 URL 修改为你自己的存储库，并立即运行该命令。
+   将 URL 修改为你自己的仓库，并立即运行该命令。
 
    > [!NOTE]
    > 在你选择了仓库名称之后，确保你的 `vite.config.js` 文件中的 `base` 选项与你的仓库名称一致，就像[上一章](/zh-CN/docs/Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain#javascript_转换)中提到的那样。否则，JavaScript 和 CSS 资源将无法正确链接。
