@@ -1,9 +1,6 @@
 ---
 title: Subgrid
 slug: Web/CSS/Guides/Grid_layout/Subgrid
-page-type: guide
-browser-compat: css.properties.grid-template-columns.subgrid
-sidebar: cssref
 l10n:
   sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
