@@ -1,16 +1,13 @@
 ---
 title: perspective()
 slug: Web/CSS/Reference/Values/transform-function/perspective
-original_slug: Web/CSS/transform-function/perspective
+l10n:
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
-{{CSSRef}}
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`perspective()`** définit une transformation qui fixe la distance entre l'utilisateur·ice et le plan z=0, soit la perspective depuis laquelle l'interface bidimensionnelle serait perçue comme tridimensionnelle. Son résultat est un type de donnée {{CSSxRef("&lt;transform-function&gt;")}}.
 
-La fonction **`perspective()`** définit la distance entre le plan d'équation z = 0 et l'œil de l'utilisateur afin de fournir une perspective aux éléments positionnés dans l'espace (3D). Chaque élément pour lequel z est positif apparaîtra plus grand et chaque élément pour lequel z est négatif apparaîtra plus petit. La « force » de cet effet est déterminée par la valeur de cette propriété. La valeur obtenue comme résultat de cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function).
-
-Le résultat de cette fonction est une valeur de type [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function).
-
-{{InteractiveExample("CSS Demo: perspective()")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: perspective()")}}
 
 ```css interactive-example-choice
 transform: perspective(0);
@@ -102,65 +99,79 @@ transform: perspective(6.5cm);
 }
 ```
 
-La fonction de transformation `perspective()`s'applique à l'élément qu'on veut transformer. En revanche, les propriétés [`perspective`](/fr/docs/Web/CSS/Reference/Properties/perspective) et [`perspective-origin`](/fr/docs/Web/CSS/Reference/Properties/perspective-origin) s'appliquent sur l'élément parent de l'enfant qu'on veut placer dans un espace 3D.
+La fonction de transformation `perspective()` fait partie de la valeur de {{CSSxRef('transform')}} appliquée à l'élément à transformer. Cela diffère des propriétés {{CSSxRef('perspective')}} et {{CSSxRef('perspective-origin')}} qui s'appliquent à l'élément parent d'un enfant transformé dans un espace 3D.
 
 ## Syntaxe
 
-```
-perspective(l)
+```css
+perspective(d)
 ```
 
 ### Valeurs
 
-- _l_
-  - : Une valeur de type [`<length>`](/fr/docs/Web/CSS/Reference/Values/length) qui définit la distance entre l'œil de l'utilisateur et le plan décrit par l'équation `z = 0`. Si la valeur est nulle ou négative, aucune perspective ne sera appliquée.
+- _d_
+  - : Est une longueur ({{CSSxRef("&lt;length&gt;")}}) représentant la distance entre l'utilisateur·ice et le plan z=0. Le plan z=0 correspond à l'endroit où tout apparaît en vue bidimensionnelle, c'est-à-dire l'écran. Les valeurs inférieures à `1px` (y compris zéro) sont ramenées à `1px`. Les valeurs négatives constituent une erreur de syntaxe.
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
+      <th scope="col"><a href="/fr/docs/Web/CSS/Reference/Values/transform-function#le_système_de_coordonnées_cartésiennes">Coordonnées cartésiennes</a> sur <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^2 <sup>(angl.)</sup></a></th>
+      <th scope="col"><a href="https://fr.wikipedia.org/wiki/Coordonn%C3%A9es_homog%C3%A8nes">Coordonnées homogènes</a> sur <a href="https://fr.wikipedia.org/wiki/Plan_projectif_r%C3%A9el">ℝℙ^2</a></th>
+      <th scope="col">Coordonnées cartésiennes sur <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^3 <sup>(angl.)</sup></a></th>
+      <th scope="col">Coordonnées homogènes sur <a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3 <sup>(angl.)</sup></a></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td colspan="2" rowspan="2">
+      <td colspan="2">
         <p>
-          Cette transformation s'applique dans l'espace (3D) et ne peut pas être
-          représentée en deux dimensions.
+          Cette transformation s'applique à l'espace 3D et ne peut pas être représentée sur le plan.
         </p>
       </td>
-      <td colspan="1" rowspan="2">
-        Une perspective n'est pas une transformation linéaire de ℝ<sup>3</sup>
-        et ne peut donc pas être représentée en utilisant une matrice du système
-        cartésien.
+      <td>
+        Cette transformation n'est pas une transformation linéaire dans ℝ^3 et ne peut donc pas être représentée par une matrice en coordonnées cartésiennes.
       </td>
-      <td colspan="1" rowspan="2">
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd><mo>−</mo>1<mo>/</mo>d</mtd
-                ><mtd>1</mtd></mtr
-              ></mtable
-            ></mfenced
-          ></math
-        >
+      <td>
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mo>−</mo><mn>1</mn><mo>/</mo><mi>d</mi></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cccc} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & -\frac{1}{d} & 1 \\ \end{array} \right)</annotation></semantics>
+        </math>
       </td>
     </tr>
   </tbody>
 </table>
 
+## Syntaxe formelle
+
+{{CSSSyntax}}
+
 ## Exemples
 
-### Appliquer une perspective sur un objet 3D
+### HTML
 
-#### CSS
+```html
+<p>Without perspective:</p>
+<div class="no-perspective-box">
+  <div class="face front">A</div>
+  <div class="face top">B</div>
+  <div class="face left">C</div>
+</div>
+
+<p>With perspective (9cm):</p>
+<div class="perspective-box-far">
+  <div class="face front">A</div>
+  <div class="face top">B</div>
+  <div class="face left">C</div>
+</div>
+
+<p>With perspective (4cm):</p>
+<div class="perspective-box-closer">
+  <div class="face front">A</div>
+  <div class="face top">B</div>
+  <div class="face left">C</div>
+</div>
+```
+
+### CSS
 
 ```css
 .face {
@@ -206,34 +217,9 @@ p + div {
 }
 ```
 
-#### HTML
+### Résultat
 
-```html
-<p>Sans perspective :</p>
-<div class="no-perspective-box">
-  <div class="face front">A</div>
-  <div class="face top">B</div>
-  <div class="face left">C</div>
-</div>
-
-<p>Avec une perspective (9cm) :</p>
-<div class="perspective-box-far">
-  <div class="face front">A</div>
-  <div class="face top">B</div>
-  <div class="face left">C</div>
-</div>
-
-<p>Avec une perspective (4cm) :</p>
-<div class="perspective-box-closer">
-  <div class="face front">A</div>
-  <div class="face top">B</div>
-  <div class="face left">C</div>
-</div>
-```
-
-#### Résultat
-
-{{EmbedLiveSample('Appliquer_une_perspective_sur_un_objet_3D', '100%', '600')}}
+{{EmbedLiveSample('Exemples', 250, 350)}}
 
 ## Spécifications
 
@@ -245,5 +231,9 @@ p + div {
 
 ## Voir aussi
 
-- [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function)
+- La propriété {{CSSxRef("transform")}}
+- Le type de donnée {{CSSxRef("&lt;transform-function&gt;")}}
+- Propriétés individuelles de transformation&nbsp;:
+  - {{CSSxRef("translate")}}
+  - {{CSSxRef("scale")}}
+  - {{CSSxRef("rotate")}}
