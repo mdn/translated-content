@@ -1,26 +1,25 @@
 ---
 title: ArrayBuffer.prototype.resize()
+short-title: resize()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/resize
 l10n:
-  sourceCommit: d42c4bd039f84d228a339a4a15c8abf9e67cf608
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}{{SeeCompatTable}}
 
 **`resize()`** は {{jsxref("ArrayBuffer")}} インスタンスのメソッドで、この `ArrayBuffer` を指定されたサイズ（バイト単位）にサイズ変更します。
 
-{{InteractiveExample("JavaScript デモ: ArrayBuffer.resize()")}}
+{{InteractiveExample("JavaScript デモ: ArrayBuffer.prototype.resize()")}}
 
 ```js interactive-example
 const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
 
 console.log(buffer.byteLength);
-// Expected output: 8
+// 予想される結果: 8
 
 buffer.resize(12);
 
 console.log(buffer.byteLength);
-// Expected output: 12
+// 予想される結果: 12
 ```
 
 ## 構文
@@ -36,7 +35,7 @@ resize(newLength)
 
 ### 返値
 
-{{jsxref("undefined")}} です。
+なし ({{jsxref("undefined")}})。
 
 ### 例外
 
