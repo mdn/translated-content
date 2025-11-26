@@ -204,7 +204,7 @@ El resultado se ve un poco más limpio:
 
 ### Gráficos y colores
 
-Ahora, ¡a por los gráficos y los colores! Puesto que la tabla rezuma contenido y actitud punk, vamos a darle un brillante estilo imponente que le pegue. No te preocupes, no tienes que hacer tus tablas tan extremadas: puedes optar por algo más sutil y de buen gusto.
+Ahora, ¡a por los gráficos y los colores! Puesto que la tabla rezuma contenido y actitud punk, vamos a darle un brillante estilo imponente que le pegue. No te preocupes, no tienes que hacer tus tablas tan extremas: puedes optar por algo más sutil y de buen gusto.
 
 Empieza añadiendo el CSS siguiente a tu archivo `style.css`, de nuevo al final:
 
