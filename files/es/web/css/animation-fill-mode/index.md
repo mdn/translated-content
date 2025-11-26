@@ -37,7 +37,6 @@ animation-fill-mode: unset;
 - `none`
   - : La animación no aplicará los estilos antes ni después de su ejecución.
 - `forwards`
-
   - : El objeto sobre el que se aplica la animación quedará con los valores y estilos que le aplique el último keyframe de la ejecución de la animación. El último valor dependerá del valor de {{ cssxref("animation-direction") }} y {{ cssxref("animation-iteration-count") }}:
 
     | `animation-direction` | `animation-iteration-count` | ultimo keyframe encontrado |
@@ -50,7 +49,6 @@ animation-fill-mode: unset;
     | `alternate-reverse`   | odd                         | `0%` or `from`             |
 
 - `backwards`
-
   - : La animación aplicará los valores definidos en el primer [keyframe](/es/docs/Web/CSS/@keyframes) tan pronto como se aplique al objeto, y los retendrá durante el tiempo de {{ cssxref("animation-delay") }}. El primer keyframe dependerá del valor de {{ cssxref("animation-direction") }}:
 
     | `animation-direction`           | primer keyframe |

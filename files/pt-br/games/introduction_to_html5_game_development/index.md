@@ -3,8 +3,6 @@ title: Introduction to HTML5 Game Development (summary)
 slug: Games/Introduction_to_HTML5_Game_Development
 ---
 
-{{GamesSidebar}}
-
 ## Vantagens
 
 1. Os Jogos criados com HTML5 funcionam em Smartphones, tablets, PCs e smart TVs.
@@ -42,7 +40,6 @@ slug: Games/Introduction_to_HTML5_Game_Development
 - [Pointer Lock API](/pt-BR/docs/Web/API/Pointer_Lock_API)
   - : Bloquei o mouse ou outro dispositivo apontador na interface do seu jogo.
 - [SVG](/pt-BR/docs/Web/SVG) (Gráficos Vetorias Escaláveis)
-
   - : Crie gráficos vetoriais que sejam dimensionados sem problemas, independemente do tamanho ou da resolução da exibição do usuário.
 
 - [Typed Arrays](/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays)

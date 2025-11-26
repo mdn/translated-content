@@ -16,7 +16,7 @@ l10n:
 
 MathML の表形式要素は [HTML 表](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)要素と似ています。 `<mtable>` 要素は数式の表を表し、子要素（行を表す）として `<mtr>` 要素があり、それぞれの子要素（セルを表す）として `<mtd>` 要素があります。 `<mtable>` 要素は MathML の数式のどこにでも挿入することができます。 `<mtd>` 要素は任意の数の MathML の子を格納することができ、それらを `<mrow>` コンテナーとして並べます。
 
-表は通常、（ベクトルを含む）行列のような表現に使用します。 [CSS の `matrix()` 関数に関する記事](/ja/docs/Web/CSS/transform-function/matrix)から引用した基本的な例を示します。
+表は通常、（ベクトルを含む）行列のような表現に使用します。 [CSS の `matrix()` 関数に関する記事](/ja/docs/Web/CSS/Reference/Values/transform-function/matrix)から引用した基本的な例を示します。
 
 ```html hidden
 <link
@@ -271,7 +271,8 @@ MathML の表形式要素は [HTML 表](/ja/docs/Learn_web_development/Core/Stru
 
 {{ EmbedLiveSample('Usage_for_advanced_layout', 700, 200, "", "") }}
 
-> **警告:** [`<mtable>` の記事](/ja/docs/Web/MathML/Reference/Element/mtable)では、配置や空間などの特別な属性によって、より高度なレイアウトオプションを提供しています。これらは CSS の相当するものよりも前に生まれ、元々は CSS を意識していないレンダラーのために設計されました。しかし、これらの属性はすべてのブラウザーで実装されているとは限りません。将来的には、 `<mtable>` の（実際の行列のようなオブジェクトではない）レイアウトのみの目的での使用は、 CSS ベースの代替手段に置き換えられる可能性があります。
+> [!WARNING]
+> [`<mtable>` の記事](/ja/docs/Web/MathML/Reference/Element/mtable)では、配置や空間などの特別な属性によって、より高度なレイアウトオプションを提供しています。これらは CSS の相当するものよりも前に生まれ、元々は CSS を意識していないレンダラーのために設計されました。しかし、これらの属性はすべてのブラウザーで実装されているとは限りません。将来的には、 `<mtable>` の（実際の行列のようなオブジェクトではない）レイアウトのみの目的での使用は、 CSS ベースの代替手段に置き換えられる可能性があります。
 
 ## まとめ
 

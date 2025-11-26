@@ -38,7 +38,6 @@ replaceItem(newItem, index)
 このメソッドは、次の型の {{domxref("DOMException")}} を発生させる可能性があります。
 
 - `NoModificationAllowedError` {{domxref("DOMException")}}
-
   - : {{domxref("SVGTransformList")}} が読み取り専用属性に対応する場合、またはオブジェクト自体が読み取り専用である場合に発生します。
 
 - `IndexSizeError` {{domxref("DOMException")}}

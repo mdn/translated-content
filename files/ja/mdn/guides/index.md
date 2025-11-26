@@ -21,7 +21,7 @@ MDN Web Docs には多くのガイドがあります。この記事は使用例�
   - : 最初の段階からテキストのスタイル設定、レイアウトの作成などに至るまで、CSS チュートリアルの完全版です。
 - [CSS レイアウトガイド](/ja/docs/Web/Guide/CSS/CSS_Layout)
   - : MDN には CSS レイアウトのガイドがたくさんありますが、このページではそれらを一斉に集めています。
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)
   - : CSS のアニメーションでは、ある CSS スタイル設定から別の CSS スタイル設定へのトランジションをアニメーション化することが可能です。このガイドは、アニメーションプロパティを使い始めるのに役立ちます。
 
 ## JavaScript
@@ -38,7 +38,7 @@ MDN Web Docs には多くのガイドがあります。この記事は使用例�
 
 ## API
 
-- [FormData オブジェクトの使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
+- [FormData オブジェクトの使い方](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
   - : [`FormData`](/ja/docs/Web/API/FormData) オブジェクトは、{{domxref("Window/fetch", "fetch()")}} を使用して送信するためのキーと値のペアのセットを収集可能にします。本来はフォームデータの送信に使用することを想定していましたが、キーのついたデータを伝送するためにフォームとは独立して使用することもできます。伝送されるデータは、フォームのエンコードタイプが "multipart/form-data" に設定されている場合に、 `submit()` メソッドで送信する際に使用するデータと同じ形式です。
 - [プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps)
   - : プログレッシブウェブアプリ (PWA) は、現行のウェブ API と従来のプログレッシブエンハンスメント戦略を使用して、クロスプラットフォームのウェブアプリケーションを作成します。このアプリはあらゆる場所で動作し、ネイティブアプリと同じユーザー使い勝手の利点をもたらすいくつかの機能を提供します。この一連のガイドでは、PWA について知っておく必要があるすべてを教えます。
@@ -57,9 +57,9 @@ MDN Web Docs には多くのガイドがあります。この記事は使用例�
 
 ## フォント
 
-- [可変フォントガイド](/ja/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
+- [可変フォントガイド](/ja/docs/Web/CSS/Guides/Fonts/Variable_fonts)
   - : デザインに可変フォントを使用する方法を見つけましょう。
-- [Web Open Font Format (WOFF)](/ja/docs/Web/CSS/CSS_fonts/WOFF)
+- [Web Open Font Format (WOFF)](/ja/docs/Web/CSS/Guides/Fonts/WOFF)
   - : WOFF (Web Open Font Format) はウェブ上で誰もが使えるフリーのフォントファイルフォーマットです。
 
 ## ユーザーインターフェイス開発

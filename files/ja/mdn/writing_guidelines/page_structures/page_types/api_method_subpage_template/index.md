@@ -7,7 +7,8 @@ l10n:
 
 {{MDNSidebar}}
 
-> **メモ:** _この説明文全体を削除してから公開してください。_
+> [!NOTE]
+> _この説明文全体を削除してから公開してください。_
 >
 > **訳注:** このテンプレートは翻訳記事用です。新たな記事を執筆する場合は、英語版を参照してください。日本語の単独記事を立項することはできません。）
 >
@@ -32,7 +33,6 @@ l10n:
 >     書式は `NameOfTheParentInterface: NameOfTheMethod() コンストラクター` です。
 >     例えば、 [IDBIndex](/ja/docs/Web/API/IDBIndex) インターフェイスの [count()](/ja/docs/Web/API/IDBIndex/count) メソッドには `IDBIndex.count()` というタイトルを付けます。
 > - **slug**
->
 >   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。
 >     これは `Web/API/NameOfTheParentInterface/NameOfTheMethod` のような形式になります。
 >

@@ -33,7 +33,6 @@ Coerções implícitas são muito convenientes, mas podem ser uma arma em potenc
 O conjunto de tipos na linguagem JavaScript consiste em [_primitive values_](#primitive_values) e [_objects_](#objects).
 
 - [Valores primitivos](#primitive_values) (dados imutáveis representados diretamente no nível mais baixo do idioma)
-
   - [tipo Boolean](#boolean_type)
   - [Tipo Null](#null_type)
   - [Tipo Undefined](#undefined_type)

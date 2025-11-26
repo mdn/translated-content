@@ -26,7 +26,6 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティがあ
 - {{domxref("HTMLTrackElement.default")}}
   - : [`default`](/ja/docs/Web/HTML/Reference/Elements/track#default) 属性を反映した論理値で、ユーザーの環境設定で他のトラックがより適切であることが示されていない場合、そのトラックを有効にすることを示します。
 - {{domxref("HTMLTrackElement.readyState")}} {{ReadOnlyInline}}
-
   - : トラックの準備状態を示す `unsigned short` を返します。
 
     | 定数      | 値  | 説明                                                                                                                                                                                       |

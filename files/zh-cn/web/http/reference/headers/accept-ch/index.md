@@ -5,7 +5,7 @@ l10n:
   sourceCommit: aa6e900e44ed7e9c3612b98abdb51cb4ab4d99e1
 ---
 
-{{HTTPSidebar}}{{securecontext_header}}
+{{securecontext_header}}
 
 **`Accept-CH`** 标头由服务器设置，以指定客户端应在后续请求中应包含哪些客户端[客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints)提示标头。
 

@@ -1,92 +1,53 @@
 # ----------------------------------------------------------------------------
-# MDN Content CODEOWNERS
+# CODEOWNERS
 # ----------------------------------------------------------------------------
-# Order is important. The last matching pattern takes precedence. For more
-# detailed information, see:
-# https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/about-code-owners
+# Order is important. The last matching pattern takes precedence.
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
 # ----------------------------------------------------------------------------
 
-# ----------------------------------------------------------------------------
-# DEFAULT OWNERS
-# ----------------------------------------------------------------------------
-*    @mdn/core-dev
+* @mdn/engineering
 
-# ----------------------------------------------------------------------------
-# DEFAULT CONTENT OWNER(S)
-# ----------------------------------------------------------------------------
-/files/    @mdn/core-yari-content
+# Content
+/files/       @mdn/content-team
+/files/es/    @mdn/es-content
+/files/fr/    @mdn/fr-content
+/files/ja/    @mdn/ja-content
+/files/ko/    @mdn/ko-content
+/files/pt-br/ @mdn/pt-br-content
+/files/ru/    @mdn/ru-content
+/files/zh-cn/ @mdn/zh-content
+/files/zh-tw/ @mdn/zh-content
 
-# ----------------------------------------------------------------------------
-# BRAZILIAN PORTUGUESE (pt-BR) CONTENT OWNER(S)
-# ----------------------------------------------------------------------------
-/files/pt-br/    @mdn/yari-content-pt-br
+# Translation guide
+/docs/        @mdn/content-team
+/docs/es/     @mdn/es-content
+/docs/fr/     @mdn/fr-content
+/docs/ja/     @mdn/ja-content
+/docs/ko/     @mdn/ko-content
+/docs/pt-br/  @mdn/pt-br-content
+/docs/ru/     @mdn/ru-content
+/docs/zh-cn/  @mdn/zh-content
+/docs/zh-tw/  @mdn/zh-content
 
-# ----------------------------------------------------------------------------
-# CHINESE (zh-CN, zh-TW) CONTENT OWNER(S)
-# ----------------------------------------------------------------------------
-/files/zh-cn/    @mdn/yari-content-zh
-/files/zh-tw/    @mdn/yari-content-zh
+# Issue templates
+/.github/ISSUE_TEMPLATE/                       @mdn/content-team
+/.github/ISSUE_TEMPLATE/page-report-es.yml     @mdn/es-content
+/.github/ISSUE_TEMPLATE/page-report-fr.yml     @mdn/fr-content
+/.github/ISSUE_TEMPLATE/page-report-ja.yml     @mdn/ja-content
+/.github/ISSUE_TEMPLATE/page-report-ko.yml     @mdn/ko-content
+/.github/ISSUE_TEMPLATE/page-report-pt-br.yml  @mdn/pt-br-content
+/.github/ISSUE_TEMPLATE/page-report-ru.yml     @mdn/ru-content
+/.github/ISSUE_TEMPLATE/page-report-zh-cn.yml  @mdn/zh-content
+/.github/ISSUE_TEMPLATE/page-report-zh-tw.yml  @mdn/zh-content
 
-# ----------------------------------------------------------------------------
-# FRENCH (fr) CONTENT OWNER(S)
-# ----------------------------------------------------------------------------
-/files/fr/    @mdn/yari-content-fr
+# Miscellaneous
+/.github/            @mdn/engineering
+/.github/CODEOWNERS  @mdn/engineering
+/*                   @mdn/engineering
+/*.md                @mdn/content-team @mdn/engineering 
+/CONTRIBUTING.md     @mdn/content-team          
+/PEERS_GUIDELINES.md @mdn/content-team
+/SECURITY.md @mdn/engineering
 
-# ----------------------------------------------------------------------------
-# JAPANESE (ja) CONTENT OWNER(S)
-# ----------------------------------------------------------------------------
-/files/ja/    @mdn/yari-content-ja
-
-# ----------------------------------------------------------------------------
-# KOREAN (ko) CONTENT OWNER(S)
-# ----------------------------------------------------------------------------
-/files/ko/    @mdn/yari-content-ko
-
-# ----------------------------------------------------------------------------
-# RUSSIAN (ru) CONTENT OWNER(S)
-# ----------------------------------------------------------------------------
-/files/ru/    @mdn/yari-content-ru
-
-# ----------------------------------------------------------------------------
-# SPANISH (es) CONTENT OWNER(S)
-# ----------------------------------------------------------------------------
-/files/es/    @mdn/yari-content-es
-
-# ----------------------------------------------------------------------------
-# TRANSLATION GUIDE OWNER(S)
-# ----------------------------------------------------------------------------
-/docs/        @mdn/core-yari-content
-/docs/es/     @mdn/yari-content-es
-/docs/fr/     @mdn/yari-content-fr
-/docs/ja/     @mdn/yari-content-ja
-/docs/ko/     @mdn/yari-content-ko
-/docs/pt-br/  @mdn/yari-content-pt-br
-/docs/ru/     @mdn/yari-content-ru
-/docs/zh-cn/  @mdn/yari-content-zh
-/docs/zh-tw/  @mdn/yari-content-zh
-
-# ----------------------------------------------------------------------------
-# ISSUE TEMPLATE OWNER(S)
-# ----------------------------------------------------------------------------
-.github/ISSUE_TEMPLATE/page-report-es.yml     @mdn/yari-content-es
-.github/ISSUE_TEMPLATE/page-report-fr.yml     @mdn/yari-content-fr
-.github/ISSUE_TEMPLATE/page-report-ja.yml     @mdn/yari-content-ja
-.github/ISSUE_TEMPLATE/page-report-ko.yml     @mdn/yari-content-ko
-.github/ISSUE_TEMPLATE/page-report-pt-br.yml  @mdn/yari-content-pt-br
-.github/ISSUE_TEMPLATE/page-report-ru.yml     @mdn/yari-content-ru
-.github/ISSUE_TEMPLATE/page-report-zh-cn.yml  @mdn/yari-content-zh
-.github/ISSUE_TEMPLATE/page-report-zh-tw.yml  @mdn/yari-content-zh
-
-# ----------------------------------------------------------------------------
-# CONTROL FILES OWNER(S)
-# ----------------------------------------------------------------------------
-# These should be the last matches in this file, since any pull request that
-# tries to change any one or more of these files should be escalated to the
-# owners specified here.
-# ----------------------------------------------------------------------------
-/.github/     @mdn/core-dev
-/*            @mdn/core-dev
-/*.md         @mdn/core-dev @mdn/core-yari-content
-/CONTRIBUTING.md            @mdn/core-yari-content
-/PEERS_GUIDELINES.md        @mdn/core-yari-content
+# Reset until https://github.com/prettier/prettier/issues/11828 is fixed
 /.prettierignore

@@ -46,11 +46,9 @@ every(function(element, index, array) { /* ... */ }, thisArg)
 ### 매개변수
 
 - `callbackFn`
-
   - : 각 요소를 시험할 함수.
 
     다음 세 가지 인수를 받습니다.
-
     - `element`
       - : 배열에서 처리되는 현재 요소.
     - `index`

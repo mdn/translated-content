@@ -82,7 +82,6 @@ Os estilos padrões do navegador exibirão as listas com as descrições indenta
 Observe que é permitido ter um único termo com múltiplas descrições, por exemplo:
 
 - aparte
-
   - : No drama, onde um personagem compartilha um comentário apenas com o público para efeito humorístico ou dramático. Isso geralmente é um sentimento, pensamento ou parte de informação de fundo adicional.
 
     Por escrito, uma seção de conteúdo que está relacionada ao tópico atual, mas não se encaixa diretamente no fluxo principal de conteúdo, então é apresentado próximo (muitas vezes em uma caixa ao lado).

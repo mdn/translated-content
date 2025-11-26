@@ -187,7 +187,6 @@ function sameValueZero(x, y) {
 すべてを網羅してはいませんが、`-0` と `+0` の区別が発生する可能性がある内蔵メソッドや演算子を以下に示します。コード中ではこれらを考慮して下さい:
 
 - [`- (単項否定演算子)`](/ja/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-
   - : 以下例を考えてみてください。
 
     ```js

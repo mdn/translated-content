@@ -2,10 +2,8 @@
 title: 剖析游戏结构
 slug: Games/Anatomy
 l10n:
-  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
+  sourceCommit: 21addd31954b2629ab3e186dacdf7edca813dc7d
 ---
-
-{{GamesSidebar}}
 
 本文从技术角度分析了一般电子游戏的结构和工作流程，就此介绍主循环是如何运行的。它有助于初学者了解在现代游戏开发领域构建游戏时需要什么，以及理解像 JavaScript 这样的 Web 标准是如何成为可用于开发游戏的工具的。游戏开发经验丰富但不熟悉 Web 开发的开发者也能从本文中受益。
 
@@ -113,7 +111,7 @@ window.cancelAnimationFrame(MyGame.stopMain);
 
 ## 用 JavaScript 构建一个更优化的主循环
 
-基本上，在 JavaScript 的中，浏览器有它自己的主循环，而你的代码存在于循环某些阶段。上面描述的主循环，试图避免脱离浏览器的控制。这种主循环附着于 `window.requestAnimationFrame()` 方法，该方法将在浏览器的下一帧中执行，具体取决于浏览器如何与将其自己的主循环关联起来。[W3C 的 requestAnimationFrame 规范](https://www.w3.org/TR/animation-timing/)并没有真正定义什么时候浏览器必须执行 requestAnimationFrame 回调。这有一个好处，浏览器厂商可以自由地实现他们认为最好的解决方案，并随着时间的推移进行调整。
+归根结底，在 JavaScript 中，是浏览器在运行其自身的主循环，而你的代码只是作为其部分阶段来执行。上文所述的主循环都避免了从浏览器手中夺走主线程控制权。这些方法都将自身附加到 `window.requestAnimationFrame()` 上，以此向浏览器请求对下一帧的控制权。至于如何将这些请求融入浏览器自己的主循环，则由浏览器自行决定。[HTML 规范](https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html#dom-animationframeprovider-requestanimationframe)并未确切定义浏览器必须在何时执行 requestAnimationFrame 回调。这有一个好处，浏览器厂商可以自由地实现他们认为最好的解决方案，并随着时间的推移进行调整。
 
 现代版的 Firefox 和 Google Chrome（可能还有其他浏览器）都尝试图在框架的时间片段的开始时*尝试*将 `requestAnimationFrame` 回调与它们的主线程进行连接。因此，浏览器的主线程*看起来*就像下面这样：
 
@@ -124,7 +122,7 @@ window.cancelAnimationFrame(MyGame.stopMain);
 
 你可以考虑开发实时应用程序，因为有时间做工作。所有上述步骤都必须在每 16 毫秒内进行一次，以跟上 60Hz 的显示器。浏览器会尽可能早地调用你的代码，从而给它最大的计算时间。你的主线程通常会启动一些甚至不在主线程上的工作负载（如 WebGL 的中的光栅化或着色器）。在浏览器使用其主线程管理垃圾收集，其他任务或处理异步事件时，可以在 Web Worker 或 GPU 上执行长时间的计算。
 
-当我们讨论预算时间时，许多 Web 浏览器都有一个称为*高解析度时间*的工具。{{jsxref("Date")}} 对象不再是公认的事件计时方法，因为它非常不精确，可以由系统时钟进行修改。另一方面，高解析度时间计算自 `navigationStart`（当上一个文档被卸载时）的毫秒数。这个值以小数的精度返回，精确到千分之一毫秒。它被称为 {{domxref("DOMHighResTimeStamp")}}，但是，无论出于什么意图和目的，都认为它是一个浮点数。
+当我们讨论预算时间时，许多 Web 浏览器都有一个称为*高精度时间*的工具。{{jsxref("Date")}} 对象不再是公认的事件计时方法，因为它非常不精确，可以由系统时钟进行修改。另一方面，高精度时间计算自 `navigationStart`（当上一个文档被卸载时）的毫秒数。这个值以小数的精度返回，精确到千分之一毫秒。它被称为 {{domxref("DOMHighResTimeStamp")}}，但是，无论出于什么意图和目的，都认为它是一个浮点数。
 
 > [!NOTE]
 > 系统（硬件或软件）不能达到微秒精度，则至少提供毫秒级的精度。不过，如果能够达到微秒的精度，那就应该提供这一精度。
@@ -212,15 +210,12 @@ const tNow = window.performance.now();
 一种常见的技术是以恒定的频率更新模拟，然后绘制尽可能多的（或尽可能少的）实际帧。更新方法可以继续循环，而不用考虑用户看到的内容。绘图方法可以查看最后的更新以及发生的时间。由于绘制知道何时表示，以及上次更新的模拟时间，它可以预测为用户绘制一个合理的框架。这是否比官方更新循环更频繁（甚至更不频繁）无关紧要。更新方法设置检查点，并且像系统允许的那样频繁地，渲染方法画出周围的时间。在 Web 标准中分离更新有很多种方法：
 
 - 在 `requestAnimationFrame()` 中绘制，并在 {{domxref("Window.setInterval", "setInterval()")}} 或 {{domxref("Window.setTimeout", "setTimeout()")}} 中更新。
-
   - 即使在未聚焦或最小化的情况下，使用处理器时间，也可能是主线程，并且可能是传统游戏循环的工件（但是很简单）。
 
 - 在 `requestAnimationFrame()` 中绘制，并在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers) 的 {{domxref("WorkerGlobalScope.setInterval", "setInterval()")}} 或 {{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}} 中对其进行更新。
-
   - 这与上述相同，除了更新不会使主线程（主线程也没有）。这是一个更复杂的解决方案，并且对于简单更新可能会有太多的开销。
 
 - 在 `requestAnimationFrame()` 中绘制，并使用它来戳一个包含更新方法的 Web Worker，其中包含要计算的刻度数（如果有的话）。
-
   - 这个睡眠直到 `requestAnimationFrame()` 被调用并且不会污染主线程，加上你不依赖于老式的方法。再次，这比以前的两个选项更复杂一些，并且*开始*每个更新将被阻止，直到浏览器决定启动 rAF 回调。
 
 这些方法中的每一种都有类似的权衡：
@@ -314,15 +309,12 @@ const tNow = window.performance.now();
 像 Web 这样的受管理平台，要记住的一件重要的事情是，你的循环可能会在相当长的一段时间内停止执行。当用户取消选择你的标签并且浏览器休眠（或减慢）其 `requestAnimationFrame` 回调间隔时，可能会发生这种情况。你有很多方法来处理这种情况，这可能取决于你的游戏是单人游戏还是多人游戏。一些选择是：
 
 - 考虑差距“暂停”并跳过时间。
-
   - 你可能会看到这对大多数多人游戏来说都是有问题的。
 
 - 你可以模拟差距赶上。
-
   - 这可能是长时间丢失和/或复杂更新的问题。
 
 - 你可以从联机设备或服务器恢复游戏状态。
-
   - 除非联机设备/服务器的游戏状态已经过期，或者这是一个没有没服务器的纯单机游戏。
 
 一旦你的主循环被开发出来，你已经决定了一套适合你的游戏的假设和权衡，现在只需要用你的决定来计算任何适用的物理、AI、声音、网络同步，以及其他任何你的游戏可能需要的。

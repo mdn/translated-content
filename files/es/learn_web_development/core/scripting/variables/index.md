@@ -345,7 +345,7 @@ daysInWeek = 8;
 
 ## ¡Pon a prueba tus habilidades!
 
-Has llegado al final de este artículo, pero ¿puedes recordar la información más importante? Puedes encontrar más pruebas para verificar que has retenido esta información antes de continuar — consulta [Pon a prueba tus habilidades: variables](/es/docs/Learn_web_development/Core/Scripting/Test_your_skills:_variables).
+Has llegado al final de este artículo, pero ¿puedes recordar la información más importante? Puedes encontrar más pruebas para verificar que has retenido esta información antes de continuar — consulta [Pon a prueba tus habilidades: variables](/es/docs/Learn_web_development/Core/Scripting/Test_your_skills/Variables).
 
 ## Resumen
 

@@ -8,7 +8,8 @@ original_slug: Web/CSS/CSS_cascade/used_value
 
 После того как {{glossary("user agent")}} закончил свои расчёты каждое свойство CSS имеет своё значение. Используемые значения (например, {{cssxref("width")}}, {{cssxref("line-height")}}) в пикселях. Используемые значения сокращённых свойств (например, {{cssxref("background")}}) согласуются с теми из свойств компонентов (например, {{cssxref("background-color")}} или {{cssxref("background-size")}}) и с {{cssxref("position")}} и {{cssxref("float")}}.
 
-> **Примечание:** {{domxref("Window.getComputedStyle", "getComputedStyle()")}} DOM API возвращает [решённое значение](/ru/docs/Web), которое может быть [численным значением](/ru/docs/Web) или [используемым значением](/ru/docs/Web), в зависимости от свойства.
+> [!NOTE]
+> {{domxref("Window.getComputedStyle", "getComputedStyle()")}} DOM API возвращает [решённое значение](/ru/docs/Web), которое может быть [численным значением](/ru/docs/Web) или [используемым значением](/ru/docs/Web), в зависимости от свойства.
 
 ## Пример
 
@@ -100,7 +101,7 @@ CSS 2.0 defined only _computed value_ as the last step in a property's calculati
 - {{domxref("window.getComputedStyle")}}
 - Ключевые концепции CSS
   - [Синтаксис CSS](/ru/docs/Web/CSS/CSS_syntax/Syntax)
-  - [@-правила](/ru/docs/Web/CSS/CSS_syntax/At-rule)
+  - [@-правила](/ru/docs/Web/CSS/CSS_syntax/At-rules)
   - [комментарии](/ru/docs/Web/CSS/CSS_syntax/Comments)
   - [специфичность](/ru/docs/Web/CSS/CSS_cascade/Specificity)
   - [наследование](/ru/docs/Web/CSS/CSS_cascade/Inheritance)

@@ -15,13 +15,14 @@ l10n:
 この要素の属性は、[グローバル MathML 属性](/ja/docs/Web/MathML/Reference/Global_attributes)と共に以下の属性があります。
 
 - `depth`
-  - : [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) で、この空間の希望する（ベースライン以下の）空間を示します。
+  - : [`<length-percentage>`](/ja/docs/Web/CSS/Reference/Values/length-percentage) で、この空間の希望する（ベースライン以下の）空間を示します。
 - `height`
-  - : [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) で、この空間の希望する（ベースラインの上の）高さを示します。
+  - : [`<length-percentage>`](/ja/docs/Web/CSS/Reference/Values/length-percentage) で、この空間の希望する（ベースラインの上の）高さを示します。
 - `width`
-  - : [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) で、この空間の希望の幅を示します。
+  - : [`<length-percentage>`](/ja/docs/Web/CSS/Reference/Values/length-percentage) で、この空間の希望の幅を示します。
 
-> **メモ:** `depth`、`height`、`width` 属性については、一部のブラウザーは[古い MathML における長さ](/ja/docs/Web/MathML/Reference/Values#古い_mathml_における長さ)も受け入れることがあります。
+> [!NOTE]
+> `depth`、`height`、`width` 属性については、一部のブラウザーは[古い MathML における長さ](/ja/docs/Web/MathML/Reference/Values#古い_mathml_における長さ)も受け入れることがあります。
 
 ## 例
 

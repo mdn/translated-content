@@ -29,11 +29,8 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `result`
-
       - : {{WebExtAPIRef('history.HistoryItem')}}. Un objet représentant l'élément dans l'historique du navigateur.
 
         Au moment où cet événement est envoyé, le navigateur ne connaît pas encore le titre de la page. Si le navigateur a déjà visité cette page et s'est souvenu de son ancien titre, l'objet `HistoryItem.title` contiendra l'ancien titre de la page. Si le navigateur n'a pas d'enregistrement de l'ancien titre de la page, alors `HistoryItem.title` sera vide. Pour obtenir les titres des pages dès qu'ils sont connus, écoutez {{WebExtAPIRef("history.onTitleChanged")}}.
@@ -60,8 +57,6 @@ browser.history.onVisited.addListener(onVisited);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

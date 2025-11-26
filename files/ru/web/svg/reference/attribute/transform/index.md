@@ -20,7 +20,6 @@ slug: Web/SVG/Reference/Attribute/transform
 ### Типы преобразований
 
 - matrix(\<a> \<b> \<c> \<d> \<e> \<f>)
-
   - : Преобразование с использованием матрицы из шести элементов. Преобразование `matrix(a,b,c,d,e,f)` равнозначно применению матрицы&#x20;
 
     <math display="block"><semantics><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\begin{pmatrix} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{pmatrix}</annotation></semantics>,</math>
@@ -34,7 +33,6 @@ slug: Web/SVG/Reference/Attribute/transform
 - scale(\<x> \[\<y>])
   - : Масштабирование по осям `x` и `y`. Равнозначно `matrix(x 0 0 y 0 0)`. Если значение `y` опущено, оно принимается равным `x`.
 - rotate(\<a> \[\<x> \<y>])
-
   - : Поворот на `a` градусов вокруг указанной точки. Если необязательные параметры `x` и `y` опущены, поворот будет осуществляться вокруг начала координат текущей пользовательской системы координат. Операция соответствует матрице&#x20;
 
     <math display="block"><semantics><mrow><mo>(</mo><mtable><mtr><mtd><mo>cos</mo><mi>a</mi></mtd><mtd><mo>-</mo><mo>sin</mo><mi>a</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mo>sin</mo><mi>a</mi></mtd><mtd><mo>cos</mo><mi>a</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\begin{pmatrix} \cos a &#x26; -\sin a &#x26; 0 \\ \sin a &#x26; \cos a &#x26; 0 \\ 0 &#x26; 0 &#x26; 1 \end{pmatrix}</annotation></semantics></math>
@@ -42,13 +40,11 @@ slug: Web/SVG/Reference/Attribute/transform
     &#x20;Если необязательные параметры `x` и `y` присутствуют, поворот будет осуществляться вокруг точки `(x, y)`. Операция равнозначна следующему списку преобразований: `translate(<x>, <y>) rotate(<a>) translate(-<x>, -<y>)`.
 
 - skewX(\<a>)
-
   - : Наклон относительно оси `x` на `a` градусов. Операция соответствует матрице&#x20;
 
     <math display="block"><semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mo>tg</mo><mi>a</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\begin{pmatrix} 1 &#x26; \tan(a) &#x26; 0 \\ 0 &#x26; 1 &#x26; 0 \\ 0 &#x26; 0 &#x26; 1 \end{pmatrix}</annotation></semantics></math>
 
 - skewY(\<a>)
-
   - : Наклон относительно оси `y` на `a` градусов. Операция соответствует матрице&#x20;
 
     <math display="block"><semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mo>tg</mo><mi>a</mi></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX"> \begin{pmatrix} 1 &#x26; 0 &#x26; 0 \\ \tan(a) &#x26; 1 &#x26; 0 \\ 0 &#x26; 0 &#x26; 1 \end{pmatrix}</annotation></semantics></math>

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5c5ee35d66ac24bc6513c14f120750c74d779d20
 ---
 
-{{AddonSidebar}}
-
 当标签页的内容被另一个（通常是之前预渲染的）标签页替换时触发此事件。
 
 ## 语法
@@ -34,9 +32,7 @@ browser.webNavigation.onTabReplaced.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 事件触发时调用的函数。该函数接收以下参数：
-
     - `details`
       - : `object`。有关导航事件的详细信息。参见 [details](#details) 部分以了解更多信息。
 

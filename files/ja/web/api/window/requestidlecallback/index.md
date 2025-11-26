@@ -1,6 +1,9 @@
 ---
-title: requestIdleCallback
+title: "Window: requestIdleCallback() メソッド"
+short-title: requestIdleCallback()
 slug: Web/API/Window/requestIdleCallback
+l10n:
+  sourceCommit: eb289996538d1242cd7eaa54cbd9e20da0cb908c
 ---
 
 {{APIRef("HTML DOM")}}
@@ -9,7 +12,8 @@ slug: Web/API/Window/requestIdleCallback
 
 `requestIdleCallback()` をアイドルコールバック関数の中で呼び出すことで、別のコールバックを次のイベントループ以降すぐに実行されるようスケジュールすることもできます。
 
-> **メモ:** `timeout` は必須のタスクにおいては設定することを強くおすすめします。設定しない場合、コールバックが実行するまでに数秒かかってしまう可能性もあるからです。
+> [!NOTE]
+> `timeout` は必須のタスクにおいては設定することを強くおすすめします。設定しない場合、コールバックが実行するまでに数秒かかってしまう可能性もあるからです。
 
 ## 構文
 
@@ -23,18 +27,17 @@ requestIdleCallback(callback, options)
 - `callback`
   - : イベントループがアイドル状態になったときに実行されるコールバック関数への参照。コールバック関数は引数に {{domxref("IdleDeadline")}} オブジェクトを受け取り、処理に使える残り時間や、この呼び出しがタイムアウト時間の経過によるものかどうかを知ることができます。
 - `options` {{optional_inline}}
-
-  - : 任意の設定パラメータです。現在はひとつのプロパティのみ定義されています。
-
-    - `timeout`：このパラメータに指定された時間（ミリ秒）が経過してもコールバックがまだ実行されていない場合、（パフォーマンスに影響を与える可能性があっても）コールバックを実行するタスクがイベントループにキューイングされます。 `timeout` が正の数値でない場合は無視されます。
+  - : 任意の設定パラメーターです。現在はひとつのプロパティのみ定義されています。
+    - `timeout`：このパラメーターに指定された時間（ミリ秒）が経過してもコールバックがまだ実行されていない場合、（パフォーマンスに影響を与える可能性があっても）コールバックを実行するタスクがイベントループにキューイングされます。 `timeout` が正の数値でない場合は無視されます。
 
 ### 返値
 
-コールバックをキャンセルする時に {{domxref("Window.cancelIdleCallback()")}} メソッドに渡す ID を返します。
+コールバックをキャンセルする時に {{domxref("window.cancelIdleCallback()")}} メソッドに渡す ID を返します。
 
 ## 例
 
-[Cooperative Scheduling of Background Tasks API](/ja/docs/Web/API/Background_Tasks_API)の記事で、[例を一式](/ja/docs/Web/API/Background_Tasks_API#Example)紹介しています。
+[完全なサンプル](/ja/docs/Web/API/Background_Tasks_API#例)を
+[バックグラウンドタスク API の協調的スケジューリング](/ja/docs/Web/API/Background_Tasks_API)の記事で参照してください。
 
 ## 仕様書
 
@@ -46,8 +49,8 @@ requestIdleCallback(callback, options)
 
 ## 関連情報
 
-- {{domxref("window.cancelIdleCallback()")}}
+- {{domxref("Window.cancelIdleCallback()")}}
 - {{domxref("IdleDeadline")}}
-- {{domxref("window.setTimeout()")}}
-- {{domxref("window.setInterval()")}}
-- {{domxref("window.requestAnimationFrame")}}
+- {{domxref("Window.setTimeout()")}}
+- {{domxref("Window.setInterval()")}}
+- {{domxref("Window.requestAnimationFrame()")}}

@@ -1,77 +1,42 @@
 ---
 title: AsyncFunction
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+L'objet **`AsyncFunction`** fournit des méthodes pour les [fonctions asynchrones](/fr/docs/Web/JavaScript/Reference/Statements/async_function). En JavaScript, chaque fonction asynchrone est en réalité un objet `AsyncFunction`.
 
-Le constructeur **`AsyncFunction`** crée un nouvel objet pour [une fonction asynchrone](/fr/docs/Web/JavaScript/Reference/Statements/async_function). En JavaScript, chaque fonction asynchrone est en fait un objet `AsyncFunction`.
-
-On notera que `AsyncFunction` _n'est pas_ un objet global. On peut l'obtenir grâce au code suivant&nbsp;:
+Notez que `AsyncFunction` n'est _pas_ un objet global. Il peut être obtenu avec le code suivant&nbsp;:
 
 ```js
-Object.getPrototypeOf(async function () {}).constructor;
+const AsyncFunction = async function () {}.constructor;
 ```
 
-## Syntaxe
+`AsyncFunction` est une sous-classe de {{JSxRef("Function")}}.
 
-```js
-new AsyncFunction(arg0, corpsFonction);
-new AsyncFunction(arg0, arg1, corpsFonction);
-new AsyncFunction(arg0, arg1, ...argN, corpsFonction);
-```
+## Constructeur
 
-### Paramètres
+- {{JSxRef("AsyncFunction/AsyncFunction", "AsyncFunction()")}}
+  - : Crée un nouvel objet `AsyncFunction`.
 
-- `arg1, arg2, ... argN`
+## Propriétés d'instance
 
-  - : Les noms à utiliser comme noms d'arguments formels. Chacun doit être une chaîne de caractères correspondant à un paramètre JavaScript valide (que ce soit [un identifiant](/fr/docs/Glossary/Identifier), [un paramètre du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters), ou [une affectation par décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)).
+_Hérite également des propriétés d'instance de sa super-classe {{JSxRef("Function")}}._
 
-    Les paramètres étant analysés comme les déclarations de fonction, les espaces et commentaires sont acceptés. Par exemple&nbsp;: `"x", "laValeur = 42", "[a, b] /* nombres */"` — ou `"x, laValeur = 42, [a, b] /* nombres */"`. (`"x, laValeur = 42", "[a, b]"` est également correct mais moins lisible.)
+Ces propriétés sont définies sur `AsyncFunction.prototype` et partagées par toutes les instances de `AsyncFunction`.
 
-- `corpsFonction`
-  - : Une chaîne de caractères qui contient les instructions JavaScript définissant la fonction.
-
-## Description
-
-Les objets de [fonction asynchrone](/fr/docs/Web/JavaScript/Reference/Statements/async_function) créés avec le constructeur `AsyncFunction` sont analysés lorsque la fonction est créée. C'est moins efficace que de déclarer une fonction asynchrone avec une [expression de fonction asynchrone](/fr/docs/Web/JavaScript/Reference/Operators/async_function) et de l'appeler depuis le code, car ces fonctions sont analysées avec le reste du code.
-
-Tous les arguments passés à la fonction sont traités comme les noms des identifiants des paramètres de la fonction qui sera créée, dans l'ordre dans lequel ils sont passés.
+- {{JSxRef("Object/constructor", "AsyncFunction.prototype.constructor")}}
+  - : La fonction constructeur qui a créé l'instance de cet objet. Pour les objets `AsyncFunction`, la valeur initiale est le constructeur {{JSxRef("AsyncFunction/AsyncFunction", "AsyncFunction")}}.
+- `AsyncFunction.prototype[Symbol.toStringTag]`
+  - : La valeur initiale de la propriété [`[Symbol.toStringTag]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) est la chaîne de caractères `"AsyncFunction"`. Cette propriété est utilisée dans {{JSxRef("Object.prototype.toString()")}}.
 
 > [!NOTE]
-> Les [fonctions asynchrones](/fr/docs/Web/JavaScript/Reference/Statements/async_function) créées avec le constructeur `AsyncFunction` ne créent pas de fermetures avec leurs contextes de création. Elles sont toujours créées dans la portée globale.
->
-> Lorsqu'on les exécute, elles ne pourront accéder qu'à leurs variables locales et aux variables globales, pas à celles qui appartiennent à la portée dans laquelle `AsyncFunction` a été appelé.
->
-> On aurait donc un comportement différent si on appelait [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval) avec le code de l'expression de la fonction asynchrone.
+> Les instances de `AsyncFunction` ne possèdent pas la propriété [`prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function).
 
-Si on appelle `AsyncFunction` comme une fonction (c'est-à-dire sans `new`), cela aura le même effet que s'il est appelé comme un constructeur.
+## Méthodes d'instance
 
-## Exemples
-
-### Créer une fonction asynchrone avec le constructeur `AsyncFunction()`
-
-```js
-function resoudreApres2Secondes(x) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(x);
-    }, 2000);
-  });
-}
-
-let AsyncFunction = Object.getPrototypeOf(async function () {}).constructor;
-
-let a = new AsyncFunction(
-  "a",
-  "b",
-  "return await resoudreApres2Secondes(a) + await resoudreApres2Secondes(b);",
-);
-
-a(10, 20).then((v) => {
-  console.log(v); // affiche 30 dans la console après 4 secondes
-});
-```
+_Hérite des méthodes d'instance de sa super-classe {{JSxRef("Function")}}._
 
 ## Spécifications
 
@@ -83,9 +48,9 @@ a(10, 20).then((v) => {
 
 ## Voir aussi
 
-- [Instruction de fonction asynchrone](/fr/docs/Web/JavaScript/Reference/Statements/async_function)
-- [Expression de fonction asynchrone avec les mots-clés `async function`](/fr/docs/Web/JavaScript/Reference/Operators/async_function)
-- [`Function`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function)
-- [Instruction de fonction](/fr/docs/Web/JavaScript/Reference/Statements/function)
-- [Expression de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function)
-- [Fonctions et portées de fonction](/fr/docs/Web/JavaScript/Reference/Functions)
+- [`async function`](/fr/docs/Web/JavaScript/Reference/Statements/async_function)
+- [Expression de fonction `async`](/fr/docs/Web/JavaScript/Reference/Operators/async_function)
+- L'objet global {{JSxRef("Function")}}
+- L'objet {{JSxRef("AsyncGeneratorFunction")}}
+- L'objet {{JSxRef("GeneratorFunction")}}
+- {{JSxRef("Functions", "Fonctions", "", 1)}}

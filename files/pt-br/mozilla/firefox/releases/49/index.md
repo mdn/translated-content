@@ -3,8 +3,6 @@ title: Firefox 49 para desenvolvedores
 slug: Mozilla/Firefox/Releases/49
 ---
 
-{{FirefoxSidebar}}
-
 [Para testar estes novos recursos do Firefox,
 Instale Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 49 foi lançado em 20 de Setembro de 2016. Este artigo faz uma lista das principais alterações não só para desenvolvedores web, mas também desenvolvedores Firefox e Gecko e de extensões.
 
@@ -20,7 +18,6 @@ Instale Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) F
 - O Inspector agora suporta sintaxe para valores de cores em `#RRGGBBAA` e `#RGBA` ([Erro do Firefox 1271191](https://bugzil.la/1271191)).
 - As ferramentas de desvenvolvedor deixa de exibir marcas de fechamento automático (tal como {{HTMLElement("br")}} e {{HTMLElement("img")}} como se eles tivessem uma tag de fechamento em páginas HTML ; o comportamento é inalteravel para páginas XHTML ([Erro do Firefox 820926](https://bugzil.la/820926)).
 - Melhorias na acessibilidade!
-
   - A caixa de ferramenta faz um trabalho melhor em assegurar que o foco no teclado seja mais visível ([Erro do Firefox 1242851](https://bugzil.la/1242851)).
   - Foram adicionados rótulos de acessibilidade a controles não marcados ([Erro do Firefox 1242715](https://bugzil.la/1242715)).
   - Adicionada semântica de exibição de árvore adequada e navegação de teclado para a exibição de marcação do Inspetor ([Erro do Firefox 1242694](https://bugzil.la/1242694)).
@@ -54,13 +51,11 @@ Instale Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) F
 - A propiedade {{cssxref("text-align-last")}} foi desprezada ([Erro do Firefox 1039541](https://bugzil.la/1039541)).
 - Adicionado suporte para {{cssxref("overflow-wrap")}}, substituindo {{cssxref("word-wrap")}} que ainda é suportado como nome alternativo ([Erro do Firefox 955857](https://bugzil.la/955857)).
 - Nossa experiencia com a implementação do [CSS Grids](/pt-BR/docs/Web/CSS/CSS_grid_layout) foi melhorado:
-
   - implementado {{cssxref("&lt;percentage&gt;")}} para as propriedades {{cssxref("grid-gap")}}, {{cssxref("grid-row-gap")}}, e {{cssxref("grid-column-gap")}} ([Erro do Firefox 1266268](https://bugzil.la/1266268)).
   - Implementado suporte a layout grid layout para {{cssxref("align")}}, {{cssxref("justify-self")}}`:baseline` e `last-baseline` (aka "baseline self-alignment") ([Erro do Firefox 1221525](https://bugzil.la/1221525)).
   - Implementado alinhamento de conteúdo baseline de item em grid ([Erro do Firefox 1256429](https://bugzil.la/1256429)).
 
 - Nosso experimeto implementação de [CSS Masks](/pt-BR/docs/Web/CSS/CSS_masking) foi melhorado:
-
   - A propiedade {{cssxref("mask-origin")}} agora usa `border-box` ao invés de `padding-box` como valor inicial, para coincidir com a especificação ([Erro do Firefox 1258286](https://bugzil.la/1258286)).
   - A propriedade {{cssxref("mask-repeat")}} suporta os seguintes volumes: `space` e `round` values ([Erro do Firefox 1258626](https://bugzil.la/1258626)).
   - Corrigido o problema que impedia o atributo {{cssxref("mask-position")}} de ser animado ([Erro do Firefox 1273804](https://bugzil.la/1273804)).
@@ -184,7 +179,6 @@ _Sem mudanças._
 A fim de melhorar a compatilidade com o conteúdo existente, Firefox agora aceita algumas propriedades e atributos do webkit.
 
 - As propriedades a seguir também trabalham com prefixo -webkit:
-
   - {{cssxref("-webkit-align-items")}}
   - {{cssxref("-webkit-align-content")}}
   - {{cssxref("-webkit-align-self")}}
@@ -232,7 +226,6 @@ A fim de melhorar a compatilidade com o conteúdo existente, Firefox agora aceit
   - {{cssxref("-webkit-user-select")}}
 
 - As propriedades a seguir correspondem à propriedade prefixa equivalente
-
   - {{cssxref("-webkit-box-flex")}}
   - {{cssxref("-webkit-box-ordinal-group")}}
   - {{cssxref("-webkit-box-orient")}}
@@ -240,19 +233,16 @@ A fim de melhorar a compatilidade com o conteúdo existente, Firefox agora aceit
   - {{cssxref("-webkit-box-pack")}}
 
 - Para valores {{cssxref("&lt;image&gt;")}}:
-
   - As funções a seguir correspondem aos seus equivalentes não predefinidos: {{cssxref("-webkit-linear-gradient", "-webkit-linear-gradient()")}}, {{cssxref("-webkit-radial-gradient", "-webkit-radial-gradient()")}}, {{cssxref("-webkit-repeating-linear-gradient", "-webkit-repeating-linear-gradient()")}}, e {{cssxref("-webkit-repeating-radial-gradient","-webkit-repeating-radial-gradient()")}}.
   - O desatualizado `-webkit-gradient` é suportado (e traduzindo para um gradiente regular)
 
 - Os seguintes valores {{cssxref("display")}} foram traduzidos:
-
   - `-webkit-box` to `-moz-box`
   - `-webkit-flex` to `flex`
   - `-webkit-inline-box` to `inline-flex`
   - `-webkit-inline-flex` to `-moz-inline-flex`
 
 - As seguintes propriedades são suportadas ( E não mapeia para qualquer equivalente não predefinido):
-
   - {{cssxref("-webkit-text-fill-color")}}
   - {{cssxref("-webkit-text-stroke-color")}}
   - {{cssxref("-webkit-text-stroke-width")}}
@@ -260,7 +250,6 @@ A fim de melhorar a compatilidade com o conteúdo existente, Firefox agora aceit
 
 - A interface {{domxref("WebKitCSSMatrix")}} é um nome de {{domxref("DOMMatrix")}}
 - Os seguintes recursos de consulta de mídia foram implementados:
-
   - `-webkit-min-device-pixel-ratio` é um nome para [`min-resolution`](/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries#resolution) com o mesmo valor em (em `dppx)`, embora este recurso seja [disabilitado por padrão](https://bugzilla.mozilla.org/show_bug.cgi?id=1237720) (atras de preferências no about:config `layout.css.prefixes.device-pixel-ratio-webkit`)
   - `-webkit-max-device-pixel-ratio` é um nome de [`max-resolution`](/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries#resolution) para o mesmo valor (em `dppx`); essa característica é destivada por padrão, atras da mesma preferência no about:config
   - [`-webkit-transform-3d`](/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries#-webkit-transform-3d) sempre combinando, indicando suporte a transformações 3D.

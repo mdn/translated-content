@@ -46,9 +46,7 @@ requestFullscreen(options)
 _`requestFullscreen()` プロシージャは、従来の例外を発生させるのではなく、返された `Promise` を拒否することでエラー状況を知らせます。拒絶ハンドラーは以下の例外値のいずれかを受け取ります。_
 
 - {{jsxref("TypeError")}}
-
   - : 例外 `TypeError` は以下のいずれかの状況で送出されることがあります。
-
     - その要素を含む文書が完全にアクティブでない、つまり、現在のアクティブ文書でない。
     - その要素が文書内に含まれていない。
     - この要素は、[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)の設定または他のアクセス制御機能により、 `fullscreen` 機能を使用することが許可されていない。

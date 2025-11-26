@@ -12,7 +12,6 @@ Essas palavras-chave especificam o interior do elemento{{CSSxRef("display")}} ty
 O `<display-inside>` O valor é definido usando uma palavra-chave da lista abaixo:
 
 - `flow` {{Experimental_Inline}}
-
   - : O elemento expõe seu conteúdo usando o layout de fluxo (layout em bloco e em linha).
     Se o seu tipo de exibição externo for
 
@@ -35,7 +34,8 @@ O `<display-inside>` O valor é definido usando uma palavra-chave da lista abaix
 - `ruby` {{Experimental_Inline}}
   - : O elemento se comporta como um elemento embutido e apresenta seu conteúdo de acordo com o modelo de formatação ruby. Ele se comporta como o HTML correspondente{{HTMLElement("ruby")}} elementos.
 
-> **Nota:**: Navegadores que suportam a sintaxe de dois valores, encontrando apenas o valor interno, como quando `display: flex` or `display: grid` especificado, definirá seu valor externo como `block`. Isso resultará no comportamento esperado; por exemplo, se você especificar um elemento a ser `display: grid`, você esperaria que a caixa criada no contêiner da grade fosse uma caixa no nível do bloco.
+> [!NOTE]
+> Navegadores que suportam a sintaxe de dois valores, encontrando apenas o valor interno, como quando `display: flex` or `display: grid` especificado, definirá seu valor externo como `block`. Isso resultará no comportamento esperado; por exemplo, se você especificar um elemento a ser `display: grid`, você esperaria que a caixa criada no contêiner da grade fosse uma caixa no nível do bloco.
 
 ### Sintaxe formal
 
@@ -106,7 +106,6 @@ Neste exemplo, a caixa pai foi fornecida `display: flow-root` e assim estabelece
 ## Veja também
 
 - {{CSSxRef("display")}}
-
   - {{CSSxRef("&lt;display-outside&gt;")}}
   - {{CSSxRef("&lt;display-listitem&gt;")}}
   - {{CSSxRef("&lt;display-internal&gt;")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 533dc583856cfc95c1b9129335cd24793eac1093
 ---
 
-{{HTMLSidebar}}
-
 **`<small>`** [HTML](/zh-CN/docs/Web/HTML) 元素代表旁注和小字印刷（如版权和法律文本），与其样式的呈现方式无关。默认情况下，它以比其中的文本小一号的字体大小呈现，例如从 `small` 变为 `x-small`。
 
 {{InteractiveExample("HTML Demo: &lt;small&gt;", "tabbed-shorter")}}

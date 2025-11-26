@@ -3,8 +3,6 @@ title: handler.set()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 ---
 
-{{JSRef}}
-
 **`handler.set()`** 方法是设置属性值操作的捕获器。
 
 {{InteractiveExample("JavaScript Demo: handler.set()", "taller")}}
@@ -55,7 +53,6 @@ new Proxy(target, {
 - `value`
   - : 新属性值。
 - `receiver`
-
   - : 最初接收赋值的对象。通常是 proxy 本身，但 handler 的 set 方法也有可能在原型链上，或以其他方式被间接地调用（因此不一定是 proxy 本身）。
 
     > [!NOTE]

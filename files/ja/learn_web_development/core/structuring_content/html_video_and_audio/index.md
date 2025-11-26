@@ -182,9 +182,7 @@ HTML 動画に含めることができる他の多くの機能があります。
 - [`poster`](/ja/docs/Web/HTML/Reference/Elements/video#poster)
   - : この属性は、動画の再生前に表示される画像の URL を値としてとります。これは、スプラッシュ画面または広告画面に使用するためのものです。
 - [`preload`](/ja/docs/Web/HTML/Reference/Elements/video#preload)
-
   - : この属性は、大きなファイルをバッファリングする要素で使用されます。3 つの値のいずれかを取ることができます。
-
     - `"none"` はファイルをバッファリングしません
     - `"auto"` はメディアファイルをバッファリングする
     - `"metadata"` はファイルのメタデータのみをバッファリングする

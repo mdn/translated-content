@@ -166,7 +166,7 @@ Ejecuta el código usando [JSFiddle](https://jsfiddle.net/hotae160/).
 
 Los lenguajes como Java le permiten declarar métodos como privados, lo que significa que solo pueden ser llamados por otros métodos de la misma clase.
 
-JavaScript, antes de [clases](/es/docs/Web/JavaScript/Reference/Classes), no tenía una forma nativa de declarar [métodos privados](/es/docs/Web/JavaScript/Reference/Classes/Private_properties#private_methods), pero era posible emular métodos privados usando _closures_. Los métodos privados no solo son útiles para restringir el acceso al código. También proporcionan una forma poderosa de gestionar su espacio de nombres global.
+JavaScript, antes de [clases](/es/docs/Web/JavaScript/Reference/Classes), no tenía una forma nativa de declarar [métodos privados](/es/docs/Web/JavaScript/Reference/Classes/Private_elements#private_methods), pero era posible emular métodos privados usando _closures_. Los métodos privados no solo son útiles para restringir el acceso al código. También proporcionan una forma poderosa de gestionar su espacio de nombres global.
 
 El siguiente código ilustra cómo usar _closures_ para definir funciones públicas que pueden acceder a funciones y variables privadas. Tenga en cuenta que estos _closures_ siguen el [Patrón de diseño de módulo](https://www.google.com/search?q=javascript+module+pattern).
 
@@ -495,7 +495,7 @@ setupHelp();
 
 Este ejemplo usa `const` en lugar de `var`, por lo que cada _closure_ vincula la variable de alcance de bloque, lo que significa que no se requieren _closure_ adicionales.
 
-Otra alternativa podría ser usar `forEach()` para iterar sobre la matriz `helpText` y adjuntar un detector a cada [`<input>`](/es/docs/Web/HTML/Element/input), como se muestra:
+Otra alternativa podría ser usar `forEach()` para iterar sobre la matriz `helpText` y adjuntar un detector a cada [`<input>`](/es/docs/Web/HTML/Reference/Elements/input), como se muestra:
 
 ```js
 function showHelp(help) {
@@ -573,4 +573,4 @@ MyObject.prototype.getMessage = function () {
 };
 ```
 
-En los dos ejemplos anteriores, el prototipo heredado puede ser compartido por todos los objetos y las definiciones del método no necesitan ocurrir en cada creación de objetos. Consulte [La herencia y la cadena de prototipos](/es/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) para obtener más información.
+En los dos ejemplos anteriores, el prototipo heredado puede ser compartido por todos los objetos y las definiciones del método no necesitan ocurrir en cada creación de objetos. Consulte [La herencia y la cadena de prototipos](/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) para obtener más información.

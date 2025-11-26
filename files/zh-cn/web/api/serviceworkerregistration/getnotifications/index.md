@@ -19,9 +19,7 @@ getNotifications(options)
 ### 参数
 
 - `options` {{optional_inline}}
-
   - : 包含用于过滤返回的通知的选项的对象。可用的选项有：
-
     - `tag` {{optional_inline}}
       - : 一个表示通知标签的字符串。如果指定，则仅返回具有此标签的通知。
 

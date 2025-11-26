@@ -377,7 +377,7 @@ body {
 
 ### break-inside の設定
 
-このふるまいを制御するために、[CSS 断片化](/ja/docs/Web/CSS/CSS_fragmentation)の仕様のプロパティを使用できます。 この仕様は、段組みとページ付きメディアでのコンテンツの分割を制御するためのプロパティを提供します。 例えば、 {{cssxref("break-inside")}} を `avoid` の値で `.card` のルールに追加することができます。これは見出しとテキストの断片化したくないコンテナーとなります。
+このふるまいを制御するために、[CSS 断片化](/ja/docs/Web/CSS/Guides/Fragmentation)の仕様のプロパティを使用できます。 この仕様は、段組みとページ付きメディアでのコンテンツの分割を制御するためのプロパティを提供します。 例えば、 {{cssxref("break-inside")}} を `avoid` の値で `.card` のルールに追加することができます。これは見出しとテキストの断片化したくないコンテナーとなります。
 
 ```css live-sample___setting_break-inside
 .card {
@@ -494,7 +494,7 @@ body {
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 段組み](/ja/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Multicolumn) を参照してください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 段組み](/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout) を参照してください。
 
 ## まとめ
 
@@ -502,5 +502,5 @@ body {
 
 ## 関連情報
 
-- [CSS 断片化](/ja/docs/Web/CSS/CSS_fragmentation)
-- [段組みレイアウトの使用](/ja/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
+- [CSS 断片化](/ja/docs/Web/CSS/Guides/Fragmentation)
+- [段組みレイアウトの使用](/ja/docs/Web/CSS/Guides/Multicol_layout/Using)

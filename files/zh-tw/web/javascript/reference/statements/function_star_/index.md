@@ -3,8 +3,6 @@ title: function*
 slug: Web/JavaScript/Reference/Statements/function*
 ---
 
-{{jsSidebar("Statements")}}
-
 **`function*`** 宣告式（`function` 關鍵字後面跟著一個星號）定義了一個*生成器函式（generator function）*，他會回傳一個{{jsxref("Global_Objects/Generator","生成器（Generator）")}}物件。
 
 {{InteractiveExample("JavaScript Demo: Statement - Function*")}}
@@ -171,7 +169,6 @@ Starting with Gecko 29, the completed generator function no longer throws a {{js
 - {{jsxref("Operators/function", "function expression")}}
 - {{jsxref("Functions_and_function_scope", "Functions and function scope")}}
 - Other web resources:
-
   - [Regenerator](http://facebook.github.io/regenerator/) an ES2015 generator compiler to ES5
   - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](https://www.youtube.com/watch?v=qbKWsbJ76-s)
   - [Task.js](https://github.com/mozilla/task.js)

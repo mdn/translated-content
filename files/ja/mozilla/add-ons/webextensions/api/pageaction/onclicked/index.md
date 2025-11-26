@@ -31,9 +31,7 @@ browser.pageAction.onClicked.hasListener(listener);
 ### パラメーター
 
 - `callback`
-
   - : イベント発生時に呼び出される関数です。関数は次の引数を渡されます:
-
     - `tab`
       - : ページアクションがクリックされたタブの{{WebExtAPIRef('tabs.Tab')}}オブジェクト。
 

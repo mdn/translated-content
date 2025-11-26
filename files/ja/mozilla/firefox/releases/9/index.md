@@ -3,8 +3,6 @@ title: Firefox 9 for developers
 slug: Mozilla/Firefox/Releases/9
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 9 は Windows 向けに 2011 年 12 月 20 日にリリースされました。その直後に見つかったクラッシュバグを修正した Mac 版および Linux 版のバージョン 9.0.1 は、2011 年 12 月 21 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -21,10 +19,10 @@ Firefox 9 は Windows 向けに 2011 年 12 月 20 日にリリースされま�
 
 ### CSS
 
-- [`font-stretch`](/ja/docs/Web/CSS/font-stretch) プロパティがサポートされました。
-- [`columns`](/ja/docs/Web/CSS/columns) プロパティが [-moz](/ja/docs/Glossary/Vendor_Prefix) 接頭辞付きでサポートされました。このプロパティは [`column-width`](/ja/docs/Web/CSS/column-width) と [`column-count`](/ja/docs/Web/CSS/column-count) をまとめて記述する短縮形プロパティです。
+- [`font-stretch`](/ja/docs/Web/CSS/Reference/Properties/font-stretch) プロパティがサポートされました。
+- [`columns`](/ja/docs/Web/CSS/Reference/Properties/columns) プロパティが [-moz](/ja/docs/Glossary/Vendor_Prefix) 接頭辞付きでサポートされました。このプロパティは [`column-width`](/ja/docs/Web/CSS/Reference/Properties/column-width) と [`column-count`](/ja/docs/Web/CSS/Reference/Properties/column-count) をまとめて記述する短縮形プロパティです。
 - [`<link>`](/ja/docs/Web/HTML/Reference/Elements/link) 要素を用いて取り込まれたスタイルシートが完全にロードされてパースされたとき (しかしまだドキュメントに適用されていない状態)、[`load` イベント](/ja/docs/Web/HTML/Reference/Elements/link#stylesheet_load_events) が発生するようになりました。また、スタイルシートの処理においてエラーが起きた場合、`error` イベントが発生します。
-- [`text-overflow`](/ja/docs/Web/CSS/text-overflow) 向けの 2 つの値を指定できる新しい構文を用いて、左端と右端の両方のオーバフロー設定を指定できるようになりました。
+- [`text-overflow`](/ja/docs/Web/CSS/Reference/Properties/text-overflow) 向けの 2 つの値を指定できる新しい構文を用いて、左端と右端の両方のオーバフロー設定を指定できるようになりました。
 
 ### DOM
 
@@ -38,7 +36,7 @@ Firefox 9 は Windows 向けに 2011 年 12 月 20 日にリリースされま�
 - DOM Level 3 [Composition イベント](/ja/docs/Web/API/CompositionEvent) がサポートされました。
 - [`Document.scripts`](/ja/docs/Web/API/Document/scripts) 属性が実装されました。このメソッドはドキュメントのすべての [`<script>`](/ja/docs/Web/HTML/Reference/Elements/script) 要素の [`HTMLCollection`](/ja/docs/Web/API/HTMLCollection) を返します。
 - [`Document.queryCommandSupported()`](/ja/docs/Web/API/Document/queryCommandSupported) メソッドが実装されました。
-- 標準 IDL インターフェイスとして Event ハンドラーが実装されました。多くのケースで、これはコンテンツに影響を及ぼさないはずですが、[例外が存在します。](/ja/docs/Web/Events/Event_handlers#event_handler_changes_in_firefox_9)
+- 標準 IDL インターフェイスとして Event ハンドラーが実装されました。多くのケースで、これはコンテンツに影響を及ぼさないはずですが、[例外が存在します。](/ja/docs/Web/API/Document_Object_Model/Events#event_handler_changes_in_firefox_9)
 - 新しいレスポンスタイプ、 "moz-json" が XMLHttpRequest に追加されました。 そのタイプを用いると、 XMLHttpRequest に自動的に [JSON](/ja/docs/Glossary/JSON) 文字列をパースさせられます。つまり、このタイプをリクエストしたときはパースされた JSON 文字列が返るので、`response` プロパティの値がパース結果の JavaScript オブジェクトになります。
 - [XMLHttpRequest の progress イベント](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress) が受け取ったデータの各チャンクに対して確実に送信されるようになりました。つまり、以前のバージョンでは受け取ったデータの最後のチャンクが progeress イベントを発生させない可能性がありました。データの最後のチャンクを受け取ったかを判定するために load イベントも監視する必要はもう無くなり、progress イベントだけで進捗を追えるようになります。
 - 過去に、`null` のリスナーを指定した [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) の呼び出しは例外を投げていましたが、エラーを出すことなく、何の影響も及ぼさずに処理を戻すようになりました。

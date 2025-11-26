@@ -9,7 +9,7 @@ Il y a plusieurs propriétés que vous pouvez regarder dans le but de détermine
 
 Cet article est conçu pour vous aider à prendre cette décision. Notez que toutes ces propriétés sont en lecture seule .
 
-Si vous voulez définir la largeur et la hauteur d'un élément, utilisez [`width`](/fr/docs/Web/CSS/width) et [`height`](/fr/docs/Web/CSS/height); ou les propriétés [`min-width`](/fr/docs/Web/CSS/min-width), [`max-width`](/fr/docs/Web/CSS/max-width), [`min-height`](/fr/docs/Web/CSS/min-height) et [`max-height`](/fr/docs/Web/CSS/max-height).
+Si vous voulez définir la largeur et la hauteur d'un élément, utilisez [`width`](/fr/docs/Web/CSS/Reference/Properties/width) et [`height`](/fr/docs/Web/CSS/Reference/Properties/height); ou les propriétés [`min-width`](/fr/docs/Web/CSS/Reference/Properties/min-width), [`max-width`](/fr/docs/Web/CSS/Reference/Properties/max-width), [`min-height`](/fr/docs/Web/CSS/Reference/Properties/min-height) et [`max-height`](/fr/docs/Web/CSS/Reference/Properties/max-height).
 
 ## Que faut-il utiliser ?
 

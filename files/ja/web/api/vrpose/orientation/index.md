@@ -29,7 +29,8 @@ yaw （y 軸周りの回転）の方向は、センサーを最初に読み込�
 
 コード例については [`VRDisplay.getFrameData()`](/ja/docs/Web/API/VRDisplay/getFrameData#examples) を参照してください。
 
-> **メモ:** `{ x: 0, y: 0, z: 0, w: 1 }` の方向は「前方」と考えられています。
+> [!NOTE]
+> `{ x: 0, y: 0, z: 0, w: 1 }` の方向は「前方」と考えられています。
 
 ## 仕様書
 

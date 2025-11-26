@@ -33,7 +33,8 @@ WebVR は、バーチャルリアリティデバイス — 例えば Oculus Rift
 
 また WebVR 1.1 では、 {{DOMxRef("Window")}} オブジェクトに多数のイベントが追加され、 JavaScript が表示状態の変化に対応できるようになっています。
 
-> **メモ:** [WebVR API の使用](/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API)と [WebVR の概念](/ja/docs/Web/API/WebVR_API/Concepts)の記事で、この API の使用方法がもっとわかります。
+> [!NOTE]
+> [WebVR API の使用](/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API)と [WebVR の概念](/ja/docs/Web/API/WebVR_API/Concepts)の記事で、この API の使用方法がもっとわかります。
 
 ### API の可用性
 
@@ -53,7 +54,8 @@ if (!navigator.getVRDisplays) {
 
 多くの WebVR ハードウェアは、ヘッドセットと一緒に使用するコントローラーをセットアップします。これらは[ゲームパッド API](/ja/docs/Web/API/Gamepad_API) を介して WebVR アプリで使用することができ、特に[ゲームパッド拡張 API](/ja/docs/Web/API/Gamepad_API#experimental_gamepad_extensions) は、コントローラーの[コントローラーのポーズ](/ja/docs/Web/API/GamepadPose)や[触覚アクチュエーター](/ja/docs/Web/API/GamepadHapticActuator)などにアクセスするための API 機能を追加します。
 
-> **メモ:** [VR コントローラーの WebVR での使用](/ja/docs/Web/API/WebVR_API/Using_VR_controllers_with_WebVR)の記事では、 WebVR アプリでの VR コントローラーの使い方の基本を解説しています。
+> [!NOTE]
+> [VR コントローラーの WebVR での使用](/ja/docs/Web/API/WebVR_API/Using_VR_controllers_with_WebVR)の記事では、 WebVR アプリでの VR コントローラーの使い方の基本を解説しています。
 
 ## WebVR インターフェイス
 

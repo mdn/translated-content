@@ -101,5 +101,5 @@ var copy = new Request(myRequest);
 ## 관련항목
 
 - [ServiceWorker API](/ko/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/ko/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/ko/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ko/docs/Web/HTTP)

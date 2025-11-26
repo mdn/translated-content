@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Methods
 original_slug: Web/HTTP/Headers/Access-Control-Allow-Methods
 ---
 
-{{HTTPSidebar}}
-
 **`Access-Control-Allow-Methods`** 헤더는 {{glossary("preflight request", "사전 요청")}}에 대한 응답으로 리소스에 접근할 때 허용되는 메서드를 지정합니다.
 
 <table class="properties">
@@ -31,9 +29,9 @@ Access-Control-Allow-Methods: *
 ## 디렉티브
 
 - `<method>`
-  - : 허용된 [HTTP 요청 메서드](/ko/docs/Web/HTTP/Methods)의 목록이며 콤마로 구분됩니다.
+  - : 허용된 [HTTP 요청 메서드](/ko/docs/Web/HTTP/Reference/Methods)의 목록이며 콤마로 구분됩니다.
 - `*` (와일드카드)
-  - : `*`는 자격 증명이 없는 요청 ([쿠키](/ko/docs/Web/HTTP/Cookies)나 HTTP 인증 정보가 없는 요청)에 대해서만 특수 와일드카드 값으로 취급됩니다. 자격 증명이 있는 요청에서는 특별한 의미를 갖지 않고 단순히 "\*"라는 메서드 이름으로 취급됩니다.
+  - : `*`는 자격 증명이 없는 요청 ([쿠키](/ko/docs/Web/HTTP/Guides/Cookies)나 HTTP 인증 정보가 없는 요청)에 대해서만 특수 와일드카드 값으로 취급됩니다. 자격 증명이 있는 요청에서는 특별한 의미를 갖지 않고 단순히 "\*"라는 메서드 이름으로 취급됩니다.
 
 ## 예제
 

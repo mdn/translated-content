@@ -3,8 +3,6 @@ title: Sec-Fetch-Mode
 slug: Web/HTTP/Reference/Headers/Sec-Fetch-Mode
 ---
 
-{{HTTPSidebar}}
-
 **`Sec-Fetch-Mode`** 获取元数据标头表明了一个请求的模式。
 
 | Header type                                    | {{Glossary("Fetch Metadata Request Header")}}                                            |

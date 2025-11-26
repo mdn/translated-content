@@ -73,7 +73,6 @@ A entrada `submit` será exibida como um botão (por padrão) que pode ser press
 
 - `action`: O recurso/URL para onde os dados devem ser enviados para processamento quando o formulário é enviado. Se isso não estiver configurado (ou configurado para uma string vazia), o formulário será enviado de volta para URL da página atual.
 - `method`: O método HTTP method utilizado para enviar os dados: _post_ or _get_.
-
   - O método `POST` deve sempre ser utilizado se os dados forem resultar em uma alteração no banco de dados do servidor, pois é mais resistente a ataques de falsificação de solicitação entre sites.
   - O método `GET` deve ser utilizado somente para formulários que não alteram dados de usuário (um formulário de busca, por exemplo). Ele é recomendado para quando você quiser poder favoritar ou compartilhar a URL.
 
@@ -92,16 +91,13 @@ Um fluxograma do processo de como o Django lida com solicitações de formulári
 Com base no diagrama acima, as principais coisas que o manuseio de formulários do Django faz são:
 
 1. Exiba o formulário padrão na primeira vez em que for solicitado pelo usuário
-
    - O formulário pode conter campos em branco (por exemplo, se você estiver criando um novo registro) ou pode ser preenchido previamente com valores iniciais (por exemplo, se você estiver alterando um registro ou tiver valores iniciais padrão úteis).
    - O formulário é referido como _unbound_ neste momento, porque não está associado a nenhum dado inserido pelo usuário (embora possa ter valores iniciais).
 
 2. Receba dados de uma solicitação de envio e vincule-os ao formulário.
-
    - Vincular dados ao formulário significa que os dados inseridos pelo usuário e quaisquer erros estão disponíveis quando precisamos exibir novamente o formulário.
 
 3. Limpe e valide os dados.
-
    - A limpeza dos dados executa a higienização da entrada (por exemplo, removendo caracteres inválidos que podem ser usados para enviar conteúdo malicioso ao servidor) e os converte em tipos consistentes de Python.
    - A validação verifica se os valores são apropriados para o campo (por exemplo, estão no período certo, não são muito curtos ou muito longos etc.)
 
@@ -318,7 +314,8 @@ Se o formulário não é válido, chamamos `render()` novamente, mas dessa vez o
 
 Se o formulário é válido, então podemos começar a utilizar os dados, acessando-o por meio do atributo`form.cleaned_data` (Ex. `data = form.cleaned_data['renewal_date']`). Aqui, apenas salvamos os dados no atributo `due_back` do objeto `BookInstance` associado.
 
-> **Aviso:** **Importante**: Embora você também possa acessar os dados do formulário diretamente por meio do _request_ (por exemplo, `request.POST['renewal_date']` ou `request.GET['renewal_date']` se utilizando requisição GET), isso NÃO é recomendado. O dado limpo é "higienizado", validado, e convertido em tipo compatível com Python.
+> [!WARNING]
+> **Importante**: Embora você também possa acessar os dados do formulário diretamente por meio do _request_ (por exemplo, `request.POST['renewal_date']` ou `request.GET['renewal_date']` se utilizando requisição GET), isso NÃO é recomendado. O dado limpo é "higienizado", validado, e convertido em tipo compatível com Python.
 
 A estapa final da manipulação de formulário na parte da _view_ é redirecionar para outra página, geralmente uma página de "êxito". Nesse caso, usamos `HttpResponseRedirect` e `reverse()` para redirecionar para a _view_ chamada `'all-borrowed'` (isso foi criado como desafio em [Tutorial Django Parte 8: Autenticação de usuário e permissões](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Authentication#challenge_yourself)). Se você não criou está página considere redirecionar para a página principal na URL '/').
 
@@ -553,7 +550,8 @@ A classe `RenewBookModelForm` acima agora é funcionalmente equivalente a nossa 
 
 O algoritmo de manipulação de formulários que usamos em nosso exemplo de função _view_ acima, representa um padrão extremamente comum nas _views_ de edição de formulário. Django abstrai grande parte desse "_boilerplate_" (trabalho repetitivo) para você, criando [views genéricas de edição](https://docs.djangoproject.com/en/2.1/ref/class-based-views/generic-editing/) para views de criação, edição e exclusão baseadas em modelos. Não apenas lidam com o comportamento de visualização, mas também criam automaticamente para você a classe de formulário (uma `ModelForm`) a partir do modelo.
 
-> **Nota:**Além das _views_ de edição descritas aqui, há também uma classe [FormView](https://docs.djangoproject.com/en/2.1/ref/class-based-views/generic-editing/#formview), que fica em algum lugar entre nossa função _view_ e outra _view_ genérica em termos de "flexibilidade" vs "esforço de codificação". Usando `FormView`, você ainda precisa criar seu `Form`, mas não precisa implementar todos os padrões de manipulação de formulário. Em vez disso, você tem apenas que fornecer uma implementação da função que será chamada assim que o envio for válido.
+> [!NOTE]
+> Além das _views_ de edição descritas aqui, há também uma classe [FormView](https://docs.djangoproject.com/en/2.1/ref/class-based-views/generic-editing/#formview), que fica em algum lugar entre nossa função _view_ e outra _view_ genérica em termos de "flexibilidade" vs "esforço de codificação". Usando `FormView`, você ainda precisa criar seu `Form`, mas não precisa implementar todos os padrões de manipulação de formulário. Em vez disso, você tem apenas que fornecer uma implementação da função que será chamada assim que o envio for válido.
 
 Nessa seção vamos usar _views_ genericas de edição para criar páginas para adicionar funcionalidades para criar, editar e excluir registros de `Author` da nossa biblioteca — fornecendo efetivamente uma reimplementação básica de parte do site _Admin_ (isso poderá ser útil se você precisa oferecer funcionalidades de administrador de uma maneira mais flexível que possa ser fornecida pelo dite _Admin_).
 

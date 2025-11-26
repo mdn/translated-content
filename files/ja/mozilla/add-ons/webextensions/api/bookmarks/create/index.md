@@ -21,9 +21,7 @@ browser.bookmarks.create(
 - `bookmark`
   - : {{WebExtAPIRef('bookmarks.CreateDetails')}}
 - `callback`{{optional_inline}}
-
   - : ブックマークが新しく作成された際に呼び出される {{jsxref("function")}} です。この関数は以下の引数を 1 つ受け取ります。
-
     - `result`
       - : 新しく作成されたブックマークノードを表す {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}
 

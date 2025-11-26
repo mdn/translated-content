@@ -193,7 +193,6 @@ customElements.define(
 
 - {{HTMLElement("template")}} 有一个 {{HTMLElement("style")}} 元素，里面有一些只能在当前 {{HTMLElement("template")}} 中创建的文档片段范围内生效的 CSS 样式
 - {{HTMLElement("template")}} 使用 {{HTMLElement("slot")}} 及其 [`name`](/zh-CN/docs/Web/HTML/Reference/Elements/slot#name) 属性来创建三个[具名插槽](/zh-CN/docs/Web/HTML/Reference/Elements/slot#name)：
-
   - `<slot name="element-name">`
   - `<slot name="description">`
   - `<slot name="attributes">`

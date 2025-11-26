@@ -14,7 +14,6 @@ slug: Web/API/HTMLLinkElement
 _Наследует свойства от своего родителя, {{domxref("HTMLElement")}}, и {{domxref("LinkStyle")}}._
 
 - {{domxref("HTMLLinkElement.as")}}
-
   - : Это {{domxref("DOMString")}} представляющий тип контента загружаемый по HTML ссылке.
 
 - {{domxref("HTMLLinkElement.crossOrigin")}} {{experimental_inline}}
@@ -45,7 +44,6 @@ _Наследует свойства от своего родителя, {{domxr
 - {{domxref("HTMLLinkElement.charset")}}
   - : Is a {{domxref("DOMString")}} representing the character encoding for the target resource.
 - {{domxref("HTMLLinkElement.rev")}}
-
   - : Is a {{domxref("DOMString")}} representing the reverse relationship of the linked resource from the resource to the document.
 
     > [!NOTE]

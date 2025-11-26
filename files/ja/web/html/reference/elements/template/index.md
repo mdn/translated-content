@@ -15,16 +15,12 @@ l10n:
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `shadowrootmode`
-
   - : 親要素の[シャドウルート](/ja/docs/Glossary/Shadow_tree)を生成します。
     これは {{domxref("Element.attachShadow()")}} メソッドの宣言版で、同じ {{glossary("enumerated")}} 値を受け入れます。
-
     - `open`
-
       - : 内部シャドウルート DOM を JavaScript に公開します（ほとんどの用途で推奨）。
 
     - `closed`
-
       - : 内部シャドウルート DOM を JavaScript から隠します。
 
     > [!NOTE]
@@ -36,18 +32,15 @@ l10n:
     > 古いチュートリアルや例では、Chrome 90-110 で対応していた非標準の `shadowroot` 属性が見つかるかもしれません。この属性は削除され、標準の `shadowrootmode` 属性に置き換えられています。
 
 - `shadowrootclonable`
-
   - : この要素を使用して作成した [`ShadowRoot`](/ja/docs/Web/API/ShadowRoot) の [`clonable`](/ja/docs/Web/API/ShadowRoot/clonable) プロパティの値を `true` に設定します。
     設定されている場合、シャドウホスト（この `<template>` の親要素）の複製を {{domxref("Node.cloneNode()")}} または {{domxref("Document.importNode()")}} で作成すると、コピーにシャドウルートが含まれます。
 
 - `shadowrootdelegatesfocus`
-
   - : この要素を使用して作成した [`ShadowRoot`](/ja/docs/Web/API/ShadowRoot) の [`delegatesFocus`](/ja/docs/Web/API/ShadowRoot/delegatesFocus) プロパティの値を `true` に設定します。
     これが設定されていて、シャドウツリー内のフォーカス可能でない要素が選択されている場合、フォーカスはツリー内の最初のフォーカス可能な要素に譲られます。
     この値は `false` が既定値です。
 
 - `shadowrootserializable` {{experimental_inline}}
-
   - : この要素を使用して作成した [`ShadowRoot`](/ja/docs/Web/API/ShadowRoot) の [`serializable`](/ja/docs/Web/API/ShadowRoot/serializable) プロパティの値を `true` に設定します。
     設定されている場合、シャドウルートは {{DOMxRef('Element.getHTML()')}} または {{DOMxRef('ShadowRoot.getHTML()')}} メソッドを、`options.serializableShadowRoots` 引数を `true` に設定して呼び出すことでシリアライズされます。
     この値は `false` が既定値です。
@@ -194,7 +187,7 @@ document
 
 このコードでは、最初に `<template>` 要素に `shadowrootmode` 属性を用いて、`<div>` 要素の中にシャドウルートを宣言します。
 これにより、テキストを格納したフォーカスできない `<div>` と、フォーカスできる `<input>` 要素の両方が表示されます。
-また、[`:focus`](/ja/docs/Web/CSS/:focus) を持つ要素を青にスタイル設定し、ホスト要素の通常のスタイル設定を設定するには CSS を使用します。
+また、[`:focus`](/ja/docs/Web/CSS/Reference/Selectors/:focus) を持つ要素を青にスタイル設定し、ホスト要素の通常のスタイル設定を設定するには CSS を使用します。
 
 ```html
 <div>
@@ -363,6 +356,6 @@ container.appendChild(secondClone);
 - {{CSSXref("::part")}}、{{CSSXref("::slotted")}} 擬似要素
 - [`ShadowRoot`](/ja/docs/Web/API/ShadowRoot) インターフェイス
 - [テンプレートとスロットの使用](/ja/docs/Web/API/Web_components/Using_templates_and_slots)
-- [CSS スコープ化](/ja/docs/Web/CSS/CSS_scoping) モジュール
+- [CSS スコープ化](/ja/docs/Web/CSS/Guides/Scoping) モジュール
 - [宣言的シャドウ DOM （HTML による）](/ja/docs/Web/API/Web_components/Using_shadow_DOM#declaratively_with_html) （シャドウ DOM の使用）
 - [Declarative shadow DOM](https://web.dev/articles/declarative-shadow-dom) (developer.chrome.com, 2023)

@@ -3,8 +3,6 @@ title: HTTP 缓存
 slug: Web/HTTP/Guides/Caching
 ---
 
-{{HTTPSidebar}}
-
 ## 概览
 
 HTTP 缓存会存储与请求关联的响应，并将存储的响应复用于后续请求。

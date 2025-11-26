@@ -24,14 +24,12 @@ navigator.share(data)
 ### 매개변수
 
 - `data` {{optional_inline}}
-
   - : 공유할 데이터를 포함한 객체입니다.
 
     사용자 에이전트에게 알려지지 않은 속성은 무시되고, 공유 데이터는 사용자 에이전트가 이해하는 속성에 대해서만 평가됩니다.
     모든 속성은 선택적이지만, 적어도 하나 이상 지정되어야 합니다.
 
     가능한 값은 다음과 같습니다.
-
     - `url` {{optional_inline}}
       - : 공유할 URL을 나타내는 문자열
     - `text` {{optional_inline}}
@@ -54,9 +52,7 @@ navigator.share(data)
 - `NotAllowedError` {{domxref("DOMException")}}
   - : `web-share` [Permissions Policy](/ko/docs/Web/HTTP/Guides/Permissions_Policy) 이 해당 기능을 차단하거나, 창에 {{Glossary("transient activation")}}가 없거나, 보안상의 이유로 파일 공유가 차단되었습니다.
 - {{jsxref("TypeError")}}
-
   - : 지정한 공유 데이터가 유효하지 않습니다. 가능한 이유는 다음과 같습니다.
-
     - `data` 매개변수가 완전히 생략되었거나 알 수 없는 값의 속성만 포함하고 있는 경우. 사용자 에이전트가 인식할 수 없는 속성은 무시됨을 주의하세요.
     - URL 형식이 잘못되었습니다.
     - 파일이 지정되었지만 지원되지 않는 파일인 경우.

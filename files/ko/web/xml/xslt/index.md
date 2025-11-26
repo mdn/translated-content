@@ -8,9 +8,9 @@ original_slug: Web/XSLT
 
 ## Documentation
 
-- [XSLT Element Reference](/ko/docs/Web/XSLT/Element)
+- [XSLT Element Reference](/ko/docs/Web/XML/XSLT/Reference/Element)
   - : Reference.
-- [Transforming XML with XSLT](/ko/docs/Web/XSLT/Transforming_XML_with_XSLT)
+- [Transforming XML with XSLT](/ko/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT)
   - : XSLT는 스타일시트 만든 이가 그러길 바란다면 컨텐트를 모조리 다시 정리하고 다른 형식으로 변환하는 것을 포함하는 컨텐트 조작(manipulating)과 정렬이라는 중요한 두 방식으로 본래 XML 문서를 변환하게 합니다.
 - [Using the Mozilla JavaScript interface to XSL Transformations](/ko/docs/Web/API/XSLTProcessor)
   - : 이 문서는 Mozilla 1.2의 JavaScript 인터페이스와 XSLT 처리 엔진까지 설명합니다.
@@ -25,7 +25,7 @@ original_slug: Web/XSLT
 
 ## Related Topics
 
-- [XML](/ko/docs/Web/XML/XML_introduction), [XPath](/ko/docs/Web/XPath)
+- [XML](/ko/docs/Web/XML/Guides/XML_introduction), [XPath](/ko/docs/Web/XML/XPath)
 
 <div id="Quick_links">
   <ol>

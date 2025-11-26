@@ -447,7 +447,8 @@ Fill in your name: <input type="text" id="name" name="name" />
 
 在這種情況下，我們完全不使用 `alt` 屬性——相反，我們將圖片的描述作為常規文字段落呈現，給它一個 `id`，然後使用 `aria-labelledb` 屬性引用該 `id`，這使得螢幕閱讀器將該段落作為圖片的替代文字/標籤。這在你想要為多個圖片使用相同文字作為標籤時特別有用——這是使用 `alt` 屬性無法實現的。
 
-> **備註：** [`aria-labelledby`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 是 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 規範的其中一部分，它允許開發者在需要時增加額外的語義，來改善螢幕閱讀器的無障礙性。
+> [!NOTE]
+> [`aria-labelledby`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 是 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 規範的其中一部分，它允許開發者在需要時增加額外的語義，來改善螢幕閱讀器的無障礙性。
 
 ### Figure 和 figure caption
 
@@ -487,7 +488,7 @@ HTML 包含兩個元素——{{htmlelement("figure")}} 和 {{htmlelement("figcap
 
 ### 連結的樣式
 
-默認情況下，連結在顏色和文字裝飾方面與其他文字在視覺上有所不同，默認情況下連結是藍色且帶有底線，訪問過的連結是紫色且帶有底線，當它們獲得鍵盤焦點時會有[焦點環](/zh-TW/docs/Web/CSS/:focus)。
+默認情況下，連結在顏色和文字裝飾方面與其他文字在視覺上有所不同，默認情況下連結是藍色且帶有底線，訪問過的連結是紫色且帶有底線，當它們獲得鍵盤焦點時會有[焦點環](/zh-TW/docs/Web/CSS/Reference/Selectors/:focus)。
 
 顏色不應作為區分連結和非連結內容的唯一方法。連結文字的顏色，如同所有文字，須與背景顏色有顯著差異（[4.5:1 的對比度](/zh-TW/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)）。此外，連結在視覺上應與非連結文字有所不同，連結文字與周圍文字之間以及默認、已訪問和焦點/啟用狀態之間的最低對比度要求為 3:1，所有這些狀態顏色與背景顏色之間的對比度為 4.5:1。
 

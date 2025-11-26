@@ -3,8 +3,6 @@ title: margin-bottom
 slug: Web/CSS/margin-bottom
 ---
 
-{{CSSRef}}
-
 ## Summary
 
 ![The effect of the CSS margin-bottom property on the element box](/files/4045/margin-bottom.svg)El `margin-bottom` [CSS](/es/docs/Web/CSS) (_margen-inferior_) es la propiedad de un elemento que establece el espacio requerido en la parte inferior de un elemento. Tambien se permiten valores negativos.

@@ -16,9 +16,9 @@ slug: Web/MathML/Reference/Element/mfenced
 - href
   - : Используется для установки гиперссылки на указанный URI.
 - mathbackground
-  - : Цвет фона. Вы можете использовать `#rgb`, `#rrggbb` и [имена цветов HTML](/ru/docs/Web/CSS/color_value#color_keywords).
+  - : Цвет фона. Вы можете использовать `#rgb`, `#rrggbb` и [имена цветов HTML](/ru/docs/Web/CSS/Reference/Values/color_value#color_keywords).
 - mathcolor
-  - : Цвет текста и также цвет линии дроби. Вы можете использовать `#rgb`, `#rrggbb` и [имена цветов HTML](/ru/docs/Web/CSS/color_value#color_keywords).
+  - : Цвет текста и также цвет линии дроби. Вы можете использовать `#rgb`, `#rrggbb` и [имена цветов HTML](/ru/docs/Web/CSS/Reference/Values/color_value#color_keywords).
 - open
   - : Строка для открывающего разделителя. Значением по умолчанию является `"("` и все пробелы обрезаются.
 - separators

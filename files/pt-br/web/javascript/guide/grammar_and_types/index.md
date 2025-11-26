@@ -218,7 +218,6 @@ function f() {
 O mais recente padrão ECMAScript define sete tipos de dados:
 
 - Seis tipos de dados são os chamados {{Glossary("Primitive", "primitivos")}}:
-
   - {{Glossary("Boolean")}}. `true` e `false`.
   - {{Glossary("null")}}. Uma palavra-chave que indica valor nulo. Devido JavaScript ser case-sensitive, `null` não é o mesmo que `Null`, `NULL`, ou ainda outra variação.
   - {{Glossary("undefined")}}. Uma propriedade superior cujo valor é indefinido.
@@ -298,7 +297,8 @@ O exemplo a seguir cria um array `coffees` com três elementos e um comprimento 
 var coffees = ["French Roast", "Colombian", "Kona"];
 ```
 
-> **Nota:** **Nota :** Um array literal é um tipo de inicializador de objetos. Veja [Usando inicializadores de Objetos](/pt-BR/docs/Web/JavaScript/Guide/Working_with_objects#using_object_initializers).
+> [!NOTE]
+> Um array literal é um tipo de inicializador de objetos. Veja [Usando inicializadores de Objetos](/pt-BR/docs/Web/JavaScript/Guide/Working_with_objects#using_object_initializers).
 
 Se um array é criado usando um literal no topo do script, JavaScript interpreta o array cada vez que avalia a expressão que contêm o array literal. Além disso, um literal usado em uma função é criado cada vez que a função é chamada.
 
@@ -316,7 +316,8 @@ Esse array tem dois elementos com valores e um elemento vazio (`fish[0]` é "Lio
 
 Se você incluir uma vírgula à direita no final da lista dos elementos, a vírgula é ignorada. No exemplo a seguir, o comprimento do array é três. Não há nenhum `myList[3]`. Todas as outras vírgulas na lista indicam um novo elemento.
 
-> **Nota:** **Nota :** Vírgulas à direita podem criar erros em algumas versões de navegadores web antigos, é recomendável removê-las.
+> [!NOTE]
+> Vírgulas à direita podem criar erros em algumas versões de navegadores web antigos, é recomendável removê-las.
 
 ```js-olint
 var myList = ["home", , "school", ];

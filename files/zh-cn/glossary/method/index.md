@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **方法**是一种作为{{glossary("object","对象")}}的{{glossary("property","属性")}}的{{glossary("function","函数")}}。方法有两种类型：*实例方法*是由对象实例执行的内置任务，而[_静态方法_](/zh-CN/docs/Glossary/Static_method)是直接在对象构造函数上调用的任务。
 
 > [!NOTE]
@@ -20,7 +18,6 @@ l10n:
 - [在 JavaScript 中定义方法](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions)（传统语法与新的简写语法的比较）
 - [JavaScript 内置方法列表](/zh-CN/docs/Web/JavaScript/Reference)
 - [MDN Web 文档术语表](/zh-CN/docs/Glossary)
-
   - {{Glossary("function", "函数")}}
   - {{Glossary("object", "对象")}}
   - {{Glossary("property", "属性")}}

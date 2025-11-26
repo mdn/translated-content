@@ -3,8 +3,6 @@ title: 304 Not Modified
 slug: Web/HTTP/Reference/Status/304
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`304 Not Modified`** 说明无需再次传输请求的内容，也就是说可以使用缓存的内容。这通常是在一些安全的方法（{{glossary("safe")}}），例如{{HTTPMethod("GET")}} 或{{HTTPMethod("HEAD")}} 或在请求中附带了头部信息： {{HTTPHeader("If-None-Match")}} 或{{HTTPHeader("If-Modified-Since")}}。
 
 该响应必须不包含主体，并且必须包含在等价 {{HTTPStatus("200")}} `OK` 响应中会带有的 {{HTTPHeader("Cache-Control")}}、{{HTTPHeader("Content-Location")}}、{{HTTPHeader("Date")}}、{{HTTPHeader("ETag")}}、{{HTTPHeader("Expires")}} 和 {{HTTPHeader("Vary")}} 标头。

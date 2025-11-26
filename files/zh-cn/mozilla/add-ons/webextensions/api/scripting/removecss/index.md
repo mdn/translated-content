@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 移除一个通过调用 {{WebExtAPIRef("scripting.insertCSS()")}} 注入的 CSS 样式表。
 
 > [!NOTE]
@@ -27,9 +25,7 @@ await browser.scripting.removeCSS(
 ### 参数
 
 - `details`
-
   - : 描述要移除的 CSS 以及从何处移除的对象。它包含以下属性：
-
     - `css` {{optional_inline}}
       - : `string`。包含要注入的 CSS 的字符串。必须指定 `css` 或 `files` 其中之一，并且必须与通过 {{WebExtAPIRef("scripting.insertCSS()")}} 插入的样式表匹配。
     - `files` {{optional_inline}}

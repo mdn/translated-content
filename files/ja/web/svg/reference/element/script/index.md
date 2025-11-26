@@ -53,7 +53,7 @@ l10n:
 
 - [`crossorigin`](/ja/docs/Web/HTML/Reference/Elements/script#crossorigin)
   - : この属性は、[CORS 設定](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) を HTML の {{HTMLElement('script')}} 要素のように定義します。
-    _値の型_: [**[ anonymous | use-credentials ]?**](/ja/docs/Web/CSS/string); _既定値_: `?`; _アニメーション_: **可**
+    _値の型_: [**[ anonymous | use-credentials ]?**](/ja/docs/Web/CSS/Reference/Values/string); _既定値_: `?`; _アニメーション_: **可**
 - {{SVGAttr("href")}}
   - : 読み込むスクリプトの {{Glossary("URL")}} です。
     _値の型_: **[\<URL>](/ja/docs/Web/SVG/Guides/Content_type#url)**; _既定値_: _none_; _アニメーション_: **不可**

@@ -12,18 +12,17 @@ Para obtener una lista de formatos compatibles, consulta [Formatos multimedia ad
 
 ## Contexto de uso
 
-| Contenido permitido            | [Contenido transparente](/es/docs/Web/HTML/Content_categories#transparent_content) , que contiene un atributo **src** o uno o más elementos {{ HTMLElement ("source") }}, seguidos por [contenido dinámico](/es/docs/Web/HTML/Content_categories#flow_content) o [el contenido estático](/es/docs/Web/HTML/Content_categories#phrasing_content) , sin elementos `<video>` ni {{ HTMLElement ("audio") }}. |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omisión de etiquetas           | Ninguna, deben estar presentes tanto las etiquetas de inicio como las de cierre                                                                                                                                                                                                                                                                                                                           |
-| Elementos primarios permitidos | Cualquier elemento que acepte [contenido dinámico](/es/docs/Web/HTML/Content_categories#flow_content) o cualquier otro elemento que acepte [contenido estático](/es/docs/Web/HTML/Content_categories#phrasing_content) .                                                                                                                                                                                  |
-| Documento normativo            | [HTML 5, sección 4.8.6](https://www.w3.org/TR/html5/video.html#video)                                                                                                                                                                                                                                                                                                                                     |
+| Contenido permitido            | [Contenido transparente](/es/docs/Web/HTML/Guides/Content_categories#transparent_content) , que contiene un atributo **src** o uno o más elementos {{ HTMLElement ("source") }}, seguidos por [contenido dinámico](/es/docs/Web/HTML/Guides/Content_categories#flow_content) o [el contenido estático](/es/docs/Web/HTML/Guides/Content_categories#phrasing_content) , sin elementos `<video>` ni {{ HTMLElement ("audio") }}. |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Omisión de etiquetas           | Ninguna, deben estar presentes tanto las etiquetas de inicio como las de cierre                                                                                                                                                                                                                                                                                                                                                |
+| Elementos primarios permitidos | Cualquier elemento que acepte [contenido dinámico](/es/docs/Web/HTML/Guides/Content_categories#flow_content) o cualquier otro elemento que acepte [contenido estático](/es/docs/Web/HTML/Guides/Content_categories#phrasing_content) .                                                                                                                                                                                         |
+| Documento normativo            | [HTML 5, sección 4.8.6](https://www.w3.org/TR/html5/video.html#video)                                                                                                                                                                                                                                                                                                                                                          |
 
 ## Atributos
 
 - `autoplay`
   - : Un atributo booleano; si se especifica, el video comenzará a reproducirse automáticamente tan pronto como sea posible, sin detenerse para terminar de cargar los datos.
 - `autobuffer` {{ Non-standard_inline() }} {{deprecated_inline}}
-
   - : Un atributo booleano; si se especifica, el video comenzará automáticamente a almacenarse en el búfer, incluso si no está listo para reproducirse de forma automática. Esto se debe utilizar para los casos en los que se considera probable que el video se reproduzca (por ejemplo, si el usuario accedió a esa página específica para reproducir el video, no si hay un video insertado junto con otros contenidos). El video se almacena en el búfer hasta que el caché de medios esté lleno.
 
     > [!NOTE]
@@ -38,9 +37,7 @@ Para obtener una lista de formatos compatibles, consulta [Formatos multimedia ad
 - `loop`
   - : Un atributo booleano; si se especifica, al alcanzar el final del video, buscaremos automáticamente hasta el principio.
 - `preload` [Error 548523 en Firefox](https://bugzil.la/548523)
-
   - : El objetivo de este atributo enumerado es proporcionar una sugerencia al navegador sobre qué cree el autor que llevará a la mejor experiencia para el usuario . Puede tener uno de los siguientes valores:
-
     - none: sugiere bien que el autor cree que el usuario no tendrá que consultar ese video, bien que el servidor desea minimizar su tráfico; es decir, esta sugerencia indica que no se debe almacenar en caché este video.
     - metadatos: sugiere que aunque el autor piensa que el usuario no tendrá que consultar este video, es razonable capturar los metadatos (p. ej. longitud).
     - auto: sugiere que el usuario necesita tener prioridad; es decir, esta sugerencia indica que, si es necesario, se puede descargar el video completo, incluso aunque el usuario no vaya a usarlo.
@@ -96,7 +93,7 @@ Su proveedor de alojamiento web puede proporcionar una interfaz fácil para los 
 ## Consulta también
 
 - [Formatos multimedia admitidos por los elementos de audio y video](/es/Formatos_multimedia_admitidos_por_los_elementos_de_video_y_audio)
-- [`audio`](/es/docs/Web/HTML/Element/audio)
+- [`audio`](/es/docs/Web/HTML/Reference/Elements/audio)
 - [Usar audio y vídeo en Firefox](/Es/Usar_audio_y_vídeo_en_Firefox)
 - [Manipular vídeo por medio de canvas](/en-US/Manipulating_video_using_canvas)
 - [`nsIDOMHTMLMediaElement`](/en-US/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement)

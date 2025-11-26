@@ -54,5 +54,5 @@ mainElem.addEventListener("scrollsnapchange", (event) => {
 
 - {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} イベント
 - {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} イベント
-- [CSS スクロールスナップモジュール](/ja/docs/Web/CSS/CSS_scroll_snap)
+- [CSS スクロールスナップモジュール](/ja/docs/Web/CSS/Guides/Scroll_snap)
 - [Scroll Snap Events](https://developer.chrome.com/blog/scroll-snap-events) (developer.chrome.com, 2024)

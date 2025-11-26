@@ -3,8 +3,6 @@ title: Forwarded
 slug: Web/HTTP/Reference/Headers/Forwarded
 ---
 
-{{HTTPSidebar}}
-
 **`Forwarded`** 首部中包含了代理服务器的客户端的信息，即由于代理服务器在请求路径中的介入而被修改或丢失的信息。
 
 其他可用来替换的，已经成为既成标准的首部是 {{HTTPHeader("X-Forwarded-For")}} 、 {{HTTPHeader("X-Forwarded-Host")}} 以及{{HTTPHeader("X-Forwarded-Proto")}} 。
@@ -24,9 +22,7 @@ Forwarded: by=<identifier>; for=<identifier>; host=<host>; proto=<http|https>
 ## 指令
 
 - \<identifier>
-
   - : 一个 identifier 显示了在使用代理的过程中被修改或者丢失的信息。它们可以是以下几种形式：
-
     - 一个 IP 地址（V4 或 V6，端口号可选，ipv6 地址需要包含在方括号里面，同时用引号括起来），
     - 语意不明的标识符（比如 "\_hidden" 或者 "\_secret"）,
     - 或者是 "unknown"，当当前信息实体不可知的时候（但是你依然想要说明请求被进行了转发）。

@@ -382,7 +382,8 @@ function greeting() {
 > [!NOTE]
 > 같은 스코프 규칙은 반복문 (예: `for() { ... }`)과 조건문(conditional blocks) (예: `if() { ... }`)에 적용되지 않습니다. — 이것들은 아주 비슷하게 생겼지만, 같은 것이 아닙니다! 헷갈리지 않도록 조심하세요.
 
-> **참고:** [ReferenceError: "x" is not defined](/ko/docs/Web/JavaScript/Reference/Errors/Not_defined) 오류는 여러분이 마주칠 가장 일반적인 것들 중 하나입니다. 만약 여러분이 이 오류를 얻었고 여러분이 문제의 변수를 정의했다는 것이 확실하다면, 그것이 어떤 스코프 안에 들어있는지 확인해 보세요.
+> [!NOTE]
+> [ReferenceError: "x" is not defined](/ko/docs/Web/JavaScript/Reference/Errors/Not_defined) 오류는 여러분이 마주칠 가장 일반적인 것들 중 하나입니다. 만약 여러분이 이 오류를 얻었고 여러분이 문제의 변수를 정의했다는 것이 확실하다면, 그것이 어떤 스코프 안에 들어있는지 확인해 보세요.
 
 ### 함수 내부의 함수
 
@@ -436,7 +437,7 @@ function subFunction3(value) {
 
 ## 실력을 평가해 보세요!
 
-이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 문서를 읽기 전에 이 문서의 내용을 잘 학습하고 이해하셨는지 확인하실 수 있습니다 — [실력을 평가해 보세요: 함수](/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Functions). 이 테스트들은 다음 두 문서에서 다뤄지는 기술들을 요구하므로, 여러분은 그 문서들을 이 테스트를 시도해 보기 전에 먼저 읽기를 원할지도 모릅니다.
+이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 문서를 읽기 전에 이 문서의 내용을 잘 학습하고 이해하셨는지 확인하실 수 있습니다 — [실력을 평가해 보세요: 함수](/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills/Functions). 이 테스트들은 다음 두 문서에서 다뤄지는 기술들을 요구하므로, 여러분은 그 문서들을 이 테스트를 시도해 보기 전에 먼저 읽기를 원할지도 모릅니다.
 
 ## 결론
 

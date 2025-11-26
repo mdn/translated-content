@@ -11,7 +11,7 @@ l10n:
 > 作为一个表现属性，`baseline-shift` 可以用作 CSS 属性。
 
 > [!NOTE]
-> 此属性将被弃用，建议作者改用 [`vertical-align`](/zh-CN/docs/Web/CSS/vertical-align)。
+> 此属性将被弃用，建议作者改用 [`vertical-align`](/zh-CN/docs/Web/CSS/Reference/Properties/vertical-align)。
 
 你可以将此属性与以下 SVG 元素一起使用：
 
@@ -45,7 +45,6 @@ l10n:
 - `super`
   - : dominant-baseline 移动到上标的默认位置。
 - `<length-percentage>`
-
   - : 长度值，将父文本内容元素的 dominant-baseline 升高（正值）或降低（负值）指定的长度。
 
     百分比值，将父文本内容元素的 dominant-baseline 升高（正值）或降低（负值）至 {{SVGAttr("line-height")}} 指定的百分比。

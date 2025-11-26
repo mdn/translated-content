@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 975650c2f6ea843d6f7cbc721aee5dbc1db907b2
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`208 Already Reported`** 响应状态码在 {{HTTPStatus("207", "207 Multi-Status")}} 响应中使用，以节省空间并避免冲突。此响应仅在基于 Web 的分布式编写与版本控制（{{Glossary("WebDAV")}}）中使用。
 
 如果多次使用不同的路径请求相同资源（例如集合的一部分），只有第一次请求会响应 `200` 状态码，而其他请求则会响应 `208` 状态码，所以不会产生冲突，响应时间也会更短。

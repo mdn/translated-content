@@ -2,10 +2,8 @@
 title: 400 Bad Request
 slug: Web/HTTP/Reference/Status/400
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`400 Bad Request`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、サーバーがクライアントエラーとみなした何らかの理由により、サーバーがリクエストを処理しなかったことを示します。
 `400` レスポンスの理由は、通常、リクエスト構文が不正であったり、リクエストメッセージのフレームが不正であったり、リクエストルーティングが不正であったりするものです。

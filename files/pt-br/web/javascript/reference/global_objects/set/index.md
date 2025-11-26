@@ -31,7 +31,6 @@ Como cada valor no Set deve ser único, a igualdade será checada e não é base
 ## Propriedades
 
 - `Set.length`
-
   - : O valor da propriedade comprimento é 0.
 
     Para contar o número de elementos de um `Set`, use {{jsxref("Set.prototype.size")}}.

@@ -125,9 +125,7 @@ td {
 ### Deprecated attributes
 
 - `align` {{deprecated_inline}}
-
   - : This enumerated attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
-
     - `left`, aligning the content to the left of the cell
     - `center`, centering the content in the cell
     - `right`, aligning the content to the right of the cell
@@ -141,7 +139,6 @@ td {
     > **Note:** The equivalent `text-align` property for the `align="char"` is not implemented in any browsers yet. See the [`text-align`'s browser compatibility section](/ko/docs/Web/CSS/text-align#Browser_compatibility) for the `&#x3C;string>` value.
 
 - `bgcolor` {{Deprecated_inline}}
-
   - : The background color of the table. It is a [6-digit hexadecimal RGB code](/ko/docs/Web/CSS/color_value#RGB_colors), prefixed by a '`#`'. One of the predefined [color kewords](/ko/docs/Web/CSS/color_value#Color_keywords) can also be used.
 
     As this attribute is deprecated, use the CSS {{cssxref("background-color")}} property instead.
@@ -151,9 +148,7 @@ td {
 - `charoff` {{deprecated_inline}}
   - : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the `char` attribute.
 - `valign` {{deprecated_inline}}
-
   - : This attribute specifies the vertical alignment of the text within each row of cells of the table header. Possible values for this attribute are:
-
     - `baseline`, which will put the text as close to the bottom of the cell as it is possible, but align it on the [baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29) of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as `bottom`.
     - `bottom`, which will put the text as close to the bottom of the cell as it is possible;
     - `middle`, which will center the text in the cell;
@@ -373,6 +368,5 @@ tbody > tr > th {
 ## 같이 보기
 
 - CSS properties and [pseudo-classes](/ko/docs/Web/CSS/Pseudo-classes) that may be specially useful to style the `<tbody>` element:
-
   - the {{ cssxref(":nth-child") }} pseudo-class to set the alignment on the cells of the column;
   - the {{ cssxref("text-align") }} property to align all cells content on the same character, like '.'.

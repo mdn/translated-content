@@ -3,7 +3,7 @@ title: clip
 slug: Web/CSS/clip
 ---
 
-{{CSSRef}}{{deprecated_header}}
+{{deprecated_header}}
 
 ## Resumen
 
@@ -30,7 +30,6 @@ clip: inherit
 ### Valores
 
 - `<shape>`
-
   - : Una forma rectangular del formulario
 
     ```

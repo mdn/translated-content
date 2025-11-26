@@ -58,7 +58,6 @@ label {
 
 - [Руководство по HTML-формам](/ru/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
-
   - {{HTMLElement("input/text")}}
   - {{HTMLElement("input/email")}}
 

@@ -139,14 +139,14 @@ Un mismo documento puede tener varios artículos; por ejemplo, en un blog en el 
 
 ## Atributos
 
-Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notas de uso
 
-- Cada `<article>` debe ser identificado, normalmente con un elemento de encabezado (elementos [`<h1>` - `<h6>`](/es/docs/Web/HTML/Element/Heading_Elements)) como hijo.
+- Cada `<article>` debe ser identificado, normalmente con un elemento de encabezado (elementos [`<h1>` - `<h6>`](/es/docs/Web/HTML/Reference/Elements/Heading_Elements)) como hijo.
 - Cuando un `<article>` está incorporado dentro de otro, representa un artículo cuyo contenido está relacionado con el artículo que lo anida. Por ejemplo, un comentario en una entrada de blog puede ser un `<article>` dentro de otro `<article>` que representa la propia entrada del blog.
-- La información del autor de un `<article>` se pueden proporcionar mediante el elemento [`<address>`](/es/docs/Web/HTML/Element/address), pero esto no se aplica a los artículos anidados dentro de otros.
-- La fecha y momento de publicación de un elemento `<article>` pueden ser declarados mediante el atributo [`datetime`](/es/docs/Web/HTML/Element/time#attr-datetime) de un elemento [`<time>`](/es/docs/Web/HTML/Element/time).
+- La información del autor de un `<article>` se pueden proporcionar mediante el elemento [`<address>`](/es/docs/Web/HTML/Reference/Elements/address), pero esto no se aplica a los artículos anidados dentro de otros.
+- La fecha y momento de publicación de un elemento `<article>` pueden ser declarados mediante el atributo [`datetime`](/es/docs/Web/HTML/Reference/Elements/time#attr-datetime) de un elemento [`<time>`](/es/docs/Web/HTML/Reference/Elements/time).
 
 ## Ejemplo
 
@@ -202,5 +202,5 @@ Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Global_att
 
 ## Véase también
 
-- Otros elementos relacionados : [`<body>`](/es/docs/Web/HTML/Element/body), [`<nav>`](/es/docs/Web/HTML/Element/nav), [`<section>`](/es/docs/Web/HTML/Element/section), [`<aside>`](/es/docs/Web/HTML/Element/aside), [`<h1>`](/es/docs/Web/HTML/Element/Heading_Elements), [`<h2>`](/es/docs/Web/HTML/Element/Heading_Elements), [`<h3>`](/es/docs/Web/HTML/Element/Heading_Elements), [`<h4>`](/es/docs/Web/HTML/Element/Heading_Elements), [`<h5>`](/es/docs/Web/HTML/Element/Heading_Elements), [`<h6>`](/es/docs/Web/HTML/Element/Heading_Elements), [`<hgroup>`](/es/docs/Web/HTML/Element/hgroup), [`<header>`](/es/docs/Web/HTML/Element/header), [`<footer>`](/es/docs/Web/HTML/Element/footer), [`<address>`](/es/docs/Web/HTML/Element/address)
-- [Uso de secciones y esquemas HTML](/es/docs/Web/HTML/Element/Heading_Elements)
+- Otros elementos relacionados : [`<body>`](/es/docs/Web/HTML/Reference/Elements/body), [`<nav>`](/es/docs/Web/HTML/Reference/Elements/nav), [`<section>`](/es/docs/Web/HTML/Reference/Elements/section), [`<aside>`](/es/docs/Web/HTML/Reference/Elements/aside), [`<h1>`](/es/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h2>`](/es/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h3>`](/es/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h4>`](/es/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h5>`](/es/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h6>`](/es/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<hgroup>`](/es/docs/Web/HTML/Reference/Elements/hgroup), [`<header>`](/es/docs/Web/HTML/Reference/Elements/header), [`<footer>`](/es/docs/Web/HTML/Reference/Elements/footer), [`<address>`](/es/docs/Web/HTML/Reference/Elements/address)
+- [Uso de secciones y esquemas HTML](/es/docs/Web/HTML/Reference/Elements/Heading_Elements)

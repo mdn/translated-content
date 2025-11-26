@@ -28,9 +28,7 @@ SVG — открытый стандарт, разработанный [World Wid
   - : SVG работает вместе с {{Glossary("HTML")}}, {{Glossary("CSS")}} и {{Glossary("JavaScript")}}.
     [Используйте SVG для улучшения обычной страницы HTML или веб-приложения.](/ru/docs/Web/SVG/Guides/SVG_in_HTML).
 - SVG в Mozilla
-
   - : Замечания и информация о том, как SVG реализован в Mozilla.
-
     - [Полнота реализации SVG в Firefox](/ru/docs/SVG_in_Firefox)
     - [SVG - учебное руководство](/ru/docs/Web/SVG/Tutorials/SVG_from_scratch)
     - [SVG в XHTML](/ru/docs/Web/SVG/Guides/SVG_in_HTML)

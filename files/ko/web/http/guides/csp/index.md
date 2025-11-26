@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 6d7b5cdaac05334b7e8b94e4cf46549d8ecc9bf7
 ---
 
-{{HTTPSidebar}}
-
 **콘텐츠 보안 정책** ({{Glossary("CSP")}})는 교차 사이트 스크립팅({{Glossary("Cross-site_scripting", "XSS")}})과 데이터 주입 공격을 비롯한 특정 유형의 공격을 탐지하고 완화하는 데 도움이 되는 추가 보안 계층입니다. 이러한 공격은 데이터 절도에서 사이트 훼손, 맬웨어 배포에 이르기까지 모든 것에 사용됩니다.
 
 CSP는 이전 버전과 완벽하게 호환되도록 설계되었습니다(이전 버전과의 호환성에서 일부 명시적으로 언급된 불일치가 있는 CSP 버전 2는 제외, 자세한 내용은 [여기](https://www.w3.org/TR/CSP2/) 섹션 1.1 참조).
@@ -38,7 +36,7 @@ CSP를 사용하면 서버 관리자가 브라우저에서 실행 가능한 스�
 
 ### 패킷 스니핑 공격 완화
 
-콘텐츠를 로드할 수 있는 도메인을 제한하는 것 외에도 서버는 사용할 수 있는 프로토콜을 지정할 수 있습니다. 예를 들어(이상적으로는 보안 관점에서) 서버는 모든 콘텐츠가 HTTPS를 사용하여 로드되도록 지정할 수 있습니다. 완전한 데이터 전송 보안 전략에서는 데이터 전송을 위해 HTTPS를 적용할 뿐만 아니라 모든 [쿠키에 `secure` 속성](/ko/docs/Web/HTTP/Cookies)을 표시하고 HTTP 페이지는 해당 HTTPS 페이지로 자동 리디렉션을 제공합니다. 사이트는 {{HTTPHeader("Strict-Transport-Security")}} HTTP 헤더를 사용하여 브라우저가 암호화된 채널을 통해서만 사이트에 연결하도록 할 수도 있습니다.
+콘텐츠를 로드할 수 있는 도메인을 제한하는 것 외에도 서버는 사용할 수 있는 프로토콜을 지정할 수 있습니다. 예를 들어(이상적으로는 보안 관점에서) 서버는 모든 콘텐츠가 HTTPS를 사용하여 로드되도록 지정할 수 있습니다. 완전한 데이터 전송 보안 전략에서는 데이터 전송을 위해 HTTPS를 적용할 뿐만 아니라 모든 [쿠키에 `secure` 속성](/ko/docs/Web/HTTP/Guides/Cookies)을 표시하고 HTTP 페이지는 해당 HTTPS 페이지로 자동 리디렉션을 제공합니다. 사이트는 {{HTTPHeader("Strict-Transport-Security")}} HTTP 헤더를 사용하여 브라우저가 암호화된 채널을 통해서만 사이트에 연결하도록 할 수도 있습니다.
 
 ## CSP 사용하기
 
@@ -146,35 +144,27 @@ Content-Security-Policy: default-src 'self'; report-to http://reportcollector.ex
 보고서 JSON 객체는 `application/csp-report` {{HTTPHeader("Content-Type")}}과 함께 전송되며 다음 데이터를 포함합니다.
 
 - `blocked-uri`
-
   - : 콘텐츠 보안 정책에 의해 로드가 차단된 리소스의 URI입니다. 차단된 URI가 `document-uri`와 다른 출처인 경우, 차단된 URI는 스키마, 호스트 그리고 포트만 포함되도록 자릅니다.
 
 - `disposition`
-
   - : {{HTTPHeader("Content-Security-Policy-Report-Only")}} 헤더 또는 `Content-Security-Policy` 헤더 사용 여부에 따라 `"enforce"` 또는 `"report"`로 나타납니다.
 
 - `document-uri`
-
   - : 위반이 발생한 문서의 URI입니다.
 
 - `effective-directive`
-
   - : 정책 시행으로 인해 위반이 발생한 지시문입니다. 실제로 적용된 지시문이 `style-src`인 경우에 Chrome이 `style-src-elem`/`style-src-attr`을 제공하는 것과 같이 일부 브라우저는 다른 값을 제공할 수 있습니다.
 
 - `original-policy`
-
   - : `Content-Security-Policy` HTTP 헤더에 지정된 원래 정책입니다.
 
 - `referrer` {{Deprecated_Inline}} {{Non-standard_Inline}}
-
   - : 위반이 발생한 문서의 리퍼러입니다.
 
 - `script-sample`
-
   - : 위반을 일으킨 인라인 스크립트, 이벤트 처리기 또는 스타일의 처음 40자입니다. `'report-sample'`이 포함된 `script-src*`와 `style-src*` 위반에만 적용 가능합니다.
 
 - `status-code`
-
   - : 전역 객체가 인스턴스화된 리소스의 HTTP 상태 코드입니다.
 
 - `violated-directive` {{Deprecated_Inline}}

@@ -30,11 +30,8 @@ li {
 Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 - `download`
-
   - : Leva o usuário a salvar a URL em vez de navegar até ela. Pode ser usado com ou sem um valor:
-
     - Sem um valor, o _browser_ irá sugerir um nome de arquivo/extensão, gerado a partir de diversas origens:
-
       - O cabeçalho HTTP {{HTTPHeader("Content-Disposition")}}
       - O segmento final no [path](/pt-BR/docs/Web/API/URL/pathname) (caminho) da URL
       - The {{Glossary("MIME_type", "media type")}} (from the ({{HTTPHeader("Content-Type")}} header, the start of a [`data:` URL](/pt-BR/docs/Web/URI/Schemes/data), or {{domxref("Blob.type")}} for a [`blob:` URL](/pt-BR/docs/Web/API/URL/createObjectURL_static))
@@ -46,9 +43,7 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
     > - Se `Content-Disposition` tiver um diferente `filename` (nome do arquivo) que `download`, o cabeçalho tem prioridade. (Se `Content-Disposition: inline`, Firefox prioriza o cabeçalho enquanto o Chrome escolhe `download`.)
 
 - `href`
-
   - : A URL para a qual o hiperlink aponta. Links não se restrigem a URLs baseadas no protocolo HTTP — eles podem utilizar qualquer tipo de URL suportado pelos browsers:
-
     - Sections of a page with fragment URLs(Seções de página com fragmentos URL)
     - Pieces of media files with media fragments (Pedaços de arquivos de mídia com fragmentos da própria mídia)
     - Números de telefone com `tel:` URLs
@@ -64,9 +59,7 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
 - `rel`
   - : The relationship of the linked URL as space-separated [link types](/pt-BR/docs/Web/HTML/Attributes/rel).
 - `target`
-
   - : Where to display the linked URL, as the name for a _browsing context_ (a tab, window, or `<iframe>`). The following keywords have special meanings for where to load the URL:
-
     - `_self`: No atual contexto de pesquisa. (Default)
     - `_blank`: Normalmente uma nova aba, porém usuários podem configurar seus navegadores para abrir em uma nova janela.
     - `_parent`: the parent browsing context of the current one. If no parent, behaves as `_self`.
@@ -83,7 +76,6 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
 ### Obsolete attributes
 
 - `charset`
-
   - : Hinted at the {{Glossary("character encoding")}} of the linked URL.
 
     > [!NOTE]
@@ -92,7 +84,6 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
 - `coords`
   - : Used with [the `shape` attribute](#shape). A comma-separated list of coordinates.
 - `name`
-
   - : Was required to define a possible target location in a page. In HTML 4.01, `id` and `name` could both be used on `<a>`, as long as they had identical values.
 
     > [!NOTE]
@@ -101,7 +92,6 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
 - `rev`
   - : Specified a reverse link; the opposite of [the `rel` attribute](#rel). Deprecated for being very confusing.
 - `shape`
-
   - : The shape of the hyperlink's region in an image map.
 
     > [!NOTE]

@@ -1225,8 +1225,8 @@
 /es/docs/Learn/Forms/How_to_structure_a_web_form	/es/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
 /es/docs/Learn/Forms/Sending_and_retrieving_form_data	/es/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
 /es/docs/Learn/Forms/Styling_web_forms	/es/docs/Learn_web_development/Extensions/Forms/Styling_web_forms
-/es/docs/Learn/Forms/Test_your_skills:_HTML5_controls	/es/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Input_types
-/es/docs/Learn/Forms/Test_your_skills:_Other_controls	/es/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls
+/es/docs/Learn/Forms/Test_your_skills:_HTML5_controls	/es/docs/conflicting/Learn_web_development/Extensions/Forms_d13688a1f23c09e79112b12fb2aa6a2861eb81ce95a6bae81023239b6caac771
+/es/docs/Learn/Forms/Test_your_skills:_Other_controls	/es/docs/conflicting/Learn_web_development/Extensions/Forms
 /es/docs/Learn/Forms/Your_first_form	/es/docs/Learn_web_development/Extensions/Forms/Your_first_form
 /es/docs/Learn/Front-end_web_developer	/es/docs/orphaned/Learn/Front-end_web_developer
 /es/docs/Learn/Getting_started_with_the_web	/es/docs/Learn_web_development/Getting_started/Your_first_website
@@ -1246,8 +1246,8 @@
 /es/docs/Learn/HTML	/es/docs/Learn_web_development/Core/Structuring_content
 /es/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form	/es/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
 /es/docs/Learn/HTML/Forms/My_first_HTML_form	/es/docs/Learn_web_development/Extensions/Forms/Your_first_form
-/es/docs/Learn/HTML/Forms/Prueba_tus_habilidades:_Otros_controles	/es/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls
-/es/docs/Learn/HTML/Forms/Prueba_tus_habilidades:_controles_HTML5	/es/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Input_types
+/es/docs/Learn/HTML/Forms/Prueba_tus_habilidades:_Otros_controles	/es/docs/conflicting/Learn_web_development/Extensions/Forms
+/es/docs/Learn/HTML/Forms/Prueba_tus_habilidades:_controles_HTML5	/es/docs/conflicting/Learn_web_development/Extensions/Forms_d13688a1f23c09e79112b12fb2aa6a2861eb81ce95a6bae81023239b6caac771
 /es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data	/es/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
 /es/docs/Learn/HTML/Forms/Styling_HTML_forms	/es/docs/Learn_web_development/Extensions/Forms/Styling_web_forms
 /es/docs/Learn/HTML/Forms/The_native_form_widgets	/es/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls
@@ -1288,7 +1288,7 @@
 /es/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web	/es/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
 /es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML	/es/docs/Learn_web_development/Core/Structuring_content/HTML_images
 /es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images	/es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Images
-/es/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page	/es/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page
+/es/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page	/es/docs/Learn_web_development/Core/Structuring_content/Splash_page
 /es/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies	/es/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies
 /es/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images	/es/docs/Web/HTML/Guides/Responsive_images
 /es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content	/es/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio
@@ -1401,11 +1401,15 @@
 /es/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Strings	/es/docs/Learn_web_development/Core/Scripting/Test_your_skills/Strings
 /es/docs/Learn_web_development/Core/Scripting/Test_your_skills:_variables	/es/docs/Learn_web_development/Core/Scripting/Test_your_skills/Variables
 /es/docs/Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images	/es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Images
+/es/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page	/es/docs/Learn_web_development/Core/Structuring_content/Splash_page
 /es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Advanced_HTML_text	/es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text
 /es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_HTML_text_basics	/es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics
 /es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Links	/es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Links
-/es/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_HTML5_controls	/es/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Input_types
-/es/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Other_controls	/es/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls
+/es/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box	/es/docs/conflicting/Learn_web_development/Core/Styling_basics_3fe7b053115cdfdcdb658e88312276a96d81de42552c60589901728cd9cfb3b3
+/es/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Input_types	/es/docs/conflicting/Learn_web_development/Extensions/Forms_d13688a1f23c09e79112b12fb2aa6a2861eb81ce95a6bae81023239b6caac771
+/es/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls	/es/docs/conflicting/Learn_web_development/Extensions/Forms
+/es/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_HTML5_controls	/es/docs/conflicting/Learn_web_development/Extensions/Forms_d13688a1f23c09e79112b12fb2aa6a2861eb81ce95a6bae81023239b6caac771
+/es/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Other_controls	/es/docs/conflicting/Learn_web_development/Extensions/Forms
 /es/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help	/es/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning
 /es/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages	/es/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
 /es/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes	/es/docs/Web/HTML/How_to/Use_data_attributes
@@ -1494,7 +1498,7 @@
 /es/docs/Referencia_CSS/Extensiones_Mozilla	/es/docs/Web/CSS/Mozilla_Extensions
 /es/docs/Referencia_CSS:Extensiones_Mozilla	/es/docs/Web/CSS/Mozilla_Extensions
 /es/docs/Referencia_DOM_de_Gecko	/es/docs/Web/API/Document_Object_Model
-/es/docs/Referencia_DOM_de_Gecko/Cómo_espacioenblanco	/es/docs/Web/API/Document_Object_Model/Whitespace
+/es/docs/Referencia_DOM_de_Gecko/Cómo_espacioenblanco	/es/docs/Web/CSS/CSS_text/Whitespace
 /es/docs/Referencia_DOM_de_Gecko/Ejemplos	/es/docs/Web/API/Document_Object_Model/Examples
 /es/docs/Referencia_DOM_de_Gecko/Introducción	/es/docs/Web/API/Document_Object_Model/Introduction
 /es/docs/Referencia_DOM_de_Gecko/Localizando_elementos_DOM_usando_selectores	/es/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
@@ -1839,6 +1843,7 @@
 /es/docs/Web/API/DocumentOrShadowRoot/styleSheets	/es/docs/Web/API/Document/styleSheets
 /es/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree	/es/docs/conflicting/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /es/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model/Example	/es/docs/conflicting/Web/API/Document_Object_Model/Using_the_Document_Object_Model_f02ee0854f5dae742561e13875ea3551
+/es/docs/Web/API/Document_Object_Model/Whitespace	/es/docs/Web/CSS/CSS_text/Whitespace
 /es/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core	/es/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /es/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Example	/es/docs/conflicting/Web/API/Document_Object_Model/Using_the_Document_Object_Model_f02ee0854f5dae742561e13875ea3551
 /es/docs/Web/API/Element/accessKey	/es/docs/Web/API/HTMLElement/accessKey
@@ -1961,6 +1966,7 @@
 /es/docs/Web/API/XMLDocument/async	/es/docs/Web/API/XMLDocument
 /es/docs/Web/API/XMLHttpRequest/FormData	/es/docs/Web/API/FormData
 /es/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest	/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
+/es/docs/Web/API/XMLHttpRequest/loadend_event	/es/docs/Web/API/XMLHttpRequestEventTarget/loadend_event
 /es/docs/Web/API/XMLHttpRequest/onreadystatechange	/es/docs/Web/API/XMLHttpRequest/readystatechange_event
 /es/docs/Web/API/atob	/es/docs/Web/API/Window/atob
 /es/docs/Web/API/btoa	/es/docs/Web/API/Window/btoa
@@ -2029,6 +2035,7 @@
 /es/docs/Web/CSS/-moz-box-pack	/es/docs/Web/CSS/box-pack
 /es/docs/Web/CSS/-moz-context-properties	/es/docs/orphaned/Web/CSS/-moz-context-properties
 /es/docs/Web/CSS/-moz-font-language-override	/es/docs/Web/CSS/font-language-override
+/es/docs/Web/CSS/-moz-image-region	/es/docs/conflicting/Web/CSS/clip
 /es/docs/Web/CSS/-moz-outline-radius	/es/docs/Web/CSS/outline
 /es/docs/Web/CSS/-moz-outline-radius-bottomleft	/es/docs/conflicting/Web/CSS/outline_114f9fa8b3569c03001b69bd5bf197b2
 /es/docs/Web/CSS/-moz-outline-radius-bottomright	/es/docs/conflicting/Web/CSS/outline_59c3f549fecef9ba8337c3b924fa8ae9
@@ -2190,7 +2197,6 @@
 /es/docs/Web/CSS/grid-gap	/es/docs/Web/CSS/gap
 /es/docs/Web/CSS/ime-mode	/es/docs/orphaned/Web/CSS/ime-mode
 /es/docs/Web/CSS/initial_value	/es/docs/Web/CSS/CSS_cascade/Value_processing
-/es/docs/Web/CSS/kerning	/en-US/docs/Web/CSS/font-kerning
 /es/docs/Web/CSS/min()	/es/docs/Web/CSS/min
 /es/docs/Web/CSS/minmax()	/es/docs/Web/CSS/minmax
 /es/docs/Web/CSS/none	/es/docs/Web/CSS/float
@@ -2235,6 +2241,7 @@
 /es/docs/Web/EXSLT/str/concat	/es/docs/Web/XML/EXSLT/Reference/str/concat
 /es/docs/Web/EXSLT/str/split	/es/docs/Web/XML/EXSLT/Reference/str/split
 /es/docs/Web/EXSLT/str/tokenize	/es/docs/Web/XML/EXSLT/Reference/str/tokenize
+/es/docs/Web/Events	/es/docs/Web/API/Document_Object_Model/Events
 /es/docs/Web/Events/animationend	/es/docs/Web/API/Element/animationend_event
 /es/docs/Web/Events/beforeunload	/es/docs/Web/API/Window/beforeunload_event
 /es/docs/Web/Events/blur	/es/docs/Web/API/Element/blur_event
@@ -2245,7 +2252,7 @@
 /es/docs/Web/Events/hashchange	/es/docs/Web/API/Window/hashchange_event
 /es/docs/Web/Events/keydown	/es/docs/Web/API/Element/keydown_event
 /es/docs/Web/Events/load	/es/docs/Web/API/Window/load_event
-/es/docs/Web/Events/loadend	/es/docs/Web/API/XMLHttpRequest/loadend_event
+/es/docs/Web/Events/loadend	/es/docs/Web/API/XMLHttpRequestEventTarget/loadend_event
 /es/docs/Web/Events/mousedown	/es/docs/Web/API/Element/mousedown_event
 /es/docs/Web/Events/offline	/es/docs/Web/API/Window/offline_event
 /es/docs/Web/Events/pointerlockchange	/es/docs/Web/API/Document/pointerlockchange_event
@@ -2873,7 +2880,8 @@
 /es/docs/Web/JavaScript/Memory_management	/es/docs/Web/JavaScript/Guide/Memory_management
 /es/docs/Web/JavaScript/Primeros_Pasos	/es/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
 /es/docs/Web/JavaScript/Reference/About	/es/docs/conflicting/Web/JavaScript/Reference
-/es/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/es/docs/Web/JavaScript/Reference/Classes/Private_properties
+/es/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/es/docs/Web/JavaScript/Reference/Classes/Private_elements
+/es/docs/Web/JavaScript/Reference/Classes/Private_properties	/es/docs/Web/JavaScript/Reference/Classes/Private_elements
 /es/docs/Web/JavaScript/Reference/Errors/Bad_octal	/es/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal
 /es/docs/Web/JavaScript/Reference/Errors/Deprecated_octal	/es/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal
 /es/docs/Web/JavaScript/Reference/Errors/Falta_puntoycoma_antes_de_declaracion	/es/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_token
@@ -2910,7 +2918,7 @@
 /es/docs/Web/JavaScript/Referencia/Características_Despreciadas	/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /es/docs/Web/JavaScript/Referencia/Classes	/es/docs/Web/JavaScript/Reference/Classes
 /es/docs/Web/JavaScript/Referencia/Classes/Class_fields	/es/docs/Web/JavaScript/Reference/Classes/Public_class_fields
-/es/docs/Web/JavaScript/Referencia/Classes/Private_class_fields	/es/docs/Web/JavaScript/Reference/Classes/Private_properties
+/es/docs/Web/JavaScript/Referencia/Classes/Private_class_fields	/es/docs/Web/JavaScript/Reference/Classes/Private_elements
 /es/docs/Web/JavaScript/Referencia/Classes/constructor	/es/docs/Web/JavaScript/Reference/Classes/constructor
 /es/docs/Web/JavaScript/Referencia/Classes/extends	/es/docs/Web/JavaScript/Reference/Classes/extends
 /es/docs/Web/JavaScript/Referencia/Classes/static	/es/docs/Web/JavaScript/Reference/Classes/static
@@ -3354,7 +3362,7 @@
 /es/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push	/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
 /es/docs/Web/Progressive_web_apps/Responsive/Media_types	/es/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction	/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames
-/es/docs/Web/Reference/Events	/es/docs/Web/Events
+/es/docs/Web/Reference/Events	/es/docs/Web/API/Document_Object_Model/Events
 /es/docs/Web/Reference/Events/animationend	/es/docs/Web/API/Element/animationend_event
 /es/docs/Web/Reference/Events/beforeunload	/es/docs/Web/API/Window/beforeunload_event
 /es/docs/Web/Reference/Events/blur	/es/docs/Web/API/Element/blur_event
@@ -3365,7 +3373,7 @@
 /es/docs/Web/Reference/Events/hashchange	/es/docs/Web/API/Window/hashchange_event
 /es/docs/Web/Reference/Events/keydown	/es/docs/Web/API/Element/keydown_event
 /es/docs/Web/Reference/Events/load	/es/docs/Web/API/Window/load_event
-/es/docs/Web/Reference/Events/loadend	/es/docs/Web/API/XMLHttpRequest/loadend_event
+/es/docs/Web/Reference/Events/loadend	/es/docs/Web/API/XMLHttpRequestEventTarget/loadend_event
 /es/docs/Web/Reference/Events/mousedown	/es/docs/Web/API/Element/mousedown_event
 /es/docs/Web/Reference/Events/pointerlockchange	/es/docs/Web/API/Document/pointerlockchange_event
 /es/docs/Web/Reference/Events/scroll	/es/docs/Web/API/Document/scroll_event

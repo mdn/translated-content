@@ -12,7 +12,6 @@ slug: Web/API/GeolocationPositionError
 _`PositionError` 接口没有继承任何属性。_
 
 - {{domxref("PositionError.code")}} {{readonlyInline}}
-
   - : 返回无符号的、简短的错误码。下列值是可能的：
 
     | 值  | 相关联的常量           | 描述                                                                                            |

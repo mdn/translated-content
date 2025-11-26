@@ -453,7 +453,7 @@ th {
 계속 진행하기 전에 이 글에서 마지막으로 소개할 기능이 하나 더 있습니다. HTML에는 데이터 열 전체에 대한 스타일 정보를 한 곳에서 정의하는 방법, 즉 **[`<col>`](/ko/docs/Web/HTML/Element/col)** 및 **[`<colgroup>`](/ko/docs/Web/HTML/Element/colgroup)** 요소가 있습니다. 열에 스타일을 지정하는 것이 다소 번거롭고 비효율적일 수 있기 때문에 이러한 기능이 존재합니다. 일반적으로 열의 "모든" `<td>` 또는 `<th>`에 스타일링 정보를 지정하거나 {{cssxref(":nth-child")}}와 같은 복잡한 선택기를 사용해야 합니다.
 
 > [!NOTE]
-> 이와 같은 열 스타일링은 [`border`](/ko/docs/Web/CSS/border), [`background`](/ko/docs/Web/CSS/background), [`width`](/ko/docs/Web/CSS/width) 및 [`visibility`](/ko/docs/Web/CSS/visibility)와 같은 [몇 가지 속성으로 제한됩니다](https://www.w3.org/TR/CSS22/tables.html#columns). 다른 속성을 설정하려면 열의 모든 `<td>` 또는 `<th>`에 스타일을 지정하거나 {{cssxref(":nth-child")}}와 같은 복잡한 선택기를 사용해야 합니다.
+> 이와 같은 열 스타일링은 [`border`](/ko/docs/Web/CSS/Reference/Properties/border), [`background`](/ko/docs/Web/CSS/Reference/Properties/background), [`width`](/ko/docs/Web/CSS/Reference/Properties/width) 및 [`visibility`](/ko/docs/Web/CSS/Reference/Properties/visibility)와 같은 [몇 가지 속성으로 제한됩니다](https://www.w3.org/TR/CSS22/tables.html#columns). 다른 속성을 설정하려면 열의 모든 `<td>` 또는 `<th>`에 스타일을 지정하거나 {{cssxref(":nth-child")}}와 같은 복잡한 선택기를 사용해야 합니다.
 
 다음의 간단한 예를 들어보겠습니다.
 

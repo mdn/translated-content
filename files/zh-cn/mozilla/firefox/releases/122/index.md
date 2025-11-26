@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 6f56b2dbc0229d381a5e63cf763a77883ee23906
 ---
 
-{{FirefoxSidebar}}
-
 本文提供了有关 Firefox 122 中影响开发者的变更信息。Firefox 122 于 [2024 年 1 月 23 日](https://whattrainisitnow.com/release/?version=122)发布。
 
 ## 为 Web 开发者带来的变化
@@ -19,9 +17,9 @@ l10n:
 ### CSS
 
 - CSS {{cssxref("offset-position")}} 属性现在默认可用。它定义了元素在路径上的初始位置。（[Firefox bug 1598152](https://bugzil.la/1598152)）
-- 用于定义 CSS {{cssxref("offset-path")}} 的多个方法——包括 [`<basic-shape>`](/zh-CN/docs/Web/CSS/offset-path#basic-shape)、[`<coord-box>`](/zh-CN/docs/Web/CSS/offset-path#coord-box) 和 [`url()`](/zh-CN/docs/Web/CSS/offset-path#url)——现在默认可用。（[Firefox bug 1598159](https://bugzil.la/1598159)）
+- 用于定义 CSS {{cssxref("offset-path")}} 的多个方法——包括 [`<basic-shape>`](/zh-CN/docs/Web/CSS/Reference/Properties/offset-path#basic-shape)、[`<coord-box>`](/zh-CN/docs/Web/CSS/Reference/Properties/offset-path#coord-box) 和 [`url()`](/zh-CN/docs/Web/CSS/Reference/Properties/offset-path#url)——现在默认可用。（[Firefox bug 1598159](https://bugzil.la/1598159)）
 - CSS {{cssxref("ray")}} 函数现在默认可用。你可以使用该函数来将 {{cssxref("offset-path")}} 定义为从 {{cssxref("offset-position")}} 开始并沿指定角度延伸的线段。（[Firefox bug 1598151](https://bugzil.la/1598151)）
-- {{CSSxref("clip-path")}} 和 {{CSSxref("offset-path")}} 属性现在支持 [`rect()`](/zh-CN/docs/Web/CSS/basic-shape/rect) 和 [`xywh()`](/zh-CN/docs/Web/CSS/basic-shape/xywh) 形状函数。这些 {{CSSXref("basic-shape")}} 值允许使用离元素边缘的距离定义的矩形（`rect()`）或坐标和尺寸（`xywh()`）来裁剪和偏移元素。（[Firefox bug 1868722](https://bugzil.la/1868722)）。
+- {{CSSxref("clip-path")}} 和 {{CSSxref("offset-path")}} 属性现在支持 [`rect()`](/zh-CN/docs/Web/CSS/Reference/Values/basic-shape/rect) 和 [`xywh()`](/zh-CN/docs/Web/CSS/Reference/Values/basic-shape/xywh) 形状函数。这些 {{CSSXref("basic-shape")}} 值允许使用离元素边缘的距离定义的矩形（`rect()`）或坐标和尺寸（`xywh()`）来裁剪和偏移元素。（[Firefox bug 1868722](https://bugzil.la/1868722)）。
 
 ### JavaScript
 
@@ -44,7 +42,7 @@ l10n:
 
 #### 移除
 
-- 移除对 CSS [`-moz-user-focus`](/zh-CN/docs/Web/CSS/-moz-user-focus) 属性的支持（[Firefox bug 1871745](https://bugzil.la/1871745) 和 [Firefox bug 1868552](https://bugzil.la/1868552)）。
+- 移除对 CSS [`-moz-user-focus`](/zh-CN/docs/Web/CSS/Reference/Properties/-moz-user-focus) 属性的支持（[Firefox bug 1871745](https://bugzil.la/1871745) 和 [Firefox bug 1868552](https://bugzil.la/1868552)）。
 
 ### WebDriver 一致性（WebDriver BiDi、Marionette）
 
@@ -73,7 +71,6 @@ l10n:
   {{htmlelement("template")}} 元素现在支持 `shadowrootmode` 属性，其可以被设置为 `open` 或 `close`，与 {{domxref("Element.attachShadow()", "attachShadow()")}} 方法的 `mode` 选项相同。这允许声明式地创建一棵影子 DOM 子树。（[Firefox bug 1712140](https://bugzil.la/1712140)）
 
 - **影子 DOM 的可克隆选项和属性。**
-
   - {{domxref("Element.attachShadow()")}} 方法现在支持 `clonable` 布尔选项，用于指定创建的影子根是否可以克隆：默认值为 `false`，而当设置为 `true` 时，使用 {{domxref("Node.cloneNode()")}} 或 {{domxref("Document.importNode()")}} 克隆的影子宿主将包括副本中的影子根。
   - {{domxref("ShadowRoot")}} 接口现在支持 {{domxref("ShadowRoot.clonable", "clonable")}} 只读属性。若影子根可克隆，则返回 `true`，否则返回 `false`。对于通过声明式影子 DOM 创建的影子根，它始终返回 `true`。
 
@@ -81,7 +78,7 @@ l10n:
 
 - **Popover API**：`dom.element.popover.enabled`。
 
-  现在支持通过 HTML 属性或 JavaScript API 来在页面内容上方显示弹出窗口，包括使用 CSS [`:popover-open`](/zh-CN/docs/Web/CSS/:popover-open) 伪类设置样式，以及对 [`::backdrop`](/zh-CN/docs/Web/CSS/::backdrop) 伪元素的扩展支持。有关更多详细信息，请参见 [Popover API](/zh-CN/docs/Web/API/Popover_API) 参考文档。（[Firefox bug 1823757](https://bugzil.la/1823757)）
+  现在支持通过 HTML 属性或 JavaScript API 来在页面内容上方显示弹出窗口，包括使用 CSS [`:popover-open`](/zh-CN/docs/Web/CSS/Reference/Selectors/:popover-open) 伪类设置样式，以及对 [`::backdrop`](/zh-CN/docs/Web/CSS/Reference/Selectors/::backdrop) 伪元素的扩展支持。有关更多详细信息，请参见 [Popover API](/zh-CN/docs/Web/API/Popover_API) 参考文档。（[Firefox bug 1823757](https://bugzil.la/1823757)）
 
 - **剪切板读写**：`dom.events.asyncClipboard.clipboardItem`、`dom.events.asyncClipboard.readText` 和 `dom.events.asyncClipboard.writeText`。
 

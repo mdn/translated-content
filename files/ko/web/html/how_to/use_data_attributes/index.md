@@ -8,7 +8,7 @@ l10n:
 
 {{LearnSidebar}}
 
-HTML은 특정 요소와 연관되어야 하지만, 정의된 의미를 갖지 않는 데이터에 대한 확장성을 고려하여 설계되었습니다. [`data-*` 속성](/ko/docs/Web/HTML/Global_attributes#dataset)은 표준이 아닌 속성이나 추가적인 DOM 속성과 같은 다른 조작을 하지 않고도, 의미론적 표준 HTML 요소에 추가 정보를 저장할 수 있게 도와줍니다.
+HTML은 특정 요소와 연관되어야 하지만, 정의된 의미를 갖지 않는 데이터에 대한 확장성을 고려하여 설계되었습니다. [`data-*` 속성](/ko/docs/Web/HTML/Reference/Global_attributes#dataset)은 표준이 아닌 속성이나 추가적인 DOM 속성과 같은 다른 조작을 하지 않고도, 의미론적 표준 HTML 요소에 추가 정보를 저장할 수 있게 도와줍니다.
 
 ## HTML 문법
 
@@ -44,7 +44,7 @@ article.dataset.parent; // "cars"
 
 ## CSS에서 접근하기
 
-데이터 속성은 평문 HTML 속성이기 때문에 [CSS](/ko/docs/Web/CSS)에서도 접근할 수 있다는 것에 주목하세요. 예를 들어, 부모 데이터를 article에서 보여주려면 [`attr()`](/ko/docs/Web/CSS/attr) 함수의 [생성된 content](/ko/docs/Web/CSS/content) 를 사용하면 됩니다.
+데이터 속성은 평문 HTML 속성이기 때문에 [CSS](/ko/docs/Web/CSS)에서도 접근할 수 있다는 것에 주목하세요. 예를 들어, 부모 데이터를 article에서 보여주려면 [`attr()`](/ko/docs/Web/CSS/attr) 함수의 [생성된 content](/ko/docs/Web/CSS/Reference/Properties/content) 를 사용하면 됩니다.
 
 ```css
 article::before {

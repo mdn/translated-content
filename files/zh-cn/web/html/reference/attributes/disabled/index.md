@@ -3,8 +3,6 @@ title: HTML 属性：disabled
 slug: Web/HTML/Reference/Attributes/disabled
 ---
 
-{{HTMLSidebar}}
-
 当布尔属性 **`disabled`** 存在时，元素将不可变、不能聚焦或与表单一同提交。用户将不能在表单控件本身或其子控件进行编辑或聚焦操作。
 
 {{InteractiveExample("HTML Demo: disabled", "tabbed-standard")}}
@@ -64,7 +62,8 @@ label {
 
 因为不能改变一个禁用字段的值，所以 [`required`](/zh-CN/docs/Web/HTML/Reference/Attributes/required) 对同时指定 `disabled` 属性的输入没有任何影响。此外，由于元素变得不可改变，大多数其他属性，如 [`pattern`](/zh-CN/docs/Web/HTML/Reference/Attributes/pattern)，在控件被启用之前没有任何作用。
 
-> **备注：** `required` 属性不可在含有 `disabled` 属性的 input 元素上使用。
+> [!NOTE]
+> `required` 属性不可在含有 `disabled` 属性的 input 元素上使用。
 
 ### 可用性
 

@@ -18,6 +18,5 @@ HTTP/2는 어떤 방식으로도 HTTP의 어플리케이션 의미를 수정하�
 - [MDN의 HTTP 설명](/ko/docs/Web/HTTP)
 - 위키피디아의 [HTTP/2](https://en.wikipedia.org/wiki/HTTP/2)
 - [용어 사전](/ko/docs/Glossary)
-
   - {{glossary("HTTP")}}
   - {{glossary("Latency")}}

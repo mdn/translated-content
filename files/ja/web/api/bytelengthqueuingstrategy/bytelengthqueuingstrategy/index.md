@@ -21,7 +21,6 @@ new ByteLengthQueuingStrategy(highWaterMark)
 以下のプロパティを持つオブジェクトです。
 
 - `highWaterMark`
-
   - : 背圧が適用される前に内部キューに格納することができるバイト数の合計です。
 
     [`CountQueuingStrategy()`](/ja/docs/Web/API/CountQueuingStrategy/CountQueuingStrategy) では `highWaterMark` 引数に単純な塊の数を指定しますが、 `ByteLengthQueuingStrategy()` では、 `highWaterMark` 引数はバイト数を指定します。具体的には、チャンクのストリームが指定された場合に、背圧が適用される前に内部キューに何バイト分のチャンクを格納することができるか（チャンクの数ではありません）を指定します。

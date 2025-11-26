@@ -3,8 +3,6 @@ title: Firefox 29 for developers
 slug: Mozilla/Firefox/Releases/29
 ---
 
-{{FirefoxSidebar}}
-
 Gecko 29 を搭載した Firefox 29 は、米国時間 2014 年 4 月 29 日にリリースされました。このページでは、開発者に影響する Firefox 29 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -25,7 +23,7 @@ _詳細および他の小規模な変更点については [Mozilla Hacks ブロ
 
 ### CSS
 
-- [CSS variables](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) を実装しました ([Firefox バグ 773296](https://bugzil.la/773296))。この件に関する Mozilla Hacks の記事は[こちら](https://hacks.mozilla.org/2013/12/css-variables-in-firefox-nightly/)です。これは Release ビルド以外でのみデフォルトで有効です (Release ビルドで使用したい場合は設定項目 `layout.css.variables.enabled` を `true` に変更してください)。
+- [CSS variables](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) を実装しました ([Firefox バグ 773296](https://bugzil.la/773296))。この件に関する Mozilla Hacks の記事は[こちら](https://hacks.mozilla.org/2013/12/css-variables-in-firefox-nightly/)です。これは Release ビルド以外でのみデフォルトで有効です (Release ビルドで使用したい場合は設定項目 `layout.css.variables.enabled` を `true` に変更してください)。
 - Flexbox で {{cssxref("visibility")}}`: collapse` をサポートしました ([Firefox バグ 783470](https://bugzil.la/783470))。
 - {{cssxref("box-sizing")}} プロパティの接頭辞を外しました ([Firefox バグ 243412](https://bugzil.la/243412))。
 - 何かがアニメーションするであろうというヒントを与える、{{cssxref("will-change")}} プロパティを追加しました。有効化するには設定項目 `layout.css.will-change.enabled` を `true` に変更しなければなりません。([Firefox バグ 940842](https://bugzil.la/940842))
@@ -45,15 +43,12 @@ _詳細および他の小規模な変更点については [Mozilla Hacks ブロ
 
 - ECMAScript 6 の String の新たなメソッドである {{jsxref("String.prototype.codePointAt()")}} および {{jsxref("String.prototype.fromCodePoint()")}} を実装しました ([Firefox バグ 918879](https://bugzil.la/918879))。
 - [ECMAScript Internationalization API (ECMA-402)](https://www.ecma-international.org/ecma-402/1.0/) を実装しました。また、デスクトップ版 Firefox ではデフォルトで有効にしました ([Firefox バグ 853301](https://bugzil.la/853301)):
-
   - {{jsxref("Intl")}} オブジェクトネームスペースの新たなオブジェクト:
-
     - {{jsxref("Collator", "Intl.Collator")}}
     - {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
     - {{jsxref("NumberFormat", "Intl.NumberFormat")}}
 
   - 以下の {{jsxref("String")}}、{{jsxref("Number")}}、{{jsxref("Date")}} のメソッドを、ECMA-402 により引数 `locales` および `options` を持つように更新しました:
-
     - {{jsxref("String.prototype.localeCompare()")}}
     - {{jsxref("Number.prototype.toLocaleString()")}}
     - {{jsxref("Date.prototype.toLocaleString()")}}

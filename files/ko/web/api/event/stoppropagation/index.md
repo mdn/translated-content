@@ -15,7 +15,7 @@ event.stopPropagation();
 
 ## 예제
 
-[이벤트 전파](/ko/docs/Web/API/Document_Object_Model/Examples#example_5_event_propagation)를 확인하세요.
+[이벤트 전파](/ko/docs/conflicting/Web/API/Document_Object_Model#example_5_event_propagation)를 확인하세요.
 
 ## 명세
 

@@ -5,11 +5,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem
 
 {{JSRef}}
 
-**`Intl.Locale.prototype.numberingSystem`** プロパティは、ロケールが使用する[命数法](https://en.wikipedia.org/wiki/Numeral_system)を返すアクセサープロパティです。
+**`Intl.Locale.prototype.numberingSystem`** プロパティは、ロケールが使用する[記数法](https://en.wikipedia.org/wiki/Numeral_system)を返すアクセサープロパティです。
 
 ## 解説
 
-命数法とは、数値を表現するための体系のことです。 `numberingSystem` プロパティは、世界中のさまざまな国、地域、文化で使用されているさまざまな命数法を表現する支援をします。ほとんどの国際化スキーマと同様に、 `Locale` オブジェクトで `numberingSystem` によって表現できる命数法は、 Unicode で標準化されています。標準的な Unicode の命数法の表を以下に示します。
+記数法とは、数値を表現するための体系のことです。 `numberingSystem` プロパティは、世界中のさまざまな国、地域、文化で使用されているさまざまな記数法を表現する支援をします。ほとんどの国際化スキーマと同様に、 `Locale` オブジェクトで `numberingSystem` によって表現できる記数法は、 Unicode で標準化されています。標準的な Unicode の記数法の表を以下に示します。
 
 | 値       | 説明                                               |
 | -------- | -------------------------------------------------- |
@@ -49,7 +49,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem
 | java     | Javanese digits                                    |
 | jpan     | 日本語の漢数字 — アルゴリズム                      |
 | jpanfin  | 日本語の金融用漢数字 — アルゴリズム                |
-| jpanyear | 最初の年を元年とした日本の暦用の命数法             |
+| jpanyear | 最初の年を元年とした日本の暦用の記数法             |
 | kali     | Kayah Li digits                                    |
 | khmr     | Khmer digits                                       |
 | knda     | Kannada digits                                     |
@@ -131,4 +131,4 @@ console.log(locale.numberingSystem); // "latn" と表示
 ## 関連情報
 
 - {{jsxref("Intl/Locale", "Intl.Locale")}}
-- [標準 Unicode 命数法の詳細](https://github.com/unicode-org/cldr/blob/main/common/supplemental/numberingSystems.xml)
+- [標準 Unicode 記数法の詳細](https://github.com/unicode-org/cldr/blob/main/common/supplemental/numberingSystems.xml)

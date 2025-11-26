@@ -21,7 +21,7 @@ Estos recursos son creados por empresas y desarrolladores web con visión de fut
 
 - [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content)
   - : Este módulo prepara el escenario, acostumbrándolo a conceptos y sintaxis importantes, analizando la aplicación de HTML al texto, cómo crear hipervínculos y cómo usar HTML para estructurar una página web.
-- [Referencia de Elementos HTML](/es/docs/Web/HTML/Element)
+- [Referencia de Elementos HTML](/es/docs/Web/HTML/Reference/Elements)
   - : Una referencia completa sobre elementos HTML y cómo los implementan los diferentes navegadores.
 - [Crear una página web sencilla con HTML](https://www.theblogstarter.com/html-for-beginners/)
   - : Una guía HTML para principiantes que incluye explicaciones de etiquetas comunes, incluidas las etiquetas HTML. También incluye una guía paso a paso para crear una página web básica con ejemplos de código.
@@ -39,7 +39,7 @@ Estos recursos son creados por empresas y desarrolladores web con visión de fut
 
 - [Formularios en HTML](/es/docs/Learn_web_development/Extensions/Forms)
   - : Los formularios son una parte muy importante de la Web: brindan gran parte de la funcionalidad que necesita para interactuar con sitios web, por ejemplo, registrarse e iniciar sesión, enviar comentarios, comprar productos y más. Este módulo lo ayuda a comenzar a crear las partes del lado del cliente de los formularios.
-- [Consejos para la creación de páginas HTML de carga rápida](/es/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages)
+- [Consejos para la creación de páginas HTML de carga rápida](/es/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages)
   - : Optimice las páginas web para proporcionar un sitio más receptivo para los visitantes y reducir la carga en su servidor web y conexión a Internet.
 
 ## Tutoriales CSS
@@ -51,21 +51,17 @@ Estos recursos son creados por empresas y desarrolladores web con visión de fut
 - [Primeros pasos en CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics)
   - : CSS (Cascading Style Sheets - en español Hojas de Estilo en Cascadas) es usado para darle estilo y diseño a las páginas Web — por ejemplo, para cambiar la fuente de letra, color, tamaño y el espaciado de tu contenido; dividir en múltiples columnas, o agregar animaciones y otras propiedades decorativas. Este modulo provee un inicio suave para tu ruta de aprendizaje hacia el dominio de CSS con su funcionamiento básico, como luce su sintaxis, y cómo puedes comenzar a utilizarlo y añadir estilo a HTML.
 - [Bloques de construcción CSS](/es/docs/Learn_web_development/Core/Styling_basics)
-
   - : Este módulo retoma donde [Primeros pasos en CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics) finalizó — ahora que estás familiarizado con el lenguaje y su sintaxis, y que tienes algo de experiencia en su uso, es hora de bucear un poco más profundo. Este módulo se centra en el estilo en cascada de css y en el concepto de herencia, también veremos todos los tipos de selectores, unidades, tamaños, estilos de fondo, bordes, debugging y mucho más.
 
     El objetivo aqui es proveerte de herramientas para que puedas escribir código CSS competentemente y ayudarte a entender lo escencial de la teoría antes de centrarnos en disciplinas más específicas como [text styling](/es/docs/Learn_web_development/Core/Text_styling) y [CSS layout](/es/docs/Learn_web_development/Core/CSS_layout).
 
 - [Selectores CSS](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
-
   - : Apunte a elementos HTML, incluso según el estado del elemento, con CSS.
 
 - [Especificidad](/es/docs/Web/CSS/CSS_cascade/Specificity)
-
   - : Comprender el algoritmo del navegador para determinar qué declaraciones CSS se aplican a un elemento cuando hay declaraciones compitiendo, con un [cuestionario de especificidad](https://estelle.github.io/CSS/selectors/exercises/specificity.html)
 
 - [Cascada y herencia](/es/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
-
   - : El objetivo de este artículo es desarrollar la comprensión de algunos de los conceptos fundamentales de CSS (cascada, especificidad y herencia) que controlan cómo se aplica el CSS al HTML y cómo se resuelven los conflictos.
 
 - [Estilo de texto](/es/docs/Learn_web_development/Core/Text_styling)

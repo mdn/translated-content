@@ -1,61 +1,116 @@
 ---
-title: Element.querySelector()
+title: "Element : méthode querySelector()"
+short-title: querySelector()
 slug: Web/API/Element/querySelector
+l10n:
+  sourceCommit: 277a8954951c900ef60a5175503976284c1d328d
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`querySelector()`** de l'interface [`Element`](/fr/docs/Web/API/Element) renvoie le premier élément descendant de l'élément sur lequel elle est invoquée qui correspond au groupe de sélecteurs spécifié.
+La méthode **`querySelector()`** de l'interface {{DOMxRef("Element")}} renvoie le premier élément descendant de l'élément sur lequel elle est invoquée qui correspond au groupe de sélecteurs défini.
 
 ## Syntaxe
 
-```js
-element = baseElement.querySelector(selectors);
+```js-nolint
+querySelector(selectors)
 ```
 
 ### Paramètres
 
 - `selectors`
-  - : est un groupe de [sélecteurs](/fr/docs/Learn/CSS/Building_blocks/Selectors) à faire correspondre aux éléments descendants du [`Element`](/fr/docs/Web/API/Element) `baseElement` ; cette syntaxe CSS doit être valide ou une exception SyntaxError se produit. Le premier élément trouvé correspondant à ce groupe de sélecteurs est renvoyé.
+  - : Une chaîne de caractères contenant un ou plusieurs sélecteurs à comparer. Cette chaîne doit être composée de sélecteurs CSS valides&nbsp;; sinon une exception `SyntaxError` est levée.
 
-### Valeur retournée
+    Notez que la spécification HTML n'exige pas que les valeurs d'attribut soient des identifiants CSS valides. Si la valeur d'un attribut [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class) ou [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) n'est pas un identifiant CSS valide, vous devez l'échapper avant de l'utiliser dans un sélecteur, soit en appelant {{DOMxRef("CSS.escape_static", "CSS.escape()")}} sur la valeur, soit en utilisant l'une des techniques décrites dans [Échapper les caractères](/fr/docs/Web/CSS/Reference/Values/ident#échapper_les_caractères). Voir [Échapper les valeurs d'attribut](#échapper_les_valeurs_d'attribut) pour un exemple.
 
-Le premier élément descendant de `baseElement` qui correspond au groupe de `selectors` « sélecteurs » spécifié. La hiérarchie entière des éléments est considérée lors de la mise en correspondance, y compris ceux qui sont en dehors de l'ensemble des éléments, y compris `baseElement` et ses descendants ; En d'autres termes, les sélecteurs sont d'abord appliqués au document entier, et non à l'élément de base, pour générer une liste initiale d'éléments potentiels. Les éléments résultants sont ensuite examinés pour voir s'ils sont des descendants de `baseElement`. La première correspondance de ces éléments restants est renvoyée par la méthode `querySelector()`.
+### Valeur de retour
+
+Le premier élément descendant de `baseElement` qui correspond au groupe de `selectors` «&nbsp;sélecteurs&nbsp;» défini. La hiérarchie entière des éléments est considérée lors de la mise en correspondance, y compris ceux qui sont en dehors de l'ensemble des éléments, y compris `baseElement` et ses descendants&nbsp;; En d'autres termes, les sélecteurs sont d'abord appliqués au document entier, et non à l'élément de base, pour générer une liste initiale d'éléments potentiels. Les éléments résultants sont ensuite examinés pour voir s'ils sont des descendants de `baseElement`. La première correspondance de ces éléments restants est renvoyée par la méthode `querySelector()`.
 
 Si aucune correspondance n'est trouvée, la valeur retournée est `null`.
 
 ### Exceptions
 
 - SyntaxError
-  - : Les `selectors` spécifiés sont invalides.
+  - : Signale que les `selectors` définis sont invalides.
 
 ## Exemple
 
-Dans ce premier exemple, est retourné le premier élément [`<style>`](/fr/docs/Web/HTML/Element/style) dans le corps du document HTML qui, soit n'a pas de type, soit a le type `text/css`:
+Voyons quelques exemples.
+
+### Trouver un élément spécifique avec des valeurs spécifiques d'un attribut
+
+Dans ce premier exemple, est retourné le premier élément {{HTMLElement("style")}} dans le corps du document HTML qui, soit n'a pas de type, soit a le type `text/css`&nbsp;:
 
 ```js
-var el = document.body.querySelector(
+const el = document.body.querySelector(
   "style[type='text/css'], style:not([type])",
 );
 ```
 
-### La hiérarchie entière compte
+### Obtenir les descendants directs avec la pseudo-classe `:scope`
 
-Cet exemple montre que la hiérarchie du document entier est prise en compte lors de l'application des `selectors`, de sorte que les niveaux en dehors du `baseElement` spécifié sont toujours pris en compte lors de la recherche des correspondances.
+Cet exemple utilise la pseudo-classe {{CSSxRef(":scope")}} pour récupérer les enfants directs de l'élément `parentElement`.
 
 #### HTML
 
 ```html
 <div>
-  <h5>Original content</h5>
+  <h6>Titre de la page</h6>
+  <div id="parent">
+    <span>L'amour est bienveillant.</span>
+    <span>
+      <span>L'amour est patient.</span>
+    </span>
+    <span>
+      <span>L'amour est altruiste.</span>
+    </span>
+  </div>
+</div>
+```
+
+#### CSS
+
+```css
+span {
+  display: block;
+  margin-bottom: 5px;
+}
+.red span {
+  background-color: red;
+  padding: 5px;
+}
+```
+
+#### JavaScript
+
+```js
+const parentElement = document.querySelector("#parent");
+let allChildren = parentElement.querySelectorAll(":scope > span");
+allChildren.forEach((item) => item.classList.add("red"));
+```
+
+#### Résultat
+
+{{EmbedLiveSample('Obtenir les descendants directs avec la pseudo-classe `:scope`-class', 600, 160)}}
+
+### La hiérarchie entière compte
+
+Cet exemple montre que la hiérarchie du document entier est prise en compte lors de l'application des `selectors`, de sorte que les niveaux en dehors du `baseElement` défini sont toujours pris en compte lors de la recherche des correspondances.
+
+#### HTML
+
+```html
+<div>
+  <h5>Contenu original</h5>
   <p>
-    inside paragraph
-    <span>inside span</span>
-    inside paragraph
+    à l'intérieur du paragraphe
+    <span>à l'intérieur de la balise span</span>
+    à l'intérieur du paragraphe
   </p>
 </div>
 <div>
-  <h5>Output</h5>
+  <h5>Résultat</h5>
   <div id="output"></div>
 </div>
 ```
@@ -63,20 +118,102 @@ Cet exemple montre que la hiérarchie du document entier est prise en compte lor
 #### JavaScript
 
 ```js
-var baseElement = document.querySelector("p");
-document.getElementById("output").innerHTML =
-  baseElement.querySelector("div span").innerHTML;
+const baseElement = document.querySelector("p");
+document.getElementById("output").textContent =
+  baseElement.querySelector("div span").textContent;
 ```
 
 #### Résultat
 
-Le résultat ressemble à ceci :
+Le résultat ressemble à ceci&nbsp;:
 
-{{EmbedLiveSample('Exemple', '', 200)}}
+{{EmbedLiveSample('La hiérarchie entière compte', '', 200)}}
+
+Remarquez que le sélecteur `"div span"` correspond toujours avec succès à l'élément {{HTMLElement("span")}}, même si les nœuds enfants de `baseElement` n'incluent pas l'élément {{HTMLElement("div")}} (il fait toujours partie du sélecteur défini).
+
+### Échapper les valeurs d'attribut
+
+Cet exemple montre que si un document HTML contient un [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) qui n'est pas un [identifiant CSS](/fr/docs/Web/CSS/Reference/Values/ident) valide, il faut échapper la valeur de l'attribut avant de l'utiliser dans `querySelector()`.
+
+#### HTML
+
+Dans le code suivant, un élément {{HTMLElement("div")}} a un `id` de `"this?element"`, qui n'est pas un identifiant CSS valide, car le caractère `"?"` n'est pas autorisé dans les identifiants CSS.
+
+Nous avons également trois boutons et un élément {{HTMLElement("pre")}} pour consigner les erreurs.
+
+```html
+<div id="container">
+  <div id="this?element"></div>
+</div>
+
+<button id="no-escape">Aucun échappement</button>
+<button id="css-escape">CSS.escape()</button>
+<button id="manual-escape">Échappement manuel</button>
+
+<pre id="log"></pre>
+```
+
+#### CSS
+
+```css
+div {
+  background-color: blue;
+  margin: 1rem 0;
+  height: 100px;
+  width: 200px;
+}
+```
+
+#### JavaScript
+
+Les trois boutons, lorsqu'on clique dessus, essaient tous de sélectionner le `<div>`, puis définissent sa couleur de fond sur une valeur aléatoire.
+
+- Le premier bouton utilise directement la valeur `this?element`.
+- Le deuxième bouton échappe la valeur en utilisant {{DOMxRef("CSS.escape_static", "CSS.escape()")}}.
+- Le troisième bouton échappe explicitement le caractère `?` à l'aide d'une barre oblique inverse. Notez qu'il faut aussi échapper la barre oblique inverse elle‑même, en utilisant une autre barre oblique inverse, par exemple&nbsp;: `\\?`.
+
+```js
+const container = document.querySelector("#container");
+const log = document.querySelector("#log");
+
+function random(number) {
+  return Math.floor(Math.random() * number);
+}
+
+function setBackgroundColor(id) {
+  log.textContent = "";
+
+  try {
+    const element = container.querySelector(`#${id}`);
+    const randomColor = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+    element.style.backgroundColor = randomColor;
+  } catch (e) {
+    log.textContent = e;
+  }
+}
+
+document.querySelector("#no-escape").addEventListener("click", () => {
+  setBackgroundColor("this?element");
+});
+
+document.querySelector("#css-escape").addEventListener("click", () => {
+  setBackgroundColor(CSS.escape("this?element"));
+});
+
+document.querySelector("#manual-escape").addEventListener("click", () => {
+  setBackgroundColor("this\\?element");
+});
+```
+
+#### Résultat
+
+Cliquer sur le premier bouton génère une erreur, tandis que les deuxième et troisième boutons fonctionnent correctement.
+
+{{EmbedLiveSample("Échapper les valeurs d'attribut", "", 200)}}
 
 ### Plus d'exemples
 
-Voir [`Document.querySelector()`](/fr/docs/Web/API/Document/querySelector) pour des exemples supplémentaires du format approprié pour les sélecteurs.
+Voir {{DOMxRef("Document.querySelector()")}} pour des exemples supplémentaires du format approprié pour les sélecteurs.
 
 ## Spécifications
 
@@ -88,12 +225,10 @@ Voir [`Document.querySelector()`](/fr/docs/Web/API/Document/querySelector) pour 
 
 ## Voir aussi
 
-- [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
-- [Sélecteurs d'attribut](/fr/docs/Web/CSS/Attribute_selectors) dans le guide CSS
-- [Sélecteurs d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors) dans la zone d'apprentissage MDN
-- [`element.querySelectorAll()`](/fr/docs/Web/API/Element/querySelectorAll)
-- [`document.querySelector()`](/fr/docs/Web/API/Document/querySelector) et [`Document.querySelectorAll()`](/fr/docs/Web/API/Document/querySelectorAll)
-- [`DocumentFragment.querySelector()`](/fr/docs/Web/API/DocumentFragment/querySelector) et [`DocumentFragment.querySelectorAll()`](/fr/docs/Web/API/DocumentFragment/querySelectorAll)
-- [`ParentNode.querySelector()`](/fr/docs/Web/API/Element/querySelector) et [`ParentNode.querySelectorAll()`](/fr/docs/Web/API/Element/querySelectorAll)
-- [Exemples de code pour querySelector](/fr/docs/Archive/Add-ons/Code_snippets/QuerySelector) Archive en anglais
-- Autres méthodes qui prennent des sélecteurs : [`element.closest()`](/fr/docs/Web/API/Element/closest) et [`element.matches()`](/fr/docs/Web/API/Element/matches).
+- [Sélection et parcours de l'arbre DOM](/fr/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
+- Le guide des [Sélecteurs d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) CSS
+- [Apprendre&nbsp;: Sélecteurs d'attribut CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
+- La méthode {{DOMxRef("Element.querySelectorAll()", "querySelectorAll()")}} de l'interface `Element`
+- Les méthodes {{DOMxRef("Document.querySelector()", "querySelector()")}} et {{DOMxRef("Document.querySelectorAll()", "querySelectorAll()")}} de l'interface `Document`
+- Les méthodes {{DOMxRef("DocumentFragment.querySelector()", "querySelector()")}} et {{DOMxRef("DocumentFragment.querySelectorAll()", "querySelectorAll()")}} de l'interface `DocumentFragment`
+- Autres méthodes qui prennent des sélecteurs&nbsp;: {{DOMxRef("element.closest()")}} et {{DOMxRef("element.matches()")}}

@@ -55,7 +55,8 @@ l10n:
 - 페이지 업데이트 속도가 훨씬 빨라지고 페이지가 새로 고쳐질 때까지 기다릴 필요가 없어 사이트가 더 빠르고 반응이 좋습니다.
 - 매 업데이트마다 더 적은 데이터가 다운로드되며, 이는 대역폭 낭비를 줄여줍니다. 이것은 광대역 연결의 데스크톱에서는 큰 문제가 아닐 수도 있지만, 모바일 장치와 유비쿼터스 빠른 인터넷 서비스가 없는 국가에서는 주요 문제입니다.
 
-> **참고:** 초기에 이 일반적인 기법은 XML 데이터를 요청하는 경향이 있었기 때문에 [Asynchronous](/ko/docs/Glossary/Asynchronous) JavaScript와 XML([Ajax](/ko/docs/Glossary/AJAX))로 알려졌습니다. 요즘에는 보통 그렇지 않지만(JSON을 요청하는 경우가 더 많을 것입니다), 결과는 여전히 똑같으며, 여전히 "Ajax"라는 용어가 이 기법을 설명하는 데 자주 사용됩니다.
+> [!NOTE]
+> 초기에 이 일반적인 기법은 XML 데이터를 요청하는 경향이 있었기 때문에 [Asynchronous](/ko/docs/Glossary/Asynchronous) JavaScript와 XML([Ajax](/ko/docs/Glossary/AJAX))로 알려졌습니다. 요즘에는 보통 그렇지 않지만(JSON을 요청하는 경우가 더 많을 것입니다), 결과는 여전히 똑같으며, 여전히 "Ajax"라는 용어가 이 기법을 설명하는 데 자주 사용됩니다.
 
 속도를 더 높이기 위해 일부 사이트는 사용자가 처음 요청할 때 에셋과 데이터를 사용자 컴퓨터에 저장하기도 하는데, 이는 페이지가 처음 로드될 때마다 새로운 복사본을 다운로드하는 대신 다음 방문 시 로컬 버전을 사용한다는 것을 의미합니다. 콘텐츠는 업데이트가 된 경우에만 서버에서 다시 로드됩니다.
 
@@ -184,7 +185,7 @@ fetch("products.json")
 
 이 함수 내부는 다음과 같습니다.
 
-- 서버가 오류(예: [404 Not Found](/ko/docs/Web/HTTP/Status/404))를 반환하지 않았는지 확인하십시오. 오류가 발생하면 예외를 발생시킵니다.
+- 서버가 오류(예: [404 Not Found](/ko/docs/Web/HTTP/Reference/Status/404))를 반환하지 않았는지 확인하십시오. 오류가 발생하면 예외를 발생시킵니다.
 - 응답 시 {{domxref("Response.json","json()")}}를 호출합니다. 그러면 [JSON 객체](/ko/docs/Learn_web_development/Core/Scripting/JSON)로 데이터를 가져옵니다. 우리는 `response.json()`가 반환한 promise를 반환합니다.
 
 다음으로 반환된 promise의 `then()` 메서드에 함수를 전달합니다. 이 함수는 응답 데이터를 JSON으로 포함하는 객체를 받고, 이를 `initialize()` 함수에 전달합니다. 사용자 인터페이스에 모든 제품을 표시하는 프로세스를 시작하는 함수입니다.
@@ -262,7 +263,7 @@ Fetch API가 이보다 더 개선된 것이라고 생각하기를 바랍니다. 
 - [Fetch 사용하기](/ko/docs/Web/API/Fetch_API/Using_Fetch)
 - [Promises](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [JSON data 사용하기](/ko/docs/Learn_web_development/Core/Scripting/JSON)
-- [HTTP 개요](/ko/docs/Web/HTTP/Overview)
+- [HTTP 개요](/ko/docs/Web/HTTP/Guides/Overview)
 - [Server-side 웹 사이트 프로그래밍](/ko/docs/Learn_web_development/Extensions/Server-side)
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}

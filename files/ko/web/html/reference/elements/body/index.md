@@ -75,7 +75,7 @@ original_slug: Web/HTML/Element/body
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
 - `alink` {{deprecated_inline}}
   - : 선택한 하이퍼텍스트 링크의 색. _이 방법은 적합하지 않습니다. CSS {{cssxref("color")}} 속성과 {{cssxref(":active")}}의 조합을 대신 사용하세요._

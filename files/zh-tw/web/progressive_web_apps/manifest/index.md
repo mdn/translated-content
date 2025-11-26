@@ -1,11 +1,10 @@
 ---
 title: Web 應用程式清單
+short-title: Web 應用程式清單
 slug: Web/Progressive_web_apps/Manifest
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 204025469739413f67f22c6c1ede6ed904b7eac5
 ---
-
-{{QuickLinksWithSubpages("/zh-TW/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 **Web 應用程式清單**，定義於 [Web 應用程式清單](https://w3c.github.io/manifest/)規範中，是一個提供有關 Web 應用程式的訊息的 {{Glossary("JSON")}} 文字檔案。
 
@@ -15,13 +14,14 @@ Web 應用程式清單包含一個單一的 JSON 物件，其中頂層鍵稱為*
 
 ## 成員
 
-本節列出了可能出現在清單中的成員。
+本節列出了記錄在 MDN 上的[清單成員的參考頁面](/zh-TW/docs/Web/Progressive_web_apps/Manifest/Reference)
 
 規範中所有成員都是可選的，但某些應用程式需要某些成員存在。例如，[PWA 必須提供某些清單成員](/zh-TW/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#必須的清單成員)。
 
 {{ListSubpages("/zh-TW/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
-> **備註：** `dir`、`lang` 和 `iarc_rating_id` 成員尚未實作。
+> [!NOTE]
+> `dir`、`lang` 和 `iarc_rating_id` 成員尚未實作。
 
 ## 範例清單
 

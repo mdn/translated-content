@@ -55,7 +55,6 @@ slug: Web/JavaScript/Reference/Global_Objects/Set
 - {{jsxref("Set.prototype.keys()")}}
   - : Аналог {{jsxref("Set.prototype.values()")}}.
 - {{jsxref("Set.prototype.entries()")}}
-
   - : Возвращает новый объект итератора, который содержит **массив `[value, value]`** для каждого элемента в объекте `Set` в порядке вставки.
 
   Этот метод похож на соответствующий метод объекта {{jsxref("Map")}}, но в случае `Set` ключ (_key_) каждой записи совпадает с её значением (_value_).

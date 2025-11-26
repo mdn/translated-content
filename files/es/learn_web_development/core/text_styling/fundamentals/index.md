@@ -291,19 +291,16 @@ p {
 El CSS proporciona cuatro propiedades comunes para alterar el efecto visual / énfasis del texto:
 
 - {{cssxref("font-style")}}: Se usa para activar y desactivar el texto en cursiva. Los valores posibles son los siguientes (raramente usarás esto, a menos que desees desactivar algún estilo de cursiva por alguna razón):
-
   - `normal`: Pone el texto en tipo de letra normal (desactiva la cursiva).
   - `italic`: Pone el texto en la versión cursiva del tipo de letra, si está disponible; si no está disponible, simulará cursiva con el modo `oblique` en su lugar.
   - `oblique`: Pone el texto en una versión de tipo de letra cursiva simulada, que se genera inclinando la versión normal.
 
 - {{cssxref("font-weight")}}: Establece el grueso o peso del texto. Puede haber muchos valores si dispones de muchas variantes de fuente (como _-light_, _-normal_, _-bold_, _-extrabold_, _-black_, etc.), pero en realidad raramente usarás alguna de ellas, más allá de los estilos `normal` y `bold`:
-
   - `normal`, `bold`: Grueso del tipo de letra normal y **negrita**
   - `lighter`, `bolder`: Establece el grueso de la negrita del elemento activo un nivel por debajo o por encima del grueso de su elemento padre.
   - `100`–`900`: Valores numéricos de negrita, que proporcionan un control más detallado que las palabras clave anteriores, si es necesario.
 
 - {{cssxref("text-transform")}}: Te permite practicar algunas transformaciones sobre tu tipo de letra. Los valores incluyen:
-
   - `none`: Impide cualquier transformación.
   - `uppercase`: Transforma TODO EL TEXTO A MAYÚSCULAS.
   - `lowercase`: Transforma todo el texto a minúsculas.
@@ -311,7 +308,6 @@ El CSS proporciona cuatro propiedades comunes para alterar el efecto visual / é
   - `full-width`: Transforma todos los caracteres para cada uno quede dentro de una caja de ancho fijo, similar a una fuente monoespaciada, lo que permite, por ejemplo, la alineación de caracteres latinos junto con caracteres asiáticos (chino, japonés, coreano.)
 
 - {{cssxref("text-decoration")}}: Activa/desactiva decoraciones en los tipos de letra (usarás esto principalmente para desactivar el subrayado por defecto de los enlaces al aplicarles estilo). Los valores disponibles son:
-
   - `none`: Desactiva cualquier decoración de texto que presente.
   - `underline`: Subraya el texto.
   - `overline`: Proporciona al texto una línea superpuesta.

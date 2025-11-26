@@ -38,19 +38,15 @@ try {
 ```
 
 - `try_statements`
-
   - : Las sentencias que serán ejecutadas.
 
 - `catch_statements_1`, `catch_statements_2`
-
   - : Sentencias que se ejecutan si una excepción es lanzada en el bloque `try`.
 
 - `exception_var_1`, `exception_var_2`
-
   - : Identificador que contiene un objeto de excepcion asociado a la cláusula `catch`.
 
 - `condition_1`
-
   - : Una expresión condicional.
 
 - `finally_statements`

@@ -282,8 +282,9 @@ slug: Web/HTML/Guides/Constraint_validation
 
 Вызов метода `checkValidity()` называется _статической_ валидацией ограничений, а вызов метода `reportValidity()` или отправка формы называется _интерактивной_ валидацией ограничений.
 
-> **Примечание:**- Если элементу {{ HTMLElement("form") }} задан атрибут [`novalidate`](/ru/docs/Web/HTML/Reference/Elements/form#novalidate), интерактивная валидация ограничений не произойдёт.
+> [!NOTE]
 >
+> - Если элементу {{ HTMLElement("form") }} задан атрибут [`novalidate`](/ru/docs/Web/HTML/Reference/Elements/form#novalidate), интерактивная валидация ограничений не произойдёт.
 > - Вызов метода `submit()` интерфейса [`HTMLFormElement`](/ru/docs/Web/API/HTMLFormElement) не запускает валидацию ограничений. Другими словами, этот метод отправляет данные формы на сервер, даже если ограничения нарушены. Вместо него вызовите метод `click()` кнопки отправки формы.
 
 ## Сложные ограничения с помощью Constraint Validation API
@@ -428,7 +429,7 @@ window.onload = function () {
 
 #### CSS-псевдоклассы :required и :optional
 
-[Псевдоклассы](/ru/docs/Web/CSS/Pseudo-classes) {{cssxref(':required')}} и {{cssxref(':optional')}} позволяют писать селекторы, соответствующие элементам формы, которые имеют или не имеют атрибут [`required`](/ru/docs/Web/HTML/Reference/Global_attributes#required)
+[Псевдоклассы](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-classes) {{cssxref(':required')}} и {{cssxref(':optional')}} позволяют писать селекторы, соответствующие элементам формы, которые имеют или не имеют атрибут [`required`](/ru/docs/Web/HTML/Reference/Global_attributes#required)
 
 #### CSS-псевдокласс :placeholder-shown
 
@@ -436,14 +437,13 @@ window.onload = function () {
 
 #### CSS-псевдоклассы :valid и :invalid
 
-[Псевдоклассы](/ru/docs/Web/CSS/Pseudo-classes) {{cssxref(':valid')}} и {{cssxref(':invalid')}} используются для представления элементов \<input>, содержимое которых является валидным или не валидным соответственно. Эти классы позволяют пользователю оформлять валидные или не валидные элементы формы, чтобы облегчить определение элементов, которые имеют корректный или некорректный формат.
+[Псевдоклассы](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-classes) {{cssxref(':valid')}} и {{cssxref(':invalid')}} используются для представления элементов \<input>, содержимое которых является валидным или не валидным соответственно. Эти классы позволяют пользователю оформлять валидные или не валидные элементы формы, чтобы облегчить определение элементов, которые имеют корректный или некорректный формат.
 
 ### Управление текстом нарушения ограничений
 
 Следующее может помочь с управлением текстом нарушения ограничений:
 
 - Метод [element.setCustomValidity(message)](</ru/docs/Web/API/Constraint_validation#element.setcustomvalidity(message)>) для элементов:
-
   - {{HTMLElement("fieldset")}}. Примечание: Добавление кастомного сообщения валидации на элемент fieldset не предотвращает отправку формы в большинстве браузеров.
   - {{HTMLElement("input")}}
   - {{HTMLElement("output")}}

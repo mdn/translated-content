@@ -31,17 +31,13 @@ measure(measureName, measureOptions, endMark)
 ### 引数
 
 - `measureName`
-
   - : 文字列で、メジャーの名前を表します。
 
 - `measureOptions` {{optional_inline}}
-
   - : メジャーのすべてのオプションを含むオブジェクトです。
-
     - `detail` {{optional_inline}}
       - : マークに含める任意のメタデータです。既定値は `null` です。[構造化クローン可能](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)でなければなりません。
     - `start` {{optional_inline}}
-
       - : 開始時刻として使用される {{domxref("DOMHighResTimeStamp")}} のタイムスタンプ、または開始マークに使用される文字列です。
 
         これが {{domxref("PerformanceMark")}} に名前を付ける文字列である場合、 `startMark` と同じ方法で定義されます。
@@ -49,7 +45,6 @@ measure(measureName, measureOptions, endMark)
     - `duration` {{optional_inline}}
       - : 開始と終了のマーク時刻間の時間（ミリ秒単位）。省略した場合は既定値が {{domxref("performance.now()")}} となり、コンテキストが作成されてから経過した時刻となります。指定された場合は `start` と `end` のどちらかを指定する必要がありますが、両方を指定することはできません。
     - `end` {{optional_inline}}
-
       - : 終了時刻として使用される {{domxref("DOMHighResTimeStamp")}} のタイムスタンプ、または終了時刻の {{domxref("PerformanceMark")}} に名前を付ける文字列です。
         これが {{domxref("PerformanceMark")}} に名前を付ける文字列である場合、 `endMark` と同じように定義します。
 
@@ -68,7 +63,6 @@ measure(measureName, measureOptions, endMark)
 - {{domxref("PerformanceEntry.entryType","entryType")}} - "`measure`" が設定されます。
 - {{domxref("PerformanceEntry.name","name")}} - "`name`" 引数が設定されます。
 - {{domxref("PerformanceEntry.startTime","startTime")}} - 以下のように設定されます。
-
   - `measureOptions.start` で指定された場合は {{domxref("DOMHighResTimeStamp","timestamp")}}。
   - `measureOptions.start` または `startMark` で指定された場合は、開始マークの{{domxref("DOMHighResTimeStamp","タイムスタンプ", "", 1)}}。
   - `measureOptions.end` と `measureOptions.duration` から計算されたタイムスタンプ（`measureOptions.start` が指定されていない場合）。
@@ -77,7 +71,6 @@ measure(measureName, measureOptions, endMark)
 - {{domxref("PerformanceEntry.duration","duration")}} - {{domxref("DOMHighResTimeStamp")}} で、終了タイムスタンプから `startTime` を引いて計算されたメジャーの時間を設定します。
 
   終了タイムスタンプは以下のいずれかになります。
-
   - `measureOptions.end` で指定された場合は {{domxref("DOMHighResTimeStamp","timestamp")}}。
   - `measureOptions.end` または `endMark` で指定された場合は、終了マークの{{domxref("DOMHighResTimeStamp","タイムスタンプ", "", 1)}}。
   - `measureOptions.start` と `measureOptions.duration` から計算されたタイムスタンプ（`measureOptions.end` が指定されていない場合）。
@@ -88,24 +81,19 @@ measure(measureName, measureOptions, endMark)
 ## 例外
 
 - {{jsxref("TypeError")}}
-
   - : start, end, duration のいずれかが曖昧になる場合に発生します。
-
     - `endMark` と `measureOptions` の両方が指定された。
     - `measureOptions` が指定されたが、 `start` および `end` メンバーが指定されなかった。
     - `measureOptions` が `start`, `end`, `duration` のメンバーすべてある状態（そして不整合な状態）で指定された。
 
 - `SyntaxError` {{domxref("DOMException")}}
-
   - : その名前のマークが存在しない場合に発生します。
-
     - `endMark` または `measureOptions.end` のどちらかを使用してエンドマークが指定されたが、一致する名前のパフォーマンスバッファーに {{domxref('PerformanceMark')}} がない。
     - `endMark` または `measureOptions.end` のどちらかを使用してエンドマークが指定されたが、 {{domxref("PerformanceTiming")}} インターフェイスの読み取り専用属性に変換することができない。
     - 開始マークが `startMark` または `measureOptions.start` のどちらかで指定されているが、一致する名前のパフォーマンスバッファーに {{domxref('PerformanceMark')}} がない。
     - 開始マークが `startMark` または `measureOptions.start` のどちらかで指定されているが、 {{domxref("PerformanceTiming")}} インターフェイスの読み取り専用属性に変換することができない。
 
 - `DataCloneError` {{domxref("DOMException")}}
-
   - : `measureOptions.detail` が `null` 以外の値であり、 HTML の "StructuredSerialize" アルゴリズムでシリアライズできない場合です。
 
 - {{jsxref("RangeError")}}

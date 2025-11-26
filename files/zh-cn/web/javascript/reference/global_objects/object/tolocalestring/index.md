@@ -3,8 +3,6 @@ title: Object.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
 ---
 
-{{JSRef}}
-
 **`toLocaleString()`** 方法返回一个表示对象的字符串。该方法旨在由派生对象重写，以达到其特定于语言环境的目的。
 
 {{InteractiveExample("JavaScript Demo: Object.prototype.tolocalestring()")}}
