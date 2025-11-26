@@ -1,11 +1,12 @@
 ---
-title: DataTransfer.addElement()
+title: "DataTransfer: addElement() メソッド"
+short-title: addElement()
 slug: Web/API/DataTransfer/addElement
+l10n:
+  sourceCommit: f336c5b6795a562c64fe859aa9ee2becf223ad8a
 ---
 
-{{APIRef("HTML Drag and Drop API")}}
-
-{{Non-standard_header()}}
+{{APIRef("HTML Drag and Drop API")}}{{SeeCompatTable}}{{Non-standard_header}}
 
 **`DataTransfer.addElement()`** メソッドは、与えられた要素にドラッグソースを設定します。この要素は {{domxref("HTMLElement/drag_event", "drag")}} と {{domxref("HTMLElement/dragend_event", "dragend")}} イベントが発生する要素となり、既定のターゲット（ドラッグされたノード）とはなりません。
 
@@ -14,8 +15,8 @@ slug: Web/API/DataTransfer/addElement
 
 ## 構文
 
-```js
-addElement(element);
+```js-nolint
+addElement(element)
 ```
 
 ### 引数
@@ -32,7 +33,7 @@ addElement(element);
 この例では、`addElement()` メソッドの使用例を示します。
 
 ```js
-function change_drag_node(event, node) {
+function changeDragNode(event, node) {
   const dt = event.dataTransfer;
   dt.addElement(node);
 }
@@ -50,6 +51,4 @@ function change_drag_node(event, node) {
 
 - [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
 - [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
-- [複数の項目のドラッグ＆ドロップ](/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
-- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)
+- [ドラッグデータストアでの作業](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)

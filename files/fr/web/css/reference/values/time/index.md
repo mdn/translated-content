@@ -1,46 +1,47 @@
 ---
 title: <time>
 slug: Web/CSS/Reference/Values/time
-original_slug: Web/CSS/time
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}
-
-Le type de donnée **`<time>`** indique des durées exprimées en secondes ou en millisecondes. Il est par exemple utilisé dans les propriétés {{cssxref("animation")}}, {{cssxref("transition")}}.
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<time>`** représente une valeur temporelle exprimée en secondes ou en millisecondes. Il est utilisé dans {{CSSxRef("animation")}}, {{CSSxRef("transition")}} et les propriétés associées.
 
 ## Syntaxe
 
-Une valeur temporelle consiste en une valeur de type {{cssxref("&lt;number&gt;")}} immédiatement suivie d'une unité. Comme avec les autres unités CSS, il n'y a pas d'espace entre l'unité et le nombre. La valeur peut éventuellement être précédée d'un signe `+` ou `-`.
+Le type de donnée `<time>` consiste en un nombre ({{CSSxRef("&lt;number&gt;")}}) suivi de l'une des unités listées ci-dessous. Il peut éventuellement être précédé d'un seul signe `+` ou `-`. Comme pour toutes les dimensions, il n'y a pas d'espace entre le littéral d'unité et le nombre.
 
-Même si toutes les unités représentent le même temps pour la valeur `0`, l'unité ne doit pas être omises, car il ne s'agit pas d'une {{cssxref("&lt;length&gt;")}} : `0` n'est pas valide et ne représente pas `0s`, `0ms`.
+> [!NOTE]
+> Bien que le nombre `0` soit toujours le même quelle que soit l'unité, l'unité ne peut pas être omise. Autrement dit, `0` est invalide et ne représente pas `0s` ou `0ms`.
 
 ### Unités
 
 - `s`
-  - : Cette unité permet d'exprimer le temps en secondes. Par exemple : `0s`, `1.5s`, `-60s`.
+  - : Représente un temps en secondes. Exemples&nbsp;: `0s`, `1.5s`, `-60s`.
 - `ms`
-  - : Cette unité permet d'exprimer le temps en millisecondes. Par exemple : `0ms`, `1500ms`, `-6000ms`.
+  - : Représente un temps en millisecondes. Exemples&nbsp;: `0ms`, `150.25ms`, `-60000ms`.
 
-La conversion entre `s` et `ms` suit la logique suivante : `1s = 1000ms`.
+> [!NOTE]
+> La conversion entre `s` et `ms` suit la logique `1s` = `1000ms`.
 
 ## Exemples
 
-### Valeurs valides
+### Temps valides
 
-```css example-good
-12s         Nombre entier positif
--456ms      Nombre entier négatif
-4.3ms       Nombre décimal
-14mS        L'unité n'est pas sensible à la casse, cependant les majuscules sont déconseillées pour s et ms.
-+0s         Zero, précédé d'un + et suivi de son unité.
--0ms        Zero, précédé d'un - et suivi de son unité (bien qu'étrange, ceci est autorisé).
+```plain example-good
+12s         Entier positif
+-456ms      Entier négatif
+4.3ms       N'est pas entier
+14mS        L'unité n'est pas sensible à la casse, bien que les majuscules ne soient pas recommandées.
++0s         Zéro avec un + devant et une unité
+-0ms        Zéro avec un - devant et une unité
 ```
 
-### Valeurs invalides
+### Temps invalides
 
-```css example-bad
-0           Bien qu'un zéro sans unité soit autorisé pour les longueurs, ceci n'est pas valide avec les autres dimensions.
-12.0        Il s'agit d'un nombre, pas d'un temps, l'unité est obligatoire.
+```plain example-bad
+0           Bien que le zéro sans unité soit autorisé pour les <length>, il est invalide pour les <time>.
+12.0        Ceci est un <number>, pas un <time>, car il manque une unité.
 7 ms        Aucun espace n'est autorisé entre le nombre et l'unité.
 ```
 
@@ -51,3 +52,8 @@ La conversion entre `s` et `ms` suit la logique suivante : `1s = 1000ms`.
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- Le type de donnée {{CSSxRef("&lt;time-percentage&gt;")}}
+- Module [des valeurs et unités CSS](/fr/docs/Web/CSS/Guides/Values_and_units)
