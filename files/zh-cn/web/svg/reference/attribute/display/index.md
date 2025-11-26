@@ -17,9 +17,9 @@ l10n:
 - 至于事件，如果 `display` 被设为 `none` 则该元素不接受任何事件。
 - [图形元素](/zh-CN/docs/Web/SVG/Reference/Element#图形元素)的 `display` 属性被设为 `none`，则其几何形状不会被边界框和剪裁路径计算中包含进去。
 
-`display` 属性只影响能被直接渲染的元素，尽管它不能防止该元素被其他元素参考。例如：将 {{SVGElement("path")}} 元素设为 `none`，会使得该元素不会被直接渲染到画布（canvas）上，但是 {{SVGElement("textPath")}} 元素依旧可以参考 {{SVGElement("path")}}。此外，即便 {{SVGElement("path")}} 的 `display` 值为 `none`，它的形状在处理路径上的文本时仍然会被用到。
+`display` 属性只影响能被直接渲染的元素，但不会阻止其他元素对其进行引用。例如：将 {{SVGElement("path")}} 元素设为 `none`，会使得该元素不会被直接渲染到画布（canvas）上，但是 {{SVGElement("textPath")}} 元素依旧可以引用 {{SVGElement("path")}}。此外，即便 {{SVGElement("path")}} 的 `display` 值为 `none`，其几何形状仍会用于路径文本处理。
 
-这个属性也能影响直接渲染到画布外的画布，比如遮罩或剪裁路径。因此，把 {{SVGElement("mask")}} 元素的一个子元素设为 `display="none"` 将会阻止 {{SVGElement("clipPath")}} 的子元素参与到路径剪裁中。
+该属性同样影响直接渲染到离屏画布的情况，例如使用蒙版或剪裁路径时。因此，把 {{SVGElement("mask")}} 元素的一个子元素设为 `display="none"` 将会阻止 {{SVGElement("clipPath")}} 的子元素参与到路径剪裁中。
 
 > [!NOTE]
 > 作为表现属性，`display` 也有一个对应的 CSS 属性：{{cssxref("display")}}。当两者都被指定时，CSS 属性优先。
@@ -42,7 +42,7 @@ svg {
   <rect x="0" y="0" width="100" height="100" fill="skyblue"></rect>
   <rect x="20" y="20" width="60" height="60" fill="yellow"></rect>
 
-  <!-- 此处未显示黄色矩形框 -->
+  <!-- 此处未显示黄色矩形 -->
   <rect x="120" y="0" width="100" height="100" fill="skyblue"></rect>
   <rect
     x="140"
