@@ -1,14 +1,13 @@
 ---
 title: translateX()
 slug: Web/CSS/Reference/Values/transform-function/translateX
-original_slug: Web/CSS/transform-function/translateX
+l10n:
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
-{{CSSRef}}
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`translateX()`** repositionne un élément horizontalement sur le plan 2D. Son résultat est de type {{CSSxRef("&lt;transform-function&gt;")}}.
 
-La fonction CSS **`translateX()`** permet d'appliquer une translation en 2D. La valeur obtenue sera du type [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function).
-
-{{InteractiveExample("CSS Demo: translateX()")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: translateX()")}}
 
 ```css interactive-example-choice
 transform: translateX(0);
@@ -53,12 +52,14 @@ transform: translateX(3ch);
 ```
 
 > [!NOTE]
-> `translateX(tx)` est équivalent à `translate(tx, 0)` ou `translate3d(tx, 0, 0)`.
+> `translateX(tx)` est équivalent à
+> `translate(tx, 0)` ou
+> `translate3d(tx, 0, 0)`.
 
 ## Syntaxe
 
 ```css
-/* Valeurs de type <length-percentage> */
+/* Valeurs <length-percentage> */
 transform: translateX(200px);
 transform: translateX(50%);
 ```
@@ -66,80 +67,38 @@ transform: translateX(50%);
 ### Valeurs
 
 - `<length-percentage>`
-  - : Une valeur exprimant une longueur (type [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)) qui représente la composante horizontale du vecteur de translation. Lorsque la valeur est un pourcentage, elle est relative à la largeur de la boîte de référence définie par la propriété [`transform-box`](/fr/docs/Web/CSS/Reference/Properties/transform-box).
+  - : Est une longueur ({{CSSxRef("&lt;length&gt;")}}) ou un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) représentant l'abscisse (composante horizontale, x) du vecteur de déplacement [tx, 0]. Dans le [système de coordonnées cartésiennes](/fr/docs/Web/CSS/Reference/Values/transform-function#le_système_de_coordonnées_cartésiennes), cela représente le déplacement le long de l'axe x. Une valeur en pourcentage fait référence à la largeur de la boîte de référence définie par la propriété {{CSSxRef("transform-box")}}.
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
+      <th scope="col"><a href="/fr/docs/Web/CSS/Reference/Values/transform-function#le_système_de_coordonnées_cartésiennes">Coordonnées cartésiennes</a> sur <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^2 <sup>(angl.)</sup></a></th>
+      <th scope="col"><a href="https://fr.wikipedia.org/wiki/Coordonn%C3%A9es_homog%C3%A8nes">Coordonnées homogènes</a> sur <a href="https://fr.wikipedia.org/wiki/Plan_projectif_r%C3%A9el">ℝℙ^2</a></th>
+      <th scope="col">Coordonnées cartésiennes sur <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^3 <sup>(angl.)</sup></a></th>
+      <th scope="col">Coordonnées homogènes sur <a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3 <sup>(angl.)</sup></a></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td rowspan="2">
         <p>
-          Une translation n'étant pas une transformation linéaire pour ℝ<sup>2</sup>, elle ne peut pas être représentée par une matrice avec des coordonnées cartésiennes.
+          Un déplacement n'est pas une transformation linéaire dans ℝ^2 et ne peut pas être représenté par une matrice de coordonnées cartésiennes.
         </p>
       </td>
       <td>
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mi>t</mi> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ></mfenced
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi>t</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{ccc} 1 & 0 & t \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
       <td rowspan="2">
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mi>t</mi> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ></mfenced
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi>t</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{ccc} 1 & 0 & t \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
       <td rowspan="2">
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mi>t</mi> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ></mfenced
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi>t</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cccc} 1 & 0 & 0 & t \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
     </tr>
     <tr>
@@ -148,11 +107,9 @@ transform: translateX(50%);
   </tbody>
 </table>
 
-### Syntaxe formelle
+## Syntaxe formelle
 
-```css
-translateX(<length-percentage>)
-```
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -174,7 +131,7 @@ div {
 }
 
 .moved {
-  transform: translateX(10px); /* Équivalent à translate(10px) */
+  transform: translateX(10px); /* Équivaut à translate(10px) */
   background-color: pink;
 }
 ```
@@ -193,7 +150,8 @@ div {
 
 ## Voir aussi
 
-- [`translate()`](/fr/docs/Web/CSS/Reference/Values/transform-function/translate)
-- [`translateY()`](/fr/docs/Web/CSS/Reference/Values/transform-function/translateY)
-- [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function)
+- La fonction {{CSSxRef("transform-function/translate", "translate()")}}
+- La fonction {{CSSxRef("transform-function/translateY", "translateY()")}}
+- La propriété {{CSSxRef("transform")}}
+- Le type de donnée {{CSSxRef("&lt;transform-function&gt;")}}
+- La propriété {{CSSxRef("translate")}}
