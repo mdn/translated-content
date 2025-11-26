@@ -60,7 +60,7 @@ Selecciona un elemento de tu página, ya sea haciendo clic con el botón derecho
 
 ![La página de ejemplo para este tutorial con DevTools abiertas.](inspecting1.png)
 
-Si observasla [vista de reglas](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#panel_css), que está a la derecha de tu HTML, deberías poder ver las propiedades y los valores CSS aplicados sobre ese elemento. Verás las reglas aplicadas directamente a la clase `box1` y también el CSS que la caja hereda de su elemento padre, en este caso `<body>`. Esto es útil para cuando ves que se aplica un CSS que no esperabas. Tal vez se esté heredando de un elemento padre y necesites añadir una regla para sobrescribirlo en el contexto de este elemento.
+Si observas la [vista de reglas](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#panel_css), que está a la derecha de tu HTML, deberías poder ver las propiedades y los valores CSS aplicados sobre ese elemento. Verás las reglas aplicadas directamente a la clase `box1` y también el CSS que la caja hereda de su elemento padre, en este caso `<body>`. Esto es útil para cuando ves que se aplica un CSS que no esperabas. Tal vez se esté heredando de un elemento padre y necesites añadir una regla para sobrescribirlo en el contexto de este elemento.
 
 También es útil la capacidad de expandir las propiedades abreviadas. En nuestro ejemplo se usa la abreviación `margin`.
 
