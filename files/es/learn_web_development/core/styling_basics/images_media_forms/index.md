@@ -57,7 +57,7 @@ En el ejemplo siguiente hay dos cajas, ambas de 200 píxeles de tamaño:
 
 ¿Qué podemos hacer con el problema del desbordado?
 
-Como aprendimos en [nuestro artículo anterior](/es/docs/Learn_web_development/Core/Styling_basics/Sizing), una técnica común es hacer que el la propiedad {{cssxref ("max-width")}} de una imagen sea 100%. Esto permite que la imagen tenga un tamaño menor que la caja, pero no que tenga un tamaño mayor. Esta técnica funciona con otros elementos de reemplazo, como [`<video>`](/es/docs/Web/HTML/Element/video) o [`<iframe>`](/es/docs/Web/HTML/Element/iframe).
+Como aprendimos en [nuestro artículo anterior](/es/docs/Learn_web_development/Core/Styling_basics/Sizing), una técnica común es hacer que la propiedad {{cssxref ("max-width")}} de una imagen sea 100%. Esto permite que la imagen tenga un tamaño menor que la caja, pero no que tenga un tamaño mayor. Esta técnica funciona con otros elementos de reemplazo, como [`<video>`](/es/docs/Web/HTML/Element/video) o [`<iframe>`](/es/docs/Web/HTML/Element/iframe).
 
 **Añade `max-width: 100%` al elemento `<img>` del ejemplo anterior. Verás que la imagen más pequeña permanece sin cambios, pero la más grande se reduce hasta caber en la caja.**
 
