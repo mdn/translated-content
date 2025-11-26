@@ -16,9 +16,7 @@ nodeList.forEach(callback[, thisArg]);
 ### Parámetros
 
 - `callback`
-
   - : Función a ser ejecutada paracada elemento, tomando eventualmente 3 argumentos:
-
     - _`currentValue`_
       - : El valor que esta siendo procesado en la lista de nodos.
     - `currentIndex`

@@ -16,13 +16,11 @@ Veja também [Extensões CSS Mozilla](/pt-BR/docs/CSS/CSS_Reference/Mozilla_Exte
 ## Seletores
 
 - Seletores básicos
-
   - [Seletores de tipo](/pt-BR/docs/CSS/Type_selectors) `elementname`
   - [Seletores de classe](/en-US/CSS/Class_selectors) `.classname`
   - [Seletores de ID](/en-US/CSS/ID_selectors) `#idname`
   - [Seletores universais](/pt-BR/docs/CSS/Universal_selectors) `* ns|* *|*`
   - [Seletores de atributo](/pt-BR/docs/CSS/Attribute_selectors)
-
     - `[attribute]`
     - `[attribute="value"]`
     - `[attribute~="value"]`
@@ -33,7 +31,6 @@ Veja também [Extensões CSS Mozilla](/pt-BR/docs/CSS/CSS_Reference/Mozilla_Exte
     - `[ns|attribute]`
 
 - Combinadores
-
   - [Combinadores equivalentes adjacentes](/pt-BR/docs/CSS/Adjacent_sibling_selectors) `A + B`
   - [Combinadores equivalentes gerais](/en-US/CSS/General_sibling_selectors) `A ~ B`
   - [Combinadores filhos](/pt-BR/docs/CSS/Child_selectors) `A > B`

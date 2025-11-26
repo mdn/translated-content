@@ -136,7 +136,6 @@ python3 -V
 Você pode instalar Python 3 (com a ferramenta pip3) facilmente em [python.org](https://www.python.org/):
 
 1. Baixe o instalador exigido:
-
    1. Acesse <https://www.python.org/downloads/>
    2. Selecione o botão **Download Python 3.7.1** (o número exato da versão menor pode diferir).
 
@@ -160,7 +159,6 @@ pip3 list
 Windows não inclui Python por padrão, mas você pode instalá-lo facilmente (com a ferramenta _pip3_) em [python.org](https://www.python.org/):
 
 1. Baixe o instalador exigido:
-
    1. Acesse <https://www.python.org/downloads/>
    2. Selecione o botão **Download Python 3.7.1** (o número exato da versão menor pode diferir).
 
@@ -357,7 +355,8 @@ py -3 -m django --version
 >
 > No Windows, os scripts _Python 3_ são iniciados prefixando o comando com `py -3`, embora isso possa variar de acordo com sua instalação. Tente omitir o modificador `-3` se você encontrar algum problema com os comandos. No Linux/macOS, o comando é `python3`.
 
-> **Aviso:** **Importante**: O resto deste **módulo** usa o comando _Linux_ para chamar o Python 3 (`python3`). Se você está usando o Windows, substitua o prefixo por: `py -3`
+> [!WARNING]
+> **Importante**: O resto deste **módulo** usa o comando _Linux_ para chamar o Python 3 (`python3`). Se você está usando o Windows, substitua o prefixo por: `py -3`
 
 ## Testando sua instalação
 

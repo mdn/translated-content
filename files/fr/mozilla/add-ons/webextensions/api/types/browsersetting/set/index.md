@@ -34,9 +34,7 @@ var setting = setting.set(
 ### Paramètres
 
 - `details`
-
   - : Un objet qui doit contenir la propriété suivante :
-
     - `value`
       - : `any`. La valeur à laquelle vous souhaitez modifier le paramètre. Son type dépend du réglage particulier.
 
@@ -74,8 +72,6 @@ browser.browserAction.onClicked.addListener(() => {
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/api/types).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

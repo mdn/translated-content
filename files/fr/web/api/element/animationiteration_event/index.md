@@ -43,4 +43,4 @@ L'événement `animationiteration` est déclenché lorsqu'une itération d'une a
 
 ## Voir aussi
 
-- [Utilisation des animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Utilisation des animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)

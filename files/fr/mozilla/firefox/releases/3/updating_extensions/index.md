@@ -3,19 +3,14 @@ title: Mise à jour des extensions pour Firefox 3
 slug: Mozilla/Firefox/Releases/3/Updating_extensions
 ---
 
-{{FirefoxSidebar}}
-
 1. Notes de versions pour développeurs
-
    1. [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
 
 2. Modules complémentaires
-
    1. [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions)
    2. [Thèmes](/fr/docs/Mozilla/Add-ons/Themes)
 
 3. Fonctionnement interne de Firefox
-
    1. [Le projet Mozilla](/fr/docs/Mozilla)
    2. [Gecko](/fr/docs/Mozilla/Gecko)
    3. [Mode « headless »](/fr/docs/Mozilla/Firefox/Headless_mode)
@@ -30,7 +25,6 @@ slug: Mozilla/Firefox/Releases/3/Updating_extensions
    12. [XUL](/fr/docs/Mozilla/Tech/XUL)
 
 4. Développer et contribuer
-
    1. [Instructions de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions)
    2. [Configuration des options de compilation](https://firefox-source-docs.mozilla.org/setup/configuring_build_options.html)
    3. [Fonctionnement de la compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works)
@@ -124,7 +118,6 @@ La méthode [`handleEnter()`](/fr/NsIAutoCompleteController#handleEnter.28.29) d
 
 - Lorsqu'un objet `DOMParser` est instancié, il hérite du principal du code appelant et des valeurs `documentURI` et `baseURI` de la fenêtre dont le constructeur venait.
 - Si l'appelant a des privilèges UniversalXPConnect, il peut fournir des paramètres à `new DOMParser()`. Si moins de trois paramètres sont fournis, les paramètres restants prendront la valeur `null` par défaut.
-
   - Le premier paramètre est le principal à utiliser&nbsp;; il remplace le principal par défaut normalement hérité.
   - Le second paramètre est la valeur `documentURI` à utiliser.
   - Le troisième paramètre est la valeur `baseURI` à utiliser.
@@ -183,7 +176,6 @@ _Ajoutez ici les changements simples que vous avez dû faire à vos extensions p
 - L'élément [`tabbrowser`](/fr/docs/Mozilla/Tech/XUL/tabbrowser) ne fait plus partie du «&nbsp;toolkit&nbsp;» ([bug 339964](https://bugzilla.mozilla.org/show_bug.cgi?id=339964)). Cela signifie qu'il n'est plus disponible pour les applications XUL et extensions. Il continue cependant à être utilisé dans la fenêtre principale de Firefox (browser.xul).
 - Les changements dans les [proxys nsISupports](/fr/Proxys_nsISupports) et éventuellement aux interfaces liées aux threads doivent être documentés.
 - Si vous utilisez des instructions de traitement XML comme `<?xml-stylesheet ?>` dans vos fichiers XUL, tenez compte des changements effectués dans le [bug 319654](https://bugzilla.mozilla.org/show_bug.cgi?id=319654)&nbsp;:
-
   1. Les instructions de traitement XML sont à présent ajoutées au DOM des documents XUL. Cela signifie que [`document.firstChild`](/fr/docs/Web/API/Document/firstChild) n'est plus forcément l'élément racine. Si vous avez besoin de l'élément racine dans votre script, utilisez plutôt [`document.documentElement`](/fr/docs/Web/API/Document/documentElement).
   2. Les instructions de traitement `<?xml-stylesheet ?>` et `<?xul-overlay ?>` n'ont plus d'effet en dehors du prologue du document.
 

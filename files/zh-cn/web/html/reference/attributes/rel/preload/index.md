@@ -3,8 +3,6 @@ title: 链接类型：preload
 slug: Web/HTML/Reference/Attributes/rel/preload
 ---
 
-{{HTMLSidebar}}
-
 {{HTMLElement("link")}} 元素的 [`rel`](/zh-CN/docs/Web/HTML/Reference/Elements/link#rel) 属性的 `preload` 值允许你在 HTML 的 {{htmlelement("head")}} 中声明获取请求，指定页面很快就需要的资源，这些资源是你希望在页面生命周期的早期就开始加载的，早于浏览器的主要渲染机制启动。这可以确保它们更早可用，并且不太可能阻塞页面的渲染，从而提高性能。尽管名称中包含“load”一词，但它并不加载和执行脚本，而只是安排脚本以更高的优先级进行下载和缓存。
 
 ## 基础知识
@@ -112,7 +110,7 @@ slug: Web/HTML/Reference/Attributes/rel/preload
 
 ## 启用 CORS 的获取请求
 
-在预加载启用 [CORS](/zh-CN/docs/Web/HTTP/Guides/CORS) 的资源（例如 [`fetch()`](/zh-CN/docs/Web/API/Window/fetch)、[`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) 或[字体](/zh-CN/docs/Web/CSS/@font-face)）时，需要特别注意在你的 [`<link>`](/zh-CN/docs/Web/HTML/Reference/Elements/link) 元素上设置 [`crossorigin`](/zh-CN/docs/Web/HTML/Reference/Elements/link#crossorigin) 属性。该属性需要设置为与资源的 CORS 和凭据模式相匹配，即使获取请求不跨域也需要设置。
+在预加载启用 [CORS](/zh-CN/docs/Web/HTTP/Guides/CORS) 的资源（例如 [`fetch()`](/zh-CN/docs/Web/API/Window/fetch)、[`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) 或[字体](/zh-CN/docs/Web/CSS/Reference/At-rules/@font-face)）时，需要特别注意在你的 [`<link>`](/zh-CN/docs/Web/HTML/Reference/Elements/link) 元素上设置 [`crossorigin`](/zh-CN/docs/Web/HTML/Reference/Elements/link#crossorigin) 属性。该属性需要设置为与资源的 CORS 和凭据模式相匹配，即使获取请求不跨域也需要设置。
 
 如上所述，其中一个适用的有趣情况是字体文件。由于各种原因，这些文件必须使用匿名模式的 CORS 进行获取（参见[字体获取要求](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)）。
 
@@ -147,7 +145,7 @@ slug: Web/HTML/Reference/Attributes/rel/preload
 
 ## 包括 media
 
-`<link>` 元素的一个很好的特性是它们能够接受 [`media`](/zh-CN/docs/Web/HTML/Reference/Elements/link#media) 属性。这些属性可以接受[媒体类型](/zh-CN/docs/Web/CSS/@media#media_types)或完整的[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)，让你可以进行响应式的预加载！
+`<link>` 元素的一个很好的特性是它们能够接受 [`media`](/zh-CN/docs/Web/HTML/Reference/Elements/link#media) 属性。这些属性可以接受[媒体类型](/zh-CN/docs/Web/CSS/Reference/At-rules/@media#media_types)或完整的[媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using)，让你可以进行响应式的预加载！
 
 让我们来看一个例子（在 GitHub 上查看，包括[源代码](https://github.com/mdn/html-examples/tree/master/link-rel-preload/media)和[在线示例](https://mdn.github.io/html-examples/link-rel-preload/media/)）：
 
@@ -187,7 +185,7 @@ slug: Web/HTML/Reference/Attributes/rel/preload
 </body>
 ```
 
-我们在 `<link>` 元素上包含 `media` 属性，以便在用户的视口较窄时预加载窄图像，在视口较宽时加载宽图像。我们使用 {{domxref("Window.matchMedia")}} / {{domxref("MediaQueryList")}} 来实现这一点（查看[测试媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Testing_media_queries)以获取更多信息）。
+我们在 `<link>` 元素上包含 `media` 属性，以便在用户的视口较窄时预加载窄图像，在视口较宽时加载宽图像。我们使用 {{domxref("Window.matchMedia")}} / {{domxref("MediaQueryList")}} 来实现这一点（查看[测试媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Testing)以获取更多信息）。
 
 这使得字体在页面渲染时更有可能可用，减少了 FOUT（未经样式处理的文本闪烁）。
 

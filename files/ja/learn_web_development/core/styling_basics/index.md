@@ -39,7 +39,7 @@ CSS （カスケーディングスタイルシート）は、ウェブページ�
 - [競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
   - : このレッスンの目的は、CSS の最も基本的な概念であるカスケード、特定の仕様、継承について理解を深めることです。これらは、CSS が HTML に適用される方法と、スタイル宣言間の競合がどのように解決されるかをコントロールします。
 - [値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-  - : CSS ルールには[宣言](/ja/docs/Web/CSS/CSS_syntax/Syntax#css_の宣言)が含まれており、宣言はプロパティと値で構成されています。 CSS で使用される各プロパティには、許容される値の種類を記述した**値型**があります。このレッスンでは、最も頻繁に使用される値型のいくつかを取り上げ、それらが何であるか、また、これらがどのように作用するのかを説明します。
+  - : CSS ルールには[宣言](/ja/docs/Web/CSS/Guides/Syntax/Introduction#css_の宣言)が含まれており、宣言はプロパティと値で構成されています。 CSS で使用される各プロパティには、許容される値の種類を記述した**値型**があります。このレッスンでは、最も頻繁に使用される値型のいくつかを取り上げ、それらが何であるか、また、これらがどのように作用するのかを説明します。
 - [CSS におけるアイテムのサイズ設定](/ja/docs/Learn_web_development/Core/Styling_basics/Sizing)
   - : デザイン上のさまざまな機能がどの程度の大きさになるかを理解することは重要です。このレッスンでは、要素が CSS 経由でサイズを取得するさまざまな方法をまとめ、将来的に役立つサイズ指定に関するいくつかの用語を定義します。
 - [背景と境界](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
@@ -52,11 +52,11 @@ CSS （カスケーディングスタイルシート）は、ウェブページ�
   - : HTML 表を装飾することは、世界で最も魅力的な仕事ではありませんが、時にはそれをしなければならないこともあります。この記事では、表をスタイル設定するテクニックとともに、HTML 表を見栄え良くするためのガイドを提供します。
 - [CSS のデバッグ](/ja/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS)
   - : この記事では CSS の問題をデバッグする方法について案内し、何が起こっているかを調べるのに、すべてのモダンブラウザーに入っている開発者ツールがどう役立つかを示します。
-- [課題: 基本的な CSS の理解](/ja/docs/Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension) <sup>課題</sup>
+- [課題: 基本的な CSS の理解](/ja/docs/Learn_web_development/Core/Styling_basics) <sup>課題</sup>
   - : この課題では、最終的なデザイン（名刺/ゲーム用カード/ソーシャルメディアのプロフィール）を作成するために、完了しなければならない数々の関連の演習を提供しています。
-- [課題: 装飾的なレターヘッド付きの便箋の作成](/ja/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper) <sup>課題</sup>
+- [課題: 装飾的なレターヘッド付きの便箋の作成](/ja/docs/Learn_web_development/Core/Styling_basics) <sup>課題</sup>
   - : 好印象を与えたいのなら、素敵なレターヘッドの便箋に手紙を書くのはとても良い考えです。この評価では、そのような見た目のオンラインテンプレートの作成に挑戦します。
-- [課題: かっこいいボックス](/ja/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box) <sup>課題</sup>
+- [課題: かっこいいボックス](/ja/docs/conflicting/Learn_web_development/Core/Styling_basics) <sup>課題</sup>
   - : この課題では、かっこいいボックスをいくつか作成する練習をします。目を引くボックスを作成してみましょう。
 
 ## 追加のチュートリアル
@@ -66,7 +66,7 @@ CSS （カスケーディングスタイルシート）は、ウェブページ�
 - [ボックスの高度な効果](/ja/docs/Learn_web_development/Core/Styling_basics/Advanced_styling_effects)
   - : この記事では、 CSS の問題をデバッグする方法について説明し、すべての現代のブラウザーに搭載されている開発者ツールが、何が起こっているのかを探す手助けをしてくれることを紹介します。
 - [カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
-  - : このレッスンでは、 [CSS カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)と [CSS 詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)という基本的な概念の上に構築された、より高度な機能である[カスケードレイヤー](/ja/docs/Web/CSS/@layer)を紹介することを目的としています。
+  - : このレッスンでは、 [CSS カスケード](/ja/docs/Web/CSS/Guides/Cascade/Introduction)と [CSS 詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)という基本的な概念の上に構築された、より高度な機能である[カスケードレイヤー](/ja/docs/Web/CSS/Reference/At-rules/@layer)を紹介することを目的としています。
 - [さまざまな方向のテキストの扱い](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)
   - : 近年、 CSS は、コンテンツのさまざまな方向に対応するために進化してきました。右から左に記述するコンテンツだけなく、上から下に記述するコンテンツ（日本語など）にも対応しています。これらのさまざまな方向は、書字方向と呼ばれます。学習を進め、レイアウト作業を始めるにあたり、書字方向を理解することは非常に役立つでしょう。そのため、この記事では書字方向について紹介します。
 - [CSS の整理](/ja/docs/Learn_web_development/Core/Styling_basics/Organizing)

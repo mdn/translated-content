@@ -1,14 +1,12 @@
 ---
-title: translate
+title: HTML translate グローバル属性
+short-title: translate
 slug: Web/HTML/Reference/Global_attributes/translate
-original_slug: Web/HTML/Global_attributes/translate
 l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar("Global_attributes")}}
-
-**`translate`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes) は[列挙型](/ja/docs/Glossary/Enumerated)属性で、要素の*翻訳可能な属性*の値や {{domxref("Text")}} 子ノードを、ページをローカライズする際に翻訳するべきか、あるいは変更せずにおくかを指定します。
+**`translate`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes) は[列挙型](/ja/docs/Glossary/Enumerated)属性で、要素の翻訳可能な属性の値や {{domxref("Text")}} 子ノードを、ページをローカライズする際に翻訳するべきか、あるいは変更せずにおくかを指定します。
 
 以下の値を使用することができます。
 

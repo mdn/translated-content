@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef}}
 
-`pointermove` はポインターの座標が変化し、かつブラウザーの[タッチ操作](/ja/docs/Web/CSS/touch-action)によってポインターが[キャンセル](/ja/docs/Web/API/Element/pointercancel_event)されていないときに発生します。
+`pointermove` はポインターの座標が変化し、かつブラウザーの[タッチ操作](/ja/docs/Web/CSS/Reference/Properties/touch-action)によってポインターが[キャンセル](/ja/docs/Web/API/Element/pointercancel_event)されていないときに発生します。
 
 ## 構文
 
@@ -92,7 +92,6 @@ para.onpointermove = (event) => {
 ## 関連情報
 
 - 関連イベント
-
   - {{domxref('Element/gotpointercapture_event', 'gotpointercapture')}}
   - {{domxref('Element/lostpointercapture_event', 'lostpointercapture')}}
   - {{domxref('Element/pointerover_event', 'pointerover')}}

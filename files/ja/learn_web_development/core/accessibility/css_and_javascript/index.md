@@ -211,7 +211,8 @@ a:active {
 
 一方で、 {{cssxref("visibility")}}`:hidden` も {{cssxref("display")}}`:none` も、スクリーンリーダーからコンテンツを隠してしまうので、使うべきではありません。もちろん、スクリーンリーダーからこのコンテンツを隠したいと思う然るべき理由がない限りは、ということですが。
 
-> **メモ:** [Invisible Content Just for Screen Reader Users](https://webaim.org/techniques/css/invisiblecontent/) には、この話題をめぐる多くのさらに有用な詳細があります。
+> [!NOTE]
+> [Invisible Content Just for Screen Reader Users](https://webaim.org/techniques/css/invisiblecontent/) には、この話題をめぐる多くのさらに有用な詳細があります。
 
 ### ユーザーがスタイルを上書きできることを受け入れる
 

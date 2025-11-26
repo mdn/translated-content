@@ -18,7 +18,7 @@ l10n:
 
 ## 示例
 
-使用 CSS `white-space` 代替，在 {{cssxref("white-space")}} 页面有一个可用的[示例](/zh-CN/docs/Web/CSS/white-space#控制表格中的换行)。
+使用 CSS `white-space` 代替，在 {{cssxref("white-space")}} 页面有一个可用的[示例](/zh-CN/docs/Web/CSS/Reference/Properties/white-space#控制表格中的换行)。
 
 ## 规范
 

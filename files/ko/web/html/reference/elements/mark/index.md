@@ -80,7 +80,7 @@ mark {
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
 ## 사용 일람
 
@@ -90,7 +90,8 @@ mark {
 - 다른 경우, `<mark>`는 문서 콘텐츠에서 사용자의 현재 행동과 관련 있는 부분을 나타낼 때 사용합니다. 예를 들어, 현재 검색 키워드를 강조 표시할 때 사용할 수 있습니다.
 - `<mark>`를 표시만을 위한 용도로 사용하지 마세요. {{htmlelement("span")}}과 적절한 CSS를 대신 사용해야 합니다.
 
-> **참고:** `<mark>`와 {{HTMLElement("strong")}} 요소의 차이점을 기억하세요. 텍스트에서, `<mark>`는 연관성을 가진 부분을, `<strong>`은 중요도를 가진 부분을 나타낼 때 사용합니다.
+> [!NOTE]
+> `<mark>`와 {{HTMLElement("strong")}} 요소의 차이점을 기억하세요. 텍스트에서, `<mark>`는 연관성을 가진 부분을, `<strong>`은 중요도를 가진 부분을 나타낼 때 사용합니다.
 
 ## 예제
 

@@ -228,7 +228,6 @@ Aquí hemos hecho lo siguiente:
   la misma cantidad para los elementos de la lista. De este modo, todos los elementos de la lista siguen alineados con los elementos de la lista ordenada y las descripciones, pero los elementos de lista tienen algo de relleno (`padding`) para poder insertar las imágenes de fondo. Si no hiciéramos esto, las imágenes de fondo se solaparían con el texto de los elementos de la lista y quedaría un aspecto desordenado.
 - Establecer la propiedad {{cssxref("list-style-type")}} en `none`, para que no aparezca la viñeta predeterminada. En lugar de ello, vamos a utilizar las propiedades {{cssxref("background")}} para manejar las viñetas.
 - Insertar una viñeta en cada elemento de la lista sin ordenar. Las propiedades relevantes son las siguientes:
-
   - {{cssxref("background-image")}}: Proporciona la ruta que apunta al archivo de imagen que quieres usar como viñeta.
   - {{cssxref("background-position")}}: Define en qué lugar del elemento seleccionado va a aparecer la imagen; en este caso le decimos `0 0`, que significa que la viñeta va a aparecer en el extremo superior izquierdo de cada elemento de lista.
   - {{cssxref("background-size")}}: Establece el tamaño de la imagen de fondo. En teoría queremos que las viñetas sean del mismo tamaño que los elementos de lista (o solo un poco menores o mayores). Utilizamos un tamaño de `1.6rem` (`16px`), que encaja muy bien con el área de relleno de `20px` que hemos elegido para que quepa la viñeta; 16 px más 4 px de espacio entre la viñeta y el texto del elemento de lista funciona bien.
@@ -266,7 +265,7 @@ A veces puedes querer numerar las listas de manera diferente, por ejemplo, que e
 
 ### start
 
-El atributo [`start`](/es/docs/Web/HTML/Element/ol#start) te permite empezar la numeración de la lista en un número diferente de 1. Observa el ejemplo siguiente:
+El atributo [`start`](/es/docs/Web/HTML/Reference/Elements/ol#start) te permite empezar la numeración de la lista en un número diferente de 1. Observa el ejemplo siguiente:
 
 ```html
 <ol start="4">
@@ -285,7 +284,7 @@ Este código da el resultado siguiente:
 
 ### reversed
 
-El atributo [`reversed`](/es/docs/Web/HTML/Element/ol#reversed) empieza la lista contando hacia atrás, en lugar de hacia adelante. Observa el ejemplo siguiente:
+El atributo [`reversed`](/es/docs/Web/HTML/Reference/Elements/ol#reversed) empieza la lista contando hacia atrás, en lugar de hacia adelante. Observa el ejemplo siguiente:
 
 ```html
 <ol start="4" reversed>
@@ -307,7 +306,7 @@ Da el resultado siguiente:
 
 ### value
 
-El atributo [`value`](/es/docs/Web/HTML/Element/ol#value) te permite establecer para tus elementos de lista unos valores numéricos específicos. Observa el ejemplo siguiente:
+El atributo [`value`](/es/docs/Web/HTML/Reference/Elements/ol#value) te permite establecer para tus elementos de lista unos valores numéricos específicos. Observa el ejemplo siguiente:
 
 ```html
 <ol>

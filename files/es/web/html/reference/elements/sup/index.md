@@ -84,7 +84,7 @@ El **elemento HTML** \<sup> define un fragmento de texto que se debe mostrar, po
 
 ## Atributos
 
-Este elemento sólo incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+Este elemento sólo incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notas de uso
 
@@ -114,7 +114,7 @@ Este elemento sólo incluye los [atributos globales](/es/docs/Web/HTML/Global_at
 
 ## Ver también
 
-- El elemento HTML [\<sub>](/es/docs/Web/HTML/Element/sub) produce subíndices. Tenga en cuenta que no puedes usar \<sup> y \<sub> ambos al mismo tiempo y necesita usar [MathML](/es/docs/Web/MathML) para producir un superíndice y un subíndice al lado del símbolo químico de un elemento, que representa su número atómico y su número nuclear.
+- El elemento HTML [\<sub>](/es/docs/Web/HTML/Reference/Elements/sub) produce subíndices. Tenga en cuenta que no puedes usar \<sup> y \<sub> ambos al mismo tiempo y necesita usar [MathML](/es/docs/Web/MathML) para producir un superíndice y un subíndice al lado del símbolo químico de un elemento, que representa su número atómico y su número nuclear.
 
   ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Element_identity.png/220px-Element_identity.png)
 

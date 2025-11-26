@@ -5,8 +5,6 @@ l10n:
   sourceCommit: dd08ec8cf78926a7854d8f5f7793bf7ae199484e
 ---
 
-{{FirefoxSidebar}}
-
 [Firefox の最新の開発者向け機能をテストするには、 Firefox Developer Edition をインストールしてください](https://www.mozilla.org/firefox/developer/) Firefox 40 は、米国時間 2015 年 8 月 11 日にリリースされました。このページでは、開発者に影響する Firefox 40 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -152,7 +150,6 @@ _変更なし。_
 
 - `nsClassInfo::GetImplementationLanguage()` 関数とともに `nsIClassInfo.implementationLanguage` 属性を削除しました。
 - 以下の XPCOM インターフェイスを削除しました。代わりに標準 HTML インターフェイスを使用してください。
-
   - `nsIDOMHTMLBRElement`
   - `nsIDOMDivElement`
   - `nsIDOMHTMLHeadingElement`

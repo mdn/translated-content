@@ -6,8 +6,6 @@ l10n:
   sourceCommit: ee756fd51ccbc4820a4b334aa753648650ad1d51
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`Cross-Origin-Opener-Policy`** (COOP) は{{glossary("response header","レスポンスヘッダー")}}で、使用する、ウェブサイトは、{{domxref("Window.open()")}} または新しいページへのナビゲーションによって開かれた新しい最上位文書を、同じ{{glossary("Browsing context","閲覧コンテキストグループ")}} (BCG) で開くか、新しい閲覧コンテキストグループで開くかを制御することができます。
 
 新しい BCG で開くと、新しい文書とその開いた文書間の参照は切断され、新しい文書は開いた文書からプロセス分離される場合があります。
@@ -43,7 +41,6 @@ Cross-Origin-Opener-Policy: noopener-allow-popups
 ### ディレクティブ
 
 - `unsafe-none`
-
   - : この文書は、その閲覧コンテキストグループを他の文書と共有することを許可しているため、安全ではない可能性があります。
     プロセス分離のために COOP を使用しないように文書をオプトアウトするために使用されます。
     これが既定値です。
@@ -55,14 +52,12 @@ Cross-Origin-Opener-Policy: noopener-allow-popups
     `same-origin` を持つ文書は、`unsafe-none` を持つ文書を常に新しい BCG で開きます。
 
 - `same-origin`
-
   - : この文書は、 COOP を使用し、同一オリジンの文書のみが含まれている BCG への読み込みを許可します。
     これは BCG に[オリジン間分離](/ja/docs/Web/API/Window/crossOriginIsolated)を提供するために使用されます。
 
     `same-origin` が指定された文書は、両方の文書が同じ BCG であり、`same-origin` ディレクティブが指定されている場合にのみ、同じ BCG 内で開くことができます。
 
 - `same-origin-allow-popups`
-
   - : これは [`same-origin`](#same-origin) ディレクティブと似ていますが、COOP 値が `unsafe-none` の文書は、同じ BCG 内で {{domxref("Window.open()")}} を使用して開くことができる点が異なります。
 
     このディレクティブは、オリジン間分離の利点が必要であるが、信頼できるオリジン間の文書を開き、その参照を保持する必要がある統合において、`same-origin` 制限を緩和するために使用されます。
@@ -74,7 +69,6 @@ Cross-Origin-Opener-Policy: noopener-allow-popups
     それ以外の場合、`same-origin-allow-popups` が指定されている文書は、両方の文書が同じオリジンであり、`same-origin-allow-popups` ディレクティブが指定されている場合にのみ、同じ BCG 内で開くことができます。
 
 - `noopener-allow-popups`
-
   - : このディレクティブが指定された文書は、`noopener-allow-popups` も指定されている文書から移動して開いた場合を除き、常に新しい BCG で開かれます。
     これは、同じオリジンの文書をプロセス分離して処理する必要がある場合に対応するために使用されます。
 

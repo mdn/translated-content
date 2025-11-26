@@ -7,7 +7,7 @@ l10n:
 
 {{QuickLinksWithSubpages("/ko/docs/Web/Security")}}
 
-[Referer HTTP 헤더](/ko/docs/Web/HTTP/Headers/Referer)와 관련된 개인 정보 및 보안 위험이 있습니다. 이 문서는 이런 위험에 대해 설명하고, 이를 완화하는 방법에 대한 조언을 제공합니다.
+[Referer HTTP 헤더](/ko/docs/Web/HTTP/Reference/Headers/Referer)와 관련된 개인 정보 및 보안 위험이 있습니다. 이 문서는 이런 위험에 대해 설명하고, 이를 완화하는 방법에 대한 조언을 제공합니다.
 
 ## 리퍼러 문제
 
@@ -31,8 +31,8 @@ URL을 통해 민감한 데이터를 다른 위치로 전달하지 않기 위해
 
 - 서버의 {{httpheader("Referrer-Policy")}} 헤더는 {{httpheader("Referer")}} 헤더를 통해 전송되는 정보를 제어합니다. 예를 들어 `no-referrer` 지시문은 Referer 헤더를 완전히 생략합니다.
 - 이러한 정보가 유출될 위험이 있는 HTML 요소(예: {{HTMLElement("img")}}와 {{HTMLElement("a")}})의 `referrerpolicy` 속성입니다. 예를 들어 `Referer` 헤더가 전송되는 것을 중지하도록 `no-referrer`로 설정할 수 있습니다.
-- 이러한 정보가 유출될 위험이 있는 HTML 요소(예: {{HTMLElement("img")}}와 {{HTMLElement("a")}})에서 [`rel`](/ko/docs/Web/HTML/Attributes/rel) 속성을 [`noreferrer`](/ko/docs/Web/HTML/Attributes/rel/noreferrer)로 설정합니다.
-- 전체 문서에 대한 Referer 헤더를 비활성화하기 위해 `referrer`의 [name](/ko/docs/Web/HTML/Element/meta#name)과 콘텐츠가 `no-referrer`으로 설정된 {{HTMLElement("meta")}} 요소. [HTML과 Referrer-Policy 통합](/ko/docs/Web/HTTP/Headers/Referrer-Policy#html%EA%B3%BC_%ED%86%B5%ED%95%A9)을 참조하십시오.
+- 이러한 정보가 유출될 위험이 있는 HTML 요소(예: {{HTMLElement("img")}}와 {{HTMLElement("a")}})에서 [`rel`](/ko/docs/Web/HTML/Reference/Attributes/rel) 속성을 [`noreferrer`](/ko/docs/Web/HTML/Attributes/rel/noreferrer)로 설정합니다.
+- 전체 문서에 대한 Referer 헤더를 비활성화하기 위해 `referrer`의 [name](/ko/docs/Web/HTML/Reference/Elements/meta#name)과 콘텐츠가 `no-referrer`으로 설정된 {{HTMLElement("meta")}} 요소. [HTML과 Referrer-Policy 통합](/ko/docs/Web/HTTP/Headers/Referrer-Policy#html%EA%B3%BC_%ED%86%B5%ED%95%A9)을 참조하십시오.
 - [Exit page](https://geekthis.net/post/hide-http-referer-headers/#exit-page-redirect) 기술.
 
 보안에 민감한 서버 측 프레임워크는 이러한 문제에 대한 완화 기능을 내장하는 경우가 많습니다. 예를 들어 다음과 같습니다.

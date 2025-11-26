@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 997a0ec66e1514b7269076195b2419db334e876e
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`Authorization`** 请求标头用于提供服务器验证用户代理身份的凭据，允许访问受保护的资源。
 
 **`Authorization`** 标头通常在用户代理首次尝试请求受保护的资源（没有携带凭据）之后发送的，但并不总是发送。服务器响应一条 {{HTTPStatus("401")}} `Unauthorized` 信息，其中包含至少一个 {{HTTPHeader("WWW-Authenticate")}} 标头。该标头表示哪些身份验证的方案可用于访问资源（以及客户端使用它们时需要的额外的信息）。用户代理应该从这些提供的身份验证方案中选择它支持的最安全的身份验证方案，并提示用户提供凭据，然后重新获取资源（包含 **`Authorization`** 标头中编码的凭据）。
@@ -57,7 +55,6 @@ Authorization: Digest username=<username>,
 ## 指令
 
 - `<auth-scheme>`
-
   - : [身份验证方案](/zh-CN/docs/Web/HTTP/Guides/Authentication#身份验证方案)定义了凭据如何编码。一些常见的类型是（不区分大小写）：[`Basic`](/zh-CN/docs/Web/HTTP/Guides/Authentication#basic_验证方案)、`Digest`、`Negotiate` 和 `AWS4-HMAC-SHA256`。
 
     > [!NOTE]
@@ -68,7 +65,6 @@ Authorization: Digest username=<username>,
 ### Basic
 
 - \<credentials>
-
   - : 凭据，根据指定的方案编码。
 
     > [!NOTE]
@@ -111,7 +107,8 @@ Authorization: Digest username=<username>,
 Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 
-> **警告：** {{Glossary("Base64")}} 编码很容易被解码，以得到原始的名称和密码，所以 Basic 身份验证是完全不安全的。当时用身份验证时，总是推荐使用 {{Glossary("HTTPS")}}，而在使用 `Basic` 身份验证时，更是如此。
+> [!WARNING]
+> {{Glossary("Base64")}} 编码很容易被解码，以得到原始的名称和密码，所以 Basic 身份验证是完全不安全的。当时用身份验证时，总是推荐使用 {{Glossary("HTTPS")}}，而在使用 `Basic` 身份验证时，更是如此。
 
 有关如何配置 Apache 或 Nginx 服务器，以通过 HTTP basic 身份验证保护你的网站，请参见 [HTTP 身份验证](/zh-CN/docs/Web/HTTP/Guides/Authentication)。
 

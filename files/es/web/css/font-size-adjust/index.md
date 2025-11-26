@@ -24,7 +24,6 @@ Para hacer esto de forma que sea compatible con los navegadores que no soportan 
 - `none`
   - : Escoge el tamaño de la fuente basándose sólo en función de la propiedad {{ Cssxref("font-size") }}.
 - \<número>
-
   - : Escoge el tamaño de la fuente de manera tal que su letra minúscula (determinada por la altura-x de la fuente) sea el*número* de veces el tamaño de {{ Cssxref("font-size") }}.
 
     El número especificado es generalmente la relación de aspecto de la fuente de primera elección en la propiedad {{ Cssxref("font-family") }}. Esto significa que la primera fuente, si está disponible, aparecerá con el mismo tamaño en los navegadores, soporten estos o no la propiedad {{ Cssxref("font-size-adjust") }}.

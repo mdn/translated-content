@@ -3,8 +3,6 @@ title: Authorization
 slug: Web/HTTP/Reference/Headers/Authorization
 ---
 
-{{HTTPSidebar}}
-
 Заголовок HTTP запроса **`Authorization`** включает в себя данные пользователя для проверки подлинности пользовательского агента с сервером обычно после того, как сервер ответил со статусом {{HTTPStatus("401")}} `Unauthorized` и заголовком {{HTTPHeader("WWW-Authenticate")}}.
 
 <table class="properties">
@@ -31,16 +29,12 @@ Authorization: <тип> <данные пользователя>
 ## Директивы
 
 - <тип>
-
   - : [Тип авторизации](/ru/docs/Web/HTTP/Guides/Authentication#authentication_schemes). Общий тип [«Базовая»](/ru/docs/Web/HTTP/Guides/Authentication#basic_authentication_scheme). Остальные типы:
-
     - [IANA registry of Authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)
     - [Authentification for AWS servers (`AWS4-HMAC-SHA256`)](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)
 
 - <данные пользователя>
-
   - : Если используется схема авторизации «Базовая», данные пользователя формируются следующим образом:
-
     - Логин и пароль, разделённые двоеточием (`aladdin:opensesame`).
     - Результирующая строка, закодированная в [base64](/ru/docs/Glossary/Base64) (`YWxhZGRpbjpvcGVuc2VzYW1l`).
 

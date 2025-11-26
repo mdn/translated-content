@@ -49,20 +49,17 @@ WebXR-兼容性设备包括沉浸式 3D 运动和定位跟踪耳机，通过框�
 使用 WebXR 的大多数应用程序将遵循类似的总体设计模式：
 
 1. 检查用户的设备和浏览器是否都能够呈现你想要提供的 XR 体验。
-
    1. 确保 WebXR API 可用；如果 {{domxref("navigator.xr")}} 未定义，则可以判断用户的浏览器和/或设备不支持 WebXR。如果不支持，请禁用用于激活 XR 功能的任何用户界面，并中止任何进入 XR 模式的尝试。
    2. 调用 {{DOMxRef("XR.isSessionSupported","navigator.xr.isSessionSupported()")}}, 指定要提供的 WebXR 体验模式：`inline`, `immersive-vr`, 或 `immersive-ar`, 以确定你希望提供的会话类型是否可用。
    3. 如果要使用的会话类型可用，请向用户提供适当的界面以允许他们激活它。
 
 2. 当用户通过上述的界面开启了 WebXR 功能后，通过调用 {{DOMxRef("XR.requestSession","navigator.xr.requestSession()")}}，也是指定使用的模式为以下三种之一： `inline`, `immersive-vr`, 或 `immersive-ar`后，可以将一个 {{DOMxRef("XRSession")}} 设定在期望的模式下。
 3. 当 `requestSession()` 返回的 promise 被 resolve 后，使用新的 {{domxref("XRSession")}} 在整个 WebXR 体验期间运行帧循环。
-
    1. 调用 {{domxref("XRSession")}} 的 {{DOMxRef("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} 方法，以调度 XR 设备的首帧渲染。
    2. 每一个 `requestAnimationFrame()` 的回调都需要使用 WebGL 渲染已提供信息的 3D 世界中的物体。
    3. 持续在回调中调用 {{DOMxRef("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} 保证每一帧都成功地按顺序渲染。
 
 4. 当需要结束 XR 会话的时候；或者用户主动退出 XR 模式。
-
    1. 通过调用 {{DOMxRef("XRSession.end", "XRSession.end()")}} 可手动结束 XR 会话。
    2. 无论通过何种方式（开发者、用户或者浏览器）终止会话，{{domxref("XRSession")}} 的 {{domxref("XRSession.end_event", "end")}} 事件都会接收到通知。
 
@@ -125,7 +122,8 @@ The Mozilla WebXR team has created a [WebXR API Emulator](https://blog.mozvr.com
 
 While somewhat awkward compared to using an actual headset, this makes it possible to experiment with and developer WebXR code on a desktop computer, where WebXR isn't normally available. It also lets you perform some basic testing before taking your code to a real device. Be aware, however, that the emulator does not yet completely emulate all of the WebXR API, so you may run into problems you're not expecting. Again, carefully read the readme file and make sure you're aware of the limitations before you begin.
 
-> **备注：** **Important:** You should _always_ test your code on actual AR and/or VR hardware before releasing or shipping a product! Emulated, simulated, or polyfilled environments are _not_ an adequate substitute for actual testing on physical devices.
+> [!NOTE]
+> **Important:** You should _always_ test your code on actual AR and/or VR hardware before releasing or shipping a product! Emulated, simulated, or polyfilled environments are _not_ an adequate substitute for actual testing on physical devices.
 
 Download the WebXR API Emulator for your supported browser below:
 

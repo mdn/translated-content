@@ -29,9 +29,7 @@ Les événements ont trois fonctions :
 ### Paramétres
 
 - `callback`
-
   - : Fonction qui est appelée lorsque cet événement se produit. La fonction se voit transmettre les arguments suivants :
-
     - `status`
       - : `string` Le statut du service, étant celui de `captive` s'il y a un portail captif déverrouillé présent ou `clear` si aucun portail captif n'est détecté
 

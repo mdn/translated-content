@@ -17,27 +17,24 @@ new Intl.RelativeTimeFormat(locales)
 new Intl.RelativeTimeFormat(locales, options)
 ```
 
-> **참고:** `Intl.RelativeTimeFormat()` 생성자는 오직
+> [!NOTE]
+> `Intl.RelativeTimeFormat()` 생성자는 오직
 > [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)와 함께 사용할 수 있습니다.
 > `new` 없이 호출하면 {{jsxref("TypeError")}}가 발생합니다.
 
 ### 매개변수
 
 - `locales` {{optional_inline}}
-
   - : BCP 47 언어 태그가 포함된 문자열 또는 {{jsxref("Intl.Locale")}} 인스턴스 또는 이러한 로케일 식별자의 배열입니다. `undefined`이 전달되거나 명시된 로케일 식별자가 지원되지 않는 경우 런타임의 기본 로케일이 사용됩니다. `locales` 인수의 일반적인 형식과 해석에 대해서는 [`Intl` 메인 페이지의 매개변수 설명](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument)을 참조하세요.
 
     허용되는 유니코드 확장 키는 아래와 같습니다.
-
     - `nu`
       - : [`numberingSystem`](#numberingsystem) 를 참고하세요.
 
     이 키는 아래 나열된 대로 `options`으로 설정할 수도 있습니다. 둘 다 설정된 경우 `options` 속성이 우선합니다.
 
 - `options` {{optional_inline}}
-
   - : 검색되는 순서대로 다음 속성을 포함하는 객체입니다(모두 선택 사항입니다).
-
     - `localeMatcher`
       - : 사용할 로케일 일치 알고리즘입니다. 가능한 값은 `"lookup"` 및 `"best fit"`이며, 기본값은 `"best fit"`입니다. 이 옵션에 대해 더 알고 싶으시다면 [로케일 식별 및 협상](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation)을 참고하시기 바랍니다.
     - `numberingSystem`

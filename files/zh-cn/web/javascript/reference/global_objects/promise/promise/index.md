@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3918b803fda416a26fc2b7a62976d2cd87187460
 ---
 
-{{JSRef}}
-
 **`Promise()`** 构造函数创建 {{jsxref("Promise")}} 对象。它主要用于封装尚未支持 Promise 的基于回调的 API。
 
 {{InteractiveExample("JavaScript Demo: Promise Constructor", "taller")}}
@@ -33,7 +31,8 @@ console.log(promise1);
 new Promise(executor)
 ```
 
-> **备注：** `Promise()` 只能通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 运算符来构造。如果尝试在没有使用 `new` 的情况下调用它，会抛出 {{jsxref("TypeError")}} 异常。
+> [!NOTE]
+> `Promise()` 只能通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 运算符来构造。如果尝试在没有使用 `new` 的情况下调用它，会抛出 {{jsxref("TypeError")}} 异常。
 
 ### 参数
 

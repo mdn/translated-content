@@ -125,9 +125,7 @@ table-layout: fixed;
 ### 페이지 구조 예
 
 - `{{htmlelement('html')}}`
-
   - `{{htmlelement('head')}}`
-
     - `{{htmlelement('link')}}`
 
       페이지의 표시를 위해 CSS 파일이 필요하다. 유지보수를 위해 관련되지 않은 CSS 파일을 분리하고 성능을 위해 파일 수를 최소화하라.
@@ -141,7 +139,6 @@ table-layout: fixed;
   - `{{htmlelement('body')}}`
 
     User visible page content in small chunks (`{{htmlelement('header')}}`/ `{{htmlelement('main')}}/` `{{htmlelement('table')}}`) that can be displayed without waiting for the full page to download.
-
     - `{{htmlelement('script')}}`
 
       DHTML을 위해 어떠한 스크립트라도 사용될 수 있습니다. 일반적으로 DHTML 스크립트는 페이지 불러오기가 완전히 끝나고 필요한 객체들이 모두 초기화된 후에만 동작합니다. 따라서 페이지 내용을 불러오기 전에 이러한 스크립트들을 먼저 읽어들일 필요가 없습니다. 오직 페이지 로딩시간을 증가시킬 뿐입니다.

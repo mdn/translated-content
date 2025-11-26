@@ -5,7 +5,8 @@ l10n:
   sourceCommit: a1ac64fa4da965d2a152f08221b1a9aed638fd16
 ---
 
-> **注目:** **訳注:** 翻訳記事には `page-type` キーを設定しないでください。英語版記事に設定されたキーが使用されます。以下の記事は、MDN Web Docs の構造を理解しやすくするために翻訳しておきます。
+> [!CALLOUT]
+> **訳注:** 翻訳記事には `page-type` キーを設定しないでください。英語版記事に設定されたキーが使用されます。以下の記事は、MDN Web Docs の構造を理解しやすくするために翻訳しておきます。
 
 フロントマターの `page-type` キーは MDN ページ型を記述します。
 これにより、 MDN コンテンツツールはコンテンツチェックやサイドバーの整理を自動化することができます。
@@ -18,7 +19,7 @@ title: 100 Continue
 slug: Web/HTTP/Reference/Status/100
 page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.100
-sidebar: httpsidebar
+sidebar: http
 ---
 ```
 
@@ -46,7 +47,7 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 - `learn-topic`: トピックの概要、つまり [_CSS_](/ja/docs/Learn_web_development/Core/Styling_basics) のようなモジュールの集合です。
 - `learn-module` [_HTML によるコンテンツの構造化_](/ja/docs/Learn_web_development/Core/Structuring_content)のように、モジュールの概要、つまり、順番に並んだガイドの集合です。
 - `learn-module-chapter` [_モバイルアクセシビリティ_](/ja/docs/Learn_web_development/Core/Accessibility/Mobile)のように、モジュールの一部であるガイド。
-- `learn-module-assessment` [_スキルテスト: 基本的なコントロール_](/ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Basic_controls)のように、モジュールまたはその一部の理解度を評価するためのアクティビティを含む特別なガイドです。
+- `learn-module-assessment` [_スキルテスト: 基本的なコントロール_](/ja/docs/Learn_web_development/Extensions/Forms)のように、モジュールまたはその一部の理解度を評価するためのアクティビティを含む特別なガイドです。
 - `learn-faq`: [_ドメイン名とは何ですか?_](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)のように、ウェブ開発に関する固有の質問に対する答えです。
 
 ### アクセシビリティのページ型
@@ -60,19 +61,19 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 
 この節では、[Web/CSS](/ja/docs/Web/CSS)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
-- `css-at-rule`: [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)。例えば {{cssxref("@media")}} など。
-- `css-at-rule-descriptor`: アットルール記述子。例えば [`@counter-style/prefix`](/ja/docs/Web/CSS/@counter-style/prefix) など。
-- `css-combinator`: 結合子。例えば[子孫結合子](/ja/docs/Web/CSS/Descendant_combinator)など。
-- `css-function`: [関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)。例えば {{cssxref("max")}} など。
+- `css-at-rule`: [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)。例えば {{cssxref("@media")}} など。
+- `css-at-rule-descriptor`: アットルール記述子。例えば [`@counter-style/prefix`](/ja/docs/Web/CSS/Reference/At-rules/@counter-style/prefix) など。
+- `css-combinator`: 結合子。例えば[子孫結合子](/ja/docs/Web/CSS/Reference/Selectors/Descendant_combinator)など。
+- `css-function`: [関数](/ja/docs/Web/CSS/Reference/Values/Functions)。例えば {{cssxref("max")}} など。
 - `css-keyword`: キーワード。例えば {{cssxref("inherit")}} など。
-- `css-media-feature`: [メディア特性](/ja/docs/Web/CSS/@media#メディア特性)。例えば [`hover`](/ja/docs/Web/CSS/@media/hover) など。
-- `css-module`: モジュール。例えば [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)など。
+- `css-media-feature`: [メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)。例えば [`hover`](/ja/docs/Web/CSS/Reference/At-rules/@media/hover) など。
+- `css-module`: モジュール。例えば [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)など。
 - `css-property`: プロパティ。例えば {{cssxref("background-color")}} など。
-- `css-pseudo-class`: [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)。例えば {{cssxref(":enabled")}} など。
-- `css-pseudo-element`: [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)。例えば {{cssxref("::before")}} など。
-- `css-selector`: [基本セレクター](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#基本セレクター)。例えば[クラスセレクター](/ja/docs/Web/CSS/Class_selectors)など。
-- `css-shorthand-property`: [一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)。例えば {{cssxref("background")}} など。
-- `css-type`: [データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)。例えば [`<color>`](/ja/docs/Web/CSS/color_value) など。
+- `css-pseudo-class`: [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)。例えば {{cssxref(":enabled")}} など。
+- `css-pseudo-element`: [擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)。例えば {{cssxref("::before")}} など。
+- `css-selector`: [基本セレクター](/ja/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators#基本セレクター)。例えば[クラスセレクター](/ja/docs/Web/CSS/Reference/Selectors/Class_selectors)など。
+- `css-shorthand-property`: [一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)。例えば {{cssxref("background")}} など。
+- `css-type`: [データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)。例えば [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) など。
 
 ### 用語集のページ型
 

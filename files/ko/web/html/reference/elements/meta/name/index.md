@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/meta/name
 
 {{HTMLSidebar}}
 
-{{htmlelement("meta")}} 요소는 [`name`](/ko/docs/Web/HTML/Element/meta#name) 특성을 메타데이터 이름으로, [`content`](/ko/docs/Web/HTML/Element/meta#content) 특성을 값으로 하여 문서 메타데이터를 이름-값 쌍의 형태로 제공할 때 사용할 수 있습니다.
+{{htmlelement("meta")}} 요소는 [`name`](/ko/docs/Web/HTML/Reference/Elements/meta#name) 특성을 메타데이터 이름으로, [`content`](/ko/docs/Web/HTML/Reference/Elements/meta#content) 특성을 값으로 하여 문서 메타데이터를 이름-값 쌍의 형태로 제공할 때 사용할 수 있습니다.
 
 ### HTML 명세가 정의하는 표준 메타데이터 이름
 
@@ -14,8 +14,9 @@ HTML 명세는 다음과 같은 표준 메타데이터 이름을 정의하고 �
 
 - `application-name`: 웹 페이지에서 구동 중인 애플리케이션의 이름.
 
-  > **참고:**- 브라우저가 이 값을 사용해 애플리케이션을 식별할 수 있습니다. {{htmlelement("title")}} 요소 역시 보통 애플리케이션 이름을 포함하지만, `application-name`과는 달리 문서 이름이나 상태 등 다른 정보도 존재할 수 있다는 점에서 차이가 있습니다.
+  > [!NOTE]
   >
+  > - 브라우저가 이 값을 사용해 애플리케이션을 식별할 수 있습니다. {{htmlelement("title")}} 요소 역시 보통 애플리케이션 이름을 포함하지만, `application-name`과는 달리 문서 이름이나 상태 등 다른 정보도 존재할 수 있다는 점에서 차이가 있습니다.
   > - 단순한 웹 페이지에서는 `application-name`을 지정하지 말아야 합니다.
 
 - `author`: 문서 저작자.
@@ -34,8 +35,9 @@ HTML 명세는 다음과 같은 표준 메타데이터 이름을 정의하고 �
   | `strict-origin-when-cross-origin` | 동일 출처 요청에는 매개변수를 제거한 전체 URL을 전송합니다. 목적지가 현재 문서와 동일하거나 더 높은 보안 수준(HTTP(S)→HTTPS)을 가진 경우 자신의 출처를 전송합니다. 그 외의 경우 아무 레퍼러 정보도 보내지 않습니다. |
   | `unsafe-URL`                      | 동일 출처와 교차 출처 요청 모두에 대해서 전체 URL을 전송합니다.                                                                                                                                                     |
 
-  > **참고:**- `<meta name="referrer">`의 값을 {{domxref("Document.write", "document.write()")}} 또는 {{domxref("Node.appendChild", "appendChild()")}}를 사용해 동적으로 삽입할 경우 레퍼러 동작을 예측할 수 없습니다.
+  > [!NOTE]
   >
+  > - `<meta name="referrer">`의 값을 {{domxref("Document.write", "document.write()")}} 또는 {{domxref("Node.appendChild", "appendChild()")}}를 사용해 동적으로 삽입할 경우 레퍼러 동작을 예측할 수 없습니다.
   > - 여러 정책이 서로 충돌할 경우에는 `no-referrer` 정책을 사용합니다.
 
 - [`theme-color`](/ko/docs/Web/HTML/Element/meta/name/theme-color): 사용자 에이전트가 페이지 혹은 주위의 사용자 인터페이스를 표시할 때 사용해야 할 색상에 대한 힌트. `content` 특성은 유효한 CSS {{cssxref("&lt;color&gt;")}} 색상을 포함해야 합니다.
@@ -48,8 +50,7 @@ CSS Color Adjustment 명세는 다음과 같은 메타데이터 이름을 정의
 
   브라우저는 이 정보에 더해 자신과 장치의 사용자 설정을 함께 사용해 배경, 전경, 양식 컨트롤, 스크롤 바 등 대부분의 색상을 결정합니다. `<meta name="color-scheme">`의 주 용도는 문서의 "다크 모드"와 "라이트 모드"중 호환 가능한 조합 및 둘 중 선호하는 쪽을 나타내는 것입니다.
 
-  `color-scheme`과 사용 가능한 [`content`](/ko/docs/Web/HTML/Element/meta#content) 특성의 값은 다음과 같습니다.
-
+  `color-scheme`과 사용 가능한 [`content`](/ko/docs/Web/HTML/Reference/Elements/meta#content) 특성의 값은 다음과 같습니다.
   - `normal`
     - : 문서가 특별한 색채 조합을 알지 못합니다. 렌더링 시 기본 색상 팔레트를 사용해야 합니다.
   - \[`light` | `dark`]+
@@ -79,8 +80,9 @@ CSS Device Adaptation 명세는 다음과 같은 메타데이터 이름을 정�
   | `user-scalable` | `yes` 또는 `no`                | `no`인 경우 사용자가 웹 페이지를 확대할 수 없습니다. 기본값은 `yes`입니다. 브라우저 설정에 따라 무시할 수 있고, iOS10 이상은 기본값으로 무시합니다.                                                                                                                                                                                                                           |
   | `viewport-fit`  | `auto`, `contain`, `cover`     | `auto` 값은 초기 뷰포트 레이아웃에 영향을 주지 않으며, 전체 웹 페이지를 볼 수 있습니다.`contain` 값은 디스플레이 내에 맞출 수 있는 가장 큰 사각형에 맞춰 뷰포트의 크기를 조절합니다.`cover` 값은 뷰포트의 크기를 조절해 디스플레이 전체를 채웁니다. [안전 영역](/ko/docs/Web/CSS/env) 환경 변수를 사용해 중요한 콘텐츠가 화면 밖에 놓이는 불상사가 없도록 하는 것이 좋습니다. |
 
-  > **참고:**- 비록 표준은 아니지만, `viewport`의 사실상 표준적인 위치로 인해 대부분의 모바일 브라우저가 선언을 준수합니다.
+  > [!NOTE]
   >
+  > - 비록 표준은 아니지만, `viewport`의 사실상 표준적인 위치로 인해 대부분의 모바일 브라우저가 선언을 준수합니다.
   > - 장치와 브라우저마다 기본값이 다를 수 있습니다.
 
 ##### Accessibility concerns with viewport scaling
@@ -112,8 +114,9 @@ CSS Device Adaptation 명세는 다음과 같은 메타데이터 이름을 정�
   | `noimageindex` | 크롤러가 페이지 이미지를 색인하지 않도록 요청합니다.     | [Google](https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag#valid-indexing--serving-directives)                                                                                               |
   | `nocache`      | `noarchive`와 동일합니다.                                | [Bing](https://www.bing.com/webmaster/help/which-robots-metatags-does-bing-support-5198d240)                                                                                                                                 |
 
-  > **참고:**- 협조적인 크롤러만 규칙을 존중합니다. 이메일 주소 수집기가 요청을 따를 것이라고 기대하지 마세요.
+  > [!NOTE]
   >
+  > - 협조적인 크롤러만 규칙을 존중합니다. 이메일 주소 수집기가 요청을 따를 것이라고 기대하지 마세요.
   > - 메타 태그의 규칙을 읽기 위해선 크롤러가 페이지에 접근을 하긴 해야 합니다. 대역폭을 아끼려면 {{glossary("robots.txt")}}를 사용하세요.
   > - 이미 등록된 페이지를 검색 결과에서 제거할 수단으로 `noindex`를 사용하는 것도 가능하지만, 수정 후 크롤러가 페이지에 재방문해야만 반영되므로 `robots.txt` 파일이 방문을 방지하고 있지는 않은지 확인하세요.
   > - `index`와 `noindex`, `follow`와 `nofollow`처럼 특정 값은 서로 배타적입니다. 그러나 같은 페이지에서 동시에 사용한 경우 크롤러의 행동은 정의되지 않았으며 둘 중 어느 것이라도 취할 수 있습니다.

@@ -12,17 +12,17 @@ CSS 字体加载 API 为你提供了动态加载字体资源的事件和接口�
 
 ## 概念和用法
 
-在 CSS 中你可以使用 [`@font-face`](/zh-CN/docs/Web/CSS/@font-face) 规则下载字体，并使用 [`font-family`](/zh-CN/docs/Web/CSS/font-family) 属性将字体应用于元素。但是，下载字体流程由客户端控制，大多数客户端仅会在首次需要该字体时才获取、加载该字体，这可能会导致明显的延迟。
+在 CSS 中你可以使用 [`@font-face`](/zh-CN/docs/Web/CSS/Reference/At-rules/@font-face) 规则下载字体，并使用 [`font-family`](/zh-CN/docs/Web/CSS/Reference/Properties/font-family) 属性将字体应用于元素。但是，下载字体流程由客户端控制，大多数客户端仅会在首次需要该字体时才获取、加载该字体，这可能会导致明显的延迟。
 
 CSS 字体加载 API 提供了控制和跟踪字体加载过程的能力，并允许你将其添加到 Document 或 Worker 的字体集中。将字体添加到 Document 或 Worker 的字体集中会让客户端在需要时自动获取、加载字体。字体可以在其被加入字体集之前或之后被加载，但是你*必须*先将字体添加到字体集，再将其用于绘图。
 
-你可以通过为 {{domxref('FontFace')}} 对象指定字体文件或 URL 字体源及其他属性来定义字体，其使用方式与 CSS [`@font-face`](/zh-CN/docs/Web/CSS/@font-face) 规则大致相同。`FontFace` 对象可以通过 {{domxref('Document.fonts')}} 或 {{domxref('WorkerGlobalScope.fonts')}} 被添加到 `Document` 或 `Web Worker` 的 {{domxref('FontFaceSet')}} 中。你可以使用 `FontFace` 或 `FontFaceSet` 对象下载字体，并监听加载完成事件。 `FontFaceSet` 还可用于确定加载页面所需的所有字体以及文档布局何时完成。
+你可以通过为 {{domxref('FontFace')}} 对象指定字体文件或 URL 字体源及其他属性来定义字体，其使用方式与 CSS [`@font-face`](/zh-CN/docs/Web/CSS/Reference/At-rules/@font-face) 规则大致相同。`FontFace` 对象可以通过 {{domxref('Document.fonts')}} 或 {{domxref('WorkerGlobalScope.fonts')}} 被添加到 `Document` 或 `Web Worker` 的 {{domxref('FontFaceSet')}} 中。你可以使用 `FontFace` 或 `FontFaceSet` 对象下载字体，并监听加载完成事件。 `FontFaceSet` 还可用于确定加载页面所需的所有字体以及文档布局何时完成。
 
 {{domxref('FontFace.status')}} 属性标识了字体加载状态：`unloaded`、`loading`、`loaded` 或 `failed`。此状态最初为 `unloaded`，下载文件或处理字体数据时为 `loading`，如果字体定义无效或无法加载字体数据则设置为 `failed`，成功获取（如果需要）并加载字体数据后，状态设置为 `loaded`。
 
 ### 定义字体
 
-你可以使用 [`FontFace` 构造函数](/zh-CN/docs/Web/API/FontFace/FontFace)创建字体，该函数有 3 个参数：字体家族、字体源和可选的描述符。这些参数与 [`@font-face`](/zh-CN/docs/Web/CSS/@font-face) 的参数一致。
+你可以使用 [`FontFace` 构造函数](/zh-CN/docs/Web/API/FontFace/FontFace)创建字体，该函数有 3 个参数：字体家族、字体源和可选的描述符。这些参数与 [`@font-face`](/zh-CN/docs/Web/CSS/Reference/At-rules/@font-face) 的参数一致。
 
 其中，字体源可以是字体文件的 [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)，也可以是 URL 指向的字体文件。请注意，URL 字体源需要使用 `url()` 函数包裹 URL。
 

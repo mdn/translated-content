@@ -66,7 +66,6 @@ HTML 的 head 就是 {{htmlelement("head")}} 元素裡面的內容 — 跟 {{htm
 ### 不要光是看：檢視一個簡單的範例
 
 1. 在開始這次主動學習之前，請你先到我們的 GitHub repo 中下載一份 [title-example.html page](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html)。要做到這件事情，你可以：
-
    1. 用你的文字編輯器開一個新檔案，並將原始碼複製到裡面，然後再儲存在一個合適的地方。
    2. 按下網頁上的 Raw 按鈕，它就會將原始碼以純文字的形式顯示在你瀏覽器的新分頁上。接著點按右鍵，將檔案儲存在你喜歡的地方。
 

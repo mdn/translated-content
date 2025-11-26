@@ -1,12 +1,10 @@
 ---
-title: Content-Security-Policy (CSP)
+title: Content-Security-Policy (CSP) ヘッダー
 short-title: Content-Security-Policy
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`Content-Security-Policy`** レスポンスヘッダーは、ウェブサイト管理者が、あるページにユーザーエージェントが読み込みを許可されたリソースを管理できるようにします。いくつかの例外を除いて、大半のポリシーにはサーバーオリジンとスクリプトエンドポイントの指定を含んでいます。これは{{Glossary("cross-site scripting", "クロスサイトスクリプティング")}}攻撃を防ぐのに役立ちます。
 
@@ -40,14 +38,12 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 フェッチディレクティブは、特定のリソース種別を読み込むことができる場所を制御します。
 
 - {{CSP("child-src")}}
-
   - : [ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)と、{{HTMLElement("frame")}} や {{HTMLElement("iframe")}} のような要素によって読み込まれる入れ子の閲覧コンテキストのための有効なソースを定義します。
     `frame-src` および `worker-src` の[代替](#代替)となります。
 
 - {{CSP("connect-src")}}
   - : スクリプトインターフェイスによって読み込まれる URL を制限します。
 - {{CSP("default-src")}}
-
   - : 別の{{Glossary("Fetch directive", "フェッチディレクティブ")}}に対する代替として提供します。
 
     他のすべてのフェッチディレクティブの[代替](#代替)となります。
@@ -69,7 +65,6 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("prefetch-src")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 事前にフェッチされるか描画される有効なソースを指定します。
 - {{CSP("script-src")}}
-
   - : JavaScript および WebAssembly のための有効なソースを指定します。
 
     `script-src-elem` および `script-src-attr` の[代替](#代替)となります。
@@ -79,7 +74,6 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("script-src-attr")}}
   - : JavaScript のインラインイベントハンドラーのための有効なソースを指定します。
 - {{CSP("style-src")}}
-
   - : スタイルシートのための有効なソースを指定します。
 
     `style-src-elem` および `style-src-attr` の[代替](#代替)となります。
@@ -131,7 +125,6 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 報告ディレクティブは CSP 違反の報告過程を制御します。 {{HTTPHeader("Content-Security-Policy-Report-Only")}} ヘッダーも参照してください。
 
 - {{CSP("report-to")}}
-
   - : CSP 違反情報を送信するための報告エンドポイントまたはエンドポイントグループを識別するトークンをブラウザーに提供します。
     トークンが表すエンドポイントは、他にも {{HTTPHeader("Reporting-Endpoints")}} などの HTTP ヘッダーで指定されている場合があります。
 
@@ -157,7 +150,6 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 ### 非推奨のディレクティブ
 
 - {{CSP("block-all-mixed-content")}} {{deprecated_inline}}
-
   - : ページが HTTPS を使用して読み込まれた際に、 HTTP を使用して資産を読み込むことを防止します。
 
 - {{CSP("report-uri")}} {{deprecated_inline}}
@@ -177,7 +169,9 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 
 ### 'nonce-\<ノンス値>'
 
-この値は、文字列 `nonce-` に続いて {{glossary("Base64", "base64 エンコード")}}された文字列から成ります。この文字列は、サーバーが HTTP レスポンスごとに生成するランダムな値です。例を示します。
+この値は、文字列 `nonce-` にノンス値を続けたものです。ノンス値は [Base64](/ja/docs/Glossary/Base64#base64_文字) または [URL セーフ Base64](/ja/docs/Glossary/Base64#url_およびファイル名セーフの_base64) の文字です。
+
+この文字列は、サーバーが HTTP レスポンスごとに生成するランダムな値です。例を示します。
 
 ```plain
 'nonce-416d1177-4d12-4e3b-b7c9-f6c409789fb8'
@@ -196,7 +190,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 
 ### '\<ハッシュアルゴリズム>-<ハッシュ値>'
 
-この値は、ハッシュアルゴリズムを識別する文字列に続いて、 {{glossary("Base64", "base64 エンコード")}}された文字列から成り、ハッシュ値を表します。
+この値は、ハッシュアルゴリズムを識別する文字列に `-` を続け、ハッシュ値を続けたものです。ハッシュ値は [Base64](/ja/docs/Glossary/Base64#base64_文字) または [URL セーフ Base64](/ja/docs/Glossary/Base64#url_およびファイル名セーフの_base64) の文字です。
 
 - ハッシュアルゴリズム識別子は、`sha256`、`sha384`、`sha512` のいずれかでなければなりません。
 - ハッシュ値は、 `<script>` または `<style>` リソースの base64 エンコードされた{{glossary("hash function", "ハッシュ")}}であり、SHA-256、SHA-384、SHA-512 のいずれかのハッシュ関数を使用して計算されます。
@@ -310,7 +304,8 @@ script-src 'unsafe-hashes' 'sha256-cd9827ad...'
 
 ハッシュ値がインラインイベントハンドラー属性値または `style` 属性値のハッシュと一致する場合、そのコードは実行が許可されます。
 
-> **メモ:** `'unsafe-hashes'` 値は安全ではありません。
+> [!NOTE]
+> `'unsafe-hashes'` 値は安全ではありません。
 >
 > 特に、インラインイベントハンドラー属性のコンテンツが、インライン `<script>` 要素として文書内に注入される攻撃が可能になります。インラインイベントハンドラーが以下であると仮定します。
 >

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 16bacf2194dc9e9ff6ee5bcc65316547cf88a8d9
 ---
 
-{{JSRef}}
-
 {{jsxref("SharedArrayBuffer")}} 实例的 **`maxByteLength`** 访问器属性返回当前 `SharedArrayBuffer` 可以增大到的最大长度（以字节为单位）。
 
 ## 描述

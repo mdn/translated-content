@@ -50,21 +50,17 @@ l10n:
 - [CSS 第一步](/zh-CN/docs/Learn_web_development/Core/Styling_basics)
   - : CSS（层叠样式表）用于为网页添加样式，对网页进行布局——例如，修改内容的字体、颜色、大小和间距，将内容分成多列，或添加动画和其它装饰特性。在前往掌握 CSS 基础知识（CSS 的运作方式，CSS 语法是什么样子，在 HTML 中如何使用 CSS 添加样式）的道路上，这个模块是一个很好的开始。
 - [CSS 构建块](/zh-CN/docs/Learn_web_development/Core/Styling_basics)
-
   - : 这个模块承接 [CSS 第一步](/zh-CN/docs/Learn_web_development/Core/Styling_basics)——这时你已经熟悉 CSS 语言及其语法，有了基本的使用经验，是时候再深入一些。在这个模块中，你会学习层叠和继承、可用的选择器类型、单位、大小、为背景和边框添加样式、调试，以及其它内容。
 
     这篇文章的目的是，在了解诸如[为文本添加样式](/zh-CN/docs/Learn_web_development/Core/Text_styling)和 [CSS 布局](/zh-CN/docs/Learn_web_development/Core/CSS_layout)等特定领域的知识之前，提供一个能让你编写合格 CSS 的工具集并帮助你理解基本的理论。
 
 - [选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
-
   - : 用 CSS 定位 HTML 元素，其中包含带状态的元素。
 
-- [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
-
+- [优先级](/zh-CN/docs/Web/CSS/Guides/Cascade/Specificity)
   - : 通过[优先级测验](https://estelle.github.io/CSS/selectors/exercises/specificity.html)了解浏览器算法在遇到存在冲突的 CSS 声明时会决定将哪个声明应用到元素上。
 
 - [层叠与继承](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
-
   - : 层叠、优先级和继承决定了 CSS 会如何应用于 HTML 中，以及如何解决样式声明冲突。
 
 - [为文本添加样式](/zh-CN/docs/Learn_web_development/Core/Text_styling)
@@ -85,9 +81,9 @@ l10n:
 
 ### 高级
 
-- [使用 CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [使用 CSS 变换](/zh-CN/docs/Web/CSS/Guides/Transforms/Using)
   - : 用 CSS 实现旋转、倾斜、缩放和平移。
-- [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [CSS 过渡](/zh-CN/docs/Web/CSS/Guides/Transitions/Using)
   - : CSS 过渡提供一种以动画的形式来改变 CSS 属性的方式，而非让改变立即生效。
 - [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)
   - : 学习如何使用画布元素和脚本绘制图形。

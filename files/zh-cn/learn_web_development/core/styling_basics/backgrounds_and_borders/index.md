@@ -51,9 +51,9 @@ CSS {{cssxref("background")}} 属性是本课程中我们将遇到的一些普�
 
 ### 背景颜色
 
-{{cssxref("background-color")}} 属性定义了 CSS 中任何元素的背景颜色。属性接受任何有效的 [`<color>`](/zh-CN/docs/Web/CSS/color_value) 值。`background-color` 可以延伸至元素的内容和内边距盒子的下面。
+{{cssxref("background-color")}} 属性定义了 CSS 中任何元素的背景颜色。属性接受任何有效的 [`<color>`](/zh-CN/docs/Web/CSS/Reference/Values/color_value) 值。`background-color` 可以延伸至元素的内容和内边距盒子的下面。
 
-在下面的例子中，我们用各种颜色值为盒子、标题和 {{htmlelement("span")}} 元素添加背景色。尝试修改为任何可用的 [`<color>`](/zh-CN/docs/Web/CSS/color_value) 值。
+在下面的例子中，我们用各种颜色值为盒子、标题和 {{htmlelement("span")}} 元素添加背景色。尝试修改为任何可用的 [`<color>`](/zh-CN/docs/Web/CSS/Reference/Values/color_value) 值。
 
 ```html live-sample___color
 <div class="box">
@@ -154,7 +154,7 @@ span {
 
 #### 调整背景图像的大小
 
-在上面的例子中，我们有一个很大的图像（_ballons.jpg_），由于它比作为背景的元素大，所以最后被裁剪掉了。在这种情况下，我们可以使用 {{cssxref("background-size")}} 属性，它可以设置[长度](/zh-CN/docs/Web/CSS/length)或[百分比](/zh-CN/docs/Web/CSS/percentage)值，来调整图像的大小以适应背景。
+在上面的例子中，我们有一个很大的图像（_ballons.jpg_），由于它比作为背景的元素大，所以最后被裁剪掉了。在这种情况下，我们可以使用 {{cssxref("background-size")}} 属性，它可以设置[长度](/zh-CN/docs/Web/CSS/Reference/Values/length)或[百分比](/zh-CN/docs/Web/CSS/Reference/Values/percentage)值，来调整图像的大小以适应背景。
 
 你也可以使用关键字：
 
@@ -212,7 +212,7 @@ span {
 }
 ```
 
-或者使用[长度](/zh-CN/docs/Web/CSS/length)和[百分比](/zh-CN/docs/Web/CSS/percentage)值：
+或者使用[长度](/zh-CN/docs/Web/CSS/Reference/Values/length)和[百分比](/zh-CN/docs/Web/CSS/Reference/Values/percentage)值：
 
 ```css
 .box {
@@ -275,7 +275,7 @@ span {
 
 当渐变用于背景时，也可以使用像图像一样的 {{cssxref("background-image")}} 属性设置。
 
-你可以在 MDN 的 [`<gradient>`](/zh-CN/docs/Web/CSS/gradient) 数据类型页面上，了解更多关于渐变的不同类型，以及使用它们可以做的事情。使用渐变的一个有趣的方法是使用网络上许多 CSS 渐变生成器中的一个，比如[这个](https://cssgradient.io/)。你可以创建一个渐变，然后复制和粘贴生成它的源代码。
+你可以在 MDN 的 [`<gradient>`](/zh-CN/docs/Web/CSS/Reference/Values/gradient) 数据类型页面上，了解更多关于渐变的不同类型，以及使用它们可以做的事情。使用渐变的一个有趣的方法是使用网络上许多 CSS 渐变生成器中的一个，比如[这个](https://cssgradient.io/)。你可以创建一个渐变，然后复制和粘贴生成它的源代码。
 
 在下面的示例中尝试一些不同的渐变。在这两个盒子里，我们分别有一个线性渐变，它延伸到整个盒子上，还有一个径向渐变，它有一个固定的大小，因此会重复。
 

@@ -81,7 +81,6 @@ MDN Web Docs 的部分程式碼範例儲存在獨立的版本庫中。最著名�
 
 - Web_Audio_API
 - AudioContext
-
   - AudioContext.currentTime
   - AudioContext.destination
   - AudioContext.listener
@@ -91,7 +90,6 @@ MDN Web Docs 的部分程式碼範例儲存在獨立的版本庫中。最著名�
   - ...
 
 - AudioNode
-
   - AudioNode.context
   - AudioNode.numberOfInputs
   - AudioNode.numberOfOutputs
@@ -101,7 +99,6 @@ MDN Web Docs 的部分程式碼範例儲存在獨立的版本庫中。最著名�
 
 - AudioParam
 - Events (update list)
-
   - start
   - end
   - ...

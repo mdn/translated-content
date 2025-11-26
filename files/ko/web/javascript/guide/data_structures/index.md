@@ -10,7 +10,7 @@ l10n:
 
 모든 프로그래밍 언어에는 내장된 자료구조가 존재하지만, 보통 그 내용은 언어마다 다릅니다. 이 글에서는 JavaScript에서 사용할 수 있는 내장 자료구조와 그 속성에 대해 알아보겠습니다. 그러면 이 자료구조들을 다른 자료구조 개발에 사용할 수 있을 것입니다.
 
-[언어 개요](/ko/docs/Web/JavaScript/Language_overview)는 일반적인 데이터 타입에 대한 유사한 정리된 내용을 제공하지만, 다른 언어와 더 많은 비교를 제공합니다.
+[언어 개요](/ko/docs/Web/JavaScript/Guide/Language_overview)는 일반적인 데이터 타입에 대한 유사한 정리된 내용을 제공하지만, 다른 언어와 더 많은 비교를 제공합니다.
 
 ## 동적 및 약타입
 
@@ -69,7 +69,7 @@ Undefined 타입은 [`undefined`](/ko/docs/Web/JavaScript/Reference/Global_Objec
 - 초기화(`let x;`)가 없는 변수 선언은 변수를 `undefined`로 암시적으로 초기화합니다.
 - {{jsxref("Array.prototype.find()")}} 및 {{jsxref("Map.prototype.get()")}}와 같은 대부분의 메서드는, 요소를 찾을 수 없을 때 `undefined`를 반환합니다.
 
-`null`은 언어의 핵심적인 부분에선 덜 자주 사용됩니다. 가장 중요한 위치는 [prototype chain](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)의 끝부분입니다. 이어서, {{jsxref("Object.getPrototypeOf()")}}, {{jsxref("Object.create()")}} 등 프로토타입과 상호 작용하는 메서드는 `undefined` 대신 `null`을 받거나 반환합니다.
+`null`은 언어의 핵심적인 부분에선 덜 자주 사용됩니다. 가장 중요한 위치는 [prototype chain](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)의 끝부분입니다. 이어서, {{jsxref("Object.getPrototypeOf()")}}, {{jsxref("Object.create()")}} 등 프로토타입과 상호 작용하는 메서드는 `undefined` 대신 `null`을 받거나 반환합니다.
 
 `null`은 [키워드](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#keywords)이지만, `undefined`는 전역 속성인 일반적인 [식별자](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers)입니다. 실제로는 `undefined`가 재정의되거나 가려져서는 안 되기 때문에 그 차이는 미미합니다.
 
@@ -103,7 +103,8 @@ console.log(42 / -0); // -Infinity
 
 숫자는 개념적으로 "수학적인 값"이고 항상 암시적으로 부동 소수점으로 인코딩되지만, JavaScript는 [비트 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise_operators)를 제공합니다. 비트 연산자를 적용할 때 숫자는 먼저 32비트 정수로 변환됩니다.
 
-> **참고:** [비트 마스킹](<https://ko.wikipedia.org/wiki/마스크_(컴퓨팅)>)을 사용해서 하나의 숫자 안에 다수의 불리언 값을 나타낼 때 비트 연산자를 사용할 수 있긴 하지만 이건 보통 나쁜 방법으로 여겨집니다. JavaScript는 일련의 불리언 값들을 나타내는 방법을 (배열이나 불리언 속성 값을 할당한 객체로) 제공합니다. 비트 마스킹은 코드를 읽고, 이해하고, 유지하기 힘들게 만듭니다.
+> [!NOTE]
+> [비트 마스킹](<https://ko.wikipedia.org/wiki/마스크_(컴퓨팅)>)을 사용해서 하나의 숫자 안에 다수의 불리언 값을 나타낼 때 비트 연산자를 사용할 수 있긴 하지만 이건 보통 나쁜 방법으로 여겨집니다. JavaScript는 일련의 불리언 값들을 나타내는 방법을 (배열이나 불리언 속성 값을 할당한 객체로) 제공합니다. 비트 마스킹은 코드를 읽고, 이해하고, 유지하기 힘들게 만듭니다.
 
 다만 로컬 저장소의 한정된 공간을 활용해야 한다거나, 네트워크의 비트 하나하나가 소중한 극한 상황처럼 제한된 환경에서는 이런 기술이 필요할 수도 있습니다. 비트 마스킹은 용량 최적화의 마지막 수단으로만 고려해야 합니다.
 
@@ -174,8 +175,8 @@ JavaScript에서의 객체는 속성의 컬렉션으로 볼 수 있습니다. [�
 - `writable`
   - : 할당으로 속성을 변경할 수 있는지 여부를 나타내는 불리언 값입니다.
 - `enumerable`
-  - : A boolean value indicating if the property can be enumerated by a [`for...in`](/ko/docs/Web/JavaScript/Reference/Statements/for...in) loop. See also [Enumerability and ownership of properties](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) for how enumerability interacts with other functions and syntaxes.
-  - : 속성을 [`for...in`](/ko/docs/Web/JavaScript/Reference/Statements/for...in) 루프로 열거할 수 있는지 여부를 나타내는 불리언 값입니다. 열거 가능성이 다른 함수 및 구문과 상호 작용하는 방식에 대해서는 [속성 열거 가능성 및 소유권](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)을 참조하세요.
+  - : A boolean value indicating if the property can be enumerated by a [`for...in`](/ko/docs/Web/JavaScript/Reference/Statements/for...in) loop. See also [Enumerability and ownership of properties](/ko/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) for how enumerability interacts with other functions and syntaxes.
+  - : 속성을 [`for...in`](/ko/docs/Web/JavaScript/Reference/Statements/for...in) 루프로 열거할 수 있는지 여부를 나타내는 불리언 값입니다. 열거 가능성이 다른 함수 및 구문과 상호 작용하는 방식에 대해서는 [속성 열거 가능성 및 소유권](/ko/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)을 참조하세요.
 - `configurable`
   - : 속성을 삭제할 수 있는지, 접근자 속성으로 변경할 수 있는지, 속성을 변경할 수 있는지를 나타내는 불리언 값입니다.
 
@@ -193,11 +194,11 @@ JavaScript에서의 객체는 속성의 컬렉션으로 볼 수 있습니다. [�
 - `set`
   - : 할당된 값을 포함하는 인수로 호출되는 함수입니다. 지정된 속성을 변경하려고 시도할 때마다 실행됩니다. [setters](/ko/docs/Web/JavaScript/Reference/Functions/set)도 참고하세요. `undefined`일 수 있습니다.
 - `enumerable`
-  - : 속성을 [`for...in`](/ko/docs/Web/JavaScript/Reference/Statements/for...in) 루프로 열거할 수 있는지 여부를 나타내는 불리언 값입니다. 열거 가능성이 다른 함수 및 구문과 상호 작용하는 방식에 대해서는 [속성 열거 가능성 및 소유권](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)을 참조하세요.
+  - : 속성을 [`for...in`](/ko/docs/Web/JavaScript/Reference/Statements/for...in) 루프로 열거할 수 있는지 여부를 나타내는 불리언 값입니다. 열거 가능성이 다른 함수 및 구문과 상호 작용하는 방식에 대해서는 [속성 열거 가능성 및 소유권](/ko/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)을 참조하세요.
 - `configurable`
   - : 속성을 삭제할 수 있는지, 데이터 속성으로 변경할 수 있는지, 속성을 변경할 수 있는지를 나타내는 불리언 값입니다.
 
-객체의 [prototype](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)은 다른 객체 또는 `null`을 가리킵니다. 이는 개념적으로 객체의 숨겨진 속성이며, 일반적으로 `[[Prototype]]`으로 표시됩니다. 객체의 `[[Prototype]]`속성은 객체 자체에서도 접근할 수 있습니다.
+객체의 [prototype](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)은 다른 객체 또는 `null`을 가리킵니다. 이는 개념적으로 객체의 숨겨진 속성이며, 일반적으로 `[[Prototype]]`으로 표시됩니다. 객체의 `[[Prototype]]`속성은 객체 자체에서도 접근할 수 있습니다.
 
 객체는 임시 키-값 쌍이므로, 종종 맵으로 사용됩니다. 그러나 인체 공학, 보안 및 성능 문제가 있을 수 있습니다. 대신 임의의 데이터를 저장하려면, {{jsxref("Map")}}을 사용하세요. [`Map` 참조](/ko/docs/Web/JavaScript/Reference/Global_Objects/Map#objects_vs._maps)에는 키-값 연결을 저장하기 위한 일반 객체와 Map 간의 장단점에 대한 자세한 설명이 포함되어 있습니다.
 
@@ -221,7 +222,7 @@ JavaScript에서의 객체는 속성의 컬렉션으로 볼 수 있습니다. [�
 
 보통 DOM 노드에 데이터를 연결할 땐 해당 객체에 직접 속성을 추가하거나 `data-*` 특성을 사용하겠지만, 동일한 컨텍스트에서 이렇게 추가한 데이터를 모든 스크립트에서 다 사용할 수 있다는 문제가 있습니다. `Map`과 `WeakMap`을 사용하면 비공개 데이터를 객체에 쉽게 바인딩 할 수 있습니다.
 
-`WeakMap` 및 `WeakSet`은 가비지 컬렉션이 가능한 객체 또는 [등록되지 않은 기호](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry)만 키로 허용하며, 키가 컬렉션에 남아있어도 가비지 컬렉션할 수 있습니다. 특히 [메모리 사용량 최적화](/ko/docs/Web/JavaScript/Memory_management#data_structures_aiding_memory_management)에 사용됩니다.
+`WeakMap` 및 `WeakSet`은 가비지 컬렉션이 가능한 객체 또는 [등록되지 않은 기호](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry)만 키로 허용하며, 키가 컬렉션에 남아있어도 가비지 컬렉션할 수 있습니다. 특히 [메모리 사용량 최적화](/ko/docs/Web/JavaScript/Guide/Memory_management#data_structures_aiding_memory_management)에 사용됩니다.
 
 ### 구조화된 자료: JSON
 

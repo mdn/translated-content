@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 81b27da7107783b4a4d9ff245a99d93f6d3efc3a
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 127 の変更点をまとめています。Firefox 127 は、米国時間 [2024 年 6 月 11 日](https://whattrainisitnow.com/release/?version=127) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -17,12 +15,11 @@ l10n:
 
 ### CSS
 
-- [`conic-gradient()`](/ja/docs/Web/CSS/gradient/conic-gradient)、[`linear-gradient()`](/ja/docs/Web/CSS/gradient/linear-gradient)、[`radial-gradient()`](/ja/docs/Web/CSS/gradient/radial-gradient) 関数で作成するグラデーション、および繰り返しのグラデーションの [`repeating-conic-gradient()`](/ja/docs/Web/CSS/gradient/repeating-conic-gradient)、[`repeating-linear-gradient()`](/ja/docs/Web/CSS/gradient/repeating-linear-gradient)、[`repeating-radial-gradient()`](/ja/docs/Web/CSS/gradient/repeating-radial-gradient) 関数で、[`<color-interpolation-method>`](/ja/docs/Web/CSS/color-interpolation-method) の使用をサポートしました ([Firefox bug 1861363](https://bugzil.la/1861363))。
+- [`conic-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/conic-gradient)、[`linear-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/linear-gradient)、[`radial-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/radial-gradient) 関数で作成するグラデーション、および繰り返しのグラデーションの [`repeating-conic-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient)、[`repeating-linear-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/repeating-linear-gradient)、[`repeating-radial-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/repeating-radial-gradient) 関数で、[`<color-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/color-interpolation-method) の使用をサポートしました ([Firefox bug 1861363](https://bugzil.la/1861363))。
 
 ### JavaScript
 
 - [`Set`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set) の、以下のメソッドをサポートしました ([Firefox bug 1868423](https://bugzil.la/1868423)):
-
   - [`Set.prototype.intersection()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/intersection) — 自身の Set と指定した Set の両方に存在する要素を持つ、新しい Set を返します。
   - [`Set.prototype.union()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/union) — 自身の Set と指定した Set にあるすべての要素を持つ、新しい Set を返します。
   - [`Set.prototype.difference()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/difference) — 自身の Set に存在するが指定した Set には存在しない要素を持つ、新しい Set を返します。
@@ -85,7 +82,7 @@ l10n:
 
 - **相対的な色で `calc()` カラーチャンネルをサポート:** `layout.css.relative-color-syntax.enabled`。
 
-  CSS の [`calc()`](/ja/docs/Web/CSS/calc) 関数で、[相対的な色](/ja/docs/Web/CSS/CSS_colors/Relative_colors#using_math_functions) のカラーチャンネルを解析できるようになりました ([Firefox bug 1889561](https://bugzil.la/1889561))。
+  CSS の [`calc()`](/ja/docs/Web/CSS/Reference/Values/calc) 関数で、[相対的な色](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors#using_math_functions) のカラーチャンネルを解析できるようになりました ([Firefox bug 1889561](https://bugzil.la/1889561))。
 
 - **JavaScript `Float16Array` 型付き配列**: `javascript.options.experimental.float16array`。
 

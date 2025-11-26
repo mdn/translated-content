@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/abbr
 
 {{HTMLSidebar}}
 
-El **elemento HTML `<abbr>`** (_o Elemento de Abreviación HTML_) representa una abreviación o acrónimo; el atributo opcional [`title`](/es/docs/Web/HTML/Global_attributes#title) puede ampliar o describir la abreviatura. Si está presente, el atributo `title` debe contener la descripción completa y nada más.
+El **elemento HTML `<abbr>`** (_o Elemento de Abreviación HTML_) representa una abreviación o acrónimo; el atributo opcional [`title`](/es/docs/Web/HTML/Reference/Global_attributes#title) puede ampliar o describir la abreviatura. Si está presente, el atributo `title` debe contener la descripción completa y nada más.
 
 ```html
 <p>I do <abbr title="Hypertext Markup Language">HTML</abbr></p>
@@ -14,15 +14,15 @@ El **elemento HTML `<abbr>`** (_o Elemento de Abreviación HTML_) representa una
 
 El artículo [Cómo marcar abreviaciones y hacerlas entendibles](/es/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#Abbreviations) es una guía para aprender a usar `<abbr>` y elementos relacionados.
 
-| Interfaz DOM                                                    | {{domxref("HTMLElement")}}                                                                                                                                                                             |
-| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Categorías de contenido](/es/docs/Web/HTML/Content_categories) | [Contenido dinámico](/es/docs/Web/HTML/Content_categories#contenido_dinámico), [contenido estático o de texto](/es/docs/Web/HTML/Content_categories#contenido_estático_o_de_texto), contenido palpable |
-| Conteido permitido                                              | [Contenido de estático o de texto](/es/docs/Web/HTML/Content_categories#contenido_estático_o_de_texto)                                                                                                 |
-| Elementos padre permitidos                                      | Cualquier elemento que acepte [contenido estático o de texto](/es/docs/Web/HTML/Content_categories#contenido_estático_o_de_texto)                                                                      |
+| Interfaz DOM                                                           | {{domxref("HTMLElement")}}                                                                                                                                                                                           |
+| ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Categorías de contenido](/es/docs/Web/HTML/Guides/Content_categories) | [Contenido dinámico](/es/docs/Web/HTML/Guides/Content_categories#contenido_dinámico), [contenido estático o de texto](/es/docs/Web/HTML/Guides/Content_categories#contenido_estático_o_de_texto), contenido palpable |
+| Conteido permitido                                                     | [Contenido de estático o de texto](/es/docs/Web/HTML/Guides/Content_categories#contenido_estático_o_de_texto)                                                                                                        |
+| Elementos padre permitidos                                             | Cualquier elemento que acepte [contenido estático o de texto](/es/docs/Web/HTML/Guides/Content_categories#contenido_estático_o_de_texto)                                                                             |
 
 ## Atributos
 
-Este elemento sólo incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes). El atributo [`title`](/es/docs/Web/HTML/Global_attributes#title) tiene un sentido específicamente semántico cuando es usado con el elemento `<abbr>`; _debe_ contener una completa descripción o ampliación de la abreviación. Este texto es usualmente presentado por los navegadores como tooltip cuando se pasa el mouse sobre el elemento.
+Este elemento sólo incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes). El atributo [`title`](/es/docs/Web/HTML/Reference/Global_attributes#title) tiene un sentido específicamente semántico cuando es usado con el elemento `<abbr>`; _debe_ contener una completa descripción o ampliación de la abreviación. Este texto es usualmente presentado por los navegadores como tooltip cuando se pasa el mouse sobre el elemento.
 
 Cada elemento `<abbr>` usado es independiente de todos los otros; dar un `<title>` a uno no hace que automáticamente todos los demás adquieran la misma descripción.
 

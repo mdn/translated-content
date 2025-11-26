@@ -3,8 +3,6 @@ title: Media queries
 slug: Web/CSS/CSS_media_queries
 ---
 
-{{CSSRef}}
-
 Las **consultas de medios** le permiten adaptar su sitio o aplicación dependiendo de la presencia o el valor de varias características y parámetros del dispositivo.
 
 Son un componente clave del [responsive design](/es/docs/Learn_web_development/Core/CSS_layout/Responsive_Design). Por ejemplo, una consulta de medios puede reducir el tamaño de la fuente en dispositivos pequeños, aumentar el relleno entre párrafos cuando se ve una página en modo vertical, o aumentar el tamaño de los botones en las pantallas táctiles.
@@ -15,9 +13,9 @@ En [CSS](/es/docs/Web/CSS), use la {{cssxref ("@ media")}} [at-rule](/es/docs/We
 
 En [HTML](/es/docs/Web/HTML), las consultas de medios se pueden aplicar a varios elementos:
 
-En el atributo {{HTMLElement ("link")}} [`media`](/es/docs/Web/HTML/Element/link#media) del elemento, definen los medios a los que se debe aplicar un recurso vinculado (normalmente CSS).
-En el atributo {{HTMLElement ("source")}} [`media`](/es/docs/Web/HTML/Element/source#media) del elemento, definen los medios a los que se debe aplicar esa fuente. (Esto solo es válido dentro de los elementos {{HTMLElement ("picture")}}.)
-En el atributo {{HTMLElement ("style")}} del elemento [`media`](/es/docs/Web/HTML/Element/style#media), definen los medios a los que se debe aplicar el estilo.
+En el atributo {{HTMLElement ("link")}} [`media`](/es/docs/Web/HTML/Reference/Elements/link#media) del elemento, definen los medios a los que se debe aplicar un recurso vinculado (normalmente CSS).
+En el atributo {{HTMLElement ("source")}} [`media`](/es/docs/Web/HTML/Reference/Elements/source#media) del elemento, definen los medios a los que se debe aplicar esa fuente. (Esto solo es válido dentro de los elementos {{HTMLElement ("picture")}}.)
+En el atributo {{HTMLElement ("style")}} del elemento [`media`](/es/docs/Web/HTML/Reference/Elements/style#media), definen los medios a los que se debe aplicar el estilo.
 
 ### Consultas de medios en JavaScript
 

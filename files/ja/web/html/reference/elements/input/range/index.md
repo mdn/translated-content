@@ -11,7 +11,7 @@ l10n:
 
 この種のウィジェットは厳密なものではないので、コントロールの正確な値が重要でない限り、通常は使用するべきではありません。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;range&quot;&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;range&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <p>Audio settings:</p>
@@ -307,7 +307,7 @@ input[type="range"] {
 
 CSS の {{cssxref('appearance')}} プロパティを標準外の `slider-vertical` 値に設定すると、 Chrome と Safari の古いバージョンに対応することもでき、標準外の `orient="vertical"` 属性を設定すると、 Firefox の古いバージョンに対応することもできます。
 
-例については[垂直フォームコントロールの作成](/ja/docs/Web/CSS/CSS_writing_modes/Vertical_controls)をご覧ください。
+例については[垂直フォームコントロールの作成](/ja/docs/Web/CSS/Guides/Writing_modes/Vertical_controls)をご覧ください。
 
 ## 技術的概要
 
@@ -379,5 +379,5 @@ CSS の {{cssxref('appearance')}} プロパティを標準外の `slider-vertica
 - [`<input type="number">`](/ja/docs/Web/HTML/Reference/Elements/input/number)
 - {{domxref('ValidityState.rangeOverflow')}} および {{domxref('ValidityState.rangeUnderflow')}}
 - [ConstantSourceNode による複数の引数の制御](/ja/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
-- [垂直フォームコントロールの作成](/ja/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
+- [垂直フォームコントロールの作成](/ja/docs/Web/CSS/Guides/Writing_modes/Vertical_controls)
 - [Styling the range element](https://css-tricks.com/sliding-nightmare-understanding-range-input)

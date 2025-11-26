@@ -50,22 +50,18 @@ l10n:
 すべてのマイクロフォーマットクラス名には接頭辞が使用されています。接頭辞は**ご意図は独立した構文**で、個別に開発されているものです。
 
 - **"h-\*" はルートクラス名**で、例えば "h-card", "h-entry", "h-feed" です。これらの最上位のルートクラスは、通常、型と、それに対応するプロパティの予想される語彙を示します。例えば、次のように記述します。
-
   - [h-card](https://microformats.org/wiki/h-card) は個人または組織を記述します。
   - [h-entry](https://microformats.org/wiki/h-entry) はブログ投稿のような、読み物的または日付がついたオンラインコンテンツを記述します。
   - [h-feed](https://microformats.org/wiki/h-feed) は投稿のフィードのストリームを記述します。
   - 他にも[microformats2 wiki の語彙](https://microformats.org/wiki/microformats2#v2_vocabularies)にたくさんのものがあります。
 
 - **"p-\*" はプレーン（テキスト）プロパティ**で、例えば "p-name", "p-summary" です。
-
   - 一般的なプレーンテキストの解釈、一般的な要素テキスト。特定の HTML 要素では、最初に特別な属性を使用してください。例えば、 img/alt、 abbr/title などです。
 
 - **"u-\*" は URL プロパティ**で、例えば "u-url", "u-photo", "u-logo" です。
-
   - 特別な解釈：要素の属性 a/href、img/src、object/data など、要素のコンテンツに対する属性。
 
 - **"dt-\*" は日付と時刻のプロパティ**で、例えば "dt-start", "dt-end", "dt-bday" です。
-
   - 特別な解釈：読みやすさのために、 time要素の datetime 属性、[値クラスパターン](https://microformats.org/wiki/value-class-pattern)、および別個の時刻値の解釈。
 
 - **"e-\*" は要素ツリープロパティ**で、含まれている要素階層全体が値である、例えば "e-content" です。 "e-" という接頭辞は、 "element tree", "embedded markup", "encapsulated markup" と覚えやすい名前としても使用できます。

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5e1ef83ea9bd743f814258096abb05bdeb9c5ccf
 ---
 
-{{AddonSidebar}}
-
 在浏览器操作图标被点击时触发的事件。如果浏览器操作有弹出窗口，该事件将不会触发。
 
 要定义右键单击操作，请使用 [`contextMenus`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/menus) API 和“browser_action”[上下文类型](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType)。
@@ -33,17 +31,12 @@ browser.browserAction.onClicked.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 事件发生时调用的函数。该函数传递以下参数：
-
     - `tab`
-
       - : {{WebExtAPIRef('tabs.Tab')}}。图标被点击时活动的标签页。
 
     - `OnClickData`
-
       - : 一个包含点击信息的对象。
-
         - `modifiers`
           - : 一个 `array`。点击时活动的键盘修饰符，可以是 `Shift`、`Alt`、`Command`、`Ctrl` 或 `MacCtrl` 中的一个或多个。
         - `button`

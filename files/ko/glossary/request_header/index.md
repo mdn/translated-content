@@ -32,5 +32,5 @@ Cache-Control: max-age=0
 
 ## 같이 보기
 
-- [모든 HTTP 헤더 목록](/ko/docs/Web/HTTP/Headers)
+- [모든 HTTP 헤더 목록](/ko/docs/Web/HTTP/Reference/Headers)
 - [RFC 9110, section 6.3: 헤더 필드](https://httpwg.org/specs/rfc9110.html#header.fields)

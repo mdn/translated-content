@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Authorization
 original_slug: Web/HTTP/Headers/Authorization
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`Authorization`** 요청 헤더는 서버의 사용자 에이전트임을 증명하는 자격을 포함하여, 보통 서버에서 {{HTTPStatus("401")}} `Unauthorized` 상태를 {{HTTPHeader("WWW-Authenticate")}} 헤더로 알려준 이후에 나옵니다.
 
 <table class="properties">
@@ -30,16 +28,12 @@ Authorization: <type> <credentials>
 ## 지시자
 
 - \<type>
-
-  - : [인증 타입](/ko/docs/Web/HTTP/Authentication#%EC%9D%B8%EC%A6%9D_%EC%8A%A4%ED%82%B4). 보통 타입은 ["Basic"](/ko/docs/Web/HTTP/Authentication#Basic_%EC%9D%B8%EC%A6%9D_%EC%8A%A4%ED%82%B4)이며. 다른 타입으로:
-
+  - : [인증 타입](/ko/docs/Web/HTTP/Guides/Authentication#%EC%9D%B8%EC%A6%9D_%EC%8A%A4%ED%82%B4). 보통 타입은 ["Basic"](/ko/docs/Web/HTTP/Guides/Authentication#Basic_%EC%9D%B8%EC%A6%9D_%EC%8A%A4%ED%82%B4)이며. 다른 타입으로:
     - [IANA registry of Authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)
     - [Authentification for AWS servers (`AWS4-HMAC-SHA256`)](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)
 
 - \<credentials>
-
   - : 만약 "Basic" 인증 스킴이 사용되었다면, 증명은 다음과 같이 만들어집니다:
-
     - 사용자명과 비밀번호가 콜론을 이용하여 합쳐집니다(`aladdin:opensesame`).
     - 그 결과에 대한 문자열을 [base64](/ko/docs/Glossary/Base64) 로 인코딩합니다 (`YWxhZGRpbjpvcGVuc2VzYW1l`).
 
@@ -52,7 +46,7 @@ Authorization: <type> <credentials>
 Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 
-HTTP basic 인증을 사용하여 비밀번호를 보호하기 위해 Apache 또는 nginx 서버를 어떻게 설정해야 하는지 예제를 보기 위해서는 [HTTP authentication](/ko/docs/Web/HTTP/Authentication) 를 보시기 바랍니다.
+HTTP basic 인증을 사용하여 비밀번호를 보호하기 위해 Apache 또는 nginx 서버를 어떻게 설정해야 하는지 예제를 보기 위해서는 [HTTP authentication](/ko/docs/Web/HTTP/Guides/Authentication) 를 보시기 바랍니다.
 
 ## 기술 사양
 
@@ -63,7 +57,7 @@ HTTP basic 인증을 사용하여 비밀번호를 보호하기 위해 Apache 또
 
 ## 함께 더 보기
 
-- [HTTP authentication](/ko/docs/Web/HTTP/Authentication)
+- [HTTP authentication](/ko/docs/Web/HTTP/Guides/Authentication)
 - {{HTTPHeader("WWW-Authenticate")}}
 - {{HTTPHeader("Proxy-Authorization")}}
 - {{HTTPHeader("Proxy-Authenticate")}}

@@ -30,9 +30,7 @@ l10n:
 - {{domxref("BackgroundFetchRegistration.result")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 初期状態では空文字列。完了時には `"success"` または `"failure"` という文字列。
 - {{domxref("BackgroundFetchRegistration.failureReason")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-
   - : 下記文字列のいずれかの値をとります。
-
     - `""`
       - : バックグラウンドフェッチが完了していない、もしくは成功したとき。
     - `"aborted"`
@@ -63,7 +61,6 @@ l10n:
 [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) を用いて、または、このインターフェイスの `oneventname` プロパティにイベントリスナーを割り当てて、これらイベントの発生を待ち受けてください。
 
 - [`progress`](/ja/docs/Web/API/BackgroundFetchRegistration/progress_event) {{Experimental_Inline}}
-
   - : 次のプロパティのいずれかに変化があったとき、発火されます。:
     {{domxref("BackgroundFetchRegistration.uploaded", "uploaded")}} 、
     {{domxref("BackgroundFetchRegistration.downloaded", "downloaded")}} 、

@@ -22,13 +22,11 @@ l10n:
 ## 関連情報
 
 - [空白文字](https://ja.wikipedia.org/wiki/空白文字)
-- [ホワイトスペースは HTML、CSS、そしてDOM 内でどう扱われるか](/ja/docs/Web/API/Document_Object_Model/Whitespace)
+- [ホワイトスペースは HTML、CSS、そしてDOM 内でどう扱われるか](/ja/docs/Web/CSS/Guides/Text/Whitespace)
 - {{cssxref("white-space")}}
 - 仕様書
-
   - [ASCII whitespace spec](https://infra.spec.whatwg.org/#ascii-whitespace)
   - [ECMAScript Language Specification](https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html#sec-white-space)
 
 - 関連用語:
-
   1. {{Glossary("Character", "文字")}}

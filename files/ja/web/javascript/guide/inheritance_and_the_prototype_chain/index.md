@@ -552,7 +552,7 @@ const filledRectangle = new FilledRectangle(5, 10, "blue");
 // filledRectangle ---> FilledRectangle.prototype ---> Rectangle.prototype ---> Object.prototype ---> null
 ```
 
-クラスは、複雑な継承構造を定義する際に、最高の読みやすさと保守性を実現します。 プロトタイプ継承には、プライベートプロパティという機能に代わるものはいくつかあります。 しかし、クラスは従来のコンストラクター関数よりも最適化されておらず、古い環境では対応していません。
+クラスは、複雑な継承構造を定義する際に、最高の読みやすさと保守性を実現します。[プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements) は、プロトタイプ継承では簡単に置き換えることができない機能です。しかし、クラスは従来のコンストラクター関数よりも最適化されておらず、古い環境では対応していません。
 
 ### Object.setPrototypeOf() で
 
@@ -571,7 +571,8 @@ Object.setPrototypeOf(obj, anotherObj);
 
 すべてのオブジェクトは [`Object.prototype.__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) セッターを継承しており、これを使用して既存のオブジェクトの `[[Prototype]]` を設定することができます（`__proto__` キーがオブジェクトでオーバーライドされていない場合）。
 
-> **警告:** `Object.prototype.__proto__` アクセサーは**標準外**で非推奨です。 代わりに、常に `Object.setPrototypeOf` を使用する必要があります。
+> [!WARNING]
+> `Object.prototype.__proto__` アクセサーは**標準外**で非推奨です。 代わりに、常に `Object.setPrototypeOf` を使用する必要があります。
 
 ```js
 const obj = {};

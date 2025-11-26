@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Vary
 original_slug: Web/HTTP/Headers/Vary
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de resposta HTTP **`Vary`** determina como corresponder futuros cabeçalhos de requisição para decidir se uma resposta cacheada pode ser usada ao invés de solicitar uma nova do servidor de origem. Ele é usado pelo servidor para indicar quais cabeçalhos ele utilizou quando selecionando a representação do recurso em um algoritmo de [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Guides/Content_negotiation).
 
 O cabeçalho `Vary` deve ser colocado em uma resposta {{HTTPStatus("304")}} `Not Modified` exatamente como seria colocado em uma resposta {{HTTPStatus("200")}} `OK` equivalente.

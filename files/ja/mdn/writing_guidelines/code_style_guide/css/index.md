@@ -101,7 +101,6 @@ h3 {
   ```
 
 - CSS の一括指定には潜在的な落とし穴があります。明示的に設定していない構文の属値に既定値が設定され、カスケードで先に設定した値を予期せぬ形でリセットしてしまったり、その他の予期せぬ効果をもたらす可能性があるからです。例えば {{cssxref("grid")}} プロパティは、指定されていない項目に対して、以下のすべての既定値を設定します。
-
   - {{cssxref("grid-template-rows")}}: `none`
   - {{cssxref("grid-template-columns")}}: `none`
   - {{cssxref("grid-template-areas")}}: `none`
@@ -121,11 +120,11 @@ h3 {
   animation: 3s ease-in 1s 2 reverse both paused slide-in;
   ```
 
-  例として、 [`<time>`](/ja/docs/Web/CSS/time) として解釈できる最初の値は [`animation-duration`](/ja/docs/Web/CSS/animation-duration) に割り当てられ、 2 つ目の値は [`animation-delay`](/ja/docs/Web/CSS/animation-delay) に割り当てられます。詳しくは、 [animation の構文](/ja/docs/Web/CSS/animation#構文)の詳細をご覧ください。
+  例として、 [`<time>`](/ja/docs/Web/CSS/Reference/Values/time) として解釈できる最初の値は [`animation-duration`](/ja/docs/Web/CSS/Reference/Properties/animation-duration) に割り当てられ、 2 つ目の値は [`animation-delay`](/ja/docs/Web/CSS/Reference/Properties/animation-delay) に割り当てられます。詳しくは、 [animation の構文](/ja/docs/Web/CSS/Reference/Properties/animation#構文)の詳細をご覧ください。
 
 ### 「モバイルファースト」のメディアクエリーを使う
 
-同じスタイルシート内で[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)を使用して、様々なターゲットのビューポートサイズによって異なるスタイルのセットを入れるとき、メディアクエリーが文書に適用される前の既定のスタイルを狭い画面／モバイルスタイルとし、その後メディアクエリー内で広いビューポート用に上書きするのはよい考えです。これには多くの利点があり、[モバイルファースト](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)の記事で概説しています。
+同じスタイルシート内で[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)を使用して、様々なターゲットのビューポートサイズによって異なるスタイルのセットを入れるとき、メディアクエリーが文書に適用される前の既定のスタイルを狭い画面／モバイルスタイルとし、その後メディアクエリー内で広いビューポート用に上書きするのはよい考えです。これには多くの利点があり、[モバイルファースト](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)の記事で概説しています。
 
 ```css example-good
 /* 狭い画面向けの既定の CSS レイアウト値 */
@@ -146,7 +145,6 @@ h3 {
 ## セレクター
 
 - ID セレクターを使用しないでください。理由は以下の通りです。
-
   - ID セレクターは柔軟性に欠け、複数必要だとわかっても追加できません。
   - クラスよりも特異性が高く、必要な場合に上書きするのが難しいです。
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1b4f28b8a92b0839dc7cb0af67166385764a8585
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 111 の変更点をまとめています。Firefox 111 は、米国時間 2023 年 3 月 14 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -24,7 +22,7 @@ l10n:
 
 - CSS 色の関数 `color()`、`lab()`、`lch()`、`oklab()`、`oklch()` をサポートしました。
   これらの機能はデフォルトで無効であり、設定項目 `layout.css.more_color_4.enabled` を true に設定すると有効にできます。
-  詳しくは [CSS color value](/ja/docs/Web/CSS/color_value) の文書をご覧ください ([Firefox bug 1352757](https://bugzil.la/1352757) および [Firefox bug 1128204](https://bugzil.la/1128204))。
+  詳しくは [CSS color value](/ja/docs/Web/CSS/Reference/Values/color_value) の文書をご覧ください ([Firefox bug 1352757](https://bugzil.la/1352757) および [Firefox bug 1128204](https://bugzil.la/1128204))。
 
 #### 廃止
 

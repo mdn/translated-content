@@ -14,7 +14,7 @@ Sin embargo, el término paraguas "JavaScript", tal como se entiende en un conte
 
 ## JavaScript, el núcleo del lenguaje (ECMAScript)
 
-EL núcleo del lenguaje JavaScript está estandarizado por el Comité ECMA TC39 como un lenguaje llamado [ECMAScript](/es/docs/Web/JavaScript/JavaScript_technologies_overview). La última versión de la especificación es [ECMAScript 6.0](https://www.ecma-international.org/ecma-262/6.0/).
+EL núcleo del lenguaje JavaScript está estandarizado por el Comité ECMA TC39 como un lenguaje llamado [ECMAScript](/es/docs/Web/JavaScript/Reference/JavaScript_technologies_overview). La última versión de la especificación es [ECMAScript 6.0](https://www.ecma-international.org/ecma-262/6.0/).
 
 Éste núcleo del lenguaje es también usado en ambientes No-Navegadores, por ejemplo en [node.js](https://nodejs.org/).
 

@@ -227,7 +227,6 @@ const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
 これは 2 つの引数を取ることがわかります。
 
 - グローバル変数について記述した 2 つのプロパティを含むオブジェクトです。
-
   - `value`: データ型は、 WebAssembly モジュールで受け入れられるもの (`i32`, `i64`, `f32`, `f64`) ならばどれでも構いません。
   - `mutable`: 論理値で、値が変更可能かどうかを定義します。
 
@@ -271,7 +270,8 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 );
 ```
 
-> **メモ:** [GitHub の動作例](https://mdn.github.io/webassembly-examples/js-api-examples/global.html) を見ることができます。[ソースコード](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/global.html)も見てください。
+> [!NOTE]
+> [GitHub の動作例](https://mdn.github.io/webassembly-examples/js-api-examples/global.html) を見ることができます。[ソースコード](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/global.html)も見てください。
 
 ## 多重性
 

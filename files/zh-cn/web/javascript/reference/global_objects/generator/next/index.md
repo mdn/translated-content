@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
-
 {{jsxref("Generator")}} 实例的 **`next()`** 方法返回一个包含属性 `done` 和 `value` 的对象。你也可以通过向 `next` 方法传入一个参数来向生成器传一个值。
 
 ## 语法
@@ -19,7 +17,6 @@ next(value)
 ### 参数
 
 - `value` {{optional_inline}}
-
   - : 要传给生成器的值。
 
     该值将作为 `yield` 表达式的结果。例如，在 `variable = yield expression` 中，传入给 `.next()` 函数的值将被分配给 `variable`。

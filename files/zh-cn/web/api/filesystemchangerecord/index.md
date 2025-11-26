@@ -14,9 +14,7 @@ l10n:
 ## 实例属性
 
 - `changedHandle`
-
   - : 对观察到变化的文件系统句柄的引用。
-
     - 对于用户可观察的文件系统，这可以是 {{domxref("FileSystemFileHandle")}} 或 {{domxref("FileSystemDirectoryHandle")}}。
     - 对于[源私有文件系统](/zh-CN/docs/Web/API/File_System_API/Origin_private_file_system)（OPFS），它可以是 {{domxref("FileSystemFileHandle")}}、{{domxref("FileSystemDirectoryHandle")}} 或 {{domxref("FileSystemSyncAccessHandle")}}。
 

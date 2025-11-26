@@ -30,13 +30,11 @@ _La interfaz `History` no hereda ninguna propiedad._
 _La interfaz `History` no hereda ningún método._
 
 - {{domxref("History.back","back()")}}
-
   - : Este método asíncrono va a la página anterior en el historial de la sesión, la misma acción que cuando el usuario hace clic en el botón <kbd>Atrás</kbd> del navegador. Equivalente a `history.go(-1)`.
 
     Llamar a este método para volver más allá de la primera página en el historial de la sesión no tiene ningún efecto y no genera una excepción.
 
 - {{domxref("History.forward","forward()")}}
-
   - : Este método asincrónico va a la página siguiente en el historial de la sesión, la misma acción que cuando el usuario hace clic en el botón <kbd>Adelante</kbd> del navegador; esto es equivalente a `history.go(1)`.
 
     Llamar a este método para avanzar más allá de la página más reciente en el historial de la sesión no tiene ningún efecto y no genera una excepción.

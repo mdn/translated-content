@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 814f49dc14eb8c8a15c6c3bdc6c83d24ed865cdf
 ---
 
-{{AddonSidebar}}
-
 为扩展注册用户脚本。
 
 ## 语法
@@ -20,7 +18,6 @@ let registeredUserScript = browser.userScripts.register(
 ### 参数
 
 - `scripts`
-
   - : {{WebExtAPIRef("userScripts.RegisteredUserScript")}} 的数组（`array`）。要注册的用户脚本的详细信息。
 
     每个 {{WebExtAPIRef("userScripts.RegisteredUserScript")}} 对象必须包含非空数组的 `js` 属性，以及非空数组的 `matches` 和 `includeGlobs` 其中之一。

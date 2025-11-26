@@ -2,14 +2,13 @@
 title: "<audio>: 埋め込み音声要素"
 slug: Web/HTML/Reference/Elements/audio
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: b0c2ce683687410406fa7ccdef391ff1d41503bb
 ---
 
-{{HTMLSidebar}}
+**`<audio>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書内に音声コンテンツを埋め込むために使用します。この要素は、1 つまたは複数の音源を含むことができます。音源は `src` 属性または {{HTMLElement("source")}} 要素を使用して表し、ブラウザーがもっとも適切な音源を選択します。
+また、 {{domxref("MediaStream")}} を使用してストリーミングメディアを指し示すこともできます。
 
-**`<audio>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書内に音声コンテンツを埋め込むために使用します。この要素は、1 つまたは複数の音源を含むことができます。音源は `src` 属性または {{HTMLElement("source")}} 要素を使用して表し、ブラウザーがもっとも適切な音源を選択します。また、 {{domxref("MediaStream")}} を使用してストリーミングメディアを指し示すこともできます。
-
-{{InteractiveExample("HTML Demo: &lt;audio&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;audio&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <figure>
@@ -25,7 +24,8 @@ figure {
 }
 ```
 
-上記の例は、 `<audio>` 要素の基本的な使用方法を示しています。 {{htmlelement("img")}} 要素と同様の方法で、埋め込みたいメディアへのパスを `src` 属性に設定します。他にも自動再生や繰り返しを行うかどうか、ブラウザーの既定のオーディオコントロールを表示したいかどうか、などの情報を指定する属性を含めることができます。
+上記の例は、 `<audio>` 要素の基本的な使用方法を示しています。
+{{htmlelement("img")}} 要素と同様の方法で、埋め込みたいメディアへのパスを `src` 属性に設定します。他にも自動再生や繰り返しを行うかどうか、ブラウザーの既定のオーディオコントロールを表示したいかどうか、などの情報を指定する属性を含めることができます。
 
 開始および終了タグ `<audio></audio>` の中のコンテンツは、この要素に対応してないブラウザーで代替表示されます。
 
@@ -34,26 +34,24 @@ figure {
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `autoplay`
-
   - : 論理属性。指定された場合、音声ファイル全体のダウンロードの完了を待たずに、再生可能な状態になった時点で即座にコンテンツの再生が始まります。
 
     > [!NOTE]
-    > 自動的に音声（あるいは音声トラックを含む動画）を再生するサイトはユーザーにとって不快な体験になる可能性がありますので、可能な限り避けるべきです。自動再生機能が必須である場合は、オプトイン（ユーザーが明示的に有効化することを求める）にするべきです。ただし、ユーザーの制御下で後からソースを設定するメディア要素を作成するときは、この方法が役に立つでしょう。[自動再生ガイド](/ja/docs/Web/Media/Guides/Autoplay)には autoplay の正しい使い方についての追加情報があります。
+    > 自動的に音声（あるいは音声トラックを含む動画）を再生するサイトはユーザーにとって不快な体験になる可能性がありますので、可能な限り避けるべきです。
+    > 自動再生機能が必須である場合は、オプトイン（ユーザーが明示的に有効化することを求める）にするべきです。
+    > ただし、ユーザーの制御下で後からソースを設定するメディア要素を作成するときは、この方法が役に立つでしょう。
+    > [自動再生ガイド](/ja/docs/Web/Media/Guides/Autoplay)には autoplay の正しい使い方についての追加情報があります。
 
 - `controls`
-
   - : この属性が指定された場合、ブラウザーは再生・一時停止、音量、シークの各機能を制御するコントロールを表示します。
 
 - `controlslist`
-
   - : [`controlslist`](https://wicg.github.io/controls-list/explainer.html) 属性は、指定された場合、ブラウザーが自分自身で一連のコントロールを表示するとき（つまり、 `controls` 属性が指定されたとき）、 `audio` 要素にどのようなコントロールを表示するかを選択するのを支援します。
 
     取ることができる値は `nodownload`、`nofullscreen`、`noremoteplayback` です。
 
 - [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)
-
   - : この列挙型の属性は、関連する音声ファイルを取得する際に CORS を使用するかを示します。[CORS が有効なリソース](/ja/docs/Web/HTML/How_to/CORS_enabled_image) は、*汚染*されることなく {{HTMLElement("canvas")}} 要素で再利用できます。次の値が使用できます:
-
     - `anonymous`
       - : 資格情報を伴わずにオリジン間リクエストを実行します。すなわち、 Cookie や X.509 証明書がない `Origin:` HTTP ヘッダーを送信したり、 HTTP ベーシック認証を行ったりしません。サーバーが元のサイトに信用情報を付与しない場合 (`Access-Control-Allow-Origin:` HTTP ヘッダーの設定なし)、画像が*汚染*され、その使用も制限されます。
     - `use-credentials`
@@ -62,8 +60,7 @@ figure {
     この属性が存在しない場合、リソースは CORS リクエストなしで (すなわち、 `Origin:` HTTP ヘッダーなしで) 取得され、 {{HTMLElement('canvas')}} 要素での汚染されない使用が妨げられます。これが無効な場合、列挙型のキーワードに **anonymous** が指定されたものとして扱われます。追加の情報は [CORS 設定属性](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)を参照してください。
 
 - `disableremoteplayback`
-
-  - : 論理属性で、有線 (HDMI, DVI, など) や無線技術 (Miracast, Chromecast, DLNA, AirPlay, など) で接続された機器のリモート再生機能を無効にするために使用します。詳しくは[この提案中の仕様書](https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute)をご覧ください。
+  - : 論理属性で、有線 (HDMI, DVI, など) や無線技術 (Miracast, Chromecast, DLNA, AirPlay, など) で接続された機器のリモート再生機能を無効にするために使用します。詳しくは[リモート再生 API 仕様書](https://w3c.github.io/remote-playback/#the-disableremoteplayback-attribute)をご覧ください。
 
     Safari では、代替として [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) を使用することができます。
 
@@ -72,9 +69,7 @@ figure {
 - `muted`
   - : 論理型の属性で、音声の既定の設定を示します。この属性を設定すると、初期状態が消音になります。既定値は `false` です。
 - `preload`
-
   - : {{Glossary("enumerated","列挙型")}}の属性で、ユーザーに取って最良の結果をもたらすと作者が考えていることのヒントをブラウザーに伝えるためのものです。以下の値のうちひとつを持つことができます。
-
     - `none`: 音声を事前に読み込むべきではないことを示します。
     - `metadata`: 音声のメタデータ (例えば、長さ) を読み込みます。
     - `auto`: ユーザーが音声ファイルを使用しないと思われる場合でも、ファイル全体をダウンロードしてよいことを示します。
@@ -92,154 +87,48 @@ figure {
 
 ## イベント
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">イベント名</th>
-      <th scope="col">発生するとき</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{domxref("ScriptProcessorNode/audioprocess_event", "audioprocess")}}</td>
-      <td>
-        {{DOMxRef("ScriptProcessorNode")}} の入力バッファーの処理の準備ができた。
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.canplay_event", 'canplay')}}
-      </td>
-      <td>
-        ブラウザーがメディアを再生できるようになったものの、追加のバッファリングのために停止することなくメディアの最後まで再生するには、充分なデータが読み込まれていないとみられる。
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}}
-      </td>
-      <td>
-        ブラウザーがコンテンツのバッファリングのために停止することなく最後までメディアを再生することができるとみられる。
-      </td>
-    </tr>
-    <tr>
-      <td>{{domxref("OfflineAudioContext/complete_event", "complete")}}</td>
-      <td>
-        {{DOMxRef("OfflineAudioContext")}} のレンダリングが終了した。
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}}
-      </td>
-      <td><code>duration</code> 属性が更新された。</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}
-      </td>
-      <td>
-        メディアが空になった。例えば、このイベントはメディアがすでに読み込まれた (または部分的に読み込まれた) 状態で、再読み込みのために {{domxref("HTMLMediaElement.load")}} メソッドが呼び出された場合など。
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.ended_event", 'ended')}}
-      </td>
-      <td>メディアの末尾に達したために再生が停止した。</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}}
-      </td>
-      <td>メディアの最初のフレームが読み込み終わった。</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}}
-      </td>
-      <td>メタデータを読み込み終えた。</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.loadstart_event", 'loadstart')}}
-      </td>
-      <td>ブラウザーがリソースの読み込みを始めたときに発生します。</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.pause_event", 'pause')}}
-      </td>
-      <td>再生が一時停止した。</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.play_event", 'play')}}
-      </td>
-      <td>再生が始まった。</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.playing_event", 'playing')}}
-      </td>
-      <td>
-        データがなくなったために一時停止または遅延した後で、再生の再開の準備ができた。
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}}
-      </td>
-      <td>再生レートが変更された。</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.seeked_event", 'seeked')}}
-      </td>
-      <td><em>シーク</em>操作が完了した。</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}
-      </td>
-      <td><em>シーク</em>捜査が始まった。</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.stalled_event", 'stalled')}}
-      </td>
-      <td>
-        ユーザーエージェントがメディアを読み込もうとしているが、データが予期せずに入ってこない。
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.suspend_event", 'suspend')}}
-      </td>
-      <td>メディアデータの読み込みが停止した。</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}}
-      </td>
-      <td>
-        <code>currentTime</code> 属性で示されている時刻が更新された。
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}}
-      </td>
-      <td>音量が変更された。</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.waiting_event", 'waiting')}}
-      </td>
-      <td>一時的なデータの不足により、再生が停止した。</td>
-    </tr>
-  </tbody>
-</table>
+- {{domxref("ScriptProcessorNode/audioprocess_event", "audioprocess")}} {{Deprecated_Inline}}
+  - : {{DOMxRef("ScriptProcessorNode")}} の入力バッファーの処理の準備ができた。
+- {{domxref("HTMLMediaElement.canplay_event", 'canplay')}}
+  - : ブラウザーがメディアを再生できるようになったものの、追加のバッファリングのために停止することなくメディアの最後まで再生するには、充分なデータが読み込まれていないとみられる。
+- {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}}
+  - : ブラウザーがコンテンツのバッファリングのために停止することなく最後までメディアを再生することができるとみられる。
+- {{domxref("OfflineAudioContext/complete_event", "complete")}}
+  - : {{DOMxRef("OfflineAudioContext")}} のレンダリングが終了した。
+- {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}}
+  - : `duration` 属性が更新された。
+- {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}
+  - : メディアが空になった。例えば、このイベントはメディアがすでに読み込まれた (または部分的に読み込まれた) 状態で、再読み込みのために {{domxref("HTMLMediaElement.load")}} メソッドが呼び出された場合など。
+- {{domxref("HTMLMediaElement.ended_event", 'ended')}}
+  - : メディアの末尾に達したために再生が停止した。
+- {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}}
+  - : メディアの最初のフレームが読み込み終わった。
+- {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}}
+  - : メタデータを読み込み終えた。
+- {{domxref("HTMLMediaElement.loadstart_event", 'loadstart')}}
+  - : ブラウザーがリソースの読み込みを始めたときに発生します。
+- {{domxref("HTMLMediaElement.pause_event", 'pause')}}
+  - : 再生が一時停止した。
+- {{domxref("HTMLMediaElement.play_event", 'play')}}
+  - : 再生が始まった。
+- {{domxref("HTMLMediaElement.playing_event", 'playing')}}
+  - : データがなくなったために一時停止または遅延した後で、再生の再開の準備ができた。
+- {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}}
+  - : 再生レートが変更された。
+- {{domxref("HTMLMediaElement.seeked_event", 'seeked')}}
+  - : シーク操作が完了した。
+- {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}
+  - : シーク操作が始まった。
+- {{domxref("HTMLMediaElement.stalled_event", 'stalled')}}
+  - : ユーザーエージェントがメディアを読み込もうとしているが、データが予期せずに入ってこない。
+- {{domxref("HTMLMediaElement.suspend_event", 'suspend')}}
+  - : メディアデータの読み込みが停止した。
+- {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}}
+  - : `currentTime` 属性で示されている時刻が更新された。
+- {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}}
+  - : 音量が変更された。
+- {{domxref("HTMLMediaElement.waiting_event", 'waiting')}}
+  - : 一時的なデータの不足により、再生が停止した。
 
 ## 使用上の注意
 
@@ -310,7 +199,8 @@ HTML の `<audio>` 要素の使用に関する良い情報源として、 [HTML 
 - {{domxref("HTMLMediaElement.textTracks")}}
   - : `addtrack` リスナーをこの {{domxref("TextTrackList")}} オブジェクトに追加することで、要素にテキストトラックが追加されたときに通知を受け取ることができます。
 
-> **メモ:** `<audio>` 要素であっても、動画やテキストトラックリストを持っており、インターフェイスの実装の仕様が奇妙に見えますが、実際に動画を表示するために使用することができます。
+> [!NOTE]
+> `<audio>` 要素であっても、動画やテキストトラックリストを持っており、インターフェイスの実装の仕様が奇妙に見えますが、実際に動画を表示するために使用することができます。
 
 例えば、次のようなコードで `<audio>` 要素で音声トラックが追加されたり削除されたりしたときを検出することができます。
 
@@ -418,7 +308,9 @@ elem.audioTrackList.onremovetrack = (event) => {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>
         <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
@@ -446,7 +338,7 @@ elem.audioTrackList.onremovetrack = (event) => {
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >対応するロールなし</a
         >
       </td>
@@ -473,7 +365,6 @@ elem.audioTrackList.onremovetrack = (event) => {
 ## 関連情報
 
 - [ウェブメディア技術](/ja/docs/Web/Media)
-
   - [メディアコンテナー形式 (ファイル形式)](/ja/docs/Web/Media/Guides/Formats/Containers)
   - [ウェブで使用される音声コーデックのガイド](/ja/docs/Web/Media/Guides/Formats/Audio_codecs)
 

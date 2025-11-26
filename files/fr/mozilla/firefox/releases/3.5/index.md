@@ -3,8 +3,6 @@ title: Firefox 3.5 pour les développeurs
 slug: Mozilla/Firefox/Releases/3.5
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'une gestion améliorée d'une grande variété de standards du Web. Cet article en fournit une longue liste, avec des liens vers des articles décrivant les améliorations majeures.
 
 ## Nouvelles fonctionnalités pour les développeurs dans Firefox 3.5
@@ -13,8 +11,8 @@ Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'
 
 #### HTML5
 
-- [Utilisation d'audio et vidéo dans Firefox](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-  - : Firefox 3.5 ajoute la gestion des éléments HTML5 [`audio`](/fr/docs/Web/HTML/Element/audio) et [`video`](/fr/docs/Web/HTML/Element/video).
+- [Utilisation d'audio et vidéo dans Firefox](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
+  - : Firefox 3.5 ajoute la gestion des éléments HTML5 [`audio`](/fr/docs/Web/HTML/Reference/Elements/audio) et [`video`](/fr/docs/Web/HTML/Reference/Elements/video).
 - [Ressources hors ligne dans Firefox](/fr/Ressources_hors_ligne_dans_Firefox)
   - : Firefox 3.5 gère entièrement la spécification de ressources hors ligne d'HTML5.
 - [Glisser et déposer](/fr/docs/Web/API/HTML_Drag_and_Drop_API)
@@ -22,14 +20,14 @@ Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'
 
 #### Nouvelles fonctionnalités CSS
 
-- [Gestion des polices téléchargeables](/fr/docs/Web/CSS/@font-face)
+- [Gestion des polices téléchargeables](/fr/docs/Web/CSS/Reference/At-rules/@font-face)
   - : La nouvelle règle-@ `@font-face` permet aux pages web de fournir des polices téléchargeables, afin qu'elles puissent être affichées exactement telles que l'auteur de la page les attend.
-- [Requêtes de média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Requêtes de média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
   - : Firefox 3.5 gère les requêtes de médias, qui améliorent le traitement des feuilles de style destinées à des médias particuliers.
 - Mise à jour de {{ cssxref(":before") }} et {{ cssxref(":after") }} pour CSS 2.1
   - : Les pseudo-éléments `:before` et `:after` ont été mis à jour pour respecter complètement CSS 2.1, avec l'ajout des propriétés `position`, `float` et `list-style-*`, ainsi que de certaines valeurs de `display`.
 - Unité de longueur `ch`
-  - : L'unité `ch` peut à présent être utilisée à tout endroit où peut être indiquée une [unité de longueur](/fr/docs/Web/CSS/length#unités). `1ch` est la largeur du caractère «&nbsp;0&nbsp;» (zéro).
+  - : L'unité `ch` peut à présent être utilisée à tout endroit où peut être indiquée une [unité de longueur](/fr/docs/Web/CSS/Reference/Values/length#unités). `1ch` est la largeur du caractère «&nbsp;0&nbsp;» (zéro).
 - {{ cssxref("opacity") }}
   - : L'extension à CSS `-moz-opacity` de Mozilla a été supprimée en faveur de la propriété standard `opacity`.
 - {{ cssxref("text-shadow") }}
@@ -49,7 +47,6 @@ Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'
   {{ cssxref("-moz-column-rule-style") }}
 
   {{ cssxref("-moz-column-rule-color") }}
-
   - : La gestion de ces extensions à CSS de Mozilla a été ajoutée dans Firefox 3.5.
 
 - La {{ cssxref("valeur_de_couleur#Extensions_spécifiques_à_Mozilla","-moz-nativehyperlinktext") }}
@@ -58,7 +55,7 @@ Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'
   - : Ces nouvelles fonctionnalités CSS ont été ajoutées pour faciliter la mise en place de thèmes.
 - Nouvelles valeurs pour {{ cssxref("-moz-appearance") }}
   - : Les valeurs `-moz-win-glass` et `-moz-mac-unified-toolbar` ont été ajoutées à `-moz-appearance`.
-- [Utilisation des transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [Utilisation des transformations CSS](/fr/docs/Web/CSS/Guides/Transforms/Using)
   - : Firefox 3.5 gère les transformations CSS. Consultez {{ cssxref("-moz-transform") }} et {{ cssxref("-moz-transform-origin") }} pour plus de détails.
 - {{ cssxref(":nth-child") }}
 
@@ -73,7 +70,6 @@ Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'
   {{ cssxref(":last-of-type") }}
 
   {{ cssxref(":only-of-type") }}
-
   - : Ces sélecteurs sont nouvellement gérés dans Firefox 3.5
 
 #### Nouvelles fonctionnalités DOM
@@ -137,7 +133,7 @@ Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'
 
 - [Correction de couleurs ICC dans Firefox](/fr/Correction_de_couleurs_ICC_dans_Firefox)
   - : Firefox 3.5 gère à présent la correction de couleurs ICC pour les images balisées.
-- L'attribut `defer` est géré sur les éléments [`script`](/fr/docs/Web/HTML/Element/script)
+- L'attribut `defer` est géré sur les éléments [`script`](/fr/docs/Web/HTML/Reference/Elements/script)
   - : Cet attribut indique au navigateur qu'il _peut_ décider de continuer d'analyser et d'afficher la page sans attendre que le script ait terminé son exécution.
 
 ### Autres améliorations
@@ -152,7 +148,7 @@ Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'
 - Dans un contexte non-chrome, les objets catchés dans les exceptions sont à présent les objets rejetés tels quels plutôt qu'une enveloppe [XPConnect](/fr/XPConnect) contenant ces objets.
 - Les références ID dans SVG sont à présent directes.
 - Les filtres SVG fonctionnent à présent avec `foreignObject`.
-- La méthode `GetSVGDocument()` a été ajoutée aux éléments [`object`](/fr/docs/HTML/Element/object) et [`iframe`](/fr/docs/Web/HTML/Element/iframe) pour assurer une meilleure compatibilité.
+- La méthode `GetSVGDocument()` a été ajoutée aux éléments [`object`](/fr/docs/HTML/Element/object) et [`iframe`](/fr/docs/Web/HTML/Reference/Elements/iframe) pour assurer une meilleure compatibilité.
 - La définition implicite de propriétés dans des initialiseurs d'objets et de tableaux n'exécute plus les mutateurs en JavaScript.
 - La variable `gDownloadLastDir.path` a été renommée en `gDownloadLastDir.file` étant donné qu'elle fait référence à un objet `nsIFile` et non à un chemin.
 - La variable `gDownloadLastDirPath` a été renommée en `gDownloadLastDirFile` étant donné qu'elle fait référence à un objet `nsIFile` et non à un chemin.

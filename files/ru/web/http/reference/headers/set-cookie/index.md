@@ -3,8 +3,6 @@ title: Set-Cookie
 slug: Web/HTTP/Reference/Headers/Set-Cookie
 ---
 
-{{HTTPSidebar}}
-
 HTTP заголовок **`Set-Cookie`** используется для отправки cookies с сервера на агент пользователя.
 
 Для детальной информации, смотрите руководство по [HTTP cookies](/ru/docs/Web/HTTP/Guides/Cookies).
@@ -49,16 +47,13 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 <!---->
 
 - `<cookie-name>=<cookie-value>`
-
   - : Cookie начинается с пары имя-значение:
-
     - `<cookie-name>` может содержать любые символы US-ASCII, за исключением управляющих символов (CTLs), пробелов, или табуляций. Оно также не должно содержать разделительных символов, таких как следующие: `( ) < > @ , ; : \ " / [ ] ? = { }`.
     - `<cookie-value>` может быть опционально заключено в двойные кавычки, разрешены любые символы US-ASCII за исключением CTLs, пробела, двойных кавычек, запятой, точки с запятой, и обратного слеша. **Кодирование:** Многие реализации выполняют кодирование в значениях cookies, однако этого не требуется по спецификации RFC. Однако, это помогает удовлетворить требование о разрешённых символах в \<cookie-value>.
     - **`__Secure-` prefix** {{non-standard_inline}}: Cookies с именем, начинающимся с `__Secure-` (подчёркивание является частью префикса ) должны быть установлены вместе с флагом secure, и должны быть с безопасной страницы (HTTPS).
     - **`__Host-` prefix** {{non-standard_inline}}: Cookies с именем, начинающимся с `__Host-` должны быть установлены с флагом secure `secure`, должны быть с безопасной страницы (HTTPS), не должны иметь определённый домен (и, следовательно, не не посылаются поддоменами), а также параметр Path должен быть "/".
 
 - `Expires=<date>` {{optional_inline}}
-
   - : Максимальное время жизни cookie в формате метки даты-времени HTTP. См. {{HTTPHeader("Date")}} о деталях формата Если не определён, cookie будет иметь время жизни **сессионного cookie.** Сессия окончена, когда клиент отключается, что приводит к удалению сессионных cookie в этот момент. Однако, многие браузеры имеют возможность, называемую восстановление сессии, которая сохраняет все ваши вкладки и затем возвращает их, когда вы в следующий раз запускаете браузер. Cookies будут также присутствовать, словно вы никогда не закрывали браузер.
 
     Когда устанавливается срок действия, время и дата устанавливаются не относительно сервера, а относительно клиента, на котором установлено cookie,
@@ -66,7 +61,6 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 - `Max-Age=<number>` {{optional_inline}}
   - : Количество секунд, после которого cookie устаревает. Ноль или отрицательное число приводят к моментальному устареванию cookie. Старые браузеры (ie6, ie7, and ie8) не поддерживают Max-Age. Для прочих браузеров, если оба параметра (`Expires` and `Max-Age`) установлены, `Max-Age` будет иметь преимущество.
 - `Domain=<domain-value>` {{optional_inline}}
-
   - : Хост, на который будут отправляться cookie.
 
     По умолчанию - хост текущего URL документа, не включая поддомены
@@ -75,14 +69,12 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     Указывать несколько хостов недопустимо.
 
 - `Path=<path-value>` {{optional_inline}}
-
   - : Путь, который должен существовать в запрошенном URL, иначе браузер не отправит заголовок Cookie.
 
     Пример: `/` - cookie будет отправляться со всеми запросами
     Пример: `/docs/` - cookie будет отправляться с запросами к директории docs и её поддиректориям
 
 - `Secure` {{optional_inline}}
-
   - : Cookie будет отправлен на сервер только с запросами c использованием SSL и протокола HTTPS.
 
     Cookie не будет дополнительно шифроваться, поэтому в нем не стоит хранить конфиденциальную информацию.
@@ -90,15 +82,12 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     **Note:** небезопасные сайты (`http:`) не могут использовать cookie с атрибутом "secure" (начиная с Chrome 52+ и Firefox 52+).
 
 - `HttpOnly` {{optional_inline}}
-
   - : Запрещает JavaScript доступ к cookie
 
     Полезно для защиты от XSS-атак.
 
 - `SameSite=<samesite-value>` {{optional_inline}}
-
   - :&#x20;
-
     - `Strict`: The browser sends the cookie only for same-site requests (that is, requests originating from the same site that set the cookie). If the request originated from a different URL than the current one, no cookies with the `SameSite=Strict` attribute are sent.
     - `Lax`: The cookie is withheld on cross-site subrequests, such as calls to load images or frames, but is sent when a user navigates to the URL from an external site, such as by following a link
     - `None`: The browser sends the cookie with both cross-site and same-site requests

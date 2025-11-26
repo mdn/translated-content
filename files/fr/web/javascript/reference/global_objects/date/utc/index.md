@@ -31,7 +31,6 @@ Date.UTC(année[,mois[,jour[,heures[,minutes[,secondes[,ms]]]]]])
 - `année`
   - : Une année sur deux chiffres pour une année après 1900 (ex. 98 pour 1998) ou bien une année sur quatre chiffres (2018).
 - `mois`{{optional_inline}}
-
   - : Un entier entre 0 (janvier) et 11 (décembre) représentant le mois.
 
     > [!NOTE]

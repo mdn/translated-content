@@ -12,15 +12,12 @@ MDN には MDN コンテンツへの常に最新のリンクを作成するた�
 MDN はリンクのリストを作成するマクロを提供しています。
 
 - [`\{{SubpagesWithSummaries}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/subpages_with_summaries.rs)
-
   - : 現在のページのサブページの定義リスト ({{HTMLElement("dl")}}) を挿入し、各ページのタイトルを {{HTMLElement("dt")}} の項、最初の段落を {{HTMLElement("dd")}} の項に入れます。
 
 - [`\{{ListSubpagesForSidebar()}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/list_subpages_for_sidebar.rs)
-
   - : 引数なしで記載された場合、現在のページのサブページへのリンクの順序付きリストを挿入します。このマクロは[サイドバー](/ja/docs/MDN/Writing_guidelines/Page_structures/Sidebars)（マクロの名前の由来）内で使用することが多く、箇条書きは表示されません。最初の引数はリンクツリーの親ページのスラッグです。リンクテキストはコードとして表示されます。 2 つ目の引数に `true` または `1` を設定するには、リンクをプレーンテキストに変換します。 3 つ目の引数に `true` または `1` を設定すると、リストの一番上にあるスラッグ（親）ページへのリンクを "Overview" というリンクテキストで追加します。
 
 - [`\{{QuickLinksWithSubpages()}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/quick_links_with_subpages.rs)
-
   - : 現在のページ （または指定したページ） の子を出力先として使用するクイックリンクのセットを作成します。これは 2 階層までの階層リストを作成します。ページのタイトルはリンクテキストとして、概要はツールチップとして使用します。
 
 ### リンクリストの例

@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Proxy-Authorization
 original_slug: Web/HTTP/Headers/Proxy-Authorization
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de requisição HTTP **`Proxy-Authorization`** contém as credenciais para autenticar o agente de usuário em um servidor proxy, usualmente depois do servidor responder com um código de status {{HTTPStatus("407")}} `Proxy Authentication Required` e cabeçalho {{HTTPHeader("Proxy-Authenticate")}}.
 
 <table class="properties">
@@ -32,9 +30,7 @@ Proxy-Authorization: <type> <credentials>
 - \<type>
   - : [Tipo de autentação](/pt-BR/docs/Web/HTTP/Guides/Authentication#authentication_schemes). Um tipo comum é ["Basic"](/pt-BR/docs/Web/HTTP/Guides/Authentication#basic_authentication_scheme). Veja também o [registro IANA de esquemas de autenticação](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
 - \<credentials>
-
   - : As credenciais são construídas assim:
-
     - O nome de usuário e senha combinados com dois pontos (`aladdin:opensesame`).
     - O resultado é uma cadeia de caracteres codificado em [base64](/pt-BR/docs/Glossary/Base64) (`YWxhZGRpbjpvcGVuc2VzYW1l`).
 

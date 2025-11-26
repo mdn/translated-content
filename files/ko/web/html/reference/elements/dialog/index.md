@@ -21,15 +21,12 @@ HTML `<dialog>` 요소는 모달 및 비모달 대화 상자를 만드는 데 �
 > 이 `tabindex` 특성은 `<dialog>` 요소에 사용하면 안 됩니다. [사용 일람](#사용_일람)을 참고하세요.
 
 - `closedby`
-
   - : `<dialog>` 요소를 닫는 데 사용할 수 있는 사용자 작업 유형을 지정합니다. 이 특성은 대화 상자를 닫을 수 있는 세 가지 방법을 구분합니다.
-
     - 간편 닫기 사용자 작업. 사용자가 대화 상자 외부를 클릭하거나 탭할 때 `<dialog>`가 닫힙니다. 이는 ["자동" 상태 팝오버의 "간편 닫기" 동작](/ko/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss)과 동일합니다.
     - 플랫폼별 사용자 작업. 데스크톱 플랫폼에서 <kbd>Esc</kbd> 키를 누르거나 모바일 플랫폼에서 "뒤로 가기" 또는 "닫기" 제스처와 같은 동작입니다.
     - 개발자가 지정한 메커니즘. {{domxref("HTMLDialogElement.close()")}}를 호출하는 [`click`](/ko/docs/Web/API/Element/click_event) 핸들러가 있는 {{htmlelement("button")}} 또는 {{htmlelement("form")}} 제출과 같은 메커니즘입니다.
 
     가능한 값은 다음과 같습니다.
-
     - `any`
       - : 세 가지 방법 중 어떤 방법으로든 대화 상자를 닫을 수 있습니다.
     - `closerequest`
@@ -38,12 +35,10 @@ HTML `<dialog>` 요소는 모달 및 비모달 대화 상자를 만드는 데 �
       - : 개발자가 지정한 메커니즘으로만 대화 상자를 닫을 수 있습니다.
 
     `<dialog>` 요소에 유효한 `closedby` 값이 지정되지 않은 경우,
-
     - {{domxref("HTMLDialogElement.showModal()", "showModal()")}}을 사용하여 열었다면 `"closerequest"` 값처럼 동작합니다.
     - 그렇지 않으면 `"none"` 값처럼 동작합니다.
 
 - `open`
-
   - : 대화 상자가 활성화되어 상호 작용할 수 있음을 나타냅니다. `open` 특성이 설정되지 않으면 대화 상자가 사용자에게 표시되지 않습니다.
     대화 상자를 렌더링하려면 `open` 특성 대신 `.show()` 또는 `.showModal()` 메서드를 사용하는 것이 좋습니다. `open` 특성을 사용하여 `<dialog>`를 열면 비모달 상태가 됩니다.
 

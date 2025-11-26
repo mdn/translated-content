@@ -1022,7 +1022,7 @@ SVG 文件是包含源代码的文本文件，解释后可绘制所需的图像�
     <tr>
       <th scope="row">支持的颜色模式</th>
       <td>
-        SVG 中的颜色是使用 <a href="/zh-CN/docs/Web/CSS/color_value">CSS 颜色语法</a>指定的。
+        SVG 中的颜色是使用 <a href="/zh-CN/docs/Web/CSS/Reference/Values/color_value">CSS 颜色语法</a>指定的。
       </td>
     </tr>
     <tr>
@@ -1434,7 +1434,7 @@ PNG 可能是最好的选择，但无损 WebP 的压缩效果可能更好。
 
 ## 提供回退图像
 
-虽然标准 HTML {{HTMLElement("img")}} 元素不支持图片的兼容性回退，但 {{HTMLElement("picture")}} 元素支持。`<picture>` 被用作多个 {{HTMLElement("source")}} 元素的包装器，每个元素都指定了不同格式或不同[媒体条件](/zh-CN/docs/Web/CSS/@media)下的图像版本，以及一个 `<img>` 元素，该元素定义了图像的显示位置以及默认或“最兼容”版本的回退。
+虽然标准 HTML {{HTMLElement("img")}} 元素不支持图片的兼容性回退，但 {{HTMLElement("picture")}} 元素支持。`<picture>` 被用作多个 {{HTMLElement("source")}} 元素的包装器，每个元素都指定了不同格式或不同[媒体条件](/zh-CN/docs/Web/CSS/Reference/At-rules/@media)下的图像版本，以及一个 `<img>` 元素，该元素定义了图像的显示位置以及默认或“最兼容”版本的回退。
 
 例如，如果要显示一个最好使用 SVG 显示的图表，但希望提供一个 PNG 或 GIF 图表的回退选项，可以这样做：
 

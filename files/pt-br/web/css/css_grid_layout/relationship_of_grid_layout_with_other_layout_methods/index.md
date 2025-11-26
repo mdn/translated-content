@@ -593,7 +593,6 @@ As you can see from this guide, CSS Grid Layout is just one part of your toolkit
 2. [**CSS Reference**](/pt-BR/docs/Web/CSS/Reference)
 3. [CSS Grid Layout](/pt-BR/docs/Web/CSS/CSS_grid_layout)
 4. **Guides**
-
    1. [Basics concepts of grid layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
    2. [Relationship to other layout methods](/pt-BR/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
    3. [Line-based placement](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
@@ -607,7 +606,6 @@ As you can see from this guide, CSS Grid Layout is just one part of your toolkit
    11. [Realizing common layouts using grids](/pt-BR/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 5. **Properties**
-
    1. [grid](/pt-BR/docs/Web/CSS/grid)
    2. [grid-area](/pt-BR/docs/Web/CSS/grid-area)
    3. [grid-auto-columns](/pt-BR/docs/Web/CSS/grid-auto-columns)
@@ -628,7 +626,6 @@ As you can see from this guide, CSS Grid Layout is just one part of your toolkit
    18. [grid-template-rows](/pt-BR/docs/Web/CSS/grid-template-rows)
 
 6. **Glossary**
-
    1. [Grid](/pt-BR/docs/Glossary/Grid)
    2. [Grid lines](/pt-BR/docs/Glossary/Grid_lines)
    3. [Grid tracks](/pt-BR/docs/Glossary/Grid_tracks)

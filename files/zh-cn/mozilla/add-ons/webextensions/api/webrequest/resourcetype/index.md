@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{AddonSidebar}}
-
 此类型是代表 Web 请求中获取到的资源的上下文环境的字符串。
 
 在 webRequest API 中它可用于[过滤](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter)你希望监听的请求。例如：你可以选择只监听图像请求或脚本请求。
@@ -30,7 +28,6 @@ l10n:
 - `media`
   - : 由 {{HTMLElement("video")}} 或 {{HTMLElement("audio")}} 元素加载的资源。
 - `object`
-
   - : 由 {{HTMLElement("object")}} 或 {{HTMLElement("embed")}} 元素加载的资源。
 
     没有专用的 `object_subrequest` 类型的浏览器（参见下方的浏览器兼容性）也将插件发送的后续请求标记为 `object`。
@@ -38,7 +35,6 @@ l10n:
 - `object_subrequest`
   - : 插件发送的请求。
 - `ping`
-
   - : 当点击超链接时，发送到超链接的 [`ping`](/zh-CN/docs/Web/HTML/Reference/Elements/a#ping) 属性中指定的 URL 的请求。
 
     没有专用的 `beacon` 类型的浏览器（参见下方的浏览器兼容性）也将通过 Beacon API 发送的请求标记为 `ping`。

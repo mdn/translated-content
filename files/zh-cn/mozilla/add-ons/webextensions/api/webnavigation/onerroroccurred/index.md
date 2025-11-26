@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9c9be5239fe7fb2907784e8cace339d4910eb103
 ---
 
-{{AddonSidebar}}
-
 当发生错误并且导航被中止时触发此事件。这可能是网络错误或用户中止导航导致的。
 
 ## 语法
@@ -34,15 +32,11 @@ browser.webNavigation.onErrorOccurred.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 此事件发生时调用的函数。
 
     `listener` 函数会接收以下参数：
-
     - `details`
-
       - : [`object`](#details)。有关导航事件的详细信息。**`details`** 包含以下属性：
-
         - `tabId`
           - : `integer`。发生导航的标签页的 ID。
         - `url`
@@ -50,7 +44,6 @@ browser.webNavigation.onErrorOccurred.hasListener(listener)
         - `processId` {{optional_inline}} {{deprecated_inline}}
           - : `integer`。在现代浏览器中未设置该值。当设置时，它表示运行此标签页的渲染器的进程 ID。
         - `frameId`
-
           - : `integer`。发生导航的框架。`0` 表示导航发生在标签页的顶级浏览上下文中，而不是嵌套的 {{HTMLElement("iframe")}} 中。
 
             正值表示导航发生在嵌套的 iframe 中。
@@ -63,7 +56,6 @@ browser.webNavigation.onErrorOccurred.hasListener(listener)
           - : `string`。错误代码。这是一个内部错误代码，不保证在不同浏览器之间保持一致。
 
 - `filter` {{optional_inline}}
-
   - : `object`。包含单个 `url` 属性的对象，且这一属性是 {{WebExtAPIRef("events.UrlFilter")}} 对象的数组（`Array`）。
 
     如果包含此参数，则仅当目标 URL 匹配数组中至少一个 `UrlFilter` 时，事件才会触发。

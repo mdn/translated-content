@@ -3,8 +3,6 @@ title: Firefox 16 for developers
 slug: Mozilla/Firefox/Releases/16
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 16 は、2012 年 10 月 9 日にリリースされました。この記事では、ウェブ開発者に知らせるだけでなく、Firefox や Gecko 開発者、アドオン開発者にも役立つ主な変更点のリストを掲載しています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -19,16 +17,16 @@ Firefox 16 は、2012 年 10 月 9 日にリリースされました。この記
 
 ### CSS
 
-- 標準の、接頭辞無しのバージョンの [CSS Animations](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations) が使えるようになりました。([bug 762302](https://bugzilla.mozilla.org/show_bug.cgi?id=762302))
+- 標準の、接頭辞無しのバージョンの [CSS Animations](/ja/docs/Web/CSS/Guides/Animations/Using) が使えるようになりました。([bug 762302](https://bugzilla.mozilla.org/show_bug.cgi?id=762302))
 - アニメーションの方向の逆転（{{ cssxref("animation-direction") }} プロパティの `reverse` と `alternate-reverse` キーワード）のサポートが追加されました。([bug 655920](https://bugzilla.mozilla.org/show_bug.cgi?id=655920))
 - CSS の {{cssxref("height")}} および {{cssxref("width")}} プロパティのアニメーションが可能になりました。
 - {{ cssxref("animation-duration") }} および {{ cssxref("transition-duration") }} の CSS プロパティが、負の値を拒絶するようになりました (さらに、そのような値はもはや `0s` として扱われません)。([bug 773102](https://bugzilla.mozilla.org/show_bug.cgi?id=773102))
-- 標準の、接頭辞無しのバージョンの [CSS Transforms](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) が使えるようになりました。([bug 745523](https://bugzilla.mozilla.org/show_bug.cgi?id=745523))
-- 標準の、接頭辞無しのバージョンの [CSS Gradients](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients) が使えるようになりました。接頭辞付きのバージョンから構文がかなり変わっていますので、よく学んでおくとよいでしょう。 ([bug 752187](https://bugzilla.mozilla.org/show_bug.cgi?id=752187))
+- 標準の、接頭辞無しのバージョンの [CSS Transforms](/ja/docs/Web/CSS/Guides/Transforms/Using) が使えるようになりました。([bug 745523](https://bugzilla.mozilla.org/show_bug.cgi?id=745523))
+- 標準の、接頭辞無しのバージョンの [CSS Gradients](/ja/docs/Web/CSS/Guides/Images/Using_gradients) が使えるようになりました。接頭辞付きのバージョンから構文がかなり変わっていますので、よく学んでおくとよいでしょう。 ([bug 752187](https://bugzilla.mozilla.org/show_bug.cgi?id=752187))
 - {{ cssxref("box-sizing", "-moz-box-sizing") }} の実装がテーブルのセルにも適用されるように更新されました。([bug 338554](https://bugzilla.mozilla.org/show_bug.cgi?id=338554))
 - 標準の、接頭辞無しの {{ cssxref("calc") }} が使えるようになりました。([bug 771678](https://bugzilla.mozilla.org/show_bug.cgi?id=771678))
 - {{cssxref("&lt;resolution&gt;")}} CSS データタイプが拡張され、`dppx` がサポートされるようになりました。([bug 741644](https://bugzilla.mozilla.org/show_bug.cgi?id=741644))
-- 画面上で、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries) のために、`dppx`、`dpi`、および `dpcm` が物理単位ではなく、CSS ピクセル単位で再表現されるようになりました。 ([bug 771390](https://bugzilla.mozilla.org/show_bug.cgi?id=771390))
+- 画面上で、[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries) のために、`dppx`、`dpi`、および `dpcm` が物理単位ではなく、CSS ピクセル単位で再表現されるようになりました。 ([bug 771390](https://bugzilla.mozilla.org/show_bug.cgi?id=771390))
 - 特定の状態にある {{HTMLElement("meter")}} 要素へのアクセスやスタイル付けを行うため、新たに 3 つの擬似クラス `:-moz-meter-optimum`、`:-moz-meter-sub-optimum`、`:-moz-meter-sub-sub-optimum` を追加しました。([bug 660238](https://bugzilla.mozilla.org/show_bug.cgi?id=660238))
 - {{cssxref("-moz-appearance")}} プロパティが新たに 2 つの値を取り入れました : `meterbar` および `meterchunk`。これらは、{{HTMLElement("meter")}} 要素内部のコンポーネントを表します。([bug 659999](https://bugzilla.mozilla.org/show_bug.cgi?id=659999))
 - {{cssxref("min-width")}} および {{cssxref("min-height")}} で、flex item のための `auto` キーワードをサポートしました (他のアイテムでは `0` と解釈します)。([Firefox バグ 763689](https://bugzil.la/763689))

@@ -78,6 +78,6 @@ var newFragment = processor.transformToFragment(domToBeTransformed, ownerDocumen
 
 ## 같이 보기
 
-- [XSLT](/ko/docs/Web/XSLT)
+- [XSLT](/ko/docs/Web/XML/XSLT)
 - [XSLT 튜토리얼](https://www.zvon.org/xxl/XSLTutorial/Books/Book1/index.html)
 - [XPath 튜토리얼](https://www.zvon.org/xxl/XPathTutorial/General/examples.html)

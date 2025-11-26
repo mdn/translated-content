@@ -15,6 +15,6 @@ l10n:
 
 ## 같이 보기
 
-- [지연 로딩](/ko/docs/Web/Performance/Lazy_loading)
+- [지연 로딩](/ko/docs/Web/Performance/Guides/Lazy_loading)
 - [HTTP/2](/ko/docs/Glossary/HTTP_2)
 - [트리 쉐이킹(Tree shaking)](/ko/docs/Glossary/Tree_shaking)

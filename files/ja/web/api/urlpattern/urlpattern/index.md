@@ -22,9 +22,7 @@ new URLPattern(input, baseURL, options)
 ### 引数
 
 - `input`
-
   - : 照合に使用する入力パターン。これは、文字列、または各 URL 部分ごとにパターンを提供するオブジェクトのいずれかです。オブジェクトのメンバーは、次のいずれかです。
-
     - `protocol`
     - `username`
     - `password`

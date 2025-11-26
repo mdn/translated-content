@@ -3,7 +3,7 @@ title: <frame>：框架元素
 slug: Web/HTML/Reference/Elements/frame
 ---
 
-{{HTMLSidebar}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 **`<frame>`** [HTML](/zh-TW/docs/Web/HTML) 元素定義了另一個 HTML 文件可以顯示的特定區域。框架應該在 {{HTMLElement("frameset")}} 元素內使用。
 

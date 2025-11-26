@@ -1,15 +1,14 @@
 ---
 title: Symbol() コンストラクター
+short-title: Symbol()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
 l10n:
-  sourceCommit: 6a557b06944a0a6eaa1e9e352fc58b973b2e03a1
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Symbol()`** 関数は、シンボル型のプリミティブ値を返します。
 
-{{InteractiveExample("JavaScript Demo: Symbol - Constructor", "taller")}}
+{{InteractiveExample("JavaScript デモ: Symbol() コンストラクター", "taller")}}
 
 ```js interactive-example
 const symbol1 = Symbol();
@@ -17,16 +16,16 @@ const symbol2 = Symbol(42);
 const symbol3 = Symbol("foo");
 
 console.log(typeof symbol1);
-// Expected output: "symbol"
+// 予想される結果: "symbol"
 
 console.log(symbol2 === 42);
-// Expected output: false
+// 予想される結果: false
 
 console.log(symbol3.toString());
-// Expected output: "Symbol(foo)"
+// 予想される結果: "Symbol(foo)"
 
 console.log(Symbol("foo") === Symbol("foo"));
-// Expected output: false
+// 予想される結果: false
 ```
 
 ## 構文
@@ -36,7 +35,8 @@ Symbol()
 Symbol(description)
 ```
 
-> **メモ:** `Symbol()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 付きで呼び出すことができません。`new` を付けて構築しようとすると、{{jsxref("TypeError")}} が発生します。
+> [!NOTE]
+> `Symbol()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 付きで呼び出すことができません。`new` を付けて構築しようとすると、{{jsxref("TypeError")}} が発生します。
 
 ### 引数
 

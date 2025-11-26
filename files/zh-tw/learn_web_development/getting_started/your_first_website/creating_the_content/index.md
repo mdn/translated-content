@@ -210,7 +210,8 @@ My cat is very grumpy
 
 **請試試在練習網頁加上一個超連結。**
 
-> **備註：** `href` 這個屬性名稱比較不直觀，不太好記，但它代表的是：**h**ypertext **ref**erence 的縮寫。
+> [!NOTE]
+> `href` 這個屬性名稱比較不直觀，不太好記，但它代表的是：**h**ypertext **ref**erence 的縮寫。
 
 ## 結論
 

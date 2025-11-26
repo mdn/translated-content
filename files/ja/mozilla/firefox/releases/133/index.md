@@ -5,15 +5,13 @@ l10n:
   sourceCommit: 66fa0acf565a240c390418f588d571d6e650514d
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 133 の変更点をまとめています。Firefox 133 は、米国時間 [2024 年 11 月 26 日](https://whattrainisitnow.com/release/?version=133) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### HTML
 
-- [`<meta>` の `viewport` タグ](/ja/docs/Web/HTML/Guides/Viewport_meta_element) で [`interactive-widgets`](/ja/docs/Web/HTML/Guides/Viewport_meta_element#the_effect_of_interactive_ui_widgets) 属性をサポートしました。これはソフトウェアキーボードのような共通 UI ウィジェットがスクリーンに表示されるときの、ビューポートのサイズに影響を与えます ([Firefox bug 1831649](https://bugzil.la/1831649)、[Firefox bug 1920755](https://bugzil.la/1920755))。
+- [`<meta>` の `viewport` タグ](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport) で [`interactive-widgets`](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport#the_effect_of_interactive_ui_widgets) 属性をサポートしました。これはソフトウェアキーボードのような共通 UI ウィジェットがスクリーンに表示されるときの、ビューポートのサイズに影響を与えます ([Firefox bug 1831649](https://bugzil.la/1831649)、[Firefox bug 1920755](https://bugzil.la/1920755))。
 
 ### CSS
 
@@ -24,7 +22,6 @@ l10n:
 - {{jsxref("Uint8Array")}} で、{{glossary("base64")}} や 16 進数表記でエンコードされた文字列とバイト配列の間の変換を容易にするメソッドをサポートしました ([Firefox bug 1917885](https://bugzil.la/1917885)、[Firefox bug 1862220](https://bugzil.la/1862220))。
 
   新しいメソッドは以下のとおりです:
-
   - {{jsxref("Uint8Array.fromBase64()")}} および {{jsxref("Uint8Array.fromHex()")}} 静的メソッド。それぞれ、base64 や 16 進数表記でエンコードされた文字列から新しい `Uint8Array` オブジェクトを構築します。
   - {{jsxref("Uint8Array.prototype.setFromBase64()")}}、{{jsxref("Uint8Array.prototype.setFromHex()")}} インスタンスメソッド。base64 や 16 進数表記でエンコードされた文字列からバイト値を、既存の `Uint8Array` オブジェクトに追加します。
   - {{jsxref("Uint8Array.prototype.toBase64()")}}、{{jsxref("Uint8Array.prototype.toHex()")}} インスタンスメソッド。`Uint8Array` オブジェクトにあるデータから、base64 や 16 進数表記でエンコードされた文字列を返します。
@@ -80,7 +77,7 @@ l10n:
 
 - **:has-slotted CSS 擬似クラス:** `layout.css.has-slotted-selector.enabled`。
 
-  {{CSSXRef(":has-slotted")}} [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes) は、[ウェブコンポーネント](/ja/docs/Web/API/Web_components) をレンダリングするときに {{HTMLElement("slot")}} 要素へ追加したコンテンツがある {{HTMLElement("template")}} 内の要素へスタイルを設定するために使用します ([Firefox bug 1921747](https://bugzil.la/1921747))。
+  {{CSSXRef(":has-slotted")}} [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes) は、[ウェブコンポーネント](/ja/docs/Web/API/Web_components) をレンダリングするときに {{HTMLElement("slot")}} 要素へ追加したコンテンツがある {{HTMLElement("template")}} 内の要素へスタイルを設定するために使用します ([Firefox bug 1921747](https://bugzil.la/1921747))。
 
 ## 過去のバージョン
 

@@ -8,7 +8,8 @@ original_slug: Web/HTML/Element/u
 
 **HTML `<u>` 요소**는 글자로 표현하지 않는 주석을 가진 것으로 렌더링 해야 하는 텍스트를 나타냅니다. 기본값에서는 단순한 밑줄로 표시하지만 CSS를 사용해 바꿀 수 있습니다.
 
-> **경고:** `<u>` 요소는 과거 HTML에서 밑줄(Underline) 요소로 불렸으며 지금도 밑줄을 추가할 목적으로 남용하는 경우가 있습니다. 그러나 밑줄을 위해서는 CSS {{cssxref("text-decoration")}} 속성을 `underline`으로 지정하는 방법을 대신 사용해야 합니다.
+> [!WARNING]
+> `<u>` 요소는 과거 HTML에서 밑줄(Underline) 요소로 불렸으며 지금도 밑줄을 추가할 목적으로 남용하는 경우가 있습니다. 그러나 밑줄을 위해서는 CSS {{cssxref("text-decoration")}} 속성을 `underline`으로 지정하는 방법을 대신 사용해야 합니다.
 
 {{InteractiveExample("HTML Demo: &lt;u&gt;", "tabbed-shorter")}}
 
@@ -77,13 +78,14 @@ u {
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)만 포함합니다.
 
 ## 사용 일람
 
 다른 순수 스타일 요소와 마찬가지로, 원래의 HTML 밑줄 요소(`<u>`)는 HTML 4부터 사용을 중단했으나, HTML 5에서 새로운 의미를 얻으며 돌아왔습니다. HTML 5에서 `<u>` 요소는 텍스트가 일종의 문자가 아닌 주석을 가지고 있음을 나타냅니다.
 
-> **참고:** `<u>`와 하이퍼링크 둘 다 기본 스타일이 밑줄이므로, `<u>`를 기본 스타일로 사용하는건 피해야 합니다.
+> [!NOTE]
+> `<u>`와 하이퍼링크 둘 다 기본 스타일이 밑줄이므로, `<u>`를 기본 스타일로 사용하는건 피해야 합니다.
 
 ### 사용처
 

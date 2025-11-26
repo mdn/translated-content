@@ -7,7 +7,7 @@ slug: Web/CSS/list-style-type
 
 ### Resumen
 
-El {{ Cssxref("list-style-type", "tipo de estilo de lista") }} especifica la apariencia del [listado](/es/docs/Web/HTML/Element/li).
+El {{ Cssxref("list-style-type", "tipo de estilo de lista") }} especifica la apariencia del [listado](/es/docs/Web/HTML/Reference/Elements/li).
 
 - {{ Cssxref("initial", "Valor inicial") }}: {{ Cssxref("disc", "disco/punto") }}
 - Se aplica a: elementos con 'display: list-item'

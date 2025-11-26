@@ -82,7 +82,7 @@ input[type="submit"] {
 
 ## 초기화 버튼 사용
 
-`<input type="reset">` 버튼은 폼을 초기화하는 데 사용됩니다. 커스텀 버튼을 만들고 JavaScript를 사용하여 동작을 사용자화하려면 [`<input type="button">`](/ko/docs/Web/HTML/Element/input/button) 또는 더 나아가 {{htmlelement("button")}} 요소를 사용해야 합니다.
+`<input type="reset">` 버튼은 폼을 초기화하는 데 사용됩니다. 커스텀 버튼을 만들고 JavaScript를 사용하여 동작을 사용자화하려면 [`<input type="button">`](/ko/docs/Web/HTML/Reference/Elements/input/button) 또는 더 나아가 {{htmlelement("button")}} 요소를 사용해야 합니다.
 
 ### 기본 초기화 버튼
 
@@ -108,9 +108,9 @@ input[type="submit"] {
 
 ### 초기화 키보드 단축키 추가
 
-의미 있는 모든 {{HTMLElement("input")}} 요소와 마찬가지로 초기화 버튼에 키보드 단축키를 추가하려면, [`accesskey`](/ko/docs/Web/HTML/Global_attributes/accesskey) 전역 특성을 사용하면 됩니다.
+의미 있는 모든 {{HTMLElement("input")}} 요소와 마찬가지로 초기화 버튼에 키보드 단축키를 추가하려면, [`accesskey`](/ko/docs/Web/HTML/Reference/Global_attributes/accesskey) 전역 특성을 사용하면 됩니다.
 
-이 예제에서는 <kbd>r</kbd>이 접근 키로 명세되었습니다. 브라우저/OS 조합에 맞는 특정 수정 키와 함께 <kbd>r</kbd>을 눌러야 합니다. 자세한 내용은 [`accesskey`](/ko/docs/Web/HTML/Global_attributes/accesskey)에서 유용한 목록을 확인할 수 있습니다.
+이 예제에서는 <kbd>r</kbd>이 접근 키로 명세되었습니다. 브라우저/OS 조합에 맞는 특정 수정 키와 함께 <kbd>r</kbd>을 눌러야 합니다. 자세한 내용은 [`accesskey`](/ko/docs/Web/HTML/Reference/Global_attributes/accesskey)에서 유용한 목록을 확인할 수 있습니다.
 
 ```html
 <form>
@@ -128,7 +128,7 @@ input[type="submit"] {
 
 위 예제의 문제는 사용자가 접근 키가 무엇인지 알 수 없다는 점입니다! 특히 수정 키의 충돌을 피하기 위해 일반적이지 않은 키로 설정하는 경우가 많기 때문에 문제가 더욱 두드러집니다.
 
-사이트를 만들 때는 이 정보를 사이트 디자인에 방해되지 않는 방식으로 제공해야 합니다 (예: 사이트 접근 키에 대한 정보를 제공하는 쉽게 접근할 수 있는 링크를 제공하는 방식). 버튼에 툴팁을 추가하는 것도 도움이 될 수 있지만, [`title`](/ko/docs/Web/HTML/Global_attributes/title) 속성을 사용하는 것처럼 접근성 측면에서 완전한 해결책은 아닙니다.
+사이트를 만들 때는 이 정보를 사이트 디자인에 방해되지 않는 방식으로 제공해야 합니다 (예: 사이트 접근 키에 대한 정보를 제공하는 쉽게 접근할 수 있는 링크를 제공하는 방식). 버튼에 툴팁을 추가하는 것도 도움이 될 수 있지만, [`title`](/ko/docs/Web/HTML/Reference/Global_attributes/title) 속성을 사용하는 것처럼 접근성 측면에서 완전한 해결책은 아닙니다.
 
 ### 초기화 버튼 비활성화 및 활성화
 
@@ -141,7 +141,7 @@ input[type="submit"] {
 버튼은 실행 중에 `disabled`를 `true` 또는 `false`로 설정하여 활성화하거나 비활성화할 수 있습니다. JavaScript에서는 `btn.disabled = true` 또는 `btn.disabled = false`와 같이 작성합니다.
 
 > [!NOTE]
-> 버튼을 활성화하거나 비활성화하는 방법에 대한 더 많은 아이디어는 [`<input type="button">`](/ko/docs/Web/HTML/Element/input/button#disabling_and_enabling_a_button) 페이지에서 확인할 수 있습니다.
+> 버튼을 활성화하거나 비활성화하는 방법에 대한 더 많은 아이디어는 [`<input type="button">`](/ko/docs/Web/HTML/Reference/Elements/input/button#disabling_and_enabling_a_button) 페이지에서 확인할 수 있습니다.
 
 ## 유효성 검사
 

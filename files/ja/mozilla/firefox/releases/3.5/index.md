@@ -3,8 +3,6 @@ title: Firefox 3.5 開発者向け情報
 slug: Mozilla/Firefox/Releases/3.5
 ---
 
-{{FirefoxSidebar}}
-
 [Firefox 3.5](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-US/firefox/3.5/releasenotes/) (_2009 年 7 月 30 日にリリース_) では数多くの新機能が導入され、また、幅広い種類のウェブ標準に対するサポートが追加および改善されます。この記事は主な変更点をカバーする記事へのリンクを伴う広範囲に及ぶ一覧を提供します。
 
 ## Firefox 3.5 の開発者向け新機能
@@ -22,14 +20,14 @@ slug: Mozilla/Firefox/Releases/3.5
 
 #### 新しくサポートされる CSS の機能
 
-- [ダウンロードフォントのサポート](/ja/docs/Web/CSS/@font-face)
+- [ダウンロードフォントのサポート](/ja/docs/Web/CSS/Reference/At-rules/@font-face)
   - : 新しい @規則である {{ cssxref("@font-face") }} を利用してウェブページでダウンロードフォントを提供できます。これにより、ページ作者が期待する通りにサイトが描画されるようになります。
-- [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)
+- [CSS メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)
   - : Firefox 3.5 では CSS メディアクエリーをサポートしています。これはメディア依存スタイルシートを拡張するものです。
 - {{ cssxref("::before") }} および {{ cssxref("::after") }} の CSS 2.1 への更新
   - : `::before` および `::after` 擬似要素が CSS 2.1 サポートを満たすように更新されました。`position`、`float`、`list-style-*`、そして、いくつかの `display` プロパティのサポートが追加されています。
 - 長さの単位 `ch`
-  - : 単位 `ch` が通常の[長さの単位](/ja/docs/Web/CSS/length#units)として任意の場所で使えるようになりました。"1 ch" は文字 '0' の横幅です。
+  - : 単位 `ch` が通常の[長さの単位](/ja/docs/Web/CSS/Reference/Values/length#units)として任意の場所で使えるようになりました。"1 ch" は文字 '0' の横幅です。
 - {{ cssxref("opacity") }}
   - : 標準の `opacity` プロパティの先行実装である `-moz-opacity` という CSS への Mozilla 拡張が削除されました。
 - {{ cssxref("text-shadow") }}
@@ -49,7 +47,6 @@ slug: Mozilla/Firefox/Releases/3.5
   `-moz-column-rule-style`
 
   `-moz-column-rule-color`
-
   - : Firefox 3.5 ではこれらの CSS への Mozilla 拡張に対するサポートが追加されます。
 
 - {{ cssxref("color_value#Mozilla_Extensions","-moz-nativehyperlinktext") }} カラー値
@@ -58,7 +55,7 @@ slug: Mozilla/Firefox/Releases/3.5
   - : これらの新しい CSS 機能はテーマ作成を手助けするために追加されました。
 - `-moz-appearance` 向けの新しい値
   - : `-moz-win-glass` および `-moz-mac-unified-toolbar` という値が `-moz-appearance` 向けに追加されました。
-- [CSS transforms の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [CSS transforms の使用](/ja/docs/Web/CSS/Guides/Transforms/Using)
   - : Firefox 3.5 では CSS transform がサポートされます。詳細は {{ cssxref("-moz-transform") }} および {{ cssxref("-moz-transform-origin") }} を参照してください。
 - {{ cssxref(":nth-child") }}
 
@@ -73,7 +70,6 @@ slug: Mozilla/Firefox/Releases/3.5
   {{ cssxref(":last-of-type") }}
 
   {{ cssxref(":only-of-type") }}
-
   - : これらのセレクターがすべて Firefox 3.5 で新たにサポートされます。
 
 #### 新しい DOM の機能
@@ -84,7 +80,7 @@ slug: Mozilla/Firefox/Releases/3.5
   - : Firefox 3.5 ではウェブアプリケーションでの簡単なマルチスレッドサポートを可能にする Web Workers をサポートします。
 - [位置情報の使用](/ja/docs/Web/API/Geolocation_API)
   - : Firefox 3.5 では Geolocation API をサポートします。これによりウェブアプリケーションはユーザーの現在位置についての情報を提供するプロバイダがインストールされ有効化されていれば、その情報を保持することができます。
-- [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
+- [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
   - : Selectors API により与えられた選択ルールにマッチする要素を指定するために文書を検索できます。
 - [マウスジェスチャイベント](/ja/docs/Web/Events/Mouse_gesture_events)
   - : Firefox 3.5 はトラックパッドスワイプのようなマウスジェスチャイベントをサポートします。

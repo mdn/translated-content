@@ -18,9 +18,7 @@ var messageEvent = new MessageEvent(type, init);
 - type
   - : 要创建的 `MessageEvent` 的类型。这可能是 XXX 中的一个
 - **`init`** {{optional_inline}}
-
   - : 可以包含以下属性的 dictionary 对象：
-
     - `data`: 你希望包含在 MessageEvent 中的数据。这可以是任何数据类型，如果没有指定，则默认为 null。
     - `origin`: {{domxref("USVString")}} 表示消息发送源。如果没有指定，则默认为空字符串 ("")。
     - `lastEventId`: {{domxref("DOMString")}} 表示事件的唯一 ID。如果没有指定，则默认为空字符串 ("")。

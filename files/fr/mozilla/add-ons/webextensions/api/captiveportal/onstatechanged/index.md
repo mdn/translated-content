@@ -29,9 +29,7 @@ Les événements ont trois fonctions :
 ### Paramétres
 
 - `callback`
-
   - : Fonction qui est appelée lorsque cet événement se produit. La fonction se voit transmettre les arguments suivants :
-
     - `details`
       - : `string` L'État portail captif, étant l'un des `unknown`, `not_captive`, `unlocked_portal`, ou `locked_portal`.
 

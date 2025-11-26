@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d1a9b34e50b4b9e84b51f8fadc585ae1afe75069
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 121 の変更点をまとめています。Firefox 121 は、米国時間 [2023 年 12 月 19 日](https://whattrainisitnow.com/release/?version=121) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -20,26 +18,23 @@ l10n:
 
 - {{CSSXRef("text-wrap")}} プロパティを、値 `balance` および `stable` をサポートするように更新しました。値 `balance` は見出しなど短いブロックのコンテンツで使用するもので、コンテンツが複数行にまたがるときにバランスがとれて読みやすくなります。値 `stable` は、編集可能なコンテンツをユーザーが編集するときにリフローしなくなります ([Firefox bug 1731541](https://bugzil.la/1731541))。
 - よく親セレクターと呼ばれる、{{cssxref(":has", ":has()")}} セレクターをサポートしました。これは開発者が、関連する要素に基づいて要素にスタイルを適用することを可能にします。たとえば `li:has(ul)` はサブリストをを持つリストに、`h1:has(+ p)` は直後に段落を持つ見出しにマッチします。
-- [`text-indent`](/ja/docs/Web/CSS/text-indent) CSS プロパティで、値 [`each-line`](/ja/docs/Web/CSS/text-indent#each-line) および [`hanging`](/ja/docs/Web/CSS/text-indent#hanging) をサポートしました ([Firefox bug 784648](https://bugzil.la/784648))。開発者は、特定のテキストインデントスタイルをより簡単に指定できます。また開発者はより創造的に、`text-indent` プロパティで複数の値を組み合わせることが可能になりました。例: `text-indent: 3em hanging each-line`
+- [`text-indent`](/ja/docs/Web/CSS/Reference/Properties/text-indent) CSS プロパティで、値 [`each-line`](/ja/docs/Web/CSS/Reference/Properties/text-indent#each-line) および [`hanging`](/ja/docs/Web/CSS/Reference/Properties/text-indent#hanging) をサポートしました ([Firefox bug 784648](https://bugzil.la/784648))。開発者は、特定のテキストインデントスタイルをより簡単に指定できます。また開発者はより創造的に、`text-indent` プロパティで複数の値を組み合わせることが可能になりました。例: `text-indent: 3em hanging each-line`
 
 ### JavaScript
 
 - {{jsxref("Promise.withResolvers()")}} 静的メソッドをサポートしました。これは戻り値の {{jsxref("Promise")}} と同じスコープで `resolve` および `reject` コールバック関数を公開して、Promise を構築した後に解決または拒否するコードを定義できます ([Firefox bug 1845586](https://bugzil.la/1845586))。
 
 - {{jsxref("Date.parse()")}} が追加の日付形式をいくつか受け入れるようになりました。
-
   - `YYYY-MMM-DD` 形式で年が 9999 より大きい (例: `19999-Jan-01`) ([Firefox bug 1858851](https://bugzil.la/1858851))
   - `MMM-DD-YYYY` 形式 (例: `Jan-01-1970`) ([Firefox bug 1863489](https://bugzil.la/1863489))
   - ISO 形式でない日時でミリ秒 (例: `Jan 1 1970 10:00:00.050`) ([Firefox bug 1863125](https://bugzil.la/1863125))
   - 以前は拒否されていた、先頭に曜日がある形式。たとえば:
-
     - `Wed, 1970-01-01`
     - `Wed, 1970-Jan-01`
 
     曜日が正確である必要はありません。たとえば `foo 1970-01-01` は動作します ([Firefox bug 1617562](https://bugzil.la/1617562))。
 
 - {{jsxref("Date.parse()")}} のその他の修正:
-
   - `YYYY-M-DD` および `YYYY-MM-D` 形式は、ISO 形式の日付 `YYYY-MM-DD` のように GMT であると想定しないようになりました ([Firefox bug 1783731](https://bugzil.la/1783731))。
   - すべての形式でミリ秒は四捨五入するのではなく、3 桁目より後を切り捨てるようになりました ([Firefox bug 746529](https://bugzil.la/746529))。
 

@@ -3,8 +3,6 @@ title: La sécurité dans Firefox 2
 slug: Mozilla/Firefox/Releases/2/Security_changes
 ---
 
-{{FirefoxSidebar}}
-
 Cet article aborde les changements concernant la sécurité dans Firefox 2.
 
 ### Chiffrements faibles désactivés par défaut

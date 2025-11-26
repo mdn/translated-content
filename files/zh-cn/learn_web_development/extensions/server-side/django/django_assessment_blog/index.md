@@ -219,7 +219,6 @@ slug: Learn_web_development/Extensions/Server-side/Django/django_assessment_blog
 
 1. 为站点创建骨架项目和 Web 应用程序（如[Django 教程 2：创建骨架网站](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website)中所述）。你可以使用 'diyblog' 作为项目名称，使用 'blog' 作为应用程序名称。
 2. 为博客帖子，评论和所需的任何其他对象创建模型。在考虑你的设计时，请记住：
-
    - 每个评论只有一个博客，但博客可能有很多评论。
    - 博客帖子和评论，必须按发布日期排序。
    - 并非每个用户都必须是博客作者，尽管任何用户都可能是评论者。
@@ -240,12 +239,10 @@ slug: Learn_web_development/Extensions/Server-side/Django/django_assessment_blog
 1. 索引页面可以实现为基本功能视图和模板（就像 locallibrary 一样）。
 2. T 可以使用[通用列表和详细信息视图](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Generic_views)，以创建博客帖子和博主的列表视图，以及博客帖子的详细信息视图。
 3. 可以使用通用列表的博客列表视图，并对指定作者匹配的博客对象进行过滤，来创建特定作者的博客帖子列表。
-
    - 你将必须实现`get_queryset(self)`来进行过滤（很像我们的图书馆类`LoanedBooksAllListView`），并从 URL 获取作者信息。
    - 你还需要将作者的名称，传递给上下文中的页面。要在基于类的视图中执行此操作，你需要实现`get_context_data()`（在下面讨论）。
 
 4. 可以使用基于函数的视图（以及关联的模型和表单），或使用通用`CreateView`，以创建添加注释表单。如果你使用`CreateView`（推荐），那么：
-
    - 你还需要将博客文章的名称，传递到上下文中的评论页面（实现`get_context_data()` ，如下所述）。
    - 表单应仅显示用户输入的注释“description”（日期和相关的博客文章，不应该是可编辑的）。由于它们本身不在表单中，因此你的代码，需要在`form_valid()` 函数中，设置注释的作者，以便将其保存到模型中（[如此处所述](https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-editing/#models-and-request-user) - Django 文档）。在同一个功能中，我们设置了相关的博客。可能的实现如下所示（`pk`是从 URL / URL 配置传入的博客 ID）。
 
