@@ -1,31 +1,36 @@
 ---
 title: BigInt.prototype.valueOf()
+short-title: valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/valueOf
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`valueOf()`** は {{jsxref("BigInt")}} 値のメソッドで、 {{jsxref("BigInt")}} オブジェクトにラップされているプリミティブ値を返します。
 
-**`valueOf()`** メソッドは、 {{jsxref("BigInt")}} オブジェクトにラップされたプリミティブ値を返します。
-
-{{InteractiveExample("JavaScript デモ: BigInt.valueOf()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: BigInt.prototype.valueOf()", "shorter")}}
 
 ```js interactive-example
 console.log(typeof Object(1n));
-// Expected output: "object"
+// 予想される結果: "object"
 
 console.log(typeof Object(1n).valueOf());
-// Expected output: "bigint"
+// 予想される結果: "bigint"
 ```
 
 ## 構文
 
-```js
-bigIntObj.valueOf();
+```js-nolint
+valueOf()
 ```
+
+### 引数
+
+なし。
 
 ### 返値
 
-指定された {{jsxref("BigInt")}} オブジェクトのプリミティブ値を表す BigInt です。
+指定された {{jsxref("BigInt")}} オブジェクトのプリミティブ値を表す長整数です。
 
 ## 例
 
