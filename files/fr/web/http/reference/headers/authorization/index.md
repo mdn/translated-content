@@ -36,10 +36,10 @@ Cet en-tête est supprimé lors des redirections inter-origines.
 ```http
 Authorization: <auth-scheme> <authorization-parameters>
 
-// Basic authentication
+// Authentication avec Basic
 Authorization: Basic <credentials>
 
-// Digest authentication
+// Authentication avec Digest
 Authorization: Digest username=<username>,
     realm="<realm>",
     uri="<url>",
