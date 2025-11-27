@@ -2,9 +2,8 @@
 title: CSS アンカー位置指定の使用
 short-title: アンカー位置指定の使用
 slug: Web/CSS/Guides/Anchor_positioning/Using
-original_slug: Web/CSS/CSS_anchor_positioning/Using
 l10n:
-  sourceCommit: 273cfbaca18a909ee6a9b4c8bd83d94b5c859559
+  sourceCommit: f3bf315cc3f26a6c96cfa6fa4898e7def28ca78a
 ---
 
 **CSS アンカー位置指定**モジュールは、要素を結びつけるための機能を定義します。要素は、**アンカー要素**と**アンカー位置指定要素**として定義できます。アンカー位置指定要素は、アンカー要素に束縛することができます。アンカー位置決めされた要素は、そのサイズと位置を、結合されたアンカー要素のサイズと位置に相対的に設定することができます。
@@ -93,24 +92,43 @@ CSS で要素をアンカーとして宣言するには、{{cssxref("anchor-name
 
 ### 暗黙的なアンカーの関連付け
 
-場合によっては、要素間の意味的な性質により、暗黙のアンカー参照が確立されることがあります。例えば、[ポップオーバー API](/ja/docs/Web/API/Popover_API) を使用してポップオーバーがコントロールに関連付けられた場合、両者の間に暗黙のアンカー参照が生成されます。これは次のような状況で発生する可能性があります。
+場合によっては、要素間の意味的な性質により、暗黙のアンカー参照が確立されることがあります。
 
-- 宣言的にポップオーバーがコントロールに関連付けられるように、[`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget) 属性と [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性を使用する。
-- プログラム的にポップオーバーアクション（{{domxref("HTMLElement.showPopover", "showPopover()")}} など）を、`source` オプションを使用してコントロールに関連付けする。
+- [ポップオーバー API](/ja/docs/Web/API/Popover_API) を使用してポップオーバーがコントロールに関連付けられた場合、両者の間に暗黙のアンカー参照が生成されます。これは次のような状況で発生する可能性があります。
+  - 宣言的にポップオーバーがコントロールに関連付けられるように、[`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget) 属性と [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性を使用する。
+  - プログラム的にポップオーバーアクション（{{domxref("HTMLElement.showPopover", "showPopover()")}} など）を、`source` オプションを使用してコントロールに関連付けする。
+
 - {{htmlelement("select")}} 要素とそのドロップダウンピッカーは、 {{cssxref("appearance")}} プロパティの `base-select` 値により、[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)機能に組み込まれます。この場合、両者の間に暗黙のポップオーバー呼び出し元関係が作成され、同時に暗黙のアンカー参照であるということになります。
 
 > [!NOTE]
 > 以上の方法はアンカーを要素に関連付けますが、まだ固定されていません。これらを固定するには、位置指定要素をそのアンカーに対して相対的に配置する必要がありますが、これは CSS で行います。
+
+### アンカーの関連付けを解除
+
+アンカー要素と位置指定された要素の間に以前設定された、明示的なアンカー関連付けを解除したい場合は、次のいずれかの方法を使用することができます。
+
+1. アンカーの `anchor-name` プロパティの値を `none` に設定するか、別の `<dashed-ident>` に設定する。これにより、別の要素をアンカーとして設定できます。
+2. 位置指定要素の `position-anchor` プロパティを、現在の文書に存在しないアンカー名（例: `--not-an-anchor-name`）に設定する。
+
+ただし、暗黙のアンカー関連付けの場合、2 番目の方法を使用する必要があります。1 番目の方法は機能しません。これは関連付けが内部で制御されているためで、CSS で `anchor-name` を削除することはできないからです。
+
+たとえば、カスタマイズ可能な `<select>` 要素のピッカーが `<select>` 要素自体に固定されるのを防ぐには、次のルールを使うと実現できます。
+
+```css
+::picker(select) {
+  position-anchor: --not-an-anchor-name;
+}
+```
 
 ## 要素をアンカーに対して相対的に配置
 
 上で見たように、位置指定された要素をアンカーと関連付けるだけでは、実はあまり使用する場面がありません。私たちの目標は、位置指定された要素を、関連付けられたアンカー要素に対して相対的に配置することです。これを設定するには、[インセットプロパティ](/ja/docs/Glossary/Inset_properties)に [CSS の `anchor()` 関数](#インセットプロパティで_anchor_関数値を使用)の値を設定するか、[`position-area` を指定](#position-area_の設定)するか、または [`anchor-center` 配置値](#anchor-center_を使用してアンカーの中央に配置)で位置指定された要素を中央揃えします。
 
 > [!NOTE]
-> CSS アンカー位置指定では、位置指定要素の既定の位置がビューポートをあふれる場合に備えた、代替位置を指定する仕組みも同時に提供しています。詳細は[代替オプションと条件付き非表示](/ja/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)ガイドを参照してください。
+> CSS アンカー位置指定では、位置指定要素の既定の位置がビューポートをあふれる場合に備えた、代替位置を指定する仕組みも同時に提供しています。詳細は[代替オプションと条件付き非表示](/ja/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)ガイドを参照してください。
 
 > [!NOTE]
-> 関連付けと位置指定が動作するには、アンカー要素は可視の DOM ノードでなければなりません。 もし非表示（例えば [`display: none`](/ja/docs/Web/CSS/Reference/Properties/display#none)）になっている場合、位置指定された要素は、最も近い位置指定祖先要素を基準として位置指定されます。 アンカーが消えた際に、アンカーで位置指定された要素を非表示にする方法については、[`position-visibility` を使用した条件付き非表示](/ja/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding#conditionally_hiding_anchor-positioned_elements)で説明しています。
+> 関連付けと位置指定が動作するには、アンカー要素は可視の DOM ノードでなければなりません。 もし非表示（例えば [`display: none`](/ja/docs/Web/CSS/Reference/Properties/display#none)）になっている場合、位置指定された要素は、最も近い位置指定祖先要素を基準として位置指定されます。 アンカーが消えた際に、アンカーで位置指定された要素を非表示にする方法については、[`position-visibility` を使用した条件付き非表示](/ja/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding#conditionally_hiding_anchor-positioned_elements)で説明しています。
 
 ### インセットプロパティで `anchor()` 関数値を使用
 
@@ -130,7 +148,7 @@ anchor(<anchor-name> <anchor-side>, <fallback>)
     > `<anchor-name>` を指定すると、そのアンカーに対する要素の位置が指定されますが、要素の関連付けは指定されません。同じ要素上の異なる `anchor()` 関数内に[異なる`<anchor-name>` 値](/ja/docs/Web/CSS/Reference/Values/anchor#複数のアンカーに相対的な要素の位置指定)を指定することで、複数のアンカーに対する要素の位置を指定できますが、位置指定された要素は単一のアンカーと関連付けられます。
 
 - [`<anchor-side>`](/ja/docs/Web/CSS/Reference/Values/anchor#anchor-side)
-  - : アンカーの端に対する相対位置を指定します。有効な値には、アンカーの中心、アンカーの物理的な辺（`top`, `left`, など）、または論理的な辺（`start`, `self-end`, など）、またはインセットプロパティの軸の先頭 (`0%`) と末尾 (`100%`) の間のパーセント値が含まれます。`anchor()` 関数が設定されているインセットプロパティと[互換性](/ja/docs/Web/CSS/Reference/Values/anchor#compatibility_of_inset_properties_and_anchor-side_values)のない値が使用された場合、代替値が使用されます。
+  - : アンカーの端に対する相対位置を指定します。有効な値には、アンカーの中心、アンカーの物理的な辺（`top`, `left`, など）、または論理的な辺（`start`, `self-end`, など）、またはインセットプロパティの軸の先頭 (`0%`) と末尾 (`100%`) の間のパーセント値が含まれます。`anchor()` 関数が設定されているインセットプロパティと[互換性](/ja/docs/Web/CSS/Reference/Values/anchor#インセットプロパティと_anchor-side_の値の互換性)のない値が使用された場合、代替値が使用されます。
 
 - `<fallback>`
   - : {{cssxref("length-percentage")}} は、要素が絶対位置指定または固定位置指定されていない場合、使用された `<anchor-side>` 値が `anchor()` 関数が設定されたインセットプロパティと互換性がない場合、またはアンカー要素が存在しない場合に、代替値として使用する距離を定義します。
@@ -422,7 +440,7 @@ selectElem.addEventListener("change", () => {
 
 `<select>` メニューから新しい `position-area` 値を選択して、情報ボックスの位置にどのような影響があるか確認してみてください。
 
-{{ EmbedLiveSample("Setting an `position-area`", "100%", "250") }}
+{{ EmbedLiveSample("Setting a `position-area`", "100%", "250") }}
 
 ### 位置指定要素の幅
 
@@ -537,7 +555,7 @@ anchor-size(<anchor-name> <anchor-size>, <length-percentage>)
 
 - `<anchor-name>`
   - : 相対指定するアンカー要素の [`anchor-name`](/ja/docs/Web/CSS/Reference/Properties/anchor-name) プロパティの値として設定する `<dashed-ident>` の名前。省略した場合は、その要素の既定のアンカー（[`position-anchor`](/ja/docs/Web/CSS/Reference/Properties/position-anchor) プロパティで参照されているアンカー）が使用されます。
-- [`<anchor-size>`](/ja/docs/Web/CSS/anchor-size#anchor-size)
+- [`<anchor-size>`](/ja/docs/Web/CSS/Reference/Values/anchor-size#anchor-size)
   - : 位置指定された要素のサイズが相対となるアンカー要素の寸法を指定します。 物理的な値（`width` または `height`）または論理的な値（`inline`, `block`, `self-inline`, `self-block`）を使用して表現することができます。
 - {{cssxref("length-percentage")}}
   - : 要素が絶対位置指定または修正された位置指定ではない場合、またはアンカー要素が存在しない場合に、代替値として使用するサイズを指定します。
@@ -670,7 +688,7 @@ inset-inline-end: anchor-size(--my-anchor height, 100px);
 
 ### アンカーサイズに基づく要素のマージンの設定
 
-[`anchor-size()`](/ja/docs/Web/CSS/anchor-size) 関数を `margin-*` プロパティの値の中で使用することで、アンカー要素のサイズに基づいて要素のマージンを設定できます。例えば：
+[`anchor-size()`](/ja/docs/Web/CSS/Reference/Values/anchor-size) 関数を `margin-*` プロパティの値の中で使用することで、アンカー要素のサイズに基づいて要素のマージンを設定できます。
 
 ```css
 margin-left: calc(anchor-size(width) / 4);
@@ -788,7 +806,7 @@ body {
 ## 関連情報
 
 - [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)モジュール
-- [オーバーフローの扱い: 代替や条件付き非表示](/ja/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)
+- [オーバーフローの扱い: 代替や条件付き非表示](/ja/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)
 - [位置指定](/ja/docs/Learn_web_development/Core/CSS_layout/Positioning)
 - [CSS 論理プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)モジュール
 - [CSS におけるアイテムのサイズ設定](/ja/docs/Learn_web_development/Core/Styling_basics/Sizing)
