@@ -9,7 +9,7 @@ l10n:
 
 ## 子网格简介
 
-当你为网格容器添加 [`display: grid`](/zh-CN/docs/Web/CSS/Reference/Properties/display)样式时，只有直接子元素会成为网格项，这些网格项随后可被放置在你创建的网格中，而这些网格项的子元素仍会正常显示。
+当你为网格容器添加 [`display: grid`](/zh-CN/docs/Web/CSS/Reference/Properties/display) 样式时，只有直接子元素会成为网格项，这些网格项随后可被放置在你创建的网格中，而这些网格项的子元素仍会以常规流布局展示。
 
 你可以通过将网格项设置为网格容器的方式来实现网格的“嵌套”。但是，这些嵌套网格独立于父网格，彼此也相互独立。这意味着，它们不会继承父网格的轨道尺寸，这使得让嵌套网格项与主网格对齐变得十分困难。
 
@@ -17,7 +17,7 @@ l10n:
 
 例如，若你为嵌套网格设置 `grid-template-columns: subgrid`，且该嵌套网格跨占父网格的三列轨道，那么这个嵌套网格将会有与父网格相同大小的三列轨道。尽管[网格间距](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#网格间距)也会被继承，但可以通过不同的 {{cssxref("gap")}} 值进行覆盖。[具名网格线](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)可以从父网格传递到子网格，子网格也可以声明自己的具名网格线。
 
-## 子网格上的列
+## 列子网格
 
 在下方示例中，该网格布局包含 9 个宽度为 `1fr` 的列轨道，以及 4 行最小高度为 100px 的行轨道。
 
@@ -81,9 +81,9 @@ l10n:
 
 {{EmbedLiveSample("columns", "", "450px")}}
 
-## 子网格上的行
+## 行子网格
 
-这个示例使用了与上面相同的 HTML，但此处将 `subgrid` 作为 `grid-template-rows` 的值来应用，同时对列轨道进行了显式定义。在这种情况下，列轨道的表现与常规嵌套网格一致，而行轨道则与 `.item` 元素所跨占的两条轨道绑定。
+这个示例使用了与上面相同的 HTML，但此处 `subgrid` 是以 `grid-template-rows` 值来应用的，同时对列轨道进行了显式定义。在这种情况下，列轨道的表现与常规嵌套网格一致，而行轨道则与 `.item` 元素所跨占的两条轨道绑定。
 
 ```html live-sample___rows hidden
 <div class="grid">
@@ -335,7 +335,7 @@ body {
 
 ## 间隔属性与子网格
 
-父网格上设置的任何 {{cssxref("gap")}}、{{cssxref("column-gap")}} 和 {{cssxref("row-gap")}} 的值都会传递到子网格，使子网格轨道之间的间距与父网格保持一致。该默认行为可以通过在子网格容器上应用 `gap-*` 属性来覆盖。
+父网格上设置的任何 {{cssxref("gap")}}、{{cssxref("column-gap")}} 或 {{cssxref("row-gap")}} 的值都会传递到子网格，使子网格轨道之间的间距与父网格保持一致。该默认行为可以通过在子网格容器上应用 `gap-*` 属性来覆盖。
 
 在这个示例中，父网格的行和列间距为 `20px`，而子网格的 `row-gap` 被设置为 `0`。
 
@@ -408,7 +408,7 @@ body {
 
 ## 具名网格线
 
-使用 CSS 网格时，你可以[为网格线命名](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)，然后根据这些网格线名称而非网格线编号来定位项目。父网格线上的线名会被传递到子网格，你可以使用这些线名来放置项目。在下面的示例中，父网格的命名线 `col-start` 和 `col-end` 被用来放置子项目。
+使用 CSS 网格时，你可以[为网格线命名](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)，然后根据这些网格线名称而非网格线编号来定位项目。父网格线上的线名会被传递到子网格，你可以使用这些线名来放置项目。在下面的示例中，父网格的具名线 `col-start` 和 `col-end` 被用来放置子项目。
 
 ```html live-sample___line-names
 <div class="grid">
@@ -547,6 +547,6 @@ body {
 
 ## 参见
 
-- [视频教程：使用子网格创建表单](https://www.youtube.com/watch?v=gmQlK3kRft4)（2019）
-- [视频教程：别再等了！用子网格创建更好的卡片布局](https://www.youtube.com/watch?v=lLnFtK1LNu4)（2019）
-- [视频教程：你好，子网格！](https://www.youtube.com/watch?v=vxOj7CaWiPU)来自 CSSConf.eu 的演讲（2019）
+- [视频：使用子网格排布表单](https://www.youtube.com/watch?v=gmQlK3kRft4)（2019）
+- [视频：不要犹豫，立即使用子网格来优化卡片布局](https://www.youtube.com/watch?v=lLnFtK1LNu4)（2019）
+- [视频：你好，子网格！](https://www.youtube.com/watch?v=vxOj7CaWiPU)（来自 CSSConf.eu 的演讲，2019）
