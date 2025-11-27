@@ -1,9 +1,9 @@
 ---
 title: CSS フレックスボックスレイアウト
+short-title: フレックスボックスレイアウト
 slug: Web/CSS/Guides/Flexible_box_layout
-original_slug: Web/CSS/CSS_flexible_box_layout
 l10n:
-  sourceCommit: 8a7e911652fcb4a61cc95f458d53f39ad08c0946
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **CSS フレックスボックスレイアウト** (CSS flexible box layout) は、ユーザーインターフェイスの設計に最適化された CSS ボックスモデルと、一次元のアイテムのレイアウトを定義します。フレックスレイアウトモデルでは、フレックスコンテナーの子は任意の方向にレイアウトすることができ、また使われていない空間を埋めるために伸長したり、あるいは親のあふれることを避けるために収縮したりと、そのサイズを「伸縮」することができます。子の水平方向と垂直方向の両方の整列を、容易に操作することが可能です。
@@ -120,5 +120,6 @@ body {
 
 ## 関連情報
 
+- [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)モジュール
 - [CSS 書字方向](/ja/docs/Web/CSS/Guides/Writing_modes)モジュール
 - [CSS display の複数キーワード構文の使用](/ja/docs/Web/CSS/Guides/Display/Multi-keyword_syntax)
