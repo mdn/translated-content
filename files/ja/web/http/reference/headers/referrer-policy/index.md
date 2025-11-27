@@ -55,7 +55,6 @@ Referrer-Policy: unsafe-url
     > これはポリシーが指定されていない場合や、与えられた値が無効であった場合の既定のポリシーです (仕様書改訂 [November 2020](https://github.com/whatwg/fetch/pull/1066) を参照) 。以前の既定値は `no-referrer-when-downgrade` でした。
 
 - `unsafe-url`
-
   - : セキュリティに関係なく、どのリクエストを行った場合でも、オリジン、パス、クエリー文字列を送信します。
 
     > [!WARNING]
