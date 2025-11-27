@@ -99,11 +99,11 @@ Pour centrer la grille horizontalement sur la page, vous pouvez définir une `ma
 
 ## Problèmes d'accessibilité
 
-Bien que la grille CSS permette de positionner les éléments presque partout, il est important de s'assurer que votre balisage sous-jacent suit un ordre logique (voir [Disposition en grille CSS et accessibilité](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility) pour plus de détails).
+Bien que la grille CSS permette de positionner les éléments presque partout, il est important de s'assurer que votre balisage sous-jacent suit un ordre logique (voir [Disposition en grille CSS et accessibilité](/fr/docs/Web/CSS/Guides/Grid_layout/Accessibility) pour plus de détails).
 
 ## Voir aussi
 
 - La propriété {{CSSxRef("grid-template-columns")}}
-- [Les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout)
+- [Les grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout)
 - [Les grilles CSS, plus de flexibilité avec `minmax()` <sup>(angl.)</sup>](https://css-irl.info/more-flexibility-with-minmax/) (2018)
 - [Isoler des éléments sur une grille CSS <sup>(angl.)</sup>](https://rachelandrew.co.uk/archives/2017/06/01/breaking-out-with-css-grid-explained/) (2017)

@@ -74,7 +74,7 @@ target.addEventListener("drop", (ev) => {
     log(`… types[${i}] = ${ev.dataTransfer.types[i]}`);
   }
 
- // それぞれの項目の "kind" と "type" を表示する
+  // それぞれの項目の "kind" と "type" を表示する
   for (let i = 0; i < ev.dataTransfer.items.length; i++) {
     log(
       `… items[${i}].kind = ${ev.dataTransfer.items[i].kind}; type = ${ev.dataTransfer.items[i].type}`,

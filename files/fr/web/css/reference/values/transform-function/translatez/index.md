@@ -1,14 +1,13 @@
 ---
 title: translateZ()
 slug: Web/CSS/Reference/Values/transform-function/translateZ
-original_slug: Web/CSS/transform-function/translateZ
+l10n:
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
-{{CSSRef}}
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`translateZ()`** repositionne un élément le long de l'axe z dans l'espace 3D, c'est-à-dire plus près ou plus loin de l'utilisateur·ice. Son résultat est de type {{CSSxRef("&lt;transform-function&gt;")}}.
 
-La fonction **`translateZ()`** permet de déplacer un élément selon l'axe z de l'espace tridimensionnel. Cette transformation est caractérisée par une valeur de longueur (type [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)) qui définit l'amplitude du mouvement. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function).
-
-{{InteractiveExample("CSS Demo: translateZ()")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: translateZ()")}}
 
 ```css interactive-example-choice
 transform: translateZ(0);
@@ -66,39 +65,43 @@ transform: translateZ(-3ch);
 }
 
 .front {
-  background: rgba(90, 90, 90, 0.7);
+  background: rgb(90 90 90 / 0.7);
   transform: translateZ(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
+  background: rgb(0 210 0 / 0.7);
   transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210, 0, 0, 0.7);
+  background: rgb(210 0 0 / 0.7);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0, 0, 210, 0.7);
+  background: rgb(0 0 210 / 0.7);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
+  background: rgb(210 210 0 / 0.7);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
+  background: rgb(210 0 210 / 0.7);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
 
-`translateZ(tz)` est un raccourci équivalent à `translate3d(0, 0, tz)`.
+Cette transformation est définie par une {{CSSxRef("&lt;length&gt;")}} qui précise de combien l'élément ou les éléments se déplacent vers l'intérieur ou l'extérieur.
 
-Dans les exemples interactifs ci-avant, `perspective: 500px;` a été utilisée afin de créer un espace en trois dimensions et `transform-style: preserve-3d` permet de positionner les éléments enfants (les 6 faces du cube) dans cet espace 3D.
+Dans les exemples interactifs ci-dessus, [`perspective: 550px;`](/fr/docs/Web/CSS/Reference/Properties/perspective) (pour créer un espace 3D) et [`transform-style: preserve-3d;`](/fr/docs/Web/CSS/Reference/Properties/transform-style) (pour que les enfants, les 6 faces du cube, soient aussi positionnés dans l'espace 3D) sont appliqués au cube.
+
+> [!NOTE]
+> `translateZ(tz)` est équivalent à
+> `translate3d(0, 0, tz)`.
 
 ## Syntaxe
 
@@ -108,48 +111,42 @@ translateZ(tz)
 
 ### Valeurs
 
-- `t`
-  - : Une valeur de type [`<length>`](/fr/docs/Web/CSS/Reference/Values/length) qui représente la composante en Z du vecteur de translation appliqué. Cet argument ne peut pas être de type [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage), si c'est le cas, la propriété qui contient la transformation est considérée comme invalide.
+- `tz`
+  - : Une longueur ({{CSSxRef("&lt;length&gt;")}}) représentant la composante z du vecteur de déplacement [0, 0, tz]. Dans le [système de coordonnées cartésiennes](/fr/docs/Web/CSS/Reference/Values/transform-function#le_système_de_coordonnées_cartésiennes), cela représente le déplacement le long de l'axe z. Une valeur positive rapproche l'élément de l'utilisateur·ice, une valeur négative l'éloigne.
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
+      <th scope="col"><a href="/fr/docs/Web/CSS/Reference/Values/transform-function#le_système_de_coordonnées_cartésiennes">Coordonnées cartésiennes</a> sur <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^2 <sup>(angl.)</sup></a></th>
+      <th scope="col"><a href="https://fr.wikipedia.org/wiki/Coordonn%C3%A9es_homog%C3%A8nes">Coordonnées homogènes</a> sur <a href="https://fr.wikipedia.org/wiki/Plan_projectif_r%C3%A9el">ℝℙ^2</a></th>
+      <th scope="col">Coordonnées cartésiennes sur <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^3 <sup>(angl.)</sup></a></th>
+      <th scope="col">Coordonnées homogènes sur <a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3 <sup>(angl.)</sup></a></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td colspan="2" rowspan="2">
-        Cette transformation s'applique en trois dimensions et ne peut donc être
-        représentée sur un plan.
+      <td colspan="2">
+        Cette transformation s'applique à l'espace 3D et ne peut pas être représentée sur le plan.
       </td>
-      <td colspan="1" rowspan="2">
-        Une translation n'est pas une transformation linéaire sur ℝ<sup>3</sup>
-        et ne peut donc pas être représentée avec une matrice dans le système
-        cartésien.
+      <td>
+        Un déplacement n'est pas une transformation linéaire dans ℝ^3 et ne peut pas être représenté par une matrice de coordonnées cartésiennes.
       </td>
-      <td colspan="1" rowspan="2">
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>t</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
-            ></mfenced
-          ></math
-        >
+      <td>
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mi>t</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cccc} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & t \\ 0 & 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
     </tr>
   </tbody>
 </table>
 
+## Syntaxe formelle
+
+{{CSSSyntax}}
+
 ## Exemples
+
+Dans cet exemple, deux boîtes sont créées. L'une est positionnée normalement sur la page, sans aucune translation. La seconde est modifiée en appliquant une perspective pour créer un espace 3D, puis déplacée vers l'utilisateur·ice.
 
 ### HTML
 
@@ -170,20 +167,25 @@ div {
 }
 
 .moved {
-  /* On ajoute une perspective pour créer un */
-  /* espace 3D. L'utilisateur regarde « depuis »*/
-  /* 500px et on avance l'élément vers l'utili- */
-  /* sateur de 200px */
   transform: perspective(500px) translateZ(200px);
   background-color: pink;
 }
 ```
 
+Ce qui importe vraiment ici est la classe «&nbsp;moved&nbsp;»&nbsp;; voyons ce qu'elle fait. D'abord, la fonction {{CSSxRef("transform-function/perspective", "perspective()")}} positionne l'utilisateur·ice par rapport au plan qui se trouve où z=0 (en essence, la surface de l'écran). Une valeur de `500px` signifie que l'utilisateur·ice est à 500 pixels «&nbsp;devant&nbsp;» l'image située à z=0.
+
+Ensuite, la fonction `translateZ()` déplace l'élément de 200 pixels «&nbsp;vers l'extérieur&nbsp;» de l'écran, vers l'utilisateur·ice.
+Cela a pour effet de faire apparaître l'élément plus grand lorsqu'il est vu sur un affichage 2D, ou plus proche lorsqu'il est vu avec un casque VR
+ou un autre dispositif d'affichage 3D.
+
+Notez que si la valeur de `perspective()` est inférieure à celle de `translateZ()`, comme `transform: perspective(200px) translateZ(300px);` l'élément transformé ne sera pas visible car il est plus éloigné que la fenêtre de l'utilisateur·ice. Plus la différence entre les valeurs de perspective et de translateZ est faible, plus l'utilisateur·ice est proche de l'élément et plus l'élément déplacé semblera grand.
+
+> [!NOTE]
+> Comme la composition des transformations n'est pas commutative, l'ordre dans lequel vous écrivez les différentes fonctions est important. En général, il est préférable de placer `perspective()` avant `translateZ()`.
+
 ### Résultat
 
-{{EmbedLiveSample("Exemples")}}
-
-Si la valeur fournie à `perspective()` est inférieure à l'argument de `translateZ()` (ex. `transform: perspective(200px) translateZ(300px);`), l'élément transformé ne sera pas visible, car il sera situé au-delà de l'espace projeté sur l'écran. Plus l'écart entre ces deux arguments est faible, plus l'élément paraîtra proche de l'utilisateur.
+{{EmbedLiveSample("Exemples", 250, 250)}}
 
 ## Spécifications
 
@@ -195,7 +197,6 @@ Si la valeur fournie à `perspective()` est inférieure à l'argument de `transl
 
 ## Voir aussi
 
-- [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function)
-- [Les transformations CSS](/fr/docs/Web/CSS/Guides/Transforms/Using)
-- [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
-- [`translateX()`](/fr/docs/Web/CSS/Reference/Values/transform-function/translateX) et [`translateY()`](/fr/docs/Web/CSS/Reference/Values/transform-function/translateY)
+- La propriété {{CSSxRef("transform")}}
+- Le type de donnée {{CSSxRef("&lt;transform-function&gt;")}}
+- La propriété {{CSSxRef("translate")}}

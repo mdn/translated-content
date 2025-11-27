@@ -69,9 +69,7 @@ div {
 const source = document.getElementById("source");
 const target = document.getElementById("target");
 
- // 画像を作成してドラッグ画像に使用します。好きな画像の URL を使用してください。
-// Create an image and use it for the drag image
-// Use the image URL that you desire
+// 画像を作成してドラッグ画像に使用します。好きな画像の URL を使用してください。
 const img = new Image();
 img.src = "/shared-assets/images/examples/favicon32.png";
 

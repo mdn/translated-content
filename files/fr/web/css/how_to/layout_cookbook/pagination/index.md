@@ -104,7 +104,7 @@ nav {
 
 ## Choix effectués
 
-Ce motif utilise la [mise en page flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout) — un conteneur flexible imbriqué dans un autre. L'élément {{HTMLElement("nav")}} est défini comme conteneur flexible afin de pouvoir centrer la liste à l'intérieur grâce à la propriété {{CSSxRef("justify-content")}}.
+Ce motif utilise la [mise en page flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout) — un conteneur flexible imbriqué dans un autre. L'élément {{HTMLElement("nav")}} est défini comme conteneur flexible afin de pouvoir centrer la liste à l'intérieur grâce à la propriété {{CSSxRef("justify-content")}}.
 
 La liste elle-même devient aussi un conteneur flexible pour disposer les éléments sur une ligne. Pour espacer les éléments, on peut soit utiliser un {{CSSxRef("margin")}} sur les éléments flexibles, soit ajouter un {{CSSxRef("gap")}} sur le conteneur flexible.
 

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f3bf4e2bd456159093d3820253be9f266ace070a
 ---
 
-Il vous faudra souvent créer une mise en page comportant plusieurs colonnes, et CSS offre plusieurs moyens d'y parvenir. Le choix entre les dispositions [à plusieurs colonnes](/fr/docs/Web/CSS/CSS_multicol_layout), [flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout) ou [grille](/fr/docs/Web/CSS/CSS_grid_layout) dépendra de l'objectif visé&nbsp;; dans cette recette nous explorons ces options.
+Il vous faudra souvent créer une mise en page comportant plusieurs colonnes, et CSS offre plusieurs moyens d'y parvenir. Le choix entre les dispositions [à plusieurs colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout), [flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout) ou [grille](/fr/docs/Web/CSS/Guides/Grid_layout) dépendra de l'objectif visé&nbsp;; dans cette recette nous explorons ces options.
 
 ![Trois styles de mise en page comportant deux colonnes dans le conteneur.](cookbook-multiple-columns.png)
 
@@ -231,6 +231,6 @@ Quand utiliser la grille&nbsp;:
 
 ## Voir aussi
 
-- [Guide pour les dispositions multi-colonnes](/fr/docs/Web/CSS/CSS_multicol_layout)
-- [Guide pour les boîtes flexibles (<i lang="en">flexbox</i>)](/fr/docs/Web/CSS/CSS_flexible_box_layout)
-- [Guide pour les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout)
+- [Guide pour les dispositions multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout)
+- [Guide pour les boîtes flexibles (<i lang="en">flexbox</i>)](/fr/docs/Web/CSS/Guides/Flexible_box_layout)
+- [Guide pour les grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout)

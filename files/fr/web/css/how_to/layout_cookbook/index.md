@@ -35,10 +35,10 @@ Le livre de recettes CSS vise à rassembler des recettes pour les motifs de mise
 [pagination]: /fr/docs/Web/CSS/How_to/Layout_cookbook/Pagination
 [card]: /fr/docs/Web/CSS/How_to/Layout_cookbook/Card
 [grid-wrapper]: /fr/docs/Web/CSS/How_to/Layout_cookbook/Grid_wrapper
-[css-grid]: /fr/docs/Web/CSS/CSS_grid_layout
-[multicol]: /fr/docs/Web/CSS/CSS_multicol_layout
-[flexbox]: /fr/docs/Web/CSS/CSS_flexible_box_layout
-[box-alignment]: /fr/docs/Web/CSS/CSS_box_alignment
+[css-grid]: /fr/docs/Web/CSS/Guides/Grid_layout
+[multicol]: /fr/docs/Web/CSS/Guides/Multicol_layout
+[flexbox]: /fr/docs/Web/CSS/Guides/Flexible_box_layout
+[box-alignment]: /fr/docs/Web/CSS/Guides/Box_alignment
 
 ## Contribuer une recette
 

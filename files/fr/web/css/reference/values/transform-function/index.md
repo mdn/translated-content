@@ -1,102 +1,263 @@
 ---
-title: transform-function
+title: <transform-function>
 slug: Web/CSS/Reference/Values/transform-function
-original_slug: Web/CSS/transform-function
+l10n:
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
-{{CSSRef}}
-
-Le type de donnée **`<transform-function>`** représente une fonction qui, lorsqu'elle est appliquée à un élément, permet de modifier sa représentation géométrique. Ces transformations sont généralement exprimées sous forme de matrices et l'image obtenue peut être déterminée en appliquant la matrice de la transformation sur chaque point de l'image. On peut ainsi tourner, redimensionner, distordre. Ce type de donnée est utilisé avec la propriété {{cssxref("transform")}}.
-
-## Coordonnées en deux dimensions
-
-Il existe plusieurs modèles de repères géométriques permettant de décrire des transformations. Le repère utilisé le plus communément est [le système cartésien](https://fr.wikipedia.org/wiki/Coordonnées_cartésiennes).
-
-### Le système de coordonnées cartésiennes
-
-![](coord_in_r2.png)
-
-Pour [le système cartésien](https://fr.wikipedia.org/wiki/Coordonnées_cartésiennes), chaque point de l'espace est décrit avec deux valeurs, l'abscisse et l'ordonnée. L'origine du repère `(0, 0)` correspond au coin supérieur gauche de l'élément. À la différence des conventions usuelles, l'axe vertical (_y_) se dirige vers le bas. Chaque point est décrit avec la notation `(x,y)`.
-
-Chaque fonction linéaire est décrite avec une matrice 2 x 2 :
-
-<math><mfenced><mtable><mtr><mtd>a</mtd><mtd>c</mtd></mtr> <mtr><mtd>b</mtd><mtd>d</mtd></mtr></mtable></mfenced></math>
-
-L'application d'une transformation consiste à multiplier la matrice de transformation au vecteur de coordonnées `(x,y)` :
-
-<math><mfenced><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr> <mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr> </mtable></mfenced><mfenced><mtable><mtr><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd></mtr> </mtable></mfenced><mo>=</mo> <mfenced><mtable><mtr><mtd><mi>a</mi><mi>x</mi><mo>+</mo><mi>c</mi><mi>y</mi></mtd> </mtr><mtr><mtd><mi>b</mi><mi>x</mi><mo>+</mo><mi>d</mi><mi>y</mi></mtd></mtr></mtable></mfenced></math>
-
-On peut appliquer plusieurs transformations les unes à la suite des autres :
-
-<math><mfenced><mtable><mtr><mtd><msub><mi>a</mi><mn>1</mn></msub></mtd> <mtd><msub><mi>c</mi><mn>1</mn></msub></mtd> </mtr><mtr><mtd><msub><mi>b</mi><mn>1</mn></msub></mtd> <mtd><msub><mi>d</mi><mn>1</mn></msub></mtd> </mtr></mtable></mfenced><mfenced><mtable><mtr><mtd><msub><mi>a</mi><mn>2</mn></msub></mtd> <mtd><msub><mi>c</mi><mn>2</mn></msub></mtd> </mtr><mtr><mtd><msub><mi>b</mi><mn>2</mn></msub></mtd> <mtd><msub><mi>d</mi><mn>2</mn></msub></mtd> </mtr></mtable></mfenced><mo>=</mo> <mfenced><mtable><mtr><mtd><msub><mi>a</mi><mn>1</mn></msub> <msub><mi>a</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>c</mi><mn>1</mn></msub> <msub><mi>b</mi><mn>2</mn></msub> </mtd><mtd><msub><mi>a</mi><mn>1</mn></msub> <msub><mi>c</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>c</mi><mn>1</mn></msub> <msub><mi>d</mi><mn>2</mn></msub> </mtd></mtr><mtr><mtd><msub><mi>b</mi><mn>1</mn></msub> <msub><mi>a</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>d</mi><mn>1</mn></msub> <msub><mi>b</mi><mn>2</mn></msub> </mtd><mtd><msub><mi>b</mi><mn>1</mn></msub> <msub><mi>c</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>d</mi><mn>1</mn></msub> <msub><mi>d</mi><mn>2</mn></msub></mtd></mtr></mtable></mfenced></math>
-
-En utilisant cette notation, on peut décrire et enchaîner (ou composer) la plupart des transformations : des rotations, des homothéties et des distorsions. Les transformations qui sont composées entre elles sont appliquées dans l'ordre, de droite à gauche. Une transformation qui n'est pas linéaire ne pourra pas être représentée par cet outil. Ainsi, l'opération de translation ne pourra pas être représentée par une matrice et devra être gérée à part.
-
-[Les coordonnées homogènes de Möbius](https://fr.wikipedia.org/wiki/August_Ferdinand_Möbius) utilisées en [géométrie projective](https://fr.wikipedia.org/wiki/Géométrie_projective) permettent d'obtenir des matrices de transformations 3x3. Bien que plus complexe et moins usitées, celles-ci permettent de représenter les translations car ces dernières correspondent à des fonctions linéaires pour cette algèbre.
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<transform-function>`** représente une transformation qui affecte l'apparence d'un élément. Les [fonctions](/fr/docs/Web/CSS/Reference/Values/Functions) de transformation peuvent faire pivoter, redimensionner, déformer ou déplacer un élément en 2D ou 3D. Ce type est utilisé dans la propriété {{CSSxRef("transform")}}.
 
 ## Syntaxe
 
-Plusieurs fonctions sont disponibles en CSS pour décrire des transformations. Chacune des fonctions qui suivent applique une opération géométrique, en 2D ou en 3D.
+Le type de donnée `<transform-function>` s'utilise avec l'une des fonctions de transformation listées ci-dessous. Chaque fonction applique une opération géométrique en 2D ou 3D.
 
-### Matrices de transformation
+### Transformation matricielle
 
-- [`matrix()`](/fr/docs/Web/CSS/Reference/Values/transform-function/matrix)
-  - : La fonction `matrix()` permet de définir une matrice de transformation homogène en deux dimensions. Cette matrice contient six coefficients. Les valeurs constantes de ces matrices sont implicites et ne font donc pas partie des paramètres. Les autres paramètres sont décrits dans l'ordre des colonnes. `matrix(a, b, c, d, tx, ty)` est une notation raccourcie pour `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)`.
-- [`matrix3d()`](/fr/docs/Web/CSS/Reference/Values/transform-function/matrix3d)
-  - : La fonction `matrix3d()` permet de définir une transformation en trois dimensions grâce à une matrice homogène 4x4. Les 16 paramètres sont décrits dans l'ordre des colonnes.
+- {{CSSxRef("transform-function/matrix", "matrix()")}}
+  - : Décrit une matrice de transformation homogène en 2D.
+- {{CSSxRef("transform-function/matrix3d", "matrix3d()")}}
+  - : Décrit une transformation 3D sous forme de matrice homogène 4×4.
 
 ### Perspective
 
-- [`perspective()`](/fr/docs/Web/CSS/Reference/Values/transform-function/perspective)
-  - : La fonction `perspective()` définit la distance entre le plan de coordonnées z=0 et l'œil de l'utilisateur. Cela permet de placer une perspective en trois dimensions sur l'élément. Chaque élément 3D pour lequel z est supérieur à 0 devient plus grand et chaque élément pour lequel z est négatif devient plus petit.
+- {{CSSxRef("transform-function/perspective", "perspective()")}}
+  - : Définit la distance entre l'utilisateur·ice et le plan z=0.
 
 ### Rotation
 
-- [`rotate()`](/fr/docs/Web/CSS/Reference/Values/transform-function/rotate)
-  - : La fonction `rotate()` définit une transformation qui déplace l'élément autour d'un point fixe (défini par la propriété {{cssxref("transform-origin")}}) sans le déformer. La quantité de mouvement est définie par l'angle passé en argument. Si la valeur fournie est positive, le mouvement se fait dans le sens des aiguilles d'une montre (sens _horaire_) et sinon dans le sens inverse (sens _anti-horaire_).
-- [`rotate3d()`](/fr/docs/Web/CSS/Reference/Values/transform-function/rotate3d)
-  - : La fonction `rotate3d()` définit une transformation qui déplace l'élément autour d'un axe donné, sans déformer l'élément. La quantité de mouvement est indiquée par l'angle passé en argument. Si celui-ci est positif, le mouvement se fera dans le sens des aiguilles d'une montre (sens _horaire_) et s'il est négatif, il se fera dans le sens anti-horaire. Contrairement aux rotations en deux dimensions (rotations _planes_), la composition des rotations en trois dimensions n'est pas commutative (autrement dit, l'ordre dans lequel elles sont appliquées a toute son importance).
-- [`rotateX()`](/fr/docs/Web/CSS/Reference/Values/transform-function/rotateX)
-  - : La fonction `rotateX()` définit une transformation qui déplace un élément autour de l'axe des abscisses sans le déformer. La quantité de mouvement est indiquée par l'angle passé en argument. Si celui-ci est positif, le mouvement se fera dans le sens des aiguilles d'une montre (sens _horaire_) et s'il est négatif, il se fera dans le sens anti-horaire. L'origine de cette rotation est définie par la propriété {{cssxref("transform-origin")}}. `rotateX(a)` est une notation raccourcie pour `rotate3D(1, 0, 0, a)`.
-- [`rotateY()`](/fr/docs/Web/CSS/Reference/Values/transform-function/rotateY)
-  - : La fonction `rotateY()` définit une transformation qui déplace un élément autour de l'axe des ordonnées sans le déformer. La quantité de mouvement est indiquée par l'angle passé en argument. Si celui-ci est positif, le mouvement se fera dans le sens des aiguilles d'une montre (sens _horaire_) et s'il est négatif, il se fera dans le sens anti-horaire. L'origine de cette rotation est définie par la propriété {{cssxref("transform-origin")}}. `rotateY(a)` est une notation raccourcie pour `rotate3D(0, 1, 0, a)`.
-- [`rotateZ()`](/fr/docs/Web/CSS/Reference/Values/transform-function/rotateZ)
-  - : La fonction `rotateZ()` définit une transformation qui déplace un élément autour de l'axe Z sans le déformer. La quantité de mouvement est indiquée par l'angle passé en argument. Si celui-ci est positif, le mouvement se fera dans le sens des aiguilles d'une montre (sens _horaire_) et s'il est négatif, il se fera dans le sens anti-horaire. L'origine de cette rotation est définie par la propriété {{cssxref("transform-origin")}}. `rotateZ(a)` est une notation raccourcie pour `rotate3D(0, 0, 1, a)`.
+- {{CSSxRef("transform-function/rotate", "rotate()")}}
+  - : Fait pivoter un élément autour d'un point fixe sur le plan 2D.
+- {{CSSxRef("transform-function/rotate3d", "rotate3d()")}}
+  - : Fait pivoter un élément autour d'un axe fixe dans l'espace 3D.
+- {{CSSxRef("transform-function/rotateX", "rotateX()")}}
+  - : Fait pivoter un élément autour de l'axe horizontal.
+- {{CSSxRef("transform-function/rotateY", "rotateY()")}}
+  - : Fait pivoter un élément autour de l'axe vertical.
+- {{CSSxRef("transform-function/rotateZ", "rotateZ()")}}
+  - : Fait pivoter un élément autour de l'axe z.
 
-### Changement d'échelle
+### Mise à l'échelle (redimensionnement)
 
-- [`scale()`](/fr/docs/Web/CSS/Reference/Values/transform-function/scale)
-  - : La fonction `scale()` modifie la taille d'un élément. Elle permet d'appliquer une homothétie définie par un vecteur. Ce vecteur décrit l'amplification ou la réduction de l'élément selon chacun des deux axes plans. Si les deux coordonnées sont égales, l'homothétie sera uniforme et la forme de l'élément sera conservée.
-- [scale3d()](/fr/docs/Web/CSS/Reference/Values/transform-function/scale3d)
-  - : La fonction `scale3d()` modifie la taille d'un élément. Elle permet d'appliquer une homothétie définie par un vecteur. Ce vecteur décrit l'amplification ou la réduction de l'élément selon les trois axes. Si les trois coordonnées sont égales, l'homothétie sera uniforme et la forme de l'élément sera conservée.
-- [`scaleX()`](/fr/docs/Web/CSS/Reference/Values/transform-function/scaleX)
-  - : La fonction `scaleX()` modifie l'abscisse de chaque point de l'élément en la multipliant par un facteur. Si ce facteur vaut 1, la fonction de transformation correspondra à l'identité. Cette transformation n'est pas isotropique et les angles de l'élément ne sont pas conservés. `scaleX(-1)` permet de définir une symétrie axiale qui passe par l'axe vertical de l'origine (définie par la propriété {{cssxref("transform-origin")}}). `scaleX(sx)` est une notation raccourcie pour `scale(sx, 1)` ou pour `scale3d(sx, 1, 1)`.
-- [`scaleY()`](/fr/docs/Web/CSS/Reference/Values/transform-function/scaleY)
-  - : La fonction `scaleY()` modifie l'ordonnée de chaque point de l'élément en la multipliant par un facteur. Si ce facteur vaut 1, la fonction de transformation correspondra à l'identité. Cette transformation n'est pas isotropique et les angles de l'élément ne sont pas conservés. `scaleY(-1)` permet de définir une symétrie axiale qui passe par l'axe horizontal de l'origine (définie par la propriété {{cssxref("transform-origin")}}). `scaleY(sy)` est une notation raccourcie pour `scale(1, sy)` ou pour `scale3d(1, sy, 1)`.
-- [`scaleZ()`](/fr/docs/Web/CSS/Reference/Values/transform-function/scaleZ)
-  - : La fonction `scaleZ()` modifie la côte de chaque point de l'élément en la multipliant par un facteur. Si ce facteur vaut 1, la fonction de transformation correspondra à l'identité. Cette transformation n'est pas isotropique et les angles de l'élément ne sont pas conservés. `scaleZ(-1)` permet de définir une symétrie axiale qui passe par l'axe Z de l'origine (définie par la propriété {{cssxref("transform-origin")}}). `scaleZ(sz)` est une notation raccourcie pour `scale3d(1, 1, sz)`.
+- {{CSSxRef("transform-function/scale", "scale()")}}
+  - : Met à l'échelle un élément sur le plan 2D.
+- {{CSSxRef("transform-function/scale3d", "scale3d()")}}
+  - : Met à l'échelle un élément dans l'espace 3D.
+- {{CSSxRef("transform-function/scaleX", "scaleX()")}}
+  - : Met à l'échelle un élément horizontalement.
+- {{CSSxRef("transform-function/scaleY", "scaleY()")}}
+  - : Met à l'échelle un élément verticalement.
+- {{CSSxRef("transform-function/scaleZ", "scaleZ()")}}
+  - : Met à l'échelle un élément selon l'axe z.
 
-### Distorsions
+### Inclinaison (distorsion)
 
-- [`skew()`](/fr/docs/Web/CSS/Reference/Values/transform-function/skew)
-  - : La fonction `skew()` permet de décrire une distorsion de l'élément où chaque point est tourné d'un angle dans chaque direction. Plus le point est éloigné de l'origine, plus grande sera la transformation appliquée.
-- [`skewX()`](/fr/docs/Web/CSS/Reference/Values/transform-function/skewX)
-  - : La fonction `skewX()` permet de distordre un élément dans la direction horizontale. Le résultat est obtenu en augmentant l'abscisse par une valeur proportionnelle à l'angle et à la distance par rapport à l'origine. Plus le point est éloigné de l'origine, plus grande sera la transformation appliquée.
-- [`skewY()`](/fr/docs/Web/CSS/Reference/Values/transform-function/skewY)
-  - : La fonction `skewY()` permet de distordre un élément dans la direction verticale. Le résultat est obtenu en augmentant l'ordonnée par une valeur proportionnelle à l'angle et à la distance par rapport à l'origine. Plus le point est éloigné de l'origine, plus grande sera la transformation appliquée.
+- {{CSSxRef("transform-function/skew", "skew()")}}
+  - : Incline un élément sur le plan 2D.
+- {{CSSxRef("transform-function/skewX", "skewX()")}}
+  - : Incline un élément horizontalement.
+- {{CSSxRef("transform-function/skewY", "skewY()")}}
+  - : Incline un élément verticalement.
 
-### Translations
+### Translation (déplacement)
 
-- [`translate()`](/fr/docs/Web/CSS/Reference/Values/transform-function/translate)
-  - : La fonction `translate()` permet de déplacer un élément sur le plan formé par le document. Cette transformation est caractérisée par un vecteur contenant deux coordonnées dont chacune définit la quantité de déplacement horizontale et verticale.
-- [`translate3d()`](/fr/docs/Web/CSS/Reference/Values/transform-function/translate3d)
-  - : La fonction `translate3d()` permet de déplacer un élément dans l'espace en 3D. Cette transformation est caractérisée par un vecteur en 3 dimensions dont les coordonnées définissent les quantités de déplacement respectives aux trois axes.
-- [`translateX()`](/fr/docs/Web/CSS/Reference/Values/transform-function/translateX)
-  - : La fonction `translateX()` permet de déplacer un élément horizontalement dans le plan. Cette transformation est caractérisée par une valeur de type {{cssxref("&lt;length&gt;")}} qui définit la quantité de déplacement horizontal. `translateX(tx)` est une notation raccourcie pour `translate(tx, 0)`.
-- [`translateY()`](/fr/docs/Web/CSS/Reference/Values/transform-function/translateY)
-  - : La fonction `translateY()` permet de déplacer un élément verticalement dans le plan. Cette transformation est caractérisée par une valeur de type {{cssxref("&lt;length&gt;")}} qui définit la quantité de déplacement vertical. `translateY(ty)` est une notation raccourcie pour `translate(0, ty)`.
-- [`translateZ()`](/fr/docs/Web/CSS/Reference/Values/transform-function/translateZ)
-  - : La fonction `translateZ()` permet de déplacer un élément sur l'axe z de l'espace en 3D. Cette transformation est caractérisée par une valeur de type {{cssxref("&lt;length&gt;")}} qui définit la quantité de déplacement. `translateZ(tz)` est une notation raccourcie pour `translate3d(0, 0, tz)`.
+- {{CSSxRef("transform-function/translate", "translate()")}}
+  - : Déplace un élément sur le plan 2D.
+- {{CSSxRef("transform-function/translate3d", "translate3d()")}}
+  - : Déplace un élément dans l'espace 3D.
+- {{CSSxRef("transform-function/translateX", "translateX()")}}
+  - : Déplace un élément horizontalement.
+- {{CSSxRef("transform-function/translateY", "translateY()")}}
+  - : Déplace un élément verticalement.
+- {{CSSxRef("transform-function/translateZ", "translateZ()")}}
+  - : Déplace un élément selon l'axe z.
+
+## Description
+
+Divers modèles de coordonnées peuvent être utilisés pour décrire la taille et la forme d'un élément HTML, ainsi que les transformations qui lui sont appliquées. Le plus courant est le [système de coordonnées cartésiennes](https://fr.wikipedia.org/wiki/Coordonn%C3%A9es_cart%C3%A9siennes), bien que les [coordonnées homogènes](https://fr.wikipedia.org/wiki/Coordonn%C3%A9es_homog%C3%A8nes) soient parfois utilisées.
+
+### Coordonnées cartésiennes
+
+Dans le système de coordonnées cartésiennes, un point en deux dimensions est décrit à l'aide de deux valeurs&nbsp;: une coordonnée x (abscisse) et une coordonnée y (ordonnée). Ceci est représenté par la notation vectorielle `(x, y)`.
+
+![Un plan cartésien montrant l'axe Y négatif et l'axe X positif partant de l'origine avec trois points P1, P2 et P3 et leurs valeurs X et Y correspondantes](coord_in_r2.png)
+
+En CSS (et dans la plupart des graphismes informatiques), l'origine `(0, 0)` représente le _coin supérieur gauche_ de tout élément. Les coordonnées positives sont vers le bas et la droite de l'origine, tandis que les négatives sont vers le haut et la gauche. Ainsi, un point situé 2 unités à droite et 5 unités en bas sera `(2, 5)`, tandis qu'un point 3 unités à gauche et 12 unités en haut sera `(-3, -12)`.
+
+### Fonctions de transformation
+
+Les fonctions de transformation modifient l'apparence d'un élément en manipulant les valeurs de ses coordonnées. Une fonction de transformation linéaire est décrite à l'aide d'une matrice 2×2, comme ceci&nbsp;:
+
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\begin{pmatrix} a & c \\ b & d \end{pmatrix}</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
+
+La fonction est appliquée à un élément par multiplication matricielle. Ainsi, chaque coordonnée change en fonction des valeurs de la matrice&nbsp;:
+
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mrow><mo>(</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable><mo>)</mo></mrow><mrow><mo>(</mo><mtable><mtr><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable><mtr><mtd><mi>a</mi><mi>x</mi><mo>+</mo><mi>c</mi><mi>y</mi></mtd></mtr><mtr><mtd><mi>b</mi><mi>x</mi><mo>+</mo><mi>d</mi><mi>y</mi></mtd></mtr></mtable><mo>)</mo></mrow></mrow><annotation encoding="TeX">\left( \begin{array}{cc} a & c \\ b & d \end{array} \right) \left( \begin{array}{c} x \\ y \end{array} \right) = \left( \begin{array}{c} ax + cy \\ bx + dy \end{array} \right)</annotation>
+</semantics>
+</math>
+<!-- prettier-ignore-end -->
+
+Il est même possible d'appliquer plusieurs transformations à la suite&nbsp;:
+
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mrow><mo>(</mo><mtable><mtr><mtd><msub><mi>a</mi><mn>1</mn></msub></mtd><mtd><msub><mi>c</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>b</mi><mn>1</mn></msub></mtd><mtd><msub><mi>d</mi><mn>1</mn></msub></mtd></mtr></mtable><mo>)</mo></mrow><mrow><mo>(</mo><mtable><mtr><mtd><msub><mi>a</mi><mn>2</mn></msub></mtd><mtd><msub><mi>c</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><msub><mi>b</mi><mn>2</mn></msub></mtd><mtd><msub><mi>d</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable><mtr><mtd><msub><mi>a</mi><mn>1</mn></msub><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><msub><mi>c</mi><mn>1</mn></msub><msub><mi>b</mi><mn>2</mn></msub></mtd><mtd><msub><mi>a</mi><mn>1</mn></msub><msub><mi>c</mi><mn>2</mn></msub><mo>+</mo><msub><mi>c</mi><mn>1</mn></msub><msub><mi>d</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><msub><mi>b</mi><mn>1</mn></msub><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><msub><mi>d</mi><mn>1</mn></msub><msub><mi>b</mi><mn>2</mn></msub></mtd><mtd><msub><mi>b</mi><mn>1</mn></msub><msub><mi>c</mi><mn>2</mn></msub><mo>+</mo><msub><mi>d</mi><mn>1</mn></msub><msub><mi>d</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>)</mo></mrow></mrow><annotation encoding="TeX">\left( \begin{array}{cc} a_1 & c_1 \\ b_1 & d_1 \end{array} \right) \left( \begin{array}{cc} a_2 & c_2 \\ b_2 & d_2 \end{array} \right) = \left( \begin{array}{cc} a_1a_2 + c_1b_2 & a_1c_2 + c_1d_2 \\ b_1a_2 + d_1b_2 & b_1c_2 + d_1d_2 \end{array} \right)</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
+
+Avec cette notation, il est possible de décrire, et donc de composer, la plupart des transformations courantes&nbsp;: rotations, mises à l'échelle ou inclinaisons. (En fait, toutes les transformations qui sont des fonctions linéaires peuvent être décrites.) Les transformations composées sont effectivement appliquées de droite à gauche.
+
+Cependant, une transformation majeure n'est pas linéaire et doit donc être traitée à part avec cette notation&nbsp;: la translation. Le vecteur de translation `(tx, ty)` doit être exprimé séparément, comme deux paramètres additionnels.
+
+> [!NOTE]
+> Bien que plus complexes que les coordonnées cartésiennes, les [coordonnées homogènes](https://fr.wikipedia.org/wiki/Coordonn%C3%A9es_homog%C3%A8nes) en [géométrie projective](https://fr.wikipedia.org/wiki/G%C3%A9om%C3%A9trie_projective) conduisent à des matrices de transformation 3×3, et peuvent exprimer les translations comme des fonctions linéaires.
+
+> [!NOTE]
+> Les fonctions de transformation sont utilisées avec la propriété `transform` mais pas avec les propriétés individuelles de transformation — {{CSSxRef("translate")}}, {{CSSxRef("scale")}} et {{CSSxRef("rotate")}}.
+
+## Exemples
+
+### Comparaison des fonctions de transformation
+
+L'exemple suivant propose un cube 3D créé à partir d'éléments DOM et de transformations, ainsi qu'un menu déroulant permettant de choisir différentes fonctions de transformation à appliquer au cube, afin de comparer les effets des différents types.
+
+Choisissez-en une, et la transformation est appliquée au cube&nbsp;; après 2 secondes, le cube revient à son état initial. L'état initial du cube est légèrement incliné avec `transform3d()`, pour permettre de voir l'effet de toutes les transformations.
+
+#### HTML
+
+```html
+<main>
+  <section id="example-element">
+    <div class="face front">1</div>
+    <div class="face back">2</div>
+    <div class="face right">3</div>
+    <div class="face left">4</div>
+    <div class="face top">5</div>
+    <div class="face bottom">6</div>
+  </section>
+
+  <div class="select-form">
+    <label for="transfunction"
+      >Sélectionnez une fonction de transformation</label
+    >
+    <select id="transfunction">
+      <option selected>Choisissez une fonction</option>
+      <option>rotate(360deg)</option>
+      <option>rotateX(360deg)</option>
+      <option>rotateY(360deg)</option>
+      <option>rotateZ(360deg)</option>
+      <option>rotate3d(1, 1, 1, 90deg)</option>
+      <option>scale(1.5)</option>
+      <option>scaleX(1.5)</option>
+      <option>scaleY(1.5)</option>
+      <option>scaleZ(1.5)</option>
+      <option>scale3d(1, 1.5, 1.5)</option>
+      <option>skew(17deg, 13deg)</option>
+      <option>skewX(17deg)</option>
+      <option>skewY(17deg)</option>
+      <option>translate(100px, 100px)</option>
+      <option>translateX(100px)</option>
+      <option>translateY(100px)</option>
+      <option>translateZ(100px)</option>
+      <option>translate3d(50px, 50px, 50px)</option>
+      <option>perspective(200px)</option>
+      <option>matrix(1, 2, -1, 1, 80, 80)</option>
+      <option>matrix3d(1,0,0,0,0,1,3,0,0,0,1,0,50,100,0,1.1)</option>
+    </select>
+  </div>
+</main>
+```
+
+#### CSS
+
+```css
+main {
+  width: 400px;
+  height: 200px;
+  padding: 50px;
+  background-image: linear-gradient(135deg, white, cyan, white);
+}
+
+#example-element {
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  transition: transform 1.5s;
+  transform: rotate3d(1, 1, 1, 30deg);
+}
+
+.face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: inherit;
+  font-size: 60px;
+  color: white;
+}
+
+.front {
+  background: rgb(90 90 90 / 70%);
+  transform: translateZ(50px);
+}
+
+.back {
+  background: rgb(0 210 0 / 70%);
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.right {
+  background: rgb(210 0 0 / 70%);
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.left {
+  background: rgb(0 0 210 / 70%);
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.top {
+  background: rgb(210 210 0 / 70%);
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.bottom {
+  background: rgb(210 0 210 / 70%);
+  transform: rotateX(-90deg) translateZ(50px);
+}
+
+.select-form {
+  margin-top: 50px;
+}
+```
+
+#### JavaScript
+
+```js
+const selectElem = document.querySelector("select");
+const example = document.querySelector("#example-element");
+
+selectElem.addEventListener("change", () => {
+  if (selectElem.value === "Choose a function") {
+    return;
+  }
+  example.style.transform = `rotate3d(1, 1, 1, 30deg) ${selectElem.value}`;
+  setTimeout(() => {
+    example.style.transform = "rotate3d(1, 1, 1, 30deg)";
+  }, 2000);
+});
+```
+
+#### Résultat
+
+{{EmbedLiveSample('Comparaison des fonctions de transformation', '100%', 300)}}
 
 ## Spécifications
 
@@ -108,4 +269,8 @@ Plusieurs fonctions sont disponibles en CSS pour décrire des transformations. C
 
 ## Voir aussi
 
-- La propriété CSS {{cssxref("transform")}}
+- La propriété {{CSSxRef("transform")}}
+- Propriétés individuelles de transformation&nbsp;:
+  - {{CSSxRef("translate")}}
+  - {{CSSxRef("scale")}}
+  - {{CSSxRef("rotate")}}
