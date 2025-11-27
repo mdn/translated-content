@@ -35,7 +35,7 @@ function f(a, b, ...theArgs) {
 
 有一些额外的语法限制：
 
-- 一个函数定义只能包含一个顺关于参数。
+- 一个函数定义只能包含一个剩余参数。
 - 剩余参数必须是函数定义的最后一个参数。
 - 剩余参数之后不允许出现[尾后逗号](/zh-CN/docs/Web/JavaScript/Reference/Trailing_commas)。
 - 剩余参数不能有[默认值](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)。
@@ -82,10 +82,10 @@ function wrong4(...wrong = []) {}
 
 剩余参数和 {{jsxref("Functions/arguments", "arguments")}} 对象之间的区别主要有四个：
 
-- `arguments` 对象不是一个真正的数组，而剩余参数是真正的 {{jsxref("Array")}} 实例，也就是说你能够在它上面直接使用所有的数组方法，比如 {{jsxref("Array/sort", "sort()")}}、{{jsxref("Array/map", "map()")}}、{{jsxref("Array/forEach", "forEach()")}} 或 {{jsxref("Array/pop", "pop()")}}。
+- `arguments` 对象不是**真正的数组**，而剩余参数是 {{jsxref("Array")}} 实例，也就是说你能够在它上面直接使用所有的数组方法，比如 {{jsxref("Array/sort", "sort()")}}、{{jsxref("Array/map", "map()")}}、{{jsxref("Array/forEach", "forEach()")}} 或 {{jsxref("Array/pop", "pop()")}}。
 - `arguments` 对象还包含额外的（已弃用的）[`callee`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/callee) 属性。
 - 在非严格模式且参数简单的函数中，`arguments` 对象会[将索引值与参数值同步](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments#通过索引赋值)。当具名参数被重新赋值时，剩余参数数组的值永远不会更新。
-- 剩余参数将所有*额外*参数打包为单一数组，但不包含任何在 `...restParam` *之前*定义的命名参数。`arguments` 对象则包含所有参数（包括 `...restParam` 数组中的参数），这些参数被打包为一个数组样式对象。
+- 剩余参数将所有*额外*参数打包为单一数组，但不包含任何在 `...restParam` *之前*定义的具名参数。`arguments` 对象则包含所有参数（包括 `...restParam` 数组中的参数），这些参数被打包为类数组对象。
 
 ## 示例
 
@@ -230,7 +230,7 @@ function fn(...args) {
 ## 参见
 
 - [函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)指南
-- [函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)参考
+- [函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)
 - [展开语法（`...`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 - [默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)
 - {{jsxref("Functions/arguments", "arguments")}}
