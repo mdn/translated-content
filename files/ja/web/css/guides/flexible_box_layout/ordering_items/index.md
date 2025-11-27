@@ -1,9 +1,8 @@
 ---
 title: フレックスアイテムの順序
 slug: Web/CSS/Guides/Flexible_box_layout/Ordering_items
-original_slug: Web/CSS/CSS_flexible_box_layout/Ordering_flex_items
 l10n:
-  sourceCommit: 8a7e911652fcb4a61cc95f458d53f39ad08c0946
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 フレックスボックスやグリッドなどのレイアウト方式には、コンテンツの順序を制御することができます。この記事では、フレックスボックスを使っている場合にコンテンツの視覚的な順序を変更する方法について見ていきます。また、アイテムの順序の変更が、アクセシビリティにどう影響するかについても考察します。

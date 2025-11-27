@@ -1,12 +1,12 @@
 ---
 title: CSS 入れ子アットルール
+short-title: 入れ子アットルール
 slug: Web/CSS/Guides/Nesting/At-rules
-original_slug: Web/CSS/CSS_nesting/Nesting_at-rules
 l10n:
-  sourceCommit: 8798af276e64ba373bc999c9a5ba5997716cc05c
+  sourceCommit: 81f8fcd666952c1782653a3675347c392cc997ca
 ---
 
-本体にスタイルルールを含む[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)は、 CSS の入れ子を使って別のスタイルルールの中に入れ子にすることができます。アットルール内に入れ子になったスタイル ルールは、最も近い祖先のスタイル ルールから入れ子のセレクタ定義を取得します。入れ子になったアットルールの内部には、 `& {...}` ブロックに入れ子になっているかのように動作するプロパティを直接含めることができます。
+本体にスタイルルールを含む[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)は、 CSS の入れ子を使って別のスタイルルールの中に入れ子にすることができます。アットルール内に入れ子になったスタイルルールは、最も近い祖先のスタイルルールから入れ子のセレクター定義を取得します。入れ子になったアットルールの内部には、 `& {...}` ブロックに入れ子になっているかのように動作するプロパティを直接含めることができます。
 
 ## 入れ子にすることができるアットルール
 
@@ -15,6 +15,7 @@ l10n:
 - {{cssxref('@layer')}}
 - {{cssxref('@scope')}}
 - {{cssxref('@container')}}
+- {{cssxref('@starting-style')}}
 
 ## 例
 
@@ -71,7 +72,7 @@ l10n:
   display: grid;
   @media (orientation: landscape) {
     grid-auto-flow: column;
-    @media (min-width: 1024px) {
+    @media (width >= 1024px) {
       max-inline-size: 1024px;
     }
   }
@@ -89,7 +90,7 @@ l10n:
     grid-auto-flow: column;
   }
 }
-@media (orientation: landscape) and (min-width: 1024px) {
+@media (orientation: landscape) and (width >= 1024px) {
   .foo {
     max-inline-size: 1024px;
   }
@@ -98,7 +99,7 @@ l10n:
 
 ### カスケードレイヤーの入れ子 (`@layer`)
 
-[カスケードレイヤー](/ja/docs/Web/CSS/Reference/At-rules/@layer)は[子レイヤーを作成](/ja/docs/Web/CSS/Reference/At-rules/@layer#nesting_layers)するために入れ子にすることができます。これらは `.` （ドット）で接続します。
+[カスケードレイヤー](/ja/docs/Web/CSS/Reference/At-rules/@layer)は[子レイヤーを作成](/ja/docs/Web/CSS/Reference/At-rules/@layer#レイヤーの入れ子)するために入れ子にすることができます。これらは `.` （ドット）で接続します。
 
 #### 親＆子レイヤーの定義
 
@@ -148,3 +149,4 @@ l10n:
 - [`&` 入れ子セレクター](/ja/docs/Web/CSS/Reference/Selectors/Nesting_selector)
 - [CSS 入れ子の使用](/ja/docs/Web/CSS/Guides/Nesting/Using)
 - [入れ子と詳細度](/ja/docs/Web/CSS/Guides/Nesting/Nesting_and_specificity)
+- [入れ子コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#入れ子のクエリー)
