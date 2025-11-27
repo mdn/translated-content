@@ -26,34 +26,6 @@ L'en-tête de requête HTTP **`Authorization`** contient les identifiants permet
 ## Syntaxe
 
 ```
-Authorizat---
-title: Authorization
-slug: Web/HTTP/Reference/Headers/Authorization
-original_slug: Web/HTTP/Headers/Authorization
----
-
-L'en-tête de requête HTTP **`Authorization`** contient les identifiants permettant l'authentification d'un utilisateur auprès d'un serveur, habituellement après que le serveur ait répondu avec un statut {{HTTPStatus("401")}} `Unauthorized` et l'en-tête {{HTTPHeader("WWW-Authenticate")}}
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Type d'en-tête</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Glossaire/Forbidden_header_name"
-          >Nom d'en-tête interdit</a
-        >
-      </th>
-      <td>Non</td>
-    </tr>
-  </tbody>
-</table>
-
-## Syntaxe
-
-```
 Authorization: <type> <credentials>
 ```
 
