@@ -49,7 +49,6 @@ Referrer-Policy: unsafe-url
 - `strict-origin`
   - : プロトコルのセキュリティ水準が同じである場合 (HTTPS→HTTPS) にオリジンのみを送信します。安全性の低下する移動先 (HTTPS→HTTP) には {{HTTPHeader("Referer")}} ヘッダーを送信しません。
 - `strict-origin-when-cross-origin` (既定値)
-
   - : 同一オリジンのリクエストを行う際はオリジン、パス、クエリー文字列を送信します。別オリジンへのリクエストでは、プロトコルのセキュリティ水準が同じである場合 (HTTPS→HTTPS) にオリジンのみを送信します。安全性の低下する移動先 (HTTPS→HTTP) には {{HTTPHeader("Referer")}} ヘッダーを送信しません。
 
     > [!NOTE]
