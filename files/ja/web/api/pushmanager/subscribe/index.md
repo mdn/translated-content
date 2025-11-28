@@ -25,7 +25,7 @@ subscribe(options)
     - `userVisibleOnly`
       - : 論理値で、返されたプッシュサブスクリプションの効果が、ユーザーに表示するメッセージにのみ使われるかを示します。
     - `applicationServerKey`
-      - : Base64 でエンコードされた文字列または {{jsxref("ArrayBuffer")}} で、プッシュサーバーがアプリケーションサーバーを認証するために使用する[楕円曲線 DSA](https://ja.wikipedia.org/wiki/%E6%A5%95%E5%86%86%E6%9B%B2%E7%B7%9ADSA) P-256 公開鍵が入ります。指定した場合は、アプリケーションサーバーから発するすべてのメッセージで [VAPID](https://tools.ietf.org/html/rfc8292) 認証スキームを使用しなければならず、また対応する秘密鍵で署名した JWT を含めなければなりません。この鍵は、データを暗号化するために使用する ECDH 鍵と**_同じではありません_**。詳しくは "[Using VAPID with WebPush](https://blog.mozilla.org/services/2016/04/04/using-vapid-with-webpush/)" をご覧ください。
+      - : Base64 でエンコードされた文字列または {{jsxref("ArrayBuffer")}} で、プッシュサーバーがアプリケーションサーバーを認証するために使用する[楕円曲線 DSA](https://ja.wikipedia.org/wiki/%E6%A5%95%E5%86%86%E6%9B%B2%E7%B7%9ADSA) P-256 公開鍵が入ります。指定した場合は、アプリケーションサーバーから発するすべてのメッセージで [VAPID](https://tools.ietf.org/html/rfc8292) 認証スキームを使用しなければならず、また対応する秘密鍵で署名した JWT を含めなければなりません。この鍵は、データを暗号化するために使用する ECDH 鍵と***同じではありません***。詳しくは "[Using VAPID with WebPush](https://blog.mozilla.org/services/2016/04/04/using-vapid-with-webpush/)" をご覧ください。
 
     > [!NOTE]
     > この引数は Chrome や Edge など、一部のブラウザーでは必須です。
