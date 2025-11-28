@@ -3,12 +3,14 @@ title: Django 教程：本地图书馆网站
 short-title: 1：本地图书馆教程
 slug: Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website
 l10n:
-  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
+  sourceCommit: e89cf8c2d91de5ac01b7153f833eb8abc30364ad
 ---
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django")}}
 
-我们实战教程系列的第一篇教程会解释你将学到什么。并提供一个“本地图书馆”的例子作为概述。在接下来的教程里，我们会不断完善和改进这个网站。
+本文概述了 MDN Express 教程，并介绍了我们将在接下来的几页内容中使用的“本地图书馆”示例网站。
+
+你将了解到本教程涵盖的内容、入门方法、如何寻求帮助，以及构建和部署第一个服务端 JavaScript 应用所需的一切。
 
 <table>
   <tbody>
