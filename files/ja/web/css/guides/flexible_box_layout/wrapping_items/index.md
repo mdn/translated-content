@@ -268,7 +268,7 @@ l10n:
 > [!NOTE]
 > 以下の例では Firefox を使用してください。他の主要なブラウザーでは `collapse` を `hidden` として扱います。
 
-```html hidden live-sample___visibility-collapse
+```html-nolint hidden live-sample___visibility-collapse
 <p>
   <label><input type="checkbox" /> <code>visibility</code> の値の切り替え</label>
 </p>
