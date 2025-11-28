@@ -2158,6 +2158,7 @@
 /zh-CN/docs/Web/API/User_Timing_API	/zh-CN/docs/Web/API/Performance_API/User_timing
 /zh-CN/docs/Web/API/VRPose/timeStamp	/zh-CN/docs/Web/API/VRPose
 /zh-CN/docs/Web/API/View_Transitions_API	/zh-CN/docs/Web/API/View_Transition_API
+/zh-CN/docs/Web/API/Visual_Viewport_API	/zh-CN/docs/Web/API/VisualViewport
 /zh-CN/docs/Web/API/WebGLRenderingContext/多边形偏移(polygonOffset)	/zh-CN/docs/Web/API/WebGLRenderingContext/polygonOffset
 /zh-CN/docs/Web/API/WebGL_API/Adding_2D_content_to_a_WebGL_context	/zh-CN/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /zh-CN/docs/Web/API/WebGL_API/Getting_started_with_WebGL	/zh-CN/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
@@ -4834,6 +4835,7 @@
 /zh-CN/docs/WebAssembly/JavaScript_interface/validate	/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/validate_static
 /zh-CN/docs/WebAssembly/JavaScript_interface/validate_static	/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/validate_static
 /zh-CN/docs/WebAssembly/Loading_and_running	/zh-CN/docs/WebAssembly/Guides/Loading_and_running
+/zh-CN/docs/WebAssembly/Reference/Variables/Local_tee	/zh-CN/docs/WebAssembly/Reference/Variables/local.tee
 /zh-CN/docs/WebAssembly/Rust_to_Wasm	/zh-CN/docs/WebAssembly/Guides/Rust_to_Wasm
 /zh-CN/docs/WebAssembly/Text_format_to_Wasm	/zh-CN/docs/WebAssembly/Guides/Text_format_to_Wasm
 /zh-CN/docs/WebAssembly/Understanding_the_text_format	/zh-CN/docs/WebAssembly/Guides/Understanding_the_text_format

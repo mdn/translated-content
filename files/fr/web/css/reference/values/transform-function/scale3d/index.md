@@ -1,14 +1,14 @@
 ---
 title: scale3d()
 slug: Web/CSS/Reference/Values/transform-function/scale3d
-original_slug: Web/CSS/transform-function/scale3d
+l10n:
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
-{{CSSRef}}
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`scale3d()`** définit une transformation qui redimensionne un élément dans l'espace 3D.
+Comme la quantité de mise à l'échelle est définie par un vecteur [sx, sy, sz], elle peut redimensionner chaque dimension à des échelles différentes. Son résultat est un type de donnée {{CSSxRef("&lt;transform-function&gt;")}}.
 
-La fonction **`scale3d()`** permet de modifier la taille d'un élément en appliquant une homothétie définie par un vecteur. Les composantes de ce vecteur permettent d'appliquer des échelles différentes selon les différentes dimensions.
-
-{{InteractiveExample("CSS Demo: scale3d()")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: scale3d()")}}
 
 ```css interactive-example-choice
 transform: scale3d(1, 1, 1);
@@ -66,43 +66,41 @@ transform: scale3d(-1.4, 0.4, 0.7);
 }
 
 .front {
-  background: rgba(90, 90, 90, 0.7);
+  background: rgb(90 90 90 / 0.7);
   transform: translateZ(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
+  background: rgb(0 210 0 / 0.7);
   transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210, 0, 0, 0.7);
+  background: rgb(210 0 0 / 0.7);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0, 0, 210, 0.7);
+  background: rgb(0 0 210 / 0.7);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
+  background: rgb(210 210 0 / 0.7);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
+  background: rgb(210 0 210 / 0.7);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
 
-La transformation appliquée est définie par un vecteur dont les coordonnées définissent l'amplitude de l'homothétie dans chaque direction. Si les trois coordonnées du vecteur sont égales, la transformation est isotropique et la forme de l'élément est conservée.
+Cette transformation de mise à l'échelle est caractérisée par un vecteur tridimensionnel. Ses coordonnées définissent l'ampleur de la mise à l'échelle dans chaque direction. Si les trois coordonnées sont égales, la mise à l'échelle est uniforme (_isotrope_) et le {{Glossary("aspect ratio", "rapport d'aspect")}} de l'élément est préservé (il s'agit d'une [transformation homothétique](https://fr.wikipedia.org/wiki/Homoth%C3%A9tie)).
 
-Lorsque les composantes du vecteur sont en dehors de l'intervalle `[-1, 1]`, la transformation agrandit l'élément dans le sens des coordonnées. Lorsque les composantes sont dans cet intervalle, cela réduit l'élément.
+Lorsqu'une valeur de coordonnée est en dehors de l'intervalle \[-1, 1], l'élément grandit selon cette dimension&nbsp;; lorsqu'elle est à l'intérieur, il rétrécit. Une valeur négative entraîne une [symétrie centrale](https://fr.wikipedia.org/wiki/Sym%C3%A9trie_centrale) selon cette dimension. La valeur `1` n'a aucun effet.
 
 ## Syntaxe
-
-La fonction `scale3d()` s'utilise avec trois valeurs dont chacune représente l'intensité de la transformation selon chaque direction.
 
 ```css
 scale3d(sx, sy, sz)
@@ -111,59 +109,47 @@ scale3d(sx, sy, sz)
 ### Valeurs
 
 - `sx`
-  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/Reference/Values/number) qui représente l'abscisse du vecteur définissant l'homothétie.
+  - : Un nombre ({{CSSxRef("&lt;number&gt;")}}) représentant l'abscisse (composante horizontale, x) du vecteur d'échelle.
 - `sy`
-  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/Reference/Values/number) qui représente l'ordonnée du vecteur définissant l'homothétie
+  - : Un nombre ({{CSSxRef("&lt;number&gt;")}}) représentant l'ordonnée (composante verticale, y) du vecteur d'échelle.
 - `sz`
-  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/Reference/Values/number) qui représente la composante, selon l'axe Z, du vecteur définissant l'homothétie
+  - : Un nombre ({{CSSxRef("&lt;number&gt;")}}) représentant la composante z du vecteur d'échelle.
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
+      <th scope="col"><a href="/fr/docs/Web/CSS/Reference/Values/transform-function#le_système_de_coordonnées_cartésiennes">Coordonnées cartésiennes</a> sur <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^2 <sup>(angl.)</sup></a></th>
+      <th scope="col"><a href="https://fr.wikipedia.org/wiki/Coordonn%C3%A9es_homog%C3%A8nes">Coordonnées homogènes</a> sur <a href="https://fr.wikipedia.org/wiki/Plan_projectif_r%C3%A9el">ℝℙ^2</a></th>
+      <th scope="col">Coordonnées cartésiennes sur <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^3 <sup>(angl.)</sup></a></th>
+      <th scope="col">Coordonnées homogènes sur <a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3 <sup>(angl.)</sup></a></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td colspan="2">
-        Cette transformation s'applique dans en 3 dimensions et ne peut pas être
-        représentée sur le plan.
+        Cette transformation s'applique à l'espace 3D et ne peut pas être représentée sur le plan.
       </td>
       <td>
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr>sx<mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>sy</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>sz</mtd></mtr></mtable
-            ></mfenced
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mi>sx</mi></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mi>sy</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi>sz</mi></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{ccc} sx & 0 & 0 \\ 0 & sy & 0 \\ 0 & 0 & sz \end{array} \right)</annotation></semantics>
+        </math>
       </td>
       <td>
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr>sx<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>sy</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>sz</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
-            ></mfenced
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mi>sx</mi></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mi>sy</mi></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi>sz</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cccc} sx & 0 & 0 & 0 \\ 0 & sy & 0 & 0 \\ 0 & 0 & sz & 0 \\ 0 & 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
     </tr>
   </tbody>
 </table>
 
+## Syntaxe formelle
+
+{{CSSSyntax}}
+
 ## Exemples
 
-### Avec origine non modifiée
+### Sans déplacement de l'origine
 
 #### HTML
 
@@ -189,9 +175,9 @@ div {
 
 #### Résultat
 
-{{EmbedLiveSample("Avec_origine_non_modifiée","100%","200")}}
+{{EmbedLiveSample("Sans déplacement de l'origine", 200, 200)}}
 
-### Avec origine translatée
+### Déplacement de l'origine de la transformation
 
 #### HTML
 
@@ -218,7 +204,7 @@ div {
 
 #### Résultat
 
-{{EmbedLiveSample("Avec_origine_translatée","100%","200")}}
+{{EmbedLiveSample("Déplacement de l'origine de la transformation","200","200")}}
 
 ## Spécifications
 
@@ -230,8 +216,12 @@ div {
 
 ## Voir aussi
 
-- [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function)
-- [`scaleZ()`](/fr/docs/Web/CSS/Reference/Values/transform-function/scaleZ)
-- [`translate3d()`](/fr/docs/Web/CSS/Reference/Values/transform-function/translate3d)
-- [`rotate3d()`](/fr/docs/Web/CSS/Reference/Values/transform-function/rotate3d)
+- La propriété {{CSSxRef("transform")}}
+- Le type de donnée {{CSSxRef("&lt;transform-function&gt;")}}
+- La fonction {{CSSxRef("transform-function/scaleZ" "scaleZ()")}}
+- La fonction {{CSSxRef("transform-function/translate3d" "translate3d()")}}
+- La fonction {{CSSxRef("transform-function/rotate3d" "rotate3d()")}}
+- Autres propriétés individuelles de transformation&nbsp;:
+  - {{CSSxRef("translate")}}
+  - {{CSSxRef("scale")}}
+  - {{CSSxRef("rotate")}}

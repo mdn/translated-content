@@ -1,12 +1,11 @@
 ---
 title: border-inline-color
 slug: Web/CSS/Reference/Properties/border-inline-color
-original_slug: Web/CSS/border-inline-color
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`border-inline-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なインライン方向の先頭側の境界色を定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界色に対応づけられます。これは {{cssxref("border-top-color")}} と {{cssxref("border-bottom-color")}}、または {{cssxref("border-right-color")}} と {{cssxref("border-left-color")}} の組み合わせのどちらかに対応し、どちらに対応するかは {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} で定義された値によって決まります。
+**`border-inline-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なインライン方向の両端の境界色を定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界色に対応づけられます。これは {{cssxref("border-top-color")}} と {{cssxref("border-bottom-color")}}、または {{cssxref("border-right-color")}} と {{cssxref("border-left-color")}} の組み合わせのどちらかに対応し、どちらに対応するかは {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} で定義された値によって決まります。
 
 {{InteractiveExample("CSS デモ: border-inline-color")}}
 
@@ -21,7 +20,7 @@ writing-mode: vertical-rl;
 ```
 
 ```css interactive-example-choice
-border-inline-color: rgb(170, 50, 220, 0.6);
+border-inline-color: rgb(170 50 220 / 0.6);
 writing-mode: horizontal-tb;
 direction: rtl;
 ```
@@ -36,8 +35,8 @@ direction: rtl;
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #000;
+  background-color: #eeeeee;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;

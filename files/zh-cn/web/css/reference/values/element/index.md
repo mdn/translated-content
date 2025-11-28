@@ -1,11 +1,11 @@
 ---
-title: element
+title: element()
 slug: Web/CSS/Reference/Values/element
 ---
 
 {{SeeCompatTable}}
 
-[CSS](/zh-CN/docs/Web/CSS) 函数 **`element()`** 定义了一个从任意的 HTML 元素中生成的图像 {{cssxref("&lt;image&gt;")}} 值。该图像值是实时的，这意味着如果被指定的 HTML 元素被更改，the CSS properties using the resulting value are automatically updated.
+[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/Reference/Values/Functions) **`element()`** 定义了一个从任意的 HTML 元素中生成的图像 {{cssxref("&lt;image&gt;")}} 值。该图像值是实时的，这意味着如果被指定的 HTML 元素被更改，则使用结果值的 CSS 属性会自动更新。
 
 一个特别实用的应用场景是，在某个 HTML {{HTMLElement("canvas")}} 元素中渲染图像，然后将其用作背景。
 
@@ -20,46 +20,66 @@ element(id)
 其中：
 
 - _id_
-  - : The ID of an element to use as the background, specified using the HTML attribute #_id_ on the element.
+  - : 用作背景的元素的 ID，使用元素的 HTML 属性 #_id_ 指定。
 
 ## 示例
 
-在支持 `-moz-element()` 的 Firefox 中，可以[实地考察](https://mdn.dev/archives/media/samples/cssref/moz-element.html)这些例子。
+这些示例在支持 `-moz-element()` 的 Firefox 中有效。
 
 ### 一个比较现实的例子
 
-这个例子将文档中另一个隐藏的 {{HTMLElement("div")}} 元素作为背景。被隐藏的元素本身使用了渐变背景，也包含了一些文字，渐变背景和文字都成为了第一个元素的背景。
+这个例子将文档中一个隐藏的 {{HTMLElement("div")}} 元素作为背景。背景元素使用了渐变，但其中也包含作为背景一部分渲染的文本。
 
 ```html
-<div
-  style="width:400px; height:400px; background:-moz-element(#myBackground1) no-repeat;">
-  <p>This box uses the element with the #myBackground1 ID as its background!</p>
+<div id="target-box">
+  <p>这个盒子使用 ID 为 #my-background 的元素作为其背景！</p>
 </div>
 
-<div style="overflow:hidden; height:0;">
-  <div
-    id="myBackground1"
-    style="width:1024px; height:1024px; background-image: linear-gradient(to right, red, orange, yellow, white);">
-    <p style="transform-origin:0 0; rotate: 45deg; color:white;">
-      This text is part of the background. Cool, huh?
-    </p>
+<div id="background-container">
+  <div id="my-background">
+    <p>这段文字是背景的一部分。很酷吧？</p>
   </div>
 </div>
 ```
 
+```css
+#target-box {
+  width: 400px;
+  height: 400px;
+  background: -moz-element(#my-background) no-repeat;
+}
+
+#background-container {
+  overflow: hidden;
+  height: 0;
+}
+
+#my-background {
+  width: 1024px;
+  height: 1024px;
+  background-image: linear-gradient(to right, red, orange, yellow, white);
+}
+
+#my-background p {
+  transform-origin: 0 0;
+  rotate: 45deg;
+  color: white;
+}
+```
+
 {{EmbedLiveSample("一个比较现实的例子")}}
 
-The {{HTMLElement("div")}} element with the ID "myBackground1" is used as the background for the content including the paragraph "This box uses the element with the #myBackground1 ID as its background!".
+ID 为“my-background”的 {{HTMLElement("div")}} 元素被包含段落“这个盒子使用 ID 为 #my-background 的元素作为其背景！”的内容用作背景。
 
 ### 页面预览
 
-这个<a href="https://iamvdo.me/en/blog/css-element-function">基于 Vincent De Oliveira 的示例</a>在 `<div id="css-result">` 之中创建了 `<div id="css-source">` 的预览。
+这个[基于 Vincent De Oliveira 的示例](https://iamvdo.me/en/blog/css-element-function)在 `<div id="css-result">` 之中创建了 `<div id="css-source">` 的预览。
 
 #### HTML
 
 ```html
 <div id="css-source">
-  <h1>Page Preview</h1>
+  <h1>页面预览</h1>
 </div>
 <div id="css-result"></div>
 ```
@@ -90,10 +110,9 @@ The {{HTMLElement("div")}} element with the ID "myBackground1" is used as the ba
 
 ## 参见
 
-- {{cssxref("_image", "image()")}}
-- {{cssxref("image-set", "image-set()")}}
+- {{cssxref("image/image", "image()")}}
+- {{cssxref("image/image-set", "image-set()")}}
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("&lt;gradient&gt;")}}
-- {{cssxref("element()")}}
-- {{cssxref("cross-fade")}}
+- {{cssxref("cross-fade", "cross-fade()")}}
 - {{domxref("document.mozSetImageElement()")}}

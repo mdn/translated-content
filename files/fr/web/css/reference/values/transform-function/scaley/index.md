@@ -1,18 +1,48 @@
 ---
 title: scaleY()
 slug: Web/CSS/Reference/Values/transform-function/scaleY
-original_slug: Web/CSS/transform-function/scaleY
+l10n:
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
-{{CSSRef}}
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`scaleY()`** définit une transformation qui redimensionne un élément selon l'axe des ordonnées (verticalement). Son résultat est de type {{CSSxRef("&lt;transform-function&gt;")}}.
 
-La fonction **`scaleY()`** modifie l'ordonnée de chaque sommet de l'élément avec un facteur multiplicateur. L'homothétie n'est pas isotropique et les angles de l'élément ne sont pas conservés. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function).
+{{InteractiveExample("Démonstration CSS&nbsp;: scaleY()")}}
 
-![](scaley.png)
+```css interactive-example-choice
+transform: scaleY(1);
+```
 
-`scaleY(sy)` est une notation raccourcie équivalente à `scale(1, sy)` ou à `scale3d(1, sy, 1)`.
+```css interactive-example-choice
+transform: scaleY(0.7);
+```
 
-`scaleY(-1)` définit une symétrie axiale selon un axe horizontal, passant par l'origine du repère (cette origine est définie grâce à la propriété [`transform-origin`](/fr/docs/Web/CSS/Reference/Properties/transform-origin)).
+```css interactive-example-choice
+transform: scaleY(1.3);
+```
+
+```css interactive-example-choice
+transform: scaleY(-0.5);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
+
+Elle modifie l'ordonnée (coordonnée verticale, y) de chaque point de l'élément par un facteur constant, sauf lorsque le facteur d'échelle vaut 1, auquel cas il n'y a pas de transformation. La mise à l'échelle n'est pas isotrope et les angles de l'élément ne sont pas conservés. `scaleY(-1)` définit une [symétrie axiale](https://fr.wikipedia.org/wiki/Sym%C3%A9trie_axiale), avec un axe horizontal passant par l'origine (tel que défini par la propriété {{CSSxRef("transform-origin")}}).
+
+> [!NOTE]
+> `scaleY(sy)` est équivalent à
+> `scale(1, sy)` ou
+> `scale3d(1, sy, 1)`.
+>
+> `transform: rotateX(180deg);` === `transform: scaleY(-1);`
 
 ## Syntaxe
 
@@ -23,64 +53,38 @@ scaleY(s)
 ### Valeurs
 
 - `s`
-  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/Reference/Values/number) qui indique le facteur d'échelle pour l'homothétie.
+  - : Est un nombre ({{CSSxRef("&lt;number&gt;")}}) représentant le facteur d'échelle à appliquer sur l'ordonnée (coordonnée verticale, y) de chaque point de l'élément.
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
+      <th scope="col"><a href="/fr/docs/Web/CSS/Reference/Values/transform-function#le_système_de_coordonnées_cartésiennes">Coordonnées cartésiennes</a> sur <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^2 <sup>(angl.)</sup></a></th>
+      <th scope="col"><a href="https://fr.wikipedia.org/wiki/Coordonn%C3%A9es_homog%C3%A8nes">Coordonnées homogènes</a> sur <a href="https://fr.wikipedia.org/wiki/Plan_projectif_r%C3%A9el">ℝℙ^2</a></th>
+      <th scope="col">Coordonnées cartésiennes sur <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^3 <sup>(angl.)</sup></a></th>
+      <th scope="col">Coordonnées homogènes sur <a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3 <sup>(angl.)</sup></a></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td colspan="1" rowspan="2">
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr>1<mtd>0</mtd></mtr>
-              <mtr><mtd>0</mtd><mtd>s</mtd></mtr></mtable
-            ></mfenced
-          ></math
-        >
+      <td rowspan="2">
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mi>s</mi></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cc} 1 & 0 \\ 0 & s \end{array} \right)</annotation></semantics>
+        </math>
       </td>
       <td>
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr>1<mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>s</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
-            ></mfenced
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mi>s</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{ccc} 1 & 0 & 0 \\ 0 & s & 0 \\ 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
-      <td colspan="1" rowspan="2">
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr>1<mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>s</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
-            ></mfenced
-          ></math
-        >
+      <td rowspan="2">
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mi>s</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{ccc} 1 & 0 & 0 \\ 0 & s & 0 \\ 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
-      <td colspan="1" rowspan="2">
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>s</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
-            ></mfenced
-          ></math
-        >
+      <td rowspan="2">
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mi>s</mi></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cccc} 1 & 0 & 0 & 0 \\ 0 & s & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
     </tr>
     <tr>
@@ -88,6 +92,10 @@ scaleY(s)
     </tr>
   </tbody>
 </table>
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -115,7 +123,7 @@ div {
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples","100%","200")}}
+{{EmbedLiveSample("Exemples", 200, 200)}}
 
 ## Spécifications
 
@@ -127,8 +135,13 @@ div {
 
 ## Voir aussi
 
-- [`scaleX()`](/fr/docs/Web/CSS/Reference/Values/transform-function/scaleX)
-- [`scaleZ()`](/fr/docs/Web/CSS/Reference/Values/transform-function/scaleZ)
-- [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function)
-- [`transform-origin`](/fr/docs/Web/CSS/Reference/Properties/transform-origin)
+- La fonction {{CSSxRef("transform-function/scaleX", "scaleX()")}}
+- La fonction {{CSSxRef("transform-function/scaleZ", "scaleZ()")}}
+- La propriété {{CSSxRef("transform")}}
+- Le type de donnée {{CSSxRef("&lt;transform-function&gt;")}}
+- La propriété {{CSSxRef("transform-origin")}}
+- Propriétés de transformation individuelles&nbsp;:
+  - {{CSSxRef("translate")}}
+  - {{CSSxRef("scale")}}
+  - {{CSSxRef("rotate")}}
+  - Remarque&nbsp;: il n'existe pas de propriété `skew`

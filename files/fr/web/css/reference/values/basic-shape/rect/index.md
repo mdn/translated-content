@@ -3,10 +3,10 @@ title: rect()
 slug: Web/CSS/Reference/Values/basic-shape/rect
 original_slug: Web/CSS/basic-shape/rect
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`rect()`** crée un rectangle à la distance spécifiée depuis les bords supérieur et gauche du bloc englobant. Il s'agit d'une fonction de forme de base du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{cssxref("&lt;basic-shape&gt;")}}. Vous pouvez utiliser la fonction `rect()` dans des propriétés CSS telles que {{cssxref("offset-path")}} pour créer le chemin rectangulaire le long duquel un élément se déplace, ou dans {{cssxref("clip-path")}} pour définir la forme de la région de découpe.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`rect()`** crée un rectangle à la distance spécifiée depuis les bords supérieur et gauche du bloc englobant. Il s'agit d'une fonction de forme de base du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{CSSxRef("&lt;basic-shape&gt;")}}. Vous pouvez utiliser la fonction `rect()` dans des propriétés CSS telles que {{CSSxRef("offset-path")}} pour créer le chemin rectangulaire le long duquel un élément se déplace, ou dans {{CSSxRef("clip-path")}} pour définir la forme de la région de découpe.
 
 ## Syntaxe
 
@@ -20,13 +20,13 @@ clip-path: rect(50px 70px 80% 20%);
 Le rectangle intérieur est défini en spécifiant quatre valeurs de décalage, en commençant par le bord supérieur puis dans le sens des aiguilles d'une montre, ainsi qu'un mot-clé optionnel `round` avec le paramètre `border-radius` pour ajouter des coins arrondis au rectangle. Chaque valeur de décalage peut être soit une longueur (`<length>`), un pourcentage (`<percentage>`), ou le mot-clé `auto`.
 
 - `<length-percentage>`
-  - : Définit la valeur {{cssxref("&lt;length-percentage&gt;")}} de la distance du bord supérieur, droit, inférieur ou gauche du rectangle par rapport au bord supérieur ou gauche du bloc englobant. La première (haut) et la troisième (bas) valeurs sont des distances depuis le bord supérieur du bloc englobant, et la deuxième (droite) et la quatrième (gauche) valeurs sont des distances depuis le bord gauche du bloc englobant. Les valeurs droite (deuxième) et bas (troisième) sont limitées par les valeurs gauche (quatrième) et haut (première), respectivement, pour éviter que le bord inférieur ne croise le bord supérieur et que le bord droit ne croise le bord gauche. Par exemple, `rect(10px 0 0 20px)` est limité à `rect(10px 20px 10px 20px)`.
+  - : Définit la valeur {{CSSxRef("&lt;length-percentage&gt;")}} de la distance du bord supérieur, droit, inférieur ou gauche du rectangle par rapport au bord supérieur ou gauche du bloc englobant. La première (haut) et la troisième (bas) valeurs sont des distances depuis le bord supérieur du bloc englobant, et la deuxième (droite) et la quatrième (gauche) valeurs sont des distances depuis le bord gauche du bloc englobant. Les valeurs droite (deuxième) et bas (troisième) sont limitées par les valeurs gauche (quatrième) et haut (première), respectivement, pour éviter que le bord inférieur ne croise le bord supérieur et que le bord droit ne croise le bord gauche. Par exemple, `rect(10px 0 0 20px)` est limité à `rect(10px 20px 10px 20px)`.
 
 - `auto`
   - : Fait coïncider le bord pour lequel cette valeur est utilisée avec le bord correspondant du bloc englobant. Si `auto` est utilisé pour la première (haut) ou la quatrième (gauche) valeur, la valeur de `auto` est `0`, et si utilisé pour la deuxième (droite) ou la troisième (bas), la valeur de `auto` est `100%`.
 
 - `round <'border-radius'>`
-  - : Définit le rayon des arrondis des coins du rectangle en utilisant la même syntaxe que la propriété abrégée CSS {{cssxref("border-radius")}}. Ce paramètre est optionnel.
+  - : Définit le rayon des arrondis des coins du rectangle en utilisant la même syntaxe que la propriété abrégée CSS {{CSSxRef("border-radius")}}. Ce paramètre est optionnel.
 
 ## Syntaxe formelle
 
@@ -36,7 +36,7 @@ Le rectangle intérieur est défini en spécifiant quatre valeurs de décalage, 
 
 ### Créer un offset-path avec rect()
 
-Dans cet exemple, la propriété {{cssxref("offset-path")}} utilise la fonction `rect()` pour définir la forme du chemin sur lequel l'élément, ici une boîte rouge, se déplace. Trois scénarios différents sont présentés, chacun utilisant des valeurs différentes pour la fonction `rect()`. La flèche à l'intérieur des boîtes pointe vers le bord droit de la boîte.
+Dans cet exemple, la propriété {{CSSxRef("offset-path")}} utilise la fonction `rect()` pour définir la forme du chemin sur lequel l'élément, ici une boîte rouge, se déplace. Trois scénarios différents sont présentés, chacun utilisant des valeurs différentes pour la fonction `rect()`. La flèche à l'intérieur des boîtes pointe vers le bord droit de la boîte.
 
 ```html
 <div class="container">
@@ -112,10 +112,10 @@ Dans cet exemple, la propriété {{cssxref("offset-path")}} utilise la fonction 
 
 ## Voir aussi
 
-- La fonction {{cssxref("basic-shape/inset","inset()")}}
-- La fonction {{cssxref("basic-shape/xywh","xywh()")}}
-- La propriété {{cssxref("clip-path")}}
-- La propriété {{cssxref("offset-path")}}
-- Le type de données {{cssxref("&lt;basic-shape&gt;")}}
+- La fonction {{CSSxRef("basic-shape/inset","inset()")}}
+- La fonction {{CSSxRef("basic-shape/xywh","xywh()")}}
+- La propriété {{CSSxRef("clip-path")}}
+- La propriété {{CSSxRef("offset-path")}}
+- Le type de données {{CSSxRef("&lt;basic-shape&gt;")}}
 - Le module de [formes CSS](/fr/docs/Web/CSS/Guides/Shapes)
 - [Guide des formes de base](/fr/docs/Web/CSS/Guides/Shapes/Using_shape-outside)
