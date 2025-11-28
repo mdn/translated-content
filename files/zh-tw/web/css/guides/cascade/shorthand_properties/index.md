@@ -3,7 +3,7 @@ title: 簡寫屬性
 slug: Web/CSS/Guides/Cascade/Shorthand_properties
 ---
 
-**_簡寫屬性_**是一種可以同時設定許多其他 CSS 屬性值的 CSS 屬性。使用簡寫屬性，Web 開發者可以寫出更簡潔、且通常更具可讀性的樣式表，省時又省力。
+***簡寫屬性***是一種可以同時設定許多其他 CSS 屬性值的 CSS 屬性。使用簡寫屬性，Web 開發者可以寫出更簡潔、且通常更具可讀性的樣式表，省時又省力。
 
 CSS 規範中定義，特性簡寫用來組合作用於相同主題的常見性質。舉例來說，CSS {{cssxref("background")}} 這個性質是個特性簡寫，可同時定義 {{cssxref("background-color")}}、{{cssxref("background-image")}}、{{cssxref("background-repeat")}} 和 {{cssxref("background-position")}} 等屬性。同樣的，最常用的字體相關屬性，可以使用 {{cssxref("font")}} 來定義；圍繞在方塊周圍的邊界，則可簡單地以 {{cssxref("margin")}} 簡寫來定義。
 

@@ -12,8 +12,7 @@ a[title] {
 }
 
 /* 存在 href 属性并且属性值匹配"https://example.org"的 <a> 元素 */
-a[href="https://example.org"]
-{
+a[href="https://example.org"] {
   color: green;
 }
 

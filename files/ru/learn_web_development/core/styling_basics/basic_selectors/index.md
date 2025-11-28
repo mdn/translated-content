@@ -118,8 +118,7 @@ a[title] {
 или основываясь на _значении_ атрибута:
 
 ```css
-a[href="https://example.com"]
-{
+a[href="https://example.com"] {
 }
 ```
 

@@ -35,7 +35,7 @@ open(name, version)
   - : 数据库名称
 - version
   - : 指定数据库版本，当你想要更改数据库格式（比如增加对象存储，非增加记录），必须指定更高版本，通过 versionchange 来更改
-- options (version and storage) {{ NonStandardBadge() }}
+- options (version and storage) {{Non-standard_Inline}}
   - : In Gecko, since [version 26](/zh-CN/docs/Mozilla/Firefox/Releases/26), you can include an `options` object as a parameter of {{ domxref("IDBFactory.open") }} that contains the `version` number of the database, plus a storage value that specifies whether you want to use `permanent` (the default value) storage for the IndexedDB, or `temporary` storage (aka shared pool.) See [Firefox bug 785884](https://bugzil.la/785884) for more details. This is a non-standard feature that we are looking to standardise sometime in the future.
 
 > [!NOTE]

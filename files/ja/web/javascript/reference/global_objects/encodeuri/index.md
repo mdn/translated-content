@@ -118,7 +118,7 @@ console.log(encodeURI("\uD800"));
 console.log(encodeURI("\uDFFF"));
 ```
 
-このエラーを避けるには、孤立サロゲートを Unicode 置換文字 (U+FFFD) に置き換える {{jsxref(String.prototype.toWellFormed())}} を使用することができます。また、文字列を `encodeURI()` に渡す前に、その文字列に孤立サロゲートが含まれているかどうかを調べるには、{{jsxref(String.prototype.isWellFormed())}} を使用することができます。
+このエラーを避けるには、孤立サロゲートを Unicode 置換文字 (U+FFFD) に置き換える {{jsxref("String.prototype.toWellFormed()")}} を使用することができます。また、文字列を `encodeURI()` に渡す前に、その文字列に孤立サロゲートが含まれているかどうかを調べるには、{{jsxref("String.prototype.isWellFormed()")}} を使用することができます。
 
 ### RFC3986 のエンコード
 

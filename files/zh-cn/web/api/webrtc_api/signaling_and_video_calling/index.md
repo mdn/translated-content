@@ -81,7 +81,7 @@ if (sendToClients) {
 
 #### 交换会话描述信息
 
-开始处理信号的时候，用户的初始化操作会创建一个**请求（offer）** ，根据 {{Glossary("SDP")}} 协议其中会包含一个 session 描述符，并且需要把这个发送到我们称之为**接收者（callee）**那里，接受者需要返回一个包含描述符的**应答（answer）**信息。我们的服务器使用 WebSocket 来传递 `"video-offer"` `"video-answer"` 两种类型的消息数据。这些消息包含以下属性：
+开始处理信号的时候，用户的初始化操作会创建一个**请求**（offer），根据 {{Glossary("SDP")}} 协议其中会包含一个 session 描述符，并且需要把这个发送到我们称之为**接收者**（callee）那里，接受者需要返回一个包含描述符的**应答**（answer）信息。我们的服务器使用 WebSocket 来传递 `"video-offer"` `"video-answer"` 两种类型的消息数据。这些消息包含以下属性：
 
 - `type`
   - : 消息类型; `"video-offer"` 或 `"video-answer"`

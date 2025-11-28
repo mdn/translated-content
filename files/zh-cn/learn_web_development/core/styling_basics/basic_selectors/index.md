@@ -180,8 +180,7 @@ a[title] {
 或者根据一个有特定值的标签属性是否存在来选择：
 
 ```css
-a[href="https://example.com"]
-{
+a[href="https://example.com"] {
 }
 ```
 

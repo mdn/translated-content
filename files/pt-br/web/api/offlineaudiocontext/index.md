@@ -77,8 +77,9 @@ function getData() {
         .startRendering()
         .then(function (renderedBuffer) {
           console.log("Rendering completed successfully");
-          var audioCtx = new (window.AudioContext ||
-            window.webkitAudioContext)();
+          var audioCtx = new (
+            window.AudioContext || window.webkitAudioContext
+          )();
           var song = audioCtx.createBufferSource();
           song.buffer = renderedBuffer;
 

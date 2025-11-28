@@ -149,8 +149,7 @@ a[title] {
 또는 특정 값을 가진 속성의 존재 여부에 따라 선택할 수도 있습니다.
 
 ```css
-a[href="https://example.com"]
-{
+a[href="https://example.com"] {
 }
 ```
 
