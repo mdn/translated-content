@@ -14,8 +14,7 @@ a[title] {
 }
 
 /* <a> elementos combinando com um href "https://example.org" */
-a[href="https://example.org"]
-{
+a[href="https://example.org"] {
   color: green;
 }
 

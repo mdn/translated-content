@@ -80,8 +80,7 @@ Makes the link to `http://example.com` non-reactive.
 ```
 
 ```css
-a[href="http://example.com"]
-{
+a[href="http://example.com"] {
   pointer-events: none;
 }
 ```
