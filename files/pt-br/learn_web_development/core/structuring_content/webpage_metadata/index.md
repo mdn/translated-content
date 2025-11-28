@@ -258,9 +258,8 @@ Todos os sites que você usar nos dias atuais empregarão o {{glossary("CSS")}} 
   ```
 
 - O elemento {{htmlelement("script")}} também deve ir dentro do `<head>` e deve incluir um atributo `src` contendo o caminho para o JavaScript que você deseja carregar, além de `defer` (um atributo booleano), que instrui o navegador a carregar o JavaScript depois que a página terminar de analisar o HTML.
-O atributo `defer` é útil porque garante que todo o HTML esteja carregado antes que o JavaScript seja executado, evitando erros causados pelo JavaScript tentar acessar um elemento HTML que ainda não existe na página.
-Existem [`várias maneiras`](/pt-BR/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#estrat%C3%A9gias_para_o_carregamento_de_scripts) de lidar com o carregamento de JavaScript na sua página, mas esta é a mais confiável para usar em navegadores modernos.
-
+  O atributo `defer` é útil porque garante que todo o HTML esteja carregado antes que o JavaScript seja executado, evitando erros causados pelo JavaScript tentar acessar um elemento HTML que ainda não existe na página.
+  Existem [`várias maneiras`](/pt-BR/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#estrat%C3%A9gias_para_o_carregamento_de_scripts) de lidar com o carregamento de JavaScript na sua página, mas esta é a mais confiável para usar em navegadores modernos.
 
   ```html
   <script src="meu-arquivo-js.js"></script>
