@@ -8,9 +8,7 @@ l10n:
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django")}}
 
-本文概述了 MDN Express 教程，并介绍了我们将在接下来的几页内容中使用的“本地图书馆”示例网站。
-
-你将了解到本教程涵盖的内容、入门方法、如何寻求帮助，以及构建和部署第一个服务端 JavaScript 应用所需的一切。
+本文概述了 MDN Django 教程，并介绍了我们将在接下来的几页内容中使用的“本地图书馆”示例网站。你将了解到本教程涵盖的内容、入门方法、如何寻求帮助，以及构建和部署你的第一个服务端 Python 应用所需的一切。
 
 <table>
   <tbody>
