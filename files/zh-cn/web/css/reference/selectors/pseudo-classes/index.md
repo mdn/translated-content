@@ -2,7 +2,7 @@
 title: 伪类
 slug: Web/CSS/Reference/Selectors/Pseudo-classes
 l10n:
-  sourceCommit: 898dd2394e7b70daa2c0c212282a64ccf5938341
+  sourceCommit: 754b68246f4e69e404309fee4a1699e047e43994
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) ***伪类***是添加到选择器的关键字，用于指定所选元素的特定状态。例如，{{CSSxRef(":hover")}} 伪类可用于在用户指针悬停在按钮上时选择该按钮，然后对选定的按钮进行样式设计。
@@ -27,6 +27,8 @@ button:hover {
 
 - {{CSSxRef(":defined")}}
   - : 匹配任何具有定义的元素。
+- {{CSSxRef(":heading")}}
+  - : 匹配任何标题元素（`<h1>`-`<h6>`）。
 
 ## 元素显示状态伪类
 
@@ -111,6 +113,9 @@ button:hover {
   - : 匹配文档 URL 的目标元素，也匹配有文档 URL 目标后代的元素。
 - {{CSSxRef(":scope")}}
   - : 代表作为选择器匹配参考点的元素。
+
+> [!NOTE]
+> `:target-within` 伪类用于匹配自身或其后代元素是文档 URL 目标的元素，该伪类曾被定义但已从规范中移除。请使用 `:has(:target)` 实现此功能。
 
 ## 资源状态伪类
 
@@ -205,13 +210,13 @@ button:hover {
 
 这些伪类接受[选择器列表](/zh-CN/docs/Web/CSS/Reference/Selectors/Selector_list)或[可容错选择器列表](/zh-CN/docs/Web/CSS/Reference/Selectors/Selector_list#可容错选择器列表)作为参数。
 
-- [`:is()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:is)
+- {{CSSxRef(":is", ":is()")}}
   - : 匹配与提供的列表中的任何选择器匹配的任何元素。
-- [`:not()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:not)
+- {{CSSxRef(":not", ":not()")}}
   - : 表示其参数中未表示的任何元素。
-- [`:where()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:where)
+- {{CSSxRef(":where", ":where()")}}
   - : 优先级调整伪类匹配与提供的列表中的任何选择器匹配的任何元素，但不添加任何优先级权重。
-- [`:has()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:has)
+- {{CSSxRef(":has", ":has()")}}
   - : 该关系伪类表示与任何一个与锚定的元素的相对选择器相匹配（如果有的话）的元素。
 
 ## 自定义状态伪类
@@ -251,6 +256,8 @@ selector:pseudo-class {
 A
 
 - {{CSSxRef(":active")}}
+- {{CSSxRef(":active-view-transition")}}
+- {{cssxref(":active-view-transition-type", ":active-view-transition-type()")}}
 - {{CSSxRef(":any-link")}}
 - {{CSSxRef(":autofill")}}
 
@@ -292,6 +299,8 @@ H
 
 - {{CSSxRef(":has-slotted")}}
 - {{CSSxRef(":has", ":has()")}}
+- {{CSSXRef(":heading")}}
+- {{CSSXRef(":heading_function", ":heading()")}}
 - {{CSSxRef(":host")}}
 - {{CSSxRef(":host_function", ":host()")}}
 - {{CSSxRef(":host-context", ":host-context()")}}
@@ -362,7 +371,6 @@ T
 
 - {{CSSxRef(":target")}}
 - {{CSSxRef(":target-current")}}
-- {{CSSxRef(":target-within")}} {{Experimental_Inline}}
 
 U
 
@@ -379,6 +387,28 @@ W
 
 - {{CSSxRef(":where", ":where()")}}
 
+### 非标准伪类
+
+非标准的具有厂商前缀的伪类包括：
+
+#### `-moz-` 前缀
+
+- {{CSSxRef(":-moz-broken")}}
+- {{CSSxRef(":-moz-drag-over")}}
+- {{CSSxRef(":-moz-first-node")}}
+- {{CSSxRef(":-moz-handler-blocked")}}
+- {{CSSxRef(":-moz-handler-crashed")}}
+- {{CSSxRef(":-moz-handler-disabled")}}
+- {{CSSxRef(":-moz-last-node")}}
+- {{CSSxRef(":-moz-loading")}}
+- {{CSSxRef(":-moz-locale-dir_ltr", ":-moz-locale-dir(ltr)")}}
+- {{CSSxRef(":-moz-locale-dir_rtl", ":-moz-locale-dir(rtl)")}}
+- {{CSSxRef(":-moz-only-whitespace")}}
+- {{CSSxRef(":-moz-submit-invalid")}}
+- {{CSSxRef(":-moz-suppressed")}}
+- {{CSSxRef(":-moz-user-disabled")}}
+- {{CSSxRef(":-moz-window-inactive")}}
+
 ## 规范
 
 {{Specifications}}
@@ -386,3 +416,4 @@ W
 ## 参见
 
 - [伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
+- [CSS 选择器](/zh-CN/docs/Web/CSS/Guides/Selectors)模块
