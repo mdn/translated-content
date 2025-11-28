@@ -192,5 +192,5 @@ img.animate(
 - {{domxref("Animation")}}
 - {{domxref("Element.getAnimations()")}}
 - {{cssxref("animation-range-end")}}, {{cssxref("animation-range-start")}}, {{cssxref("animation-timeline")}}
-- [CSS スクロール駆動型アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)
+- [CSS スクロール駆動型アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)
 - [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)

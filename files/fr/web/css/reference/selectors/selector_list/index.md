@@ -146,4 +146,4 @@ Dans l'exemple ci-dessus, le style italique sera appliqué à tout titre `h2` im
 - Les pseudo-classes {{CSSxRef(":is", ":is()")}} et {{CSSxRef(":where", ":where()")}} acceptent des listes de sélecteurs tolérantes.
 - La pseudo-classe {{CSSxRef(":not", ":not()")}} accepte une liste de sélecteurs classique.
 - La pseudo-classe {{CSSxRef(":has", ":has()")}} accepte une liste de sélecteurs relative.
-- [Sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors)
+- [Sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors)

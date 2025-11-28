@@ -82,4 +82,4 @@ transform-style: unset;
 
 ## 参见
 
-- [Using CSS transforms](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [Using CSS transforms](/zh-CN/docs/Web/CSS/Guides/Transforms/Using)

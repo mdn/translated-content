@@ -221,7 +221,7 @@ l10n:
     この属性は、`rel` 属性が `stylesheet`、`preload`、`modulepreload` を指定した場合にのみ指定する必要があります。
     [サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)を参照してください。
 - `media`
-  - : この属性は、リンク先のリソースが適用されるメディアを指定します。この値は[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)でなければなりません。
+  - : この属性は、リンク先のリソースが適用されるメディアを指定します。この値は[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)でなければなりません。
     この属性は主に外部のスタイルシートから、実行中のデバイスに最適なものをユーザーエージェントが選択できるようにリンクするときに役立ちます。
 
 - `referrerpolicy`

@@ -116,70 +116,70 @@ La propriété `filter` s'utilise avec le mot-clé `none` ou avec une à plusieu
 
 Lorsque la valeur de la propriété `filter` contient plusieurs fonctions, les filtres sont appliqués dans l'ordre.
 
-- [`blur()`](/fr/docs/Web/CSS/filter-function/blur)
+- [`blur()`](/fr/docs/Web/CSS/Reference/Values/filter-function/blur)
   - : Applique un [flou gaussien](https://en.wikipedia.org/wiki/Gaussian_blur) à l'image.
 
     ```css
     filter: blur(5px);
     ```
 
-- [`brightness()`](/fr/docs/Web/CSS/filter-function/brightness)
+- [`brightness()`](/fr/docs/Web/CSS/Reference/Values/filter-function/brightness)
   - : Rend l'image plus claire ou plus sombre en utilisant un coefficient multiplicateur. L'effet est linéaire&nbsp;: `0%` créera une image complètement noire, `100%` ne modifiera pas l'image et les valeurs supérieures à 100% rendront l'image plus claire.
 
     ```css
     filter: brightness(2);
     ```
 
-- [`contrast()`](/fr/docs/Web/CSS/filter-function/contrast)
+- [`contrast()`](/fr/docs/Web/CSS/Reference/Values/filter-function/contrast)
   - : Ajuste le contraste de l'image. Une valeur de `0%` rendra l'image grise, `100%` n'aura pas d'effet et les valeurs supérieures à `100%` renforceront le contraste.
 
     ```css
     filter: contrast(200%);
     ```
 
-- [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow)
-  - : Applique une ombre portée suivant les contours de l'image. Son paramètre suit la même syntaxe que celle de la propriété [`box-shadow`](/fr/docs/Web/CSS/Reference/Properties/box-shadow) (définie dans le module [Arrière-plans et bordures CSS](/fr/docs/Web/CSS/CSS_backgrounds_and_borders)), sauf que le mot-clé `inset` et le paramètre `spread` ne sont pas autorisés. Tous les filtres appliqués après `drop-shadow()` sont appliqués à l'ombre portée également.
+- [`drop-shadow()`](/fr/docs/Web/CSS/Reference/Values/filter-function/drop-shadow)
+  - : Applique une ombre portée suivant les contours de l'image. Son paramètre suit la même syntaxe que celle de la propriété [`box-shadow`](/fr/docs/Web/CSS/Reference/Properties/box-shadow) (définie dans le module [Arrière-plans et bordures CSS](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders)), sauf que le mot-clé `inset` et le paramètre `spread` ne sont pas autorisés. Tous les filtres appliqués après `drop-shadow()` sont appliqués à l'ombre portée également.
 
     ```css
     filter: drop-shadow(16px 16px 10px black);
     ```
 
-- [`grayscale()`](/fr/docs/Web/CSS/filter-function/grayscale)
+- [`grayscale()`](/fr/docs/Web/CSS/Reference/Values/filter-function/grayscale)
   - : Convertit l'image en niveaux de gris. Un argument de `100%` rendra l'image uniquement avec des niveaux de gris. Un argument de `0%` ne modifiera pas l'image d'entrée. Les valeurs entre `0%` et `100%` appliquent un effet proportionnel.
 
     ```css
     filter: grayscale(100%);
     ```
 
-- [`hue-rotate()`](/fr/docs/Web/CSS/filter-function/hue-rotate)
+- [`hue-rotate()`](/fr/docs/Web/CSS/Reference/Values/filter-function/hue-rotate)
   - : Applique une rotation de teinte. L'argument angulaire définit le nombre de degrés pour la rotation sur le cercle des teintes. Une valeur de `0deg` n'aura pas d'effet sur l'image.
 
     ```css
     filter: hue-rotate(90deg);
     ```
 
-- [`invert()`](/fr/docs/Web/CSS/filter-function/invert)
+- [`invert()`](/fr/docs/Web/CSS/Reference/Values/filter-function/invert)
   - : Inverse les couleurs de l'image. Si l'argument vaut `100%`, on obtiendra le négatif complet de l'image. Si l'argument vaut `0%`, l'image sera inchangée. Les valeurs entre `0%` et `100%` ont des effets proportionnels.
 
     ```css
     filter: invert(100%);
     ```
 
-- [`opacity()`](/fr/docs/Web/CSS/filter-function/opacity)
+- [`opacity()`](/fr/docs/Web/CSS/Reference/Values/filter-function/opacity)
   - : Applique un niveau de transparence. Un coefficient de `0%` rendra l'image complètement transparente tandis qu'un coefficient de `100%` laissera l'image inchangée.
 
     ```css
     filter: opacity(50%);
     ```
 
-- [`saturate()`](/fr/docs/Web/CSS/filter-function/saturate)
+- [`saturate()`](/fr/docs/Web/CSS/Reference/Values/filter-function/saturate)
   - : Sature l'image. Avec un coefficient de `0%`, l'image sera complètement désaturée. `100%` n'aura pas d'effet sur l'image. Les valeurs supérieures à `100%` augmenteront la saturation.
 
     ```css
     filter: saturate(200%);
     ```
 
-- [`sepia()`](/fr/docs/Web/CSS/filter-function/sepia)
+- [`sepia()`](/fr/docs/Web/CSS/Reference/Values/filter-function/sepia)
   - : Convertit l'image en sépia. Un coefficient de `100%` rendra l'image complètement sépia tandis qu'un coefficient `0%` n'aura pas d'effet sur l'image.
 
     ```css
@@ -277,7 +277,7 @@ Les filtres sont appliqués dans l'ordre, c'est pour cela que les ombres portée
 ## Voir aussi
 
 - La propriété CSS [`backdrop-filter`](/fr/docs/Web/CSS/Reference/Properties/backdrop-filter)
-- [La composition et les modes de fusion en CSS](/fr/docs/Web/CSS/CSS_compositing_and_blending) avec les propriétés CSS [`background-blend-mode`](/fr/docs/Web/CSS/Reference/Properties/background-blend-mode) et [`mix-blend-mode`](/fr/docs/Web/CSS/Reference/Properties/mix-blend-mode)
+- [La composition et les modes de fusion en CSS](/fr/docs/Web/CSS/Guides/Compositing_and_blending) avec les propriétés CSS [`background-blend-mode`](/fr/docs/Web/CSS/Reference/Properties/background-blend-mode) et [`mix-blend-mode`](/fr/docs/Web/CSS/Reference/Properties/mix-blend-mode)
 - La propriété CSS [`mask`](/fr/docs/Web/CSS/Reference/Properties/mask)
 - [SVG](/fr/docs/Web/SVG) et notamment l'élément [`<filter>`](/fr/docs/Web/SVG/Reference/Element/filter) et l'attribut [`filter`](/fr/docs/Web/SVG/Attribute/filter)
 - [Appliquer des effets SVG à du contenu HTML](/fr/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

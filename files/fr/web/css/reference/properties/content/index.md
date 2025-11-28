@@ -115,7 +115,7 @@ Les mots-clés et les types de données mentionnés ci-dessus sont décrits plus
   - : Une {{cssxref("&lt;image&gt;")}}, représentant une image à afficher. Cela peut être égal à une {{cssxref("url_value", "&lt;url&gt;")}}, {{cssxref("image/image-set", "image-set()")}}, ou {{cssxref("&lt;gradient&gt;")}} type de données, ou une partie de la page Web elle-même, définie par la {{cssxref("element", "element()")}} fonction.
 
 - `<counter>`
-  - : La valeur `<counter>` est un [compteur CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), généralement un nombre produit par des calculs définis par les {{cssxref("&lt;counter-reset&gt;")}} et {{cssxref("&lt;counter-increment&gt;")}} propriétés. Il peut être affiché à l'aide de la {{cssxref("counter", "counter()")}} ou {{cssxref("counters", "counters()")}} fonction.
+  - : La valeur `<counter>` est un [compteur CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters), généralement un nombre produit par des calculs définis par les {{cssxref("&lt;counter-reset&gt;")}} et {{cssxref("&lt;counter-increment&gt;")}} propriétés. Il peut être affiché à l'aide de la {{cssxref("counter", "counter()")}} ou {{cssxref("counters", "counters()")}} fonction.
     - {{cssxref("counter", "counter()")}}
       - : La {{cssxref("counter", "counter()")}} fonction a deux formes : 'counter(_name_)' ou 'counter(_name_, style)'. Le texte généré est la valeur du compteur le plus interne du nom donné dans le contexte du pseudo-élément donné. Il est formaté dans le {{cssxref("&lt;list-style-type&gt;")}} spécifié (`decimal` par défaut).
     - {{cssxref("counters", "counters()")}}
@@ -304,8 +304,7 @@ Cet exemple est utile pour les feuilles de style d'impression. Il utilise un [s�
 #### CSS
 
 ```css
-a[href^="https://"]::after
-{
+a[href^="https://"]::after {
   content: " (Lien : " attr(href) ")";
   color: darkgreen;
 }
@@ -465,8 +464,8 @@ div {
 - {{cssxref("image/image-set", "image-set()")}}
 - {{cssxref("url_value", "&lt;url&gt;")}}
 - {{glossary("Replaced elements")}}
-- Le module de [contenu généré par CSS](/fr/docs/Web/CSS/CSS_generated_content) module
-- Le module des [listes et compteurs CSS](/fr/docs/Web/CSS/CSS_lists) module
+- Le module de [contenu généré par CSS](/fr/docs/Web/CSS/Guides/Generated_content) module
+- Le module des [listes et compteurs CSS](/fr/docs/Web/CSS/Guides/Lists) module
 - Panneaux d'accessibilité du navigateur&nbsp;:
   - [Inspecteur d'accessibilité de Firefox](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/)
   - [Panneau d'accessibilité de Chrome](https://developer.chrome.com/docs/devtools/accessibility/reference#pane)

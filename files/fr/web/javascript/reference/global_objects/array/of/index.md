@@ -1,5 +1,5 @@
 ---
-title: "Array : méthode of()"
+title: "Array : méthode statique of()"
 short-title: of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
 l10n:
@@ -65,13 +65,13 @@ Array.of(undefined); // [undefined]
 La méthode `of()` peut être appelée sur n'importe quelle fonction constructeur qui accepte un seul argument représentant la longueur du nouveau tableau.
 
 ```js
-function NotArray(len) {
-  console.log("NotArray appelé avec la longueur", len);
+function PasUnTableau(len) {
+  console.log("PasUnTableau appelé avec la longueur", len);
 }
 
-console.log(Array.of.call(NotArray, 1, 2, 3));
-// NotArray appelé avec la longueur 3
-// NotArray { '0': 1, '1': 2, '2': 3, length: 3 }
+console.log(Array.of.call(PasUnTableau, 1, 2, 3));
+// PasUnTableau appelé avec la longueur 3
+// PasUnTableau { '0': 1, '1': 2, '2': 3, length: 3 }
 
 console.log(Array.of.call(Object)); // [Number: 0] { length: 0 }
 ```

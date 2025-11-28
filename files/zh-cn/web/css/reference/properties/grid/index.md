@@ -158,5 +158,5 @@ grid: unset;
 ## 参见
 
 - 相关 CSS 属性：{{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}
-- _网格布局指南：[Line-based placement with CSS Grid](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
-- _网格布局指南：[Grid template areas - Grid definition shorthands](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#grid_definition_shorthands)_
+- _网格布局指南：[Line-based placement with CSS Grid](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)_
+- _网格布局指南：[Grid template areas - Grid definition shorthands](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas#grid_definition_shorthands)_

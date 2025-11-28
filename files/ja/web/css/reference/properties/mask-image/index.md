@@ -45,7 +45,7 @@ mask-image: unset;
 
 `mask-image` プロパティは、適用される要素の一部を非表示にするマスクを提供します。値は、マスク参照のカンマ区切りリストです。それぞれのマスク参照は、`<image>`、`<mask-source>`、またはキーワード `none` です。
 
-`<image>` には、[CSS グラデーション](/ja/docs/Web/CSS/gradient) などの生成画像を含む、あらゆる種類の画像を指定することができます。
+`<image>` には、[CSS グラデーション](/ja/docs/Web/CSS/Reference/Values/gradient) などの生成画像を含む、あらゆる種類の画像を指定することができます。
 
 `mask-image` プロパティの値に 1 つの値しか指定されておらず、その値が `none` の場合、マスク効果は現れません。複数の値が指定されている場合、リストに含まれる `none` 値は直接的な効果は持ちませんが、同じリスト内の他の `mask-*` 値は、透明な黒のマスクレイヤーに適用され、視覚的な効果はありません。
 
@@ -79,7 +79,7 @@ mask-image: unset;
 
 ### マスク画像としてのグラデーション
 
-この例では、マスクとして `<image>` 値を使用し、CSS の[放射グラデーション](/ja/docs/Web/CSS/gradient/radial-gradient)をマスク画像として定義して、縁が柔らかい丸い画像を作成しています。
+この例では、マスクとして `<image>` 値を使用し、CSS の[放射グラデーション](/ja/docs/Web/CSS/Reference/Values/gradient/radial-gradient)をマスク画像として定義して、縁が柔らかい丸い画像を作成しています。
 
 #### HTML
 
@@ -284,5 +284,5 @@ body:has(:checked) img {
 - {{cssxref("mask-size")}}
 - {{cssxref("mask-border")}}
 - {{cssxref("clip-path")}}
-- [CSS マスク入門](/ja/docs/Web/CSS/CSS_masking/Masking)
-- [CSS マスク](/ja/docs/Web/CSS/CSS_masking)モジュール
+- [CSS マスク入門](/ja/docs/Web/CSS/Guides/Masking/Introduction)
+- [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール

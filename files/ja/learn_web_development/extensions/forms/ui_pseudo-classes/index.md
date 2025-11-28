@@ -40,7 +40,7 @@ l10n:
 - {{cssxref(":focus")}}: フォーカスされているとき（キーボードからタブで移動しているとき）にのみ、要素を選択します。
 - {{cssxref(":active")}}: その要素がアクティブ化されているとき（つまり、クリックされたとき、またはキーボード操作の場合は <kbd>Return</kbd> / <kbd>Enter</kbd> キーが押されたとき）だけ、要素を選択します。
 
-これらの基本的な擬似クラスについては、 もう慣れたことでしょう。 [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)では、他にも HTML フォームに関連する擬似クラスをいくつか提供しています。これらは、これらは、利用することができる有用なターゲット条件をいくつか提供しています。以下の節で詳しく説明しますが、簡単に説明すると、主なものは以下のとおりです。
+これらの基本的な擬似クラスについては、 もう慣れたことでしょう。 [CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors)では、他にも HTML フォームに関連する擬似クラスをいくつか提供しています。これらは、これらは、利用することができる有用なターゲット条件をいくつか提供しています。以下の節で詳しく説明しますが、簡単に説明すると、主なものは以下のとおりです。
 
 - {{cssxref(':required')}} および {{cssxref(':optional')}}: 必須となりうる要素（HTML [`required`](/ja/docs/Web/HTML/Reference/Attributes/required) 属性に対応している要素など）を、必須かオプションかに基づいて対象とします。
   必須または省略可能なフォームコントロールを対象とします。
@@ -114,9 +114,9 @@ input:optional {
 
 ## 擬似クラスでコンテンツを生成する
 
-これまでの記事で、[生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content)の使い方を見てきましたが、今こそもう少し詳しく話をする良い機会だと思い、今回はその内容を紹介します。
+これまでの記事で、[生成コンテンツ](/ja/docs/Web/CSS/Guides/Generated_content)の使い方を見てきましたが、今こそもう少し詳しく話をする良い機会だと思い、今回はその内容を紹介します。
 
-これは、 [`::before`](/ja/docs/Web/CSS/::before) と [`::after`](/ja/docs/Web/CSS/::after) という擬似要素と [`content`](/ja/docs/Web/CSS/Reference/Properties/content) というプロパティを使用して、影響を受ける要素の前または後にコンテンツの塊を表示させることができるというものです。コンテンツの塊は DOM に追加されないので、スクリーンリーダーによっては見えないかもしれません。擬似要素なので、実際の DOM ノードと同じ方法でスタイル設定の対象とすることができます。
+これは、 [`::before`](/ja/docs/Web/CSS/Reference/Selectors/::before) と [`::after`](/ja/docs/Web/CSS/Reference/Selectors/::after) という擬似要素と [`content`](/ja/docs/Web/CSS/Reference/Properties/content) というプロパティを使用して、影響を受ける要素の前または後にコンテンツの塊を表示させることができるというものです。コンテンツの塊は DOM に追加されないので、スクリーンリーダーによっては見えないかもしれません。擬似要素なので、実際の DOM ノードと同じ方法でスタイル設定の対象とすることができます。
 
 これは、すべてのユーザーのアクセシビリティを保証するため代替のインジケーターも利用できる場合に、ラベルやアイコンのような視覚的なインジケーターを要素に追加したい場合に実に有益です。たとえば、[カスタムラジオボタンの例](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html)では、ラジオボタンが選択されたときにカスタムラジオボタンの内側の円の配置とアニメーションを処理するために生成コンテンツを使用しています。
 
@@ -601,7 +601,7 @@ input[type="radio"]:indeterminate {
 以下のものも興味深いですが、まだブラウザーの対応が十分でありません。
 
 - {{cssxref(":blank")}} 擬似クラスは、空のフォームコントロールを選択します。 {{cssxref(":empty")}} も {{HTMLElement("input")}} のように子を持たない要素に一致しますが、より一般化されており、他の{{glossary("void element", "空要素")}}、例えば {{HTMLElement("br")}} や {{HTMLElement("hr")}} などにも一致します。 `:empty` はそれなりにブラウザーが対応しています。`:blank` 擬似クラスの仕様書はまだ完成していないので、どのブラウザーも対応しているわけではありません。
-- [`:user-invalid`](/ja/docs/Web/CSS/:user-invalid) 擬似クラスは、対応されると {{cssxref(":invalid")}} に似ていますが、使い勝手がより良くなるでしょう。入力にフォーカスが当たった時に値が有効であれば、ユーザーがデータを入力フィールドする際に、その要素が `:invalid` に一致する可能性がありますが、フォーカスが外れた時には `:user-invalid` にのみ一致することになります。元々無効な値であった場合は、フォーカスがある間中、 `:invalid` と `:user-invalid` の両方に一致することになります。 `:invalid` と同様に、値が有効になると `:user-invalid` と一致しなくなります。
+- [`:user-invalid`](/ja/docs/Web/CSS/Reference/Selectors/:user-invalid) 擬似クラスは、対応されると {{cssxref(":invalid")}} に似ていますが、使い勝手がより良くなるでしょう。入力にフォーカスが当たった時に値が有効であれば、ユーザーがデータを入力フィールドする際に、その要素が `:invalid` に一致する可能性がありますが、フォーカスが外れた時には `:user-invalid` にのみ一致することになります。元々無効な値であった場合は、フォーカスがある間中、 `:invalid` と `:user-invalid` の両方に一致することになります。 `:invalid` と同様に、値が有効になると `:user-invalid` と一致しなくなります。
 
 ## スキルテスト
 

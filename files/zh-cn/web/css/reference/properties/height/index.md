@@ -3,7 +3,7 @@ title: height
 slug: Web/CSS/Reference/Properties/height
 ---
 
-`height` CSS 属性指定了一个元素的高度。默认情况下，这个属性决定的是内容区（ [content area](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content-area)）的高度，但是，如果将 {{cssxref("box-sizing")}} 设置为 `border-box` , 这个属性决定的将是边框区域（[border area](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border-area)）的高度。
+`height` CSS 属性指定了一个元素的高度。默认情况下，这个属性决定的是内容区（ [content area](/zh-CN/docs/Web/CSS/Guides/Box_model/Introduction#content-area)）的高度，但是，如果将 {{cssxref("box-sizing")}} 设置为 `border-box` , 这个属性决定的将是边框区域（[border area](/zh-CN/docs/Web/CSS/Guides/Box_model/Introduction#border-area)）的高度。
 
 {{InteractiveExample("CSS Demo: height")}}
 
@@ -151,4 +151,4 @@ div {
 
 ## 参见
 
-- [box model](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("width")}}, {{cssxref("box-sizing")}}, {{cssxref("min-height")}}, {{cssxref("max-height")}}
+- [box model](/zh-CN/docs/Web/CSS/Guides/Box_model/Introduction), {{cssxref("width")}}, {{cssxref("box-sizing")}}, {{cssxref("min-height")}}, {{cssxref("max-height")}}

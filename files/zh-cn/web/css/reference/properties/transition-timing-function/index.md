@@ -3,7 +3,7 @@ title: transition-timing-function
 slug: Web/CSS/Reference/Properties/transition-timing-function
 ---
 
-CSS **`transition-timing-function`** 属性设置如何计算受[过渡效果](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)影响的 CSS 属性的中间值。
+CSS **`transition-timing-function`** 属性设置如何计算受[过渡效果](/zh-CN/docs/Web/CSS/Guides/Transitions/Using)影响的 CSS 属性的中间值。
 
 {{InteractiveExample("CSS 演示：transition-timing-function")}}
 
@@ -253,5 +253,5 @@ const intervalID = setInterval(updateTransition, 10000);
 
 ## 参见
 
-- [Using CSS transitions](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Using CSS transitions](/zh-CN/docs/Web/CSS/Guides/Transitions/Using)
 - {{ domxref("TransitionEvent") }}

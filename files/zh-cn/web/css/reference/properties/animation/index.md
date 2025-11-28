@@ -159,13 +159,13 @@ animation:
 
 {{EmbedLiveSample('赛隆人之眼')}}
 
-更多示例请参阅[使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations#examples)。
+更多示例请参阅[使用 CSS 动画](/zh-CN/docs/Web/CSS/Guides/Animations/Using#examples)。
 
 ## 潜在的问题
 
 眨眼和闪烁的动画对于有认知问题的人来说是有问题的，比如注意力缺陷多动障碍 (ADHD)。此外，某些动画效果可以触发前庭神经紊乱、癫痫、偏头痛和暗点敏感性。
 
-考虑提供一种暂停或禁用动画的机制，以及使用 [Reduced Motion Media Query](/zh-CN/docs/Web/CSS/@media/prefers-reduced-motion)（简约运动媒体查询），为那些表示不喜欢动画的用户创建一个良好的体验。
+考虑提供一种暂停或禁用动画的机制，以及使用 [Reduced Motion Media Query](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion)（简约运动媒体查询），为那些表示不喜欢动画的用户创建一个良好的体验。
 
 - [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity)
 - [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
@@ -183,5 +183,5 @@ animation:
 
 ## 参见
 
-- [Using CSS animations](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Using CSS animations](/zh-CN/docs/Web/CSS/Guides/Animations/Using)
 - JavaScript {{domxref("AnimationEvent")}} API

@@ -21,7 +21,7 @@ slug: Learn_web_development/Core/Styling_basics/Handling_different_text_directio
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/simple-vertical.html", '100%', 800)}}
 
-Три возможных значения свойства [`writing-mode`](/ru/docs/Web/CSS/writing-mode):
+Три возможных значения свойства [`writing-mode`](/ru/docs/Web/CSS/Reference/Properties/writing-mode):
 
 - `horizontal-tb`: Направление потока блока сверху вниз. Предложения идут горизонтально.
 - `vertical-rl`: Направление потока блоков справа налево. Предложения идут вертикально.

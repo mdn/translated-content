@@ -95,9 +95,9 @@ CSS の {{cssxref("initial-letter")}} プロパティは、 [CSS インライン
 
 ### スクロール駆動アニメーション
 
-以前は「スクロールリンクアニメーション」と呼ばれていた[スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)は、時間やその他の次元ではなく、スクロールバーのスクロール位置に依存します。
+以前は「スクロールリンクアニメーション」と呼ばれていた[スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)は、時間やその他の次元ではなく、スクロールバーのスクロール位置に依存します。
 {{cssxref('scroll-timeline-name')}} および {{cssxref('scroll-timeline-axis')}} プロパティ（および {{cssxref('scroll-timeline')}} 一括指定プロパティ）を使用すると、特定の名前付きコンテナー内の特定のスクロールバーを、スクロール駆動アニメーションのソースとして使用できることを指定できます。
-スクロールタイムラインを[アニメーション](/ja/docs/Web/CSS/CSS_animations)に関連付けするには、 {{cssxref('animation-timeline')}} プロパティを `scroll-timeline-name` で定義した名前の値に設定します。
+スクロールタイムラインを[アニメーション](/ja/docs/Web/CSS/Guides/Animations)に関連付けするには、 {{cssxref('animation-timeline')}} プロパティを `scroll-timeline-name` で定義した名前の値に設定します。
 
 {{cssxref('scroll-timeline')}} 一括指定プロパティを使用する場合、プロパティ値の順序は {{cssxref('scroll-timeline-name')}} の後に {{cssxref('scroll-timeline-axis')}} を指定する必要があります。
 個別指定プロパティと一括指定プロパティは、設定で両方利用できます。
@@ -119,7 +119,7 @@ CSS の {{cssxref("initial-letter")}} プロパティは、 [CSS インライン
 
 ### @scope アットルール
 
-[@scope](/ja/docs/Web/CSS/@scope) は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、 CSS セレクターの詳細度を過度に上げることなく、特定の子要素を選択することができます（[Firefox バグ 1886441](https://bugzil.la/1886441)）。
+[@scope](/ja/docs/Web/CSS/Reference/At-rules/@scope) は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、 CSS セレクターの詳細度を過度に上げることなく、特定の子要素を選択することができます（[Firefox バグ 1886441](https://bugzil.la/1886441)）。
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -148,7 +148,7 @@ CSS の [`font-variant-emoji`](/ja/docs/Web/CSS/Reference/Properties/font-varian
 
 ### prefers-reduced-transparency メディア特性
 
-CSS の [`prefers-reduced-transparency`](/ja/docs/Web/CSS/@media/prefers-reduced-transparency) メディア機能を使用すると、ユーザーが端末で透明または半透明のレイヤー効果を最小限に抑える設定を有効にしているかどうかを検出できます。
+CSS の [`prefers-reduced-transparency`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-transparency) メディア機能を使用すると、ユーザーが端末で透明または半透明のレイヤー効果を最小限に抑える設定を有効にしているかどうかを検出できます。
 詳細については、[Firefox バグ 1736914](https://bugzil.la/1736914) をご覧ください。
 
 | Release channel   | Version added | Enabled by default? |
@@ -163,7 +163,7 @@ CSS の [`prefers-reduced-transparency`](/ja/docs/Web/CSS/@media/prefers-reduced
 
 ### inverted-colors メディア特性
 
-CSS の [`inverted-colors`](/ja/docs/Web/CSS/@media/inverted-colors) メディア特性を使用すると、ユーザーエージェントまたは基盤となるオペレーティングシステムが色を反転しているかどうかを検出できます。
+CSS の [`inverted-colors`](/ja/docs/Web/CSS/Reference/At-rules/@media/inverted-colors) メディア特性を使用すると、ユーザーエージェントまたは基盤となるオペレーティングシステムが色を反転しているかどうかを検出できます。
 詳しくは [Firefox バグ 1794628](https://bugzil.la/1794628) を参照してください。
 
 | Release channel   | Version added | Enabled by default? |
@@ -210,7 +210,7 @@ CSS の [`view()`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline/view
 
 ### ベンダー接頭辞付き座標変換プロパティ
 
-`-moz-` という接頭辞が付いた [CSS 座標変換](/ja/docs/Web/CSS/CSS_transforms)プロパティは、環境設定の `layout.css.prefixes.transforms` を `false` に設定することで無効にすることができます。これは、標準の CSS の zoom プロパティが十分に対応されるようになった時点で、これらのプロパティを無効にするためです。（[Firefox バグ 1886134](https://bugzil.la/1886134)、[Firefox バグ 1855763](https://bugzil.la/1855763)）。
+`-moz-` という接頭辞が付いた [CSS 座標変換](/ja/docs/Web/CSS/Guides/Transforms)プロパティは、環境設定の `layout.css.prefixes.transforms` を `false` に設定することで無効にすることができます。これは、標準の CSS の zoom プロパティが十分に対応されるようになった時点で、これらのプロパティを無効にするためです。（[Firefox バグ 1886134](https://bugzil.la/1886134)、[Firefox バグ 1855763](https://bugzil.la/1855763)）。
 
 仕様上、この環境設定は、次の接頭辞が付いたプロパティを無効にします。
 
@@ -233,7 +233,7 @@ CSS の [`view()`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline/view
 
 ### `shape()` 関数
 
-CSS の [`shape()`](/ja/docs/Web/CSS/basic-shape/shape) 関数は、[`<basic-shape>`](/ja/docs/Web/CSS/basic-shape) データ型の一つで、 {{cssxref("clip-path")}} および {{cssxref("offset-path")}} プロパティで 1 つ以上の「シェイプコマンド」を使用して、シェイプを定義することができます。これらのコマンドは、 [SVG パスコマンド](/ja/docs/Web/SVG/Reference/Attribute/d#パスコマンド) とよく似ています。 `shape()` 関数は、いくつかの点で {{cssxref("basic-shape/path","path()")}} 関数と似ていますが、[SVG パス](/ja/docs/Web/SVG/Reference/Element/path)構文を使用する `path()` とは異なり、`shape()` は標準の CSS 構文を使用します。これにより、シェイプを簡単に作成および編集でき、　CSS 数学関数も使用できます。
+CSS の [`shape()`](/ja/docs/Web/CSS/basic-shape/shape) 関数は、[`<basic-shape>`](/ja/docs/Web/CSS/Reference/Values/basic-shape) データ型の一つで、 {{cssxref("clip-path")}} および {{cssxref("offset-path")}} プロパティで 1 つ以上の「シェイプコマンド」を使用して、シェイプを定義することができます。これらのコマンドは、 [SVG パスコマンド](/ja/docs/Web/SVG/Reference/Attribute/d#パスコマンド) とよく似ています。 `shape()` 関数は、いくつかの点で {{cssxref("basic-shape/path","path()")}} 関数と似ていますが、[SVG パス](/ja/docs/Web/SVG/Reference/Element/path)構文を使用する `path()` とは異なり、`shape()` は標準の CSS 構文を使用します。これにより、シェイプを簡単に作成および編集でき、　CSS 数学関数も使用できます。
 詳細については、`clip-path` での `shape()` 関数の対応については [Firefox バグ 1823463](https://bugzil.la/1823463) を、 `offset-path` での関数の対応については [Firefox バグ 1884424](https://bugzil.la/1884424) を、補間処理への対応については [Firefox バグ 1884425](https://bugzil.la/1884425) を参照してください。
 
 | Release channel   | Version added | Enabled by default? |
@@ -262,7 +262,7 @@ CSS の {{cssxref("letter-spacing")}} プロパティは、これで指定した
 
 ### 相対色での `calc()` 色チャンネルの対応
 
-CSS [`calc()`](/ja/docs/Web/CSS/calc) 関数は、これで[相対色](/ja/docs/Web/CSS/CSS_colors/Relative_colors#数学関数の使用)の色チャンネルを解釈できるようになり、異なる色空間や異なる関数記法を使用している場合でも、色の変化を正しく計算できるようになりました。[Firefox バグ 1889561](https://bugzil.la/1889561) を参照してください。
+CSS [`calc()`](/ja/docs/Web/CSS/Reference/Values/calc) 関数は、これで[相対色](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors#数学関数の使用)の色チャンネルを解釈できるようになり、異なる色空間や異なる関数記法を使用している場合でも、色の変化を正しく計算できるようになりました。[Firefox バグ 1889561](https://bugzil.la/1889561) を参照してください。
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -276,7 +276,7 @@ CSS [`calc()`](/ja/docs/Web/CSS/calc) 関数は、これで[相対色](/ja/docs/
 
 ### CSS アンカー位置指定
 
-[CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)モジュールは、要素をアンカー要素として定義し、他の要素をアンカー要素に対して相対的に位置指定できるようにする一連の機能を定義しています。
+[CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)モジュールは、要素をアンカー要素として定義し、他の要素をアンカー要素に対して相対的に位置指定できるようにする一連の機能を定義しています。
 これにより、例えば、ビューポートをスクロールすると、関連付けられたコンテンツの横にツールチップが表示され、ビューポートからあふれた場合は必要に応じて移動し、アンカーが画面外に移動すると消えるようになります。
 この一連の機能は、環境設定（[Firefox バグ 1838746](https://bugzil.la/1838746)）により徐々に導入されています。実装されている部分には、[`CSSPositionTryRule`](/ja/docs/Web/API/CSSPositionTryRule) および [`CSSPositionTryDescriptors`](/ja/docs/Web/API/CSSPositionTryDescriptors) (Firefox 131) が含まれます。
 
@@ -306,7 +306,7 @@ CSS の {{cssxref("::details-content")}} 擬似要素を使用すると、{{html
 
 ### 要素に属する擬似要素の後に擬似要素を使用できるようにする
 
-[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)（{{cssxref("::first-letter")}} や {{cssxref("::before")}} など）を、[要素に属する擬似要素](/ja/docs/Web/CSS/Pseudo-elements#要素に属する擬似要素)に（{{cssxref("::details-content")}} や {{cssxref("::file-selector-button")}} など）追加できるようにする作業が始まりました。
+[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)（{{cssxref("::first-letter")}} や {{cssxref("::before")}} など）を、[要素に属する擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements#要素に属する擬似要素)に（{{cssxref("::details-content")}} や {{cssxref("::file-selector-button")}} など）追加できるようにする作業が始まりました。
 
 これにより、例えば、 {{htmlElement("details")}} 要素の最初の文字のスタイルを設定するために CSS セレクター `::details-content::first-letter` を使用したり、 {{HTMLElement("input") }} の [`type="file"`](/ja/docs/Web/HTML/Reference/Elements/input/file) の前にコンテンツを追加するために CSS セレクター `::file-selector-button::before` を使用したりすることが可能になります。
 

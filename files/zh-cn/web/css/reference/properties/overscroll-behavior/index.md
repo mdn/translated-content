@@ -82,5 +82,5 @@ body {
 
 ## 参见
 
-- [CSS 过度滚动行为](/zh-CN/docs/Web/CSS/CSS_overscroll_behavior)模块
+- [CSS 过度滚动行为](/zh-CN/docs/Web/CSS/Guides/Overscroll_behavior)模块
 - developer.chrome.google.cn 上的[掌控滚动操作——自定义下拉刷新和溢出效果](https://developer.chrome.google.cn/blog/overscroll-behavior)（2017）

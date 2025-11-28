@@ -78,10 +78,10 @@ padding-block-end: unset;
 
 ### Valeurs
 
-- [`<length>`](/fr/docs/Web/CSS/length)
+- [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)
   - : La taille du remplissage exprimée avec une valeur absolue. Cette valeur ne peut être négative.
-- [`<percentage>`](/fr/docs/Web/CSS/percentage)
-  - : La taille du remplissage exprimée en pourcentage, relatif à la taille du [bloc englobant](/fr/docs/Web/CSS/CSS_display/Containing_block) sur l'axe en ligne (physiquement, cela correspond à la largeur pour les sens d'écriture horizontaux (voir [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode))). Cette valeur ne peut être négative.
+- [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)
+  - : La taille du remplissage exprimée en pourcentage, relatif à la taille du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block) sur l'axe en ligne (physiquement, cela correspond à la largeur pour les sens d'écriture horizontaux (voir [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode))). Cette valeur ne peut être négative.
 
 ## Description
 
@@ -139,7 +139,7 @@ div {
 
 ## Voir aussi
 
-- [Les propriétés et valeurs logiques en CSS](/fr/docs/Web/CSS/CSS_logical_properties_and_values)
+- [Les propriétés et valeurs logiques en CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values)
 - Les propriétés physiques correspondantes&nbsp;:
   - [`padding-top`](/fr/docs/Web/CSS/Reference/Properties/padding-top)
   - [`padding-right`](/fr/docs/Web/CSS/Reference/Properties/padding-right)

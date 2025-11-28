@@ -3,7 +3,7 @@ title: grid-row
 slug: Web/CSS/Reference/Properties/grid-row
 ---
 
-**`grid-row`** 属性是一种 {{cssxref("grid-row-start")}} 和 {{cssxref("grid-row-end")}} 的缩写（[shorthand](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)）形式，它定义了网格单元与网格行（row）相关的尺寸和位置，可以通过在网格布局中的基线（line）、跨度（span），或者什么也不做（自动），从而指定{{glossary("grid areas", "网格区域")}}的行起始与行结束。
+**`grid-row`** 属性是一种 {{cssxref("grid-row-start")}} 和 {{cssxref("grid-row-end")}} 的缩写（[shorthand](/zh-CN/docs/Web/CSS/Guides/Cascade/Shorthand_properties)）形式，它定义了网格单元与网格行（row）相关的尺寸和位置，可以通过在网格布局中的基线（line）、跨度（span），或者什么也不做（自动），从而指定{{glossary("grid areas", "网格区域")}}的行起始与行结束。
 
 {{InteractiveExample("CSS Demo: grid-row")}}
 
@@ -165,5 +165,5 @@ IE11 不支持网格单元的自动布置。除非显式地注释 `-ms-`{{cssxre
 ## 参见
 
 - Related CSS properties: {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-column")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}
-- Grid Layout Guide: _[Line-based placement with CSS Grid](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
+- Grid Layout Guide: _[Line-based placement with CSS Grid](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)_
 - Video tutorial: _[Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)_

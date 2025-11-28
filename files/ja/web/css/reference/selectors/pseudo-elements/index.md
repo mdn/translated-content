@@ -26,14 +26,14 @@ p::first-line {
 }
 ```
 
-擬似要素にはダブルコロン (`::`) を使用します。これは、単一のコロン (`:`) を使用する[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)と区別するためです。なお、ブラウザーは、当初の 4 つの擬似要素（`::before`、`::after`、`::first-line`、`::first-letter`）に対して単一のコロンの構文に対応しています。
+擬似要素にはダブルコロン (`::`) を使用します。これは、単一のコロン (`:`) を使用する[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)と区別するためです。なお、ブラウザーは、当初の 4 つの擬似要素（`::before`、`::after`、`::first-line`、`::first-letter`）に対して単一のコロンの構文に対応しています。
 
-擬似要素は独立して存在しません。擬似要素が属する要素は、その擬似要素の「対象要素」と呼ばれます。擬似要素が現れる場所は、それが現れる[複雑](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複雑セレクター)セレクターまたは[複合](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複合セレクター)セレクター内の他のすべての要素の後でなければなりません。セレクターの最後の要素は、擬似要素の対象要素です。例えば、`p::first-line` を使用して段落の最初の行を選択することはできますが、最初の行の子要素は選択できません。したがって、`p::first-line > *` は不正です。
+擬似要素は独立して存在しません。擬似要素が属する要素は、その擬似要素の「対象要素」と呼ばれます。擬似要素が現れる場所は、それが現れる[複雑](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#複雑セレクター)セレクターまたは[複合](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#複合セレクター)セレクター内の他のすべての要素の後でなければなりません。セレクターの最後の要素は、擬似要素の対象要素です。例えば、`p::first-line` を使用して段落の最初の行を選択することはできますが、最初の行の子要素は選択できません。したがって、`p::first-line > *` は不正です。
 
 擬似要素は、対象要素の現在の状態に基づいて選択することができます。例えば、`p:hover::first-line` は、段落自体にカーソルが置かれているとき（擬似クラス）、その段落の最初の行（擬似要素）を選択します。
 
 > [!NOTE]
-> [セレクターリスト](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#セレクターリスト)に無効なセレクターが含まれている場合、そのスタイルブロック全体が無効になります。
+> [セレクターリスト](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#セレクターリスト)に無効なセレクターが含まれている場合、そのスタイルブロック全体が無効になります。
 
 ## 組版擬似要素
 
@@ -44,7 +44,7 @@ p::first-line {
 - {{CSSxRef("::cue")}}
   - : 選択した要素内の [WebVTT](/ja/docs/Web/API/WebVTT_API) キュー。
     これは、VTT 予定があるメディアで[キャプションや他のキューのスタイル設定](/ja/docs/Web/API/WebVTT_API#html_またはスタイルシートの中の_webvtt_のスタイル設定)を行うために使用することができます。
-    [CSS 擬似要素](/ja/docs/Web/CSS/CSS_pseudo-elements)モジュールでは、`::postfix` および `::prefix` サブ擬似要素も定義されています。これらは、どのブラウザーでもまだ対応していません。
+    [CSS 擬似要素](/ja/docs/Web/CSS/Guides/Pseudo-elements)モジュールでは、`::postfix` および `::prefix` サブ擬似要素も定義されています。これらは、どのブラウザーでもまだ対応していません。
 
 ## 強調擬似要素
 
@@ -70,7 +70,7 @@ p::first-line {
 - {{CSSxRef("::after")}}
   - : 選択した要素の最後の子である擬似要素を作成します。
 - {{CSSxRef("::column")}}
-  - : [段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout) のそれぞれの段のフラグメントです。
+  - : [段組みレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout) のそれぞれの段のフラグメントです。
 - {{CSSxRef("::marker")}}
   - : リストアイテムの自動的に生成されるマーカーボックスです。
 - {{CSSxRef("::backdrop")}}
@@ -194,7 +194,7 @@ V
 
 ## 関連情報
 
-- [CSS 擬似要素](/ja/docs/Web/CSS/CSS_pseudo-elements)モジュール
-- [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュール
+- [CSS 擬似要素](/ja/docs/Web/CSS/Guides/Pseudo-elements)モジュール
+- [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
+- [CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors)モジュール
 - [CSS 構成要素: 擬似クラスと擬似要素](/ja/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)

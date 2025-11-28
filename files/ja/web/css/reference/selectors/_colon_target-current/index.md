@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`:target-current`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes) で、**アクティブ**なスクロールマーカー、つまり、現在スクロールされている {{cssxref("::scroll-marker")}} 擬似要素の {{cssxref("scroll-marker-group")}} を選択します。この[セレクター](/ja/docs/Web/CSS/CSS_selectors)は、[スクロールマーカーグループ](/ja/docs/Web/CSS/::scroll-marker-group#description)内のアクティブなナビゲーションの位置のスタイル設定に使用できます。
+**`:target-current`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes) で、**アクティブ**なスクロールマーカー、つまり、現在スクロールされている {{cssxref("::scroll-marker")}} 擬似要素の {{cssxref("scroll-marker-group")}} を選択します。この[セレクター](/ja/docs/Web/CSS/Guides/Selectors)は、[スクロールマーカーグループ](/ja/docs/Web/CSS/Reference/Selectors/::scroll-marker-group#description)内のアクティブなナビゲーションの位置のスタイル設定に使用できます。
 
 > [!NOTE]
 > `:target-current` 擬似クラスは、 `::scroll-marker` 擬似要素でのみ有効です。
@@ -23,7 +23,7 @@ l10n:
 
 ## 例
 
-[CSS によるカルーセルの作成](/ja/docs/Web/CSS/CSS_overflow/CSS_carousels) および {{cssxref("::scroll-marker")}} に、 `:target-current` 擬似クラスの完全な使用例があります。
+[CSS によるカルーセルの作成](/ja/docs/Web/CSS/Guides/Overflow/Carousels) および {{cssxref("::scroll-marker")}} に、 `:target-current` 擬似クラスの完全な使用例があります。
 
 ### 基本的な使用
 
@@ -50,6 +50,6 @@ l10n:
 - {{cssxref("scroll-marker-group")}}
 - {{cssxref("::scroll-marker")}}
 - {{cssxref("::scroll-marker-group")}}
-- [CSS によるカルーセルの作成](/ja/docs/Web/CSS/CSS_overflow/CSS_carousels)
-- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
+- [CSS によるカルーセルの作成](/ja/docs/Web/CSS/Guides/Overflow/Carousels)
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
 - [CSS Carousel Gallery](https://chrome.dev/carousel/) (chrome.dev, 2025)

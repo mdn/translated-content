@@ -57,6 +57,6 @@ CSS 允许一些高级的设计技巧。这些文章可以帮助你解决一些�
 
 ### 布局
 
-- [使用 CSS flex 布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [使用 CSS 多列布局](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
+- [使用 CSS flex 布局](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [使用 CSS 多列布局](/zh-CN/docs/Web/CSS/Guides/Multicol_layout/Using)
 - [使用 CSS 生成内容](/zh-CN/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content)

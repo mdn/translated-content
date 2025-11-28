@@ -22,7 +22,7 @@ l10n:
 
 - CSS の {{cssxref("ray")}} 関数をデフォルトで有効にしました。この関数を使用して、{{cssxref("offset-position")}} から始まって指定した角度の方向へ伸びる線分として {{cssxref("offset-path")}} を定義できます ([Firefox bug 1598151](https://bugzil.la/1598151))。
 
-- {{CSSxref("clip-path")}} および {{CSSxref("offset-path")}} プロパティが、[`rect()`](/ja/docs/Web/CSS/basic-shape/rect) および [`xywh()`](/ja/docs/Web/CSS/basic-shape/xywh) シェイプ関数を受け入れるようになりました。これらの {{CSSXref("basic-shape")}} 値は、要素の端からの距離で定義する長方形 (`rect()`) または座標とサイズ (`xywh()`) で要素の切り抜きや移動を可能にします ([Firefox bug 1868722](https://bugzil.la/1868722))。
+- {{CSSxref("clip-path")}} および {{CSSxref("offset-path")}} プロパティが、[`rect()`](/ja/docs/Web/CSS/Reference/Values/basic-shape/rect) および [`xywh()`](/ja/docs/Web/CSS/Reference/Values/basic-shape/xywh) シェイプ関数を受け入れるようになりました。これらの {{CSSXref("basic-shape")}} 値は、要素の端からの距離で定義する長方形 (`rect()`) または座標とサイズ (`xywh()`) で要素の切り抜きや移動を可能にします ([Firefox bug 1868722](https://bugzil.la/1868722))。
 
 ### JavaScript
 
@@ -84,7 +84,7 @@ l10n:
 
 - **Popover API:** `dom.element.popover.enabled`。
 
-  HTML 属性や JavaScript API を使用して、ページコンテンツの上にポップオーバーを表示する機能をサポートしました。これは CSS の [`:popover-open`](/ja/docs/Web/CSS/:popover-open) 擬似クラスや [`::backdrop`](/ja/docs/Web/CSS/::backdrop) 擬似要素のサポート強化が含まれます。詳しくは [Popover API](/ja/docs/Web/API/Popover_API) のリファレンスをご覧ください ([Firefox bug 1823757](https://bugzil.la/1823757))。
+  HTML 属性や JavaScript API を使用して、ページコンテンツの上にポップオーバーを表示する機能をサポートしました。これは CSS の [`:popover-open`](/ja/docs/Web/CSS/Reference/Selectors/:popover-open) 擬似クラスや [`::backdrop`](/ja/docs/Web/CSS/Reference/Selectors/::backdrop) 擬似要素のサポート強化が含まれます。詳しくは [Popover API](/ja/docs/Web/API/Popover_API) のリファレンスをご覧ください ([Firefox bug 1823757](https://bugzil.la/1823757))。
 
 - **クリップボードの読み書き:** `dom.events.asyncClipboard.clipboardItem`、`dom.events.asyncClipboard.readText`、`dom.events.asyncClipboard.writeText`。
 

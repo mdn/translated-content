@@ -8,7 +8,7 @@ l10n:
 
 **`column-gap`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の段または列の間のすき間（{{glossary("gutters", "溝")}}）の寸法を設定します。
 
-当初は[段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout)の一部でしたが、`column-gap` の定義は複数のレイアウト方式を含めるように拡張されました。現在は[ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)の中で定義され、段組みレイアウト、フレックスボックス、グリッドレイアウトで使用されることがあります。
+当初は[段組みレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout)の一部でしたが、`column-gap` の定義は複数のレイアウト方式を含めるように拡張されました。現在は[ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)の中で定義され、段組みレイアウト、フレックスボックス、グリッドレイアウトで使用されることがあります。
 
 仕様書の初期バージョンでは、このプロパティは `grid-column-gap` と呼ばれていました。古いウェブサイトとの互換性を維持するため、ブラウザーは `grid-column-gap` を `column-gap` の別名として受け入れます。
 
@@ -221,5 +221,5 @@ div:nth-of-type(3n) {
 
 - {{CSSxRef("row-gap")}}
 - {{CSSxRef("gap")}}
-- [グリッドレイアウトの基本概念 - 溝](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#溝)
-- [段組みのスタイル設定](/ja/docs/Web/CSS/CSS_multicol_layout/Styling_columns)
+- [グリッドレイアウトの基本概念 - 溝](/ja/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#溝)
+- [段組みのスタイル設定](/ja/docs/Web/CSS/Guides/Multicol_layout/Styling_columns)

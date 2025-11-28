@@ -185,7 +185,7 @@ article p:first-child::first-line {
 
 ## ::before 및 ::after로 콘텐츠 생성
 
-CSS를 사용하여 문서에 콘텐츠를 삽입하기 위해 [`content`](/ko/docs/Web/CSS/content) 속성과 함께 사용되는 몇 가지 특수 의사 요소가 있습니다.
+CSS를 사용하여 문서에 콘텐츠를 삽입하기 위해 [`content`](/ko/docs/Web/CSS/Reference/Properties/content) 속성과 함께 사용되는 몇 가지 특수 의사 요소가 있습니다.
 
 이를 사용하여 아래의 실제 예와 같이 텍스트 문자열을 삽입할 수 있습니다. {{cssxref("content")}} 속성의 텍스트 값을 변경해고 출력에서 변경되는 것을 확인해보세요. 또한 `::before` 의사 요소를 `::after`로 변경하고 요소의 시작 부분 대신 끝에 삽입된 텍스트를 볼 수 있습니다.
 

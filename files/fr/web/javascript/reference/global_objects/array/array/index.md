@@ -1,5 +1,5 @@
 ---
-title: "Array : constructeur Array()"
+title: Constructeur Array()
 short-title: Array()
 slug: Web/JavaScript/Reference/Global_Objects/Array/Array
 l10n:

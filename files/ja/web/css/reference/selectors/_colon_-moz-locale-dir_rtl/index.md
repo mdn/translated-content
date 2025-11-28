@@ -6,7 +6,7 @@ original_slug: Web/CSS/:-moz-locale-dir_rtl
 
 {{Non-standard_header}}
 
-**`:-moz-locale-dir(rtl)`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions)であり、ユーザーインターフェイスが右から左へ向けて表示される要素に一致します。これは設定の `intl.uidirection.locale` （`locale` は現在のロケール）が "rtl" に設定されていることで特定されます。
+**`:-moz-locale-dir(rtl)`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions)であり、ユーザーインターフェイスが右から左へ向けて表示される要素に一致します。これは設定の `intl.uidirection.locale` （`locale` は現在のロケール）が "rtl" に設定されていることで特定されます。
 
 > [!NOTE]
 > 擬似クラスは、主に拡張機能およびテーマをユーザーのロケールに基づいて適合させるために使用されます。 (これは、ウィンドウとウィンドウ、またタブとタブの間でも変えることができます。) また、拡張機能がユーザーの既定のロケールに対応しなくても動作させることができるため、ロケールの仕様を気にしなくても、左から右方向、右から左方向の両方のレイアウトに対応できます。

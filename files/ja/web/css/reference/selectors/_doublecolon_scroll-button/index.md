@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`::scroll-button()`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、{{glossary("scroll container", "スクロールコンテナー")}}のスクロールをコントロールするためのボタンを表します。これらは、 {{cssxref("content")}} 値が `none` 以外の場合に、スクロールコンテナー上に生成されます。スクロールの方向は、引数の値によって決まります。
+**`::scroll-button()`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、{{glossary("scroll container", "スクロールコンテナー")}}のスクロールをコントロールするためのボタンを表します。これらは、 {{cssxref("content")}} 値が `none` 以外の場合に、スクロールコンテナー上に生成されます。スクロールの方向は、引数の値によって決まります。
 
 ## 構文
 
@@ -51,13 +51,13 @@ l10n:
 
 生成されるボタンは、既定のブラウザースタイルを共有するなど、通常の {{htmlelement("button")}} 要素とまったく同じように動作します。フォーカス可能、アクセシビリティ対応であり、通常のボタンと同じようにアクティブ化することができます。スクロールボタンが押されると、スクロールコンテナーのコンテンツは、 <kbd>PgUp</kbd> キーおよび <kbd>PgDn</kbd> キーを押した場合と同様に、指定した方向に 1 ページ分、つまりスクロールコンテナーの寸法とほぼ同じ分だけスクロールされます。
 
-スクロールコンテナーに [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)を設定し、スクロールしたいコンテンツの別個のアイテムをそれぞれ[スナップターゲット](/ja/docs/Glossary/Scroll_snap#スナップターゲット)として設定することをお勧めします。こうすると、スクロールボタンを有効にしたとき、コンテンツは 1 ページ分の距離にあるスナップターゲットまでスクロールされます。スクロールスナップを設定しなくてもスクロールボタンは動作しますが、期待した効果が得られない場合があります。
+スクロールコンテナーに [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)を設定し、スクロールしたいコンテンツの別個のアイテムをそれぞれ[スナップターゲット](/ja/docs/Glossary/Scroll_snap#スナップターゲット)として設定することをお勧めします。こうすると、スクロールボタンを有効にしたとき、コンテンツは 1 ページ分の距離にあるスナップターゲットまでスクロールされます。スクロールスナップを設定しなくてもスクロールボタンは動作しますが、期待した効果が得られない場合があります。
 
 特定のスクロールボタンのスクロール方向にさらにスクロールできない場合、そのボタンは自動的に無効になり、それ以外の場合は有効になります。 {{cssxref(":enabled")}} および {{cssxref(":disabled")}} 擬似クラスを使用して、スクロールボタンの有効および無効の状態のスタイルを設定することができます。
 
 ## 例
 
-カルーセルの例については、「[CSS カルーセルの作成](/ja/docs/Web/CSS/CSS_overflow/CSS_carousels)」をご覧ください。
+カルーセルの例については、「[CSS カルーセルの作成](/ja/docs/Web/CSS/Guides/Overflow/Carousels)」をご覧ください。
 
 ### スクロールボタンの作成
 
@@ -164,11 +164,11 @@ ul::scroll-button(right) {
 
 ### スクロールボタンの位置設定
 
-前回の例は動作しますが、ボタンの位置は理想的ではありません。この章では、[アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)を使用してボタンを配置するための CSS を追加します。
+前回の例は動作しますが、ボタンの位置は理想的ではありません。この章では、[アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)を使用してボタンを配置するための CSS を追加します。
 
 #### CSS
 
-まず、参照 {{cssxref("anchor-name")}} を `<ul>` に設定して、名前付きアンカーとして定義します。次に、各スクロールボタンの {{cssxref("position")}} を `absolute` に設定し、 {{cssxref("position-anchor")}} プロパティをリストの `anchor-name` に設定して、 [2 つを関連付けます](/ja/docs/Web/CSS/CSS_anchor_positioning/Using#アンカー要素と位置指定要素の関連付け)。
+まず、参照 {{cssxref("anchor-name")}} を `<ul>` に設定して、名前付きアンカーとして定義します。次に、各スクロールボタンの {{cssxref("position")}} を `absolute` に設定し、 {{cssxref("position-anchor")}} プロパティをリストの `anchor-name` に設定して、 [2 つを関連付けます](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#アンカー要素と位置指定要素の関連付け)。
 
 ```css live-sample___positioning-scroll-buttons
 ul {
@@ -220,7 +220,7 @@ ul::scroll-button(right) {
 - {{cssxref("::scroll-marker")}}
 - {{cssxref("::column")}}
 - {{cssxref(":target-current")}}
-- [CSS によるカルーセルの作成](/ja/docs/Web/CSS/CSS_overflow/CSS_carousels)
-- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
-- [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)モジュール
+- [CSS によるカルーセルの作成](/ja/docs/Web/CSS/Guides/Overflow/Carousels)
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
+- [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)モジュール
 - [CSS Carousel Gallery](https://chrome.dev/carousel/) (chrome.dev, 2025)

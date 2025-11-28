@@ -53,7 +53,7 @@ Les options de configuration fournies par l'agent utilisateur auront la priorit�
 
 ### Préserver un contraste faible
 
-Dans cet exemple, on a une boîte qui utilise [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image) avec [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient) pour avoir un dégradé bleu foncé sur un fond noir. Le texte par-dessus est écrit en rouge. Pour cet exemple, on estime que c'est l'apparence voulue dans chaque environnement de rendu, y compris sur le papier et on utilise donc `print-color-adjust: exact` pour indiquer au navigateur de ne pas effectuer d'ajustements sur la boîte lors du rendu.
+Dans cet exemple, on a une boîte qui utilise [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image) avec [`linear-gradient()`](/fr/docs/Web/CSS/Reference/Values/gradient/linear-gradient) pour avoir un dégradé bleu foncé sur un fond noir. Le texte par-dessus est écrit en rouge. Pour cet exemple, on estime que c'est l'apparence voulue dans chaque environnement de rendu, y compris sur le papier et on utilise donc `print-color-adjust: exact` pour indiquer au navigateur de ne pas effectuer d'ajustements sur la boîte lors du rendu.
 
 #### CSS
 
@@ -100,7 +100,7 @@ Dans cet exemple, on a une boîte qui utilise [`background-image`](/fr/docs/Web/
 
 ## Voir aussi
 
-- [Appliquer des couleurs aux éléments HTML en utilisant CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
+- [Appliquer des couleurs aux éléments HTML en utilisant CSS](/fr/docs/Web/CSS/Guides/Colors/Applying_color)
 - Les autres propriétés relatives aux couleurs&nbsp;:
   - [`color`](/fr/docs/Web/CSS/Reference/Properties/color)
   - [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color)

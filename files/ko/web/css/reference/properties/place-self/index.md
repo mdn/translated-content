@@ -129,7 +129,7 @@ place-self: unset;
 
 ### 간단히 시연해보기
 
-다음은 2 x 2 그리드 레이아웃 예제입니다. 초기에 그리드 컨테이너의 [`justify-items`](/ko/docs/Web/CSS/justify-items) 와 [`align-items`](/ko/docs/Web/CSS/align-items)는 기본 값인 `stretch` 로 설정되어 있어 그리드 요소가 해당 셀의 전체 너비만큼 늘어납니다.
+다음은 2 x 2 그리드 레이아웃 예제입니다. 초기에 그리드 컨테이너의 [`justify-items`](/ko/docs/Web/CSS/justify-items) 와 [`align-items`](/ko/docs/Web/CSS/Reference/Properties/align-items)는 기본 값인 `stretch` 로 설정되어 있어 그리드 요소가 해당 셀의 전체 너비만큼 늘어납니다.
 
 두번째, 세번째, 그리고 네번째 그리드 요소는 기본 각기 다른 `place-self` 값을 부여하여, 이러한 값들이 기본 배치를 어떻게 재정의하는지를 나타냅니다. 이 값들은 그리드 요소가 콘텐츠의 너비/높이에 맞추어 너비/높이를 조정하고, 블록 방향과 인라인 방향에서 셀 내 다른 위치에 정렬될 수 있도록 합니다.
 

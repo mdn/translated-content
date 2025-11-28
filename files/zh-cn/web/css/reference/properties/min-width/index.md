@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 925b2bd8beeae6ce8237863637bcd28ccbb8d47f
 ---
 
-`min-width` [CSS](/zh-CN/docs/Web/CSS) 属性为给定元素设置最小宽度。它可以阻止 {{cssxref("width")}} 属性的[应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)小于 `min-width` 指定的值。
+`min-width` [CSS](/zh-CN/docs/Web/CSS) 属性为给定元素设置最小宽度。它可以阻止 {{cssxref("width")}} 属性的[应用值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#应用值)小于 `min-width` 指定的值。
 
 {{InteractiveExample("CSS Demo: min-width")}}
 
@@ -82,7 +82,7 @@ min-width: unset;
 - `min-content` {{ experimental_inline() }}
   - : 固有最小 `min-width`。
 - `fit-content`
-  - : 使用可用空间，但不得超过 [max-content](/zh-CN/docs/Web/CSS/max-content)，即 `min(max-content,max(min-content,stretch))`。
+  - : 使用可用空间，但不得超过 [max-content](/zh-CN/docs/Web/CSS/Reference/Values/max-content)，即 `min(max-content,max(min-content,stretch))`。
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})` {{Experimental_Inline}}
   - : 使用 `fit-content` 公式，用指定参数替换可用空间，即 `min(max-content, max(min-content, argument))`。
 
@@ -119,4 +119,4 @@ form {
 ## 参见
 
 - {{ Cssxref("width") }}、{{ Cssxref("max-width") }}
-- [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)，{{ Cssxref("box-sizing") }}
+- [盒模型](/zh-CN/docs/Web/CSS/Guides/Box_model/Introduction)，{{ Cssxref("box-sizing") }}

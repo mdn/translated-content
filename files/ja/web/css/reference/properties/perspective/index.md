@@ -129,7 +129,7 @@ z>0 である 3D 要素はより大きく、 z<0 である 3D 要素はより小
 
 *消点*は既定で要素の中心に置かれますが、この位置は {{cssxref("perspective-origin")}} プロパティで変更できます。
 
-このプロパティを `0` と `none` 以外の値で使用すると、新たな[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)を生成します。また、その場合、オブジェクトはそれを含む `position: fixed` の要素の包含ブロックとして動作します。
+このプロパティを `0` と `none` 以外の値で使用すると、新たな[重ね合わせコンテキスト](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)を生成します。また、その場合、オブジェクトはそれを含む `position: fixed` の要素の包含ブロックとして動作します。
 
 ## 公式定義
 
@@ -143,7 +143,7 @@ z>0 である 3D 要素はより大きく、 z<0 である 3D 要素はより小
 
 ### 視点の設定
 
-視点を様々な位置に設定した場合に立体がどのように変化するかを示す例は、 [CSS 座標変換の使用 > 視点の設定](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms#setting_perspective)にあります。
+視点を様々な位置に設定した場合に立体がどのように変化するかを示す例は、 [CSS 座標変換の使用 > 視点の設定](/ja/docs/Web/CSS/Guides/Transforms/Using#setting_perspective)にあります。
 
 ## 仕様書
 
@@ -155,4 +155,4 @@ z>0 である 3D 要素はより大きく、 z<0 である 3D 要素はより小
 
 ## 関連情報
 
-- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [CSS 座標変換の使用](/ja/docs/Web/CSS/Guides/Transforms/Using)

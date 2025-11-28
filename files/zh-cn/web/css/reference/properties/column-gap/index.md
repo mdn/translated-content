@@ -51,7 +51,7 @@ column-gap: 20px;
 }
 ```
 
-`column-gap` 一开始是 [Multi-column 布局](/zh-CN/docs/Web/CSS/CSS_multicol_layout)下的特有属性，后来在其他布局中也使用这个属性。如 [CSS 盒子对齐](/zh-CN/docs/Web/CSS/CSS_box_alignment)中的表述，该属性已经可以在 Multi-column（多列布局）、Flexible Box（弹性盒子）以及 Grid layout（网格布局）中使用。
+`column-gap` 一开始是 [Multi-column 布局](/zh-CN/docs/Web/CSS/Guides/Multicol_layout)下的特有属性，后来在其他布局中也使用这个属性。如 [CSS 盒子对齐](/zh-CN/docs/Web/CSS/Guides/Box_alignment)中的表述，该属性已经可以在 Multi-column（多列布局）、Flexible Box（弹性盒子）以及 Grid layout（网格布局）中使用。
 
 ## 语法
 
@@ -195,5 +195,5 @@ column-gap: unset;
 ## 参见
 
 - 相关 CSS 属性：{{cssxref("row-gap")}}、{{cssxref("gap")}}
-- 网格布局指南：_[网格布局基本概念 - 网格间距](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#网格间距)_
-- Multi-column 布局指南：_[Styling Columns](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Styling_columns)_
+- 网格布局指南：_[网格布局基本概念 - 网格间距](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#网格间距)_
+- Multi-column 布局指南：_[Styling Columns](/zh-CN/docs/Web/CSS/Guides/Multicol_layout/Styling_columns)_

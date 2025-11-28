@@ -79,7 +79,7 @@ li:nth-child(even) {
     - `B` est un décalage entier,
     - `n` représente les entiers positifs à partir de 0.
 
-    Autrement dit, on cible les `An+B`-ième éléments de la liste. `A` et `B` doivent tout deux être des [valeurs entières (type CSS `<integer>`)](/fr/docs/Web/CSS/integer).
+    Autrement dit, on cible les `An+B`-ième éléments de la liste. `A` et `B` doivent tout deux être des [valeurs entières (type CSS `<integer>`)](/fr/docs/Web/CSS/Reference/Values/integer).
 
 ### La syntaxe `of <selector>`
 
@@ -523,4 +523,4 @@ tbody tr :nth-child(3) {
 - [`:nth-last-child()`](/fr/docs/Web/CSS/Reference/Selectors/:nth-last-child)
 - La pseudo-classe [`:has()`](/fr/docs/Web/CSS/Reference/Selectors/:has) qui cible l'élément parent
 - [Les pseudo-classes relatives à l'arborescence](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes#pseudo-classes_relatives_%C3%A0_larborescence)
-- Le module relatif [aux sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors)
+- Le module relatif [aux sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors)

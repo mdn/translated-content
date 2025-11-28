@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/::backdrop
 original_slug: Web/CSS/::backdrop
 ---
 
-[CSS](/ja/docs/Web/CSS) の **`::backdrop`** [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)は、何らかの要素が全画面モード ({{glossary("top layer")}}) で表示される直下に直接表示される {{Glossary("viewport")}} の寸法のボックスです。
+[CSS](/ja/docs/Web/CSS) の **`::backdrop`** [擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)は、何らかの要素が全画面モード ({{glossary("top layer")}}) で表示される直下に直接表示される {{Glossary("viewport")}} の寸法のボックスです。
 
 {{InteractiveExample("CSS デモ: ::backdrop", "tabbed-shorter")}}
 
@@ -86,7 +86,7 @@ dialog::backdrop {
 
 #### CSS
 
-[CSS グラデーション](/ja/docs/Web/CSS/gradient)を使用してカラフルなドーナツを作成し、backdrop に背景を追加します。
+[CSS グラデーション](/ja/docs/Web/CSS/Reference/Values/gradient)を使用してカラフルなドーナツを作成し、backdrop に背景を追加します。
 
 ```css
 ::backdrop {

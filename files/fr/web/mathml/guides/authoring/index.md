@@ -106,7 +106,7 @@ m|math {
 }
 ```
 
-En fin vous pouvez utiliser la règle [@font-face](/fr/docs/Web/CSS/@font-face) comme usuellement pour fournir une alternative WOFF pour les fontes Latin Modern et Latin Modern Math. Regardez ce [dépôt GitHub pour obtenir des fontes WOFF et des échantillons de feuilles de style CSS](https://github.com/fred-wang/MathFonts) à utiliser sur votre site ainsi que [sa page d'essai](http://fred-wang.github.io/MathFonts/).
+En fin vous pouvez utiliser la règle [@font-face](/fr/docs/Web/CSS/Reference/At-rules/@font-face) comme usuellement pour fournir une alternative WOFF pour les fontes Latin Modern et Latin Modern Math. Regardez ce [dépôt GitHub pour obtenir des fontes WOFF et des échantillons de feuilles de style CSS](https://github.com/fred-wang/MathFonts) à utiliser sur votre site ainsi que [sa page d'essai](http://fred-wang.github.io/MathFonts/).
 
 #### MathML dans les documents XML (XHTML, EPUB, etc)
 

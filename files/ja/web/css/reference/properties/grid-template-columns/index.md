@@ -97,7 +97,7 @@ grid-template-columns: unset;
 - `none`
   - : 明示的なグリッドがないことを示します。どの列も暗黙的に生成され、それらのサイズは {{cssxref("grid-auto-columns")}} プロパティによって決定されます。
 - `[line-name]`
-  - : [`<custom-ident>`](/ja/docs/Web/CSS/custom-ident) で、その位置にある線の名称を指定します。識別子には、予約語の `span` と `auto` 以外の有効な文字列を指定してください。行は、`[line-name-a line-name-b]`のように、角括弧内のスペースで区切られた複数の名前を持つことができます。
+  - : [`<custom-ident>`](/ja/docs/Web/CSS/Reference/Values/custom-ident) で、その位置にある線の名称を指定します。識別子には、予約語の `span` と `auto` 以外の有効な文字列を指定してください。行は、`[line-name-a line-name-b]`のように、角括弧内のスペースで区切られた複数の名前を持つことができます。
 - {{cssxref("&lt;length&gt;")}}
   - : 負の値ではない長さです。
 - {{cssxref("&lt;percentage&gt;")}}
@@ -128,9 +128,9 @@ grid-template-columns: unset;
   - : `max(minimum, min(limit, max-content))` という式を表し、ここで _minimum_ は `auto` の最小値 （常に {{cssxref("min-content")}} の最小値に等しいわけではありませんが、そうなることが多い） を表し、 _limit_ は fit-content() に引数として渡されるトラックの大きさを計算する関数です。これは基本的に `minmax(auto, max-content)` と `minmax(auto, limit)` の小さい方として計算されます。
 - {{cssxref("repeat", "repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ] , &lt;track-list&gt; )")}}
   - : トラックリストの繰り返しフラグメントを表し、繰り返しパターンを示す多数の列をよりコンパクトな形式で記述できるようにします。
-- [`masonry`](/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout)
+- [`masonry`](/ja/docs/Web/CSS/Guides/Grid_layout/Masonry_layout)
   - : masonry の値は、この軸が組積アルゴリズムに従ってレイアウトされるべきであることを示します。
-- [`subgrid`](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid)
+- [`subgrid`](/ja/docs/Web/CSS/Guides/Grid_layout/Subgrid)
   - : `subgrid` の値は、グリッドがその軸に親グリッドのスパン部分を採用することを示します。グリッドの行や列のサイズは、明示的に指定されるのではなく、親グリッドの定義から取得されます。
 
 ## 公式定義
@@ -189,6 +189,6 @@ grid-template-columns: unset;
 - {{cssxref("grid-template-rows")}}
 - {{cssxref("grid-template-areas")}}
 - {{cssxref("grid-template")}}
-- [グリッドレイアウトの基本概念: グリッドトラック](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#グリッドトラック)
+- [グリッドレイアウトの基本概念: グリッドトラック](/ja/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#グリッドトラック)
 - 動画チュートリアル: _[Defining a grid](https://gridbyexample.com/video/series-define-a-grid/)_
-- [サブグリッド](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid)
+- [サブグリッド](/ja/docs/Web/CSS/Guides/Grid_layout/Subgrid)

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
 ---
 
-**`::highlight()`** は CSS の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、スタイルをカスタムハイライトに適用します。
+**`::highlight()`** は CSS の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、スタイルをカスタムハイライトに適用します。
 
 カスタムハイライトは、 {{domxref("Range")}} オブジェクトの集合であり、 {{domxref("HighlightRegistry")}} を使用してウェブページに登録されます。
 
@@ -125,4 +125,4 @@ for (let i = 0; i < textNode.textContent.length; i++) {
 ## 関連情報
 
 - [CSS カスタムハイライト API](/ja/docs/Web/API/CSS_Custom_Highlight_API)
-- [CSS 擬似要素](/ja/docs/Web/CSS/CSS_pseudo-elements)モジュール
+- [CSS 擬似要素](/ja/docs/Web/CSS/Guides/Pseudo-elements)モジュール

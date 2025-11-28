@@ -6,12 +6,12 @@ l10n:
   sourceCommit: 29e0d867283aedbc7ab674218761f5f609fcdda9
 ---
 
-CSS の **`&` 入れ子セレクター**は、 [CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting)を使用する場合に、親子ルールの関係を明示的に示します。このセレクターは、入れ子になっている子ルールのセレクターを親要素に対して相対的なものにします。入れ子セレクター `&` がない場合、子ルールセレクターは子要素を選択します。子ルールセレクターは {{cssxref(":is", ":is()")}} 内にあるのと同じ[詳細度](/ja/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)の重みを持ちます。
+CSS の **`&` 入れ子セレクター**は、 [CSS 入れ子](/ja/docs/Web/CSS/Guides/Nesting)を使用する場合に、親子ルールの関係を明示的に示します。このセレクターは、入れ子になっている子ルールのセレクターを親要素に対して相対的なものにします。入れ子セレクター `&` がない場合、子ルールセレクターは子要素を選択します。子ルールセレクターは {{cssxref(":is", ":is()")}} 内にあるのと同じ[詳細度](/ja/docs/Web/CSS/Guides/Nesting/Nesting_and_specificity)の重みを持ちます。
 
 > [!NOTE]
 > 子ルールは子要素セレクターという意味ではありません。子ルールは `&` 入れ子セレクターを使用することによって、親要素を対象とすることも子要素を対象とすることもできます。
 
-入れ子スタイルルールで使用しない場合、 `&` 入れ子セレクターは[スコープルート](/ja/docs/Web/CSS/:scope)を表します。
+入れ子スタイルルールで使用しない場合、 `&` 入れ子セレクターは[スコープルート](/ja/docs/Web/CSS/Reference/Selectors/:scope)を表します。
 
 ## 構文
 
@@ -49,7 +49,7 @@ parentRule {
 }
 ```
 
-入れ子ルールを親ルールに（空白なしで）接続する必要があるとき、例えば{{cssxref('Pseudo-classes', '擬似クラス')}}を使用するときや、[複合セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複合セレクター)を作成するときなどは、 **`&` 入れ子セレクター**を直前に使用して、望ましい効果を得る必要があります。
+入れ子ルールを親ルールに（空白なしで）接続する必要があるとき、例えば{{cssxref('Pseudo-classes', '擬似クラス')}}を使用するときや、[複合セレクター](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#複合セレクター)を作成するときなどは、 **`&` 入れ子セレクター**を直前に使用して、望ましい効果を得る必要があります。
 
 例えば要素に、常に適用されるスタイルを適用し、加えてホバー時のみ適用される入れ子のスタイルをいくつか提供する場合を考えてみましょう。もし **`&` 入れ子セレクター**が記載されていない場合、ホワイトスペースが追加されるため、入れ子スタイルは親ルールセレクターの子孫にあたる任意のホバー中の要素に適用されるルールセットになってしまいます。これは私たちが望んでいるものではありません。
 
@@ -211,7 +211,7 @@ parentRule {
 
 ### 入れ子ルール以外の使用方法
 
-入れ子スタイルルールで使用しない場合、 `&` 入れ子セレクターは[スコープルート](/ja/docs/Web/CSS/:scope)を表します。
+入れ子スタイルルールで使用しない場合、 `&` 入れ子セレクターは[スコープルート](/ja/docs/Web/CSS/Reference/Selectors/:scope)を表します。
 
 ```html
 <p>出力ボックスの上にポインターを当てると、文書の背景色を変更できます。</p>
@@ -244,6 +244,6 @@ parentRule {
 
 ## 関連情報
 
-- [CSS 入れ子の使用](/ja/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
-- [CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting)モジュール
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュール
+- [CSS 入れ子の使用](/ja/docs/Web/CSS/Guides/Nesting/Using)
+- [CSS 入れ子](/ja/docs/Web/CSS/Guides/Nesting)モジュール
+- [CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors)モジュール

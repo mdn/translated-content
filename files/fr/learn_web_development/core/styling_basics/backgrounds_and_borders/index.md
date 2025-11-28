@@ -56,11 +56,11 @@ Nous reviendrons un peu plus loin sur le fonctionnement des raccourcis. Pour l'i
 
 ### Couleurs d'arrière-plan
 
-La propriété [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color) définit la couleur d'arrière-plan d'un élément HTML. La propriété accepte comme valeur n'importe quelle [`<color>`](/fr/docs/Web/CSS/color_value). La `background-color` s'étend sous le contenu dans la zone de remplissage (padding box) de l'élément.
+La propriété [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color) définit la couleur d'arrière-plan d'un élément HTML. La propriété accepte comme valeur n'importe quelle [`<color>`](/fr/docs/Web/CSS/Reference/Values/color_value). La `background-color` s'étend sous le contenu dans la zone de remplissage (padding box) de l'élément.
 
 Dans l'exemple ci-dessous, nous ajoutons des couleurs de fond à une boîte, un titre et un élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span).
 
-**Expérimentez avec ce code, en faisant varier les valeurs [\<color>](/fr/docs/Web/CSS/color_value) dans les différentes déclarations.**
+**Expérimentez avec ce code, en faisant varier les valeurs [\<color>](/fr/docs/Web/CSS/Reference/Values/color_value) dans les différentes déclarations.**
 
 {{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/color.html", '100%', 700)}}
 
@@ -89,7 +89,7 @@ La propriété [`background-repeat`](/fr/docs/Web/CSS/Reference/Properties/backg
 
 #### Dimensionner l'image de fond
 
-Dans l'exemple ci-dessus on voit qu'une image d'arrière-plan est recadrée quand elle dépasse de l'élément dont elle est le fond. Dans un tel cas, la propriété [`background-size`](/fr/docs/Web/CSS/Reference/Properties/background-size) — avec comme valeur une [longueur](/fr/docs/Web/CSS/length) ou un [pourcentage](/fr/docs/Web/CSS/percentage), permet d'adapter l'image à l'élément pour en occuper tout le fond.
+Dans l'exemple ci-dessus on voit qu'une image d'arrière-plan est recadrée quand elle dépasse de l'élément dont elle est le fond. Dans un tel cas, la propriété [`background-size`](/fr/docs/Web/CSS/Reference/Properties/background-size) — avec comme valeur une [longueur](/fr/docs/Web/CSS/Reference/Values/length) ou un [pourcentage](/fr/docs/Web/CSS/Reference/Values/percentage), permet d'adapter l'image à l'élément pour en occuper tout le fond.
 
 On peut aussi utiliser les mots-clé :
 
@@ -125,7 +125,7 @@ Vous pouvez utiliser les mots-clé tels que `top` et `right` (vous trouverez les
 }
 ```
 
-Ainsi que des valeurs de [longueurs](/fr/docs/Web/CSS/length), ou des [pourcentages](/fr/docs/Web/CSS/percentage)&nbsp;:
+Ainsi que des valeurs de [longueurs](/fr/docs/Web/CSS/Reference/Values/length), ou des [pourcentages](/fr/docs/Web/CSS/Reference/Values/percentage)&nbsp;:
 
 ```css
 .box {
@@ -166,7 +166,7 @@ La syntaxe à quatre valeurs enfin permet d'indiquer la distance depuis certains
 
 Un dégradé — quand on l'utilise pour arrière-plan — se comporte comme une image, il se paramètre aussi avec la propriété [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image).
 
-Vous en apprendrez plus sur les différents types de dégradés et tout ce qu'on peut faire avec sur la page MDN consacrée au type [`<gradient>`](/fr/docs/Web/CSS/gradient). Une manière amusante de découvrir les dégradés est d'utiliser l'un des nombreux générateurs de dégradés CSS disponibles en ligne, par exemple [celui-là](https://cssgradient.io/). Créez votre dégradé puis copiez-collez le code source qui l'a généré.
+Vous en apprendrez plus sur les différents types de dégradés et tout ce qu'on peut faire avec sur la page MDN consacrée au type [`<gradient>`](/fr/docs/Web/CSS/Reference/Values/gradient). Une manière amusante de découvrir les dégradés est d'utiliser l'un des nombreux générateurs de dégradés CSS disponibles en ligne, par exemple [celui-là](https://cssgradient.io/). Créez votre dégradé puis copiez-collez le code source qui l'a généré.
 
 Essayez différents dégradés dans l'exemple ci-dessous. Dans les deux boîtes on trouve respectivement un dégradé linéaire étendu sur toute la boîte et un dégradé circulaire de taille donné, qui du coup se répète.
 

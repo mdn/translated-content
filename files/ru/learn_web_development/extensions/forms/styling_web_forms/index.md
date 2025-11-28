@@ -355,7 +355,7 @@ textarea {
 }
 ```
 
-The {{HTMLElement("button")}} element is really convenient with CSS; you can do whatever you want, even using [pseudo-elements](/ru/docs/Web/CSS/Pseudo-elements):
+The {{HTMLElement("button")}} element is really convenient with CSS; you can do whatever you want, even using [pseudo-elements](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-elements):
 
 ```css
 button {

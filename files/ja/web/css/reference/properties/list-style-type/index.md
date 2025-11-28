@@ -87,7 +87,7 @@ hr {
 }
 ```
 
-マーカーは [`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_キーワード)となり、適用先の要素の[色](/ja/docs/Web/CSS/color_value)の計算値と同じになります。
+マーカーは [`currentcolor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード)となり、適用先の要素の[色](/ja/docs/Web/CSS/Reference/Values/color_value)の計算値と同じになります。
 
 わずかな要素 ({{HTMLElement("li")}} と {{HTMLElement("summary")}}) だけが既定で `display: list-item` の値を持っています。しかし、 `list-style-type` プロパティは {{cssxref("display")}} の値が `list-item` に設定されているあらゆる要素に適用することができます。さらに、このプロパティは継承されるので、親要素（普通は {{HTMLElement("ol")}} または {{HTMLElement("ul")}}）に設定することですべてのリスト項目に適用することができます。
 
@@ -793,5 +793,5 @@ container.addEventListener("change", (event) => {
 - {{Cssxref("list-style-image")}} プロパティ
 - {{Cssxref("list-style-position")}} プロパティ
 - {{cssxref("::marker")}} 擬似要素
-- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
-- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)モジュール
+- [CSS リストとカウンター](/ja/docs/Web/CSS/Guides/Lists)モジュール
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)モジュール

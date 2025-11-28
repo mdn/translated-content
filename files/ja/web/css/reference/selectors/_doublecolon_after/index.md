@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/::after
 original_slug: Web/CSS/::after
 ---
 
-CSS において **`::after`** は、選択した要素の最後の子要素として[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を生成します。よく {{cssxref("content")}} プロパティを使用して、要素に装飾的な内容を追加するために用いられます。この要素は既定でインラインです。
+CSS において **`::after`** は、選択した要素の最後の子要素として[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)を生成します。よく {{cssxref("content")}} プロパティを使用して、要素に装飾的な内容を追加するために用いられます。この要素は既定でインラインです。
 
 ```css
 /* リンクの後に矢印を追加 */
@@ -49,14 +49,14 @@ a::after {
 ```
 
 > [!NOTE]
-> `::before` および `::after` によって作成される擬似要素は[要素の整形ボックスに含まれるため](https://www.w3.org/TR/CSS2/generate.html#before-after-content)、 {{htmlelement("img")}} や {{htmlelement("br")}} のような[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)には適用されません。
+> `::before` および `::after` によって作成される擬似要素は[要素の整形ボックスに含まれるため](https://www.w3.org/TR/CSS2/generate.html#before-after-content)、 {{htmlelement("img")}} や {{htmlelement("br")}} のような[置換要素](/ja/docs/Web/CSS/Guides/Images/Replaced_element_properties)には適用されません。
 
 ## 構文
 
 {{CSSSyntax}}
 
 > [!NOTE]
-> CSS3 では[疑似クラス](/ja/docs/Web/CSS/Pseudo-classes)と[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を見分けやすくするために、 `::after` の表記法（二重コロン付き）が導入されました。ブラウザーでは CSS2 で導入された `:after` も使用できます。
+> CSS3 では[疑似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)と[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)を見分けやすくするために、 `::after` の表記法（二重コロン付き）が導入されました。ブラウザーでは CSS2 で導入された `:after` も使用できます。
 
 ## 例
 
@@ -121,7 +121,7 @@ a::after {
 
 ### ツールチップ
 
-この例は、 `::after` を CSS の [`attr()`](/ja/docs/Web/CSS/attr) 関数と `data-descr` [カスタムデータ属性](/ja/docs/Web/HTML/Reference/Global_attributes/data-*)との組み合わせで使用し、ツールチップを作成しています。 JavaScript は必要ありません。
+この例は、 `::after` を CSS の [`attr()`](/ja/docs/Web/CSS/Reference/Values/attr) 関数と `data-descr` [カスタムデータ属性](/ja/docs/Web/HTML/Reference/Global_attributes/data-*)との組み合わせで使用し、ツールチップを作成しています。 JavaScript は必要ありません。
 
 また、このテクニックを使ってキーボードユーザーに対応することもできます。 `tabindex` に `0` を追加して、それぞれの `span` をキーボードフォーカス可能にし、CSS の `:focus` セレクターを使用することでキーボードフォーカスを可能にします。これは `::before` と `::after` がいかに柔軟であるかを示しています。しかし、最もアクセスしやすいようにするには、他の方法（例えば [details および summary](/ja/docs/Web/HTML/Reference/Elements/details) 要素で作成した詳細折りたたみウィジェットがより適していると思われます。
 

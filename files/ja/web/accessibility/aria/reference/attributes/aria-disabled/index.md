@@ -31,7 +31,7 @@ HTML の `disabled` 属性ではなく `aria-disabled` 属性を使用するも�
 <div role="button" aria-disabled="true" tabindex="-1">Edit</div>
 ```
 
-`aria-disabled="true"` を持つ要素が確実に機能しないように JavaScript を使用する必要があるのと同様に、スタイル設定も必要になります。 HTML の `disabled` 属性を指定するとユーザーエージェントの `:disabled` スタイルが提供されますが、 `aria-disabled="true"` を追加してもスタイル設定はされません。要素は[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)の `[aria-disabled="true"]` でスタイル設定できます。
+`aria-disabled="true"` を持つ要素が確実に機能しないように JavaScript を使用する必要があるのと同様に、スタイル設定も必要になります。 HTML の `disabled` 属性を指定するとユーザーエージェントの `:disabled` スタイルが提供されますが、 `aria-disabled="true"` を追加してもスタイル設定はされません。要素は[属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors)の `[aria-disabled="true"]` でスタイル設定できます。
 
 ```css
 [aria-disabled="true"] {
@@ -50,7 +50,7 @@ HTML の `disabled` 属性ではなく `aria-disabled` 属性を使用するも�
 }
 ```
 
-[`forced-colors` メディアクエリー](/ja/docs/Web/CSS/@media/forced-colors)は、[ユーザーエージェント](/ja/docs/Glossary/User_agent)が強制色モードを有効にしているかどうかを検出します。もしそうなら、テキストと境界の色はどちらも[システム色 `greyText`](/ja/docs/Web/CSS/system-color#syntax) に設定されます。
+[`forced-colors` メディアクエリー](/ja/docs/Web/CSS/Reference/At-rules/@media/forced-colors)は、[ユーザーエージェント](/ja/docs/Glossary/User_agent)が強制色モードを有効にしているかどうかを検出します。もしそうなら、テキストと境界の色はどちらも[システム色 `greyText`](/ja/docs/Web/CSS/Reference/Values/system-color#syntax) に設定されます。
 
 ネイティブの HTML 属性ではなく `aria-disabled` を使用する場合、もう一つ留意すべきことは、 ARIA 属性は Windows 高コントラストモードにおいて、要素が無効であることを視覚的に伝えるためには、必要な手動スタイル設定が要求されるということです。
 

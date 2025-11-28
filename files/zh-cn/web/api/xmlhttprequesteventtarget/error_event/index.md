@@ -1,7 +1,6 @@
 ---
 title: "XMLHttpRequest: error 事件"
 slug: Web/API/XMLHttpRequestEventTarget/error_event
-original_slug: Web/API/XMLHttpRequest/error_event
 ---
 
 {{APIRef}}

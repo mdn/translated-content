@@ -9,7 +9,7 @@ l10n:
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}
 
-[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout) (Flexbox) は、アイテムを行または列に並べるための 1 次元のレイアウト方法です。アイテムがたわんで（伸びて）追加の空間を埋めたり、縮んで小さい空間に収まったりします。この記事では、すべての基本事項について説明します。
+[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout) (Flexbox) は、アイテムを行または列に並べるための 1 次元のレイアウト方法です。アイテムがたわんで（伸びて）追加の空間を埋めたり、縮んで小さい空間に収まったりします。この記事では、すべての基本事項について説明します。
 
 <table>
   <tbody>
@@ -231,7 +231,7 @@ div {
 
 - 既定では、この値は `normal` であり、フレックスボックスでは `stretch` として動作します。これは、すべてのフレックスアイテムを親を埋めるように交差軸方向に引き伸ばします。 親が交差軸方向に固定サイズを持っていない場合、すべてのフレックスアイテムが最長のフレックスアイテムと同じ長さになります。 これが最初の例が既定で同じ高さの列を得た方法です。
 - 上記のコードで使用した `center` の値により、アイテムは固有の寸法を維持しますが、交差軸の中心に配置されます。 これが、この例のボタンが縦方向に中央揃えされている理由です。これが、最初の例で既定では同じ高さの列になった理由です。
-- `flex-start`、`self-start`、`start`、`flex-end`、`self-end`、`end` のような値を指定することもでき、それぞれすべてのアイテムを交差軸の先頭と末尾に配置します。`baseeline` を指定すると、フレックスアイテムのベースラインを揃えます。基本的に、各フレックスアイテムの交差始点とベースラインの間の距離が最も大きい要素の最初の行の下端に並べられます。詳細は {{cssxref("align-items")}} を参照してください。
+- `flex-start`、`self-start`、`start`、`flex-end`、`self-end`、`end` のような値を指定することもでき、それぞれすべてのアイテムを交差軸の先頭と末尾に配置します。`baseline` を指定すると、フレックスアイテムのベースラインを揃えます。基本的に、各フレックスアイテムの交差始点とベースラインの間の距離が最も大きい要素の最初の行の下端に並べられます。詳細は {{cssxref("align-items")}} を参照してください。
 
 個々のフレックスアイテムの {{cssxref("align-items")}} のふるまいは、 {{cssxref("align-self")}} プロパティを適用することで上書きできます。 例えば、 CSS に次のコードを追加してみてください。
 
@@ -362,11 +362,11 @@ button {
 
 ## 関連情報
 
-- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [フレックスアイテムの順序](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
-- [主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
-- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+- [フレックスアイテムの順序](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)
+- [主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)モジュール
 - [CSS-Tricks guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) — フレックスボックスのすべてを視覚的にわかりやすく説明した記事です。
 - [Flexbox Froggy](https://flexboxfroggy.com/) — フレックスボックスの基本を学び、理解を深めるための教育ゲームです。
 

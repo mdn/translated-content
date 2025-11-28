@@ -35,15 +35,15 @@ slug: Learn_web_development/Core/Styling_basics/Handling_conflicts
 
 CSS 代表**层叠样式表**（Cascading Style Sheets），理解第一个词*层叠*（cascade）很重要——层叠的表现方式是理解 CSS 的关键。
 
-在某些时候，在做一个项目过程中你会发现一些应该产生效果的样式没有生效。通常的原因是你创建了两个应用于同一个元素的规则。与[**层叠**](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)密切相关的概念是[**优先级**（specificity）](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)，决定在发生冲突的时候应该使用哪条规则。设计元素样式的规则可能不是期望的规则，因此需要了解这些机制是如何工作的。
+在某些时候，在做一个项目过程中你会发现一些应该产生效果的样式没有生效。通常的原因是你创建了两个应用于同一个元素的规则。与[**层叠**](/zh-CN/docs/Web/CSS/Guides/Cascade/Introduction)密切相关的概念是[**优先级**（specificity）](/zh-CN/docs/Web/CSS/Guides/Cascade/Specificity)，决定在发生冲突的时候应该使用哪条规则。设计元素样式的规则可能不是期望的规则，因此需要了解这些机制是如何工作的。
 
-这里也有[**继承**](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)的概念，也就是在默认情况下，一些 css 属性继承当前元素的父元素上设置的值，有些则不继承。这也可能导致一些和期望不同的结果。
+这里也有[**继承**](/zh-CN/docs/Web/CSS/Guides/Cascade/Inheritance)的概念，也就是在默认情况下，一些 css 属性继承当前元素的父元素上设置的值，有些则不继承。这也可能导致一些和期望不同的结果。
 
 我们来快速地看下正在处理的关键问题，然后依次了解它们是如何相互影响的，以及如何和 CSS 交互的。虽然这些概念难以理解，但是随着不断的练习，你会慢慢熟悉它的工作原理。
 
 ### 层叠
 
-样式表[**层叠**](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)——简单的说，就是 CSS 规则的顺序很重要；当应用两条同级别的规则到一个元素的时候，写在后面的就是实际使用的规则。
+样式表[**层叠**](/zh-CN/docs/Web/CSS/Guides/Cascade/Introduction)——简单的说，就是 CSS 规则的顺序很重要；当应用两条同级别的规则到一个元素的时候，写在后面的就是实际使用的规则。
 
 下面的示例中，我们有两个关于 `<h1>` 的规则。`<h1>` 最后显示蓝色——这两个规则来自同一个源，且具有相同的元素选择器，有相同的优先级，所以顺序在最后的生效。
 
@@ -64,7 +64,7 @@ h1 {
 
 ### 优先级
 
-浏览器是根据[优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)来决定当多个规则有不同选择器对应相同的元素的时候需要使用哪个规则。它基本上是一个衡量选择器具体选择哪些区域的尺度：
+浏览器是根据[优先级](/zh-CN/docs/Web/CSS/Guides/Cascade/Specificity)来决定当多个规则有不同选择器对应相同的元素的时候需要使用哪个规则。它基本上是一个衡量选择器具体选择哪些区域的尺度：
 
 - 一个元素选择器不是很具体，则会选择页面上该类型的所有元素，所以它的优先级就会低一些。
 - 一个类选择器稍微具体点，则会选择该页面中有特定 `class` 属性值的元素，所以它的优先级就要高一点。
@@ -183,16 +183,16 @@ CSS 为控制继承提供了五个特殊的通用属性值。每个 CSS 属性�
 - {{cssxref("inherit")}}
   - : 设置该属性会使子元素属性和父元素相同。实际上，就是“开启继承”。
 - {{cssxref("initial")}}
-  - : 将应用于选定元素的属性值设置为该属性的[初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)。
+  - : 将应用于选定元素的属性值设置为该属性的[初始值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#初始值)。
 - {{cssxref("revert")}}
   - : 将应用于选定元素的属性值重置为浏览器的默认样式，而不是应用于该属性的默认值。在许多情况下，此值的作用类似于 {{cssxref("unset")}}。
 - {{cssxref("revert-layer")}}
-  - : 将应用于选定元素的属性值重置为在上一个[层叠层](/zh-CN/docs/Web/CSS/@layer)中建立的值。
+  - : 将应用于选定元素的属性值重置为在上一个[层叠层](/zh-CN/docs/Web/CSS/Reference/At-rules/@layer)中建立的值。
 - {{cssxref("unset")}}
   - : 将属性重置为自然值，也就是如果属性是自然继承那么就是 `inherit`，否则和 `initial` 一样
 
 > [!NOTE]
-> 见 [CSS 声明的源](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade#css_声明的源)有更多信息和具体是怎么工作的。
+> 见 [CSS 声明的源](/zh-CN/docs/Web/CSS/Guides/Cascade/Introduction#css_声明的源)有更多信息和具体是怎么工作的。
 
 我们可以查看一个链接列表来探索这些值是如何运作的。在下面的实例中，你可以通过修改 CSS 来查看它们的功能，写代码是掌握 HTML 和 CSS 最好的办法。
 
@@ -328,7 +328,7 @@ h2 {
 
 否定（[`:not()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:not)）和任意匹配（[`:is()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:is)）伪类本身对优先级没有影响，但它们的参数则会带来影响。参数中，对优先级算法有贡献的参数的优先级的最大值将作为该伪类选择器的优先级。
 
-下面有几个单独的例子，有空可以看看。试着思考下，理解为什么优先级是这样定的。我们还没有深入介绍选择器，不过你可以在 MDN 的[选择器参考页面](/zh-CN/docs/Web/CSS/CSS_selectors)找到每个选择器的详细信息。
+下面有几个单独的例子，有空可以看看。试着思考下，理解为什么优先级是这样定的。我们还没有深入介绍选择器，不过你可以在 MDN 的[选择器参考页面](/zh-CN/docs/Web/CSS/Guides/Selectors)找到每个选择器的详细信息。
 
 | 选择器                                    | ID  | 类  | 元素 | 优先级 |
 | ----------------------------------------- | --- | --- | ---- | ------ |
@@ -493,7 +493,7 @@ p {
 
 ## 级联层的顺序
 
-尽管[级联层](/zh-CN/docs/Web/CSS/@layer)属于高级的主题，你可能不会立刻使用此特性，但了解层是如何级联的非常重要。
+尽管[级联层](/zh-CN/docs/Web/CSS/Reference/At-rules/@layer)属于高级的主题，你可能不会立刻使用此特性，但了解层是如何级联的非常重要。
 
 在级联层中声明 CSS 时，优先级的顺序由声明层的顺序来决定。在任何层之外声明的 CSS 样式会被按声明的顺序组合在一起，形成一个未命名的层，它会被当作最后声明的层。对于存在冲突的常规（没有 `!important` 声明）样式，后面的层比先前定义的层的优先级高。但对于带有 `!important` 标记的样式，其顺序相反——先前的层中的 important 样式比后面的层以及为在层中声明的 important 样式优先级要高。但内联样式比所有作者定义的样式的优先级都要高，不受级联层规则的影响。
 

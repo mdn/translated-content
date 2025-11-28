@@ -144,7 +144,7 @@ p {
 
 段落の字下げがある場合の一般的な組版では、最初の段落の字下げを省略します。_The Chicago Manual of Style_ によると、「中間見出しに続くテキストの最初の行は、完全に左端から始めてもよいし、通常の段落の字下げで字下げしてもよい」とされています。
 
-最初の段落とそれ以降の段落を別扱いにするには、次の例のように[次兄弟結合子](/ja/docs/Web/CSS/Next-sibling_combinator)を使います。
+最初の段落とそれ以降の段落を別扱いにするには、次の例のように[次兄弟結合子](/ja/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator)を使います。
 
 #### HTML
 
@@ -254,5 +254,5 @@ p {
   - [`text-transform`](/ja/docs/Web/CSS/Reference/Properties/text-transform)
   - {{cssxref('hanging-punctuation')}}
 
-- [CSS テキスト装飾](/ja/docs/Web/CSS/CSS_text_decoration) CSS モジュール
-- [CSS テキスト](/ja/docs/Web/CSS/CSS_text) モジュール
+- [CSS テキスト装飾](/ja/docs/Web/CSS/Guides/Text_decoration) CSS モジュール
+- [CSS テキスト](/ja/docs/Web/CSS/Guides/Text) モジュール

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`:scope`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、セレクターが選択する対象の参照点である要素を表します。
+**`:scope`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、セレクターが選択する対象の参照点である要素を表します。
 
 ```css
 /* スコープとなる要素を選択 */
@@ -153,8 +153,8 @@ document.getElementById("results").textContent = Array.prototype.map
 
 ## 関連情報
 
-- {{cssxref("@scope")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
-- {{cssxref(":root")}} [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)
+- {{cssxref("@scope")}} [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)
+- {{cssxref(":root")}} [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 - [セレクターを使用した DOM 要素の特定](/ja/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
 - {{domxref("Element.querySelector()")}} および {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}} および {{domxref("Document.querySelectorAll()")}}

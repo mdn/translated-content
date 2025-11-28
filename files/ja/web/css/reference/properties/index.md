@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 55326f330a6ae829494c7606b1bd47b2c0f9d888
 ---
 
-[CSS](/ja/docs/Web/CSS) **プロパティ**は、 [CSS 宣言](/ja/docs/Web/CSS/CSS_syntax/Syntax#css_の宣言)で使用される引数で、選択した要素の特定の側面をスタイル設定するために使用します。
+[CSS](/ja/docs/Web/CSS) **プロパティ**は、 [CSS 宣言](/ja/docs/Web/CSS/Guides/Syntax/Introduction#css_の宣言)で使用される引数で、選択した要素の特定の側面をスタイル設定するために使用します。
 例えば、 {{CSSxRef("opacity")}} プロパティは、選択した要素の不透明度を設定するために使用し、その要素の背後のコンテンツを表示するかどうかをコントロールすることができます。
 
 ```css
@@ -599,8 +599,8 @@ CSS 仕様書で定義されている標準のプロパティには、以下の�
 
 ## 関連情報
 
-- [CSS 構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
-- [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)
+- [CSS 構文](/ja/docs/Web/CSS/Guides/Syntax/Introduction)
+- [擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
 - [Firefox (-moz-) ベンダー接頭辞付き CSS 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions)
 - [WebKit (-webkit-) ベンダー接頭辞付き CSS 拡張](/ja/docs/Web/CSS/Reference/Webkit_extensions)
 - {{Glossary("Vendor prefix", "ベンダー接頭辞")}}

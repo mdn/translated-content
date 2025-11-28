@@ -99,9 +99,9 @@ La valeur optionnelle `fill` peut être utilisée et placée à n'importe quel e
 
 ### Valeurs
 
-- [`<number>`](/fr/docs/Web/CSS/number)
+- [`<number>`](/fr/docs/Web/CSS/Reference/Values/number)
   - : Représente un décalage par rapport au bord, exprimé en _pixels_ pour les images matricielles et en _coordonnées_ pour les images vectorielles. Pour les images vectorielles, le nombre est relatif à la taille de l'élément plutôt qu'à la taille de l'image source. Aussi, dans ce cas de figure, on utilisera plutôt les pourcentages.
-- [`<percentage>`](/fr/docs/Web/CSS/percentage)
+- [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)
   - : Représente un décalage par rapport au bord comme pourcentage par rapport à la taille de l'image source&nbsp;: c'est la largeur de l'image qui sert de référence pour les décalages horizontaux et la hauteur de l'image qui sert de référence pour les décalages verticaux.
 - `fill`
   - : La région au centre de l'image est conservée et celle-ci est affichée comme image d'arrière-plan mais empilée _sous_ l'arrière-plan fourni par [`background`](/fr/docs/Web/CSS/Reference/Properties/background). La largeur et la hauteur sont dimensionnées afin de correspondre aux tailles des régions haute et gauche.
@@ -218,4 +218,4 @@ sliceSlider.addEventListener("input", () => {
 
 ## Voir aussi
 
-- [Description illustrée de la syntaxe multi-valuée](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties#quelques_cas_aux_limites_épineux)
+- [Description illustrée de la syntaxe multi-valuée](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties#quelques_cas_aux_limites_épineux)

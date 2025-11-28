@@ -66,7 +66,7 @@ Firefox 6, basé sur Gecko 6.0, est sorti le 16 août 2011. Cet article fournit 
 
 #### Autres changements
 
-- La propriété [`@-moz-document`](/fr/docs/Web/CSS/@document) a une nouvelle fonction `regexp()`, qui vous permet d'adapter l'URL du document à une [regular expression](/fr/Guide_JavaScript_1.5/Expressions_rationnelles).
+- La propriété [`@-moz-document`](/fr/docs/Web/CSS/Reference/At-rules/@document) a une nouvelle fonction `regexp()`, qui vous permet d'adapter l'URL du document à une [regular expression](/fr/Guide_JavaScript_1.5/Expressions_rationnelles).
 - La propriété CSS [`azimuth`](/fr/docs/Web/CSS/azimuth) n'est plus supportée, comme nous avons enlevé le peu de code que nous avions pour le groupe média `aural`. Il n'a jamais été implémenté de manière significative, donc il était plus logique de supprimer cette implémentation crufty pour le moment, au lieu d'essayer de le rafistoler.
 - Avant, la pseudo-classe [`:hover`](/fr/docs/Web/CSS/Reference/Selectors/:hover) n'était pas appliquée aux sélecteurs de classe quand on était en mode quirks, par exemple, `.someclass:hover` ne fonctionne pas. Cette bizarrerie a été enlevée.
 - La pseudo-classe [`:indeterminate`](/fr/docs/Web/CSS/Reference/Selectors/:indeterminate) peut être appliquée à l'élément [`<progress>`](/fr/docs/Web/HTML/Reference/Elements/progress). Cela n'est pas un standard, mais nous espérons que ce soit adopté par les autres navigateurs car c'est utile.
@@ -75,7 +75,7 @@ Firefox 6, basé sur Gecko 6.0, est sorti le 16 août 2011. Cet article fournit 
 
 ### DOM
 
-- [Utilisation de media queries à partir de code](/fr/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+- [Utilisation de media queries à partir de code](/fr/docs/Web/CSS/Guides/Media_queries/Testing)
   - : Vous pouvez désormais tester le résultat d'une chaîne media query en programmant la méthode [`window.matchMedia()`](/fr/docs/Web/API/Window/matchMedia) et l'interface [`MediaQueryList`](/fr/docs/Web/API/MediaQueryList).
 - [Evènements tactile](/fr/docs/Web/API/Touch_events)
   - : Firefox 6 ajout le support du standard W3C sur les évènements tactile, cela facilite l'interprétation d'une ou plusieurs touches à la fois sur les surfaces tactiles comme les écrans tactiles et pavés tactiles.

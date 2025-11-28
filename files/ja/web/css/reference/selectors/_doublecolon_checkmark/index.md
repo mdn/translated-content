@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`::checkmark`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)の現在選択されている {{htmlelement("option")}} 要素内に配置されたチェックマークを対象とします。選択されているオプションを視覚的に示すために使用することができます。
+**`::checkmark`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)の現在選択されている {{htmlelement("option")}} 要素内に配置されたチェックマークを対象とします。選択されているオプションを視覚的に示すために使用することができます。
 
 {{InteractiveExample("CSS デモ: ::checkmark")}}
 
@@ -103,7 +103,7 @@ select,
 }
 ```
 
-[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout) が `<option>` 要素のレイアウトに使用されていると想定します（カスタマイズ可能な選択ボックスの**現在の実装**では実際に使用されています）。この場合、チェックマークを列の先頭から末尾に移動するには、チェックマークに `0` より大きい {{cssxref("order")}} 値を設定し（`0` より小さい値を設定している場合は、それを `0` に設定する）、さらに `auto` を {{cssxref("margin-left")}} に設定して、行末に揃えることで実現できます（詳細は [alignment および auto のマージン](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox#alignment_および_auto_のマージン)を参照）。
+[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout) が `<option>` 要素のレイアウトに使用されていると想定します（カスタマイズ可能な選択ボックスの**現在の実装**では実際に使用されています）。この場合、チェックマークを列の先頭から末尾に移動するには、チェックマークに `0` より大きい {{cssxref("order")}} 値を設定し（`0` より小さい値を設定している場合は、それを `0` に設定する）、さらに `auto` を {{cssxref("margin-left")}} に設定して、行末に揃えることで実現できます（詳細は [alignment および auto のマージン](/ja/docs/Web/CSS/Guides/Box_alignment/In_flexbox#alignment_および_auto_のマージン)を参照）。
 
 {{cssxref("content")}} プロパティの値を別の絵文字に設定することで、表示されるアイコンを変更することもできます。
 

@@ -39,7 +39,7 @@ l10n:
 
 `class` 屬性是一個以 [ASCII 空白字元](/zh-TW/docs/Glossary/Whitespace#在_html_中)分隔的類別值列表。
 
-每個類別值可以包含任何 Unicode 字元（當然，除了 ASCII 空白字元）。但是，當在 CSS 選擇器中使用時，無論是從 JavaScript 使用 {{domxref("Document.querySelector()")}} 等 API 或是在 CSS 樣式表中使用，類別屬性值都必須是有效的 [CSS 標識符](/zh-TW/docs/Web/CSS/ident)。這表示如果類別屬性值不是有效的 CSS 標識符（例如，`my?class` 或 `1234`），則在選擇器中使用它之前必須對其進行跳脫，可以使用 {{domxref("CSS.escape_static", "CSS.escape()")}} 方法或[手動](/zh-TW/docs/Web/CSS/ident#跳脫字元)轉換。
+每個類別值可以包含任何 Unicode 字元（當然，除了 ASCII 空白字元）。但是，當在 CSS 選擇器中使用時，無論是從 JavaScript 使用 {{domxref("Document.querySelector()")}} 等 API 或是在 CSS 樣式表中使用，類別屬性值都必須是有效的 [CSS 標識符](/zh-TW/docs/Web/CSS/Reference/Values/ident)。這表示如果類別屬性值不是有效的 CSS 標識符（例如，`my?class` 或 `1234`），則在選擇器中使用它之前必須對其進行跳脫，可以使用 {{domxref("CSS.escape_static", "CSS.escape()")}} 方法或[手動](/zh-TW/docs/Web/CSS/Reference/Values/ident#跳脫字元)轉換。
 
 因此，建議開發人員為 class 屬性選擇不需要跳脫的有效 CSS 標識符作為值。
 

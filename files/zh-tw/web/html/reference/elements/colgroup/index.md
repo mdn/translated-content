@@ -92,7 +92,7 @@ td {
     > 如果表格使用了 [`colspan`](/zh-TW/docs/Web/HTML/Reference/Elements/td#colspan) 屬性，可以通過組合適當的 CSS 屬性選擇器來達到效果，例如像 `[colspan=n]`，儘管這並不簡單。
 
 - `bgcolor` {{deprecated_inline}}
-  - : 定義每個欄群組儲存格的背景顏色。該值是一個 HTML 顏色；可以是 [6 位十六進制 RGB 碼](/zh-TW/docs/Web/CSS/hex-color)，前綴為「`#`」，或者是一個[顏色關鍵字](/zh-TW/docs/Web/CSS/named-color)。不支援其他 CSS {{cssxref("color_value", "&lt;color&gt;")}} 值。請改用 {{cssxref("background-color")}} CSS 屬性，因為此屬性已棄用。
+  - : 定義每個欄群組儲存格的背景顏色。該值是一個 HTML 顏色；可以是 [6 位十六進制 RGB 碼](/zh-TW/docs/Web/CSS/Reference/Values/hex-color)，前綴為「`#`」，或者是一個[顏色關鍵字](/zh-TW/docs/Web/CSS/Reference/Values/named-color)。不支援其他 CSS {{cssxref("color_value", "&lt;color&gt;")}} 值。請改用 {{cssxref("background-color")}} CSS 屬性，因為此屬性已棄用。
 
 - `char` {{deprecated_inline}}
   - : 指定每個欄群組儲存格內容與字符的對齊方式。這個屬性的典型值包括當試圖對齊數字或貨幣值時使用的句點（`.`）。如果 [`align`](#align) 未設置為 `char`，則忽略此屬性，但它仍將作為屬於此欄群組的 {{HTMLElement("col")}} 元素的 [`align`](/zh-TW/docs/Web/HTML/Reference/Elements/col#align) 的默認值使用。

@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`view()`** は [CSS 関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、アニメーションタイムラインと共に使用して、アニメーションする無名ビュー進行タイムラインを提供する主体要素を示すことができます。ビュー進行タイムラインは、最も近い先祖スクロール内の主体要素の可視性の変化によって進行します。既定では、タイムラインは、主体がスクローラーの一方の端に最初に表示された時に 0% になり、反対側の端に達した時に 100% になります。
+**`view()`** は [CSS 関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、アニメーションタイムラインと共に使用して、アニメーションする無名ビュー進行タイムラインを提供する主体要素を示すことができます。ビュー進行タイムラインは、最も近い先祖スクロール内の主体要素の可視性の変化によって進行します。既定では、タイムラインは、主体がスクローラーの一方の端に最初に表示された時に 0% になり、反対側の端に達した時に 100% になります。
 
 関数の引数には、タイムラインの進行が追跡されるスクロールバーの軸と、主体が表示されているとみなされるボックスの位置を調整するインセットを指定します。
 
@@ -220,6 +220,6 @@ p {
 
 ## 関連情報
 
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)
 - [`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline)

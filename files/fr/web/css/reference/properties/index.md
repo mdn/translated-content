@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 5878ceaae26e3873d5122fa3c294896fe8092be6
 ---
 
-Une **_propriété_** [CSS](/fr/docs/Web/CSS) est un paramètre utilisé dans une [déclaration CSS](/fr/docs/Web/CSS/CSS_syntax/Syntax#css_declarations) qui vous permet de mettre en forme certains aspects des éléments sélectionnés. Par exemple, la propriété {{CSSxRef("opacity")}} est utilisée pour définir l'opacité d'un élément sélectionné, ce qui vous permet de contrôler si le contenu derrière cet élément est visible&nbsp;:
+Une **_propriété_** [CSS](/fr/docs/Web/CSS) est un paramètre utilisé dans une [déclaration CSS](/fr/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations) qui vous permet de mettre en forme certains aspects des éléments sélectionnés. Par exemple, la propriété {{CSSxRef("opacity")}} est utilisée pour définir l'opacité d'un élément sélectionné, ce qui vous permet de contrôler si le contenu derrière cet élément est visible&nbsp;:
 
 ```css
 /* Définit une opacité de 0,8 sur les éléments <img> */
@@ -596,7 +596,7 @@ Les propriétés non standard ou préfixées par le navigateur comprennent les s
 
 ## Voir aussi
 
-- [Syntaxe CSS](/fr/docs/Web/CSS/CSS_syntax/Syntax)
+- [Syntaxe CSS](/fr/docs/Web/CSS/Guides/Syntax/Introduction)
 - [Pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
 - [Extensions CSS de Mozilla (-moz-)](/fr/docs/Web/CSS/Reference/Mozilla_extensions)
 - [Extensions CSS de WebKit (-webkit-)](/fr/docs/Web/CSS/Reference/Webkit_extensions)

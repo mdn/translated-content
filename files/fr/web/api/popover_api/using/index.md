@@ -316,19 +316,19 @@ Allez voir [notre exemple de <i lang="en">popover</i> avec arrière-plan flouté
 
 ## Animer les <i lang="en">popovers</i>
 
-Les <i lang="en">popovers</i> sont mis en forme avec la déclaration `display: none;` quand ils sont fermés et avec `display: block;` quand ils sont ouverts, et sont respectivement retirés/ajoutés à [la couche supérieure](/fr/docs/Glossary/Top_layer) et à [l'arbre d'accessibilité](/fr/docs/Web/Performance/Guides/How_browsers_work#construire_larbre_daccessibilité). En conséquence, pour que les <i lang="en">popovers</i> puissent être animés, la propriété [`display`](/fr/docs/Web/CSS/Reference/Properties/display) doit pouvoir être animée. Les [navigateurs compatibles](/fr/docs/Web/CSS/Reference/Properties/display#compatibilité_des_navigateurs) animent `display` avec [une variation discrète](/fr/docs/Web/CSS/CSS_animated_properties#discrete). Concrètement, le navigateur passera de la valeur `none` à une autre valeur de manière à ce que l'animation affiche le contenu tout du long. Ainsi&nbsp;:
+Les <i lang="en">popovers</i> sont mis en forme avec la déclaration `display: none;` quand ils sont fermés et avec `display: block;` quand ils sont ouverts, et sont respectivement retirés/ajoutés à [la couche supérieure](/fr/docs/Glossary/Top_layer) et à [l'arbre d'accessibilité](/fr/docs/Web/Performance/Guides/How_browsers_work#construire_larbre_daccessibilité). En conséquence, pour que les <i lang="en">popovers</i> puissent être animés, la propriété [`display`](/fr/docs/Web/CSS/Reference/Properties/display) doit pouvoir être animée. Les [navigateurs compatibles](/fr/docs/Web/CSS/Reference/Properties/display#compatibilité_des_navigateurs) animent `display` avec [une variation discrète](/fr/docs/Web/CSS/Guides/Animations/Animatable_properties#discrete). Concrètement, le navigateur passera de la valeur `none` à une autre valeur de manière à ce que l'animation affiche le contenu tout du long. Ainsi&nbsp;:
 
 - Quand `display` est animé de `none` à `block` (ou toute autre valeur visible de `display`), la valeur passera à `block` à 0% de la durée de l'animation, ce qui la rendra visible du début à la fin.
 - Quand `display` est animé de `block` (ou toute autre valeur visible de `display`) à `none`, la valeur passera à `none` à 100% de la durée de l'animation, ce qui la rendra visible du début à la fin.
 
 > [!NOTE]
-> Quand on anime en utilisant [les transitions CSS](/fr/docs/Web/CSS/CSS_transitions), la déclaration [`transition-behavior: allow-discrete`](/fr/docs/Web/CSS/transition-behavior) doit être appliquée sur l'élément <i lang="en">popover</i> pour activer le comportement décrit ci-avant. Quand on anime avec [les animations CSS](/fr/docs/Web/CSS/CSS_animations), le comportement décrit ci-avant est activé par défaut, et il n'y a pas besoin de définir cette propriété.
+> Quand on anime en utilisant [les transitions CSS](/fr/docs/Web/CSS/Guides/Transitions), la déclaration [`transition-behavior: allow-discrete`](/fr/docs/Web/CSS/transition-behavior) doit être appliquée sur l'élément <i lang="en">popover</i> pour activer le comportement décrit ci-avant. Quand on anime avec [les animations CSS](/fr/docs/Web/CSS/Guides/Animations), le comportement décrit ci-avant est activé par défaut, et il n'y a pas besoin de définir cette propriété.
 
 ### Les transitions sur les <i lang="en">popovers</i>
 
 Quand on anime un <i lang="en">popover</i> à l'aide des transitions CSS, les éléments suivant sont nécessaires&nbsp;:
 
-- Règle @ [`@starting-style`](/fr/docs/Web/CSS/@starting-style) {{experimental_inline}}
+- Règle @ [`@starting-style`](/fr/docs/Web/CSS/Reference/At-rules/@starting-style) {{experimental_inline}}
   - : Définissez un ensemble de valeurs de départ pour les propriétés appliquées au <i lang="en">popover</i> qui vont être la cible de la transformation. Ces valeurs seront utilisées lors de la première transition pour éviter des comportements inattendus. Par défaut, les transitions CSS ne sont possibles que quand une propriété change de valeur sur un élément visible. Elles ne s'appliquent pas lors du premier affichage d'un élément, ou quand `display` passe de `none` à une autre valeur.
 - La propriété [`display`](/fr/docs/Web/CSS/Reference/Properties/display)
   - : Ajoutez `display` à la liste des transitions pour que le <i lang="en">popover</i> garde la valeur `display: block` (ou tout autre valeur visible de `display`) pendant toute la transition pour s'assurer que le contenu du <i lang="en">popover</i> soit visible tout du long.
@@ -425,7 +425,7 @@ Comme vu précédemment, nous avons également&nbsp;:
 - Défini un état de départ pour la `transition` dans un bloc `@starting-style`
 - Ajouté `display` à la liste des propriétés à transitionner de manière à ce que l'élément animé soit visible (avec `display: block`) pendant toute l'animation. Sans cela, la transition de fermeture ne serait pas visible, le popover disparaîtrait instantanément.
 - Ajouté `overlay` à la liste des propriétés à transitionner de manière à ce que l'élément popover reste dans [la couche supérieure](/fr/docs/Glossary/Top_layer) jusqu'à la fin de l'animation. L'impact de cet ajout n'est pas nécessairement perceptible pour des animations aussi simples que celle-ci. Cependant, dans certains cas plus complexes, le fait d'omettre cette propriété peut avoir pour conséquence de faire disparaitre l'élément avant la fin de l'animation de transition.
-- Ajouté `allow-discrete` aux transitions des propriétés `display` et `overlay` pour activer les [transitions discrètes](/fr/docs/Web/CSS/CSS_animated_properties#discrete) de ces propriétés.
+- Ajouté `allow-discrete` aux transitions des propriétés `display` et `overlay` pour activer les [transitions discrètes](/fr/docs/Web/CSS/Guides/Animations/Animatable_properties#discrete) de ces propriétés.
 
 Vous noterez que nous avons également défini une transition pour le pseudo-élément [`::backdrop`](/fr/docs/Web/CSS/Reference/Selectors/::backdrop) qui apparait derrière le <i lang="en">popover</i> quand il s'ouvre, provoquant un effet d'assombrissement du contenu de la page.
 
@@ -438,7 +438,7 @@ Le code donne ce résultat&nbsp;:
 > [!NOTE]
 > Parce que les <i lang="en">popovers</i> passent de `display: none` à `display: block` à chaque fois qu'ils apparaissent, le <i lang="en">popover</i> transitionne des styles définis dans `@starting-style` aux styles définis dans `[popover]:popover-open` à chaque fois qu'il apparait. Quand le <i lang="en">popover</i> se ferme, il transitionne des styles définis dans `[popover]:popover-open` aux styles définis dans `[popover]`.
 >
-> Il est possible que les styles de transition pour l'entrée et la sortie puissent être différents. Regarder [notre démonstration d'utilisation des styles de départ](/fr/docs/Web/CSS/@starting-style#demonstration_of_when_starting_styles_are_used) pour voir un exemple.
+> Il est possible que les styles de transition pour l'entrée et la sortie puissent être différents. Regarder [notre démonstration d'utilisation des styles de départ](/fr/docs/Web/CSS/Reference/At-rules/@starting-style#demonstration_of_when_starting_styles_are_used) pour voir un exemple.
 
 ### Les animations sur les <i lang="en">popovers</i>
 

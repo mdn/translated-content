@@ -1,12 +1,11 @@
 ---
 title: transition-behavior
 slug: Web/CSS/Reference/Properties/transition-behavior
-original_slug: Web/CSS/transition-behavior
 l10n:
-  sourceCommit: 0fe8f4d7e9cd5b1b6a39e9fa047468206d3c3ca2
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-**`transition-behavior`** は [CSS](/ja/docs/Web/CSS) のプロパティで、プロパティは、アニメーションの動作が[離散](/ja/docs/Web/CSS/CSS_animated_properties#離散)であるプロパティにトランジションを始めるかどうかを指定します。
+**`transition-behavior`** は [CSS](/ja/docs/Web/CSS) のプロパティで、プロパティは、アニメーションの動作が[離散](/ja/docs/Web/CSS/Guides/Animations/Animatable_properties#離散)であるプロパティにトランジションを始めるかどうかを指定します。
 
 ## 構文
 
@@ -86,7 +85,7 @@ transition-behavior: unset;
 
 ### ポップオーバーのトランジション
 
-この例では、[ポップオーバー](/ja/docs/Web/API/Popover_API)が非表示から表示へ[トランジション](/ja/docs/Web/CSS/CSS_transitions)したり、戻したりするアニメーションをしています。
+この例では、[ポップオーバー](/ja/docs/Web/API/Popover_API)が非表示から表示へ[トランジション](/ja/docs/Web/CSS/Guides/Transitions)したり、戻したりするアニメーションをしています。
 
 #### HTML
 
@@ -101,7 +100,7 @@ transition-behavior: unset;
 
 ```css hidden
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 [popover] {
@@ -146,14 +145,14 @@ html {
 }
 ```
 
-アニメーションさせたいプロパティは [`opacity`](/ja/docs/Web/CSS/Reference/Properties/opacity) と [`transform`](/ja/docs/Web/CSS/Reference/Properties/transform) の 2 つです。これらのプロパティの開始状態にはポップオーバー要素の既定の非表示状態（`[popover]` で選択）を設定し、終了状態にはポップオーバーを開いた状態（[`:popover-open`](/ja/docs/Web/CSS/:popover-open) 擬似クラスで選択）を設定します。そして、この 2 つの間でアニメーションするように [`transition`](/ja/docs/Web/CSS/Reference/Properties/transition) プロパティを設定します。
+アニメーションさせたいプロパティは [`opacity`](/ja/docs/Web/CSS/Reference/Properties/opacity) と [`transform`](/ja/docs/Web/CSS/Reference/Properties/transform) の 2 つです。これらのプロパティの開始状態にはポップオーバー要素の既定の非表示状態（`[popover]` で選択）を設定し、終了状態にはポップオーバーを開いた状態（[`:popover-open`](/ja/docs/Web/CSS/Reference/Selectors/:popover-open) 擬似クラスで選択）を設定します。そして、この 2 つの間でアニメーションするように [`transition`](/ja/docs/Web/CSS/Reference/Properties/transition) プロパティを設定します。
 
 アニメーションする要素は、表示されると[最上位レイヤー](/ja/docs/Glossary/Top_layer)へ移動し、（[`display: none`](/ja/docs/Web/CSS/Reference/Properties/display) で）非表示になると最上位レイヤーから除去されるため、以下のプロパティをトランジションする要素のリストに追加し、双方向でアニメーションが動作するようにしています。どちらの場合も、 `transition-behavior: allow-discrete` を一括指定して、トランジションのアニメーションを有効にしています。
 
 - `display`: アニメーションする要素の出現と消滅の両方のアニメーションを通して表示される（`display: block`に設定する）ために必要です。これがないと、消滅アニメーションは表示されません。結果として、ポップオーバーはただ消えてしまいます。
 - [`overlay`](/ja/docs/Web/CSS/Reference/Properties/overlay): 要素が最上位レイヤーから除去されるのをアニメーションが終わるまで確実に延期するようにするために必要です。これは、このような単純なアニメーションでは大差ありませんが、より複雑なケースでは、これを行わないと、要素がオーバーレイからすばやく除去され、アニメーションが滑らかでなくなったり、効果的でなくなったりすることがあります。
 
-さらに、アニメーションの開始状態は [`@starting-style`](/ja/docs/Web/CSS/@starting-style) アットルール内に設定します。これは予期しない動作を避けるために必要です。既定では、要素の初回スタイル更新時、または `display` の種類が `none` から別の種類に変更された場合、トランジションは発生しません。`@starting-style` により、既定のスタイルを特有の制御方法で上書きすることができます。これがなければ、出現アニメーションは発生せず、ポップオーバーはただ現れるだけです。
+さらに、アニメーションの開始状態は [`@starting-style`](/ja/docs/Web/CSS/Reference/At-rules/@starting-style) アットルール内に設定します。これは予期しない動作を避けるために必要です。既定では、要素の初回スタイル更新時、または `display` の種類が `none` から別の種類に変更された場合、トランジションは発生しません。`@starting-style` により、既定のスタイルを特有の制御方法で上書きすることができます。これがなければ、出現アニメーションは発生せず、ポップオーバーはただ現れるだけです。
 
 #### 結果
 
@@ -164,7 +163,7 @@ html {
 > [!NOTE]
 > ポップオーバーは表示されるたびに `display: none` から `display: block` に変化するので、表示トランジションが発生するたびに `@starting-style` スタイルから `[popover]:popover-open` スタイルに遷移します。ポップオーバーが閉じられたとき、その `[popover]:popover-open` 状態から既定の `[popover]` 状態に遷移します。
 >
-> このような場合、出現時と消滅時で異なるスタイル設定が可能です。この例については、[開始スタイルを使用する場合のデモ](/ja/docs/Web/CSS/@starting-style#開始スタイルを使用する場合のデモ)を参照してください。
+> このような場合、出現時と消滅時で異なるスタイル設定が可能です。この例については、[開始スタイルを使用する場合のデモ](/ja/docs/Web/CSS/Reference/At-rules/@starting-style#開始スタイルを使用する場合のデモ)を参照してください。
 
 ## 仕様書
 
@@ -177,6 +176,6 @@ html {
 ## 関連情報
 
 - [`overlay`](/ja/docs/Web/CSS/Reference/Properties/overlay)
-- [`@starting-style`](/ja/docs/Web/CSS/@starting-style)
-- [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)モジュール
+- [`@starting-style`](/ja/docs/Web/CSS/Reference/At-rules/@starting-style)
+- [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)モジュール
 - [Four new CSS features for smooth entry and exit animations](https://developer.chrome.com/blog/entry-exit-animations/) (developer.chrome.com, 2023)

@@ -3,7 +3,7 @@ title: min-height
 slug: Web/CSS/Reference/Properties/min-height
 ---
 
-CSS 属性 **`min-height`** 能够设置元素的最小高度。这样能够防止 {{cssxref("height")}} 属性的[应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)小于 `min-height` 的值。
+CSS 属性 **`min-height`** 能够设置元素的最小高度。这样能够防止 {{cssxref("height")}} 属性的[应用值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#应用值)小于 `min-height` 的值。
 
 {{InteractiveExample("CSS Demo: min-height")}}
 
@@ -112,5 +112,5 @@ form {
 
 ## 相关链接
 
-- [The box model](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
+- [The box model](/zh-CN/docs/Web/CSS/Guides/Box_model/Introduction), {{cssxref("box-sizing")}}
 - {{cssxref("height")}}, {{cssxref("max-height")}}

@@ -163,7 +163,7 @@ document.getElementById("results").innerHTML = Array.prototype.map
 
 ## 参见
 
-- {{cssxref("@scope")}} [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
+- {{cssxref("@scope")}} [at 规则](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules)
 - {{cssxref(":root")}} [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 - [DOM 树节点的选择和遍历](/zh-CN/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
 - {{domxref("Element.querySelector()")}} 和 {{domxref("Element.querySelectorAll()")}}

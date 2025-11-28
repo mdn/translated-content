@@ -150,19 +150,19 @@ MDN ページの種類を明確に識別するために、フロントマター�
 
 ### CSS モジュールランディングページ
 
-それぞれの **[CSS](/ja/docs/Web/CSS) モジュール**は、CSS の特定の機能や実装に対応する CSS 仕様書を表します。例えば、 [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)モジュールは、CSS のボックスの中や周りに空間を作成するための margin および padding プロパティを記述する[仕様書](/ja/docs/Web/CSS/CSS_box_model#仕様書)を表します。
+それぞれの **[CSS](/ja/docs/Web/CSS) モジュール**は、CSS の特定の機能や実装に対応する CSS 仕様書を表します。例えば、 [CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model)モジュールは、CSS のボックスの中や周りに空間を作成するための margin および padding プロパティを記述する[仕様書](/ja/docs/Web/CSS/Guides/Box_model#仕様書)を表します。
 
 **CSS モジュールランディングページ**は、モジュールが提供する機能の概要を提供し、モジュールが提供するすべてのプロパティ、データ型、CSS 関数などを一覧表示します。可能な場合、 CSS モジュールのランディングページでは、モジュールのプロパティを使用することで、どのようなことが実現できるかを対話式の例で簡単に示すことができます。モジュールランディングページは主にナビゲーションページとして機能しますが、モジュールの一目でわかるリファレンスページとしても機能します。
 
 他のモジュール内のプロパティや機能であっても、文書化するモジュールが提供する機能と密接に関連しているものについては、「関連概念」の節で扱うことができます。
-例えば、 `<easing-function>` データ型と `prefers-reduced-motion` メディアクエリーは CSS アニメーションモジュールでは扱われていませんが、CSS アニメーションと密接に関連しているため、CSS アニメーションモジュールのランディングページの[関連概念](/ja/docs/Web/CSS/CSS_animations#関連概念)の節で強調するとよいでしょう。
+例えば、 `<easing-function>` データ型と `prefers-reduced-motion` メディアクエリーは CSS アニメーションモジュールでは扱われていませんが、CSS アニメーションと密接に関連しているため、CSS アニメーションモジュールのランディングページの[関連概念](/ja/docs/Web/CSS/Guides/Animations#関連概念)の節で強調するとよいでしょう。
 
 #### 例
 
-- [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)
-- [CSS 基本ユーザーインターフェイス](/ja/docs/Web/CSS/CSS_basic_user_interface)
-- [CSS フィルター効果](/ja/docs/Web/CSS/CSS_filter_effects)
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
+- [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)
+- [CSS 基本ユーザーインターフェイス](/ja/docs/Web/CSS/Guides/Basic_user_interface)
+- [CSS フィルター効果](/ja/docs/Web/CSS/Guides/Filter_effects)
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)
 
 #### テンプレート
 
@@ -175,8 +175,8 @@ MDN ページの種類を明確に識別するために、フロントマター�
 #### 例
 
 - [`background-color` プロパティ](/ja/docs/Web/CSS/Reference/Properties/background-color)
-- [`:hover` 擬似クラス](/ja/docs/Web/CSS/:hover)
-- [`@media` アットルール](/ja/docs/Web/CSS/@media)
+- [`:hover` 擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/:hover)
+- [`@media` アットルール](/ja/docs/Web/CSS/Reference/At-rules/@media)
 
 #### テンプレート
 

@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`::column`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 [CSS 段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout)によってコンテナーのコンテンツを複数の段で表示するように設定した場合に生成される、個々の段を表します。 `::column` 擬似要素を使用すると、レイアウトに影響を与えないスタイルを、これらの生成された断片に適用することができます。
+**`::column`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、 [CSS 段組みレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout)によってコンテナーのコンテンツを複数の段で表示するように設定した場合に生成される、個々の段を表します。 `::column` 擬似要素を使用すると、レイアウトに影響を与えないスタイルを、これらの生成された断片に適用することができます。
 
 ## 構文
 
@@ -26,7 +26,7 @@ CSS の段組みレイアウトを使用してコンテナーのコンテンツ�
 
 `::column` 擬似要素は、 {{cssxref("::scroll-marker")}} 擬似要素を持つことができます。 {{cssxref("::before")}} や {{cssxref("::after")}} などのその他の擬似要素は、 `::column` では生成されません。 `::column::scroll-marker` を適用すると、元の[スクロールコンテナー](/ja/docs/Glossary/Scroll_container)のすべての段にマーカーが作成され、 `::scroll-marker` 擬似要素は、 `::column` 擬似要素そのものではなく、 `::column` 擬似要素の元の要素から継承されます。
 
-これは [CSS カルーセル](/ja/docs/Web/CSS/CSS_overflow/CSS_carousels)で役立ちます。 `::column` を使用して、それぞれの段の `::scroll-marker` 擬似要素を生成し、[CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)を使用してそれらを[スナップターゲット](/ja/docs/Glossary/Scroll_snap#スナップターゲット)として設定することができます。
+これは [CSS カルーセル](/ja/docs/Web/CSS/Guides/Overflow/Carousels)で役立ちます。 `::column` を使用して、それぞれの段の `::scroll-marker` 擬似要素を生成し、[CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)を使用してそれらを[スナップターゲット](/ja/docs/Glossary/Scroll_snap#スナップターゲット)として設定することができます。
 
 `::column` に適用できるスタイル設定はとても制限されていますが、将来は拡大される可能性があります。将来対応されるプロパティおよび値は、レイアウトに影響を与えないものに限定されます。
 
@@ -102,7 +102,7 @@ HTML は、[順序なしリスト](/ja/docs/Web/HTML/Reference/Elements/ul)で�
 
 #### CSS
 
-リストは、 {{cssxref("height")}} が固定されており、ビューポートの全幅に広がるように {{cssxref("width")}} が `100vw` に指定されています。次に、コンテンツが水平方向にスクロールするように {{cssxref("overflow-x")}} 値に `scroll` を設定し、 [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)を使用してそれぞれのアイテム、すなわち「ページ」へスナップするようにします。 {{cssxref("scroll-snap-type")}} に `x mandatory` を使用して、リストを[スクロールスナップコンテナー](/ja/docs/Glossary/Scroll_snap#スクロールスナップコンテナー)にします。最後に、 {{cssxref("columns")}} の値を `1` に設定して、リストのコンテンツを単一の列として表示するように強制します。また、 {{cssxref("text-align")}} の値に `center` を適用して、コンテンツをリストの中央に配置します。
+リストは、 {{cssxref("height")}} が固定されており、ビューポートの全幅に広がるように {{cssxref("width")}} が `100vw` に指定されています。次に、コンテンツが水平方向にスクロールするように {{cssxref("overflow-x")}} 値に `scroll` を設定し、 [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)を使用してそれぞれのアイテム、すなわち「ページ」へスナップするようにします。 {{cssxref("scroll-snap-type")}} に `x mandatory` を使用して、リストを[スクロールスナップコンテナー](/ja/docs/Glossary/Scroll_snap#スクロールスナップコンテナー)にします。最後に、 {{cssxref("columns")}} の値を `1` に設定して、リストのコンテンツを単一の列として表示するように強制します。また、 {{cssxref("text-align")}} の値に `center` を適用して、コンテンツをリストの中央に配置します。
 
 ```css hidden live-sample___column-layout-example live-sample___carousel-example
 * {
@@ -215,7 +215,7 @@ ul::column::scroll-marker:target-current {
 
 スクロールマーカーを押して、各ページに直接移動してみてください。現在のマーカーが強調表示されていることに注意してください。これにより、ページ内の現在の位置を確認することができます。また、スクロールマーカーグループまでタブキーを押してから、カーソルキーを使用して各ページを順番に表示してみてください。
 
-他のカルーセルの例は、 [CSS カルーセルの作成](/ja/docs/Web/CSS/CSS_overflow/CSS_carousels)を参照してください。
+他のカルーセルの例は、 [CSS カルーセルの作成](/ja/docs/Web/CSS/Guides/Overflow/Carousels)を参照してください。
 
 ## 仕様書
 
@@ -231,7 +231,7 @@ ul::column::scroll-marker:target-current {
 - {{cssxref("::scroll-marker")}}
 - {{cssxref("::scroll-marker-group")}}
 - {{cssxref(":target-current")}}
-- [CSS カルーセルの作成](/ja/docs/Web/CSS/CSS_overflow/CSS_carousels)
-- [CSS 段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout)モジュール
-- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
+- [CSS カルーセルの作成](/ja/docs/Web/CSS/Guides/Overflow/Carousels)
+- [CSS 段組みレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout)モジュール
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
 - [CSS Carousel Gallery](https://chrome.dev/carousel/) (chrome.dev, 2025)

@@ -69,7 +69,7 @@ background-image:
 - `none`
   - : 是一个表示无背景图的关键字。
 - `<image>`
-  - : {{cssxref("&lt;image&gt;")}} 用来标记将要显示的图片。支持[多背景](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)设置，背景之间以逗号隔开。
+  - : {{cssxref("&lt;image&gt;")}} 用来标记将要显示的图片。支持[多背景](/zh-CN/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)设置，背景之间以逗号隔开。
 
 ### 正规语法
 
@@ -133,7 +133,7 @@ div {
 
 ## 参见
 
-- [在 CSS 中实现图像合并](/zh-CN/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
+- [在 CSS 中实现图像合并](/zh-CN/docs/Web/CSS/Guides/Images/Implementing_image_sprites)
 - {{HTMLElement("img")}}
 - 与图像相关的数据类型：{{cssxref("&lt;image&gt;")}}、{{cssxref("&lt;gradient&gt;")}}
 - 与图像相关的函数：

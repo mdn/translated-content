@@ -21,7 +21,7 @@ MDN Web Docs には多くのガイドがあります。この記事は使用例�
   - : 最初の段階からテキストのスタイル設定、レイアウトの作成などに至るまで、CSS チュートリアルの完全版です。
 - [CSS レイアウトガイド](/ja/docs/Web/Guide/CSS/CSS_Layout)
   - : MDN には CSS レイアウトのガイドがたくさんありますが、このページではそれらを一斉に集めています。
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)
   - : CSS のアニメーションでは、ある CSS スタイル設定から別の CSS スタイル設定へのトランジションをアニメーション化することが可能です。このガイドは、アニメーションプロパティを使い始めるのに役立ちます。
 
 ## JavaScript
@@ -57,9 +57,9 @@ MDN Web Docs には多くのガイドがあります。この記事は使用例�
 
 ## フォント
 
-- [可変フォントガイド](/ja/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
+- [可変フォントガイド](/ja/docs/Web/CSS/Guides/Fonts/Variable_fonts)
   - : デザインに可変フォントを使用する方法を見つけましょう。
-- [Web Open Font Format (WOFF)](/ja/docs/Web/CSS/CSS_fonts/WOFF)
+- [Web Open Font Format (WOFF)](/ja/docs/Web/CSS/Guides/Fonts/WOFF)
   - : WOFF (Web Open Font Format) はウェブ上で誰もが使えるフリーのフォントファイルフォーマットです。
 
 ## ユーザーインターフェイス開発

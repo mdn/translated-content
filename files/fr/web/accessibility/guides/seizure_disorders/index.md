@@ -209,7 +209,7 @@ Avec les GIFs animés, assurez-vous que l'animation est inactive jusqu'à ce que
 
 ### Vidéos
 
-Comme pour les GIFs animés, l'utilisateur·ice doit appuyer sur un bouton ou cocher une case pour démarrer l'animation. Il existe de nombreuses façons de procéder, comme NE PAS ajouter l'attribut [`autoplay`](/fr/docs/Web/API/HTMLMediaElement/autoplay) à `<video controls>`, ou définir {{CSSxRef('animation-play-state')}} sur `paused` comme état initial. Pour voir un exemple puissant de la façon dont cela fonctionne, consultez l'article de Kirupa&nbsp;: [«&nbsp;Activer ou désactiver les animations&nbsp;» <sup>(angl.)</sup>](https://www.kirupa.com/html5/toggling_animations_on_off.htm). Kirupa utilise `animation-play-state` en combinaison avec {{CSSxRef('transition')}}, {{CSSxRef('transform')}} et [`prefers-reduced-motion`](/fr/docs/Web/CSS/@media/prefers-reduced-motion) pour créer une expérience très accessible sous le contrôle de l'utilisateur·ice.
+Comme pour les GIFs animés, l'utilisateur·ice doit appuyer sur un bouton ou cocher une case pour démarrer l'animation. Il existe de nombreuses façons de procéder, comme NE PAS ajouter l'attribut [`autoplay`](/fr/docs/Web/API/HTMLMediaElement/autoplay) à `<video controls>`, ou définir {{CSSxRef('animation-play-state')}} sur `paused` comme état initial. Pour voir un exemple puissant de la façon dont cela fonctionne, consultez l'article de Kirupa&nbsp;: [«&nbsp;Activer ou désactiver les animations&nbsp;» <sup>(angl.)</sup>](https://www.kirupa.com/html5/toggling_animations_on_off.htm). Kirupa utilise `animation-play-state` en combinaison avec {{CSSxRef('transition')}}, {{CSSxRef('transform')}} et [`prefers-reduced-motion`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) pour créer une expérience très accessible sous le contrôle de l'utilisateur·ice.
 
 [`animation-play-state`](/fr/docs/Web/CSS/Reference/Properties/animation-play-state) est une propriété CSS qui définit si une animation est en cours ou en pause.
 
@@ -219,7 +219,7 @@ div {
 }
 ```
 
-[Les transitions CSS](/fr/docs/Web/CSS/CSS_transitions) peuvent être utilisées pour définir la durée à zéro pour l'étape initiale de l'animation.
+[Les transitions CSS](/fr/docs/Web/CSS/Guides/Transitions) peuvent être utilisées pour définir la durée à zéro pour l'étape initiale de l'animation.
 
 ```css
 div {
@@ -321,7 +321,7 @@ La propriété animation est déjà puissante seule, mais combinée à d'autres 
 
 JavaScript est souvent utilisé pour contrôler les éléments HTML {{HTMLElement('canvas')}} et SVG. La plupart du code JavaScript qui s'applique à la vidéo HTML s'applique aussi à l'audio. `HTMLMediaElement.playbackRate` permet de contrôler la vitesse de lecture pour la vidéo et l'audio. Une valeur de 1.0 est la vitesse normale&nbsp;; 0.5 est la moitié de la vitesse, 2.0 est deux fois plus rapide. Un nombre négatif lit la vidéo ou l'audio à l'envers. Définissez la propriété playback rate&nbsp;: `HTMLMediaElement.playbackRate = playbackSpeed`.
 
-{{DOMxRef("document.getAnimations()")}} est une technologie expérimentale, et inclut [Animations CSS](/fr/docs/Web/CSS/CSS_animations), [Transitions CSS](/fr/docs/Web/CSS/CSS_transitions) et [Web Animations](/fr/docs/Web/API/Web_Animations_API). La page MDN sur {{DOMxRef("Document.getAnimations()")}} propose l'exemple de code suivant pour ralentir toutes les animations d'une page à la moitié de la vitesse&nbsp;:
+{{DOMxRef("document.getAnimations()")}} est une technologie expérimentale, et inclut [Animations CSS](/fr/docs/Web/CSS/Guides/Animations), [Transitions CSS](/fr/docs/Web/CSS/Guides/Transitions) et [Web Animations](/fr/docs/Web/API/Web_Animations_API). La page MDN sur {{DOMxRef("Document.getAnimations()")}} propose l'exemple de code suivant pour ralentir toutes les animations d'une page à la moitié de la vitesse&nbsp;:
 
 ```js
 document.getAnimations().forEach((animation) => {
@@ -464,7 +464,7 @@ La prise en charge de `prefers-reduced-motion` dans les navigateurs modernes pro
 }
 ```
 
-Pour voir un bon exemple d'utilisation de `prefers-reduced-motion`, consultez le document MDN [`prefers-reduced-motion`](/fr/docs/Web/CSS/@media/prefers-reduced-motion), ou l'exemple ci-dessous tiré de la section [«&nbsp;Nouveautés de Chrome 74&nbsp;» <sup>(angl.)</sup>](https://developer.chrome.com/blog/new-in-chrome-74/).
+Pour voir un bon exemple d'utilisation de `prefers-reduced-motion`, consultez le document MDN [`prefers-reduced-motion`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion), ou l'exemple ci-dessous tiré de la section [«&nbsp;Nouveautés de Chrome 74&nbsp;» <sup>(angl.)</sup>](https://developer.chrome.com/blog/new-in-chrome-74/).
 
 ```css
 button {
@@ -532,12 +532,12 @@ EnvironmentMQ (prévu dans Media Queries Niveau 5)
 
 - `inverted-colors`
   - : Selon la section [User Preference Media Features <sup>(angl.)</sup>](https://drafts.csswg.org/mediaqueries-5/#mf-user-preferences), «&nbsp;La fonction média [`inverted-colors` <sup>(angl.)</sup>](https://drafts.csswg.org/mediaqueries-5/#descdef-media-inverted-colors) indique si le contenu est affiché normalement ou si les couleurs sont inversées&nbsp;».
-- [`forced-colors`](/fr/docs/Web/CSS/@media/forced-colors)
+- [`forced-colors`](/fr/docs/Web/CSS/Reference/At-rules/@media/forced-colors)
   - : Dans [`forced-colors-mode` <sup>(angl.)</sup>](https://drafts.csswg.org/css-color-adjust-1/#forced-colors-mode), l'agent utilisateur impose la palette de couleurs préférée de l'utilisateur·ice sur la page, remplaçant les couleurs choisies par l'auteur·ice. D'après le document de travail du W3C Media Queries Niveau 5 sur forced-colors&nbsp;: _«&nbsp;La fonction média forced-colors permet de détecter si l'agent utilisateur a activé un [mode couleurs forcées <sup>(angl.)</sup>](https://drafts.csswg.org/css-color-adjust-1/#forced-colors-mode) où il impose une palette de couleurs limitée choisie par l'utilisateur·ice sur la page&nbsp;»_. L'utilisateur·ice doit être informé·e de cette capacité, et elle doit fonctionner avec la valeur appropriée pour la requête média prefers-color-scheme.
 - `light-level`
   - : D'après le document de travail du W3C Media Queries Niveau 5 sur light-level&nbsp;: _«&nbsp;La fonction média [`light-level` <sup>(angl.)</sup>](https://drafts.csswg.org/mediaqueries-5/#descdef-media-light-level) permet d'interroger le niveau de lumière ambiante dans lequel l'appareil est utilisé, pour permettre à l'auteur·ice d'adapter le style du document en conséquence.&nbsp;»_ Cela sera très utile pour celles et ceux qui ont des problèmes de motricité ou des difficultés cognitives, qui ne trouvent pas le bon «&nbsp;bouton&nbsp;» pour changer les réglages de l'écran.
 - prefers-contrast
-  - : D'après le document de travail du W3C Media Queries Niveau 5 sur [`prefers-contrast`](/fr/docs/Web/CSS/@media/prefers-contrast)&nbsp;: _«&nbsp;La fonction média prefers-contrast permet de détecter si l'utilisateur·ice a demandé au système d'augmenter ou de diminuer le contraste entre les couleurs adjacentes. Par exemple, beaucoup ont du mal à lire un texte dont le contraste avec le fond est faible et préfèrent un contraste plus élevé.&nbsp;»_ Parfois, trop de contraste peut créer un effet de halo autour du texte et réduire la lisibilité. Mettre le contraste sous le contrôle de l'utilisateur·ice est un vrai plus pour l'accessibilité.
+  - : D'après le document de travail du W3C Media Queries Niveau 5 sur [`prefers-contrast`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast)&nbsp;: _«&nbsp;La fonction média prefers-contrast permet de détecter si l'utilisateur·ice a demandé au système d'augmenter ou de diminuer le contraste entre les couleurs adjacentes. Par exemple, beaucoup ont du mal à lire un texte dont le contraste avec le fond est faible et préfèrent un contraste plus élevé.&nbsp;»_ Parfois, trop de contraste peut créer un effet de halo autour du texte et réduire la lisibilité. Mettre le contraste sous le contrôle de l'utilisateur·ice est un vrai plus pour l'accessibilité.
 
 #### Interface `MediaQueryList`
 

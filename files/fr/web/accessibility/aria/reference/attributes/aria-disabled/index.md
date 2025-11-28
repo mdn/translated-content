@@ -50,7 +50,7 @@ Si vous souhaitez que le contrôle reste dans l'ordre de tabulation, notamment s
 }
 ```
 
-La [requête média `forced-colors`](/fr/docs/Web/CSS/@media/forced-colors) détecte si l'agent utilisateur a activé un mode couleurs forcées&nbsp;: dans ce cas, la couleur du texte et des bordures est définie sur la couleur système [GrayText](/fr/docs/Web/CSS/system-color#syntax).
+La [requête média `forced-colors`](/fr/docs/Web/CSS/Reference/At-rules/@media/forced-colors) détecte si l'agent utilisateur a activé un mode couleurs forcées&nbsp;: dans ce cas, la couleur du texte et des bordures est définie sur la couleur système [GrayText](/fr/docs/Web/CSS/system-color#syntax).
 
 À noter&nbsp;: avec `aria-disabled`, il faut toujours prévoir le style visuel pour signaler l'état désactivé, notamment en mode contraste élevé sous Windows.
 

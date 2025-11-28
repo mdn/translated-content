@@ -299,7 +299,7 @@ input:not(:checked):not(:disabled) {
 
 Par défaut, tous les identifiants doivent être en minuscules. Cela s'applique aux sélecteurs, fonctions et mots-clés. Les identifiants personnalisés doivent utiliser le [kebab-case](/fr/docs/Glossary/Kebab_case), comme `--custom-property` ou `my-animation`. Consultez le [guide de style HTML](/fr/docs/MDN/Writing_guidelines/Code_style_guide/HTML#convention_de_casse_sur_mdn) pour les conventions de casse des identifiants et classes HTML référencés comme sélecteurs CSS.
 
-Des exceptions existent pour les mots-clés définis dans SVG, qui pour des raisons historiques sont en [camelCase](/fr/docs/Glossary/Camel_case), et doivent être écrits ainsi pour la lisibilité. Ces mots-clés incluent&nbsp;: [`currentColor`](/fr/docs/Web/CSS/color_value#mot-clé_currentcolor), les valeurs de {{CSSxRef("text-rendering")}}, {{CSSxRef("shape-rendering")}}, {{CSSxRef("pointer-events")}} et {{CSSxRef("color-interpolation-filters")}}.
+Des exceptions existent pour les mots-clés définis dans SVG, qui pour des raisons historiques sont en [camelCase](/fr/docs/Glossary/Camel_case), et doivent être écrits ainsi pour la lisibilité. Ces mots-clés incluent&nbsp;: [`currentColor`](/fr/docs/Web/CSS/Reference/Values/color_value#mot-clé_currentcolor), les valeurs de {{CSSxRef("text-rendering")}}, {{CSSxRef("shape-rendering")}}, {{CSSxRef("pointer-events")}} et {{CSSxRef("color-interpolation-filters")}}.
 
 ## Couleurs
 
@@ -419,7 +419,7 @@ Si vous avez différents styles alternatifs sélectionnés par des seuils de req
 
 ### Requêtes de média « mobile first »
 
-Dans une feuille de style qui contient des styles [media query](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) pour différentes tailles cibles de zone d'affichage (<i lang="en">viewport</i>), incluez d'abord la mise en forme pour les écrans étroits/mobiles avant toute autre media query. Ajoutez la mise en forme pour les tailles de zone d'affichage plus larges via des media queries successives. Suivre cette règle présente de nombreux avantages expliqués dans [Conception réactive](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
+Dans une feuille de style qui contient des styles [media query](/fr/docs/Web/CSS/Guides/Media_queries/Using) pour différentes tailles cibles de zone d'affichage (<i lang="en">viewport</i>), incluez d'abord la mise en forme pour les écrans étroits/mobiles avant toute autre media query. Ajoutez la mise en forme pour les tailles de zone d'affichage plus larges via des media queries successives. Suivre cette règle présente de nombreux avantages expliqués dans [Conception réactive](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
 
 ```css example-good
 /* Mise en page CSS par défaut pour les écrans étroits */

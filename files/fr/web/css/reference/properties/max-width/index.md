@@ -6,7 +6,7 @@ l10n:
   sourceCommit: de7d710496266ccf4fce5ade75a67e6605f60ce5
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`max-width`** est utilisée pour définir la largeur maximale d'un élément. Elle empêche la [valeur utilisée](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_utilisée) de la propriété [`width`](/fr/docs/Web/CSS/Reference/Properties/width) de devenir supérieure à la valeur spécifiée par `max-width`.
+La propriété [CSS](/fr/docs/Web/CSS) **`max-width`** est utilisée pour définir la largeur maximale d'un élément. Elle empêche la [valeur utilisée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée) de la propriété [`width`](/fr/docs/Web/CSS/Reference/Properties/width) de devenir supérieure à la valeur spécifiée par `max-width`.
 
 {{InteractiveExample("CSS Demo: max-width")}}
 
@@ -74,9 +74,9 @@ max-width: unset;
 
 ### Valeurs
 
-- [`<length>`](/fr/docs/Web/CSS/length)
+- [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)
   - : Définit la largeur maximale avec une valeur absolue.
-- [`<percentage>`](/fr/docs/Web/CSS/percentage)
+- [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)
   - : Définit la largeur maximale avec une valeur relative à la largeur du bloc englobant.
 - <code>fit-content(<a href="/fr/docs/Web/CSS/length-percentage">&lt;length-percentage&gt;</a>)</code>
   - : Utilise la formule `fit-content` avec l'espace disponible remplacé par l'argument fourni, c'est-à-dire `min(max-content, max(min-content, argument))`.
@@ -147,6 +147,6 @@ Dans cet exemple, l'élément `enfant` aura la largeur la plus petite entre 150 
 
 ## Voir aussi
 
-- [Le modèle de boîtes](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) et [`box-sizing`](/fr/docs/Web/CSS/Reference/Properties/box-sizing)
+- [Le modèle de boîtes](/fr/docs/Web/CSS/Guides/Box_model/Introduction) et [`box-sizing`](/fr/docs/Web/CSS/Reference/Properties/box-sizing)
 - [`width`](/fr/docs/Web/CSS/Reference/Properties/width), [`min-width`](/fr/docs/Web/CSS/Reference/Properties/min-width)
 - Les propriétés logiques correspondantes [`max-block-size`](/fr/docs/Web/CSS/Reference/Properties/max-block-size) et [`max-inline-size`](/fr/docs/Web/CSS/Reference/Properties/max-inline-size)

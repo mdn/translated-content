@@ -45,7 +45,7 @@ a::after {
 ```
 
 > [!NOTE]
-> Les pseudo-éléments générés par `::before` et `::after` sont [contenus dans la boîte de mise en forme de l'élément](https://www.w3.org/TR/CSS2/generate.html#before-after-content). Aussi, [`::before`](/fr/docs/Web/CSS/Reference/Selectors/::before) et `::after` ne s'appliquent pas aux _[éléments remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties)_ tels que les éléments [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) ou [`<br>`](/fr/docs/Web/HTML/Reference/Elements/br).
+> Les pseudo-éléments générés par `::before` et `::after` sont [contenus dans la boîte de mise en forme de l'élément](https://www.w3.org/TR/CSS2/generate.html#before-after-content). Aussi, [`::before`](/fr/docs/Web/CSS/Reference/Selectors/::before) et `::after` ne s'appliquent pas aux _[éléments remplacés](/fr/docs/Web/CSS/Guides/Images/Replaced_element_properties)_ tels que les éléments [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) ou [`<br>`](/fr/docs/Web/HTML/Reference/Elements/br).
 
 ## Syntaxe
 
@@ -142,7 +142,7 @@ On peut mettre en forme du texte ou des images avec la propriété {{CSSxRef("co
 
 ### Bulles d'information
 
-Dans l'exemple suivant, on illustre le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) `::after` avec l'expression CSS [`attr()`](/fr/docs/Web/CSS/attr) et un attribut de données personnalisé `data-descr` afin de créer une bulle d'information de type glossaire en CSS, sans JavaScript.
+Dans l'exemple suivant, on illustre le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) `::after` avec l'expression CSS [`attr()`](/fr/docs/Web/CSS/Reference/Values/attr) et un attribut de données personnalisé `data-descr` afin de créer une bulle d'information de type glossaire en CSS, sans JavaScript.
 
 On peut également aider les personnes qui naviguent au clavier avec cette technique, en ajoutant un `tabindex` de `0` pour faire un `span` focusable, et en utilisant la sélection `:focus`. Cela montre à quel point les options [`::before`](/fr/docs/Web/CSS/Reference/Selectors/::before) and `::after` peuvent être flexibles, bien que, pour l'expérience la plus accessible, un widget de divulgation sémantique créé d'une autre manière serait probablement plus approprié.
 

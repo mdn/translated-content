@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 82ef8b5c50a0045add71f1a06f5be1db781aede4
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`min-width`** est utilisée pour définir la largeur minimale d'un élément donné. Elle empêche [la valeur utilisée](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_utilisée) de la propriété [`width`](/fr/docs/Web/CSS/Reference/Properties/width) de devenir inférieure à la valeur spécifiée par `min-width`.
+La propriété [CSS](/fr/docs/Web/CSS) **`min-width`** est utilisée pour définir la largeur minimale d'un élément donné. Elle empêche [la valeur utilisée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée) de la propriété [`width`](/fr/docs/Web/CSS/Reference/Properties/width) de devenir inférieure à la valeur spécifiée par `min-width`.
 
 {{InteractiveExample("CSS Demo: min-width")}}
 
@@ -73,9 +73,9 @@ min-width: unset;
 
 ### Valeurs
 
-- [`<length>`](/fr/docs/Web/CSS/length)
+- [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)
   - : La largeur minimale sous la forme d'une valeur absolue. Une largeur négative rendra la déclaration invalide.
-- [`<percentage>`](/fr/docs/Web/CSS/percentage)
+- [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)
   - : La largeur minimale, exprimée comme une fraction de la largeur du bloc englobant. Les valeurs négatives rendront la déclaration invalide.
 - `auto`
   - : Le navigateur calculera et sélectionnera une valeur de `min-width` pour l'élément ciblé.
@@ -84,7 +84,7 @@ min-width: unset;
 - `min-content`
   - : La valeur intrinsèque minimale pour `min-width`.
 - `fit-content(<length-percentage>)`
-  - : Utilise la formule `fit-content` avec le maximum d'espace disponible remplacé par l'argument indiqué, c'est-à-dire `min(max-content, max(min-content, argument))`. Voir [`<length-percentage>`](/fr/docs/Web/CSS/length-percentage) pour le type de valeur qui peut être utilisée en argument.
+  - : Utilise la formule `fit-content` avec le maximum d'espace disponible remplacé par l'argument indiqué, c'est-à-dire `min(max-content, max(min-content, argument))`. Voir [`<length-percentage>`](/fr/docs/Web/CSS/Reference/Values/length-percentage) pour le type de valeur qui peut être utilisée en argument.
 
 ## Définition formelle
 
@@ -140,4 +140,4 @@ p {
 - [`max-width`](/fr/docs/Web/CSS/Reference/Properties/max-width)
 - [`min-height`](/fr/docs/Web/CSS/Reference/Properties/min-height)
 - [`box-sizing`](/fr/docs/Web/CSS/Reference/Properties/box-sizing)
-- [Le modèle de boîtes](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [Le modèle de boîtes](/fr/docs/Web/CSS/Guides/Box_model/Introduction)

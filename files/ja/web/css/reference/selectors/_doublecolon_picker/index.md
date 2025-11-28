@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-`::picker()` は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、要素のピッカー部分を対象とします。例えば、[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)のドロップダウンピッカーなどが該当します。
+`::picker()` は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、要素のピッカー部分を対象とします。例えば、[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)のドロップダウンピッカーなどが該当します。
 
 ## 構文
 
@@ -39,9 +39,9 @@ l10n:
 
 ### ピッカーのアンカー位置指定
 
-上記の暗黙的な呼び出し元/ポップオーバーの関係によるさらなる効果として、 `<select>` 要素とピッカーの間にも暗黙のアンカー参照が存在します。これは、ピッカーが [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)によって自動的に選択要素に関連付けられるということです。これにはいくつかの利点があり、特に以下の点が挙げられます。
+上記の暗黙的な呼び出し元/ポップオーバーの関係によるさらなる効果として、 `<select>` 要素とピッカーの間にも暗黙のアンカー参照が存在します。これは、ピッカーが [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)によって自動的に選択要素に関連付けられるということです。これにはいくつかの利点があり、特に以下の点が挙げられます。
 
-- ブラウザーの既定のスタイルでは、ピッカーはボタン（アンカー）を基準に位置決めされます。この位置は、[アンカーを基準とした要素の位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning/Using#positioning_elements_relative_to_their_anchor)で説明されているようにカスタマイズできます。参考までに、関連の既定のスタイルは次の通りです：
+- ブラウザーの既定のスタイルでは、ピッカーはボタン（アンカー）を基準に位置決めされます。この位置は、[アンカーを基準とした要素の位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#positioning_elements_relative_to_their_anchor)で説明されているようにカスタマイズできます。参考までに、関連の既定のスタイルは次の通りです：
 
   ```css
   inset: auto;

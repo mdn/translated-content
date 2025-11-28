@@ -1,12 +1,11 @@
 ---
 title: border-bottom
 slug: Web/CSS/Reference/Properties/border-bottom
-original_slug: Web/CSS/border-bottom
 l10n:
-  sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`border-bottom`** は[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の下側の[境界](/ja/docs/Web/CSS/Reference/Properties/border)のプロパティをすべて設定します。
+**`border-bottom`** は[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) プロパティで、要素の下側の[境界](/ja/docs/Web/CSS/Reference/Properties/border)を設定します。これは {{cssxref("border-bottom-width")}}、{{cssxref("border-bottom-style")}}、{{cssxref("border-bottom-color")}} の値を設定します。
 
 {{InteractiveExample("CSS デモ: border-bottom")}}
 
@@ -27,21 +26,21 @@ border-bottom: thick double #32a1ce;
 ```
 
 ```css interactive-example-choice
-border-bottom: 4mm ridge rgba(211, 220, 50, 0.6);
+border-bottom: 4mm ridge rgb(211 220 50 / 0.6);
 ```
 
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これは周囲に境界線があるボックスです。
   </div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #8b008b;
+  background-color: #eeeeee;
+  color: darkmagenta;
   padding: 0.75em;
   width: 80%;
   height: 100px;

@@ -1,17 +1,18 @@
 ---
-title: window.top
+title: "Window: top プロパティ"
+short-title: top
 slug: Web/API/Window/top
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef}}
 
 ウィンドウ階層における最上位のウィンドウへの参照を返します。
 
-## 構文
+## 値
 
-```
-var topWindow = window.top;
-```
+The reference to the topmost window.
 
 ## 注記
 

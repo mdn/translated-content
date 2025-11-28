@@ -70,7 +70,7 @@ outline-color: unset;
 - {{cssxref("&lt;color&gt;")}}
   - : 輪郭線の色であり、`<color>` で指定します。
 
-仕様書では、追加の値として `auto` も挙げられていますが、これは現在どのブラウザーも対応していません。実装された場合、 `auto` は、輪郭線が `auto` に設定されない限り [`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_キーワード) に計算されます。ただし、 [`outline-style`](/ja/docs/Web/CSS/Reference/Properties/outline-style) が `auto` に設定されている場合は、[アクセントカラー](/ja/docs/Web/CSS/Reference/Properties/accent-color)に計算されます。
+仕様書では、追加の値として `auto` も挙げられていますが、これは現在どのブラウザーも対応していません。実装された場合、 `auto` は、輪郭線が `auto` に設定されない限り [`currentcolor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード) に計算されます。ただし、 [`outline-style`](/ja/docs/Web/CSS/Reference/Properties/outline-style) が `auto` に設定されている場合は、[アクセントカラー](/ja/docs/Web/CSS/Reference/Properties/accent-color)に計算されます。
 
 ## 解説
 
@@ -80,7 +80,7 @@ outline-color: unset;
 
 ## アクセシビリティ
 
-独自の[フォーカススタイル](/ja/docs/Web/CSS/:focus)を作成するときに、ふつう {{cssxref("outline")}} プロパティを調整します。輪郭線の色を変更するのであれば、輪郭線と、それが配置される部分の背景のコントラスト比が、弱視の人でも知覚できるよう高くなっているか確認することが重要です。
+独自の[フォーカススタイル](/ja/docs/Web/CSS/Reference/Selectors/:focus)を作成するときに、ふつう {{cssxref("outline")}} プロパティを調整します。輪郭線の色を変更するのであれば、輪郭線と、それが配置される部分の背景のコントラスト比が、弱視の人でも知覚できるよう高くなっているか確認することが重要です。
 
 色のコントラスト比は、テキスト及び背景色の明度の値を比較することで決定されます。現在の[ウェブコンテンツアクセシビリティガイドライン (Web Content Accessibility Guidelines, WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/) によれば、文字列コンテンツで 4.5:1 以上、見出しのような大きめの文字列で 3:1 以上のコントラスト比が求められています。大きめの文字列とは、[太字](/ja/docs/Web/CSS/Reference/Properties/font-weight)ならば 18.66px 以上、または 24px 以上と定義されています。
 

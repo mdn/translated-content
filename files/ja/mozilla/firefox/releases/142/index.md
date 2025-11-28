@@ -19,8 +19,8 @@ Firefox 142 は、米国時間 [2025 年 8 月 19 日](https://whattrainisitnow.
 
 ### CSS
 
-- {{cssxref("@scope")}} の内部の [`&` セレクター](/ja/docs/Web/CSS/Nesting_selector) が、[スコープ開始セレクターの詳細度](/ja/docs/Web/CSS/@scope#scope_の詳細度) を継承しないようになりました。
-  これにより `@scope` の内部の `&` セレクターは [CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting) との一貫性が保たれて、予期せぬ詳細度の違いを避けられます ([CSS 入れ子と詳細度](/ja/docs/Web/CSS/CSS_nesting/Nesting_and_specificity) をご覧ください) ([Firefox bug 1975531](https://bugzil.la/1975531))。
+- {{cssxref("@scope")}} の内部の [`&` セレクター](/ja/docs/Web/CSS/Reference/Selectors/Nesting_selector) が、[スコープ開始セレクターの詳細度](/ja/docs/Web/CSS/Reference/At-rules/@scope#scope_の詳細度) を継承しないようになりました。
+  これにより `@scope` の内部の `&` セレクターは [CSS 入れ子](/ja/docs/Web/CSS/Guides/Nesting) との一貫性が保たれて、予期せぬ詳細度の違いを避けられます ([CSS 入れ子と詳細度](/ja/docs/Web/CSS/Guides/Nesting/Nesting_and_specificity) をご覧ください) ([Firefox bug 1975531](https://bugzil.la/1975531))。
 
 ### JavaScript
 

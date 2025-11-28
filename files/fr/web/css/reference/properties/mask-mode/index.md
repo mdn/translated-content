@@ -37,7 +37,7 @@ La propriété `mask-mode` est définie avec un ou plusieurs mots-clés parmi ce
 - `match-source`
   - : Si la propriété [`mask-image`](/fr/docs/Web/CSS/Reference/Properties/mask-image) est de type `<mask-source>`, les valeurs de luminance de l'image doivent être utilisées comme valeurs pour le masque.
 
-    Si elle est de type [`<image>`](/fr/docs/Web/CSS/image), ce seront les valeurs de transparence (canal alpha) qui seront utilisées.
+    Si elle est de type [`<image>`](/fr/docs/Web/CSS/Reference/Values/image), ce seront les valeurs de transparence (canal alpha) qui seront utilisées.
 
 ## Définition formelle
 

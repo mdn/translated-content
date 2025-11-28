@@ -15,7 +15,7 @@ l10n:
 
 ### CSS
 
-- [CSS Nesting](/ja/docs/Web/CSS/CSS_nesting) モジュールと [`&` ネスティングセレクター](/ja/docs/Web/CSS/Nesting_selector) を Firefox でサポートしました。これは入れ子になった CSS を開発者が書くことを可能にして、CSS スタイルシートの可読性、モジュール性、保守性の向上に役立ちます。また、CSS のファイルサイズの縮小に役立つ可能性もあり、ダウンロードサイズも削減します。([Firefox bug 1835066](https://bugzil.la/1835066)、[Firefox bug 1840781](https://bugzil.la/1840781))
+- [CSS Nesting](/ja/docs/Web/CSS/Guides/Nesting) モジュールと [`&` ネスティングセレクター](/ja/docs/Web/CSS/Reference/Selectors/Nesting_selector) を Firefox でサポートしました。これは入れ子になった CSS を開発者が書くことを可能にして、CSS スタイルシートの可読性、モジュール性、保守性の向上に役立ちます。また、CSS のファイルサイズの縮小に役立つ可能性もあり、ダウンロードサイズも削減します。([Firefox bug 1835066](https://bugzil.la/1835066)、[Firefox bug 1840781](https://bugzil.la/1840781))
 
 - [`math-style`](/ja/docs/Web/CSS/Reference/Properties/math-style) および [`math-depth`](/ja/docs/Web/CSS/Reference/Properties/math-depth) プロパティをサポートしました。また、[`font-size`](/ja/docs/Web/CSS/Reference/Properties/font-size#値) プロパティの値 `math` もサポートしました ([Firefox bug 1845516](https://bugzil.la/1845516))。
 
@@ -67,7 +67,7 @@ l10n:
   矢印キーを押すと選択した領域の移動、<kbd>Ctrl</kbd> + 矢印キー (Mac では <kbd>Cmd</kbd> + 矢印キー) を押すと選択した領域のリサイズになります。
   これらのキーコンビネーションを使用するときに <kbd>Shift</kbd> キーを押し続けると、移動やリサイズを加速します ([Firefox bug 1262782](https://bugzil.la/1262782))。
 
-- ハイライト擬似要素 ([`::highlight()`](/ja/docs/Web/CSS/::highlight)、[`::target-text`](/ja/docs/Web/CSS/::target-text)、[`::spelling-error`](/ja/docs/Web/CSS/::spelling-error)、[`::grammar-error`](/ja/docs/Web/CSS/::grammar-error)、[`::selection`](/ja/docs/Web/CSS/::selection)) でサポートしていないプロパティを、[ページインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/#page-inspector) の CSS ルールパネルで報告するようになりました ([Firefox bug 1842157](https://bugzil.la/1842157))。
+- ハイライト擬似要素 ([`::highlight()`](/ja/docs/Web/CSS/Reference/Selectors/::highlight)、[`::target-text`](/ja/docs/Web/CSS/Reference/Selectors/::target-text)、[`::spelling-error`](/ja/docs/Web/CSS/Reference/Selectors/::spelling-error)、[`::grammar-error`](/ja/docs/Web/CSS/Reference/Selectors/::grammar-error)、[`::selection`](/ja/docs/Web/CSS/Reference/Selectors/::selection)) でサポートしていないプロパティを、[ページインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/#page-inspector) の CSS ルールパネルで報告するようになりました ([Firefox bug 1842157](https://bugzil.la/1842157))。
 
 ## アドオン開発者向けの変更点一覧
 

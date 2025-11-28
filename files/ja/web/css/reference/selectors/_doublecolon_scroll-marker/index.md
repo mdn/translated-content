@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`::scroll-marker`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、任意の要素内に生成でき、そのスクロールマーカーを表します。すべての要素が `::scroll-marker` 擬似要素を持つことができ、これは最も近い{{glossary("scroll container", "スクロールコンテナー")}}である祖先の {{cssxref("::scroll-marker-group")}} 内に配置されます。スクロールマーカーは、スクロールターゲットがマーカーの元の要素であるアンカー（{{htmlelement("a")}} 要素）のように動作し、アクティブになると、その要素までスクロールコンテナをスクロールします。
+**`::scroll-marker`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、任意の要素内に生成でき、そのスクロールマーカーを表します。すべての要素が `::scroll-marker` 擬似要素を持つことができ、これは最も近い{{glossary("scroll container", "スクロールコンテナー")}}である祖先の {{cssxref("::scroll-marker-group")}} 内に配置されます。スクロールマーカーは、スクロールターゲットがマーカーの元の要素であるアンカー（{{htmlelement("a")}} 要素）のように動作し、アクティブになると、その要素までスクロールコンテナをスクロールします。
 
 ## 構文
 
@@ -28,7 +28,7 @@ l10n:
 
 ## 例
 
-[CSS によるカルーセルの作成](/ja/docs/Web/CSS/CSS_overflow/CSS_carousels)に、 `::scroll-marker` 擬似要素のその他の使用例があります。
+[CSS によるカルーセルの作成](/ja/docs/Web/CSS/Guides/Overflow/Carousels)に、 `::scroll-marker` 擬似要素のその他の使用例があります。
 
 ### カルーセルスクロールマーカーの作成
 
@@ -118,7 +118,7 @@ li::scroll-marker {
 
 ### カスタムスクロールマーカーの番号付けとスタイル
 
-この例は、スクロールマーカーに別のスタイル設定を適用し、[CSS カウンター](/ja/docs/Web/CSS/CSS_lists)を使用して各マーカーに表示される数値を増加させる点を除いて、前回の例と同じです。CSS の違いについては、次の節で説明します。
+この例は、スクロールマーカーに別のスタイル設定を適用し、[CSS カウンター](/ja/docs/Web/CSS/Guides/Lists)を使用して各マーカーに表示される数値を増加させる点を除いて、前回の例と同じです。CSS の違いについては、次の節で説明します。
 
 ### CSS
 
@@ -190,7 +190,7 @@ li:last-child::scroll-marker {
 - {{cssxref("::scroll-button()")}}
 - {{cssxref("::scroll-marker-group")}}
 - {{cssxref(":target-current")}}
-- [CSS によるカルーセルの作成](/ja/docs/Web/CSS/CSS_overflow/CSS_carousels)
-- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
-- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
+- [CSS によるカルーセルの作成](/ja/docs/Web/CSS/Guides/Overflow/Carousels)
+- [CSS リストとカウンター](/ja/docs/Web/CSS/Guides/Lists)モジュール
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
 - [CSS Carousel Gallery](https://chrome.dev/carousel/) (chrome.dev, 2025)
