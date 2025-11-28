@@ -83,7 +83,7 @@ text-decoration-style: unset;
   - : 破線を描画します。
 - `wavy`
   - : 波線を描画します。
-- `\-moz-none`
+- `-moz-none`
   - : 線を描画しません。代わりに {{cssxref("text-decoration-line", "text-decoration-line: none")}} を使用してください。
 
 ## 公式定義
