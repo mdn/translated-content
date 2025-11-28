@@ -31,7 +31,7 @@ var request = indexedDB.deleteDatabase(nom, options);
 
 - `nom`
   - : Le nom de la base de données qu'on souhaite supprimer. Tenter de supprimer une base de données qui n'existe pas ne déclenchera pas d'exception (contrairement à la tentative de suppression d'un magasin d'objets inexistant avec {{domxref("IDBDatabase.deleteObjectStore()")}} qui déclenchera bien une exception).
-- `options` {{NonStandardBadge}}
+- `options` {{Non-standard_Inline}}
   - : Dans Gecko, à partir de [la version 26](/fr/docs/Mozilla/Firefox/Releases/26), il est possible d'inclure un paramètre pour indiquer le stockage de la base. La valeur peut être `permanent` (la valeur par défaut) ou `temporary` si on souhaite supprimer une base de données qui fait partie d'une mémoire partagée.
 
 ### Valeur de retour
