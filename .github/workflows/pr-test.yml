@@ -151,7 +151,7 @@ jobs:
               ARGS+=("-f" "$CONTENT_TRANSLATED_ROOT/$file_without_prefix")
           done
 
-          npm run rari build -- --no-basic --json-issues --data-issues "${ARGS[@]}"
+          npx rari build --no-basic --json-issues --data-issues "${ARGS[@]}"
 
           # Workaround, as fred-ssr doesn't copy assets.
           cp -vR node_modules/@mdn/fred/out/. "$BUILD_OUT_ROOT"

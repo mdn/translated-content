@@ -136,7 +136,7 @@ jobs:
 
           echo "Running markdownlint --fix"
           MD_LINT_FAILED=false
-          MD_LINT_LOG=$(npm run markdownlint-cli2 --fix "${files_to_lint[@]}" 2>&1) || MD_LINT_FAILED=true
+          MD_LINT_LOG=$(npx markdownlint-cli2 --fix "${files_to_lint[@]}" 2>&1) || MD_LINT_FAILED=true
           echo "MD_LINT_LOG<<${EOF}" >> "$GITHUB_OUTPUT"
           echo "${MD_LINT_LOG}" >> "$GITHUB_OUTPUT"
           echo "${EOF}" >> "$GITHUB_OUTPUT"
@@ -149,7 +149,7 @@ jobs:
           for file in "${files_to_lint[@]}"; do
               absolute_paths+=("$(realpath -e "$file")")
           done
-          FM_LINT_LOG=$(cd ${{ github.workspace }}/mdn/content && npm run fix:fm --config-file ${{ github.workspace }}/.front-matter-config.json "${absolute_paths[@]}" 2>&1) || FM_LINT_FAILED=true
+          FM_LINT_LOG=$(cd ${{ github.workspace }}/mdn/content && npm run fix:fm -- --config-file ${{ github.workspace }}/.front-matter-config.json "${absolute_paths[@]}" 2>&1) || FM_LINT_FAILED=true
           echo "FM_LINT_LOG<<${EOF}" >> "$GITHUB_OUTPUT"
           echo "${FM_LINT_LOG}" >> "$GITHUB_OUTPUT"
           echo "${EOF}" >> "$GITHUB_OUTPUT"

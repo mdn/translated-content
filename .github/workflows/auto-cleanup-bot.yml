@@ -67,7 +67,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         working-directory: ${{ github.workspace }}/mdn/content
         run: |
-          npm run content fix-flaws --locale "${{ matrix.lang }}"
+          npm run content fix-flaws -- --locale "${{ matrix.lang }}"
 
       - name: Lint Markdown files
         run: |
