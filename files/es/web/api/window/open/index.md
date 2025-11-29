@@ -140,7 +140,7 @@ If the `strWindowFeatures` parameter is used and if no position features are def
 
 ### Características de funcionalidad de window
 
-- attention {{NonStandardBadge}}
+- attention {{Non-standard_Inline}}
   - : If this feature is specified, the window is able to open even if another application is already in the foreground. This feature is for Firefox OS applications only, and is currently restricted to certified applications. See [Internal (Certified) app permissions](</es/docs/Archive/B2G_OS/Firefox_OS_apps/App_permissions#internal_(certified)_app_permissions>) for more information. Supported in: ![](firefox_os_logo_wordmark-75px.png)
 
 - dependent
