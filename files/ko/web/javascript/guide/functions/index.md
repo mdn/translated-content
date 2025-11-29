@@ -1,5 +1,7 @@
 ---
 title: 함수
+slug: Web/JavaScrip---
+title: 함수
 slug: Web/JavaScript/Guide/Functions
 ---
 

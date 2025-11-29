@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Properties/border
 original_slug: Web/CSS/border
 ---
 
-[CSS](/ko/docs/Web/CSS) **`border`** [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)은 요소의 테두리를 설정합니다. {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}}의 값을 설정합니다.
+[CSS](/ko/docs/Web/CSS) **`border`** [단축 속성](/ko/docs/Web/CSS/Guides/Cascade/Shorthand_properties)은 요소의 테두리를 설정합니다. {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}}의 값을 설정합니다.
 
 {{InteractiveExample("CSS Demo: border")}}
 
@@ -91,7 +91,7 @@ border: unset;
 
 ## 설명
 
-다른 단축 속성과 마찬가지로, 생략한 속성은 [초깃값](/ko/docs/Web/CSS/CSS_cascade/Value_processing)으로 설정됩니다. 한 가지 중요한 점은, `border`를 사용해서는 {{cssxref("border-image")}}에 원하는 값을 지정할 수는 없고 대신 초깃값인 `none`이 자동으로 설정됩니다.
+다른 단축 속성과 마찬가지로, 생략한 속성은 [초깃값](/ko/docs/Web/CSS/Guides/Cascade/Property_value_processing)으로 설정됩니다. 한 가지 중요한 점은, `border`를 사용해서는 {{cssxref("border-image")}}에 원하는 값을 지정할 수는 없고 대신 초깃값인 `none`이 자동으로 설정됩니다.
 
 `border` 단축 속성은 요소의 테두리를 모두 동일하게 설정하고 싶을 때 특히 유용합니다. 그러나 서로의 테두리를 다르게 하고 싶다면 네 면을 각각 설정할 수 있는 본디 속성 {{Cssxref("border-width")}}, {{Cssxref("border-style")}},{{Cssxref("border-color")}}를 사용하면 됩니다. 아니면 한 면의 테두리를 절대 기준({{Cssxref("border-top")}} 등)이나 상대 기준({{Cssxref("border-block-start")}} 등) 속성을 사용해서 따로 정해줄 수도 있습니다.
 
@@ -152,5 +152,5 @@ div {
 - {{Cssxref("border-width")}}
 - {{Cssxref("border-style")}}
 - {{Cssxref("border-color")}}
-- [배경 및 테두리](/ko/docs/Web/CSS/CSS_backgrounds_and_borders)
+- [배경 및 테두리](/ko/docs/Web/CSS/Guides/Backgrounds_and_borders)
 - [CSS 배우기: 배경 및 테두리](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)

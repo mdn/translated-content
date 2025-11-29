@@ -51,6 +51,6 @@ l10n:
 
 - [`prefers-contrast`](/ko/docs/Web/CSS/@media/prefers-contrast): 유저의 대비 선호도를 기반으로한 페이지 스타일 조정
 - [`prefers-reduced-transparency`](/ko/docs/Web/CSS/@media/prefers-reduced-transparency)
-- [`prefers-color-scheme`](/ko/docs/Web/CSS/@media/prefers-color-scheme)
+- [`prefers-color-scheme`](/ko/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme)
 - [`inverted-colors`](/ko/docs/Web/CSS/@media/inverted-colors)
 - [모션 민감도를 고려한 축소된 모션 디자인](https://www.smashingmagazine.com/2020/09/design-reduced-motion-sensitivities/)

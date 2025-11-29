@@ -254,4 +254,4 @@ td {
 
 ## 같이 보기
 
-- [CSS 변형 사용하기](/ko/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [CSS 변형 사용하기](/ko/docs/Web/CSS/Guides/Transforms/Using)

@@ -130,7 +130,7 @@ HTML에는 마우스 이벤트의 데이터를 표시하는 `"log"` 클래스를
 
 ## 함께 보기
 
-- [CSS 변환 사용하기](/ko/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) : 좌표계를 변경하는 방법
+- [CSS 변환 사용하기](/ko/docs/Web/CSS/Guides/Transforms/Using) : 좌표계를 변경하는 방법
 - {{domxref("MouseEvent", "마우스 이벤트")}}의 좌표
   - {{domxref("MouseEvent.offsetX")}} 및 {{domxref("MouseEvent.offsetY")}}
   - {{domxref("MouseEvent.clientX")}} 및 {{domxref("MouseEvent.clientY")}}

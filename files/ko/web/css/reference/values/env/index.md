@@ -8,7 +8,7 @@ l10n:
 
 **`env()`** [CSS](/ko/docs/Web/CSS) [함수](/ko/docs/Web/CSS/CSS_Functions)는 {{cssxref("var", "var()")}} 함수나 [사용자 정의 속성](/ko/docs/Web/CSS/--*)과 비슷한 방법으로 환경 변수에 정의된 값을 CSS에 삽입할 때 사용할 수 있습니다. 환경 변수와 사용자 정의 속성의 차이점은 환경 변수는 작성자가 아닌 사용자 에이전트에 의해 정의되며 문서 전체에 전역적으로 적용된다는 점입니다. 반면 사용자 정의 속성은 선언된 요소(들)로 적용 범위가 제한됩니다.
 
-또한 선언 밖에서 사용될 수는 없는 사용자 정의 속성들과는 달리, `env()` 함수는 속성값 또는 설명자의 어떤 부분에서도 사용될 수 있습니다. (예시. [미디어쿼리 규칙](/ko/docs/Web/CSS/@media)). 명세가 발전하면서, 선택자와 같은 다른 곳들에서도 사용될 수 있습니다.
+또한 선언 밖에서 사용될 수는 없는 사용자 정의 속성들과는 달리, `env()` 함수는 속성값 또는 설명자의 어떤 부분에서도 사용될 수 있습니다. (예시. [미디어쿼리 규칙](/ko/docs/Web/CSS/Reference/At-rules/@media)). 명세가 발전하면서, 선택자와 같은 다른 곳들에서도 사용될 수 있습니다.
 
 원래는 iOS 브라우저에서 개발자가 뷰포트의 안전 영역에 컨텐츠를 배치할 수 있도록 제공된 `safe-area-inset-*` 값은 사양에 정의된 것처럼 비사각형 화면을 사용하는 사용자들에게도 컨텐츠가 보이도록 돕는데 사용될 수 있습니다.
 
@@ -210,9 +210,9 @@ main {
 ## 함께 보기
 
 - {{CSSxRef("var", "var(…)")}}
-- [CSS custom properties for cascading variables](/ko/docs/Web/CSS/CSS_cascading_variables) module
+- [CSS custom properties for cascading variables](/ko/docs/Web/CSS/Guides/Cascading_variables) module
 - [Custom properties (`--*`): CSS variables](/ko/docs/Web/CSS/--*)
-- [Using CSS custom properties (variables)](/ko/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
+- [Using CSS custom properties (variables)](/ko/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)
 - [Customize the window controls overlay of your PWA's title bar](https://web.dev/articles/window-controls-overlay)
 - [Display content in the title bar](https://docs.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/window-controls-overlay)
 - [Breaking Out of the Box](https://alistapart.com/article/breaking-out-of-the-box/)

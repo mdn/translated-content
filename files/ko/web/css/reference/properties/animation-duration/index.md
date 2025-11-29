@@ -33,7 +33,7 @@ animation-duration: 10s, 35s, 230ms;
 > 음수 값은 유효하지 않으므로 선언이 무시됩니다. 접두사가 붙은 구현은 그것들을 0과 동일하게 간주 할 수 있습니다.
 
 > [!NOTE]
-> animation- \* 속성에 여러 개의 쉼표로 구분 된 값을 지정하면 {{cssxref ( "animation-name")}} 속성에 지정된 애니메이션에 얼마나 많은 값이 있는지에 따라 다른 방식으로 지정됩니다. 자세한 내용은 [Setting multiple animation property values](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values)를 참조하십시오.
+> animation- \* 속성에 여러 개의 쉼표로 구분 된 값을 지정하면 {{cssxref ( "animation-name")}} 속성에 지정된 애니메이션에 얼마나 많은 값이 있는지에 따라 다른 방식으로 지정됩니다. 자세한 내용은 [Setting multiple animation property values](/ko/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values)를 참조하십시오.
 
 ### Formal syntax
 
@@ -53,5 +53,5 @@ animation-duration: 10s, 35s, 230ms;
 
 ## 같이 보기(See also)
 
-- [Using CSS animations](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Using CSS animations](/ko/docs/Web/CSS/Guides/Animations/Using)
 - JavaScript {{domxref("AnimationEvent")}} API

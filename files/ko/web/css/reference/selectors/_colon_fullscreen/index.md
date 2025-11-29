@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:fullscreen
 original_slug: Web/CSS/:fullscreen
 ---
 
-[CSS](/ko/docs/Web/CSS) **`:fullscreen`** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 전체 화면 모드에 진입한 모든 요소와 일치합니다. 다수의 요소가 전체 화면 중이라면 그 요소 모두 선택합니다.
+[CSS](/ko/docs/Web/CSS) **`:fullscreen`** [의사 클래스](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes)는 전체 화면 모드에 진입한 모든 요소와 일치합니다. 다수의 요소가 전체 화면 중이라면 그 요소 모두 선택합니다.
 
 ## 구문
 

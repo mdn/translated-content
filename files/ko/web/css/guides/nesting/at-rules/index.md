@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 4b6b77bc36496c88dcbe477ec46da678a85d8e6e
 ---
 
-CSS 중첩을 이용하면 어떠한 [@-규칙](/ko/docs/Web/CSS/CSS_syntax/At-rule) 이든 다른 스타일 규칙 안에 또 다른 중첩 스타일을 가질 수 있습니다. @-규칙 내에 중첩된 스타일 규칙은 그것의 가장 가까운 조상으로부터 스타일 중첩 선택자 정의를 가져옵니다. 속성은 직접적으로 @-규칙 안에 포함될 수 있는데, 이는 마치 `& {...}` 블록 안에 중첩된 것과 같은 동작을 합니다.
+CSS 중첩을 이용하면 어떠한 [@-규칙](/ko/docs/Web/CSS/Guides/Syntax/At-rules) 이든 다른 스타일 규칙 안에 또 다른 중첩 스타일을 가질 수 있습니다. @-규칙 내에 중첩된 스타일 규칙은 그것의 가장 가까운 조상으로부터 스타일 중첩 선택자 정의를 가져옵니다. 속성은 직접적으로 @-규칙 안에 포함될 수 있는데, 이는 마치 `& {...}` 블록 안에 중첩된 것과 같은 동작을 합니다.
 
 ## 중첩 가능한 @-규칙들
 
@@ -98,7 +98,7 @@ CSS 중첩을 이용하면 어떠한 [@-규칙](/ko/docs/Web/CSS/CSS_syntax/At-r
 
 ### 중첩 종속 계층 (`@layer`)
 
-[종속 계측](/ko/docs/Web/CSS/@layer) 은 [자식 계층 생성](/ko/docs/Web/CSS/@layer#nesting_layers) 과 중첩될 수 있습니다. 이들은 `.`(온점) 으로 결합됩니다.
+[종속 계측](/ko/docs/Web/CSS/Reference/At-rules/@layer) 은 [자식 계층 생성](/ko/docs/Web/CSS/Reference/At-rules/@layer#nesting_layers) 과 중첩될 수 있습니다. 이들은 `.`(온점) 으로 결합됩니다.
 
 #### 부모 & 자식 계층 정의하기
 
@@ -144,8 +144,8 @@ CSS 중첩을 이용하면 어떠한 [@-규칙](/ko/docs/Web/CSS/CSS_syntax/At-r
 
 ## 같이 보기
 
-- [CSS 중첩](/ko/docs/Web/CSS/CSS_nesting) 모듈
-- [`&` 중첩 선택자](/ko/docs/Web/CSS/Nesting_selector)
-- [CSS 중첩 사용하기](/ko/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
-- [중첩과 명시도](/ko/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)
+- [CSS 중첩](/ko/docs/Web/CSS/Guides/Nesting) 모듈
+- [`&` 중첩 선택자](/ko/docs/Web/CSS/Reference/Selectors/Nesting_selector)
+- [CSS 중첩 사용하기](/ko/docs/Web/CSS/Guides/Nesting/Using)
+- [중첩과 명시도](/ko/docs/Web/CSS/Guides/Nesting/Nesting_and_specificity)
 - [중첩 컨테이너 쿼리](/ko/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#nested_queries)

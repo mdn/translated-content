@@ -32,7 +32,7 @@ l10n:
   - : **보안 컨텍스트**는 콘텐츠가 안전하게 전달되었다는 합리적인 확신이 있고 (HTTPS/TLS를 통해) 안전하지 **않은** 컨텍스트와의 통신 가능성은 제한되는 `Window` 또는 `Worker`입니다. 많은 웹 API와 기능은 보안 컨텍스트에서만 액세스할 수 있습니다. 보안 컨텍스트의 주요 목표는 [중간자 공격자](https://ko.wikipedia.org/wiki/%EC%A4%91%EA%B0%84%EC%9E%90_%EA%B3%B5%EA%B2%A9)가 피해자를 추가로 손상시킬 수 있는 강력한 API에 액세스하지 못하도록 방지하는 것입니다.
 - [보안 컨텍스트로 제한된 기능](/ko/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
   - : 이 참조는 보안 컨텍스트에서만 사용할 수 있는 웹 플랫폼 기능을 나열합니다.
-- [Weak signature algorithms](/ko/docs/Web/Security/Weak_Signature_Algorithm)
+- [Weak signature algorithms](/ko/docs/conflicting/Glossary/Hash_function_86dd22ef183473ac9a504997ad1c9553d207746e3362848f8271069c8e9f3614)
   - : {{Glossary("digital certificate", "디지털 인증서")}} {{Glossary("Signature/Security", "서명")}}에 사용되는 해시 알고리즘의 강도는 인증서 보안의 중요한 요소입니다. 이 문서에서는 약하다고 알려진 서명 알고리즘에 대한 몇 가지 정보를 제공하므로 적절하게 이런 경우를 피할 수 있습니다.
 - 301 및 302 응답 코드로 리디렉션
   - : 추후 작성 예정
@@ -73,7 +73,7 @@ l10n:
 
 ## 사용자 정보 보안
 
-- [안전하지 않은 비밀번호](/ko/docs/Web/Security/Insecure_passwords)
+- [안전하지 않은 비밀번호](/ko/docs/Web/Security/Authentication/Passwords)
   - : HTTP를 통해 로그인 양식을 제공하는 것은 사용자 암호를 추출하기 위해 사용할 수 있는 다양한 공격으로 인해 특히 위험합니다. 네트워크 도청자는 네트워크를 스니핑하거나 전송 중인 페이지를 수정하여 사용자의 비밀번호를 훔칠 수 있습니다.
 - [개인 정보 및 :visited 선택자](/ko/docs/Web/CSS/Privacy_and_the_:visited_selector)
   - : 2010년 이전에는 [CSS](/ko/docs/Web/CSS) {{cssxref(":visited")}} 선택자를 사용하여 웹사이트에서 사용자의 검색 기록을 발견하고 사용자가 방문한 사이트를 파악할 수 있었습니다. 이 문제를 완화하기 위해 브라우저는 방문한 링크에서 얻을 수 있는 정보의 양을 제한했습니다.

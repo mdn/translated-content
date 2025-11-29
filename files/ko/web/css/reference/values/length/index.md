@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Values/length
 original_slug: Web/CSS/length
 ---
 
-[CSS](/ko/docs/Web/CSS) **`<length>`** [자료형](/ko/docs/Web/CSS/CSS_values_and_units/CSS_data_types)은 거리 값을 나타냅니다. {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, {{Cssxref("border-width")}}, {{Cssxref("font-size")}}, {{Cssxref("text-shadow")}} 등 다양한 속성에 사용할 수 있습니다.
+[CSS](/ko/docs/Web/CSS) **`<length>`** [자료형](/ko/docs/Web/CSS/Reference/Values/Data_types)은 거리 값을 나타냅니다. {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, {{Cssxref("border-width")}}, {{Cssxref("font-size")}}, {{Cssxref("text-shadow")}} 등 다양한 속성에 사용할 수 있습니다.
 
 > [!NOTE]
 > {{cssxref("&lt;percentage&gt;")}} 값을 일부 속성의 `<length>` 값으로 사용할 수는 있지만 `<percentage>`와 `<length>` 는 다릅니다. {{cssxref("&lt;length-percentage&gt;")}}를 참고하세요.
@@ -52,13 +52,13 @@ original_slug: Web/CSS/length
 뷰포트 백분율 길이는 `<length>` 값을 {{glossary("viewport", "뷰포트")}}, 즉 문서에서 볼 수 있는 부분의 크기를 기준으로 설정합니다. 뷰포트 길이는 {{cssxref("@page")}} 선언 블록에서는 유효하지 않습니다.
 
 - `vh`
-  - : 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block) 높이 1%와 같습니다.
+  - : 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/Guides/Display/Containing_block) 높이 1%와 같습니다.
 - `vw`
-  - : 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block) 너비 1%와 같습니다.
+  - : 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/Guides/Display/Containing_block) 너비 1%와 같습니다.
 - `vi` {{experimental_inline}}
-  - : 초기 컨테이닝 블록의 [인라인 축](/ko/docs/Web/CSS/CSS_logical_properties_and_values#%ec%9d%b8%eb%9d%bc%ec%9d%b8_%ec%b9%98%ec%88%98) 크기 1%와 같습니다.
+  - : 초기 컨테이닝 블록의 [인라인 축](/ko/docs/Web/CSS/Guides/Logical_properties_and_values#%ec%9d%b8%eb%9d%bc%ec%9d%b8_%ec%b9%98%ec%88%98) 크기 1%와 같습니다.
 - `vb` {{experimental_inline}}
-  - : 초기 컨테이닝 블록의 [블록 축](/ko/docs/Web/CSS/CSS_logical_properties_and_values#%eb%b8%94%eb%a1%9d_%ec%b9%98%ec%88%98) 크기 1%와 같습니다.
+  - : 초기 컨테이닝 블록의 [블록 축](/ko/docs/Web/CSS/Guides/Logical_properties_and_values#%eb%b8%94%eb%a1%9d_%ec%b9%98%ec%88%98) 크기 1%와 같습니다.
 - `vmin`
   - : `vw`와 `vh` 중 작은 것과 같습니다.
 - `vmax`

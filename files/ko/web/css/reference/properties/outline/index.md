@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Properties/outline
 original_slug: Web/CSS/outline
 ---
 
-[CSS](/ko/docs/Web/CSS) **`outline`** [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)은 모든 외곽선 속성을 한꺼번에 지정합니다.
+[CSS](/ko/docs/Web/CSS) **`outline`** [단축 속성](/ko/docs/Web/CSS/Guides/Cascade/Shorthand_properties)은 모든 외곽선 속성을 한꺼번에 지정합니다.
 
 {{InteractiveExample("CSS Demo: outline")}}
 
@@ -95,7 +95,7 @@ outline: unset;
 - 외곽선은 요소 콘텐츠의 밖에 그려지며 절대 공간을 차지하지 않습니다.
 - 명세에 따르면 외곽선은 직사각형일 필요가 없습니다. 보통 직사각형으로 그리기는 합니다.
 
-다른 모든 단축 속성과 마찬가지로, 누락한 하위 속성의 값은 [초깃값](/ko/docs/Web/CSS/CSS_cascade/Value_processing)으로 설정됩니다.
+다른 모든 단축 속성과 마찬가지로, 누락한 하위 속성의 값은 [초깃값](/ko/docs/Web/CSS/Guides/Cascade/Property_value_processing)으로 설정됩니다.
 
 ## 접근성 고려사항
 

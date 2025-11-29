@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/At-rules/@media/prefers-color-scheme
 original_slug: Web/CSS/@media/prefers-color-scheme
 ---
 
-**`prefers-color-scheme`** [CSS](/ko/docs/Web/CSS) [미디어 특성](/ko/docs/Web/CSS/@media#media_features)은 사용자의 시스템이 라이트 테마나 다크 테마를 사용하는지 탐지하는 데에 사용됩니다.
+**`prefers-color-scheme`** [CSS](/ko/docs/Web/CSS) [미디어 특성](/ko/docs/Web/CSS/Reference/At-rules/@media#media_features)은 사용자의 시스템이 라이트 테마나 다크 테마를 사용하는지 탐지하는 데에 사용됩니다.
 
 사용자는 운영체제 설정(라이트 모드 또는 다크 모드)이나 사용자 에이전트 설정에서 선호하는 테마를 나타낼 수 있습니다.
 

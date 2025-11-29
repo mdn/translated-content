@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Properties/border-right
 original_slug: Web/CSS/border-right
 ---
 
-**`border-right`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)은 요소의 오른쪽 테두리를 설정합니다. {{cssxref("border-right-width")}}, {{cssxref("border-right-style")}}, {{cssxref("border-right-color")}}의 값을 지정합니다.
+**`border-right`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Guides/Cascade/Shorthand_properties)은 요소의 오른쪽 테두리를 설정합니다. {{cssxref("border-right-width")}}, {{cssxref("border-right-style")}}, {{cssxref("border-right-color")}}의 값을 지정합니다.
 
 {{InteractiveExample("CSS Demo: border-right")}}
 

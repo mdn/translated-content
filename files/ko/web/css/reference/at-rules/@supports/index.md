@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/At-rules/@supports
 original_slug: Web/CSS/@supports
 ---
 
-**`@supports`** [CSS](/ko/docs/Web/CSS) [@규칙](/ko/docs/Web/CSS/CSS_syntax/At-rule)은 주어진 하나 이상의 CSS 기능을 브라우저가 지원하는지에 따라 다른 스타일 선언을 할 수 있는 방법을 제공합니다. 이를 기능 쿼리(feature query)라고 부릅니다. `@supports`는 스타일의 최상위 단계, 또는 다른 [조건부 그룹 규칙](/ko/docs/Web/CSS/CSS_syntax/At-rule#조건부_그룹_규칙)에 중첩해 위치할 수 있습니다.
+**`@supports`** [CSS](/ko/docs/Web/CSS) [@규칙](/ko/docs/Web/CSS/Guides/Syntax/At-rules)은 주어진 하나 이상의 CSS 기능을 브라우저가 지원하는지에 따라 다른 스타일 선언을 할 수 있는 방법을 제공합니다. 이를 기능 쿼리(feature query)라고 부릅니다. `@supports`는 스타일의 최상위 단계, 또는 다른 [조건부 그룹 규칙](/ko/docs/Web/CSS/Guides/Syntax/At-rules#조건부_그룹_규칙)에 중첩해 위치할 수 있습니다.
 
 ```css
 @supports (display: grid) {
@@ -43,7 +43,7 @@ JavaScript에서, `@supports`는 CSS 객체 모델 인터페이스 {{DOMxRef("CS
 
 #### `selector()` {{experimental_inline}}
 
-브라우저가 주어진 선택자를 지원하는지 판별합니다. 다음 예제는 브라우저가 [자식 결합자](/ko/docs/Web/CSS/Child_combinator)를 지원할 때 통과합니다.
+브라우저가 주어진 선택자를 지원하는지 판별합니다. 다음 예제는 브라우저가 [자식 결합자](/ko/docs/Web/CSS/Reference/Selectors/Child_combinator)를 지원할 때 통과합니다.
 
 ```css
 @supports selector(A > B) {
