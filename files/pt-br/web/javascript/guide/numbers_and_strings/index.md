@@ -1,6 +1,9 @@
 ---
 title: Números e datas
 slug: Web/JavaScript/Guide/Numbers_and_strings
+original_slug: Web/JavaScript/Gui---
+title: Números e datas
+slug: Web/JavaScript/Guide/Numbers_and_strings
 original_slug: Web/JavaScript/Guide/Numbers_and_dates
 ---
 

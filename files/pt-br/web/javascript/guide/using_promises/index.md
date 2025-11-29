@@ -1,5 +1,7 @@
 ---
 title: Usando promises
+slug: Web/JavaScript/---
+title: Usando promises
 slug: Web/JavaScript/Guide/Using_promises
 ---
 
