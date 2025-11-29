@@ -2,6 +2,10 @@
 title: Números y fechas
 slug: Web/JavaScript/Guide/Numbers_and_strings
 original_slug: Web/JavaScript/Guide/Numbers_and_dates
+-----
+title: Números y fechas
+slug: Web/JavaScript/Guide/Numbers_and_strings
+original_slug: Web/JavaScript/Guide/Numbers_and_dates
 ---
 
 {{jsSidebar("JavaScript Guide", "Guía JavaScript")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}

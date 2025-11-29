@@ -3,6 +3,16 @@ title: Colecciones con clave
 slug: Web/JavaScript/Guide/Keyed_collections
 ---
 
+{{jsS---
+title: Colecciones con clave
+slug: Web/JavaScript/Guide/Keyed_collections
+---
+
+{{jsSi---
+title: Colecciones con clave
+slug: Web/JavaScript/Guide/Keyed_collections
+---
+
 {{jsSidebar("JavaScript Guide", "Guía de JavaScript")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
 
 Este capítulo presenta colecciones de datos que están indexadas por una clave; los objetos `Map` y `Set` contienen elementos que son iterables en el orden de inserción.
