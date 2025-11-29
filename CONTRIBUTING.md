@@ -72,11 +72,11 @@ Once that is done, you will also need to fork and clone this repository by follo
 
    (the `.env` file will be created for you if it does not already exist.)
 
-3. Run the command `yarn start` to start the local server at `localhost:5042`.
+3. Run the command `npm start` to start the local server at `localhost:5042`.
 
 #### Working in the translated-content repo
 
-This repo has exactly the same folder structure and concepts as the [upstream content repo](https://github.com/mdn/content). The main difference is in the setup you need to do before you can start editing. It is mostly the same, but there is a little bit more to consider. Primarily, commands such as `yarn content` are only available from the upstream content repo; linting commands are available here, however, as they often use different configuration.
+This repo has exactly the same folder structure and concepts as the [upstream content repo](https://github.com/mdn/content). The main difference is in the setup you need to do before you can start editing. It is mostly the same, but there is a little bit more to consider. Primarily, commands such as `npm run content` are only available from the upstream content repo; linting commands are available here, however, as they often use different configuration.
 
 ## Contributing to MDN translated content
 
