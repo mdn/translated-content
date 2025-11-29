@@ -55,9 +55,10 @@ l10n:
 
 クリップボード API は、ユーザーが[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)のシステムクリップボードとの間で、テキストや他の種類のデータをプログラムで読み書きすることをできるようにします。
 
-この仕様では、クリップボードから読み取るために、ユーザーが最近ページを操作したことが要求されます（[単発のユーザーの活性化](/ja/docs/Web/Security/User_activation)が必要です）。
-読み取り処理がブラウザーやOSの「貼り付け要素」（コンテキストメニューなど）とのユーザー対話によって発生した場合、ブラウザーはユーザーに確認を促すことが期待されます。
-クリップボードに書き込む場合、詳細度はページが[権限 API](/ja/docs/Web/API/Permissions_API) の `clipboard-write` 権限を持つことを期待し、ブラウザーは[単発のユーザー活性化](/ja/docs/Web/Security/User_activation)も要求されるかもしれません。
+この仕様では、クリップボードから読み取るために、ユーザーが最近ページを操作したことが要求されます ([単発のユーザーの活性化](/ja/docs/Web/Security/User_activation)が必要です)。
+さらに、読み取り処理がブラウザーや OS の「貼り付け要素」(ネイティブのコンテキストメニューにある「貼り付け」を選ぶなど) とのユーザー対話によって発生したことも要求されます。
+実際は、ブラウザーはこれらの条件を満たさなくても読み取り処理を許可する一方で、かわりに他の要求 (権限や、処理のたびに確認するなど) をすることが多いです。
+クリップボードに書き込む場合、仕様書ではページが[権限 API](/ja/docs/Web/API/Permissions_API) の `clipboard-write` 権限を持つことを期待し、ブラウザーは[単発のユーザー活性化](/ja/docs/Web/Security/User_activation)も要求するかもしれません。
 ブラウザーはクリップボードにアクセスするメソッドを使用する際に、さらに制限を加えるかもしれません。
 
 ブラウザーの実装は仕様から乖離しています。
@@ -65,18 +66,17 @@ l10n:
 
 Chromium 系のブラウザー:
 
-- 読み取りには[権限 API](/ja/docs/Web/API/Permissions_API) の `clipboard-read` 権限が要求されます。
-  単発の活性化は要求されません。
-- 書き込みには `clipboard-read` 権限または単発の活性化が要求されます。
+- 仕様上読み取りが許されず、文書にフォーカスがあるときは、[権限 API](/ja/docs/Web/API/Permissions_API) の `clipboard-read` 権限を要求し、(ユーザーが許可したか、既に許可されているかで) 権限が許可された場合は読み取りに成功します。
+- 書き込みには `clipboard-write` 権限または単発の活性化が要求されます。
   権限が付与された場合、その権限は維持され、それ以上の単発の活性化は要求されません。
-- クリップボードにアクセスする {{HTMLElement("iframe")}} 要素には、HTTP の[Permissions-Policy](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy) の `clipboard-read` と `clipboard-write` の権限を許可しなければなりません。
-- ブラウザーや OS の「貼り付け要素」によって読み取り処理が発生した場合、持続的な貼り付けプロンプトは表示されません。
+- クリップボードにアクセスする {{HTMLElement("iframe")}} 要素には、HTTP の [Permissions-Policy](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy) の `clipboard-read` と `clipboard-write` の権限を許可しなければなりません。
 
 Firefox および Safari:
 
-- 読み書きには単発の活性化が要求されます。
-- 同じオリジンのクリップボードのコンテンツを読み込む場合、paste-prompt は抑制されますが、オリジン間のコンテンツは抑制されません。
-- `clipboard-read` と `clipboard-write` 権限は Firefox や Safari では対応していません（対応する予定もありません）。
+- 仕様上読み取りが許されていないが、単発の活性化が行われた場合は、(1 秒後に有効化される)「貼り付け」の選択肢のみを持つ一時的なコンテキストメニューの形でユーザーに確認を行い、ユーザーがこの選択肢を選択すると読み取りに成功します。
+- 書き込みには単発の活性化が要求されます。
+- 同じオリジンのクリップボードのコンテンツを読み込む場合、paste-prompt は抑制されますが、オリジン間のコンテンツでは抑制されません。
+- `clipboard-read` と `clipboard-write` 権限は Firefox や Safari では対応していません (対応する予定もありません)。
 
 Firefox の [Web Extensions](/ja/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard):
 
@@ -92,7 +92,7 @@ Firefox の [Web Extensions](/ja/docs/Mozilla/Add-ons/WebExtensions/Interact_wit
 システムクリップボードには、グローバルの {{domxref("Navigator.clipboard")}} を通してアクセスします。
 
 このスニペットはクリップボードからテキストを読み取り、最初に見つかった `editor` クラスを持つ要素に追加します。
-{{domxref("Clipboard.readText", "readText()")}} (および場合によっては {{domxref("Clipboard.read", "read()")}}) はクリップボードにテキストがないときには空文字列を返すので、このコードは安全です。
+{{domxref("Clipboard.readText", "readText()")}} はクリップボードにテキストがないときには空文字列を返すので、このコードは安全です。
 
 ```js
 navigator.clipboard
