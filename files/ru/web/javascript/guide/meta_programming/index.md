@@ -1,5 +1,7 @@
 ---
 title: Мета-программирование
+slug: Web/JavaScript/Guide/---
+title: Мета-программирование
 slug: Web/JavaScript/Guide/Meta_programming
 ---
 

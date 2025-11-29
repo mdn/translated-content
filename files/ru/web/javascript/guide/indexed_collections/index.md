@@ -1,5 +1,9 @@
 ---
 title: Упорядоченные наборы данных
+slug: Web/JavaScript/Guide/Indexed_---
+title: Упорядоченные наборы данных
+slug: Web/JavaScript/Guide/Indexed_co---
+title: Упорядоченные наборы данных
 slug: Web/JavaScript/Guide/Indexed_collections
 ---
 

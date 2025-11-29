@@ -1,5 +1,7 @@
 ---
 title: Числа и даты
+slug: Web/JavaScript/Guide/Nu---
+title: Числа и даты
 slug: Web/JavaScript/Guide/Numbers_and_strings
 ---
 

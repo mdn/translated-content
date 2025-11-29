@@ -1,5 +1,9 @@
 ---
 title: Коллекции
+slug: Web/JavaScript/Guide/Keyed---
+title: Коллекции
+slug: Web/JavaScript/Guide/Keyed_---
+title: Коллекции
 slug: Web/JavaScript/Guide/Keyed_collections
 ---
 
