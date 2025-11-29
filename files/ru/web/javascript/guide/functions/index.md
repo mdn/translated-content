@@ -1,5 +1,7 @@
 ---
 title: Функции
+slug: Web/JavaScrip---
+title: Функции
 slug: Web/JavaScript/Guide/Functions
 ---
 

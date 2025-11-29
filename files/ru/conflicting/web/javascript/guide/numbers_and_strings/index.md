@@ -1,6 +1,9 @@
 ---
 title: Форматирование текста
 slug: conflicting/Web/JavaScript/Guide/Numbers_and_strings
+original_slug: Web/JavaScript/Guide/Text---
+title: Форматирование текста
+slug: conflicting/Web/JavaScript/Guide/Numbers_and_strings
 original_slug: Web/JavaScript/Guide/Text_formatting
 ---
 
