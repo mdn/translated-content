@@ -1,9 +1,9 @@
 ---
 title: フレックスボックスの典型的な用途
+short-title: 典型的な用途
 slug: Web/CSS/Guides/Flexible_box_layout/Use_cases
-original_slug: Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 l10n:
-  sourceCommit: 8a7e911652fcb4a61cc95f458d53f39ad08c0946
+  sourceCommit: 81f8fcd666952c1782653a3675347c392cc997ca
 ---
 
 このガイドでは、フレックスボックスの一般的な使用用途（フレックスボックスが他のレイアウト方法よりも有意義である場合）について見ていきます。
@@ -42,7 +42,7 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: #000;
+  color: black;
   border: 2px solid rgb(96 139 168);
   border-radius: 5px;
   background-color: rgb(96 139 168 / 0.2);
@@ -93,7 +93,7 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #000;
+  color: black;
   border: 2px solid rgb(96 139 168);
   border-radius: 5px;
   background-color: rgb(96 139 168 / 0.2);
@@ -132,7 +132,7 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: #000;
+  color: black;
   border: 2px solid rgb(96 139 168);
   border-radius: 5px;
   background-color: rgb(96 139 168 / 0.2);
@@ -394,7 +394,7 @@ img {
 .wrapper > * {
   padding: 10px;
   border: none;
-  color: #fff;
+  color: white;
 }
 .wrapper > input[type="text"] {
   background-color: rgb(96 139 168 / 0.5);
@@ -403,10 +403,10 @@ img {
 }
 .wrapper input[type="submit"] {
   background-color: rgb(96 139 168);
-  color: #fff;
+  color: white;
 }
 .wrapper label {
-  background-color: #666;
+  background-color: #666666;
 }
 ```
 
