@@ -2,10 +2,27 @@
 title: <path>
 slug: Web/SVG/Reference/Element/path
 l10n:
-  sourceCommit: 34c204f8f6c3f7ac60ebb23fca9798680aee9956
+  sourceCommit: ac806e34aba086be141689c64dc4dd73636fbd62
 ---
 
 **`<path>`** は [SVG](/ja/docs/Web/SVG) の要素で、図形を定義する汎用的な要素です。全ての基本図形は path 要素によって定義することができます。
+
+## 使用コンテキスト
+
+{{svginfo}}
+
+## 属性
+
+- {{SVGAttr("d")}}
+  - : この属性は、図形のパスを定義します。
+    _値の型_: **\<string>**; _デフォルト値_: `''`; _アニメーション_: **可**
+- {{SVGAttr("pathLength")}}
+  - : この属性は、ユーザー単位系でのパスの全長を指定することを可能にします。
+    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number); _デフォルト値_: _none_; _アニメーション_: **可**
+
+## DOM インターフェイス
+
+この要素は {{domxref("SVGPathElement")}} インターフェイスを実装しています。
 
 ## 例
 
@@ -29,19 +46,6 @@ svg {
 ```
 
 {{EmbedLiveSample('Example', 100, 100)}}
-
-## 属性
-
-- {{SVGAttr("d")}}
-  - : この属性は、図形のパスを定義します。
-    _値の型_: **\<string>**; _既定値_: `''`; _アニメーション_: **可**
-- {{SVGAttr("pathLength")}}
-  - : この属性は、ユーザー単位系でのパスの全長を指定することを可能にします。
-    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number); _既定値_: _none_; _アニメーション_: **可**
-
-## 使用可能な場所
-
-{{svginfo}}
 
 ## 仕様書
 
