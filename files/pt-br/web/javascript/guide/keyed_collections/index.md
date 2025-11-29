@@ -1,5 +1,9 @@
 ---
 title: Coleções chaveadas
+slug: Web/JavaScript/Guide/Ke---
+title: Coleções chaveadas
+slug: Web/JavaScript/Guide/Key---
+title: Coleções chaveadas
 slug: Web/JavaScript/Guide/Keyed_collections
 ---
 

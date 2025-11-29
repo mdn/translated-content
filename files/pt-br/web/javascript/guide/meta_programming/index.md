@@ -1,5 +1,7 @@
 ---
 title: Meta programação
+slug: Web/JavaScript/Gui---
+title: Meta programação
 slug: Web/JavaScript/Guide/Meta_programming
 ---
 
