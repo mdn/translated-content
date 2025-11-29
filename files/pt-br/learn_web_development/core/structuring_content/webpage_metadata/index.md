@@ -257,7 +257,9 @@ Todos os sites que você usar nos dias atuais empregarão o {{glossary("CSS")}} 
   <link rel="stylesheet" href="meu-arquivo-css.css" />
   ```
 
-- O elemento {{htmlelement("script")}} não precisa ir no cabeçalho; na verdade, muitas vezes é melhor colocá-lo na parte inferior do corpo do documento (antes da tag `</body>` de fechamento), para garantir que todo o conteúdo HTML tenha sido lido pelo navegador antes de tentar aplicar o JavaScript nele (se o JavaScript tentar acessar um elemento que ainda não existe, o navegador gerará um erro.)
+- O elemento {{htmlelement("script")}} também deve ir dentro do `<head>` e deve incluir um atributo `src` contendo o caminho para o JavaScript que você deseja carregar, além de `defer` (um atributo booleano), que instrui o navegador a carregar o JavaScript depois que a página terminar de analisar o HTML.
+  O atributo `defer` é útil porque garante que todo o HTML esteja carregado antes que o JavaScript seja executado, evitando erros causados pelo JavaScript tentar acessar um elemento HTML que ainda não existe na página.
+  Existem [`várias maneiras`](/pt-BR/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#estrat%C3%A9gias_para_o_carregamento_de_scripts) de lidar com o carregamento de JavaScript na sua página, mas esta é a mais confiável para usar em navegadores modernos.
 
   ```html
   <script src="meu-arquivo-js.js"></script>
