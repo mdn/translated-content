@@ -57,6 +57,65 @@ HTML ne permet que de gérer la structure et le contenu d'un document. Pour rég
 
 ### Intégrer du contenu
 
+- [Comment intégrer une page ---
+title: Apprendre à utiliser HTML pour résoudre des problèmes
+slug: Learn_web_development/Howto/Solve_HTML_problems
+original_slug: Learn/HTML/Howto
+---
+
+{{LearnSidebar}}
+
+Une fois [les bases acquises](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content), il n'existe pas de voie idéale pour apprendre {{Glossary("HTML")}}. Vous pouvez ensuite progresser à votre rythme, en utilisant les balises qui vous sont utiles. HTML n'est qu'un ensemble de balises que vous pouvez utiliser pour structurer votre document et lui ajouter des fonctionnalités supplémentaires. Dans les articles suivants, nous travaillerons sur différents exemples illustrant comment utiliser HTML pour résoudre des problèmes fréquents qu'on rencontre lorsqu'on développe pour le Web. Si vous avez besoin d'explications détaillées sur une balise HTML donnée, n'hésitez pas à consulter [notre référence HTML](/fr/docs/Web/HTML/Reference).
+
+## Cas d'utilisation fréquents
+
+HTML permet de résoudre de nombreux problèmes qui se posent lors de la conception de sites web. Il est très probable que vous rencontriez au moins l'un de ces scénarios :
+
+### Structure de base
+
+En HTML, tout commence par la structure du document. Si vous débutez avec HTML, vous devriez démarrer avec :
+
+- [Comment créer un document HTML simple](/fr/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax)
+- [Comment diviser une page web en sections logiques](/fr/docs/Learn_web_development/Core/Structuring_content/Structuring_documents)
+- [Comment organiser une hiérarchie de titres](/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs)
+
+### Sémantique de base pour le texte
+
+Le but de HTML est de fournir des informations sémantiques (c'est-à-dire sur le sens) d'un document et de ce qui le compose. HTML permettra donc de répondre à de nombreuses questions sur le sens du texte qu'on veut utiliser dans un document.
+
+- [Comment créer une liste d'éléments en HTML](/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#Lists)
+- [Comment faire pour accentuer un contenu](/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#Emphasis_and_importance)
+- [Comment indiquer qu'un texte est important](/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#Emphasis_and_importance)
+- [Comment afficher du code informatique avec HTML](/fr/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#Representing_computer_code)
+- [Comment indiquer une notation exponentielle avec HTML](/fr/docs/Learn/HTML/Howto/Indicate_exponential_notation_with_HTML)
+- [Comment fournir des informations de contact dans une page web](/fr/docs/Learn/HTML/Howto/Provide_contact_information_within_a_webpage)
+- [Comment annoter des images et des graphiques](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_images#Annotating_images_with_figures_and_figure_captions)
+- [Comment marquer des abréviations et les rendre compréhensibles](/fr/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#Abbreviations)
+- [Comment ajouter des citations à une page web](/fr/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#Quotations)
+- [Comment définir des termes en HTML](/fr/docs/Web/HTML/How_to/Define_terms_with_HTML)
+
+### Les hyperliens
+
+Les {{Glossary("hyperlien", "hyperliens")}} rendent la navigation très simple sur le web, ils peuvent être utilisés de différentes façons :
+
+- [Comment créer un hyperlien](/fr/docs/Learn_web_development/Core/Structuring_content/Creating_links)
+- [Comment créer une table des matières en HTML](/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#Lists)
+
+### Images et multimédia
+
+- [Comment ajouter des images à une page web](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_images#How_do_we_put_an_image_on_a_webpage)
+- [Comment ajouter une vidéo à une page web](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
+- [Comment ajouter un contenu audio à une page web](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
+
+### Script et mise en forme
+
+HTML ne permet que de gérer la structure et le contenu d'un document. Pour régler les aspects de styles, on utilisera du {{glossary("CSS")}}, pour l'aspect interactif et script, on utilisera {{glossary("JavaScript")}}.
+
+- [Comment utiliser CSS dans une page web](/fr/docs/Learn/HTML/Howto/Use_CSS_within_a_webpage)
+- [Comment utiliser JavaScript dans une page web](/fr/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page)
+
+### Intégrer du contenu
+
 - [Comment intégrer une page web dans une autre page web](/fr/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies)
 - [Comment ajouter du contenu Flash dans une page web](/fr/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#The_<embed>_and_<object>_elements)
 

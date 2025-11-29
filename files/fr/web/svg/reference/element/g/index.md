@@ -43,6 +43,98 @@ Cet élément n'a que des attributs globaux
 - [Attributs de style](/fr/docs/Web/SVG/Reference/Attribute)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
 - [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Reference/Attribute)
+  - : Notamment: {{SVGAttr('requiredExtensions')}},---
+title: <g>
+slug: Web/SVG/Reference/Element/g
+original_slug: Web/SVG/Element/g
+---
+
+{{SVGRef}}
+
+L'élément `g` est un conteneur utilisé pour grouper des objets.
+
+Les transformations appliquées à l'élément `g` sont reportées à tous ses éléments enfants. Les attributs appliqués sont également reportés aux éléments enfants. De plus, il peut être utilisé pour définir des objets complexes qui seront référencés ultérieurement avec l'élément {{SVGElement("use")}}.
+
+## Exemple
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Les enfants de g héritent de ses attributs de présentation -->
+  <g fill="white" stroke="green" stroke-width="5">
+    <circle cx="40" cy="40" r="25" />
+    <circle cx="60" cy="60" r="25" />
+  </g>
+</svg>
+```
+
+{{EmbedLiveSample('Exemple', 100, '100%')}}
+
+## Attributs
+
+Cet élément n'a que des attributs globaux
+
+### Attributs globaux
+
+- [Attributs de base](/fr/docs/Web/SVG/Reference/Attribute)
+  - : Notamment: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
+- [Attributs de style](/fr/docs/Web/SVG/Reference/Attribute)
+  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Reference/Attribute)
+  - : Notamment: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
+- Attributs d'événement
+  - : [Attributs d'événement glob---
+title: <g>
+slug: Web/SVG/Reference/Element/g
+original_slug: Web/SVG/Element/g
+---
+
+{{SVGRef}}
+
+L'élément `g` est un conteneur utilisé pour grouper des objets.
+
+Les transformations appliquées à l'élément `g` sont reportées à tous ses éléments enfants. Les attributs appliqués sont également reportés aux éléments enfants. De plus, il peut être utilisé pour définir des objets complexes qui seront référencés ultérieurement avec l'élément {{SVGElement("use")}}.
+
+## Exemple
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Les enfants de g héritent de ses attributs de présentation -->
+  <g fill="white" stroke="green" stroke-width="5">
+    <circle cx="40" cy="40" r="25" />
+    <circle cx="60" cy="60" r="25" />
+  </g>
+</svg>
+```
+
+{{EmbedLiveSample('Exemple', 100, '100%')}}
+
+## Attributs
+
+Cet élément n'a que des attributs globaux
+
+### Attributs globaux
+
+- [Attributs de base](/fr/docs/Web/SVG/Reference/Attribute)
+  - : Notamment: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
+- [Attributs de style](/fr/docs/Web/SVG/Reference/Attribute)
+  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Reference/Attribute)
   - : Notamment: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
 - Attributs d'événement
   - : [Attributs d'événement globaux](/fr/docs/Web/SVG/Attribute#attributs_d'événement_globaux), [Attributs d'événement graphiques](/fr/docs/Web/SVG/Attribute#attributs_d'événement_graphiques)
