@@ -382,13 +382,13 @@ l10n:
 ### 트랜지션 이벤트
 
 - {{domxref("Window/transitioncancel_event", "transitioncancel")}}
-  - : [CSS 트랜지션](/ko/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)이 취소되면 발생합니다.
+  - : [CSS 트랜지션](/ko/docs/Web/CSS/Guides/Transitions/Using)이 취소되면 발생합니다.
 - {{domxref("Window/transitionend_event", "transitionend")}}
-  - : [CSS 트랜지션](/ko/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)이 끝나면 발생합니다.
+  - : [CSS 트랜지션](/ko/docs/Web/CSS/Guides/Transitions/Using)이 끝나면 발생합니다.
 - {{domxref("Window/transitionrun_event", "transitionrun")}}
-  - : [CSS 트랜지션](/ko/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)이 처음으로 생성되면 시작합니다.
+  - : [CSS 트랜지션](/ko/docs/Web/CSS/Guides/Transitions/Using)이 처음으로 생성되면 시작합니다.
 - {{domxref("Window/transitionstart_event", "transitionstart")}}
-  - : [CSS 트랜지션](/ko/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)이 시작하면 발생합니다.
+  - : [CSS 트랜지션](/ko/docs/Web/CSS/Guides/Transitions/Using)이 시작하면 발생합니다.
 
 ### Deprecated events
 

@@ -6,19 +6,19 @@ l10n:
   sourceCommit: c8f8d139207c796a49390614fbe4e65a8ab9bfac
 ---
 
-[CSS 중첩](/ko/docs/Web/CSS/CSS_nesting) 모듈은 스타일시트의 가독성을 높이고 모듈화하며 그리고 유지 보수하기 용이하게 만듭니다. 선택자를 반복하여 작성하지 않아도 되고, 이로 인해 파일 크기도 줄어들 수 있습니다.
+[CSS 중첩](/ko/docs/Web/CSS/Guides/Nesting) 모듈은 스타일시트의 가독성을 높이고 모듈화하며 그리고 유지 보수하기 용이하게 만듭니다. 선택자를 반복하여 작성하지 않아도 되고, 이로 인해 파일 크기도 줄어들 수 있습니다.
 
-CSS 중첩은 [Sass](https://sass-lang.com/) 와 같은 CSS 전처리기와는 다릅니다. CSS 전처리기는 사전에 컴파일되지만, CSS 중첩은 브라우저에 의해 파싱됩니다. 또한 CSS 중첩에서는, [`&` 중첩 선택자의 명시도](/ko/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)는 {{cssxref(':is',':is()')}} 함수와 유사하며, 관련 선택자 목록과 연관에서 가장 높은 명시도를 이용하여 계산합니다.
+CSS 중첩은 [Sass](https://sass-lang.com/) 와 같은 CSS 전처리기와는 다릅니다. CSS 전처리기는 사전에 컴파일되지만, CSS 중첩은 브라우저에 의해 파싱됩니다. 또한 CSS 중첩에서는, [`&` 중첩 선택자의 명시도](/ko/docs/Web/CSS/Guides/Nesting/Nesting_and_specificity)는 {{cssxref(':is',':is()')}} 함수와 유사하며, 관련 선택자 목록과 연관에서 가장 높은 명시도를 이용하여 계산합니다.
 
 이 안내서는 CSS 에서 중첩을 사용하는 각기 다른 방법에 대해 설명합니다.
 
 ## 자식 선택자
 
-CSS 중첩을 사용하면 부모의 자식 선택자를 생성할 수 있는데, 이것을 이용하여 특정 부모의 자식 요소를 타겟팅할 수 있습니다. 이는 [`&` 중첩 선택자](/ko/docs/Web/CSS/Nesting_selector) 를 사용하는 경우와 사용하지 않는 경우에도 가능합니다.
+CSS 중첩을 사용하면 부모의 자식 선택자를 생성할 수 있는데, 이것을 이용하여 특정 부모의 자식 요소를 타겟팅할 수 있습니다. 이는 [`&` 중첩 선택자](/ko/docs/Web/CSS/Reference/Selectors/Nesting_selector) 를 사용하는 경우와 사용하지 않는 경우에도 가능합니다.
 
 `&` 중첩 선택자 사용이 필수적이거나 도움이 되는 특수한 인스턴스들이 있습니다.
 
-- [결합 선택자들](#compound_selectors) 혹은 [가상의 클래스](/ko/docs/Web/CSS/Pseudo-classes) 와 같이 선택자들을 함께 사용할 때.
+- [결합 선택자들](#compound_selectors) 혹은 [가상의 클래스](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes) 와 같이 선택자들을 함께 사용할 때.
 - 역호환성을 고려할 때.
 - 가독성을 위한 시각적 표시로써, `&` 중첩 선택자를 보는 것처럼 CSS 중첩이 사용되고 있음을 표현할 때.
 
@@ -153,7 +153,7 @@ label {
 
 #### 형제 결합자의 중첩
 
-이 예제에서는, 각 `<h2>` 뒤 첫번째 단락이 CSS 중첩의 [인접 형제 결합자 (`+`)](/ko/docs/Web/CSS/Next-sibling_combinator) 로 타겟팅됩니다.
+이 예제에서는, 각 `<h2>` 뒤 첫번째 단락이 CSS 중첩의 [인접 형제 결합자 (`+`)](/ko/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator) 로 타겟팅됩니다.
 
 ##### HTML
 
@@ -400,9 +400,9 @@ h2 {
 }
 ```
 
-> **경고** 이것은 CSS 중첩에서는 불가능한 일입니다. [결합자](/ko/docs/Learn_web_development/Core/Styling_basics/Combinators)가 사용되지 않는다면 중첩 선택자는 [타입 선택자](/ko/docs/Web/CSS/Type_selectors) 처럼 취급됩니다. 문자열 연쇄를 허용하면 이는 끊기게 됩니다.
+> **경고** 이것은 CSS 중첩에서는 불가능한 일입니다. [결합자](/ko/docs/Learn_web_development/Core/Styling_basics/Combinators)가 사용되지 않는다면 중첩 선택자는 [타입 선택자](/ko/docs/Web/CSS/Reference/Selectors/Type_selectors) 처럼 취급됩니다. 문자열 연쇄를 허용하면 이는 끊기게 됩니다.
 
-[걸합 선택자](/ko/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) 에서는, 타입 선택자가 가장 처음으로 위치해야 합니다. ([타입 선택자](/ko/docs/Web/CSS/Type_selectors)인) `&Element` 를 사용하는 것은 CSS 선택자 뿐만 아니라, 전체 선택자 블록을 무효로 만듭니다. 타입 선택자가 가장 먼저 위치함에 따라 결합 선택자는 `Element&` 로 작성되어야만 합니다.
+[걸합 선택자](/ko/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) 에서는, 타입 선택자가 가장 처음으로 위치해야 합니다. ([타입 선택자](/ko/docs/Web/CSS/Reference/Selectors/Type_selectors)인) `&Element` 를 사용하는 것은 CSS 선택자 뿐만 아니라, 전체 선택자 블록을 무효로 만듭니다. 타입 선택자가 가장 먼저 위치함에 따라 결합 선택자는 `Element&` 로 작성되어야만 합니다.
 
 ```css example-good
 .my-class {
@@ -437,7 +437,7 @@ element.my-class {
 
 ## 같이 보기
 
-- [CSS 중첩](/ko/docs/Web/CSS/CSS_nesting) 모듈
-- [`&` 중첩 선택자](/ko/docs/Web/CSS/Nesting_selector)
-- [`@` 규칙 중첩](/ko/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
-- [중첩과 명시도](/ko/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)
+- [CSS 중첩](/ko/docs/Web/CSS/Guides/Nesting) 모듈
+- [`&` 중첩 선택자](/ko/docs/Web/CSS/Reference/Selectors/Nesting_selector)
+- [`@` 규칙 중첩](/ko/docs/Web/CSS/Guides/Nesting/At-rules)
+- [중첩과 명시도](/ko/docs/Web/CSS/Guides/Nesting/Nesting_and_specificity)

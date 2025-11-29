@@ -121,7 +121,7 @@ div {
 
 ## Browser compatibility
 
-호환성 정보는 [`<transform-function>`](/ko/docs/Web/CSS/transform-function#browser_compatibility) 데이터 타입을 확인하세요.
+호환성 정보는 [`<transform-function>`](/ko/docs/Web/CSS/Reference/Values/transform-function#browser_compatibility) 데이터 타입을 확인하세요.
 
 ## See also
 

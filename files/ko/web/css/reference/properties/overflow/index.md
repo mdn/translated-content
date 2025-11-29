@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Properties/overflow
 original_slug: Web/CSS/overflow
 ---
 
-**`overflow`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)은 요소의 콘텐츠가 너무 커서 요소의 [블록 서식 맥락](/ko/docs/Web/CSS/CSS_display/Block_formatting_context)에 맞출 수 없을 때의 처리법을 지정합니다. {{cssxref("overflow-x")}}, {{cssxref("overflow-y")}}의 값을 설정합니다.
+**`overflow`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Guides/Cascade/Shorthand_properties)은 요소의 콘텐츠가 너무 커서 요소의 [블록 서식 맥락](/ko/docs/Web/CSS/CSS_display/Block_formatting_context)에 맞출 수 없을 때의 처리법을 지정합니다. {{cssxref("overflow-x")}}, {{cssxref("overflow-y")}}의 값을 설정합니다.
 
 {{InteractiveExample("CSS Demo: overflow")}}
 

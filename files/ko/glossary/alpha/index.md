@@ -17,7 +17,7 @@ l10n:
 
 ## 같이 보기
 
-- [CSS 색상](/ko/docs/Web/CSS/CSS_colors)
+- [CSS 색상](/ko/docs/Web/CSS/Guides/Colors)
 - [CSS 값과 단위 소개](/ko/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - [이미지 파일 형식 및 형식 안내서](/ko/docs/Web/Media/Formats/Image_types)
 - [알파 합성](https://en.wikipedia.org/wiki/Alpha_compositing) on Wikipedia

@@ -1,6 +1,9 @@
 ---
 title: 텍스트 서식
 slug: conflicting/Web/JavaScript/Guide/Numbers_and_strings
+original_slug: Web/JavaScript/Guide/Text---
+title: 텍스트 서식
+slug: conflicting/Web/JavaScript/Guide/Numbers_and_strings
 original_slug: Web/JavaScript/Guide/Text_formatting
 ---
 

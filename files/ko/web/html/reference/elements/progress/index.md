@@ -86,7 +86,7 @@ label {
 > {{htmlelement("meter")}} 요소와 달리, 최솟값은 항상 0이며 `min` 특성을 지정할 수 없습니다.
 
 > [!NOTE]
-> CSS {{cssxref(":indeterminate")}} [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)를 사용하면 미결정 상태의 진행 표시줄을 선택할 수 있습니다. 값을 지정한 진행 표시줄을 미결정 상태로 바꾸려면 {{domxref("Element.removeAttribute", "element.removeAttribute('value')")}}를 사용해 `value` 특성을 제거해야 합니다.
+> CSS {{cssxref(":indeterminate")}} [의사 클래스](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes)를 사용하면 미결정 상태의 진행 표시줄을 선택할 수 있습니다. 값을 지정한 진행 표시줄을 미결정 상태로 바꾸려면 {{domxref("Element.removeAttribute", "element.removeAttribute('value')")}}를 사용해 `value` 특성을 제거해야 합니다.
 
 ## 예제
 

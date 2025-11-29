@@ -182,6 +182,6 @@ article > p {
 
 이 글에서는 특정 HTML 요소를 타겟팅할 수 있는 CSS 선택자를 소개했습니다. 다음에는 [타입, 클래스 및 ID 선택자](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors)에 대해 자세히 살펴보겠습니다.
 
-전체 선택자 목록은 [CSS 선택자 참조](/ko/docs/Web/CSS/CSS_selectors)를 참고하세요.
+전체 선택자 목록은 [CSS 선택자 참조](/ko/docs/Web/CSS/Guides/Selectors)를 참고하세요.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}

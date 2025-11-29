@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/At-rules/@namespace
 original_slug: Web/CSS/@namespace
 ---
 
-**`@namespace`** 는 [CSS](/ko/docs/Glossary/CSS) [스타일 시트](/ko/docs/Web/API/StyleSheet)에서 사용되는 [XML 네임스페이스](/ko/docs/Namespaces)를 정의하는 [at-규칙](/ko/docs/Web/CSS/CSS_syntax/At-rule)입니다. 정의된 네임스페이스는 오직 그 네임스페이스 내의 요소를 선택만 하기 위해 [universal](/ko/docs/Web/CSS/Universal_selectors), [type](/ko/docs/Web/CSS/Type_selectors) 및 [attribute](/ko/docs/Web/CSS/Attribute_selectors) [선택자](/ko/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)를 제한하는 데 사용될 수 있습니다. `@namespace` 규칙은 보통 여러 네임스페이스(인라인 SVG 또는 MathML 있는 HTML5 또는 다양한 어휘를 섞는 XML 등)를 포함하는 문서를 처리하는 경우에만 유용합니다.
+**`@namespace`** 는 [CSS](/ko/docs/Glossary/CSS) [스타일 시트](/ko/docs/Web/API/StyleSheet)에서 사용되는 [XML 네임스페이스](/ko/docs/Namespaces)를 정의하는 [at-규칙](/ko/docs/Web/CSS/Guides/Syntax/At-rules)입니다. 정의된 네임스페이스는 오직 그 네임스페이스 내의 요소를 선택만 하기 위해 [universal](/ko/docs/Web/CSS/Reference/Selectors/Universal_selectors), [type](/ko/docs/Web/CSS/Reference/Selectors/Type_selectors) 및 [attribute](/ko/docs/Web/CSS/Reference/Selectors/Attribute_selectors) [선택자](/ko/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)를 제한하는 데 사용될 수 있습니다. `@namespace` 규칙은 보통 여러 네임스페이스(인라인 SVG 또는 MathML 있는 HTML5 또는 다양한 어휘를 섞는 XML 등)를 포함하는 문서를 처리하는 경우에만 유용합니다.
 
 어떤 `@namespace` 규칙이든 모든 [@charset](/ko/docs/Web/CSS/%40charset) 및 [@import](/ko/docs/Web/CSS/%40import) 규칙의 다음에 오고 스타일시트에서 모든 다른 at-규칙 및 [스타일 선언](/ko/docs/Web/API/CSSStyleDeclaration)보다 앞서야 합니다.
 

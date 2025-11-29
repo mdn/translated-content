@@ -34,7 +34,7 @@ l10n:
 
 ## 안내서
 
-- [CSS 카운터 사용하기](/ko/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
+- [CSS 카운터 사용하기](/ko/docs/Web/CSS/Guides/Counter_styles/Using_counters)
   - : CSS 카운터 속성을 사용하여 목록 카운터를 제어하는 방법을 설명합니다.
 
 ## 명세서

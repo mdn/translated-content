@@ -1,5 +1,9 @@
 ---
 title: 키 기반 컬렉션
+slug: Web/JavaScript/Guide/Keyed---
+title: 키 기반 컬렉션
+slug: Web/JavaScript/Guide/Keyed_---
+title: 키 기반 컬렉션
 slug: Web/JavaScript/Guide/Keyed_collections
 ---
 
