@@ -1,9 +1,8 @@
 ---
 title: Transparence des certificats
 slug: Web/Security/Defenses/Certificate_Transparency
-original_slug: Web/Security/Certificate_Transparency
 l10n:
-  sourceCommit: ade8d870ed7e18a71dc51fe25aa13d812fb82558
+  sourceCommit: 39070892d5d1a5cc55312a0ac10c97f4c339384f
 ---
 
 La **transparence des certificats** (<i lang="en">Certificate Transparency</i> en anglais) est un cadre ouvert conçu pour protéger contre les mauvaises émissions de certificats et les surveiller. Avec la transparence des certificats, les certificats nouvellement émis sont «&nbsp;journalisés&nbsp;» dans des _journaux CT_ publics, souvent indépendants, qui maintiennent un enregistrement append-only (ajout-seulement) et garanti cryptographiquement des certificats TLS émis.
@@ -44,8 +43,8 @@ Firefox pour Android n'exige pas actuellement l'inclusion dans un journal CT.
 
 ## Spécifications
 
-Les implémentations des navigateurs sont basées sur la spécification obsolète {{rfc("6962","Certificate Transparency <sup>(angl.)</sup>")}} (janvier 2025).
-La spécification actuelle est {{rfc("9162","Certificate Transparency Version 2.0 <sup>(angl.)</sup>")}}.
+Les implémentations des navigateurs sont basées sur la spécification obsolète {{RFC("6962","Certificate Transparency <sup>(angl.)</sup>")}} (janvier 2025).
+La spécification actuelle est {{RFC("9162","Certificate Transparency Version 2.0 <sup>(angl.)</sup>")}}.
 
 ## Voir aussi
 
