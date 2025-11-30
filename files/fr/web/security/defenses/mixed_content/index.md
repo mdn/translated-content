@@ -2,162 +2,163 @@
 title: Contenu mixte
 slug: Web/Security/Defenses/Mixed_content
 l10n:
-  sourceCommit: 39070892d5d1a5cc55312a0ac10c97f4c339384f
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
-When a web page is loaded from a secure origin, over a secure channel such as {{Glossary("HTTPS")}}, the connection with the web server is encrypted, and is therefore protected from eavesdropping and modification by man-in-the-middle attacks.
-If the securely loaded web page only includes images, scripts, and other resources that are also hosted on secure origins, users can be confident that the whole page is safe from these kinds of attacks.
+Lorsqu'une page web est chargée depuis une origine sécurisée, via un canal sécurisé tel que {{Glossary("HTTPS")}}, la connexion avec le serveur web est chiffrée et donc protégée contre l'écoute clandestine et la modification par des attaques de type «&nbsp;homme au milieu&nbsp;».
+Si la page web chargée de manière sécurisée ne contient que des images, des scripts et d'autres ressources hébergées également sur des origines sécurisées, les utilisateur·ice·s peuvent être certain·e·s que la page entière est protégée contre ce type d'attaques.
 
-"Mixed content" refers to securely loaded web pages that use resources to be fetched via HTTP or another insecure protocol.
-This kind of web page is potentially unsafe because any resources that are sent insecurely can be viewed, possibly revealing sensitive information, and/or modified by an attacker.
-Scripts are particularly dangerous because they can modify any aspect of the page, but all types of resources have some risk.
-For example, images can be modified to give the user false or misleading information, or to change the apparent function of a button.
+«&nbsp;Contenu mixte&nbsp;» désigne les pages web chargées de manière sécurisée qui récupèrent des ressources via HTTP ou un autre protocole non sécurisé.
+Ce type de page est potentiellement dangereux, car les ressources transmises de manière non sécurisée peuvent être visualisées (révélant éventuellement des informations sensibles) et/ou modifiées par un·e attaquant·e.
+Les scripts sont particulièrement dangereux puisqu'ils peuvent modifier n'importe quel aspect de la page, mais tous les types de ressources présentent un risque.
+Par exemple, des images peuvent être altérées pour donner à l'utilisateur·ice des informations fausses ou trompeuses, ou pour modifier la fonction apparente d'un bouton.
 
-"Mixed downloads" refer to resource downloads initiated from a secure context, but fetched over an insecure connection.
-These share the same risks as mixed content: downloads appear to come from a secure origin, but could have been modified or viewed en-route.
+Les «&nbsp;téléchargements mixtes&nbsp;» désignent des téléchargements de ressources initiés depuis un contexte sécurisé mais récupérés via une connexion non sécurisée.
+Ils présentent les mêmes risques que le contenu mixte&nbsp;: les téléchargements semblent provenir d'une origine sécurisée, mais ils ont pu être modifiés ou interceptés en chemin.
 
-You should avoid using mixed content and mixed downloads in your websites!
-Browsers mitigate the risks of mixed content by auto-upgrading image, video, and audio mixed content requests from HTTP to HTTPS, and block insecure requests for all other resource types.
-They should also block _mixed downloads_ by default.
+Vous devriez éviter d'utiliser du contenu mixte et des téléchargements mixtes sur vos sites web.
+Les navigateurs atténuent les risques liés au contenu mixte en passant automatiquement les requêtes de contenu mixte pour les images, vidéos et flux audio de HTTP à HTTPS, et en bloquant les requêtes non sécurisées pour tous les autres types de ressources.
+Ils doivent également bloquer les _téléchargements mixtes_ par défaut.
 
-## Types of mixed content
+## Types de contenu mixte
 
-Mixed content in a web page is divided into two categories: "upgradable content" and "blockable content".
-Browsers should automatically upgrade requests for upgradable content from HTTP to HTTPS, and block requests for the blockable content.
+Le contenu mixte d'une page web se divise en deux catégories&nbsp;: le «&nbsp;contenu améliorable&nbsp;» et le «&nbsp;contenu bloquable&nbsp;».
+Les navigateurs doivent automatiquement passer les requêtes pour le contenu améliorable de HTTP à HTTPS, et bloquer les requêtes pour le contenu bloquable.
 
-This approach ensures that all content in a secure context is either loaded via a secure channel or blocked, which is safer for users than displaying a mix of secure and insecure content, and less disruptive than breaking web pages by blocking absolutely all insecure content.
+Cette approche garantit que tout le contenu d'un contexte sécurisé est soit chargé via un canal sécurisé, soit bloqué, ce qui est plus sûr pour les utilisateur·ice·s que d'afficher un mélange de contenu sûr et non sécurisé, et moins perturbant que de casser les pages en bloquant absolument tout contenu non sécurisé.
 
 > [!NOTE]
-> Earlier versions of the specification divided mixed content into "blockable" and "optionally blockable" categories:
+> Les versions antérieures de la spécification divisaient le contenu mixte en catégories «&nbsp;bloquable&nbsp;» et «&nbsp;optionnellement bloquable&nbsp;»&nbsp;:
 >
-> - Blockable content types, also referred to as "active mixed content", were those that could modify other parts of the web page, such as scripts and stylesheets.
->   The potential risk if these files are modified is very high, and browsers were required to block them.
-> - Optionally blockable content types, also known as "passive mixed content", were those that could not modify other content in the web page, such as images, videos, and audio files.
->   The potential risk of allowing these files was lower, so browsers could choose to block or display them, or defer the decision to the user.
+> - Les types de contenu bloquable, également appelés «&nbsp;contenu mixte actif&nbsp;», étaient ceux susceptibles de modifier d'autres parties de la page web (par exemple les scripts et les feuilles de style).
+>   Le risque potentiel si ces fichiers sont modifiés est très élevé, et les navigateurs devaient les bloquer.
+> - Les types de contenu optionnellement bloquable, aussi appelés «&nbsp;contenu mixte passif&nbsp;», étaient ceux qui ne pouvaient pas modifier le reste du contenu de la page (images, vidéos, fichiers audio).
+>   Le risque potentiel étant moindre, les navigateurs pouvaient choisir de les bloquer ou de les afficher, ou laisser la décision à l'utilisateur·ice.
 
-The set of resource types that comprise "upgradable content" was seeded from the set of "optionally blockable" mixed content.
-The expectation is that any new file types will be defined as blockable content, and some upgradable content may become blockable in future.
+L'ensemble des types de ressources qui forment le «&nbsp;contenu améliorable&nbsp;» provient initialement de l'ensemble des contenus «&nbsp;optionnellement bloquables&nbsp;».
+L'attente est que tout nouveau type de fichier soit défini comme contenu bloquable, et que certains contenus améliorable puissent devenir bloquables à l'avenir.
 
-### Upgradable content
+### Contenu améliorable
 
-Upgradable content requests are those where an insecure request will automatically be upgraded to a secure request, by modifying the origin scheme from `http` to `https`.
-The remote server will either respond with the resource, or a status code indicating that it was not found.
+Les requêtes de contenu améliorable sont celles pour lesquelles une requête non sécurisée est automatiquement convertie en requête sécurisée en modifiant le schéma d'origine de `http` à `https`.
+Le serveur distant répondra soit avec la ressource, soit avec un code d'état indiquant qu'elle est introuvable.
 
-The resource types in this category are those where the blocking the request would risk of breaking significant portions of the web.
-These currently correspond to the mixed content types that were previously "optionally blockable", as these are still used on some websites.
+Les types de ressources de cette catégorie sont ceux dont le blocage risquerait de casser une part importante du Web.
+Ils correspondent actuellement aux types de contenu mixte auparavant «&nbsp;optionnellement bloquables&nbsp;», car ils sont encore utilisés sur certains sites.
 
-The following elements are upgradable (except where the URL host is specified as an IP address — see the following section):
+Les éléments suivants sont améliorable (sauf si l'hôte de l'URL est spécifié comme adresse IP — voir la section suivante)&nbsp;:
 
-- {{HTMLElement("img")}} where origin is set via `src` attribute, including SVG documents (but not when setting resources with `srcset` or `<picture>`).
-- CSS image elements such as: `background-image`, `border-image`, etc.
-- {{HTMLElement("audio")}} where origin is set with `src` attribute.
-- {{HTMLElement("video")}} where origin is set with `src` attribute
-- {{HTMLElement("source")}} where video or origin resource is set.
+- L'élément HTML {{HTMLElement("img")}} lorsque l'origine est définie via l'attribut `src`, y compris les documents SVG (mais pas lors de l'utilisation de `srcset` ou de `<picture>`).
+- Les images CSS telles que&nbsp;: `background-image`, `border-image`, etc.
+- L'élément HTML {{HTMLElement("audio")}} lorsque l'origine est définie avec l'attribut `src`.
+- L'élément HTML {{HTMLElement("video")}} lorsque l'origine est définie avec l'attribut `src`.
+- L'élément HTML {{HTMLElement("source")}} lorsque la ressource vidéo ou son origine est définie.
 
-### Blockable content
+### Contenu bloquable
 
-Blockable content is defined as "all mixed content that is not upgradable".
+Le contenu bloquable est défini comme «&nbsp;tout le contenu mixte qui n'est pas améliorable&nbsp;».
 
-This includes HTTP requests resulting from the following elements (this list is not exhaustive):
+Cela inclut les requêtes HTTP résultant des éléments suivants (liste non exhaustive)&nbsp;:
 
-- {{HTMLElement("script")}} where origin is set via `src` attribute
-- {{HTMLElement("link")}} where the origin is set in the `href` attribute, and includes stylesheets
-- {{HTMLElement("iframe")}} where origin is set via `src` attribute
-- {{domxref("Window/fetch", "fetch()")}} requests
-- {{domxref("XMLHttpRequest")}} requests
-- All cases in CSS where a {{CSSXref("url_value", "&lt;url&gt;")}} value is used ({{cssxref("@font-face")}}, {{cssxref("cursor")}}, {{cssxref("background-image")}}, and so forth).
-- {{HTMLElement("object")}} (`data` attribute)
-- {{domxref("Navigator.sendBeacon")}} (`url` attribute)
-- {{HTMLElement("img")}} where origin is set via `srcset` or `<picture>`.
-- Web fonts
+- L'élément HTML {{HTMLElement("script")}} lorsque l'origine est définie via l'attribut `src`.
+- L'élément HTML {{HTMLElement("link")}} lorsque l'origine est définie dans l'attribut `href`, y compris les feuilles de style.
+- L'élément HTML {{HTMLElement("iframe")}} lorsque l'origine est définie via l'attribut `src`.
+- Les requêtes {{DOMxRef("Window/fetch", "fetch()")}}.
+- Les requêtes {{DOMxRef("XMLHttpRequest")}}.
+- Tous les cas en CSS où une valeur {{CSSxRef("url_value", "&lt;url&gt;")}} est utilisée ({{CSSxRef("@font-face")}}, {{CSSxRef("cursor")}}, {{CSSxRef("background-image")}}, etc.).
+- L'élément HTML {{HTMLElement("object")}} (attribut `data`).
+- La propriété {{DOMxRef("Navigator.sendBeacon")}} (attribut `url`).
+- L'élément HTML {{HTMLElement("img")}} lorsque l'origine est définie via `srcset` ou `<picture>`.
+- Les polices web.
 
-Mixed content requests that would otherwise be upgraded are blocked if the URL's host is an IP address rather than a domain name.
-So `<img src="http://example.com/image.png">` will be upgraded, but `<img src="http://93.184.215.14/image.png">` is blocked.
+Les requêtes de contenu mixte qui seraient autrement améliorées sont bloquées si l'hôte de l'URL est une adresse IP plutôt qu'un nom de domaine.
+Ainsi `<img src="http://example.com/image.png">` sera amélioré, mais `<img src="http://93.184.215.14/image.png">` sera bloqué.
 
-## Examples of mixed content requests
+## Exemples de requêtes de contenu mixte
 
-Mixed content requests are insecure requests for resources from a [secure context](/fr/docs/Web/Security/Secure_Contexts):
+Les requêtes de contenu mixte sont des requêtes non sécurisées pour des ressources provenant d'un [contexte sécurisé](/fr/docs/Web/Security/Defenses/Secure_Contexts)&nbsp;:
 
-The following examples demonstrate secure, insecure, and mixed content requests:
+Les exemples suivants illustrent des requêtes sécurisées, non sécurisées et mixtes&nbsp;:
 
-- `http://insecure.com` loads `http://also.insecure.com` — is not a mixed content request because both origins are insecure.
-- `https://secure.com` loads `http://insecure.com` — is a mixed content request because the insecure resource `http://insecure.com` is loaded into the secure context `https://secure.com`.
-- `http://insecure.com` loads `https://secure.com` in an `<iframe>`, which in turn loads `http://also.insecure.com` — loading `https://secure.com` into `http://insecure.com` is not a mixed content request (there is no restriction on loading a secure context into an insecure context).
-  However loading `http://also.insecure.com` into the secure frame `https://secure.com` is a mixed content request.
-- `https://secure.com` frames a `data:` URL, which loads `http://insecure.com` — this is a mixed content request, because `https://secure.com` (and hence `data:`) were securely loaded and `http://insecure.com` is insecure.
+- `http://insecure.com` charge `http://also.insecure.com` — ce n'est pas une requête de contenu mixte car les deux origines sont non sécurisées.
+- `https://secure.com` charge `http://insecure.com` — c'est une requête de contenu mixte car la ressource non sécurisée `http://insecure.com` est chargée dans le contexte sécurisé `https://secure.com`.
+- `http://insecure.com` charge `https://secure.com` dans un `<iframe>`, qui à son tour charge `http://also.insecure.com` — charger `https://secure.com` dans `http://insecure.com` n'est pas une requête de contenu mixte (il n'y a pas de restriction pour charger un contexte sécurisé dans un contexte non sécurisé).
+  Cependant, charger `http://also.insecure.com` dans le cadre sécurisé `https://secure.com` est une requête de contenu mixte.
+- `https://secure.com` affiche une URL `data:`, qui charge `http://insecure.com` — il s'agit d'une requête de contenu mixte, car `https://secure.com` (et donc `data:`) ont été chargés en sécurisé et `http://insecure.com` est non sécurisé.
 
-Mixed context requests can also be made from secure contexts such as plugins or workers, and will be upgraded/blocked in the same way.
+Les requêtes depuis des contextes sécurisés tels que des plugins ou des workers peuvent également être mixtes, et seront améliorées ou bloquées de la même manière.
 
-Note however that navigation requests from a secure context that target insecure target top-level browsing contexts are not considered mixed content as they create a new context that will either be secure or insecure independent of the origin of the request.
+Notez toutefois que les requêtes de navigation depuis un contexte sécurisé ciblant des contextes de navigation de niveau supérieur non sécurisés ne sont pas considérées comme du contenu mixte, car elles créent un nouveau contexte qui sera soit sécurisé soit non sécurisé indépendamment de l'origine de la requête.
 
-### Loading locally delivered mixed-resources
+### Chargement de ressources locales mixtes
 
-Local resources are considered to be from secure origins, just like HTTPS origins.
-This includes `file:` URLs, and content accessed from loopback addresses such as `http://127.0.0.1/` or `http://localhost/`.
+Les ressources locales sont considérées comme provenant d'origines sécurisées, de la même manière que les origines HTTPS.
+Cela inclut les URL `file:` et le contenu accédé via des adresses de loopback telles que `http://127.0.0.1/` ou `http://localhost/`.
 
-You can load these files from secure contexts, and you will still have a secure context.
-However if a local file loads insecure resource via `http:`, it would be a mixed content request.
+Vous pouvez charger ces fichiers depuis des contextes sécurisés, et vous conserverez un contexte sécurisé.
+Cependant, si un fichier local charge une ressource non sécurisée via `http:`, il s'agit d'une requête de contenu mixte.
 
-Support for loading local content can be checked in the [Browser compatibility](#browser_compatibility) section.
+La prise en charge du chargement de contenu local peut être vérifiée dans la section [Compatibilité des navigateurs](#compatibilité_des_navigateurs).
 
-## Mixed downloads
+## Téléchargements mixtes
 
-A mixed download is a resource download from a secure context over an insecure connection.
-They are problematic for the same reasons as mixed content — content may be intercepted and/or modified by an attacker, and it is not obvious to users that this might happen on a secure site.
+Un téléchargement mixte est un téléchargement de ressource depuis un contexte sécurisé via une connexion non sécurisée.
+Ils posent les mêmes problèmes que le contenu mixte — le contenu peut être intercepté et/ou modifié par un·e attaquant·e, et il n'est pas évident pour les utilisateur·ice·s qu'un tel risque existe sur un site sécurisé.
 
-For example, the following code defines an [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a#download) element that could be used to download the page at the insecure origin `http://example.com/`.
-If this code is in a page that is served over HTTPS, saving the link results in a mixed download.
+Par exemple, le code suivant définit un élément [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a#download) qui pourrait être utilisé pour télécharger la page d'une origine non sécurisée `http://example.com/`.
+Si ce code se trouve dans une page servie via HTTPS, l'enregistrement du lien entraîne un téléchargement mixte.
 
 ```html
-<a href="http://example.com/" download>Download</a>
+<a href="http://example.com/" download>Télécharger</a>
 ```
 
-Browsers are expected to block mixed downloads, and secure sites should not include them.
+Les navigateurs doivent bloquer les téléchargements mixtes, et les sites sécurisés ne devraient pas les proposer.
 
 > [!NOTE]
-> Browsers commonly block mixed downloads by default, but inform users of the risk and allow them to keep or discard the download.
+> Les navigateurs bloquent couramment les téléchargements mixtes par défaut, mais informent l'utilisateur·ice du risque et lui permettent de conserver ou d'abandonner le téléchargement.
 
-## Developer console
+## Console du développeur
 
-The developer console shows warnings when mixed content is upgraded or blocked.
-These can be used to debug and fix mixed-content in your websites.
+La console du développeur affiche des avertissements lorsque du contenu mixte est amélioré ou bloqué.
+Ces avertissements permettent de détecter et corriger le contenu mixte sur vos sites.
 
-The screenshot below shows the console warning when an image is upgraded on Firefox (Chrome has a similar warning).
+La capture d'écran ci‑dessous montre l'avertissement de la console lorsque une image est améliorée sur Firefox (Chrome affiche un avertissement similaire).
 
-![Screen shot of the web console displaying upgrade warning for mixed content image.](mixed_content_console_upgradable.png)
+![Capture d'écran de la console web affichant l'avertissement d'amélioration pour une image de contenu mixte.](mixed_content_console_upgradable.png)
 
-On browser versions that still display "optionally blockable" content, an icon is used to indicate that there is mixed content in the displayed content, along with a console warning.
-The screenshot below shows the icon and console warning for Firefox starting supporting upgradable mixed-content.
+Sur les versions des navigateurs qui affichent encore le contenu «&nbsp;optionnellement bloquable&nbsp;», une icône est utilisée pour signaler la présence de contenu mixte, accompagnée d'un avertissement dans la console.
+La capture ci‑dessous montre l'icône et l'avertissement dans Firefox lorsqu'il commence à prendre en charge le contenu mixte améliorable.
 
-![Screen shot of the web console displaying display warning for mixed content image.](mixed_content_console_displayed.png)
+![Capture d'écran de la console web affichant l'avertissement d'affichage pour une image de contenu mixte.](mixed_content_console_displayed.png)
 
-## Fixing mixed content issues
+## Corriger les problèmes de contenu mixte
 
-The best strategy to avoid issues with mixed content is to serve all the content as HTTPS:
+La meilleure stratégie pour éviter les problèmes de contenu mixte est de servir l'ensemble du contenu en HTTPS&nbsp;:
 
-- Serve all content from your domain as HTTPS.
-- Make all references to resources hosted on your domain into relative links or HTTPS links, including for downloads.
-- If using resource on other sites use HTTPS versions, if available.
+- Servez tout le contenu de votre domaine en HTTPS.
+- Transformez toutes les références aux ressources hébergées sur votre domaine en liens relatifs ou en liens HTTPS, y compris pour les téléchargements.
+- Pour les ressources situées sur d'autres sites, utilisez les versions HTTPS si elles sont disponibles.
 
-  Most sites provide HTTPS versions of shared resources.
-  Often the easiest approach is to replace all `http://` links with `https://` and then use tools such as [LinkChecker](https://linkchecker.github.io/linkchecker/) to verify that the links all work.
+La plupart des sites proposent une version HTTPS des ressources partagées.
+Souvent, la méthode la plus simple consiste à remplacer tous les liens `http://` par `https://` puis à utiliser des outils tels que [LinkChecker <sup>(angl.)</sup>](https://linkchecker.github.io/linkchecker/) pour vérifier que les liens fonctionnent correctement.
 
-There are a number of ways to verify that your site is free of mixed content including:
+Voici quelques méthodes pour vérifier qu'un site est exempt de contenu mixte&nbsp;:
 
-- Navigate your site, and check your browser's [developer console](#developer_console) for mixed content warnings.
-- Disable all mixed content on your browser and test that pages work as expected.
-  This is the default for Safari, but most browsers support some mechanism for blocking all mixed content (see [compatibility data](#browser_compatibility)).
-- Use a desktop-based web crawler like [HTTPSChecker](https://httpschecker.net/how-it-works), or a CLI tool like [mcdetect](https://github.com/agis/mcdetect), to check your website recursively and find links to insecure content.
-- Use an online tool like [Mixed Content Checker](https://www.crawlcenter.com/mixed-content-checker) to check your site.
+-- Parcourez votre site et consultez la [console du développeur](#console_du_développeur) de votre navigateur pour détecter les avertissements de contenu mixte.
+
+- Désactivez tout contenu mixte dans votre navigateur et testez que les pages fonctionnent comme prévu.
+  C'est le comportement par défaut dans Safari, mais la plupart des navigateurs proposent un mécanisme pour bloquer tout contenu mixte (voir les données de [compatibilité](#compatibilité_des_navigateurs)).
+- Utilisez un crawler de bureau comme [HTTPSChecker](https://httpschecker.net/how-it-works) ou un outil CLI comme [mcdetect <sup>(angl.)</sup>](https://github.com/agis/mcdetect) pour analyser récursivement votre site et trouver les liens vers du contenu non sécurisé.
+- Utilisez un outil en ligne comme [Mixed Content Checker <sup>(angl.)</sup>](https://www.crawlcenter.com/mixed-content-checker) pour vérifier votre site.
 
 ## Specifications
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
 {{Compat}}
 
-## See also
+## Voir aussi
 
-- [CSP: `upgrade-insecure-requests`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/upgrade-insecure-requests) upgrades all requests to HTTPS, including blockable mixed content
+- [CSP&nbsp;: `upgrade-insecure-requests`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/upgrade-insecure-requests) passe toutes les requêtes en HTTPS, y compris le contenu mixte bloquable
