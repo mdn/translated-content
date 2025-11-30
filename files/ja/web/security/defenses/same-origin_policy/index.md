@@ -1,6 +1,7 @@
 ---
 title: 同一オリジンポリシー
-slug: Web/Security/Same-origin_policy
+slug: Web/Security/Defenses/Same-origin_policy
+original_slug: Web/Security/Same-origin_policy
 l10n:
   sourceCommit: 4d9320f9857fb80fef5f3fe78e3d09b06eb0ebbd
 ---

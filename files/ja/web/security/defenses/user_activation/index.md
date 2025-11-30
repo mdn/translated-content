@@ -1,6 +1,7 @@
 ---
 title: ユーザーによる有効化によって制御される機能
-slug: Web/Security/User_activation
+slug: Web/Security/Defenses/User_activation
+original_slug: Web/Security/User_activation
 l10n:
   sourceCommit: 27bceead8e9b1fe9c92df0fa5e418f81bd5b9fdf
 ---

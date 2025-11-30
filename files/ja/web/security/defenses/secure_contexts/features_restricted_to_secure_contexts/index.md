@@ -1,6 +1,7 @@
 ---
 title: 保護されたコンテキストに制限されている機能
-slug: Web/Security/Secure_Contexts/features_restricted_to_secure_contexts
+slug: Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts
+original_slug: Web/Security/Secure_Contexts/features_restricted_to_secure_contexts
 l10n:
   sourceCommit: dea173f1ffb3e6bef851f2e328cf7562f1ef78ce
 ---
