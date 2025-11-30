@@ -1,6 +1,7 @@
 ---
 title: Secure Contexts
-slug: Web/Security/Secure_Contexts
+slug: Web/Security/Defenses/Secure_Contexts
+original_slug: Web/Security/Secure_Contexts
 ---
 
 {{QuickLinksWithSubpages("/fr/docs/Web/Security")}}

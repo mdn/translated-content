@@ -1,6 +1,7 @@
 ---
 title: Subresource Integrity
-slug: Web/Security/Subresource_Integrity
+slug: Web/Security/Defenses/Subresource_Integrity
+original_slug: Web/Security/Subresource_Integrity
 ---
 
 {{QuickLinksWithSubpages("/fr/docs/Web/Security")}}

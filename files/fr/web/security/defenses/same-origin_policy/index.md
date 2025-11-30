@@ -1,6 +1,7 @@
 ---
 title: Same-origin policy
-slug: Web/Security/Same-origin_policy
+slug: Web/Security/Defenses/Same-origin_policy
+original_slug: Web/Security/Same-origin_policy
 ---
 
 {{QuickLinksWithSubpages("/fr/docs/Web/Security")}}
