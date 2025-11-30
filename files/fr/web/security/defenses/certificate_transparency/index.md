@@ -1,5 +1,6 @@
 ---
-title: Transparence des certificats
+title: Transparence des certificats (Certificate Transparency)
+short-title: Transparence des certificats
 slug: Web/Security/Defenses/Certificate_Transparency
 l10n:
   sourceCommit: 39070892d5d1a5cc55312a0ac10c97f4c339384f

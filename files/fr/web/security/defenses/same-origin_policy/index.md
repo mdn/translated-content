@@ -1,5 +1,6 @@
 ---
 title: Politique de même origine (Same-origin)
+short-title: Politique de même origine
 slug: Web/Security/Defenses/Same-origin_policy
 l10n:
   sourceCommit: 39070892d5d1a5cc55312a0ac10c97f4c339384f

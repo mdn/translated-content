@@ -1,5 +1,6 @@
 ---
-title: Contenu mixte
+title: Contenu mixte (Mixed Content)
+short-title: Contenu mixte
 slug: Web/Security/Defenses/Mixed_content
 l10n:
   sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa

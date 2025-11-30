@@ -1,5 +1,6 @@
 ---
 title: Contextes sécurisés (Secure Contexts)
+short-title: Contextes sécurisés
 slug: Web/Security/Defenses/Secure_Contexts
 l10n:
   sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
