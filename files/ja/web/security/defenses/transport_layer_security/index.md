@@ -1,6 +1,7 @@
 ---
 title: トランスポート層セキュリティ
-slug: Web/Security/Transport_Layer_Security
+slug: Web/Security/Defenses/Transport_Layer_Security
+original_slug: Web/Security/Transport_Layer_Security
 l10n:
   sourceCommit: d71da812ee94c20658cb1916a123a42254ea545c
 ---

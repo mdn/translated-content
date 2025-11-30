@@ -1,6 +1,7 @@
 ---
 title: サブリソース完全性
-slug: Web/Security/Subresource_Integrity
+slug: Web/Security/Defenses/Subresource_Integrity
+original_slug: Web/Security/Subresource_Integrity
 l10n:
   sourceCommit: 8df009472bbc7f0fc8a69717e1493de02982ed66
 ---

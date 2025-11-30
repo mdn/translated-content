@@ -1,6 +1,7 @@
 ---
 title: 混在コンテンツ
-slug: Web/Security/Mixed_content
+slug: Web/Security/Defenses/Mixed_content
+original_slug: Web/Security/Mixed_content
 l10n:
   sourceCommit: 6d311a5f07c97dbcd7bb9a6d49c2fe820a228659
 ---

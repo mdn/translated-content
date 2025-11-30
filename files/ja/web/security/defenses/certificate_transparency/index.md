@@ -1,6 +1,7 @@
 ---
 title: 証明書の透明性
-slug: Web/Security/Certificate_Transparency
+slug: Web/Security/Defenses/Certificate_Transparency
+original_slug: Web/Security/Certificate_Transparency
 l10n:
   sourceCommit: 5b755904cd31e7329ee32ace99486a2fea0fe6a1
 ---
