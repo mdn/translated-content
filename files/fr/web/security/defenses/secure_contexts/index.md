@@ -1,12 +1,11 @@
 ---
-title: Secure Contexts
+title: Contextes sécurisés (Secure Contexts)
 slug: Web/Security/Defenses/Secure_Contexts
-original_slug: Web/Security/Secure_Contexts
+l10n:
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/Security")}}
-
-Un navigateur entre dans un **contexte sécurisé** quand il a satisfait les exigences minimale de sécurité. Un contexte sécurisé permet au navigateur de mettre à disposition des APIs qui nécessitent des transferts sécurisés avec l'utilisateur.
+Un **contexte sécurisé** (<i lang="en">secure context</i> en anglais) est une fenêtre de navigation (`Window`) ou un `Worker` pour lequel certains standards minimaux d'authentification et de confidentialité sont respectés. De nombreuses API Web et fonctionnalités ne sont accessibles que dans un contexte sécurisé. L'objectif principal des contextes sécurisés est d'empêcher les [attaquant·es de type MITM <sup>(angl.)</sup>](https://fr.wikipedia.org/wiki/Attaque_de_l%27homme_du_milieu) d'accéder à des API puissantes qui pourraient compromettre davantage la victime d'une attaque.
 
 ## Pourquoi certaines fonctionnalitées devraient être limitées ?
 
@@ -18,128 +17,44 @@ Certaines APIs du web peuvent donner beaucoup de pouvoir à un attaqueur, lui pe
 
 ## À quel moment un context est-il considéré comme sécurisé ?
 
-Un contexte sera considéré comme sécurisé s'il est servi locallement, ou depuis un serveur sécurisé. Un contexte qui n'est pas à la racine (une page qui n'est pas dans une fenêtre, iframe, ...) doit avoir tous ses contextes parents sécurisés.
+Un contexte est considéré comme sécurisé lorsqu'il respecte certains standards minimaux d'authentification et de confidentialité définis dans la [spécification Secure Contexts <sup>(angl.)</sup>](https://w3c.github.io/webappsec-secure-contexts/). Un document particulier est considéré comme étant dans un contexte sécurisé lorsqu'il est le [document actif <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/browsers.html#active-document) d'un [contexte de navigation de premier niveau <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context) (c'est-à-dire une fenêtre ou un onglet) qui est lui-même sécurisé.
 
-Les fichiers servis locallement avec des chemins comme `http://localhost` et `file://` sont considérés sécurisés.
+Par exemple, même pour un document délivré via TLS dans un élément HTML {{HTMLElement("iframe")}}, son contexte **n'est pas** considéré comme sécurisé si un de ses ancêtres n'a pas aussi été délivré via TLS.
 
-Les contextes qui ne sont pas servis locallement doivent être servis avec _https\://_ ou _wss\://_ et les protocoles utilisés ne doivent pas être considérés obsolètes.
+Cependant, il est important de noter que si un contexte non sécurisé ouvre une nouvelle fenêtre (avec ou sans l'attribut [noopener](/fr/docs/Web/API/Window/open)), le fait que l'ouvreur ne soit pas sécurisé n'a aucun effet sur le statut sécurisé de la nouvelle fenêtre. En effet, la détermination du caractère sécurisé d'un document ne dépend que de son contexte de navigation de premier niveau — et non du contexte qui a servi à le créer.
+
+Pour qu'une ressource non locale soit considérée comme sécurisée, elle doit remplir les critères suivants&nbsp;:
+
+- Elle doit être servie via une URL `https://`.
+- Les propriétés de sécurité du canal réseau utilisé pour la délivrer ne doivent pas être considérées comme obsolètes.
+
+## Origines potentiellement dignes de confiance
+
+Une **origine potentiellement digne de confiance** est une origine que le navigateur peut généralement considérer comme fiable pour la sécurité des données, même si, strictement parlant, elle ne remplit pas tous les critères d'un contexte sécurisé.
+
+Les ressources servies localement, comme celles avec les URL `http://127.0.0.1`, `http://localhost` et `http://*.localhost` (par exemple, `http://dev.whatever.localhost/`), ne sont pas délivrées en HTTPS, mais peuvent être considérées comme sécurisées car elles sont sur le même appareil que le navigateur. Elles sont donc potentiellement dignes de confiance. Cela est pratique pour les développeur·euses qui testent des applications en local.
+
+Il en va de même, en général, pour les URL `file://`.
+
+Les URL [WebSocket](/fr/docs/Web/API/WebSockets_API) sécurisées (`"wss://"`) sont également considérées comme potentiellement dignes de confiance.
+
+Les schémas d'URL spécifiques à un éditeur, comme `app://` ou `chrome-extension://`, ne sont pas considérés comme dignes de confiance par tous les navigateurs, mais peuvent l'être par ceux de l'éditeur concerné.
+
+> [!NOTE]
+> Firefox 84 et versions ultérieures prennent en charge les URL `http://localhost` et `http://*.localhost` comme origines dignes de confiance (ce n'était pas le cas auparavant, car `localhost` n'était pas garanti de pointer vers une adresse locale/boucle).
 
 ## Détection des fonctionnalités
 
-Les pages peuvent utiliser la détection de fonctionnalités pour vérifier si elles sont dans un context sécurisé ou non en utilisant le booléen `isSecureContext` qui est présent dans le scope global.
+Les pages peuvent utiliser la détection de fonctionnalités pour vérifier si elles sont dans un contexte sécurisé ou non, en utilisant le booléen {{DOMxRef("Window.isSecureContext")}} ou {{DOMxRef("WorkerGlobalScope.isSecureContext")}}, disponible dans l'environnement global.
 
 ```js
 if (window.isSecureContext) {
-  // La page est dans un contexte sécurisé, les services workers sont disponibles.
-  navigator.serviceWorker.register("/offline-worker.js").then(function () {
-    ...
+  // La page est dans un contexte sécurisé, les service workers sont disponibles
+  navigator.serviceWorker.register("/offline-worker.js").then(() => {
+    // …
   });
 }
 ```
-
-## Quelles APIs requièrent un contexte sécurisé ?
-
-- <i lang="en">Service Workers</i>
-- <i lang="en">Web Bluetooth</i>
-- <i lang="en">EME</i>
-
-### Prositions de brouillons
-
-- <https://w3c.github.io/sensors/>
-- <https://w3c.github.io/webappsec-credential-management/>
-- <https://w3c.github.io/geofencing-api/>
-- <https://w3c.github.io/web-nfc/releases/20150925/>
-
-### Navigateurs
-
-Certains navigateurs peuvent décider de demander à certaines APIs d'être dans un contexte sécurisé même si la spécification ne le demande pas.
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td></td>
-      <td>Chrome</td>
-      <td>Safari</td>
-      <td>Firefox</td>
-    </tr>
-    <tr>
-      <td>getUserMedia</td>
-      <td>
-        <p>Désactivé</p>
-        <p>
-          <a href="https://codereview.chromium.org/1336633002"
-            >Supprimé dans Chrome 47</a
-          >
-        </p>
-      </td>
-      <td></td>
-      <td>
-        <p>
-          Accès temporaire uniquement (les utilisateurs ne peuvent pas choisir
-          "Retenir ce choix" dans la selection de permission).
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>Geolocation</td>
-      <td>
-        <p>Désactivé</p>
-        <p>
-          <a href="https://codereview.chromium.org/1530403002/"
-            >Supprimé dans Chrome 50</a
-          >
-        </p>
-      </td>
-      <td>
-        <p>Désactivé</p>
-        <p>
-          <a href="https://trac.webkit.org/changeset/200686">Suppression ici</a>
-        </p>
-      </td>
-      <td>
-        <p>Suppression en cours</p>
-        <p>
-          <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1072859"
-            >Suppression attendue pour Firefox 55</a
-          >
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>EME</td>
-      <td>Avertissement de dépréciation</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Device motion / orientation</td>
-      <td>Avertissement de dépréciation</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>MIDI</td>
-      <td>Désactivé</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><i lang="en">Web Crypto API</i></td>
-      <td>
-        <em
-          >est réservé à HTTPS même is la vérification du Secure Context est
-          antérieur</em
-        >
-      </td>
-      <td></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
-
-Pour vérifier le support de votre navigateur, utilisez le site: `http://permission.site`
-
-_Note: Safari et Chrome ne supportent pas complètement la spécification des Secure Contexts, certaines APIs peuvent fonctionner avec des iframes utilisant du HTTPS dans une page utilisant du HTTP ou dans une page qui a un contexte ouvert avec une page non sécurisée (c'est le cas quand une page utilisant du HTTP utilise window\.open ou target="\_blank")._
 
 ## Spécifications
 
@@ -147,4 +62,7 @@ _Note: Safari et Chrome ne supportent pas complètement la spécification des Se
 
 ## Voir aussi
 
-- {{domxref("Window.isSecureContext")}}
+- [Fonctionnalités limitées aux contextes sécurisés](/fr/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts) — liste des fonctionnalités disponibles uniquement dans les contextes sécurisés
+- Les propriétés JavaScript {{DOMxRef("Window.isSecureContext")}} et {{DOMxRef("WorkerGlobalScope.isSecureContext")}}
+- <https://permission.site> — Un site permettant de vérifier quelles permissions d'API sont contrôlées par votre navigateur, en HTTP et HTTPS
+- L'en-tête HTTP [Strict-Transport-Security](/fr/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)
