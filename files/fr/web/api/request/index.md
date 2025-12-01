@@ -27,7 +27,7 @@ Vous pouvez créer un nouvel objet `Request` en utilisant le constructeur {{domx
 - {{domxref("Request.headers")}} {{readonlyInline}}
   - : Contient l'objet {{domxref("Headers")}} associé de la requête.
 - {{domxref("Request.integrity")}} {{readonlyInline}}
-  - : Contient la valeur d'[intégrité de la sous-ressource](/fr/docs/Web/Security/Subresource_Integrity) de la demande (par exemple, `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
+  - : Contient la valeur d'[intégrité de la sous-ressource](/fr/docs/Web/Security/Defenses/Subresource_Integrity) de la demande (par exemple, `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
 - {{domxref("Request.method")}} {{readonlyInline}}
   - : Contient la méthode de la requête (`GET`, `POST`, etc).
 - {{domxref("Request.mode")}} {{readonlyInline}}
