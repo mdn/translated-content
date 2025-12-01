@@ -1,6 +1,7 @@
 ---
 title: 仅限于安全上下文的特性
-slug: Web/Security/Secure_Contexts/features_restricted_to_secure_contexts
+slug: Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts
+original_slug: Web/Security/Secure_Contexts/features_restricted_to_secure_contexts
 ---
 
 本参考列出了仅在安全上下文中可用的 web 平台的特性，有关定义和更多详情，请参阅[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)。

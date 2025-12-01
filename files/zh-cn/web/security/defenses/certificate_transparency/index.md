@@ -1,6 +1,7 @@
 ---
 title: 证书透明度
-slug: Web/Security/Certificate_Transparency
+slug: Web/Security/Defenses/Certificate_Transparency
+original_slug: Web/Security/Certificate_Transparency
 ---
 
 **证书透明度**（Certificate Transparency，CT）是一个开放的框架，旨在监测和防止证书的误发。它在 [RFC 9162](https://www.rfc-editor.org/rfc/rfc9162) 中定义。有了证书透明度机制，新颁发的证书会被“记录”到公开运行的、通常是独立的 *CT 日志*中——这些日志保持着仅允许添加、有密码学保证的已颁发 TLS 证书记录。
