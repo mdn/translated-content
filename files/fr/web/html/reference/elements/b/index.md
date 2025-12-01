@@ -1,107 +1,41 @@
 ---
 title: "<b> : l'élément portant à l'attention"
 slug: Web/HTML/Reference/Elements/b
-original_slug: Web/HTML/Element/b
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<b>`** est utilisé pour attirer l'attention du·de la lecteur·ice sur le contenu de l'élément, qui n'a pas d'importance particulière par ailleurs. Il était auparavant connu sous le nom d'élément «&nbsp;Boldface&nbsp;», et la plupart des navigateurs affichent encore le texte en gras. Cependant, il ne faut pas utiliser `<b>` pour la mise en forme du texte ou pour indiquer une importance. Pour créer un texte en gras, il faut utiliser la propriété CSS {{CSSxRef("font-weight")}}. Pour indiquer qu'un élément a une importance particulière, il faut utiliser l'élément {{HTMLElement("strong")}}.
 
-L'élément HTML **`<b>`** permet d'attirer l'attention du lecteur sur un contenu qui n'a pas, pour autant, d'importance significative. Anciennement utilisé pour mettre le texte en gras. Cet élément ne doit pas être utilisé pour mettre en forme des éléments, c'est la propriété CSS [`font-weight`](/fr/docs/Web/CSS/Reference/Properties/font-weight) qu'il faut utiliser. Si l'élément est d'une importance particulière, on utilisera l'élément HTML [`<strong>`](/fr/docs/Web/HTML/Reference/Elements/strong).
-
-{{InteractiveExample("HTML Demo: &lt;b&gt;", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;b&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>
-  The two most popular science courses offered by the school are
-  <b class="term">chemistry</b> (the study of chemicals and the composition of
-  substances) and <b class="term">physics</b> (the study of the nature and
-  properties of matter and energy).
+  Les deux cours de sciences les plus populaires proposés par l'école sont
+  <b class="term">la chimie</b> (l'étude des produits chimiques et de la
+  composition des substances) et <b class="term">la physique</b> (l'étude de la
+  nature et des propriétés de la matière et de l'énergie).
 </p>
 ```
 
 ```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
 b {
+  /* Ajoutez vos styles ici */
 }
 ```
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
-        >
-      </th>
-      <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"
-          >contenu tangible</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
-      <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >Contenu phrasé</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont
-        obligatoires.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
-      <td>
-        Tout élément acceptant du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >contenu phrasé</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >Pas de rôle correspondant</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>
-        <a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## Attributs
 
-Seuls [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes) peuvent être utilisés pour cet élément.
+Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 
-- `<b>` est habituellement utilisé pour les mots-clés dans les résumés, les noms de produits dans des tests (sans que ceux-ci aient une importance particulière). Il peut également être utilisé afin d'indiquer la première phrase de chaque paragraphe d'un article.
-- Il ne faut pas confondre l'élément `<b>` avec les éléments [`<strong>`](/fr/docs/Web/HTML/Reference/Elements/strong), [`<em>`](/fr/docs/Web/HTML/Reference/Elements/em), ou [`<mark>`](/fr/docs/Web/HTML/Reference/Elements/mark). L'élément [`<strong>`](/fr/docs/Web/HTML/Reference/Elements/strong) représente un texte d'une certaine _importance_, [`<em>`](/fr/docs/Web/HTML/Reference/Elements/em) met une emphase sur le texte et [`<mark>`](/fr/docs/Web/HTML/Reference/Elements/mark) représente un texte avec une certaine _pertinence_. L'élément `<b>` ne porte aucune information sémantique particulière ; utilisez-le lorsque qu'aucun autre ne convient.
-- De la même façon, ne balisez pas les titres en utilisant l'élément `<b>`. Pour cet usage, utilisez les balises [`<h1>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) à [`<h6>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements). De plus, les feuilles de style peuvent changer le style par défaut de ces éléments. Ils ne seront pas _forcément_ affichés en gras.
-- C'est généralement une bonne pratique d'utiliser l'attribut [`class`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-class) sur l'élément `<b>` lorsqu'on souhaite transporter des informations sémantiques supplémentaires. Cela facilitera le développement des styles à appliquer sur le document, sans avoir à modifier le code HTML.
-- Historiquement, l'élément `<b>` a été pensé pour rendre du texte avec une police grasse. Les éléments à seul but stylistique ont été dépréciés avec HTML 4. Ainsi, le sens de l'élément `<b>` a évolué.
-- S'il n'y a aucune raison particulière d'utiliser l'élément `<b>`, en dehors de son apparence en gras, l'utilisation de la propriété [CSS](/fr/docs/Web/CSS) [`font-weight`](/fr/docs/Web/CSS/Reference/Properties/font-weight) avec une valeur `bold` est à privilégier.
+- Utilisez l'élément `<b>` pour des cas comme les mots-clés dans un résumé, les noms de produits dans un test ou d'autres portions de texte dont la présentation typique serait en gras (mais sans importance particulière).
+- Ne confondez pas l'élément `<b>` avec les éléments {{HTMLElement("strong")}}, {{HTMLElement("em")}} ou {{HTMLElement("mark")}}. L'élément {{HTMLElement("strong")}} représente un texte d'une certaine _importance_, {{HTMLElement("em")}} met l'accent sur le texte et {{HTMLElement("mark")}} représente un texte d'une certaine _pertinence_. L'élément `<b>` ne transmet pas d'information sémantique particulière&nbsp;; utilisez-le uniquement lorsqu'aucun autre ne convient.
+- De même, n'utilisez pas l'élément `<b>` pour marquer des titres ou des en-têtes. Pour cela, utilisez les balises {{HTMLElement("Heading_Elements", "h1")}} à {{HTMLElement("Heading_Elements", "h6")}}. De plus, les feuilles de style peuvent modifier le style par défaut de ces éléments, de sorte qu'ils ne sont pas nécessairement affichés en gras.
+- Il est recommandé d'utiliser l'attribut [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class) sur l'élément `<b>` pour transmettre des informations sémantiques supplémentaires si nécessaire (par exemple `<b class="lead">` pour la première phrase d'un paragraphe). Cela facilite la gestion de plusieurs cas d'utilisation de `<b>` si vos besoins stylistiques changent, sans avoir à modifier toutes ses utilisations dans le HTML.
+- Historiquement, l'élément `<b>` était destiné à rendre le texte en gras. Les informations de style ont été dépréciées depuis HTML4, donc la signification de l'élément `<b>` a changé.
+- S'il n'y a pas de but sémantique à utiliser l'élément `<b>`, vous devez utiliser la propriété CSS {{CSSxRef("font-weight")}} avec la valeur `bold` pour mettre le texte en gras.
 
 ## Exemples
 
@@ -118,6 +52,70 @@ sûrement en gras.
 
 {{EmbedLiveSample("Exemple")}}
 
+## Résumé technique
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
+          >Catégories de contenu</a
+        >
+      </th>
+      <td>
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
+          >Contenu de flux</a
+        >,
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
+          >contenu phrasé</a
+        >, contenu tangible.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Contenu autorisé</th>
+      <td>
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
+          >Contenu phrasé</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omission de balises</th>
+      <td>
+        Aucune, la balise d'ouverture et la balise de fermeture sont
+        obligatoires.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Parents autorisés</th>
+      <td>
+        Tout élément acceptant du
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
+          >contenu phrasé</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <code
+          ><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
+            >generic</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôles ARIA autorisés</th>
+      <td>Tous les rôles sont autorisés.</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface DOM</th>
+      <td>{{DOMxRef("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
+
 ## Spécifications
 
 {{Specifications}}
@@ -128,5 +126,5 @@ sûrement en gras.
 
 ## Voir aussi
 
-- Les autres éléments portants une sémantique textuelle : [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a), [`<em>`](/fr/docs/Web/HTML/Reference/Elements/em), [`<strong>`](/fr/docs/Web/HTML/Reference/Elements/strong), [`<small>`](/fr/docs/Web/HTML/Reference/Elements/small), [`<cite>`](/fr/docs/Web/HTML/Reference/Elements/cite), [`<q>`](/fr/docs/Web/HTML/Reference/Elements/q), [`<dfn>`](/fr/docs/Web/HTML/Reference/Elements/dfn), [`<abbr>`](/fr/docs/Web/HTML/Reference/Elements/abbr), [`<time>`](/fr/docs/Web/HTML/Reference/Elements/time), [`<code>`](/fr/docs/Web/HTML/Reference/Elements/code), [`<var>`](/fr/docs/Web/HTML/Reference/Elements/var), [`<samp>`](/fr/docs/Web/HTML/Reference/Elements/samp), [`<kbd>`](/fr/docs/Web/HTML/Reference/Elements/kbd), [`<sub>`](/fr/docs/Web/HTML/Reference/Elements/sub), [`<sup>`](/fr/docs/Web/HTML/Reference/Elements/sup), [`<i>`](/fr/docs/Web/HTML/Reference/Elements/i), [`<mark>`](/fr/docs/Web/HTML/Reference/Elements/mark), [`<ruby>`](/fr/docs/Web/HTML/Reference/Elements/ruby), [`<rp>`](/fr/docs/Web/HTML/Reference/Elements/rp), [`<rt>`](/fr/docs/Web/HTML/Reference/Elements/rt), [`<bdo>`](/fr/docs/Web/HTML/Reference/Elements/bdo), [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span), [`<br>`](/fr/docs/Web/HTML/Reference/Elements/br), [`<wbr>`](/fr/docs/Web/HTML/Reference/Elements/wbr).
+- Les autres éléments portants une sémantique textuelle&nbsp;: {{HTMLElement("a")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("abbr")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.
 - [Utiliser les éléments `<b>` et `<i>` (W3C)](https://www.w3.org/International/questions/qa-b-and-i-tags)
