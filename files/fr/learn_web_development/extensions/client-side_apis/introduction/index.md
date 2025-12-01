@@ -274,7 +274,7 @@ audioElement.addEventListener("ended", function () {
 
 ### Elles disposent de mécanismes de sécurité supplémentaires adéquats
 
-Les fonctionnalités des API web sont soumises aux mêmes considérations de sécurité que JavaScript et les autres technologies web (par exemple [la règle de même origine](/fr/docs/Web/Security/Same-origin_policy)), mais elles disposent parfois de mécanismes de sécurité supplémentaires. Par exemple, certaines des API web les plus modernes ne fonctionneront que sur des pages servies avec HTTPS, car elles transmettent des données potentiellement sensibles (par exemple [l'API <i lang="en">Service Workers</i>](/fr/docs/Web/API/Service_Worker_API) et [<i lang="en">Push</i>](/fr/docs/Web/API/Push_API)).
+Les fonctionnalités des API web sont soumises aux mêmes considérations de sécurité que JavaScript et les autres technologies web (par exemple [la règle de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy)), mais elles disposent parfois de mécanismes de sécurité supplémentaires. Par exemple, certaines des API web les plus modernes ne fonctionneront que sur des pages servies avec HTTPS, car elles transmettent des données potentiellement sensibles (par exemple [l'API <i lang="en">Service Workers</i>](/fr/docs/Web/API/Service_Worker_API) et [<i lang="en">Push</i>](/fr/docs/Web/API/Push_API)).
 
 En outre, certaines API web demandent la permission à la personne pour être activée dès que des appels à ces interfaces sont effectués dans votre code. À titre d'exemple, l'API [Notifications](/fr/docs/Web/API/Notifications_API) demande la permission à l'aide d'une boîte de dialogue contextuelle&nbsp;:
 
