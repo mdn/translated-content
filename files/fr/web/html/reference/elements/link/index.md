@@ -225,7 +225,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
   - : Contient des métadonnées en ligne&nbsp;: une empreinte cryptographique (hachage base64) de la ressource (fichier) que vous demandez au navigateur de récupérer.
     Le navigateur peut utiliser cette empreinte pour vérifier que la ressource récupérée n'a pas été modifiée de façon inattendue.
     Cet attribut ne doit être utilisé que lorsque l'attribut `rel` vaut `stylesheet`, `preload` ou `modulepreload`.
-    Voir [Subresource Integrity](/fr/docs/Web/Security/Subresource_Integrity).
+    Voir [Subresource Integrity](/fr/docs/Web/Security/Defenses/Subresource_Integrity).
 - `media`
   - : Cet attribut indique le média auquel s'applique la ressource liée. Sa valeur doit être un type de média ou une [requête média](/fr/docs/Web/CSS/Guides/Media_queries).
     Cet attribut est principalement utilisé pour lier des feuilles de style externes&nbsp;: il permet à l'agent utilisateur de sélectionner la plus adaptée à l'appareil utilisé.
