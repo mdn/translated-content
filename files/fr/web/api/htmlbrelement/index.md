@@ -1,23 +1,26 @@
 ---
 title: HTMLBRElement
 slug: Web/API/HTMLBRElement
+l10n:
+  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
-{{ApiRef}}
+{{APIRef("HTML DOM")}}
 
-L'interface **`HTMLBRElement`** représente un retour à la ligne. Il hérite de {{domxref("HTMLElement")}}.
+L'interface **`HTMLBRElement`** représente un élément de saut de ligne HTML ({{HTMLElement("br")}}). Elle hérite de {{DOMxRef("HTMLElement")}}.
 
-## Propriétés
+{{InheritanceDiagram}}
 
-_Hérite les propriétés de son parent : {{domxref("HTMLElement")}}._
+## Propriétés d'instance
 
-| Nom                           | Type                     | Description                                            |
-| ----------------------------- | ------------------------ | ------------------------------------------------------ |
-| `clear` {{deprecated_inline}} | {{domxref("DOMString")}} | Indique le flux du texte autours des objets flottants. |
+_Hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
 
-## Méthodes
+- {{DOMxRef("HTMLBRElement.clear")}} {{Deprecated_Inline}}
+  - : Une chaîne de caractères indiquant le flux du texte autour des objets flottants.
 
-_Aucune méthode spécifique ;_ _hérite les méthodes de son parent, {{domxref("HTMLElement")}}_.
+## Méthodes d'instance
+
+_Aucune méthode spécifique&nbsp;; hérite des méthodes de son parent, {{DOMxRef("HTMLElement")}}._
 
 ## Spécifications
 
@@ -29,4 +32,4 @@ _Aucune méthode spécifique ;_ _hérite les méthodes de son parent, {{domxref(
 
 ## Voir aussi
 
-- L'élément HTML supportant cet interface : {{ HTMLElement("br") }}
+- L'élément HTML implémentant cette interface&nbsp;: {{HTMLElement("br")}}
