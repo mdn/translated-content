@@ -1,6 +1,7 @@
 ---
 title: 混合內容
-slug: Web/Security/Mixed_content
+slug: Web/Security/Defenses/Mixed_content
+original_slug: Web/Security/Mixed_content
 ---
 
 {{QuickLinksWithSubpages("/zh-TW/docs/Web/Security")}}
