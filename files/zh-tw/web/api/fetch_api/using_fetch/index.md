@@ -50,7 +50,7 @@ async function getData() {
    - 一個 {{domxref("Request")}} 實例
 2. 可選的物件，包含可以用來設定請求的選項
 
-在這個章節我們我會看看一些最常用的選項。如果你想要查看所有可用的選項，你可以查看 [`fetch()`](/zh-tw/docs/Web/API/Window/fetch)。
+在這個章節我們我會看看一些最常用的選項。如果你想要查看所有可用的選項，你可以查看 [`fetch()`](/zh-TW/docs/Web/API/Window/fetch)。
 
 ### 設定 HTTP 請求方法
 
@@ -91,7 +91,7 @@ const response = await fetch("https://example.org/post", {
 - {{domxref("FormData")}}
 - {{domxref("ReadableStream")}}
 
-其他物件會使用 `toString()` 方法來轉換，舉例來說你可以使用 {{domxref("URLSearchParams")}} 物件來編碼資料（更多資訊請查看 [設定Headers](#設定-headers)）： 
+其他物件會使用 `toString()` 方法來轉換，舉例來說你可以使用 {{domxref("URLSearchParams")}} 物件來編碼資料（更多資訊請查看 [設定Headers](#設定-headers)）：
 
 ```js
 const response = await fetch("https://example.org/post", {
