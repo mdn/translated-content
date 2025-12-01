@@ -5,7 +5,7 @@ slug: Web/API/Document/domain
 
 {{ApiRef}}
 
-Retourne/définit la partie domaine de l'origine du document courant, telle qu'utilisée par la [politique d'origine identique](/fr/docs/Web/Security/Same-origin_policy).
+Retourne/définit la partie domaine de l'origine du document courant, telle qu'utilisée par la [politique d'origine identique](/fr/docs/Web/Security/Defenses/Same-origin_policy).
 
 ## Syntaxe
 
@@ -48,7 +48,7 @@ Si cette propriété est définie avec succès, la partie "port" de l'origine es
 
 ## Voir aussi
 
-- [Politique de même origine](/fr/docs/Web/Security/Same-origin_policy)
+- [Politique de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy)
 - {{domxref("Location.hostname")}}
 - {{domxref("Location.host")}}
 - {{domxref("Window.origin")}}
