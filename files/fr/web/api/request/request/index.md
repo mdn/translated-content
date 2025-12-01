@@ -32,7 +32,7 @@ var maRequete = new Request(entree[, init]);
     - `cache`: Le [mode de cache](/fr/docs/Web/API/Request/cache) que vous voulez utiliser pour la requête.
     - `redirect`: Le mode de redirection à utiliser : `follow`, `error`, ou `manual`. Dans Chrome, le défaut est `manual` avant Chrome 47 et `follow` à partir de Chrome 47.
     - `referrer`: Une {{domxref("USVString")}} indiquant `no-referrer`, `client`, ou une URL. La valeur par défaut est `client`.
-    - `integrity`: Contient la valeur d'[intégrité de la sous ressource](/fr/docs/Web/Security/Subresource_Integrity) de la requête (par ex.., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
+    - `integrity`: Contient la valeur d'[intégrité de la sous ressource](/fr/docs/Web/Security/Defenses/Subresource_Integrity) de la requête (par ex.., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
 
 ## Erreurs
 
