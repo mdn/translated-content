@@ -42389,19 +42389,71 @@
       "hashedhyphen"
     ]
   },
-  "Web/Security/Certificate_Transparency": {
+  "Web/Security/Defenses/Certificate_Transparency": {
     "modified": "2020-10-24T06:27:55.333Z",
     "contributors": [
       "silverskyvicto"
     ]
   },
-  "Web/Security/Mixed_content": {
+  "Web/Security/Defenses/Mixed_content": {
     "modified": "2020-08-31T12:56:43.359Z",
     "contributors": [
       "mfuji09",
       "YuichiNukiyama",
       "hashedhyphen",
       "clariroid"
+    ]
+  },
+  "Web/Security/Defenses/Same-origin_policy": {
+    "modified": "2020-09-26T14:15:25.418Z",
+    "contributors": [
+      "mfuji09",
+      "commis1059",
+      "hashedhyphen",
+      "hamasaki",
+      "yyss",
+      "geckotang+gh",
+      "ethertank",
+      "Ghostheaven",
+      "Potappo",
+      "Kohei"
+    ]
+  },
+  "Web/Security/Defenses/Secure_Contexts": {
+    "modified": "2020-10-22T14:39:53.506Z",
+    "contributors": [
+      "silverskyvicto",
+      "mfuji09",
+      "Uemmra3",
+      "YuichiNukiyama",
+      "hashedhyphen"
+    ]
+  },
+  "Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts": {
+    "modified": "2020-10-23T09:50:39.875Z",
+    "contributors": [
+      "silverskyvicto",
+      "mfuji09",
+      "YuichiNukiyama"
+    ]
+  },
+  "Web/Security/Defenses/Subresource_Integrity": {
+    "modified": "2020-10-23T10:16:42.622Z",
+    "contributors": [
+      "silverskyvicto",
+      "mfuji09",
+      "reioto",
+      "hashedhyphen",
+      "satakeh"
+    ]
+  },
+  "Web/Security/Defenses/Transport_Layer_Security": {
+    "modified": "2020-10-23T09:47:35.770Z",
+    "contributors": [
+      "silverskyvicto",
+      "pcw",
+      "mfuji09",
+      "hashedhyphen"
     ]
   },
   "Web/Security/Practical_implementation_guides": {
@@ -42428,58 +42480,6 @@
       "soratako",
       "mfuji09",
       "ShowGoTagami"
-    ]
-  },
-  "Web/Security/Same-origin_policy": {
-    "modified": "2020-09-26T14:15:25.418Z",
-    "contributors": [
-      "mfuji09",
-      "commis1059",
-      "hashedhyphen",
-      "hamasaki",
-      "yyss",
-      "geckotang+gh",
-      "ethertank",
-      "Ghostheaven",
-      "Potappo",
-      "Kohei"
-    ]
-  },
-  "Web/Security/Secure_Contexts": {
-    "modified": "2020-10-22T14:39:53.506Z",
-    "contributors": [
-      "silverskyvicto",
-      "mfuji09",
-      "Uemmra3",
-      "YuichiNukiyama",
-      "hashedhyphen"
-    ]
-  },
-  "Web/Security/Secure_Contexts/features_restricted_to_secure_contexts": {
-    "modified": "2020-10-23T09:50:39.875Z",
-    "contributors": [
-      "silverskyvicto",
-      "mfuji09",
-      "YuichiNukiyama"
-    ]
-  },
-  "Web/Security/Subresource_Integrity": {
-    "modified": "2020-10-23T10:16:42.622Z",
-    "contributors": [
-      "silverskyvicto",
-      "mfuji09",
-      "reioto",
-      "hashedhyphen",
-      "satakeh"
-    ]
-  },
-  "Web/Security/Transport_Layer_Security": {
-    "modified": "2020-10-23T09:47:35.770Z",
-    "contributors": [
-      "silverskyvicto",
-      "pcw",
-      "mfuji09",
-      "hashedhyphen"
     ]
   },
   "Web/URI/Guides/Choosing_between_www_and_non-www_URLs": {
