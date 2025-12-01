@@ -24,7 +24,7 @@
     "prepare": "node scripts/npm-check.js"
   },
   "engines": {
-    "node": ">=22"
+    "node": ">=24"
   },
   "dependencies": {
     "autocorrect-node": "2.14.0",
