@@ -65,7 +65,7 @@ open(url, target, windowFeatures);
 
 ### Valeur de retour
 
-Un objet [WindowProxy](/fr/docs/Glossary/WindowProxy). La référence renvoyée peut être utilisée afin d'accéder aux propriétés et méthodes de la nouvelle fenêtre tant que les prérequis concernant [la règle de même origine](/fr/docs/Web/Security/Same-origin_policy) sont respectés.
+Un objet [WindowProxy](/fr/docs/Glossary/WindowProxy). La référence renvoyée peut être utilisée afin d'accéder aux propriétés et méthodes de la nouvelle fenêtre tant que les prérequis concernant [la règle de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy) sont respectés.
 
 ## Description
 
@@ -262,7 +262,7 @@ On peut aussi n'utiliser qu'une seule fenêtre secondaire et la réutiliser pour
 - Impossible d'accéder aux propriétés de la fenêtre secondaire en raison d'une exception JavaScript "Error: uncaught exception: Permission denied to get property blablabla". Pourquoi&nbsp;?
   - : Des raisons de sécurité, en l'occurrence la règle de même origine, empêche un script chargé dans une fenêtre depuis une autre origine **d'accéder ou de modifier** les propriétés d'une autre fenêtre ou les propriétés des objets HTML provenant d'une autre origine. Avant d'exécuter un script ciblant une fenêtre secondaire, le navigateur vérifiera depuis la fenêtre principale que la fenêtre secondaire partage bien la même origine.
 
-    Pour en savoir plus, voir [la page de documentation quant à la règle de même origine](/fr/docs/Web/Security/Same-origin_policy)
+    Pour en savoir plus, voir [la page de documentation quant à la règle de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy)
 
 ## Problèmes d'utilisabilité
 
