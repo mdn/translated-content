@@ -11,7 +11,7 @@ on:
     paths:
       - ".github/**"
       - package.json
-      - yarn.lock
+      - package-lock.json
 
 # No GITHUB_TOKEN permissions, as we don't use it.
 permissions: {}
@@ -39,7 +39,7 @@ jobs:
 
           # Check actor.
           if [ "$ACTOR" != "$AUTHOR" ]; then
-            ACTOR_PERMISSION=$(gh api https://api.github.com/repos/${{ github.repository }}/collaborators/$ACTOR/permission --jq .permission)  
+            ACTOR_PERMISSION=$(gh api https://api.github.com/repos/${{ github.repository }}/collaborators/$ACTOR/permission --jq .permission)
 
             if [ "$ACTOR_PERMISSION" != "admin" ]; then
               echo "PR actor ($ACTOR) is not an admin, please ping someone for a review."
