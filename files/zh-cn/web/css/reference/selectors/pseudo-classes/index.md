@@ -244,7 +244,7 @@ button:hover {
 这些伪类与参与[视图过渡](/zh-CN/docs/Web/API/View_Transition_API)的元素相关。
 
 - {{cssxref(":active-view-transition")}}
-  - : 匹配文档的根元素，当[视图过渡](/zh-CN/docs/Web/API/View_Transition_API#概念与用法)正在进行（_active_）时生效，并在过渡完成后停止匹配。 
+  - : 匹配文档的根元素，当[视图过渡](/zh-CN/docs/Web/API/View_Transition_API#概念与用法)正在进行（_active_）时生效，并在过渡完成后停止匹配。
 - {{cssxref(":active-view-transition-type", ":active-view-transition-type()")}}
   - : 匹配文档的根元素，当指定的[视图过渡](/zh-CN/docs/Web/API/View_Transition_API#概念与用法)正在进行（_active_）时生效，并在过渡完成后停止匹配。
 
