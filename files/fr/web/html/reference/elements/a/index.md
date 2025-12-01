@@ -64,7 +64,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
     > [!NOTE]
     >
-    > - `download` ne fonctionne que pour [les URLs de même origine](/fr/docs/Web/Security/Same-origin_policy), ou les schémas `blob:` et `data:`.
+    > - `download` ne fonctionne que pour [les URLs de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy), ou les schémas `blob:` et `data:`.
     > - Le comportement du téléchargement varie selon le navigateur, les paramètres utilisateur·ice·s et d'autres facteurs. L'utilisateur·ice peut être invité·e avant le début du téléchargement, ou le fichier peut être enregistré automatiquement, ou il peut s'ouvrir automatiquement, soit dans une application externe, soit dans le navigateur lui-même.
     > - Si l'en-tête `Content-Disposition` comporte des informations différentes de celles de l'attribut `download`, le comportement résultant peut différer&nbsp;:
     >   - Si l'en-tête spécifie un `nom de fichier`, il a priorité sur un nom de fichier spécifié dans l'attribut `download`.
