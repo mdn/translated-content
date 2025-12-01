@@ -57,13 +57,13 @@ For an orphaned page, the generic approach consists of the following:
 4. Depending on the presence of a redirect, use either
 
    ```bash
-   yarn content delete <orphaned/slug/of/page> <locale> --redirect <other/slug>
+   npm run content delete <orphaned/slug/of/page> <locale> -- --redirect <other/slug>
    ```
 
    or
 
    ```bash
-   yarn content delete <orphaned/slug/of/page> <locale>
+   npm run content delete <orphaned/slug/of/page> <locale>
    ```
 
 #### Dealing with conflicting pages
@@ -90,7 +90,7 @@ A conflicting page might need more work as content may have been moved/rewritten
 3. Applying the same redirect as per `mdn/content` for the source page:
 
    ```bash
-   yarn content delete <conflicting/slug/of/page> <locale> --redirect <other/slug>
+   npm run content delete <conflicting/slug/of/page> <locale> -- --redirect <other/slug>
    ```
 
 4. Updating the target page to reflect the movement of content in English. You might need to reuse content from the "conflicting" page into the existing target page to follow the English evolution.
@@ -99,7 +99,7 @@ A conflicting page might need more work as content may have been moved/rewritten
 
 With the automated PRs workflow, it is now easier to "catch" orphaned or conflicting pages before they fill the stack of pages to be removed in the repository.
 
-The process stays the same as above (using `yarn content delete bla/bla locale --redirect foo/foo` most of the time). However, the changes should be made on the branch created by the bot rather than on a new PR (checkout the existing branch rather than creating your own on your fork).
+The process stays the same as above (using `npm run content delete bla/bla locale -- --redirect foo/foo` most of the time). However, the changes should be made on the branch created by the bot rather than on a new PR (checkout the existing branch rather than creating your own on your fork).
 
 Be careful though, if left opened, the PR will be force-pushed updated by the bot every 24h and your changes might be lost. Be sure to keep a local/forked branch with your changes or to review such changes swiftly within your team.
 
