@@ -39,7 +39,6 @@ jobs:
           repository: mdn/content
           path: mdn/content
           persist-credentials: false
-          ref: npm # TODO Remove before merge
 
       - name: Setup Node.js environment
         if: steps.filter.outputs.required_files == 'true'
