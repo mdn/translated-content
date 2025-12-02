@@ -119,7 +119,7 @@ iframe {
     - `allow-presentation`
       - : 埋め込み側が、 iframe が[プレゼンテーションセッション](/ja/docs/Web/API/PresentationRequest)を開始できるかどうかを制御することを許可します。
     - `allow-same-origin`
-      - : このトークンが使用されていない場合、リソースは{{Glossary("same-origin policy", "同一オリジンポリシー")}}に常に失敗する特別なオリジンからのものとして扱われます（潜在的に[データストレージやクッキー](/ja/docs/Web/Security/Same-origin_policy#オリジンをまたいだデータストレージアクセス)へのアクセスや一部の JavaScript API の使用を阻止することがあります）。
+      - : このトークンが使用されていない場合、リソースは{{Glossary("same-origin policy", "同一オリジンポリシー")}}に常に失敗する特別なオリジンからのものとして扱われます（潜在的に[データストレージやクッキー](/ja/docs/Web/Security/Defenses/Same-origin_policy#オリジンをまたいだデータストレージアクセス)へのアクセスや一部の JavaScript API の使用を阻止することがあります）。
     - `allow-scripts`
       - : ページがスクリプトを実行することを許可します（ただし、ポップアップウィンドウは作成しません）。このキーワードが使用されない場合、この操作は許可されません。
     - `allow-storage-access-by-user-activation` {{experimental_inline}}
@@ -140,7 +140,7 @@ iframe {
     > ユーザーをリダイレクトするとき、ポップアップウィンドウを開くとき、または `sandbox` 属性を持つ `<iframe>` 内に埋め込まれたページから新しいタブを開くとき、新しい閲覧コンテキストは同じ `sandbox` の制限に従います。例えば、`sandbox="allow-forms"`または`sandbox="allow-popups-to-escape-sandbox"` 属性が設定されていない`<iframe>`内に埋め込まれたページが別個のタブで新しいサイトを開いた場合、その新しい閲覧コンテキストでのフォーム送信は静かに失敗します。
 
 - `src`
-  - : 埋め込むページの URL です。[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy#オリジンの継承)に従う空白ページを埋め込む場合は、 `about:blank` の値を使用してください。また、プログラムから `<iframe>` の src 属性を削除すると (例えば {{domxref("Element.removeAttribute()")}} などで)、 Firefox (バージョン 65 以降)、 Chromium ベースのブラウザー、 Safari/iOS では `about:blank` が読み込まれます。
+  - : 埋め込むページの URL です。[同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy#オリジンの継承)に従う空白ページを埋め込む場合は、 `about:blank` の値を使用してください。また、プログラムから `<iframe>` の src 属性を削除すると (例えば {{domxref("Element.removeAttribute()")}} などで)、 Firefox (バージョン 65 以降)、 Chromium ベースのブラウザー、 Safari/iOS では `about:blank` が読み込まれます。
 
     > [!NOTE]
     > `about:blank` ページは、アンカーリンクなどの相対 URL を解決するときに、埋め込み文書の URL をベース URL として使用します。
@@ -185,7 +185,7 @@ DOM の {{domxref("HTMLIFrameElement")}} オブジェクトでは、スクリプ
 
 スクリプトは、フレームの内側からは {{domxref("window.parent")}} で親ウィンドウを参照できます。
 
-フレームの内容にアクセスするスクリプトは、[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)に従います。別なオリジンから読み込まれたスクリプトは、フレーム内のスクリプトがフレームの親にアクセスする場合を含め、他の `window` オブジェクトのほとんどのプロパティにアクセスできません。オリジンをまたいだやりとりは {{domxref("Window.postMessage()")}} を使用して実現できます。
+フレームの内容にアクセスするスクリプトは、[同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)に従います。別なオリジンから読み込まれたスクリプトは、フレーム内のスクリプトがフレームの親にアクセスする場合を含め、他の `window` オブジェクトのほとんどのプロパティにアクセスできません。オリジンをまたいだやりとりは {{domxref("Window.postMessage()")}} を使用して実現できます。
 
 ## 位置指定と表示倍率
 

@@ -8,7 +8,7 @@ l10n:
 
 {{QuickLinksWithSubpages("/ja/docs/Web/Security")}}
 
-このリファレンスは、保護されたコンテキストでのみ使用できるウェブプラットフォーム機能の一覧です — 定義や詳細については、[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)を参照してください。
+このリファレンスは、保護されたコンテキストでのみ使用できるウェブプラットフォーム機能の一覧です — 定義や詳細については、[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)を参照してください。
 
 ## 保護されたコンテキストでのみ使用できる現在の機能
 
@@ -73,5 +73,5 @@ l10n:
 
 ## 関連情報
 
-- [保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)
+- [保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)
 - ["secure context" query on Chrome Platform Status](https://www.chromestatus.com/features#secure%20context)
