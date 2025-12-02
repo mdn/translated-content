@@ -116,7 +116,7 @@ Cet élément possède [les attributs universels](/fr/docs/Web/HTML/Reference/Gl
 
 ## Notes d'utilisation
 
-Il est possible d'utiliser la propriété CSS [`object-position`](/fr/docs/Web/CSS/object-position) afin d'ajuster la position de l'objet embarqué au sein de la _frame_ et la propriété CSS [`object-fit`](/fr/docs/Web/CSS/object-fit) afin de contrôler la façon dont la taille de l'objet est ajustée par rapport à celle de la _frame_.
+Il est possible d'utiliser la propriété CSS [`object-position`](/fr/docs/Web/CSS/Reference/Properties/object-position) afin d'ajuster la position de l'objet embarqué au sein de la _frame_ et la propriété CSS [`object-fit`](/fr/docs/Web/CSS/Reference/Properties/object-fit) afin de contrôler la façon dont la taille de l'objet est ajustée par rapport à celle de la _frame_.
 
 ## Exemples
 
@@ -144,4 +144,4 @@ Utilisez l'attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/titl
 ## Voir aussi
 
 - D'autres éléments sont utilisés pour intégrer du contenu de différents types, notamment [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio), [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas), [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe), [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img), [`<math>`](/fr/docs/Web/MathML/Reference/Element/math), [`<object>`](/fr/docs/Web/HTML/Reference/Elements/object), [`<svg>`](/fr/docs/Web/SVG/Reference/Element/svg), and [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video).
-- Positionnement et dimensionnement du contenu intégré dans son cadre : [`object-position`](/fr/docs/Web/CSS/object-position) and [`object-fit`](/fr/docs/Web/CSS/object-fit)
+- Positionnement et dimensionnement du contenu intégré dans son cadre : [`object-position`](/fr/docs/Web/CSS/Reference/Properties/object-position) and [`object-fit`](/fr/docs/Web/CSS/Reference/Properties/object-fit)

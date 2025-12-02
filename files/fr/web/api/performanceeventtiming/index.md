@@ -52,7 +52,7 @@ L'interface `PerformanceEventTiming` des événements de l'`Event Timing API` fo
   - : Retourne un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant l'heure à laquelle la diffusion de l'événement s'est terminée.
 - [`PerformanceEventTiming.cancelable`](/fr/docs/Web/API/PerformanceEventTiming/cancelable) _lecture seule_ {{ExperimentalBadge}}
   - : Retourne un [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean) représentant l'attribut annulable de l'événement associé.
-- [`PerformanceEventTiming.target`](/fr/docs/Web/API/PerformanceEventTiming/target) _lecture seule_ {{NonStandardBadge}}
+- [`PerformanceEventTiming.target`](/fr/docs/Web/API/PerformanceEventTiming/target) _lecture seule_ {{Non-standard_Inline}}
   - : Retourne un [`Node`](/fr/docs/Web/API/Node) représentant la dernière cible de l'événement associé, si elle n'est pas supprimée.
 
 ## Méthodes

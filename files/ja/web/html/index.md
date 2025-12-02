@@ -61,5 +61,5 @@ HTML 要素は文書中で、`<` および `>` で囲まれた要素名で構成
 
 ## 関連トピック
 
-- [CSS を使って HTML の要素に色をつける](/ja/docs/Web/CSS/CSS_colors/Applying_color)
+- [CSS を使って HTML の要素に色をつける](/ja/docs/Web/CSS/Guides/Colors/Applying_color)
   - : この記事では、 CSS を使用して HTML コンテンツに色をつける方法、 HTML 文書のどの部分に色付けできるかの一覧、使用する CSS プロパティについて説明します。

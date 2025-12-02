@@ -2,14 +2,12 @@
 title: Fonction
 slug: Glossary/Function
 l10n:
-  sourceCommit: 7fd56d044d3469659bbe5c04b004e87b13dee352
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+Une **fonction** est une portion de code qui peut être appelée par d'autres codes ou par elle-même ou par une {{Glossary("variable")}} qui se réfère à la fonction. Lorsqu'une fonction est appelée, des {{Glossary("Argument", "arguments")}} lui sont généralement donnés en entrée. La fonction peut également retourner une valeur de sortie. En {{Glossary("JavaScript")}}, une fonction est aussi un {{Glossary("object", "objet")}}.
 
-Une **fonction** est une portion de code qui peut être appelée par d'autres codes ou par elle-même ou par une [variable](/fr/docs/Glossary/Variable) qui se réfère à la fonction. Lorsqu'une fonction est appelée, des [arguments](/fr/docs/Glossary/Argument) lui sont généralement donnés en entrée. La fonction peut également retourner une valeur de sortie. En [JavaScript](/fr/docs/Glossary/JavaScript), une fonction est aussi un [objet](/fr/docs/Glossary/Object).
-
-Un nom de fonction est un [identifiant](/fr/docs/Glossary/Identifier) déclaré dans le cadre d'une déclaration de fonction ou d'une expression de fonction. Le fait que le nom de fonction soit déclaré ou exprimé impacte [la portée](/fr/docs/Glossary/Scope) du nom de fonction.
+Un nom de fonction est un {{Glossary("identifier", "identifiant")}} déclaré dans le cadre d'une déclaration de fonction ou d'une expression de fonction. Le fait que le nom de fonction soit déclaré ou exprimé impacte {{Glossary("scope", "la portée")}} du nom de fonction.
 
 ### Différents types de fonctions
 
@@ -55,7 +53,7 @@ const ajouteCarres2 = (a, b) => {
 };
 ```
 
-Une **fonction récursive** est une fonction qui fait appel à elle-même. Voir [la page du glossaire sur la récursion](/fr/docs/Glossary/Recursion).
+Une **fonction récursive** est une fonction qui fait appel à elle-même. Voir l'entrée de glossaire {{Glossary("Recursion", "récursion")}}.
 
 ```js
 function boucle(x) {
@@ -70,7 +68,7 @@ const boucle2 = (x) => {
 };
 ```
 
-Une **expression de fonction invoquée immédiatement** ([IIFE](/fr/docs/Glossary/IIFE) pour <i lang="en">Immediately Invoked Function Expressions</i> en anglais) est une fonction appelée directement après le chargement de la fonction dans le compilateur du navigateur. Pour identifier une IIFE, on cherchera les parenthèses gauche et droite supplémentaires à la fin de la déclaration de la fonction.
+Une **expression de fonction invoquée immédiatement** ({{Glossary("IIFE")}} pour <i lang="en">Immediately Invoked Function Expressions</i> en anglais) est une fonction appelée directement après le chargement de la fonction dans le compilateur du navigateur. Pour identifier une IIFE, on cherchera les parenthèses gauche et droite supplémentaires à la fin de la déclaration de la fonction.
 
 Les expressions de fonction, nommées ou anonymes, peuvent être appelées immédiatement.
 
@@ -94,7 +92,7 @@ function toto() {
 }();
 ```
 
-Voir [la page du glossaire sur les IIFE](/fr/docs/Glossary/IIFE) pour en savoir plus.
+Si vous souhaitez en savoir plus sur les IIFE, consultez la page Wikipédia&nbsp;: [Expression de fonction invoquée immédiatement <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Immediately_invoked_function_expression)
 
 ## Voir aussi
 

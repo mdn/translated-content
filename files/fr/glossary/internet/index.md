@@ -1,15 +1,12 @@
 ---
 title: Internet
 slug: Glossary/Internet
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
-
-Internet est un réseau mondial constitué de réseaux. Ce réseau utilise le protocole Internet aussi nommé {{glossary("TCP")}}/{{glossary("IPv6", "IP")}} d'après ses principaux {{glossary("Protocol", "protocoles")}}.
+Internet est un réseau mondial constitué de réseaux. Ce réseau utilise le protocole Internet aussi nommé {{Glossary("TCP")}}/{{Glossary("IPv6", "IP")}} d'après ses principaux {{Glossary("Protocol", "protocoles")}}.
 
 ## Voir aussi
 
-### Culture générale
-
-- [Internet](http://fr.wikipedia.org/wiki/Internet) sur Wikipédia
-- [How the Internet works](/fr/docs/Learn/How_the_Internet_works) (introduction pour les débutants, article en anglais)
+- [Comment fonctionne Internet](/fr/docs/Learn/How_the_Internet_works) (introduction pour les débutants)

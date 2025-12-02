@@ -61,7 +61,7 @@ MDN では、すべての CSS プロパティページでブラウザー互換�
 
 CSS 仕様書には、レイアウトメソッドのような 2 つの類似した機能が同じアイテムに適用された場合に、ブラウザーがどのような処理を行うかを説明する情報が含まれています。例えば、アイテムが浮動ボックスであり、グリッドアイテムでもあり、CSS グリッドコンテナーの一部でもある場合にどうなるかを定義しています。要素に {{cssxref("margin-top")}} と {{cssxref("margin-block-start")}} プロパティが設定されている場合の定義もあります。
 
-ブラウザーは新しい機能を認識しない場合、その宣言を不正なものとして[エラーを発生させずに](/ja/docs/Web/CSS/CSS_syntax/Error_handling#css_パーサーのエラー)破棄します。ブラウザーが対応していない CSS のプロパティや数値は破棄されるため、古い値と新しい値の両方を同じルールセットで共存させることができます。ただ、新しい値の前に古い値を宣言し、対応している場合は新しい値が古い値を上書きするようにします（代替表示）。
+ブラウザーは新しい機能を認識しない場合、その宣言を不正なものとして[エラーを発生させずに](/ja/docs/Web/CSS/Guides/Syntax/Error_handling#css_パーサーのエラー)破棄します。ブラウザーが対応していない CSS のプロパティや数値は破棄されるため、古い値と新しい値の両方を同じルールセットで共存させることができます。ただ、新しい値の前に古い値を宣言し、対応している場合は新しい値が古い値を上書きするようにします（代替表示）。
 
 例えば、ほとんどのブラウザーは {{cssxref("display")}} プロパティの 2 値構文に対応しています。そうでないブラウザーは、古い 1 つの値の構文を使用します。
 
@@ -72,13 +72,13 @@ CSS 仕様書には、レイアウトメソッドのような 2 つの類似し�
 }
 ```
 
-同様に、この[エラー処理](/ja/docs/Web/CSS/CSS_syntax/Error_handling#ベンダー接頭辞)は、古い CSS コードベースが、古い{{glossary("Vendor_Prefix", "ベンダー接頭辞付き")}}機能が対応できなくなったとしても、動作し続けることを保証します。ベンダー接頭辞はもう一般的には使用されていませんが、ベンダー接頭辞のプロパティや値を記載する必要がある場合は、標準値の前に接頭辞つきの値を宣言し、対応している場合に新しい値が代替値を上書きするようにしてください。
+同様に、この[エラー処理](/ja/docs/Web/CSS/Guides/Syntax/Error_handling#ベンダー接頭辞)は、古い CSS コードベースが、古い{{glossary("Vendor_Prefix", "ベンダー接頭辞付き")}}機能が対応できなくなったとしても、動作し続けることを保証します。ベンダー接頭辞はもう一般的には使用されていませんが、ベンダー接頭辞のプロパティや値を記載する必要がある場合は、標準値の前に接頭辞つきの値を宣言し、対応している場合に新しい値が代替値を上書きするようにしてください。
 
 ### 新しいセレクターの使用
 
 すべてのブラウザーで対応していない新しいセレクターを記載することは、より慎重に処理する必要があります。セレクターのカンマ区切りリスト内の[セレクターが不正](/ja/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS#セレクターの対応)な場合、スタイルブロック全体が無視されます。
 
-ブラウザーの対応していないベンダー接頭辞付きの[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)や新しい[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)を使用する場合は、 {{cssxref(":is", ":is()")}} や {{cssxref(":where", ":where()")}} を使用して寛容なセレクターリスト内に接頭辞の値を記載して、セレクターブロック全体が[不正で無視されないように](/ja/docs/Web/CSS/Selector_list#無効なセレクターリスト)してください。
+ブラウザーの対応していないベンダー接頭辞付きの[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)や新しい[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)を使用する場合は、 {{cssxref(":is", ":is()")}} や {{cssxref(":where", ":where()")}} を使用して寛容なセレクターリスト内に接頭辞の値を記載して、セレクターブロック全体が[不正で無視されないように](/ja/docs/Web/CSS/Reference/Selectors/Selector_list#無効なセレクターリスト)してください。
 
 ```css
 :is(:-prefix-mistake, :unsupported-pseudo),
@@ -155,7 +155,7 @@ CSS 仕様書には、レイアウトメソッドのような 2 つの類似し�
 
 ## 関連情報
 
-- [`@supports`](/ja/docs/Web/CSS/@supports) アットルール
-- [CSS アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
-- [機能クエリーの使用](/ja/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
-- [CSS 条件付きルール](/ja/docs/Web/CSS/CSS_conditional_rules)モジュール
+- [`@supports`](/ja/docs/Web/CSS/Reference/At-rules/@supports) アットルール
+- [CSS アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)
+- [機能クエリーの使用](/ja/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)
+- [CSS 条件付きルール](/ja/docs/Web/CSS/Guides/Conditional_rules)モジュール

@@ -3,8 +3,6 @@ title: Date.prototype[Symbol.toPrimitive]
 slug: Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive
 ---
 
-{{JSRef}}
-
 {{jsxref("Date")}} 实例的 **`[Symbol.toPrimitive]()`** 方法返回表示当前日期的原始值。根据给定提示的不同，其可能是字符串或数字。
 
 {{InteractiveExample("JavaScript Demo: Date.prototype[Symbol.toPrimitive]")}}

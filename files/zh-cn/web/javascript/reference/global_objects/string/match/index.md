@@ -3,8 +3,6 @@ title: String.prototype.match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
 ---
 
-{{JSRef}}
-
 **`match()`** 方法检索字符串与[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)进行匹配的结果。
 
 {{InteractiveExample("JavaScript Demo: String.match()", "shorter")}}

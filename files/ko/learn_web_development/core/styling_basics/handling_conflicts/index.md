@@ -132,7 +132,7 @@ span {
 일부 속성은 상속되지 않습니다 — 예를 들어 요소에 {{cssxref("width")}} 를 50% 로 설정하면, 모든 하위 항목의 너비가 부모 너비의 50% 가 되지 않습니다. 이 경우, CSS 는 사용하기가 매우 어려울 것입니다!
 
 > [!NOTE]
-> MDN CSS 속성 참조 페이지에서 일반적으로 specifications 섹션의 맨 아래에 기술 정보 박스가 있습니다. 여기에는 해당 속성의 상속 여부를 포함하여 해당 속성에 대한 여러 데이터 요소가 나열되어 있습니다. 예를 들어, [color 속성 Specifications 섹션](/ko/docs/Web/CSS/color#specifications) 을 참조 하십시오.
+> MDN CSS 속성 참조 페이지에서 일반적으로 specifications 섹션의 맨 아래에 기술 정보 박스가 있습니다. 여기에는 해당 속성의 상속 여부를 포함하여 해당 속성에 대한 여러 데이터 요소가 나열되어 있습니다. 예를 들어, [color 속성 Specifications 섹션](/ko/docs/Web/CSS/Reference/Properties/color#specifications) 을 참조 하십시오.
 
 ## 개념이 함께 작동하는 방식 이해하기
 

@@ -14,4 +14,4 @@ WebKit 是 Apple 的商标，该框架根据 BSD 形式的许可证分发。然�
 ## 参见
 
 - 维基百科上的 [WebKit](https://zh.wikipedia.org/wiki/WebKit)
-- [WebKit CSS 拓展](/zh-CN/docs/Web/CSS/WebKit_Extensions)
+- [WebKit CSS 拓展](/zh-CN/docs/Web/CSS/Reference/Webkit_extensions)

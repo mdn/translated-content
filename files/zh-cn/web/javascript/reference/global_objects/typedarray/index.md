@@ -3,8 +3,6 @@ title: TypedArray
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray
 ---
 
-{{JSRef}}
-
 一个 **_TypedArray_** 对象描述了底层[二进制数据缓冲区](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)的类数组视图。没有称为 `TypedArray` 的全局属性，也没有直接可用的 `TypedArray` 构造函数。但是，有很多不同的全局属性，其值是指定元素类型的类型化数组构造函数，如下所列。在接下来的页面，你将找到可以与包含任意类型元素的任意类型化数组一起使用的常见属性和方法。
 
 {{InteractiveExample("JavaScript Demo: TypedArray Constructor")}}

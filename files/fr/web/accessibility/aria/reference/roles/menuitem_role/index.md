@@ -31,7 +31,7 @@ Chaque `menuitem` doit avoir un nom accessible. Ce nom provient par défaut du c
 - le rôle [`group`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/group_role)
   - : Peut être utilisé pour identifier un ensemble de `menuitem`s connexes dans ou possédés par un `menu` ou `menubar`.
 - [`aria-disabled`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)
-  - : Indique que l'élément est perceptible mais désactivé, donc il n'est pas opérable.
+  - : Indique que l'élément est perceptible mais désactivé, donc il n'est pas utilisable.
 - [`aria-haspopup`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup)
   - : Indique la disponibilité et le type de popup interactif qui peut être déclenché par le `menuitem`
 

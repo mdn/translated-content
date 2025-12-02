@@ -731,7 +731,7 @@ aside {
 
 ## 推荐阅读
 
-- [CSS 网格指南](/zh-CN/docs/Web/CSS/CSS_grid_layout#guides)
+- [CSS 网格指南](/zh-CN/docs/Web/CSS/Guides/Grid_layout#guides)
 - [CSS 网格检查器：检查的你的网格版面](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout")}}

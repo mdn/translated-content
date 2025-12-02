@@ -11,7 +11,7 @@ l10n:
 Le constructeur **`Image()`** crée une nouvelle instance {{domxref("HTMLImageElement")}}. C'est fonctionnellement équivalent à {{domxref("Document.createElement()", "document.createElement('img')")}}.
 
 > [!NOTE]
-> Cette fonction ne doit pas être confondue avec la fonction CSS [`image()`](/fr/docs/Web/CSS/image/image).
+> Cette fonction ne doit pas être confondue avec la fonction CSS [`image()`](/fr/docs/Web/CSS/Reference/Values/image/image).
 
 ## Syntaxe
 

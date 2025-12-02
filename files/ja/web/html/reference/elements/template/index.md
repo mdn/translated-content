@@ -187,7 +187,7 @@ document
 
 このコードでは、最初に `<template>` 要素に `shadowrootmode` 属性を用いて、`<div>` 要素の中にシャドウルートを宣言します。
 これにより、テキストを格納したフォーカスできない `<div>` と、フォーカスできる `<input>` 要素の両方が表示されます。
-また、[`:focus`](/ja/docs/Web/CSS/:focus) を持つ要素を青にスタイル設定し、ホスト要素の通常のスタイル設定を設定するには CSS を使用します。
+また、[`:focus`](/ja/docs/Web/CSS/Reference/Selectors/:focus) を持つ要素を青にスタイル設定し、ホスト要素の通常のスタイル設定を設定するには CSS を使用します。
 
 ```html
 <div>
@@ -356,6 +356,6 @@ container.appendChild(secondClone);
 - {{CSSXref("::part")}}、{{CSSXref("::slotted")}} 擬似要素
 - [`ShadowRoot`](/ja/docs/Web/API/ShadowRoot) インターフェイス
 - [テンプレートとスロットの使用](/ja/docs/Web/API/Web_components/Using_templates_and_slots)
-- [CSS スコープ化](/ja/docs/Web/CSS/CSS_scoping) モジュール
+- [CSS スコープ化](/ja/docs/Web/CSS/Guides/Scoping) モジュール
 - [宣言的シャドウ DOM （HTML による）](/ja/docs/Web/API/Web_components/Using_shadow_DOM#declaratively_with_html) （シャドウ DOM の使用）
 - [Declarative shadow DOM](https://web.dev/articles/declarative-shadow-dom) (developer.chrome.com, 2023)

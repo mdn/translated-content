@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef}}
 
-**`animationend`** イベントは、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)が完了したときに発生します。アニメーションが完了前に中止された場合、例えば要素が DOM から削除されたりアニメーションが要素から削除されたりした場合、 `animationend` イベントは発生しません。
+**`animationend`** イベントは、 [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)が完了したときに発生します。アニメーションが完了前に中止された場合、例えば要素が DOM から削除されたりアニメーションが要素から削除されたりした場合、 `animationend` イベントは発生しません。
 
 ## 構文
 
@@ -35,7 +35,7 @@ _親である {{domxref("Event")}} から継承したプロパティもありま
 - {{domxref("AnimationEvent.elapsedTime")}} {{ReadOnlyInline}}
   - : `float` で、このイベントが発行されたときにアニメーションが実行されていた時間（アニメーションが一時停止していた時間を除く）を秒単位で指定します。 `animationstart` イベントの場合、 `elapsedTime` は `0.0` です。ただし、{{cssxref("animation-delay")}} に負の値を指定した場合は、 `(-1 * delay)` を含む `elapsedTime` としてイベントが発行されます。
 - {{domxref("AnimationEvent.pseudoElement")}} {{ReadOnlyInline}}
-  - : `'::'` で始まる文字列で、アニメーションを実行する[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)の名前を指定します。です。アニメーションが擬似要素上で動作しておらず、要素上で動作している場合は、空文字列 `''` となります。
+  - : `'::'` で始まる文字列で、アニメーションを実行する[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)の名前を指定します。です。アニメーションが擬似要素上で動作しておらず、要素上で動作している場合は、空文字列 `''` となります。
 
 ## 例
 
@@ -161,7 +161,7 @@ applyAnimation.addEventListener("click", () => {
 
 ## 関連情報
 
-- [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)
 - {{domxref("AnimationEvent")}}
 - 関連イベント: {{domxref("Element/animationstart_event", "animationstart")}}, {{domxref("Element/animationcancel_event", "animationcancel")}}, {{domxref("Element/animationiteration_event", "animationiteration")}}

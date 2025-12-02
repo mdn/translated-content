@@ -3,8 +3,6 @@ title: AggregateError
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError
 ---
 
-{{JSRef}}
-
 **`AggregateError`** 对象代表了包装了多个错误对象的单个错误对象。当一个操作需要报告多个错误时，例如 {{JSxRef("Promise.any()")}}，当传递给它的所有承诺都被拒绝时，就会抛出该错误。
 
 `AggregateError` 是 {{jsxref("Error")}} 的子类。

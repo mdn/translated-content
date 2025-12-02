@@ -29,10 +29,10 @@ new TransitionEvent(type, options)
         既定値は `""` です。
     - `elapsedTime` {{optional_inline}}
       - : アニメーションが一時停止していた時間を除き、このイベントが発行されたときにアニメーションが実行されている時間を秒単位で表す数値です。
-        `"animationstart"` イベントでは、 `elapsedTime` はふつう `0.0` ですが、 [`animation-delay`](/ja/docs/Web/CSS/animation-delay) が負の値である場合は、 `elapsedTime` が `(-1 * delay)` であるイベントが発行されます。
+        `"animationstart"` イベントでは、 `elapsedTime` はふつう `0.0` ですが、 [`animation-delay`](/ja/docs/Web/CSS/Reference/Properties/animation-delay) が負の値である場合は、 `elapsedTime` が `(-1 * delay)` であるイベントが発行されます。
         既定値は `0.0` です。
     - `pseudoElement` {{optional_inline}}
-      - : 文字列で、既定値は `"::"` です。アニメーションが実行される[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)の名前が入ります。
+      - : 文字列で、既定値は `"::"` です。アニメーションが実行される[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)の名前が入ります。
         アニメーションが擬似要素ではなく要素で実行されている場合は、空文字列 `""` になります。
         既定値は `""` です。
 
@@ -50,7 +50,7 @@ new TransitionEvent(type, options)
 
 ## 関連情報
 
-- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [CSS トランジションの使用](/ja/docs/Web/CSS/Guides/Transitions/Using)
 - CSS プロパティ: {{cssxref("transition")}}, {{cssxref("transition-delay")}},
   {{cssxref("transition-duration")}}, {{cssxref("transition-property")}},
   {{cssxref("transition-timing-function")}}

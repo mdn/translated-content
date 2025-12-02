@@ -11,7 +11,7 @@ original_slug: Web/HTML/Element/center
 
 L'élément **`<center>`** est un [élément de bloc](/fr/docs/Glossary/Block-level_content) qui contient des paragraphes et d'autres éléments de type bloc ou en ligne. Le contenu entier de cet élément est centré horizontalement au sein de son conteneur parent (généralement l'élément [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body)).
 
-Cet élément a été déprécié en HTML4 (et XHTML 1) au profit de la propriété [CSS](/fr/docs/Web/CSS) [`text-align`](/fr/docs/Web/CSS/text-align) qui peut être appliqué à l'élément [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) ou à un élément [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p). Pour centrer des blocs, on utilisera d'autres propriétés ([`margin-left`](/fr/docs/Web/CSS/margin-left) et [`margin-right`](/fr/docs/Web/CSS/margin-right) (ou définissez [`margin`](/fr/docs/Web/CSS/margin) à `0 auto`).
+Cet élément a été déprécié en HTML4 (et XHTML 1) au profit de la propriété [CSS](/fr/docs/Web/CSS) [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align) qui peut être appliqué à l'élément [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) ou à un élément [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p). Pour centrer des blocs, on utilisera d'autres propriétés ([`margin-left`](/fr/docs/Web/CSS/Reference/Properties/margin-left) et [`margin-right`](/fr/docs/Web/CSS/Reference/Properties/margin-right) (ou définissez [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin) à `0 auto`).
 
 ## Interface DOM
 
@@ -49,7 +49,7 @@ Cet élément implémente l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLEleme
 
 ## Notes
 
-Appliquer [`text-align`](/fr/docs/Web/CSS/text-align)`: center` sur un élément [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p) ou [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) centre _le contenu_ de ces éléments, tout en laissant leurs dimensions générales inchangées.
+Appliquer [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align)`: center` sur un élément [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p) ou [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) centre _le contenu_ de ces éléments, tout en laissant leurs dimensions générales inchangées.
 
 ## Spécifications
 
@@ -61,5 +61,5 @@ Appliquer [`text-align`](/fr/docs/Web/CSS/text-align)`: center` sur un élément
 
 ## Voir aussi
 
-- La propriété [`text-align`](/fr/docs/Web/CSS/text-align)
-- La propriété [`display`](/fr/docs/Web/CSS/display)
+- La propriété [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align)
+- La propriété [`display`](/fr/docs/Web/CSS/Reference/Properties/display)

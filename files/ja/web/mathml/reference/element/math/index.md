@@ -19,8 +19,8 @@ l10n:
 
 - `display`
   - : この[列挙](/ja/docs/Glossary/Enumerated)属性は、囲まれた MathML マークアップをレンダリングする方法を指定します。これは、次のいずれかの値を取ることができます。
-    - `block` は、この要素が現在のテキストのスパンの外にある独自のブロックに表示され、 [`math-style`](/ja/docs/Web/CSS/math-style) が `normal` に設定されていることを意味します。
-    - `inline` は、この要素が現在のテキストのスパンの中に表示され、 [`math-style`](/ja/docs/Web/CSS/math-style) が `compact` に設定されていることを意味します。
+    - `block` は、この要素が現在のテキストのスパンの外にある独自のブロックに表示され、 [`math-style`](/ja/docs/Web/CSS/Reference/Properties/math-style) が `normal` に設定されていることを意味します。
+    - `inline` は、この要素が現在のテキストのスパンの中に表示され、 [`math-style`](/ja/docs/Web/CSS/Reference/Properties/math-style) が `compact` に設定されていることを意味します。
 
     存在しない場合、既定値は `inline` です。
 

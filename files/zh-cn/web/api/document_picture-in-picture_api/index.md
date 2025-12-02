@@ -56,7 +56,7 @@ l10n:
 ## CSS 补充
 
 - {{cssxref("@media/display-mode", "display-mode")}}，`picture-in-picture` 值
-  - : 一个 [CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/@media#媒体特性)值，允许开发人员根据文档是否处于画中画模式显示来将 CSS 应用于文档。
+  - : 一个 [CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/Reference/At-rules/@media#媒体特性)值，允许开发人员根据文档是否处于画中画模式显示来将 CSS 应用于文档。
 
 ## 示例
 

@@ -90,11 +90,11 @@ Il est nécessaire d'échapper les caractères `<`, `>`, `&`, et `"` afin de s'a
 Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `cols` {{non-standard_inline}} {{deprecated_inline}}
-  - : Cet attribut contient le nombre _préféré_ de caractères qu'une ligne devrait avoir. Cet attribut était un synonyme non-standard de l'attribut `width` (voir ci-après). Afin d'obtenir cet effet, il est plutôt conseillé d'utiliser la propriété CSS [`width`](/fr/docs/Web/CSS/width).
+  - : Cet attribut contient le nombre _préféré_ de caractères qu'une ligne devrait avoir. Cet attribut était un synonyme non-standard de l'attribut `width` (voir ci-après). Afin d'obtenir cet effet, il est plutôt conseillé d'utiliser la propriété CSS [`width`](/fr/docs/Web/CSS/Reference/Properties/width).
 - `width` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : Cet attribut contient le nombre _préféré_ de caractères qu'une ligne devrait avoir. Bien qu'implémenté, cet attribut n'a aucun effet visuel. Pour obtenir cet effet, il est plutôt conseillé d'utiliser la propriété CSS [`width`](/fr/docs/Web/CSS/width).
+  - : Cet attribut contient le nombre _préféré_ de caractères qu'une ligne devrait avoir. Bien qu'implémenté, cet attribut n'a aucun effet visuel. Pour obtenir cet effet, il est plutôt conseillé d'utiliser la propriété CSS [`width`](/fr/docs/Web/CSS/Reference/Properties/width).
 - `wrap` {{non-standard_inline}} {{Deprecated_Inline}}
-  - : Cet attribut est une indication sur la façon de gérer le dépassement d'une ligne. Les navigateurs modernes ignorent cette indication et cet attribut n'engendre aucun effet visuel. Pour obtenir cet effet, il faut utiliser la propriété CSS [`white-space`](/fr/docs/Web/CSS/white-space).
+  - : Cet attribut est une indication sur la façon de gérer le dépassement d'une ligne. Les navigateurs modernes ignorent cette indication et cet attribut n'engendre aucun effet visuel. Pour obtenir cet effet, il faut utiliser la propriété CSS [`white-space`](/fr/docs/Web/CSS/Reference/Properties/white-space).
 
 ## Accessibilité
 
@@ -176,7 +176,7 @@ if (i &lt; 10 &amp;&amp; i &gt; 0) {
 ## Voir aussi
 
 - Les propriétés CSS&nbsp;
-  - [`white-space`](/fr/docs/Web/CSS/white-space)
-  - [`word-break`](/fr/docs/Web/CSS/word-break)
+  - [`white-space`](/fr/docs/Web/CSS/Reference/Properties/white-space)
+  - [`word-break`](/fr/docs/Web/CSS/Reference/Properties/word-break)
 - [Les entités HTML](/fr/docs/Glossary/Entity)
 - L'élément HTML [`<code>`](/fr/docs/Web/HTML/Reference/Elements/code)

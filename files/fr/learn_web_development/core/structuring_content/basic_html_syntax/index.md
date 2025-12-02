@@ -765,6 +765,6 @@ Vous avez atteint la fin de l'article — nous espérons que vous avez appréci�
 
 ## Voir aussi
 
-- [Appliquer une couleur aux éléments HTML avec les CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
+- [Appliquer une couleur aux éléments HTML avec les CSS](/fr/docs/Web/CSS/Guides/Colors/Applying_color)
 
 {{NextMenu("Apprendre/HTML/Introduction_à_HTML/The_head_metadata_in_HTML", "Apprendre/HTML/Introduction_à_HTML")}}

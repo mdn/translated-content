@@ -1728,7 +1728,7 @@ Pour prendre en charge le rôle `listbos`, nous n'avons qu'à mettre à jour not
 ```
 
 > [!NOTE]
-> Inclure à la fois l'attribut `role` et l'attribut `class` n'est nécessaire que si vous souhaitez prendre en charge les navigateurs anciens qui n'acceptent pas les [selecteurs d'attribut CSS](/fr/docs/Web/CSS/Attribute_selectors).
+> Inclure à la fois l'attribut `role` et l'attribut `class` n'est nécessaire que si vous souhaitez prendre en charge les navigateurs anciens qui n'acceptent pas les [selecteurs d'attribut CSS](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors).
 
 ### L'attribut `aria-selected`
 

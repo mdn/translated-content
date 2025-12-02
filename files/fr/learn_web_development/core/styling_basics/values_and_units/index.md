@@ -42,13 +42,13 @@ Chaque propriété utilisée en CSS possède un type de valeur qui définit l'en
 
 ## Qu'est-ce qu'une valeur CSS&nbsp;?
 
-Dans les spécifications CSS et sur les pages de propriétés présentes sur MDN, vous pourrez identifier les types de valeurs, car ils sont entourés par des chevrons, tel que [`<color>`](/fr/docs/Web/CSS/color_value) ou [`<length>`](/fr/docs/Web/CSS/length). Quand vous voyez le type de valeur `<color>`, valide pour une propriété particulière, cela signifie que vous pouvez utiliser n'importe quelle couleur valide comme valeur pour cette propriété, comme énoncé dans la page de référence de [`<color>`](/fr/docs/Web/CSS/color_value).
+Dans les spécifications CSS et sur les pages de propriétés présentes sur MDN, vous pourrez identifier les types de valeurs, car ils sont entourés par des chevrons, tel que [`<color>`](/fr/docs/Web/CSS/Reference/Values/color_value) ou [`<length>`](/fr/docs/Web/CSS/Reference/Values/length). Quand vous voyez le type de valeur `<color>`, valide pour une propriété particulière, cela signifie que vous pouvez utiliser n'importe quelle couleur valide comme valeur pour cette propriété, comme énoncé dans la page de référence de [`<color>`](/fr/docs/Web/CSS/Reference/Values/color_value).
 
 > [!NOTE]
 > Vous verrez également des valeurs CSS appelées _types de données_. Les termes sont interchangeables — Quand vous voyez quelque chose en CSS identifié comme type de données, c'est juste une façon différente de dire type de valeur. Le terme _valeur_ se rapporte à n'importe quelle expression particulière supportée par un type de valeur que vous avez choisi d'utiliser.
 
 > [!NOTE]
-> Oui, les types de valeurs CSS tendent à être indiqués par des chevrons, pour les différencier des propriétés CSS (ex : la propriété [`color`](/fr/docs/Web/CSS/color), comparée au type de données [\<color>](/fr/docs/Web/CSS/color_value)). Vous pourriez aussi être désorienté entre les types de données CSS et les éléments HTML, car ils utilisent tous deux les chevrons, mais c'est peu probable — ils sont utilisés dans des contextes très différents.
+> Oui, les types de valeurs CSS tendent à être indiqués par des chevrons, pour les différencier des propriétés CSS (ex : la propriété [`color`](/fr/docs/Web/CSS/Reference/Properties/color), comparée au type de données [\<color>](/fr/docs/Web/CSS/Reference/Values/color_value)). Vous pourriez aussi être désorienté entre les types de données CSS et les éléments HTML, car ils utilisent tous deux les chevrons, mais c'est peu probable — ils sont utilisés dans des contextes très différents.
 
 Dans l'exemple suivant, nous avons défini la couleur de notre titre en utilisant un mot-clé, et la couleur de fond en utilisant la fonction `rgb()`&nbsp;:
 
@@ -59,7 +59,7 @@ h1 {
 }
 ```
 
-Un type de valeur en CSS est une manière de définir un ensemble de valeurs autorisées. Cela signifie que si vous voyez `<color>` comme valide, vous n'avez pas besoin de vous demander quel type de valeur vous pouvez utiliser — mot-clés, valeurs hex, fonctions `rgb()`, etc. Vous pouvez utiliser _n'importe quelle_ valeur `<color>` disponible, en supposant qu'elle soit supportée par votre navigateur. La page MDN pour chaque valeur vous donnera les informations au sujet du support par le navigateur. Par exemple, si vous regardez la page [`<color>`](/fr/docs/Web/CSS/color_value), vous verrez que la section sur la compatibilité des navigateurs liste différents types de valeurs pour "color" et le support.
+Un type de valeur en CSS est une manière de définir un ensemble de valeurs autorisées. Cela signifie que si vous voyez `<color>` comme valide, vous n'avez pas besoin de vous demander quel type de valeur vous pouvez utiliser — mot-clés, valeurs hex, fonctions `rgb()`, etc. Vous pouvez utiliser _n'importe quelle_ valeur `<color>` disponible, en supposant qu'elle soit supportée par votre navigateur. La page MDN pour chaque valeur vous donnera les informations au sujet du support par le navigateur. Par exemple, si vous regardez la page [`<color>`](/fr/docs/Web/CSS/Reference/Values/color_value), vous verrez que la section sur la compatibilité des navigateurs liste différents types de valeurs pour "color" et le support.
 
 Observons quelques-uns des types de valeurs et d'unités que vous pouvez fréquemment rencontrer, avec des exemples, pour que vous puissiez essayer différentes valeurs possibles.
 
@@ -67,12 +67,12 @@ Observons quelques-uns des types de valeurs et d'unités que vous pouvez fréque
 
 Il existe plusieurs types de valeur numérique que vous pourrez utiliser en CSS. Les types qui suivent sont classés comme numériques :
 
-| Type de donnée                                | Description                                                                                                                                                                                                                                                                                                                                                                 |
-| --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`<integer>`](/fr/docs/Web/CSS/integer)       | Une valeur de type `<integer>` est un nombre entier comme `1024` ou `-55`.                                                                                                                                                                                                                                                                                                  |
-| [`<number>`](/fr/docs/Web/CSS/number)         | Une valeur de type `<number>` représente un nombre décimal (qui peut avoir ou ne pas avoir de partie décimale). Par exemple : `0.255`, `128`, ou `-1.2`.                                                                                                                                                                                                                    |
-| [`<dimension>`](/fr/docs/Web/CSS/dimension)   | Une valeur de type `<dimension>` est une valeur de type `<number>` à laquelle est attachée une unité. Par exemple : `45deg`, `5s`, ou `10px`. `<dimension>` est une catégorie de type qui inclut les types [`<length>`](/fr/docs/Web/CSS/length), [`<angle>`](/fr/docs/Web/CSS/angle), [`<time>`](/fr/docs/Web/CSS/time), et [`<resolution>`](/fr/docs/Web/CSS/resolution). |
-| [`<percentage>`](/fr/docs/Web/CSS/percentage) | Une valeur de type `<percentage>` représente une fraction relative à une autre valeur. Par exemple : `50%`. Les valeurs de pourcentages sont toujours relatives à une autre quantité. Ainsi, la longueur d'un élément pourra être relative à la longueur de son élément parent.                                                                                             |
+| Type de donnée                                                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`<integer>`](/fr/docs/Web/CSS/Reference/Values/integer)       | Une valeur de type `<integer>` est un nombre entier comme `1024` ou `-55`.                                                                                                                                                                                                                                                                                                                                                                      |
+| [`<number>`](/fr/docs/Web/CSS/Reference/Values/number)         | Une valeur de type `<number>` représente un nombre décimal (qui peut avoir ou ne pas avoir de partie décimale). Par exemple : `0.255`, `128`, ou `-1.2`.                                                                                                                                                                                                                                                                                        |
+| [`<dimension>`](/fr/docs/Web/CSS/Reference/Values/dimension)   | Une valeur de type `<dimension>` est une valeur de type `<number>` à laquelle est attachée une unité. Par exemple : `45deg`, `5s`, ou `10px`. `<dimension>` est une catégorie de type qui inclut les types [`<length>`](/fr/docs/Web/CSS/Reference/Values/length), [`<angle>`](/fr/docs/Web/CSS/Reference/Values/angle), [`<time>`](/fr/docs/Web/CSS/Reference/Values/time), et [`<resolution>`](/fr/docs/Web/CSS/Reference/Values/resolution). |
+| [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage) | Une valeur de type `<percentage>` représente une fraction relative à une autre valeur. Par exemple : `50%`. Les valeurs de pourcentages sont toujours relatives à une autre quantité. Ainsi, la longueur d'un élément pourra être relative à la longueur de son élément parent.                                                                                                                                                                 |
 
 ### Longueurs
 
@@ -98,21 +98,21 @@ La plupart de ces unités sont utiles pour l'impression plutôt que pour l'affic
 
 Les unités de longueur relative permettent d'exprimer des quantités relatives à quelque chose d'autre comme la taille de la police de l'élément parent ou la taille de la zone d'affichage (<i lang="en">viewport</i>). L'avantage d'utiliser des unités relatives est qu'avec un peu d'organisation, on peut faire que la taille du texte ou d'autres éléments se mette à l'échelle, relativement à quelque chose d'autre sur la page. La plupart des unités les plus utiles pour le développement web sont présentes dans le tableau qui suit.
 
-| Unité  | Relative à                                                                                                                                                                                                                                                     |
-| ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `em`   | Pour les propriétés typographiques comme [`font-size`](/fr/docs/Web/CSS/font-size), relative à la taille de la police de l'élément parent. Pour les autres propriétés comme [`width`](/fr/docs/Web/CSS/width), relative à la taille de la police de l'élément; |
-| `ex`   | La hauteur d'x de la police de l'élément.                                                                                                                                                                                                                      |
-| `ch`   | La [chasse/avance](<https://fr.wikipedia.org/wiki/Chasse_(typographie)>) du glyphe « 0 » pour la police de l'élément.                                                                                                                                          |
-| `rem`  | La taille de la police pour l'élément racine.                                                                                                                                                                                                                  |
-| `lh`   | La hauteur de ligne pour l'élément.                                                                                                                                                                                                                            |
-| `vw`   | 1% de la largeur du <i lang="en">viewport</i> (la zone d'affichage).                                                                                                                                                                                           |
-| `vh`   | 1% de la hauteur du <i lang="en">viewport</i> (la zone d'affichage).                                                                                                                                                                                           |
-| `vmin` | 1% de la plus petite dimension du <i lang="en">viewport</i> (la zone d'affichage).                                                                                                                                                                             |
-| `vmax` | 1% de la plus grande dimension du <i lang="en">viewport</i> (la zone d'affichage).                                                                                                                                                                             |
+| Unité  | Relative à                                                                                                                                                                                                                                                                                               |
+| ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `em`   | Pour les propriétés typographiques comme [`font-size`](/fr/docs/Web/CSS/Reference/Properties/font-size), relative à la taille de la police de l'élément parent. Pour les autres propriétés comme [`width`](/fr/docs/Web/CSS/Reference/Properties/width), relative à la taille de la police de l'élément; |
+| `ex`   | La hauteur d'x de la police de l'élément.                                                                                                                                                                                                                                                                |
+| `ch`   | La [chasse/avance](<https://fr.wikipedia.org/wiki/Chasse_(typographie)>) du glyphe « 0 » pour la police de l'élément.                                                                                                                                                                                    |
+| `rem`  | La taille de la police pour l'élément racine.                                                                                                                                                                                                                                                            |
+| `lh`   | La hauteur de ligne pour l'élément.                                                                                                                                                                                                                                                                      |
+| `vw`   | 1% de la largeur du <i lang="en">viewport</i> (la zone d'affichage).                                                                                                                                                                                                                                     |
+| `vh`   | 1% de la hauteur du <i lang="en">viewport</i> (la zone d'affichage).                                                                                                                                                                                                                                     |
+| `vmin` | 1% de la plus petite dimension du <i lang="en">viewport</i> (la zone d'affichage).                                                                                                                                                                                                                       |
+| `vmax` | 1% de la plus grande dimension du <i lang="en">viewport</i> (la zone d'affichage).                                                                                                                                                                                                                       |
 
 #### Exploration d'un exemple
 
-Dans l'exemple qui suit, vous pouvez observer le fonctionnement de certaines unités de longueur relative et absolue. La première boîte a la propriété [`width`](/fr/docs/Web/CSS/width) définie en pixels. Il s'agit d'une unité absolue et cette largeur restera donc la même, quels que soient les autres changements.
+Dans l'exemple qui suit, vous pouvez observer le fonctionnement de certaines unités de longueur relative et absolue. La première boîte a la propriété [`width`](/fr/docs/Web/CSS/Reference/Properties/width) définie en pixels. Il s'agit d'une unité absolue et cette largeur restera donc la même, quels que soient les autres changements.
 
 La deuxième boîte a sa largeur définie avec l'unité `vw` (relative à la largeur de la zone d'affichage). Cette valeur est relative à la largeur du <i lang="en">viewport</i>. Ainsi, `10vw` correspondra à 10 pourcents de la largeur de la zone d'affichage. Si vous changez la largeur de la fenêtre de votre navigateur, la taille de cette boîte devrait changer. Toutefois, si l'exemple est intégré dans la page avec un élément [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe), cela ne fonctionnera pas. Pour voir concrètement le résultat, vous devrez ouvrir [l'exemple dans un nouvel onglet avant d'ajuster la taille de votre fenêtre](https://mdn.github.io/css-examples/learn/values-units/length.html).
 
@@ -154,7 +154,7 @@ Le prochain exemple utilise des tailles de police définies en pourcentages. Cha
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/percentage-fonts.html", '100%', 650)}}
 
-On notera que, bien que de nombreuses propriétés acceptent une longueur ou un pourcentage, il en existe certaines qui n'acceptent que des longueurs. Vous pouvez voir cette information sur les pages de référence de chaque propriété sur MDN. Si les valeurs autorisées incluent le type [`<length-percentage>`](/fr/docs/Web/CSS/length-percentage), on peut utiliser une longueur ou un pourcentage. Si les valeurs autorisées n'incluent que `<length>`, il n'est pas possible d'utiliser un pourcentage.
+On notera que, bien que de nombreuses propriétés acceptent une longueur ou un pourcentage, il en existe certaines qui n'acceptent que des longueurs. Vous pouvez voir cette information sur les pages de référence de chaque propriété sur MDN. Si les valeurs autorisées incluent le type [`<length-percentage>`](/fr/docs/Web/CSS/Reference/Values/length-percentage), on peut utiliser une longueur ou un pourcentage. Si les valeurs autorisées n'incluent que `<length>`, il n'est pas possible d'utiliser un pourcentage.
 
 ### Nombres
 
@@ -178,7 +178,7 @@ Le système standard de couleurs disponible pour les ordinateurs modernes utilis
 
 ### Mots-clés pour les couleurs
 
-Dans la plupart des exemples de cette section d'apprentissage ou à d'autres endroits sur MDN, vous verrez des mots-clés utilisés pour définir des couleurs : il s'agit d'une méthode simple et compréhensible pour indiquer une couleur. Il existe de nombreux mots-clés, certains avec des noms plutôt amusants. Vous pouvez consulter la liste complète sur la page pour le type de valeur [`<color>`](/fr/docs/Web/CSS/color_value).
+Dans la plupart des exemples de cette section d'apprentissage ou à d'autres endroits sur MDN, vous verrez des mots-clés utilisés pour définir des couleurs : il s'agit d'une méthode simple et compréhensible pour indiquer une couleur. Il existe de nombreux mots-clés, certains avec des noms plutôt amusants. Vous pouvez consulter la liste complète sur la page pour le type de valeur [`<color>`](/fr/docs/Web/CSS/Reference/Values/color_value).
 
 **Essayez de manipuler les différentes valeurs de couleur dans l'exemple ci-après afin de mieux comprendre comment celles-ci fonctionnent.**
 
@@ -203,7 +203,7 @@ Réécrivons notre dernier exemple afin d'utiliser les couleurs RGB&nbsp;:
 Il est aussi possible d'utiliser des couleurs RGBA&nbsp;: celles-ci fonctionnent exactement comme les couleurs RGB (et il est donc possible d'utiliser n'importe quelle valeur RGB pour une valeur RGBA). Toutefois, les valeurs RGBA utilisent une quatrième valeur qui représente le canal alpha de la couleur qui contrôle son opacité. Avec une valeur de `0` pour le canal alpha, la couleur sera complètement transparente tandis qu'avec `1`, elle sera complètement opaque. Les valeurs intermédiaires fourniront des niveaux progressifs d'opacité.
 
 > [!NOTE]
-> Définir un canal alpha sur une couleur n'est pas exactement la même chose qu'utiliser la propriété [`opacity`](/fr/docs/Web/CSS/opacity) dont nous avons parlé auparavant. Lorsqu'on utilise `opacity`, c'est tout l'élément et ce qu'il contient qui devient plus ou moins opaque/transparent alors que lorsqu'on définit une couleur RGBA, seule la couleur est plus ou moins opaque.
+> Définir un canal alpha sur une couleur n'est pas exactement la même chose qu'utiliser la propriété [`opacity`](/fr/docs/Web/CSS/Reference/Properties/opacity) dont nous avons parlé auparavant. Lorsqu'on utilise `opacity`, c'est tout l'élément et ce qu'il contient qui devient plus ou moins opaque/transparent alors que lorsqu'on définit une couleur RGBA, seule la couleur est plus ou moins opaque.
 
 Dans l'exemple qui suit, on a ajouté une image d'arrière-plan au bloc englobant les boîtes colorées. On a ensuite réglé différentes valeurs d'opacité pour les différentes boîtes&nbsp;: vous pouvez voir comment l'arrière-plan est de plus en plus visible au fur et à mesure que la valeur du canal alpha est faible.
 
@@ -234,18 +234,18 @@ Vous pouvez utiliser n'importe laquelle de ces couleurs dans vos projets et il e
 
 ## Images
 
-Le type de valeur [`<image>`](/fr/docs/Web/CSS/image) est utilisé à chaque endroit où une image est une valeur valide. Il peut s'agir d'une image à proprement parler dans un fichier (avec une fonction `url()` qui utilisera l'adresse du fichier avec l'image) ou d'un dégradé.
+Le type de valeur [`<image>`](/fr/docs/Web/CSS/Reference/Values/image) est utilisé à chaque endroit où une image est une valeur valide. Il peut s'agir d'une image à proprement parler dans un fichier (avec une fonction `url()` qui utilisera l'adresse du fichier avec l'image) ou d'un dégradé.
 
 Voici un exemple où on utilise une image et un dégradé pour la propriété CSS `background-image`.
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/image.html", '100%', 740)}}
 
 > [!NOTE]
-> Il existe d'autres valeurs possibles pour le type `<image>`, toutefois celles-ci sont plus récentes et moins bien prises en charge par les navigateurs. Consultez la page MDN pour le type de données [`<image>`](/fr/docs/Web/CSS/image) si vous voulez en savoir plus.
+> Il existe d'autres valeurs possibles pour le type `<image>`, toutefois celles-ci sont plus récentes et moins bien prises en charge par les navigateurs. Consultez la page MDN pour le type de données [`<image>`](/fr/docs/Web/CSS/Reference/Values/image) si vous voulez en savoir plus.
 
 ## Position
 
-Le type de valeur [`<position>`](/fr/docs/Web/CSS/position_value) représente un ensemble de coordonnées sur deux dimensions, utilisé pour positionner un objet comme une image d'arrière-plan (via [`background-position`](/fr/docs/Web/CSS/background-position)). Ces valeurs peuvent être indiquées avec des mots-clés comme `top`, `left`, `bottom`, `right`, et `center` afin d'aligner les objets sur les bords d'une boîte en deux dimensions et avec des longueurs qui représentent les décalages par rapport au coin supérieur gauche de la boîte.
+Le type de valeur [`<position>`](/fr/docs/Web/CSS/Reference/Values/position_value) représente un ensemble de coordonnées sur deux dimensions, utilisé pour positionner un objet comme une image d'arrière-plan (via [`background-position`](/fr/docs/Web/CSS/Reference/Properties/background-position)). Ces valeurs peuvent être indiquées avec des mots-clés comme `top`, `left`, `bottom`, `right`, et `center` afin d'aligner les objets sur les bords d'une boîte en deux dimensions et avec des longueurs qui représentent les décalages par rapport au coin supérieur gauche de la boîte.
 
 Une position se compose généralement de deux valeurs&nbsp;: la première indiquant la position horizontale et la seconde indiquant la position verticale. Si une seule valeur est fournie, l'autre valeur sera `center` par défaut.
 
@@ -279,10 +279,10 @@ Nous avons abordé de nombreuses notions dans cet article. Avez-vous retenu les 
 
 ## Résumé
 
-Voici un rapide tour des types de valeur et unités que vous pourrez rencontrer en CSS. Vous pouvez consulter la liste exhaustive des différents types sur [la page de référence MDN sur les valeurs et unités CSS](/fr/docs/Web/CSS/CSS_values_and_units). Vous verrez de nombreuses types et valeurs à mesure que vous progresserez dans ces leçons.
+Voici un rapide tour des types de valeur et unités que vous pourrez rencontrer en CSS. Vous pouvez consulter la liste exhaustive des différents types sur [la page de référence MDN sur les valeurs et unités CSS](/fr/docs/Web/CSS/Guides/Values_and_units). Vous verrez de nombreuses types et valeurs à mesure que vous progresserez dans ces leçons.
 
 La notion cruciale à garder en mémoire est que chaque propriété possède une liste de types de valeur autorisés et que chaque type de valeur possède une définition indiquant les valeurs possibles. Vous pourrez trouver toutes les informations et détails sur MDN.
 
-Par exemple, comprendre le type [`<image>`](/fr/docs/Web/CSS/image) vous permettra de comprendre comment créer un dégradé de couleur. C'est utile mais ce n'est pas forcément évident de prime abord.
+Par exemple, comprendre le type [`<image>`](/fr/docs/Web/CSS/Reference/Values/image) vous permettra de comprendre comment créer un dégradé de couleur. C'est utile mais ce n'est pas forcément évident de prime abord.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}

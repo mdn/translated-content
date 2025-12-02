@@ -437,7 +437,7 @@ HTTP [クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints)は一�
 
 ### 圧縮辞書転送
 
-[圧縮辞書転送] (/ja/docs/Web/HTTP/Guides/Compression_dictionary_transport) は、 {{glossary("Brotli compression", "Brotli 圧縮")}} または {{glossary("Zstandard compression", "Zstandard 圧縮")}} の標準の静的辞書を使用する代わりに、共有圧縮辞書を使用して HTTP レスポンスの転送サイズを縮小する方法です。
+[圧縮辞書転送](/ja/docs/Web/HTTP/Guides/Compression_dictionary_transport)は、{{glossary("Brotli compression", "Brotli 圧縮")}} または {{glossary("Zstandard compression", "Zstandard 圧縮")}} の標準の静的辞書を使用する代わりに、共有圧縮辞書を使用して HTTP レスポンスの転送サイズを縮小する方法です。
 
 - {{HTTPHeader("Available-Dictionary")}} {{experimental_inline}}
   - : ブラウザーは、このリクエストヘッダーを使用して、サーバーが圧縮に使用できる、最も適切な辞書を示すことができます。

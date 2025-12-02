@@ -143,7 +143,7 @@ Il convient de noter que la spécification du W3C dit qu'une référence à une 
 
 Pour inclure une référence à la source du matériel cité qui est contenu dans un élément [`<blockquote>`](/fr/docs/Web/HTML/Reference/Elements/blockquote) ou [`<q>`](/fr/docs/Web/HTML/Reference/Elements/q), utilisez l'attribut [`cite`](/fr/docs/Web/HTML/Reference/Elements/blockquote#attr-cite) sur l'élément.
 
-En général, les navigateurs donnent un style au contenu d'un élément `<cite>` en italique par défaut. Pour éviter cela, appliquez la propriété CSS [`font-style`](/fr/docs/Web/CSS/font-style) à l'élément `<cite>`.
+En général, les navigateurs donnent un style au contenu d'un élément `<cite>` en italique par défaut. Pour éviter cela, appliquez la propriété CSS [`font-style`](/fr/docs/Web/CSS/Reference/Properties/font-style) à l'élément `<cite>`.
 
 ## Exemples
 

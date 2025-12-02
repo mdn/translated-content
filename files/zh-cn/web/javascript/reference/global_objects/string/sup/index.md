@@ -3,7 +3,7 @@ title: String.prototype.sup()
 slug: Web/JavaScript/Reference/Global_Objects/String/sup
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{deprecated_header}}
 
 {{jsxref("String")}} 值的 **`sup()`** 方法创建一个 {{HTMLElement("sup")}} 元素字符串，其中嵌入了调用的字符串（`<sup>str</sup>`）中，这会导致该字符串显示为上标。
 

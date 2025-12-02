@@ -59,7 +59,7 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Refer
 
 L'élément `<fieldset>` est quelque peu particulier pour la mise en forme.
 
-La valeur initiale de la propriété [`display`](/fr/docs/Web/CSS/display) pour cet élément est `block` et l'élément crée un [contexte de formatage de bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context). Si l'élément `<fieldset>` est mis en forme avec une valeur `display` qui correspond à un style en ligne, celui-ci se comportera comme `inline-block` et sinon comme `block`. Par défaut, une bordure de 2 pixels ondulée entoure le contenu de l'élément et il y a un léger _padding_. Par défaut, l'élément a `min-inline-size: min-content`.
+La valeur initiale de la propriété [`display`](/fr/docs/Web/CSS/Reference/Properties/display) pour cet élément est `block` et l'élément crée un [contexte de formatage de bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context). Si l'élément `<fieldset>` est mis en forme avec une valeur `display` qui correspond à un style en ligne, celui-ci se comportera comme `inline-block` et sinon comme `block`. Par défaut, une bordure de 2 pixels ondulée entoure le contenu de l'élément et il y a un léger _padding_. Par défaut, l'élément a `min-inline-size: min-content`.
 
 Si un élément [`<legend>`](/fr/docs/Web/HTML/Reference/Elements/legend) est présent, il est placé au-dessus de la bordure située au début de l'axe de bloc. L'élément `<legend>` se réduit si besoin et établit également un contexte de formatage. Sa valeur `display` utilisée est `block` (autrement dit, on pourra le cibler avec `display: inline`, il continuera de se comporter comme `block`).
 

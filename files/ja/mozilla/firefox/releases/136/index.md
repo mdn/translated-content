@@ -16,8 +16,8 @@ l10n:
 
 ### CSS
 
-- {{CSSXRef(":has-slotted")}} [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes) は、[ウェブコンポーネント](/ja/docs/Web/API/Web_components) をレンダリングするときに {{HTMLElement("slot")}} 要素へ追加したコンテンツを持つ {{HTMLElement("template")}} で要素にスタイルを設定するために使用します ([Firefox bug 1940691](https://bugzil.la/1940691))。
-- [`:open`](/ja/docs/Web/CSS/:open) 擬似クラスをサポートして、開いた状態にある要素を選択できるようになりました。これは {{htmlelement("details")}}、{{htmlelement("dialog")}}、ピッカーがある {{htmlelement("input")}}、ドロップダウンリストを表示する {{htmlelement("select")}} の各要素に適用します ([Firefox bug 1936113](https://bugzil.la/1936113))。
+- {{CSSXRef(":has-slotted")}} [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes) は、[ウェブコンポーネント](/ja/docs/Web/API/Web_components) をレンダリングするときに {{HTMLElement("slot")}} 要素へ追加したコンテンツを持つ {{HTMLElement("template")}} で要素にスタイルを設定するために使用します ([Firefox bug 1940691](https://bugzil.la/1940691))。
+- [`:open`](/ja/docs/Web/CSS/Reference/Selectors/:open) 擬似クラスをサポートして、開いた状態にある要素を選択できるようになりました。これは {{htmlelement("details")}}、{{htmlelement("dialog")}}、ピッカーがある {{htmlelement("input")}}、ドロップダウンリストを表示する {{htmlelement("select")}} の各要素に適用します ([Firefox bug 1936113](https://bugzil.la/1936113))。
 - {{cssxref("gradient")}} CSS 関数の {{cssxref("linear-gradient")}}、{{cssxref("conic-gradient")}}、{{cssxref("radial-gradient")}} が、1 つの色経由点と 0 から 1 の範囲の位置を受け入れるようになりました。これは 1 つのソリッドカラーを生成して、{{cssxref("mask")}} CSS プロパティの設定に使用されます ([Firefox bug 1900530](https://bugzil.la/1900530))。
 
 ### JavaScript

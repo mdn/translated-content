@@ -29,7 +29,7 @@ L'attribut `aria-description` est similaire à [`aria-label`](/fr/docs/Web/Acces
 
 Les propriétés `aria-description` et `aria-describedby` ont le même objectif&nbsp;: fournir à l'utilisateur·ice un texte descriptif supplémentaire pour l'objet sur lequel elles sont définies. Si un texte descriptif est disponible dans le DOM, utilisez plutôt [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
 
-La propriété `aria-description` ne doit être utilisée que si fournir une description visible n'est pas l'expérience utilisateur souhaitée. L'attribut `aria-describedby` prend comme valeur une liste d'`id` des éléments contenant le texte descriptif de l'objet. `aria-description` s'utilise lorsqu'aucun texte descriptif approprié ne peut être associé à l'objet par référence d'`id`. Si les deux attributs sont présents, `aria-describedby` prévaut pour définir la propriété {{glossary("description accessible")}}.
+La propriété `aria-description` ne doit être utilisée que si fournir une description visible n'est pas l'expérience utilisateur souhaitée. L'attribut `aria-describedby` prend comme valeur une liste d'`id` des éléments contenant le texte descriptif de l'objet. `aria-description` s'utilise lorsqu'aucun texte descriptif approprié ne peut être associé à l'objet par référence d'`id`. Si les deux attributs sont présents, `aria-describedby` prévaut pour définir la propriété {{Glossary("Accessible_description", "description accessible")}}.
 
 Le contenu de la description, qu'il soit défini par `aria-description` ou `aria-describedby`, doit être du texte simple. Si le contenu est très long, possède une sémantique particulière ou une structure de navigation, utilisez plutôt [`aria-details`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details).
 
@@ -40,8 +40,8 @@ Le contenu de la description, qu'il soit défini par `aria-description` ou `aria
 
 ## Interfaces associées
 
-- {{domxref("Element.ariaDescription")}}
-  - : La propriété [`ariaDescription`](/fr/docs/Web/API/Element/ariaDescription), qui fait partie de l'interface {{domxref("Element")}}, reflète la valeur de l'attribut `aria-description`, qui définit une valeur textuelle décrivant ou annotant l'élément courant.
+- {{DOMxRef("Element.ariaDescription")}}
+  - : La propriété {{DOMxRef("Element.ariaDescription", "ariaDescription")}}, qui fait partie de l'interface {{DOMxRef("Element")}}, reflète la valeur de l'attribut `aria-description`, qui définit une valeur textuelle décrivant ou annotant l'élément courant.
 
 ## Rôles associés
 
@@ -53,6 +53,6 @@ Utilisé dans **TOUS** les rôles.
 
 ## Voir aussi
 
-- [Attribut HTML `title`](/fr/docs/Web/HTML/Reference/Global_attributes/title)
+- L'attribut global HTML [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title)
 - L'attribut ARIA [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
 - L'attribut ARIA [`aria-details`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details)

@@ -39,6 +39,6 @@ Web 内容的**源**由用于访问它的 {{Glossary("URL")}} 的*方案*（协�
 
 ## 参见
 
-- [同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)。
+- [同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)。
 - {{Glossary("Site", "站点")}}
 - [HTML 规范：源](https://html.spec.whatwg.org/multipage/origin.html#origin)

@@ -40,7 +40,7 @@ Chaque propriété est une chaîne et peut être en lecture et écriture. Dans l
 
 ## Accéder via du code CSS
 
-Remarquez que, dans la mesure où les attributs data sont de simples attributs HTML, vous pouvez même y accéder par les [CSS](/fr/docs/Web/CSS). Par exemple, pour afficher les données associées à l'article, vous pouvez utiliser des [contenus générés](/fr/docs/Web/CSS/content) en CSS avec la fonction {{cssxref("attr")}} :
+Remarquez que, dans la mesure où les attributs data sont de simples attributs HTML, vous pouvez même y accéder par les [CSS](/fr/docs/Web/CSS). Par exemple, pour afficher les données associées à l'article, vous pouvez utiliser des [contenus générés](/fr/docs/Web/CSS/Reference/Properties/content) en CSS avec la fonction {{cssxref("attr")}} :
 
 ```css
 article::before {
@@ -48,7 +48,7 @@ article::before {
 }
 ```
 
-Vous pouvez également utiliser les [sélecteurs d'attributs](/fr/docs/Web/CSS/Attribute_selectors) en CSS pour modifier les styles en fonction des données :
+Vous pouvez également utiliser les [sélecteurs d'attributs](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) en CSS pour modifier les styles en fonction des données :
 
 ```css
 article[data-columns="3"] {

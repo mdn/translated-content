@@ -1,0 +1,119 @@
+---
+title: min-height
+slug: Web/CSS/Reference/Properties/min-height
+original_slug: Web/CSS/min-height
+---
+
+**`max-height`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 최소 높이를 설정합니다. `min-height`는 {{cssxref("height")}} 속성의 [사용값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)이 자신의 값보다 작아지는걸 방지합니다.
+
+{{InteractiveExample("CSS Demo: min-height")}}
+
+```css interactive-example-choice
+min-height: 150px;
+```
+
+```css interactive-example-choice
+min-height: 7em;
+```
+
+```css interactive-example-choice
+min-height: 75%;
+```
+
+```css interactive-example-choice
+min-height: 10px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the minimum height. <br />If there is
+    more content than the minimum the box will grow to the height needed by the
+    content.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
+
+`min-height`가 {{cssxref("max-height")}} 또는 {{cssxref("height")}}보다 커지면 요소의 높이는 `min-height`의 값을 사용합니다.
+
+## 구문
+
+```css
+/* <length> 값 */
+min-height: 3.5em;
+
+/* <percentage> 값 */
+min-height: 10%;
+
+/* 키워드 값 */
+min-height: max-content;
+min-height: min-content;
+min-height: fit-content;
+min-height: fill-available;
+
+/* 전역 값 */
+min-height: inherit;
+min-height: initial;
+min-height: unset;
+```
+
+### 값
+
+- {{cssxref("&lt;length&gt;")}}
+  - : 고정 길이로 나타낸 최대 높이. 음수 값은 유효하지 않습니다.
+- {{cssxref("&lt;percentage&gt;")}}
+  - [: 컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block) 높이에 대한 백분율로 나타낸 최대 높이. 음수 값은 유효하지 않습니다.
+
+#### 키워드 값
+
+- `auto`
+  - : 최소 높이를 정하지 않음.
+- `max-content` {{ experimental_inline() }}
+  - : 본질적인 선호 높이.
+- `min-content` {{ experimental_inline() }}
+  - : 본질적인 최소 높이.
+- `fill-available` {{ experimental_inline() }}
+  - : 컨테이닝 블록의 높이에서 세로축 안쪽 및 바깥 여백과 테두리의 공간을 제외한 높이. (일부 브라우저는 매우 오래 된 이름인 `available`로 구현함을 참고하세요.)
+- `fit-content` {{ experimental_inline() }}
+  - : CSS3 Box 모듈에 따라 `min-content`의 다른 이름. CSS3 Sizing 모듈은 더 복잡한 알고리즘을 정의하지만, 모든 브라우저에서 실험 기능으로도 구현하지 않습니다.
+
+### 형식 구문
+
+{{csssyntax}}
+
+## 예제
+
+```css
+table {
+  min-height: 75%;
+}
+
+form {
+  min-height: 0;
+}
+```
+
+## 명세
+
+{{Specifications}}
+
+{{cssinfo}}
+
+## 브라우저 호환성
+
+{{Compat}}
+
+## 같이 보기
+
+- [박스 모델 입문](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
+- {{ Cssxref("height") }}, {{ Cssxref("max-height") }}

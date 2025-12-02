@@ -1,14 +1,41 @@
 ---
 title: "Attribut HTML : size"
+short-title: size
 slug: Web/HTML/Reference/Attributes/size
 original_slug: Web/HTML/Attributes/size
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+L'attribut **`size`** définit la largeur de l'élément HTML {{HTMLElement('input')}} et la hauteur de l'élément {{HTMLElement('select')}}. Pour un élément `input`, il définit le nombre de caractères que l'agent utilisateur permet à l'utilisateur·ice de voir lors de la modification de la valeur. Pour un élément `select`, il définit le nombre d'options qui doivent être affichées à l'utilisateur·ice. Il doit s'agir d'un entier non négatif valide supérieur à zéro.
 
-L'attribut **`size`** définit la largeur de l'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) et la hauteur de l'élément [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select). Pour `input`, si l'attribut `type` est [`text`](/fr/docs/Web/HTML/Reference/Elements/input/text) ou [`password`](/fr/docs/Web/HTML/Reference/Elements/input/password) alors c'est le nombre de caractères. Il doit s'agir d'un nombre entier de valeur 0 ou supérieure. Si aucun `size` n'est spécifié, ou si une valeur invalide est spécifiée, l'entrée n'a pas de taille déclarée, et le contrôle de formulaire aura la largeur par défaut basée sur l'agent utilisateur. Si CSS cible l'élément avec des propriétés ayant un impact sur la largeur, CSS a la priorité.
+Si aucun `size` n'est défini, ou si une valeur invalide est spécifiée, l'entrée n'a pas de taille déclarée et le contrôle de formulaire aura la largeur par défaut selon l'agent utilisateur. Si du CSS cible l'élément avec des propriétés impactant la largeur, le CSS prévaut.
 
 L'attribut `size` n'a aucun impact sur la validation des contraintes.
+
+{{InteractiveExample("Démonstration HTML&nbsp;: size", "tabbed-standard")}}
+
+```html interactive-example
+<label for="firstName">Prénom&nbsp;:</label>
+<input id="firstName" name="firstName" type="text" size="10" />
+
+<label for="lastName">Nom&nbsp;:</label>
+<input id="lastName" name="lastName" type="text" size="20" />
+
+<label for="fruit">Fruit préféré&nbsp;:</label>
+<select id="fruit" name="fruit" size="2">
+  <option>Orange</option>
+  <option>Banane</option>
+  <option>Pomme</option>
+</select>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1rem;
+}
+```
 
 ## Exemples
 
@@ -37,7 +64,7 @@ En ajoutant `size` sur certains types d'entrée, la largeur de l'entrée peut ê
 </select>
 ```
 
-{{EmbedLiveSample('Exemples')}}
+{{EmbedLiveSample('Exemples', '100%', 200)}}
 
 ## Spécifications
 

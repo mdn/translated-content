@@ -1,7 +1,6 @@
 ---
 title: progress 事件
 slug: Web/API/XMLHttpRequestEventTarget/progress_event
-original_slug: Web/API/XMLHttpRequest/progress_event
 ---
 
 {{APIRef}}

@@ -3,8 +3,6 @@ title: Number.isSafeInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 ---
 
-{{JSRef}}
-
 **`Number.isSafeInteger()`** 静态方法判断提供的值是否是一个*安全整数*。
 
 {{InteractiveExample("JavaScript Demo: Number.isSafeInteger()")}}

@@ -87,4 +87,4 @@ Utilisable dans tous les rôles, sauf pour les éléments ayant le rôle [`gridc
 
 - L'attribut ARIA [`aria-selected`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected)
 - {{cssxref(':local-link')}}
-- [Navigation en fil d'Ariane avec `aria-current`](/fr/docs/Web/CSS/Layout_cookbook/Breadcrumb_Navigation)
+- [Navigation en fil d'Ariane avec `aria-current`](/fr/docs/Web/CSS/How_to/Layout_cookbook/Breadcrumb_navigation)

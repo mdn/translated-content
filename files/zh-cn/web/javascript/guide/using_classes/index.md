@@ -304,7 +304,7 @@ red.values[0] = 0;
 console.log(red.values[0]); // 0
 ```
 
-在面向对象编程中，有一个叫做“封装”的哲学。这是说你不应该访问对象的底层实现，而是使用抽象方法来与之交互。例如，如果我们突然决定将颜色表示为 [HSL](/zh-CN/docs/Web/CSS/color_value/hsl) 而不是 RGB：
+在面向对象编程中，有一个叫做“封装”的哲学。这是说你不应该访问对象的底层实现，而是使用抽象方法来与之交互。例如，如果我们突然决定将颜色表示为 [HSL](/zh-CN/docs/Web/CSS/Reference/Values/color_value/hsl) 而不是 RGB：
 
 ```js
 class Color {

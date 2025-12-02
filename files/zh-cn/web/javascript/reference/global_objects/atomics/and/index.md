@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
 ---
 
-{{JSRef}}
-
 **`Atomics.and()`** 静态方法会将给定的值与数组指定位置上的值进行按位与运算，并返回该位置的旧值。此原子操作保证在修改后的值写回之前不会发生其他写操作。
 
 {{InteractiveExample("JavaScript Demo: Atomics.and()")}}

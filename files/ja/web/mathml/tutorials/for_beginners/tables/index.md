@@ -16,7 +16,7 @@ l10n:
 
 MathML の表形式要素は [HTML 表](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)要素と似ています。 `<mtable>` 要素は数式の表を表し、子要素（行を表す）として `<mtr>` 要素があり、それぞれの子要素（セルを表す）として `<mtd>` 要素があります。 `<mtable>` 要素は MathML の数式のどこにでも挿入することができます。 `<mtd>` 要素は任意の数の MathML の子を格納することができ、それらを `<mrow>` コンテナーとして並べます。
 
-表は通常、（ベクトルを含む）行列のような表現に使用します。 [CSS の `matrix()` 関数に関する記事](/ja/docs/Web/CSS/transform-function/matrix)から引用した基本的な例を示します。
+表は通常、（ベクトルを含む）行列のような表現に使用します。 [CSS の `matrix()` 関数に関する記事](/ja/docs/Web/CSS/Reference/Values/transform-function/matrix)から引用した基本的な例を示します。
 
 ```html hidden
 <link

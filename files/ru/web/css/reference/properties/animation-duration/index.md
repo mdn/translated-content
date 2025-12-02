@@ -1,0 +1,55 @@
+---
+title: animation-duration
+slug: Web/CSS/Reference/Properties/animation-duration
+original_slug: Web/CSS/animation-duration
+---
+
+{{CSSRef}} {{ SeeCompatTable() }}
+
+## Описание
+
+Свойство **`animation-duration`** устанавливает длительность анимации во времени за один цикл.
+
+Значение по умолчанию **`0s`** определяет, что анимация не должна выполняться.
+
+Удобно использовать сокращённое свойство {{ cssxref("animation") }} чтобы установить сразу все свойства анимации.
+
+{{cssinfo}}
+
+## Синтаксис
+
+```css
+animation-duration: 6s;
+animation-duration: 120ms;
+animation-duration: 1s, 15s;
+animation-duration: 10s, 30s, 230ms;
+```
+
+### Примеры
+
+- `<time>`
+  - : Длительность анимации определяется в секундах `s` или в миллисекундах `ms`. По умолчанию стоит значение `0s`. Отрицательные значения являются недействительными.
+
+> [!NOTE]
+> Отрицательные значения являются недействительными и отменяют объявление. Некоторые старые реализации считают отрицательные значения равнозначными `0s`.
+
+### Формальный синтаксис
+
+{{csssyntax}}
+
+## Примеры
+
+Смотрите для примеров [CSS-анимации](/en-US/CSS/CSS_animations).
+
+## Спецификации
+
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- {{ domxref("AnimationEvent", "AnimationEvent") }}

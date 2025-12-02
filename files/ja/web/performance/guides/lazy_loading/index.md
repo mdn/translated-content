@@ -52,7 +52,7 @@ JavaScript、CSS、HTML は小さな塊に分割して送信することがで�
 
 既定では、フォントリクエストはレンダリングツリーが構築されるまで遅延されるため、テキスト描画が遅延することがあります。
 
-既定値を上書きしてウェブのフォントリソースを事前読み込みするために、`<link rel="preload">` や [CSS `font-display` プロパティ](/ja/docs/Web/CSS/@font-face/font-display)、[フォント読み込み API](/ja/docs/Web/API/CSS_Font_Loading_API) を使用することが可能です。
+既定値を上書きしてウェブのフォントリソースを事前読み込みするために、`<link rel="preload">` や [CSS `font-display` プロパティ](/ja/docs/Web/CSS/Reference/At-rules/@font-face/font-display)、[フォント読み込み API](/ja/docs/Web/API/CSS_Font_Loading_API) を使用することが可能です。
 
 [link 要素](/ja/docs/Web/HTML/Reference/Elements/link) も参照してください。
 

@@ -3,8 +3,6 @@ title: TypedArray.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf
 ---
 
-{{JSRef}}
-
 **`lastIndexOf()`** 方法返回在类型数组中可以找到给定元素的最后一个索引，如果不存在，则返回 -1。方法具有与 {{jsxref("Array.prototype.lastIndexOf()")}} 相同的算法。TypedArray 是这里的[类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects)之一。
 
 ## 语法

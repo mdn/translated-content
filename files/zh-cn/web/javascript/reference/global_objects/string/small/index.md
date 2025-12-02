@@ -3,7 +3,7 @@ title: String.prototype.small()
 slug: Web/JavaScript/Reference/Global_Objects/String/small
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{deprecated_header}}
 
 {{jsxref("String")}} 值的 **`small()`** 方法创建一个 {{HTMLElement("small")}} 元素字符串，其中嵌入了调用的字符串（`<small>str</small>`），从而使该字符串以小号字体显示。
 

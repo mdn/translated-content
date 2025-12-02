@@ -43,7 +43,7 @@ l10n:
 - [`<input type="file">`](/ja/docs/Web/HTML/Reference/Elements/input/file)
 - {{HTMLElement("progress")}} および {{HTMLElement("meter")}}
 
-最初に [`appearance`](/ja/docs/Web/CSS/appearance) プロパティについて説明します。これは上記のすべてをよりスタイル付けできるようにするためにかなり有用なプロパティです。
+最初に [`appearance`](/ja/docs/Web/CSS/Reference/Properties/appearance) プロパティについて説明します。これは上記のすべてをよりスタイル付けできるようにするためにかなり有用なプロパティです。
 
 ## appearance: OS レベルのスタイル制御
 
@@ -378,7 +378,7 @@ select {
 }
 ```
 
-次に生成されたコンテンツを使って独自のアイコンを作成します。コントロールの周りに特別なラッパーを置きました。それは[`::before`](/ja/docs/Web/CSS/::before)/[`::after`](/ja/docs/Web/CSS/::after) が `<select>` 要素では動作しないためです（これはコンテンツが完全にブラウザーによって制御されているからです）。
+次に生成されたコンテンツを使って独自のアイコンを作成します。コントロールの周りに特別なラッパーを置きました。それは[`::before`](/ja/docs/Web/CSS/Reference/Selectors/::before)/[`::after`](/ja/docs/Web/CSS/Reference/Selectors/::after) が `<select>` 要素では動作しないためです（これはコンテンツが完全にブラウザーによって制御されているからです）。
 
 ```html
 <label for="select">Select a fruit</label>

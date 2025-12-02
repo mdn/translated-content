@@ -123,4 +123,4 @@ window.addEventListener("error", function (e) {
 - [ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)
 - {{domxref('PerformanceObserver')}}
 - {{domxref('IntersectionObserver')}} （[交差オブザーバー API](/ja/docs/Web/API/Intersection_Observer_API) の一部）
-- 今後リリースされる[コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)は、レスポンシブデザインを実装するための有効な選択肢になるかもしれません。
+- 今後リリースされる[コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)は、レスポンシブデザインを実装するための有効な選択肢になるかもしれません。

@@ -3,8 +3,6 @@ title: Symbol.split
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
 ---
 
-{{JSRef}}
-
 **`Symbol.split`** 指向一个正则表达式的索引处分割字符串的方法。这个方法通过 {{jsxref("String.prototype.split()")}} 调用。
 
 详情请参阅 [`RegExp.prototype[Symbol.split]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split) 和 {{jsxref("String.prototype.split()")}}。

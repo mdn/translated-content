@@ -28,7 +28,7 @@ Le [standard CORS](https://fetch.spec.whatwg.org/#http-cors-protocol) est utilis
 - Les polices web (pour récupérer des polices provenant d'autres origines lorsqu'on utilise {{cssxref("@font-face")}} en CSS), [afin que les serveurs puissent déployer des polices TrueType uniquement chargées en _cross-site_ et utilisées par les sites web qui l'autorisent](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
 - [Les textures WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)
 - Les _frames_ (images ou vidéo) dessinées sur un canevas avec [`drawImage`](/fr/docs/Web/API/CanvasRenderingContext2D/drawImage)
-- Les feuilles de style (pour les accès [CSSOM](/fr/docs/Web/CSS/CSSOM_view))
+- Les feuilles de style (pour les accès [CSSOM](/fr/docs/Web/CSS/Guides/CSSOM_view))
 - Les scripts (pour les exceptions non silencieuses (_unmuted exceptions_)).
 
 Cet article propose un aperçu général de _Cross-Origin Resource Sharing_ ainsi qu'un aperçu des en-têtes HTTP nécessaires.

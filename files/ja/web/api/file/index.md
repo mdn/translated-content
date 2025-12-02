@@ -2,7 +2,7 @@
 title: File
 slug: Web/API/File
 l10n:
-  sourceCommit: 0ebc78fd61acddbe9505330f006b706ac786456d
+  sourceCommit: 0a24354d9ac0cac0b9c6f47de27cbf758c9f32f4
 ---
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
@@ -11,7 +11,13 @@ l10n:
 
 `File` オブジェクトは通常、{{HTMLElement("input")}} 要素を使用してファイルを選択した結果として返される {{DOMxRef("FileList")}} オブジェクト、またはドラッグ＆ドロップ操作の {{DOMxRef("DataTransfer")}} オブジェクトから取得します。
 
-`File` オブジェクトは特別な種類の {{DOMxRef("Blob")}} オブジェクトであり、 Blob が利用できる場面ではどこでも利用できます。特に、{{DOMxRef("FileReader")}}、{{DOMxRef("URL.createObjectURL_static", "URL.createObjectURL()")}}、{{DOMxRef("createImageBitmap()")}}、{{domxref("Window.fetch", "fetch()")}} の [`body`](/ja/docs/Web/API/RequestInit#body) オプション、{{DOMxRef("XMLHttpRequest.send()")}} は、`Blob` と `File` の両方を受け付けます。
+`File` オブジェクトは特別な種類の {{DOMxRef("Blob")}} オブジェクトであり、 Blob が利用できる場面ではどこでも利用できます。特に、以下の API は `Blob` と `File` の両方を受け付けます。
+
+- {{DOMxRef("FileReader")}}
+- {{DOMxRef("URL.createObjectURL_static", "URL.createObjectURL()")}}
+- {{DOMxRef("Window.createImageBitmap()")}} および {{DOMxRef("WorkerGlobalScope.createImageBitmap()")}}
+- {{domxref("Window.fetch", "fetch()")}} の [`body`](/ja/docs/Web/API/RequestInit#body) オプション
+- {{DOMxRef("XMLHttpRequest.send()")}}
 
 詳しい情報や例は、[ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications) を参照してください。
 

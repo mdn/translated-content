@@ -37,4 +37,4 @@ if (navigator.userActivation.hasBeenActive) {
 
 - {{domxref("UserActivation")}}
 - {{domxref("UserActivation.isActive")}}
-- [由用户激活控制的特性](/zh-CN/docs/Web/Security/User_activation)
+- [由用户激活控制的特性](/zh-CN/docs/Web/Security/Defenses/User_activation)

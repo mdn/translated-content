@@ -142,4 +142,4 @@ SVG 2 では、このプロパティの定義にいくつかの変更が加え�
 ## 関連情報
 
 - CSS の {{cssxref("alignment-baseline")}} プロパティ
-- [CSS ベースライン配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment#ベースライン揃え)
+- [CSS ベースライン配置](/ja/docs/Web/CSS/Guides/Box_alignment/Overview#ベースライン揃え)

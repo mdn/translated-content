@@ -16,7 +16,7 @@ Firefox 18, basé sur Gecko 18.0, est sorti le 8 janvier 2013. Cette page résum
 ### CSS
 
 - {{cssxref("min-width")}} et {{cssxref("min-height")}} utilisent désormais le mot-clé `auto` comme _valeur initiale_ (Cela influe uniquement sur les éléments flexibles qui corrigeaient à `0`, la précédente valeur initiale, pour les autres éléments). ([bug Firefox 763689](https://bugzil.la/763689))
-- La cascade a été mise à jour : désormais l'auteur des règles `!important` prend le dessus sur les [animations CSS](/fr/docs/Web/CSS/CSS_animations). ([bug Firefox 783714](https://bugzil.la/783714))
+- La cascade a été mise à jour : désormais l'auteur des règles `!important` prend le dessus sur les [animations CSS](/fr/docs/Web/CSS/Guides/Animations). ([bug Firefox 783714](https://bugzil.la/783714))
 - La propriété raccourcie {{cssxref("background")}} reconnait à présent la propriété CSS3 {{cssxref("background-size")}}. ([bug Firefox 570326](https://bugzil.la/570326))
 - Le support initial du module CSS Flexbox a été lancé. Il est désactivé par défaut mais peut être activé en passant le paramètre `layout.css.flexbox.enabled` à `true`. ([bug Firefox 666041](https://bugzil.la/666041))
 

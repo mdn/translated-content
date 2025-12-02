@@ -3,8 +3,6 @@ title: Object.prototype.hasOwnProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 ---
 
-{{JSRef}}
-
 **`hasOwnProperty()`** 方法返回一个布尔值，表示对象自有属性（而不是继承来的属性）中是否具有指定的属性。
 
 > [!NOTE]

@@ -3,8 +3,6 @@ title: handler.set()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 ---
 
-{{JSRef}}
-
 **`handler.set()`** 方法是设置属性值操作的捕获器。
 
 {{InteractiveExample("JavaScript Demo: handler.set()", "taller")}}

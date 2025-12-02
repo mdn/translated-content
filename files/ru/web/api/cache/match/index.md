@@ -19,7 +19,8 @@ cache.match(request, { options }).then(function (response) {
 
 {{jsxref("Promise")}}, который разрешается в первый {{domxref("Response")}}, который совпадает с запросом или в {{jsxref("undefined")}}, если совпадений не найдено.
 
-> **Примечание:** `Cache.match()` в основном идентичен {{domxref("Cache.matchAll()")}}, за исключением того, что `Cache.match()` разрешается в `response[0]` (первый совпадающий ответ) вместо `response[]` (массив со всеми совпадающими ответами).
+> [!NOTE]
+> `Cache.match()` в основном идентичен {{domxref("Cache.matchAll()")}}, за исключением того, что `Cache.match()` разрешается в `response[0]` (первый совпадающий ответ) вместо `response[]` (массив со всеми совпадающими ответами).
 
 ### Параметры
 

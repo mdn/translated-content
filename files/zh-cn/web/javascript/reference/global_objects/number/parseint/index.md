@@ -3,8 +3,6 @@ title: Number.parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 ---
 
-{{JSRef}}
-
 **`Number.parseInt()`** 静态方法解析一个字符串参数并返回一个指定基数的整数。
 
 {{InteractiveExample("JavaScript Demo: Number.parseInt()", "taller")}}

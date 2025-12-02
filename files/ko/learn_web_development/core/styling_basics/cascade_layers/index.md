@@ -72,7 +72,7 @@ CSS의 C는 "Cascading"을 의미합니다. 스타일이 함께 계단식으로 
 각 속성에 대해 "승리" 선언은 가중치(보통 또는 중요)를 기반으로 우선 순위가 있는 출처의 선언입니다. 잠시 동안 레이어를 무시하면 우선 순위가 가장 높은 출처의 값이 적용됩니다.
 우승 출처에 요소에 대한 속성 선언이 두 개 이상 있는 경우 이러한 경쟁 속성 값에 대한 선택자의 [특정성](/ko/docs/Web/CSS/CSS_cascade/Specificity)이 비교됩니다. 특정성은 다른 출처의 선택자 간에 비교되지 않습니다.
 
-아래 예에는, 두 개의 링크가 있습니다. 첫 번째는 작성자 스타일이 적용되지 않았으므로 사용자 에이전트 스타일만 적용됩니다(및 개인 사용자 스타일이 있는 경우). 두 번째는 작성자 스타일로 설정된 [`text-decoration`](/ko/docs/Web/CSS/text-decoration) and [`color`](/ko/docs/Web/CSS/color)입니다. 작성자 스타일 시트의 선택자의 특정성이 [`0-0-0`](/ko/docs/Web/CSS/CSS_cascade/Specificity#selector_weight_categories)인 경우에도 마찬가지입니다. 작성자 스타일이 "승리"하는 이유는 다른 출처에서 충돌하는 스타일이 있을 때, 우선 순위가 없는 출처의 특정성과 관계없이 우선순위가 있는 출처의 규칙이 적용되기 때문입니다.
+아래 예에는, 두 개의 링크가 있습니다. 첫 번째는 작성자 스타일이 적용되지 않았으므로 사용자 에이전트 스타일만 적용됩니다(및 개인 사용자 스타일이 있는 경우). 두 번째는 작성자 스타일로 설정된 [`text-decoration`](/ko/docs/Web/CSS/Reference/Properties/text-decoration) and [`color`](/ko/docs/Web/CSS/Reference/Properties/color)입니다. 작성자 스타일 시트의 선택자의 특정성이 [`0-0-0`](/ko/docs/Web/CSS/CSS_cascade/Specificity#selector_weight_categories)인 경우에도 마찬가지입니다. 작성자 스타일이 "승리"하는 이유는 다른 출처에서 충돌하는 스타일이 있을 때, 우선 순위가 없는 출처의 특정성과 관계없이 우선순위가 있는 출처의 규칙이 적용되기 때문입니다.
 
 {{EmbedGHLiveSample("css-examples/learn/layers/basic-cascade.html", '100%', 500)}}
 

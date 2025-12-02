@@ -44,7 +44,7 @@ article.dataset.parent; // "cars"
 
 ## CSS에서 접근하기
 
-데이터 속성은 평문 HTML 속성이기 때문에 [CSS](/ko/docs/Web/CSS)에서도 접근할 수 있다는 것에 주목하세요. 예를 들어, 부모 데이터를 article에서 보여주려면 [`attr()`](/ko/docs/Web/CSS/attr) 함수의 [생성된 content](/ko/docs/Web/CSS/content) 를 사용하면 됩니다.
+데이터 속성은 평문 HTML 속성이기 때문에 [CSS](/ko/docs/Web/CSS)에서도 접근할 수 있다는 것에 주목하세요. 예를 들어, 부모 데이터를 article에서 보여주려면 [`attr()`](/ko/docs/Web/CSS/attr) 함수의 [생성된 content](/ko/docs/Web/CSS/Reference/Properties/content) 를 사용하면 됩니다.
 
 ```css
 article::before {

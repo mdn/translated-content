@@ -233,7 +233,7 @@ CSS 本身没有什么内置的组织方式，所以你需要自己完成建立�
 
 #### OOCSS
 
-你会遇到的大多数方式都有一部分归功于面向对象的 CSS（OOCSS）的概念，这是一种因[Nicole Sullivan 的努力](https://github.com/stubbornella/oocss/wiki)而流行的方式。OOCSS 的基本理念是将你的 CSS 分解成可复用的对象，于是你可以在你的站点上任何需要的地方使用。OOCSS 的标准示例是在[The Media Object](/zh-CN/docs/Web/CSS/Layout_cookbook/Media_objects)中所描述的排布。这一排布一方面让图片、视频或者其他元素保持固定尺寸，而另一方面也让其他内容可伸缩。这是我们在用于评论、列表等网站随处可见的排布。
+你会遇到的大多数方式都有一部分归功于面向对象的 CSS（OOCSS）的概念，这是一种因[Nicole Sullivan 的努力](https://github.com/stubbornella/oocss/wiki)而流行的方式。OOCSS 的基本理念是将你的 CSS 分解成可复用的对象，于是你可以在你的站点上任何需要的地方使用。OOCSS 的标准示例是在[The Media Object](/zh-CN/docs/Web/CSS/How_to/Layout_cookbook/Media_objects)中所描述的排布。这一排布一方面让图片、视频或者其他元素保持固定尺寸，而另一方面也让其他内容可伸缩。这是我们在用于评论、列表等网站随处可见的排布。
 
 如果你没有使用一种 OOCSS 的方法，你或许会创建一个用在这种排布所应用的不同地方的自定义 CSS，例如创建一个叫做`comment`的类，用于组件部分的一组规则，然后是叫做`list-item`的类，除了一些细小的区别外，它几乎和`comment`类完全相同。这两个组件之间的不同是列表项有一个底边，在评论里的图像有边框而列表项里面的图像没有。
 
@@ -343,7 +343,7 @@ BEM 在大些的 Web 项目中被广泛使用，许多人用这种方式写他�
 
 #### 定义变量
 
-CSS 现在有原生的[自定义属性](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)，所以这个功能越来越没那么重要了，但是你使用 Sass 的可能原因之一为，能够作为设置定义用于一个项目的所有颜色和字体，之后这些变量在项目中可用。这意味着如果你意识到你用了错误的蓝色阴影，你只需要在一个地方修改。
+CSS 现在有原生的[自定义属性](/zh-CN/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)，所以这个功能越来越没那么重要了，但是你使用 Sass 的可能原因之一为，能够作为设置定义用于一个项目的所有颜色和字体，之后这些变量在项目中可用。这意味着如果你意识到你用了错误的蓝色阴影，你只需要在一个地方修改。
 
 如果我们创建了在下面的第一行里面叫做 `$base-color` 的变量，我们之后可以在样式表的任何需要这一颜色的地方使用它。
 
@@ -382,4 +382,4 @@ $base-color: #c6538c;
 
 欲了解更多关于 CSS 布局的事情，查看[学习 CSS 布局](/zh-CN/docs/Learn_web_development/Core/CSS_layout)这节课。
 
-你应该也有了探索 [MDN CSS](/zh-CN/docs/Web/CSS) 学习材料的剩余部分的技能。你可以查阅属性和值，探索我们的 [CSS 指导手册](/zh-CN/docs/Web/CSS/Layout_cookbook)来了解可用的布局模式，或继续阅读如 [CSS 网格布局指南](/zh-CN/docs/Web/CSS/CSS_grid_layout)等更加专门的指南。
+你应该也有了探索 [MDN CSS](/zh-CN/docs/Web/CSS) 学习材料的剩余部分的技能。你可以查阅属性和值，探索我们的 [CSS 指导手册](/zh-CN/docs/Web/CSS/How_to/Layout_cookbook)来了解可用的布局模式，或继续阅读如 [CSS 网格布局指南](/zh-CN/docs/Web/CSS/Guides/Grid_layout)等更加专门的指南。

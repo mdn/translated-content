@@ -117,6 +117,6 @@ Plutôt que d'utiliser des info-bulles et de masquer des informations importante
 ## Voir aussi
 
 - [ARIA&nbsp;: rôle `dialog`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role)
-- [La pseudo-classe CSS `:focus`](/fr/docs/Web/CSS/:focus)
+- [La pseudo-classe CSS `:focus`](/fr/docs/Web/CSS/Reference/Selectors/:focus)
 - [Tooltips & Toggletips <sup>(angl.)</sup>](https://inclusive-components.design/tooltips-toggletips/) par Heydon Pickering
 - [Comprendre SC 1.4.13&nbsp;: contenu au survol ou à la sélection (WCAG niveau AA) <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html)

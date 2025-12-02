@@ -27,7 +27,7 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティがあ
 - {{domxref("HTMLImageElement.crossOrigin")}}
   - : 文字列で、この画像要素の CORS 設定を指定します。詳細は [CORS 設定属性](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)を参照してください。これは CORS が使用されていない場合、 `null` になることがあります。
 - {{domxref("HTMLImageElement.currentSrc")}} {{ReadOnlyInline}}
-  - : 現在表示されている画像が読み込まれた URL を表す文字列を返します。この文字列は、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)が適用されている場合、状況の変化に応じて画像が調整され、変更される可能性があります。
+  - : 現在表示されている画像が読み込まれた URL を表す文字列を返します。この文字列は、[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)が適用されている場合、状況の変化に応じて画像が調整され、変更される可能性があります。
 - {{domxref("HTMLImageElement.decoding")}}
   - : ブラウザーが画像をどのようにデコードすべきかのヒントを表すオプションの文字列です。この値を指定する場合、許可されている値のいずれかでなければなりません。同期的に画像をデコードする場合は `sync`、非同期的に画像をデコードする場合は `async`、優先順位を指定しない場合は `auto` （これが既定値）です。このプロパティの値の意味については、 {{domxref("HTMLImageElement.decoding", "decoding")}} のページを参照してください。
 - {{domxref("HTMLImageElement.fetchPriority")}}

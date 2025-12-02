@@ -180,7 +180,7 @@ La valeur `'unsafe-eval'` contrôle différentes méthodes de mise en forme qui 
 - [`style-src-attr`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-attr)
 - [`Link`](/fr/docs/Web/HTTP/Reference/Headers/Link) header
 - [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style), [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link)
-- [`@import`](/fr/docs/Web/CSS/@import)
+- [`@import`](/fr/docs/Web/CSS/Reference/At-rules/@import)
 - [`CSSStyleSheet.insertRule()`](/fr/docs/Web/API/CSSStyleSheet/insertRule)
 - [`CSSGroupingRule.insertRule()`](/fr/docs/Web/API/CSSGroupingRule/insertRule)
 - [`CSSStyleDeclaration.cssText`](/fr/docs/Web/API/CSSStyleDeclaration/cssText)

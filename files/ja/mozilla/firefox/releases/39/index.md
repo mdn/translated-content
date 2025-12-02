@@ -72,7 +72,7 @@ _変更なし。_
 
 ### その他
 
-- [WOFF2](/ja/docs/Web/CSS/CSS_fonts/WOFF) フォントのサポートを Release バージョンの Firefox でも、デフォルトで有効にしました (Nightly や Developer Edition に加えて、Beta や Release も有効) ([Firefox バグ 1084026](https://bugzil.la/1084026))。
+- [WOFF2](/ja/docs/Web/CSS/Guides/Fonts/WOFF) フォントのサポートを Release バージョンの Firefox でも、デフォルトで有効にしました (Nightly や Developer Edition に加えて、Beta や Release も有効) ([Firefox バグ 1084026](https://bugzil.la/1084026))。
 - [`-remote`](https://wiki.mozilla.org/Firefox/CommandLineOptions#-remote_remote_command) コマンドラインオプションを削除しました ([Firefox バグ 1080319](https://bugzil.la/1080319))。
 - 新たに [Unicode 8.0 skin tone emoji](https://www.bbc.co.uk/newsbeat/article/32220611/diverse-thumbs-up-emojis-with-different-skin-tones-finally-here) サポートしました ([Firefox バグ 1153460](https://bugzil.la/1153460))。
 

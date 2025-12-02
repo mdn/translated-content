@@ -19,7 +19,7 @@ elementList = document.querySelectorAll(selectors);
 ### Параметры
 
 - **`selectors`**
-  - : Строка {{domxref("DOMString")}}, содержащая один или более [CSS селектор](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors). Эта строка должна быть валидным [CSS селектором](/ru/docs/Web/CSS/CSS_selectors). Если это не так, то генерируется `SyntaxError`. Смотрите [Поиск элементов DOM с использованием селекторов](/ru/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors) для получения информации о том, распознавать элементы. Несколько селекторов нужно разделить запятыми.
+  - : Строка {{domxref("DOMString")}}, содержащая один или более [CSS селектор](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors). Эта строка должна быть валидным [CSS селектором](/ru/docs/Web/CSS/CSS_selectors). Если это не так, то генерируется `SyntaxError`. Смотрите [Поиск элементов DOM с использованием селекторов](/ru/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree) для получения информации о том, распознавать элементы. Несколько селекторов нужно разделить запятыми.
 
 > [!NOTE]
 > Символы, которые не являются частью стандартного синтаксиса CSS, должны быть экранированы с помощью символа обратной косой черты (`\`). Поскольку в JavaScript также используется экранирование обратной косой черты, при написании строковых литералов с использованием этих символов следует соблюдать особую осторожность. Для более подробной информации смотри [Escaping special characters](#escaping_special_characters).
@@ -29,7 +29,7 @@ elementList = document.querySelectorAll(selectors);
 Статический (non-live) {{domxref("NodeList")}}, содержащий все элементы в пределах документа, которые соответствуют как минимум одному из указанных селекторов, или пустой {{domxref("NodeList")}} в случае отсутствия совпадений.
 
 > [!NOTE]
-> Если в строке `selectors` содержатся [CSS псевдоэлементы](/ru/docs/Web/CSS/Pseudo-elements), то возвращаемый список будет всегда пуст.
+> Если в строке `selectors` содержатся [CSS псевдоэлементы](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-elements), то возвращаемый список будет всегда пуст.
 
 ### Исключения
 
@@ -59,7 +59,7 @@ var container = document.querySelector("#test");
 var matches = container.querySelectorAll("div.highlighted > p");
 ```
 
-В этом примере используются [селекторы атрибутов](/ru/docs/Web/CSS/Attribute_selectors), чтобы вернуть список элементов {{HTMLElement("iframe")}}, которые содержат атрибут `data-src`:
+В этом примере используются [селекторы атрибутов](/ru/docs/Web/CSS/Reference/Selectors/Attribute_selectors), чтобы вернуть список элементов {{HTMLElement("iframe")}}, которые содержат атрибут `data-src`:
 
 ```js
 var matches = document.querySelectorAll("iframe[data-src]");

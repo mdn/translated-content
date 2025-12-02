@@ -30,7 +30,7 @@ Vous voulez aider à documenter Firefox 22 ? Parcourez la [liste des bugs qui on
 
 ### CSS
 
-- Le support de [CSS Flexbox layout](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) a été activé par défaut ([bug Firefox 841876](https://bugzil.la/841876)).
+- Le support de [CSS Flexbox layout](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) a été activé par défaut ([bug Firefox 841876](https://bugzil.la/841876)).
 - Le support de CSS Conditionals ({{cssxref("@supports")}} et {{domxref("CSS.supports")}}) ont été activés par défaut ([bug Firefox 855455](https://bugzil.la/855455)).
 
 ## Changements pour les développeurs Mozilla et développeurs d'add-on

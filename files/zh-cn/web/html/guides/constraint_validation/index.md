@@ -396,7 +396,7 @@ window.onload = () => {
 
 #### :required、:optional CSS 伪类
 
-{{cssxref(':required')}} 和 {{cssxref(':optional')}} [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)允许开发者编写选择器，以匹配有 [`required`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#required) 属性或没有该属性的表单元素。
+{{cssxref(':required')}} 和 {{cssxref(':optional')}} [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)允许开发者编写选择器，以匹配有 [`required`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#required) 属性或没有该属性的表单元素。
 
 #### :placeholder-shown CSS 伪类
 
@@ -404,7 +404,7 @@ window.onload = () => {
 
 #### :valid、:invalid CSS 伪类
 
-{{cssxref(':valid')}} 和 {{cssxref(':invalid')}} [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)用于表示 \<input> 元素，根据输入的类型设置，这些元素的内容分别可以验证和无法验证。这些类允许用户对有效或无效的表单元素进行样式设计，以使其更容易识别格式正确或不正确的元素。
+{{cssxref(':valid')}} 和 {{cssxref(':invalid')}} [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)用于表示 \<input> 元素，根据输入的类型设置，这些元素的内容分别可以验证和无法验证。这些类允许用户对有效或无效的表单元素进行样式设计，以使其更容易识别格式正确或不正确的元素。
 
 ### 控制约束验证的文字
 

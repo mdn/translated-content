@@ -11,7 +11,7 @@ l10n:
 
 ### CSS
 
-- [Anchor Positioning](/ja/docs/Web/CSS/CSS_anchor_positioning) のさらなる実装の準備として、`inset-area` CSS プロパティを {{CSSXRef("position-area")}} に改名しました。現在、このプロパティは値を解析するために内部で使用するのみです。Anchor Positioning の機能は、設定で制御した上で順次ロールアウトしています。詳しくは [Firefox における実験的機能: CSS Anchor Positioning](/ja/docs/Mozilla/Firefox/Experimental_features#css_anchor_positioning) をご覧ください ([Firefox bug 1909358](https://bugzil.la/1909358)、[Firefox bug 1838746](https://bugzil.la/1838746))。
+- [Anchor Positioning](/ja/docs/Web/CSS/Guides/Anchor_positioning) のさらなる実装の準備として、`inset-area` CSS プロパティを {{CSSXRef("position-area")}} に改名しました。現在、このプロパティは値を解析するために内部で使用するのみです。Anchor Positioning の機能は、設定で制御した上で順次ロールアウトしています。詳しくは [Firefox における実験的機能: CSS Anchor Positioning](/ja/docs/Mozilla/Firefox/Experimental_features#css_anchor_positioning) をご覧ください ([Firefox bug 1909358](https://bugzil.la/1909358)、[Firefox bug 1838746](https://bugzil.la/1838746))。
 
 ### JavaScript
 

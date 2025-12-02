@@ -30,5 +30,5 @@ _このインターフェイスには、親である {{domxref("CSSGroupingRule"
 ## 関連情報
 
 - {{CSSxRef("@starting-style")}}
-- [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)モジュール
+- [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)モジュール
 - [動的スタイル情報の使用](/ja/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

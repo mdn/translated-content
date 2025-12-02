@@ -1,63 +1,57 @@
 ---
-title: Array.prototype.every()
+title: "Array : méthode every()"
+short-title: every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
+l10n:
+  sourceCommit: 4bfeb5a89c1528da7cb7847a9ccb93f9b00290f0
 ---
 
-{{JSRef}}
+La méthode **`every()`** des instances de {{JSxRef("Array")}} retourne `false` si elle trouve un élément du tableau qui ne satisfait pas la fonction de test fournie. Sinon, elle retourne `true`.
 
-La méthode **`every()`** permet de tester si tous les éléments d'un tableau vérifient une condition donnée par une fonction en argument. Cette méthode renvoie un booléen pour le résultat du test.
-
-> [!NOTE]
-> Cette méthode renvoie `true` pour n'importe quelle condition utilisée sur un tableau vide.
-
-{{InteractiveExample("JavaScript Demo: Array.every()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Array.prototype.every()", "shorter")}}
 
 ```js interactive-example
 const isBelowThreshold = (currentValue) => currentValue < 40;
 
-const array1 = [1, 30, 39, 29, 10, 13];
+const array = [1, 30, 39, 29, 10, 13];
 
-console.log(array1.every(isBelowThreshold));
-// Expected output: true
+console.log(array.every(isBelowThreshold));
+// Sortie attendue : true
 ```
 
 ## Syntaxe
 
-```js
-arr.every(callback[, thisArg])
+```js-nolint
+every(callbackFn)
+every(callbackFn, thisArg)
 ```
 
 ### Paramètres
 
-- `callback`
-  - : La fonction sur laquelle on souhaite tester chaque élément du tableau. Elle prend en compte trois arguments :
-    - `currentValue`
-      - : La valeur de l'élément à traiter.
-    - `index`{{Optional_inline}}
-      - : L'indice de l'élément du tableau à tester.
-    - `array`{{Optional_inline}}
-      - : Le tableau sur lequel on a appelé la méthode `every`.
-
-- `thisArg`{{Optional_inline}}
-  - : Paramètre optionnel. La valeur à utiliser pour `this` lors de l'exécution de la fonction.
+- `callbackFn`
+  - : La fonction à exécuter pour chaque élément du tableau. Elle doit retourner une valeur [équivalente à vrai](/fr/docs/Glossary/Truthy) pour indiquer que l'élément passe le test, et une valeur [équivalente à faux](/fr/docs/Glossary/Falsy) sinon. La fonction est appelée avec les arguments suivants&nbsp;:
+    - `element`
+      - : L'élément en cours de traitement dans le tableau.
+    - `index`
+      - : L'indice de l'élément en cours de traitement dans le tableau.
+    - `array`
+      - : Le tableau sur lequel `every()` a été appelée.
+- `thisArg` {{Optional_Inline}}
+  - : Une valeur à utiliser comme `this` lors de l'exécution de `callbackFn`. Voir [méthodes itératives](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives).
 
 ### Valeur de retour
 
-`true` si la fonction de rappel obtient une valeur équivalente à vrai (_truthy_) pour chaque élément du tableau et `false` sinon.
+`true` sauf si `callbackFn` retourne une valeur {{Glossary("falsy", "équivalente à faux")}} pour un élément du tableau, auquel cas `false` est immédiatement retourné.
 
 ## Description
 
-La méthode `every` exécute la fonction `callback` fournie sur chacun des éléments contenus dans le tableau jusqu'à ce qu'un élément pour lequel la fonction `callback` renvoie une valeur fausse (_falsy value_) soit trouvé. Si un tel élément est trouvé, la méthode `every` renvoie directement `false`. Sinon, si la fonction `callback` a renvoyé une valeur vraie pour tous les éléments, la méthode `every` renverra `true`. La fonction `callback` n'est appelée que pour les indices du tableau pour lesquels il existe des valeurs affectées. Elle n'est pas appelée pour les indices supprimés ou ceux qui n'ont jamais reçu de valeur.
+La méthode `every()` est une [méthode itérative](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives). Elle appelle la fonction `callbackFn` fournie une fois pour chaque élément du tableau, jusqu'à ce que `callbackFn` retourne une valeur [équivalente à faux](/fr/docs/Glossary/Falsy). Si un tel élément est trouvé, `every()` retourne immédiatement `false` et arrête l'itération. Sinon, si `callbackFn` retourne une valeur [équivalente à vrai](/fr/docs/Glossary/Truthy) pour tous les éléments, `every()` retourne `true`. Consultez la section [méthodes itératives](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives) pour plus d'informations sur le fonctionnement général de ces méthodes.
 
-`callback` est appelée avec trois arguments : la valeur de l'élément en cours de traitement, l'indice de l'élément dans le tableau et le tableau qui est parcouru.
+`every` agit comme le quantificateur «&nbsp;pour tout&nbsp;» en mathématiques. En particulier, pour un tableau vide, elle retourne `true`. (Il est [trivialement vrai <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Vacuous_truth) que tous les éléments d'un [ensemble vide](https://fr.wikipedia.org/wiki/Ensemble_vide#Propriétés) respectent n'importe quelle condition.)
 
-Si un paramètre `thisArg` est fourni à la méthode `every`, ce sera la valeur `this` de la fonction `callback`. Si ce paramètre n'est pas fourni, la valeur `undefined` sera utilisée comme valeur pour `this`. La valeur `this` « définitivement » utilisée par la fonction `callback` est déterminée selon [les règles usuelles de détermination de `this`](/fr/docs/Web/JavaScript/Reference/Operators/this).
+`callbackFn` n'est appelée que pour les indices du tableau qui ont des valeurs affectées. Elle n'est pas appelée pour les cases vides dans les [tableaux creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux).
 
-`every` ne modifie pas le tableau sur lequel elle a été appelée.
-
-Les éléments traités par la méthode `every` sont définis lors du premier appel à `callback`. Les éléments ajoutés au tableau après que l'appel à `every` ait commencé ne seront pas traités par la fonction `callback`. Si des éléments du tableau sont modifiés, la valeur passée à la fonction `callback` sera celle qu'ils ont au moment où `every` les traitera. Les éléments qui sont supprimés ne sont pas traités par la fonction `every`.
-
-`every` agit de la même façon que le quantificateur mathématiques « pour tous », notamment pour le cas au limite d'un tableau vide pour lequel elle renvoie `true` (on dit qu'il est trivialement vrai que tous les éléments d'un [ensemble vide](https://fr.wikipedia.org/wiki/Ensemble_vide#Difficult.C3.A9s_de_la_notion_d.27ensemble_vide) respectent n'importe quelle condition).
+La méthode `every()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_tableau_génériques). Elle attend seulement que la valeur de `this` possède une propriété `length` et des propriétés à clés entières.
 
 ## Exemples
 
@@ -73,90 +67,62 @@ function estAssezGrand(element, index, array) {
 [12, 54, 18, 130, 44].every(estAssezGrand); // true
 ```
 
-### Utiliser les fonctions fléchées avec `every`
+### Vérifier si un tableau est un sous-ensemble d'un autre tableau
 
-{{jsxref("Fonctions/Fonctions_fléchées","Les fonctions fléchées","",1)}} permettent d'utiliser une syntaxe plus concise pour effectuer le même test.
+L'exemple suivant teste si tous les éléments d'un tableau sont présents dans un autre tableau.
 
 ```js
-[12, 5, 8, 130, 44].every((elem) => elem >= 10); // false
-[12, 54, 18, 130, 44].every((elem) => elem >= 10); // true
-[
-  { a: 1, b: 2 },
-  { a: 1, b: 3 },
-].every((elem) => elem.a === 1); // true
-[
-  { a: 2, b: 2 },
-  { a: 1, b: 3 },
-].every((elem) => elem.a === 1); // false
+const estSousEnsemble = (tableau1, tableau2) =>
+  tableau2.every((element) => tableau1.includes(element));
+
+console.log(estSousEnsemble([1, 2, 3, 4, 5, 6, 7], [5, 7, 6])); // true
+console.log(estSousEnsemble([1, 2, 3, 4, 5, 6, 7], [5, 8, 7])); // false
 ```
 
-## Prothèse d'émulation (_polyfill_)
+### Utiliser le troisième argument de `callbackFn`
 
-`every` fut ajouté avec la cinquième édition du standard ECMA-262. Pour cette raison, il n'est pas nécessairement présent dans les différentes implémentations de ce standard. Afin de faire fonctionner du code dans un environnement qui ne possède pas cette fonctionnalité, on pourra utiliser le fragment de code suivant au début des scripts. Cet algorithme correspond exactement à celui défini dans la cinquième édition du standard ECMA-262. On prend l'hypothèse que `Object` et `TypeError` ont leurs valeurs originales (n'ont pas été modifiés) et que `callbackfn.call` correspond bien à la valeur originale de {{jsxref("Function.prototype.call")}}
+L'argument `array` est utile si vous souhaitez accéder à un autre élément du tableau. L'exemple suivant utilise d'abord `filter()` pour extraire les valeurs positives puis utilise `every()` pour vérifier si le tableau est strictement croissant.
 
 ```js
-if (!Array.prototype.every) {
-  Array.prototype.every = function (callbackfn, thisArg) {
-    "use strict";
-    var T, k;
+const nombres = [-2, 4, -8, 16, -32];
+const estCroissant = nombres
+  .filter((num) => num > 0)
+  .every((num, idx, arr) => {
+    // Sans l'argument arr, il n'y a pas de moyen simple d'accéder
+    // au tableau intermédiaire sans le stocker dans une variable.
+    if (idx === 0) return true;
+    return num > arr[idx - 1];
+  });
+console.log(estCroissant); // true
+```
 
-    if (this == null) {
-      throw new TypeError("this vaut null ou n est pas défini");
-    }
+### Utiliser `every()` sur des tableaux creux
 
-    // 1. Soit O le résultat de l'appel à ToObject auquel on a
-    // passé this comme argument
-    var O = Object(this);
+`every()` n'exécutera pas son prédicat sur les cases vides.
 
-    // 2. Soit lenValue le résultat de l'appel de la méthode interne
-    //   Get sur O avec l'argument "length".
-    // 3. Soit len le résultat de ToUint32(lenValue).
-    var len = O.length >>> 0;
+```js
+console.log([1, , 3].every((x) => x !== undefined)); // true
+console.log([2, , 2].every((x) => x === 2)); // true
+```
 
-    // 4. Si IsCallable(callbackfn) est faux, on lève une exception
-    // TypeError.
-    if (typeof callbackfn !== "function") {
-      throw new TypeError();
-    }
+### Appeler `every()` sur des objets qui ne sont pas des tableaux
 
-    // 5. Si thisArg a été fourni : soit T cette valeur thisArg, undefined sinon.
-    if (arguments.length > 1) {
-      T = thisArg;
-    }
+La méthode `every()` lit la propriété `length` de `this` puis accède à chaque propriété dont la clé est un entier non négatif inférieur à `length` jusqu'à ce qu'elles aient toutes été traitées ou que `callbackFn` retourne `false`.
 
-    // 6. Soit k égal à 0.
-    k = 0;
-
-    // 7. On répète tant que k < len
-    while (k < len) {
-      var kValue;
-
-      // a. Soit Pk la valeur de ToString(k).
-      //   (ce qui est implicite pour les opérandes gauche de in)
-      // b. Soit kPresent le résultat de l'appel de la méthode
-      //    interne de O avec l'argument Pk.
-      //    Cette étape peut être combinée avec l'étape c
-      // c. Si kPresent vaut true, alors
-      if (k in O) {
-        // i. Soit kValue le résultat de l'appel de la méthode
-        //    interne Get de O avec l'argument Pk.
-        kValue = O[k];
-
-        // ii. Soit testResult le résultat de l'appel de la méthode
-        //     interne Call de callbackfn avec T comme valeur this et
-        //     la liste d'argument contenant kValue, k, et O.
-        var testResult = callbackfn.call(T, kValue, k, O);
-
-        // iii. Si ToBoolean(testResult) vaut false, on renvoie false.
-        if (!testResult) {
-          return false;
-        }
-      }
-      k++;
-    }
-    return true;
-  };
-}
+```js
+const objetSimilaireTableau = {
+  length: 3,
+  0: "a",
+  1: "b",
+  2: "c",
+  3: 345, // ignoré par every() car length vaut 3
+};
+console.log(
+  Array.prototype.every.call(
+    objetSimilaireTableau,
+    (x) => typeof x === "string",
+  ),
+); // true
 ```
 
 ## Spécifications
@@ -169,7 +135,11 @@ if (!Array.prototype.every) {
 
 ## Voir aussi
 
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Array.prototype.some()")}}
-- {{jsxref("Array.prototype.find()")}}
-- {{jsxref("TypedArray.prototype.every()")}}
+- [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
+- L'objet global {{JSxRef("Array")}}
+- La méthode {{JSxRef("Array.prototype.forEach()")}}
+- La méthode {{JSxRef("Array.prototype.some()")}}
+- La méthode {{JSxRef("Array.prototype.find()")}}
+- La méthode {{JSxRef("TypedArray.prototype.every()")}}
+- [Prothèse d'émulation de `Array.prototype.every` dans `core-js`<sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
+- [Prothèse d'émulation es-shims de `Array.prototype.every`<sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.every)

@@ -24,10 +24,10 @@ const sheet = stylesheet.parentStyleSheet ?? stylesheet;
 
 如果当前样式表是一个顶级的样式表或者如果不支持包含样式表，则这个属性返回 `null`。
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}

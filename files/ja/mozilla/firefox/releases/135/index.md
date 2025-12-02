@@ -17,7 +17,7 @@ l10n:
 
 #### 廃止
 
-- [`-moz-user-input`](/ja/docs/Web/CSS/-moz-user-input) CSS プロパティで、入力フィールドを無効化できました。このプロパティが非推奨になり、削除されました ([Firefox bug 1935198](https://bugzil.la/1935198))。
+- [`-moz-user-input`](/ja/docs/Web/CSS/Reference/Properties/-moz-user-input) CSS プロパティで、入力フィールドを無効化できました。このプロパティが非推奨になり、削除されました ([Firefox bug 1935198](https://bugzil.la/1935198))。
 
 ### JavaScript
 

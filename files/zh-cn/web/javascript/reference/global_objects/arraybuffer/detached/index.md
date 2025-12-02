@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f6e304f08e3fe566465a40830ea7d589ef5e83a8
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 {{jsxref("ArrayBuffer")}} 实例的 **`detached`** 访问器属性返回一个布尔值，指示该缓冲区是否已经分离（传输）。
 

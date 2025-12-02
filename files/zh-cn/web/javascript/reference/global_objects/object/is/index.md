@@ -3,8 +3,6 @@ title: Object.is()
 slug: Web/JavaScript/Reference/Global_Objects/Object/is
 ---
 
-{{JSRef}}
-
 **`Object.is()`** 静态方法确定两个值是否为[相同值](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#使用_object.is_进行同值相等比较)。
 
 {{InteractiveExample("JavaScript Demo: Object.is()")}}

@@ -1,66 +1,58 @@
 ---
-title: KeyboardEvent.charCode
+title: "KeyboardEvent : propriété charCode"
+short-title: charCode
 slug: Web/API/KeyboardEvent/charCode
+l10n:
+  sourceCommit: 87440643d71bf81a5bf4b8fa21db9e3d56ead395
 ---
 
-{{Deprecated_Header}}
+{{APIRef("UI Events")}}{{Deprecated_Header}}
 
-{{APIRef("UI Events")}}
+La propriété en lecture seule **`charCode`** de l'interface {{DOMxRef("KeyboardEvent")}} retourne la valeur Unicode d'une touche caractère pressée lors d'un évènement {{DOMxRef("Element/keypress_event", "keypress")}}.
 
-La propriété en lecture seule {{domxref("KeyboardEvent.charCode")}} retourne la valeur Unicode d'une touche caractère pressée pendant un évènement {{ domxref("element.onkeypress", "keypress") }}.
+> [!WARNING]
+> Ne pas utiliser cette propriété, elle est dépréciée. Pour obtenir la valeur Unicode du caractère, utilisez la propriété {{DOMxRef("KeyboardEvent.key", "key")}}.
 
-Pour des constantes équivalant ces codes numériques, voir {{ domxref("KeyboardEvent", "KeyEvent") }}.
+## Value
 
-> [!NOTE]
-> N'utilisez plus cette propriété, elle est dépréciée. Utilisez plutôt {{domxref("KeyboardEvent.key")}}.
-
-## Syntaxe
-
-```js
-var value = event.charCode;
-```
-
-- _`value`_ est la valeur Unicode du caractère associé à la touche pressée.
+Un nombre qui représente la valeur Unicode de la touche caractère qui a été pressée.
 
 ## Exemple
 
+### HTML
+
 ```html
-<html>
-  <head>
-    <title>Exemple charCode</title>
-
-    <script type="text/javascript">
-      function AfficherCaractere(e) {
-        alert(
-          "Touche tapée : " +
-            String.fromCharCode(e.charCode) +
-            "\n" +
-            "charCode: " +
-            e.charCode,
-        );
-      }
-    </script>
-  </head>
-
-  <body onkeypress="AfficherCaractere(event);">
-    <p>Tapez une touche caractère de votre clavier (a,b,c...)</p>
-  </body>
-</html>
+<p>
+  Tapez du texte dans la zone ci-dessous pour afficher le <code>charCode</code>.
+</p>
+<input type="text" />
+<p id="log"></p>
 ```
+
+### JavaScript
+
+```js
+const input = document.querySelector("input");
+const log = document.querySelector("#log");
+
+input.addEventListener("keypress", (e) => {
+  log.innerText = `Key pressed: ${String.fromCharCode(e.charCode)}\ncharCode: ${
+    e.charCode
+  }`;
+});
+```
+
+### Résultat
+
+{{EmbedLiveSample("Exemples")}}
 
 ## Notes
 
-Après un évènement {{ domxref("element.onkeypress", "keypress") }}, la valeur Unicode de la touche pressée est stockée dans l'une ou l'autre des propriétés `{{ domxref("event.keyCode", "keyCode") }}` et `charCode`, jamais les deux à la fois. Si la touche pressée génère un caractère (ex. 'a'), `charCode` prend la valeur du code de ce caractère, en respectant la casse. (i.e. `charCode` tient compte d'une touche Maj. enfoncée). Sinon, le code est stocké dans `keyCode`.
-
-Quand une ou plusieurs touche modificatrices sont pressées, il y a quelques règles complexes pour `charCode`, jetez un oeil à [Gecko Keypress Event](/fr/docs/Gecko_Keypress_Event) (en anglais) pour le détail.
-
-`charCode` n'est jamais défini lors d'évènements {{ domxref("element.onkeydown", "keydown") }} et {{ domxref("element.onkeyup", "keyup") }}. Dans ces cas, `keyCode` is set instead.
-
-Pour obtenir le code de la touche qu'il soit stocké dans `keyCode` ou `charCode`, requêtez la propriété {{ domxref("event.which", "which") }}.
-
-Les caractères entrés via IME ne s'enregistrent pas sous `keyCode` ou `charCode`. Actually with the Chinese IME I'm using, entering the IME results in a keypress event with keyCode = 229 and no other key events fire until the IME exits (which may happen after multiple characters are inputted). I'm not sure if other IME's work this way.
-
-Pour une liste de valeurs de `charCode` associées à leurs touches, lancez l'exemple dans [Gecko DOM Reference:Examples #Example 7: Displaying Event Object Constants](/fr/docs/Web/API/Document_Object_Model/Examples#example_7:_displaying_event_object_properties) (en anglais) et regardez le tableau HTML résultant.
+- Lors d'un évènement {{DOMxRef("Element/keypress_event", "keypress")}}, la valeur Unicode de la touche pressée est stockée soit dans la propriété {{DOMxRef("KeyboardEvent.keyCode", "keyCode")}} soit dans `charCode`, mais jamais dans les deux. Si la touche pressée génère un caractère (par exemple «&nbsp;a&nbsp;»), `charCode` reçoit le code de ce caractère&nbsp;; `charCode` respecte la casse (autrement dit, `charCode` tient compte du fait que la touche <kbd>Maj</kbd> est enfoncée). Sinon, le code de la touche pressée est stocké dans `keyCode`.
+- `charCode` n'est jamais défini lors des évènements {{DOMxRef("Element/keydown_event", "keydown")}} et {{DOMxRef("Element/keyup_event", "keyup")}}. Dans ces cas, c'est `keyCode` qui est défini.
+- Pour obtenir le code de la touche, qu'il soit stocké dans `keyCode` ou `charCode`, interrogez la propriété {{DOMxRef("UIEvent/which", "which")}}.
+- Les caractères saisis via un {{Glossary("Input method editor", "éditeur de méthode de saisie")}} ne sont pas enregistrés via `keyCode` ou `charCode`.
+- Pour obtenir la liste des valeurs `charCode` associées à chaque touche, exécutez [Afficher les propriétés de l'objet évènement](/fr/docs/Web/API/Document_Object_Model#afficher_les_proprietes_de_lobjet_evenement) et consultez le tableau HTML généré.
 
 ## Spécifications
 

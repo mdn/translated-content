@@ -15,7 +15,7 @@ Firefox 18 已于 2013 年 1 月 8 日发布。
 ### CSS
 
 - {{cssxref("min-width")}} 和 {{cssxref("min-height")}} 属性使用 `auto` 关键字作为初始值 (This has an effect only on flex items as it resolves to `0`, the previous initial value, for other items). ([Firefox bug 763689](https://bugzil.la/763689))
-- The cascade has been updated: now author `!important` rules override [CSS animations](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations). ([Firefox bug 783714](https://bugzil.la/783714))
+- The cascade has been updated: now author `!important` rules override [CSS animations](/zh-CN/docs/Web/CSS/Guides/Animations/Using). ([Firefox bug 783714](https://bugzil.la/783714))
 - {{cssxref("background")}}简写属性可以包含 CSS3 中的{{cssxref("background-size")}}属性了。([Firefox bug 570326](https://bugzil.la/570326))
 - 初步实现了 Flexbox.默认禁用状态，可以通过设置`layout.css.flexbox.enabled`选项激活该特性.([Firefox bug 666041](https://bugzil.la/666041))
 

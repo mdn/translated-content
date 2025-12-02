@@ -13,7 +13,7 @@ Un [en-tête de requêtes sûr pour le CORS (<i lang="en">CORS-safelisted reques
 - {{HTTPHeader("Content-Type")}}
 - {{HTTPHeader("Range")}}
 
-Lorsqu'une requête ne contient que ces en-têtes (et répond aux critères indiqués après), il n'y a pas besoin d'une {{glossary('preflight request', 'requête préalable (<i lang="en">preflight request</i>)')}} dans le contexte du {{Glossary("CORS")}}..
+Lorsqu'une requête ne contient que ces en-têtes (et répond aux critères indiqués après), il n'y a pas besoin d'une {{Glossary('preflight request', 'requête préalable (<i lang="en">preflight request</i>)')}} dans le contexte du {{Glossary("CORS")}}..
 
 Il est possible d'indiquer d'autres en-têtes comme sûrs à l'aide de l'en-tête {{HTTPHeader("Access-Control-Allow-Headers")}}. `Access-Control-Allow-Headers` permet également de lister les en-têtes précédents pour contourner les restrictions supplémentaires décrites ensuite.
 

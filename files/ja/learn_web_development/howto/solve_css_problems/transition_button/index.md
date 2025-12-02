@@ -72,4 +72,4 @@ button {
 
 ## 関連情報
 
-- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [CSS トランジションの使用](/ja/docs/Web/CSS/Guides/Transitions/Using)

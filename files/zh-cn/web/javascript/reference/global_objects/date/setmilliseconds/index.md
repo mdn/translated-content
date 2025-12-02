@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 6bd17cb9cbc2d11163617b9f71706e93fdd743c8
 ---
 
-{{JSRef}}
-
 {{jsxref("Date")}} 实例的 **`setMilliseconds()`** 方法会根据本地时间设置一个日期对象的毫秒数。
 
 {{InteractiveExample("JavaScript Demo: Date.setMilliseconds()")}}

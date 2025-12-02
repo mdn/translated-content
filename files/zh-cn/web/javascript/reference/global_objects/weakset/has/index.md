@@ -3,8 +3,6 @@ title: WeakSet.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
 ---
 
-{{JSRef}}
-
 {{jsxref("WeakSet")}} 实例的 **`has()`** 方法返回一个布尔值，指示该 `WeakSet` 中指定的对象是否存在。
 
 {{InteractiveExample("JavaScript Demo: WeakSet.Prototype.has()")}}
