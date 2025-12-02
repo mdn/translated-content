@@ -111,7 +111,7 @@ console.log(b); // 7
 
 ### Échange de variables
 
-Une fois le fragment de code exécuté, on aura _b_ égal à 1 et _a_ égal à 3. S'il n'avait pas été possible d'utiliser l'affectation par décomposition, l'échange des valeurs aurait nécessité une variable temporaire (pour des données binaires, on aurait pu utiliser une [permutation XOR](<https://fr.wikipedia.org/wiki/Permutation_(informatique)#En_utilisant_l.27op.C3.A9ration_XOR>)).
+Une fois le fragment de code exécuté, on aura _b_ égal à 1 et _a_ égal à 3. S'il n'avait pas été possible d'utiliser l'affectation par décomposition, l'échange des valeurs aurait nécessité une variable temporaire (pour des données binaires, on aurait pu utiliser une [permutation XOR](<https://fr.wikipedia.org/wiki/Permutation_(informatique)#En_utilisant_l.27opération_XOR>)).
 
 ```js
 let a = 1;

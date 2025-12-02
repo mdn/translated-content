@@ -439,7 +439,7 @@ Lorsque vous installez un nouvel éditeur de texte, il est probable que votre sy
 - Linux
   - [Ubuntu Unity](http://doc.ubuntu-fr.org/changer_l_association_par_defaut_des_fichiers_avec_les_applications)
   - [GNOME](http://www.generation-linux.fr/index.php?post/2008/02/10/59-associations-de-fichier-dans-gnome)
-  - [KDE](https://userbase.kde.org/Dolphin/File_Management/fr#Modifier_une_association_de_fichiers_.C3.A0_la_vol.C3.A9e-)
+  - [KDE](https://userbase.kde.org/Dolphin/File_Management/fr#Modifier_une_association_de_fichiers_à_la_volée)
 
 ## Prochaines étapes
 

@@ -32,17 +32,17 @@ Ce guide est divisé en plusieurs chapitres :
 ## [Contrôle du flux et gestion des erreurs](/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 
 - [`if...else`](/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#instruction_if...else)
-- [`switch`](/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#L%27instruction_switch)
-- [`try/catch/throw`](/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#L%27instruction_try...catch)
+- [`switch`](/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#linstruction_switch)
+- [`try/catch/throw`](/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#linstruction_try...catch)
 - [Objets `Error`](/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#utiliser_les_objets_error)
 
 ## [Itération et boucles](/fr/docs/Web/JavaScript/Guide/Loops_and_iteration)
 
-- [`for`](/fr/docs/Web/JavaScript/Guide/Loops_and_iteration#L%27instruction_for)
-- [`while`](/fr/docs/Web/JavaScript/Guide/Loops_and_iteration#L%27instruction_while)
-- [`do...while`](/fr/docs/Web/JavaScript/Guide/Loops_and_iteration#L%27instruction_do...while)
-- [`break`](/fr/docs/Web/JavaScript/Guide/Loops_and_iteration#L%27instruction_break)/[continue](/fr/docs/Web/JavaScript/Guide/Loops_and_iteration#L%27instruction_continue)
-- [`for..in`](/fr/docs/Web/JavaScript/Guide/Loops_and_iteration#L%27instruction_for...in)
+- [`for`](/fr/docs/Web/JavaScript/Guide/Loops_and_iteration#linstruction_for)
+- [`while`](/fr/docs/Web/JavaScript/Guide/Loops_and_iteration#linstruction_while)
+- [`do...while`](/fr/docs/Web/JavaScript/Guide/Loops_and_iteration#linstruction_do...while)
+- [`break`](/fr/docs/Web/JavaScript/Guide/Loops_and_iteration#linstruction_break)/[continue](/fr/docs/Web/JavaScript/Guide/Loops_and_iteration#linstruction_continue)
+- [`for..in`](/fr/docs/Web/JavaScript/Guide/Loops_and_iteration#linstruction_for...in)
 - [`for..of`](/fr/docs/Web/JavaScript/Guide/Loops_and_iteration#l'instruction_for...of)
 
 ## [Fonctions](/fr/docs/Web/JavaScript/Guide/Functions)
@@ -56,7 +56,7 @@ Ce guide est divisé en plusieurs chapitres :
 
 ## [Expressions et opérateurs](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators)
 
-- [Affectation](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#Op.C3.A9rateurs_d%27affectation) et [comparaisons](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#op.c3.a9rateurs_de_comparaison)
+- [Affectation](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#Opérateurs_daffectation) et [comparaisons](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#op.c3.a9rateurs_de_comparaison)
 - [Opérateurs arithmétiques](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#op.c3.a9rateurs_arithm.c3.a9tiques)
 - [Opérateurs binaires](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#op.c3.a9rateurs_binaires) et [logiques](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#op.c3.a9rateurs_logiques)
 - [Opérateur conditionnel](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#op.c3.a9rateur_conditionnel_ternaire)

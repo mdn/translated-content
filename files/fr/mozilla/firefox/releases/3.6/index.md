@@ -137,7 +137,7 @@ Si vous êtes un développeur d'extensions, vous devriez commencer par lire [Upd
 - [Tri des données locales avec l'API Storage](</fr/docs/Storage#Collation_(sorting)>)
   - : Gecko 1.9.2 ajoute plusieurs nouvelles méthodes pour offrir une collecte (tri) optimisée des résulats en utilisant les techniques de localisation.
 - [Énumération des propriétés d'une requête](/fr/docs/mozIStorageStatementParams#Enumeration_of_properties)
-  - : Vous pouvez maintenant utiliser [`for...in`](/fr/docs/Guide_JavaScript_1.5/Instructions_de_manipulation_d%27objets#L%27instruction_for...in) pour énumérer toutes les propriétés d'une déclaration.
+  - : Vous pouvez maintenant utiliser [`for...in`](/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#linstruction_for...in) pour énumérer toutes les propriétés d'une déclaration.
 - mozIStorageStatement's getParameterIndex a changé de comportement entre Firefox 3.5 et 3.6.
   - : Voir [bug 528166](https://bugzilla.mozilla.org/show_bug.cgi?id=528166) pour plus de détails.
 - Liaison asynchrone de plusieurs ensembles de paramètres pour exécution d'une requête.
