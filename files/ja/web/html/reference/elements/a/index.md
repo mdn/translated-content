@@ -65,7 +65,7 @@ li {
 
     > [!NOTE]
     >
-    > - `download` は[同一オリジンの URL](/ja/docs/Web/Security/Same-origin_policy) と、 `blob:`、 `data:` の各スキームでのみ動作します。
+    > - `download` は[同一オリジンの URL](/ja/docs/Web/Security/Defenses/Same-origin_policy) と、 `blob:`、 `data:` の各スキームでのみ動作します。
     > - ブラウザーがダウンロードをどのように扱うかは、ブラウザー、ユーザーの設定、その他の要因によって異なります。ダウンロードを開始する前にユーザーにプロンプトが表示されたり、ファイルが自動的に保存されたり、外部のアプリケーションまたはブラウザー自体で自動的に開いたりすることがあります。
     > - `Content-Disposition` ヘッダーが `download` とは異なる情報を持っていた場合、動作結果は様々です。
     >   - ヘッダーが `filename` を指定した場合、そちらが `download` 属性で指定されたファイル名より優先されます。
