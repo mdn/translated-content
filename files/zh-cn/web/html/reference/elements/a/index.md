@@ -40,7 +40,7 @@ li {
 
     > [!NOTE]
     >
-    > - `download` 只在[同源 URL](/zh-CN/docs/Web/Security/Same-origin_policy) 或 `blob:`、`data:` 协议起作用。
+    > - `download` 只在[同源 URL](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy) 或 `blob:`、`data:` 协议起作用。
     > - 浏览器对待下载的方式因浏览器、用户设置和其他因素而异。在下载开始之前，可能会提示用户，或者自动保存文件，或者自动打开。自动打开要么在外部应用程序中，要么在浏览器本身中。
     > - 如果 `Content-Disposition` 标头的信息与 `download` 属性不同，产生的行为可能不同：
     >   - 如果文件头指定了一个 `filename`，它将优先于 `download` 属性中指定的文件名。

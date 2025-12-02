@@ -3,7 +3,7 @@ title: 伺服端網站程式設計
 slug: Learn_web_development/Extensions/Server-side
 ---
 
-**_動態網站_**–**_伺服端網站程式設計_**是一連串有關如何建立動態網站的模組：動態網站可以針對 HTTP 請求，發送客製化的資訊。這些模組將介紹伺服端網站程式設計：還有以初學者的角度，來教你怎麼使用 Django (Python) 與 Express (Node.js/JavaScript) 來架設基本的動態網路程式。
+**_動態網站_**——**伺服端網站程式設計**是一連串有關如何建立動態網站的模組：動態網站可以針對 HTTP 請求，發送客製化的資訊。這些模組將介紹伺服端網站程式設計：還有以初學者的角度，來教你怎麼使用 Django (Python) 與 Express (Node.js/JavaScript) 來架設基本的動態網路程式。
 
 大多數主流網站會使用伺服端技術，以根據需要呈現動態資料。例如說，來想想亞馬遜（Amazon）上架多少商品、還有臉書（Facebook）貼了多少動態。如果都用靜態頁面來呈現這些內容，開發就會毫無效率可言。因此，我們會使用靜態技術（[HTML](/zh-TW/docs/Learn_web_development/Core/Structuring_content)、[CSS](/zh-TW/docs/Learn_web_development/Core/Styling_basics)、[JavaScript](/zh-TW/docs/Learn_web_development/Core/Scripting)）來顯示靜態模板；並在需要時，動態更新模板內的資料。一如你在逛亞馬遜時，看著五花八門的產品一般。
 

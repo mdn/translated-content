@@ -43,4 +43,4 @@ console.log(el.integrity); // Affiche : "sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K
 ## Voir aussi
 
 - La propriété {{DOMxRef("HTMLLinkElement.integrity")}}
-- [Intégrité des sous-ressources](/fr/docs/Web/Security/Subresource_Integrity)
+- [Intégrité des sous-ressources](/fr/docs/Web/Security/Defenses/Subresource_Integrity)

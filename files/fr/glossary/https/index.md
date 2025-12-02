@@ -11,7 +11,7 @@ l10n:
 
 - [HTTPS](https://fr.wikipedia.org/wiki/HTTPS) sur Wikipédia
 - [Guide communautaire Moving to HTTPS <sup>(angl.)</sup>](https://movingtohttps.com/)
-- [Contextes sécurisés](/fr/docs/Web/Security/Secure_Contexts)
+- [Contextes sécurisés](/fr/docs/Web/Security/Defenses/Secure_Contexts)
 - Termes associés du glossaire&nbsp;:
   - {{Glossary("HTTP")}}
   - {{Glossary("TLS")}}

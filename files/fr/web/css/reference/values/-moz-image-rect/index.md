@@ -1,54 +1,48 @@
 ---
 title: -moz-image-rect
 slug: Web/CSS/Reference/Values/-moz-image-rect
-original_slug: Web/CSS/-moz-image-rect
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{Non-standard_Header}}{{Deprecated_Header}}
 
-La propriété **`-moz-image-rect`** permet d'utiliser une seule partie d'une image pour un arrière-plan (contrairement à [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image)). On peut ainsi utiliser une image qui regroupe plusieurs _sprites_ à différentes fins, ce qui permet de diminuer le nombre de transfert réseau.
+La valeur [CSS](/fr/docs/Web/CSS) **`-moz-image-rect`** pour {{CSSxRef("background-image")}} permet d'utiliser une portion d'une image plus grande comme arrière-plan.
 
 ## Syntaxe
 
 ```css
--moz-image-rect(url(), top, right, bottom, left);
+-moz-image-rect(url("my-url"), top, right, bottom, left);
 ```
 
 ### Valeurs
 
 - {{CSSxRef("url_value", "&lt;url&gt;")}}
-  - : L'URI de l'image dont on veut obtenir une portion.
+  - : L'URI de l'image à partir de laquelle extraire la sous-image.
 - `top`
-  - : La coordonnée du bord haut de l'image, définie comme un entier ([`<integer>`](/fr/docs/Web/CSS/Reference/Values/integer)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)) à partir du coin supérieur gauche.
+  - : Le bord supérieur, défini comme un entier ({{CSSxRef("&lt;integer&gt;")}}) ou un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}), de la sous-image dans l'image définie.
 - `right`
-  - : La coordonnée du bord droit de l'image, définie comme un entier ([`<integer>`](/fr/docs/Web/CSS/Reference/Values/integer)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)) à partir du coin supérieur gauche.
+  - : Le bord droit, défini comme un entier ({{CSSxRef("&lt;integer&gt;")}}) ou un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}), de la sous-image dans l'image définie.
 - `bottom`
-  - : La coordonnée du bord inférieur de l'image, définie comme un entier ([`<integer>`](/fr/docs/Web/CSS/Reference/Values/integer)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)) à partir du coin supérieur gauche.
+  - : Le bord inférieur, défini comme un entier ({{CSSxRef("&lt;integer&gt;")}}) ou un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}), de la sous-image dans l'image définie.
 - `left`
-  - : La coordonnée du bord gauche de l'image, définie comme un entier ([`<integer>`](/fr/docs/Web/CSS/Reference/Values/integer)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)) à partir du coin supérieur gauche.
+  - : Le bord gauche, défini comme un entier ({{CSSxRef("&lt;integer&gt;")}}) ou un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}), de la sous-image dans l'image définie.
 
 ## Description
 
-Cette propriété fonctionne de façon analogue à [`-moz-image-region`](/fr/docs/Web/CSS/Reference/Properties/clip) qui peut être utilisée pour déterminer la partie d'une image utilisée pour [`list-style-image`](/fr/docs/Web/CSS/Reference/Properties/list-style-image) qui met en forme les puces d'une liste. Grâce à `-moz-image-rect`, on peut avoir le même fonctionnement pour n'importe quel arrière-plan CSS.
+Cette propriété vous permet, par exemple, d'utiliser différentes parties d'une même image plus grande comme arrière-plans dans différentes parties de votre contenu.
 
-La syntaxe de cette propriété est similaire à la fonction [`rect()`](/fr/docs/Web/CSS/Reference/Values/shape#syntaxe) qui génère une valeur de type [`<shape>`](/fr/docs/Web/CSS/Reference/Values/shape). Les quatre valeurs indiquées font chacune référence au coin supérieur gauche de l'image.
+La syntaxe du rectangle est similaire à la fonction [`rect()`](/fr/docs/Web/CSS/Reference/Values/shape#syntaxe) qui génère un type CSS {{CSSxRef("&lt;shape&gt;")}}. Les quatre valeurs sont relatives au coin supérieur gauche de l'image.
 
 ## Exemples
 
-Dans cet exemple, on charge une image qu'on découpe en quatre zones pour dessiner le logo Firefox dans quatre éléments [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div). Lorsqu'on clique sur le conteneur, cela fait tourner les images entre les blocs.
-
-### HTML
-
-```html
-<div id="container" onclick="rotate()">
-  <div id="box1" style="left:0px; top:0px;">En haut à gauche</div>
-  <div id="box2" style="left:133px; top:0px;">En haut à droite</div>
-  <div id="box3" style="left:0px; top:136px;">En bas à gauche</div>
-  <div id="box4" style="left:133px; top:136px;">En bas à droite</div>
-</div>
-```
+Cet exemple charge une image et l'utilise en quatre segments pour dessiner le logo Firefox dans quatre blocs {{HTMLElement("div")}}. Un clic sur leur conteneur fait tourner les quatre segments en permutant les valeurs de la propriété {{CSSxRef("background-image")}} entre les quatre blocs {{HTMLElement("div")}}.
 
 ### CSS
+
+Le CSS définit un style de conteneur, puis les styles des quatre boîtes qui composent l'image complète.
+
+Le conteneur ressemble à ceci&nbsp;:
 
 ```css
 #container {
@@ -61,68 +55,107 @@ Dans cet exemple, on charge une image qu'on découpe en quatre zones pour dessin
   text-shadow: white 0px 0px 6px;
   text-align: center;
 }
+```
 
+Ensuite, les quatre boîtes définissant les segments de l'image sont définies. Regardons-les une par une.
+
+```css
 #box1 {
-  background-image: -moz-image-rect(url(firefox.png), 0%, 50%, 50%, 0%);
+  background-image: -moz-image-rect(url("firefox.png"), 0%, 50%, 50%, 0%);
   width: 133px;
   height: 136px;
-  position: absolute;
-}
-
-#box2 {
-  background-image: -moz-image-rect(url(firefox.png), 0%, 100%, 50%, 50%);
-  width: 133px;
-  height: 136px;
-  position: absolute;
-}
-
-#box3 {
-  background-image: -moz-image-rect(url(firefox.png), 50%, 50%, 100%, 0%);
-  width: 133px;
-  height: 136px;
-  position: absolute;
-}
-
-#box4 {
-  background-image: -moz-image-rect(url(firefox.png), 50%, 100%, 100%, 50%);
-  width: 133px;
-  height: 136px;
+  left: 0px;
+  top: 0px;
   position: absolute;
 }
 ```
 
+Il s'agit du coin supérieur gauche de l'image. Il définit un rectangle contenant le quart supérieur gauche de l'image dans le fichier `firefox.jpg`.
+
+```css
+#box2 {
+  background-image: -moz-image-rect(url("firefox.png"), 0%, 100%, 50%, 50%);
+  width: 133px;
+  height: 136px;
+  left: 133px;
+  top: 0px;
+  position: absolute;
+}
+```
+
+Cela définit le coin supérieur droit de l'image.
+
+Les autres coins suivent un schéma similaire&nbsp;:
+
+```css
+#box3 {
+  background-image: -moz-image-rect(url("firefox.png"), 50%, 50%, 100%, 0%);
+  width: 133px;
+  height: 136px;
+  left: 0px;
+  top: 136px;
+  position: absolute;
+}
+#box4 {
+  background-image: -moz-image-rect(url("firefox.png"), 50%, 100%, 100%, 50%);
+  width: 133px;
+  height: 136px;
+  left: 133px;
+  top: 136px;
+  position: absolute;
+}
+```
+
+### HTML
+
+On inclut un conteneur avec quatre boîtes&nbsp;:
+
+```html
+<div id="container">
+  <div id="box1">Coin supérieur gauche</div>
+  <div id="box2">Coin supérieur droit</div>
+  <div id="box3">Coin inférieur gauche</div>
+  <div id="box4">Coin inférieur droit</div>
+</div>
+```
+
+Cela place les quatre segments de notre image dans une grille de deux par deux. Ces quatre segments sont tous contenus dans un bloc {{HTMLElement("div")}} plus grand dont le but principal est de recevoir les événements de clic et de les transmettre à notre code JavaScript.
+
 ### JavaScript
+
+Ce code gère l'événement de clic lorsque le conteneur reçoit un clic de souris.
 
 ```js
 function rotate() {
-  var prevStyle = window
+  let prevStyle = window
     .getComputedStyle(document.getElementById("box4"), null)
     .getPropertyValue("background-image");
 
-  // Récupérer le style du dernier élément, puis faire tourner les images
-
-  for (var i = 1; i <= 4; i++) {
-    var curId = "box" + i;
+  // Maintenant que nous avons sauvegardé la dernière, on commence la rotation
+  for (let i = 1; i <= 4; i++) {
+    const curId = `box${i}`;
 
     // Décaler les images d'arrière-plan
-    var curStyle = window
+    const curStyle = window
       .getComputedStyle(document.getElementById(curId), null)
       .getPropertyValue("background-image");
     document.getElementById(curId).style.backgroundImage = prevStyle;
     prevStyle = curStyle;
   }
 }
+
+document.getElementById("container").addEventListener("click", rotate);
 ```
 
-Dans ce script, on utilise la méthode [`window.getComputedStyle()`](/fr/docs/Web/API/Window/getComputedStyle) afin de récupérer le style de chaque élément et on le décale à l'élément suivant. On notera qu'avant de commencer ce «&nbsp;défilement&nbsp;», on sauvegarde une version du style de la dernière boîte. En copiant simplement les valeurs de [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image) d'un élément à l'autre lors du clic, on obtient l'effet souhaité.
+Cela utilise {{DOMxRef("window.getComputedStyle()")}} pour obtenir le style de chaque élément, en le décalant vers l'élément suivant. Remarquez qu'avant de commencer, il sauvegarde une copie du style de la dernière boîte puisqu'il sera écrasé par le style du troisième élément. En copiant les valeurs de la propriété {{CSSxRef("background-image")}} d'un élément à l'autre à chaque clic de souris, on obtient l'effet souhaité.
 
-### Résultat
+### Aperçu visuel
 
-{{EmbedLiveSample("","400","400")}}
+{{EmbedLiveSample("Exemples", 400, 400)}}
 
-## Specifications
+## Spécifications
 
-Cette fonction ne fait partie d'aucun standard.
+Ne fait partie d'aucun standard.
 
 ## Compatibilité des navigateurs
 
@@ -130,5 +163,5 @@ Cette fonction ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- [Les extensions spécifiques à Mozilla pour CSS extensions](/fr/docs/Web/CSS/Reference/Mozilla_extensions)
-- [Le module de spécification CSS sur les arrière-plans et bordures](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders)
+- [Les extensions CSS Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions)
+- Le module [des arrière-plans et bordures CSS](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders)
