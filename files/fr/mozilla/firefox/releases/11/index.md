@@ -47,7 +47,7 @@ Firefox 11, basé sur Gecko 11.0, est sorti le 13 mars 2012. Cet article fournit
 
 ### IndexedDB
 
-- Le support de [IDBFactory.cmp()](/fr/docs/IndexedDB/IDBFactory#cmp%28%29) a été ajouté.
+- Le support de [IDBFactory.cmp()](</fr/docs/IndexedDB/IDBFactory#cmp()>) a été ajouté.
 - Une [clé IndexedDB](/fr/docs/Web/API/IndexedDB_API/Basic_Terminology#section_6) peut également être de l'un des types suivants : Date, Arrays et Float (et pas seulement String et Integer).
 
 ### Réseau

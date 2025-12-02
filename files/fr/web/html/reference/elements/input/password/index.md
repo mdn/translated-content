@@ -112,7 +112,7 @@ L'attribut `placeholder` est une chaîne de caractères fournissant une courte i
 Si le contenu du contrôle respecte une directionnalité donnée ([LTR](/fr/docs/Glossary/LTR) ou [RTL](/fr/docs/Glossary/RTL)) et que le texte indicatif doit être présenté dans l'autre sens, il est possible d'utiliser l'algorithme de formatage bidirectionnel Unicode — voir [Comment utiliser les contrôles Unicode pour le texte bidirectionnel (en anglais)](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus de détails.
 
 > [!NOTE]
-> On évitera, tant que faire se peut, d'utiliser l'attribut `placeholder`, car il n'est pas sémantiquement très utile pour expliquer le formulaire et car il peut causer certains problèmes avec le contenu. Voir [Utilisation de libellés](/fr/docs/Web/HTML/Reference/Elements/input#utilisation_de_libell%c3%a9s) pour plus d'informations.
+> On évitera, tant que faire se peut, d'utiliser l'attribut `placeholder`, car il n'est pas sémantiquement très utile pour expliquer le formulaire et car il peut causer certains problèmes avec le contenu. Voir [Utilisation de libellés](/fr/docs/Web/HTML/Reference/Elements/input#utilisation_de_libellés) pour plus d'informations.
 
 ### `readonly`
 
