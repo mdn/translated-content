@@ -2826,7 +2826,7 @@
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Propriétés_globales/undefined	/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/À_propos	/fr/docs/Web/JavaScript
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/À_propos/Conventions_d'écriture	/fr/docs/Web/JavaScript
-/fr/docs/JavaScript/Same_origin_policy_for_JavaScript	/fr/docs/Web/Security/Same-origin_policy
+/fr/docs/JavaScript/Same_origin_policy_for_JavaScript	/fr/docs/Web/Security/Defenses/Same-origin_policy
 /fr/docs/JavaScript/Shells	/fr/docs/Web/JavaScript/Reference/JavaScript_technologies_overview
 /fr/docs/JavaScript/Structures_de_données	/fr/docs/Web/JavaScript/Guide/Data_structures
 /fr/docs/JavaScript/Tableaux_typés	/fr/docs/Web/JavaScript/Guide/Typed_arrays
@@ -6519,7 +6519,7 @@
 /fr/docs/Web/HTTP/Overview	/fr/docs/Web/HTTP/Guides/Overview
 /fr/docs/Web/HTTP/Permissions_Policy	/fr/docs/Web/HTTP/Guides/Permissions_Policy
 /fr/docs/Web/HTTP/Protocol_upgrade_mechanism	/fr/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism
-/fr/docs/Web/HTTP/Public_Key_Pinning	/fr/docs/Web/Security/Certificate_Transparency
+/fr/docs/Web/HTTP/Public_Key_Pinning	/fr/docs/Web/Security/Defenses/Certificate_Transparency
 /fr/docs/Web/HTTP/Range_requests	/fr/docs/Web/HTTP/Guides/Range_requests
 /fr/docs/Web/HTTP/Redirections	/fr/docs/Web/HTTP/Guides/Redirections
 /fr/docs/Web/HTTP/Requêtes_conditionnelles	/fr/docs/Web/HTTP/Guides/Conditional_requests
@@ -7643,7 +7643,7 @@
 /fr/docs/Web/JavaScript/Reference/Valeurs_par_défaut_des_arguments	/fr/docs/Web/JavaScript/Reference/Functions/Default_parameters
 /fr/docs/Web/JavaScript/Reference/Virgules_finales	/fr/docs/Web/JavaScript/Reference/Trailing_commas
 /fr/docs/Web/JavaScript/Reference/fonctions_fléchées	/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions
-/fr/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/fr/docs/Web/Security/Same-origin_policy
+/fr/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/fr/docs/Web/Security/Defenses/Same-origin_policy
 /fr/docs/Web/JavaScript/Shells	/fr/docs/Web/JavaScript/Reference/JavaScript_technologies_overview
 /fr/docs/Web/JavaScript/Structures_de_données	/fr/docs/Web/JavaScript/Guide/Data_structures
 /fr/docs/Web/JavaScript/Tableaux_typés	/fr/docs/Web/JavaScript/Guide/Typed_arrays
@@ -7866,9 +7866,14 @@
 /fr/docs/Web/SVG/Tutoriel_SVG	/fr/docs/Web/SVG/Tutorials/SVG_from_scratch
 /fr/docs/Web/SVG/Tutoriel_SVG/Introduction	/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Introduction
 /fr/docs/Web/SVG/Tutoriel_SVG/Premiers_pas	/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started
-/fr/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content	/fr/docs/Web/Security/Mixed_content
-/fr/docs/Web/Security/Public_Key_Pinning	/fr/docs/Web/Security/Certificate_Transparency
-/fr/docs/Web/Security/Same_origin_policy_for_JavaScript	/fr/docs/Web/Security/Same-origin_policy
+/fr/docs/Web/Security/Certificate_Transparency	/fr/docs/Web/Security/Defenses/Certificate_Transparency
+/fr/docs/Web/Security/Mixed_content	/fr/docs/Web/Security/Defenses/Mixed_content
+/fr/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content	/fr/docs/Web/Security/Defenses/Mixed_content
+/fr/docs/Web/Security/Public_Key_Pinning	/fr/docs/Web/Security/Defenses/Certificate_Transparency
+/fr/docs/Web/Security/Same-origin_policy	/fr/docs/Web/Security/Defenses/Same-origin_policy
+/fr/docs/Web/Security/Same_origin_policy_for_JavaScript	/fr/docs/Web/Security/Defenses/Same-origin_policy
+/fr/docs/Web/Security/Secure_Contexts	/fr/docs/Web/Security/Defenses/Secure_Contexts
+/fr/docs/Web/Security/Subresource_Integrity	/fr/docs/Web/Security/Defenses/Subresource_Integrity
 /fr/docs/Web/Tutorials	/fr/docs/MDN/Tutorials
 /fr/docs/Web/Tutoriels	/fr/docs/MDN/Tutorials
 /fr/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs	/fr/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs

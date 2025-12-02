@@ -15,8 +15,7 @@ a[title] {
 }
 
 /* <a> 要素で href が "https://example.org" と一致するもの */
-a[href="https://example.org"]
-{
+a[href="https://example.org"] {
   color: green;
 }
 
@@ -111,8 +110,7 @@ a[href$=".org"] {
 }
 
 /* "https://" で始まり ".org" で終わるリンク */
-a[href^="https://"][href$=".org"]
-{
+a[href^="https://"][href$=".org"] {
   color: green;
 }
 ```
