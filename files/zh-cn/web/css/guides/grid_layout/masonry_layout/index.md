@@ -9,11 +9,11 @@ l10n:
 
 [CSS 网格布局](/zh-CN/docs/Web/CSS/Guides/Grid_layout)的第 3 版规范包含了 `masonry` 值，用于 {{cssxref("grid-template-columns")}} 和 {{cssxref("grid-template-rows")}}。本指南详细介绍了瀑布流布局是什么，以及如何使用它。
 
-瀑布流布局是一种布局方式，其中一个轴使用标准的的严格网格布局（通常是列），另一个轴则采用瀑布流布局。在瀑布流轴上，后续行的元素会向上对齐，完全填补较短元素留下的空隙，而非坚守严格网格导致空隙残留。
+瀑布流布局是一种布局方式，其中一个轴使用标准的的严格网格布局（通常是列），另一个轴则采用瀑布流布局。在瀑布流轴上，后续行的元素会向上对齐，完全填补较短元素留下的空隙，而非严格按网格排列导致空隙残留。
 
 ## 创建瀑布流布局
 
-要创建最常用的瀑布流布局，需要将列设置为网格轴，将行设置为瀑布流轴，通过 `grid-template-columns` 和 `grid-template-rows`属性进行定义。此时容器的子元素会像常规网格布局的自动排列那样，逐行依次布局。
+要创建最常用的瀑布流布局，需要将列设置为网格轴，将行设置为瀑布流轴，通过 `grid-template-columns` 和 `grid-template-rows` 属性进行定义。此时容器的子元素会像常规网格布局的自动排列那样，逐行依次布局。
 
 当元素换行时，会遵循瀑布流算法进行排列。元素将被加载到剩余空间最多的列中，最终形成一个紧密排列的布局，而不会存在固定的行轨道。
 
@@ -150,7 +150,7 @@ for (let i = 0; i < items.length; i++) {
   <div class="item"></div>
   <div class="item"></div>
   <div class="item"></div>
-  <div class="item positioned">positioned.</div>
+  <div class="item positioned">已定位。</div>
   <div class="item"></div>
   <div class="item"></div>
   <div class="item"></div>
