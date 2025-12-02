@@ -146,7 +146,6 @@ const myIterator = Iterator.from({
 - {{jsxref("Object/constructor", "Iterator.prototype.constructor")}}
   - : 인스턴스 객체를 생성한 생성자 함수입니다. `Iterator` 인스턴스의 경우, 초기 값은 {{jsxref("Iterator/Iterator", "Iterator")}} 생성자입니다.
 - `Iterator.prototype[Symbol.toStringTag]`
-
   - : [`[Symbol.toStringTag]`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 속성의 초기 값은 문자열 `"Iterator"`입니다. 이 속성은 {{jsxref("Object.prototype.toString()")}}에서 사용됩니다.
 
     > [!NOTE]
