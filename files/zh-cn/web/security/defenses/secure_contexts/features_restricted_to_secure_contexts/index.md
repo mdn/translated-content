@@ -1,9 +1,9 @@
 ---
 title: 仅限于安全上下文的特性
-slug: Web/Security/Secure_Contexts/features_restricted_to_secure_contexts
+slug: Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts
 ---
 
-本参考列出了仅在安全上下文中可用的 web 平台的特性，有关定义和更多详情，请参阅[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)。
+本参考列出了仅在安全上下文中可用的 web 平台的特性，有关定义和更多详情，请参阅[安全上下文](/zh-CN/docs/Web/Security/Defenses/Secure_Contexts)。
 
 ## 当前仅在安全上下文中可用的特性
 
@@ -39,5 +39,5 @@ slug: Web/Security/Secure_Contexts/features_restricted_to_secure_contexts
 
 ## 参见
 
-- [安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)
+- [安全上下文](/zh-CN/docs/Web/Security/Defenses/Secure_Contexts)
 - [在 Chrome Platform Status 上搜索“secure context”](https://chromestatus.com/features#secure%20context)
