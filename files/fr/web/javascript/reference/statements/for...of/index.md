@@ -294,7 +294,7 @@ for (let i of iterable) {
 }
 ```
 
-Cette boucle parcourt les valeurs définies comme itérables par [l'objet itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_.c2.ab_it.c3.a9rable_.c2.bb) et dans ce cas ce sont les éléments du tableau `3`, `5`, `7` et pas les propriétés de l'objet.
+Cette boucle parcourt les valeurs définies comme itérables par [l'objet itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_.c2.ab_itérable_.c2.bb) et dans ce cas ce sont les éléments du tableau `3`, `5`, `7` et pas les propriétés de l'objet.
 
 ### Attention à ne pas réutiliser les générateurs
 

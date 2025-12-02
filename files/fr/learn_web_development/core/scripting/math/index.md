@@ -305,7 +305,7 @@ x *= y; // x contient maintenant la valeur 12
 ```
 
 > [!NOTE]
-> Il y a des tas d'[autres opérateurs d'affectation disponibles](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#opérateurs_d'affectation), mais ceux‑ci sont les plus courants, à apprendre dès maintenant.
+> Il y a des tas d'[autres opérateurs d'affectation disponibles](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#opérateurs_daffectation), mais ceux‑ci sont les plus courants, à apprendre dès maintenant.
 
 ## Apprentissage actif&nbsp;: dimensionner la boîte d'un canevas
 
