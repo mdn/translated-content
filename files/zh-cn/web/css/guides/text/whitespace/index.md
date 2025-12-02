@@ -17,7 +17,7 @@ CSS 还定义了[_分段符_](https://drafts.csswg.org/css-text-4/#segment-break
 
 ## HTML 如何处理空白字符？
 
-“HTML 会忽略空白字符”是一个普遍存在的误解，事实并非如此：**HTML 会完整保留源代码中所有空白文本内容**。作为标记语言，HTML 会生成一个 {{glossary("DOM")}}，其中文本内容的所有空白字符均被完整保留，可通过 DOM API（如 {{domxref("Node.textContent")}}）进行检索和操作。若 HTML 从 DOM 中移除空白字符，那么作为基于 DOM 工作的下游渲染引擎，CSS 将无法通过 {{cssxref("white-space|)}} 属性保留这些空白。
+“HTML 会忽略空白字符”是一个普遍存在的误解，事实并非如此：**HTML 会完整保留源代码中所有空白文本内容**。作为标记语言，HTML 会生成一个 {{glossary("DOM")}}，其中文本内容的所有空白字符均被完整保留，可通过 DOM API（如 {{domxref("Node.textContent")}}）进行检索和操作。若 HTML 从 DOM 中移除空白字符，那么作为基于 DOM 工作的下游渲染引擎，CSS 将无法通过 {{cssxref("white-space")}} 属性保留这些空白。
 
 > [!NOTE]
 > 需要明确的是，我们讨论的是 *HTML 标签之间*的空白字符，这些空白字符在 DOM 中会转化为文本节点。而任何位于标签内部的空白字符（即位于尖括号之间但不属于属性值的空白）仅是 HTML 语法的一部分，不会出现在 DOM 中。
