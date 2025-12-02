@@ -13,7 +13,7 @@ Ce guide est divisé en plusieurs chapitres :
 
 ## [Introduction](/fr/docs/Web/JavaScript/Guide/Introduction)
 
-- [À propos de ce guide](/fr/docs/Web/JavaScript/Guide/Introduction#o.c3.b9_trouver_des_informations_concernant_javascript)
+- [À propos de ce guide](/fr/docs/Web/JavaScript/Guide/Introduction#où_trouver_des_informations_concernant_javascript)
 - [À propos de JavaScript](/fr/docs/Web/JavaScript/Guide/Introduction#quest-ce_que_javascript)
 - [JavaScript et Java](/fr/docs/Web/JavaScript/Guide/Introduction#javascript_and_java)
 - [ECMAScript](/fr/docs/Web/JavaScript/Guide/Introduction#javascript_and_the_ecmascript_specification)
