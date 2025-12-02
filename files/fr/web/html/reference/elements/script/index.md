@@ -91,7 +91,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     Voir {{DOMxRef("HTMLScriptElement.fetchPriority")}} pour plus d'informations.
 
 - `integrity`
-  - : Cet attribut contient des métadonnées que l'agent utilisateur peut vérifier afin de contrôler qu'une ressource téléchargée n'a pas été modifiée de façon frauduleuse. Pour plus d'informations, consulter [la page relative à l'intégrité des sous-ressources](/fr/docs/Web/Security/Subresource_Integrity).
+  - : Cet attribut contient des métadonnées que l'agent utilisateur peut vérifier afin de contrôler qu'une ressource téléchargée n'a pas été modifiée de façon frauduleuse. Pour plus d'informations, consulter [la page relative à l'intégrité des sous-ressources](/fr/docs/Web/Security/Defenses/Subresource_Integrity).
 - `nomodule`
   - : Cet attribut booléen indique que le script ne doit pas être exécuté dans les navigateurs qui prennent en charge les [modules EcmaScript](/fr/docs/Web/JavaScript/Guide/Modules). Il permet ainsi de fournir un script de repli aux anciens navigateurs qui ne gèrent pas le code JavaScript modulaire.
 - `nonce`

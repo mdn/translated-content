@@ -142,7 +142,7 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Refer
     - `no-referrer-when-downgrade` signifie qu'aucun en-tête `Referer` ne sera envoyé lorsqu'on navigue vers une origine qui n'utilise pas [TLS](/fr/docs/Glossary/TLS) ([HTTPS](/fr/docs/Glossary/HTTPS)). C'est le comportement par défaut de l'agent utilisateur.
     - `origin` signifie que le référent sera l'origine de la page (c'est-à-dire son [schéma](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), son [hôte](/fr/docs/Glossary/Host) et le [port](/fr/docs/Glossary/Port) utilisé).
     - `origin-when-cross-origin` signifie que les navigations vers d'autres origines seront limitées aux schémas, hôtes et ports. Les navigations sur la même origine incluront le chemin explicite du référent.
-    - `same-origin` un référent sera envoyé pour [les mêmes origines](/fr/docs/Web/Security/Same-origin_policy) mais les requêtes multi-origines ne contiendront pas d'informations de référent.
+    - `same-origin` un référent sera envoyé pour [les mêmes origines](/fr/docs/Web/Security/Defenses/Same-origin_policy) mais les requêtes multi-origines ne contiendront pas d'informations de référent.
     - `strict-origin` seule l'origine du document est envoyée comme référent lorsque le protocole de sécurité est le même (HTTPS→HTTPS). L'origine n'est pas envoyée lorsque la destination est moins sécurisée (HTTPS→HTTP).
     - `strict-origin-when-cross-origin` : l'URL complète est envoyée pour les requêtes de même origine, seule l'origine est envoyée lorsque le protocole de sécurité est le même (HTTPS→HTTPS) et aucun en-tête n'est envoyé pour une destination moins sécurisée (HTTPS→HTTP).
     - `unsafe-url` signifie que le référent inclura l'origine et le chemin (mais pas le fragment, le mot de passe ou le nom utilisateur). **Cette valeur n'est pas sûre**, car elle peut entraîner des fuites d'origine ou de chemin provenant de ressources sécurisées avec TLS vers des origines non sécurisées.
@@ -208,7 +208,7 @@ En utilisant l'élément [`HTMLIFrameElement`](/fr/docs/Web/API/HTMLIFrameElemen
 
 Depuis l'_iframe_, un script peut obtenir une référence à la fenêtre parente via la propriété [`window.parent`](/fr/docs/Web/API/Window/parent).
 
-Les scripts qui tentent d'accéder au contenu de l'_iframe_ doivent respecter [les règles de même origine](/fr/docs/Web/Security/Same-origin_policy) et ne peuvent pas accéder à la plupart des propriétés d'une autre fenêtre s'ils ont été chargés depuis un domaine différent. Cela s'applique également aux scripts d'un _iframe_ qui souhaitent accéder au contexte englobant. On peut toutefois communiquer entre différents domaines grâce à la méthode [`Window.postMessage()`](/fr/docs/Web/API/Window/postMessage).
+Les scripts qui tentent d'accéder au contenu de l'_iframe_ doivent respecter [les règles de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy) et ne peuvent pas accéder à la plupart des propriétés d'une autre fenêtre s'ils ont été chargés depuis un domaine différent. Cela s'applique également aux scripts d'un _iframe_ qui souhaitent accéder au contexte englobant. On peut toutefois communiquer entre différents domaines grâce à la méthode [`Window.postMessage()`](/fr/docs/Web/API/Window/postMessage).
 
 ## Positionnement et redimensionnement
 
