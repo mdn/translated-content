@@ -49,7 +49,7 @@ Le corps de la réponse, si la requête réussit, contient alors la ressource de
 
 Le diagramme ci-dessous montre l'architecture d'un serveur web basique pour un _site statique_ (un site statique est un site qui renvoie du contenu codé en dur, c'est-à-dire le contenu d'un fichier, quand une ressource donnée est demandée). Quand un·e utilisateur·ice veut naviguer sur une page, le navigateur envoie une requête HTTP «&nbsp;GET&nbsp;» spécifiant son URL.
 
-Le serveur récupère le document demandé du système de fichiers et retourne une réponse HTTP contenant le document et le [statut de la réponse](/fr/docs/Web/HTTP/Reference/Status#réponses_de_succès) (habituellement, 200 OK). Si le fichier ne peut pas être recupéré pour une raison x ou y, le statut d'erreur est retourné (voir [réponses d'erreur client](/fr/docs/Web/HTTP/Status#réponses_derreur_côté_client) et [réponse d'erreur serveur](/fr/docs/Web/HTTP/Status#réponses_derreur_côté_serveur)).
+Le serveur récupère le document demandé du système de fichiers et retourne une réponse HTTP contenant le document et le [statut de la réponse](/fr/docs/Web/HTTP/Reference/Status#réponses_de_succès) (habituellement, 200 OK). Si le fichier ne peut pas être recupéré pour une raison x ou y, le statut d'erreur est retourné (voir [réponses d'erreur client](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client) et [réponse d'erreur serveur](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_serveur)).
 
 ![A simplified diagram of a static web server.](basic_static_app_server.png)
 
