@@ -51,7 +51,7 @@ Ce guide est divisé en plusieurs chapitres :
 - [Appeler des fonctions](/fr/docs/Web/JavaScript/Guide/Functions#appeler_des_fonctions)
 - [Portées des fonctions](/fr/docs/Web/JavaScript/Guide/Functions#port.c3.a9e_d'une_fonction)
 - [Fermetures (_closures_)](</fr/docs/Web/JavaScript/Guide/Functions#fermetures_(closures)>)
-- [Arguments](/fr/docs/Web/JavaScript/Guide/Functions#utiliser_l'objet_arguments) et [paramètres](/fr/docs/Web/JavaScript/Guide/Functions#param.c3.a8tres_des_fonctions)
+- [Arguments](/fr/docs/Web/JavaScript/Guide/Functions#utiliser_lobjet_arguments) et [paramètres](/fr/docs/Web/JavaScript/Guide/Functions#param.c3.a8tres_des_fonctions)
 - [Fonctions fléchées](/fr/docs/Web/JavaScript/Guide/Functions#fonctions_fl.c3.a9ch.c3.a9es)
 
 ## [Expressions et opérateurs](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators)
@@ -64,9 +64,9 @@ Ce guide est divisé en plusieurs chapitres :
 ## [Nombres et dates](/fr/docs/Web/JavaScript/Guide/Numbers_and_strings)
 
 - [Littéraux numériques](/fr/docs/Web/JavaScript/Guide/Numbers_and_strings#nombres)
-- [Objet `Number`](/fr/docs/Web/JavaScript/Guide/Numbers_and_dates#l'objet_number)
-- [Objet `Math`](/fr/docs/Web/JavaScript/Guide/Numbers_and_dates#l'objet_math)
-- [Objet `Date`](/fr/docs/Web/JavaScript/Guide/Numbers_and_dates#l'objet_date)
+- [Objet `Number`](/fr/docs/Web/JavaScript/Guide/Numbers_and_dates#lobjet_number)
+- [Objet `Math`](/fr/docs/Web/JavaScript/Guide/Numbers_and_dates#lobjet_math)
+- [Objet `Date`](/fr/docs/Web/JavaScript/Guide/Numbers_and_dates#lobjet_date)
 
 ## [Formatage du texte](/fr/docs/Web/JavaScript/Guide/Numbers_and_strings)
 
