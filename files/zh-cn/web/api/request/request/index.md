@@ -33,7 +33,7 @@ new Request(input, options)
     - `cache`: 请求中想要使用的 [cache mode](/zh-CN/docs/Web/API/Request/cache)
     - `redirect`: 对重定向处理的模式： `follow`, `error`, or `manual`。在 Chrome 中，Chrome 47 之前的版本默认值为 `manual`，自 Chrome 47 起，默认值为 `follow`。
     - `referrer`: 一个指定了`no-referrer`, `client`, 或一个 URL 的 {{domxref("USVString")}} 。默认值是`about:client`。
-    - `integrity`: 包括请求的 [subresource integrity](/zh-CN/docs/Web/Security/Subresource_Integrity) 值 (e.g., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
+    - `integrity`: 包括请求的 [subresource integrity](/zh-CN/docs/Web/Security/Defenses/Subresource_Integrity) 值 (e.g., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
 
 ## Errors
 

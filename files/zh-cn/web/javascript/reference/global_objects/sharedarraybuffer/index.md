@@ -30,7 +30,7 @@ worker.postMessage(sab);
 
 由于[幽灵漏洞](https://zh.wikipedia.org/wiki/幽灵漏洞)，共享内存和高精度定时器在 2018 年 1 月 5 日开始被[禁用](https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/)。在 2020 年，一种新的、安全的方法已经被标准化，以重新启用共享内存。
 
-作为基本要求，你的文档需要处于一个[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)中。
+作为基本要求，你的文档需要处于一个[安全上下文](/zh-CN/docs/Web/Security/Defenses/Secure_Contexts)中。
 
 对于顶级文档，需要设置两个标头来实现你网站的跨源隔离：
 

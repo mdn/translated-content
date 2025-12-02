@@ -7,7 +7,7 @@ slug: Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection
 
 {{PWASidebar}}
 
-Service worker 以及 PWA，都[被限制在安全上下文中](/zh-CN/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)。安全上下文包括使用 `https://` 协议提供的 SSL 上下文和本地提供的资源，包括使用 `http://` 协议提供的 `127.0.0.1` 和 `localhost` URL。在本节中，我们将讨论如何在本地和远程用安全连接提供应用程序。
+Service worker 以及 PWA，都[被限制在安全上下文中](/zh-CN/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts)。安全上下文包括使用 `https://` 协议提供的 SSL 上下文和本地提供的资源，包括使用 `http://` 协议提供的 `127.0.0.1` 和 `localhost` URL。在本节中，我们将讨论如何在本地和远程用安全连接提供应用程序。
 
 在上一节中，我们使用 HTML 和 CSS 创建了我们的经期追踪应用程序的壳。在这一节中，我们将在浏览器中打开经期跟踪器的静态内容，查看从本地启动的开发环境中的内容，以及在远程安全服务器上查看内容。
 
@@ -22,7 +22,7 @@ Service worker 以及 PWA，都[被限制在安全上下文中](/zh-CN/docs/Web/
 我们正在使用 `file://` 协议查看我们的页面。这适用于我们代码库的当前状态，并且在我们[添加 JavaScript 功能](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality)之后将继续适用。然而，就像许多其他 API 一样，清单文件和 service worker（都是 PWA 的要求）需要安全连接。PWA 需要通过基于 `https` 的 web 服务器或使用 `localhost`、`127.0.0.1`（无论是否带有端口号）的本地开发环境来提供。如果我们使用 `files://` 协议查看我们完成的应用，我们的[清单文件](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file)将被忽略，任何我们添加的 [service worker](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers) 都将失败。
 
 > [!NOTE]
-> 通过 `https` 提供你的应用不仅对 PWA 有益，而且对所有网站有益，因为它确保了在你的 web 服务器和用户的浏览器之间传输的信息是端到端加密的。许多 [Web API 需要安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)。即使你没有创建可安装的 PWA，当你向任何 web 应用添加特性时，你都可能会遇到需要安全上下文的情况。
+> 通过 `https` 提供你的应用不仅对 PWA 有益，而且对所有网站有益，因为它确保了在你的 web 服务器和用户的浏览器之间传输的信息是端到端加密的。许多 [Web API 需要安全上下文](/zh-CN/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts)。即使你没有创建可安装的 PWA，当你向任何 web 应用添加特性时，你都可能会遇到需要安全上下文的情况。
 
 我们需要一个本地开发环境来完成教程。[使 PWA 可安装](/zh-CN/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)的一部分是安全服务器。文件需要在 web 上通过安全连接提供，以获取 PWA 提供的好处，并将我们的应用程序作为 PWA 分发。
 
