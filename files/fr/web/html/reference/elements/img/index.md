@@ -68,7 +68,7 @@ Si une erreur se produit lors du chargement ou du rendu de l'image et qu'un gest
 
 Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
-- [`alt`](/fr/docs/Web/API/HTMLImageElement/alt#notes_d'utilisation)
+- [`alt`](/fr/docs/Web/API/HTMLImageElement/alt#notes_dutilisation)
   - : Définit une description textuelle alternative pour l'image.
 
     > [!NOTE]

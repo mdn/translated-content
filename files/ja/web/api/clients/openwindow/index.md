@@ -32,11 +32,11 @@ URL がサービスワーカーと同じオリジンからのものである場�
 ### 例外
 
 - `InvalidAccessError` {{domxref("DOMException")}}
-  - : アプリの元のウィンドウに[一時的な活性化](/ja/docs/Web/Security/User_activation)のウィンドウが存在しない場合、この例外でプロミスは拒否されます。
+  - : アプリの元のウィンドウに[一時的な活性化](/ja/docs/Web/Security/Defenses/User_activation)のウィンドウが存在しない場合、この例外でプロミスは拒否されます。
 
 ## セキュリティ要件
 
-- アプリの元のウィンドウのうち、少なくとも 1 つは[一時的な活性化](/ja/docs/Web/Security/User_activation)が行われている必要があります。
+- アプリの元のウィンドウのうち、少なくとも 1 つは[一時的な活性化](/ja/docs/Web/Security/Defenses/User_activation)が行われている必要があります。
 
 ## 例
 

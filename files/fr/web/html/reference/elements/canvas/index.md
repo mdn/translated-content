@@ -1,49 +1,118 @@
 ---
 title: "<canvas> : l'élément de canevas graphique"
 slug: Web/HTML/Reference/Elements/canvas
-original_slug: Web/HTML/Element/canvas
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-On utilise l'élément **HTML `<canvas>`** avec l'API [canvas](/fr/docs/Web/API/Canvas_API), ou l'API [WebGL](/fr/docs/Web/API/WebGL_API) pour dessiner des graphiques et des animations.
+Utilisez l'élément HTML **`<canvas>`** avec soit l'[API de script Canvas](/fr/docs/Web/API/Canvas_API), soit l'[API WebGL](/fr/docs/Web/API/WebGL_API) pour dessiner des graphiques et des animations.
+
+## Attributs
+
+Comme les autres éléments HTML, cet élément possède les [attributs globaux](/fr/docs/Web/HTML/Reference/Global_attributes).
+
+- **`height`**
+  - : La hauteur de l'espace pour l'élément, exprimée en pixels CSS. La valeur par défaut est 150.
+- **`moz-opaque`** {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Cet attribut permet d'indiquer s'il y aura de la transparence ou non. Si le canevas sait qu'il n'y aura pas de transparence, les performances de rendu pourront être améliorées. Cet attribut est uniquement pris en charge par les navigateurs Mozilla, il est préférable d'utiliser la méthode standard {{DOMxRef("HTMLCanvasElement.getContext()", "canvas.getContext('2d', { alpha: false })")}} à la place.
+- **`width`**
+  - : La largeur de l'espace pour l'élément, exprimée en pixels CSS. La valeur par défaut est 300.
+
+## Notes d'utilisation
+
+### Contenu alternatif
+
+Vous devez fournir un contenu alternatif à l'intérieur du bloc `<canvas>`. Ce contenu sera affiché à la fois par les navigateurs plus anciens qui ne prennent pas en charge cet élément et par les navigateurs où JavaScript est désactivé.
+
+### Balise `</canvas>` obligatoire
+
+À la différence de {{HTMLElement("img")}}, l'élément `<canvas>` **doit** être fermé avec la balise fermante (`</canvas>`).
+
+### Dimensionnement du canevas : CSS ou HTML
+
+On peut modifier la taille affichée du canevas grâce à une feuille de style. L'image est mise à l'échelle lors du rendu pour correspondre à la taille indiquée par le style. Toutefois, cela pourra distordre l'image lors du rendu final.
+
+Mieux vaut utiliser les attributs explicites `width` et `height` de l'élément en HTML (ou via du code JavaScript).
+
+### Taille maximale d'un canevas
+
+La taille maximale exacte d'un élément `<canvas>` dépend du navigateur et de l'environnement. Dans la plupart des cas, les dimensions maximales dépassent 10 000 × 10 000 pixels, mais certains appareils — notamment iOS — limitent la taille du canevas à 4 096 × 4 096 pixels. Voir [limitations de taille du canevas selon les navigateurs et les appareils <sup>(angl.)</sup>](https://jhildenbiddle.github.io/canvas-size/#/?id=test-results).
+
+> [!NOTE]
+> Si on dépasse les dimensions ou l'aire maximale, le canevas deviendra inutilisable et les commandes de dessin ne fonctionneront pas.
+
+## Accessibilité
+
+### Contenu alternatif
+
+L'élément `<canvas>` pris isolément n'est qu'une image matricielle et ne fournit aucune information sur les objets dessinés. Le contenu d'un canevas n'est pas exposé aux outils d'accessibilité comme le serait du HTML sémantique. De façon générale, évitez d'utiliser `<canvas>` pour produire un site ou une application accessibles. Les guides suivants peuvent aider à en améliorer l'accessibilité.
+
+- [Cas d'utilisation pour l'accessibilité de `<canvas>` <sup>(angl.)</sup>](https://www.w3.org/WAI/PF/HTML/wiki/Canvas_Accessibility_Use_Cases)
+- [Problèmes d'accessibilité de l'élément `<canvas>` <sup>(angl.)</sup>](https://www.w3.org/html/wg/wiki/AddedElementCanvas)
+- [L'accessibilité de l'élément `<canvas>` dans Firefox 13 — Steve Faulkner <sup>(angl.)</sup>](https://www.tpgi.com/html5-canvas-accessibility-in-firefox-13/)
+- [Bonnes pratiques pour concevoir des éléments `<canvas>` interactifs <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/scripting.html#best-practices)
+
+## Exemples
+
+### HTML
+
+Le fragment de code suivant ajoute un élément `canvas` au document. Un texte alternatif est fourni au cas où le navigateur ne peut pas afficher ce canevas. Un texte alternatif ou bien des éléments internes permettront de rendre le canevas plus accessible.
+
+```html
+<canvas width="300" height="100">
+  Désolé, votre navigateur ne prend pas en charge &lt;canvas&gt;.
+</canvas>
+```
+
+### JavaScript
+
+On utilise également ce fragment de code JavaScript avec la méthode {{DOMxRef("HTMLCanvasElement.getContext()")}} afin d'obtenir le contexte de dessin puis on dessine sur le canevas.
+
+```js
+var canvas = document.querySelector("canvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "green";
+// Ajoute un rectangle en (10, 10) de taille 100×100 pixels
+ctx.fillRect(10, 10, 100, 100);
+```
+
+### Résultat
+
+{{EmbedLiveSample('Exemples', 600, 150)}}
+
+## Résumé technique
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
           >Catégories de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
         >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
         >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#embedded_content"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_intégré"
           >contenu intégré</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"
-          >contenu tangible</a
-        >.
+        >, contenu tangible.
       </td>
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
         Transparent mais sans aucun descendant étant du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#interactive_content"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#interactive_content"
           >contenu interactif</a
         >
-        à l'exception des éléments
-        <a href="/fr/docs/Web/HTML/Element/a"><code>&#x3C;a></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Button"><code>&#x3C;button></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a>
+        à l'exception des éléments {{HTMLElement("a")}},
+        {{HTMLElement("button")}}, {{HTMLElement("input")}}
         dont l'attribut
-        <a href="/fr/docs/Web/HTML/Element/Input#attr-type"
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-type"
           ><code>type</code></a
         >
         vaut <code>checkbox</code>, <code>radio</code>, ou <code>button</code>.
@@ -60,7 +129,7 @@ On utilise l'élément **HTML `<canvas>`** avec l'API [canvas](/fr/docs/Web/API/
       <th scope="row">Parents autorisés</th>
       <td>
         Tout contenu acceptant du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
         >.
       </td>
@@ -68,8 +137,8 @@ On utilise l'élément **HTML `<canvas>`** avec l'API [canvas](/fr/docs/Web/API/
     <tr>
       <th scope="row">Rôle ARIA implicite</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >Pas de rôle correspondant</a
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
+          >Pas de rôle correspondant <sup>(angl.)</sup></a
         >
       </td>
     </tr>
@@ -79,94 +148,10 @@ On utilise l'élément **HTML `<canvas>`** avec l'API [canvas](/fr/docs/Web/API/
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>
-        <a href="/fr/docs/Web/API/HTMLCanvasElement"
-          ><code>HTMLCanvasElement</code></a
-        >
-      </td>
+      <td>{{DOMxRef("HTMLCanvasElement")}}</td>
     </tr>
   </tbody>
 </table>
-
-## Attributs
-
-Comme les autres éléments HTML, cet élément possède les [attributs globaux](/fr/docs/Web/HTML/Reference/Global_attributes).
-
-- **`height`**
-  - : La hauteur de l'espace pour l'élément, exprimée en pixels CSS. La valeur par défaut est 150.
-- **`moz-opaque`** {{non-standard_inline}}{{deprecated_inline}}
-  - : Cet attribut permet d'indiquer s'il y aura de la transparence ou non. Si le canevas sait qu'il n'y aura pas de transparence, les performances de rendu pourront être améliorées. Cet attribut est uniquement pris en charge par les navigateurs Mozilla, il est préférable d'utiliser la méthode standard [`canvas.getContext('2d', { alpha: false})`](/fr/docs/Web/API/HTMLCanvasElement/getContext) à la place.
-- **`width`**
-  - : La largeur de l'espace pour l'élément, exprimée en pixels CSS. La valeur par défaut est 300.
-
-## Notes d'utilisation
-
-### Contenu alternatif
-
-Il est fortement recommandé de fournir un contenu alternatif au contenu du bloc `<canvas>`. Ce contenu pourra être utilisé par les navigateurs plus anciens qui ne supportent pas l'élément `<canvas>` et ceux pour lesquels JavaScript est désactivé. Fournir un texte de repli ou un sous-DOM utile aide à [rendre le canevas plus accessible](/fr/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility).
-
-### Balise `</canvas>` obligatoire
-
-À la différence de [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img), l'élément [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) **doit** être fermé avec la balise fermante `</canvas>`.
-
-### Dimensionnement du canevas : CSS ou HTML
-
-On peut modifier la taille affichée du canevas grâce à une feuille de style. L'image est mise à l'échelle lors du rendu pour correspondre à la taille indiquée par le style. Toutefois, cela pourra distordre l'image lors du rendu final.
-
-Mieux vaut utiliser les attributs explicites `width` et `height` de l'élément en HTML (ou via du code JavaScript).
-
-### Taille maximale d'un canevas
-
-La taille maximale d'un élément `<canvas>` dépend du navigateur utilisé. Voici un tableau de mesures provenant de tests et diverses sources (ex. [Stack Overflow](https://stackoverflow.com/questions/6081483/maximum-size-of-a-canvas-element)):
-
-| Navigateur | Hauteur maximale | Largeur maximale | Aire maximale                             |
-| ---------- | ---------------- | ---------------- | ----------------------------------------- |
-| Chrome     | 32 767 pixels    | 32 767 pixels    | 268 435 456 pixels (soit 16 384 x 16 384) |
-| Firefox    | 32 767 pixels    | 32 767 pixels    | 472 907 776 pixels (soit 22 528 x 20 992) |
-| Safari     | 32 767 pixels    | 32 767 pixels    | 268 435 456 pixels (soit 16 384 x 16 384) |
-| IE         | 8 192 pixels     | 8 192 pixels     | ?                                         |
-
-> [!NOTE]
-> Si on dépasse les dimensions ou l'aire maximale, le canevas deviendra inutilisable et les commandes de dessin ne fonctionneront pas.
-
-## Exemples
-
-### HTML
-
-Le fragment de code suivant ajoute un élément `canvas` au document. Un texte alternatif est fourni au cas où le navigateur ne peut pas afficher ce canevas. Un texte alternatif ou bien des éléments internes permettront de rendre le canevas plus accessible.
-
-```html
-<canvas width="300" height="100">
-  Désolé, votre navigateur ne prend pas en charge &lt;canvas&gt;.
-</canvas>
-```
-
-### JavaScript
-
-On utilise également ce fragment de code JavaScript avec la méthode [`HTMLCanvasElement.getContext()`](/fr/docs/Web/API/HTMLCanvasElement/getContext) afin d'obtenir le contexte de dessin puis on dessine sur le canevas.
-
-```js
-var canvas = document.querySelector("canvas");
-var ctx = canvas.getContext("2d");
-ctx.fillStyle = "green";
-ctx.fillRect(10, 10, 100, 100);
-```
-
-### Résultat
-
-{{EmbedLiveSample('Exemples')}}
-
-## Accessibilité
-
-### Contenu alternatif
-
-Seul, l'élément `<canvas>` est une image matricielle et ne fournit pas d'informations sur les objets dessinés. Le contenu d'un canevas n'est pas accessible aux outils d'assistance qui se basent sur le contenu sémantique du document HTML. De façon générale, on évitera de se servir uniquement de `<canvas>` pour produire un document accessible. Voici quelques pages et articles pour aider à l'accessibilité avec les canevas :
-
-- [Les régions cliquables et l'accessibilité](/fr/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility)
-- [Cas d'utilisation pour l'accessibilité de `<canvas>`](https://www.w3.org/WAI/PF/HTML/wiki/Canvas_Accessibility_Use_Cases)
-- [Problèmes d'accessibilité de l'élément `<canvas>`](https://www.w3.org/html/wg/wiki/AddedElementCanvas)
-- [L'accessibilité de l'élément `<canvas>` dans Firefox 13, un article de Steve Faulkner (en anglais)](http://www.paciellogroup.com/blog/2012/06/html5-canvas-accessibility-in-firefox-13/)
-- [Les meilleures pratiques pour concevoir des éléments `<canvas>` interactifs](https://html.spec.whatwg.org/multipage/scripting.html#best-practices)
 
 ## Spécifications
 
@@ -178,7 +163,14 @@ Seul, l'élément `<canvas>` est une image matricielle et ne fournit pas d'infor
 
 ## Voir aussi
 
-- [Le portail MDN sur l'élément `<canvas>`](/fr/docs/Web/API/Canvas_API)
-- [Tutoriel `<canvas>`](/fr/docs/Web/API/Canvas_API/Tutorial)
-- [Anti-sèche `<canvas>`](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html)
-- [Introduction à `<canvas>` par Apple](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html) (en anglais)
+- [L'API Canvas](/fr/docs/Web/API/Canvas_API)
+- [Tutoriel Canvas](/fr/docs/Web/API/Canvas_API/Tutorial)
+- [L'API OffscreenCanvas](/fr/docs/Web/API/OffscreenCanvas)
+- [Anti‑sèche Canvas <sup>(angl.)</sup>](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html) (2009)
+- [Anti‑sèche Canvas (pdf) <sup>(angl.)</sup>](https://websitesetup.org/wp-content/uploads/2015/11/Infopgraphic-CanvasCheatSheet-Final2.pdf) (2015)
+- [Guide Safari HTML Canvas <sup>(angl.)</sup>](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html) sur Apple (2013)
+- [`CanvasRenderingContext2D` — contexte de dessin 2D pour un élément `<canvas>` <sup>(angl.)</sup>](https://developer.apple.com/documentation/webkitjs/canvasrenderingcontext2d) sur Apple.com
+- [L'API WebGL](/fr/docs/Web/API/WebGL_API)
+- L'élément HTML {{HTMLElement("img")}}
+- [SVG](/fr/docs/Web/SVG)
+- [Vidéo et audio HTML](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)

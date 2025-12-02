@@ -1016,7 +1016,7 @@
 /zh-CN/docs/JavaScript/Reference/default_parameters	/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters
 /zh-CN/docs/JavaScript/Reference/default_parameters-redirect-1	/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters
 /zh-CN/docs/JavaScript/Reference/rest_parameters	/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters
-/zh-CN/docs/JavaScript/Same_origin_policy_for_JavaScript	/zh-CN/docs/Web/Security/Same-origin_policy
+/zh-CN/docs/JavaScript/Same_origin_policy_for_JavaScript	/zh-CN/docs/Web/Security/Defenses/Same-origin_policy
 /zh-CN/docs/JavaScript/Strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode
 /zh-CN/docs/JavaScript/Strict_mode/Transitioning_to_strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode
 /zh-CN/docs/JavaScript/Typed_arrays	/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays
@@ -1029,7 +1029,7 @@
 /zh-CN/docs/JavaScript_1.5_核心指引	/zh-CN/docs/Web/JavaScript/Reference
 /zh-CN/docs/JavaScript_核心参考	/zh-CN/docs/Web/JavaScript/Reference
 /zh-CN/docs/JavaScript参考文档	/zh-CN/docs/Web/JavaScript/Reference
-/zh-CN/docs/JavaScript的同源策略	/zh-CN/docs/Web/Security/Same-origin_policy
+/zh-CN/docs/JavaScript的同源策略	/zh-CN/docs/Web/Security/Defenses/Same-origin_policy
 /zh-CN/docs/JavaScript语言资源	/zh-CN/docs/Web/JavaScript/Reference/JavaScript_technologies_overview
 /zh-CN/docs/Learn	/zh-CN/docs/Learn_web_development
 /zh-CN/docs/Learn/Accessibility	/zh-CN/docs/Learn_web_development/Core/Accessibility
@@ -1564,7 +1564,7 @@
 /zh-CN/docs/SVG/教程/Positions	/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Positions
 /zh-CN/docs/SVG/教程/引言	/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Introduction
 /zh-CN/docs/SVG_In_HTML_Introduction	/zh-CN/docs/Web/SVG/Guides/SVG_in_HTML
-/zh-CN/docs/Same_origin_policy_for_JavaScript	/zh-CN/docs/Web/Security/Same-origin_policy
+/zh-CN/docs/Same_origin_policy_for_JavaScript	/zh-CN/docs/Web/Security/Defenses/Same-origin_policy
 /zh-CN/docs/Security/CSP/Using_Content_Security_Policy	/zh-CN/docs/Web/HTTP/Guides/CSP
 /zh-CN/docs/Security/HTTP_Strict_Transport_Security	/zh-CN/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security
 /zh-CN/docs/Server-sent_events	/zh-CN/docs/Web/API/Server-sent_events
@@ -4130,7 +4130,7 @@
 /zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling	/zh-CN/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling
 /zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file	/zh-CN/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 /zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file	/zh-CN/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
-/zh-CN/docs/Web/HTTP/Public_Key_Pinning	/zh-CN/docs/Web/Security/Certificate_Transparency
+/zh-CN/docs/Web/HTTP/Public_Key_Pinning	/zh-CN/docs/Web/Security/Defenses/Certificate_Transparency
 /zh-CN/docs/Web/HTTP/Range_requests	/zh-CN/docs/Web/HTTP/Guides/Range_requests
 /zh-CN/docs/Web/HTTP/Redirections	/zh-CN/docs/Web/HTTP/Guides/Redirections
 /zh-CN/docs/Web/HTTP/Resources_and_URIs	/zh-CN/docs/Web/HTTP/Guides/MIME_types
@@ -4466,7 +4466,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/rest_parameters	/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters
 /zh-CN/docs/Web/JavaScript/Reference/template_strings	/zh-CN/docs/Web/JavaScript/Reference/Template_literals
 /zh-CN/docs/Web/JavaScript/Reference/关于	/zh-CN/docs/Web/JavaScript/Reference
-/zh-CN/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/zh-CN/docs/Web/Security/Same-origin_policy
+/zh-CN/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/zh-CN/docs/Web/Security/Defenses/Same-origin_policy
 /zh-CN/docs/Web/JavaScript/Shells	/zh-CN/docs/Web/JavaScript/Reference/JavaScript_technologies_overview
 /zh-CN/docs/Web/JavaScript/Strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode
 /zh-CN/docs/Web/JavaScript/Strict_mode/Transitioning_to_strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode
@@ -4777,13 +4777,19 @@
 /zh-CN/docs/Web/SVG/Tutorial/Tools_for_SVG	/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG
 /zh-CN/docs/Web/SVG/Tutorial/渐变	/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Gradients
 /zh-CN/docs/Web/Security/CSP/Using_Content_Security_Policy	/zh-CN/docs/Web/HTTP/Guides/CSP
+/zh-CN/docs/Web/Security/Certificate_Transparency	/zh-CN/docs/Web/Security/Defenses/Certificate_Transparency
+/zh-CN/docs/Web/Security/Same-origin_policy	/zh-CN/docs/Web/Security/Defenses/Same-origin_policy
+/zh-CN/docs/Web/Security/Secure_Contexts	/zh-CN/docs/Web/Security/Defenses/Secure_Contexts
+/zh-CN/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts	/zh-CN/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts
 /zh-CN/docs/Web/Security/Securing_your_site	/zh-CN/docs/Web/Security/Practical_implementation_guides
 /zh-CN/docs/Web/Security/Securing_your_site/Configuring_server_MIME_types	/zh-CN/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types
 /zh-CN/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/zh-CN/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
+/zh-CN/docs/Web/Security/Subresource_Integrity	/zh-CN/docs/Web/Security/Defenses/Subresource_Integrity
+/zh-CN/docs/Web/Security/Transport_Layer_Security	/zh-CN/docs/Web/Security/Defenses/Transport_Layer_Security
 /zh-CN/docs/Web/Security/Types_of_attacks	/zh-CN/docs/Web/Security/Attacks
 /zh-CN/docs/Web/Security/Weak_Signature_Algorithm	/zh-CN/docs/Glossary/Hash_function
-/zh-CN/docs/Web/Security/传输层安全协议	/zh-CN/docs/Web/Security/Transport_Layer_Security
-/zh-CN/docs/Web/Security/子资源完整性	/zh-CN/docs/Web/Security/Subresource_Integrity
+/zh-CN/docs/Web/Security/传输层安全协议	/zh-CN/docs/Web/Security/Defenses/Transport_Layer_Security
+/zh-CN/docs/Web/Security/子资源完整性	/zh-CN/docs/Web/Security/Defenses/Subresource_Integrity
 /zh-CN/docs/Web/Text_fragments	/zh-CN/docs/Web/URI/Reference/Fragment/Text_fragments
 /zh-CN/docs/Web/Tutorials	/zh-CN/docs/MDN/Tutorials
 /zh-CN/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs	/zh-CN/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs

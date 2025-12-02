@@ -36,7 +36,7 @@ requestStorageAccessFor(requestedOrigin)
   - : 現在の {{domxref("Document")}} がまだアクティブ化されたいない場合に発生します。
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if:
-    - 文書のウィンドウが[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)ではない場合。
+    - 文書のウィンドウが[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)ではない場合。
     - この文書が最上位の文書でない場合。
     - この文書のオリジンが `null` であった場合。
     - 指定された `requestedOrigin` が[不透明](https://html.spec.whatwg.org/multipage/browsers.html#concept-origin-opaque)であった場合。

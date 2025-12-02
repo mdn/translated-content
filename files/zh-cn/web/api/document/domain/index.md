@@ -5,7 +5,7 @@ slug: Web/API/Document/domain
 
 {{ApiRef}}{{Deprecated_Header}}
 
-{{domxref("Document")}} 接口的 **`domain`** 属性获取/设置当前文档的原始域部分，常用于[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)。
+{{domxref("Document")}} 接口的 **`domain`** 属性获取/设置当前文档的原始域部分，常用于[同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)。
 
 如果成功设置此属性，则原始端口的端口部分也将设置为 `null`.
 
@@ -71,4 +71,4 @@ Mozilla 会区分 `document.domain` 属性 **从没有被设定过值** 和 **�
 
 ## 参见
 
-- [Same origin policy for JavaScript](/zh-CN/docs/Web/Security/Same-origin_policy)
+- [Same origin policy for JavaScript](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)

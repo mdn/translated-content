@@ -8,7 +8,7 @@ slug: Glossary/SSL
 ## 参见
 
 - [传输层安全性协议](https://zh.wikipedia.org/wiki/传输层安全性协议)（维基百科）
-- [传输层安全协议（TLS）](/zh-CN/docs/Web/Security/Transport_Layer_Security)
+- [传输层安全协议（TLS）](/zh-CN/docs/Web/Security/Defenses/Transport_Layer_Security)
 - [术语表](/zh-CN/docs/Glossary)
   - {{Glossary("HTTPS")}}
   - {{Glossary("TLS")}}

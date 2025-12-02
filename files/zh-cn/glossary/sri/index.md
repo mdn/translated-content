@@ -9,4 +9,4 @@ l10n:
 
 ## 参见
 
-- [子资源完整性](/zh-CN/docs/Web/Security/Subresource_Integrity)
+- [子资源完整性](/zh-CN/docs/Web/Security/Defenses/Subresource_Integrity)

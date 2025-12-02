@@ -89,4 +89,4 @@ l10n:
 - {{Glossary("Transient activation", "一時的な有効化")}}
 - {{Glossary("Sticky activation", "粘着的な有効化")}}
 - {{domxref("UserActivation")}} API
-- [保護されたコンテキストに制限されている機能](/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
+- [保護されたコンテキストに制限されている機能](/ja/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts)

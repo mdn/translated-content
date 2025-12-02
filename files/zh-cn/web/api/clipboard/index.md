@@ -15,7 +15,7 @@ l10n:
 
 所有 Clipboard API 方法都是异步的；它们返回一个 {{jsxref("Promise")}} 对象，在剪贴板访问完成后被兑现。如果剪贴板访问被拒绝，promise 也会被拒绝。
 
-所有的方法也都需要[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)。使用 API 的其他要求在 API 概述主题的[安全考虑](/zh-CN/docs/Web/API/Clipboard_API#安全考虑)部分进行了讨论。
+所有的方法也都需要[安全上下文](/zh-CN/docs/Web/Security/Defenses/Secure_Contexts)。使用 API 的其他要求在 API 概述主题的[安全考虑](/zh-CN/docs/Web/API/Clipboard_API#安全考虑)部分进行了讨论。
 
 ## 方法
 

@@ -35,7 +35,7 @@ Referrer-Policy: unsafe-url
 - `origin-when-cross-origin`
   - : 对于同源的请求，会发送完整的 URL 作为引用地址，但是对于非同源请求仅发送文件的源。
 - `same-origin`
-  - : 对于[同源的请求](/zh-CN/docs/Web/Security/Same-origin_policy)会发送引用地址，但是对于非同源请求则不发送引用地址信息。
+  - : 对于[同源的请求](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)会发送引用地址，但是对于非同源请求则不发送引用地址信息。
 - `strict-origin`
   - : 在同等安全级别的情况下，发送文件的源作为引用地址 (HTTPS->HTTPS)，但是在降级的情况下不会发送 (HTTPS->HTTP)。
 - `strict-origin-when-cross-origin`（默认值）
@@ -130,5 +130,5 @@ Referrer-Policy: no-referrer, strict-origin-when-cross-origin
   - The `noreferrer` link relation on an a, area, or link element (`rel="noreferrer"`).
   - When using [Fetch](/zh-CN/docs/Web/API/Fetch_API): {{domxref("Request.referrerPolicy")}}
 
-- [同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)
+- [同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)
 - [Tighter Control Over Your Referrers – Mozilla Security Blog](https://blog.mozilla.org/security/2015/01/21/meta-referrer/)

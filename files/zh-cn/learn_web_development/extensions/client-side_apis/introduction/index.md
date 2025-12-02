@@ -265,7 +265,7 @@ audioElement.addEventListener("ended", () => {
 
 ### 它们在适当的地方有额外的安全机制
 
-Web API 特性受到与 JavaScript 和其他 Web 技术（例如[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)）相同的安全考虑，但是它们有时会有额外的安全机制。例如，一些更现代的 Web API 将只能在通过 HTTPS 提供的页面上工作，因为它们正在传输潜在的敏感数据（例如 [Service Worker](/zh-CN/docs/Web/API/Service_Worker_API) 和[推送](/zh-CN/docs/Web/API/Push_API)）。
+Web API 特性受到与 JavaScript 和其他 Web 技术（例如[同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)）相同的安全考虑，但是它们有时会有额外的安全机制。例如，一些更现代的 Web API 将只能在通过 HTTPS 提供的页面上工作，因为它们正在传输潜在的敏感数据（例如 [Service Worker](/zh-CN/docs/Web/API/Service_Worker_API) 和[推送](/zh-CN/docs/Web/API/Push_API)）。
 
 另外，在代码中调用某些 Web API 时会请求用户启用权限。例如，[Notification API](/zh-CN/docs/Web/API/Notifications_API) 使用弹出对话框请求权限：
 

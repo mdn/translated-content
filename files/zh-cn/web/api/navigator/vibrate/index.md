@@ -30,7 +30,7 @@ vibrate(pattern)
 
 ## 安全
 
-需要[粘性用户激活](/zh-CN/docs/Web/Security/User_activation)。用户必须与页面或 UI 元素进行交互才能使此特性发挥作用。
+需要[粘性用户激活](/zh-CN/docs/Web/Security/Defenses/User_activation)。用户必须与页面或 UI 元素进行交互才能使此特性发挥作用。
 
 ## 示例
 

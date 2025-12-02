@@ -385,7 +385,7 @@ removeChild.addEventListener("click", () => {
 
 ### Lire et modifier l'arbre
 
-Supposons que l'auteur·ice souhaite modifier l'en-tête du document dans [Qu'est-ce qu'un arbre DOM&nbsp;?](#qu'estce_quun_arbre_dom) et écrire deux paragraphes au lieu d'un seul. Le script suivant permet de le faire&nbsp;:
+Supposons que l'auteur·ice souhaite modifier l'en-tête du document dans [Qu'est-ce qu'un arbre DOM&nbsp;?](#questce_quun_arbre_dom) et écrire deux paragraphes au lieu d'un seul. Le script suivant permet de le faire&nbsp;:
 
 #### HTML
 

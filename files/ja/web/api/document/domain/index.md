@@ -8,7 +8,7 @@ l10n:
 
 {{ApiRef}} {{Deprecated_Header}}
 
-**`domain`** は {{domxref("Document")}} インターフェイスのプロパティは、[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)で使用される現在の文書の{{glossary("origin", "オリジン")}}のうち、ドメインの部分を取得または設定します。
+**`domain`** は {{domxref("Document")}} インターフェイスのプロパティは、[同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)で使用される現在の文書の{{glossary("origin", "オリジン")}}のうち、ドメインの部分を取得または設定します。
 
 ## 値
 
@@ -68,7 +68,7 @@ document.domain = document.domain;
 
 #### 非推奨
 
-`document.domain` セッターは非推奨です。これは[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)によって指定されたセキュリティ保護を損ない、ブラウザーにおけるオリジンモデルを複雑にし、相互運用性の問題やセキュリティバグを引き起こします。
+`document.domain` セッターは非推奨です。これは[同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)によって指定されたセキュリティ保護を損ない、ブラウザーにおけるオリジンモデルを複雑にし、相互運用性の問題やセキュリティバグを引き起こします。
 
 `document.domain` を設定しようとするのは危険です。すべてのサブドメインからページの DOM にフルアクセスすることができるようになり、意図したものではありません。また、元からポートの部品が除去されるので、これであなたのページは同じIPアドレスや同じホストの部品を持つ他のページから、異なるポートであってもアクセスすることができるようになります。
 
@@ -108,7 +108,7 @@ document.domain = document.domain;
 
 ## 関連情報
 
-- [同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)
+- [同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)
 - {{domxref("Location.hostname")}}
 - {{domxref("Location.host")}}
 - {{domxref("Window.origin")}}

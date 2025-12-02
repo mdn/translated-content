@@ -244,7 +244,7 @@
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的函數/isFinite_函數	/zh-TW/docs/Web/JavaScript/Guide/Functions
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的函數/isNaN_函數	/zh-TW/docs/Web/JavaScript/Guide/Functions
 /zh-TW/docs/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件	/zh-TW/docs/Web/JavaScript/Guide
-/zh-TW/docs/JavaScript/Same_origin_policy_for_JavaScript	/zh-TW/docs/Web/Security/Same-origin_policy
+/zh-TW/docs/JavaScript/Same_origin_policy_for_JavaScript	/zh-TW/docs/Web/Security/Defenses/Same-origin_policy
 /zh-TW/docs/JavaScript_technologies_overview	/zh-TW/docs/Web/JavaScript/Reference/JavaScript_technologies_overview
 /zh-TW/docs/JavaScript_technologies_overview-redirect-1	/zh-TW/docs/Web/JavaScript/Reference/JavaScript_technologies_overview
 /zh-TW/docs/JavaScript_typed_arrays	/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays
@@ -465,7 +465,7 @@
 /zh-TW/docs/SVG/Tutorial/填充与边框	/zh-TW/docs/Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes
 /zh-TW/docs/SVG/Tutorial/渐变	/zh-TW/docs/Web/SVG/Tutorials/SVG_from_scratch/Gradients
 /zh-TW/docs/SVG/教學	/zh-TW/docs/Web/SVG/Tutorials/SVG_from_scratch
-/zh-TW/docs/Security/MixedContent	/zh-TW/docs/Web/Security/Mixed_content
+/zh-TW/docs/Security/MixedContent	/zh-TW/docs/Web/Security/Defenses/Mixed_content
 /zh-TW/docs/Security/弱簽章演算法	/zh-TW/docs/Glossary/Hash_function
 /zh-TW/docs/Security/缺少安全性的密碼	/zh-TW/docs/Web/Security/Authentication/Passwords
 /zh-TW/docs/Tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
@@ -970,7 +970,7 @@
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件	/zh-TW/docs/Web/JavaScript/Guide
 /zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator
 /zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment	/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring
-/zh-TW/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/zh-TW/docs/Web/Security/Same-origin_policy
+/zh-TW/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/zh-TW/docs/Web/Security/Defenses/Same-origin_policy
 /zh-TW/docs/Web/JavaScript/Shells	/zh-TW/docs/Web/JavaScript/Reference/JavaScript_technologies_overview
 /zh-TW/docs/Web/JavaScript/Typed_arrays	/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays
 /zh-TW/docs/Web/JavaScript/資料結構	/zh-TW/docs/Web/JavaScript/Guide/Data_structures
@@ -998,6 +998,8 @@
 /zh-TW/docs/Web/SVG/Tutorial/渐变	/zh-TW/docs/Web/SVG/Tutorials/SVG_from_scratch/Gradients
 /zh-TW/docs/Web/SVG/教學	/zh-TW/docs/Web/SVG/Tutorials/SVG_from_scratch
 /zh-TW/docs/Web/Security/Insecure_passwords	/zh-TW/docs/Web/Security/Authentication/Passwords
+/zh-TW/docs/Web/Security/Mixed_content	/zh-TW/docs/Web/Security/Defenses/Mixed_content
+/zh-TW/docs/Web/Security/Same-origin_policy	/zh-TW/docs/Web/Security/Defenses/Same-origin_policy
 /zh-TW/docs/Web/Security/Weak_Signature_Algorithm	/zh-TW/docs/Glossary/Hash_function
 /zh-TW/docs/Web/Tutorials	/zh-TW/docs/MDN/Tutorials
 /zh-TW/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs	/zh-TW/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs

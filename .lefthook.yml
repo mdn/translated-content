@@ -3,12 +3,12 @@ pre-commit:
   jobs:
     - name: Format non-markdown
       glob: "*.{js,json,yml,yaml,css,html}"
-      run: yarn prettier --write --cache {staged_files}
+      run: npx prettier --write --cache {staged_files}
       stage_fixed: true
 
     - name: Autocorrect zh-cn
       glob: "{docs,files}/zh-cn/*.md"
-      run: yarn autocorrect --fix {staged_files}
+      run: npx autocorrect --fix {staged_files}
       stage_fixed: true
 
     - name: Format markdown
@@ -17,21 +17,21 @@ pre-commit:
         parallel: true
         jobs:
           - name: Markdownlint
-            run: yarn markdownlint-cli2 --fix {staged_files}
+            run: npx markdownlint-cli2 --fix {staged_files}
             stage_fixed: true
           - name: Check URLs per locale
-            run: yarn node ./scripts/check-url-locale.js --fix {staged_files}
+            run: node ./scripts/check-url-locale.js --fix {staged_files}
             stage_fixed: true
           - name: Prettier
-            run: yarn prettier --write --cache {staged_files}
+            run: npx prettier --write --cache {staged_files}
             stage_fixed: true
 
 post-merge:
   only:
     - ref: main
   commands:
-    yarn-install:
-      run: yarn install
+    npm-install:
+      run: npm install
 
 # For condensed output
 output:

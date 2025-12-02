@@ -11,7 +11,7 @@ l10n:
 
 ワーカーは `Worker("path/to/worker/script")` コンストラクターを呼び出すことで生成されます。
 
-ワーカーは同じ親ページと同一の[オリジン](/ja/docs/Web/Security/Same-origin_policy)内でホストされている限り、他の新しいワーカーを生成することができます。
+ワーカーは同じ親ページと同一の[オリジン](/ja/docs/Web/Security/Defenses/Same-origin_policy)内でホストされている限り、他の新しいワーカーを生成することができます。
 
 すべてのインターフェイスと関数がウェブワーカーで利用できるわけではないことにご注意ください。詳細については、[ウェブワーカーで利用可能な関数とクラス](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)を参照してください。
 

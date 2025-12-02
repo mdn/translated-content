@@ -1,14 +1,13 @@
 ---
 title: "<bdo> : l'élément de remplacement bidirectionnelle"
 slug: Web/HTML/Reference/Elements/bdo
-original_slug: Web/HTML/Element/bdo
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<bdo>`** force la direction courante du texte, de sorte que le texte à l'intérieur est affiché dans une direction différente.
 
-L'élément HTML **`<bdo>`** (pour élément de remplacement du texte bidirectionnel) est utilisé afin d'outrepasser la direction du texte. Cela permet d'imposer une direction donnée à un texte. L'orientation du texte est inversée mais pas celle des caractères.
-
-{{InteractiveExample("HTML Demo: &lt;bdo&gt;", "tabbed-standard")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;bdo&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <h1>Famous seaside songs</h1>
@@ -31,92 +30,21 @@ html {
   font-family: sans-serif;
 }
 
-/* stylelint-disable-next-line block-no-empty */
 bdo {
+  /* Add your styles here */
 }
 ```
 
 Les caractères du texte sont dessinés à partir du point de départ dans la direction donnée ; l'orientation des caractères individuels n'est pas affectée (les caractères ne sont donc pas dessinés vers l'arrière, par exemple).
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
-        >
-      </th>
-      <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"
-          >contenu tangible</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
-      <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >Contenu phrasé</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont
-        obligatoires.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
-      <td>
-        Tout élément acceptant du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >contenu phrasé</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >Pas de rôle correspondant</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>
-        <a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a
-        >. Auparavant et jusqu'à Gecko 1.9.2 (Firefox 4) inclus, Firefox
-        implémente l'interface
-        <a href="/fr/docs/Web/API/HTMLSpanElement"
-          ><code>HTMLSpanElement</code></a
-        >
-        pour cet élément.
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## Attributs
 
-Comme pour tous les éléments, on peut appliquer [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - **`dir`**
-  - : La direction du texte au sein de l'élément. Cet attribut peut valoir :
-    - `ltr` : pour un texte allant de gauche à droite (_left-to-right_).
-    - `rtl` : pour un texte allant de droite à gauche (_right-to-left_).
+  - : La direction du texte au sein de l'élément. Cet attribut peut valoir&nbsp;:
+    - `ltr`&nbsp;: pour un texte allant de gauche à droite (<i lang="en">left-to-right</i>).
+    - `rtl`&nbsp;: pour un texte allant de droite à gauche (<i lang="en">right-to-left</i>).
 
 ## Exemples
 
@@ -134,6 +62,72 @@ Comme pour tous les éléments, on peut appliquer [les attributs universels](/fr
 
 La spécification HTML 4 ne définissait pas d'évènement pour cet élément. Ils ont été ajoutés en XHTML. Ceci était probablement un oubli de la spécification HTML 4.
 
+## Résumé technique
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
+          >Contenu de flux</a
+        >,
+          >contenu phrasé</a
+        >, contenu tangible.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Contenu autorisé</th>
+      <td>        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
+          >Contenu phrasé</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omission de balises</th>
+      <td>
+        Aucune, la balise d'ouverture et la balise de fermeture sont
+        obligatoires.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Parents autorisés</th>
+      <td>
+        Tout élément acceptant du
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
+          >contenu phrasé</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <code
+          ><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
+            >generic</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôles ARIA autorisés</th>
+      <td>Tous les rôles sont autorisés.</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface DOM</th>
+      <td>
+        {{DOMxRef("HTMLElement")}}. Auparavant et jusqu'à Gecko 1.9.2 (Firefox 4) inclus, Firefox
+        implémente l'interface
+        {{DOMxRef("HTMLSpanElement")}} pour cet élément.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ## Spécifications
 
 {{Specifications}}
@@ -144,4 +138,4 @@ La spécification HTML 4 ne définissait pas d'évènement pour cet élément. I
 
 ## Voir aussi
 
-- Élément HTML associé : [`<bdi>`](/fr/docs/Web/HTML/Reference/Elements/bdi)
+- L'élément HTML {{HTMLElement("bdi")}}

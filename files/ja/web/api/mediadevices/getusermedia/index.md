@@ -72,7 +72,7 @@ getUserMedia(constraints)
 
 プライバシーに関わる重要な API として、 `getUserMedia()` の仕様は、ブラウザーが満たすべきプライバシーとセキュリティに関する広範な要件を規定しています。
 
-`getUserMedia()` は強力な機能ですが、[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ使用できます。保護されていないコンテキストでは `navigator.mediaDevices` は `undefined` で、 `getUserMedia()` にアクセスすることができなくなります。保護されたコンテキストとは、簡単に言うと、 HTTPS や `file:///` URL スキームを使って読み込まれたページ、あるいは `localhost` から読み込まれたページのことです。
+`getUserMedia()` は強力な機能ですが、[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)でのみ使用できます。保護されていないコンテキストでは `navigator.mediaDevices` は `undefined` で、 `getUserMedia()` にアクセスすることができなくなります。保護されたコンテキストとは、簡単に言うと、 HTTPS や `file:///` URL スキームを使って読み込まれたページ、あるいは `localhost` から読み込まれたページのことです。
 
 さらに、ユーザーの音声と動画の入力にアクセスするためには、常にユーザーの許可が必要です。有効なオリジンにおけるウィンドウの最上位の文書コンテキストのみが、 `getUserMedia()` を用いて権限をリクエストすることができます。ただし、最上位のコンテキストが該当する {{HTMLElement("iframe")}} に[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)を用いてその権限を明示的に許可した場合は例外です。そうでなければ、ユーザーは入力機器を使用する許可を求められることすらありません。
 
@@ -115,7 +115,7 @@ Permissions-Policy: microphone=(self "https://developer.mozilla.org")
 
 #### 暗号化ベースのセキュリティ
 
-`getUserMedia()` メソッドは[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)においてのみ利用可能です。保護されたコンテキストとは、ブラウザーが HTTPS/TLS を使って安全に読み込まれた文書を含んでいると合理的に確信できるもので、保護されていないコンテキストにさらされることは限定されています。文書が保護されたコンテキストで読み込まれなかった場合、 {{domxref("navigator.mediaDevices")}} プロパティは `undefined` となり、 `getUserMedia()` へのアクセスが不可能になります。
+`getUserMedia()` メソッドは[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)においてのみ利用可能です。保護されたコンテキストとは、ブラウザーが HTTPS/TLS を使って安全に読み込まれた文書を含んでいると合理的に確信できるもので、保護されていないコンテキストにさらされることは限定されています。文書が保護されたコンテキストで読み込まれなかった場合、 {{domxref("navigator.mediaDevices")}} プロパティは `undefined` となり、 `getUserMedia()` へのアクセスが不可能になります。
 
 この状態で `getUserMedia()` にアクセスしようとすると {{jsxref("TypeError")}} が発生します。
 

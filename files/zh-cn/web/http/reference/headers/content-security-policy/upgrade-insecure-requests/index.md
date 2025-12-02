@@ -71,4 +71,4 @@ That way, you still upgrade insecure requests on your secure site, but the only 
 - {{HTTPHeader("Upgrade-Insecure-Requests")}} header
 - {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}}) header
 - {{CSP("block-all-mixed-content")}}
-- [Mixed content](/zh-CN/docs/Web/Security/Mixed_content)
+- [Mixed content](/zh-CN/docs/Web/Security/Defenses/Mixed_content)

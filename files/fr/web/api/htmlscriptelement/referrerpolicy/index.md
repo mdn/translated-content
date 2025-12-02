@@ -23,7 +23,7 @@ Une chaîne de caractères&nbsp;; l'une des suivantes&nbsp;:
 - `origin-when-cross-origin`
   - : Envoie une URL complète lors d'une requête de même origine, mais envoie uniquement l'origine du document dans les autres cas.
 - `same-origin`
-  - : Un référent sera envoyé pour les [origines de même site](/fr/docs/Web/Security/Same-origin_policy), mais les requêtes inter-origines ne contiendront aucune information de référent.
+  - : Un référent sera envoyé pour les [origines de même site](/fr/docs/Web/Security/Defenses/Same-origin_policy), mais les requêtes inter-origines ne contiendront aucune information de référent.
 - `strict-origin`
   - : Envoie uniquement l'origine du document comme référent lorsque le niveau de sécurité du protocole reste le même (par exemple, HTTPS→HTTPS), mais ne l'envoie pas vers une destination moins sécurisée (par exemple, HTTPS→HTTP).
 - `strict-origin-when-cross-origin` (par défaut)

@@ -100,5 +100,5 @@ Firefox はバージョン 74 以降、古い TLS バージョンを使用して
 - [Mozilla SSL Configuration Generator](https://ssl-config.mozilla.org/) および [Cipherlist.eu](https://cipherlist.eu/) は、サーバーがサイトの安全を確保するための構成ファイルを生成するのに役立つかもしれません。
 - Mozilla Operations Security (OpSec) チームは、 [reference TLS configurations](https://wiki.mozilla.org/Security/Server_Side_TLS) のウィキページを保守しています。
 - [HTTP Observatory](/en-US/observatory/), [SSL Labs](https://www.ssllabs.com/ssltest/) はサイトの HTTP/TLS 構成がどれだけ安全かを確認するテストに役立ちます。
-- [保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)
+- [保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)
 - [Strict-Transport-Security](/ja/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) HTTP ヘッダー

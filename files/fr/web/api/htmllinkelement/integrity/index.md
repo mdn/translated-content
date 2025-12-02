@@ -43,4 +43,4 @@ console.log(el.integrity); // Résultat : "sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6Yc
 ## Voir aussi
 
 - La propriété {{domxref("HTMLScriptElement.integrity")}}
-- [Intégrité des sous-ressources](/fr/docs/Web/Security/Subresource_Integrity)
+- [Intégrité des sous-ressources](/fr/docs/Web/Security/Defenses/Subresource_Integrity)

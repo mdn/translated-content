@@ -31,7 +31,7 @@ writeText(newClipText)
 
 ## 安全考虑
 
-只能在[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)中读取剪贴板。
+只能在[安全上下文](/zh-CN/docs/Web/Security/Defenses/Secure_Contexts)中读取剪贴板。
 
 其他安全要求在 API 概述主题的[安全考虑](/zh-CN/docs/Web/API/Clipboard_API#安全考虑)一节中进行了介绍。
 

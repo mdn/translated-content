@@ -34,7 +34,7 @@ Web 浏览器遵循严格的安全模式，对内容、浏览器与服务器之�
 
 ### 同源策略和 CORS
 
-[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)是 Web 的一种基本安全机制，它限制从一个{{Glossary("origin", "源")}}加载的文档或脚本如何与另一个源的资源交互。它有助于隔离潜在的恶意文档，减少可能的攻击载体。
+[同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)是 Web 的一种基本安全机制，它限制从一个{{Glossary("origin", "源")}}加载的文档或脚本如何与另一个源的资源交互。它有助于隔离潜在的恶意文档，减少可能的攻击载体。
 
 一般来说，来自一个源的文档不能向其他源发出请求。这样做是有道理的，因为你不希望网站之间相互干扰并访问未经授权的数据。
 
@@ -50,13 +50,13 @@ Web 浏览器和服务器使用 [HTTP](/zh-CN/docs/Web/HTTP) 协议相互通信�
 
 相关主题：
 
-- [传输层安全](/zh-CN/docs/Web/Security/Transport_Layer_Security)（TLS）
+- [传输层安全](/zh-CN/docs/Web/Security/Defenses/Transport_Layer_Security)（TLS）
   - : TLS 协议是使两个联网应用程序或设备能够私密、稳健地交换信息的标准。使用 TLS 的应用程序可以选择自己的安全参数，这些参数会对数据的安全性和可靠性产生重大影响。
 - [HTTP Strict-Transport-Security](/zh-CN/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)
   - : `Strict-Transport-Security` [HTTP](/zh-CN/docs/Web/HTTP) 标头可以让网站指定其只能通过 HTTPS 访问。
-- [证书透明度](/zh-CN/docs/Web/Security/Certificate_Transparency)
+- [证书透明度](/zh-CN/docs/Web/Security/Defenses/Certificate_Transparency)
   - : 证书透明度（CT）是一个开放的框架，旨在防止和监测证书的误发。新颁发的证书被记录到公开运行的、通常是独立的 CT 日志中，这些日志保持着一个仅有附录的、有密码学保证的 TLS 证书的记录。
-- [混合内容](/zh-CN/docs/Web/Security/Mixed_content)
+- [混合内容](/zh-CN/docs/Web/Security/Defenses/Mixed_content)
   - : 如果一个 HTTPS 页面包含明文 HTTP 获取的内容，那么该页面就被称为**混合内容**页面。像这样的页面只能保证部分内容加密，未加密的部分仍然可以被嗅探器和中间人攻击者感知。
 
 ### 安全上下文和权限特性
@@ -70,13 +70,13 @@ Web 浏览器和服务器使用 [HTTP](/zh-CN/docs/Web/HTTP) 协议相互通信�
 
 这些“强大特性”通过以下方法控制：
 
-- 仅允许在[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)中使用此类特性。安全上下文是 {{domxref("Window", "window")}} 或 {{domxref("WorkerGlobalScope", "worker")}}，有理由相信其内容已通过 HTTPS/TLS 安全交付。在安全上下文中，与**不**安全的上下文进行通信的可能性是有限的。安全上下文还有助于防止[中间人攻击者](https://zh.wikipedia.org/wiki/中间人攻击)访问强大的功能。
+- 仅允许在[安全上下文](/zh-CN/docs/Web/Security/Defenses/Secure_Contexts)中使用此类特性。安全上下文是 {{domxref("Window", "window")}} 或 {{domxref("WorkerGlobalScope", "worker")}}，有理由相信其内容已通过 HTTPS/TLS 安全交付。在安全上下文中，与**不**安全的上下文进行通信的可能性是有限的。安全上下文还有助于防止[中间人攻击者](https://zh.wikipedia.org/wiki/中间人攻击)访问强大的功能。
 
-  要查看仅在安全上下文中可用的 Web 平台特性列表，请参阅[限制在安全上下文中使用的特性](/zh-CN/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)。
+  要查看仅在安全上下文中可用的 Web 平台特性列表，请参阅[限制在安全上下文中使用的特性](/zh-CN/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts)。
 
 - 这些功能的使用受到用户权限系统的限制：用户必须明确选择提供对这些功能的访问权限，这意味着它们不能自动使用。用户权限请求是自动进行的，可以使用[权限 API](/zh-CN/docs/Web/API/Permissions_API) 来查询 API 权限的状态。
 
-- 其他一些浏览器功能只能在响应用户操作（如点击按钮）时使用，这意味着需要在适当的事件处理程序中调用这些功能。这被称为**瞬态激活**。更多信息请参阅[用户激活特性](/zh-CN/docs/Web/Security/User_activation)。
+- 其他一些浏览器功能只能在响应用户操作（如点击按钮）时使用，这意味着需要在适当的事件处理程序中调用这些功能。这被称为**瞬态激活**。更多信息请参阅[用户激活特性](/zh-CN/docs/Web/Security/Defenses/User_activation)。
 
 ## 更高层次的安全考虑
 
@@ -131,7 +131,7 @@ CSP 允许你添加一层安全保护，例如，只允许从特定的可信来�
 
 相关主题：
 
-- [子资源完整性](/zh-CN/docs/Web/Security/Subresource_Integrity)
+- [子资源完整性](/zh-CN/docs/Web/Security/Defenses/Subresource_Integrity)
   - : **子资源完整性**（SRI）是一种安全功能，允许浏览器验证所获取的文件（比如，从一个{{Glossary("CDN","内容分发网络")}}中）没有遭受恶意修改。它的工作原理是允许你提供一个密码散列值，目标文件必须匹配这个值。
 - [HTTP Access-Control-Allow-Origin](/zh-CN/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin)
   - : **`Access-Control-Allow-Origin`** 响应标头表明响应是否可以与来自给定{{glossary("origin","来源")}}的请求代码共享。

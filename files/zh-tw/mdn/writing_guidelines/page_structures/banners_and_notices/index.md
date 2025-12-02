@@ -13,7 +13,7 @@ l10n:
 
 ## 橫幅巨集加入的位置
 
-橫幅使用巨集加入，且通常插入在頁面後設資料下方與側邊欄巨集並列。例如，在下方區塊中，`\{{SecureContext_Header}}` 巨集用來表示 {{domxref("AudioDecoder")}} 介面僅能在[安全上下文](/zh-TW/docs/Web/Security/Secure_Contexts)中使用、`\{{AvailableInWorkers}}` 巨集用來表示 {{domxref("AudioDecoder")}} 介面僅能在 [Window 上下文](/zh-TW/docs/Web/API/Window)與[專用 Worker 上下文](/zh-TW/docs/Web/API/DedicatedWorkerGlobalScope)中使用，而 `\{{SeeCompatTable}}` 則用來表示該介面為實驗性技術。
+橫幅使用巨集加入，且通常插入在頁面後設資料下方與側邊欄巨集並列。例如，在下方區塊中，`\{{SecureContext_Header}}` 巨集用來表示 {{domxref("AudioDecoder")}} 介面僅能在[安全上下文](/zh-TW/docs/Web/Security/Defenses/Secure_Contexts)中使用、`\{{AvailableInWorkers}}` 巨集用來表示 {{domxref("AudioDecoder")}} 介面僅能在 [Window 上下文](/zh-TW/docs/Web/API/Window)與[專用 Worker 上下文](/zh-TW/docs/Web/API/DedicatedWorkerGlobalScope)中使用，而 `\{{SeeCompatTable}}` 則用來表示該介面為實驗性技術。
 
 ```md
 ---
@@ -32,7 +32,7 @@ browser-compat: api.AudioDecoder
 
 必須手動加入下列巨集：
 
-- `\{{SecureContext_Header}}`——這會產生一個**安全上下文**橫幅，表示該技術僅能在[安全上下文](/zh-TW/docs/Web/Security/Secure_Contexts)中使用。
+- `\{{SecureContext_Header}}`——這會產生一個**安全上下文**橫幅，表示該技術僅能在[安全上下文](/zh-TW/docs/Web/Security/Defenses/Secure_Contexts)中使用。
 - `\{{AvailableInWorkers}}`——這會產生一個**可在 Worker 使用**通知，表示該技術在 [Worker 上下文](/zh-TW/docs/Web/API/Web_Workers_API)中可用。
 
 ## 自動加入的橫幅

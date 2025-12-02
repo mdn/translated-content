@@ -43,4 +43,4 @@ Si on ne prend pas le schéma en considération, ces deux URL porteront sur le m
 
 - [Qu'est-ce qu'une URL&nbsp;?](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
 - [L'entrée du glossaire pour le terme «&nbsp;origine&nbsp;»](/fr/docs/Glossary/Origin)
-- [La règle de même origine](/fr/docs/Web/Security/Same-origin_policy)
+- [La règle de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy)

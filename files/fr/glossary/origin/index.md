@@ -39,4 +39,4 @@ Les deux exemples qui suivent ne sont pas de la même origine, car les ports son
 
 ## Pour en savoir plus
 
-Voir [Same-origin policy](/fr/docs/Web/Security/Same-origin_policy) _(politique de même origine)_ pour plus d'informations.
+Voir [Same-origin policy](/fr/docs/Web/Security/Defenses/Same-origin_policy) _(politique de même origine)_ pour plus d'informations.

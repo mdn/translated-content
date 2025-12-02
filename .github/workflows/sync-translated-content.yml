@@ -52,9 +52,9 @@ jobs:
           node-version-file: mdn/content/.nvmrc
           package-manager-cache: false
 
-      - name: Install all yarn packages
+      - name: Install
         working-directory: ${{ github.workspace }}/mdn/content
-        run: yarn --frozen-lockfile
+        run: npm ci
         env:
           # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -67,7 +67,7 @@ jobs:
           # when fetching the latest releases info from the GitHub API.
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         working-directory: ${{ github.workspace }}/mdn/content
-        run: yarn content sync-translated-content ${{ matrix.lang }}
+        run: npm run content sync-translated-content ${{ matrix.lang }}
 
       - name: Gather related upstream commits
         id: gather

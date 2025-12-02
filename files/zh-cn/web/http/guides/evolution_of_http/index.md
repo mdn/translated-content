@@ -161,7 +161,7 @@ Tim Berners-Lee 对于 Web 的最初设想不是一个只读媒体。他设想�
 
 ### 放松安全措施——基于当前的 Web 模型
 
-HTTP 和 Web 安全模型——[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)是互不相关的。事实上，当前的 Web 安全模型是在 HTTP 被创造出来后才被发展的！这些年来，已经证实了它如果能通过在特定的约束下移除一些这个策略的限制来管的宽松些的话，将会更有用。这些策略导致大量的成本和时间被花费在通过转交到服务端来添加一些新的 HTTP 头来发送。这些被定义在了[跨源资源共享](/zh-CN/docs/Glossary/CORS)（CORS）和[内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)（CSP）规范里。
+HTTP 和 Web 安全模型——[同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)是互不相关的。事实上，当前的 Web 安全模型是在 HTTP 被创造出来后才被发展的！这些年来，已经证实了它如果能通过在特定的约束下移除一些这个策略的限制来管的宽松些的话，将会更有用。这些策略导致大量的成本和时间被花费在通过转交到服务端来添加一些新的 HTTP 头来发送。这些被定义在了[跨源资源共享](/zh-CN/docs/Glossary/CORS)（CORS）和[内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)（CSP）规范里。
 
 不只是这大量的扩展，很多的其他的头也被加了进来，有些只是实验性的。比较著名的有 {{HTTPHeader("DNT")}}（Do Not Track）来控制隐私，{{HTTPHeader("X-Frame-Options")}}，还有很多。
 

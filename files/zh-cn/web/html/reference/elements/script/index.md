@@ -83,7 +83,7 @@ slug: Web/HTML/Reference/Elements/script
       - : 默认值：自动确定获取该脚本的相对优先级。
 
 - `integrity`
-  - : 包含用户代理可用于验证所获取到资源的完整性的内联元数据。参见[子资源完整性](/zh-CN/docs/Web/Security/Subresource_Integrity)。
+  - : 包含用户代理可用于验证所获取到资源的完整性的内联元数据。参见[子资源完整性](/zh-CN/docs/Web/Security/Defenses/Subresource_Integrity)。
 - `nomodule`
   - : 这个布尔属性被设置来标明这个脚本不应该在支持 [ES 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)的浏览器中执行。实际上，这可用于在不支持模块化 JavaScript 的旧浏览器中提供回退脚本。
 - `nonce`

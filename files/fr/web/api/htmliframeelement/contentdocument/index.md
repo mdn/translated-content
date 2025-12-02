@@ -5,7 +5,7 @@ slug: Web/API/HTMLIFrameElement/contentDocument
 
 {{APIRef("HTML DOM")}}
 
-Si l'<i lang="en">iframe</i> et le document parent de l'<i lang="en">iframe</i> sont de la [même origine](/fr/docs/Web/Security/Same-origin_policy), `HTMLIFrameElement.contentDocument` retourne un [`Document`](/fr/docs/Web/API/Document) (c'est à dire le document actif dans le contexte de navigation imbriqué du cadre). Sinon, il retourne `null`.
+Si l'<i lang="en">iframe</i> et le document parent de l'<i lang="en">iframe</i> sont de la [même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy), `HTMLIFrameElement.contentDocument` retourne un [`Document`](/fr/docs/Web/API/Document) (c'est à dire le document actif dans le contexte de navigation imbriqué du cadre). Sinon, il retourne `null`.
 
 ## Exemples
 

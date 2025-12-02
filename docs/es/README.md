@@ -49,7 +49,7 @@ Digamos que desea traducir el contenido de la página que se observa en esta dir
 
 ## Arreglar "flaws" (defectos)
 
-Al usar `yarn start` en localhost para el repositorio `mdn/content`, es posible ver una previsualización en tu servidor local de los cambios que has hecho y como lucirán. Esto también es posible creando un PR, el bot se encargará de generar una "preview URL" donde puedes observar el mismo resultado. En ambas pantallas, podrás, en la parte superior del documento, mostrar los "flaws" que el motor indique, y que contendrá aquellos defectos detectados de manera automática para ser corregidos, y, en algunos casos, la corrección disponible con un clic, o una sugerencia.
+Al usar `npm start` en localhost para el repositorio `mdn/content`, es posible ver una previsualización en tu servidor local de los cambios que has hecho y como lucirán. Esto también es posible creando un PR, el bot se encargará de generar una "preview URL" donde puedes observar el mismo resultado. En ambas pantallas, podrás, en la parte superior del documento, mostrar los "flaws" que el motor indique, y que contendrá aquellos defectos detectados de manera automática para ser corregidos, y, en algunos casos, la corrección disponible con un clic, o una sugerencia.
 
 ## Convención en traducciones
 

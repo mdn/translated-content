@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef}}
 
-**`drop`** イベントは、要素または選択されたテキストが、妥当なドロップターゲットにドロップされたときに発生します。`drop` イベントが確実に期待通りに発生するように、[`dragover`](/ja/docs/Web/API/Event/preventDefault) イベントを処理するコードの一部に [`preventDefault()`](/ja/docs/Web/API/HTMLElement/dragover_event) 呼び出しを常に記載してください。
+**`drop`** イベントは、要素または選択されたテキストが、妥当なドロップターゲットにドロップされたときに発生します。`drop` イベントが確実に期待通りに発生するように、[`dragover`](/ja/docs/Web/API/HTMLElement/dragover_event) イベントを処理するコードの一部に [`preventDefault()`](/ja/docs/Web/API/Event/preventDefault) 呼び出しを常に記載してください。
 
 このイベントは取り消される可能性があり、{{domxref("Document")}} と {{domxref("Window")}} オブジェクトまでバブルアップする可能性があります。
 

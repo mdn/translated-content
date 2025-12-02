@@ -17,6 +17,6 @@ TCP セッションをネゴシエートして TCP セッションを開始す�
 
 ## 関連情報
 
-- [トランスポート層セキュリティ (TLS) プロトコル](/ja/docs/Web/Security/Transport_Layer_Security)
+- [トランスポート層セキュリティ (TLS) プロトコル](/ja/docs/Web/Security/Defenses/Transport_Layer_Security)
 - {{Glossary("HTTPS")}}
 - [トランスポート層セキュリティ](https://ja.wikipedia.org/wiki/Transport_Layer_Security)（ウィキペディア）

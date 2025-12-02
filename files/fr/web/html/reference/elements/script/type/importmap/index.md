@@ -142,7 +142,7 @@ Si cette portée ne contient aucun spécificateur correspondant à l'import, il 
 
 ### Carte des métadonnées d'intégrité
 
-Vous pouvez utiliser la clé `integrity` pour fournir une correspondance pour les [métadonnées d'intégrité](/fr/docs/Web/Security/Subresource_Integrity#utilisation_de_subresource_integrity) des modules.
+Vous pouvez utiliser la clé `integrity` pour fournir une correspondance pour les [métadonnées d'intégrité](/fr/docs/Web/Security/Defenses/Subresource_Integrity#utilisation_de_subresource_integrity) des modules.
 Cela permet de garantir l'intégrité des modules importés dynamiquement ou statiquement.
 La clé `integrity` permet aussi de fournir une solution de repli pour les modules principaux ou préchargés, au cas où ils n'incluraient pas déjà un attribut `integrity`.
 
@@ -306,7 +306,7 @@ La carte d'import doit être un objet JSON valide qui définit au plus deux clé
 
 - `integrity` {{Optional_Inline}}
   - : Définit un objet JSON valide dont les _clés_ sont des chaînes de caractères contenant des URL absolues ou relatives valides (commençant par `/`, `./` ou `../`),
-    et dont les _valeurs_ correspondantes sont des [métadonnées d'intégrité](/fr/docs/Web/Security/Subresource_Integrity#utilisation_de_subresource_integrity) valides.
+    et dont les _valeurs_ correspondantes sont des [métadonnées d'intégrité](/fr/docs/Web/Security/Defenses/Subresource_Integrity#utilisation_de_subresource_integrity) valides.
 
     Si l'URL d'un script important ou préchargeant un module correspond à une clé de l'objet `integrity`, les métadonnées d'intégrité correspondantes sont appliquées aux options de récupération du script,
     sauf si elles possèdent déjà des métadonnées d'intégrité.

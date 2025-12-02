@@ -41,6 +41,6 @@ l10n:
 
 ## 関連情報
 
-- [同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)
+- [同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)
 - {{Glossary("Site")}}
 - [HTML 仕様書: origin](https://html.spec.whatwg.org/multipage/origin.html#origin)（英語）

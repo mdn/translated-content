@@ -1,25 +1,24 @@
 ---
 title: CSS を使った HTML の要素への色の適用
-short-title: HTML の要素への色の適用
+short-title: 色の適用
 slug: Web/CSS/Guides/Colors/Applying_color
-original_slug: Web/CSS/CSS_colors/Applying_color
 l10n:
-  sourceCommit: 92447fec056cc89b7f28445851bea0c981fcbc12
+  sourceCommit: 81f8fcd666952c1782653a3675347c392cc997ca
 ---
 
 [CSS](/ja/docs/Web/CSS) では、[HTML](/ja/docs/Web/HTML) [要素](/ja/docs/Web/HTML/Reference/Elements)に色を追加し好みの見た目にする方法が多岐に渡ります。
 このガイドは、CSS を使用して HTML 要素に色を適用する方法を紹介する入門書です。このガイドには、[色を設定する CSS プロパティの一覧とその値](#色を設定できるプロパティ)、および[スタイルシート](#スタイルシートで色を値として指定)と[それ以外の方法](#色をつける他の方法)の両方で色を使用する方法を記載しています。
 
 > [!NOTE]
-> [色を賢く使用する](/ja/docs/Web/CSS/CSS_colors/Using_color_wisely)ことが重要です。常に適切な色を選択し、テキストと背景のコントラストを十分に確保して読みやすさを保証し、視覚能力が異なる人々のニーズを常に念頭に置いてください。
+> [色を賢く使用する](/ja/docs/Web/CSS/Guides/Colors/Using_color_wisely)ことが重要です。常に適切な色を選択し、テキストと背景のコントラストを十分に確保して読みやすさを保証し、視覚能力が異なる人々のニーズを常に念頭に置いてください。
 
-データ型としての CSS 色についてさらに詳しく知りたい場合は、[CSS `<color>` データ型](/ja/docs/Web/CSS/Reference/Values/color_value)リファレンスおよび [CSS 色値ガイド](/ja/docs/Web/CSS/CSS_colors/Color_values)を参照してください。
+データ型としての CSS 色についてさらに詳しく知りたい場合は、[CSS `<color>` データ型](/ja/docs/Web/CSS/Reference/Values/color_value)リファレンスおよび [CSS 色値ガイド](/ja/docs/Web/CSS/Guides/Colors/Color_values)を参照してください。
 
 ## 色を設定できるプロパティ
 
 要素レベルでは、HTML のすべてのものに色を適用することができます。それよりも、テキストや境界線など、要素の中に描かれているものの種類で見てみましょう。それぞれについて、色を適用する CSS プロパティの一覧を見てみましょう。
 
-基礎的なレベルでならば、{{cssxref("color")}} プロパティは HTML 要素の内容物の色を定義し、{{cssxref("background-color")}} は HTML 要素の背景色を定義すると言えます。これらのプロパティはほぼすべての要素で使用できます。
+基礎的なレベルでならば、{{cssxref("color")}} プロパティは HTML 要素のコンテンツの色を定義し、{{cssxref("background-color")}} は HTML 要素の背景色を定義すると言えます。これらのプロパティはほぼすべての要素で使用できます。
 
 ### テキスト
 
@@ -32,10 +31,10 @@ l10n:
   - : テキストの背景色です。
 
 - {{cssxref("text-shadow")}}
-  - : テキストに適用する影の効果を設定します。影の設定には、影のベース色 (他のパラメータに基づいて背景をぼかして混色する色) があります。より詳しくは基本的な[テキストとフォントの装飾](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)の[テキストのドロップシャドウ](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals#text_drop_shadows)を参照してください。
+  - : テキストに適用する影の効果を設定します。影の設定には、影のベース色（他のパラメータに基づいて背景をぼかして混色する色）があります。より詳しくは[テキストのドロップシャドウ](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals#text_drop_shadows)を参照してください。
 
 - {{cssxref("text-decoration-color")}}
-  - : テキスト装飾（下線、取り消し線など）の既定の色は [`currentcolor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード) です。このキーワードは、`color` プロパティの現在の値を表します。ただし、`text-decoration-color` プロパティを使用して、その値を上書きし、異なる色を使用することができます。
+  - : テキスト装飾（下線、取り消し線など）の既定の色は [`currentColor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード) です。このキーワードは、`color` プロパティの現在の値を表します。ただし、`text-decoration-color` プロパティを使用して、その値を上書きし、異なる色を使用することができます。
 
 - {{cssxref("text-emphasis-color")}}
   - : テキスト内の各文字に隣接する強調記号をレンダリングする際に使用する色です。これは主に、東アジア言語のテキストを描画する際に使用します。
@@ -64,8 +63,7 @@ l10n:
 
 ### 境界線
 
-あらゆる要素で、周囲に[境界線](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)を描画することができます。基本的な要素の境界線は、要素の内容物の辺を囲むように描かれた線です。
-基本的な要素の境界は、要素の内容の端に描かれている線です。要素とその境界線の関係性については、[ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)を、より詳しい境界線へのスタイルの適用については [CSS での境界線のスタイル設定](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders) を参照してください。
+あらゆる要素で、周囲に境界線を描画することができます。基本的な要素の境界線は、要素のコンテンツの辺を囲むように描かれた線です。要素とその境界線の関係性については、[ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)を、より詳しい境界線へのスタイルの適用については [CSS での境界線のスタイル設定](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders) を参照してください。
 
 {{cssxref("border")}} 一括指定プロパティを使用することもできます。これは、境界線に関する (色以外の[線幅](/ja/docs/Web/CSS/Reference/Properties/border-width)、[線種](/ja/docs/Web/CSS/Reference/Properties/border-style)（実線、破線など) などの特性も含んだ）すべての設定をこれ一つで行えます。
 
@@ -111,7 +109,7 @@ l10n:
 上記の結果を作成する CSS を、1 つずつ見ていきましょう。
 
 > [!NOTE]
-> この例では、複数の[異なる CSS 色値型](/ja/docs/Web/CSS/CSS_colors/Color_values)を使用して、その使用方法を説明しています。これは、実稼働コードには推奨されません。CSS を書く際には、ご自身やチームにとって最もわかりやすい値型を使用してください。
+> この例では、複数の[異なる CSS 色値型](/ja/docs/Web/CSS/Guides/Colors/Color_values)を使用して、その使用方法を説明しています。これは、実稼働コードには推奨されません。CSS を書く際には、ご自身やチームにとって最もわかりやすい値型を使用してください。
 
 ```css
 .wrapper {
@@ -155,8 +153,8 @@ div {
 .boxRight {
   background-color: hwb(270deg 63% 13%);
   outline: 4px dashed #6e1478;
-  color: hsl(0deg 100% 100%);
-  text-decoration: underline;
+  color: hsl(0deg 95% 95%);
+  text-decoration-line: underline;
   text-decoration-style: wavy;
   text-decoration-color: #8f8;
   text-decoration: underline wavy #8f8;
@@ -167,7 +165,7 @@ div {
 > [!NOTE]
 > ここでは `text-decoration-*` スタイルを個別に設定しましたが、これは Safari が {{cssxref("text-decoration")}} を一括指定プロパティとして対応していないためです。
 
-最後に、`.boxRight` クラスは、右側に描画するボックスにいくつかのスタイルを設定します。 そして、以下の色が設定されます（[色値](/ja/docs/Web/CSS/CSS_colors/Color_values)の 5 つの異なる宣言方法を使用します）。
+最後に、`.boxRight` クラスは、右側に描画するボックスにいくつかのスタイルを設定します。 そして、以下の色が設定されます（[色値](/ja/docs/Web/CSS/Guides/Colors/Color_values)の 5 つの異なる宣言方法を使用します）。
 
 - `background-color` は {{CSSXref("color_value/hwb", "hwb()")}} 関数記法を使用して `hwb(270deg 63% 13%)` と設定しています。この色は中くらいの紫色です。
 - ボックスの `outline` を使用して、ボックスを囲む 4 ピクセルの太さの破線を指定します。色は、6 桁の {{cssxref("hex-color")}} `#6e1478` を使用して、やや濃い紫色を指定します。
@@ -186,7 +184,7 @@ CSS が唯一の色を付けるためのウェブ技術ではありません。�
 - [SVG](/ja/docs/Web/SVG) (Scalable Vector Graphics)
   - : SVG ならば、特定の形状、パターン、線を描くコマンドで画像を描画できます。 SVG のコマンドは XML の形式となっており、直接ウェブページに埋め込めます。また、{{HTMLElement("img")}} 要素を使うと他の画像と同じような配置もできます。
 - [WebGL](/ja/docs/Web/API/WebGL_API)
-  - : Web Graphics Library は Open GL ES を基にした API で、ウェブ上に 2D や 3D のハイパフォーマンスなグラフィックを描画できます。より詳しくは [WebGL チュートリアル](/ja/docs/Web/API/WebGL_API/Tutorial)を参照してください。
+  - : Web Graphics Library は OpenGL ES を基にした API で、ウェブ上に 2D や 3D のハイパフォーマンスなグラフィックを描画できます。より詳しくは [WebGL チュートリアル](/ja/docs/Web/API/WebGL_API/Tutorial)を参照してください。
 
 > [!NOTE]
 > すでに廃止されている HTML 属性には、`bgcolor` や `vlink` のように、色を値として受け入れるものがいくつかあります。これらの属性では、 {{cssxref("named-color")}} と 3 桁または 6 桁の {{cssxref("hex-color")}} 値のみを受け入れます。
@@ -194,8 +192,7 @@ CSS が唯一の色を付けるためのウェブ技術ではありません。�
 ## 関連情報
 
 - [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) データ型
-- [CSS 色値](/ja/docs/Web/CSS/CSS_colors/Color_values)ガイド
-- [賢い色の使用](/ja/docs/Web/CSS/CSS_colors/Using_color_wisely)
+- [CSS 色値](/ja/docs/Web/CSS/Guides/Colors/Color_values)ガイド
+- [賢い色の使用](/ja/docs/Web/CSS/Guides/Colors/Using_color_wisely)
 - [CSS 色モジュール](/ja/docs/Web/CSS/Guides/Colors)
 - [グラフィックの描画](/ja/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics)
-- [ウェブのグラフィック](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images#ウェブ上のその他のグラフィック)
