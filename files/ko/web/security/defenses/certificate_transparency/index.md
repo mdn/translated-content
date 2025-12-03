@@ -1,6 +1,7 @@
 ---
 title: 인증서 투명성
-slug: Web/Security/Certificate_Transparency
+slug: Web/Security/Defenses/Certificate_Transparency
+original_slug: Web/Security/Certificate_Transparency
 l10n:
   sourceCommit: 199c317d91bf506a81a6f68f53d6c63499651dff
 ---

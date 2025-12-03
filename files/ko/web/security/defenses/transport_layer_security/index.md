@@ -1,6 +1,7 @@
 ---
 title: 전송 계층 보안
-slug: Web/Security/Transport_Layer_Security
+slug: Web/Security/Defenses/Transport_Layer_Security
+original_slug: Web/Security/Transport_Layer_Security
 l10n:
   sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---
