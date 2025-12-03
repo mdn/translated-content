@@ -77,7 +77,7 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Ref
 
 L'élément `<sub>` devrait uniquement être utilisé à des fins typographiques (afin de modifier la position du texte en raison des conventions typographiques) et non pour obtenir des effets de mise en forme.
 
-Ainsi, on n'utilisera pas `<sub>` pour restituer l'effet visuel d'un logo mais plutôt la propriété CSS [`vertical-align`](/fr/docs/Web/CSS/vertical-align) avec la valeur `sub`).
+Ainsi, on n'utilisera pas `<sub>` pour restituer l'effet visuel d'un logo mais plutôt la propriété CSS [`vertical-align`](/fr/docs/Web/CSS/Reference/Properties/vertical-align) avec la valeur `sub`).
 
 Voici certains cas d'utilisation (non exhaustifs) pour `<sub>`&nbsp;:
 
@@ -127,4 +127,4 @@ Voici certains cas d'utilisation (non exhaustifs) pour `<sub>`&nbsp;:
 
 - L'élément HTML [`<sup>`](/fr/docs/Web/HTML/Reference/Elements/sup) qui permet une mise en exposant. Il est à noter que l'élément `<sub>` et l'élément `<sup>` ne peuvent pas être utilisés simultanément. Pour afficher le symbole chimique d'un élément, il faudra utiliser [MathML](/fr/docs/Web/MathML) pour représenter à la fois le numéro atomique et le nombre de masse.
 - Les éléments MathML [`<msub>`](/fr/docs/Web/MathML/Reference/Element/msub), [`<msup>`](/fr/docs/Web/MathML/Element/msup), et [`<msubsup>`](/fr/docs/Web/MathML/Element/msubsup).
-- La propriété CSS [`vertical-align`](/fr/docs/Web/CSS/vertical-align).
+- La propriété CSS [`vertical-align`](/fr/docs/Web/CSS/Reference/Properties/vertical-align).

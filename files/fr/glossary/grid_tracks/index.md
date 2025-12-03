@@ -62,7 +62,7 @@ Les pistes créées dans la grille implicite ont une taille définie automatique
 
 ## Voir aussi
 
-- [Concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [Concepts de base des grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
 - [Définition des pistes de grille dans la spécification CSS Grid Layout <sup>(angl.)</sup>](https://drafts.csswg.org/css-grid/#grid-track-concept)
 - Références de propriété
   - {{CSSxRef("grid-template-columns")}}

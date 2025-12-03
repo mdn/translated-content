@@ -69,7 +69,7 @@ _画中画 API 定义了三个事件，它们可以用来检测画中画模式�
 
 ## 控制样式
 
-[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) [`:picture-in-picture`](/zh-CN/docs/Web/CSS/:picture-in-picture) 匹配当前进入画中画模式的视频元素，并允许你配置样式表，以便视频在画中画或者传统播放模式来回切换时自动调整内容的大小、样式或布局。
+[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [`:picture-in-picture`](/zh-CN/docs/Web/CSS/Reference/Selectors/:picture-in-picture) 匹配当前进入画中画模式的视频元素，并允许你配置样式表，以便视频在画中画或者传统播放模式来回切换时自动调整内容的大小、样式或布局。
 
 ## 控制访问权限
 

@@ -7,7 +7,7 @@ l10n:
 
 在 CSS 中，保证无效值是 {{CSSXref("initial")}}。
 
-当[自定义属性](/zh-CN/docs/Web/CSS/--*)的值为保证无效值时，{{CSSXref("var")}} 函数无法用它进行替换。尝试这样做会使声明在计算值时无效，除非指定了有效的回退值。
+当[自定义属性](/zh-CN/docs/Web/CSS/Reference/Properties/--*)的值为保证无效值时，{{CSSXref("var")}} 函数无法用它进行替换。尝试这样做会使声明在计算值时无效，除非指定了有效的回退值。
 
 ## 参见
 

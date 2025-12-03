@@ -3,7 +3,7 @@ title: Firefox 144 release notes for developers (Stable)
 short-title: Firefox 144 (Stable)
 slug: Mozilla/Firefox/Releases/144
 l10n:
-  sourceCommit: 61912f53d01e935aea926a2226130fb4587414a9
+  sourceCommit: 08f01e6cd0103ac0a472f9e3cf2482bb9fc2f25a
 ---
 
 このページでは、開発者に影響する Firefox 144 の変更点をまとめています。
@@ -98,3 +98,7 @@ Firefox 144 は、米国時間 [2025 年 10 月 14 日](https://whattrainisitnow
 - **datetime-local の時刻選択:** `dom.forms.datetime.timepicker`
 
   HTML の datetime-local 型 input 要素 ([`<input type="datetime-local">`](/ja/docs/Web/HTML/Reference/Elements/input/datetime-local)) に時刻選択が含まれるようになりました ([Firefox bug 1726108](https://bugzil.la/1726108))。
+
+- **:heading():** `layout.css.heading-selector.enabled`
+
+  [`:heading()`](/ja/docs/Web/CSS/Reference/Selectors/:heading_function) 関数擬似クラスが、見出しレベルに一致する整数のカンマ区切りリストを受け入れるように、よりシンプルになりました ([Firefox bug 1974386](https://bugzil.la/1974386) & [Firefox bug 1984310](https://bugzil.la/1984310))。

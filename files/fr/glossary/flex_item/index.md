@@ -19,6 +19,6 @@ Des passages continus de texte à l'intérieur des conteneurs flexibles deviendr
 
 ## Voir aussi
 
-- [Concepts de base de Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [Ordonnancement des éléments flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
-- [Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
+- [Concepts de base de Flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [Ordonnancement des éléments flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)
+- [Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)

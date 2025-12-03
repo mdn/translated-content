@@ -259,9 +259,9 @@ Le sélecteur `details[open]` peut être utilisé pour donner un style à l'él�
 
 Le triangle généralement utilisé peut également être personnalisé. Toutefois, cette fonctionnalité a été standardisée récemment et n'est pas encore largement prise en charge. De plus, la méthode de prise en charge varie encore d'un navigateur à un autre.
 
-L'élément [`<summary>`](/fr/docs/Web/HTML/Reference/Elements/summary) prend en charge la propriété raccourcie [`list-style`](/fr/docs/Web/CSS/list-style) et ses propriétés longues, comme [`list-style-type`](/fr/docs/Web/CSS/list-style-type), pour changer le triangle de divulgation en ce que vous choisissez (généralement avec [`list-style-image`](/fr/docs/Web/CSS/list-style-image)). Par exemple, nous pouvons supprimer l'icône du widget de divulgation en définissant `list-style : none`.
+L'élément [`<summary>`](/fr/docs/Web/HTML/Reference/Elements/summary) prend en charge la propriété raccourcie [`list-style`](/fr/docs/Web/CSS/Reference/Properties/list-style) et ses propriétés longues, comme [`list-style-type`](/fr/docs/Web/CSS/Reference/Properties/list-style-type), pour changer le triangle de divulgation en ce que vous choisissez (généralement avec [`list-style-image`](/fr/docs/Web/CSS/Reference/Properties/list-style-image)). Par exemple, nous pouvons supprimer l'icône du widget de divulgation en définissant `list-style : none`.
 
-Actuellement, Chrome ne prend pas en charge cette fonctionnalité et il faut utiliser [le pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) spécifique `::-webkit-details-marker` afin de personnaliser l'apparence.
+Actuellement, Chrome ne prend pas en charge cette fonctionnalité et il faut utiliser [le pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) spécifique `::-webkit-details-marker` afin de personnaliser l'apparence.
 
 #### CSS
 

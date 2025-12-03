@@ -179,7 +179,7 @@ MathML は HTML と同じ構文を用いて要素と属性のツリーを表し�
 - [`<math>` 要素](/ja/docs/Web/MathML/Reference/Element/math)
 - [`<mfrac>` 要素](/ja/docs/Web/MathML/Reference/Element/mfrac)
 - [`<mrow>` 要素](/ja/docs/Web/MathML/Reference/Element/mrow)
-- [`math-style` プロパティ](/ja/docs/Web/CSS/math-style)
-- [`math-depth` プロパティ](/ja/docs/Web/CSS/math-depth)
+- [`math-style` プロパティ](/ja/docs/Web/CSS/Reference/Properties/math-style)
+- [`math-depth` プロパティ](/ja/docs/Web/CSS/Reference/Properties/math-depth)
 
 {{NextMenu("Web/MathML/Guides/Text_containers", "Web/MathML/Guides")}}

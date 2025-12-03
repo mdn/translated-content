@@ -92,7 +92,7 @@ A partir de Firefox 13, Firefox pour Windows requiert au minimum Windows XP Serv
 - Le support d'un drapeau sale a été ajouté à l'API Source Editor.
 - L'éditeur de source ne supporte plus de retomber sur un {{HTMLElement("textarea")}} au lieu d'utiliser Orion.
 - L'éditeur expose à présent les évènements focus et blur.
-- La méthode [`getIndentationString()`](/fr/docs/JavaScript_code_modules/source-editor.jsm#getIndentationString%28%29) a été ajoutée, cela renvoie la chaîne à utiliser pour l'indentation du texte dans l'éditeur.
+- La méthode [`getIndentationString()`](</fr/docs/JavaScript_code_modules/source-editor.jsm#getIndentationString()>) a été ajoutée, cela renvoie la chaîne à utiliser pour l'indentation du texte dans l'éditeur.
 - L'éditeur de source supporte désormais la gestion d'une liste de points d'arrêt et l'affichage de l'interface utilisateur pour les basculer sur et en dehors ; toutefois, il ne fait pas la mise en œuvre des points d'arrêt. C'est à vous d'écrire du code pour le débogueur.
 - Le support pour mettre en surbrillance la ligne actuelle a été ajouté, en utilisant l'option de configuration `highlightCurrentLine`.
 

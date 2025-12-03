@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/class
 
 {{HTMLSidebar("Global_attributes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`class`** indique une liste de classes associées à l'élément courant. Les classes permettent de manipuler les éléments, via CSS ou JavaScript en utilisant [les sélecteurs de classe](/fr/docs/Web/CSS/Class_selectors) ou des fonctions telles que {{domxref("document.getElementsByClassName")}}.
+L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`class`** indique une liste de classes associées à l'élément courant. Les classes permettent de manipuler les éléments, via CSS ou JavaScript en utilisant [les sélecteurs de classe](/fr/docs/Web/CSS/Reference/Selectors/Class_selectors) ou des fonctions telles que {{domxref("document.getElementsByClassName")}}.
 
 {{InteractiveExample("HTML Demo: class", "tabbed-standard")}}
 

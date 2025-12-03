@@ -37,7 +37,7 @@ slug: Mozilla/Firefox/Releases/76
 
 ### CSS
 
-- [CSS4 system colors](/ja/docs/Web/CSS/color_value#system_colors) を Firefox でサポートしました ([Firefox バグ 1590894](https://bugzil.la/1590894))。
+- [CSS4 system colors](/ja/docs/Web/CSS/Reference/Values/color_value#system_colors) を Firefox でサポートしました ([Firefox バグ 1590894](https://bugzil.la/1590894))。
 
 ### SVG
 

@@ -32,7 +32,7 @@ Firefox 12, basé sur Gecko 12.0, est sorti le 24 avril 2012. Cette page résume
 - {{domxref("DOMError")}} a été implémenté selon la spécification DOM 4.
 - La méthode {{domxref("Document.createNodeIterator()")}} a été mise à jour suivant la spécification DOM4. Cela rend les paramètres `whatToShow` et `filter` facultatifs et supprime le quatrième paramètre non-standard, `entityReferenceExpansion`.
 - La méthode `slice()` de l'interface {{domxref("Blob")}} a été touché par un bug qui l'empêchait d'accepter correctement le début et la fin des valeurs hors de la portée d'un entier de 64 bits signé, cela a été corrigé.
-- La méthode {{domxref("element.getBoundingClientRect()")}} considère désormais l'effet des [transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) lors du calcul des délimitations du rectangle de l'élément.
+- La méthode {{domxref("element.getBoundingClientRect()")}} considère désormais l'effet des [transformations CSS](/fr/docs/Web/CSS/Guides/Transforms/Using) lors du calcul des délimitations du rectangle de l'élément.
 - La propriété `crossOrigin` est à présent supportée par {{domxref("HTMLMediaElement")}}.
 
 #### Nouvelles WebAPIs
@@ -75,7 +75,7 @@ Mozilla travaille sur l'intégration des ses propres outils de développement We
 
 #### source-editor.jsm
 
-- La méthode [`resetUndo()`](/fr/docs/JavaScript_code_modules/source-editor.jsm#resetUndo%28%29) a été ajoutée, elle vous permet d'effacer la pile d'annulation.
+- La méthode [`resetUndo()`](</fr/docs/JavaScript_code_modules/source-editor.jsm#resetUndo()>) a été ajoutée, elle vous permet d'effacer la pile d'annulation.
 - L'éditeur de source offre à présent des méthodes pour apporter des capacités de recherche : [`find()`](</fr/docs/JavaScript_code_modules/source-editor.jsm#find()>), [`findNext()`](</fr/docs/JavaScript_code_modules/source-editor.jsm#findNext()>), and [`findPrevious()`](</fr/docs/JavaScript_code_modules/source-editor.jsm#findPrevious()>).
 
 ### XUL

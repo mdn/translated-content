@@ -18,7 +18,7 @@ Gecko 25 を搭載した Firefox 25 は米国時間 2013 年 10 月 29 日にリ
 ### CSS
 
 - {{cssxref("background-attachment")}} CSS プロパティの値として、キーワード `local` をサポートしました ([Firefox バグ 483446](https://bugzil.la/483446))。
-- オペレーティングシステムのバージョンを検出するための、非標準で Mozilla だけのメディアクエリーをサポートしました: [`-moz-os-version`](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-os-version) ([Firefox バグ 810399](https://bugzil.la/810399))。現在このプロパティは、Windows のみで実装されています。
+- オペレーティングシステムのバージョンを検出するための、非標準で Mozilla だけのメディアクエリーをサポートしました: [`-moz-os-version`](/ja/docs/Web/CSS/Guides/Media_queries/Using#-moz-os-version) ([Firefox バグ 810399](https://bugzil.la/810399))。現在このプロパティは、Windows のみで実装されています。
 - {{cssxref("-moz-osx-font-smoothing")}} CSS プロパティを実装しました ([Firefox バグ 857142](https://bugzil.la/857142))。
 
 ### HTML

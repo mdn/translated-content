@@ -421,8 +421,8 @@ MDN Web Docs のサンプルコードをどのようにスタイルまたは整�
 
 MDN で他のページやページの節のタイトルで参照する場合、リンクテキストでは文章の大文字小文字表記に従ってください（ページや節ののタイトルと同じです）。リンク先のページタイトルや節のタイトルと異なっていても、リンクテキストでは文章の大文字小文字表記を使用してください（ページタイトルや節タイトルで使用している大文字小文字表記が間違っている可能性があります）。リンクテキストに引用符を使用しないでください。 MDN でページをタイトルで参照するには、以下のスタイル設定を使用してください。
 
-- **正**: [フレックスアイテムの順序](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)ガイドを参照してください。
-- **語**: 「[フレックスアイテムの順序](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)」ガイドを参照してください。
+- **正**: [フレックスアイテムの順序](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)ガイドを参照してください。
+- **語**: 「[フレックスアイテムの順序](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)」ガイドを参照してください。
 
 次のように、ページの節にリンクする場合も同様のスタイル設定を行ってください。
 
@@ -430,13 +430,13 @@ MDN で他のページやページの節のタイトルで参照する場合、�
 
 リンク先の節が同じページにある場合は、「上記」 (above) や「下記」 (below) の言葉を用いて、その節の場所を示唆することができます。
 
-- **正**: この概念は下記の[アクセシビリティ](/ja/docs/Web/CSS/gradient/repeating-conic-gradient#アクセシビリティ)の節で詳しく説明しています。
+- **正**: この概念は下記の[アクセシビリティ](/ja/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient#アクセシビリティ)の節で詳しく説明しています。
 
 文章の一部を記事や記事の節にリンクすることができます。リンクテキストとして説明的な語句を使用し、リンクされているページに十分なコンテキストを提供するように注意してください。
 
-- **正**: 詳しくは[フレックスアイテムの並べ替え](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)を参照してください。
-- **語**: 詳しくは[こちら](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)をクリックしてください。
-- **語**: 詳しくは[この記事](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)を読んでください。
+- **正**: 詳しくは[フレックスアイテムの並べ替え](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)を参照してください。
+- **語**: 詳しくは[こちら](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)をクリックしてください。
+- **語**: 詳しくは[この記事](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)を読んでください。
 
 MDN で、リファレンスページにリンクするもう一つの方法はマクロを使用することです。これらのマクロは[よく使われるマクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#リファレンスのページへのリンク)ページに記述されています。例えば、 HTML 要素のリファレンスページにリンクするには `HTMLElement` マクロを使用し、 CSS プロパティのリファレンスページにリンクするには `CSSxRef` マクロを使用します。
 
@@ -558,7 +558,7 @@ markdown の見出しレベルをスキップすることなく、小さい順�
 
 ### 関連情報の節
 
-MDN Web Docs のほとんどのガイド、リファレンスページ、そして用語集ページには、記事の終わりに _関連情報_ 節があります。この節には MDN 内の関連トピックへの [相互参照](#相互参照（リンク）)があり、時には関連する外部記事へのリンクもあります。例えば、この例は `@layer` ページの[関連情報の節](/ja/docs/Web/CSS/@layer#関連情報)です。
+MDN Web Docs のほとんどのガイド、リファレンスページ、そして用語集ページには、記事の終わりに _関連情報_ 節があります。この節には MDN 内の関連トピックへの [相互参照](#相互参照（リンク）)があり、時には関連する外部記事へのリンクもあります。例えば、この例は `@layer` ページの[関連情報の節](/ja/docs/Web/CSS/Reference/At-rules/@layer#関連情報)です。
 
 一般的に、関連情報の節のリンクは[箇条書きリスト](#リスト)形式で、リストの各アイテムを句として表示します。しかし、 MDN の[ウェブ開発を学習する](/ja/docs/Learn_web_development)の章では、関連情報の節は[定義リスト](/ja/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#定義リスト)形式に従います。
 
@@ -573,8 +573,8 @@ MDN Web Docs 全体の一貫性を保つため、関連情報の節を追加ま�
 - 外部リンクの場合も、対象とする記事ページのケーシングが異なっていても、文の大文字小文字を使用してください。これは MDN Web Docs 全体の一貫性を確実に保持するためです。書籍名等は例外です。
 - MDN では、[リファレンスページへのリンク](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#リファレンスのページへのリンク)の節で説明されているように、オプションでマクロを使用することができます。マクロを使用すると、次の例に示すように、リンクテキストのキーワードにコード形式が追加されます。
 - リンクリストアイテムの先頭に冠詞 ("A", "An", "The") は必要ありません。リストアイテムの終わりには句読点は要求されません。
-  - **正**: [`revert-layer`](/ja/docs/Web/CSS/revert-layer)
-  - **語**: The [`revert-layer`](/ja/docs/Web/CSS/revert-layer) keyword.
+  - **正**: [`revert-layer`](/ja/docs/Web/CSS/Reference/Values/revert-layer)
+  - **語**: The [`revert-layer`](/ja/docs/Web/CSS/Reference/Values/revert-layer) keyword.
   - **正**: [HTML DOM API](/ja/docs/Web/API/HTML_DOM_API)
   - **語**: The [HTML DOM API](/ja/docs/Web/API/HTML_DOM_API)
 - 上の例で示したように、ページタイトルや節タイトルでは書式を使用しない場合でも、リンクテキストのキーワードやリテラルの部分にバックティック (\`) を使用してコード書式化を追加してください。例えば、 "Array() constructor" というページタイトルの場合、リンクテキストは [`Array()` constructor](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Array) となります。

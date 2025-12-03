@@ -8,7 +8,7 @@ l10n:
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}
 
-CSS 规则包含[声明](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax#css_声明)，而声明又由属性和值组成。在 CSS 中使用的每个属性都有一个**值类型**，用于描述该属性允许拥有何种类型的值。在本课中，我们将了解一些最常用的值类型、它们是什么以及如何起作用。
+CSS 规则包含[声明](/zh-CN/docs/Web/CSS/Guides/Syntax/Introduction#css_声明)，而声明又由属性和值组成。在 CSS 中使用的每个属性都有一个**值类型**，用于描述该属性允许拥有何种类型的值。在本课中，我们将了解一些最常用的值类型、它们是什么以及如何起作用。
 
 > [!NOTE]
 > 每个 [CSS 属性页面](/zh-CN/docs/Web/CSS/Reference#索引)都有一个语法章节，其中列出了该属性可用的值类型。
@@ -39,9 +39,9 @@ CSS 规则包含[声明](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax#css_声明)，而
 
 ## 什么是 CSS 的值？
 
-在 CSS 规范和 MDN 的属性页上，你将能够发现**值类型**（value type）的存在，它们被尖括号（`<`、`>`）包围，如 [`<color>`](/zh-CN/docs/Web/CSS/color_value) 或 {{cssxref("length")}}。当你看到值类型 `<color>` 对特定属性有效时，这意味着你可以使用任何有效的颜色作为该属性的值，如 [`<color>`](/zh-CN/docs/Web/CSS/color_value) 参考页面所列。
+在 CSS 规范和 MDN 的属性页上，你将能够发现**值类型**（value type）的存在，它们被尖括号（`<`、`>`）包围，如 [`<color>`](/zh-CN/docs/Web/CSS/Reference/Values/color_value) 或 {{cssxref("length")}}。当你看到值类型 `<color>` 对特定属性有效时，这意味着你可以使用任何有效的颜色作为该属性的值，如 [`<color>`](/zh-CN/docs/Web/CSS/Reference/Values/color_value) 参考页面所列。
 
-有时值类型和属性可能具有相同或相似的名称——例如 {{cssxref("color")}} 属性和 [`<color>`](/zh-CN/docs/Web/CSS/color_value) 数据类型。你可以使用尖括号来区分每种情况下你所研究的具体对象。HTML 元素也使用尖括号，但从上下文应该能清楚你所查看的是哪一个。如果你不确定，可以尝试在 MDN 上搜索它。
+有时值类型和属性可能具有相同或相似的名称——例如 {{cssxref("color")}} 属性和 [`<color>`](/zh-CN/docs/Web/CSS/Reference/Values/color_value) 数据类型。你可以使用尖括号来区分每种情况下你所研究的具体对象。HTML 元素也使用尖括号，但从上下文应该能清楚你所查看的是哪一个。如果你不确定，可以尝试在 MDN 上搜索它。
 
 > [!NOTE]
 > 你还将看到被称为*数据类型*（data type）的 CSS 值。这些术语基本上是可以互换的——当你在 CSS 中看到被称为数据类型的东西时，它实际上只是另一种表达*值类型*的方式。术语*值*（value）指的是你所选择的值类型所支持的任何特定表达式。
@@ -55,7 +55,7 @@ h1 {
 }
 ```
 
-在 CSS 中，值类型是一种定义可使用的值的集合的方式。这意味着，如果你看到的 `<color>` 是有效的，那么你就不需要纠结要使用哪种颜色值类型——关键字、十六进制值或者 `rgb()` 函数。只要你的浏览器支持，你可以使用*任意*可用的 `<color>` 值。MDN 上每个值类型的页面都将提供有关浏览器支持的信息。例如，如果你查看 [`<color>`](/zh-CN/docs/Web/CSS/color_value) 页面，你会看到浏览器兼容性部分列出了不同类型的颜色值以及对它们的支持情况。
+在 CSS 中，值类型是一种定义可使用的值的集合的方式。这意味着，如果你看到的 `<color>` 是有效的，那么你就不需要纠结要使用哪种颜色值类型——关键字、十六进制值或者 `rgb()` 函数。只要你的浏览器支持，你可以使用*任意*可用的 `<color>` 值。MDN 上每个值类型的页面都将提供有关浏览器支持的信息。例如，如果你查看 [`<color>`](/zh-CN/docs/Web/CSS/Reference/Values/color_value) 页面，你会看到浏览器兼容性部分列出了不同类型的颜色值以及对它们的支持情况。
 
 让我们来看看你可能经常遇到的一些值和单位类型，并提供一些示例，以便你尝试使用各种值的可能性。
 
@@ -73,7 +73,7 @@ h1 {
   <tbody>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/CSS/integer">&#x3C;integer></a></code>
+        <code><a href="/zh-CN/docs/Web/CSS/Reference/Values/integer">&#x3C;integer></a></code>
       </td>
       <td>
         <code>&#x3C;integer></code> 是一个整数，比如 <code>1024</code> 或 <code>-55</code>。
@@ -81,7 +81,7 @@ h1 {
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/CSS/number">&#x3C;number></a></code>
+        <code><a href="/zh-CN/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></code>
       </td>
       <td>
         <code>&#x3C;number></code> 表示一个十进制数——它可能有小数部分，也可能没有。例如 <code>0.255</code>、<code>128</code> 或 <code>-1.2</code>。
@@ -90,17 +90,17 @@ h1 {
     <tr>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/CSS/dimension">&#x3C;dimension></a></code
+          ><a href="/zh-CN/docs/Web/CSS/Reference/Values/dimension">&#x3C;dimension></a></code
         >
       </td>
       <td>
         <code>&#x3C;dimension></code> 是一个 <code>&#x3C;number></code>。它有一个附加的单位，例如 <code>45deg</code>、<code>5s</code> 或 <code>10px</code>。<code>&#x3C;dimension></code> 是一个伞形类别，包括
-        <code><a href="/zh-CN/docs/Web/CSS/length">&#x3C;length></a></code
-        >、<code><a href="/zh-CN/docs/Web/CSS/angle">&#x3C;angle></a></code
-        >、<code><a href="/zh-CN/docs/Web/CSS/time">&#x3C;time></a></code
+        <code><a href="/zh-CN/docs/Web/CSS/Reference/Values/length">&#x3C;length></a></code
+        >、<code><a href="/zh-CN/docs/Web/CSS/Reference/Values/angle">&#x3C;angle></a></code
+        >、<code><a href="/zh-CN/docs/Web/CSS/Reference/Values/time">&#x3C;time></a></code
         > 和
         <code
-          ><a href="/zh-CN/docs/Web/CSS/resolution">&#x3C;resolution></a></code
+          ><a href="/zh-CN/docs/Web/CSS/Reference/Values/resolution">&#x3C;resolution></a></code
         >
         类型。
       </td>
@@ -108,7 +108,7 @@ h1 {
     <tr>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/CSS/percentage">&#x3C;percentage></a></code
+          ><a href="/zh-CN/docs/Web/CSS/Reference/Values/percentage">&#x3C;percentage></a></code
         >
       </td>
       <td>
@@ -264,7 +264,7 @@ html {
 
 `lh` 和 `rlh` 是类似于 `em` 和 `rem` 的相对长度单位。`lh` 和 `rlh` 的区别在于，前者是相对于元素自身的行高，而后者是相对于根元素（通常是 `<html>`）的行高。
 
-使用这些单位，我们可以将盒子的装饰与文本精确对齐。在此示例中，我们通过用 [`repeating-linear-gradient()`](/zh-CN/docs/Web/CSS/gradient/repeating-linear-gradient) 的方法，使用 `lh` 单位创建类似记事本的线条。无论文本的行高是多少，线条始终会从正确的位置开始。
+使用这些单位，我们可以将盒子的装饰与文本精确对齐。在此示例中，我们通过用 [`repeating-linear-gradient()`](/zh-CN/docs/Web/CSS/Reference/Values/gradient/repeating-linear-gradient) 的方法，使用 `lh` 单位创建类似记事本的线条。无论文本的行高是多少，线条始终会从正确的位置开始。
 
 ```css hidden
 body {
@@ -432,7 +432,7 @@ li {
 
 ### 颜色关键字
 
-你会在许多 MDN 代码示例中看到颜色关键字（或“命名颜色”）的使用。由于 [`<named-color>`](/zh-CN/docs/Web/CSS/named-color) 数据类型包含的颜色值数量非常有限，这些颜色通常不会在生产环境的网站中使用。由于关键字以人类可读的文本值表示颜色，因此在代码示例中使用命名颜色可以清楚地告诉用户预期的颜色是什么，从而使学习者能够专注于所教授的内容。
+你会在许多 MDN 代码示例中看到颜色关键字（或“命名颜色”）的使用。由于 [`<named-color>`](/zh-CN/docs/Web/CSS/Reference/Values/named-color) 数据类型包含的颜色值数量非常有限，这些颜色通常不会在生产环境的网站中使用。由于关键字以人类可读的文本值表示颜色，因此在代码示例中使用命名颜色可以清楚地告诉用户预期的颜色是什么，从而使学习者能够专注于所教授的内容。
 
 尝试在下面的实时示例中使用不同的颜色值，以更好地理解它们的工作原理：
 
@@ -505,7 +505,7 @@ li {
 
 ### RGB 值
 
-要直接创建 RGB 值，[`rgb()`](/zh-CN/docs/Web/CSS/color_value/rgb) 函数接受三个参数，分别表示颜色的**红**、**绿**和**蓝**通道值，还可以选择性地添加一个由斜杠（'/'）分隔的第四个参数来表示不透明度，其方式与十六进制值非常相似。RGB 的不同之处在于，每个通道不是由两个十六进制数字表示，而是由一个介于 0 到 255 之间的十进制数字或一个介于 0% 到 100% 之间的百分比表示（但不能混合使用两者）。
+要直接创建 RGB 值，[`rgb()`](/zh-CN/docs/Web/CSS/Reference/Values/color_value/rgb) 函数接受三个参数，分别表示颜色的**红**、**绿**和**蓝**通道值，还可以选择性地添加一个由斜杠（'/'）分隔的第四个参数来表示不透明度，其方式与十六进制值非常相似。RGB 的不同之处在于，每个通道不是由两个十六进制数字表示，而是由一个介于 0 到 255 之间的十进制数字或一个介于 0% 到 100% 之间的百分比表示（但不能混合使用两者）。
 
 让我们使用 RGB 颜色重写上一个示例：
 
@@ -586,23 +586,23 @@ li {
 
 ### 使用色相来指定颜色
 
-如果你不满足于仅使用关键字、十六进制和 `rgb()` 来定义颜色，可以尝试使用 [`<hue>`](/zh-CN/docs/Web/CSS/hue)。色相是让我们能够区分或比较颜色（如红色、橙色、黄色、绿色、蓝色等）的属性。关键在于，你可以使用 [`<angle>`](/zh-CN/docs/Web/CSS/angle) 来指定色相，因为大多数颜色模型都使用{{glossary("color wheel", "色环")}}来描述色相。
+如果你不满足于仅使用关键字、十六进制和 `rgb()` 来定义颜色，可以尝试使用 [`<hue>`](/zh-CN/docs/Web/CSS/Reference/Values/hue)。色相是让我们能够区分或比较颜色（如红色、橙色、黄色、绿色、蓝色等）的属性。关键在于，你可以使用 [`<angle>`](/zh-CN/docs/Web/CSS/Reference/Values/angle) 来指定色相，因为大多数颜色模型都使用{{glossary("color wheel", "色环")}}来描述色相。
 
-有几种颜色函数包含 [`<hue>`](/zh-CN/docs/Web/CSS/hue) 组件，例如 `hsl()`、`hwb()` 和 [`lch()`](/zh-CN/docs/Web/CSS/color_value/lch)。其他颜色函数，如 [`lab()`](/zh-CN/docs/Web/CSS/color_value/lab)，则基于人类视觉定义颜色。
+有几种颜色函数包含 [`<hue>`](/zh-CN/docs/Web/CSS/Reference/Values/hue) 组件，例如 `hsl()`、`hwb()` 和 [`lch()`](/zh-CN/docs/Web/CSS/Reference/Values/color_value/lch)。其他颜色函数，如 [`lab()`](/zh-CN/docs/Web/CSS/Reference/Values/color_value/lab)，则基于人类视觉定义颜色。
 
-如果你想了解更多关于这些函数和颜色空间的信息，请参阅[使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)指南、列出了 CSS 中所有颜色使用方式的 [`<color>`](/zh-CN/docs/Web/CSS/color_value) 参考文档，以及提供 CSS 中所有颜色类型和使用颜色值的属性概述的 [CSS 颜色模块](/zh-CN/docs/Web/CSS/CSS_colors)。
+如果你想了解更多关于这些函数和颜色空间的信息，请参阅[使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/Guides/Colors/Applying_color)指南、列出了 CSS 中所有颜色使用方式的 [`<color>`](/zh-CN/docs/Web/CSS/Reference/Values/color_value) 参考文档，以及提供 CSS 中所有颜色类型和使用颜色值的属性概述的 [CSS 颜色模块](/zh-CN/docs/Web/CSS/Guides/Colors)。
 
 ### HWB
 
-在 CSS 中使用色相的一个很好的起点是 [`hwb()`](/zh-CN/docs/Web/CSS/color_value/hwb) 函数，它指定了一个 `srgb()` 颜色。颜色的三个成分分别是：
+在 CSS 中使用色相的一个很好的起点是 [`hwb()`](/zh-CN/docs/Web/CSS/Reference/Values/color_value/hwb) 函数，它指定了一个 `srgb()` 颜色。颜色的三个成分分别是：
 
-- **色相（Hue）**：颜色的基本色调。它接受一个介于 0 到 360 之间的 [`<hue>`](/zh-CN/docs/Web/CSS/hue) 值，表示色轮上的角度。
+- **色相（Hue）**：颜色的基本色调。它接受一个介于 0 到 360 之间的 [`<hue>`](/zh-CN/docs/Web/CSS/Reference/Values/hue) 值，表示色轮上的角度。
 - **白度（Whiteness）**：颜色中有多少白色？它接受一个从 `0%`（无白色）到 `100%`（完全白色）的值。
 - **黑度（Blackness）**：颜色中有多少黑色？它接受一个从 `0%`（无黑色）到 `100%`（完全黑色）的值。
 
 ### HSL
 
-与 `hwb()` 函数类似的是 [`hsl()`](/zh-CN/docs/Web/CSS/color_value/hsl) 函数，它也指定了一个 `srgb()` 颜色。HSL 使用**色相**，以及**饱和度**和**亮度**：
+与 `hwb()` 函数类似的是 [`hsl()`](/zh-CN/docs/Web/CSS/Reference/Values/color_value/hsl) 函数，它也指定了一个 `srgb()` 颜色。HSL 使用**色相**，以及**饱和度**和**亮度**：
 
 - **色相（Hue）**
 - **饱和度（Saturation）**：颜色的饱和度是多少？它接受一个 0–100% 的值，其中 0 表示无颜色（会显示为灰色），100% 表示完全饱和的颜色。
@@ -681,7 +681,7 @@ li {
 
 ## 图像
 
-[`<image>`](/zh-CN/docs/Web/CSS/image) 值类型用于图像为有效值的任何地方。它可以是一个通过 `url()` 函数指向的实际图像文件，也可以是一个渐变。
+[`<image>`](/zh-CN/docs/Web/CSS/Reference/Values/image) 值类型用于图像为有效值的任何地方。它可以是一个通过 `url()` 函数指向的实际图像文件，也可以是一个渐变。
 
 在下面的例子中，我们演示了一个图像和一个渐变作为 CSS `background-image` 属性的值。
 
@@ -713,11 +713,11 @@ li {
 {{EmbedLiveSample("image", "", "380px")}}
 
 > [!NOTE]
-> 注意 `<image>` 还有一些其他可能的值，但是这些都是较新的，并且目前对浏览器的支持很差。如果你想进一步了解，请查看 [`<image>`](/zh-CN/docs/Web/CSS/image) 数据类型的 MDN 页面。
+> 注意 `<image>` 还有一些其他可能的值，但是这些都是较新的，并且目前对浏览器的支持很差。如果你想进一步了解，请查看 [`<image>`](/zh-CN/docs/Web/CSS/Reference/Values/image) 数据类型的 MDN 页面。
 
 ## 位置
 
-[`<position>`](/zh-CN/docs/Web/CSS/position_value) 值类型表示一组二维坐标，用于定位背景图像等元素（通过 [`background-position`](/zh-CN/docs/Web/CSS/background-position)）。它可以接受诸如 `top`、`left`、`bottom`、`right` 和 `center` 等关键字，将元素与二维盒子的特定边界对齐，同时还可以使用长度值来表示从盒子顶部和左侧边缘的偏移量。
+[`<position>`](/zh-CN/docs/Web/CSS/Reference/Values/position_value) 值类型表示一组二维坐标，用于定位背景图像等元素（通过 [`background-position`](/zh-CN/docs/Web/CSS/Reference/Properties/background-position)）。它可以接受诸如 `top`、`left`、`bottom`、`right` 和 `center` 等关键字，将元素与二维盒子的特定边界对齐，同时还可以使用长度值来表示从盒子顶部和左侧边缘的偏移量。
 
 一个典型的位置值由两个值组成。第一个值水平地设置位置，第二个值垂直地设置位置。如果只指定一个轴的值，另一个轴将默认为 `center`。
 
@@ -772,15 +772,15 @@ li {
 
 在编程中，函数是一段执行特定任务的代码。函数非常有用，因为你可以编写一次代码，然后多次重复使用它，而不必一遍又一遍地编写相同的逻辑。大多数编程语言不仅支持函数，还提供了方便的常用内置函数，因此你不必从头开始自己编写这些函数。
 
-CSS 也有[函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)，其工作方式与其他语言中的函数类似。事实上，我们在上面的[颜色](#颜色)部分已经看到了 CSS 函数，例如 [`rgb()`](/zh-CN/docs/Web/CSS/color_value/rgb) 和 [`hsl()`](/zh-CN/docs/Web/CSS/color_value/hsl) 函数。
+CSS 也有[函数](/zh-CN/docs/Web/CSS/Reference/Values/Functions)，其工作方式与其他语言中的函数类似。事实上，我们在上面的[颜色](#颜色)部分已经看到了 CSS 函数，例如 [`rgb()`](/zh-CN/docs/Web/CSS/Reference/Values/color_value/rgb) 和 [`hsl()`](/zh-CN/docs/Web/CSS/Reference/Values/color_value/hsl) 函数。
 
-除了应用颜色之外，你还可以使用 CSS 函数来完成许多其他任务。例如，[变换函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#变换函数)是一种常见的在页面上移动、旋转和缩放元素的方式。你可能会看到 [`translate()`](/zh-CN/docs/Web/CSS/transform-function/translate) 用于水平或垂直移动某物，[`rotate()`](/zh-CN/docs/Web/CSS/transform-function/rotate) 用于旋转某物，或者 [`scale()`](/zh-CN/docs/Web/CSS/transform-function/scale) 用于放大或缩小某物。
+除了应用颜色之外，你还可以使用 CSS 函数来完成许多其他任务。例如，[变换函数](/zh-CN/docs/Web/CSS/Reference/Values/Functions#变换函数)是一种常见的在页面上移动、旋转和缩放元素的方式。你可能会看到 [`translate()`](/zh-CN/docs/Web/CSS/Reference/Values/transform-function/translate) 用于水平或垂直移动某物，[`rotate()`](/zh-CN/docs/Web/CSS/Reference/Values/transform-function/rotate) 用于旋转某物，或者 [`scale()`](/zh-CN/docs/Web/CSS/Reference/Values/transform-function/scale) 用于放大或缩小某物。
 
 ### 数学函数
 
 在为项目创建样式时，你可能会从诸如 `300px` 的长度或 `200ms` 的持续时间等数值开始。如果你希望这些值基于其他值发生变化，则需要进行一些数学计算。你可以计算某个值的百分比或将一个数字与另一个数字相加，然后使用结果更新你的 CSS。
 
-CSS 支持[数学函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#数学函数)，它允许我们执行计算，而不是依赖于静态值或在 JavaScript 中进行计算。最常见的数学函数之一是 [`calc()`](/zh-CN/docs/Web/CSS/calc)，它允许你执行加法、减法、乘法和除法等操作。
+CSS 支持[数学函数](/zh-CN/docs/Web/CSS/Reference/Values/Functions#数学函数)，它允许我们执行计算，而不是依赖于静态值或在 JavaScript 中进行计算。最常见的数学函数之一是 [`calc()`](/zh-CN/docs/Web/CSS/Reference/Values/calc)，它允许你执行加法、减法、乘法和除法等操作。
 
 例如，假设我们希望将某个元素的宽度设置为其父容器宽度的 20% 加上 100px。我们无法使用静态值指定此宽度 —— 如果父容器使用百分比宽度（或诸如 `em` 或 `rem` 之类的相对单位），则它会根据使用环境以及其他因素（例如用户的设备或浏览器窗口宽度）而变化。但是，我们可以使用 `calc()` 将该元素的宽度设置为其父容器宽度的 20% 加上 100px。20% 基于父容器（`.wrapper`）的宽度，如果该宽度发生变化，计算结果也会随之变化：
 
@@ -805,7 +805,7 @@ CSS 支持[数学函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_func
 
 {{EmbedLiveSample("calc")}}
 
-CSS 中还有许多其他数学函数可供使用，例如 [`min()`](/zh-CN/docs/Web/CSS/min)、[`max()`](/zh-CN/docs/Web/CSS/max) 和 [`clamp()`](/zh-CN/docs/Web/CSS/clamp)；它们分别允许你从一组值中选择最小、最大或中间值。你还可以使用[三角函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#三角函数)，例如 [`sin()`](/zh-CN/docs/Web/CSS/sin)、[`cos()`](/zh-CN/docs/Web/CSS/cos) 和 [`tan()`](/zh-CN/docs/Web/CSS/tan)，来计算围绕某点旋转元素的角度，或选择以[色相角度](/zh-CN/docs/Web/CSS/hue)作为参数的颜色。当你需要对某物的移动和外观进行非常精细的控制时，[指数函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#指数函数)也可用于动画和过渡。
+CSS 中还有许多其他数学函数可供使用，例如 [`min()`](/zh-CN/docs/Web/CSS/Reference/Values/min)、[`max()`](/zh-CN/docs/Web/CSS/Reference/Values/max) 和 [`clamp()`](/zh-CN/docs/Web/CSS/Reference/Values/clamp)；它们分别允许你从一组值中选择最小、最大或中间值。你还可以使用[三角函数](/zh-CN/docs/Web/CSS/Reference/Values/Functions#三角函数)，例如 [`sin()`](/zh-CN/docs/Web/CSS/Reference/Values/sin)、[`cos()`](/zh-CN/docs/Web/CSS/Reference/Values/cos) 和 [`tan()`](/zh-CN/docs/Web/CSS/Reference/Values/tan)，来计算围绕某点旋转元素的角度，或选择以[色相角度](/zh-CN/docs/Web/CSS/Reference/Values/hue)作为参数的颜色。当你需要对某物的移动和外观进行非常精细的控制时，[指数函数](/zh-CN/docs/Web/CSS/Reference/Values/Functions#指数函数)也可用于动画和过渡。
 
 了解 CSS 函数非常有用，这样当你看到它们时就能识别出来。你应该开始在项目中尝试使用它们——它们将帮助你避免编写自定义或重复的代码来实现你可以通过常规 CSS 获得的结果。
 
@@ -815,9 +815,9 @@ CSS 中还有许多其他数学函数可供使用，例如 [`min()`](/zh-CN/docs
 
 ## 总结
 
-本文简要介绍了你可能会遇到的最常见的值和单位类型。你可以在 [CSS 值和单位](/zh-CN/docs/Web/CSS/CSS_values_and_units)模块页面上查看所有不同的类型——在学习这些课程的过程中，你会遇到许多这样的类型。
+本文简要介绍了你可能会遇到的最常见的值和单位类型。你可以在 [CSS 值和单位](/zh-CN/docs/Web/CSS/Guides/Values_and_units)模块页面上查看所有不同的类型——在学习这些课程的过程中，你会遇到许多这样的类型。
 
-需要记住的关键点是，每个属性都有一个定义好的允许值类型列表，而每个值类型都有一个定义来解释这些值是什么。然后，你可以在 MDN 上查找详细信息。例如，了解 [`<image>`](/zh-CN/docs/Web/CSS/image) 还允许你创建颜色渐变，这是很有用的，但这可能并不容易学习！
+需要记住的关键点是，每个属性都有一个定义好的允许值类型列表，而每个值类型都有一个定义来解释这些值是什么。然后，你可以在 MDN 上查找详细信息。例如，了解 [`<image>`](/zh-CN/docs/Web/CSS/Reference/Values/image) 还允许你创建颜色渐变，这是很有用的，但这可能并不容易学习！
 
 在下一篇文章中，我们将探讨 CSS 中项目的大小是如何确定的。
 

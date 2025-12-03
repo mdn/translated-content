@@ -7,7 +7,7 @@ slug: Web/SVG/Guides/Applying_SVG_effects_to_HTML_content
 
 Современные браузеры поддерживают [SVG](/ru/docs/Web/SVG) в стилях [CSS](/ru/docs/Web/CSS) для применения графических эффектов к HTML-контенту.
 
-Вы можете указать SVG в стилях как внутри одного документа, так и из внешней таблицы стилей. Есть 3 свойства, которые вы можете использовать: [`mask`](/ru/docs/Web/CSS/mask), [`clip-path`](/ru/docs/Web/CSS/clip-path), и [`filter`](/ru/docs/Web/CSS/filter).
+Вы можете указать SVG в стилях как внутри одного документа, так и из внешней таблицы стилей. Есть 3 свойства, которые вы можете использовать: [`mask`](/ru/docs/Web/CSS/mask), [`clip-path`](/ru/docs/Web/CSS/Reference/Properties/clip-path), и [`filter`](/ru/docs/Web/CSS/Reference/Properties/filter).
 
 > [!NOTE]
 > Ссылки на SVG во внешних файлах должны быть в том же самом источнике [same origin](/ru/docs/Web/Security/Same-origin_policy) , что и ссылочный документ.
@@ -129,7 +129,7 @@ function toggleRadius() {
 
 ### Пример: Фильтрация
 
-Это демонстрирует применение фильтра к содержимому HTML с помощью SVG. Он устанавливает несколько фильтров, которые применяются с CSS к трём элементам как в нормальном состоянии, так и при [hover](/ru/docs/Web/CSS/:hover) мыши.
+Это демонстрирует применение фильтра к содержимому HTML с помощью SVG. Он устанавливает несколько фильтров, которые применяются с CSS к трём элементам как в нормальном состоянии, так и при [hover](/ru/docs/Web/CSS/Reference/Selectors/:hover) мыши.
 
 ```html
 <p class="target" style="background: lime;">
@@ -229,7 +229,7 @@ pre.target:hover {
 
 ### Пример: размытый текст
 
-Чтобы размыть текст, браузеры, основанные на Webkit, имеют (префиксный) CSS-фильтр, называемый blur (см. Также [CSS filter](/ru/docs/Web/CSS/filter#blur%28%29_2)). Вы можете добиться такого же эффекта, используя фильтры SVG.
+Чтобы размыть текст, браузеры, основанные на Webkit, имеют (префиксный) CSS-фильтр, называемый blur (см. Также [CSS filter](/ru/docs/Web/CSS/Reference/Properties/filter#blur%28%29_2)). Вы можете добиться такого же эффекта, используя фильтры SVG.
 
 ```html
 <p class="blur">Time to clean my glasses</p>

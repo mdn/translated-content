@@ -29,7 +29,8 @@ slug: Web/Security/Same-origin_policy
 
 Например, `about:blank` часто используется в качестве URL новых, пустых окон в которые родительский скрипт записывает контент (например, с помощью {{domxref("Window.open()")}}). Если это окно также содержит JavaScript, то скрипт будет наследовать то же происхождение, что и его родитель.
 
-> **Предупреждение:** `data:` адреса получают новый, пустой, безопасный контекст.
+> [!WARNING]
+> `data:` адреса получают новый, пустой, безопасный контекст.
 
 ### Исключения в Internet Explorer
 
@@ -72,7 +73,7 @@ Here are some examples of resources which may be embedded cross-origin:
 - Images with {{htmlelement("img")}}. Supported image formats include PNG, JPEG, GIF, BMP, SVG, ...
 - Media files with {{htmlelement("video")}} and {{htmlelement("audio")}}.
 - Plug-ins with [`<object>`](/ru/docs/Web/HTML/Element/object), [`<embed>`](/ru/docs/Web/HTML/Reference/Elements/embed) and [`<applet>`](/ru/docs/HTML/Element/applet).
-- Fonts with [`@font-face`](/ru/docs/Web/CSS/@font-face). Some browsers allow cross-origin fonts, others require same-origin fonts.
+- Fonts with [`@font-face`](/ru/docs/Web/CSS/Reference/At-rules/@font-face). Some browsers allow cross-origin fonts, others require same-origin fonts.
 - Anything with [`<frame>`](/ru/docs/Web/HTML/Element/frame) and [`<iframe>`](/ru/docs/Web/HTML/Element/iframe). A site can use the [`X-Frame-Options`](/ru/docs/Web/HTTP/Headers/X-Frame-Options) header to prevent this form of cross-origin interaction.
 
 ### How to allow cross-origin access

@@ -88,7 +88,7 @@ MDN [CSS 학습지](/ko/docs/conflicting/Learn_web_development/Core/Styling_basi
   - [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout)
   - [CSS 선택자](/ko/docs/Web/CSS/CSS_selectors)
   - [미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries)
-  - [애니메이션](/ko/docs/Web/CSS/animation)
+  - [애니메이션](/ko/docs/Web/CSS/Reference/Properties/animation)
 
 ## 쿡북
 

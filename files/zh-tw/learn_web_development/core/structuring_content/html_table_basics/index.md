@@ -435,7 +435,7 @@ th {
 在我們繼續下去前，我們將要告訴你這節文章最後一個重點。HTML 有一個一次定義一整欄樣式資訊的方法 — **[`<col>`](/zh-TW/docs/Web/HTML/Reference/Elements/col)** **[`<colgroup>`](/zh-TW/docs/Web/HTML/Reference/Elements/colgroup)** 元素。These exist because it can be a bit annoying and inefficient having to specify styling on columns — you generally have to specify your styling information on _every_ `<td>` or `<th>` in the column, or use a complex selector such as {{cssxref(":nth-child()")}}.
 
 > [!NOTE]
-> Styling columns like this is [limited to a few properties](https://www.w3.org/TR/CSS22/tables.html#columns): [`border`](/zh-TW/docs/Web/CSS/border), [`background`](/zh-TW/docs/Web/CSS/background), [`width`](/zh-TW/docs/Web/CSS/width), and [`visibility`](/zh-TW/docs/Web/CSS/visibility). To set other properties you'll have to either style every `<td>` or `<th>` in the column, or use a complex selector such as {{cssxref(":nth-child()")}}.
+> Styling columns like this is [limited to a few properties](https://www.w3.org/TR/CSS22/tables.html#columns): [`border`](/zh-TW/docs/Web/CSS/Reference/Properties/border), [`background`](/zh-TW/docs/Web/CSS/Reference/Properties/background), [`width`](/zh-TW/docs/Web/CSS/Reference/Properties/width), and [`visibility`](/zh-TW/docs/Web/CSS/Reference/Properties/visibility). To set other properties you'll have to either style every `<td>` or `<th>` in the column, or use a complex selector such as {{cssxref(":nth-child()")}}.
 
 Take the following simple example:
 

@@ -20,7 +20,7 @@ L'utilisateur·ice peut se protéger en apprenant à utiliser son système d'exp
 
 ### Utilisez des navigateurs modernes et apprenez les réglages d'accessibilité
 
-Les navigateurs modernes prennent en charge la fonctionnalité CSS [`prefers-reduced-motion`](/fr/docs/Web/CSS/@media/prefers-reduced-motion). Ils peuvent détecter si l'utilisateur·ice a demandé une expérience avec moins d'animations, via une interface d'accessibilité comme illustré ci-dessous.
+Les navigateurs modernes prennent en charge la fonctionnalité CSS [`prefers-reduced-motion`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion). Ils peuvent détecter si l'utilisateur·ice a demandé une expérience avec moins d'animations, via une interface d'accessibilité comme illustré ci-dessous.
 
 ![Capture d'écran montrant comment désactiver les animations sur Android.](android-remove-animations.png)
 

@@ -73,7 +73,7 @@ function randomRGB() {
 }
 ```
 
-`random()` 関数は、2 つの数値を引数に取り、その間の範囲の乱数を返します。`randomRGB()` 関数は、[`rgb()`](/ja/docs/Web/CSS/color_value/rgb) 文字列として表されるランダムな色を生成します。
+`random()` 関数は、2 つの数値を引数に取り、その間の範囲の乱数を返します。`randomRGB()` 関数は、[`rgb()`](/ja/docs/Web/CSS/Reference/Values/color_value/rgb) 文字列として表されるランダムな色を生成します。
 
 ## プログラム用のボールを一つモデル化する
 

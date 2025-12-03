@@ -21,14 +21,14 @@ querySelectorAll(selectors);
 - `selectors`
   - : Une chaîne de caractères qui contient un ou plusieurs sélecteurs CSS. La chaîne de caractères doit être une chaîne de sélecteurs CSS valide&nbsp;; si ce n'est pas le cas, une exception `SyntaxError` est lancée.
 
-    Notez que la spécification HTML n'exige pas que les valeurs d'attribut soient des identifiants CSS valides. Si la valeur d'un attribut [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class) ou [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) n'est pas un identifiant CSS valide, vous devez l'échapper avant de l'utiliser dans un sélecteur, soit en appelant {{DOMxRef("CSS.escape_static", "CSS.escape()")}} sur la valeur, soit en utilisant l'une des techniques décrites dans [Échapper les caractères](/fr/docs/Web/CSS/ident#échapper_les_caractères). Voir [Échapper les valeurs d'attribut](#échapper_les_valeurs_dattribut) pour un exemple.
+    Notez que la spécification HTML n'exige pas que les valeurs d'attribut soient des identifiants CSS valides. Si la valeur d'un attribut [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class) ou [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) n'est pas un identifiant CSS valide, vous devez l'échapper avant de l'utiliser dans un sélecteur, soit en appelant {{DOMxRef("CSS.escape_static", "CSS.escape()")}} sur la valeur, soit en utilisant l'une des techniques décrites dans [Échapper les caractères](/fr/docs/Web/CSS/Reference/Values/ident#échapper_les_caractères). Voir [Échapper les valeurs d'attribut](#échapper_les_valeurs_dattribut) pour un exemple.
 
 ### Valeur de retour
 
 Une {{DOMxRef("NodeList")}} statique contenant un objet {{DOMxRef("Element")}} pour chaque élément qui correspond à au-moins un des sélecteurs spécifiés ou une {{DOMxRef("NodeList")}} vide si aucune correspondance n'est trouvée.
 
 > [!NOTE]
-> Si les `selectors` spécifiés contiennent un [pseudo-element CSS](/fr/docs/Web/CSS/Pseudo-elements), la liste retournée sera toujours vide.
+> Si les `selectors` spécifiés contiennent un [pseudo-element CSS](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements), la liste retournée sera toujours vide.
 
 ### Exceptions
 
@@ -58,7 +58,7 @@ const container = document.querySelector("#test");
 const matches = container.querySelectorAll("div.highlighted > p");
 ```
 
-Cet exemple utilise un [sélecteur d'attribut](/fr/docs/Web/CSS/Attribute_selectors) pour renvoyer une liste d'éléments {{HTMLElement("iframe")}} dans le document qui contient un attribut nommé `"data-src"`&nbsp;:
+Cet exemple utilise un [sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) pour renvoyer une liste d'éléments {{HTMLElement("iframe")}} dans le document qui contient un attribut nommé `"data-src"`&nbsp;:
 
 ```js
 const matches = document.querySelectorAll("iframe[data-src]");
@@ -87,7 +87,7 @@ highlightedItems.forEach(function (userItem) {
 
 ### Échapper les valeurs d'attribut
 
-Cet exemple montre que si un document HTML contient un [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) qui n'est pas un [identifiant CSS](/fr/docs/Web/CSS/ident) valide, il faut échapper la valeur de l'attribut avant de l'utiliser dans `querySelectorAll()`.
+Cet exemple montre que si un document HTML contient un [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) qui n'est pas un [identifiant CSS](/fr/docs/Web/CSS/Reference/Values/ident) valide, il faut échapper la valeur de l'attribut avant de l'utiliser dans `querySelectorAll()`.
 
 #### HTML
 
@@ -173,7 +173,7 @@ Cliquer sur le premier bouton génère une erreur, tandis que les deuxième et t
 ## Voir aussi
 
 - [Sélection et parcours de l'arbre DOM](/fr/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
-- Le guide des [Sélecteurs d'attribut](/fr/docs/Web/CSS/Attribute_selectors) CSS
+- Le guide des [Sélecteurs d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) CSS
 - [Apprendre&nbsp;: Sélecteurs d'attribut CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
 - Les méthodes {{DOMxRef("Element.querySelector()", "querySelector()")}} et {{DOMxRef("Element.querySelectorAll()", "querySelectorAll()")}} de l'interface `Element`
 - La méthode {{DOMxRef("Document.querySelector()", "querySelector()")}} de l'interface `Document`

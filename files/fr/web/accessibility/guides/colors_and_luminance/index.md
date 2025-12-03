@@ -18,7 +18,7 @@ Le choix des couleurs et leur utilisation est un aspect majeur de l'accessibilit
 
 L'environnement compte. La perception d'une couleur dans une pièce bien éclairée sera différente de la perception de cette même couleur sur le même écran d'ordinateur dans une pièce sombre. En matière d'accessibilité, certaines combinaisons de couleurs ont plus d'impact que d'autres. La taille de la police, le [style de police <sup>(angl.)</sup>](https://www.nngroup.com/articles/glanceable-fonts/) (certaines polices sont si fines ou fantaisistes qu'elles posent des problèmes d'accessibilité à elles seules), la couleur de fond, la taille de l'espace autour du texte, voire la densité de pixels, influent sur la façon dont la couleur est restituée à l'écran.
 
-La distance de l'utilisateur·ice à l'écran, l'environnement ambiant, la santé de ses yeux, etc., influent aussi sur la façon dont la couleur est perçue. La perception de la couleur après qu'elle a atteint les yeux dépend aussi de la santé générale. Heureusement, il existe des [requêtes médias](/fr/docs/Web/CSS/@media) qui permettent aux développeur·euse·s de proposer des styles adaptés aux préférences utilisateur·ice·s, notamment pour le [contraste](/fr/docs/Web/CSS/@media/prefers-contrast) et le [schéma de couleurs](/fr/docs/Web/CSS/@media/prefers-color-scheme).
+La distance de l'utilisateur·ice à l'écran, l'environnement ambiant, la santé de ses yeux, etc., influent aussi sur la façon dont la couleur est perçue. La perception de la couleur après qu'elle a atteint les yeux dépend aussi de la santé générale. Heureusement, il existe des [requêtes médias](/fr/docs/Web/CSS/Reference/At-rules/@media) qui permettent aux développeur·euse·s de proposer des styles adaptés aux préférences utilisateur·ice·s, notamment pour le [contraste](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast) et le [schéma de couleurs](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme).
 
 Lorsque c'est pris en charge, l'interface [Ambient Light Sensor](/fr/docs/Web/API/AmbientLightSensor) retourne le niveau de lumière ambiante autour de l'appareil, permettant à une page web de détecter tout changement d'intensité lumineuse et d'ajuster le texte en conséquence. De plus, les requêtes médias ci-dessus permettent de proposer des expériences alternatives lorsque les préférences utilisateur·ice·s indiquent un niveau de contraste préféré, en ajustant automatiquement selon l'emplacement et le type d'écran utilisé.
 
@@ -36,11 +36,11 @@ Lorsque vous travaillez avec la couleur, il est important de savoir dans quel «
 
 En impression couleur, votre imprimante utilise probablement des cartouches cyan, magenta, jaune et noir (<abbr>CMJN</abbr>). Le modèle CMJN est soustractif&nbsp;: les quatre encres _retirent_ certaines longueurs d'onde de la lumière, ne réfléchissant que la plage étroite qui leur est associée. Le modèle RVB est additif et ajoute différentes proportions de lumières rouge, verte et bleue.
 
-Actuellement, l'espace {{glossary("RGB", "RVB")}} domine dans le développement web. Bien que les espaces HEX, RVB et HSL aient des notations différentes, les navigateurs convertissent automatiquement les valeurs entre ces notations. Les [modules de couleurs CSS](/fr/docs/Web/CSS/CSS_colors) fournissent d'autres espaces colorimétriques. Cependant, en raison de la domination actuelle de l'espace RVB pour mesurer la couleur à l'écran, la plupart des calculs de ce document sont supposés être en RVB, et plus précisément en sRGB.
+Actuellement, l'espace {{glossary("RGB", "RVB")}} domine dans le développement web. Bien que les espaces HEX, RVB et HSL aient des notations différentes, les navigateurs convertissent automatiquement les valeurs entre ces notations. Les [modules de couleurs CSS](/fr/docs/Web/CSS/Guides/Colors) fournissent d'autres espaces colorimétriques. Cependant, en raison de la domination actuelle de l'espace RVB pour mesurer la couleur à l'écran, la plupart des calculs de ce document sont supposés être en RVB, et plus précisément en sRGB.
 
 ## L'espace colorimétrique sRGB
 
-La couleur peut être définie de nombreuses façons, comme le montre le [type de données `<color>`](/fr/docs/Web/CSS/color_value), incluant RVB, RVB décimal, RVB pourcentage, HSL, HWB, LCH, Lab, et CMJN, entre autres.
+La couleur peut être définie de nombreuses façons, comme le montre le [type de données `<color>`](/fr/docs/Web/CSS/Reference/Values/color_value), incluant RVB, RVB décimal, RVB pourcentage, HSL, HWB, LCH, Lab, et CMJN, entre autres.
 
 Pour le numérique, la plupart des technologies reposent historiquement sur l'espace colorimétrique RVB. Le modèle RVB est étendu pour inclure l'«&nbsp;alpha&nbsp;» — RGBA — afin de spécifier l'opacité d'une couleur. D'autres méthodes de mesure de la couleur utilisent d'autres espaces colorimétriques, désormais pris en charge par les écrans et navigateurs modernes. Cependant, les mesures de couleur dans l'espace RVB prédominent, notamment dans la production vidéo.
 
@@ -95,7 +95,7 @@ color: color(xyz-d65 0.59 0.28 0.96);
 color: color(xyz-d65 0.59 0.28 0.96 / 1);
 ```
 
-Le premier exemple utilise l'une des [couleurs nommées](/fr/docs/Web/CSS/named-color) définies.
+Le premier exemple utilise l'une des [couleurs nommées](/fr/docs/Web/CSS/Reference/Values/named-color) définies.
 
 On peut définir les valeurs sRVB directement en pourcentage, 0% correspondant à l'absence (noir) et 100% à la valeur maximale pour cette couleur. Les valeurs sont dans l'ordre rouge, vert, bleu. On peut aussi définir les valeurs sRVB directement par un nombre de 0 à 255.
 
@@ -103,7 +103,7 @@ Viennent ensuite les valeurs hexadécimales. L'hexadécimal est un système de n
 
 Si toutes les valeurs sont des paires de chiffres identiques, la valeur peut être représentée par un seul chiffre que le navigateur dupliquera. Ainsi, `f00` équivaut à `ff0000`. Si un quatrième groupe de chiffres est présent, cette valeur correspond au A de RGBA, le canal alpha qui définit la transparence en termes d'opacité de la couleur. Une valeur plus élevée signifie que la couleur est plus opaque et donc moins transparente. Dans les exemples ci‑dessus, la valeur alpha est `f`, `ff`, `1` et `100%` pour une opacité totale.
 
-L'exemple montre aussi la syntaxe héritée pour [`rgb()` et `rgba()`](/fr/docs/Web/CSS/color_value/rgb#exemples). La syntaxe héritée des fonctions de couleur est séparée par des virgules, avec une fonction distincte lorsque le canal alpha est inclus. Les nouvelles fonctions de couleur n'ont qu'une seule syntaxe avec des valeurs séparées par des espaces (plutôt que par des virgules), le canal alpha, s'il est présent, étant précédé d'une barre oblique. La syntaxe moderne permet de mélanger nombres et pourcentages et prend en charge le mot‑clé `none`&nbsp;; la syntaxe héritée séparée par des virgules ne le permet pas.
+L'exemple montre aussi la syntaxe héritée pour [`rgb()` et `rgba()`](/fr/docs/Web/CSS/Reference/Values/color_value/rgb#exemples). La syntaxe héritée des fonctions de couleur est séparée par des virgules, avec une fonction distincte lorsque le canal alpha est inclus. Les nouvelles fonctions de couleur n'ont qu'une seule syntaxe avec des valeurs séparées par des espaces (plutôt que par des virgules), le canal alpha, s'il est présent, étant précédé d'une barre oblique. La syntaxe moderne permet de mélanger nombres et pourcentages et prend en charge le mot‑clé `none`&nbsp;; la syntaxe héritée séparée par des virgules ne le permet pas.
 
 Les exemples suivants montrent «&nbsp;HSL&nbsp;», qui signifie _Teinte, Saturation et Luminosité_. Les valeurs de couleur HSL sont considérées par beaucoup comme plus intuitives que les valeurs RVB. La couleur produite à partir de ces réglages reste dans l'espace colorimétrique sRVB, mais {{CSSXRef("color_value/hsl", "hsl()")}} est une syntaxe intuitive pour beaucoup. La teinte est ajustée comme un angle, et il est facile de créer une interface utilisateur avec un bouton rotatif ou un contrôle circulaire pour ajuster la teinte. Notez que les couleurs HSL intègrent la _luminosité_, et non la _luminance_, ce qui est une distinction importante.
 
@@ -121,7 +121,7 @@ Outre les outils de développement, de nombreux utilitaires peuvent convertir le
 
 ![Sélecteur de couleurs avec HSL et RGB et valeurs de contraste.](microcolorsc.jpg)
 
-Comme indiqué précédemment, le [module de couleurs CSS](/fr/docs/Web/CSS/CSS_colors) intègre d'autres espaces colorimétriques, notamment la notation fonctionnelle {{CSSXRef("color_value/lch", "lch()")}} et{{CSSXRef("color_value/oklch", "oklch()")}}, ainsi que les systèmes de coordonnées de couleur {{CSSXRef("color_value/lab", "lab()")}} et {{CSSXRef("color_value/oklab", "oklab()")}}, qui peuvent décrire n'importe quelle couleur visible. Cela dit, sRGB reste l'espace colorimétrique par défaut et préféré pour l'accessibilité en raison de sa large diffusion.
+Comme indiqué précédemment, le [module de couleurs CSS](/fr/docs/Web/CSS/Guides/Colors) intègre d'autres espaces colorimétriques, notamment la notation fonctionnelle {{CSSXRef("color_value/lch", "lch()")}} et{{CSSXRef("color_value/oklch", "oklch()")}}, ainsi que les systèmes de coordonnées de couleur {{CSSXRef("color_value/lab", "lab()")}} et {{CSSXRef("color_value/oklab", "oklab()")}}, qui peuvent décrire n'importe quelle couleur visible. Cela dit, sRGB reste l'espace colorimétrique par défaut et préféré pour l'accessibilité en raison de sa large diffusion.
 
 En matière d'accessibilité, les normes et recommandations sont cependant rédigées majoritairement en se basant sur l'espace colorimétrique sRGB, en particulier pour les rapports de contraste de couleur.
 
@@ -218,7 +218,7 @@ L'adaptation à l'obscurité (face à une faible luminance) est lente. Lorsque v
 
 L'adaptation à la lumière est l'inverse. Passer d'une pièce sombre à une lumière solaire intense est plus rapide, mais cela peut aussi être douloureux.
 
-Les développeur·euse·s web qui cherchent à améliorer la lisibilité du texte lorsque les conditions d'éclairage ambiant d'une pièce ont changé peuvent tirer parti de l'interface `AmbientLightSensor` et de la requête média [`prefers-contrast`](/fr/docs/Web/CSS/@media/prefers-contrast).
+Les développeur·euse·s web qui cherchent à améliorer la lisibilité du texte lorsque les conditions d'éclairage ambiant d'une pièce ont changé peuvent tirer parti de l'interface `AmbientLightSensor` et de la requête média [`prefers-contrast`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast).
 
 ## Saturation
 
@@ -228,7 +228,7 @@ La saturation est parfois décrite comme la «&nbsp;pureté&nbsp;» ou l'«&nbsp
 
 Sur un écran, les couleurs saturées correspondent à des longueurs d'onde particulières. La définition de la saturation varie selon l'espace colorimétrique, mais la saturation se mesure facilement. L'important est de connaître l'espace colorimétrique utilisé et d'être prêt·e à le convertir si nécessaire.
 
-Les espaces colorimétriques les plus souvent considérés pour la photosensibilité sont RVB, HSL et HSV (aussi appelé HSB). L'espace HSV, qui signifie _hue_, _saturation_ et _value_, et le synonyme HSB, qui signifie _hue_, _saturation_ et _brightness_, sont représentés en CSS par [`hwb()`](/fr/docs/Web/CSS/color_value/hwb) pour _hue_, _whiteness_ et _blackness_.
+Les espaces colorimétriques les plus souvent considérés pour la photosensibilité sont RVB, HSL et HSV (aussi appelé HSB). L'espace HSV, qui signifie _hue_, _saturation_ et _value_, et le synonyme HSB, qui signifie _hue_, _saturation_ et _brightness_, sont représentés en CSS par [`hwb()`](/fr/docs/Web/CSS/Reference/Values/color_value/hwb) pour _hue_, _whiteness_ et _blackness_.
 
 Il est important de savoir dans quel espace colorimétrique vous travaillez. Par exemple, les couleurs saturées ont une _luminosité_ (<i lang="en">lightness</i>) de `0.5` en HSL, tandis qu'en HWB elles ont une valeur `1`. La saturation dans l'espace RVB est généralement indiquée par une valeur RVB de `255` ou `100%` pour la couleur considérée. Par exemple, un rouge saturé de valeur hexadécimale `#ff0000` correspond à `rgb(255 0 0)` et à `hsl(0 100% 50%)`. Un autre rouge saturé de valeur hexadécimale `#ff3300` correspond à `rgb(255 51 0)` et à `hsl(12 100% 50%)`. Ce sont tous deux des rouges «&nbsp;saturés&nbsp;». Ils représentent deux «&nbsp;teintes&nbsp;» différentes mais sont tous deux considérés comme des couleurs saturées.
 

@@ -77,7 +77,7 @@ l10n:
 
 - **:has-slotted CSS 擬似クラス:** `layout.css.has-slotted-selector.enabled`。
 
-  {{CSSXRef(":has-slotted")}} [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes) は、[ウェブコンポーネント](/ja/docs/Web/API/Web_components) をレンダリングするときに {{HTMLElement("slot")}} 要素へ追加したコンテンツがある {{HTMLElement("template")}} 内の要素へスタイルを設定するために使用します ([Firefox bug 1921747](https://bugzil.la/1921747))。
+  {{CSSXRef(":has-slotted")}} [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes) は、[ウェブコンポーネント](/ja/docs/Web/API/Web_components) をレンダリングするときに {{HTMLElement("slot")}} 要素へ追加したコンテンツがある {{HTMLElement("template")}} 内の要素へスタイルを設定するために使用します ([Firefox bug 1921747](https://bugzil.la/1921747))。
 
 ## 過去のバージョン
 

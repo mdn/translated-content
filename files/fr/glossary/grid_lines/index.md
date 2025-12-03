@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 13839b2979cc244034ffb1fe243240778b0cd23f
 ---
 
-Les **lignes de grille** sont créées chaque fois que vous utilisez une [grille CSS](/fr/docs/Web/CSS/CSS_grid_layout).
+Les **lignes de grille** sont créées chaque fois que vous utilisez une [grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout).
 
 ## Exemple
 
@@ -54,7 +54,7 @@ Dans l'exemple suivant, il y a une grille avec trois pistes de colonnes et deux 
 
 {{EmbedLiveSample("Exemple", 500, 250)}}
 
-Les lignes peuvent être adressées en utilisant leur numéro de ligne. Dans une langue de gauche à droite telle que l'anglais, la ligne de colonne 1 sera sur la gauche de la grille, la ligne de ligne 1 en haut. Les chiffres des lignes respectent le [mode d'écriture](/fr/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes) du document et ainsi, dans une langue écrite de droite à gauche par exemple, la ligne de colonne 1 sera sur la droite de la grille. L'image ci-dessous montre les numéros de ligne de la grille, en supposant que la langue est écrite de gauche à droite.
+Les lignes peuvent être adressées en utilisant leur numéro de ligne. Dans une langue de gauche à droite telle que l'anglais, la ligne de colonne 1 sera sur la gauche de la grille, la ligne de ligne 1 en haut. Les chiffres des lignes respectent le [mode d'écriture](/fr/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes) du document et ainsi, dans une langue écrite de droite à gauche par exemple, la ligne de colonne 1 sera sur la droite de la grille. L'image ci-dessous montre les numéros de ligne de la grille, en supposant que la langue est écrite de gauche à droite.
 
 ![Diagram showing the grid with lines numbered.](1_diagram_numbered_grid_lines.png)
 
@@ -170,8 +170,8 @@ Les lignes créées dans la grille explicite peuvent être nommées, en ajoutant
   - {{CSSxRef("grid-row-end")}}
   - {{CSSxRef("grid-row")}}
 - Guides sur la mise en page en grille CSS&nbsp;:
-  - [Concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-  - [Placement sur les lignes avec CSS grid](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-  - [Utiliser des lignes nommées sur une grille](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
-  - [Grilles CSS, valeurs logiques et modes d'écriture](/fr/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
+  - [Concepts de base des grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+  - [Placement sur les lignes avec CSS grid](/fr/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+  - [Utiliser des lignes nommées sur une grille](/fr/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)
+  - [Grilles CSS, valeurs logiques et modes d'écriture](/fr/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes)
 - [Définition des lignes de grille dans la spécification CSS Grid Layout <sup>(angl.)</sup>](https://drafts.csswg.org/css-grid/#grid-line-concept)

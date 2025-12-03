@@ -98,7 +98,7 @@ L'attribut `placeholder` est une chaîne de caractères fournissant une courte i
 Si le contenu du contrôle respecte une directionnalité donnée ([LTR](/fr/docs/Glossary/LTR) ou [RTL](/fr/docs/Glossary/RTL)) et que le texte indicatif doit être présenté dans l'autre sens, il est possible d'utiliser l'algorithme de formatage bidirectionnel Unicode — voir [Comment utiliser les contrôles Unicode pour le texte bidirectionnel (en anglais)](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus de détails.
 
 > [!NOTE]
-> On évitera, tant que faire se peut, d'utiliser l'attribut `placeholder`, car il n'est pas sémantiquement très utile pour expliquer le formulaire et car il peut causer certains problèmes avec le contenu. Voir [Utilisation de libellés](/fr/docs/Web/HTML/Reference/Elements/input#utilisation_de_libell%c3%a9s) pour plus d'informations.
+> On évitera, tant que faire se peut, d'utiliser l'attribut `placeholder`, car il n'est pas sémantiquement très utile pour expliquer le formulaire et car il peut causer certains problèmes avec le contenu. Voir [Utilisation de libellés](/fr/docs/Web/HTML/Reference/Elements/input#utilisation_de_libellés) pour plus d'informations.
 
 ### `readonly`
 
@@ -294,7 +294,7 @@ input:valid + span:after {
 }
 ```
 
-Ici, on a utilisé les pseudo-classes [`:invalid`](/fr/docs/Web/CSS/:invalid) et [`:valid`](/fr/docs/Web/CSS/:valid) afin d'afficher une icône selon le cas, à côté de l'élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) adjacent. On utilise un élément `<span>` séparé pour plus de flexibilité&nbsp;: certains navigateurs n'affichent pas le contenu généré par les pseudo-classes pour certains types de contrôle (cf. [`<input type="date">`](/fr/docs/Web/HTML/Reference/Elements/input/date#validation)).
+Ici, on a utilisé les pseudo-classes [`:invalid`](/fr/docs/Web/CSS/Reference/Selectors/:invalid) et [`:valid`](/fr/docs/Web/CSS/Reference/Selectors/:valid) afin d'afficher une icône selon le cas, à côté de l'élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) adjacent. On utilise un élément `<span>` séparé pour plus de flexibilité&nbsp;: certains navigateurs n'affichent pas le contenu généré par les pseudo-classes pour certains types de contrôle (cf. [`<input type="date">`](/fr/docs/Web/HTML/Reference/Elements/input/date#validation)).
 
 > [!WARNING]
 > La validation des données des formulaires par le navigateur (côté client) doit toujours être complétée d'une validation des données côté serveur (l'utilisatrice ou l'utilisateur peut toujours modifier le HTML et envoyer les données au serveur).

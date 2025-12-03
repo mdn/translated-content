@@ -15,7 +15,7 @@ l10n:
 
 ### CSS
 
-- [`conic-gradient()`](/ja/docs/Web/CSS/gradient/conic-gradient)、[`linear-gradient()`](/ja/docs/Web/CSS/gradient/linear-gradient)、[`radial-gradient()`](/ja/docs/Web/CSS/gradient/radial-gradient) 関数で作成するグラデーション、および繰り返しのグラデーションの [`repeating-conic-gradient()`](/ja/docs/Web/CSS/gradient/repeating-conic-gradient)、[`repeating-linear-gradient()`](/ja/docs/Web/CSS/gradient/repeating-linear-gradient)、[`repeating-radial-gradient()`](/ja/docs/Web/CSS/gradient/repeating-radial-gradient) 関数で、[`<color-interpolation-method>`](/ja/docs/Web/CSS/color-interpolation-method) の使用をサポートしました ([Firefox bug 1861363](https://bugzil.la/1861363))。
+- [`conic-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/conic-gradient)、[`linear-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/linear-gradient)、[`radial-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/radial-gradient) 関数で作成するグラデーション、および繰り返しのグラデーションの [`repeating-conic-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient)、[`repeating-linear-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/repeating-linear-gradient)、[`repeating-radial-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/repeating-radial-gradient) 関数で、[`<color-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/color-interpolation-method) の使用をサポートしました ([Firefox bug 1861363](https://bugzil.la/1861363))。
 
 ### JavaScript
 
@@ -82,7 +82,7 @@ l10n:
 
 - **相対的な色で `calc()` カラーチャンネルをサポート:** `layout.css.relative-color-syntax.enabled`。
 
-  CSS の [`calc()`](/ja/docs/Web/CSS/calc) 関数で、[相対的な色](/ja/docs/Web/CSS/CSS_colors/Relative_colors#using_math_functions) のカラーチャンネルを解析できるようになりました ([Firefox bug 1889561](https://bugzil.la/1889561))。
+  CSS の [`calc()`](/ja/docs/Web/CSS/Reference/Values/calc) 関数で、[相対的な色](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors#using_math_functions) のカラーチャンネルを解析できるようになりました ([Firefox bug 1889561](https://bugzil.la/1889561))。
 
 - **JavaScript `Float16Array` 型付き配列**: `javascript.options.experimental.float16array`。
 

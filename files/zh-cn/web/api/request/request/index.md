@@ -33,15 +33,14 @@ new Request(input, options)
     - `cache`: 请求中想要使用的 [cache mode](/zh-CN/docs/Web/API/Request/cache)
     - `redirect`: 对重定向处理的模式： `follow`, `error`, or `manual`。在 Chrome 中，Chrome 47 之前的版本默认值为 `manual`，自 Chrome 47 起，默认值为 `follow`。
     - `referrer`: 一个指定了`no-referrer`, `client`, 或一个 URL 的 {{domxref("USVString")}} 。默认值是`about:client`。
-    - `integrity`: 包括请求的 [subresource integrity](/zh-CN/docs/Web/Security/Subresource_Integrity) 值 (e.g., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
+    - `integrity`: 包括请求的 [subresource integrity](/zh-CN/docs/Web/Security/Defenses/Subresource_Integrity) 值 (e.g., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
 
-## Errors
+## 异常
 
-| **Type**  | **Description**                                                                                                                                              |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| TypeError | 自 [Firefox 43](/zh-CN/docs/Mozilla/Firefox/Releases/43)后，若 URL 有 credentials，`Request()` 会抛出 TypeError , 例如 `http://user:password\@example.com`。 |
+- `TypeError`
+  - : URL 带有凭据（例如 `http://user:password@example.com`），或无法解析。
 
-## Example
+## 示例
 
 在我们的获取请求示例 [Fetch Request example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request) (see [Fetch Request live](https://mdn.github.io/fetch-examples/fetch-request/)) 中，我们使用构造函数创建一个新的`Request`对象，然后使用 {{domxref("GlobalFetch.fetch")}} 发送请求。由于我们正在获取图像，我们在响应上运行 {{domxref("Body.blob")}} 以为其提供正确的 MIME 类型，以便对其进行正确处理，然后为其创建一个 Object URL，并将其显示在 {{htmlelement("img")}} 元素中。
 

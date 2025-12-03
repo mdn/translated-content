@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 13839b2979cc244034ffb1fe243240778b0cd23f
 ---
 
-Une **zone de grille** se compose d'une ou plusieurs {{Glossary("grid cell", "cellules de grille")}} formant une zone rectangulaire sur la grille. Les zones de grille sont créées lors du placement d'un élément en utilisant [le placement basé sur les lignes](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement) ou lors de la définition de zones avec [les zones de grille nommées](/fr/docs/Web/CSS/CSS_grid_layout/Grid_template_areas).
+Une **zone de grille** se compose d'une ou plusieurs {{Glossary("grid cell", "cellules de grille")}} formant une zone rectangulaire sur la grille. Les zones de grille sont créées lors du placement d'un élément en utilisant [le placement basé sur les lignes](/fr/docs/Web/CSS/Guides/Grid_layout/Line-based_placement) ou lors de la définition de zones avec [les zones de grille nommées](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas).
 
 ![Un schéma illustrant une zone de grille en vert turquoise sur une grille quadrillée.](1_grid_area.png)
 
@@ -75,6 +75,6 @@ Dans l'exemple qui suit, on a un conteneur de grille avec deux éléments de gri
 ### Pour aller plus loin
 
 - Guide de mise en page en grille CSS&nbsp;:
-  - [Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-  - [Définir des zones sur une grille](/fr/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+  - [Les concepts de base des grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+  - [Définir des zones sur une grille](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)
 - [La définition des zones de grille dans le module de spécification sur les grilles CSS <sup>(angl.)</sup>](https://drafts.csswg.org/css-grid/#grid-area-concept)

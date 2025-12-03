@@ -1,0 +1,202 @@
+---
+title: max-block-size
+slug: Web/CSS/Reference/Properties/max-block-size
+original_slug: Web/CSS/max-block-size
+l10n:
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+---
+
+**`max-block-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("writing-mode")}} で指定された書字方向とは逆の向きの要素の最大寸法を指定します。すなわち、書字方向が水平 (横書き) であれば、 `max-block-size` は {{cssxref("max-height")}} と等価になります。書字方向が垂直 (縦書き) であれば、 `max-block-size` は {{cssxref("max-width")}} と同じになります。
+
+もう一方の方向の最大長は、 {{cssxref("max-inline-size")}} プロパティを使用して指定します。
+
+`max-width` は常に水平方向の寸法に使われ、 `max-height` は常に垂直方向の寸法に使われるため、このプロパティはテキストコンテンツの寸法に基づいて寸法を設定する必要がある場合、書字方向を意識して指定する必要がある場合に便利です。
+
+ふつう `max-height` または `max-width` を使用する場面でいつでも、代わりに `max-block-size` をコンテンツの最大の「高さ」を設定するために使用し (これは垂直の値ではない可能性がありますが)、 `max-inline-size`をコンテンツの最大の「幅」を設定するために使用してください (これが横書きではなく縦書きである場合であっても)。様々な書字方向を表す [`writing-mode` の例](/ja/docs/Web/CSS/Reference/Properties/writing-mode#例)を参照してください。
+
+{{InteractiveExample("CSS デモ: max-block-size")}}
+
+```css interactive-example-choice
+max-block-size: 150px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+max-block-size: 150px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+max-block-size: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+max-block-size: 75%;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    このボックスは、ブロック軸の最大サイズを変更することができます。<br />
+    これにより、ブロック方向のサイズが制限され、オーバーフローが発生する可能性があります。
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
+
+## 構文
+
+```css
+/* <length> 値 */
+max-block-size: 300px;
+max-block-size: 25em;
+max-block-size: anchor-size(--myAnchor self-inline, 250px);
+max-block-size: calc(anchor-size(width) / 2);
+
+/* <percentage> 値 */
+max-block-size: 75%;
+
+/* キーワード値 */
+max-block-size: none;
+max-block-size: max-content;
+max-block-size: min-content;
+max-block-size: fit-content;
+max-block-size: fit-content(20em);
+
+/* グローバル値 */
+max-block-size: inherit;
+max-block-size: initial;
+max-block-size: revert;
+max-block-size: revert-layer;
+max-block-size: unset;
+```
+
+### 値
+
+`max-block-size` プロパティの値は、 {{cssxref("max-width")}} および {{cssxref("max-height")}} プロパティで有効なすべての値を取ることができます。
+
+- {{cssxref("&lt;length&gt;")}}
+  - : `max-block-size` を絶対的な値で定義します。
+- {{cssxref("&lt;percentage&gt;")}}
+  - : `max-block-size` を包含ブロックの幅に対するパーセント値で定義します。
+- `none`
+  - : ボックスの寸法を制限しません。
+- `max-content`
+  - : コンテンツが推奨する `max-block-size` です。
+- `min-content`
+  - : コンテンツの最小の `max-block-size` です。
+- `fit-content`
+  - : 利用可能な空間を使用しますが、 [max-content](/ja/docs/Web/CSS/Reference/Values/max-content) よりも大きくはなりません。つまり、 `min(max-content, max(min-content, stretch))` です。
+- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
+  - : 利用可能な空白を指定された引数で置き換えた `fit-content` 式を使用します。すなわち、 `min(max-content, max(min-content, 引数))` です。
+
+### 書字方向が方向にどう影響するのか
+
+`writing-mode` の値は次のように `max-block-size` から `max-width` または `max-height` への対応付けに影響します。
+
+| `writing-mode` の値                                                       | `max-block-size` が等価になるもの |
+| ------------------------------------------------------------------------- | --------------------------------- |
+| `horizontal-tb`, `lr`, `lr-tb`, `rl`, `rb`, `rb-rl`                       | {{cssxref("max-height")}}         |
+| `vertical-rl`, `vertical-lr`, `sideways-rl`, `sideways-lr`, `tb`, `tb-rl` | {{cssxref("max-width")}}          |
+
+> [!NOTE]
+> `writing-mode` の値のうち `sideways-lr` および `sideways-rl` は設計プロセスの後期に CSS 書字方向s Level 3 仕様書から削除されました。これらは Level 4 で復活する可能性があります。
+
+> [!NOTE]
+> 書字方向の `lr`, `lr-tb`, `rl`, `rb`, `rb-tl` は {{Glossary("HTML")}} のコンテキストでは許可されなくなりました。 {{Glossary("SVG")}} 1.x コンテキストでのみ利用できる可能性があります。
+
+## 公式定義
+
+{{CSSInfo}}
+
+## 形式文法
+
+{{csssyntax}}
+
+## 例
+
+### 横書きおよび縦書きでの max-block-size の設定
+
+この例では、同じテキスト ([Herman Melville](https://en.wikipedia.org/wiki/Herman_Melville) の小説 _[Moby-Dick](https://en.wikipedia.org/wiki/Moby-Dick)_ の冒頭部分) が `horizontal-tb` および `vertical-rl` の両方の書字方向で表示されます。
+
+二つのボックスついてそれ以外の部分はすべて、 {{cssxref("max-block-size")}} に使われている値を含めて同じです。
+
+#### HTML
+
+この HTML では、単純に二つの {{HTMLElement("div")}} ブロックを作成し、それぞれの {{cssxref("writing-mode")}} を `horizontal` および `vertical` クラスを用いて設定しています。両方のボックスで `standard-box` クラスを共有しており、こちらで単純に色、パディング、それぞれの `max-block-size` の値を設定しています。
+
+```html
+<p>書字方向 <code>horizontal-tb</code> (既定値):</p>
+<div class="standard-box horizontal">
+  Call me Ishmael. Some years ago—never mind how long precisely—having little or
+  no money in my purse, and nothing particular to interest me on shore, I
+  thought I would sail about a little and see the watery part of the world. It
+  is a way I have of driving off the spleen and regulating the circulation.
+</div>
+
+<p>書字方向 <code>vertical-rl</code>:</p>
+<div class="standard-box vertical">
+  Call me Ishmael. Some years ago—never mind how long precisely—having little or
+  no money in my purse, and nothing particular to interest me on shore, I
+  thought I would sail about a little and see the watery part of the world. It
+  is a way I have of driving off the spleen and regulating the circulation.
+</div>
+```
+
+#### CSS
+
+この CSS では3つのクラスを定義しています。最初は `standard-box` で、両方のボックスに適用され、上にあるものです。これはブロックの最小および最大の寸法、フォントの大きさ、などを指定します。
+
+その後にくるクラス `horizontal` および `vertical` は、ボックスに {{cssxref("writing-mode")}} プロパティを追加し、値を使われるクラスに応じて `horizontal-tb` または `vertical-rl` に設定します。
+
+```css
+.standard-box {
+  padding: 4px;
+  background-color: #abcdef;
+  color: #000;
+  font:
+    16px "Open Sans",
+    "Helvetica",
+    "Arial",
+    sans-serif;
+  max-block-size: 160px;
+  min-block-size: 100px;
+}
+
+.horizontal {
+  writing-mode: horizontal-tb;
+}
+
+.vertical {
+  writing-mode: vertical-rl;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample("Setting_max-block-size_with_horizontal_and_vertical_text", 600, 850)}}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- 対応する物理的プロパティ: {{cssxref("max-width")}} と {{cssxref("max-height")}}
+- 他の方向の最大寸法の設定: {{cssxref("max-inline-size")}}
+- {{cssxref("writing-mode")}}

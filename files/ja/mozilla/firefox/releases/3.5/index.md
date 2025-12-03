@@ -20,14 +20,14 @@ slug: Mozilla/Firefox/Releases/3.5
 
 #### 新しくサポートされる CSS の機能
 
-- [ダウンロードフォントのサポート](/ja/docs/Web/CSS/@font-face)
+- [ダウンロードフォントのサポート](/ja/docs/Web/CSS/Reference/At-rules/@font-face)
   - : 新しい @規則である {{ cssxref("@font-face") }} を利用してウェブページでダウンロードフォントを提供できます。これにより、ページ作者が期待する通りにサイトが描画されるようになります。
-- [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)
+- [CSS メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)
   - : Firefox 3.5 では CSS メディアクエリーをサポートしています。これはメディア依存スタイルシートを拡張するものです。
 - {{ cssxref("::before") }} および {{ cssxref("::after") }} の CSS 2.1 への更新
   - : `::before` および `::after` 擬似要素が CSS 2.1 サポートを満たすように更新されました。`position`、`float`、`list-style-*`、そして、いくつかの `display` プロパティのサポートが追加されています。
 - 長さの単位 `ch`
-  - : 単位 `ch` が通常の[長さの単位](/ja/docs/Web/CSS/length#units)として任意の場所で使えるようになりました。"1 ch" は文字 '0' の横幅です。
+  - : 単位 `ch` が通常の[長さの単位](/ja/docs/Web/CSS/Reference/Values/length#units)として任意の場所で使えるようになりました。"1 ch" は文字 '0' の横幅です。
 - {{ cssxref("opacity") }}
   - : 標準の `opacity` プロパティの先行実装である `-moz-opacity` という CSS への Mozilla 拡張が削除されました。
 - {{ cssxref("text-shadow") }}
@@ -55,7 +55,7 @@ slug: Mozilla/Firefox/Releases/3.5
   - : これらの新しい CSS 機能はテーマ作成を手助けするために追加されました。
 - `-moz-appearance` 向けの新しい値
   - : `-moz-win-glass` および `-moz-mac-unified-toolbar` という値が `-moz-appearance` 向けに追加されました。
-- [CSS transforms の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [CSS transforms の使用](/ja/docs/Web/CSS/Guides/Transforms/Using)
   - : Firefox 3.5 では CSS transform がサポートされます。詳細は {{ cssxref("-moz-transform") }} および {{ cssxref("-moz-transform-origin") }} を参照してください。
 - {{ cssxref(":nth-child") }}
 

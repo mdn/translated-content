@@ -60,7 +60,7 @@ Dans l'exemple ci-dessous, nous avons créé une _grille explicite_ de 3 colonne
 
 ## Voir aussi
 
-- [Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [Les concepts de base des grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
 - Références de la propriété&nbsp;:
   - {{CSSxRef("grid-template-columns")}}
   - {{CSSxRef("grid-template-rows")}}

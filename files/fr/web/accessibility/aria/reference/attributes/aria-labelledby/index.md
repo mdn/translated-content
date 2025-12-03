@@ -76,7 +76,7 @@ Heureusement, l'élément HTML {{HTMLElement('input')}} avec `type="checkbox"` f
 
 4. La propriété `aria-labelledby` ignore les identifiants répétés dans sa valeur. Si un élément est référencé plusieurs fois, seule la première occurrence est prise en compte. `aria-labelledby="attr attr rm13 rm13"` est traité comme `aria-labelledby="attr rm13"`.
 
-5. La propriété `aria-labelledby` peut inclure le contenu d'éléments qui ne sont pas visibles. Même s'il est recommandé de fournir aux utilisateur·ice·s des technologies d'assistance le même contenu que pour les autres utilisateur·ice·s, vous pouvez inclure le contenu d'éléments avec l'attribut HTML [`hidden`](/fr/docs/Web/HTML/Reference/Global_attributes/hidden), la propriété CSS [`display: none`](/fr/docs/Web/CSS/display) et la propriété CSS [`visibility: hidden`](/fr/docs/Web/CSS/visibility) dans le nom accessible calculé.
+5. La propriété `aria-labelledby` peut inclure le contenu d'éléments qui ne sont pas visibles. Même s'il est recommandé de fournir aux utilisateur·ice·s des technologies d'assistance le même contenu que pour les autres utilisateur·ice·s, vous pouvez inclure le contenu d'éléments avec l'attribut HTML [`hidden`](/fr/docs/Web/HTML/Reference/Global_attributes/hidden), la propriété CSS [`display: none`](/fr/docs/Web/CSS/Reference/Properties/display) et la propriété CSS [`visibility: hidden`](/fr/docs/Web/CSS/Reference/Properties/visibility) dans le nom accessible calculé.
 
 6. La propriété `aria-labelledby` intègre la valeur des éléments de formulaire. Si la valeur référence un `<input>`, la valeur courante du contrôle de formulaire est incluse dans le nom accessible calculé, et change si la valeur est modifiée.
 

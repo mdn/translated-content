@@ -9,7 +9,7 @@ Le **bloc d'alignement** est le rectangle avec lequel le {{Glossary("alignment s
 
 ## Voir aussi
 
-- Le module [CSS d'alignement des boîtes](/fr/docs/Web/CSS/CSS_box_alignment)
+- Le module [CSS d'alignement des boîtes](/fr/docs/Web/CSS/Guides/Box_alignment)
 - Référence des propriétés
   - la propriété CSS {{CSSxRef("align-content")}}
   - la propriété CSS {{CSSxRef("align-items")}}

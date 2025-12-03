@@ -29,5 +29,5 @@ Les effets d'une propriété CSS peuvent être unidimensionnels ou bidimensionne
 
 ## Voir aussi
 
-- [Module CSS propriétés et valeurs logiques](/fr/docs/Web/CSS/CSS_logical_properties_and_values)
-- [Concepts de base des propriétés et valeurs logiques](/fr/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values)
+- [Module CSS propriétés et valeurs logiques](/fr/docs/Web/CSS/Guides/Logical_properties_and_values)
+- [Concepts de base des propriétés et valeurs logiques](/fr/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts)

@@ -48,7 +48,7 @@ Ces tutoriels sont créés par des entreprises et des développeur·euse·s web 
   - : CSS permet la mise en forme et la mise en page des sites web — par exemple, modifier la police, la couleur, la taille, l'espacement du contenu, le diviser en colonnes, ou ajouter des animations et autres effets décoratifs. Ce module propose une introduction progressive aux bases de CSS, à sa syntaxe et à la manière de l'utiliser pour la présentation du HTML.
 - [Sélecteurs](/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
   - : Ciblage des éléments HTML, y compris selon leur état, avec CSS.
-- [Spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity)
+- [Spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity)
   - : Comprendre l'algorithme du navigateur pour déterminer quelles déclarations CSS s'appliquent à un élément en cas de conflit, avec un [quiz sur la spécificité <sup>(angl.)</sup>](https://estelle.github.io/CSS/selectors/exercises/specificity.html).
 - [Gestion des conflits](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
   - : La cascade, la spécificité et l'héritage contrôlent l'application du CSS au HTML et la résolution des conflits entre styles.
@@ -70,9 +70,9 @@ Ces tutoriels sont créés par des entreprises et des développeur·euse·s web 
 
 ### Sujets CSS avancés
 
-- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [Utiliser les transformations CSS](/fr/docs/Web/CSS/Guides/Transforms/Using)
   - : Appliquez des rotations, inclinaisons, mises à l'échelle et translations avec CSS.
-- [Transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Transitions CSS](/fr/docs/Web/CSS/Guides/Transitions/Using)
   - : Les transitions CSS permettent d'animer les changements de propriétés CSS, au lieu de les appliquer instantanément.
 - [Tutoriel Canvas](/fr/docs/Web/API/Canvas_API/Tutorial)
   - : Apprenez à dessiner des graphiques par script avec l'élément canvas.

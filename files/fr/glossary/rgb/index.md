@@ -17,4 +17,4 @@ Il existe de nombreuses façons de décrire les composantes RVB d'une couleur. E
 
 ### Apprendre
 
-- [Type de donnée CSS : \<color>](/fr/docs/Web/CSS/color_value)
+- [Type de donnée CSS : \<color>](/fr/docs/Web/CSS/Reference/Values/color_value)

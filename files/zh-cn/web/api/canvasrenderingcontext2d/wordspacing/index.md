@@ -9,7 +9,7 @@ l10n:
 
 [Canvas API](/zh-CN/docs/Web/API/Canvas_API) 的 **`CanvasRenderingContext2D.wordSpacing`** 属性用于指定绘制文本时单词之间的间距。
 
-该属性对应于 CSS 中的 [`word-spacing`](/zh-CN/docs/Web/CSS/word-spacing) 属性。
+该属性对应于 CSS 中的 [`word-spacing`](/zh-CN/docs/Web/CSS/Reference/Properties/word-spacing) 属性。
 
 ## 值
 

@@ -52,7 +52,7 @@ DOM 是使用多个 API 构建的，它们一起工作。核心 DOM 定义了描
 
 ![DOM 是一种树状的文档表示，它有一个根和包含内容的节点元素](using_the_w3c_dom_level_1_core-doctree.jpg)
 
-虽然上面的树与上面文档的 DOM 树相似，但并不完全相同，因为[实际的 DOM 树保留了空白](/zh-CN/docs/Web/CSS/CSS_text/Whitespace)。
+虽然上面的树与上面文档的 DOM 树相似，但并不完全相同，因为[实际的 DOM 树保留了空白](/zh-CN/docs/Web/CSS/Guides/Text/Whitespace)。
 
 当 web 浏览器解析 HTML 文档时，它建立了一个 DOM 树，然后用它来显示文档。
 

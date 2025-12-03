@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-Dans le [module d'alignement des boîtes CSS](/fr/docs/Web/CSS/CSS_box_alignment), le **sujet d'alignement** est l'élément (ou les éléments) qui sont alignés à l'intérieur du {{Glossary("alignment container", "conteneur d'alignement")}} par la propriété.
+Dans le [module d'alignement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_alignment), le **sujet d'alignement** est l'élément (ou les éléments) qui sont alignés à l'intérieur du {{Glossary("alignment container", "conteneur d'alignement")}} par la propriété.
 
 Pour {{CSSxRef("justify-self")}} et {{CSSxRef("align-self")}}, le sujet d'alignement est la boîte de marge de la boîte sur laquelle la propriété est définie, en utilisant le mode d'écriture de cette boîte. Pour {{CSSxRef("justify-content")}} et {{CSSxRef("align-content")}}, le mode d'écriture de la boîte est également utilisé.
 
@@ -22,6 +22,6 @@ La définition du sujet d'alignement dépend du mode de disposition utilisé.
 
 ## Voir aussi
 
-- [Module d'alignement des boîtes CSS](/fr/docs/Web/CSS/CSS_box_alignment)
+- [Module d'alignement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_alignment)
 - Terme associé du glossaire&nbsp;:
   - {{Glossary("alignment container", "conteneur d'alignement")}}

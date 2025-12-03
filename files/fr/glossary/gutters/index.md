@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-**Les gouttières** sont l'espace entre {{Glossary("grid_tracks", "les pistes de contenu")}}. Elles peuvent être créées avec [les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout) en utilisant les propriétés {{CSSxRef("column-gap")}}, {{CSSxRef("row-gap")}} ou {{CSSxRef("gap")}}.
+**Les gouttières** sont l'espace entre {{Glossary("grid_tracks", "les pistes de contenu")}}. Elles peuvent être créées avec [les grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout) en utilisant les propriétés {{CSSxRef("column-gap")}}, {{CSSxRef("row-gap")}} ou {{CSSxRef("gap")}}.
 
 ## Exemple
 
@@ -55,11 +55,11 @@ Dans l'exemple ci-dessous, nous avons une grille de 3 colonnes et 2 lignes, avec
 
 En ce qui concerne la taille de la grille, les espaces agissent comme s'ils étaient une piste de grille normale, mais rien ne peut y être placé. L'espace agit comme si la ligne de la grille à cet endroit avait gagné en taille, de sorte que tout élément de la grille placé après cette ligne commence à la fin de l'espace.
 
-Les propriétés `row-gap` et `column-gap` ne sont pas les seules à pouvoir entraîner un espacement des pistes. Les marges, le remplissage (<i lang="en">padding</i>) ou l'utilisation des propriétés de distribution d'espace pour [l'alignement des boîtes](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout) peuvent tous contribuer à l'écart visible. Par conséquent, les propriétés `row-gap` et `column-gap` ne doivent pas être considérées comme égales à la taille de la gouttière.
+Les propriétés `row-gap` et `column-gap` ne sont pas les seules à pouvoir entraîner un espacement des pistes. Les marges, le remplissage (<i lang="en">padding</i>) ou l'utilisation des propriétés de distribution d'espace pour [l'alignement des boîtes](/fr/docs/Web/CSS/Guides/Grid_layout/Box_alignment) peuvent tous contribuer à l'écart visible. Par conséquent, les propriétés `row-gap` et `column-gap` ne doivent pas être considérées comme égales à la taille de la gouttière.
 
 ## Voir aussi
 
-- [Les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [Les grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
 - Référence CSS pour les propriétés associées&nbsp;:
   - {{CSSxRef("column-gap")}}
   - {{CSSxRef("row-gap")}}

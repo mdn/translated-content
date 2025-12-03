@@ -38,13 +38,13 @@ Ces dernières années cependant, le CSS a évolué pour supporter du contenu or
 
 ## Que sont les modes d'écritures?
 
-Un mode d'écriture en CSS fait référence au sens d'écriture du texte : horizontal ou vertical. La propriété [`writing-mode`](/fr/docs/Web/CSS/writing-mode) nous permet de passer d'un mode d'écriture à un autre. Vous n'avez pas besoin de travailler dans une langue qui utilise un mode d'écriture vertical pour vouloir l'utiliser — vous pourriez aussi changer le mode d'écriture de certaines parties de votre agencement dans un but créatif.
+Un mode d'écriture en CSS fait référence au sens d'écriture du texte : horizontal ou vertical. La propriété [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode) nous permet de passer d'un mode d'écriture à un autre. Vous n'avez pas besoin de travailler dans une langue qui utilise un mode d'écriture vertical pour vouloir l'utiliser — vous pourriez aussi changer le mode d'écriture de certaines parties de votre agencement dans un but créatif.
 
 Dans l'exemple ci-dessous nous avons un titre affiché qui utilise `writing-mode: vertical-rl`. Le texte est maintenant affiché verticalement. Les textes verticaux sont communs dans le design graphique, et peuvent être un moyen pour ajouter un look plus intéressant à votre design web.
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/simple-vertical.html", '100%', 800)}}
 
-Les trois valeurs possibles pour la propriété [`writing-mode`](/fr/docs/Web/CSS/writing-mode) sont&nbsp;:
+Les trois valeurs possibles pour la propriété [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode) sont&nbsp;:
 
 - `horizontal-tb`&nbsp;: Direction de bloc allant du haut vers le bas, les phrases sont écrites horizontalement.
 - `vertical-rl`&nbsp;: Direction de bloc allant de droite à gauche, les phrases sont écrites verticalement.
@@ -82,7 +82,7 @@ En plus des modes d'écriture, il existe également la direction du texte. Comme
 
 Nous abordons maintenant les modes d'écriture et la direction du texte maintenant, car les propriétés que nous avons vues jusqu'à présent étaient plutôt liées aux dimensions physiques de l'écran et à un mode d'écriture horizontal.
 
-Reprenons nos deux boîtes&nbsp;: celle avec le mode d'écriture `horizontal-tb` et celle avec le mode d'écriture `vertical-rl`. Pour ces deux boîtes, on a défini [`width`](/fr/docs/Web/CSS/width). Pour la boîte avec le mode d'écriture vertical, cela provoque un dépassement du texte.
+Reprenons nos deux boîtes&nbsp;: celle avec le mode d'écriture `horizontal-tb` et celle avec le mode d'écriture `vertical-rl`. Pour ces deux boîtes, on a défini [`width`](/fr/docs/Web/CSS/Reference/Properties/width). Pour la boîte avec le mode d'écriture vertical, cela provoque un dépassement du texte.
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/width.html", '100%', 1200)}}
 
@@ -90,17 +90,17 @@ Ce qu'on veut plus probablement dans ce scénario, c'est de passer de la largeur
 
 Pour faciliter cela, CSS est désormais doté d'un ensemble de propriétés correspondantes. Dans l'ensemble, ces propriétés remplacent les propriétés physiques comme `width` ou `height` par des versions **logiques** ou **relatives au flux**.
 
-La propriété logique qui correspond à `width` lorsqu'on utilise un mode d'écriture horizontal est appelée [`inline-size`](/fr/docs/Web/CSS/inline-size)&nbsp;: elle fait référence à la dimension selon l'axe en ligne. La propriété correspondant à `height` est quant à elle intitulée [`block-size`](/fr/docs/Web/CSS/block-size) et représente la taille selon la dimension de bloc. Vous pouvez observer leur fonctionnement dans l'exemple qui suit où nous avons remplacé `width` par `inline-size`.
+La propriété logique qui correspond à `width` lorsqu'on utilise un mode d'écriture horizontal est appelée [`inline-size`](/fr/docs/Web/CSS/Reference/Properties/inline-size)&nbsp;: elle fait référence à la dimension selon l'axe en ligne. La propriété correspondant à `height` est quant à elle intitulée [`block-size`](/fr/docs/Web/CSS/Reference/Properties/block-size) et représente la taille selon la dimension de bloc. Vous pouvez observer leur fonctionnement dans l'exemple qui suit où nous avons remplacé `width` par `inline-size`.
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/inline-size.html", '100%', 950)}}
 
 ### Propriétés logiques pour les marges, bordures et remplissages
 
-Dans les deux précédentes leçons, nous avons abordé le modèle de boîte CSS et les bordures. Pour les propriétés qui régissent les marges, bordures et le remplissage, vous verrez de nombreuses propriétés physiques comme [`margin-top`](/fr/docs/Web/CSS/margin-top), [`padding-left`](/fr/docs/Web/CSS/padding-left), et [`border-bottom`](/fr/docs/Web/CSS/border-bottom). À l'instar de la hauteur et de la largeur, ces propriétés disposent de propriétés logiques équivalentes.
+Dans les deux précédentes leçons, nous avons abordé le modèle de boîte CSS et les bordures. Pour les propriétés qui régissent les marges, bordures et le remplissage, vous verrez de nombreuses propriétés physiques comme [`margin-top`](/fr/docs/Web/CSS/Reference/Properties/margin-top), [`padding-left`](/fr/docs/Web/CSS/Reference/Properties/padding-left), et [`border-bottom`](/fr/docs/Web/CSS/Reference/Properties/border-bottom). À l'instar de la hauteur et de la largeur, ces propriétés disposent de propriétés logiques équivalentes.
 
-La propriété physique `margin-top` correspond à la propriété logique [`margin-block-start`](/fr/docs/Web/CSS/margin-block-start) pour un mode d'écriture horizontal. Cette propriété logique fera toujours référence à la marge située au début de la dimension de bloc.
+La propriété physique `margin-top` correspond à la propriété logique [`margin-block-start`](/fr/docs/Web/CSS/Reference/Properties/margin-block-start) pour un mode d'écriture horizontal. Cette propriété logique fera toujours référence à la marge située au début de la dimension de bloc.
 
-La propriété physique [`padding-left`](/fr/docs/Web/CSS/padding-left) trouve son équivalent avec [`padding-inline-start`](/fr/docs/Web/CSS/padding-inline-start), le remplissage (<i lang="en">padding</i>) appliqué au début de la direction en ligne. Cela correspond à l'endroit où les phrases commencent pour le mode d'écriture courant. La propriété [`border-bottom`](/fr/docs/Web/CSS/border-bottom) a quant à elle l'équivalent [`border-block-end`](/fr/docs/Web/CSS/border-block-end) qui représente la bordure sur à la fin de la dimension de bloc.
+La propriété physique [`padding-left`](/fr/docs/Web/CSS/Reference/Properties/padding-left) trouve son équivalent avec [`padding-inline-start`](/fr/docs/Web/CSS/Reference/Properties/padding-inline-start), le remplissage (<i lang="en">padding</i>) appliqué au début de la direction en ligne. Cela correspond à l'endroit où les phrases commencent pour le mode d'écriture courant. La propriété [`border-bottom`](/fr/docs/Web/CSS/Reference/Properties/border-bottom) a quant à elle l'équivalent [`border-block-end`](/fr/docs/Web/CSS/Reference/Properties/border-block-end) qui représente la bordure sur à la fin de la dimension de bloc.
 
 Vous pouvez voir une comparaison entre les propriétés physiques et logiques ci-après.
 
@@ -110,7 +110,7 @@ Vous pouvez voir une comparaison entre les propriétés physiques et logiques ci
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/logical-mbp.html", '100%', 1200)}}
 
-Il existe de nombreuses propriétés détaillées pour gérer les différents aspects des bordures, vous pouvez voir l'ensemble des correspondances sur la page MDN des [propriétés et valeurs logiques](/fr/docs/Web/CSS/CSS_logical_properties_and_values).
+Il existe de nombreuses propriétés détaillées pour gérer les différents aspects des bordures, vous pouvez voir l'ensemble des correspondances sur la page MDN des [propriétés et valeurs logiques](/fr/docs/Web/CSS/Guides/Logical_properties_and_values).
 
 ### Valeurs logiques
 

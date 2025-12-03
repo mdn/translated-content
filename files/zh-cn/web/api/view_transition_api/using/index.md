@@ -123,7 +123,7 @@ function updateView(event) {
 
 ## 自定义动画
 
-视图过渡伪元素应用了默认的 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)（详见其[参考页面](/zh-CN/docs/Web/API/View_Transition_API#伪元素)）。
+视图过渡伪元素应用了默认的 [CSS 动画](/zh-CN/docs/Web/CSS/Guides/Animations)（详见其[参考页面](/zh-CN/docs/Web/API/View_Transition_API#伪元素)）。
 
 如上所述，大多数外观过渡都带有默认的平滑交叉淡化动画。有一些例外情况：
 

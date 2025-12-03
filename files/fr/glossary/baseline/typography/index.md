@@ -13,6 +13,6 @@ D'autres systèmes d'écriture ont des lignes de base différentes. Par exemple,
 
 ## Voir aussi
 
-- [Alignement des boîtes CSS](/fr/docs/Web/CSS/CSS_box_alignment#types_dalignement)
+- [Alignement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_alignment#types_dalignement)
 - Le module [de disposition en ligne CSS](/fr/docs/Web/CSS/CSS_inline_layout)
 - [La page Wikipédia sur la ligne de base](<https://fr.wikipedia.org/wiki/Ligne_de_base_(typographie)>)

@@ -64,7 +64,7 @@ _ピクチャインピクチャ API では 3 つのイベントを定義して�
 
 ## スタイルの制御
 
-[`:picture-in-picture`](/ja/docs/Web/CSS/:picture-in-picture) は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、現在ピクチャインピクチャモードになっている動画要素に一致します。これにより、動画がピクチャインピクチャモードと従来の表示モードを行き来するときに、コンテンツのサイズやスタイル、レイアウトを自動的に調整するようにスタイルシートを設定することができます。
+[`:picture-in-picture`](/ja/docs/Web/CSS/Reference/Selectors/:picture-in-picture) は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、現在ピクチャインピクチャモードになっている動画要素に一致します。これにより、動画がピクチャインピクチャモードと従来の表示モードを行き来するときに、コンテンツのサイズやスタイル、レイアウトを自動的に調整するようにスタイルシートを設定することができます。
 
 ## アクセスの制御
 

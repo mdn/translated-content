@@ -32,8 +32,8 @@ Firefox 11, basé sur Gecko 11.0, est sorti le 13 mars 2012. Cet article fournit
 
 ### CSS
 
-- La propriété [`text-size-adjust`](/fr/docs/Web/CSS/text-size-adjust) est à présent supportée.
-- Les [Règles Conditionnelles](/fr/docs/CSS/CSS3#Conditional_Rules) [CSS3](/fr/docs/CSS/CSS3) sont à présent mieux supportées : les déclarations imbriquées peuvent désormais être ajoutées à [@media](/fr/docs/Web/CSS/@media), [@-moz-document](/fr/docs/Web/CSS/@document). (Voir [CSS Syntax](/fr/docs/Web/CSS/CSS_syntax/Syntax) et [CSS at-rules](/fr/docs/Web/CSS/CSS_syntax/At-rule)).
+- La propriété [`text-size-adjust`](/fr/docs/Web/CSS/Reference/Properties/text-size-adjust) est à présent supportée.
+- Les [Règles Conditionnelles](/fr/docs/CSS/CSS3#Conditional_Rules) [CSS3](/fr/docs/CSS/CSS3) sont à présent mieux supportées : les déclarations imbriquées peuvent désormais être ajoutées à [@media](/fr/docs/Web/CSS/Reference/At-rules/@media), [@-moz-document](/fr/docs/Web/CSS/Reference/At-rules/@document). (Voir [CSS Syntax](/fr/docs/Web/CSS/Guides/Syntax/Introduction) et [CSS at-rules](/fr/docs/Web/CSS/Guides/Syntax/At-rules)).
 
 ### SVG
 
@@ -47,7 +47,7 @@ Firefox 11, basé sur Gecko 11.0, est sorti le 13 mars 2012. Cet article fournit
 
 ### IndexedDB
 
-- Le support de [IDBFactory.cmp()](/fr/docs/IndexedDB/IDBFactory#cmp%28%29) a été ajouté.
+- Le support de [IDBFactory.cmp()](</fr/docs/IndexedDB/IDBFactory#cmp()>) a été ajouté.
 - Une [clé IndexedDB](/fr/docs/Web/API/IndexedDB_API/Basic_Terminology#section_6) peut également être de l'un des types suivants : Date, Arrays et Float (et pas seulement String et Integer).
 
 ### Réseau

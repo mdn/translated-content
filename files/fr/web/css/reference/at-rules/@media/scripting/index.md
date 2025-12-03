@@ -1,0 +1,78 @@
+---
+title: scripting
+slug: Web/CSS/Reference/At-rules/@media/scripting
+original_slug: Web/CSS/@media/scripting
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+---
+
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`scripting`** permet de tester si les scripts (comme JavaScript) sont disponibles.
+
+> [!NOTE]
+> La détection est effectuée par les navigateurs selon les paramètres de l'utilisateur. Certaines extensions de navigateur peuvent bloquer les scripts avec différentes techniques. Dans ces cas, la caractéristique média `scripting` peut ne pas fonctionner comme prévu.
+
+## Syntaxe
+
+La caractéristique `scripting` est définie avec un mot-clé parmi les suivants&nbsp;:
+
+- `none`
+  - : Les outils de script sont indisponibles pour le document courant.
+- `initial-only`
+  - : Les outils de script sont disponibles pendant le chargement de la page mais pas ensuite.
+- `enabled`
+  - : Les outils de script sont pris en charge et actifs pour le document courant.
+
+## Exemples
+
+### HTML
+
+```html
+<p class="script-none">Les outils de script ne sont pas disponibles. :-(</p>
+<p class="script-initial-only">
+  Les outils de script sont uniquement disponibles au chargement initial.
+</p>
+<p class="script-enabled">Les outils de script sont activés ! :-)</p>
+```
+
+### CSS
+
+```css
+p {
+  color: lightgray;
+}
+
+@media (scripting: none) {
+  .script-none {
+    color: red;
+  }
+}
+
+@media (scripting: initial-only) {
+  .script-initial-only {
+    color: red;
+  }
+}
+
+@media (scripting: enabled) {
+  .script-enabled {
+    color: red;
+  }
+}
+```
+
+### Résultat
+
+{{EmbedLiveSample("exemples")}}
+
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
+- {{cssxref("@media")}}

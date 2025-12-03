@@ -50,7 +50,7 @@ Nous avons besoin de votre expertise technique, et nous vous aiderons à peaufin
 
 ## Choisir sur quoi travailler et se lancer
 
-Une fois que vous avez décidé quel type de tâche vous souhaitez accomplir, il est temps de vous rendre sur le [tableau des tâches des contributeurs](https://github.com/orgs/mdn/projects/44), de choisir un problème et de nous le faire savoir en commentant le problème et en taguant l'équipe `@mdn/yari-content-fr`.
+Une fois que vous avez décidé quel type de tâche vous souhaitez accomplir, il est temps de vous rendre sur le [tableau des tâches des contributeurs](https://github.com/orgs/mdn/projects/44), de choisir un problème et de nous le faire savoir en commentant le problème et en taguant l'équipe `@mdn/fr-content`.
 Quelqu'un de l'équipe répondra avec des commentaires, des conseils ou des orientations.
 
 Assurez-vous de ne pas travailler sur quelque chose qui est déjà en cours - cela peut être frustrant de dupliquer ou de perdre du travail.

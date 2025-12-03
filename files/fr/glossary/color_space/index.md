@@ -27,7 +27,7 @@ Les valeurs CSS `<color>` dans les espaces de couleur sRGB incluent {{CSSxRef("h
 
 L'espace de couleur HSV (teinte, saturation et valeur), et son synonyme HSB (teinte, saturation et luminosité), sont représentés en CSS comme {{CSSxRef("color_value/hwb", "hwb()")}}. Les couleurs nommées sont simplement des mots-clés mappés à des valeurs hexadécimales spécifiques. La conversion de ces diverses notations de couleur vers sRGB est mathématiquement simple. Notez que {{CSSxRef("&lt;color&gt;","currentColor","#mot-clé_currentcolor")}} peut être n'importe quelle couleur — elle n'est pas restreinte à sRGB.
 
-La fonction de couleur `rgb()` n'est pas la seule fonction de couleur qui peut représenter l'espace de couleur _sRGB_. Les systèmes de coordonnées cylindriques comme les modèles de couleur [`HSL`](/fr/docs/Web/CSS/color_value/hsl) (_teinte-saturation-luminosité_) ou [`HWB`](/fr/docs/Web/CSS/color_value/hwb) (_teinte-blancheur-noirceur_) sont également utilisés pour représenter une couleur sRGB sur le web.
+La fonction de couleur `rgb()` n'est pas la seule fonction de couleur qui peut représenter l'espace de couleur _sRGB_. Les systèmes de coordonnées cylindriques comme les modèles de couleur [`HSL`](/fr/docs/Web/CSS/Reference/Values/color_value/hsl) (_teinte-saturation-luminosité_) ou [`HWB`](/fr/docs/Web/CSS/Reference/Values/color_value/hwb) (_teinte-blancheur-noirceur_) sont également utilisés pour représenter une couleur sRGB sur le web.
 
 - Espace de couleur `srgb`
   - : L'espace de couleur sRGB, ou «&nbsp;RGB standard&nbsp;», est l'espace de couleur RGB (rouge, vert, bleu) standard. Il a été créé pour être utilisé sur les moniteurs, imprimantes et le Web. C'est l'espace de couleur le plus largement utilisé et il est pris en charge par la plupart des systèmes d'exploitation, programmes logiciels, moniteurs et imprimantes. sRGB est basé sur `r`, `g`, et `b`, avec des valeurs dans le gamut allant de `0` à `1`. Le point blanc est D65.
@@ -87,7 +87,7 @@ Les personnes avec une vision normale ont trois types de cellules coniques qui d
 ## Voir aussi
 
 - La fonctionnalité `@media` {{CSSxRef("@media/color-gamut", "color-gamut")}}
-- [Type de donnée CSS&nbsp;: `<color>`](/fr/docs/Web/CSS/color_value)
+- [Type de donnée CSS&nbsp;: `<color>`](/fr/docs/Web/CSS/Reference/Values/color_value)
 - [Espace de couleur sRGB <sup>(angl.)</sup>](https://webstore.iec.ch/en/publication/6168)
 - [Espace de couleur CIELAB](https://fr.wikipedia.org/wiki/L*a*b*_CIE_1976) sur Wikipédia
 - [Espace de couleur CIE 1931](https://fr.wikipedia.org/wiki/CIE_XYZ) sur Wikipédia

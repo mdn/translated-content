@@ -420,6 +420,6 @@ getComputedStyle () возвращает объект ComputedCSSStyleDeclaratio
 ## Subnav
 
 - [DOM Reference](/ru/docs/Web/API/Document_Object_Model)
-- [Introduction to the DOM](/ru/docs/Web/API/Document_Object_Model/Introduction)
+- [Introduction to the DOM](/ru/docs/conflicting/Web/API/Document_Object_Model)
 - [Events and the DOM](/ru/docs/Learn_web_development/Core/Scripting/Events)
-- [Examples](/ru/docs/Web/API/Document_Object_Model/Examples)
+- [Examples](/ru/docs/conflicting/Web/API/Document_Object_Model_16086573ad7dac5194660bdbfcad47fdf7637bed7caad1fb76fb380952c4fb4b)

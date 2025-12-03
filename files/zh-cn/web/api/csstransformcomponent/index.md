@@ -19,9 +19,9 @@ l10n:
 - {{domxref("CSSTransformComponent.toMatrix()")}}
   - : 返回一个新的 {{domxref('DOMMatrix')}} 对象。
 - {{domxref("CSSTransformComponent.toString()")}}
-  - : [CSS 变换函数](/zh-CN/docs/Web/CSS/transform-function)形式的字符串。
+  - : [CSS 变换函数](/zh-CN/docs/Web/CSS/Reference/Values/transform-function)形式的字符串。
 
-    这将使用 `is2D` 的值来返回 2D 或 3D 变换。例如，如果组件表示 {{domxref("CSSRotate")}} 并且 `is2D` 为 false，则返回的字符串将以 CSS 转换函数 [`rotate3d()`](/zh-CN/docs/Web/CSS/transform-function/rotate3d) 的形式。如果为 true，则返回的字符串将以 2D 的 [`rotate()`](/zh-CN/docs/Web/CSS/transform-function/rotate) 函数的形式。
+    这将使用 `is2D` 的值来返回 2D 或 3D 变换。例如，如果组件表示 {{domxref("CSSRotate")}} 并且 `is2D` 为 false，则返回的字符串将以 CSS 转换函数 [`rotate3d()`](/zh-CN/docs/Web/CSS/Reference/Values/transform-function/rotate3d) 的形式。如果为 true，则返回的字符串将以 2D 的 [`rotate()`](/zh-CN/docs/Web/CSS/Reference/Values/transform-function/rotate) 函数的形式。
 
 ## 示例
 

@@ -43,8 +43,8 @@ myTrack.applyConstraints(constraints);
 ## 関連情報
 
 - CSS の {{cssxref("aspect-ratio")}} プロパティ
-- [アスペクト比の理解](/ja/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)ガイド
-- [CSS ボックスサイズ指定](/ja/docs/Web/CSS/CSS_box_sizing)モジュール
+- [アスペクト比の理解](/ja/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)ガイド
+- [CSS ボックスサイズ指定](/ja/docs/Web/CSS/Guides/Box_sizing)モジュール
 - 関連用語:
   - {{glossary("intrinsic size", "内在サイズ")}}
 - CSS の {{cssxref("min-content")}}、{{cssxref("max-content")}}、{{cssxref("fit-content")}} プロパティ値

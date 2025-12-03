@@ -1,0 +1,133 @@
+---
+title: caret-color
+slug: Web/CSS/Reference/Properties/caret-color
+original_slug: Web/CSS/caret-color
+l10n:
+  sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
+---
+
+**`caret-color`** は CSS のプロパティで、次に入力された文字が挿入される位置を示す可視マーカーである**入力キャレット**の色を設定します。これは**テキスト入力カーソル**と呼ばれることもあります。キャレットは {{HTMLElement("input")}} または [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable)ML/Global_attributes#contenteditable) 属性のついた要素などの中に現れます。ふつうキャレットは細い垂直線で、気づきやすくなるように点滅します。既定では黒ですが、このプロパティで色を変更することができます。
+
+{{InteractiveExample("CSS デモ: caret-color")}}
+
+```css interactive-example-choice
+caret-color: red;
+```
+
+```css interactive-example-choice
+caret-color: auto;
+```
+
+```css interactive-example-choice
+caret-color: transparent;
+```
+
+```html interactive-example
+<section class="default-example container" id="default-example">
+  <div>
+    <p>Enter text in the field to see the caret:</p>
+    <p><input id="example-element" type="text" /></p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-size: 1.2rem;
+}
+```
+
+なお、入力キャレットはキャレットのうちの一種類にすぎません。例えば、多くのブラウザーには「ナビゲーションキャレット」があり、入力キャレットと同様に動きますが、編集できないテキストの中を移動できるものがあります。一方、マウスカーソルが、 {{cssxref("cursor")}} プロパティが `auto` のときにテキスト上に移動した場合や、 `cursor` プロパティが `text` または `vertical-text` の場合に、キャレットのように見えることがありますが、キャレットではありません (カーソルです)。
+
+## 構文
+
+```css
+/* キーワード値 */
+caret-color: auto;
+caret-color: transparent;
+caret-color: currentcolor;
+
+/* <color> 値 */
+caret-color: red;
+caret-color: #5729e9;
+caret-color: rgb(0 200 0);
+caret-color: hsl(228deg 4% 24% / 80%);
+
+/* グローバル値 */
+caret-color: inherit;
+caret-color: initial;
+caret-color: revert;
+caret-color: revert-layer;
+caret-color: unset;
+```
+
+### 値
+
+- `auto`
+  - : ユーザーエージェントはキャレットの適切な色を選択します。これは一般的に {{cssxref("&lt;color&gt;","currentcolor","#currentcolor_keyword")}} ですが、視認性や周囲のコンテンツとのコントラストを高めるために、ユーザーエージェントが `currentcolor`、背景色、影の色、その他の要因を考慮して、別な色を選択することがあります。
+
+    > [!NOTE]
+    > ユーザーエージェントは `auto` の値に `currentcolor` (通常はアニメーション可能) を使用することがありますが、 `auto` はトランジションやアニメーションでは補完されません。
+
+- {{cssxref("&lt;color&gt;")}}
+  - : キャレットの色です。
+
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
+
+{{csssyntax}}
+
+## 例
+
+### 独自のキャレット色の設定
+
+#### HTML
+
+```html
+<input value="このフィールドは既定のキャレットを使用します。" size="64" />
+<input class="custom" value="キャレットが独自の色になります！" size="64" />
+<p contenteditable class="custom">
+  この段落は編集可能であり、 同様にキャレットが独自の色です！
+</p>
+```
+
+#### CSS
+
+```css
+input {
+  caret-color: auto;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+input.custom {
+  caret-color: red;
+}
+
+p.custom {
+  caret-color: green;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample('Setting_a_custom_caret_color', 500, 200)}}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{HTMLElement("input")}} 要素
+- 要素のテキストを編集可能にする HTML の [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性
+- [CSS を使用した HTML 要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color)
+- {{cssxref("&lt;color&gt;")}} データ型
+- その他の色に関するプロパティ: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}

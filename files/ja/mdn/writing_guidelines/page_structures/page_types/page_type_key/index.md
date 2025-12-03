@@ -61,19 +61,19 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 
 この節では、[Web/CSS](/ja/docs/Web/CSS)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
-- `css-at-rule`: [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)。例えば {{cssxref("@media")}} など。
-- `css-at-rule-descriptor`: アットルール記述子。例えば [`@counter-style/prefix`](/ja/docs/Web/CSS/@counter-style/prefix) など。
-- `css-combinator`: 結合子。例えば[子孫結合子](/ja/docs/Web/CSS/Descendant_combinator)など。
-- `css-function`: [関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)。例えば {{cssxref("max")}} など。
+- `css-at-rule`: [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)。例えば {{cssxref("@media")}} など。
+- `css-at-rule-descriptor`: アットルール記述子。例えば [`@counter-style/prefix`](/ja/docs/Web/CSS/Reference/At-rules/@counter-style/prefix) など。
+- `css-combinator`: 結合子。例えば[子孫結合子](/ja/docs/Web/CSS/Reference/Selectors/Descendant_combinator)など。
+- `css-function`: [関数](/ja/docs/Web/CSS/Reference/Values/Functions)。例えば {{cssxref("max")}} など。
 - `css-keyword`: キーワード。例えば {{cssxref("inherit")}} など。
-- `css-media-feature`: [メディア特性](/ja/docs/Web/CSS/@media#メディア特性)。例えば [`hover`](/ja/docs/Web/CSS/@media/hover) など。
-- `css-module`: モジュール。例えば [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)など。
+- `css-media-feature`: [メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)。例えば [`hover`](/ja/docs/Web/CSS/Reference/At-rules/@media/hover) など。
+- `css-module`: モジュール。例えば [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)など。
 - `css-property`: プロパティ。例えば {{cssxref("background-color")}} など。
-- `css-pseudo-class`: [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)。例えば {{cssxref(":enabled")}} など。
-- `css-pseudo-element`: [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)。例えば {{cssxref("::before")}} など。
-- `css-selector`: [基本セレクター](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#基本セレクター)。例えば[クラスセレクター](/ja/docs/Web/CSS/Class_selectors)など。
-- `css-shorthand-property`: [一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)。例えば {{cssxref("background")}} など。
-- `css-type`: [データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)。例えば [`<color>`](/ja/docs/Web/CSS/color_value) など。
+- `css-pseudo-class`: [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)。例えば {{cssxref(":enabled")}} など。
+- `css-pseudo-element`: [擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)。例えば {{cssxref("::before")}} など。
+- `css-selector`: [基本セレクター](/ja/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators#基本セレクター)。例えば[クラスセレクター](/ja/docs/Web/CSS/Reference/Selectors/Class_selectors)など。
+- `css-shorthand-property`: [一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)。例えば {{cssxref("background")}} など。
+- `css-type`: [データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)。例えば [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) など。
 
 ### 用語集のページ型
 
