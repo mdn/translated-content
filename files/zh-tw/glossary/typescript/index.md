@@ -1,9 +1,11 @@
 ---
 title: TypeScript
 slug: Glossary/TypeScript
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-TypeScript 是一個程式語言，為 JavaScript 增加了 {{glossary("static_typing", "靜態型別")}} 功能。
+TypeScript 是一個程式語言，為 JavaScript 增加了{{glossary("static_typing", "靜態型別檢查")}}功能。
 
 TypeScript 是 JavaScript 的超集，這意味著 JavaScript 的一切都可以在 TypeScript 中使用，同時所有的 JavaScript 程式都是語法合法的 TypeScript 程式。此外，TypeScript 跟 JavaScript 的執行時期行為完全相同。
 
