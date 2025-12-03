@@ -1,9 +1,5 @@
 ---
 title: Collections indexées
-slug: Web/JavaScript/Guide/Indexed_---
-title: Collections indexées
-slug: Web/JavaScript/Guide/Indexed_co---
-title: Collections indexées
 slug: Web/JavaScript/Guide/Indexed_collections
 ---
 
