@@ -31,7 +31,7 @@ Firefox 145 は、米国時間 [2025 年 11 月 11 日](https://whattrainisitnow
 
 ### HTTP
 
-- {{httpheader("Integrity-Policy")}} および {{httpheader("Integrity-Policy-Report-Only")}} HTTP ヘッダーを、スクリプトリソースでサポートしました。これにより、ウェブサイトが _スクリプト_ の [サブリソース完全性の保証](/ja/docs/Web/Security/Subresource_Integrity) を強制できます。
+- {{httpheader("Integrity-Policy")}} および {{httpheader("Integrity-Policy-Report-Only")}} HTTP ヘッダーを、スクリプトリソースでサポートしました。これにより、ウェブサイトが _スクリプト_ の [サブリソース完全性の保証](/ja/docs/Web/Security/Defenses/Subresource_Integrity) を強制できます。
   ただし、[`endpoints`](/ja/docs/Web/HTTP/Reference/Headers/Integrity-Policy#endpoints) キーは未サポートです (違反はコンソールに記録されます)。
   ([Firefox bug 1984973](https://bugzil.la/1984973))
 
