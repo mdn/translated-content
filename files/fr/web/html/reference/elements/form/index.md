@@ -91,9 +91,9 @@ Les attributs suivants contrôlent le comportement pendant l'envoi du formulaire
 
 - `method`
   - : Cet attribut définit la méthode [HTTP](/fr/docs/Web/HTTP) qui sera utilisée pour envoyer les données au serveur.
-    C'est un attribut énuméré qui peut prendre les valeurs suivantes&nbsp;:
-    - `post`&nbsp;: La méthode {{HTTPMethod("POST")}}&nbsp;; données du formulaire envoyées comme [corps de la requête](/fr/docs/Web/API/Body).
-    - `get`&nbsp;: La méthode {{HTTPMethod("GET")}}&nbsp;; données du formulaire annexées à l'URL `action` avec un séparateur `?`. Utilisez cette méthode lorsque le formulaire [n'a pas d'effets secondaires](/fr/docs/Glossary/Idempotent).
+    C'est un attribut énuméré qui peut prendre les valeurs suivantes (non sensibles à la casse)&nbsp;:
+    - `post`&nbsp;: La méthode {{HTTPMethod("POST")}}&nbsp;; données du formulaire envoyées comme [corps de la requête](/fr/docs/Web/API/Request/body).
+    - `get`&nbsp;: La méthode {{HTTPMethod("GET")}}&nbsp;; données du formulaire annexées à l'URL `action` avec un séparateur `?`. Utilisez cette méthode lorsque le formulaire {{Glossary("Idempotent", "n'a pas d'effets secondaires")}}.
     - `dialog`&nbsp;: Lorsque le formulaire se trouve à l'intérieur d'un {{HTMLElement("dialog")}}, ferme la boîte de dialogue à la soumission.
 
     Si cet attribut n'est pas défini, la valeur par défaut utilisée est `get`. Cette valeur peut-être remplacée par un attribut [`formmethod`](/fr/docs/Web/HTML/Reference/Elements/button#formmethod) sur un {{HTMLElement("button")}}, [`<input type="submit">`](/fr/docs/Web/HTML/Reference/Elements/input/submit) ou [`<input type="image">`](/fr/docs/Web/HTML/Reference/Elements/input/image).
