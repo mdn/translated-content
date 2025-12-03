@@ -1,11 +1,11 @@
 ---
-title: rule-list
+title: <rule-list>
 slug: Web/CSS/Reference/Values/rule-list
 l10n:
   sourceCommit: 3ee2355c3c90cf92c3119b82f8ebfa5d16c91c53
 ---
 
-Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<rule-list>`** représente une séquence de **zéro ou plusieurs règles CSS**. Il est utilisé pour définir les endroits du CSS où plusieurs règles peuvent apparaître, comme le niveau supérieur d'une feuille de style ou à l'intérieur des règles @ de regroupement telles que `@media` ou `@supports`.
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<rule-list>`** représente une séquence de **zéro ou plusieurs règles CSS**. Il est utilisé pour définir les endroits du CSS où plusieurs règles peuvent apparaître, comme le niveau supérieur d'une feuille de style ou à l'intérieur des règles @ de regroupement telles que `@media` ou `@supports`.
 
 Une `<rule-list>` n'est pas écrite directement. Elle décrit la façon dont l'analyseur CSS collecte et interprète les règles à l'intérieur d'un bloc ou d'une feuille de style.
 
@@ -53,7 +53,7 @@ h1 {
 }
 ```
 
-### Un `<rule-list>` à l'intérieur d'une règle `@media`
+### Une `<rule-list>` à l'intérieur d'une règle `@media`
 
 Le bloc contenu dans une règle `@media` est une `<rule-list>` contenant une ou plusieurs règles de style. L'exemple suivant contient deux règles de style.
 
@@ -70,7 +70,7 @@ Le bloc contenu dans une règle `@media` est une `<rule-list>` contenant une ou 
 }
 ```
 
-### Règles invalides à l'intérieur d'un `<rule-list>`
+### Règles invalides à l'intérieur d'une `<rule-list>`
 
 La séquence de jetons invalide (`!invalid-rule`) est ignorée par l'analyseur. Le reste des règles constitue un `<rule-list>` valide.
 
