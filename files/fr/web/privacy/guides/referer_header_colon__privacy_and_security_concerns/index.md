@@ -5,9 +5,9 @@ l10n:
   sourceCommit: bb435e7556282e5dbe5ae9476b0a185c3d3ede32
 ---
 
-L'[entête HTTP Referer](/fr/docs/Web/HTTP/Reference/Headers/Referer) présente des risques de confidentialité et de sécurité. Cet article les décrit et donne des conseils pour les minimiser.
+L'[en-tête HTTP Referer](/fr/docs/Web/HTTP/Reference/Headers/Referer) présente des risques de confidentialité et de sécurité. Cet article les décrit et donne des conseils pour les minimiser.
 
-## Le problème
+## Le problème du référent
 
 L'en-tête `{{HTTPHeader("Referer")}}` (sic) contient l'adresse de la page web précédente lorsqu'un lien vers la page actuelle a été suivi, ce qui offre de nombreuses possibilités légitimes comme l'analyse, la journalisation ou la mise en cache optimisée. Cependant, il existe des utilisations plus problématiques telles que le suivi ou le vol d'informations, ou même des effets secondaires tels que la fuite accidentelle d'informations sensibles.
 
@@ -23,7 +23,7 @@ Vous devez utiliser {{HTTPMethod("POST")}} plutôt que {{HTTPMethod("GET")}} dan
 
 Vous devriez toujours utiliser {{Glossary("HTTPS")}} pour vos sites. Cela présente de nombreux avantages en matière de sécurité, y compris le fait que les sites HTTPS ne transmettent jamais le `referer` à des sites non-HTTPS. C'est aujourd'hui de moins en moins nécessaire maintenant que la plupart des sites Web utilisent HTTPS, mais cela reste malgré tout un élément à prendre en compte.
 
-De plus, vous devriez envisager de supprimer tout contenu provenant d'un tiers (ex., les widgets de réseautage social inclus dans des {{HTMLElement("iframe")}}) des zones sécurisées de vos sites Web, comme les pages de réinitialisation de mots de passe, les formulaires de paiement, les interfaces de connexion, etc.
+De plus, vous devriez envisager de supprimer tout contenu provenant d'un tiers (ex., les composants de réseautage social inclus dans des {{HTMLElement("iframe")}}) des zones sécurisées de vos sites Web, comme les pages de réinitialisation de mots de passe, les formulaires de paiement, les interfaces de connexion, etc.
 
 Vous pouvez également atténuer ces risques en utilisant&nbsp;:
 
