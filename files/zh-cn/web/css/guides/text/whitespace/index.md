@@ -407,9 +407,9 @@ Firefox 开发者工具的 HTML 检查器能高亮文本节点，并精确显示
 
 ## 在 DOM 中使用空白字符
 
-如前所述，在渲染时空白字符会被[压缩和修剪](#压缩与转换)，但在 DOM 中得以保留。这在使用 JavaScript 进行 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 操作时可能带来一些陷阱。例如，当你持有父节点引用并试图通过 `Node.firstChild` 操作其首个子元素时，若父节点起始标签后存在异常空白字符节点，将导致错误结果——文本节点会被选中而非目标元素。
+如前所述，在渲染时空白字符会被[压缩和修剪](#压缩与转换)，但在 DOM 中得以保留。这在使用 JavaScript 进行 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 操作时可能带来一些陷阱。例如，当你持有父节点引用并试图通过 [`Node.firstChild`](/zh-CN/docs/Web/API/Node/firstChild) 操作其首个子元素时，若父节点起始标签后存在异常空白字符节点，将导致错误结果——文本节点会被选中而非目标元素。
 
-另一个例子是：若需根据元素是否为空（无子节点）对子集进行操作，可使用 `Node.hasChildNodes()` 方法。但若目标元素中存在文本节点，则可能导致错误结果。
+另一个例子是：若需根据元素是否为空（无子节点）对子集进行操作，可使用 [`Node.hasChildNodes()`](/zh-CN/docs/Web/API/Node/hasChildNodes) 方法。但若目标元素中存在文本节点，则可能导致错误结果。
 
 以下 JavaScript 代码展示了若干便于处理 DOM 中空白字符的函数：
 
@@ -421,7 +421,7 @@ Firefox 开发者工具的 HTML 检查器能高亮文本节点，并精确显示
  *  "\r" CR  \u000D（回车符）
  *  " "  SPC \u0020（真正的空格符）
  *
- * 不使用 JavaScript 的“\s”，因为它包含不断行空白字符等其他字符。
+ * 不使用 JavaScript 的“\s”，因为它包含非断行空白字符等其他字符。
  */
 
 /**
