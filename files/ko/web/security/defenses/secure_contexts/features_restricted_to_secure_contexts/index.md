@@ -1,6 +1,7 @@
 ---
 title: 보안 컨텍스트로 제한된 기능들
-slug: Web/Security/Secure_Contexts/features_restricted_to_secure_contexts
+slug: Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts
+original_slug: Web/Security/Secure_Contexts/features_restricted_to_secure_contexts
 l10n:
   sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---

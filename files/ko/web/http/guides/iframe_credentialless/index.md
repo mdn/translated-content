@@ -1,6 +1,7 @@
 ---
 title: 무인증 IFrame
-slug: Web/Security/IFrame_credentialless
+slug: Web/HTTP/Guides/IFrame_credentialless
+original_slug: Web/Security/IFrame_credentialless
 l10n:
   sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---
