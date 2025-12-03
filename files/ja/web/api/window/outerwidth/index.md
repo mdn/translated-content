@@ -1,6 +1,9 @@
 ---
-title: Window.outerWidth
+title: "Window: outerWidth プロパティ"
+short-title: outerWidth
 slug: Web/API/Window/outerWidth
+l10n:
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 {{APIRef}}
@@ -17,7 +20,7 @@ slug: Web/API/Window/outerWidth
 
 {{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat}}
 

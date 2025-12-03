@@ -1,9 +1,9 @@
 ---
 title: フレックスコンテナー内のアイテムの配置
+short-title: フレックスアイテムの配置
 slug: Web/CSS/Guides/Flexible_box_layout/Aligning_items
-original_slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
 l10n:
-  sourceCommit: f11e9200b6f9d5c191051eb7ccbe7ebd44966e43
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 フレックスボックスが有用な理由の 1 つは、要素を垂直方向に中央揃えする手軽な方法を提供しているなど、適切な配置が可能になることです。このガイドでは、フレックスボックスの配置と位置揃えのプロパティがどのように動作するのかを、徹底的に見ていきます。
@@ -96,7 +96,6 @@ l10n:
 
 .box div {
   width: 100px;
-  height: 100px;
   background-color: rgb(96 139 168 / 0.2);
   border: 2px solid rgb(96 139 168);
   border-radius: 5px;
@@ -514,7 +513,7 @@ l10n:
 フレックスのアイテム間にすき間を作るには、{{cssxref("gap")}}、{{cssxref("column-gap")}}、{{cssxref("row-gap")}}の各プロパティを使用します。{{cssxref("column-gap")}} プロパティは、行内のアイテム間にすき間を作成します。{{cssxref("row-gap")}} プロパティは、{{cssxref("flex-wrap")}} が `wrap` に設定されている場合、フレックス行間にすき間を作成します。
 
 {{cssxref("gap")}} プロパティは、 `row-gap` と `column-gap` の両方を一緒に設定する一括指定です。
-フレックスアイテム間またはフレックス行間の隙間は方向によって変わります。 {{cssxref("flex-direction")}} プロパティが行を作成する場合、最初の値はフレックス行間の隙間を定義し、 2 つ目の値はそれぞれの行内のアイテム間の隙間を定義します。列の場合（`flex-direction` を `column` または `column-reverse` に設定した場合）、最初の値はフレックスアイテム間の隙間を定義し、 2 つ目の値はフレックス行間の隙間を定義します。
+フレックスアイテム間またはフレックス行間は方向によって変わります。 {{cssxref("flex-direction")}} プロパティが行を作成する場合、最初の値はフレックス行間の隙間を定義し、 2 つ目の値はそれぞれの行内のアイテム間の隙間を定義します。列の場合（`flex-direction` を `column` または `column-reverse` に設定した場合）、最初の値はフレックスアイテム間の隙間を定義し、 2 つ目の値はフレックス行間の隙間を定義します。
 
 ```html live-sample___gap
 <div class="box">

@@ -3,18 +3,18 @@ title: <angle-percentage>
 slug: Web/CSS/Reference/Values/angle-percentage
 original_slug: Web/CSS/angle-percentage
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
-Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<angle-percentage>`** représente une valeur qui peut être soit un {{cssxref("angle")}} soit un {{cssxref("percentage")}}.
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<angle-percentage>`** représente une valeur qui peut être soit un {{CSSxRef("angle")}} soit un {{CSSxRef("percentage")}}.
 
-Lorsque **`<angle-percentage>`** est accepté, le pourcentage est converti en une valeur angulaire et peut donc être utilisé dans une expression {{cssxref("calc", "calc()")}}.
+Lorsque **`<angle-percentage>`** est accepté, le pourcentage est converti en une valeur angulaire et peut donc être utilisé dans une expression {{CSSxRef("calc", "calc()")}}.
 
 ## Syntaxe
 
-Voir la documentation pour {{cssxref("angle")}} et {{cssxref("percentage")}} pour plus de détails sur les syntaxes autorisées par ce type.
+Voir la documentation pour {{CSSxRef("angle")}} et {{CSSxRef("percentage")}} pour plus de détails sur les syntaxes autorisées par ce type.
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Spécifications
 

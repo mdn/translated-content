@@ -74,9 +74,9 @@ grid-template:
 
 Это свойство является сокращённой формой записи для следующих CSS-свойств:
 
-- [`grid-template-areas`](/ru/docs/Web/CSS/grid-template-areas)
-- [`grid-template-columns`](/ru/docs/Web/CSS/grid-template-columns)
-- [`grid-template-rows`](/ru/docs/Web/CSS/grid-template-rows)
+- [`grid-template-areas`](/ru/docs/Web/CSS/Reference/Properties/grid-template-areas)
+- [`grid-template-columns`](/ru/docs/Web/CSS/Reference/Properties/grid-template-columns)
+- [`grid-template-rows`](/ru/docs/Web/CSS/Reference/Properties/grid-template-rows)
 
 ## Синтаксис
 

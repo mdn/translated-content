@@ -177,7 +177,7 @@ let maHonda = {
 };
 ```
 
-De la même façon, on pourra utiliser des initialisateurs pour créer des tableaux. Pour plus d'informations à ce sujet, voir [les littéraux de tableaux](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#les_litt.c3.a9raux_de_tableaux).
+De la même façon, on pourra utiliser des initialisateurs pour créer des tableaux. Pour plus d'informations à ce sujet, voir [les littéraux de tableaux](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#les_littéraux_de_tableaux).
 
 ### Utiliser les constructeurs
 

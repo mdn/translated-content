@@ -39,4 +39,4 @@ _Источник изображения: [Icons & Browser Colors](https://web.d
 ## Смотрите также
 
 - Свойство CSS {{cssxref("color-scheme")}}
-- Медиа-запрос [`prefers-color-scheme`](/ru/docs/Web/CSS/@media/prefers-color-scheme)
+- Медиа-запрос [`prefers-color-scheme`](/ru/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme)

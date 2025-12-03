@@ -6,7 +6,7 @@ original_slug: Web/CSS/::after
 
 {{CSSRef}}
 
-В CSS, **`::after`** создаёт [псевдоэлемент](/ru/docs/Web/CSS/Pseudo-elements), который является последним потомком выбранного элемента. Часто используется для добавления косметического содержимого в элемент с помощью свойства {{cssxref("content")}}. По умолчанию является инлайновым.
+В CSS, **`::after`** создаёт [псевдоэлемент](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-elements), который является последним потомком выбранного элемента. Часто используется для добавления косметического содержимого в элемент с помощью свойства {{cssxref("content")}}. По умолчанию является инлайновым.
 
 ```css
 /* Добавить стрелки после ссылок */
@@ -23,7 +23,7 @@ a::after {
 {{csssyntax}}
 
 > [!NOTE]
-> В CSS3 появилась запись `::after` (с двумя двоеточиями) для различения [псевдоклассов](/ru/docs/Web/CSS/Pseudo-classes) и [псевдоэлементов](/ru/docs/Web/CSS/Pseudo-elements). Браузеры также поддерживают запись `:after`, введённую в CSS2.
+> В CSS3 появилась запись `::after` (с двумя двоеточиями) для различения [псевдоклассов](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-classes) и [псевдоэлементов](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-elements). Браузеры также поддерживают запись `:after`, введённую в CSS2.
 
 ## Примеры
 
@@ -91,7 +91,7 @@ a::after {
 
 ### Подсказки
 
-Следующий пример показывает использование [псевдоэлемента](/ru/docs/Web/CSS/Pseudo-elements) `::after` в сочетании с CSS-выражением [`attr()`](/ru/docs/Web/CSS/attr) и [пользовательского `data-*` атрибута](/ru/docs/Web/HTML/Reference/Global_attributes/data-*) `data-descr` для создания _подсказки_ на чистом CSS.
+Следующий пример показывает использование [псевдоэлемента](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-elements) `::after` в сочетании с CSS-выражением [`attr()`](/ru/docs/Web/CSS/Reference/Values/attr) и [пользовательского `data-*` атрибута](/ru/docs/Web/HTML/Reference/Global_attributes/data-*) `data-descr` для создания _подсказки_ на чистом CSS.
 
 #### HTML
 

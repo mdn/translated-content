@@ -2298,7 +2298,6 @@
 /fr/docs/JavaScript/Reference/Objets_globaux/Function/displayName	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/displayName
 /fr/docs/JavaScript/Reference/Objets_globaux/Function/length	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/length
 /fr/docs/JavaScript/Reference/Objets_globaux/Function/name	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/name
-/fr/docs/JavaScript/Reference/Objets_globaux/Function/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function
 /fr/docs/JavaScript/Reference/Objets_globaux/Function/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /fr/docs/JavaScript/Reference/Objets_globaux/Function/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /fr/docs/JavaScript/Reference/Objets_globaux/InternalError	/fr/docs/Web/JavaScript/Reference/Global_Objects/InternalError
@@ -2522,7 +2521,6 @@
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Function	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Function/caller	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/caller
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Function/length	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/length
-/fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Function/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Function/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Function/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Math	/fr/docs/Web/JavaScript/Reference/Global_Objects/Math
@@ -2745,7 +2743,6 @@
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Function	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Function/caller	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/caller
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Function/length	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/length
-/fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Function/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Function/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Function/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Math	/fr/docs/Web/JavaScript/Reference/Global_Objects/Math
@@ -2829,7 +2826,7 @@
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Propriétés_globales/undefined	/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/À_propos	/fr/docs/Web/JavaScript
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/À_propos/Conventions_d'écriture	/fr/docs/Web/JavaScript
-/fr/docs/JavaScript/Same_origin_policy_for_JavaScript	/fr/docs/Web/Security/Same-origin_policy
+/fr/docs/JavaScript/Same_origin_policy_for_JavaScript	/fr/docs/Web/Security/Defenses/Same-origin_policy
 /fr/docs/JavaScript/Shells	/fr/docs/Web/JavaScript/Reference/JavaScript_technologies_overview
 /fr/docs/JavaScript/Structures_de_données	/fr/docs/Web/JavaScript/Guide/Data_structures
 /fr/docs/JavaScript/Tableaux_typés	/fr/docs/Web/JavaScript/Guide/Typed_arrays
@@ -6522,7 +6519,7 @@
 /fr/docs/Web/HTTP/Overview	/fr/docs/Web/HTTP/Guides/Overview
 /fr/docs/Web/HTTP/Permissions_Policy	/fr/docs/Web/HTTP/Guides/Permissions_Policy
 /fr/docs/Web/HTTP/Protocol_upgrade_mechanism	/fr/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism
-/fr/docs/Web/HTTP/Public_Key_Pinning	/fr/docs/Web/Security/Certificate_Transparency
+/fr/docs/Web/HTTP/Public_Key_Pinning	/fr/docs/Web/Security/Defenses/Certificate_Transparency
 /fr/docs/Web/HTTP/Range_requests	/fr/docs/Web/HTTP/Guides/Range_requests
 /fr/docs/Web/HTTP/Redirections	/fr/docs/Web/HTTP/Guides/Redirections
 /fr/docs/Web/HTTP/Requêtes_conditionnelles	/fr/docs/Web/HTTP/Guides/Conditional_requests
@@ -6774,7 +6771,6 @@
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/toString
-/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/@@toStringTag	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendars	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCalendars
@@ -7098,7 +7094,6 @@
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/displayName	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/displayName
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/length	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/length
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/name	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/name
-/fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Generator	/fr/docs/Web/JavaScript/Reference/Global_Objects/Generator
@@ -7106,7 +7101,6 @@
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Generator/return	/fr/docs/Web/JavaScript/Reference/Global_Objects/Generator/return
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Generator/throw	/fr/docs/Web/JavaScript/Reference/Global_Objects/Generator/throw
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/GeneratorFunction	/fr/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction
-/fr/docs/Web/JavaScript/Reference/Objets_globaux/GeneratorFunction/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Infinity	/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Int16Array	/fr/docs/Web/JavaScript/Reference/Global_Objects/Int16Array
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Int32Array	/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array
@@ -7649,7 +7643,7 @@
 /fr/docs/Web/JavaScript/Reference/Valeurs_par_défaut_des_arguments	/fr/docs/Web/JavaScript/Reference/Functions/Default_parameters
 /fr/docs/Web/JavaScript/Reference/Virgules_finales	/fr/docs/Web/JavaScript/Reference/Trailing_commas
 /fr/docs/Web/JavaScript/Reference/fonctions_fléchées	/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions
-/fr/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/fr/docs/Web/Security/Same-origin_policy
+/fr/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/fr/docs/Web/Security/Defenses/Same-origin_policy
 /fr/docs/Web/JavaScript/Shells	/fr/docs/Web/JavaScript/Reference/JavaScript_technologies_overview
 /fr/docs/Web/JavaScript/Structures_de_données	/fr/docs/Web/JavaScript/Guide/Data_structures
 /fr/docs/Web/JavaScript/Tableaux_typés	/fr/docs/Web/JavaScript/Guide/Typed_arrays
@@ -7872,9 +7866,15 @@
 /fr/docs/Web/SVG/Tutoriel_SVG	/fr/docs/Web/SVG/Tutorials/SVG_from_scratch
 /fr/docs/Web/SVG/Tutoriel_SVG/Introduction	/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Introduction
 /fr/docs/Web/SVG/Tutoriel_SVG/Premiers_pas	/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started
-/fr/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content	/fr/docs/Web/Security/Mixed_content
-/fr/docs/Web/Security/Public_Key_Pinning	/fr/docs/Web/Security/Certificate_Transparency
-/fr/docs/Web/Security/Same_origin_policy_for_JavaScript	/fr/docs/Web/Security/Same-origin_policy
+/fr/docs/Web/Security/Certificate_Transparency	/fr/docs/Web/Security/Defenses/Certificate_Transparency
+/fr/docs/Web/Security/Mixed_content	/fr/docs/Web/Security/Defenses/Mixed_content
+/fr/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content	/fr/docs/Web/Security/Defenses/Mixed_content
+/fr/docs/Web/Security/Public_Key_Pinning	/fr/docs/Web/Security/Defenses/Certificate_Transparency
+/fr/docs/Web/Security/Referer_header:_privacy_and_security_concerns	/fr/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns
+/fr/docs/Web/Security/Same-origin_policy	/fr/docs/Web/Security/Defenses/Same-origin_policy
+/fr/docs/Web/Security/Same_origin_policy_for_JavaScript	/fr/docs/Web/Security/Defenses/Same-origin_policy
+/fr/docs/Web/Security/Secure_Contexts	/fr/docs/Web/Security/Defenses/Secure_Contexts
+/fr/docs/Web/Security/Subresource_Integrity	/fr/docs/Web/Security/Defenses/Subresource_Integrity
 /fr/docs/Web/Tutorials	/fr/docs/MDN/Tutorials
 /fr/docs/Web/Tutoriels	/fr/docs/MDN/Tutorials
 /fr/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs	/fr/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs

@@ -108,7 +108,7 @@ _Aucun changement._
 ## Réseau & Sécurité
 
 - L'entête HTTP/2 `alt-svc` est maintenant supportée ([bug 1003448](https://bugzilla.mozilla.org/show_bug.cgi?id=1003448)).
-- L'extension [Public Key Pinning](/fr/docs/Web/Security/Certificate_Transparency) pour HTTP (HPKP) a été implementée ([bug 787133](https://bugzilla.mozilla.org/show_bug.cgi?id=787133)).
+- L'extension [Public Key Pinning](/fr/docs/Web/Security/Defenses/Certificate_Transparency) pour HTTP (HPKP) a été implementée ([bug 787133](https://bugzilla.mozilla.org/show_bug.cgi?id=787133)).
 
 ## Changements pour les modules et les développeurs Mozilla
 

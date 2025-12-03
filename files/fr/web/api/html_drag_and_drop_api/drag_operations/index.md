@@ -211,7 +211,7 @@ Vous pouvez également définir une propriété [effectAllowed](/fr/docs/Web/API
 
 ## Retour d'information du dépôt
 
-Il y a de nombreuses manières d'indiquer à l'utilisateur que le dépot est autorisé dans une certaine zone. Le pointeur de la souris va être mis à jour en fonction de la valeur de la propriété [dropEffect](/fr/docs/Web/API/DragDrop/DataTransfer#dropEffect.28.29). L'apparence exacte dépend de la plateforme de l'utilisateur, généralement il s'agit d'un icone représentant un signe plus qui apparaît pour une copie par exemple, et un 'impossible de déposer ici' peut apparaître quand le dépôt n'est pas autorisé. Cette information contextuelle est suffisante dans la plupart des cas.
+Il y a de nombreuses manières d'indiquer à l'utilisateur que le dépot est autorisé dans une certaine zone. Le pointeur de la souris va être mis à jour en fonction de la valeur de la propriété [dropEffect](</fr/docs/Web/API/DragDrop/DataTransfer#dropEffect()>). L'apparence exacte dépend de la plateforme de l'utilisateur, généralement il s'agit d'un icone représentant un signe plus qui apparaît pour une copie par exemple, et un 'impossible de déposer ici' peut apparaître quand le dépôt n'est pas autorisé. Cette information contextuelle est suffisante dans la plupart des cas.
 
 De plus, vous pouvez aussi mettre à jour l'interface utilisateur en surlignant au besoin. Pour un simple surlignage, vous pouvez utiliser la pseudo-classe `-moz-drag-over`sur la cible du dépôt.
 
@@ -233,9 +233,9 @@ Finally, the `dragleave` event will fire at an element when the drag leaves the 
 
 When the user releases the mouse, the drag and drop operation ends. If the mouse was released over an element that is a valid drop target, that is, one that cancelled the last `dragenter` or `dragover` event, then the drop will be successful, and a `drop` event will fire at the target. Otherwise, the drag operation is cancelled and no `drop` event is fired.
 
-During the `drop` event, you should retrieve that data that was dropped from the event and insert it at the drop location. You can use the [dropEffect](/fr/docs/Web/API/DragDrop/DataTransfer#dropEffect.28.29) property to determine which drag operation was desired.
+During the `drop` event, you should retrieve that data that was dropped from the event and insert it at the drop location. You can use the [dropEffect](</fr/docs/Web/API/DragDrop/DataTransfer#dropEffect()>) property to determine which drag operation was desired.
 
-As with all drag related events, the event's `dataTransfer` property will hold the data that is being dragged. The [getData](/fr/docs/Web/API/DragDrop/DataTransfer#getData.28.29) method may be used to retrieve the data again.
+As with all drag related events, the event's `dataTransfer` property will hold the data that is being dragged. The [getData](</fr/docs/Web/API/DragDrop/DataTransfer#getData()>) method may be used to retrieve the data again.
 
 ```js
 function onDrop(event) {
@@ -245,7 +245,7 @@ function onDrop(event) {
 }
 ```
 
-The [getData](/fr/docs/Web/API/DragDrop/DataTransfer#getData.28.29) method takes one argument, the type of data to retrieve. It will return the string value that was set when the [setData](/fr/docs/Web/API/DragDrop/DataTransfer#setData.28.29) was called at the beginning of the drag operation. An empty string will be returned if data of that type does not exist. Naturally though, you would likely know that the right type of data was available, as it was previously checked during a `dragover` event.
+The [getData](</fr/docs/Web/API/DragDrop/DataTransfer#getData()>) method takes one argument, the type of data to retrieve. It will return the string value that was set when the [setData](</fr/docs/Web/API/DragDrop/DataTransfer#setData()>) was called at the beginning of the drag operation. An empty string will be returned if data of that type does not exist. Naturally though, you would likely know that the right type of data was available, as it was previously checked during a `dragover` event.
 
 In the example here, once we have retrieved the data, we insert the string as the textual content of the target. This has the effect of inserting the dragged text where it was dropped, assuming that the drop target is an area of text such as a `p` or `div` element.
 
@@ -280,7 +280,7 @@ var link = event.dataTransfer.getData("URL");
 
 This eliminates the need to check for comments or iterate through lines yourself, however it is limited to only the first URL in the list.
 
-The `URL` type is a special type used only as a shorthand, and it does not appear within the list of types specified in the [types](/fr/docs/Web/API/DragDrop/DataTransfer#types.28.29) property.
+The `URL` type is a special type used only as a shorthand, and it does not appear within the list of types specified in the [types](</fr/docs/Web/API/DragDrop/DataTransfer#types()>) property.
 
 Sometimes you may support a number of different formats, and you want to retrieve the data that is most specific that is supported. In this example, three formats are support by a drop target.
 
@@ -302,9 +302,9 @@ This method relies on JavaScript functionality available in Firefox 3. However t
 
 ## Finishing a Drag
 
-Once the drag is complete, a `dragend` is fired at the source of the drag (the same element that received the `dragstart` event). This event will fire if the drag was successful or if it was cancelled. However, you can use the [dropEffect](/fr/docs/Web/API/DragDrop/DataTransfer#dropEffect.28.29) to determine what drop operation occurred.
+Once the drag is complete, a `dragend` is fired at the source of the drag (the same element that received the `dragstart` event). This event will fire if the drag was successful or if it was cancelled. However, you can use the [dropEffect](</fr/docs/Web/API/DragDrop/DataTransfer#dropEffect()>) to determine what drop operation occurred.
 
-If the [dropEffect](/fr/docs/Web/API/DragDrop/DataTransfer#dropEffect.28.29) property has the value `none` during a `dragend`, then the drag was cancelled. Otherwise, the effect specifies which operation was performed. The source can use this information after a move operation to remove the dragged item from the old location. The [mozUserCancelled](/fr/docs/Web/API/DragDrop/DataTransfer#mozUserCancelled.28.29) property will be set to true if the user cancelled the drag (by pressing Escape), and false if the drag was cancelled for other reasons such as an invalid drop target, or if was successful.
+If the [dropEffect](</fr/docs/Web/API/DragDrop/DataTransfer#dropEffect()>) property has the value `none` during a `dragend`, then the drag was cancelled. Otherwise, the effect specifies which operation was performed. The source can use this information after a move operation to remove the dragged item from the old location. The [mozUserCancelled](</fr/docs/Web/API/DragDrop/DataTransfer#mozUserCancelled()>) property will be set to true if the user cancelled the drag (by pressing Escape), and false if the drag was cancelled for other reasons such as an invalid drop target, or if was successful.
 
 A drop can occur inside the same window or over another application. The `dragend` event will always fire regardless. The event's [screenX](/fr/docs/Web/API/Window/screenX) and [screenY](/fr/docs/Web/API/Window/screenY) properties will be set to the screen coordinate where the drop occurred.
 
