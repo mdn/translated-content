@@ -109,7 +109,7 @@ l10n:
 
 一般的に、 [URL のクエリー文字列に機密データを含める](https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url)ことは避けるべきです。なぜなら、第三者が URL を傍受した場合（例えば、 HTTP の {{httpheader("Referer")}} ヘッダー経由で）、その情報を盗むことができるからです。さらに深刻なのは、これらの URL が[インターネットアーカイブ](https://web.archive.org/)などの公開ウェブクローラ、 HTTP プロキシー、アーカイブツールによってインデックス化される可能性があるということです。つまり、機密データが公的にアクセス可能なリソース上に残存する可能性があるということです。
 
-これらの問題を避けるには、 `GET` リクエストではなく `POST` リクエストを使用してください。 記事 [Referer ヘッダーのプライバシーとセキュリティの考慮事項](/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns)では、 `Referer` ヘッダーに関連付けられたプライバシーとセキュリティのリスクについてより詳しく説明し、それらのリスクを軽減するためのアドバイスを提供しています。
+これらの問題を避けるには、 `GET` リクエストではなく `POST` リクエストを使用してください。 記事 [Referer ヘッダーのプライバシーとセキュリティの考慮事項](/ja/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns)では、 `Referer` ヘッダーに関連付けられたプライバシーとセキュリティのリスクについてより詳しく説明し、それらのリスクを軽減するためのアドバイスを提供しています。
 
 > [!NOTE]
 > GET リクエストで URL に機密データを送信しないようにすることで、{{glossary("CSRF", "クロスサイトリクエストフォージェリー")}}や[リプレイ攻撃](https://en.wikipedia.org/wiki/Replay_attack)から保護するのにも役に立ちます。
