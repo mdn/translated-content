@@ -1,6 +1,7 @@
 ---
 title: Referer ヘッダーのプライバシーとセキュリティの考慮事項
-slug: Web/Security/Referer_header:_privacy_and_security_concerns
+slug: Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns
+original_slug: Web/Security/Referer_header:_privacy_and_security_concerns
 l10n:
   sourceCommit: bea339d321513fc6d66d95c8f0305b9387fa57bb
 ---
