@@ -1,6 +1,7 @@
 ---
 title: CSS 属性
-slug: Web/CSS/Properties
+short-title: 属性
+slug: Web/CSS/Reference/Properties
 l10n:
   sourceCommit: 12b296d2b3937c45b2363f34ed8afadcf00ed166
 ---
