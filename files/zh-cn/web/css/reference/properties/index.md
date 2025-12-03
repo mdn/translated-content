@@ -1,9 +1,11 @@
 ---
 title: CSS 属性
 slug: Web/CSS/Properties
+l10n:
+  sourceCommit: 12b296d2b3937c45b2363f34ed8afadcf00ed166
 ---
 
-在 [CSS 声明](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax#css_声明) 中，[CSS](/zh-CN/docs/Web/CSS) ***属性***用于设置选中元素某些样式参数的内容。例如，{{CSSxRef("opacity")}} 属性用于设置选中元素的不透明度，从而可以控制该元素后面的内容是否可见：
+在 [CSS 声明](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax#css_声明) 中，[CSS](/zh-CN/docs/Web/CSS) **_属性_**用于设置选中元素某些样式参数的内容。例如，{{CSSxRef("opacity")}} 属性用于设置选中元素的不透明度，从而可以控制该元素后面的内容是否可见：
 
 ```css
 /* 设置 <img> 元素的不透明度为 0.8 */
@@ -44,7 +46,7 @@ CSS 规范定义的标准属性列表列举如下：
 - {{CSSxRef("align-items")}}
 - {{CSSxRef("align-self")}}
 - {{CSSxRef("alignment-baseline")}}
-- {{CSSxRef("all")}}（简写）
+- {{CSSxRef("all")}} (shorthand)
 - {{CSSxRef("anchor-name")}}
 - {{CSSxRef("animation-composition")}}
 - {{CSSxRef("animation-delay")}}
@@ -56,10 +58,10 @@ CSS 规范定义的标准属性列表列举如下：
 - {{CSSxRef("animation-play-state")}}
 - {{CSSxRef("animation-range-end")}}
 - {{CSSxRef("animation-range-start")}}
-- {{CSSxRef("animation-range")}}（简写）
+- {{CSSxRef("animation-range")}} (shorthand)
 - {{CSSxRef("animation-timeline")}}
 - {{CSSxRef("animation-timing-function")}}
-- {{CSSxRef("animation")}}（简写）
+- {{CSSxRef("animation")}} (shorthand)
 - {{CSSxRef("appearance")}}
 - {{CSSxRef("aspect-ratio")}}
 
@@ -78,7 +80,7 @@ CSS 规范定义的标准属性列表列举如下：
 - {{CSSxRef("background-position")}}
 - {{CSSxRef("background-repeat")}}
 - {{CSSxRef("background-size")}}
-- {{CSSxRef("background")}}（简写）
+- {{CSSxRef("background")}} (shorthand)
 - {{CSSxRef("block-size")}}
 
 ### Border-\*
@@ -87,22 +89,22 @@ CSS 规范定义的标准属性列表列举如下：
 - {{CSSxRef("border-block-end-color")}}
 - {{CSSxRef("border-block-end-style")}}
 - {{CSSxRef("border-block-end-width")}}
-- {{CSSxRef("border-block-end")}}（简写）
+- {{CSSxRef("border-block-end")}} (shorthand)
 - {{CSSxRef("border-block-start-color")}}
 - {{CSSxRef("border-block-start-style")}}
 - {{CSSxRef("border-block-start-width")}}
-- {{CSSxRef("border-block-start")}}（简写）
+- {{CSSxRef("border-block-start")}} (shorthand)
 - {{CSSxRef("border-block-style")}}
 - {{CSSxRef("border-block-width")}}
-- {{CSSxRef("border-block")}}（简写）
+- {{CSSxRef("border-block")}} (shorthand)
 - {{CSSxRef("border-bottom-color")}}
 - {{CSSxRef("border-bottom-left-radius")}}
 - {{CSSxRef("border-bottom-right-radius")}}
 - {{CSSxRef("border-bottom-style")}}
 - {{CSSxRef("border-bottom-width")}}
-- {{CSSxRef("border-bottom")}}（简写）
+- {{CSSxRef("border-bottom")}} (shorthand)
 - {{CSSxRef("border-collapse")}}
-- {{CSSxRef("border-color")}}（简写）
+- {{CSSxRef("border-color")}} (shorthand)
 - {{CSSxRef("border-end-end-radius")}}
 - {{CSSxRef("border-end-start-radius")}}
 - {{CSSxRef("border-image-outset")}}
@@ -110,40 +112,40 @@ CSS 规范定义的标准属性列表列举如下：
 - {{CSSxRef("border-image-slice")}}
 - {{CSSxRef("border-image-source")}}
 - {{CSSxRef("border-image-width")}}
-- {{CSSxRef("border-image")}}（简写）
+- {{CSSxRef("border-image")}} (shorthand)
 - {{CSSxRef("border-inline-color")}}
 - {{CSSxRef("border-inline-end-color")}}
 - {{CSSxRef("border-inline-end-style")}}
 - {{CSSxRef("border-inline-end-width")}}
-- {{CSSxRef("border-inline-end")}}（简写）
+- {{CSSxRef("border-inline-end")}} (shorthand)
 - {{CSSxRef("border-inline-start-color")}}
 - {{CSSxRef("border-inline-start-style")}}
 - {{CSSxRef("border-inline-start-width")}}
-- {{CSSxRef("border-inline-start")}}（简写）
+- {{CSSxRef("border-inline-start")}} (shorthand)
 - {{CSSxRef("border-inline-style")}}
 - {{CSSxRef("border-inline-width")}}
-- {{CSSxRef("border-inline")}}（简写）
+- {{CSSxRef("border-inline")}} (shorthand)
 - {{CSSxRef("border-left-color")}}
 - {{CSSxRef("border-left-style")}}
 - {{CSSxRef("border-left-width")}}
-- {{CSSxRef("border-left")}}（简写）
-- {{CSSxRef("border-radius")}}（简写）
+- {{CSSxRef("border-left")}} (shorthand)
+- {{CSSxRef("border-radius")}} (shorthand)
 - {{CSSxRef("border-right-color")}}
 - {{CSSxRef("border-right-style")}}
 - {{CSSxRef("border-right-width")}}
-- {{CSSxRef("border-right")}}（简写）
+- {{CSSxRef("border-right")}} (shorthand)
 - {{CSSxRef("border-spacing")}}
 - {{CSSxRef("border-start-end-radius")}}
 - {{CSSxRef("border-start-start-radius")}}
-- {{CSSxRef("border-style")}}（简写）
+- {{CSSxRef("border-style")}} (shorthand)
 - {{CSSxRef("border-top-color")}}
 - {{CSSxRef("border-top-left-radius")}}
 - {{CSSxRef("border-top-right-radius")}}
 - {{CSSxRef("border-top-style")}}
 - {{CSSxRef("border-top-width")}}
-- {{CSSxRef("border-top")}}（简写）
-- {{CSSxRef("border-width")}}（简写）
-- {{CSSxRef("border")}}（简写）
+- {{CSSxRef("border-top")}} (shorthand)
+- {{CSSxRef("border-width")}} (shorthand)
+- {{CSSxRef("border")}} (shorthand)
 
 ### B - C
 
@@ -163,7 +165,10 @@ CSS 规范定义的标准属性列表列举如下：
 - {{CSSxRef("break-before")}}
 - {{CSSxRef("break-inside")}}
 - {{CSSxRef("caption-side")}}
+- {{CSSxRef("caret-animation")}}
 - {{CSSxRef("caret-color")}}
+- {{CSSxRef("caret-shape")}}
+- {{CSSxRef("caret")}} (shorthand)
 - {{CSSxRef("clear")}}
 - {{CSSxRef("clip-path")}}
 - {{CSSxRef("clip-rule")}}
@@ -178,21 +183,38 @@ CSS 规范定义的标准属性列表列举如下：
 - {{CSSxRef("column-rule-color")}}
 - {{CSSxRef("column-rule-style")}}
 - {{CSSxRef("column-rule-width")}}
-- {{CSSxRef("column-rule")}}（简写）
+- {{CSSxRef("column-rule")}} (shorthand)
 - {{CSSxRef("column-span")}}
 - {{CSSxRef("column-width")}}
-- {{CSSxRef("columns")}}（简写）
+- {{CSSxRef("columns")}} (shorthand)
 - {{CSSxRef("contain-intrinsic-block-size")}}
 - {{CSSxRef("contain-intrinsic-height")}}
 - {{CSSxRef("contain-intrinsic-inline-size")}}
-- {{CSSxRef("contain-intrinsic-size")}}（简写）
+- {{CSSxRef("contain-intrinsic-size")}} (shorthand)
 - {{CSSxRef("contain-intrinsic-width")}}
 - {{CSSxRef("contain")}}
 - {{CSSxRef("container-name")}}
 - {{CSSxRef("container-type")}}
-- {{CSSxRef("container")}}（简写）
+- {{CSSxRef("container")}} (shorthand)
 - {{CSSxRef("content-visibility")}}
 - {{CSSxRef("content")}}
+- {{CSSxRef("corner-block-end-shape")}}
+- {{CSSxRef("corner-block-start-shape")}}
+- {{CSSxRef("corner-bottom-left-shape")}}
+- {{CSSxRef("corner-bottom-right-shape")}}
+- {{CSSxRef("corner-bottom-shape")}} (shorthand)
+- {{CSSxRef("corner-end-end-shape")}}
+- {{CSSxRef("corner-end-start-shape")}}
+- {{CSSxRef("corner-inline-end-shape")}}
+- {{CSSxRef("corner-inline-start-shape")}}
+- {{CSSxRef("corner-left-shape")}} (shorthand)
+- {{CSSxRef("corner-right-shape")}} (shorthand)
+- {{CSSxRef("corner-shape")}} (shorthand)
+- {{CSSxRef("corner-start-end-shape")}}
+- {{CSSxRef("corner-start-start-shape")}}
+- {{CSSxRef("corner-top-left-shape")}}
+- {{CSSxRef("corner-top-right-shape")}}
+- {{CSSxRef("corner-top-shape")}} (shorthand)
 - {{CSSxRef("counter-increment")}}
 - {{CSSxRef("counter-reset")}}
 - {{CSSxRef("counter-set")}}
@@ -206,6 +228,7 @@ CSS 规范定义的标准属性列表列举如下：
 - {{CSSxRef("direction")}}
 - {{CSSxRef("display")}}
 - {{CSSxRef("dominant-baseline")}}
+- {{CSSxRef("dynamic-range-limit")}}
 - {{CSSxRef("empty-cells")}}
 - {{CSSxRef("field-sizing")}}
 - {{CSSxRef("fill-opacity")}}
@@ -214,11 +237,11 @@ CSS 规范定义的标准属性列表列举如下：
 - {{CSSxRef("filter")}}
 - {{CSSxRef("flex-basis")}}
 - {{CSSxRef("flex-direction")}}
-- {{CSSxRef("flex-flow")}}（简写）
+- {{CSSxRef("flex-flow")}} (shorthand)
 - {{CSSxRef("flex-grow")}}
 - {{CSSxRef("flex-shrink")}}
 - {{CSSxRef("flex-wrap")}}
-- {{CSSxRef("flex")}}（简写）
+- {{CSSxRef("flex")}} (shorthand)
 - {{CSSxRef("float")}}
 - {{CSSxRef("flood-color")}}
 - {{CSSxRef("flood-opacity")}}
@@ -237,7 +260,7 @@ CSS 规范定义的标准属性列表列举如下：
 - {{CSSxRef("font-synthesis-small-caps")}}
 - {{CSSxRef("font-synthesis-style")}}
 - {{CSSxRef("font-synthesis-weight")}}
-- {{CSSxRef("font-synthesis")}}（简写）
+- {{CSSxRef("font-synthesis")}} (shorthand)
 - {{CSSxRef("font-variant-alternates")}}
 - {{CSSxRef("font-variant-caps")}}
 - {{CSSxRef("font-variant-east-asian")}}
@@ -245,30 +268,30 @@ CSS 规范定义的标准属性列表列举如下：
 - {{CSSxRef("font-variant-ligatures")}}
 - {{CSSxRef("font-variant-numeric")}}
 - {{CSSxRef("font-variant-position")}}
-- {{CSSxRef("font-variant")}}（简写）
+- {{CSSxRef("font-variant")}} (shorthand)
 - {{CSSxRef("font-variation-settings")}}
 - {{CSSxRef("font-weight")}}
-- {{CSSxRef("font")}}（简写）
+- {{CSSxRef("font")}} (shorthand)
 - {{CSSxRef("forced-color-adjust")}}
 
 ### G - I
 
-- {{CSSxRef("gap")}}（简写）
-- {{CSSxRef("grid-area")}}（简写）
+- {{CSSxRef("gap")}} (shorthand)
+- {{CSSxRef("grid-area")}} (shorthand)
 - {{CSSxRef("grid-auto-columns")}}
 - {{CSSxRef("grid-auto-flow")}}
 - {{CSSxRef("grid-auto-rows")}}
 - {{CSSxRef("grid-column-end")}}
 - {{CSSxRef("grid-column-start")}}
-- {{CSSxRef("grid-column")}}（简写）
+- {{CSSxRef("grid-column")}} (shorthand)
 - {{CSSxRef("grid-row-end")}}
 - {{CSSxRef("grid-row-start")}}
-- {{CSSxRef("grid-row")}}（简写）
+- {{CSSxRef("grid-row")}} (shorthand)
 - {{CSSxRef("grid-template-areas")}}
 - {{CSSxRef("grid-template-columns")}}
 - {{CSSxRef("grid-template-rows")}}
-- {{CSSxRef("grid-template")}}（简写）
-- {{CSSxRef("grid")}}（简写）
+- {{CSSxRef("grid-template")}} (shorthand)
+- {{CSSxRef("grid")}} (shorthand)
 - {{CSSxRef("hanging-punctuation")}}
 - {{CSSxRef("height")}}
 - {{CSSxRef("hyphenate-character")}}
@@ -281,14 +304,15 @@ CSS 规范定义的标准属性列表列举如下：
 - {{CSSxRef("inline-size")}}
 - {{CSSxRef("inset-block-end")}}
 - {{CSSxRef("inset-block-start")}}
-- {{CSSxRef("inset-block")}}（简写）
-- {{CSSxRef("inset-block")}}（简写）
+- {{CSSxRef("inset-block")}} (shorthand)
+- {{CSSxRef("inset-block")}} (shorthand)
 - {{CSSxRef("inset-inline-end")}}
 - {{CSSxRef("inset-inline-start")}}
-- {{CSSxRef("inset-inline")}}（简写）
-- {{CSSxRef("inset-inline")}}（简写）
-- {{CSSxRef("inset")}}（简写）
-- {{CSSxRef("inset")}}（简写）
+- {{CSSxRef("inset-inline")}} (shorthand)
+- {{CSSxRef("inset-inline")}} (shorthand)
+- {{CSSxRef("inset")}} (shorthand)
+- {{CSSxRef("inset")}} (shorthand)
+- {{CSSxRef("interactivity")}}
 - {{CSSxRef("interpolate-size")}}
 - {{CSSxRef("isolation")}}
 
@@ -307,20 +331,20 @@ CSS 规范定义的标准属性列表列举如下：
 - {{CSSxRef("list-style-image")}}
 - {{CSSxRef("list-style-position")}}
 - {{CSSxRef("list-style-type")}}
-- {{CSSxRef("list-style")}}（简写）
-- {{CSSxRef("list-style")}}（简写）
+- {{CSSxRef("list-style")}} (shorthand)
+- {{CSSxRef("list-style")}} (shorthand)
 - {{CSSxRef("margin-block-end")}}
 - {{CSSxRef("margin-block-start")}}
-- {{CSSxRef("margin-block")}}（简写）
+- {{CSSxRef("margin-block")}} (shorthand)
 - {{CSSxRef("margin-bottom")}}
 - {{CSSxRef("margin-inline-end")}}
 - {{CSSxRef("margin-inline-start")}}
-- {{CSSxRef("margin-inline")}}（简写）
+- {{CSSxRef("margin-inline")}} (shorthand)
 - {{CSSxRef("margin-left")}}
 - {{CSSxRef("margin-right")}}
 - {{CSSxRef("margin-top")}}
 - {{CSSxRef("margin-trim")}}
-- {{CSSxRef("margin")}}（简写）
+- {{CSSxRef("margin")}} (shorthand)
 - {{CSSxRef("marker-end")}}
 - {{CSSxRef("marker-mid")}}
 - {{CSSxRef("marker-start")}}
@@ -331,7 +355,7 @@ CSS 规范定义的标准属性列表列举如下：
 - {{CSSxRef("mask-border-slice")}}
 - {{CSSxRef("mask-border-source")}}
 - {{CSSxRef("mask-border-width")}}
-- {{CSSxRef("mask-border")}}（简写）
+- {{CSSxRef("mask-border")}} (shorthand)
 - {{CSSxRef("mask-clip")}}
 - {{CSSxRef("mask-composite")}}
 - {{CSSxRef("mask-image")}}
@@ -341,7 +365,7 @@ CSS 规范定义的标准属性列表列举如下：
 - {{CSSxRef("mask-repeat")}}
 - {{CSSxRef("mask-size")}}
 - {{CSSxRef("mask-type")}}
-- {{CSSxRef("mask")}}（简写）
+- {{CSSxRef("mask")}} (shorthand)
 - {{CSSxRef("math-depth")}}
 - {{CSSxRef("math-shift")}}
 - {{CSSxRef("math-style")}}
@@ -359,12 +383,13 @@ CSS 规范定义的标准属性列表列举如下：
 
 - {{CSSxRef("object-fit")}}
 - {{CSSxRef("object-position")}}
+- {{CSSxRef("object-view-box")}}
 - {{CSSxRef("offset-anchor")}}
 - {{CSSxRef("offset-distance")}}
 - {{CSSxRef("offset-path")}}
 - {{CSSxRef("offset-position")}}
 - {{CSSxRef("offset-rotate")}}
-- {{CSSxRef("offset")}}（简写）
+- {{CSSxRef("offset")}} (shorthand)
 - {{CSSxRef("opacity")}}
 - {{CSSxRef("order")}}
 - {{CSSxRef("orphans")}}
@@ -372,7 +397,7 @@ CSS 规范定义的标准属性列表列举如下：
 - {{CSSxRef("outline-offset")}}
 - {{CSSxRef("outline-style")}}
 - {{CSSxRef("outline-width")}}
-- {{CSSxRef("outline")}}（简写）
+- {{CSSxRef("outline")}} (shorthand)
 - {{CSSxRef("overflow-anchor")}}
 - {{CSSxRef("overflow-block")}}
 - {{CSSxRef("overflow-clip-margin")}}
@@ -380,24 +405,24 @@ CSS 规范定义的标准属性列表列举如下：
 - {{CSSxRef("overflow-wrap")}}
 - {{CSSxRef("overflow-x")}}
 - {{CSSxRef("overflow-y")}}
-- {{CSSxRef("overflow")}}（简写）
+- {{CSSxRef("overflow")}} (shorthand)
 - {{CSSxRef("overlay")}}
 - {{CSSxRef("overscroll-behavior-block")}}
 - {{CSSxRef("overscroll-behavior-inline")}}
 - {{CSSxRef("overscroll-behavior-x")}}
 - {{CSSxRef("overscroll-behavior-y")}}
-- {{CSSxRef("overscroll-behavior")}}（简写）
+- {{CSSxRef("overscroll-behavior")}} (shorthand)
 - {{CSSxRef("padding-block-end")}}
 - {{CSSxRef("padding-block-start")}}
-- {{CSSxRef("padding-block")}}（简写）
+- {{CSSxRef("padding-block")}} (shorthand)
 - {{CSSxRef("padding-bottom")}}
 - {{CSSxRef("padding-inline-end")}}
 - {{CSSxRef("padding-inline-start")}}
-- {{CSSxRef("padding-inline")}}（简写）
+- {{CSSxRef("padding-inline")}} (shorthand)
 - {{CSSxRef("padding-left")}}
 - {{CSSxRef("padding-right")}}
 - {{CSSxRef("padding-top")}}
-- {{CSSxRef("padding")}}（简写）
+- {{CSSxRef("padding")}} (shorthand)
 - {{CSSxRef("page-break-after")}}
 - {{CSSxRef("page-break-before")}}
 - {{CSSxRef("page-break-inside")}}
@@ -405,15 +430,15 @@ CSS 规范定义的标准属性列表列举如下：
 - {{CSSxRef("paint-order")}}
 - {{CSSxRef("perspective-origin")}}
 - {{CSSxRef("perspective")}}
-- {{CSSxRef("place-content")}}（简写）
-- {{CSSxRef("place-items")}}（简写）
-- {{CSSxRef("place-self")}}（简写）
+- {{CSSxRef("place-content")}} (shorthand)
+- {{CSSxRef("place-items")}} (shorthand)
+- {{CSSxRef("place-self")}} (shorthand)
 - {{CSSxRef("pointer-events")}}
 - {{CSSxRef("position-anchor")}}
 - {{CSSxRef("position-area")}}
 - {{CSSxRef("position-try-fallbacks")}}
 - {{CSSxRef("position-try-order")}}
-- {{CSSxRef("position-try")}}（简写）
+- {{CSSxRef("position-try")}} (shorthand)
 - {{CSSxRef("position-visibility")}}
 - {{CSSxRef("position")}}
 - {{CSSxRef("print-color-adjust")}}
@@ -429,6 +454,7 @@ CSS 规范定义的标准属性列表列举如下：
 - {{CSSxRef("rotate")}}
 - {{CSSxRef("row-gap")}}
 - {{CSSxRef("ruby-align")}}
+- {{CSSxRef("ruby-overhang")}}
 - {{CSSxRef("ruby-position")}}
 - {{CSSxRef("rx")}}
 - {{CSSxRef("ry")}}
@@ -436,33 +462,34 @@ CSS 规范定义的标准属性列表列举如下：
 - {{CSSxRef("scroll-behavior")}}
 - {{CSSxRef("scroll-margin-block-end")}}
 - {{CSSxRef("scroll-margin-block-start")}}
-- {{CSSxRef("scroll-margin-block")}}（简写）
+- {{CSSxRef("scroll-margin-block")}} (shorthand)
 - {{CSSxRef("scroll-margin-bottom")}}
 - {{CSSxRef("scroll-margin-inline-end")}}
 - {{CSSxRef("scroll-margin-inline-start")}}
-- {{CSSxRef("scroll-margin-inline")}}（简写）
+- {{CSSxRef("scroll-margin-inline")}} (shorthand)
 - {{CSSxRef("scroll-margin-left")}}
 - {{CSSxRef("scroll-margin-right")}}
 - {{CSSxRef("scroll-margin-top")}}
-- {{CSSxRef("scroll-margin")}}（简写）
+- {{CSSxRef("scroll-margin")}} (shorthand)
 - {{CSSxRef("scroll-marker-group")}}
 - {{CSSxRef("scroll-padding-block-end")}}
 - {{CSSxRef("scroll-padding-block-start")}}
-- {{CSSxRef("scroll-padding-block")}}（简写）
+- {{CSSxRef("scroll-padding-block")}} (shorthand)
 - {{CSSxRef("scroll-padding-bottom")}}
 - {{CSSxRef("scroll-padding-inline-end")}}
 - {{CSSxRef("scroll-padding-inline-start")}}
-- {{CSSxRef("scroll-padding-inline")}}（简写）
+- {{CSSxRef("scroll-padding-inline")}} (shorthand)
 - {{CSSxRef("scroll-padding-left")}}
 - {{CSSxRef("scroll-padding-right")}}
 - {{CSSxRef("scroll-padding-top")}}
-- {{CSSxRef("scroll-padding")}}（简写）
+- {{CSSxRef("scroll-padding")}} (shorthand)
 - {{CSSxRef("scroll-snap-align")}}
 - {{CSSxRef("scroll-snap-stop")}}
 - {{CSSxRef("scroll-snap-type")}}
+- {{CSSxRef("scroll-target-group")}}
 - {{CSSxRef("scroll-timeline-axis")}}
 - {{CSSxRef("scroll-timeline-name")}}
-- {{CSSxRef("scroll-timeline")}}（简写）
+- {{CSSxRef("scroll-timeline")}} (shorthand)
 - {{CSSxRef("scrollbar-color")}}
 - {{CSSxRef("scrollbar-gutter")}}
 - {{CSSxRef("scrollbar-width")}}
@@ -489,21 +516,23 @@ CSS 规范定义的标准属性列表列举如下：
 - {{CSSxRef("text-align-last")}}
 - {{CSSxRef("text-align")}}
 - {{CSSxRef("text-anchor")}}
+- {{CSSxRef("text-autospace")}}
 - {{CSSxRef("text-box-edge")}}
 - {{CSSxRef("text-box-trim")}}
-- {{CSSxRef("text-box")}}（简写）
+- {{CSSxRef("text-box")}} (shorthand)
 - {{CSSxRef("text-combine-upright")}}
 - {{CSSxRef("text-decoration-color")}}
+- {{CSSxRef("text-decoration-inset")}}
 - {{CSSxRef("text-decoration-line")}}
 - {{CSSxRef("text-decoration-skip-ink")}}
 - {{CSSxRef("text-decoration-skip")}}
 - {{CSSxRef("text-decoration-style")}}
 - {{CSSxRef("text-decoration-thickness")}}
-- {{CSSxRef("text-decoration")}}（简写）
+- {{CSSxRef("text-decoration")}} (shorthand)
 - {{CSSxRef("text-emphasis-color")}}
 - {{CSSxRef("text-emphasis-position")}}
 - {{CSSxRef("text-emphasis-style")}}
-- {{CSSxRef("text-emphasis")}}（简写）
+- {{CSSxRef("text-emphasis")}} (shorthand)
 - {{CSSxRef("text-indent")}}
 - {{CSSxRef("text-justify")}}
 - {{CSSxRef("text-orientation")}}
@@ -517,7 +546,7 @@ CSS 规范定义的标准属性列表列举如下：
 - {{CSSxRef("text-underline-position")}}
 - {{CSSxRef("text-wrap-mode")}}
 - {{CSSxRef("text-wrap-style")}}
-- {{CSSxRef("text-wrap")}}（简写）
+- {{CSSxRef("text-wrap")}} (shorthand)
 - {{CSSxRef("timeline-scope")}}
 - {{CSSxRef("top")}}
 - {{CSSxRef("touch-action")}}
@@ -530,7 +559,7 @@ CSS 规范定义的标准属性列表列举如下：
 - {{CSSxRef("transition-duration")}}
 - {{CSSxRef("transition-property")}}
 - {{CSSxRef("transition-timing-function")}}
-- {{CSSxRef("transition")}}（简写）
+- {{CSSxRef("transition")}} (shorthand)
 - {{CSSxRef("translate")}}
 - {{CSSxRef("unicode-bidi")}}
 - {{CSSxRef("user-modify")}}
@@ -540,7 +569,7 @@ CSS 规范定义的标准属性列表列举如下：
 - {{CSSxRef("view-timeline-axis")}}
 - {{CSSxRef("view-timeline-inset")}}
 - {{CSSxRef("view-timeline-name")}}
-- {{CSSxRef("view-timeline")}}（简写）
+- {{CSSxRef("view-timeline")}} (shorthand)
 - {{CSSxRef("view-transition-class")}}
 - {{CSSxRef("view-transition-name")}}
 - {{CSSxRef("visibility")}}
@@ -557,11 +586,11 @@ CSS 规范定义的标准属性列表列举如下：
 - {{CSSxRef("z-index")}}
 - {{CSSxRef("zoom")}}
 
-### 非标准属性
+### Non-standard properties
 
-非标准的（浏览器引擎前缀）属性列举如下：
+Non-standard vendor-prefixed properties include:
 
-#### `-moz-` 前缀
+#### `-moz-` prefix
 
 - {{CSSxRef("-moz-float-edge")}}
 - {{CSSxRef("-moz-force-broken-image-icon")}}
@@ -569,11 +598,11 @@ CSS 规范定义的标准属性列表列举如下：
 - {{CSSxRef("-moz-user-focus")}}
 - {{CSSxRef("-moz-user-input")}}
 
-#### `-webkit-` 前缀
+#### `-webkit-` prefix
 
 - {{CSSxRef("-webkit-box-reflect")}}
-- {{CSSxRef("-webkit-border-before")}}（简写）
-- {{CSSxRef("-webkit-mask-box-image")}}（简写）
+- {{CSSxRef("-webkit-border-before")}} (shorthand)
+- {{CSSxRef("-webkit-mask-box-image")}} (shorthand)
 - {{CSSxRef("-webkit-mask-composite")}}
 - {{CSSxRef("-webkit-mask-position-x")}}
 - {{CSSxRef("-webkit-mask-position-y")}}
@@ -582,12 +611,12 @@ CSS 规范定义的标准属性列表列举如下：
 - {{CSSxRef("-webkit-tap-highlight-color")}}
 - {{CSSxRef("-webkit-text-fill-color")}}
 - {{CSSxRef("-webkit-text-security")}}
-- {{CSSxRef("-webkit-text-stroke")}}（简写）
+- {{CSSxRef("-webkit-text-stroke")}} (shorthand)
 - {{CSSxRef("-webkit-text-stroke-color")}}
 - {{CSSxRef("-webkit-text-stroke-width")}}
 - {{CSSxRef("-webkit-touch-callout")}}
 
-## 规范
+## Specifications
 
 {{Specifications}}
 
