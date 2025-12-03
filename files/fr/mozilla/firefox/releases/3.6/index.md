@@ -44,7 +44,7 @@ Firefox 3.6 (nom de code [Namoroka](https://wiki.mozilla.org/Firefox/Namoroka)) 
   - : Firefox 3.6 ajoute le support de [`-moz-linear-gradient`](/fr/docs/Web/CSS/Reference/Values/gradient/linear-gradient) et [`-moz-radial-gradient`](/fr/docs/Web/CSS/Reference/Values/gradient/radial-gradient) pour la propriété [`background`](/fr/docs/Web/CSS/Reference/Properties/background).
 - [Fonds multiples](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
   - : La propriété [`background`](/fr/docs/Web/CSS/Reference/Properties/background) (ainsi que [`background-attachment`](/fr/docs/Web/CSS/Reference/Properties/background-attachment)[`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color), [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image), [`background-position`](/fr/docs/Web/CSS/Reference/Properties/background-position) et [`background-repeat`](/fr/docs/Web/CSS/Reference/Properties/background-repeat)) peuvent gérer des fonds multiples. Ceux-ci seront affichés par couches, les uns au dessus des autres.
-- [Fonctionnalités de médias spécifiques à Mozilla](/fr/docs/Web/CSS/Guides/Media_queries/Using#fonctionnalit.c3.a9s_de_m.c3.a9dias_sp.c3.a9cifiques_.c3.a0_mozilla)
+- [Fonctionnalités de médias spécifiques à Mozilla](/fr/docs/Web/CSS/Guides/Media_queries/Using#fonctionnalités_de_médias_spécifiques_à_mozilla)
   - : Des fonctionnalités de médias ont été ajoutées pour des mesures spécifiques à Mozilla, afin de pouvoir utiliser des [media queries](/fr/docs/Web/CSS/Guides/Media_queries/Using) pour vérifier plus aisément la disponibilité de fonctionnalités comme un écran tactile.
 - [Redimensionnement d'images de fond](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images)
   - : La propriété `background-size` du [brouillon CSS 3 Backgrounds and Borders](https://dev.w3.org/csswg/css3-background/) est gérée sous le nom de [`-moz-background-size`](/fr/docs/Web/CSS/Reference/Properties/background-size).
@@ -137,7 +137,7 @@ Si vous êtes un développeur d'extensions, vous devriez commencer par lire [Upd
 - [Tri des données locales avec l'API Storage](</fr/docs/Storage#Collation_(sorting)>)
   - : Gecko 1.9.2 ajoute plusieurs nouvelles méthodes pour offrir une collecte (tri) optimisée des résulats en utilisant les techniques de localisation.
 - [Énumération des propriétés d'une requête](/fr/docs/mozIStorageStatementParams#Enumeration_of_properties)
-  - : Vous pouvez maintenant utiliser [`for...in`](/fr/docs/Guide_JavaScript_1.5/Instructions_de_manipulation_d%27objets#L%27instruction_for...in) pour énumérer toutes les propriétés d'une déclaration.
+  - : Vous pouvez maintenant utiliser [`for...in`](/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#linstruction_for...in) pour énumérer toutes les propriétés d'une déclaration.
 - mozIStorageStatement's getParameterIndex a changé de comportement entre Firefox 3.5 et 3.6.
   - : Voir [bug 528166](https://bugzilla.mozilla.org/show_bug.cgi?id=528166) pour plus de détails.
 - Liaison asynchrone de plusieurs ensembles de paramètres pour exécution d'une requête.

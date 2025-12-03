@@ -1,6 +1,7 @@
 ---
 title: "Referer 헤더: 개인 정보 보호 및 보안 문제"
-slug: Web/Security/Referer_header:_privacy_and_security_concerns
+slug: Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns
+original_slug: Web/Security/Referer_header:_privacy_and_security_concerns
 l10n:
   sourceCommit: 590c1bef13f965a00be626abe963f330a6f96aa1
 ---

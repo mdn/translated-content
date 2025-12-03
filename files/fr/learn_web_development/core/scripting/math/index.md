@@ -235,7 +235,7 @@ Si vous voulez contourner les règles de précédence des opérateurs, vous pouv
 Essayez-le et voyez le résultat obtenu.
 
 > [!NOTE]
-> La liste complète de tous les opérateurs JavaScript et de leur précédence peut être trouvée dans [la page de référence sur les expressions et les opérateurs](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#pr%c3%a9c%c3%a9dence_des_op%c3%a9rateurs).
+> La liste complète de tous les opérateurs JavaScript et de leur précédence peut être trouvée dans [la page de référence sur les expressions et les opérateurs](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#précédence_des_opérateurs).
 
 ## Opérateurs d'incrémentation et de décrémentation
 
@@ -305,7 +305,7 @@ x *= y; // x contient maintenant la valeur 12
 ```
 
 > [!NOTE]
-> Il y a des tas d'[autres opérateurs d'affectation disponibles](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#op%c3%a9rateurs_d'affectation), mais ceux‑ci sont les plus courants, à apprendre dès maintenant.
+> Il y a des tas d'[autres opérateurs d'affectation disponibles](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#opérateurs_daffectation), mais ceux‑ci sont les plus courants, à apprendre dès maintenant.
 
 ## Apprentissage actif&nbsp;: dimensionner la boîte d'un canevas
 

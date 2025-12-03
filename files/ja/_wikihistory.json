@@ -41465,6 +41465,15 @@
       "chrisdavidmills"
     ]
   },
+  "Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns": {
+    "modified": "2020-10-24T06:28:29.243Z",
+    "contributors": [
+      "silverskyvicto",
+      "soratako",
+      "mfuji09",
+      "ShowGoTagami"
+    ]
+  },
   "Web/Progressive_web_apps": {
     "modified": "2020-05-17T10:04:50.272Z",
     "contributors": [
@@ -42471,15 +42480,6 @@
       "pcw",
       "mfuji09",
       "hashedhyphen"
-    ]
-  },
-  "Web/Security/Referer_header:_privacy_and_security_concerns": {
-    "modified": "2020-10-24T06:28:29.243Z",
-    "contributors": [
-      "silverskyvicto",
-      "soratako",
-      "mfuji09",
-      "ShowGoTagami"
     ]
   },
   "Web/URI/Guides/Choosing_between_www_and_non-www_URLs": {

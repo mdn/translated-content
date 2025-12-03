@@ -107,7 +107,7 @@ Les propriétés qui suivent sont désormais des propriétés des instances de `
 ### Générateur historique
 
 - {{jsxref("Instructions/Legacy_generator_function", "L'instruction pour le générateur historique")}} et {{jsxref("Opérateurs/Legacy_generator_function", "l'expression de fonction du générateur historique")}} sont dépréciées. Il faut utiliser {{jsxref("Instructions/function*", "L'instruction function* ")}} et {{jsxref("Opérateurs/function*", "l'expression function*")}} à la place.
-- {{jsxref("Opérateurs/Compréhensions_de_tableau", "Les compréhensions de tableaux JS1.7/JS1.8", "#Diff.C3.A9rences_avec_les_compr.C3.A9hensions_pr.C3.A9c.C3.A9dentes_JS1.7.2FJS1.8")}} et {{jsxref("Opérateurs/Compréhensions_de_générateur", "les compréhensions de générateurs JS1.7/JS1.8", "#Differences_to_the_older_JS1.7.2FJS1.8_comprehensions")}} sont dépréciées.
+- {{jsxref("Opérateurs/Compréhensions_de_tableau", "Les compréhensions de tableaux JS1.7/JS1.8", "#Différences_avec_les_compréhensions_précédentes_JS1.7.2FJS1.8")}} et {{jsxref("Opérateurs/Compréhensions_de_générateur", "les compréhensions de générateurs JS1.7/JS1.8", "#Differences_to_the_older_JS1.7.2FJS1.8_comprehensions")}} sont dépréciées.
 
 ### Itérateur
 

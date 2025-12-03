@@ -113,7 +113,7 @@ Les nombres ordinaux, comme «&nbsp;quatrième&nbsp;» en français, «&nbsp;<i 
           >Contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Guides/Content_categories#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#Contenu_phrasé"
           >contenu phrasé</a
         >, contenu tangible.
       </td>
@@ -122,7 +122,7 @@ Les nombres ordinaux, comme «&nbsp;quatrième&nbsp;» en français, «&nbsp;<i 
       <th scope="row">Contenu autorisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Guides/Content_categories#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#Contenu_phrasé"
           >Contenu phrasé</a
         >.
       </td>
@@ -136,7 +136,7 @@ Les nombres ordinaux, comme «&nbsp;quatrième&nbsp;» en français, «&nbsp;<i 
       <td>
         Tout élément acceptant du
         <a
-          href="/fr/docs/Web/HTML/Guides/Content_categories#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#Contenu_phrasé"
           >contenu phrasé</a
         >.
       </td>

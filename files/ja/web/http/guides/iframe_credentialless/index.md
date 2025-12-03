@@ -1,6 +1,7 @@
 ---
 title: 無信頼の iframe
-slug: Web/Security/IFrame_credentialless
+slug: Web/HTTP/Guides/IFrame_credentialless
+original_slug: Web/Security/IFrame_credentialless
 l10n:
   sourceCommit: bb48907e64eb4bf60f17efd7d39b46c771d220a0
 ---

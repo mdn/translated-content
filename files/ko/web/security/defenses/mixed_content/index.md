@@ -1,6 +1,7 @@
 ---
 title: 혼합 콘텐츠
-slug: Web/Security/Mixed_content
+slug: Web/Security/Defenses/Mixed_content
+original_slug: Web/Security/Mixed_content
 l10n:
   sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---

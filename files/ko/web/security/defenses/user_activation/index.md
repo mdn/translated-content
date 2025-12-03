@@ -1,6 +1,7 @@
 ---
 title: 사용자 활성화로 제어되는 기능
-slug: Web/Security/User_activation
+slug: Web/Security/Defenses/User_activation
+original_slug: Web/Security/User_activation
 l10n:
   sourceCommit: 199c317d91bf506a81a6f68f53d6c63499651dff
 ---

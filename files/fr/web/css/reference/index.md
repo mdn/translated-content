@@ -58,7 +58,7 @@ Comme la structure des règles @ varie grandement, veuillez consulter [règle @]
 
 Sont indiqués dans ce qui suit les divers [sélecteurs](/fr/docs/Web/CSS/Guides/Selectors), qui permettent aux styles d'être appliqués de façon conditionnelle selon diverses caractéristiques des éléments présents dans le DOM.
 
-### [Sélecteurs simples](/fr/docs/Web/CSS/Guides/Selectors#les_s%c3%a9lecteurs_simples/fr/docs/web/css/s%c3%a9lecteurs_css)
+### [Sélecteurs simples](/fr/docs/Web/CSS/Guides/Selectors#les_sélecteurs_simples)
 
 Les sélecteurs simples sont des sélecteurs fondamentaux. Ce sont les sélecteurs les plus élémentaires qui sont fréquemment combinés pour créer d'autres sélecteurs plus complexes.
 

@@ -157,7 +157,7 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
           Insère les scripts de contenu dans les pages dont l'URL est
           <code>about:blank</code> ou <code>about:srcdoc</code>, si l'URL de la
           page qui a ouvert ou créé cette page
-          [correspond aux modèles](#les_modèles_de_correspondance_d'url)
+          [correspond aux modèles](#les_modèles_de_correspondance_durl)
           spécifiés dans le reste de la clé <code>content_scripts</code>.
         </p>
         <p>

@@ -350,7 +350,7 @@ Cette partie de l'article indique des techniques avancées pour rendre les table
 
 Les lecteurs d'écran identifieront tous les en-têtes et les utiliseront pour réaliser automatiquement les associations entre ces en-têtes et les cellules correspondantes. La combinaison des en-têtes des colonnes et des lignes doit permettre d'identifier et d'interpréter les données de chaque cellule. Ainsi, les utilisateurs de lecteurs d'écran peuvent accéder aux données d'une façon similaire à celle des utilisateurs voyants.
 
-Nous avons déjà traité des en-têtes dans notre article précédent — voir [Ajouter des en-têtes avec \<th>](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics#Adding_headers_with_%3Cth%3E_elements) .
+Nous avons déjà traité des en-têtes dans notre article précédent — voir [Ajouter des en-têtes avec \<th>](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics#adding_headers_with_th_elements) .
 
 ### L'attribut `scope`
 

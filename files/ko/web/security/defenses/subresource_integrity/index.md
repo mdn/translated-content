@@ -1,6 +1,7 @@
 ---
 title: 하위 리소스 무결성
-slug: Web/Security/Subresource_Integrity
+slug: Web/Security/Defenses/Subresource_Integrity
+original_slug: Web/Security/Subresource_Integrity
 l10n:
   sourceCommit: 4a6dacf8c68925a8538585be3b2728bcb271241e
 ---

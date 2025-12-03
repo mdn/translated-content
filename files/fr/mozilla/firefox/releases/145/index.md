@@ -31,7 +31,7 @@ Aucun changement notable.
 
 ### HTTP
 
-- Les en-têtes HTTP {{HTTPHeader("Integrity-Policy")}} et {{HTTPHeader("Integrity-Policy-Report-Only")}} sont désormais pris en charge pour les ressources de type script. Ils permettent aux sites web d'appliquer des [garanties d'intégrité de sous-ressources](/fr/docs/Web/Security/Subresource_Integrity) pour les _scripts_.
+- Les en-têtes HTTP {{HTTPHeader("Integrity-Policy")}} et {{HTTPHeader("Integrity-Policy-Report-Only")}} sont désormais pris en charge pour les ressources de type script. Ils permettent aux sites web d'appliquer des [garanties d'intégrité de sous-ressources](/fr/docs/Web/Security/Defenses/Subresource_Integrity) pour les _scripts_.
   Notez que la clé [`endpoints`](/fr/docs/Web/HTTP/Reference/Headers/Integrity-Policy#endpoints) n'est pas encore prise en charge (les violations sont consignées dans la console) ([bogue Firefox 1984973 <sup>(angl.)</sup>](https://bugzil.la/1984973)).
 
 ### APIs

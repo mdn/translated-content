@@ -11,7 +11,7 @@ La **spécificité** est le moyen par lequel les navigateurs décident quelles v
 La spécificité est l'importance donnée à une déclaration CSS, déterminée par le nombre de [types de sélecteur](#types_de_sélecteurs) dans le sélecteur correspondant. Lorsque plusieurs déclarations ont une même spécificité, la dernière déclaration trouvée dans la CSS est appliquée à l'élément. La spécificité ne s'applique que lorsque le même élément est ciblé par plusieurs déclarations. Selon les règles CSS, [les éléments ciblés directement](#éléments_ciblés_directement_vs_styles_hérités) seront toujours prioritaires par rapport aux règles héritées par un élément de leurs ancêtres.
 
 > [!NOTE]
-> [la proximité des éléments](#ignorance_de_la_proximité_dans_l'arborescence) dans l'arborescence du document n'a aucun effet sur la spécificité.
+> [la proximité des éléments](#ignorance_de_la_proximité_dans_larborescence) dans l'arborescence du document n'a aucun effet sur la spécificité.
 
 ### Types de sélecteurs
 

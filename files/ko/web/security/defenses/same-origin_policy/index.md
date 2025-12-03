@@ -1,6 +1,7 @@
 ---
 title: 동일 출처 정책
-slug: Web/Security/Same-origin_policy
+slug: Web/Security/Defenses/Same-origin_policy
+original_slug: Web/Security/Same-origin_policy
 l10n:
   sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---

@@ -101,7 +101,7 @@ Pour les développeurs qui désirent prendre connaissance de toutes les nouvelle
 
 <!---->
 
-- [Mises à jour sécurisées](/fr/Versions_d'une_extension,_mise_à_jour_et_compatibilité#Mises_.C3.A0_jour_s.C3.A9curis.C3.A9es)
+- [Mises à jour sécurisées](/fr/Versions_d'une_extension,_mise_à_jour_et_compatibilité#Mises_à_jour_sécurisées)
   - : Afin que le processus de mise à jour soit plus sûr pour les utilisateurs, les modules complémentaires doivent à présent fournir une méthode sécurisée de distribution des mises à jour avant de pouvoir être installés. Les modules hébergés sur [AMO](https://addons.mozilla.org) fournissent ceci automatiquement. Tout module installé ne fournissant pas une méthode de mise à jour sécurisée lorsque l'utilisateur migrera vers Firefox 3 sera désactivé automatiquement. Firefox continuera cependant à vérifier si des mises à jour sont disponibles au travers du chemin non sécurisé et essayera d'installer toute mise à jour proposée (l'installation échouera si la mise à jour ne propose pas non plus de méthode de mise à jour sécurisée).
 
 <!---->

@@ -129,7 +129,7 @@ Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment c
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
           >Contenu de flux</a
         >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >contenu phrasé</a
         >,
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
@@ -153,7 +153,7 @@ Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment c
       <th scope="row">Parents autorisés</th>
       <td>
         Tout élément qui accepte
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >du contenu phrasé</a
         >.
       </td>

@@ -69,7 +69,7 @@ Cet élément inclut uniquement les [attributs globaux](/fr/docs/Web/HTML/Refere
           >Contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >contenu de phrasé</a
         >,
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
@@ -81,7 +81,7 @@ Cet élément inclut uniquement les [attributs globaux](/fr/docs/Web/HTML/Refere
       <th scope="row">Contenu autorisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >Contenu de phrasé</a
         >.
       </td>
@@ -94,7 +94,7 @@ Cet élément inclut uniquement les [attributs globaux](/fr/docs/Web/HTML/Refere
       <th scope="row">Parents autorisés</th>
       <td>
         Tout élément qui accepte du <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >contenu de phrasé</a
         >.
       </td>

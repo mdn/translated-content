@@ -1,6 +1,7 @@
 ---
 title: 보안 컨텍스트
-slug: Web/Security/Secure_Contexts
+slug: Web/Security/Defenses/Secure_Contexts
+original_slug: Web/Security/Secure_Contexts
 l10n:
   sourceCommit: 199c317d91bf506a81a6f68f53d6c63499651dff
 ---

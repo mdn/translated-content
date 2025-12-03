@@ -28,7 +28,7 @@ Cette section décrit les options permettant d'écrire des données dans le pres
 
 ### Utiliser l'API Clipboard
 
-L'API Clipboard permet d'écrire des données arbitraires dans le presse-papier de votre extension. Pour utiliser cette API, il faut la permission `"clipboardRead"` ou `"clipboardWrite"` dans le fichier `manifest.json`. Cette API étant uniquement disponible [pour les contextes sécurisés](/fr/docs/Web/Security/Secure_Contexts), on ne peut pas l'utiliser pour un script de contenu qui s'exécute sur une page servie en HTTP mais uniquement sur des pages servies en HTTPS.
+L'API Clipboard permet d'écrire des données arbitraires dans le presse-papier de votre extension. Pour utiliser cette API, il faut la permission `"clipboardRead"` ou `"clipboardWrite"` dans le fichier `manifest.json`. Cette API étant uniquement disponible [pour les contextes sécurisés](/fr/docs/Web/Security/Defenses/Secure_Contexts), on ne peut pas l'utiliser pour un script de contenu qui s'exécute sur une page servie en HTTP mais uniquement sur des pages servies en HTTPS.
 
 Pour les scripts de page, la permission `"clipboard-write"` doit être demandée via l'API [`navigator.permissions`](/fr/docs/Web/API/Permissions). Cette permission peut ensuite être vérifiée avec [`navigator.permissions.query()`](/fr/docs/Web/API/Permissions/query)&nbsp;:
 
@@ -123,7 +123,7 @@ Cette section décrit les options disponibles pour lire ou copier des données d
 
 ### Utiliser l'API Clipboard
 
-Les méthodes de l'API Clipboard [`navigator.clipboard.readText()`](/fr/docs/Web/API/Clipboard/readText) et [`navigator.clipboard.read()`](/fr/docs/Web/API/Clipboard/read) permettent de lire du texte ou des données binaires depuis le presse-papier [dans les contextes sécurisés](/fr/docs/Web/Security/Secure_Contexts). Cela permet d'accéder aux données du presse-papier sans avoir à les coller au préalable dans un élément éditable.
+Les méthodes de l'API Clipboard [`navigator.clipboard.readText()`](/fr/docs/Web/API/Clipboard/readText) et [`navigator.clipboard.read()`](/fr/docs/Web/API/Clipboard/read) permettent de lire du texte ou des données binaires depuis le presse-papier [dans les contextes sécurisés](/fr/docs/Web/Security/Defenses/Secure_Contexts). Cela permet d'accéder aux données du presse-papier sans avoir à les coller au préalable dans un élément éditable.
 
 Une fois que la permission `"clipboard-read"` a été demandée via [l'API Permissions](/fr/docs/Web/API/Permissions_API), il est possible de lire depuis le presse-papier. Ce fragment de code illustre la récupération du texte depuis le presse-papier et remplace le contenu de l'élément ayant l'identifiant `"outbox"` avec ce texte.
 

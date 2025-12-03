@@ -47,7 +47,7 @@ Referrer-Policy: unsafe-url
 - `origin-when-cross-origin`
   - : Envoie l'origine, le chemin et les paramètres de requête pour les requêtes {{glossary("Same-origin_policy", "same-origin")}} et seulement l'origine du document dans les autres cas.
 - `same-origin`
-  - : Un référent sera envoyé aux [page de même origine](/fr/docs/Web/Security/Same-origin_policy), mais des requêtes vers des adresses externes n'enverront aucune information sur le référent.
+  - : Un référent sera envoyé aux [page de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy), mais des requêtes vers des adresses externes n'enverront aucune information sur le référent.
 - `strict-origin`
   - : N'envoie que l'origine du document comme référent quand le niveau de sécurité du protocole reste le même (HTTPS vers HTTPS) mais n'envoie rien si la destination est moins sécurisée (HTTPS vers HTTP).
 - `strict-origin-when-cross-origin` (_valeur par défaut_)
@@ -214,5 +214,5 @@ Ici, `no-referrer` ne sera utilisée que si `strict-origin-when-cross-origin` n'
 - [Référent](<https://fr.wikipedia.org/wiki/Référent_(informatique)>) sur Wikipédia
 - En utilisant [Fetch](/fr/docs/Web/API/Fetch_API) : {{domxref("Request.referrerPolicy")}}
 - La directive obsolète {{HTTPHeader("Content-Security-Policy/referrer", "referrer")}} {{deprecated_inline}} de l'en-tête {{HTTPHeader("Content-Security-Policy")}}.
-- [Same-origin policy](/fr/docs/Web/Security/Same-origin_policy)
+- [Same-origin policy](/fr/docs/Web/Security/Defenses/Same-origin_policy)
 - [Tighter Control Over Your Referrers – Mozilla Security Blog](https://blog.mozilla.org/security/2015/01/21/meta-referrer/)
