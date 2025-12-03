@@ -61,7 +61,7 @@ output.textContent = `Result: ${titleSpan.textContent} ${firstNameSpan.textConte
 container.insertAdjacentElement("afterend", output);
 ```
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Exemple")}}
 
 ## Spécifications
 
