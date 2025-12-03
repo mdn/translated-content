@@ -21,11 +21,11 @@ l10n:
 ## 语法
 
 ```css
-/* 为两个角同时设置单个关键字值 */
+/* 为两个边角同时设置单个关键字值 */
 corner-block-end-shape: square;
 corner-block-end-shape: scoop;
 
-/* 为两个角同时设置单个 superellipse() 值 */
+/* 为两个边角同时设置单个 superellipse() 值 */
 corner-block-end-shape: superellipse(3.5);
 corner-block-end-shape: superellipse(-1.9);
 
