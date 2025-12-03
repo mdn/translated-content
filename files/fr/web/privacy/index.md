@@ -192,7 +192,7 @@ La liste suivante fournit quelques conseils sur la façon d'atténuer les risque
 - Dans la mesure du possible, vous devez bloquer les tiers de recevoir un en-tête {{httpheader("Referer")}} lorsque vous leur faites des requêtes. Cela peut être fait de manière assez granulaire, par exemple en incluant [rel="noreferrer"](/fr/docs/Web/HTML/Reference/Attributes/rel/noreferrer) sur les liens externes. Ou, vous pourriez définir cela de manière plus globale pour la page ou le site, par exemple en utilisant l'en-tête {{httpheader("Referrer-Policy")}}.
 
   > [!NOTE]
-  > Voir aussi [En-tête Referer&nbsp;: problèmes de confidentialité et de sécurité](/fr/docs/Web/Security/Referer_header:_privacy_and_security_concerns).
+  > Voir aussi [En-tête Referer&nbsp;: problèmes de confidentialité et de sécurité](/fr/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns).
 
 - Utilisez l'en-tête HTTP {{httpheader("Permissions-Policy")}} pour contrôler l'accès aux «&nbsp;fonctionnalités puissantes&nbsp;» de l'API (telles que les notifications, les données de géolocalisation, l'accès aux flux multimédias des webcams, etc.). Cela peut être utile pour la confidentialité car cela empêche les sites tiers de faire des choses inattendues avec ces fonctionnalités, et les utilisateur·ice·s ne veulent pas être inutilement bombardés par des invites de permission qu'ils ne comprennent peut-être pas. Vous pouvez également contrôler l'utilisation des «&nbsp;fonctionnalités puissantes&nbsp;» à l'intérieur des sites tiers intégrés dans des éléments {{htmlelement("iframe")}} en spécifiant des politiques de permissions à l'intérieur d'un attribut `allow` sur l'`<iframe>` lui-même.
 

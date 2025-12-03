@@ -406,7 +406,7 @@ L'attribut `src` est ignoré par les agents utilisateurs qui le prennent en char
 
 ## Sécurité et vie privée
 
-Bien que les éléments `<img>` puissent être utilisés innocemment, ils peuvent également avoir des effets indésirables en termes de sécurité et de vie privée. Voir [cet article quant à l'en-tête `Referer`](/fr/docs/Web/Security/Referer_header:_privacy_and_security_concerns) pour plus de détails.
+Bien que les éléments `<img>` puissent être utilisés innocemment, ils peuvent également avoir des effets indésirables en termes de sécurité et de vie privée. Voir [cet article quant à l'en-tête `Referer`](/fr/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns) pour plus de détails.
 
 ## Résumé technique
 

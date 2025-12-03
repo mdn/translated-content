@@ -453,7 +453,7 @@ document
 
 ## Sécurité et vie privée
 
-Les éléments `<a>` peuvent avoir des conséquences sur la sécurité et la vie privée des utilisateurs. Voir [`Referer` header : privacy and security concerns](/fr/docs/Web/Security/Referer_header:_privacy_and_security_concerns) pour plus d'informations.
+Les éléments `<a>` peuvent avoir des conséquences sur la sécurité et la vie privée des utilisateurs. Voir [`Referer` header : privacy and security concerns](/fr/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns) pour plus d'informations.
 
 L'utilisation de `target="_blank"` sans [`rel="noreferrer"`](/fr/docs/Web/HTML/Reference/Attributes/rel/noreferrer) ni [`rel="noopener"`](/fr/docs/Web/HTML/Reference/Attributes/rel/noopener) rend le site vulnérable aux attaques exploitant l'API {{domxref("window.opener")}}. Notez toutefois que, dans les versions récentes des navigateurs, définir `target="_blank"` fournit implicitement la même protection que `rel="noopener"`. Voir la [compatibilité des navigateurs](#compatibilité_des_navigateurs) pour plus de détails.
 
