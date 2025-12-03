@@ -64,9 +64,9 @@ Ce guide est divisé en plusieurs chapitres :
 ## [Nombres et dates](/fr/docs/Web/JavaScript/Guide/Numbers_and_strings)
 
 - [Littéraux numériques](/fr/docs/Web/JavaScript/Guide/Numbers_and_strings#nombres)
-- [Objet `Number`](/fr/docs/Web/JavaScript/Guide/Numbers_and_dates#lobjet_number)
-- [Objet `Math`](/fr/docs/Web/JavaScript/Guide/Numbers_and_dates#lobjet_math)
-- [Objet `Date`](/fr/docs/Web/JavaScript/Guide/Numbers_and_dates#lobjet_date)
+- [Objet `Number`](/fr/docs/Web/JavaScript/Guide/Numbers_and_strings#lobjet_number)
+- [Objet `Math`](/fr/docs/Web/JavaScript/Guide/Numbers_and_strings#lobjet_math)
+- [Objet `Date`](/fr/docs/Web/JavaScript/Guide/Numbers_and_strings#lobjet_date)
 
 ## [Formatage du texte](/fr/docs/Web/JavaScript/Guide/Numbers_and_strings)
 
@@ -98,7 +98,7 @@ Ce guide est divisé en plusieurs chapitres :
 
 - [Modèle à base de prototypes](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#langages_de_prototypes_.2f_langages_de_classes)
 - [Créer des hiérarchies d'objets](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#la_création_de_la_hiérarchie)
-- [Héritage](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#lhéritage_de_propriétés_.3a_les_subtilités)
+- [Héritage](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#lhéritage_de_propriétés_.3a_les_subtilités)
 
 ## [Promesses](/fr/docs/Web/JavaScript/Guide/Using_promises)
 
