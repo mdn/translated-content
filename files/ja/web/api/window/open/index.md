@@ -80,7 +80,7 @@ open(url, target, windowFeatures)
 
 ### 返値
 
-ブラウザーが新しい閲覧コンテキストを開くことができた場合は、 [`WindowProxy`](/ja/docs/Glossary/WindowProxy) オブジェクトを返します。返される参照は、[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)のセキュリティ要件に準拠する限り、新しいコンテキストのプロパティとメソッドにアクセスするために使用することができます。
+ブラウザーが新しい閲覧コンテキストを開くことができた場合は、 [`WindowProxy`](/ja/docs/Glossary/WindowProxy) オブジェクトを返します。返される参照は、[同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)のセキュリティ要件に準拠する限り、新しいコンテキストのプロパティとメソッドにアクセスするために使用することができます。
 
 HTTP の {{httpheader("Cross-Origin-Opener-Policy")}} ヘッダーが使用されており、文書ポリシーによって文書が新しい{{glossary("Browsing context","閲覧コンテキストグループ")}}で開かれる場合、開かれたウィンドウへの参照は切断され、返されるオブジェクトは開かれたウィンドウが閉じられていることを示します（{{domxref("Window.closed","closed")}} は `true` です）。
 
@@ -259,7 +259,7 @@ console.log(sameOriginContext.origin);
 // https://example.com
 ```
 
-詳しくは、[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)の記事を参照してください。
+詳しくは、[同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)の記事を参照してください。
 
 ## アクセシビリティの考慮
 
@@ -317,4 +317,4 @@ console.log(sameOriginContext.origin);
 - [`window.focus()`](/ja/docs/Web/API/Window/focus)
 - [`window.opener`](/ja/docs/Web/API/Window/opener)
 - [`rel="opener"`](/ja/docs/Web/HTML/Reference/Attributes/rel#opener) および [`rel="noopener"`](/ja/docs/Web/HTML/Reference/Attributes/rel#noopener)
-- [同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)
+- [同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)

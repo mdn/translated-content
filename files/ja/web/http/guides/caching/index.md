@@ -47,7 +47,7 @@ Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
 
 しかし、近年 HTTPS が一般的になり、クライアント/サーバー間の通信が暗号化されるようになったため、 経路上のプロキシーキャッシュはレスポンスをトンネリングすることしかできず、 キャッシュとして振る舞うことができない場合が多くなっています。そのような場合は、レスポンスを見ることすらできないので、時代遅れのプロキシーキャッシュ実装を心配する必要はありません。
 
-他にも、 {{Glossary("TLS")}} ブリッジプロキシーが、組織が管理する{{Glossary("Certificate_authority", "認証局 (CA)")}} の資格情報を PC にインストールすることで、中間者 (person-in-the-middle) 的にすべての通信を復号し、アクセス制御などを行う場合、レスポンスの内容を見たり、キャッシュしたりすることが使用可能です。ただし、近年は [CT (certificate transparency)](/ja/docs/Web/Security/Certificate_Transparency) が普及し、ブラウザーによっては SCT (signed certificate timestamp) で発行された証明書しか許可しないものもあるため、このメソッドでは企業ポリシーを適用する必要があります。このような制御された環境では、プロキシーキャッシュが「古くて更新されない」ことを心配する必要はありません。
+他にも、 {{Glossary("TLS")}} ブリッジプロキシーが、組織が管理する{{Glossary("Certificate_authority", "認証局 (CA)")}} の資格情報を PC にインストールすることで、中間者 (person-in-the-middle) 的にすべての通信を復号し、アクセス制御などを行う場合、レスポンスの内容を見たり、キャッシュしたりすることが使用可能です。ただし、近年は [CT (certificate transparency)](/ja/docs/Web/Security/Defenses/Certificate_Transparency) が普及し、ブラウザーによっては SCT (signed certificate timestamp) で発行された証明書しか許可しないものもあるため、このメソッドでは企業ポリシーを適用する必要があります。このような制御された環境では、プロキシーキャッシュが「古くて更新されない」ことを心配する必要はありません。
 
 #### マネージドキャッシュ
 

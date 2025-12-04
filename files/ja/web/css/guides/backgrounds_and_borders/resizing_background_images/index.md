@@ -1,12 +1,12 @@
 ---
-title: 背景画像の拡大縮小
+title: background-size による背景画像の拡大縮小
+short-title: 背景画像の拡大縮小
 slug: Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images
-original_slug: Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
 l10n:
-  sourceCommit: d45f6c3733728f0eefdb7fd4b9a84c4858b35fd1
+  sourceCommit: ca5d9f9e63b460fc0c9e15ac57d9739e10e4ea0d
 ---
 
-**{{cssxref("background-size")}}** は CSS のプロパティで、要素の背景画像の大きさを変更し、画像の幅や高さから見た完全な大きさの画像をタイル表示するという既定の動作を変更することができます。こうすることで、画像を必要に応じて拡大したり縮小したりすることができます。
+**{{cssxref("background-size")}}** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背景画像の大きさを変更し、画像の幅や高さから見た完全な大きさの画像をタイル表示するという既定の動作を変更することができます。こうすることで、画像を必要に応じて拡大したり縮小したりすることができます。
 
 ## 巨大な画像を並べて表示
 
@@ -22,7 +22,7 @@ l10n:
 
 ```css
 .tiledBackground {
-  background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
+  background-image: url("https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png");
   background-size: 150px;
   width: 300px;
   height: 300px;
@@ -55,7 +55,7 @@ background-size: 300px 150px;
 
 ```css
 .square2 {
-  background-image: url(favicon.png);
+  background-image: url("favicon.png");
   background-size: 300px;
   width: 300px;
   height: 300px;
@@ -87,7 +87,7 @@ background-size: 300px 150px;
 
 ```css
 .bgSizeContain {
-  background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
+  background-image: url("https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png");
   background-size: contain;
   width: 160px;
   height: 160px;
@@ -117,7 +117,7 @@ background-size: 300px 150px;
 
 ```css
 .bgSizeCover {
-  background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
+  background-image: url("https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png");
   background-size: cover;
   width: 160px;
   height: 160px;
@@ -135,4 +135,5 @@ background-size: 300px 150px;
 
 - {{cssxref("background-size")}}
 - {{cssxref("background")}}
+- [CSS 背景と境界](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)モジュール
 - [SVG の背景画像の拡大縮小](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds)

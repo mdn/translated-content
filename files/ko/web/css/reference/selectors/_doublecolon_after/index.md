@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/::after
 original_slug: Web/CSS/::after
 ---
 
-CSS에서, **`::after`** 는 선택한 요소의 맨 마지막 자식으로 [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)를 하나 생성합니다. 보통 {{cssxref("content")}} 속성과 함께 짝지어, 요소에 장식용 콘텐츠를 추가할 때 사용합니다. 기본값은 인라인입니다.
+CSS에서, **`::after`** 는 선택한 요소의 맨 마지막 자식으로 [의사 요소](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-elements)를 하나 생성합니다. 보통 {{cssxref("content")}} 속성과 함께 짝지어, 요소에 장식용 콘텐츠를 추가할 때 사용합니다. 기본값은 인라인입니다.
 
 ```css
 /* 링크 뒤에 화살표 추가 */
@@ -14,14 +14,14 @@ a::after {
 ```
 
 > [!NOTE]
-> `::before`와 `::after`로 생성한 의사 요소는 [원본 요소의 서식 박스에 포함되므로](https://www.w3.org/TR/CSS2/generate.html#before-after-content), {{HTMLElement("img")}}나 {{HTMLElement("br")}} 등 [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)에 적용할 수 없습니다.
+> `::before`와 `::after`로 생성한 의사 요소는 [원본 요소의 서식 박스에 포함되므로](https://www.w3.org/TR/CSS2/generate.html#before-after-content), {{HTMLElement("img")}}나 {{HTMLElement("br")}} 등 [대체 요소](/ko/docs/Web/CSS/Guides/Images/Replaced_element_properties)에 적용할 수 없습니다.
 
 ## 구문
 
 {{csssyntax}}
 
 > [!NOTE]
-> [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)와 [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)를 구분하기 위해 CSS3부터`::after` 구문을 도입했습니다. 그러나 브라우저는 CSS2 구문인 `:after`도 허용합니다.
+> [의사 클래스](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes)와 [의사 요소](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-elements)를 구분하기 위해 CSS3부터`::after` 구문을 도입했습니다. 그러나 브라우저는 CSS2 구문인 `:after`도 허용합니다.
 
 ## 예제
 

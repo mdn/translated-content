@@ -6,7 +6,7 @@ l10n:
   sourceCommit: cebbd9095ac12557c55157355181672027fffc14
 ---
 
-**`::slotted()`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 HTML 템플릿 내부 슬롯에 위치할 수 있는 모든 요소를 나타냅니다. (더 많은 정보는 [템플릿과 슬롯](/ko/docs/Web/API/Web_components/Using_templates_and_slots) 문서를 참고하세요.).
+**`::slotted()`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-elements)는 HTML 템플릿 내부 슬롯에 위치할 수 있는 모든 요소를 나타냅니다. (더 많은 정보는 [템플릿과 슬롯](/ko/docs/Web/API/Web_components/Using_templates_and_slots) 문서를 참고하세요.).
 
 이는 [shadow DOM](/ko/docs/Web/API/Web_components/Using_shadow_DOM) 내에 배치된 CSS 내에서만 동작합니다. 이 선택자는 슬롯에 배치된 텍스트 노트를 선택하지 않고, 실제 요소만을 대상으로 한다는 점을 참고하세요.
 

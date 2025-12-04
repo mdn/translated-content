@@ -172,7 +172,7 @@ Pour assembler le tout, on ajoute deux paragraphes ([`<p>`](/fr/docs/Web/HTML/Re
 </form>
 ```
 
-Nous vous invitons [à approfondir la construction de formulaires web accessibles](/fr/docs//Learn_web_development/Extensions/Forms\).
+Nous vous invitons [à approfondir la construction de formulaires web accessibles](/fr/docs/Learn_web_development/Extensions/Forms).
 
 ### Textes temporaires en dur
 

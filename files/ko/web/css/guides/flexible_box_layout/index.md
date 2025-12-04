@@ -62,7 +62,7 @@ original_slug: Web/CSS/CSS_flexible_box_layout
   - : `flex-grow`, `flex-shrink`, `flex-basis` 속성을 설명합니다.
 - [플렉스 아이템 줄바꿈 마스터하기](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)
   - : 여러 줄로 이뤄진 플렉스 컨테이너를 만드는 방법과, 컨테이너 아이템의 표시 방법 설정을 설명합니다.
-- [플렉스박스의 일반적인 용례](/ko/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
+- [플렉스박스의 일반적인 용례](/ko/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases)
   - : 일반적인 플렉스박스 디자인 패턴입니다.
 - [플렉스박스의 하위 호환성](/ko/docs/Glossary/Flexbox)
   - : 플렉스박스의 브라우저 상태, 상호 호환성 이슈와 함께 구형 브라우저와 이전 명세를 지원하는 방법을 설명합니다.

@@ -10,7 +10,7 @@ l10n:
 
 **`window.postMessage()`** は、 {{domxref("Window")}} オブジェクト間で安全にオリジン間通信を可能にするためのメソッドです。例えば、ポップアップとそれを表示したページの間や、iframe とそれが埋め込まれたページの間での通信に使うことができます。
 
-通常、異なった複数のページでのスクリプトはそれらが実行されたページが同じ[オリジン](/ja/docs/Web/API/Location/origin)である場合に限りお互いにアクセスすることが可能です（「[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)」とも呼ばれます）。正しく使用した `window.postMessage` はこの制限を安全に回避するための制御された仕組みを提供します。
+通常、異なった複数のページでのスクリプトはそれらが実行されたページが同じ[オリジン](/ja/docs/Web/API/Location/origin)である場合に限りお互いにアクセスすることが可能です（「[同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)」とも呼ばれます）。正しく使用した `window.postMessage` はこの制限を安全に回避するための制御された仕組みを提供します。
 
 さらに、アクセスするスクリプトは、アクセスする文書のウィンドウオブジェクトを事前に取得しておく必要があります。これは、ポップアップの場合は [`window.open()`](/ja/docs/Web/API/Window/open)、iframe の場合は [`iframe.contentWindow`](/ja/docs/Web/API/HTMLIFrameElement/contentWindow) などのメソッドを使用して行うことができます。
 

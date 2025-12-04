@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:first-of-type
 original_slug: Web/CSS/:first-of-type
 ---
 
-[CSS](/ko/docs/Web/CSS) **`:first-of-type`** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 형제 요소 중 자신의 유형과 일치하는 제일 첫 요소를 나타냅니다.
+[CSS](/ko/docs/Web/CSS) **`:first-of-type`** [의사 클래스](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes)는 형제 요소 중 자신의 유형과 일치하는 제일 첫 요소를 나타냅니다.
 
 ```css
 /* Selects any <p> that is the first element
@@ -48,7 +48,7 @@ p:first-of-type {
 
 ### 중첩 요소
 
-아래 코드는 중첩 요소를 선택하는 방법을 보입니다. 기본 선택자를 지정하지 않은 경우 [전체 선택자](/ko/docs/Web/CSS/Universal_selectors)(`*`)가 암시된다는 점도 볼 수 있습니다.
+아래 코드는 중첩 요소를 선택하는 방법을 보입니다. 기본 선택자를 지정하지 않은 경우 [전체 선택자](/ko/docs/Web/CSS/Reference/Selectors/Universal_selectors)(`*`)가 암시된다는 점도 볼 수 있습니다.
 
 #### HTML
 

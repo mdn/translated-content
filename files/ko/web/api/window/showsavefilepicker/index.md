@@ -56,7 +56,7 @@ showSaveFilePicker()
   - : 사용자가 파일을 선택하지 않고 선택창을 닫았을 때, 또는 사용자 에이전트가 판단했을 때
     파일이 너무 민감하거나 위험할 때 발생합니다.
   - `SecurityError` {{domxref("DOMException")}}
-  - : [동일 출처 정책](/ko/docs/Web/Security/Same-origin_policy)에 의해 호출이 차단됐거나, 버튼 클릭과 같은 사용자 상호작용에 의해 호출된 것이 아니라면 발생합니다.
+  - : [동일 출처 정책](/ko/docs/Web/Security/Defenses/Same-origin_policy)에 의해 호출이 차단됐거나, 버튼 클릭과 같은 사용자 상호작용에 의해 호출된 것이 아니라면 발생합니다.
 - {{jsxref("TypeError")}}
   - : 다음과 같은 상황에 의해 허용하는 파일 유형을 처리할 수 없으면 발생합니다.
     - `types` 옵션의 `accept` 옵션 내 어떤 키가 유효한 MIME 유형이 아닌 경우.
@@ -65,7 +65,7 @@ showSaveFilePicker()
 
 ## 보안
 
-[사용자의 임시 활성화](/ko/docs/Web/Security/User_activation)가 필요합니다. 이 기능이 동작하려면 사용자가 페이지 또는 UI 요소와 상호작용해야 합니다.
+[사용자의 임시 활성화](/ko/docs/Web/Security/Defenses/User_activation)가 필요합니다. 이 기능이 동작하려면 사용자가 페이지 또는 UI 요소와 상호작용해야 합니다.
 
 ## 예제
 

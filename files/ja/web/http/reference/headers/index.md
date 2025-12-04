@@ -156,9 +156,9 @@ IANA レジストリーでは、[ステータスに関する情報](https://gith
 ## 整合性ポリシー
 
 - {{HTTPHeader("Integrity-Policy")}}
-  - : ユーザーエージェントが読み込む（特定の型の）すべてのリソースが [サブリソース整合性](/ja/docs/Web/Security/Subresource_Integrity)を保証するようにします。
+  - : ユーザーエージェントが読み込む（特定の型の）すべてのリソースが [サブリソース整合性](/ja/docs/Web/Security/Defenses/Subresource_Integrity)を保証するようにします。
 - {{HTTPHeader("Integrity-Policy-Report-Only")}}
-  - : 整合性ポリシーが（`Integrity-Policy` ヘッダーを使用して）適用された場合、[サブリソース整合性](/ja/docs/Web/Security/Subresource_Integrity)を侵害する、ユーザーエージェントが読み込んだリソースに関してレポートします。
+  - : 整合性ポリシーが（`Integrity-Policy` ヘッダーを使用して）適用された場合、[サブリソース整合性](/ja/docs/Web/Security/Defenses/Subresource_Integrity)を侵害する、ユーザーエージェントが読み込んだリソースに関してレポートします。
 
 ## メッセージ本体の情報
 
@@ -245,7 +245,7 @@ HTTP の[範囲付きリクエスト](/ja/docs/Web/HTTP/Guides/Range_requests)�
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
   - : ウェブの開発者がポリシーの効果を適用せずに監視することで、実験を行うことができます。これらの違反レポートは、 HTTP `POST` リクエストによって指定した URI へ送信される {{Glossary("JSON")}} 文書で構成されます。
 - {{HTTPHeader("Expect-CT")}} {{deprecated_inline}}
-  - : サイトが[証明書の透過性](/ja/docs/Web/Security/Certificate_Transparency)の報告と実施にオプトインできるようにし、そのサイトに対して誤って発行された資格情報を使用しているかどうかを検出できるようにします。
+  - : サイトが[証明書の透過性](/ja/docs/Web/Security/Defenses/Certificate_Transparency)の報告と実施にオプトインできるようにし、そのサイトに対して誤って発行された資格情報を使用しているかどうかを検出できるようにします。
 - {{HTTPHeader("Permissions-Policy")}}
   - : 自身のフレームまたはその中に埋め込まれた {{htmlelement("iframe")}} で、ブラウザーの機能を使用することを許可または拒否する仕組みを提供します。
 - {{HTTPHeader("Reporting-Endpoints")}} {{experimental_inline}}
@@ -259,7 +259,7 @@ HTTP の[範囲付きリクエスト](/ja/docs/Web/HTTP/Guides/Range_requests)�
 - {{HTTPHeader("X-Frame-Options")}} (XFO)
   - : ブラウザーがページを {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, {{HTMLElement("object")}} の内部に表示することを許可するかを示します。
 - {{HTTPHeader("X-Permitted-Cross-Domain-Policies")}}
-  - : クロスドメインポリシーファイルは、Adobe Acrobat や Apache Flex などのクライアントに、[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy) によって制限されるドメイン間のデータを処理する権限を付与することができます。
+  - : クロスドメインポリシーファイルは、Adobe Acrobat や Apache Flex などのクライアントに、[同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy) によって制限されるドメイン間のデータを処理する権限を付与することができます。
     `X-Permitted-Cross-Domain-Policies` ヘッダーは、このようなポリシーファイルを上書きして、クライアントが不要なリクエストをブロックし続けるようにします。
 - {{HTTPHeader("X-Powered-By")}}
   - : ホスティング環境やその他のフレームワークによって設定される可能性があり、アプリケーションや訪問者に有益ではない情報を含みます。潜在的な脆弱性が発現することを防ぐために、このヘッダーは設定しないでください。

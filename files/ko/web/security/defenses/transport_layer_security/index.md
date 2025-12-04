@@ -102,5 +102,5 @@ Firefox는 버전 74부터 이전 TLS 버전을 사용하여 서버에 연결할
 - [Mozilla SSL 설정 생성기](https://mozilla.github.io/server-side-tls/ssl-config-generator/)와 [Cipherlist.eu](https://cipherlist.eu/)는 사이트를 보호하기 위해 서버에 대한 설정 파일을 생성하는 데 도움이 될 수 있습니다.
 - OpSec(Mozilla Operations Security) 팀은 [참조 TLS 설정](https://wiki.mozilla.org/Security/Server_Side_TLS)이 포함된 위키 페이지를 유지 관리합니다.
 - [Mozilla Observatory](https://observatory.mozilla.org/), [SSL Labs](https://www.ssllabs.com/ssltest/), 그리고 [Cipherscan](https://github.com/mozilla/cipherscan)은 사이트를 테스트하여 TLS 구성이 얼마나 안전한지 확인하는 데 도움을 줄 수 있습니다.
-- [Secure Contexts](/ko/docs/Web/Security/Secure_Contexts)
+- [Secure Contexts](/ko/docs/Web/Security/Defenses/Secure_Contexts)
 - [Strict-Transport-Security](/ko/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) HTTP 헤더

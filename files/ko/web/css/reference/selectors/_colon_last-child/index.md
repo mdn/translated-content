@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:last-child
 original_slug: Web/CSS/:last-child
 ---
 
-[CSS](/ko/docs/Web/CSS) **`:last-child`** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 형제 요소 중 제일 마지막 요소를 나타냅니다.
+[CSS](/ko/docs/Web/CSS) **`:last-child`** [의사 클래스](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes)는 형제 요소 중 제일 마지막 요소를 나타냅니다.
 
 {{InteractiveExample("CSS Demo: :last-child", "tabbed-shorter")}}
 

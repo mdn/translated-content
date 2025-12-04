@@ -42,7 +42,7 @@ image-set(
 ### 값
 
 - `<image>`
-  - : [`<image>`](/ko/docs/Web/CSS/image) 태그는 이미지 집합을 제외하고서는 어떠한 이미지 타입도 될 수 있습니다. `image-set()` 함수는 다른 `image-set()` 함수 내에 중첩될 수 없습니다.
+  - : [`<image>`](/ko/docs/Web/CSS/Reference/Values/image) 태그는 이미지 집합을 제외하고서는 어떠한 이미지 타입도 될 수 있습니다. `image-set()` 함수는 다른 `image-set()` 함수 내에 중첩될 수 없습니다.
 - `<string>`
   - : 이미지의 URL입니다.
 - `<resolution>` {{optional_inline}}

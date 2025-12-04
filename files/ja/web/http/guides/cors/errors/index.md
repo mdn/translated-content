@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 25250cc6891257af95351169ec07e004df8540d0
 ---
 
-[オリジン間リソース共有](/ja/docs/Web/HTTP/Guides/CORS) (Cross-Origin Resource Sharing) ({{Glossary("CORS")}}) は、サーバーが[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)を緩和することができる標準規格です。例えば、サイトが埋め込み可能なサービスを提供する場合、このような制約を緩和する必要があるかもしれません。このような CORS の構成の設定は必ずしも簡単ではなく、いくらか冒険的です。これらのページでは、よくある CORS のエラーメッセージと解決方法を調査します。
+[オリジン間リソース共有](/ja/docs/Web/HTTP/Guides/CORS) (Cross-Origin Resource Sharing) ({{Glossary("CORS")}}) は、サーバーが[同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)を緩和することができる標準規格です。例えば、サイトが埋め込み可能なサービスを提供する場合、このような制約を緩和する必要があるかもしれません。このような CORS の構成の設定は必ずしも簡単ではなく、いくらか冒険的です。これらのページでは、よくある CORS のエラーメッセージと解決方法を調査します。
 
 CORS 構成が正しく設定されていないと、ブラウザーのコンソールには `"Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at [some site]"` のようなエラーを表示して、リクエストが CORS のセキュリティ規則を侵害しているためにブロックされたことを示します。これは必ずしも設定ミスとは限りません。実際には、ユーザーのウェブアプリケーションおよびリモートの外部サービスからのリクエストが、意図的に許可されていない場合もあります。ただし、エンドポイントが使用可能である場合、成功するためにはデバッグが必要です。
 

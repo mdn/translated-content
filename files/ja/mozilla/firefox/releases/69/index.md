@@ -27,7 +27,7 @@ Firefox 69 は、米国時間 2019 年 9 月 3 日 にリリースされまし�
 
 #### ネットワーク
 
-- [CSP](/ja/docs/Web/HTTP/Guides/CSP) または [混在コンテンツ](/ja/docs/Web/Security/Mixed_content) のためにブロックされたリソースを、詳しい理由とともにネットワークパネルに表示するようになりました ([Firefox バグ 1556451](https://bugzil.la/1556451))。
+- [CSP](/ja/docs/Web/HTTP/Guides/CSP) または [混在コンテンツ](/ja/docs/Web/Security/Defenses/Mixed_content) のためにブロックされたリソースを、詳しい理由とともにネットワークパネルに表示するようになりました ([Firefox バグ 1556451](https://bugzil.la/1556451))。
 - ネットワークパネルで、リソースの完全な URL を表示する _URL_ 列が新たに使用可能になりました ([Firefox バグ 1341155](https://bugzil.la/1341155))。
 
 #### インスペクター

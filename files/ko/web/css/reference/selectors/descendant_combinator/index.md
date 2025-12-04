@@ -72,4 +72,4 @@ li li {
 
 ## 같이 보기
 
-- [자식 결합자](/ko/docs/Web/CSS/Child_combinator)
+- [자식 결합자](/ko/docs/Web/CSS/Reference/Selectors/Child_combinator)

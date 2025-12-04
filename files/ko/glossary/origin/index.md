@@ -41,6 +41,6 @@ l10n:
 
 ## 같이 보기
 
-- [동일 출처 정책](/ko/docs/Web/Security/Same-origin_policy)
+- [동일 출처 정책](/ko/docs/Web/Security/Defenses/Same-origin_policy)
 - {{Glossary("Site")}}
 - [HTML 명세: 출처](https://html.spec.whatwg.org/multipage/origin.html#origin)

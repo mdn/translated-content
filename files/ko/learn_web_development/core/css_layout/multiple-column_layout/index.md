@@ -481,6 +481,6 @@ body {
 ## 참조 항목
 
 - [CSS 붕괴](/ko/docs/Web/CSS/CSS_Fragmentation)
-- [다단 레이아웃 사용하기](/ko/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
+- [다단 레이아웃 사용하기](/ko/docs/Web/CSS/Guides/Multicol_layout/Using)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}

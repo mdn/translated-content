@@ -56,4 +56,4 @@ Origin: https://developer.mozilla.org
 
 - {{HTTPHeader("Host")}}
 - {{HTTPHeader("Referer")}}
-- [Same-origin policy](/ko/docs/Web/Security/Same-origin_policy)
+- [Same-origin policy](/ko/docs/Web/Security/Defenses/Same-origin_policy)

@@ -53,7 +53,7 @@ p {
     > 현대적인 웹 문서에서 이 특성을 포함할 이유는 거의 존재하지 않습니다.
 
 - `media`
-  - : 스타일을 적용할 매체. 값은 [미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries)이며, 누락할 경우 기본값은 `all`입니다.
+  - : 스타일을 적용할 매체. 값은 [미디어 쿼리](/ko/docs/Web/CSS/Guides/Media_queries/Using)이며, 누락할 경우 기본값은 `all`입니다.
 - `nonce`
   - : [`style-src Content-Security-Policy`](/ko/docs/Web/HTTP/Headers/Content-Security-Policy/style-src)에서 인라인 스타일을 화이트리스트에 추가할 때 사용하는 논스(임시 값). 서버는 매번 정책을 전송할 때마다 새로운 고유 논스를 생성해야 합니다. 논스 값을 알고 있는 공격자라면 리소스 정책을 우회하는 것은 매우 간단한 일이므로, 사전에 유추할 수 없는 값을 생성하는 것이 중요합니다.
 - `title`

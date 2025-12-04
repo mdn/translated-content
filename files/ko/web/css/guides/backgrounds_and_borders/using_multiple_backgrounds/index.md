@@ -18,11 +18,11 @@ original_slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 }
 ```
 
-{{ cssxref("background") }} [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)뿐 아니라 {{cssxref("background-color")}}를 제외한 단일 속성에서도 사용할 수 있습니다. 즉, {{ cssxref("background") }}, {{ cssxref("background-attachment") }}, {{ cssxref("background-clip") }}, {{ cssxref("background-image") }}, {{ cssxref("background-origin") }}, {{ cssxref("background-position") }}, {{ cssxref("background-repeat") }}, {{ cssxref("background-size") }}에는 목록을 값으로 지정할 수 있습니다.
+{{ cssxref("background") }} [단축 속성](/ko/docs/Web/CSS/Guides/Cascade/Shorthand_properties)뿐 아니라 {{cssxref("background-color")}}를 제외한 단일 속성에서도 사용할 수 있습니다. 즉, {{ cssxref("background") }}, {{ cssxref("background-attachment") }}, {{ cssxref("background-clip") }}, {{ cssxref("background-image") }}, {{ cssxref("background-origin") }}, {{ cssxref("background-position") }}, {{ cssxref("background-repeat") }}, {{ cssxref("background-size") }}에는 목록을 값으로 지정할 수 있습니다.
 
 ## 예제
 
-다음 예제는 Firefox 로고, 거품, [선형 그레이디언트](/ko/docs/Web/CSS/gradient/linear-gradient) 총 세 개의 배경을 사용합니다.
+다음 예제는 Firefox 로고, 거품, [선형 그레이디언트](/ko/docs/Web/CSS/Reference/Values/gradient/linear-gradient) 총 세 개의 배경을 사용합니다.
 
 ### HTML
 
@@ -55,4 +55,4 @@ original_slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 
 ## 같이 보기
 
-- [CSS 그레이디언트 사용하기](/ko/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [CSS 그레이디언트 사용하기](/ko/docs/Web/CSS/Guides/Images/Using_gradients)

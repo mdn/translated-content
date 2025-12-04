@@ -180,7 +180,7 @@ Firefox 49 より、サイトが正しく機能するために必要ではない
 
 ## セキュリティ
 
-- {{domxref("isSecureContext")}} プロパティを実装し、これが[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)を必要とする機能を使用できるコンテキストであるかを示ようになりました ([Firefox バグ 1162772](https://bugzil.la/1162772))。
+- {{domxref("isSecureContext")}} プロパティを実装し、これが[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)を必要とする機能を使用できるコンテキストであるかを示ようになりました ([Firefox バグ 1162772](https://bugzil.la/1162772))。
 
 ## 互換性
 

@@ -43,6 +43,6 @@ Server: Apache/2.4.1 (Unix)
 
 - [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
 - [Multiple hosts and misdirected requests](https://httpd.apache.org/docs/2.4/mod/mod_http2.html#misdirected) Apache Server documentation
-- [TLS 1.3](/ja/docs/Web/Security/Transport_Layer_Security#tls_1.3)
+- [TLS 1.3](/ja/docs/Web/Security/Defenses/Transport_Layer_Security#tls_1.3)
 - [Server Name Indication (SNI)](https://ja.wikipedia.org/wiki/Server_Name_Indication)
 - [Transport Layer Security (TLS) 構成](/ja/docs/Web/Security/Practical_implementation_guides/TLS)

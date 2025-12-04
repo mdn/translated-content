@@ -8,8 +8,8 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-La propriété **`returnValue`** de l'interface {{domxref("HTMLDialogElement")}} est une chaîne de caractères (`string`) représentant la valeur de retour pour un élément {{htmlelement("dialog")}} lorsqu'il est fermé.
-Vous pouvez définir cette valeur directement (`dialog.returnValue = "résultat"`) ou en fournissant la valeur comme argument de type `string` à {{domxref("HTMLDialogElement.close()", "close()")}} ou {{domxref("HTMLDialogElement.requestClose()", "requestClose()")}}.
+La propriété **`returnValue`** de l'interface {{DOMxRef("HTMLDialogElement")}} est une chaîne de caractères (`string`) représentant la valeur de retour pour un élément {{HTMLElement("dialog")}} lorsqu'il est fermé.
+Vous pouvez définir cette valeur directement (`dialog.returnValue = "résultat"`) ou en fournissant la valeur comme argument de type `string` à {{DOMxRef("HTMLDialogElement.close()", "close()")}} ou {{DOMxRef("HTMLDialogElement.requestClose()", "requestClose()")}}.
 
 ## Valeur
 
@@ -22,9 +22,9 @@ La valeur par défaut est une chaîne vide (`""`).
 
 L'exemple suivant affiche un bouton pour ouvrir une boîte de dialogue. Celle-ci demande à l'utilisateur·ice s'il·elle accepte les conditions d'utilisation.
 
-La boîte de dialogue contient des boutons «&nbsp;Accepter&nbsp;» ou «&nbsp;Refuser&nbsp;»&nbsp;: lorsque l'utilisateur·ice clique sur l'un des boutons, le gestionnaire d'événement ferme la boîte de dialogue en passant le choix à la fonction {{domxref("HTMLDialogElement.close()", "close()")}}. Ce choix est alors assigné à la propriété `returnValue` de la boîte de dialogue.
+La boîte de dialogue contient des boutons «&nbsp;Accepter&nbsp;» ou «&nbsp;Refuser&nbsp;»&nbsp;: lorsque l'utilisateur·ice clique sur l'un des boutons, le gestionnaire d'événement ferme la boîte de dialogue en passant le choix à la fonction {{DOMxRef("HTMLDialogElement.close()", "close()")}}. Ce choix est alors assigné à la propriété `returnValue` de la boîte de dialogue.
 
-Dans le gestionnaire d'événement {{domxref("HTMLDialogElement.close_event", "close")}} de la boîte de dialogue, l'exemple met à jour le texte d'état de la page principale pour afficher la valeur de `returnValue`.
+Dans le gestionnaire d'événement {{DOMxRef("HTMLDialogElement.close_event", "close")}} de la boîte de dialogue, l'exemple met à jour le texte d'état de la page principale pour afficher la valeur de `returnValue`.
 
 Si l'utilisateur·ice ferme la boîte de dialogue sans cliquer sur un bouton (par exemple, en appuyant sur la touche <kbd>Échap</kbd>), alors la valeur de retour n'est pas définie.
 
@@ -75,7 +75,7 @@ dialog.addEventListener("close", () => {
 
 Essayez de cliquer sur «&nbsp;Lire les CGU&nbsp;», puis choisissez les boutons «&nbsp;Accepter&nbsp;» ou «&nbsp;Refuser&nbsp;» dans la boîte de dialogue, ou fermez la boîte de dialogue en appuyant sur la touche <kbd>Échap</kbd>, et observez les différents états affichés.
 
-{{ EmbedLiveSample('Checking the return value', '100%', '200px') }}
+{{EmbedLiveSample('Vérifier la valeur de retour', '100%', 200)}}
 
 ## Spécifications
 
@@ -87,5 +87,4 @@ Essayez de cliquer sur «&nbsp;Lire les CGU&nbsp;», puis choisissez les boutons
 
 ## Voir aussi
 
-- Élément HTML implémentant cette interface&nbsp;:
-  - {{HTMLElement("dialog")}}
+- L'élément HTML implémentant cette interface&nbsp;: {{HTMLElement("dialog")}}

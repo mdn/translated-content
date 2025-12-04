@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Values/angle-percentage
 original_slug: Web/CSS/angle-percentage
 ---
 
-[CSS](/ko/docs/Web/CSS) **`<angle-percentage>`** [자료형](/ko/docs/Web/CSS/CSS_values_and_units/CSS_data_types)은 {{cssxref("&lt;angle&gt;")}}과 {{cssxref("&lt;percentage&gt;")}} 모두 가능한 값을 나타냅니다.
+[CSS](/ko/docs/Web/CSS) **`<angle-percentage>`** [자료형](/ko/docs/Web/CSS/Reference/Values/Data_types)은 {{cssxref("&lt;angle&gt;")}}과 {{cssxref("&lt;percentage&gt;")}} 모두 가능한 값을 나타냅니다.
 
 ## 구문
 

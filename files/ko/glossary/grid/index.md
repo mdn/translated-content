@@ -62,7 +62,7 @@ l10n:
 
 ## 같이 보기
 
-- [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
 - 속성 참고서
   - {{cssxref("grid-template-columns")}}
   - {{cssxref("grid-template-rows")}}

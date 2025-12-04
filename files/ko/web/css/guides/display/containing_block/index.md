@@ -4,7 +4,7 @@ slug: Web/CSS/Guides/Display/Containing_block
 original_slug: Web/CSS/CSS_display/Containing_block
 ---
 
-요소의 크기와 위치는 **컨테이닝 블록**(containing block)의 영향을 받곤 합니다. 대부분의 경우, 어떤 요소의 컨테이닝 블록은 가장 가까운 [블록 레벨](/ko/docs/Glossary/Block-level_content) 조상의 [콘텐츠 영역](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content-area)이나, 항상 그런 것은 아닙니다. 이 글에서는 요소의 컨테이닝 블록을 결정하는 요인을 살펴보겠습니다.
+요소의 크기와 위치는 **컨테이닝 블록**(containing block)의 영향을 받곤 합니다. 대부분의 경우, 어떤 요소의 컨테이닝 블록은 가장 가까운 [블록 레벨](/ko/docs/Glossary/Block-level_content) 조상의 [콘텐츠 영역](/ko/docs/Web/CSS/Guides/Box_model/Introduction#content-area)이나, 항상 그런 것은 아닙니다. 이 글에서는 요소의 컨테이닝 블록을 결정하는 요인을 살펴보겠습니다.
 
 사용자 에이전트(브라우저 등)는 문서를 그릴 때 모든 요소에 대해 상자(박스)를 생성합니다. 각각의 상자는 아래의 네 가지 영역으로 나눠집니다.
 
@@ -243,25 +243,25 @@ p {
 ## 같이 보기
 
 - CSS 주요 개념
-  - [CSS 문법](/ko/docs/Web/CSS/CSS_syntax/Syntax)
-  - [@규칙](/ko/docs/Web/CSS/CSS_syntax/At-rule)
-  - [주석](/ko/docs/Web/CSS/CSS_syntax/Comments)
-  - [명시도](/ko/docs/Web/CSS/CSS_cascade/Specificity)
-  - [상속](/ko/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [박스 모델](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+  - [CSS 문법](/ko/docs/Web/CSS/Guides/Syntax/Introduction)
+  - [@규칙](/ko/docs/Web/CSS/Guides/Syntax/At-rules)
+  - [주석](/ko/docs/Web/CSS/Guides/Syntax/Comments)
+  - [명시도](/ko/docs/Web/CSS/Guides/Cascade/Specificity)
+  - [상속](/ko/docs/Web/CSS/Guides/Cascade/Inheritance)
+  - [박스 모델](/ko/docs/Web/CSS/Guides/Box_model/Introduction)
   - [레이아웃 모드](/ko/docs/Glossary/Layout_mode)
   - [시각적 서식 모델](/ko/docs/Web/CSS/Visual_formatting_model)
-  - [마진 중첩](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [마진 중첩](/ko/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - 값
-    - [초깃값](/ko/docs/Web/CSS/CSS_cascade/Value_processing)
+    - [초깃값](/ko/docs/Web/CSS/Guides/Cascade/Property_value_processing)
     - [계산값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4129c9bf28ee4c2570fe2528f20c4b2cd9a30d9cf2ec4e75fb56fe903059e63e)
     - [결정값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4)
     - [지정값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
     - [사용값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)
     - [실제값](/ko/docs/Web/CSS/actual_value)
 
-  - [값 정의 구문](/ko/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
-  - [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)
+  - [값 정의 구문](/ko/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
+  - [단축 속성](/ko/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
+  - [대체 요소](/ko/docs/Web/CSS/Guides/Images/Replaced_element_properties)
 
 - 모든 CSS 선언을 주어진 상태로 되돌리는 {{cssxref("all")}} 속성

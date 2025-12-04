@@ -340,5 +340,5 @@ DOM 요소를 배치하거나 스타일링할 때, 네 가지 기본 수학 함�
 ## 결론
 
 - CSS 수학 함수를 사용하면 JavaScript 코드를 사용하지 않고도 반응형 사용자 인터페이스를 구축할 수 있습니다.
-- CSS 수학 함수는 때로는 레이아웃 중단점을 정의하기 위해 [CSS 미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries) 대신으로 사용될 수 있습니다.
+- CSS 수학 함수는 때로는 레이아웃 중단점을 정의하기 위해 [CSS 미디어 쿼리](/ko/docs/Web/CSS/Guides/Media_queries/Using) 대신으로 사용될 수 있습니다.
 - 2023년도에는, Interop 프로젝트의 구성원은 [개선에 초점을 맞춘 "CSS 수학 함수" 를 채택했습니다](https://github.com/web-platform-tests/interop/blob/main/2023/README.md#css-math-functions). 이는 브라우저의 벤더들이 CSS 수학 함수가 브라우저와 장치 사이에서 동일한 작동을 하도록 보장하는 데에 협력한다는 의미입니다.

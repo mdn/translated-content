@@ -1,11 +1,16 @@
 ---
 title: Référence JavaScript
+short-title: Référence
 slug: Web/JavaScript/Reference
+l10n:
+  sourceCommit: b6a36de3428f4b42c7707c8f190a349db13bf531
 ---
 
-{{JsSidebar}}
+La référence JavaScript sert de répertoire de faits sur le langage JavaScript. Le langage entier y est décrit en détail. Lorsque vous écrivez du code JavaScript, vous consulterez souvent ces pages (d'où le titre «&nbsp;Référence JavaScript&nbsp;»).
 
-Cette partie de la section JavaScript de MDN regroupe plusieurs notions sur le langage JavaScript. En savoir plus [à propos de cette référence](/fr/docs/Web/JavaScript/Reference).
+Le langage JavaScript est conçu pour être utilisé dans un environnement plus large, que ce soit un navigateur, des scripts côté serveur ou similaire. Pour l'essentiel, cette référence tente de rester indépendante de l'environnement et ne cible pas spécifiquement les navigateurs web.
+
+Si vous débutez avec JavaScript, commencez par le [guide](/fr/docs/Web/JavaScript/Guide). Une fois les bases acquises, vous pouvez utiliser la référence pour obtenir plus de détails sur les objets et les constructions du langage.
 
 ## Objets natifs
 
@@ -13,124 +18,125 @@ Cette partie de la section JavaScript de MDN regroupe plusieurs notions sur le l
 
 ### Propriétés de valeur
 
-- [`globalThis`](/fr/docs/Web/JavaScript/Reference/Global_Objects/globalThis)
-- [`Infinity`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity)
-- [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN)
-- [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)
+- {{JSxRef("globalThis")}}
+- {{JSxRef("Infinity")}}
+- {{JSxRef("NaN")}}
+- {{JSxRef("undefined")}}
 
 ### Propriétés de fonction
 
-- [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval)
-- [`isFinite()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/isFinite)
-- [`isNaN()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/isNaN)
-- [`parseFloat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/parseFloat)
-- [`parseInt()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
-- [`decodeURI()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/decodeURI)
-- [`decodeURIComponent()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent)
-- [`encodeURI()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/encodeURI)
-- [`encodeURIComponent()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)
+- {{JSxRef("Global_Objects/eval", "eval()")}}
+- {{JSxRef("isFinite()")}}
+- {{JSxRef("isNaN()")}}
+- {{JSxRef("parseFloat()")}}
+- {{JSxRef("parseInt()")}}
+- {{JSxRef("decodeURI()")}}
+- {{JSxRef("decodeURIComponent()")}}
+- {{JSxRef("encodeURI()")}}
+- {{JSxRef("encodeURIComponent()")}}
+- {{JSxRef("escape()")}} {{Deprecated_Inline}}
+- {{JSxRef("unescape()")}} {{Deprecated_Inline}}
 
 ### Objets fondamentaux
 
-- [`Object`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object)
-- [`Function`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function)
-- [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
-- [`Symbol`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
+- {{JSxRef("Object")}}
+- {{JSxRef("Function")}}
+- {{JSxRef("Boolean")}}
+- {{JSxRef("Symbol")}}
 
 ### Objets d'erreur
 
-- [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error)
-- [`EvalError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/EvalError)
-- [`RangeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RangeError)
-- [`ReferenceError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError)
-- [`SyntaxError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)
-- [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError)
-- [`URIError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/URIError)
-- [`AggregateError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/AggregateError)
+- {{JSxRef("Error")}}
+- {{JSxRef("AggregateError")}}
+- {{JSxRef("EvalError")}}
+- {{JSxRef("RangeError")}}
+- {{JSxRef("ReferenceError")}}
+- {{JSxRef("SuppressedError")}}
+- {{JSxRef("SyntaxError")}}
+- {{JSxRef("TypeError")}}
+- {{JSxRef("URIError")}}
+- {{JSxRef("InternalError")}} {{Non-standard_Inline}}
 
 ### Nombres et dates
 
-- [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number)
-- [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
-- [`Math`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math)
-- [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date)
+- {{JSxRef("Number")}}
+- {{JSxRef("BigInt")}}
+- {{JSxRef("Math")}}
+- {{JSxRef("Date")}}
+- {{JSxRef("Temporal")}}
 
 ### Traitement du texte
 
-- [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)
-- [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+- {{JSxRef("String")}}
+- {{JSxRef("RegExp")}}
 
 ### Collections indexées
 
-- [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)
-- [`Int8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int8Array)
-- [`Uint8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
-- [`Uint8ClampedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)
-- [`Int16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int16Array)
-- [`Uint16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array)
-- [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array)
-- [`Uint32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array)
-- [`BigInt64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array)
-- [`BigUint64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array)
-- [`Float32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float32Array)
-- [`Float64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float64Array)
+- {{JSxRef("Array")}}
+- {{JSxRef("Int8Array")}}
+- {{JSxRef("Uint8Array")}}
+- {{JSxRef("Uint8ClampedArray")}}
+- {{JSxRef("Int16Array")}}
+- {{JSxRef("Uint16Array")}}
+- {{JSxRef("Int32Array")}}
+- {{JSxRef("Uint32Array")}}
+- {{JSxRef("BigInt64Array")}}
+- {{JSxRef("BigUint64Array")}}
+- {{JSxRef("Float16Array")}}
+- {{JSxRef("Float32Array")}}
+- {{JSxRef("Float64Array")}}
 
 ### Collections avec clés
 
-- [`Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map)
-- [`Set`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set)
-- [`WeakMap`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)
-- [`WeakSet`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet)
+- {{JSxRef("Map")}}
+- {{JSxRef("Set")}}
+- {{JSxRef("WeakMap")}}
+- {{JSxRef("WeakSet")}}
 
 ### Données structurées
 
-- [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-- [`SharedArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer)
-- [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView)
-- [`Atomics`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Atomics)
-- [`JSON`](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON)
+- {{JSxRef("ArrayBuffer")}}
+- {{JSxRef("SharedArrayBuffer")}}
+- {{JSxRef("DataView")}}
+- {{JSxRef("Atomics")}}
+- {{JSxRef("JSON")}}
 
 ### Gestion de la mémoire
 
-- [`WeakRef`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakRef)
-- [`FinalizationRegistry`](/fr/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry)
+- {{JSxRef("WeakRef")}}
+- {{JSxRef("FinalizationRegistry")}}
 
 ### Abstraction du contrôle
 
-- [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [`GeneratorFunction`](/fr/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction)
-- [`AsyncGeneratorFunction`](/fr/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction)
-- [`Generator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Generator)
-- [`AsyncGenerator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator)
-- [`AsyncFunction`](/fr/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction)
+- {{JSxRef("Iterator")}}
+- {{JSxRef("AsyncIterator")}}
+- {{JSxRef("Promise")}}
+- {{JSxRef("GeneratorFunction")}}
+- {{JSxRef("AsyncGeneratorFunction")}}
+- {{JSxRef("Generator")}}
+- {{JSxRef("AsyncGenerator")}}
+- {{JSxRef("AsyncFunction")}}
+- {{JSxRef("DisposableStack")}}
+- {{JSxRef("AsyncDisposableStack")}}
 
 ### Réflexion
 
-- [`Reflect`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Reflect)
-- [`Proxy`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy)
+- {{JSxRef("Reflect")}}
+- {{JSxRef("Proxy")}}
 
 ### Internationalisation
 
-- [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl)
-- [`Intl.Collator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator)
-- [`Intl.DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
-- [`Intl.DisplayNames`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames)
-- [`Intl.ListFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat)
-- [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale)
-- [`Intl.NumberFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)
-- [`Intl.PluralRules`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules)
-- [`Intl.RelativeTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat)
-
-### WebAssembly
-
-- [`WebAssembly`](/fr/docs/WebAssembly/Reference/JavaScript_interface)
-- [`WebAssembly.Module`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Module)
-- [`WebAssembly.Instance`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Instance)
-- [`WebAssembly.Memory`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Memory)
-- [`WebAssembly.Table`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Table)
-- [`WebAssembly.CompileError`](/fr/docs/WebAssembly/Reference/JavaScript_interface/CompileError)
-- [`WebAssembly.LinkError`](/fr/docs/WebAssembly/Reference/JavaScript_interface/LinkError)
-- [`WebAssembly.RuntimeError`](/fr/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError)
+- {{JSxRef("Intl")}}
+- {{JSxRef("Intl.Collator")}}
+- {{JSxRef("Intl.DateTimeFormat")}}
+- {{JSxRef("Intl.DisplayNames")}}
+- {{JSxRef("Intl.DurationFormat")}}
+- {{JSxRef("Intl.ListFormat")}}
+- {{JSxRef("Intl.Locale")}}
+- {{JSxRef("Intl.NumberFormat")}}
+- {{JSxRef("Intl.PluralRules")}}
+- {{JSxRef("Intl.RelativeTimeFormat")}}
+- {{JSxRef("Intl.Segmenter")}}
 
 ## Instructions
 
@@ -138,45 +144,49 @@ Cette partie de la section JavaScript de MDN regroupe plusieurs notions sur le l
 
 ### Contrôle du flux d'exécution
 
-- [Bloc](/fr/docs/Web/JavaScript/Reference/Statements/block)
-- [Instruction vide](/fr/docs/Web/JavaScript/Reference/Statements/Empty)
-- [`break`](/fr/docs/Web/JavaScript/Reference/Statements/break)
-- [`continue`](/fr/docs/Web/JavaScript/Reference/Statements/continue)
-- [`if…else`](/fr/docs/Web/JavaScript/Reference/Statements/if...else)
-- [`switch`](/fr/docs/Web/JavaScript/Reference/Statements/switch)
-- [`throw`](/fr/docs/Web/JavaScript/Reference/Statements/throw)
-- [`try…catch`](/fr/docs/Web/JavaScript/Reference/Statements/try...catch)
+- {{JSxRef("Statements/return", "return")}}
+- {{JSxRef("Statements/break", "break")}}
+- {{JSxRef("Statements/continue", "continue")}}
+- {{JSxRef("Statements/throw", "throw")}}
+- {{JSxRef("Statements/if...else", "if...else")}}
+- {{JSxRef("Statements/switch", "switch")}}
+- {{JSxRef("Statements/try...catch", "try...catch")}}
 
-### Déclarations
+### Déclarations de variables
 
-- [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var)
-- [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let)
-- [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const)
+- {{JSxRef("Statements/var", "var")}}
+- {{JSxRef("Statements/let", "let")}}
+- {{JSxRef("Statements/const", "const")}}
+- {{JSxRef("Statements/using", "using")}}
+- {{JSxRef("Statements/await_using", "await using")}}
 
 ### Fonctions et classes
 
-- [`function`](/fr/docs/Web/JavaScript/Reference/Statements/function)
-- [`function*`](/fr/docs/Web/JavaScript/Reference/Statements/function*)
-- [`async function`](/fr/docs/Web/JavaScript/Reference/Statements/async_function)
-- [`return`](/fr/docs/Web/JavaScript/Reference/Statements/return)
-- [`class`](/fr/docs/Web/JavaScript/Reference/Statements/class)
+- {{JSxRef("Statements/function", "function")}}
+- {{JSxRef("Statements/function*", "function*")}}
+- {{JSxRef("Statements/async_function", "async function")}}
+- {{JSxRef("Statements/async_function*", "async function*")}}
+- {{JSxRef("Statements/class", "class")}}
 
 ### Itérations
 
-- [`do…while`](/fr/docs/Web/JavaScript/Reference/Statements/do...while)
-- [`for`](/fr/docs/Web/JavaScript/Reference/Statements/for)
-- [`for…in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in)
-- [`for…of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of)
-- [`for await…of`](/fr/docs/Web/JavaScript/Reference/Statements/for-await...of)
-- [`while`](/fr/docs/Web/JavaScript/Reference/Statements/while)
+- {{JSxRef("Statements/do...while", "do...while")}}
+- {{JSxRef("Statements/for", "for")}}
+- {{JSxRef("Statements/for...in", "for...in")}}
+- {{JSxRef("Statements/for...of", "for...of")}}
+- {{JSxRef("Statements/for-await...of", "for await...of")}}
+- {{JSxRef("Statements/while", "while")}}
 
 ### Autres
 
-- [`debugger`](/fr/docs/Web/JavaScript/Reference/Statements/debugger)
-- [`export`](/fr/docs/Web/JavaScript/Reference/Statements/export)
-- [`import`](/fr/docs/Web/JavaScript/Reference/Statements/import)
-- [`label`](/fr/docs/Web/JavaScript/Reference/Statements/label)
-- [`with`](/fr/docs/Web/JavaScript/Reference/Statements/with)
+- {{JSxRef("Statements/Empty", "Vide", "", 1)}}
+- {{JSxRef("Statements/block", "Bloc", "", 1)}}
+- {{JSxRef("Statements/Expression_statement", "Instruction d'expression", "", 1)}}
+- {{JSxRef("Statements/debugger", "debugger")}}
+- {{JSxRef("Statements/export", "export")}}
+- {{JSxRef("Statements/import", "import")}}
+- {{JSxRef("Statements/label", "label", "", 1)}}
+- {{JSxRef("Statements/with", "with")}} {{Deprecated_Inline}}
 
 ## Expressions et opérateurs
 
@@ -184,131 +194,181 @@ Cette partie de la section JavaScript de MDN regroupe plusieurs notions sur le l
 
 ### Expressions primaires
 
-- [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this)
-- [`function`](/fr/docs/Web/JavaScript/Reference/Operators/function)
-- [`class`](/fr/docs/Web/JavaScript/Reference/Operators/class)
-- [`function*`](/fr/docs/Web/JavaScript/Reference/Operators/function*)
-- [`yield`](/fr/docs/Web/JavaScript/Reference/Operators/yield)
-- [`yield*`](/fr/docs/Web/JavaScript/Reference/Operators/yield*)
-- [`async function`](/fr/docs/Web/JavaScript/Reference/Operators/async_function)
-- [`await`](/fr/docs/Web/JavaScript/Reference/Operators/await)
-- [`[]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)
-- [`{}`](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer)
-- [`/ab+c/i`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
-- [`( )`](/fr/docs/Web/JavaScript/Reference/Operators/Grouping)
-- [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null)
+- {{JSxRef("Operators/this", "this")}}
+- [Litéraux](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#litéraux)
+- {{JSxRef("Array", "[]")}}
+- {{JSxRef("Operators/Object_initializer", "{}")}}
+- {{JSxRef("Operators/function", "function")}}
+- {{JSxRef("Operators/class", "class")}}
+- {{JSxRef("Operators/function*", "function*")}}
+- {{JSxRef("Operators/async_function", "async function")}}
+- {{JSxRef("Operators/async_function*", "async function*")}}
+- {{JSxRef("RegExp", "/ab+c/i")}}
+- {{JSxRef("Template_literals", "`string`")}}
+- {{JSxRef("Operators/Grouping", "( )")}}
 
 ### Expressions vers la gauche
 
-- [Accesseurs de propriété](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors)
-- [`?.` pour le chaînage optionnel](/fr/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-- [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new)
-- [`new.target`](/fr/docs/Web/JavaScript/Reference/Operators/new%2Etarget)
-- [`import.meta`](/fr/docs/Web/JavaScript/Reference/Statements/import%2Emeta)
-- [`super`](/fr/docs/Web/JavaScript/Reference/Operators/super)
-- [`…obj`](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+- {{JSxRef("Operators/Property_accessors", "Accesseurs de propriété", "", 1)}}
+- {{JSxRef("Operators/Optional_chaining", "?.")}}
+- {{JSxRef("Operators/new", "new")}}
+- {{JSxRef("Operators/new.target", "new.target")}}
+- {{JSxRef("Operators/import.meta", "import.meta")}}
+- {{JSxRef("Operators/super", "super")}}
+- {{JSxRef("Operators/import", "import()")}}
 
 ### Incrément & décrément
 
-- [`A++`](/fr/docs/Web/JavaScript/Reference/Operators/Increment)
-- [`A--`](/fr/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [`++A`](/fr/docs/Web/JavaScript/Reference/Operators/Increment)
-- [`--A`](/fr/docs/Web/JavaScript/Reference/Operators/Decrement)
+- {{JSxRef("Operators/Increment", "A++")}}
+- {{JSxRef("Operators/Decrement", "A--")}}
+- {{JSxRef("Operators/Increment", "++A")}}
+- {{JSxRef("Operators/Decrement", "--A")}}
 
 ### Opérateurs unaires
 
-- [`delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete)
-- [`void`](/fr/docs/Web/JavaScript/Reference/Operators/void)
-- [`typeof`](/fr/docs/Web/JavaScript/Reference/Operators/typeof)
-- [`+`](/fr/docs/Web/JavaScript/Reference/Operators/Unary_plus)
-- [`-`](/fr/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [`~`](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT)
-- [`!`](/fr/docs/Web/JavaScript/Reference/Operators/Logical_NOT)
+- {{JSxRef("Operators/delete", "delete")}}
+- {{JSxRef("Operators/void", "void")}}
+- {{JSxRef("Operators/typeof", "typeof")}}
+- {{JSxRef("Operators/Unary_plus", "+")}}
+- {{JSxRef("Operators/Unary_negation", "-")}}
+- {{JSxRef("Operators/Bitwise_NOT", "~")}}
+- {{JSxRef("Operators/Logical_NOT", "!")}}
+- {{JSxRef("Operators/await", "await")}}
 
 ### Opérateurs arithmétiques
 
-- [`+`](/fr/docs/Web/JavaScript/Reference/Operators/Addition)
-- [`-`](/fr/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [`/`](/fr/docs/Web/JavaScript/Reference/Operators/Division)
-- [`*`](/fr/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [`%`](/fr/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [`**`](/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- {{JSxRef("Operators/Exponentiation", "**")}}
+- {{JSxRef("Operators/Multiplication", "*")}}
+- {{JSxRef("Operators/Division", "/")}}
+- {{JSxRef("Operators/Remainder", "%")}}
+- {{JSxRef("Operators/Addition", "+")}} (Plus)
+- {{JSxRef("Operators/Subtraction", "-")}}
 
 ### Opérateurs relationnels
 
-- [`in`](/fr/docs/Web/JavaScript/Reference/Operators/in)
-- [`instanceof`](/fr/docs/Web/JavaScript/Reference/Operators/instanceof)
-- [`<`](/fr/docs/Web/JavaScript/Reference/Operators/Less_than)
-- [`>`](/fr/docs/Web/JavaScript/Reference/Operators/Greater_than)
-- [`<=`](/fr/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal)
-- [`>=`](/fr/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
+- {{JSxRef("Operators/Less_than", "&lt;")}} (Inférieur à)
+- {{JSxRef("Operators/Greater_than", "&gt;")}} (Supérieur à)
+- {{JSxRef("Operators/Less_than_or_equal", "&lt;=")}}
+- {{JSxRef("Operators/Greater_than_or_equal", "&gt;=")}}
+- {{JSxRef("Operators/instanceof", "instanceof")}}
+- {{JSxRef("Operators/in", "in")}}
 
 ### Opérateurs d'égalité
 
-- [`==`](/fr/docs/Web/JavaScript/Reference/Operators/Equality)
-- [`!=`](/fr/docs/Web/JavaScript/Reference/Operators/Inequality)
-- [`===`](/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality)
-- [`!==`](/fr/docs/Web/JavaScript/Reference/Operators/Strict_inequality)
+- {{JSxRef("Operators/Equality", "==")}}
+- {{JSxRef("Operators/Inequality", "!=")}}
+- {{JSxRef("Operators/Strict_equality", "===")}}
+- {{JSxRef("Operators/Strict_inequality", "!==")}}
 
 ### Opérateurs de décalage binaire
 
-- [`<<`](/fr/docs/Web/JavaScript/Reference/Operators/Left_shift)
-- [`>>`](/fr/docs/Web/JavaScript/Reference/Operators/Right_shift)
-- [`>>>`](/fr/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)
+- {{JSxRef("Operators/Left_shift", "&lt;&lt;")}}
+- {{JSxRef("Operators/Right_shift", "&gt;&gt;")}}
+- {{JSxRef("Operators/Unsigned_right_shift", "&gt;&gt;&gt;")}}
 
 ### Opérateurs logiques binaires
 
-- [`&`](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)
-- [`|`](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_OR)
-- [`^`](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR)
+- {{JSxRef("Operators/Bitwise_AND", "&amp;")}}
+- {{JSxRef("Operators/Bitwise_OR", "|")}}
+- {{JSxRef("Operators/Bitwise_XOR", "^")}}
 
 ### Opérateurs logiques
 
-- [`&&`](/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND)
-- [`||`](/fr/docs/Web/JavaScript/Reference/Operators/Logical_OR)
-- [`??`](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
+- {{JSxRef("Operators/Logical_AND", "&amp;&amp;")}}
+- {{JSxRef("Operators/Logical_OR", "||")}}
+- {{JSxRef("Operators/Nullish_coalescing", "??")}}
 
 ### Opérateur conditionnel (opérateur ternaire)
 
-- [`(condition ? ifTrue : ifFalse)`](/fr/docs/Web/JavaScript/Reference/Operators/Conditional_operator)
+- {{JSxRef("Operators/Conditional_operator", "(condition ? ifTrue : ifFalse)")}}
 
 ### Opérateurs d'affectation
 
-- [`=`](/fr/docs/Web/JavaScript/Reference/Operators/Assignment)
-- [`*=`](/fr/docs/Web/JavaScript/Reference/Operators/Multiplication_assignment)
-- [`**=`](/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation_assignment)
-- [`/=`](/fr/docs/Web/JavaScript/Reference/Operators/Division_assignment)
-- [`%=`](/fr/docs/Web/JavaScript/Reference/Operators/Remainder_assignment)
-- [`+=`](/fr/docs/Web/JavaScript/Reference/Operators/Addition_assignment)
-- [`-=`](/fr/docs/Web/JavaScript/Reference/Operators/Subtraction_assignment)
-- [`<<=`](/fr/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)
-- [`>>=`](/fr/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)
-- [`>>>=`](/fr/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment)
-- [`&=`](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
-- [`^=`](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)
-- [`|=`](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)
-- [`&&=`](/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)
-- [`||=`](/fr/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)
-- [`??=`](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
-- [`[a, b] = [1, 2]`](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring)
+- {{JSxRef("Operators/Assignment", "=")}}
+- {{JSxRef("Operators/Multiplication_assignment", "*=")}}
+- {{JSxRef("Operators/Division_assignment", "/=")}}
+- {{JSxRef("Operators/Remainder_assignment", "%=")}}
+- {{JSxRef("Operators/Addition_assignment", "+=")}}
+- {{JSxRef("Operators/Subtraction_assignment", "-=")}}
+- {{JSxRef("Operators/Left_shift_assignment", "&lt;&lt;=")}}
+- {{JSxRef("Operators/Right_shift_assignment", "&gt;&gt;=")}}
+- {{JSxRef("Operators/Unsigned_right_shift_assignment", "&gt;&gt;&gt;=")}}
+- {{JSxRef("Operators/Bitwise_AND_assignment", "&amp;=")}}
+- {{JSxRef("Operators/Bitwise_XOR_assignment", "^=")}}
+- {{JSxRef("Operators/Bitwise_OR_assignment", "|=")}}
+- {{JSxRef("Operators/Exponentiation_assignment", "**=")}}
+- {{JSxRef("Operators/Logical_AND_assignment", "&amp;&amp;=")}}
+- {{JSxRef("Operators/Logical_OR_assignment", "||=")}}
+- {{JSxRef("Operators/Nullish_coalescing_assignment", "??=")}}
 - [`{a, b} = {a:1, b:2}`](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring)
+
+### Opérateurs de génération
+
+- {{JSxRef("Operators/yield", "yield")}}
+- {{JSxRef("Operators/yield*", "yield*")}}
+
+### Syntaxe de déploiement
+
+- {{JSxRef("Operators/Spread_syntax", "...obj")}}
 
 ### Opérateur virgule
 
-- [`,`](/fr/docs/Web/JavaScript/Reference/Operators/Comma_operator)
+- {{JSxRef("Operators/Comma_operator", ",")}}
 
 ## Fonctions
 
-Ce chapitre documente comment travailler avec [les fonctions JavaScript](/fr/docs/Web/JavaScript/Reference/Functions) pour développer des applications.
+[Les fonctions JavaScript](/fr/docs/Web/JavaScript/Reference/Functions)
 
-- [`arguments`](/fr/docs/Web/JavaScript/Reference/Functions/arguments)
-- [Fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
-- [Paramètres par défaut](/fr/docs/Web/JavaScript/Reference/Functions/Default_parameters)
-- [Paramètres du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+- {{JSxRef("Functions/Arrow_functions", "Fonctions fléchées", "", 1)}}
+- {{JSxRef("Functions/Default_parameters", "Paramètres par défaut", "", 1)}}
+- {{JSxRef("Functions/rest_parameters", "Paramètres rest", "", 1)}}
+- {{JSxRef("Functions/arguments", "arguments")}}
+- {{JSxRef("Functions/Method_definitions", "Définitions de méthodes", "", 1)}}
+- {{JSxRef("Functions/get", "Accesseur", "", 1)}}
+- {{JSxRef("Functions/set", "Mutateur", "", 1)}}
 
-## Autres pages de la référence
+## Classes
 
-- [Grammaire lexicale](/fr/docs/Web/JavaScript/Reference/Lexical_grammar)
+[Classes JavaScript](/fr/docs/Web/JavaScript/Reference/Classes)
+
+- {{JSxRef("Classes/Constructor", "constructor")}}
+- {{JSxRef("Classes/extends", "extends")}}
+- [Éléments privés](/fr/docs/Web/JavaScript/Reference/Classes/Private_elements)
+- [Champs de classe publics](/fr/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
+- {{JSxRef("Classes/static", "static")}}
+- [Blocs d'initialisation statique](/fr/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
+
+## Expressions régulières
+
+[Expressions régulières JavaScript](/fr/docs/Web/JavaScript/Reference/Regular_expressions)
+
+- [Référence arrière&nbsp;: `\1`, `\2`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)
+- [Groupe capturant&nbsp;: `(...)`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)
+- [Classe de caractères&nbsp;: `[...]`, `[^...]`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
+- [Échappement de classe de caractères&nbsp;: `\d`, `\D`, `\w`, `\W`, `\s`, `\S`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)
+- [Échappement de caractère&nbsp;: `\n`, `\u{...}`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)
+- [Disjonction&nbsp;: `|`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)
+- [Assertion de limite d'entrée&nbsp;: `^`, `$`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion)
+- [Caractère littéral&nbsp;: `a`, `b`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character)
+- [Assertion de prévisualisation&nbsp;: `(?=...)`, `(?!...)`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)
+- [Assertion de rétrovisualisation&nbsp;: `(?<=...)`, `(?<!...)`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion)
+- [Modificateur&nbsp;: `(?ims-ims:...)`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Modifier)
+- [Référence arrière nommée&nbsp;: `\k<name>`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference)
+- [Groupe capturant nommé&nbsp;: `(?<name>...)`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)
+- [Groupe non capturant&nbsp;: `(?:...)`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group)
+- [Quantificateur&nbsp;: `*`, `+`, `?`, `{n}`, `{n,}`, `{n,m}`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier)
+- [Échappement de classe de caractères Unicode&nbsp;: `\p{...}`, `\P{...}`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
+- [Joker&nbsp;: `.`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Wildcard)
+- [Assertion de limite de mot&nbsp;: `\b`, `\B`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion)
+
+## Autres pages de référence
+
+- [Vue d'ensemble des technologies JavaScript](/fr/docs/Web/JavaScript/Reference/JavaScript_technologies_overview)
+- [Modèle d'exécution](/fr/docs/Web/JavaScript/Reference/Execution_model)
+- {{JSxRef("Lexical_grammar", "Grammaire lexicale", "", 1)}}
 - [Types de données et structures de données](/fr/docs/Web/JavaScript/Guide/Data_structures)
-- [Mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode)
-- [Fonctionnalités dépréciées](/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
+- [Protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [Virgules finales](/fr/docs/Web/JavaScript/Reference/Trailing_commas)
+- [Erreurs](/fr/docs/Web/JavaScript/Reference/Errors)
+- {{JSxRef("Strict_mode", "Mode strict", "", 1)}}
+- {{JSxRef("Deprecated_and_obsolete_features", "Fonctionnalités dépréciées", "", 1)}}

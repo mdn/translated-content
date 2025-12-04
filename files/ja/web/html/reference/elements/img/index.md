@@ -397,7 +397,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
 ## セキュリティとプライバシーの考慮事項
 
-`<img>` 要素の多くは無害な使用ですが、ユーザーのセキュリティとプライバシーに望ましくない結果をもたらす可能性もあります。詳細情報と緩和策については [Referer ヘッダー: プライバシーとセキュリティの考慮事項](/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns)を参照してください。
+`<img>` 要素の多くは無害な使用ですが、ユーザーのセキュリティとプライバシーに望ましくない結果をもたらす可能性もあります。詳細情報と緩和策については [Referer ヘッダー: プライバシーとセキュリティの考慮事項](/ja/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns)を参照してください。
 
 ## 技術的概要
 

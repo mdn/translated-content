@@ -202,6 +202,6 @@ grid-template-columns: unset;
 ## 같이 보기
 
 - 연관 CSS 속성: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}
-- 그리드 레이아웃 안내서: [Basic concepts of grid layout - Grid Tracks](/ko/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#grid_tracks)
+- 그리드 레이아웃 안내서: [Basic concepts of grid layout - Grid Tracks](/ko/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#grid_tracks)
 - 영상 설명서: [Defining a Grid](https://gridbyexample.com/video/series-define-a-grid/)
 - [Subgrid](/ko/docs/Web/CSS/CSS_Grid_Layout/Subgrid)

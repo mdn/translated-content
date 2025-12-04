@@ -15,7 +15,7 @@ SVG および iframe の場合、 `prefers-color-scheme` を使用すると、 S
 SVG は、HTML にインラインでではなく、埋め込み（すなわち `<img src="circle.svg" alt="circle" />`）で使用する必要があります。
 SVG で `prefers-color-scheme` を使用している例については、「[埋め込み要素で継承される配色](#埋め込み要素で継承される配色)」の節を参照してください。
 
-`prefers-color-scheme` は、[オリジンをまたいだ](/ja/docs/Web/Security/Same-origin_policy#異なるオリジンへのネットワークアクセス) `<svg>` および `<iframe>` 要素で使用することができます。オリジンをまたぐとは、参照しているページとは異なるホストから取得される要素のことです。 SVG の詳細については、 [SVG のドキュメント](/ja/docs/Web/SVG)、 iframe の詳細については、 [iframe のドキュメント](/ja/docs/Web/HTML/Reference/Elements/iframe)を参照してください。
+`prefers-color-scheme` は、[オリジンをまたいだ](/ja/docs/Web/Security/Defenses/Same-origin_policy#異なるオリジンへのネットワークアクセス) `<svg>` および `<iframe>` 要素で使用することができます。オリジンをまたぐとは、参照しているページとは異なるホストから取得される要素のことです。 SVG の詳細については、 [SVG のドキュメント](/ja/docs/Web/SVG)、 iframe の詳細については、 [iframe のドキュメント](/ja/docs/Web/HTML/Reference/Elements/iframe)を参照してください。
 
 ## 構文
 

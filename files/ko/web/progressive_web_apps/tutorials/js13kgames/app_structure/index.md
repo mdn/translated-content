@@ -38,7 +38,7 @@ App shell 개념은 가능한 최소한의 사용자 인터페이스를 로딩�
 
 - 연결 가능: 네이티브 앱처럼 동작한다고해도 이는 여전히 웹 사이트입니다. 여러분은 페이지의 링크를 클릭할 수 있고, 누군가에게 URL을 공유할 수 있습니다.
 - 점진적: "좋은 오래된 기본적인 웹사이트"로 시작해서 새로운 기능을 점진적으로 추가하되, 브라우저에서 지원하지 않는 기능을 감지하고 이에 대한 적절한 에러 처리를 할 것을 기억하시기 바랍니다. 예를 들어, service worker의 도움을 통한 오프라인 모드는 더 나은 웹 사이트 경험을 제공하는 부가적인 특성일 뿐, 없어도 충분히 사용이 가능합니다.
-- 반응형: 반응형 웹 디자인 또한 프로그레시브 웹 앱에 적용됩니다. 둘 다 주로 모바일 기기에 해당됩니다. 기기와 브라우저는 아주 다양합니다. 따라서 [뷰포트 meta 태그](/ko/docs/Mozilla/Mobile/Viewport_meta_tag), [CSS 미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries), [Flexbox](/ko/docs/Web/CSS/CSS_flexible_box_layout), [CSS Grid](/ko/docs/Web/CSS/CSS_grid_layout) 와 같은 기술들을 사용해 여러분의 웹사이트를 다양한 화면 크기, 뷰포트 또는 픽셀 밀도에서 동작하도록 준비하는 것이 중요합니다.
+- 반응형: 반응형 웹 디자인 또한 프로그레시브 웹 앱에 적용됩니다. 둘 다 주로 모바일 기기에 해당됩니다. 기기와 브라우저는 아주 다양합니다. 따라서 [뷰포트 meta 태그](/ko/docs/Mozilla/Mobile/Viewport_meta_tag), [CSS 미디어 쿼리](/ko/docs/Web/CSS/Guides/Media_queries/Using), [Flexbox](/ko/docs/Web/CSS/Guides/Flexible_box_layout), [CSS Grid](/ko/docs/Web/CSS/Guides/Grid_layout) 와 같은 기술들을 사용해 여러분의 웹사이트를 다양한 화면 크기, 뷰포트 또는 픽셀 밀도에서 동작하도록 준비하는 것이 중요합니다.
 
 ## 다른 개념: streams
 

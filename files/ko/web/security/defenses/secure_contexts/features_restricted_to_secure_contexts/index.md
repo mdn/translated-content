@@ -8,7 +8,7 @@ l10n:
 
 {{QuickLinksWithSubpages("/ko/docs/Web/Security")}}
 
-이 참조는 보안 컨텍스트에서만 사용할 수 있는 웹 플랫폼 기능을 나열합니다. 정의와 자세한 내용은 [보안 컨텍스트](/ko/docs/Web/Security/Secure_Contexts)를 참조하세요.
+이 참조는 보안 컨텍스트에서만 사용할 수 있는 웹 플랫폼 기능을 나열합니다. 정의와 자세한 내용은 [보안 컨텍스트](/ko/docs/Web/Security/Defenses/Secure_Contexts)를 참조하세요.
 
 ## 보안 컨텍스트에서만 사용할 수 있는 현재 기능들
 
@@ -44,5 +44,5 @@ l10n:
 
 ## 같이 보기
 
-- [보안 컨텍스트](/ko/docs/Web/Security/Secure_Contexts)
+- [보안 컨텍스트](/ko/docs/Web/Security/Defenses/Secure_Contexts)
 - [Chrome Platform Status에서 "secure context" 검색](https://chromestatus.com/features#secure%20context)

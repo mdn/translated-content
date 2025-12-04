@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Values/integer
 original_slug: Web/CSS/integer
 ---
 
-**`<integer>`** [CSS](/ko/docs/Web/API/CSS) [자료형](/ko/docs/Web/CSS/CSS_values_and_units/CSS_data_types)은 {{cssxref("&lt;number&gt;")}}의 종류 중 하나로 소수점이 없는 완전한 수, 즉 정수를 표현합니다. 정수는 {{cssxref("column-count")}}, {{cssxref("counter-increment")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, {{cssxref("z-index")}} 등 다양한 속성에서 사용할 수 있습니다.
+**`<integer>`** [CSS](/ko/docs/Web/API/CSS) [자료형](/ko/docs/Web/CSS/Reference/Values/Data_types)은 {{cssxref("&lt;number&gt;")}}의 종류 중 하나로 소수점이 없는 완전한 수, 즉 정수를 표현합니다. 정수는 {{cssxref("column-count")}}, {{cssxref("counter-increment")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, {{cssxref("z-index")}} 등 다양한 속성에서 사용할 수 있습니다.
 
 ## 구문
 

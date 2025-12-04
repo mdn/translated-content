@@ -8,13 +8,13 @@ l10n:
 
 {{QuickLinksWithSubpages("/ko/docs/Web/Security")}}
 
-Firefox 23부터는 기본적으로 [액티브 혼합 콘텐츠](/ko/docs/Web/Security/Mixed_content#혼합_액티브_콘텐츠)를 차단합니다. 이는 [Chrome](https://security.googleblog.com/2011/06/trying-to-end-mixed-scripting.html?m=1)에서 채택한 방식을 따른 것입니다.
+Firefox 23부터는 기본적으로 [액티브 혼합 콘텐츠](/ko/docs/Web/Security/Defenses/Mixed_content#혼합_액티브_콘텐츠)를 차단합니다. 이는 [Chrome](https://security.googleblog.com/2011/06/trying-to-end-mixed-scripting.html?m=1)에서 채택한 방식을 따른 것입니다.
 
 이 페이지는 웹 개발자로서 알아야 할 사항을 설명합니다.
 
 ## 웹사이트가 고장날 수 있습니다
 
-웹사이트가 HTTPS 페이지를 제공하는 경우, 이 페이지에서 HTTP를 통해 전달되는 모든 [액티브 혼합 콘텐츠](/ko/docs/Web/Security/Mixed_content#혼합_액티브_콘텐츠)는 기본적으로 차단됩니다. 따라서 사용자에겐 웹사이트가 손상된 것처럼 보일 수 있습니다(iframe 또는 플러그인이 로드되지 않는 경우 등). [패시브 혼합 콘텐츠](/ko/docs/Web/Security/Mixed_content#혼합_패시브디스플레이_콘텐츠)는 기본적으로 표시되긴 하지만, 사용자는 이러한 유형의 콘텐츠도 차단하도록 설정할 수 있습니다.
+웹사이트가 HTTPS 페이지를 제공하는 경우, 이 페이지에서 HTTP를 통해 전달되는 모든 [액티브 혼합 콘텐츠](/ko/docs/Web/Security/Defenses/Mixed_content#혼합_액티브_콘텐츠)는 기본적으로 차단됩니다. 따라서 사용자에겐 웹사이트가 손상된 것처럼 보일 수 있습니다(iframe 또는 플러그인이 로드되지 않는 경우 등). [패시브 혼합 콘텐츠](/ko/docs/Web/Security/Defenses/Mixed_content#혼합_패시브디스플레이_콘텐츠)는 기본적으로 표시되긴 하지만, 사용자는 이러한 유형의 콘텐츠도 차단하도록 설정할 수 있습니다.
 
 이미 Chrome부터 혼합 콘텐츠 차단을 시행했기 때문에 웹사이트가 Chrome에서 정상적으로 작동하는 경우, 혼합 콘텐츠 차단 기능이 있는 Firefox에서도 동일하게 작동할 가능성이 높습니다.
 

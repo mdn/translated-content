@@ -29,7 +29,7 @@ original_slug: Web/HTML/Global_attributes
     - `characters`, 모든 글자의 기본값이 대문자
 
 - [`class`](/ko/docs/Web/HTML/Reference/Global_attributes/class)
-  - : 공백으로 구분된 해당 요소의 클래스의 목록입니다. 클래스를 이용하면 CSS나 JavaScript에서 [클래스 선택자](/ko/docs/Web/CSS/Class_selectors)나 {{domxref("Document.getElementsByClassName()")}}과 같은 메서드를 이용해 특정 요소를 선택하거나 접근할 수 있습니다.
+  - : 공백으로 구분된 해당 요소의 클래스의 목록입니다. 클래스를 이용하면 CSS나 JavaScript에서 [클래스 선택자](/ko/docs/Web/CSS/Reference/Selectors/Class_selectors)나 {{domxref("Document.getElementsByClassName()")}}과 같은 메서드를 이용해 특정 요소를 선택하거나 접근할 수 있습니다.
 - [`contenteditable`](/ko/docs/Web/HTML/Reference/Global_attributes/contenteditable)
   - : 해당 요소를 사용자가 편집할 수 있는지를 나타내는 열거형 특성입니다. 편집 가능한 경우에 브라우저는 편집을 허용하도록 위젯을 수정합니다.
 - [`data-*`](/ko/docs/Web/HTML/Reference/Global_attributes/data-*)
@@ -65,7 +65,7 @@ original_slug: Web/HTML/Global_attributes
 - [`lang`](/ko/docs/Web/HTML/Reference/Global_attributes/lang)
   - : 요소의 언어를 정의하는데 도움을 줍니다: 편집할 수 없는 요소가 있는 언어 또는 사용자가 요소를 편집할 수 있는 언어를 정의하는 데 도움이 됩니다. 이 특성은 언어 식별 태그([_Tags for Identifying Languages (BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt))에 정의된 형식의 하나의 "언어 태그"(하이픈으로 구분된 "언어 하위 태그(language subtags)"로 구성된)를 포함합니다. `xml:lang` 은 이보다 우선합니다.
 - [`part`](/ko/docs/Web/HTML/Reference/Global_attributes/part)
-  - : 요소의 부분(part) 이름 목록(공백으로 구분됨). 부분 이름은 CSS가 그림자 트리 내에서 특정 요소를 선택하고 스타일링하기 위해 [::part](/ko/docs/Web/CSS/::part) 가상 요소를 통해 사용할 수 있습니다..
+  - : 요소의 부분(part) 이름 목록(공백으로 구분됨). 부분 이름은 CSS가 그림자 트리 내에서 특정 요소를 선택하고 스타일링하기 위해 [::part](/ko/docs/Web/CSS/Reference/Selectors/::part) 가상 요소를 통해 사용할 수 있습니다..
 - [`slot`](/ko/docs/Web/HTML/Reference/Global_attributes/slot)
   - : 요소에 [shadow DOM](/ko/docs/Web/API/Web_components/Using_shadow_DOM)의 shadow tree에 있는 슬롯을 할당합니다: `slot` 특성을 가진 요소는 [`name`](/ko/docs/Web/HTML/Reference/Elements/slot#name) 특성의 값이 해당 `slot` 특성의 값과 일치하는 {HTMLElement("slot")}} 요소가 생성한 슬롯에 할당됩니다.
 - [`spellcheck`](/ko/docs/Web/HTML/Reference/Global_attributes/spellcheck)

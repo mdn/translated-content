@@ -107,7 +107,7 @@ bold && <length>
 
 ### 이중 바
 
-두 개 이상의 구성 요소를 **이중 바**, `||`로 구분하면 모든 개체 중 **적어도 하나는 나타나야 하고 순서는 상관하지 않습니다**. 보통 [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)의 여러 값을 정의할 때 사용합니다.
+두 개 이상의 구성 요소를 **이중 바**, `||`로 구분하면 모든 개체 중 **적어도 하나는 나타나야 하고 순서는 상관하지 않습니다**. 보통 [단축 속성](/ko/docs/Web/CSS/Guides/Cascade/Shorthand_properties)의 여러 값을 정의할 때 사용합니다.
 
 ```
 <'border-width'> || <'border-style'> || <'border-color'>

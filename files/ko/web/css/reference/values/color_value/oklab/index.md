@@ -52,7 +52,7 @@ oklab(L a b[ / A])
   - : 색상의 알파 채널 값을 나타내는 {{CSSXref("&lt;alpha-value&gt;")}}로, 숫자 `0`은 `0%` (완전히 투명), 숫자 `1`은 `100%` (완전히 불투명)을 나타냅니다. 또한, `none` 키워드를 사용하여 알파 채널이 없음을 명시적으로 지정할 수 있습니다. `A` 채널 값이 명시되지 않으면 기본값은 100% 입니다. 값이 포함될 경우에는 슬래시 (`/`)가 앞에 붙습니다.
 
 > [!NOTE]
-> 자세한 내용은 [Missing color components](/ko/docs/Web/CSS/color_value#missing_color_components) 섹션에서 `none`이 미치는 영향을 확인하세요.
+> 자세한 내용은 [Missing color components](/ko/docs/Web/CSS/Reference/Values/color_value#missing_color_components) 섹션에서 `none`이 미치는 영향을 확인하세요.
 
 #### 상댓값 구문
 
@@ -476,9 +476,9 @@ span {
 
 ## 같이 보기
 
-- The [`<color>` data type](/ko/docs/Web/CSS/color_value) for a list of all color notations
+- The [`<color>` data type](/ko/docs/Web/CSS/Reference/Values/color_value) for a list of all color notations
 - {{cssxref("color_value/lab","lab()")}} and {{cssxref("color_value/oklch","oklch()")}} color functions
 - [Using relative colors](/ko/docs/Web/CSS/CSS_colors/Relative_colors)
-- [CSS colors](/ko/docs/Web/CSS/CSS_colors) module
+- [CSS colors](/ko/docs/Web/CSS/Guides/Colors) module
 - [A perceptual color space for image processing](https://bottosson.github.io/posts/oklab/) on bottosson.github.io (2023)
 - [OKLAB color wheel](https://observablehq.com/@shan/oklab-color-wheel) on observablehq.com

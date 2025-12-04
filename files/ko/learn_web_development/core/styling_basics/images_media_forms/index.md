@@ -47,7 +47,7 @@ original_slug: Learn/CSS/Building_blocks/Images_media_form_elements
 
 ## 대체 (Replaced) 요소
 
-이미지와 비디오는 **[대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)** 로 설명됩니다. 즉, CSS 는 이러한 요소의 내부 레이아웃에 영향을 줄 수 없으며 — 다른 요소중에서 페이지의 위치에만 영향을 줍니다. 그러나 우리가 볼 수 있듯이 CSS 는 이미지로 할 수 있는 다양한 일들이 있습니다.
+이미지와 비디오는 **[대체 요소](/ko/docs/Web/CSS/Guides/Images/Replaced_element_properties)** 로 설명됩니다. 즉, CSS 는 이러한 요소의 내부 레이아웃에 영향을 줄 수 없으며 — 다른 요소중에서 페이지의 위치에만 영향을 줍니다. 그러나 우리가 볼 수 있듯이 CSS 는 이미지로 할 수 있는 다양한 일들이 있습니다.
 
 이미지 및 비디오와 같은 특정 대체 요소도 **종횡비 (aspect ratio)** 를 갖는 것으로 설명됩니다. 이는 가로 (x) 및 세로 (y) 크기를 가지며, 기본적으로 파일의 고유 크기를 사용하여 표시됨을 의미합니다.
 

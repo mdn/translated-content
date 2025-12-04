@@ -19,7 +19,7 @@ est un attribut à valeur contrainte définissant le libellé d'action (ou l'ic�
 
 ## Description
 
-Les [contrôles de formulaires](/fr/docs//Learn_web_development/Extensions/Forms\) (tels que les éléments [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea)
+Les [contrôles de formulaires](/fr/docs/Learn_web_development/Extensions/Forms) (tels que les éléments [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea)
 ou [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input)) ou les éléments utilisant l'attribut
 [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable) peuvent spécifier un attribut
 [`inputmode`](/fr/docs/Web/HTML/Reference/Global_attributes/inputmode) pour contrôler le type de clavier virtuel qui sera utilisé. Pour améliorer davantage l'expérience du visiteur, la touche à entrer peut être personnalisée spécifiquement en fournissant un attribut `enterkeyhint` indiquant comment la clé de saisie doit être libellée (ou quelle icône doit être affichée). La clé de saisie représente généralement ce que la personne va devoir faire par la suite. Les actions consistent généralement en l'envoi d'un texte, l'insertion d'une nouvelle ligne, le lancement d'une recherche, etc.

@@ -12,7 +12,7 @@ l10n:
 
 위치로 지정된 조상 요소는 다음과 같습니다.
 
-- 절대 위치 지정 요소의 [컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block#identifying_the_containing_block)
+- 절대 위치 지정 요소의 [컨테이닝 블록](/ko/docs/Web/CSS/Guides/Display/Containing_block#identifying_the_containing_block)
 - 이 요소와는 다른 유효 [zoom](/ko/docs/Web/CSS/zoom) 값을 가진 요소 (즉, 모든 부모의 zoom 배율을 곱한 값)
 - `td`, `th`, `table` in case the element itself is static positioned.
 - 해당 요소가 정적으로 위치가 지정된 경우의 `td`, `th`, `table` 요소

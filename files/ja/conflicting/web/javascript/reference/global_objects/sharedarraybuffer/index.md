@@ -15,7 +15,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned
 
 ## 新しい HTTP ヘッダーの鉱脈
 
-基本要件として、文書は[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)にあることが必要です。
+基本要件として、文書は[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)にあることが必要です。
 
 最上位の文書の場合、 2 つのヘッダーを設定する必要があります。
 

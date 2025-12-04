@@ -32,31 +32,31 @@ original_slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 
 **바깥 여백 영역**(마진 영역, margin area)은 바깥 여백 경계(margin edge)가 감싼 영역으로, 테두리 요소를 확장해 요소와 인근 요소 사이의 빈 공간까지 포함하도록 만듭니다. 영역의 크기는 바깥 여백 박스 너비와 바깥 여백 박스 높이입니다.
 
-바깥 여백 영역의 크기는 {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}와 단축 속성인 {{cssxref("margin")}}이 결정합니다. [여백 상쇄](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)가 발생할 때는 요소 간에 바깥 여백이 공유되므로 여백 영역이 명확하게 결정되지 않습니다.
+바깥 여백 영역의 크기는 {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}와 단축 속성인 {{cssxref("margin")}}이 결정합니다. [여백 상쇄](/ko/docs/Web/CSS/Guides/Box_model/Margin_collapsing)가 발생할 때는 요소 간에 바깥 여백이 공유되므로 여백 영역이 명확하게 결정되지 않습니다.
 
 끝으로, 비대체 인라인 요소가 차지하는 공간의 크기(줄 높이에 기여하는 양)는 요소 주위에 테두리와 안쪽 여백이 표시되더라도 {{cssxref('line-height')}} 속성으로 결정한다는 점을 주의하세요.
 
 ## 같이 보기
 
-- [컨테이닝 블록의 모든 것](/ko/docs/Web/CSS/CSS_display/Containing_block)
+- [컨테이닝 블록의 모든 것](/ko/docs/Web/CSS/Guides/Display/Containing_block)
 - [종속](/ko/docs/Web/CSS/Cascade)
 - [계단식 및 상속](/ko/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 
 - CSS 주요 개념:
-  - [CSS 문법](/ko/docs/Web/CSS/CSS_syntax/Syntax)
-  - [@규칙](/ko/docs/Web/CSS/CSS_syntax/At-rule)
-  - [주석](/ko/docs/Web/CSS/CSS_syntax/Comments)
-  - [명시도](/ko/docs/Web/CSS/CSS_cascade/Specificity)
-  - [상속](/ko/docs/Web/CSS/CSS_cascade/Inheritance)
+  - [CSS 문법](/ko/docs/Web/CSS/Guides/Syntax/Introduction)
+  - [@규칙](/ko/docs/Web/CSS/Guides/Syntax/At-rules)
+  - [주석](/ko/docs/Web/CSS/Guides/Syntax/Comments)
+  - [명시도](/ko/docs/Web/CSS/Guides/Cascade/Specificity)
+  - [상속](/ko/docs/Web/CSS/Guides/Cascade/Inheritance)
   - [레이아웃 모드](/ko/docs/Glossary/Layout_mode)
   - [시각적 서식 모델](/ko/docs/Web/CSS/Visual_formatting_model)
-  - [마진 중첩](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [마진 중첩](/ko/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - 값
-    - [초기 값](/ko/docs/Web/CSS/CSS_cascade/Value_processing)
+    - [초기 값](/ko/docs/Web/CSS/Guides/Cascade/Property_value_processing)
     - [계산 값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4129c9bf28ee4c2570fe2528f20c4b2cd9a30d9cf2ec4e75fb56fe903059e63e)
     - [사용 값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)
     - [실제 값](/ko/docs/Web/CSS/actual_value)
 
-  - [값 정의 구문](/ko/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
-  - [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)
+  - [값 정의 구문](/ko/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
+  - [단축 속성](/ko/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
+  - [대체 요소](/ko/docs/Web/CSS/Guides/Images/Replaced_element_properties)

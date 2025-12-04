@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
 ---
 
-HTTP の **`Referrer-Policy`** は{{Glossary("response header", "レスポンスヘッダー")}}で、 [リファラー情報](/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns)（{{HTTPHeader("Referer")}} ヘッダーで送られる）をリクエストにどれだけ含めるかを制御します。 HTTP ヘッダーのほかに、 [HTML でこのポリシーを設定する](#html_との統合)こともできます。
+HTTP の **`Referrer-Policy`** は{{Glossary("response header", "レスポンスヘッダー")}}で、 [リファラー情報](/ja/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns)（{{HTTPHeader("Referer")}} ヘッダーで送られる）をリクエストにどれだけ含めるかを制御します。 HTTP ヘッダーのほかに、 [HTML でこのポリシーを設定する](#html_との統合)こともできます。
 
 <table class="properties">
   <tbody>
@@ -184,8 +184,8 @@ Firefox のユーザー設定では*既定の*リファラーポリシーを構�
 
 ## 関連情報
 
-- [ウェブセキュリティ > Referer ヘッダー: プライバシーとセキュリティの考慮事項](/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns)
+- [ウェブセキュリティ > Referer ヘッダー: プライバシーとセキュリティの考慮事項](/ja/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns)
 - [Fetch](/ja/docs/Web/API/Fetch_API) の使用時: {{domxref("Request.referrerPolicy")}}
-- [同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)
+- [同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)
 - [HTTP リファラ](https://ja.wikipedia.org/wiki/HTTPリファラ)（ウィキペディア）
 - [Tighter Control Over Your Referrers – Mozilla Security Blog](https://blog.mozilla.org/security/2015/01/21/meta-referrer/)

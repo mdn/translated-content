@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-グローバルの **`isSecureContext`** プロパティは読み取り専用で、現在の[コンテキストが安全](/ja/docs/Web/Security/Secure_Contexts)である (`true`) かそうではない (`false`) を示す論理値を返します。
+グローバルの **`isSecureContext`** プロパティは読み取り専用で、現在の[コンテキストが安全](/ja/docs/Web/Security/Defenses/Secure_Contexts)である (`true`) かそうではない (`false`) を示す論理値を返します。
 
 ## 値
 
@@ -24,4 +24,4 @@ l10n:
 
 ## 関連情報
 
-- [保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)
+- [保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)

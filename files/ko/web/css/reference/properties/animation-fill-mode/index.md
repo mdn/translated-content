@@ -29,7 +29,7 @@ animation-fill-mode: both, forwards, none;
 - `none`
   - : 애니메이션은 실행되지 않을 때 대상에 스타일을 적용하지 않습니다. 요소는 대신 적용된 다른 CSS 규칙을 사용하여 표시됩니다. 이것은 기본값입니다.
 - `forwards`
-  - : 대상은 실행 된 애니메이션의 마지막 [keyframe](/ko/docs/Web/CSS/@keyframes)에 의해 설정된 계산 된 값을 유지합니다. 마지막 키 프레임은 {{cssxref("animation-direction")}}및 {{cssxref("animation-iteration-count")}}의 값에 따라 다릅니다.
+  - : 대상은 실행 된 애니메이션의 마지막 [keyframe](/ko/docs/Web/CSS/Reference/At-rules/@keyframes)에 의해 설정된 계산 된 값을 유지합니다. 마지막 키 프레임은 {{cssxref("animation-direction")}}및 {{cssxref("animation-iteration-count")}}의 값에 따라 다릅니다.
 
     | `animation-direction` | `animation-iteration-count` | last keyframe encountered |
     | --------------------- | --------------------------- | ------------------------- |
@@ -41,7 +41,7 @@ animation-fill-mode: both, forwards, none;
     | `alternate-reverse`   | odd                         | `0%` or `from`            |
 
 - `backwards`
-  - : 애니메이션은 대상에 적용되는 즉시 첫 번째 관련 [keyframe](/ko/docs/Web/CSS/@keyframes) 에 정의 된 값을 적용하고 {{cssxref("animation-delay")}} 기간 동안 이 값을 유지합니다. 첫 번째 관련 키프레임은 {{cssxref("animation-direction")}}의 값에 따라 다릅니다.
+  - : 애니메이션은 대상에 적용되는 즉시 첫 번째 관련 [keyframe](/ko/docs/Web/CSS/Reference/At-rules/@keyframes) 에 정의 된 값을 적용하고 {{cssxref("animation-delay")}} 기간 동안 이 값을 유지합니다. 첫 번째 관련 키프레임은 {{cssxref("animation-direction")}}의 값에 따라 다릅니다.
 
     | `animation-direction`            | first relevant keyframe |
     | -------------------------------- | ----------------------- |
@@ -52,7 +52,7 @@ animation-fill-mode: both, forwards, none;
   - : 애니메이션은 앞뒤 양쪽 모두의 규칙을 따르므로 애니메이션 속성이 양방향으로 확장됩니다.
 
 > [!NOTE]
-> animation- \* 속성에 여러 개의 쉼표로 구분 된 값을 지정하면 [`animation-name`](/ko/docs/Web/CSS/animation-name) 속성에 지정된 애니메이션에 할당되는 값의 수에 따라 다른 방식으로 지정됩니다. 자세한 내용은 [여러 애니메이션 속성 값 설정](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values)을 참조하십시오.
+> animation- \* 속성에 여러 개의 쉼표로 구분 된 값을 지정하면 [`animation-name`](/ko/docs/Web/CSS/animation-name) 속성에 지정된 애니메이션에 할당되는 값의 수에 따라 다른 방식으로 지정됩니다. 자세한 내용은 [여러 애니메이션 속성 값 설정](/ko/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values)을 참조하십시오.
 
 ### Formal syntax
 
@@ -103,7 +103,7 @@ animation-fill-mode: both, forwards, none;
 
 {{EmbedLiveSample('Example',700,300)}}
 
-자세한 예제는 [CSS animations](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)를 보십시오.
+자세한 예제는 [CSS animations](/ko/docs/Web/CSS/Guides/Animations/Using)를 보십시오.
 
 ## 명세
 
@@ -115,5 +115,5 @@ animation-fill-mode: both, forwards, none;
 
 ## 같이 보기(See also)
 
-- [Using CSS animations](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Using CSS animations](/ko/docs/Web/CSS/Guides/Animations/Using)
 - JavaScript {{domxref("AnimationEvent")}} API

@@ -37,11 +37,11 @@
     "markdownlint-rule-search-replace": "1.2.0",
     "mdast-util-from-markdown": "^2.0.2",
     "ora": "^9.0.0",
-    "prettier": "3.7.3",
+    "prettier": "3.7.4",
     "unist-util-visit": "^5.0.0",
     "yargs": "^18.0.0"
   },
   "devDependencies": {
-    "lefthook": "^2.0.4"
+    "lefthook": "^2.0.7"
   }
 }
