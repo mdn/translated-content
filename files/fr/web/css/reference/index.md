@@ -1,5 +1,6 @@
 ---
 title: Référence CSS
+short-title: Référence
 slug: Web/CSS/Reference
 l10n:
   sourceCommit: 93b85a5bc2b4589d93185263fd2c14381c36f821
