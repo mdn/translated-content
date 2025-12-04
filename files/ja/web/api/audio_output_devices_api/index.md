@@ -46,11 +46,11 @@ Audio Output Devices API は以下の API を拡張し、以下の機能を追�
 
 この API へのアクセスは、以下の制限を受けます。
 
-- 全てのメソッドやプロパティは[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ呼びだせます。
+- 全てのメソッドやプロパティは[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)でのみ呼びだせます。
 
 - [`MediaDevices.selectAudioOutput()`](/ja/docs/Web/API/MediaDevices/selectAudioOutput) はユーザーから選択されたデバイスを音声の出力先として使用する許可を得ます。
   - アクセスは HTTP の[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)の [`speaker-selection`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) により制限される可能性があります。
-  - [ユーザーによる一時的な有効化](/ja/docs/Web/Security/User_activation)が必要です。
+  - [ユーザーによる一時的な有効化](/ja/docs/Web/Security/Defenses/User_activation)が必要です。
     このメソッドを呼び出すには、ユーザーがページまたは UI 要素を操作する必要があります。
 
 - [`HTMLMediaElement.setSinkId()`](/ja/docs/Web/API/HTMLMediaElement/setSinkId) は許可された ID を音声の出力先として設定します。
