@@ -31,7 +31,7 @@ slice(start, end)
 - `start` {{optional_inline}}
   - : 要开始提取的位置（从 0 开始计数），会被[转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。
 - `end` {{optional_inline}}
-  - : 要结束提取的位置（从 0 开始计数），会被[转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。`slice()` 会提取到 `end`（但不包括）该位置。
+  - : 要结束提取的位置（从 0 开始计数），会被[转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。`slice()` 会提取到（但不包括）`end` 为止的位置。
 
 ### 返回值
 
@@ -39,7 +39,7 @@ slice(start, end)
 
 ## 描述
 
-更多详细信息请参见 {{jsxref("Array.prototype.slice()")}} 此方法不是通用方法，只能在类型化数组实例上调用。
+更多详细信息请参见 {{jsxref("Array.prototype.slice()")}}。此方法不是通用方法，只能在类型化数组实例上调用。
 
 ## 示例
 
@@ -64,7 +64,7 @@ bytes.slice(0, 1); // Uint8Array [ 1 ]
 ## 参见
 
 - [`core-js` 中 `TypedArray.prototype.slice` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [`TypedArray.prototype.slice` 的 es-shims polyfill 实现](https://www.npmjs.com/package/typedarray.prototype.slice)
+- [`TypedArray.prototype.slice` 的 es-shims polyfill](https://www.npmjs.com/package/typedarray.prototype.slice)
 - [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)指南
 - {{jsxref("TypedArray")}}
 - {{jsxref("Array.prototype.slice()")}}
