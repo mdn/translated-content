@@ -27,7 +27,7 @@ new Animation(effect, timeline)
 
 ## 示例
 
-在 [Follow the White Rabbit 示例](/zh-CN/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#暂停和启动动画)中，我们可以使用 `Animation()` 构造函数，结合文档的 `timeline`，为 `rabbitDownKeyframes` 创建一个 `Animation`：
+在[跟随白兔示例](/zh-CN/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#暂停和启动动画)中，我们可以使用 `Animation()` 构造函数，结合文档的 `timeline`，为 `rabbitDownKeyframes` 创建一个 `Animation`：
 
 ```js
 const whiteRabbit = document.getElementById("rabbit");
