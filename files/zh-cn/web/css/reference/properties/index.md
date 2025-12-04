@@ -32,9 +32,9 @@ selector {
 }
 ```
 
-## 字典序索引的属性列表
+## 属性的字典序索引
 
-CSS 规范定义的标准属性列表列举如下：
+CSS 规范定义的标准属性包括以下几种：
 
 ### 杂项
 
@@ -625,6 +625,6 @@ CSS 规范定义的标准属性列表列举如下：
 
 - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
 - [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)
-- [具有 Mozilla 浏览器引擎前缀的（-moz-）CSS 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)
-- [具有 Mozilla 浏览器引擎前缀的（-webkit-）CSS 扩展](/zh-CN/docs/Web/CSS/WebKit_Extensions)
+- [具有 Firefox 浏览器引擎前缀（-moz-）的 CSS 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)
+- [具有 WebKit 浏览器引擎前缀（-webkit-）的 CSS 扩展](/zh-CN/docs/Web/CSS/WebKit_Extensions)
 - {{Glossary("Vendor prefix", "浏览器引擎前缀")}}
