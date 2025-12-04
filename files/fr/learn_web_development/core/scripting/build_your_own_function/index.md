@@ -17,7 +17,7 @@ Dans l'article précédent, nous avons traité essentiellement de la théorie. L
         <a href="/fr/docs/Learn/JavaScript/First_steps"
           >premiers pas en JavaScript</a
         >,
-        <a href="/fr/docs/Learn/JavaScript/Building_blocks/Functions"
+        <a href="/fr/docs/Learn_web_development/Core/Scripting/Functions"
           >Fonctions — blocs de code réutilisables</a
         >.
       </td>
@@ -298,4 +298,4 @@ Passons au paramètre suivant. Celui-ci va demander un peu plus de travail — s
 
 Vous êtes venu à bout de cette activité, félicitations&nbsp;! Cet article vous a amené à travers tout le processus de construction d'une fonction pratique personnalisée, qui avec un peu plus de travail pourrait être transposée dans un projet réel. Dans l'article suivant, nous allons conclure l'apprentissage des fonctions en expliquant un autre concept connexe essentiel — les valeurs de retour.
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
