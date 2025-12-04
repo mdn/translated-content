@@ -200,7 +200,7 @@ l10n:
 - `imagesrcset`
   - : 仅适用于 `rel="preload"` 和 `as="image"`，`imagesrcset` 属性具有与 [`srcset`](/zh-CN/docs/Web/HTML/Reference/Elements/img#srcset) 属性类似的语法和语义，表示要预载 `img` 元素使用的适当资源，其 `srcset` 和 `sizes` 属性具有相应的值。
 - `integrity`
-  - : 包含内联元数据——（你要求浏览器获取的）资源（文件）的以 base64 编码的密码散列值。浏览器可以使用这一点来验证所获取的资源是否已被传输且没有遭到意外的修改。该属性只有在指定了 `rel` 属性为 `stylesheet`、`preload` 或 `modulepreload` 时才能指定。参见[子资源完整性](/zh-CN/docs/Web/Security/Subresource_Integrity)。
+  - : 包含内联元数据——（你要求浏览器获取的）资源（文件）的以 base64 编码的密码散列值。浏览器可以使用这一点来验证所获取的资源是否已被传输且没有遭到意外的修改。该属性只有在指定了 `rel` 属性为 `stylesheet`、`preload` 或 `modulepreload` 时才能指定。参见[子资源完整性](/zh-CN/docs/Web/Security/Defenses/Subresource_Integrity)。
 - `media`
   - : 该属性指定链接资源适用的媒体。其值必须是媒体类型或[媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries)。该属性主要用于链接外部样式表——它允许用户代理选择最适合其运行设备的样式表。
 

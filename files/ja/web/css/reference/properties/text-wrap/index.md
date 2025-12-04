@@ -137,7 +137,7 @@ text-wrap: unset;
 </h2>
 
 <h2 class="balance" contenteditable="true">
-  この場合、この見出しのテキストは各行のバランスがうまくれます。
+  この場合、この見出しのテキストは各行のバランスがうまく取れます。
 </h2>
 ```
 
