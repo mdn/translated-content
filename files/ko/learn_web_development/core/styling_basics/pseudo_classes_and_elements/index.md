@@ -98,7 +98,7 @@ article p:first-child {
 
 모든 의사 클래스는 이와 같은 방식으로 작동합니다. HTML에 클래스를 추가한 것처럼 동작하여 특정 상태에 있는 문서의 일부를 대상으로 합니다. MDN의 다른 예를 살펴보십시오.
 
-- [`:last-child`](/ko/docs/Web/CSS/:last-child)
+- [`:last-child`](/ko/docs/Web/CSS/Reference/Selectors/:last-child)
 - [`:only-child`](/ko/docs/Web/CSS/:only-child)
 - [`:invalid`](/ko/docs/Web/CSS/:invalid)
 
@@ -109,8 +109,8 @@ article p:first-child {
 
 일부 의사 클래스는 사용자가 어떤 방식으로든 문서와 상호 작용할 때만 적용됩니다. **동적 의사 클래스**라고도 하는 이러한 **사용자 행동** 의사 클래스는 사용자가 요소와 상호 작용할 때 클래스가 요소에 추가된 것처럼 작동합니다. 예를 들면, 다음과 같습니다.
 
-- [`:hover`](/ko/docs/Web/CSS/:hover) — mentioned above; this only applies if the user moves their pointer over an element, typically a link.
-- [`:focus`](/ko/docs/Web/CSS/:focus) — only applies if the user focuses the element by clicking or using keyboard controls.
+- [`:hover`](/ko/docs/Web/CSS/Reference/Selectors/:hover) — mentioned above; this only applies if the user moves their pointer over an element, typically a link.
+- [`:focus`](/ko/docs/Web/CSS/Reference/Selectors/:focus) — only applies if the user focuses the element by clicking or using keyboard controls.
 
 ```html live-sample___hover
 <p><a href="">Hover over me</a></p>
@@ -250,7 +250,7 @@ CSS에서 텍스트 문자열을 삽입하는 것은 실제로 웹에서 매우 
 
 ## See also
 
-- [Pseudo-classes reference](/ko/docs/Web/CSS/Pseudo-classes)
-- [Pseudo-elements reference](/ko/docs/Web/CSS/Pseudo-elements)
+- [Pseudo-classes reference](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
+- [Pseudo-elements reference](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
