@@ -6,9 +6,9 @@ l10n:
   sourceCommit: a567dfc8bf5da874d1831b3f6a3ddb12b27d1ab9
 ---
 
-[CSS 논리적 속성과 값](/ko/docs/Web/CSS/CSS_logical_properties_and_values) 모듈은 다양한 바깥 여백, 테두리, 그리고 안쪽 여백 속성과 그것의 단축어에 대한 흐름 상대적인 매핑을 정의합니다. 이 안내서는 이에 대해 자세히 살펴봅니다.
+[CSS 논리적 속성과 값](/ko/docs/Web/CSS/Guides/Logical_properties_and_values) 모듈은 다양한 바깥 여백, 테두리, 그리고 안쪽 여백 속성과 그것의 단축어에 대한 흐름 상대적인 매핑을 정의합니다. 이 안내서는 이에 대해 자세히 살펴봅니다.
 
-[논리적 속성과 값](/ko/docs/Web/CSS/CSS_logical_properties_and_values) 모듈에 대해 살펴보면, 모듈 속성에 대한 목록이 아주 길다는 것을 알아차릴 수 있습니다. 이는 대부분이 각각의 바깥 여백, 테두리, 그리고 안쪽 여백에 대해 네 가지의 긴 값과 모든 단축어를 포함하고 있기 때문입니다.
+[논리적 속성과 값](/ko/docs/Web/CSS/Guides/Logical_properties_and_values) 모듈에 대해 살펴보면, 모듈 속성에 대한 목록이 아주 길다는 것을 알아차릴 수 있습니다. 이는 대부분이 각각의 바깥 여백, 테두리, 그리고 안쪽 여백에 대해 네 가지의 긴 값과 모든 단축어를 포함하고 있기 때문입니다.
 
 ## 바깥 여백, 테두리, 그리고 안쪽 여백 매핑하기
 

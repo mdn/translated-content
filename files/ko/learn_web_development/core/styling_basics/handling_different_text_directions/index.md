@@ -114,7 +114,7 @@ CSS 레이아웃, 특히 최신 레이아웃 방법을 살펴보기 시작하면
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/logical-mbp.html", '100%', 1200)}}
 
-모든 개별 테두리를 고려할 때 많은 속성이 있으며, [논리 속성 및 값](/ko/docs/Web/CSS/CSS_logical_properties_and_values) 에 대한 MDN 페이지에서 매핑된 속성을 모두 볼 수 있습니다.
+모든 개별 테두리를 고려할 때 많은 속성이 있으며, [논리 속성 및 값](/ko/docs/Web/CSS/Guides/Logical_properties_and_values) 에 대한 MDN 페이지에서 매핑된 속성을 모두 볼 수 있습니다.
 
 ### 논리적 값
 

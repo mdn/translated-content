@@ -18,7 +18,7 @@ l10n:
 
 이것은 모든 페이지가 모바일에 최적화되지 않고 작은 뷰포트 폭에서 렌더링될 때 깨지기(또는 적어도 나빠 보임) 때문에 수행됩니다. 이 가상 뷰포트는 일반적으로 모바일에 최적화되지 않은 사이트를 좁은 스크린 장치에서 더 잘 보이도록 하는 방법입니다.
 
-그러나 이 메커니즘은 [미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries)를 사용하여 좁은 화면에 최적화된 페이지에는 적합하지 않습니다. 예를 들어 가상 뷰포트가 980px인 경우 640px 또는 480px 이하에서 시작되는 미디어 쿼리는 사용되지 않으므로 이러한 반응형 디자인 기법의 효과가 제한됩니다. 뷰포트 `<meta>` 요소는 좁은 화면 장치에서 가상 뷰포트의 이러한 문제를 완화합니다.
+그러나 이 메커니즘은 [미디어 쿼리](/ko/docs/Web/CSS/Guides/Media_queries)를 사용하여 좁은 화면에 최적화된 페이지에는 적합하지 않습니다. 예를 들어 가상 뷰포트가 980px인 경우 640px 또는 480px 이하에서 시작되는 미디어 쿼리는 사용되지 않으므로 이러한 반응형 디자인 기법의 효과가 제한됩니다. 뷰포트 `<meta>` 요소는 좁은 화면 장치에서 가상 뷰포트의 이러한 문제를 완화합니다.
 
 ## 뷰포트 기본
 
@@ -33,9 +33,9 @@ l10n:
 "viewport" `<meta>` 요소의 기본 속성은 다음과 같습니다.
 
 - `width`
-  - 뷰포트의 크기를 제어합니다. `width=600`과 같은 특정 픽셀 수 또는 [100vw](/ko/docs/Web/CSS/length#relative_length_units_based_on_viewport) 또는 뷰포트 너비의 100%를 의미하는 특수 값인 `device-width`로 설정할 수 있습니다. 최소값은 `1` 입니다. 최대값은 `10000` 입니다. 음수 값은 무시됩니다.
+  - 뷰포트의 크기를 제어합니다. `width=600`과 같은 특정 픽셀 수 또는 [100vw](/ko/docs/Web/CSS/Reference/Values/length#relative_length_units_based_on_viewport) 또는 뷰포트 너비의 100%를 의미하는 특수 값인 `device-width`로 설정할 수 있습니다. 최소값은 `1` 입니다. 최대값은 `10000` 입니다. 음수 값은 무시됩니다.
 - `height`
-  - 뷰포트의 크기를 제어합니다. `height=400`과 같은 특정 픽셀 수 또는 [100vh](/ko/docs/Web/CSS/length#vh) 또는 뷰포트 높이의 100%를 의미하는 특수 값인 `device-height`로 설정할 수 있습니다. 최소값은 `1` 입니다. 최대값은 `10000` 입니다. 음수 값은 무시됩니다.
+  - 뷰포트의 크기를 제어합니다. `height=400`과 같은 특정 픽셀 수 또는 [100vh](/ko/docs/Web/CSS/Reference/Values/length#vh) 또는 뷰포트 높이의 100%를 의미하는 특수 값인 `device-height`로 설정할 수 있습니다. 최소값은 `1` 입니다. 최대값은 `10000` 입니다. 음수 값은 무시됩니다.
 - `initial-scale`
   - 페이지가 처음 로드될 때 줌 레벨을 제어합니다. 최소값은 `0.1`입니다. 최대값은 `10` 입니다. 기본값은 `1` 입니다. 음수값은 무시됩니다.
 - `minimum-scale`
@@ -83,7 +83,7 @@ l10n:
 - `overlays-content`
   - {{Glossary("viewport")}} 또는 {{Glossary("visual viewport")}}는 대화형 위젯에 의해 크기가 조정되지 않습니다.
 
-{{Glossary("viewport")}} 의 크기가 조정되면 초기 [컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block) 도 크기가 조정되어 [뷰포트 단위](/ko/docs/Web/CSS/length#viewport-percentage_lengths) 의 계산된 크기에 영향을 미칩니다.
+{{Glossary("viewport")}} 의 크기가 조정되면 초기 [컨테이닝 블록](/ko/docs/Web/CSS/Guides/Display/Containing_block) 도 크기가 조정되어 [뷰포트 단위](/ko/docs/Web/CSS/Reference/Values/length#viewport-percentage_lengths) 의 계산된 크기에 영향을 미칩니다.
 
 ## 모바일 및 태블릿 장치의 일반 뷰포트 크기
 
