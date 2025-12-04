@@ -349,4 +349,4 @@ Avant d'ajouter [les fonctionnalités JavaScript](/fr/docs/Web/Progressive_web_a
 
 Avant d'aller plus loin, vous pouvez [voir le résultat obtenu à ce chapitre](https://mdn.github.io/pwa-examples/cycletracker/html_and_css) et télécharger [le code source HTML et CSS de CycleTracker](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css).
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/", "Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker", "Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}

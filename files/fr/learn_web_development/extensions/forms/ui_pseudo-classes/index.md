@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/UI_pseudo-classes
 original_slug: Learn/Forms/UI_pseudo-classes
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}
 
 Dans les articles précédents, nous avons vu la mise en forme des différents contrôles de formulaire de façon générale. Cela inclut l'utilisation de certaines pseudo-classes, telles que `:checked` qui permet de cibler une case à cocher seulement lorsqu'elle est sélectionnée. Dans cet article, nous verrons en détails les différentes pseudo-classes disponibles et qui ont trait à l'interface utilisateur et qui permettent de mettre en forme les formulaires dans différents états.
 
@@ -637,4 +637,4 @@ Vous avez atteint la fin de cet article, mais avez-vous retenu les informations 
 
 Et voilà la fin de ce tour des pseudo-classes relatives à l'interface utilisateur. N'hésitez pas à les utiliser et à créer des mises en forme amusantes avec&nbsp;! Nous allons voir ensuite un sujet différent&nbsp;: [la validation des formulaires côté client](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation).
 
-{{PreviousMenuNext("Learn/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Combinators
 original_slug: Learn/CSS/Building_blocks/Selectors/Combinators
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}
 
 Les derniers sélecteurs que nous allons étudier sont appelés combinateurs, car ils combinent différents sélecteurs de façon à leur donner une relation utile et l'emplacement du contenu dans le document.
 
@@ -114,4 +114,4 @@ Nous en avons beaucoup vu dans cet article, mais pouvez-vous vous souvenir des i
 
 Ceci est la dernière section de nos leçons sur les sélecteurs. Ensuite, nous passerons à une autre partie importante du CSS - le [modèle de Boîte](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model).
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}
