@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-{{domxref("Node")}} 接口的 **`isDefaultNamespace()`** 方法接受一个命名空间 URI 作为参数，并返回一个布尔值。如果该命名空间是该节点的默认命名空间，则返回 `true`，否则返回 `false` 要获取默认命名空间，可以向 {{domxref("Node.lookupNamespaceURI()")}} 传入 `null`。
+{{domxref("Node")}} 接口的 **`isDefaultNamespace()`** 方法接受一个命名空间 URI 作为参数，并返回一个布尔值。如果该命名空间是该节点的默认命名空间，则返回 `true`，否则返回 `false`。要获取默认命名空间，可以向 {{domxref("Node.lookupNamespaceURI()")}} 传入 `null`。
 
 ## 语法
 
