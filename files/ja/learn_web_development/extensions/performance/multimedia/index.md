@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0a9bfb1aee6b1b88c14acd3f66501cc01320f184
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/measuring_performance", "Learn/Performance/video", "Learn/Performance")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Measuring_performance", "Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance")}}
 
 画像や動画といったメディアは、平均的なウェブサイトでダウンロード量の 70% 以上を占めています。ダウンロードのパフォーマンスという観点からは、メディアを減らし、ファイルサイズを縮小することは、低いハードルであると言えます。この記事では、ウェブパフォーマンスを向上させるために画像や動画を最適化することについて見ていきます。
 
@@ -156,4 +156,4 @@ img {
 
 この章では、画像の最適化について見ていきました。これで、平均的なウェブサイトの平均帯域幅の合計の半分を最適化する方法について、全般的に理解したことになります。これは、ユーザーの帯域幅を消費し、ページ読み込みを遅くするメディアの種類の 1 つに過ぎません。次に、帯域幅消費の 20% を占める動画の最適化について見ていきましょう。
 
-{{PreviousMenuNext("Learn/Performance/measuring_performance", "Learn/Performance/video", "Learn/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Measuring_performance", "Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance")}}
