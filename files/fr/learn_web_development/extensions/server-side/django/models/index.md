@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Models
 original_slug: Learn/Server-side/Django/Models
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Ce troisième article est consacré aux modèles de données pour les sites web générés avec Django. Après une définition et une présentation de la notion de modèle de données, il explique comment les déclarer, choisir le type de champs et quelques méthodes d'accès au modèle de données via Django.
 

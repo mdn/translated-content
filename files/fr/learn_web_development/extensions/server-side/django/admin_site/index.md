@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Admin_site
 original_slug: Learn/Server-side/Django/Admin_site
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Nous avons créé le modèle de données pour le site web de la [bibliothèque locale](/fr/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website). Dans ce chapitre nous allons utiliser le site d'administration pour introduire des données réelles pour les livres. Dans un premier temps, nous aborderons la manière d'enregistrer les données des objets sur le site d'administration et comment se connecter au site et créer des données. La fin de ce chapitre sera dédié à des éléments d'amélioration possible du site d'administration.
 
