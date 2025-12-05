@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Accessibility/Mobile
 original_slug: Learn/Accessibility/Mobile
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Multimedia","Learn_web_development/Core/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Multimedia","Learn_web_development/Core/Accessibility/Accessibility_troubleshooting", "Learn_web_development/Core/Accessibility")}}
 
 L'accès Web sur les appareils mobiles étant si populaire et les plates-formes populaires telles qu'IOS et Android disposant d'outils d'aide à l'accessibilité complets, il est important de prendre en compte l'accessibilité de votre contenu Web sur ces plates-formes. Cet article examine les considérations relatives à l'accessibilité spécifiques aux mobiles.
 

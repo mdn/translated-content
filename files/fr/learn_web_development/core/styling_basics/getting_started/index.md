@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Getting_started
 original_slug: Learn/CSS/First_steps/How_CSS_is_structured
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn_web_development/Core/Styling_basics/Getting_started")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/What_is_CSS", "Learn_web_development/Core/Styling_basics/Getting_started")}}
 
 Vous avez maintenant une idée plus claire de CSS. Vous connaissez les bases de son fonctionnement. Il est temps d'explorer plus avant la structure du langage lui-même. Nous avons déjà rencontré nombre des concepts apparaissant dans ce tutoriel ; reportez vous aux leçons précédentes si un concept vous semble peu clair.
 

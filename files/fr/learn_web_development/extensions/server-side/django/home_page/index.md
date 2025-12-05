@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Home_page
 original_slug: Learn/Server-side/Django/Home_page
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn_web_development/Extensions/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Le travail préparatoire pour nous permettre de créer une page d'accueil pour le site web de [la bibliothèque locale](/fr/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) est réalisé. La page d'accueil montera le nombre d'enregistrements pour chacun des objets décrits dans la base et les liens à l'aide d'une barre latérale de navigation. Dans la progression de l'article, nous apprendrons à gérer les vues et à présenter les données à l'aide de gabarits.
 
