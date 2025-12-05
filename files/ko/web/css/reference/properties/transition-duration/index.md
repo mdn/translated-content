@@ -167,7 +167,7 @@ changeButton.addEventListener("click", change);
 
 ## 같이 보기
 
-- [Using CSS transitions](/ko/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Using CSS transitions](/ko/docs/Web/CSS/Guides/Transitions/Using)
 - {{cssxref('transition')}}
 - {{cssxref('transition-property')}}
 - {{cssxref('transition-timing-function')}}

@@ -65,7 +65,7 @@ svg|a:active {
 {{EmbedLiveSample('Example', 100, 100)}}
 
 > [!WARNING]
-> 이 요소는 [HTML의 `<a>` 요소](/ko/docs/Web/HTML/Reference/Elements/a)와 태그 이름을 공유하므로 CSS 또는 {{domxref("Document.querySelector", "querySelector")}}로 `a`를 선택하면 잘못된 요소를 선택할 수 있습니다. 둘을 구분하려면 [@namespace 규칙](/ko/docs/Web/CSS/@namespace)을 사용해 보세요.
+> 이 요소는 [HTML의 `<a>` 요소](/ko/docs/Web/HTML/Reference/Elements/a)와 태그 이름을 공유하므로 CSS 또는 {{domxref("Document.querySelector", "querySelector")}}로 `a`를 선택하면 잘못된 요소를 선택할 수 있습니다. 둘을 구분하려면 [@namespace 규칙](/ko/docs/Web/CSS/Reference/At-rules/@namespace)을 사용해 보세요.
 
 ## 속성
 

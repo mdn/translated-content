@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Math
 original_slug: Learn/JavaScript/First_steps/Math
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}
 
 À ce point du didacticiel, nous parlerons des mathématiques en JavaScript, de comment utiliser les [opérateurs](/fr/docs/Glossary/Operator) et d'autres fonctionnalités pour manipuler les nombres à notre guise.
 
@@ -95,7 +95,7 @@ partieDecimaleAdeuxChiffres;
 
 ### Convertir des valeurs en type numérique
 
-Parfois vous pourrez rencontrer un nombre enregistré sous la forme d'une chaîne de caractères, et il sera alors plus difficile d'effectuer des calculs avec. Cela arrive le plus souvent lorsqu'une donnée est entrée dans une entrée de [formulaire](/fr/docs//Learn_web_development/Extensions/Forms\), et que le [type de donnée entré est du texte](/fr/docs/Web/HTML/Reference/Elements/input/text). Il existe une façon de résoudre ce problème&nbsp;: passer la valeur qu'est la chaîne de caractères au constructeur [`Number()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) pour retourner une version numérique de la même valeur.
+Parfois vous pourrez rencontrer un nombre enregistré sous la forme d'une chaîne de caractères, et il sera alors plus difficile d'effectuer des calculs avec. Cela arrive le plus souvent lorsqu'une donnée est entrée dans une entrée de [formulaire](/fr/docs/Learn_web_development/Extensions/Forms), et que le [type de donnée entré est du texte](/fr/docs/Web/HTML/Reference/Elements/input/text). Il existe une façon de résoudre ce problème&nbsp;: passer la valeur qu'est la chaîne de caractères au constructeur [`Number()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) pour retourner une version numérique de la même valeur.
 
 Par exemple, essayez de taper ces lignes dans votre console&nbsp;:
 
@@ -235,7 +235,7 @@ Si vous voulez contourner les règles de précédence des opérateurs, vous pouv
 Essayez-le et voyez le résultat obtenu.
 
 > [!NOTE]
-> La liste complète de tous les opérateurs JavaScript et de leur précédence peut être trouvée dans [la page de référence sur les expressions et les opérateurs](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#pr%c3%a9c%c3%a9dence_des_op%c3%a9rateurs).
+> La liste complète de tous les opérateurs JavaScript et de leur précédence peut être trouvée dans [la page de référence sur les expressions et les opérateurs](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#précédence_des_opérateurs).
 
 ## Opérateurs d'incrémentation et de décrémentation
 
@@ -305,7 +305,7 @@ x *= y; // x contient maintenant la valeur 12
 ```
 
 > [!NOTE]
-> Il y a des tas d'[autres opérateurs d'affectation disponibles](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#op%c3%a9rateurs_d'affectation), mais ceux‑ci sont les plus courants, à apprendre dès maintenant.
+> Il y a des tas d'[autres opérateurs d'affectation disponibles](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#opérateurs_daffectation), mais ceux‑ci sont les plus courants, à apprendre dès maintenant.
 
 ## Apprentissage actif&nbsp;: dimensionner la boîte d'un canevas
 
@@ -395,4 +395,4 @@ Dans l'article suivant, nous étudierons le texte et les façons dont JavaScript
 > [!NOTE]
 > Si les maths vous plaisent et que vous souhaitez en savoir plus sur la manière dont elles sont implémentées en JavaScript, vous trouverez plus de précisions dans la section principale JavaScript de MDN. Pour commencer, nous vous conseillons [Nombres et dates](/fr/docs/Web/JavaScript/Guide/Numbers_and_strings) et [Expressions et opérateurs](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators).
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}

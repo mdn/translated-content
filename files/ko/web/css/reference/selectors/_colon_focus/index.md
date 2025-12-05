@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:focus
 original_slug: Web/CSS/:focus
 ---
 
-[CSS](/ko/docs/Web/CSS) **`:focus`** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 양식의 입력 칸 등 포커스를 받은 요소를 나타냅니다. 보통 사용자가 요소를 클릭 또는 탭하거나, 키보드 <kbd>Tab</kbd> 키로 선택했을 때 발동합니다.
+[CSS](/ko/docs/Web/CSS) **`:focus`** [의사 클래스](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes)는 양식의 입력 칸 등 포커스를 받은 요소를 나타냅니다. 보통 사용자가 요소를 클릭 또는 탭하거나, 키보드 <kbd>Tab</kbd> 키로 선택했을 때 발동합니다.
 
 ```css
 /* Selects any <input> when focused */

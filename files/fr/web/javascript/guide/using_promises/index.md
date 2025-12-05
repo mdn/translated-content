@@ -3,7 +3,7 @@ title: Utiliser les promesses
 slug: Web/JavaScript/Guide/Using_promises
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Le_modèle_objet_JavaScript_en_détails", "Web/JavaScript/Guide/iterateurs_et_generateurs")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Inheritance_and_the_prototype_chain", "Web/JavaScript/Guide/Iterators_and_generators")}}
 
 Une promesse est un objet ({{jsxref("Promise")}}) qui représente la complétion ou l'échec d'une opération asynchrone. La plupart du temps, on « consomme » des promesses et c'est donc ce que nous verrons dans la première partie de ce guide pour ensuite expliquer comment les créer.
 
@@ -344,4 +344,4 @@ console.log(1); // 1, 2, 3, 4
 - [La spécification Promises/A+](https://promisesaplus.com/)
 - [Nolan Lawson : We have a problem with promises — Common mistakes with promises (article en anglais)](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
 
-{{PreviousNext("Web/JavaScript/Guide/Le_modèle_objet_JavaScript_en_détails", "Web/JavaScript/Guide/iterateurs_et_generateurs")}}
+{{PreviousNext("Web/JavaScript/Guide/Inheritance_and_the_prototype_chain", "Web/JavaScript/Guide/Iterators_and_generators")}}

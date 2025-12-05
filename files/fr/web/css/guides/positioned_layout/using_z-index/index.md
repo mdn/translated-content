@@ -4,7 +4,7 @@ slug: Web/CSS/Guides/Positioned_layout/Using_z-index
 original_slug: Web/CSS/CSS_positioned_layout/Using_z-index
 ---
 
-{{CSSRef}}{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Empilement_et_float","Web/CSS/Comprendre_z-index/Empilement_de_couches", "Web/CSS/Comprendre_z-index")}}
+{{CSSRef}}{{PreviousMenuNext("Web/CSS/Guides/Positioned_layout/Stacking_floating_elements","Web/CSS/Guides/Positioned_layout/Stacking_context", "Web/CSS/Guides/Positioned_layout/Understanding_z-index")}}
 
 ## Ajouter `z-index`
 
@@ -132,4 +132,4 @@ b {
 }
 ```
 
-{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Empilement_et_float","Web/CSS/Comprendre_z-index/Empilement_de_couches", "Web/CSS/Comprendre_z-index")}}
+{{PreviousMenuNext("Web/CSS/Guides/Positioned_layout/Stacking_floating_elements","Web/CSS/Guides/Positioned_layout/Stacking_context", "Web/CSS/Guides/Positioned_layout/Understanding_z-index")}}

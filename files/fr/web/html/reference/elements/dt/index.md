@@ -1,25 +1,29 @@
 ---
 title: "<dt> : l'élément pour le terme d'une description"
 slug: Web/HTML/Reference/Elements/dt
-original_slug: Web/HTML/Element/dt
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<dt>`** identifie un terme dans une liste de descriptions ou de définitions et, de ce fait, doit être utilisé à l'intérieur d'un élément HTML {{HTMLElement("dl")}}. Il est généralement suivi d'un élément {{HTMLElement("dd")}}&nbsp;; toutefois, plusieurs éléments `<dt>` successifs indiquent plusieurs termes qui sont tous définis par le {{HTMLElement("dd")}} immédiatement suivant.
 
-L'élément HTML **`<dt>`** identifie un terme dans une liste de définitions ou de descriptions. Cet élément n'apparaît qu'en tant qu'élément enfant d'un élément [`<dl>`](/fr/docs/Web/HTML/Reference/Elements/dl) et est généralement suivi d'un élément [`<dd>`](/fr/docs/Web/HTML/Reference/Elements/dd). Plusieurs éléments `<dt>` qui se suivent indiqueront qu'ils partagent la définition/description fournie par le prochain élément [`<dd>`](/fr/docs/Web/HTML/Reference/Elements/dd).
+L'élément {{HTMLElement("dd")}} suivant (élément **Détails de la description**, <i lang="en">Description Details</i> en anglais) fournit la définition ou tout autre texte associé au terme spécifié à l'aide de `<dt>`.
 
-{{InteractiveExample("HTML Demo: &lt;dt&gt;", "tabbed-standard")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;dt&gt;", "tabbed-standard")}}
 
 ```html interactive-example
-<p>Please use the following paint colors for the new house:</p>
+<p>
+  Veuillez utiliser les teintes de peinture suivantes pour la nouvelle
+  maison&nbsp;:
+</p>
 
 <dl>
-  <dt>Denim (semigloss finish)</dt>
-  <dd>Ceiling</dd>
+  <dt>Denim (finition semi-brillante)</dt>
+  <dd>Plafond</dd>
 
-  <dt>Denim (eggshell finish)</dt>
-  <dt>Evening Sky (eggshell finish)</dt>
-  <dd>Layered on the walls</dd>
+  <dt>Denim (finition coquille d'oeuf)</dt>
+  <dt>Evening Sky (finition coquille d'oeuf)</dt>
+  <dd>Appliqué sur les murs</dd>
 </dl>
 ```
 
@@ -41,11 +45,21 @@ dd {
 }
 ```
 
+## Attributs
+
+Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+
+## Exemples
+
+Pour des exemples, voir les [exemples fournis pour l'élément `<dl>`](/fr/docs/Web/HTML/Reference/Elements/dl#exemples).
+
+## Résumé technique
+
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
           >Catégories de contenu</a
         >
       </th>
@@ -54,13 +68,10 @@ dd {
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#content_de_flux"
           >Contenu de flux</a
-        >, sans élément
-        <a href="/fr/docs/Web/HTML/Element/header"><code>&#x3C;header></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/footer"><code>&#x3C;footer></code></a
-        >, sans contenu sectionnant et sans titre parmi les descendants.
+        >, sans élément {{HTMLElement("header")}},
+        {{HTMLElement("footer")}}, sans contenu sectionnant et sans titre parmi les descendants.
       </td>
     </tr>
     <tr>
@@ -68,34 +79,33 @@ dd {
       <td>
         Cet élément doit avoir une balise ouvrante. La balise de fin peut être
         omise si l'élément est immédiatement suivi par un autre élément
-        <code>&#x3C;dd></code> ou par un élément <code>&#x3C;dt></code> ou s'il
+        <code>&#x3C;dt></code> ou par un élément {{HTMLElement("dd")}} ou s'il
         n'y a plus de contenu au sein de l'élément parent.
       </td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>
       <td>
-        L'élement doit être situé avant un élément
-        <a href="/fr/docs/Web/HTML/Element/dt"><code>&#x3C;dt></code></a> ou
-        <a href="/fr/docs/Web/HTML/Element/dd"><code>&#x3C;dd></code></a> et à
-        l'intérieur d'un élément
-        <a href="/fr/docs/Web/HTML/Element/dl"><code>&#x3C;dl></code></a
-        >. Sinon (selon le WHATWG), au sein d'un élément
-        <a href="/fr/docs/Web/HTML/Element/div"><code>&#x3C;div></code></a>
-        situé dans un élément
-        <a href="/fr/docs/Web/HTML/Element/dl"><code>&#x3C;dl></code></a
-        >.
+        Un {{HTMLElement("dl")}} ou (dans le {{Glossary("WHATWG")}} HTML, {{Glossary("W3C")}}
+        HTML 5.2 et versions ultérieures) un
+        {{HTMLElement("div")}} enfant d'un {{HTMLElement("dl")}}.<br />Cet
+        élément peut être utilisé avant un {{HTMLElement("dd")}} ou un
+        autre élément <code>&lt;dt&gt;</code>.
       </td>
     </tr>
     <tr>
       <th scope="row">Rôle ARIA implicite</th>
-      <td><a href="https://w3c.github.io/aria/#term">term</a></td>
+      <td>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
+          >Pas de rôle correspondant <sup>(angl.)</sup></a
+        >
+      </td>
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
       <td>
         <code
-          ><a href="/fr/docs/Web/Accessibility/ARIA/Roles/Listitem_role"
+          ><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role"
             >listitem</a
           ></code
         >
@@ -104,24 +114,13 @@ dd {
     <tr>
       <th scope="row">Interface DOM</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a>
-        Jusqu'à Gecko 1.9.2 inclus (Firefox 4), Firefox implémentait l'interface
-        <a href="/fr/docs/Web/API/HTMLSpanElement"
-          ><code>HTMLSpanElement</code></a
-        >
+        {{DOMxRef("HTMLElement")}}.
+        Jusqu'à Gecko 1.9.2 inclus (Firefox 4), Firefox implémentait l'interface {{DOMxRef("HTMLSpanElement")}}
         pour cet élément.
       </td>
     </tr>
   </tbody>
 </table>
-
-## Attributs
-
-On peut employer [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes) sur cet élément.
-
-## Exemples
-
-Pour des exemples, voir les [exemples fournis pour l'élément `<dl>`](/fr/docs/Web/HTML/Reference/Elements/dl#examples).
 
 ## Spécifications
 
@@ -133,5 +132,5 @@ Pour des exemples, voir les [exemples fournis pour l'élément `<dl>`](/fr/docs/
 
 ## Voir aussi
 
-- L'élément [`<dd>`](/fr/docs/Web/HTML/Reference/Elements/dd)
-- L'élément [`<dl>`](/fr/docs/Web/HTML/Reference/Elements/dl)
+- L'élément {{HTMLElement("dl")}}
+- L'élément {{HTMLElement("dd")}}

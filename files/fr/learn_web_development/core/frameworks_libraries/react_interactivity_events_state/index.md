@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 5e207965797b3672d3c06b65298de551d1eac515
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_components","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering", "Learn_web_development/Core/Frameworks_libraries")}}
 
 Après avoir organisé nos composants, il est maintenant temps de faire évoluer l'interface utilisateur de notre application afin que celle-ci ne soit plus statique mais interactive et permette de modifier les choses. C'est ce que nous allons faire dans cet article, en nous penchant sur les évènements et l'état, pour aboutir à une application dans laquelle nous pouvons ajouter des tâches, les supprimer et les marquer comme terminées.
 
@@ -521,4 +521,4 @@ Essayez à nouveau votre application. Vous devriez maintenant pouvoir supprimer 
 
 Cet article était dense. Nous avons vu comment React gère les évènements et les états. Nous avons implémenté une fonctionnalité permettant d'ajouter et de supprimer des tâches, et de marquer des tâches comme étant terminées. Nous en avons presque terminé. Dans le prochain article, nous implémenterons une fonctionnalité pour modifier les tâches existantes, filtrer la liste des tâches entre toutes les tâches, les tâches terminées et les tâches incomplètes. Nous en profiterons pour aborder le rendu conditionnel de l'interface utilisateur.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_components","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering", "Learn_web_development/Core/Frameworks_libraries")}}

@@ -15,7 +15,7 @@ Pour les SVG et les iframes, `prefers-color-scheme` permet de définir un style 
 Les SVG doivent être utilisés en tant qu'éléments embarqués (c'est-à-dire `<img src="circle.svg" alt="circle" />`) et non [intégrés en HTML](/fr/docs/Web/SVG/Guides/SVG_in_HTML#basic_example).
 Un exemple d'utilisation de `prefers-color-scheme` dans des SVG se trouve dans la section [Héritage du schéma de couleurs dans les éléments embarqués](#héritage_du_schéma_de_couleurs_dans_les_éléments_embarqués).
 
-L'utilisation de `prefers-color-scheme` est autorisée dans les éléments `<svg>` et `<iframe>` avec [cross-origin](/fr/docs/Web/Security/Same-origin_policy#cross-origin_network_access). Les éléments cross-origin sont des éléments récupérés depuis un autre hôte que la page qui les référence.
+L'utilisation de `prefers-color-scheme` est autorisée dans les éléments `<svg>` et `<iframe>` avec [cross-origin](/fr/docs/Web/Security/Defenses/Same-origin_policy#cross-origin_network_access). Les éléments cross-origin sont des éléments récupérés depuis un autre hôte que la page qui les référence.
 Pour en savoir plus sur les SVG, consultez la [documentation SVG](/fr/docs/Web/SVG) et pour plus d'informations sur les iframes, consultez la [documentation iframe](/fr/docs/Web/HTML/Reference/Elements/iframe).
 
 ## Syntaxe

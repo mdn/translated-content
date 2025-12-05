@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Accessibility/HTML
 original_slug: Learn/Accessibility/HTML
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_accessibility","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}
 
 Une grande partie des contenus web peut être rendue accessible simplement en s'assurant d'utiliser les éléments HTML appropriés systématiquement. Cet article détaille comment HTML peut être utilisé pour un maximum d'accessibilité.
 
@@ -565,4 +565,4 @@ La raison d'utiliser un vide `alt` au lieu de ne pas l'inclure est due au fait q
 
 Vous devriez maintenant bien connaître l'écriture HTML accessible pour la plupart des cas. Notre article sur les bases de WAI-ARIA comblera également certaines lacunes dans cette connaissance, mais cet article s'occupe des bases. Ensuite, nous allons explorer CSS et JavaScript, et comment l'accessibilité est affectée par leur bon ou mauvais usage.
 
-{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_accessibility","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}

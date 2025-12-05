@@ -15215,7 +15215,7 @@
       "shefollowme"
     ]
   },
-  "Web/Security/Same-origin_policy": {
+  "Web/Security/Defenses/Same-origin_policy": {
     "modified": "2020-08-22T13:54:54.667Z",
     "contributors": [
       "alattalatta",
@@ -15229,7 +15229,7 @@
       "behumble"
     ]
   },
-  "Web/Security/Transport_Layer_Security": {
+  "Web/Security/Defenses/Transport_Layer_Security": {
     "modified": "2020-09-21T00:10:58.229Z",
     "contributors": [
       "junnapark",

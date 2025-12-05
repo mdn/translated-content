@@ -44,7 +44,7 @@ div#current {
 
 ## 같이 보기
 
-- [상속](/ko/docs/Web/CSS/CSS_cascade/Inheritance)
+- [상속](/ko/docs/Web/CSS/Guides/Cascade/Inheritance)
 - {{cssxref("initial")}}을 사용해 속성의 초깃값을 사용하세요.
 - {{cssxref("unset")}}을 사용해 속성의 상속값 또는 초깃값을 사용하세요.
 - {{cssxref("revert")}}를 사용해 사용자 에이전트가 지정한 값(또는 사용자가 수정한 값)으로 속성을 되돌리세요.

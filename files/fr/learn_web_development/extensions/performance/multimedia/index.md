@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Performance/Multimedia
 original_slug: Learn/Performance/Multimedia
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/measuring_performance", "Learn/Performance/video", "Learn/Performance")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Measuring_performance", "Learn/Performance/video", "Learn_web_development/Extensions/Performance")}}
 
 Les fichiers média, et plus précisément les images et les vidéos, représentent plus de 70 % des octets téléchargés sur un site web classique. En termes de performance lors du téléchargement des ressources d'une page, la suppression des fichiers média et la réduction de la taille des fichiers est la solution de facilité pour produire des sites performants. Cet article s'intéresse à l'optimisation des images et des vidéos dans le but d'améliorer les performances.
 
@@ -132,4 +132,4 @@ Pour les images d'arrière-plan, il est important de mettre en place une valeur 
 
 Dans cette section nous avons vu l'optimisation des images. Vous avez maintenant une compréhension générale de la façon d'optimiser la bande passante de la moitié des sites web. Ce n'est qu'un des types d'optimisation consommant la bande passante des visiteurs et ralentissant le chargement des pages. Dans le prochain article, nous verrons l'optimisation du critère responsable de 20 % de la consommation de bande passante.
 
-{{PreviousMenuNext("Learn/Performance/measuring_performance", "Learn/Performance/video", "Learn/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Measuring_performance", "Learn/Performance/video", "Learn_web_development/Extensions/Performance")}}

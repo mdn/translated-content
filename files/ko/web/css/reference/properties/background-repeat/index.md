@@ -238,4 +238,4 @@ div {
 
 ## 같이 보기
 
-- [한 번에 여러 배경 사용하기](/ko/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [한 번에 여러 배경 사용하기](/ko/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
