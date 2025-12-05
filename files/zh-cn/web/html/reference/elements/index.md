@@ -10,7 +10,7 @@ l10n:
 它们已被按照功能进行分组，以便更轻松地找到你想要的内容。同时，侧边栏中也按照字母排序列出了所有元素。
 
 > [!NOTE]
-> 若想获知更多关于 HTML 元素、属性的基本信息，请查阅[剖析一个 HTML 元素](/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#剖析一个_html_元素)中的相关内容。
+> 若想获知更多关于 HTML 元素、属性的基本信息，请查阅[剖析一个 HTML 元素](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#剖析一个_html_元素)中的相关内容。
 
 ## 主根元素
 
