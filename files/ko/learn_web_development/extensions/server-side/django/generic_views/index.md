@@ -493,7 +493,7 @@ class BookListView(generic.ListView):
 
 만약 현재 페이지에 pagination이 사용중이라면, `page_obj` 가 [Paginator](https://docs.djangoproject.com/en/2.0/topics/pagination/#paginator-objects) 오브젝트 로서 존재합니다. 해당 오브젝트는 현재 페이지, 전 페이지, 페이지 수는 얼마나 되는 지등의 모든 정보를 제공합니다.
 
-pagination 링크를 만들기 위해 우리는 `{{ request.path }}` 를 이용하여 현재 페이지의 URL을 가져오도록 할 겁니다. 우리가 pagination을 하는 객체와 독립적이기 때문에 유용합니다.
+pagination 링크를 만들기 위해 우리는 `\{{ request.path }}` 를 이용하여 현재 페이지의 URL을 가져오도록 할 겁니다. 우리가 pagination을 하는 객체와 독립적이기 때문에 유용합니다.
 
 다됬네요!
 

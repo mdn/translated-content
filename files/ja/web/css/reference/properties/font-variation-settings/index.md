@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ad6eb6b52b4b3082397e8e011bd59a6d88a8f5f3
 ---
 
-**`font-variation-settings`** は [CSS](/ja/docs/Web/CSS) のプロパティで、変更したい特性の 4 文字の軸名と特性の値を指定することにより、[可変フォント](/ja/docs/Web/CSS/Guides/Fonts/Variable_fonts)に対する低水準の制御できるようにします。
+**`font-variation-settings`** は [CSS](/ja/docs/Web/CSS) のプロパティで、変更したい特性の 4 文字の軸名と特性の値を指定することにより、[可変フォント](/ja/docs/Web/CSS/Guides/Fonts/Variable_fonts)に対する低水準の制御を行うことができます。
 
 {{InteractiveExample("CSS デモ: font-variation-settings")}}
 

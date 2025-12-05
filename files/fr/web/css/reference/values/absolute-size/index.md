@@ -3,10 +3,10 @@ title: <absolute-size>
 slug: Web/CSS/Reference/Values/absolute-size
 original_slug: Web/CSS/absolute-size
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<absolute-size>`** décrit les mots-clés de taille absolue. Ce type de donnée est utilisé dans les propriétés abrégées {{cssxref("font")}} et {{cssxref("font-size")}}.
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<absolute-size>`** décrit les mots-clés de taille absolue. Ce type de donnée est utilisé dans les propriétés abrégées {{CSSxRef("font")}} et {{CSSxRef("font-size")}}.
 
 Les mots-clés de taille de police correspondent à l'attribut HTML obsolète `size`. Voir la section [Attribut HTML size](#attribut_html_size) ci-dessous.
 
@@ -119,6 +119,6 @@ li {
 
 ## Voir aussi
 
-- Le type de donnée CSS {{cssxref("relative-size")}}
-- Les propriétés CSS {{cssxref("font")}} et {{cssxref("font-size")}}
+- Le type de donnée CSS {{CSSxRef("relative-size")}}
+- Les propriétés CSS {{CSSxRef("font")}} et {{CSSxRef("font-size")}}
 - [Le module CSS fonts](/fr/docs/Web/CSS/Guides/Fonts)

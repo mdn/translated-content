@@ -3,10 +3,10 @@ title: shape()
 slug: Web/CSS/Reference/Values/basic-shape/shape
 original_slug: Web/CSS/basic-shape/shape
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`shape()`** permet de définir une forme pour les propriétés {{cssxref("clip-path")}} et {{cssxref("offset-path")}}. Elle combine un point de départ initial avec une série de commandes de forme qui définissent le tracé de la forme. La fonction `shape()` fait partie du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{cssxref("&lt;basic-shape&gt;")}}.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`shape()`** permet de définir une forme pour les propriétés {{CSSxRef("clip-path")}} et {{CSSxRef("offset-path")}}. Elle combine un point de départ initial avec une série de commandes de forme qui définissent le tracé de la forme. La fonction `shape()` fait partie du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{CSSxRef("&lt;basic-shape&gt;")}}.
 
 ## Syntaxe
 
@@ -57,17 +57,17 @@ clip-path: shape(
 
 ### Paramètres
 
-- [`<fill-rule>`](/fr/docs/Web/SVG/Reference/Attribute/fill-rule) {{optional_inline}}
+- [`<fill-rule>`](/fr/docs/Web/SVG/Reference/Attribute/fill-rule) {{Optional_Inline}}
   - : Définit la manière dont les régions superposées d'une forme doivent être remplies. Les valeurs possibles sont&nbsp;:
     - `nonzero`&nbsp;: Un point est considéré comme étant à l'intérieur de la forme si un rayon tracé depuis ce point croise plus de segments de chemin de gauche à droite que de droite à gauche, ce qui donne un compte non nul. C'est la valeur par défaut si `<fill-rule>` est omis.
 
     - `evenodd`&nbsp;: Un point est considéré comme étant à l'intérieur de la forme si un rayon tracé depuis ce point croise un nombre impair de segments de chemin. Cela signifie que pour chaque fois que le rayon entre dans la forme, il n'en est pas sorti un nombre égal de fois, indiquant un nombre impair d'entrées sans sorties correspondantes.
 
     > [!WARNING]
-    > `<fill-rule>` n'est pas pris en charge dans {{cssxref("offset-path")}} et son utilisation invalide la propriété.
+    > `<fill-rule>` n'est pas pris en charge dans {{CSSxRef("offset-path")}} et son utilisation invalide la propriété.
 
 - `from <coordinate-pair>`
-  - : Définit le point de départ de la première `<shape-command>` comme une paire de coordonnées mesurées à partir du coin supérieur gauche de la [boîte de référence](/fr/docs/Web/CSS/Guides/Shapes/Using_shape-outside#the_reference_box). Les coordonnées sont spécifiées comme des valeurs `<x> <y>` {{cssxref("&lt;length-percentage&gt;")}} séparées par un espace, représentant respectivement le décalage à gauche et le décalage en haut. Les pourcentages sont relatifs à la largeur et à la hauteur de la boîte de référence de l'élément. Ajoutez une virgule après ce paramètre.
+  - : Définit le point de départ de la première `<shape-command>` comme une paire de coordonnées mesurées à partir du coin supérieur gauche de la [boîte de référence](/fr/docs/Web/CSS/Guides/Shapes/Using_shape-outside#the_reference_box). Les coordonnées sont spécifiées comme des valeurs `<x> <y>` {{CSSxRef("&lt;length-percentage&gt;")}} séparées par un espace, représentant respectivement le décalage à gauche et le décalage en haut. Les pourcentages sont relatifs à la largeur et à la hauteur de la boîte de référence de l'élément. Ajoutez une virgule après ce paramètre.
 
 - `<shape-command>`
   - : Définit une liste d'une ou plusieurs commandes séparées par des virgules qui décrivent la forme, en utilisant une syntaxe similaire aux [commandes de chemin SVG](/fr/docs/Web/SVG/Reference/Attribute/d#path_commands). Les commandes incluent `<move-command>`, `<line-command>`, `<hv-line-command>`, `<curve-command>`, `<smooth-command>`, `<arc-command>` et `close`. Le point de départ de chaque commande est le point d'arrivée de la commande précédente, le premier point étant défini par le paramètre [`from <coordinate-pair>`](#from_coordinate-pair).
@@ -117,7 +117,7 @@ clip-path: shape(
 
 ## Description
 
-La fonction `shape()` permet de définir des formes complexes. Elle est similaire à la fonction de forme {{cssxref("basic-shape/path","path()")}} à plusieurs égards&nbsp;:
+La fonction `shape()` permet de définir des formes complexes. Elle est similaire à la fonction de forme {{CSSxRef("basic-shape/path","path()")}} à plusieurs égards&nbsp;:
 
 - Le paramètre `<fill-rule>` fonctionne exactement comme dans la fonction `path()`.
 - La fonction `shape()` exige une ou plusieurs `<shape-command>`, chacune utilisant une [commande de chemin](/fr/docs/Web/SVG/Reference/Attribute/d#commande_path) sous-jacente, comme [MoveTo](/fr/docs/Web/SVG/Reference/Attribute/d#commande_moveto_path), [LineTo](/fr/docs/Web/SVG/Reference/Attribute/d#commande_lineto_path) et [ClosePath](/fr/docs/Web/SVG/Reference/Attribute/d#closepath).
@@ -126,17 +126,17 @@ Cependant, `shape()` présente plusieurs avantages par rapport à `path()`&nbsp;
 
 - `shape()` utilise la syntaxe CSS standard, ce qui facilite la création et la modification des formes directement dans votre feuille de style. À l'inverse, `path()` utilise la syntaxe [SVG path](/fr/docs/Web/SVG/Reference/Element/path), moins intuitive si vous ne connaissez pas SVG.
 - `shape()` prend en charge divers types d'unités CSS, y compris les pourcentages, `rem` et `em`. `path()` définit les formes comme une seule chaîne et limite les unités à `px`.
-- `shape()` permet aussi l'utilisation de fonctions mathématiques CSS comme {{cssxref("calc")}}, {{cssxref("max")}} et {{cssxref("abs")}}, offrant plus de flexibilité.
+- `shape()` permet aussi l'utilisation de fonctions mathématiques CSS comme {{CSSxRef("calc")}}, {{CSSxRef("max")}} et {{CSSxRef("abs")}}, offrant plus de flexibilité.
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
 ### Utiliser `shape()` pour définir un chemin
 
-Cet exemple montre comment la fonction `shape()` peut être utilisée avec la propriété {{cssxref("offset-path")}} pour définir le chemin suivi par un élément.
+Cet exemple montre comment la fonction `shape()` peut être utilisée avec la propriété {{CSSxRef("offset-path")}} pour définir le chemin suivi par un élément.
 
 La première forme, `shape1`, suit un chemin courbe de Bézier cubique défini par la commande `curve to`. Ensuite, la commande `close` trace une ligne droite du point final de la courbe au point initial défini par `from`. Enfin, `shape1` se déplace à sa nouvelle position `0px 150px` puis suit une ligne horizontale.
 
@@ -231,7 +231,7 @@ body {
 
 ### Utiliser `shape()` pour définir la partie visible d'un élément
 
-Cet exemple montre comment la fonction `shape()` peut être utilisée avec la propriété {{cssxref("clip-path")}} pour créer différentes formes de région de découpage. La première forme (`shape1`) utilise un triangle défini par des lignes droites. La seconde forme (`shape2`) inclut des courbes et des transitions lisses&nbsp;; elle illustre aussi l'utilisation de `<move-command>` après la commande `close`, ce qui ajoute une forme rectangulaire à la région de découpage.
+Cet exemple montre comment la fonction `shape()` peut être utilisée avec la propriété {{CSSxRef("clip-path")}} pour créer différentes formes de région de découpage. La première forme (`shape1`) utilise un triangle défini par des lignes droites. La seconde forme (`shape2`) inclut des courbes et des transitions lisses&nbsp;; elle illustre aussi l'utilisation de `<move-command>` après la commande `close`, ce qui ajoute une forme rectangulaire à la région de découpage.
 
 ```html hidden
 <div class="container">
@@ -317,8 +317,8 @@ body {
 
 ## Voir aussi
 
-- {{cssxref("clip-path")}}
-- {{cssxref("offset-path")}}
+- {{CSSxRef("clip-path")}}
+- {{CSSxRef("offset-path")}}
 - Le module des [formes de base](/fr/docs/Web/CSS/Guides/Shapes)
 - [Présentation des formes](/fr/docs/Web/CSS/Guides/Shapes/Overview)
 - [Guide des formes de base](/fr/docs/Web/CSS/Guides/Shapes/Using_shape-outside)

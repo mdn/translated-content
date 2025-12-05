@@ -6,7 +6,7 @@ original_slug: Web/SVG/Tutorial/SVG_fonts
 
 {{SVGRef}}
 
-{{ PreviousNext("Web/SVG/Tutoriel/filtres","Web/SVG/Tutoriel/SVG_Image_Tag") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Filter_effects","Web/SVG/Tutorials/SVG_from_scratch/Image_element") }}
 
 Lorsque SVG a été spécifié, le support des polices d'écriture pour le web n'était pas répandu dans les navigateurs. Comme l'accès au fichier de la police adéquate est cependant crucial pour afficher correctement le texte, une technologie de description des polices a été ajoutée à SVG pour offrir cette capacité. Elle n'a pas été conçue pour la compatibilité avec d'autres formats tels que le PostScript ou OTF, mais plutôt comme un moyen simple d'intégration des informations des glyphes en SVG lors de l'affichage.
 
@@ -111,4 +111,4 @@ L'élément mentionné `font-face-uri` vous permet de référencer une police ex
 </font>
 ```
 
-{{ PreviousNext("Web/SVG/Tutoriel/filtres","Web/SVG/Tutoriel/SVG_Image_Tag") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Filter_effects","Web/SVG/Tutorials/SVG_from_scratch/Image_element") }}

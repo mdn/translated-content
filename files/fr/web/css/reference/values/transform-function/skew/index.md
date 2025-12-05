@@ -1,14 +1,13 @@
 ---
 title: skew()
 slug: Web/CSS/Reference/Values/transform-function/skew
-original_slug: Web/CSS/transform-function/skew
+l10n:
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
-{{CSSRef}}
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`skew()`** définit une transformation qui incline un élément dans le plan 2D. Son résultat est de type {{CSSxRef("&lt;transform-function&gt;")}}.
 
-La fonction **`skew()`** permet d'opérer une distorsion en étirant chaque point de l'élément d'un certain angle dans une direction du plan. Pour cela, on augmente l'ordonnée d'un élément d'une valeur proportionnelle à l'angle donné et à la distance de l'origine. Plus le point est éloigné de l'origine, plus le décalage obtenu sera important.
-
-{{InteractiveExample("CSS Demo: skew()")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: skew()")}}
 
 ```css interactive-example-choice
 transform: skew(0);
@@ -36,11 +35,11 @@ transform: skew(0.312rad);
 </section>
 ```
 
-La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function).
+Cette transformation est une application de cisaillement ([transvection](https://fr.wikipedia.org/wiki/Transvection)) qui déforme chaque point d'un élément selon un certain angle dans les directions horizontale et verticale. L'effet est similaire à celui d'étirer chaque coin de l'élément selon un certain angle.
+
+Les coordonnées de chaque point sont modifiées d'une valeur proportionnelle à l'angle défini et à la distance à l'origine. Ainsi, plus un point est éloigné de l'origine, plus la valeur ajoutée est grande.
 
 ## Syntaxe
-
-La fonction `skew()` s'utilise avec une ou deux valeurs qui représente l'intensité de la distorsion appliquée dans chaque direction. Si une seule valeur est fournie, elle sera utilisée pour la distorsion sur l'axe horizontal et il n'y aura pas de distorsion verticale.
 
 ```css
 skew(ax)
@@ -51,65 +50,40 @@ skew(ax, ay)
 ### Valeurs
 
 - `ax`
-  - : Une valeur de type [`<angle>`](/fr/docs/Web/CSS/Reference/Values/angle) qui représente l'angle avec lequel appliquer la distorsion selon l'axe des abscisses (axe horizontal).
-- `ay`
-  - : Une valeur de type [`<angle>`](/fr/docs/Web/CSS/Reference/Values/angle) qui représente l'angle avec lequel appliquer la distorsion selon l'axe des ordonnées (axe vertical).
+  - : Est un {{CSSxRef("&lt;angle&gt;")}} représentant l'angle à utiliser pour incliner l'élément selon l'axe des abscisses (x).
+- `ay` {{Optional_Inline}}
+  - : Est un {{CSSxRef("&lt;angle&gt;")}} représentant l'angle à utiliser pour incliner l'élément selon l'axe des ordonnées (y). Si non défini, sa valeur par défaut est `0`, ce qui donne un cisaillement purement horizontal.
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
+      <th scope="col"><a href="/fr/docs/Web/CSS/Reference/Values/transform-function#le_système_de_coordonnées_cartésiennes">Coordonnées cartésiennes</a> sur <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^2 <sup>(angl.)</sup></a></th>
+      <th scope="col"><a href="https://fr.wikipedia.org/wiki/Coordonn%C3%A9es_homog%C3%A8nes">Coordonnées homogènes</a> sur <a href="https://fr.wikipedia.org/wiki/Plan_projectif_r%C3%A9el">ℝℙ^2</a></th>
+      <th scope="col">Coordonnées cartésiennes sur <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^3 <sup>(angl.)</sup></a></th>
+      <th scope="col">Coordonnées homogènes sur <a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3 <sup>(angl.)</sup></a></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td colspan="1" rowspan="2">
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr>1<mtd>tan(ax)</mtd></mtr
-              ><mtr>tan(ay)<mtd>1</mtd></mtr></mtable
-            ></mfenced
-          ></math
-        >
+      <td rowspan="2">
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mo>tan</mo><mo>(</mo><mi>ax</mi><mo>)</mo></mtd></mtr><mtr><mtd><mo>tan</mo><mo>(</mo><mi>ay</mi><mo>)</mo></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cc} 1 & \tan(ax) \\ \tan(ay) & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
       <td>
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr>1<mtd>tan(ax)</mtd><mtd>0</mtd></mtr
-              ><mtr>tan(ay)<mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ><mtr></mtr></mtable></mfenced
-        ></math>
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mo>tan</mo><mo>(</mo><mi>ax</mi><mo>)</mo></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mo>tan</mo><mo>(</mo><mi>ay</mi><mo>)</mo></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{ccc} 1 & \tan(ax) & 0 \\ \tan(ay) & 1 & 0 \\ 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
-      <td colspan="1" rowspan="2">
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr>1<mtd>tan(ax)</mtd><mtd>0</mtd></mtr
-              ><mtr>tan(ay)<mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
-            ></mfenced
-          ></math
-        >
+      <td rowspan="2">
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mo>tan</mo><mo>(</mo><mi>ax</mi><mo>)</mo></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mo>tan</mo><mo>(</mo><mi>ay</mi><mo>)</mo></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{ccc} 1 & \tan(ax) & 0 \\ \tan(ay) & 1 & 0 \\ 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
-      <td colspan="1" rowspan="2">
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr>1<mtd>tan(ax)</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>tan(ay)<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
-            ></mfenced
-          ></math
-        >
+      <td rowspan="2">
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mo>tan</mo><mo>(</mo><mi>ax</mi><mo>)</mo></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mo>tan</mo><mo>(</mo><mi>ay</mi><mo>)</mo></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cccc} 1 & \tan(ax) & 0 & 0 \\ \tan(ay) & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
     </tr>
     <tr>
@@ -118,15 +92,19 @@ skew(ax, ay)
   </tbody>
 </table>
 
+## Syntaxe formelle
+
+{{CSSSyntax}}
+
 ## Exemples
 
-### Utiliser une distorsion horizontale
+### Inclinaison selon l'axe x uniquement
 
 #### HTML
 
 ```html
 <div>Normal</div>
-<div class="skewed">Distordu</div>
+<div class="skewed">Incliné</div>
 ```
 
 #### CSS
@@ -143,22 +121,22 @@ div {
 }
 
 .skewed {
-  transform: skew(10deg); /* Équivalent à skewX(10deg) */
+  transform: skew(10deg); /* Équivaut à skewX(10deg) */
   background-color: pink;
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Utiliser_une_distorsion_horizontale","100%","200")}}
+{{EmbedLiveSample("Inclinaison selon l'axe x uniquement", 200, 200)}}
 
-### Utiliser deux angles
+### Inclinaison sur les deux axes
 
 #### HTML
 
 ```html
 <div>Normal</div>
-<div class="skewed">Distordu</div>
+<div class="skewed">Incliné</div>
 ```
 
 #### CSS
@@ -182,7 +160,7 @@ div {
 
 #### Résultat
 
-{{EmbedLiveSample("Utiliser_deux_angles","100%","200")}}
+{{EmbedLiveSample("Inclinaison sur les deux axes", 200, 200)}}
 
 ## Spécifications
 
@@ -194,7 +172,12 @@ div {
 
 ## Voir aussi
 
-- [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function)
-- [`skewX()`](/fr/docs/Web/CSS/Reference/Values/transform-function/skewX)
-- [`skewY()`](/fr/docs/Web/CSS/Reference/Values/transform-function/skewY)
+- La propriété {{CSSxRef("transform")}}
+- Le type de donnée {{CSSxRef("&lt;transform-function&gt;")}}
+- La fonction {{CSSxRef("transform-function/skewX", "skewX()")}}
+- La fonction {{CSSxRef("transform-function/skewY", "skewY()")}}
+- Propriétés de transformation individuelles&nbsp;:
+  - {{CSSxRef("translate")}}
+  - {{CSSxRef("scale")}}
+  - {{CSSxRef("rotate")}}
+  - Remarque&nbsp;: il n'existe pas de propriété `skew`

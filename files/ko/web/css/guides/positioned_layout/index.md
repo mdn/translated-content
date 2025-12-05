@@ -31,7 +31,7 @@ l10n:
 
 ## 안내서
 
-- [CSS z-index 이해하기](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
+- [CSS z-index 이해하기](/ko/docs/Web/CSS/Guides/Positioned_layout/Understanding_z-index)
   - : 쌓임 문맥의 개념을 소개하고 몇 가지 예와 함께 z축 순서의 동작을 설명합니다.
 
 ## 명세

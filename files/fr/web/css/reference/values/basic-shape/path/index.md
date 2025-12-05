@@ -3,10 +3,10 @@ title: path()
 slug: Web/CSS/Reference/Values/basic-shape/path
 original_slug: Web/CSS/basic-shape/path
 l10n:
-  sourceCommit: e85be070cbdbfd0ad1aad7b93b8d9752fef2df98
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`path()`** accepte une chaîne de caractères représentant un [tracé SVG](/fr/docs/Web/SVG/Reference/Element/path) et permet de dessiner une forme dans les modules [formes CSS](/fr/docs/Web/CSS/Guides/Shapes) et [chemin de déplacement CSS](/fr/docs/Web/CSS/Guides/Motion_path). La fonction `path()` est une valeur du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{cssxref("&lt;basic-shape&gt;")}}. Elle peut être utilisée dans les propriétés CSS [`offset-path`](/fr/docs/Web/CSS/Reference/Properties/offset-path) et [`clip-path`](/fr/docs/Web/CSS/Reference/Properties/clip-path), ainsi que dans l'attribut SVG [`d`](/fr/docs/Web/SVG/Reference/Attribute/d).
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`path()`** accepte une chaîne de caractères représentant un [tracé SVG](/fr/docs/Web/SVG/Reference/Element/path) et permet de dessiner une forme dans les modules [formes CSS](/fr/docs/Web/CSS/Guides/Shapes) et [chemin de déplacement CSS](/fr/docs/Web/CSS/Guides/Motion_path). La fonction `path()` est une valeur du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{CSSxRef("&lt;basic-shape&gt;")}}. Elle peut être utilisée dans les propriétés CSS [`offset-path`](/fr/docs/Web/CSS/Reference/Properties/offset-path) et [`clip-path`](/fr/docs/Web/CSS/Reference/Properties/clip-path), ainsi que dans l'attribut SVG [`d`](/fr/docs/Web/SVG/Reference/Attribute/d).
 
 Il existe certaines limitations à l'utilisation de la fonction `path()`. Le tracé doit être défini comme une seule chaîne de caractères, il n'est donc pas possible de créer un tracé personnalisé à l'aide de variables (fonctions [`var()`](/fr/docs/Web/CSS/Reference/Values/var)). De plus, toutes les longueurs du tracé sont implicitement définies en [pixels](/fr/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#absolute_length_units) (`px`)&nbsp;; aucune autre unité n'est acceptée. La fonction [`shape()`](/fr/docs/Web/CSS/Reference/Values/basic-shape/shape) offre plus de flexibilité que la fonction `path()`.
 
@@ -58,31 +58,31 @@ path(evenodd,"M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80")
 
 ### Paramètres
 
-- [`<fill-rule>`](/fr/docs/Web/SVG/Reference/Attribute/fill-rule) {{optional_inline}}
+- [`<fill-rule>`](/fr/docs/Web/SVG/Reference/Attribute/fill-rule) {{Optional_Inline}}
   - : Définit quelles parties du tracé sont à l'intérieur de la forme. Les valeurs possibles sont&nbsp;:
     - `nonzero`&nbsp;: Un point est considéré comme étant à l'intérieur de la forme si un rayon tracé depuis ce point croise plus de segments du tracé de gauche à droite que de droite à gauche, ce qui donne un compte non nul. C'est la valeur par défaut si `<fill-rule>` est omis.
 
     - `evenodd`&nbsp;: Un point est considéré comme étant à l'intérieur de la forme si un rayon tracé depuis ce point croise un nombre impair de segments du tracé. Cela signifie que chaque fois que le rayon entre dans la forme, il n'en est pas sorti un nombre égal de fois, indiquant un nombre impair d'entrées sans sorties correspondantes.
 
     > [!WARNING]
-    > `<fill-rule>` n'est pas pris en charge dans {{cssxref("offset-path")}} et son utilisation invalide la propriété.
+    > `<fill-rule>` n'est pas pris en charge dans {{CSSxRef("offset-path")}} et son utilisation invalide la propriété.
 
-- {{cssxref("string")}}
+- {{CSSxRef("string")}}
   - : Une [chaîne de données](/fr/docs/Web/SVG/Reference/Attribute/d), placée entre guillemets, qui définit un [tracé SVG](/fr/docs/Web/SVG/Reference/Element/path). La chaîne de données du tracé SVG contient des [commandes de tracé](/fr/docs/Web/SVG/Reference/Attribute/d#path_commands) qui utilisent implicitement l'unité pixel. Un tracé vide est considéré comme invalide.
 
 ### Valeur de retour
 
-Retourne une valeur {{cssxref("basic-shape")}}.
+Retourne une valeur {{CSSxRef("basic-shape")}}.
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
 ### Utiliser la fonction `path()` comme valeur de `offset-path`
 
-Une fonction `path()` est utilisée comme valeur de {{cssxref("offset-path")}} dans l'exemple suivant pour créer un chemin elliptique le long duquel une balle se déplace.
+Une fonction `path()` est utilisée comme valeur de {{CSSxRef("offset-path")}} dans l'exemple suivant pour créer un chemin elliptique le long duquel une balle se déplace.
 
 ```html
 <div id="path">
@@ -178,7 +178,7 @@ svg {
 
 ## Voir aussi
 
-- {{cssxref("&lt;shape-outside&gt;")}}
+- {{CSSxRef("&lt;shape-outside&gt;")}}
 - Le module des [formes CSS](/fr/docs/Web/CSS/Guides/Shapes)
 - [Présentation des formes CSS](/fr/docs/Web/CSS/Guides/Shapes/Overview)
 - [Guide illustré de la syntaxe du tracé SVG <sup>(angl.)</sup>](https://css-tricks.com/svg-path-syntax-illustrated-guide/) sur CSS-tricks (2021)

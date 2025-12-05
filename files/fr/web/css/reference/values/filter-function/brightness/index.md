@@ -3,10 +3,10 @@ title: brightness()
 slug: Web/CSS/Reference/Values/filter-function/brightness
 original_slug: Web/CSS/filter-function/brightness
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`brightness()`** applique un coefficient multiplicateur linéaire sur un élément ou une image en entrée, rendant l'image plus claire ou plus sombre. Le résultat de cette fonction est une valeur {{cssxref("&lt;filter-function&gt;")}}.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`brightness()`** applique un coefficient multiplicateur linéaire sur un élément ou une image en entrée, rendant l'image plus claire ou plus sombre. Le résultat de cette fonction est une valeur {{CSSxRef("&lt;filter-function&gt;")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: brightness()")}}
 
@@ -45,7 +45,7 @@ brightness(amount)
 ### Valeurs
 
 - `amount` {{Optional_Inline}}
-  - : La clarté indiquée sous la forme d'un nombre ({{cssxref("&lt;number&gt;")}}) ou d'un pourcentage ({{cssxref("&lt;percentage&gt;")}}). Une valeur inférieure à `100%` assombrit l'image ou l'élément, tandis qu'une valeur supérieure à `100%` l'éclaircit. Une valeur de `0%` rend l'image ou l'élément complètement noir, tandis qu'une valeur de `100%` laisse l'entrée inchangée. Les autres valeurs entre `0%` et `100%` appliquent un effet multiplicateur linéaire. Les valeurs supérieures à `100%` sont autorisées et donnent un résultat plus clair. La valeur initiale pour l'{{Glossary("interpolation")}} est `1`. Les valeurs négatives ne sont pas autorisées. La valeur par défaut est `1`.
+  - : La clarté indiquée sous la forme d'un nombre ({{CSSxRef("&lt;number&gt;")}}) ou d'un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}). Une valeur inférieure à `100%` assombrit l'image ou l'élément, tandis qu'une valeur supérieure à `100%` l'éclaircit. Une valeur de `0%` rend l'image ou l'élément complètement noir, tandis qu'une valeur de `100%` laisse l'entrée inchangée. Les autres valeurs entre `0%` et `100%` appliquent un effet multiplicateur linéaire. Les valeurs supérieures à `100%` sont autorisées et donnent un résultat plus clair. La valeur initiale pour l'{{Glossary("interpolation")}} est `1`. Les valeurs négatives ne sont pas autorisées. La valeur par défaut est `1`.
 
 Voici des paires de valeurs équivalentes&nbsp;:
 
@@ -72,7 +72,7 @@ brightness(200%)
 
 ### Utiliser `brightness()` avec la propriété `backdrop-filter`
 
-Cet exemple montre comment appliquer le filtre `brightness()` à un paragraphe via la propriété CSS {{cssxref("backdrop-filter")}}.
+Cet exemple montre comment appliquer le filtre `brightness()` à un paragraphe via la propriété CSS {{CSSxRef("backdrop-filter")}}.
 
 #### CSS
 
@@ -115,7 +115,7 @@ Dans cet exemple, les couleurs de la zone derrière l'élément HTML `<p>` sont 
 
 ### Utiliser `brightness()` avec la propriété `filter`
 
-Dans cet exemple, un filtre `brightness()` est appliqué à l'ensemble de l'élément, y compris le contenu, la bordure et l'image de fond, via la propriété CSS {{cssxref("filter")}}. Le résultat montre trois variantes avec différentes valeurs de clarté.
+Dans cet exemple, un filtre `brightness()` est appliqué à l'ensemble de l'élément, y compris le contenu, la bordure et l'image de fond, via la propriété CSS {{CSSxRef("filter")}}. Le résultat montre trois variantes avec différentes valeurs de clarté.
 
 ```css
 p:first-of-type {
@@ -238,13 +238,13 @@ svg:not(:root) {
 ## Voir aussi
 
 - Le module des [effets de filtre CSS](/fr/docs/Web/CSS/Guides/Filter_effects)
-- Les autres fonctions de {{cssxref("&lt;filter-function&gt;")}} disponibles pour être utilisées dans les valeurs des propriétés {{cssxref("filter")}} et {{cssxref("backdrop-filter")}} incluent&nbsp;:
-  - {{cssxref("filter-function/blur", "blur()")}}
-  - {{cssxref("filter-function/contrast", "contrast()")}}
-  - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-  - {{cssxref("filter-function/grayscale", "grayscale()")}}
-  - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-  - {{cssxref("filter-function/invert", "invert()")}}
-  - {{cssxref("filter-function/opacity", "opacity()")}}
-  - {{cssxref("filter-function/saturate", "saturate()")}}
-  - {{cssxref("filter-function/sepia", "sepia()")}}
+- Les autres fonctions de {{CSSxRef("&lt;filter-function&gt;")}} disponibles pour être utilisées dans les valeurs des propriétés {{CSSxRef("filter")}} et {{CSSxRef("backdrop-filter")}} incluent&nbsp;:
+  - {{CSSxRef("filter-function/blur", "blur()")}}
+  - {{CSSxRef("filter-function/contrast", "contrast()")}}
+  - {{CSSxRef("filter-function/drop-shadow", "drop-shadow()")}}
+  - {{CSSxRef("filter-function/grayscale", "grayscale()")}}
+  - {{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}}
+  - {{CSSxRef("filter-function/invert", "invert()")}}
+  - {{CSSxRef("filter-function/opacity", "opacity()")}}
+  - {{CSSxRef("filter-function/saturate", "saturate()")}}
+  - {{CSSxRef("filter-function/sepia", "sepia()")}}

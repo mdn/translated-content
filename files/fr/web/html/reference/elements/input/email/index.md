@@ -390,7 +390,7 @@ L'élément [`<label>`](/fr/docs/Web/HTML/Reference/Elements/label) qui précèd
 
 ## Voir aussi
 
-- [Le guide relatif aux formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\)
+- [Le guide relatif aux formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms)
 - [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input)
 - [`<input type="tel">`](/fr/docs/Web/HTML/Reference/Elements/input)
 - [`<input type="url">`](/fr/docs/Web/HTML/Reference/Elements/input/url)

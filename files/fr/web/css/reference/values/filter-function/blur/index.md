@@ -3,10 +3,10 @@ title: blur()
 slug: Web/CSS/Reference/Values/filter-function/blur
 original_slug: Web/CSS/filter-function/blur
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`blur()`** permet d'appliquer [un flou gaussien](https://fr.wikipedia.org/wiki/Flou_gaussien) sur l'image d'entrée. Le résultat de cette fonction est une valeur {{cssxref("&lt;filter-function&gt;")}}.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`blur()`** permet d'appliquer [un flou gaussien](https://fr.wikipedia.org/wiki/Flou_gaussien) sur l'image d'entrée. Le résultat de cette fonction est une valeur {{CSSxRef("&lt;filter-function&gt;")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: blur()")}}
 
@@ -44,7 +44,7 @@ blur(1.17rem)  /* Flou avec un rayon de 1.17rem */
 
 ### Paramètres
 
-- {{cssxref("length")}} {{Optional_Inline}}
+- {{CSSxRef("length")}} {{Optional_Inline}}
   - : Définit le rayon du flou. Il correspond à la valeur de l'écart-type de la fonction gaussienne, c'est-à-dire le nombre de pixels de l'écran qui se mélangent entre eux. Plus la valeur est grande, plus le flou sera prononcé. Une valeur de `0` laisse l'entrée inchangée. La valeur initiale pour l'{{Glossary("interpolation")}} est `0`. Les valeurs en pourcentage ne sont pas valides. La valeur par défaut est `0`.
 
 ## Filtre SVG
@@ -156,13 +156,13 @@ svg:not([height]) {
 ## Voir aussi
 
 - Le module des [effets de filtre CSS](/fr/docs/Web/CSS/Guides/Filter_effects)
-- Les autres fonctions de {{cssxref("&lt;filter-function&gt;")}} disponibles pour être utilisées dans les valeurs des propriétés {{cssxref("filter")}} et {{cssxref("backdrop-filter")}} incluent&nbsp;:
-  - {{cssxref("filter-function/brightness", "brightness()")}}
-  - {{cssxref("filter-function/contrast", "contrast()")}}
-  - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-  - {{cssxref("filter-function/grayscale", "grayscale()")}}
-  - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-  - {{cssxref("filter-function/invert", "invert()")}}
-  - {{cssxref("filter-function/opacity", "opacity()")}}
-  - {{cssxref("filter-function/saturate", "saturate()")}}
-  - {{cssxref("filter-function/sepia", "sepia()")}}
+- Les autres fonctions de {{CSSxRef("&lt;filter-function&gt;")}} disponibles pour être utilisées dans les valeurs des propriétés {{CSSxRef("filter")}} et {{CSSxRef("backdrop-filter")}} incluent&nbsp;:
+  - {{CSSxRef("filter-function/brightness", "brightness()")}}
+  - {{CSSxRef("filter-function/contrast", "contrast()")}}
+  - {{CSSxRef("filter-function/drop-shadow", "drop-shadow()")}}
+  - {{CSSxRef("filter-function/grayscale", "grayscale()")}}
+  - {{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}}
+  - {{CSSxRef("filter-function/invert", "invert()")}}
+  - {{CSSxRef("filter-function/opacity", "opacity()")}}
+  - {{CSSxRef("filter-function/saturate", "saturate()")}}
+  - {{CSSxRef("filter-function/sepia", "sepia()")}}

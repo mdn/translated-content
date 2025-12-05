@@ -24,7 +24,7 @@ l10n:
 
 ## 플렉스박스 사용하기
 
-박스를 다른 박스 내부에서 중앙 정렬하기 위해서는 먼저 감싸고 있는 박스에 {{cssxref("display")}} 속성을 `flex`로 지정해서 [flex 컨테이너](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox#the_flex_container) 로 바꿔줍니다. 그 다음에 {{cssxref("align-items")}}를 `center`로 지정하여 수직 방향의 중앙 정렬(블록 축)을 하고, {{cssxref("justify-content")}}를 `center`로 설정하여 수평 방향의 중앙 정렬(인라인 축)을 합니다. 그러면 박스를 다른 박스 내부에서 중앙 정렬하는 데 필요한 모든 작업이 완료됩니다!
+박스를 다른 박스 내부에서 중앙 정렬하기 위해서는 먼저 감싸고 있는 박스에 {{cssxref("display")}} 속성을 `flex`로 지정해서 [flex 컨테이너](/ko/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts#the_flex_container) 로 바꿔줍니다. 그 다음에 {{cssxref("align-items")}}를 `center`로 지정하여 수직 방향의 중앙 정렬(블록 축)을 하고, {{cssxref("justify-content")}}를 `center`로 설정하여 수평 방향의 중앙 정렬(인라인 축)을 합니다. 그러면 박스를 다른 박스 내부에서 중앙 정렬하는 데 필요한 모든 작업이 완료됩니다!
 
 ### HTML
 
@@ -60,7 +60,7 @@ div {
 
 ## 그리드 사용
 
-박스를 다른 박스 내부에서 중앙 정렬하는 또 다른 방법은 감싸고 있는 박스를 [그리드 컨테이너](/ko/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#grid_container)로 만들고 {{cssxref("place-items")}} 속성을 `center`로 지정해서 내부의 아이템들을 블록과 인라인 축에서 중앙 정렬 하는 것입니다.
+박스를 다른 박스 내부에서 중앙 정렬하는 또 다른 방법은 감싸고 있는 박스를 [그리드 컨테이너](/ko/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#grid_container)로 만들고 {{cssxref("place-items")}} 속성을 `center`로 지정해서 내부의 아이템들을 블록과 인라인 축에서 중앙 정렬 하는 것입니다.
 
 ### HTML
 

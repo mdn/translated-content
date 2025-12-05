@@ -1,11 +1,12 @@
 ---
-title: Firefox 52 for developers
+title: Firefox 52 開発者向けリリースノート
+short-title: Firefox 52
 slug: Mozilla/Firefox/Releases/52
 l10n:
-  sourceCommit: c01b393fbb6939f88cc98ac2a34df1a54be1edfd
+  sourceCommit: cc7f29133a331628d623e8cd705394b538d4368c
 ---
 
-Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました。このページでは、開発者に影響する Firefox 52 の変更点をまとめています。
+Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました。この記事では、ウェブ開発者だけでなく、Firefox および Gecko の開発者、アドオン開発者にも役立つ主な変更点を挙げています。
 
 ## ウェブ開発者向けの変更点一覧
 
@@ -30,7 +31,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 
 - {{cssxref(":focus-within")}} 擬似クラスを追加しました ([Firefox バグ 1176997](https://bugzil.la/1176997))。
 - {{HTMLElement("button")}} 要素内で `display:flex/grid` および段組みレイアウトをサポートしました ([Firefox バグ 984869](https://bugzil.la/984869))。
-- 数値で表した色と [currentcolor](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) との間の補完処理を実装しました ([Firefox バグ 1299741](https://bugzil.la/1299741))。
+- 数値で表した色と [currentColor](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード) との間の補完処理を実装しました ([Firefox バグ 1299741](https://bugzil.la/1299741))。
 - `{{cssxref("justify-content")}}: space-evenly` および `{{cssxref("align-content")}}: space-evenly` 向けに flexbox レイアウトを実装しました ([Firefox バグ 1235922](https://bugzil.la/1235922))。
 - CSS {{cssxref("mask")}} / {{cssxref("clip-path")}} でサブピクセルアンチエイリアシングをサポートしました ([Firefox バグ 1305259](https://bugzil.la/1305259))。
 - CSS Text 3 の、区分分断の変換規則を実装しました ([Firefox バグ 1081858](https://bugzil.la/1081858))。
@@ -38,19 +39,19 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 - {{cssxref("align-self")}} および {{cssxref("justify-self")}} 向けのフレックスボックスレイアウトを実装しました ([Firefox バグ 1221524](https://bugzil.la/1221524))。
 - {{cssxref("touch-action")}} プロパティを、すべてのプラットフォームにおいてデフォルトで有効にしました。(詳しくは [intent to ship mail #1](https://groups.google.com/forum/#!topic/mozilla.dev.platform/6CGjsm1XpD4) および [intent to ship mail #2](https://groups.google.com/forum/#!topic/mozilla.dev.platform/SYEzvXJKw9M) をご覧ください)
 - Flexbox の {{cssxref("align-content")}} の処理および単一ラインのサイズ調整が、ラインの数ではなく {{cssxref("flex-wrap")}} に依存するようになりました ([Firefox バグ 1090031](https://bugzil.la/1090031))。
-- 補間処理ができないプロパティのアニメーションに [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)を使用できるようになりました ([Firefox バグ 1064937](https://bugzil.la/1064937))。
+- [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)が、補間処理ができないプロパティのアニメーションに使用できるようになりました ([Firefox バグ 1064937](https://bugzil.la/1064937))。
 - `baseline|last-baseline` を `[ first | last ]? baseline` に変更しました ([Firefox バグ 1313254](https://bugzil.la/1313254)).
 - block-axis について、`left`/`right` の使用値を `start` にしました ([Firefox バグ 1221565](https://bugzil.la/1221565))。
 - 包含ブロックの長さが不定である、flexible tracks を伸長する際に、最小サイズや最大サイズを重視するようになりました ([Firefox バグ 1309407](https://bugzil.la/1309407))。
 - {{cssxref("mask-position")}} および {{cssxref("mask-repeat")}} の初期値を、それぞれ `0% 0%` および `repeat` に変更しました ([Firefox バグ 1308963](https://bugzil.la/1308963))。
 - CSS の {{cssxref("&lt;color&gt;")}} 値に対していくつか変更を施しました ([Firefox バグ 1295456](https://bugzil.la/1295456)):
   - `rgba()` および `hsla()` を、`rgb()` および `hsl()` の別名として再定義しました。どちらも同じ引数構文を受け入れます。
-  - `rgb(`) および `hsl()` が、アルファ値 (省略可能) を受け入れるようになりました。例: `rgb(255, 0, 0, 0.5)`
+  - `rgb()` および `hsl()` が、アルファ値 (省略可能) を受け入れるようになりました。例: `rgb(255, 0, 0, 0.5)`
   - 色関数が、カンマ区切りではなく空白区切りの引数を受け入れるようになりました。例: `rgb(255 0 0 / 0.5)`
   - アルファ値を、数値だけでなくパーセンテージでも指定できるようになりました。例: `rgb(255 0 0 / 50%)`
   - `hsl()` 色の色相を、数値だけでなく角度でも指定できるようになりました。例: `hsl(120deg, 60%, 70%)`
 
-- Firefox の子インデックス付き擬似クラス ({{cssxref(":nth-child")}}, {{cssxref(":first-child")}} など) の実装が CSS selectors level 4 仕様に合わせて更新されました。これらの擬似クラスは親要素の子ではなく、適切な兄弟要素に一致するようになりました。これにより、親要素がない場合や、親要素が {{domxref("Element")}} でない場合にも、これらの擬似クラスを使用することができるようになりました ([Firefox バグ 1300374](https://bugzil.la/1300374).
+- Firefox の子インデックス付き擬似クラス ({{cssxref(":nth-child")}}, {{cssxref(":first-child")}} など) の実装が CSS selectors level 4 仕様に合わせて更新されました。これらの擬似クラスは親要素の子ではなく、適切な兄弟要素に一致するようになりました。これにより、親要素がない場合や、親要素が {{domxref("Element")}} でない場合にも、これらの擬似クラスを使用することができるようになりました（[Firefox バグ 1300374](https://bugzil.la/1300374)）。
 
 #### CSS グリッド
 
@@ -64,7 +65,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 - スタイルシステムから、`<flex>` 値を最小値として使用する箇所を削除しました ([Firefox バグ 1305244](https://bugzil.la/1305244))。
 - 設定項目 `layout.css.masking.enabled` を削除しました ([Firefox バグ 1308239](https://bugzil.la/1308239))。
 - 独自の `-moz-images-in-menus` および `-moz-images-in-buttons` [メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)を削除しました ([Firefox バグ 1302157](https://bugzil.la/1302157))。
-- 色のプロパティから `-moz-use-text-color` を削除しました。代わりに [`currentcolor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) を使用してください ([Firefox バグ 1306214](https://bugzil.la/1306214))。
+- 色のプロパティから `-moz-use-text-color` を削除しました。代わりに [`currentColor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード) を使用してください ([Firefox バグ 1306214](https://bugzil.la/1306214))。
 - \[css-grid] グリッドアイテムに 'max-width' を設定するとテキストがはみ出す問題を修正しました ([Firefox バグ 1330380](https://bugzil.la/1330380))。
 
 ### JavaScript
@@ -72,9 +73,9 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 #### 新機能
 
 - 非同期関数の対応を追加しました。{{jsxref("Statements/async_function", "async function")}} 宣言、{{jsxref("Operators/async_function", "async function")}} 式、{{jsxref("Operators/await", "await")}} キーワードを追加しました ([Firefox バグ 1185106](https://bugzil.la/1185106))。
-- 関数に対して、ES2017 の [trailing commas](/ja/docs/Web/JavaScript/Reference/Trailing_commas) を実装しました ([Firefox バグ 1303788](https://bugzil.la/1303788))。
-- {{jsxref("Functions/rest_parameters", "rest parameter の構造分解", "#Destructuring_rest_parameters", 1)}} を実装しました ([Firefox バグ 1243717](https://bugzil.la/1243717))。
-- {{jsxref("Operators", "べき乗演算子 (**)", "#Exponentiation_(**)", 1)}} をデフォルトで有効にしました ([Firefox バグ 1291212](https://bugzil.la/1291212))。
+- 関数に対して、ES2017 の[末尾のカンマ](/ja/docs/Web/JavaScript/Reference/Trailing_commas)を実装しました（[Firefox バグ 1303788](https://bugzil.la/1303788)）。
+- [残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)の[構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)を実装しました ([Firefox バグ 1243717](https://bugzil.la/1243717))。
+- [べき乗演算子 (`**`)](/ja/docs/Web/JavaScript/Reference/Operators/Exponentiation) をデフォルトで有効にしました ([Firefox バグ 1291212](https://bugzil.la/1291212))。
 - {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}} や {{jsxref("Date.toLocaleString()")}} といった日付関連の API の `timeZone` オプションで、[IANA タイムゾーン名称](https://www.iana.org/time-zones) が使用可能になりました ([Firefox バグ 837961](https://bugzil.la/837961))。
 
 #### 変更および削除
@@ -104,7 +105,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 - [ドラッグ & ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API) の {{domxref("DataTransfer.types")}} プロパティが、{{domxref("DOMStringList")}} ではなく文字列の凍結された配列を返すようになりました ([Firefox バグ 1298243](https://bugzil.la/1298243))。
 - `loadstart` および `loadend` イベントが {{htmlelement("img")}} 要素で発生するようになりました（[Firefox バグ 1264769](https://bugzil.la/1264769)）。
 - [通知 API](/ja/docs/Web/API/Notifications_API) の {{domxref("Notification.requireInteraction")}} を実装しました ([Firefox バグ 862395](https://bugzil.la/862395))。
-- {{domxref("Window.open()")}} メソッドで、`noopener` [ウィンドウ機能特性](/ja/docs/Web/API/Window/open#window_functionality_features) が使用可能になりました ([Firefox バグ 1267339](https://bugzil.la/1267339))。これは、`rel="noopener"` [リンク種別](/ja/docs/Web/HTML/Reference/Attributes/rel)の機能を反映します。
+- {{domxref("Window.open()")}} メソッドで、`noopener` [ウィンドウ機能特性](/ja/docs/Web/API/Window/open#noopener)が使用可能になりました ([Firefox バグ 1267339](https://bugzil.la/1267339))。これは、`rel="noopener"` [リンク種別](/ja/docs/Web/HTML/Reference/Attributes/rel)の機能を反映します。
 - [ウェブコンポーネント API](/ja/docs/Web/API/Web_components) の {{domxref("CustomElementRegistry.get()")}} メソッドを実装しました ([Firefox バグ 1275838](https://bugzil.la/1275838))。
 - [Pointer Event](/ja/docs/Web/API/Pointer_events) の {{domxref("PointerEvent.width","width")}} および {{domxref("PointerEvent.height","height")}} プロパティのデフォルト値が 1 になりました ([Firefox バグ 1304315](https://bugzil.la/1304315))。
 - [最新の仕様書](https://wicg.github.io/entries-api/) における変更点を含むように、[File and Directory Entries API](/ja/docs/Web/API/File_and_Directory_Entries_API) を更新しました (詳しくは [Firefox バグ 1284987](https://bugzil.la/1284987) をご覧ください)。
@@ -145,7 +146,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 - Firefox OS 独自の Apps installation/management API を、プラットフォームから削除しました ([Firefox バグ 1261019](https://bugzil.la/1261019))。
 - Firefox OS 独自の Web Telephony API を、プラットフォームから削除しました ([Firefox バグ 1309719](https://bugzil.la/1309719))。
 - Firefox OS 独自の Web Bluetooth API を、プラットフォームから削除しました ([Firefox バグ 1310020](https://bugzil.la/1310020))。
-- [Battery Status API](/ja/docs/Web/API/Battery_Status_API) が、chrome/特権付きコードに限り使用可能になりました ([Firefox バグ 1313580](https://bugzil.la/1313580))。
+- [バッテリー状態 API](/ja/docs/Web/API/Battery_Status_API) が、chrome/特権付きコードに限り使用可能になりました ([Firefox バグ 1313580](https://bugzil.la/1313580))。
 - `ImageBitmapRenderingContext.transferImageBitmap()` を {{domxref("ImageBitmapRenderingContext.transferFromImageBitmap()")}} に改名しました ([Firefox バグ 1304767](https://bugzil.la/1304767))。
 - `mozDash` および `mozDashOffset` メンバーを、{{domxref("CanvasRenderingContext2D")}} から削除しました ([Firefox バグ 931389](https://bugzil.la/931389))。
 
@@ -153,9 +154,9 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 
 - {{HTTPHeader("Referrer-Policy")}} ヘッダーで `same-origin`、`strict-origin`、`strict-origin-when-cross-origin` ディレクティブをサポートしました ([Firefox バグ 1276836](https://bugzil.la/1276836))。
 - {{CSP("script-src")}} のように、[`'strict-dynamic'` source expression](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#strict-dynamic) を {{HTTPHeader("Content-Security-Policy")}} のディレクティブでサポートしました ([Firefox バグ 1299483](https://bugzil.la/1299483))。
-- [Strict Secure Cookies specification](https://tools.ietf.org/html/draft-ietf-httpbis-cookie-alone-01) に従って、安全ではないサイト (`http:`) が "secure" ディレクティブで [Cookie を設定する](/ja/docs/Web/HTTP/Guides/Cookies) ことができなくなりました ([Firefox バグ 976073](https://bugzil.la/976073))。
-- HTTP/2 ヘッダー圧縮方式 [HPACK](https://tools.ietf.org/html/rfc7541) の最大テーブルサイズを 4 KB から 64 KB に拡張しました ([Firefox バグ 1296280](https://bugzil.la/1296280))。
-- {{HTTPHeader("Large-Allocation")}} ヘッダーを追加しました ([Firefox バグ 1304140](https://bugzil.la/1304140))。
+- [Strict Secure Cookies specification](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-alone-01) に従って、保護されていないサイト (`http:`) が "secure" ディレクティブで [Cookie を設定する](/ja/docs/Web/HTTP/Guides/Cookies) ことができなくなりました ([Firefox バグ 976073](https://bugzil.la/976073))。
+- HTTP/2 ヘッダー圧縮方式 [HPACK](https://datatracker.ietf.org/doc/html/rfc7541) の最大テーブルサイズを 4 KB から 64 KB に拡張しました ([Firefox バグ 1296280](https://bugzil.la/1296280))。
+- `Large-Allocation` ヘッダーを追加しました ([Firefox バグ 1304140](https://bugzil.la/1304140))。
 
 ### SVG
 
@@ -163,7 +164,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 
 ### セキュリティ
 
-- ログインページ (すなわち [`<input type="password">`](/ja/docs/Web/HTML/Reference/Elements/input/password) フィールドを含むページ) でログイン情報が安全でない方法で送信されると思われる場合に、Firefox はユーザーに警告するため、ページ内のパスワードフィールドの下に警告メッセージを表示します ([Firefox バグ 1319119](https://bugzil.la/1319119))。また、安全でないログインフォームではオートフィルが無効になります ([Firefox バグ 1217152](https://bugzil.la/1217152))。詳しくは [安全でないパスワード](/ja/docs/Web/Security/Authentication/Passwords) をご覧ください。
+- ログインページ (すなわち [`<input type="password">`](/ja/docs/Web/HTML/Reference/Elements/input/password) フィールドを含むページ) でログイン情報が安全でない方法で送信されると思われる場合に、Firefox はユーザーに警告するため、ページ内のパスワードフィールドの下に警告メッセージを表示します ([Firefox バグ 1319119](https://bugzil.la/1319119))。また、安全でないログインフォームではオートフィルが無効になります ([Firefox バグ 1217152](https://bugzil.la/1217152))。
 - SHA-1 SSL 証明書のサポートを廃止しました。SHA-1 証明書を使用する安全なページに移動すると、 `Untrusted Connection` エラーが発生します ([Firefox バグ 1330043](https://bugzil.la/1330043))。
 
 ## プラグイン
@@ -193,7 +194,3 @@ Flash を除くすべての NPAPI プラグインのサポートを廃止しま�
 
 - `tabbrowser.loadTabs(uris, params)` メソッドのオーバーロードを追加しました ([Firefox バグ 92737](https://bugzil.la/92737))。
 - `browser.droppedLinkHandler` 関数のシグネチャを変更しました ([Firefox バグ 92737](https://bugzil.la/92737))。
-
-## 過去のバージョン
-
-{{Firefox_for_developers(52)}}

@@ -147,8 +147,7 @@ a[title] {
 Ou até mesmo faça uma seleção com base na presença de um atributo com um valor específico:
 
 ```css
-a[href="https://example.com"]
-{
+a[href="https://example.com"] {
 }
 ```
 

@@ -172,11 +172,11 @@ Un élément {{HTMLElement("input")}} avec `type="button"` et un attribut `value
           >Contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >contenu phrasé</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_associ.C3.A9_aux_formulaires"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_associé_aux_formulaires"
           >contenu associé aux formulaires</a
         >
         (listed, submittable, resettable),
@@ -188,7 +188,7 @@ Un élément {{HTMLElement("input")}} avec `type="button"` et un attribut `value
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
-        <a href="/fr/docs/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
+        <a href="/fr/docs/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >Contenu phrasé</a
         >
         sans éléments <code>label</code> descendants. À l'exception du contrôle
@@ -205,7 +205,7 @@ Un élément {{HTMLElement("input")}} avec `type="button"` et un attribut `value
       <td>
         Tout élément acceptant du
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >contenu phrasé</a
         >.
       </td>

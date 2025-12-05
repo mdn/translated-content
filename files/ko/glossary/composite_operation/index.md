@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-CSS에서, CSS 규칙의 속성 값은 해당 속성의 '기본 값'이고, [키프레임](/ko/docs/Web/CSS/@keyframes)의 동일한 속성 값은 해당 효과 크기입니다.
+CSS에서, CSS 규칙의 속성 값은 해당 속성의 '기본 값'이고, [키프레임](/ko/docs/Web/CSS/Reference/At-rules/@keyframes)의 동일한 속성 값은 해당 효과 크기입니다.
 
 '복합 연산'은 효과 값을 기본 값과 결합하여 생성하는 데 사용되는 특정 작업입니다. 복합 연산에는 세 가지 유형이 있습니다.
 

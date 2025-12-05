@@ -3,10 +3,10 @@ title: <dashed-ident>
 slug: Web/CSS/Reference/Values/dashed-ident
 original_slug: Web/CSS/dashed-ident
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
-Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<dashed-ident>`** désigne une chaîne de caractères arbitraire utilisée comme {{glossary("identifier", "identifiant")}}.
+Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<dashed-ident>`** désigne une chaîne de caractères arbitraire utilisée comme {{Glossary("identifier", "identifiant")}}.
 
 ## Syntaxe
 
