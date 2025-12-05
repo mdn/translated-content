@@ -1,9 +1,8 @@
 ---
 title: background-repeat
 slug: Web/CSS/Reference/Properties/background-repeat
-original_slug: Web/CSS/background-repeat
 l10n:
-  sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`background-repeat`** は [CSS](/ja/docs/Web/CSS) のプロパティで、背景画像をどのように繰り返すかを設定します。背景画像は水平軸方向と垂直軸方向に繰り返したり、まったく繰り返さないようにしたりすることができます。
@@ -42,7 +41,8 @@ background-repeat: space repeat;
 
 ```css interactive-example
 #example-element {
-  background: #ccc url("/shared-assets/images/examples/moon.jpg") center / 120px;
+  background: #cccccc url("/shared-assets/images/examples/moon.jpg") center /
+    120px;
   min-width: 100%;
   min-height: 100%;
 }
@@ -59,7 +59,7 @@ background-repeat: space;
 background-repeat: round;
 background-repeat: no-repeat;
 
-/* 値2つの構文: 水平方向 | 垂直方向 */
+/* 値 2 つの構文: 水平方向 | 垂直方向 */
 background-repeat: repeat space;
 background-repeat: repeat repeat;
 background-repeat: round space;
@@ -75,18 +75,18 @@ background-repeat: unset;
 
 ## 解説
 
-このプロパティは、 2 つの [`<repeat-style>`](#値) キーワード、または 1 つのキーワードを 2 つの値の短縮形として受け入れます。 2 つの値が指定された場合、最初の値は水平方向の繰り返し動作を定義し、 2 番目の値は垂直方向の動作を定義します。
+このプロパティは、 2 つの [`<repeat-style>`](#値) キーワード、または 1 つのキーワードを 2 つの値の一括指定のカンマ区切りのリストを受け入れます。 2 つの値が指定された場合、最初の値は水平方向の繰り返し動作を定義し、2 番目の値は垂直方向の動作を定義します。
 プロパティ値は、水平方向のみ、垂直方向のみ、または全く繰り返さないように使用することができます。
 
-既定値は `repeat repeat` です。この値では、背景画像は内在的な{{glossary("aspect ratio","アスペクト比")}}を維持したまま、水平および垂直方向に繰り返されて背景領域全体を覆い、端の画像は要素のサイズに合わせて切り取られます。どの端が切り取られるかは、 {{cssxref("background-position")}} の値によって異なります。繰り返される回数と端の画像が切り取られる量は、背景領域のサイズと {{cssxref("background-size")}} の値によって異なります。
+既定値は `repeat repeat` です。この値では、背景画像は内在的な{{glossary("aspect ratio","アスペクト比")}}を維持したまま、水平および垂直方向に繰り返されて背景領域全体を覆い、辺の画像は要素のサイズに合わせて切り取られます。どの辺が切り取られるかは、対応する {{cssxref("background-position")}} の値によって決まります。繰り返される回数や、端の画像がどれだけ切り取られるかは、背景の描画領域のサイズと対応する {{cssxref("background-size")}} の値によって決まります。
 
 繰り返される画像は等間隔に配置され、繰り返される画像が切り取られることなく、アスペクト比を確実に保持します。 `space` 値を使用した場合には、背景描画領域のアスペクト比が画像と異なる場合、またはいずれかの方向が背景画像のサイズの倍数でない場合、背景画像に覆われない領域ができます。
 
-あるいは、繰り返される背景画像は、切り取りを行わずに、領域全体に応じたサイズに引き伸ばすこともできます。 `round` では、背景画像のアスペクト比が描画領域のものと異なる場合、利用できる空間すべてに繰り返される画像が引き伸ばされ、追加の繰り返される画像を追加する空間が生まれるまで、その状態が続きます。例えば、指定された背景画像が 100px × 100px で、背景描画領域が 1099px × 750px の場合、画像は水平方向に 10 回、垂直方向に 7 回繰り返され、合計 70 回繰り返されます。それぞれの画像は、 109.9px × 105px になるよう、両方向に引き伸ばされます。描画領域の幅が 1px 増えて 1100px 幅になると、 11 番目の画像が水平方向に収まり、合計 77 枚の画像が繰り返され、各画像は幅 100px、高さ 105px で、垂直方向にのみ引き伸ばされて描画されます。
+あるいは、繰り返し背景画像を切り取ることなく、領域全体を覆うように引き伸ばすこともできます。`round` を使用すると、背景画像のアスペクト比が描画領域のアスペクト比と一致しない場合、追加の繰り返し画像を追加できる余地が生まれるまで、利用可能な空間全体を埋めるよう画像が引き伸ばされます。例えば、100px x 100px の背景画像と 1099px x 750px の描画領域がある場合、 水平方向に 10 回、垂直方向に 7 回、合計 70 回繰り返されます。各画像は両方向に引き伸ばされ 109.9px × 105px となり、アスペクト比が変化して歪みが生じる可能性があります。描画領域の幅が 1px 増加し 1100px になると、11 枚目の画像が水平方向に収まり、合計 77 回の画像繰り返しが実現されます。各画像は幅 100px・高さ 105px で描画され、垂直方向にのみ引き伸ばされて描画されます。
 
 ### 値
 
-このプロパティでは、最大 2 つの `<repeat-style>` キーワードを受け入れます。最初の値は水平方向の反復です。 2 つ目の値は垂直方向の動作です。 `repeat-x` または `repeat-y` 以外の値に 1 つの値だけを設定した場合、その値は両方の辺に適用されます。以下の値が指定できます。
+このプロパティでは、最大 2 つの `<repeat-style>` キーワードまたは 2 つの値の一括指定としての単一のキーワードのリストを受け入れます。最初の値は水平方向の反復です。 2 つ目の値は垂直方向の動作です。 `repeat-x` または `repeat-y` 以外の値に 1 つの値だけを設定した場合、その値は両方の辺に適用されます。以下の値が指定できます。
 
 - `repeat`
   - : 既定値です。画像は背景画像が描画領域全体を覆うのに必要な回数だけ繰り返され、描画領域の寸法が背景画像の寸法の倍数でない場合は、端の画像が切り取られます。
@@ -177,7 +177,7 @@ li {
   margin-bottom: 12px;
 }
 div {
-  background-image: url(star-solid.gif);
+  background-image: url("star-solid.gif");
   width: 160px;
   height: 70px;
 }
@@ -205,7 +205,7 @@ div {
 /* 複数の画像 */
 .seven {
   background-image:
-    url(star-solid.gif), url(/shared-assets/images/examples/favicon32.png);
+    url("star-solid.gif"), url("/shared-assets/images/examples/favicon32.png");
   background-repeat: repeat-x, repeat-y;
   height: 144px;
 }
