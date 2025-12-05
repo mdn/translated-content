@@ -90,8 +90,7 @@ function showOffsetPos(sId) {
     nLeft += oItNode.offsetLeft,
       nTop += oItNode.offsetTop,
       oItNode = oItNode.offsetParent // expressão final
-    /* empty statement */
-  );
+  ); /* empty statement */
 
   console.log(
     'Offset position of "' +
