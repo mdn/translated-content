@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps/Website_security", "Learn_web_development/Extensions/Server-side/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps/Website_security", "Learn_web_development/Extensions/Server-side/First_steps")}}
 
 前の記事では、ウェブクライアントとサーバー間の通信、HTTP リクエストとレスポンスの性質、およびウェブブラウザーからのリクエストにレスポンスするためにサーバーサイドウェブアプリケーションが実行する必要があることについて説明しました。この知識をもとに、ウェブフレームワークがどのようにこれらのタスクを単純化できるかを探り、最初のサーバーサイドウェブアプリケーションのためのフレームワークをどのように選択するかを考えてみましょう。
 
