@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ff2893c6e14249c44e54c67102ca4218f08b70d1
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}
 
 CSS 규칙은 [선언](/ko/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations)으로 구성되어 있으며, 이는 다시 속성과 값으로 이루어져 있습니다.
 CSS에서 사용되는 각 속성은 어떤 종류의 값을 가질 수 있는지를 설명하는 **값 유형을** 가지고 있습니다.
@@ -718,4 +718,4 @@ CSS에서 문자열을 사용하는 장소가 있습니다. 예를 들면, [생�
 
 다음 기사에서는 CSS로 어떻게 [항목의 크기를 조절하는지](/ko/docs/Learn_web_development/Core/Styling_basics/Sizing) 알아보겠습니다.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}

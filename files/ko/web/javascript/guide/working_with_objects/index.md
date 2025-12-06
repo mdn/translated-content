@@ -517,4 +517,4 @@ console.log(fruitbear); // 출력: { name: "사과" }가 아니라 { name: "포�
 - 더 깊게 들어가려면 [JavaScript 객체 모델의 세부 사항](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)을 읽어보세요.
 - 객체를 생성하는 다른 방법인 ECMAScript 2015 클래스에 대해 알아보려면 [JavaScript 클래스](/ko/docs/Web/JavaScript/Reference/Classes) 참고서를 방문하세요.
 
-{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}

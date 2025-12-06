@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 38029c123179b3dbccc12fb01dc558b3dcb01292
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}
 
 이 강의에서는 [CSS 종속](/ko/docs/Web/CSS/Cascade)과 [CSS 특정성](/ko/docs/Web/CSS/Guides/Cascade/Specificity)의 기본 개념을 기반으로 하는 고급 기능인 [종속 계층](/ko/docs/Web/CSS/Reference/At-rules/@layer)을 소개합니다.
 
@@ -19,7 +19,7 @@ CSS를 처음 사용하는 경우, 이 강의를 진행하는 것이 당장은 �
     <tr>
       <th scope="row">전제조건:</th>
       <td>종속 및 특정성을 포함하여 CSS 작동 방식에 대한 아이디어 (
-        <a href="/ko/docs/Learn/CSS/First_steps">CSS 첫 단계</a> 와 <a href="/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">종속, 특정성, 상속</a>을 공부하세요).
+        <a href="/ko/docs/Learn/CSS/First_steps">CSS 첫 단계</a> 와 <a href="/ko/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts">종속, 특정성, 상속</a>을 공부하세요).
       </td>
     </tr>
     <tr>
@@ -429,4 +429,4 @@ body {
 
 이 기사의 대부분을 이해했다면, 잘 한 것입니다. 이제 CSS 종속 계층의 기본 메커니즘에 익숙해졌습니다. 다음으로 [박스 모델](/ko/docs/Learn_web_development/Core/Styling_basics/Box_model)을 자세히 살펴보겠습니다.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}

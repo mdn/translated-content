@@ -7,7 +7,7 @@ l10n:
 ---
 
 {{LearnSidebar}}
-{{PreviousMenu("Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper", "Learn/CSS/Building_blocks")}}
+{{PreviousMenu("conflicting/Learn_web_development/Core/Styling_basics_caad113ab4b172ad3cd3f6b04d466fd25bbbea60c1a37548c663858321ca18f3", "Learn_web_development/Core/Styling_basics")}}
 
 이 평가에서는, 눈길을 사로잡는 박스를 만들어보면서 멋지게 보이는 박스를 만드는 것을 더 많이 연습하게 될 것입니다.
 
@@ -83,4 +83,4 @@ l10n:
    - 온라인 공유 가능한 편집기(위의 단계 1에서 언급한 사이트)에 작업 내용을 공유하는 링크. 다른 사람의 코드를 보지 못하면 코딩 문제를 도와드리기 어려울 수 있으므로 이 점을 유의하세요.
    - 도움이 필요한 작업 또는 평가 페이지에 대한 링크
 
-{{PreviousMenu("Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper", "Learn/CSS/Building_blocks")}}
+{{PreviousMenu("conflicting/Learn_web_development/Core/Styling_basics_caad113ab4b172ad3cd3f6b04d466fd25bbbea60c1a37548c663858321ca18f3", "Learn_web_development/Core/Styling_basics")}}
