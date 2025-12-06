@@ -37,7 +37,7 @@ L'axe secondaire est perpendiculaire à l'axe principal. Ainsi, si `flex-directi
 
 ![If flex-direction is set to row then the cross axis runs in the block direction.](basics3.svg)
 
-Si l'axe principale est `column` ou `column-reverse`, l'axe secondaire suivra celui des lignes (horizontales).
+Si l'axe principal est `column` ou `column-reverse`, l'axe secondaire suivra celui des lignes (horizontales).
 
 ![If flex-direction is set to column then the cross axis runs in the inline direction.](basics4.svg)
 
@@ -162,7 +162,7 @@ Cette propriété permet également d'utiliser des valeurs synthétiques qui cou
 - `flex: none`
 - `flex: <nombre-positif>`
 
-Avec `flex: initial`, les éléments récupèrent les valeurs initiales pour les différentes propriétés du modèle de boîte flexible. Cette valeur permettra d'obtenir le même comportement que `flex: 0 1 auto`. Ici, `flex-grow` vaut 0 et les éléments ne s'agrandiront pas au-delà de la taille `flex-basis`. `flex-shrink` vaut 1 et les éléments pourront rétrécir si besoin plutôt que de dépasser du conteneur. `flex-basis` vaut `auto` et les éléments utiliseront donc la taille qui leur a été définie sur l'axe principale ou la taille déterminée à partir du contenu.
+Avec `flex: initial`, les éléments récupèrent les valeurs initiales pour les différentes propriétés du modèle de boîte flexible. Cette valeur permettra d'obtenir le même comportement que `flex: 0 1 auto`. Ici, `flex-grow` vaut 0 et les éléments ne s'agrandiront pas au-delà de la taille `flex-basis`. `flex-shrink` vaut 1 et les éléments pourront rétrécir si besoin plutôt que de dépasser du conteneur. `flex-basis` vaut `auto` et les éléments utiliseront donc la taille qui leur a été définie sur l'axe principal ou la taille déterminée à partir du contenu.
 
 Avec `flex: auto`, on obtient le même comportement que `flex: 1 1 auto`, la seule différence avec `flex:initial` est que les éléments peuvent s'étirer si besoin.
 
