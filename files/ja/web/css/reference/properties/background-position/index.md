@@ -1,9 +1,8 @@
 ---
 title: background-position
 slug: Web/CSS/Reference/Properties/background-position
-original_slug: Web/CSS/background-position
 l10n:
-  sourceCommit: 86e8a3060c6f2cb59dd669675a0113356191566e
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`background-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、それぞれの背景画像の初期位置を設定します。位置は {{cssxref("background-origin")}} で設定された位置レイヤーからの相対です。
@@ -102,7 +101,7 @@ background-position: unset;
     - キーワード値 `top`、 `left`、 `bottom`、 `right` のうちの一つの場合。ここで `left` または `right` が指定された場合は、これが X 座標を定義し、もう一方の値が Y 座標になります。 `top` または `bottom` が指定された場合は、これが Y 座標を定義し、もう一方の値が X 座標を定義します。
     - {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} の場合。もう一方の値が `left` または `right` の場合、この値は上辺からの相対的な Y 座標を定義します。もう一方の値が `top` または `bottom` の場合、この値は左辺からの相対的な X 座標を定義します。両方の値が `<length>` または `<percentage>` の値である場合は、最初の値が X 座標を定義し、2 つ目の値が Y 座標を定義します。
     - 注: 一方の値が `top` または `bottom` である場合、もう一方の値を `top` または `bottom` にすることはできません。一方の値が `left` または `right` である場合、もう一方の値を `left` または `right` にすることはできません。すなわち、例えば `top top` や `left right` は妥当ではありません。
-    - 順序について、キーワードを組み合わせる際は、ブラウザーが並べ替えることができるので順序は重要ではありません。 `top left` でも `left top` でも同じ結果になります。 {{cssxref("&lt;length&gt;")}} や {{cssxref("&lt;percentage&gt;")}} をキーワードと組み合わせた場合、順序は重要です。 X を定義する値が先に来て、それに Y が続くべきです。 `right 20px` は `20px right` とは同じではなく、全社は有効ですが後者は無効です。 `left 20%` または `20% bottom` は X と Y の値を明確に定義しており、順序も正しいので有効です。
+    - 順序について、キーワードを組み合わせる際は、ブラウザーが並べ替えることができるので順序は重要ではありません。 `top left` でも `left top` でも同じ結果になります。 {{cssxref("&lt;length&gt;")}} や {{cssxref("&lt;percentage&gt;")}} をキーワードと組み合わせた場合、順序は重要です。 X を定義する値が先に、Y が後に来る必要があります。例えば、`right 20px` は有効ですが、`20px right` は無効です。`left 20%` と `20% bottom` は有効です。X と Y の値が明確に定義され、位置も正しいからです。
     - 既定値は `left top` または `0% 0%` です。
 
     **値 3 つの構文:** 2 つの値はキーワード値で、3 つ目の値はその前の値のオフセットです。
@@ -127,7 +126,7 @@ background-position: unset;
 
 X 軸を例にすると、幅 300px の画像があり、それを幅 100px のコンテナーに入れて、 `background-size` を auto に設定して使用しているとします。
 
-```
+```plain
 100px - 300px = -200px (コンテナーと画像の差)
 ```
 
@@ -168,9 +167,9 @@ X 軸を例にすると、幅 300px の画像があり、それを幅 100px の�
 #### HTML
 
 ```html
-<div class="exampleone">Example One</div>
-<div class="exampletwo">Example Two</div>
-<div class="examplethree">Example Three</div>
+<div class="example-one">Example One</div>
+<div class="example-two">Example Two</div>
+<div class="example-three">Example Three</div>
 ```
 
 #### CSS
@@ -186,16 +185,16 @@ div {
 }
 
 /* これらの例は background 一括指定プロパティを使用しています */
-.exampleone {
+.example-one {
   background: url("star-transparent.gif") #ffee99 2.5cm bottom no-repeat;
 }
-.exampletwo {
+.example-two {
   background: url("star-transparent.gif") #ffee99 left 4em bottom 1em no-repeat;
 }
 
 /* 複数の背景画像: 各画像は対応する位置スタイルに、
    最初に指定されたものから順に対応付けられます。 */
-.examplethree {
+.example-three {
   background-image: url("star-transparent.gif"), url("cat-front.png");
   background-position:
     0px 0px,
