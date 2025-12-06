@@ -1,9 +1,8 @@
 ---
 title: padding
 slug: Web/CSS/Reference/Properties/padding
-original_slug: Web/CSS/padding
 l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`padding`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、要素の全四辺の[パディング領域](/ja/docs/Web/CSS/Guides/Box_model/Introduction#パディング領域)を一度に設定します。
@@ -125,7 +124,7 @@ padding: unset;
 
 #### CSS
 
-```css live-sample___setting_padding_with_pixels
+```css
 h4 {
   background-color: lime;
   padding: 20px 50px;
@@ -139,7 +138,7 @@ h3 {
 
 #### 結果
 
-{{EmbedLiveSample('Setting_padding_with_pixels', '100%', 300)}}
+{{EmbedLiveSample('パディングをピクセル数で設定', '100%', 300)}}
 
 ### パディングをピクセル数とパーセント値で設定
 
@@ -171,6 +170,8 @@ padding: 1em 3px 30px 5px; /* 上:     1em のパディング */
 
 ## 関連情報
 
-- [CSS 基本ボックスモデル入門](/ja/docs/Web/CSS/Guides/Box_model/Introduction)
 - {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}
-- 対応付けられる論理的プロパティ: {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, {{cssxref("padding-inline-end")}} および一括指定の {{cssxref("padding-block")}} と {{cssxref("padding-inline")}}
+- {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, {{cssxref("padding-inline-end")}}
+- 一括指定の {{cssxref("padding-block")}} および {{cssxref("padding-inline")}}
+- [CSS 基本ボックスモデル入門](/ja/docs/Web/CSS/Guides/Box_model/Introduction)ガイド
+- [CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model)モジュール
