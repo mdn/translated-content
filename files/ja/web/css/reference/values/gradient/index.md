@@ -1,12 +1,11 @@
 ---
 title: <gradient>
 slug: Web/CSS/Reference/Values/gradient
-original_slug: Web/CSS/gradient
 l10n:
-  sourceCommit: 745950224a21606bb2d953e149b1385b9ea6a3f8
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
-**`<gradient>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、 2 色以上の連続的な色の変化で構成される特殊な型の {{cssxref("&lt;image&gt;")}} です。
+**`<gradient>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、2 色以上の連続的な色の変化で構成される特殊な型の {{cssxref("&lt;image&gt;")}} です。
 
 {{InteractiveExample("CSS デモ: &lt;gradient&gt;")}}
 
@@ -42,11 +41,11 @@ background: conic-gradient(#f69d3c, #3f87a6);
 }
 ```
 
-CSS グラデーションは[内在的な寸法を持ちません](/ja/docs/Web/CSS/Reference/Values/image#description)。つまり、自然または推奨される寸法や、推奨される縦横比を持ちません。実際の寸法は適用される要素に一致します。
+CSS グラデーションは[内在的な寸法を持ちません](/ja/docs/Web/CSS/Reference/Values/image#解説)。つまり、自然または推奨される寸法や、推奨される縦横比を持ちません。実際の寸法は適用される要素に一致します。
 
 ## 構文
 
-`<gradient>` データ型は、以下のリストにある関数型のうちの一つによって定義します。
+`<gradient>` データ型は、以下に列挙されている関数型のいずれかによって定義します。
 
 ### 線形グラデーション
 
@@ -76,7 +75,7 @@ CSS グラデーションは[内在的な寸法を持ちません](/ja/docs/Web/
 
 ### 線形グラデーションの例
 
-単純な線形グラデーションです。
+線形グラデーションです。
 
 ```html hidden
 <div class="linear-gradient">線形グラデーション</div>
@@ -108,7 +107,7 @@ div {
 
 ### 放射グラデーションの例
 
-単純な放射グラデーションです。
+放射グラデーションです。
 
 ```html hidden
 <div class="radial-gradient">放射グラデーション</div>
@@ -123,7 +122,7 @@ div {
 
 ```css
 .radial-gradient {
-  background: radial-gradient(red, yellow, rgb(30 144 255));
+  background: radial-gradient(red, yellow, dodgerblue);
 }
 ```
 
@@ -131,7 +130,7 @@ div {
 
 ### 扇形グラデーションの例
 
-単純な扇形グラデーションの例です。なお、まだこれはブラウザーの間で十分に対応されていません。
+扇形グラデーションの例です。
 
 ```html hidden
 <div class="conic-gradient">扇形グラデーション</div>
@@ -154,7 +153,7 @@ div {
 
 ### 反復グラデーションの例
 
-単純な線形および放射の反復グラデーションの例です。
+線形および放射の反復グラデーションの例です。
 
 ```html hidden
 <div class="linear-repeat"></div>
@@ -220,5 +219,5 @@ span {
 - [CSS グラデーションの使用](/ja/docs/Web/CSS/Guides/Images/Using_gradients)
 - グラデーション関数: {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - [CSS の基本データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)
-- [CSS の単位と値](/ja/docs/Web/CSS/Guides/Values_and_units)
-- [CSS 入門: 値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
+- [CSS 単位と値](/ja/docs/Web/CSS/Guides/Values_and_units)モジュール
+- [学習: 値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

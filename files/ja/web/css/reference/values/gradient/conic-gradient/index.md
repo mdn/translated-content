@@ -1,9 +1,8 @@
 ---
 title: conic-gradient()
 slug: Web/CSS/Reference/Values/gradient/conic-gradient
-original_slug: Web/CSS/gradient/conic-gradient
 l10n:
-  sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
 **`conic-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 (中心から広がるのではなく) 中心点の周りを回りながら色が変化する画像を生成します。扇型グラデーションの例としては、円グラフや{{glossary("color wheel", "色相環")}}などがあります。 `conic-gradient()` 関数の結果は {{CSSxRef("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{CSSxRef("&lt;image&gt;")}} の特殊型です。
@@ -55,7 +54,10 @@ background: conic-gradient(
 ## 構文
 
 ```css
-/* 45度回転した扇形グラデーション、
+/* 単一色の赤のグラデーション */
+conic-gradient(red)
+
+/* 45 度回転した扇形グラデーション、
    青で始まり赤で終わる */
 conic-gradient(from 45deg, blue, red)
 
@@ -98,7 +100,7 @@ conic-gradient(
 
 ## 解説
 
-他のグラデーションと同様、扇形グラデーションは[内在的な寸法を持ちません](/ja/docs/Web/CSS/Reference/Values/image#description)。つまり、自然の寸法や推奨される寸法、推奨される縦横比もありません。自身の寸法は適用先の要素の寸法、または要素の寸法以外で設定された `<image>` の寸法に一致します。
+他のグラデーションと同様、扇形グラデーションは[内在的な寸法を持ちません](/ja/docs/Web/CSS/Reference/Values/image#解説)。つまり、自然の寸法や推奨される寸法、推奨される縦横比もありません。自身の寸法は適用先の要素の寸法、または要素の寸法以外で設定された `<image>` の寸法に一致します。
 
 繰り返して 360 度の回転を埋める扇形グラデーションを生成するには、代わりに {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} 関数を使用してください。
 
@@ -137,8 +139,8 @@ conic-gradient(red 40grad, 80grad, blue 360grad);
 2 つ以上の色経由点が同じ場所にある場合、その場所で宣言された最初の色と最後の色の間に不連続の (硬い) 色変化として表示されます。扇形グラデーションを使用して円グラフを作成するには、 — 背景画像はアクセシビリティが確保できないため、正しい方法ではありませんが — 隣接する 2 つの色経由点の色経由点の角度が同じである、硬い色経由点を使用します。これを実現する最も簡単な方法は、複数のポジションの色経由点を使用することです。次の 2 つの宣言は等価です。
 
 ```css
-conic-gradient(#fff 0.09turn, #bbb 0.09turn, #bbb 0.27turn, #666 0.27turn, #666 0.54turn, #000 0.54turn);
-conic-gradient(#fff 0turn 0.09turn, #bbb 0.09turn 0.27turn, #666 0.27turn 0.54turn, #000 0.54turn 1turn);
+conic-gradient(white 0.09turn, #bbbbbb 0.09turn, #bbbbbb 0.27turn, #666666 0.27turn, #666666 0.54turn, black 0.54turn);
+conic-gradient(white 0turn 0.09turn, #bbbbbb 0.09turn 0.27turn, #666666 0.27turn 0.54turn, black 0.54turn 1turn);
 ```
 
 色経由点は、昇順に並べる必要があります。後続の色経由点がより低い値であった場合、前の色経由点の値を上書きし、硬い (不連続の) 色変化を生成します。次の例では、 30% の地点で赤から黄色に変化し、グラデーションの 35% の地点で黄色から青に変化しています。
@@ -150,7 +152,7 @@ conic-gradient(red .8rad, yellow .6rad, blue 1.3rad);
 扇形グラデーションでは、他にもさまざまな効果を作り出すことができます。奇しくも市松模様もその一つです。左上と右下の白、左下と右上の黒で四分円を作り、グラデーションを16回 (横に4回、下に4回) 繰り返すと市松模様になります。
 
 ```css
-conic-gradient(#fff 90deg, #000 0.25turn 0.5turn, #fff 1rad 1.5rad, #000 300grad);
+conic-gradient(white 90deg, black 0.25turn 0.5turn, white 1rad 1.5rad, black 300grad);
 background-size: 25% 25%;
 ```
 
@@ -165,7 +167,7 @@ background-size: 25% 25%;
 ブラウザーは、背景画像に関する特別な情報を支援技術に提供しません。これは主にスクリーンリーダーにとって重要なことで、スクリーンリーダーはその存在を告知しないため、ユーザーに何も伝えられません。扇形グラデーションを使って円グラフや市松模様などの効果を出すことは可能ですが、 CSS 画像は代替テキストを割り当てるネイティブな方法を提供していないため、扇形グラデーションで表現された画像はスクリーンリーダーのユーザーが認知することはできません。ページの全体的な目的を理解するために重要な情報が画像に含まれている場合は、文書内で意味的に記述する方が良いでしょう。
 
 - [MDN WCAG を理解する, ガイドライン 1.1 の説明](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
-- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 ## 例
 
@@ -184,7 +186,7 @@ div {
 
 ```css live-sample___gradient_at_40-degrees
 div {
-  background-image: conic-gradient(from 40deg, #fff, #000);
+  background-image: conic-gradient(from 40deg, white, black);
 }
 ```
 
@@ -251,10 +253,10 @@ div {
 ```css live-sample___checkerboard
 div {
   background: conic-gradient(
-      #fff 0.25turn,
-      #000 0.25turn 0.5turn,
-      #fff 0.5turn 0.75turn,
-      #000 0.75turn
+      white 0.25turn,
+      black 0.25turn 0.5turn,
+      white 0.5turn 0.75turn,
+      black 0.75turn
     )
     top left / 25% 25% repeat;
   border: 1px solid;
