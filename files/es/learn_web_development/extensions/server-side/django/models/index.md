@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Models
 original_slug: Learn/Server-side/Django/Models
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Este artículo muestra cómo definir modelos para el sitio web de la [BibliotecaLocal](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website). En él se explica lo que es un modelo, cómo se declara, y cuáles son algunos de los principales tipos de campos de un modelo. También veremos, brevemente, cuáles son algunas de las maneras en que puede accederse a los datos del modelo.
 
@@ -14,7 +14,7 @@ Este artículo muestra cómo definir modelos para el sitio web de la [Biblioteca
       <th scope="row">Pre-requisitos:</th>
       <td>
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Server-side/Django/skeleton_website"
+          href="https://developer.mozilla.org/es/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website"
           >Tutorial Django Parte 2: Creación del esqueleto del sitio web</a
         >.
       </td>
@@ -471,4 +471,4 @@ En este punto nos desviaremos brevemente de la creación del sitio, y miraremos 
 - [Realizando consultas](https://docs.djangoproject.com/en/1.10/topics/db/queries/) (Django Docs)
 - [Referencia del API QuerySet](https://docs.djangoproject.com/en/1.10/ref/models/querysets/) (Django Docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django")}}

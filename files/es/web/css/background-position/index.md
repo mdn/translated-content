@@ -3,7 +3,7 @@ title: background-position
 slug: Web/CSS/background-position
 ---
 
-{{ PreviousNext("CSS:background-image", "CSS:background-repeat") }}
+{{ PreviousNext("Web/CSS/background-image", "Web/CSS/background-repeat") }}
 
 ## Resumen
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ac5dfaa2f71a7381cd8fdd4cb554507f375ac19c
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn_web_development/Core/Scripting")}}
 
 Los eventos son cosas que pasan en el sistema que estás programando, el cual se encarga de avisarte para que tu código pueda hacer algo al respecto.
 
@@ -804,4 +804,4 @@ Si hay algo que no te quedó muy claro, tómate la libertad de leer de nuevo el 
 - [Orden de eventos](https://www.quirksmode.org/js/events_order.html) (debate sobre captura y burbujeo) - un excelente y detallado artículo por Peter-Paul Koch.
 - [Event accessing](https://www.quirksmode.org/js/events_access.html) (debate sobre el objeto evento) - otro excelente y detallado artículo por Peter-Paul Koch.
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn_web_development/Core/Scripting")}}

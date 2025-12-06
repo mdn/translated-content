@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Home_page
 original_slug: Learn/Server-side/Django/Home_page
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Estamos listos ahora para añadir el código para mostrar nuestra primera página entera — una página de inicio del sitio web de la [BibliotecaLocal](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) que muestra cuántos registros tenemos de cada tipo de modelo y proporciona una barra lateral con enlaces de navegación a nuestras otras páginas. Por el camino ganaremos experiencia práctica en escritura básica de mapeos de URL y vistas, obtención de resgistros de la base de datos y uso de plantillas.
 
@@ -19,7 +19,7 @@ Estamos listos ahora para añadir el código para mostrar nuestra primera págin
           >Introducción a Django</a
         >. Completa los tópicos previos del tutorial (incluyendo
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Server-side/Django/Admin_site"
+          href="https://developer.mozilla.org/es/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site"
           >Tutorial de Django Parte 4: Sitio de administración de Django</a
         >).
       </td>
@@ -394,4 +394,4 @@ En nuestro siguiente artículo nos basaremos en nuestro conocimiento para crear 
 - [Administrando archivos estáticos](https://docs.djangoproject.com/en/1.10/howto/static-files/) (Django docs)
 - [Funciones atajo de Django](https://docs.djangoproject.com/en/1.10/topics/http/shortcuts/#django.shortcuts.render) (Django docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn_web_development/Extensions/Server-side/Django")}}

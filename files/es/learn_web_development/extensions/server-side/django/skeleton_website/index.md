@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/skeleton_website
 original_slug: Learn/Server-side/Django/skeleton_website
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Este segundo artículo de nuestro [Tutorial Django](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) muestra cómo puedes crear un proyecto de "esqueleto" de sitio web como base, que puedes continuar luego llenado de configuraciones específicas del sitio, urls, modelos, vistas y plantillas.
 
@@ -18,7 +18,7 @@ Este segundo artículo de nuestro [Tutorial Django](/es/docs/Learn_web_developme
           >Poner en marcha un entorno de desarrollo Django</a
         >. Repasar el
         <a
-          href="/es/docs/Learn/Server-side/Django/Tutorial_local_library_website"
+          href="/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website"
           >Tutorial Django</a
         >.
       </td>
@@ -370,4 +370,4 @@ Ahora que el esqueleto del [sitio web de la BibliotecaLocal](/es/docs/Learn_web_
 - [Escribiendo tu primera aplicación Django - parte 1](https://docs.djangoproject.com/en/2.0/intro/tutorial01/) (Django docs)
 - [Aplicaciones](https://docs.djangoproject.com/en/2.0/ref/applications/#configuring-applications) (Django Docs). Contiene información sobre cómo configurar aplicaciones.
 
-{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django")}}

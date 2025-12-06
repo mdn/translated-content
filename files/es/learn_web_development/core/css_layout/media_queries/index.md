@@ -8,7 +8,7 @@ l10n:
 
 {{learnsidebar}}
 
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout/Fundamental_layout_comprehension", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_Design", "Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension", "Learn_web_development/Core/CSS_layout")}}
 
 Las **media queries (consulta de medios) en CSS** te dan una forma de aplicar CSS solo cuando el navegador y el entorno del dispositivo coinciden con una regla que especifiques, por ejemplo, "el área de visualización es más ancha que 480 píxeles". Las media queries son una parte clave del diseño web adaptativo, ya que te permiten crear diferentes diseños según el tamaño del área de visualización, pero también se pueden utilizar para detectar otras cosas sobre el entorno en el que se está ejecutando tu sitio, por ejemplo, si el usuario está utilizando una pantalla táctil en lugar de un ratón.
 
@@ -626,4 +626,4 @@ También podrías experimentar con la adición de diferentes componentes y ver s
 
 Bien, casi hemos llegado al final de este módulo. Terminemos dándote un desafío para poner a prueba tu comprensión.
 
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout/Fundamental_layout_comprehension", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_Design", "Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension", "Learn_web_development/Core/CSS_layout")}}

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Accessibility/CSS_and_JavaScript
 original_slug: Learn/Accessibility/CSS_and_JavaScript
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}
 
 CSS y JavaScript, cuando se usan correctamente, también tienen el potencial de permitir experiencias web accesibles... o pueden dañar significativamente la accesibilidad si se usan incorrectamente. Este artículo describe algunas de las mejores prácticas de CSS y JavaScript que deben tenerse en cuenta para garantizar que incluso el contenido complejo sea lo más accesible posible.
 
@@ -379,4 +379,4 @@ Esperamos que este artículo te haya brindado una buena cantidad de detalles y c
 
 ¡Siguiente parada, WAI-ARIA!
 
-{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}
