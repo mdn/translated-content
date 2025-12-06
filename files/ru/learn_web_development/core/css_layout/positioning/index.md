@@ -3,7 +3,7 @@ title: Позиционирование
 slug: Learn_web_development/Core/CSS_layout/Positioning
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn_web_development/Core/CSS_layout")}}
 
 Позиционирование позволяет вам изымать элементы из нормального потока макета документа и заставить их вести себя по-другому; например, располагаться друг на друге или всегда оставаться на одном и том же месте внутри окна просмотра браузера. Эта статья объясняет разные значения {{cssxref("position")}} и как их использовать.
 
@@ -669,7 +669,7 @@ dt {
 
 Я уверен, что вы повеселились с основами позиционирования; хотя это не является методом, который вы бы использовали для целого макета, всё же как вы видите, существует много задач, подходящих для него.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn_web_development/Core/CSS_layout")}}
 
 ## Смотрите также
 

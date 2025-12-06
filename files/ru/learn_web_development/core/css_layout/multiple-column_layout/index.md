@@ -3,7 +3,7 @@ title: Макет с несколькими столбцами
 slug: Learn_web_development/Core/CSS_layout/Multiple-column_Layout
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout/Responsive_Design", "Learn_web_development/Core/CSS_layout")}}
 
 Спецификация макет с несколькими столбцами даёт вам метод вёрстки контента по столбцам, точно также как вы можете видеть в газете. Эта статья объясняет, как использовать эту функцию.
 
@@ -518,4 +518,4 @@ body {
 - [CSS Фрагментация](/ru/docs/Web/CSS/CSS_Fragmentation)
 - [Применение макета с несколькими столбцами](/ru/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout/Responsive_Design", "Learn_web_development/Core/CSS_layout")}}

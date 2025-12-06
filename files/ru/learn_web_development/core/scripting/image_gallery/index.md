@@ -3,7 +3,7 @@ title: Галерея изображений
 slug: Learn_web_development/Core/Scripting/Image_gallery
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}
 
 Теперь, после изучения основ JavaScript, мы проверим ваши знания циклов, функций, условных операторов и событий предложив вам написать популярный элемент который вы увидите на многих сайтах - галерея на JavaScript.
 
@@ -95,4 +95,4 @@ overlay.style.backgroundColor = xxx;
 
 Если вы проводите эту оценку в рамках организованного курса, вы должны уметь отдать свою работу своему учителю/наставнику для маркировки. Если вы самообучаетесь, то вы можете получить руководство по маркировке довольно легко, задав тему [обсуждения об этом упражнении](https://discourse.mozilla.org/t/image-gallery-assessment/24687) или в IRC-канале [#mdn](irc://irc.mozilla.org/mdn) в [Mozilla IRC](https://wiki.mozilla.org/IRC). Сначала попробуйте упражнение - ничего не выиграть от обмана!
 
-{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenu("Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}

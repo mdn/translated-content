@@ -3,7 +3,7 @@ title: "Руководство часть 5: Создание домашней �
 slug: Learn_web_development/Extensions/Server-side/Django/Home_page
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Теперь мы готовы создать код нашей первой страницы — домашняя страница сайта [LocalLibrary](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) будет показывать количество записей в каждой модели, кроме того, она будет выводить боковую навигационную панель с ссылками на другие страницы сайта. В результате мы приобретём практический навык написания простых URL-преобразований и отображений, получения записей из базы данных и применения шаблонов.
 
@@ -341,4 +341,4 @@ return render(
 - [Управление статическими файлами](https://docs.djangoproject.com/en/1.10/howto/static-files/) (Django docs)
 - [Удобные (встроенные) функции Django](https://docs.djangoproject.com/en/1.10/topics/http/shortcuts/#django.shortcuts.render) (Django docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn_web_development/Extensions/Server-side/Django")}}

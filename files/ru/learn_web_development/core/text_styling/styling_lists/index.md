@@ -3,7 +3,7 @@ title: Стилизация списков
 slug: Learn_web_development/Core/Text_styling/Styling_lists
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}
 
 [Списки](/ru/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#lists), по-большому счету, ведут себя также как любой другой текст, но существуют некоторые специфичные настройки CSS, о которых вы должны знать. В этой статье они все описываются.
 
@@ -411,4 +411,4 @@ window.addEventListener("load", drawOutput);
 
 В плане стилизации списки сравнительно легко освоить, как только вы освоите несколько связанных базовых принципов и специфичные свойства. В следующей статье мы перейдём к методам стилизации ссылок.
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}

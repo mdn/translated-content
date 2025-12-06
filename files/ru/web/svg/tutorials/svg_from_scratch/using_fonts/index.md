@@ -3,7 +3,7 @@ title: SVG шрифты
 slug: Web/SVG/Tutorials/SVG_from_scratch/Using_fonts
 ---
 
-{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Filter_effects", "Web/SVG/Tutorial/SVG_Image_Tag") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Filter_effects", "Web/SVG/Tutorials/SVG_from_scratch/Image_element") }}
 
 Когда был написан стандарт SVG, поддержка веб-шрифтов ещё не была широко распространена в браузерах. Поскольку доступ к правильному файлу шрифта имеет решающее значение для правильного отображения текста, в SVG была добавлена технология описания шрифтов. Она не совместима с другими форматами, такими как PostScript или OTF, это лишь простое средство вложения информации о глифах в SVG при визуализации.
 
@@ -97,4 +97,4 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Using_fonts
 </font>
 ```
 
-{{ PreviousNext("Web/SVG/Tutorial/Filter_effects", "Web/SVG/Tutorial/SVG_Image_Tag") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Filter_effects", "Web/SVG/Tutorials/SVG_from_scratch/Image_element") }}

@@ -3,7 +3,7 @@ title: Блочная модель
 slug: Learn_web_development/Core/Styling_basics/Box_model
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}Каждый элемент в CSS заключён в блок, и понимание поведения этих блоков — это ключ к умению задавать раскладку с помощью CSS, то есть выстраивать одни элементы относительно других элементов. В этом уроке мы надлежащим образом рассмотрим _блочную модель_ CSS, чтобы вы могли создавать более сложные раскладки, понимая принцип ее работы и терминологию, которая к ней относится.
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics")}}Каждый элемент в CSS заключён в блок, и понимание поведения этих блоков — это ключ к умению задавать раскладку с помощью CSS, то есть выстраивать одни элементы относительно других элементов. В этом уроке мы надлежащим образом рассмотрим _блочную модель_ CSS, чтобы вы могли создавать более сложные раскладки, понимая принцип ее работы и терминологию, которая к ней относится.
 
 | Необходимые условия: | Базовая компьютерная грамотность, [установка базового ПО](/ru/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software), базовые знания о [работе с файлами](/ru/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files), основы HTML (изучите [Введение в HTML](/ru/docs/conflicting/Learn_web_development/Core/Structuring_content)) и понимание работы CSS (изучите [Введение в CSS](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics).) |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -290,4 +290,4 @@ html {
 
 В следующем уроке мы рассмотрим, как можно использовать [фон и рамки](/ru/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders), чтобы сделать ваши простые блоки более интересными.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics")}}

@@ -3,7 +3,7 @@ title: Пути (paths)
 slug: Web/SVG/Tutorials/SVG_from_scratch/Paths
 ---
 
-{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes", "Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes") }}
 
 Элемент [`<path>`](/ru/docs/Web/SVG/Reference/Element/path) ("путь")– наиболее мощный элемент в библиотеке [основных форм](/ru/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes) SVG. С его помощью можно создавать отрезки, кривые, дуги и многое другое.
 
@@ -260,4 +260,4 @@ m dx dy
 
 Если вы переходите в SVG из Canvas а, дуги могут быть самой трудной вещью для изучения, но они также очень мощные. Т.к. начальная и конечные точки для любого пути, обходящего круг, одно и то же место, существует бесконечное количество кругов, которые могут быть выбраны и действительный путь не определён. Возможно приблизить их, сделав начальную и конечную точку пути слегка разными и соединив их с другими сегментами пути. В этой точке, часто проще использовать настоящий круг или эллипс. Это интерактивное демо может помочь понять основные принципы SVG-дуг: <https://codepen.io/lingtalfi/pen/yaLWJG> (протестировано только в Chrome и Firefox, может не работать в вашем браузере)
 
-{{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes", "Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes") }}

@@ -3,7 +3,7 @@ title: Псевдоклассы, псевдоэлементы
 slug: Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics")}}
 
 Следующий набор селекторов, который мы рассмотрим, относится к псевдоклассам и псевдоэлементам. Их очень много, и они часто служат довольно специфическим целям. После того как вы узнаете порядок их использования, просмотрите список — не найдётся ли в нём что-либо, что поможет решить стоящую перед вами задачу. Кроме того, будет полезным заглянуть на соответствующую каждому селектору страницу MDN, чтобы прояснить, как его обрабатывает браузер.
 
@@ -175,4 +175,4 @@ article p:first-child::first-line {
 | {{ Cssxref("::selection") }}      | Соответствует части документа, которая была выбрана.                                                                |
 | {{ Cssxref("::spelling-error") }} | Соответствует части документа, содержащей орфографическую ошибку, отмеченную браузером.                             |
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics")}}
