@@ -1,13 +1,14 @@
 ---
 title: background-size
 slug: Web/CSS/Reference/Properties/background-size
-original_slug: Web/CSS/background-size
 l10n:
-  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
+  sourceCommit: 1bfe630bd8538b64c97c7f684f5ee647a76c1a28
 ---
 
 **`background-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背景画像の寸法を設定します。
 画像は自然な寸法になったり、引き伸ばされたり、利用可能な領域に収まるように縮小されたりします。
+
+背景画像に覆われていない領域は {{cssxref("background-color")}} プロパティで埋められ、透過性のある背景画像の背後には背景色が見えます。
 
 {{InteractiveExample("CSS デモ: background-size")}}
 
@@ -45,8 +46,6 @@ background-size: 200px 100px;
   min-height: 100%;
 }
 ```
-
-背景画像に覆われていない領域は {{cssxref("background-color")}} プロパティで埋められ、背景画像の後ろに見える背景色は透過性があります。
 
 ## 構文
 
@@ -137,11 +136,15 @@ background-size: unset;
   > SVG 画像には [`preserveAspectRatio`](/ja/docs/Web/SVG/Reference/Attribute/preserveAspectRatio) 属性があり、既定では `contain` と同等です。明示的に `background-size` が設定されると `preserveAspectRatio` が無視されます。
 
 - **`background-size` の一方が `auto` でもう一方が `auto` ではない場合:**
-  - 画像に内在的な比率がある場合は、指定された寸法まで変倍されます。指定されていない方の寸法は指定された寸法と内在的な比率を使用して計算されます。
-  - 画像に内在的な比率がない場合は、指定された寸法まで変倍されます。指定されていない方の寸法は、画像の指定された寸法を使用して計算されます。そのような内在的な寸法がない場合、背景配置領域の適切な寸法になります。
+  - 画像に内在的な比率がある場合は、指定された寸法まで変倍されます。
+    指定されていない方の寸法は、指定された寸法と内在的な比率を使用して計算されます。
+  - 画像に内在的な比率がない場合は、指定された寸法まで変倍されます。
+    指定されていない方の寸法は、画像の指定された寸法を使用して計算されます。
+    そのような内在的な寸法がない場合、背景配置領域の適切な寸法になります。
 
-  > [!NOTE]
-  > 内在的な寸法や比率を持たないベクター画像の背景の変倍は、まだすべてのブラウザーで完全に実装されているわけではありません。上記に記述した振る舞いに注意し、結果が適切であるかを複数のブラウザーで確認してください。
+> [!NOTE]
+> 内在的な寸法や比率を持たないベクター画像の背景の変倍は、まだすべてのブラウザーで完全に実装されているわけではありません。
+> 上記にの振る舞いに注意し、結果が適切であるかを複数のブラウザーで確認してください。
 
 ## 公式定義
 
@@ -167,7 +170,7 @@ background-size: unset;
 
 ```css
 .tiledBackground {
-  background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
+  background-image: url("https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png");
   background-size: 150px;
   width: 300px;
   height: 300px;
