@@ -3,7 +3,7 @@ title: Генератор глупых историй
 slug: Learn_web_development/Core/Scripting/Silly_story_generator
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Первые_шаги/Arrays", "Learn/JavaScript/Первые_шаги")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Scripting/Arrays", "conflicting/Learn_web_development/Core/Scripting")}}
 
 В этом испытании вам будет нужно, используя знания, полученные в статьях этого модуля, применить их для создания забавного приложения, создающего случайные глупые истории. Удачно повеселиться!
 
@@ -97,4 +97,4 @@ slug: Learn_web_development/Core/Scripting/Silly_story_generator
    - Ссылка на пример, который вы хотите оценить или нуждаетесь в помощи, в онлайн-редакторе. Это хорошая практика - очень сложно помочь кому-то с проблемой кодирования, если вы не видите его код.
    - Ссылка на актуальную задачу или страницу оценки, чтобы мы могли найти вопрос, с которым вы хотите помочь.
 
-{{PreviousMenu("Learn/JavaScript/Первые_шаги/Arrays", "Learn/JavaScript/Первые_шаги")}}
+{{PreviousMenu("Learn_web_development/Core/Scripting/Arrays", "conflicting/Learn_web_development/Core/Scripting")}}

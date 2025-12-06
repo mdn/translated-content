@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/What_is_CSS
 ---
 
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("conflicting/Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "conflicting/Learn_web_development/Core/Styling_basics")}}
 
 Мы уже изучили основы CSS, для чего он нужен и как создавать простые таблицы стилей. В этом уроке мы посмотрим, как браузер обрабатывает CSS и HTML и выводит содержимое на веб-страницу.
 
@@ -142,4 +142,4 @@ p {
 
 Вы почти закончили модуль; осталось только одно. В следующей статье вы попрактикуетесь в [использовании ваших новых знаний](/ru/docs/Learn_web_development/Core/Styling_basics/Styling_a_bio_page).
 
-{{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("conflicting/Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "conflicting/Learn_web_development/Core/Styling_basics")}}

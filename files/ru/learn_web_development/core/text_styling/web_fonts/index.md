@@ -3,7 +3,7 @@ title: Веб-шрифты
 slug: Learn_web_development/Core/Text_styling/Web_fonts
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling/Typesetting_a_homepage", "Learn_web_development/Core/Text_styling")}}
 
 В первой статье модуля, мы изучали основные функции CSS доступные для стилизации шрифтов и текста. В этой статье мы продвинемся дальше изучая веб-шрифты в деталях — они позволяют вам загружать пользовательские шрифты вместе с вашей веб-страницей, чтобы обеспечить более разнообразный, индивидуальный стиль текста.
 
@@ -169,4 +169,4 @@ font-family: "zantrokeregular", serif;
 
 Теперь, когда вы ознакомились с нашими статьями об основах стилизации текста, пришло время проверить ваше понимание нашей оценкой модуля «Задание: стилизация школьного сайта».
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling/Typesetting_a_homepage", "Learn_web_development/Core/Text_styling")}}

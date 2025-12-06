@@ -3,7 +3,7 @@ title: "Задание: DIY Django мини блог"
 slug: Learn_web_development/Extensions/Server-side/Django/django_assessment_blog
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Server-side/Django/web_application_security", "Learn_web_development/Extensions/Server-side/Django")}}
 
 В этом задании вы будете оценивать знания Django, которые вы приобрели в [Django Web Framework (Python)](/ru/docs/Learn_web_development/Extensions/Server-side/Django), чтобы создать очень простой блог.
 
@@ -323,4 +323,4 @@ class SomeView(generic.ListView):
 
 После того, как вы завершили этот модуль, вы также закончили весь контент MDN для изучения базового веб-сайта на сервере Django! Надеемся, вам понравится этот модуль и вы почувствуете, что у вас есть хорошее понимание основ!
 
-{{PreviousMenu("Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
+{{PreviousMenu("Learn_web_development/Extensions/Server-side/Django/web_application_security", "Learn_web_development/Extensions/Server-side/Django")}}

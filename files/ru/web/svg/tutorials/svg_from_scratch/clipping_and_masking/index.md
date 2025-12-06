@@ -3,7 +3,7 @@ title: Обрезка и маска
 slug: Web/SVG/Tutorials/SVG_from_scratch/Clipping_and_masking
 ---
 
-{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Basic_Transformations", "Web/SVG/Tutorial/Other_content_in_SVG") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations", "Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG") }}
 
 На первый взгляд, странно стирать то, что было только что нарисовано. Но когда вы попытаетесь создать полукруг в SVG, то сразу столкнётесь со следующими свойствами.
 
@@ -105,4 +105,4 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Clipping_and_masking
 
 Одним из мощных инструментов является `display: none`. Поэтому неудивительно, что было принято решение использовать это CSS свойство в SVG вместе с `visibility` и `clip`, как определено в CSS 2. Для восстановления значения по умолчанию ранее важно знать, что начальное значение для всех элементов SVG - `inline`.
 
-{{ PreviousNext("Web/SVG/Tutorial/Basic_Transformations", "Web/SVG/Tutorial/Other_content_in_SVG") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations", "Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG") }}

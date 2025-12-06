@@ -3,7 +3,7 @@ title: "Учебник Express часть 6: Работа с формами"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 В этой главе мы покажем вам как работать с HTML формами в Express, используя Pug, и в частности как написать формы для создания, обновления и удаления документов из базы данных.
 
@@ -224,7 +224,7 @@ _Express_, Node.js и сторонние пакеты, полученные с �
 
 - Пакет [express-validator](https://www.npmjs.com/package/express-validator) (документация на npm).
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 ## Содержание этого модуля (блока статей)
 

@@ -3,7 +3,7 @@ title: Сторонние API
 slug: Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Network_requests", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 API, которые мы рассмотрели до сих пор, встроены в браузер, но не все API таковы. Многие крупные веб-сайты и сервисы, такие как Google Maps, Twitter, Facebook, PayPal и т. д., Предоставляют API-интерфейсы, позволяющие разработчикам использовать свои данные (например, показывать ваш твиттер-поток в вашем блоге) или сервисы (например, отображение пользовательских карт Google на вашем сайте, или использование логина Facebook для входа в систему ваших пользователей). В этой статье рассматривается различие между API-интерфейсами браузера и сторонними API и показано типичное использование последних.
 
@@ -432,7 +432,7 @@ We are not going to say too much more about this example in the article — [the
 
 This article has given you a useful introduction to using third party APIs to add functionality to your websites.
 
-{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Network_requests", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 ## In this module
 

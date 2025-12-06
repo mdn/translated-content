@@ -4,7 +4,7 @@ slug: conflicting/Learn_web_development/Core/Styling_basics/Getting_started
 original_slug: Learn/CSS/First_steps/How_CSS_is_structured
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/What_is_CSS", "conflicting/Learn_web_development/Core/Styling_basics")}}
 
 Теперь, когда у вас есть представление о том, чем является CSS, и о его основах, настало время посмотреть немного глубже в структуру самого языка. Нам уже встречались многие из обсуждаемых здесь концепций; вы можете вернуться к этому, чтобы разобраться, если вы обнаружите какие-либо более поздние концепции запутанными.
 
@@ -569,4 +569,4 @@ padding- left: 10px;
 
 Полезно знать, как браузер делает из HTML и CSS готовую страницу, поэтом следующая ваша статья — [Как работает CSS](/ru/docs/Learn_web_development/Core/Styling_basics/What_is_CSS) — мы рассмотрим этот процесс.
 
-{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/What_is_CSS", "conflicting/Learn_web_development/Core/Styling_basics")}}
