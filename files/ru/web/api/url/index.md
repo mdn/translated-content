@@ -66,7 +66,7 @@ slug: Web/API/URL
 ```js
 const url = new URL("../cats", "http://www.example.com/dogs");
 console.log(url.hostname); // "www.example.com"
-console.log(url.pathname); // "/cats"</pre>
+console.log(url.pathname); // "/cats"
 ```
 
 Вы можете задавать значения свойствам объекта URL, чтобы изменять URL-адрес:
