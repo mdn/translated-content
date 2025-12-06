@@ -1,31 +1,20 @@
 ---
-title: CSSTransformValue.forEach()
+title: "CSSTransformValue: forEach() メソッド"
+short-title: forEach()
 slug: Web/API/CSSTransformValue/forEach
 l10n:
-  sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 **`CSSTransformValue.forEach()`** メソッドは、指定された関数を `CSSTransformValue` の各要素に対して一度だけ実行します。
 
 ## 構文
 
 ```js-nolint
-// アロー関数
-forEach((currentValue) => { /* … */ } )
-forEach((currentValue, index) => { /* … */ } )
-forEach((currentValue, index, array) => { /* … */ } )
-
-// コールバック関数
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
-
-// インラインコールバック関数
-forEach(function(currentValue) { /* … */ })
-forEach(function(currentValue, index) { /* … */ })
-forEach(function(currentValue, index, array) { /* … */ })
-forEach(function(currentValue, index, array) { /* … */ }, thisArg)
 ```
 
 ### 引数
