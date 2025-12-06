@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/CSS_layout/Flexbox
 original_slug: Learn/CSS/CSS_layout/Flexbox
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}{{PreviousMenuNext("conflicting/Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}
 
 flexbox는 행과 열 형태로 항목 무리를 배치하는 일차원 레이아웃 메서드입니다. 항목은 부족한 공간에 맞추기 위해 축소되거나 여분의 공간을 채우기 위해 변형된다. 이 문서는 근간이 되는 내용 전체를 설명합니다.
 
@@ -356,4 +356,4 @@ flexbox는 몇몇 CSS 기능보다 다소 까다롭습니다. 예를 들어 브�
 
 이로써 flexbox의 기본 안내서를 마감합니다. 재미있는 경험이었기 바라며, 당신이 학습 진도를 더해 갈수록 flexbox를 자유자제로 다룰 수 있게 될 겁니다. 다음으로 CSS 레이아웃의 또 다른 중요한 측면인 CSS grid를 살펴볼 것입니다.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("conflicting/Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}

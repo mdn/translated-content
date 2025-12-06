@@ -565,4 +565,4 @@ h2 {
 
 다음 수업에서는 문서의 쓰기 모드가 CSS 와 어떻게 상호 작용하는지 알아봅니다. 텍스트가 왼쪽에서 오른쪽으로 표시되지 않으면 어떻게 됩니까?
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics/Handling_different_text_directions", "Learn_web_development/Core/Styling_basics")}}
