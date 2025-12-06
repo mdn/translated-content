@@ -1,9 +1,8 @@
 ---
-title: SVG の背景の拡大縮小
+title: SVG 背景画像の拡大縮小
 slug: Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds
-original_slug: Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds
 l10n:
-  sourceCommit: f6497ec3b1a28d7b0a99f5d13e81027204293fa3
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 SVG 画像の柔軟性を踏まえると、{{ cssxref("background-image") }} プロパティで背景画像として使用する際に注意すべき点はまだありますし、{{ cssxref("background-size") }} プロパティで拡大縮小する際にもさらに注意すべき点があります。この記事では、これらのプロパティを使用する際に SVG 画像の拡大縮小がどのように処理されるか説明します。
@@ -28,18 +27,18 @@ SVG 画像の柔軟性を踏まえると、{{ cssxref("background-image") }} プ
 
 ### 寸法なし、比率なし
 
-このSVGグラデーション画像は、寸法も比率もありません。大きさが何であれ、また、具体的なアスペクト比を維持するかどうかを気にしません。これは、画面の大きさやアスペクト比に関係なく作業できるので、グラデーションのデスクトップ背景にはいいでしょう。
+この SVG グラデーション画像は、寸法も比率もありません。大きさが何であれ、また、具体的なアスペクト比を維持するかどうかを気にしません。これは、画面の大きさやアスペクト比に関係なく作業できるので、グラデーションのデスクトップ背景にはいいでしょう。
 
 ```html
 <svg>
   <title>Corner-to-corner gradient</title>
   <defs>
     <linearGradient id="g" x1="0%" x2="100%" y1="0%" y2="100%">
-      <stop style="stop-color:pink" offset="0" />
-      <stop style="stop-color:goldenrod" offset="1" />
+      <stop stop-color="pink" offset="0" />
+      <stop stop-color="goldenrod" offset="1" />
     </linearGradient>
   </defs>
-  <rect style="fill: url(#g)" width="100%" height="100%" />
+  <rect fill="url('#g')" width="100%" height="100%" />
 </svg>
 ```
 
@@ -54,11 +53,11 @@ SVG 画像の柔軟性を踏まえると、{{ cssxref("background-image") }} プ
   <title>Vertical gradient, with a fixed width</title>
   <defs>
     <linearGradient id="g" x1="0%" x2="0%" y1="0%" y2="100%">
-      <stop style="stop-color: purple;" offset="0" />
-      <stop style="stop-color: lime;" offset="1" />
+      <stop stop-color="purple" offset="0" />
+      <stop stop-color="lime" offset="1" />
     </linearGradient>
   </defs>
-  <rect style="fill: url(#g);" width="100%" height="100%" />
+  <rect fill="url('#g')" width="100%" height="100%" />
 </svg>
 ```
 
@@ -75,11 +74,11 @@ SVG 画像の柔軟性を踏まえると、{{ cssxref("background-image") }} プ
   <title>Vertical gradient, with a fixed height and intrinsic ratio</title>
   <defs>
     <linearGradient id="g" x1="0%" x2="0%" y1="0%" y2="100%">
-      <stop style="stop-color: teal;" offset="0" />
-      <stop style="stop-color: orange;" offset="1" />
+      <stop stop-color="teal" offset="0" />
+      <stop stop-color="orange" offset="1" />
     </linearGradient>
   </defs>
-  <rect style="fill: url(#g);" width="100%" height="100%" />
+  <rect fill="url('#g')" width="100%" height="100%" />
 </svg>
 ```
 
@@ -94,11 +93,11 @@ SVG 画像の柔軟性を踏まえると、{{ cssxref("background-image") }} プ
   <title>Intrinsic ratio</title>
   <defs>
     <linearGradient id="g" x1="0%" x2="100%" y1="0%" y2="0%">
-      <stop style="stop-color: navy;" offset="0" />
-      <stop style="stop-color: maroon;" offset="1" />
+      <stop stop-color="navy" offset="0" />
+      <stop stop-color="maroon" offset="1" />
     </linearGradient>
   </defs>
-  <rect style="fill: url(#g);" width="100%" height="100%" />
+  <rect fill="url('#g')" width="100%" height="100%" />
 </svg>
 ```
 
@@ -140,7 +139,7 @@ div {
 
 ```css live-sample___scaling1
 div {
-  background-image: url(no-dimensions-or-ratio.svg);
+  background-image: url("no-dimensions-or-ratio.svg");
   background-size: 125px 175px;
 }
 ```
@@ -166,7 +165,7 @@ div {
 
 ```css live-sample___scaling2
 div {
-  background-image: url(100px-wide-no-height-or-ratio.svg);
+  background-image: url("100px-wide-no-height-or-ratio.svg");
   background-size: 250px 150px;
 }
 ```
@@ -192,7 +191,7 @@ div {
 
 ```css live-sample___scaling3
 div {
-  background-image: url(100px-height-3x4-ratio.svg);
+  background-image: url("100px-height-3x4-ratio.svg");
   background-size: 275px 125px;
 }
 ```
@@ -218,7 +217,7 @@ div {
 
 ```css live-sample___scaling4
 div {
-  background-image: url(no-dimensions-1x1-ratio.svg);
+  background-image: url("no-dimensions-1x1-ratio.svg");
   background-size: 250px 100px;
 }
 ```
@@ -250,7 +249,7 @@ div {
 
 ```css live-sample___cc1
 div {
-  background-image: url(no-dimensions-or-ratio.svg);
+  background-image: url("no-dimensions-or-ratio.svg");
   background-size: contain;
 }
 ```
@@ -276,7 +275,7 @@ div {
 
 ```css live-sample___cc2
 div {
-  background-image: url(100px-wide-no-height-or-ratio.svg);
+  background-image: url("100px-wide-no-height-or-ratio.svg");
   background-size: contain;
 }
 ```
@@ -308,7 +307,7 @@ div {
 
 ```css live-sample___cc3
 div {
-  background-image: url(100px-height-3x4-ratio.svg);
+  background-image: url("100px-height-3x4-ratio.svg");
   background-size: contain;
 }
 ```
@@ -334,7 +333,7 @@ div {
 
 ```css live-sample___cc5
 div {
-  background-image: url(100px-height-3x4-ratio.svg);
+  background-image: url("100px-height-3x4-ratio.svg");
   background-size: cover;
 }
 ```
@@ -364,7 +363,7 @@ div {
 
 ```css live-sample___cc6
 div {
-  background-image: url(no-dimensions-1x1-ratio.svg);
+  background-image: url("no-dimensions-1x1-ratio.svg");
   background-size: contain;
 }
 ```
@@ -390,7 +389,7 @@ div {
 
 ```css live-sample___cc7
 div {
-  background-image: url(no-dimensions-1x1-ratio.svg);
+  background-image: url("no-dimensions-1x1-ratio.svg");
   background-size: cover;
 }
 ```
@@ -422,7 +421,7 @@ div {
 
 ```css live-sample___both-auto1
 div {
-  background-image: url(no-dimensions-or-ratio.svg);
+  background-image: url("no-dimensions-or-ratio.svg");
   background-size: auto auto;
 }
 ```
@@ -448,7 +447,7 @@ div {
 
 ```css live-sample___both-auto2
 div {
-  background-image: url(100px-wide-no-height-or-ratio.svg);
+  background-image: url("100px-wide-no-height-or-ratio.svg");
   background-size: auto auto;
 }
 ```
@@ -476,7 +475,7 @@ div {
 
 ```css live-sample___both-auto3
 div {
-  background-image: url(100px-height-3x4-ratio.svg);
+  background-image: url("100px-height-3x4-ratio.svg");
   background-size: auto auto;
 }
 ```
@@ -504,7 +503,7 @@ div {
 
 ```css live-sample___both-auto4
 div {
-  background-image: url(no-dimensions-1x1-ratio.svg);
+  background-image: url("no-dimensions-1x1-ratio.svg");
   background-size: auto auto;
 }
 ```
@@ -534,7 +533,7 @@ div {
 
 ```css live-sample___auto0
 div {
-  background-image: url(no-dimensions-or-ratio.svg);
+  background-image: url("no-dimensions-or-ratio.svg");
   background-size: auto 140px;
 }
 ```
@@ -562,7 +561,7 @@ div {
 
 ```css live-sample___auto1
 div {
-  background-image: url(100px-wide-no-height-or-ratio.svg);
+  background-image: url("100px-wide-no-height-or-ratio.svg");
   background-size: 200px auto;
 }
 ```
@@ -586,14 +585,14 @@ div {
 
 ```css live-sample___auto2
 div {
-  background-image: url(100px-wide-no-height-or-ratio.svg);
+  background-image: url("100px-wide-no-height-or-ratio.svg");
   background-size: auto 125px;
 }
 ```
 
 {{ EmbedLiveSample('auto2', 200, 230) }}
 
-この場合、幅は CSS で auto と指定されているので、ルール 3 に従って、 SVG で指定した `100px` の幅が選択されます。高さは CSS で `125px` に設定されているので、ルール 1 に従って選択されます。
+この場合、幅は CSS で `auto` と指定されているので、ルール 3 に従って、 SVG で指定した `100px` の幅が選択されます。高さは CSS で `125px` に設定されているので、ルール 1 に従って選択されます。
 
 #### 一方の寸法が指定され、内在的な比率あり
 
@@ -614,7 +613,7 @@ div {
 
 ```css live-sample___auto3
 div {
-  background-image: url(100px-height-3x4-ratio.svg);
+  background-image: url("100px-height-3x4-ratio.svg");
   background-size: 150px auto;
 }
 ```
@@ -642,7 +641,7 @@ div {
 
 ```css live-sample___auto4
 div {
-  background-image: url(no-dimensions-1x1-ratio.svg);
+  background-image: url("no-dimensions-1x1-ratio.svg");
   background-size: 150px auto;
 }
 ```
