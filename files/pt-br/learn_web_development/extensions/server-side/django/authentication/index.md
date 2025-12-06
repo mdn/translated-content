@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Authentication
 original_slug: Learn/Server-side/Django/Authentication
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Neste tutorial, mostraremos como permitir que os usuários efetuem login no seu site com suas próprias contas e como controlar o que eles podem fazer e ver com base em se eles estão ou não conectados e em suas permissões. Como parte desta demonstração, estenderemos o [LocalLibrary](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) website, adicionando páginas de login e logout e páginas específicas do usuário e da equipe para visualizar os livros emprestados.
 
@@ -14,7 +14,7 @@ Neste tutorial, mostraremos como permitir que os usuários efetuem login no seu 
       <th scope="row">Pré-requisitos:</th>
       <td>
         Conclua todos os tópicos do tutorial anterior, incluindo
-        <a href="/pt-BR/docs/Learn/Server-side/Django/Sessions"
+        <a href="/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Sessions"
           >Django Tutorial Part 7: Sessions framework</a
         >.
       </td>
@@ -707,4 +707,4 @@ Em nosso próximo artigo, veremos como você pode usar os formulários Django pa
 - [Usando o sistema (default) de Autenticação do Django](https://docs.djangoproject.com/en/2.1/topics/auth/default//) (Django docs)
 - [Introdução a views baseadas em classe > Decorating class-based views](https://docs.djangoproject.com/en/2.1/topics/class-based-views/intro/#decorating-class-based-views) (Django docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django")}}

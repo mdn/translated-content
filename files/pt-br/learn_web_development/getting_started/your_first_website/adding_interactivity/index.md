@@ -4,7 +4,7 @@ slug: Learn_web_development/Getting_started/Your_first_website/Adding_interactiv
 original_slug: Learn/Getting_started_with_the_web/JavaScript_basics
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}
 
 JavaScript é uma linguagem de programação que adiciona interatividade ao seu site. Isso acontece em jogos, no comportamento das respostas quando botões são pressionados ou com entrada de dados em formulários; com estilo dinâmico; com animação, etc.
 Este artigo ajuda você a começar a usar o JavaScript e aumenta sua compreensão do que é possível.
@@ -475,4 +475,4 @@ Acabamos de arranhar a superfície do JavaScript. Se você gostou de jogar e des
 - [Aprenda JavaScript](https://learnjavascript.online/)
   - : Este é um excelente recurso para aspirantes a desenvolvedores da web! Aprenda JavaScript em um ambiente interativo, com aulas curtas e testes interativos, guiados por uma avaliação automatizada. As primeiras 40 aulas são gratuitas. O curso completo está disponível por um pequeno pagamento único.
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}

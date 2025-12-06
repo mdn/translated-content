@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local
 original_slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 Este artigo tem como objetivo explicar o que você vai aprender ao longo dos próximo tutoriais e dar uma visão geral do projeto que vamos desenvolver: um site de "local library" (Biblioteca Local, em tradução livre).
 
@@ -75,4 +75,4 @@ Se ficar perdido no meio do caminho, fique calmo. Você pode acessar o código i
 
 Agora que você entedeu o que é o site "Biblioteca Local " e o que vamos aprender ao longo do projeto, é hora de criar nossa estrutura de pastas e arquivos.
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
