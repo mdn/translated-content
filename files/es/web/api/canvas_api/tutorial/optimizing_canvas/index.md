@@ -19,4 +19,4 @@ A continuación una lista de tips par mejorar el rendimiento:
 - Con las animaciones, use {{domxref("window.requestAnimationFrame()")}}.
 - Probar el rendimiento con [JSPerf](http://jsperf.com).
 
-{{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Basic_animations")}}
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations")}}

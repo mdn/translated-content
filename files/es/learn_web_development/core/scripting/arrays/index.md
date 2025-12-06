@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Arrays
 original_slug: Learn/JavaScript/First_steps/Arrays
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Silly_story_generator", "conflicting/Learn_web_development/Core/Scripting")}}
 
 ## Arreglos
 
@@ -674,4 +674,4 @@ Lo único que queda por hacer es trabajar a través de la evaluación de este m�
 - [Colecciones indexadas](/es/docs/Web/JavaScript/Guide/Indexed_collections) — una guía de nivel avanzado sobre arreglos y sus primos, los arreglos tipadosa.
 - {{jsxref("Array")}}: la página de referencia del objeto `Array`, para obtener una guía de referencia detallada de las funciones analizadas en esta página y muchas más.
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Silly_story_generator", "conflicting/Learn_web_development/Core/Scripting")}}

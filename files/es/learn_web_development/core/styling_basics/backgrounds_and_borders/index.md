@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 original_slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics/Handling_different_text_directions", "Learn_web_development/Core/Styling_basics")}}
 
 En este artículo, veremos algunas de las cosas creativas que puedes hacer con los fondos y los bordes de CSS. Añadir degradados, imágenes de fondo o redondear esquinas; los fondos y los bordes son la solución para una gran cantidad de cuestiones de estilo en CSS.
 
@@ -312,4 +312,4 @@ En este artículo hemos expuesto bastantes conceptos y puedes ver que hay mucho 
 
 En el próximo artículo descubriremos cómo interacciona el modo de escritura de tu documento con tu CSS. ¿Qué sucede cuando el texto no fluye de izquierda a derecha?
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics/Handling_different_text_directions", "Learn_web_development/Core/Styling_basics")}}

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Box_model
 original_slug: Learn/CSS/Building_blocks/The_box_model
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics")}}
 
 Todo en CSS tiene una caja alrededor, y comprender estas cajas es clave para poder crear diseños con CSS o para alinear elementos con otros elementos. En este artículo, echaremos un vistazo más de cerca al _modelo de cajas_ en CSS con el que vas a poder crear diseños de compaginación más complejos con una comprensión de cómo funciona y la terminología relacionada.
 
@@ -319,4 +319,4 @@ Eso es lo que hay que entender sobre el modelo de cajas. Es posible que en el fu
 
 En el artículo siguiente veremos cómo se pueden usar los [fondos y bordes](/es/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders) para hacer que tus simples cajas presenten un aspecto más interesante.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics")}}

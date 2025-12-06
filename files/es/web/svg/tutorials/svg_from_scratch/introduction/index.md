@@ -4,7 +4,7 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Introduction
 original_slug: Web/SVG/Tutorial/Introduction
 ---
 
-{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial", "Web/SVG/Tutorial/Getting_Started") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch", "Web/SVG/Tutorials/SVG_from_scratch/Getting_started") }}
 
 ![Ejemplo de imagenes vectoriales, una cría de leon, una curva con flechas direccionales a intervalos regulares y un texto que sigue una trayectoria ondulada](svg_overview.png)[SVG](/es/docs/Web/SVG) es un lenguaje [XML](/es/docs/Web/XML/Guides/XML_introduction), parecido a [XHTML](/es/docs/Glossary/XHTML), el cual puede ser usado para dibujar gráficos vectoriales, como los mostrados a la derecha. Puede ser usado para crear una imagen ya sea especificando todas las líneas y formas necesarias, modificando las imágenes matriciales (raster images) o una combinación de ambas. La imagen y sus componentes pueden ser transformados, compuestos o filtrados para cambiar completamente su apariencia.
 
@@ -37,4 +37,4 @@ En adición a la recomendación de SVG completo, el grupo de trabajo en W3C intr
 
 Hubo planes para una especificación SVG Print, la cual habría agregado soporte para páginas múltiples y administración de color mejorada. Esta tarea fue abandonada.
 
-{{ PreviousNext("Web/SVG/Tutorial", "Web/SVG/Tutorial/Getting_Started") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch", "Web/SVG/Tutorials/SVG_from_scratch/Getting_started") }}

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/CSS_layout/Grids
 original_slug: Learn/CSS/CSS_layout/Grids
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout")}}
 
 La compaginación en cuadrícula con CSS es un método de diseño de páginas web en dos dimensiones. Te permite distribuir el contenido en filas y columnas, y tiene muchas características que facilitan la creación de diseños complejos. Este artículo te proporciona todo lo que necesitas saber para comenzar con el diseño de páginas web.
 
@@ -773,4 +773,4 @@ En esta descripción general, hemos recorrido las características principales d
 - [Guías de cuadrícula CSS](/es/docs/Web/CSS/CSS_grid_layout#guides)
 - [Inspector de cuadrícula CSS: Examinar diseños de cuadrícula](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout")}}

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Text_styling/Styling_lists
 original_slug: Learn/CSS/Styling_text/Styling_lists
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}
 
 Las [listas](/es/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#lists) se comportan como cualquier otro texto en su mayor parte, pero hay algunas propiedades CSS específicas de las listas que debes conocer y algunas prácticas recomendadas a tener en cuenta. Este artículo te lo explica.
 
@@ -18,7 +18,7 @@ Las [listas](/es/docs/Learn_web_development/Core/Structuring_content/Headings_an
         <a href="/es/docs/Learn/HTML/Introduccion_a_HTML">introducción a HTML</a
         >), nociones de cómo trabaja con CSS (estudio
         <a href="/es/docs/Learn/CSS/First_steps">introducción a CSS</a>),
-        <a href="/es/docs/Learn/CSS/Styling_text/Fundamentals"
+        <a href="/es/docs/Learn_web_development/Core/Text_styling/Fundamentals"
           >Conocimientos básicos de CSS para texto y tipos de letra</a
         >.
       </td>
@@ -434,4 +434,4 @@ Los contadores CSS proporcionan herramientas avanzadas para la personalización 
 
 La aplicación de estilo a listas se domina con relativa facilidad una vez que conoces algunos principios básicos y propiedades específicas asociados. En el artículo siguiente vamos a continuar con las técnicas de aplicación de estilo a enlaces.
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}

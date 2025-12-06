@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Styling_a_bio_page
 original_slug: Learn/CSS/First_steps/Styling_a_biography_page
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Styling_basics/What_is_CSS", "conflicting/Learn_web_development/Core/Styling_basics")}}
 
 Con las cosas que has aprendido en las últimas lecciones, puedes darle formato a documentos de texto simple utilizando CSS para agregar tu propio estilo a ellos. Esta evaluación te da una posibilidad de hacer eso.
 
@@ -80,4 +80,4 @@ Si deseas que tu trabajo sea evaluado, o estás atorado y quieres solicitar ayud
 
 Felicitaciones por completar este primer modulo!. Deberías tener un buen entendimiento general de CSS, y ser capaz de comprender bastante de los que está sucediendo en una hoja de estilo. En el módulo siguiente, [bloques de construccion CSS](/es/docs/Learn_web_development/Core/Styling_basics), revisaremos en profundidad algunas áreas clave.
 
-{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{PreviousMenu("Learn_web_development/Core/Styling_basics/What_is_CSS", "conflicting/Learn_web_development/Core/Styling_basics")}}
