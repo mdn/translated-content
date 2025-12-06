@@ -10703,7 +10703,7 @@
       "Nikoro"
     ]
   },
-  "Web/CSS/CSS_animations": {
+  "Web/CSS/Guides/Animations": {
     "modified": "2019-03-23T22:43:47.167Z",
     "contributors": [
       "Geloosa",
@@ -10711,7 +10711,7 @@
       "MexieAndCo"
     ]
   },
-  "Web/CSS/CSS_animations/Using_CSS_animations": {
+  "Web/CSS/Guides/Animations/Using": {
     "modified": "2019-09-08T05:26:38.746Z",
     "contributors": [
       "dmarkin",
@@ -10727,49 +10727,49 @@
       "ukarim"
     ]
   },
-  "Web/CSS/CSS_backgrounds_and_borders/Border-image_generator": {
+  "Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator": {
     "modified": "2019-03-23T22:25:50.600Z",
     "contributors": [
       "BychekRU"
     ]
   },
-  "Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator": {
+  "Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator": {
     "modified": "2019-03-23T22:40:49.075Z",
     "contributors": [
       "vito_falcone"
     ]
   },
-  "Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator": {
+  "Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator": {
     "modified": "2019-03-18T20:43:50.074Z",
     "contributors": [
       "BychekRU"
     ]
   },
-  "Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds": {
+  "Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds": {
     "modified": "2019-03-23T22:13:04.810Z",
     "contributors": [
       "J-N-Z"
     ]
   },
-  "Web/CSS/CSS_basic_user_interface": {
+  "Web/CSS/Guides/Basic_user_interface": {
     "modified": "2019-03-18T21:18:49.969Z",
     "contributors": [
       "SphinxKnight"
     ]
   },
-  "Web/CSS/CSS_box_alignment": {
+  "Web/CSS/Guides/Box_alignment": {
     "modified": "2019-03-18T21:33:03.343Z",
     "contributors": [
       "slychai85"
     ]
   },
-  "Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox": {
+  "Web/CSS/Guides/Box_alignment/In_flexbox": {
     "modified": "2020-06-05T15:51:55.007Z",
     "contributors": [
       "randomesis"
     ]
   },
-  "Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model": {
+  "Web/CSS/Guides/Box_model/Introduction": {
     "modified": "2019-03-23T23:02:32.915Z",
     "contributors": [
       "akovbovich",
@@ -10777,7 +10777,7 @@
       "codedokode"
     ]
   },
-  "Web/CSS/CSS_box_model/Mastering_margin_collapsing": {
+  "Web/CSS/Guides/Box_model/Margin_collapsing": {
     "modified": "2020-07-01T02:44:27.480Z",
     "contributors": [
       "ialexi-bl",
@@ -10793,20 +10793,27 @@
       "hinduCoder"
     ]
   },
-  "Web/CSS/CSS_cascade/Inheritance": {
+  "Web/CSS/Guides/Cascade/Inheritance": {
     "modified": "2019-03-23T22:44:45.904Z",
     "contributors": [
       "ViktorPalansky",
       "BychekRU"
     ]
   },
-  "Web/CSS/CSS_cascade/Shorthand_properties": {
+  "Web/CSS/Guides/Cascade/Property_value_processing": {
+    "modified": "2019-03-23T22:31:07.849Z",
+    "contributors": [
+      "warsan",
+      "BychekRU"
+    ]
+  },
+  "Web/CSS/Guides/Cascade/Shorthand_properties": {
     "modified": "2019-03-23T22:04:06.155Z",
     "contributors": [
       "brolnickij"
     ]
   },
-  "Web/CSS/CSS_cascade/Specificity": {
+  "Web/CSS/Guides/Cascade/Specificity": {
     "modified": "2019-03-23T22:31:13.059Z",
     "contributors": [
       "kirillsh",
@@ -10818,14 +10825,7 @@
       "102"
     ]
   },
-  "Web/CSS/CSS_cascade/Value_processing": {
-    "modified": "2019-03-23T22:31:07.849Z",
-    "contributors": [
-      "warsan",
-      "BychekRU"
-    ]
-  },
-  "Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties": {
+  "Web/CSS/Guides/Cascading_variables/Using_custom_properties": {
     "modified": "2019-05-25T05:15:45.165Z",
     "contributors": [
       "Allakazam",
@@ -10839,14 +10839,14 @@
       "ArsenBespalov"
     ]
   },
-  "Web/CSS/CSS_colors": {
+  "Web/CSS/Guides/Colors": {
     "modified": "2019-03-23T22:34:30.410Z",
     "contributors": [
       "BychekRU",
       "Krenair"
     ]
   },
-  "Web/CSS/CSS_colors/Applying_color": {
+  "Web/CSS/Guides/Colors/Applying_color": {
     "modified": "2019-03-18T21:45:50.255Z",
     "contributors": [
       "ChristinaKrapivina",
@@ -10854,7 +10854,7 @@
       "kasperyan"
     ]
   },
-  "Web/CSS/CSS_colors/Color_format_converter": {
+  "Web/CSS/Guides/Colors/Color_format_converter": {
     "modified": "2019-03-23T22:34:32.727Z",
     "contributors": [
       "altsab",
@@ -10862,14 +10862,14 @@
       "buhantsev"
     ]
   },
-  "Web/CSS/CSS_counter_styles/Using_CSS_counters": {
+  "Web/CSS/Guides/Counter_styles/Using_counters": {
     "modified": "2020-04-28T15:39:35.383Z",
     "contributors": [
       "arnoldovich",
       "moshenskyDV"
     ]
   },
-  "Web/CSS/CSS_display/Block_formatting_context": {
+  "Web/CSS/Guides/Display/Block_formatting_context": {
     "modified": "2019-10-04T09:05:37.001Z",
     "contributors": [
       "Radragon",
@@ -10882,26 +10882,26 @@
       "akhabibullina"
     ]
   },
-  "Web/CSS/CSS_display/Containing_block": {
+  "Web/CSS/Guides/Display/Containing_block": {
     "modified": "2020-01-07T10:40:33.535Z",
     "contributors": [
       "alattalatta",
       "Radragon"
     ]
   },
-  "Web/CSS/CSS_display/Flow_layout": {
+  "Web/CSS/Guides/Display/Flow_layout": {
     "modified": "2020-03-07T13:30:09.947Z",
     "contributors": [
       "Radragon"
     ]
   },
-  "Web/CSS/CSS_display/Introduction_to_formatting_contexts": {
+  "Web/CSS/Guides/Display/Formatting_contexts": {
     "modified": "2020-03-08T14:31:08.319Z",
     "contributors": [
       "Radragon"
     ]
   },
-  "Web/CSS/CSS_display/Visual_formatting_model": {
+  "Web/CSS/Guides/Display/Visual_formatting_model": {
     "modified": "2019-09-20T10:50:10.502Z",
     "contributors": [
       "RomanBush",
@@ -10916,7 +10916,7 @@
       "ViT09"
     ]
   },
-  "Web/CSS/CSS_flexible_box_layout": {
+  "Web/CSS/Guides/Flexible_box_layout": {
     "modified": "2020-10-19T05:53:46.314Z",
     "contributors": [
       "kyusov",
@@ -10924,7 +10924,7 @@
       "WynnChen"
     ]
   },
-  "Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container": {
+  "Web/CSS/Guides/Flexible_box_layout/Aligning_items": {
     "modified": "2020-05-25T19:08:16.925Z",
     "contributors": [
       "synedvorkham",
@@ -10938,7 +10938,7 @@
       "dubtar"
     ]
   },
-  "Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox": {
+  "Web/CSS/Guides/Flexible_box_layout/Basic_concepts": {
     "modified": "2020-07-30T04:09:14.375Z",
     "contributors": [
       "aka.sonja",
@@ -10948,26 +10948,26 @@
       "kalitadanila"
     ]
   },
-  "Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items": {
+  "Web/CSS/Guides/Flexible_box_layout/Wrapping_items": {
     "modified": "2020-07-12T10:15:34.642Z",
     "contributors": [
       "PavelKoroteev",
       "RomanBush"
     ]
   },
-  "Web/CSS/CSS_fonts": {
+  "Web/CSS/Guides/Fonts": {
     "modified": "2020-10-10T08:59:00.093Z",
     "contributors": [
       "StanEffy"
     ]
   },
-  "Web/CSS/CSS_fonts/WOFF": {
+  "Web/CSS/Guides/Fonts/WOFF": {
     "modified": "2020-10-15T22:33:54.379Z",
     "contributors": [
       "bogpok"
     ]
   },
-  "Web/CSS/CSS_grid_layout": {
+  "Web/CSS/Guides/Grid_layout": {
     "modified": "2020-04-17T02:22:53.979Z",
     "contributors": [
       "alexphilin",
@@ -10982,7 +10982,7 @@
       "SHOOROOP"
     ]
   },
-  "Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout": {
+  "Web/CSS/Guides/Grid_layout/Basic_concepts": {
     "modified": "2020-10-15T04:59:47.084Z",
     "contributors": [
       "Virss",
@@ -11004,7 +11004,7 @@
       "chemaxa"
     ]
   },
-  "Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout": {
+  "Web/CSS/Guides/Grid_layout/Box_alignment": {
     "modified": "2020-06-05T16:04:56.391Z",
     "contributors": [
       "randomesis",
@@ -11012,21 +11012,13 @@
       "slychai85"
     ]
   },
-  "Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement": {
-    "modified": "2020-09-29T19:08:10.559Z",
-    "contributors": [
-      "Zulcom",
-      "denisvovchenko",
-      "coshturnina"
-    ]
-  },
-  "Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines": {
-    "modified": "2020-04-04T03:56:43.842Z",
+  "Web/CSS/Guides/Grid_layout/Common_grid_layouts": {
+    "modified": "2020-04-12T13:44:00.238Z",
     "contributors": [
       "anna.bunakova"
     ]
   },
-  "Web/CSS/CSS_grid_layout/Grid_template_areas": {
+  "Web/CSS/Guides/Grid_layout/Grid_template_areas": {
     "modified": "2019-03-18T21:10:23.458Z",
     "contributors": [
       "maximTorba",
@@ -11035,19 +11027,27 @@
       "coshturnina"
     ]
   },
-  "Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes": {
+  "Web/CSS/Guides/Grid_layout/Line-based_placement": {
+    "modified": "2020-09-29T19:08:10.559Z",
+    "contributors": [
+      "Zulcom",
+      "denisvovchenko",
+      "coshturnina"
+    ]
+  },
+  "Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes": {
     "modified": "2019-03-18T21:35:04.965Z",
     "contributors": [
       "slychai85"
     ]
   },
-  "Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids": {
-    "modified": "2020-04-12T13:44:00.238Z",
+  "Web/CSS/Guides/Grid_layout/Named_grid_lines": {
+    "modified": "2020-04-04T03:56:43.842Z",
     "contributors": [
       "anna.bunakova"
     ]
   },
-  "Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods": {
+  "Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods": {
     "modified": "2020-12-13T10:57:37.943Z",
     "contributors": [
       "deepdarkness",
@@ -11056,19 +11056,19 @@
       "InkFaust"
     ]
   },
-  "Web/CSS/CSS_grid_layout/Subgrid": {
+  "Web/CSS/Guides/Grid_layout/Subgrid": {
     "modified": "2019-11-24T10:14:04.099Z",
     "contributors": [
       "hisbvdis"
     ]
   },
-  "Web/CSS/CSS_images": {
+  "Web/CSS/Guides/Images": {
     "modified": "2019-03-23T22:33:49.629Z",
     "contributors": [
       "BychekRU"
     ]
   },
-  "Web/CSS/CSS_images/Replaced_element_properties": {
+  "Web/CSS/Guides/Images/Replaced_element_properties": {
     "modified": "2019-03-23T22:31:00.260Z",
     "contributors": [
       "SelenIT",
@@ -11076,26 +11076,26 @@
       "BychekRU"
     ]
   },
-  "Web/CSS/CSS_images/Using_CSS_gradients": {
+  "Web/CSS/Guides/Images/Using_gradients": {
     "modified": "2020-03-30T10:47:12.450Z",
     "contributors": [
       "Virss"
     ]
   },
-  "Web/CSS/CSS_media_queries": {
+  "Web/CSS/Guides/Media_queries": {
     "modified": "2019-03-23T22:04:37.337Z",
     "contributors": [
       "tropikan4",
       "Sheppy"
     ]
   },
-  "Web/CSS/CSS_media_queries/Testing_media_queries": {
+  "Web/CSS/Guides/Media_queries/Testing": {
     "modified": "2020-10-15T22:17:28.449Z",
     "contributors": [
       "opereverzeva"
     ]
   },
-  "Web/CSS/CSS_media_queries/Using_media_queries": {
+  "Web/CSS/Guides/Media_queries/Using": {
     "modified": "2020-02-12T11:53:35.471Z",
     "contributors": [
       "halfdead30",
@@ -11109,7 +11109,7 @@
       "valeryvitkus"
     ]
   },
-  "Web/CSS/CSS_multicol_layout/Using_multicol_layouts": {
+  "Web/CSS/Guides/Multicol_layout/Using": {
     "modified": "2019-07-22T11:08:23.191Z",
     "contributors": [
       "a-bodrova",
@@ -11118,13 +11118,13 @@
       "ldone"
     ]
   },
-  "Web/CSS/CSS_paged_media": {
+  "Web/CSS/Guides/Paged_media": {
     "modified": "2020-10-12T15:00:21.800Z",
     "contributors": [
       "at940266"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Stacking_context": {
+  "Web/CSS/Guides/Positioned_layout/Stacking_context": {
     "modified": "2019-03-23T22:44:33.535Z",
     "contributors": [
       "haritonasty",
@@ -11135,7 +11135,7 @@
       "lerniri"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Stacking_without_z-index": {
+  "Web/CSS/Guides/Positioned_layout/Stacking_without_z-index": {
     "modified": "2020-04-16T01:00:44.047Z",
     "contributors": [
       "pelyp47",
@@ -11143,7 +11143,7 @@
       "SphinxKnight"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index": {
+  "Web/CSS/Guides/Positioned_layout/Understanding_z-index": {
     "modified": "2020-04-16T00:54:23.175Z",
     "contributors": [
       "pelyp47",
@@ -11154,25 +11154,25 @@
       "Jeremie"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Using_z-index": {
+  "Web/CSS/Guides/Positioned_layout/Using_z-index": {
     "modified": "2020-04-16T01:16:28.675Z",
     "contributors": [
       "pelyp47"
     ]
   },
-  "Web/CSS/CSS_ruby_layout": {
+  "Web/CSS/Guides/Ruby_layout": {
     "modified": "2019-03-18T21:40:32.040Z",
     "contributors": [
       "FeliciaJess"
     ]
   },
-  "Web/CSS/CSS_scroll_snap/Basic_concepts": {
+  "Web/CSS/Guides/Scroll_snap/Basic_concepts": {
     "modified": "2020-04-24T16:34:16.121Z",
     "contributors": [
       "hisbvdis"
     ]
   },
-  "Web/CSS/CSS_selectors": {
+  "Web/CSS/Guides/Selectors": {
     "modified": "2019-09-26T17:15:05.505Z",
     "contributors": [
       "RomanBush",
@@ -11182,27 +11182,27 @@
       "irenprkpv"
     ]
   },
-  "Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors": {
+  "Web/CSS/Guides/Selectors/Using_:target": {
     "modified": "2019-03-18T21:30:19.329Z",
     "contributors": [
       "Hoopers_Hooch"
     ]
   },
-  "Web/CSS/CSS_syntax/At-rules": {
+  "Web/CSS/Guides/Syntax/At-rules": {
     "modified": "2019-11-07T14:56:39.596Z",
     "contributors": [
       "sashakrauzer",
       "JokerHD"
     ]
   },
-  "Web/CSS/CSS_syntax/Comments": {
+  "Web/CSS/Guides/Syntax/Comments": {
     "modified": "2019-03-23T22:32:40.563Z",
     "contributors": [
       "BychekRU",
       "Evgeny166"
     ]
   },
-  "Web/CSS/CSS_syntax/Syntax": {
+  "Web/CSS/Guides/Syntax/Introduction": {
     "modified": "2019-07-26T04:52:30.660Z",
     "contributors": [
       "munaticu",
@@ -11210,13 +11210,13 @@
       "Norville"
     ]
   },
-  "Web/CSS/CSS_table": {
+  "Web/CSS/Guides/Table": {
     "modified": "2019-03-23T22:31:01.222Z",
     "contributors": [
       "BychekRU"
     ]
   },
-  "Web/CSS/CSS_transitions/Using_CSS_transitions": {
+  "Web/CSS/Guides/Transitions/Using": {
     "modified": "2019-03-18T20:34:12.871Z",
     "contributors": [
       "Sakayama",
@@ -11228,7 +11228,7 @@
       "BychekRU"
     ]
   },
-  "Web/CSS/CSS_writing_modes": {
+  "Web/CSS/Guides/Writing_modes": {
     "modified": "2020-03-07T12:38:48.764Z",
     "contributors": [
       "Radragon"
@@ -21689,13 +21689,7 @@
       "Sheppy"
     ]
   },
-  "Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion": {
-    "modified": "2019-12-18T06:44:21.121Z",
-    "contributors": [
-      "KolesnikovR"
-    ]
-  },
-  "Web/Security/Same-origin_policy": {
+  "Web/Security/Defenses/Same-origin_policy": {
     "modified": "2020-10-20T11:28:42.439Z",
     "contributors": [
       "niklimoff01",
@@ -21704,6 +21698,12 @@
       "iamvector",
       "vladlipski",
       "ZVanoZ"
+    ]
+  },
+  "Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion": {
+    "modified": "2019-12-18T06:44:21.121Z",
+    "contributors": [
+      "KolesnikovR"
     ]
   },
   "Web/URI/Reference/Schemes/data": {
