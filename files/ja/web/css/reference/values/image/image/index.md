@@ -1,9 +1,8 @@
 ---
 title: image()
 slug: Web/CSS/Reference/Values/image/image
-original_slug: Web/CSS/image/image
 l10n:
-  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`image()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 {{CSSxRef("&lt;image&gt;")}} を {{CSSxRef("url_function", "url()")}} 関数に似た様式で定義しますが、画像の書字方向を指定したり、メディアフラグメントで定義された画像の一部だけを表示したり、指定された画像がどれも描画できなかった場合の予備として単色を指定するなどの機能が追加されています。
@@ -13,11 +12,28 @@ l10n:
 
 ## 構文
 
-{{CSSSyntax}}
+```css-nolint
+/* 基本的な使用 */
+image("image1.jpg");
+image(url("image2.jpg"));
 
-ここで
+/* 書字方向に依存した画像 */
+image(ltr "image1.jpg");
+image(rtl "image1.jpg");
 
-- `image-tags`{{Optional_Inline}}
+/* 画像の代替 */
+image("image1.jpg", black);
+
+/* 画像の断片 */
+image("image1.jpg#xywh=40,0,20,20");
+
+/* 単一色の画像 */
+image(rgb(0 0 255 / 0.5)), url("bg-image.png");
+```
+
+### 値
+
+- `image-tags` {{optional_inline}}
   - : 画像の書字方向、左書きならば `ltr`、右書きならば `rtl` です。
 - `image-src` {{Optional_Inline}}
   - : 0 個以上の {{cssxref("url_value", "&lt;url&gt;")}} または {{CSSxRef("&lt;string&gt;")}} で、画像のソースをオプションの画像フラグメント識別子と共に指定します。
@@ -40,7 +56,7 @@ background-image: image("my-image.webp#xywh=0,20,40,60");
 
 `#xywh=#,#,#,#` というメディアフラグメントの構文は、カンマで区切られた 4 つの数値を取ります。最初の 2 つの値は、作成されるボックスの始点の X および Y 座標を表します。 3 つ目の値はボックスの幅、最後の値は高さです。既定では、これらはピクセル値です。[メディア仕様書の spacial dimension definition](https://www.w3.org/TR/media-frags/#naming-space) によると、パーセント値にも対応しています。
 
-```css
+```plain
 xywh=160,120,320,240        /* 320x240 の画像を x=160 および y=120 の位置から使用 */
 xywh=pixel:160,120,320,240 /* 320x240 の画像を x=160 および y=120 の位置から使用 */
 xywh=percent:25,25,50,50    /* 50%x50% の画像を x=25% および y=25% の位置から使用 */
@@ -58,12 +74,16 @@ xywh=percent:25,25,50,50    /* 50%x50% の画像を x=25% および y=25% の位
 
 色見本の寸法は、 {{CSSxRef("background-size")}} プロパティで設定できます。これは、要素全体を覆うように色を設定する `background-color` とは異なります。 `image(color)` と `background-color` の両方を配置すると、 {{CSSxRef("background-clip")}} と {{CSSxRef("background-origin")}} プロパティの影響を受けます。
 
+## 形式文法
+
+{{CSSSyntax}}
+
 ## アクセシビリティ
 
 ブラウザーは、背景画像に関する特別な情報を支援技術に提供しません。これは主にスクリーンリーダーにとって重要なことで、スクリーンリーダーはその存在を告知しないため、ユーザーに何も伝えません。画像に、ページ全体の目的を理解するために重要な情報が含まれている場合は、文書内で意味的に記述したほうがよいでしょう。
 
 - [MDN WCAG を理解する, ガイドライン 1.1 の説明](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
-- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 この機能は、画像の読み込みに失敗したときに予備の色を提供することで、アクセシビリティの向上に役立ちます。この機能は、すべての背景画像に背景色を含めることで実現できますが、 CSS の `image()` 関数では、画像の読み込みに失敗したときに背景色のみを含めることができます。つまり、透過 PNG/GIF/WebP の読み込みに失敗したときに、予備の色を追加することができます。
 
@@ -138,7 +158,7 @@ ul {
 
 ## ブラウザーの互換性
 
-{{Compat}}
+今のところ、この機能に対応しているブラウザーはありません。
 
 ## 関連情報
 
@@ -149,3 +169,4 @@ ul {
 - {{CSSxRef("&lt;gradient&gt;")}}
 - {{CSSxRef("image/image-set", "image-set()")}}
 - {{CSSxRef("cross-fade", "cross-fade()")}}
+- [CSS 画像](/ja/docs/Web/CSS/Guides/Images)モジュール
