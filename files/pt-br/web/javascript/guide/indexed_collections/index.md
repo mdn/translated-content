@@ -3,7 +3,7 @@ title: Coleções Indexadas
 slug: Web/JavaScript/Guide/Indexed_collections
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}
 
 Este capítulo introduz coleções de dados que são ordenados por um valor indexado. Isso inclui construtores de arrays e array-like como objetos {{jsxref("Array")}} e {{jsxref("TypedArray")}}.
 
@@ -493,4 +493,4 @@ Views de arrays tipados possuem nomes autodescritivos e provêm views para todos
 
 Para mais informações, veja [Arrays tipados no JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays) e documentos de referência para os diferentes objetos {{jsxref("TypedArray")}}.
 
-{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}
