@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-La méthode **`checkValidity()`** de l'interface {{DOMxRef("HTMLFormElement")}} retourne une valeur booléenne qui indique si tous les contrôles associés respectent les règles de [validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation) qui leur sont appliquées. La méthode déclenche également un évènement annulable {{DOMxRef("HTMLElement/invalid_event", "invalid")}} sur chaque élément invalide, mais pas sur l'élément de formulaire lui‑même. Comme il n'existe pas de comportement navigateur par défaut pour `checkValidity()`, annuler cet évènement `invalid` n'a aucun effet.
+La méthode **`checkValidity()`** de l'interface {{DOMxRef("HTMLFormElement")}} retourne une valeur booléenne qui indique si tous les contrôles associés respectent les règles de [validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation) qui leur sont appliquées. La méthode déclenche également un évènement annulable {{DOMxRef("HTMLInputElement/invalid_event", "invalid")}} sur chaque élément invalide, mais pas sur l'élément de formulaire lui‑même. Comme il n'existe pas de comportement navigateur par défaut pour `checkValidity()`, annuler cet évènement `invalid` n'a aucun effet.
 
 > [!NOTE]
 > Les pseudo-classes CSS {{CSSxRef(":valid")}} et {{CSSxRef(":invalid")}} sont appliquées aux éléments `<form>` en fonction de la validité de leurs contrôles de formulaire propriétaires, et non de la validité de l'élément `<form>` lui‑même.
