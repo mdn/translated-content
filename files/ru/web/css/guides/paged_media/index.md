@@ -1,7 +1,6 @@
 ---
 title: Постраничные носители
 slug: Web/CSS/Guides/Paged_media
-original_slug: Web/CSS/CSS_paged_media
 ---
 
 {{cssref}}

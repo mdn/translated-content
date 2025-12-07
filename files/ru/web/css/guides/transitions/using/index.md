@@ -1,7 +1,6 @@
 ---
 title: Использование CSS переходов
 slug: Web/CSS/Guides/Transitions/Using
-original_slug: Web/CSS/CSS_transitions/Using_CSS_transitions
 ---
 
 {{CSSref}}{{SeeCompatTable}}

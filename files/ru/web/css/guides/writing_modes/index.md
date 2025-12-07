@@ -1,7 +1,6 @@
 ---
 title: Режимы письма CSS
 slug: Web/CSS/Guides/Writing_modes
-original_slug: Web/CSS/CSS_writing_modes
 ---
 
 {{CSSRef}}

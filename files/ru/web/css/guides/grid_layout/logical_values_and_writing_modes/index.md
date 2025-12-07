@@ -1,7 +1,6 @@
 ---
 title: CSS grids, logical values and writing modes
 slug: Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes
-original_slug: Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
 ---
 
 {{CSSRef}}

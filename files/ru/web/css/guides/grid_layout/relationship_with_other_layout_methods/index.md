@@ -1,7 +1,6 @@
 ---
 title: Связь Grid-разметки с другими методами
 slug: Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods
-original_slug: Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods
 ---
 
 {{CSSRef}}

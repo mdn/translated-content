@@ -1,7 +1,6 @@
 ---
 title: CSS Text
 slug: Web/CSS/Guides/Text
-original_slug: Web/CSS/CSS_text
 ---
 
 {{CSSRef}}

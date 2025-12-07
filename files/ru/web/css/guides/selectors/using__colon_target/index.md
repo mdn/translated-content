@@ -1,7 +1,6 @@
 ---
 title: Использование псевдокласса :target в селекторах
 slug: Web/CSS/Guides/Selectors/Using_:target
-original_slug: Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 ---
 
 {{CSSRef}}

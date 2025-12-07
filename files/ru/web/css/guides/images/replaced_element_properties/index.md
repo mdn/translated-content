@@ -1,7 +1,6 @@
 ---
 title: Замещаемый элемент
 slug: Web/CSS/Guides/Images/Replaced_element_properties
-original_slug: Web/CSS/CSS_images/Replaced_element_properties
 ---
 
 {{CSSRef}}

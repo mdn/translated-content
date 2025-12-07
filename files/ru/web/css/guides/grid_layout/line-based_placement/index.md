@@ -1,7 +1,6 @@
 ---
 title: Расположение элементов по грид-линиям с помощью CSS Grid
 slug: Web/CSS/Guides/Grid_layout/Line-based_placement
-original_slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 ---
 
 {{CSSRef}}

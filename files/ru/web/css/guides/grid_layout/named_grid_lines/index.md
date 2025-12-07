@@ -1,7 +1,6 @@
 ---
 title: Layout using named grid lines
 slug: Web/CSS/Guides/Grid_layout/Named_grid_lines
-original_slug: Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: CSS Transforms
 slug: Web/CSS/Guides/Transforms
-original_slug: Web/CSS/CSS_transforms
 ---
 
 {{CSSRef}}

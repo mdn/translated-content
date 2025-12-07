@@ -1,7 +1,6 @@
 ---
 title: Шаблоны грид-областей
 slug: Web/CSS/Guides/Grid_layout/Grid_template_areas
-original_slug: Web/CSS/CSS_grid_layout/Grid_template_areas
 ---
 
 {{CSSRef}}

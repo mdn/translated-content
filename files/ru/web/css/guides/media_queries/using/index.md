@@ -1,7 +1,6 @@
 ---
 title: Использование медиавыражений
 slug: Web/CSS/Guides/Media_queries/Using
-original_slug: Web/CSS/CSS_media_queries/Using_media_queries
 ---
 
 {{cssref}}

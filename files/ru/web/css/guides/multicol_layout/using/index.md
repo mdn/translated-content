@@ -1,7 +1,6 @@
 ---
 title: Использование CSS разметки для многих колонок
 slug: Web/CSS/Guides/Multicol_layout/Using
-original_slug: Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: Комментарии
 slug: Web/CSS/Guides/Syntax/Comments
-original_slug: Web/CSS/CSS_syntax/Comments
 ---
 
 {{CSSRef}}

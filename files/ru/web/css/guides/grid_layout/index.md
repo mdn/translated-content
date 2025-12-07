@@ -1,7 +1,6 @@
 ---
 title: CSS Grid Layout
 slug: Web/CSS/Guides/Grid_layout
-original_slug: Web/CSS/CSS_grid_layout
 ---
 
 {{CSSRef}}

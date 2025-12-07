@@ -1,7 +1,6 @@
 ---
 title: Media queries
 slug: Web/CSS/Guides/Media_queries
-original_slug: Web/CSS/CSS_media_queries
 ---
 
 {{CSSRef}}
