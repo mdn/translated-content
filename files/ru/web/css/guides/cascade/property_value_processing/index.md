@@ -1,7 +1,6 @@
 ---
 title: Действительное значение
 slug: Web/CSS/Guides/Cascade/Property_value_processing
-original_slug: Web/CSS/CSS_cascade/Value_processing
 ---
 
 {{CSSRef}}

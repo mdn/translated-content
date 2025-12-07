@@ -1,7 +1,6 @@
 ---
 title: Выравнивание блоков в CSS разметке Grid
 slug: Web/CSS/Guides/Grid_layout/Box_alignment
-original_slug: Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
 ---
 
 {{CSSRef}}

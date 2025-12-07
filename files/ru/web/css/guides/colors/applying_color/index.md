@@ -1,7 +1,6 @@
 ---
 title: Применение цвета к HTML-элементам с помощью CSS
 slug: Web/CSS/Guides/Colors/Applying_color
-original_slug: Web/CSS/CSS_colors/Applying_color
 ---
 
 {{CSSRef}}

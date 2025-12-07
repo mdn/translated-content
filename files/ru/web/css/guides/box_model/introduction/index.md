@@ -1,7 +1,6 @@
 ---
 title: Блоковая модель (боксовая модель, box model)
 slug: Web/CSS/Guides/Box_model/Introduction
-original_slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 ---
 
 {{CSSRef}}

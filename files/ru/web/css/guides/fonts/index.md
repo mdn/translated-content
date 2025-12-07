@@ -1,7 +1,6 @@
 ---
 title: CSS Fonts
 slug: Web/CSS/Guides/Fonts
-original_slug: Web/CSS/CSS_fonts
 ---
 
 {{CSSRef}}

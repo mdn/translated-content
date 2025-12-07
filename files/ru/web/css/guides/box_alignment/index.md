@@ -1,7 +1,6 @@
 ---
 title: Выравнивание полей CSS
 slug: Web/CSS/Guides/Box_alignment
-original_slug: Web/CSS/CSS_box_alignment
 ---
 
 {{CSSRef}}

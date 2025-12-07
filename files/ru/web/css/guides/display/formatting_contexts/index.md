@@ -1,7 +1,6 @@
 ---
 title: Введение в контексты форматирования
 slug: Web/CSS/Guides/Display/Formatting_contexts
-original_slug: Web/CSS/CSS_display/Introduction_to_formatting_contexts
 ---
 
 {{CSSRef}}

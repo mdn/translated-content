@@ -1,7 +1,6 @@
 ---
 title: CSS Flexible Box Layout
 slug: Web/CSS/Guides/Flexible_box_layout
-original_slug: Web/CSS/CSS_flexible_box_layout
 ---
 
 {{CSSRef}}

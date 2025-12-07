@@ -1,7 +1,6 @@
 ---
 title: Специфичность
 slug: Web/CSS/Guides/Cascade/Specificity
-original_slug: Web/CSS/CSS_cascade/Specificity
 ---
 
 {{cssref}}

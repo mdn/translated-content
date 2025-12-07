@@ -1,7 +1,6 @@
 ---
 title: Выравнивание элементов во Flex контейнере
 slug: Web/CSS/Guides/Flexible_box_layout/Aligning_items
-original_slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: Основные понятия Grid Layout
 slug: Web/CSS/Guides/Grid_layout/Basic_concepts
-original_slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 ---
 
 {{CSSRef}}

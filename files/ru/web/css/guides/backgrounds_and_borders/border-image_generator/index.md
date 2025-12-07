@@ -1,7 +1,6 @@
 ---
 title: Генератор рамок (border-image)
 slug: Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator
-original_slug: Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
 ---
 
 {{CSSRef}}

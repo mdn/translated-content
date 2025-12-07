@@ -1,7 +1,6 @@
 ---
 title: Множественные фоны
 slug: Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds
-original_slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 ---
 
 {{CSSRef}}

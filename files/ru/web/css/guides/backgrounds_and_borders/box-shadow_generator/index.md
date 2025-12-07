@@ -1,7 +1,6 @@
 ---
 title: Генератор теней (box-shadow)
 slug: Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator
-original_slug: Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
 ---
 
 {{CSSRef}}

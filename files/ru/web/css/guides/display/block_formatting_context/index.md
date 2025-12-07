@@ -1,7 +1,6 @@
 ---
 title: Блочный контекст форматирования
 slug: Web/CSS/Guides/Display/Block_formatting_context
-original_slug: Web/CSS/CSS_display/Block_formatting_context
 ---
 
 {{ CSSRef() }}

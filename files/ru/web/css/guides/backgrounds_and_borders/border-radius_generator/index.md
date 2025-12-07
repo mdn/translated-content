@@ -1,7 +1,6 @@
 ---
 title: Генератор скруглений границ (border-radius)
 slug: Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator
-original_slug: Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
 ---
 
 {{CSSRef}}

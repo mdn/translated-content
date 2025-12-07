@@ -1,7 +1,6 @@
 ---
 title: Кастомные CSS свойства
 slug: Web/CSS/Guides/Cascading_variables
-original_slug: Web/CSS/CSS_cascading_variables
 ---
 
 {{CSSRef}}

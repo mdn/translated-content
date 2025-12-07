@@ -1,7 +1,6 @@
 ---
 title: Схлопывание внешних отступов
 slug: Web/CSS/Guides/Box_model/Margin_collapsing
-original_slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: CSS Animations
 slug: Web/CSS/Guides/Animations
-original_slug: Web/CSS/CSS_animations
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

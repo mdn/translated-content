@@ -1,7 +1,6 @@
 ---
 title: Разметка и содержащий блок
 slug: Web/CSS/Guides/Display/Containing_block
-original_slug: Web/CSS/CSS_display/Containing_block
 ---
 
 {{cssref}}

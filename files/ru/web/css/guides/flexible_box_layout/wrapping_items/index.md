@@ -1,7 +1,6 @@
 ---
 title: Разбираемся с обёртыванием Flex элементов
 slug: Web/CSS/Guides/Flexible_box_layout/Wrapping_items
-original_slug: Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items
 ---
 
 {{CSSRef}}
