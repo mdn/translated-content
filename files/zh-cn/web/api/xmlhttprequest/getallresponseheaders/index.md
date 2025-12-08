@@ -13,7 +13,7 @@ l10n:
 如果发生网络错误，则返回一个空字符串。
 
 > [!NOTE]
-> 对于分块请求，此方法返回的是*当前*分块部分的响应标头，而不是原始通道的响应标头。
+> 对于多部分请求，此方法返回的是*当前*部分的响应标头，而不是原始通道的响应标头。
 
 ## 语法
 
@@ -85,7 +85,7 @@ request.onreadystatechange = () => {
 const contentType = headerMap["content-type"];
 ```
 
-这会将 {{httpheader("Content-Type")}} 响应标头的值获取并存入变量 `contentType`。
+这会将 {{httpheader("Content-Type")}} 响应标头的值赋值给变量 `contentType`。
 
 ## 规范
 
