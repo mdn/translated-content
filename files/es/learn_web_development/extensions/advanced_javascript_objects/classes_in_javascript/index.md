@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 8b799e40ec01fede4e6cd95c2447ae45b6bc74d5
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 En el último artículo, se introdujeron algunos de los conceptos básicos de la [programación orientada a objetos](/es/docs/Learn/JavaScript/Objects/Object-oriented_programming) (POO), y discutimos un ejemplo donde usamos principios de la POO para modelar los profesores y alumnos de una escuela.
 

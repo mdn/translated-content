@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bc0d0d1ef796435e969f6d65c7e5d3c08f4023aa
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Scripting/Arrays", "conflicting/Learn_web_development/Core/Scripting")}}
 
 En esta evaluación, deberás tomar parte del conocimiento que has aprendido en los artículos de este módulo y aplicarlo a la creación de una aplicación divertida que genere historias aleatorias. ¡Que te diviertas!
 
@@ -105,4 +105,4 @@ Completando la función `result()`:
 - [Math.round()](/es/docs/Web/JavaScript/Reference/Global_Objects/Math/round) es un método JavaScript integrado que simplemente redondea el resultado de un cálculo al número entero más cercano.
 - Hay tres instancias de cadenas que deben reemplazarse. Puede repetir el método `replace()` varias veces o puedes utilizar `replaceAll(). Recuerda, los Strings son inmutables.
 
-{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+{{PreviousMenu("Learn_web_development/Core/Scripting/Arrays", "conflicting/Learn_web_development/Core/Scripting")}}
