@@ -55,13 +55,13 @@ jobs:
         if: matrix.lang != 'other'
         run: |
           echo "::add-matcher::.github/workflows/markdownlint-problem-matcher.json"
-          npx markdownlint-cli2 "docs/${{ matrix.lang }}/**/*.md" "files/${{ matrix.lang }}/**/*.md"
+          npx markdownlint-cli2 "files/${{ matrix.lang }}/**/*.md"
 
       - name: Run markdownlint-cli2 (other)
         if: matrix.lang == 'other'
         run: |
           echo "::add-matcher::.github/workflows/markdownlint-problem-matcher.json"
-          npx markdownlint-cli2 '**/*.md' '!docs/*/**' '!files/*/**'
+          npx markdownlint-cli2 '**/*.md' '!files/*/**'
 
   check-url-locale:
     if: github.repository == 'mdn/translated-content'
@@ -150,8 +150,8 @@ jobs:
 
       - name: Run prettier (locale)
         if: matrix.lang != 'other'
-        run: npx prettier -c "docs/${{ matrix.lang }}/**/*.md" "files/${{ matrix.lang }}/**/*.md"
+        run: npx prettier -c "files/${{ matrix.lang }}/**/*.md"
 
       - name: Run prettier (other)
         if: matrix.lang == 'other'
-        run: npx prettier -c "**/*.md" "!docs/*/**" "!files/*/**"
+        run: npx prettier -c "**/*.md" "!files/*/**"
