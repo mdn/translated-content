@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Math
 original_slug: Learn/JavaScript/First_steps/Math
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}
 
 Neste ponto do curso estaremos discutindo matemática em JavaScript — Como podemos usar {{Glossary("Operador","operadores")}} e outros recursos para manipular números e fazer cálculos.
 
@@ -299,4 +299,4 @@ No próximo artigo, vamos explorar o texto e como o JavaScript nos permite manip
 > [!NOTE]
 > Se você gosta de matemática e quer saber mais sobre como ela é implementada em JavaScriot, você pode encontrar muito mais detalhes na seção principal de JavaScript do MDN. Ótimos lugares para começar são os artigos [Números e datas](/pt-BR/docs/Web/JavaScript/Guide/Numbers_and_strings) e [Expressões e operadores](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators) .
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}

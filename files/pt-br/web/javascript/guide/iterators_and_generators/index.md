@@ -3,7 +3,7 @@ title: Iteratores e geradores
 slug: Web/JavaScript/Guide/Iterators_and_generators
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Meta_programming")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain", "Web/JavaScript/Guide/Meta_programming")}}
 
 Processar cada item em uma coleção é uma operação muito comum. O JavaScript disponibiliza uma série de maneiras de iterar sobre uma coleção, desde um simples laço {{jsxref("Statements/for","for")}}, até um {{jsxref("Global_Objects/Array/map","map()")}} e também com o {{jsxref("Global_Objects/Array/filter","filter()")}}. Iteradores e Geradores trazem o conceito da interação ocorrer diretamente no núcleo da linguagem e prover um mecanismo para a customização do comportamento dos laços {{jsxref("Statements/for...of","for...of")}}.
 
@@ -158,4 +158,4 @@ Se um yield não for encontrado durante o processo de lançamento de um thrown e
 
 Generators têm o método {{jsxref("Global_Objects/Generator/return","return(value)")}} que retorna o valor pego e finaliza o generator.
 
-{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Meta_programming")}}
+{{PreviousNext("conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain", "Web/JavaScript/Guide/Meta_programming")}}

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Functions
 original_slug: Learn/JavaScript/Building_blocks/Functions
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "conflicting/Learn_web_development/Core/Scripting")}}
 
 Outro conceito essencial em código é função, que permitem que você armazene um pedaço de código que realiza uma simples tarefa dentro de um bloco, e então chama aquele código sempre que você precisar usá-lo com um curto comando — em vez de ter que escrever o mesmo código multiplas vezes. Neste artigo nós vamos explorar conceitos fundamentais por trás das funções como sintaxe básica, como invocá-las e defini-las, escopo, e parâmetros.
 
@@ -447,4 +447,4 @@ Este arquivo explorou os conceitos fundamentais por trás das funções, pavimen
 - [Referências de funções](/pt-BR/docs/Web/JavaScript/Reference/Functions)
 - [Parâmetros padrão](/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters), [Funções de flexa](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions) — referências de conceito avançado
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "conflicting/Learn_web_development/Core/Scripting")}}
