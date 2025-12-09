@@ -1,4 +1,4 @@
-name: Markdownlint (All files)
+name: Markdownlint (global)
 
 on:
   pull_request:
@@ -16,10 +16,22 @@ on:
 permissions: {}
 
 jobs:
-  docs:
-    # do not run on forks
+  markdownlint:
     if: github.repository == 'mdn/translated-content'
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        lang:
+          - es
+          - fr
+          - ja
+          - ko
+          - pt-br
+          - ru
+          - zh-cn
+          - zh-tw
+          - other
 
     steps:
       - name: Checkout
@@ -27,7 +39,7 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Setup Node.js environment
+      - name: Setup Node.js
         uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
         with:
           node-version-file: ".nvmrc"
@@ -39,7 +51,107 @@ jobs:
           # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Lint markdown files
+      - name: Run markdownlint-cli2 (locale)
+        if: matrix.lang != 'other'
         run: |
           echo "::add-matcher::.github/workflows/markdownlint-problem-matcher.json"
-          npm run lint:md
+          npx markdownlint-cli2 "files/${{ matrix.lang }}/**/*.md"
+
+      - name: Run markdownlint-cli2 (other)
+        if: matrix.lang == 'other'
+        run: |
+          echo "::add-matcher::.github/workflows/markdownlint-problem-matcher.json"
+          npx markdownlint-cli2 '**/*.md' '!files/*/**'
+
+  check-url-locale:
+    if: github.repository == 'mdn/translated-content'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
+        with:
+          node-version-file: ".nvmrc"
+          cache: npm
+
+      - name: Install
+        run: npm ci
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check URL locales
+        run: node ./scripts/check-url-locale.js files
+
+  autocorrect:
+    if: github.repository == 'mdn/translated-content'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
+        with:
+          node-version-file: ".nvmrc"
+          cache: npm
+
+      - name: Install
+        run: npm ci
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Lint with autocorrect
+        run: npx autocorrect --lint .
+
+  prettier:
+    if: github.repository == 'mdn/translated-content'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        lang:
+          - es
+          - fr
+          - ja
+          - ko
+          - pt-br
+          - ru
+          - zh-cn
+          - zh-tw
+          - other
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
+        with:
+          node-version-file: ".nvmrc"
+          cache: npm
+
+      - name: Install
+        run: npm ci
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run prettier (locale)
+        if: matrix.lang != 'other'
+        run: npx prettier -c "files/${{ matrix.lang }}/**/*.md"
+
+      - name: Run prettier (other)
+        if: matrix.lang == 'other'
+        run: npx prettier -c "**/*.md" "!files/*/**"
