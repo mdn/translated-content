@@ -184,4 +184,4 @@ img {
 
 - その他の画像関連 CSS プロパティ: {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}
 - {{cssxref("background-size")}}
-- [アスペクト比の理解](/en-US/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)
+- [アスペクト比の理解](/ja/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)
