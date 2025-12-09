@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-La méthode **`checkValidity()`** de l'interface {{DOMxRef("HTMLInputElement")}} retourne une valeur booléenne indiquant si l'élément respecte les règles de [validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation) qui lui sont appliquées. Si elle retourne faux, la méthode déclenche également un évènement {{DOMxRef("HTMLElement/invalid_event", "invalid")}} sur l'élément. Comme `checkValidity()` n'est associé à aucun comportement par défaut du navigateur, annuler cet évènement `invalid` n'a aucun effet.
+La méthode **`checkValidity()`** de l'interface {{DOMxRef("HTMLInputElement")}} retourne une valeur booléenne indiquant si l'élément respecte les règles de [validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation) qui lui sont appliquées. Si elle retourne faux, la méthode déclenche également un évènement {{DOMxRef("HTMLInputElement/invalid_event", "invalid")}} sur l'élément. Comme `checkValidity()` n'est associé à aucun comportement par défaut du navigateur, annuler cet évènement `invalid` n'a aucun effet.
 
 > [!NOTE]
 > Un élément HTML {{HTMLElement("input")}} dont la propriété {{DOMxRef("HTMLInputElement.validationMessage", "validationMessage")}} n'est pas nulle est considéré comme invalide, correspondra à la pseudo-classe CSS {{CSSxRef(":invalid")}} et fera en sorte que `checkValidity()` retourne faux. Utilisez la méthode {{DOMxRef("HTMLInputElement.setCustomValidity()")}} pour définir {{DOMxRef("HTMLInputElement.validationMessage")}} sur la chaîne vide afin de rendre l'état {{DOMxRef("HTMLInputElement.validity", "validity")}} valide.
