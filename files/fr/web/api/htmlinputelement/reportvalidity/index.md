@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-La méthode **`reportValidity()`** de l'interface {{DOMxRef("HTMLInputElement")}} effectue les mêmes vérifications de validité que la méthode {{DOMxRef("HTMLInputElement.checkValidity", "checkValidity()")}}. De plus, si l'évènement {{DOMxRef("HTMLElement/invalid_event", "invalid")}} n'est pas annulé, le navigateur affiche le problème à l'utilisateur·rice.
+La méthode **`reportValidity()`** de l'interface {{DOMxRef("HTMLInputElement")}} effectue les mêmes vérifications de validité que la méthode {{DOMxRef("HTMLInputElement.checkValidity", "checkValidity()")}}. De plus, si l'évènement {{DOMxRef("HTMLInputElement/invalid_event", "invalid")}} n'est pas annulé, le navigateur affiche le problème à l'utilisateur·rice.
 
 ## Syntaxe
 
