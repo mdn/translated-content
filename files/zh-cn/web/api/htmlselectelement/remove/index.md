@@ -40,7 +40,7 @@ let sel = document.getElementById("existingList");
 sel.remove(1);
 ```
 
-HTML is now:
+现在的 HTML 是：
 
 ```html
 <select id="existingList" name="existingList">
