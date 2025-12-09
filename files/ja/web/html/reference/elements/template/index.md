@@ -13,7 +13,7 @@ l10n:
 
 - `shadowrootmode`
   - : 親要素の[シャドウルート](/ja/docs/Glossary/Shadow_tree)を生成します。
-    これは {{domxref("Element.attachShadow()")}} メソッドの宣言版で、同じ {{glossary("enumerated")}} 値を受け入れます。
+    これは {{domxref("Element.attachShadow()")}} メソッドの宣言版で、同じ{{glossary("enumerated", "列挙")}}値を受け入れます。
     - `open`
       - : 内部シャドウルート DOM を JavaScript に公開します（ほとんどの用途で推奨）。
 

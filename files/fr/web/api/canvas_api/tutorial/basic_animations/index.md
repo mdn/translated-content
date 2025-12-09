@@ -3,7 +3,7 @@ title: Animations basiques
 slug: Web/API/Canvas_API/Tutorial/Basic_animations
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Tutoriel_canvas/Advanced_animations")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
 
 Avec l'utilisation en Javascript du composant {{HTMLElement("canvas")}}, il est très simple de créer des animations (interactives). Ce chapitre décrit comment créer quelques animations basiques.
 
@@ -334,4 +334,4 @@ En dessous, vous trouvez l'élément {{HTMLElement("canvas")}} avec l'image qui 
 - [Animations avancées](/fr/docs/Web/API/Canvas_API/Tutorial/Advanced_animations)
   - : Nous nous attarderons sur quelques techniques d'animation et de gestion de physique avancées dans le prochain châpitre.
 
-{{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Tutoriel_canvas/Advanced_animations")}}
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}

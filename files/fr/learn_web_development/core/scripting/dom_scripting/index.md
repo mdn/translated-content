@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/DOM_scripting
 original_slug: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Introduction", "Learn_web_development/Core/Scripting/Network_requests", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 Quand on écrit des pages web et des applications, une des choses les plus courantes que l'on veut faire est de manipuler la structure du document d'une manière ou d'une autre. On le fait généralement en utilisant le <i lang="en">Document Object Model</i> (DOM), un ensemble d'API qui permettent de contrôler le HTML et le style — et qui utilisent massivement l'objet [`Document`](/fr/docs/Web/API/Document). Dans cet article, nous allons voir comment utiliser le DOM en détails, ainsi que quelques API intéressantes qui peuvent modifier votre environnement.
 
@@ -307,4 +307,4 @@ Il y a bien d'autres fonctionnalités que vous pouvez utiliser pour manipuler vo
 
 (Voir notre [Référence Web API](/fr/docs/Web/API) pour une liste complète des API web documentées sur MDN&nbsp;!)
 
-{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Introduction", "Learn_web_development/Core/Scripting/Network_requests", "Learn_web_development/Extensions/Client-side_APIs")}}

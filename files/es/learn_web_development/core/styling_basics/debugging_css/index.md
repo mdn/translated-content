@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Debugging_CSS
 original_slug: Learn/CSS/Building_blocks/Debugging_CSS
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn/CSS/Building_blocks/Organizing", "Learn_web_development/Core/Styling_basics")}}
 
 Al escribir CSS te puedes encontrar que, a veces, alguna parte de tu CSS no hace lo que esperas. Tal vez creas que cierto selector debería coincidir con un elemento, pero no sucede nada; o una caja tiene un tamaño diferente al que esperabas. Este artículo te orientará sobre cómo solucionar un problema de CSS y te mostrará cómo las DevTools incluidas en todos los navegadores modernos pueden ayudarte a descubrir qué sucede.
 
@@ -25,7 +25,7 @@ Al escribir CSS te puedes encontrar que, a veces, alguna parte de tu CSS no hace
         >, HTML básico (véase
         <a href="/es/docs/Learn/HTML/Introduccion_a_HTML">Introducción a HTML</a
         >) y nociones de cómo funciona el CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Primeros pasos con el CSS</a>).
+        <a href="/es/docs/Learn/CSS/First_steps">Primeros pasos con CSS</a>).
       </td>
     </tr>
     <tr>
@@ -50,7 +50,7 @@ En este artículo veremos algunas características útiles de Firefox DevTools p
 
 Algo que puede hacer tropezar a los recién llegados a DevTools es la diferencia entre lo que ves cuando [miras el código fuente](https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html) de una página web, o miras el archivo HTML que colocas en el servidor, y lo que puedes ver en la [ventana HTML](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#panel_html) de DevTools. Aunque ves más o menos lo mismo que puedes ver desde View Source (Ver código fuente de la página), hay algunas diferencias.
 
-En el DOM procesado, el navegador puede haber corregido algunos HTML mal escritos por ti. Si cerraste un elemento incorrectamente, por ejemplo, por abrir con un `<h2>` y cerrar con un `</h3>`, el navegador descubre lo que ibas a hacer y el HTML del DOM cerrará ese `<h2>` de apertura correctamente con un `</h2>`. El navegador también normaliza todo el HTML, y el DOM también muestra los cambios que hace JavaScript.
+En el DOM procesado, el navegador puede haber corregido algunos HTML mal escritos por ti. Si cerraste un elemento incorrectamente, por ejemplo, al abrir con un `<h2>` y cerrar con un `</h3>`, el navegador descubre lo que ibas a hacer y el HTML del DOM cerrará ese `<h2>` de apertura correctamente con un `</h2>`. El navegador también normaliza todo el HTML, y el DOM también muestra los cambios que hace JavaScript.
 
 En comparación, View Source es simplemente el código fuente HTML tal como está almacenado en el servidor. El [árbol HTML](/es/docs/Tools/Page_Inspector/How_to/Examinar_y_editar_HTML#%C3%81rbol_HTML) de tus DevTools muestra exactamente lo que el navegador representa en un momento dado, y te da una idea de lo que sucede en realidad.
 
@@ -60,7 +60,7 @@ Selecciona un elemento de tu página, ya sea haciendo clic con el botón derecho
 
 ![La página de ejemplo para este tutorial con DevTools abiertas.](inspecting1.png)
 
-Si observasla [vista de reglas](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#panel_css), que está a la derecha de tu HTML, deberías poder ver las propiedades y los valores CSS aplicados sobre ese elemento. Verás las reglas aplicadas directamente a la clase `box1` y también el CSS que la caja hereda de su elemento padre, en este caso `<body>`. Esto es útil para cuando ves que se aplica un CSS que no esperabas. Tal vez se esté heredando de un elemento padre y necesites añadir una regla para sobrescribirlo en el contexto de este elemento.
+Si observas la [vista de reglas](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#panel_css), que está a la derecha de tu HTML, deberías poder ver las propiedades y los valores CSS aplicados sobre ese elemento. Verás las reglas aplicadas directamente a la clase `box1` y también el CSS que la caja hereda de su elemento padre, en este caso `<body>`. Esto es útil para cuando ves que se aplica un CSS que no esperabas. Tal vez se esté heredando de un elemento padre y necesites añadir una regla para sobrescribirlo en el contexto de este elemento.
 
 También es útil la capacidad de expandir las propiedades abreviadas. En nuestro ejemplo se usa la abreviación `margin`.
 
@@ -173,7 +173,7 @@ Un caso de prueba reducido es un ejemplo de código que muestra el problema de l
 Para crear un caso de prueba reducido:
 
 1. Si tu marcado se genera dinámicamente, por ejemplo desde un CMS, crea una versión estática de la salida que muestre el problema. Un sitio para compartir código como [CodePen](https://codepen.io/) es útil para alojar casos de prueba reducidos, porque son accesibles en línea y puedes compartirlos fácilmente con tus colegas. Puedes comenzar por hacer un View Source de la página y copiar el HTML en CodePen, luego toma cualquier CSS y JavaScript relevante e inclúyelo también. Después de eso, puedes verificar si el problema sigue ahí.
-2. Si eliminar el JavaScript no soluciona el problema, no incluyas el JavaScript. Si eliminar el JavaScript hace desaparecer el problema, elimina la mayor cantidad de JavaScript que puedas; deja solo las causas del problema.
+2. Si eliminar el JavaScript no soluciona el problema, no incluyas. Si eliminar el JavaScript hace desaparecer el problema, elimina la mayor cantidad de JavaScript que puedas; deja solo las causas del problema.
 3. Elimina cualquier HTML que no contribuya al problema. Elimina componentes o incluso elementos principales del diseño. Nuevamente, intenta reducir al mínimo la cantidad de código que aún muestra el problema.
 4. Elimina cualquier CSS que no afecte al problema.
 
@@ -183,6 +183,6 @@ Si todavía tienes dificultades para solucionar el problema, tener un caso de pr
 
 En el caso de que tu problema sea en realidad un error en un navegador, también puedes usar un caso de prueba reducido para presentar un informe de error al proveedor del navegador correspondiente (por ejemplo, en el sitio de [Bugzilla](https://bugzilla.mozilla.org) de Mozilla).
 
-A medida que adquieras más experiencia con CSS, descubrirás que vas adquiriendo rapidez para descubrir de dónde vienen los problemas. Sin embargo, incluso los más experimentados a veces nos preguntamos qué pasa. Adoptar un enfoque metódico, hacer un caso de prueba reducido y explicar el problema a otra persona suele dar un buen resultado para encontrar una solución.
+A medida que adquieras más experiencia con CSS, descubrirás que adquieres rapidez para descubrir de dónde vienen los problemas. Sin embargo, incluso los más experimentados a veces nos preguntamos qué pasa. Adoptar un enfoque metódico, hacer un caso de prueba reducido y explicar el problema a otra persona suele dar un buen resultado para encontrar una solución.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn/CSS/Building_blocks/Organizing", "Learn_web_development/Core/Styling_basics")}}

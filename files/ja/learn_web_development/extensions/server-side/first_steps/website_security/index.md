@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 94ef07a7b073c2663cbace0667bdb717a40bfa28
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}
 
 ウェブサイトのセキュリティでは、ウェブサイトのデザインと使用方法のあらゆる面で警戒が必要です。この入門記事だけではウェブサイトのセキュリティの第一人者にはなれませんが、脅威がどこから発生するのか、そして最も一般的な攻撃に対してウェブアプリケーションを強化するために何ができるのかを理解するのに役立ちます。
 
@@ -148,4 +148,4 @@ CSRF 攻撃は、悪意のあるユーザーが他のユーザーの資格情報
 
 この記事で、[モジュール](/ja/docs/Learn_web_development/Extensions/Server-side/First_steps)の終わりに来ました。サーバーサイドのウェブサイトプログラミングの最初のステップをカバーしました。これらの基本概念を学んで楽しんでいただければ幸いです。これでウェブフレームワークを選択してプログラミングを開始する準備が整いました。
 
-{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
+{{PreviousMenu("Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}

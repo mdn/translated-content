@@ -1,35 +1,40 @@
 ---
 title: "<hr> : l'élément de rupture thématique (règle horizontale)"
 slug: Web/HTML/Reference/Elements/hr
-original_slug: Web/HTML/Element/hr
+l10n:
+  sourceCommit: a1765c2cad20118be0dad322d3548908787b5791
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<hr>`** représente une rupture thématique entre des éléments de niveau paragraphe&nbsp;: par exemple, un changement de décor dans un récit ou un changement de sujet au sein d'une section.
 
-L'élément HTML **`<hr>`** représente un changement thématique entre des éléments de paragraphe (par exemple, un changement de décor dans un récit, un changement de sujet au sein d'une section).
-
-{{InteractiveExample("HTML Demo: &lt;hr&gt;", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;hr&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
-<p>§1: The first rule of Fight Club is: You do not talk about Fight Club.</p>
+<p>
+  §1&nbsp;: La première règle du Fight Club est&nbsp;: vous ne parlez pas du
+  Fight Club.
+</p>
 
 <hr />
 
-<p>§2: The second rule of Fight Club is: Always bring cupcakes.</p>
+<p>
+  §2&nbsp;: La deuxième règle du Fight Club est&nbsp;: apportez toujours des
+  cupcakes.
+</p>
 ```
 
 ```css interactive-example
 hr {
   border: none;
-  border-top: 3px double #333;
-  color: #333;
+  border-top: 3px double #333333;
+  color: #333333;
   overflow: visible;
   text-align: center;
   height: 5px;
 }
 
 hr::after {
-  background: #fff;
+  background: white;
   content: "§";
   padding: 0 4px;
   position: relative;
@@ -37,7 +42,7 @@ hr::after {
 }
 ```
 
-Dans les versions précédentes d'HTML, il représente une ligne horizontale. Bien qu'il puisse toujours être représenté ainsi par les navigateurs graphiques, il possède désormais une signification sémantique et ne représente plus un élément de mise en forme.
+Historiquement, il était présenté comme une règle ou une ligne horizontale. Bien qu'il puisse encore être affiché comme une règle horizontale par les navigateurs visuels, cet élément est désormais défini en termes sémantiques plutôt qu'en termes de présentation&nbsp;; si vous souhaitez tracer une ligne horizontale, faites‑le à l'aide du CSS approprié.
 
 ## Attributs
 
@@ -45,15 +50,15 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Refer
 
 ### Attributs dépréciés, obsolètes ou non-standard
 
-- `align` {{deprecated_inline}}
+- `align` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Définit l'alignement de la ligne horizontale sur la page. Si aucune valeur n'est renseignée, la valeur prise par défaut est `left`.
-- `color` {{Non-standard_inline}}
+- `color` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Définit la couleur à utiliser pour la ligne horizontale, grâce à un nom de couleur SVG ou à un code hexadécimal (précédé d'un #).
-- `noshade` {{deprecated_inline}}
+- `noshade` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Avec cet attribut, la ligne horizontale n'aura pas d'ombre.
-- `size` {{deprecated_inline}}
+- `size` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Définit la hauteur de la ligne, exprimée en pixels.
-- `width` {{deprecated_inline}}
+- `width` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Définit la longueur de la ligne, exprimée par une valeur en pixels ou en pourcents.
 
 ## Exemples
@@ -76,7 +81,7 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Refer
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples","100%","200")}}
+{{EmbedLiveSample("Exemples")}}
 
 ## Résumé technique
 
@@ -85,22 +90,20 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Refer
     <tr>
       <th scope="row">
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-          title="HTML/Content_categories"
+          href="/fr/docs/Web/HTML/Guides/Content_categories"
           >Catégories de contenu</a
         >
       </th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          title="HTML/Content categories#Flow content"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
         >
       </td>
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
-      <td>Aucun, c'est un élément vide.</td>
+      <td>Aucun, c'est un {{Glossary("void element", "élément vide")}}.</td>
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
@@ -112,21 +115,24 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Refer
     <tr>
       <th scope="row">Parents autorisés</th>
       <td>
-        Tout élément qui accepte du
-        <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          title="HTML/Content categories#Flow content"
-          >contenu de flux</a
-        >.
+        <ul>
+          <li>Tout élément acceptant du <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux">contenu de flux</a></li>
+          <li>L'élément {{HTMLElement("select")}}</li>
+        </ul>
       </td>
     </tr>
     <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td><code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code></td>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role"><code>separator</code></a></td>
     </tr>
     <tr>
+      <th scope="row">Rôles ARIA autorisés</th>
+      <td>
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a> ou <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>
+      </td>
+    <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLHRElement")}}</td>
+      <td>{{DOMxRef("HTMLHRElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -141,4 +147,5 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Refer
 
 ## Voir aussi
 
-- {{HTMLElement("p")}} qui permet de constituer des paragraphes.
+- L'élément {{HTMLElement("p")}}
+- [`<hr>` dans `<select>`](/fr/docs/Web/HTML/Reference/Elements/select#select_with_grouping_options)

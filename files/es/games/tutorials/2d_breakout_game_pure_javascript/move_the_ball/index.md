@@ -3,7 +3,7 @@ title: Mueve la bola
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 ---
 
-{{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Create_the_Canvas_and_draw_on_it", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Bounce_off_the_walls")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
 
 Este es el segundo paso de los 10 del [tutorial de Canvas para el desarrollo de juegos](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código fuente como debería quedar después de completar la lección en [Gamedev-Canvas-workshop/lesson2.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson02.html).
 
@@ -139,4 +139,4 @@ Puedes comprobar el código terminado de este artículo en la demostración en v
 
 Hemos dibujado nuestra bola y hemos hecho que se mueva, pero cuando supera el borde del canvas, desaparece. En el tercer capítulo exploraremos como hacer que [rebote en las paredes](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls).
 
-{{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Create_the_Canvas_and_draw_on_it", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Bounce_off_the_walls")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}

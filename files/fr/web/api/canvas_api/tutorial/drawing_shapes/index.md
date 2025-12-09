@@ -3,7 +3,7 @@ title: Dessiner des formes avec le canevas
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Utilisation_de_base", "Tutoriel_canvas/Ajout_de_styles_et_de_couleurs")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
 
 Maintenant que nous avons défini notre [environnement de canevas](/fr/docs/Web/API/Canvas_API/Tutorial/Basic_usage), nous pouvons entrer dans les détails de la façon de dessiner sur le canevas. A la fin de cet article, vous aurez appris à tracer des rectangles, des triangles, des lignes, des arcs et des courbes, vous rendant ainsi familier avec certaines des formes de base. Le travail avec les trajets est essentiel lors du dessin d'objets sur le canevas, et nous verrons comment cela peut être fait.
 
@@ -558,4 +558,4 @@ Le trajet se déplacera au point (`M10 10`) et se déplacera alors de 80 points 
 var p = new Path2D("M10 10 h 80 v 80 h -80 Z");
 ```
 
-{{PreviousNext("Tutoriel_canvas/Utilisation_de_base", "Tutoriel_canvas/Ajout_de_styles_et_de_couleurs")}}
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}

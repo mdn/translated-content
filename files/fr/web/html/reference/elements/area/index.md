@@ -2,7 +2,7 @@
 title: "<area> : l'élément de zone"
 slug: Web/HTML/Reference/Elements/area
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: e00212a2a707a57b49b58b37a6a6c978aaef2bbd
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<area>`** définit une zone à l'intérieur d'une image qui possède des zones cliquables prédéfinies. Une _image_ permet d'associer des zones géométriques d'une image à des {{Glossary("Hyperlink", "liens hypertextes")}}.
@@ -82,6 +82,8 @@ Les attributs de cet élément incluent les [attributs universels](/fr/docs/Web/
   - : La cible du lien hypertexte pour la zone.
     Sa valeur est une URL valide.
     Cet attribut peut être omis&nbsp;; dans ce cas, l'élément `<area>` ne représente pas un lien hypertexte.
+- `interestfor` {{Experimental_Inline}}
+  - : Définit l'élément `<area>` comme un **invocateur d'intérêt** (<i lang="en">interest invoker</i>). Sa valeur est l'`id` de l'élément cible, qui sera affecté d'une manière ou d'une autre (généralement affiché ou masqué) lorsque l'intérêt est montré ou perdu sur l'élément invocateur (par exemple au survol/fin de survol ou à la sélection/perte de sélection). Voir [Utilisation des invocateurs d'intérêt](/fr/docs/Web/API/Popover_API/Using_interest_invokers) pour plus de détails et d'exemples.
 - `ping`
   - : Contient une liste d'URL séparées par des espaces vers lesquelles, lors du suivi du lien, des requêtes {{HTTPMethod("POST")}} avec le corps `PING` seront envoyées par le navigateur (en arrière-plan).
     Généralement utilisé pour le pistage.

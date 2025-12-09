@@ -7,7 +7,7 @@ l10n:
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics", "Learn_web_development/Core/Styling_basics")}}
 
 CSS を書いていると、CSS が期待通りに動作しない、という問題に遭遇することがあります。あるセレクターがある要素に一致するはずなのに何も起こらないとか、ボックスの大きさが思っていたのと違うとか。この記事では、CSS の問題をデバッグする方法について説明し、現行のブラウザーすべてに記載されている開発者ツールを使って、何が起こっているのかを探す方法を示します。
 
@@ -187,4 +187,4 @@ CSS を使いこなせるようになると、問題を発見するのが早く�
 - [Firefox > Examine and edit CSS](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html), Firefox Source Docs
 - [Chrome > View and change CSS](https://developer.chrome.com/docs/devtools/css/), developer.chrome.com
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics", "Learn_web_development/Core/Styling_basics")}}

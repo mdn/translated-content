@@ -6,7 +6,7 @@ original_slug: Web/SVG/Tutorial/Introduction
 
 {{SVGRef}}
 
-{{ PreviousNext("SVG/Tutoriel", "SVG/Tutoriel/Premiers_pas") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch", "Web/SVG/Tutorials/SVG_from_scratch/Getting_started") }}
 
 SVG est un langage [XML](/fr/XML), assez similaire au [XHTML](/fr/XHTML). Ce langage peut être utilisé pour dessiner des choses complexes, comme le petit lion sur la gauche. Je l'ai dit en présentation de ce tutoriel, le SVG est un langage vectoriel. En gros, cela veut dire que l'image peut être transformée, rétrécie, agrandie, bref, manipulée, sans perte de qualité.
 
@@ -46,4 +46,4 @@ Outre les recommendations complètes de SVG, le groupe de travail du W3C a intro
 
 Une spécification SVG Print était prévue, qui ajouterait la prise en charge de plusieurs pages et une gestion améliorée des couleurs. Ce travail a été interrompu.
 
-{{ PreviousNext("SVG/Tutoriel", "SVG/Tutoriel/Premiers_pas") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch", "Web/SVG/Tutorials/SVG_from_scratch/Getting_started") }}

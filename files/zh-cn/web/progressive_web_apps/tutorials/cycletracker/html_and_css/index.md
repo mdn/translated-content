@@ -340,4 +340,4 @@ li:nth-of-type(even) {
 
 在那之前，你可以查看[静态 CycleTracker 外壳](https://mdn.github.io/pwa-examples/cycletracker/html_and_css)，并从 GitHub 下载 [CycleTracker HTML 和 CSS 源代码](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css)。
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/","Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection","Web/Progressive_web_apps/Tutorials/CycleTracker")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker","Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection","Web/Progressive_web_apps/Tutorials/CycleTracker")}}

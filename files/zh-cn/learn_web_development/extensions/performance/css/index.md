@@ -3,7 +3,7 @@ title: CSS 性能优化
 slug: Learn_web_development/Extensions/Performance/CSS
 ---
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Performance/html", "Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/HTML", "Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}
 
 当开发网站时，你需要考虑浏览器如何处理你网站上的 CSS。为了减轻 CSS 可能引起的性能问题，你应该对其进行优化。例如，你应该优化 CSS 以减少[阻塞渲染](/zh-CN/docs/Glossary/Render_blocking)并最小化所需的回流次数。本文将为你介绍关键的 CSS 性能优化技术。
 
@@ -288,4 +288,4 @@ article {
 - [字体最佳实践](https://web.developers.google.cn/articles/font-best-practices)（来自 web.developers.google.cn，2022）
 - [content-visibility：提升渲染性能的新 CSS 属性](https://web.developers.google.cn/articles/content-visibility)（来自 web.developers.google.cn，2022）
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Performance/html", "Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/HTML", "Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}

@@ -1,27 +1,25 @@
 ---
-title: <hgroup>
+title: "<hgroup> : l'élément de regroupement de titres"
 slug: Web/HTML/Reference/Elements/hgroup
-original_slug: Web/HTML/Element/hgroup
 l10n:
-  sourceCommit: 7fd56d044d3469659bbe5c04b004e87b13dee352
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<hgroup>`** représente un titre et son contenu associé. Il regroupe un seul élément [`<h1>—<h6>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) avec un ou plusieurs éléments {{HTMLElement("p")}}.
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<hgroup>`** représente un titre et son contenu associé. Il regroupe un élément [`<h1>-<h6>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) avec un ou plusieurs paragraphes [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p).
-
-{{InteractiveExample("HTML Demo: &lt;hgroup&gt;", "tabbed-standard")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;hgroup&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <hgroup>
   <h1>Frankenstein</h1>
-  <p>Or: The Modern Prometheus</p>
+  <p>Ou&nbsp;: Le Prométhée moderne</p>
 </hgroup>
 <p>
-  Victor Frankenstein, a Swiss scientist, has a great ambition: to create
-  intelligent life. But when his creature first stirs, he realizes he has made a
-  monster. A monster which, abandoned by his master and shunned by everyone who
-  sees it, follows Dr Frankenstein to the very ends of the earth.
+  Victor Frankenstein, un scientifique suisse, a une grande ambition&nbsp;:
+  créer une vie intelligente. Mais lorsque sa créature s'éveille pour la
+  première fois, il se rend compte qu'il a créé un monstre. Un monstre qui,
+  abandonné par son maître et rejeté par tous ceux qui le voient, poursuit le Dr
+  Frankenstein aux confins de la terre.
 </p>
 ```
 
@@ -44,7 +42,7 @@ hgroup p {
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 
@@ -70,11 +68,7 @@ L'élément `<hgroup>` en tant que tel n'a pas d'effet sur le plan (<i lang="en"
 
 ### Résultat
 
-{{EmbedLiveSample('','',520)}}
-
-## Accessibilité
-
-L'élément `<hgroup>` n'a pas de sémantique forte pour l'accessibilité. C'est le contenu de l'élément (le titre et les éventuels paragraphes) qui sont exposés aux API d'accessibilité du navigateur.
+{{EmbedLiveSample('Exemples')}}
 
 ## Résumé technique
 
@@ -82,16 +76,18 @@ L'élément `<hgroup>` n'a pas de sémantique forte pour l'accessibilité. C'est
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/HTML/Content_categories">Catégories de contenu</a>
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories">Catégories de contenu</a>
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Content_categories#contenu_de_flux">Contenu de flux</a>, <a href="/fr/docs/Web/HTML/Content_categories#contenu_de_titre">contenu de titre</a>, <a href="/fr/docs/Web/HTML/Content_categories#contenu_tangible">contenu tangible</a>.
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux">Contenu de flux</a>, contenu de titre, contenu tangible.
       </td>
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
-        Zéro ou plusieurs éléments <a href="/fr/docs/Web/HTML/Element/p"><code>&lt;p&gt;</code></a>, suivi par <a href="/fr/docs/Web/HTML/Element/Heading_Elements">un élément de titre (<code>&lt;h1-6&gt;</code>)</a>, suivis par zéro ou plusieurs éléments <a href="/fr/docs/Web/HTML/Element/p"><code>&lt;p&gt;</code></a>.
+        Zéro ou plusieurs éléments {{HTMLElement("p")}}, suivi par l'un des éléments {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}},
+        {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}},
+        {{HTMLElement("Heading_Elements", "h5")}}, or {{HTMLElement("Heading_Elements", "h6")}}, suivis par zéro ou plusieurs éléments {{HTMLElement("p")}}.
       </td>
     </tr>
     <tr>
@@ -101,22 +97,26 @@ L'élément `<hgroup>` n'a pas de sémantique forte pour l'accessibilité. C'est
     <tr>
       <th scope="row">Parents autorisés</th>
       <td>
-        Tout élément qui accepte du <a href="/fr/docs/Web/HTML/Content_categories#Contenu_de_flux">contenu de flux</a>.
+        Tout élément qui accepte du <a href="/fr/docs/Web/HTML/Guides/Content_categories#Contenu_de_flux">contenu de flux</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Rôle ARIA implicite</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">Aucun rôle correspondant</a>
+        <code
+          ><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"
+            >group</a
+          ></code
+        >
       </td>
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous</td>
+      <td>Tous les rôles sont autorisés.</td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td><a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a></td>
+      <td>{{DOMxRef("HTMLElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -131,14 +131,5 @@ L'élément `<hgroup>` n'a pas de sémantique forte pour l'accessibilité. C'est
 
 ## Voir aussi
 
-- Les autres éléments HTML relatifs aux sections du document&nbsp;:
-  - [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body)
-  - [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article)
-  - [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section)
-  - [`<aside>`](/fr/docs/Web/HTML/Reference/Elements/aside)
-  - [`<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements)
-  - [`<nav>`](/fr/docs/Web/HTML/Reference/Elements/nav)
-  - [`<header>`](/fr/docs/Web/HTML/Reference/Elements/header)
-  - [`<footer>`](/fr/docs/Web/HTML/Reference/Elements/footer)
-  - [`<address>`](/fr/docs/Web/HTML/Reference/Elements/address)
+- Autres éléments HTML relatifs aux sections du document&nbsp;: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
 - [Sections et plan d'un document HTML](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements)

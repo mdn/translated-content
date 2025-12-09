@@ -6,7 +6,7 @@ original_slug: Web/SVG/Tutorial/Texts
 
 {{SVGRef}}
 
-{{PreviousNext("Web/SVG/Tutoriel/Motifs", "Web/SVG/Tutoriel/Transformations_de_base")}}
+{{PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Patterns", "Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations")}}
 
 Lorsqu'on parle de texte en SVG, on doit différencier deux choses pratiquement complètement séparées: 1. l'inclusion et l'affichage de texte dans une image, 2. les polices SVG. Un article séparé sera dédié aux polices SVG, celui-ci se concentrera uniquement sur le fait d'insérer du texte.
 
@@ -125,4 +125,4 @@ Cet élément récupère via son attribut `xlink:href` un chemin arbitraire et a
 
 {{ EmbedLiveSample('Code_jouable_2', '100%', 100) }}
 
-{{PreviousNext("Web/SVG/Tutoriel/Motifs", "Web/SVG/Tutoriel/Transformations_de_base")}}
+{{PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Patterns", "Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations")}}

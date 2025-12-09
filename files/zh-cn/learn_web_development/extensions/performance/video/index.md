@@ -3,7 +3,7 @@ title: 多媒体：视频
 slug: Learn_web_development/Extensions/Performance/video
 ---
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance/Javascript", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance/JavaScript", "Learn_web_development/Extensions/Performance")}}
 
 正如我们在前一节中了解到的，媒体（即图片和视频）占了一般网站下载量的 70% 以上。我们已经学过了如何优化图片。本文将研究如何优化视频来提高 web 性能。
 
@@ -125,4 +125,4 @@ ffmpeg -i original.mp4 -an -c:v copy audioFreeVersion.mp4
 
 优化视频有可能显著提高网站性能。视频文件相比其他网站文件相对较大，因此始终值得关注。本文解释了如何通过减少文件大小、使用（HTML）下载设置和流媒体来优化网站视频。
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance/Javascript", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance/JavaScript", "Learn_web_development/Extensions/Performance")}}

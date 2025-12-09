@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Authentication
 original_slug: Learn/Server-side/Django/Authentication
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django")}}
 
 En este tutorial mostraremos cómo permitir a los usuarios iniciar sesión en tu sitio con sus propias cuentas, y cómo controlar lo que pueden hacer basándose en si han iniciado sesión o no y sus _permisos_. Como parte de esta demostración extenderemos el sitio web de la [BibliotecaLocal](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), añadiendo páginas de inicio y cierre de sesión, y páginas específicas de usuarios y personal de la biblioteca para ver libros que han sido prestados.
 
@@ -14,7 +14,7 @@ En este tutorial mostraremos cómo permitir a los usuarios iniciar sesión en tu
       <th scope="row">Prerequisitos:</th>
       <td>
         Completa todos los temas del tutorial anterior, incluyendo:
-        <a href="/es/docs/Learn/Server-side/Django/Sessions"
+        <a href="/es/docs/Learn_web_development/Extensions/Server-side/Django/Sessions"
           >Django Tutorial Part 7: Sessions framework</a
         >.
       </td>
@@ -717,4 +717,4 @@ En nuestro siguiente artículo observaremos cómo puedes usar los formularios de
 - [Usando el sistema por defecto de Autenticación de Django](https://docs.djangoproject.com/en/1.10/topics/auth/default//) (documentación de Django)
 - [Introducción a clases basadas en vistas > Decoradores](https://docs.djangoproject.com/en/1.10/topics/class-based-views/intro/#decorating-class-based-views) (documentación de Django)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django")}}

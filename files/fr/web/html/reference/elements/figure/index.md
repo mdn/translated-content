@@ -1,27 +1,26 @@
 ---
 title: "<figure> : l'élément de figure avec légende facultative"
 slug: Web/HTML/Reference/Elements/figure
-original_slug: Web/HTML/Element/figure
+l10n:
+  sourceCommit: a1765c2cad20118be0dad322d3548908787b5791
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<figure>`** représente un contenu autonome, éventuellement accompagné d'une légende facultative, qui est spécifiée à l'aide de l'élément {{HTMLElement("figcaption")}}. La figure, sa légende et son contenu sont référencés comme une seule unité.
 
-L'élément HTML **`<figure>`** représente un contenu autonome, éventuellement accompagné d'une légende facultative, qui est spécifiée à l'aide de l'élément [`<figcaption>`](/fr/docs/Web/HTML/Reference/Elements/figcaption). La figure, sa légende et son contenu sont référencés comme une seule unité.
-
-{{InteractiveExample("HTML Demo: &lt;figure&gt;", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;figure&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <figure>
   <img
     src="/shared-assets/images/examples/elephant.jpg"
-    alt="Elephant at sunset" />
-  <figcaption>An elephant at sunset</figcaption>
+    alt="Un éléphant au coucher du soleil" />
+  <figcaption>Un éléphant au coucher du soleil</figcaption>
 </figure>
 ```
 
 ```css interactive-example
 figure {
-  border: thin #c0c0c0 solid;
+  border: thin silver solid;
   display: flex;
   flex-flow: column;
   padding: 5px;
@@ -35,73 +34,23 @@ img {
 }
 
 figcaption {
-  background-color: #222;
-  color: #fff;
+  background-color: #222222;
+  color: white;
   font: italic smaller sans-serif;
   padding: 3px;
   text-align: center;
 }
 ```
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories">Catégories de contenu</a>
-      </th>
-      <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content">Contenu de flux</a>,
-        <a href="/fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#sectioning_roots">racine de sectionnement</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content">contenu tangible</a>.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
-      <td>
-        Un élément <a href="/fr/docs/Web/HTML/Element/figcaption"><code>&#x3C;figcaption></code></a> suivi d'un <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content">contenu de flux</a> ou du contenu de flux suivi d'un élément <a href="/fr/docs/Web/HTML/Element/figcaption"><code>&#x3C;figcaption></code></a> ou du contenu de flux.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>
-        Aucune, la balise ouvrante et la balise fermante sont toutes les deux obligatoires.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
-      <td>
-        Tout élément qui accepte du <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content">contenu de flux</a>.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
-      <td>
-        <a href="/fr/docs/Web/Accessibility/ARIA/Roles/Figure_Role"><code>figure</code></a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>
-        Sans descendant <a href="/fr/docs/Web/HTML/Element/figcaption"><code>&#x3C;figcaption></code></a> descendant : <a href="https://www.w3.org/TR/html-aria/#dfn-any-role">n'importe quel rôle</a>, sinon aucun rôle autorisé.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>
-        <a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## Attributs
 
-Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 
-- Généralement, un élément `<figure>` est utilisé pour une image, une illustration, un diagramme, un fragment de code ou autre qui est référencé depuis le flux principal du document. Toutefois, cet élément peut être déplacé vers une autre partie du document ou en annexe sans que cela ait un impact sur le flux principal.
-- `<figure>` est [une racine de sectionnement](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements#sectioning_roots), son contenu est donc exclu du plan général du document.
-- Une légende peut être associée avec l'élément `<figure>` en insérant un élément [`<figcaption>`](/fr/docs/Web/HTML/Reference/Elements/figcaption) à l'intérieur (en premier ou dernier élément enfant). C'est le premier élément `<figcaption>` qui sera trouvé dans la figure qui sera affiché comme légende.
+- Généralement, une `<figure>` est une image, une illustration, un diagramme, un extrait de code, etc., qui est référencé dans le flux principal d'un document, mais qui peut être déplacé dans une autre partie du document ou dans une annexe sans affecter le flux principal.
+- Une légende peut être associée à l'élément `<figure>` en insérant un {{HTMLElement("figcaption")}} à l'intérieur (comme premier ou dernier enfant). Le premier élément `<figcaption>` trouvé dans la figure est présenté comme la légende de la figure.
+- Le `<figcaption>` fournit le {{Glossary("accessible name", "nom accessible")}} au parent `<figure>`.
 
 ## Exemples
 
@@ -122,7 +71,7 @@ Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web
 
 #### Résultat
 
-{{EmbedLiveSample("", "100%", 480)}}
+{{EmbedLiveSample("Images", "100%", 375)}}
 
 ### Extrait de code
 
@@ -132,7 +81,7 @@ Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web
   <pre>
     function NavigatorExample(){
       let txt;
-      txt = "Nom de code: " + navigator.appCodeName;
+      txt = "Nom de code : " + navigator.appCodeName;
       txt += "Nom du navigateur : " + navigator.appName;
       txt += "Version : " + navigator.appVersion ;
       txt += "Cookies activés : " + navigator.cookieEnabled;
@@ -146,25 +95,25 @@ Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web
 
 #### Résultat
 
-{{EmbedLiveSample("", "100%", 250)}}
+{{EmbedLiveSample("Extrait de code")}}
 
 ### Citation
 
 ```html
 <figure>
   <figcaption>
-    <cite>Edsger Dijkstra : </cite>
+    <cite>Edsger Dijkstra&nbsp;: </cite>
   </figcaption>
   <p>
-    « Si le débogage correspond au retrait de bogues, alors la programmation
-    correspond à l'ajout de bogues. »
+    «&nbsp;Si le débogage correspond au retrait de bogues, alors la
+    programmation correspond à l'ajout de bogues.&nbsp;»
   </p>
 </figure>
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("","", 150)}}
+{{EmbedLiveSample("Citation")}}
 
 ### Poème
 
@@ -184,7 +133,59 @@ Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web
 
 #### Résultat
 
-{{EmbedLiveSample("", "100%", 300)}}
+{{EmbedLiveSample("Poème", "100%", 250)}}
+
+## Résumé technique
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories">Catégories de contenu</a>
+      </th>
+      <td>
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux">Contenu de flux</a>,
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_tangible">contenu tangible</a>.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Contenu autorisé</th>
+      <td>
+        Un élément {{HTMLElement("figcaption")}} suivi d'un <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux">contenu de flux</a> ou du contenu de flux suivi d'un élément {{HTMLElement("figcaption")}} ou du contenu de flux.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omission de balises</th>
+      <td>
+        Aucune, la balise ouvrante et la balise fermante sont toutes les deux obligatoires.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Parents autorisés</th>
+      <td>
+        Tout élément qui accepte du <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux">contenu de flux</a>.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/figure_role"
+          ><code>figure</code></a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôles ARIA autorisés</th>
+      <td>
+        Sans descendant {{HTMLElement("figcaption")}} descendant&nbsp;: <a href="https://w3c.github.io/html-aria/#dfn-any-role">n'importe quel rôle</a>, sinon aucun rôle autorisé.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Interface DOM</th>
+      <td>{{DOMxRef("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Spécifications
 
@@ -196,4 +197,4 @@ Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web
 
 ## Voir aussi
 
-- L'élément [`<figcaption>`](/fr/docs/Web/HTML/Reference/Elements/figcaption)
+- L'élément {{HTMLElement("figcaption")}}

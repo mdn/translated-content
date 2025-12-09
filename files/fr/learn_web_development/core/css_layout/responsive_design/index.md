@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 9b73bdea5458572f77a401596fef9a06ed8bba1b
 ---
 
-{{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
+{{learnsidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
 
 La conception réactive, plus souvent appelée <i lang="en">responsive design</i> (ou RWD pour <i lang="en">responsive web design</i>) est une approche de la conception web visant à ce que les pages web s'affichent correctement pour toutes les tailles et résolution d'écran, tout en ayant une utilisabilité correcte. Il s'agit de concevoir un site ou une application web à destination de l'ensemble des appareils existants. Dans cet article, nous verrons certaines techniques liées au <i lang="en">responsive design</i>.
 
@@ -270,4 +270,4 @@ Il est également plus facile d'obtenir des dispositions adaptatives en employan
   - Les caractéristiques média [`pointer`](/fr/docs/Web/CSS/Reference/At-rules/@media/pointer) et [`any-pointer`](/fr/docs/Web/CSS/Reference/At-rules/@media/any-pointer) permettent d'appliquer du CSS différent en fonction de la prise en charge tactile de l'appareil.
 - [Le guide CSS Tricks sur les requêtes média (en anglais)](https://css-tricks.com/a-complete-guide-to-css-media-queries/)
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}

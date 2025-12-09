@@ -28,9 +28,9 @@ slug: Web/HTML/Reference/Elements/meta/name/viewport
 "viewport" `<meta>` 标签的基本属性如下所示：
 
 - `width`
-  - : 控制视口的大小。这可以设置为特定像素数（如 `width=600`），也可以设置为特殊值`device-width`，即 [100vw](/zh-CN/docs/Web/CSS/Reference/Values/length#视口_viewport_比例的长度)，100% 的视口宽度。最小值为 `1`。最大值为 `10000`。负值会被忽略。
+  - : 控制视口的（最小）像素宽度（参见[视口宽度和屏幕宽度](#视口宽度和屏幕宽度)）。这可以设置为 1 到 10000 之间的正整数像素值（如 `width=600`）；也可以设置为特殊值 `device-width`，表示设备屏幕的物理尺寸（以 CSS 像素为单位）。此值决定了 [`vw`](/zh-CN/docs/Web/CSS/Reference/Values/length#基于视口的相对长度单位) 单位的值。
 - `height`
-  - : 控制视口的大小。这可以设置为特定像素数（如 `height=400`），也可以设置为特殊值 `device-height`，即 [100vh](/zh-CN/docs/Web/CSS/Reference/Values/length#视口_viewport_比例的长度)，100% 的视口高度。最小值为 `1`。最大值为 `10000`。负值会被忽略。
+  - : 控制视口的（最小）像素高度（参见[视口宽度和屏幕宽度](#视口宽度和屏幕宽度)）。这可以设置为 1 到 10000 之间的正整数像素值（如 `height=400`）；也可以设置为特殊值 `device-height`，表示设备屏幕的物理尺寸（以 CSS 像素为单位）。此值决定了 [`vh`](/zh-CN/docs/Web/CSS/Reference/Values/length#基于视口的相对长度单位) 单位的值。
 - `initial-scale`
   - : 控制页面首次加载时显示的缩放倍数。最小值是 `0.1`。最大值是 `10`。默认值为 `1`。负值会被忽略。
 - `minimum-scale`

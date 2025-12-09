@@ -6,7 +6,7 @@ l10n:
   sourceCommit: cb551824f3dac0aa6828de78e0f9bc476c6110d1
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content")}}
 
 Les hyperliens sont vraiment importants, ils sont ce qui fait du Web _une toile_. Cet article montre la syntaxe requise pour construire un lien et discute des bonnes pratiques associées.
 
@@ -15,7 +15,7 @@ Les hyperliens sont vraiment importants, ils sont ce qui fait du Web _une toile_
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Connaissance générale des bases de HTML (voir <a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started">Commencer avec le HTML</a>), savoir mettre en forme le texte HTML (voir <a href="/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">Fondamentaux du texte HTML</a>.).
+        Connaissance générale des bases de HTML (voir <a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started">Commencer avec le HTML</a>), savoir mettre en forme le texte HTML (voir <a href="/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs">Fondamentaux du texte HTML</a>.).
       </td>
     </tr>
     <tr>
@@ -354,4 +354,4 @@ Vous voici à la fin de cet article, mais pouvez-vous vous souvenir des informat
 
 C'est tout pour les liens, du moins pour l'instant&nbsp;! Nous reverrons aux liens plus loin dans le cours pour les mettre en forme. Pour la prochaine étape de ce cours, nous reviendrons sur la sémantique HTML, et verrons quelques fonctionnalités plus avancées ou inhabituelles pour [le formatage avancé de texte](/fr/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features).
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content")}}

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Text_styling/Styling_links
 original_slug: Learn/CSS/Styling_text/Styling_links
 ---
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}
 
 Lors de la mise en forme de [liens](/fr/docs/Learn_web_development/Core/Structuring_content/Creating_links), il est important de comprendre comment utiliser les pseudo-classes pour mettre en forme efficacement les états des liens, et comment créer des liens pour les utiliser dans diverses fonctionnalités d'interface courantes, telles que les menus de navigation et les onglets. Nous allons examiner tous ces sujets dans cet article.
 
@@ -477,4 +477,4 @@ Expliquons ce qui se passe ici, en nous concentrant sur les parties les plus int
 
 Nous espérons que cet article vous a fourni tout ce que vous aviez besoin de savoir sur les liens — pour l'instant ! L'article final de notre module de Mise en forme de texte détaille comment utiliser des polices personnalisées (ou polices web, comme elles sont mieux connues) sur vos sites web.
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}

@@ -6,7 +6,7 @@ original_slug: Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
 
 {{CSSRef}}
 
-{{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS", "Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_écriture","Web/CSS/CSS_Grid_Layout")}}
+{{PreviousMenuNext("Web/CSS/Guides/Grid_layout/Auto-placement", "Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes","Web/CSS/Guides/Grid_layout")}}
 
 Si vous connaissez [les boîtes flexibles (flexbox)](/fr/docs/Web/CSS/Guides/Flexible_box_layout) vous savez déjà comment aligner les éléments flexibles à l'intérieur d'un conteneur flexible. Ces propriétés d'alignement, initialement spécifiée dans la spécification des boîtes flexibles, sont désormais spécifiées dans une nouvelle spécification [Box Alignment Level 3](https://drafts.csswg.org/css-align/). Cette spécification détaille le fonctionnement de l'alignement pour les différentes méthodes de disposition.
 
@@ -666,4 +666,4 @@ Dans tout ces exemples, nous avons travaillé en français ou en anglais, des la
 
 Les spécifications pour les grilles CSS et les boîtes flexibles sont conçues pour fonctionner avec les différents modes d'écriture. Cela signifie que si on travaille avec une langue qui s'écrit de droite à gauche (comme l'arabe), le début de la grille serait en haut à droite. Cela signifie également que la valeur par défaut `justify-content: start` placerait les pistes du côté droit de la grille. En revanche, si on utilise les marges automatiques avec `margin-right` ou `margin-left` ou si on utilise le positionnement absolu avec les valeurs `top`, `right`, `bottom` et `left`, on ne tiendra pas compte des modes d'écritures. Dans le guide suivant, nous verrons plus en détails comment les grilles et l'alignement interagissent avec les modes d'écriture. Cet aspect est fondamental si vous souhaitez développer des sites qui puissent être affichés dans plusieurs langues ou si vous souhaitez mélanger certaines langues ou modes d'écriture pour une application.
 
-{{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS", "Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_écriture","Web/CSS/CSS_Grid_Layout")}}
+{{PreviousMenuNext("Web/CSS/Guides/Grid_layout/Auto-placement", "Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes","Web/CSS/Guides/Grid_layout")}}

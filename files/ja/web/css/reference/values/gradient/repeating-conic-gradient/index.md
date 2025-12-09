@@ -1,9 +1,8 @@
 ---
 title: repeating-conic-gradient()
 slug: Web/CSS/Reference/Values/gradient/repeating-conic-gradient
-original_slug: Web/CSS/gradient/repeating-conic-gradient
 l10n:
-  sourceCommit: 8e2465af7cac389b70e83d54eeb288448f2ae08d
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
 **`repeating-conic-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、（[単一のグラデーション](/ja/docs/Web/CSS/Reference/Values/gradient/conic-gradient)ではなく）繰り返しのグラデーションからなる、色の遷移が（中心から[放射状に広がるのではなく](/ja/docs/Web/CSS/Reference/Values/gradient/repeating-radial-gradient)）、中心点の周りを回転する画像を生成します。
@@ -43,7 +42,7 @@ background: repeating-conic-gradient(
    明るい青と暗い青のスターブラストで、 3 度傾いている
    ため垂直線がありません。 */
 repeating-conic-gradient(
-    from 3deg at 25% 25%,
+  from 3deg at 25% 25%,
   hsl(200 100% 50%) 0deg 15deg,
   hsl(200 100% 60%) 10deg 30deg
 )
@@ -73,7 +72,7 @@ repeating-conic-gradient(in hsl shorter hue, red, blue 90deg, green 180deg)
 
 最初と最後の色経由点がどちらも 0 度以上か 360 度未満になっていない場合、 conic-gradient は繰り返されません。
 
-他のグラデーションと同様、扇形グラデーションは[内在的な寸法を持ちません](/ja/docs/Web/CSS/Reference/Values/image#description)。つまり、自然の寸法や推奨される寸法、推奨される縦横比もありません。自身の寸法は適用先の要素の寸法、または要素の寸法以外で設定された `<image>` の寸法に一致します。
+他のグラデーションと同様、扇形グラデーションは[内在的な寸法を持ちません](/ja/docs/Web/CSS/Reference/Values/image#解説)。つまり、自然の寸法や推奨される寸法、推奨される縦横比もありません。自身の寸法は適用先の要素の寸法、または要素の寸法以外で設定された `<image>` の寸法に一致します。
 
 `<gradient>` は `<image>` データ型に属するため、 `<image>` が使用できるところでしか使用できません。このため、 `conic-gradient()` は {{CSSxRef("background-color")}} や、その他の {{CSSxRef("&lt;color&gt;")}} データ型を使用するプロパティでは動作しません。</p>
 
@@ -123,16 +122,16 @@ repeating-conic-gradient(from -45deg, red 45deg, orange, yellow, green, blue 225
 
 異なる角度の単位を混在させることは可能ですが、やめておきましょう。 CSS が読みづらくなります。
 
-### 形式文法
+## 形式文法
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## アクセシビリティの考慮
 
 ブラウザーは、背景画像に関する特別な情報を支援技術に提供しません。これは主にスクリーンリーダーにとって重要なことで、スクリーンリーダーはその存在を告知しないため、ユーザーに何も伝えられません。扇形グラデーションを使って円グラフや市松模様などの効果を出すことは可能ですが、 CSS 画像は代替テキストを割り当てるネイティブな方法を提供していないため、扇形グラデーションで表現された画像はスクリーンリーダーのユーザーが認知することはできません。ページの全体的な目的を理解するために重要な情報が画像に含まれている場合は、文書内で意味的に記述する方が良いでしょう。
 
 - [MDN WCAG を理解する, ガイドライン 1.1 の説明](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
-- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 ## 例
 
@@ -151,7 +150,7 @@ div {
 
 ```css live-sample___black_and_white_starburst
 div {
-  background-image: repeating-conic-gradient(#fff 0 9deg, #000 9deg 18deg);
+  background-image: repeating-conic-gradient(white 0 9deg, black 9deg 18deg);
 }
 ```
 

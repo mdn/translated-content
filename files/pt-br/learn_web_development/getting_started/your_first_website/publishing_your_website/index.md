@@ -6,7 +6,7 @@ original_slug: Learn/Getting_started_with_the_web/Publishing_your_website
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Web_standards/How_the_web_works", "Learn_web_development/Getting_started/Your_first_website")}}
 
 Uma vez que você tenha acabado de escrever seu código e organizar os arquivos que compõem seu site, você precisa disponibilizar tudo isso online para que as pessoas possam achá-lo. Este artigo mostra como colocar online seu código de amostra simples com o mínimo de esforço.
 
@@ -84,4 +84,4 @@ Para aprender mais, consulte a [Ajuda do Github Pages](https://help.github.com/e
 - [Publicar um site](https://www.codecademy.com/learn/deploy-a-website): Um bom tutorial da Codecademy que vai um pouco além e mostra algumas técnicas adicionais.
 - [Hospedagem baratas ou gratuitas de sites estáticos](https://alignedleft.com/resources/cheap-web-hosting), por Scott Murray, tem algumas idéias úteis sobre serviços disponíveis.
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Web_standards/How_the_web_works", "Learn_web_development/Getting_started/Your_first_website")}}

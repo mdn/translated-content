@@ -4,7 +4,7 @@ slug: conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors
 original_slug: Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics")}}
 
 En este artículo vamos a echar un vistazo a los selectores más simples de que dispones y que seguramente serán los que utilices con mayor frecuencia.
 
@@ -108,4 +108,4 @@ Un selector de ID comienza con un carácter `#` en lugar de un punto, pero se ut
 
 Seguiremos con la descripción de los selectores examinando los [selectores de atributo](/es/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors).
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics")}}

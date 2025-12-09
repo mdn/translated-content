@@ -139,7 +139,7 @@ Gecko は現在 [HTML5](/ja/docs/Glossary/HTML5) パーサーを利用するよ�
     <tr>
       <td>{{cssxref(":valid")}}</td>
       <td>
-        	入力が妥当であると判断された {{HTMLElement("input")}} フィールドに自動的に適用されます。
+          入力が妥当であると判断された {{HTMLElement("input")}} フィールドに自動的に適用されます。
       </td>
     </tr>
   </tbody>

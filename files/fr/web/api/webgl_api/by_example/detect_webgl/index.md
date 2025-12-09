@@ -3,7 +3,7 @@ title: Détecter WebGL
 slug: Web/API/WebGL_API/By_example/Detect_WebGL
 ---
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple","Apprendre/WebGL/Par_exemple/Appliquer_des_couleurs")}}
+{{PreviousNext("Web/API/WebGL_API/By_example","Web/API/WebGL_API/By_example/Clearing_with_colors")}}
 
 Dans cet exemple, on voit comment détecter un contexte de rendu {{Glossary("WebGL")}} et afficher le résultat à l'utilisateur.
 
@@ -73,4 +73,4 @@ window.addEventListener(
 
 Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/detect-webgl).
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple","Apprendre/WebGL/Par_exemple/Appliquer_des_couleurs")}}
+{{PreviousNext("Web/API/WebGL_API/By_example","Web/API/WebGL_API/By_example/Clearing_with_colors")}}

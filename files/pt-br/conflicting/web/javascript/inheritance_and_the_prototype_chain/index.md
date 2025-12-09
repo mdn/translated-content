@@ -679,4 +679,4 @@ Hobbyist.prototype.equipment = ["mask", "fins", "regulator", "bcd"]
 
 The `dennis` object does not inherit this new property.
 
-{{PreviousNext("Web/JavaScript/Guide/Working_with_Objects", "Web/JavaScript/Guide/Iterators_and_Generators")}}
+{{PreviousNext("Web/JavaScript/Guide/Working_with_objects", "Web/JavaScript/Guide/Iterators_and_generators")}}

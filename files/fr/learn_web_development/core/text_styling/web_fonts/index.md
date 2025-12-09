@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Text_styling/Web_fonts
 original_slug: Learn/CSS/Styling_text/Web_fonts
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling/Typesetting_a_homepage", "Learn_web_development/Core/Text_styling")}}
 
 Dans le premier article du module, nous avons exploré les fonctions CSS de base disponibles pour composer du texte. Dans cet article, nous allons plus loin et explorons les polices web en détail : comment télécharger des polices personnalisées en même temps que la page Web, pour donner un style plus varié et personnalisé au texte.
 
@@ -183,4 +183,4 @@ Elle est désignée sous le vocable «&nbsp;bulletproof @font-face syntax&nbsp;�
 
 Maintenant que vous avez travaillé nos articles sur les principes fondamentaux pour composer du texte, il est temps de tester votre compréhension de la chose avec notre évaluation pour le module&nbsp;: composition d'une page d'accueil d'une école communale.
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling/Typesetting_a_homepage", "Learn_web_development/Core/Text_styling")}}

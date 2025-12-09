@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Models
 original_slug: Learn/Server-side/Django/Models
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Este artigo mostra como definir os modelos para o website [LocalLibrary](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website). Ele explica o que é um modelo, como ele é declarado e mostra algum dos principais tipos de campo. Ele também mostra brevemente algumas das principais formas pelas quais você pode acessar dados do modelo.
 
@@ -13,7 +13,7 @@ Este artigo mostra como definir os modelos para o website [LocalLibrary](/pt-BR/
     <tr>
       <th scope="row">Pré-requisitos:</th>
       <td>
-        <a href="/pt-BR/docs/Learn/Server-side/Django/skeleton_website"
+        <a href="/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website"
           >Django Tutorial Part 2: Criar um esqueleto de um site</a
         >.
       </td>
@@ -438,4 +438,4 @@ Neste ponto faremos um rápido desvio da criação do site para ver o _Django Ad
 - [Fazendo queries](https://docs.djangoproject.com/en/2.1/topics/db/queries/) (Django Docs)
 - [Referência a QuerySet API](https://docs.djangoproject.com/en/2.1/ref/models/querysets/) (Django Docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django")}}

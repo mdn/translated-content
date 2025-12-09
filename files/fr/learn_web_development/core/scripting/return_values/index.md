@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
 Il y a un dernier concept essentiel sur les fonctions dont nous devons discuter&nbsp;: **les valeurs de retour**. Certaines fonctions ne renvoient pas de valeur significative, mais d'autres le font. Il est important de comprendre quelles sont leurs valeurs, comment les utiliser dans votre code et comment faire en sorte que les fonctions renvoient des valeurs utiles. Nous allons aborder ces différents sujets dans cet article.
 
@@ -187,4 +187,4 @@ Si vous n'avez pas compris quelque chose, n'hésitez pas à relire l'article, ou
 - [La page du glossaire sur les fonctions de rappel (<i lang="en">callbacks</i> en anglais)](/fr/docs/Glossary/Callback_function)
   - : Il arrive souvent en JavaScript de passer une fonction à une autre fonction _comme argument_. Cet argument est alors appelé au sein de la deuxième fonction. Ce concept va au-delà de ce premier guide, mais n'hésitez pas à vous familiariser avec cette notion.
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}

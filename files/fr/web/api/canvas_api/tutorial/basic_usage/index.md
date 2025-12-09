@@ -3,7 +3,7 @@ title: Utilisation de base des canvas
 slug: Web/API/Canvas_API/Tutorial/Basic_usage
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas", "Tutoriel_canvas/Formes_géométriques")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}
 
 ## L'élément `<canvas>`
 
@@ -147,4 +147,4 @@ Cet exemple ressemble a ceci :
 
 {{EmbedLiveSample("Un_exemple_simple", 160, 160, "canvas_ex1.png")}}
 
-{{PreviousNext("Tutoriel_canvas", "Tutoriel_canvas/Formes_géométriques")}}
+{{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}

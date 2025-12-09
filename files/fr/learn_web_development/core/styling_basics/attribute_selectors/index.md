@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b580c9fe8f354fb00dfe55d9d1fc4083bb49fab8
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics")}}
 
 En étudiant HTML, vous avez vu que les éléments peuvent avoir des attributs, qui leur fournissent des détails supplémentaires. En CSS, on peut utiliser les sélecteurs d'attribut afin de cibler les éléments qui possèdent certains attributs. Dans cet article, nous verrons comment utiliser ces sélecteurs.
 
@@ -105,4 +105,4 @@ Dans l'exemple qui suit, le premier sélecteur cible l'élément dont la valeur 
 
 Maintenant que nous avons vu les sélecteurs d'attribut, nous allons poursuivre avec [les sélecteurs de pseudo-classe et de pseudo-élément](/fr/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements).
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics")}}

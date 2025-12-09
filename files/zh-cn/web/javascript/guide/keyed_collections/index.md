@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
 ---
 
-{{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_objects")}}
+{{PreviousNext("Web/JavaScript/Guide/Indexed_collections", "Web/JavaScript/Guide/Working_with_objects")}}
 
 本章将介绍由键索引的数据集合；`Map` 和 `Set` 对象包含可按插入顺序迭代的元素。
 
@@ -151,4 +151,4 @@ mySet2 = new Set([1, 2, 3, 4]);
 - `-0` 和 `+0` 相等。
 - {{jsxref("NaN")}} 与自身相等（与 `===` 有所不同）。
 
-{{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_objects")}}
+{{PreviousNext("Web/JavaScript/Guide/Indexed_collections", "Web/JavaScript/Guide/Working_with_objects")}}

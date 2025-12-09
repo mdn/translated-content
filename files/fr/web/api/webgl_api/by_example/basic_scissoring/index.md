@@ -3,7 +3,7 @@ title: Appliquer des découpes simples
 slug: Web/API/WebGL_API/By_example/Basic_scissoring
 ---
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Masque_de_couleur","Apprendre/WebGL/Par_exemple/Tailles_de_canvas_et_WebGL")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Color_masking","Web/API/WebGL_API/By_example/Canvas_size_and_WebGL")}}
 
 Dans cet article, on illustre comment dessiner des rectangles et des carrés grâce à des opérations de découpe simple (_scissoring_).
 
@@ -86,4 +86,4 @@ window.addEventListener(
 
 Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/basic-scissoring).
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Masque_de_couleur","Apprendre/WebGL/Par_exemple/Tailles_de_canvas_et_WebGL")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Color_masking","Web/API/WebGL_API/By_example/Canvas_size_and_WebGL")}}

@@ -6,7 +6,7 @@ original_slug: Web/SVG/Tutorial/Getting_Started
 
 {{SVGRef}}
 
-{{PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions")}}
+{{PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Introduction", "Web/SVG/Tutorials/SVG_from_scratch/Positions")}}
 
 ## Un exemple simple
 
@@ -92,4 +92,4 @@ Vous pouvez vérifier que votre serveur envoie le bon en-tête HTTP avec vos fic
 
 La mauvaise configuration du serveur est souvent la cause de l'échec du chargement du SVG, donc assurez-vous bien d'avoir vérifié le vôtre. Si votre serveur n'est pas configuré pour envoyer les bons en-têtes avec les fichiers SVG qu'il fournit, alors Firefox affichera le contenu du fichier comme du texte ou comme du rebut encodé, ou demandera peut-être à l'utilisateur de choisir une application pour l'ouvrir.
 
-{{PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions")}}
+{{PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Introduction", "Web/SVG/Tutorials/SVG_from_scratch/Positions")}}

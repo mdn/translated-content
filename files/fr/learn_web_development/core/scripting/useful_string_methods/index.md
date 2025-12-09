@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Useful_string_methods
 original_slug: Learn/JavaScript/First_steps/Useful_string_methods
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting")}}
 
 À présent que nous avons vu les bases de la manipulation des chaînes de caractères, allons un cran plus loin et commençons à imaginer les opérations utiles que nous pourrions faire sur les chaînes de caractères avec les méthodes intégrées&nbsp;: trouver la longueur d'une chaîne, assembler ou couper des chaînes, substituer un caractère à un autre dans une chaîne, et plus encore.
 
@@ -468,4 +468,4 @@ window.addEventListener("load", updateCode);
 
 Il n'est pas possible d'éluder le fait qu'il est très important de savoir manipuler des mots et des phrases lorsqu'on programme — tout particulièrement en JavaScript, dans la mesure où les sites web servent à la communication entre les personnes. Cet article vous a indiqué, pour l'instant, les bases à connaître pour manipuler les chaînes. Ce sera utile lorsque vous aborderez des sujets plus complexes à l'avenir. Pour suivre, nous allons nous intéresser au dernier grand type de données sur lequel nous devons nous concentrer à court terme — les tableaux.
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting")}}

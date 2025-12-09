@@ -1,69 +1,126 @@
 ---
-title: HTMLFormElement.elements
+title: "HTMLFormElement : propriété elements"
+short-title: elements
 slug: Web/API/HTMLFormElement/elements
+l10n:
+  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété **`elements`**, rattachée à l'interface [`HTMLFormElement`](/fr/docs/Web/API/HTMLFormElement), renvoie un objet [`HTMLFormControlsCollection`](/fr/docs/Web/API/HTMLFormControlsCollection) qui liste l'ensemble des contrôles de formulaire contenu dans l'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form).
+La propriété **`elements`** de l'interface {{DOMxRef("HTMLFormElement")}} retourne un objet {{DOMxRef("HTMLFormControlsCollection")}} listant tous les contrôles de formulaire associés à l'élément HTML {{HTMLElement("form")}}.
 
-Si besoin d'obtenir uniquement le nombre de contrôles du formulaire, on pourra utiliser la propriété [`length`](/fr/docs/Web/API/HTMLFormElement/length).
+Vous pouvez accéder à un contrôle particulier dans la collection retournée en utilisant soit un index, soit les attributs `name` ou `id` de l'élément.
 
-On peut accéder à un contrôle particulier du formulaire via la collection renvoyée en utilisant l'indice ou l'attribut `name` ou `id` de l'élément.
+Avant HTML5, l'objet retourné était un {{DOMxRef("HTMLCollection")}}, sur lequel s'appuie `HTMLFormControlsCollection`.
 
-Avant HTML 5, l'objet renvoyé était un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection), sur lequel `HTMLFormControlsCollection` est désormais basé.
-
-> [!NOTE]
-> De la même façon, on peut obtenir la liste de tous les formulaires contenus dans un document donné en utilisant la propriété [`forms`](/fr/docs/Web/API/Document/forms).
+De manière indépendante, vous pouvez obtenir uniquement le nombre de contrôles associés en utilisant la propriété {{DOMxRef("HTMLFormElement.length", "length")}}. Vous pouvez obtenir la liste de tous les formulaires contenus dans un document donné en utilisant la propriété {{DOMxRef("Document.forms", "forms")}} du document.
 
 ## Valeur
 
-Un objet [`HTMLFormControlsCollection`](/fr/docs/Web/API/HTMLFormControlsCollection) contenant tous les contrôles du formulaire qui ne sont pas des images. Il s'agit d'une collection dynamique, si des contrôles sont ajoutés ou retirés du formulaire, cette collection sera mise à jour afin de refléter cette modification.
+Un {{DOMxRef("HTMLFormControlsCollection")}} contenant tous les contrôles non-image associés au formulaire&nbsp;; si des contrôles sont associés ou dissociés du formulaire, cette collection se mettra à jour pour refléter le changement.
 
-Les contrôles de formulaires de la collection renvoyée sont dans le même ordre que celui selon lequel ils apparaissent dans le formulaire selon un parcours préfixe en profondeur de l'arbre, appelé **ordre de l'arbre**.
+Les contrôles du formulaire dans la collection retournée sont dans le même ordre dans lequel ils apparaissent dans le document en suivant un parcours pré-ordonné, un parcours en profondeur de l'arbre. Cela s'appelle **l'ordre de l'arbre**.
 
-Seuls les éléments suivants sont renvoyés&nbsp;:
+Seuls les contrôles suivants sont retournés&nbsp;:
 
-- [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button)
-- [`<fieldset>`](/fr/docs/Web/HTML/Reference/Elements/fieldset)
-- [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) (exception faite des éléments dont l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) vaut `"image"`, pour des raisons historiques)
-- [`<object>`](/fr/docs/Web/HTML/Reference/Elements/object)
-- [`<output>`](/fr/docs/Web/HTML/Reference/Elements/output)
-- [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select)
-- [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea)
+- {{HTMLElement("button")}}
+- {{HTMLElement("fieldset")}}
+- {{HTMLElement("input")}} (à l'exception de ceux dont le [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) est `"image"`, qui sont omis pour des raisons historiques)
+- {{HTMLElement("object")}}
+- {{HTMLElement("output")}}
+- {{HTMLElement("select")}}
+- {{HTMLElement("textarea")}}
+- [éléments personnalisés associés aux formulaires <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/custom-elements.html#form-associated-custom-element)
 
 ## Exemples
 
 ### Utilisation basique de la syntaxe
 
-Dans cet exemple, on voit comment obtenir la liste des contrôles d'un formulaire et comment accéder à ses éléments avec un indice, un nom ou un identifiant.
+Dans cet exemple, on voit comment obtenir la liste des contrôles du formulaire ainsi que la manière d'accéder à ses membres par indice et par nom ou identifiant.
 
 ```html
-<form id="mon-formulaire">
-  <input type="text" name="username" />
-  <input type="text" name="full-name" />
-  <input type="password" name="password" />
+<form id="my-form">
+  <label>
+    Nom d'utilisateur&nbsp;:
+    <input type="text" name="username" />
+  </label>
+  <label>
+    Nom complet&nbsp;:
+    <input type="text" name="full-name" />
+  </label>
+  <label>
+    Mot de passe&nbsp;:
+    <input type="password" name="password" />
+  </label>
 </form>
 ```
 
 ```js
-const inputs = document.getElementById("mon-formulaire").elements;
+const inputs = document.getElementById("my-form").elements;
 const inputByIndex = inputs[0];
 const inputByName = inputs["username"];
 ```
 
-### Accéder aux contrôles du formulaire
+### Contrôles de formulaire associés
 
-Dans cet exemple, on récupère la liste des éléments du formulaire, qu'on parcourt à la recherche d'éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) de type [`"text"`](/fr/docs/Web/HTML/Reference/Elements/input/text) afin de pouvoir modifier leur valeur.
+Cet exemple montre comment l'objet {{DOMxRef("HTMLFormControlsCollection")}} contient les contrôles de formulaire associés au formulaire, plutôt que les contrôles imbriqués physiquement dans le `<form>`.
+
+Le premier formulaire est complet, avec quatre contrôles de formulaire&nbsp;: un {{HTMLElement("fieldset")}} et trois {{HTMLElement("input")}}. Les éléments {{HTMLElement("legend")}} et {{HTMLElement("label")}} ne sont pas des contrôles listés. Le second formulaire est clairsemé, avec un seul contrôle imbriqué&nbsp;: un seul élément {{HTMLElement("object")}}. Tous les contrôles du formulaire complet sont associés au formulaire clairsemé via leur attribut `form`.
+
+```html
+<form id="fullForm">
+  Ce formulaire semble complet, mais il n'a aucun contrôle de formulaire associé
+  <fieldset form="sparseForm">
+    <legend>Ceci est une légende</legend>
+    <label>Un contrôle de formulaire&nbsp;: <input form="sparseForm" /></label>
+    <label
+      >Un autre contrôle de formulaire&nbsp;: <input form="sparseForm"
+    /></label>
+    <label
+      >Encore un contrôle de formulaire&nbsp;: <input form="sparseForm"
+    /></label>
+  </fieldset>
+</form>
+
+<form id="sparseForm">
+  <object data="lone-form-control.jpg">Contrôle de formulaire isolé</object>
+</form>
+```
+
+On utilise la propriété `elements` pour obtenir le `HTMLFormControlsCollection` de chaque formulaire.
 
 ```js
-const inputs = document.getElementById("mon-formulaire").elements;
+const sparse = document.getElementById("sparseForm").elements;
+const full = document.getElementById("fullForm").elements;
+```
 
-// On parcourt les contrôles du formulaire
-for (let i = 0; i < inputs.length; i++) {
-  if (inputs[i].nodeName === "INPUT" && inputs[i].type === "text") {
-    // On met à jour le champ texte
-    inputs[i].value.toLocaleUpperCase();
+La collection inclut les contrôles de formulaire associés à l'élément de formulaire, c'est‑à‑dire tous les {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} et éléments personnalisés associés aux formulaires, même si ces éléments sont imbriqués dans un autre formulaire ou non imbriqués dans un formulaire.
+
+```js
+console.log(`formulaire clairsemé : ${sparse.length}`); // formulaire clairsemé : 5
+console.log(`formulaire complet : ${full.length}`); // formulaire complet : 0
+```
+
+Les contrôles de la collection sont dans le même ordre que lorsqu'ils apparaissent dans le document.
+
+```js
+console.log(`premier membre : ${sparse[0].tagName}`); // premier membre : FIELDSET
+console.log(`dernier membre : ${sparse[sparse.length - 1].tagName}`); // dernier membre : OBJECT
+```
+
+### Accéder aux contrôles du formulaire
+
+Cet exemple obtient la liste des éléments du formulaire, puis parcourt la liste à la recherche d'éléments {{HTMLElement("input")}} de type [`"text"`](/fr/docs/Web/HTML/Reference/Elements/input/text) afin d'effectuer un certain traitement sur eux.
+
+```js
+const inputs = document.getElementById("my-form").elements;
+
+// Parcourt les contrôles du formulaire
+for (const input of inputs) {
+  if (input.nodeName === "INPUT" && input.type === "text") {
+    // Met à jour la valeur du champ texte
+    input.value = input.value.toLocaleUpperCase();
   }
 }
 ```
@@ -71,12 +128,12 @@ for (let i = 0; i < inputs.length; i++) {
 ### Désactiver des contrôles de formulaire
 
 ```js
-const inputs = document.getElementById("mon-formulaire").elements;
+const inputs = document.getElementById("my-form").elements;
 
-// On parcourt les contrôles du formulaire
-for (let i = 0; i < inputs.length; i++) {
-  // On les désactive tous
-  inputs[i].setAttribute("disabled", "");
+// Parcourt les contrôles du formulaire
+for (const input of inputs) {
+  // Désactive tous les contrôles du formulaire
+  input.setAttribute("disabled", "");
 }
 ```
 
