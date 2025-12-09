@@ -11,7 +11,7 @@ HTTP **`Early-Data`** {{Glossary("request header", "请求标头")}}由某个中
 
 如果客户端最近与服务器交互过，早期数据（也称为零往返时间[（0-RTT）数据](/zh-CN/docs/Web/Security/Defenses/Transport_Layer_Security#tls_1.3)）允许客户端在连接的第一个往返中向服务器发送数据，而无需等待 TLS [握手](/zh-CN/docs/Glossary/TCP_handshake)完成。这减少了客户端和服务器之间重复连接的延迟，但具有安全隐患，因为早期数据容易受到重放攻击。
 
-`Early-Data` 标头**不由**请求的发起者设置（例如，浏览器）。
+`Early-Data` 标头**不**由请求的发起者设置（例如，浏览器）。
 
 <table class="properties">
   <tbody>
