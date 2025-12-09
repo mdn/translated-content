@@ -595,7 +595,7 @@ Les attributs qui suivent ne sont pas standard et sont disponibles dans certains
     <tr>
       <td><code>mozactionhint</code> {{Deprecated_Inline}}</td>
       <td><p>Une chaîne de caractères qui indique le type d'action qui sera réalisée lorsque la personne appuiera sur la touche <kbd>Entrée</kbd> ou <kbd>Retour</kbd> lors de l'édition du champ. Il est utilisé pour déterminer le libellé pertinent à utiliser sur un clavier virtuel.</p>
-        <p><strong>Obsolète&nbsp;: il faut utiliser <a href="/fr/docs/Web/HTML/Global_attributes/enterkeyhint"><code>enterkeyhint</code></a> à la place.</strong></p>
+        <p><strong>Obsolète&nbsp;: il faut utiliser <a href="/fr/docs/Web/HTML/Reference/Global_attributes/enterkeyhint"><code>enterkeyhint</code></a> à la place.</strong></p>
       </td>
     </tr>
     <tr>
