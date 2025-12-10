@@ -1,12 +1,11 @@
 ---
 title: border-left
 slug: Web/CSS/Reference/Properties/border-left
-original_slug: Web/CSS/border-left
 l10n:
-  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`border-left`** は[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の[境界](/ja/docs/Web/CSS/Reference/Properties/border)のプロパティをすべて設定します。
+**`border-left`** は[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) プロパティで、要素の左側の[境界](/ja/docs/Web/CSS/Reference/Properties/border)のプロパティをすべて設定します。
 
 {{InteractiveExample("CSS デモ: border-left")}}
 
@@ -27,21 +26,21 @@ border-left: thick double #32a1ce;
 ```
 
 ```css interactive-example-choice
-border-left: 4mm ridge rgba(211, 220, 50, 0.6);
+border-left: 4mm ridge rgb(211 220 50 / 0.6);
 ```
 
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これは周囲に境界線があるボックスです。
   </div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #8b008b;
+  background-color: #eeeeee;
+  color: darkmagenta;
   padding: 0.75em;
   width: 80%;
   height: 100px;
@@ -112,13 +111,13 @@ border-left: unset;
 
 #### HTML
 
-```html live-sample___applying_a_left_border
+```html
 <div>このボックスには左側に境界線があります。</div>
 ```
 
 #### CSS
 
-```css live-sample___applying_a_left_border
+```css
 div {
   border-left: 4px dashed blue;
   background-color: gold;

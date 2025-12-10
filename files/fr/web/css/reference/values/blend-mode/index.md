@@ -3,10 +3,10 @@ title: <blend-mode>
 slug: Web/CSS/Reference/Values/blend-mode
 original_slug: Web/CSS/blend-mode
 l10n:
-  sourceCommit: 0ca040b6a9cfd931558bd1d3a402707abddc1924
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<blend-mode>`** définit la façon dont les couleurs doivent apparaître lorsque des éléments se superposent. Il est utilisé dans les propriétés {{cssxref("background-blend-mode")}} et {{cssxref("mix-blend-mode")}}.
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<blend-mode>`** définit la façon dont les couleurs doivent apparaître lorsque des éléments se superposent. Il est utilisé dans les propriétés {{CSSxRef("background-blend-mode")}} et {{CSSxRef("mix-blend-mode")}}.
 
 ## Syntaxe
 
@@ -329,8 +329,8 @@ selectElem.addEventListener("change", () => {
 ## Voir aussi
 
 - Les propriétés utilisant des valeurs de ce type :
-  - {{cssxref("background-blend-mode")}}
-  - {{cssxref("mix-blend-mode")}}
+  - {{CSSxRef("background-blend-mode")}}
+  - {{CSSxRef("mix-blend-mode")}}
 
 - [Les modes de fusion sur Wikipédia (en anglais)](https://en.wikipedia.org/wiki/Blend_modes)
 - [La référence CSS](/fr/docs/Web/CSS/Reference)

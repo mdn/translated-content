@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Sizing
 original_slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics")}}
 
 En los diversos artículos vistos hasta ahora, has aprendido varias formas de dimensionar elementos en una página web utilizando CSS. Es importante que comprendas qué tamaños van a tener los diferentes elementos de tu diseño, y en este artículo vamos a resumir las diversas formas en que puedes asignar tamaños a los elementos con CSS y definir algunos términos relativos al dimensionado que te ayudarán en el futuro.
 
@@ -119,4 +119,4 @@ Cambiar los tamaños según la ventana gráfica puede ser útil en tus diseños.
 
 Este artículo te ha dado un resumen de algunos problemas clave con los que puedes encontrarte al dimensionar cosas en la web. Cuando llegues al artículo [Compaginar con CSS](/es/docs/Learn_web_development/Core/CSS_layout), el tamaño va a ser un aspecto muy importante para dominar los diferentes métodos de compaginación, por lo que, antes de continuar, vale la pena comprender los conceptos que hemos expuesto en este artículo.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics")}}

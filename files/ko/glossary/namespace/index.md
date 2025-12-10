@@ -16,7 +16,7 @@ HTML, CSS 와 XML 기반 언어에서, 네임스페이스는 요소(또는 속�
 ## 같이 보기
 
 - [네임스페이스 집중 강의](/ko/docs/Web/SVG/Namespaces_Crash_Course)
-- [CSS 네임스페이스](/ko/docs/Web/CSS/CSS_namespaces) 모듈
+- [CSS 네임스페이스](/ko/docs/Web/CSS/Guides/Namespaces) 모듈
 - CSS {{CSSXref("@namespace")}}
 - [`Document.createElementNS()`](/ko/docs/Web/API/Document/createElementNS) 메소드
 - 위키백과의 [네임스페이스](https://en.wikipedia.org/wiki/Namespace)

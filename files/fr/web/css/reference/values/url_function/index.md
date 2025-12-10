@@ -1,12 +1,11 @@
 ---
 title: url()
 slug: Web/CSS/Reference/Values/url_function
-original_slug: Web/CSS/url_function
 l10n:
-  sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`url()`** est utilisée afin d'inclure un fichier. Le paramètre est une URL absolue, une URL relative ou un URI de donnée. La fonction **`url()`** peut être utilisée comme paramètre d'une autre fonction comme {{cssxref("attr")}}. Selon la propriété pour laquelle elle est utilisée, la ressource utilisée peut être une image, une police ou une feuille de style. La notation fonctionnelle `url()` correspond au type de donnée CSS `<url>`.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`url()`** est utilisée afin d'inclure un fichier. Le paramètre est une URL absolue, une URL relative ou un URI de donnée. La fonction **`url()`** peut être utilisée comme paramètre d'une autre fonction comme {{CSSxRef("attr")}}. Selon la propriété pour laquelle elle est utilisée, la ressource utilisée peut être une image, une police ou une feuille de style. La notation fonctionnelle `url()` correspond au type de donnée CSS `<url>`.
 
 > [!NOTE]
 > Il y a une différence entre un {{Glossary("URI")}} et une {{Glossary("URL")}}. Un URI identifie une ressource. Une URL est un type d'URI qui décrit _l'emplacement_ d'une ressource. Un URI peut être une URL ou un nom ({{Glossary("URN")}}) d'une ressource.
@@ -16,7 +15,7 @@ La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CS
 Lorsque des URL relatives sont utilisées, elles sont relatives à l'URL de la feuille de style et pas à celle de la page web courante.
 
 La fonction **`url()`** peut être incluse comme valeur pour les propriétés&nbsp;:
-{{cssxref('background')}}, {{cssxref('background-image')}}, {{cssxref('border')}}, {{cssxref('border-image')}}, {{cssxref('border-image-source')}}, {{cssxref('content')}}, {{cssxref('cursor')}}, {{cssxref('filter')}}, {{cssxref('list-style')}}, {{cssxref('list-style-image')}}, {{cssxref('mask')}}, {{cssxref('mask-image')}}, {{cssxref('offset-path')}}, {{cssxref('clip-path')}}, [src](/fr/docs/Web/CSS/Reference/At-rules/@font-face/src) dans le cadre d'un bloc [`@font-face`](/fr/docs/Web/CSS/Reference/At-rules/@font-face) et [@counter-style/`symbol`](/fr/docs/Web/CSS/Reference/At-rules/@counter-style/symbols)
+{{CSSxRef('background')}}, {{CSSxRef('background-image')}}, {{CSSxRef('border')}}, {{CSSxRef('border-image')}}, {{CSSxRef('border-image-source')}}, {{CSSxRef('content')}}, {{CSSxRef('cursor')}}, {{CSSxRef('filter')}}, {{CSSxRef('list-style')}}, {{CSSxRef('list-style-image')}}, {{CSSxRef('mask')}}, {{CSSxRef('mask-image')}}, {{CSSxRef('offset-path')}}, {{CSSxRef('clip-path')}}, [src](/fr/docs/Web/CSS/Reference/At-rules/@font-face/src) dans le cadre d'un bloc {{CSSxRef('@font-face')}} et {{CSSxRef('@counter-style/symbols', '@counter-style/symbols')}}.
 
 ## Syntaxe
 
@@ -178,8 +177,8 @@ Lorsqu'une URL est utilisée comme chemin d'un filtre, l'URL doit être&nbsp;:
 
 ## Voir aussi
 
-- {{cssxref("&lt;gradient&gt;")}}
-- {{cssxref("element", "element()")}}
-- {{cssxref("image/image", "image()")}}
-- {{cssxref("image/image-set", "image-set()")}}
-- {{cssxref("cross-fade", "cross-fade()")}}
+- Le type de donnée {{CSSxRef("&lt;gradient&gt;")}}
+- La fonction {{CSSxRef("element", "element()")}}
+- La fonction {{CSSxRef("image/image", "image()")}}
+- La fonction {{CSSxRef("image/image-set", "image-set()")}}
+- La fonction {{CSSxRef("cross-fade", "cross-fade()")}}

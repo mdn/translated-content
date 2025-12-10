@@ -24,7 +24,7 @@ Un objet {{DOMxRef("Storage")}} qui peut être utilisé pour accéder à l'espac
 ### Exceptions
 
 - `SecurityError`
-  - : La demande viole une décision politique, ou l'origine n'est pas [un schéma/hôte/port valide](/fr/docs/Web/Security/Same-origin_policy) (cela peut se produire si l'origine utilise le shéma `file:` ou `data:`, par exemple). Par exemple, l'utilisateur peut configurer son navigateur de manière à refuser la permission de conserver des données pour l'origine spécifiée.
+  - : La demande viole une décision politique, ou l'origine n'est pas [un schéma/hôte/port valide](/fr/docs/Web/Security/Defenses/Same-origin_policy) (cela peut se produire si l'origine utilise le shéma `file:` ou `data:`, par exemple). Par exemple, l'utilisateur peut configurer son navigateur de manière à refuser la permission de conserver des données pour l'origine spécifiée.
 
 ## Exemple
 

@@ -2,9 +2,8 @@
 title: 名前付きグリッド線を使用したレイアウト
 short-title: 名前付きグリッド線の使い方
 slug: Web/CSS/Guides/Grid_layout/Named_grid_lines
-original_slug: Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 これまでのガイドでは、[グリッドトラックの定義](/ja/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)で作成した行にアイテムを配置する方法、および[名前付きテンプレート領域の使用](/ja/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)でアイテムを配置する方法について説明しました。このガイドでは、名前付き行を使用する場合、これら 2 つがどのように連携して動作するのかを見ていきます。

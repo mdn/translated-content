@@ -298,8 +298,7 @@ li::marker {
 #### CSS
 
 ```css
-a[href^="https://"]::after
-{
+a[href^="https://"]::after {
   content: " (URL: " attr(href) ")";
   color: darkgreen;
 }

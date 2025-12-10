@@ -3,7 +3,7 @@ title: <easing-function>
 slug: Web/CSS/Reference/Values/easing-function
 original_slug: Web/CSS/easing-function
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<easing-function>`** représente une fonction mathématique décrivant la vitesse à laquelle la valeur change.
@@ -54,8 +54,8 @@ Une `<easing-function>` peut être l'un des types suivants&nbsp;:
         > [!NOTE]
         > Le mot-clé `linear` est toujours interprété comme `linear(0, 1)`, tandis que la fonction `linear(0, 1)` est interprétée comme `linear(0 0%, 1 100%)`.
 
-    - {{cssxref("easing-function/linear", "linear()")}}
-      - : Définit plusieurs points de progression à l'aide de valeurs {{cssxref("&lt;number&gt;")}}, avec des valeurs {{cssxref("&lt;percentage&gt;")}} optionnelles pour contrôler leur position dans le temps.
+    - {{CSSxRef("easing-function/linear", "linear()")}}
+      - : Définit plusieurs points de progression à l'aide de valeurs {{CSSxRef("&lt;number&gt;")}}, avec des valeurs {{CSSxRef("&lt;percentage&gt;")}} optionnelles pour contrôler leur position dans le temps.
 
 - `<cubic-bezier-easing-function>`
   - : Crée des transitions progressives avec des vitesses variables. Cette fonction peut être spécifiée de l'une des façons suivantes&nbsp;:
@@ -79,8 +79,8 @@ Une `<easing-function>` peut être l'un des types suivants&nbsp;:
 
         ![Graphiques de la progression d'entrée vers la progression de sortie : ease montre une courbe montant rapidement de l'origine à (1, 1) ; ease-in montre une courbe peu pentue au départ qui s'accentue vers (1, 1) ; ease-out montre une diagonale qui s'incurve légèrement à l'approche de (1, 1) ; ease-in-out montre une courbe symétrique en S de l'origine à (1, 1).](ease.svg)
 
-    - {{cssxref("easing-function/cubic-bezier", "cubic-bezier()")}}
-      - : Définit une courbe personnalisée à l'aide de quatre valeurs {{cssxref("&lt;number&gt;")}} qui spécifient les coordonnées de deux points de contrôle.
+    - {{CSSxRef("easing-function/cubic-bezier", "cubic-bezier()")}}
+      - : Définit une courbe personnalisée à l'aide de quatre valeurs {{CSSxRef("&lt;number&gt;")}} qui spécifient les coordonnées de deux points de contrôle.
         Les abscisses doivent être comprises dans l'intervalle `[0, 1]`.
 
 - `<step-easing-function>`
@@ -96,12 +96,12 @@ Une `<easing-function>` peut être l'un des types suivants&nbsp;:
 
         ![Deux graphiques de la progression d'entrée vers la progression de sortie. Pour step-start, un cercle non rempli à l'origine (0, 0), une ligne horizontale de (0, 1) à (1, 1). Pour step-end, une ligne horizontale de l'origine à (1, 0), un cercle non rempli en (1,0) et un cercle plein en (1, 1).](step.svg)
 
-    - {{cssxref("easing-function/steps", "steps()")}}
-      - : Crée une courbe en escalier à l'aide d'un {{cssxref("&lt;integer&gt;")}} pour spécifier le nombre d'intervalles et d'un mot-clé optionnel pour contrôler le moment des sauts.
+    - {{CSSxRef("easing-function/steps", "steps()")}}
+      - : Crée une courbe en escalier à l'aide d'un {{CSSxRef("&lt;integer&gt;")}} pour spécifier le nombre d'intervalles et d'un mot-clé optionnel pour contrôler le moment des sauts.
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 

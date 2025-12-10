@@ -1,21 +1,20 @@
 ---
 title: "<data> : l'élément de données"
 slug: Web/HTML/Reference/Elements/data
-original_slug: Web/HTML/Element/data
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<data>`** associe un contenu donné à une version interprétable par une machine. Si le contenu concerne une date ou une heure, il faut utiliser l'élément HTML {{HTMLElement("time")}}.
 
-L'élément HTML **`<data>`** relie un contenu à une version de ce contenu interprétable par un ordinateur. Si le contenu possède une composante temporelle, l'élément [`<time>`](/fr/docs/Web/HTML/Reference/Elements/time) doit être utilisé.
-
-{{InteractiveExample("HTML Demo: &lt;data&gt;", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;data&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
-<p>New Products:</p>
+<p>Nouveaux produits&nbsp;:</p>
 <ul>
   <li><data value="398">Mini Ketchup</data></li>
   <li><data value="399">Jumbo Ketchup</data></li>
-  <li><data value="400">Mega Jumbo Ketchup</data></li>
+  <li><data value="400">Méga Jumbo Ketchup</data></li>
 </ul>
 ```
 
@@ -26,30 +25,53 @@ data:hover::after {
 }
 ```
 
+## Attributs
+
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+
+- `value`
+  - : Cet attribut définit la version du contenu qui doit être interprétée par une machine.
+
+## Exemples
+
+Dans l'exemple suivant, on affiche des noms de produits avec des codes correspondants.
+
+```html
+<p>Nouveaux produits&nbsp;:</p>
+<ul>
+  <li><data value="398">Mini Ketchup</data></li>
+  <li><data value="399">Jumbo Ketchup</data></li>
+  <li><data value="400">Méga Jumbo Ketchup</data></li>
+</ul>
+```
+
+### Résultat
+
+{{EmbedLiveSample('Examples')}}
+
+## Résumé technique
+
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
           >Catégories de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
         >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"
-          >contenu tangible</a
-        >.
+        >, contenu tangible.
       </td>
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >Contenu phrasé</a
         >.
       </td>
@@ -65,7 +87,7 @@ data:hover::after {
       <th scope="row">Éléments parents autorisés</th>
       <td>
         Tout élément acceptant du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
         >.
       </td>
@@ -73,49 +95,23 @@ data:hover::after {
     <tr>
       <th scope="row">Rôle ARIA implicite</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >Pas de rôle correspondant</a
+        <code
+          ><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
+            >generic</a
+          ></code
         >
       </td>
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles.</td>
+      <td>Tous les rôles sont autorisés.</td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>
-        <a href="/fr/docs/Web/API/HTMLDataElement"
-          ><code>HTMLDataElement</code></a
-        >
-      </td>
+      <td>{{DOMxRef("HTMLDataElement")}}</td>
     </tr>
   </tbody>
 </table>
-
-## Attributs
-
-Comme pour tous les autres éléments, on peut utiliser [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes) sur `<data>`.
-
-- `value`
-  - : Cet attribut définit la version du contenu qui doit être interprétée par une machine.
-
-## Exemples
-
-Dans l'exemple suivant, on affiche des noms de produits avec des codes correspondants :
-
-```html
-<p>Nouveaux produits</p>
-<ul>
-  <li><data value="3251546">Mini voiture</data></li>
-  <li><data value="5867654">Grande voiture</data></li>
-  <li><data value="9887635">Énorme voiture</data></li>
-</ul>
-```
-
-### Résultat
-
-{{EmbedLiveSample('',640,160)}}
 
 ## Spécifications
 
@@ -127,4 +123,4 @@ Dans l'exemple suivant, on affiche des noms de produits avec des codes correspon
 
 ## Voir aussi
 
-- L'élément [`<time>`](/fr/docs/Web/HTML/Reference/Elements/time).
+- L'élément {{HTMLElement("time")}}

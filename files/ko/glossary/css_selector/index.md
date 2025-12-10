@@ -63,22 +63,22 @@ div.warning {
 
 - CSS 소개에서 [CSS 선택자에 대해 더 알아보기](/ko/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
 - 기본 선택자
-  - [타입 선택자](/ko/docs/Web/CSS/Type_selectors) `elementname`
-  - [클래스 선택자](/ko/docs/Web/CSS/Class_selectors) `.classname`
-  - [ID 선택자](/ko/docs/Web/CSS/ID_selectors) `#idname`
-  - [범용 선택자](/ko/docs/Web/CSS/Universal_selectors) `* ns|* *|*`
-  - [속성 선택자](/ko/docs/Web/CSS/Attribute_selectors) `[attr=value]`
-  - [상태 선택자](/ko/docs/Web/CSS/Pseudo-classes) `a:active, a:visited`
+  - [타입 선택자](/ko/docs/Web/CSS/Reference/Selectors/Type_selectors) `elementname`
+  - [클래스 선택자](/ko/docs/Web/CSS/Reference/Selectors/Class_selectors) `.classname`
+  - [ID 선택자](/ko/docs/Web/CSS/Reference/Selectors/ID_selectors) `#idname`
+  - [범용 선택자](/ko/docs/Web/CSS/Reference/Selectors/Universal_selectors) `* ns|* *|*`
+  - [속성 선택자](/ko/docs/Web/CSS/Reference/Selectors/Attribute_selectors) `[attr=value]`
+  - [상태 선택자](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes) `a:active, a:visited`
 
 - 그룹화 선택자
-  - [선택자 목록](/ko/docs/Web/CSS/Selector_list) `A, B`
+  - [선택자 목록](/ko/docs/Web/CSS/Reference/Selectors/Selector_list) `A, B`
 
 - 결합자
-  - [인접 형제 선택자](/ko/docs/Web/CSS/Next-sibling_combinator) `A + B`
-  - [일반 형제 선택자](/ko/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
-  - [자식 선택자](/ko/docs/Web/CSS/Child_combinator) `A > B`
-  - [하위 선택자](/ko/docs/Web/CSS/Descendant_combinator) `A B`
+  - [인접 형제 선택자](/ko/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator) `A + B`
+  - [일반 형제 선택자](/ko/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator) `A ~ B`
+  - [자식 선택자](/ko/docs/Web/CSS/Reference/Selectors/Child_combinator) `A > B`
+  - [하위 선택자](/ko/docs/Web/CSS/Reference/Selectors/Descendant_combinator) `A B`
 
 - 의사 요소
-  - [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes) `:`
-  - [의사 요소](/ko/docs/Web/CSS/Pseudo-elements) `::`
+  - [의사 클래스](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes) `:`
+  - [의사 요소](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-elements) `::`

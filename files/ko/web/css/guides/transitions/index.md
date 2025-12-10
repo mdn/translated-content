@@ -18,7 +18,7 @@ original_slug: Web/CSS/CSS_transitions
 
 ## 안내서
 
-- [CSS 트랜지션 사용하기](/ko/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [CSS 트랜지션 사용하기](/ko/docs/Web/CSS/Guides/Transitions/Using)
   - : CSS 트랜지션을 사용하는 법이 단계별로 적혀있습니다. 각각의 CSS 트랜지션 속성의 설명과, 서로 합치면 어떻게 동작하는지 설명합니다.
 
 ## 명세

@@ -22,9 +22,9 @@ slug: Web/MathML/Reference/Element/maction
 - href
   - : Используется для установки гиперссылки на указанный URI.
 - mathbackground
-  - : Цвет фона. Вы можете использовать `#rgb`, `#rrggbb` и [названия цветов HTML](/ru/docs/Web/CSS/color_value#color_keywords).
+  - : Цвет фона. Вы можете использовать `#rgb`, `#rrggbb` и [названия цветов HTML](/ru/docs/Web/CSS/Reference/Values/color_value#color_keywords).
 - mathcolor
-  - : Цвет текста и цвет пунктирной линии. Вы можете использовать `#rgb`, `#rrggbb` и [названия цветов HTML](/ru/docs/Web/CSS/color_value#color_keywords).
+  - : Цвет текста и цвет пунктирной линии. Вы можете использовать `#rgb`, `#rrggbb` и [названия цветов HTML](/ru/docs/Web/CSS/Reference/Values/color_value#color_keywords).
 - selection
   - : Дочерний элемент, которому адресуется действие. Значение по умолчанию равно 1, что соответствует первому дочернему элементу.
 

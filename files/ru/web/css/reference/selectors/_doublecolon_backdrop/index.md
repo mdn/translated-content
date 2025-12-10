@@ -6,7 +6,7 @@ original_slug: Web/CSS/::backdrop
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS) [псевдо-элемент](/ru/docs/Web/CSS/Pseudo-elements) **`::backdrop`** это прямоугольник с размерами {{Glossary("viewport", "окна")}}, который отрисовывается сразу же после отрисовки любого элемента в полноэкранном режиме. Это включает элементы, установленные в полноэкранный режим с помощью [Fullscreen API](/ru/docs/Web/API/Fullscreen_API) и элементы {{HTMLElement("dialog")}}.
+[CSS](/ru/docs/Web/CSS) [псевдо-элемент](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-elements) **`::backdrop`** это прямоугольник с размерами {{Glossary("viewport", "окна")}}, который отрисовывается сразу же после отрисовки любого элемента в полноэкранном режиме. Это включает элементы, установленные в полноэкранный режим с помощью [Fullscreen API](/ru/docs/Web/API/Fullscreen_API) и элементы {{HTMLElement("dialog")}}.
 
 Когда несколько элементов находятся в полноэкранном режиме, подложка появляется под тем из них, который находится на переднем плане и над всеми остальными.
 

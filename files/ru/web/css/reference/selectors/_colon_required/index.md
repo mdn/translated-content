@@ -8,7 +8,7 @@ original_slug: Web/CSS/:required
 
 ## Описание
 
-CSS [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) `:required` находит любые {{ HTMLElement("input") }} элементы, имеющие атрибут [`required`](/ru/docs/Web/HTML/Reference/Elements/input#required). Он позволяет формам легко сообщать, что поля должны быть корректно заполнены перед отправкой формы.
+CSS [псевдокласс](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-classes) `:required` находит любые {{ HTMLElement("input") }} элементы, имеющие атрибут [`required`](/ru/docs/Web/HTML/Reference/Elements/input#required). Он позволяет формам легко сообщать, что поля должны быть корректно заполнены перед отправкой формы.
 
 Псевдо-класс {{ cssxref(":optional") }} может использоваться, чтобы дать особый внешний вид полям, не обязательным для заполнения.
 

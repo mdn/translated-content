@@ -8,7 +8,7 @@ original_slug: Web/CSS/:last-child
 
 ## Описание
 
-CSS [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) `:last-child` находит любой элемент, являющийся последним в его родителе.
+CSS [псевдокласс](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-classes) `:last-child` находит любой элемент, являющийся последним в его родителе.
 
 ## Синтаксис
 

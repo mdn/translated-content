@@ -76,13 +76,13 @@ body {
 
 ## Choix effectués
 
-Dans l'exemple ci-dessus, nous obtenons le bas de page adhérant en utilisant la [mise en page en grille CSS](/fr/docs/Web/CSS/CSS_grid_layout). Le `.wrapper` a une hauteur minimale de `100%`, ce qui signifie qu'il est aussi haut que le conteneur dans lequel il se trouve. Nous créons ensuite une grille à une seule colonne avec trois lignes, une pour chaque partie de notre mise en page.
+Dans l'exemple ci-dessus, nous obtenons le bas de page adhérant en utilisant la [mise en page en grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout). Le `.wrapper` a une hauteur minimale de `100%`, ce qui signifie qu'il est aussi haut que le conteneur dans lequel il se trouve. Nous créons ensuite une grille à une seule colonne avec trois lignes, une pour chaque partie de notre mise en page.
 
-[Le placement automatique en grille](/fr/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout) place nos éléments dans l'ordre du code source&nbsp;: l'en-tête va dans la première piste de taille automatique, le contenu principal dans la piste `1fr` et le pied de page dans la dernière piste de taille automatique. La piste `1fr` prend tout l'espace disponible et s'agrandit pour combler l'écart.
+[Le placement automatique en grille](/fr/docs/Web/CSS/Guides/Grid_layout/Auto-placement) place nos éléments dans l'ordre du code source&nbsp;: l'en-tête va dans la première piste de taille automatique, le contenu principal dans la piste `1fr` et le pied de page dans la dernière piste de taille automatique. La piste `1fr` prend tout l'espace disponible et s'agrandit pour combler l'écart.
 
 ## Méthode alternative
 
-Vous pouvez aussi utiliser [flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) pour créer un bas de page adhérant.
+Vous pouvez aussi utiliser [flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) pour créer un bas de page adhérant.
 
 ```html live-sample___sticky-footer-flexbox-example
 <div class="wrapper">
@@ -148,7 +148,7 @@ L'exemple flexbox commence de la même manière, mais nous utilisons `display:fl
 ## Ressources sur MDN
 
 - Propriétés CSS&nbsp;: {{CSSxRef("display")}}, {{CSSxRef("min-height")}}, {{CSSxRef("grid-template-rows")}}, {{CSSxRef("flex-direction")}}, {{CSSxRef("flex-grow")}}, {{CSSxRef("flex-shrink")}}
-- [Concepts de base de la mise en page en grille](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-- [Module de mise en page en grille CSS](/fr/docs/Web/CSS/CSS_grid_layout)
-- [Concepts de base de flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [Module de boîte flexible CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout)
+- [Concepts de base de la mise en page en grille](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+- [Module de mise en page en grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout)
+- [Concepts de base de flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [Module de boîte flexible CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout)

@@ -3,7 +3,7 @@ title: steps()
 slug: Web/CSS/Reference/Values/easing-function/steps
 original_slug: Web/CSS/easing-function/steps
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`steps()`** définit une transition qui divise le temps d'entrée en un nombre spécifié d'intervalles de même longueur. Cette sous-classe de fonctions en étapes est parfois aussi appelée _fonction en escalier_.
@@ -64,7 +64,7 @@ steps(3, jump-both)
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -106,6 +106,6 @@ steps(0, jump-none)
 
 ## Voir aussi
 
-- Autres fonctions d'assouplissement&nbsp;: {{cssxref("easing-function/cubic-bezier", "cubic-bezier()")}} et {{cssxref("easing-function/linear", "linear()")}}
+- Autres fonctions d'assouplissement&nbsp;: {{CSSxRef("easing-function/cubic-bezier", "cubic-bezier()")}} et {{CSSxRef("easing-function/linear", "linear()")}}
 - Le module des [fonctions d'assouplissement CSS](/fr/docs/Web/CSS/CSS_easing_functions)
 - [Fonction en escalier <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Step_function) sur Wikipédia

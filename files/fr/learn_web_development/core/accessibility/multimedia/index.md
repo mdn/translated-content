@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Accessibility/Multimedia
 original_slug: Learn/Accessibility/Multimedia
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/WAI-ARIA_basics","Learn_web_development/Core/Accessibility/Mobile", "Learn_web_development/Core/Accessibility")}}
 
 Le multimédia est une autre catégorie de contenu susceptible de créer des problèmes d'accessibilité: les contenus vidéo, audio et images doivent disposer de solutions de remplacement textuelles appropriées pour être compris par les technologies d'assistance et leurs utilisateurs. Cet article montre comment.
 
@@ -363,4 +363,4 @@ Vous pouvez toutefois vous assurer qu'une telle application présente un contras
 
 Ce chapitre présente un résumé des problèmes d'accessibilité des contenus multimédias, ainsi que des solutions pratiques.
 
-{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/WAI-ARIA_basics","Learn_web_development/Core/Accessibility/Mobile", "Learn_web_development/Core/Accessibility")}}

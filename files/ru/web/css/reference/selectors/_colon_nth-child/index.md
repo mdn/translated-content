@@ -6,7 +6,7 @@ original_slug: Web/CSS/:nth-child
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) **`:nth-child()`** находит один или более элементов, основываясь на их позиции среди группы соседних элементов.
+[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:nth-child()`** находит один или более элементов, основываясь на их позиции среди группы соседних элементов.
 
 ```css
 /* Выбирает каждый четвёртый элемент

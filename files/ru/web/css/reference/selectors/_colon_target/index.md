@@ -6,7 +6,7 @@ original_slug: Web/CSS/:target
 
 {{CSSRef}}
 
-[Псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) [CSS](/ru/docs/Web/CSS) **`:target`** представляет уникальный элемент (целевой элемент) с подходящим [`id`](/ru/docs/Web/HTML/Reference/Global_attributes#id) URL-фрагментом.
+[Псевдокласс](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/ru/docs/Web/CSS) **`:target`** представляет уникальный элемент (целевой элемент) с подходящим [`id`](/ru/docs/Web/HTML/Reference/Global_attributes#id) URL-фрагментом.
 
 ```css
 /* Выбирает элемент с подходящим ID текущего URL-фрагмента */

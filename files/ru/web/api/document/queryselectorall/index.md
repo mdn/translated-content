@@ -29,7 +29,7 @@ elementList = document.querySelectorAll(selectors);
 Статический (non-live) {{domxref("NodeList")}}, содержащий все элементы в пределах документа, которые соответствуют как минимум одному из указанных селекторов, или пустой {{domxref("NodeList")}} в случае отсутствия совпадений.
 
 > [!NOTE]
-> Если в строке `selectors` содержатся [CSS псевдоэлементы](/ru/docs/Web/CSS/Pseudo-elements), то возвращаемый список будет всегда пуст.
+> Если в строке `selectors` содержатся [CSS псевдоэлементы](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-elements), то возвращаемый список будет всегда пуст.
 
 ### Исключения
 
@@ -59,7 +59,7 @@ var container = document.querySelector("#test");
 var matches = container.querySelectorAll("div.highlighted > p");
 ```
 
-В этом примере используются [селекторы атрибутов](/ru/docs/Web/CSS/Attribute_selectors), чтобы вернуть список элементов {{HTMLElement("iframe")}}, которые содержат атрибут `data-src`:
+В этом примере используются [селекторы атрибутов](/ru/docs/Web/CSS/Reference/Selectors/Attribute_selectors), чтобы вернуть список элементов {{HTMLElement("iframe")}}, которые содержат атрибут `data-src`:
 
 ```js
 var matches = document.querySelectorAll("iframe[data-src]");

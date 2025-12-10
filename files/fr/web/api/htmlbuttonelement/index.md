@@ -1,75 +1,75 @@
 ---
 title: HTMLButtonElement
 slug: Web/API/HTMLButtonElement
+l10n:
+  sourceCommit: e00212a2a707a57b49b58b37a6a6c978aaef2bbd
 ---
 
 {{APIRef("HTML DOM")}}
 
-L'interface **`HTMLButtonElement`** fournit des propriétés et méthodes (en plus de celles fournies par l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) dont elle hérite) qui permettent de manipuler les éléments [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button).
+L'interface **`HTMLButtonElement`** fournit des propriétés et des méthodes (en plus de l'interface régulière {{DOMxRef("HTMLElement")}} dont elle hérite) pour manipuler les éléments HTML {{HTMLElement("button")}}.
 
 {{InheritanceDiagram}}
 
-## Propriétés
+## Propriétés d'instance
 
-_Hérite des propriétés de son parent, [`HTMLElement`](/fr/docs/Web/API/HTMLElement)._
+_Hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
 
-- [`HTMLButtonElement.accessKey`](/fr/docs/Web/API/HTMLButtonElement/accessKey)
-  - : Une chaîne de caractères qui indique la touche du clavier (unique) qui donne accès à ce bouton.
-- [`HTMLButtonElement.autofocus`](/fr/docs/Web/API/HTMLButtonElement/autofocus)
-  - : Un booléen qui indique si le contrôle devrait avoir le focus au chargement de la page, à moins que l'utilisatrice ou l'utilisateur passe outre, par exemple en saisissant dans un autre contrôle. Seul un élément du document, associé à un formulaire, peut avoir cet attribut.
-- [`HTMLButtonElement.disabled`](/fr/docs/Web/API/HTMLButtonElement/disabled)
-  - : Un booléen qui indique si le contrôle est désactivé, signifiant alors qu'il n'accepte aucun clic.
-- [`HTMLButtonElement.form`](/fr/docs/Web/API/HTMLButtonElement/form) {{readonlyInline}}
-  - : Un objet [`HTMLFormElement`](/fr/docs/Web/API/HTMLFormElement) qui reflète l'élément de formulaire auquel ce bouton est associé. Si le bouton est un descendant de l'élément du formulaire, cet attribut sera une référence à l'objet `HTMLFormElement` associé à ce formulaire. Si le bouton n'est pas un descendant de l'élément du formulaire, l'attribut peut être une référence à n'importe quel élément `HTMLFormElement` associé du même document, ou la valeur `null` si aucun ne correspond.
-- [`HTMLButtonElement.formAction`](/fr/docs/Web/API/HTMLButtonElement/formAction)
-  - : Une chaîne de caractères qui reflète l'URI d'une ressource qui traite les informations envoyées par ce bouton. S'il est présent, cet attribut surcharge l'attribut [`action`](/fr/docs/Web/HTML/Reference/Elements/form#action) de l'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) auquel est associé cet élément.
-- [`HTMLButtonElement.formEnctype`](/fr/docs/Web/API/HTMLButtonElement/formEnctype)
-  - : Une chaîne de caractères qui reflète le type de contenu utilisé pour envoyer le formulaire au serveur. S'il est présent, cet attribut surcharge l'attribut [`enctype`](/fr/docs/Web/HTML/Reference/Elements/form#enctype) de l'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) auquel est associé cet élément.
-- [`HTMLButtonElement.formMethod`](/fr/docs/Web/API/HTMLButtonElement/formMethod)
-  - : Une chaîne de caractères qui reflète la méthode HTTP utilisée par le navigateur pour envoyer le formulaire. S'il est présent, cet attribut surcharge l'attribut [`method`](/fr/docs/Web/HTML/Reference/Elements/form#attr-method) de l'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) auquel est associé cet élément.
-- [`HTMLButtonElement.formNoValidate`](/fr/docs/Web/API/HTMLButtonElement/formNoValidate)
-  - : Un booléen qui indique que le formulaire ne devrait pas être validé pour l'envoi. S'il est présent, cet attribut surcharge l'attribut [`novalidate`](/fr/docs/Web/HTML/Reference/Elements/form#attr-novalidate) de l'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) auquel est associé cet élément.
-- [`HTMLButtonElement.formTarget`](/fr/docs/Web/API/HTMLButtonElement/formTarget)
-  - : Une chaîne de caractères qui reflète le nom ou un mot-clé de l'emplacement où afficher la réponse reçue après l'envoi du formulaire. S'il est présent, cet attribut surcharge l'attribut [`target`](/fr/docs/Web/HTML/Reference/Elements/form#attr-target) de l'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) auquel est associé cet élément.
-- [`HTMLButtonElement.labels`](/fr/docs/Web/API/HTMLButtonElement/labels) {{readonlyInline}}
-  - : Un objet [`NodeList`](/fr/docs/Web/API/NodeList) qui représente une liste des éléments [`<label>`](/fr/docs/Web/HTML/Reference/Elements/label) qui sont des libellés pour ce bouton.
-- [`HTMLButtonElement.menu`](/fr/docs/Web/API/HTMLButtonElement/menu) {{experimental_inline}}
-  - : Un objet [`HTMLMenuElement`](/fr/docs/Web/API/HTMLMenuElement) qui représente l'élément de menu à afficher si on clique sur ce bouton et qu'il a `type="menu"`.
-- [`HTMLButtonElement.name`](/fr/docs/Web/API/HTMLButtonElement/name)
-  - : Une chaîne de caractères qui représente le nom de l'objet lorsqu'il est envoyé avec un formulaire. Si cet attribut est présent, sa valeur ne doit pas être la chaîne de caractères.
-- [`HTMLButtonElement.tabIndex`](/fr/docs/Web/API/HTMLButtonElement/tabIndex)
-  - : Une valeur numérique de type `long` qui représente la position de cet élément au sein de l'ordre de tabulation.
-- [`HTMLButtonElement.type`](/fr/docs/Web/API/HTMLButtonElement/type)
-  - : Une chaîne de caractères qui indique le comportement du bouton. Il s'agit d'un attribut à valeur contrainte parmi une liste&nbsp;:
-    - `submit`
-      - : Le bouton envoi le formulaire. Il s'agit de la valeur par défaut si l'attribut n'est pas indiqué ou s'il a été changé dynamiquement vers une valeur vide ou invalide.
-    - `reset`
-      - : Le bouton réinitialise le formulaire.
-    - `button`
-      - : Le bouton ne fait rien.
-    - `menu`
-      - : Le bouton affiche un menu. {{experimental_inline}}
+- {{DOMxRef("HTMLButtonElement.command")}}
+  - : Une chaîne de caractères indiquant l'action à effectuer sur un élément contrôlé par ce bouton.
+- {{DOMxRef("HTMLButtonElement.commandForElement")}}
+  - : Une référence à un objet {{DOMxRef("Element")}} existant que le bouton contrôle.
+- {{DOMxRef("HTMLButtonElement.disabled")}}
+  - : Un booléen indiquant si le contrôle est désactivé, c'est-à-dire qu'il n'accepte pas les clics.
+- {{DOMxRef("HTMLButtonElement.form")}} {{ReadOnlyInline}}
+  - : Un objet {{DOMxRef("HTMLFormElement")}} représentant le formulaire auquel ce bouton est associé. Si le bouton est un descendant d'un élément formulaire, cet attribut est une référence à l'`HTMLFormElement` associé à ce formulaire.
+    Si le bouton n'est pas un descendant d'un élément formulaire, l'attribut peut être une référence à n'importe quel élément `HTMLFormElement` du même document auquel il est lié, ou la valeur nulle (`null`) si aucun ne correspond.
+- {{DOMxRef("HTMLButtonElement.formAction")}}
+  - : Une chaîne de caractères représentant l'URI d'une ressource qui traite les informations soumises par le bouton. Si défini, cet attribut remplace l'attribut [`action`](/fr/docs/Web/HTML/Reference/Elements/form#action) de l'élément HTML {{HTMLElement("form")}} qui possède ce bouton.
+- {{DOMxRef("HTMLButtonElement.formEnctype")}}
+  - : Une chaîne de caractères représentant le type de contenu utilisé pour soumettre le formulaire au serveur. Si défini, cet attribut remplace l'attribut [`enctype`](/fr/docs/Web/HTML/Reference/Elements/form#enctype) de l'élément HTML {{HTMLElement("form")}} qui possède ce bouton.
+- {{DOMxRef("HTMLButtonElement.formMethod")}}
+  - : Une chaîne de caractères représentant la méthode HTTP utilisée par le navigateur pour soumettre le formulaire. Si défini, cet attribut remplace l'attribut [`method`](/fr/docs/Web/HTML/Reference/Elements/form#method) de l'élément HTML {{HTMLElement("form")}} qui possède ce bouton.
+- {{DOMxRef("HTMLButtonElement.formNoValidate")}}
+  - : Un booléen indiquant que le formulaire ne doit pas être validé lors de sa soumission. Si défini, cet attribut remplace l'attribut [`novalidate`](/fr/docs/Web/HTML/Reference/Elements/form#novalidate) de l'élément HTML {{HTMLElement("form")}} qui possède ce bouton.
+- {{DOMxRef("HTMLButtonElement.formTarget")}}
+  - : Une chaîne de caractères représentant un nom ou un mot-clé indiquant où afficher la réponse reçue après la soumission du formulaire. Si défini, cet attribut remplace l'attribut [`target`](/fr/docs/Web/HTML/Reference/Elements/form#target) de l'élément HTML {{HTMLElement("form")}} qui possède ce bouton.
+- {{DOMxRef("HTMLButtonElement.interestForElement")}} {{Experimental_Inline}}
+  - : Obtient ou définit l'élément cible d'un invocateur d'intérêt, dans les cas où l'élément HTML {{HTMLElement("button")}} associé est défini comme un [invocateur d'intérêt](/fr/docs/Web/API/Popover_API/Using_interest_invokers#création_dun_invocateur_dinteret).
+- {{DOMxRef("HTMLButtonElement.labels")}} {{ReadOnlyInline}}
+  - : Un objet {{DOMxRef("NodeList")}} représentant une liste d'éléments {{HTMLElement("label")}} qui sont des étiquettes pour ce bouton.
+- {{DOMxRef("HTMLButtonElement.name")}}
+  - : Une chaîne de caractères représentant le nom de l'objet lors de la soumission avec un formulaire. Si défini, il ne doit pas être une chaîne vide.
+- {{DOMxRef("HTMLButtonElement.popoverTargetAction")}}
+  - : Obtient et définit l'action à effectuer (`"hide"`, `"show"` ou `"toggle"`) sur un élément de fenêtre contextuelle (<i lang="en">popover</i> en anglais) contrôlé par un bouton de contrôle. Cela reflète la valeur de l'attribut HTML [`popovertargetaction`](/fr/docs/Web/HTML/Reference/Elements/button#popovertargetaction).
+- {{DOMxRef("HTMLButtonElement.popoverTargetElement")}}
+  - : Obtient et définit l'élément de fenêtre contextuelle (<i lang="en">popover</i> en anglais) à contrôler via un bouton. L'équivalent JavaScript de l'attribut HTML [`popovertarget`](/fr/docs/Web/HTML/Reference/Elements/button#popovertarget).
+- {{DOMxRef("HTMLButtonElement.type")}}
+  - : Une chaîne de caractères indiquant le comportement du bouton. Il s'agit d'un attribut énuméré avec les valeurs possibles suivantes&nbsp;:
+    - `submit`&nbsp;: Le bouton soumet le formulaire. C'est la valeur par défaut si l'attribut n'est pas défini, ou s'il est modifié dynamiquement en une valeur vide ou invalide.
+    - `reset`&nbsp;: Le bouton réinitialise le formulaire.
+    - `button`&nbsp;: Le bouton n'a pas d'action.
+    - `menu`&nbsp;: Le bouton affiche un menu. {{Experimental_Inline}}
 
-- [`HTMLButtonElement.willValidate`](/fr/docs/Web/API/HTMLButtonElement/willValidate) {{readonlyInline}}
-  - : Un booléen qui indique si le bouton est candidat à la validation de contraintes. Il vaut `false` si une condition l'empêche de participer à la validation des contraintes, y compris si sa propriété `type` vaut `reset` ou `button`&nbsp;; s'il a un ancêtre [`<datalist>`](/fr/docs/Web/HTML/Reference/Elements/datalist)&nbsp;; ou si la propriété `disabled` vaut `true`.
-- [`HTMLButtonElement.validationMessage`](/fr/docs/Web/API/HTMLButtonElement/validationMessage) {{readonlyInline}}
-  - : Une chaîne de caractères représentant le message localisé qui décrit la validation de contrainte lorsque le contrôle ne respecte pas les contraintes éventuelles. Cet attribut vaudra la chaîne vide si le contrôle n'est pas candidat à la validation de contraintes (`willValidate` à `false`), ou s'il respecte les contraintes.
-- [`HTMLButtonElement.validity`](/fr/docs/Web/API/HTMLButtonElement/validity) {{readonlyInline}}
-  - : Un objet [`ValidityState`](/fr/docs/Web/API/ValidityState) représentant l'état de validité du bouton.
-- [`HTMLButtonElement.value`](/fr/docs/Web/API/HTMLButtonElement/value)
-  - : Une chaîne de caractères représentant la valeur de formulaire associé au contrôle du bouton.
+- {{DOMxRef("HTMLButtonElement.willValidate")}} {{ReadOnlyInline}}
+  - : Un booléen indiquant si le bouton est candidat à la validation de contraintes. Il est à `false` si certaines conditions l'empêchent d'être validé, notamment&nbsp;: sa propriété `type` est `reset` ou `button`&nbsp;; il a un ancêtre {{HTMLElement("datalist")}}&nbsp;; ou la propriété `disabled` est à `true`.
+- {{DOMxRef("HTMLButtonElement.validationMessage")}} {{ReadOnlyInline}}
+  - : Une chaîne de caractères représentant le message localisé décrivant les contraintes de validation non satisfaites (le cas échéant). Cet attribut est une chaîne vide si le contrôle n'est pas candidat à la validation de contraintes (`willValidate` est à `false`), ou s'il satisfait ses contraintes.
+- {{DOMxRef("HTMLButtonElement.validity")}} {{ReadOnlyInline}}
+  - : Un {{DOMxRef("ValidityState")}} représentant les états de validité de ce bouton.
+- {{DOMxRef("HTMLButtonElement.value")}}
+  - : Une chaîne de caractères représentant la valeur actuelle du contrôle de formulaire du bouton.
 
-## Méthodes
+## Méthodes d'instance
 
-_Hérite des méthodes de son parent, [`HTMLElement`](/fr/docs/Web/API/HTMLElement)_
+_Hérite des méthodes de son parent, {{DOMxRef("HTMLElement")}}._
 
-| Nom                                     | Valeur de retour | Description                                                          |
-| --------------------------------------- | ---------------- | -------------------------------------------------------------------- |
-| `checkValidity()`                       | Booléen          | Non prise en charge pour les éléments bouton ou de réinitialisation. |
-| `reportValidity()`                      | Booléen          | Non prise en charge pour les éléments bouton ou de réinitialisation. |
-| `setCustomValidity(in DOMString error)` | `void`           | Non prise en charge pour les éléments bouton ou de réinitialisation. |
-
-Pour les navigateurs utilisant Gecko, la pseudo-classe non standard [`:-moz-submit-invalid`](/fr/docs/Web/CSS/Reference/Selectors/:-moz-submit-invalid) permet de mettre en forme les boutons d'envoi de formulaire selon la validation du formulaire.
+- {{DOMxRef("HTMLButtonElement.checkValidity()")}}
+  - : Retourne `true` si la valeur de l'élément ne présente aucun problème de validité&nbsp;; sinon, retourne `false`.
+- {{DOMxRef("HTMLButtonElement.reportValidity()")}}
+  - : Effectue la même action que `checkValidity()`, mais signale également le résultat à l'utilisateur·ice si l'événement `invalid` n'a pas été annulé.
+- {{DOMxRef("HTMLButtonElement.setCustomValidity()")}}
+  - : Définit le message de validité personnalisé pour l'élément. Utilisez la chaîne vide pour indiquer que l'élément n'a _pas_ d'erreur de validité personnalisée.
 
 ## Spécifications
 
@@ -81,4 +81,4 @@ Pour les navigateurs utilisant Gecko, la pseudo-classe non standard [`:-moz-subm
 
 ## Voir aussi
 
-- L'élément HTML qui porte cette interface&nbsp;: [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button)
+- L'élément HTML implémentant cette interface&nbsp;: {{HTMLElement("button")}}

@@ -47,7 +47,7 @@ D'autres éléments peuvent être utilisés en association avec `<kbd>` afin de 
 
 - Imbriquer un élément `<kbd>` dans un autre élément `<kbd>` représente une touche ou une unité de saisie au sein d'une saisie plus grande. Cf. [Représenter les frappes de touches dans une saisie](#représenter_les_frappes_de_touches_dans_une_saisie) ci-après.
 - Imbriquer un élément `<kbd>` dans un élément {{HTMLElement("samp")}} permet d'indiquer que la saisie a été restituée (_echo_) à l'utilisateur. Cf. [Saisie restituée](#saisie_restituée), ci-après.
-- Imbriquer un élément `<samp>` dans un élément `<kbd>` permet de représenter des saisies basées sur le texte présenté par le système (cela peut être le nom de menus, d'éléments de menu ou le nom de bouttons affichés à l'écran). Cf. [Représenter les options de saisies à l'écran](#représenter_les_options_de_saisies_à_l'écran) ci-après.
+- Imbriquer un élément `<samp>` dans un élément `<kbd>` permet de représenter des saisies basées sur le texte présenté par le système (cela peut être le nom de menus, d'éléments de menu ou le nom de bouttons affichés à l'écran). Cf. [Représenter les options de saisies à l'écran](#représenter_les_options_de_saisies_à_lécran) ci-après.
 
 > [!NOTE]
 > Il est possible de définir un style pour surcharger la mise en forme par défaut du navigateur pour l'élément `<kbd>`. À ce titre, on gardera à l'esprit que les préférences et feuilles de style de l'utilisateur peuvent surcharger la mise en forme du site.

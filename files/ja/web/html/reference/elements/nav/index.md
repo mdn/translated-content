@@ -1,18 +1,15 @@
 ---
 title: "<nav>: ナビゲーションセクション要素"
 slug: Web/HTML/Reference/Elements/nav
-original_slug: Web/HTML/Element/nav
 l10n:
-  sourceCommit: 829db137a01feb14af7beaec178a3ea0118b4777
+  sourceCommit: f2d281d86396bcd2dcecfdabd5837b1590132aa6
 ---
-
-{{HTMLSidebar}}
 
 **`<nav>`** は [HTML](/ja/docs/Web/HTML) の要素で、現在の文書内の他の部分や他の文書へのナビゲーションリンクを提供するためのセクションを表します。ナビゲーションセクションの一般的な例としてメニュー、目次、索引などがあります。
 
 {{InteractiveExample("HTML デモ: &lt;nav&gt;", "tabbed-standard")}}
 
-```html interactive-example
+```html-nolint interactive-example
 <nav class="crumbs">
   <ol>
     <li class="crumb"><a href="#">Bikes</a></li>
@@ -23,8 +20,7 @@ l10n:
 
 <h1>Jump Bike 3000</h1>
 <p>
-  This BMX bike is a solid step into the pro world. It looks as legit as it
-  rides and is built to polish your skills.
+  この BMX バイクは、プロの世界へ踏み出す確かな一歩だ。見た目も乗り心地も本格的で、スキルを磨くために設計されている。
 </p>
 ```
 
@@ -44,7 +40,7 @@ nav {
 
 .crumb a::after {
   display: inline-block;
-  color: #000;
+  color: black;
   content: ">";
   font-size: 80%;
   font-weight: bold;
@@ -58,52 +54,46 @@ nav {
 
 ## 使用上の注意
 
-- すべてのリンクを `<nav>` 要素に入れる必要はありません。`<nav>` はナビゲーションリンクの主要なブロックのみに用います。{{HTMLElement("footer")}} にもよくリンクのリストが設置されますが、{{HTMLElement("nav")}} 要素の中に入れる必要はありません。
-- {{HTMLElement("nav")}} 要素は文書内に複数設定することができます。例えば、サイトナビゲーションを一つ、ページ内ナビゲーションを一つなどです。このような場合、アクセシビリティを強化するために、 [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) を使用することができます。[例](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements#labeling_section_content)をご覧ください。
+- すべてのリンクを `<nav>` 要素に入れる必要はありません。`<nav>` はナビゲーションリンクの主要なブロックのみに用います。{{HTMLElement("footer")}} にもよくリンクのリストが設置されますが、`<nav>` 要素の中に入れる必要はありません。
+- `<nav>` 要素は文書内に複数置くことができます。例えば、サイトナビゲーションを一つ、ページ内ナビゲーションを一つなどです。このような場合、アクセシビリティを強化するために、 [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) を使用することができます。[例](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements#区分コンテンツのラベル付け)をご覧ください。
 - スクリーンリーダーのような障碍者向けのユーザーエージェントは、この要素を使用してナビゲーション用のコンテンツを初期読み上げから省略するかを判断するために使用することがあります。
 
 ## 例
 
-この例では、`<nav>` ブロックを使用して、リンクの番号なしリスト ({{HTMLElement("ul")}}) を囲んでいます。適切な CSS によってサイドバー、ナビゲーションバー、あるいはドロップダウンメニューにすることができます。
+この例では、`<nav>` ブロックを使用して、リンクの番号なしリスト ({{HTMLElement("ul")}}) を囲んでいます。適切な CSS によってサイドバーやナビゲーションバー、ドロップダウンメニューなどにすることができます。
 
-```html
+```html live-sample___unordered-list
 <nav class="menu">
   <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
+    <li><a href="#">ホーム</a></li>
+    <li><a href="#">概要</a></li>
+    <li><a href="#">お問い合わせ</a></li>
   </ul>
 </nav>
 ```
 
+{{EmbedLiveSample('unordered-list')}}
+
 `nav` 要素の意味づけはリンクを提供することです。しかし、`nav` 要素はリストを格納する必要はなく、他の種類のコンテンツを格納することもできます。このナビゲーションブロックでは、リンクは散文で指定されています。
 
-```html
+```html-nolint live-sample___prose
 <nav>
-  <h2>Navigation</h2>
+  <h2>ナビゲーション</h2>
   <p>
-    You are on my home page. To the north lies <a href="/blog">my blog</a>, from
-    whence the sounds of battle can be heard. To the east you can see a large
-    mountain, upon which many <a href="/school">school papers</a> are littered.
-    Far up this mountain you can spy a little figure who appears to be me,
-    desperately scribbling a <a href="/school/thesis">thesis</a>.
+    あなたは私のホームページにいます。北には<a href="/blog">私のブログ</a>があり、そこから戦いの音が聞こえてきます。東には大きな山が見え、その山には多くの<a href="/school">学校のレポート</a>が散らばっています。
+    この山のはるか上の方で、私らしき小さな人影が見えます。必死に<a href="/school/thesis">論文</a>を書きなぐっています。
   </p>
   <p>
-    To the west are several exits. One fun-looking exit is labeled
-    <a href="https://games.example.com/">"games"</a>. Another more
-    boring-looking exit is labeled <a href="https://isp.example.net/">ISP™</a>.
+    西側にはいくつかの出口があります。楽しそうな出口の一つは<a href="https://games.example.com/">「ゲーム」</a>と表示されています。もう一つ、面白くなさそうな出口は <a href="https://isp.example.net/">ISP™</a> と表示されています。
   </p>
   <p>
-    To the south lies a dark and dank <a href="/about">contacts page</a>.
-    Cobwebs cover its disused entrance, and at one point you see a rat run
-    quickly out of the page.
+    南には暗く湿った<a href="/about">連絡先ページ</a>が広がっています。
+    使われなくなった入口は蜘蛛の巣で覆われており、ある時ページからネズミが素早く駆け出していきます。
   </p>
 </nav>
 ```
 
-### 結果
-
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('prose')}}
 
 ## 技術的概要
 
@@ -111,15 +101,15 @@ nav {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >、
-        <a href="/ja/docs/Web/HTML/Content_categories#区分コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#区分コンテンツ"
           >区分コンテンツ</a
         >、知覚可能コンテンツ
       </td>
@@ -127,7 +117,7 @@ nav {
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >
       </td>
@@ -139,7 +129,7 @@ nav {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >を受け入れるすべての要素
       </td>

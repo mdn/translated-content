@@ -3,7 +3,7 @@ title: 内容协商
 slug: Web/HTTP/Guides/Content_negotiation
 ---
 
-在 [HTTP](/zh-CN/docs/Glossary/HTTP) 协议中，**_内容协商_**是一种机制，用于为同一 URI 提供资源不同的{{Glossary("Representation header","表示")}}形式，以帮助用户代理指定最适合用户的表示形式（例如，哪种文档语言、哪种图片格式或者哪种内容编码）。
+在 [HTTP](/zh-CN/docs/Glossary/HTTP) 协议中，***内容协商***是一种机制，用于为同一 URI 提供资源不同的{{Glossary("Representation header","表示")}}形式，以帮助用户代理指定最适合用户的表示形式（例如，哪种文档语言、哪种图片格式或者哪种内容编码）。
 
 > [!NOTE]
 > 你可以在[来自 WHATWG 的维基页面](https://wiki.whatwg.org/wiki/Why_not_conneg)发现 HTTP 内容协商的一些缺点。HTML5 提供其他的选择来进行内容协商，例如 [`<source>` 元素](/zh-CN/docs/Web/HTML/Reference/Elements/source)。

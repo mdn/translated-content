@@ -80,11 +80,11 @@ text-overflow: unset;
 ### 값
 
 - `clip`
-  - : 이 속성의 기본 값입니다. 이 키워드 값은 [콘텐츠 영역](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) 의 한계에서 텍스트를 자릅니다. 그렇기 때문에 문자열 중간에서 줄바꿈이 일어날 수 있습니다. `text-overflow: '';` 가 브라우저에서 지원된다면, 빈 문자열로 `text-overflow` 를 설정하여 문자열과 문자열 사이에서 잘리도록 할 수 있습니다.
+  - : 이 속성의 기본 값입니다. 이 키워드 값은 [콘텐츠 영역](/ko/docs/Web/CSS/Guides/Box_model/Introduction) 의 한계에서 텍스트를 자릅니다. 그렇기 때문에 문자열 중간에서 줄바꿈이 일어날 수 있습니다. `text-overflow: '';` 가 브라우저에서 지원된다면, 빈 문자열로 `text-overflow` 를 설정하여 문자열과 문자열 사이에서 잘리도록 할 수 있습니다.
 - `ellipsis`
-  - : 이 키워드는 말줄임표 (`'…'`, `U+2026 HORIZONTAL ELLIPSIS`) 를 잘린 텍스트에 대치합니다. 말줄임표는 [콘텐츠 영역](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) 안에서 표시되고, 표시되는 텍스트의 양을 줄입니다. 말줄임표를 표시할 여유 공간이 없다면 이 역시 생략됩니다.
+  - : 이 키워드는 말줄임표 (`'…'`, `U+2026 HORIZONTAL ELLIPSIS`) 를 잘린 텍스트에 대치합니다. 말줄임표는 [콘텐츠 영역](/ko/docs/Web/CSS/Guides/Box_model/Introduction) 안에서 표시되고, 표시되는 텍스트의 양을 줄입니다. 말줄임표를 표시할 여유 공간이 없다면 이 역시 생략됩니다.
 - 문자열
-  - : {{cssxref("&lt;string&gt;", "문자열")}} 은 생략된 텍스트를 나타내는 데에 사용됩니다. 문자열은 [콘텐츠 영역](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) 안에서 표시되고, 표시되는 텍스트의 길이를 줄입니다. 문자열을 표시할 여유 공간이 없다면 이 역시 생략됩니다.
+  - : {{cssxref("&lt;string&gt;", "문자열")}} 은 생략된 텍스트를 나타내는 데에 사용됩니다. 문자열은 [콘텐츠 영역](/ko/docs/Web/CSS/Guides/Box_model/Introduction) 안에서 표시되고, 표시되는 텍스트의 길이를 줄입니다. 문자열을 표시할 여유 공간이 없다면 이 역시 생략됩니다.
 
 ## 형식 정의
 

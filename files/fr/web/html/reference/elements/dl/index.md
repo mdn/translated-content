@@ -1,27 +1,26 @@
 ---
 title: "<dl> : l'élément de liste de descriptions"
 slug: Web/HTML/Reference/Elements/dl
-original_slug: Web/HTML/Element/dl
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
-
-{{HTMLSidebar}}
 
 L'élément HTML **`<dl>`** représente une liste de descriptions sous la forme d'une liste de paires associant des termes (fournis par des éléments [`<dt>`](/fr/docs/Web/HTML/Reference/Elements/dt)) et leurs descriptions ou définitions (fournies par des éléments [`<dd>`](/fr/docs/Web/HTML/Reference/Elements/dd)). On utilisera par exemple cet élément pour implémenter un glossaire.
 
-{{InteractiveExample("HTML Demo: &lt;dl&gt;", "tabbed-standard")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;dl&gt;", "tabbed-standard")}}
 
 ```html interactive-example
-<p>Cryptids of Cornwall:</p>
+<p>Cryptides de Cornouailles&nbsp;:</p>
 
 <dl>
-  <dt>Beast of Bodmin</dt>
-  <dd>A large feline inhabiting Bodmin Moor.</dd>
+  <dt>Bête de Bodmin</dt>
+  <dd>Un grand félin qui habite la lande de Bodmin.</dd>
 
   <dt>Morgawr</dt>
-  <dd>A sea serpent.</dd>
+  <dd>Un serpent de mer.</dd>
 
-  <dt>Owlman</dt>
-  <dd>A giant owl-like creature.</dd>
+  <dt>Homme-hibou</dt>
+  <dd>Une créature géante ressemblant à un hibou.</dd>
 </dl>
 ```
 
@@ -41,106 +40,20 @@ dd {
 }
 ```
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
-        >
-      </th>
-      <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >
-        et, si les éléments enfants de <code>&#x3C;dl></code> incluent une paire
-        avec un nom et une valeur, du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"
-          >contenu tangible</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
-      <td>
-        <p>
-          Zéro ou plusieurs groupes composés d'un ou plusieurs éléments
-          <a href="/fr/docs/Web/HTML/Element/dt"><code>&#x3C;dt></code></a
-          >, chacun suivi par un ou plusieurs éléments
-          <a href="/fr/docs/Web/HTML/Element/dd"><code>&#x3C;dd></code></a>
-          entre lesquels on pourra éventuellement avoir des éléments
-          <a href="/fr/docs/Web/HTML/Element/script"
-            ><code>&#x3C;script></code></a
-          >
-          et
-          <a href="/fr/docs/Web/HTML/Element/template"
-            ><code>&#x3C;template></code></a
-          >.
-        </p>
-        <p>
-          Selon le WHATWG : un ou plusieurs éléments
-          <a href="/fr/docs/Web/HTML/Element/div"><code>&#x3C;div></code></a>
-          éventuellement entrecoupés d'éléments
-          <a href="/fr/docs/Web/HTML/Element/script"
-            ><code>&#x3C;script></code></a
-          >
-          ou
-          <a href="/fr/docs/Web/HTML/Element/template"
-            ><code>&#x3C;template></code></a
-          >.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont
-        obligatoires.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
-      <td>
-        Tout élément acceptant du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_de_flux"
-          >contenu de flux</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >Pas de rôle correspondant</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>
-        <a href="https://w3c.github.io/aria/#group">group</a>,
-        <code
-          ><a href="/fr/docs/Web/Accessibility/ARIA/Roles/List_role"
-            >list</a
-          ></code
-        >, <code><a href="https://w3c.github.io/aria/#none">none</a></code
-        >, <a href="https://w3c.github.io/aria/#presentation">presentation</a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>
-        <a href="/fr/docs/Web/API/HTMLDListElement"
-          ><code>HTMLDListElement</code></a
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+
+- `compact` {{Deprecated_Inline}}
+  - : Cet attribut booléen indique que la liste doit être rendue avec un affichage compact. L'interprétation de cet attribut dépend de l'agent utilisateur. Utilisez plutôt [CSS](/fr/docs/Web/CSS)&nbsp;: pour obtenir un effet similaire à l'attribut `compact`, la propriété CSS {{CSSxRef("line-height")}} peut être utilisée avec la valeur `80%`.
+
+## Accessibilité
+
+Chaque lecteur d'écran expose le contenu de `<dl>` différemment, notamment le nombre total d'éléments, le contexte termes/définitions et les modes de navigation. Ces différences ne sont pas nécessairement des bogues.
+À partir d'iOS 14, VoiceOver annoncera que le contenu de `<dl>` est une liste lorsqu'on navigue avec le curseur virtuel (et non via la commande «&nbsp;lire tout&nbsp;»). VoiceOver ne prend pas en charge les commandes de navigation de liste avec `<dl>`. Faites attention à l'application des rôles ARIA `term` et `definition` aux constructions `<dl>`, car VoiceOver (macOS et iOS) ajustera la manière dont ils sont annoncés.
+
+- [VoiceOver sur iOS 14 prend en charge les listes de descriptions <sup>(angl.)</sup>](https://adrianroselli.com/2020/09/voiceover-on-ios-14-supports-description-lists.html)
+- [Brève note sur la prise en charge des listes de descriptions <sup>(angl.)</sup>](https://adrianroselli.com/2022/12/brief-note-on-description-list-support.html)
 
 ## Exemples
 
@@ -159,7 +72,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 #### Résultat
 
-{{EmbedLiveSample("", "",'160')}}
+{{EmbedLiveSample("Un seul terme et une seule définition")}}
 
 ### Plusieurs termes avec une même définition
 
@@ -178,7 +91,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 #### Résultat
 
-{{EmbedLiveSample("", "", 210)}}
+{{EmbedLiveSample("Plusieurs termes avec une même définition")}}
 
 ### Un seul terme avec plusieurs définitions
 
@@ -200,7 +113,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 #### Résultat
 
-{{EmbedLiveSample('', '', '280')}}
+{{EmbedLiveSample("Un seul terme avec plusieurs définitions")}}
 
 ### Termes et descriptions multiples
 
@@ -231,13 +144,9 @@ dt::after {
 }
 ```
 
-#### Résultat
-
-{{EmbedLiveSample('','',240)}}
-
 ### Intégration de groupes nom-valeur dans les éléments `<div>`
 
-[WHATWG](/fr/docs/Glossary/WHATWG) HTML permet d'envelopper chaque groupe nom-valeur d'un élément [`<dl>`](/fr/docs/Web/HTML/Reference/Elements/dl) dans un élément [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div). Cela peut être utile lors de l'utilisation de [microdonnées](/fr/docs/Web/HTML/Guides/Microdata), ou lorsque les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes) s'appliquent à un groupe entier, ou encore à des fins de style.
+Le HTML permet d'envelopper chaque groupe nom-valeur d'un élément `<dl>` dans un élément {{HTMLElement("div")}}. Cela peut être utile lors de l'utilisation de [microdonnées](/fr/docs/Web/HTML/Guides/Microdata), ou lorsque les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes) s'appliquent à un groupe entier, ou encore à des fins de style.
 
 ```html
 <dl>
@@ -262,20 +171,84 @@ dt::after {
 
 #### Résultat
 
-{{EmbedLiveSample('','','240')}}
+{{EmbedLiveSample("Intégration de groupes nom-valeur dans les éléments `<div>`")}}
 
-## Notes
+## Résumé technique
 
-Cet élément ne doit pas être utilisé (de même que les éléments [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul)), dans le seul but de créer une indentation sur la page. Bien que cela fonctionne parfaitement, c'est une pratique déconseillée qui mêle mise en forme et sémantique. Cela modifie le rôle que doivent avoir les listes de définitions.
-
-Pour changer l'indentation de la définition d'un terme, il faut utiliser la propriété [CSS](/fr/docs/Web/CSS) [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin).
-
-## Accessibilité
-
-Les lecteurs d'écran annoncent `<dl>` de façon différente. À partir d'iOS 14, VoiceOver annoncera que le contenu de `<dl>` est une liste lors de la navigation au curseur (mais pas via la lecture générale). Il faut donc s'assurer que la relation entre les éléments de la liste est bien communiquée grâce aux contenus des éléments.
-
-- [CodePen - Les camarades HTML : dt & dd](https://codepen.io/aardrian/debug/NzGaKP) (en)
-- [VoiceOver sous iOS 14 prend en charge les listes de descriptions](https://adrianroselli.com/2020/09/voiceover-on-ios-14-supports-description-lists.html) (en)
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
+          >Catégories de contenu</a
+        >
+      </th>
+      <td>
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
+          >Contenu de flux</a
+        >
+        et, si les éléments enfants de <code>&#x3C;dl></code> incluent une paire
+        avec un nom et une valeur, du contenu tangible.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Contenu autorisé</th>
+      <td>
+        <p>
+          Soit&nbsp;: zéro ou plusieurs groupes, chacun constitué d'un ou
+          plusieurs éléments {{HTMLElement("dt")}} suivis d'un ou
+          plusieurs éléments {{HTMLElement("dd")}}, éventuellement
+          mêlés à des éléments {{HTMLElement("script")}} et
+          {{HTMLElement("template")}}.<br />Ou&nbsp;: (dans le
+          {{Glossary("WHATWG")}} HTML, {{Glossary("W3C")}} HTML 5.2 et
+          versions ultérieures) un ou plusieurs éléments
+          {{HTMLElement("div")}}, éventuellement mêlés à des
+          éléments {{HTMLElement("script")}} et
+          {{HTMLElement("template")}}.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omission de balises</th>
+      <td>
+        Aucune, la balise d'ouverture et la balise de fermeture sont
+        obligatoires.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Parents autorisés</th>
+      <td>
+        Tout élément acceptant du
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
+          >contenu de flux</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
+          >Pas de rôle correspondant <sup>(angl.)</sup></a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôles ARIA autorisés</th>
+      <td>
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a>,
+        <code
+          ><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/list_role"
+            >list</a
+          ></code
+        >, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Interface DOM</th>
+      <td>{{DOMxRef("HTMLDListElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Spécifications
 
@@ -287,5 +260,5 @@ Les lecteurs d'écran annoncent `<dl>` de façon différente. À partir d'iOS 14
 
 ## Voir aussi
 
-- L'élément [`<dt>`](/fr/docs/Web/HTML/Reference/Elements/dt)
-- L'élément [`<dd>`](/fr/docs/Web/HTML/Reference/Elements/dd)
+- L'élément {{HTMLElement("dt")}}
+- L'élément {{HTMLElement("dd")}}

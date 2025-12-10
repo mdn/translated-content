@@ -38,7 +38,7 @@ requestPictureInPicture()
 
 ## 安全
 
-需要[瞬态用户激活](/zh-CN/docs/Web/Security/User_activation)。用户必须与页面或 UI 元素进行交互，才能使用此特性。
+需要[瞬态用户激活](/zh-CN/docs/Web/Security/Defenses/User_activation)。用户必须与页面或 UI 元素进行交互，才能使用此特性。
 
 ## 示例
 

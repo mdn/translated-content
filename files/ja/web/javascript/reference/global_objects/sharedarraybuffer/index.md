@@ -33,7 +33,7 @@ worker.postMessage(sab);
 共有メモリーと高解像度タイマーは、[Spectre](https://ja.wikipedia.org/wiki/Spectre) の対策として 2018 年の初めに事実上[無効化されました](https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/)。
 2020 年には、共有メモリーを再び有効にするために、新しい安全なアプローチが標準化されました。
 
-共有メモリーを使用するには、文書が[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)内にあり、{{domxref("Window.crossOriginIsolated","オリジン同士が分離されている","","nocode")}}必要があります。
+共有メモリーを使用するには、文書が[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)内にあり、{{domxref("Window.crossOriginIsolated","オリジン同士が分離されている","","nocode")}}必要があります。
 {{domxref("Window.crossOriginIsolated")}} と {{domxref("WorkerGlobalScope.crossOriginIsolated")}} のプロパティを使用して、文書のオリジン同士が分離されているかどうかを調べることができます。
 
 ```js
