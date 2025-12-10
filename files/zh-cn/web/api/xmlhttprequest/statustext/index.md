@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
-**`XMLHttpRequest.statusText`** 只读属性返回一个字符串，其中包含由 HTTP 服务器返回的响应状态消息。与表示数值状态码的 [`XMLHttpRequest.status`](/zh-CN/docs/Web/API/XMLHttpRequest/status) 不同，此属性包含响应状态的*文本*，例如“OK”或“Not Found”。如果请求的 [`readyState`](/zh-CN/docs/Web/API/XMLHttpRequest/readyState) 处于 `UNSENT` 或 `OPENED` 状态，则 `statusText` 的值将为空字符串。
+**`XMLHttpRequest.statusText`** 只读属性返回一个包含由 HTTP 服务器返回的响应状态消息的字符串。与表示数值状态码的 [`XMLHttpRequest.status`](/zh-CN/docs/Web/API/XMLHttpRequest/status) 不同，此属性包含响应状态的*文本*，例如“OK”或“Not Found”。如果请求的 [`readyState`](/zh-CN/docs/Web/API/XMLHttpRequest/readyState) 处于 `UNSENT` 或 `OPENED` 状态，则 `statusText` 的值将为空字符串。
 
 如果服务器响应未明确指定状态文本，`statusText` 将采用默认值“OK”。
 
@@ -60,4 +60,4 @@ xhr.send(null);
 
 - [HTTP 状态码](/zh-CN/docs/Web/HTTP/Reference/Status)列表
 - [HTTP](/zh-CN/docs/Web/HTTP)
-- [WHATWG Fetch 现行标准](https://fetch.spec.whatwg.org/#concept-response-status-message)
+- [WHATWG Fetch 动态标准](https://fetch.spec.whatwg.org/#concept-response-status-message)
