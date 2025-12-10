@@ -36,7 +36,7 @@ element(id)
 
 この例では hidden 状態の {{HTMLElement("div")}} を背景に使います。背景要素はグラデーションを使うだけでなく、背景の一部として描画されるテキストも含んでいます。
 
-```html
+```html-nolint
 <div id="target-box">
   <p>このボックスは、#my-background ID を付けている要素を背景として使用しています。</p>
 </div>
