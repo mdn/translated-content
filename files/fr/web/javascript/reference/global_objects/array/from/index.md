@@ -50,7 +50,7 @@ Une nouvelle instance de {{JSxRef("Array")}}.
 - [d'objets itérables](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) (des objets comme {{JSxRef("Map")}} et {{JSxRef("Set")}})&nbsp;; ou, si l'objet n'est pas itérable,
 - d'objets semblables à des tableaux (objets avec une propriété `length` et des éléments indexés).
 
-Pour convertir un objet ordinaire qui n'est ni itérable ni semblable à un tableau en un tableau (en énumérant ses clés, valeurs ou les deux), utilisez {{JSxRef("Object.keys()")}}, {{JSxRef("Object.values()")}} ou {{JSxRef("Object.entries()")}}. Pour convertir un [objet itérable asynchrone](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#itérateur_asynchrone_et_les_protocoles_itérables_asynchrones) en un tableau, utilisez {{JSxRef("Array.fromAsync()")}}.
+Pour convertir un objet ordinaire qui n'est ni itérable ni semblable à un tableau en un tableau (en énumérant ses clés, valeurs ou les deux), utilisez {{JSxRef("Object.keys()")}}, {{JSxRef("Object.values()")}} ou {{JSxRef("Object.entries()")}}. Pour convertir un [objet itérable asynchrone](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#les_protocoles_ditérateur_asynchrone_et_ditérable_asynchrone) en un tableau, utilisez {{JSxRef("Array.fromAsync()")}}.
 
 `Array.from()` ne crée jamais de tableau creux. Si l'objet `items` n'a pas certaines propriétés d'index, elles deviennent `undefined` dans le nouveau tableau.
 
