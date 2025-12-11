@@ -34,4 +34,4 @@ collapseToEnd()
 
 ## 参见
 
-- {{domxref("Selection")}}，所属的接口。
+- 所属的 {{domxref("Selection")}} 接口。
