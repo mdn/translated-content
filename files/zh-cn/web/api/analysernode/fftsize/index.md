@@ -23,8 +23,7 @@ l10n:
 
 ## 示例
 
-下面的示例展示了如何基本使用 {{domxref("AudioContext")}} 来创建一个 `AnalyserNode`，然后借助 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} 和 {{htmlelement("canvas")}} 反复收集时域数据，并绘制当前音频输入的“示波器风格”输出。
-如需更完整的应用示例或信息，请查看我们的示例 [Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic)（相关代码见 [app.js 第 108–193 行](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js#L108-L193)）。
+下面的示例展示了如何使用 {{domxref("AudioContext")}} 来创建一个 `AnalyserNode`，然后借助 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} 和 {{htmlelement("canvas")}} 反复收集时域数据，并绘制当前音频输入的“示波器风格”输出。如需更完整的应用示例或信息，请查看我们的 [Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) 演示（相关代码见 [app.js 第 108–193 行](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js#L108-L193)）。
 
 ```js
 const audioCtx = new AudioContext();
