@@ -74,4 +74,4 @@ button.addEventListener("click", () => {
 
 ## 参见
 
-- {{domxref("Selection")}}，此方法所属的接口
+- 所属的 {{domxref("Selection")}} 接口的方法
