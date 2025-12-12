@@ -50,7 +50,6 @@
 /SECURITY.md         @mdn/engineering
 /package.json        @mdn/engineering @mdn-bot
 /package-lock.json   @mdn/engineering @mdn-bot
-/yarn.lock           @mdn/engineering @mdn-bot
 
 # Reset until https://github.com/prettier/prettier/issues/11828 is fixed
 /.prettierignore
