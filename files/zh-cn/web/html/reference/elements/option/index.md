@@ -1,7 +1,6 @@
 ---
 title: <option>：HTML 选项元素
 slug: Web/HTML/Reference/Elements/option
-page-type: html-element
 l10n:
   sourceCommit: c10cfb6daba8fe6fc5366f2e1ca1bd32de8a537f
 ---
