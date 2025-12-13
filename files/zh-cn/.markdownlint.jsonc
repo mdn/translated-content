@@ -103,9 +103,9 @@
         "searchScope": "text",
       },
       {
-        "name": "gfm-alert",
-        "message": "Use the GFM syntax: https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#备注、警告和标注",
-        "searchPattern": "/^ *> \\*\\*(备注|警告|标注)：\\*\\*/gm",
+        "name": "bad-bold-format",
+        "message": "Please check the bold format",
+        "searchPattern": "[^\\*—、_`“，”\\[（。：\\s]+\\*\\*`",
         "searchScope": "text",
       },
       {
