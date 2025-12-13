@@ -13,8 +13,7 @@ Firefox 146 は、米国時間 [2025 年 12 月 9 日](https://whattrainisitnow.
 
 ### 開発者ツール
 
-- インスペクターのルールビューで、表示しているルールセットで未使用の [CSS カスタムプロパティ](/ja/docs/Web/CSS/Reference/Properties/--*) が 10 個以上宣言されているときに、それらのプロパティがデフォルトで非表示になります。これは雑然とした状態を軽減して、インスペクターのパネルのレンダリングが高速化する場合もあります。この状況で、ルールセットの末尾に表示される "カスタム CSS プロパティを表示" ボタンを押すと非表示のプロパティを表示できます 
-  ([Firefox bug 1719461](https://bugzil.la/1719461))。
+- インスペクターのルールビューで、表示しているルールセットで未使用の [CSS カスタムプロパティ](/ja/docs/Web/CSS/Reference/Properties/--*) が 10 個以上宣言されているときに、それらのプロパティがデフォルトで非表示になります。これは雑然とした状態を軽減して、インスペクターのパネルのレンダリングが高速化する場合もあります。この状況で、ルールセットの末尾に表示される "カスタム CSS プロパティを表示" ボタンを押すと非表示のプロパティを表示できます ([Firefox bug 1719461](https://bugzil.la/1719461))。
 
 ### HTML
 
@@ -22,27 +21,21 @@ Firefox 146 は、米国時間 [2025 年 12 月 9 日](https://whattrainisitnow.
 
 ### MathML
 
-- 右横書き (RTL) モードで演算子の鏡像化や伸縮を組み合わせたときに、正しく動作するようになりました 
-  ([Firefox bug 1994172](https://bugzil.la/1994172))。
-- {{cssxref("math-shift")}} プロパティをサポートしました。これは MathML の数式で表示する上付き文字を通常表示するかコンパクトに表示するかを開発者が示せるプロパティであり、上付き文字を移動させる高さに影響を与えます 
-  ([Firefox bug 1994171](https://bugzil.la/1994171))。
+- 右横書き (RTL) モードで演算子の鏡像化や伸縮を組み合わせたときに、正しく動作するようになりました ([Firefox bug 1994172](https://bugzil.la/1994172))。
+- {{cssxref("math-shift")}} プロパティをサポートしました。これは MathML の数式で表示する上付き文字を通常表示するかコンパクトに表示するかを開発者が示せるプロパティであり、上付き文字を移動させる高さに影響を与えます ([Firefox bug 1994171](https://bugzil.la/1994171))。
 
 ### CSS
 
-- {{cssxref("color_value/contrast-color()")}} 関数をサポートしました。この関数は [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) の値を受け入れて、少なくとも [WCAG AA minimum contrast](https://w3c.github.io/wcag/guidelines/22/#contrast-minimum) に準拠する対照的な色を返します 
-  ([Firefox bug 1682439](https://bugzil.la/1682439))。
+- {{cssxref("color_value/contrast-color()")}} 関数をサポートしました。この関数は [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) の値を受け入れて、少なくとも [WCAG AA minimum contrast](https://w3c.github.io/wcag/guidelines/22/#contrast-minimum) に準拠する対照的な色を返します ([Firefox bug 1682439](https://bugzil.la/1682439))。
 
-- [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) データ型で `display-p3-linear` 色空間をサポートしました。この色空間は [`display-p3`](/ja/docs/Glossary/Color_space#display-p3) に似ていますが、線形光の伝達関数を使用してガンマエンコーディングを行わないという違いがあり、表示される色を高精度にできます 
-  ([Firefox bug 1996318](https://bugzil.la/1996318))。
+- [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) データ型で `display-p3-linear` 色空間をサポートしました。この色空間は [`display-p3`](/ja/docs/Glossary/Color_space#display-p3) に似ていますが、線形光の伝達関数を使用してガンマエンコーディングを行わないという違いがあり、表示される色を高精度にできます ([Firefox bug 1996318](https://bugzil.la/1996318))。
 
-- [`text-decoration-inset`](/ja/docs/Web/CSS/Reference/Properties/text-decoration-inset) プロパティをサポートしました。これは、要素の {{cssxref("text-decoration")}} の始端と終端を調節することができ、短縮・延伸、あるいは表示するテキストに対して位置を移動させることができます 
-  ([Firefox bug 1979915](https://bugzil.la/1979915)、[Firefox bug 1997157](https://bugzil.la/1997157)、[Firefox bug 1993043](https://bugzil.la/1993043))。
+- [`text-decoration-inset`](/ja/docs/Web/CSS/Reference/Properties/text-decoration-inset) プロパティをサポートしました。これは、要素の {{cssxref("text-decoration")}} の始端と終端を調節することができ、短縮・延伸、あるいは表示するテキストに対して位置を移動させることができます ([Firefox bug 1979915](https://bugzil.la/1979915)、[Firefox bug 1997157](https://bugzil.la/1997157)、[Firefox bug 1993043](https://bugzil.la/1993043))。
 
 - {{cssxref("@scope")}} [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules) をデフォルトで有効にしました。これは特定の DOM サブツリー内の要素を選択することができ、上書きが困難な過度に具体的なセレクターを記述することなく、またセレクターを DOM 構造と過度に結びつけることなく、要素を正確に対象にします ([Firefox bug 1991105](https://bugzil.la/1991105))。
 
 - WEB互換性を向上させるため、旧来の [`-webkit-fill-available`](/ja/docs/Web/CSS/Reference/Webkit_extensions#-webkit-prefixed_property_values) キーワードを CSS の {{cssxref("width")}} および {{cssxref("height")}} プロパティの値としてサポートしました。
-  このキーワードは最近標準化された `stretch` キーワード (すなわち [`width: stretch`](/ja/docs/Web/CSS/Reference/Properties/width#stretch) および [`height: stretch`](/ja/docs/Web/CSS/Reference/Properties/height#stretch)) の別名であり、Firefox では未サポートでした 
-  ([Firefox bug 1988938](https://bugzil.la/1988938)、[Firefox bug 1789477](https://bugzil.la/1789477))。
+  このキーワードは最近標準化された `stretch` キーワード (すなわち [`width: stretch`](/ja/docs/Web/CSS/Reference/Properties/width#stretch) および [`height: stretch`](/ja/docs/Web/CSS/Reference/Properties/height#stretch)) の別名であり、Firefox では未サポートでした ([Firefox bug 1988938](https://bugzil.la/1988938)、[Firefox bug 1789477](https://bugzil.la/1789477))。
 
 ### JavaScript
 
@@ -83,13 +76,11 @@ Firefox 146 は、米国時間 [2025 年 12 月 9 日](https://whattrainisitnow.
 
 - **`<meta name="rating">`** (Nightly): `security.restrict_to_adults.always` および `security.restrict_to_adults.respect_platform`
 
-  `<meta name="rating">` 要素は、ウェブサイトが制限つきやアダルト向けのコンテンツであると自身を定義できます。この要素を認識するブラウザーは、ユーザーがコンテンツを表示することを制限する措置をとることができます 詳しくは [Restricting adult content with `<meta name="rating">`](/ja/docs/Mozilla/Firefox/Experimental_features#restricting_adult_content_with_meta_namerating) をご覧ください 
-  ([Firefox bug 1991135](https://bugzil.la/1991135))。
+  `<meta name="rating">` 要素は、ウェブサイトが制限つきやアダルト向けのコンテンツであると自身を定義できます。この要素を認識するブラウザーは、ユーザーがコンテンツを表示することを制限する措置をとることができます 詳しくは [Restricting adult content with `<meta name="rating">`](/ja/docs/Mozilla/Firefox/Experimental_features#restricting_adult_content_with_meta_namerating) をご覧ください ([Firefox bug 1991135](https://bugzil.la/1991135))。
 
 - **Navigation API** (Nightly): `dom.navigation.webidl.enabled`
 
-  Nightly ビルドで Navigation API をサポートしました。これは、ブラウザーのナビゲーションアクションを開始・傍受・管理する機能を提供します。また、アプリケーションの履歴の項目を調査することもできます。これは {{domxref("History API", "", "", "nocode")}} や {{domxref("window.location")}} のような従来のウェブプラットフォームの機能の後継であり、従来の機能の短所を解決するとともに、特に {{glossary("SPA", "SPA (単一ページアプリケーション)")}} のニーズを対象にしています 
-  ([Firefox bug 1979288](https://bugzil.la/1979288))。
+  Nightly ビルドで Navigation API をサポートしました。これは、ブラウザーのナビゲーションアクションを開始・傍受・管理する機能を提供します。また、アプリケーションの履歴の項目を調査することもできます。これは {{domxref("History API", "", "", "nocode")}} や {{domxref("window.location")}} のような従来のウェブプラットフォームの機能の後継であり、従来の機能の短所を解決するとともに、特に {{glossary("SPA", "SPA (単一ページアプリケーション)")}} のニーズを対象にしています ([Firefox bug 1979288](https://bugzil.la/1979288))。
 
 - **CSS `shape()` 曲線コマンドの相対的な制御点**: `layout.css.basic-shape-shape.enabled`
 
