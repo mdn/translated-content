@@ -10,9 +10,8 @@ l10n:
 {{InteractiveExample("HTML 演示：&lt;option&gt;", "tabbed-standard")}}
 
 ```html interactive-example
-<label for="pet-select">选择一只宠物：</label>
-
-<select id="pet-select">
+<label for="pet-select">选择一只宠物：</label
+><select id="pet-select">
   <option value="">--请选择一个选项--</option>
   <option value="dog">狗</option>
   <option value="cat">猫</option>
@@ -45,7 +44,7 @@ select {
 - `label`
   - : 该属性是用于指示此选项含义的标签文本。如果未定义 `label` 属性，其值将取自元素的文本内容。
 - `selected`
-  - : 如果存在，该布尔属性表示此选项在初始时被选中。如果该 `<option>` 元素属于一个未设置 [`multiple`](/zh-CN/docs/Web/HTML/Reference/Elements/select#multiple) 属性的 {{HTMLElement("select")}} 元素，则在该 {{HTMLElement("select")}} 中只能有一个 `<option>` 拥有 `selected` 属性。
+  - : 如果存在，该布尔属性表示此选项在初始时被选中。如果该 `<option>` 元素属于一个未设置 [`multiple`](/zh-CN/docs/Web/HTML/Reference/Elements/select#multiple) 属性的 {{HTMLElement("select")}} 元素，则在该 {{HTMLElement("select")}} 中只能有一个 `<option>` 具有 `selected` 属性。
 - `value`
   - : 该属性的内容表示当此选项被选中时，随表单一起提交的值。如果省略该属性，其值将取自该 option 元素的文本内容。
 
@@ -53,11 +52,11 @@ select {
 
 对 `<option>` 元素的样式定制在历史上一直非常受限。[可自定义的 select 元素](/zh-CN/docs/Learn_web_development/Extensions/Forms/Customizable_select)介绍了能够对其进行完整自定义的新特性，使其像任何常规 DOM 元素一样可被样式化。
 
-### 旧式 option 样式
+### 旧版 option 样式
 
 在不支持现代自定义功能的浏览器中（或在无法使用这些功能的旧代码库中），`<option>` 元素可用的样式取决于浏览器和操作系统。根据不同的操作系统，Firefox 和 Chromium 会遵循所属 `<select>` 的 {{cssxref("font-size")}}。Chromium 可能还允许设置 {{cssxref("color")}}、{{cssxref("background-color")}}、{{cssxref("font-family")}}、{{cssxref("font-variant")}} 和 {{cssxref("text-align")}}。
 
-关于旧式 `<option>` 样式的更多细节，请参阅我们的[高级表单样式指南](/zh-CN/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)。
+关于旧版 `<option>` 样式的更多细节，请参阅我们的[高级表单样式指南](/zh-CN/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)。
 
 ## 示例
 
@@ -90,7 +89,7 @@ select {
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        一个 {{HTMLElement("select")}}、{{HTMLElement("optgroup")}} 或 {{HTMLElement("datalist")}} 元素。
+        {{HTMLElement("select")}}、{{HTMLElement("optgroup")}} 或 {{HTMLElement("datalist")}} 元素。
       </td>
     </tr>
     <tr>
