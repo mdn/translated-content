@@ -1,9 +1,8 @@
 ---
 title: <display-box>
 slug: Web/CSS/Reference/Values/display-box
-original_slug: Web/CSS/display-box
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
 これらのキーワードは、要素が表示ボックスを作るかどうかを定義します。

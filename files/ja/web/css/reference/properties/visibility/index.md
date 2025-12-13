@@ -1,9 +1,8 @@
 ---
 title: visibility
 slug: Web/CSS/Reference/Properties/visibility
-original_slug: Web/CSS/visibility
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 0b5859108411e47d228a4bb9f30a5556ab17f63c
 ---
 
 **`visibility`** は CSS のプロパティで、文書のレイアウトを変更することなく要素を表示したり非表示にしたりします。このプロパティは {{HTMLElement("table")}} の行や列を隠すこともできます。
@@ -142,21 +141,23 @@ visibility の値は*可視*及び*不可視*の間で補間可能です。従�
 
 ```html
 <table>
-  <tr>
-    <td>1.1</td>
-    <td class="collapse">1.2</td>
-    <td>1.3</td>
-  </tr>
-  <tr class="collapse">
-    <td>2.1</td>
-    <td>2.2</td>
-    <td>2.3</td>
-  </tr>
-  <tr>
-    <td>3.1</td>
-    <td>3.2</td>
-    <td>3.3</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td>1.1</td>
+      <td class="collapse">1.2</td>
+      <td>1.3</td>
+    </tr>
+    <tr class="collapse">
+      <td>2.1</td>
+      <td>2.2</td>
+      <td>2.3</td>
+    </tr>
+    <tr>
+      <td>3.1</td>
+      <td>3.2</td>
+      <td>3.3</td>
+    </tr>
+  </tbody>
 </table>
 ```
 

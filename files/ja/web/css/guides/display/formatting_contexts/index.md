@@ -1,9 +1,9 @@
 ---
 title: 整形コンテキストの紹介
+short-title: 整形コンテキスト
 slug: Web/CSS/Guides/Display/Formatting_contexts
-original_slug: Web/CSS/CSS_display/Introduction_to_formatting_contexts
 l10n:
-  sourceCommit: 93f54a9e0ceb65880b951986cc47bee87336f156
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 この記事では整形コンテキストの概念を紹介します。ブロック整形コンテキスト、インライン整形コンテキスト、フレックス整形コンテキストなど、いくつかの種類があります。どのように動作するのか、これらの動作をどのように利用できるのかについても紹介します。
@@ -21,7 +21,7 @@ l10n:
 新しい BFC は以下のような場面で生成されます。
 
 - {{cssxref("float")}} を使用して浮動状態になった要素
-- [絶対位置指定](/ja/docs/Web/CSS/Reference/Properties/position#types_of_positioning)の要素
+- [絶対位置指定](/ja/docs/Web/CSS/Reference/Properties/position#位置指定の種類)の要素
 - {{cssxref("display", "display: inline-block", "#inline-block")}} の要素
 - 表のセル、または `display: table-cell` が指定された要素で、 `display: table-*` プロパティを使用して生成された無名の表のセルを含む
 - テーブルのキャプション、または `display: table-caption` が付いた要素
@@ -180,7 +180,7 @@ strong {
 
 ## まとめ
 
-このガイドでは、ブロックおよびインライン整形コンテキストにおける詳細と、ブロック整形コンテキスト (BFC) を生成することの重要な目的を見てきました。次のガイドでは、[通常フローがどのように様々な所持方向に対応するか](/ja/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes)を見ていきます。
+このガイドでは、ブロックおよびインライン整形コンテキストにおける詳細と、ブロック整形コンテキスト (BFC) を生成することの重要な目的を見てきました。次のガイドでは、[通常フローがどのように様々な書字方向に対応するか](/ja/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes)を見ていきます。
 
 ## 関連情報
 

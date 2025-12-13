@@ -23,6 +23,7 @@
     "lint:yml": "prettier -c \"**/*.yml\"",
     "prepare": "node scripts/npm-check.js"
   },
+  "packageManager": "npm@11.6.2",
   "engines": {
     "node": ">=24"
   },
