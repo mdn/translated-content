@@ -276,7 +276,7 @@ CSS мы рассмотрим более детально, чтобы по оч�
 }
 ```
 
-Вкратце класс `.box` устанавливает размер каждого блока и параметры шрифта. Также мы используем [CSS Flexbox](/ru/docs/Web/CSS/CSS_flexible_box_layout), чтобы с лёгкостью отцентрировать содержимое каждого блока. Мы включаем режим `flex` с помощью {{cssxref("display", "display: flex")}}, и присваиваем значение center {{cssxref("justify-content")}} и {{cssxref("align-items")}}. Затем мы создаём отдельные классы для каждого из двух блоков, которые определят индивидуальные свойства.
+Вкратце класс `.box` устанавливает размер каждого блока и параметры шрифта. Также мы используем [CSS Flexbox](/ru/docs/Web/CSS/Guides/Flexible_box_layout), чтобы с лёгкостью отцентрировать содержимое каждого блока. Мы включаем режим `flex` с помощью {{cssxref("display", "display: flex")}}, и присваиваем значение center {{cssxref("justify-content")}} и {{cssxref("align-items")}}. Затем мы создаём отдельные классы для каждого из двух блоков, которые определят индивидуальные свойства.
 
 ```css
 .boxLeft {
@@ -415,7 +415,7 @@ Once you have decided on your base color, there are plenty of online tools that 
 
 A few examples (all free to use as of the time this list was last revised):
 
-- [MDN's color picker tool](/ru/docs/Web/CSS/CSS_colors/Color_format_converter)
+- [MDN's color picker tool](/ru/docs/Web/CSS/Guides/Colors/Color_format_converter)
 - [Paletton](http://paletton.com)
 - [Adobe Color CC online color wheel](https://color.adobe.com/create/color-wheel)
 

@@ -5,7 +5,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginnin
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_getting_started","Learn_web_development/Core/Frameworks_libraries/Angular_styling", "Learn_web_development/Core/Frameworks_libraries")}}
 
 Сейчас мы готовы приступить к созданию приложения списка дел с использованием Angular. Готовое приложение будет отображать список дел, позволять редактировать, удалять и добавлять элементы. В этой статье вы познакомитесь со структурой приложения и поработаете над базовым отображением списка дел.
 
@@ -191,7 +191,7 @@ addItem(description: string) {
 
 Сейчас у вас должен быть список дел, отображаемый в вашем браузере. Это большой прогресс! Конечно, нам предстоит еще многое сделать. В следующей статье мы рассмотрим добавление стилей в наше приложение.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_getting_started","Learn_web_development/Core/Frameworks_libraries/Angular_styling", "Learn_web_development/Core/Frameworks_libraries")}}
 
 ## В это модуле
 

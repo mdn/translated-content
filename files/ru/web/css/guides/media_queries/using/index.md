@@ -131,7 +131,7 @@ The `only` keyword prevents older browsers that do not support media queries wit
 
 - [Media types](/ru/docs/Web/CSS/Reference/At-rules/@media#media_types)
 - [Media features](/ru/docs/Web/CSS/Reference/At-rules/@media#media_features)
-- [Testing media queries using code](/ru/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+- [Testing media queries using code](/ru/docs/Web/CSS/Guides/Media_queries/Testing)
 - [CSS Animations Between Media Queries](https://davidwalsh.name/animate-media-queries)
 - [Extended Mozilla media features](/ru/docs/Web/CSS/Mozilla_Extensions#Media_features)
 - [Extended WebKit media features](/ru/docs/Web/CSS/Webkit_Extensions#Media_features)

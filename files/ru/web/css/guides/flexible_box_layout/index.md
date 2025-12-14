@@ -32,7 +32,7 @@ slug: Web/CSS/Guides/Flexible_box_layout
 
 ## Guides
 
-- [Using CSS flexible boxes](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Using CSS flexible boxes](/ru/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
   - : Step-by-step tutorial about how to build layouts using this feature.
 - [Using flexbox to lay out Web applications](/ru/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
   - : Tutorial explaining how to use flexbox in the specific context of Web applications.

@@ -3,7 +3,7 @@ title: HTML таблицы продвинутые возможности и до
 slug: Learn_web_development/Core/Structuring_content/Table_accessibility
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content/Planet_data_table", "conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics")}}
 
 Во второй статье этого модуля мы рассматриваем ещё несколько продвинутых возможностей в HTML таблицах — такие как заголовок/описание и группировка строк внутри head, body и footer секциях таблицы, а также доступность таблиц для пользователей с ограниченными возможностями.
 
@@ -396,4 +396,4 @@ slug: Learn_web_development/Core/Structuring_content/Table_accessibility
 
 Есть ещё некоторые вещи которые можно узнать о HTML таблицах, но мы действительно дали всё что нужно на настоящий момент. Дальше вы возможно захотите больше узнать о стилизации HTML таблиц, посмотрите статью ["Стилизация таблиц"](/ru/docs/Learn_web_development/Core/Styling_basics/Tables).
 
-{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content/Planet_data_table", "conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics")}}

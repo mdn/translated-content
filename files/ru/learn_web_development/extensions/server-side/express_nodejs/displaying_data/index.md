@@ -3,7 +3,7 @@ title: "Учебник Express часть 5: Отображение данных
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/routes", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 Теперь мы готовы добавить страницы, на которых будут отображаться книги веб-сайта [LocalLibrary](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website) и другие данные. Страницы будут включать главную страницу, которая показывает сколько записей определённого типа мы имеем и отдельные страницы для детального просмотра записей. Попутно мы приобретём практический опыт в получении записей из баз данных и использовании шаблонов.
 
@@ -51,7 +51,7 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_dat
 - [Pug](https://pugjs.org/api/getting-started.html) (Pug документация)
 - [Moment](http://momentjs.com/docs/) (Moment документация)
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/routes", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 ## In this module
 

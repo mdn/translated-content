@@ -51,6 +51,6 @@ slug: Web/CSS/How_to/Layout_cookbook/Breadcrumb_navigation
 
 ## Смотрите также
 
-- [CSS Flexible Box Layout](/ru/docs/Web/CSS/CSS_flexible_box_layout)
+- [CSS Flexible Box Layout](/ru/docs/Web/CSS/Guides/Flexible_box_layout)
 - [Создание следа из хлебных крошек](https://www.w3.org/TR/WCAG20-TECHS/G65.html)
 - [Использование атрибута aria-current](https://tink.uk/using-the-aria-current-attribute/)
