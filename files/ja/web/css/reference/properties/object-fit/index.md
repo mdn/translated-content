@@ -73,7 +73,7 @@ object-fit: unset;
 ### 値
 
 - `contain`
-  - : 置換コンテンツは{{glossary("aspect ratio", "アスペクト比")}}を維持したまま、要素のコンテンツボックスに収まるように拡大縮小されます。オブジェクト全体がボックス内に表示され、アスペクト比が維持されるので、オブジェクトのアスペクト比とボックスのアスペクト比が合わない場合は、[レターボックス](https://ja.wikipedia.org/wiki/レターボックス_(映像技術))または[ピラーボックス](https://ja.wikipedia.org/wiki/ピラーボックス_(映像技術))表示になります。
+  - : 置換コンテンツは{{glossary("aspect ratio", "アスペクト比")}}を維持したまま、要素のコンテンツボックスに収まるように拡大縮小されます。オブジェクト全体がボックス内に表示され、アスペクト比が維持されるので、オブジェクトのアスペクト比とボックスのアスペクト比が合わない場合は、[レターボックス](<https://ja.wikipedia.org/wiki/レターボックス_(映像技術)>)または[ピラーボックス](<https://ja.wikipedia.org/wiki/ピラーボックス_(映像技術)>)表示になります。
 - `cover`
   - : 置換コンテンツはアスペクト比を維持したまま、要素のコンテンツボックス全体を埋めるように拡大縮小されます。オブジェクトのアスペクト比がボックスのアスペクト比と合わない場合は、オブジェクトの方が合うように切り取られます。
 - `fill`
@@ -184,4 +184,4 @@ img {
 
 - その他の画像関連 CSS プロパティ: {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}
 - {{cssxref("background-size")}}
-- [アスペクト比の理解](/en-US/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)
+- [アスペクト比の理解](/ja/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)

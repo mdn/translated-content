@@ -3,16 +3,16 @@ title: "GeolocationPosition: timestamp プロパティ"
 short-title: timestamp
 slug: Web/API/GeolocationPosition/timestamp
 l10n:
-  sourceCommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
+  sourceCommit: 066d55a090927fa19ba19c2a4b2417470e1a979f
 ---
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-**`GeolocationPosition.timestamp`** は読み取り専用のプロパティで、端末が位置を測定した日時を表します。
+**`timestamp`** は {{domxref("GeolocationPosition")}} インターフェイスの読み取り専用プロパティで、端末が位置を測定した日時を表します。
 
 ### 値
 
-ミリ秒単位の[Unix 時刻](/ja/docs/Glossary/Unix_time)で与えられるタイムスタンプが入った数値です。
+ミリ秒単位の {{Glossary("Unix time", "Unix 時刻")}}で与えられたタイムスタンプが入った数値です。
 
 ## 仕様書
 

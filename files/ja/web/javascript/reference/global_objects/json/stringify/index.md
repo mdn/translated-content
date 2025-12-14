@@ -1,11 +1,10 @@
 ---
 title: JSON.stringify()
+short-title: stringify()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 l10n:
-  sourceCommit: e7fab5265b54dc9faeff7e8cf4972cc171ec856b
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`JSON.stringify()`** メソッドは、ある JavaScript のオブジェクトや値を JSON 文字列に変換します。置き換え関数を指定して値を置き換えたり、置き換え配列を指定して指定されたプロパティのみを含むようにしたりすることもできます。
 
@@ -13,18 +12,18 @@ l10n:
 
 ```js interactive-example
 console.log(JSON.stringify({ x: 5, y: 6 }));
-// Expected output: '{"x":5,"y":6}'
+// 予想される結果: '{"x":5,"y":6}'
 
 console.log(
   JSON.stringify([new Number(3), new String("false"), new Boolean(false)]),
 );
-// Expected output: '[3,"false",false]'
+// 予想される結果: '[3,"false",false]'
 
 console.log(JSON.stringify({ x: [10, undefined, function () {}, Symbol("")] }));
-// Expected output: '{"x":[10,null,null,null]}'
+// 予想される結果: '{"x":[10,null,null,null]}'
 
 console.log(JSON.stringify(new Date(2006, 0, 2, 15, 4, 5)));
-// Expected output: '"2006-01-02T15:04:05.000Z"'
+// 予想される結果: '"2006-01-02T15:04:05.000Z"'
 ```
 
 ## 構文
@@ -40,7 +39,7 @@ JSON.stringify(value, replacer, space)
 - `value`
   - : JSON 文字列に変換する値です。
 - `replacer` {{optional_inline}}
-  - : 文字列化の手順の挙動を変更する関数、または `value` のプロパティのうち出力に含めるものを指定する文字列と数値の配列です。この値が配列である場合は、文字列でも数値でもない要素（{{jsxref("Symbol")}} など）は完全に無視されます。文字列や数値としては、プリミティブでもラッパーオブジェクトでも使用可能です。この値が関数でも配列でもない場合（[`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) の場合や、指定しない場合など）は、結果の JSON 文字列にオブジェクトの文字列をキーとするすべてのプロパティが含まれます。
+  - : 文字列化の手順の挙動を変更する関数、または `value` のプロパティのうち出力に含めるものを指定する文字列と数値の配列です。この値が配列である場合は、文字列でも数値でもない要素（{{jsxref("Symbol")}} 値など）は完全に無視されます。文字列や数値としては、プリミティブでもラッパーオブジェクトでも使用可能です。この値が関数でも配列でもない場合（[`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) の場合や、指定しない場合など）は、結果の JSON 文字列にオブジェクトの文字列をキーとするすべてのプロパティが含まれます。
 - `space` {{optional_inline}}
   - : 文字列または数値で、出力する JSON 文字列に可読性を目的に空白 (インデントや改行など) を挿入するために使用します。
 
@@ -79,7 +78,7 @@ JSON.stringify(value, replacer, space)
     - 配列の要素の場合は、配列の添字を表す文字列
     - `JSON.stringify()` がこのオブジェクトについて直接呼ばれた場合は、空文字列
 
-    {{jsxref("Date")}} のインスタンスは文字列を返す `toJSON()` を実装しています ([`date.toISOString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString) と同じです)。そのため、これは文字列に変換されます。
+    すべての {{jsxref("Temporal")}} のオブジェクトは `toJSON()` メソッドを実装しており、これは文字列を返します（`toString()` の呼び出しと同様）。したがって、これは文字列としてシリアライズされます。同様に、{{jsxref("Date")}} オブジェクトも `toJSON()` を実装しており、これは [`toISOString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString) と同じものを返します。
 
   - [列挙可能なプロパティ](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)のみが文字列化されます。そのため、{{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("WeakMap")}}、{{jsxref("WeakSet")}} などは `"{}"` に変換されます。引数 [`replacer`](#replacer_引数) を用いることで、これらをより実用的なものに変換できます。
 
@@ -328,7 +327,7 @@ JSON.stringify(circularReference);
 
 循環参照をシリアライズするためには、これに対応したライブラリを使用したり (Douglas Crockford による [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js) など)、自分自身で解決策を実装したりする方法があります。循環参照を探索してシリアライズされた値に置き換える (または削除する) 必要があるでしょう。
 
-`JSON.stringify()` をオブジェクトをディープコピーするために使っている場合は、かわりに [`structuredClone()`](/ja/docs/Web/API/Window/structuredClone) を使いたくなるかもしれません。この関数は循環参照に対応しています。[`v8.serialize()`](https://nodejs.org/api/v8.html#v8serializevalue) などのバイナリシリアライズを行う JavaScript エンジンの API も、循環参照に対応しています。
+`JSON.stringify()` をオブジェクトをディープコピーするために使っている場合は、かわりに {{DOMxRef("Window.structuredClone", "structuredClone()")}} を使いたくなるかもしれません。この関数は循環参照に対応しています。[`v8.serialize()`](https://nodejs.org/api/v8.html#v8serializevalue) などのバイナリーシリアライズを行う JavaScript エンジンの API も、循環参照に対応しています。
 
 ### localStorage で JSON.stringify() を使った例
 

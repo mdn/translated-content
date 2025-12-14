@@ -3,13 +3,13 @@ title: "GeolocationCoordinates: longitude プロパティ"
 short-title: longitude
 slug: Web/API/GeolocationCoordinates/longitude
 l10n:
-  sourceCommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
+  sourceCommit: d8f04d843dd81ab8cea1cfc0577ae3c5c9b77d5c
 ---
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-{{domxref("GeolocationCoordinates")}} インターフェイスの **`longitude`** プロパティは読み取り専用であり、地理的な位置の経度 10 進数で表す倍精度浮動小数点値です。
-[Unix 時刻](/ja/docs/Glossary/Unix_time)として提供される、計測時刻を表すタイムスタンプ共に、 `GeolocationCoordinates` オブジェクトは {{domxref("GeolocationPosition")}} インターフェイスの一部であり、位置位置を取得して返す位置情報 API 関数が返すオブジェクト型です。
+**`longitude`** は {{domxref("GeolocationCoordinates")}} インターフェイスの読み取り専用プロパティであり、地理的な位置の経度 10 進数で表す数値です。
+ミリ秒単位の {{Glossary("Unix time", "Unix 時刻")}}として提供される、計測時刻を表すタイムスタンプ共に、 `GeolocationCoordinates` オブジェクトは {{domxref("GeolocationPosition")}} インターフェイスの一部であり、位置位置を取得して返す位置情報 API 関数が返すオブジェクト型です。
 
 ## 値
 

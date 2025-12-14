@@ -1,49 +1,54 @@
 ---
-title: Atomics.waitAsync()
+title: "Atomics : méthode statique waitAsync()"
+short-title: waitAsync()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/waitAsync
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode statique **`waitAsync()`** de l'objet {{JSxRef("Atomics")}} vérifie qu'un emplacement de mémoire partagée contient une valeur donnée, retournant immédiatement un objet dont la propriété `value` contient la chaîne de caractères `"not-equal"` si l'emplacement de mémoire ne correspond pas à la valeur donnée, ou `"timed-out"` si le délai d'attente a été fixé à zéro. Sinon, la méthode renvoie un objet dont la propriété `value` est une {{JSxRef("Promise")}} qui s'exécute avec `"ok"` lorsque {{JSxRef("Atomics.notify()")}} est appelée, ou `"timed-out"` si le délai d'attente a expiré.
 
-La méthode statique **`Atomics.waitAsync()`** permet d'attendre de façon asynchrone à un emplacement de mémoire partagée et renvoie une [promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+`Atomics.waitAsync()` et {{JSxRef("Atomics.notify()")}} sont utilisés ensemble pour permettre la synchronisation des processus basée sur une valeur en mémoire partagée. Un processus peut continuer immédiatement si la valeur de synchronisation a changé, ou attendre la notification d'un autre processus lorsqu'il atteint le point de synchronisation.
 
-À la différence de [`Atomics.wait()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wait), `waitAsync()` n'est pas bloquante et peut être utilisée sur le fil d'exécution principal.
-
-> [!NOTE]
-> Cette opération ne fonctionne qu'avec un tableau typé partagé entier [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array) ou [`BigInt64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array).
+Cette méthode ne fonctionne qu'avec un {{JSxRef("Int32Array")}} ou un {{JSxRef("BigInt64Array")}} qui observe un {{JSxRef("SharedArrayBuffer")}}. Elle est non bloquante et, contrairement à {{JSxRef("Atomics.wait()")}}, peut être utilisée dans le processus principal. Comme elle ne bloque pas le processus entier, il faut veiller à ne pas accéder à la mémoire partagée avant que la promesse ne soit résolue.
 
 ## Syntaxe
 
-```js
-Atomics.waitAsync(typedArray, index, value);
-Atomics.waitAsync(typedArray, index, value, timeout);
+```js-nolint
+Atomics.waitAsync(typedArray, index, value)
+Atomics.waitAsync(typedArray, index, value, timeout)
 ```
 
 ### Paramètres
 
 - `typedArray`
-  - : Un tableau typé partagé de type [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array) ou [`BigInt64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array).
+  - : Un objet {{JSxRef("Int32Array")}} ou {{JSxRef("BigInt64Array")}} qui observe un {{JSxRef("SharedArrayBuffer")}}.
 - `index`
   - : La position au sein du tableau typé `typedArray` à laquelle on souhaite attendre.
 - `value`
   - : La valeur attendue à tester.
-- `timeout` {{optional_inline}}
-  - : Le temps à attendre, exprimé en millisecondes. Par défaut, c'est la valeur [`Infinity`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity) qui est utilisée.
+- `timeout` {{Optional_Inline}}
+  - : Le temps d'attente en millisecondes. {{JSxRef("NaN")}} (et les valeurs qui sont converties en `NaN`, comme `undefined`) devient {{JSxRef("Infinity")}}. Les valeurs négatives deviennent `0`.
 
 ### Valeur de retour
 
-Un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) dont la valeur de résolution est l'un des objets suivants&nbsp;:
+Un objet ({{JSxRef("Object")}}) avec les propriétés suivantes&nbsp;:
 
-```js
-{ async: false, value: 'ok' }
-{ async: false, value: 'not-equal' }
-{ async: false, value: 'timed-out' }
-{ async: true, value: promise }
-```
+- `async`
+  - : Un booléen indiquant si la propriété `value` est une {{JSxRef("Promise")}} ou non.
+- `value`
+  - : Si `async` est `false`, ce sera une chaîne de caractères qui est soit `"not-equal"` soit `"timed-out"` (uniquement lorsque le paramètre `timeout` est `0`). Si `async` est `true`, ce sera une {{JSxRef("Promise")}} qui est résolue avec une valeur de chaîne, soit `"ok"` soit `"timed-out"`. La promesse n'est jamais rejetée.
+
+### Exceptions
+
+- {{JSxRef("TypeError")}}
+  - : Levée si `typedArray` n'est pas un objet {{JSxRef("Int32Array")}} ou un {{JSxRef("BigInt64Array")}} qui observe un {{JSxRef("SharedArrayBuffer")}}.
+- {{JSxRef("RangeError")}}
+  - : Levée si `index` est hors des limites de `typedArray`.
 
 ## Exemples
 
-### Utiliser `waitAsync()`
+### Utilisation de `waitAsync()`
 
 Soit un tableau de mémoire partagée `Int32Array`.
 
@@ -52,24 +57,22 @@ const sab = new SharedArrayBuffer(1024);
 const int32 = new Int32Array(sab);
 ```
 
-Un <i lang="en">thread</i> de lecture est en sommeil et attend la valeur 0 à l'emplacement 0. La promesse `resultat` est renvoyée immédiatement.
+Un processus de lecture est en train de dormir et d'attendre sur l'emplacement 0 qui devrait être 0.
+Le `result.value` sera une promesse.
 
 ```js
 const resultat = Atomics.waitAsync(int32, 0, 0, 1000);
-// { async: true, value: promise }
+// { async: true, value: Promise {<pending>} }
 ```
 
-Dans le <i lang="en">thread</i> de lecture ou dans un autre <i lang="en">thread</i>, on fait appel à l'emplacement mémoire 0 et la promesse peut être résolue avec `value: "ok"`.
+Dans le processus de lecture ou dans un autre processus, l'emplacement mémoire 0 est appelé et la promesse peut être résolue avec `"ok"`.
 
 ```js
 Atomics.notify(int32, 0);
-// { async: false, value: "ok" }
+// { async: true, value: Promise {<fulfilled>: 'ok'} }
 ```
 
-Si la résolution ne founit pas `value: "ok"`, cela signifie que&nbsp;:
-
-- La valeur située à cet emplacement de la mémoire partagée n'était pas la valeur attendue (`"not-equal"`)
-- Ou que la durée d'attente a expiré (`"time-out"`).
+Si elle ne se résout pas en `"ok"`, la valeur dans la mémoire partagée n'était pas celle attendue (la `valeur` serait `"not-equal"` au lieu d'une promesse) ou le délai d'attente a été atteint (la promesse se résoudra en `"time-out"`).
 
 ## Spécifications
 
@@ -81,6 +84,6 @@ Si la résolution ne founit pas `value: "ok"`, cela signifie que&nbsp;:
 
 ## Voir aussi
 
-- [`Atomics`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Atomics)
-- [`Atomics.wait()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wait)
-- [`Atomics.notify()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Atomics/notify)
+- L'objet {{JSxRef("Atomics")}}
+- La méthode {{JSxRef("Atomics.wait()")}}
+- La méthode {{JSxRef("Atomics.notify()")}}

@@ -1,56 +1,64 @@
 ---
-title: Atomics.notify()
+title: "Atomics : méthode statique notify()"
+short-title: notify()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/notify
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-La méthode statique **`Atomics.notify()`** permet de réveiller des agents dormants qui sont dans la file d'attente.
+La méthode statique **`notify()`** de l'objet {{JSxRef("Atomics")}} permet de réveiller des agents dormants qui sont dans la file d'attente.
 
 > [!NOTE]
-> Cette opération ne fonctionne que sur un tableau typé partagé de type {{jsxref("Int32Array")}}.
+> Cette opération ne fonctionne qu'avec un {{JSxRef("Int32Array")}} ou un {{JSxRef("BigInt64Array")}} qui est une vue sur un {{JSxRef("SharedArrayBuffer")}}.
+> Elle renverra `0` pour les objets `ArrayBuffer` non partagés.
 
 ## Syntaxe
 
-```js
-Atomics.notify(typedArray, index, count);
+```js-nolint
+Atomics.notify(typedArray, index, count)
 ```
 
 ### Paramètres
 
 - `typedArray`
-  - : Un table typé partagé de type {{jsxref("Int32Array")}}.
+  - : Un objet {{JSxRef("Int32Array")}} ou un {{JSxRef("BigInt64Array")}} qui est une vue sur un {{JSxRef("SharedArrayBuffer")}}.
 - `index`
   - : La position sur le tableau `typedArray` pour laquelle réveiller les agents.
 - `count`
-  - : Le nombre d'agents dormants à réveiller.
+  - : Le nombre d'agents dormants à réveiller. Par défaut, la valeur est {{JSxRef("Infinity")}}.
 
 ### Valeur de retour
 
-Le nombre d'agents réveillés.
+Retourne le nombre d'agents réveillés, ou `0` si `typedArray` est une vue sur un objet {{JSxRef("ArrayBuffer")}} non partagé.
 
-### Exceptions levées
+### Exceptions
 
-- Cette méthode lève {{jsxref("TypeError")}} si `typedArray` n'est pas un tableau typé partagé de type{{jsxref("Int32Array")}}.
-- Cette méthode lève {{jsxref("RangeError")}} si `index` est en dehors des limites de `typedArray`.
+- {{JSxRef("TypeError")}}
+  - : Levée si `typedArray` n'est pas un {{JSxRef("Int32Array")}} ou un {{JSxRef("BigInt64Array")}}.
+- {{JSxRef("RangeError")}}
+  - : Levée si `index` est en dehors des limites de `typedArray`.
 
 ## Exemples
 
-Soit un tableau typé partagé `Int32Array`:
+### Utilisation de `notify()`
+
+Étant donné un `Int32Array` partagé&nbsp;:
 
 ```js
-var sab = new SharedArrayBuffer(1024);
-var int32 = new Int32Array(sab);
+const sab = new SharedArrayBuffer(1024);
+const int32 = new Int32Array(sab);
 ```
 
-Un _thread_ de lecture est en sommeil et surveille l'emplacement 0 et s'attend à ce que la valeur soit 0. Tant que cette condition est vérifiée, l'exécution n'ira pas plus loin. Lorsque le _thread_ d'écriture a enregistré une nouvelle valeur, le _thread_ de lecture sera réveillé par le _thread_ d'écriture et renverra la nouvelle valeur (123).
+Un processus de lecture est en sommeil et attend sur l'emplacement 0 parce que la `value` fournie correspond à ce qui est stocké à l'`index` fourni.
+Le processus de lecture n'avancera pas tant que le processus d'écriture n'aura pas appelé `Atomics.notify()` sur la position 0 du `typedArray` fourni.
+Notez que si, après avoir été réveillé, la valeur de l'emplacement 0 n'a pas été modifiée par le processus d'écriture, le processus de lecture ne **retournera pas** en sommeil, mais continuera.
 
 ```js
 Atomics.wait(int32, 0, 0);
 console.log(int32[0]); // 123
 ```
 
-Un _thread_ d'écriture stocke une nouvelle valeur et notifie le _thread_ de lecture une fois que la valeur a bien été écrite :
+Un processus d'écriture stocke une nouvelle valeur et notifie le processus en attente une fois qu'il a écrit&nbsp;:
 
 ```js
 console.log(int32[0]); // 0;
@@ -68,5 +76,6 @@ Atomics.notify(int32, 0, 1);
 
 ## Voir aussi
 
-- {{jsxref("Atomics")}}
-- {{jsxref("Atomics.wait()")}}
+- L'objet {{JSxRef("Atomics")}}
+- La méthode {{JSxRef("Atomics.wait()")}}
+- La méthode {{JSxRef("Atomics.waitAsync()")}}
