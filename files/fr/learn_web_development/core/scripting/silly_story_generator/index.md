@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Silly_story_generator
 original_slug: Learn/JavaScript/First_steps/Silly_story_generator
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting")}}
 
 Dans cette évaluation, vous aurez pour tâche d'utiliser les connaissances que vous avez apprises dans les articles de ce module et de les appliquer dans le but de créer une appli ludique qui génère des histoires absurdes au hasard. Amusez-vous bien !
 
@@ -110,4 +110,4 @@ Compléter la fonction `result()` :
 
 Si vous suivez cette évaluation dans le cadre d'un cours organisé, vous devriez pouvoir soumettre votre travail à votre enseignant/encadrant pour être évalué. Si vous êtes autodidacte, vous pouvez facilement obtenir le guide de notation en vous adressant à la mailing list [dev-mdc](https://lists.mozilla.org/listinfo/dev-mdc) ou au canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Essayez de faire l'exercice d'abord — vous ne gagnez rien à tricher !
 
-{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+{{PreviousMenu("Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting")}}

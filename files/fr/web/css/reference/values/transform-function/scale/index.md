@@ -1,25 +1,48 @@
 ---
 title: scale()
 slug: Web/CSS/Reference/Values/transform-function/scale
-original_slug: Web/CSS/transform-function/scale
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`scale()`** définit une transformation qui redimensionne un élément dans le plan 2D. Comme la quantité de mise à l'échelle est définie par un vecteur [sx, sy], elle peut redimensionner les dimensions horizontale et verticale à des échelles différentes. Son résultat est un type de donnée {{CSSxRef("&lt;transform-function&gt;")}}.
 
-La fonction CSS **`scale()`** permet de modifier la taille d'un élément avec un facteur d'échelle sur deux dimensions. Le résultat de cette fonction est une valeur de type [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function).
+{{InteractiveExample("Démonstration CSS&nbsp;: scale()")}}
 
-![](scale.png)
+```css interactive-example-choice
+transform: scale(1);
+```
 
-Cette transformation est définie par un vecteur dont les coordonnées définissent la déformation appliquée dans chaque direction (horizontale et verticale). Si les deux coordonnées du vecteur sont égales, la mise à l'échelle est uniforme (ou isotropique) et la forme de l'élément est conservée.
+```css interactive-example-choice
+transform: scale(0.7);
+```
 
-Lorsque les coordonnées du vecteur sont en dehors de l'intervalle \[`-1, 1]`, la transformation agrandit la taille de l'élément. Dans cet intervalle, l'élément est réduit.
+```css interactive-example-choice
+transform: scale(1.3, 0.4);
+```
+
+```css interactive-example-choice
+transform: scale(-0.5, 1);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
+
+Cette transformation de mise à l'échelle est caractérisée par un vecteur bidimensionnel. Ses coordonnées définissent l'ampleur de la mise à l'échelle dans chaque direction. Si les deux coordonnées sont égales, la mise à l'échelle est uniforme (_isotrope_) et le rapport d'aspect de l'élément est préservé (il s'agit d'une [transformation homothétique](https://fr.wikipedia.org/wiki/Homoth%C3%A9tie)).
+
+Lorsqu'une valeur de coordonnée est en dehors de l'intervalle \[-1, 1], l'élément grandit selon cette dimension&nbsp;; lorsqu'elle est à l'intérieur, il rétrécit. Une valeur négative entraîne une [symétrie centrale](https://fr.wikipedia.org/wiki/Sym%C3%A9trie_centrale) selon cette dimension. La valeur `1` n'a aucun effet.
 
 > [!NOTE]
-> La fonction `scale()` applique une transformation dans le plan (2D). S'il faut que la transformation soit appliquée dans l'espace (3D), on pourra utiliser la fonction `scale3D()`.
+> La fonction `scale()` ne met à l'échelle qu'en 2D. Pour une mise à l'échelle en 3D, utilisez plutôt [`scale3d()`](/fr/docs/Web/CSS/Reference/Values/transform-function/scale3d).
 
 ## Syntaxe
-
-La fonction `scale()` s'utilise avec une ou deux valeurs qui indiquent l'échelle à utiliser selon chaque direction.
 
 ```css
 scale(sx)
@@ -30,90 +53,40 @@ scale(sx, sy)
 ### Valeurs
 
 - `sx`
-  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/Reference/Values/number) qui représente l'abscisse du vecteur de transformation (le facteur d'échelle selon l'axe horizontal).
-- `sy`
-  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/Reference/Values/number) qui représente l'abscisse du vecteur de transformation (le facteur d'échelle selon l'axe vertical). Si ce paramètre est absent, la valeur par défaut qui sera prise sera **_sx_** (on aura ainsi une transformation homogène).
+  - : Un nombre ({{CSSxRef("&lt;number&gt;")}}) ou {{CSSxRef("&lt;percentage&gt;")}} représentant l'abscisse (composante horizontale, x) du vecteur d'échelle.
+- `sy` {{Optional_Inline}}
+  - : Un nombre ({{CSSxRef("&lt;number&gt;")}}) ou {{CSSxRef("&lt;percentage&gt;")}} représentant l'ordonnée (composante verticale, y) du vecteur d'échelle. Si elle n'est pas définie, sa valeur par défaut est `sx`, ce qui donne une mise à l'échelle uniforme qui préserve le {{Glossary("aspect ratio", "rapport d'aspect")}} de l'élément.
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
+      <th scope="col"><a href="/fr/docs/Web/CSS/Reference/Values/transform-function#le_système_de_coordonnées_cartésiennes">Coordonnées cartésiennes</a> sur <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^2 <sup>(angl.)</sup></a></th>
+      <th scope="col"><a href="https://fr.wikipedia.org/wiki/Coordonn%C3%A9es_homog%C3%A8nes">Coordonnées homogènes</a> sur <a href="https://fr.wikipedia.org/wiki/Plan_projectif_r%C3%A9el">ℝℙ^2</a></th>
+      <th scope="col">Coordonnées cartésiennes sur <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^3 <sup>(angl.)</sup></a></th>
+      <th scope="col">Coordonnées homogènes sur <a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3 <sup>(angl.)</sup></a></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td rowspan="2">
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr
-                ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi></mtd></mtr
-              ></mtable
-            ></mfenced
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mi>sx</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mi>sy</mi></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cc} sx & 0 \\ 0 & sy \end{array} \right)</annotation></semantics>
+        </math>
       </td>
       <td>
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr
-                ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ></mfenced
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mi>sx</mi></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mi>sy</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{ccc} sx & 0 & 0 \\ 0 & sy & 0 \\ 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
       <td rowspan="2">
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr
-                ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ></mfenced
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mi>sx</mi></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mi>sy</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{ccc} sx & 0 & 0 \\ 0 & sy & 0 \\ 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
       <td rowspan="2">
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr
-                ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ></mfenced
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mi>sx</mi></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mi>sy</mi></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cccc} sx & 0 & 0 & 0 \\ 0 & sy & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
     </tr>
     <tr>
@@ -122,26 +95,30 @@ scale(sx, sy)
   </tbody>
 </table>
 
+## Syntaxe formelle
+
+{{CSSSyntax}}
+
 ## Accessibilité
 
-Les animations utilisées pour les zooms/changement d'échelle peuvent poser problème comme facteurs de déclenchement pour certains types de migraine. Si vous devez inclure de telles animations sur votre site, vous devriez fournir un moyen de désactiver les animations pour le site.
+Les animations de mise à l'échelle ou de zoom posent des problèmes d'accessibilité, car elles déclenchent fréquemment certains types de migraines. Si vous devez inclure de telles animations sur votre site, vous devriez fournir un contrôle permettant aux utilisateur·ices de les désactiver, de préférence à l'échelle du site.
 
-Vous pouvez également tirer parti de la caractéristique média [`prefers-reduced-motion`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) et écrire une requête média qui désactivera les animations si l'utilisateur décide de réduire les animations via les préférences du système.
+Pensez aussi à utiliser la fonctionnalité média {{CSSxRef("@media/prefers-reduced-motion", "prefers-reduced-motion")}} — servez-vous-en pour écrire une [requête média](/fr/docs/Web/CSS/Guides/Media_queries) qui désactivera les animations si l'utilisateur·ice a activé la réduction des animations dans ses préférences système.
 
-Pour en savoir plus :
+Pour en savoir plus&nbsp;:
 
-- [Comprendre les règles WCAG 2.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.3_—_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
-- [Comprendre les critères de succès WCAG 2.1 / 2.3.3 (W3C)](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
+- [MDN Comprendre le WCAG, explications de la directive 2.3](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#règle_2.3_—_crises_et_réactions_physiques_ne_concevez_pas_de_contenu_susceptible_de_provoquer_des_crises_ou_des_réactions_physiques)
+- [Comprendre le critère de succès 2.3.3&nbsp;| W3C Understanding WCAG 2.1 <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
 
 ## Exemples
 
-### Déformation horizontale et verticale
+### Mise à l'échelle conjointe des dimensions X et Y
 
 #### HTML
 
 ```html
 <div>Normal</div>
-<div class="scaled">Déformé</div>
+<div class="scaled">Mis à l'échelle</div>
 ```
 
 #### CSS
@@ -154,22 +131,22 @@ div {
 }
 
 .scaled {
-  transform: scale(0.7); /* Équivalent à scaleX(0.7) scaleY(0.7) */
+  transform: scale(0.7); /* Équivaut à scaleX(0.7) scaleY(0.7) */
   background-color: pink;
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Déformation_horizontale_et_verticale", "200", "200")}}
+{{EmbedLiveSample("Mise à l'échelle conjointe des dimensions X et Y", "200", "200")}}
 
-### Déformer horizontalement et verticalement avec origine déplacée
+### Mise à l'échelle séparée des dimensions X et Y, et déplacement de l'origine
 
 #### HTML
 
 ```html
 <div>Normal</div>
-<div class="scaled">Déformé</div>
+<div class="scaled">Mis à l'échelle</div>
 ```
 
 #### CSS
@@ -182,7 +159,7 @@ div {
 }
 
 .scaled {
-  transform: scale(2, 0.5); /* Équivalent à scaleX(2) scaleY(0.5) */
+  transform: scale(2, 0.5); /* Équivaut à scaleX(2) scaleY(0.5) */
   transform-origin: left;
   background-color: pink;
 }
@@ -190,7 +167,7 @@ div {
 
 #### Résultat
 
-{{EmbedLiveSample("Déformer_horizontalement_et_verticalement_avec_origine_déplacée", "200", "200")}}
+{{EmbedLiveSample("Mise à l'échelle séparée des dimensions X et Y, et déplacement de l'origine", "200", "200")}}
 
 ## Spécifications
 
@@ -202,6 +179,9 @@ div {
 
 ## Voir aussi
 
-- [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function)
-- [`scale3d()`](/fr/docs/Web/CSS/Reference/Values/transform-function/scale3d)
+- La propriété {{CSSxRef("transform")}}
+- La propriété {{CSSxRef("scale")}}
+- La propriété {{CSSxRef("zoom")}}
+- Le type de donnée {{CSSxRef("&lt;transform-function&gt;")}}
+- {{CSSxRef("transform-function/scale3d")}}
+- Autres transformations individuelles&nbsp;: {{CSSxRef("translate")}} et {{CSSxRef("rotate")}}

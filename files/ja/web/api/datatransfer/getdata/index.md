@@ -1,6 +1,9 @@
 ---
-title: DataTransfer.getData()
+title: "DataTransfer: getData() メソッド"
+short-title: getData()
 slug: Web/API/DataTransfer/getData
+l10n:
+  sourceCommit: 8285d415db211ae9efe04752d9dab1b574450ee8
 ---
 
 {{APIRef("HTML DOM")}}
@@ -11,8 +14,8 @@ slug: Web/API/DataTransfer/getData
 
 ## 構文
 
-```js
-getData(format);
+```js-nolint
+getData(format)
 ```
 
 ## 引数
@@ -24,30 +27,22 @@ getData(format);
 
 文字列で、 `format` で指定した型のドラッグデータを表します。ドラッグ操作にデータがなかったり、 `format` で指定した型のデータがなかったりした場合、このメソッドは空文字列を返します。
 
-### 注意事項
-
-- データの利用可能性
-  - [HTML5 Drag and Drop 仕様書](https://www.w3.org/TR/2011/WD-html5-20110113/dnd.html#drag-data-store-mode)では、「ドラッグデータストアモード」が規定されています。
-    これは、 **`DataTransfer.getData()`** が期待した値を返さないという、予期しない動作をする可能性があります。すべてのブラウザーがこの制限を強制しているわけではないからです。
-
-    `dragstart` と `drop` イベントの処理中は、安全にデータにアクセスすることができます。それ以外のイベントでは、データは利用できないものと考えてください。それでも、項目とその形式を列挙することは可能です。
+`DataTransfer.getData()` は、特定のイベントに対してのみデータの読み書きを許可するため、期待した値を返さない場合があることに注意してください。`dragstart` と `drop` イベントの処理中は、安全にデータにアクセスすることができます。それ以外のイベントでは、データは利用できないものと考えてください。それでも、項目とその形式を列挙することは可能です。
 
 ## 例
 
-この例は、{{domxref("DataTransfer")}} オブジェクトの {{domxref("DataTransfer.getData","getData()")}} メソッドおよび {{domxref("DataTransfer.setData","setData()")}} メソッドの使い方を紹介します。
+この例は、{{domxref("DataTransfer")}} オブジェクトの `getData()` メソッドおよび {{domxref("DataTransfer.setData()","setData()")}} メソッドの使い方を紹介します。
 
-### HTML コンテンツ
+### HTML
 
-```html
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-  <span id="drag" draggable="true" ondragstart="drag(event)"
-    >drag me to the other box</span
-  >
+```html-nolint
+<div id="div1">
+  <span id="drag" draggable="true">他のボックスにドラッグ</span>
 </div>
-<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div2"></div>
 ```
 
-### CSS コンテンツ
+### CSS
 
 ```css
 #div1,
@@ -62,27 +57,37 @@ getData(format);
 ### JavaScript
 
 ```js
-function allowDrop(allowdropevent) {
-  allowdropevent.target.style.color = "blue";
-  allowdropevent.preventDefault();
+const div1 = document.getElementById("div1");
+const div2 = document.getElementById("div2");
+const dragElement = document.getElementById("drag");
+
+dragElement.addEventListener("dragstart", drag);
+div1.addEventListener("dragover", allowDrop);
+div2.addEventListener("dragover", allowDrop);
+div1.addEventListener("drop", drop);
+div2.addEventListener("drop", drop);
+
+function allowDrop(allowDropEvent) {
+  allowDropEvent.target.style.color = "blue";
+  allowDropEvent.preventDefault();
 }
 
-function drag(dragevent) {
-  dragevent.dataTransfer.setData("text", dragevent.target.id);
-  dragevent.target.style.color = "green";
+function drag(dragEvent) {
+  dragEvent.dataTransfer.setData("text", dragEvent.target.id);
+  dragEvent.target.style.color = "green";
 }
 
-function drop(dropevent) {
-  dropevent.preventDefault();
-  const data = dropevent.dataTransfer.getData("text");
-  dropevent.target.appendChild(document.getElementById(data));
-  document.getElementById("drag").style.color = "black";
+function drop(dropEvent) {
+  dropEvent.preventDefault();
+  const data = dropEvent.dataTransfer.getData("text");
+  dropEvent.target.appendChild(document.getElementById(data));
+  dragElement.style.color = "black";
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples', 600) }}
+{{EmbedLiveSample('例', 600) }}
 
 ## 仕様書
 
@@ -96,6 +101,4 @@ function drop(dropevent) {
 
 - [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
 - [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
-- [複数の項目のドラッグ＆ドロップ](/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
-- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)
+- [ドラッグデータストアでの作業](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)

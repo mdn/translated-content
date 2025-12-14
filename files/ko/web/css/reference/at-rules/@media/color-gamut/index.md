@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-[CSS](/ko/docs/Web/CSS) [미디어 특성](/ko/docs/Web/CSS/@media#media_features)인 **`color-gamut`** 은 {{glossary("user agent", "사용자 에이전트")}} 와 출력 장치가 지원하는 대략적인 {{glossary("gamut", "색역")}} 범위를 기반으로 CSS 스타일을 적용하는 데에 사용됩니다.
+[CSS](/ko/docs/Web/CSS) [미디어 특성](/ko/docs/Web/CSS/Reference/At-rules/@media#media_features)인 **`color-gamut`** 은 {{glossary("user agent", "사용자 에이전트")}} 와 출력 장치가 지원하는 대략적인 {{glossary("gamut", "색역")}} 범위를 기반으로 CSS 스타일을 적용하는 데에 사용됩니다.
 
 ## 구문
 
@@ -57,8 +57,8 @@ p {
 ## 같이 보기
 
 - 색 공간을 지정하는 [`color()`](/ko/docs/Web/CSS/color_value/color) 함수
-- [CSS colors](/ko/docs/Web/CSS/CSS_colors) 모듈
-- 색역 표현을 지정하는 [`@media`](/ko/docs/Web/CSS/@media) at 규칙
-- 미디어 쿼리 사용법 이해를 위한 [미디어 쿼리 사용하기](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [CSS media queries](/ko/docs/Web/CSS/CSS_media_queries) 모듈
+- [CSS colors](/ko/docs/Web/CSS/Guides/Colors) 모듈
+- 색역 표현을 지정하는 [`@media`](/ko/docs/Web/CSS/Reference/At-rules/@media) at 규칙
+- 미디어 쿼리 사용법 이해를 위한 [미디어 쿼리 사용하기](/ko/docs/Web/CSS/Guides/Media_queries/Using)
+- [CSS media queries](/ko/docs/Web/CSS/Guides/Media_queries) 모듈
 - 위키피디아의 [sRGB](https://en.wikipedia.org/wiki/SRGB)

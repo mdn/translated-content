@@ -43,7 +43,7 @@ isNaN(valeurÀTester);
 
 ### La nécessité d'avoir `isNaN()`
 
-À la différence des autres valeurs JavaScript, il est impossible d'utiliser les opérateurs d'égalité faible et stricte ({{jsxref("Opérateurs/Opérateurs_de_comparaison","==","#.C3.89galit.C3.A9_simple_(.3D.3D)")}} et {{jsxref("Opérateurs/Opérateurs_de_comparaison","===","#.C3.89galit.C3.A9_stricte_(.3D.3D.3D)")}}) afin de déterminer si une valeur _est_ ou _n'est pas_ réellement {{jsxref("NaN")}}. En effet `NaN == NaN` et `NaN === NaN` renvoient `false` tous les deux. C'est pour cela qu'il est nécessaire d'avoir la fonction `isNaN()`.
+À la différence des autres valeurs JavaScript, il est impossible d'utiliser les opérateurs d'égalité faible et stricte ({{jsxref("Opérateurs/Opérateurs_de_comparaison","==","#égalité_simple_(==)")}} et {{jsxref("Opérateurs/Opérateurs_de_comparaison","===","#égalité_stricte_(===)")}}) afin de déterminer si une valeur _est_ ou _n'est pas_ réellement {{jsxref("NaN")}}. En effet `NaN == NaN` et `NaN === NaN` renvoient `false` tous les deux. C'est pour cela qu'il est nécessaire d'avoir la fonction `isNaN()`.
 
 ### Les origines de `NaN`
 

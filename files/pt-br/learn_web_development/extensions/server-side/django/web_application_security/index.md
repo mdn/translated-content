@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/web_application_securi
 original_slug: Learn/Server-side/Django/web_application_security
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Proteger dados do usuário é uma parte essencial de qualquer projeto de website. Anteriormente, explicamos algumas das ameaças de segurança mais comuns no artigo [Web security](/pt-BR/docs/Web/Security) — esse artigo fornece uma demonstração prática de como as proteções internas de Django lidam com essas ameaças.
 
@@ -199,4 +199,4 @@ A próxima e última etapa neste módulo sobre Django é concluir a [tarefa de a
 - [Segurança web](/pt-BR/docs/Web/Security) (MDN)
 - [Protegendo seu site](/pt-BR/docs/Web/Security/Practical_implementation_guides) (MDN)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn_web_development/Extensions/Server-side/Django")}}

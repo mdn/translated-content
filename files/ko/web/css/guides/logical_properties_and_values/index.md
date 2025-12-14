@@ -17,13 +17,13 @@ l10n:
 
 이 모듈에서 정의된 논리적 속성은 물리적 방향이 아니라 콘텐츠의 쓰기 방향에 따른 속성을 정의할 수 있습니다. 이 의미는 콘텐츠가 다른 쓰기 방식의 언어로 번역되어도 콘텐츠가 의도한대로 렌더링된다는 것을 의미합니다.
 
-논리적 속성과 값은 흐르는 방향을 설명하기 위해 블록과 인라인이라는 추상적인 용어들을 사용합니다. 이러한 용어들의 물리적 의미는 [쓰기 모드](/ko/docs/Web/CSS/CSS_writing_modes)에 의존합니다.
+논리적 속성과 값은 흐르는 방향을 설명하기 위해 블록과 인라인이라는 추상적인 용어들을 사용합니다. 이러한 용어들의 물리적 의미는 [쓰기 모드](/ko/docs/Web/CSS/Guides/Writing_modes)에 의존합니다.
 
 **블록 차원**은 문장 내의 흐름에 수직적인 차원입니다. 즉, 가로 방향의 쓰기 모드에서는 수직 차원이고, 세로 방향의 쓰기 모드에서는 수평 차원입니다. 표준 영어 텍스트의 경우에는 수직 차원입니다.
 
 **인라인 차원**은 문장 내의 흐름과 평행합니다. 즉, 가로 방향의 쓰기 모드에서는 수평 차원이고, 세로 방향의 쓰기 모드에서는 수직 차원입니다. 표준 영어 텍스트의 경우에는 수평 차원입니다.
 
-CSS 는 본래 물리적인 좌표만을 위해 고안되었습니다. 논리적 속성과 값 모듈은 많은 [값](/ko/docs/Web/CSS/CSS_values_and_units)과 [속성](/ko/docs/Glossary/Property/CSS)들에 대응하는 흐름 상대성을 정의합니다. 물리적 값 (`top`, `bottom`, `left`, `right`) 만 수용했던 속성들은 이제 흐름 상대적인 논리적 속성 (`block-start`, `block-end`, `inline-start`, `inline-end`) 들도 허용하게 됩니다.
+CSS 는 본래 물리적인 좌표만을 위해 고안되었습니다. 논리적 속성과 값 모듈은 많은 [값](/ko/docs/Web/CSS/Guides/Values_and_units)과 [속성](/ko/docs/Glossary/Property/CSS)들에 대응하는 흐름 상대성을 정의합니다. 물리적 값 (`top`, `bottom`, `left`, `right`) 만 수용했던 속성들은 이제 흐름 상대적인 논리적 속성 (`block-start`, `block-end`, `inline-start`, `inline-end`) 들도 허용하게 됩니다.
 
 ## 참고서
 
@@ -103,16 +103,16 @@ CSS 는 본래 물리적인 좌표만을 위해 고안되었습니다. 논리적
 
 ## 안내서
 
-- [논리적 속성과 값의 기본 개념](/ko/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values)
+- [논리적 속성과 값의 기본 개념](/ko/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts)
   - : 흐름 상대적인 속성과 값들 전반에 대해 다룹니다.
 
-- [크기 조절을 위한 논리적 속성](/ko/docs/Web/CSS/CSS_logical_properties_and_values/Sizing)
+- [크기 조절을 위한 논리적 속성](/ko/docs/Web/CSS/Guides/Logical_properties_and_values/Sizing)
   - : 페이지의 요소의 크기 조절에 사용되는 물리적 속성과 논리적 속성들 사이의 흐름 상대적인 매핑에 대해 다룹니다.
 
-- [바깥 여백, 테두리, 그리고 안쪽 여백에 관한 논리적 속성들](/ko/docs/Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding)
+- [바깥 여백, 테두리, 그리고 안쪽 여백에 관한 논리적 속성들](/ko/docs/Web/CSS/Guides/Logical_properties_and_values/Margins_borders_padding)
   - : 바깥 여백, 테두리, 그리고 안쪽 여백에 관한 흐름 상대적인 매핑과 그에 대한 단축 속성들에 대해 다룹니다.
 
-- [플로팅과 위치 지정을 위한 논리적 속성](/ko/docs/Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning)
+- [플로팅과 위치 지정을 위한 논리적 속성](/ko/docs/Web/CSS/Guides/Logical_properties_and_values/Floating_and_positioning)
   - : `float`, `clear`, [inset 속성](/ko/docs/Glossary/Inset_properties) 그리고 `resize` 에 사용되는 물리적인 값과 논리적인 값들 사이의 상세 매핑에 대해 다룹니다.
 
 ## 연관 개념
@@ -123,7 +123,7 @@ CSS 는 본래 물리적인 좌표만을 위해 고안되었습니다. 논리적
 - {{CSSxRef("resize")}}
 - {{CSSxRef("text-align")}}
 
-[CSS box model](/ko/docs/Web/CSS/CSS_box_model)
+[CSS box model](/ko/docs/Web/CSS/Guides/Box_model)
 
 - {{CSSxRef("margin")}} 단축어
 - {{CSSxRef("padding")}} 단축어
@@ -135,7 +135,7 @@ CSS 는 본래 물리적인 좌표만을 위해 고안되었습니다. 논리적
 - {{CSSxRef("min-height")}}
 - {{CSSxRef("min-width")}}
 
-[CSS backgrounds and borders](/ko/docs/Web/CSS/CSS_backgrounds_and_borders)
+[CSS backgrounds and borders](/ko/docs/Web/CSS/Guides/Backgrounds_and_borders)
 
 - {{CSSxRef("border-color")}}
 - {{CSSxRef("border-style")}}
@@ -143,20 +143,20 @@ CSS 는 본래 물리적인 좌표만을 위해 고안되었습니다. 논리적
 - {{CSSxRef("border")}} 단축어
 - {{CSSxRef("border-radius")}}
 
-[CSS positioned layout](/ko/docs/Web/CSS/CSS_positioned_layout)
+[CSS positioned layout](/ko/docs/Web/CSS/Guides/Positioned_layout)
 
 - {{CSSxRef("top")}}
 - {{CSSxRef("right")}}
 - {{CSSxRef("bottom")}}
 - {{CSSxRef("left")}}
 
-[CSS writing modes](/ko/docs/Web/CSS/CSS_writing_modes)
+[CSS writing modes](/ko/docs/Web/CSS/Guides/Writing_modes)
 
 - {{CSSxRef("direction")}}
 - {{CSSxRef("text-orientation")}}
 - {{CSSxRef("writing-mode")}}
 
-[CSS containment](/ko/docs/Web/CSS/CSS_containment)
+[CSS containment](/ko/docs/Web/CSS/Guides/Containment)
 
 - {{CSSxRef("contain-intrinsic-block-size")}}
 - {{CSSxRef("contain-intrinsic-inline-size")}}
@@ -177,6 +177,6 @@ CSS 는 본래 물리적인 좌표만을 위해 고안되었습니다. 논리적
 
 ## 같이 보기
 
-- [플로우 레이아웃과 쓰기 모드](/ko/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)
-- [CSS 유연한 박스 레이아웃](/ko/docs/Web/CSS/CSS_flexible_box_layout) 모듈
-- [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout) 모듈
+- [플로우 레이아웃과 쓰기 모드](/ko/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes)
+- [CSS 유연한 박스 레이아웃](/ko/docs/Web/CSS/Guides/Flexible_box_layout) 모듈
+- [CSS 그리드 레이아웃](/ko/docs/Web/CSS/Guides/Grid_layout) 모듈

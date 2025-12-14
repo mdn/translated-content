@@ -3,7 +3,7 @@ title: "Django учебник Часть 3: Использование моде�
 slug: Learn_web_development/Extensions/Server-side/Django/Models
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django")}}
 
 В этой статье показано, как определить модели для [LocalLibrary](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) сайта. Она объясняет, что такое модель, как она объявляется, и некоторые из основных типов полей. В ней также кратко показаны некоторые из основных способов доступа к данным модели.
 
@@ -427,4 +427,4 @@ python3 manage.py migrate
 - [Making queries](https://docs.djangoproject.com/en/1.10/topics/db/queries/) (Django Docs)
 - [QuerySet API Reference](https://docs.djangoproject.com/en/1.10/ref/models/querysets/) (Django Docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django")}}

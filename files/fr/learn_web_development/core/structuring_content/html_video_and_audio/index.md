@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/HTML_video_and_audio
 original_slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_images", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
 
 Maintenant que nous sommes à l'aise pour ajouter de simples images dans une page web, nous passons à l'étape suivante : ajouter de la vidéo et un lecteur audio à vos documents HTML. Dans cet article, nous nous contenterons de le faire avec les éléments {{htmlelement("video")}} et {{htmlelement("audio")}}. Nous terminerons en apprenant comment ajouter des légendes et des sous-titres à vos vidéos.
 
@@ -289,4 +289,4 @@ Emballez, c'est pesé ! Nous espérons que vous avez pris plaisir avec ces pages
 - [Manipuler l'Audio et la Vidéo](/fr/docs/Web/Media/Guides/Audio_and_video_manipulation): de nombreux détails pour manipuler l'audio et la vidéo avec JavaScript (par ex. en ajoutant des filtres).
 - Options automatisées pour la [traduction multimédia](http://www.inwhatlanguage.com/blog/translate-video-audio/).
 
-{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_images", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}

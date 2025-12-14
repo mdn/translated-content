@@ -5,7 +5,7 @@ slug: Learn_web_development/Core/Scripting/Useful_string_methods
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/Строки", "Learn/JavaScript/Первые_шаги/Arrays", "Learn/JavaScript/Первые_шаги")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting/Arrays", "conflicting/Learn_web_development/Core/Scripting")}}
 
 Мы рассмотрели базовые понятия, касающиеся строк. Давайте пойдём дальше и рассмотрим, какие полезные операции мы можем выполнять со строками, используя встроенные функции, такие как поиск длины текстовой строки, объединение и разделение строк, замена одного символа из строки другим и многое другое.
 
@@ -613,4 +613,4 @@ textarea.onkeyup = function () {
 
 Нельзя не согласиться с тем, что способность обрабатывать слова и предложения в программировании очень важна — особенно в JavaScript, поскольку веб-сайты — все связаны с людьми. Эта статья дала вам основы, которые вам нужно знать о манипуляции строками на данный момент. Это пойдёт вам на пользу, когда вы займётесь более сложными темами в будущем. Далее мы рассмотрим последний важный тип данных, на который нам нужно сосредоточиться в краткосрочной перспективе — массивы.
 
-{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/Строки", "Learn/JavaScript/Первые_шаги/Arrays", "Learn/JavaScript/Первые_шаги")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting/Arrays", "conflicting/Learn_web_development/Core/Scripting")}}

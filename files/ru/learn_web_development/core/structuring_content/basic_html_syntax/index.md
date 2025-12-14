@@ -726,6 +726,6 @@ textarea.onkeyup = function () {
 
 ## Смотрите также
 
-- [Применение цвета к элементам HTML с помощью CSS](/ru/docs/Web/CSS/CSS_colors/Applying_color)
+- [Применение цвета к элементам HTML с помощью CSS](/ru/docs/Web/CSS/Guides/Colors/Applying_color)
 
 {{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Введение_в_HTML/Начало_работы")}}

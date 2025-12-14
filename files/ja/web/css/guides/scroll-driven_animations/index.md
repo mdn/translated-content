@@ -1,74 +1,164 @@
 ---
 title: CSS スクロール駆動アニメーション
+short-title: スクロール駆動アニメーション
 slug: Web/CSS/Guides/Scroll-driven_animations
-original_slug: Web/CSS/CSS_scroll-driven_animations
 l10n:
-  sourceCommit: 4458494807b6f4898d504b6c0af0a45f8031cbf3
+  sourceCommit: e9d014225ac5c28294a68d3743a3ef80794912b9
 ---
 
-**CSS スクロール駆動アニメーション**モジュールは、[CSS アニメーションモジュール](/ja/docs/Web/CSS/Guides/Animations)と[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)の上に構築する機能を提供します。これは、既定の時間ベースによる文書タイムラインの代わりに、スクロールベースのタイムラインに沿った進行に基づいてプロパティ値をアニメーションすることができます。つまり、時間の経過だけでなく、スクロール可能な要素をスクロールすることで、要素をアニメーションすることができます。
+**CSS スクロール駆動アニメーション**モジュールは、[CSS アニメーションモジュール](/ja/docs/Web/CSS/Guides/Animations)と[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) の上に構築する機能を提供します。これは、デフォルトの時間ベースの文書タイムラインではなく、スクロールベースのタイムラインに沿ってプロパティ値をアニメーションできるようにします。つまり、時間の経過だけでなく、要素自体、そのスクロールコンテナー、またはそのルート要素をスクロールすることで要素をアニメーションできるということです。
 
-スクロールベースのタイムラインには 2 種類あります。
+## スクロール駆動アニメーションの実演
 
-- スクロール進行タイムライン: このタイムラインは、スクロール可能な要素（スクローラー）を上から下（または左から右）にスクロールしたり戻したりすることで進行させます。スクロール範囲の位置はパーセント値に変換されます。先頭が 0%、末尾が 100% です。
-- ビュー進行タイムライン: このタイムラインは、スクローラー内の要素（主体）の可視性の変化に基づいて進行します。スクローラー内の主体の可視性は、進行のパーセント値として追跡されます。既定では、進行タイムラインはサブジェクトがスクローラーの一方の端に最初に表示された時に 0% になり、反対側の端に達したときに 100% になります。
+アニメーションを制御するスクローラーは、アニメーションに名前を付けるか、 {{cssxref("scroll")}} 関数を使用するかして定義できます。
 
-これら 2 つのタイムラインのいずれかがアニメーションする要素に適用されると、アニメーションは既定の時間ベースのタイムラインに従うのではなく、そのタイムラインに沿って進行します。
+```html hidden live-sample___scroll_animation
+<main>
+  <div></div>
+</main>
+```
 
-アニメーションの実効位置をスクロール進行とビュー進行タイムラインに沿って調整することが可能です、つまり、アニメーションの開始位置と終了位置を定義することができます。これにはいくつかの方法があります。
+```css live-sample___scroll_animation
+main {
+  scroll-timeline: --main-timeline;
+}
 
-- アニメーションの開始と終了の値をアニメーションに適用することで、アニメーションの開始位置と終了位置をタイムラインに沿って調整できます。
-- ビュー進行タイムラインには、主体要素が表示されているとみなされるスクロールポート（詳細は {{glossary("Scroll container")}} を参照）の位置を調整するために、開始と終了のインセット（またはアウトセット）を適用することができます。別の言い方をすれば、タイムライン自体の位置をずらす開始や終了のインセット（またはアウトセット）の値を指定することができます。
+div {
+  animation: background-animation linear;
+  animation-timeline: scroll(nearest inline);
+}
 
-## スクロール駆動アニメーションの実際
+div::after {
+  animation: shape-animation linear;
+  animation-timeline: --main-timeline;
+}
+```
 
-[Scroll-driven Animations tools and demos](https://scroll-driven-animations.style/) では、スクロール駆動アニメーションを示すツールやデモをいくつか探すことができます。
+```css hidden live-sample___scroll_animation
+@layer animations {
+  @keyframes background-animation {
+    0% {
+      background-color: palegoldenrod;
+    }
+    100% {
+      background-color: magenta;
+    }
+  }
+  @keyframes shape-animation {
+    0% {
+      left: 0;
+      top: 0;
+      background-color: black;
+    }
+    50% {
+      top: calc(100% - var(--elSize));
+      left: calc(50% - var(--elSize));
+      background-color: red;
+    }
+    100% {
+      left: calc(100vw - var(--elSize));
+      top: 0;
+      rotate: 1800deg;
+      background-color: white;
+    }
+  }
+}
+
+@layer page-setup {
+  :root {
+    --elSize: 50px;
+  }
+  main {
+    height: 90vh;
+    overflow: scroll;
+    border: 1px solid;
+    margin: 5vh auto;
+  }
+  div {
+    height: 400vh;
+    width: 400vw;
+  }
+  div::after {
+    content: "";
+    border: 1px solid red;
+    height: var(--elSize);
+    width: var(--elSize);
+    position: absolute;
+    border-radius: 20px;
+    corner-shape: superellipse(-4);
+  }
+}
+
+@layer no-support {
+  @supports not (scroll-timeline: --main-timeline) {
+    body::before {
+      content: "このブラウザーはスクロール駆動アニメーションに対応していません。";
+      background-color: wheat;
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+    body > * {
+      display: none;
+    }
+  }
+}
+```
+
+{{EmbedLiveSample("scroll_animation", "", "400px")}}
+
+要素をインライン方向にスクロールすると、背景色の変化が確認できます。垂直方向にスクロールすると、生成されたコンテンツが移動、回転、色変化する様子が見られます。
 
 ## リファレンス
 
 ### プロパティ
 
-アニメーションの進行を制御するタイムラインを設定し、そのタイムラインに沿って適用範囲を設定します。
-
-- {{cssxref("animation-timeline")}}
-- {{cssxref("animation-range")}}
-- {{cssxref("animation-range-start")}}
-- {{cssxref("animation-range-end")}}
-
-名前付きスクロール進行タイムラインの定義:
-
-- {{cssxref("scroll-timeline")}}
-- {{cssxref("scroll-timeline-axis")}}
-- {{cssxref("scroll-timeline-name")}}
-
-名前付きビュー進行タイムラインの定義:
-
-- {{cssxref("view-timeline")}}
-- {{cssxref("view-timeline-axis")}}
-- {{cssxref("view-timeline-inset")}}
-- {{cssxref("view-timeline-name")}}
-
-タイムラインスコープの変更:
-
+- {{cssxref("animation-range")}} 一括指定
+  - {{cssxref("animation-range-end")}}
+  - {{cssxref("animation-range-start")}}
+- {{cssxref("scroll-timeline")}} 一括指定
+  - {{cssxref("scroll-timeline-axis")}}
+  - {{cssxref("scroll-timeline-name")}}
 - {{cssxref("timeline-scope")}}
+- {{cssxref("view-timeline")}} 一括指定
+  - {{cssxref("view-timeline-axis")}}
+  - {{cssxref("view-timeline-inset")}}
+  - {{cssxref("view-timeline-name")}}
 
-### アットルール
+### データ型と値
 
-CSS スクロール駆動アニメーションでは、`<timeline-range-name>` を {{cssxref("@keyframes")}} ブロックに記述することで、名前付きのタイムライン範囲内の特定の位置にキーフレームを配置できるようになります。
+- [`<axis>`](/ja/docs/Web/CSS/Reference/Values/axis)
+- [`<timeline-range-name>`](/ja/docs/Web/CSS/Reference/Properties/animation-range#timeline-range-name)
 
 ### 関数
-
-無名スクロール進行タイムラインと無名ビュー進行タイムラインを定義するための {{cssxref("animation-timeline")}} プロパティの可能な値（つまり、明示的に名前付きで `scroll-timeline-*` プロパティと `view-timeline-*` プロパティを使用して定義するのではなく、ブラウザーによって暗黙的に定義されます）。
 
 - [`scroll()`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline/scroll)
 - [`view()`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline/view)
 
-### JavaScript 機能
+### インターフェイス
 
-- {{domxref("Element.animate()")}}
-- {{domxref("AnimationTimeline")}}
 - {{domxref("ScrollTimeline")}}
 - {{domxref("ViewTimeline")}}
+
+## ガイド
+
+- [スクロール駆動アニメーションのタイムライン](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
+  - : スクロール駆動アニメーションのタイムラインとスクロール駆動アニメーションの作成についてです。
+
+## 関連概念
+
+- [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations) module
+  - {{cssxref("animation-timeline")}}
+  - {{cssxref("@keyframes")}}
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow) module
+  - {{glossary("Scroll container")}}
+  - [スクロールポート](/ja/docs/Glossary/Scroll_container#scrollport)
+- [ウェブアニメーション](/ja/docs/Web/API/Web_Animations_API) API
+  - {{domxref("Element.animate()")}}
+  - {{domxref("Animation")}}
+  - {{domxref("AnimationTimeline")}}
+  - {{domxref("DocumentTimeline")}}
+  - {{domxref("KeyframeEffect")}}
 
 ## 仕様書
 

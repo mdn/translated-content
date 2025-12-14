@@ -3,7 +3,7 @@ title: Селекторы CSS
 slug: Learn_web_development/Core/Styling_basics/Basic_selectors
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}
 
 В {{Glossary("CSS")}}-селекторы используются для стилизации {{glossary("HTML")}} элементов на веб-странице. Существует широкий выбор CSS-селекторов, позволяющий максимально точно отбирать элементы для стилизации. В этой статье и её подстатьях мы в мельчайших подробностях рассмотрим разные их типы и увидим, как они работают.
 
@@ -118,8 +118,7 @@ a[title] {
 или основываясь на _значении_ атрибута:
 
 ```css
-a[href="https://example.com"]
-{
+a[href="https://example.com"] {
 }
 ```
 
@@ -152,7 +151,7 @@ article > p {
 
 Ниже можно просмотреть таблицу различных видов селекторов с соответствующими ссылками, или вы можете двинуться дальше: нас ждут [селекторы тегов, классов и идентификаторов](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors).
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}
 
 ## Справка о селекторах
 
