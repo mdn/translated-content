@@ -91,7 +91,7 @@ content-visibility: unset;
 
 이 동작은 DOM에서 `content-visibility: hidden` 를 사용하여 요소를 제거하는 진입점이나 마무리 애니메이션을 생성할 때 이를 즉각적으로 사라지게 하는 대신 부드러운 전환(페이드 아웃 등) 을 할 때에 더 유용하게 사용됩니다.
 
-`content-visibility` 를 [CSS 전환](/ko/docs/Web/CSS/CSS_transitions)과 함께 애니메이션화할 때, [`transition-behavior: allow-discrete`](/ko/docs/Web/CSS/transition-behavior) 가 `content-visibility` 에 설정이 되어 있어야 합니다. 이는 `content-visibility` 전환을 효과적으로 동작하게 합니다.
+`content-visibility` 를 [CSS 전환](/ko/docs/Web/CSS/Guides/Transitions)과 함께 애니메이션화할 때, [`transition-behavior: allow-discrete`](/ko/docs/Web/CSS/transition-behavior) 가 `content-visibility` 에 설정이 되어 있어야 합니다. 이는 `content-visibility` 전환을 효과적으로 동작하게 합니다.
 
 > [!NOTE]
 > 요소의 `content-visibility` 값을 전환할 때, [`display` 를 전환할](/ko/docs/Web/CSS/display#animating_display)때처럼 [`@starting-style`](/ko/docs/Web/CSS/@starting-style) 블록을 사용하여 전환의 시작 값을 제공할 필요가 없습니다. 이는 `content-visibility` 가 `display` 처럼 DOM에서 요소를 숨기지 않고 요소의 콘텐츠 렌더링을 생략하기 때문입니다.
@@ -314,7 +314,7 @@ function showHide() {
 
 ## 같이 보기
 
-- [CSS Containment](/ko/docs/Web/CSS/CSS_containment)
+- [CSS Containment](/ko/docs/Web/CSS/Guides/Containment)
 - [`contain-intrinsic-size`](/ko/docs/Web/CSS/contain-intrinsic-size)
 - {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
 - [content-visibility: 렌더링 동작을 향상시키는 새로운 CSS 속성](https://web.dev/articles/content-visibility) (web.dev)

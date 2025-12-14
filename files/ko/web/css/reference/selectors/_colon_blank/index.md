@@ -12,7 +12,7 @@ l10n:
 >
 > [CSSWG issue #1967](https://github.com/w3c/csswg-drafts/issues/1967) 를 확인해 보세요.
 
-**`:blank`** [CSS](/ko/docs/Web/CSS) [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 비어 있는 사용자의 인풋 요소 (예를 들어 {{HTMLElement("input")}} or {{HTMLElement("textarea")}}와 같은 요소들)를 선택합니다.
+**`:blank`** [CSS](/ko/docs/Web/CSS) [의사 클래스](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes)는 비어 있는 사용자의 인풋 요소 (예를 들어 {{HTMLElement("input")}} or {{HTMLElement("textarea")}}와 같은 요소들)를 선택합니다.
 
 ## 구문
 

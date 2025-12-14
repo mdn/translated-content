@@ -1,12 +1,11 @@
 ---
 title: image-rendering
 slug: Web/CSS/Reference/Properties/image-rendering
-original_slug: Web/CSS/image-rendering
 l10n:
-  sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`image-rendering`** は [CSS](/ja/docs/Web/CSS) のプロパティで、画像を拡大縮小するアルゴリズムを設定します。このプロパティは要素自身に適用され、他のプロパティで設定されるあらゆる画像、子孫要素に適用されます。
+**`image-rendering`** は [CSS](/ja/docs/Web/CSS) のプロパティで、画像を変倍するアルゴリズムを設定します。このプロパティは要素自身に適用され、他のプロパティで設定されるあらゆる画像、子孫要素に適用されます。
 
 {{InteractiveExample("CSS デモ: image-rendering")}}
 
@@ -42,13 +41,14 @@ image-rendering: pixelated;
 }
 ```
 
-{{Glossary("User agent", "ユーザーエージェント")}}は、ページの作者が自然な寸法とは異なる寸法を指定したとき、画像を拡大縮小します。拡大縮小は、ユーザー操作 (ズーム) によって発生することもあります。例えば、画像の自然な寸法が `100×100px` であって、実際の寸法が `200×200px` (または `50×50px`) であるとき、画像は `image-rendering` で指定されたアルゴリズムを使用して拡大 (または縮小) されます。このプロパティは拡大/縮小されない画像には効果がありません。
+{{Glossary("user agent", "ユーザーエージェント")}}は、ページの作者が自然なサイズとは異なる寸法を指定したとき、画像を変倍します。変倍は、ユーザー操作 (ズーム) によって発生することもあります。例えば、画像の自然なサイズが `100×100px` であって、実際の寸法が `200×200px` (または `50×50px`) であるとき、画像は `image-rendering` で指定されたアルゴリズムを使用して拡大 (または縮小) されます。このプロパティは拡大/縮小されない画像には効果がありません。
 
 ## 構文
 
 ```css
 /* キーワード値 */
 image-rendering: auto;
+image-rendering: smooth;
 image-rendering: crisp-edges;
 image-rendering: pixelated;
 
@@ -63,11 +63,9 @@ image-rendering: unset;
 ### 値
 
 - `auto`
-  - : 拡大縮小のアルゴリズムはユーザーエージェントに依存します。バージョン 1.9 (Firefox 3.0) から、Gecko は*バイリニア* (bilinear) 再サンプリングを使用します (high-quality)。
+  - : 変倍のアルゴリズムはユーザーエージェントに依存します。バージョン 1.9 (Firefox 3.0) 以降では、Gecko は「バイリニア法」(bilinear) による再サンプリングを使用します（高品質）。
 - `smooth`
-  - : 画像は、画像の外見を最適化するアルゴリズムで拡大縮小されます。具体的には、バイリニア補完などの色の「円滑化」が許容されるアルゴリズムで拡大縮小されます。これは、写真のような画像を想定しています。
-- `high-quality`
-  - : `smooth` と同等ですが、より高品質な設定です。システムのリソースが制約されている場合、どの画像の品質をどの程度低下させるかを検討するとき。`high-quality` の画像は他の値よりも優先されます。
+  - : 画像は、画像の外見を最適化するアルゴリズムで変倍されます。具体的には、バイリニア補完などの色の「円滑化」が許容されるアルゴリズムで変倍されます。これは、写真のような画像を想定しています。
 - `crisp-edges`
   - : 画像は、「最近傍法」 ("nearest neighbor") などのアルゴリズムで変倍され、画像のコントラストやエッジが維持されます。一般的に、ピクセルアートや行描画などの画像を意図通りに処理することを目的としており、不鮮明になったり色が滑らかになったりすることはありません。
 - `pixelated`
@@ -75,6 +73,9 @@ image-rendering: unset;
 
 > [!NOTE]
 > `optimizeQuality` および `optimizeSpeed` の値は、初期の草稿で (SVG の仕様 {{SVGAttr("image-rendering")}} に似たものとして) `smooth` および `pixelated` の同義語として定義されていました。
+
+> [!NOTE]
+> [CSS 画像](/ja/docs/Web/CSS/Guides/Images)モジュールは、`high-quality` の値を `image-rendering` プロパティで、高品質の変倍を行うために定義していますが、これはどのブラウザーでも対応していません。
 
 ## 公式定義
 
@@ -86,7 +87,7 @@ image-rendering: unset;
 
 ## 例
 
-### 画像の拡大縮小アルゴリズムの設定
+### 画像の変倍アルゴリズムの設定
 
 この例では、画像が 3 回繰り返され、それぞれに異なる `image-rendering` 値が適用されています。
 
@@ -94,15 +95,19 @@ image-rendering: unset;
 <div>
   <img
     class="auto"
-    alt="A small photo of some white and yellow flower against a leafy green background. The image is about 33% smaller than the size it is being displayed at. This upscaling causes the image to appear blurry, with notable soft edges between objects."
+    alt="緑の葉を背景にした白と黄色の花の小さな写真。画像は表示されるサイズより約 33% 縮小されています。この拡大処理が発生し、画像がぼやけて現れ、オブジェクト間の輪郭が明らかに柔らかくなっています。"
+    src="blumen.jpg" />
+  <img
+    class="smooth"
+    alt="前回の画像と同じ写真で、同時に同じだけ拡大処理されています。image-rendering プロパティの smooth 値に対応するブラウザーは、画像を最大化表示で display させます。"
     src="blumen.jpg" />
   <img
     class="pixelated"
-    alt="The same photo as the previous image, which is also being upscaled the same amount. Browsers that support the pixelated value for the image-rendering property display the image as very pixelated. Individual pixels are clearly visible and edges appear much sharper."
+    alt="前回の画像と同じ写真で、同時に同じだけ拡大処理されています。 image-rendering プロパティの pixelated 値に対応しているブラウザーは、画像をとてもピクセル化された状態で表示させます。個々のピクセルがはっきりと現れ、縁がはるかに鮮明になって現れます。"
     src="blumen.jpg" />
   <img
     class="crisp-edges"
-    alt="The same photo as the previous images, which is also being upscaled the same amount. Browsers that support the crisp-edges value for the image-rendering property display the image as very pixelated. In these examples, there is virtually no perceivable difference between the pixelated and crisp-edges versions."
+    alt="前回の画像と同じ写真で、同時に同じだけ拡大処理されています。 image-rendering プロパティの crisp-edges 値に対応しているブラウザーは、画像をとてもピクセル化された状態で表示させます。この例では、 pixelated バージョンと crisp-edges バージョンでは、ほとんど認識できる差がほとんどありません。"
     src="blumen.jpg" />
 </div>
 ```
@@ -118,6 +123,10 @@ img {
 ```css
 .auto {
   image-rendering: auto;
+}
+
+.smooth {
+  image-rendering: smooth;
 }
 
 .pixelated {

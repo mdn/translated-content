@@ -3,7 +3,7 @@ title: "<a> : l'élément d'ancre"
 slug: Web/HTML/Reference/Elements/a
 original_slug: Web/HTML/Element/a
 l10n:
-  sourceCommit: a1765c2cad20118be0dad322d3548908787b5791
+  sourceCommit: e00212a2a707a57b49b58b37a6a6c978aaef2bbd
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<a>`** (ou élément d'_ancre_), avec [son attribut `href`](#href), crée un hyperlien vers des pages web, des fichiers, des adresses e-mail, des emplacements dans la même page ou toute autre ressource accessible par une URL.
@@ -32,13 +32,13 @@ li {
 
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
-- `attributionsrc` {{experimental_inline}}
-  - : Définit que vous souhaitez que le navigateur envoie un en-tête {{httpheader("Attribution-Reporting-Eligible")}}. Côté serveur, cela sert à déclencher l'envoi d'un en-tête {{httpheader("Attribution-Reporting-Register-Source")}} dans la réponse, afin d'enregistrer une [source d'attribution basée sur la navigation](/fr/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources).
+- `attributionsrc` {{Experimental_Inline}}
+  - : Définit que vous souhaitez que le navigateur envoie un en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}}. Côté serveur, cela sert à déclencher l'envoi d'un en-tête {{HTTPHeader("Attribution-Reporting-Register-Source")}} dans la réponse, afin d'enregistrer une [source d'attribution basée sur la navigation](/fr/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources).
 
-    Le navigateur stocke les données de la source associée à la source d'attribution basée sur la navigation (telles que fournies dans l'en-tête de réponse {{httpheader("Attribution-Reporting-Register-Source")}}) lorsque l'utilisateur·ice clique sur le lien. Voir l'[API Attribution Reporting](/fr/docs/Web/API/Attribution_Reporting_API) pour plus de détails.
+    Le navigateur stocke les données de la source associée à la source d'attribution basée sur la navigation (telles que fournies dans l'en-tête de réponse {{HTTPHeader("Attribution-Reporting-Register-Source")}}) lorsque l'utilisateur·ice clique sur le lien. Voir l'[API Attribution Reporting](/fr/docs/Web/API/Attribution_Reporting_API) pour plus de détails.
 
     Il existe deux versions de cet attribut&nbsp;:
-    - Booléen, c'est-à-dire, uniquement le nom `attributionsrc`. Cela indique que vous souhaitez que l'en-tête {{httpheader("Attribution-Reporting-Eligible")}} soit envoyé au même serveur que celui indiqué par l'attribut `href`. Cela convient lorsque vous gérez l'enregistrement de la source d'attribution sur le même serveur.
+    - Booléen, c'est-à-dire, uniquement le nom `attributionsrc`. Cela indique que vous souhaitez que l'en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}} soit envoyé au même serveur que celui indiqué par l'attribut `href`. Cela convient lorsque vous gérez l'enregistrement de la source d'attribution sur le même serveur.
     - Valeur contenant une ou plusieurs URL, par exemple&nbsp;:
 
       ```html
@@ -46,7 +46,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
       https://b.example/register-source"
       ```
 
-      Ceci est utile dans les cas où la ressource demandée n'est pas sur un serveur que vous contrôlez, ou si vous souhaitez simplement gérer l'enregistrement de la source d'attribution sur un autre serveur. Dans ce cas, vous pouvez définir une ou plusieurs URL comme valeur de `attributionsrc`. Lorsque la requête de ressource a lieu, l'en-tête {{httpheader("Attribution-Reporting-Eligible")}} sera envoyé à l'(aux) URL(s) spécifiée(s) dans `attributionsrc` en plus de l'origine de la ressource. Ces URL peuvent alors répondre avec {{httpheader("Attribution-Reporting-Register-Source")}} pour compléter l'enregistrement.
+      Ceci est utile dans les cas où la ressource demandée n'est pas sur un serveur que vous contrôlez, ou si vous souhaitez simplement gérer l'enregistrement de la source d'attribution sur un autre serveur. Dans ce cas, vous pouvez définir une ou plusieurs URL comme valeur de `attributionsrc`. Lorsque la requête de ressource a lieu, l'en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}} sera envoyé à l'(aux) URL(s) spécifiée(s) dans `attributionsrc` en plus de l'origine de la ressource. Ces URL peuvent alors répondre avec {{HTTPHeader("Attribution-Reporting-Register-Source")}} pour compléter l'enregistrement.
 
       > [!NOTE]
       > Définir plusieurs URL signifie que plusieurs sources d'attribution peuvent être enregistrées sur la même fonctionnalité. Par exemple, vous pouvez avoir différentes campagnes dont vous souhaitez mesurer le succès, ce qui implique de générer différents rapports sur différentes données.
@@ -58,13 +58,13 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     - Sans valeur, le navigateur proposera un nom de fichier/extension, généré à partir de diverses sources&nbsp;:
       - L'en-tête HTTP {{HTTPHeader("Content-Disposition")}}
       - Le segment final dans l'URL&nbsp;: [path](/fr/docs/Web/API/URL/pathname)
-      - Le {{Glossary("MIME_type", "type MIME")}} (depuis l'en-tête {{HTTPHeader("Content-Type")}}, le début d'une URL [`data:`](/fr/docs/Web/URI/Reference/Schemes/data), ou {{domxref("Blob.type")}} pour une URL [`blob:`](/fr/docs/Web/URI/Reference/Schemes/blob))
+      - Le {{Glossary("MIME_type", "type MIME")}} (depuis l'en-tête {{HTTPHeader("Content-Type")}}, le début d'une URL [`data:`](/fr/docs/Web/URI/Reference/Schemes/data), ou {{DOMxRef("Blob.type")}} pour une URL [`blob:`](/fr/docs/Web/URI/Reference/Schemes/blob))
 
     - `filename`&nbsp;: définir une valeur la suggère comme nom de fichier. Les caractères `/` et `\` sont convertis en caractères de soulignement (`_`). Les systèmes de fichiers peuvent interdire d'autres caractères dans les noms de fichiers, les navigateurs ajusteront donc le nom suggéré si nécessaire.
 
     > [!NOTE]
     >
-    > - `download` ne fonctionne que pour [les URLs de même origine](/fr/docs/Web/Security/Same-origin_policy), ou les schémas `blob:` et `data:`.
+    > - `download` ne fonctionne que pour [les URLs de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy), ou les schémas `blob:` et `data:`.
     > - Le comportement du téléchargement varie selon le navigateur, les paramètres utilisateur·ice·s et d'autres facteurs. L'utilisateur·ice peut être invité·e avant le début du téléchargement, ou le fichier peut être enregistré automatiquement, ou il peut s'ouvrir automatiquement, soit dans une application externe, soit dans le navigateur lui-même.
     > - Si l'en-tête `Content-Disposition` comporte des informations différentes de celles de l'attribut `download`, le comportement résultant peut différer&nbsp;:
     >   - Si l'en-tête spécifie un `nom de fichier`, il a priorité sur un nom de fichier spécifié dans l'attribut `download`.
@@ -87,6 +87,8 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
   - : Donne des indications sur le langage humain de l'URL liée. Aucune fonctionnalité intégrée. Les valeurs autorisées sont les mêmes que [l'attribut global `lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang).
 - `ping`
   - : Contient une liste d'URL séparées par des espaces vers lesquelles sont envoyées des requêtes {{HTTPMethod("POST")}} avec le corps `PING` lorsque l'utilisateur suit le lien. Cet attribut est généralement utilisé pour tracer un utilisateur.
+- `interestfor` {{Experimental_Inline}}
+  - : Définit l'élément `<a>` comme un **invocateur d'intérêt** (<i lang="en">interest invoker</i>). Sa valeur est l'`id` de l'élément cible, qui sera affecté d'une manière ou d'une autre (généralement affiché ou masqué) lorsque l'intérêt est montré ou perdu sur l'élément invocateur (par exemple au survol/fin de survol ou à la sélection/perte de sélection). Voir [Utilisation des invocateurs d'intérêt](/fr/docs/Web/API/Popover_API/Using_interest_invokers) pour plus de détails et d'exemples.
 - `referrerpolicy`
   - : Détermine la quantité d'informations du [référent](/fr/docs/Web/HTTP/Reference/Headers/Referer) à envoyer lors du suivi du lien.
     - `no-referrer`&nbsp;: L'en-tête {{HTTPHeader("Referer")}} ne sera pas envoyé.
@@ -376,7 +378,7 @@ Pour plus de détails sur les URL `mailto:`, comme l'inclusion d'un sujet ou d'u
 
 - Les appareils cellulaires composent automatiquement le numéro.
 - La plupart des systèmes d'exploitation disposent de programmes permettant de passer des appels, comme Skype ou FaceTime.
-- Les sites web peuvent passer des appels téléphoniques avec {{domxref("Navigator/registerProtocolHandler", "registerProtocolHandler")}}, comme `web.skype.com`.
+- Les sites web peuvent passer des appels téléphoniques avec {{DOMxRef("Navigator/registerProtocolHandler", "registerProtocolHandler")}}, comme `web.skype.com`.
 - Les autres comportements comprennent l'enregistrement du numéro dans les contacts, ou l'envoi du numéro à un autre appareil.
 
 Voir {{RFC(3966)}} pour la syntaxe, les fonctionnalités supplémentaires et d'autres détails sur le schéma URL `tel:`.
@@ -453,9 +455,9 @@ document
 
 ## Sécurité et vie privée
 
-Les éléments `<a>` peuvent avoir des conséquences sur la sécurité et la vie privée des utilisateurs. Voir [`Referer` header : privacy and security concerns](/fr/docs/Web/Security/Referer_header:_privacy_and_security_concerns) pour plus d'informations.
+Les éléments `<a>` peuvent avoir des conséquences sur la sécurité et la vie privée des utilisateurs. Voir [`Referer` header : privacy and security concerns](/fr/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns) pour plus d'informations.
 
-L'utilisation de `target="_blank"` sans [`rel="noreferrer"`](/fr/docs/Web/HTML/Reference/Attributes/rel/noreferrer) ni [`rel="noopener"`](/fr/docs/Web/HTML/Reference/Attributes/rel/noopener) rend le site vulnérable aux attaques exploitant l'API {{domxref("window.opener")}}. Notez toutefois que, dans les versions récentes des navigateurs, définir `target="_blank"` fournit implicitement la même protection que `rel="noopener"`. Voir la [compatibilité des navigateurs](#compatibilité_des_navigateurs) pour plus de détails.
+L'utilisation de `target="_blank"` sans [`rel="noreferrer"`](/fr/docs/Web/HTML/Reference/Attributes/rel/noreferrer) ni [`rel="noopener"`](/fr/docs/Web/HTML/Reference/Attributes/rel/noopener) rend le site vulnérable aux attaques exploitant l'API {{DOMxRef("window.opener")}}. Notez toutefois que, dans les versions récentes des navigateurs, définir `target="_blank"` fournit implicitement la même protection que `rel="noopener"`. Voir la [compatibilité des navigateurs](#compatibilité_des_navigateurs) pour plus de détails.
 
 ## Résumé technique
 

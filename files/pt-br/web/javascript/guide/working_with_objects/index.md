@@ -553,4 +553,4 @@ Para mais informações sobre comparaçāo de operadores, veja [Operadores de co
 - Para se aprofundar, leia sobre os [detalhes do modelo de objetos javaScript](/pt-BR/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain).
 - Para saber mais sobre classes em ECMAScript6 (uma nova forma de criar objetos), veja o capítulo [JavaScript classes](/pt-BR/docs/Web/JavaScript/Reference/Classes).
 
-{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain")}}

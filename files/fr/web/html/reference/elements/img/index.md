@@ -68,7 +68,7 @@ Si une erreur se produit lors du chargement ou du rendu de l'image et qu'un gest
 
 Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
-- [`alt`](/fr/docs/Web/API/HTMLImageElement/alt#notes_d'utilisation)
+- [`alt`](/fr/docs/Web/API/HTMLImageElement/alt#notes_dutilisation)
   - : Définit une description textuelle alternative pour l'image.
 
     > [!NOTE]
@@ -406,7 +406,7 @@ L'attribut `src` est ignoré par les agents utilisateurs qui le prennent en char
 
 ## Sécurité et vie privée
 
-Bien que les éléments `<img>` puissent être utilisés innocemment, ils peuvent également avoir des effets indésirables en termes de sécurité et de vie privée. Voir [cet article quant à l'en-tête `Referer`](/fr/docs/Web/Security/Referer_header:_privacy_and_security_concerns) pour plus de détails.
+Bien que les éléments `<img>` puissent être utilisés innocemment, ils peuvent également avoir des effets indésirables en termes de sécurité et de vie privée. Voir [cet article quant à l'en-tête `Referer`](/fr/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns) pour plus de détails.
 
 ## Résumé technique
 

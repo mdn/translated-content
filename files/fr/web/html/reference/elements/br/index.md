@@ -1,25 +1,24 @@
 ---
 title: "<br> : l'élément de saut de ligne"
 slug: Web/HTML/Reference/Elements/br
-original_slug: Web/HTML/Element/br
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<br>`** crée un saut de ligne dans le texte (retour à la ligne). Il est utile pour écrire un poème ou une adresse, lorsque la division des lignes est significative.
 
-L'élément HTML **`<br>`** crée un saut de ligne (un retour chariot) dans le texte. Il s'avère utile lorsque les sauts de ligne ont une importance (par exemple lorsqu'on écrit une adresse ou un poème).
-
-{{InteractiveExample("HTML Demo: &lt;br&gt;", "tabbed-standard")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;br&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <p>
-  O’er all the hilltops<br />
-  Is quiet now,<br />
-  In all the treetops<br />
-  Hearest thou<br />
-  Hardly a breath;<br />
-  The birds are asleep in the trees:<br />
-  Wait, soon like these<br />
-  Thou too shalt rest.
+  Sur toutes les collines<br />
+  Tout est calme maintenant,<br />
+  Dans tous les arbres<br />
+  Tu n'entends<br />
+  Presque aucun souffle&nbsp;;<br />
+  Les oiseaux dorment dans les arbres&nbsp;:<br />
+  Attends, bientôt comme eux<br />
+  Toi aussi tu reposeras.
 </p>
 ```
 
@@ -31,31 +30,37 @@ p {
 }
 ```
 
-Comme vous pouvez le voir dans l'exemple ci-dessus, un élément `<br>` est inclus à chaque point où nous voulons que le texte soit interrompu. Le texte après le `<br>` recommence au début de la ligne suivante du bloc de texte.
+Comme vous pouvez le voir dans l'exemple ci-dessus, un élément `<br>` est inclus à chaque endroit où l'on souhaite que le texte soit coupé. Le texte après le `<br>` recommence au début de la ligne suivante du bloc de texte.
 
 > [!NOTE]
-> Attention, `<br>` ne doit pas être utilisé de façon abusive afin d'augmenter l'espace entre les lignes d'un texte. Pour cela, on utilisera la propriété [CSS](/fr/docs/Web/CSS) [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin) sur l'élément HTML [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p).
+> N'utilisez pas `<br>` pour créer des marges entre les paragraphes&nbsp;; entourez-les d'éléments {{HTMLElement("p")}} et utilisez la propriété [CSS](/fr/docs/Web/CSS) {{CSSxRef('margin')}} pour contrôler leur taille.
 
 ## Attributs
 
-Comme pour tous les éléments, on peut utiliser [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ### Attributs obsolètes
 
-- **`clear`** {{deprecated_inline}}
+- `clear` {{Deprecated_Inline}}
   - : Cet attribut indique où commencer la prochaine ligne après le saut de ligne.
 
 ## Mise en forme avec CSS
 
-`<br>` n'a aucun rôle purement stylistique et il sert uniquement à créer une rupture de ligne au sein d'un bloc de texte. Cet élément pourra très peu être mis en forme avec CSS.
+L'élément `<br>` a un seul objectif bien défini — créer un saut de ligne dans un bloc de texte. Il n'a donc pas de dimensions ni de rendu visuel propre, et il y a très peu de possibilités de lui appliquer une mise en forme.
 
-Bien qu'il soit possible d'appliquer une marge ([`margin`](/fr/docs/Web/CSS/Reference/Properties/margin) sur les éléments `<br>` afin d'augmenter l'espacement entre les lignes de texte d'un même bloc, ce n'est pas une bonne pratique. Pour obtenir le même effet, on pourra utiliser la propriété [`line-height`](/fr/docs/Web/CSS/Reference/Properties/line-height).
+Vous pouvez appliquer une marge ({{CSSxRef("margin")}}) sur les éléments `<br>` eux-mêmes pour augmenter l'espacement entre les lignes de texte du bloc, mais ce n'est pas une bonne pratique — il vaut mieux utiliser la propriété {{CSSxRef("line-height")}} prévue à cet effet.
+
+## Accessibilité
+
+Créer des paragraphes séparés à l'aide de `<br>` n'est pas seulement une mauvaise pratique, c'est aussi problématique pour les personnes qui naviguent avec une technologie d'assistance. Les lecteurs d'écran peuvent annoncer la présence de l'élément, mais pas le contenu associé aux `<br>`. Cela peut être source de confusion et de frustration pour la personne utilisant le lecteur d'écran.
+
+Utilisez des éléments `<p>`, et des propriétés CSS comme {{CSSxRef("margin")}} pour contrôler leur espacement.
 
 ## Exemples
 
 ### Simple rupture de ligne
 
-Dans l'exemple suivant, nous utilisons des éléments `<br>` pour créer des sauts de ligne entre les différentes lignes d'une adresse postale :
+Dans l'exemple suivant, nous utilisons des éléments `<br>` pour créer des sauts de ligne entre les différentes lignes d'une adresse postale&nbsp;:
 
 ```html
 Mozilla<br />
@@ -67,13 +72,7 @@ USA<br />
 
 #### Résultat
 
-{{EmbedLiveSample('Simple_rupture_de_ligne', '', '130')}}
-
-## Accessibilité
-
-Utiliser une suite d'éléments `<br>` pour uniquement rajouter un espace entre des paragraphes sera source de confusion ou de frustration pour les personnes qui utilisent des outils d'assistance. Les lecteurs d'écran, par exemple, pourront annoncer la présence de l'élément alors qu'il n'y a aucun contenu associé.
-
-Si on souhaite ajouter un espace supplémentaire, on utilisera plutôt la propriété CSS [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin).
+{{EmbedLiveSample('Simple rupture de ligne', 640, 120)}}
 
 ## Résumé technique
 
@@ -81,15 +80,15 @@ Si on souhaite ajouter un espace supplémentaire, on utilisera plutôt la propri
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
           >Catégories de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
         >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
         >.
       </td>
@@ -98,7 +97,7 @@ Si on souhaite ajouter un espace supplémentaire, on utilisera plutôt la propri
       <th scope="row">Contenu autorisé</th>
       <td>
         Aucun, c'est un
-        <a href="/fr/docs/Glossary/Empty_element">élément vide</a>.
+        {{Glossary("void element", "élément vide")}}.
       </td>
     </tr>
     <tr>
@@ -113,7 +112,7 @@ Si on souhaite ajouter un espace supplémentaire, on utilisera plutôt la propri
       <th scope="row">Parents autorisés</th>
       <td>
         Tout élément qui accepte du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
         >.
       </td>
@@ -121,26 +120,20 @@ Si on souhaite ajouter un espace supplémentaire, on utilisera plutôt la propri
     <tr>
       <th scope="row">Rôle ARIA implicite</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >Pas de rôle correspondant</a
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
+          >Pas de rôle correspondant <sup>(angl.)</sup></a
         >
       </td>
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
       <td>
-        <a href="https://w3c.github.io/aria/#none"><code>none</code></a
-        >,
-        <a href="https://w3c.github.io/aria/#presentation"
-          ><code>presentation</code></a
-        >
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>
-        <a href="/fr/docs/Web/API/HTMLBRElement"><code>HTMLBRElement</code></a>
-      </td>
+      <td>{{DOMxRef("HTMLBRElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -155,6 +148,6 @@ Si on souhaite ajouter un espace supplémentaire, on utilisera plutôt la propri
 
 ## Voir aussi
 
-- L'élément [`<address>`](/fr/docs/Web/HTML/Reference/Elements/address)
-- L'élément [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p)
-- L'élément [`<wbr>`](/fr/docs/Web/HTML/Reference/Elements/wbr)
+- L'élément HTML {{HTMLElement("address")}}
+- L'élément HTML {{HTMLElement("p")}}
+- L'élément HTML {{HTMLElement("wbr")}}

@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Express_Nodejs/skeleton_website
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 Neste segundo [Tutorial Express](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website), mostrará como criar a estrutura do website que depois você poderá colocar _templates,_ chamadas de banco de dados ou rotas específicas.
 
@@ -510,4 +510,4 @@ Next, we'll start modifying the skeleton so that it works as a library website.
 - [Express application generator](https://expressjs.com/en/starter/generator.html) (Express docs)
 - [Using template engines with Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs)
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

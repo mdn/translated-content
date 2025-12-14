@@ -3,7 +3,7 @@ title: Métaprogrammation
 slug: Web/JavaScript/Guide/Meta_programming
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/iterateurs_et_generateurs","Web/JavaScript/Guide/Modules")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Iterators_and_generators","Web/JavaScript/Guide/Modules")}}
 
 À partir d'ECMAScript 2015, JavaScript fournit les objets natifs {{jsxref("Proxy")}} et {{jsxref("Reflect")}}. Ces objets permettent d'intercepter et de définir des comportements spécifiques pour certaines opérations fondamentales du langage (par exemple la recherche d'une propriété, l'affectation, l'énumération, l'appel d'une fonction, etc.). Grâce à ces deux objets, il est possible d'interagir avec le langage lui-même (on parle alors de métaprogrammation).
 
@@ -390,4 +390,4 @@ Par exemple, avec {{jsxref("Reflect.has()")}}, on obtient le comportement de l'o
 Reflect.has(Object, "assign"); // true
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/iterateurs_et_generateurs","Web/JavaScript/Guide/Modules")}}
+{{PreviousNext("Web/JavaScript/Guide/Iterators_and_generators","Web/JavaScript/Guide/Modules")}}

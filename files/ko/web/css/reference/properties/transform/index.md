@@ -42,7 +42,7 @@ transform: scale(0.5) translate(-100%, -100%);
 </section>
 ```
 
-`none`이 아닌 값을 지정하면 새로운 [쌓임 맥락](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_context)을 생성합니다. 이 경우, {{cssxref("position")}}이 `fixed`거나 `absolute`인 요소의 [컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block)으로서 작용합니다.
+`none`이 아닌 값을 지정하면 새로운 [쌓임 맥락](/ko/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)을 생성합니다. 이 경우, {{cssxref("position")}}이 `fixed`거나 `absolute`인 요소의 [컨테이닝 블록](/ko/docs/Web/CSS/Guides/Display/Containing_block)으로서 작용합니다.
 
 > [!WARNING]
 > 변형 가능한 요소만 `transform`할 수 있습니다. 즉, CSS 박스 모델이 레이아웃을 결정하는 모든 요소 중 [비대체 인라인 박스](/ko/docs/Web/CSS/Visual_formatting_model#Inline-level_elements_and_inline_boxes), [표 열 박스](/ko/docs/Web/HTML/Element/col), [표 열 그룹 박스](/ko/docs/Web/HTML/Element/colgroup)를 제외한 요소에만 적용할 수 있습니다.
@@ -91,7 +91,7 @@ transform: unset;
 ### 값
 
 - {{cssxref("&lt;transform-function&gt;")}}
-  - : 요소에 적용할 하나 이상의 [CSS 변형 함수](/ko/docs/Web/CSS/transform-function). 변형 함수는 왼쪽에서 오른쪽으로 곱해집니다. 즉, 요소에 변형을 오른쪽부터 왼쪽으로 하나씩 순서대로 적용하는 것과 같습니다.
+  - : 요소에 적용할 하나 이상의 [CSS 변형 함수](/ko/docs/Web/CSS/Reference/Values/transform-function). 변형 함수는 왼쪽에서 오른쪽으로 곱해집니다. 즉, 요소에 변형을 오른쪽부터 왼쪽으로 하나씩 순서대로 적용하는 것과 같습니다.
 - `none`
   - : 아무런 변형도 적용하지 않음.
 
@@ -124,13 +124,13 @@ div {
 
 {{EmbedLiveSample("예제", "400", "160")}}
 
-[CSS 변형 사용하기](/ko/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)와 {{cssxref("&lt;transform-function&gt;")}} 문서를 방문해 더 많은 예제를 찾아보세요.
+[CSS 변형 사용하기](/ko/docs/Web/CSS/Guides/Transforms/Using)와 {{cssxref("&lt;transform-function&gt;")}} 문서를 방문해 더 많은 예제를 찾아보세요.
 
 ## 접근성 고려사항
 
 크기 변경/확대/축소 애니메이션은 흔한 편두통 유발 요인이므로 접근성에 좋지 않습니다. 그러나 꼭 넣어야 한다면 되도록 사이트 전체의 애니메이션을 켜거나 끌 수 있는 방법을 제공하는걸 고려해주세요.
 
-{{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} 미디어 기능을 사용할 수도 있습니다. [미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries)와 함께 사용하면, 사용자가 시스템 설정에서 애니메이션을 줄였는지 알아내고, 애니메이션을 비활성화할 수 있습니다.
+{{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} 미디어 기능을 사용할 수도 있습니다. [미디어 쿼리](/ko/docs/Web/CSS/Guides/Media_queries)와 함께 사용하면, 사용자가 시스템 설정에서 애니메이션을 줄였는지 알아내고, 애니메이션을 비활성화할 수 있습니다.
 
 자세한 내용은 다음 링크에서 확인할 수 있습니다.
 
@@ -149,6 +149,6 @@ div {
 
 ## 같이 보기
 
-- [CSS 변형 사용하기](/ko/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [CSS 변형 사용하기](/ko/docs/Web/CSS/Guides/Transforms/Using)
 - 변형 함수의 설명을 담은 {{cssxref("&lt;transform-function&gt;")}} 자료형 문서.
 - CSS 변형 함수의 시각화가 가능한 온라인 도구: [CSS Transform Playground](https://css-transform.moro.es/)

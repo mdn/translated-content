@@ -11,7 +11,7 @@ Les navigateurs modernes supportent le format [SVG](/fr/docs/Web/SVG) utilisant 
 Vous pouvez éditer un SVG avec du CSS, soit directement dans le document, soit dans une feuille de style externe. Il y a 3 propriétés que vous pouvez utiliser : [`mask`](/fr/docs/Web/CSS/Reference/Properties/mask), [`clip-path`](/fr/docs/Web/CSS/Reference/Properties/clip-path) et [`filter`](/fr/docs/Web/CSS/Reference/Properties/filter).
 
 > [!NOTE]
-> Dans des fichiers externes, les références à un SVG doivent être à la [même origine](/fr/docs/Web/Security/Same-origin_policy) que le document de référence.
+> Dans des fichiers externes, les références à un SVG doivent être à la [même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy) que le document de référence.
 
 ## Utilisation de SVG intégré
 

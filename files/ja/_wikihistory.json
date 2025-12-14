@@ -41465,6 +41465,15 @@
       "chrisdavidmills"
     ]
   },
+  "Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns": {
+    "modified": "2020-10-24T06:28:29.243Z",
+    "contributors": [
+      "silverskyvicto",
+      "soratako",
+      "mfuji09",
+      "ShowGoTagami"
+    ]
+  },
   "Web/Progressive_web_apps": {
     "modified": "2020-05-17T10:04:50.272Z",
     "contributors": [
@@ -42389,13 +42398,13 @@
       "hashedhyphen"
     ]
   },
-  "Web/Security/Certificate_Transparency": {
+  "Web/Security/Defenses/Certificate_Transparency": {
     "modified": "2020-10-24T06:27:55.333Z",
     "contributors": [
       "silverskyvicto"
     ]
   },
-  "Web/Security/Mixed_content": {
+  "Web/Security/Defenses/Mixed_content": {
     "modified": "2020-08-31T12:56:43.359Z",
     "contributors": [
       "mfuji09",
@@ -42404,33 +42413,7 @@
       "clariroid"
     ]
   },
-  "Web/Security/Practical_implementation_guides": {
-    "modified": "2020-07-25T12:16:18.770Z",
-    "contributors": [
-      "pcw",
-      "mfuji09",
-      "satakeh",
-      "hashedhyphen"
-    ]
-  },
-  "Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion": {
-    "modified": "2020-07-25T12:03:22.245Z",
-    "contributors": [
-      "pcw",
-      "mfuji09",
-      "hashedhyphen"
-    ]
-  },
-  "Web/Security/Referer_header:_privacy_and_security_concerns": {
-    "modified": "2020-10-24T06:28:29.243Z",
-    "contributors": [
-      "silverskyvicto",
-      "soratako",
-      "mfuji09",
-      "ShowGoTagami"
-    ]
-  },
-  "Web/Security/Same-origin_policy": {
+  "Web/Security/Defenses/Same-origin_policy": {
     "modified": "2020-09-26T14:15:25.418Z",
     "contributors": [
       "mfuji09",
@@ -42445,7 +42428,7 @@
       "Kohei"
     ]
   },
-  "Web/Security/Secure_Contexts": {
+  "Web/Security/Defenses/Secure_Contexts": {
     "modified": "2020-10-22T14:39:53.506Z",
     "contributors": [
       "silverskyvicto",
@@ -42455,7 +42438,7 @@
       "hashedhyphen"
     ]
   },
-  "Web/Security/Secure_Contexts/features_restricted_to_secure_contexts": {
+  "Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts": {
     "modified": "2020-10-23T09:50:39.875Z",
     "contributors": [
       "silverskyvicto",
@@ -42463,7 +42446,7 @@
       "YuichiNukiyama"
     ]
   },
-  "Web/Security/Subresource_Integrity": {
+  "Web/Security/Defenses/Subresource_Integrity": {
     "modified": "2020-10-23T10:16:42.622Z",
     "contributors": [
       "silverskyvicto",
@@ -42473,10 +42456,27 @@
       "satakeh"
     ]
   },
-  "Web/Security/Transport_Layer_Security": {
+  "Web/Security/Defenses/Transport_Layer_Security": {
     "modified": "2020-10-23T09:47:35.770Z",
     "contributors": [
       "silverskyvicto",
+      "pcw",
+      "mfuji09",
+      "hashedhyphen"
+    ]
+  },
+  "Web/Security/Practical_implementation_guides": {
+    "modified": "2020-07-25T12:16:18.770Z",
+    "contributors": [
+      "pcw",
+      "mfuji09",
+      "satakeh",
+      "hashedhyphen"
+    ]
+  },
+  "Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion": {
+    "modified": "2020-07-25T12:03:22.245Z",
+    "contributors": [
       "pcw",
       "mfuji09",
       "hashedhyphen"

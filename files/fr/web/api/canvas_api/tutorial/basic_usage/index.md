@@ -3,7 +3,7 @@ title: Utilisation de base des canvas
 slug: Web/API/Canvas_API/Tutorial/Basic_usage
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas", "Tutoriel_canvas/Formes_géométriques")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}
 
 ## L'élément `<canvas>`
 
@@ -53,7 +53,7 @@ Si vous n'avez pas besoin de contenu de repli, un simple `<canvas id="foo" ...><
 
 L'élément {{HTMLElement("canvas")}} crée une surface pour dessiner à grandeur fixe. Cette surface expose un ou plusieurs **contextes de rendu**, qui sont utilisés pour créer et manipuler le contenu affiché. Ce tutoriel se concentrera sur le contexte de rendu 2D. D'autres contextes permettent d'autres types de rendu, tel que le contexte [WebGL](/fr/docs/Web/API/WebGL_API), qui utilise un contexte 3D ("experimental-webgl") inspiré de [OpenGL ES](https://www.khronos.org/opengles/).
 
-Initialement, le canvas est vide. Pour afficher quelque chose, un script doit commencer par accéder au contexte de rendu pour pouvoir dessiner dessus. L'élément {{HTMLElement("canvas")}} a une [méthode](/fr/docs/Web/API/HTMLCanvasElement#m.c3.a9thodes) nommée `getContext()`, qui peut être utilisée pour obtenir le contexte de rendu et ses fonctions de dessin. `getContext()` a comme seul paramètre le type de contexte. Pour des graphiques 2D, comme ceux utilisés dans ce tutoriel, il faut spécifier "2d".
+Initialement, le canvas est vide. Pour afficher quelque chose, un script doit commencer par accéder au contexte de rendu pour pouvoir dessiner dessus. L'élément {{HTMLElement("canvas")}} a une [méthode](/fr/docs/Web/API/HTMLCanvasElement#méthodes) nommée `getContext()`, qui peut être utilisée pour obtenir le contexte de rendu et ses fonctions de dessin. `getContext()` a comme seul paramètre le type de contexte. Pour des graphiques 2D, comme ceux utilisés dans ce tutoriel, il faut spécifier "2d".
 
 ```js
 var canvas = document.getElementById("tutorial");
@@ -147,4 +147,4 @@ Cet exemple ressemble a ceci :
 
 {{EmbedLiveSample("Un_exemple_simple", 160, 160, "canvas_ex1.png")}}
 
-{{PreviousNext("Tutoriel_canvas", "Tutoriel_canvas/Formes_géométriques")}}
+{{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}

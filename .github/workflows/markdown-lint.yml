@@ -1,4 +1,4 @@
-name: Markdownlint (All files)
+name: Markdownlint (global)
 
 on:
   pull_request:
@@ -9,38 +9,149 @@ on:
       - .markdownlint-cli2.jsonc
       - "**/.markdownlint.jsonc"
       - package.json
-      - yarn.lock
+      - package-lock.json
       - .github/workflows/markdown-lint.yml
       - .github/workflows/markdownlint-problem-matcher.json
 
 permissions: {}
 
 jobs:
-  docs:
-    # do not run on forks
+  markdownlint:
+    if: github.repository == 'mdn/translated-content'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        lang:
+          - es
+          - fr
+          - ja
+          - ko
+          - pt-br
+          - ru
+          - zh-cn
+          - zh-tw
+          - other
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
+        with:
+          node-version-file: ".nvmrc"
+          cache: npm
+
+      - name: Install
+        run: npm ci
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run markdownlint-cli2 (locale)
+        if: matrix.lang != 'other'
+        run: |
+          echo "::add-matcher::.github/workflows/markdownlint-problem-matcher.json"
+          npx markdownlint-cli2 "files/${{ matrix.lang }}/**/*.md"
+
+      - name: Run markdownlint-cli2 (other)
+        if: matrix.lang == 'other'
+        run: |
+          echo "::add-matcher::.github/workflows/markdownlint-problem-matcher.json"
+          npx markdownlint-cli2 '**/*.md' '!files/*/**'
+
+  check-url-locale:
     if: github.repository == 'mdn/translated-content'
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
-        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
         with:
           persist-credentials: false
 
-      - name: Setup Node.js environment
-        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
+      - name: Setup Node.js
+        uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
         with:
           node-version-file: ".nvmrc"
-          cache: yarn
+          cache: npm
 
-      - name: Install all yarn packages
-        run: |
-          yarn --frozen-lockfile
+      - name: Install
+        run: npm ci
         env:
           # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Lint markdown files
-        run: |
-          echo "::add-matcher::.github/workflows/markdownlint-problem-matcher.json"
-          yarn lint:md
+      - name: Check URL locales
+        run: node ./scripts/check-url-locale.js files
+
+  autocorrect:
+    if: github.repository == 'mdn/translated-content'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
+        with:
+          node-version-file: ".nvmrc"
+          cache: npm
+
+      - name: Install
+        run: npm ci
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Lint with autocorrect
+        run: npx autocorrect --lint .
+
+  prettier:
+    if: github.repository == 'mdn/translated-content'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        lang:
+          - es
+          - fr
+          - ja
+          - ko
+          - pt-br
+          - ru
+          - zh-cn
+          - zh-tw
+          - other
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
+        with:
+          node-version-file: ".nvmrc"
+          cache: npm
+
+      - name: Install
+        run: npm ci
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run prettier (locale)
+        if: matrix.lang != 'other'
+        run: npx prettier -c "files/${{ matrix.lang }}/**/*.md"
+
+      - name: Run prettier (other)
+        if: matrix.lang == 'other'
+        run: npx prettier -c "**/*.md" "!files/*/**"

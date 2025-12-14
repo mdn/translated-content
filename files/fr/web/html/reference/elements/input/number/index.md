@@ -98,7 +98,7 @@ L'attribut `placeholder` est une chaîne de caractères fournissant une courte i
 Si le contenu du contrôle respecte une directionnalité donnée ([LTR](/fr/docs/Glossary/LTR) ou [RTL](/fr/docs/Glossary/RTL)) et que le texte indicatif doit être présenté dans l'autre sens, il est possible d'utiliser l'algorithme de formatage bidirectionnel Unicode — voir [Comment utiliser les contrôles Unicode pour le texte bidirectionnel (en anglais)](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus de détails.
 
 > [!NOTE]
-> On évitera, tant que faire se peut, d'utiliser l'attribut `placeholder`, car il n'est pas sémantiquement très utile pour expliquer le formulaire et car il peut causer certains problèmes avec le contenu. Voir [Utilisation de libellés](/fr/docs/Web/HTML/Reference/Elements/input#utilisation_de_libell%c3%a9s) pour plus d'informations.
+> On évitera, tant que faire se peut, d'utiliser l'attribut `placeholder`, car il n'est pas sémantiquement très utile pour expliquer le formulaire et car il peut causer certains problèmes avec le contenu. Voir [Utilisation de libellés](/fr/docs/Web/HTML/Reference/Elements/input#utilisation_de_libellés) pour plus d'informations.
 
 ### `readonly`
 
@@ -434,7 +434,7 @@ Après avoir déclaré quelques variables, on ajoute un gestionnaire d'évèneme
 
 ## Voir aussi
 
-- [Guide sur les formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\)
+- [Guide sur les formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms)
 - [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input)
 - [`<input type="tel">`](/fr/docs/Web/HTML/Reference/Elements/input/tel)
 - [La compatibilité des propriétés CSS pour les contrôles de formulaires](/fr/docs/Learn_web_development/Extensions/Forms)

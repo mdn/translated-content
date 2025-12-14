@@ -1,14 +1,15 @@
 ---
 title: "<area> : l'élément de zone"
 slug: Web/HTML/Reference/Elements/area
-original_slug: Web/HTML/Element/area
+l10n:
+  sourceCommit: e00212a2a707a57b49b58b37a6a6c978aaef2bbd
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<area>`** définit une zone à l'intérieur d'une image qui possède des zones cliquables prédéfinies. Une _image_ permet d'associer des zones géométriques d'une image à des {{Glossary("Hyperlink", "liens hypertextes")}}.
 
-L'élément HTML **`<area>`** définit une zone particulière d'une image et peut lui associer un [lien hypertexte](/fr/docs/Glossary/Hyperlink). Cet élément n'est utilisé qu'au sein d'un élément [`<map>`](/fr/docs/Web/HTML/Reference/Elements/map).
+Cet élément est utilisé uniquement à l'intérieur d'un élément {{HTMLElement("map")}}.
 
-{{InteractiveExample("HTML Demo: &lt;area&gt;", "tabbed-taller")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;area&gt;", "tabbed-taller")}}
 
 ```html interactive-example
 <map name="infographic">
@@ -53,28 +54,124 @@ img {
 }
 ```
 
+## Attributs
+
+Les attributs de cet élément incluent les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+
+- `alt`
+  - : Une chaîne de caractères alternative à afficher sur les navigateurs qui n'affichent pas les images.
+    Le texte doit être formulé de sorte qu'il présente à l'utilisateur·ice le même type de choix que l'image lorsqu'elle est affichée sans le texte alternatif.
+    Cet attribut est requis uniquement si l'attribut [`href`](#href) est utilisé.
+- `coords`
+  - : L'attribut `coords` détaille les coordonnées de l'attribut [`shape`](#shape) en taille, forme et placement d'un élément `<area>`.
+    Cet attribut ne doit pas être utilisé si `shape` est défini sur `default`.
+    - `rect`&nbsp;: la valeur est `x1,y1,x2,y2`.
+      La valeur définit les coordonnées du coin supérieur gauche et du coin inférieur droit du rectangle.
+      Par exemple, dans `<area shape="rect" coords="0,0,253,27" href="#" target="_blank" alt="Mozilla">`, les coordonnées sont `0,0` et `253,27`, indiquant le coin supérieur gauche et le coin inférieur droit du rectangle, respectivement.
+    - `circle`&nbsp;: la valeur est `x,y,radius`. La valeur définit les coordonnées du centre du cercle et le rayon.
+      Par exemple&nbsp;: `<area shape="circle" coords="130,136,60" href="#" target="_blank" alt="MDN">`.
+    - `poly`&nbsp;: la valeur est `x1,y1,x2,y2,..,xn,yn`. La valeur définit les coordonnées des bords du polygone.
+      Si la première et la dernière paire de coordonnées ne sont pas les mêmes, le navigateur ajoutera la dernière paire de coordonnées pour fermer le polygone.
+
+    Les valeurs sont des nombres de pixels CSS. Notre [générateur de formes](/fr/docs/Web/CSS/Guides/Shapes/Shape_generator) peut vous aider à générer la syntaxe `coords` en sélectionnant des points sur une image que vous téléchargez.
+
+- `download`
+  - : Cet attribut, s'il est présent, indique que la ressource liée est destinée à être téléchargée plutôt qu'affichée dans le navigateur.
+    Voir l'élément HTML {{HTMLElement("a")}} pour une description complète de l'attribut [`download`](/fr/docs/Web/HTML/Reference/Elements/a#download).
+- `href`
+  - : La cible du lien hypertexte pour la zone.
+    Sa valeur est une URL valide.
+    Cet attribut peut être omis&nbsp;; dans ce cas, l'élément `<area>` ne représente pas un lien hypertexte.
+- `interestfor` {{Experimental_Inline}}
+  - : Définit l'élément `<area>` comme un **invocateur d'intérêt** (<i lang="en">interest invoker</i>). Sa valeur est l'`id` de l'élément cible, qui sera affecté d'une manière ou d'une autre (généralement affiché ou masqué) lorsque l'intérêt est montré ou perdu sur l'élément invocateur (par exemple au survol/fin de survol ou à la sélection/perte de sélection). Voir [Utilisation des invocateurs d'intérêt](/fr/docs/Web/API/Popover_API/Using_interest_invokers) pour plus de détails et d'exemples.
+- `ping`
+  - : Contient une liste d'URL séparées par des espaces vers lesquelles, lors du suivi du lien, des requêtes {{HTTPMethod("POST")}} avec le corps `PING` seront envoyées par le navigateur (en arrière-plan).
+    Généralement utilisé pour le pistage.
+- `referrerpolicy`
+  - : Une chaîne de caractères indiquant le référent à utiliser lors de la récupération de la ressource&nbsp;:
+    - `no-referrer`&nbsp;: L'en-tête {{HTTPHeader("Referer")}} ne sera pas envoyé.
+    - `no-referrer-when-downgrade`&nbsp;: L'en-tête {{HTTPHeader("Referer")}} ne sera pas envoyé vers des {{Glossary("origin", "origines")}} sans {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
+    - `origin`&nbsp;: Le référent envoyé sera limité à l'origine de la page référente&nbsp;: son [schéma](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, et {{Glossary("port")}}.
+    - `origin-when-cross-origin`&nbsp;: Le référent envoyé vers d'autres origines sera limité au schéma, à l'hôte et au port. Les navigations sur la même origine incluront toujours le chemin.
+    - `same-origin`&nbsp;: Un référent sera envoyé pour la {{Glossary("Same-origin policy", "même origine")}}, mais les requêtes inter-origines ne contiendront aucune information de référent.
+    - `strict-origin`&nbsp;: N'envoie l'origine du document comme référent que lorsque le niveau de sécurité du protocole reste le même (HTTPS→HTTPS), mais ne l'envoie pas vers une destination moins sécurisée (HTTPS→HTTP).
+    - `strict-origin-when-cross-origin` (par défaut)&nbsp;: Envoie une URL complète lors d'une requête même origine, n'envoie que l'origine lorsque le niveau de sécurité du protocole reste le même (HTTPS→HTTPS), et n'envoie aucun en-tête vers une destination moins sécurisée (HTTPS→HTTP).
+    - `unsafe-url`&nbsp;: Le référent envoyé inclura l'origine et le chemin (mais pas le [fragment](/fr/docs/Web/API/HTMLAnchorElement/hash), le [mot de passe](/fr/docs/Web/API/HTMLAnchorElement/password) ou le [nom d'utilisateur](/fr/docs/Web/API/HTMLAnchorElement/username)).
+      **Cette valeur n'est pas sûre**, car elle divulgue des origines et des chemins de ressources protégées par TLS vers des origines non sécurisées.
+
+- [`rel`](/fr/docs/Web/HTML/Reference/Attributes/rel)
+  - : Pour les ancres contenant l'attribut [`href`](#href), cet attribut définit la relation de l'objet cible à l'objet du lien.
+    La valeur est une liste de types de liens séparés par des espaces.
+    Les valeurs et leur signification seront enregistrées par une autorité qui pourrait avoir une signification pour l'auteur ou l'autrice du document.
+    La relation par défaut, si aucune autre n'est donnée, est vide. Utilisez cet attribut uniquement si l'attribut [`href`](#href) est présent.
+- `shape`
+  - : La forme de la zone associée. Les spécifications HTML définissent les valeurs `rect`, qui définit une région rectangulaire&nbsp;; `circle`, qui définit une région circulaire&nbsp;; `poly`, qui définit un polygone&nbsp;; et `default`, qui indique toute la région au-delà des formes définies.
+- `target`
+  - : Un mot-clé ou un nom défini par l'auteur ou l'autrice du {{Glossary("browsing context", "contexte de navigation")}} pour afficher la ressource liée.
+    Les mots-clés suivants ont des significations particulières&nbsp;:
+    - `_self` (valeur par défaut)&nbsp;: Affiche la ressource dans le contexte de navigation actuel.
+    - `_blank`&nbsp;: Affiche la ressource dans un nouveau contexte de navigation sans nom.
+    - `_parent`&nbsp;: Affiche la ressource dans le contexte de navigation parent du contexte actuel, si la page courante est incluse dans un cadre.
+      S'il n'y a pas de parent, agit comme `_self`.
+    - `_top`&nbsp;: Affiche la ressource dans le contexte de navigation le plus haut niveau (c'est-à-dire l'ancêtre du contexte actuel qui n'a pas de parent).
+      S'il n'y a pas de parent, agit comme `_self`.
+
+    Utilisez cet attribut uniquement si l'attribut [`href`](#href) est présent.
+
+    > [!NOTE]
+    > Définir `target="_blank"` sur les éléments `<area>` fournit implicitement le même comportement `rel` que la définition de [`rel="noopener"`](/fr/docs/Web/HTML/Reference/Attributes/rel/noopener) qui ne définit pas `window.opener`. Voir la [compatibilité des navigateurs](#compatibilité_des_navigateurs) pour plus d'informations sur la prise en charge.
+
+## Exemples
+
+### Image avec zones cliquables
+
+```html
+<map name="primary">
+  <area
+    shape="circle"
+    coords="75,75,75"
+    href="left.html"
+    alt="Aller à gauche" />
+  <area
+    shape="circle"
+    coords="275,75,75"
+    href="right.html"
+    alt="Aller à droite" />
+</map>
+<img
+  usemap="#primary"
+  src="https://dummyimage.com/350x150"
+  alt="Image 350 x 150" />
+```
+
+### Résultat
+
+{{EmbedLiveSample("Image avec zones cliquables", 360, 160)}}
+
+## Résumé technique
+
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
           >Catégories de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
         >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
-        >
+        >.
       </td>
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
         Aucun, cet élément est un
-        <a href="/fr/docs/Glossary/Empty_element">élément vide</a>.
+        {{Glossary("void element", "élément vide")}}.
       </td>
     </tr>
     <tr>
@@ -88,127 +185,30 @@ img {
       <th scope="row">Parents autorisés</th>
       <td>
         Tout élément acceptant du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
         >. L'élément <code>&#x3C;area></code> doit avoir un élément
-        <a href="/fr/docs/Web/HTML/Element/map"><code>&#x3C;map></code></a>
-        parmi ses ancêtres mais ce dernier n'a pas besoin d'être son parent
-        direct.
+        {{HTMLElement("map")}} parmi ses ancêtres mais ce dernier n'a pas besoin
+        d'être son parent direct.
       </td>
     </tr>
     <tr>
       <th scope="row">Rôle ARIA implicite</th>
       <td>
-        <a href="https://w3c.github.io/aria/#link"><code>link</code></a> lorsque
-        l'attribut <a href="#attr-href"><code>href</code></a> est présent, sinon
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >aucun rôle correspondant</a
-        >.
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a> lorsque l'attribut <a href="#href"><code>href</code></a> est présent, sinon
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"><code>generic</code></a>
       </td>
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
+      <td>Aucun <code>role</code> autorisé</td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>
-        <a href="/fr/docs/Web/API/HTMLAreaElement"
-          ><code>HTMLAreaElement</code></a
-        >
-      </td>
+      <td>{{DOMxRef("HTMLAreaElement")}}</td>
     </tr>
   </tbody>
 </table>
-
-## Attributs
-
-Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
-
-- **`alt`**
-  - : Une chaîne de texte alternative à afficher sur les navigateurs qui n'affichent pas les images. Le texte doit être formulé de manière à offrir à l'utilisateur le même type de choix que l'image lorsqu'elle est affichée sans le texte alternatif. Cet attribut est requis uniquement si l'attribut [`href`](#attr-href) est utilisé.
-- **`coords`**
-  - : L'attribut `coords` détaille les coordonnées de l'attribut [`shape`](#attr-shape) en taille, forme et placement d'un élément `<area>`.
-    - `rect` : la valeur est `x1,y1,x2,y2`. La valeur spécifie les coordonnées du coin supérieur gauche et inférieur droit du rectangle.
-
-      Par exemple : `<area shape="rect" coords="0,0,253,27" href="#" target="_blank" alt="Mozilla">` Les coordonnées dans l'exemple ci-dessus spécifient : 0,0 comme le coin supérieur gauche et 253,27 comme le coin inférieur droit du rectangle.
-
-    - `cercle` : la valeur est `x,y,radius`. La valeur spécifie les coordonnées du centre du cercle et du rayon.
-
-      Par exemple : `<area shape="circle" coords="130,136,60" href="#" target="_blank" alt="MDN">`.
-
-    - `poly` : la valeur est `x1,y1,x2,y2,...,xn,yn`. La valeur spécifie les coordonnées des bords du polygone. Si la première et la dernière paire de coordonnées ne sont pas les mêmes, le navigateur ajoutera la dernière paire de coordonnées pour fermer le polygone.
-    - `default` : définit la région entière.
-
-    Les valeurs sont exprimées en nombre de pixels CSS.
-
-- **`download`**
-  - : Cet attribut, s'il est présent, indique que l'auteur souhaite que l'hyperlien soit utilisé pour télécharger une ressource. Voir [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) pour une description complète de l'attribut [`download`](/fr/docs/Web/HTML/Reference/Elements/a#attr-download).
-- **`href`**
-  - : Le lien hypertexte porté par la zone d'intérêt. Ce doit être une URL valide. Cet attribut peut être absent et dans ce cas, la zone d'intérêt ne représente pas de lien hypertexte.
-- **`hreflang`**
-  - : Cet attribut indique la langue du contenu vers lequel le lien renvoie. Les valeurs autorisées pour cet attribut sont définies par [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt). Cet attribut doit uniquement être utilisé lorsque `href` est présent.
-- **`ping`**
-  - : Cet attribut contient une liste d'URL séparées par des espaces vers lesquelles sont envoyées des requêtes HTTP [`POST`](/fr/docs/Web/HTTP/Reference/Methods/POST) dont le corps vaut `PING` lors du clic sur le lien. Les requêtes sont envoyées en arrière-plan. Cet attribut est généralement utilisé à des fins de pistage.
-- **`referrerpolicy`** {{experimental_inline}}
-  - : Une chaîne de caractères qui indique le référent (_referrer_) à utiliser lors de la récupération de la ressource :
-    - « `no-referrer` » indique que l'en-tête `Referer` ne sera pas envoyé.
-    - « `no-referrer-when-downgrade` » indique que l'en-tête `Referer` ne sera pas envoyé lorsque l'utilisateur navigue depuis une origine sans TLS/HTTPS. C'est le comportement par défaut de l'agent utilisateur si aucune autre politique n'est spécifiée.
-    - « `origin` » indique que le référent sera l'origine de la page (ce qui correspond au schéma utilisé, à l'hôte et au port).
-    - « `origin-when-cross-origin` » indique que lorsqu'on navigue sur d'autres origines, seule l'origine du document sera envoyée. Lorsqu'on navigue sur la même origine, le chemin de la ressource sera inclus dans le référent.
-    - « `unsafe-url` » indique que le référent envoyé inclura l'origine et le chemin (mais pas le fragment, le mot de passe ou le nom d'utilisateur). Ce cas n'est pas considéré comme sûr, car il peut laisser fuiter des origines et des chemins de ressources protégées par TLS vers des origines non-sécurisées.
-
-- **`rel`**
-  - : Pour les ancres contenant l'attribut **`href`**, cet attribut définit la relation entre l'objet ciblé et l'objet lié. La valeur est une liste des [différentes relations](/fr/docs/Web/HTML/Reference/Attributes/rel) dont les valeurs sont séparées par des espaces. Les valeurs et leurs significations peuvent être enregistrées par une autorité jugée utile par l'auteur du document. La valeur par défaut est la relation vide. Cet attribut doit uniquement être utilisé si l'attribut [`href`](#attr-href) est présent.
-- **`shape`**
-  - : La forme de la zone d'intérêt. Les spécifications HTML5 et HTML4 définissent les valeurs `rect` (zone rectangulaire), `circle` (zone circulaire), `poly` (zone polygonale) et `default` (indiquant toute la zone). Beacuoup de navigateurs, comme Internet Explorer 4 et ultérieur, supportent les valeurs `circ`, `polygon` et `rectangle` pour l'attribut `shape`, mais ces valeurs ne sont pas standard.
-- **`target`**
-  - : Cet attribut dans quel _contexte de navigation_ afficher la ressource liée. Les mots-clés peuvent avoir les significations suivantes :
-    - `_self` (valeur par défaut) : Charge la réponse dans le contexte de navigation actuel.
-    - `_blank`&nbsp;: Charge la réponse dans un nouveau contexte de navigation (sans nom).
-    - `_parent` : Charge la réponse dans le contexte de navigation parent. Si la page courante n'est pas incluse via une _frame_, cette valeur agit comme `_self`.
-    - `_top` : Charge la réponse dans le contexte de navigation avec le plus haut niveau (autrement dit l'ancêtre du contexte actuel qui n'a pas de parent). Si le contexte actuel n'a pas de parent alors cette valeur aura le même effet que la valeur `_self`.
-
-    Cet attribut doit uniquement être utilisé si l'attribut [`href`](#attr-href) est présent.
-
-    > [!NOTE]
-    > La définition de `target="_blank"` sur les éléments `<area>` fournit implicitement le même comportement `rel` que la définition de [`rel="noopener"`](/fr/docs/Web/HTML/Reference/Attributes/rel/noopener) qui ne définit pas `window.opener`. Voir la [compatibilité des navigateurs](#browser_compatibility) pour les informations sur son support.
-
-### Attributs dépréciés ou obsolètes
-
-- **`name`** {{deprecated_inline}}
-  - : Définit un nom pour la zone sur laquelle on peut cliquer afin que cet élément puisse être interprété par les navigateurs plus anciens.
-- **`nohref`** {{deprecated_inline}}
-  - : Indique une absence d'hyperlien pour la zone d'intérêt. Cet attribut doit être présent si **href** ne l'est pas et _vice versa_.
-
-    > [!NOTE]
-    > Cet attribut est obsolète en HTML5, ne pas utiliser l'attribut `href` suffit.
-
-- **`tabindex`** {{deprecated_inline}}
-  - : Une valeur numérique définissant l'ordre de la zone d'intérêt parmi les différentes étiquettes. Cet attribut est un attribut universel avec HTML5.
-- **`type`** {{deprecated_inline}}
-  - : Sans effet car ignoré par les navigateurs.
-
-## Exemples
-
-Dans cet exemple, la partie gauche est un lien vers une page et la partie droite est inactive.
-
-```html
-<map name="exemple-map-1">
-  <area
-    shape="rect"
-    coords="0,0 200,200"
-    href="https://developer.mozilla.org"
-    target="_blank"
-    alt="Page d'accueil MDN" />
-  <area shape="default" />
-</map>
-<img usemap="#exemple-map-1" src="https://via.placeholder.com/350x150" />
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemple", "100%", "230")}}
 
 ## Spécifications
 

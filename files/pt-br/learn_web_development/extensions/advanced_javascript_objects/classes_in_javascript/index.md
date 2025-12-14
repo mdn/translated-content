@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_Ja
 original_slug: Learn/JavaScript/Objects/Classes_in_JavaScript
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 Com a maior parte dos detalhes principais do OOJS agora explicados, este artigo mostra como criar classes de objetos "child" (construtores) que herdam recursos de suas classes "parent". Além disso, apresentamos alguns conselhos sobre quando e onde você pode usar o OOJS e veja como as classes são tratadas na sintaxe moderna do ECMAScript.
 
@@ -445,4 +445,4 @@ No próximo artigo, veremos como trabalhar com JavaScript Object Notation (JSON)
 - [Segredos Ninja de JavaScript](https://www.manning.com/books/secrets-of-the-javascript-ninja-second-edition), Capítulo 7 - Um bom livro sobre conceitos e técnicas avançadas de JavaScript, por John Resig, Bear Bibeault e Josip Maras. O Capítulo 7 aborda aspectos de protótipos e herança muito bem; Você provavelmente pode rastrear uma cópia impressa ou on-line com bastante facilidade.
 - [Você não sabe JS: this & Object Prototypes](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes) — Parte da excelente série de manuais de JavaScript de Kyle Simpson, o Capítulo 5, em particular, analisa os protótipos com muito mais detalhes do que fazemos aqui. Nós apresentamos uma visão simplificada nesta série de artigos destinados a iniciantes, enquanto Kyle entra em grande profundidade e fornece uma imagem mais complexa, mas mais precisa.
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

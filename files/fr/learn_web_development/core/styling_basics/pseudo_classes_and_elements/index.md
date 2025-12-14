@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
 original_slug: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics")}}
 
 Voyons maintenant les sélecteurs de **pseudo-classes** et de **pseudo-éléments**. Il en existe un grand nombre, ces sélecteurs sont souvent assez spécifiques. Une fois que vous aurez compris comment les utiliser, revenez consulter leur liste pour voir si quelque chose peut fonctionner dans la tâche que vous essayez d'accomplir. Une fois encore, vérifiez la prise en charge par les navigateurs sur la page MDN associée à chaque sélecteur.
 
@@ -138,4 +138,4 @@ Dans le prochain article, nous aborderons [les combinateurs](/fr/docs/Learn_web_
 - [La référence des pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 - [La référence des pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics")}}

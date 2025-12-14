@@ -304,8 +304,7 @@ Cet exemple est utile pour les feuilles de style d'impression. Il utilise un [s√
 #### CSS
 
 ```css
-a[href^="https://"]::after
-{
+a[href^="https://"]::after {
   content: " (Lien : " attr(href) ")";
   color: darkgreen;
 }
