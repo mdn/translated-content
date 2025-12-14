@@ -52,7 +52,7 @@ Dans chacune des trois origines de feuilles de style — auteur·ice, utilisateu
 
 ### Styles en ligne
 
-Les styles en ligne sont des styles définis à l'aide de l'attribut [`style`](/fr/docs/Web/HTML/Attributs_globaux/style). Ils peuvent aussi être normaux ou importants. Les styles en ligne _normaux_ prévalent sur toutes les déclarations _normales_, quelle que soit l'origine. Les styles en ligne _importants_ prévalent sur tous les autres styles _importants_ de l'auteur·ice, quelle que soit la couche, mais les styles importants des feuilles de style de l'utilisateur·ice ou de l'agent utilisateur et les transitions les outrepassent.
+Les styles en ligne sont des styles définis à l'aide de l'attribut [`style`](/fr/docs/Web/HTML/Reference/Global_attributes/style). Ils peuvent aussi être normaux ou importants. Les styles en ligne _normaux_ prévalent sur toutes les déclarations _normales_, quelle que soit l'origine. Les styles en ligne _importants_ prévalent sur tous les autres styles _importants_ de l'auteur·ice, quelle que soit la couche, mais les styles importants des feuilles de style de l'utilisateur·ice ou de l'agent utilisateur et les transitions les outrepassent.
 
 ### `!important` et spécificité
 
