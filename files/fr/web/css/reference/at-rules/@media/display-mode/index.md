@@ -1,9 +1,8 @@
 ---
 title: display-mode
 slug: Web/CSS/Reference/At-rules/@media/display-mode
-original_slug: Web/CSS/@media/display-mode
 l10n:
-  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`display-mode`** permet de tester si une application web est affichée dans un onglet de navigateur classique ou d'une autre manière, comme une application autonome ou en mode plein écran.
@@ -23,7 +22,7 @@ La caractéristique `display-mode` se définit à l'aide d'une valeur-mot-clé c
 - `browser`
   - : L'application s'ouvre dans un onglet de navigateur classique ou une nouvelle fenêtre, selon le navigateur et la plateforme.
 - `fullscreen`
-  - : Toute la surface d'affichage disponible est utilisée et aucun {{glossary("chrome", "aspect visible")}} de l'agent utilisateur n'est affichée. Cela permet d'appliquer du CSS uniquement lorsque l'application est en mode plein écran via l'[API Fullscreen](/fr/docs/Web/API/Fullscreen_API) ou en utilisant la valeur `fullscreen` de la propriété [`display`](/fr/docs/Web/Progressive_web_apps/Manifest/Reference/display) du manifeste de l'application web.
+  - : Toute la surface d'affichage disponible est utilisée et aucun {{Glossary("chrome", "aspect visible")}} de l'agent utilisateur n'est affichée. Cela permet d'appliquer du CSS uniquement lorsque l'application est en mode plein écran via l'[API Fullscreen](/fr/docs/Web/API/Fullscreen_API) ou en utilisant la valeur `fullscreen` de la propriété [`display`](/fr/docs/Web/Progressive_web_apps/Manifest/Reference/display) du manifeste de l'application web.
 - `minimal-ui`
   - : L'application ressemble à une application autonome, mais dispose d'un ensemble minimal d'éléments d'interface pour la navigation. Les éléments varient selon le navigateur.
 - `picture-in-picture`
@@ -48,7 +47,7 @@ La caractéristique `display-mode` se définit à l'aide d'une valeur-mot-clé c
 
 ### Fournir un thème clair et sombre au contenu Picture-in-Picture
 
-Dans cet exemple, on combine la valeur `display-mode: picture-in-picture` avec la caractéristique média {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} pour créer des thèmes clair et sombre appliqués selon la préférence de l'utilisateur·ice, uniquement lorsque l'application est affichée en mode image dans l'image (<i lang="en">Picture-in-Picture</i> en anglais).
+Dans cet exemple, on combine la valeur `display-mode: picture-in-picture` avec la caractéristique média {{CSSxRef("@media/prefers-color-scheme", "prefers-color-scheme")}} pour créer des thèmes clair et sombre appliqués selon la préférence de l'utilisateur·ice, uniquement lorsque l'application est affichée en mode image dans l'image (<i lang="en">Picture-in-Picture</i> en anglais).
 
 ```css
 @media (display-mode: picture-in-picture) and (prefers-color-scheme: light) {
@@ -81,4 +80,4 @@ Voir [Utiliser l'API Document Picture-in-Picture](/fr/docs/Web/API/Document_Pict
 ## Voir aussi
 
 - [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
-- {{cssxref("@media")}}
+- La règle {{CSSxRef("@media")}}

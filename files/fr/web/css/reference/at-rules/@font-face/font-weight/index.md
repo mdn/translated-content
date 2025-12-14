@@ -1,16 +1,15 @@
 ---
 title: font-weight
 slug: Web/CSS/Reference/At-rules/@font-face/font-weight
-original_slug: Web/CSS/@font-face/font-weight
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-weight`** permet aux auteur·ice·s d'indiquer les graisses pour les polices fournies dans une [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{cssxref("@font-face")}}. La propriété {{cssxref("font-weight")}} peut être utilisée séparément pour indiquer la graisse des caractères d'un texte (c'est-à-dire s'ils sont en gras, normaux ou plus fins).
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-weight`** permet aux auteur·ice·s d'indiquer les graisses pour les polices fournies dans une [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@font-face")}}. La propriété {{CSSxRef("font-weight")}} peut être utilisée séparément pour indiquer la graisse des caractères d'un texte (c'est-à-dire s'ils sont en gras, normaux ou plus fins).
 
-En général, un·e développeur·euse souhaite utiliser des polices d'une même famille avec différentes graisses. Avec les polices traditionnelles ou _statiques_, un fichier de police contient les caractères d'une famille dans une graisse et un style précis&nbsp;: par exemple, «&nbsp;Helvetica bold italic&nbsp;». Pour permettre l'affichage de polices fines, normales, grasses ou extra-grasses lorsque la propriété `font-weight` demande une graisse spécifique, vous pouvez définir plusieurs règles {{cssxref("@font-face")}} pour la même famille (toutes avec la même valeur de descripteur {{cssxref("@font-face/font-family", "font-family")}}), une pour chaque graisse ou plage de graisses.
+En général, un·e développeur·euse souhaite utiliser des polices d'une même famille avec différentes graisses. Avec les polices traditionnelles ou _statiques_, un fichier de police contient les caractères d'une famille dans une graisse et un style précis&nbsp;: par exemple, «&nbsp;Helvetica bold italic&nbsp;». Pour permettre l'affichage de polices fines, normales, grasses ou extra-grasses lorsque la propriété `font-weight` demande une graisse spécifique, vous pouvez définir plusieurs règles {{CSSxRef("@font-face")}} pour la même famille (toutes avec la même valeur de descripteur {{CSSxRef("@font-face/font-family", "font-family")}}), une pour chaque graisse ou plage de graisses.
 
-Pour déclarer la police à utiliser pour une plage de graisses, indiquez une paire de valeurs de graisse séparées par un espace comme valeur du descripteur `font-weight`. Lorsque les règles CSS définissent une graisse via la propriété {{cssxref("font-weight")}} ou la propriété raccourcie {{cssxref("font")}}, la police appropriée sera alors utilisée.
+Pour déclarer la police à utiliser pour une plage de graisses, indiquez une paire de valeurs de graisse séparées par un espace comme valeur du descripteur `font-weight`. Lorsque les règles CSS définissent une graisse via la propriété {{CSSxRef("font-weight")}} ou la propriété raccourcie {{CSSxRef("font")}}, la police appropriée sera alors utilisée.
 
 Par exemple, si le descripteur est `font-weight: 400 600;`, lorsque la propriété est `font-weight: 450` ou `font-weight: 550`, cette police sera utilisée pour cette famille de polices.
 Que la police soit statique ou une [police variable](/fr/docs/Web/CSS/Guides/Fonts/Variable_fonts), la police correspondant à la plage sera utilisée. Dans ce cas, si la police est statique, `450` et `550` apparaîtront identiques. Si la police est variable, la seconde sera plus grasse.
@@ -45,7 +44,7 @@ Chaque `<font-weight-absolute>` peut être l'une des valeurs suivantes&nbsp;:
 - `bold`
   - : Graisse grasse. Équivalent à `700`.
 - `<number>`
-  - : Une valeur {{cssxref("&lt;number&gt;")}} comprise entre 1 et 1000 inclus. Les nombres plus élevés représentent des graisses plus épaisses (ou aussi épaisses) que les nombres plus faibles. Certaines valeurs courantes correspondent à des noms de graisses communs, comme décrit dans la section [Correspondance entre les noms et les valeurs numériques](#correspondance_entre_les_noms_et_les_valeurs_numériques) ci-dessous.
+  - : Une valeur {{CSSxRef("&lt;number&gt;")}} comprise entre 1 et 1000 inclus. Les nombres plus élevés représentent des graisses plus épaisses (ou aussi épaisses) que les nombres plus faibles. Certaines valeurs courantes correspondent à des noms de graisses communs, comme décrit dans la section [Correspondance entre les noms et les valeurs numériques](#correspondance_entre_les_noms_et_les_valeurs_numériques) ci-dessous.
 
 ### Correspondance entre les noms et les valeurs numériques
 
@@ -71,11 +70,11 @@ Pour les polices variables TrueType ou OpenType, c'est l'axe de variation `"wght
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ### Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -83,7 +82,7 @@ Pour les polices variables TrueType ou OpenType, c'est l'axe de variation `"wght
 
 Dans cet exemple, nous incluons deux polices, une de graisse normale et une de graisse grasse, de la famille de polices [«&nbsp;Fira Sans&nbsp;»](https://fonts.google.com/specimen/Fira+Sans) en utilisant deux règles `@font-face`. Nous définissons les descripteurs `font-weight` pour correspondre à la graisse des polices.
 
-Ensuite, les règles CSS peuvent sélectionner la police normale ou la police grasse pour la famille «&nbsp;Fira Sans&nbsp;» simplement en définissant la propriété {{cssxref("font-weight")}}. Notez que l'élément HTML {{htmlelement("strong")}} sélectionne également la police grasse, car par défaut les éléments `<strong>` ont une valeur de propriété CSS `font-weight` à `bold`.
+Ensuite, les règles CSS peuvent sélectionner la police normale ou la police grasse pour la famille «&nbsp;Fira Sans&nbsp;» simplement en définissant la propriété {{CSSxRef("font-weight")}}. Notez que l'élément HTML {{HTMLElement("strong")}} sélectionne également la police grasse, car par défaut les éléments `<strong>` ont une valeur de propriété CSS `font-weight` à `bold`.
 
 #### HTML
 
@@ -228,7 +227,7 @@ Nous incluons une police variable, [«&nbsp;League Mono&nbsp;»](https://www.the
 
 Nous incluons un paragraphe avec `<output>` initialisé à `400`, valeur par défaut pour le texte non stylisé. Ce paragraphe est placé entre deux autres, pour comparer le rendu des graisses.
 
-Nous incluons un {{htmlelement("input/range")}} de type `range`, dans un {{htmlelement("label")}}, avec un `step` à `50`.
+Nous incluons un {{HTMLElement("input/range")}} de type `range`, dans un {{HTMLElement("label")}}, avec un `step` à `50`.
 
 ```html
 <p>LeagueMono, font-weight: 300 (comparaison)</p>
@@ -297,11 +296,11 @@ Notez que le paragraphe exemple n'est pas plus fin que le paragraphe `300` au-de
 
 ## Voir aussi
 
-- {{cssxref("@font-face/font-display", "font-display")}}
-- {{cssxref("@font-face/font-family", "font-family")}}
-- {{cssxref("@font-face/font-stretch", "font-stretch")}}
-- {{cssxref("@font-face/font-style", "font-style")}}
-- {{cssxref("font-feature-settings", "font-feature-settings")}}
-- {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
-- {{cssxref("@font-face/src", "src")}}
-- Le descripteur {{cssxref("@font-face/unicode-range", "unicode-range")}}
+- Le descripteur {{CSSxRef("@font-face/font-display", "font-display")}}
+- Le descripteur {{CSSxRef("@font-face/font-family", "font-family")}}
+- Le descripteur {{CSSxRef("@font-face/font-stretch", "font-stretch")}}
+- Le descripteur {{CSSxRef("@font-face/font-style", "font-style")}}
+- Le descripteur {{CSSxRef("@font-face/font-feature-settings", "font-feature-settings")}}
+- Le descripteur {{CSSxRef("@font-face/font-variation-settings", "font-variation-settings")}}
+- Le descripteur {{CSSxRef("@font-face/src", "src")}}
+- Le descripteur {{CSSxRef("@font-face/unicode-range", "unicode-range")}}
