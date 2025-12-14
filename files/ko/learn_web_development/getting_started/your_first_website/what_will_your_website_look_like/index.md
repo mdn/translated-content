@@ -42,7 +42,7 @@ _웹사이트의 외관은 어떻게 할까요?_ 에서는 "나의 웹사이트�
 
 ### 주요 색상
 
-색상을 선택하기 위해, [the Color Picker](/ko/docs/Web/CSS/CSS_colors/Color_format_converter)로 가서 여러분이 원하는 색을 찾아보세요. 한 색을 선택하면, 여러분은 #660066같은 여섯 문자의 이상한 코드를 보게 될 것입니다. 이것은 _hex(adecimal)_ 코드로 불리고, 여러분의 색을 나타냅니다. 안전한 어느 곳에 복사해두세요.
+색상을 선택하기 위해, [the Color Picker](/ko/docs/Web/CSS/Guides/Colors/Color_format_converter)로 가서 여러분이 원하는 색을 찾아보세요. 한 색을 선택하면, 여러분은 #660066같은 여섯 문자의 이상한 코드를 보게 될 것입니다. 이것은 _hex(adecimal)_ 코드로 불리고, 여러분의 색을 나타냅니다. 안전한 어느 곳에 복사해두세요.
 
 ![](screenshot_from_2014-11-03_17-40-49.png)
 

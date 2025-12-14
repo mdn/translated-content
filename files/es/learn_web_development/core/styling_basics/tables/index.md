@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Tables
 original_slug: Learn/CSS/Building_blocks/Styling_tables
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics")}}
 
 Aplicar estilos a una tabla HTML no es el trabajo más interesante del mundo, pero a veces hay que hacerlo. Este artículo proporciona una guía para hacer que las tablas HTML presenten un aspecto agradable, para ello usaremos algunas de las características específicas para tablas que hemos destacado en artículos anteriores.
 
@@ -85,7 +85,7 @@ Tal y como está, es aburrida y difícil de leer. Necesitamos usar algo de CSS p
 
 ## Aprendizaje activo: Aplicar estilo a nuestra tabla
 
-En esta sección de aprendizaje activo vamos a aplica estilo a nuestra tabla juntos.
+En esta sección de aprendizaje activo vamos a aplicar estilo a nuestra tabla juntos.
 
 1. Para comenzar, crea una copia local del [código de ejemplo](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-unstyled.html), descarga las dos imágenes ([noise](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/noise.png) y [leopardskin](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/leopardskin.jpg)), y pon los tres archivos en alguna carpeta de tu ordenador.
 2. Ahora crea un archivo nuevo llamado `style.css` y guárdalo con el resto de archivos, en la misma carpeta.
@@ -204,7 +204,7 @@ El resultado se ve un poco más limpio:
 
 ### Gráficos y colores
 
-Ahora, ¡a por los gráficos y los colores! Puesto que la tabla rezuma contenido y actitud punk, vamos a darle un brillante estilo imponente que le pegue. No te preocupes, no tienes que hacer tus tablas tan extremadas: puedes optar por algo más sutil y de buen gusto.
+Ahora, ¡a por los gráficos y los colores! Puesto que la tabla rezuma contenido y actitud punk, vamos a darle un brillante estilo imponente que le pegue. No te preocupes, no tienes que hacer tus tablas tan extremas: puedes optar por algo más sutil y de buen gusto.
 
 Empieza añadiendo el CSS siguiente a tu archivo `style.css`, de nuevo al final:
 
@@ -305,4 +305,4 @@ Antes de seguir adelante, creemos que tendríamos que proporcionar una lista rá
 
 Después de aplicar estilo a las tablas, necesitamos algo más en que ocupar nuestro tiempo. El artículo siguiente expone la depuración de documentos CSS, es decir, cómo resolver problemas como diseños de página que no presentan el aspecto que deberían, o propiedades que no se aplican cuando crees que deberían aplicarse. Esto incluye información sobre el uso de las herramientas DevTools del navegador para hallar soluciones a tus problemas.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics")}}

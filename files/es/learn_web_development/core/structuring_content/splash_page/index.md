@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Splash_page
 original_slug: Learn_web_development/Core/Structuring_content/Mozilla_splash_page
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{PreviousMenu("Web/HTML/Guides/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 
 En esta evaluación, pondremos a prueba tu conocimiento de algunas de las técnicas mostradas en los artículos de este módulo, ¡para que tú agregues algunas imágenes y videos a una página de bienvenida de Mozzilla!.
 
@@ -14,7 +14,7 @@ En esta evaluación, pondremos a prueba tu conocimiento de algunas de las técni
       <th scope="row">Requisitos previos:</th>
       <td>
         Antes de intentar esta evaluación, ya deberías conocer el módulo de
-        <a href="/es/docs/Learn/HTML/Multimedia_and_embedding"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b"
           >Multimedia e inserción</a
         >.
       </td>
@@ -103,4 +103,4 @@ Si quieres evaluar tu trabajo, estás atorado o quieres pedir ayuda:
    - Un enlace al ejemplo que deseas evaluar o en el que necesitas ayuda, en un editor en línea. Ésta es una buena práctica: es muy difícil ayudar a alguien con un problema de codificación si no puede ver su código.
    - Un enlace a la página de evaluación actual, para que podamos encontrar la pregunta con la que desea ayuda.
 
-{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{PreviousMenu("Web/HTML/Guides/Responsive_images", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}

@@ -47,7 +47,9 @@
 /*.md                @mdn/content-team @mdn/engineering 
 /CONTRIBUTING.md     @mdn/content-team          
 /PEERS_GUIDELINES.md @mdn/content-team
-/SECURITY.md @mdn/engineering
+/SECURITY.md         @mdn/engineering
+/package.json        @mdn/engineering @mdn-bot
+/package-lock.json   @mdn/engineering @mdn-bot
 
 # Reset until https://github.com/prettier/prettier/issues/11828 is fixed
 /.prettierignore

@@ -1,9 +1,8 @@
 ---
 title: background-attachment
 slug: Web/CSS/Reference/Properties/background-attachment
-original_slug: Web/CSS/background-attachment
 l10n:
-  sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`background-attachment`** は [CSS](/ja/docs/Web/CSS) のプロパティで、背景画像の位置を{{glossary("viewport", "ビューポート")}}の中で固定するか、包含ブロックと一緒にスクロールするかを設定します。
@@ -69,8 +68,8 @@ body {
   overflow: auto;
   padding: 20px;
   text-shadow:
-    0 0 0.6rem #000,
-    0 0 0.6rem #000;
+    0 0 0.6rem black,
+    0 0 0.6rem black;
 }
 ```
 
@@ -111,11 +110,11 @@ background-attachment: unset;
 
 ## 例
 
-### 単純な例
+### 基本的な例
 
 #### HTML
 
-```html live-sample___simple_example
+```html
 <p>
   There were doors all round the hall, but they were all locked; and when Alice
   had been all the way down one side and up the other, trying every door, she
@@ -125,7 +124,7 @@ background-attachment: unset;
 
 #### CSS
 
-```css live-sample___simple_example
+```css
 p {
   background-image: url("star-solid.gif");
   background-attachment: fixed;
@@ -134,7 +133,7 @@ p {
 
 #### 結果
 
-{{EmbedLiveSample("Simple_example")}}
+{{EmbedLiveSample("基本的な例")}}
 
 ### 複数の背景画像
 
@@ -142,7 +141,7 @@ p {
 
 #### HTML
 
-```html live-sample___multiple_background_images
+```html
 <p>
   There were doors all round the hall, but they were all locked; and when Alice
   had been all the way down one side and up the other, trying every door, she
@@ -160,7 +159,7 @@ p {
 
 #### CSS
 
-```css live-sample___multiple_background_images
+```css
 p {
   background-image: url("star-solid.gif"), url("star-transparent.gif");
   background-attachment: fixed, scroll;
@@ -170,7 +169,7 @@ p {
 
 #### 結果
 
-{{EmbedLiveSample("Multiple_background_images")}}
+{{EmbedLiveSample("複数の背景画像")}}
 
 ## 仕様書
 
@@ -182,4 +181,4 @@ p {
 
 ## 関連情報
 
-- [複数の背景画像を使う](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
+- [複数の背景画像の利用](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)

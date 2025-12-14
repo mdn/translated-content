@@ -11,7 +11,7 @@ l10n:
 
 - 维基百科上的 [HTTPS](https://zh.wikipedia.org/wiki/超文本传输安全协议) 词条
 - [迁移至 HTTPS：社区指南](https://movingtohttps.com/)
-- [安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)
+- [安全上下文](/zh-CN/docs/Web/Security/Defenses/Secure_Contexts)
 - [MDN Web 文档术语表](/zh-CN/docs/Glossary)
   - {{glossary("HTTP")}}
   - {{glossary("SSL")}}

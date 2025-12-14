@@ -108,7 +108,7 @@ console.log(str == obj); // true
 同值相等决定了两个值在所有上下文中是否在功能上相同。（这个用例演示了[里氏替换原则](https://zh.wikipedia.org/wiki/里氏替换原则)的一种情况。）这一情况会在尝试修改一个不可变属性时发生。
 
 ```js
-// 向 Nmuber 构造函数添加一个不可变的属性 NEGATIVE_ZERO
+// 向 Number 构造函数添加一个不可变的属性 NEGATIVE_ZERO
 Object.defineProperty(Number, "NEGATIVE_ZERO", {
   value: -0,
   writable: false,

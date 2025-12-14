@@ -1,55 +1,79 @@
 ---
 title: "<code> : l'élément de code en ligne"
 slug: Web/HTML/Reference/Elements/code
-original_slug: Web/HTML/Element/code
+l10n:
+  sourceCommit: 9cfc2285428932f448a1747e347b1e35a3e0172b
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<code>`** affiche son contenu avec une mise en forme destinée à indiquer qu'il s'agit d'un court fragment de code informatique. Par défaut, le texte est affiché avec la police monospace par défaut de l'{{Glossary("user agent", "agent utilisateur")}}.
 
-L'élément HTML **`<code>`** représente un court fragment de code machine. Par défaut, l'agent utilisateur utilise une police à chasse fixe (_monospace_) afin d'afficher le texte contenu dans cet élément.
-
-{{InteractiveExample("HTML Demo: &lt;code&gt;", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;code&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>
-  The <code>push()</code> method adds one or more elements to the end of an
-  array and returns the new length of the array.
+  La méthode <code>push()</code> ajoute un ou plusieurs éléments à la fin d'un
+  tableau et retourne la nouvelle longueur du tableau.
 </p>
 ```
 
 ```css interactive-example
 code {
-  background-color: #eee;
+  background-color: #eeeeee;
   border-radius: 3px;
-  font-family: courier, monospace;
+  font-family: "Courier New", monospace;
   padding: 0 3px;
 }
 ```
+
+## Attributs
+
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+
+## Exemples
+
+Un paragraphe de texte qui contient `<code>`&nbsp;:
+
+```html
+<p>
+  La fonction <code>selectAll()</code> met en évidence tout le texte du champ de
+  saisie afin que l'utilisateur·ice puisse, par exemple, le copier ou le
+  supprimer.
+</p>
+```
+
+### Résultat
+
+{{EmbedLiveSample('Exemples', 640, 70)}}
+
+## Notes
+
+Pour représenter plusieurs lignes de code, enveloppez l'élément `<code>` dans un élément {{HTMLElement("pre")}}. L'élément `<code>` en lui-même ne représente qu'une seule phrase de code ou ligne de code.
+
+Une règle CSS peut être définie pour le sélecteur `code` afin de remplacer la police par défaut du navigateur. Les préférences définies par l'utilisateur·ice peuvent prévaloir sur la règle CSS définie.
+
+## Résumé technique
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
           >Catégories de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
         >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"
-          >contenu tangible</a
-        >.
+        >, contenu tangible.
       </td>
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >Contenu phrasé</a
         >.
       </td>
@@ -65,7 +89,7 @@ code {
       <th scope="row">Parents autorisés</th>
       <td>
         Tout élément acceptant du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
         >.
       </td>
@@ -73,8 +97,9 @@ code {
     <tr>
       <th scope="row">Rôle ARIA implicite</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >Pas de rôle correspondant</a
+        <code
+          ><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#rôles_structurels_avec_équivalents_html">code</a
+          ></code
         >
       </td>
     </tr>
@@ -85,42 +110,13 @@ code {
     <tr>
       <th scope="row">Interface DOM</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a
-        >. Jusqu'à Gecko 1.9.2 (Firefox 4) inclus, Firefox implémentait
-        l'interface
-        <a href="/fr/docs/Web/API/HTMLSpanElement"
-          ><code>HTMLSpanElement</code></a
-        >
+        {{DOMxRef("HTMLElement")}}. Jusqu'à Gecko 1.9.2 (Firefox 4) inclus, Firefox implémentait
+        l'interface {{DOMxRef("HTMLSpanElement")}}
         pour cet élément.
       </td>
     </tr>
   </tbody>
 </table>
-
-## Attributs
-
-Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
-
-## Exemples
-
-Un paragraphe de texte qui contient `<code>` :
-
-```html
-<p>
-  La fonction <code>selectAll()</code> met en évidence tout le texte du champ de
-  saisie afin que l'utilisateur puisse, par exemple, le copier ou le supprimer.
-</p>
-```
-
-### Résultat
-
-{{EmbedLiveSample('', '', 100)}}
-
-## Notes
-
-Pour représenter plusieurs lignes de code, enveloppez l'élément `<code>` dans un élément [`<pre>`](/fr/docs/Web/HTML/Reference/Elements/pre). L'élément `<code>` en lui-même ne représente qu'une seule phrase de code ou ligne de code.
-
-Une règle CSS peut être définie pour le sélecteur `code` afin de remplacer la fonte par défaut du navigateur. Les préférences définies par l'utilisateur peuvent avoir la priorité sur la règle CSS spécifiée.
 
 ## Spécifications
 
@@ -132,7 +128,7 @@ Une règle CSS peut être définie pour le sélecteur `code` afin de remplacer l
 
 ## Voir aussi
 
-- L'élément [`<samp>`](/fr/docs/Web/HTML/Reference/Elements/samp)
-- L'élément [`<kbd>`](/fr/docs/Web/HTML/Reference/Elements/kbd)
-- L'élément [`<var>`](/fr/docs/Web/HTML/Reference/Elements/var)
-- L'élément [`<pre>`](/fr/docs/Web/HTML/Reference/Elements/pre)
+- L'élément {{HTMLElement("samp")}}
+- L'élément {{HTMLElement("kbd")}}
+- L'élément {{HTMLElement("var")}}
+- L'élément {{HTMLElement("pre")}}

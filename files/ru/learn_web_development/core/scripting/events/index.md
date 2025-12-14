@@ -3,7 +3,7 @@ title: Введение в события
 slug: Learn_web_development/Core/Scripting/Events
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Return_values","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}
 
 События — это действия или случаи, возникающие в программируемой вами системе, о которых система сообщает вам для того, чтобы вы могли с ними взаимодействовать. Например, если пользователь нажимает кнопку на веб-странице, вы можете ответить на это действие, отобразив информационное окно. В этой статье мы обсудим некоторые важные концепции, связанные с событиями, и посмотрим, как они работают в браузерах. Эта статья не является исчерпывающим источником по этой теме — здесь только то, что вам нужно знать на этом этапе.
 
@@ -612,4 +612,4 @@ video.onclick = function (e) {
 - [Event accessing](https://www.quirksmode.org/js/events_access.html) (discussing of the event object) — another excellently detailed piece by Peter-Paul Koch.
 - [Event reference](/ru/docs/Web/API/Document_Object_Model/Events)
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Return_values","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}

@@ -3,7 +3,7 @@ title: Основы редактирования текста в HTML
 slug: Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Creating_links", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 Одна из основных задач HTML — придавать тексту структуру и смысл, {{glossary("семантику")}}, так, чтобы браузер смог отобразить текст корректно. Эта статья покажет, как можно использовать {{glossary("HTML")}}, чтобы упорядочить текст на странице путём добавления заголовков и абзацев, выделения слов, создания списков и многое другое.
 
@@ -1017,4 +1017,4 @@ HTML5 переопределил \<b>, \<i> и \<u> с новыми, неско�
 
 Вот и всё! Эта статья должна была дать вам хорошее представление о том, как начать разметку текста в HTML, и познакомить вас с некоторыми из наиболее важных элементов в этой области. В этой области есть намного больше семантических элементов, и мы рассмотрим их в нашей статье «Больше семантических элементов» позже в курсе. В следующей статье мы подробно рассмотрим, как [создавать гиперссылки](/ru/docs/Learn_web_development/Core/Structuring_content/Creating_links), возможно, самый важный элемент в Интернете.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Creating_links", "conflicting/Learn_web_development/Core/Structuring_content")}}

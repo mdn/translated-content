@@ -3,7 +3,7 @@ title: Упорядоченные наборы данных
 slug: Web/JavaScript/Guide/Indexed_collections
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}
 
 Данная глава знакомит читателя с массивами - коллекциями элементов, упорядоченных по индексу. Глава включает в себя описание массивов и массивоподобных структур, таких как {{jsxref("Array")}} и {{jsxref("TypedArray")}}.
 
@@ -485,4 +485,4 @@ Array.prototype.forEach.call("a string", function (chr) {
 
 Для получения подробных сведений смотрите [Типизированные массивы JavaScript](/ru/docs/Web/JavaScript/Guide/Typed_arrays) и справочную документацию для {{jsxref("TypedArray")}}.
 
-{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}

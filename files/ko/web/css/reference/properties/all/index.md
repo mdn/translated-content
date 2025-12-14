@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Properties/all
 original_slug: Web/CSS/all
 ---
 
-[CSS](/ko/docs/Web/CSS) **`all`** [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)은 요소의 {{cssxref("unicode-bidi")}}, {{cssxref("direction")}}, [CSS 사용자 지정 속성](/ko/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)을 제외한 모든 속성을 초기화합니다. 초깃값, 상속값, 아니면 다른 스타일시트 출처의 값으로 설정할 수 있습니다.
+[CSS](/ko/docs/Web/CSS) **`all`** [단축 속성](/ko/docs/Web/CSS/Guides/Cascade/Shorthand_properties)은 요소의 {{cssxref("unicode-bidi")}}, {{cssxref("direction")}}, [CSS 사용자 지정 속성](/ko/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)을 제외한 모든 속성을 초기화합니다. 초깃값, 상속값, 아니면 다른 스타일시트 출처의 값으로 설정할 수 있습니다.
 
 {{InteractiveExample("CSS Demo: all")}}
 
@@ -78,9 +78,9 @@ all: revert;
 ### 값
 
 - {{cssxref("initial")}}
-  - : 요소의 모든 속성을 [초깃값](/ko/docs/Web/CSS/CSS_cascade/Value_processing)으로 변경합니다.
+  - : 요소의 모든 속성을 [초깃값](/ko/docs/Web/CSS/Guides/Cascade/Property_value_processing)으로 변경합니다.
 - {{cssxref("inherit")}}
-  - : 요소의 모든 속성을 [상속값](/ko/docs/Web/CSS/CSS_cascade/Inheritance)으로 변경합니다.
+  - : 요소의 모든 속성을 [상속값](/ko/docs/Web/CSS/Guides/Cascade/Inheritance)으로 변경합니다.
 - {{cssxref("unset")}}
   - : 요소의 모든 속성을, 속성이 값을 상속하는 경우 상속값으로, 아니면 초깃값으로 변경합니다.
 - {{cssxref("revert")}}

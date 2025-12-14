@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-**`integrity`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、このリクエストの[サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)の値を保持します。
+**`integrity`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、このリクエストの[サブリソース完全性](/ja/docs/Web/Security/Defenses/Subresource_Integrity)の値を保持します。
 
 ## 値
 

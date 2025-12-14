@@ -1,9 +1,8 @@
 ---
 title: element()
 slug: Web/CSS/Reference/Values/element
-original_slug: Web/CSS/element
 l10n:
-  sourceCommit: 66944f622b6b51bc9c24bebbbea242138d910600
+  sourceCommit: e253c3abaca1994b6b940699ea582091df5207f3
 ---
 
 {{SeeCompatTable}}
@@ -25,6 +24,10 @@ element(id)
 - _id_
   - : 背景として使う要素の ID です。要素の HTML 属性 #_id_ に定義されているものです。
 
+## 形式文法
+
+{{CSSSyntax}}
+
 ## 例
 
 以下の例は、 `-moz-element()` に対応している Firefox のビルドが必要です。
@@ -33,26 +36,46 @@ element(id)
 
 この例では hidden 状態の {{HTMLElement("div")}} を背景に使います。背景要素はグラデーションを使うだけでなく、背景の一部として描画されるテキストも含んでいます。
 
-```html live-sample___a_somewhat_realistic_example
-<div
-  style="width:400px; height:400px; background:-moz-element(#myBackground1) no-repeat;">
-  <p>This box uses the element with the #myBackground1 ID as its background!</p>
+```html-nolint
+<div id="target-box">
+  <p>このボックスは、#my-background ID を付けている要素を背景として使用しています。</p>
 </div>
 
-<div style="overflow:hidden; height:0;">
-  <div
-    id="myBackground1"
-    style="width:1024px; height:1024px; background-image: linear-gradient(to right, red, orange, yellow, white);">
-    <p style="transform-origin:0 0; rotate: 45deg; color:white;">
-      This text is part of the background. Cool, huh?
-    </p>
+<div id="background-container">
+  <div id="my-background">
+    <p>このテキストは背景の一部です。かっこいいでしょ？</p>
   </div>
 </div>
 ```
 
-{{EmbedLiveSample("A_somewhat_realistic_example")}}
+```css
+#target-box {
+  width: 400px;
+  height: 400px;
+  background: -moz-element(#my-background) no-repeat;
+}
 
-"myBackground1" という ID を持つ {{HTMLElement("div")}} 要素が、"This box uses the element with the #myBackground1 ID as its background!" という段落を含むコンテンツの背景に使われています。
+#background-container {
+  overflow: hidden;
+  height: 0;
+}
+
+#my-background {
+  width: 1024px;
+  height: 1024px;
+  background-image: linear-gradient(to right, red, orange, yellow, white);
+}
+
+#my-background p {
+  transform-origin: 0 0;
+  rotate: 45deg;
+  color: white;
+}
+```
+
+{{EmbedLiveSample("いくらか現実的な例")}}
+
+"my-background" という ID を持つ {{HTMLElement("div")}} 要素が、「このボックスは、#my-background ID を付けている要素を背景として使用しています。」という段落を含むコンテンツの背景に使われています。
 
 ### ページプレビュー
 
@@ -62,7 +85,7 @@ element(id)
 
 ```html live-sample___page_preview
 <div id="css-source">
-  <h1>Page Preview</h1>
+  <h1>ページプレビュー</h1>
 </div>
 <div id="css-result"></div>
 ```

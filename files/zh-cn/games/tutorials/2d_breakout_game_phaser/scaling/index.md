@@ -3,7 +3,7 @@ title: Scaling
 slug: Games/Tutorials/2D_breakout_game_Phaser/Scaling
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_Phaser/Initialize_the_framework", "Games/Tutorials/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework", "Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}
 
 这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser)系列的第二课。在课程完成之后，你可以在[Gamedev-Phaser-Content-Kit/demos/lesson02.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson01.html)找到源码。
 
@@ -49,4 +49,4 @@ game.stage.backgroundColor = "#eee";
 
 现在我们设置了我们游戏的缩放比例，让我们继续第三课，并设计出如何[加载资源并将其显示在屏幕上](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen)。
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_Phaser/Initialize_the_framework", "Games/Tutorials/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework", "Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}
