@@ -25,18 +25,18 @@ slug: Web/CSS
 
 - [Справочник CSS](/ru/docs/Web/CSS/Reference): исчерпывающий справочник для опытных веб-разработчиков, в котором описаны все свойства и понятия CSS.
 - Ключевые понятия CSS:
-  - [Описание синтаксиса и внешнего вида языка](/ru/docs/Web/CSS/CSS_syntax/Syntax)
-  - [Специфичность](/ru/docs/Web/CSS/CSS_cascade/Specificity), [наследование](/ru/docs/Web/CSS/CSS_cascade/Inheritance) и [каскадирование](/ru/docs/Web/CSS/Cascade)
+  - [Описание синтаксиса и внешнего вида языка](/ru/docs/Web/CSS/Guides/Syntax/Introduction)
+  - [Специфичность](/ru/docs/Web/CSS/Guides/Cascade/Specificity), [наследование](/ru/docs/Web/CSS/Guides/Cascade/Inheritance) и [каскадирование](/ru/docs/Web/CSS/Cascade)
   - [Единицы измерения в CSS](/ru/docs/Web/CSS/CSS_Values_and_Units) и [функции в CSS](/ru/docs/Web/CSS/CSS_Functions)
-  - [Блоковая модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) и [схлопывание внешних отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - [Содержащий блок](/ru/docs/Web/CSS/CSS_display/Containing_block)
-  - [Контекст наложения](/ru/docs/Web/CSS/CSS_positioned_layout/Stacking_context) и [блочный контекст форматирования](/ru/docs/Web/CSS/CSS_display/Block_formatting_context)
-  - [Начальное](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing), [вычисленное](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d), [используемое](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_67ecc2d1089286b6003d201c901ee7218b8f627858ae89823dc40509095cd65b) и [действительное](/ru/docs/Web/CSS/CSS_cascade/Value_processing) значения
-  - [Краткая форма записи CSS свойств](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [Флексбокс-раскладка в CSS](/ru/docs/Web/CSS/CSS_flexible_box_layout)
-  - [Грид-раскладка в CSS](/ru/docs/Web/CSS/CSS_grid_layout)
-  - [CSS-селекторы](/ru/docs/Web/CSS/CSS_selectors)
-  - [Медиавыражения](/ru/docs/Web/CSS/CSS_media_queries)
+  - [Блоковая модель](/ru/docs/Web/CSS/Guides/Box_model/Introduction) и [схлопывание внешних отступов](/ru/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
+  - [Содержащий блок](/ru/docs/Web/CSS/Guides/Display/Containing_block)
+  - [Контекст наложения](/ru/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) и [блочный контекст форматирования](/ru/docs/Web/CSS/Guides/Display/Block_formatting_context)
+  - [Начальное](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing), [вычисленное](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d), [используемое](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_67ecc2d1089286b6003d201c901ee7218b8f627858ae89823dc40509095cd65b) и [действительное](/ru/docs/Web/CSS/Guides/Cascade/Property_value_processing) значения
+  - [Краткая форма записи CSS свойств](/ru/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
+  - [Флексбокс-раскладка в CSS](/ru/docs/Web/CSS/Guides/Flexible_box_layout)
+  - [Грид-раскладка в CSS](/ru/docs/Web/CSS/Guides/Grid_layout)
+  - [CSS-селекторы](/ru/docs/Web/CSS/Guides/Selectors)
+  - [Медиавыражения](/ru/docs/Web/CSS/Guides/Media_queries)
   - [Анимация](/ru/docs/Web/CSS/Reference/Properties/animation)
 
 ## Книга рецептов

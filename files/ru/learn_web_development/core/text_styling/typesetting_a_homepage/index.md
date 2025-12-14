@@ -3,7 +3,7 @@ title: "Задание: Стилизирование школьного сайт
 slug: Learn_web_development/Core/Text_styling/Typesetting_a_homepage
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}
 
 В этой оценке мы проверим ваше понимание всех методов стилизации текста, которые мы рассмотрели в этом модуле дав вам задание стилизовать текст домашней страницы общественной школы. Вы можете просто развлечься, выполняя задание.
 
@@ -82,4 +82,4 @@ slug: Learn_web_development/Core/Text_styling/Typesetting_a_homepage
    - Ссылку на онлайн редактор (как упомянуто выше в пункте 1) с примером, который нуждается в оценке или с которым нужна помощь. Это хорошая практика чтобы вникнуть — очень сложно помочь кому-либо с проблемным кодом если вы не видите их код.
    - Ссылку на актуальную задачу или страницу оценки, чтобы мы могли найти вопрос, по которому вам нужна помощь.
 
-{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{PreviousMenu("Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}

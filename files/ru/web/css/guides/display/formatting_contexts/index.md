@@ -74,6 +74,6 @@ In this guide, we have looked in more detail at the block and Inline formatting 
 
 ## Смотрите также
 
-- [Block formatting context](/ru/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [Visual Formatting Model](/ru/docs/Web/CSS/CSS_display/Visual_formatting_model)
+- [Block formatting context](/ru/docs/Web/CSS/Guides/Display/Block_formatting_context)
+- [Visual Formatting Model](/ru/docs/Web/CSS/Guides/Display/Visual_formatting_model)
 - [CSS Box Model](/ru/docs/Web/CSS/CSS_Box_Model)

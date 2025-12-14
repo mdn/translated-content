@@ -5,7 +5,7 @@ slug: Web/CSS/Guides/Display/Visual_formatting_model
 
 {{CSSRef}}
 
-_Модель визуального форматирования_ CSS - это алгоритм, используемый для обработки документа и его визуального отображения. Это базовая концепция CSS. Модель визуального форматирования задаёт трансформацию каждого элемента в документе и создаёт ноль, одну или несколько боксов, согласно [боксовой модели CSS](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model). Расположение (layout) каждого бокса определяется:
+_Модель визуального форматирования_ CSS - это алгоритм, используемый для обработки документа и его визуального отображения. Это базовая концепция CSS. Модель визуального форматирования задаёт трансформацию каждого элемента в документе и создаёт ноль, одну или несколько боксов, согласно [боксовой модели CSS](/ru/docs/Web/CSS/Guides/Box_model/Introduction). Расположение (layout) каждого бокса определяется:
 
 - размерами бокса: точно заданными или заданными ограничениями. Если размеры не заданы, это правило игнорируется;
 - типом бокса: inline, inline-level, atomic inline-level, block box;
@@ -25,7 +25,7 @@ _Модель визуального форматирования_ CSS - это 
 
 Говорят, что элемент является блочным, когда вычисленное значение его CSS-свойства {{ cssxref("display") }} равно: `block`, `list-item`, или `table`. Блочный элемент визуально форматируется как блок (например, параграф), предназначенный для вертикальной компоновки (в столбик).
 
-Каждый элемент блочного уровня участвует в [контексте блочного форматирования](/ru/docs/Web/CSS/CSS_display/Block_formatting_context). Каждый элемент блочного уровня генерирует как минимум один блок-бокс, названный _главным блок-боксом_. Некоторые элементы, например, такие как list-item, создают дополнительные боксы для хранения маркеров и других типографических элементов, содержащихся в list item. Большинство блочных элементов генерирует только один, главный блок-бокс.
+Каждый элемент блочного уровня участвует в [контексте блочного форматирования](/ru/docs/Web/CSS/Guides/Display/Block_formatting_context). Каждый элемент блочного уровня генерирует как минимум один блок-бокс, названный _главным блок-боксом_. Некоторые элементы, например, такие как list-item, создают дополнительные боксы для хранения маркеров и других типографических элементов, содержащихся в list item. Большинство блочных элементов генерирует только один, главный блок-бокс.
 
 Главный блок-бокс содержит сгенерированные боксы-потомки и сгенерированный контекст. Он так же будет боксом, участвующем в [схеме позиционирования](/ru/docs/CSS/Positioning_scheme).
 
@@ -121,7 +121,7 @@ _Run-in boxes_, defined using `display:run-in`, are boxes that are either block 
 Besides the inline and block formatting contexts, CSS specifies several additional _content models_ that may be applied to elements. These additional models, used to describe specific layouts, may define additional box types:
 
 - The [table content model](/ru/docs/Web/CSS/table-layout) may create a _table wrapper box_ and a _table box_, but also specific boxes like _caption boxes_.
-- The [multi-column content model](/ru/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts) may create _column boxes_ between the container box and the content*.*
+- The [multi-column content model](/ru/docs/Web/CSS/Guides/Multicol_layout/Using) may create _column boxes_ between the container box and the content*.*
 - The experimental grid, or flex-box content models, also create additional types of boxes.
 
 #### Positioning schemes
@@ -144,7 +144,7 @@ The float positioning scheme for a box is selected, by setting the {{ cssxref("f
 
 ### Absolute positioning
 
-In the _absolute positioning scheme_, boxes are entirely removed from the flow and don't interact with it at all. They are positioned relative to their [containing block](/ru/docs/Web/CSS/CSS_display/Containing_block) using the {{ cssxref("top") }}, {{ cssxref("bottom") }}, {{ cssxref("left") }} and {{ cssxref("right") }} CSS properties.
+In the _absolute positioning scheme_, boxes are entirely removed from the flow and don't interact with it at all. They are positioned relative to their [containing block](/ru/docs/Web/CSS/Guides/Display/Containing_block) using the {{ cssxref("top") }}, {{ cssxref("bottom") }}, {{ cssxref("left") }} and {{ cssxref("right") }} CSS properties.
 
 An element is absolutely positioned if the {{ cssxref("position") }} is set to `absolute` or `fixed`.
 
