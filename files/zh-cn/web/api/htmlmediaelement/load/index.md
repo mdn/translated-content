@@ -32,7 +32,7 @@ None.
 在 load 过程中 合适的事件会发生并通知给媒体本身，包括：
 
 - 如果已经是 `load` 过了，则 `abort` 事件发送给媒体。
-- 如果元素已经使用媒体进行了初始化, 则会发送 **[`emptied`](/zh-CN/docs/Web/API/HTMLMediaElement/emptied_event)** 事件。
+- 如果元素已经使用媒体进行了初始化，则会发送 **[`emptied`](/zh-CN/docs/Web/API/HTMLMediaElement/emptied_event)** 事件。
 - 如果重置播放位置到开始，通常指修改播放位置，**timeupdate** 事件触发。
 - 当已经选择了源并且已经准备加载内容了，**loadstart** 事件触发。
 - 之前的几点，媒体加载并且事件已经送达
