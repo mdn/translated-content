@@ -1,16 +1,16 @@
 ---
 title: 重ね合わせコンテキストの例 3
+short-title: 例 3
 slug: Web/CSS/Guides/Positioned_layout/Stacking_context/Example_3
-original_slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3
 l10n:
-  sourceCommit: 9b9086cf753e2d5721fe1229ff6f767ccf512f97
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 ## 解説
 
 この最後の例では、複数の階層を持つ HTML 構造内で、位置指定された要素を組み合わせたときと、 `z-index` がクラスセレクターを使って設定されたとき、発生する問題を示します。
 
-位置指定された DIV 要素で作られた、3 階層の階層メニューを一例として見てみましょう。第 2 階層と第 3 階層の DIV 要素は、マウスが親要素をホバーしたり、クリックしたりすると現れます。通常この種類のメニューはクライアントサイドかサーバーサイドのどちらかでスクリプトにより生成されます。このためスタイルルールは id セレクターではなく、クラスセレクターで割り当てられます。
+位置指定された `div` 要素で作られた、3 階層の階層メニューを一例として見てみましょう。第 2 階層と第 3 階層の `div` 要素は、マウスが親要素をホバーしたり、クリックしたりすると現れます。通常この種類のメニューはクライアントサイドかサーバーサイドのどちらかでスクリプトにより生成されます。このためスタイルルールは id セレクターではなく、クラスセレクターで割り当てられます。
 
 もし 3 つのメニュー階層が部分的に重なると、重なりの管理が問題になるかもしれません。
 
@@ -48,70 +48,68 @@ l10n:
 
 ```html live-sample___example
 <div class="lev1">
-  <span class="bold">LEVEL #1</span>
+  LEVEL #1
 
   <div id="container1">
     <div class="lev2">
-      <br /><span class="bold">LEVEL #2</span> <br />z-index: 1;
+      LEVEL #2 <br />z-index: 1;
 
       <div id="container2">
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
+        <div class="lev3">LEVEL #3</div>
+        <div class="lev3">LEVEL #3</div>
+        <div class="lev3">LEVEL #3</div>
+        <div class="lev3">LEVEL #3</div>
+        <div class="lev3">LEVEL #3</div>
+        <div class="lev3">LEVEL #3</div>
+        <div class="lev3">LEVEL #3</div>
+        <div class="lev3">LEVEL #3</div>
+        <div class="lev3">LEVEL #3</div>
+        <div class="lev3">LEVEL #3</div>
+        <div class="lev3">LEVEL #3</div>
       </div>
     </div>
 
-    <div class="lev2">
-      <br /><span class="bold">LEVEL #2</span> <br />z-index: 1;
-    </div>
-    <div class="lev2">
-      <br /><span class="bold">LEVEL #2</span> <br />z-index: 1;
-    </div>
-    <div class="lev2">
-      <br /><span class="bold">LEVEL #2</span> <br />z-index: 1;
-    </div>
+    <div class="lev2">LEVEL #2 <br />z-index: 1;</div>
+    <div class="lev2">LEVEL #2 <br />z-index: 1;</div>
+    <div class="lev2">LEVEL #2 <br />z-index: 1;</div>
   </div>
 </div>
 
-<div class="lev1">
-  <span class="bold">LEVEL #1</span>
-</div>
-
-<div class="lev1">
-  <span class="bold">LEVEL #1</span>
-</div>
-
-<div class="lev1">
-  <span class="bold">LEVEL #1</span>
-</div>
+<div class="lev1">LEVEL #1</div>
+<div class="lev1">LEVEL #1</div>
+<div class="lev1">LEVEL #1</div>
 ```
 
 ### CSS
 
 ```css live-sample___example
 div {
-  font: 12px Arial;
-}
-
-span.bold {
+  font: 12px "Arial";
   font-weight: bold;
+  padding-left: 5px;
 }
+.lev1 {
+  border: 2px outset #669966;
+  background-color: #ccffcc;
+}
+.lev2 {
+  border: 2px outset #990000;
+  background-color: #ffdddd;
+}
+.lev3 {
+  border: 2px outset #000099;
+  background-color: #ddddff;
+}
+```
 
-div.lev1 {
+```css
+div {
+  opacity: 0.9;
+}
+.lev1 {
   width: 250px;
   height: 70px;
   position: relative;
-  border: 2px outset #669966;
-  background-color: #ccffcc;
-  padding-left: 5px;
 }
 
 #container1 {
@@ -121,14 +119,10 @@ div.lev1 {
   left: 75px;
 }
 
-div.lev2 {
-  opacity: 0.9;
+.lev2 {
   width: 200px;
   height: 60px;
   position: relative;
-  border: 2px outset #990000;
-  background-color: #ffdddd;
-  padding-left: 5px;
 }
 
 #container2 {
@@ -138,13 +132,10 @@ div.lev2 {
   left: 110px;
 }
 
-div.lev3 {
+.lev3 {
   z-index: 10;
   width: 100px;
   position: relative;
-  border: 2px outset #000099;
-  background-color: #ddddff;
-  padding-left: 5px;
 }
 ```
 
@@ -160,6 +151,3 @@ div.lev3 {
 - [重ね合わせコンテキスト](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context): 重ね合わせコンテキストについてのメモ
 - [重ね合わせコンテキストの例 1](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_1): 2 階層の HTML 構造で、最終階層の `z-index`
 - [重ね合わせコンテキストの例 2](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_2): 2 階層の HTML 構造、全階層の `z-index`
-
-> [!NOTE]
-> 実は、サンプル画像は間違っているようです。第 2 階層の 2 つ目が第 3 階層に重複しているのは、第 2 階層が半透明であるため、新しい重ね合わせコンテキストが作成されるからです。基本的に、このサンプルページ全体が誤っており、誤解を招きます。

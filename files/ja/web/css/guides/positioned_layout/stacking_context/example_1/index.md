@@ -1,9 +1,9 @@
 ---
 title: 重ね合わせコンテキストの例 1
+short-title: 例 1
 slug: Web/CSS/Guides/Positioned_layout/Stacking_context/Example_1
-original_slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1
 l10n:
-  sourceCommit: 9b9086cf753e2d5721fe1229ff6f767ccf512f97
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 ## 解説
@@ -61,7 +61,7 @@ DIV #2 に正の (ゼロでなく auto でもない) `z-index` 値が代入さ�
 
 ```css
 .bold {
-  font-family: Arial;
+  font-family: "Arial";
   font-size: 12px;
   font-weight: bold;
 }
@@ -109,9 +109,7 @@ DIV #2 に正の (ゼロでなく auto でもない) `z-index` 値が代入さ�
 
 ## 関連情報
 
-- [`z-index` なしの重ね合わせ](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_without_z-index): `z-index` が使用されなかった場合に適用される既定の重ね合わせ規則
-- [浮動ボックスの重ね合わせ](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_floating_elements): 浮動ボックスが重ね合わせでどのように扱われるか
-- [z-index の使用](/ja/docs/Web/CSS/Guides/Positioned_layout/Using_z-index): `z-index` を使って既定の重ね合わせ変更する方法
-- [重ね合わせコンテキスト](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context): 重ね合わせコンテキストについてのメモ
-- [重ね合わせコンテキストの例 2](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_2): 2 階層の HTML 構造、全階層の `z-index`
-- [重ね合わせコンテキストの例 3](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_3): 3 階層の HTML 構造、第 2 階層の `z-index`
+- [例: 2 階層の HTML 構造で、すべての階層の `z-index`](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_2)
+- [例: 3 階層の HTML 構造で、第 2 階層の `z-index`](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_3)
+- [重ね合わせコンテキスト](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)
+- [CSS 位置指定レイアウト](/ja/docs/Web/CSS/Guides/Positioned_layout)モジュール

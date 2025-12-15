@@ -1,14 +1,14 @@
 ---
 title: 重ね合わせコンテキストの例 2
+short-title: 例 2
 slug: Web/CSS/Guides/Positioned_layout/Stacking_context/Example_2
-original_slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2
 l10n:
-  sourceCommit: 9b9086cf753e2d5721fe1229ff6f767ccf512f97
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 ## 解説
 
-これはとても簡単な例ですが、「重ね合わせコンテキスト」の概念を理解するカギになります。前の例には同じ 4 つの DIV 要素がありましたが、今度は両方の階層構造で `z-index` プロパティが設定されています。
+これは基本的な例ですが、「重ね合わせコンテキスト」の概念を理解するカギになります。前の例には同じ 4 つの DIV 要素がありましたが、今度は両方の階層構造で `z-index` プロパティが設定されています。
 
 DIV #2 (`z-index`: 2) が DIV #3 (`z-index`: 1) よりも上にあることがわかります。これは、どちらも同じ重ね合わせコンテキスト（ルートのもの）に属していて、z-index 値が要素の重なり方を決めているからです。
 
@@ -61,7 +61,7 @@ DIV #2 (`z-index`: 2) が DIV #3 (`z-index`: 1) よりも上にあることが�
 
 ```css live-sample___example
 div {
-  font: 12px Arial;
+  font: 12px "Arial";
 }
 
 span.bold {
@@ -119,9 +119,7 @@ span.bold {
 
 ## 関連情報
 
-- [`z-index` なしの重ね合わせ](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_without_z-index): `z-index` が使用されなかった場合に適用される既定の重ね合わせ規則
-- [浮動ボックスの重ね合わせ](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_floating_elements): 浮動ボックスが重ね合わせでどのように扱われるか
-- [z-index の使用](/ja/docs/Web/CSS/Guides/Positioned_layout/Using_z-index): `z-index` を使って既定の重ね合わせ変更する方法
-- [重ね合わせコンテキスト](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context): 重ね合わせコンテキストについてのメモ
-- [重ね合わせコンテキストの例 1](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_1): 2 階層の HTML 構造で、最終階層の `z-index`
-- [重ね合わせコンテキストの例 3](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_3): 3 階層の HTML 構造、第 2 階層の `z-index`
+- [例: 1 階層の HTML 構造で、最終階層の `z-index`](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_1)
+- [例: 3 階層の HTML 構造で、第 2 階層の `z-index`](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_3)
+- [重ね合わせコンテキスト](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)
+- [CSS 位置指定レイアウト](/ja/docs/Web/CSS/Guides/Positioned_layout)モジュール
