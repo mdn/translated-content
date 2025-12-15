@@ -1,7 +1,8 @@
 ---
 title: :-moz-submit-invalid
 slug: Web/CSS/Reference/Selectors/:-moz-submit-invalid
-original_slug: Web/CSS/:-moz-submit-invalid
+l10n:
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
 {{Non-standard_Header}}
@@ -28,7 +29,7 @@ Cette pseudo-classe ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- {{cssxref(":valid")}}
-- {{cssxref(":invalid")}}
-- {{cssxref(":required")}}
-- {{cssxref(":optional")}}
+- La pseudo-classe {{CSSxRef(":valid")}}
+- La pseudo-classe {{CSSxRef(":invalid")}}
+- La pseudo-classe {{CSSxRef(":required")}}
+- La pseudo-classe {{CSSxRef(":optional")}}
