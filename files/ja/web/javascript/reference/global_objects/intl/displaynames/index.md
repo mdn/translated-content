@@ -56,7 +56,7 @@ regionNames.of('MM');  // "Myanmar (Burma)"
 
 // 繁体字中国語での地域名を表示
 regionNames = new Intl.DisplayNames(['zh-Hant'], {type: 'region'});
-regionNames.of('419'; // "拉丁美洲"
+regionNames.of('419'); // "拉丁美洲"
 regionNames.of('BZ'); // "貝里斯"
 regionNames.of('US'); // "美國"
 regionNames.of('BA'); // "波士尼亞與赫塞哥維納"
