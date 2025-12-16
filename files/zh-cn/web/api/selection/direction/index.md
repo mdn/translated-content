@@ -62,7 +62,7 @@ function log(text) {
 }
 ```
 
-代码会检查是否存在 `direction` 属性；如果存在，则为 [`selectionchange` 事件](/zh-CN/docs/Web/API/Document/selectionchange_event)添加监听器，用于获取当前选区并记录其方向。如果该属性不受支持，代码会记录这一情况并隐藏可选择文本。
+代码会检查是否定义了 `direction` 属性；如果存在，则为 [`selectionchange` 事件](/zh-CN/docs/Web/API/Document/selectionchange_event)添加监听器，用于获取当前选区并记录其方向。如果该属性不受支持，代码会记录这一情况并隐藏可选择文本。
 
 ```js
 const input = document.getElementById("text-box");
