@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Debugging_HTML
 original_slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Forms_challenge", "Learn_web_development/Core/Styling_basics", "Learn_web_development/Core/Structuring_content")}}
 
 Écrire du code HTML, c'est bien, mais si quelque chose se passe mal, que faire pour trouver où est l'erreur dans le code ? Cet article vous indique divers outils pour vous aider à trouver et corriger les erreurs en HTML.
 
@@ -13,23 +13,19 @@ original_slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Être familiarisé avec les bases du HTML, traitées aux pages
-        <a
-          href="/fr/docs/Apprendre/HTML/Introduction_à_HTML/Getting_started"
-          >Commencer avec le HTML,</a
-        >
-        <a
-          href="/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
-          >Fondamentaux du texte HTML </a
-        >et
-        <a
-          href="/fr/docs/Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks"
-          >Création d'hyperliens</a
-        >.
+        Connaissances de base en HTML, comme présenté dans
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >Syntaxe HTML de base</a
+        >. Sémantique au niveau du texte comme les <a href="/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
+          >titres et paragraphes</a
+        > et les <a href="/fr/docs/Learn_web_development/Core/Structuring_content/Lists"
+          >listes</a
+        >. <a href="/fr/docs/Learn_web_development/Core/Structuring_content/Structuring_documents"
+          >HTML structurel</a>.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif&nbsp;:</th>
+      <th scope="row">Objectifs d'apprentissage&nbsp;:</th>
       <td>
         Apprendre les bases de l'utilisation des outils de débogage pour
         détecter des problèmes en HTML.
@@ -168,12 +164,10 @@ Les messages d'erreur sont généralement utiles, mais parfois non ; avec un peu
 
 Si vous ne comprenez pas ce que signifie chaque message d'erreur, ne vous inquiétez pas — une bonne idée consiste à corriger quelques erreurs à la fois. Puis essayez de revalider le HTML pour voir les erreurs restantes. Parfois, la correction d'une erreur en amont permet aussi d'éliminer d'autres messages d'erreur — plusieurs erreurs sont souvent causées par un même problème, avec une sorte d'effet domino.
 
-Vous saurez que toutes vos erreurs sont corrigées quand vous verrez la bannière suivante dans la sortie :
-
-![Banner that reads "The document validates according to the specified schema(s) and to additional constraints checked by the validator."](valid-html-banner.png)
+Vous saurez que toutes vos erreurs sont corrigées lorsque vous verrez une petite bannière verte indiquant qu'il n'y a aucune erreur à signaler. Au moment de la rédaction, elle affichait «&nbsp;Vérification du document terminée. Aucune erreur ou avertissement à afficher.&nbsp;»
 
 ## Résumé
 
 Voilà donc une introduction au débogage HTML, qui devrait vous donner des compétences utiles sur lesquelles compter lorsque vous commencerez à déboguer des CSS, du JavaScript ou d'autres types de code plus tard dans votre carrière. Ceci marque également la fin des articles d'apprentissage du module Introduction au HTML — maintenant vous pouvez faire un auto‑test avec nos évaluations : le lien ci‑dessous vous dirige sur la première.
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Forms_challenge", "Learn_web_development/Core/Styling_basics", "Learn_web_development/Core/Structuring_content")}}

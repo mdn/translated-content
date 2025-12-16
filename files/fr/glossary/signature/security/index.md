@@ -22,7 +22,3 @@ Le système échoue si la clé privée est compromise ou si le destinataire donn
 
 - [Signature numérique](https://fr.wikipedia.org/wiki/Signature_numérique) sur Wikipédia
 - Voir {{glossary("digest")}}, {{glossary("encryption")}}
-
-### Référence technique
-
-- [Tutoriel sur la sécurité informatique](/fr/docs/Apprendre/Tutoriels/Les_bases_de_la_sécurité_informatique)
