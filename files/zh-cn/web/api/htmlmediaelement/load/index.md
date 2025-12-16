@@ -27,7 +27,7 @@ None.
 
 调用 `load()` 会使媒体上所有正在进行的操作中止，然后根据 `audio` 或者 `video` 元素的 `src` 或者 `source` 属性里寻找合适的播放源并重新加载媒体内容。更多查看 [Supporting multiple formats](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio#supporting_multiple_formats) 和 [Video and audio content](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) 。
 
-中止任何正在进行的活动的过程将导致 {{domxref("HTMLMediaElement.play", "play()")}} 返回的所有未完成的 {{jsxref("Promise")}} 根据其在开始加载新媒体之前的状态被适当地解决或拒绝。待处理的播放 promise 会以 `"AbortError"` {{domxref("DOMException")}} 中止。
+中止任何正在进行的活动的过程将导致 {{domxref("HTMLMediaElement.play", "play()")}} 返回的所有未完成的 {{jsxref("Promise")}} 根据其在开始加载新媒体之前的状态被适当地兑现或拒绝。待处理的播放 promise 会以 `"AbortError"` {{domxref("DOMException")}} 中止。
 
 在 load 过程中 合适的事件会发生并通知给媒体本身，包括：
 
