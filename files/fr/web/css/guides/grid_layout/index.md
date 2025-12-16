@@ -116,14 +116,14 @@ Dans l'exemple qui suit, on montre comment utiliser une grille avec trois pistes
 ### Termes définis dans le glossaire
 
 - [Grille](/fr/docs/Glossary/Grid)
-- [Lignes](/fr/docs/Glossaire/Grid_Lines)
-- [Pistes](/fr/docs/Glossaire/Grid_Tracks)
-- [Cellules](/fr/docs/Glossaire/Grid_Cell)
-- [Zones](/fr/docs/Glossaire/Grid_Areas)
+- [Lignes](/fr/docs/Glossary/Grid_Lines)
+- [Pistes](/fr/docs/Glossary/Grid_Tracks)
+- [Cellules](/fr/docs/Glossary/Grid_Cell)
+- [Zones](/fr/docs/Glossary/Grid_Areas)
 - [Gouttières](/fr/docs/Glossary/Gutters)
-- [Axe](/fr/docs/Glossaire/Grid_Axis)
-- [Ligne horizontale](/fr/docs/Glossaire/Grid_Rows)
-- [Colonnes](/fr/docs/Glossaire/Grid_Column)
+- [Axe](/fr/docs/Glossary/Grid_Axis)
+- [Ligne horizontale](/fr/docs/Glossary/Grid_Rows)
+- [Colonnes](/fr/docs/Glossary/Grid_Column)
 
 ## Guides
 

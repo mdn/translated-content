@@ -77,7 +77,7 @@ Firefox 13, basé sur Gecko 13.0, est sorti le 5 juin 2012. Cette page résume l
 
 #### Amélioration de l'Ardoise
 
-- L'[Ardoise](/fr/docs/Outils/Ardoise) a maintenant une option dans le menu Aide pour vous rendre à la documentation MDN sur l'Ardoise.
+- L'_Ardoise_ a maintenant une option dans le menu Aide pour vous rendre à la documentation MDN sur l'Ardoise.
 
 ## Changements pour les développeurs de Mozilla et de modules complémentaires
 

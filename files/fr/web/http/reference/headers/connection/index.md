@@ -15,11 +15,11 @@ Except for the standard hop-by-hop headers ({{HTTPHeader("Keep-Alive")}}, {{HTTP
   <tbody>
     <tr>
       <th scope="row">Type d'en-tête</th>
-      <td><a href="/fr/docs/Glossaire/General_header">En-tête général</a></td>
+      <td><a href="/fr/docs/Glossary/General_header">En-tête général</a></td>
     </tr>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Glossaire/Forbidden_header_name"
+        <a href="/fr/docs/Glossary/Forbidden_header_name"
           >Nom d'en-tête interdit</a
         >
       </th>
