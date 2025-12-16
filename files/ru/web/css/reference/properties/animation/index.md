@@ -52,7 +52,7 @@ animation: 0.5s linear 1s infinite alternate slidein;
 }
 ```
 
-[Описание того, какие свойства являются анимируемые](/ru/docs/Web/CSS/Guides/Transitions/Using#which_css_properties_are_animatable) доступно; стоит отметить, что это описание также подходит для [CSS переходов](/ru/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
+[Описание того, какие свойства являются анимируемые](/ru/docs/Web/CSS/Guides/Transitions/Using#which_css_properties_are_animatable) доступно; стоит отметить, что это описание также подходит для [CSS переходов](/ru/docs/Web/CSS/Guides/Transitions/Using).
 
 {{cssinfo}}
 
