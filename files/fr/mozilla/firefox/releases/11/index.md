@@ -59,7 +59,7 @@ _Aucun changement._
 
 ### Réseau
 
-- La modification dans Firefox 8 concernant la suppression des guillemets comme délimiteurs pour {{rfc(2231)}} et {{rfc(5987)}} a été annulée, car cela a cassé certains sites, y compris Outlook Web Access.
+- La modification dans Firefox 8 concernant la suppression des guillemets comme délimiteurs pour {{RFC(2231)}} et {{RFC(5987)}} a été annulée, car cela a cassé certains sites, y compris Outlook Web Access.
 
 ### Outils de développement
 
