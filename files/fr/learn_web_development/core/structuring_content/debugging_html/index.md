@@ -38,7 +38,9 @@ original_slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 
 Quand on écrit du code , tout va généralement bien, jusqu'au moment redouté où une erreur se produit — vous avez fait quelque chose d'incorrect, donc votre code ne fonctionne pas — soit pas du tout, soit pas tout à fait comme vous l'aviez souhaité. Par exemple, ce qui suit montre une erreur signalée lors d'une tentative de {{glossary("compile","compilation")}} d'un programme simple écrit en Rust.
 
-![Console montrant le résultat de la compilation d'un programme Rust avec guillemet manquant dans une chaîne textuelle dans une instruction d'affichage. Le message signalé est « erreur : guillemet double manquant dans la chaîne ».](fr-erreur.png)Ici, le message d'erreur est relativement facile à comprendre — «&nbsp;unterminated double quote string&nbsp;» : il manque un guillemet double ouvrant ou fermant pour envelopper la chaîne. Si vous regardez le listage, vous verrez `println!(Salut, Ô Monde!");` il manque un guillemet double. Cependant, des messages d'erreur peuvent devenir plus complexes et plus abscons au fur et à mesure que le programme grossit et, même dans des cas simples devenir intimidants à quelqu'un qui ne connaît rien du Rust.
+![Console montrant le résultat de la compilation d'un programme Rust avec guillemet manquant dans une chaîne textuelle dans une instruction d'affichage. Le message signalé est « erreur : guillemet double manquant dans la chaîne ».](error-message.png)
+
+Ici, le message d'erreur est relativement facile à comprendre — «&nbsp;unterminated double quote string&nbsp;» : il manque un guillemet double ouvrant ou fermant pour envelopper la chaîne. Si vous regardez le listage, vous verrez `println!(Salut, Ô Monde!");` il manque un guillemet double. Cependant, des messages d'erreur peuvent devenir plus complexes et plus abscons au fur et à mesure que le programme grossit et, même dans des cas simples devenir intimidants à quelqu'un qui ne connaît rien du Rust.
 
 Déboguer ne doit toutefois pas devenir un problème — la clé pour être à l'aise lors de l'écriture et du débogage d'un programme réside dans une bonne connaissance à la fois du langage et des outils.
 
@@ -63,7 +65,10 @@ HTML ne craint pas les erreurs de syntaxe, car les navigateurs l'analysent de ma
 Voici le moment venu d'étudier le caractère permissif du code HTML.
 
 1. Primo, télécharchez notre démo [debug-example](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html) et enregistrez‑le localement. Cette démo est délibérement écrite avec des erreurs pour que nous puissions les examiner (le balisage HTML est dit **malformé**, par opposition à **bien-formé**).
-2. Ensuite, ouvrez‑le dans un navigateur. Vous verrez quelque chose comme ceci&nbsp;:![Un simple document HTML intitulé « Exemples de HTML à déboguer » et quelques informations sur les erreurs HTML courantes, telles que les éléments non fermés ou mal imbriqués et des attributs non fermés. ](fr-html-errone.png)
+2. Ensuite, ouvrez‑le dans un navigateur. Vous verrez quelque chose comme ceci&nbsp;:
+
+   ![Un simple document HTML intitulé « Exemples de HTML à déboguer » et quelques informations sur les erreurs HTML courantes, telles que les éléments non fermés ou mal imbriqués et des attributs non fermés. ](badly-formed-html.png)
+
 3. Constatons que ce n'est pas terrible&nbsp;; examinons le code source pour voir ce que nous pouvons en faire (seul le contenu de l'élément `body` est affiché)&nbsp;:
 
    ```html
@@ -126,7 +131,7 @@ Comme vous pouvez le voir dans l'exemple ci-dessus, il faut s'assurer que votre 
 
 La meilleure stratégie consiste à faire passer votre page HTML par le [Markup Validation Service (](https://validator.w3.org/)Service de validation de balisage) — créé et maintenu par le W3C, l'organisation s'occupant des normes définissant le HTML, les CSS et autres technologies web. Cet outil Web accepte un document HTML en entrée, le parcourt et fait le rapport de ce qui ne va pas dans le HTML soumis.
 
-![La page d'accueil du validateur HTML](fr-w3c.png)
+![La page d'accueil du validateur HTML](validator.png)
 
 Pour définir le HTML à valider, vous pouvez donner une adresse web (_Validate by URI_) , téléverser un fichier HTML (_Validate by File Upload_) ou entrer directement du code HTML (_Validate by Direct Input_).
 
@@ -141,7 +146,7 @@ Essayons cet outil avec notre [document exemple](https://github.com/mdn/learning
 
 Cela vous donnera une liste d'erreurs et autres informations.
 
-![La liste des résultats de la validation de HTML par le service de validation du W3C.](fr-liste-erreur.png)
+![La liste des résultats de la validation de HTML par le service de validation du W3C.](validation-results.png)
 
 #### Interprétation des messages d'erreur
 

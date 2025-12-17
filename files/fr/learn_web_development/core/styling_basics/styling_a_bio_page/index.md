@@ -68,7 +68,7 @@ Suivez les instructions ci-dessous pour mettre en forme la biographie. Essayez d
 3. Donnez au titre de niveau un une taille de police de `2rem` et au titre de niveau deux une taille de police de `1.5rem`.
 4. Sélectionnez le `<div>` à l'aide d'un sélecteur de classe, et donnez-lui une couleur `darkslategray` et une graisse de police en gras.
 5. Affichez les liens en `green`.
-6. Affichez les liens en `darkgreen` lors du survol de la souris ou de la sélection au clavier (vous devrez utiliser quelques {{CSSxRef("pseudo-classes")}} pour cela).
+6. Affichez les liens en `darkgreen` lors du survol de la souris ou de la sélection au clavier (vous devrez utiliser quelques [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) pour cela).
 7. Supprimez le soulignement des liens lors du survol ou de la sélection.
 
 ## Astuces et conseils
