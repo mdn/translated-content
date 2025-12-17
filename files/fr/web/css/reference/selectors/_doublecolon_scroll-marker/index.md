@@ -1,14 +1,13 @@
 ---
 title: ::scroll-marker
 slug: Web/CSS/Reference/Selectors/::scroll-marker
-original_slug: Web/CSS/::scroll-marker
 l10n:
-  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
+  sourceCommit: 9dbcd91284ec1ec64c4d8b343c3770880dd25129
 ---
 
 {{SeeCompatTable}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::scroll-marker`** peut être généré à l'intérieur de n'importe quel élément et représente son marqueur de défilement. Il est placé dans le {{cssxref("::scroll-marker-group")}} de l'ancêtre du {{glossary("scroll container","conteneur de défilement")}} le plus proche. Un marqueur de défilement se comporte comme une ancre (élément {{htmlelement("a")}}) dont la cible de défilement est l'élément d'origine du marqueur — et fait défiler le conteneur de défilement jusqu'à cet élément lorsqu'il est activé.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::scroll-marker`** peut être généré à l'intérieur de n'importe quel élément et représente son marqueur de défilement. Il est placé dans le {{CSSxRef("::scroll-marker-group")}} de l'ancêtre du {{Glossary("scroll container","conteneur de défilement")}} le plus proche. Un marqueur de défilement se comporte comme une ancre (élément {{HTMLElement("a")}}) dont la cible de défilement est l'élément d'origine du marqueur — et fait défiler le conteneur de défilement jusqu'à cet élément lorsqu'il est activé.
 
 ## Syntaxe
 
@@ -20,7 +19,7 @@ Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS
 
 ## Description
 
-Un `::scroll-marker` est généré sur un élément lorsque la propriété {{cssxref("content")}} de `::scroll-marker` est définie sur une valeur différente de `none`, et que l'élément possède un ancêtre, conteneur de défilement, avec une valeur {{cssxref("scroll-marker-group")}} différente de `none` (ce qui signifie qu'il générera un pseudo-élément {{cssxref("::scroll-marker-group")}}).
+Un `::scroll-marker` est généré sur un élément lorsque la propriété {{CSSxRef("content")}} de `::scroll-marker` est définie sur une valeur différente de `none`, et que l'élément possède un ancêtre, conteneur de défilement, avec une valeur {{CSSxRef("scroll-marker-group")}} différente de `none` (ce qui signifie qu'il générera un pseudo-élément {{CSSxRef("::scroll-marker-group")}}).
 
 Le pseudo-élément `::scroll-marker-group` du conteneur de défilement contient automatiquement tout pseudo-élément `::scroll-marker` généré sur le conteneur ou ses descendants. Cela permet de les positionner et de les disposer comme un groupe, généralement utilisé lors de la création d'un carrousel CSS pour générer un indicateur de position de défilement. Les marqueurs individuels peuvent être utilisés pour naviguer vers leurs éléments de contenu associés.
 
@@ -36,7 +35,7 @@ Dans cet exemple, nous montrons comment créer des marqueurs de défilement sur 
 
 #### HTML
 
-Nous avons une liste {{htmlelement("ul")}} HTML de base avec plusieurs éléments {{htmlelement("li")}}.
+Nous avons une liste {{HTMLElement("ul")}} HTML de base avec plusieurs éléments {{HTMLElement("li")}}.
 
 ```html live-sample___créer_des_marqueurs_de_défilement_de_carrousel live-sample___numérotation_et_style_personnalisés_des_marqueurs_de_défilement
 <ul>
@@ -53,7 +52,7 @@ Nous avons une liste {{htmlelement("ul")}} HTML de base avec plusieurs élément
 
 #### CSS
 
-Nous transformons notre `<ul>` en conteneur de défilement avec accrochage en définissant {{cssxref("display")}} sur `flex`, créant une seule ligne non enroulée d'éléments `<li>`. La propriété {{cssxref("overflow-x")}} est définie sur `auto`, ce qui signifie que si les éléments débordent de leur conteneur sur l'axe x, le contenu défile horizontalement. Nous convertissons ensuite le `<ul>` en [conteneur d'ancrage au défilement](/fr/docs/Glossary/Scroll_snap#conteneur_dancrage_au_défilement), garantissant que les éléments s'alignent toujours lorsqu'on fait défiler le conteneur avec une valeur {{cssxref("scroll-snap-type")}} de `mandatory`.
+Nous transformons notre `<ul>` en conteneur de défilement avec accrochage en définissant {{CSSxRef("display")}} sur `flex`, créant une seule ligne non enroulée d'éléments `<li>`. La propriété {{CSSxRef("overflow-x")}} est définie sur `auto`, ce qui signifie que si les éléments débordent de leur conteneur sur l'axe x, le contenu défile horizontalement. Nous convertissons ensuite le `<ul>` en [conteneur d'ancrage au défilement](/fr/docs/Glossary/Scroll_snap#conteneur_dancrage_au_défilement), garantissant que les éléments s'alignent toujours lorsqu'on fait défiler le conteneur avec une valeur {{CSSxRef("scroll-snap-type")}} de `mandatory`.
 
 Nous créons un groupe de marqueurs de défilement avec la propriété `scroll-marker-group`, en plaçant le groupe après tout le contenu.
 
@@ -69,7 +68,7 @@ ul {
 }
 ```
 
-Ensuite, nous mettons en évidence les éléments `<li>`, en utilisant la propriété {{cssxref("flex")}} pour les rendre à `33%` de la largeur du conteneur. La valeur {{cssxref("scroll-snap-align")}} `start` permet d'aligner le côté gauche de l'élément visible le plus à gauche avec le bord gauche du conteneur.
+Ensuite, nous mettons en évidence les éléments `<li>`, en utilisant la propriété {{CSSxRef("flex")}} pour les rendre à `33%` de la largeur du conteneur. La valeur {{CSSxRef("scroll-snap-align")}} `start` permet d'aligner le côté gauche de l'élément visible le plus à gauche avec le bord gauche du conteneur.
 
 ```css live-sample___créer_des_marqueurs_de_défilement_de_carrousel live-sample___numérotation_et_style_personnalisés_des_marqueurs_de_défilement
 li {
@@ -94,7 +93,7 @@ li::scroll-marker {
 }
 ```
 
-Nous appliquons également des mises en évidence au pseudo-élément {{cssxref("::scroll-marker-group")}} afin de disposer les marqueurs de défilement au centre de la ligne, avec un espacement de `0.4em` entre chacun&nbsp;:
+Nous appliquons également des mises en évidence au pseudo-élément {{CSSxRef("::scroll-marker-group")}} afin de disposer les marqueurs de défilement au centre de la ligne, avec un espacement de `0.4em` entre chacun&nbsp;:
 
 ```css live-sample___créer_des_marqueurs_de_défilement_de_carrousel live-sample___numérotation_et_style_personnalisés_des_marqueurs_de_défilement
 ::scroll-marker-group {
@@ -104,7 +103,7 @@ Nous appliquons également des mises en évidence au pseudo-élément {{cssxref(
 }
 ```
 
-Enfin, nous mettons en évidence différemment le marqueur de l'élément actuellement défilé, en ciblant ce marqueur avec la pseudo-classe {{cssxref(":target-current")}}.
+Enfin, nous mettons en évidence différemment le marqueur de l'élément actuellement défilé, en ciblant ce marqueur avec la pseudo-classe {{CSSxRef(":target-current")}}.
 
 ```css live-sample___créer_des_marqueurs_de_défilement_de_carrousel
 ::scroll-marker:target-current {
@@ -122,7 +121,7 @@ Cet exemple est identique au précédent, sauf que nous avons appliqué un style
 
 ### CSS
 
-Dans cet exemple, nous définissons un compteur nommé `markers` que nous voulons incrémenter sur chaque `<li>`, grâce à la propriété {{cssxref("counter-increment")}}&nbsp;:
+Dans cet exemple, nous définissons un compteur nommé `markers` que nous voulons incrémenter sur chaque `<li>`, grâce à la propriété {{CSSxRef("counter-increment")}}&nbsp;:
 
 ```css live-sample___numérotation_et_style_personnalisés_des_marqueurs_de_défilement
 li {
@@ -130,7 +129,7 @@ li {
 }
 ```
 
-Nous définissons ensuite la propriété {{cssxref("content")}} du pseudo-élément `::scroll-marker` sur la fonction {{cssxref("counter()")}}, en lui passant le nom du compteur `markers` en argument. Cela insère un numéro dans chaque marqueur, qui s'incrémente automatiquement. Le reste du style est rudimentaire, mais il illustre comment les marqueurs peuvent être entièrement mis en évidence.
+Nous définissons ensuite la propriété {{CSSxRef("content")}} du pseudo-élément `::scroll-marker` sur la fonction {{CSSxRef("counter()")}}, en lui passant le nom du compteur `markers` en argument. Cela insère un numéro dans chaque marqueur, qui s'incrémente automatiquement. Le reste du style est rudimentaire, mais il illustre comment les marqueurs peuvent être entièrement mis en évidence.
 
 ```css live-sample___numérotation_et_style_personnalisés_des_marqueurs_de_défilement
 li::scroll-marker {
@@ -147,7 +146,7 @@ li::scroll-marker {
 }
 ```
 
-Pour une autre personnalisation intéressante, nous incluons deux règles pour sélectionner le marqueur du premier et du dernier élément de la liste, en insérant respectivement {{cssxref(":first-child")}} et {{cssxref(":last-child")}} dans le sélecteur. Nous donnons au premier marqueur le texte «&nbsp;Premier&nbsp;» et au dernier le texte «&nbsp;Dernier&nbsp;».
+Pour une autre personnalisation intéressante, nous incluons deux règles pour sélectionner le marqueur du premier et du dernier élément de la liste, en insérant respectivement {{CSSxRef(":first-child")}} et {{CSSxRef(":last-child")}} dans le sélecteur. Nous donnons au premier marqueur le texte «&nbsp;Premier&nbsp;» et au dernier le texte «&nbsp;Dernier&nbsp;».
 
 ```css live-sample___numérotation_et_style_personnalisés_des_marqueurs_de_défilement
 li:first-child::scroll-marker {
@@ -159,7 +158,7 @@ li:last-child::scroll-marker {
 }
 ```
 
-Pour améliorer l'expérience utilisateur, nous appliquons une couleur différente aux marqueurs au survol ({{cssxref(":hover")}}) et utilisons la pseudo-classe `:target-current` pour définir une {{cssxref("color")}} et une {{cssxref("background-color")}} différentes sur le marqueur de l'élément actuellement affiché, afin que les utilisateur·ice·s sachent quel élément est visible&nbsp;:
+Pour améliorer l'expérience utilisateur, nous appliquons une couleur différente aux marqueurs au survol ({{CSSxRef(":hover")}}) et utilisons la pseudo-classe `:target-current` pour définir une {{CSSxRef("color")}} et une {{CSSxRef("background-color")}} différentes sur le marqueur de l'élément actuellement affiché, afin que les utilisateur·ice·s sachent quel élément est visible&nbsp;:
 
 ```css live-sample___numérotation_et_style_personnalisés_des_marqueurs_de_défilement
 ::scroll-marker:hover {
@@ -186,10 +185,10 @@ Pour améliorer l'expérience utilisateur, nous appliquons une couleur différen
 
 ## Voir aussi
 
-- {{cssxref("scroll-marker-group")}}
-- {{cssxref("::scroll-button()")}}
-- {{cssxref("::scroll-marker-group")}}
-- {{cssxref(":target-current")}}
+- La propriété {{CSSxRef("scroll-marker-group")}}
+- Le pseudo-élément {{CSSxRef("::scroll-button()")}}
+- Le pseudo-élément {{CSSxRef("::scroll-marker-group")}}
+- La pseudo-classe {{CSSxRef(":target-current")}}
 - [Créer des carrousels en CSS](/fr/docs/Web/CSS/CSS_overflow/CSS_carousels)
 - Le module de [listes et compteurs CSS](/fr/docs/Web/CSS/Guides/Lists)
 - Le module de [débordement CSS](/fr/docs/Web/CSS/Guides/Overflow)

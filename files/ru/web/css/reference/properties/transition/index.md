@@ -103,7 +103,7 @@ transition: unset;
 - ноль или одно {{cssxref("&lt;single-transition-timing-function&gt;")}} значение, представляющее временну́ю функцию
 - ноль, одно или два {{cssxref("&lt;time&gt;")}} значения. Первое значение, которое может быть интерпретировано как время, присваивается {{cssxref("transition-duration")}}, а второе значение, которое может быть интерпретировано как время, присваивается {{cssxref("transition-delay")}}.
 
-Посмотрите, [что предпринимается](/ru/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#%d0%9a%d0%be%d0%b3%d0%b4%d0%b0_%d1%83_%d1%81%d0%bf%d0%b8%d1%81%d0%ba%d0%be%d0%b2_%d0%b7%d0%bd%d0%b0%d1%87%d0%b5%d0%bd%d0%b8%d0%b9_%d1%81%d0%b2%d0%be%d0%b9%d1%81%d1%82%d0%b2_%d1%80%d0%b0%d0%b7%d0%bd%d1%8b%d0%b5_%d0%b4%d0%bb%d0%b8%d0%bd%d1%8b) когда у списков значений свойств разные длины. Вкратце, избыточные свойства, не подлежащие анимации, игнорируются.
+Посмотрите, [что предпринимается](/ru/docs/Web/CSS/Guides/Transitions/Using#%d0%9a%d0%be%d0%b3%d0%b4%d0%b0_%d1%83_%d1%81%d0%bf%d0%b8%d1%81%d0%ba%d0%be%d0%b2_%d0%b7%d0%bd%d0%b0%d1%87%d0%b5%d0%bd%d0%b8%d0%b9_%d1%81%d0%b2%d0%be%d0%b9%d1%81%d1%82%d0%b2_%d1%80%d0%b0%d0%b7%d0%bd%d1%8b%d0%b5_%d0%b4%d0%bb%d0%b8%d0%bd%d1%8b) когда у списков значений свойств разные длины. Вкратце, избыточные свойства, не подлежащие анимации, игнорируются.
 
 ### Формальное описание синтаксиса
 
@@ -111,7 +111,7 @@ transition: unset;
 
 ## Примеры
 
-Примеры CSS переходов включены в главную статью о [CSS переходах](/ru/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
+Примеры CSS переходов включены в главную статью о [CSS переходах](/ru/docs/Web/CSS/Guides/Transitions/Using).
 
 ## Спецификации
 
@@ -125,5 +125,5 @@ transition: unset;
 
 ## Смотрите также
 
-- [Использование CSS переходов](/ru/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Использование CSS переходов](/ru/docs/Web/CSS/Guides/Transitions/Using)
 - {{ domxref("TransitionEvent") }}

@@ -1,7 +1,6 @@
 ---
 title: layer()
 slug: Web/CSS/Reference/At-rules/@import/layer_function
-original_slug: Web/CSS/@import/layer_function
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---

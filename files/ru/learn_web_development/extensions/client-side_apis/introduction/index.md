@@ -244,7 +244,7 @@ audioElement.addEventListener("ended", () => {
 
 ### У них есть дополнительные средства безопасности там, где это необходимо
 
-Функциональность WebAPI подвержена тем же соображениям безопасности, что и JavaScript или другие веб-технологии (например, [same-origin policy](/ru/docs/Web/Security/Same-origin_policy)), но иногда они содержат дополнительные механизмы защиты. К примеру, некоторые из наиболее современных WebAPI работают только со страницами, обслуживаемыми через HTTPS в связи с передачей конфиденциальных данных (примеры: [Service Workers](/ru/docs/Web/API/Service_Worker_API) и [Push](/ru/docs/Web/API/Push_API)).
+Функциональность WebAPI подвержена тем же соображениям безопасности, что и JavaScript или другие веб-технологии (например, [same-origin policy](/ru/docs/Web/Security/Defenses/Same-origin_policy)), но иногда они содержат дополнительные механизмы защиты. К примеру, некоторые из наиболее современных WebAPI работают только со страницами, обслуживаемыми через HTTPS в связи с передачей конфиденциальных данных (примеры: [Service Workers](/ru/docs/Web/API/Service_Worker_API) и [Push](/ru/docs/Web/API/Push_API)).
 
 К тому же, некоторые WebAPI запрашивают разрешение от пользователя, как только к ним происходит вызов в коде. Например, [Notifications API](/ru/docs/Web/API/Notifications_API) запрашивает разрешение для показа диалогого окна:
 

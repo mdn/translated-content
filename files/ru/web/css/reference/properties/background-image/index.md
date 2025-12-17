@@ -33,7 +33,7 @@ background-image: inherit;
 - `none`
   - : Это ключевое слово обозначает отсутствие изображений.
 - `<image>`
-  - : {{cssxref("&lt;image&gt;")}} обозначает изображение для отображения. Их может быть несколько, разделённых запятыми, поскольку поддерживается[несколько фонов](/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds).
+  - : {{cssxref("&lt;image&gt;")}} обозначает изображение для отображения. Их может быть несколько, разделённых запятыми, поскольку поддерживается[несколько фонов](/ru/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds).
 
 ### Официальный синтаксис
 

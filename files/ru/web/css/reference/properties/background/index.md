@@ -48,7 +48,7 @@ background:
 }
 ```
 
-Свойство является [сокращением,](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties) которое устанавливает следующие свойства в одном объявлении: {{cssxref("background-clip")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}, {{cssxref("background-position")}}, {{cssxref("background-repeat")}}, {{cssxref("background-size")}}, и {{cssxref("background-attachment")}}.
+Свойство является [сокращением,](/ru/docs/Web/CSS/Guides/Cascade/Shorthand_properties) которое устанавливает следующие свойства в одном объявлении: {{cssxref("background-clip")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}, {{cssxref("background-position")}}, {{cssxref("background-repeat")}}, {{cssxref("background-size")}}, и {{cssxref("background-attachment")}}.
 
 Как и во всех сокращённых свойствах, любые пропущенные вложенные значения будут установлены в свои [изначальные значения](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing).
 
@@ -137,5 +137,5 @@ background: no-repeat center/80% url("../img/image.png");
 ## Смотрите также
 
 - {{cssxref("-moz-background-inline-policy")}}
-- [Использование градиентов](/ru/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- [Несколько backgrounds](/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [Использование градиентов](/ru/docs/Web/CSS/Guides/Images/Using_gradients)
+- [Несколько backgrounds](/ru/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)

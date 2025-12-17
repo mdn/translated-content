@@ -11,7 +11,7 @@ slug: Web/CSS/Guides/Media_queries
 
 In addition, the {{domxref("Window.matchMedia()")}} method can be used to test the window against a media query. You can also use {{domxref("MediaQueryList.addListener()")}} to be notified whenever the state of the queries changes. With this functionality, your site or app can respond to changes in the device configuration, orientation, or state.
 
-You can learn more about programmatically using media queries in [Testing media queries](/ru/docs/Web/CSS/CSS_media_queries/Testing_media_queries).
+You can learn more about programmatically using media queries in [Testing media queries](/ru/docs/Web/CSS/Guides/Media_queries/Testing).
 
 ## Reference
 
@@ -22,9 +22,9 @@ You can learn more about programmatically using media queries in [Testing media 
 
 ## Guides
 
-- [Using media queries](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Using media queries](/ru/docs/Web/CSS/Guides/Media_queries/Using)
   - : Introduces media queries, their syntax, and the operators and media features which are used to construct media query expressions.
-- [Testing media queries](/ru/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+- [Testing media queries](/ru/docs/Web/CSS/Guides/Media_queries/Testing)
   - : Describes how to test media queries from your JavaScript code, programmatically, to determine the state of the device, and to set up listeners that let your code be notified when the results of media queries change (such as when the user rotates the screen, causing an orientation change).
 
 ## Спецификации

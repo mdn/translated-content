@@ -1,9 +1,8 @@
 ---
 title: :required
 slug: Web/CSS/Reference/Selectors/:required
-original_slug: Web/CSS/:required
 l10n:
-  sourceCommit: 7f460077d6f16c939718e9482a8270166f6d9abd
+  sourceCommit: 4cb9d89a204a9532370693b982e8a3b274a874b1
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:required`** permet de cibler un élément {{HTMLElement("input")}} pour lequel l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required) est activé. Cela permet de mettre en forme les éléments obligatoires pour remplir correctement un formulaire.
@@ -49,7 +48,7 @@ label {
 La pseudo-classe est utile pour mettre en évidence les champs qui doivent contenir des données valides avant qu'un formulaire puisse être soumis.
 
 > [!NOTE]
-> La pseudo-classe {{cssxref(":optional")}} pourra être utilisée pour mettre en forme les champs facultatifs.
+> La pseudo-classe {{CSSxRef(":optional")}} pourra être utilisée pour mettre en forme les champs facultatifs.
 
 ## Syntaxe
 
@@ -61,7 +60,7 @@ La pseudo-classe est utile pour mettre en évidence les champs qui doivent conte
 
 ## Accessibilité
 
-Si un formulaire ({{HTMLElement("form")}}) contient des champs ({{htmlelement("input")}}) optionnels, les champs obligatoires doivent être indiqués avec l'attribut [`input`](/fr/docs/Web/HTML/Element/required#input). Ainsi, les personnes utilisant des outils d'assistance (par exemple un lecteur d'écran) pourront savoir que ces champs ont besoin d'un contenu valide afin de pouvoir envoyer le formulaire.
+Si un formulaire ({{HTMLElement("form")}}) contient des champs ({{HTMLElement("input")}}) optionnels, les champs obligatoires doivent être indiqués avec l'attribut [`input`](/fr/docs/Web/HTML/Element/required#input). Ainsi, les personnes utilisant des outils d'assistance (par exemple un lecteur d'écran) pourront savoir que ces champs ont besoin d'un contenu valide afin de pouvoir envoyer le formulaire.
 
 Les champs obligatoires devraient également être indiqués visuellement et cette indication ne doit pas uniquement être fournie avec une couleur. Généralement, un texte descriptif ou une icône est utilisé.
 
@@ -127,7 +126,7 @@ input:required:invalid {
 ## Voir aussi
 
 - Les autres pseudo-classes liées à la validation&nbsp;:
-  - {{cssxref(":optional")}}
-  - {{cssxref(":invalid")}}
-  - {{cssxref(":valid")}}
+  - {{CSSxRef(":optional")}}
+  - {{CSSxRef(":invalid")}}
+  - {{CSSxRef(":valid")}}
 - [La validation des données d'un formulaire](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation)

@@ -1,12 +1,11 @@
 ---
 title: page-orientation
 slug: Web/CSS/Reference/At-rules/@page/page-orientation
-original_slug: Web/CSS/@page/page-orientation
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`page-orientation`** pour la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{cssxref("@page")}} contrôle la rotation d'une page imprimée. Il gère le flux du contenu d'une page à l'autre lorsque l'orientation de la page est modifiée. Ce comportement diffère du descripteur [`size`](/fr/docs/Web/CSS/Reference/At-rules/@page/size) car l'utilisateur·rice peut définir la direction de rotation de la page.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`page-orientation`** pour la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@page")}} contrôle la rotation d'une page imprimée. Il gère le flux du contenu d'une page à l'autre lorsque l'orientation de la page est modifiée. Ce comportement diffère du descripteur [`size`](/fr/docs/Web/CSS/Reference/At-rules/@page/size) car l'utilisateur·rice peut définir la direction de rotation de la page.
 
 Ce descripteur facilite la mise en page et l'orientation des documents imprimés, en particulier lorsque les documents sont imprimés recto‑verso. L'utilisateur·rice peut préciser comment les pages seront tournées à l'impression. C'est utile pour disposer du contenu tel que des tableaux, qui peuvent être plus larges que le reste du document, dans une orientation différente.
 
@@ -43,11 +42,11 @@ Ce descripteur facilite la mise en page et l'orientation des documents imprimés
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 

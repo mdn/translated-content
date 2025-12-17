@@ -1,9 +1,8 @@
 ---
 title: :where()
 slug: Web/CSS/Reference/Selectors/:where
-original_slug: Web/CSS/:where
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:where()`** prend une liste de sélecteurs en argument et cible tout élément qui peut être sélectionné par l'un des sélecteurs de la liste.
@@ -69,7 +68,7 @@ La pseudo-classe `:where()` nécessite une [liste de sélecteurs](/fr/docs/Web/C
 
 ### Analyse permissive de la liste des sélecteurs
 
-`:is()` et `:where()` acceptent une liste permissive de sélecteurs ([voir la spécification](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list)).
+`:is()` et `:where()` acceptent une liste permissive de sélecteurs ([voir la spécification <sup>(angl.)</sup>](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list)).
 
 En général, lorsqu'on utilise une liste de sélecteurs, celle-ci devient intégralement invalide dès que l'un des sélecteurs est invalide. En utilisant `:is()` ou `:where()`, si la liste contient un sélecteur incorrect ou qui n'est pas pris en charge, celui-ci sera ignoré et les autres seront utilisés.
 
@@ -180,7 +179,7 @@ Cela ne fonctionnera pas pour les liens rouges, car les sélecteurs à l'intéri
 Cependant, les sélecteurs à l'intérieur de `:where()` ont une spécificité à 0, et le lien orange du pied de page sera surchargé par le sélecteur simple.
 
 > [!NOTE]
-> Vous pouvez également consulter [cet exemple sur GitHub](https://mdn.github.io/css-examples/is-where/).
+> Vous pouvez également consulter [cet exemple sur GitHub <sup>(angl.)</sup>](https://mdn.github.io/css-examples/is-where/).
 
 {{EmbedLiveSample('comparer_where_et_is', '100%', 600)}}
 
@@ -194,6 +193,6 @@ Cependant, les sélecteurs à l'intérieur de `:where()` ont une spécificité �
 
 ## Voir aussi
 
-- {{CSSxRef(":is", ":is()")}}
+- {{CSSxRef(":is()")}}
 - [Liste de sélecteurs](/fr/docs/Web/CSS/Reference/Selectors/Selector_list)
 - [Composants web](/fr/docs/Web/API/Web_components)

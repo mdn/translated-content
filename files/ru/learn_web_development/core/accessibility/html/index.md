@@ -3,7 +3,7 @@ title: "HTML: Хорошая основа для доступности"
 slug: Learn_web_development/Core/Accessibility/HTML
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_accessibility","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}
 
 Большая часть содержимого интернета может быть сделана доступной просто благодаря использованию правильных HTML-элементов по назначению. В этой статье подробно рассмотрено как HTML может быть использован для обеспечения максимальной доступности.
 
@@ -521,4 +521,4 @@ HTML5 содержит два новых элемента — {{htmlelement("fig
 
 Теперь вы должны хорошо разбираться в написании доступного HTML для большинства случаев. Наша статья про основы WAI-ARIA также заполнит пробелы в знаниях, но эта статья посвящена основам. Далее мы рассмотрим CSS и JavaScript, и как хорошо или плохое их использование влияет на доступность.
 
-{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_accessibility","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}

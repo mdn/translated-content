@@ -1,9 +1,8 @@
 ---
 title: horizontal-viewport-segments
 slug: Web/CSS/Reference/At-rules/@media/horizontal-viewport-segments
-original_slug: Web/CSS/@media/horizontal-viewport-segments
 l10n:
-  sourceCommit: ee348fc4da928b445f95660fae094269604b1b9c
+  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`horizontal-viewport-segments`** permet de détecter si l'appareil possède un nombre spécifié de segments de zone d'affichage disposés horizontalement (côte à côte).
@@ -12,7 +11,7 @@ En lien avec l'[API Viewport Segments](/fr/docs/Web/API/Viewport_segments_API), 
 
 ## Syntaxe
 
-La caractéristique `horizontal-viewport-segments` se définit comme une valeur {{cssxref("integer", "entière")}} de `1` ou plus, représentant le nombre de segments horizontaux de la zone d'affichage de l'appareil.
+La caractéristique `horizontal-viewport-segments` se définit comme une valeur {{CSSxRef("integer", "entière")}} de `1` ou plus, représentant le nombre de segments horizontaux de la zone d'affichage de l'appareil.
 
 - La valeur sera `1` pour&nbsp;:
   - Un appareil non pliable (par exemple, un smartphone ou une tablette à écran unique classique)
@@ -72,6 +71,6 @@ Consultez notre [démo de l'API Viewport Segments <sup>(angl.)</sup>](https://md
 
 ## Voir aussi
 
-- {{cssxref("@media/vertical-viewport-segments", "vertical-viewport-segments")}} (caractéristique `@media`)
+- La caractéristique média {{CSSxRef("@media/vertical-viewport-segments", "vertical-viewport-segments")}}
 - L'[API Viewport Segments](/fr/docs/Web/API/Viewport_segments_API)
 - [Expérimentation des API Foldable <sup>(angl.)</sup>](https://developer.chrome.com/blog/foldable-apis-ot) sur developer.chrome.com (2024)

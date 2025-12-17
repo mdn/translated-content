@@ -41,6 +41,6 @@ l10n:
 
 ## Смотрите также
 
-- [Политика одинакового источника](/ru/docs/Web/Security/Same-origin_policy)
+- [Политика одинакового источника](/ru/docs/Web/Security/Defenses/Same-origin_policy)
 - {{Glossary("Site")}}
 - [Спецификация HTML: origin](https://html.spec.whatwg.org/multipage/origin.html#origin)

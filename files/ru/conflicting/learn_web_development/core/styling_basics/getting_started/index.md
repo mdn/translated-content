@@ -4,7 +4,7 @@ slug: conflicting/Learn_web_development/Core/Styling_basics/Getting_started
 original_slug: Learn/CSS/First_steps/How_CSS_is_structured
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/What_is_CSS", "conflicting/Learn_web_development/Core/Styling_basics")}}
 
 Теперь, когда у вас есть представление о том, чем является CSS, и о его основах, настало время посмотреть немного глубже в структуру самого языка. Нам уже встречались многие из обсуждаемых здесь концепций; вы можете вернуться к этому, чтобы разобраться, если вы обнаружите какие-либо более поздние концепции запутанными.
 
@@ -321,13 +321,13 @@ p {
 
 ## Правила
 
-До сих пор не сталкивались мы с правилами [`@rules`](/ru/docs/Web/CSS/CSS_syntax/At-rules) (произносится как _эт-рулс_, от английского "at-rules"). Это особые правила, дающие CSS инструкции, как вести себя. У некоторых правил `@rules` простые названия и значения. Чтобы, к примеру, импортировать ещё одну таблицу стилей в основной CSS-файл, нужно использовать `@import`:
+До сих пор не сталкивались мы с правилами [`@rules`](/ru/docs/Web/CSS/Guides/Syntax/At-rules) (произносится как _эт-рулс_, от английского "at-rules"). Это особые правила, дающие CSS инструкции, как вести себя. У некоторых правил `@rules` простые названия и значения. Чтобы, к примеру, импортировать ещё одну таблицу стилей в основной CSS-файл, нужно использовать `@import`:
 
 ```css
 @import "styles2.css";
 ```
 
-Чаще других встречается `@rules` под названием `@media`: оно позволяет вам использовать [медиавыражения](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries), чтобы применять CSS в определённых случаях, только если выполняются те или иные условия (например, при изменении размеров окна или при просмотре сайта с иного типа устройства).
+Чаще других встречается `@rules` под названием `@media`: оно позволяет вам использовать [медиавыражения](/ru/docs/Web/CSS/Guides/Media_queries/Using), чтобы применять CSS в определённых случаях, только если выполняются те или иные условия (например, при изменении размеров окна или при просмотре сайта с иного типа устройства).
 
 Ниже у нас CSS-файл, в котором значение заднего фона элемента `<body>` равно `pink`. Однако после мы добавили правило `@media`, которое делает задний фон элемента синим, при условии если ширина окна не менее 30em.
 
@@ -569,4 +569,4 @@ padding- left: 10px;
 
 Полезно знать, как браузер делает из HTML и CSS готовую страницу, поэтом следующая ваша статья — [Как работает CSS](/ru/docs/Learn_web_development/Core/Styling_basics/What_is_CSS) — мы рассмотрим этот процесс.
 
-{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/What_is_CSS", "conflicting/Learn_web_development/Core/Styling_basics")}}

@@ -57,7 +57,7 @@ slug: Learn_web_development/Core/Structuring_content/HTML_images
 ![A basic image of a dinosaur, embedded in a browser, with Images in HTML written above it](basic-image.png)
 
 > [!NOTE]
-> Такие элементы как {{htmlelement("img")}} и {{htmlelement("video")}} иногда называются замещаемыми элементами. Это потому что содержание элемента и размер, определяет внешний ресурс (как изображение или видео файл), а не содержание самого элемента. Вы можете узнать о них больше в [Замещаемых элементах](/ru/docs/Web/CSS/CSS_images/Replaced_element_properties).
+> Такие элементы как {{htmlelement("img")}} и {{htmlelement("video")}} иногда называются замещаемыми элементами. Это потому что содержание элемента и размер, определяет внешний ресурс (как изображение или видео файл), а не содержание самого элемента. Вы можете узнать о них больше в [Замещаемых элементах](/ru/docs/Web/CSS/Guides/Images/Replaced_element_properties).
 
 > [!NOTE]
 > Вы можете найти готовый пример этого раздела, [размещённый на Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) (смотрите также [исходный код](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html)).

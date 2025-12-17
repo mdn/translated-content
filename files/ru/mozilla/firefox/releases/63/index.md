@@ -29,9 +29,9 @@ slug: Mozilla/Firefox/Releases/63
 ### CSS
 
 - Добавлена поддержка псевдокласса {{CSSxRef(":defined")}} ([Firefox bug 1331334](https://bugzil.la/1331334)).
-- В [Flexbox-раскладку](/ru/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox#the_gap_properties) добавлена поддержка {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}} и {{CSSxRef("gap")}} ([Firefox bug 1398483](https://bugzil.la/1398483)).
+- В [Flexbox-раскладку](/ru/docs/Web/CSS/Guides/Box_alignment/In_flexbox#the_gap_properties) добавлена поддержка {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}} и {{CSSxRef("gap")}} ([Firefox bug 1398483](https://bugzil.la/1398483)).
 - Снова включена поддержка [запросов pixel-density правила @media](/ru/docs/Web/CSS/@media/-webkit-device-pixel-ratio), у которых есть префикс -webkit ([Firefox bug 1444139](https://bugzil.la/1444139)).
-- Реализована поддержка свойств [CSS Flexible Box Layout](/ru/docs/Web/CSS/CSS_flexible_box_layout) (Flexbox) {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}} и {{CSSxRef("align-items")}}, а также {{CSSxRef("justify-content")}} ([Firefox bug 1472843](https://bugzil.la/1472843)).
+- Реализована поддержка свойств [CSS Flexible Box Layout](/ru/docs/Web/CSS/Guides/Flexible_box_layout) (Flexbox) {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}} и {{CSSxRef("align-items")}}, а также {{CSSxRef("justify-content")}} ([Firefox bug 1472843](https://bugzil.la/1472843)).
 - Реализована функция `path` для {{CSSxRef("offset-path")}} ([Firefox bug 1429298](https://bugzil.la/1429298)).
 - Внесены [улучшения синтаксиса из спецификации Media Queries Level 4](/ru/docs/Web/JavaScript/Reference/Errors/Unexpected_type) ([Firefox bug 1472843](https://bugzil.la/1472843)).
 - Свойства `offset-*` переименованы в {{CSSxRef("inset-block-start")}}, {{CSSxRef("inset-block-end")}}, {{CSSxRef("inset-inline-start")}} и {{CSSxRef("inset-inline-end")}} ([Firefox bug 1464782](https://bugzil.la/1464782)).

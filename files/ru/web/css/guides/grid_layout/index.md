@@ -124,18 +124,18 @@ slug: Web/CSS/Guides/Grid_layout
 
 ## Руководства
 
-- [Базовая концепция Grid Layout](/ru/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-- [Связь Grid Layout с другими методами компоновки](/ru/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
-- [Расположение элементов по грид-линиям с помощью CSS Grid](/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-- [Шаблон области сетки](/ru/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-- [Использование именованных линий](/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+- [Базовая концепция Grid Layout](/ru/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+- [Связь Grid Layout с другими методами компоновки](/ru/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods)
+- [Расположение элементов по грид-линиям с помощью CSS Grid](/ru/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+- [Шаблон области сетки](/ru/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)
+- [Использование именованных линий](/ru/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)
 - [Авторазмещение в CSS Grid Layout](/ru/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
-- [Выравнивание блока в CSS Grid Layout](/ru/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-- [CSS Сетка, логические Значения и Режимы Редактирования](/ru/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
+- [Выравнивание блока в CSS Grid Layout](/ru/docs/Web/CSS/Guides/Grid_layout/Box_alignment)
+- [CSS Сетка, логические Значения и Режимы Редактирования](/ru/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes)
 - [CSS Grid Layout и доступность](/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
 - [CSS Grid and progressive enhancement](/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
-- [Реализация общих макетов используя CSS Grid](/ru/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
-- [Subgrid](/ru/docs/Web/CSS/CSS_grid_layout/Subgrid)
+- [Реализация общих макетов используя CSS Grid](/ru/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts)
+- [Subgrid](/ru/docs/Web/CSS/Guides/Grid_layout/Subgrid)
 - [Masonry Layout](/ru/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout){{Experimental_Inline}}
 
 ## Внешние ресурсы

@@ -1,9 +1,8 @@
 ---
 title: :nth-last-child
 slug: Web/CSS/Reference/Selectors/:nth-last-child
-original_slug: Web/CSS/:nth-last-child
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:nth-last-child`** permet de cibler les éléments qui possèdent `an+b-1` nœud frères qui les suivent pour un même élément parent avec un indice n entier qui est incrémenté à partir de 0. Avec CSS3, il était nécessaire que l'élément ciblé ait un élément parent, cette restriction a été levée en CSS4.
@@ -61,7 +60,7 @@ La pseudo-classe `nth-last-child` prend un seul argument qui représente le moti
 ### Notation fonctionnelle
 
 - `<An+B>`
-  - : Représente les éléments dont la position, à partir de la fin, est la `An+B`-ième avec `n` qui parcourt les entiers à partir de 0. Les valeurs fournies pour `A` et `B` doivent être des entiers {{cssxref("&lt;integer&gt;")}}.
+  - : Représente les éléments dont la position, à partir de la fin, est la `An+B`-ième avec `n` qui parcourt les entiers à partir de 0. Les valeurs fournies pour `A` et `B` doivent être des entiers {{CSSxRef("&lt;integer&gt;")}}.
 
 #### La syntaxe `of <selector>`
 
@@ -101,7 +100,7 @@ Ce sélecteur applique un style aux éléments de liste s'ils font également pa
 - `p:nth-last-child(n)` ou `p:nth-last-child(n+1)`
   - : Représente chaque élément `<p>` parmi un groupe de frères. Cela est identique à un simple sélecteur `p`. (Puisque `n` commence à zéro, tandis que le dernier élément commence à un, `n` et `n+1` sélectionneront tous deux les mêmes éléments.)
 - `p:nth-last-child(1)` ou `p:nth-last-child(0n+1)`
-  - : Représente chaque `<p>` qui est le premier élément parmi un groupe de frères, en partant de la fin. Cela est identique au sélecteur {{cssxref(":last-child")}}.
+  - : Représente chaque `<p>` qui est le premier élément parmi un groupe de frères, en partant de la fin. Cela est identique au sélecteur {{CSSxRef(":last-child")}}.
 
 ### Exemple de tableau
 
@@ -275,6 +274,6 @@ Les éléments avec `class="noted"` ont une bordure inférieure épaisse et les 
 
 ## Voir aussi
 
-- {{Cssxref(":nth-child")}}
-- {{Cssxref(":nth-last-of-type")}}
+- La pseudo-classe {{CSSxRef(":nth-child")}}
+- La pseudo-classe {{CSSxRef(":nth-last-of-type")}}
 - [Requêtes de quantité pour CSS <sup>(angl.)</sup>](https://alistapart.com/article/quantity-queries-for-css)

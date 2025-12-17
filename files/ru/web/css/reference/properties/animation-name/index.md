@@ -108,7 +108,7 @@ animation-name: unset
 
 ## Примеры
 
-См. [CSS animations](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations).
+См. [CSS animations](/ru/docs/Web/CSS/Guides/Animations/Using).
 
 ## Спецификации
 
@@ -120,5 +120,5 @@ animation-name: unset
 
 ## Смотрите также
 
-- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Использование CSS-анимации](/ru/docs/Web/CSS/Guides/Animations/Using)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

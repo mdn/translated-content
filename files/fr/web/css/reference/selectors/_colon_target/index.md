@@ -1,9 +1,8 @@
 ---
 title: :target
 slug: Web/CSS/Reference/Selectors/:target
-original_slug: Web/CSS/:target
 l10n:
-  sourceCommit: b460458fa125f4ee252d01466c1390d16ba19215
+  sourceCommit: 11d748f9e217b6a9fd16291d7815a6f803f0136d
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:target`** permet de cibler l'unique élément (s'il existe) dont l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes#id) correspond au fragment d'identifiant de l'URI du document.
@@ -112,4 +111,4 @@ p:target i {
 ## Voir aussi
 
 - [Utiliser la pseudo-classe `:target` dans les sélecteurs](/fr/docs/Web/CSS/Guides/Selectors/Using_:target)
-- {{cssxref("::target-text")}} (pour mettre en évidence les fragments de texte)
+- {{CSSxRef("::target-text")}} (pour mettre en évidence les fragments de texte)

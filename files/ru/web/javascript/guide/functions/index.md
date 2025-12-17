@@ -3,7 +3,7 @@ title: Функции
 slug: Web/JavaScript/Guide/Functions
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}
 
 ## Функции в JavaScript
 
@@ -690,4 +690,4 @@ var p = new Person();
 - [ECMAScript® 2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/index.html#sec-ecmascript-function-objects)
 - [Учебник по Javascript - замыкания](https://learn.javascript.ru/closures)
 
-{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
+{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}

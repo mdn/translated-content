@@ -3,7 +3,7 @@ title: Что внутри "head"? Метаданные в HTML
 slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 Элемент {{glossary("Head", "head")}} HTML-документа не отображается на странице в веб-браузере. Он содержит такую информацию, как:
 
@@ -276,4 +276,4 @@ slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
 
 На этом заканчивается наш беглый обзор по HTML-блоку head — с его помощью вы можете делать гораздо больше, но исчерпывающий обзор будет скучным и запутанным на этом этапе, мы же сейчас хотели дать вам представление о самых распространённых вещах, которые вы можете там найти! В следующей статье мы рассмотрим основы разметки текста в HTML.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "conflicting/Learn_web_development/Core/Structuring_content")}}

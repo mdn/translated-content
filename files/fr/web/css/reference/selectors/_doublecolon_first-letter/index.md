@@ -1,9 +1,8 @@
 ---
 title: ::first-letter
 slug: Web/CSS/Reference/Selectors/::first-letter
-original_slug: Web/CSS/::first-letter
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::first-letter`** sélectionne la première lettre de la première ligne d'un bloc, si elle n'est pas précédée par un quelconque autre contenu (comme une image ou un tableau en ligne) sur sa ligne.
@@ -35,7 +34,7 @@ La première lettre d'un élément n'est pas toujours triviale à identifier&nbs
 
 - La ponctuation qui précède ou suit immédiatement la première lettre est incluse dans la correspondance. La ponctuation comprend tout caractère Unicode défini dans les classes _open_ (Ps), _close_ (Pe), _initial quote_ (Pi), _final quote_ (Pf) et _other punctuation_ (Po).
 - Certaines langues ont des digraphes qui sont toujours capitalisés ensemble, comme le `IJ` en néerlandais. Dans ces cas, les deux lettres du digraphe doivent être correspondantes par le pseudo-élément `::first-letter`.
-- Une combinaison du pseudo-élément {{ cssxref("::before") }} et de la propriété {{ cssxref("content") }} peut injecter du texte au début de l'élément. Dans ce cas, `::first-letter` correspondra à la première lettre de ce contenu généré.
+- Une combinaison du pseudo-élément {{CSSxRef("::before")}} et de la propriété {{CSSxRef("content")}} peut injecter du texte au début de l'élément. Dans ce cas, `::first-letter` correspondra à la première lettre de ce contenu généré.
 
 > [!NOTE]
 > CSS a introduit la notation `::first-letter` (avec deux deux-points) pour distinguer [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) des [pseudo-elements](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements). Pour des raisons de compatibilité, les navigateurs acceptent également `:first-letter`, introduit plus tôt.
@@ -46,13 +45,13 @@ La première lettre d'un élément n'est pas toujours triviale à identifier&nbs
 
 Seul un petit sous-ensemble de propriétés CSS peut être utilisé avec le pseudo-élément `::first-letter`&nbsp;:
 
-- Toutes les propriétés de police&nbsp;: {{ Cssxref("font") }}, {{ Cssxref("font-style") }}, {{cssxref("font-feature-settings")}}, {{cssxref("font-kerning")}}, {{cssxref("font-language-override")}}, {{cssxref("font-stretch")}}, {{cssxref("font-synthesis")}}, {{ Cssxref("font-variant") }}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{ Cssxref("font-weight") }}, {{ Cssxref("font-size") }}, {{cssxref("font-size-adjust")}}, {{ Cssxref("line-height") }} et {{ Cssxref("font-family") }}
-- Toutes les propriétés d'arrière-plan&nbsp;: {{ Cssxref("background") }}, {{ Cssxref("background-color") }}, {{ Cssxref("background-image") }}, {{cssxref("background-clip")}}, {{cssxref("background-origin")}}, {{ Cssxref("background-position") }}, {{ Cssxref("background-repeat") }}, {{ cssxref("background-size") }}, {{ Cssxref("background-attachment") }} et {{cssxref("background-blend-mode")}}
-- Toutes les propriétés de marge&nbsp;: {{ Cssxref("margin") }}, {{ Cssxref("margin-top") }}, {{ Cssxref("margin-right") }}, {{ Cssxref("margin-bottom") }}, {{ Cssxref("margin-left") }}
-- Toutes les propriétés de remplissage&nbsp;: {{ Cssxref("padding") }}, {{ Cssxref("padding-top") }}, {{ Cssxref("padding-right") }}, {{ Cssxref("padding-bottom") }}, {{ Cssxref("padding-left") }}
-- Toutes les propriétés de bordure&nbsp;: les raccourcis {{ Cssxref("border") }}, {{ Cssxref("border-style") }}, {{ Cssxref("border-color") }}, {{ cssxref("border-width") }}, {{ cssxref("border-radius") }}, {{cssxref("border-image")}} et les propriétés longues
-- La propriété {{ cssxref("color") }}
-- Les propriétés CSS {{ cssxref("text-decoration") }}, {{cssxref("text-shadow")}}, {{ cssxref("text-transform") }}, {{ cssxref("letter-spacing") }}, {{ cssxref("word-spacing") }} (le cas échéant), {{ cssxref("line-height") }}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, {{cssxref("box-shadow")}}, {{ cssxref("float") }}, {{ cssxref("vertical-align") }} (uniquement si la valeur de `float` est `none`)
+- Toutes les propriétés de police&nbsp;: {{CSSxRef("font")}}, {{CSSxRef("font-style")}}, {{CSSxRef("font-feature-settings")}}, {{CSSxRef("font-kerning")}}, {{CSSxRef("font-language-override")}}, {{CSSxRef("font-stretch")}}, {{CSSxRef("font-synthesis")}}, {{CSSxRef("font-variant")}}, {{CSSxRef("font-variant-alternates")}}, {{CSSxRef("font-variant-caps")}}, {{CSSxRef("font-variant-east-asian")}}, {{CSSxRef("font-variant-ligatures")}}, {{CSSxRef("font-variant-numeric")}}, {{CSSxRef("font-variant-position")}}, {{CSSxRef("font-weight")}}, {{CSSxRef("font-size")}}, {{CSSxRef("font-size-adjust")}}, {{CSSxRef("line-height")}} et {{CSSxRef("font-family")}}
+- Toutes les propriétés d'arrière-plan&nbsp;: {{CSSxRef("background")}}, {{CSSxRef("background-color")}}, {{CSSxRef("background-image")}}, {{CSSxRef("background-clip")}}, {{CSSxRef("background-origin")}}, {{CSSxRef("background-position")}}, {{CSSxRef("background-repeat")}}, {{CSSxRef("background-size")}}, {{CSSxRef("background-attachment")}} et {{CSSxRef("background-blend-mode")}}
+- Toutes les propriétés de marge&nbsp;: {{CSSxRef("margin")}}, {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}}, {{CSSxRef("margin-bottom")}}, {{CSSxRef("margin-left")}}
+- Toutes les propriétés de remplissage&nbsp;: {{CSSxRef("padding")}}, {{CSSxRef("padding-top")}}, {{CSSxRef("padding-right")}}, {{CSSxRef("padding-bottom")}}, {{CSSxRef("padding-left")}}
+- Toutes les propriétés de bordure&nbsp;: les raccourcis {{CSSxRef("border")}}, {{CSSxRef("border-style")}}, {{CSSxRef("border-color")}}, {{CSSxRef("border-width")}}, {{CSSxRef("border-radius")}}, {{CSSxRef("border-image")}} et les propriétés longues
+- La propriété {{CSSxRef("color")}}
+- Les propriétés CSS {{CSSxRef("text-decoration")}}, {{CSSxRef("text-shadow")}}, {{CSSxRef("text-transform")}}, {{CSSxRef("letter-spacing")}}, {{CSSxRef("word-spacing")}} (le cas échéant), {{CSSxRef("line-height")}}, {{CSSxRef("text-decoration-color")}}, {{CSSxRef("text-decoration-line")}}, {{CSSxRef("text-decoration-style")}}, {{CSSxRef("box-shadow")}}, {{CSSxRef("float")}}, {{CSSxRef("vertical-align")}} (uniquement si la valeur de `float` est `none`)
 
 ## Syntaxe
 
@@ -106,7 +105,7 @@ h2 + p::first-letter {
 
 #### Résultat
 
-{{ EmbedLiveSample('lettre_en_tête_de_ligne', '100%', 350) }}
+{{EmbedLiveSample('lettre_en_tête_de_ligne', '100%', 350)}}
 
 ### Effet sur la ponctuation spéciale et les caractères non latins
 
@@ -141,7 +140,7 @@ p::first-letter {
 
 #### Résultat
 
-{{ EmbedLiveSample('effet_sur_la_ponctuation_spéciale_et_les_caractères_non_latins', '100%', 350) }}
+{{EmbedLiveSample('effet_sur_la_ponctuation_spéciale_et_les_caractères_non_latins', '100%', 350)}}
 
 ### Mise en forme de la première lettre dans un élément de texte SVG
 
@@ -176,7 +175,7 @@ text::first-letter {
 
 #### Résultat
 
-{{ EmbedLiveSample("mise_en_forme_de_la_première_lettre_dans_un_élément_de_texte_SVG", "100%", "100") }}
+{{EmbedLiveSample("mise_en_forme_de_la_première_lettre_dans_un_élément_de_texte_SVG", "100%", "100")}}
 
 ## Spécifications
 
@@ -188,4 +187,4 @@ text::first-letter {
 
 ## Voir aussi
 
-- {{cssxref("::first-line")}}
+- Le pseudo-élément {{CSSxRef("::first-line")}}

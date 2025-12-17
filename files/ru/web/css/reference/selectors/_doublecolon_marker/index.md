@@ -19,12 +19,12 @@ original_slug: Web/CSS/::marker
 
 Только некоторые CSS-свойства могут быть использованы с `::marker` в качестве селектора:
 
-- Все [свойства шрифтов](/ru/docs/Web/CSS/CSS_fonts)
+- Все [свойства шрифтов](/ru/docs/Web/CSS/Guides/Fonts)
 - {{CSSxRef("white-space")}}
 - {{CSSxRef("color")}}
 - {{CSSxRef("text-combine-upright")}}, {{CSSxRef("unicode-bidi")}} и {{CSSxRef("direction")}}
 - Свойство {{CSSxRef("content")}}
-- Все [animation](/ru/docs/Web/CSS/CSS_animations#css_properties) и [transition](/ru/docs/Web/CSS/CSS_Transitions#Properties) свойства
+- Все [animation](/ru/docs/Web/CSS/Guides/Animations#css_properties) и [transition](/ru/docs/Web/CSS/CSS_Transitions#Properties) свойства
 
 > [!NOTE]
 > The specification states that additional CSS properties may be supported in future.

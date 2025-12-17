@@ -1,12 +1,11 @@
 ---
 title: ::-webkit-meter-even-less-good-value
 slug: Web/CSS/Reference/Selectors/::-webkit-meter-even-less-good-value
-original_slug: Web/CSS/::-webkit-meter-even-less-good-value
 l10n:
-  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
+  sourceCommit: f336c5b6795a562c64fe859aa9ee2becf223ad8a
 ---
 
-{{Non-standard_header}}
+{{Non-standard_Header}}
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-meter-even-less-good-value`** est une [extension de WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui met en forme l'élément {{HTMLElement("meter")}} lorsque les attributs `value` et `optimum` se situent en dehors de la plage basse-haute, mais dans des zones opposées. À titre d'illustration, cela s'applique lorsque `value` < `low` < `high` < `optimum` ou `value` > `high` > `low` > `optimum`.
 
@@ -93,9 +92,9 @@ Ce pseudo-élément ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-Les pseudo-éléments utilisés par WebKit/Blink pour mettre en forme les autres parties d'un élément {{htmlelement("meter")}}&nbsp;:
+Les pseudo-éléments utilisés par WebKit/Blink pour mettre en forme les autres parties d'un élément {{HTMLElement("meter")}}&nbsp;:
 
-- {{cssxref("::-webkit-meter-inner-element")}}
-- {{cssxref("::-webkit-meter-bar")}}
-- {{cssxref("::-webkit-meter-optimum-value")}}
-- {{cssxref("::-webkit-meter-suboptimum-value")}}
+- {{CSSxRef("::-webkit-meter-inner-element")}}
+- {{CSSxRef("::-webkit-meter-bar")}}
+- {{CSSxRef("::-webkit-meter-optimum-value")}}
+- {{CSSxRef("::-webkit-meter-suboptimum-value")}}

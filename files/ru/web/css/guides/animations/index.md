@@ -28,7 +28,7 @@ slug: Web/CSS/Guides/Animations
 
 ## Guides
 
-- [Использование CSS-анимаций](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Использование CSS-анимаций](/ru/docs/Web/CSS/Guides/Animations/Using)
   - : Пошаговое руководство по созданию анимаций с помощью CSS. Статья описывает все касающиеся анимации CSS-свойства и @-правила и объясняет, как они взаимодействуют друг с другом.
 
 ## Спецификации

@@ -1140,4 +1140,4 @@ p {
 
 - [Нижнее меню](http://techstream.org/Web-Design/Dock-Menu-with-CSS3) с использованием CSS переходов
 - Интерфейс {{domxref("TransitionEvent")}} и событие .
-- [Использование CSS-анимаций](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Использование CSS-анимаций](/ru/docs/Web/CSS/Guides/Animations/Using)

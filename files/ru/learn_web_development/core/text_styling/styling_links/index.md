@@ -3,7 +3,7 @@ title: Стилизация ссылок
 slug: Learn_web_development/Core/Text_styling/Styling_links
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}
 
 При стилизации ссылок, важно понимать как использовать псевдоклассы, чтобы стилизировать состояния ссылок эффективно, и как стилизировать ссылки для использования в общих разнообразных функциях интерфейса: таких как например навигационное меню и вкладки. Мы рассмотрим все эти темы в этой статье.
 
@@ -450,4 +450,4 @@ a:active {
 
 Мы надеемся эта статья снабдила вас всем что вам надо знать о ссылках — на данный момент! Последняя статья в нашем модуле стилизации текста детализирует как использовать пользовательские шрифты на вашем веб-сайте или как они больше известны веб-шрифты.
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}

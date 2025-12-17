@@ -1,12 +1,11 @@
 ---
 title: dynamic-range
 slug: Web/CSS/Reference/At-rules/@media/dynamic-range
-original_slug: Web/CSS/@media/dynamic-range
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`dynamic-range`** permet de tester la combinaison de la luminosité, du taux de contraste et de la profondeur de couleur pris en charge par l'{{glossary("user agent", "agent utilisateur")}} et le périphérique de sortie.
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`dynamic-range`** permet de tester la combinaison de la luminosité, du taux de contraste et de la profondeur de couleur pris en charge par l'{{Glossary("user agent", "agent utilisateur")}} et le périphérique de sortie.
 
 > [!NOTE]
 > Certains appareils disposent de capacités à grande plage dynamique qui ne sont pas toujours «&nbsp;actives&nbsp;» et doivent être activées (parfois de façon programmatique, parfois par l'utilisateur·ice, parfois selon le contenu). Cette caractéristique média ne teste pas si la capacité de plage dynamique est active&nbsp;; elle teste uniquement si l'appareil est capable d'afficher des visuels à grande plage dynamique.
@@ -48,4 +47,4 @@ La caractéristique `dynamic-range` se définit à l'aide d'une valeur-mot-clé 
 ## Voir aussi
 
 - [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
-- {{cssxref("@media")}}
+- La règle {{CSSxRef("@media")}}

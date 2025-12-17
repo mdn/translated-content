@@ -6,7 +6,7 @@ original_slug: Web/CSS/column-rule
 
 {{CSSRef}}
 
-[Краткая форма записи](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/ru/docs/Web/CSS) свойств **`column-rule`** устанавливает ширину, стиль и цвет линии, находящейся между колонками в мультиколоночной вёрстке.
+[Краткая форма записи](/ru/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/ru/docs/Web/CSS) свойств **`column-rule`** устанавливает ширину, стиль и цвет линии, находящейся между колонками в мультиколоночной вёрстке.
 
 {{InteractiveExample("CSS Demo: column-rule")}}
 

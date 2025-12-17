@@ -1,9 +1,8 @@
 ---
 title: ::column
 slug: Web/CSS/Reference/Selectors/::column
-original_slug: Web/CSS/::column
 l10n:
-  sourceCommit: 601a0178d9b45121b72638d18e4e509644bd9258
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{SeeCompatTable}}
@@ -20,11 +19,11 @@ Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS
 
 ## Description
 
-Quand une mise en page CSS multi-colonnes est utilisée pour disposer le contenu d'un conteneur en plusieurs colonnes (par exemple, en utilisant la propriété {{cssxref("column-count")}}), des pseudo-éléments `::column` sont générés pour contenir chaque colonne individuelle.
+Quand une mise en page CSS multi-colonnes est utilisée pour disposer le contenu d'un conteneur en plusieurs colonnes (par exemple, en utilisant la propriété {{CSSxRef("column-count")}}), des pseudo-éléments `::column` sont générés pour contenir chaque colonne individuelle.
 
-Le pseudo-élément `::column` n'accepte que les propriétés de défilement qui s'appliquent aux éléments à l'intérieur d'un conteneur de défilement, y compris {{cssxref("scroll-margin")}}, {{cssxref("scroll-snap-align")}} et {{cssxref("scroll-snap-stop")}}.
+Le pseudo-élément `::column` n'accepte que les propriétés de défilement qui s'appliquent aux éléments à l'intérieur d'un conteneur de défilement, y compris {{CSSxRef("scroll-margin")}}, {{CSSxRef("scroll-snap-align")}} et {{CSSxRef("scroll-snap-stop")}}.
 
-Le pseudo-élément `::column` peut avoir un pseudo-élément {{cssxref("::scroll-marker")}}. D'autres pseudo-éléments comme {{cssxref("::before")}} et {{cssxref("::after")}} ne sont pas générés sur `::column`. L'application de `::column::scroll-marker` crée un marqueur pour chaque colonne du [conteneur de défilement](/fr/docs/Glossary/Scroll_container) d'origine, les pseudo-éléments `::scroll-marker` héritant de l'élément d'origine du pseudo-élément `::column` plutôt que du `::column` lui-même.
+Le pseudo-élément `::column` peut avoir un pseudo-élément {{CSSxRef("::scroll-marker")}}. D'autres pseudo-éléments comme {{CSSxRef("::before")}} et {{CSSxRef("::after")}} ne sont pas générés sur `::column`. L'application de `::column::scroll-marker` crée un marqueur pour chaque colonne du {{Glossary("scroll container", "conteneur de défilement")}} d'origine, les pseudo-éléments `::scroll-marker` héritant de l'élément d'origine du pseudo-élément `::column` plutôt que du `::column` lui-même.
 
 Cela est utile pour les [carrousels CSS](/fr/docs/Web/CSS/CSS_overflow/CSS_carousels)&nbsp;: `::column` peut être utilisé pour générer des pseudo-éléments `::scroll-marker` pour chaque colonne, et les définir comme [cibles de défilement](/fr/docs/Glossary/Scroll_snap#snap_target) en utilisant [accrochage de défilement CSS](/fr/docs/Web/CSS/Guides/Scroll_snap).
 
@@ -34,7 +33,7 @@ Bien que le style qui peut être appliqué à `::column` soit très limité, il 
 
 ### Mise en page de colonnes défilantes
 
-Cette démo crée un conteneur réactif qui ajuste chaque "page" de contenu en place. Elle utilise la propriété {{cssxref("columns")}} et le pseudo-élément `::column` pour créer des colonnes de contenu qui s'étendent sur toute la largeur de leur conteneur {{glossary("scroll container")}} parent, qui peut être défilé horizontalement. Chaque colonne contient un ou plusieurs éléments de liste, dont le nombre varie en fonction de la largeur de la fenêtre d'affichage.
+Cette démo crée un conteneur réactif qui ajuste chaque "page" de contenu en place. Elle utilise la propriété {{CSSxRef("columns")}} et le pseudo-élément `::column` pour créer des colonnes de contenu qui s'étendent sur toute la largeur de leur {{Glossary("scroll container", "conteneur de défilement")}} parent, qui peut être défilé horizontalement. Chaque colonne contient un ou plusieurs éléments de liste, dont le nombre varie en fonction de la largeur de la fenêtre d'affichage.
 
 #### HTML
 
@@ -102,7 +101,7 @@ Le code HTML suivant consiste en une [liste non ordonnée](/fr/docs/Web/HTML/Ref
 
 #### CSS
 
-La liste est donnée avec une hauteur ({{cssxref("height")}}) fixe et une largeur ({{cssxref("width")}}) de `100vw` pour s'étendre sur toute la largeur de la fenêtre d'affichage. Une valeur {{cssxref("overflow-x")}} de `scroll` est ensuite définie afin que le contenu défile horizontalement, et [CSS scroll snap](/fr/docs/Web/CSS/Guides/Scroll_snap) est utilisé pour s'accrocher à chaque élément ou «&nbsp;page&nbsp;» — une valeur {{cssxref("scroll-snap-type")}} de `x mandatory` est utilisée pour faire de la liste un [scroll snap container](/fr/docs/Glossary/Scroll_snap#scroll_snap_container). Enfin, une valeur {{cssxref("columns")}} de `1` est définie pour forcer le contenu de la liste à s'afficher comme une seule colonne. Une valeur {{cssxref("text-align")}} de `center` est également appliquée, pour aligner le contenu avec le centre de la liste.
+La liste est donnée avec une hauteur ({{CSSxRef("height")}}) fixe et une largeur ({{CSSxRef("width")}}) de `100vw` pour s'étendre sur toute la largeur de la fenêtre d'affichage. Une valeur {{CSSxRef("overflow-x")}} de `scroll` est ensuite définie afin que le contenu défile horizontalement, et [CSS scroll snap](/fr/docs/Web/CSS/Guides/Scroll_snap) est utilisé pour s'accrocher à chaque élément ou «&nbsp;page&nbsp;» — une valeur {{CSSxRef("scroll-snap-type")}} de `x mandatory` est utilisée pour faire de la liste un [scroll snap container](/fr/docs/Glossary/Scroll_snap#scroll_snap_container). Enfin, une valeur {{CSSxRef("columns")}} de `1` est définie pour forcer le contenu de la liste à s'afficher comme une seule colonne. Une valeur {{CSSxRef("text-align")}} de `center` est également appliquée, pour aligner le contenu avec le centre de la liste.
 
 ```css hidden live-sample___mise_en_page_de_colonnes_défilantes live-sample___carousel_basé_sur_les_colonnes_avec_des_marqueurs_de_défilement
 * {
@@ -131,10 +130,10 @@ ul {
 
 Les éléments de la liste sont ensuite mis en forme&nbsp;:
 
-- Une valeur {{cssxref("display")}} de `inline-block` est définie pour faire en sorte que les éléments de la liste s'alignent les uns à côté des autres et que la liste défile horizontalement.
-- Une {{cssxref("width")}} et une {{cssxref("height")}} fixes ont été définies sur eux.
+- Une valeur {{CSSxRef("display")}} de `inline-block` est définie pour faire en sorte que les éléments de la liste s'alignent les uns à côté des autres et que la liste défile horizontalement.
+- Une {{CSSxRef("width")}} et une {{CSSxRef("height")}} fixes ont été définies sur eux.
 - Une valeur de `text-align` de `left` est définie sur eux pour remplacer le `text-align: center` défini sur le conteneur parent, de sorte que le contenu de l'élément sera aligné à gauche.
-- Chaque élément de liste de numéro pair se voit attribuer une couleur de fond différente via {{cssxref(":nth-child()")}}, afin qu'il soit plus facile de voir l'effet de défilement.
+- Chaque élément de liste de numéro pair se voit attribuer une couleur de fond différente via {{CSSxRef(":nth-child()")}}, afin qu'il soit plus facile de voir l'effet de défilement.
 
 ```css live-sample___mise_en_page_de_colonnes_défilantes live-sample___carousel_basé_sur_les_colonnes_avec_des_marqueurs_de_défilement
 li {
@@ -156,7 +155,7 @@ li:nth-child(even) {
 }
 ```
 
-La propriété {{cssxref("scroll-snap-align")}} est définie sur les pseudo-éléments `::column` — qui représentent les colonnes de contenu générées par la propriété `columns` — de sorte que lorsqu'elles sont défilées, une colonne soit centrée dans le conteneur de défilement.
+La propriété {{CSSxRef("scroll-snap-align")}} est définie sur les pseudo-éléments `::column` — qui représentent les colonnes de contenu générées par la propriété `columns` — de sorte que lorsqu'elles sont défilées, une colonne soit centrée dans le conteneur de défilement.
 
 ```css live-sample___mise_en_page_de_colonnes_défilantes live-sample___carousel_basé_sur_les_colonnes_avec_des_marqueurs_de_défilement
 ul::column {
@@ -170,11 +169,11 @@ ul::column {
 
 ### Carousel basé sur les colonnes avec des marqueurs de défilement
 
-En s'appuyant sur l'exemple précédent, nous allons créer des marqueurs de défilement pour permettre une navigation directe vers différentes colonnes en appliquant un {{cssxref("scroll-marker-group")}} au conteneur et un {{cssxref("::scroll-marker")}} à chaque pseudo-élément `::column`. Le HTML reste inchangé.
+En s'appuyant sur l'exemple précédent, nous allons créer des marqueurs de défilement pour permettre une navigation directe vers différentes colonnes en appliquant un {{CSSxRef("scroll-marker-group")}} au conteneur et un {{CSSxRef("::scroll-marker")}} à chaque pseudo-élément `::column`. Le HTML reste inchangé.
 
 #### CSS
 
-Nous créons un groupe de marqueurs de défilement avec la propriété {{cssxref("scroll-marker-group")}}, plaçant le groupe après tout le contenu&nbsp;:
+Nous créons un groupe de marqueurs de défilement avec la propriété {{CSSxRef("scroll-marker-group")}}, plaçant le groupe après tout le contenu&nbsp;:
 
 ```css live-sample___carousel_basé_sur_les_colonnes_avec_des_marqueurs_de_défilement
 ul {
@@ -182,7 +181,7 @@ ul {
 }
 ```
 
-Nous appliquons ensuite des styles au pseudo-élément {{cssxref("::scroll-marker-group")}} pour disposer les marqueurs de défilement au centre de la ligne avec un écart de `0.4em` entre chacun d'eux&nbsp;:
+Nous appliquons ensuite des styles au pseudo-élément {{CSSxRef("::scroll-marker-group")}} pour disposer les marqueurs de défilement au centre de la ligne avec un écart de `0.4em` entre chacun d'eux&nbsp;:
 
 ```css live-sample___carousel_basé_sur_les_colonnes_avec_des_marqueurs_de_défilement
 ::scroll-marker-group {
@@ -192,7 +191,7 @@ Nous appliquons ensuite des styles au pseudo-élément {{cssxref("::scroll-marke
 }
 ```
 
-Enfin, nous utilisons le pseudo-élément {{cssxref("::scroll-marker")}} pour créer un marqueur rond et transparent pour chaque élément de liste avec une bordure noire, puis nous stylisons le marqueur de l'élément actuellement défilé différemment des autres, en ciblant le marqueur avec la pseudo-classe {{cssxref(":target-current")}}&nbsp;:
+Enfin, nous utilisons le pseudo-élément {{CSSxRef("::scroll-marker")}} pour créer un marqueur rond et transparent pour chaque élément de liste avec une bordure noire, puis nous stylisons le marqueur de l'élément actuellement défilé différemment des autres, en ciblant le marqueur avec la pseudo-classe {{CSSxRef(":target-current")}}&nbsp;:
 
 ```css live-sample___carousel_basé_sur_les_colonnes_avec_des_marqueurs_de_défilement
 ul::column::scroll-marker {
@@ -227,10 +226,10 @@ Voir la [création de carrousels CSS](/fr/docs/Web/CSS/CSS_overflow/CSS_carousel
 
 ## Voir aussi
 
-- {{cssxref("columns")}}
-- {{cssxref("::scroll-marker")}}
-- {{cssxref("::scroll-marker-group")}}
-- {{cssxref(":target-current")}}
+- La propriété {{CSSxRef("columns")}}
+- Le pseudo-élément {{CSSxRef("::scroll-marker")}}
+- Le pseudo-élément {{CSSxRef("::scroll-marker-group")}}
+- La pseudo-classe {{CSSxRef(":target-current")}}
 - [Création de carrousels CSS](/fr/docs/Web/CSS/CSS_overflow/CSS_carousels)
 - Le module de [Mise en page multi-colonnes CSS](/fr/docs/Web/CSS/Guides/Multicol_layout)
 - Le module de [Débordement CSS](/fr/docs/Web/CSS/Guides/Overflow)

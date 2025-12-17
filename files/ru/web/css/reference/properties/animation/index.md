@@ -6,7 +6,7 @@ original_slug: Web/CSS/animation
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS) свойство **`animation`** это [короткая запись](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties) для {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}} и {{cssxref("animation-play-state")}}.
+[CSS](/ru/docs/Web/CSS) свойство **`animation`** это [короткая запись](/ru/docs/Web/CSS/Guides/Cascade/Shorthand_properties) для {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}} и {{cssxref("animation-play-state")}}.
 
 {{InteractiveExample("CSS Demo: animation")}}
 
@@ -52,7 +52,7 @@ animation: 0.5s linear 1s infinite alternate slidein;
 }
 ```
 
-[Описание того, какие свойства являются анимируемые](/ru/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#which_css_properties_are_animatable) доступно; стоит отметить, что это описание также подходит для [CSS переходов](/ru/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
+[Описание того, какие свойства являются анимируемые](/ru/docs/Web/CSS/Guides/Transitions/Using#which_css_properties_are_animatable) доступно; стоит отметить, что это описание также подходит для [CSS переходов](/ru/docs/Web/CSS/Guides/Transitions/Using).
 
 {{cssinfo}}
 
@@ -80,7 +80,7 @@ Note that order is also important within each animation definition for distingui
 
 ## Примеры
 
-Посмотрите примеры [CSS-анимаций.](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+Посмотрите примеры [CSS-анимаций.](/ru/docs/Web/CSS/Guides/Animations/Using)
 
 ### Cylon Eye
 
@@ -189,5 +189,5 @@ Note that order is also important within each animation definition for distingui
 
 ## Смотрите также
 
-- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Использование CSS-анимации](/ru/docs/Web/CSS/Guides/Animations/Using)
 - JavaScript {{domxref("AnimationEvent")}} API

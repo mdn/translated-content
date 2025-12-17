@@ -132,7 +132,7 @@ grid-template-rows: unset;
   - : Позволяет в краткой форме создать список рядов с определённым количеством и размером.
 - [`masonry`](/ru/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout){{Experimental_Inline}}
   - : Значение masonry указывает на то, что эта ось должна быть проложена в соответствии с алгоритмом masonry.
-- [`subgrid`](/ru/docs/Web/CSS/CSS_grid_layout/Subgrid)
+- [`subgrid`](/ru/docs/Web/CSS/Guides/Grid_layout/Subgrid)
   - : Значение `subgrid` указывает на то, что грид примет составную часть родительского грида по данной оси. Поскольку размеры рядов/колонок не указываются явно, они берутся из определения родительского грида.
 
 > [!WARNING]
@@ -194,6 +194,6 @@ grid-template-rows: unset;
 ## Смотрите также
 
 - Связанные CSS-свойства: {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}
-- Руководство по грид-раскладке: _[Основы грид-раскладки - грид-полосы](/ru/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#grid_tracks)_
+- Руководство по грид-раскладке: _[Основы грид-раскладки - грид-полосы](/ru/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#grid_tracks)_
 - Обучающее видео: _[Defining a Grid](https://gridbyexample.com/video/series-define-a-grid/)_
-- [Сабгрид](/ru/docs/Web/CSS/CSS_grid_layout/Subgrid)
+- [Сабгрид](/ru/docs/Web/CSS/Guides/Grid_layout/Subgrid)

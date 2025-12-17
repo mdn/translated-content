@@ -141,4 +141,4 @@ p {
 - {{cssxref("outline-width")}}
 - Тип данных {{cssxref("&lt;color&gt;")}}
 - Другие, относящиеся к цвету свойства: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} и {{cssxref("column-rule-color")}}
-- [Applying color to HTML elements using CSS](/ru/docs/Web/CSS/CSS_colors/Applying_color)
+- [Applying color to HTML elements using CSS](/ru/docs/Web/CSS/Guides/Colors/Applying_color)

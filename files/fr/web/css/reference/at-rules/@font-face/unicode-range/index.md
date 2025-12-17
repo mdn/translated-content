@@ -1,12 +1,11 @@
 ---
 title: unicode-range
 slug: Web/CSS/Reference/At-rules/@font-face/unicode-range
-original_slug: Web/CSS/@font-face/unicode-range
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`unicode-range`** pour à la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{cssxref("@font-face")}}, définit l'intervalle de caractères qui peuvent être représentés par cette police pour la page. Si la page n'utilise aucun caractère de cet intervalle, la police n'est pas téléchargée. Si, au contraire, elle utilise au moins un caractère appartenant à cet intervalle, toute la police est téléchargée.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`unicode-range`** pour à la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@font-face")}}, définit l'intervalle de caractères qui peuvent être représentés par cette police pour la page. Si la page n'utilise aucun caractère de cet intervalle, la police n'est pas téléchargée. Si, au contraire, elle utilise au moins un caractère appartenant à cet intervalle, toute la police est téléchargée.
 
 ## Syntaxe
 
@@ -36,11 +35,11 @@ Le but de ce descripteur est de segmenter les ressources liées aux polices afin
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -48,7 +47,7 @@ Le but de ce descripteur est de segmenter les ressources liées aux polices afin
 
 Dans cet exemple, nous créons un élément {{HTMLElement("div")}} unique, avec une chaîne de texte qui inclut une esperluette que nous voulons styliser avec une police différente. Pour que cela soit évident, nous utiliserons une police sans empattement, _Helvetica_, pour le texte, et une police avec empattement, _Times New Roman_, pour l'esperluette.
 
-Dans le CSS, nous définissons en effet une règle {{cssxref("@font-face")}} complètement séparée qui n'inclut qu'un seul caractère, ce qui signifie que seul ce caractère sera stylisé avec cette police. Nous aurions également pu faire cela en enveloppant l'esperluette dans un {{HTMLElement("span")}} et en appliquant une police différente uniquement à cela, mais cela aurait ajouté un élément et un ensemble de règles supplémentaires.
+Dans le CSS, nous définissons en effet une règle {{CSSxRef("@font-face")}} complètement séparée qui n'inclut qu'un seul caractère, ce qui signifie que seul ce caractère sera stylisé avec cette police. Nous aurions également pu faire cela en enveloppant l'esperluette dans un {{HTMLElement("span")}} et en appliquant une police différente uniquement à cela, mais cela aurait ajouté un élément et un ensemble de règles supplémentaires.
 
 #### HTML
 
@@ -85,11 +84,11 @@ div {
 
 ## Voir aussi
 
-- {{cssxref("@font-face/font-display", "font-display")}}
-- {{cssxref("@font-face/font-family", "font-family")}}
-- {{cssxref("@font-face/font-stretch", "font-stretch")}}
-- {{cssxref("@font-face/font-style", "font-style")}}
-- {{cssxref("@font-face/font-weight", "font-weight")}}
-- {{cssxref("font-feature-settings", "font-feature-settings")}}
-- {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
-- {{cssxref("@font-face/src", "src")}}
+- Le descripteur {{CSSxRef("@font-face/font-display", "font-display")}}
+- Le descripteur {{CSSxRef("@font-face/font-family", "font-family")}}
+- Le descripteur {{CSSxRef("@font-face/font-stretch", "font-stretch")}}
+- Le descripteur {{CSSxRef("@font-face/font-style", "font-style")}}
+- Le descripteur {{CSSxRef("@font-face/font-weight", "font-weight")}}
+- Le descripteur {{CSSxRef("@font-face/font-feature-settings", "font-feature-settings")}}
+- Le descripteur {{CSSxRef("@font-face/font-variation-settings", "font-variation-settings")}}
+- Le descripteur {{CSSxRef("@font-face/src", "src")}}

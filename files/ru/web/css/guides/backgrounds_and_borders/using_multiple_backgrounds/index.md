@@ -55,4 +55,4 @@ slug: Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds
 
 ## Смотрите также
 
-- [Использование CSS-градиентов](/ru/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [Использование CSS-градиентов](/ru/docs/Web/CSS/Guides/Images/Using_gradients)

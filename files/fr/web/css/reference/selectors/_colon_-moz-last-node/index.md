@@ -1,14 +1,13 @@
 ---
 title: :-moz-last-node
 slug: Web/CSS/Reference/Selectors/:-moz-last-node
-original_slug: Web/CSS/:-moz-last-node
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
-{{Non-standard_header}}{{SeeCompatTable}}
+{{Non-standard_Header}}{{SeeCompatTable}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:-moz-last-node`** est une [extension de Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions) qui correspond à un élément si celui-ci est le dernier nœud d'un autre élément. Cette pseudo-classe est différente de {{cssxref(":last-child")}} car elle ne cible pas le dernier élément qui possède du texte (hors blancs).
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:-moz-last-node`** est une [extension de Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions) qui correspond à un élément si celui-ci est le dernier nœud d'un autre élément. Cette pseudo-classe est différente de {{CSSxRef(":last-child")}} car elle ne cible pas le dernier élément qui possède du texte (hors blancs).
 
 > [!NOTE]
 > Tout blanc qui serait à la fin d'un élément est ignoré pour la détermination de `:-moz-last-node`.
@@ -58,5 +57,5 @@ Cette pseudo-classe ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- {{cssxref(":-moz-first-node")}}
-- {{cssxref(":last-child")}}
+- La pseudo-classe {{CSSxRef(":-moz-first-node")}}
+- La pseudo-classe {{CSSxRef(":last-child")}}

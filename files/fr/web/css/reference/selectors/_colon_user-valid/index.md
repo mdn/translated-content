@@ -1,12 +1,11 @@
 ---
 title: :user-valid
 slug: Web/CSS/Reference/Selectors/:user-valid
-original_slug: Web/CSS/:user-valid
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:user-valid`** représente tout élément de formulaire validé donc la valeur respecte [la validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation). Toutefois, à la différence de {{cssxref(":valid")}}, cette pseudo-classe ne cible l'élément qu'après que la personne a interagi avec.
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:user-valid`** représente tout élément de formulaire validé donc la valeur respecte [la validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation). Toutefois, à la différence de {{CSSxRef(":valid")}}, cette pseudo-classe ne cible l'élément qu'après que la personne a interagi avec.
 
 Cette pseudo-classe s'applique selon les règles suivantes&nbsp;:
 
@@ -76,8 +75,8 @@ input:user-valid + span::before {
 
 ## Voir aussi
 
-- {{CSSxRef(":valid")}}
-- {{CSSxRef(":invalid")}}
-- {{CSSxRef(":required")}}
-- {{CSSxRef(":optional")}}
-- {{CSSxRef(":user-invalid")}}
+- La pseudo-classe {{CSSxRef(":valid")}}
+- La pseudo-classe {{CSSxRef(":invalid")}}
+- La pseudo-classe {{CSSxRef(":required")}}
+- La pseudo-classe {{CSSxRef(":optional")}}
+- La pseudo-classe {{CSSxRef(":user-invalid")}}

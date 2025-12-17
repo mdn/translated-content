@@ -1,12 +1,11 @@
 ---
 title: ::-moz-progress-bar
 slug: Web/CSS/Reference/Selectors/::-moz-progress-bar
-original_slug: Web/CSS/::-moz-progress-bar
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
-{{Non-standard_header}}{{SeeCompatTable}}
+{{Non-standard_Header}}{{SeeCompatTable}}
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-progress-bar`** est [une extension de Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions) qui représente la barre de progression à l'intérieur d'un élément {{HTMLElement("progress")}}. (La barre représente la progression accomplie.)
 
@@ -56,7 +55,7 @@ Ce pseudo-élément ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- {{HTMLElement("progress")}}
-- {{ cssxref("::-webkit-progress-bar") }}
-- {{ cssxref("::-webkit-progress-value") }}
-- {{ cssxref("::-webkit-progress-inner-element") }}
+- L'élément HTML {{HTMLElement("progress")}}
+- Le pseudo-élément {{CSSxRef("::-webkit-progress-bar")}}
+- Le pseudo-élément {{CSSxRef("::-webkit-progress-value")}}
+- Le pseudo-élément {{CSSxRef("::-webkit-progress-inner-element")}}

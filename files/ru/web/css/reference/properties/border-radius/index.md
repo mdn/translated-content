@@ -55,7 +55,7 @@ border-radius: 50% 20% / 10% 40%;
 }
 ```
 
-Это свойство является [короткой записью](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties) для четырёх свойств {{Cssxref("border-top-left-radius")}}, {{Cssxref("border-top-right-radius")}}, {{Cssxref("border-bottom-right-radius")}} и{{Cssxref("border-bottom-left-radius")}}.
+Это свойство является [короткой записью](/ru/docs/Web/CSS/Guides/Cascade/Shorthand_properties) для четырёх свойств {{Cssxref("border-top-left-radius")}}, {{Cssxref("border-top-right-radius")}}, {{Cssxref("border-bottom-right-radius")}} и{{Cssxref("border-bottom-left-radius")}}.
 
 Скругление применяется ко всему {{Cssxref ("background")}}, даже если элемент не имеет границ, точное положение отсечения определяется свойством {{Cssxref ("background-clip")}}.
 

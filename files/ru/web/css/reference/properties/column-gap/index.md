@@ -54,7 +54,7 @@ column-gap: 20px;
 }
 ```
 
-Изначально свойство появилось в [многоколоночной раскладке](/ru/docs/Web/CSS/CSS_multicol_layout). Позже оно перекочевало в другие методы раскладки, и теперь `column-gap` определено в спецификации [Box Alignment](/ru/docs/Web/CSS/CSS_box_alignment). А значит может использоваться в многоколоночной, флексбокс- и грид-раскладках.
+Изначально свойство появилось в [многоколоночной раскладке](/ru/docs/Web/CSS/CSS_multicol_layout). Позже оно перекочевало в другие методы раскладки, и теперь `column-gap` определено в спецификации [Box Alignment](/ru/docs/Web/CSS/Guides/Box_alignment). А значит может использоваться в многоколоночной, флексбокс- и грид-раскладках.
 
 Обратите внимание, что `grid-column-gap` является псевдонимом для этого свойства.
 
@@ -200,5 +200,5 @@ column-gap: unset;
 ## Смотрите также
 
 - Похожие CSS-свойства: {{CSSxRef("row-gap")}}, {{CSSxRef("gap")}}
-- Руководство по грид-раскладке: _[Основы грид-раскладки - Отступы](/ru/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#gutters)_
+- Руководство по грид-раскладке: _[Основы грид-раскладки - Отступы](/ru/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#gutters)_
 - Руководство по многоколоночной раскладке: _[Стилизация колонок](/ru/docs/Web/CSS/CSS_multicol_layout/Styling_columns)_

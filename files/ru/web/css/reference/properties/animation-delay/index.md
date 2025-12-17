@@ -135,7 +135,7 @@ animation-delay: 2s, 4ms;
 
 ## Примеры
 
-Посмотрите [CSS-анимации](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations) для примера.
+Посмотрите [CSS-анимации](/ru/docs/Web/CSS/Guides/Animations/Using) для примера.
 
 ## Спецификации
 
@@ -147,5 +147,5 @@ animation-delay: 2s, 4ms;
 
 ## Смотрите также
 
-- [Использование CSS-анимаций](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Использование CSS-анимаций](/ru/docs/Web/CSS/Guides/Animations/Using)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

@@ -6,7 +6,7 @@ original_slug: Web/CSS/:left
 
 {{ CSSRef() }}
 
-[Псевдокласс](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/ru/docs/Web/CSS) **`:left`** используется с [@-правилом](/ru/docs/Web/CSS/CSS_syntax/At-rules) {{cssxref("@page")}}, предоставляет все левые страницы печатного документа.
+[Псевдокласс](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/ru/docs/Web/CSS) **`:left`** используется с [@-правилом](/ru/docs/Web/CSS/Guides/Syntax/At-rules) {{cssxref("@page")}}, предоставляет все левые страницы печатного документа.
 
 ```css
 /* Выбирает все левые страницы при печати */

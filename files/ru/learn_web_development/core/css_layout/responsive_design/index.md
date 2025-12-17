@@ -3,7 +3,7 @@ title: Отзывчивый дизайн
 slug: Learn_web_development/Core/CSS_layout/Responsive_Design
 ---
 
-{{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
+{{learnsidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
 
 На заре веб-дизайна страницы создавались для экрана определённого размера. Если у пользователя был экран большего или меньшего размера чем ожидал дизайнер, то результат мог быть от нежелательных полос прокрутки, до слишком длинной строки и плохого использования пространства. Поскольку становились доступны много различных размеров экранов, появилась концепция _отзывчивого (адаптивного) веб-дизайна_ _(responsive web design_ (RWD)) — набор методов, которые позволяют веб-страницам менять свой макет и внешний вид в соответствии с разной шириной экрана, разрешением и т.д. Это та самая, идея которая изменила подход к дизайну веба для множества устройств, и в этой статье мы поможем вам понять основные методы, которые вам необходимо знать, чтобы освоить его.
 
@@ -51,7 +51,7 @@ slug: Learn_web_development/Core/CSS_layout/Responsive_Design
 
 1. Первой была идея жидких сеток, нечто что уже исследовала Гилленвотер, что можно прочитать в статье Маркотта - [Fluid Grids](https://alistapart.com/article/fluidgrids/) (опубликовано в 2009 в A List Apart).
 2. Вторым методом была идея [жидких изображений](https://unstoppablerobotninja.com/entry/fluid-images). Используя очень простой метод настройки свойства `max-width` на `100%`, изображения будут становиться меньше если содержащий столбец становится уже чем изначальный размер изображения, но никогда не становится больше. Это позволяет изображению уменьшаться чтобы соответствовать столбцу гибких размеров, а не перекрываться с ним, но не расти и становиться пиксельным если столбец становится шире изображения.
-3. Третьим ключевым компонентом были [медиавыражения](/ru/docs/Web/CSS/CSS_media_queries). Медиавыражения позволяют переключать тип макета применяя только CSS то, что Камерон Адамс исследовал, используя JavaScript. Вместо того чтобы иметь один макет для всех размеров экранов, макет мог изменяться. Боковые панели можно перемещать для маленьких экранов, либо отображать альтернативную навигацию.
+3. Третьим ключевым компонентом были [медиавыражения](/ru/docs/Web/CSS/Guides/Media_queries). Медиавыражения позволяют переключать тип макета применяя только CSS то, что Камерон Адамс исследовал, используя JavaScript. Вместо того чтобы иметь один макет для всех размеров экранов, макет мог изменяться. Боковые панели можно перемещать для маленьких экранов, либо отображать альтернативную навигацию.
 
 Очень важно понять, что **адаптивный веб-дизайн** — **это не отдельная технология**, это термин используемый, чтобы описать подход к веб-дизайну или набор лучших практик, используемых для создания макета, который может реагировать на используемое устройство для просмотра контента. В первоначальном исследовании Маркотта это означало гибкие сетки (с использованием floats) и медиавыражения, однако почти за 10 лет, прошедших с момента написания этой статьи, адаптивная работа стала стандартом по умолчанию. Современные методы макета CSS отзывчивы по своей сути, и у нас есть новые штучки, встроенные в веб-платформу для того, чтобы делать дизайн отзывчивых сайтов проще.
 
@@ -75,7 +75,7 @@ slug: Learn_web_development/Core/CSS_layout/Responsive_Design
 
 Общим подходом при использовании медиавыражений является создание простого одноколоночного макета для устройств с узкими экранами (например, мобильные телефоны), затем проверка для больших экранов и применение макета с несколькими столбцам, когда вы знаете, что у вас достаточно ширины экрана, чтобы уместить все. Такой подход часто называют **mobile first** дизайном.
 
-Узнать больше о [медиавыражениях](/ru/docs/Web/CSS/CSS_media_queries) можно в документации MDN.
+Узнать больше о [медиавыражениях](/ru/docs/Web/CSS/Guides/Media_queries) можно в документации MDN.
 
 ## Гибкие сетки
 
@@ -279,7 +279,7 @@ Responsive design refers to a site or application design that responds to the en
 
 It has also become much easier to achieve responsive designs with the help of the layout methods you have learned in these lessons. If you are new to web development today you have many more tools at your disposal than in the early days of responsive design. It is therefore worth checking the age of any materials you are referencing. While the historical articles are still useful, modern use of CSS and HTML makes it far easier to create elegant and useful designs, no matter what device your visitor views the site with.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
 
 ## In this module
 

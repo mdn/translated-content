@@ -109,4 +109,4 @@ slug: Web/CSS/Guides/Selectors
 
 ## Смотрите также
 
-[CSS специфичность](/ru/docs/Web/CSS/CSS_cascade/Specificity)
+[CSS специфичность](/ru/docs/Web/CSS/Guides/Cascade/Specificity)

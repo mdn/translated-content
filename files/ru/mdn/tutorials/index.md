@@ -124,7 +124,7 @@ slug: MDN/Tutorials
 
 - [Using CSS Transforms](/ru/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
   - : Как применять поворот, наклон, масштабирование и перемещение при помощи CSS
-- [CSS Transitions](/ru/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [CSS Transitions](/ru/docs/Web/CSS/Guides/Transitions/Using)
   - : CSS переходы, спецификация CSS3 по этой теме, как анимировать изменения стилей в CSS, вместо того, чтобы делать их "сразу".
 - [Quick Guide to Implement Web Fonts with @font-face](https://www.html5rocks.com/tutorials/webfonts/quick/) (HTML5 Rocks)
   - : Возможности @font-face в CSS3, создание собственных шрифтов и работа с ними.

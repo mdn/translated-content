@@ -1,9 +1,8 @@
 ---
 title: inset-block-end
 slug: Web/CSS/Reference/Properties/inset-block-end
-original_slug: Web/CSS/inset-block-end
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`inset-block-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なブロック方向の末尾のオフセットを定義し、要素の書字方向やテキストの向きに従って物理的な内部位置に対応付けられます。 {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
@@ -68,7 +67,7 @@ writing-mode: vertical-lr;
 inset-block-end: 3px;
 inset-block-end: 2.4em;
 inset-block-end: calc(anchor(start) + 20px);
-inset-block-end: anchor-size(--myAnchor width, 10%);
+inset-block-end: anchor-size(--my-anchor width, 10%);
 
 /* 包含ブロックの幅または高さに対する <percentage> 値 */
 inset-block-end: 10%;

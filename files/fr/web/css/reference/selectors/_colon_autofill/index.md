@@ -1,9 +1,8 @@
 ---
 title: :autofill
 slug: Web/CSS/Reference/Selectors/:autofill
-original_slug: Web/CSS/:autofill
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:autofill`** correspond à un élément {{HTMLElement("input")}} lorsque sa valeur est remplie automatiquement par le navigateur. La classe cesse la correspondance si l'utilisateur·ice modifie le champ.
@@ -48,7 +47,7 @@ input:is(:-webkit-autofill, :autofill) {
 > color: -internal-light-dark(black, white) !important;
 > ```
 >
-> Cela signifie que vous ne pouvez pas définir {{cssxref('background-color')}}, {{cssxref('background-image')}} ou {{cssxref('color')}} dans vos propres règles.
+> Cela signifie que vous ne pouvez pas définir {{CSSxRef('background-color')}}, {{CSSxRef('background-image')}} ou {{CSSxRef('color')}} dans vos propres règles.
 
 ## Syntaxe
 
@@ -61,7 +60,7 @@ input:is(:-webkit-autofill, :autofill) {
 ## Exemples
 
 L'exemple suivant démontre l'utilisation de la pseudo-classe `:autofill` pour changer la bordure d'un champ de texte qui a été complété automatiquement par le navigateur.
-Pour garantir que nous ne créons pas une [liste de sélecteurs invalide](/fr/docs/Web/CSS/Reference/Selectors/Selector_list#invalid_selector_list), à la fois `:-webkit-autofill` et `:autofill` sont associés à l'aide d'une liste de sélecteurs tolérante avec {{cssxref(":is()")}}.
+Pour garantir que nous ne créons pas une [liste de sélecteurs invalide](/fr/docs/Web/CSS/Reference/Selectors/Selector_list#invalid_selector_list), à la fois `:-webkit-autofill` et `:autofill` sont associés à l'aide d'une liste de sélecteurs tolérante avec {{CSSxRef(":is()")}}.
 
 ```css
 input {

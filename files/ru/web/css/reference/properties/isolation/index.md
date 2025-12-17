@@ -6,7 +6,7 @@ original_slug: Web/CSS/isolation
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS)-свойство **`isolation`** определяет должен ли элемент создавать новый [контекст наложения](/ru/docs/Web/CSS/CSS_positioned_layout/Stacking_context) {{glossary("stacking context")}}.
+[CSS](/ru/docs/Web/CSS)-свойство **`isolation`** определяет должен ли элемент создавать новый [контекст наложения](/ru/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) {{glossary("stacking context")}}.
 
 {{InteractiveExample("CSS Demo: isolation")}}
 

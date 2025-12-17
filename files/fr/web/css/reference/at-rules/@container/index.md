@@ -1,9 +1,8 @@
 ---
 title: "@container"
 slug: Web/CSS/Reference/At-rules/@container
-original_slug: Web/CSS/@container
 l10n:
-  sourceCommit: 27e3d279057ebbb559f4725641b1c431914de7b1
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@container`** est une règle conditionnelle de groupe qui applique des styles à un [contexte de conteneur](/fr/docs/Web/CSS/CSS_containment/Container_queries#nommer_les_contextes_de_conteneur).

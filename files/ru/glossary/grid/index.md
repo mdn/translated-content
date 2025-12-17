@@ -69,4 +69,4 @@ If you place content outside of this explicit grid, or if you are relying on aut
 
 ### Что почитать ещё
 
-- Руководство по CSS Grid: _[Базовые принципы CSS сеток](/ru/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
+- Руководство по CSS Grid: _[Базовые принципы CSS сеток](/ru/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)_

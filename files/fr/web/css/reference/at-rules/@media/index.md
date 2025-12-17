@@ -1,15 +1,14 @@
 ---
 title: "@media"
 slug: Web/CSS/Reference/At-rules/@media
-original_slug: Web/CSS/@media
 l10n:
-  sourceCommit: 7860297e91985460147c2bd6ced2bfa8cab5aba7
+  sourceCommit: 3ee2355c3c90cf92c3119b82f8ebfa5d16c91c53
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@media`** permet d'appliquer une partie d'une feuille de styles en fonction du résultat d'une ou plusieurs [requêtes média (<i lang="en">media queries</i>)](/fr/docs/Web/CSS/Guides/Media_queries). Grâce à cette règle, on peut indiquer une requête média et un ensemble de règles CSS qui s'appliquent uniquement si la requête média est vérifiée pour l'appareil, le contexte avec lequel le contenu est consulté.
 
 > [!NOTE]
-> Il est possible de manipuler la règle `@media` via le CSSOM (et JavaScript) grâce à l'interface {{domxref("CSSMediaRule")}}.
+> Il est possible de manipuler la règle `@media` via le CSSOM (et JavaScript) grâce à l'interface {{DOMxRef("CSSMediaRule")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: @media", "tabbed-standard")}}
 
@@ -89,100 +88,100 @@ _Les types de média_ décrivent la catégorie générale d'un appareil. Sauf qu
 
 ### Caractéristiques média
 
-Une _`<media feature>`_ décrit une caractéristique spécifique de l'{{glossary("user agent", "agent utilisateur")}}, du périphérique de sortie ou de l'environnement.
+Une _`<media feature>`_ décrit une caractéristique spécifique de l'{{Glossary("user agent", "agent utilisateur")}}, du périphérique de sortie ou de l'environnement.
 Les expressions de caractéristique média testent leur présence, leur valeur ou une plage de valeurs, et sont entièrement optionnelles. Chaque expression de caractéristique média doit être entourée de parenthèses.
 
-- {{cssxref("@media/any-hover", "any-hover")}}
+- {{CSSxRef("@media/any-hover", "any-hover")}}
   - : Un des mécanismes d'entrée disponibles permet-il à l'utilisateur·ice de survoler des éléments&nbsp;?
-- {{cssxref("@media/any-pointer", "any-pointer")}}
+- {{CSSxRef("@media/any-pointer", "any-pointer")}}
   - : Un des mécanismes d'entrée disponibles est-il un dispositif de pointage, et si oui, avec quelle précision&nbsp;?
-- {{cssxref("@media/aspect-ratio", "aspect-ratio")}}
-  - : Rapport largeur/hauteur ({{glossary("aspect ratio", "rapport d'aspect")}}) de la zone d'affichage (<i lang="en">viewport</i> en anglais).
-- {{cssxref("@media/color", "color")}}
+- {{CSSxRef("@media/aspect-ratio", "aspect-ratio")}}
+  - : Rapport largeur/hauteur ({{Glossary("aspect ratio", "rapport d'aspect")}}) de la zone d'affichage (<i lang="en">viewport</i> en anglais).
+- {{CSSxRef("@media/color", "color")}}
   - : Nombre de bits par composant couleur du périphérique de sortie, ou zéro si le périphérique n'est pas en couleur.
-- {{cssxref("@media/color-gamut", "color-gamut")}}
+- {{CSSxRef("@media/color-gamut", "color-gamut")}}
   - : Plage approximative de couleurs prises en charge par l'agent utilisateur et le périphérique de sortie.
-- {{cssxref("@media/color-index", "color-index")}}
+- {{CSSxRef("@media/color-index", "color-index")}}
   - : Nombre d'entrées dans la table de correspondance des couleurs du périphérique de sortie, ou zéro si le périphérique n'utilise pas une telle table.
-- {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}}
+- {{CSSxRef("@media/device-aspect-ratio", "device-aspect-ratio")}}
   - : Rapport largeur/hauteur du périphérique de sortie. Déprécié dans Media Queries niveau 4.
-- {{cssxref("@media/device-height", "device-height")}}
+- {{CSSxRef("@media/device-height", "device-height")}}
   - : Hauteur de la surface de rendu du périphérique de sortie. Déprécié dans Media Queries niveau 4.
-- {{cssxref("@media/device-posture", "device-posture")}}
+- {{CSSxRef("@media/device-posture", "device-posture")}}
   - : Détecte la posture actuelle du périphérique, c'est-à-dire si la zone d'affichage est à plat ou pliée. Défini dans l'[API Device Posture](/fr/docs/Web/API/Device_Posture_API).
-- {{cssxref("@media/device-width", "device-width")}}
+- {{CSSxRef("@media/device-width", "device-width")}}
   - : Largeur de la surface de rendu du périphérique de sortie. Déprécié dans Media Queries niveau 4.
-- {{cssxref("@media/display-mode", "display-mode")}}
+- {{CSSxRef("@media/display-mode", "display-mode")}}
   - : Mode dans lequel une application s'affiche&nbsp;: par exemple, [plein écran](/fr/docs/Web/CSS/Reference/At-rules/@media/display-mode#fullscreen) ou [mode image dans l'image](/fr/docs/Web/CSS/Reference/At-rules/@media/display-mode#image_dans_limage).
     Ajouté dans Media Queries niveau 5.
-- {{cssxref("@media/dynamic-range", "dynamic-range")}}
+- {{CSSxRef("@media/dynamic-range", "dynamic-range")}}
   - : Combinaison de la luminosité, du contraste et de la profondeur de couleur prise en charge par l'agent utilisateur et le périphérique de sortie. Ajouté dans Media Queries niveau 5.
-- {{cssxref("@media/forced-colors", "forced-colors")}}
+- {{CSSxRef("@media/forced-colors", "forced-colors")}}
   - : Détecte si l'agent utilisateur restreint la palette de couleurs.
     Ajouté dans Media Queries niveau 5.
-- {{cssxref("@media/grid", "grid")}}
+- {{CSSxRef("@media/grid", "grid")}}
   - : Le périphérique utilise-t-il un écran en grille ou en bitmap&nbsp;?
-- {{cssxref("@media/height", "height")}}
+- {{CSSxRef("@media/height", "height")}}
   - : Hauteur de la zone d'affichage (<i lang="en">viewport</i> en anglais).
-- {{cssxref("@media/horizontal-viewport-segments", "horizontal-viewport-segments")}}
+- {{CSSxRef("@media/horizontal-viewport-segments", "horizontal-viewport-segments")}}
   - : Détecte si le périphérique possède un nombre spécifié de segments de zone d'affichage disposés horizontalement.
-- {{cssxref("@media/hover", "hover")}}
+- {{CSSxRef("@media/hover", "hover")}}
   - : Le mécanisme d'entrée principal permet-il à l'utilisateur·ice de survoler des éléments&nbsp;?
-- {{cssxref("@media/inverted-colors", "inverted-colors")}}
+- {{CSSxRef("@media/inverted-colors", "inverted-colors")}}
   - : L'agent utilisateur ou le système d'exploitation inverse-t-il les couleurs&nbsp;?
     Ajouté dans Media Queries niveau 5.
-- {{cssxref("@media/monochrome", "monochrome")}}
+- {{CSSxRef("@media/monochrome", "monochrome")}}
   - : Nombre de bits par pixel dans la mémoire tampon monochrome du périphérique de sortie, ou zéro si le périphérique n'est pas monochrome.
-- {{cssxref("@media/orientation", "orientation")}}
+- {{CSSxRef("@media/orientation", "orientation")}}
   - : Orientation de la zone d'affichage (<i lang="en">viewport</i> en anglais).
-- {{cssxref("@media/overflow-block", "overflow-block")}}
+- {{CSSxRef("@media/overflow-block", "overflow-block")}}
   - : Comment le périphérique de sortie gère-t-il le contenu qui déborde de la zone d'affichage selon l'axe du bloc&nbsp;?
-- {{cssxref("@media/overflow-inline", "overflow-inline")}}
+- {{CSSxRef("@media/overflow-inline", "overflow-inline")}}
   - : Le contenu qui déborde de la zone d'affichage selon l'axe en ligne peut-il être défilé&nbsp;?
-- {{cssxref("@media/pointer", "pointer")}}
+- {{CSSxRef("@media/pointer", "pointer")}}
   - : Le mécanisme d'entrée principal est-il un dispositif de pointage, et si oui, avec quelle précision&nbsp;?
-- {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}
+- {{CSSxRef("@media/prefers-color-scheme", "prefers-color-scheme")}}
   - : Détecte si l'utilisateur·ice préfère un thème clair ou sombre.
     Ajouté dans Media Queries niveau 5.
-- {{cssxref("@media/prefers-contrast", "prefers-contrast")}}
+- {{CSSxRef("@media/prefers-contrast", "prefers-contrast")}}
   - : Détecte si l'utilisateur·ice a demandé au système d'augmenter ou de diminuer le contraste entre les couleurs adjacentes.
     Ajouté dans Media Queries niveau 5.
-- {{cssxref("@media/prefers-reduced-data", "prefers-reduced-data")}}
+- {{CSSxRef("@media/prefers-reduced-data", "prefers-reduced-data")}}
   - : Détecte si l'utilisateur·ice a demandé un contenu web qui consomme moins de données.
-- {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}}
+- {{CSSxRef("@media/prefers-reduced-motion", "prefers-reduced-motion")}}
   - : L'utilisateur·ice préfère moins d'animations sur la page.
     Ajouté dans Media Queries niveau 5.
-- {{cssxref("@media/prefers-reduced-transparency", "prefers-reduced-transparency")}}
+- {{CSSxRef("@media/prefers-reduced-transparency", "prefers-reduced-transparency")}}
   - : Détecte si l'utilisateur·ice a activé un réglage sur son appareil pour réduire les effets de transparence ou de translucidité utilisés sur l'appareil.
-- {{cssxref("@media/resolution", "resolution")}}
+- {{CSSxRef("@media/resolution", "resolution")}}
   - : Densité de pixels du périphérique de sortie.
-- {{cssxref("@media/scan", "scan")}}
+- {{CSSxRef("@media/scan", "scan")}}
   - : Le rendu de l'affichage est-il progressif ou entrelacé&nbsp;?
-- {{cssxref("@media/scripting", "scripting")}}
+- {{CSSxRef("@media/scripting", "scripting")}}
   - : Détecte si le scripting (JavaScript) est disponible.
     Ajouté dans Media Queries niveau 5.
-- {{cssxref("@media/shape", "shape")}}
+- {{CSSxRef("@media/shape", "shape")}}
   - : Détecte la forme du périphérique pour distinguer les écrans rectangulaires et ronds.
-- {{cssxref("@media/update", "update")}}
+- {{CSSxRef("@media/update", "update")}}
   - : Fréquence à laquelle le périphérique de sortie peut modifier l'apparence du contenu.
-- {{cssxref("@media/vertical-viewport-segments", "vertical-viewport-segments")}}
+- {{CSSxRef("@media/vertical-viewport-segments", "vertical-viewport-segments")}}
   - : Détecte si le périphérique possède un nombre spécifié de segments de zone d'affichage disposés verticalement. Ajouté dans Media Queries niveau 5.
-- {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}
+- {{CSSxRef("@media/video-dynamic-range", "video-dynamic-range")}}
   - : Combinaison de la luminosité, du contraste et de la profondeur de couleur prise en charge par le plan vidéo de l'agent utilisateur et du périphérique de sortie. Ajouté dans Media Queries niveau 5.
-- {{cssxref("@media/width", "width")}}
+- {{CSSxRef("@media/width", "width")}}
   - : Largeur de la zone d'affichage (<i lang="en">viewport</i> en anglais), y compris la largeur de la barre de défilement.
-- {{cssxref("@media/-moz-device-pixel-ratio", "-moz-device-pixel-ratio")}}
+- {{CSSxRef("@media/-moz-device-pixel-ratio", "-moz-device-pixel-ratio")}}
   - : Nombre de pixels du périphérique par pixel CSS. Utilisez plutôt la caractéristique [`resolution`](/fr/docs/Web/CSS/Reference/At-rules/@media/resolution) avec l'unité `dppx`.
-- {{cssxref("@media/-webkit-animation", "-webkit-animation")}}
-  - : Le navigateur prend en charge l'animation CSS {{cssxref("animation")}} préfixée `-webkit`. Utilisez plutôt la requête de fonctionnalité [`@supports (animation)`](/fr/docs/Web/CSS/Reference/At-rules/@supports).
-- {{cssxref("@media/-webkit-device-pixel-ratio", "-webkit-device-pixel-ratio")}}
+- {{CSSxRef("@media/-webkit-animation", "-webkit-animation")}}
+  - : Le navigateur prend en charge l'animation CSS {{CSSxRef("animation")}} préfixée `-webkit`. Utilisez plutôt la requête de fonctionnalité [`@supports (animation)`](/fr/docs/Web/CSS/Reference/At-rules/@supports).
+- {{CSSxRef("@media/-webkit-device-pixel-ratio", "-webkit-device-pixel-ratio")}}
   - : Nombre de pixels du périphérique par pixel CSS. Utilisez plutôt la caractéristique [`resolution`](/fr/docs/Web/CSS/Reference/At-rules/@media/resolution) avec l'unité `dppx`.
-- {{cssxref("@media/-webkit-transform-2d", "-webkit-transform-2d")}}
-  - : Le navigateur prend en charge la transformation CSS 2D {{cssxref("transform")}} préfixée `-webkit`. Utilisez plutôt la requête de fonctionnalité [`@supports (transform)`](/fr/docs/Web/CSS/Reference/At-rules/@supports).
-- {{cssxref("@media/-webkit-transform-3d", "-webkit-transform-3d")}}
-  - : Le navigateur prend en charge la transformation CSS 3D {{cssxref("transform")}} préfixée `-webkit`. Utilisez plutôt la requête de fonctionnalité [`@supports (transform)`](/fr/docs/Web/CSS/Reference/At-rules/@supports).
-- {{cssxref("@media/-webkit-transition", "-webkit-transition")}}
-  - : Le navigateur prend en charge la transition CSS {{cssxref("transition")}} préfixée `-webkit`. Utilisez plutôt la requête de fonctionnalité [`@supports (transition)`](/fr/docs/Web/CSS/Reference/At-rules/@supports).
+- {{CSSxRef("@media/-webkit-transform-2d", "-webkit-transform-2d")}}
+  - : Le navigateur prend en charge la transformation CSS 2D {{CSSxRef("transform")}} préfixée `-webkit`. Utilisez plutôt la requête de fonctionnalité [`@supports (transform)`](/fr/docs/Web/CSS/Reference/At-rules/@supports).
+- {{CSSxRef("@media/-webkit-transform-3d", "-webkit-transform-3d")}}
+  - : Le navigateur prend en charge la transformation CSS 3D {{CSSxRef("transform")}} préfixée `-webkit`. Utilisez plutôt la requête de fonctionnalité [`@supports (transform)`](/fr/docs/Web/CSS/Reference/At-rules/@supports).
+- {{CSSxRef("@media/-webkit-transition", "-webkit-transition")}}
+  - : Le navigateur prend en charge la transition CSS {{CSSxRef("transition")}} préfixée `-webkit`. Utilisez plutôt la requête de fonctionnalité [`@supports (transition)`](/fr/docs/Web/CSS/Reference/At-rules/@supports).
 
 ### Opérateurs logiques
 
@@ -212,11 +211,11 @@ Elles incluent {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} et {{HTTPHeader("Se
 
 ### Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Accessibilité
 
-Pour une meilleure accessibilité, notamment pour les personnes qui ajustent la taille du texte d'un site, il convient d'utiliser l'unité [`em`](/fr/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types) lorsqu'une valeur de type {{cssxref("&lt;length&gt;")}} est nécessaire pour [les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using).
+Pour une meilleure accessibilité, notamment pour les personnes qui ajustent la taille du texte d'un site, il convient d'utiliser l'unité [`em`](/fr/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types) lorsqu'une valeur de type {{CSSxRef("&lt;length&gt;")}} est nécessaire pour [les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using).
 
 Les unités [`em`](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units) et [`px`](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units) sont toutes les deux valides, mais [`em`](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units) s'adapte mieux si l'utilisateur·ice modifie la taille du texte du navigateur.
 
@@ -286,6 +285,7 @@ Pour plus d'exemples, voir [Utiliser les requêtes média](/fr/docs/Web/CSS/Guid
 
 - Le module de [requêtes média CSS](/fr/docs/Web/CSS/Guides/Media_queries)
 - [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
-- L'interface {{domxref("CSSMediaRule")}}
+- L'interface API {{DOMxRef("CSSMediaRule")}}
+- La règle {{CSSxRef("@custom-media")}}
 - [Extensions CSS préfixées pour Firefox (-moz-)](/fr/docs/Web/CSS/Reference/Mozilla_extensions#media_features)
 - [Extensions CSS préfixées pour WebKit (-webkit-)](/fr/docs/Web/CSS/Reference/Webkit_extensions#media_features)

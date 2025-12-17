@@ -1,9 +1,8 @@
 ---
 title: "@namespace"
 slug: Web/CSS/Reference/At-rules/@namespace
-original_slug: Web/CSS/@namespace
 l10n:
-  sourceCommit: 9944f7b12ef1a6aecd54d4b2f0c188a82fdeaaf0
+  sourceCommit: 1dcf976e9b654679c762568812562b1a2361c755
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@namespace`** définie [les espaces de noms XML](/fr/docs/Glossary/Namespace) utilisés dans une feuille de style CSS. Les espaces de noms définis sont alors utilisés pour restreindre les sélecteurs [universels](/fr/docs/Web/CSS/Reference/Selectors/Universal_selectors), [de type](/fr/docs/Web/CSS/Reference/Selectors/Type_selectors), et [d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) afin que ceux-ci ne sélectionnent que les éléments contenus dans cet espace de nom. La règle `@namespace` est généralement utilisée lorsqu'on manipule des documents entremêlant différents espaces de noms (par exemple, un document HTML5 qui contient du SVG en ligne ou du MathML ou alors un fichier XML qui est composé de plusieurs vocabulaires).
@@ -52,7 +51,7 @@ svg|a {
 
 ## Description
 
-Les règles `@namespace` doivent suivre les règles @ {{cssxref("@charset")}} et {{cssxref("@import")}} et précéder les autres règles @ ainsi que les déclarations de style contenus dans la feuille de style.
+Les règles `@namespace` doivent suivre les règles @ {{CSSxRef("@charset")}} et {{CSSxRef("@import")}} et précéder les autres règles @ ainsi que les déclarations de style contenus dans la feuille de style.
 
 `@namespace` peut être utilisée afin de définir **l'espace de noms par défaut** de la feuille de style. Lorsqu'un espace de noms par défaut est définit, les sélecteurs universels et les sélecteurs de types (pas les sélecteurs d'attribut, cf. note ci-après) ne s'appliqueront qu'aux éléments de cet espace de noms.
 
@@ -65,7 +64,7 @@ En HTML, les [éléments étrangers <sup>(angl.)</sup>](https://html.spec.whatwg
 
 ### Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 

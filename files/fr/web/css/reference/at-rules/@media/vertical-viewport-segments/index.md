@@ -1,9 +1,8 @@
 ---
 title: vertical-viewport-segments
 slug: Web/CSS/Reference/At-rules/@media/vertical-viewport-segments
-original_slug: Web/CSS/@media/vertical-viewport-segments
 l10n:
-  sourceCommit: ee348fc4da928b445f95660fae094269604b1b9c
+  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`vertical-viewport-segments`** permet de détecter si l'appareil possède un nombre spécifié de segments de zone d'affichage (<i lang="en">viewport</i>) disposés verticalement (de haut en bas).
@@ -12,7 +11,7 @@ En lien avec l'[API Viewport Segments](/fr/docs/Web/API/Viewport_segments_API), 
 
 ## Syntaxe
 
-La caractéristique `vertical-viewport-segments` s'exprime comme une valeur {{cssxref("integer", "entier")}} supérieure ou égale à `1`, représentant le nombre de segments verticaux de la zone d'affichage de l'appareil.
+La caractéristique `vertical-viewport-segments` s'exprime comme une valeur {{CSSxRef("integer", "entier")}} supérieure ou égale à `1`, représentant le nombre de segments verticaux de la zone d'affichage de l'appareil.
 
 - La valeur sera `1` pour&nbsp;:
   - Un appareil non pliable (par exemple, un smartphone ou une tablette à écran unique standard).
@@ -72,6 +71,6 @@ Consultez notre [démo de l'API Viewport Segments <sup>(angl.)</sup>](https://md
 
 ## Voir aussi
 
-- {{cssxref("@media/horizontal-viewport-segments", "horizontal-viewport-segments")}}
+- La caractéristique média {{CSSxRef("@media/horizontal-viewport-segments", "horizontal-viewport-segments")}}
 - L'[API Viewport Segments](/fr/docs/Web/API/Viewport_segments_API)
 - [Expérimentation origin pour les API Foldable <sup>(angl.)</sup>](https://developer.chrome.com/blog/foldable-apis-ot) sur developer.chrome.com

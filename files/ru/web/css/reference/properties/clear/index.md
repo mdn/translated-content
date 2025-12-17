@@ -65,11 +65,11 @@ clear: both;
 }
 ```
 
-При применении к неплавающим блокам он перемещает границу края [border edge](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) элемента до тех пор, пока не окажется ниже края [margin edge](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) поля всех соответствующих поплавков. Вертикальный край неплавающего блока сжимается.
+При применении к неплавающим блокам он перемещает границу края [border edge](/ru/docs/Web/CSS/Guides/Box_model/Introduction) элемента до тех пор, пока не окажется ниже края [margin edge](/ru/docs/Web/CSS/Guides/Box_model/Introduction) поля всех соответствующих поплавков. Вертикальный край неплавающего блока сжимается.
 
-Вертикальные поля между двумя плавающими элементами, с другой стороны, не будут разрушаться. При применении к плавающим элементам - [margin edge](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) нижнего элемента перемещается ниже [margin edge](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) всех соответствующих поплавков. Это влияет на положение более поздних поплавков, поскольку более поздние поплавки не могут быть расположены выше предыдущих.
+Вертикальные поля между двумя плавающими элементами, с другой стороны, не будут разрушаться. При применении к плавающим элементам - [margin edge](/ru/docs/Web/CSS/Guides/Box_model/Introduction) нижнего элемента перемещается ниже [margin edge](/ru/docs/Web/CSS/Guides/Box_model/Introduction) всех соответствующих поплавков. Это влияет на положение более поздних поплавков, поскольку более поздние поплавки не могут быть расположены выше предыдущих.
 
-Поплавки, которые имеют отношение к очистке, - это более ранние поплавки в одном и том же [контексте форматирования блоков](/ru/docs/Web/CSS/CSS_display/Block_formatting_context).
+Поплавки, которые имеют отношение к очистке, - это более ранние поплавки в одном и том же [контексте форматирования блоков](/ru/docs/Web/CSS/Guides/Display/Block_formatting_context).
 
 ## Синтаксис
 
@@ -269,4 +269,4 @@ p {
 
 ## Смотрите также
 
-- [Box model](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [Box model](/ru/docs/Web/CSS/Guides/Box_model/Introduction)

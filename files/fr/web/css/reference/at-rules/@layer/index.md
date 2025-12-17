@@ -1,9 +1,8 @@
 ---
 title: "@layer"
 slug: Web/CSS/Reference/At-rules/@layer
-original_slug: Web/CSS/@layer
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 1dcf976e9b654679c762568812562b1a2361c755
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@layer`** est utilisée pour déclarer une couche de cascade et peut également être utilisée afin de définir l'ordre de précédence lorsqu'il y a plusieurs couches de cascade.
@@ -62,7 +61,7 @@ Le schéma suivant montre les priorités des couches selon l'ordre de déclarati
 
 ![Schéma illustrant les priorités des couches de cascade](https://mdn.github.io/shared-assets/images/diagrams/css/at-rules/layer-cascade.svg)
 
-Comme indiqué dans le schéma ci-dessus, les _déclarations importantes_ (celles avec le drapeau `!important`) ont priorité sur les _déclarations normales_ (celles sans le drapeau `!important`). L'ordre de précédence entre les règles importantes est l'inverse de celui des règles normales. Les transitions ont la plus grande précédence. Viennent ensuite, de la plus haute à la plus basse priorité&nbsp;: les déclarations importantes de l'{{glossary("user agent", "agent utilisateur")}}, les déclarations importantes de l'utilisateur·rice, puis les déclarations importantes de l'auteur·ice (développeur·euse web), dans cet ordre. Les utilisateur·ice·s peuvent spécifier des styles via les préférences du navigateur, du système d'exploitation ou des extensions. Leurs déclarations importantes l'emportent sur celles écrites par l'auteur·ice ou le·la développeur·euse.
+Comme indiqué dans le schéma ci-dessus, les _déclarations importantes_ (celles avec le drapeau `!important`) ont priorité sur les _déclarations normales_ (celles sans le drapeau `!important`). L'ordre de précédence entre les règles importantes est l'inverse de celui des règles normales. Les transitions ont la plus grande précédence. Viennent ensuite, de la plus haute à la plus basse priorité&nbsp;: les déclarations importantes de l'{{Glossary("user agent", "agent utilisateur")}}, les déclarations importantes de l'utilisateur·rice, puis les déclarations importantes de l'auteur·ice (développeur·euse web), dans cet ordre. Les utilisateur·ice·s peuvent spécifier des styles via les préférences du navigateur, du système d'exploitation ou des extensions. Leurs déclarations importantes l'emportent sur celles écrites par l'auteur·ice ou le·la développeur·euse.
 
 Dans les styles de l'auteur·ice, toutes les déclarations importantes à l'intérieur des couches CSS l'emportent sur les déclarations importantes en dehors d'une couche, tandis que toutes les déclarations normales à l'intérieur des couches CSS ont une priorité inférieure à celles déclarées en dehors d'une couche.
 L'ordre de déclaration est important&nbsp;: la première couche déclarée a la priorité la plus faible et la dernière la plus forte. Cependant, la priorité est inversée lorsque le drapeau [`!important`](/fr/docs/Web/CSS/important) est utilisé.
@@ -143,7 +142,7 @@ Pour ajouter des règles à la couche `layout` située à l'intérieur de `frame
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -233,11 +232,11 @@ Dans l'exemple qui suit, on crée deux couches sans leur affecter de règle puis
 
 ## Voir aussi
 
-- {{cssxref("@import")}}
-- {{domxref("CSSLayerBlockRule")}}
-- {{domxref("CSSLayerStatementRule")}}
-- {{cssxref("important", "!important")}}
-- {{cssxref("revert-layer")}}
+- La règle {{CSSxRef("@import")}}
+- L'interface API {{DOMxRef("CSSLayerBlockRule")}}
+- L'interface API {{DOMxRef("CSSLayerStatementRule")}}
+- Le drapeau {{CSSxRef("important", "!important")}}
+- La propriété {{CSSxRef("revert-layer")}}
 - [Introduction à la cascade CSS](/fr/docs/Web/CSS/Guides/Cascade/Introduction)
 - [Apprendre&nbsp;: Gérer les conflits](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [Apprendre&nbsp;: Les couches de cascade](/fr/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)

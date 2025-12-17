@@ -1,14 +1,15 @@
 ---
 title: "@supports"
 slug: Web/CSS/Reference/At-rules/@supports
-original_slug: Web/CSS/@supports
 l10n:
-  sourceCommit: 9944f7b12ef1a6aecd54d4b2f0c188a82fdeaaf0
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@supports`** permet de définir des déclarations CSS qui dépendent du support de certaines fonctionnalités CSS par le navigateur.
 L'utilisation de cette règle est couramment appelée «&nbsp;requête de fonctionnalité&nbsp;».
 La règle doit être placée au niveau supérieur de votre code ou imbriquée dans une autre règle conditionnelle de groupe.
+
+En JavaScript, `@supports` peut être accédée via le modèle d'objet CSS et l'interface {{DOMxRef("CSSSupportsRule")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: @supports", "tabbed-standard")}}
 
@@ -39,8 +40,6 @@ La règle doit être placée au niveau supérieur de votre code ou imbriquée da
   <li><a href="#">Contact</a></li>
 </ul>
 ```
-
-En JavaScript, `@supports` peut être accédée via le modèle d'objet CSS et l'interface {{DOMxRef("CSSSupportsRule")}}.
 
 ## Syntaxe
 
@@ -144,7 +143,7 @@ L'opérateur `not` peut être utilisé avant une expression afin de créer une e
 }
 ```
 
-renvoie VRAI si la propriété {{cssxref("transform-origin")}} du navigateur ne considère pas la valeur `10em 10em 10em` comme valide.
+renvoie VRAI si la propriété {{CSSxRef("transform-origin")}} du navigateur ne considère pas la valeur `10em 10em 10em` comme valide.
 
 Comme pour les autres opérateurs, on peut appliquer l'opérateur `not` à une déclaration, quelle que soit sa complexité. Les exemples qui suivent sont donc des expressions valides&nbsp;:
 
@@ -206,7 +205,7 @@ Plusieurs disjonctions peuvent être juxtaposées sans nécessiter plus de paren
 
 ### Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -239,7 +238,7 @@ Plusieurs disjonctions peuvent être juxtaposées sans nécessiter plus de paren
 
 ### Tester le support d'un sélecteur
 
-Les règles conditionnelles CSS permettent de tester le support d'un sélecteur comme {{cssxref(":has",":has()")}}.
+Les règles conditionnelles CSS permettent de tester le support d'un sélecteur comme {{CSSxRef(":has",":has()")}}.
 
 ```css
 /* Cette règle ne sera pas appliquée dans les navigateurs qui ne supportent pas :has() */
@@ -319,5 +318,5 @@ L'exemple suivant applique le style CSS si le navigateur prend en charge le form
 
 - [Utiliser les requêtes de fonctionnalité](/fr/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)
 - [Fonctions des règles @ CSS](/fr/docs/Web/CSS/CSS_syntax/At-rule_functions)
-- {{DOMxRef("CSSSupportsRule")}}
-- La méthode {{DOMxref("CSS.supports_static", "CSS.supports()")}}
+- L'interface API {{DOMxRef("CSSSupportsRule")}}
+- La méthode API {{DOMxRef("CSS.supports_static", "CSS.supports()")}}

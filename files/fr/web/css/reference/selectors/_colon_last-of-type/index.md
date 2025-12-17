@@ -1,9 +1,8 @@
 ---
 title: :last-of-type
 slug: Web/CSS/Reference/Selectors/:last-of-type
-original_slug: Web/CSS/:last-of-type
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:last-of-type`** cible un élément qui est le dernier enfant d'un type donné dans la liste des enfants de l'élément parent.
@@ -163,5 +162,5 @@ Le dernier `<div>` et le dernier `<p>` sont tous deux rouges et en gras, car le 
 
 ## Voir aussi
 
-- {{cssxref(":last-child")}}
-- {{cssxref(":nth-last-of-type")}}
+- La pseudo-classe {{CSSxRef(":last-child")}}
+- La pseudo-classe {{CSSxRef(":nth-last-of-type")}}

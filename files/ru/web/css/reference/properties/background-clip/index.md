@@ -104,4 +104,4 @@ p {
 
 - Свойство {{cssxref("clip-path")}} создаёт область отсечения, которая определяет, которая определяет, какая часть целого элемента должна отображаться.
 - Свойства фона: {{cssxref("background")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}
-- [Введение в блочную модель CSS](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [Введение в блочную модель CSS](/ru/docs/Web/CSS/Guides/Box_model/Introduction)
