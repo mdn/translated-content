@@ -1,9 +1,8 @@
 ---
 title: position
 slug: Web/CSS/Reference/Properties/position
-original_slug: Web/CSS/position
 l10n:
-  sourceCommit: 886f2641ae90a70858c5e7d0d20959c70ee44d9d
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、文書内で要素がどのように配置されるかを設定します。 {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, {{Cssxref("left")}} の各物理的プロパティ、 {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}} のフロー相対論理的プロパティが、配置された要素の最終的な位置を決めます。
@@ -127,7 +126,7 @@ position: unset;
 - `fixed`
   - : 要素は文書の通常のフローから除外され、ページレイアウト内に要素のための空間が作成されません。要素は最初の[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block#包含ブロックの識別)（視覚メディア要素の場合はビューポート）から相対的に配置されます。最終的な位置は `top`、`right`、`bottom`、`left` の値によって決まります。
 
-    この値は、常に新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)を作成します。印刷文書の場合、要素は*各ページ*の同じ位置に配置されます。
+    この値は、常に新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)を作成します。印刷文書の場合、要素は各ページの同じ位置に配置されます。
 
 - `sticky`
   - : 要素は文書の通常のフローに従って配置され、*直近のスクロールする祖先*および[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)（直近のブロックレベル祖先、表関連要素を含む）に対して `top`, `right`, `bottom`, `left` の値に基づいて相対配置されます。このオフセットは他の要素の配置には影響を与えません。
@@ -135,16 +134,16 @@ position: unset;
     この値は、常に新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)を生成します。なお粘着要素は、直近の祖先がスクロールしない場合でも、「スクロールの仕組み」を持つ直近の祖先（`overflow` が `hidden`, `scroll`, `auto`, `overlay` として作成されたもの）に「粘着」します。
 
     > [!NOTE]
-    > 要素を粘着させる必要がある軸に対して、少なくとも 1 つの [inset](/ja/docs/Web/CSS/Reference/Properties/inset) プロパティ（{{cssxref("top")}}, {{cssxref("inset-block-start")}}, {{cssxref("right")}}, {{cssxref("inset-inline-end")}} など）を `auto` 以外の値に設定する必要があります。軸の `inset` プロパティが両方とも `auto` に設定されている場合、その軸では `sticky` 値は `relative` として動作します。
+    > 要素を粘着させる必要がある軸に対して、少なくとも 1 つの[インセット](/ja/docs/Web/CSS/Reference/Properties/inset)プロパティ（{{cssxref("top")}}, {{cssxref("inset-block-start")}}, {{cssxref("right")}}, {{cssxref("inset-inline-end")}} など）を `auto` 以外の値に設定する必要があります。軸の `inset` プロパティが両方とも `auto` に設定されている場合、その軸では `sticky` 値は `relative` として動作します。
 
 ## 解説
 
 ### 位置指定の種類
 
-- **位置指定要素** (positioned element) とは、 `position` の[計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)が `relative`, `absolute`, `fixed`, `sticky` のいずれかである要素です。 (言い換えれば、 `static` 以外の全てです。)
-- **相対位置指定要素** (relatively positioned element) とは、 `position` の[計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)が `relative` である要素です。 {{Cssxref("top")}} および {{Cssxref("bottom")}} プロパティは、通常の位置からの垂直方向のオフセットを指定します。 {{Cssxref("left")}} および {{Cssxref("right")}} プロパティは、水平方向のオフセットを指定します。
-- **絶対位置指定要素** (absolutely positioned element) とは、 `position` の[計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)が `absolute` または `fixed` である要素です。 {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, {{Cssxref("left")}} の各プロパティは、この要素の[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)の端からのオフセットを指定します。 (包含ブロックは配置される要素の祖先です。) 要素にマージンがある場合は、オフセットにマージンが追加されます。この要素は内容のために新しい [ブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context) (BFC) を生成します。
-- **粘着位置指定要素** (stickily positioned element) とは、 `position` の[計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)が `sticky` である要素です。これは[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)がフロールート (またはその中でスクロールするコンテナー) 内の指定されたしきい値 (例えば {{Cssxref("top")}} に設定された auto 以外の値など) を達するまでは相対的な配置として扱われ、[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)の反対の端が来るまでその位置に「粘着」するものとして扱われます。
+- **位置指定要素** (positioned element) とは、 `position` の[計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)が `relative`, `absolute`, `fixed`, `sticky` のいずれかである要素です。 (言い換えれば、`static` 以外の全てです。)
+- **相対位置指定要素** (relatively positioned element) とは、`position` の[計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)が `relative` である要素です。 {{Cssxref("top")}} および {{Cssxref("bottom")}} プロパティは、通常の位置からの垂直方向のオフセットを指定します。 {{Cssxref("left")}} および {{Cssxref("right")}} プロパティは、水平方向のオフセットを指定します。
+- **絶対位置指定要素** (absolutely positioned element) とは、`position` の[計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)が `absolute` または `fixed` である要素です。 {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, {{Cssxref("left")}} の各プロパティは、この要素の[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)の端からのオフセットを指定します。 (包含ブロックは配置される要素の祖先です。) 要素にマージンがある場合は、オフセットにマージンが追加されます。この要素は内容のために新しい [ブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context) (BFC) を生成します。
+- **粘着位置指定要素** (stickily positioned element) とは、`position` の[計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)が `sticky` である要素です。これは[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)がフロールート (またはその中でスクロールするコンテナー) 内の指定されたしきい値 (例えば {{Cssxref("top")}} に設定された auto 以外の値など) を達するまでは相対的な配置として扱われ、[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)の反対の端が来るまでその位置に「粘着」するものとして扱われます。
 
 ほとんどの場合、絶対位置指定要素に {{Cssxref("height")}} および {{Cssxref("width")}} が `auto` が設定されると、内容に合うように大きさが調整されます。しかし、非[置換](/ja/docs/Glossary/Replaced_elements)要素で絶対位置指定要素は、 {{Cssxref("top")}} および {{Cssxref("bottom")}} を指定して {{Cssxref("height")}} を指定しない (つまり `auto` の) ままにすることで、利用できる垂直の空間を埋めることができます。同様に、 {{Cssxref("left")}} および {{Cssxref("right")}} を指定して {{Cssxref("width")}} を `auto` のままにすることで、利用できる水平の空間を埋めることができます。
 
@@ -226,7 +225,7 @@ position: unset;
 </p>
 
 <p class="positioned">
-  既定では、親要素の幅を100%使用し、子コンテンツの高さと同じ高さになります。コンテンツの幅と高さの合計は、コンテンツの高さ＋パディング＋境界線の幅/高さとなります。
+  既定では、親要素の幅を 100% 使用し、子コンテンツの高さと同じ高さになります。コンテンツの幅と高さの合計は、コンテンツの高さ＋パディング＋境界線の幅/高さとなります。
 </p>
 
 <p>
@@ -416,8 +415,8 @@ dt {
   border-top: 1px solid #717d85;
   color: white;
   font:
-    bold 18px/21px Helvetica,
-    Arial,
+    bold 18px/21px "Helvetica",
+    "Arial",
     sans-serif;
   margin: 0;
   padding: 2px 0 0 12px;
@@ -428,8 +427,8 @@ dt {
 
 dd {
   font:
-    bold 20px/45px Helvetica,
-    Arial,
+    bold 20px/45px "Helvetica",
+    "Arial",
     sans-serif;
   margin: 0;
   padding-left: 12px;
@@ -480,7 +479,7 @@ div {
   overflow: scroll;
   scrollbar-width: thin;
   font-size: 16px;
-  font-family: Verdana;
+  font-family: "Verdana";
   border: 1px solid;
 }
 
