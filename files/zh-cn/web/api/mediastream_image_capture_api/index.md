@@ -7,13 +7,13 @@ l10n:
 
 {{DefaultAPISidebar("Image Capture API")}}
 
-**MediaStream 图像捕获 API** 是用于从拍摄设备捕获图像或视频的 API。除了捕获数据之外，它还可以检索设备能力的信息，例如图像尺寸、是否支持消除红眼、是否有闪光灯以及这些功能当前的设置。相反地，该 API 允许在设备允许的限制范围内配置各项功能。
+**媒体流图像捕获 API**（MediaStream Image Capture API）是用于从拍摄设备捕获图像或视频的 API。除了捕获数据之外，它还可以检索设备能力的信息，例如图像尺寸、是否支持消除红眼、是否有闪光灯以及这些功能当前的设置。相反地，该 API 允许在设备允许的限制范围内配置各项功能。
 
 ## 媒体流图像捕获的概念与用法
 
 检索图像或视频流的过程如下所述。下面的示例代码改编自 [Chrome 的图片截取示例](https://googlechrome.github.io/samples/image-capture/)。
 
-首先，调用 {{domxref("MediaDevices.getUserMedia()")}} 获取对设备的引用。下面的示例请求任何可用的视频设备，但 getUserMedia() 方法也允许请求更具体的能力。该方法返回一个会解析为 {{domxref("MediaStream")}} 对象的 {{jsxref("Promise")}}。
+首先，调用 {{domxref("MediaDevices.getUserMedia()")}} 获取对设备的引用。下面的示例请求任何可用的视频设备，但 `getUserMedia()` 方法也允许请求更具体的能力。该方法返回一个会兑现为 {{domxref("MediaStream")}} 对象的 {{jsxref("Promise")}}。
 
 ```js
 navigator.mediaDevices.getUserMedia({ video: true }).then((mediaStream) => {
