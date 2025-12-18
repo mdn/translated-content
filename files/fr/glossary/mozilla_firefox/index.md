@@ -1,20 +1,46 @@
 ---
 title: Mozilla Firefox
 slug: Glossary/Mozilla_Firefox
+l10n:
+  sourceCommit: 74e7902b0875b6378d77df6d2d925a2d09d19f5d
 ---
 
-{{GlossarySidebar}}
+**Firefox** est un {{Glossary("Browser","navigateur web")}} gratuit et open source développé par la Mozilla Corporation. Firefox est disponible pour Windows, macOS, Linux, Android et iOS.
 
-Mozilla Firefox est un {{Glossary("navigateur")}} open source libre dont le développement est supervisé par Mozilla Corporation. Firefox fonctionne sur Windows, OS X, Linux, et Android.
+Sorti pour la première fois en novembre 2004, Firefox est personnalisable avec des thèmes, des modules complémentaires et des [extensions](/fr/docs/Mozilla/Add-ons). Firefox utilise le moteur de rendu {{Glossary("Gecko")}} pour afficher les pages web et implémente les standards {{Glossary("world wide web", "web")}} actuels et à venir.
 
-Distribué pour la première fois en novembre 2004, Firefox est entièrement personnalisable grâce à des thèmes, plug-ins, et [modules](/fr/docs/Mozilla/Add-ons). Firefox utilise {{glossary("Gecko")}} pour réaliser l'affichage des pages web, et implémente aussi bien les normes Web actuelles que celles à venir.
+## Télécharger Firefox
 
-## Pour en savoir plus
+Firefox est disponible sur plusieurs plateformes et existe en différentes versions selon les besoins des utilisateur·ice·s.
 
-### Culture générale
+### Utilisateur·ice·s
 
-- [Site web officiel de Mozilla Firefox](https://www.firefox.com/)
+Utilisez ces liens pour télécharger Firefox pour différentes plateformes, appareils ou besoins de déploiement&nbsp;:
 
-### Référence technique
+- [Ordinateur](https://www.firefox.com/fr/)
+- [Android](https://www.firefox.com/fr/browsers/mobile/)
+- [iOS](https://www.firefox.com/fr/browsers/mobile/)
+- [Firefox pour les entreprises](https://www.firefox.com/fr/browsers/enterprise/)
 
-- [Documentation/infos développeur sur MDN](/fr/docs/Mozilla/Firefox)
+### Développeur·euse·s web
+
+Si vous souhaitez essayer les dernières fonctionnalités de Firefox, installez l'une des versions préliminaires&nbsp;:
+
+- [Firefox Developer Edition](https://www.firefox.com/fr/channel/desktop/developer/)
+- [Firefox Nightly](https://www.firefox.com/fr/channel/desktop/#nightly)
+- [Firefox Beta](https://www.firefox.com/fr/channel/desktop/#beta)
+
+## Voir aussi
+
+- [Firefox](https://fr.wikipedia.org/wiki/Mozilla_Firefox) sur Wikipédia
+- [Notes de version de Firefox <sup>(angl.)</sup>](https://www.firefox.com/en-US/releases/)
+- [Documentation source de Firefox <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/)
+- [Documentation développeur·euse Firefox](/fr/docs/Mozilla/Firefox) sur MDN Web Docs
+- [SpiderMonkey <sup>(angl.)</sup>](https://spidermonkey.dev/) moteur JavaScript et WebAssembly
+- [Positions de Mozilla sur les standards <sup>(angl.)</sup>](https://mozilla.github.io/standards-positions/)
+- [Signaler un bug Firefox <sup>(angl.)</sup>](https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox)
+- Termes associés du glossaire&nbsp;:
+  - {{Glossary("Browser", "Navigateur web")}}
+  - {{Glossary("Gecko")}}
+  - {{Glossary("Engine/Rendering", "Moteur de rendu")}}
+  - Autres navigateurs&nbsp;: {{Glossary("Apple Safari")}}, {{Glossary("Google Chrome")}}, {{Glossary("Microsoft Edge")}}, {{Glossary("Opera Browser")}}
