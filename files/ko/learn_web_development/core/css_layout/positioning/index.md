@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/CSS_layout/Positioning
 original_slug: Learn/CSS/CSS_layout/Positioning
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn_web_development/Core/CSS_layout")}}
 
 당신이 일반 문서 레이아웃 대열에서 요소를 끄집어 내어, 그것이 다르게 행동하게 만들수 있게 해주는 것이 위치잡기다. 예를 들어 상대 요소 위에 놓거나 브라우저 뷰 포트 내부의 동일한 위치를 항상 유지하게 해준다. 이 문서는 서로 다른 {{cssxref("position")}} 값을 설명하고, 그 걸 사용하는 방법에 대해서도 설명한다.
 
@@ -685,7 +685,7 @@ body {
 
 기본적인 위치잡기를 가지고 놀이삼아 시험해 보니 재미있었을 것이다; 비록 이것이 완전체 레이아웃에 사용할 수 있는 방법은 아니지만, 여러분이 보았다시피 이것이 알맞은 용도로 사용될 수 있는 많은 작업들이 있다.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn_web_development/Core/CSS_layout")}}
 
 ## 참조 항목
 
