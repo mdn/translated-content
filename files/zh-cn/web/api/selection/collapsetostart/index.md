@@ -22,7 +22,7 @@ collapseToStart()
 
 ### 返回值
 
-None ({{jsxref("undefined")}}).
+无（{{jsxref("undefined")}}）。
 
 ## 规范
 
