@@ -119,7 +119,7 @@ left: unset;
 
 #### HTML
 
-```html
+```html-nolint
 <div id="wrap">
   <div id="example_1">
     <pre>
