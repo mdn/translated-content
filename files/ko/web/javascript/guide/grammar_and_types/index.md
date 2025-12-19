@@ -3,7 +3,7 @@ title: 문법과 자료형
 slug: Web/JavaScript/Guide/Grammar_and_types
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/소개", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 
 이 장은 JavaScript의 기본 문법과 변수 선언, 자료형 및 리터럴을 다룹니다.
 
@@ -793,4 +793,4 @@ and so is foo.`;
 
 다음 장에서는, 흐름 제어 구조와 에러 처리를 살펴 볼 것입니다.
 
-{{PreviousNext("Web/JavaScript/Guide/소개", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
+{{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}

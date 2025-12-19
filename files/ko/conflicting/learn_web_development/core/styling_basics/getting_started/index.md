@@ -4,7 +4,7 @@ slug: conflicting/Learn_web_development/Core/Styling_basics/Getting_started
 original_slug: Learn/CSS/First_steps/How_CSS_is_structured
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/What_is_CSS", "conflicting/Learn_web_development/Core/Styling_basics")}}
 
 CSS 가 무엇인지, 그리고 CSS 의 기본 사용법에 대해 여러분은 알고 있습니다. 이제 언어 자체의 구조를 조금 더 깊이 살펴볼 차례입니다. 우리는 이미 여기에서 논의된 많은 개념들을 만났습니다. 나중에 혼란스러워 하는 개념을 발견하면, 이 개념으로 돌아와서 요약할 수 있습니다.
 
@@ -575,4 +575,4 @@ padding- left: 10px;
 
 브라우저가 HTML 과 CSS 를 가져와서 웹 페이지로 전환하는 방법에 대해 약간 이해하는 것이 유용합니다. 따라서 다음 기사 — [CSS 작동 방식](/ko/docs/Learn_web_development/Core/Styling_basics/What_is_CSS) — 에서 해당 작업을 살펴 보겠습니다.
 
-{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/What_is_CSS", "conflicting/Learn_web_development/Core/Styling_basics")}}

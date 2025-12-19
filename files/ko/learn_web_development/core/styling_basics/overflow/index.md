@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Overflow
 original_slug: Learn/CSS/Building_blocks/Overflowing_content
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_different_text_directions", "Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics")}}
 
 이번 수업에서는 CSS 의 또 다른 중요한 개념인 — **overflow** 를 살펴봅니다. Overflow 는 박스 안에 편안하게 담기에는 너무 많은 내용이 있을 때 발생합니다. 이 안내서에서는 내용과 관리 방법에 대해 설명합니다.
 
@@ -111,4 +111,4 @@ CSS 에는 **Block Formatting Context** (BFC) 의 개념이 있습니다. 이것
 
 이 짧은 수업은 overflow 개념을 소개했습니다; 이제 CSS 가 넘쳐나는 내용을 보이지 않게 만들려고 하지만 데이터가 손실될 수 있음을 이해합니다. overflow 가능성을 관리할 수 있으며 실수로 overflow 문제가 발생하지 않도록 작업을 테스트해야 합니다.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_different_text_directions", "Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics")}}

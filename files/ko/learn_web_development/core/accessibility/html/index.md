@@ -6,7 +6,7 @@ l10n:
   sourceCommit: d3cdafcdb4d22e5c55771501e7c80451a96aa032
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_accessibility","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}
 
 HTML 요소를 늘 올바른 목적에 따라 사용하는 것 만으로 수많은 웹 콘텐츠가 접근성을 갖춥니다. 이번 글에서는 접근성을 최대한으로 보장하기 위해 HTML을 어떻게 사용해야 하는지 자세히 설명합니다.
 
@@ -637,4 +637,4 @@ anchor를 포함해 많은 상호작용 가능한 콘텐츠들은 서로에게 �
 
 이제 당신은 대부분의 상황에서 접근성있는 HTML을 작성하는 능력을 갖췄을 것입니다. 이번 아티클에서는 아주 기본적인 내용들을 다뤘고, 남은 부분 WAI-ARIA 아티클에서 채워질 것입니다. 다음에는 CSS와 JavaScript에 대해 알아보고 모범적인 또는 잘못된 사용이 접근성에 어떻게 영향을 주는지 살펴보겠습니다.
 
-{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_accessibility","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}
