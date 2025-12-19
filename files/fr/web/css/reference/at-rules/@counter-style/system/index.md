@@ -1,9 +1,8 @@
 ---
 title: system
 slug: Web/CSS/Reference/At-rules/@counter-style/system
-original_slug: Web/CSS/@counter-style/system
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`system`** permet de spécifier l'algorithme à utiliser pour convertir la valeur entière d'un compteur en une représentation sous forme de chaîne de caractères. Il est utilisé dans une règle {{cssxref("@counter-style")}} pour définir le comportement du style défini.

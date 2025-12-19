@@ -1,9 +1,8 @@
 ---
 title: order
 slug: Web/CSS/Reference/Properties/order
-original_slug: Web/CSS/order
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`order`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスコンテナーやグリッドコンテナーの中で、アイテムを並べる順序を設定します。コンテナー内のアイテムは `order` の値の昇順に配置され、さらにソースコード内の順序で配置されます。明示的に `order` 値が指定されていないアイテムには、既定値である `0` が代入されます。
@@ -84,7 +83,7 @@ order: unset;
 
 `order` は要素の視覚上の順序にのみ影響を与えるものであり、論理的な順序やタブオーダーには影響を与えないので、 [speech](https://drafts.csswg.org/css-speech/) など、視覚的ではないメディアで使用してはいけません。
 
-[CSS 表示方法](/ja/docs/Web/CSS/Guides/Display)モジュールで定義されているこのプロパティは、グリッドおよびフレックスアイテムにのみ影響します。親要素の {{cssxref("display")}} プロパティがフレックスまたはグリッドコンテナーを作成していない要素に `order` を設定しても、効果はありません。
+このプロパティは[CSS 表示方法](/ja/docs/Web/CSS/Guides/Display)モジュールで定義されていますが、グリッドおよびフレックスアイテムにのみ影響します。その要素が親要素の {{cssxref("display")}} プロパティがフレックスまたはグリッドコンテナーを形成しない場合、`order` を設定しても、効果はありません。
 
 ### 値
 
@@ -130,7 +129,7 @@ order: unset;
 
 #### CSS
 
-メイン領域は、[フレキシブルボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout) モジュールの機能を使用してスタイルを設定します。{{cssxref("display")}} を `flex` に設定すると、{{htmlelement("main")}} 要素がフレックスコンテナーになります。既定では、これにより、垂直サイズが等しいフレックスアイテムが作成されます。サイドバーにはどちらも絶対的な {{cssxref("width")}} が指定されており、 {{htmlelement("article")}} は[正の余白](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios#正と負の余白)を、 {{cssxref("flex")}} 一括指定で設定した {{cssxref("flex-grow")}} 係数に応じて消費します。
+メイン領域は、[フレキシブルボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)モジュールの機能を使用してスタイルを設定します。{{cssxref("display")}} を `flex` に設定すると、{{htmlelement("main")}} 要素がフレックスコンテナーになります。既定では、これにより、垂直サイズが等しいフレックスアイテムが作成されます。サイドバーにはどちらも絶対的な {{cssxref("width")}} が指定されており、 {{htmlelement("article")}} は[正の余白](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios#正と負の余白)を、 {{cssxref("flex")}} 一括指定で設定した {{cssxref("flex-grow")}} 係数に応じて消費します。
 
 次に、フレックスコンテナーの 3 つの子要素それぞれに異なる `order` プロパティの値を設定します。これは、 CSS が HTML で宣言された順序ではなく、その要素の視覚的な順序を定義していることを意味します。
 

@@ -1,14 +1,13 @@
 ---
 title: ::scroll-marker-group
 slug: Web/CSS/Reference/Selectors/::scroll-marker-group
-original_slug: Web/CSS/::scroll-marker-group
 l10n:
-  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
+  sourceCommit: 9dbcd91284ec1ec64c4d8b343c3770880dd25129
 ---
 
 {{SeeCompatTable}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::scroll-marker-group`** est généré à l'intérieur d'un {{glossary("scroll container","conteneur de défilement")}} et contient tout pseudo-élément {{cssxref("::scroll-marker")}} généré sur les descendants de ce conteneur.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::scroll-marker-group`** est généré à l'intérieur d'un {{Glossary("scroll container", "conteneur de défilement")}} et contient tout pseudo-élément {{CSSxRef("::scroll-marker")}} généré sur les descendants de ce conteneur.
 
 ## Syntaxe
 
@@ -20,9 +19,9 @@ Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS
 
 ## Description
 
-Le pseudo-élément **`::scroll-marker-group`** d'un conteneur de défilement représente un **groupe de marqueurs de défilement**. Il s'agit d'un conteneur qui inclut automatiquement tout pseudo-élément {{cssxref("::scroll-marker")}} généré sur lui-même ou ses descendants. Cela permet de les positionner et de les disposer comme un groupe et s'utilise généralement lors de la création d'un carrousel CSS pour fournir un indicateur de position de défilement. Les marqueurs individuels peuvent être utilisés pour naviguer vers leurs éléments de contenu associés.
+Le pseudo-élément **`::scroll-marker-group`** d'un conteneur de défilement représente un **groupe de marqueurs de défilement**. Il s'agit d'un conteneur qui inclut automatiquement tout pseudo-élément {{CSSxRef("::scroll-marker")}} généré sur lui-même ou ses descendants. Cela permet de les positionner et de les disposer comme un groupe et s'utilise généralement lors de la création d'un carrousel CSS pour fournir un indicateur de position de défilement. Les marqueurs individuels peuvent être utilisés pour naviguer vers leurs éléments de contenu associés.
 
-Le conteneur de défilement doit avoir une valeur {{cssxref("scroll-marker-group")}} différente de `none` afin que le pseudo-élément `::scroll-marker-group` soit généré. La valeur de {{cssxref("scroll-marker-group")}} détermine l'endroit où le groupe de marqueurs apparaît dans l'ordre d'onglet et l'ordre de disposition des boîtes du carrousel (mais pas dans la structure du DOM)&nbsp;: `before` le place au début, tandis que `after` le place à la fin.
+Le conteneur de défilement doit avoir une valeur {{CSSxRef("scroll-marker-group")}} différente de `none` afin que le pseudo-élément `::scroll-marker-group` soit généré. La valeur de {{CSSxRef("scroll-marker-group")}} détermine l'endroit où le groupe de marqueurs apparaît dans l'ordre d'onglet et l'ordre de disposition des boîtes du carrousel (mais pas dans la structure du DOM)&nbsp;: `before` le place au début, tandis que `after` le place à la fin.
 
 Il est recommandé d'aligner la position de rendu visuelle du groupe de marqueurs avec l'ordre d'onglet. Lorsque vous positionnez le groupe au début du contenu, placez-le au début de l'ordre d'onglet avec `before`. Lorsque vous positionnez le groupe à la fin du contenu, placez-le à la fin de l'ordre d'onglet avec `after`.
 
@@ -59,7 +58,7 @@ Le HTML se compose d'une [liste non ordonnée](/fr/docs/Web/HTML/Reference/Eleme
 
 #### CSS
 
-Nous convertissons d'abord notre `<ul>` en carrousel en définissant {{cssxref("display")}} sur `flex`, créant une seule ligne non enroulée d'éléments `<li>`. La propriété {{cssxref("overflow-x")}} est définie sur `auto`, ce qui signifie que si les éléments débordent de leur conteneur sur l'axe x, le contenu défile horizontalement. Nous convertissons ensuite le `<ul>` en [conteneur d'ancrage au défilement](/fr/docs/Glossary/Scroll_snap#conteneur_dancrage_au_défilement), garantissant que les éléments s'alignent toujours lorsque le conteneur est défilé avec une valeur {{cssxref("scroll-snap-type")}} de `mandatory`.
+Nous convertissons d'abord notre `<ul>` en carrousel en définissant {{CSSxRef("display")}} sur `flex`, créant une seule ligne non enroulée d'éléments `<li>`. La propriété {{CSSxRef("overflow-x")}} est définie sur `auto`, ce qui signifie que si les éléments débordent de leur conteneur sur l'axe x, le contenu défile horizontalement. Nous convertissons ensuite le `<ul>` en [conteneur d'ancrage au défilement](/fr/docs/Glossary/Scroll_snap#conteneur_dancrage_au_défilement), garantissant que les éléments s'alignent toujours lorsque le conteneur est défilé avec une valeur {{CSSxRef("scroll-snap-type")}} de `mandatory`.
 
 ```css hidden live-sample___créer_des_marqueurs_de_défilement_pour_un_carrousel live-sample___positionner_le_groupe_de_marqueurs_avec_le_positionnement_par_ancrage
 * {
@@ -83,7 +82,7 @@ ul {
 }
 ```
 
-Ensuite, nous mettons en évidence les éléments `<li>`, en utilisant la propriété {{cssxref("flex")}} pour les rendre à `100%` de la largeur du conteneur. La valeur {{cssxref("scroll-snap-align")}} `start` fait s'accrocher le côté gauche de l'élément visible le plus à gauche au bord gauche du conteneur lorsque le contenu est défilé.
+Ensuite, nous mettons en évidence les éléments `<li>`, en utilisant la propriété {{CSSxRef("flex")}} pour les rendre à `100%` de la largeur du conteneur. La valeur {{CSSxRef("scroll-snap-align")}} `start` fait s'accrocher le côté gauche de l'élément visible le plus à gauche au bord gauche du conteneur lorsque le contenu est défilé.
 
 ```css live-sample___créer_des_marqueurs_de_défilement_pour_un_carrousel live-sample___positionner_le_groupe_de_marqueurs_avec_le_positionnement_par_ancrage
 li {
@@ -97,7 +96,7 @@ li {
 }
 ```
 
-Ensuite, la propriété {{cssxref("scroll-marker-group")}} de la liste est définie sur `after`, de sorte que le pseudo-élément `::scroll-marker-group` est placé après le contenu DOM de la liste dans l'ordre de tabulation et l'ordre de disposition des boîtes&nbsp;; cela signifie qu'il vient après les boutons de défilement.
+Ensuite, la propriété {{CSSxRef("scroll-marker-group")}} de la liste est définie sur `after`, de sorte que le pseudo-élément `::scroll-marker-group` est placé après le contenu DOM de la liste dans l'ordre de tabulation et l'ordre de disposition des boîtes&nbsp;; cela signifie qu'il vient après les boutons de défilement.
 
 ```css live-sample___créer_des_marqueurs_de_défilement_pour_un_carrousel live-sample___positionner_le_groupe_de_marqueurs_avec_le_positionnement_par_ancrage
 ul {
@@ -105,7 +104,7 @@ ul {
 }
 ```
 
-Ensuite, le pseudo-élément `::scroll-marker-group` de la liste est disposé avec Flexbox, avec une valeur de {{cssxref("justify-content")}} à `center` et un {{cssxref("gap")}} de `20px` afin que ses enfants (les pseudo-éléments {{cssxref("::scroll-marker")}}) soient centrés à l'intérieur du `::scroll-marker-group` avec un espacement entre chacun.
+Ensuite, le pseudo-élément `::scroll-marker-group` de la liste est disposé avec Flexbox, avec une valeur de {{CSSxRef("justify-content")}} à `center` et un {{CSSxRef("gap")}} de `20px` afin que ses enfants (les pseudo-éléments {{CSSxRef("::scroll-marker")}}) soient centrés à l'intérieur du `::scroll-marker-group` avec un espacement entre chacun.
 
 ```css live-sample___créer_des_marqueurs_de_défilement_pour_un_carrousel live-sample___positionner_le_groupe_de_marqueurs_avec_le_positionnement_par_ancrage
 ul::scroll-marker-group {
@@ -115,7 +114,7 @@ ul::scroll-marker-group {
 }
 ```
 
-Ensuite, les marqueurs de défilement eux-mêmes sont mis en évidence. Leur apparence est gérée par {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("background-color")}}, {{cssxref("border")}} et {{cssxref("border-radius")}}. Il faut aussi définir une valeur de {{cssxref("content")}} différente de `none` afin qu'ils soient effectivement générés.
+Ensuite, les marqueurs de défilement eux-mêmes sont mis en évidence. Leur apparence est gérée par {{CSSxRef("width")}}, {{CSSxRef("height")}}, {{CSSxRef("background-color")}}, {{CSSxRef("border")}} et {{CSSxRef("border-radius")}}. Il faut aussi définir une valeur de {{CSSxRef("content")}} différente de `none` afin qu'ils soient effectivement générés.
 
 ```css live-sample___créer_des_marqueurs_de_défilement_pour_un_carrousel live-sample___positionner_le_groupe_de_marqueurs_avec_le_positionnement_par_ancrage
 li::scroll-marker {
@@ -131,7 +130,7 @@ li::scroll-marker {
 > [!NOTE]
 > Le contenu généré est en ligne (<i lang="en">inline</i> en anglais) par défaut&nbsp;; nous pouvons appliquer `width` et `height` à nos marqueurs car ils sont disposés en éléments flexibles.
 
-Enfin, la pseudo-classe {{cssxref(":target-current")}} est utilisée pour sélectionner le marqueur de défilement correspondant à la «&nbsp;page&nbsp;» visible, afin de mettre en évidence la progression de défilement. Ici, nous définissons `background-color` sur `black` pour obtenir un disque plein.
+Enfin, la pseudo-classe {{CSSxRef(":target-current")}} est utilisée pour sélectionner le marqueur de défilement correspondant à la «&nbsp;page&nbsp;» visible, afin de mettre en évidence la progression de défilement. Ici, nous définissons `background-color` sur `black` pour obtenir un disque plein.
 
 ```css live-sample___créer_des_marqueurs_de_défilement_pour_un_carrousel live-sample___positionner_le_groupe_de_marqueurs_avec_le_positionnement_par_ancrage
 li::scroll-marker:target-current {
@@ -149,7 +148,7 @@ Cet exemple étend le précédent en montrant l'utilisation du [positionnement p
 
 #### CSS
 
-Le pseudo-élément `::scroll-marker-group` de la liste est positionné par rapport au carrousel en utilisant le positionnement par ancrage, en donnant au groupe une valeur {{cssxref("position-anchor")}} qui correspond au {{cssxref("anchor-name")}} de l'élément `<ul>`. Nous positionnons ensuite ce groupe par rapport au conteneur de défilement dans la direction de bloc en définissant une valeur de {{cssxref("top")}} qui inclut une fonction {{cssxref("anchor()")}}. Nous ajoutons aussi une valeur {{cssxref("justify-self")}} `anchor-center`, qui aligne le groupe au centre du conteneur de défilement dans la direction en ligne.
+Le pseudo-élément `::scroll-marker-group` de la liste est positionné par rapport au carrousel en utilisant le positionnement par ancrage, en donnant au groupe une valeur {{CSSxRef("position-anchor")}} qui correspond au {{CSSxRef("anchor-name")}} de l'élément `<ul>`. Nous positionnons ensuite ce groupe par rapport au conteneur de défilement dans la direction de bloc en définissant une valeur de {{CSSxRef("top")}} qui inclut une fonction {{CSSxRef("anchor()")}}. Nous ajoutons aussi une valeur {{CSSxRef("justify-self")}} `anchor-center`, qui aligne le groupe au centre du conteneur de défilement dans la direction en ligne.
 
 ```css live-sample___positionner_le_groupe_de_marqueurs_avec_le_positionnement_par_ancrage
 ul {
@@ -182,11 +181,11 @@ ul::scroll-marker-group {
 
 ## Voir aussi
 
-- {{cssxref("scroll-marker-group")}}
-- {{cssxref("::scroll-button()")}}
-- {{cssxref("::scroll-marker")}}
-- {{cssxref("::column")}}
-- {{cssxref(":target-current")}}
+- La propriété {{CSSxRef("scroll-marker-group")}}
+- Le pseudo-élément {{CSSxRef("::scroll-button()")}}
+- Le pseudo-élément {{CSSxRef("::scroll-marker")}}
+- Le pseudo-élément {{CSSxRef("::column")}}
+- La pseudo-classe {{CSSxRef(":target-current")}}
 - [Créer des carrousels en CSS](/fr/docs/Web/CSS/CSS_overflow/CSS_carousels)
 - Le module de [positionnement par ancrage CSS](/fr/docs/Web/CSS/CSS_anchor_positioning)
 - Le module de [débordement CSS](/fr/docs/Web/CSS/Guides/Overflow)

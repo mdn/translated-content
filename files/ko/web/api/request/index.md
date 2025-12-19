@@ -31,7 +31,7 @@ l10n:
 - {{domxref("Request.headers")}} {{ReadOnlyInline}}
   - : 요청에 연관된 {{domxref("Headers")}} 객체입니다.
 - {{domxref("Request.integrity")}} {{ReadOnlyInline}}
-  - : 요청의 [하위 리소스 무결성](/ko/docs/Web/Security/Subresource_Integrity) 값(예시: `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`)입니다.
+  - : 요청의 [하위 리소스 무결성](/ko/docs/Web/Security/Defenses/Subresource_Integrity) 값(예시: `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`)입니다.
 - {{domxref("Request.method")}} {{ReadOnlyInline}}
   - : 요청의 메서드(`GET`, `POST` 등)입니다.
 - {{domxref("Request.mode")}} {{ReadOnlyInline}}

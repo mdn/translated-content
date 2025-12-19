@@ -1,9 +1,8 @@
 ---
 title: :read-write
 slug: Web/CSS/Reference/Selectors/:read-write
-original_slug: Web/CSS/:read-write
 l10n:
-  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:read-write`** représente un élément (tel que `input` ou `textarea`) qui peut être modifié par l'utilisateur·ice.
@@ -54,7 +53,7 @@ input[type="submit"] {
 ### Confirmation des détails du formulaire à l'aide de contrôles en lecture seule
 
 Vous pouvez utiliser le contrôle de formulaire [`readonly`](/fr/docs/Web/HTML/Reference/Attributes/readonly) lorsque vous souhaitez qu'un·e utilisateur·ice vérifie les informations qu'il a saisies précédemment, que vous souhaitez soumettre avec de nouvelles données dans des contrôles en lecture-écriture.
-Dans l'exemple ci-dessous, la pseudo-classe {{cssxref(":read-only")}} est utilisée pour faire en sorte que le {{htmlelement("textarea")}} (l'adresse d'un utilisateur) ressemble à un paragraphe ordinaire. La pseudo-classe `:read-write` fournit un moyen de mettre en évidence le `<textarea>` modifiable (les instructions de livraison)&nbsp;:
+Dans l'exemple ci-dessous, la pseudo-classe {{CSSxRef(":read-only")}} est utilisée pour faire en sorte que le {{HTMLElement("textarea")}} (l'adresse d'un utilisateur) ressemble à un paragraphe ordinaire. La pseudo-classe `:read-write` fournit un moyen de mettre en évidence le `<textarea>` modifiable (les instructions de livraison)&nbsp;:
 
 ```css hidden
 body {
@@ -132,11 +131,11 @@ France</textarea
 </form>
 ```
 
-{{embedlivesample("confirmation_des_détails_du_formulaire_à_laide_de_contrôles_en_lecture_seule", , "300")}}
+{{EmbedLiveSample("confirmation_des_détails_du_formulaire_à_laide_de_contrôles_en_lecture_seule", , "300")}}
 
 ### Mise en forme des contrôles non-formulaires en lecture-écriture
 
-Ce sélecteur ne sélectionne pas seulement les éléments {{htmlElement("input")}}/{{htmlElement("textarea")}} — il sélectionnera _tout_ élément qui peut être modifié par l'utilisateur, comme un élément {{htmlelement("p")}} avec l'attribut [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable) activé.
+Ce sélecteur ne sélectionne pas seulement les éléments {{HTMLElement("input")}}/{{HTMLElement("textarea")}} — il sélectionnera _tout_ élément qui peut être modifié par l'utilisateur, comme un élément {{HTMLElement("p")}} avec l'attribut [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable) activé.
 
 #### HTML
 
@@ -185,5 +184,5 @@ p:read-write {
 
 ## Voir aussi
 
-- {{cssxref(":read-only")}}
+- La pseudo-classe {{CSSxRef(":read-only")}}
 - L'attribut HTML [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes#contenteditable)

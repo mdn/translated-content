@@ -1,9 +1,8 @@
 ---
 title: pad
 slug: Web/CSS/Reference/At-rules/@counter-style/pad
-original_slug: Web/CSS/@counter-style/pad
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`pad`** de la règle {{cssxref("@counter-style")}} permet de définir une longueur minimale pour les représentations des marqueurs.

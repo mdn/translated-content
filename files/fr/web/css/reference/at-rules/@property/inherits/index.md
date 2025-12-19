@@ -1,12 +1,11 @@
 ---
 title: inherits
 slug: Web/CSS/Reference/At-rules/@property/inherits
-original_slug: Web/CSS/@property/inherits
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`inherits`** de la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{cssxref("@property")}} contrôle si la [propriété personnalisée CSS](/fr/docs/Web/CSS/Reference/Properties/--*) enregistrée hérite ou non de sa valeur par défaut.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`inherits`** de la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@property")}} contrôle si la [propriété personnalisée CSS](/fr/docs/Web/CSS/Reference/Properties/--*) enregistrée hérite ou non de sa valeur par défaut.
 Ce descripteur est obligatoire&nbsp;: s'il est absent ou invalide, la règle `@property` entière est ignorée.
 
 ## Syntaxe
@@ -28,11 +27,11 @@ inherits: true;
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -48,7 +47,7 @@ Cet exemple montre comment définir une propriété personnalisée `--my-color` 
 }
 ```
 
-En utilisant [JavaScript](/fr/docs/Web/JavaScript) {{domxref('CSS.registerProperty_static', 'CSS.registerProperty()')}}&nbsp;:
+En utilisant [JavaScript](/fr/docs/Web/JavaScript) {{DOMxRef('CSS.registerProperty_static', 'CSS.registerProperty()')}}&nbsp;:
 
 ```js
 window.CSS.registerProperty({
@@ -69,7 +68,7 @@ window.CSS.registerProperty({
 
 ## Voir aussi
 
-- Autres descripteurs de {{cssxref("@property")}}&nbsp;: {{cssxref("@property/initial-value", "initial-value")}} et {{cssxref("@property/syntax","syntax")}}
+- Autres descripteurs de {{CSSxRef("@property")}}&nbsp;: {{CSSxRef("@property/initial-value", "initial-value")}} et {{CSSxRef("@property/syntax","syntax")}}
 - [API Propriétés et valeurs CSS](/fr/docs/Web/API/CSS_Properties_and_Values_API)
 - [API Peinture CSS](/fr/docs/Web/API/CSS_Painting_API)
 - [API Typage de modèle d'objet CSS](/fr/docs/Web/API/CSS_Typed_OM_API)

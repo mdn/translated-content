@@ -193,6 +193,6 @@ Bien que le champ masqué soit invisible sur la page, il fait toujours partie de
 
 ## Voir aussi
 
-- [Guide sur les formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\)
+- [Guide sur les formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
 - L'interface DOM {{domxref("HTMLInputElement")}}

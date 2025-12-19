@@ -34,7 +34,7 @@ l10n:
 
 ### 同一オリジンポリシーと CORS
 
-[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)は、ウェブの基本的なセキュリティメカニズムであり、ある{{Glossary("origin", "オリジン")}}から読み込まれた文書やスクリプトが、別のオリジンからのリソースを操作する方法を制限します。これにより、潜在的に悪意のある文書を隔離し、実現可能な攻撃ベクトルを減らすことができます。
+[同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)は、ウェブの基本的なセキュリティメカニズムであり、ある{{Glossary("origin", "オリジン")}}から読み込まれた文書やスクリプトが、別のオリジンからのリソースを操作する方法を制限します。これにより、潜在的に悪意のある文書を隔離し、実現可能な攻撃ベクトルを減らすことができます。
 
 一般的に、あるオリジンの文書から、他のオリジンにリクエストを送信することはできません。 これには意味があります。サイト同士が干渉し合ったり、許可されていないデータにアクセスしたりすることを防ぐためです。
 
@@ -50,13 +50,13 @@ l10n:
 
 関連トピック:
 
-- [トランスポート層セキュリティ](/ja/docs/Web/Security/Transport_Layer_Security) (TLS)
+- [トランスポート層セキュリティ](/ja/docs/Web/Security/Defenses/Transport_Layer_Security) (TLS)
   - : TLS プロトコルは、ネットワーク上の 2 つのアプリケーションまたは端末が情報を安全に交換するための標準です。 TLS を使用するアプリケーションは、セキュリティパラメーターを選べます。これは、データのセキュリティと信頼性に大きな影響を及ぼす可能性があります。
 - [HTTP Strict-Transport-Security](/ja/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)
   - : `Strict-Transport-Security` は [HTTP](/ja/docs/Web/HTTP) のヘッダーで、ウェブサイトが HTTPS のみを使用してアクセスすることを指定します。
-- [証明書の透明性](/ja/docs/Web/Security/Certificate_Transparency)
+- [証明書の透明性](/ja/docs/Web/Security/Defenses/Certificate_Transparency)
   - : 証明書の透明性 (CT) は、証明書の誤発行を防止し、監視するための開かれた枠組みです。新たに発行された証明書は、一般に実行されている、多くの場合独立した CT ログに「ログ出力」されます。これらは、発行された TLS 証明書の追記専用で、暗号化により保証された記録を提供します。
-- [混在コンテンツ](/ja/docs/Web/Security/Mixed_content)
+- [混在コンテンツ](/ja/docs/Web/Security/Defenses/Mixed_content)
   - : HTTPS ページが[平文](/ja/docs/Glossary/Plaintext)の HTTP を使用して取得したコンテンツを含んだ場合、**混在コンテンツ**ページと呼ばれます。このようなページは部分的にしか暗号化されないため、暗号化されていないコンテンツはスニッファーや中間者攻撃者にアクセス可能な状態となります。
 
 ### 保護されたコンテキストと機能の許可
@@ -70,13 +70,13 @@ l10n:
 
 これらの「強力な機能」は、次の方法で制御されています。
 
-- このような機能の使用は、[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ許可されます。保護されたコンテキストとは、コンテンツが安全に配信された（HTTPS/TLS経由）という合理的な信頼性を持つ{{domxref("Window", "ウィンドウ")}}または{{domxref("WorkerGlobalScope", "ワーカー")}}です。保護されたコンテキストでは、保護されて**いない**コンテキストとの通信の可能性は制限されます。保護されたコンテキストは、強力な機能にアクセスしようとする[中間者攻撃者](https://ja.wikipedia.org/wiki/中間者攻撃)からのアクセスを防ぐのにも役立ちます。
+- このような機能の使用は、[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)でのみ許可されます。保護されたコンテキストとは、コンテンツが安全に配信された（HTTPS/TLS経由）という合理的な信頼性を持つ{{domxref("Window", "ウィンドウ")}}または{{domxref("WorkerGlobalScope", "ワーカー")}}です。保護されたコンテキストでは、保護されて**いない**コンテキストとの通信の可能性は制限されます。保護されたコンテキストは、強力な機能にアクセスしようとする[中間者攻撃者](https://ja.wikipedia.org/wiki/中間者攻撃)からのアクセスを防ぐのにも役立ちます。
 
-  保護されたコンテキストでのみ利用できるウェブプラットフォーム機能の一覧は、「[保護されたコンテキストでのみ利用可能な機能](/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)」をご覧ください。
+  保護されたコンテキストでのみ利用できるウェブプラットフォーム機能の一覧は、「[保護されたコンテキストでのみ利用可能な機能](/ja/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts)」をご覧ください。
 
 - これらの機能の使用は、ユーザー権限のシステムによって制限されています。ユーザーは、そのような機能へのアクセスを明示的にオプトインする必要があり、自動的に使用できるということではありません。ユーザー権限のリクエストは自動的に行われ、[権限 API](/ja/docs/Web/API/Permissions_API) を使用して API 権限の状態をクエリーすることができます。
 
-- 他にも、ボタンをクリックするなどユーザーのアクションに対するレスポンスとしてのみ使用できるブラウザー機能がいくつかあります。つまり、それらの機能は適切なイベントハンドラー内から呼び出す必要があるということです。 これらは**一時的な活性化**と呼ばれます。 詳細については、「[ユーザーによる有効化によって制御される機能](/ja/docs/Web/Security/User_activation)」を参照してください。
+- 他にも、ボタンをクリックするなどユーザーのアクションに対するレスポンスとしてのみ使用できるブラウザー機能がいくつかあります。つまり、それらの機能は適切なイベントハンドラー内から呼び出す必要があるということです。 これらは**一時的な活性化**と呼ばれます。 詳細については、「[ユーザーによる有効化によって制御される機能](/ja/docs/Web/Security/Defenses/User_activation)」を参照してください。
 
 ## 高水準のセキュリティの認識
 
@@ -109,7 +109,7 @@ l10n:
 
 一般的に、 [URL のクエリー文字列に機密データを含める](https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url)ことは避けるべきです。なぜなら、第三者が URL を傍受した場合（例えば、 HTTP の {{httpheader("Referer")}} ヘッダー経由で）、その情報を盗むことができるからです。さらに深刻なのは、これらの URL が[インターネットアーカイブ](https://web.archive.org/)などの公開ウェブクローラ、 HTTP プロキシー、アーカイブツールによってインデックス化される可能性があるということです。つまり、機密データが公的にアクセス可能なリソース上に残存する可能性があるということです。
 
-これらの問題を避けるには、 `GET` リクエストではなく `POST` リクエストを使用してください。 記事 [Referer ヘッダーのプライバシーとセキュリティの考慮事項](/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns)では、 `Referer` ヘッダーに関連付けられたプライバシーとセキュリティのリスクについてより詳しく説明し、それらのリスクを軽減するためのアドバイスを提供しています。
+これらの問題を避けるには、 `GET` リクエストではなく `POST` リクエストを使用してください。 記事 [Referer ヘッダーのプライバシーとセキュリティの考慮事項](/ja/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns)では、 `Referer` ヘッダーに関連付けられたプライバシーとセキュリティのリスクについてより詳しく説明し、それらのリスクを軽減するためのアドバイスを提供しています。
 
 > [!NOTE]
 > GET リクエストで URL に機密データを送信しないようにすることで、{{glossary("CSRF", "クロスサイトリクエストフォージェリー")}}や[リプレイ攻撃](https://en.wikipedia.org/wiki/Replay_attack)から保護するのにも役に立ちます。
@@ -131,7 +131,7 @@ CSP を使用すると、例えば、特定の信頼された元から読み込�
 
 関連トピック:
 
-- [サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)
+- [サブリソース完全性](/ja/docs/Web/Security/Defenses/Subresource_Integrity)
   - : **サブリソース完全性** (SRI) は、ブラウザーが（例えば、 {{Glossary("CDN")}} から）取得するリソースが予期せぬ操作なしに配信されていることを確認できるセキュリティ機能です。これは、取得するリソースが一致しなければならない暗号ハッシュを指定することでうまくいきます。
 - [HTTP Access-Control-Allow-Origin](/ja/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin)
   - : **`Access-Control-Allow-Origin`** レスポンスヘッダーは、このレスポンスが指定された{{glossary("Origin","オリジン")}}からリクエストされたコードに共有できるかどうかを示します。

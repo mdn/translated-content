@@ -1,9 +1,8 @@
 ---
 title: :heading()
 slug: Web/CSS/Reference/Selectors/:heading_function
-original_slug: Web/CSS/:heading_function
 l10n:
-  sourceCommit: 1a1fe4efc4bfa6147f084aad12cf9908130f76ab
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{SeeCompatTable}}
@@ -40,7 +39,7 @@ La fonction pseudo-classe `:heading()` prend une liste séparée par des virgule
     - `B` est un décalage entier,
     - `n` est tous les entiers non négatifs, à partir de 0.
 
-    Cela peut être lu comme le `An+B`-ème élément d'une liste. Les valeurs de `A` et `B` doivent toutes deux avoir des valeurs {{cssxref("&lt;integer&gt;")}}.
+    Cela peut être lu comme le `An+B`-ème élément d'une liste. Les valeurs de `A` et `B` doivent toutes deux avoir des valeurs {{CSSxRef("&lt;integer&gt;")}}.
 
 ## Remarques d'utilisation
 
@@ -126,4 +125,4 @@ Dans cet exemple&nbsp;:
 
 ## Voir aussi
 
-- Le sélecteur {{CSSXRef(":heading")}}
+- La pseudo-classe {{CSSxRef(":heading")}}

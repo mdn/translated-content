@@ -1,12 +1,11 @@
 ---
 title: :host-context()
 slug: Web/CSS/Reference/Selectors/:host-context
-original_slug: Web/CSS/:host-context
 l10n:
-  sourceCommit: 572f56b6deaa1402c2c332aba2754a9ec727ff7b
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{deprecated_header}}
+{{Deprecated_Header}}
 
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:host-context()`** sélectionne l'hôte sombre (<i lang="en">shadow host</i>) du [DOM sombre (<i lang="en">shadow DOM</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM) contenant le CSS dans lequel il est utilisé (afin de pouvoir sélectionner un élément personnalisé depuis l'intérieur de son DOM sombre), uniquement si le sélecteur fourni comme paramètre de la fonction correspond à un ancêtre de l'hôte sombre à l'emplacement qu'il occupe dans la hiérarchie du DOM.
 
@@ -16,7 +15,7 @@ Imaginez que vous ayez un élément personnalisé `<greenhouse>`, dans lequel vi
 
 Ce sélecteur traverse toutes les limites d'ombre. Il recherchera le thème ensoleillé ou ombragé appliqué directement à la `<greenhouse>` ou à l'un des ancêtres de l'hôte et aux DOM ancêtres jusqu'à atteindre la racine du document.
 
-Pour limiter le sélecteur uniquement à l'hôte `<greenhouse>` directement ou limiter la sélection au DOM de l'hôte, utilisez plutôt la pseudo-classe {{cssxref(":host")}} ou {{cssxref(":host_function", ":host()")}}.
+Pour limiter le sélecteur uniquement à l'hôte `<greenhouse>` directement ou limiter la sélection au DOM de l'hôte, utilisez plutôt la pseudo-classe {{CSSxRef(":host")}} ou {{CSSxRef(":host_function", ":host()")}}.
 
 > [!NOTE]
 > Cette pseudo-classe n'a aucun effet si elle est utilisée en dehors d'un _shadow DOM_.
@@ -99,7 +98,7 @@ p {
 
 ### Mettre en forme les hôtes sombres de façon ciblée
 
-Les fragments de code qui suivent sont tirés de notre [exemple sur les sélecteurs d'hôte](https://github.com/mdn/web-components-examples/tree/main/host-selectors) ([voir la démonstration](https://mdn.github.io/web-components-examples/host-selectors/)).
+Les fragments de code qui suivent sont tirés de notre [exemple sur les sélecteurs d'hôte <sup>(angl.)</sup>](https://github.com/mdn/web-components-examples/tree/main/host-selectors) ([voir la démonstration <sup>(angl.)</sup>](https://mdn.github.io/web-components-examples/host-selectors/)).
 
 Dans cet exemple, on a un élément personnalisé, `<context-span>`, dans lequel on peut écrire du texte&nbsp;:
 
@@ -143,9 +142,9 @@ Les règles `:host-context(h1) { font-style: italic; }` et `:host-context(h1):af
 ## Voir aussi
 
 - [Les composants web](/fr/docs/Web/API/Web_components)
-- La pseudo-classe CSS {{cssxref(":host")}}
-- La pseudo-classe CSS {{cssxref(":host_function", ":host()")}}
-- La pseudo-classe CSS {{cssxref(":state",":state()")}}
-- Le pseudo-élément CSS {{CSSXref("::slotted")}}
+- La pseudo-classe CSS {{CSSxRef(":host")}}
+- La pseudo-classe CSS {{CSSxRef(":host_function", ":host()")}}
+- La pseudo-classe CSS {{CSSxRef(":state",":state()")}}
+- Le pseudo-élément CSS {{CSSxRef("::slotted")}}
 - L'élément HTML {{HTMLElement("template")}}
 - Le module [CSS scoping](/fr/docs/Web/CSS/CSS_scoping)

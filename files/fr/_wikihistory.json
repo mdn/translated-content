@@ -36376,6 +36376,16 @@
       "Voulto"
     ]
   },
+  "Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns": {
+    "modified": "2020-11-02T18:51:04.362Z",
+    "contributors": [
+      "JNa0",
+      "applicodeur",
+      "arnaud.wixiweb",
+      "duduindo",
+      "Elaxis_"
+    ]
+  },
   "Web/Progressive_web_apps": {
     "modified": "2020-04-26T14:49:45.824Z",
     "contributors": [
@@ -37407,16 +37417,6 @@
     "contributors": [
       "SphinxKnight",
       "nico3333fr"
-    ]
-  },
-  "Web/Security/Referer_header:_privacy_and_security_concerns": {
-    "modified": "2020-11-02T18:51:04.362Z",
-    "contributors": [
-      "JNa0",
-      "applicodeur",
-      "arnaud.wixiweb",
-      "duduindo",
-      "Elaxis_"
     ]
   },
   "Web/URI/Guides/Choosing_between_www_and_non-www_URLs": {

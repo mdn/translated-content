@@ -3,7 +3,7 @@ title: Публикация вашего веб-сайта
 slug: Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Web_standards/How_the_web_works", "Learn_web_development/Getting_started/Your_first_website")}}
 
 После того, как вы закончите писать код и организовывать файлы, которые составляют ваш веб-сайт, вам нужно расположить все это в Интернете, чтобы люди могли найти ваш сайт. В этой статье описывается, как разместить простой пример вашего кода с минимальными усилиями.
 
@@ -153,4 +153,4 @@ git push
 - [Развёртывание сайта](https://www.codecademy.com/learn/deploy-a-website): хороший курс от Codecademy, который забегает немного вперёд и показывает некоторые дополнительные техники.
 - [Cheap or Free Static Website Hosting](http://alignedleft.com/resources/cheap-web-hosting), статья написанная Скоттом Мюрреем содержит некоторые полезные идеи о доступных сервисах.
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Web_standards/How_the_web_works", "Learn_web_development/Getting_started/Your_first_website")}}

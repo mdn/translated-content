@@ -1,9 +1,8 @@
 ---
 title: prefix
 slug: Web/CSS/Reference/At-rules/@counter-style/prefix
-original_slug: Web/CSS/@counter-style/prefix
 l10n:
-  sourceCommit: 9944f7b12ef1a6aecd54d4b2f0c188a82fdeaaf0
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`prefix`** de la règle {{cssxref('@counter-style')}} permet de spécifier le contenu qui sera ajouté au début de la représentation du marqueur du compteur.

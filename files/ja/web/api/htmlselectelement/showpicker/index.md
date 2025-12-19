@@ -39,7 +39,7 @@ showPicker()
 
 ## セキュリティの注意事項
 
-[一時的なユーザーの活性化](/ja/docs/Web/Security/User_activation)が要求されます。
+[一時的なユーザーの活性化](/ja/docs/Web/Security/Defenses/User_activation)が要求されます。
 この機能が動作するには、ユーザーがページまたはUIの要素と対話する必要があります。
 
 このメソッドは、同一オリジン iframe でのみ呼び出すことができます。別オリジンの iframe で呼び出された場合は例外が発生します。
