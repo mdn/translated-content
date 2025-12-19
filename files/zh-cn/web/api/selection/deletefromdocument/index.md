@@ -63,4 +63,4 @@ function deleteSelection() {
 
 ## 参见
 
-- 所属的 {{domxref("Selection")}} 接口。
+- 定义此方法的 {{domxref("Selection")}} 接口。
