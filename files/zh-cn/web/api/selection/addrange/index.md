@@ -8,7 +8,7 @@ l10n:
 
 {{ ApiRef("DOM") }}
 
-**`Selection.addRange()`** 方法会将一个 {{domxref("Range")}} 添加到一个 {{domxref("Selection")}} 中。
+**`Selection.addRange()`** 方法会向选区（{{domxref("Selection")}}）中添加一个范围（{{domxref("Range")}}）。
 
 ## 语法
 
@@ -19,7 +19,7 @@ addRange(range)
 ### 参数
 
 - `range`
-  - : A {{ domxref("Range") }} object that will be added to the {{domxref("Selection")}}.
+  - : 一个将被添加到 {{domxref("Selection")}} 中的 {{ domxref("Range") }} 对象。
 
 ### 返回值
 
@@ -74,4 +74,4 @@ button.addEventListener("click", () => {
 
 ## 参见
 
-- 所属的 {{domxref("Selection")}} 接口的方法
+- 此方法所属的接口：{{domxref("Selection")}}
