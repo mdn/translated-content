@@ -62,8 +62,8 @@ ul li {
 
 ![Firefox DevTools with the index.scss file opened in the style editor. The editor is focused on the source code's third line in SCSS format with nesting.](style-editor.png)
 
-## See also
+## 関連情報
 
-- [Source map format specification](https://tc39.es/ecma426/2024/)
-- HTTP {{HTTPHeader("SourceMap")}} response header
-- [Firefox Developer Tools: using a source map](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)
+- [ソースマップ形式の仕様](https://tc39.es/ecma426/2024/)
+- HTTP {{HTTPHeader("SourceMap")}} レスポンスヘッダー
+- [Firefox 開発ツール: ソースマップの使用](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)
