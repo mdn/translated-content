@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "conflicting/Learn_web_development/Core/Structuring_content")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 웹을 웹답게 만든다는 점에서 하이퍼 링크는 중요합니다. 이 글에서는 링크를 만드는데 필요한 구문을 보여주고 링크의 모범 사례를 설명합니다.
 

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Text_styling/Styling_lists
 original_slug: Learn/CSS/Styling_text/Styling_lists
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}
 
 [목록](/ko/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#lists) 은 대부분 다른 텍스트처럼 작동하지만, 알아야 할 목록과 관련된 몇 가지 CSS 속성과 고려해야 할 모범 사례가 있습니다. 이 기사는 모든 것을 설명합니다.
 
