@@ -1,8 +1,8 @@
 ---
-title: Source map
+title: Source map（ソースマップ）
 slug: Glossary/Source_map
-page-type: glossary-definition
-sidebar: glossarysidebar
+l10n:
+  sourceCommit: 7d4f930455a349e3c73836500add3d4840c76f5d
 ---
 
 A **source map** is a {{Glossary("JSON")}} file format that maps between minified or transformed code received by the browser and its original unmodified form, allowing the original code to be reconstructed and used when debugging.
