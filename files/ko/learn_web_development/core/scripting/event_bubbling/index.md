@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bc0d0d1ef796435e969f6d65c7e5d3c08f4023aa
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Events","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}
 
 웹 페이지는 제목, 텍스트 단락, 이미지, 버튼 등 "요소"로 구성되어 있으며 이러한 요소에 발생하는 이벤트를 수신할 수 있다는 것을 살펴보았습니다. 예를 들어, 버튼에 수신기를 추가하면 사용자가 버튼을 클릭했을 때 실행됩니다.
 
@@ -411,4 +411,4 @@ button.addEventListener("click", handleClick);
 - [이벤트 참고서](/ko/docs/Web/Events)
 - [이벤트 순서](https://www.quirksmode.org/js/events_order.html) (캡처링과 버블링에 대한 논의) — 피터-폴 코흐가 매우 자세하게 설명한 글입니다.
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Events","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}

@@ -9,7 +9,7 @@ slug: Glossary/Python
 
 Python は、 ABC と呼ばれている別な言語の後継として、 Guido van Rossum によって 1985 年から 1990 年の間に開発され、現在ではウェブ開発、他のアプリケーションのスクリプト言語、実際のアプリケーション構築など、広い分野で使用されています。
 
-Python は OSI に承認されたオープンソースライセンスのもとで開発され、商用を含めて無料で利用や配布をすることができます。 Phython のライセンスは [Python Software Foundation](https://www.python.org/psf) が管理しています。
+Python は OSI に承認されたオープンソースライセンスのもとで開発され、商用を含めて無料で利用や配布をすることができます。 Python のライセンスは [Python Software Foundation](https://www.python.org/psf) が管理しています。
 
 1. Learn more
    1. Wikipedia の [Python](https://ja.wikipedia.org/wiki/Python)

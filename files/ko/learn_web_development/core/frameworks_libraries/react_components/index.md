@@ -6,7 +6,7 @@ l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state", "Learn_web_development/Core/Frameworks_libraries")}}
 
 이 시점에서 우리의 앱은 모놀리식입니다. 우리는 이를 작동시키기 전에, 관리 가능하고, 기술적인 컴포넌트로 나눌 필요가 있습니다. React는 컴포넌트로 무엇이고 무엇이 아닌지에 대한 엄격한 규칙은 없으며, 당신에게 달려 있습니다! 이 글에서는 우리의 앱을 컴포넌트로 나누는 합리적인 방법을 보여줄 것입니다.
 
@@ -441,4 +441,4 @@ export default App;
 
 이 문서는 여기까지입니다. 앱을 컴포넌트로 잘 나누고 효율적으로 렌더링하는 방법에 대해 자세히 알아보았습니다. 이제 React에서 이벤트를 처리하는 방법을 살펴보고 상호 작용을 추가해 보겠습니다.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state", "Learn_web_development/Core/Frameworks_libraries")}}

@@ -4,7 +4,7 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Positions
 original_slug: Web/SVG/Tutorial/Positions
 ---
 
-{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Getting_Started", "Web/SVG/Tutorial/Basic_Shapes") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Getting_started", "Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes") }}
 
 ## 그리드
 
@@ -44,4 +44,4 @@ SVG 1.1 스펙에서는 다음과 같이 인용합니다:
 
 > \[...] 사용자 환경에서 "1px"이 "0.2822222mm" 에 대응한다고 가정했을때(90dpi), SVG는 다음과 같이 처리한다: \[...] "1cm"는 "35.43307px"과 같다. (그리고 35.43307 사용자 단위와 같다.)
 
-{{ PreviousNext("Web/SVG/Tutorial/Getting_Started", "Web/SVG/Tutorial/Basic_Shapes") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Getting_started", "Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes") }}

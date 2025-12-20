@@ -8,7 +8,7 @@ l10n:
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started","Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props", "Learn_web_development/Core/Frameworks_libraries")}}
 
 이제 Svelte에서 작동하는 방식에 대한 기본적인 이해가 있으므로 예제 앱인 할 일 목록을 구축할 수 있습니다. 이 글에서는 먼저 앱의 요구되는 기능을 살펴본 다음 `Todos.svelte` 컴포넌트를 만들고 정적 마크업과 스타일을 배치하고 이어지는 문서들에서 진행할 할 일 목록 앱의 기능 개발을 시작 할 수 있는 모든 준비를 마칩니다.
 
@@ -722,4 +722,4 @@ REPL에서 코드의 현재 상태를 보려면 다음에 방문하십시오.
 
 마크업과 스타일 지정을 통해 할 일 목록 앱이 구체화되기 시작했으며 구현해야 하는 기능에 집중할 수 있도록 모든 준비가 완료되었습니다.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started","Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props", "Learn_web_development/Core/Frameworks_libraries")}}

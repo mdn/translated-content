@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/html", "Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/HTML", "Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}
 
 웹 사이트를 개발할 때, 브라우저가 사이트에서 CSS를 처리하는 방식을 고려해야 합니다. CSS가 원인이 되는 성능 이슈를 완화하기 위해서는, CSS를 최적화 해야 합니다. 예를 들어, [렌더링 차단](/ko/docs/Glossary/Render_blocking)을 완화하려면 CSS를 최적화 해야 하고 리플로우 횟수를 최소화 해야 합니다. 이번 글에서는 주요한 CSS 성능 최적화 기법을 살펴봅니다.
 
@@ -290,4 +290,4 @@ article {
 - [글꼴 모범 예제](https://web.dev/articles/font-best-practices) web.dev (2022)
 - [content-visibility: 렌더링 성능을 개선하는 새로운 CSS 속성](https://web.dev/articles/content-visibility) web.dev (2022)
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Performance/html", "Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/HTML", "Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}

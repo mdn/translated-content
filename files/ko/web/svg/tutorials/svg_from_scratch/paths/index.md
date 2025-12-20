@@ -4,7 +4,7 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Paths
 original_slug: Web/SVG/Tutorial/Paths
 ---
 
-{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
 
 [`<path>`](/ko/docs/Web/SVG/Element/path) 엘리먼트는 SVG [기본 도형](/ko/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes) 라이브러리에서 가장 강력한 엘리먼트이다. 선과 곡선, 호 등 다양한 형태를 그릴 수 있다.
 
@@ -240,4 +240,4 @@ A 명령어는 일단 x축, y축 반지름을 매개변수로 받는다. 혹시 
 
 [캔버스](/ko/docs/Web/API/Canvas_API)에서 SVG로 넘어오는 사람에게는 호가 가장 배우기 어려울 수도 있지만, 그런 만큼 강력하기도 하다. 다음 반응형 예제를 보면 SVG 호의 개념을 이해하는 데 도움이 될 것이다. <https://codepen.io/lingtalfi/pen/yaLWJG> (크롬과 Firefox로만 테스트했으므로 일부 브라우저에서 동작하지 않을 수 있음)
 
-{{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}

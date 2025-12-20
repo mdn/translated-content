@@ -4,7 +4,7 @@ slug: conflicting/Web/JavaScript/Guide/Numbers_and_strings
 original_slug: Web/JavaScript/Guide/Text_formatting
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_strings", "Web/JavaScript/Guide/Regular_expressions")}}
 
 이 장에서는 JavaScript에서 문자열과 텍스트로 작업하는 방법을 소개합니다.
 
@@ -336,4 +336,4 @@ console.log(names.sort(germanDictionary.compare).join(", "));
 
 {{jsxref("Intl")}}API에 대한 자세한 내용은 [Introducing the JavaScript Internationalization API](https://hacks.mozilla.org/2014/12/introducing-the-javascript-internationalization-api/)를 참조하세요.
 
-{{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
+{{PreviousNext("Web/JavaScript/Guide/Numbers_and_strings", "Web/JavaScript/Guide/Regular_expressions")}}

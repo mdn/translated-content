@@ -6,7 +6,7 @@ original_slug: Learn/CSS/CSS_layout/Legacy_Layout_Methods
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers", "Learn_web_development/Core/CSS_layout")}}
 
 격자 시스템은 CSS 레이아웃에서 사용되는 매우 일반적인 기능이며, CSS 격자 레이아웃 이전에는 부동체 또는 기타 레이아웃 기능을 이용하여 격자 레이아웃이 구현되는 경향이 있었습니다. 당신의 레이아웃을 정해진 수의 열(예를 들어 4, 6 또는 12열)이라 상상한 뒤 당신의 콘텐츠 열을 그 가상의 열 안에 끼워맞춥니다. 이 문서에서 우리는 이 오래된 메서드가 어떻게 작동하는지 탐구할 것입니다. 이는 여러분이 오래된 프로젝트에 몸을 담게 될 경우에 그들 메서드의 사용 방법에 대한 이해를 돕기 위함입니다.
 
@@ -719,4 +719,4 @@ HTML 파일을 저장하고 브라우저에 불러들여 효과를 확인하십�
 
 이제 다양한 격자 시스템이 어떻게 만들어지는지 이해하게 되었는데, 이는 구형 사이트에서 작업할 때와 CSS 격자 레이아웃이 제공하는 기본 격자와 이들 구형 시스템 간의 차이를 이해하는 데 유용합니다.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers", "Learn_web_development/Core/CSS_layout")}}

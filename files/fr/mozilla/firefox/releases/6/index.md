@@ -138,7 +138,7 @@ Firefox 6, basé sur Gecko 6.0, est sorti le 16 août 2011. Cet article fournit 
 
 - Le support des microrésumés a été enlevé, ils n'ont jamais été très utilisés, n'étaient pas très détectable et continuer leur support été d'apporter des améliorations à Places (favoris et historique) à l'architecture difficile.
 - WebGL supporte maintenant l'extension [`OES_texture_float`](https://www.khronos.org/registry/gles/extensions/OES/OES_texture_float.txt).
-- Le nouvel outil [Ardoise](/fr/docs/Outils/Ardoise) offre un endroit pratique pour expérimenter du code JavaScript.
+- Le nouvel outil _Ardoise_ offre un endroit pratique pour expérimenter du code JavaScript.
 - La méthode `console.trace()` a été ajouté à [ConsoleAPI](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) (voir [bug 585956](https://bugzilla.mozilla.org/show_bug.cgi?id=585956)).
 
 ## Changements pour les développeurs de Mozilla et de modules complémentaires

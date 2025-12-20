@@ -4,7 +4,7 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Introduction
 original_slug: Web/SVG/Tutorial/Introduction
 ---
 
-{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial", "Web/SVG/Tutorial/Getting_Started") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch", "Web/SVG/Tutorials/SVG_from_scratch/Getting_started") }}
 
 ![Mozilla dino logo](dino.svg)
 
@@ -41,4 +41,4 @@ SVG의 명세는 아주 길다. 이 튜토리얼에서는 기초적인 부분만
 
 다중 페이지 지원 및 더 나은 색상 관리를 위한 SVG 프린트 명세도 계획되어 있었다. 이 작업은 현재 진행되지 않고 있다.
 
-{{ PreviousNext("Web/SVG/Tutorial", "Web/SVG/Tutorial/Getting_Started") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch", "Web/SVG/Tutorials/SVG_from_scratch/Getting_started") }}

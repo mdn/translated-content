@@ -2,10 +2,8 @@
 title: MitM
 slug: Glossary/MitM
 l10n:
-  sourceCommit: 37bd8d794902f05bbb638eb3505cb87ccf38a992
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
-
-{{GlossarySidebar}}
 
 Une **attaque du monstre du milieu** (en anglais <i lang="en">manipulator-in-the-middle attack</i>, abrégé en MitM) ou aussi attaque de l'homme du milieu consiste à intercepter une communication entre deux systèmes. Cela peut par exemple se produit lorsqu'un routeur Wi-Fi a été compromis.
 
@@ -19,6 +17,5 @@ Qu'il s'agisse du courrier postal ou des communications électroniques, il est d
 
 ## Voir aussi
 
-- [La page OWASP sur les attaques du monstre du milieu (en anglais)](https://owasp.org/www-community/attacks/Manipulator-in-the-middle_attack)
-- Le site PortSwigger&nbsp;: [les dernières actualités concernant les attaques du monstre du milieu (en anglais)](https://portswigger.net/daily-swig/mitm)
-- [La page Wikipédia correspondante](https://fr.wikipedia.org/wiki/Attaque_de_l%27homme_du_milieu)
+- OWASP&nbsp;: [les attaques du monstre du milieu <sup>(angl.)</sup>](https://owasp.org/www-community/attacks/Manipulator-in-the-middle_attack)
+- [Attaque de l'homme du millieu](https://fr.wikipedia.org/wiki/Attaque_de_l%27homme_du_milieu) sur Wikipédia

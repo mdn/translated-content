@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 8d766d1d1c60a2d6d2c95bd2aa9d0b297d9c70ac
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics")}}
 
 더 큰 스타일시트와 큰 프로젝트에서 작업하기 시작하면 거대한 CSS 파일을 유지하는 것이 어렵다는 것을 알게 됩니다. 이 글에서는 CSS를 쉽게 유지 관리할 수 있도록 작성하기 위한 몇 가지 모범 사례와 유지 관리성을 향상시키기 위해 다른 사람들이 사용하는 솔루션에 대해 간략히 알아보겠습니다.
 
@@ -403,7 +403,7 @@ CSS에서 레이아웃에 대해 더 알아보려면, [CSS 레이아웃][] 모�
 
 또한 이제 [MDN CSS][] 자료의 나머지 부분을 탐색하는 능력도 있어야 합니다. 속성과 값을 찾아보고, 패턴을 사용하기 위해 우리의 [CSS 자세한 설명서][] 를 탐색하거나, [CSS 그리드 레이아웃 가이드][] 와 같은 특정 가이드들을 계속 읽을 수 있습니다.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics")}}
 
 [CSS guidelines for N code examples]: /ko/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
 [The Media Object]: /ko/docs/Web/CSS/Layout_cookbook/Media_objects

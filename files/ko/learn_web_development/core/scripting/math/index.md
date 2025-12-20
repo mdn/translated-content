@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "conflicting/Learn_web_development/Core/Scripting")}}
 
 이 장은 JavaScript의 연산에 대해 다룹니다. 능숙하게 숫자를 다루기 위해 어떻게 {{Glossary("Operator","연산자")}} 와 그 외 기능을 사용하는지 알아봅니다.
 
@@ -346,4 +346,4 @@ function updateBtn() {
 > [!NOTE]
 > 수학을 좋아하고 JavaScript에서 수학이 어떻게 구현되는지 더 자세히 알고 싶으시다면 MDN의 메인 JavaScript 섹션에서 더 자세한 내용을 확인할 수 있습니다. [숫자와 날짜](/ko/docs/Web/JavaScript/Guide/Numbers_and_strings), [표현식 및 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators) 문서에서 시작하기 좋습니다.
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "conflicting/Learn_web_development/Core/Scripting")}}

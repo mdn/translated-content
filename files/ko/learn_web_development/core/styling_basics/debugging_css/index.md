@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics/Organizing", "Learn_web_development/Core/Styling_basics")}}
 
 때로는 CSS를 작성할 때 CSS가 예상한 대로 동작하지 않는 문제가 발생합니다. 아마도 특정 선택자가 요소와 일치해야 하지만, 아무 일도 일어나지 않거나 박스의 크기가 예상과 다릅니다. 이 기사에서는 CSS 문제를 디버깅하는 방법에 대한 지침을 제공하고 모든 최신 브라우저에 포함된 개발자 도구가 진행 상황을 찾는 데 어떻게 도움이 되는지 보여줍니다.
 
@@ -203,4 +203,4 @@ CSS에 대한 경험이 많을수록 문제를 더 빨리 파악하게 될 것�
 
 이 과정의 마지막 글에서는 [CSS를 구성하는 방법](/ko/docs/Learn_web_development/Core/Styling_basics/Organizing)을 살펴보겠습니다.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics/Organizing", "Learn_web_development/Core/Styling_basics")}}

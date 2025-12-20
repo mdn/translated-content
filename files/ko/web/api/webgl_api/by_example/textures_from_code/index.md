@@ -3,7 +3,7 @@ title: 코드에서의 텍스쳐
 slug: Web/API/WebGL_API/By_example/Textures_from_code
 ---
 
-{{PreviousNext("Learn/WebGL/By_example/Hello_vertex_attributes","Learn/WebGL/By_example/Video_textures")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Hello_vertex_attributes","Learn/WebGL/By_example/Video_textures")}}
 
 단편화된 쉐이더들과 함께 순차적으로 보여주는 간단한 데모
 
@@ -155,4 +155,4 @@ function getRenderingContext() {
 
 이 예시 코드는 [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/textures-from-code)에서도 확인 가능합니다.
 
-{{PreviousNext("Learn/WebGL/By_example/Hello_vertex_attributes","Learn/WebGL/By_example/Video_textures")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Hello_vertex_attributes","Learn/WebGL/By_example/Video_textures")}}

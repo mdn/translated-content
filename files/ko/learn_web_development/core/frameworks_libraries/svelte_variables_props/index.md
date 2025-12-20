@@ -7,7 +7,7 @@ l10n:
 ---
 
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/Svelte_components", "Learn_web_development/Core/Frameworks_libraries")}}
 
 이제 마크업과 스타일이 준비되었으므로 Svelte 할 일 목록 앱에 필요한 기능 개발을 시작할 수 있습니다. 이 문서에서는 변수와 props를 사용한 동적인 앱을 만들어 할 일을 추가 및 삭제하고, 완료로 표시하거나 상태별로 필터링할 수 있습니다.
 
@@ -495,4 +495,4 @@ REPL에서 코드의 현재 상태를 보려면 다음에 방문하십시오.
 
 우리는 사용자가 할 일을 편집할 수 있는 기능을 더 추가할 것입니다.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/Svelte_components", "Learn_web_development/Core/Frameworks_libraries")}}

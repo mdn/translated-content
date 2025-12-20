@@ -3,7 +3,7 @@ title: Hello vertex attributes
 slug: Web/API/WebGL_API/By_example/Hello_vertex_attributes
 ---
 
-{{PreviousNext("Learn/WebGL/By_example/Hello_GLSL","Learn/WebGL/By_example/Textures_from_code")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Hello_GLSL","Web/API/WebGL_API/By_example/Textures_from_code")}}
 
 쉐이더 프로그래밍과 유저 인터페이스를 정점 속성을 이용하여 합치기.
 
@@ -169,4 +169,4 @@ function getRenderingContext() {
 
 이 예시 코드는 [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/hello-vertex-attributes)에서도 확인 가능합니다.
 
-{{PreviousNext("Learn/WebGL/By_example/Hello_GLSL","Learn/WebGL/By_example/Textures_from_code")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Hello_GLSL","Web/API/WebGL_API/By_example/Textures_from_code")}}
