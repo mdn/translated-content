@@ -2,7 +2,7 @@
 title: Axe transversal
 slug: Glossary/Cross_Axis
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 L'**axe transversal** d'une {{Glossary("flexbox")}} traverse l'{{Glossary("Main Axis", "axe principal")}}, donc si la {{CSSxRef("flex-direction")}} et l'axe principal sont `row` (_ligne_) ou `row-reverse` l'axe transversal est en colonne.
