@@ -5,16 +5,16 @@ l10n:
   sourceCommit: 7d4f930455a349e3c73836500add3d4840c76f5d
 ---
 
-A **source map** is a {{Glossary("JSON")}} file format that maps between minified or transformed code received by the browser and its original unmodified form, allowing the original code to be reconstructed and used when debugging.
+**ソースマップ** は、ブラウザーが受信した縮小または変換されたコードと元の変更されていない形式をマッピングする {{Glossary("JSON")}} ファイル形式です。これにより、デバッグ時に元のコードを再構築して使用できるようになります。
 
-Code executed by the browser is often transformed in some way from the original source created by a developer. There are several reasons for this:
+ブラウザで実行されるコードは、開発者が作成した元のソースコードから何らかの形で変換されることがよくあります。これにはいくつかの理由があります。
 
-- To make delivering code from the server more efficient by combining and minifying source files.
-- To support older browsers by transforming modern features into older equivalents.
-- To use languages that browsers don't support, like {{Glossary("TypeScript")}} or [Sass](https://sass-lang.com/).
+- ソースファイルを結合および縮小することで、サーバーからのコード配信をより効率的にするため。
+- 最新の機能を古いバージョンの同等の機能に変換することで、古いブラウザをサポートするため。
+- {{Glossary("TypeScript")}} や [Sass](https://sass-lang.com/) など、ブラウザがサポートしていない言語を使用するため。
 
-In these situations, debugging the original source is more intuitive than the source in the transformed state that the browser has downloaded.
-Browsers detect a source map via the {{HTTPHeader("SourceMap")}} HTTP header for a resource, or a `sourceMappingURL` annotation in the generated code.
+このような状況では、ブラウザがダウンロードした変換後の状態のソースよりも、元のソースをデバッグする方が直感的です。
+ブラウザは、リソースの {{HTTPHeader("SourceMap")}} HTTP ヘッダー、または生成されたコード内の `sourceMappingURL` アノテーションを介してソースマップを検出します。
 
 ## Example
 
