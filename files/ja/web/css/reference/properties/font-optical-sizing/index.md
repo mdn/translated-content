@@ -1,9 +1,8 @@
 ---
 title: font-optical-sizing
 slug: Web/CSS/Reference/Properties/font-optical-sizing
-original_slug: Web/CSS/font-optical-sizing
 l10n:
-  sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`font-optical-sizing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストの描画をそれぞれの大きさでの表示に最適化して表示するかどうかを設定します。
@@ -20,7 +19,7 @@ font-optical-sizing: none;
 
 ```html interactive-example
 <section id="default-example">
-  <div id="example-element" style="font-optical-sizing: auto">
+  <div id="example-element">
     <h2>Chapter 3</h2>
     <p>
       On this particular Thursday, something was moving quietly through the
@@ -35,12 +34,12 @@ font-optical-sizing: none;
 ```css interactive-example
 @font-face {
   src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
-  font-family: Amstelvar;
+  font-family: "Amstelvar";
   font-style: normal;
 }
 
 #example-element {
-  font-family: Amstelvar;
+  font-family: "Amstelvar", serif;
   text-align: left;
 }
 
@@ -77,9 +76,9 @@ font-optical-sizing: unset;
 
 ## 解説
 
-オプティカルサイズは、光学的サイズ変化軸を持つフォントに対して既定で有効になります。オプティカルサイズ変化軸は {{cssxref("font-variation-settings")}} の `opsz` で表されます。
+光学的サイズは、光学的サイズ変化軸を持つフォントに対して既定で有効になります。光学的サイズ変化軸は {{cssxref("font-variation-settings")}} の `opsz` で表されます。
 
-オプティカルサイジングを使用した場合、小さな文字サイズは太いストロークと大きなセリフで表現されることが多く、逆に大きな文字サイズは太いストロークと細いストロークのコントラストが強くなり、より繊細に表現されることが多くなります。
+光学的サイズを使用した場合、小さな文字サイズは太いストロークと大きなセリフで表現されることが多く、逆に大きな文字サイズは太いストロークと細いストロークのコントラストが強くなり、より繊細に表現されることが多くなります。
 
 ## 公式定義
 
@@ -113,7 +112,7 @@ font-optical-sizing: unset;
 
 p {
   font-size: 36px;
-  font-family: Amstelvar;
+  font-family: "Amstelvar", serif;
 }
 
 .no-optical-sizing {
@@ -122,7 +121,7 @@ p {
 ```
 
 > [!NOTE]
-> 上記で参照されているフォント — 光学的サイズを含みライセンスフリーであるもの — がテストに適しています。 [GitHub からダウンロード](https://github.com/googlefonts/amstelvar/releases)できます。
+> 上記で参照されているフォント — 光学的サイズに対応したライセンスフリーであるもの — がテストに適しています。[GitHub からダウンロード](https://github.com/googlefonts/amstelvar/releases)できます。
 
 ## 仕様書
 
@@ -136,4 +135,4 @@ p {
 
 - {{cssxref("font-size")}}
 - {{cssxref("font-size-adjust")}}
-- [基本的なテキストとフォントの装飾](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)
+- [基本的なテキストとフォントのスタイル設定](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)
