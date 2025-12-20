@@ -16,9 +16,9 @@ l10n:
 このような状況では、ブラウザがダウンロードした変換後の状態のソースよりも、元のソースをデバッグする方が直感的です。
 ブラウザは、リソースの {{HTTPHeader("SourceMap")}} HTTP ヘッダー、または生成されたコード内の `sourceMappingURL` アノテーションを介してソースマップを検出します。
 
-## Example
+## 例
 
-For example, consider this SCSS syntax of Sass:
+たとえば、Sass の次の SCSS 構文を考えてみましょう。
 
 ```scss
 ul {
@@ -29,8 +29,8 @@ ul {
 }
 ```
 
-During the build process, the SCSS is transformed into CSS.
-A source map file `index.css.map` is generated and linked to from the CSS in a comment at the end:
+ビルドプロセス中に、 SCSS は CSS に変換されます。
+ソースマップファイル `index.css.map` が生成され、末尾のコメントで CSS からリンクされます。
 
 ```css
 ul {
@@ -43,7 +43,7 @@ ul li {
 /*# sourceMappingURL=index.css.map */
 ```
 
-This map file contains not only mappings between the original SCSS and the generated CSS but also the original SCSS source code in encoded form. It's ignored by the browser's CSS parser but used by browser's DevTools:
+このマップファイルには、元の SCSS と生成された CSS のマッピングだけでなく、エンコードされた元の SCSS ソースコードも含まれています。ブラウザの CSS パーサーでは無視されますが、ブラウザの DevTools では使用されます。
 
 ```json
 {
@@ -56,7 +56,7 @@ This map file contains not only mappings between the original SCSS and the gener
 }
 ```
 
-The source map allows the browser's DevTools to link to specific lines in the original SCSS file and display the source code:
+ソースマップを使用すると、ブラウザの DevTools で元の SCSS ファイル内の特定の行にリンクし、ソースコードを表示できます。
 
 ![Firefox DevTools focused on the li element in the DOM inspector. The style panel shows transformed CSS without nesting and a link to the third line of the index.scss file.](inspector.png)
 
