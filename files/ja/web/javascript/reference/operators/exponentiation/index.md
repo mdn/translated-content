@@ -5,7 +5,7 @@ l10n:
   sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-<strong>べき乗演算子 (`**`)<strong> は、1 つ目のオペランドを 2 つ目のオペランドで累乗した結果を返します。これは {{jsxref("Math.pow()")}} と同等ですが、オペランドとして[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)も受け入れます。
+<strong>べき乗演算子 (`**`)</strong> は、1 つ目のオペランドを 2 つ目のオペランドで累乗した結果を返します。これは {{jsxref("Math.pow()")}} と同等ですが、オペランドとして[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)も受け入れます。
 
 {{InteractiveExample("JavaScript デモ: べき乗演算子 (**)")}}
 
