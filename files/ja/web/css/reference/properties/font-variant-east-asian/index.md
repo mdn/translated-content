@@ -1,12 +1,11 @@
 ---
 title: font-variant-east-asian
 slug: Web/CSS/Reference/Properties/font-variant-east-asian
-original_slug: Web/CSS/font-variant-east-asian
 l10n:
-  sourceCommit: aac4966bd12c77281f9374bbfaf4e17e2680ac3b
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-**`font-variant-east-asian`** は [CSS](/ja/docs/Web/CSS) のプロパティで、日本語と中国語のような東アジアの字形の違いを制御するために使用します。
+**`font-variant-east-asian`** は [CSS](/ja/docs/Web/CSS) のプロパティで、日本語や中国語のような東アジアの字形の違いを制御するために使用します。
 
 {{InteractiveExample("CSS デモ: font-variant-east-asian")}}
 
@@ -26,11 +25,11 @@ font-variant-east-asian: jis78;
 font-variant-east-asian: proportional-width;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section id="default-example">
   <div id="example-element">
     <p>
-      JIS78とJIS83以降では、檜と桧、籠と篭など、一部の文字の入れ替えが行われている。また、「唖然」や「躯体」などの書体が変更されている。
+      JIS78 と JIS83 以降では、檜と桧、籠と篭など、一部の文字の入れ替えが行われている。また、「唖然」や「躯体」などの書体が変更されている。
     </p>
   </div>
 </section>
@@ -39,7 +38,7 @@ font-variant-east-asian: proportional-width;
 ```css interactive-example
 section {
   font-family:
-    "YuGothic Medium", YuGothic, "Yu Gothic Medium", "Yu Gothic", sans-serif;
+    "YuGothic Medium", "YuGothic", "Yu Gothic Medium", "Yu Gothic", sans-serif;
   margin-top: 10px;
   font-size: 1.5em;
 }
@@ -110,7 +109,7 @@ font-variant-east-asian: unset;
 ```html
 <table>
   <thead></thead>
-  <tbody style="border:0;">
+  <tbody>
     <tr>
       <th>normal/jis78:</th>
       <td>麹町</td>
@@ -133,8 +132,12 @@ font-variant-east-asian: unset;
 #### CSS
 
 ```css
+tbody {
+  border: 0;
+}
+
 td {
-  font-family: "Yu Gothic";
+  font-family: "Yu Gothic", fantasy;
   font-size: 20px;
 }
 th {
@@ -169,10 +172,10 @@ th {
 
 ## 関連情報
 
-- [`font-variant`](/ja/docs/Web/CSS/Reference/Properties/font-variant)
-- [`font-variant-alternates`](/ja/docs/Web/CSS/Reference/Properties/font-variant-alternates)
-- [`font-variant-caps`](/ja/docs/Web/CSS/Reference/Properties/font-variant-caps)
-- [`font-variant-emoji`](/ja/docs/Web/CSS/Reference/Properties/font-variant-emoji)
-- [`font-variant-ligatures`](/ja/docs/Web/CSS/Reference/Properties/font-variant-ligatures)
-- [`font-variant-numeric`](/ja/docs/Web/CSS/Reference/Properties/font-variant-numeric)
-- [`font-variant-position`](/ja/docs/Web/CSS/Reference/Properties/font-variant-position)
+- {{cssxref("font-variant")}}
+- {{cssxref("font-variant-alternates")}}
+- {{cssxref("font-variant-caps")}}
+- {{cssxref("font-variant-emoji")}}
+- {{cssxref("font-variant-ligatures")}}
+- {{cssxref("font-variant-numeric")}}
+- {{cssxref("font-variant-position")}}
