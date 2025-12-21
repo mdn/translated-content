@@ -1,12 +1,11 @@
 ---
 title: src
 slug: Web/CSS/Reference/At-rules/@font-face/src
-original_slug: Web/CSS/@font-face/src
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
 ---
 
-**`src`** は CSS の {{cssxref("@font-face")}} アットルールの記述子で、フォントデータを含むリソースを指定します。 `@font-face` ルールを有効にするためには必要です。
+**`src`** は [CSS](/ja/docs/Web/CSS) の {{cssxref("@font-face")}} アットルールの記述子で、フォントデータを含むリソースを指定します。 `@font-face` ルールを有効にするためには必要です。
 
 ## 構文
 
@@ -83,7 +82,7 @@ src:
 最後の `src` 記述子がリソースを読み込むことができ、かつ `local()` フォントを含んでいない場合、ブラウザーは外部フォントファイルをダウンロードし、端末に利用できるフォントがあってもローカルバージョンを無視します。
 
 > [!NOTE]
-> ブラウザーが不正とみなす記述子内の値は無視されます。
+> ブラウザーが不正とみなした記述子内の値は無視されます。
 > ブラウザーによっては、不正な項目が 1 つでもあると、記述子全体を無視します。
 > これは代替の設計に影響するかもしれません。
 > 詳しくは[ブラウザーの互換性](#ブラウザーの互換性)を確認してください。
@@ -94,14 +93,15 @@ CSS のその他の URL と同様に、相対 URL を使用することができ
 
 ```css
 /* WhichFont はフォントファイル内のフォントの PostScript 名 */
-src: url(collection.otc#WhichFont);
+src: url("collection.otc#WhichFont");
 /* WhichFont は SVG フォントファイル内のフォントの要素 id */
-src: url(fonts.svg#WhichFont);
+src: url("fonts.svg#WhichFont");
 ```
 
 ### フォント形式
 
-次の表は、有効なフォントキーワードと、それに対応するフォント形式を示しています。CSS内でフォント形式がブラウザーの対応しているかどうかを調べるには、 {{cssxref("@supports", "@supports")}} ルールを使用します。
+次の表は、有効なフォントキーワードと、それに対応するフォント形式を示しています。
+CSS 内でフォント形式がブラウザーの対応しているかどうかを調べるには、{{cssxref("@supports", "@supports")}} ルールを使用します。
 
 | キーワード          | フォント形式           | 一般的な拡張子 |
 | ------------------- | ---------------------- | -------------- |
@@ -129,7 +129,8 @@ src: url(fonts.svg#WhichFont);
 
 ### フォント技術
 
-次の表は、 `tech()` 記述子に有効な値と、それに対応するフォント技術を示したものです。 CSS 内でフォント技術にブラウザーの対応しているかどうかを調べるには、 {{cssxref("@supports", "@supports")}} アットルールを使用します。
+次の表は、 `tech()` 記述子に有効な値と、それに対応するフォント技術を示したものです。
+CSS 内でフォント技術にブラウザーの対応しているかどうかを調べるには、 {{cssxref("@supports", "@supports")}} アットルールを使用します。
 
 | キーワード          | 記述子                                                                                                       |
 | :------------------ | :----------------------------------------------------------------------------------------------------------- |
@@ -151,18 +152,9 @@ src: url(fonts.svg#WhichFont);
 
 ## 形式文法
 
-```plain
-<url> [ format( <font-format> ) ]? [ tech( <font-tech># ) ]?  |
-local( <family-name> )
+{{CSSSyntax}}
 
-<font-format> = [ <string> | collection | embedded-opentype | opentype | svg | truetype | woff | woff2 ]
-
-<font-tech> = [ <font-features-tech> | <color-font-tech> | variations | palettes | incremental-patch | incremental-range | incremental-auto ]
-
-<font-features-tech> = [ features-opentype | features-aat | features-graphite ]
-
-<color-font-tech> = [ color-COLRv0 | color-COLRv1 | color-SVG | color-sbix | color-CBDT ]
-```
+{{CSSSyntaxRaw(`<font-src>`)}}
 
 ## 例
 
@@ -173,19 +165,19 @@ local( <family-name> )
 ```css
 /* 通常のフォントフェイスの定義 */
 @font-face {
-  font-family: MainText;
+  font-family: "MainText";
   src:
-    local(Futura-Medium),
+    local("Futura-Medium"),
     url("FuturaMedium.woff") format("woff"),
     url("FuturaMedium.otf") format("opentype");
 }
 
 /* 同じフォントファミリーで太字のフォントフェイス */
 @font-face {
-  font-family: MainText;
+  font-family: "MainText";
   src:
-    local(Gill Sans Bold) /* 完全なフォント名 */,
-    local(GillSans-Bold) /* postscript 名 */,
+    local("Gill Sans Bold") /* 完全なフォント名 */,
+    local("GillSans-Bold") /* postscript 名 */,
     url("GillSansBold.woff") format("woff"),
     url("GillSansBold.otf") format("opentype"),
     url("GillSansBold.svg#MyFontBold"); /* id による SVG フォントフラグメントの参照 */
@@ -194,7 +186,7 @@ local( <family-name> )
 
 /* 通常フォントフェイスの使用 */
 p {
-  font-family: MainText;
+  font-family: "MainText", sans-serif;
 }
 
 /* Font-family は継承されるが、太字フォントが使用される */
@@ -219,7 +211,7 @@ p.bold {
 
 /* フォントフェイスの使用 */
 p {
-  font-family: "Trickster";
+  font-family: "Trickster", fantasy;
 }
 ```
 
@@ -270,7 +262,7 @@ p {
   }
 
   .colored_text {
-    font-family: "Trickster";
+    font-family: "Trickster", fantasy;
   }
 }
 ```

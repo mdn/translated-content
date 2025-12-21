@@ -2,7 +2,7 @@
 title: Ligne de base (typographie)
 slug: Glossary/Baseline/Typography
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Une **ligne de base** est une ligne imaginaire le long de l'axe en ligne d'une boîte de ligne, sur laquelle les glyphes individuels du texte sont alignés. Les lignes de base guident la conception des glyphes dans une police et l'alignement des glyphes de différentes polices ou tailles lors de la composition.
@@ -13,6 +13,6 @@ D'autres systèmes d'écriture ont des lignes de base différentes. Par exemple,
 
 ## Voir aussi
 
-- [Alignement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_alignment#types_dalignement)
-- Le module [de disposition en ligne CSS](/fr/docs/Web/CSS/CSS_inline_layout)
+- [Alignement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_alignment/Overview#types_dalignement)
+- Le module [de disposition en ligne CSS](/fr/docs/Web/CSS/Guides/Inline_layout)
 - [La page Wikipédia sur la ligne de base](<https://fr.wikipedia.org/wiki/Ligne_de_base_(typographie)>)

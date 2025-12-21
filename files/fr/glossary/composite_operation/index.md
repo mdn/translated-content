@@ -2,7 +2,7 @@
 title: Opération composite
 slug: Glossary/Composite_operation
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 96a73163513476fe49bfba695acedb7622135354
 ---
 
 En CSS, la valeur d'une propriété dans une règle CSS est la _valeur sous-jacente_ de cette propriété, pour cette même propriété, la valeur dans [une étape d'animation (<i lang="en">keyframe</i>)](/fr/docs/Web/CSS/Reference/At-rules/@keyframes) est sa _valeur effective_.

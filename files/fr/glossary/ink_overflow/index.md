@@ -2,7 +2,7 @@
 title: Débordement d'encre (ink overflow)
 slug: Glossary/Ink_overflow
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Le **débordement d'encre** (<i lang="en">ink overflow</i> en anglais) d'une boîte désigne la partie de la boîte et de son contenu qui crée un effet visuel en dehors de la boîte englobante (<i lang="en">border box</i>). Purement visuel, le débordement d'encre n'affecte pas la mise en page car il n'a aucun impact sur les propriétés du modèle de boîte.

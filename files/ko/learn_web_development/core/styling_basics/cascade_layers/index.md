@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 38029c123179b3dbccc12fb01dc558b3dcb01292
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}
 
 이 강의에서는 [CSS 종속](/ko/docs/Web/CSS/Cascade)과 [CSS 특정성](/ko/docs/Web/CSS/Guides/Cascade/Specificity)의 기본 개념을 기반으로 하는 고급 기능인 [종속 계층](/ko/docs/Web/CSS/Reference/At-rules/@layer)을 소개합니다.
 

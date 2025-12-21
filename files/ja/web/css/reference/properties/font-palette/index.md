@@ -1,12 +1,11 @@
 ---
 title: font-palette
 slug: Web/CSS/Reference/Properties/font-palette
-original_slug: Web/CSS/font-palette
 l10n:
-  sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**`font-palette`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ユーザーエージェントがフォントに使用できる[カラーフォント](https://www.colorfonts.wtf/)に含まれる多くのパレットの一つを指定できます。ユーザーは、 [`@font-palette-values`](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values) アットルールを使って、パレットの値を上書きしたり、新しいパレットを作成したりすることもできます。
+**`font-palette`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ユーザーエージェントがフォントに使用できる[カラーフォント](https://www.colorfonts.wtf/)に含まれる多くのパレットの一つを指定できます。ユーザーは {{cssxref("@font-palette-values")}} アットルールを使って、パレットの値を上書きしたり、新しいパレットを作成したりすることもできます。
 
 > [!NOTE]
 > `font-palette` はフォントに色を付けるときに優先されます。 {{cssxref("color")}} プロパティは、たとえ {{cssxref("important", "!important")}} が指定されていても、フォントパレットを上書きすることはありません。
@@ -76,30 +75,30 @@ HTML には、アニメーションするテキストの単一の段落があり
 この CSS では、 [Google Fonts](https://fonts.google.com/?coloronly=true) から [Nabla](https://nabla.typearture.com/) という[色フォント](https://www.colorfonts.wtf/)をインポートし、独自の 2 つの `font-palette` 値を {{cssxref("@font-palette-values")}} アットルールを使用して定義しています。そして、この 2 つのパレットの間でアニメーションする {{cssxref("@keyframes")}} を作成し、このアニメーションを段落に適用します。
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Nabla&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Nabla&display=swap";
 
-@font-palette-values --blueNabla {
-  font-family: Nabla;
+@font-palette-values --blue-nabla {
+  font-family: "Nabla";
   base-palette: 2; /* Nabla の青色パレット */
 }
 
-@font-palette-values --greyNabla {
-  font-family: Nabla;
+@font-palette-values --grey-nabla {
+  font-family: "Nabla";
   base-palette: 3; /* Nabla の灰色パレット */
 }
 
 @keyframes animate-palette {
   from {
-    font-palette: --greyNabla;
+    font-palette: --grey-nabla;
   }
 
   to {
-    font-palette: --blueNabla;
+    font-palette: --blue-nabla;
   }
 }
 
 p {
-  font-family: "Nabla";
+  font-family: "Nabla", fantasy;
   font-size: 5rem;
   margin: 0;
   text-align: center;

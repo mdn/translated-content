@@ -2,7 +2,7 @@
 title: Largest Contentful Paint (LCP)
 slug: Glossary/Largest_contentful_paint
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 96a73163513476fe49bfba695acedb7622135354
 ---
 
 La mesure de performance **Largest Contentful Paint** (<abbr>LCP</abbr>) indique le temps de rendu de la plus grande image ou du plus grand bloc de texte visible dans la zone d'affichage (<i lang="en">viewport</i> en anglais), mesuré à partir du début du chargement de la page.
@@ -17,7 +17,7 @@ Les éléments suivants sont pris en compte pour déterminer le LCP&nbsp;:
 
 ## Voir aussi
 
-- L'interface [`LargestContentfulPaint`](/fr/docs/Web/API/LargestContentfulPaint)
+- L'interface {{DOMxRef("LargestContentfulPaint")}}
 - Termes associés du glossaire&nbsp;:
   - {{Glossary("First Contentful Paint", "Premier rendu de contenu")}}
   - {{Glossary("First Paint", "Premier rendu")}}

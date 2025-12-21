@@ -1,9 +1,8 @@
 ---
 title: font-size-adjust
 slug: Web/CSS/Reference/Properties/font-size-adjust
-original_slug: Web/CSS/font-size-adjust
 l10n:
-  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`font-size-adjust`** は [CSS](/ja/docs/Web/CSS) のプロパティで、全体の {{cssxref("font-size")}} を定義する大文字のサイズに対する小文字のサイズを変更する方法を提供します。このプロパティは、フォントの代替が起こりうる状況で有益なものです。
@@ -66,7 +65,7 @@ font-size-adjust: unset;
 `font-size-adjust` に対応していないブラウザーとの互換性を保証するために、このプロパティは {{cssxref("font-size")}} プロパティの数値倍数として指定します。この数値は、一般的に最初の選択フォントのアスペクト値と一致する必要があります。
 
 > [!NOTE]
-> 指定した `<font-metric>` が [`@font-face`](/ja/docs/Web/CSS/Reference/At-rules/@font-face) で上書きされた場合、例えば [`size-adjust`](/ja/docs/Web/CSS/Reference/At-rules/@font-face/size-adjust) 記述子を使用することで、上書きされたメトリックが `font-size-adjust` の計算に用いられます。ということは、 `font-size-adjust` と `size-adjust` が一緒に適用されている場合、 `size-adjust` は効果を持たないということです。
+> 指定した `<font-metric>` が {{cssxref("@font-face")}} で上書きされた場合、例えば [`size-adjust`](/ja/docs/Web/CSS/Reference/At-rules/@font-face/size-adjust) 記述子を使用することで、上書きされたメトリックが `font-size-adjust` の計算に用いられます。ということは、 `font-size-adjust` と `size-adjust` が一緒に適用されている場合、 `size-adjust` は効果を持たないということです。
 
 調整されたフォントサイズは、式 `u  =  ( m / m′ ) s` を使用して計算されます。
 
@@ -117,12 +116,12 @@ font-size-adjust: unset;
 
 ```css
 .times {
-  font-family: Times, serif;
+  font-family: "Times", serif;
   font-size: 14px;
 }
 
 .verdana {
-  font-family: Verdana, sans-serif;
+  font-family: "Verdana", sans-serif;
   font-size: 14px;
 }
 
@@ -189,7 +188,7 @@ div {
 }
 
 p {
-  font-family: Futura;
+  font-family: "Futura", sans-serif;
   font-size: 50px;
 }
 
@@ -225,4 +224,5 @@ span {
 - {{cssxref("font-size")}}
 - {{cssxref("font-weight")}}
 - {{cssxref("@font-face/size-adjust", "size-adjust")}} `@font-face` 記述子
+- SVG の {{SVGAttr("font-size-adjust")}} 属性
 - [学習: 基本的なテキストとフォントのスタイル設定](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)

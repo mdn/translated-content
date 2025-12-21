@@ -2,7 +2,7 @@
 title: Valeurs relatives au flux
 slug: Glossary/Flow_relative_values
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 En CSS, les **valeurs relatives au flux** sont des mots-clés directionnels relatifs aux axes de bloc et en ligne d'un élément. Ces valeurs incluent `block-start`, `block-end`, `inline-start`, `inline-end`, `start` et `end`.

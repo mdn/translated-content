@@ -2,7 +2,7 @@
 title: Rapport d'aspect (Aspect ratio)
 slug: Glossary/Aspect_ratio
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Un **rapport d'aspect** est la relation proportionnelle entre la largeur et la hauteur d'un élément ou de la {{Glossary("viewport", "zone d'affichage")}}. Il s'exprime comme un {{CSSxRef("ratio")}} de deux nombres.
@@ -41,8 +41,8 @@ myTrack.applyConstraints(constraints);
 ## Voir aussi
 
 - La propriété CSS {{CSSxRef("aspect-ratio")}}
-- [Comprendre les rapports d'aspect](/fr/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
-- Le module de [taille de boîte CSS](/fr/docs/Web/CSS/CSS_box_sizing)
+- [Comprendre les rapports d'aspect](/fr/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)
+- Le module de [taille de boîte CSS](/fr/docs/Web/CSS/Guides/Box_sizing)
 - Termes associés du glossaire&nbsp;:
   - {{Glossary("intrinsic size")}}
 - Valeurs de propriété CSS {{CSSxRef("min-content")}}, {{CSSxRef("max-content")}} et {{CSSxRef("fit-content")}}.

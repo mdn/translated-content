@@ -1,6 +1,8 @@
 ---
 title: HMAC
 slug: Glossary/HMAC
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
 Le **code d'authentification de message basé sur un hachage** (_HMAC_) est un mécanisme utilisé pour authentifier des messages de façon {{Glossary("cryptography", "cryptographique")}}.

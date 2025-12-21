@@ -2,7 +2,7 @@
 title: Alignment subject
 slug: Glossary/Alignment_Subject
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Dans le [module d'alignement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_alignment), le **sujet d'alignement** est l'élément (ou les éléments) qui sont alignés à l'intérieur du {{Glossary("alignment container", "conteneur d'alignement")}} par la propriété.
