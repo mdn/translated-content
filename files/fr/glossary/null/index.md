@@ -18,7 +18,7 @@ Ceci est considéré comme [un bug](/fr/docs/Web/JavaScript/Reference/Operators/
 ## Voir aussi
 
 - [Types et structures de données en JavaScript](/fr/docs/Web/JavaScript/Guide/Data_structures)
-- L'objet JavaScript global&nbsp;: {{JSxRef("null")}}
+- L'objet JavaScript global&nbsp;: {{JSxRef("Operators/null", "null")}}
 - [Le pointeur `Null`](https://fr.wikipedia.org/wiki/Null) sur Wikipédia
 - Termes associés du glossaire&nbsp;:
   - {{Glossary("JavaScript")}}
@@ -27,4 +27,4 @@ Ceci est considéré comme [un bug](/fr/docs/Web/JavaScript/Reference/Operators/
   - Le type de donnée {{Glossary("bigint")}}
   - Le type de donnée {{Glossary("boolean")}}
   - Le type de donnée {{Glossary("undefined")}}
-  - Les objets {{Glossary("symbol")}}
+  - Les objets {{Glossary("Symbol")}}
