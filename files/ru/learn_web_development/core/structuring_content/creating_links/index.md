@@ -3,7 +3,7 @@ title: Создание гиперссылок
 slug: Learn_web_development/Core/Structuring_content/Creating_links
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "conflicting/Learn_web_development/Core/Structuring_content")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 Гиперссылки очень важны — именно они делают Интернет _сетью_. В этой статье представлен синтаксис, необходимый для создания ссылки, а также обсуждаются лучшие практики обращения со ссылками.
 

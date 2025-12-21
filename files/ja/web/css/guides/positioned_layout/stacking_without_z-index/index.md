@@ -1,9 +1,9 @@
 ---
-title: z-index なしの重ね合わせ
+title: z-index プロパティなしの重ね合わせ
+short-title: z-index なしの重ね合わせ
 slug: Web/CSS/Guides/Positioned_layout/Stacking_without_z-index
-original_slug: Web/CSS/CSS_positioned_layout/Stacking_without_z-index
 l10n:
-  sourceCommit: 9b9086cf753e2d5721fe1229ff6f767ccf512f97
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 どの要素にも {{cssxref("z-index")}} プロパティが指定されていない場合、要素は以下の順序で（下から上に）重ね合わせられます。
@@ -56,24 +56,24 @@ div {
 .static {
   position: static;
   height: 80px;
-  background-color: #ffc;
-  border-color: #996;
+  background-color: #ffffcc;
+  border-color: #999966;
 }
 
 .absolute {
   position: absolute;
   width: 150px;
   height: 350px;
-  background-color: #fdd;
-  border-color: #900;
+  background-color: #ffdddd;
+  border-color: #990000;
   opacity: 0.7;
 }
 
 .relative {
   position: relative;
   height: 80px;
-  background-color: #cfc;
-  border-color: #696;
+  background-color: #ccffcc;
+  border-color: #669966;
   opacity: 0.7;
 }
 
@@ -84,13 +84,13 @@ div {
 
 #rel1 {
   top: 30px;
-  margin: 0px 50px 0px 50px;
+  margin: 0px 50px;
 }
 
 #rel2 {
   top: 15px;
   left: 20px;
-  margin: 0px 50px 0px 50px;
+  margin: 0px 50px;
 }
 
 #abs2 {
@@ -99,8 +99,8 @@ div {
 }
 
 #sta1 {
-  background-color: #ffc;
-  margin: 0px 50px 0px 50px;
+  background-color: #ffffcc;
+  margin: 0px 50px;
 }
 ```
 
@@ -110,9 +110,8 @@ div {
 
 ## 関連情報
 
-- [浮動ボックスの重ね合わせ](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_floating_elements): 浮動ボックスが重ね合わせでどのように扱われるか
-- [`z-index` の追加](/ja/docs/Web/CSS/Guides/Positioned_layout/Using_z-index): `z-index` を使って既定の重ね合わせ変更する方法
-- [重ね合わせコンテキスト](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context): 重ね合わせコンテキストについてのメモ
-- [重ね合わせコンテキストの例 1](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_1): 2 階層の HTML 構造で、最終階層の `z-index`
-- [重ね合わせコンテキストの例 2](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_2): 2 階層の HTML 構造、全階層の `z-index`
-- [重ね合わせコンテキストの例 3](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_3): 3 階層の HTML 構造、第 2 階層の `z-index`
+- [z-index を理解する](/ja/docs/Web/CSS/Guides/Positioned_layout/Understanding_z-index)
+- [z-index の使用](/ja/docs/Web/CSS/Guides/Positioned_layout/Using_z-index)
+- [重ね合わせコンテキスト](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)
+- [浮動ボックスの重ね合わせ](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_floating_elements)
+- [CSS 位置指定レイアウト](/ja/docs/Web/CSS/Guides/Positioned_layout)モジュール

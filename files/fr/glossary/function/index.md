@@ -9,7 +9,7 @@ Une **fonction** est une portion de code qui peut être appelée par d'autres co
 
 Un nom de fonction est un {{Glossary("identifier", "identifiant")}} déclaré dans le cadre d'une déclaration de fonction ou d'une expression de fonction. Le fait que le nom de fonction soit déclaré ou exprimé impacte {{Glossary("scope", "la portée")}} du nom de fonction.
 
-### Différents types de fonctions
+## Différents types de fonctions
 
 Une **fonction anonyme** est une fonction sans nom de fonction. Seules les expressions de fonction peuvent être anonymes. Les déclarations de fonctions doivent avoir un nom&nbsp;:
 

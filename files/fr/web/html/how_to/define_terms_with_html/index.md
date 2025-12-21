@@ -4,8 +4,6 @@ slug: Web/HTML/How_to/Define_terms_with_HTML
 original_slug: Learn/HTML/Howto/Define_terms_with_HTML
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Learn/HTML/Howto")}}
-
 HTML fournit plusieurs méthodes pour décrire la sémantique du contenu qu'on emploie (que ce soit intégré dans le texte ou dans un glossaire à part). Dans cet article, nous verrons comment correctement définir les termes utilisés au sein d'un document.
 
 <table class="standard-table">
@@ -14,7 +12,7 @@ HTML fournit plusieurs méthodes pour décrire la sémantique du contenu qu'on e
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vous devez au préalable savoir comment
-        <a href="/fr/Learn/HTML/Write_a_simple_page_in_HTML"
+        <a href="/fr/docs/Learn_web_development/Getting_started/Your_first_website"
           >créer un document HTML simple</a
         >.
       </td>
@@ -55,11 +53,11 @@ On peut procéder de cette façon avec HTML. En revanche, HTML ne gère pas l'as
 ```
 
 > [!NOTE]
-> On utilise également parfois le gras pour mettre en avant du contenu. Le gras, en tant que tel, est un concept qui n'appartient pas à HTML mais à la mise en forme. En revanche, pour mettre en avant (utiliser une emphase), il existe [des éléments HTML tout indiqués](/fr/docs/Apprendre/HTML/Howto/Emphasize_content_or_indicate_that_text_is_important).
+> On utilise également parfois le gras pour mettre en avant du contenu. Le gras, en tant que tel, est un concept qui n'appartient pas à HTML mais à la mise en forme. En revanche, pour mettre en avant (utiliser une emphase), il existe [des éléments HTML tout indiqués](/fr/docs/Learn_web_development/Core/Structuring_content/Emphasis_and_importance).
 
 ### Cas spécifique : les abréviations
 
-En ce qui concerne les abréviations, il est préférable [de les identifier séparement](/fr/docs/Apprendre/HTML/Howto/Mark_abbreviations_and_make_them_understandable) grâce à l'élément {{htmlelement("abbr")}} afin que les lecteurs d'écrans puissent les utiliser correctement. Comme pour la définition d'un nouveau terme, une abréviation doit être définie lors de sa première apparition.
+En ce qui concerne les abréviations, il est préférable [de les identifier séparement](/fr/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#abréviations) grâce à l'élément {{htmlelement("abbr")}} afin que les lecteurs d'écrans puissent les utiliser correctement. Comme pour la définition d'un nouveau terme, une abréviation doit être définie lors de sa première apparition.
 
 ```html
 <p>
@@ -70,11 +68,11 @@ En ce qui concerne les abréviations, il est préférable [de les identifier sé
 ```
 
 > [!NOTE]
-> La spécification HTML [met en avant l'attribut `title`](https://www.w3.org/TR/html/text-level-semantics.html#the-abbr-element) pour expliciter les termes de l'abréviation. Cependant, il reste nécessaire d'utiliser le texte classique pour fournir une explication car le contenu de l'attribut `title` ne sera pas montré aux utilisateurs, sauf si ceux-ci passent la souris au-dessus de l'abréviation. C'est également [ce qui est noté dans les spécifications](https://www.w3.org/TR/html/dom.html#attr-title).
+> La spécification HTML [met en avant l'attribut `title` <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-abbr-element) pour expliciter les termes de l'abréviation. Cependant, il reste nécessaire d'utiliser le texte classique pour fournir une explication car le contenu de l'attribut `title` ne sera pas montré aux utilisateurs, sauf si ceux-ci passent la souris au-dessus de l'abréviation. C'est également [ce qui est noté dans les spécifications <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/dom.html#attr-title).
 
 ### Améliorer l'accessibilité
 
-{{HTMLElement('dfn')}} identifie le terme qui est défini et indique que le paragraphe courant définit le terme. Il y a donc une relation implicite entre l'élément `<dfn>` et l'élément qui le contient. Si vous souhaitez avoir une relation plus formelle ou que votre définition ne s'étend que sur une ou plusieurs phrases plutôt que sur l'ensemble du paragraphe, vous pouvez utiliser l'attribut [`aria-discribedby`](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-describedby) pour associer, formellement, un terme à sa définition :
+{{HTMLElement('dfn')}} identifie le terme qui est défini et indique que le paragraphe courant définit le terme. Il y a donc une relation implicite entre l'élément `<dfn>` et l'élément qui le contient. Si vous souhaitez avoir une relation plus formelle ou que votre définition ne s'étend que sur une ou plusieurs phrases plutôt que sur l'ensemble du paragraphe, vous pouvez utiliser l'attribut [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) pour associer, formellement, un terme à sa définition :
 
 ```html
 <p>
@@ -94,7 +92,7 @@ Les technologies d'assistance à la navigation pourront tirer parti de cet attri
 Les listes de descriptions sont des listes de termes associés à leur description (par exemple une liste de définition, des entrées d'un dictionnaire, une FAQ, des paires de clés-valeurs, etc.).
 
 > [!NOTE]
-> Les listes de descriptions [ne doivent pas être utilisées pour retranscrire des dialogues](https://www.w3.org/TR/html5/grouping-content.html#the-dl-element). En effet, la conversation ne décrit pas les différents interlocuteurs. Voici [quelques recommandations pour retranscrire un dialogue dans un document web](https://www.w3.org/TR/html5/common-idioms.html#conversations).
+> Les listes de descriptions [ne doivent pas être utilisées pour retranscrire des dialogues <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element). En effet, la conversation ne décrit pas les différents interlocuteurs. Voici [quelques recommandations pour retranscrire un dialogue dans un document web <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/semantics-other.html#conversations).
 
 Les termes à décrire sont placés dans des éléments {{htmlelement("dt")}} et la description, qui suit immédiatement, est placée dans un ou plusieurs éléments {{htmlelement("dd")}}. Enfin, l'ensemble de la liste est placé au sein d'un élément {{htmlelement("dl")}}.
 
@@ -148,4 +146,4 @@ Cela permettra d'obtenir le résultat suivant :
 - {{htmlelement("dl")}}
 - {{htmlelement("dt")}}
 - {{htmlelement("dd")}}
-- [Comment utiliser l'attribut `aria-describedby`](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-describedby)
+- [Comment utiliser l'attribut `aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
