@@ -19,6 +19,6 @@ En sécurité web, les nonces sont fréquemment utilisés dans des mécanismes t
 - Termes associés du glossaire&nbsp;:
   - {{Glossary("cryptography", "Cryptographie")}}
   - {{Glossary("encryption", "Chiffrement")}}
-  - {{Glossary("hash", "Hachage")}}
+  - {{Glossary("Hash_function", "Hachage")}}
   - {{Glossary("TLS")}}
   - {{Glossary("authentication", "Authentification")}}
