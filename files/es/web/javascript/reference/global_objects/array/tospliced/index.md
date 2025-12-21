@@ -1,7 +1,7 @@
 ---
 title: Array.prototype.toSpliced()
 short-title: toSpliced()
-slug: es/Web/JavaScript/Reference/Global_Objects/Array/toSpliced
+slug: web/javascript/reference/global_objects/array/tospliced
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.toSpliced
 sidebar: jsref
@@ -32,7 +32,7 @@ toSpliced(start, deleteCount, item1, item2, /* …, */ itemN)
 
 - `skipCount` {{optional_inline}}
 
-  - : Un entero que indica el número de elementos para eliminar, o saltear, en el array partiendo de `start`.
+  - : Un entero que indica el número de elementos para eliminar, o s`altear, en el array partiendo de `start`.
 
     Si `skipCount` es omitido, o si su valor es más grande o igual a la cantidad de elementos después de la posición dada por `start`, entonces todos los elementos desde `start` hasta el fin del array serán eliminados. Sin embargo, si deseas pasar cualquier parámetro `itemN`, deberías pasar `Infinity` como `skipCount` para eliminar todos los elementos luego de `start`, ya que un valor explicito `undefined` es [convertido](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion) a `0`.
 
