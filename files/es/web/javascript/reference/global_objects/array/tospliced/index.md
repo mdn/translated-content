@@ -5,6 +5,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/toSpliced
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.toSpliced
 sidebar: jsref
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
 El método **`toSpliced()`** pertenece a las instancias de {{jsxref("Array")}} y es la versión [copying](/es/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) del método {{jsxref("Array/splice", "splice()")}}. Devuelve un nuevo array con elementos eliminados y/o reemplazados en un índice dado.
