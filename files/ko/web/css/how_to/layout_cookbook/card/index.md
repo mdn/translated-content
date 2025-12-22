@@ -1,8 +1,6 @@
 ---
 title: 카드(Card)
 slug: Web/CSS/How_to/Layout_cookbook/Card
-page-type: how-to
-sidebar: cssref
 ---
 
 이 패턴은 선택적으로 푸터를 포함할 수 있는 **카드(card) 컴포넌트**의 목록을 다룹니다. 각 카드는 제목, 이미지, 설명 또는 기타 콘텐츠, 그리고 출처 또는 푸터를 포함합니다. 카드는 일반적으로 그룹이나 컬렉션 형태로 표시됩니다.
