@@ -1,35 +1,36 @@
 ---
 title: Array.prototype.toSpliced()
 short-title: toSpliced()
-slug: web/javascript/reference/global_objects/array/tospliced
+slug: Web/JavaScript/Reference/Global_Objects/Array/toSpliced
+page-type: javascript-instance-method
+browser-compat: javascript.builtins.Array.toSpliced
+sidebar: jsref
 ---
 
-{{JSRef}}
-
-El método **`toSpliced()`** pertenece a las instancias de {{jsxref("Array")}} y es la versión [copying](/es/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) del método {{jsxref("Array/splice", "splice()")}}. El método `toSpliced()` devuelve un nuevo array con los elementos eliminados y/o reemplazados al índice dado sin alterar el array original.
+El método **`toSpliced()`** pertenece a las instancias de {{jsxref("Array")}} y es la versión [copying](/es/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) del método {{jsxref("Array/splice", "splice()")}}. Devuelve un nuevo array con elementos eliminados y/o reemplazados en un índice dado.
 
 ## Sintaxis
 
 ```js-nolint
 toSpliced(start)
-toSpliced(start, deleteCount)
-toSpliced(start, deleteCount, item1)
-toSpliced(start, deleteCount, item1, item2)
-toSpliced(start, deleteCount, item1, item2, /* …, */ itemN)
+toSpliced(start, skipCount)
+toSpliced(start, skipCount, item1)
+toSpliced(start, skipCount, item1, item2)
+toSpliced(start, skipCount, item1, item2, /* …, */ itemN)
 ```
 
 ### Parámetros
 
 - `start`
   - : Índice basado en cero a partir del cual se comienzan a modificar los elementos del array, [convertido en un entero](/es/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
-    - Índices negativos cuentan hacia atrás desde el final del array — si `-array.length <= start < 0`, `start + array.length` es usado.
-    - Si `start < -array.length` o `start` es omitido, `0` es usado.
-    - Si `start >= array.length`, ningún elemento será eliminado, pero el método se comportará como una función de adición, agregando tantos elementos como hayan sido proporcionados.
+    - Un índice negativo cuenta hacia atrás desde el final del array — si `-array.length <= start < 0`, se usa `start + array.length`.
+    - Si `start < -array.length` o `start` se omite, se usa `0`.
+    - Si `start >= array.length`, no se eliminará ningún elemento, pero el método se comportará como una función de adición, agregando tantos elementos como se hayan proporcionado.
 
 - `skipCount` {{optional_inline}}
-  - : Un entero que indica el número de elementos para eliminar, o s`altear, en el array partiendo de `start`.
+  - : Un entero que indica el número de elementos que se deben eliminar (o saltear) del array a partir de `start`.
 
-    Si `skipCount` es omitido, o si su valor es más grande o igual a la cantidad de elementos después de la posición dada por `start`, entonces todos los elementos desde `start` hasta el fin del array serán eliminados. Sin embargo, si deseas pasar cualquier parámetro `itemN`, deberías pasar `Infinity` como `skipCount` para eliminar todos los elementos luego de `start`, ya que un valor explicito `undefined` es [convertido](/es/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion) a `0`.
+    Si `skipCount` se omite, o si su valor es mayor o igual a la cantidad de elementos después de la posición indicada por `start`, entonces se eliminarán todos los elementos desde `start` hasta el final del array. Sin embargo, si deseas pasar cualquier parámetro `itemN`, deberías pasar `Infinity` como `skipCount` para eliminar todos los elementos después de `start`, ya que un valor explícito `undefined` se [convierte](/es/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion) en `0`.
 
     Si `skipCount` es `0` o negativo, no se eliminarán elementos.
     En ese caso, debes especificar al menos un nuevo elemento (ver abajo).
