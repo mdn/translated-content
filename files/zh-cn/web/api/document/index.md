@@ -13,7 +13,7 @@ DOM 树包含了像 {{HTMLElement("body")}}、{{HTMLElement("table")}} 这样的
 
 {{InheritanceDiagram}}
 
-`Document` 接口描述了任何类型的文档的通用属性与方法。根据不同的文档类型（例如 [HTML](/zh-CN/docs/Web/HTML)、[XML](/zh-CN/docs/Web/XML)、[SVG](/zh-CN/docs/Web/SVG)……），还有更多可用的 API：使用 `"text/html"` 作为内容类型的 HTML 文档，还实现了 {{DOMxRef("HTMLDocument")}} 接口，而 XML 和 SVG 文档则实现了 {{DOMxRef("XMLDocument")}} 接口。
+`Document` 接口描述了任何类型的文档的通用属性与方法。根据不同的文档类型（例如 [HTML](/zh-CN/docs/Web/HTML)、[XML](/zh-CN/docs/Web/XML)、SVG……），还有更多可用的 API：使用 `"text/html"` 作为内容类型的 HTML 文档，还实现了 {{DOMxRef("HTMLDocument")}} 接口，而 XML 和 SVG 文档则实现了 {{DOMxRef("XMLDocument")}} 接口。
 
 ## 构造函数
 
@@ -85,7 +85,7 @@ _此接口还继承了 {{DOMxRef("Node")}} 和 {{DOMxRef("EventTarget")}} 接口
 - {{DOMxRef("Document.pointerLockElement")}} {{ReadOnlyInline}}
   - : 当指针被锁定时，返回鼠标事件的目标的元素集合。若锁定正处于等待状态、指针已被解锁，或是目标正处于另一个文档中，则返回 `null`。
 - {{DOMxRef("Document.prerendering")}} {{ReadOnlyInline}} {{experimental_inline}}
-  - : 返回一个表示文档当前是否处于预渲染过程（通过[推测规则 API](/zh-CN/docs/Web/API/Speculation_Rules_API)启动）中的布尔值。
+  - : 返回一个表示文档当前是否处于预渲染过程（通过[推测规则 API](/zh-CN/docs/Web/API/Speculation_Rules_API) 启动）中的布尔值。
 - {{DOMxRef("Document.scripts")}} {{ReadOnlyInline}}
   - : 返回包含文档中所有的 {{HTMLElement("script")}} 元素的 {{DOMxRef("HTMLCollection")}}。
 - {{DOMxRef("Document.scrollingElement")}} {{ReadOnlyInline}}
@@ -180,7 +180,7 @@ _HTML 文档的 `Document` 接口继承了 {{DOMxRef("HTMLDocument")}} 接口，
 
 ## 实例方法
 
-_该接口同样继承了 {{DOMxRef("Node")}} 和 {{DOMxRef("EventTarget")}} 接口。_
+_该接口还继承了 {{DOMxRef("Node")}} 和 {{DOMxRef("EventTarget")}} 接口。_
 
 - {{DOMxRef("Document.adoptNode()")}}
   - : 从外部文档中采用的节点。
