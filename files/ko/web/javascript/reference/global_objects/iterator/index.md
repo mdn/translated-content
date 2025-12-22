@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`Iterator`** 객체는 반복자 결과 객체를 반환하는 [`next()`] 메서드를 제공함으로써 [반복자 프로토콜](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol)을 따르는 객체입니다. 모든 내장 반복자들은 `Iterator` 클래스를 상속합니다. `Iterator` 클래스는 반복자 객체 자신을 반환하는 [`[Symbol.iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.iterator) 메서드를 제공하여 반복자가 [순회 가능](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)하도록 합니다. 또한 반복자를 다루기 위한 보조 메서드들도 제공합니다.
+**`Iterator`** 객체는 반복자 결과 객체를 반환하는 `next()` 메서드를 제공함으로써 [반복자 프로토콜](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol)을 따르는 객체입니다. 모든 내장 반복자들은 `Iterator` 클래스를 상속합니다. `Iterator` 클래스는 반복자 객체 자신을 반환하는 [`[Symbol.iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.iterator) 메서드를 제공하여 반복자가 [순회 가능](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)하도록 합니다. 또한 반복자를 다루기 위한 보조 메서드들도 제공합니다.
 
 ## 설명
 
@@ -129,7 +129,7 @@ const myIterator = Iterator.from({
 });
 ```
 
-## 셍성자
+## 생성자
 
 - {{jsxref("Iterator/Iterator", "Iterator()")}}
   - : 반복자를 생성하는 다른 클래스에 의해 [확장](/ko/docs/Web/JavaScript/Reference/Classes/extends)되도록 의도되었습니다. 이 클래스 자체로 인스턴스를 생성하면 오류가 발생합니다.
@@ -192,7 +192,7 @@ for (const value of arrIterator) {
 // Logs: 1, 2, 3
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
