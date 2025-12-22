@@ -30,8 +30,8 @@ slug: Web/CSS/How_to/Layout_cookbook/Card
       alt="열기구" />
     <div class="content">
       <p>
-        열기구를 이용해 북극점에 도달하려는 아이디어는 오래전부터
-        제안되어 왔습니다.
+        열기구를 이용해 북극점에 도달하려는 아이디어는 오래전부터 제안되어
+        왔습니다.
       </p>
     </div>
   </article>
@@ -60,8 +60,8 @@ slug: Web/CSS/How_to/Layout_cookbook/Card
       alt="열기구" />
     <div class="content">
       <p>
-        1863년 파리에서 Delaville Dedreux가 출판한 흥미로운 저작에서는
-        비행선을 이용해 북극점에 도달하는 제안이 등장합니다.
+        1863년 파리에서 Delaville Dedreux가 출판한 흥미로운 저작에서는 비행선을
+        이용해 북극점에 도달하는 제안이 등장합니다.
       </p>
     </div>
     <footer>푸터가 있습니다!</footer>
@@ -76,8 +76,8 @@ slug: Web/CSS/How_to/Layout_cookbook/Card
       alt="열기구" />
     <div class="content">
       <p>
-        열기구를 이용해 북극점에 도달하려는 아이디어는 오래전부터
-        제안되어 왔습니다.
+        열기구를 이용해 북극점에 도달하려는 아이디어는 오래전부터 제안되어
+        왔습니다.
       </p>
     </div>
   </article>
@@ -166,11 +166,11 @@ img {
 {{cssxref("grid-template-columns")}} 속성은 그리드 열의 너비를 정의합니다. 여기서는 최소 `230px`에서 시작해 사용 가능한 공간을 채울 수 있도록 확장되는 열을 `auto-fill`로 반복 생성합니다. {{cssxref("gap")}} 속성은 인접한 행과 열 사이의 간격을 `20px`로 설정합니다.
 
 > [!NOTE]
-> 각 카드는 독립적인 그리드이므로, 카드 컴포넌트 내부의 구성 요소들이 다른 카드의 동일한 구성 요소들과 정확히 정렬되지는 않습니다. 인접한 카드들 간에 동일한 구성 요소를 정렬하려면 [서브그리드(subgrid)](/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid)를 사용할 수 있습니다.
+> 각 카드는 독립적인 그리드이므로, 카드 컴포넌트 내부의 구성 요소들이 다른 카드의 동일한 구성 요소들과 정확히 정렬되지는 않습니다. 인접한 카드들 간에 동일한 구성 요소를 정렬하려면 [서브그리드(subgrid)](/ko/docs/Web/CSS/Guides/Grid_layout/Subgrid)를 사용할 수 있습니다.
 
 ## 대안 방법
 
-[플렉스박스](/en-US/docs/Web/CSS/Guides/Flexible_box_layout)를 사용해 각 카드 컴포넌트를 배치할 수도 있습니다. 플렉스박스를 사용할 경우, 각 카드의 트랙 크기는 카드 컨테이너가 아니라 자식 요소에 설정한 {{cssxref("flex")}} 속성으로 제어합니다.
+[플렉스박스](/ko/docs/Web/CSS/Guides/Flexible_box_layout)를 사용해 각 카드 컴포넌트를 배치할 수도 있습니다. 플렉스박스를 사용할 경우, 각 카드의 트랙 크기는 카드 컨테이너가 아니라 자식 요소에 설정한 {{cssxref("flex")}} 속성으로 제어합니다.
 
 플렉스박스에서는 컨테이너가 아니라 플렉스 아이템에서 크기를 정의합니다. 그리드와 플렉스박스 중 어떤 것을 선택할지는 트랙을 컨테이너에서 제어하고 싶은지, 아니면 아이템에 규칙을 두고 싶은지에 따라 달라집니다.
 
@@ -186,4 +186,4 @@ img {
 - {{Cssxref("grid-template-rows")}}
 - {{Cssxref("gap")}}
 - [Inclusive components: Card](https://inclusive-components.design/cards/)
-- [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) 모듈
+- [CSS grid layout](/ko/docs/Web/CSS/Guides/Grid_layout) 모듈
