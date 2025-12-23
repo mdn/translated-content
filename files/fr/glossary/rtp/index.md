@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-Le **Real-time Transport Protocol** (**RTP**, pour protocole de transport en temps réel) est un protocole réseau qui décrit comment transmettre différents médias (audio, vidéo) d'un point de terminaison à un autre en temps réel. RTP convient aux applications de diffusion vidéo, à la téléphonie sur {{Glossary("IP")}} comme Skype et aux technologies de conférence.
+Le **Real-time Transport Protocol** (**RTP**, pour protocole de transport en temps réel) est un protocole réseau qui décrit comment transmettre différents médias (audio, vidéo) d'un point de terminaison à un autre en temps réel. RTP convient aux applications de diffusion vidéo, à la téléphonie sur {{Glossary("VoIP")}} comme Skype et aux technologies de conférence.
 
 La version sécurisée de RTP, **SRTP**, est utilisée par [WebRTC](/fr/docs/Web/API/WebRTC_API) et utilise le chiffrement et l'authentification pour minimiser le risque d'attaques par déni de service et de failles de sécurité.
 
