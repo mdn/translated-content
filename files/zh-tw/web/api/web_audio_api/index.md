@@ -63,7 +63,7 @@ Web Audio API 擁有許多的介面與相關聯的事件，我們將其分為九
 - {{domxref("AudioContext")}}
   - : **`AudioContext`** 介面代表由音訊模組互相連接而成的音訊處理圖，每個模組由一個 {{domxref("AudioNode")}} 代表。音訊上下文控制其包含的節點的建立以及音訊處理或解碼的執行。在你做任何事情之前，你需要建立一個 `AudioContext`，因為所有事情都發生在上下文內。
 - {{domxref("AudioNode")}}
-  - : **`AudioNode`** 介面代表一個音訊處理模組，像是一個*音訊來源*（例如 HTML {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 元素）、*音訊目的地*、*中間處理模組*（例如像 {{domxref("BiquadFilterNode")}} 的濾波器，或像 {{domxref("GainNode")}} 的*音量控制*）。
+  - : **`AudioNode`** 介面代表一個音訊處理模組，像是一個*音訊來源*（例如 HTML {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 元素）、_音訊目的地_、_中間處理模組_（例如像 {{domxref("BiquadFilterNode")}} 的濾波器，或像 {{domxref("GainNode")}} 的*音量控制*）。
 - {{domxref("AudioParam")}}
   - : **`AudioParam`** 介面代表一個音訊相關參數，像是 {{domxref("AudioNode")}} 的參數之一。它可以被設定為特定數值或數值的變化，並可以被排程在特定時間發生並遵循特定模式。
 - {{domxref("AudioParamMap")}}
