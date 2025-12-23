@@ -7,7 +7,6 @@ l10n:
 
 The **`<self-position>`** は{{glossary("enumerated", "列挙型")}}の値データ型で、{{cssxref("justify-content")}} および {{cssxref("align-content")}} プロパティ、それに {{cssxref("place-self")}} 一括指定で使用され、ボックスのコンテンツを配置コンテナーの中に配置するために使用されます。これは {{cssxref("justify-items")}} および {{cssxref("align-items")}} プロパティや、 {{cssxref("place-items")}} 一括指定からも、デフォルト値を `justify-self` および `align-self` のデフォルト値を指定するために使用されます。
 
-
 ## 構文
 
 ```plain
