@@ -1,18 +1,18 @@
 ---
-title: ブロック、絶対配置、表レイアウトのブロック配置
+title: ブロック、絶対位置指定、表レイアウトのボックス配置
+short-title: ブロックレイアウトで
 slug: Web/CSS/Guides/Box_alignment/In_block_abspos_tables
-original_slug: Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables
 l10n:
-  sourceCommit: ca6d4f6114d278926e183225a90fd2209802cfe9
+  sourceCommit: ca5d9f9e63b460fc0c9e15ac57d9739e10e4ea0d
 ---
 
-[ボックス配置仕様書](/ja/docs/Web/CSS/Guides/Box_alignment)は、様々なレイアウト方式でどのように配置が動作するかを詳説しています。このページでは、ボックス配置は浮動、位置指定、表要素を含むボックスレイアウトのレイアウトでどのように動作するかを明らかにします。このページはブロックレイアウトとボックス配置に固有のことを詳説するため、様々なレイアウト方式に共通のボックス配置の共通機能について説明している、中心となる[ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)ページを併せて読んでください。
+[CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)モジュールは、様々なレイアウト方式でどのように配置が動作するかを詳説しています。このガイドでは、ボックス配置は浮動、位置指定、表要素を含むボックスレイアウトのレイアウトでどのように動作するかを明らかにします。このガイドはブロックレイアウトとボックス配置に固有のことを詳説するため、様々なレイアウト方式に共通のボックス配置の共通機能について説明している[ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/Overview)ガイドを併せて読んでください。
 
 ## align-content と justify-content
 
 {{cssxref("justify-content")}} プロパティは、ブロックコンテナーや表のセルには適用されません。
 
-{{cssxref("align-content")}} プロパティは、ブロック軸に適用され、ボックスの内容物をそのコンテナー内で整列させるためのものです。`space-between`、`space-around`、`space-evenly` などの内容物配分方法が要求されている場合は、内容物が 1 つの[配置対象物](/ja/docs/Glossary/Alignment_Subject)として扱われるため、代替配置が使用されます。
+{{cssxref("align-content")}} プロパティは、ブロック軸に適用され、ボックスのコンテンツをそのコンテナー内で整列させるためのものです。`space-between`、`space-around`、`space-evenly` などのコンテンツの配分方法が要求されている場合は、コンテンツが 1 つの[配置対象物](/ja/docs/Glossary/Alignment_Subject)として扱われるため、代替配置が使用されます。
 
 ## justify-self
 
@@ -77,17 +77,10 @@ l10n:
 
 {{EmbedLiveSample("intro", "", "320px")}}
 
-## リファレンス
+## 関連情報
 
-### CSS プロパティ
-
-- {{cssxref("justify-content")}}
-- {{cssxref("align-content")}}
-- {{cssxref("justify-self")}}
-- {{cssxref("align-self")}}
-
-### 用語集の項目
-
-- [配置対象物](/ja/docs/Glossary/Alignment_Subject)
-- [配置コンテナー](/ja/docs/Glossary/Alignment_Container)
-- [代替配置](/ja/docs/Glossary/Fallback_Alignment)
+- [CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)モジュール
+- [ボックス配置の概要](/ja/docs/Web/CSS/Guides/Box_alignment/Overview)
+- [フレックスボックスのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_flexbox)
+- [グリッドレイアウトでのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
+- [段組みレイアウトのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_multi-column_layout)

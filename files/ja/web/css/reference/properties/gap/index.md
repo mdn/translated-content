@@ -1,9 +1,8 @@
 ---
 title: gap
 slug: Web/CSS/Reference/Properties/gap
-original_slug: Web/CSS/gap
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`gap`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、行や列の間のすき間（{{glossary("gutters", "溝")}}）を設定します。このプロパティは[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)、[フレックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)コンテナーに適用します。
@@ -53,7 +52,7 @@ gap: calc(20px + 10%);
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 ```
@@ -215,10 +214,9 @@ gap: unset;
 
 #### HTML
 
-```html live-sample___multi-column_layout
+```html-nolint live-sample___multi-column_layout
 <p class="content-box">
-  This is some multi-column text with a 40px column gap created with the CSS
-  <code>gap</code> property. Don't you think that's fun and exciting? I sure do!
+  これは CSS の <code>gap</code> プロパティで作成した、40px の列間隔を持つ段組みのテキストです。これって楽しくて期待しませんか？私はそう思います！
 </p>
 ```
 
@@ -260,7 +258,7 @@ gap: unset;
 
 ```css hidden live-sample___explicit_container_size
 body > div {
-  background-color: #ccc;
+  background-color: #cccccc;
   width: 200px;
   flex-flow: column;
 }
@@ -316,7 +314,7 @@ body > div {
 
 ```css hidden live-sample___implicit_container_size
 body > div {
-  background-color: #ccc;
+  background-color: #cccccc;
   width: 200px;
 }
 
