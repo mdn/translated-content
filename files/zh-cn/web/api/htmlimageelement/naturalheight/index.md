@@ -33,7 +33,7 @@ l10n:
     class="image"
     alt="一款带有白色表盘和黑色数字的圆形挂钟" />
 </div>
-<div class="output"></div>
+<pre></pre>
 ```
 
 HTML 具有一个 400x398 像素的图像（放置在一个 {{HTMLElement("div")}} 元素中）。
