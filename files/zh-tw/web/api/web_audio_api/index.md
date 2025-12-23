@@ -1,8 +1,8 @@
 ---
 title: Web Audio API
 slug: Web/API/Web_Audio_API
-page-type: web-api-overview
-browser-compat: api.AudioContext
+l10n:
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
 
 {{DefaultAPISidebar("Web Audio API")}}
