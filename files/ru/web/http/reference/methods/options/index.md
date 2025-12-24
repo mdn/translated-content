@@ -9,15 +9,15 @@ slug: Web/HTTP/Reference/Methods/OPTIONS
   <tbody>
     <tr>
       <th scope="row">Запрос имеет тело</th>
-      <td>Нет</td>
+      <td>Может*</td>
     </tr>
     <tr>
       <th scope="row">Успешный ответ имеет тело</th>
-      <td>Да</td>
+      <td>Может</td>
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Safe", "Безопасный")}}
+        {{Glossary("Safe/HTTP", "Безопасный")}}
       </th>
       <td>Да</td>
     </tr>
@@ -41,6 +41,8 @@ slug: Web/HTTP/Reference/Methods/OPTIONS
     </tr>
   </tbody>
 </table>
+
+\* Хотя отправка тела запроса в сообщении `OPTIONS` технически разрешена, его семантика не определена. Вы можете включить тело в сообщение `OPTIONS` при условии, что вы указали действительный заголовок {{HTTPHeader("Content-Type")}} и знаете, что сервер его ожидает, поскольку такое поведение зависит от конкретной реализации.
 
 ## Синтаксис
 

@@ -21,7 +21,7 @@ slug: Web/HTTP/Reference/Methods/HEAD
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Safe", "Безопасный")}}
+        {{Glossary("Safe/HTTP", "Безопасный")}}
       </th>
       <td>Да</td>
     </tr>
