@@ -1,13 +1,15 @@
 ---
 title: Applications web progressistes
 slug: Glossary/Progressive_web_apps
+l10n:
+  sourceCommit: 7d4f930455a349e3c73836500add3d4840c76f5d
 ---
 
-{{GlossarySidebar}}
+Les **applications web progressistes** (**PWAs**) sont des applications conçues à l'aide des technologies de la plateforme web, mais qui offrent une expérience utilisateur·ice similaire à celle d'une application spécifique à une plateforme.
 
-_Applications web progressistes_ (Progressive web apps) est une locution utilisée pour décrire une manière moderne de développer des applications web. Cela consiste à utiliser des sites ou applications web classiques qui profitent du meilleur du web — comme la possibilité d'apparaître avec les moteurs de recherche, le fait d'être lié par les {{Glossary("URL")}} ou encore la capacité à fonctionner sur tout type d'environnement —, d'y ajouter des API modernes (comme les [Service Workers](/fr/docs/Web/API/Service_Worker_API) et les notifications [Push](/fr/docs/Web/API/Push_API)) et des fonctionnalités qui offrent d'autres avantages habituellement réservés aux applications natives.
+Ce type d'application bénéficie de tous les avantages du Web — comme la découvrabilité via les moteurs de recherche, la possibilité d'être liées via des {{Glossary("URL")}}, et la compatibilité avec de nombreux formats d'appareils, tout en étant amélioré progressivement grâce aux API modernes (comme les [Service Workers](/fr/docs/Web/API/Service_Worker_API) et [Push](/fr/docs/Web/API/Push_API)).
 
-Ces fonctionnalités incluent : la possibilité d'installer l'application, de fonctionner hors-ligne, d'être facile à synchroniser ou encore d'interagir avec l'utilisateur à l'initiative du serveur.
+Ces fonctionnalités incluent la possibilité d'être installées, de fonctionner hors ligne, de se synchroniser et de réengager l'utilisateur·ice depuis le serveur.
 
 ## Voir aussi
 
