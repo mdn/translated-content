@@ -1,12 +1,11 @@
 ---
 title: border-image-repeat
 slug: Web/CSS/Reference/Properties/border-image-repeat
-original_slug: Web/CSS/border-image-repeat
 l10n:
-  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-[CSS](/ja/docs/Web/CSS) の **`border-image-repeat`** プロパティは、元画像の[辺の領域](/ja/docs/Web/CSS/Reference/Properties/border-image-slice#edge-regions)と[中央の領域](/ja/docs/Web/CSS/Reference/Properties/border-image-slice#middle-region)を、どうやって要素の[境界画像](/ja/docs/Web/CSS/Reference/Properties/border-image)に合うように合わせるかを定義します。 border-image-slice プロパティでキーワード "fill" を使用することで、中央の領域を表示することができます。
+**`border-image-repeat`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[境界画像](/ja/docs/Web/CSS/Reference/Properties/border-image)の辺と中央部分の画像がどのように変倍され、タイル状に配置されるかを定義します。中央領域は、{{cssxref("border-image-slice")}} プロパティでキーワード "fill" を使用することで、表示させることができます。
 
 {{InteractiveExample("CSS デモ: border-image-repeat")}}
 
@@ -32,7 +31,7 @@ border-image-repeat: round stretch;
 
 ```html interactive-example
 <section id="default-example">
-  <div id="example-element">This is a box with a border around it.</div>
+  <div id="example-element">これは周囲に境界があるボックスです。</div>
 </section>
 ```
 
@@ -45,7 +44,7 @@ border-image-repeat: round stretch;
   justify-content: center;
   padding: 50px;
   background: #fff3d4;
-  color: #000;
+  color: black;
   border: 30px solid;
   border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
     round;
@@ -151,3 +150,4 @@ repetition.addEventListener("change", (evt) => {
 
 - [背景と境界](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)
 - [CSS の学習: 背景と境界](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
+- [Border images in CSS: A key focus area for Interop 2023](/en-US/blog/border-images-interop-2023/) - MDN blog (2023)

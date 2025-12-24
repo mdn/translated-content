@@ -1,9 +1,8 @@
 ---
 title: box-shadow
 slug: Web/CSS/Reference/Properties/box-shadow
-original_slug: Web/CSS/box-shadow
 l10n:
-  sourceCommit: 4d5e2c11f4b8cc32e54d2527d9576ed26ced9458
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`box-shadow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のフレームの周囲にシャドウ効果を追加します。カンマで区切ることで、複数の効果を設定することができます。ボックスの影は要素からの相対的な X および Y のオフセット、ぼかしと拡散の半径、色で記述します。
@@ -19,7 +18,7 @@ box-shadow: 60px -16px teal;
 ```
 
 ```css interactive-example-choice
-box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+box-shadow: 12px 12px 2px 1px rgb(0 0 255 / 0.2);
 ```
 
 ```css interactive-example-choice
@@ -35,7 +34,7 @@ box-shadow:
 ```html interactive-example
 <section id="default-example">
   <div class="transition-all" id="example-element">
-    <p>This is a box with a box-shadow around it.</p>
+    <p>このボックスには周囲に box-shadow があります。</p>
   </div>
 </section>
 ```
@@ -44,15 +43,11 @@ box-shadow:
 #example-element {
   margin: 20px auto;
   padding: 0;
-  border: 2px solid #333;
+  border: 2px solid #333333;
   width: 80%;
   text-align: center;
 }
 ```
-
-`box-shadow` プロパティで、ほぼすべての要素のフレームからドロップシャドウを作成することができます。 {{cssxref("border-radius")}} が指定された場合は、影もその丸みを反映します。複数のボックスの影の重ね合わせ順は、複数の[テキストの影](/ja/docs/Web/CSS/Reference/Properties/text-shadow)の場合と同様になります (最初に指定された影が最も手前に来ます)。
-
-[ボックスの影作成ツール](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator)は、 `box-shadow` を対話的に作成できるツールです。
 
 ## 構文
 
@@ -113,7 +108,8 @@ box-shadow: unset;
       指定しない場合、省略された長さには `0` の値が使用されます。もし `<offset-x>` と `<offset-y>` の両方が `0` に設定されると、影は要素の後ろに配置されます（もし `<blur-radius>` や `<spread-radius>` が設定されていれば、ぼかし効果が発生するかもしれません）。
     - 3 つの値を指定した場合、 3 つ目の値は `<blur-radius>` と解釈されます。この値が大きいほどよりぼかしが大きくなり、影が大きく明るくなります。負の値は指定できません。指定しない場合は `0` に設定されます（すなわち、影の輪郭が鮮明になります）。この仕様には、ぼかし半径をどのように計算するかの正確なアルゴリズムは記載されていませんが、以下のように詳しく説明されています。
 
-    > …影の辺が長くまっすぐな場合、影の辺に垂直で中心にあるぼかし距離の長さの色遷移を作成し、影の内側の半径の端点で完全な影の色からその外側の端点で完全に透明になるまでの範囲の色遷移を作成する必要があります。
+      > …影の辺が長くまっすぐな場合、影の辺に垂直で中心にあるぼかし距離の長さの色遷移を作成し、影の内側の半径の端点で完全な影の色からその外側の端点で完全に透明になるまでの範囲の色遷移を作成する必要があります。
+
     - 4 つの値を指定した場合、 4 番目の値は `<spread-radius>` と解釈されます。正の値を指定すると影は展開され大きくなり、負の値を指定すると影は縮小します。指定しない場合は `0` に設定します（つまり、影は要素と同じ大きさになります）。
 
 - `inset` {{optional_inline}}
@@ -121,9 +117,15 @@ box-shadow: unset;
 
 ### 補間
 
-影をアニメーションさせる場合、たとえばボックス上の複数の影の値がホバー時に新しい値に遷移する場合、値は補間されます。{{Glossary("Interpolation", "補間")}}は影の遷移に伴って、ぼかし半径、拡散半径、色などのプロパティの中間値を決定します。影のリスト内のそれぞれの影について、色、x、y、ぼかし、拡散が遷移します。色は [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) として、他の値は {{cssxref("length")}} として遷移します。
+影をアニメーションさせる場合、たとえばボックス上の複数の影の値がホバー時に新しい値に遷移する場合、値は補間されます。{{Glossary("Interpolation", "補間")}}は影の遷移に伴って、ぼかし半径、拡散半径、色などのプロパティの中間値を決定します。影のリスト内のそれぞれの影について、色、x、y、ぼかし、拡散が遷移します。色は {{cssxref("&lt;color&gt;")}} として、他の値は {{cssxref("length")}} として遷移します。
 
-カンマで区切られた 2 つのボックスシャドウのリスト間で複数の影を補間する場合、影は順番に対になり、対になった影の間で補間が行われます。影のリストの長さが異なる場合は、短い方のリストの最後に、色が `transparent` であり、X、Y、ぼかしが `0` である影が挿入され、挿入の有無が一致するように設定されます。影のペアのうち、一方に `inset` が設定されていて、もう一方に `inset` が設定されていない場合、影のリスト全体が補間されません。
+カンマで区切られた 2 つのボックスシャドウのリスト間で複数の影を補間する場合、影は順番に対になり、対になった影の間で補間が行われます。影のリストの長さが異なる場合は、短い方のリストの最後に、色が `transparent` であり、X、Y、ぼかしが `0` である影が挿入され、挿入の有無が一致するように設定されます。影のペアのうち、一方に `inset` が設定されていて、もう一方に設定されていない場合、影のリスト全体が補間されません。影はアニメーション効果なしで新しい値に変化します。
+
+## 解説
+
+`box-shadow` プロパティで、ほぼすべての要素のフレームからドロップシャドウを作成することができます。 {{cssxref("border-radius")}} が指定された場合は、影もその丸みを反映します。複数のボックスの影の重ね合わせ順は、複数の[テキストの影](/ja/docs/Web/CSS/Reference/Properties/text-shadow)の場合と同様になります (最初に指定された影が最も手前に来ます)。
+
+[ボックスの影作成ツール](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator)は、 `box-shadow` を対話的に作成できるツールです。
 
 ## 公式定義
 
@@ -212,4 +214,6 @@ p {
 - {{cssxref("&lt;color&gt;")}} データ型（影の色を指定するのに使用）
 - {{cssxref("text-shadow")}}
 - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
+- [テキストの影の紹介](/ja/docs/Web/CSS/Guides/Text_decoration/Text_shadows)
 - [CSS を用いた HTML 要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color)
+- [CSS 背景と境界](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)モジュール

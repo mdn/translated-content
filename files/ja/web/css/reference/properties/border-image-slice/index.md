@@ -1,9 +1,8 @@
 ---
 title: border-image-slice
 slug: Web/CSS/Reference/Properties/border-image-slice
-original_slug: Web/CSS/border-image-slice
 l10n:
-  sourceCommit: 9416f9b9db835dc3cc9a4f628d3bd34cdf494bc1
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`border-image-slice`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("border-image-source")}} で指定された画像を複数の領域に分割します。これらの領域は[境界画像](/ja/docs/Web/CSS/Reference/Properties/border-image)の部品を構成します。
@@ -30,7 +29,7 @@ border-image-width: 30px 48px;
 
 ```html interactive-example
 <section id="default-example">
-  <div id="example-element">This is a box with a border around it.</div>
+  <div id="example-element">これは周囲に境界があるボックスです。</div>
 </section>
 ```
 
@@ -43,25 +42,13 @@ border-image-width: 30px 48px;
   justify-content: center;
   padding: 50px;
   background: #fff3d4;
-  color: #000;
+  color: black;
   border: 30px solid;
   border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
     round;
   font-size: 1.2em;
 }
 ```
-
-分割する過程で、4 つの角、4 つの辺、それに中央領域の計 9 つの領域を作成します。それぞれの辺からの距離で設定される 4 本の分割線が、領域の寸法を制御します。
-
-[![border-image または border-image-slice プロパティで定義された 9 つの領域](border-image-slice.png)](/ja/docs/Web/CSS/border-image-slice/border-image-slice.png)
-
-上の図は、それぞれの領域の位置を説明しています。
-
-- 1-4 の領域は角領域です。それぞれが1回ずつ使用され、最終的な境界画像の中で四隅を形成します。
-- 5-8 の領域は辺領域です。これらは最終的な境界画像の中で、要素の寸法に合わせて[反復、拡縮、その他の加工が行なわれ](/ja/docs/Web/CSS/Reference/Properties/border-image-repeat)ます。
-- 9 の領域は中央領域です。既定では描画されませんが、キーワード `fill` がセットされていれば背景画像のように使用されます。
-
-{{cssxref("border-image-repeat")}}, {{cssxref("border-image-width")}}, {{cssxref("border-image-outset")}} の各プロパティは、最終的な境界画像を構成するためにこれらの領域が使用される方法を指定します。
 
 ## 構文
 
@@ -86,6 +73,7 @@ border-image-slice: fill 10%;
 border-image-slice: inherit;
 border-image-slice: initial;
 border-image-slice: revert;
+border-image-slice: revert-layer;
 border-image-slice: unset;
 ```
 
@@ -107,6 +95,20 @@ border-image-slice: unset;
 - `fill`
   - : 中央の画像領域を維持し、背景画像のように表示しますが、実際の {{cssxref("background")}} の上に重ねられます。幅と高さは、画像領域のそれぞれ上と左に一致するように拡縮されます。
 
+## 解説
+
+分割する過程で、4 つの角、4 つの辺、それに中央領域の計 9 つの領域を作成します。それぞれの辺からの距離で設定される 4 本の分割線が、領域の寸法を制御します。
+
+![border-image または border-image-slice プロパティで定義された 9 つの領域](border-image-slice.png)
+
+上の図は、それぞれの領域の位置を説明しています。
+
+- 1-4 の領域は角領域です。それぞれが1回ずつ使用され、最終的な境界画像の中で四隅を形成します。
+- 5-8 の領域は辺領域です。これらは最終的な境界画像の中で、要素の寸法に合わせて[反復、拡縮、その他の加工が行なわれ](/ja/docs/Web/CSS/Reference/Properties/border-image-repeat)ます。
+- 9 の領域は中央領域です。既定では描画されませんが、キーワード `fill` がセットされていれば背景画像のように使用されます。
+
+{{cssxref("border-image-repeat")}}, {{cssxref("border-image-width")}}, {{cssxref("border-image-outset")}} の各プロパティは、最終的な境界画像を構成するためにこれらの領域が使用される方法を指定します。
+
 ## 公式定義
 
 {{CSSInfo}}
@@ -119,11 +121,11 @@ border-image-slice: unset;
 
 ### 調整のできる境界の幅とスライス
 
-次の例は、シンプルな `<div>` に境界画像を設定したものです。境界のソース画像は以下の通りです。
+次の例は、`<div>` に境界画像を設定したものです。境界のソース画像は以下の通りです。
 
 ![素敵な複数色のダイヤモンド](border-diamonds.png)
 
-ダイヤモンドの幅は 30px なので、[`border-width`](/ja/docs/Web/CSS/Reference/Properties/border-width) と `border-image-slice` の両方に 30 ピクセルを設定すると、ボーダーに完全でかなり鮮明なダイヤモンドが表示されます。
+ダイヤモンドの幅は 30px なので、{{cssxref("border-width")}} と `border-image-slice` の両方に 30 ピクセルを設定すると、境界に完全でかなり鮮明なダイヤモンドが表示されます。
 
 ```css
 border-width: 30px;
@@ -138,7 +140,7 @@ border-image-slice: 30;
 
 #### HTML
 
-```html
+```html-nolint
 <div class="wrapper">
   <div></div>
 </div>
@@ -150,9 +152,7 @@ border-image-slice: 30;
     <output id="width-output">30px</output>
   </li>
   <li>
-    <label for="slice"
-      >スライドして <code>border-image-slice</code> を調整</label
-    >
+    <label for="slice">スライドして <code>border-image-slice</code> を調整</label>
     <input type="range" min="10" max="45" id="slice" />
     <output id="slice-output">30</output>
   </li>
@@ -172,7 +172,7 @@ div > div {
   height: 200px;
   border-width: 30px;
   border-style: solid;
-  border-image: url(/shared-assets/images/examples/border-diamonds.png);
+  border-image: url("/shared-assets/images/examples/border-diamonds.png");
   border-image-slice: 30;
   border-image-repeat: round;
 }
@@ -219,4 +219,5 @@ sliceSlider.addEventListener("input", () => {
 
 ## 関連情報
 
-- [1 ～ 4 つの値による構文の図による説明](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties#tricky_edge_cases)
+- [1 ～ 4 つの値による構文の図による説明](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties#注意するべき場合)
+- [Border images in CSS: A key focus area for Interop 2023](/en-US/blog/border-images-interop-2023/) - MDN blog (2023)
