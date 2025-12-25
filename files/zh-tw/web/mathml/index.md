@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 9036ccca6d55b90913ca424e6706b0c9ed1fa93b
 ---
 
-**數學標記語言 (MathML)** 是一種基於 [XML](/zh-TW/docs/Web/XML) 的語言，用於描述數學符號。
+**數學標記語言（MathML）**是一種基於 [XML](/zh-TW/docs/Web/XML) 的語言，用於描述數學符號。
 
 [MathML](https://w3c.github.io/mathml/) 最初被設計為通用規範，適用於瀏覽器、辦公軟體套件、[電腦代數系統](https://en.wikipedia.org/wiki/Computer_algebra_system)、[EPUB](https://www.w3.org/publishing/epub33/) 閱讀器以及 [LaTeX](https://en.wikipedia.org/wiki/LaTeX) 生成器。然而，這種方法並不十分適合 Web：[專注於語意](https://w3c.github.io/mathml/#contm)的子集從未在瀏覽器中實作，而[專注於數學佈局](https://w3c.github.io/mathml/#presm)的子集則導致了不完整且不一致的瀏覽器實作。
 
