@@ -180,7 +180,7 @@ p.max-green {
 }
 ```
 
-```html
+```html-nolint
 <p class="max-green">MDN コミュニティは非常に優れたドキュメントを作成しています。</p>
 ```
 
@@ -195,7 +195,7 @@ p.min-blue {
 }
 ```
 
-```html
+```html-nolint
 <p class="min-blue">MDN コミュニティは非常に優れたドキュメントを作成しています。</p>
 ```
 
