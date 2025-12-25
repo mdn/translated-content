@@ -1,7 +1,9 @@
 ---
-title: Element
+title: Référence des éléments SVG
+short-title: Éléments
 slug: Web/SVG/Reference/Element
-original_slug: Web/SVG/Element
+l10n:
+  sourceCommit: c1564acf160ef4b320fb7b89ab65211b9c50cf1b
 ---
 
 Les dessins et les images SVG sont créés à l'aide d'un large éventail d'éléments dédiés à la construction, au dessin et à la mise en page d'images vectorielles et de diagrammes. Vous trouverez ici la documentation de référence pour chacun des éléments SVG.
@@ -19,13 +21,11 @@ Les dessins et les images SVG sont créés à l'aide d'un large éventail d'él�
 
 - {{SVGElement("circle")}}
 - {{SVGElement("clipPath")}}
-- {{SVGElement("color-profile")}}
 
 ### D
 
 - {{SVGElement("defs")}}
 - {{SVGElement("desc")}}
-- {{SVGElement("discard")}}
 
 ### E
 
@@ -65,11 +65,6 @@ Les dessins et les images SVG sont créés à l'aide d'un large éventail d'él�
 
 - {{SVGElement("g")}}
 
-### H
-
-- {{SVGElement("hatch")}}
-- {{SVGElement("hatchpath")}}
-
 ### I
 
 - {{SVGElement("image")}}
@@ -83,10 +78,6 @@ Les dessins et les images SVG sont créés à l'aide d'un large éventail d'él�
 
 - {{SVGElement("marker")}}
 - {{SVGElement("mask")}}
-- {{SVGElement("mesh")}}
-- {{SVGElement("meshgradient")}}
-- {{SVGElement("meshpatch")}}
-- {{SVGElement("meshrow")}}
 - {{SVGElement("metadata")}}
 - {{SVGElement("mpath")}}
 
@@ -106,7 +97,6 @@ Les dessins et les images SVG sont créés à l'aide d'un large éventail d'él�
 
 - {{SVGElement("script")}}
 - {{SVGElement("set")}}
-- {{SVGElement("solidcolor")}}
 - {{SVGElement("stop")}}
 - {{SVGElement("style")}}
 - {{SVGElement("svg")}}
@@ -122,7 +112,6 @@ Les dessins et les images SVG sont créés à l'aide d'un large éventail d'él�
 
 ### U
 
-- {{SVGElement("unknown")}}
 - {{SVGElement("use")}}
 
 ### V
@@ -133,117 +122,74 @@ Les dessins et les images SVG sont créés à l'aide d'un large éventail d'él�
 
 ### Éléments d'animation
 
-{{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, {{SVGElement("discard")}}, {{SVGElement("mpath")}}, {{SVGElement("set")}}
+{{SVGElement("animate")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, {{SVGElement("mpath")}}, {{SVGElement("set")}}
 
 ### Formes simples
 
-{{ SVGElement("circle") }}, {{ SVGElement("ellipse") }}, {{ SVGElement("line") }}, {{SVGElement("polygon") }}, {{ SVGElement("polyline") }}, {{ SVGElement("rect") }}
+{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
 
 ### Éléments conteneurs
 
-{{SVGElement("a")}}, {{SVGElement("defs")}}, {{SVGElement("g")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("missing-glyph")}}, {{SVGElement("pattern")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}, {{SVGElement("unknown")}}
+{{SVGElement("a")}}, {{SVGElement("defs")}}, {{SVGElement("g")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("pattern")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}
 
 ### Éléments descriptifs
 
-{{SVGElement("desc") }}, {{ SVGElement("metadata") }}, {{ SVGElement("title") }}
+{{SVGElement("desc")}}, {{SVGElement("metadata")}}, {{SVGElement("title")}}
 
 ### Éléments primitives de filtre
 
-{{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feConvolveMatrix")}}, {{SVGElement("feDiffuseLighting")}}, {{SVGElement("feDisplacementMap")}}, {{SVGElement("feDropShadow")}}, {{SVGElement("feFlood")}},{{SVGElement("feFuncA")}}, {{SVGElement("feFuncB")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncR")}},{{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMergeNode")}}, {{SVGElement("feMorphology")}}, {{SVGElement("feOffset")}}, {{SVGElement("feSpecularLighting")}}, {{SVGElement("feTile")}}, {{SVGElement("feTurbulence")}}
-
-### Éléments pour polices de caractères
-
-{{SVGElement("font")}}, {{SVGElement("font-face")}}, {{SVGElement("font-face-format")}}, {{SVGElement("font-face-name")}}, {{SVGElement("font-face-src")}}, {{SVGElement("font-face-uri")}}, {{SVGElement("hkern")}}, {{SVGElement("vkern")}}
+{{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feConvolveMatrix")}}, {{SVGElement("feDiffuseLighting")}}, {{SVGElement("feDisplacementMap")}}, {{SVGElement("feDropShadow")}}, {{SVGElement("feFlood")}}, {{SVGElement("feFuncA")}}, {{SVGElement("feFuncB")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncR")}}, {{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMergeNode")}}, {{SVGElement("feMorphology")}}, {{SVGElement("feOffset")}}, {{SVGElement("feSpecularLighting")}}, {{SVGElement("feTile")}}, {{SVGElement("feTurbulence")}}
 
 ### Éléments de dégradés
 
-{{SVGElement("linearGradient")}}, {{SVGElement("meshgradient")}}, {{SVGElement("radialGradient")}}, {{SVGElement("stop")}}
+{{SVGElement("linearGradient")}}, {{SVGElement("radialGradient")}}, {{SVGElement("stop")}}
 
 ### Éléments graphiques
 
-{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("mesh")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("text")}}, {{SVGElement("use")}}
+{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("text")}}, {{SVGElement("use")}}
 
 ### Éléments de référencement graphique
 
-{{SVGElement("mesh")}}, {{SVGElement("use")}}
+{{SVGElement("use")}}
 
 ### Éléments de source de lumière
 
-{{ SVGElement("feDistantLight") }}, {{ SVGElement("fePointLight") }}, {{ SVGElement("feSpotLight") }}
+{{SVGElement("feDistantLight")}}, {{SVGElement("fePointLight")}}, {{SVGElement("feSpotLight")}}
 
 ### Éléments sans‑rendu
 
-{{SVGElement("clipPath")}}, {{SVGElement("defs")}}, {{SVGElement("hatch")}}, {{SVGElement("linearGradient")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("meshgradient")}}, {{SVGElement("metadata")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("symbol")}}, {{SVGElement("title")}}
+{{SVGElement("clipPath")}}, {{SVGElement("defs")}}, {{SVGElement("linearGradient")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("metadata")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("symbol")}}, {{SVGElement("title")}}
 
 ### Éléments de service pour peinture
 
-{{SVGElement("hatch")}}, {{SVGElement("linearGradient")}}, {{SVGElement("meshgradient")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("solidcolor")}}
+{{SVGElement("linearGradient")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}
 
 ### Éléments avec rendu
 
-{{SVGElement("a")}}, {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("foreignObject")}}, {{SVGElement("g")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("mesh")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}, {{SVGElement("text")}}, {{SVGElement("textPath")}}, {{SVGElement("tspan")}}, {{SVGElement("unknown")}}, {{SVGElement("use")}}
+{{SVGElement("a")}}, {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("foreignObject")}}, {{SVGElement("g")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}, {{SVGElement("text")}}, {{SVGElement("textPath")}}, {{SVGElement("tspan")}}, {{SVGElement("use")}}
 
 ### Éléments de formes
 
-{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("mesh")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
+{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
 
 ### Éléments structurels
 
-{{ SVGElement("defs") }}, {{ SVGElement("g") }}, {{ SVGElement("svg") }}, {{SVGElement("symbol") }}, {{ SVGElement("use") }}
+{{SVGElement("defs")}}, {{SVGElement("g")}}, {{SVGElement("svg")}}, {{SVGElement("symbol")}}, {{SVGElement("use")}}
 
 ### Éléments de contenu textuel
 
-{{SVGElement("altGlyph")}}, {{SVGElement("altGlyphDef")}}, {{SVGElement("altGlyphItem")}}, {{SVGElement("glyph")}}, {{SVGElement("glyphRef")}}, {{SVGElement("textPath")}}, {{SVGElement("text")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}
+{{SVGElement("textPath")}}, {{SVGElement("text")}}, {{SVGElement("tspan")}}
 
 ### Éléments de contenu textuel enfant
 
-{{ SVGElement("altGlyph") }}, {{ SVGElement("textPath") }}, {{ SVGElement("tref") }}, {{SVGElement("tspan") }}
+{{SVGElement("textPath")}}, {{SVGElement("tspan")}}
 
 ### Éléments non catégorisés
 
-{{SVGElement("clipPath")}}, {{SVGElement("color-profile")}}, {{SVGElement("cursor")}}, {{SVGElement("filter")}}, {{SVGElement("foreignObject")}}, {{SVGElement("hatchpath")}}, {{SVGElement("meshpatch")}}, {{SVGElement("meshrow")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("view")}}
-
-## Élements obsolètes et dépréciés
-
-> [!WARNING]
-> Les éléments ci-dessous sont dépréciés et ne doivent pas être utilisés. **Vous ne devez absolument pas les utiliser dans des nouveux projets, et vous devez dans la mesure du possible les remplacer dans les vieux projets.** Ils sont listés là uniquemnt à titre informatif.
-
-### A
-
-{{SVGElement("altGlyph")}}, {{SVGElement("altGlyphDef")}}, {{SVGElement("altGlyphItem")}}, {{SVGElement("animateColor")}}
-
-### C
-
-{{SVGElement("cursor")}}
-
-### F
-
-{{SVGElement("font")}}, {{SVGElement("font-face")}}, {{SVGElement("font-face-format")}}, {{SVGElement("font-face-name")}}, {{SVGElement("font-face-src")}}, {{SVGElement("font-face-uri")}}
-
-### G
-
-{{SVGElement("glyph")}}, {{SVGElement("glyphRef")}}
-
-### H
-
-{{SVGElement("hkern")}}
-
-### M
-
-{{SVGElement("missing-glyph")}}
-
-### T
-
-{{SVGElement("tref")}}
-
-### V
-
-{{SVGElement("vkern")}}
+{{SVGElement("clipPath")}}, {{SVGElement("filter")}}, {{SVGElement("foreignObject")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("view")}}
 
 ## Voir aussi
 
 - [Référence des attributs SVG](/fr/docs/Web/SVG/Reference/Attribute)
 - [Tutoriel SVG](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch)
-- [Référence des interfaces avec SVG](/fr/docs/Web/API/Document_Object_Model#svg_interfaces)
-
-{{SVGRef}}
+- [Référence des interfaces avec SVG](/fr/docs/Web/API/Document_Object_Model#dom_svg)
