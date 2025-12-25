@@ -1,9 +1,8 @@
 ---
 title: min-width
 slug: Web/CSS/Reference/Properties/min-width
-original_slug: Web/CSS/min-width
 l10n:
-  sourceCommit: 9a3940b0231838338f65ae1c37d5b874439a3d43
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`min-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の最小幅を設定します。これは {{Cssxref("width")}} プロパティの[使用値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#使用値)が、`min-width` で指定した値を下回ることを防ぎます。
@@ -29,7 +28,7 @@ min-width: 40ch;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    Change the minimum width.
+    最小幅を変更してください。
   </div>
 </section>
 ```
@@ -41,7 +40,7 @@ min-width: 40ch;
   background-color: #5b6dcd;
   height: 80%;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
@@ -53,7 +52,7 @@ min-width: 40ch;
 /* <length> 値 */
 min-width: 3.5em;
 min-width: anchor-size(width);
-min-width: anchor-size(--myAnchor self-inline, 200%);
+min-width: anchor-size(--my-anchor self-inline, 200%);
 
 /* <percentage> 値 */
 min-width: 10%;
@@ -84,13 +83,13 @@ min-width: unset;
 
     [フレックスアイテム](/ja/docs/Glossary/Flex_Item)およびグリッドアイテムの場合、最小幅の値は、 `width` プロパティの値などの指定された推奨サイズ、または要素にアスペクト比が設定され、高さが確定しているサイズである場合は変換されたサイズ、それ以外は最小コンテンツサイズが使用されます。フレックスアイテムまたはグリッドアイテムが{{glossary("scroll container","スクロールコンテナー")}}である場合、またはグリッドアイテムが複数のフレックスカラムトラックにまたがる場合、自動最小サイズは `0` になります。
 
-- `max-content`
+- {{cssxref("max-content")}}
   - : 内容物の推奨する `min-width` です。
-- `min-content`
+- {{cssxref("min-content")}}
   - : 内容物の最小の `min-width` です。
-- `fit-content`
-  - : 利用できる空間を使用しますが、 [`max-content`](/ja/docs/Web/CSS/Reference/Values/max-content) を超えないようにします。すなわち、 `min(max-content, max(min-content, stretch))` です。
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
+- {{cssxref("fit-content")}}
+  - : 利用できる空間を使用しますが、{{cssxref("max-content")}} を超えないようにします。すなわち、 `min(max-content, max(min-content, stretch))` です。
+- [`fit-content(<length-percentage>)`](/ja/docs/Web/CSS/Reference/Values/fit-content_function)
   - : 利用可能な空白を指定された引数で置き換えた `fit-content` 式を使用します。すなわち、 `min(max-content, max(min-content, 引数))` です。
 - `stretch`
   - : 要素の[マージンボックス](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model#ボックスの構成)の最小の幅を、[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block#包含ブロックの識別)の幅に制限します。マージンボックスが包含ブロック内で利用できる空間をすべて満たそうとするため、 `100%` と似たような動作をしますが、結果として得られるサイズは [box-sizing](/ja/docs/Web/CSS/Reference/Properties/box-sizing) で決定されるボックスではなく、マージンボックスに適用されます。

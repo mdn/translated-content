@@ -1,9 +1,8 @@
 ---
 title: max-height
 slug: Web/CSS/Reference/Properties/max-height
-original_slug: Web/CSS/max-height
 l10n:
-  sourceCommit: 9a3940b0231838338f65ae1c37d5b874439a3d43
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`max-height`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の最大高を設定します。これは {{Cssxref("height")}} プロパティの[使用値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#使用値)が、 `max-height` に指定した値を上回ることを防ぎます。
@@ -29,8 +28,8 @@ max-height: 10px;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box where you can change the maximum height. <br />This will limit
-    how tall the box can be, potentially causing an overflow.
+    これは、最大高が変更できるボックスです。<br />
+    これによりボックスの高さは制限され、オーバーフローが発生する可能性があります。
   </div>
 </section>
 ```
@@ -41,7 +40,7 @@ max-height: 10px;
   flex-direction: column;
   background-color: #5b6dcd;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
@@ -53,7 +52,7 @@ max-height: 10px;
 /* <length> 値 */
 max-height: 3.5em;
 max-height: anchor-size(height);
-max-height: calc(anchor-size(--myAnchor self-block, 250px) + 2em);
+max-height: calc(anchor-size(--my-anchor self-block, 250px) + 2em);
 
 /* <percentage> 値 */
 max-height: 75%;
@@ -82,13 +81,13 @@ max-height: unset;
   - : `max-height` を包含ブロックの高さに対するパーセント値で定義します。
 - `none`
   - : ボックスの寸法を制限しません。
-- `max-content`
+- {{cssxref("max-content")}}
   - : 内容物が推奨する `max-height` です。
-- `min-content`
+- {{cssxref("min-content")}}
   - : 内容物の最小の `max-height` です。
-- `fit-content`
+- {{cssxref("fit-content")}}
   - : 利用できる空間を使用しますが、 [max-content](/ja/docs/Web/CSS/Reference/Values/max-content) を超えないようにします。すなわち、 `min(max-content, max(min-content, stretch))` です。
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
+- [`fit-content(<length-percentage>)`](/ja/docs/Web/CSS/Reference/Values/fit-content_function)
   - : 利用可能な空白を指定された引数で置き換えた `fit-content` 式を使用します。すなわち、 `min(max-content, max(min-content, 引数))` です。
 - `stretch`
   - : 要素の[マージンボックス](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model#ボックスの構成)の最大の高さを、[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block#包含ブロックの識別)の高さに制限します。マージンボックスが包含ブロック内で利用できる空間をすべて満たそうとするため、 `100%` と似たような動作をしますが、結果として得られるサイズは [box-sizing](/ja/docs/Web/CSS/Reference/Properties/box-sizing) で決定されるボックスではなく、マージンボックスに適用されます。
