@@ -54,7 +54,7 @@ l10n:
 
 前回のコードスニペットは同様に書き換え可能です。
 
-```html live-sample___command-commandfor
+```html-nolint live-sample___command-commandfor
 <button commandfor="mypopover" command="show-popover">ポップオーバーを表示</button>
 <button commandfor="mypopover" command="hide-popover">ポップオーバーを非表示</button>
 <div id="mypopover" popover>ポップオーバーのコンテンツ</div>
