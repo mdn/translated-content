@@ -17,10 +17,10 @@ Web Audio API 涉及在**音訊上下文**中處理音訊操作，並被設計�
 
 這些節點的輸出可以連結到其他節點的輸入，這些節點將這些聲音樣本流混合或修改成不同的流。一個常見的修改是將樣本乘以一個數值，使其變大聲或變小聲（如 {{domxref("GainNode")}} 的情況）。一旦聲音經過了足夠的處理以達到預期效果，它就可以連結到目的地（{{domxref("BaseAudioContext.destination")}}）的輸入，該目的地將聲音發送到揚聲器或耳機。只有在使用者應該聽到音訊時，才需要這最後的連接。
 
-一個簡單、典型的 web audio 工作流程看起來會像這樣：
+一個簡單、典型的 web 音訊工作流程看起來會像這樣：
 
 1. 建立音訊上下文
-2. 在上下文內，建立來源 — 例如 `<audio>`、振盪器、串流
+2. 在上下文內，建立來源——例如 `<audio>`、振盪器、串流
 3. 建立效果節點，例如殘響、雙二階濾波器、平移器、壓縮器
 4. 選擇音訊的最終目的地，例如你的系統揚聲器
 5. 連接來源至效果，再將效果連接至目的地。
@@ -44,7 +44,7 @@ Web Audio API 也允許我們控制音訊如何被*空間化*。它使用基於*
 
 還有一篇 [Web Audio API 背後的基本概念](/zh-TW/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)文章，幫助你理解數位音訊的工作原理，特別是在 API 的領域中。這也包括了對 API 所建構的一些概念的良好介紹。
 
-學習寫程式就像打牌 — 你先學習規則，然後玩，再回去學習規則，然後再玩。所以如果在第一個教學和文章之後，某些理論還不太合適，有一個[進階教學](/zh-TW/docs/Web/API/Web_Audio_API/Advanced_techniques)可以延伸第一個教學，幫助你練習所學，並應用一些更進階的技巧來建立一個步進定序器。
+學習寫程式就像打牌——你先學習規則，然後玩，再回去學習規則，然後再玩。所以如果在第一個教學和文章之後，某些理論還不太合適，有一個[進階教學](/zh-TW/docs/Web/API/Web_Audio_API/Advanced_techniques)可以延伸第一個教學，幫助你練習所學，並應用一些更進階的技巧來建立一個步進定序器。
 
 我們還有其他教學和涵蓋 API 所有功能的綜合參考資料。請參閱本頁側邊欄以獲取更多資訊。
 
@@ -111,7 +111,7 @@ Web Audio API 擁有許多的介面與相關聯的事件，我們將其分為九
 - {{domxref("PeriodicWave")}}
   - : 描述一個週期性波形，可用於塑造 {{ domxref("OscillatorNode") }} 的輸出。
 - {{domxref("IIRFilterNode")}}
-  - : 實作一個通用的[無限脈衝響應](https://en.wikipedia.org/wiki/Infinite_impulse_response)濾波器；這種類型的濾波器也可以用來實作音調控制裝置和圖形等化器。
+  - : 實作一個通用的[無限脈衝響應](https://zh.wikipedia.org/wiki/无限冲激响应)濾波器；這種類型的濾波器也可以用來實作音調控制裝置和圖形等化器。
 
 ### 定義音訊目的地
 
@@ -151,7 +151,7 @@ Web Audio API 擁有許多的介面與相關聯的事件，我們將其分為九
 
 ### JavaScript 中的音訊處理
 
-使用 audio worklets，你可以定義用 JavaScript 或 [WebAssembly](/zh-TW/docs/WebAssembly) 撰寫的自訂音訊節點。Audio worklets 實作了 {{domxref("Worklet")}} 介面，這是 {{domxref("Worker")}} 介面的輕量級版本。
+使用 audio worklet，你可以定義用 JavaScript 或 [WebAssembly](/zh-TW/docs/WebAssembly) 撰寫的自訂音訊節點。Audio worklet 實作了 {{domxref("Worklet")}} 介面，這是 {{domxref("Worker")}} 介面的輕量級版本。
 
 - {{domxref("AudioWorklet")}}
   - : `AudioWorklet` 介面可透過 {{domxref("AudioContext")}} 物件的 {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} 獲得，讓你可以將模組新增至 audio worklet 以在主執行緒之外執行。
@@ -164,7 +164,7 @@ Web Audio API 擁有許多的介面與相關聯的事件，我們將其分為九
 
 #### 已過時：腳本處理器節點
 
-在定義 audio worklets 之前，Web Audio API 使用 `ScriptProcessorNode` 進行基於 JavaScript 的音訊處理。由於程式碼在主執行緒中執行，它們的效能不佳。`ScriptProcessorNode` 因為歷史原因被保留，但已被標記為已棄用。
+在定義 audio worklet 之前，Web Audio API 使用 `ScriptProcessorNode` 進行基於 JavaScript 的音訊處理。由於程式碼在主執行緒中執行，它們的效能不佳。`ScriptProcessorNode` 因為歷史原因被保留，但已被標記為已棄用。
 
 - {{domxref("ScriptProcessorNode")}} {{deprecated_inline}}
   - : **`ScriptProcessorNode`** 介面允許使用 JavaScript 產生、處理或分析音訊。它是一個 {{domxref("AudioNode")}} 音訊處理模組，連結到兩個緩衝區，一個包含目前的輸入，一個包含輸出。每當輸入緩衝區包含新資料時，會發送一個實作了 {{domxref("AudioProcessingEvent")}} 介面的事件給物件，並且事件處理程序會在它將資料填滿輸出緩衝區時終止。
@@ -212,17 +212,17 @@ Web Audio API 擁有許多的介面與相關聯的事件，我們將其分為九
 - [使用 Web Audio API 進行視覺化](/zh-TW/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
 - [Web audio 空間化基礎](/zh-TW/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - [使用 ConstantSourceNode 控制多個參數](/zh-TW/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
-- [混合定位音訊與 WebGL (2012)](https://web.dev/articles/webaudio-positional-audio)
-- [使用 Web Audio API 開發遊戲音訊 (2012)](https://web.dev/articles/webaudio-games)
+- [混合定位音訊與 WebGL（2012）](https://web.dev/articles/webaudio-positional-audio)
+- [使用 Web Audio API 開發遊戲音訊（2012）](https://web.dev/articles/webaudio-games)
 
 ### 函式庫
 
-- [Tone.js](https://tonejs.github.io/): 一個在瀏覽器中建立互動式音樂的框架。
-- [howler.js](https://github.com/goldfire/howler.js/): 一個 JS 音訊函式庫，預設使用 [Web Audio API](https://webaudio.github.io/web-audio-api/) 並退回到 [HTML Audio](https://html.spec.whatwg.org/multipage/media.html#the-audio-element)，同時提供其他有用的功能。
-- [Mooog](https://github.com/mattlima/mooog): jQuery 風格的 AudioNodes 鏈接、混音器風格的 sends/returns 等等。
-- [XSound](https://xsound.jp/): 用於合成器、效果、視覺化、錄音等的 Web Audio API 函式庫。
-- [OpenLang](https://github.com/chrisjohndigital/OpenLang): 使用 Web Audio API 將來自不同來源的視訊和音訊錄製並組合成單一檔案的 HTML 視訊語言實驗室網頁應用程式（[GitHub 上的原始碼](https://github.com/chrisjohndigital/OpenLang)）
-- [Pts.js](https://ptsjs.org/): 簡化 web audio 視覺化（[指南](https://ptsjs.org/guide/sound-0800)）
+- [Tone.js](https://tonejs.github.io/)：一個在瀏覽器中建立互動式音樂的框架。
+- [howler.js](https://github.com/goldfire/howler.js/)：一個 JS 音訊函式庫，預設使用 [Web Audio API](https://webaudio.github.io/web-audio-api/) 並退回到 [HTML Audio](https://html.spec.whatwg.org/multipage/media.html#the-audio-element)，同時提供其他有用的功能。
+- [Mooog](https://github.com/mattlima/mooog)：jQuery 風格的 AudioNode 鏈接、混音器風格的 send/return 等等。
+- [XSound](https://xsound.jp/)：用於合成器、效果、視覺化、錄音等的 Web Audio API 函式庫。
+- [OpenLang](https://github.com/chrisjohndigital/OpenLang)：使用 Web Audio API 將來自不同來源的視訊和音訊錄製並組合成單一檔案的 HTML 視訊語言實驗室網頁應用程式（[GitHub 上的原始碼](https://github.com/chrisjohndigital/OpenLang)）
+- [Pts.js](https://ptsjs.org/)：簡化 web audio 視覺化（[指南](https://ptsjs.org/guide/sound-0800)）
 
 ### 相關主題
 
