@@ -134,7 +134,7 @@ _HTML 文档的 `Document` 接口继承了 {{DOMxRef("HTMLDocument")}} 接口，
 ### 已弃用的属性
 
 - {{DOMxRef("Document.alinkColor")}} {{Deprecated_Inline}}
-  - : 返回或设置文档正文部分启用的链接的颜色。
+  - : 返回或设置文档正文部分激活的链接的颜色。
 - {{DOMxRef("Document.all")}} {{Deprecated_Inline}}
   - : 返回一个以文档节点为根节点的 {{DOMxRef('HTMLAllCollection')}} 集合，以访问文档中所有的元素。这是遗留的非标准属性，不应使用。
 - {{DOMxRef("Document.anchors")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
@@ -151,8 +151,6 @@ _HTML 文档的 `Document` 接口继承了 {{DOMxRef("HTMLDocument")}} 接口，
   - : 获取或设置当前文档的前景色或文本颜色。
 - {{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}
   - : 若文档处于[全屏模式](/zh-CN/docs/Web/API/Fullscreen_API)，则返回 `true`。
-- {{DOMxRef("Document.height")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : 获取或设置当前文档的高度。
 - {{DOMxRef("Document.inputEncoding")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : {{DOMxRef("Document.characterSet")}} 的别名，请使用原始属性替换。
 - {{DOMxRef("Document.lastStyleSheetSet")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
@@ -169,8 +167,6 @@ _HTML 文档的 `Document` 接口继承了 {{DOMxRef("HTMLDocument")}} 接口，
   - : 返回文档上可用样式表的集合。
 - {{DOMxRef("Document.vlinkColor")}} {{Deprecated_Inline}}
   - : 获取或设置被访问的超链接的颜色。
-- {{DOMxRef("Document.width")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : 返回当前文档的宽度。
 - {{DOMxRef("Document.xmlEncoding")}} {{Deprecated_Inline}}
   - : 返回由 XML 声明的编码类型。
 - `Document.xmlStandalone` {{Deprecated_Inline}}
@@ -183,7 +179,7 @@ _HTML 文档的 `Document` 接口继承了 {{DOMxRef("HTMLDocument")}} 接口，
 _该接口还继承了 {{DOMxRef("Node")}} 和 {{DOMxRef("EventTarget")}} 接口。_
 
 - {{DOMxRef("Document.adoptNode()")}}
-  - : 从外部文档中采用的节点。
+  - : 从外部文档中转移节点。
 - {{DOMxRef("Document.append()")}}
   - : 在文档的最后一个子节点后插入一个 {{domxref("Node")}} 对象或字符串的集合。
 - {{DOMxRef("Document.ariaNotify()")}} {{Experimental_Inline}} {{non-standard_inline}}
@@ -210,7 +206,7 @@ _该接口还继承了 {{DOMxRef("Node")}} 和 {{DOMxRef("EventTarget")}} 接口
   - : 用给定标签名创建一个新的元素。
 - {{DOMxRef("Document.createElementNS()")}}
   - : 用给定标签名和命名空间创建一个新的元素。
-- {{DOMxRef("Document.createEvent()")}}
+- {{DOMxRef("Document.createEvent()")}} {{deprecated_inline}}
   - : 创建一个事件对象。
 - {{DOMxRef("Document.createNodeIterator()")}}
   - : 创建一个 {{DOMxRef("NodeIterator")}} 对象。
@@ -279,7 +275,9 @@ _该接口还继承了 {{DOMxRef("Node")}} 和 {{DOMxRef("EventTarget")}} 接口
 - {{DOMxRef("Document.replaceChildren()")}}
   - : 用一个指定的新的子节点集合替换替换文档中现有的子节点。
 - {{DOMxRef("Document.requestStorageAccess()")}}
-  - : 允许顶级站点代表来自同一[关联网站集合](/zh-CN/docs/Web/API/Storage_Access_API/Related_website_sets)中的其他站点的嵌入内容请求第三方 Cookie 访问。
+  - : 允许在第三方上下文中加载的文档（即嵌入在 {{htmlelement("iframe")}} 的）请求访问未分区 cookie，以便在默认情况下，用户代理可以通过阻止在第三方上下文中加载的网站访问未分区 cookie 来提高隐私性。
+- {{DOMxRef("Document.requestStorageAccessFor()")}} {{experimental_inline}}
+  - : 允许顶级站点代表来自同一[关联网站集合](/zh-CN/docs/Web/API/Storage_Access_API/Related_website_sets)中的其他站点的嵌入内容请求第三方 cookie 访问。
 - {{domxref("Document.startViewTransition()")}}
   - : 启动新的{{domxref("View Transition API", "视图转换", "", "nocode")}}并返回一个表示它的 {{domxref("ViewTransition")}} 对象。
 
@@ -288,7 +286,7 @@ _该接口还继承了 {{DOMxRef("Node")}} 和 {{DOMxRef("EventTarget")}} 接口
 - {{DOMxRef("Document.createExpression()")}}
   - : 编译一个用于（重复）执行的 [`XPathExpression`](/zh-CN/docs/Web/API/XPathExpression)。
 - {{DOMxRef("Document.createNSResolver()")}}
-  - : 创建一个 {{DOMxRef("XPathNSResolver")}} 对象。
+  - : 原样返回输入的节点。
 - {{DOMxRef("Document.evaluate()")}}
   - : 执行一个 XPath 表达式。
 
@@ -328,9 +326,9 @@ HTML 文档的 `Document` 接口继承了 {{DOMxRef("HTMLDocument")}} 接口，�
 _此接口还继承了 {{DOMxRef("Node")}} 和 {{DOMxRef("EventTarget")}} 接口。_
 
 - {{domxref("Document/parseHTML_static", "Document.parseHTML()")}} {{experimental_inline}}
-  - : 以 XSS 安全的方式，对 HTML 字符串进行清理并创建一个新的 `Document` 对象。
+  - : 通过 HTML 字符串创建一个新的 `Document` 对象，而不执行任何清理操作。该字符串可能包含声明式影子根。
 - {{domxref("Document/parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}
-  - : 通过 HTML 字符串创建一个新的 `Document` 对象，而不执行任何清理操作。该字符串可能包含声明式影子根
+  - : 通过 HTML 字符串创建一个新的 `Document` 对象，而不执行任何清理操作。该字符串可能包含声明式影子根。
 
 ## 事件
 
