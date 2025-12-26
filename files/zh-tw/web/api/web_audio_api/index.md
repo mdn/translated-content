@@ -50,7 +50,7 @@ Web Audio API 也允許我們控制音訊如何被*空間化*。它使用基於*
 
 如果你對音樂方面比較熟悉，熟悉樂理概念，想要開始製作樂器，那麼你可以繼續前進，並以進階教學和其他資源為指南開始製作東西（上述連結的教學涵蓋了排程音符、建立自訂振盪器和包絡線，以及 LFO 等等）。
 
-如果你不熟悉程式設計基礎，你可能想要先查閱一些初學者的 JavaScript 教學，然後再回到這裡 — 參見我們的[初學者 JavaScript 學習模組](/zh-TW/docs/Learn_web_development/Core/Scripting)是一個很好的起點。
+如果你不熟悉程式設計基礎，你可能想要先查閱一些初學者的 JavaScript 教學，然後再回到這裡——參見我們的[初學者 JavaScript 學習模組](/zh-TW/docs/Learn_web_development/Core/Scripting)，這是個很好的入門起點。
 
 ## Web Audio API 介面
 
@@ -69,7 +69,7 @@ Web Audio API 擁有許多的介面與相關聯的事件，我們將其分為九
 - {{domxref("AudioParamMap")}}
   - : 提供一個類似 Map 的介面給一組 {{domxref("AudioParam")}} 介面，這意味著它提供了 `forEach()`、`get()`、`has()`、`keys()` 和 `values()` 方法，以及 `size` 屬性。
 - {{domxref("BaseAudioContext")}}
-  - : **`BaseAudioContext`** 介面作為線上和離線音訊處理圖的基礎定義，分別由 {{domxref("AudioContext")}} 和 {{domxref("OfflineAudioContext")}} 代表。你不會直接使用 `BaseAudioContext` — 你會透過這兩個繼承介面之一來使用其功能。
+  - : **`BaseAudioContext`** 介面作為線上和離線音訊處理圖的基礎定義，分別由 {{domxref("AudioContext")}} 和 {{domxref("OfflineAudioContext")}} 代表。你不會直接使用 `BaseAudioContext`——你會透過這兩個繼承介面之一來使用其功能。
 - {{domxref("AudioScheduledSourceNode/ended_event", "ended")}} 事件
   - : 當播放因為到達媒體末端而停止時，會觸發 `ended` 事件。
 
@@ -168,14 +168,14 @@ Web Audio API 擁有許多的介面與相關聯的事件，我們將其分為九
 
 - {{domxref("ScriptProcessorNode")}} {{deprecated_inline}}
   - : **`ScriptProcessorNode`** 介面允許使用 JavaScript 產生、處理或分析音訊。它是一個 {{domxref("AudioNode")}} 音訊處理模組，連結到兩個緩衝區，一個包含目前的輸入，一個包含輸出。每當輸入緩衝區包含新資料時，會發送一個實作了 {{domxref("AudioProcessingEvent")}} 介面的事件給物件，並且事件處理程序會在它將資料填滿輸出緩衝區時終止。
-- {{domxref("ScriptProcessorNode.audioprocess_event", "audioprocess")}} (event) {{deprecated_inline}}
+- {{domxref("ScriptProcessorNode.audioprocess_event", "audioprocess")}}（事件）{{deprecated_inline}}
   - : 當 Web Audio API {{domxref("ScriptProcessorNode")}} 的輸入緩衝區準備好被處理時，會觸發 `audioprocess` 事件。
 - {{domxref("AudioProcessingEvent")}} {{deprecated_inline}}
   - : `AudioProcessingEvent` 代表當 {{domxref("ScriptProcessorNode")}} 輸入緩衝區準備好被處理時發生的事件。
 
 ### 離線／背景音訊處理
 
-透過以下介面，可以在背景非常快速地處理／算繪音訊圖 — 將其算繪到 {{domxref("AudioBuffer")}} 而不是裝置的揚聲器。
+透過以下介面，可以在背景非常快速地處理／算繪音訊圖——將其算繪到 {{domxref("AudioBuffer")}} 而不是裝置的揚聲器。
 
 - {{domxref("OfflineAudioContext")}}
   - : **`OfflineAudioContext`** 介面是一個 {{domxref("AudioContext")}} 介面，代表由互相連接的 {{domxref("AudioNode")}} 所建構的音訊處理圖。與標準的 `AudioContext` 相比，`OfflineAudioContext` 並不真正算繪音訊，而是*盡可能快地*在緩衝區中產生它。
