@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/HTML_video_and_audio
 original_slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn_web_development/Core/Structuring_content/General_embedding_technologies", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_images", "Learn_web_development/Core/Structuring_content/General_embedding_technologies", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}
 
 Ahora que estamos cómodos añadiendo imágenes simples a una página web, el siguiente paso será empezar a agregar reproductores de audio y video a tu documento HTML. En este artículo veremos cómo hacerlo con los elementos {{htmlelement("video")}} y {{htmlelement("audio")}}; luego terminaremos viendo como agregar subtítulos a nuestros videos.
 
