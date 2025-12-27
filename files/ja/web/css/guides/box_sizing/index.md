@@ -1,16 +1,16 @@
 ---
 title: CSS ボックスサイズ指定
+short-title: ボックスサイズ指定
 slug: Web/CSS/Guides/Box_sizing
-original_slug: Web/CSS/CSS_box_sizing
 l10n:
-  sourceCommit: 2ef2c905a7322f5a533cf7c96ec5a337fc614359
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**CSS ボックスサイズ指定**モジュールは、要素のサイズをどのようにコンテンツに合わせるか、または特定のレイアウトコンテキストに合わせるかを開発者が指定できるようにします。このモジュールでは、サイズ指定、最小サイズ指定、最大サイズ指定のプロパティを定義しており、コンテンツに基づく{{glossary("intrinsic size", "内在サイズ")}}とコンテキストに基づく[外在](/ja/docs/Glossary/Intrinsic_Size#外在サイズ)サイズを表すキーワードで CSS サイズ指定のプロパティを拡張します。
+**CSS ボックスサイズ指定**モジュールは、要素のサイズをどのようにコンテンツに合わせるか、または特定のレイアウトコンテキストに合わせるかを指定できるようにします。このモジュールでは、サイズ指定、最小サイズ指定、最大サイズ指定のプロパティを定義しており、コンテンツに基づく{{glossary("intrinsic size", "内在サイズ")}}とコンテキストに基づく{{glossary("extrinsic size", "外因的なサイズ")}}を表すキーワードで CSS サイズ指定のプロパティを拡張します。
 
 要素は、外在的にも内在的にもサイズを設定することができます。[CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model)は、要素の大きさを明示的に、つまり「外在的」に設定するためのページに相対的なプロパティ、たとえば `width`、`height`、`padding`、`margin` などのプロパティ（[CSS 背景と境界](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)モジュールで定義されている `border` プロパティも含む）を定義しています。この CSS ボックスサイズ指定モジュールは、CSS ボックスモデルモジュールを拡張し、コンテンツのサイズに基づいて要素のサイズを設定することで、要素を内在的にサイズ指定できるようにします。
 
-このモジュールで導入されたサイズ指定値は、[サイズ拘束](/ja/docs/Web/CSS/Guides/Containment/Using#サイズ拘束)を持つ要素が、内在サイズが何も指定されていないかのようにサイズ指定されるのではなく、そのフロー内コンテンツの幅と高さが指定された明示的な内在サイズと一致するように、明示的な内在サイズを取ることができるようになります。
+このモジュールで導入されたサイズ指定値は、[サイズ抑制](/ja/docs/Web/CSS/Guides/Containment/Using#サイズ抑制)を持つ要素が、内在サイズが何も指定されていないかのようにサイズ指定されるのではなく、そのフロー内コンテンツの幅と高さが指定された明示的な内在サイズと一致するように、明示的な内在サイズを取ることができるようになります。
 
 このモジュールでは、要素のボックスのアスペクト比を定義する機能も導入されました。つまり、ブラウザーは指定されたアスペクト比を維持するために、いずれかの寸法が自動的にサイズ調整される限り、要素の寸法を自動的に調整することができます。
 
@@ -34,8 +34,7 @@ l10n:
 - {{cssxref("min-width")}}
 - {{cssxref("width")}}
 
-> [!NOTE]
-> CSS ボックスサイズ指定モジュールでは、まだ実装されていない `min-intrinsic-sizing` プロパティを導入しています。
+CSS ボックスサイズ指定モジュールでは、`min-intrinsic-sizing` プロパティも導入されています。現在、この機能を対応しているブラウザーはありません。
 
 ### データ型と値
 
@@ -43,10 +42,6 @@ l10n:
 - {{cssxref("min-content")}} 値
 - {{cssxref("max-content")}} 値
 - {{cssxref("fit-content")}} 値
-- {{cssxref("fit-content_function", "fit-content()")}} 関数
-
-> [!NOTE]
-> CSS ボックスサイズ指定モジュールでは、ボックスサイズ指定プロパティにまだ実装されていないサイズ指定値として、`stretch` と `contain` キーワードを導入しています。
 
 ### 関数
 
@@ -54,7 +49,8 @@ l10n:
 
 ### 用語集の用語
 
-- {{glossary("intrinsic size", "内在サイズ")}}
+- {{glossary("Intrinsic size", "内在サイズ")}}
+- {{glossary("Extrinsic size", "外因的なサイズ")}}
 
 ## ガイド
 
@@ -140,7 +136,7 @@ l10n:
 
 ## 関連情報
 
-- [CSS 表示](/ja/docs/Web/CSS/Guides/Display)モジュール
+- [CSS 表示方法](/ja/docs/Web/CSS/Guides/Display)モジュール
 - [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)モジュール
 - [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)モジュール
 - [CSS 位置指定レイアウト](/ja/docs/Web/CSS/Guides/Positioned_layout)モジュール
