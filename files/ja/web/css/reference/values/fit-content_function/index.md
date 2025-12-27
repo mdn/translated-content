@@ -1,9 +1,8 @@
 ---
 title: fit-content()
 slug: Web/CSS/Reference/Values/fit-content_function
-original_slug: Web/CSS/fit-content_function
 l10n:
-  sourceCommit: fb409b8972e7c03d7eb284466433a28efb850ef5
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`fit-content()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、指定された寸法を `min(最大サイズ, max(最小サイズ, 引数))` の式に従って有効な範囲の寸法に収めます。
@@ -26,7 +25,7 @@ grid-template-columns: fit-content(40%) fit-content(40%) 1fr;
 <section class="default-example" id="default-example">
   <div class="example-container">
     <div class="transition-all" id="example-element">
-      <div>One. This column has more text in it.</div>
+      <div>One この列には多めのテキストが入っています。</div>
       <div>Two</div>
       <div>Three</div>
       <div>Four</div>
@@ -45,7 +44,7 @@ grid-template-columns: fit-content(40%) fit-content(40%) 1fr;
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   text-align: left;
 }
@@ -55,11 +54,9 @@ grid-template-columns: fit-content(40%) fit-content(40%) 1fr;
 
 `max-content` および `auto` キーワードについての詳細は、 {{cssxref("grid-template-columns")}} ページを参照してください。
 
-`fit-content()` 関数は {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}}, {{cssxref("max-height")}} のレイアウトボックスの寸法としても使用され、最大寸法は内容物の最大寸法、最小寸法は内容物の最小寸法になります。
+`fit-content()` 関数は {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}}, {{cssxref("max-height")}} のレイアウトボックスの寸法としても使用され、最大寸法はコンテンツの最大寸法、最小寸法はコンテンツの最小寸法になります。
 
 ## 構文
-
-引数として `<length>` または `<percentage>` を受け付ける関数です。
 
 ```css
 /* <length> 値 */
@@ -80,6 +77,10 @@ fit-content(40%)
   - : 指定された軸で有効な空間に対する相対的なパーセント値です。
 
     グリッドプロパティでは、行トラックにおける列内のグリッドコンテナーのインライン方向の寸法およびグリッドコンテナーのブロック方向の寸法の相対値です。それ以外では、書字方向に応じてレイアウトボックスの有効なインライン方向の寸法またはブロック方向の寸法に対する相対値になります。
+
+## 形式文法
+
+{{CSSSyntax("fit-content")}}
 
 ## 例
 
