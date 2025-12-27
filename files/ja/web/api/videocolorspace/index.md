@@ -1,48 +1,46 @@
 ---
 title: VideoColorSpace
 slug: Web/API/VideoColorSpace
-page-type: web-api-interface
-browser-compat: api.VideoColorSpace
 ---
 
 {{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
-The **`VideoColorSpace`** interface of the {{domxref('WebCodecs API','','',' ')}} represents the color space of a video.
+{{domxref('WebCodecs API','','',' ')}} の　**`VideoColorSpace`** インターフェースは動画の色空間を表します
 
-## Constructor
+## コンストラクタ
 
 - {{domxref("VideoColorSpace.VideoColorSpace", "VideoColorSpace()")}}
-  - : Creates a new `VideoColorSpace` object.
+  - : 新しい `VideoColorSpace` を作成します。
 
-## Instance properties
+## インスタンスプロパティ
 
 - {{domxref("VideoColorSpace.primaries")}} {{ReadOnlyInline}}
-  - : A string containing the color primary describing the color {{glossary("gamut")}} of a video sample.
+  - : ビデオサンプルの{{glossary("gamut")}}色域を説明するカラープライマリを含む文字列。
 - {{domxref("VideoColorSpace.transfer")}}
-  - : A string containing the transfer characteristics of video samples.
+  - : ビデオサンプルの伝達特性を含む文字列。
 - {{domxref("VideoColorSpace.matrix")}}
-  - : A string containing the matrix coefficients describing the relationship between sample component values and color coordinates.
+  - : サンプルコンポーネント値と色座標の関係を説明する係数行列を含む文字列。
 - {{domxref("VideoColorSpace.fullRange")}}
-  - : A {{jsxref("Boolean")}}. If `true` indicates that full-range color values are used.
+  - : {{jsxref("Boolean")}}。`true` の場合、フルレンジの色値が使用されていることを示します。
 
-## Instance methods
+## インスタンスメソッド
 
 - {{domxref("VideoColorSpace.toJSON()")}}
-  - : Returns a JSON representation of the `VideoColorSpace` object.
+  - : `VideoColorSpace` オブジェクトの JSON を返します。
 
-## Examples
+## 例
 
-In the following example, `colorSpace` is a `VideoColorSpace` object returned from {{domxref("VideoFrame")}}. The object is then printed to the console.
+次の例では、`colorSpace` は {{domxref("VideoFrame")}} から返された `VideoColorSpace` オブジェクトです。オブジェクトはコンソールに出力されます。
 
 ```js
 let colorSpace = VideoFrame.colorSpace;
 console.log(colorSpace);
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザ互換性
 
 {{Compat}}
