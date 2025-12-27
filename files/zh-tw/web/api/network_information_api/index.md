@@ -1,29 +1,59 @@
 ---
 title: Network Information API
 slug: Web/API/Network_Information_API
+l10n:
+  sourceCommit: 1fae6a1db8be34bc73fb9d1e0fb058c253045853
 ---
 
-{{DefaultAPISidebar("Network Information API")}}{{ SeeCompatTable() }}
+{{DefaultAPISidebar("Network Information API")}} {{AvailableInWorkers}}
 
-Network Information API 將提供系統連線的相關資訊，如使用者裝置的現有頻寬，或目前的連線狀態。根據使用者的連線情形，可進一步選擇高解析度或低解析度的內容。此完整的 API 另包含 domxref("Connection") 介面，以及 [`Navigator`](/zh-TW/docs/Web/API/Navigator) 介面的單一屬性 ─ [`Navigator.connection`](/zh-TW/docs/Web/API/Navigator/connection)。
+**Network Information API** 提供了有關系統連線的訊息，包含一般的連線類型（例如：「wifi」、「cellular」等）。這可以用於根據使用者的連線狀況來選擇高畫質或低畫質的內容。
 
-## 偵測連線變化
+此介面由單一個 {{domxref("NetworkInformation")}} 物件組成，該物件的實例由 {{domxref("Navigator.connection")}} 屬性或 {{domxref("WorkerNavigator.connection")}} 屬性回傳。
 
-此範例將觀察使用者連線的變化。舉例來說，當使用者從高價位連線轉用低價位連線時，就會降低頻寬需求以避免連線費用暴增，並採用類似 Apps 受到警示的方法。
+## 介面
+
+- {{domxref("NetworkInformation")}}
+  - : 提供裝置用於與網路通訊的連線訊息，並提供一種讓腳本在連線類型變更時收到通知的方法。`NetworkInformation` 介面無法直接實例化。需改透過 {{domxref("Navigator")}} 介面或 {{domxref("WorkerNavigator")}} 介面來存取。
+
+### 對其他介面的擴充功能
+
+- {{domxref("Navigator.connection")}} {{ReadOnlyInline}}
+  - : 回傳一個包含裝置網路連線訊息的 {{domxref("NetworkInformation")}} 物件。
+- {{domxref("WorkerNavigator.connection")}} {{ReadOnlyInline}}
+  - : 提供一個包含裝置網路連線訊息的 {{domxref("NetworkInformation")}} 物件。
+
+## 範例
+
+### 偵測連線變更
+
+此範例監聽使用者連線的變更。
 
 ```js
-var connection =
-  navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+let type = navigator.connection.effectiveType;
 
 function updateConnectionStatus() {
-  alert("Connection bandwidth: " + connection.bandwidth + " MB/s");
-  if (connection.metered) {
-    alert("The connection is metered!");
-  }
+  console.log(
+    `連線類型已從 ${type} 變更為 ${navigator.connection.effectiveType}`,
+  );
+  type = navigator.connection.effectiveType;
 }
 
-connection.addEventListener("change", updateConnectionStatus);
-updateConnectionStatus();
+navigator.connection.addEventListener("change", updateConnectionStatus);
+```
+
+### 預先載入大型資源
+
+連線物件對於決定是否預先載入會佔用大量頻寬或記憶體的資源非常有用。此範例會在頁面載入後隨即呼叫，以檢查連線類型，判斷是否不適合預先載入視訊。如果發現行動數據連線，則將 `preloadVideo` 旗標設定為 `false`。為了簡單明瞭，此範例僅測試一種連線類型。實際的使用案例可能會使用 switch 陳述式或其他方法來檢查 {{domxref("NetworkInformation.type")}} 的所有可能值。無論 `type` 值為何，你都可以透過 {{domxref("NetworkInformation.effectiveType")}} 屬性取得連線速度的估算值。
+
+```js
+let preloadVideo = true;
+const connection = navigator.connection;
+if (connection) {
+  if (connection.effectiveType === "slow-2g") {
+    preloadVideo = false;
+  }
+}
 ```
 
 ## 規範
@@ -36,6 +66,4 @@ updateConnectionStatus();
 
 ## 參見
 
-- [Network Information API Specification](https://dvcs.w3.org/hg/dap/raw-file/tip/network-api/Overview.html)
-- [線上與離線事件](/zh-TW/Online_and_offline_events)
-- {{domxref("window.navigator.connection")}}
+- [Online 與 offline 事件](/zh-TW/docs/Web/API/Navigator/onLine)
