@@ -1,9 +1,8 @@
 ---
 title: word-spacing
 slug: Web/CSS/Reference/Properties/word-spacing
-original_slug: Web/CSS/word-spacing
 l10n:
-  sourceCommit: 3928d2b1004e2435e063ef4b037e06e1906d62f3
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`word-spacing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、タグや単語の間隔に関する挙動を指定します。
@@ -39,13 +38,13 @@ word-spacing: -0.4ch;
 ```css interactive-example
 @font-face {
   src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
-  font-family: Amstelvar;
+  font-family: "Amstelvar";
   font-style: normal;
 }
 
 section {
   font-size: 1.2em;
-  font-family: Amstelvar;
+  font-family: "Amstelvar", serif;
 }
 ```
 
@@ -125,3 +124,4 @@ word-spacing: unset;
 ## 関連情報
 
 - {{cssxref("letter-spacing")}}
+- SVG の {{SVGAttr("word-spacing")}} 属性

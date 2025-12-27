@@ -1,9 +1,8 @@
 ---
 title: hanging-punctuation
 slug: Web/CSS/Reference/Properties/hanging-punctuation
-original_slug: Web/CSS/hanging-punctuation
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`hanging-punctuation`** は [CSS](/ja/docs/Web/CSS) のプロパティで、区切り記号をテキストの行頭や行末にぶら下げるべきかどうかを指定します。ぶら下げられる区切り記号は行ボックスの外側に配置されれることがあります。

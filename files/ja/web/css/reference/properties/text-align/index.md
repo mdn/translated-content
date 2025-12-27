@@ -1,9 +1,8 @@
 ---
 title: text-align
 slug: Web/CSS/Reference/Properties/text-align
-original_slug: Web/CSS/text-align
 l10n:
-  sourceCommit: 199b1ab9210af2da7306f2a034c70980c5b873b5
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`text-align`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ブロック要素または表のセルボックス内におけるインラインレベルコンテンツの水平方向の配置を設定します。つまり、 {{cssxref("vertical-align")}} と同じように機能しますが、水平方向に機能します。
