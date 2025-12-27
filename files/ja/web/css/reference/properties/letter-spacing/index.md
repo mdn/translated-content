@@ -25,7 +25,7 @@ letter-spacing: 1px;
 letter-spacing: -1px;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section id="default-example">
   <p id="example-element">
     通りにはまるで水が地球の表面から引き始めたばかりかのような泥が堆積し、ホルボーン・ヒルを象のようなトカゲ同様によたよたと歩く、全長約 40 フィートのメガロサウルスに出会っても不思議ではない。
