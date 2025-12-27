@@ -1,9 +1,8 @@
 ---
 title: hyphenate-limit-chars
 slug: Web/CSS/Reference/Properties/hyphenate-limit-chars
-original_slug: Web/CSS/hyphenate-limit-chars
 l10n:
-  sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`hyphenate-limit-chars`** は [CSS](/ja/docs/Web/CSS) のプロパティで、単語のハイフネーションを許可する単語の最小の長さ、およびハイフンの前後の最小文字数を指定します。
