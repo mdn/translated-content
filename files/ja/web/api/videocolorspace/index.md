@@ -15,7 +15,7 @@ slug: Web/API/VideoColorSpace
 ## インスタンスプロパティ
 
 - {{domxref("VideoColorSpace.primaries")}} {{ReadOnlyInline}}
-  - : ビデオサンプルの{{glossary("gamut")}}色域を説明するカラープライマリを含む文字列。
+  - : ビデオサンプルの {{glossary("gamut")}} 色域を説明するカラープライマリを含む文字列。
 - {{domxref("VideoColorSpace.transfer")}}
   - : ビデオサンプルの伝達特性を含む文字列。
 - {{domxref("VideoColorSpace.matrix")}}
