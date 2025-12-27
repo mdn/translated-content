@@ -2,7 +2,7 @@
 title: grid-template-rows
 slug: Web/CSS/Reference/Properties/grid-template-rows
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`grid-template-rows`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{glossary("grid_row", "グリッド行")}}の線名とトラックのサイズ変更機能を定義します。
@@ -102,7 +102,7 @@ grid-template-rows: unset;
 - `none`
   - : 明示的なグリッドがないことを示すキーワードです。どの列も暗黙的に生成され、それらのサイズは {{cssxref("grid-auto-rows")}} プロパティによって決定されます。
 - `[line-name]`
-  - : [`<custom-ident>`](/ja/docs/Web/CSS/Reference/Values/custom-ident) で、その位置にある線の名称を指定します。識別子には、予約語の `span` と `auto` 以外の有効な文字列を指定してください。行は、`[line-name-a line-name-b]`のように、角括弧内のスペースで区切られた複数の名前を持つことができます。
+  - : {{cssxref("custom-ident")}} で、その位置にある線の名称を指定します。識別子には、予約語の `span` と `auto` 以外の有効な文字列を指定してください。線には複数の名前を付けることができ、その場合は `[line-name-a line-name-b]` のように、角括弧内で空白で区切ります。
 - {{cssxref("&lt;length&gt;")}}
   - : 非負の長さです。
 - {{cssxref("&lt;percentage&gt;")}}
@@ -120,7 +120,7 @@ grid-template-rows: unset;
 
     最小値として使われた場合は、グリッドトラックを占めるグリッドアイテムの最大の最小サイズ ({{cssxref("min-width")}}/{{cssxref("min-height")}} で指定されたもの) を表します。ふつうは {{cssxref("min-content")}} ですが、必ずそうとは限りません。
 
-    {{cssxref("minmax", "minmax()")}} の外で使われた場合、 `auto` は上記の最小値と最大値の間の範囲を表します。これはほとんどの場合、`minmax(min-content,max-content)` と同じように動作します。
+    {{cssxref("minmax()")}} の外で使われた場合、 `auto` は上記の最小値と最大値の間の範囲を表します。これはほとんどの場合、`minmax(min-content,max-content)` と同じように動作します。
 
     > [!NOTE]
     > トラックのサイズが `auto` の場合 (そして `auto` の場合だけ)、 {{cssxref("align-content")}} および{{cssxref("justify-content")}} プロパティによって引き伸ばされることがあります。

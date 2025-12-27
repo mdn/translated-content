@@ -1,9 +1,8 @@
 ---
 title: grid-row-end
 slug: Web/CSS/Reference/Properties/grid-row-end
-original_slug: Web/CSS/grid-row-end
 l10n:
-  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`grid-row-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、グリッド行の中におけるグリッドアイテムの末尾の位置を指定します。グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}のインライン方向の末尾の端を指定します。
@@ -47,12 +46,12 @@ grid-row-end: span 3;
 }
 
 .example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 
 #example-element {
-  background-color: rgba(255, 0, 200, 0.2);
+  background-color: rgb(255 0 200 / 0.2);
   border: 3px solid rebeccapurple;
 }
 ```
@@ -86,9 +85,9 @@ grid-row-end: unset;
 ### 値
 
 - `auto`
-  - : プロパティをグリッドアイテムの配置に影響させず、自動的に配置し、間隔を自動的に取るか、既定の `1` とするためのキーワードです。
+  - : グリッドアイテムの配置には何も影響せず、自動配置、自動スパン、またはデフォルトのスパン値 `1` を示します。これがデフォルト値です。
 - `<custom-ident>`
-  - : `<custom-ident>-end` という名前の付いた線がある場合、これはそのような線の先頭がグリッドアイテムの配置に関わります。
+  - : '\<custom-ident>-end' という名前の付いた線があった場合、その最初の線がグリッドアイテムの配置に関与します。
 
     > [!NOTE]
     > 名前付きグリッド領域、自動的にこの形で暗黙の名前付き線を生成しますので、 `grid-row-end: foo;` と指定すると名前付きグリッド領域の末尾側の端を選択します (その前に `foo-end` という名前の線が明示的に存在しない限り)。

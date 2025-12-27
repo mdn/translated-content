@@ -1,9 +1,8 @@
 ---
 title: grid
 slug: Web/CSS/Reference/Properties/grid
-original_slug: Web/CSS/grid
 l10n:
-  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`grid`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)として明示的・暗黙的なすべてのグリッドプロパティを単一の宣言で設定します。
@@ -45,19 +44,19 @@ grid: repeat(3, 80px) / auto-flow;
 }
 
 #example-element :nth-child(1) {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 
 #example-element :nth-child(2) {
-  background-color: rgba(255, 0, 200, 0.2);
+  background-color: rgb(255 0 200 / 0.2);
   border: 3px solid rebeccapurple;
   grid-column: auto / span 3;
   grid-row: auto / span 2;
 }
 
 #example-element :nth-child(3) {
-  background-color: rgba(94, 255, 0, 0.2);
+  background-color: rgb(94 255 0 / 0.2);
   border: 3px solid green;
   grid-column: auto / span 2;
 }
@@ -70,12 +69,12 @@ grid: repeat(3, 80px) / auto-flow;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`grid-auto-columns`](/ja/docs/Web/CSS/Reference/Properties/grid-auto-columns)
-- [`grid-auto-flow`](/ja/docs/Web/CSS/Reference/Properties/grid-auto-flow)
-- [`grid-auto-rows`](/ja/docs/Web/CSS/Reference/Properties/grid-auto-rows)
-- [`grid-template-areas`](/ja/docs/Web/CSS/Reference/Properties/grid-template-areas)
-- [`grid-template-columns`](/ja/docs/Web/CSS/Reference/Properties/grid-template-columns)
-- [`grid-template-rows`](/ja/docs/Web/CSS/Reference/Properties/grid-template-rows)
+- {{cssxref("grid-auto-columns")}}
+- {{cssxref("grid-auto-flow")}}
+- {{cssxref("grid-auto-rows")}}
+- {{cssxref("grid-template-areas")}}
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-template-rows")}}
 
 ## 構文
 
