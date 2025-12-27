@@ -43,7 +43,7 @@ _親 {{jsxref("Error")}} からインスタンスメソッドを継承します�
 
 ### SuppressedError のキャッチ
 
-`SuppressedError` は、[リソースの破棄](/ja/docs/Web/JavaScript/Guide/Resource_management) 中にエラーが発生したときにスローされます。エラーをスローするとスコープのクリーンアップが行われ、クリーンアップ中の各ディスポーザーは独自のエラーをスローできます。これらのエラーはすべて `SuppressedError` インスタンスのチェーンに収集され、元のエラーが `suppressed` プロパティとして、次のディスポーザーによってスローされた新しいエラーが `error` プロパティとして格納されます。
+`SuppressedError` は、[リソースの破棄](/ja/docs/Web/JavaScript/Guide/Resource_management) 中にエラーが発生したときにスローされます。エラーをスローするとスコープのクリーンアップが行われ、クリーンアップ中の各 disposer は独自のエラーをスローできます。これらのエラーはすべて `SuppressedError` インスタンスのチェーンに収集され、元のエラーが `suppressed` プロパティとして、次の disposer によってスローされた新しいエラーが `error` プロパティとして格納されます。
 
 ```js
 try {
