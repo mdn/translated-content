@@ -1,12 +1,14 @@
 ---
 title: border-right-style
 slug: Web/CSS/Reference/Properties/border-right-style
-original_slug: Web/CSS/border-right-style
 l10n:
-  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
 **`border-right-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の右側の境界線 ({{cssxref("border")}}) のスタイルを設定します。
+
+> [!NOTE]
+> 仕様書では、異なるスタイルの境界線を角でどの様に接続するかを定義していません。
 
 {{InteractiveExample("CSS デモ: border-right-style")}}
 
@@ -37,15 +39,15 @@ border-right-style: inset;
 ```html interactive-example
 <section id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これは周囲に境界があるボックスです。
   </div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #000;
+  background-color: #eeeeee;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;
@@ -53,12 +55,9 @@ border-right-style: inset;
 }
 
 body {
-  background-color: #fff;
+  background-color: white;
 }
 ```
-
-> [!NOTE]
-> 仕様書では、異なるスタイルの境界線を角でどの様に接続するかを定義していません。
 
 ## 構文
 
@@ -101,22 +100,24 @@ border-right-style: unset;
 
 ```html live-sample___border_styles
 <table>
-  <tr>
-    <td class="b1">none</td>
-    <td class="b2">hidden</td>
-    <td class="b3">dotted</td>
-    <td class="b4">dashed</td>
-  </tr>
-  <tr>
-    <td class="b5">solid</td>
-    <td class="b6">double</td>
-    <td class="b7">groove</td>
-    <td class="b8">ridge</td>
-  </tr>
-  <tr>
-    <td class="b9">inset</td>
-    <td class="b10">outset</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td class="b1">none</td>
+      <td class="b2">hidden</td>
+      <td class="b3">dotted</td>
+      <td class="b4">dashed</td>
+    </tr>
+    <tr>
+      <td class="b5">solid</td>
+      <td class="b6">double</td>
+      <td class="b7">groove</td>
+      <td class="b8">ridge</td>
+    </tr>
+    <tr>
+      <td class="b9">inset</td>
+      <td class="b10">outset</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
