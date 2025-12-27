@@ -1,9 +1,8 @@
 ---
 title: grid-auto-flow
 slug: Web/CSS/Reference/Properties/grid-auto-flow
-original_slug: Web/CSS/grid-auto-flow
 l10n:
-  sourceCommit: 5ced6d0b9636a1b904474d1546674b305346daa0
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`grid-auto-flow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、自動配置のアルゴリズムの動作を制御し、自動配置されたアイテムがどのようにグリッドに流れ込むかを正確に指定するものです。
@@ -47,7 +46,7 @@ grid-auto-flow: row dense;
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 
@@ -61,7 +60,7 @@ grid-auto-flow: row dense;
 ```
 
 > [!NOTE]
-> `masonry-auto-flow` プロパティは、CSS の[メイソンリーレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout/Masonry_layout)にありましたが、 `grid-auto-flow` に取って代わられ、廃止されました。
+> `masonry-auto-flow` プロパティが CSS の[メイソンリーレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout/Masonry_layout)にありましたが、 `grid-auto-flow` に取って代わられ、廃止されました。
 > 詳細は [csswg-drafts #10231](https://github.com/w3c/csswg-drafts/issues/10231) をご覧ください。
 
 ## 構文
