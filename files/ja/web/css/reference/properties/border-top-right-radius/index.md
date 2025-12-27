@@ -1,9 +1,8 @@
 ---
 title: border-top-right-radius
 slug: Web/CSS/Reference/Properties/border-top-right-radius
-original_slug: Web/CSS/border-top-right-radius
 l10n:
-  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
 **`border-top-right-radius`** は [CSS](/ja/docs/Web/CSS) のプロパティで、角の曲率を定義する楕円の半径 (または半長軸と半短軸) を指定することで、要素の右上の角を丸めます。
@@ -31,7 +30,7 @@ background-clip: content-box;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a top right rounded corner.
+    このボックスは右上が丸い角です。
   </div>
 </section>
 ```
@@ -48,15 +47,6 @@ background-clip: content-box;
   padding: 10px;
 }
 ```
-
-丸みは円または楕円にすることができ、値のうちの一つが `0` であれば、丸めは行われずに角は四角くなります。
-
-![border-top-right-radius.png](border-top-right-radius.png)
-
-画像または単色が背景になっている場合、丸みがあっても境界で切り取られます。切り取られる正確な位置は、 {{cssxref("background-clip")}} プロパティの値で定義されます。
-
-> [!NOTE]
-> このプロパティの値が `border-top-right-radius` プロパティの後の {{cssxref("border-radius")}} 一括指定プロパティで設定されなかった場合、このプロパティは[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)によって初期値にリセットされます。
 
 ## 構文
 
@@ -92,6 +82,17 @@ border-top-right-radius: unset;
 
 - `<length-percentage>`
   - : 円の半径または楕円の長半径および短半径を示します。絶対的な長さの場合は、 CSS の {{cssxref("&lt;length&gt;")}} データ型で表現することができます。水平軸のパーセント値はボックスの幅、垂直軸のパーセント軸はボックスの高さに対する値です。負の数は無効です。
+
+## 解説
+
+丸みは円または楕円にすることができ、値のうちの一つが `0` であれば、丸めは行われずに角は四角くなります。
+
+![border-top-right-radius.png](border-top-right-radius.png)
+
+画像または単色が背景になっている場合、丸みがあっても境界で切り取られます。切り取られる正確な位置は、 {{cssxref("background-clip")}} プロパティの値で定義されます。
+
+> [!NOTE]
+> このプロパティの値が `border-top-right-radius` プロパティの後の {{cssxref("border-radius")}} 一括指定プロパティで設定されなかった場合、このプロパティは[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)によって初期値にリセットされます。
 
 ## 公式定義
 
