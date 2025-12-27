@@ -1,7 +1,7 @@
 ---
 title: CSS テキスト
+short-title: テキスト
 slug: Web/CSS/Guides/Text
-original_slug: Web/CSS/CSS_text
 l10n:
   sourceCommit: d92ee717f209ccad5d5a5705d64548e1d289f5d9
 ---
@@ -37,10 +37,12 @@ l10n:
 
 仕様書では `hyphenate-limit-last`, `hyphenate-limit-lines`, `hyphenate-limit-zone`, `line-padding`, `text-align-all`, `text-group-align`, `text-spacing`, `white-space-trim`, `word-space-transform`, `wrap-after`, `wrap-before`, `wrap-inside` の各プロパティも定義していますが、まだどのブラウザーも対応していません。
 
-### ガイド
+## ガイド
 
 - [テキストの分割と折り返し](/ja/docs/Web/CSS/Guides/Text/Wrapping_breaking_text)
   - : あふれたテキストを CSS で管理する、さまざまな方法についてのガイドです。
+- [ホワイトスペースの扱い](/ja/docs/Web/CSS/Guides/Text/Whitespace)
+  - : DOM におけるホワイトスペースのレンダリングを制御する様々な CSS プロパティを紹介し、落とし穴とその回避策を探るガイドです。
 
 ## 関連概念
 

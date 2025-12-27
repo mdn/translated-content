@@ -1,9 +1,8 @@
 ---
 title: hyphens
 slug: Web/CSS/Reference/Properties/hyphens
-original_slug: Web/CSS/hyphens
 l10n:
-  sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`hyphens`** は [CSS](/ja/docs/Web/CSS) のプロパティで、文字列を複数行にわたって折り返す際に、単語のハイフネーションを行う方法を指定します。ハイフネーションをまったく行わなかったり、手動で指定された位置で文字列のハイフネーションを行ったり、ブラウザーに適切な位置にハイフンを挿入させたりすることができます。

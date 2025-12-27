@@ -1,9 +1,8 @@
 ---
 title: ホワイトスペースの扱い
 slug: Web/CSS/Guides/Text/Whitespace
-original_slug: Web/CSS/CSS_text/Whitespace
 l10n:
-  sourceCommit: 4c2c5febdf57cb0b5bdd5d55fc44b965ff41b10f
+  sourceCommit: 32bdfdb82cf91ce9942b694286dec62be2cc20aa
 ---
 
 [DOM](/ja/docs/Web/API/Document_Object_Model) にホワイトスペースが存在すると、レイアウトの問題が発生したり、ホワイトスペースがある場所によっては、予期せぬ形でコンテンツツリーの操作が困難になることがあります。この記事では、どのような場合に問題が発生するかを探り、その結果生じる問題を軽減するために何ができるかを見ていきます。
@@ -55,7 +54,7 @@ CSS では、[セグメント区切り](https://drafts.csswg.org/css-text-4/#seg
 - 他のテキストノードは、先頭または末尾にホワイトスペースを保有することがあります。
 
 > [!NOTE]
-> [Firefox 開発者ツール] (https://firefox-source-docs.mozilla.org/devtools-user/index.html) は、テキストノードの強調表示に対応しており、ホワイトスペース文字が含まれているノードを簡単に確認できます。純粋なホワイトスペースノードには "whitespace" というラベルが付いています。
+> [Firefox 開発者ツール] (https://firefox-source-docs.mozilla.org/devtools-user/index.html) は、テキストノードの強調表示に対応しており、ホワイトスペース文字が含まれているノードを確認できます。純粋なホワイトスペースノードには "whitespace" というラベルが付いています。
 
 DOM 内でホワイトスペース文字を保存することは、さまざまな点で有用ですが、一部のレイアウトの実装が難しくなったり、DOM ノードを反復処理したい開発者に問題を引き起こしたりする可能性もあります。これらの課題と、その解決策については、後で[ホワイトスペースノードに関する一般的な問題の解決](#solving_common_problems_with_whitespace_nodes)の節で見ていきます。
 
@@ -138,7 +137,7 @@ DOM がレンダリングのために CSS に渡されると、既定ではホ�
    世界</div>
    ```
 
-   は、ブラウザーの経験則によっては、間の空白がすべて削除されて「你好世界」と表示される場合があります。
+   これは、ブラウザーの経験則によっては、間の空白がすべて削除されて「你好世界」と表示される場合があります。
 
 4. 次に、すべてのタブ文字が空白文字に変換されるため、この例は次のようになります。
 
@@ -369,7 +368,7 @@ Firefox 開発者ツールの HTML インスペクターでは、テキストノ
   }
   ```
 
-- `inline-block` に頼る必要があるのであれば、そのリストの [`font-size`](/ja/docs/Web/CSS/Reference/Properties/font-size) を `0` にしてください。これは、ブロックのサイズが `em` で設定されていない場合のみ有効です（ブロックのサイズも `font-size` に基づいているので、結局 `0` になってしまいます）。ここでは `rem` を使用するといいでしょう。
+- `inline-block` に頼る必要があるのであれば、そのリストの {{cssxref("font-size")}} を `0` にしてください。これは、ブロックのサイズが `em` で設定されていない場合のみ有効です（ブロックのサイズも `font-size` に基づいているので、結局 `0` になってしまいます）。ここでは `rem` を使用するといいでしょう。
 
   ```css
   ul {

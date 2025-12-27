@@ -1,9 +1,8 @@
 ---
 title: text-wrap-mode
 slug: Web/CSS/Reference/Properties/text-wrap-mode
-original_slug: Web/CSS/text-wrap-mode
 l10n:
-  sourceCommit: 4809e8217288dc7e1372d5c74140ca6661673206
+  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
 ---
 
 **`text-wrap-mode`** は [CSS](/ja/docs/Web/CSS) プロパティで、要素内のテキストを折り返すかどうかを制御します。様々な値で、ブロック要素のコンテンツを折り返す代替方法を提供します。また、{{CSSXRef("text-wrap")}} の一括指定または {{CSSXRef("white-space")}} の一括指定を使って設定したり、リセットしたりすることができます。
@@ -27,9 +26,9 @@ text-wrap-mode: nowrap;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="whole-content-wrapper">
-    <p>Edit the text in the box:</p>
+    <p>ボックス内のテキストを編集してください:</p>
     <div class="transition-all" id="example-element">
-      <p contenteditable="">
+      <p contenteditable>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut
         cum eum id quos est.
       </p>
@@ -100,7 +99,7 @@ text-wrap-mode: unset;
 
 ```css
 .box {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   font-weight: bold;
   font-size: 64px;
   box-sizing: border-box;
@@ -129,7 +128,7 @@ text-wrap-mode: unset;
 
 ```css
 .box {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   font-weight: bold;
   font-size: 64px;
   box-sizing: border-box;
