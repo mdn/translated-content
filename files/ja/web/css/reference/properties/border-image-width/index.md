@@ -1,12 +1,13 @@
 ---
 title: border-image-width
 slug: Web/CSS/Reference/Properties/border-image-width
-original_slug: Web/CSS/border-image-width
 l10n:
-  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
 **`border-image-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[境界画像](/ja/docs/Web/CSS/Reference/Properties/border-image)の幅を設定します。
+
+このプロパティの値が要素の {{cssxref("border-width")}} よりも大きい場合、境界画像はパディング領域 (またはコンテンツ領域) の縁に向けて拡張されます。
 
 {{InteractiveExample("CSS デモ: border-image-width")}}
 
@@ -28,7 +29,7 @@ border-image-width: 20% 8%;
 
 ```html interactive-example
 <section id="default-example">
-  <div id="example-element">This is a box with a border around it.</div>
+  <div id="example-element">これは周囲に境界があるボックスです。</div>
 </section>
 ```
 
@@ -41,15 +42,13 @@ border-image-width: 20% 8%;
   justify-content: center;
   padding: 50px;
   background: #fff3d4;
-  color: #000;
+  color: black;
   border: 30px solid;
   border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
     round;
   font-size: 1.2em;
 }
 ```
-
-このプロパティの値が要素の {{cssxref("border-width")}} よりも大きい場合、境界画像はパディング領域 (またはコンテンツ領域) の縁に向けて拡張されます。
 
 ## 構文
 
@@ -155,3 +154,4 @@ p {
 
 - [背景と境界](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)
 - [CSS の学習: 背景と境界](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
+- [Border images in CSS: A key focus area for Interop 2023](/en-US/blog/border-images-interop-2023/) - MDN blog (2023)
