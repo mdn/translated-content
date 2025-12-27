@@ -1,9 +1,8 @@
 ---
 title: border-radius
 slug: Web/CSS/Reference/Properties/border-radius
-original_slug: Web/CSS/border-radius
 l10n:
-  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`border-radius`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の境界の外側の角を丸めます。1 つの半径を設定すると円の角になり、2 つの半径を設定すると楕円の角になります。
@@ -55,21 +54,14 @@ border-radius: 50% 20% / 10% 40%;
 }
 ```
 
-半径は要素に境界がなくても、 {{cssxref("background")}} 全体に適用されます。切り取りが行われる正確な位置は、 {{cssxref("background-clip")}} プロパティで定義します。
-
-`border-radius` プロパティは {{cssxref("border-collapse")}} が `collapse` の table 要素には適用されません。
-
-> [!NOTE]
-> 他の一括指定プロパティと同様、個別のサブプロパティは `border-radius:0 0 inherit inherit` のように既存の定義を部分的に上書きして継承させることはできません。代わりに、それぞれの個別指定プロパティを使用する必要があります。
-
 ## 構成要素のプロパティ
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`border-top-left-radius`](/ja/docs/Web/CSS/Reference/Properties/border-top-left-radius)
-- [`border-top-right-radius`](/ja/docs/Web/CSS/Reference/Properties/border-top-right-radius)
-- [`border-bottom-right-radius`](/ja/docs/Web/CSS/Reference/Properties/border-bottom-right-radius)
-- [`border-bottom-left-radius`](/ja/docs/Web/CSS/Reference/Properties/border-bottom-left-radius)
+- {{cssxref("border-top-left-radius")}}
+- {{cssxref("border-top-right-radius")}}
+- {{cssxref("border-bottom-right-radius")}}
+- {{cssxref("border-bottom-left-radius")}}
 
 ## 構文
 
@@ -181,7 +173,7 @@ border-radius: unset;
 例:
 
 ```css
-border-radius: 1em/5em;
+border-radius: 1em / 5em;
 
 /* 次のものと同等 */
 border-top-left-radius: 1em 5em;
@@ -200,6 +192,15 @@ border-bottom-right-radius: 6px 2px;
 border-bottom-left-radius: 3px 4px;
 ```
 
+## 解説
+
+半径は要素に境界がなくても、 {{cssxref("background")}} 全体に適用されます。切り取りが行われる正確な位置は、 {{cssxref("background-clip")}} プロパティで定義します。
+
+`border-radius` プロパティは table 要素の {{cssxref("border-collapse")}} が `collapse` の場合には適用されません。
+
+> [!NOTE]
+> 他の一括指定プロパティと同様、個別のサブプロパティは `border-radius:0 0 inherit inherit` のように既存の定義を部分的に上書きして継承させることはできません。代わりに、それぞれの個別指定プロパティを使用する必要があります。
+
 ## 公式定義
 
 {{CSSInfo}}
@@ -210,45 +211,50 @@ border-bottom-left-radius: 3px 4px;
 
 ## 例
 
+### 境界スタイルの比較
+
+次の例には 7 つの {{htmlelement("pre")}} 要素があり、それぞれが `border` と `border-radius` スタイルの組み合わせを示しています。
+それぞれの `<pre>` 要素に適用されるスタイルは、要素のコンテンツとして含まれていますので、その協会スタイルを作成するために必要な CSS 宣言を確認することができます。
+
 ```html hidden
 <pre id="example-1">
-border: solid 10px;
-border-radius: 10px 40px 40px 10px;
+  border: solid 10px;
+  border-radius: 10px 40px 40px 10px;
 </pre>
 
 <pre id="example-2">
-border: groove 1em red;
-border-radius: 2em;
+  border: groove 1em red;
+  border-radius: 2em;
 </pre>
 
 <pre id="example-3">
-background: gold;
-border: ridge gold;
-border-radius: 13em/3em;
+  background: gold;
+  border: ridge gold;
+  border-radius: 13em / 3em;
 </pre>
 
 <pre id="example-4">
-border: none;
-border-radius: 40px 10px;
-background: gold;
+  border: none;
+  border-radius: 40px 10px;
+  background: gold;
 </pre>
 
 <pre id="example-5">
-border: none;
-border-radius: 50%;
-background: burlywood;
+  border: none;
+  border-radius: 50%;
+  background: burlywood;
 </pre>
 
 <pre id="example-6">
-border: dotted;
-border-width: 10px 4px;
-border-radius: 10px 40px;
+  border: dotted;
+  border-width: 10px 4px;
+  border-radius: 10px 40px;
 </pre>
 
 <pre id="example-7">
-border: dashed;
-border-width: 2px 4px;
-border-radius: 40px;
+  border: dashed;
+  border-width: 2px 4px;
+  border-radius: 40px;
 </pre>
 ```
 
@@ -257,7 +263,7 @@ pre {
   margin: 20px;
   padding: 20px;
   width: 80%;
-  height: 80px;
+  height: 50px;
 }
 
 pre#example-1 {
@@ -273,7 +279,7 @@ pre#example-2 {
 pre#example-3 {
   background: gold;
   border: ridge gold;
-  border-radius: 13em/3em;
+  border-radius: 13em / 3em;
 }
 
 pre#example-4 {
@@ -301,15 +307,61 @@ pre#example-7 {
 }
 ```
 
-{{EmbedLiveSample("Examples", "200", "1150")}}
+{{EmbedLiveSample("Comparing border styles", "", "900")}}
 
-### ライブサンプル
+### `corner-shape` と `border-radius` の使用
 
-- 例 1 : [https://jsfiddle.net/Tripad/qnGKj/2/](https://jsfiddle.net/Tripad/qnGKj/2/)
-- 例 2 : [https://jsfiddle.net/Tripad/qnGKj/3/](https://jsfiddle.net/Tripad/qnGKj/3/)
-- 例 3 : [https://jsfiddle.net/Tripad/qnGKj/4/](https://jsfiddle.net/Tripad/qnGKj/4/)
-- 例 4 : [https://jsfiddle.net/Tripad/qnGKj/5/](https://jsfiddle.net/Tripad/qnGKj/5/)
-- 例 5 : [https://jsfiddle.net/Tripad/qnGKj/6/](https://jsfiddle.net/Tripad/qnGKj/6/)
+ボックスの角に `0` ではない `border-radius` 値が適用されている場合、{{cssxref("corner-shape")}} プロパティ（または[個別指定と一括指定](/ja/docs/Web/CSS/Reference/Properties/corner-shape#corner--shape_shorthands_and_longhands)のいずれか）を使用して、ベベル、ノッチ、スクイークルなどの独自の形状をその角に適用することができます。この例では `corner-shape` の使い方の例を示します。
+
+#### HTML
+
+この例のマークアップには、単一の {{htmlelement("div")}} 要素があります。
+
+```html live-sample___basic-usage
+<div></div>
+```
+
+#### CSS
+
+このボックスにはいくつか基本的なスタイルを設定していますが、簡単にするため非表示にしています。{{cssxref("box-shadow")}}、`border-radius` を `0 20% 50px 30%`、`corner-shape` を `superellipse(0.5) bevel notch squircle` に設定しています。
+
+```css hidden live-sample___basic-usage
+body {
+  font-family: "Helvetica", "Arial", sans-serif;
+  width: 240px;
+  margin: 20px auto;
+}
+
+div {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(255 255 255 / 0),
+    rgb(255 255 255 / 0.5)
+  );
+}
+```
+
+```css live-sample___basic-usage
+div {
+  box-shadow: 1px 1px 3px gray;
+  border-radius: 0 20% 50px 30%;
+  corner-shape: superellipse(0.5) bevel notch squircle;
+}
+```
+
+#### 結果
+
+表示結果はこのようになります。
+
+{{EmbedLiveSample("basic-usage", "100%", "240")}}
+
+左上角には角の図形が適用されていないことに注意してください。これは、`border-radius` を `0` に設定しているからです。
 
 ## 仕様書
 
