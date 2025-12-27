@@ -1,9 +1,8 @@
 ---
 title: tab-size
 slug: Web/CSS/Reference/Properties/tab-size
-original_slug: Web/CSS/tab-size
 l10n:
-  sourceCommit: 82877d5cf5a35e0a4d02b7c54aea0ce7d771d5cb
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 CSS の **`tab-size`** プロパティは、タブ文字 (U+0009) の表示幅の指定に用います。
@@ -28,7 +27,7 @@ tab-size: 4;
 
 ```html interactive-example
 <section id="default-example">
-  <pre id="example-element">  123</pre>
+  <pre id="example-element">&#9;123</pre>
 </section>
 ```
 
@@ -60,7 +59,7 @@ tab-size: unset;
 ### 値
 
 - {{CSSxRef("&lt;number&gt;")}}
-  - : タブの幅として使用する空白文字 (U+0020) のアドバンス幅の倍数です。負の値であってはなりません。アドバンス幅とは、次の文字が出力される前に、カーソルまたは印字ヘッドが移動する距離ということになります。
+  - : タブの幅として使用する空白文字 (U+0020) の送り幅の倍数です。負の値であってはなりません。送り幅とは、次の文字が出力される前に、カーソルまたは印字ヘッドが移動する距離ということになります。
 - {{CSSxRef("&lt;length&gt;")}}
   - : タブの幅です。正の数でなければなりません。
 
