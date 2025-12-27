@@ -19,9 +19,9 @@ slug: Web/API/VideoColorSpace
 - {{domxref("VideoColorSpace.transfer")}}
   - : ビデオサンプルの伝達特性を含む文字列。
 - {{domxref("VideoColorSpace.matrix")}}
-  - : サンプルコンポーネント値と色座標の関係を説明する係数行列を含む文字列。
+  - : サンプルコンポーネント値と色座標の関係を示す係数行列を含む文字列。
 - {{domxref("VideoColorSpace.fullRange")}}
-  - : {{jsxref("Boolean")}}。`true` の場合、フルレンジの色値が使用されていることを示します。
+  - : {{jsxref("Boolean")}}。フルレンジの色値が使われていれば `true` です。
 
 ## インスタンスメソッド
 
