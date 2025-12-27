@@ -1,9 +1,8 @@
 ---
 title: border-top-width
 slug: Web/CSS/Reference/Properties/border-top-width
-original_slug: Web/CSS/border-top-width
 l10n:
-  sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`border-top-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の境界の幅を設定します。
@@ -33,7 +32,7 @@ border-top-width: 0;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これは周囲に境界があるボックスです。
   </div>
 </section>
 ```
@@ -41,7 +40,7 @@ border-top-width: 0;
 ```css interactive-example
 #example-element {
   background-color: palegreen;
-  color: #000;
+  color: black;
   border: 0 solid crimson;
   padding: 0.75em;
   width: 80%;
