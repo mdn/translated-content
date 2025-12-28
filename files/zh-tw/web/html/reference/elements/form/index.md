@@ -96,7 +96,7 @@ label {
     這個值可以被 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-TW/docs/Web/HTML/Reference/Elements/input/submit) 或 [`<input type="image">`](/zh-TW/docs/Web/HTML/Reference/Elements/input/image) 元素上的 [`formmethod`](/zh-TW/docs/Web/HTML/Reference/Elements/button#formmethod) 屬性覆蓋。
 
 - `novalidate`
-  - : 此布林屬性表示提交表單時不應該驗證表單。如果未設置此屬性（因此表單**_被_**驗證），則可以被屬於表單的 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-TW/docs/Web/HTML/Reference/Elements/input/submit) 或 [`<input type="image">`](/zh-TW/docs/Web/HTML/Reference/Elements/input/image) 元素上的 [`formnovalidate`](/zh-TW/docs/Web/HTML/Reference/Elements/button#formnovalidate) 屬性覆蓋。
+  - : 此布林屬性表示提交表單時不應該驗證表單。如果未設置此屬性（因此表單***被***驗證），則可以被屬於表單的 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-TW/docs/Web/HTML/Reference/Elements/input/submit) 或 [`<input type="image">`](/zh-TW/docs/Web/HTML/Reference/Elements/input/image) 元素上的 [`formnovalidate`](/zh-TW/docs/Web/HTML/Reference/Elements/button#formnovalidate) 屬性覆蓋。
 - `target`
   - : 提交表單後在哪裡顯示響應。它是一個用於*瀏覽上下文*的名稱/關鍵字（例如，標籤、窗口或 iframe）。以下關鍵字具有特殊含義：
     - `_self`（默認值）：加載到與當前瀏覽上下文相同的位置。

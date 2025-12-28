@@ -29,7 +29,7 @@ slug: Web/API/Request
 - {{domxref("Request.headers")}} {{ReadOnlyInline}}
   - : 包含请求相关联的 {{domxref("Headers")}} 对象。
 - {{domxref("Request.integrity")}} {{ReadOnlyInline}}
-  - : 包含请求的[子资源完整性](/zh-CN/docs/Web/Security/Subresource_Integrity)值（例如 `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`）。
+  - : 包含请求的[子资源完整性](/zh-CN/docs/Web/Security/Defenses/Subresource_Integrity)值（例如 `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`）。
 - {{domxref("Request.method")}} {{ReadOnlyInline}}
   - : 包含请求的方法（`GET`、`POST` 等）。
 - {{domxref("Request.mode")}} {{ReadOnlyInline}}

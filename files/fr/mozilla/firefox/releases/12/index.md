@@ -75,7 +75,7 @@ Mozilla travaille sur l'intégration des ses propres outils de développement We
 
 #### source-editor.jsm
 
-- La méthode [`resetUndo()`](/fr/docs/JavaScript_code_modules/source-editor.jsm#resetUndo%28%29) a été ajoutée, elle vous permet d'effacer la pile d'annulation.
+- La méthode [`resetUndo()`](</fr/docs/JavaScript_code_modules/source-editor.jsm#resetUndo()>) a été ajoutée, elle vous permet d'effacer la pile d'annulation.
 - L'éditeur de source offre à présent des méthodes pour apporter des capacités de recherche : [`find()`](</fr/docs/JavaScript_code_modules/source-editor.jsm#find()>), [`findNext()`](</fr/docs/JavaScript_code_modules/source-editor.jsm#findNext()>), and [`findPrevious()`](</fr/docs/JavaScript_code_modules/source-editor.jsm#findPrevious()>).
 
 ### XUL

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Functions
 original_slug: Learn/JavaScript/Building_blocks/Functions
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
 
 Les **fonctions** sont un autre concept essentiel de la programmation, qui permettent de stocker dans un bloc défini une partie de code qui effectue une seule tâche afin de l'appeler plus tard lorsque nous en avons besoin en utilisant une seule commande courte — au lieu de ré-écrire l'intégralité de ce code à chaque fois. Dans cet article nous explorons les concepts fondamentaux inhérents aux fonctions tels que la syntaxe de base, comment les définir et les invoquer, leur portée et leurs paramètres.
 
@@ -444,4 +444,4 @@ Cet article a exploré les concepts fondamentaux inhérents aux fonctions, ouvra
 - [Fonctions](/fr/docs/Web/JavaScript/Guide/Functions) — aborde certaines fonctionnalités avancées non incluses ici.
 - [Valeur par défaut des arguments](/fr/docs/Web/JavaScript/Reference/Functions/Default_parameters), [Fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) — références avancées
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}

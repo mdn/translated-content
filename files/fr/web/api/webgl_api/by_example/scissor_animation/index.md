@@ -3,7 +3,7 @@ title: Créer une animation avec découpe et applique
 slug: Web/API/WebGL_API/By_example/Scissor_animation
 ---
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Modèle_1","Apprendre/WebGL/Par_exemple/Une_pluie_de_rectangle")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Boilerplate_1","Web/API/WebGL_API/By_example/Raining_rectangles")}}
 
 Dans cet article, on voit comment créer des animations grâce à des opérations de découpe et d'applique.
 
@@ -160,4 +160,4 @@ function getRenderingContext() {
 
 Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/scissor-animation).
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Modèle_1","Apprendre/WebGL/Par_exemple/Une_pluie_de_rectangle")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Boilerplate_1","Web/API/WebGL_API/By_example/Raining_rectangles")}}

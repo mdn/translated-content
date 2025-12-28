@@ -4,7 +4,7 @@ slug: Learn_web_development/Getting_started/Web_standards/How_the_web_works
 original_slug: Learn/Getting_started_with_the_web/How_the_Web_works
 ---
 
-{{LearnSidebar()}}{{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar()}}{{PreviousMenu("Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}
 
 _Cómo funciona la web_ proporciona una vista simplificada de lo que sucede cuando ves una página web en un navegador web de tu computador o teléfono.
 
@@ -70,4 +70,4 @@ Anteriormente hemos utilizado el término _**paquetes**_ para describir el forma
 
 Foto de la calle: Street Composing, por [kevin digga](https://www.pinterest.com/kevindigga/).
 
-{{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenu("Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}

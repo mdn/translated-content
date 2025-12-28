@@ -1,9 +1,8 @@
 ---
 title: font-synthesis-style
 slug: Web/CSS/Reference/Properties/font-synthesis-style
-original_slug: Web/CSS/font-synthesis-style
 l10n:
-  sourceCommit: 28368ab728eed206d9069f5ba5b889e990ff810c
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`font-synthesis-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントファミリーに斜体書体がない場合に、ブラウザーが斜体書体を合成するかどうかを指定します。
@@ -16,6 +15,7 @@ l10n:
 /* キーワード値 */
 font-synthesis-style: auto;
 font-synthesis-style: none;
+font-synthesis-style: oblique-only;
 
 /* グローバル値 */
 font-synthesis-style: inherit;
@@ -31,6 +31,8 @@ font-synthesis-style: unset;
   - : 不足している斜体書体は、必要に応じてブラウザーが合成する可能性があることを示します。
 - `none`
   - : 不足している斜体書体のブラウザーによる合成が許可されていないことを示します。
+- `oblique-only`
+  - : `auto` と同様ですが、`font-style: italic` が設定されている場合は合成が行われません。
 
 ## 公式定義
 
@@ -62,11 +64,12 @@ font-synthesis-style: unset;
 #### CSS
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Montserrat&display=swap";
 
 .english {
   font-family: "Montserrat", sans-serif;
 }
+
 .no-syn {
   font-synthesis-style: none;
 }
@@ -75,6 +78,94 @@ font-synthesis-style: unset;
 #### 結果
 
 {{EmbedLiveSample('Disabling synthesis of bold typeface', '', '100')}}
+
+### font-synthesis-style 値の比較
+
+この例では、イタリック体と斜体で書かれたテキストを使用して、すべての `font-synthesis-style` の値を比較しています。
+
+#### HTML
+
+```html
+<div class="fss-none">
+  <h2>font-synthesis-style: none</h2>
+  <p class="oblique">このテキストは <code>oblique</code> に設定されています</p>
+  <p class="italic">このテキストは <code>italic</code> に設定されています</p>
+</div>
+
+<div class="fss-auto">
+  <h2>font-synthesis-style: auto</h2>
+  <p class="oblique">このテキストは <code>oblique</code> に設定されています</p>
+  <p class="italic">このテキストは <code>italic</code> に設定されています</p>
+</div>
+
+<div class="fss-oblique-only">
+  <h2>font-synthesis-style: oblique-only</h2>
+  <p class="oblique">このテキストは <code>oblique</code> に設定されています</p>
+  <p class="italic">このテキストは <code>italic</code> に設定されています</p>
+</div>
+```
+
+#### CSS
+
+```css hidden
+@import "https://fonts.googleapis.com/css2?family=Montserrat&display=swap";
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+}
+
+@supports not (font-synthesis-style: oblique-only) {
+  body::before {
+    content: "このブラウザーは 'oblique-only' 値には対応していません。";
+    background-color: #ffcd33;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+```
+
+```css
+/* フォント合成のスタイルを指定 */
+.fss-none {
+  font-synthesis-style: none;
+}
+
+.fss-auto {
+  font-synthesis-style: auto;
+}
+
+.fss-oblique-only {
+  font-synthesis-style: oblique-only;
+}
+
+/* フォントスタイルを設定 */
+.oblique {
+  font-style: oblique;
+}
+
+.italic {
+  font-style: italic;
+}
+
+/* デモのためのスタイル設定 */
+.oblique::after {
+  content: " (font-style: oblique)";
+  font-size: 0.8rem;
+  vertical-align: sub;
+}
+
+.italic::after {
+  content: " (font-style: italic)";
+  font-size: 0.8rem;
+  vertical-align: sub;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample('Comparison of font-synthesis-style values', '', '560')}}
 
 ## 仕様書
 

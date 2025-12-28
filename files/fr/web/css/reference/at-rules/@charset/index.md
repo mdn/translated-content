@@ -1,9 +1,8 @@
 ---
 title: "@charset"
 slug: Web/CSS/Reference/At-rules/@charset
-original_slug: Web/CSS/@charset
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@charset`** spécifie l'encodage des caractères utilisé dans la feuille de style. Cette syntaxe est utile lorsque vous utilisez des caractères non-{{Glossary("ASCII")}} dans certaines propriétés CSS, comme {{ cssxref("content") }}. Bien que le premier caractère de `@charset` soit le symbole `@`, il ne s'agit pas d'une [règle at](/fr/docs/Web/CSS/Guides/Syntax/At-rules). C'est une séquence d'octets spécifique qui ne peut être placée qu'au tout début d'une feuille de style. Aucun autre caractère, à l'exception du marqueur d'ordre des octets Unicode, n'est autorisé avant. Elle ne suit pas non plus les règles habituelles de syntaxe CSS, comme l'utilisation de guillemets ou d'espaces.

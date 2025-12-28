@@ -1,15 +1,14 @@
 ---
 title: :is()
 slug: Web/CSS/Reference/Selectors/:is
-original_slug: Web/CSS/:is
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:is()`** prend comme argument une liste de sélecteurs, et cible tous les éléments sélectionnés par chaque sélecteur de cette liste. Cela permet d'écrire des sélecteurs expansifs de façon plus concise.
 
 > [!NOTE]
-> Cette pseudo-classe avait d'abord été intitulée `:matches()` (puis `:any()`), avant d'être renommée en `:is()` avec [le ticket CSSWG n°3258](https://github.com/w3c/csswg-drafts/issues/3258).
+> Cette pseudo-classe avait d'abord été intitulée `:matches()` (puis `:any()`), avant d'être renommée en `:is()` avec [le ticket CSSWG n°3258 <sup>(angl.)</sup>](https://github.com/w3c/csswg-drafts/issues/3258).
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :is", "tabbed-shorter")}}
 
@@ -70,11 +69,11 @@ La pseudo-classe `:is()` nécessite une [liste de sélecteurs](/fr/docs/Web/CSS/
 
 ### Différence entre `:is()` et `:where()`
 
-Contrairement à [`:where()`](/fr/docs/Web/CSS/Reference/Selectors/:where) dont la spécificité vaut 0, `:is()` participe à la spécificité du sélecteur (elle prend la spécificité de son argument le plus spécifique)). Vous pouvez observer cette différence sur [l'exemple de la page sur `:where()`](/fr/docs/Web/CSS/Reference/Selectors/:where#examples).
+Contrairement à [`:where()`](/fr/docs/Web/CSS/Reference/Selectors/:where) dont la spécificité vaut 0, `:is()` participe à la spécificité du sélecteur (elle prend la spécificité de son argument le plus spécifique). Vous pouvez observer cette différence sur [l'exemple de la page sur `:where()`](/fr/docs/Web/CSS/Reference/Selectors/:where#exemples).
 
 ### Analyse permissive de la liste des sélecteurs
 
-`:is()` et `:where()` acceptent une liste permissive de sélecteurs ([voir la spécification](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list)).
+`:is()` et `:where()` acceptent une liste permissive de sélecteurs ([voir la spécification <sup>(angl.)</sup>](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list)).
 
 En CSS, lorsque vous utilisez une liste de sélecteurs, si l'un des sélecteurs n'est pas valide, toute la liste est considérée comme non valide. Lorsque vous utilisez `:is()` ou `:where()`, au lieu que toute la liste de sélecteurs soit considérée comme non valide si l'un d'entre eux ne peut être analysé, le sélecteur incorrect ou non pris en charge sera ignoré et les autres seront utilisés.
 

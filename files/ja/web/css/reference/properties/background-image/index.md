@@ -1,9 +1,8 @@
 ---
 title: background-image
 slug: Web/CSS/Reference/Properties/background-image
-original_slug: Web/CSS/background-image
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 1bfe630bd8538b64c97c7f684f5ee647a76c1a28
 ---
 
 **`background-image`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素に 1 つ以上の背景画像を設定します。
@@ -28,7 +27,7 @@ background-image:
 
 ```css interactive-example-choice
 background-image:
-  linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+  linear-gradient(rgb(0 0 255 / 0.5), rgb(255 255 0 / 0.5)),
   url("/shared-assets/images/examples/lizard.png");
 ```
 
@@ -46,15 +45,6 @@ background-image:
 }
 ```
 
-画像はお互いの上に積み重ねるコンテキストレイヤーに描画されます。最初に指定されたレイヤーが、ユーザーに対し最も手前にあるかのように描画されます。
-
-要素の[境界](/ja/docs/Web/CSS/Reference/Properties/border)は背景画像よりも上、 {{cssxref("background-color")}} は背景画像より下に描画されます。画像がボックスとその境界に対し相対的にどう描画されるかは、 {{cssxref("background-clip")}} および {{cssxref("background-origin")}} プロパティによって定義されます。
-
-指定された画像を描画することができない (例えば、指定された URI が指し示すファイルをロードできない) 場合、ブラウザーはその指定を `none` 値であるかのように処理します。
-
-> [!NOTE]
-> たとえ画像が不透明で通常は色が表示されないとしても、ウェブ開発者は常に {{cssxref("background-color")}} を指定すべきです。例えばネットワークが切断された場合など、もし画像が読み込めなかったときに、背景色がフォールバックとして使われます。
-
 ## 構文
 
 ```css
@@ -64,7 +54,7 @@ background-image: url("cat-front.png");
 
 /* 複数の画像 */
 background-image:
-  radial-gradient(circle, #0000 45%, #000f 48%),
+  radial-gradient(circle, transparent 45%, black 48%),
   radial-gradient(ellipse farthest-corner, #fc1c14 20%, #cf15cf 80%);
 
 /* グローバル値 */
@@ -86,12 +76,23 @@ background-image: unset;
 - `<image>`
   - : 表示する背景を記述する {{cssxref("&lt;image&gt;")}}。[複数の背景](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)に対応している場合は、カンマ区切りで複数指定することができます。
 
+## 解説
+
+画像はお互いの上に積み重ねるコンテキストレイヤーに描画されます。最初に指定されたレイヤーが、ユーザーに対し最も手前にあるかのように描画されます。
+
+要素の[境界](/ja/docs/Web/CSS/Reference/Properties/border)は背景画像よりも上、 {{cssxref("background-color")}} は背景画像より下に描画されます。画像がボックスとその境界に対し相対的にどう描画されるかは、 {{cssxref("background-clip")}} および {{cssxref("background-origin")}} プロパティによって定義されます。
+
+指定された画像を描画することができない (例えば、指定された URI が指し示すファイルをロードできない) 場合、ブラウザーはその指定を `none` 値であるかのように処理します。
+
+> [!NOTE]
+> たとえ画像が不透明で通常は色が表示されないとしても、ウェブ開発者は常に {{cssxref("background-color")}} を指定すべきです。例えばネットワークが切断された場合など、もし画像が読み込めなかったときに、背景色がフォールバックとして使われます。
+
 ## アクセシビリティ
 
 ブラウザーは、背景画像に関する特別な情報を支援技術に提供しません。これは主に読み上げアプリにとって重要であり、読み上げアプリはその存在を告知しないため、ユーザーには何も伝えません。ページの全体的な目的を理解する上で重要な情報が画像に含まれている場合は、文書の中でその意味を記述した方が良いでしょう。
 
 - [MDN "WCAG を理解する ― ガイドライン 1.1 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
-- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 さらに、背景画像と前景テキストのコントラスト比を確保し、弱視者がページコンテンツを読めるようにすることも重要です。
 
@@ -117,18 +118,18 @@ background-image: unset;
 
 #### HTML
 
-```html
+```html live-sample___layering_background_images
 <div>
-  <p class="cats-and-stars">This paragraph is full of cats<br />and stars.</p>
-  <p>This paragraph is not.</p>
-  <p class="cats-and-stars">Here are more cats for you.<br />Look at them!</p>
-  <p>And no more.</p>
+  <p class="cats-and-stars">この段落は、猫と<br />星でいっぱいです。</p>
+  <p>この段落はそうではありません。</p>
+  <p class="cats-and-stars">もっと猫たちを紹介するよ。<br />見てごらん！</p>
+  <p>これで終わり。</p>
 </div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___layering_background_images
 p {
   font-weight: bold;
   font-size: 1.5em;
@@ -184,7 +185,7 @@ div {
   - {{cssxref("background-repeat")}}
   - {{cssxref("background-size")}}
   - {{cssxref("background")}} 一括指定
-- [CSS の学習: 背景と境界線](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
+- [学習: 背景と境界線](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
 - [複数の背景画像の使用](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
 - [背景画像の拡大縮小](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images)
 - [CSS 背景と境界](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)モジュール

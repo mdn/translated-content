@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Express_Nodejs/skeleton_website
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 この [Express チュートリアル](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website)の 2 回目の記事では、どのようにして "スケルトン"ウェブサイトプロジェクトを作成し、サイト固有のルート、テンプレート/ビュー、およびデータベース呼び出しを追加するかを説明します。
 
@@ -490,4 +490,4 @@ block content
 - [Express application generator](https://expressjs.com/en/starter/generator.html) (Express ドキュメント)
 - [Using template engines with Express](https://expressjs.com/en/guide/using-template-engines.html) (Express ドキュメント)
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

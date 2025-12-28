@@ -408,7 +408,7 @@ En plus des exemples précédents, vous pouvez consulter [l'exemple de validatio
 
 ## Voir aussi
 
-- [Guide sur les formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\)
+- [Guide sur les formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms)
 - [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input)
 - [`<input type="tel">`](/fr/docs/Web/HTML/Reference/Elements/input/tel)
 - [`<input type="email">`](/fr/docs/Web/HTML/Reference/Elements/input/email)

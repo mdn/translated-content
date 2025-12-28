@@ -1,28 +1,27 @@
 ---
 title: Animation SVG avec SMIL
 slug: Web/SVG/Guides/SVG_animation_with_SMIL
-original_slug: Web/SVG/SVG_animation_with_SMIL
+l10n:
+  sourceCommit: 636b90011532e3fd2cf9333aaf1754fdc8de7938
 ---
 
-{{SVGRef}}
+[Synchronized Multimedia Integration Language <sup>(angl.)</sup>](https://www.w3.org/TR/SMIL/) (SMIL) est un langage basé sur XML pour écrire des présentations multimédias interactives.
+Les auteur·ice·s peuvent utiliser la syntaxe SMIL dans d'autres langages basés sur XML pour définir le minutage et la disposition des éléments pour l'animation.
 
-> [!WARNING]
-> Bien que Chrome 45 déprécie SMIL en faveur des animations CSS et des animations Web, les développeurs Chrome ont depuis [suspendu](https://groups.google.com/a/chromium.org/d/msg/blink-dev/5o0yiO440LM/YGEJBsjUAwAJ) cette décision.
+SMIL permet de&nbsp;:
 
-Firefox 4 introduit le support pour les animations [SVG](/fr/docs/Web/SVG) en utilisant [Synchronized Multimedia Integration Language](https://www.w3.org/TR/REC-smil) (SMIL). SMIL permet :
+- animer les attributs numériques d'un élément ({{SVGAttr("x")}}, {{SVGAttr("y")}}, etc.)
+- animer les attributs de [transformation](/fr/docs/Web/SVG/Reference/Attribute/transform) ([déplacement](/fr/docs/Web/SVG/Reference/Attribute/transform#translate), [rotation](/fr/docs/Web/SVG/Reference/Attribute/transform#rotate), etc.)
+- animer les attributs de [couleur](/fr/docs/Web/SVG/Reference/Attribute/color)
+- suivre un [chemin](/fr/docs/Web/SVG/Reference/Element/path) de mouvement
 
-- d'animer les attributs numériques d'un élément (x, y, ...)
-- d'animer la transformation des attributs (translation ou rotation)
-- d'animer les attributs de couleur
-- de créer un mouvement en suivant un tracé donné
-
-Pour ce faire, on utilise un élément SVG tel que {{ SVGElement("animate") }}. Vous trouverez ci-dessous des exemples illustrant les quatres différents manières de procéder.
+Les sections suivantes montrent comment utiliser SMIL dans [SVG](/fr/docs/Web/SVG) pour ces quatre cas d'usage.
 
 ## Animation pour un attribut
 
-L'exemple suivant anime l'attribut **`cx`** d'un cercle. Pour ce faire, on ajoute un élément {{ SVGElement("animate") }} dans l'élément {{ SVGElement("circle") }}. Les attributs importants pour {{ SVGElement("animate") }} sont :
+L'exemple suivant anime l'[attribut `cx`](/fr/docs/Web/SVG/Reference/Attribute/cx) d'un cercle. Pour ce faire, on ajoute un élément {{SVGElement("animate")}} dans l'élément {{SVGElement("circle")}}. Les attributs importants pour {{SVGElement("animate")}} sont&nbsp;:
 
-- **`attributeName`**
+- `attributeName`
   - : Le nom de l'attribut à animer.
 - `from`
   - : La valeur initiale de l'attribut.
@@ -31,34 +30,32 @@ L'exemple suivant anime l'attribut **`cx`** d'un cercle. Pour ce faire, on ajout
 - `dur`
   - : La durée de l'animation (par exemple, écrire '5s' pour 5 secondes).
 
-Si vous voulez animer plus d'attributs dans le même élément, ajoutez simplement d'autres éléments {{ SVGElement("animate") }}.
+Si vous voulez animer plus d'attributs dans le même élément, ajoutez simplement d'autres éléments {{SVGElement("animate")}}.
 
 ```html
 <svg width="300" height="100">
-  <title>Attribute Animation with SMIL</title>
+  <title>Animation d'attribut avec SMIL</title>
   <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
   <circle cx="0" cy="50" r="15" fill="blue" stroke="black" stroke-width="1">
     <animate
       attributeName="cx"
       from="0"
-      to="100"
+      to="500"
       dur="5s"
       repeatCount="indefinite" />
   </circle>
 </svg>
 ```
 
-{{ EmbedLiveSample("Animation_pour_un_attribut", '100%', 120) }}
+{{EmbedLiveSample("Animation pour un attribut", '100%', 120)}}
 
-## Animer une transformation d'attributs
+## Animer les attributs de transformation
 
-L'élement {{ SVGElement("animateTransform") }} permet d'animer la **transformation** d'attributs. Ce nouvel élément est nécéssaire parce que nous n'animons pas un simple attribut tel que **x,** qui est juste un nombre.
-Les attributs pour la rotation sont ainsi : `rotation(theta, x, y)`, où `theta` est l'angle en degrés, `x` et `y` sont les positions absolues.
-Dans l'exemple ci dessous, on anime le centre de rotation et l'angle.
+L'élément {{SVGElement("animateTransform")}} permet d'animer les attributs de [transformation](/fr/docs/Web/SVG/Reference/Attribute/transform). Cet élément est nécessaire car nous n'animons pas un simple attribut comme [x](/fr/docs/Web/SVG/Reference/Attribute/x) qui est juste un nombre. Les attributs pour la rotation sont ainsi&nbsp;: `rotation(theta, x, y)`, où `theta` est l'angle en degrés, et `x` et `y` sont les positions absolues. Dans l'exemple ci-dessous, on anime le centre de rotation et l'angle.
 
 ```html
 <svg width="300" height="100">
-  <title>SVG SMIL Animate with transform</title>
+  <title>Animation SVG SMIL avec transformation</title>
   <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
   <rect
     x="0"
@@ -80,21 +77,21 @@ Dans l'exemple ci dessous, on anime le centre de rotation et l'angle.
 </svg>
 ```
 
-{{ EmbedLiveSample("Animer_une_transformation_d'attributs", '100%', 120) }}
+{{EmbedLiveSample("Animer les attributs de transformation", '100%', 120)}}
 
 ## Animation suivant un tracé (chemin)
 
-L'élement {{ SVGElement("animateMotion") }} permet d'animer la position et la rotation d'éléments en suivant un tracé spécifique. Ce chemin est définit de la même manière que dans {{ SVGElement("path") }}.
+L'élement {{SVGElement("animateMotion")}} permet d'animer la position et la rotation d'éléments en suivant un tracé spécifique. Ce chemin est définit de la même manière que dans {{SVGElement("path")}}.
 
-### Exemple 1: Mouvement linéaire
+### Exemple 1 : Mouvement linéaire
 
-Dans cet exemple, un cercle bleu rebondit indéfiniment entre les bords gauche et droit d'une boîte noir. L'animation est ici gérée par l'élément {{ SVGElement("animateMotion") }}.
+Dans cet exemple, un cercle bleu rebondit indéfiniment entre les bords gauche et droit d'une boîte noir. L'animation est ici gérée par l'élément {{SVGElement("animateMotion")}}.
 
 On crée ici un chemin avec les commandes **MoveTo**, pour définir le point de départ de l'animation, **Horizontal-line**, pour déplacer le cercle de 300 pixels vers la droite, et la commande **Z**, pour fermer le chemin — ce qui permet d'établir une boucle qui revient au début. En définissant la valeur de l'attribut **repeatCount** à `indefinite`, on indique que l'animation doit boucler indéfiniment, tant que l'image SVG existe.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="300" height="100">
-  <title>SVG SMIL Animate with Path</title>
+  <title>Animation SVG SMIL avec chemin</title>
   <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
   <circle cx="0" cy="50" r="15" fill="blue" stroke="black" stroke-width="1">
     <animateMotion path="M 0 0 H 300 Z" dur="3s" repeatCount="indefinite" />
@@ -102,15 +99,15 @@ On crée ici un chemin avec les commandes **MoveTo**, pour définir le point de 
 </svg>
 ```
 
-{{ EmbedLiveSample('Exemple_1_Mouvement_linéaire', '100%', 120) }}
+{{EmbedLiveSample('Exemple 1 : Mouvement linéaire', '100%', 120)}}
 
-### Exemple 2: Mouvement en courbe
+### Exemple 2 : Mouvement en courbe
 
 Le même exemple que précédemment mais avec une trajectoire courbe.
 
 ```html
 <svg width="300" height="100">
-  <title>SVG SMIL Animate with Path</title>
+  <title>Animation SVG SMIL avec chemin</title>
   <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
   <rect
     x="0"
@@ -129,10 +126,10 @@ Le même exemple que précédemment mais avec une trajectoire courbe.
 </svg>
 ```
 
-{{ EmbedLiveSample('Exemple_2_Mouvement_en_courbe', '100%', 120) }}
+{{EmbedLiveSample('Exemple 2 : Mouvement en courbe', '100%', 120)}}
 
 ## Voir aussi
 
 - [SVG](/fr/docs/Web/SVG)
-- [SVG Animation Specification](https://www.w3.org/TR/SVG/animate.html)
-- [SMIL Specification](https://www.w3.org/TR/REC-smil)
+- [Spécification de l'animation SVG <sup>(angl.)</sup>](https://svgwg.org/svg2-draft/animate.html)
+- [Spécification SMIL <sup>(angl.)</sup>](https://www.w3.org/TR/SMIL/)

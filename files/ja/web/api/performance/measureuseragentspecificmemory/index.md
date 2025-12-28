@@ -99,7 +99,7 @@ None.
 
 ## セキュリティ要件
 
-ウェブサイトが[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)にある必要があります。
+ウェブサイトが[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)にある必要があります。
 
 サイトをオリジン間分離するためには、 2 つのヘッダーを設定する必要があります。
 

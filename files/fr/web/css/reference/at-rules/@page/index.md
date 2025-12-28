@@ -1,9 +1,8 @@
 ---
 title: "@page"
 slug: Web/CSS/Reference/At-rules/@page
-original_slug: Web/CSS/@page
 l10n:
-  sourceCommit: c699955e1e368bd42d6ea9318a6afc9256c3036f
+  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@page`** est utilisée pour modifier différents aspects des pages imprimées. Elle permet de cibler et de modifier les dimensions, l'orientation et les marges de la page. La règle `@page` peut s'appliquer à toutes les pages d'une impression ou à un sous-ensemble grâce à ses différentes pseudo-classes.
@@ -130,21 +129,21 @@ La spécification mentionne que les propriétés CSS suivantes pourraient s'appl
 
 ## Description
 
-La règle @page définit les propriétés de la boîte de page. La règle `@page` est accessible via l'interface du modèle objet CSS {{domxref("CSSPageRule")}}.
+La règle @page définit les propriétés de la boîte de page. La règle `@page` est accessible via l'interface du modèle objet CSS {{DOMxRef("CSSPageRule")}}.
 
 > [!NOTE]
-> Le W3C discute de la gestion des unités {{cssxref("&lt;length&gt;")}} liées à la zone d'affichage (<i lang="en">viewport</i>)&nbsp;: `vh`, `vw`, `vmin` et `vmax`. En attendant, il est déconseillé de les utiliser dans une règle `@page`.
+> Le W3C discute de la gestion des unités {{CSSxRef("&lt;length&gt;")}} liées à la zone d'affichage (<i lang="en">viewport</i>)&nbsp;: `vh`, `vw`, `vmin` et `vmax`. En attendant, il est déconseillé de les utiliser dans une règle `@page`.
 
 ### Propriétés associées
 
 La règle `@page` permet d'attribuer un nom à la règle, qui pourra ensuite être utilisé dans une déclaration via la propriété `page`.
 
-- {{Cssxref("page")}}
+- {{CSSxRef("page")}}
   - : Permet à un sélecteur d'utiliser une **page nommée** définie par l'utilisateur·ice.
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 Où `<page-body>` inclut&nbsp;:
 
@@ -153,10 +152,10 @@ Où `<page-body>` inclut&nbsp;:
 
 et `<pseudo-page>` représente ces pseudo-classes&nbsp;:
 
-- {{Cssxref(":blank")}}
-- {{Cssxref(":first")}}
-- {{Cssxref(":left")}}
-- {{Cssxref(":right")}}
+- {{CSSxRef(":blank")}}
+- {{CSSxRef(":first")}}
+- {{CSSxRef(":left")}}
+- {{CSSxRef(":right")}}
 
 ## Règles de marge
 
@@ -278,7 +277,7 @@ Les propriétés de marge de page sont l'ensemble des propriétés CSS pouvant �
 
 Les pages nommées permettent de réaliser une mise en page par page et d'ajouter des [sauts de page](/fr/docs/Web/CSS/Guides/Fragmentation) de manière déclarative lors de l'impression.
 
-Les pages nommées peuvent être appliquées à l'aide de la propriété {{Cssxref("page")}}. Cela permet de créer différentes configurations de page à utiliser dans les mises en page d'impression.
+Les pages nommées peuvent être appliquées à l'aide de la propriété {{CSSxRef("page")}}. Cela permet de créer différentes configurations de page à utiliser dans les mises en page d'impression.
 
 Un exemple de ceci se trouve dans les exemples de la page [`page`](/fr/docs/Web/CSS/page#exemples).
 
@@ -364,10 +363,10 @@ section {
 
 Voir les différentes [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) de `@page` pour des exemples.
 
-- {{Cssxref(":blank")}}
-- {{Cssxref(":first")}}
-- {{Cssxref(":left")}}
-- {{Cssxref(":right")}}
+- {{CSSxRef(":blank")}}
+- {{CSSxRef(":first")}}
+- {{CSSxRef(":left")}}
+- {{CSSxRef(":right")}}
 
 ## Spécifications
 
@@ -379,7 +378,7 @@ Voir les différentes [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseu
 
 ## Voir aussi
 
-- La propriété {{cssxref("page")}}
+- La propriété {{CSSxRef("page")}}
 - Le descripteur [`size`](/fr/docs/Web/CSS/Reference/At-rules/@page/size) de `@page`
 - Le module [Médias paginés CSS](/fr/docs/Web/CSS/Guides/Paged_media)
 - Le ticket [\[META\] CSS Paged Media Module Level 3 <sup>(angl.)</sup>](https://bugzil.la/286443) du Bugzilla pour suivre l'avancement du sujet (compteurs par page, etc.)

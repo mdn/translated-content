@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/CSS_layout/Floats
 original_slug: Learn/CSS/CSS_layout/Floats
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout")}}
 
 Originalmente pensada para flotar imágenes dentro de bloques de texto, la propiedad {{cssxref("float")}} se convirtió en una de las herramientas más usadas para crear diseños multicolumna en las páginas web. Con la llegada de Flexbox y Grid ha vuelto ahora a su propósito original, como se explica en este artículo.
 
@@ -665,4 +665,4 @@ body {
 
 Ahora ya sabes todo lo que tienes que saber sobre los flotadores en el desarrollo web moderno. Consulta el artículo sobre [métodos de diseño anticuados](/es/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods) para obtener información de cómo se solían usar, lo que puede serte útil si tienes que trabajar en proyectos antiguos.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout")}}

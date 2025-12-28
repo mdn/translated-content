@@ -5,7 +5,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/development_environmen
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Теперь, когда вы знаете, что такое Django, мы покажем вам, как настроить и протестировать среду разработки Django для Windows, Linux (Ubuntu) и Mac OS X - какую бы операционную систему вы не использовали, эта статья должна дать вам все, что необходимо для возможности начать разрабатывать приложения Django.
 

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/CSS_layout/Flexbox
 original_slug: Learn/CSS/CSS_layout/Flexbox
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}{{PreviousMenuNext("conflicting/Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}
 
 [Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout) es un método de diseño de página unidimensional para compaginar elementos en filas o columnas. Los elementos de contenido se ensanchan para rellenar el espacio adicional y se encogen para caber en espacios más pequeños. En este artículo expondremos todas sus características básicas.
 
@@ -343,4 +343,4 @@ Hemos cubierto mucho terreno en este artículo. ¿Recuerdas la información más
 
 Con esto concluye nuestro recorrido por los conceptos básicos de las propiedades flexbox. Esperamos que te hayas divertido y que juegues con ello mientras avanzas en tu aprendizaje. A continuación, veremos otro aspecto importante de los diseños CSS: las rejillas CSS.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("conflicting/Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}

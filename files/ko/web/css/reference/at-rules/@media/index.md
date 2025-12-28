@@ -4,14 +4,14 @@ slug: Web/CSS/Reference/At-rules/@media
 original_slug: Web/CSS/@media
 ---
 
-**`@media`** [CSS](/ko/docs/Web/CSS) [@규칙](/ko/docs/Web/CSS/CSS_syntax/At-rule)은 스타일 시트의 일부를 하나 이상의 [미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries) 결과에 따라 적용할 때 사용할 수 있습니다. `@media`를 사용해 미디어 쿼리를 지정하면 해당 쿼리를 만족하는 장치에서만 CSS 블록을 적용할 수 있습니다.
+**`@media`** [CSS](/ko/docs/Web/CSS) [@규칙](/ko/docs/Web/CSS/Guides/Syntax/At-rules)은 스타일 시트의 일부를 하나 이상의 [미디어 쿼리](/ko/docs/Web/CSS/Guides/Media_queries/Using) 결과에 따라 적용할 때 사용할 수 있습니다. `@media`를 사용해 미디어 쿼리를 지정하면 해당 쿼리를 만족하는 장치에서만 CSS 블록을 적용할 수 있습니다.
 
 > [!NOTE]
 > JavaScript에서는 `@media`를 {{domxref("CSSMediaRule")}} CSS 객체 모델 인터페이스로 접근할 수 있습니다.
 
 ## 구문
 
-`@media` @규칙은 최상위 코드나, 아무 [조건부 그룹 @규칙](/ko/docs/Web/CSS/CSS_syntax/At-rule#조건부_그룹_규칙) 안에 중첩해 작성할 수 있습니다.
+`@media` @규칙은 최상위 코드나, 아무 [조건부 그룹 @규칙](/ko/docs/Web/CSS/Guides/Syntax/At-rules#조건부_그룹_규칙) 안에 중첩해 작성할 수 있습니다.
 
 ```css
 /* 최상위 코드 레벨 */
@@ -31,13 +31,13 @@ original_slug: Web/CSS/@media
 }
 ```
 
-미디어 쿼리 구문에 관한 내용은 [미디어 쿼리 사용하기](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries#구문) 문서를 참고하세요.
+미디어 쿼리 구문에 관한 내용은 [미디어 쿼리 사용하기](/ko/docs/Web/CSS/Guides/Media_queries/Using#구문) 문서를 참고하세요.
 
 ## 접근성 고려사항
 
-글씨 크기를 조절한 사용자를 위해서, 미디어 쿼리의 {{cssxref("&lt;length&gt;")}} 자리에는 [`em`](/ko/docs/Web/CSS/length#em)을 사용하는게 좋습니다.
+글씨 크기를 조절한 사용자를 위해서, 미디어 쿼리의 {{cssxref("&lt;length&gt;")}} 자리에는 [`em`](/ko/docs/Web/CSS/Reference/Values/length#em)을 사용하는게 좋습니다.
 
-`em`과 [`px`](/ko/docs/Web/CSS/length#px) 모두 유효한 단위지만, 사용자가 브라우저의 글씨 크기를 변경했다면 `em`이 더 자연스럽게 동작합니다.
+`em`과 [`px`](/ko/docs/Web/CSS/Reference/Values/length#px) 모두 유효한 단위지만, 사용자가 브라우저의 글씨 크기를 변경했다면 `em`이 더 자연스럽게 동작합니다.
 
 Level 4 미디어 쿼리를 통한 사용자 경험 향상도 고려해보세요. 예컨대 `prefers-reduced-motion` 쿼리를 사용하면 [사용자가 시스템에 애니메이션을 최소로 줄여달라고 요청했는지 알 수 있습니다](/ko/docs/Web/CSS/@media/prefers-reduced-motion).
 
@@ -97,7 +97,7 @@ Media Queries Level 4부터는 새로운 범위 표현 구문을 사용해 더 �
 }
 ```
 
-더 많은 예제는 [미디어 쿼리 사용하기](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries)를 참고하세요.
+더 많은 예제는 [미디어 쿼리 사용하기](/ko/docs/Web/CSS/Guides/Media_queries/Using)를 참고하세요.
 
 ## 명세
 
@@ -109,7 +109,7 @@ Media Queries Level 4부터는 새로운 범위 표현 구문을 사용해 더 �
 
 ## 같이 보기
 
-- [미디어 쿼리 사용하기](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [미디어 쿼리 사용하기](/ko/docs/Web/CSS/Guides/Media_queries/Using)
 - JavaScript에서 `@media`에 접근할 때 사용할 수 있는 CSS 객체 모델 인터페이스 {{domxref("CSSMediaRule")}}
 - [Mozilla 미디어 특성 확장](/ko/docs/Web/CSS/Mozilla_Extensions#Media_features)
 - [WebKit 미디어 특성 확장](/ko/docs/Web/CSS/Webkit_Extensions#Media_features)

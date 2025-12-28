@@ -13,7 +13,7 @@ l10n:
 
 通常のウェブページで読み込まれたスクリプトと同様に、コンテンツスクリプトは、標準の [Web API](/ja/docs/Web/API) を使用してページのコンテンツを読み取り、変更することができます。しかし、このようなことができるのは、[ウェブページのオリジンに対するホスト権限が与えられている場合](#権限)だけです。
 
-> [!NOTE] 一部の Web API は[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)に制限されており、これらのコンテキストで実行するコンテンツスクリプトにも適用されます。ただし、{{domxref("PointerEvent.getCoalescedEvents()")}} は、 Firefox の保護されていないコンテキストでコンテンツスクリプトから呼び出すことができます。
+> [!NOTE] 一部の Web API は[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)に制限されており、これらのコンテキストで実行するコンテンツスクリプトにも適用されます。ただし、{{domxref("PointerEvent.getCoalescedEvents()")}} は、 Firefox の保護されていないコンテキストでコンテンツスクリプトから呼び出すことができます。
 
 コンテンツスクリプトは、[WebExtension API の小さなサブセット](#webextension_api)にしかアクセスできませんが、メッセージングシステムを使用して [バックグラウンドスクリプトと通信](#バックグラウンドスクリプトとの通信)し、WebExtension API に間接的にアクセスすることができます。
 

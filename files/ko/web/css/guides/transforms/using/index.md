@@ -9,7 +9,7 @@ original_slug: Web/CSS/CSS_transforms/Using_CSS_transforms
 CSS 변형은 HTML 요소에 선형 아핀 변형(affine linear transformation)을 적용하는 여러 개의 CSS 속성을 조합해 구현합니다. 변형은 평면과 3D 공간에서의 회전, 확대, 이동, 비틀기를 포함합니다.
 
 > [!WARNING]
-> [박스 모델](/ko/docs/Web/CSS/CSS_box_model)에 따라 배치된 요소만 `transform`을 적용할 수 있습니다. 한 가지 예를 들자면, `display: block` 속성을 가진 요소는 박스 모델을 따릅니다.
+> [박스 모델](/ko/docs/Web/CSS/Guides/Box_model)에 따라 배치된 요소만 `transform`을 적용할 수 있습니다. 한 가지 예를 들자면, `display: block` 속성을 가진 요소는 박스 모델을 따릅니다.
 
 ## CSS 변형 속성
 

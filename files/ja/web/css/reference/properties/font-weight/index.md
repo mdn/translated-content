@@ -1,9 +1,8 @@
 ---
 title: font-weight
 slug: Web/CSS/Reference/Properties/font-weight
-original_slug: Web/CSS/font-weight
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`font-weight`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントの太さ（あるいは重み）を指定します。実際に表示されるフォントの太さは、現在設定されている {{cssxref("font-family")}} に依存する場合があります。
@@ -223,9 +222,8 @@ TrueType や OpenType の可変フォントでは、 "wght" バリエーショ�
 .sample {
   text-transform: uppercase;
   font-weight: 500;
-  font:
-    1.5rem "MutatorSans",
-    sans-serif;
+  font-size: 1.5rem;
+  font-family: "MutatorSans", sans-serif;
 }
 ```
 
@@ -303,5 +301,6 @@ span {
 
 - {{cssxref("font-family")}}
 - {{cssxref("font-style")}}
+- SVG の {{SVGAttr("font-weight")}} 属性
 - [基本的なテキストとフォントのスタイル設定](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)
 - [CSS フォント](/ja/docs/Web/CSS/Guides/Fonts)モジュール

@@ -42,7 +42,7 @@ Dans l'exemple qui suit, vous pouvez modifier `flex: auto` pour utiliser `flex: 
 
 ## La navigation séparée
 
-Une autre façon d'aligner les éléments le long de l'axe principal consiste à utiliser des marges automatiques. Cela permet d'obtenir une barre où une partie des éléments sont alignés à gauche alors qu'un second groupe est aligné à droite. Dans l'exemple qui suit, on utilise la technique des marges automatiques détaillée dans [Utiliser les marges automatiques pour l'alignement sur l'axe principal](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container#utiliser_les_marges_automatiques_pour_aligner_sur_l'axe_principal).
+Une autre façon d'aligner les éléments le long de l'axe principal consiste à utiliser des marges automatiques. Cela permet d'obtenir une barre où une partie des éléments sont alignés à gauche alors qu'un second groupe est aligné à droite. Dans l'exemple qui suit, on utilise la technique des marges automatiques détaillée dans [Utiliser les marges automatiques pour l'alignement sur l'axe principal](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items#utiliser_les_marges_automatiques_pour_aligner_sur_laxe_principal).
 
 Les éléments sont alignés sur l'axe principal avec `flex-start` car c'est le comportement initial de flexbox. La propriété [`gap`](/fr/docs/Web/CSS/Reference/Properties/gap) a été utilisée pour créer des espaces entre les éléments. Nous alignons le dernier élément sur la droite en lui attribuant une marge gauche automatique. Vous pouvez déplacer la classe d'un élément à l'autre pour modifier l'emplacement de la séparation.
 

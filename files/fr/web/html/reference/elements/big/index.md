@@ -1,18 +1,16 @@
 ---
 title: "<big> : l'élément d'agrandissement de texte"
 slug: Web/HTML/Reference/Elements/big
-original_slug: Web/HTML/Element/big
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+{{Deprecated_Header}}
+
+L'élément [HTML](/fr/docs/Web/HTML) obsolète **`<big>`** affiche le texte qu'il contient avec une taille de police supérieure d'un niveau à celle du texte environnant (par exemple, `medium` devient `large`). La taille est limitée à la valeur maximale autorisée par le navigateur.
 
 > [!WARNING]
-> Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la supporter, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications Web l'utilisant peuvent cesser de fonctionner à tout moment.
-
-L'élément HTML **`<big>`** (gros) augmente d'une taille la police du texte de l'élément (il permet par exemple de passer de `small` à `medium`, ou de `large` à `x-large`) jusqu'à atteindre la taille maximale autorisée par le navigateur.
-
-> [!NOTE]
-> Cet élément est purement stylistique. Il a été supprimé en HTML5 et ne doit plus être utilisé. Les développeurs web doivent utiliser les propriétés [CSS](/fr/docs/Web/CSS) pour remplacer cet élément.
+> Cet élément a été supprimé de la spécification et ne doit plus être utilisé. Utilisez la propriété CSS {{CSSxRef("font-size")}} pour ajuster la taille de la police.
 
 ## Attributs
 
@@ -22,7 +20,7 @@ Cet élément n'a aucun autre attribut en dehors des [attributs universels](/fr/
 
 Nous voyons ici des exemples montrant l'utilisation de `<big>` suivis d'un exemple montrant comment obtenir les mêmes résultats en utilisant plutôt la syntaxe CSS moderne.
 
-### Utilisation de \<big>
+### Utilisation de `<big>`
 
 Dans cet exemple, on utilise l'élément obsolète `<big>` afin d'augmenter la taille du texte.
 
@@ -37,11 +35,11 @@ Dans cet exemple, on utilise l'élément obsolète `<big>` afin d'augmenter la t
 
 #### Résultat
 
-{{EmbedLiveSample("Utilisation_de_big", "", 110)}}
+{{EmbedLiveSample("Utilisation de `<big>`", 640, 60)}}
 
 ### Utilisation de la propriété CSS `font-size`
 
-Cet exemple utilise la propriété CSS [`font-size`](/fr/docs/Web/CSS/Reference/Properties/font-size) pour augmenter la taille de la police d'un niveau.
+Cet exemple utilise la propriété CSS {{CSSxRef("font-size")}} pour augmenter la taille de la police d'un niveau.
 
 #### CSS
 
@@ -64,14 +62,11 @@ Cet exemple utilise la propriété CSS [`font-size`](/fr/docs/Web/CSS/Reference/
 
 #### Résultat
 
-{{EmbedLiveSample("Utilisation_de_la_propriété_CSS_font-size", "", 100)}}
+{{EmbedLiveSample("Utilisation de la propriété CSS `font-size`", 640, 60)}}
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement).
-
-> [!NOTE]
-> Jusqu'à Gecko 1.9.2 inclus, Firefox implémentait l'interface [`HTMLSpanElement`](/fr/docs/Web/API/HTMLSpanElement) pour cet élément.
+Cet élément implémente l'interface {{DOMxRef('HTMLElement')}}.
 
 ## Spécifications
 
@@ -83,6 +78,5 @@ Cet élément implémente l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLEleme
 
 ## Voir aussi
 
-- CSS : [`font-size`](/fr/docs/Web/CSS/Reference/Properties/font-size), [`font`](/fr/docs/Web/CSS/Reference/Properties/font)
-- HTML : [`<small>`](/fr/docs/Web/HTML/Reference/Elements/small), [`<font>`](/fr/docs/Web/HTML/Reference/Elements/font), [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style)
-- Spécification HTML 4.01 sur [la mise en forme utilisant les polices](https://www.w3.org/TR/html4/present/graphics.html#h-15.2)
+- CSS&nbsp;: {{CSSxRef("font-size")}}, {{CSSxRef("font")}}
+- HTML&nbsp;: {{HTMLElement("small")}}, {{HTMLElement("font")}}, {{HTMLElement("style")}}

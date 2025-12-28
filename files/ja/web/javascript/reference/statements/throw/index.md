@@ -2,20 +2,17 @@
 title: throw
 slug: Web/JavaScript/Reference/Statements/throw
 l10n:
-  sourceCommit: 0f3738f6b1ed1aa69395ff181207186e1ad9f4d8
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Statements")}}
+**`throw`** 文は、ユーザー定義の例外を発生させます。現在の関数の実行を停止し（`throw` の後の文は実行されません）、コールスタック内の最初の [`catch`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) ブロックに制御を移します。呼び出し元の関数に `catch` ブロックが存在しない場合は、プログラムが終了します。
 
-**`throw`** 文は、ユーザー定義の例外を発生させます。
-現在の関数の実行を停止し（`throw` の後の文は実行されません）、コールスタック内の最初の [`catch`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) ブロックに制御を移します。呼び出し元の関数に `catch` ブロックが存在しない場合は、プログラムが終了します。
-
-{{InteractiveExample("JavaScript デモ: Statement - Throw")}}
+{{InteractiveExample("JavaScript デモ: throw 文")}}
 
 ```js interactive-example
 function getRectArea(width, height) {
   if (isNaN(width) || isNaN(height)) {
-    throw new Error("Parameter is not a number!");
+    throw new Error("引数が数値ではありません!");
   }
 }
 
@@ -23,7 +20,7 @@ try {
   getRectArea(3, "A");
 } catch (e) {
   console.error(e);
-  // Expected output: Error: Parameter is not a number!
+  // 予想される結果: Error: 引数が数値ではありません!
 }
 ```
 
@@ -38,144 +35,101 @@ throw expression;
 
 ## 解説
 
-`throw` 文を使用して例外を発生させることができます。例外を発生させるときは、 `expression` で例外の値を指定します。以下のいずれもが例外を発生させます。
+`throw` 文は、文が使用できるすべてのコンテキストで有効です。その実行により例外が生成され、コールスタックを遡って伝播します。エラーの伝播と処理の詳細については、[制御フローとエラー処理](/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)を参照してください。
+
+`throw` キーワードの次の式は、下記のようにあらゆる種類の式を続けることができます。
 
 ```js
-throw "Error2"; // 文字列値である例外を生成します
-throw 42; // 値 42 である例外を生成します
-throw true; // 値 true である例外を生成します
-throw new Error("Required"); // Required というメッセージを持ったエラーオブジェクトを生成します
+throw error; // （catch ブロックの中などで）前回定義された値を投げる
+throw new Error("Required"); // 新しい Error オブジェクトを投げる
 ```
 
-また、`throw` 文は[自動セミコロン挿入 (ASI)](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#自動セミコロン挿入)の影響を受けることに注意してください。`throw` キーワードと式の間に改行は許されていません。
+実際には、投げられる例外は常に {{jsxref("Error")}} オブジェクト、または {{jsxref("RangeError")}} のような `Error` のサブクラスのインスタンスであるべきです。これは、例外を捕捉するコードが、捕捉された値に {{jsxref("Error/message", "message")}} などの特定のプロパティが存在することを期待する可能性があるためです。例えば、Web API は通常、`Error.prototype` を継承する {{domxref("DOMException")}} インスタンスを投げます。
+
+### 自動セミコロン挿入
+
+構文上、`throw`キーワードと投げられる式の間に改行文字を挿入することは禁止されています。
+
+```js-nolint example-bad
+throw
+new Error();
+```
+
+このコードは[自動セミコロン挿入 (ASI)](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#自動セミコロン挿入) によって次のように変換されます。
+
+```js-nolint
+throw;
+new Error();
+```
+
+これは無効なコードです。{{jsxref("Statements/return", "return")}} とは異なり、`throw` は式が続かなければなりません。
+
+この問題を防ぐには（ASI を防ぐには）、括弧で囲むことができます。
+
+```js-nolint
+throw (
+  new Error()
+);
+```
 
 ## 例
 
-### オブジェクトで例外を発生させる
+### ユーザー定義エラーを投げる
 
-例外を派生させるときにオブジェクトを指定することができます。そうすれば、 `catch` ブロックの中でそのオブジェクトのプロパティを参照できます。次の例は、 `UserException` 型のオブジェクトを生成し、それを `throw` 文の中で使っています。
+この例では、入力が期待される型でなかった場合に {{jsxref("TypeError")}} を発生する関数を定義する。
 
 ```js
-function UserException(message) {
-  this.message = message;
-  this.name = "UserException";
+function isNumeric(x) {
+  return ["number", "bigint"].includes(typeof x);
 }
-function getMonthName(mo) {
-  mo--; // 配列の添字のために月の数を調整する (1 = Jan, 12 = Dec)
-  const months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
-  if (months[mo] !== undefined) {
-    return months[mo];
-  } else {
-    throw new UserException("InvalidMonthNo");
+
+function sum(...values) {
+  if (!values.every(isNumeric)) {
+    throw new TypeError("数値のみを加えることができます");
   }
+  return values.reduce((a, b) => a + b);
 }
 
-let monthName;
-
+console.log(sum(1, 2, 3)); // 6
 try {
-  // 試みる文
-  const myMonth = 15; // 15 は範囲外であり、例外が発生する
-  monthName = getMonthName(myMonth);
+  sum("1", "2");
 } catch (e) {
-  monthName = "unknown";
-  console.error(e.message, e.name); // エラーハンドラーに例外オブジェクトを渡す
+  console.error(e); // TypeError: Can only add numbers
 }
 ```
 
-### オブジェクトで例外を発生させる他の例
+### 既存のオブジェクトを投げる
 
-次の例では入力文字列でアメリカの郵便番号であるかどうかをテストします。郵便番号が無効な書式を使っていた場合は、 throw 文で `ZipCodeFormatException` 型のオブジェクトを生成して例外を発生させます。
+この例はコールバックベースの非同期関数を呼び出し、コールバックがエラーを受け取った場合に例外を発生させます。
 
 ```js
-/*
- * ZipCode オブジェクトを生成します。
- *
- * 郵便番号として受け入れられる書式は次のとおりです。
- *    12345
- *    12345-6789
- *    123456789
- *    12345 6789
- *
- * もし ZipCode コンストラクターに渡された引数が、これらのパターンの
- * うちのどれにも一致しないのであれば、例外が発生します。
- */
-class ZipCode {
-  static pattern = /[0-9]{5}([- ]?[0-9]{4})?/;
-  constructor(zip) {
-    zip = String(zip);
-    const match = zip.match(ZipCode.pattern);
-    if (!match) {
-      throw new ZipCodeFormatException(zip);
-    }
-    // 郵便番号の値は文字列中で最初に一致した部分です。
-    this.value = match[0];
+readFile("foo.txt", (err, data) => {
+  if (err) {
+    throw err;
   }
-  valueOf() {
-    return this.value;
-  }
-  toString() {
-    return this.value;
-  }
-}
-
-class ZipCodeFormatException extends Error {
-  constructor(zip) {
-    super(`${zip} does not conform to the expected format for a zip code`);
-  }
-}
-
-/*
- * これは、US の住所のためのアドレスデータを検証するスクリプトで
- * 使われるかもしれません。
- */
-
-const ZIPCODE_INVALID = -1;
-const ZIPCODE_UNKNOWN_ERROR = -2;
-
-function verifyZipCode(z) {
-  try {
-    z = new ZipCode(z);
-  } catch (e) {
-    const isInvalidCode = e instanceof ZipCodeFormatException;
-    return isInvalidCode ? ZIPCODE_INVALID : ZIPCODE_UNKNOWN_ERROR;
-  }
-  return z;
-}
-
-a = verifyZipCode(95060); // 95060 を返します
-b = verifyZipCode(9560); // -1 を返します
-c = verifyZipCode("a"); // -1 を返します
-d = verifyZipCode("95060"); // 95060 を返します
-e = verifyZipCode("95060 1234"); // 95060 1234 を返します
+  console.log(data);
+});
 ```
 
-### 例外を再発生させる
-
-例外を捕捉した後、その例外を再度発生させるために `throw` を使うことができます。次の例では、数値である例外を捕捉し、もしその値が 50 を超えるのなら、それを改めて発生させます。改めて発生した例外は、利用者がわかるように、囲んでいる関数または最上位にいたるまで伝播します。
+この方法で発生するエラーは呼び出し側で捕捉できず、プログラムがクラッシュします。ただし、(a) `readFile` 関数自体がエラーを捕捉する場合、または (b) 最上位のエラーを捕捉するコンテキストでプログラムが実行されている場合を除きます。{{jsxref("Promise/Promise", "Promise()")}} コンストラクターを使用することで、より自然なエラー処理が可能です。
 
 ```js
+function readFilePromise(path) {
+  return new Promise((resolve, reject) => {
+    readFile(path, (err, data) => {
+      if (err) {
+        reject(err);
+      }
+      resolve(data);
+    });
+  });
+}
+
 try {
-  throw n; // 数値である例外を発生させる
-} catch (e) {
-  if (e <= 50) {
-    // 1 から 50 の例外を操作するための文
-  } else {
-    // この例外を操作できないので、再度発生させる
-    throw e;
-  }
+  const data = await readFilePromise("foo.txt");
+  console.log(data);
+} catch (err) {
+  console.error(err);
 }
 ```
 
@@ -190,4 +144,4 @@ try {
 ## 関連情報
 
 - {{jsxref("Statements/try...catch", "try...catch")}}
-- {{jsxref("Global_Objects/Error", "Error")}}
+- {{jsxref("Error")}}

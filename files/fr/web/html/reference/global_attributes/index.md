@@ -1,9 +1,8 @@
 ---
 title: Attributs universels
 slug: Web/HTML/Reference/Global_attributes
-original_slug: Web/HTML/Global_attributes
 l10n:
-  sourceCommit: 1e1ac4b84b46ef34e901e22ee94e97cc749a4b3a
+  sourceCommit: dc788bf0ea36cb1ebe809c82aaae2c77cb3e18c0
 ---
 
 Les **attributs universels** sont des attributs communs à l'ensemble des éléments HTML. Ces attributs peuvent donc être ajoutés sur tous les éléments (dans certains cas, les attributs n'auront aucun effet).
@@ -81,7 +80,7 @@ En plus des attributs universels HTML, il existe également les attributs univer
 - [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang)
   - : Aide à définir la langue d'un élément&nbsp;: la langue dans laquelle les éléments non éditables sont écrits, ou la langue dans laquelle les éléments éditables doivent être écrits par l'utilisateur·ice. L'attribut doit contenir une valeur valide {{Glossary("BCP 47 language tag", "de balise de langue BCP 47")}}. `xml:lang` est prioritaire sur celui-ci.
 - [`nonce`](/fr/docs/Web/HTML/Reference/Global_attributes/nonce)
-  - : Un nombre unique («&nbsp;nonce&nbsp;», pour <i lang="en">number used once</i> en anglais) qui peut être utilisé par la [politique de sécurité du contenu](/fr/docs/Web/HTTP/Guides/CSP) pour déterminer si une requête donnée sera autorisée ou non.
+  - : Un nombre unique («&nbsp;{{Glossary("Nonce", "nonce")}}&nbsp;», pour <i lang="en">number used once</i> en anglais) qui peut être utilisé par la [politique de sécurité du contenu](/fr/docs/Web/HTTP/Guides/CSP) pour déterminer si une requête donnée sera autorisée ou non.
 - [`part`](/fr/docs/Web/HTML/Reference/Global_attributes/part)
   - : Une liste de noms de parties séparés par des espaces pour l'élément. Les noms de parties permettent au CSS de cibler et de mettre en forme des éléments spécifiques dans un arbre d'ombre (<i lang="en">shadow tree</i> en anglais) via le pseudo-élément {{CSSxRef("::part")}}.
 - [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover)

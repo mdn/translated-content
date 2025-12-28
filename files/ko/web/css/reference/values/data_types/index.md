@@ -63,5 +63,5 @@ original_slug: Web/CSS/CSS_values_and_units/CSS_data_types
 
 ## 같이 보기
 
-- [CSS 단위와 값](/ko/docs/Web/CSS/CSS_values_and_units)
+- [CSS 단위와 값](/ko/docs/Web/CSS/Guides/Values_and_units)
 - [CSS 단위와 값 소개](/ko/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

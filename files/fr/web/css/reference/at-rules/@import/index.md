@@ -1,9 +1,8 @@
 ---
 title: "@import"
 slug: Web/CSS/Reference/At-rules/@import
-original_slug: Web/CSS/@import
 l10n:
-  sourceCommit: 9944f7b12ef1a6aecd54d4b2f0c188a82fdeaaf0
+  sourceCommit: 1dcf976e9b654679c762568812562b1a2361c755
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@import`** est utilisée pour importer des règles de style depuis d'autres feuilles de style valides.
@@ -26,7 +25,7 @@ Une règle `@import` _doit_ être définie en haut de la feuille de style, avant
 où&nbsp;:
 
 - _url_
-  - : Est une chaîne de caractères ({{CSSxRef("string")}}) ou une valeur de type {{cssxref("url_value", "&lt;url&gt;")}} représentant l'emplacement de la ressource à importer. L'URL peut être absolue ou relative.
+  - : Est une chaîne de caractères ({{CSSxRef("string")}}) ou une valeur de type {{CSSxRef("url_value", "&lt;url&gt;")}} représentant l'emplacement de la ressource à importer. L'URL peut être absolue ou relative.
 - _list-of-media-queries_
   - : Est une liste de [requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using) séparées par des virgules, qui spécifient les conditions dépendantes du média pour appliquer les règles CSS définies dans l'URL liée. Si le navigateur ne prend en charge aucune de ces requêtes, il ne charge pas la ressource liée.
 - _layer-name_
@@ -64,18 +63,18 @@ Comme la règle at-rule `@import` est déclarée après les styles, elle est inv
 
 La règle `@import` n'est pas une [instruction imbriquée](/fr/docs/Web/CSS/Guides/Syntax/Introduction#nested_statements). Elle ne peut donc pas être utilisée à l'intérieur de [groupes conditionnels des règles @](/fr/docs/Web/CSS/Guides/Conditional_rules#règles-@).
 
-Pour que les {{glossary("user agent", "agents utilisateur")}} puissent éviter de récupérer des ressources pour des types de média non pris en charge, les auteur·ice·s peuvent spécifier des conditions d'importation dépendantes du média. Ces importations conditionnelles spécifient des [requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using) séparées par des virgules après l'URL. En l'absence de requête média, l'importation n'est pas conditionnée au média utilisé. Spécifier `all` pour la `list-of-media-queries` a le même effet.
+Pour que les {{Glossary("user agent", "agents utilisateur")}} puissent éviter de récupérer des ressources pour des types de média non pris en charge, les auteur·ice·s peuvent spécifier des conditions d'importation dépendantes du média. Ces importations conditionnelles spécifient des [requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using) séparées par des virgules après l'URL. En l'absence de requête média, l'importation n'est pas conditionnée au média utilisé. Spécifier `all` pour la `list-of-media-queries` a le même effet.
 
 De même, les agents utilisateur peuvent utiliser la fonction `supports()` dans une règle at-rule `@import` pour ne récupérer les ressources que si un ensemble de fonctionnalités particulier est (ou n'est pas) pris en charge.
 
 Cela permet aux auteur·ice·s de profiter des fonctionnalités CSS récemment introduites, tout en assurant une rétrocompatibilité pour les anciennes versions de navigateurs.
-Notez que les conditions de la fonction `supports()` d'une règle at-rule `@import` peuvent être obtenues en JavaScript via {{domxref("CSSImportRule.supportsText")}}.
+Notez que les conditions de la fonction `supports()` d'une règle at-rule `@import` peuvent être obtenues en JavaScript via {{DOMxRef("CSSImportRule.supportsText")}}.
 
 La règle `@import` peut aussi être utilisée pour créer une [couche de cascade](/fr/docs/Web/CSS/Reference/At-rules/@layer) en important des règles depuis une ressource liée. Les règles peuvent aussi être importées dans une couche de cascade existante. Le mot-clé `layer` ou la fonction `layer()` sont utilisés avec `@import` à cet effet. Les déclarations des règles de style des feuilles importées interagissent avec la cascade comme si elles étaient écrites littéralement dans la feuille de style au point d'importation.
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -158,7 +157,7 @@ Ceci est un exemple de création de deux couches de cascade sans nom distinctes 
 
 ## Voir aussi
 
-- {{CSSxRef("@media")}}
-- {{CSSxRef("@supports")}}
-- Le module [cascade et héritage CSS](/fr/docs/Web/CSS/CSS_cascade)
+- La règle {{CSSxRef("@media")}}
+- La règle {{CSSxRef("@supports")}}
+- Le module de [cascade et héritage CSS](/fr/docs/Web/CSS/CSS_cascade)
 - [Fonctions des règles @ CSS](/fr/docs/Web/CSS/CSS_syntax/At-rule_functions)
