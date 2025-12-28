@@ -1,12 +1,11 @@
 ---
 title: hue-rotate()
 slug: Web/CSS/Reference/Values/filter-function/hue-rotate
-original_slug: Web/CSS/filter-function/hue-rotate
 l10n:
-  sourceCommit: 5026c14bd6d2b6b377289aadac7eceae9282e806
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**`hue-rotate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、要素およびその中身のコンテンツの[色相環](https://ja.wikipedia.org/wiki/%E8%89%B2%E7%9B%B8)を回転させます。結果は {{cssxref("&lt;filter-function&gt;")}} です。
+**`hue-rotate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、要素およびその中身のコンテンツの[色相環](https://ja.wikipedia.org/wiki/%E8%89%B2%E7%9B%B8)を回転させます。結果は {{cssxref("filter-function")}} です。
 
 > [!NOTE]
 > `hue-rotate()` は RGB 色に対する行列演算として定義されています。これは実際には色を HSL モデルに変換するものではなく、非線形操作です。そのため、特に彩度の高い色の場合、元の色の彩度や明度が維持されない場合があります。
@@ -41,16 +40,14 @@ filter: hue-rotate(3.142rad);
 
 ## 構文
 
-`hue-rotate()` 関数は、適用された要素に色相回転を適用します。
-
 ```css
 hue-rotate(angle)
 ```
 
 ### 引数
 
-- `angle`
-  - : 入力サンプルの色相の相対的な変化量を、 {{cssxref("&lt;angle&gt;")}} で指定します。 `0deg` は入力を変更しないままにします。正の回転角は色相の値を増加させるのに対し、負の回転角は色相の値を減少させます。{{Glossary("interpolation","補間")}}の初期値は `0` です。最小値または最大値はありません。 `360deg` を超える値の効果は、 `hue-rotate(Ndeg)` とした場合、 `N` を 360 で割った余りと等価です。
+- `angle` {{Optional_Inline}}
+  - : 入力サンプルの色相の相対的な変化量を、 {{cssxref("angle")}} で指定します。 `0deg` は入力を変更しないままにします。正の回転角は色相の値を増加させるのに対し、負の回転角は色相の値を減少させます。{{Glossary("interpolation","補間")}}の初期値は `0` です。最小値または最大値はありません。 `360deg` を超える値の効果は、 `hue-rotate(Ndeg)` とした場合、 `N` を 360 で割った余りと等価です。デフォルト値は `0deg` です。
 
 CSS のデータ型 `<angle>` は、度、グラディアン、ラジアン、回転で表された角度の値を表します。次のものは同等です。
 
@@ -62,9 +59,9 @@ hue-rotate(3.14159rad)
 hue-rotate(0.5turn)
 ```
 
-### 形式文法
+## 形式文法
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## 例
 
@@ -74,7 +71,8 @@ hue-rotate(0.5turn)
 
 ```css
 .container {
-  background: url(image.jpg) no-repeat left / contain #011296;
+  background: url("/shared-assets/images/examples/listen_to_black_women.jpg")
+    no-repeat left / contain #011296;
 }
 p {
   backdrop-filter: hue-rotate(240deg);
@@ -89,18 +87,16 @@ p {
 }
 p {
   padding: 0.5rem;
-  color: #ffffff;
+  color: white;
   font-size: 2rem;
   font-family: sans-serif;
 }
 ```
 
-```html-nolint hidden
-<div
-  class="container"
-  style="background-image: url('https://mdn.github.io/shared-assets/images/examples/listen_to_black_women.jpg');">
+```html hidden
+<div class="container">
   <p>
-    画像上のテキストは、ドロップシャドウがあっても読みにくく、アクセシビリティがない場合があります。
+    画像上のテキストは、ドロップシャドウがあっても読みにくく、アクセシビリティに欠ける場合があります。
   </p>
 </div>
 ```
@@ -143,24 +139,31 @@ p {
 
 SVG の {{SVGElement("filter")}} 要素は、カスタムフィルター効果を定義するために使用でき、 [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) で参照することができます。 `<filter>` の {{SVGElement("feColorMatrix")}} プリミティブの `hueRotate` 型は、同様の効果を提供します。次のものが指定されたとします。
 
-```svg
-<filter id="filterID">
-  <feColorMatrix type="hueRotate" values="90" />
-</filter>
+```html live-sample___svg_filter
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 220 220"
+  color-interpolation-filters="sRGB"
+  height="220"
+  width="220">
+  <filter id="hue-rotate">
+    <feColorMatrix type="hueRotate" values="90" />
+  </filter>
+</svg>
 ```
 
 これらの値は同じ結果をもたらします。
 
 ```css
 filter: hue-rotate(90deg); /* 90deg 回転 */
-filter: url(#filterID); /* 埋め込み SVG で */
-filter: url(folder/fileName.svg#filterID); /* 外部 SVG フィルター定義 */
+filter: url("#hue-rotate"); /* 埋め込み SVG で */
+filter: url("folder/fileName.svg#hue-rotate"); /* 外部 SVG フィルター定義 */
 ```
 
 この例では、 3 つの画像を表示させています。 `hue-rotate()` フィルター関数を適用した画像、同等の `url()` フィルターを適用した画像、比較用の元画像です。
 
-```html hidden
-<table cellpadding="5">
+```html hidden live-sample___svg_filter
+<table>
   <thead>
     <tr>
       <th><code>hue-rotate()</code></th>
@@ -172,39 +175,44 @@ filter: url(folder/fileName.svg#filterID); /* 外部 SVG フィルター定義 *
     <tr>
       <td>
         <img
-          style="filter: hue-rotate(90deg)"
+          class="css-filter"
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
           alt="色を回転させたプライドフラッグ" />
       </td>
       <td>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 220 220"
-          color-interpolation-filters="sRGB"
-          height="220"
-          width="220">
-          <filter id="hue-rotate">
-            <feColorMatrix type="hueRotate" values="90" />
-          </filter>
-          <image
-            href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-            filter="url(#hue-rotate)"
-            width="220"
-            height="220" />
-        </svg>
+        <img
+          class="svg-filter"
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="色を回転させたプライドフラッグ" />
       </td>
-
       <td>
         <img
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-          alt="Pride flag" />
+          alt="プライドフラッグ" />
       </td>
     </tr>
   </tbody>
 </table>
 ```
 
-{{EmbedLiveSample('With_url()_and_the_SVG_hue-rotate_filter','100%','280')}}
+```css hidden live-sample___svg_filter
+.css-filter {
+  filter: hue-rotate(90deg);
+}
+.svg-filter {
+  filter: url("#hue-rotate");
+}
+
+th,
+td {
+  padding: 5px;
+}
+svg:not(:root) {
+  display: none;
+}
+```
+
+{{EmbedLiveSample('svg_filter','100%','280')}}
 
 ### hue-rotate() は彩度や明度を維持しない
 
@@ -264,7 +272,7 @@ for (let i = 0; i < 360; i++) {
 ## 関連情報
 
 - [CSS フィルター効果](/ja/docs/Web/CSS/Guides/Filter_effects)モジュール
-- その他の {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティの値で使用できる {{cssxref("&lt;filter-function&gt;")}} 関数には、次のものがあります。
+- その他の {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティの値で使用できる {{cssxref("filter-function")}} 関数には、次のものがあります。
   - {{cssxref("filter-function/blur", "blur()")}}
   - {{cssxref("filter-function/brightness", "brightness()")}}
   - {{cssxref("filter-function/contrast", "contrast()")}}
