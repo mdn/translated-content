@@ -155,11 +155,12 @@ body {
 
 {{EmbedLiveSample('simple-grid_2', '100%', "130") }}
 
-## グリッド概念の対話的な復習
+<!-- ## グリッド概念の対話的な復習
 
 次の Scrimba<sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_コンテンツ#partner_links_and_embeds)</sup>からの埋め込みコンテンツは、CSS グリッドの基本に関する対話型レッスンを提供します。同時に、コードの動作を確認するために操作できるライブグリッドの例も含まれています。
 
 <mdn-scrim-inline url="https://scrimba.com/learn-css-grid-c02k/~01" scrimtitle="Your first grid"></scrim-inline>
+-->
 
 ### fr 単位を使用した柔軟なグリッド
 
