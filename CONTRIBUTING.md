@@ -119,11 +119,22 @@ At the time of writing this document, a massive cleanup of translated content is
 
 #### Has a source commit property
 
-XXX Write me...
+If the file has a `l10n.sourceCommit` property, you can use `git diff` to see what has changed in the upstream content since the translation was last updated.
+
+1. Navigate to your local `mdn/content` repository.
+2. Run `git diff <sourceCommit> HEAD -- <path_to_upstream_file>`
+   - Replace `<sourceCommit>` with the hash found in the translated file's front matter.
+   - Replace `<path_to_upstream_file>` with the path to the English source file.
+3. Update the translation to reflect the changes shown in the diff.
+4. Update the `l10n.sourceCommit` property to the latest commit hash of the upstream file (can be found with `git log -1 <path_to_upstream_file>`).
 
 #### No source commit present
 
-XXX Write me...
+If the file does _not_ have a `l10n.sourceCommit` property, it is difficult to know exactly which version of the English content the translation is based on. In this case, you should:
+
+1. Compare the current translation with the current English version.
+2. Update the translation to match the current English version as closely as possible.
+3. Add the `l10n.sourceCommit` property to the front matter, setting it to the latest commit hash of the upstream English file.
 
 ## License
 
