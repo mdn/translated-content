@@ -1,5 +1,5 @@
 ---
-title: "AbortSignal：any() 静态方法"
+title: AbortSignal：any() 静态方法
 short-title: any()
 slug: Web/API/AbortSignal/any_static
 l10n:
