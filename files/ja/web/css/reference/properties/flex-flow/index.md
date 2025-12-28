@@ -1,9 +1,8 @@
 ---
 title: flex-flow
 slug: Web/CSS/Reference/Properties/flex-flow
-original_slug: Web/CSS/flex-flow
 l10n:
-  sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`flex-flow`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、フレックスコンテナーの向きと折り返しの動作を同時に指定します。
@@ -48,7 +47,7 @@ flex-flow: column wrap;
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   width: 60px;
   margin: 10px;
@@ -59,8 +58,8 @@ flex-flow: column wrap;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`flex-direction`](/ja/docs/Web/CSS/Reference/Properties/flex-direction)
-- [`flex-wrap`](/ja/docs/Web/CSS/Reference/Properties/flex-wrap)
+- {{cssxref("flex-direction")}}
+- {{cssxref("flex-wrap")}}
 
 ## 構文
 
@@ -105,9 +104,10 @@ flex-flow: unset;
 
 ### column-reverse と wrap の設定
 
+この例では、主軸はブロック方向であり、主軸の先頭と末尾が逆転しています。フレックスアイテムは、必要があれば折り返され、新しい行を作成することができます。
+
 ```css
-element {
-  /* main-axis は block 方向で、 main-start と main-end を逆にします。フレックスアイテムは複数行にレイアウトされます */
+.container {
   flex-flow: column-reverse wrap;
 }
 ```
@@ -122,5 +122,5 @@ element {
 
 ## 関連情報
 
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)_
-- CSS フレックスボックスガイド: _[フレックスアイテムの順序](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)_
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [フレックスアイテムの順序](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)

@@ -1,9 +1,8 @@
 ---
 title: flex-wrap
 slug: Web/CSS/Reference/Properties/flex-wrap
-original_slug: Web/CSS/flex-wrap
 l10n:
-  sourceCommit: 1f12a4156d4aec63d8466c49a39b1ac76d8a5735
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`flex-wrap`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスアイテムを単一行に押し込むか、あるいは複数行に折り返してもよいかを指定します。折り返しを許可する場合は、行を積み重ねる方向の制御も可能です。
@@ -43,7 +42,7 @@ flex-wrap: wrap-reverse;
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   width: 60px;
   margin: 10px;
@@ -120,7 +119,7 @@ flex-wrap: unset;
 .content,
 .content1,
 .content2 {
-  color: #fff;
+  color: white;
   font: 100 24px/100px sans-serif;
   height: 150px;
   width: 897px;

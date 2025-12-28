@@ -1,9 +1,8 @@
 ---
 title: flex
 slug: Web/CSS/Reference/Properties/flex
-original_slug: Web/CSS/flex
 l10n:
-  sourceCommit: e050b876063f44bde9bf011a2dfc94c0d90ca863
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`flex`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、{{glossary("flex item","フレックスアイテム")}}をフレックスコンテナーの領域に収めるために、どのように伸長・収縮させるかを指定します。
@@ -28,7 +27,7 @@ flex: 1 1 100px;
 
 ```html interactive-example
 <section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">Change me</div>
+  <div class="transition-all" id="example-element">ここが変わります</div>
   <div>flex: 1</div>
   <div>flex: 1</div>
 </section>
@@ -43,7 +42,7 @@ flex: 1 1 100px;
 }
 
 .default-example > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   margin: 10px;
   flex-grow: 1;
@@ -52,7 +51,7 @@ flex: 1 1 100px;
 }
 
 #example-element {
-  background-color: rgba(255, 0, 200, 0.2);
+  background-color: rgb(255 0 200 / 0.2);
   border: 3px solid rebeccapurple;
 }
 ```
@@ -136,7 +135,7 @@ flex: unset;
 - `flex: <number [1,∞]>`: フレックスアイテムの主要サイズは設定した数値に比例します。この値は `flex: <number> 1 0` に展開されます。これは `flex-basis` をゼロに設定し、フレックスアイテムを伸縮自在にします。このアイテムは最小の寸法と同じ幅または高さになり、コンテナー内で利用できる正の値は、このアイテムと兄弟フレックスアイテムの成長係数に基づいて比例配分されます。すべてのフレックスアイテムがこのパターンを使用する場合、すべてのアイテムはその数値に比例したサイズになります。
 
   > [!WARNING]
-  > ブラウザーは `flex` 値で `flex-basis` が指定されていない場合、 `flex-basis` 値に `0%` を使用します。これは仕様で言われている `flex-basis` 値の `0` とは異なります。これはフレックスレイアウトに影響を与える場合があります。この効果を[flex-basis の 0 と 0% の違い](/ja/docs/Web/CSS/Reference/Properties/flex-basis##flex-basis_の_0_と_0_の違い)の例で見てみましょう。
+  > ブラウザーは `flex` 値で `flex-basis` が指定されていない場合、 `flex-basis` 値に `0%` を使用します。これは仕様で言われている `flex-basis` 値の `0` とは異なります。これはフレックスレイアウトに影響を与える場合があります。この効果を [flex-basis の 0 と 0% の違い](/ja/docs/Web/CSS/Reference/Properties/flex-basis##flex-basis_の_0_と_0_の違い)の例で確認してください。
 
 ## 解説
 
@@ -257,9 +256,9 @@ flex: unset;
 ```css hidden live-sample___setting_flex_auto
 body * {
   padding: 1rem;
-  text-select: none;
+  user-select: none;
   box-sizing: border-box;
-  font-family: Consolas, Arial, sans-serif;
+  font-family: "Consolas", "Arial", sans-serif;
 }
 ```
 
@@ -296,8 +295,8 @@ flexAutoItem.addEventListener("click", () => {
 
 このフレックスコンテナーには 2 つのフレックスアイテムがあります。
 
-- `#flex-auto` のアイテムは `flex` 値が [`auto`](#auto) です。 `auto` 値は `1 1 auto` に展開され、つまりアイテムは拡大が許可されます。
-- `#default` アイテムには `flex` 値が設定されていないので、既定値として [`initial`](#initial) 値が設定されます。 `initial` 値は `0 1 auto` に展開され、アイテムは拡大されません。
+- `#flex-auto` のアイテムは `flex` 値が `auto` です。 `auto` 値は `1 1 auto` に展開され、つまりアイテムは拡大が許可されます。
+- `#default` アイテムには `flex` 値が設定されていないので、デフォルト値として `initial` 値が設定されます。 `initial` 値は `0 1 auto` に展開され、アイテムは拡大されません。
 
 `#default` アイテムはその幅が要求されるだけの空間を取りますが、それ以上空間を取るために拡大されることはありません。残りの空間はすべて `#flex-auto` アイテムが占めます。
 
