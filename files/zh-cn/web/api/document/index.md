@@ -326,7 +326,7 @@ HTML 文档的 `Document` 接口继承了 {{DOMxRef("HTMLDocument")}} 接口，�
 _此接口还继承了 {{DOMxRef("Node")}} 和 {{DOMxRef("EventTarget")}} 接口。_
 
 - {{domxref("Document/parseHTML_static", "Document.parseHTML()")}} {{experimental_inline}}
-  - : 通过 HTML 字符串创建一个新的 `Document` 对象，而不执行任何清理操作。该字符串可能包含声明式影子根。
+  - : 以 XSS 安全的方式，通过对 HTML 字符串进行净化处理，创建一个新的 `Document` 对象。
 - {{domxref("Document/parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}
   - : 通过 HTML 字符串创建一个新的 `Document` 对象，而不执行任何清理操作。该字符串可能包含声明式影子根。
 
