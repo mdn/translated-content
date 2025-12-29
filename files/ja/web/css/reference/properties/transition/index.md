@@ -35,7 +35,7 @@ transition:
 transition: all 1s ease-out;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section id="default-example">
   <div id="example-element">トランジションを見るには<br />ポインターを当ててください</div>
 </section>
