@@ -38,7 +38,6 @@ console.log(proxy1.message2); // 好
 
 要自定义代理，我们在 handler 对象中定义函数：
 
-
 ```js
 const target = {
   message1: "大家",
@@ -327,7 +326,6 @@ const view = new Proxy(
     },
   },
 );
-
 
 const item1 = document.getElementById("item-1");
 const item2 = document.getElementById("item-2");
