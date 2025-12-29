@@ -25,7 +25,7 @@ transition-timing-function: steps(6, end);
 transition-timing-function: cubic-bezier(0.29, 1.01, 1, -0.68);
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section id="default-example">
   <div id="example-element">トランジションを見るには<br />ポインターを当ててください</div>
 </section>
