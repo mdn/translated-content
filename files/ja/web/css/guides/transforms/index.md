@@ -3,7 +3,7 @@ title: CSS 座標変換
 short-title: 座標変換
 slug: Web/CSS/Guides/Transforms
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **CSS 座標変換** (CSS transforms) は、CSS でスタイル設定された要素を 2 次元または 3 次元空間に座標変換する方法を定義します。
@@ -652,9 +652,9 @@ updateTransform();
 
 {{EmbedLiveSample("transforms", "", "850px")}}
 
-また、 `perspective` スライダーを使って、立方体のコンテナーの [`perspective`](/ja/docs/Web/CSS/Reference/Properties/perspective) プロパティを変更できます。これはあなたと `z=0` 平面の間の距離を決定します。
+また、 `perspective` スライダーを使って、立方体のコンテナーの {{cssxref("perspective")}} プロパティを変更できます。これはあなたと `z=0` 平面の間の距離を決定します。
 
-[`perspective-origin`](/ja/docs/Web/CSS/Reference/Properties/perspective-origin) スライダーは、ビューの消点を決定するために、閲覧者が3D空間のどこを見ているかを決定します。この消点は小さな赤い点で示されます。これらのスライダーを変更することで、立方体自体を動かすことなく、頭を上下左右に動かして立方体のさまざまな部分を見ることができると想像してください。
+{{cssxref("perspective-origin")}} スライダーは、ビューの消点を決定するために、閲覧者が3D空間のどこを見ているかを決定します。この消点は小さな赤い点で示されます。これらのスライダーを変更することで、立方体自体を動かすことなく、頭を上下左右に動かして立方体のさまざまな部分を見ることができると想像してください。
 
 `backface-visibility` チェックボックスは、立方体の裏面を `visible` （表示）に設定するか、`hidden` （非表示）に設定するかを決定します。
 
@@ -720,31 +720,31 @@ updateTransform();
 ## 関連する概念
 
 - CSS プロパティ:
-  - [`animation`](/ja/docs/Web/CSS/Reference/Properties/animation)
-  - [`background-position`](/ja/docs/Web/CSS/Reference/Properties/background-position)
-  - [`clip`](/ja/docs/Web/CSS/Reference/Properties/clip)
-  - [`clip-path`](/ja/docs/Web/CSS/Reference/Properties/clip-path)
-  - [`contain`](/ja/docs/Web/CSS/Reference/Properties/contain)
-  - [`content-visibility`](/ja/docs/Web/CSS/Reference/Properties/content-visibility)
-  - [`isolation`](/ja/docs/Web/CSS/Reference/Properties/isolation)
-  - [`mask`](/ja/docs/Web/CSS/Reference/Properties/mask)
-  - [`mask-border-source`](/ja/docs/Web/CSS/Reference/Properties/mask-border-source)
-  - [`mask-image`](/ja/docs/Web/CSS/Reference/Properties/mask-image)
-  - [`mix-blend-mode`](/ja/docs/Web/CSS/Reference/Properties/mix-blend-mode)
-  - [`opacity`](/ja/docs/Web/CSS/Reference/Properties/opacity)
-  - [`overflow`](/ja/docs/Web/CSS/Reference/Properties/overflow)
-  - [`transition`](/ja/docs/Web/CSS/Reference/Properties/transition)
-  - [`visibility`](/ja/docs/Web/CSS/Reference/Properties/visibility)
+  - {{cssxref("animation")}}
+  - {{cssxref("background-position")}}
+  - {{cssxref("clip")}}
+  - {{cssxref("clip-path")}}
+  - {{cssxref("contain")}}
+  - {{cssxref("content-visibility")}}
+  - {{cssxref("isolation")}}
+  - {{cssxref("mask")}}
+  - {{cssxref("mask-border-source")}}
+  - {{cssxref("mask-image")}}
+  - {{cssxref("mix-blend-mode")}}
+  - {{cssxref("opacity")}}
+  - {{cssxref("overflow")}}
+  - {{cssxref("transition")}}
+  - {{cssxref("visibility")}}
 - データ型:
-  - [`<angle>`](/ja/docs/Web/CSS/Reference/Values/angle)
+  - {{cssxref("angle")}}
   - {{cssxref("length-percentage")}}
   - {{cssxref("length")}}
-  - [`<number>`](/ja/docs/Web/CSS/Reference/Values/number)
+  - {{cssxref("number")}}
   - {{cssxref("percentage")}}
-  - [`<position>`](/ja/docs/Web/CSS/Reference/Values/position_value)
+  - {{cssxref("position")}}
 - 用語集の用語:
-  - [補間](/ja/docs/Glossary/Interpolation)
-  - [重ね合わせコンテキスト](/ja/docs/Glossary/Stacking_context)
+  - {{glossary("Interpolation", "補間")}}
+  - {{glossary("Stacking context", "重ね合わせコンテキスト")}}
 - [SVG](/ja/docs/Web/SVG) の概念:
   - [`<animate>`](/ja/docs/Web/SVG/Reference/Element/animate) 要素
   - [`<animateTransform>`](/ja/docs/Web/SVG/Reference/Element/animateTransform) 要素

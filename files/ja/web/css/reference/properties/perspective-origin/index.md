@@ -1,12 +1,11 @@
 ---
 title: perspective-origin
 slug: Web/CSS/Reference/Properties/perspective-origin
-original_slug: Web/CSS/perspective-origin
 l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`perspective-origin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、閲覧者の視点の位置を決めます。これは {{cssxref("perspective")}} プロパティによって*消点*として使われます。
+**`perspective-origin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、閲覧者の視点の位置を決めます。これは {{cssxref("perspective")}} プロパティによって「消点」として使われます。
 
 {{InteractiveExample("CSS デモ: perspective-origin")}}
 
@@ -69,32 +68,32 @@ perspective-origin: 500% 200%;
 }
 
 .front {
-  background: rgba(90, 90, 90, 0.7);
+  background: rgb(90 90 90 / 0.7);
   transform: translateZ(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
+  background: rgb(0 210 0 / 0.7);
   transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210, 0, 0, 0.7);
+  background: rgb(210 0 0 / 0.7);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0, 0, 210, 0.7);
+  background: rgb(0 0 210 / 0.7);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
+  background: rgb(210 210 0 / 0.7);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
+  background: rgb(210 0 210 / 0.7);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
@@ -125,14 +124,14 @@ perspective-origin: unset;
 ### 値
 
 - _x-position_
-  - : *消失点*の横座標上の位置を示します。次のいずれかの値です。
+  - : 消点の横座標上の位置を示します。次のいずれかの値です。
     - {{cssxref("&lt;length-percentage&gt;")}} は、絶対的な length 値、または要素の幅に対する相対値で位置を示します。負の数も使えます。
     - `left` キーワードは、length 値 `0` を示すショートカットです。
     - `center` キーワードは、パーセント値 `50%` を示すショートカットです。
     - `right` キーワードは、パーセント値 `100%` を示すショートカットです。
 
 - _y-position_
-  - : *消失点*の縦座標上の位置を示します。次のいずれかの値です。
+  - : 消点の縦座標上の位置を示します。次のいずれかの値です。
     - {{cssxref("&lt;length-percentage&gt;")}} は、絶対的な length 値、または要素の高さに対する相対値で位置を示します。負の数も使えます。
     - `top` キーワードは、 length 値 `0` を示すショートカットです。
     - `center` キーワードは、パーセント値 `50%` を示すショートカットです。

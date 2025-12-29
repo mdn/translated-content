@@ -1,12 +1,11 @@
 ---
 title: mask-border-mode
 slug: Web/CSS/Reference/Properties/mask-border-mode
-original_slug: Web/CSS/mask-border-mode
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{cssref}}{{SeeCompatTable}}
-
-La propriété CSS **`mask-border-mode`** indique le mode de fusion utilisé pour [le masque de bordure](/fr/docs/Web/CSS/Reference/Properties/mask-border).
+La propriété [CSS](/fr/docs/Web/CSS) **`mask-border-mode`** définit le mode de fusion utilisé pour [le masque de bordure](/fr/docs/Web/CSS/Reference/Properties/mask-border).
 
 ## Syntaxe
 
@@ -18,6 +17,8 @@ mask-border-mode: alpha;
 /* Valeurs globales */
 mask-border-mode: inherit;
 mask-border-mode: initial;
+mask-border-mode: revert;
+mask-border-mode: revert-layer;
 mask-border-mode: unset;
 ```
 
@@ -42,4 +43,17 @@ mask-border-mode: unset;
 
 ## Compatibilité des navigateurs
 
-{{Compat}}
+Actuellement, aucun navigateur ne prend en charge cette fonctionnalité.
+
+## Voir aussi
+
+- La propriété {{CSSxRef("mask-mode")}}
+- La propriété {{CSSxRef("mask-type")}}
+- [Transparence alpha contre luminance](/fr/docs/Web/CSS/Guides/Masking/Introduction#transparence_alpha_contre_luminance)
+- La propriété raccourcie {{CSSxRef("mask-border")}}
+- La propriété {{CSSxRef("mask-border-outset")}}
+- La propriété {{CSSxRef("mask-border-repeat")}}
+- La propriété {{CSSxRef("mask-border-source")}}
+- La propriété {{CSSxRef("mask-border-width")}}
+- La propriété {{CSSxRef("mask-mode")}}
+- Le module de [masquage CSS](/fr/docs/Web/CSS/Guides/Masking)

@@ -2,12 +2,11 @@
 title: En-tête Accept-Encoding
 short-title: Accept-Encoding
 slug: Web/HTTP/Reference/Headers/Accept-Encoding
-original_slug: Web/HTTP/Headers/Accept-Encoding
 l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-L'en-tête HTTP **`Accept-Encoding`** de {{glossary("request header", "requête")}} et {{glossary("response header", "réponse")}} indique le codage du contenu (généralement un algorithme de compression) que l'émetteur peut comprendre.
+L'{{Glossary("request header", "en-tête de requête")}} et {{Glossary("response header", "réponse")}} HTTP **`Accept-Encoding`** indique le codage du contenu (généralement un algorithme de compression) que l'émetteur peut comprendre.
 Dans les requêtes, le serveur utilise la [négociation de contenu](/fr/docs/Web/HTTP/Guides/Content_negotiation) pour sélectionner l'un des encodages proposés par le client et informe ce dernier de son choix via l'en-tête de réponse {{HTTPHeader("Content-Encoding")}}.
 Dans les réponses, il fournit des informations sur les codages de contenu que le serveur peut comprendre dans les messages vers la ressource demandée, afin que l'encodage puisse être utilisé dans les requêtes ultérieures vers cette ressource.
 Par exemple, `Accept-Encoding` est inclus dans une réponse {{HTTPStatus("415", "415 Unsupported Media Type")}} si une requête vers une ressource (par exemple, {{HTTPMethod("PUT")}}) utilise un encodage non pris en charge.
@@ -66,9 +65,9 @@ Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5
   - : Un format de compression utilisant l'algorithme [Brotli](https://fr.wikipedia.org/wiki/Brotli).
 - `zstd`
   - : Un format de compression utilisant l'algorithme [Zstandard](https://fr.wikipedia.org/wiki/Zstandard).
-- `dcb` {{experimental_inline}}
+- `dcb` {{Experimental_Inline}}
   - : Un format utilisant l'algorithme [Dictionary-Compressed Brotli <sup>(angl.)</sup>](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary#name-dictionary-compressed-brotl). Voir [Compression Dictionary Transport](/fr/docs/Web/HTTP/Guides/Compression_dictionary_transport).
-- `dcz` {{experimental_inline}}
+- `dcz` {{Experimental_Inline}}
   - : Un format utilisant l'algorithme [Dictionary-Compressed Zstandard <sup>(angl.)</sup>](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary#name-dictionary-compressed-zstan). Voir [Compression Dictionary Transport](/fr/docs/Web/HTTP/Guides/Compression_dictionary_transport).
 - `identity`
   - : Indique la fonction identité (c'est-à-dire sans modification ni compression). Cette valeur est toujours considérée comme acceptable, même si elle est omise.

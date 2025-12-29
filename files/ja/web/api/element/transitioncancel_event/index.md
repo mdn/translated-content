@@ -3,7 +3,7 @@ title: "Element: transitioncancel イベント"
 short-title: transitioncancel
 slug: Web/API/Element/transitioncancel_event
 l10n:
-  sourceCommit: 1b094710cd2816a6669ce616b6f56d0a5b25e6ad
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{APIRef}}
@@ -14,10 +14,10 @@ l10n:
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-```js
-addEventListener("transitioncancel", (event) => {});
+```js-nolint
+addEventListener("transitioncancel", (event) => { })
 
-ontransitioncancel = (event) => {};
+ontransitioncancel = (event) => { }
 ```
 
 ## イベント型
@@ -72,7 +72,7 @@ transition.ontransitioncancel = () => {
 .transition {
   width: 100px;
   height: 100px;
-  background: rgba(255, 0, 0, 1);
+  background: red;
   transition-property: transform, background;
   transition-duration: 2s;
   transition-delay: 2s;
@@ -80,7 +80,7 @@ transition.ontransitioncancel = () => {
 
 .transition:hover {
   transform: rotate(90deg);
-  background: rgba(255, 0, 0, 0);
+  background: transparent;
 }
 ```
 
