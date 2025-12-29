@@ -5,16 +5,16 @@ l10n:
   sourceCommit: 9036ccca6d55b90913ca424e6706b0c9ed1fa93b
 ---
 
-**數學標記語言（MathML）**是一種基於 [XML](/zh-TW/docs/Web/XML) 的語言，用於描述數學符號。
+**數學標記語言**（MathML）是一種基於 [XML](/zh-TW/docs/Web/XML) 的語言，用於描述數學符號。
 
-[MathML](https://w3c.github.io/mathml/) 最初被設計為通用規範，適用於瀏覽器、辦公軟體套件、[電腦代數系統](https://en.wikipedia.org/wiki/Computer_algebra_system)、[EPUB](https://www.w3.org/publishing/epub33/) 閱讀器以及 [LaTeX](https://en.wikipedia.org/wiki/LaTeX) 生成器。然而，這種方法並不十分適合 Web：[專注於語意](https://w3c.github.io/mathml/#contm)的子集從未在瀏覽器中實作，而[專注於數學佈局](https://w3c.github.io/mathml/#presm)的子集則導致了不完整且不一致的瀏覽器實作。
+[MathML](https://w3c.github.io/mathml/) 最初被設計為通用規範，適用於瀏覽器、辦公軟體套件、[電腦代數系統](https://zh.wikipedia.org/wiki/計算機代數系統)、[EPUB](https://www.w3.org/publishing/epub33/) 閱讀器以及 [LaTeX](https://zh.wikipedia.org/wiki/LaTeX) 生成器。然而，這種方法並不十分適合 Web：[專注於語意](https://w3c.github.io/mathml/#contm)的子集從未在瀏覽器中實作，而[專注於數學佈局](https://w3c.github.io/mathml/#presm)的子集則導致了不完整且不一致的瀏覽器實作。
 
-[MathML Core](https://w3c.github.io/mathml-core/) 是一個子集，基於 [LaTeX](https://en.wikipedia.org/wiki/LaTeX) 和[開放字型格式](https://learn.microsoft.com/en-us/typography/opentype/spec/math)的規則增加了實作細節。它是為瀏覽器量身打造的，並專為與其他 Web 標準（包括 [HTML](/zh-TW/docs/Web/HTML)、[CSS](/zh-TW/docs/Web/CSS)、[DOM](/zh-TW/docs/Web/API/Document_Object_Model)、[JavaScript](/zh-TW/docs/Web/JavaScript)）良好運作而設計。
+[MathML Core](https://w3c.github.io/mathml-core/) 是一個子集，基於 [LaTeX](https://zh.wikipedia.org/wiki/LaTeX) 和[開放字型格式](https://learn.microsoft.com/zh-tw/typography/opentype/spec/math)的規則增加了實作細節。它是為瀏覽器量身打造的，並專為與其他 Web 標準（包括 [HTML](/zh-TW/docs/Web/HTML)、[CSS](/zh-TW/docs/Web/CSS)、[DOM](/zh-TW/docs/Web/API/Document_Object_Model)、[JavaScript](/zh-TW/docs/Web/JavaScript)）良好運作而設計。
 
 在下方你可以找到使用 MathML 的文件、範例和工具連結。MDN 使用 [MathML Core](https://w3c.github.io/mathml-core/) 作為參考規範，但由於不穩定的標準化歷史，舊有的 MathML 功能可能仍會出現在現有的實作和 Web 內容中。
 
 > [!NOTE]
-> 強烈建議開發者和作者轉向 MathML Core，或許依靠其他 Web 技術來覆蓋缺失的使用案例。Math 工作小組維護了一組 [MathML polyfills](https://github.com/w3c/mathml-polyfills) 以促進該過渡。
+> 強烈建議開發者和作者轉向 MathML Core，或許依靠其他 Web 技術來覆蓋缺失的使用案例。Math 工作小組維護了一組 [MathML polyfill](https://github.com/w3c/mathml-polyfills) 以促進該過渡。
 
 ## 教學
 
@@ -65,10 +65,10 @@ l10n:
 以下的展示將 MathML 與其他 Web 技術混合以產生進階內容。
 
 - [`<la-tex>` 自訂元素](https://fred-wang.github.io/TeXZilla/examples/customElement.html)
-  - : 一個接受 [LaTeX](https://en.wikipedia.org/wiki/LaTeX) 內容的[自訂元素](/zh-TW/docs/Web/API/Web_components/Using_custom_elements)。
+  - : 一個接受 [LaTeX](https://zh.wikipedia.org/wiki/LaTeX) 內容的[自訂元素](/zh-TW/docs/Web/API/Web_components/Using_custom_elements)。
 - [磁場展示](https://fred-wang.github.io/TeXZilla/examples/toImageWebGL.html)
   - : 磁場的 3D 表現，使用 [SVG](/zh-TW/docs/Web/SVG) 和 [WebGL](/zh-TW/docs/Web/API/WebGL_API)。
-- [黎曼 ζ 函數（el）](https://fred-wang.github.io/MathFonts/%CE%A3%CF%85%CE%BD%CE%AC%CF%81%CF%84%CE%B7%CF%83%CE%B7_%CE%B6%CE%AE%CF%84%CE%B1_%CE%A1%CE%AE%CE%BC%CE%B1%CE%BD.html)
+- [黎曼 ζ 函數（el）](https://fred-wang.github.io/MathFonts/Συνάρτηση_ζήτα_Ρήμαν.html)
   - : 一篇關於黎曼 ζ 函數的希臘文文章，使用了來自 [Greek Font Society](https://greekfontsociety-gfs.gr/) 的 [Web 字型](/zh-TW/docs/Learn_web_development/Core/Text_styling/Web_fonts)。
 - [佩爾方程式](https://people.igalia.com/fwang/pell-bigint-mathml/)
   - : 一個使用 [`BigInt`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 求解佩爾方程式的 JavaScript 程式。
