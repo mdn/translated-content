@@ -29,7 +29,7 @@ transition-delay: 1s, 250ms;
 transition-property: margin-right, color;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section id="default-example">
   <div id="example-element">トランジションを見るには<br />ポインターを当ててください</div>
 </section>
