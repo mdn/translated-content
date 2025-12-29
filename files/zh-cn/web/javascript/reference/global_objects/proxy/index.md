@@ -140,7 +140,7 @@ console.log(proxy3.message2); // 你好世界
 
 所有内部方法均由语言本身调用，无法在 JavaScript 代码中直接访问。{{jsxref("Reflect")}} 命名空间提供的方法除执行输入规范化/验证外，主要功能就是调用这些内部方法。在每个陷阱的页面中，我们列出了触发该陷阱的典型场景，但这些内部方法在大量场景中被调用。例如数组方法通过这些内部方法读写数组，因此诸如 [`push()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push) 之类的方法也会触发 `get()` 和 `set()` 陷阱。
 
-大多数内部方法的功能都很直观。唯一可能令人混淆的是 `[[Set]]` 和 `[[DefineOwnProperty]]`。对于普通对象，前者会调用 setter；后者则不会（且当不存在属性或属性为数据属性时，`[[Set]] `会内部调用`[[DefineOwnProperty]]`。） 虽然你可能知道 `obj.x = 1` 语法使用 `[[Set]]`，而 {{jsxref("Object.defineProperty()")}} 使用 `[[DefineOwnProperty]]`，但其他内置方法和语法采用何种语义并不直观。例如，[类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields) 使用 `[[DefineOwnProperty]]` 语义，因此当派生类声明字段时，父类中定义的 setter 不会被调用。
+大多数内部方法的功能都很直观。唯一可能令人混淆的是 `[[Set]]` 和 `[[DefineOwnProperty]]`。对于普通对象，前者会调用 setter；后者则不会（且当不存在属性或属性为数据属性时，`[[Set]] `会内部调用`[[DefineOwnProperty]]`。）虽然你可能知道 `obj.x = 1` 语法使用 `[[Set]]`，而 {{jsxref("Object.defineProperty()")}} 使用 `[[DefineOwnProperty]]`，但其他内置方法和语法采用何种语义并不直观。例如，[类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields) 使用 `[[DefineOwnProperty]]` 语义，因此当派生类声明字段时，父类中定义的 setter 不会被调用。
 
 ## 构造函数
 
