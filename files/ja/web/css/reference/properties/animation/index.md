@@ -147,7 +147,7 @@ animation:
 ## 例
 
 > [!NOTE]
-> [CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model) プロパティのアニメーションは推奨されません。ボックスモデルのプロパティをアニメーションさせると、本質的に CPU に負荷がかかります。代わりに [transform](/en-US/docs/Web/CSS/Reference/Properties/transform) プロパティのアニメーションを検討してください。
+> [CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model) プロパティのアニメーションは推奨されません。ボックスモデルのプロパティをアニメーションさせると、本質的に CPU に負荷がかかります。代わりに [transform](/ja/docs/Web/CSS/Reference/Properties/transform) プロパティのアニメーションを検討してください。
 
 ### 日の出
 
