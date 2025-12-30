@@ -1,9 +1,8 @@
 ---
 title: animation-composition
 slug: Web/CSS/Reference/Properties/animation-composition
-original_slug: Web/CSS/animation-composition
 l10n:
-  sourceCommit: 0c8ed7f82f3aee5ee177f8c8e33879460b82ad6b
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`animation-composition`** は [CSS](/ja/docs/Web/CSS) のプロパティで、複数のアニメーションが同じプロパティに同時に影響する場合に使用する{{Glossary("composite operation", "合成演算")}}を指定します。
