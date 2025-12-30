@@ -1,12 +1,13 @@
 ---
 title: animation-duration
 slug: Web/CSS/Reference/Properties/animation-duration
-original_slug: Web/CSS/animation-duration
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`animation-duration`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 1 回のアニメーション周期が完了するまでの再生時間を設定します。
+
+アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxref("animation")}} プロパティを使用すると便利です。
 
 {{InteractiveExample("CSS デモ: animation-duration")}}
 
@@ -38,7 +39,7 @@ animation-duration: 0s;
   animation-timing-function: ease-in;
   background-color: #1766aa;
   border-radius: 50%;
-  border: 5px solid #333;
+  border: 5px solid #333333;
   color: white;
   height: 150px;
   margin: auto;
@@ -69,25 +70,19 @@ animation-duration: 0s;
 ```
 
 ```js interactive-example
-"use strict";
+const el = document.getElementById("example-element");
+const button = document.getElementById("play-pause");
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const button = document.getElementById("play-pause");
-
-  button.addEventListener("click", () => {
-    if (el.classList.contains("running")) {
-      el.classList.remove("running");
-      button.textContent = "再生";
-    } else {
-      el.classList.add("running");
-      button.textContent = "一時停止";
-    }
-  });
+button.addEventListener("click", () => {
+  if (el.classList.contains("running")) {
+    el.classList.remove("running");
+    button.textContent = "再生";
+  } else {
+    el.classList.add("running");
+    button.textContent = "一時停止";
+  }
 });
 ```
-
-アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxref("animation")}} プロパティを使用すると便利です。
 
 ## 構文
 
@@ -117,8 +112,8 @@ animation-duration: unset;
 - {{cssxref("&lt;time&gt;")}}
   - : 1 回のアニメーションの周期にかかる時間。この値は、秒 (`s`) またはミリ秒 (`ms`) で指定することができます。値は正の数か 0 でなければならず、単位は必須です。
 
-    値が指定されなかった場合、既定値である `0s` が使用され、この場合でもアニメーションは実行されます（[`animationStart`](/ja/docs/Web/API/Element/animationstart_event) と [`animationEnd`](/ja/docs/Web/API/Element/animationend_event) イベントが発生します）。長さが `0s` のときにアニメーションが表示されるかどうかは、下記で説明する [`animation-fill-mode`](/ja/docs/Web/CSS/Reference/Properties/animation-fill-mode) の値によります。
-    - `animation-fill-mode` を `backwards` または `both` に設定した場合、 `animation-direction` で定義したアニメーションの最初のフレームが `animation-delay`(/ja/docs/Web/CSS/animation-delay) のカウントダウン中に表示されます。
+    値が指定されなかった場合、既定値である `0s` が使用され、この場合でもアニメーションは実行されます（[`animationStart`](/ja/docs/Web/API/Element/animationstart_event) と [`animationEnd`](/ja/docs/Web/API/Element/animationend_event) イベントが発生します）。長さが `0s` のときにアニメーションが表示されるかどうかは、下記で説明する {{cssxref("animation-fill-mode")}} の値によります。
+    - `animation-fill-mode` を `backwards` または `both` に設定した場合、 `animation-direction` で定義したアニメーションの最初のフレームが {{cssxref("animation-delay")}} のカウントダウン中に表示されます。
     - `animation-fill-mode` が `forwards` または `both` に設定した場合、アニメーションの最後のフレームは `animation-delay` が経過した後に、 `animation-direction` で定義したように表示されます。
     - `animation-fill-mode` を `none` に設定すると、アニメーションは目に見える効果はありません。
 
