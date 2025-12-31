@@ -33,7 +33,7 @@ const video = document.querySelector("video");
 const videoSrc = "https://example.org/path/to/video.webm";
 
 video.addEventListener("abort", () => {
- console.log(`中止載入：${videoSrc}`);
+  console.log(`中止載入：${videoSrc}`);
 });
 
 const source = document.createElement("source");
