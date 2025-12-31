@@ -2,7 +2,6 @@
 title: Méthode de requête HEAD
 short-title: HEAD
 slug: Web/HTTP/Reference/Methods/HEAD
-original_slug: Web/HTTP/Methods/HEAD
 l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
