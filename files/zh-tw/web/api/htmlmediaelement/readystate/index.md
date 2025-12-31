@@ -2,8 +2,8 @@
 title: HTMLMediaElement：readyState 屬性
 short-title: readyState
 slug: Web/API/HTMLMediaElement/readyState
-page-type: web-api-instance-property
-browser-compat: api.HTMLMediaElement.readyState
+l10n:
+  sourceCommit: e932acf254c5dd06e26798b9d8fe01ce8dab1fb7
 ---
 
 {{APIRef("HTML DOM")}}
