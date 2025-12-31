@@ -68,7 +68,7 @@ animated.style.display = "none";
 
 #### HTML
 
-```html
+```html-nolint
 <div class="animation-example">
   <div class="container">
     <p class="animation">あなたは私たちの惑星を訪れるのに、寒い夜を選びました。</p>
