@@ -1,9 +1,9 @@
 ---
 title: CSS 段組みレイアウト
+short-title: 段組みレイアウト
 slug: Web/CSS/Guides/Multicol_layout
-original_slug: Web/CSS/CSS_multicol_layout
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **CSS 段組みレイアウト** (CSS multi-column layout) モジュールを使用すると、コンテンツを複数の段に分割することができます。このモジュールのプロパティを使用すると、段の推奨数と幅、段間の間隔、およびオプションで段の分割線（段間罫と呼ばれる）の外観を定義することができます。また、コンテンツが段から段へどのように流れるか、および段間でコンテンツをどのように分割するかを定義することもできます。
@@ -79,9 +79,11 @@ l10n:
     nations.
   </p>
 </article>
-<fieldset id="options">
-  <legend role="button" aria-expanded="true" aria-controls="controls">
-    段のオプション
+<fieldset id="options" class="open">
+  <legend>
+    <button aria-expanded="true" aria-controls="controls">
+      段のオプション
+    </button>
   </legend>
   <div id="controls">
     <p>
@@ -121,6 +123,7 @@ const page = document.querySelector("article");
 const title = document.querySelector(".title");
 const options = document.querySelector("#options");
 const legend = document.querySelector("#options > legend");
+const legendBtn = document.querySelector("#options > legend > button");
 const blockquote = document.getElementsByTagName("blockquote")[0];
 
 const colCount = document.getElementById("colCount");
@@ -134,7 +137,7 @@ const breakP = document.getElementById("break");
 // JS が有効である場合にオプションが見えるようにする
 options.style.display = "revert";
 
-legend.addEventListener("click", () => {
+legendBtn.addEventListener("click", () => {
   showAndHideMenu();
 });
 
@@ -175,12 +178,16 @@ breakP.addEventListener("change", () => {
 });
 
 function showAndHideMenu() {
-  if (legend.getAttribute("aria-expanded") === "true") {
+  if (legendBtn.getAttribute("aria-expanded") === "true") {
     // close it
-    legend.setAttribute("aria-expanded", "false");
+    legendBtn.setAttribute("aria-expanded", "false");
+    legend.classList.add("closed");
+    legend.classList.remove("open");
   } else {
     // open it
-    legend.setAttribute("aria-expanded", "true");
+    legendBtn.setAttribute("aria-expanded", "true");
+    legend.classList.remove("closed");
+    legend.classList.add("open");
   }
 }
 
@@ -200,7 +207,7 @@ article {
   widows: 3;
   orphans: 3;
   gap: 1em;
-  column-rule: 2px dashed #666;
+  column-rule: 2px dashed #666666;
   height: 50em;
 }
 .title {
@@ -227,22 +234,26 @@ p {
 fieldset p {
   margin-bottom: 0.25em;
 }
-[aria-expanded] {
+legend {
   position: relative;
   top: 0;
   transition: 200ms;
 }
-[aria-expanded="false"] {
+legend.closed {
   top: 0.75em;
 }
-[aria-expanded="false"] + #controls {
+legend.closed + #controls {
   display: none;
 }
 legend {
   background-color: #dedede;
   padding: 0.5em;
 }
-[aria-expanded="false"] {
+legend > button {
+  all: unset;
+  cursor: pointer;
+}
+legend.closed {
   margin: -1em;
   display: inline-block;
 }
@@ -271,9 +282,6 @@ blockquote p::after {
 
 ### プロパティ
 
-- {{cssxref("break-after")}}
-- {{cssxref("break-before")}}
-- {{cssxref("break-inside")}}
 - {{cssxref("column-fill")}}
 - {{cssxref("column-gap")}}
 - {{cssxref("column-span")}}
@@ -306,16 +314,40 @@ blockquote p::after {
   - : アイテムが段をオーバーフローときに起こることと、段内のコンテンツが多すぎてコンテナーに収まらない場合に起こることです。
 - [段組みにおけるコンテンツの分割の処理](/ja/docs/Web/CSS/Guides/Multicol_layout/Handling_content_breaks)
   - : 断片化仕様と、段のコンテンツの分割位置を制御する方法について説明します。
+- [CSS カルーセルの作成](/ja/docs/Web/CSS/Guides/Overflow/Carousels)
+  - : スクロールボタン、スクロールマーカー、生成された列を使用する、純粋な CSS によるカルーセル UI 機能を作成します。
 
 ## 関連概念
 
-- CSS の {{cssxref("orphans")}} プロパティ
-- CSS の {{cssxref("widows")}} プロパティ
-- CSS の {{cssxref("overflow")}} プロパティ
-- CSS の {{cssxref("gap")}} プロパティ
-- CSS の {{cssxref("height")}}, {{cssxref("max-height")}}, {{cssxref("block-size")}} プロパティ
-- CSS の {{cssxref("width")}}, {{cssxref("max-width")}}, {{cssxref("inline-size")}} プロパティ
-- {{cssxref("line-style")}} 列挙型データ型
+[CSS 断片化](/ja/docs/Web/CSS/Guides/Fragmentation)モジュール
+
+- {{cssxref("break-after")}}
+- {{cssxref("break-before")}}
+- {{cssxref("break-inside")}}
+- {{cssxref("orphans")}}
+- {{cssxref("widows")}}
+
+[CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)モジュール
+
+- {{cssxref("gap")}}
+
+[CSS ボックスサイズ指定](/ja/docs/Web/CSS/Guides/Box_sizing)モジュール
+
+- {{cssxref("height")}}
+- {{cssxref("max-height")}}
+- {{cssxref("block-size")}}
+- {{cssxref("width")}}
+- {{cssxref("max-width")}}
+
+[CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
+
+- {{cssxref("overflow")}}
+- {{cssxref("::scroll-marker")}}
+- {{cssxref("::scroll-marker-group")}}
+- {{glossary("Scroll container", "スクロールコンテナー")}}（用語集の用語）
+
+[CSS 表示方法](/ja/docs/Web/CSS/Guides/Display)モジュール
+
 - [ブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context)ガイド
 
 ## 仕様書
