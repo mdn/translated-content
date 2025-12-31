@@ -16,7 +16,7 @@ l10n:
 _祖先である {{domxref("CSSRule")}} からプロパティを継承しています。_
 
 - {{domxref("CSSKeyframesRule.name")}}
-  - : キーフレームセットのの名前を表します。 {{cssxref("animation-name")}} プロパティで使用されます。
+  - : キーフレームセットの名前を表します。 {{cssxref("animation-name")}} プロパティで使用されます。
 - {{domxref("CSSKeyframesRule.cssRules")}} {{ReadOnlyInline}}
   - : リスト内のキーフレームセットの {{domxref("CSSRuleList")}} を返します。
 - {{domxref("CSSKeyframesRule.length")}} {{ReadOnlyInline}}

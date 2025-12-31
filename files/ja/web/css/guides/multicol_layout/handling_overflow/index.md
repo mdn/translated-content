@@ -2,9 +2,8 @@
 title: 段組みでのオーバーフローの処理
 short-title: オーバーフローの処理
 slug: Web/CSS/Guides/Multicol_layout/Handling_overflow
-original_slug: Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 このガイドでは、段組み (_multicol_) レイアウトにおいて、段ボックス内およびコンテナーに収まらないコンテンツがある場合のオーバーフローに対処する方法について説明します。
@@ -13,7 +12,7 @@ l10n:
 
 オーバーフローは、アイテムの寸法が段ボックスよりも大きな場合に発生します。例えば、段内の画像が `column-width` の幅、または `column-count` で宣言された段数に基づく段の幅よりも広い場合に発生します。
 
-この場合、内容物は段ボックスで切り取られるのではなく、次の列にはみ出します。以下の例と、ブラウザーが描画時に別な方法で処理する予定のレンダリングの画像を見てください。
+この場合、コンテンツは段ボックスで切り取られるのではなく、次の列にはみ出します。以下の例と、ブラウザーが描画時に別な方法で処理する予定のレンダリングの画像を見てください。
 
 ```html live-sample___image
 <div class="container">
