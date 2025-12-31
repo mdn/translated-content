@@ -17,7 +17,7 @@ browser-compat: api.HTMLMediaElement.readyState
 - `HTMLMediaElement.HAVE_NOTHING` （0）
   - : 關於媒體資源沒有可用的資訊。
 - `HTMLMediaElement.HAVE_METADATA`（1）
-  - : 已擷取足夠的媒體資源，使得後設資料屬性已被初始化。尋找（Seeking）將不再拋出例外。
+  - : 已擷取足夠的媒體資源，使得後設資料屬性已被初始化。尋找將不再拋出例外。
 - `HTMLMediaElement.HAVE_CURRENT_DATA` （2）
   - : 目前播放位置的資料可用，但不足以播放超過一個影格。
 - `HTMLMediaElement.HAVE_FUTURE_DATA` （3）
