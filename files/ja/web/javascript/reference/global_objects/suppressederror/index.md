@@ -28,7 +28,7 @@ _継承元の {{jsxref("Error")}} からインスタンスプロパティも継�
   - : エラーの種類を表す名前。`SuppressedError.prototype.name` の初期値は `"SuppressedError"` です。
 
 > [!NOTE]
-> `cause` と `suppressed` の意味論が重複するため、`SuppressedError` は {{jsxref("Error/cause", "cause")}} プロパティを持たない。
+> `cause` と `suppressed` の意味論が重複するため、`SuppressedError` は {{jsxref("Error/cause", "cause")}} プロパティを持ちません。
 
 これらのプロパティは各 `SuppressedError` インスタンスの固有のプロパティです。
 
