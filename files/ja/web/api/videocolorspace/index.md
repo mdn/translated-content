@@ -1,13 +1,15 @@
 ---
 title: VideoColorSpace
 slug: Web/API/VideoColorSpace
+l10n:
+  sourceCommit: 7dd8030389cfb754034e2203a0c782555f17a89f
 ---
 
 {{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
-{{domxref('WebCodecs API','','',' ')}} の　**`VideoColorSpace`** インターフェースは動画の色空間を表します
+{{domxref('WebCodecs API','','',' ')}} の　**`VideoColorSpace`** インターフェイスは動画の色空間を表します
 
-## コンストラクタ
+## コンストラクター
 
 - {{domxref("VideoColorSpace.VideoColorSpace", "VideoColorSpace()")}}
   - : 新しい `VideoColorSpace` を作成します。
@@ -41,6 +43,6 @@ console.log(colorSpace);
 
 {{Specifications}}
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
 {{Compat}}
