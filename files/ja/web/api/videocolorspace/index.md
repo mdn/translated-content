@@ -5,7 +5,7 @@ slug: Web/API/VideoColorSpace
 
 {{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
-{{domxref('WebCodecs API','','',' ')}} の　**`VideoColorSpace`** インターフェースは動画の色空間を表します
+{{domxref('WebCodecs API','','',' ')}} の　**`VideoColorSpace`** インターフェイスは動画の色空間を表します
 
 ## コンストラクタ
 
