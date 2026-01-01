@@ -1,6 +1,8 @@
 ---
 title: SuppressedError
 slug: Web/JavaScript/Reference/Global_Objects/SuppressedError
+l10n:
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
 
 `SuppressedError` は、別のエラーを処理している際に発生したエラーを表すオブジェクトです。これは、{{jsxref("Statements/using", "using")}} または {{jsxref("Statements/await_using", "await using")}} を使用したリソースの破棄中に生成されます。
@@ -9,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/SuppressedError
 
 `SuppressedError` は {{jsxref("Error")}} のサブクラスです。
 
-## コンストラクタ
+## コンストラクター
 
 - {{jsxref("SuppressedError/SuppressedError", "SuppressedError()")}}
   - : `SuppressedError` オブジェクトを生成します。
@@ -21,12 +23,12 @@ _継承元の {{jsxref("Error")}} からインスタンスプロパティも継�
 これらのプロパティは `SuppressedError.prototype` に定義されており、すべての `SuppressedError` インスタンスで共有されます。
 
 - {{jsxref("Object/constructor", "SuppressedError.prototype.constructor")}}
-  - : インスタンスオブジェクトを生成したコンストラクタ関数。`SuppressedError` インスタンスの場合、初期値は {{jsxref("SuppressedError/SuppressedError", "SuppressedError")}} コンストラクタです。
+  - : インスタンスオブジェクトを生成したコンストラクター関数。`SuppressedError` インスタンスの場合、初期値は {{jsxref("SuppressedError/SuppressedError", "SuppressedError")}} コンストラクターです。
 - {{jsxref("Error/name", "SuppressedError.prototype.name")}}
   - : エラーの種類を表す名前。`SuppressedError.prototype.name` の初期値は `"SuppressedError"` です。
 
 > [!NOTE]
-> `cause` と `suppressed` の意味論が重複するため、`SuppressedError` は {{jsxref("Error/cause", "cause")}} プロパティ は持たない。
+> `cause` と `suppressed` の意味論が重複するため、`SuppressedError` は {{jsxref("Error/cause", "cause")}} プロパティを持たない。
 
 これらのプロパティは各 `SuppressedError` インスタンスの固有のプロパティです。
 
@@ -98,15 +100,15 @@ try {
 }
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
 {{Compat}}
 
-## 参照
+## 関連情報
 
 - [core-js における `SuppressedError` のポリフィル](https://github.com/zloirock/core-js#explicit-resource-management)
 - {{jsxref("Error")}}
