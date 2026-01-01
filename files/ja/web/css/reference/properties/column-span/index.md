@@ -1,12 +1,13 @@
 ---
 title: column-span
 slug: Web/CSS/Reference/Properties/column-span
-original_slug: Web/CSS/column-span
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
 **`column-span`** は [CSS](/ja/docs/Web/CSS) のプロパティで、値に `all` を設定した場合、段組みレイアウトで要素をすべての段にまたがらせることができます。
+
+複数の段にまたがる要素は**段抜き要素** (spanning element) と呼びます。
 
 {{InteractiveExample("CSS デモ: column-span")}}
 
@@ -46,11 +47,9 @@ column-span: all;
 #example-element {
   background-color: rebeccapurple;
   padding: 10px;
-  color: #fff;
+  color: white;
 }
 ```
-
-複数の段にまたがる要素は**段抜き要素** (spanning element) と呼びます。
 
 ## 構文
 

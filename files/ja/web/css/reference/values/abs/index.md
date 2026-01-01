@@ -1,9 +1,8 @@
 ---
 title: abs()
 slug: Web/CSS/Reference/Values/abs
-original_slug: Web/CSS/abs
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
 **`abs()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、引数の絶対値を同じ型で返します。
@@ -11,23 +10,24 @@ l10n:
 ## 構文
 
 ```css
-/* プロパティ: abs(式) */
-width: abs(20% - 100px);
+/* abs( <calc-sum> ) */
+abs(20% - 100px)
+abs(var(--gradientAngle))
 ```
 
 ### 引数
 
-`abs(x)` 関数は、1つの引数を受け取ります。
+`abs(x)` 関数は、引数を 1 つだけ受け取ります。
 
-- `x`
-  - : 数値に解決される計算式です。
+- `<calc-sum>`
+  - : {{cssxref("number")}}、{{cssxref("dimension")}}、{{cssxref("percentage")}}、{{cssxref("calc-keyword")}} に解決する式または計算です。
 
 ### 返値
 
-`x` の絶対値を返します。
+`<calc-sum>` の絶対値を返します。
 
-- もし `x` の数値が正または `0⁺` であれば、`x` を返します。
-- そうでない場合は、`-1 * x` を返します。
+- もし `<calc-sum>` の数値が正または `0⁺` であれば、`<calc-sum>` を返します。
+- そうでない場合は、`-1 * <calc-sum>` を返します。
 
 ## 形式文法
 
@@ -58,7 +58,7 @@ div {
 
 ### 後方互換性のための代替手段
 
-CSS の `abs()` 関数に対応していない古いブラウザーでは、次のように CSS {{CSSxRef("max")}} 関数を使用することで同じ結果を得られます。
+CSS の `abs()` 関数に対応していないブラウザーでは、CSS の {{CSSxRef("max")}} 関数を使用することで同じ結果を得られます。
 
 ```css
 p {

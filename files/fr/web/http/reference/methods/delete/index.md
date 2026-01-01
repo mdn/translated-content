@@ -2,7 +2,6 @@
 title: Méthode de requête DELETE
 short-title: DELETE
 slug: Web/HTTP/Reference/Methods/DELETE
-original_slug: Web/HTTP/Methods/DELETE
 l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---

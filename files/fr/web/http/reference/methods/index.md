@@ -2,7 +2,8 @@
 title: Méthodes de requête HTTP
 short-title: Méthodes de requête
 slug: Web/HTTP/Reference/Methods
-original_slug: Web/HTTP/Methods
+l10n:
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 <abbr title="Hypertext Transfer Protocol">HTTP</abbr> définit un ensemble de **méthodes de requête** pour indiquer le but de la requête et ce qui est attendu en cas de succès.

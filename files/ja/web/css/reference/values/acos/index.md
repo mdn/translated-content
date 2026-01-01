@@ -1,12 +1,11 @@
 ---
 title: acos()
 slug: Web/CSS/Reference/Values/acos
-original_slug: Web/CSS/acos
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**`acos()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、`-1` から `1` までの数値の逆余弦を返す三角関数です。この関数には、 `0deg` から `180deg` までの {{cssxref("&lt;angle&gt;")}} を表すラジアンの数を返す単一の計算が含まれています。
+**`acos()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、`-1` から `1` までの数値の逆余弦を返す三角関数です。この関数には、 `0deg` から `180deg` までの {{cssxref("angle")}} を返す単一の計算が含まれています。
 
 ## 構文
 
@@ -29,7 +28,7 @@ transform: rotate(acos(e / 3));
 
 ### 返値
 
-`number` の逆余弦で、常に {{cssxref("&lt;angle&gt;")}} であり、 `0deg` と `180deg` の間です。
+`number` の逆余弦で、常に {{cssxref("angle")}} であり、 `0deg` と `180deg` の間です。
 
 - `number` が `-1` より小さいか `1` より大きい場合、結果は `NaN` になります。
 - `number` がちょうど `1` の場合、結果は `0` になります。
@@ -42,7 +41,7 @@ transform: rotate(acos(e / 3));
 
 ### 要素の回転
 
-`acos()` 関数は {{cssxref("&lt;angle&gt;")}} を返すので、要素の回転 ({{cssxref("transform-function/rotate", "rotate")}}) に使用することができます。
+`acos()` 関数は {{cssxref("angle")}} を返すので、要素の回転 ({{cssxref("transform-function/rotate", "rotate")}}) に使用することができます。
 
 #### HTML
 
