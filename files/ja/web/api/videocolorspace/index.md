@@ -2,7 +2,7 @@
 title: VideoColorSpace
 slug: Web/API/VideoColorSpace
 l10n:
-  sourceCommit: 7dd8030389cfb754034e2203a0c782555f17a89f
+  sourceCommit: 3789de65bd11453c4cb24625723f81a7e8fcdd56
 ---
 
 {{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
