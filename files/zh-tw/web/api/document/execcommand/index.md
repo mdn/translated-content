@@ -82,6 +82,7 @@ execCommand(commandName, showDefaultUI, valueArgument)
         > 輸入會被解析為 HTML 並寫入 DOM 中。像這樣的 API 被稱為[注入匯點](/zh-TW/docs/Web/API/Trusted_Types_API#concepts_and_usage)，如果輸入最初來自攻擊者，可能會成為[跨站腳本（XSS）](/zh-TW/docs/Web/Security/Attacks/XSS)攻擊的載體。
         >
         > 你可以透過始終指派 {{domxref("TrustedHTML")}} 物件而非字串，並[強制執行可信任類型](/zh-TW/docs/Web/API/Trusted_Types_API#使用_csp_強制執行可信任類型)來減輕此風險。更多資訊請參見 [Trusted Types API](/zh-TW/docs/Web/API/Trusted_Types_API)。
+
     - `insertImage`
       - : 在插入點插入一個圖像（刪除選取範圍）。需要一個圖像 `src` 的 URL 字串作為引數值。此字串的要求與 `createLink` 相同。
     - `insertOrderedList`
