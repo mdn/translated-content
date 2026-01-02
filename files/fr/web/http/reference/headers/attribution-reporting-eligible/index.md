@@ -21,7 +21,7 @@ Voir l'[API Attribution Reporting](/fr/docs/Web/API/Attribution_Reporting_API) p
       <td>{{Glossary("Request header", "En-tête de requête")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden request header", "Nom d'en-tête interdit")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "En-tête de requête interdit")}}</th>
       <td>Non</td>
     </tr>
   </tbody>

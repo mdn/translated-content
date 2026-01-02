@@ -16,7 +16,7 @@ Cet en-tête est nécessaire car la requête préliminaire est toujours une {{HT
       <td>{{Glossary("Request header", "En-tête de requête")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden request header", "Nom d'en-tête interdit")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "En-tête de requête interdit")}}</th>
       <td>Oui</td>
     </tr>
   </tbody>
