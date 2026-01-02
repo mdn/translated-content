@@ -1,12 +1,11 @@
 ---
 title: calc()
 slug: Web/CSS/Reference/Values/calc
-original_slug: Web/CSS/calc
 l10n:
-  sourceCommit: 39a17e10bc078c6e76717683b26a5b20d9d9c574
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**`calc()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 CSS のプロパティ値を指定する際に計算を行うことができるものです。 {{cssxref("&lt;length&gt;")}}、{{cssxref("&lt;frequency&gt;")}}、{{cssxref("&lt;angle&gt;")}}、{{cssxref("&lt;time&gt;")}}、{{cssxref("&lt;percentage&gt;")}}、{{cssxref("&lt;number&gt;")}}、{{cssxref("&lt;integer&gt;")}}、{{cssxref("color_value", "&lt;color-function&gt;")}} の値が利用できる場所ならば使用できます。
+**`calc()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 CSS のプロパティ値を指定する際に計算を行うことができるものです。 {{cssxref("&lt;length&gt;")}}、{{cssxref("&lt;frequency&gt;")}}、{{cssxref("angle")}}、{{cssxref("&lt;time&gt;")}}、{{cssxref("&lt;percentage&gt;")}}、{{cssxref("&lt;number&gt;")}}、{{cssxref("&lt;integer&gt;")}}、{{cssxref("color_value", "&lt;color-function&gt;")}} の値が利用できる場所ならば使用できます。
 
 {{InteractiveExample("CSS デモ: calc()")}}
 
@@ -82,10 +81,10 @@ lch(from aquamarine l c calc(h + 180))
 
 - {{cssxref("&lt;length&gt;")}}
 - {{cssxref("&lt;frequency&gt;")}}
-- {{cssxref("&lt;angle&gt;")}}
+- {{cssxref("angle")}}
 - {{cssxref("&lt;time&gt;")}}
 - {{cssxref("flex_value", "&lt;flex&gt;")}}
-- {{cssxref("&lt;resolution&gt;")}}
+- {{cssxref("resolution")}}
 - {{cssxref("&lt;percentage&gt;")}}
 - {{cssxref("&lt;number&gt;")}}
 - {{cssxref("&lt;integer&gt;")}}
@@ -97,16 +96,25 @@ lch(from aquamarine l c calc(h + 180))
 
 {{cssxref("&lt;integer&gt;")}} が期待される場合、 `calc()` 式は `<number>` として評価され、最も近い整数に丸められます。したがって、 `calc(1.4)` は値 `1` を返します。値の小数点以下の桁数が正確に `0.5` の場合、値は正の無限大に向かって丸められます。例えば、 `calc(1.5)` は値 `2` となり、 `calc(-1.5)` は `-1` に丸められます。
 
-`calc()` は、 IEEE-754 標準に従う浮動小数点演算を実行するため、 `infinity` および `NaN` の値についていくつかの注意事項が あります。定数のシリアル化の詳細については、 [`calc-keyword`](/ja/docs/Web/CSS/Reference/Values/calc-keyword) ページを参照してください。
+`calc()` は、 IEEE-754 標準に従う浮動小数点演算を実行するため、 `infinity` および `NaN` の値についていくつかの注意事項が あります。定数のシリアル化の詳細については、 {{cssxref("calc-keyword")}} ページを参照してください。
 
 ### 入力の注意事項
 
 - `calc()` は[内在的なサイズの値](/ja/docs/Glossary/Intrinsic_Size)、例えば {{cssxref("width#auto", "auto")}} や {{cssxref("fit-content")}} では計算を行うことができません。代わりに {{cssxref("calc-size()")}} 関数を使用してください。
 - `*` 演算子と `/` 演算子には前後のホワイトスペースは必要ありませんが、一貫性のために追加することが推奨されています。
 - `calc()` 関数は入れ子にすることができ、この場合、内側のものは単なる括弧として扱われます。
-- 現在の実装では、 `*` および `/` 演算子では、オペランドの 1 つが単位なしである必要があります。 `/` の場合、右のオペランドが単位なしでなければなりません。例えば、 `font-size: calc(1.25rem / 1.25)` は有効ですが、 `font-size: calc(1.25rem / 125%)` は不正なコードです。
 - 自動レイアウトと固定レイアウトの表の両方において、表の列、表の列グループ、表の行、表の行グループ、表のセルの幅と高さにパーセント値を含む数式は、 `auto` が指定されているかのように扱われる場合があります。
 - `+` および `-` 式の構文の詳細については、 {{cssxref("calc-sum", "&lt;calc-sum&gt;")}} を参照してください。
+
+### CSS 型付き演算
+
+`calc()` で値を乗算する場合、`*` 演算子を使用する際は、単位を含む値は 1 つだけである必要があります。`200px * 4px` のような計算は対応していません。CSS において 800px<sup>2</sup> は無意味な値となるためです。
+
+逆に、`200px / 4px` は `50` と評価され、これは CSS において意味を成します。したがって、`calc()` 関数で数値を除算する際に `/` 演算子を使用する場合、[対応しているブラウザー](#ブラウザーの互換性)では、オペランドの両辺に単位を指定することができます。ただし、それらが同じデータ型であることが条件です。例えば、`100vw / 1px` は有効であり、単位のない値を返します。
+
+この商は、{{cssxref("number")}} を値または引数として受け入れるプロパティや関数の値として使用できるほか、型付き値を乗算することで別のデータ型に変換することも可能です。
+
+CSS における型付き算術演算の完全な説明と例については、[CSS 型付き演算の使用](/ja/docs/Web/CSS/Guides/Values_and_units/Using_typed_arithmetic)を参照してください。
 
 ### 相対色における色チャンネルの計算の対応
 
@@ -137,7 +145,7 @@ h1 {
 
 ### マージンをつけてオブジェクトを画面に配置する
 
-`calc()` でマージン設定を持つボックス配置がしやすくなります。この例では CSS でウィンドウを横切るように広がるバナーを作ります。バナーの両側とウィンドウの縁は 40 ピクセル空けます。
+`calc()` により、マージン設定を持つボックス配置できます。この例では CSS でウィンドウを横切るように広がるバナーを作ります。バナーの両側とウィンドウの縁は 40 ピクセル空けます。
 
 ```css
 .banner {
@@ -194,7 +202,7 @@ input {
 
 ### 入れ子の `calc()` と CSS 変数
 
-`calc()` で [CSS 変数](/ja/docs/Web/CSS/Guides/Cascading_variables) を使用することもできます。以下のコードを見てみてください。</p>
+`calc()` で [CSS 変数](/ja/docs/Web/CSS/Guides/Cascading_variables)を使用することもできます。以下のコードを見てみてください。
 
 ```css
 .foo {
@@ -211,7 +219,7 @@ input {
 
 `calc()` 関数を使用すると、色チャンネル値を変数として格納する必要なく、[相対色](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)の個々の色チャンネルを調整することができます。
 
-例えば、下記では最初の段落で [`<named-color>`](/ja/docs/Web/CSS/Reference/Values/named-color) を使用しています。
+例えば、下記では最初の段落で {{cssxref("named-color")}} を使用しています。
 その後の段落では `calc()` を [`rgb()`](/ja/docs/Web/CSS/Reference/Values/color_value/rgb) および [`hsl()`](/ja/docs/Web/CSS/Reference/Values/color_value/hsl) 関数と組み合わせて使用することで、元の名前付き色に対する各色チャンネルの値を相対的に調整しています。
 
 ```html

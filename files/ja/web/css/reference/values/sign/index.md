@@ -1,9 +1,8 @@
 ---
 title: sign()
 slug: Web/CSS/Reference/Values/sign
-original_slug: Web/CSS/sign
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`sign()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 1 つの計算式を指定し、引数の数値が負の場合は `-1`、 引数の数値が正の値の場合は `+1`、引数の数値が 0⁺ の場合は `0⁺`、引数の数値が 0⁻ の場合は `0⁻` を返します。
@@ -73,3 +72,4 @@ div {
 ## 関連情報
 
 - {{CSSxRef("abs")}}
+- [CSS 型付き演算の使用](/ja/docs/Web/CSS/Guides/Values_and_units/Using_typed_arithmetic)

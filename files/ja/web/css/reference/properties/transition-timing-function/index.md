@@ -25,7 +25,7 @@ transition-timing-function: steps(6, end);
 transition-timing-function: cubic-bezier(0.29, 1.01, 1, -0.68);
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section id="default-example">
   <div id="example-element">トランジションを見るには<br />ポインターを当ててください</div>
 </section>
@@ -298,7 +298,7 @@ const intervalID = setInterval(updateTransition, 10000);
 
 - [CSS トランジションの使用](/ja/docs/Web/CSS/Guides/Transitions/Using)
 - {{cssxref("easing-function")}}
-- [CSS イージング関数](/en-US/docs/Web/CSS/Guides/Easing_functions)モジュール
+- [CSS イージング関数](/ja/docs/Web/CSS/Guides/Easing_functions)モジュール
 - {{cssxref('transition')}}
 - {{cssxref('transition-property')}}
 - {{cssxref('transition-duration')}}

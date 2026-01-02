@@ -1,9 +1,8 @@
 ---
 title: if()
 slug: Web/CSS/Reference/Values/if
-original_slug: Web/CSS/if
 l10n:
-  sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{SeeCompatTable}}
@@ -94,7 +93,7 @@ div {
 }
 ```
 
-この場合、`--scheme` [カスタムプロパティ](/ja/docs/Web/CSS/Reference/Properties/--*) が `ice` と`fire` のどちらに設定されているかによって、{{htmlelement("div")}} 要素の {{cssxref("background-image")}} として異なる {{cssxref("gradient/linear-gradient", "linear-gradient()")}} を設定しています。 `--scheme` が存在しない場合、または存在しても他の値に設定されている場合は、 `else` の値が適用され、 `background-image` プロパティは `none` に設定されます。
+この場合、`--scheme` [カスタムプロパティ](/ja/docs/Web/CSS/Reference/Properties/--*) が `ice` と`fire` のどちらに設定されているかによって、{{htmlelement("div")}} 要素の {{cssxref("background-image")}} として異なる {{cssxref("linear-gradient()")}} を設定しています。 `--scheme` が存在しない場合、または存在しても他の値に設定されている場合は、 `else` の値が適用され、 `background-image` プロパティは `none` に設定されます。
 
 > [!NOTE]
 > それぞれの条件は、関連付けられた値とコロンで区切り、それぞれの `<if-condition> : <value>` ペアはセミコロンで区切る必要が あります。最後の `<if-condition> : <value>` ペアでは、セミコロンはオプションです。
@@ -106,7 +105,7 @@ div {
 
 ### `else : <value>` ペアの頻度と位置
 
-`if()` 関数内には、任意の位置に複数の `else : <value>` ペアを含めることができます。ただし、ほとんどの場合、セミコロンで区切られたリストの最後に 1 つの `else : <value>` ペアを指定して、`<if-test>` のいずれも真と評価されなかった場合に常に返される既定値を指定します。
+`if()` 関数内には、任意の位置に複数の `else : <value>` ペアを含めることができます。ただし、ほとんどの場合、セミコロンで区切られたリストの最後に 1 つの `else : <value>` ペアを指定して、`<if-test>` のいずれも真と評価されなかった場合に常に返されるデフォルト値を指定します。
 
 `<if-test> : <value>` ペアの前に `else : <value>` ペアを含めると、`else` は常に `true` と評価されるため、それに続く条件は評価されません。したがって、次の `if()` は常に `none` を返し、2 つの `<if-test> : <value>` ペアは決して評価されません。
 
@@ -457,7 +456,7 @@ HTML には、いくつかのコンテンツを含む {{htmlelement("article")}}
 <form>
   <label for="scheme">配色を選択:</label>
   <select id="scheme">
-    <option value="">既定</option>
+    <option value="">デフォルト</option>
     <option value="ice">Ice</option>
     <option value="fire">Fire</option>
   </select>
@@ -487,7 +486,7 @@ CSS では、`<body>` 要素に `700px` の {{cssxref("max-width")}} を指定�
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 p {

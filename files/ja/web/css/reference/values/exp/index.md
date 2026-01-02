@@ -1,9 +1,8 @@
 ---
 title: exp()
 slug: Web/CSS/Reference/Values/exp
-original_slug: Web/CSS/exp
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
 **`exp()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、指数関数であり、引数として数値を取り、その数値で数学定数 `e` を累乗した値を返します。
@@ -16,9 +15,9 @@ l10n:
 
 ```css
 /* <number> 値 */
-width: calc(100px * exp(-1)); /* 100px * 0.367879441171442 = 36px */
+width: calc(100px * exp(-1)); /* 100px * 0.367879441171442 = 36.8px */
 width: calc(100px * exp(0)); /* 100px * 1 = 100px */
-width: calc(100px * exp(1)); /* 100px * 2.718281828459045 = 217px */
+width: calc(100px * exp(1)); /* 100px * 2.718281828459045 = 271.8px */
 ```
 
 ### 引数

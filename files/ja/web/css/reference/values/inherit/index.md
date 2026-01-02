@@ -1,12 +1,11 @@
 ---
 title: inherit
 slug: Web/CSS/Reference/Values/inherit
-original_slug: Web/CSS/inherit
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`inherit`** は CSS のキーワードで、要素のプロパティの[計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)を親要素から取得するよう指定します。 CSS の一括指定 {{cssxref("all")}} を含め、すべての CSS プロパティに適用することができます。
+**`inherit`** は [CSS](/ja/docs/Web/CSS) のキーワードで、要素のプロパティの[計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)を親要素から取得するよう指定します。 CSS の一括指定 {{cssxref("all")}} を含め、すべての CSS プロパティに適用することができます。
 
 [継承プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Inheritance#継承プロパティ)においては、既定の動作を推進するものであり、他のルールを上書きする場合にのみ必要です。
 

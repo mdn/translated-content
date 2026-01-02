@@ -1,12 +1,11 @@
 ---
 title: cos()
 slug: Web/CSS/Reference/Values/cos
-original_slug: Web/CSS/cos
 l10n:
-  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**`cos()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、数値の余弦を返す三角関数です。値は `-1` から `1` までの範囲になります。この関数には単一の計算が含まれており、引数の結果をラジアンとして解釈して、{{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;angle&gt;")}} のいずれかに解決する必要があります。つまり、`cos(45deg)`、`cos(0.125turn)`、`cos(3.14159 / 4)` はすべて、ほぼ `0.707` という同じ値を表します。
+**`cos()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、数値の余弦を返す三角関数です。値は `-1` から `1` までの範囲になります。この関数には単一の計算が含まれており、引数の結果をラジアンとして解釈して、{{cssxref("&lt;number&gt;")}} または {{cssxref("angle")}} のいずれかに解決する必要があります。つまり、`cos(45deg)`、`cos(0.125turn)`、`cos(3.14159 / 4)` はすべて、ほぼ `0.707` という同じ値を表します。
 
 {{InteractiveExample("CSS デモ: cos()")}}
 
@@ -92,7 +91,7 @@ width: calc(100px * cos(e / 2));
 `cos(angle)` 関数は、引数として 1 つの値のみを受け入れます。
 
 - `angle`
-  - : {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;angle&gt;")}} に解決される計算式。単位のない数値を指定すると、 {{cssxref("&lt;angle&gt;")}} を表すラジアン数として解釈されます。
+  - : {{cssxref("&lt;number&gt;")}} または {{cssxref("angle")}} に解決される計算式。単位のない数値を指定すると、 {{cssxref("angle")}} を表すラジアン数として解釈されます。
 
 ### 返値
 
