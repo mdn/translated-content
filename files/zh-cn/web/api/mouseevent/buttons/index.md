@@ -39,7 +39,7 @@ slug: Web/API/MouseEvent/buttons
 ```js
 const buttonNames = ["left", "right", "wheel", "back", "forward"];
 function mouseButtonPressed(event, buttonName) {
-  // 使用与运算符（`&`）与 2 的相应幂次相乘来检查指定按键是否被按下
+  // 使用与运算符（`&`）与 2 的相应幂次来检查指定按键是否被按下
   return Boolean(event.buttons & (1 << buttonNames.indexOf(buttonName)));
 }
 
