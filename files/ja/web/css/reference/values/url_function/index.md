@@ -1,9 +1,8 @@
 ---
 title: url()
 slug: Web/CSS/Reference/Values/url_function
-original_slug: Web/CSS/url_function
 l10n:
-  sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`url()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、ファイルを含めるために使用します。引数は絶対 URL、相対 URL、Blob URL、データ URL の何れかです。 **`url()`** 関数は {{cssxref("attr")}} 関数のように、他の CSS 関数に引数として渡すことができます。値を使用するプロパティに応じて、求められるリソースは画像、フォント、スタイルシートのいずれかになります。`url()` 関数記法は `<url>` データ型の値になります。
@@ -16,7 +15,7 @@ l10n:
 相対 URL が使用された場合は、スタイルシートの URL からの相対となります（ウェブページの URL からではありません）。
 
 **`url()`** 関数は {{cssxref('background')}}, {{cssxref('background-image')}}, {{cssxref('border')}}, {{cssxref('border-image')}}, {{cssxref('border-image-source')}}, {{cssxref('content')}}, {{cssxref('cursor')}}, {{cssxref('filter')}}, {{cssxref('list-style')}}, {{cssxref('list-style-image')}}, {{cssxref('mask')}}, {{cssxref('mask-image')}}, {{cssxref('offset-path')}}, {{cssxref('clip-path')}},
-[`@font-face`](/ja/docs/Web/CSS/Reference/At-rules/@font-face) ブロック内での [src](/ja/docs/Web/CSS/Reference/At-rules/@font-face/src), [@counter-style/`symbol`](/ja/docs/Web/CSS/Reference/At-rules/@counter-style/symbols) の値として使用することができます。
+{{cssxref("@font-face")}} ブロック内での [src](/ja/docs/Web/CSS/Reference/At-rules/@font-face/src), [@counter-style/`symbol`](/ja/docs/Web/CSS/Reference/At-rules/@counter-style/symbols) の値として使用することができます。
 
 ## 構文
 
@@ -176,8 +175,8 @@ URL がフィルターへのパスとして使用される場合、 URL は以�
 
 ## 関連情報
 
-- {{cssxref("&lt;gradient&gt;")}}
-- {{cssxref("element", "element()")}}
+- {{cssxref("gradient")}}
+- {{cssxref("element()")}}
 - {{cssxref("image/image", "image()")}}
 - {{cssxref("image/image-set", "image-set()")}}
-- {{cssxref("cross-fade", "cross-fade()")}}
+- {{cssxref("cross-fade()")}}
