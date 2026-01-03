@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("File API")}}
 
-`readAsDataURL()` は {{DOMxRef("FileReaderSync")}} インターフェイスのメソッドで、{{DOMxRef("File")}} または {{DOMxRef("Blob")}} オブジェクトを同期的にデータ URL を表す文字列に読み込むことができます。このインターフェイスは、ブロックが発生する可能性のある同期 I/O を可能にするため、[ワーカー](/ja/docs/Web/API/Worker)で[のみ利用可能](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)です。
+`readAsDataURL()` は {{DOMxRef("FileReaderSync")}} インターフェイスのメソッドで、{{DOMxRef("File")}} または {{DOMxRef("Blob")}} オブジェクトを同期的に data URL を表す文字列に読み込むことができます。このインターフェイスは、ブロックが発生する可能性のある同期 I/O を可能にするため、[ワーカー](/ja/docs/Web/API/Worker)で[のみ利用可能](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)です。
 
 ## 構文
 
@@ -24,7 +24,7 @@ readAsDataURL(Blob)
 
 ### 返値
 
-入力データをデータ URL として表す文字列です。
+入力データを data URL として表す文字列です。
 
 ## 例外
 
@@ -40,7 +40,7 @@ readAsDataURL(Blob)
 - `NotReadableError` {{domxref("DOMException")}}
   - : 同時実行ロックなどの権限の問題でリソースを読み込めない場合に発生します。
 - `EncodingError` {{domxref("DOMException")}}
-  - : リソースがデータ URL であり、ブラウザーごとに定義された制限長を超えた場合に発生します。
+  - : リソースが data URL であり、ブラウザーごとに定義された制限長を超えた場合に発生します。
 
 ## 仕様書
 
