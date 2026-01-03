@@ -2,7 +2,6 @@
 title: Méthode de requête POST
 short-title: POST
 slug: Web/HTTP/Reference/Methods/POST
-original_slug: Web/HTTP/Methods/POST
 l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
