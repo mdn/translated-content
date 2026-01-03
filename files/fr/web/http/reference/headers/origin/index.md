@@ -16,7 +16,7 @@ Ainsi, si un agent utilisateur doit demander les ressources incluses dans une pa
       <td><a href="/fr/docs/Glossary/Request_header">En-tête de requête</a></td>
     </tr>
     <tr>
-      <th scope="row"><a href="/fr/docs/Glossary/Forbidden_header_name">Nom d'en-tête interdit</a></th>
+      <th scope="row">{{Glossary("Forbidden_request_header", "En-tête de requête interdit")}}</th>
       <td>Oui</td>
     </tr>
   </tbody>
