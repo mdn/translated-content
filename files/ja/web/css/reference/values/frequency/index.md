@@ -1,9 +1,8 @@
 ---
 title: <frequency>
 slug: Web/CSS/Reference/Values/frequency
-original_slug: Web/CSS/frequency
 l10n:
-  sourceCommit: 66944f622b6b51bc9c24bebbbea242138d910600
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`<frequency>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、話し声の高さなどの周波数の値を表します。今のところ、どの CSS プロパティでも使われていません。
@@ -48,9 +47,9 @@ l10n:
 
 ## ブラウザーの互換性
 
-{{Compat}}
+今のところ、この機能に対応しているブラウザーはありません。
 
 ## 関連情報
 
 - {{cssxref("&lt;frequency-percentage&gt;")}}
-- [CSS 値と単位](/ja/docs/Web/CSS/Guides/Values_and_units)
+- [CSS 値と単位](/ja/docs/Web/CSS/Guides/Values_and_units)モジュール
