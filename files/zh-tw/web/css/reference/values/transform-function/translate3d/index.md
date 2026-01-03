@@ -116,7 +116,7 @@ translate3d(tx, ty, tz)
   <thead>
     <tr>
       <th scope="col"><a href="/zh-TW/docs/Web/CSS/Reference/Values/transform-function#cartesian_coordinates">笛卡兒座標</a>於 <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^2</a></th>
-      <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">齊次座標</a>於 <a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a></th>
+      <a href="https://zh.wikipedia.org/wiki/实射影平面">ℝℙ^2</a> 中的<th scope="col"><a href="https://zh.wikipedia.org/wiki/齐次坐标">齊次座標</a></th>
       <th scope="col">笛卡兒座標於 <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^3</a></th>
       <th scope="col">齊次座標於 <a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a></th>
     </tr>
