@@ -17,7 +17,7 @@ l10n:
 
 ## 補間
 
-アニメーション時には、 `<integer>` データ型の値は離散的に整数を使用して{{Glossary("interpolation", "補間")}}されます。実数、すなわち浮動小数点で計算が行われた場合、離散値は [floor 関数](https://ja.wikipedia.org/wiki/%E5%BA%8A%E9%96%A2%E6%95%B0%E3%81%A8%E5%A4%A9%E4%BA%95%E9%96%A2%E6%95%B0)を使って求められます。補間の速度は、アニメーションに結びつけられた[タイミング関数](/ja/docs/Web/CSS/Reference/Values/easing-function)で決められます。
+アニメーション時には、 `<integer>` データ型の値は離散的に整数を使用して{{Glossary("interpolation", "補間")}}されます。実数、すなわち浮動小数点で計算が行われた場合、離散値は [floor 関数](https://ja.wikipedia.org/wiki/%E5%BA%8A%E9%96%A2%E6%95%B0%E3%81%A8%E5%A4%A9%E4%BA%95%E9%96%A2%E6%95%B0)を使って求められます。補間の速度は、アニメーションに結びつけられた[イージング関数](/ja/docs/Web/CSS/Reference/Values/easing-function)で決められます。
 
 ## 例
 
