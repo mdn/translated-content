@@ -1,9 +1,8 @@
 ---
 title: transition-property
 slug: Web/CSS/Reference/Properties/transition-property
-original_slug: Web/CSS/transition-property
 l10n:
-  sourceCommit: bed59f268d5e299beb538e435f08c4f4ce685980
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`transition-property`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[トランジション効果](/ja/docs/Web/CSS/Guides/Transitions/Using)を適用する CSS プロパティを指定します。
@@ -26,16 +25,16 @@ transition-property: all;
 transition-property: none;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section id="default-example">
-  <div id="example-element">Hover to see<br />the transition.</div>
+  <div id="example-element">トランジションを見るには<br />ポインターを当ててください</div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
   background-color: #e4f0f5;
-  color: #000;
+  color: black;
   padding: 1rem;
   border-radius: 0.5rem;
   font: 1em monospace;
@@ -44,8 +43,8 @@ transition-property: none;
 }
 
 #default-example:hover > #example-element {
-  background-color: #909;
-  color: #fff;
+  background-color: #990099;
+  color: white;
   margin-right: 40%;
 }
 ```
@@ -101,7 +100,7 @@ transition-property: unset;
 
 ### 基本的な例
 
-ボタンにポインターを当てるかフォーカスすると、 1 秒間の色のトランジションが行われます。 `transition-property` は [`background-color`](/ja/docs/Web/CSS/Reference/Properties/background-color) です。
+ボタンにポインターを当てるかフォーカスすると、 1 秒間の色のトランジションが行われます。 `transition-property` は {{cssxref("background-color")}} です。
 
 #### HTML
 
@@ -119,7 +118,7 @@ html {
 button {
   font-size: 1.4rem;
   padding: 10px 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-radius: 10px;
   outline: none;
 }
@@ -129,18 +128,18 @@ button {
 .target {
   transition-property: background-color;
   transition-duration: 1s;
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 
 .target:hover,
 .target:focus {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 ```
 
 {{EmbedLiveSample('Basic_example', 600, 100)}}
 
-`transition-property` のその他の例については、 [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions/Using)ガイドを参照してください。
+`transition-property` のその他の例については、[CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions/Using)ガイドを参照してください。
 
 ## 仕様書
 

@@ -71,12 +71,12 @@ CSS では、以下のものを表すために寸法を使います。
 
 | 単位   | 相対値の基準                                                                                        |
 | ------ | --------------------------------------------------------------------------------------------------- |
-| `dvh`  | [動的](/ja/docs/Web/CSS/Reference/Values/length#動的ビューポートサイズ)ビューポートの高さの 1%。    |
-| `dvw`  | [動的](/ja/docs/Web/CSS/Reference/Values/length#動的ビューポートサイズ)ビューポートの幅の 1%。      |
-| `lvh`  | [大](/ja/docs/Web/CSS/Reference/Values/length#大ビューポートサイズ)ビューポートの高さの 1%。        |
-| `lvw`  | [大](/ja/docs/Web/CSS/Reference/Values/length#大ビューポートサイズ)ビューポートの幅の 1%。          |
-| `svh`  | [小](/ja/docs/Web/CSS/Reference/Values/length#小ビューポートサイズ)ビューポートの高さの 1%。        |
-| `svw`  | [小](/ja/docs/Web/CSS/Reference/Values/length#小ビューポートサイズ)ビューポートの幅の 1%。          |
+| `dvh`  | [動的](/ja/docs/Web/CSS/Reference/Values/length#動的ビューポート単位)ビューポートの高さの 1%。      |
+| `dvw`  | [動的](/ja/docs/Web/CSS/Reference/Values/length#動的ビューポート単位)ビューポートの幅の 1%。        |
+| `lvh`  | [大](/ja/docs/Web/CSS/Reference/Values/length#大ビューポート単位)ビューポートの高さの 1%。          |
+| `lvw`  | [大](/ja/docs/Web/CSS/Reference/Values/length#大ビューポート単位)ビューポートの幅の 1%。            |
+| `svh`  | [小](/ja/docs/Web/CSS/Reference/Values/length#小ビューポート単位)ビューポートの高さの 1%。          |
+| `svw`  | [小](/ja/docs/Web/CSS/Reference/Values/length#小ビューポート単位)ビューポートの幅の 1%。            |
 | `vb`   | ルート要素の[ブロック軸](/ja/docs/Glossary/Flow_relative_values)におけるビューポートサイズの 1%。   |
 | `vh`   | ビューポートの高さの 1%。                                                                           |
 | `vi`   | ルート要素の[インライン軸](/ja/docs/Glossary/Flow_relative_values)におけるビューポートサイズの 1%。 |
