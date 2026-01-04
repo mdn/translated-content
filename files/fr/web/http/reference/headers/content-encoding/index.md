@@ -15,7 +15,7 @@ Il est recommandé de compresser les données autant que possible et donc d'util
       <td>{{Glossary("Entity_header", "En-tête d'entité")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden_request_header", "Nom d'en-tête interdit")}}</th>
+      <th scope="row">{{Glossary("Forbidden_request_header", "En-tête de requête interdit")}}</th>
       <td>Non</td>
     </tr>
   </tbody>

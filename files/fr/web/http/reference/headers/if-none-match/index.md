@@ -24,7 +24,7 @@ Il y a 2 cas d'utilisation communs:
       <td>{{Glossary("En-tête de requête")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Nom d'en-tête interdit")}}</th>
+      <th scope="row">{{Glossary("Forbidden_request_header", "En-tête de requête interdit")}}</th>
       <td>non</td>
     </tr>
   </tbody>

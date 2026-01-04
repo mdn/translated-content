@@ -1,9 +1,9 @@
 ---
-title: Cache-Control
+title: En-tête Cache-Control
+short-title: Cache-Control
 slug: Web/HTTP/Reference/Headers/Cache-Control
-original_slug: Web/HTTP/Headers/Cache-Control
 l10n:
-  sourceCommit: 2f22893feecd8ef6f4d6f7fa8458cf8c1734d921
+  sourceCommit: fd4cf672d03417a8a391a74db10dfda3cb1e8443
 ---
 
 L'en-tête HTTP **`Cache-Control`** contient des _directives_ (c'est-à-dire des instructions), dans les requêtes et dans les réponses, pour contrôler [la mise en cache](/fr/docs/Web/HTTP/Guides/Caching) dans les navigateurs et caches partagées (par exemple les <i lang="en">proxies</i>, CDN).
@@ -13,21 +13,28 @@ L'en-tête HTTP **`Cache-Control`** contient des _directives_ (c'est-à-dire des
     <tr>
       <th scope="row">Type d'en-tête</th>
       <td>
-        <a href="/fr/docs/Glossary/Request_header">En-tête de requête</i>, <a href="/fr/docs/Glossary/Response_header">en-tête de réponse</i>
+        {{Glossary("Request header", "En-tête de requête")}},
+        {{Glossary("Response header", "En-tête de réponse")}}
       </td>
     </tr>
     <tr>
-      <th scope="row"><a href="/fr/docs/Glossary/Forbidden_header_name">Nom d'en-tête interdit</a></th>
+      <th scope="row">{{Glossary("Forbidden request header", "En-tête de requête interdit")}}</th>
       <td>Non</td>
     </tr>
     <tr>
-      <th scope="row"><a href="/fr/docs/Glossary/CORS-safelisted_response_header">En-tête de réponse sûr pour le CORS</th>
+      <th scope="row">
+        {{Glossary("CORS-safelisted response header", "En-tête de réponse sûr pour le CORS")}}
+      </th>
       <td>Oui</td>
     </tr>
   </tbody>
 </table>
 
 ## Syntaxe
+
+```http
+Cache-Control: <directive>, <directive>, ...
+```
 
 Les directives pour la mise en cache suivent les règles suivantes&nbsp;:
 
@@ -100,7 +107,9 @@ Cache-Control: max-age=604800
 Cela indique que les caches peuvent stocker cette réponse et la réutiliser pour les requêtes suivantes tant qu'elle est [fraîche](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness).
 
 On notera que `max-age` ne correspond pas au temps écoulé depuis que la réponse a été reçue, il s'agit du temps écoulé depuis que la réponse a été générée sur le serveur d'origine.
-Ainsi, si les autres caches situés sur la route réseau empruntée par la réponse stockent la réponse pendant 100 secondes (en l'indiquant avec l'en-tête de réponse `Age`), le cache du navigateur déduira 100 secondes de la durée de fraîcheur.
+Ainsi, si les autres caches situés sur la route réseau empruntée par la réponse stockent la réponse pendant 100 secondes (en l'indiquant avec l'en-tête de réponse `Age`), le cache du navigateur déduira 100 secondes de la [durée de fraîcheur](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_et_durabilité_en_fonction_de_lâge).
+
+Si la valeur de `max-age` est négative (par exemple, `-1`) ou n'est pas un entier (par exemple, `3599.99`), alors le comportement de la mise en cache n'est pas défini. Il est recommandé aux caches de traiter la valeur comme si elle était `0` (cela est indiqué dans la section [Calcul de la durée de fraîcheur <sup>(angl.)</sup>](https://httpwg.org/specs/rfc9111.html#calculating.freshness.lifetime) de la spécification HTTP).
 
 ```http
 Cache-Control: max-age=604800
@@ -109,7 +118,8 @@ Age: 100
 
 #### `s-maxage`
 
-La directive de réponse `s-maxage` indique également la durée pendant laquelle la réponse est [fraîche](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness) (de façon analogue à `max-age`), mais s'applique spécifiquement aux caches partagés. Ceux-ci ignoreront `max-age` si `s-maxage` est présente.
+La directive de réponse `s-maxage` indique également la durée pendant laquelle la réponse est [fraîche](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness) (de façon analogue à `max-age`), mais s'applique spécifiquement aux caches partagés.
+La directive `s-maxage` est ignorée par les caches privés et remplace la valeur définie par la directive `max-age` ou l'en-tête `Expires` pour les caches partagés, si elles sont présentes.
 
 ```http
 Cache-Control: s-maxage=604800
@@ -203,8 +213,6 @@ Certains intermédiaires transforment du contenu pour différentes raisons. Par 
 
 `no-transform` indique à l'intermédiaire (qu'il s'agisse d'un cache ou non) qu'il ne faut pas transformer le contenu de la réponse.
 
-[Google Web Light](https://developers.google.com/search/docs/advanced/mobile/web-light) est un exemple d'un tel intermédiaire. Il convertit les images afin de minimiser les données stockées en cache ou transmises sur une connexion lente et prend en charge `no-transform` comme moyen d'éviter cette transformation.
-
 #### `immutable`
 
 La directive de réponse `immutable` indique que la réponse ne sera pas mise à jour tant qu'elle est [fraîche](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness).
@@ -249,9 +257,9 @@ Dans l'exemple précédent, la réponse est [fraîche](/fr/docs/Web/HTTP/Guides/
 
 Une fois cette période écoulée, la réponse enregistrée devient [périmée](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness). Cela signifie que le client recevra une réponse d'erreur telle que fournie par le serveur d'origine.
 
-## Directives de requête
+### Directives de requête
 
-### `no-cache`
+#### `no-cache`
 
 La directive de requête `no-cache` demande aux caches de valider la réponse auprès du serveur d'origine avant toute réutilisation.
 
@@ -263,7 +271,7 @@ Cache-Control: no-cache
 
 Les navigateurs ajoutent généralement `no-cache` aux requêtes effectuées lors d'un **rechargement forcé** d'une page.
 
-### `no-store`
+#### `no-store`
 
 La directive de requête `no-store` permet à un client de demander à ce qu'un cache ne stocke pas la requête et la réponse correspondante, même si la réponse du serveur d'origine pourrait être enregistrée.
 
@@ -273,7 +281,7 @@ Cache-Control: no-store
 
 On notera que la plupart des navigateurs principaux ne prennent pas en charge les requêtes avec `no-store`.
 
-### `max-age`
+#### `max-age`
 
 La directive de requête `max-age=N` indique que le client autorise une réponse enregistrée qui est générée sur le serveur d'origine dans les `N` secondes, où `N` est un nombre positif (pouvant être `0`).
 
@@ -293,13 +301,10 @@ Cache-Control: max-age=0
 
 Si la valeur de `max-age` est négative (par exemple `-1`) ou n'est pas un entier (par exemple, `3599.99`), le comportement pour la mise en cache n'est pas défini. Toutefois, la section sur [le calcul pour la durée de la fraîcheur](https://httpwg.org/specs/rfc7234.html#calculating.freshness.lifetime) de la spécification HTTP indique&nbsp;:
 
-> Les caches sont incités à considérer les réponses portant des informations de fraîcheur invalides comme étant périmées.
-
-Autrement dit, pour toute valeur de `max-age` qui n'est ni entière, ni positive, on incite à traiter la valeur comme si elle était `0`.
-
-### `max-stale`
+#### `max-stale`
 
 La directive de requête `max-stale=N` indique que le client permet l'utilisation d'une réponse enregistrée [périmée](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness) dans les `N` secondes.
+Si aucune valeur _N_ n'est définie, le client acceptera une réponse périmée quel que soit son âge.
 
 ```http
 Cache-Control: max-stale=3600
@@ -311,7 +316,7 @@ Les clients peuvent utiliser cet en-tête lorsque le serveur d'origine est inacc
 
 On notera que la plupart des navigateurs principaux ne prennent pas en charge les requêtes avec `max-stale`.
 
-### `min-fresh`
+#### `min-fresh`
 
 La directive de requête `min-fresh=N` indique que le client permet d'utiliser une réponse enregistrée qui est [fraîche](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness) pendant au moins `N` secondes.
 
@@ -325,13 +330,18 @@ Les clients peuvent utiliser cet en-tête pour demander une réponse qui soit [f
 
 On notera que la plupart des navigateurs principaux ne prennent pas en charge les requêtes avec `min-fresh`.
 
-### `no-transform`
+#### `no-transform`
 
 Équivalent à `no-transform` telle que définie pour les réponses, mais ici pour les requêtes.
 
-### `only-if-cached`
+#### `only-if-cached`
 
 Le client indique que le cache devrait obtenir une réponse déjà mise en cache. Si un cache possède une réponse enregistrée, celle-ci est réutilisée.
+
+#### `stale-if-error`
+
+La directive de requête `stale-if-error` indique que le navigateur souhaite recevoir un contenu périmé en cas d'erreur de la part d'un serveur intermédiaire pour une origine donnée.
+Cette fonctionnalité n'est prise en charge par aucun navigateur (voir [Compatibilité des navigateurs](#compatibilité_des_navigateurs)).
 
 ## Cas d'usage
 
@@ -354,9 +364,7 @@ En théorie, si les directives rentrent en conflit, c'est la plus restrictive qu
 ```http example-bad
 # Conflit entre les directives
 Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
-```
 
-```http example-good
 # Équivalent à
 Cache-Control: no-store
 ```
@@ -423,11 +431,12 @@ Ceci étant écrit, avec un cache moderne, il suffit d'utiliser `no-cache` à la
 
 ### Supprimer les informations déjà enregistrées en cache
 
-Malheureusement, il n'existe pas de directives pour supprimer les réponses déjà enregistrées dans les caches.
+Il n'existe aucune directive de cache permettant de supprimer les réponses déjà enregistrées dans les caches sur les serveurs _intermédiaires_.
 
 Imaginons qu'un client ou qu'un cache enregistre une réponse [fraîche](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness) pour un chemin donné et qu'il n'effectue aucune requête vers le serveur. Il n'y a rien que le serveur pourrait faire à ce moment.
 
-Sinon, `Clear-Site-Data` peut nettoyer le cache du navigateur pour un site. Mais cela a ses limites, toutes les réponses stockées pour un site sont supprimées, et cela ne s'applique qu'aux navigateurs, pas aux caches partagés.
+[`Clear-Site-Data: cache`](/fr/docs/Web/HTTP/Reference/Headers/Clear-Site-Data#cache) peut nettoyer le cache du navigateur pour un site. Mais cela a ses limites, toutes les réponses stockées pour un site sont supprimées, et cela ne s'applique qu'aux navigateurs, pas aux caches partagés.
+Notez que cela n'affectera pas les caches partagés ou intermédiaires.
 
 ## Spécifications
 
@@ -439,10 +448,10 @@ Sinon, `Clear-Site-Data` peut nettoyer le cache du navigateur pour un site. Mais
 
 ## Voir aussi
 
-- [Mise en cache avec HTTP](/fr/docs/Web/HTTP/Guides/Caching)
-- [Tutoriel sur la mise en cache pour les équipes web](https://www.mnot.net/cache_docs/)
-- [Bonnes pratiques pour la mise en cache et pièges liés à `max-age` (en anglais)](https://jakearchibald.com/2016/caching-best-practices/)
-- [`Cache-Control` pour les civils (en anglais)](https://csswizardry.com/2019/03/cache-control-for-civilians/)
-- [RFC 7234 — Hypertext Transfer Protocol (HTTP/1.1)&nbsp;: mise en cache (en anglais)](https://httpwg.org/specs/rfc7234.html)
-- [RFC 5861 — Extensions HTTP à `Cache-Control` pour le contenu périmé (en anglais)](https://httpwg.org/specs/rfc5861.html)
-- [RFC 8246 — Réponses HTTP immuables (en anglais)](https://httpwg.org/specs/rfc8246.html)
+- [La mise en cache avec HTTP](/fr/docs/Web/HTTP/Guides/Caching)
+- [Tutoriel sur la mise en cache pour les équipes web <sup>(angl.)</sup>](https://www.mnot.net/cache_docs/)
+- [Bonnes pratiques pour la mise en cache et pièges liés à `max-age` <sup>(angl.)</sup>](https://jakearchibald.com/2016/caching-best-practices/)
+- [`Cache-Control` pour les civils <sup>(angl.)</sup>](https://csswizardry.com/2019/03/cache-control-for-civilians/)
+- [RFC 9111 — Mise en cache HTTP <sup>(angl.)</sup>](https://httpwg.org/specs/rfc9111.html)
+- [RFC 5861 — Extensions HTTP à `Cache-Control` pour le contenu périmé <sup>(angl.)</sup>](https://httpwg.org/specs/rfc5861.html)
+- [RFC 8246 — Réponses HTTP immuables <sup>(angl.)</sup>](https://httpwg.org/specs/rfc8246.html)
