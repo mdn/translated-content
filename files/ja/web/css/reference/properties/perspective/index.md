@@ -1,9 +1,8 @@
 ---
 title: perspective
 slug: Web/CSS/Reference/Properties/perspective
-original_slug: Web/CSS/perspective
 l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`perspective`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 z=0 の平面とユーザーとの間の距離を定めて 3D に配置された要素に遠近感を与えます。
@@ -66,32 +65,32 @@ perspective: 5.5cm;
 }
 
 .front {
-  background: rgba(90, 90, 90, 0.7);
+  background: rgb(90 90 90 / 0.7);
   transform: translateZ(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
+  background: rgb(0 210 0 / 0.7);
   transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210, 0, 0, 0.7);
+  background: rgb(210 0 0 / 0.7);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0, 0, 210, 0.7);
+  background: rgb(0 0 210 / 0.7);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
+  background: rgb(210 210 0 / 0.7);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
+  background: rgb(210 0 210 / 0.7);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
@@ -119,15 +118,17 @@ perspective: unset;
 - `none`
   - : 立体的な座標変換を一切適用しないことを示すキーワードです。
 - `<length>`
-  - : ユーザーと z=0 平面間の距離を表す {{cssxref("&lt;length&gt;")}} です。立体的な座標変換を要素とその内容に適用するときに使います。 `0` や負の値ならば、立体的な座標変換は適用されません。
+  - : ユーザーと z=0 平面間の距離を表す {{cssxref("&lt;length&gt;")}} です。立体的な座標変換を要素とその内容に適用するときに使います。要素の子要素に視点位置変換を適用するために使用します。負の値は構文エラーとなります。値が `1px` より小さい場合、`1px` に制限されます。
 
 ## 解説
 
 z>0 である 3D 要素はより大きく、 z<0 である 3D 要素はより小さくなります。効果の強度はこのプロパティの値から決められます。
+`perspective` の値が大きいと、変形が小さくなります。
+`perspective` の値が小さいと、変形が大きくなります。
 
 ユーザーの背後にある 3D 要素の部品、つまり z 軸座標が CSS の `perspective` プロパティの値より大きい要素は描画されません。
 
-*消点*は既定で要素の中心に置かれますが、この位置は {{cssxref("perspective-origin")}} プロパティで変更できます。
+消点は既定で要素の中心に置かれますが、この位置は {{cssxref("perspective-origin")}} プロパティで変更できます。
 
 このプロパティを `0` と `none` 以外の値で使用すると、新たな[重ね合わせコンテキスト](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)を生成します。また、その場合、オブジェクトはそれを含む `position: fixed` の要素の包含ブロックとして動作します。
 
@@ -143,7 +144,7 @@ z>0 である 3D 要素はより大きく、 z<0 である 3D 要素はより小
 
 ### 視点の設定
 
-視点を様々な位置に設定した場合に立体がどのように変化するかを示す例は、 [CSS 座標変換の使用 > 視点の設定](/ja/docs/Web/CSS/Guides/Transforms/Using#setting_perspective)にあります。
+視点を様々な位置に設定した場合に立体がどのように変化するかを示す例は、 [CSS 座標変換の使用 > 視点の設定](/ja/docs/Web/CSS/Guides/Transforms/Using#視点の設定)にあります。
 
 ## 仕様書
 

@@ -1,37 +1,41 @@
 ---
 title: 412 Precondition Failed
 slug: Web/HTTP/Reference/Status/412
-original_slug: Web/HTTP/Status/412
+l10n:
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-Le code de réponse d'erreur HTTP **`412 Precondition Failed`** indique que l'accès à la ressource visée a été refusé. Cela arrive avec les requêtes conditionnelles lorsque les méthodes utilisées ne sont pas [`GET`](/fr/docs/Web/HTTP/Reference/Methods/GET) ou [`HEAD`](/fr/docs/Web/HTTP/Reference/Methods/HEAD) et que la condition définie par les en-têtes [`If-Unmodified-Since`](/fr/docs/Web/HTTP/Headers/If-Unmodified-Since) ou [`If-None-Match`](/fr/docs/Web/HTTP/Reference/Headers/If-None-Match) n'est pas respectée. Dans ce cas, la requête, généralement un téléversement ou une modification d'une ressource, ne peut être appliquée et ce code de réponse d'erreur est renvoyé.
+Le code de statut de [réponse d'erreur client](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client) HTTP **`412 Precondition Failed`** indique que l'accès à la ressource cible a été refusé.
+Cela se produit avec les [requêtes conditionnelles](/fr/docs/Web/HTTP/Guides/Conditional_requests) sur des méthodes autres que {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}}, lorsque la condition définie par les en-têtes {{HTTPHeader("If-Unmodified-Since")}} ou {{HTTPHeader("If-Match")}} n'est pas remplie.
+Dans ce cas, la requête (généralement un téléversement ou une modification de ressource) ne peut pas être effectuée et cette réponse d'erreur est renvoyée.
 
 ## Statut
 
-```
+```http
 412 Precondition Failed
 ```
 
 ## Exemples
 
-```
+### Précondition non remplie
+
+```http
 ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ETag: W/"0815"
 ```
 
 ### Éviter les conflits d'édition
 
-Grâce aux en-têtes `ETag` et [`If-Match`](/fr/docs/Web/HTTP/Headers/If-Match), il est possible de détecter des conflits d'édition sur une même ressource.
+Grâce aux en-têtes `ETag` et {{HTTPHeader("If-Match")}}, il est possible d'éviter les conflits ou les collisions d'édition.
+Par exemple, lors de la modification de certaines pages wiki, le contenu est haché et placé dans un `ETag` dans les réponses réussies&nbsp;:
 
-Par exemple, pour un wiki dont l'empreinte du contenu du document édité serait placée dans l'en-tête `Etag` de la réponse&nbsp;:
-
-```
+```http
 ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ```
 
-Lors d'un enregistrement demandé côté client qui correspond à une requête HTTP [`POST`](/fr/docs/Web/HTTP/Reference/Methods/POST), la requête contiendra un en-tête [`If-Match`](/fr/docs/Web/HTTP/Headers/If-Match) contenant la valeur de l'`ETag` afin de vérifier la fraîcheur du contenu.
+Lors de l'enregistrement des modifications d'une page wiki (envoi de données), la requête {{HTTPMethod("POST")}} contiendra l'en-tête {{HTTPHeader("If-Match")}} avec la valeur d'`ETag` que le client a enregistrée lors de la dernière édition afin de vérifier la fraîcheur de la ressource sur le serveur&nbsp;:
 
-```
+```http
 If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ```
 
@@ -41,13 +45,10 @@ Si les deux empreintes ne correspondent pas, cela signifie que le document a ét
 
 {{Specifications}}
 
-## Compatibilité des navigateurs
-
-{{Compat}}
-
 ## Voir aussi
 
-- [`304 Not Modified`](/fr/docs/Web/HTTP/Reference/Status/304)
-- [`If-Unmodified-Since`](/fr/docs/Web/HTTP/Headers/If-Unmodified-Since)
-- [`If-None-Match`](/fr/docs/Web/HTTP/Reference/Headers/If-None-Match)
-- [`428`](/fr/docs/Web/HTTP/Reference/Status/428)
+- [Les codes de statut de réponse HTTP](/fr/docs/Web/HTTP/Reference/Status)
+- [Requêtes conditionnelles](/fr/docs/Web/HTTP/Guides/Conditional_requests)
+- Le code de statut HTTP {{HTTPStatus("304")}}
+- Les en-têtes HTTP {{HTTPHeader("If-Unmodified-Since")}}, {{HTTPHeader("If-Match")}}
+- Le code de statut HTTP {{HTTPStatus("428")}}
