@@ -25,10 +25,12 @@ getFile()
 
 {{domxref('File')}} オブジェクトで解決する {{jsxref('Promise')}} を返します。
 
-### 例
+### 例外
 
-- NotAllowedError
+- `NotAllowedError` {{domxref("DOMException")}}
   - : 読み込みモードの {{domxref('PermissionStatus.state')}} が `granted` でないとき投げられます。
+- `NotFoundError` {{domxref("DOMException")}}
+  - : ファイルが見つからない場合に投げられます。
 
 ## 例
 
