@@ -32,7 +32,7 @@ li {
 该元素的属性包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `attributionsrc` {{deprecated_inline}}
-  - : 要求浏览器发送 {{httpheader("Attribution-Reporting-Eligible")}} 表头。在服务器端，此操作将触发响应中发送 {{httpheader("Attribution-Reporting-Register-Source")}} 表头，用于注册[基于导航的归因来源](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#基于导航的归因来源)。
+  - : 要求浏览器发送 {{httpheader("Attribution-Reporting-Eligible")}} 标头。在服务器端，此操作将触发响应中发送 {{httpheader("Attribution-Reporting-Register-Source")}} 标头，用于注册[基于导航的归因来源](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#基于导航的归因来源)。
 
     当用户点击链接时，浏览器会存储与基于导航的归因来源相关的源数据（该数据由 {{httpheader("Attribution-Reporting-Register-Source")}} 响应标头提供）。更多详情请参阅[归因报告 API](/zh-CN/docs/Web/API/Attribution_Reporting_API)。
 
@@ -71,11 +71,11 @@ li {
 
 - `href`
   - : 超链接所指向的 URL。链接不限于基于 HTTP 的 URL——它们可以使用浏览器支持的任何 URL 协议：
-    - 带 `tel:` 协议的电话号码
-    - 带 `mailto:` 协议的电子邮件地址
-    - 带 `sms:` 协议的短信
-    - 带 [`javascript:` 协议](/zh-CN/docs/Web/URI/Reference/Schemes/javascript)的可执行代码
-    - 如果 web 浏览器不能支持其他 URL 协议，网站可以使用 [`registerProtocolHandler()`](/zh-CN/docs/Web/API/Navigator/registerProtocolHandler)
+    - 带 `tel:` URL 的电话号码
+    - 带 `mailto:` URL 的电子邮件地址
+    - 带 `sms:` URL 的短信
+    - 带 [`javascript:` URL](/zh-CN/docs/Web/URI/Reference/Schemes/javascript) 的可执行代码
+    - 如果 web 浏览器不支持其他 URL 方案，网站可以使用 [`registerProtocolHandler()`](/zh-CN/docs/Web/API/Navigator/registerProtocolHandler)
 
     此外，URL 的其他特性可定位资源的特定部分，包括：
     - 使用文档片段链接到页面的某一段
