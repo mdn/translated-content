@@ -57,7 +57,7 @@ li {
     - 如果没有指定值，浏览器会从多个来源决定文件名和扩展名：
       - {{HTTPHeader("Content-Disposition")}} HTTP 标头。
       - URL [路径](/zh-CN/docs/Web/API/URL/pathname)的最后一段。
-      - {{Glossary("MIME_type", "媒体类型")}}（来自 {{HTTPHeader("Content-Type")}} 标头，[`data:` URL](/zh-CN/docs/Web/URI/Reference/Schemes/data) 的开头，或 [`blob:` URL](/zh-CN/docs/Web/API/URL/createObjectURL_static) 的 {{domxref("Blob.type")}}）。
+      - {{Glossary("MIME_type", "媒体类型")}}（来自 {{HTTPHeader("Content-Type")}} 标头、[`data:` URL](/zh-CN/docs/Web/URI/Reference/Schemes/data) 的开头，或 [`blob:` URL](/zh-CN/docs/Web/API/URL/createObjectURL_static) 的 {{domxref("Blob.type")}}）。
 
     - `filename`：决定文件名的值。`/` 和 `\` 被转化为下划线（`_`）。文件系统可能会阻止文件名中其他的字符，因此浏览器会在必要时适当调整文件名。
 
@@ -92,7 +92,7 @@ li {
   - : 在跟随链接时，[referrer](/zh-CN/docs/Web/HTTP/Reference/Headers/Referer) 需要发送多少内容：
     - `no-referrer`：不会发送 {{HTTPHeader("Referer")}} 标头。
     - `no-referrer-when-downgrade`：{{HTTPHeader("Referer")}} 标头将不会发送到未启用 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}）的{{Glossary("origin","源")}}上。
-    - `origin`：发送的 referrer 将被限制在其页面的源：[协议](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host","主机")}}和{{Glossary("port","端口")}}。
+    - `origin`：发送的 referrer 将被限制在其页面的源：[方案](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host","主机")}}和{{Glossary("port","端口")}}。
     - `origin-when-cross-origin`：发送到其他源的 referrer 将只包含协议、主机和端口，而导航到相同的源仍将包括路径。
     - `same-origin`：将向{{Glossary("Same-origin policy", "同源")}}地址发送 referrer，但跨源请求不包含 referrer 信息。
     - `strict-origin`：当协议安全级别保持不变（HTTPS→HTTPS）时，只将文档的来源作为 referrer 发送，但不要将其发送到安全性较低的目的地（HTTPS→HTTP）。
@@ -491,9 +491,7 @@ document
           href="/zh-CN/docs/Web/HTML/Guides/Content_categories#交互内容"
           >交互内容</a
         >或
-        <a href="/zh-CN/docs/Web/HTML/Reference/Elements/a"
-          >a</a
-        > 元素，且后代不可以指定 <a
+        <code>&lt;a&gt;</code> 元素，且后代不可以指定 <a
           href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/tabindex"
           >tabindex</a
         > 属性
@@ -506,19 +504,15 @@ document
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
-          >短语内容</a
-        >的元素，或任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
+        任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
-        >但不是另外一个 <code>&#x3C;a></code> 元素的元素。
+        >但不是另外一个 <code>&lt;a&gt;</code> 元素的元素。
       </td>
     </tr>
     <tr>
       <th scope="row">隐含的 ARIA 角色</th>
       <td>
-        当 <code>href</code> 属性存在时，为 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a>，否则<a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >没有相应的角色</a
-        >
+        当 <code>href</code> 属性存在时，为 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a>，否则为 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"><code>generic</code></a>
       </td>
     </tr>
     <tr>
