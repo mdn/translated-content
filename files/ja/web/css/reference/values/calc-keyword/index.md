@@ -1,9 +1,8 @@
 ---
 title: <calc-keyword>
 slug: Web/CSS/Reference/Values/calc-keyword
-original_slug: Web/CSS/calc-keyword
 l10n:
-  sourceCommit: 62ebcab471aceef4d843e57e310dae4ab1eda94a
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
 **`<calc-keyword>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、 `e` や `pi` のようなよく定義された定数を表します。これらの数学定数を何桁も手作業で入力したり、計算したりする必要はなく、利便性のために CSS によって直接提供されています。
@@ -109,7 +108,7 @@ NAN
 .container {
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: start;
   width: 200px;
 }
 .container > div {
@@ -158,12 +157,12 @@ const eValue = document.querySelector("#e-value");
 const piValue = document.querySelector("#pi-value");
 
 eInput.addEventListener("input", function () {
-  e.style.transform = "rotate(calc(1deg * pow(" + this.value + ", e)))";
+  e.style.transform = `rotate(calc(1deg * pow(${this.value}, e)))`;
   eValue.textContent = e.style.transform;
 });
 
 piInput.addEventListener("input", function () {
-  pi.style.rotate = "calc(sin(" + this.value + " * pi) * 100deg)";
+  pi.style.rotate = `calc(sin(${this.value} * pi) * 100deg)`;
   piValue.textContent = pi.style.rotate;
 });
 ```

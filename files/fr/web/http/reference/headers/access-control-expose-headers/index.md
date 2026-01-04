@@ -17,7 +17,7 @@ Seuls les {{Glossary("CORS-safelisted response header", "en-têtes de réponse s
       <td>{{Glossary("Response header", "En-tête de réponse")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden request header", "Nom d'en-tête interdit")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "En-tête de requête interdit")}}</th>
       <td>Non</td>
     </tr>
   </tbody>

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**`url()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、ファイルを含めるために使用します。引数は絶対 URL、相対 URL、Blob URL、データ URL の何れかです。 **`url()`** 関数は {{cssxref("attr")}} 関数のように、他の CSS 関数に引数として渡すことができます。値を使用するプロパティに応じて、求められるリソースは画像、フォント、スタイルシートのいずれかになります。`url()` 関数記法は `<url>` データ型の値になります。
+**`url()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、ファイルを含めるために使用します。引数は絶対 URL、相対 URL、Blob URL、data URL の何れかです。 **`url()`** 関数は {{cssxref("attr")}} 関数のように、他の CSS 関数に引数として渡すことができます。値を使用するプロパティに応じて、求められるリソースは画像、フォント、スタイルシートのいずれかになります。`url()` 関数記法は `<url>` データ型の値になります。
 
 > [!NOTE]
 > {{Glossary("URI")}} と {{Glossary("URL")}} との間には違いがあります。 URI は単純にリソースを識別します。 URL は URI の一種で、リソースの*場所*を記述します。 URI はリソースの URL または名前 ({{Glossary("URN")}}) であることがあります。
@@ -61,7 +61,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 ### 値
 
 - `<string>`
-  - : URL を指定する文字列。これは、相対アドレス、絶対アドレス、またはポインター、あるいは含まれるウェブリソースへのデータ URL です。また、ハッシュ URL を使用して、[SVG シェイプ](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes)または [SVG フィルター](/ja/docs/Web/SVG/Reference/Element/filter)の ID を参照することもできます。
+  - : URL を指定する文字列。これは、相対アドレス、絶対アドレス、またはポインター、あるいは含まれるウェブリソースへの data URL です。また、ハッシュ URL を使用して、[SVG シェイプ](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes)または [SVG フィルター](/ja/docs/Web/SVG/Reference/Element/filter)の ID を参照することもできます。
 
     引用符は一般的にオプションです。URL に括弧、ホワイトスペース、引用符が含まれている場合（これらの文字がエスケープされている場合を除く）、またはアドレスに 0x7e 以上の制御文字が含まれている場合は、引用符が必要です。通常の文字列構文の規則が適用されます。二重引用符は二重引用符内で使用することはできず、単一引用符はエスケープされていない限り単一引用符内で使用することはできません。
 
@@ -136,7 +136,7 @@ li::after {
 
 {{EmbedLiveSample("Usage_in_the_content_property", "100%", "110")}}
 
-### データ URL の使用
+### data URL の使用
 
 #### CSS
 

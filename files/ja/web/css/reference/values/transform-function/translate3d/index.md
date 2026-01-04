@@ -111,7 +111,7 @@ translate3d(tx, ty, tz)
   - : {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で、移動ベクトル [tx, ty, tz] の縦軸（垂直、Y 成分）を表します。
 - `tz`
   - : {{cssxref("&lt;length&gt;")}} で、移動ベクトルの z 成分を表します。
-  {{cssxref("&lt;percentage&gt;")}} 値は指定できません。この場合、これを含む座標変換 [tx, ty, tz] は無効とされます。
+    {{cssxref("&lt;percentage&gt;")}} 値は指定できません。この場合、これを含む座標変換 [tx, ty, tz] は無効とされます。
 
 <table class="standard-table">
   <thead>

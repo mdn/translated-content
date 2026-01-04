@@ -47,9 +47,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs
 ## 関数
 
 - {{WebExtAPIRef("tabs.captureTab()")}}
-  - : あるタブの可視エリアの画像をエンコードしたデータ URI を作成します。
+  - : あるタブの可視エリアの画像をエンコードした data URL を作成します。
 - {{WebExtAPIRef("tabs.captureVisibleTab()")}}
-  - : 特定のウィンドウのアクティブなタブの可視エリアの画像をエンコードしたデータ URI を作成します。
+  - : 特定のウィンドウのアクティブなタブの可視エリアの画像をエンコードした data URL を作成します。
 - {{WebExtAPIRef("tabs.connect()")}}
   - : あるタブにおいて、バックグラウンドスクリプト（またはその他ポップアップやオプションページのスクリプトなど特権スクリプト）と [content scripts](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) 間でのメッセージのやり取り用の経路を確保します。
 - {{WebExtAPIRef("tabs.create()")}}

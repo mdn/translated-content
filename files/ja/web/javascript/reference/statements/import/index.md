@@ -189,18 +189,18 @@ const utils = require("./utils/index.js"); // もっとも明示的
 
 - [HTTP URL](/ja/docs/Web/HTTP) は、ほとんどのスクリプトが既に HTTP URL を使用しているため、ウェブ上では常に対応しています。Deno ではネイティブに対応してあります（Deno は当初、モジュールシステム全体を HTTP URL に依存させていました）。一方、Node では[カスタム HTTPS ローダー](https://nodejs.org/api/module.html#import-from-https)を介した実験的な対応のみとなっています。
 - `file:` URL は、Node などの多くのブラウザー以外のランタイムで利用でき、これらの環境ではスクリプトが既に `file:` URL を使用しています。しかし、セキュリティ上の理由から、ブラウザーでは利用できません。
-- [データ URL](/ja/docs/Web/URI/Reference/Schemes/data) は、ブラウザー、Node、Deno など多くのランタイムで使用可能です。小さなモジュールをソースコードに直接埋め込むのに便利です。対応する [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)は、インポート可能なソースコードを指定するものです。例えば、JavaScript 用の `text/javascript`、JSON モジュール用の `application/json`、WebAssembly モジュール用の `application/wasm` などです。（なお、 [import 属性](/ja/docs/Web/JavaScript/Reference/Statements/import/with)が必要となる場合があります。）
+- [data URL](/ja/docs/Web/URI/Reference/Schemes/data) は、ブラウザー、Node、Deno など多くのランタイムで使用可能です。小さなモジュールをソースコードに直接埋め込むのに便利です。対応する [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)は、インポート可能なソースコードを指定するものです。例えば、JavaScript 用の `text/javascript`、JSON モジュール用の `application/json`、WebAssembly モジュール用の `application/wasm` などです。（なお、 [import 属性](/ja/docs/Web/JavaScript/Reference/Statements/import/with)が必要となる場合があります。）
 
   ```js
   // HTTP URL
   import x from "https://example.com/x.js";
-  // データ URL
+  // data URL
   import x from "data:text/javascript,export default 42;";
-  // JSON モジュールのデータ URL
+  // JSON モジュールの data URL
   import x from 'data:application/json,{"foo":42}' with { type: "json" };
   ```
 
-  `text/javascript` データ URL であってもモジュールとして解釈されますが、相対インポートは使用できません。これは `data:` URL スキームが階層構造を持たないためです。つまり、`import x from "data:text/javascript,import y from './y.js';"` はエラーが発生します。相対指定子 `'./y.js'` を解決できないためです。
+  `text/javascript` の data URL であってもモジュールとして解釈されますが、相対インポートは使用できません。これは `data:` URL スキームが階層構造を持たないためです。つまり、`import x from "data:text/javascript,import y from './y.js';"` はエラーが発生します。相対指定子 `'./y.js'` を解決できないためです。
 
 - [`node:` URL](https://nodejs.org/api/esm.html#node-imports) は、Node.js の組み込みモジュールに解決されます。これらは Node および Bun など、Node との互換性を主張する他のランタイムで使用できます。
 

@@ -574,7 +574,7 @@ btn.addEventListener("click", () => {
 
 - [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)
 - {{cssxref('easing-function')}}
-- [CSS イージング関数](/en-US/docs/Web/CSS/Guides/Easing_functions)モジュール
+- [CSS イージング関数](/ja/docs/Web/CSS/Guides/Easing_functions)モジュール
 - JavaScript の {{domxref("AnimationEvent")}} API
 - [Cubic bézier generation tool](https://cubic-bezier.com/)
 - その他のアニメーション関連プロパティ: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timeline")}}

@@ -20,7 +20,7 @@ Ils offrent une alternative efficace au fait de charger d'abord la ressource san
       <td>{{Glossary("Fetch Metadata Request Header", "En-tête de requête Fetch Metadata")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden request header", "Nom d'en-tête interdit")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "En-tête de requête interdit")}}</th>
       <td>Non</td>
     </tr>
     <tr>

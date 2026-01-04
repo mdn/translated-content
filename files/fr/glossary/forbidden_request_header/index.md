@@ -1,12 +1,12 @@
 ---
-title: Nom d'en-tête interdit
+title: En-tête de requête interdit
 slug: Glossary/Forbidden_request_header
 original_slug: Glossary/Forbidden_header_name
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: a8a430360e652306ae0b2d97388da9501671d2fb
 ---
 
-**Un nom d'en-tête interdit** est un nom d'[en-tête HTTP](/fr/docs/Web/HTTP/Reference/Headers) qui ne peut être modifié par programmation, spécifiquement, un nom d'en-tête de requête HTTP (contraste avec {{Glossary("Forbidden response header name", "Nom d'en-tête de réponse interdit")}}).
+**Un en-tête de requête interdit** est une paire nom-valeur d'[en-tête HTTP](/fr/docs/Web/HTTP/Reference/Headers) qui ne peut être modifié par programmation, spécifiquement, un nom d'en-tête de requête HTTP (contraste avec {{Glossary("Forbidden response header name", "un en-tête de réponse interdit")}}).
 
 Les modifications de ces en-têtes sont interdites pour que l'agent utilisateur garde un total contrôle sur eux.
 Par exemple, l'en-tête {{HTTPHeader("Date")}} est un en-tête de requête interdit, donc ce code ne peut pas définir le champ `Date` du message&nbsp;:
@@ -54,7 +54,10 @@ Les en-têtes interdits sont l'un des suivants&nbsp;:
 > [!NOTE]
 > Bien que l'en-tête {{HTTPHeader("Referer")}} soit listé comme interdit [dans la spécification <sup>(angl.)</sup>](https://fetch.spec.whatwg.org/#forbidden-request-header), l'agent utilisateur n'en garde pas le contrôle total et l'en-tête peut être modifié par programmation. Par exemple, lors de l'utilisation de [`fetch()`](/fr/docs/Web/API/Window/fetch), l'en-tête {{HTTPHeader("Referer")}} peut être modifié par programmation via l'option [`referrer`](/fr/docs/Web/API/RequestInit#referrer).
 
+> [!NOTE]
+> Chrome interdit également `Access-Control-Request-Private-Network`
+
 ## Voir aussi
 
 - Terme associé du glossaire&nbsp;:
-  - {{Glossary("Forbidden response header name", "Nom d'en-tête de réponse interdit")}}
+  - {{Glossary("Forbidden response header name", "En-tête de réponse interdit")}}
