@@ -1,9 +1,8 @@
 ---
 title: symbols
 slug: Web/CSS/Reference/At-rules/@counter-style/symbols
-original_slug: Web/CSS/@counter-style/symbols
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`symbols`** は [CSS](/ja/docs/Web/CSS) の記述子で、指定されたカウンターシステムでカウンター表現を作成するための記号を指定するために使用されます。 {{cssxref('@counter-style/system', 'system')}} 記述子の値が `cyclic`、`numeric`、`alphabetic`、`symbolic`、`fixed` の場合、この記述子を指定する必要があります。
@@ -23,7 +22,7 @@ symbols: indic-numbers;
 `symbols` 記述子は、 1 つ以上の `<symbol>` を空白で区切って指定したリストで指定します。
 
 - `<symbol>`
-  - : カウンターシステム内で使用する記号を指定します。リスト内のそれぞれの記号は、{{cssxref("&lt;string&gt;")}}、{{cssxref("&lt;image&gt;")}}、{{cssxref("&lt;custom-ident&gt;")}} のいずれかです。 `<image>` 値は、{{cssxref("url_value", "&lt;url&gt;")}} または {{cssxref("&lt;gradient&gt;")}} として指定することができます。
+  - : カウンターシステム内で使用する記号を指定します。リスト内のそれぞれの記号は、{{cssxref("&lt;string&gt;")}}、{{cssxref("image")}}、{{cssxref("&lt;custom-ident&gt;")}} のいずれかです。 `<image>` 値は、{{cssxref("url_value", "&lt;url&gt;")}} または {{cssxref("gradient")}} として指定することができます。
 
 > [!NOTE]
 > 記号に{{glossary("identifier", "識別子")}}を使用する場合、`*`、`「`、`\` などの {{glossary("ASCII")}} 以外の文字は識別子とはみなされないことに注意してください。これらは、文字列として引用符で囲むか、エスケープするかする必要があります。
@@ -93,6 +92,6 @@ symbols: indic-numbers;
 
 - {{cssxref("@counter-style")}} 記述子: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}}, {{cssxref("@counter-style/fallback", "fallback")}}
 - リストスタイルのプロパティ: {{cssxref("list-style")}}, {{cssxref("list-style-image")}}, {{cssxref("list-style-position")}}
-- {{cssxref("symbols", "symbols()")}} 関数
+- {{cssxref("symbols()")}} 関数
 - {{cssxref("url_value", "&lt;url&gt;")}} 型
 - [CSS カウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)モジュール

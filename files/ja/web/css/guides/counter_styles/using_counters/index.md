@@ -1,9 +1,9 @@
 ---
 title: CSS カウンターの使用
+short-title: カウンターの使用
 slug: Web/CSS/Guides/Counter_styles/Using_counters
-original_slug: Web/CSS/CSS_counter_styles/Using_CSS_counters
 l10n:
-  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **CSS カウンター**では、文書内の位置に基づいてコンテンツの表示方法を調整することができます。
@@ -23,12 +23,12 @@ l10n:
 
 カウンターを使用するには、最初に必ず {{cssxref("counter-reset")}} プロパティで値を初期化する必要があります。
 カウンター値は、 {{cssxref("counter-increment")}} プロパティを使用して増減させることができ、 {{cssxref("counter-set")}} プロパティを使用して特定の値に直接設定することができます。
-カウンターの現在の値は、 {{cssxref("counter", "counter()")}} または {{cssxref("counters", "counters()")}} 関数を使用して表示することができ、通常は[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)の {{CSSxRef("content")}} プロパティ内に表示されます。
+カウンターの現在の値は、 {{cssxref("counter()")}} または {{cssxref("counters()")}} 関数を使用して表示することができ、通常は[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)の {{CSSxRef("content")}} プロパティ内に表示されます。
 
 カウンターは、ボックスを生成する要素でのみ、設定したり、リセットしたり、進めたりすることができます。
 例えば、要素が `display: none` に設定されている場合、その要素に対するカウンター操作は無視されます。
 
-カウンターのプロパティは、スタイルの包含を使用して特定の要素に限定することができます。スタイルの包含については、 `contain` プロパティで詳しく説明されています。
+カウンターのプロパティは、スタイルの包含を使用して特定の要素に限定することができます。スタイルの包含については、 {{cssxref("contain")}} プロパティで詳しく説明されています。
 
 ### カウンター値の操作
 
@@ -59,7 +59,7 @@ h3::before {
 
 カウンター名の後に、増加量や減少量を指定することができます。これは正の数や負の数を指定する事ができますが、整数が指定されなかった場合は既定値の `1` となります。
 
-増加または減少させる以外に、 {{cssxref("counter-set")}} プロパティを使用して明示的に値を設定することができます。
+増加または減少させる以外に、{{cssxref("counter-set")}} プロパティを使用して明示的に値を設定することができます。
 
 ```css
 .done::before {
@@ -71,11 +71,15 @@ h3::before {
 
 ### カウンターの表示
 
-カウンター値は、 {{cssxref("counter", "counter()")}} または {{cssxref("counters", "counters()")}} 関数を {{cssxref("content")}} の中で使用して表示することができます。
+カウンター値は、 {{cssxref("counter()")}} または {{cssxref("counters()")}} 関数を {{cssxref("content")}} の中で使用して表示することができます。
 
 例えば、以下の宣言は `counter()` をそれぞれの `h3` 見出しの前に `Section <数値>:` というテキストを付けるために使用しています。ここで `<数値>` は、 10 進数（既定の表示スタイル）でのカウントの値です。
 
 ```css
+body {
+  counter-reset: section; /* 'section' という名前付きのカウンターを設定し、その初期値は 0 です。 */
+}
+
 h3::before {
   counter-increment: section; /* カウンター section の値を 1 つずつ増加 */
   content: "Section " counter(section) ": "; /* カウンター値を既定のスタイル（10 進数）で表示 */
@@ -96,7 +100,7 @@ h3::before {
 3 Three
 ```
 
-{{cssxref("counters", "counters()")}} 関数は、内側のレベルのカウントに親レベルのカウントが含まれる場合に使用されます。
+{{cssxref("counters()")}} 関数は、内側のレベルのカウントに親レベルのカウントが含まれる場合に使用されます。
 例えば、これを使用すると次のように節をレイアウトすることができます。
 
 ```plain
@@ -110,10 +114,10 @@ h3::before {
 3 Three
 ```
 
-{{cssxref("counter", "counter()")}} 関数には `counter(<カウンター名>)` と `counter(<カウンター名>, <カウンタースタイル>)` の 2 つの形があります。
+{{cssxref("counter()")}} 関数には `counter(<カウンター名>)` と `counter(<カウンター名>, <カウンタースタイル>)` の 2 つの形があります。
 生成される文字列は、その擬似要素のスコープにある指定された名前の最も内側にあるカウンター値です。
 
-{{cssxref("counter", "counter()")}} 関数にも、 `counters(<カウンター名>, <セパレーター>)` と `counters(<カウンター名>, <セパレーター>, <カウンタースタイル>)` の 2 つの形があります。生成される文字列は、その擬似要素のスコープにある指定された名前のすべてのカウンター値が、外側から内側に向けて、指定された文字列 (`<セパレーター>`) で区切られたものになります。
+{{cssxref("counters()")}} 関数にも、 `counters(<カウンター名>, <セパレーター>)` と `counters(<カウンター名>, <セパレーター>, <カウンタースタイル>)` の 2 つの形があります。生成される文字列は、その擬似要素のスコープにある指定された名前のすべてのカウンター値が、外側から内側に向けて、指定された文字列 (`<セパレーター>`) で区切られたものになります。
 
 どちらのメソッドでも、カウンターは指定された `<カウンタースタイル>` で表示されます（既定では `decimal` です）。
 {{cssxref("list-style-type")}} の値のいずれか、または[カスタムスタイル](/ja/docs/Web/CSS/Guides/Counter_styles)を使用することができます。
@@ -126,7 +130,7 @@ h3::before {
 逆行カウンターは `reversed()` という関数記法を使って {{cssxref("counter-reset")}} でカウンターの名前を指定する際に作成します。
 
 逆行カウンターは、初期値が要素数と等しくなります（初期値が 0 である通常のカウンターとは異なります）。
-このため、要素数から 1 までカウントするカウンターを簡単に実装することができます。
+これにより、要素数から 1 までカウントダウンするカウンターを実装することができます。
 
 例えば、 `section` という名前の逆行カウンターを初期値で作成するには、次のような構文を使用します。
 
@@ -148,7 +152,7 @@ counter-reset: reversed(section);
 
 要素がカウンターを宣言すると、親から受け取った同じ名前のカウンターが入れ子になります。親に同じ名前のカウンターがない場合、カウンターはそのまま要素のカウンターのセットに追加されます。前回の子要素から受け取った同じ名前のカウンターは、カウンターのセットから除去されます。
 
-{{cssxref("counter", "counter()")}} 関数は、指定された名前の最も内側のカウンターを取得します。そして、 {{cssxref("counters", "counters()")}} 関数は、指定された名前のカウンター全体を受け取ります。
+{{cssxref("counter()")}} 関数は、指定された名前の最も内側のカウンターを取得します。そして、 {{cssxref("counters()")}} 関数は、指定された名前のカウンター全体を受け取ります。
 
 次の例では、`primary` という名前の継承されたカウンターと、 `secondary` という名前の兄弟カウンターをデモします。すべての `<div>` 要素で、`counters()` 関数を使用してそれぞれのカウンターを表示します。すべてのカウンターは `counter-reset` プロパティを使用して作成されており、カウンターはどれも増加していないことに注意してください。
 
@@ -391,9 +395,9 @@ a[href]:empty::after {
 #### HTML
 
 ```html
-<p><a href="https://www.mozilla.org/"></a> を参照</p>
+<p><a href="https://www.mozilla.org/" aria-label="Mozilla"></a> を参照</p>
 <p><a href="contact-me.html">メッセージを残す</a>方法を忘れないでください。</p>
-<p><a href="https://developer.mozilla.org/"></a> も参照</p>
+<p><a href="https://developer.mozilla.org/" aria-label="MDN"></a> も参照</p>
 ```
 
 #### 結果
@@ -403,7 +407,7 @@ a[href]:empty::after {
 ### 入れ子になったカウンターの例
 
 CSS カウンターはアウトラインのリストを作成するのには特に便利で、子要素でカウンターの新しいインスタンスが自動的に生成されます。
-{{cssxref("counter", "counter()")}} 関数を使用して、入れ子になったカウンターの階層間に区切り文字列を挿入することができます。
+{{cssxref("counter()")}} 関数を使用して、入れ子になったカウンターの階層間に区切り文字列を挿入することができます。
 
 #### CSS
 

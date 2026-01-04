@@ -1,12 +1,11 @@
 ---
 title: symbols()
 slug: Web/CSS/Reference/Values/symbols
-original_slug: Web/CSS/symbols
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`symbols()`** は CSS の関数で、 {{cssxref("list-style")}} などのプロパティの値として、カウンタースタイルをインラインで直接定義することができます。これは、カウンタースタイルを定義する {{cssxref("@counter-style")}} メソッドよりも機能は劣りますが、よりシンプルな代替手段です。
+**`symbols()`** は [CSS](/ja/docs/Web/CSS) の関数で、 {{cssxref("list-style")}} などのプロパティの値として、カウンタースタイルをインラインで直接定義することができます。これは、カウンタースタイルを定義する {{cssxref("@counter-style")}} メソッドよりも機能は劣りますが、よりシンプルな代替手段です。
 
 再利用可能なカウンタースタイルを定義する {{cssxref("@counter-style")}} とは異なり、`symbols()` は無名です（つまり、1 回しか使用できません）。この関数は、文字列および画像を値として受け入れます。これに対し、{{cssxref("@counter-style")}} の [`symbols`](/ja/docs/Web/CSS/Reference/At-rules/@counter-style/symbols) 記述子は、識別子も受け入れます。
 
