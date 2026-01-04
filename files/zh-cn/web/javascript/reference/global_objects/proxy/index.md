@@ -414,4 +414,4 @@ console.log(products.latestBrowser);
 
 ## 参见
 
-- [Proxies are awesome](https://youtu.be/sClk6aB_CPk)——Brendan Eich 在 JSConf 大会（2014 年）的演讲
+- [Proxy 太棒了](https://youtu.be/sClk6aB_CPk)——Brendan Eich 在 JSConf 大会（2014 年）的演讲
