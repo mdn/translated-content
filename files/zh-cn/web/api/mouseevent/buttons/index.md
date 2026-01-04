@@ -75,12 +75,12 @@ document.addEventListener("mousedown", logButtons);
 
 ### Firefox 备注
 
-Firefox 在 Windows、Linux (GTK) 以及 macOS 上支持 `buttons` 属性，但具有以下限制：
+Firefox 在 Windows、Linux（GTK）以及 macOS 上支持 `buttons` 属性，但具有以下限制：
 
 - 工具程序允许自定义按键的行为。因此，*第一按键*可能不是设备上的物理左键，*第二按键*也可能不是物理右键，以此类推。此外，中键（滚轮键）、第四按键和第五按键即使被按下，也可能不会被分配值。
 - 单按键设备可能会通过按键与键盘按键的组合来模拟额外的按键。
 - 触控设备可能会通过设定的手势来模拟按键（例如，单指触摸是*第一按键*，双指触摸是*第二按键*，等等）。
-- 在 Linux (GTK) 上不支持第四按键和第五按键。此外，{{domxref("Element/mouseup_event", "mouseup")}} 事件总是在 `buttons` 的值中包含被释放按键的信息。
+- 在 Linux（GTK）上不支持第四按键和第五按键。此外，{{domxref("Element/mouseup_event", "mouseup")}} 事件总是在 `buttons` 的值中包含被释放按键的信息。
 - 在 Mac OS X 10.5 上，`buttons` 属性总是返回 `0`，因为其不具有能够实现此特性的平台 API。
 
 ## 参见
