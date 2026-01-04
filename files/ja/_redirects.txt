@@ -4529,7 +4529,7 @@
 /ja/docs/Web/CSS/Common_CSS_Questions	/ja/docs/Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
 /ja/docs/Web/CSS/Compositing_and_Blending	/ja/docs/Web/CSS/Guides/Compositing_and_blending
 /ja/docs/Web/CSS/Containing_block	/ja/docs/Web/CSS/Guides/Display/Containing_block
-/ja/docs/Web/CSS/Currentcolor	/ja/docs/Web/CSS/Reference/Values/color_value#currentColor_keyword
+/ja/docs/Web/CSS/Currentcolor	/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード
 /ja/docs/Web/CSS/Descendant_combinator	/ja/docs/Web/CSS/Reference/Selectors/Descendant_combinator
 /ja/docs/Web/CSS/Descendant_selectors	/ja/docs/Web/CSS/Reference/Selectors/Descendant_combinator
 /ja/docs/Web/CSS/Filter_Effects	/ja/docs/Web/CSS/Guides/Filter_effects
@@ -5179,6 +5179,7 @@
 /ja/docs/Web/CSS/ruby-align	/ja/docs/Web/CSS/Reference/Properties/ruby-align
 /ja/docs/Web/CSS/ruby-position	/ja/docs/Web/CSS/Reference/Properties/ruby-position
 /ja/docs/Web/CSS/scale	/ja/docs/Web/CSS/Reference/Properties/scale
+/ja/docs/Web/CSS/scroll	/ja/docs/Web/CSS/Reference/Properties/animation-timeline/scroll
 /ja/docs/Web/CSS/scroll-behavior	/ja/docs/Web/CSS/Reference/Properties/scroll-behavior
 /ja/docs/Web/CSS/scroll-margin	/ja/docs/Web/CSS/Reference/Properties/scroll-margin
 /ja/docs/Web/CSS/scroll-margin-block	/ja/docs/Web/CSS/Reference/Properties/scroll-margin-block
@@ -5346,6 +5347,7 @@
 /ja/docs/Web/CSS/var	/ja/docs/Web/CSS/Reference/Values/var
 /ja/docs/Web/CSS/var()	/ja/docs/Web/CSS/Reference/Values/var
 /ja/docs/Web/CSS/vertical-align	/ja/docs/Web/CSS/Reference/Properties/vertical-align
+/ja/docs/Web/CSS/view	/ja/docs/Web/CSS/Reference/Properties/animation-timeline/view
 /ja/docs/Web/CSS/view-timeline	/ja/docs/Web/CSS/Reference/Properties/view-timeline
 /ja/docs/Web/CSS/view-timeline-axis	/ja/docs/Web/CSS/Reference/Properties/view-timeline-axis
 /ja/docs/Web/CSS/view-timeline-inset	/ja/docs/Web/CSS/Reference/Properties/view-timeline-inset

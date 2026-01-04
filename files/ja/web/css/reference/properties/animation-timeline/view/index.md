@@ -1,22 +1,11 @@
 ---
 title: view()
 slug: Web/CSS/Reference/Properties/animation-timeline/view
-original_slug: Web/CSS/animation-timeline/view
 l10n:
-  sourceCommit: dfad9eccce7c2f11c195003ec1cbd7b0fd9db577
+  sourceCommit: 8f7fa9e7aef0399c7a7f8e5a20476a0c2f287640
 ---
 
-{{SeeCompatTable}}
-
-**`view()`** は [CSS 関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、アニメーションタイムラインと共に使用して、アニメーションする無名ビュー進行タイムラインを提供する主体要素を示すことができます。ビュー進行タイムラインは、最も近い先祖スクロール内の主体要素の可視性の変化によって進行します。既定では、タイムラインは、主体がスクローラーの一方の端に最初に表示された時に 0% になり、反対側の端に達した時に 100% になります。
-
-関数の引数には、タイムラインの進行が追跡されるスクロールバーの軸と、主体が表示されているとみなされるボックスの位置を調整するインセットを指定します。
-
-> [!NOTE]
-> 示された軸がスクロールバーを持たない場合、アニメーションタイムラインは非アクティブになります（進行がゼロになります）。
-
-> [!NOTE]
-> `view()` を使用するたびに、[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) に {{domxref("ViewTimeline")}} の固有のインスタンスが対応付けられます。
+**`view()`** は [CSS 関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、{{cssxref("animation-timeline")}} プロパティと組み合わせて使用され、要素が最も近い{{glossary("scroll container", "スクロールコンテナー")}}内で表示範囲に入るタイミングに基づいて、[無名ビュー進行タイムライン](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#無名ビュー進行タイムライン)を生成します。追跡する軸とオプションのインセットを調整することで、要素が「表示範囲内」と見なされるタイミングを制御できます。
 
 ## 構文
 
@@ -25,13 +14,11 @@ l10n:
 animation-timeline: view();
 
 /* 軸を選択する値 */
-animation-timeline: view(block); /* 既定 */
-animation-timeline: view(inline);
-animation-timeline: view(y);
+animation-timeline: view(block);
 animation-timeline: view(x);
 
 /* インセットの値 */
-animation-timeline: view(auto); /* 既定 */
+animation-timeline: view(auto);
 animation-timeline: view(20%);
 animation-timeline: view(200px);
 animation-timeline: view(20% 40%);
@@ -40,35 +27,31 @@ animation-timeline: view(100px 200px);
 animation-timeline: view(auto 200px);
 
 /* 軸とインセットを指定する例 */
-animation-timeline: view(block auto); /* 既定 */
+animation-timeline: view(block auto);
 animation-timeline: view(inline 20%);
 animation-timeline: view(x 200px auto);
 ```
 
 ### 引数
 
-- 軸
-  - : スクロールバー軸の値は以下のいずれかになります。
-    - `block`
-      - : スクロールコンテナーのブロック軸にあるスクロールバーで、行内のテキストの流れに垂直な方向の軸です。
-        標準的な英語のような横書きモードでは `y` と同じになり、縦書きモードでは `x` と同じになります。これが既定値です。
-    - `inline`
-      - : スクロールコンテナーのインライン軸にあるスクロールバーで、行のテキストの流れと平行な方向の軸です。
-        横書きモードでは `x` と同じになり、縦書きモードでは `y` と同じになります。
-    - `y`
-      - : スクロールコンテナーの縦軸にあるスクロールバー。
-    - `x`
-      - : スクロールコンテナーの横軸にあるスクロールバー。
+- `<axis>`
+  - : スクロールポートの方向（軸）を説明する {{ cssxref("axis") }} キーワード値。デフォルト値は `block` です。
+- `<view-timeline-inset>`
+  - : 要素が「表示範囲内」とみなされる領域を定義するインセット領域を指定します。値はキーワード`auto`、または最大 2 つの {{cssxref("length-percentage")}} パーセント値を指定できます。
 
-- インセット
-  - : この値は `auto` または {{cssxref("length-percentage")}} のいずれかです。[スクロールポート](/ja/docs/Glossary/Scroll_container#スクロールポート)のインセット（正の値）またはアウトセット（負の値）の調整を指定します。インセットは、アニメーションタイムラインの長さを決定する要素が表示されているかどうかを決定するために使用します。言い換えれば、アニメーションは要素がインセット調整されたビューにある限り続きます。
-    - start
-      - : スクロールポートの先頭からの内方オフセット。
-    - end
-      - : スクロールポートの末尾からの内方オフセット。
+## 解説
 
-> [!NOTE]
-> 軸とインセットの値は、任意の順序で指定することができます。
+ビュー進行タイムラインは、主体要素が属する最も近いスクロールコンテナー内での可視性の変化に基づいて進行します。`view()` 関数は、{{cssxref("animation-timeline")}} プロパティと組み合わせて使用され、このようなビュー進行タイムラインを生成します。
+
+この関数の引数では、タイムラインの進行状況を追跡するスクロールバーの軸と、対象が可視状態とみなされるボックスの位置を調整するインセットを指定します。
+
+- **軸** (axis): デフォルトでは、`view()` はブロック軸を使用します。明示的な `<axis>` 値を指定することでこれを変更できます。選択した軸にスクロールバーが含まれていない場合、アニメーションタイムラインは無効化されます（進行状況ゼロ）。
+- **インセット** (inset): デフォルトでは、対象がスクロール領域の一方の端に最初に表示された時点でタイムラインは `0%`（{{cssxref("@keyframes")}} アニメーションの `from` キーフレーム）に位置し、対象の外枠がスクロール領域の反対側の端に達した時点で `100%`（`to` キーフレーム）に位置します。これらの位置は `<view-timeline-inset>` 引数を使って制御できます。
+  アニメーションは、要素がインセット調整済みビュー内にある間だけ持続します。インセットは要素がビュー内にあるかどうかを判断するために使用されており、これがアニメーションのタイムラインの長さを決定します。インセットは最大2つの値で構成され、それぞれの値は `auto` と {{cssxref("length-percentage")}} のどちらかになります。
+  - 最初の値は始点を定義し、スクロールポートの先頭から内側へのオフセットを定義します。
+  - 2つ目（存在する場合）は終点を指定し、スクロールポートの末尾からの内側へのオフセットを表します。値が `0` より大きい場合、インセット（正の値）を指定します。負の値は、[スクロールポート](/ja/docs/Glossary/Scroll_container#スクロールポート)に対するアウトセット調整を定義します。
+
+軸とインセットの要素は任意の順序で指定します。インセット成分の中では、最初の値が始点のインセットを定義し、2 つ目の値が終点のインセットを定義します。
 
 ### 形式文法
 
@@ -78,7 +61,7 @@ animation-timeline: view(x 200px auto);
 
 ### 無名ビュー進行タイムラインの設定
 
-無名ビュー進行タイムラインは `animation-timeline: view()` を使用して `subject` クラスを持つ要素に設定します。その結果、 `subject` 要素は文書のスクロールに合わせてアニメーションします。
+この例では、`subject` および `animation` クラスを持つ要素に対して、`animation-timeline: view()` を使用して無名ビュー進行タイムラインを生成します。その結果、文書をスクロールすると、この要素が文書内を上に移動するにつれてアニメーションが再生されます。
 
 #### HTML
 
@@ -86,7 +69,7 @@ animation-timeline: view(x 200px auto);
 
 ```html
 <div class="content">
-  <h1>Content</h1>
+  <h1>コンテンツ</h1>
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Risus quis varius quam
@@ -118,8 +101,8 @@ animation-timeline: view(x 200px auto);
     scelerisque. Netus et malesuada fames ac.
   </p>
 </div>
-<div class="overlay top">inset start 50%</div>
-<div class="overlay bottom">inset end 10%</div>
+<div class="overlay top">インセット先頭 50%</div>
+<div class="overlay bottom">インセット末尾 10%</div>
 ```
 
 #### CSS
@@ -145,7 +128,7 @@ p {
 }
 ```
 
-結果の理解を助けるために、`subject-container`、`top`、`bottom` という追加要素を使用しています。 `subject-container` はアニメーションの範囲を示します。また、半透過の `top` と `bottom` のオーバーレイは、オフセットされたスクロールポートを示します。
+結果の理解を助けるために、いくつか追加クラスを定義しました。`subject-container`クラスはアニメーションの境界を表示させます。また半透明の`top`と`bottom`オーバーレイは、インセット調整されたスクロールポートをマークします。
 
 ```css
 .subject-container {
@@ -167,13 +150,13 @@ p {
 
 .top {
   top: 0;
-  height: 244px;
+  height: 50%;
   align-items: end;
 }
 
 .bottom {
-  top: 432px;
-  height: 48px;
+  bottom: 0;
+  height: 10%;
 }
 ```
 
@@ -186,9 +169,7 @@ p {
 ```css
 .animation {
   animation-timeline: view(block 50% 10%);
-
   animation-name: grow;
-  animation-fill-mode: both;
   animation-duration: 1ms; /* Firefox では、アニメーションを適用するために必要 */
   animation-timing-function: linear;
 }
@@ -204,11 +185,25 @@ p {
 }
 ```
 
+```css hidden
+@layer no-support {
+  @supports not (animation-timeline: view()) {
+    body::before {
+      content: "このブラウザーは CSS の `view()` 関数に対応していません。";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1em;
+    }
+  }
+}
+```
+
 #### 結果
 
 主体要素のアニメーションはスクロールしてご覧ください。
 
-{{EmbedLiveSample("Setting an anonymous view progress timeline", "100%", "480px")}}
+{{EmbedLiveSample("Examples", "100%", "480px")}}
 
 ## 仕様書
 
@@ -220,6 +215,10 @@ p {
 
 ## 関連情報
 
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)
+- {{cssxref("animation-timeline")}}
+- [スクロール駆動アニメーションタイムライン](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
 - [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)
-- [`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline)
+- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)モジュール
+- [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)モジュール
+- {{domxref("ViewTimeline")}}
+- [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
