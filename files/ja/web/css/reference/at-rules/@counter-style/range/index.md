@@ -1,9 +1,8 @@
 ---
 title: range
 slug: Web/CSS/Reference/At-rules/@counter-style/range
-original_slug: Web/CSS/@counter-style/range
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`range`** 記述子を使用すると、作成者は、 {{cssxref("@counter-style")}} アットルールを使用して独自のカウンタースタイルを定義する際に、スタイルを適用するカウンター値の 1 つ以上の範囲を指定することができます。 `range` 記述子が含まれている場合、定義されたカウンターは、設定された範囲内の値にのみ使用されます。カウンター値が指定された範囲外の場合、そのマーカーの表現を構築するには代替スタイルが使用されます。
@@ -126,6 +125,6 @@ range:
 
 - {{cssxref("@counter-style")}} 記述子: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}}, {{cssxref("@counter-style/fallback", "fallback")}}
 - リストスタイルのプロパティ: {{cssxref("list-style")}}, {{cssxref("list-style-image")}}, {{cssxref("list-style-position")}}
-- {{cssxref("symbols", "symbols()")}}, 無名のカウンタースタイルを生成する関数記法。
+- {{cssxref("symbols()")}}: 無名のカウンタースタイルを生成する関数記法。
 - [CSS カウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)モジュール
 - [CSS リストとカウンター](/ja/docs/Web/CSS/Guides/Lists)モジュール
