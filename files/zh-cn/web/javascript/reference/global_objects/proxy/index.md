@@ -102,7 +102,7 @@ console.log(proxy3.message2); // 你好世界
 
 ### 对象内部方法
 
-[对象](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#对象) 是属性的集合。然而，该语言并未提供任何机制来直接操作对象中存储的数据——相反，对象定义了一些内部方法来规定其交互方式。例如，当你读取 `obj.x` 时，你可能会期望发生以下情况：
+[对象](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#对象)是属性的集合。然而，该语言并未提供任何机制来*直接*操作对象中存储的数据——相反，对象定义了一些内部方法来规定其交互方式。例如，当你读取 `obj.x` 时，你可能会期望发生以下情况：
 
 - `x` 属性会沿着[原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)上行搜索，直至找到该属性。
 - 若 `x` 是数据属性，则返回属性描述符的 `value` 属性。
@@ -110,7 +110,7 @@ console.log(proxy3.message2); // 你好世界
 
 这种过程在语言中并无特殊之处——仅仅是因为普通对象默认具有一个名为 `[[Get]]` 的内部方法，该方法即以这种行为方式定义。`obj.x` 属性访问语法只是调用了对象的 `[[Get]]` 方法，而对象会通过自身内部方法的实现来决定返回什么内容。
 
-另一个例子是，数组与普通对象不同，因为它们具有一个神奇的 `length` 属性——当修改该属性时，系统会自动为数组分配空槽位或移除元素。同样地，向数组添加元素会自动改变 `length` 属性。这是因为数组拥有 `[[DefineOwnProperty]]` 内部方法，该方法在写入整数索引时会更新 `length`，在写入 `length` 值时则更新数组内容。这类内部方法实现与普通对象不同的特殊对象被称为*特殊对象*。`Proxy` 使开发者能够全权定义自定义的特殊对象。
+另一个例子是，[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)与普通对象不同，因为它们具有一个神奇的 [`length`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/length) 属性——当修改该属性时，系统会自动为数组分配空槽位或移除元素。同样地，向数组添加元素会自动改变 `length` 属性。这是因为数组拥有 `[[DefineOwnProperty]]` 内部方法，该方法在写入整数索引时会更新 `length`，在写入 `length` 值时则更新数组内容。这类内部方法实现与普通对象不同的特殊对象被称为*特殊对象*。`Proxy` 使开发者能够全权定义自定义的特殊对象。
 
 所有对象均具有以下内部方法：
 
@@ -158,7 +158,7 @@ console.log(proxy3.message2); // 你好世界
 
 ### 基本示例
 
-在以下简单的例子中，当对象中不存在属性名时，默认返回值为 `37`。下面的代码以此展示了 {{jsxref("Global_Objects/Proxy/handler/get", "get")}} handler 的使用场景。
+在以下简单的例子中，当对象中不存在属性名时，默认返回值为 `37`。下面的代码以此展示了 {{jsxref("Proxy/Proxy/get", "get()")}} 处理器的使用场景。
 
 ```js
 const handler = {
@@ -262,7 +262,7 @@ console.log(proxy.size); // TypeError: get size method called on incompatible Pr
 
 ### 验证
 
-通过 `Proxy`，你可以轻松地验证向一个对象的传值。下面的代码借此展示了 {{jsxref("Global_Objects/Proxy/handler/set", "set")}} handler 的作用。
+通过 `Proxy`，你可以轻松地验证向一个对象的传值。下面的代码借此展示了 {{jsxref("Proxy/Proxy/set", "set()")}} 处理器的作用。
 
 ```js
 const validator = {
@@ -412,6 +412,6 @@ console.log(products.latestBrowser);
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - [Proxies are awesome](https://youtu.be/sClk6aB_CPk)——Brendan Eich 在 JSConf 大会（2014 年）的演讲
