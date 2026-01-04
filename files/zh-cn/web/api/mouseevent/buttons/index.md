@@ -1,6 +1,8 @@
 ---
-title: MouseEvent.buttons
+title: MouseEvent：buttons 属性
 slug: Web/API/MouseEvent/buttons
+l10n:
+  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
 
 {{APIRef("UI Events")}}
