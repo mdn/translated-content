@@ -11,7 +11,7 @@ IndexedDB 是一種底層 API，用於在用戶端儲存大量結構化資料（
 
 ## 關鍵概念與用法
 
-IndexedDB 是一個交易式資料庫系統，就像 SQL 基礎的關聯式資料庫管理系統（RDBMS）。然而，不同於 SQL 基礎的 RDBMS 使用固定欄位的表格，IndexedDB 是一個 JavaScript 基礎的物件導向資料庫。IndexedDB 讓你儲存和檢索以**鍵**索引的物件；任何[結構化複製演算法](/zh-TW/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)支援的物件都能被儲存。你需要指定資料庫 schema，開啟與資料庫的連線，然後在**交易**序列中檢索和更新資料。
+IndexedDB 是一個交易式資料庫系統，就像 SQL 基礎的關聯式資料庫管理系統（RDBMS）。然而，不同於 SQL 基礎的 RDBMS 使用固定欄位的表格，IndexedDB 是一個 JavaScript 基礎的物件導向資料庫。IndexedDB 讓你儲存和檢索以**鍵**索引的物件；任何[結構化複製演算法](/zh-TW/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)支援的物件都能被儲存。你需要指定資料庫綱要，開啟與資料庫的連線，然後在**交易**序列中檢索和更新資料。
 
 - 閱讀更多關於 [IndexedDB 關鍵特性和基本術語](/zh-TW/docs/Web/API/IndexedDB_API/Basic_Terminology)。
 - 透過我們的[使用 IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API/Using_IndexedDB) 指南，從基本原理開始學習非同步地使用 IndexedDB。
@@ -76,6 +76,6 @@ IndexedDB 是一個交易式資料庫系統，就像 SQL 基礎的關聯式資�
 ## 參見
 
 - [Web Storage API](/zh-TW/docs/Web/API/Web_Storage_API)
-- [Window: localStorage 屬性](/zh-TW/docs/Web/API/Window/localStorage)
-- [Window: sessionStorage 屬性](/zh-TW/docs/Web/API/Window/sessionStorage)
+- [Window：localStorage 屬性](/zh-TW/docs/Web/API/Window/localStorage)
+- [Window：sessionStorage 屬性](/zh-TW/docs/Web/API/Window/sessionStorage)
 - [StorageEvent](/zh-TW/docs/Web/API/StorageEvent)
