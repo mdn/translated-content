@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLSelectElement")}} 介面的 **`checkValidity()`** 方法會回傳一個布林值，該值表示此元素是否符合任何套用於其上的[約束驗證](/zh-TW/docs/Web/HTML/Guides/Constraint_validation)規則。如果為 false，此方法也會在該元素上觸發一個 {{domxref("HTMLElement/invalid_event", "invalid")}} 事件。因為 `checkValidity()` 沒有預設的瀏覽器行為，取消此 `invalid` 事件不會有任何效果。
+{{domxref("HTMLSelectElement")}} 介面的 **`checkValidity()`** 方法會回傳一個表示此元素是否符合任何套用於其上的[約束驗證](/zh-TW/docs/Web/HTML/Guides/Constraint_validation)規則的布林值。如果為 false，此方法也會在該元素上觸發一個 {{domxref("HTMLElement/invalid_event", "invalid")}} 事件。因為 `checkValidity()` 沒有預設的瀏覽器行為，取消此 `invalid` 事件不會有任何效果。
 
 > [!NOTE]
 > 具有非 null {{domxref("HTMLSelectElement.validationMessage", "validationMessage")}} 的 HTML {{htmlelement("select")}} 元素會被視為無效，且會匹配 CSS {{cssxref(":invalid")}} 偽類，並導致 `checkValidity()` 回傳 false。使用 {{domxref("HTMLSelectElement.setCustomValidity()")}} 方法將 {{domxref("HTMLSelectElement.validationMessage")}} 設定為空字串，以將 {{domxref("HTMLSelectElement.validity", "validity")}} 狀態設定為有效。
