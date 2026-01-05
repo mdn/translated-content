@@ -2,8 +2,6 @@
 title: "HTMLMediaElement: defaultPlaybackRate property"
 short-title: defaultPlaybackRate
 slug: Web/API/HTMLMediaElement/defaultPlaybackRate
-page-type: web-api-instance-property
-browser-compat: api.HTMLMediaElement.defaultPlaybackRate
 ---
 
 {{APIRef("HTML DOM")}}
