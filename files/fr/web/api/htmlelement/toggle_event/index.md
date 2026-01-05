@@ -1,5 +1,6 @@
 ---
 title: "HTMLElement : évènement toggle"
+short-title: toggle
 slug: Web/API/HTMLElement/toggle_event
 l10n:
   sourceCommit: 405fc9a921068347e95211312a8c19e917c457d2
