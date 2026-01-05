@@ -117,7 +117,7 @@ overflow のオプションには、あふれたコンテンツを非表示に�
 
 スクロール可能なコンテンツ領域はキーボードフォーカスを受け付けないため、キーボードのみを使用するユーザーはスクロールできません。Firefox および Chrome 132 以降はこの限りではなく、デフォルトでスクロール可能なコンテナーにフォーカスを付与します。
 
-他のブラウザーでは、キーボードのみを使用するユーザーがコンテナーをスクロールすることができるようにするには、[`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) をコンテナーに `tabindex="0"` で割り当てる必要があります。残念ながら、スクリーンリーダーがこのタブストップを検出すると、コンテナーに関するコンテキストを持たないため、コンテナーの内容全体を読み上げてしまう可能性があります。これを軽減するために、コンテナーに適切な [WAI-ARIA ロール](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles)（例えば `role="region"`）とアクセシブル名（[`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) または [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) によって）を指定してください。
+他のブラウザーでは、キーボードのみを使用するユーザーがコンテナーをスクロールすることができるようにするには、[`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) をコンテナーに `tabindex="0"` で割り当てる必要があります。残念ながら、スクリーンリーダーがこのタブストップを検出すると、コンテナーに関するコンテキストを持たないため、コンテナーの内容全体を読み上げてしまう可能性があります。これを軽減するために、コンテナーに適切な [WAI-ARIA ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)（例えば `role="region"`）とアクセシブル名（[`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) または [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) によって）を指定してください。
 
 ## 例
 
