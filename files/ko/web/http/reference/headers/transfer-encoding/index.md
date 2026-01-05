@@ -46,6 +46,7 @@ Transfer-Encoding: gzip, chunked
   - : ([RFC 1951](https://tools.ietf.org/html/rfc1952)에 정의된) *[deflate](http://en.wikipedia.org/wiki/DEFLATE) *압축 알고리즘과 함께 ([RFC 1950](https://tools.ietf.org/html/rfc1950)에서 정의된) [zlib](http://en.wikipedia.org/wiki/Zlib) 구조체를 사용합니다.
 - `gzip`
   - : 32비트 CRC를 이용한 [Lempel-Ziv coding](http://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77) (LZ77)을 사용하는 형식. 이것은 근본적으로 UNIX _gzip_ 프로그램의 형식입니다. 또한, HTTP/1.1 표준은 이 content-encoding을 지원하는 서버는 호환성 목적을 위해 `x-gzip` 을 별칭으로 인지할 것을 권고하고 있습니다.
+
 ## 예제
 
 ### 청크 분할 인코딩
