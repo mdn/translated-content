@@ -10,7 +10,7 @@ slug: Web/API/HTMLMediaElement/disableRemotePlayback
 
 ## 值
 
-一个布尔值,指示媒体元素是否可以具有远程播放 UI。(`false` 表示"未禁用",即"已启用")
+一个布尔值，指示媒体元素是否可以具有远程播放 UI。(`false` 表示"未禁用",即"已启用")
 
 ## 示例
 
