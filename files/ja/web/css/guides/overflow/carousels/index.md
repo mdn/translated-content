@@ -2,9 +2,8 @@
 title: CSS によるカルーセルの作成
 short-title: カルーセルの作成
 slug: Web/CSS/Guides/Overflow/Carousels
-original_slug: Web/CSS/CSS_overflow/CSS_carousels
 l10n:
-  sourceCommit: f5fd4776d1c0cd6e4cffc9649f7c4f44badb7ae2
+  sourceCommit: 9dbcd91284ec1ec64c4d8b343c3770880dd25129
 ---
 
 [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュールは、ブラウザーによって生成され、開発者がスタイルを設定したスクロールボタンおよびスクロールマーカーを備えた、柔軟でアクセシビリティの高い純粋な CSS カルーセルを作成するための機能を定義します。このガイドでは、これらの機能を使用してカルーセルを作成する方法について説明します。
@@ -24,13 +23,13 @@ l10n:
 
 カルーセルの重要な機能は**ページ分割**です。アイテムは、1 つの連続したコンテンツの区間を形成するのではなく、別個のコンテンツとして移動します。1 つのカルーセル「ページ」に 1 つのアイテム、または複数のアイテムを表示させることができます。複数のアイテムが表示されている場合、「次へ」または「前へ」ボタンを押すたびに、まったく新しいアイテムのグループを表示させることができます。あるいは、リストの一方の端に単一の新しいアイテムを追加し、もう一方の端のアイテムを非表示に移動することもできます。
 
-JavaScript を使用してカルーセルを作成するのは、非常に不安定で実装が難しい場合があります。カルーセルを正しく動作させるには、スクロールマーカーをそれらが表すアイテムに関連付けるスクリプトが必要であり、スクロールボタンを継続的に更新する必要があります。JavaScript を使用してカルーセルを作成する場合は、カルーセルおよび関連付けられたコントロールのアクセシビリティを追加する必要があります。
+カルーセルは極めて繊細であり、JavaScript で実装するのは困難を伴います。カルーセルを正しく動作させるには、スクロールマーカーをそれらが表すアイテムに関連付けるスクリプトが必要であり、スクロールボタンを継続的に更新する必要があります。JavaScript を使用してカルーセルを作成する場合は、カルーセルおよび関連付けられたコントロールのアクセシビリティを追加する必要があります。
 
 幸い、CSS のカルーセル機能を使用すれば、JavaScript を使用せずに、関連付けられたコントロールを備えたアクセシブルなカルーセルを作成することができます。
 
 ## CSS カルーセル機能
 
-CSS カルーセル機能は、 CSS と HTML だけを使用してカルーセルを作成できる擬似要素と擬似クラスを提供します。ブラウザーは、アクセシビリティ、柔軟性、一貫性を保ちながら、スクロールとリンクの参照のほとんどを処理します。これらの機能は次のとおりです。
+CSS カルーセル機能は、 CSS と HTML だけを使用してカルーセルを作成できる擬似要素と擬似クラスを提供します。ブラウザーは、アクセシビリティ、柔軟性、一貫性を保ちながら、スクロールとリンクのReferenceのほとんどを処理します。これらの機能は次のとおりです。
 
 - {{cssxref("::scroll-button()")}}
   - : {{glossary("scroll container", "スクロールコンテナー")}}内に生成されるこれらの擬似要素は、指定した方向にコンテナーをスクロールするスクロールボタンを表します。
@@ -39,9 +38,11 @@ CSS カルーセル機能は、 CSS と HTML だけを使用してカルーセ�
 - {{cssxref("::scroll-marker")}}
   - : スクロールコンテナーの祖先の子要素内、またはスクロールコンテナーの列内に生成され、スクロールマーカーを表します。これらを選択して、関連付けられた子要素または列にコンテナーをスクロールすることができます。また、レイアウトのために、スクロールコンテナーの {{cssxref("::scroll-marker-group")}} 内に収集されます。
 - {{cssxref(":target-current")}}
-  - : この擬似クラスは、現在アクティブなスクロールマーカーを選択するために使用できます。現在アクティブなマーカーにハイライトスタイルを提供するために使用でき、これはユーザビリティとアクセシビリティにとって重要です。
+  - : 現在アクティブなスクロールマーカーを選択し、スタイルを設定するために使用します。アクティブなスクロールマーカーのスタイル設定機能は、ユーザビリティとアクセシビリティの両方において重要です。
+- {{cssxref(":target-before")}} および {{cssxref(":target-after")}}
+  - : 現在アクティブなスクロールマーカーの前後にあるスクロールマーカーをそれぞれ選択し、スタイル設定するために使用されます。これらは、アクティブなナビゲーション位置の前後に位置するナビゲーションアイテムのスタイル設定に有益であり、ユーザーが既に閲覧したアイテムやまだ閲覧していないアイテムを示すのに役立ちます。
 - {{cssxref("::column")}}
-  - : この擬似要素は、[CSS 段組みレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout)を使用して、コンテンツを複数の段で表示するようにコンテナーが設定されている場合に生成される、個々の段を表します。 {{cssxref("::scroll-marker")}} と組み合わせて使用することで、各列にスクロールマーカーを生成することができます。
+  - : [CSS 段組みレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout)を使用して、コンテンツを複数の段で表示するようにコンテナーが設定されている場合に生成される、個々の段を表します。`::column` 擬似要素は、{{cssxref("::scroll-marker")}} と組み合わせて使用することで、各列にスクロールマーカーを生成することができます。
 
 ## 単一ページのカルーセル
 
@@ -52,7 +53,7 @@ CSS カルーセル機能は、 CSS と HTML だけを使用してカルーセ�
 HTML は、[見出し要素](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)と[順序なしリスト](/ja/docs/Web/HTML/Reference/Elements/ul)で構成されており、それぞれの[リストアイテム](/ja/docs/Web/HTML/Reference/Elements/li)にはサンプルコンテンツが含まれています。
 
 ```html live-sample___first-example live-sample___first-example-step1 live-sample___first-example-step2
-<h1>ページ当たり単一アイテムの CSS カルーセル</h1>
+<h1>単一アイテム表示の CSS カルーセル</h1>
 <ul>
   <li>
     <h2>ページ 1</h2>
@@ -82,7 +83,7 @@ HTML は、[見出し要素](/ja/docs/Web/HTML/Reference/Elements/Heading_Elemen
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 h1 {
@@ -106,8 +107,8 @@ ul {
 ```css live-sample___first-example live-sample___first-example-step1 live-sample___first-example-step2
 li {
   list-style-type: none;
-  background-color: #eee;
-  border: 1px solid #ddd;
+  background-color: #eeeeee;
+  border: 1px solid #dddddd;
   padding: 20px;
 
   flex: 0 0 100%;
@@ -124,7 +125,7 @@ li:nth-child(even) {
 
 この節では、 `<ul>` にオーバーフロー値を設定して{{glossary("scroll container", "スクロールコンテナー")}}にし、 [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)を適用して、コンテンツがスクロールされるとリストが各リストアイテムの中央にスナップするようにします。
 
-`<ul>` の　{{cssxref("overflow-x")}} の値を `scroll` に設定して、そのコンテンツがビューポート全体ではなくリスト内で水平方向にスクロールするようにします。 [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)を使用して、それぞれの「ページ」にスナップするようにします。 {{cssxref("scroll-snap-type")}} の値を `x mandatory` を設定して、リストを[スクロールスナップコンテナー](/ja/docs/Glossary/Scroll_snap#スクロールスナップコンテナー)にします。 `x` キーワードにより、コンテナーの[スナップターゲット](/ja/docs/Glossary/Scroll_snap#スナップターゲット)を水平方向にスナップするようにします。 `mandatory` キーワードは、コンテナーがスクロール動作の終わりに、常にスナップターゲットにスナップすることを意味します。
+`<ul>` の {{cssxref("overflow-x")}} の値を `scroll` に設定して、そのコンテンツがビューポート全体ではなくリスト内で水平方向にスクロールするようにします。 [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)を使用して、それぞれの「ページ」にスナップするようにします。 {{cssxref("scroll-snap-type")}} の値を `x mandatory` を設定して、リストを[スクロールスナップコンテナー](/ja/docs/Glossary/Scroll_snap#スクロールスナップコンテナー)にします。 `x` キーワードにより、コンテナーの[スナップターゲット](/ja/docs/Glossary/Scroll_snap#スナップターゲット)を水平方向にスナップするようにします。 `mandatory` キーワードは、コンテナーがスクロール動作の終わりに、常にスナップターゲットにスナップすることを意味します。
 
 ```css live-sample___first-example live-sample___first-example-step1 live-sample___first-example-step2
 ul {
@@ -165,13 +166,14 @@ ul::scroll-button(*) {
   border: 0;
   font-size: 2rem;
   background: none;
-  color: rgb(0 0 0 / 0.7);
+  color: black;
+  opacity: 0.7;
   cursor: pointer;
 }
 
 ul::scroll-button(*):hover,
 ul::scroll-button(*):focus {
-  color: rgb(0 0 0 / 1);
+  opacity: 1;
 }
 
 ul::scroll-button(*):active {
@@ -179,7 +181,7 @@ ul::scroll-button(*):active {
 }
 
 ul::scroll-button(*):disabled {
-  color: rgb(0 0 0 / 0.2);
+  opacity: 0.2;
   cursor: unset;
 }
 ```
@@ -206,16 +208,16 @@ ul::scroll-button(right) {
 
 スクロールボタンを作成しました。これで、 [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)を使用して、カルーセルに対して相対的な位置にボタンを配置します。
 
-まず、参照 {{cssxref("anchor-name")}} がリストに設定されます。次に、各スクロールボタンの {{cssxref("position")}} が `absolute` に設定され、 {{cssxref("position-anchor")}} プロパティがリストで定義された同じ参照名に設定され、2 つが関連付けられます。
+まず、Reference {{cssxref("anchor-name")}} がリストに設定されます。次に、各スクロールボタンの {{cssxref("position")}} が `absolute` に設定され、 {{cssxref("position-anchor")}} プロパティがリストで定義された同じReference名に設定され、2 つが関連付けられます。
 
 ```css live-sample___first-example live-sample___first-example-step2
 ul {
-  anchor-name: --myCarousel;
+  anchor-name: --my-carousel;
 }
 
 ul::scroll-button(*) {
   position: absolute;
-  position-anchor: --myCarousel;
+  position-anchor: --my-carousel;
 }
 ```
 
@@ -246,7 +248,7 @@ ul::scroll-button(right) {
 この節では、カルーセルにスクロールマーカーを追加します。これには 3 つの主な機能があります。
 
 - {{cssxref("scroll-marker-group")}} プロパティは、スクロールコンテナー要素に設定されます。 {{cssxref("::scroll-marker-group")}} 擬似要素を生成するには、このプロパティの値を `none` 以外の値に設定する必要があります。この値は、スクロールマーカーグループがカルーセルのタブ順およびレイアウトボックスの順（DOM 構造ではない）で表示される位置を指定します。 `before` はスクロールマーカーグループを先頭、スクロールボタンの前に配置し、 `after` は末尾に配置します。
-- {{cssxref("::scroll-marker-group")}} 擬似要素は、スクロールコンテナーの中に存在し、スクロールマーカーをまとめてレイアウトするために使用されます。
+- {{cssxref("::scroll-marker-group")}} 擬似要素は、スクロールコンテナーの中に存在し、スクロールマーカーをまとめてグループとして配置・レイアウトするために使用されます。
 - {{cssxref("::scroll-marker")}} 擬似要素は、スクロールコンテナーの祖先の {{cssxref("::column")}} フラグメントの子の中に存在し、そのスクロールマーカーを表します。これらは、レイアウトのために、祖先の {{cssxref("::scroll-marker-group")}} の中に集められます。
 
 まず、リストの `scroll-marker-group` プロパティが `after` に設定されているため、 `::scroll-marker-group` 擬似要素は、フォーカスおよびレイアウトボックスの順序でリストの DOM コンテンツの後に配置されます。これは、スクロールボタンよりも後に表示されることを意味します。
@@ -257,12 +259,15 @@ ul {
 }
 ```
 
+> [!NOTE]
+> あるいは、既存の要素からスクロールマーカーグループコンテナーを作成することも可能です。その要素には {{htmlelement("a")}} 要素のセットが含まれており、{{cssxref("scroll-target-group")}} を使用します。
+
 次に、リストの `::scroll-marker-group` 擬似要素を、スクロールボタンと同様に CSS アンカー位置指定を使用してカルーセルに対して相対的に位置指定します。ただし、 {{cssxref("justify-self")}} 値を `anchor-center` に設定して、カルーセルの水平中央に配置します。このグループは、フレックスボックスを使用して、 {{cssxref("justify-content")}} の値を `center`、 {{cssxref("gap")}} の値を `20px` に設定してレイアウトされます。これにより、子要素（`::scroll-marker` 擬似要素）は、 `::scroll-marker-group` 内に中央に配置され、各要素間に間隔が確保されます。
 
 ```css live-sample___first-example
 ul::scroll-marker-group {
   position: absolute;
-  position-anchor: --myCarousel;
+  position-anchor: --my-carousel;
   top: calc(anchor(bottom) - 70px);
   justify-self: anchor-center;
 
@@ -297,7 +302,7 @@ li::scroll-marker:target-current {
 ```
 
 > [!NOTE]
-> アクセシビリティに関しては、スクロールマーカーグループおよびそれに含まれるスクロールマーカーは、 [`tablist`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)/[`tab`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) の意味付けでレンダリングされます。キーボードでグループに <kbd>Tab</kbd> で移動すると、グループは単一のアイテムのように動作し（つまり、 <kbd>Tab</kbd> キーをもう一度押すと、グループを過ぎて次のアイテムに移動します）、左右（または上下）のカーソルキーを使用して、異なるスクロールマーカー間を移動することができます。
+> スクロールマーカーグループコンテナーが `scroll-marker-group` プロパティを使用してスクロールコンテナー上に作成されると、スクロールコンテナーは [`tablist`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)/[`tab`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) の意味づけでレンダリングされます。キーボードで <kbd>Tab</kbd> キーを押してから、左右（または上下）カーソルキーで異なる「ページ」間を移動できます。これにより、関連付けられたスクロールマーカーとスクロールボタンの状態も期待通りに変化します。スクロールマーカー間も通常通りタブ移動が可能です。
 
 ## 単一のページカルーセルの最終結果
 
@@ -330,7 +335,7 @@ HTML は前回のデモとよく似ていますが、リストアイテムの数
 このデモには、次の節で説明するルールを除いて、よく似た CSS も存在します。
 
 ```html hidden live-sample___second-example
-<h1>ページ当たり複数のアイテムの CSS カルーセル</h1>
+<h1>複数アイテム表示の CSS カルーセル</h1>
 <ul>
   <li>
     <h2>アイテム 1</h2>
@@ -391,7 +396,7 @@ HTML は前回のデモとよく似ていますが、リストアイテムの数
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 h1 {
@@ -424,8 +429,8 @@ li {
   height: 100%;
   width: 200px;
 
-  background-color: #eee;
-  border: 1px solid #ddd;
+  background-color: #eeeeee;
+  border: 1px solid #dddddd;
   padding: 20px;
   margin: 0 10px;
 
@@ -456,13 +461,14 @@ ul::scroll-button(*) {
   border: 0;
   font-size: 2rem;
   background: none;
-  color: rgb(0 0 0 / 0.7);
+  color: black;
+  opacity: 0.7;
   cursor: pointer;
 }
 
 ul::scroll-button(*):hover,
 ul::scroll-button(*):focus {
-  color: rgb(0 0 0 / 1);
+  opacity: 1;
 }
 
 ul::scroll-button(*):active {
@@ -470,7 +476,7 @@ ul::scroll-button(*):active {
 }
 
 ul::scroll-button(*):disabled {
-  color: rgb(0 0 0 / 0.2);
+  opacity: 0.2;
   cursor: unset;
 }
 
@@ -483,12 +489,12 @@ ul::scroll-button(right) {
 }
 
 ul {
-  anchor-name: --myCarousel;
+  anchor-name: --my-carousel;
 }
 
 ul::scroll-button(*) {
   position: absolute;
-  position-anchor: --myCarousel;
+  position-anchor: --my-carousel;
 }
 
 ul::scroll-button(left) {
@@ -507,7 +513,7 @@ ul {
 
 ul::scroll-marker-group {
   position: absolute;
-  position-anchor: --myCarousel;
+  position-anchor: --my-carousel;
   top: calc(anchor(bottom) - 70px);
   justify-self: anchor-center;
   display: flex;
@@ -518,7 +524,7 @@ ul::scroll-marker-group {
 
 ### 段のスクロールマーカー
 
-このデモでスクロールマーカーを作成するための CSS は、セレクターが異なることを除いて、[前回のデモ](#スクロールマーカーの作成)とほぼ同じです。スクロールマーカーは、リストアイテムではなく、生成された `::column` スクロールマーカー上に作成されます（生成された段にスクロールマーカーを生成するために、2 つの擬似要素を記載していることに注意してください）。
+このデモでスクロールマーカーを作成するための CSS は、セレクターが異なることを除いて、[前回のデモ](#スクロールマーカーの作成)とほぼ同じです。スクロールマーカーは、リストアイテムではなく、生成された `::column` 擬似要素上に作成されます。なお、生成された段にスクロールマーカーを生成するために、2 つの擬似要素を記載していることに注意してください。
 
 ```css live-sample___second-example
 ul::column::scroll-marker {
@@ -529,9 +535,23 @@ ul::column::scroll-marker {
   border: 2px solid black;
   border-radius: 10px;
 }
+```
+
+最後に、`:target-current` 擬似クラスを使用してアクティブなスクロールマーカーをマークし、ユーザーにナビゲーションのどこにいるかということを提供します。 また、{{cssxref(":target-before")}} および {{cssxref(":target-after")}} 擬似クラスを使用して、アクティブなマーカーの前後にあるスクロールマーカーに独自のスタイル設定を適用します。さらに、{{cssxref("transition")}} を `ul::column::scroll-marker:target-current` ルールに設定し、異なる状態間のスタイル変更が滑らかにアニメーションするようにしました。
+
+```css live-sample___second-example
+ul::column::scroll-marker:target-before {
+  border: 2px solid gray;
+}
 
 ul::column::scroll-marker:target-current {
   background-color: black;
+  transition: all 0.7s;
+}
+
+ul::column::scroll-marker:target-after {
+  border: 2px solid red;
+  background-color: red;
 }
 ```
 

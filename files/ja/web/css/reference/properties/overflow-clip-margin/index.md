@@ -1,9 +1,8 @@
 ---
 title: overflow-clip-margin
 slug: Web/CSS/Reference/Properties/overflow-clip-margin
-original_slug: Web/CSS/overflow-clip-margin
 l10n:
-  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`overflow-clip-margin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 [`overflow: clip`](/ja/docs/Web/CSS/Reference/Properties/overflow) を持つ要素がクリップされる前に、要素の辺からどれだけ外側に描画できるかを指定します。 このプロパティで定義される境界は、ボックスのオーバーフロークリップ枠と呼ばれます。

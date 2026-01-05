@@ -1,9 +1,8 @@
 ---
 title: overflow-inline
 slug: Web/CSS/Reference/Properties/overflow-inline
-original_slug: Web/CSS/overflow-inline
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`overflow-inline`** は [CSS](/ja/docs/Web/CSS) のプロパティで、コンテンツがボックスのインライン方向の先頭および末尾方向の端をあふれた時にどのように表示するかを設定します。これは表示なし、スクロールバー付き、コンテンツをはみ出させる、のいずれかになります。

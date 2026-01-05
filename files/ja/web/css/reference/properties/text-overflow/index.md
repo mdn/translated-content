@@ -1,9 +1,8 @@
 ---
 title: text-overflow
 slug: Web/CSS/Reference/Properties/text-overflow
-original_slug: Web/CSS/text-overflow
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`text-overflow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、あふれたコンテンツが非表示になる場合、それをどのようにユーザーに示すのかを設定します。切り取られるか、省略記号 (`…`) を表示するか、独自の文字列を表示するかです。
@@ -26,10 +25,10 @@ text-overflow: "-";
 text-overflow: "";
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section id="default-example">
   <div id="example-element-container">
-    <p id="example-element">"Is there any tea on this spaceship?" he asked.</p>
+    <p id="example-element">「この宇宙船にお茶はありますか？」と彼は尋ねた。</p>
   </div>
 </section>
 ```

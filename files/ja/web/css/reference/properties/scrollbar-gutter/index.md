@@ -1,9 +1,8 @@
 ---
 title: scrollbar-gutter
 slug: Web/CSS/Reference/Properties/scrollbar-gutter
-original_slug: Web/CSS/scrollbar-gutter
 l10n:
-  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **scrollbar-gutter** は [CSS](/ja/docs/Web/CSS) プロパティで、スクロールバーのための空間を確保することを可能にし、コンテンツが大きくなるにつれて不要なレイアウト変更を防ぐと同時に、スクロールが不要な場合に表示されることを避けることができます。

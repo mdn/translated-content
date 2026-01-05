@@ -2,10 +2,10 @@
 title: "カスタムプロパティ (--*): CSS 変数"
 slug: Web/CSS/Reference/Properties/--*
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-接頭辞 `--` が付いたプロパティ名、例えば `--example-name` は、*カスタムプロパティ*を表し、 {{cssxref("var", "var()")}} 関数を用いて他の宣言の中で使用することができる値を持ちます。
+接頭辞 `--` が付いたプロパティ名、例えば `--example-name` は、*カスタムプロパティ*を表し、 {{cssxref("var()")}} 関数を用いて他の宣言の中で使用することができる値を持ちます。
 
 カスタムプロパティは宣言された要素のスコープになり、カスケードに関連します。そのようなカスタムプロパティの値は、カスケードのアルゴリズムによって決められた宣言から取られます。
 
@@ -85,7 +85,7 @@ l10n:
 
 ## 関連情報
 
-- {{cssxref("var", "var()")}} 関数
+- {{cssxref("var()")}} 関数
 - {{cssxref("@property")}} アットルール
 - [CSS カスタムプロパティ（変数）の使用](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)ガイド
 - [カスケード変数のための CSS カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables)モジュール
