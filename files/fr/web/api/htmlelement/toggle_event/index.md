@@ -7,9 +7,9 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-L'évènement **`toggle`** de l'interface {{DOMxRef("HTMLElement")}} se déclenche sur un élément {{DOMxRef("Popover_API", "popover", "", "nocode")}}, un élément HTML {{HTMLElement("dialog")}} ou un élément HTML {{HTMLElement("details")}} juste après qu'il a été affiché ou masqué.
+L'évènement **`toggle`** de l'interface {{DOMxRef("HTMLElement")}} se déclenche sur un élément {{DOMxRef("Popover_API", "de fenêtre contextuelle", "", "nocode")}} (<i lang="en">popover</i> en anglais), un élément HTML {{HTMLElement("dialog")}} ou un élément HTML {{HTMLElement("details")}} juste après qu'il a été affiché ou masqué.
 
-- Si la fenêtre contextuelle (<i lang="en">popover</i> en anglais) passe de masqué à affiché, la propriété [`event.oldState`](/fr/docs/Web/API/ToggleEvent/oldState) sera définie sur `closed` et la propriété [`event.newState`](/fr/docs/Web/API/ToggleEvent/newState) sera définie sur `open`.
+- Si la fenêtre contextuelle passe de masqué à affiché, la propriété [`event.oldState`](/fr/docs/Web/API/ToggleEvent/oldState) sera définie sur `closed` et la propriété [`event.newState`](/fr/docs/Web/API/ToggleEvent/newState) sera définie sur `open`.
 - Si la fenêtre contextuelle passe d'affiché à masqué, alors `event.oldState` sera définie sur `open` et `event.newState` sera définie sur `closed`.
 
 Cet évènement n'est pas [annulable](/fr/docs/Web/API/Event/cancelable).
@@ -32,7 +32,7 @@ Un objet {{DOMxRef("ToggleEvent")}}. Hérite de l'objet {{DOMxRef("Event")}}.
 
 ## Exemples
 
-L'exemple de code ci-dessous montre comment l'évènement `toggle` peut être utilisé pour un élément {{DOMxRef("Popover_API", "de fenêtre contextuelle", "", "nocode")}}.
+L'exemple de code ci-dessous montre comment l'évènement `toggle` peut être utilisé pour un élément {{DOMxRef("Popover_API", "de fenêtre contextuelle", "", "nocode")}} (<i lang="en">popover</i> en anglais).
 Le même code peut être utilisé de la même manière pour un élément HTML {{HTMLElement("dialog")}} ou {{HTMLElement("details")}}.
 
 ### Exemple simple
