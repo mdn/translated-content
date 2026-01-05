@@ -180,7 +180,7 @@ img {
 
 카드 컴포넌트에 포함되는 콘텐츠에 따라 접근성을 향상시키기 위해 추가로 고려해야 할 사항이 있을 수 있습니다. 자세한 내용은 Heydon Pickering의 [Inclusive components: Card](https://inclusive-components.design/cards/)를 참고하세요.
 
-## 참고 자료
+## 같이 보기
 
 - {{Cssxref("grid-template-columns")}}
 - {{Cssxref("grid-template-rows")}}
