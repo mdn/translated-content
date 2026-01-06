@@ -1,6 +1,7 @@
 ---
 title: eTLD
-slug: Glossary/eTLD
+slug: Glossary/Registrable_domain
+original_slug: Glossary/eTLD
 l10n:
   sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
