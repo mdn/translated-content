@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-{{domxref("HTMLElement")}} 介面的 **`lang`** 屬性以 {{glossary("BCP 47 language tag")}} 的形式，表示元素屬性值與文字內容的基礎語言。它反映了元素的 [`lang`](/zh-TW/docs/Web/HTML/Reference/Global_attributes/lang) 屬性；`xml:lang` 屬性不影響此屬性。
+{{domxref("HTMLElement")}} 介面的 **`lang`** 屬性以 {{glossary("BCP 47 language tag", "BCP 47 語言標籤")}}的形式，表示元素屬性值與文字內容的基礎語言。它反映了元素的 [`lang`](/zh-TW/docs/Web/HTML/Reference/Global_attributes/lang) 屬性；`xml:lang` 屬性不影響此屬性。
 
 注意，如果未指定 `lang` 屬性，元素本身仍可能從其父元素繼承語言。然而，該繼承的語言不會反映在此屬性的值中。
 
