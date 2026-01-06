@@ -1,9 +1,8 @@
 ---
 title: テキストデータ型
 slug: Web/CSS/Guides/Values_and_units/Textual_data_types
-original_slug: Web/CSS/CSS_values_and_units/Textual_data_types
 l10n:
-  sourceCommit: 83dd1960e946e82f2cf830ac5df5703df501f73b
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 CSS 宣言はすべて、プロパティと値のペアから成っています。値には、単一のキーワード、整数、関数、異なる型の組み合わせなど、プロパティに応じてさまざまなデータ型を含めることがあります。また、値には単位を持つものもあれば、持たないものもあります。このガイドでは、テキストデータ型の概要を説明します。より詳細な情報については、それぞれの値の型のページを参照してください。
@@ -59,7 +58,7 @@ left | right | none | inline-start | inline-end
 }
 ```
 
-## CSS 全般の値
+## CSS 全般のキーワード
 
 プロパティ用に仕様で定められている定義済みキーワードのほかに、すべての CSS プロパティで使える CSS 全般のプロパティ値として、{{cssxref("initial")}}、{{cssxref("inherit")}}、{{cssxref("unset")}}、{{cssxref("revert")}}、{{cssxref("revert-layer")}} があります。これらは既定値への戻し方を明示するために使用します。
 
