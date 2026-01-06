@@ -41,7 +41,7 @@ return expression;
 - 在一般函式中，對該函式的呼叫會求值為回傳值。
 - 在 async 函式中，產生的 promise 會以回傳值兌現。
 - 在 generator 函式中，產生的 generator 物件的 `next()` 方法會回傳 `{ done: true, value: returnedValue }`。
-- 在 async generator 函式中，產生的 async generator 物件的 `next()` 方法會回傳一個以 `{ done: true, value: returnedValue }` 實現的 promise。
+- 在 async generator 函式中，產生的 async generator 物件的 `next()` 方法會回傳一個以 `{ done: true, value: returnedValue }` 兌現的 promise。
 
 如果 `return` 陳述式在 {{jsxref("Statements/try...catch", "try")}} 區塊內執行，且該區塊有 `finally` 區塊，則 `finally` 區塊會先執行，然後才實際回傳該值。
 
