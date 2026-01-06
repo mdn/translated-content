@@ -1,5 +1,5 @@
 ---
-title: "HTMLMediaElement: defaultPlaybackRate property"
+title: HTMLMediaElement：defaultPlaybackRate 属性
 short-title: defaultPlaybackRate
 slug: Web/API/HTMLMediaElement/defaultPlaybackRate
 ---
