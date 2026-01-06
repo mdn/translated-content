@@ -2,6 +2,8 @@
 title: HTMLMediaElement：disableRemotePlayback 属性
 short-title: disableRemotePlayback
 slug: Web/API/HTMLMediaElement/disableRemotePlayback
+l10n:
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{APIRef("Remote Playback API")}}
