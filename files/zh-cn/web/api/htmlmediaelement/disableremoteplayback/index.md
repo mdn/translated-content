@@ -1,5 +1,5 @@
 ---
-title: "HTMLMediaElement: disableRemotePlayback property"
+title: HTMLMediaElement：disableRemotePlayback 属性
 short-title: disableRemotePlayback
 slug: Web/API/HTMLMediaElement/disableRemotePlayback
 ---
