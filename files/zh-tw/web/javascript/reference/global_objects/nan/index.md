@@ -44,7 +44,7 @@ console.log(sanitize("NotANumber"));
 - 運算元為 `NaN` 或被強制轉型為 `NaN` 的方法或表達式（例如：`7 ** NaN`、`7 * "blabla"`）——這意味著 `NaN` 具有傳染性
 - 其他將無效值表示為數值的情況（例如：無效的 [Date](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date) `new Date("blabla").getTime()`、`"".charCodeAt(1)`）
 
-`NaN` 及其行為並非 JavaScript 所發明。它在浮點數運算中的語義（包括 `NaN !== NaN`）是由 [IEEE 754](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) 所規範。`NaN` 的行為包括：
+`NaN` 及其行為並非 JavaScript 所首創。它在浮點數運算中的語義（包括 `NaN !== NaN`）是由 [IEEE 754](https://zh.wikipedia.org/wiki/雙精度浮點數) 標準所定義。`NaN` 的行為包括：
 
 - 如果 `NaN` 涉及數學運算（但不包括[位元運算](/zh-TW/docs/Web/JavaScript/Reference/Operators#位元移位運算子)），結果通常也是 `NaN`。（參見下方的[反例](#靜默避開_nan)。）
 - 當 `NaN` 是任何關係比較（`>`、`<`、`>=`、`<=`）的運算元之一時，結果總是 `false`。
