@@ -39,7 +39,7 @@ return expression;
 `return` 陳述式只能在函式主體內使用。當 `return` 陳述式用在函式主體中時，函式的執行將會停止。`return` 陳述式放置在不同的函式中會有不同的效果：
 
 - 在一般函式中，對該函式的呼叫會求值為回傳值。
-- 在 async 函式中，產生的 promise 會以回傳值被解決。
+- 在 async 函式中，產生的 promise 會以回傳值兌現。
 - 在 generator 函式中，產生的 generator 物件的 `next()` 方法會回傳 `{ done: true, value: returnedValue }`。
 - 在 async generator 函式中，產生的 async generator 物件的 `next()` 方法會回傳一個以 `{ done: true, value: returnedValue }` 實現的 promise。
 
