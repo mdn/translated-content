@@ -41,7 +41,7 @@ readEntries(successCallback, errorCallback)
 
 {{Compat}}
 
-在 Chrome 77 上，`readEntries()` 只会返回前 100 个 `FileSystemEntry` 实例。为了获取所有的实例，请多次调用 `readEntries()`。
+在基于 Chromium 的浏览器中，`readEntries()` 只会返回前 100 个 `FileSystemEntry` 实例。为了获取所有的实例，请多次调用 `readEntries()`。
 
 ## 参见
 
