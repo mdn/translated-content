@@ -227,7 +227,7 @@ function updateUsedWidth(id) {
   const div = document.getElementById(id);
   const par = div.querySelector(".show-used-width");
   const wid = window.getComputedStyle(div)["width"];
-  par.textContent = `Used width: ${wid}.`;
+  par.textContent = `Largeur utilisée : ${wid}.`;
 }
 
 function updateAllUsedWidths() {
