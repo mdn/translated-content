@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTMLMediaElement")}}
 
-當播放速率變更時，將觸發 `ratechange` 事件。
+`ratechange` 事件將在播放速度改變時被觸發。
 
 此事件不可取消且不會冒泡。
 
