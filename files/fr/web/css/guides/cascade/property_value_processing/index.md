@@ -52,7 +52,7 @@ Une fois le filtrage terminé, chaque élément possède zéro ou plusieurs [val
 
 La [cascade](/fr/docs/Web/CSS/Guides/Cascade/Introduction) résout les conflits lorsqu'un même élément se voit appliquer plusieurs déclarations pour une même propriété. La cascade trie les déclarations à l'aide de [l'ordre de tri de la cascade](/fr/docs/Web/CSS/Guides/Cascade/Introduction#ordre_de_la_cascade).
 
-Par exemple, les deux déclarations de {{CSSxRef("font-size")}} correspondent à `<p class="large">CSS is fun!</p>`, mais la seconde déclaration est appliquée parce qu'elle a une [spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity) plus élevée. Les deux déclarations proviennent de l'origine auteur·ice, mais le second sélecteur a une spécificité `0-1-1` alors que le premier a `0-0-1`&nbsp;:
+Par exemple, les deux déclarations de {{CSSxRef("font-size")}} correspondent à `<p class="large">Le CSS c'est cool !</p>`, mais la seconde déclaration est appliquée parce qu'elle a une [spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity) plus élevée. Les deux déclarations proviennent de l'origine auteur·ice, mais le second sélecteur a une spécificité `0-1-1` alors que le premier a `0-0-1`&nbsp;:
 
 ```css
 p {
@@ -71,8 +71,8 @@ Après la cascade, le navigateur détermine la [**valeur en cascade**](#valeur_e
 L'**application des valeurs par défaut** garantit que chaque propriété de chaque élément possède une valeur. Cela implique d'appliquer les valeurs par défaut lorsque aucune déclaration CSS ne définit explicitement la valeur de la propriété.
 Cela comprend&nbsp;:
 
-- Définir les **valeurs héritées** pour les [propriétés héritées](/fr/docs/Web/CSS/Guides/Cascade/Inheritance#inherited_properties)
-- Définir les **valeurs initiales** pour les [propriétés non héritées](/fr/docs/Web/CSS/Guides/Cascade/Inheritance#non-inherited_properties)
+- Définir les **valeurs héritées** pour les [propriétés héritées](/fr/docs/Web/CSS/Guides/Cascade/Inheritance#propriétés_héritées)
+- Définir les **valeurs initiales** pour les [propriétés non héritées](/fr/docs/Web/CSS/Guides/Cascade/Inheritance#propriétés_non-héritées)
 
 À la suite de cette étape, chaque propriété dispose d'une [valeur définie](#valeur_définie).
 
@@ -80,7 +80,7 @@ Notez que les mots-clés explicites de valeur par défaut ({{CSSxRef("initial")}
 
 ## Étapes de traitement
 
-Tous les éléments faisant partie de l'arbre aplati du document possèdent des valeurs [déclarées](#valeur_déclarée), [en cascade](#valeur_en_cascade), [définies](#valeur_définie), [calculées](#valeur_calculée), [utilisées](#valeur_utilisée) et [réelles](#valeur_réelle). Pour une propriété donnée, ces valeurs peuvent être identiques ou différentes. Par exemple, si votre base de code contient `p { font-size: 1.25em; }` et que votre HTML inclut `<p class="large">CSS is fun!</p>`, quelle taille aura le paragraphe ? La valeur de {{CSSxRef("font-size")}} traverse plusieurs étapes pour passer de la valeur définie en `em` à la valeur rendue en `px`.
+Tous les éléments faisant partie de l'arbre aplati du document possèdent des valeurs [déclarées](#valeur_déclarée), [en cascade](#valeur_en_cascade), [définies](#valeur_définie), [calculées](#valeur_calculée), [utilisées](#valeur_utilisée) et [réelles](#valeur_réelle). Pour une propriété donnée, ces valeurs peuvent être identiques ou différentes. Par exemple, si votre base de code contient `p { font-size: 1.25em; }` et que votre HTML inclut `<p class="large">Le CSS c'est cool !</p>`, quelle taille aura le paragraphe ? La valeur de {{CSSxRef("font-size")}} traverse plusieurs étapes pour passer de la valeur définie en `em` à la valeur rendue en `px`.
 
 Les étapes de traitement des valeurs sont&nbsp;:
 
@@ -97,7 +97,7 @@ Ces valeurs servent à déterminer les [valeurs rendues](#valeurs_rendues).
 
 Une **valeur déclarée** est toute valeur syntaxiquement valide issue d'une déclaration qui s'applique à un élément. Un élément peut avoir zéro ou plusieurs valeurs déclarées pour chaque propriété. Ces valeurs proviennent des feuilles de style (auteur·ice, utilisateur·ice ou agent utilisateur) et sont identifiées lors de l'étape de [filtrage](#filtrage).
 
-Dans notre exemple, où la feuille de style contient `p { font-size: 1.25em; }` et le document inclut `<p class="large">CSS is fun!</p>`, d'autres déclarations `font-size` pourraient également s'appliquer à ce paragraphe. La feuille de style de l'agent utilisateur peut définir `font-size: 1em` pour tous les paragraphes, tandis qu'une autre déclaration auteur·ice définit `font-size: 2em` pour les éléments de la classe "large"&nbsp;:
+Dans notre exemple, où la feuille de style contient `p { font-size: 1.25em; }` et le document inclut `<p class="large">Le CSS c'est cool !</p>`, d'autres déclarations `font-size` pourraient également s'appliquer à ce paragraphe. La feuille de style de l'agent utilisateur peut définir `font-size: 1em` pour tous les paragraphes, tandis qu'une autre déclaration auteur·ice définit `font-size: 2em` pour les éléments de la classe «&nbsp;large&nbsp;»&nbsp;:
 
 ```css
 /* Styles de l'agent utilisateur */
@@ -143,7 +143,7 @@ Dans notre exemple, comme nous avons une [valeur en cascade](#valeur_en_cascade)
 font-size: 2em;
 ```
 
-Pour les propriétés sans valeur en cascade, le processus de valeurs par défaut détermine la valeur. Par exemple, si `color` n'est pas défini, la `color` est héritée de la valeur calculée du parent puisque c'est une propriété héritée. Si `margin` n'est pas défini, la valeur `initial` de `0` est utilisée puisque `margin` n'est pas une [propriété héritée](/fr/docs/Web/CSS/Guides/Cascade/Inheritance#inherited_properties)&nbsp;:
+Pour les propriétés sans valeur en cascade, le processus de valeurs par défaut détermine la valeur. Par exemple, si `color` n'est pas défini, la `color` est héritée de la valeur calculée du parent puisque c'est une propriété héritée. Si `margin` n'est pas défini, la valeur `initial` de `0` est utilisée puisque `margin` n'est pas une [propriété héritée](/fr/docs/Web/CSS/Guides/Cascade/Inheritance#propriétés_héritées)&nbsp;:
 
 ```css
 color: inherit;
@@ -154,8 +154,8 @@ margin: 0;
 
 La **valeur initiale** d'une propriété est la valeur par défaut indiquée dans son tableau de définition dans la spécification. La valeur initiale est utilisée lors de l'application des valeurs par défaut lorsque&nbsp;:
 
-- Pour les [propriétés héritées](/fr/docs/Web/CSS/Guides/Cascade/Inheritance#inherited_properties), la valeur initiale est utilisée uniquement pour l'élément racine, qui n'a pas d'élément parent, lorsqu'aucune valeur en cascade n'existe.
-- Pour les [propriétés non héritées](/fr/docs/Web/CSS/Guides/Cascade/Inheritance#non-inherited_properties), la valeur initiale est utilisée sur tous les éléments lorsqu'aucune valeur en cascade n'existe.
+- Pour les [propriétés héritées](/fr/docs/Web/CSS/Guides/Cascade/Inheritance#propriétés_héritées), la valeur initiale est utilisée uniquement pour l'élément racine, qui n'a pas d'élément parent, lorsqu'aucune valeur en cascade n'existe.
+- Pour les [propriétés non héritées](/fr/docs/Web/CSS/Guides/Cascade/Inheritance#propriétés_non-héritées), la valeur initiale est utilisée sur tous les éléments lorsqu'aucune valeur en cascade n'existe.
 
 Vous pouvez définir explicitement la valeur initiale en utilisant le mot-clé {{CSSxRef("initial")}}.
 
@@ -169,7 +169,7 @@ La **valeur calculée** d'une propriété est la valeur transmise du parent vers
 La valeur calculée est dérivée de la [valeur définie](#valeur_définie) en&nbsp;:
 
 1. Gérant les valeurs spéciales {{CSSxRef("inherit")}}, {{CSSxRef("initial")}}, {{CSSxRef("revert")}}, {{CSSxRef("revert-layer")}} et {{CSSxRef("unset")}}.
-2. Effectuant les calculs nécessaires pour obtenir la valeur indiquée dans la ligne "Computed value" du tableau de définition de la propriété.
+2. Effectuant les calculs nécessaires pour obtenir la valeur indiquée dans la ligne «&nbsp;Valeur calculée&nbsp;» du tableau de définition de la propriété.
 
 Le calcul nécessaire pour obtenir la valeur calculée implique typiquement la conversion de valeurs relatives (comme les unités `em` ou les pourcentages) en valeurs absolues. Par exemple, si un élément a `font-size: 16px` et `padding-top: 2em` comme valeurs définies, alors la valeur calculée de `padding-top` est `32px` (double de la taille de police).
 
@@ -240,7 +240,7 @@ updateAllUsedWidths();
 window.addEventListener("resize", updateAllUsedWidths);
 ```
 
-Alors que les trois valeurs définies — `auto`, `50%` et `inherit` — sont des mots-clés et des valeurs de type {{CSSxRef("percentage")}}, récupérer la `width` via `window.getComputedStyle(el)["width"];` renvoie une valeur `px` d'[unité de longueur absolue](/fr/docs/Web/CSS/Reference/Values/length#absolute_length_units)&nbsp;:
+Alors que les trois valeurs définies — `auto`, `50%` et `inherit` — sont des mots-clés et des valeurs de type {{CSSxRef("percentage")}}, récupérer la `width` via `window.getComputedStyle(el)["width"];` renvoie une valeur `px` d'[unité de longueur absolue](/fr/docs/Web/CSS/Reference/Values/length#unités_de_longueur_absolues)&nbsp;:
 
 {{EmbedLiveSample('Valeur utilisée', '80%', 372)}}
 
@@ -269,7 +269,7 @@ Historiquement, `getComputedStyle()` retournait la valeur calculée d'un éléme
 
 Pour la plupart des propriétés, la valeur résolue est la valeur calculée, mais pour quelques propriétés héritées du passé (dont {{CSSxRef("width")}} et {{CSSxRef("height")}}), elle correspond à la valeur utilisée. La [spécification CSSOM <sup>(angl.)</sup>](https://drafts.csswg.org/cssom/#resolved_values) fournit des détails par propriété.
 
-CSS 2.0 définissait la _valeur calculée_ comme la dernière étape du calcul d'une propriété. CSS 2.1 a introduit la définition distincte de "valeur utilisée". Un élément pouvait alors hériter explicitement de la largeur/hauteur de son parent, dont la valeur calculée est un pourcentage. Pour les propriétés CSS qui ne dépendent pas du layout (par ex., `display`, `font-size` ou `line-height`), les valeurs calculées et utilisées sont identiques. La liste ci-dessous contient les propriétés CSS 2.1 qui _dépendent_ du layout et ont donc une valeur calculée différente de la valeur utilisée (extrait de [CSS 2.1 Changes: Specified, computed, and actual values <sup>(angl.)</sup>](https://www.w3.org/TR/CSS2/changes.html#q21.36))&nbsp;:
+CSS 2.0 définissait la _valeur calculée_ comme la dernière étape du calcul d'une propriété. CSS 2.1 a introduit la définition distincte de «&nbsp;valeur utilisée&nbsp;». Un élément pouvait alors hériter explicitement de la largeur/hauteur de son parent, dont la valeur calculée est un pourcentage. Pour les propriétés CSS qui ne dépendent pas du layout (par ex., `display`, `font-size` ou `line-height`), les valeurs calculées et utilisées sont identiques. La liste ci-dessous contient les propriétés CSS 2.1 qui _dépendent_ du layout et ont donc une valeur calculée différente de la valeur utilisée (extrait de [Changements dans CSS 2.1&nbsp;: Définies, calculées et valeurs réelles <sup>(angl.)</sup>](https://www.w3.org/TR/CSS2/changes.html#q21.36))&nbsp;:
 
 - {{CSSxRef("background-position")}}
 - {{CSSxRef("bottom")}}, {{CSSxRef("left")}}, {{CSSxRef("right")}}, {{CSSxRef("top")}}
