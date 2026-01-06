@@ -102,7 +102,7 @@ arr.findIndex((n) => Number.isNaN(n)); // 2
 
 ### 可觀察到的不同 NaN 值
 
-產生兩個二進位表示法不同但都是 `NaN` 的浮點數是可能的，因為在 [IEEE 754 編碼](https://en.wikipedia.org/wiki/NaN#Floating_point)中，任何指數為 `0x7ff` 且尾數非零的浮點數都是 `NaN`。在 JavaScript 中，你可以使用[型別陣列](/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays)進行位元級的操作。
+產生兩個二進位表示法不同但都是 `NaN` 的浮點數是可能的，因為在 [IEEE 754 編碼](https://zh.wikipedia.org/wiki/NaN#浮點數)中，任何指數為 `0x7ff` 且尾數非零的浮點數都是 `NaN`。在 JavaScript 中，你可以使用[型別陣列](/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays)進行位元級的操作。
 
 ```js
 const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);
