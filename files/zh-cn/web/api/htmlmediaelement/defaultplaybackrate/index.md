@@ -36,4 +36,4 @@ console.log(obj.defaultPlaybackRate); // 1
 
 ## 参见
 
-- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.defaultPlaybackRate` property
+- {{domxref("HTMLMediaElement")}}：用于定义 `HTMLMediaElement.defaultPlaybackRate` 属性的接口
