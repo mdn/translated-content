@@ -1,6 +1,7 @@
 ---
 title: 有效顶级域
-slug: Glossary/eTLD
+slug: Glossary/Registrable_domain
+original_slug: Glossary/eTLD
 l10n:
   sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
 ---
