@@ -44,8 +44,8 @@ scroll-target-group: unset;
 `scroll-target-group` を使用して作成されたスクロールマーカーグループコンテナーは、{{cssxref("scroll-marker-group")}} プロパティを使用して作成されたものとよく似ている動作をしますが、いくつかの違いがあります。
 
 - `scroll-target-group` では、独自のマークアップを作成してスクロールマーカーグループコンテナーとスクロールマーカーを表す必要があるのに対し、`scroll-marker-group` はコンテナー ({{cssxref("::scroll-marker-group")}}) とマーカー（{{cssxref("::scroll-marker")}} の 1 つ以上のインスタンス）を表現する一連の擬似要素を自動的に作成します。
-これらは自動的に、期待されるナビゲーションを生成された{{glossary("scroll container", "スクロールコンテナー")}}に関連付けます。`scroll-marker-group` を使用すると、自分自身でマークアップを作成する必要がないため、より迅速に設定できます。ただし、独自のマークアップを作成し、`scroll-target-group` を介してスクロールマーカーグループのコンテナーとして設定することで、より高度な制御と柔軟性が得られます。
-- `scroll-target-group` で指定されたスクロールマーカーは特別なナビゲーション動作を持ちませんが、`scroll-marker-group` で生成されたマーカーには自動的に [`tablist`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role )/[`tab`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) の意味づけが適用されます。これは、タブ順序において単一のアイテムと同様に振る舞い、ユーザーが矢印キーでスクロールマーカー間を移動することが可能であることを意味します。繰り返しになりますが、`scroll-marker-group` は有用なデフォルト動作を提供しますが、`scroll-target-group` で指定されたマーカーに対しては、代替の意味や動作を柔軟に提供することが可能です。
+  これらは自動的に、期待されるナビゲーションを生成された{{glossary("scroll container", "スクロールコンテナー")}}に関連付けます。`scroll-marker-group` を使用すると、自分自身でマークアップを作成する必要がないため、より迅速に設定できます。ただし、独自のマークアップを作成し、`scroll-target-group` を介してスクロールマーカーグループのコンテナーとして設定することで、より高度な制御と柔軟性が得られます。
+- `scroll-target-group` で指定されたスクロールマーカーは特別なナビゲーション動作を持ちませんが、`scroll-marker-group` で生成されたマーカーには自動的に [`tablist`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)/[`tab`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) の意味づけが適用されます。これは、タブ順序において単一のアイテムと同様に振る舞い、ユーザーが矢印キーでスクロールマーカー間を移動することが可能であることを意味します。繰り返しになりますが、`scroll-marker-group` は有用なデフォルト動作を提供しますが、`scroll-target-group` で指定されたマーカーに対しては、代替の意味や動作を柔軟に提供することが可能です。
 
 ## 公式定義
 
