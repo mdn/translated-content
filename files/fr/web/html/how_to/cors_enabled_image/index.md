@@ -16,7 +16,7 @@ Les pixels composant un canevas pouvant venir de différentes sources, notamment
 
 Dès que des données sont chargées dans le canevas depuis une autre origine sans avoir été approuvées par le CORS, le canevas devient **corrompu** (<i lang="en">tainted</i> en anglais). Dès qu'un canevas est corrompu, il n'est plus considéré comme sécurisé et toute tentative de récupérer des données depuis les données de l'image résultera en une exception.
 
-Si la source du contenu tiers est un élément HTML {{HTMLElement("img")}} ou SVG {{HTMLElement("svg")}}, il n'est plus permis de récupérer le contenu du canevas.
+Si la source du contenu tiers est un élément HTML {{HTMLElement("img")}} ou SVG {{SVGElement("svg")}}, il n'est plus permis de récupérer le contenu du canevas.
 
 Si la source du contenu tiers est une image obtenue à partir d'un {{DOMxRef("HTMLCanvasElement")}} ou d'une {{DOMxRef("ImageBitMap")}} et que la source de l'image ne respecte pas les règles quant à l'unicité de l'origine, il ne sera pas possible de lire le contenu du canevas.
 
