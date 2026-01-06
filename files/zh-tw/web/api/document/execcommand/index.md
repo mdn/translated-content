@@ -230,7 +230,7 @@ function insertText(newText, selector) {
 ## 參見
 
 - [Clipboard API](/zh-TW/docs/Web/API/Clipboard_API)
-- MDN 範例：[你的瀏覽器支援的 execCommands](https://mdn.github.io/dom-examples/execcommand/)
+- MDN 範例：[你的瀏覽器支援的 execCommand](https://mdn.github.io/dom-examples/execcommand/)
 - {{domxref("HTMLElement.contentEditable")}}
 - {{domxref("document.designMode")}}
 - {{domxref("document.queryCommandEnabled()")}}
