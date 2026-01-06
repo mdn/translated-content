@@ -24,7 +24,7 @@ console.log(sanitize("NotANumber"));
 // 預期輸出：NaN
 ```
 
-## 數值
+## 值
 
 與 {{jsxref("Number.NaN")}} 相同的數值。
 
