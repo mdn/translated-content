@@ -2,6 +2,8 @@
 title: HTMLMediaElement：defaultPlaybackRate 属性
 short-title: defaultPlaybackRate
 slug: Web/API/HTMLMediaElement/defaultPlaybackRate
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}
