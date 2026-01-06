@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Remote Playback API")}}
 
-{{domxref("HTMLMediaElement")}} 的 **`disableRemotePlayback`** 属性用于确定媒体元素是否允许具有远程播放 UI。
+{{domxref("HTMLMediaElement")}} 接口的 **`disableRemotePlayback`** 属性用于确定媒体元素是否允许具有远程播放 UI。
 
 ## 值
 
