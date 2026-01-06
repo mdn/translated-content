@@ -17,7 +17,7 @@ l10n:
 ### 异常
 
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : Thrown if the specified value is not supported.
+  - : 在指定的值不被支持时抛出。
 
 ## 示例
 
