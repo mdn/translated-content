@@ -1,14 +1,13 @@
 ---
 title: <easing-function>
 slug: Web/CSS/Reference/Values/easing-function
-original_slug: Web/CSS/easing-function
 l10n:
-  sourceCommit: a075805de90029b65fa5cfcc8ea43737728320f5
+  sourceCommit: ed2725c99c6011da9d4afa5e47546fe0722ee814
 ---
 
 **`<easing-function>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、値が変化する割合を記述する数学的な関数を表します。
 
-この 2 つの値の間の遷移は様々な形で適用される可能性があります。アニメーション中に値が変化する速さを記述するために使用されることがあります。これにより、この間、アニメーションの速度を変化させることができます。イージング関数は、CSS の [transition](/ja/docs/Web/CSS/Reference/Properties/transition-timing-function) および [animation](/ja/docs/Web/CSS/Reference/Properties/animation-timing-function) プロパティで指定することができます。
+この 2 つの値の間の遷移は様々な形で適用される可能性があります。アニメーション中に値が変化する速さを記述するために使用されることがあります。これにより、この間、アニメーションの速度を変化させることができます。イージング関数は、CSS の[トランジション](/ja/docs/Web/CSS/Reference/Properties/transition-timing-function)および[アニメーション](/ja/docs/Web/CSS/Reference/Properties/animation-timing-function)のプロパティで指定することができます。
 
 ## 構文
 
@@ -88,13 +87,14 @@ steps(10, jump-both)
     この関数は、次のいずれかを指定することで使用できます。
     - `step-start`
       - : イージング関数 `steps(1, jump-start)` または `steps(1, start)` を表します。
-        補間はすぐに最終状態に遷移し、最後までその状態を維持します。
+        補間はすぐに最終状態に遷移し、最後までその状態を維持することを示します。
 
     - `step-end`
       - : イージング関数 `steps(1, jump-end)` または `steps(1, end)` を表します。
         補間は、終了するまで初期状態のままで、終了時点で直接最終状態にジャンプします。
 
-    ![「入力の進行」から「出力の進行」のグラフのうち、"step-start" は原点を中空にし、(0, 1) から (1, 1) に伸びる水平線を示し、"step-end" は原点から (1, 0) に伸びる水平線（中空）と (1, 1) のこの点を示します。](step.svg)
+        ![「入力の進行」から「出力の進行」のグラフのうち、"step-start" は原点を中空にし、(0, 1) から (1, 1) に伸びる水平線を示し、"step-end" は原点から (1, 0) に伸びる水平線（中空）と (1, 1) のこの点を示します。](step.svg)
+
     - {{cssxref("easing-function/steps", "steps()")}}
       - : 間隔の数を指定する {{cssxref("&lt;integer&gt;")}} と、ジャンプのタイミングを制御するオプションのキーワードを使用して、階段状の曲線を作成します。
 
@@ -215,7 +215,8 @@ selectElem.addEventListener("change", () => {
 
 ## 関連情報
 
+- [CSS イージング関数](/ja/docs/Web/CSS/Guides/Easing_functions)モジュール
 - [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)
 - [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)
-- [cubic-bezier.com](https://cubic-bezier.com/) - Lea Verou (2011)
 - [`linear()` easing generator](https://linear-easing-generator.netlify.app/) - Jake Archibald
+- [cubic-bezier.com](https://cubic-bezier.com/) - Lea Verou (2011)
