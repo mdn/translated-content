@@ -125,4 +125,4 @@ document.addEventListener("visibilitychange", () => {
 
 - {{domxref("Document.visibilityState")}}
 - {{domxref("Document.hidden")}}
-- [使用 Intersection Observer API 实现元素可见性计时](/zh-CN/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)
+- [使用交叉观察器 API 实现元素可见性计时](/zh-CN/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)
