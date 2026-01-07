@@ -2,7 +2,7 @@
 title: 406 Not Acceptable
 slug: Web/HTTP/Reference/Status/406
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 HTTP **`406 Not Acceptable`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示伺服器無法產生與請求的[主動內容協商](/zh-TW/docs/Web/HTTP/Guides/Content_negotiation#服務器驅動的內容協商)標頭中定義的可接受值清單匹配的回應，並且伺服器不願意提供默認表示。
