@@ -158,7 +158,7 @@ peut être à revoir.
 
 ## Mettre en forme les sous-titres WebVTT
 
-Les sous-titres WebVTT peuvent être mis en forme en ciblant les éléments correspondants avec le pseudo-élément [`::cue`](/fr/docs/Web/CSS/::cue).
+Les sous-titres WebVTT peuvent être mis en forme en ciblant les éléments correspondants avec le pseudo-élément [`::cue`](/fr/docs/Web/CSS/Reference/Selectors/::cue).
 
 ### Avec le CSS du site
 

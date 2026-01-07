@@ -173,5 +173,5 @@ p {
 - 他のリスト関連 HTML 要素: {{HTMLElement("ul")}}, {{HTMLElement("ol")}}, {{HTMLElement("menu")}} および廃止された {{HTMLElement("dir")}}
 - `<li>` の整形に便利な CSS プロパティ:
   - 箇条書き記号の表示を選択するための {{cssxref("list-style")}}
-  - 複雑な入れ子状リストを処理するのに使用できる [CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
+  - 複雑な入れ子状リストを処理するのに使用できる [CSS カウンター](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters)
   - リストアイテムのインデントの調整に用いることができる {{cssxref("margin")}}

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: c72b86b3d6818ec6c8df1d52a77513d769f4164e
 ---
 
-**`place-self`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties) 은 [그리드](/ko/docs/Web/CSS/CSS_grid_layout) 혹은 [플렉스박스](/ko/docs/Web/CSS/CSS_flexible_box_layout) 와 같은 관계형 레이아웃 시스템에서 블록 방향과 인라인 방향에서 한번에 개별 요소를 정렬합니다 (예시. {{CSSxRef("align-items")}} 와 {{CSSxRef("justify-items")}} 속성). 만일 두번째 값이 지정되지 않는다면, 첫번째 값이 두번째 값으로도 사용됩니다.
+**`place-self`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Guides/Cascade/Shorthand_properties) 은 [그리드](/ko/docs/Web/CSS/Guides/Grid_layout) 혹은 [플렉스박스](/ko/docs/Web/CSS/Guides/Flexible_box_layout) 와 같은 관계형 레이아웃 시스템에서 블록 방향과 인라인 방향에서 한번에 개별 요소를 정렬합니다 (예시. {{CSSxRef("align-items")}} 와 {{CSSxRef("justify-items")}} 속성). 만일 두번째 값이 지정되지 않는다면, 첫번째 값이 두번째 값으로도 사용됩니다.
 
 {{InteractiveExample("CSS Demo: place-self")}}
 
@@ -129,7 +129,7 @@ place-self: unset;
 
 ### 간단히 시연해보기
 
-다음은 2 x 2 그리드 레이아웃 예제입니다. 초기에 그리드 컨테이너의 [`justify-items`](/ko/docs/Web/CSS/justify-items) 와 [`align-items`](/ko/docs/Web/CSS/align-items)는 기본 값인 `stretch` 로 설정되어 있어 그리드 요소가 해당 셀의 전체 너비만큼 늘어납니다.
+다음은 2 x 2 그리드 레이아웃 예제입니다. 초기에 그리드 컨테이너의 [`justify-items`](/ko/docs/Web/CSS/justify-items) 와 [`align-items`](/ko/docs/Web/CSS/Reference/Properties/align-items)는 기본 값인 `stretch` 로 설정되어 있어 그리드 요소가 해당 셀의 전체 너비만큼 늘어납니다.
 
 두번째, 세번째, 그리고 네번째 그리드 요소는 기본 각기 다른 `place-self` 값을 부여하여, 이러한 값들이 기본 배치를 어떻게 재정의하는지를 나타냅니다. 이 값들은 그리드 요소가 콘텐츠의 너비/높이에 맞추어 너비/높이를 조정하고, 블록 방향과 인라인 방향에서 셀 내 다른 위치에 정렬될 수 있도록 합니다.
 
@@ -202,7 +202,7 @@ span {
 
 ## 같이 보기
 
-- CSS 플렉스박스 가이드: [플렉스박스의 기본 개념](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- CSS 플렉스박스 가이드: [플렉스박스의 기본 개념](/ko/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
 - CSS 플렉스박스 가이드: [플렉스 컨테이너에서의 요소 정렬](/ko/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
 - CSS 그리드 가이드: [CSS 그리드 레이아웃 에서의 박스 정렬](/ko/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - [CSS 박스 정렬](/ko/docs/Web/CSS/CSS_box_alignment)

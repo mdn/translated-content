@@ -8,8 +8,8 @@ l10n:
 
 要素はクエリーコンテナーを確立するのに、 **`container-type`** という [CSS](/ja/docs/Web/CSS) プロパティを使用することができます。 `container-type` は、コンテナークエリーで使用されるコンテナーコンテキストの種類を定義するために使用されます。利用できるコンテナーコンテキストは次のとおりです。
 
-- [サイズ](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries): 最大または最小サイズ、アスペクト比、方向などの一般的なサイズまたはインラインサイズの条件に基づいて、コンテナーの子に CSS ルールを選択的に適用できるようにします。
-- [スクロール状態](/ja/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries): コンテナーが途中までスクロールされているスクロールコンテナーであるかどうか、コンテナーがスクロールスナップコンテナーにスナップされている[スナップターゲット](/ja/docs/Glossary/Scroll_snap#スナップターゲット)であるかどうかなどのスクロール状態の条件に基づいて、コンテナーの子に CSS ルールを選択的に適用できるようにします。
+- [サイズ](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries): 最大または最小サイズ、アスペクト比、方向などの一般的なサイズまたはインラインサイズの条件に基づいて、コンテナーの子に CSS ルールを選択的に適用できるようにします。
+- [スクロール状態](/ja/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries): コンテナーが途中までスクロールされているスクロールコンテナーであるかどうか、コンテナーがスクロールスナップコンテナーにスナップされている[スナップターゲット](/ja/docs/Glossary/Scroll_snap#スナップターゲット)であるかどうかなどのスクロール状態の条件に基づいて、コンテナーの子に CSS ルールを選択的に適用できるようにします。
 
 > [!NOTE]
 > `container-type` および {{cssxref("container-name")}} プロパティを使用すると、自動的に `style` 値と `layout` 値が {{cssxref("contain")}} プロパティに適用されます。
@@ -39,19 +39,19 @@ container-type: unset;
 `container-type` プロパティは、以下のリスト内の 1 つの値、または 2 つの値（そのうちの 1 つは `scroll-state` で、もう 1 つは `inline-size` または `size`）を指定できます。言い換えれば、要素は、サイズクエリーコンテナー、スクロール状態クエリーコンテナー、その両方、またはどちらでもないものとして設定できます。
 
 - `inline-size`
-  - : コンテナーの[インライン軸](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#ブロック軸とインライン軸)上のサイズクエリー用のクエリーコンテナーを確立します。
+  - : コンテナーの[インライン軸](/ja/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#ブロック軸とインライン軸)上のサイズクエリー用のクエリーコンテナーを確立します。
     要素にレイアウト、スタイル、インラインサイズ抑制を適用します。
 
-    インラインサイズ抑制が要素に適用されます。要素のインラインサイズは、子要素を無視して[単独で計算](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment#サイズ抑制)することができます （[CSS コンテナーの使用](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment)を参照してください）。
+    インラインサイズ抑制が要素に適用されます。要素のインラインサイズは、子要素を無視して[単独で計算](/ja/docs/Web/CSS/Guides/Containment/Using#サイズ抑制)することができます （[CSS コンテナーの使用](/ja/docs/Web/CSS/Guides/Containment/Using)を参照してください）。
 
 - `normal`
-  - : この要素はコンテナーサイズクエリーのクエリーコンテナーではありませんが、[コンテナースタイルクエリー](/ja/docs/Web/CSS/@container#コンテナースタイルクエリー)のクエリーコンテナーであることに変わりはありません。
+  - : この要素はコンテナーサイズクエリーのクエリーコンテナーではありませんが、[コンテナースタイルクエリー](/ja/docs/Web/CSS/Reference/At-rules/@container#コンテナースタイルクエリー)のクエリーコンテナーであることに変わりはありません。
 
 - `scroll-state`
   - : コンテナーのスクロール状態クエリー用のクエリコンテナーを設定します。この場合、要素のサイズは単独で計算されず、抑制は適用されません。
 
 - `size`
-  - : [インラインおよびブロック](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#ブロック軸とインライン軸)の両方の寸法で コンテナーサイズクエリーのためのクエリー コンテナーを確立します。
+  - : [インラインおよびブロック](/ja/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#ブロック軸とインライン軸)の両方の寸法で コンテナーサイズクエリーのためのクエリー コンテナーを確立します。
     コンテナーにレイアウト抑制、スタイル抑制、サイズ抑制を適用します。
 
     サイズ抑制は、インライン方向とブロック方向の両方で要素に適用されます。要素のサイズは、子要素を無視して単独で計算できます。
@@ -72,7 +72,7 @@ container-type: unset;
 
 ### コンテナーサイズクエリー
 
-[コンテナーサイズクエリー](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#コンテナーサイズクエリー)を使用すると、最大または最小のサイズ、アスペクト比、向きなどのサイズ条件に基づいて、コンテナーの子孫に CSS ルールを選択的に適用することができます。
+[コンテナーサイズクエリー](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#コンテナーサイズクエリー)を使用すると、最大または最小のサイズ、アスペクト比、向きなどのサイズ条件に基づいて、コンテナーの子孫に CSS ルールを選択的に適用することができます。
 
 サイズコンテナーには、さらにサイズ抑制が適用されます。これにより、要素がそのコンテンツからサイズ情報を取得できなくなります。これは、無限ループを避けるためにコンテナークエリーにとって重要です。そうしないと、コンテナークエリー内の CSS ルールによってコンテンツのサイズが変更され、その結果、クエリーの評価が false になり、親要素のサイズが変更され、その結果、コンテンツのサイズが変更され、クエリーの評価が再び true になり、というように無限ループに陥ってしまいます。この連鎖は、無限ループとして繰り返されます。
 
@@ -80,11 +80,11 @@ container-type: unset;
 
 ### コンテナースクロール状態クエリー
 
-[コンテナースクロール状態クエリー](/ja/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)を使用すると、次のようなスクロール状態の条件に基づいて、コンテナーの子要素に CSS ルールを選択的に適用することができます。
+[コンテナースクロール状態クエリー](/ja/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)を使用すると、次のようなスクロール状態の条件に基づいて、コンテナーの子要素に CSS ルールを選択的に適用することができます。
 
 - コンテナーのコンテンツが部分的にスクロールされているかどうか。
 - コンテナーがスクロールスナップコンテナーにスナップされているスナップターゲットであるかどうか。
-- コンテナーが [`position: sticky`](/ja/docs/Web/CSS/display) によって位置指定され、{{glossary("scroll container", "スクロールコンテナー")}}の境界に貼り付いているかどうか。
+- コンテナーが [`position: sticky`](/ja/docs/Web/CSS/Reference/Properties/display) によって位置指定され、{{glossary("scroll container", "スクロールコンテナー")}}の境界に貼り付いているかどうか。
 
 最初のケースでは、クエリーの対象となるコンテナーはスクロールコンテナーそのものです。他の 2 件の場合、クエリーの対象となるコンテナーは、親スクロールコンテナーのスクロール位置の影響を受ける要素です。
 
@@ -116,7 +116,7 @@ container-type: unset;
 </div>
 ```
 
-コンテナーコンテキストを作成するには、要素に `container-type` プロパティを追加します。以下は、 `inline-size` 値を使用してコンテナーの[インライン軸](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#ブロック軸とインライン軸)のコンテナーコンテキストを作成しています。
+コンテナーコンテキストを作成するには、要素に `container-type` プロパティを追加します。以下は、 `inline-size` 値を使用してコンテナーの[インライン軸](/ja/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#ブロック軸とインライン軸)のコンテナーコンテキストを作成しています。
 
 ```css
 .container {
@@ -175,9 +175,9 @@ h3 {
 
 ## 関連情報
 
-- [CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
-- [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
-- [コンテナーのスクロール状態クエリーの使用](/ja/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
+- [CSS コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)
+- [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)
+- [コンテナーのスクロール状態クエリーの使用](/ja/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)
 - {{Cssxref("@container")}} アットルール
 - CSS {{Cssxref("container")}} 一括指定プロパティ
 - CSS {{Cssxref("container-name")}} プロパティ

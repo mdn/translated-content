@@ -1,12 +1,11 @@
 ---
 title: font-synthesis
 slug: Web/CSS/Reference/Properties/font-synthesis
-original_slug: Web/CSS/font-synthesis
 l10n:
-  sourceCommit: ec64bbd66dab1ce079768708b5da8c50abc4a957
+  sourceCommit: bdcf465db305b8296fa663a877ac0d56c5757777
 ---
 
-**`font-synthesis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、指定したフォントファミリに太字、斜体、小文字、添字、上付き文字がない場合に、ブラウザーが合成するかどうかを指定します。
+**`font-synthesis`** [一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) プロパティで、指定されたフォントファミリに太字、斜体、スモールキャップ、下付き文字、上付き文字がない場合に、ブラウザーが合成するかどうかを指定します。
 
 {{InteractiveExample("CSS デモ: font-synthesis")}}
 
@@ -45,77 +44,29 @@ font-synthesis: position;
       <span class="sup">superscript</span> variants.
     </p>
     <p class="chinese">
-      中文排版通常不运用<span class="bold">粗体</span>或<span class="italic"
+      中文排版通常不用<span class="bold">粗体</span>或<span class="italic"
         >斜体</span
-      ><span class="sub">常不</span><span class="sup">运用</span>。
+      >，也不会使用<span class="small-caps">小型大写字母</span>和<span
+        class="sub"
+        >下标</span
+      ><span class="sup">上标</span>变体。
     </p>
   </div>
 </section>
 ```
 
 ```css interactive-example
-@font-face {
-  font-family: Oxygen;
-  font-style: normal;
-  font-weight: 400;
-  src: url("https://fonts.gstatic.com/s/oxygen/v14/2sDfZG1Wl4LcnbuKjk0m.woff2")
-    format("woff2");
-}
-
-/* [108] */
-@font-face {
-  font-family: "Ma Shan Zheng";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("https://fonts.gstatic.com/s/mashanzheng/v10/NaPecZTRCLxvwo41b4gvzkXaRMGEFoZJFdX0wQ5Xo5Hr21L9zCcRFhbSe5Nk0pIMuUkHEA.108.woff2")
-    format("woff2");
-}
-/* [110] */
-@font-face {
-  font-family: "Ma Shan Zheng";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("https://fonts.gstatic.com/s/mashanzheng/v10/NaPecZTRCLxvwo41b4gvzkXaRMGEFoZJFdX0wQ5Xo5Hr21L9zCcRFhbSe5Nk0pIMuUkHEA.110.woff2")
-    format("woff2");
-}
-/* [117] */
-@font-face {
-  font-family: "Ma Shan Zheng";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("https://fonts.gstatic.com/s/mashanzheng/v10/NaPecZTRCLxvwo41b4gvzkXaRMGEFoZJFdX0wQ5Xo5Hr21L9zCcRFhbSe5Nk0pIMuUkHEA.117.woff2")
-    format("woff2");
-}
-/* [118] */
-@font-face {
-  font-family: "Ma Shan Zheng";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("https://fonts.gstatic.com/s/mashanzheng/v10/NaPecZTRCLxvwo41b4gvzkXaRMGEFoZJFdX0wQ5Xo5Hr21L9zCcRFhbSe5Nk0pIMuUkHEA.118.woff2")
-    format("woff2");
-}
-/* [119] */
-@font-face {
-  font-family: "Ma Shan Zheng";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("https://fonts.gstatic.com/s/mashanzheng/v10/NaPecZTRCLxvwo41b4gvzkXaRMGEFoZJFdX0wQ5Xo5Hr21L9zCcRFhbSe5Nk0pIMuUkHEA.119.woff2")
-    format("woff2");
-}
+@import "https://fonts.googleapis.com/css2?family=Oxygen&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap";
 
 .english {
   font-size: 1.2em;
-  font-family: Oxygen;
+  font-family: "Oxygen", sans-serif;
 }
 
 .chinese {
   font-size: 1.2em;
-  font-family: "Ma Shan Zheng";
+  font-family: "Ma Shan Zheng", cursive;
 }
 
 .bold {
@@ -143,10 +94,10 @@ font-synthesis: position;
 
 このプロパティは、以下の CSS プロパティの一括指定です。
 
-- [font-synthesis-weight](/ja/docs/Web/CSS/font-synthesis-weight)
-- [font-synthesis-style](/ja/docs/Web/CSS/font-synthesis-style)
-- [font-synthesis-small-caps](/ja/docs/Web/CSS/font-synthesis-small-caps)
-- [font-synthesis-position](/ja/docs/Web/CSS/font-synthesis-position)
+- [font-synthesis-weight](/ja/docs/Web/CSS/Reference/Properties/font-synthesis-weight)
+- [font-synthesis-style](/ja/docs/Web/CSS/Reference/Properties/font-synthesis-style)
+- [font-synthesis-small-caps](/ja/docs/Web/CSS/Reference/Properties/font-synthesis-small-caps)
+- [font-synthesis-position](/ja/docs/Web/CSS/Reference/Properties/font-synthesis-position)
 
 ## 構文
 
@@ -184,7 +135,7 @@ font-synthesis: unset;
 
 ほとんどの標準的な欧文フォントにはイタリック体や太字の変化形が含まれていますが、多くのノベルティフォントには含まれていません。中国語、日本語、韓国語、その他の表語文字に使用されているフォントは、これらの変化形を含まない傾向があり、それらを合成するとテキストの可読性が損なわれる可能性があります。このような場合には、ブラウザーの既定のフォント合成機能をオフにしたほうがよいかもしれません。
 
-例えば、 [:lang()](/ja/docs/Web/CSS/:lang) 擬似クラスを用いることで、ある言語（この例ではアラビア語）に対してブラウザーが太字や斜体を合成しないようにすることができます。
+例えば、 [:lang()](/ja/docs/Web/CSS/Reference/Selectors/:lang) 擬似クラスを用いることで、ある言語（この例ではアラビア語）に対してブラウザーが太字や斜体を合成しないようにすることができます。
 
 ```css
 *:lang(ar) {
@@ -194,23 +145,23 @@ font-synthesis: unset;
 
 下記の表は、一括指定の `font-synthesis` プロパティの値が、個別指定プロパティにどのように割り当てられるかを示しています。
 
-| font-synthesis の値                | [font-synthesis-weight](/ja/docs/Web/CSS/font-synthesis-weight) 値 | [font-synthesis-style](/ja/docs/Web/CSS/font-synthesis-style) 値 | [font-synthesis-small-caps](/ja/docs/Web/CSS/font-synthesis-small-caps) 値 | [font-synthesis-position](/ja/docs/Web/CSS/font-synthesis-position) 値 |
-| :--------------------------------- | :----------------------------------------------------------------- | :--------------------------------------------------------------- | :------------------------------------------------------------------------- | :--------------------------------------------------------------------- |
-| `none`                             | `none`                                                             | `none`                                                           | `none`                                                                     | `none`                                                                 |
-| `weight`                           | `auto`                                                             | `none`                                                           | `none`                                                                     | `none`                                                                 |
-| `style`                            | `none`                                                             | `auto`                                                           | `none`                                                                     | `none`                                                                 |
-| `small-caps`                       | `none`                                                             | `none`                                                           | `auto`                                                                     | `none`                                                                 |
-| `position`                         | `none`                                                             | `none`                                                           | `none`                                                                     | `auto`                                                                 |
-| `weight style`                     | `auto`                                                             | `auto`                                                           | `none`                                                                     | `none`                                                                 |
-| `weight small-caps`                | `auto`                                                             | `none`                                                           | `auto`                                                                     | `none`                                                                 |
-| `weight position`                  | `auto`                                                             | `none`                                                           | `none`                                                                     | `auto`                                                                 |
-| `style small-caps`                 | `none`                                                             | `auto`                                                           | `auto`                                                                     | `none`                                                                 |
-| `style position`                   | `none`                                                             | `auto`                                                           | `none`                                                                     | `auto`                                                                 |
-| `weight style small-caps`          | `auto`                                                             | `auto`                                                           | `auto`                                                                     | `none`                                                                 |
-| `weight style position`            | `auto`                                                             | `auto`                                                           | `none`                                                                     | `auto`                                                                 |
-| `weight small-caps position`       | `auto`                                                             | `none`                                                           | `auto`                                                                     | `auto`                                                                 |
-| `style small-caps position`        | `none`                                                             | `auto`                                                           | `auto`                                                                     | `auto`                                                                 |
-| `weight style small-caps position` | `auto`                                                             | `auto`                                                           | `auto`                                                                     | `auto`                                                                 |
+| font-synthesis の値                | [font-synthesis-weight](/ja/docs/Web/CSS/Reference/Properties/font-synthesis-weight) 値 | [font-synthesis-style](/ja/docs/Web/CSS/Reference/Properties/font-synthesis-style) 値 | [font-synthesis-small-caps](/ja/docs/Web/CSS/Reference/Properties/font-synthesis-small-caps) 値 | [font-synthesis-position](/ja/docs/Web/CSS/Reference/Properties/font-synthesis-position) 値 |
+| :--------------------------------- | :-------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------ |
+| `none`                             | `none`                                                                                  | `none`                                                                                | `none`                                                                                          | `none`                                                                                      |
+| `weight`                           | `auto`                                                                                  | `none`                                                                                | `none`                                                                                          | `none`                                                                                      |
+| `style`                            | `none`                                                                                  | `auto`                                                                                | `none`                                                                                          | `none`                                                                                      |
+| `small-caps`                       | `none`                                                                                  | `none`                                                                                | `auto`                                                                                          | `none`                                                                                      |
+| `position`                         | `none`                                                                                  | `none`                                                                                | `none`                                                                                          | `auto`                                                                                      |
+| `weight style`                     | `auto`                                                                                  | `auto`                                                                                | `none`                                                                                          | `none`                                                                                      |
+| `weight small-caps`                | `auto`                                                                                  | `none`                                                                                | `auto`                                                                                          | `none`                                                                                      |
+| `weight position`                  | `auto`                                                                                  | `none`                                                                                | `none`                                                                                          | `auto`                                                                                      |
+| `style small-caps`                 | `none`                                                                                  | `auto`                                                                                | `auto`                                                                                          | `none`                                                                                      |
+| `style position`                   | `none`                                                                                  | `auto`                                                                                | `none`                                                                                          | `auto`                                                                                      |
+| `weight style small-caps`          | `auto`                                                                                  | `auto`                                                                                | `auto`                                                                                          | `none`                                                                                      |
+| `weight style position`            | `auto`                                                                                  | `auto`                                                                                | `none`                                                                                          | `auto`                                                                                      |
+| `weight small-caps position`       | `auto`                                                                                  | `none`                                                                                | `auto`                                                                                          | `auto`                                                                                      |
+| `style small-caps position`        | `none`                                                                                  | `auto`                                                                                | `auto`                                                                                          | `auto`                                                                                      |
+| `weight style small-caps position` | `auto`                                                                                  | `auto`                                                                                | `auto`                                                                                          | `auto`                                                                                      |
 
 ## 公式定義
 
@@ -253,14 +204,14 @@ font-synthesis: unset;
 #### CSS
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Montserrat&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap";
 
 .english {
   font-family: "Montserrat", sans-serif;
 }
 .chinese {
-  font-family: "Ma Shan Zheng";
+  font-family: "Ma Shan Zheng", cursive;
 }
 .no-syn {
   font-synthesis: none;

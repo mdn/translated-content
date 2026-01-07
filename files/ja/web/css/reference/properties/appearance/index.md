@@ -1,9 +1,8 @@
 ---
 title: appearance
 slug: Web/CSS/Reference/Properties/appearance
-original_slug: Web/CSS/appearance
 l10n:
-  sourceCommit: 6eae35bc64a49865a469ca29bc40e6993b9cb8cc
+  sourceCommit: a1c041f5d15330c7bcd85e9bf93d88f759174cf5
 ---
 
 **`appearance`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォームコントロールなどの置換された UI ウィジェット要素のレンダリングされた外観を指定します。最も一般的な場合、これらの要素にはオペレーティングシステムのテーマに基づくネイティブでプラットフォーム特定のスタイルが適用されるか、 CSS を使用して上書き可能なスタイルによる基本的な外観が指定されます。
@@ -94,7 +93,7 @@ appearance: checkbox;
 一部のブラウザーでは、 標準外の値にも対応しています。
 
 - `slider-vertical`
-  - : `<input type="range">` 要素に適用すると、スライダーを縦方向にします。[垂直スライダーを作成する](/ja/docs/Web/CSS/CSS_writing_modes/Vertical_controls)には、代わりに {{cssxref("writing-mode")}} を `vertical-lr` に、 {{cssxref("direction")}} を `rtl` に設定する必要があります。
+  - : `<input type="range">` 要素に適用すると、スライダーを縦方向にします。[垂直スライダーを作成する](/ja/docs/Web/CSS/Guides/Writing_modes/Vertical_controls)には、代わりに {{cssxref("writing-mode")}} を `vertical-lr` に、 {{cssxref("direction")}} を `rtl` に設定する必要があります。
 
 - `-apple-pay-button`
   - : {{htmlelement("button")}}、{{htmlelement("a")}}、{{htmlelement("input")}} 要素で表示型が `button` または `reset` に設定されている場合に、Apple Pay のロゴを表示します。
@@ -111,11 +110,11 @@ appearance: checkbox;
 
 `none` はウィジェットを非表示にする可能性があるため、ウィジェットに基本外観を指定された `base` 値が追加されました。対応している場合、 `base` 値はウィジェットがネイティブ外観を維持しつつ、既定では変更できないウィジェットのスタイルを CSS で変更できるように確実にします。 `none` がラジオボタンやチェックボックスを消失させる可能性があるのに対し、 `base` はウィジェットに基本的な外観を与え、使用可能かつ相互運用性のある既定のネイティブスタイルを提供すると同時に、 CSS による良くカスタマイズを可能にします。この `base` 値はまだ対応していないものの、多くの `<compat-auto>` 値が同様の機能を果たします。ただしこれらは特定の型に属し、グローバルではありません。
 
-`base-select` 値は、 {{htmlelement("select")}} 要素および {{cssxref("::picker()", "::picker(select)")}} 擬似要素にのみ関連し、[`<select>` 要素と選択ピッカーのスタイル設定](#select_の外見を設定)をすることができるのです （`<option>` 要素を含む）。ピッカーはポップオーバーと同様に最前面レイヤーに描画されます。 `base-select` が設定されている場合、 [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)機能を使用して、ピッカーを選択要素（または他の要素）に対して相対的に配置できます。さらに、 `base-select` 値を設定すると、 `<select>` がブラウザーペイン外にレンダリングされたり、組み込みのモバイル OS 要素が起動することを防ぎます。また、最も幅の広い `<option>` の幅に基づいてサイズが調整されることもなくなりました。
+`base-select` 値は、 {{htmlelement("select")}} 要素および {{cssxref("::picker()", "::picker(select)")}} 擬似要素にのみ関連し、（`<option>` 要素を含む）[`<select>` 要素と選択ピッカーのスタイル設定](#select_の外見を設定)をすることができます。ピッカーはポップオーバーと同様に最前面レイヤーに描画されます。 `base-select` が設定されている場合、 [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)機能を使用して、ピッカーを選択要素（または他の要素）に対して相対的に配置できます。さらに、 `base-select` 値を設定すると、 `<select>` がブラウザーペイン外にレンダリングされたり、組み込みのモバイル OS 要素が起動したりすることを防ぎます。また、最も幅の広い `<option>` の幅に基づいてサイズが調整されることもなくなります。
 
 ### 接頭辞付きの標準外の値
 
-標準化以前、接頭辞付きプロパティである **`-moz-appearance`** および **`-webkit-appearance`** により、要素をボタンやチェックボックスなどのウィジェットとして示すことができるようになりました。古いスタイルシートでは、以下の標準外の値が使用されていることがあります。最も一般的なのは、シャドウ DOM 要素の[接頭辞付き擬似要素](/ja/docs/Web/CSS/WebKit_Extensions#擬似要素)の値としてです。
+標準化以前、接頭辞付きプロパティである **`-moz-appearance`** および **`-webkit-appearance`** により、要素をボタンやチェックボックスなどのウィジェットとして示すことができるようになりました。古いスタイルシートでは、以下の標準外の値が使用されていることがあります。最も一般的なのは、シャドウ DOM 要素の[接頭辞付き擬似要素](/ja/docs/Web/CSS/Reference/Webkit_extensions#擬似要素)の値としてです。
 
 <details>
 <summary>標準外の値</summary>
@@ -239,7 +238,7 @@ appearance: checkbox;
 
 {{EmbedLiveSample("Basic example", 600, 100)}}
 
-ブラウザーによっては、コントロールがテキストフィールドと同様に設定されている場合、スピナーが視覚的に除去されることがあります。 `appearance` プロパティは機能に影響を及ぼしません。例えば、クリック可能なスピナーが存在しなくなっても、上下のカーソルキーで値を増減させることが可能です。
+ブラウザーによっては、コントロールがテキストフィールドと同様に設定されている場合、スピナーが視覚的に除去されることがあります。 `appearance` プロパティは機能に影響を及ぼしません。例えば、クリック可能なスピナーが存在しなくなっても、上下カーソルキーで値を増減させることが可能です。
 
 ### 外見を `none` に設定
 
@@ -247,7 +246,7 @@ appearance: checkbox;
 
 #### HTML
 
-チェックボックス、ラジオボタン、`<select>`要素と、それらに関連付けられたラベルのペアを記述します。
+チェックボックス、ラジオボタン、`<select>` 要素と、それらに関連付けられたラベルのペアを記述します。
 
 ```html
 <label><input type="checkbox" /> 既定で未チェック </label>
@@ -396,4 +395,4 @@ select {
 
 ## 関連情報
 
-- [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme)
+- [`prefers-color-scheme`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme)

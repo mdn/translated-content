@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/HTML5_input_types
 original_slug: Learn/Forms/HTML5_input_types
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
 
 Dans [l'article précédent](/fr/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls), nous avons vu l'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) et les types qu'il pouvait avoir depuis les origines de HTML. Voyons ici, en détails, les fonctionnalités offertes par les contrôles de formulaire plus récents, dont certains ont été ajoutés en HTML5 et qui permettent de récupérer des données d'un certain type.
 
@@ -66,7 +66,7 @@ En revanche, un tel mécanisme _ne devrait pas être considéré_ comme une mesu
 On notera aussi que `a@b` est une adresse électronique valide pour les contraintes fournies par défaut. En effet, par défaut, un champ `email` permet de saisir des adresses intranet. Pour implémenter un comportement de validation différent, on pourra utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Attributes/pattern) et personnaliser les messages d'erreur affichés. Nous verrons ces fonctionnalités dans l'article [Validation d'un formulaire côté client](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation).
 
 > [!NOTE]
-> Si la valeur saisie n'est pas une adresse électronique, la pseudo-classe [`:invalid`](/fr/docs/Web/CSS/:invalid) s'appliquera, et la propriété du DOM [`validityState.typeMismatch`](/fr/docs/Web/API/validityState/typeMismatch) renverra `true`.
+> Si la valeur saisie n'est pas une adresse électronique, la pseudo-classe [`:invalid`](/fr/docs/Web/CSS/Reference/Selectors/:invalid) s'appliquera, et la propriété du DOM [`validityState.typeMismatch`](/fr/docs/Web/API/validityState/typeMismatch) renverra `true`.
 
 ## Champ de recherche
 
@@ -283,4 +283,4 @@ Vous avez atteint la fin de cet article, mais avez-vous retenu les informations 
 
 Cela marque la fin de notre tour des types de champs de formulaire HTML5. Il existe certains types de contrôle qui sont difficilement utilisables en combinaison en raison de leur comportement très spécifique, mais que vous devriez connaître — nous les détaillerons dans l'article suivant.
 
-{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}

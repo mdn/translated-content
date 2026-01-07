@@ -31,7 +31,7 @@ Renvoie une séquence d'objets avec le format suivant&nbsp;:
 - `computedOffset`
   - : Le décalage calculé pour cette image clé, déterminé lorsque la liste des images clés calculées a été produite. Contrairement à **`offset`**, ci-dessus, **`computedOffset`** n'est jamais `null`.
 - `easing`
-  - : La [fonction d'atténuation](/fr/docs/Web/CSS/easing-function) utilisée de cette image clé jusqu'à la suivante de la série.
+  - : La [fonction d'atténuation](/fr/docs/Web/CSS/Reference/Values/easing-function) utilisée de cette image clé jusqu'à la suivante de la série.
 - `composite`
   - : L'opération {{domxref("KeyframeEffect.composite")}} utilisée pour combiner les valeurs spécifiées dans cette image clé avec la valeur sous-jacente. Cette propriété sera absente si l'opération de composition spécifiée sur l'effet est utilisée.
 

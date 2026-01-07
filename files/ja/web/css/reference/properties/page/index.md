@@ -6,9 +6,9 @@ l10n:
   sourceCommit: 62ad79f3ece9fa7199b3420f38e8bdd05b54073f
 ---
 
-**`page`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{cssxref("@page")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で定義された、名前付きページ、つまり特定の種類のページを指定するために使用します。
+**`page`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{cssxref("@page")}} [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で定義された、名前付きページ、つまり特定の種類のページを指定するために使用します。
 
-名前付きページを連続して使用しているセレクターが複数ある場合は、 [`break-after`](/ja/docs/Web/CSS/break-after) を使用して強制的にページを分割する必要があるかもしれません。
+名前付きページを連続して使用しているセレクターが複数ある場合は、 [`break-after`](/ja/docs/Web/CSS/Reference/Properties/break-after) を使用して強制的にページを分割する必要があるかもしれません。
 
 ## 構文
 
@@ -33,7 +33,7 @@ page: unset;
 - `auto`
   - : 既定値。 `auto` 以外の値を持つ最も近い祖先の値を使用します。名前付きページの値が設定されている祖先が存在しない場合、 `auto` に使用される値は空文字列になります。
 - {{cssxref("custom-ident")}}
-  - : [`@page`](/ja/docs/Web/CSS/@page) アットルールで定義されている、大文字小文字を区別する名前。
+  - : [`@page`](/ja/docs/Web/CSS/Reference/At-rules/@page) アットルールで定義されている、大文字小文字を区別する名前。
 
 ## 公式定義
 
@@ -131,7 +131,7 @@ page: unset;
 </article>
 ```
 
-CSS の最初の部分では、**名前付き**ページを設定します。これには、サイズ、方向、および印刷されるページの [`@top-center` マージン](/ja/docs/Web/CSS/@page#マージンのアットルール)に表示されるコンテンツが含まれます。
+CSS の最初の部分では、**名前付き**ページを設定します。これには、サイズ、方向、および印刷されるページの [`@top-center` マージン](/ja/docs/Web/CSS/Reference/At-rules/@page#マージンのアットルール)に表示されるコンテンツが含まれます。
 
 ```css live-sample___page-property
 @page toc {
@@ -183,7 +183,7 @@ body {
 }
 ```
 
-CSS の次の部分では、[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)を使用して、前回の CSS の章で定義した名前付き `@page` ルールで定義した出力サイズ、方向、およびマージンを、`page` プロパティを使用する要素に適用します。
+CSS の次の部分では、[属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors)を使用して、前回の CSS の章で定義した名前付き `@page` ルールで定義した出力サイズ、方向、およびマージンを、`page` プロパティを使用する要素に適用します。
 `class="chapter"` の節は同時実行であり、1 ページとして表示されます。
 `break-after: page;` を使用してそれらを分割し、各章を別々に印刷されるページに分割します。
 

@@ -1,9 +1,8 @@
 ---
 title: columns
 slug: Web/CSS/Reference/Properties/columns
-original_slug: Web/CSS/columns
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`columns`** は [CSS](/ja/docs/Web/CSS) 一括指定プロパティで、要素の内容物を描画する際に使用する段数や段の幅を設定します。
@@ -45,8 +44,8 @@ columns: 3;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`column-count`](/ja/docs/Web/CSS/column-count)
-- [`column-width`](/ja/docs/Web/CSS/column-width)
+- {{cssxref("column-count")}}
+- {{cssxref("column-width")}}
 
 ## 構文
 
@@ -124,5 +123,5 @@ columns: unset;
 
 - {{cssxref("widows")}}
 - {{cssxref("orphans")}}
-- [ページ化メディア](/ja/docs/Web/CSS/CSS_paged_media)
+- [ページ化メディア](/ja/docs/Web/CSS/Guides/Paged_media)
 - [学習: 段組みレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)

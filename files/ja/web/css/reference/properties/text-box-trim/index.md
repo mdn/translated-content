@@ -296,5 +296,5 @@ trimUnderSelect.addEventListener("change", setEdgeTrim);
 ## 関連情報
 
 - {{cssxref("text-box")}}, {{cssxref("text-box-edge")}}
-- [CSS インラインレイアウト](/ja/docs/Web/CSS/CSS_inline_layout) module
+- [CSS インラインレイアウト](/ja/docs/Web/CSS/Guides/Inline_layout) module
 - [CSS text-box-trim](https://developer.chrome.com/blog/css-text-box-trim) (developer.chrome.com, 2025)

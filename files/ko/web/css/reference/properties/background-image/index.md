@@ -46,7 +46,7 @@ background-image:
 
 여러 개의 배경 이미지는 쌓임 맥락에 따라 서로의 위에 놓입니다. 맨 처음 지정한 이미지가 제일 위에(사용자에게 제일 가까운 것 처럼) 위치합니다.
 
-[테두리](/ko/docs/Web/CSS/border)는 배경 이미지 위에, {{cssxref("background-color")}}는 밑에 그려집니다. 요소 박스와 테두리에 관련하여 배경 이미지를 어떻게 그릴지는 {{cssxref("background-clip")}}과 {{cssxref("background-origin")}} CSS 속성이 정의합니다.
+[테두리](/ko/docs/Web/CSS/Reference/Properties/border)는 배경 이미지 위에, {{cssxref("background-color")}}는 밑에 그려집니다. 요소 박스와 테두리에 관련하여 배경 이미지를 어떻게 그릴지는 {{cssxref("background-clip")}}과 {{cssxref("background-origin")}} CSS 속성이 정의합니다.
 
 브라우저는 값에 유효하지 않은 URI를 지정하는 등 주어진 이미지를 그릴 수 없을 때 `none` 키워드를 사용한 것처럼 처리합니다.
 
@@ -70,7 +70,7 @@ background-image:
 - `none`
   - : 배경 이미지의 부재를 나타내는 키워드입니다.
 - {{cssxref("&lt;image&gt;")}}
-  - : 배경으로 사용할 이미지입니다. [여러 개의 배경 이미지](/ko/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)를 사용할 땐 쉼표로 구분한 다수의 값을 지정하세요.
+  - : 배경으로 사용할 이미지입니다. [여러 개의 배경 이미지](/ko/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)를 사용할 땐 쉼표로 구분한 다수의 값을 지정하세요.
 
 ## 접근성 고려사항
 
@@ -138,7 +138,7 @@ div {
 
 ## 같이 보기
 
-- [CSS로 이미지 스프라이트 구현하기](/ko/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
+- [CSS로 이미지 스프라이트 구현하기](/ko/docs/Web/CSS/Guides/Images/Implementing_image_sprites)
 - {{HTMLElement("img")}}
 - 이미지 관련 자료형: {{cssxref("&lt;image&gt;")}}, {{cssxref("&lt;gradient&gt;")}}
 - 이미지 관련 함수: {{cssxref("linear-gradient")}}, {{cssxref("radial-gradient")}}, {{cssxref("repeating-linear-gradient")}}, {{cssxref("repeating-radial-gradient")}}, {{cssxref("element")}}, {{cssxref("_image", "image()")}}, {{cssxref("image-set")}}, {{cssxref("url", "url()")}}

@@ -82,7 +82,7 @@ body {
 
 ## Choix effectués
 
-Cette recette utilise la fonction {{CSSxRef("minmax", "minmax()")}} de la grille CSS pour définir la taille des pistes dans la propriété {{CSSxRef("grid-template-columns")}}. Pour les colonnes centrales avec une largeur maximale, on peut définir une valeur minimale de `0` ou plus et une valeur maximale qui spécifie la taille maximale que les pistes de colonne peuvent atteindre. L'utilisation d'unités [relatives](/fr/docs/Web/CSS/length#relative_length_units_based_on_font) ou [absolues](/fr/docs/Web/CSS/length#absolute_length_units) {{CSSxRef("length")}} (pixels, em, rem) crée une taille maximale fixe pour le conteneur central, tandis que l'utilisation de valeurs en {{CSSxRef("percentage")}} ou d'[unités de la zone d'affichage](/fr/docs/Web/CSS/length#relative_length_units_based_on_viewport) permet au conteneur de s'adapter à son contexte.
+Cette recette utilise la fonction {{CSSxRef("minmax", "minmax()")}} de la grille CSS pour définir la taille des pistes dans la propriété {{CSSxRef("grid-template-columns")}}. Pour les colonnes centrales avec une largeur maximale, on peut définir une valeur minimale de `0` ou plus et une valeur maximale qui spécifie la taille maximale que les pistes de colonne peuvent atteindre. L'utilisation d'unités [relatives](/fr/docs/Web/CSS/Reference/Values/length#relative_length_units_based_on_font) ou [absolues](/fr/docs/Web/CSS/Reference/Values/length#absolute_length_units) {{CSSxRef("length")}} (pixels, em, rem) crée une taille maximale fixe pour le conteneur central, tandis que l'utilisation de valeurs en {{CSSxRef("percentage")}} ou d'[unités de la zone d'affichage](/fr/docs/Web/CSS/Reference/Values/length#relative_length_units_based_on_viewport) permet au conteneur de s'adapter à son contexte.
 
 Les deux colonnes extérieures ont une taille maximale de `1fr`, ce qui signifie qu'elles s'étendent pour occuper l'espace restant dans le conteneur de grille.
 
@@ -99,11 +99,11 @@ Pour centrer la grille horizontalement sur la page, vous pouvez définir une `ma
 
 ## Problèmes d'accessibilité
 
-Bien que la grille CSS permette de positionner les éléments presque partout, il est important de s'assurer que votre balisage sous-jacent suit un ordre logique (voir [Disposition en grille CSS et accessibilité](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility) pour plus de détails).
+Bien que la grille CSS permette de positionner les éléments presque partout, il est important de s'assurer que votre balisage sous-jacent suit un ordre logique (voir [Disposition en grille CSS et accessibilité](/fr/docs/Web/CSS/Guides/Grid_layout/Accessibility) pour plus de détails).
 
 ## Voir aussi
 
 - La propriété {{CSSxRef("grid-template-columns")}}
-- [Les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout)
+- [Les grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout)
 - [Les grilles CSS, plus de flexibilité avec `minmax()` <sup>(angl.)</sup>](https://css-irl.info/more-flexibility-with-minmax/) (2018)
 - [Isoler des éléments sur une grille CSS <sup>(angl.)</sup>](https://rachelandrew.co.uk/archives/2017/06/01/breaking-out-with-css-grid-explained/) (2017)

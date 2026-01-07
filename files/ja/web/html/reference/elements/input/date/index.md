@@ -176,7 +176,7 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 
 {{EmbedLiveSample('Validation', 600, 100)}}
 
-上記の例で使用されている CSS です。 {{cssxref(":valid")}} および {{cssxref(":invalid")}} [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を使用して、現在の値が妥当かどうかで入力欄の隣にアイコンを追加しています。アイコンは入力欄そのものではなく、入力欄の隣の {{htmlelement("span")}} に置くようにしないと、 Chrome ではコントロールの内側にコンテンツを生成するので、正しく整形したり表示したりすることができません。
+上記の例で使用されている CSS です。 {{cssxref(":valid")}} および {{cssxref(":invalid")}} [擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)を使用して、現在の値が妥当かどうかで入力欄の隣にアイコンを追加しています。アイコンは入力欄そのものではなく、入力欄の隣の {{htmlelement("span")}} に置くようにしないと、 Chrome ではコントロールの内側にコンテンツを生成するので、正しく整形したり表示したりすることができません。
 
 ```css
 label {

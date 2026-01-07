@@ -2,7 +2,7 @@
 title: Conteneur flexible
 slug: Glossary/Flex_Container
 l10n:
-  sourceCommit: 13839b2979cc244034ffb1fe243240778b0cd23f
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Une mise en page {{Glossary("flexbox")}} est définie en utilisant les valeurs `flex` ou `inline-flex` de la propriété `display` sur l'élément parent. Cet élément devient alors un **conteneur flexible** et chacun de ses enfants un {{Glossary("flex item", "élément flexible")}}.
@@ -21,7 +21,7 @@ Une valeur `flex` fait que l'élément devient un conteneur flexible de niveau b
 
 ## Voir aussi
 
-- [Concepts de base de Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [Alignement des éléments dans un conteneur flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [Maîtriser le retour à la ligne des éléments flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
+- [Concepts de base de Flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [Alignement des éléments dans un conteneur flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+- [Maîtriser le retour à la ligne des éléments flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items)
 - [Inspecteur Flexbox CSS&nbsp;: examiner les mises en page flexbox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_flexbox_layouts/index.html)

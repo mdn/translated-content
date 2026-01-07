@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 919d97a4bda8004f63f655d3f9576c27a82c8a2a
 ---
 
-**`text-shadow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストに影を追加します。文字列およびその装飾 ([`decoration`](/ja/docs/Web/CSS/text-decoration)) に適用される影のリストをカンマで区切ったリストで受け付けます。それぞれの影は、要素からの X および Y オフセット、影の明るさ、影の色のうちいくつかの組み合わせで記述します。
+**`text-shadow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストに影を追加します。文字列およびその装飾 ([`decoration`](/ja/docs/Web/CSS/Reference/Properties/text-decoration)) に適用される影のリストをカンマで区切ったリストで受け付けます。それぞれの影は、要素からの X および Y オフセット、影の明るさ、影の色のうちいくつかの組み合わせで記述します。
 
 {{InteractiveExample("CSS デモ: text-shadow")}}
 
@@ -87,7 +87,7 @@ text-shadow: unset;
 
 複数の影が与えられた場合は、影は手前から奥に向けて適用され、最初に指定された影が一番上になります。
 
-このプロパティは {{cssxref("::first-line")}} および {{cssxref("::first-letter")}} の両方の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)に適用されます。
+このプロパティは {{cssxref("::first-line")}} および {{cssxref("::first-letter")}} の両方の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)に適用されます。
 
 ### 値
 

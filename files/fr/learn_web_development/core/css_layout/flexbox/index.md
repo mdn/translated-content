@@ -8,7 +8,7 @@ l10n:
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Test_your_skills/Position", "Learn_web_development/Core/CSS_layout/Test_your_skills/Flexbox", "Learn_web_development/Core/CSS_layout")}}
 
-[Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) est une méthode de mise en page selon un axe principal, permettant de disposer des éléments en ligne ou en colonne. Les éléments se dilatent ou se rétractent pour occuper l'espace disponible. Cet article en explique tous les fondamentaux.
+[Flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) est une méthode de mise en page selon un axe principal, permettant de disposer des éléments en ligne ou en colonne. Les éléments se dilatent ou se rétractent pour occuper l'espace disponible. Cet article en explique tous les fondamentaux.
 
 <table>
   <tbody>
@@ -879,11 +879,11 @@ Notre visite guidée des bases de Flexbox est maintenant terminée. Espérons qu
 
 ## Voir aussi
 
-- [Concepts de base de Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [Alignement des éléments dans un conteneur flex](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [Ordre des éléments flex](/fr/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
-- [Contrôle des proportions des éléments flex le long de l'axe principal](/fr/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
-- [Module CSS flexible box layout](/fr/docs/Web/CSS/CSS_flexible_box_layout)
+- [Concepts de base de Flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [Alignement des éléments dans un conteneur flex](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+- [Ordre des éléments flex](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)
+- [Contrôle des proportions des éléments flex le long de l'axe principal](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)
+- [Module CSS flexible box layout](/fr/docs/Web/CSS/Guides/Flexible_box_layout)
 - [Guide sur Flexbox par CSS-Tricks <sup>(angl.)</sup>](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) — un article qui explique tout sur Flexbox de façon visuelle
 - [Flexbox Froggy <sup>(angl.)</sup>](https://flexboxfroggy.com/) — un jeu éducatif pour apprendre et mieux comprendre les bases de Flexbox
 

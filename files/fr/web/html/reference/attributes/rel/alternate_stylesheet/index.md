@@ -9,7 +9,7 @@ l10n:
 La paire de mots-clés **`alternate stylesheet`**, lorsqu'elle est utilisée comme valeur pour l'attribut [`rel`](/fr/docs/Web/HTML/Reference/Elements/link#rel) de l'élément {{HTMLElement("link")}}, indique que la ressource cible est une _feuille de style alternative_. Définir des **feuilles de style alternatives** dans une page web permet aux utilisateur·ice·s de voir plusieurs versions d'une page selon leurs besoins ou préférences.
 
 > [!NOTE]
-> Cette fonctionnalité n'est pas bien prise en charge dans les navigateurs sans extension. Pour proposer des présentations alternatives qui fonctionnent avec les préférences existantes de l'utilisateur·ice, voir les [fonctions média CSS](/fr/docs/Web/CSS/@media#fonctions_média) {{CSSxRef("@media/prefers-color-scheme","prefers-color-scheme")}} et {{CSSxRef("@media/prefers-contrast","prefers-contrast")}}.
+> Cette fonctionnalité n'est pas bien prise en charge dans les navigateurs sans extension. Pour proposer des présentations alternatives qui fonctionnent avec les préférences existantes de l'utilisateur·ice, voir les [fonctions média CSS](/fr/docs/Web/CSS/Reference/At-rules/@media#fonctions_média) {{CSSxRef("@media/prefers-color-scheme","prefers-color-scheme")}} et {{CSSxRef("@media/prefers-contrast","prefers-contrast")}}.
 
 Firefox permet aux utilisateur·ice·s de sélectionner des {{Glossary("stylesheet", "feuilles de style")}} alternatives via le sous-menu _Affichage &gt; Style de la page_, qui affiche les valeurs des attributs [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title). Les autres navigateurs nécessitent une extension pour activer cette fonctionnalité. La page web peut aussi fournir sa propre interface utilisateur pour permettre de changer de style.
 

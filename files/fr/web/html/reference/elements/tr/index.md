@@ -108,7 +108,7 @@ La construction de tableau peut parfois demander un peu de pratique. Au-delà de
     > - Pour réaliser le même effet qu'avec la valeur `char`. Il est possible d'utiliser la valeur de l'attribut [`char`](#attr-char) comme valeur de la propriété [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align).
 
 - **`bgcolor`** {{deprecated_inline}}
-  - : Une chaîne de caractères qui définit la couleur d'arrière-plan de toutes les cellules de la colonne. Il peut s'agit d'une [notation hexadécimale #RRGGGBB ou #RGB](</fr/docs/Web/CSS/color_value#rgb()>) ou bien d'un [mot-clé](/fr/docs/Web/CSS/color_value#color_keywords) pour une couleur. L'absence de cet attribut (ou sa déclaration à `null` en JavaScript) fera que la couleur des cellules de la ligne sera héritée de la couleur d'arrière-plan de l'élément parent.
+  - : Une chaîne de caractères qui définit la couleur d'arrière-plan de toutes les cellules de la colonne. Il peut s'agit d'une [notation hexadécimale #RRGGGBB ou #RGB](</fr/docs/Web/CSS/Reference/Values/color_value#rgb()>) ou bien d'un [mot-clé](/fr/docs/Web/CSS/Reference/Values/color_value#color_keywords) pour une couleur. L'absence de cet attribut (ou sa déclaration à `null` en JavaScript) fera que la couleur des cellules de la ligne sera héritée de la couleur d'arrière-plan de l'élément parent.
 
     > [!NOTE]
     > L'élément `<tr>` doit être mis en forme grâce au [CSS](/fr/docs/Web/CSS). Pour fournir un effet semblable à celui achevé par l'attribut `bgcolor`, il est possible d'utiliser la propriété CSS [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color).
@@ -499,7 +499,7 @@ thead > tr:nth-of-type(2) {
 }
 ```
 
-On définit la couleur d'arrière-plan de tous les éléments `<tr>` dans la ligne d'en-tête du tableau (contenue dans [`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead)). Ensuite, on définit la bordure basse pour que ce soit une ligne avec une épaisseur de deux pixels. On peut voir qu'on utilise le sélecteur [`:nth-of-type`](/fr/docs/Web/CSS/:nth-of-type) afin de cibler l'application de [`border-bottom`](/fr/docs/Web/CSS/Reference/Properties/border-bottom) sur la _deuxième_ ligne de l'en-tête. Pourquoi ? Parce que l'en-tête se compose de deux lignes où on a des cellules fusionnées. Cela signifie qu'il y a effectivement deux lignes et appliquer ces règles à la première ligne ne fournirait pas le résultat attendu.
+On définit la couleur d'arrière-plan de tous les éléments `<tr>` dans la ligne d'en-tête du tableau (contenue dans [`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead)). Ensuite, on définit la bordure basse pour que ce soit une ligne avec une épaisseur de deux pixels. On peut voir qu'on utilise le sélecteur [`:nth-of-type`](/fr/docs/Web/CSS/Reference/Selectors/:nth-of-type) afin de cibler l'application de [`border-bottom`](/fr/docs/Web/CSS/Reference/Properties/border-bottom) sur la _deuxième_ ligne de l'en-tête. Pourquoi ? Parce que l'en-tête se compose de deux lignes où on a des cellules fusionnées. Cela signifie qu'il y a effectivement deux lignes et appliquer ces règles à la première ligne ne fournirait pas le résultat attendu.
 
 ##### Les en-têtes d'inscription et de résiliation
 
@@ -659,5 +659,5 @@ Cette règle applique la propriété CSS [`text-align`](/fr/docs/Web/CSS/Referen
 - Les autres éléments HTML relatifs aux tableaux : [`<caption>`](/fr/docs/Web/HTML/Reference/Elements/caption), [`<col>`](/fr/docs/Web/HTML/Reference/Elements/col), [`<colgroup>`](/fr/docs/Web/HTML/Reference/Elements/colgroup), [`<table>`](/fr/docs/Web/HTML/Reference/Elements/table), [`<tbody>`](/fr/docs/Web/HTML/Reference/Elements/tbody), [`<td>`](/fr/docs/Web/HTML/Reference/Elements/td), [`<tfoot>`](/fr/docs/Web/HTML/Reference/Elements/tfoot), [`<th>`](/fr/docs/Web/HTML/Reference/Elements/th), [`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead).
 - [`HTMLTableRowElement`](/fr/docs/Web/API/HTMLTableRowElement) : l'interface DOM sur laquelle `<tr>` est basé.
 - Les propriétés et pseudo-classes CSS qui sont particulièrement utiles pour mettre en forme l'élément `<tr>` :
-  - La pseudo-classe [`:nth-child`](/fr/docs/Web/CSS/:nth-child) qui permet de définir l'alignement des cellules dans la colonne ou sur une ligne
+  - La pseudo-classe [`:nth-child`](/fr/docs/Web/CSS/Reference/Selectors/:nth-child) qui permet de définir l'alignement des cellules dans la colonne ou sur une ligne
   - La propriété [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align) qui permet d'aligner l'ensemble des cellules par rapport au même caractère (comme le point ou la virgule).

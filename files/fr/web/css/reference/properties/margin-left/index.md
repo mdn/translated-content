@@ -8,7 +8,7 @@ l10n:
 
 {{CSSRef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`margin-left`** d'un élément définit l'espace horizontal à gauche qui formera [la zone de marge](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#zone_de_marge) à gauche de l'élément. On peut avoir une marge gauche négative qui rapproche l'élément de ses voisins ou une marge positive qui l'en écarte.
+La propriété [CSS](/fr/docs/Web/CSS) **`margin-left`** d'un élément définit l'espace horizontal à gauche qui formera [la zone de marge](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_marge) à gauche de l'élément. On peut avoir une marge gauche négative qui rapproche l'élément de ses voisins ou une marge positive qui l'en écarte.
 
 {{InteractiveExample("CSS Demo: margin-left")}}
 
@@ -60,7 +60,7 @@ margin-left: 0;
 }
 ```
 
-Les marges verticales de deux boîtes adjacentes peuvent fusionner entre elles. C'est ce qu'on appelle [_la fusion de marges_](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
+Les marges verticales de deux boîtes adjacentes peuvent fusionner entre elles. C'est ce qu'on appelle [_la fusion de marges_](/fr/docs/Web/CSS/Guides/Box_model/Margin_collapsing).
 
 Dans certains cas où la largeur est sur-contrainte (autrement dit quand `width`, `margin-left`, `border`, `padding`, la taille de la zone de contenu et `margin-right` sont toutes définies), `margin-left` est ignorée. La valeur calculée sera la même que si `auto` avait été utilisée.
 
@@ -89,10 +89,10 @@ La valeur de cette propriété peut être le mot-clé `auto`, une longueur (`<le
 
 ### Valeurs
 
-- [`<length>`](/fr/docs/Web/CSS/length)
+- [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)
   - : La taille de la marge, exprimée comme une valeur fixe.
-- [`<percentage>`](/fr/docs/Web/CSS/percentage)
-  - : La taille de la marge exprimée avec un pourcentage relatif à la dimension du [bloc englobant](/fr/docs/Web/CSS/CSS_display/Containing_block) sur l'axe en ligne (qui correspond à la largeur pour une langue écrite horizontalement, voir [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode)).
+- [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)
+  - : La taille de la marge exprimée avec un pourcentage relatif à la dimension du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block) sur l'axe en ligne (qui correspond à la largeur pour une langue écrite horizontalement, voir [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode)).
 - `auto`
   - : Un mot-clé qui indique que la marge gauche s'adapte à l'espace restant. Cet espace est principalement défini par le mode de disposition utilisé. Si `margin-left` et `margin-right` valent toutes les deux `auto`, m'espace calculé sera réparti de façon équitable. Le tableau suivant précise les différents cas&nbsp;:
 

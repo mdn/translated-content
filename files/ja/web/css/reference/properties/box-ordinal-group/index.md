@@ -7,7 +7,7 @@ original_slug: Web/CSS/box-ordinal-group
 {{Non-standard_Header}}
 
 > [!WARNING]
-> これはオリジナルの CSS フレックスボックスレイアウトモジュールの草稿のプロパティで、より新しい標準に置き換えられました。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)を参照してください。
+> これはオリジナルの CSS フレックスボックスレイアウトモジュールの草稿のプロパティで、より新しい標準に置き換えられました。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)を参照してください。
 
 **`box-ordinal-group`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスボックスの子要素を順序付きグループに割り当てます。
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-`scroll-padding-block` は[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、要素のブロック軸のスクロールパディングを設定します。
+`scroll-padding-block` は[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、要素のブロック軸のスクロールパディングを設定します。
 
 {{InteractiveExample("CSS デモ: scroll-padding-block")}}
 
@@ -76,8 +76,8 @@ scroll-padding 系のプロパティは、スクロールポートの*最適表�
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`scroll-padding-block-end`](/ja/docs/Web/CSS/scroll-padding-block-end)
-- [`scroll-padding-block-start`](/ja/docs/Web/CSS/scroll-padding-block-start)
+- [`scroll-padding-block-end`](/ja/docs/Web/CSS/Reference/Properties/scroll-padding-block-end)
+- [`scroll-padding-block-start`](/ja/docs/Web/CSS/Reference/Properties/scroll-padding-block-start)
 
 ## 構文
 
@@ -123,5 +123,5 @@ scroll-padding-block: unset;
 
 ## 関連情報
 
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)
 - [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

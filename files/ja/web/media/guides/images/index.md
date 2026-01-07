@@ -22,9 +22,9 @@ original_slug: Web/Media/images
 ### CSS
 
 - {{cssxref("object-fit")}}
-  - : **`object-fit`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)、例えば [`<img>`](/ja/docs/Web/HTML/Reference/Elements/img) や [`<video>`](/ja/docs/Web/HTML/Reference/Elements/video) の中身をコンテナーに合わせるために、どのようにリサイズする可を設定します。
+  - : **`object-fit`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[置換要素](/ja/docs/Web/CSS/Guides/Images/Replaced_element_properties)、例えば [`<img>`](/ja/docs/Web/HTML/Reference/Elements/img) や [`<video>`](/ja/docs/Web/HTML/Reference/Elements/video) の中身をコンテナーに合わせるために、どのようにリサイズする可を設定します。
 - {{cssxref("object-position")}}
-  - : **`object-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のボックス内で選択された[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)内のコンテンツの配置を指定します。ボックス内の領域のうちで置換要素のオブジェクトに覆われていない部分には、要素の背景が表示されます。
+  - : **`object-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のボックス内で選択された[置換要素](/ja/docs/Web/CSS/Guides/Images/Replaced_element_properties)内のコンテンツの配置を指定します。ボックス内の領域のうちで置換要素のオブジェクトに覆われていない部分には、要素の背景が表示されます。
 - {{cssxref("background-image")}}
   - : **`background-image`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 1 つまたは複数の要素の背景画像を設定します。
 

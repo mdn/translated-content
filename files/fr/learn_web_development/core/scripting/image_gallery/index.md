@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Image_gallery
 original_slug: Learn/JavaScript/Building_blocks/Image_gallery
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Scripting/Events", "Learn/JavaScript/Building_blocks")}}
 
 Maintenant que nous avons examiné les blocs fondamentaux de construction de JavaScript, nous allons tester vos connaissances sur les boucles, les fonctions, les conditions et les événements en vous aidant à créer un élément assez commun que vous verrez sur de nombreux sites web. Une galerie JavaScript animée.
 
@@ -123,4 +123,4 @@ Si vous souhaitez que votre travail soit évalué, ou si vous êtes bloqué et q
 
 Si vous suivez cette évaluation dans le cadre d'un cours organisé, vous devriez pouvoir donner votre travail à votre professeur ou mentor pour la notation. Si vous apprenez en autodidacte, vous pouvez obtenir le guide de notation simplement en le demandant [sur le fil de discussion de cet exercice](https://discourse.mozilla.org/t/image-gallery-assessment/24687), ou sur [#mdn](irc://irc.mozilla.org/mdn) du canal IRC de [Mozilla IRC](https://wiki.mozilla.org/IRC). Faites d'abord l'exercice, vous ne gagnerez rien à tricher!
 
-{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenu("Learn_web_development/Core/Scripting/Events", "Learn/JavaScript/Building_blocks")}}

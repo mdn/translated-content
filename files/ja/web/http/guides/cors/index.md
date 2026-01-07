@@ -9,7 +9,7 @@ l10n:
 
 オリジン間リクエストとは、例えば `https://domain-a.com` で提供されているウェブアプリケーションのフロントエンド JavaScript コードが {{domxref("Window/fetch", "fetch()")}} を使用して `https://domain-b.com/data.json` へリクエストを行うようなものです。
 
-セキュリティ上の理由から、ブラウザーは、スクリプトによって開始されるオリジン間 HTTP リクエストを制限しています。例えば、 `fetch()` や {{domxref("XMLHttpRequest")}} は[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy) (same-origin policy) に従います。つまり、これらの API を使用するウェブアプリケーションは、そのアプリケーションが読み込まれたのと同じオリジンに対してのみリソースのリクエストを行うことができ、それ以外のオリジンからの場合は正しい CORS ヘッダーを含んでいることが必要です。
+セキュリティ上の理由から、ブラウザーは、スクリプトによって開始されるオリジン間 HTTP リクエストを制限しています。例えば、 `fetch()` や {{domxref("XMLHttpRequest")}} は[同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy) (same-origin policy) に従います。つまり、これらの API を使用するウェブアプリケーションは、そのアプリケーションが読み込まれたのと同じオリジンに対してのみリソースのリクエストを行うことができ、それ以外のオリジンからの場合は正しい CORS ヘッダーを含んでいることが必要です。
 
 ![CORS の仕組みの図式化](fetching-page-cors.svg)
 
@@ -23,7 +23,7 @@ CORS の仕組みは、安全なオリジン間のリクエストとブラウザ
 - ウェブフォント（CSS の `@font-face` で別ドメインのフォントを利用するため）。[これによりサーバーは、許可したウェブサイトのみからオリジンをまたがって読み込んで利用できる TrueType フォントを提供することができます。](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
 - [WebGL テクスチャ](/ja/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)。
 - {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}} を使用してキャンバスへ描かれた画像や映像のフレーム
-- [画像から生成する CSS シェイプ](/ja/docs/Web/CSS/CSS_shapes/Shapes_from_images)。
+- [画像から生成する CSS シェイプ](/ja/docs/Web/CSS/Guides/Shapes/From_images)。
 
 この記事では、 HTTP ヘッダーの要件を含むオリジン間リソース共有の全般的な説明を行います。
 

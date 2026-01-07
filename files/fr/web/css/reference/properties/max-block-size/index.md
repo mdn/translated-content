@@ -85,9 +85,9 @@ max-block-size: unset;
 
 La propriété `max-block-size` peut prendre les mêmes valeurs que les propriétés [`max-width`](/fr/docs/Web/CSS/Reference/Properties/max-width) ou [`max-height`](/fr/docs/Web/CSS/Reference/Properties/max-height).
 
-- [`<length>`](/fr/docs/Web/CSS/length)
+- [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)
   - : Définit la valeur de `max-block-size` avec une longueur absolue.
-- [`<percentage>`](/fr/docs/Web/CSS/percentage)
+- [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)
   - : Définit la valeur `max-block-size` comme un pourcentage de la taille du bloc englobant sur l'axe de bloc.
 - `none`
   - : Aucune limite n'est imposée à la taille de la boîte.
@@ -95,7 +95,7 @@ La propriété `max-block-size` peut prendre les mêmes valeurs que les proprié
   - : La valeur intrinsèque préférée de `max-block-size`.
 - `min-content`
   - : La valeur intrinsèque minimale de `max-block-size`.
-- `fit-content(`[`<length-percentage>`](/fr/docs/Web/CSS/length-percentage)`)`
+- `fit-content(`[`<length-percentage>`](/fr/docs/Web/CSS/Reference/Values/length-percentage)`)`
   - : Utilise la formule `fit-content` où l'espace disponible est remplacé par l'argument (correspond à `min(max-content, max(min-content, argument))`).
 
 ### Relation avec les propriétés physiques

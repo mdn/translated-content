@@ -224,4 +224,4 @@ table td {
 
 - {{cssxref("border-spacing")}}, {{cssxref("border-style")}}
 - `border-collapse` プロパティは HTML の {{htmlelement("table")}} 要素の表示方法を変更します。
-- [CSS 表](/ja/docs/Web/CSS/CSS_table)モジュール
+- [CSS 表](/ja/docs/Web/CSS/Guides/Table)モジュール

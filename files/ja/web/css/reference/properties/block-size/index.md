@@ -1,9 +1,8 @@
 ---
 title: block-size
 slug: Web/CSS/Reference/Properties/block-size
-original_slug: Web/CSS/block-size
 l10n:
-  sourceCommit: 883491d47f6b764563aa825d9d56f83fb80c6fb9
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`block-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、書字方向に応じた要素ブロックの水平または垂直方向の寸法を定義します。これは {{cssxref("width")}} または {{cssxref("height")}} プロパティに相当し、 {{cssxref("writing-mode")}} の値によって変わります。書字方向が垂直方向であった場合、 `block-size` の値は要素の幅に対応し、水平方向であった場合は要素の高さに対応します。関連プロパティの {{cssxref("inline-size")}} が要素のもう一方の寸法を定義します。
@@ -44,7 +43,7 @@ writing-mode: vertical-lr;
   flex-direction: column;
   background-color: #5b6dcd;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
@@ -55,7 +54,7 @@ writing-mode: vertical-lr;
 block-size: 300px;
 block-size: 25em;
 block-size: anchor-size(height);
-block-size: calc(anchor-size(--myAnchor block) * 0.75);
+block-size: calc(anchor-size(--my-anchor block) * 0.75);
 
 /* <percentage> 値 */
 block-size: 75%;

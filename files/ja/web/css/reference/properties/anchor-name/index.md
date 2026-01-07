@@ -42,15 +42,15 @@ anchor-name: unset;
 
 複数のアンカー要素に同じアンカー名が設定されており、その名前が位置指定要素の `position-anchor` プロパティ値によって参照されている場合、その位置指定要素はソース順における当該アンカー名の最後のアンカー要素に関連付けられます。
 
-アンカー位置指定は、アンカー位置指定された要素の[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)を変更し、その `position` プロパティを最も近い位置指定された祖先要素ではなく、アンカー要素を基準とするようにします。
+アンカー位置指定は、アンカー位置指定された要素の[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)を変更し、その `position` プロパティを最も近い位置指定された祖先要素ではなく、アンカー要素を基準とするようにします。
 
 アンカー要素に対する相対位置で位置指定された要素を特定の場所に固定するには、アンカー位置指定機能が必要です。例えば、{{glossary("inset properties", "インセットプロパティの")}}値内で設定される {{cssxref("anchor()")}} 関数や {{cssxref("position-area")}} プロパティなどが該当します。
 
-アンカー要素が非表示の場合（{{cssxref("display", "display: none")}} や {{cssxref("visibility", "visibility: hidden")}} による）や、アンカー要素が別の要素の {{cssxref("content-visibility", "content-visibility: hidden")}} 設定により[スキップされたコンテンツ](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment#コンテンツのスキップ)の一部となっている場合、位置指定された要素をアンカー要素に関連付けられたりすることはできません。
+アンカー要素が非表示の場合（{{cssxref("display", "display: none")}} や {{cssxref("visibility", "visibility: hidden")}} による）や、アンカー要素が別の要素の {{cssxref("content-visibility", "content-visibility: hidden")}} 設定により[スキップされたコンテンツ](/ja/docs/Web/CSS/Guides/Containment/Using#コンテンツのスキップ)の一部となっている場合、位置指定された要素をアンカー要素に関連付けられたりすることはできません。
 
-`anchor-name` プロパティは、 主ボックスを生成するすべての要素で使用することができます。これは、[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)（{{cssxref("::before")}} や {{cssxref("::after")}} を使用して生成されたコンテンツを含む）や、[`range` 入力](/ja/docs/Web/HTML/Reference/Elements/input/range)のつまみ ({{cssxref("::-webkit-slider-thumb")}}) などの UI 機能もアンカー要素になり得るということです。擬似要素は、特に指定がない限り、擬似要素の親要素と同じ要素に暗黙的にアンカーされます。
+`anchor-name` プロパティは、 主ボックスを生成するすべての要素で使用することができます。これは、[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)（{{cssxref("::before")}} や {{cssxref("::after")}} を使用して生成されたコンテンツを含む）や、[`range` 入力](/ja/docs/Web/HTML/Reference/Elements/input/range)のつまみ ({{cssxref("::-webkit-slider-thumb")}}) などの UI 機能もアンカー要素になり得るということです。擬似要素は、特に指定がない限り、擬似要素の親要素と同じ要素に暗黙的にアンカーされます。
 
-アンカー機能と使い方についての詳しい情報は、 [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)モジュールのランディングページと [CSS アンカー位置指定の使用](/ja/docs/Web/CSS/CSS_anchor_positioning/Using)ガイドを参照してください。
+アンカー機能と使い方についての詳しい情報は、 [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)モジュールのランディングページと [CSS アンカー位置指定の使用](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using)ガイドを参照してください。
 
 ## 公式定義
 
@@ -383,5 +383,5 @@ body {
 
 - {{cssxref("position-anchor")}}
 - HTML [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性
-- [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)モジュール
-- [CSS アンカー位置指定の使用](/ja/docs/Web/CSS/CSS_anchor_positioning/Using)ガイド
+- [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)モジュール
+- [CSS アンカー位置指定の使用](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using)ガイド

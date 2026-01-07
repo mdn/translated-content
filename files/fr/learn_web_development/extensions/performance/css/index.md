@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Performance/CSS
 original_slug: Learn/Performance/CSS
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/fonts", "Learn/Performance")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/HTML", "Learn/Performance/fonts", "Learn_web_development/Extensions/Performance")}}
 
 Peindre une page non stylisée, puis la repeindre une fois les styles analysés constituerait une mauvaise expérience pour l'utilisateur. C'est pourquoi les feuilles de style CSS bloquent le rendu, sauf si le navigateur sait que les feuilles de style CSS ne sont pas nécessaires. Le navigateur peut peindre la page une fois qu'il a téléchargé le CSS et construit le modèle objet CSS. Les navigateurs suivent un chemin de rendu spécifique : la peinture n'intervient qu'après la mise en page, qui intervient après la création de l'arbre de rendu, qui nécessite à son tour les arbres DOM et CSSOM. Pour optimiser la construction du CSSOM, il faut supprimer les styles inutiles, les minifier, les compresser et les mettre en cache, et répartir les CSS qui ne sont pas nécessaires au chargement de la page dans des fichiers supplémentaires afin de réduire le blocage du rendu CSS.
 
@@ -24,11 +24,11 @@ Les CSS peuvent adapter les styles à des conditions particulières grâce aux r
 <!-- non bloquant sur grand écran -->
 ```
 
-Par défaut, le navigateur suppose que chaque feuille de style spécifiée bloque le rendu. Indiquez au navigateur quand la feuille de style doit être appliquée en ajoutant un attribut `media` avec la [requête média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries). Lorsque le navigateur voit une feuille de style, il sait qu'il n'a besoin de l'appliquer que pour un scénario spécifique, il télécharge quand même la feuille de style, mais ne rend pas le bloc. En séparant la feuille de style en plusieurs fichiers, le fichier principal bloquant le rendu, dans ce cas `styles.css`, est beaucoup plus petit, ce qui réduit le temps de blocage du rendu.
+Par défaut, le navigateur suppose que chaque feuille de style spécifiée bloque le rendu. Indiquez au navigateur quand la feuille de style doit être appliquée en ajoutant un attribut `media` avec la [requête média](/fr/docs/Web/CSS/Guides/Media_queries/Using). Lorsque le navigateur voit une feuille de style, il sait qu'il n'a besoin de l'appliquer que pour un scénario spécifique, il télécharge quand même la feuille de style, mais ne rend pas le bloc. En séparant la feuille de style en plusieurs fichiers, le fichier principal bloquant le rendu, dans ce cas `styles.css`, est beaucoup plus petit, ce qui réduit le temps de blocage du rendu.
 
 ### Les animations sur le GPU
 
-Les navigateurs sont déjà optimisés pour manipuler les animations CSS, ainsi que les propriétés d'animation qui ne provoquent pas de réorganisation soudaine du document (ces autres propriétés nécessiteront alors un nouveau rendu). Cette optimisation s'effectue en plaçant les éléments animés sur un autre fil d'exécution que l'on peut alors envoyer sur le GPU, bien plus rapide pour ce genre de tâche. Pour profiter de cette optimisation, il faut alors animer de préférence avec les propriétés de transformation 3D ([`transform: translateZ()`](/fr/docs/Web/CSS/Reference/Properties/transform), [`rotate3d()`](/fr/docs/Web/CSS/transform-function/rotate3d), etc.), de transformation 2D ainsi que les propriétés [`opacity`](/fr/docs/Web/CSS/Reference/Properties/opacity), [`position: fixed`](/fr/docs/Web/CSS/Reference/Properties/position), [`will-change`](/fr/docs/Web/CSS/Reference/Properties/will-change) et [`filter`](/fr/docs/Web/CSS/Reference/Properties/filter). D'autres éléments, parmi lesquels [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video), [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) ou encore [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe), fonctionnent aussi sur leur propre fil d'exécution. Cette technique permet donc de tirer profit de la vitesse d'exécution du GPU pour chaque élément géré sur un nouveau fil d'exécution, et permet d'obtenir de bien meilleures performances, en particulier sur mobile.
+Les navigateurs sont déjà optimisés pour manipuler les animations CSS, ainsi que les propriétés d'animation qui ne provoquent pas de réorganisation soudaine du document (ces autres propriétés nécessiteront alors un nouveau rendu). Cette optimisation s'effectue en plaçant les éléments animés sur un autre fil d'exécution que l'on peut alors envoyer sur le GPU, bien plus rapide pour ce genre de tâche. Pour profiter de cette optimisation, il faut alors animer de préférence avec les propriétés de transformation 3D ([`transform: translateZ()`](/fr/docs/Web/CSS/Reference/Properties/transform), [`rotate3d()`](/fr/docs/Web/CSS/Reference/Values/transform-function/rotate3d), etc.), de transformation 2D ainsi que les propriétés [`opacity`](/fr/docs/Web/CSS/Reference/Properties/opacity), [`position: fixed`](/fr/docs/Web/CSS/Reference/Properties/position), [`will-change`](/fr/docs/Web/CSS/Reference/Properties/will-change) et [`filter`](/fr/docs/Web/CSS/Reference/Properties/filter). D'autres éléments, parmi lesquels [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video), [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) ou encore [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe), fonctionnent aussi sur leur propre fil d'exécution. Cette technique permet donc de tirer profit de la vitesse d'exécution du GPU pour chaque élément géré sur un nouveau fil d'exécution, et permet d'obtenir de bien meilleures performances, en particulier sur mobile.
 
 ### La propriété `will-change`
 
@@ -40,7 +40,7 @@ will-change: opacity, transform;
 
 ### La propriété `font-display`
 
-Insérée dans une règle [`@font-face`](/fr/docs/Web/CSS/@font-face), la propriété CSS [`font-display`](/fr/docs/Web/CSS/@font-face/font-display) permet de définir la logique de chargement et d'affichage des polices par le navigateur. Elle permet par exemple d'afficher le texte avec une police par défaut le temps que l'autre charge ou lorsque le chargement échoue. Cela permet de rendre le texte visible sans l'attente du chargement des polices, mais a pour défaut un flash brusque de changement de police une fois la ressource chargée.
+Insérée dans une règle [`@font-face`](/fr/docs/Web/CSS/Reference/At-rules/@font-face), la propriété CSS [`font-display`](/fr/docs/Web/CSS/Reference/At-rules/@font-face/font-display) permet de définir la logique de chargement et d'affichage des polices par le navigateur. Elle permet par exemple d'afficher le texte avec une police par défaut le temps que l'autre charge ou lorsque le chargement échoue. Cela permet de rendre le texte visible sans l'attente du chargement des polices, mais a pour défaut un flash brusque de changement de police une fois la ressource chargée.
 
 ```css
 @font-face {
@@ -67,7 +67,7 @@ Optimiser les performances en CSS revient ainsi à améliorer deux étapes cruci
 
 Enfin, les outils de développement du navigateur sont à votre disposition pour vous aider à cibler les étapes chronophages qui ralentissent le rendu de vos pages et gagner encore en efficacité, au prix parfois de quelques compromis.
 
-{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/fonts", "Learn/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/HTML", "Learn/Performance/fonts", "Learn_web_development/Extensions/Performance")}}
 
 ## Voir aussi
 

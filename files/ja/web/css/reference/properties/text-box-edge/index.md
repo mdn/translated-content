@@ -124,7 +124,7 @@ p {
 
 ### 対話的な `text-box-edge` 値の比較
 
-完全な対話型の `text-box-edge` の例については、[text-box-trim ページ](/ja/docs/Web/CSS/text-box-trim#interactive_text-box-trim_and_text-box-edge_value_comparison)をご覧ください。
+完全な対話型の `text-box-edge` の例については、[text-box-trim ページ](/ja/docs/Web/CSS/Reference/Properties/text-box-trim#interactive_text-box-trim_and_text-box-edge_value_comparison)をご覧ください。
 
 ## 仕様書
 
@@ -138,5 +138,5 @@ p {
 
 - {{cssxref("text-box")}}, {{cssxref("text-box-trim")}}
 - {{cssxref("&lt;text-edge&gt;")}} データ型
-- [CSS インラインレイアウト](/ja/docs/Web/CSS/CSS_inline_layout)モジュール
+- [CSS インラインレイアウト](/ja/docs/Web/CSS/Guides/Inline_layout)モジュール
 - [CSS text-box-edge](https://developer.chrome.com/blog/css-text-box-trim) (developer.chrome.com, 2025)

@@ -6,7 +6,7 @@ l10n:
 ---
 
 {{DefaultAPISidebar("CSS Painting API")}}
-[CSS 描画 API](/ja/docs/Web/API/CSS_Painting_API) を用いると、開発者がプログラムで CSS 画像が呼び出されるところならばどこでも利用できる画像を定義できます。例えば CSS の [`background-image`](/ja/docs/Web/CSS/background-image)、[`border-image`](/ja/docs/Web/CSS/border-image-source), [`mask-image`](/ja/docs/Web/CSS/mask-image) などです。
+[CSS 描画 API](/ja/docs/Web/API/CSS_Painting_API) を用いると、開発者がプログラムで CSS 画像が呼び出されるところならばどこでも利用できる画像を定義できます。例えば CSS の [`background-image`](/ja/docs/Web/CSS/Reference/Properties/background-image)、[`border-image`](/ja/docs/Web/CSS/Reference/Properties/border-image-source), [`mask-image`](/ja/docs/Web/CSS/Reference/Properties/mask-image) などです。
 
 CSS スタイルシートで使用される画像をプログラムで生成するには、いくつかのステップを踏む必要があります。
 
@@ -58,7 +58,7 @@ registerPaint(
 
 黄色の影をつくるために [`fillStyle`](/ja/docs/Web/API/CanvasRenderingContext2D/fillStyle) を `hsl(55 90% 60% / 100%)` と定義し、その色の矩形を作成するために `fillRect()` を呼び出します。[`fillRect()`](/ja/docs/Web/API/CanvasRenderingContext2D/fillRect) の引数は、順に x 軸原点、y 軸原点、幅、高さです。`fillRect(0, 15, 200, 20)` は、幅 200 単位、高さ 20 単位の矩形を、コンテンツボックスの左端から 0 単位、上端から 15 単位に作成します。
 
-CSS の [`background-size`](/ja/docs/Web/CSS/background-size) と [`background-position`](/ja/docs/Web/CSS/background-position) プロパティを使用して、この背景画像のサイズを変更したり、再配置したりすることができますが、これは描画ワークレットで作成した黄色のボックスの既定のサイズと配置です。
+CSS の [`background-size`](/ja/docs/Web/CSS/Reference/Properties/background-size) と [`background-position`](/ja/docs/Web/CSS/Reference/Properties/background-position) プロパティを使用して、この背景画像のサイズを変更したり、再配置したりすることができますが、これは描画ワークレットで作成した黄色のボックスの既定のサイズと配置です。
 
 この例はシンプルなものにしてみました。より多くのオプションについては、[キャンバスのドキュメント](/ja/docs/Web/HTML/Reference/Elements/canvas)を参照してください。また、このチュートリアルの後半では、少し複雑さを追加しています。
 
@@ -208,7 +208,7 @@ registerPaint(
 );
 ```
 
-`paint()` 関数の 3 つの引数には、描画コンテキスト、描画サイズ、プロパティが含まれます。プロパティにアクセスできるようにするために、静的な `inputProperties()` メソッドを含めています。これは、通常のプロパティや[カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables)を含む CSS プロパティへの動的なアクセスを提供し、プロパティ名の{{jsxref("Array", "配列")}}を返します。最後に`inputArguments` について見ていきます。
+`paint()` 関数の 3 つの引数には、描画コンテキスト、描画サイズ、プロパティが含まれます。プロパティにアクセスできるようにするために、静的な `inputProperties()` メソッドを含めています。これは、通常のプロパティや[カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables)を含む CSS プロパティへの動的なアクセスを提供し、プロパティ名の{{jsxref("Array", "配列")}}を返します。最後に`inputArguments` について見ていきます。
 
 3 種類の色と 3 種類の幅の間で周回する背景画像を使って、項目一覧を作成してみましょう。
 
@@ -389,7 +389,7 @@ registerPaint(
 <h6 class="fancy">Smallest Header</h6>
 ```
 
-それぞれのヘッダーは、それぞれ異なった値の `--highColor` [カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables)を持つことができます。
+それぞれのヘッダーは、それぞれ異なった値の `--highColor` [カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables)を持つことができます。
 
 ```css
 .fancy {
@@ -416,7 +416,7 @@ CSS.paintWorklet.addModule("header-highlight.js");
 
 {{EmbedGHLiveSample("dom-examples/css-painting/fancy-header-highlight/", 200, 200)}}
 
-このワークレットそのものを編集することはできませんが、CSS や HTML をいじることはできます。ヘッダーの [`float`](/ja/docs/Web/CSS/float) と [`clear`](/ja/docs/Web/CSS/clear) を試してみるのはどうでしょう？
+このワークレットそのものを編集することはできませんが、CSS や HTML をいじることはできます。ヘッダーの [`float`](/ja/docs/Web/CSS/Reference/Properties/float) と [`clear`](/ja/docs/Web/CSS/Reference/Properties/clear) を試してみるのはどうでしょう？
 
 上記の背景画像を CSS 描画 API を使わずに作ってみるのもいいかもしれません。これは可能ですが、作成したい色ごとに異なる、かなり複雑な線形グラデーションを宣言しなければなりません。CSS 描画 API を使えば、1 つのワークレットを再利用することができ、その場合でも異なる色を渡すことができます。
 

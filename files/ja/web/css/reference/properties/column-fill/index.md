@@ -1,9 +1,8 @@
 ---
 title: column-fill
 slug: Web/CSS/Reference/Properties/column-fill
-original_slug: Web/CSS/column-fill
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`column-fill`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで要素のコンテンツが複数の段に分割されるとき、どのようにバランスを取るのかを制御します。
@@ -21,7 +20,7 @@ column-fill: balance;
 ```html-nolint interactive-example
 <section id="default-example">
   <p id="example-element">
-    ロンドン。ミカエルマス学期が終わり、リンカーンズ・イン・ホールで大法官が座っています。容赦のない11月の天候です。
+    ロンドン。ミカエルマス学期が終わり、リンカーンズ・イン・ホールで大法官が座っています。容赦のない 11 月の天候です。
   </p>
 </section>
 ```
@@ -57,9 +56,9 @@ column-fill: unset;
 - `auto`
   - : 段は順に埋められます。コンテンツは必要な余地があるときだけ分割されるので、一部の段は空になることがあります。
 - `balance`
-  - : コンテンツは各段に均等に分割されます。[ページメディア](/ja/docs/Web/CSS/CSS_paged_media)などの断片化されたコンテキストでは、最後の断片のみが均等に分割されます。従ってページ付きメディアでは、最後のページのみが均等に分割されます。
+  - : コンテンツは各段に均等に分割されます。[ページメディア](/ja/docs/Web/CSS/Guides/Paged_media)などの断片化されたコンテキストでは、最後の断片のみが均等に分割されます。従ってページ付きメディアでは、最後のページのみが均等に分割されます。
 
-仕様書では `balance-all` の値を定義しており、この値では[ページメディア](/ja/docs/Web/CSS/CSS_paged_media)などの断片化されたコンテキストにおいて、段の間で均等に分割します。この値は、まだどのブラウザーでも対応していません。
+仕様書では `balance-all` の値を定義しており、この値では[ページメディア](/ja/docs/Web/CSS/Guides/Paged_media)などの断片化されたコンテキストにおいて、段の間で均等に分割します。この値は、まだどのブラウザーでも対応していません。
 
 ## 公式定義
 
@@ -90,7 +89,7 @@ column-fill: unset;
 ```css live-sample___balancing_column_content
 p {
   height: 7em;
-  background: #ff9;
+  background: #ffff99;
   columns: 3;
   column-rule: 1px solid;
 }

@@ -45,7 +45,7 @@ Content-Security-Policy: style-src-attr <source>;
 
 `<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
 
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
+On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associées)).
 
 ## Spécifications
 
@@ -62,7 +62,7 @@ On notera que cet ensemble de valeurs peut être utilisé pour toutes les [direc
 - [`style-src-elem`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-elem)
 - L'en-tête [`Link`](/fr/docs/Web/HTTP/Reference/Headers/Link)
 - [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style), [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link)
-- [`@import`](/fr/docs/Web/CSS/@import)
+- [`@import`](/fr/docs/Web/CSS/Reference/At-rules/@import)
 - [`CSSStyleSheet.insertRule()`](/fr/docs/Web/API/CSSStyleSheet/insertRule)
 - [`CSSGroupingRule.insertRule()`](/fr/docs/Web/API/CSSGroupingRule/insertRule)
 - [`CSSStyleDeclaration.cssText`](/fr/docs/Web/API/CSSStyleDeclaration/cssText)

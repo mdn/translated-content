@@ -82,9 +82,9 @@ CSS コンテナーには、サイズ、レイアウト、スタイル、描画�
 > [!NOTE]
 > (`paint`, `strict`, `content` のいずれかの値で) 適用された場合、このプロパティは以下のものを生成します。
 >
-> 1. 新しい[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block) ({{cssxref("position")}} プロパティが `absolute` または `fixed` である子孫を対象とする)。
-> 2. 新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)。
-> 3. 新しい[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)。
+> 1. 新しい[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block) ({{cssxref("position")}} プロパティが `absolute` または `fixed` である子孫を対象とする)。
+> 2. 新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)。
+> 3. 新しい[ブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context)。
 
 ## 構文
 
@@ -249,7 +249,7 @@ div {
 
 ### スタイル拘束
 
-スタイルの拘束は[カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)と[引用符](/ja/docs/Web/CSS/quotes)を拘束される要素にスコープします。
+スタイルの拘束は[カウンター](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters)と[引用符](/ja/docs/Web/CSS/Reference/Properties/quotes)を拘束される要素にスコープします。
 CSS カウンターの場合、{{cssxref("counter-increment")}} と {{cssxref("counter-set")}} プロパティは、要素が文書のルートにあるかのように要素にスコープされます。
 
 #### 拘束とカウンター
@@ -288,7 +288,7 @@ li::before {
 
 #### 拘束と引用符
 
-CSS の引用符も同様に、[`content`](/ja/docs/Web/CSS/content) の引用符関連の値が要素にスコープされます。
+CSS の引用符も同様に、[`content`](/ja/docs/Web/CSS/Reference/Properties/content) の引用符関連の値が要素にスコープされます。
 
 ```html
 <!-- スタイル拘束付き -->
@@ -337,7 +337,7 @@ body {
 
 ## 関連情報
 
-- [CSS コンテナー](/ja/docs/Web/CSS/CSS_containment)
-- [CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
+- [CSS コンテナー](/ja/docs/Web/CSS/Guides/Containment)
+- [CSS コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)
 - CSS の {{cssxref("content-visibility")}} プロパティ
 - CSS の {{cssxref("position")}} プロパティ

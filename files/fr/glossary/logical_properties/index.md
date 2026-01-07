@@ -23,4 +23,4 @@ L'**axe en ligne** est perpendiculaire à l'axe bloc. L'axe en ligne représente
 
 ## Voir aussi
 
-- Le module [des propriétés et valeurs logiques CSS](/fr/docs/Web/CSS/CSS_logical_properties_and_values)
+- Le module [des propriétés et valeurs logiques CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values)

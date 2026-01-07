@@ -6,7 +6,7 @@ l10n:
   sourceCommit: cd3fbb8b10186d3466ab16d590978d5c10882875
 ---
 
-**`color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のテキストや[テキスト装飾](/ja/docs/Web/CSS/text-decoration)における前景色の[色の値](/ja/docs/Web/CSS/color_value)を設定し、 [`currentColor`](/ja/docs/Web/CSS/color_value#currentcolor_キーワード) の値を設定します。`currentColor` は他のプロパティの間接的な値として使用される可能性があり、 {{cssxref("border-color")}} のような他の色に関するプロパティの既定値にもなったりします。
+**`color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のテキストや[テキスト装飾](/ja/docs/Web/CSS/Reference/Properties/text-decoration)における前景色の[色の値](/ja/docs/Web/CSS/Reference/Values/color_value)を設定し、 [`currentColor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード) の値を設定します。`currentColor` は他のプロパティの間接的な値として使用される可能性があり、 {{cssxref("border-color")}} のような他の色に関するプロパティの既定値にもなったりします。
 
 {{InteractiveExample("CSS デモ: color")}}
 
@@ -56,7 +56,7 @@ color: hwb(152deg 0% 58% / 70%);
 }
 ```
 
-HTML における色の使用の概要については、[CSS を使用した HTML 要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)をご覧ください。
+HTML における色の使用の概要については、[CSS を使用した HTML 要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color)をご覧ください。
 
 ## 構文
 
@@ -117,14 +117,14 @@ color: unset;
 
 - {{cssxref("&lt;color&gt;")}}
   - : 要素のテキストや装飾部分の色を設定します。
-- [`currentColor`](/ja/docs/Web/CSS/color_value#currentcolor_キーワード)
+- [`currentColor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード)
   - : 要素の`color`プロパティの値に色を設定します。ただし、`color`の値として設定された場合、`currentColor`は`inherit`として扱われます。
 
 ## アクセシビリティ
 
 背景色とその上に配置されたテキストの色のコントラスト比が、弱視の人がページのコンテンツを読むことができる程度に高いことを確認することが重要です。
 
-色のコントラスト比は、テキストおよび背景色の明度の値を比較することで決定されます。現在の[ウェブコンテンツアクセシビリティガイドライン (Web Content Accessibility Guidelines, WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/) によれば、文字列コンテンツで 4.5:1 以上、見出しのような大きめの文字列で 3:1 以上のコントラスト比が求められています。大きめの文字列とは、[太字](/ja/docs/Web/CSS/font-weight)ならば 18.66px 以上、または 24px 以上と定義されています。
+色のコントラスト比は、テキストおよび背景色の明度の値を比較することで決定されます。現在の[ウェブコンテンツアクセシビリティガイドライン (Web Content Accessibility Guidelines, WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/) によれば、文字列コンテンツで 4.5:1 以上、見出しのような大きめの文字列で 3:1 以上のコントラスト比が求められています。大きめの文字列とは、[太字](/ja/docs/Web/CSS/Reference/Properties/font-weight)ならば 18.66px 以上、または 24px 以上と定義されています。
 
 - [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
 - [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
@@ -190,5 +190,5 @@ p {
 - 他の色に関するプロパティ: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}, {{cssxref("print-color-adjust")}}
 - SVG の {{SVGAttr("color")}} 属性
 - {{CSSXref("color_value/color")}} 関数
-- [CSS を使用した HTML 要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)
+- [CSS を使用した HTML 要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color)
 - [WCAG: 色のコントラスト](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)

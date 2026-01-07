@@ -1,9 +1,8 @@
 ---
 title: inset
 slug: Web/CSS/Reference/Properties/inset
-original_slug: Web/CSS/inset
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`inset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}} に対応する一括指定です。これは {{cssxref("margin")}} の一括指定における複数値の場合と同じ構文です。
@@ -62,7 +61,7 @@ inset: 0;
 }
 ```
 
-これは [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)の仕様書で定義されているものですが、論理的なオフセットを定義するものではありません。これは物理的なオフセットであり、要素の書字方向やテキストの向きには関係がありません。
+これは [CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)の仕様書で定義されているものですが、論理的なオフセットを定義するものではありません。これは物理的なオフセットであり、要素の書字方向やテキストの向きには関係がありません。
 
 ## 構成要素のプロパティ
 
@@ -158,5 +157,5 @@ div {
 - {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}
 - {{cssxref("inset-block")}} および {{cssxref("inset-inline")}}
 - {{cssxref("position")}}
-- [CSS 位置指定レイアウト](/ja/docs/Web/CSS/CSS_positioned_layout)モジュール
-- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
+- [CSS 位置指定レイアウト](/ja/docs/Web/CSS/Guides/Positioned_layout)モジュール
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)

@@ -78,7 +78,7 @@ border-image-outset: revert;
 border-image-outset: unset;
 ```
 
-La propriété `border-image-outset` peut être définie à l'aide d'une, deux, trois ou quatre valeurs. Chaque valeur est une longueur ([`<length>`](/fr/docs/Web/CSS/length)) ou un nombre ([`<number>`](/fr/docs/Web/CSS/number)). Les valeurs négatives sont invalides (la déclaration est alors ignorée).
+La propriété `border-image-outset` peut être définie à l'aide d'une, deux, trois ou quatre valeurs. Chaque valeur est une longueur ([`<length>`](/fr/docs/Web/CSS/Reference/Values/length)) ou un nombre ([`<number>`](/fr/docs/Web/CSS/Reference/Values/number)). Les valeurs négatives sont invalides (la déclaration est alors ignorée).
 
 1. Si **une** valeur est indiquée, elle s'applique **aux quatre côtés**.
 2. Si **deux** valeurs sont indiquées, la première s'applique aux côtés **haut et bas** et la seconde s'applique aux côtés **gauche et droit**.
@@ -88,9 +88,9 @@ La propriété `border-image-outset` peut être définie à l'aide d'une, deux, 
 ### Valeurs
 
 - `<length>`
-  - : Une valeur de longueur (cf. type [`<length>`](/fr/docs/Web/CSS/length)) qui indique l'espace duquel on peut dépasser de la boîte de bordure. Les valeurs négatives ne sont pas autorisées.
+  - : Une valeur de longueur (cf. type [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)) qui indique l'espace duquel on peut dépasser de la boîte de bordure. Les valeurs négatives ne sont pas autorisées.
 - `<number>`
-  - : Une valeur numérique (cf. type [`<number>`](/fr/docs/Web/CSS/number)) qui sera multipliée par la valeur calculée de [`border-width`](/fr/docs/Web/CSS/Reference/Properties/border-width) afin de déterminer la longueur de l'espace duquel dépasser.
+  - : Une valeur numérique (cf. type [`<number>`](/fr/docs/Web/CSS/Reference/Values/number)) qui sera multipliée par la valeur calculée de [`border-width`](/fr/docs/Web/CSS/Reference/Properties/border-width) afin de déterminer la longueur de l'espace duquel dépasser.
 
 ## Définition formelle
 
@@ -137,5 +137,5 @@ La propriété `border-image-outset` peut être définie à l'aide d'une, deux, 
 
 ## Voir aussi
 
-- [Les arrière-plans et bordures](/fr/docs/Web/CSS/CSS_backgrounds_and_borders)
+- [Les arrière-plans et bordures](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders)
 - [Apprendre le CSS&nbsp;: les arrière-plans et les bordures](/fr/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)

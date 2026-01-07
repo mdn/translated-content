@@ -1,9 +1,8 @@
 ---
 title: image-resolution
 slug: Web/CSS/Reference/Properties/image-resolution
-original_slug: Web/CSS/image-resolution
 l10n:
-  sourceCommit: fb2af1f15456199685a9f4fbaf8c9d003a2bf91f
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 {{SeeCompatTable}}
@@ -30,12 +29,12 @@ image-resolution: unset;
 
 ### 値
 
-- `{{cssxref("&lt;resolution&gt;")}}`
+- {{cssxref("&lt;resolution&gt;")}}
   - : 内在解像度を明示的に指定します。
 - `from-image`
   - : 画像形式で指定された内在解像度を使用します。画像が自身の解像度を指定しなかった場合、明示的に指定された解像度が (与えられていれば) 使用し、そうでなければ既定で `1dppx` (1 画像ピクセル毎 CSS ピクセル)となります。
 - `snap`
-  - : `snap` キーワードが指定された場合、計算された解像度は、指定された解像度を、画像の 1 ピクセルを端末の整数のピクセルにマッピングする最も近い値に丸めたものになります。解像度が画像から取得された場合、使用される固有の解像度は、画像のネイティブ解像度を同様に調整したものになります。
+  - : `snap` キーワードが指定された場合、計算された解像度は、指定された解像度を、画像の 1 ピクセルを整数の{{glossary("device pixel", "デバイスピクセル")}}にマッピングする最も近い値に丸めたものになります。解像度が画像から取得された場合、使用される固有の解像度は、画像のネイティブ解像度を同様に調整したものになります。
 
 > [!NOTE]
 > SVG などのベクター形式は内在解像度を持たないので、このプロパティはベクター画像には影響しません。
@@ -56,7 +55,7 @@ image-resolution: unset;
 
 ```css
 @media print {
-  .myimage {
+  .my-image {
     image-resolution: 300dpi;
   }
 }
@@ -67,7 +66,7 @@ image-resolution: unset;
 画像から解像度を使用します。画像に解像度がない場合は、既定の 1dppx ではなく 300dpi を使用します。
 
 ```css
-.myimage {
+.my-image {
   image-resolution: from-image 300dpi;
 }
 ```
@@ -78,9 +77,9 @@ image-resolution: unset;
 
 ## ブラウザーの互換性
 
-このプロパティに対応しているブラウザーは今のところありません。
+今のところ、このプロパティに対応しているブラウザーはありません。
 
 ## 関連情報
 
 - その他の画像に関する CSS プロパティ: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}.
-- [Chromium bug: 1086473](https://bugs.chromium.org/p/chromium/issues/detail?id=1086473).
+- [Chromium bug: 1086473](https://crbug.com/1086473).

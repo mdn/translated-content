@@ -8,12 +8,12 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`scroll-timeline-axis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロール可能な要素（_スクローラー_）を上下（または左右）にスクロールすることで進行する _名前付きスクロール進行タイムライン_ アニメーションのタイムラインを提供するために使用されるスクロールバーの方向を指定するために使用します。 `scroll-timeline` はタイムラインを提供するスクローラーに設定します。詳しくは [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を参照してください。
+**`scroll-timeline-axis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロール可能な要素（_スクローラー_）を上下（または左右）にスクロールすることで進行する _名前付きスクロール進行タイムライン_ アニメーションのタイムラインを提供するために使用されるスクロールバーの方向を指定するために使用します。 `scroll-timeline` はタイムラインを提供するスクローラーに設定します。詳しくは [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)を参照してください。
 
 > [!NOTE]
 > スクローラー要素が軸方向のコンテナーをはみ出さないか、はみ出した部分が隠されているかクリップされている場合、スクロール進行タイムラインは作成されません。
 
-`scroll-timeline-axis` および {{cssxref("scroll-timeline-name")}} プロパティは [`scroll-timeline`](/ja/docs/Web/CSS/scroll-timeline) 一括指定プロパティを使用して設定することもできます。
+`scroll-timeline-axis` および {{cssxref("scroll-timeline-name")}} プロパティは [`scroll-timeline`](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline) 一括指定プロパティを使用して設定することもできます。
 
 ## 構文
 
@@ -140,7 +140,7 @@ body {
 
 ## 関連情報
 
-- [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline)
-- [`scroll-timeline`](/ja/docs/Web/CSS/scroll-timeline), [`scroll-timeline-name`](/ja/docs/Web/CSS/scroll-timeline-name)
+- [`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline)
+- [`scroll-timeline`](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline), [`scroll-timeline-name`](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline-name)
 - {{cssxref("timeline-scope")}}
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)
+- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)

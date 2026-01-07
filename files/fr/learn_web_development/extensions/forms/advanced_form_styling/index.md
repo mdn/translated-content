@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/Advanced_form_styling
 original_slug: Learn/Forms/Advanced_form_styling
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
 
 Dans cet article, nous verrons comment utiliser CSS pour mettre en forme les contrôles de formulaires qui sont les plus compliqués à mettre en forme. Comme abordé [dans l'article précédent](/fr/docs/Learn_web_development/Extensions/Forms/Styling_web_forms), les champs texte et les boutons sont plutôt simples à mettre en forme. Nous verrons ici le changement de style pour les éléments de formulaire plus problématiques.
 
@@ -196,7 +196,7 @@ input[type="checkbox"] {
 }
 ```
 
-Nous pouvons ensuite utiliser les pseudo-classes [`:checked`](/fr/docs/Web/CSS/:checked) et [`:disabled`](/fr/docs/Web/CSS/:disabled) pour changer l'apparence de nos cases à cocher lorsque leur état change&nbsp;:
+Nous pouvons ensuite utiliser les pseudo-classes [`:checked`](/fr/docs/Web/CSS/Reference/Selectors/:checked) et [`:disabled`](/fr/docs/Web/CSS/Reference/Selectors/:disabled) pour changer l'apparence de nos cases à cocher lorsque leur état change&nbsp;:
 
 ```css
 input[type="checkbox"] {
@@ -386,7 +386,7 @@ select {
 }
 ```
 
-Nous allons créer notre propre icone à l'aide de contenu généré. On place un élément contenant le contrôle afin que [`::before`](/fr/docs/Web/CSS/::before)/[`::after`](/fr/docs/Web/CSS/::after) puissent fonctionner (en effet, ils n'ont pas d'effet sur les éléments `<select>`, car le contenu généré est placé relativement à la boîte de formatage d'un élément et que les champs de formulaires fonctionnent comme des éléments remplacés et ils n'ont donc pas de boîte de formatage)&nbsp;:
+Nous allons créer notre propre icone à l'aide de contenu généré. On place un élément contenant le contrôle afin que [`::before`](/fr/docs/Web/CSS/Reference/Selectors/::before)/[`::after`](/fr/docs/Web/CSS/Reference/Selectors/::after) puissent fonctionner (en effet, ils n'ont pas d'effet sur les éléments `<select>`, car le contenu généré est placé relativement à la boîte de formatage d'un élément et que les champs de formulaires fonctionnent comme des éléments remplacés et ils n'ont donc pas de boîte de formatage)&nbsp;:
 
 ```html
 <div class="select-wrapper">
@@ -522,4 +522,4 @@ Bien qu'il existe encore des difficultés pour utiliser CSS avec les formulaires
 
 Dans le prochain article de ce module, nous aborderons [les différentes pseudo-classes relatives à l'interface utilisateur](/fr/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes) qui peuvent être utilisées dans les navigateurs modernes afin d'adapter la mise en forme d'un formulaire à différents états.
 
-{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}

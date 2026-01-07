@@ -94,4 +94,4 @@ p {
 
 ## 関連情報
 
-- [`text-decoration-skip-ink`](/ja/docs/Web/CSS/text-decoration-skip-ink)
+- [`text-decoration-skip-ink`](/ja/docs/Web/CSS/Reference/Properties/text-decoration-skip-ink)

@@ -35,7 +35,7 @@ Cette propriété n'est pas conçue pour appliquer une rotation arbitraire sur u
 
 Pour tout autre usage, on utilisera la propriété [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform) avec le mot-clé `rotate` afin d'indiquer une rotation. Ces autres usages incluent les modifications volontaires de l'orientation de l'image ou les changements nécessaires à l'impression portrait/paysage.
 
-Lorsqu'elle est utilisée avec d'autres propriétés CSS (comme [`transform-function`](/fr/docs/Web/CSS/transform-function)), la rotation fournie par `image-orientation` est appliquée avant toute autre transformation.
+Lorsqu'elle est utilisée avec d'autres propriétés CSS (comme [`transform-function`](/fr/docs/Web/CSS/Reference/Values/transform-function)), la rotation fournie par `image-orientation` est appliquée avant toute autre transformation.
 
 ## Définition formelle
 

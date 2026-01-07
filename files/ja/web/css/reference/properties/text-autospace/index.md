@@ -1,9 +1,8 @@
 ---
 title: text-autospace
 slug: Web/CSS/Reference/Properties/text-autospace
-original_slug: Web/CSS/text-autospace
 l10n:
-  sourceCommit: 9036ccca6d55b90913ca424e6706b0c9ed1fa93b
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`text-autospace`** は [CSS](/ja/docs/Web/CSS) のプロパティで、中国語/日本語/韓国語 (CJK) の文字とそれ以外の文字の間に空間を適用することができます。
@@ -173,5 +172,5 @@ chose.addEventListener("change", (e) => {
 ## 関連情報
 
 - {{cssxref('text-spacing-trim')}}
-- [`ic`](/ja/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#ローカルフォント相対長) および [`ric`](/ja/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#ルートフォント相対長) 単位
-- [CSS テキスト](/ja/docs/Web/CSS/CSS_text)モジュール
+- [`ic`](/ja/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#ローカルフォント相対長) および [`ric`](/ja/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#ルートフォント相対長) 単位
+- [CSS テキスト](/ja/docs/Web/CSS/Guides/Text)モジュール

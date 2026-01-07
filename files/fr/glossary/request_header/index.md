@@ -1,19 +1,19 @@
 ---
 title: En-tête de requête
 slug: Glossary/Request_header
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+Un **en-tête de requête** est un {{Glossary("HTTP header", "en-tête HTTP")}} qui peut être utilisé dans une requête HTTP pour fournir des informations sur le contexte de la requête, afin que le serveur puisse adapter la réponse. Par exemple, les en-têtes {{HTTPHeader("Accept", "Accept-*")}} indiquent les formats autorisés et préférés pour la réponse. D'autres en-têtes peuvent servir à fournir des informations d'authentification (par exemple {{HTTPHeader("Authorization")}}), à contrôler la mise en cache, ou à transmettre des informations sur l'agent utilisateur·ice ou le référent, etc.
 
-Un **en-tête de requête** est un {{glossary("header","en-tête HTTP")}} qui peut être utilisé dans une requête HTTP et ne concerne pas le contenu du message. Les en-têtes de requête, comme {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language", "Accept-*")}} ou {{HTTPHeader("If-Modified-Since","If-*")}}, permettent d'effectuer des requêtes conditionnelles ; d'autres comme {{HTTPHeader("Cookie")}}, {{HTTPHeader("User-Agent")}} ou {{HTTPHeader("Referer")}} précisent le contexte pour que le serveur adapte la réponse.
+Tous les en-têtes pouvant apparaître dans une requête ne sont pas qualifiés d'_en-têtes de requête_ par la spécification. Par exemple, l'en-tête {{HTTPHeader("Content-Type")}} est qualifié d'{{Glossary("representation header", "en-tête de représentation")}}.
 
-Tous les en-têtes apparaissant dans une requête ne sont pas des _en-têtes de requête_. Par exemple, l'en-tête {{HTTPHeader("Content-Length")}} apparaissant dans une requête {{HTTPMethod("POST")}} est en fait un {{glossary("entity header","en-tête d'entité")}} faisant référence à la taille du corps du message de requête. Cependant, ces en-têtes d'entité sont souvent appelés en-têtes de requête dans un tel contexte.
+De plus, {{Glossary("CORS")}} définit un sous-ensemble d'en-têtes de requête comme {{Glossary('CORS-safelisted request header', 'en-têtes simples')}}, des en-têtes de requête toujours considérés comme autorisés et qui ne sont pas explicitement listés dans les réponses aux requêtes {{Glossary("preflight request", "préliminaires")}}.
 
-De plus, [CORS](/fr/docs/Glossary/CORS) définit un sous-ensemble d'en-têtes de requête comme {{glossary('simple header','en-têtes simples')}}, en-têtes de requêtes qui sont toujours considérés comme autorisés et non listés explicitement dans les réponses des requêtes de {{glossary("preflight request", "contrôle")}}.
+Le message HTTP ci-dessous montre quelques en-têtes de requête après une requête {{HTTPMethod("GET")}}&nbsp;:
 
-Quelques en-têtes de requêtes après une requête {{HTTPMethod("GET")}} :
-
-```
+```http
 GET /home.html HTTP/1.1
 Host: developer.mozilla.org
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
@@ -28,17 +28,7 @@ If-None-Match: "c561c68d0ba92bbeb8b0fff2a9199f722e3a621a"
 Cache-Control: max-age=0
 ```
 
-À strictement parler, l'en-tête {{HTTPHeader("Content-Length")}} dans cet exemple n'est pas un en-tête de requête comme les autres, mais un {{glossary("entity header","en-tête d'entité")}} :
-
-```
-POST /myform.html HTTP/1.1
-Host: developer.mozilla.org
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
-Content-Length: 128
-```
-
 ## Voir aussi
 
-### Savoir technique
-
 - [Liste de tous les en-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers)
+- [RFC 9110, section 6.3&nbsp;: Champs d'en-tête <sup>(angl.)</sup>](https://httpwg.org/specs/rfc9110.html#header.fields)

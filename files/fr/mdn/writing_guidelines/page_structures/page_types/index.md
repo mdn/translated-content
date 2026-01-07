@@ -173,20 +173,20 @@ Une **page de référence SVG** liste tous les attributs disponibles sur un él�
 
 ### Page d'accueil de module CSS
 
-Chaque **module [CSS](/fr/docs/Web/CSS)** représente une spécification CSS qui fournit la prise en charge de certaines fonctionnalités et implémentations en CSS. Par exemple, le module [Modèle de boîte CSS](/fr/docs/Web/CSS/CSS_box_model) représente la [spécification](/fr/docs/Web/CSS/CSS_box_model#spécifications) qui décrit les propriétés de marge et de remplissage permettant de créer des espacements dans et autour d'une boîte CSS.
+Chaque **module [CSS](/fr/docs/Web/CSS)** représente une spécification CSS qui fournit la prise en charge de certaines fonctionnalités et implémentations en CSS. Par exemple, le module [Modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model) représente la [spécification](/fr/docs/Web/CSS/Guides/Box_model#spécifications) qui décrit les propriétés de marge et de remplissage permettant de créer des espacements dans et autour d'une boîte CSS.
 
 Une **page d'accueil de module CSS** donne un aperçu des fonctionnalités offertes par le module et liste toutes les propriétés, types de données, fonctions CSS, etc. proposés par le module. Lorsque c'est possible, la page d'accueil du module CSS propose une démonstration rapide de ce qu'il est possible de réaliser avec les propriétés du module via un exemple interactif.
 La page d'accueil du module sert principalement de page de _navigation_, mais fait aussi office de page de _référence_ synthétique pour le module.
 
 Certaines propriétés et fonctionnalités associées qui appartiennent à d'autres modules, mais qui sont étroitement liées à la fonctionnalité offerte par le module que vous documentez, peuvent aussi être abordées dans une section _Concepts associés_.
-Par exemple, le type de données `<easing-function>` et la media query `prefers-reduced-motion` ne sont pas couverts dans le module CSS animations, mais comme ils sont étroitement liés aux animations CSS, il est pertinent de les mettre en avant dans la section [Concepts associés](/fr/docs/Web/CSS/CSS_animations#concepts_associés) de la page d'accueil du module CSS animations.
+Par exemple, le type de données `<easing-function>` et la media query `prefers-reduced-motion` ne sont pas couverts dans le module CSS animations, mais comme ils sont étroitement liés aux animations CSS, il est pertinent de les mettre en avant dans la section [Concepts associés](/fr/docs/Web/CSS/Guides/Animations#concepts_associés) de la page d'accueil du module CSS animations.
 
 #### Exemples
 
-- [Animations CSS](/fr/docs/Web/CSS/CSS_animations)
-- [Interface utilisateur CSS de base](/fr/docs/Web/CSS/CSS_basic_user_interface)
-- [Effets de filtre CSS](/fr/docs/Web/CSS/CSS_filter_effects)
-- [Alignement du défilement CSS](/fr/docs/Web/CSS/CSS_scroll_snap)
+- [Animations CSS](/fr/docs/Web/CSS/Guides/Animations)
+- [Interface utilisateur CSS de base](/fr/docs/Web/CSS/Guides/Basic_user_interface)
+- [Effets de filtre CSS](/fr/docs/Web/CSS/Guides/Filter_effects)
+- [Alignement du défilement CSS](/fr/docs/Web/CSS/Guides/Scroll_snap)
 
 #### Modèles
 
@@ -199,8 +199,8 @@ Une **page de référence CSS** liste toutes les syntaxes disponibles pour une f
 #### Exemples
 
 - [Propriété `background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color)
-- [Pseudo-classe `:hover`](/fr/docs/Web/CSS/:hover)
-- [Règle @media](/fr/docs/Web/CSS/@media)
+- [Pseudo-classe `:hover`](/fr/docs/Web/CSS/Reference/Selectors/:hover)
+- [Règle @media](/fr/docs/Web/CSS/Reference/At-rules/@media)
 
 #### Modèles
 

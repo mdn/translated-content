@@ -3,7 +3,7 @@ title: L'élément de clignotement (balise <blink>)
 short-title: Élément <blink>
 slug: Glossary/blink_element
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 L'élément **`<blink>`** (balise blink) est une fonctionnalité HTML obsolète qui n'est plus prise en charge par les navigateurs web et n'est plus documentée sur MDN. Il servait à faire clignoter du texte (affichage/disparition en boucle).
@@ -28,7 +28,7 @@ Bien qu'initialement populaire, `<blink>` est vite devenu détesté à cause de 
 
 - La propriété CSS {{CSSxRef("text-decoration-line")}} possède une valeur `blink` censée avoir le même effet, mais la plupart des navigateurs modernes l'ignorent.
 - La méthode JavaScript {{JSxRef("String.blink()")}} entoure une chaîne de texte avec des balises `<blink></blink>`, mais comme vu plus haut, cet élément n'est plus pris en charge nulle part.
-- [Les animations CSS](/fr/docs/Web/CSS/CSS_animations) peuvent encore être utilisées pour faire clignoter du texte. Cependant, il faut éviter le texte clignotant sur les pages web pour les raisons évoquées précédemment.
+- [Les animations CSS](/fr/docs/Web/CSS/Guides/Animations) peuvent encore être utilisées pour faire clignoter du texte. Cependant, il faut éviter le texte clignotant sur les pages web pour les raisons évoquées précédemment.
 
 ## Voir aussi
 

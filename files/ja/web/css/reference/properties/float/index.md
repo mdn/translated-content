@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 6aa664dc5ccb5edf0897f99ad5feb59325dff831
 ---
 
-**`float`** は CSS のプロパティで、要素を包含ブロックの左右どちらかの側に沿うように設置し、テキストやインライン要素がその周りを回りこめるように定義します。要素はウェブページの通常のフローから外れますが、（[絶対位置指定](/ja/docs/Web/CSS/position#absolute_positioning) とは対照的に）フローの一部であり続けます。
+**`float`** は CSS のプロパティで、要素を包含ブロックの左右どちらかの側に沿うように設置し、テキストやインライン要素がその周りを回りこめるように定義します。要素はウェブページの通常のフローから外れますが、（[絶対位置指定](/ja/docs/Web/CSS/Reference/Properties/position#absolute_positioning) とは対照的に）フローの一部であり続けます。
 
 {{InteractiveExample("CSS デモ: float")}}
 
@@ -196,5 +196,5 @@ div {
 
 ## 関連情報
 
-- [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)
+- [ブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context)
 - アイテムを浮動要素の下へ強制的に移動させるには {{cssxref("clear")}} を使用します。

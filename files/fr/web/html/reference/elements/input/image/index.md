@@ -174,7 +174,7 @@ Lorsque cet attribut est indiqué, sa valeur doit être le nom d'un élément de
 
 ## Utiliser les boutons d'image
 
-Un élément `<input type="image">` est [un élément remplacé](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties) (c'est-à-dire un élément dont le contenu n'est pas généré ou directement géré par la couche CSS), et se comporte principalement comme un élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) classique, avec les fonctionnalités d'un [bouton d'envoi](/fr/docs/Web/HTML/Reference/Elements/input/submit).
+Un élément `<input type="image">` est [un élément remplacé](/fr/docs/Web/CSS/Guides/Images/Replaced_element_properties) (c'est-à-dire un élément dont le contenu n'est pas généré ou directement géré par la couche CSS), et se comporte principalement comme un élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) classique, avec les fonctionnalités d'un [bouton d'envoi](/fr/docs/Web/HTML/Reference/Elements/input/submit).
 
 ### Fonctionnalités essentielles des boutons d'image
 

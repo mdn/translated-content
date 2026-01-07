@@ -468,7 +468,7 @@ function roundedRect(ctx, x, y, width, height, radius) {
 
 稍後我們會更進一步介紹 fillStyle 屬性，這個範例我們所做是的透過 fillStyle 屬性來改變路徑填滿色為白色，然後再改回預設黑色，來變換填滿顏色。
 
-{{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Basic_usage", "Web/Guide/HTML/Canvas_tutorial/Using_images")}}
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Using_images")}}
 
 ## Path2D objects
 

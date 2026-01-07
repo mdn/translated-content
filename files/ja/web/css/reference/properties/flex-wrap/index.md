@@ -1,9 +1,8 @@
 ---
 title: flex-wrap
 slug: Web/CSS/Reference/Properties/flex-wrap
-original_slug: Web/CSS/flex-wrap
 l10n:
-  sourceCommit: 1f12a4156d4aec63d8466c49a39b1ac76d8a5735
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`flex-wrap`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスアイテムを単一行に押し込むか、あるいは複数行に折り返してもよいかを指定します。折り返しを許可する場合は、行を積み重ねる方向の制御も可能です。
@@ -43,7 +42,7 @@ flex-wrap: wrap-reverse;
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   width: 60px;
   margin: 10px;
@@ -74,7 +73,7 @@ flex-wrap: unset;
 - `nowrap`
   - : フレックスアイテムは単一行に配置され、フレックスコンテナーからはみ出すこともあります。交差軸の先頭は、 {{cssxref("flex-direction")}} の値に応じて、[インラインの先頭またはブロックの先頭](/ja/docs/Glossary/Flow_relative_values)のどちらかと等しくなります。
 - `wrap`
-  - : フレックスアイテムは複数行に分割されます。交差軸の先頭は、現在の[書字方向](/ja/docs/Web/CSS/CSS_writing_modes)および {{cssxref("flex-direction")}} の値に応じて、[インラインの先頭またはブロックの先頭](/ja/docs/Glossary/Flow_relative_values)のどちらかと等しくなります。
+  - : フレックスアイテムは複数行に分割されます。交差軸の先頭は、現在の[書字方向](/ja/docs/Web/CSS/Guides/Writing_modes)および {{cssxref("flex-direction")}} の値に応じて、[インラインの先頭またはブロックの先頭](/ja/docs/Glossary/Flow_relative_values)のどちらかと等しくなります。
 - `wrap-reverse`
   - : `wrap` と同様に動作しますが、交差軸の先頭と末尾が入れ替わります。
 
@@ -120,7 +119,7 @@ flex-wrap: unset;
 .content,
 .content1,
 .content2 {
-  color: #fff;
+  color: white;
   font: 100 24px/100px sans-serif;
   height: 150px;
   width: 897px;
@@ -174,6 +173,6 @@ flex-wrap: unset;
 
 - {{CSSXRef("flex-direction")}}
 - {{CSSXRef("flex-flow")}} 一括指定
-- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [フレックスアイテムの折り返しをマスターする](/ja/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
-- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [フレックスアイテムの折り返しをマスターする](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items)
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)モジュール

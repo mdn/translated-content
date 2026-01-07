@@ -176,5 +176,5 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - Les autres éléments liés aux listes&nbsp;: {{HTMLElement("ul")}}, {{HTMLElement("ol")}}, {{HTMLElement("menu")}} et {{HTMLElement("dir")}} (obsolète)&nbsp;;
 - Les propriétés CSS qui peuvent être particulièrement utiles pour mettre en forme l'élément `<li>`&nbsp;:
   - la propriété {{cssxref("list-style")}}, pour choisir la manière d'afficher l'ordinal&nbsp;;
-  - les [compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), pour gérer des listes imbriquées complexes&nbsp;;
+  - les [compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters), pour gérer des listes imbriquées complexes&nbsp;;
   - la propriété {{cssxref("margin")}}, pour contrôler l'indentation de l'élément de liste.

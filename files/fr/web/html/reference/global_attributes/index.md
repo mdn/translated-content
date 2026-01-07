@@ -1,9 +1,8 @@
 ---
 title: Attributs universels
 slug: Web/HTML/Reference/Global_attributes
-original_slug: Web/HTML/Global_attributes
 l10n:
-  sourceCommit: 1e1ac4b84b46ef34e901e22ee94e97cc749a4b3a
+  sourceCommit: dc788bf0ea36cb1ebe809c82aaae2c77cb3e18c0
 ---
 
 Les **attributs universels** sont des attributs communs à l'ensemble des éléments HTML. Ces attributs peuvent donc être ajoutés sur tous les éléments (dans certains cas, les attributs n'auront aucun effet).
@@ -30,7 +29,7 @@ En plus des attributs universels HTML, il existe également les attributs univer
 - [`autofocus`](/fr/docs/Web/HTML/Reference/Global_attributes/autofocus)
   - : Indique qu'un élément est sélectionné au chargement de la page, ou dès que l'élément HTML {{HTMLElement("dialog")}} auquel il appartient est affiché. Cet attribut est un booléen, initialement à false.
 - [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class)
-  - : Une liste de classes séparées par des espaces pour l'élément. Les classes permettent au CSS et à JavaScript de sélectionner et d'accéder à des éléments spécifiques via les [sélecteurs de classe](/fr/docs/Web/CSS/Class_selectors) ou des fonctions comme la méthode {{DOMxRef("Document.getElementsByClassName()")}}.
+  - : Une liste de classes séparées par des espaces pour l'élément. Les classes permettent au CSS et à JavaScript de sélectionner et d'accéder à des éléments spécifiques via les [sélecteurs de classe](/fr/docs/Web/CSS/Reference/Selectors/Class_selectors) ou des fonctions comme la méthode {{DOMxRef("Document.getElementsByClassName()")}}.
 - [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable)
   - : Un attribut {{Glossary("Enumerated", "énuméré")}} qui indique si l'élément est éditable par l'utilisateur·ice. Si c'est le cas, le navigateur modifie son interface pour permettre l'édition. L'attribut doit prendre l'une des valeurs suivantes&nbsp;:
     - `true` ou la chaîne de caractères vide, ce qui indique que l'élément est éditable&nbsp;;
@@ -81,7 +80,7 @@ En plus des attributs universels HTML, il existe également les attributs univer
 - [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang)
   - : Aide à définir la langue d'un élément&nbsp;: la langue dans laquelle les éléments non éditables sont écrits, ou la langue dans laquelle les éléments éditables doivent être écrits par l'utilisateur·ice. L'attribut doit contenir une valeur valide {{Glossary("BCP 47 language tag", "de balise de langue BCP 47")}}. `xml:lang` est prioritaire sur celui-ci.
 - [`nonce`](/fr/docs/Web/HTML/Reference/Global_attributes/nonce)
-  - : Un nombre unique («&nbsp;nonce&nbsp;», pour <i lang="en">number used once</i> en anglais) qui peut être utilisé par la [politique de sécurité du contenu](/fr/docs/Web/HTTP/Guides/CSP) pour déterminer si une requête donnée sera autorisée ou non.
+  - : Un nombre unique («&nbsp;{{Glossary("Nonce", "nonce")}}&nbsp;», pour <i lang="en">number used once</i> en anglais) qui peut être utilisé par la [politique de sécurité du contenu](/fr/docs/Web/HTTP/Guides/CSP) pour déterminer si une requête donnée sera autorisée ou non.
 - [`part`](/fr/docs/Web/HTML/Reference/Global_attributes/part)
   - : Une liste de noms de parties séparés par des espaces pour l'élément. Les noms de parties permettent au CSS de cibler et de mettre en forme des éléments spécifiques dans un arbre d'ombre (<i lang="en">shadow tree</i> en anglais) via le pseudo-élément {{CSSxRef("::part")}}.
 - [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover)

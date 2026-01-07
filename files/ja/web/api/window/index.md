@@ -34,7 +34,7 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
 - {{domxref("Window.cookieStore")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : 現在の文書コンテキストの {{domxref("CookieStore")}} オブジェクトへの参照を返します。
 - {{domxref("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 現在の文書が 無信頼の {{htmlelement("iframe")}} 内で読み込まれたかどうかを示す論理値を返します。詳しくは[無信頼の iframe](/ja/docs/Web/Security/IFrame_credentialless) を参照してください。
+  - : 現在の文書が 無信頼の {{htmlelement("iframe")}} 内で読み込まれたかどうかを示す論理値を返します。詳しくは[無信頼の iframe](/ja/docs/Web/HTTP/Guides/IFrame_credentialless) を参照してください。
 - {{domxref("Window.crossOriginIsolated")}} {{ReadOnlyInline}}
   - : ウェブサイトがオリジン間分離状態にあるかどうかを示す論理値を返します。
 - {{domxref("Window.crypto")}} {{ReadOnlyInline}}

@@ -155,7 +155,7 @@ tfoot td {
     - right：意思是表格應該顯示在文件的右方。在 CSS 要得出類似效果，應該設定 {{cssxref("margin-left")}} 與 {{cssxref("margin-right")}}；如果要置中，則要把 {{cssxref("margin")}} 屬性設定為 `0 auto`。
 
 - `bgcolor` {{Deprecated_inline}}
-  - : 定義表格的背景與內容顏色。它使用[六位十六進制 RGB code](/zh-TW/docs/Web/CSS/color_value#RGB_colors)，前缀需要加上 '`#`' 。也可以用[預先定義的顏色字串](/zh-TW/docs/Web/CSS/color_value#Color_keywords)可用。在 CSS 要得出類似效果，應該使用 {{cssxref("background-color")}} 屬性。
+  - : 定義表格的背景與內容顏色。它使用[六位十六進制 RGB code](/zh-TW/docs/Web/CSS/Reference/Values/color_value#RGB_colors)，前缀需要加上 '`#`' 。也可以用[預先定義的顏色字串](/zh-TW/docs/Web/CSS/Reference/Values/color_value#Color_keywords)可用。在 CSS 要得出類似效果，應該使用 {{cssxref("background-color")}} 屬性。
 - `border` {{Deprecated_inline}}
   - : 這個屬性以像素為單位，定義了圍繞於表格框架的大小。如果設為 0，代表 [`frame`](#frame) 屬性為空。在 CSS 要得出類似效果，應該使用 {{cssxref("border")}} 屬性。
 - `cellpadding` {{Deprecated_inline}}

@@ -59,10 +59,10 @@ CSS の {{cssxref("background")}} プロパティは一括指定プロパティ�
 
 ### 背景色
 
-{{cssxref("background-color")}} プロパティは、要素の背景色を定義します。このプロパティは、有効な [`<color>`](/ja/docs/Web/CSS/color_value) 値を受け入れます。 `background-color` は、要素のコンテンツおよびパディングボックスの下に広がります。
+{{cssxref("background-color")}} プロパティは、要素の背景色を定義します。このプロパティは、有効な [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) 値を受け入れます。 `background-color` は、要素のコンテンツおよびパディングボックスの下に広がります。
 
 次の例では、さまざまな色の値を使用して、ボックス、見出し、 {{htmlelement("span")}} 要素に背景色を指定しています。
-あなた自身で、利用可能な [`<color>`](/ja/docs/Web/CSS/color_value) を使ってみましょう。
+あなた自身で、利用可能な [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) を使ってみましょう。
 
 ```html live-sample___color
 <div class="box">
@@ -288,7 +288,7 @@ span {
 
 グラデーション (gradient) は、背景に使用する場合には画像と同じようにふるまいます。グラデーションは {{cssxref("background-image")}} プロパティを使用して設定されます。
 
-[`<gradient>`](/ja/docs/Web/CSS/gradient) データ型の MDN ページで、さまざまな種類のグラデーションとそれらを使ってできることについて詳しく読むことができます。ウェブで数多く提供されている CSS グラデーションジェネレーター、たとえば [CSSGradient.io](https://cssgradient.io/) を使用して、グラデーションを楽しく試せます。このウェブサービスでは、グラデーションを作成したのち、グラデーションを生成するソースコードをコピー & ペーストできます。
+[`<gradient>`](/ja/docs/Web/CSS/Reference/Values/gradient) データ型の MDN ページで、さまざまな種類のグラデーションとそれらを使ってできることについて詳しく読むことができます。ウェブで数多く提供されている CSS グラデーションジェネレーター、たとえば [CSSGradient.io](https://cssgradient.io/) を使用して、グラデーションを楽しく試せます。このウェブサービスでは、グラデーションを作成したのち、グラデーションを生成するソースコードをコピー & ペーストできます。
 
 以下の例でいろいろなグラデーションを試してみましょう。 1 つめのボックスには、ボックス全体に広がる線形グラデーション (linear gradient) を指定しています。2 つめのボックスには、サイズを設定して（そのため繰り返されている）放射グラデーション (radial gradient) を指定しています。
 
@@ -440,7 +440,7 @@ background-position:
 
 ## 境界線
 
-[ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)について学習するとき、境界線 (border) がボックスのサイズにどのように影響するかを見てきました。このレッスンでは、境界線をクリエイティブに活用する方法を見ていきます。通常、CSS で要素に境界線を追加するときは、CSS の 1 行で境界線の色、幅、[スタイル](/ja/docs/Web/CSS/line-style)を指定する一括指定プロパティを使います。
+[ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)について学習するとき、境界線 (border) がボックスのサイズにどのように影響するかを見てきました。このレッスンでは、境界線をクリエイティブに活用する方法を見ていきます。通常、CSS で要素に境界線を追加するときは、CSS の 1 行で境界線の色、幅、[スタイル](/ja/docs/Web/CSS/Reference/Values/line-style)を指定する一括指定プロパティを使います。
 
 {{cssxref("border")}} を使用すると、ボックスの 4 辺すべてに境界線を設定できます。
 
@@ -479,7 +479,7 @@ background-position:
 ```
 
 > [!NOTE]
-> top, right, bottom, left の各方向の境界線を指定するプロパティには、HTML 文書の書字方向 (writing mode) と結びついた[論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values#プロパティ)が割り当てられています（書字方向は、左から右、右から左、上から下といったテキストの方向を制御するものです）。次回のレッスンでは、[テキスト方向の扱い](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)に応じたこれらの方法を探ります。
+> top, right, bottom, left の各方向の境界線を指定するプロパティには、HTML 文書の書字方向 (writing mode) と結びついた[論理的プロパティ](/ja/docs/Web/CSS/Guides/Logical_properties_and_values#プロパティ)が割り当てられています（書字方向は、左から右、右から左、上から下といったテキストの方向を制御するものです）。次回のレッスンでは、[テキスト方向の扱い](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)に応じたこれらの方法を探ります。
 
 境界線にはさまざまなスタイルを指定できます。以下の例では、ボックスの 4 辺にそれぞれ異なる境界線スタイルを使用しています。境界線の色、幅、スタイルを試して、境界線の動作を確認しましょう。
 
@@ -531,9 +531,9 @@ h2 {
 ```
 
 > [!NOTE]
-> 上記の境界線プロパティと同様に、これらの border-radius プロパティも割り当てられた[論理的 border-radius プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values#プロパティ)もあります。
+> 上記の境界線プロパティと同様に、これらの border-radius プロパティも割り当てられた[論理的 border-radius プロパティ](/ja/docs/Web/CSS/Guides/Logical_properties_and_values#プロパティ)もあります。
 
-以下の例では、はじめに 4 つの角すべてについて角の丸みを設定したのち、右上角を他と異なる値に変更しました。値を変えて試してみましょう。使用できる構文は {{cssxref("border-radius")}} プロパティのページを見て確認してください。[境界角丸ジェネレーター](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator)を使用して、角丸値を出力することができます。
+以下の例では、はじめに 4 つの角すべてについて角の丸みを設定したのち、右上角を他と異なる値に変更しました。値を変えて試してみましょう。使用できる構文は {{cssxref("border-radius")}} プロパティのページを見て確認してください。[境界角丸ジェネレーター](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator)を使用して、角丸値を出力することができます。
 
 ```html live-sample___corners
 <div class="box">

@@ -130,7 +130,7 @@ L'attribut `placeholder` est une chaîne de caractères fournissant une courte i
 Si le contenu du contrôle respecte une directionnalité donnée ([LTR](/fr/docs/Glossary/LTR) ou [RTL](/fr/docs/Glossary/RTL)) et que le texte indicatif doit être présenté dans l'autre sens, il est possible d'utiliser l'algorithme de formatage bidirectionnel Unicode — voir [Comment utiliser les contrôles Unicode pour le texte bidirectionnel (en anglais)](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus d'informations.
 
 > [!NOTE]
-> On évitera, tant que faire se peut, d'utiliser l'attribut `placeholder`, car il n'est pas sémantiquement très utile pour expliquer le formulaire, et car il peut causer certains problèmes avec le contenu. Voir la section [Utilisation de libellés](/fr/docs/Web/HTML/Reference/Elements/input#utilisation_de_libell%c3%a9s) de [la page sur l'élément `<input>`](/fr/docs/Web/HTML/Reference/Elements/input) pour plus d'informations.
+> On évitera, tant que faire se peut, d'utiliser l'attribut `placeholder`, car il n'est pas sémantiquement très utile pour expliquer le formulaire, et car il peut causer certains problèmes avec le contenu. Voir la section [Utilisation de libellés](/fr/docs/Web/HTML/Reference/Elements/input#utilisation_de_libellés) de [la page sur l'élément `<input>`](/fr/docs/Web/HTML/Reference/Elements/input) pour plus d'informations.
 
 ### `readonly`
 
@@ -264,7 +264,7 @@ Les éléments `<input>` de type `text` ne possède pas de mécanisme de validat
 
 ### Un aparté sur la mise en forme
 
-Les pseudo-classes CSS [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) sont utiles pour mettre en forme les éléments qui ne respectent pas les contraintes de validation. Dans la suite de cette section, nous utiliserons cette feuille de style afin d'afficher une coche ou une croix après les valeurs valides ou invalides.
+Les pseudo-classes CSS [`:valid`](/fr/docs/Web/CSS/Reference/Selectors/:valid) et [`:invalid`](/fr/docs/Web/CSS/Reference/Selectors/:invalid) sont utiles pour mettre en forme les éléments qui ne respectent pas les contraintes de validation. Dans la suite de cette section, nous utiliserons cette feuille de style afin d'afficher une coche ou une croix après les valeurs valides ou invalides.
 
 ```css
 div {
@@ -462,7 +462,7 @@ Vous trouverez de bons exemples de champs texte utilisés en contexte dans les a
 
 ## Voir aussi
 
-- [Les formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\)
+- [Les formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms)
 - L'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) et l'interface DOM [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) qui le porte
 - [`<input type="search">`](/fr/docs/Web/HTML/Reference/Elements/input/search)
 - [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea)&nbsp;: un élément qui permet de saisir du texte sur plusieurs lignes

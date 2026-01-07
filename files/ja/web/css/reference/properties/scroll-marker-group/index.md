@@ -50,7 +50,7 @@ scroll-marker-group: unset;
 
 ## 例
 
-`scroll-marker-group` プロパティを使用する完全な例については、「[CSS カルーセルの作成](/ja/docs/Web/CSS/CSS_overflow/CSS_carousels)」参照してください。
+`scroll-marker-group` プロパティを使用する完全な例については、「[CSS カルーセルの作成](/ja/docs/Web/CSS/Guides/Overflow/Carousels)」参照してください。
 
 ### スクロールマーカーの配置
 
@@ -181,6 +181,6 @@ label {
 - {{cssxref("::scroll-marker-group")}}
 - {{cssxref("::scroll-marker")}}
 - {{cssxref(":target-current")}}
-- [CSS によるカルーセルの作成](/ja/docs/Web/CSS/CSS_overflow/CSS_carousels)
-- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
+- [CSS によるカルーセルの作成](/ja/docs/Web/CSS/Guides/Overflow/Carousels)
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
 - [CSS Carousel Gallery](https://chrome.dev/carousel/) (chrome.dev, 2025)

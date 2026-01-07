@@ -8,12 +8,12 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`view-timeline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、スクロール可能な要素（_スクローラー_）内の要素（主体要素として呼ばれる）の可視性の変化に基づいて進行する名前付きビュー進行タイムラインを定義するために使用します。 `view-timeline` は主体要素に設定します。
+**`view-timeline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、スクロール可能な要素（_スクローラー_）内の要素（主体要素として呼ばれる）の可視性の変化に基づいて進行する名前付きビュー進行タイムラインを定義するために使用します。 `view-timeline` は主体要素に設定します。
 
 既定では、主体要素がスクローラーの一方の端に初めて表示されるとタイムラインは 0% になり、反対側の端に達すると 100% になります。
 
 `view-timeline` は 2 つの構成値、名前付き進行タイムラインの名前とオプションのスクロール軸の値持つことができます。
-この名前は [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline) 宣言で参照され、タイムラインの進行に合わせてアニメーションする要素を示します。これは主体要素である場合もありますが、そうである必要はありません。主体がスクロール領域を移動する際に異なる要素をアニメーションさせることができます。
+この名前は [`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline) 宣言で参照され、タイムラインの進行に合わせてアニメーションする要素を示します。これは主体要素である場合もありますが、そうである必要はありません。主体がスクロール領域を移動する際に異なる要素をアニメーションさせることができます。
 
 > [!NOTE]
 > 要素が軸方向の寸法でそのコンテナーをはみ出さない場合、またははみ出した部分が隠されているかクリップされている場合、タイムラインは作成されません。
@@ -22,8 +22,8 @@ l10n:
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`view-timeline-name`](/ja/docs/Web/CSS/view-timeline-name)
-- [`view-timeline-axis`](/ja/docs/Web/CSS/view-timeline-axis)
+- [`view-timeline-name`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-name)
+- [`view-timeline-axis`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-axis)
 
 ## 構文
 
@@ -46,15 +46,15 @@ view-timeline: --custom_name_for_timeline;
 `view-timeline` の一括指定プロパティは `<view-timeline-name>` と `<view-timeline-axis>` の値の組み合わせとしてコンテナー要素に適用することができます。少なくともどちらか一方の値を指定しなければなりません。両方の値を指定する場合は、 `<view-timeline-name>` 値の後に `<view-timeline-axis>` 値が続く順序でなければなりません。
 
 > [!NOTE]
-> `<view-timeline-name>` は [`<dashed-ident>`](/ja/docs/Web/CSS/dashed-ident) の値で、 `--` から始める必要があり、これによって CSS の標準キーワードとの名前の衝突を避けることができます。
+> `<view-timeline-name>` は [`<dashed-ident>`](/ja/docs/Web/CSS/Reference/Values/dashed-ident) の値で、 `--` から始める必要があり、これによって CSS の標準キーワードとの名前の衝突を避けることができます。
 
 ### 値
 
 - `<view-timeline-name>`
-  - : [`view-timeline-name`](/ja/docs/Web/CSS/view-timeline-name) を参照してください。
+  - : [`view-timeline-name`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-name) を参照してください。
 
 - `<view-timeline-axis>`
-  - : [`view-timeline-axis`](/ja/docs/Web/CSS/view-timeline-axis) を参照してください。既定値は `block` です。
+  - : [`view-timeline-axis`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-axis) を参照してください。既定値は `block` です。
 
 ## 公式定義
 
@@ -186,7 +186,7 @@ p {
 
 ## 関連情報
 
-- [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline)
+- [`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline)
 - {{cssxref("timeline-scope")}}
-- [`view-timeline-axis`](/ja/docs/Web/CSS/view-timeline-axis), [`view-timeline-name`](/ja/docs/Web/CSS/view-timeline-name)
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)
+- [`view-timeline-axis`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-axis), [`view-timeline-name`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-name)
+- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)

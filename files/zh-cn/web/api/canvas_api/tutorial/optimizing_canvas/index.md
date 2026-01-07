@@ -79,7 +79,7 @@ ctx.drawImage(myImage, 0.3, 0.5);
 
 ### 用 CSS 变换特性缩放画布
 
-[CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)使用 GPU，因此速度更快。最好的情况是不直接缩放画布，或者具有较小的画布并按比例放大，而不是较大的画布并按比例缩小。
+[CSS 变换](/zh-CN/docs/Web/CSS/Guides/Transforms/Using)使用 GPU，因此速度更快。最好的情况是不直接缩放画布，或者具有较小的画布并按比例放大，而不是较大的画布并按比例缩小。
 
 ```js
 var scaleX = window.innerWidth / canvas.width;

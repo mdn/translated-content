@@ -95,7 +95,7 @@ shape-outside: unset;
 - `<shape-box>`
   - : La forme est calculée selon '`margin-box`', '`border-box`', '`padding-box`' or '`content-box`' qui correspondent chacune aux boîtes de marge, bordure, remplissage et de contenu. La boîte ainsi définie inclue les courbures induites par {{cssxref("border-radius")}}. On a un effet semblable à {{cssxref("background-clip")}}.
 - `<basic-shape>`
-  - : Une valeur de type {{cssxref("&lt;basic-shape&gt;")}}. La forme est calculée selon une valeur parmi [`inset()`](</fr/docs/Web/CSS/basic-shape#inset()>), [`circle()`](</fr/docs/Web/CSS/basic-shape#circle()>), [`ellipse()`](</fr/docs/Web/CSS/basic-shape#ellipse()>), ou [`polygon()`](</fr/docs/Web/CSS/basic-shape#polygon()>). Si une valeur `<shape-box>` est fournie, cela définira la boîte de référence dans laquelle appliquée la forme définie avec la fonction `<basic-shape>`. Si `<shape-box>` n'est pas fournie, la valeur par défaut sera '`margin-box`'.
+  - : Une valeur de type {{cssxref("&lt;basic-shape&gt;")}}. La forme est calculée selon une valeur parmi [`inset()`](</fr/docs/Web/CSS/Reference/Values/basic-shape#inset()>), [`circle()`](</fr/docs/Web/CSS/Reference/Values/basic-shape#circle()>), [`ellipse()`](</fr/docs/Web/CSS/Reference/Values/basic-shape#ellipse()>), ou [`polygon()`](</fr/docs/Web/CSS/Reference/Values/basic-shape#polygon()>). Si une valeur `<shape-box>` est fournie, cela définira la boîte de référence dans laquelle appliquée la forme définie avec la fonction `<basic-shape>`. Si `<shape-box>` n'est pas fournie, la valeur par défaut sera '`margin-box`'.
 - `<image>`
   - : La forme est extraite et calculée à partir du canal alpha de l'image {{cssxref("image")}} en utilisant l propriété {{cssxref("shape-image-threshold")}}. Les agents utilisateurs doivent utiliser la méthode `fetch`, éventuellement avec CORS pour les URL utilisées dans `shape-outside`. Lors de l'accès à la ressource, les agents utilisateurs doivent utiliser le mode Anonymous et définir la source du _referrer_ comme l'URL de la feuille de style, l'origine de l'URL doit être celle du document. S'il y a des erreurs réseau empêchant de récupérer l'image, l'effet sera le même que celui obtenu avec la valeur **`none`**.
 
@@ -182,11 +182,11 @@ p {
 
 ## Voir aussi
 
-- [Les formes CSS : le module de spécification _CSS Shapes_](/fr/docs/Web/CSS/CSS_shapes)
-- [Un aperçu des formes CSS](/fr/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
-- [Créer des formes à partir des boîtes](/fr/docs/Web/CSS/CSS_shapes/From_box_values)
-- [Les formes simples : le type de donnée `<basic-shape>`](/fr/docs/Web/CSS/CSS_shapes/Basic_shapes)
-- [Créer des formes à partir d'images](/fr/docs/Web/CSS/CSS_shapes/Shapes_from_images)
+- [Les formes CSS : le module de spécification _CSS Shapes_](/fr/docs/Web/CSS/Guides/Shapes)
+- [Un aperçu des formes CSS](/fr/docs/Web/CSS/Guides/Shapes/Overview)
+- [Créer des formes à partir des boîtes](/fr/docs/Web/CSS/Guides/Shapes/From_box_values)
+- [Les formes simples : le type de donnée `<basic-shape>`](/fr/docs/Web/CSS/Guides/Shapes/Using_shape-outside)
+- [Créer des formes à partir d'images](/fr/docs/Web/CSS/Guides/Shapes/From_images)
 - {{cssxref("&lt;basic-shape&gt;")}}
 - {{cssxref("shape-margin")}}
 - {{cssxref("shape-image-threshold")}}

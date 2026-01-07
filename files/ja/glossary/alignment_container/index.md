@@ -11,7 +11,7 @@ l10n:
 
 ## 関連情報
 
-- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)モジュール
+- [CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)モジュール
 - プロパティリファレンス
   - CSS {{CSSXref("align-content")}} プロパティ
   - CSS {{CSSXref("align-items")}} プロパティ

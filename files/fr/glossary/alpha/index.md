@@ -2,7 +2,7 @@
 title: Alpha (canal alpha)
 slug: Glossary/Alpha
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Le **canal alpha** spécifie le degré d'opacité d'une couleur ({{CSSxRef("&lt;color&gt;")}}). Les couleurs sont représentées sous forme numérique comme un ensemble de nombres, chacun représentant la force ou le niveau d'intensité d'un composant donné de la couleur. Chacun de ces composants est appelé un **canal**. Dans un fichier d'image typique, les canaux de couleur décrivent la quantité de rouge, de vert et de bleu utilisée pour composer la couleur finale. Pour représenter une couleur à travers laquelle le fond peut être vu dans une certaine mesure, un quatrième canal est ajouté à la couleur&nbsp;: le canal alpha.
@@ -15,7 +15,7 @@ Comme vous pouvez le voir, la couleur sans canal alpha bloque complètement le t
 
 ## Voir aussi
 
-- [Couleurs CSS](/fr/docs/Web/CSS/CSS_colors)
+- [Couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)
 - [Apprendre&nbsp;: Unités et valeurs CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - [Guide des types et formats des fichiers d'images](/fr/docs/Web/Media/Guides/Formats/Image_types)
 - [Alpha blending](https://fr.wikipedia.org/wiki/Alpha_blending) sur Wikipedia

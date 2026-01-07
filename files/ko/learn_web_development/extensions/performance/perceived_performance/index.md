@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/what_is_web_performance", "Learn_web_development/Extensions/Performance/Measuring_performance", "Learn_web_development/Extensions/Performance")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/What_is_web_performance", "Learn_web_development/Extensions/Performance/Measuring_performance", "Learn_web_development/Extensions/Performance")}}
 
 **[인지된 성능](/ko/docs/Glossary/Perceived_performance)**은 웹 성능, 반응성, 신뢰성의 주관적인 지표입니다. 다시 말해, 사용자에게 웹이 얼마나 빠르게 보이는지를 의미합니다. 실제 동작 속도보다 양과 지표를 측정하는 것은 어렵지만, 어쩌면 인지된 성능은 더 중요할 수도 있습니다.
 
@@ -94,4 +94,4 @@ l10n:
 
 사용자가 유용한 콘텐츠를 기다리는 시간을 줄이고 사이트를 반응적이고 흥미롭게 유지함으로써, 사용자는 실제로 자원을 로드하는 데 걸리는 시간이 동일하더라도 사이트가 더 빠르게 동작한다고 느낄 것입니다.
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Performance/what_is_web_performance", "Learn_web_development/Extensions/Performance/Measuring_performance", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/What_is_web_performance", "Learn_web_development/Extensions/Performance/Measuring_performance", "Learn_web_development/Extensions/Performance")}}

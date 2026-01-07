@@ -6,7 +6,7 @@ original_slug: Web/CSS/transition-timing-function
 
 {{CSSRef}}
 
-La propriété **`transition-timing-function`** décrit la façon dont les valeurs intermédiaires des propriétés CSS affectées par un [effet de transition](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) sont calculées. Ceci permet donc de définir une courbe d'accelération, de manière à ce que la vitesse de la transition varie au cours de sa durée.
+La propriété **`transition-timing-function`** décrit la façon dont les valeurs intermédiaires des propriétés CSS affectées par un [effet de transition](/fr/docs/Web/CSS/Guides/Transitions/Using) sont calculées. Ceci permet donc de définir une courbe d'accelération, de manière à ce que la vitesse de la transition varie au cours de sa durée.
 
 {{InteractiveExample("CSS Demo: transition-timing-function")}}
 
@@ -286,7 +286,7 @@ var intervalID = window.setInterval(updateTransition, 10000);
 
 Certaines animations permettent de guider les utilisateurs vers les actions possibles et utiles, d'illustrer les relations qui existent entre les éléments d'interface et d'informer les utilisateurs quant aux actions qui se sont produites. Les animations réduisent ainsi la charge cognitive et améliorent la perception du changement.
 
-Toutefois, certaines animations s'avèrent problématiques pour les personnes souffrant de troubles cognitifs, d'épilepsie ou autre. Pour cela, on prévoira d'intégrer un mécanisme qui permette de suspendre ou de désactiver l'animation. De même, on pourra tirer parti de [la requête média sur la réduction de mouvements](/fr/docs/Web/CSS/@media/prefers-reduced-motion) afin de créer une expérience complémentaire pour les personnes ayant exprimé leur souhait d'absence d'animation.
+Toutefois, certaines animations s'avèrent problématiques pour les personnes souffrant de troubles cognitifs, d'épilepsie ou autre. Pour cela, on prévoira d'intégrer un mécanisme qui permette de suspendre ou de désactiver l'animation. De même, on pourra tirer parti de [la requête média sur la réduction de mouvements](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) afin de créer une expérience complémentaire pour les personnes ayant exprimé leur souhait d'absence d'animation.
 
 ## Spécifications
 
@@ -298,5 +298,5 @@ Toutefois, certaines animations s'avèrent problématiques pour les personnes so
 
 ## Voir aussi
 
-- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Utiliser les transitions CSS](/fr/docs/Web/CSS/Guides/Transitions/Using)
 - {{domxref("TransitionEvent")}}

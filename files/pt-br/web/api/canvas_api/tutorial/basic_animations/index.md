@@ -359,4 +359,4 @@ Abaixo é o {{HTMLElement("canvas")}} em que a imagem é rolada. Note que a larg
 - [JavaScript Daemons Management](/pt-BR/docs/JavaScript/Timers/Daemons)
 - [HTMLCanvasElement](/pt-BR/docs/Web/API/HTMLCanvasElement)
 
-{{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Compositing", "Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas")}}
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas")}}

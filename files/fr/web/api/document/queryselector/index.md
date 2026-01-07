@@ -8,13 +8,13 @@ l10n:
 
 {{APIRef("DOM")}}
 
-La méthode **`querySelector()`** de l'interface {{DOMxRef("Document")}} retourne le premier élément {{DOMxRef("Element")}} du document qui correspond au sélecteur [CSS](/fr/docs/Web/CSS/CSS_selectors) spécifié, ou à un groupe de sélecteurs CSS. Si aucune correspondance n'est trouvée, `null` est retourné.
+La méthode **`querySelector()`** de l'interface {{DOMxRef("Document")}} retourne le premier élément {{DOMxRef("Element")}} du document qui correspond au sélecteur [CSS](/fr/docs/Web/CSS/Guides/Selectors) spécifié, ou à un groupe de sélecteurs CSS. Si aucune correspondance n'est trouvée, `null` est retourné.
 
 La correspondance se fait par un parcours en profondeur (pré‑ordre) des nœuds du document, en commençant par le premier élément du balisage et en parcourant ensuite les nœuds dans l'ordre séquentiel.
 
 Si le sélecteur correspond à un ID utilisé par erreur plusieurs fois dans le document, le premier élément portant cet ID est retourné.
 
-Les [pseudo‑éléments CSS](/fr/docs/Web/CSS/Pseudo-elements) ne retournent jamais d'éléments.
+Les [pseudo‑éléments CSS](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) ne retournent jamais d'éléments.
 
 ## Syntaxe
 
@@ -27,11 +27,11 @@ querySelector(selectors)
 - `selectors`
   - : Une chaîne de caractères qui contient un ou plusieurs sélecteurs à comparer. La chaîne de caractères doit être composée de sélecteurs CSS valides&nbsp;; sinon une exception `SyntaxError` est levée.
 
-    Notez que la spécification HTML n'exige pas que les valeurs d'attribut soient des identifiants CSS valides. Si la valeur d'un attribut [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class) ou [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) n'est pas un identifiant CSS valide, vous devez l'échapper avant de l'utiliser dans un sélecteur, soit en appelant {{DOMxRef("CSS.escape_static", "CSS.escape()")}} sur la valeur, soit en utilisant l'une des techniques décrites dans [Échapper les caractères](/fr/docs/Web/CSS/ident#échapper_les_caractères). Voir [Échapper des caractères spéciaux](#échapper_des_caractères_spéciaux) pour un exemple.
+    Notez que la spécification HTML n'exige pas que les valeurs d'attribut soient des identifiants CSS valides. Si la valeur d'un attribut [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class) ou [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) n'est pas un identifiant CSS valide, vous devez l'échapper avant de l'utiliser dans un sélecteur, soit en appelant {{DOMxRef("CSS.escape_static", "CSS.escape()")}} sur la valeur, soit en utilisant l'une des techniques décrites dans [Échapper les caractères](/fr/docs/Web/CSS/Reference/Values/ident#échapper_les_caractères). Voir [Échapper des caractères spéciaux](#échapper_des_caractères_spéciaux) pour un exemple.
 
 ### Valeur de retour
 
-Un objet {{DOMxRef("Element")}} représentant le premier élément dans le document qui corresponde au jeu de [sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors) spécifié, ou `null` s'il n'y a pas de correspondances.
+Un objet {{DOMxRef("Element")}} représentant le premier élément dans le document qui corresponde au jeu de [sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors) spécifié, ou `null` s'il n'y a pas de correspondances.
 
 Si vous avez besoin d'une liste de tous les éléments correspondant aux sélecteurs spécifiés, vous devez utiliser {{DOMxRef("Document.querySelectorAll", "querySelectorAll()")}} à la place.
 
@@ -74,7 +74,7 @@ Cela sélectionne un input dont le parent est un div avec la classe `user-panel`
 
 ### Échapper les valeurs d'attribut
 
-Cet exemple montre que si un document HTML contient un [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) qui n'est pas un [identifiant CSS](/fr/docs/Web/CSS/ident) valide, il faut échapper la valeur de l'attribut avant de l'utiliser dans `querySelector()`.
+Cet exemple montre que si un document HTML contient un [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) qui n'est pas un [identifiant CSS](/fr/docs/Web/CSS/Reference/Values/ident) valide, il faut échapper la valeur de l'attribut avant de l'utiliser dans `querySelector()`.
 
 #### HTML
 

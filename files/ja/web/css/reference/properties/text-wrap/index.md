@@ -1,12 +1,11 @@
 ---
 title: text-wrap
 slug: Web/CSS/Reference/Properties/text-wrap
-original_slug: Web/CSS/text-wrap
 l10n:
-  sourceCommit: 4809e8217288dc7e1372d5c74140ca6661673206
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-**`text-wrap`** は CSS の一括指定プロパティで、要素の中のテキストを折り返す方法を制御します。様々な値により、次のことを制御します。
+**`text-wrap`** は [CSS](/ja/docs/Web/CSS) の一括指定プロパティで、要素内のテキストの折り返し方法を制御します。様々な値により、次のことを制御します。
 
 - 組版の改善、例えば見出しの行の長さのバランスの改善。
 - テキストの折り返しを完全にオフにする方法。
@@ -36,9 +35,9 @@ text-wrap: stable;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="whole-content-wrapper">
-    <p>Edit the text in the box:</p>
+    <p>ボックス内のテキストを編集してください:</p>
     <div class="transition-all" id="example-element">
-      <p contenteditable="">
+      <p contenteditable>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut
         cum eum id quos est.
       </p>
@@ -65,8 +64,8 @@ text-wrap: stable;
 
 このプロパティは、以下の CSS プロパティの一括指定です。
 
-- [`text-wrap-mode`](/ja/docs/Web/CSS/text-wrap-mode)
-- [`text-wrap-style`](/ja/docs/Web/CSS/text-wrap-style)
+- {{cssxref("text-wrap-mode")}}
+- {{cssxref("text-wrap-style")}}
 
 ## 構文
 
@@ -97,7 +96,7 @@ text-wrap: unset;
 - `balance`
   - : テキストは、各行の文字数を均等にする方法で折り返し、レイアウトの品質と読みやすさを向上させます。文字を数えて複数の行にまたがるようにバランスをとるのはコンピューターに負荷がかかるため、この値は限られた行数（Chromium では 6 行以下、Firefox では 10 行以下）のテキストブロックにのみ対応しています。
 - `pretty`
-  - : `wrap`と同じ動作になりますが、ユーザーエージェントは速度よりも優れたレイアウトを優先する遅いアルゴリズムを使用します。この例は、パフォーマンスよりも優れた組版が優先される本体コピーを意図しています（例えば、[オルファン](/ja/docs/Web/CSS/orphans)の数を最小に保つ必要がある場合など）。
+  - : `wrap`と同じ動作になりますが、ユーザーエージェントは速度よりも優れたレイアウトを優先する遅いアルゴリズムを使用します。この例は、パフォーマンスよりも優れた組版が優先される本体コピーを意図しています（例えば、[オルファン](/ja/docs/Web/CSS/Reference/Properties/orphans)の数を最小に保つ必要がある場合など）。
 - `stable`
   - : `wrap` と同じ動作になりますが、ユーザーがコンテンツを編集しているときに、テキストブロック全体が折り返されるのではなく、編集中の行よりも前の行が静止します。
 
@@ -137,7 +136,7 @@ text-wrap: unset;
 </h2>
 
 <h2 class="balance" contenteditable="true">
-  この場合、この見出しのテキストは各行のバランスがうまくれます。
+  この場合、この見出しのテキストは各行のバランスがうまく取れます。
 </h2>
 ```
 
@@ -180,6 +179,7 @@ h2 {
 
 - {{CSSxRef("white-space")}}
 - {{CSSxRef("white-space-collapse")}}
-- [CSS テキストモジュール](/ja/docs/Web/CSS/CSS_text)
-- [CSS `text-wrap: balance`](https://developer.chrome.com/docs/css-ui/css-text-wrap-balance) (developer.chrome.com)
-- [CSS `text-wrap: pretty`](https://developer.chrome.com/blog/css-text-wrap-pretty/) (developer.chrome.com)
+- [CSS テキストモジュール](/ja/docs/Web/CSS/Guides/Text)
+- [CSS `text-wrap: balance`](https://developer.chrome.com/docs/css-ui/css-text-wrap-balance) - developer.chrome.com (2023)
+- [CSS `text-wrap: pretty`](https://developer.chrome.com/blog/css-text-wrap-pretty/) - developer.chrome.com (2023)
+- [Balancing Japanese and Korean typography](https://ryelle.codes/2025/04/typography-troubles-balancing-in-japanese-korean/) - Kelly Choyce-Dwan (2025)

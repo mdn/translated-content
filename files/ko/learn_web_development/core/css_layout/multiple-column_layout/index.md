@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/CSS_layout/Multiple-column_Layout
 original_slug: Learn/CSS/CSS_layout/Multiple-column_Layout
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout/Responsive_Design", "Learn_web_development/Core/CSS_layout")}}
 
 CSS 다단 레이아웃 규격은 신문에서 볼 수 있듯이 콘텐츠를 단으로 배치하는 방법을 제공합니다. 이 문서는 그 기능을 어떻게 사용하는지 설명합니다.
 
@@ -481,6 +481,6 @@ body {
 ## 참조 항목
 
 - [CSS 붕괴](/ko/docs/Web/CSS/CSS_Fragmentation)
-- [다단 레이아웃 사용하기](/ko/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
+- [다단 레이아웃 사용하기](/ko/docs/Web/CSS/Guides/Multicol_layout/Using)
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout/Responsive_Design", "Learn_web_development/Core/CSS_layout")}}

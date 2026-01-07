@@ -54,7 +54,7 @@ _固有のメソッドはありません。祖先である {{domxref("CSSRule")}
 - 最後のルールは `CSSNestedDeclaration` オブジェクトであり、スタイルシート内の `color: black` ルールを表します。これは `document.styleSheets[0].cssRules[0].cssRules[1]` で返されます。
 
 > [!NOTE]
-> 最初の `CSSNestedDeclaration` の後のすべての最上位スタイルも、[CSS 入れ子の宣言ルール](/ja/docs/Web/CSS/CSS_nesting/Using_CSS_nesting#入れ子の宣言ルール)に従うために、`CSSNestedDeclaration` オブジェクトとして表現する必要があります。
+> 最初の `CSSNestedDeclaration` の後のすべての最上位スタイルも、[CSS 入れ子の宣言ルール](/ja/docs/Web/CSS/Guides/Nesting/Using#入れ子の宣言ルール)に従うために、`CSSNestedDeclaration` オブジェクトとして表現する必要があります。
 
 ### CSSOM （CSS オブジェクトモデル）
 
@@ -82,4 +82,4 @@ _固有のメソッドはありません。祖先である {{domxref("CSSRule")}
 ## 関連情報
 
 - {{domxref("CSSNestedDeclarations.style")}}
-- [入れ子の宣言ルール](/ja/docs/Web/CSS/CSS_nesting/Using_CSS_nesting#入れ子の宣言ルール)
+- [入れ子の宣言ルール](/ja/docs/Web/CSS/Guides/Nesting/Using#入れ子の宣言ルール)

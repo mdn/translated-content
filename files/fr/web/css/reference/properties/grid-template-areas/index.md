@@ -174,5 +174,5 @@ grid-template-areas: unset;
 - {{cssxref("grid-template-rows")}}
 - {{cssxref("grid-template-columns")}}
 - {{cssxref("grid-template")}}
-- [Guide : les zones des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+- [Guide : les zones des grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)
 - Tutoriel vidéo : [les zones des grilles CSS (en anglais)](https://gridbyexample.com/video/grid-template-areas/)

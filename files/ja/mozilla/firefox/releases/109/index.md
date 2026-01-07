@@ -15,7 +15,7 @@ l10n:
 
 ### CSS
 
-- [`<system-color>`](/ja/docs/Web/CSS/system-color) CSS データ型で、値 [`Mark`](/ja/docs/Web/CSS/system-color#mark)、[`MarkText`](/ja/docs/Web/CSS/system-color#marktext)、[`ButtonBorder`](/ja/docs/Web/CSS/system-color#buttonborder) をサポートしました ([Firefox バグ 1638052](https://bugzil.la/1638052))。
+- [`<system-color>`](/ja/docs/Web/CSS/Reference/Values/system-color) CSS データ型で、値 [`Mark`](/ja/docs/Web/CSS/Reference/Values/system-color#mark)、[`MarkText`](/ja/docs/Web/CSS/Reference/Values/system-color#marktext)、[`ButtonBorder`](/ja/docs/Web/CSS/Reference/Values/system-color#buttonborder) をサポートしました ([Firefox バグ 1638052](https://bugzil.la/1638052))。
 
 ### JavaScript
 

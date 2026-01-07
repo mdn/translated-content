@@ -132,7 +132,7 @@ clip-path: unset;
   - : 클리핑 패스를 생성하지 않습니다.
 
 > [!NOTE]
-> {{cssxref("opacity")}}가 1이 아닌 값일 때와 마찬가지로, **`none`** 외의 계산값은 새로운 [쌓임 맥락](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_context)을 생성합니다.
+> {{cssxref("opacity")}}가 1이 아닌 값일 때와 마찬가지로, **`none`** 외의 계산값은 새로운 [쌓임 맥락](/ko/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)을 생성합니다.
 
 ### 형식 구문
 

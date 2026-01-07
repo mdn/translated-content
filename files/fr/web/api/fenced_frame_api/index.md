@@ -25,7 +25,7 @@ Les éléments `<fencedframe>` visent à résoudre un autre aspect de ce problè
 
 - La communication ne peut pas être partagée entre le contenu du `<fencedframe>` et le site qui l'intègre.
 - Un `<fencedframe>` peut accéder à des données intersites, mais uniquement dans un ensemble très spécifique de circonstances contrôlées qui préservent la vie privée de l'utilisateur·ice.
-- Un `<fencedframe>` ne peut pas être manipulé librement ni voir ses données accessibles via des scripts classiques (par exemple, lecture ou modification de l'URL source). Le contenu d'un `<fencedframe>` ne peut être intégré que via des [API spécifiques](#cas_d'utilisation).
+- Un `<fencedframe>` ne peut pas être manipulé librement ni voir ses données accessibles via des scripts classiques (par exemple, lecture ou modification de l'URL source). Le contenu d'un `<fencedframe>` ne peut être intégré que via des [API spécifiques](#cas_dutilisation).
 - Un `<fencedframe>` ne peut pas accéder au DOM du contexte parent, et le contexte parent ne peut pas accéder au DOM du `<fencedframe>`.
 
 Pour plus d'informations sur le modèle de communication des cadres protégés, consultez le guide [Communication avec les cadres intégrés](/fr/docs/Web/API/Fenced_frame_API/Communication_with_embedded_frames).
@@ -76,7 +76,7 @@ Par exemple, {{domxref("Fence.reportEvent()")}} permet de déclencher l'envoi de
 
 ### Politique d'autorisations
 
-Seules certaines fonctionnalités conçues pour être utilisées dans les `<fencedframe>` peuvent être activées via des politiques d'autorisations définies sur eux&nbsp;; les autres fonctionnalités contrôlées par politique ne sont pas disponibles dans ce contexte. Voir les [Politiques d'autorisations disponibles pour les cadres protégés](/fr/docs/Web/HTML/Reference/Elements/fencedframe#politiques_d'autorisations_disponibles_pour_les_fenced_frames) pour plus de détails.
+Seules certaines fonctionnalités conçues pour être utilisées dans les `<fencedframe>` peuvent être activées via des politiques d'autorisations définies sur eux&nbsp;; les autres fonctionnalités contrôlées par politique ne sont pas disponibles dans ce contexte. Voir les [Politiques d'autorisations disponibles pour les cadres protégés](/fr/docs/Web/HTML/Reference/Elements/fencedframe#politiques_dautorisations_disponibles_pour_les_fenced_frames) pour plus de détails.
 
 ### En-têtes HTTP
 

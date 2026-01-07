@@ -103,7 +103,7 @@ L'élément `<textarea>` gère plusieurs attributs utilisés par les éléments 
 
 ## Interaction avec CSS
 
-Pour CSS, un élément `<textarea>` est [un élément remplacé](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties) qui possède des dimensions intrinsèques (comme une image matricielle). La valeur initiale de la propriété {{cssxref("display")}} pour cet élément est `block`.
+Pour CSS, un élément `<textarea>` est [un élément remplacé](/fr/docs/Web/CSS/Guides/Images/Replaced_element_properties) qui possède des dimensions intrinsèques (comme une image matricielle). La valeur initiale de la propriété {{cssxref("display")}} pour cet élément est `block`.
 
 [Le guide sur la mise en forme des formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms/Styling_web_forms) fournit différentes indications pour mettre en forme les éléments `<textarea>`.
 

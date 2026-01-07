@@ -31,5 +31,5 @@ Les en-têtes sûr pour le CORS doivent également respecter ces critères&nbsp;
 
 - Termes de glossaire associés&nbsp;:
   - {{Glossary("CORS-safelisted response header", "En-tête de réponse sûr pour le CORS")}}
-  - {{Glossary("Forbidden request header", "Nom d'en-tête interdit")}}
+  - {{Glossary("Forbidden request header", "En-tête de requête interdit")}}
   - {{Glossary("Request header", "En-tête de requête")}}

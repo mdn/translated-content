@@ -1,36 +1,37 @@
 ---
 title: "HTMLElement : évènement change"
+short-title: change
 slug: Web/API/HTMLElement/change_event
 l10n:
-  sourceCommit: 8d83c05362120cbba32c165a6b1f76e73ccc9674
+  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
-L'évènement **`change`** est déclenché sur les éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input), [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select) et [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea) lorsque la personne modifie la valeur de l'élément. À la différence de [l'évènement `input`](/fr/docs/Web/API/Element/input_event), l'évènement `change` n'est pas nécessairement déclenché à chaque modification unitaire de la valeur de l'élément.
+L'évènement **`change`** de l'interface {{DOMxRef("HTMLElement")}} est déclenché sur les éléments HTML {{HTMLElement("input")}}, {{HTMLElement("select")}} et {{HTMLElement("textarea")}} lorsque la personne modifie la valeur de l'élément. À la différence de l'évènement {{DOMxRef("Element/input_event", "input")}}, l'évènement `change` n'est pas nécessairement déclenché à chaque modification unitaire de la valeur de l'élément.
 
 Selon le type d'élément modifié et l'interaction avec l'élément, l'évènement `change` pourra se déclencher à un moment différent&nbsp;:
 
-- Quand un élément [`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox) est coché ou décoché (au clic ou au clavier)&nbsp;;
-- Quand un élément [`<input type="radio">`](/fr/docs/Web/HTML/Reference/Elements/input/radio) est sélectionné (mais pas lorsqu'il est désélectionné)&nbsp;;
-- Lorsque l'utilisatrice ou l'utilisateur applique le changement explicitement (par exemple en sélectionnant une valeur dans une liste déroulante [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select) à l'aide du clic de la souris, en sélectionnant une date dans un sélecteur [`<input type="date">`](/fr/docs/Web/HTML/Reference/Elements/input/date), ou en sélectionnant un fichier dans le sélecteur de fichiers [`<input type="file">`](/fr/docs/Web/HTML/Reference/Elements/input/file), etc.)&nbsp;;
-- Lorsque l'élément perd le focus après que la valeur a été changée pour les éléments où il s'agit de saisir une valeur plutôt que d'en sélectionner une, comme [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea) ou les champs tels que [`<input type="text">`](/fr/docs/Web/HTML/Reference/Elements/input/text), [`<input type="search">`](/fr/docs/Web/HTML/Reference/Elements/input/search), [`<input type="url">`](/fr/docs/Web/HTML/Reference/Elements/input/url), [`<input type="tel">`](/fr/docs/Web/HTML/Reference/Elements/input/tel), [`<input type="email">`](/fr/docs/Web/HTML/Reference/Elements/input/email), ou [`<input type="password">`](/fr/docs/Web/HTML/Reference/Elements/input/password).
+- Quand un élément `{{HTMLElement('input/checkbox', '&lt;input type="checkbox"&gt;')}}` est coché ou décoché (au clic ou au clavier)&nbsp;;
+- Quand un élément `{{HTMLElement('input/radio', '&lt;input type="radio"&gt;')}}` est sélectionné (mais pas lorsqu'il est désélectionné)&nbsp;;
+- Lorsque l'utilisateur·ice applique le changement explicitement (par exemple en sélectionnant une valeur dans une liste déroulante {{HTMLElement("select")}} à l'aide du clic de la souris, en sélectionnant une date dans un sélecteur `{{HTMLElement('input/date', '&lt;input type="date"&gt;')}}`, ou en sélectionnant un fichier dans le sélecteur de fichiers `{{HTMLElement('input/file', '&lt;input type="file"&gt;')}}`, etc.)&nbsp;;
+- Lorsque l'élément perd le focus après que la valeur a été changée pour les éléments où il s'agit de saisir une valeur plutôt que d'en sélectionner une, comme {{HTMLElement("textarea")}} ou les champs de type `{{HTMLElement('input/text', 'text')}}`, `{{HTMLElement('input/search', 'search')}}`, `{{HTMLElement('input/url', 'url')}}`, `{{HTMLElement('input/tel', 'tel')}}`, `{{HTMLElement('input/email', 'email')}}`, ou `{{HTMLElement('input/password', 'password')}}` de l'élément HTML {{HTMLElement('input')}}.
 
 La spécification HTML liste [les types d'éléments `<input>` qui devraient déclencher l'évènement `change`](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply).
 
 ## Syntaxe
 
-On utilisera le nom de l'évènement dans des méthodes telles que [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) ou alors on utilisera une propriété globale de gestion d'évènements telle que `onchange`.
+On utilisera le nom de l'évènement dans des méthodes telles que {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou alors on utilisera une propriété globale de gestion d'évènements telle que `onchange`.
 
-```js
-addEventListener("change", (event) => {});
+```js-nolint
+addEventListener("change", (event) => { })
 
-onchange = (event) => {};
+onchange = (event) => { }
 ```
 
 ## Type d'évènement
 
-Un évènement générique de type [`Event`](/fr/docs/Web/API/Event).
+Un évènement générique de type {{DOMxRef("Event")}}.
 
 ## Exemples
 
@@ -80,7 +81,7 @@ selectElement.addEventListener("change", (event) => {
 
 #### Résultat
 
-{{EmbedLiveSample('Avec_un_élément_select', '100%', '75px')}}
+{{EmbedLiveSample('Avec un élément `<select>`', '100%', 75)}}
 
 ### Avec un champ texte
 
@@ -108,7 +109,7 @@ function updateValue(e) {
 
 #### Résultat
 
-{{EmbedLiveSample('Avec_un_champ_texte', '100%', '90px')}}
+{{EmbedLiveSample('Avec un champ texte', '100%', 90)}}
 
 ## Spécifications
 
@@ -117,3 +118,5 @@ function updateValue(e) {
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+Les navigateurs ne sont pas toujours d'accord sur le moment où l'évènement `change` doit être déclenché pour certains types d'interaction. Par exemple, la navigation au clavier dans les éléments HTML {{HTMLElement("select")}} ne déclenchait autrefois jamais d'évènement `change` dans Gecko tant que l'utilisateur·ice n'appuyait pas sur Entrée ou ne déplaçait pas la sélection en dehors du `<select>` (voir le bug [Firefox 126379 <sup>(angl.)</sup>](https://bugzil.la/126379)). Depuis Firefox 63 (Quantum), ce comportement est cependant cohérent entre les principaux navigateurs.

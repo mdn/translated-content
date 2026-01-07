@@ -1,9 +1,8 @@
 ---
 title: font-size
 slug: Web/CSS/Reference/Properties/font-size
-original_slug: Web/CSS/font-size
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
 **`font-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントの大きさを定義します。フォントの大きさを変更すると、フォントの大きさに相対的な {{cssxref("&lt;length&gt;")}} の単位例えば `em`, `ex`, なども更新されます。
@@ -80,10 +79,10 @@ font-size: unset;
 ### 値
 
 - `xx-small`, `x-small`, `small`, `medium`, `large`, `x-large`, `xx-large`, `xxx-large`
-  - : [絶対的なサイズ](/ja/docs/Web/CSS/absolute-size)のキーワードで、ユーザーの既定のフォントサイズ (つまり `medium`) を基準としたものです。
+  - : [絶対的なサイズ](/ja/docs/Web/CSS/Reference/Values/absolute-size)のキーワードで、ユーザーの既定のフォントサイズ (つまり `medium`) を基準としたものです。
 
 - `larger`, `smaller`
-  - : [相対的なサイズ](/ja/docs/Web/CSS/relative-size)のキーワードです。フォントは親要素のフォントサイズから相対的に、上記の絶対的サイズのキーワードで使われている倍率におよそ沿う形で拡大または縮小されます。
+  - : [相対的なサイズ](/ja/docs/Web/CSS/Reference/Values/relative-size)のキーワードです。フォントは親要素のフォントサイズから相対的に、上記の絶対的サイズのキーワードで使われている倍率におよそ沿う形で拡大または縮小されます。
 
 - {{cssxref("&lt;length&gt;")}}
   - : 正の {{cssxref("&lt;length&gt;")}} の値。 (`em` や `ex` などの) フォント相対単位のほとんどは、親要素のフォントサイズに対する相対値です。
@@ -97,7 +96,7 @@ font-size: unset;
 
 - `math`
   - : math 要素の `font-size` プロパティの計算値を、親要素の `font-size` から相対的に決定する際に、[変倍ルール](https://w3c.github.io/mathml-core/#the-math-script-level-property)が適用されます。
-    詳細は、[math-depth](/ja/docs/Web/CSS/math-depth) プロパティを参照してください。
+    詳細は、[math-depth](/ja/docs/Web/CSS/Reference/Properties/math-depth) プロパティを参照してください。
 
 ## 解説
 
@@ -190,9 +189,9 @@ span {
 
 ### ex
 
-`em` の単位と同様に、`ex` の単位を使用して設定された要素の `font-size` は、計算または動的に行われます。全く同じように動作しますが、`ex` の単位を使用して `font-size` プロパティを設定する場合、`font-size` はページで使用されている[最初に利用可能なフォント](https://www.w3.org/TR/css-fonts-3/#first-available-font)の x-height に等しいことを除いては、同じように動作します。数値は、要素の継承された `font-size` と `font-size` の複合体を相対的に乗算します。
+`em` の単位と同様に、`ex` の単位を使用して設定された要素の `font-size` は、計算または動的に行われます。全く同じように動作しますが、`ex` の単位を使用して `font-size` プロパティを設定する場合、`font-size` はページで使用されている[最初に利用可能なフォント](https://drafts.csswg.org/css-fonts/#first-available-font)の x 高 (x-height) に等しいことを除いては、同じように動作します。数値は、要素の継承された `font-size` と `font-size` の複合体を相対的に乗算します。
 
-`ex` などの[フォントに関する長さの単位](https://drafts.csswg.org/css-values-4/#font-relative-length)の詳細な説明はW3C Editor's Draftを参照してください。
+`ex` などの[フォントに関する長さの単位](https://drafts.csswg.org/css-values-4/#font-relative-length)の詳細な説明は W3C Editor's Draft を参照してください。
 
 ## 公式定義
 
@@ -251,4 +250,5 @@ span {
 - {{cssxref("font-weight")}}
 - {{cssxref("math-depth")}}
 - {{cssxref("math-style")}}
+- SVG の {{SVGAttr("font-size")}} 属性
 - [学習: 基本的なテキストとフォントのスタイル設定](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)

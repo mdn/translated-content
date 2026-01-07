@@ -1,12 +1,11 @@
 ---
 title: grid-column
 slug: Web/CSS/Reference/Properties/grid-column
-original_slug: Web/CSS/grid-column
 l10n:
-  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-**`grid-column`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、グリッドアイテムの寸法と{{glossary("grid column", "グリッド列")}}内での位置を指定します。グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}の行の先頭と末尾の端を指定します。
+**`grid-column`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、グリッドアイテムの寸法と{{glossary("grid column", "グリッド列")}}内での位置を指定します。グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}の行の先頭と末尾の端を指定します。
 
 {{InteractiveExample("CSS デモ: grid-column")}}
 
@@ -47,12 +46,12 @@ grid-column: 1 / span 2;
 }
 
 .example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 
 #example-element {
-  background-color: rgba(255, 0, 200, 0.2);
+  background-color: rgb(255 0 200 / 0.2);
   border: 3px solid rebeccapurple;
 }
 ```
@@ -61,8 +60,8 @@ grid-column: 1 / span 2;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`grid-column-end`](/ja/docs/Web/CSS/grid-column-end)
-- [`grid-column-start`](/ja/docs/Web/CSS/grid-column-start)
+- {{cssxref("grid-column-end")}}
+- {{cssxref("grid-column-start")}}
 
 ## 構文
 
@@ -130,7 +129,7 @@ grid-column: unset;
 - `span && [ <integer> || <custom-ident> ]`
   - : グリッドアイテムのグリッド領域の列側の先頭の端が末尾の端から n 行になるように、グリッドアイテムの配置にグリッドスパンを設定します。
 
-    名前が `<custom-ident>` として与えられた場合、その名前の付いた線のみがカウントされます。その名前を持つ線の数が十分おにない場合は、検索方向に対応する明示的グリッドの側にあるすべての暗黙的グリッド線が、この区間をカウントする目的でその名前を持つと仮定されます。
+    名前が `<custom-ident>` として与えられた場合、その名前の付いた線のみがカウントされます。その名前を持つ線の数が十分にない場合は、検索方向に対応する明示的グリッドの側にあるすべての暗黙的グリッド線が、この区間をカウントする目的でその名前を持つと仮定されます。
 
     `<integer>` が省略された場合の既定値は `1` です。負の数や 0 は無効です。
 
@@ -201,5 +200,5 @@ grid-column: unset;
 - {{cssxref("grid-column-start")}}
 - {{cssxref("grid-column-end")}}
 
-- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
 - 動画チュートリアル: _[Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)_

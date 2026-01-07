@@ -93,8 +93,8 @@ CSS の {{CSSXRef(':required')}} および {{CSSXRef(':optional')}} 疑似クラ
 ## 関連情報
 
 - HTML [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性
-- [`:optional` 擬似クラス](/ja/docs/Web/CSS/:optional)
-- [`:required` 擬似クラス](/ja/docs/Web/CSS/:required)
+- [`:optional` 擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/:optional)
+- [`:required` 擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/:required)
 - [`aria-invalid` 属性](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid)
 - [MDN Understanding WCAG, Guideline 3.3 explanations](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.3_%e2%80%94_input_assistance_help_users_avoid_and_correct_mistakes)
 - [Understanding Success Criterion 3.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html)

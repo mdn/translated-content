@@ -6,7 +6,7 @@ l10n:
   sourceCommit: c4a970a5ab72ff68139e27739acae66b97d7e09a
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 Dans cet article, nous verrons certains problèmes fréquents qui se posent entre les différents navigateurs avec JavaScript, et aussi comment les résoudre.
 
@@ -209,7 +209,7 @@ Lorsqu'une application devient de plus en plus complexer et qu'on utilise de plu
 - Pour éviter de charger plus de JavaScript que nécessaire, vous pouvez empaqueter vos scripts dans un seul fichier à l'aide d'un outil comme [Browserify](https://browserify.org/). De façon générale, réduire le nombre de requêtes HTTP permet d'améliorer les performances.
 - Minifiez/compressez vos fichiers avant de les déployer sur votre serveur de production. La minification consiste à compresser l'ensemble du code sur une seule ligne et en renommant certaines des variables pour obtenir un fichier beaucoup plus petit. Le code obtenu est presqu'illisible, mais à ce moment, il est là pour être exécuté plutôt que lu. [`terser`](https://terser.org/) est un exemple d'outil de minification.
 - Lorsque vous utilisez des API, assurez vous de désactiver les fonctionnalités que vous n'utilisez pas. Certains appels d'API ont un impact élevé sur les performances. Par exemple, lors de l'affichage d'un flux vidéo, assurez vous de l'arrêter lorsque la vidéo est hors de la zone d'affichage de la page. De même, si vous suivez la position géographique d'une personne à l'aide d'appels à l'API Geolocation, assurez vous d'arrêter les appels lorsque la personne n'utilise plus le site ou l'application.
-- Les animations peuvent s'avérer coûteuses en performances. De nombreuses bibliothèques JavaScript fournissent des outils d'animation en JavaScript. Toutefois, il est plus efficace d'implémenter des animations avec des fonctionnalités natives comme [les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations) ou [l'API Web Animations](/fr/docs/Web/API/Web_Animations_API).
+- Les animations peuvent s'avérer coûteuses en performances. De nombreuses bibliothèques JavaScript fournissent des outils d'animation en JavaScript. Toutefois, il est plus efficace d'implémenter des animations avec des fonctionnalités natives comme [les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using) ou [l'API Web Animations](/fr/docs/Web/API/Web_Animations_API).
 
 ## Les problèmes de compatibilité entre navigateurs causés par JavaScript
 
@@ -244,7 +244,7 @@ if ("geolocation" in navigator) {
 }
 ```
 
-On pourra écrire un test analogue pour la prise en charge d'une fonctionnalité CSS, en testant l'existence de [`element.style.propriete`](/fr/docs/Web/API/HTMLElement/style) (par exemple `paragraph.style.transform !== undefined`). Si vous souhaitez appliquer des styles selon la prise en charge d'une fonctionnalité CSS, vous pouvez directement utiliser la règle @ [`@supports`](/fr/docs/Web/CSS/@supports). Ainsi, si on souhaite déterminer si le navigateur courant prend en charge les requêtes de conteneur, on pourra écrire&nbsp;:
+On pourra écrire un test analogue pour la prise en charge d'une fonctionnalité CSS, en testant l'existence de [`element.style.propriete`](/fr/docs/Web/API/HTMLElement/style) (par exemple `paragraph.style.transform !== undefined`). Si vous souhaitez appliquer des styles selon la prise en charge d'une fonctionnalité CSS, vous pouvez directement utiliser la règle @ [`@supports`](/fr/docs/Web/CSS/Reference/At-rules/@supports). Ainsi, si on souhaite déterminer si le navigateur courant prend en charge les requêtes de conteneur, on pourra écrire&nbsp;:
 
 ```css
 @supports (container-type: inline-size) {
@@ -413,4 +413,4 @@ Vous pourrez tomber sur de nombreux autres problèmes en JavaScript (comme avec 
 
 Et voilà pour JavaScript. Ce n'est pas si simple, mais cet article devrait vous donner quelques points de départ et idées pour diagnostiquer et résoudre certains problèmes JavaScript que vous pourriez rencontrer à l'avenir.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}

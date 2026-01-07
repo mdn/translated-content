@@ -64,7 +64,7 @@ La propriété `border-radius` ne s'applique pas aux éléments de tableaux lors
 
 ## Propriétés détaillées correspondantes
 
-Cette propriété est une [propriété raccourcie](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties) qui permet de définir&nbsp;:
+Cette propriété est une [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) qui permet de définir&nbsp;:
 
 - [`border-top-left-radius`](/fr/docs/Web/CSS/Reference/Properties/border-top-left-radius),
 - [`border-top-right-radius`](/fr/docs/Web/CSS/Reference/Properties/border-top-right-radius),
@@ -125,7 +125,7 @@ border-radius: unset;
 
 La propriété `border-radius` peut être définie avec&nbsp;:
 
-- Une, deux, trois voire quatre valeurs de longueur ([`<length>`](/fr/docs/Web/CSS/length)) ou de pourcentages ([`<percentage>`](/fr/docs/Web/CSS/percentage)). Ces valeurs sont utilisées pour désigner un rayon de courbure pour chaque angle&nbsp;;
+- Une, deux, trois voire quatre valeurs de longueur ([`<length>`](/fr/docs/Web/CSS/Reference/Values/length)) ou de pourcentages ([`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)). Ces valeurs sont utilisées pour désigner un rayon de courbure pour chaque angle&nbsp;;
 - Puis éventuellement une barre oblique (`/`) suivie d'une, deux, trois ou quatre valeurs de longueur ou de pourcentage qui permettent de définir un rayon de courbure supplémentaire pour créer des coins elliptiques.
 
 ### Valeurs
@@ -188,9 +188,9 @@ La propriété `border-radius` peut être définie avec&nbsp;:
   </tbody>
 </table>
 
-- [`<length>`](/fr/docs/Web/CSS/length)
+- [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)
   - : Cette valeur indique la mesure du rayon de courbure du cercle ou la mesure du demi grand axe ou du demi petit axe de l'ellipse traduisant la courbure. Les valeurs négatives sont considérées comme invalides.
-- [`<percentage>`](/fr/docs/Web/CSS/percentage)
+- [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)
   - : Cette valeur traduit la mesure du rayon de courbure (elliptique ou circulaire) exprimée en pourcentages par rapport à la taille de la boîte. Les rayons verticaux sont donc proportionnels à la hauteur de la boîte et les rayons horizontaux proportionnels à la largeur de la boîte. Les valeurs négatives sont considérées comme invalides.
 
 Ainsi&nbsp;:

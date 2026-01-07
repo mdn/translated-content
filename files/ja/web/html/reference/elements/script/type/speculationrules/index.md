@@ -98,7 +98,7 @@ JSON 構造は最上位のレベルに 1 つ以上のフィールドを格納し
     - `"relative_to"`
       - : `"href_matches"` 条件の場合、この条件を一致させる場所を相対的に指定します。これは、[ルールレベルの `"relative_to"` キー](#relative_to_2)と同様に動作しますが、 `"where"` キー内の単一の `"href_matches"` 条件のみに影響を与えます。
     - `"selector_matches"`
-      - : [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)を含む文字列、または複数の CSS セレクターを含む配列。これらのセレクターに一致する文書内のリンクにルールが適用されます。
+      - : [CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors)を含む文字列、または複数の CSS セレクターを含む配列。これらのセレクターに一致する文書内のリンクにルールが適用されます。
     - `"and"`
       - : 条件（`"href_matches"`、`"selector_matches"`、`"and"`、`"not"`、`"or"` のいずれか）を含む 1 つ以上のオブジェクトを含む配列で、すべてが一致しなければルールが適用されません。
     - `"not"`

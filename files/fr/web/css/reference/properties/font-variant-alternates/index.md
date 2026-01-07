@@ -6,7 +6,7 @@ original_slug: Web/CSS/font-variant-alternates
 
 {{CSSRef}}
 
-La propriété CSS **`font-variant-alternates`** contrôle l'utilisation de glyphes alternatifs. Ces glyphes peuvent être référencés par les noms définis avec la règle @ [`@font-feature-values`](/fr/docs/Web/CSS/@font-feature-values).
+La propriété CSS **`font-variant-alternates`** contrôle l'utilisation de glyphes alternatifs. Ces glyphes peuvent être référencés par les noms définis avec la règle @ [`@font-feature-values`](/fr/docs/Web/CSS/Reference/At-rules/@font-feature-values).
 
 ```css
 /* Valeurs avec un mot-clé */
@@ -30,7 +30,7 @@ font-variant-alternates: revert-layer;
 font-variant-alternates: unset;
 ```
 
-La règle @ [`@font-feature-values`](/fr/docs/Web/CSS/@font-feature-values) définit les noms associés aux valeurs OpenType pour les différentes fonctions de glyphes alternatifs (`stylistic`, `styleset`, `character-variant`, `swash`, `ornament` ou `annotation`). Ces propriétés permettent d'utiliser des noms adaptés (définis avec [`@font-feature-values`](/fr/docs/Web/CSS/@font-feature-values)) dans la feuille de styles.
+La règle @ [`@font-feature-values`](/fr/docs/Web/CSS/Reference/At-rules/@font-feature-values) définit les noms associés aux valeurs OpenType pour les différentes fonctions de glyphes alternatifs (`stylistic`, `styleset`, `character-variant`, `swash`, `ornament` ou `annotation`). Ces propriétés permettent d'utiliser des noms adaptés (définis avec [`@font-feature-values`](/fr/docs/Web/CSS/Reference/At-rules/@font-feature-values)) dans la feuille de styles.
 
 ## Syntaxe
 
@@ -122,4 +122,4 @@ Ne fait partie d'aucun standard.
 - [`font-variant-east-asian`](/fr/docs/Web/CSS/Reference/Properties/font-variant-east-asian)
 - [`font-variant-ligatures`](/fr/docs/Web/CSS/Reference/Properties/font-variant-ligatures)
 - [`font-variant-numeric`](/fr/docs/Web/CSS/Reference/Properties/font-variant-numeric)
-- [`@font-feature-values`](/fr/docs/Web/CSS/@font-feature-values)
+- [`@font-feature-values`](/fr/docs/Web/CSS/Reference/At-rules/@font-feature-values)

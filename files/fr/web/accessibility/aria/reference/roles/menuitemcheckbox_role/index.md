@@ -105,7 +105,7 @@ Si le `menuitemcheckbox` se trouve dans un sous-menu dans une `menubar` ou un me
 
 [`tabindex="-1"`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) rend le `menuitemcheckbox` sélectionnable mais pas partie de la séquence de tabulation de la page. Si nous avions inclus `aria-checked="true"` cela aurait indiqué que le `menuitemcheckbox` était coché, et nous aurions stylisé visuellement l'état sélectionné pour qu'il ressemble à un état coché en utilisant le sélecteur d'attribut `[role='menuitemcheckbox'][aria-checked='true']`. Au lieu de cela, la présence de `aria-checked="false"` indique aux technologies d'assistance que le `menuitemcheckbox` est sélectionnable mais pas actuellement coché. Le nom accessible «&nbsp;violet&nbsp;» provient du contenu.
 
-L'apparence visuelle de l'état sélectionné est une case à cocher cochée que nous pouvons créer en utilisant [le contenu généré](/fr/docs/Web/CSS/CSS_generated_content), la rendant visible et de la même couleur que le contenu en synchronisant avec la valeur `aria-checked` en utilisant les [sélecteurs d'attributs CSS](/fr/docs/Web/CSS/Attribute_selectors) et en [héritant](/fr/docs/Web/CSS/inherit) la couleur.
+L'apparence visuelle de l'état sélectionné est une case à cocher cochée que nous pouvons créer en utilisant [le contenu généré](/fr/docs/Web/CSS/Guides/Generated_content), la rendant visible et de la même couleur que le contenu en synchronisant avec la valeur `aria-checked` en utilisant les [sélecteurs d'attributs CSS](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) et en [héritant](/fr/docs/Web/CSS/Reference/Values/inherit) la couleur.
 
 ```css
 [role="menuitemcheckbox"]::before {

@@ -61,7 +61,7 @@ border-image: repeating-linear-gradient(30deg, #4d9f0c, #9198e5, #4d9f0c 20px)
 
 ## Propriétés détaillées correspondantes
 
-C'est [une propriété raccourcie](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties) qui permet de définir&nbsp;:
+C'est [une propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) qui permet de définir&nbsp;:
 
 - [`border-image-outset`](/fr/docs/Web/CSS/Reference/Properties/border-image-outset)
 - [`border-image-repeat`](/fr/docs/Web/CSS/Reference/Properties/border-image-repeat)
@@ -95,7 +95,7 @@ border-image: unset;
 La propriété `border-image` peut être définie avec une à cinq valeurs parmi celles définies ci-après.
 
 > [!NOTE]
-> Si la [valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing) de [`border-image-source`](/fr/docs/Web/CSS/Reference/Properties/border-image-source) vaut `none` ou si l'image ne peut pas être affichée, c'est le [`border-style`](/fr/docs/Web/CSS/Reference/Properties/border-style) correspondant qui sera affiché.
+> Si la [valeur calculée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing) de [`border-image-source`](/fr/docs/Web/CSS/Reference/Properties/border-image-source) vaut `none` ou si l'image ne peut pas être affichée, c'est le [`border-style`](/fr/docs/Web/CSS/Reference/Properties/border-style) correspondant qui sera affiché.
 
 ### Valeurs
 

@@ -39,7 +39,7 @@ Vous devrez avoir des connaissances en [HTTP](/fr/docs/Web/HTTP) ou être prêt 
 - Rédigez un texte sur le nouvel en-tête HTTP.
 - Assurez-vous d'avoir les sections suivantes&nbsp;:
   - Texte d'introduction dont la première phrase mentionne le nom de l'en-tête (en gras) et résume son objectif.
-  - - Une boîte d'information contenant au moins le type d'en-tête et si l'en-tête est un [nom d'en-tête interdit](/fr/docs/Glossary/Forbidden_request_header).
+  - Une boîte d'information contenant au moins le type d'en-tête et si l'en-tête est un {{Glossary("Forbidden_request_header", "en-tête de requête interdit")}}.
   - Un encart syntaxique contenant toutes les directives/paramètres/valeurs possibles de l'en-tête HTTP.
   - Une section expliquant ces directives/valeurs.
   - Une section d'exemples qui contient un cas d'utilisation pratique pour cet en-tête ou qui montre où et comment il se produit habituellement.

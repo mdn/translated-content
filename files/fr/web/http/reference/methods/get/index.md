@@ -2,7 +2,6 @@
 title: Méthode de requête GET
 short-title: GET
 slug: Web/HTTP/Reference/Methods/GET
-original_slug: Web/HTTP/Methods/GET
 l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---

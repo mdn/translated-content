@@ -1,9 +1,8 @@
 ---
 title: text-spacing-trim
 slug: Web/CSS/Reference/Properties/text-spacing-trim
-original_slug: Web/CSS/text-spacing-trim
 l10n:
-  sourceCommit: 2b26cc6e576d23f68fdf992767da81de9707965e
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{seecompattable}}
@@ -41,7 +40,7 @@ text-spacing-trim: unset;
       - : `normal` と同様に動作しますが、 CJK 全角の開始用約物文字が各行の先頭に来た場合には半角幅で設定します。
 
     > [!NOTE]
-    > [CSS テキスト](/ja/docs/Web/CSS/CSS_text)モジュールは、 `trim-both`, `trim-all`, `auto` の値も定義しています。しかし、今のところどのブラウザーでも実装されていません。.
+    > [CSS テキスト](/ja/docs/Web/CSS/Guides/Text)モジュールは、 `trim-both`, `trim-all`, `auto` の値も定義しています。しかし、今のところどのブラウザーでも実装されていません。.
 
 ## 解説
 
@@ -171,5 +170,6 @@ p {
 
 ## 関連情報
 
-- [`ic`](/ja/docs/Web/CSS/CSS_values_and_units#local_font-relative_lengths) および [`ric`](/ja/docs/Web/CSS/CSS_values_and_units#root_font-relative_lengths) の単位
-- [CSS テキスト](/ja/docs/Web/CSS/CSS_text)モジュール
+- {{CSSXref("text-autospace")}}
+- [`ic`](/ja/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#ローカルフォント相対長) および [`ric`](/ja/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#ルートフォント相対長) 単位
+- [CSS テキスト](/ja/docs/Web/CSS/Guides/Text)モジュール

@@ -7,7 +7,7 @@ l10n:
 
 {{learnsidebar}}
 
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout/Fundamental_layout_comprehension", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_Design", "Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension", "Learn_web_development/Core/CSS_layout")}}
 
 **CSS メディアクエリー** (CSS Media Query) を使用すると、例えば、「ビューポートは 480 ピクセルよりも広い」というような、ブラウザーとデバイスの環境が指定したルールに一致する場合にのみ CSS を適用できます。 メディアクエリーは、ビューポートのサイズに応じて異なるレイアウトを作成できるため、レスポンシブウェブデザイン (responsive web design) の重要な部分ですが、例えば、ユーザーはマウスではなくタッチパネルを使用しているというような、サイトが実行されている環境に関する他のものを検出するためにも使用できます。
 
@@ -128,7 +128,7 @@ l10n:
 
 実際には、レスポンシブデザインでは最小値または最大値を使用する方がはるかに便利であるため、`width` または `height` を単独で使用することはほとんどありません。
 
-テストできるメディア特性は他にも多数ありますが、メディアクエリー仕様のレベル 4 および 5 で導入された新しい特性の一部は、ブラウザーの対応が限定的です。各特性は、ブラウザー対応情報とともに MDN で文書化されていて、完全なリストは、[メディアクエリーの使用: 構文](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#構文)で見ることができます。
+テストできるメディア特性は他にも多数ありますが、メディアクエリー仕様のレベル 4 および 5 で導入された新しい特性の一部は、ブラウザーの対応が限定的です。各特性は、ブラウザー対応情報とともに MDN で文書化されていて、完全なリストは、[メディアクエリーの使用: 構文](/ja/docs/Web/CSS/Guides/Media_queries/Using#構文)で見ることができます。
 
 #### 画面の方向
 
@@ -586,4 +586,4 @@ body {
 
 さて、このモジュールの終わりも間近です。最後に、理解度を検査する課題を皆さんにあげましょう。
 
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout/Fundamental_layout_comprehension", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_Design", "Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension", "Learn_web_development/Core/CSS_layout")}}

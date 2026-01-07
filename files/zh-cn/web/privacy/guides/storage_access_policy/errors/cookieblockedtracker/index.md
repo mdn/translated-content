@@ -2,7 +2,7 @@
 title: "Blocked: Storage access requests from trackers"
 slug: Web/Privacy/Guides/Storage_Access_Policy/Errors/CookieBlockedTracker
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: ab458cefeb4e268c9298e1c6b8119c80397dc9ef
 ---
 
 由于浏览器识别到该请求来自跟踪器，且内容阻止功能已启用，因此访问 Cookie 或存储的请求被阻止。
@@ -21,7 +21,7 @@ Firefox：
 
 - 前往*设置 > 隐私与安全 > 增强型跟踪保护*，然后
   - 使用*管理例外*…按钮添加例外
-  - 选择*自定义*内容阻止，并取消勾选*跟踪性内容*复选框
+  - 选择*自定义*内容阻止选项，并取消勾选*跟踪性内容*复选框
 
 如果被阻止的资源不需要身份验证，你可以通过向相关元素添加 `crossorigin="anonymous"` 属性来修复警告消息。
 

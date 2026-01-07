@@ -74,7 +74,7 @@ mask-position: unset;
 
 それぞれの `mask-position` は、関連付けられた {{cssxref("mask-origin")}} 値に対する関連付けられたマスクレイヤーの位置を定義します。 `mask-origin` プロパティの値は、同様に `mask-image` の値と順番に照合され、余分な `mask-position` 値は使用されないか、 `mask-position` 値の数が `mask-origin` 値よりも少ない場合は繰り返されます。したがって、各マスクレイヤーには、関連付けられた `mask-origin` および `mask-position` 値が存在します。
 
-`mask-origin` が設定されていない場合、値は既定で `padding-box` になります。これは、各 `mask-position` の原点が要素の[パディングボックス](/ja/docs/Web/CSS/box-edge#padding-box)であることを意味しています。
+`mask-origin` が設定されていない場合、値は既定で `padding-box` になります。これは、各 `mask-position` の原点が要素の[パディングボックス](/ja/docs/Web/CSS/Reference/Values/box-edge#padding-box)であることを意味しています。
 
 ### 単一値の構文
 
@@ -90,7 +90,7 @@ mask-position: unset;
 
 #### パーセント値
 
-{{cssxref("&lt;percentage&gt;")}} 値は、コンテナーの幅に対するマスクの水平位置の値を、左端を基準として表します。ただし、オフセットはマスクの端からボックスの端までの距離ではありません。マスク画像の寸法は[コンテナーの寸法から差し引かれます](/ja/docs/Web/CSS/background-position#regarding_percentages)、そしてその結果の値のパーセント値が、ボックスの左端からの直接のオフセットとして使用されます。これは、 [`background-position` のパーセント値](/ja/docs/Web/CSS/background-position#regarding_percentages)と同じです。
+{{cssxref("&lt;percentage&gt;")}} 値は、コンテナーの幅に対するマスクの水平位置の値を、左端を基準として表します。ただし、オフセットはマスクの端からボックスの端までの距離ではありません。マスク画像の寸法は[コンテナーの寸法から差し引かれます](/ja/docs/Web/CSS/Reference/Properties/background-position#regarding_percentages)、そしてその結果の値のパーセント値が、ボックスの左端からの直接のオフセットとして使用されます。これは、 [`background-position` のパーセント値](/ja/docs/Web/CSS/Reference/Properties/background-position#regarding_percentages)と同じです。
 
 算出式は次のとおりです。
 
@@ -177,6 +177,6 @@ div {
 - {{cssxref("mask-repeat")}}
 - {{cssxref("mask-size")}}
 - {{cssxref("mask")}} 一括指定
-- [CSS マスク](/ja/docs/Web/CSS/CSS_masking)モジュール
+- [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール
 - {{cssxref("background-position")}}
 - {{cssxref("&lt;position&gt;")}}

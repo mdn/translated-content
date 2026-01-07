@@ -50,7 +50,7 @@ Cette propriété est une version standard de la propriété [`-ms-high-contrast
 
 Dans l'exemple ci-dessous, la première boîte utilise le jeu de couleur définit par l'utilisateur. Par exemple, dans le mode à forts contrastes sombre de Windows, cela donnera du texte blanc sur fond noir. La seconde boîte conservera quant à elle les couleurs du site définies par la classe `.box`.
 
-En utilisant la fonctionnalité média [`forced-colors`](/fr/docs/Web/CSS/@media/forced-colors), vous pouvez ajouter n'importe qu'elle autre optimisation pour le mode de couleurs forcées aux côtés de la propriété `forced-color-adjust`.
+En utilisant la fonctionnalité média [`forced-colors`](/fr/docs/Web/CSS/Reference/At-rules/@media/forced-colors), vous pouvez ajouter n'importe qu'elle autre optimisation pour le mode de couleurs forcées aux côtés de la propriété `forced-color-adjust`.
 
 #### CSS
 
@@ -98,7 +98,7 @@ En utilisant la fonctionnalité média [`forced-colors`](/fr/docs/Web/CSS/@media
 
 ## Voir aussi
 
-- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
+- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/Guides/Colors/Applying_color)
 - <i lang="en">Styling for Windows high contrast with standards for forced colors</i>
 
   [<i lang="en">Styling for Windows high contrast with standards for forced colors</i> (en anglais)](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/)

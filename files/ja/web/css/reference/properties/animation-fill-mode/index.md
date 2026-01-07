@@ -1,12 +1,13 @@
 ---
 title: animation-fill-mode
 slug: Web/CSS/Reference/Properties/animation-fill-mode
-original_slug: Web/CSS/animation-fill-mode
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`animation-fill-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 CSS アニメーションの実行の前後にどう対象にスタイルを適用するかを設定します。
+
+アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxref("animation")}} を使用すると便利です。
 
 {{InteractiveExample("CSS デモ: animation-fill-mode")}}
 
@@ -32,7 +33,7 @@ animation-delay: 1s;
 
 ```html interactive-example
 <section class="flex-column" id="default-example">
-  <div>アニメーション<span id="playstatus"></span></div>
+  <div>アニメーション<span id="play-status"></span></div>
   <div id="example-element">モードを選択すると開始します！</div>
 </section>
 ```
@@ -43,7 +44,7 @@ animation-delay: 1s;
   color: white;
   margin: auto;
   margin-left: 0;
-  border: 5px solid #333;
+  border: 5px solid #333333;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -54,7 +55,7 @@ animation-delay: 1s;
   flex-direction: column;
 }
 
-#playstatus {
+#play-status {
   font-weight: bold;
 }
 
@@ -77,44 +78,38 @@ animation-delay: 1s;
 ```
 
 ```js interactive-example
-"use strict";
+const el = document.getElementById("example-element");
+const status = document.getElementById("play-status");
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const status = document.getElementById("playstatus");
-
-  function update() {
-    status.textContent = "待機中";
-    el.className = "";
+function update() {
+  status.textContent = "待機中";
+  el.className = "";
+  window.requestAnimationFrame(() => {
     window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        el.className = "animating";
-      });
+      el.className = "animating";
     });
-  }
-
-  el.addEventListener("animationstart", () => {
-    status.textContent = "動作中";
   });
+}
 
-  el.addEventListener("animationend", () => {
-    status.textContent = "完了";
-  });
+el.addEventListener("animationstart", () => {
+  status.textContent = "動作中";
+});
 
-  const observer = new MutationObserver(() => {
-    update();
-  });
+el.addEventListener("animationend", () => {
+  status.textContent = "完了";
+});
 
-  observer.observe(el, {
-    attributes: true,
-    attributeFilter: ["style"],
-  });
-
+const observer = new MutationObserver(() => {
   update();
 });
-```
 
-アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxref("animation")}} を使用すると便利です。
+observer.observe(el, {
+  attributes: true,
+  attributeFilter: ["style"],
+});
+
+update();
+```
 
 ## 構文
 
@@ -142,7 +137,7 @@ animation-fill-mode: unset;
 - `none`
   - : アニメーションが実行されていない時は、対象にスタイルを適用しません。要素は適用されているその他の CSS 規則を使用して表示されます。これが既定値です。
 - `forwards`
-  - : 対象は実行の最後の[キーフレーム](/ja/docs/Web/CSS/@keyframes)で設定された計算値を保持します。最後のキーフレームは {{cssxref("animation-direction")}} と {{cssxref("animation-iteration-count")}} の値によって変わります。
+  - : 対象は実行の最後の[キーフレーム](/ja/docs/Web/CSS/Reference/At-rules/@keyframes)で設定された計算値を保持します。最後のキーフレームは {{cssxref("animation-direction")}} と {{cssxref("animation-iteration-count")}} の値によって変わります。
 
     | `animation-direction` | `animation-iteration-count` | 最後のキーフレーム |
     | --------------------- | --------------------------- | ------------------ |
@@ -153,10 +148,10 @@ animation-fill-mode: unset;
     | `alternate-reverse`   | 偶数                        | `100%` または `to` |
     | `alternate-reverse`   | 奇数                        | `0%` または `from` |
 
-    アニメーションするプロパティは、設定された [`will-change`](/ja/docs/Web/CSS/will-change) プロパティの値に含められたかのように動作します。アニメーション中に新しい重ね合わせコンテキストが作成された場合、アニメーションが完了した後も、対象要素は重ね合わせコンテキストを保持します。
+    アニメーションするプロパティは、設定された {{cssxref("will-change")}} プロパティの値に含められたかのように動作します。アニメーション中に新しい重ね合わせコンテキストが作成された場合、アニメーションが完了した後も、対象要素は重ね合わせコンテキストを保持します。
 
 - `backwards`
-  - : アニメーションは最初の適切な[キーフレーム](/ja/docs/Web/CSS/@keyframes)で定義された値を対象に適用されると同時に適用し、 {{cssxref("animation-delay")}} の期間これを保持します。最初の適切なキーフレームは、 {{cssxref("animation-direction")}} の値によって変わります。
+  - : アニメーションは最初の適切な[キーフレーム](/ja/docs/Web/CSS/Reference/At-rules/@keyframes)で定義された値を対象に適用されると同時に適用し、 {{cssxref("animation-delay")}} の期間これを保持します。最初の適切なキーフレームは、 {{cssxref("animation-direction")}} の値によって変わります。
 
     | `animation-direction`                | 最初の適切なキーフレーム |
     | ------------------------------------ | ------------------------ |
@@ -167,10 +162,10 @@ animation-fill-mode: unset;
   - : アニメーションは forwards と backwards の両方の既定に従います。よって、アニメーションの設定は実行前と実行後の両方に適用されます。
 
 > [!NOTE]
-> `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
+> `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/Guides/Animations/Using#複数のアニメーションプロパティ値の設定) を参照してください。
 
 > [!NOTE]
-> `animation-fill-mode` は [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を作成するときに、通常の時間ベースのアニメーションと同じ効果があります。
+> `animation-fill-mode` は [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)を作成するときに、通常の時間ベースのアニメーションと同じ効果があります。
 
 ## 公式定義
 
@@ -200,7 +195,7 @@ animation-fill-mode: unset;
 
 ```css
 .demo {
-  border-top: 100px solid #ccc;
+  border-top: 100px solid #cccccc;
   height: 300px;
 }
 
@@ -229,7 +224,7 @@ animation-fill-mode: unset;
 
 {{EmbedLiveSample('Setting fill mode',700,300)}}
 
-これ以外の例は [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)を参照してください。
+これ以外の例は [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations/Using)を参照してください。
 
 ## 仕様書
 
@@ -241,6 +236,6 @@ animation-fill-mode: unset;
 
 ## 関連情報
 
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)
 - JavaScript の {{domxref("AnimationEvent")}} API
 - その他のアニメーション関連プロパティ: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timeline")}}, {{cssxref("animation-timing-function")}}

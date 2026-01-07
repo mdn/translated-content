@@ -4,8 +4,6 @@ slug: Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server
 original_slug: Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
-
 Cet article illustre comment publier votre site en ligne grâce à des outils {{Glossary("FTP")}}.
 
 <table class="standard-table">
@@ -13,25 +11,26 @@ Cet article illustre comment publier votre site en ligne grâce à des outils {{
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Vous devriez au préalable comprendre
-        <a href="/fr/Apprendre/Qu_est-ce_qu_un_serveur_web"
+        Vous devez savoir
+        <a href="/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server"
           >ce qu'est un serveur web</a
         >
         et
-        <a href="/fr/Apprendre/Comprendre_noms_de_domaine"
-          >comment fonctionnent les noms de domaines</a
-        >. Vous devriez également savoir
-        <a href="/fr/Apprendre/Set_up_a_basic_working_environment"
-          >mettre en place un environnement simple de développement web</a
+        <a href="/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name"
+          >comment fonctionnent les noms de domaine</a
+        >. Vous devez aussi savoir
+        <a
+          href="/fr/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server"
+          >comment configurer un environnement de base</a
         >
-        et savoir comment
-        <a href="/fr/Apprendre/HTML/Write_a_simple_page_in_HTML"
-          >écrire une page web simple</a
+        et
+        <a href="/fr/docs/Learn_web_development/Getting_started/Your_first_website"
+          >comment écrire une page web simple</a
         >.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectifs&nbsp;:</th>
+      <th scope="row">Objectifs d'apprentissage&nbsp;:</th>
       <td>
         Apprendre à envoyer des fichiers vers un serveur en utilisant FTP.
       </td>
@@ -52,7 +51,7 @@ _Il n'y a, pour le moment, pas d'élément de pédagogie active pour cette secti
 Il existe de nombreux clients FTP. Dans cette démonstration, nous utiliserons FireFTP. Celui-ci est simple à installer avec Firefox car [c'est un module complémentaire](https://addons.mozilla.org/firefox/addon/fireftp/).
 
 > [!NOTE]
-> Il existe de nombreuses autres options, voir [les outils de publications : les clients FTP](/fr/docs/Apprendre/How_much_does_it_cost#publishing_tools.3a_ftp_client) pour plus d'informations.
+> Il existe de nombreuses autres options, voir [les outils de publications : les clients FTP](/fr/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#publier_des_outils) pour plus d'informations.
 
 Pour ouvrir FireFTP dans un nouvel onglet de Firefox, il existe deux méthodes :
 
@@ -131,7 +130,3 @@ Le protocole FTP est l'une des méthodes les plus répandues pour publier un sit
 - **GitHub** (méthode avancée). Il est possible de transférer des fichiers grâce à {{Glossary("git")}} en utilisant des combinaison de méthodes qui sont liées aux opérations de commit/push. Pour plus d'informations, voir l'article sur [comment publier son site web](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website) qui fait partie du guide [Commencer avec le Web](/fr/docs/Learn_web_development/Getting_started/Your_first_website).
 - **{{Glossary("Rsync")}}** (méthode avancée). Un système de synchronisation de fichiers entre un système local et un système distant.
 - **{{Glossary("WebDAV")}}**. Une extension du protocle {{Glossary("HTTP")}} qui permet de gérer des fichiers de façon plus avancée.
-
-## Prochaines étapes
-
-Félicitations, vous avez presque fini. Il reste encore une dernière étape importante : [vérifier que votre site fonctionne correctement](/fr/docs/Apprendre/Checking_that_your_web_site_is_working_properly).

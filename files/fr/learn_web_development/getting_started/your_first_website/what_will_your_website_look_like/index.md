@@ -62,7 +62,7 @@ Ensuite, prenez un crayon et du papier et faites une esquisse de l'apparence sou
 
 Choisissons une couleur d'arrière-plan pour votre page.
 
-1. Rendez-vous sur [le sélecteur de couleurs](/fr/docs/Web/CSS/CSS_colors/Color_format_converter) et trouvez une couleur qui vous plaît.
+1. Rendez-vous sur [le sélecteur de couleurs](/fr/docs/Web/CSS/Guides/Colors/Color_format_converter) et trouvez une couleur qui vous plaît.
 2. Lorsque vous choisissez une couleur, vous verrez un étrange code à six caractères comme `#660066`. C'est ce qu'on appelle un _code hex_ (abréviation de hexadécimal), et il représente votre couleur. Copiez ce code dans un endroit sûr pour l'instant.
 
 ![Outil de conversion de format de couleur sur le site MDN Docs](color_format_converter.jpg)

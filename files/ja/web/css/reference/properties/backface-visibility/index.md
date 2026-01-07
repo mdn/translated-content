@@ -1,9 +1,8 @@
 ---
 title: backface-visibility
 slug: Web/CSS/Reference/Properties/backface-visibility
-original_slug: Web/CSS/backface-visibility
 l10n:
-  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`backface-visibility`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素がユーザーに対して裏側を向いたときに、裏面を可視にするかどうかを設定します。
@@ -50,7 +49,7 @@ backface-visibility: hidden;
   height: 100%;
   position: absolute;
   backface-visibility: inherit;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgb(0 0 0 / 0.4);
   font-size: 60px;
   color: white;
 }
@@ -60,23 +59,23 @@ backface-visibility: hidden;
 }
 
 .back {
-  background: rgb(230, 0, 0);
+  background: rgb(230 0 0);
   color: white;
   transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgb(0 0 0 / 0.6);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgb(0 0 0 / 0.6);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
 
-要素の裏面は表面の鏡像です。裏面は二次元では可視ではありませんが、三次元空間で要素に回転変換が行われたときに、背面を見ることができます。 (このプロパティは、視点を持たない二次元の座標変換では効果がありません。)
+要素の裏面は表面の鏡像です。裏面は 2 次元では可視ではありませんが、3 次元空間で要素に回転変換が行われたときに、背面を見ることができます。（このプロパティは、視点を持たない 2 次元の座標変換では効果がありません。）
 
 ## 構文
 
@@ -118,43 +117,46 @@ backface-visibility: unset;
 
 #### HTML
 
-```html
+```html-nolint
 <table>
-  <tr>
-    <th><code>backface-visibility: visible;</code></th>
-    <th><code>backface-visibility: hidden;</code></th>
-  </tr>
-  <tr>
-    <td>
-      <div class="container">
-        <div class="cube showbf">
-          <div class="face front">1</div>
-          <div class="face back">2</div>
-          <div class="face right">3</div>
-          <div class="face left">4</div>
-          <div class="face top">5</div>
-          <div class="face bottom">6</div>
+  <thead>
+    <tr>
+      <th><code>backface-visibility: visible;</code></th>
+      <th><code>backface-visibility: hidden;</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <div class="container">
+          <div class="cube show-bf">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
         </div>
-      </div>
-      <p>
-        すべての面が透明であり、裏面 (2, 4, 5) が表面 (1, 3, 6)
-        を通して表示されます。
-      </p>
-    </td>
-    <td>
-      <div class="container">
-        <div class="cube hidebf">
-          <div class="face front">1</div>
-          <div class="face back">2</div>
-          <div class="face right">3</div>
-          <div class="face left">4</div>
-          <div class="face top">5</div>
-          <div class="face bottom">6</div>
+        <p>
+          すべての面が透明であり、裏面 (2, 4, 5) が表面 (1, 3, 6) を通して表示されます。
+        </p>
+      </td>
+      <td>
+        <div class="container">
+          <div class="cube hide-bf">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
         </div>
-      </div>
-      <p>背後の3面 (2, 4, 5) は非表示です。</p>
-    </td>
-  </tr>
+        <p>背後の3面 (2, 4, 5) は非表示です。</p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -162,11 +164,11 @@ backface-visibility: unset;
 
 ```css
 /* 「立方体」の 3 つの背面を表示または非表示にするクラス */
-.showbf div {
+.show-bf div {
   backface-visibility: visible;
 }
 
-.hidebf div {
+.hide-bf div {
   backface-visibility: hidden;
 }
 
@@ -201,33 +203,33 @@ backface-visibility: unset;
 
 /* 方向に基づいてそれぞれの面を設定 */
 .front {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgb(0 0 0 / 30%);
   transform: translateZ(50px);
 }
 
 .back {
-  background: rgba(0, 255, 0, 1);
+  background: lime;
   color: black;
   transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(196, 0, 0, 0.7);
+  background: rgb(196 0 0 / 70%);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0, 0, 196, 0.7);
+  background: rgb(0 0 196 / 70%);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(196, 196, 0, 0.7);
+  background: rgb(196 196 0 / 70%);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(196, 0, 196, 0.7);
+  background: rgb(196 0 196 / 70%);
   transform: rotateX(-90deg) translateZ(50px);
 }
 
@@ -257,4 +259,4 @@ td {
 
 ## 関連情報
 
-- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [CSS 座標変換の使用](/ja/docs/Web/CSS/Guides/Transforms/Using)

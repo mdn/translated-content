@@ -37,20 +37,20 @@ La fonction [evaluate](/fr/docs/Web/API/Document/evaluate) prend cinq arguments 
 
 <!---->
 
-- [Créée](#impl.c3.a9mentation_d.27un_r.c3.a9solveur_d.27espaces_de_nommage_par_d.c3.a9faut) à l'aide de la méthode [`createNSResolver`](/fr/docs/Web/API/Document/createNSResolver) d'un objet [`XPathEvaluator`](http://www.xulplanet.com/references/objref/XPathEvaluator.html). C'est la solution à utiliser à peu près tout le temps.
+- [Créée](#implémentation_dun_résolveur_despaces_de_nommage_par_défaut) à l'aide de la méthode [`createNSResolver`](/fr/docs/Web/API/Document/createNSResolver) d'un objet [`XPathEvaluator`](http://www.xulplanet.com/references/objref/XPathEvaluator.html). C'est la solution à utiliser à peu près tout le temps.
 - Une valeur `null`, qui peut être utilisé pour les documents HTML ou lorsqu'aucun préfixe n'est utilisé. Remarquez que si l'expression `xpathExpression` contient un préfixe d'espace de nommage cela déclenchera une exception `DOMException` portant le code `NAMESPACE_ERR`.
-- Une fonction personnalisée définie par l'utilisateur. Voir la section [Implémentation d'un résolveur d'espace de nommage personnalisé](#impl.c3.a9mentation_d.27un_r.c3.a9solveur_d.27espace_de_nommage_personnalis.c3.a9) dans l'annexe pour plus de détails.
+- Une fonction personnalisée définie par l'utilisateur. Voir la section [Implémentation d'un résolveur d'espace de nommage personnalisé](#implémentation_dun_résolveur_despace_de_nommage_personnalisé) dans l'annexe pour plus de détails.
 
 <!---->
 
 - `resultType`
-  - : Une [constante](#constantes_d.c3.a9finies_de_xpathresult) qui définit le type de résultat à renvoyer comme résultat de l'évaluation. La constante la plus courante est `XPathResult.ANY_TYPE` qui renverra un résultat du type le plus naturel par rapport à l'expression XPath. Une section de l'annexe contient une liste complète des [constantes disponibles](#constantes_d.c3.a9finies_de_xpathresult). Elles sont expliquées dans la section [#Définition du type de retour](#d.c3.a9finition_du_type_de_retour) ci-dessous.
+  - : Une [constante](#constantes_définies_de_xpathresult) qui définit le type de résultat à renvoyer comme résultat de l'évaluation. La constante la plus courante est `XPathResult.ANY_TYPE` qui renverra un résultat du type le plus naturel par rapport à l'expression XPath. Une section de l'annexe contient une liste complète des [constantes disponibles](#constantes_définies_de_xpathresult). Elles sont expliquées dans la section [#Définition du type de retour](#définition_du_type_de_retour) ci-dessous.
 - `result`
   - : Soit un objet `XPathResult` existant qui sera réutilisé pour contenir les résultats, soit la valeur `null` qui peut être utilisée pour créer un nouvel objet `XPathResult`.
 
 ### Valeur de retour
 
-Renvoie `xpathResult`, qui est un objet `XPathResult` du type [défini](#d.c3.a9finition_du_type_de_retour) dans le paramètre `resultType`. L'interface `XPathResult` est définie dans ce [document](/fr/docs/Web/API/XPathResult).
+Renvoie `xpathResult`, qui est un objet `XPathResult` du type [défini](#définition_du_type_de_retour) dans le paramètre `resultType`. L'interface `XPathResult` est définie dans ce [document](/fr/docs/Web/API/XPathResult).
 
 ### Implémentation d'un résolveur d'espaces de nommage par défaut
 
@@ -66,11 +66,11 @@ var nsResolver = document.createNSResolver(
 
 Ou alternativement en utilisant la méthode \<code>createNSResolver\</code> d'un objet \<code>XPathEvaluator\</code>. \<pre> var xpEvaluator = new XPathEvaluator(); var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement ); \</pre> On lui passe ensuite `document.evaluate`, la variable `nsResolver` comme paramètre `namespaceResolver`.
 
-véracité du paragraphe suivant à vérifier avec la doc du w3c Notez que XPath définit que les `QNames` sans préfixe correspondent uniquement aux éléments de l'espace de nommage `null`. Il n'existe aucun moyen dans XPath pour récupérer l'espace de nommage par défaut. Pour coupler des éléments ou des attributs dans un espace de nommage non nul, vous devrez détecter les noms préfixés, et créer un résolveur d'espace de nommage qui fera correspondre le préfixe avec l'espace de nommage. Vous en saurez plus sur la façon de [créer un résolveur d'espace de nommage personnalisé](#impl.c3.a9mentation_d.27un_r.c3.a9solveur_d.27espace_de_nommage_personnalis.c3.a9) ci-dessous.
+véracité du paragraphe suivant à vérifier avec la doc du w3c Notez que XPath définit que les `QNames` sans préfixe correspondent uniquement aux éléments de l'espace de nommage `null`. Il n'existe aucun moyen dans XPath pour récupérer l'espace de nommage par défaut. Pour coupler des éléments ou des attributs dans un espace de nommage non nul, vous devrez détecter les noms préfixés, et créer un résolveur d'espace de nommage qui fera correspondre le préfixe avec l'espace de nommage. Vous en saurez plus sur la façon de [créer un résolveur d'espace de nommage personnalisé](#implémentation_dun_résolveur_despace_de_nommage_personnalisé) ci-dessous.
 
 ### Définition du type de retour
 
-La variable `xpathResult` renvoyée par `document.evaluate` peut être composée de nœuds individuels ([types simples](#types_simples)), ou un groupe de nœuds ([types d'ensembles de nœuds](#types_d.27ensembles_de_n.c5.93uds)).
+La variable `xpathResult` renvoyée par `document.evaluate` peut être composée de nœuds individuels ([types simples](#types_simples)), ou un groupe de nœuds ([types d'ensembles de nœuds](#types_densembles_de_n.c5.93uds)).
 
 #### Types simples
 
@@ -130,7 +130,7 @@ Au lieu de cela, il déclenchera une exception portant le code `NS_DOM_TYPE_ERRO
 
 L'objet `XPathResult` permet de renvoyer les ensembles de nœuds sous la forme de trois types principaux :
 
-- [Itérateurs](#it.c3.a9rateurs)
+- [Itérateurs](#itérateurs)
 - [Snapshots](#snapshots)
 - [Premiers nœuds](#premiers_n.c5.93uds)
 
@@ -233,7 +233,7 @@ Lorsque le type de résultat spécifié dans le paramètre `resultType` est la v
 
 Il peut s'agir de n'importe lequel des types simples (`NUMBER_TYPE, STRING_TYPE, BOOLEAN_TYPE`), **mais** si le type du résultat retourné est un ensemble de nœuds alors il ne pourra être **que** du type `UNORDERED_NODE_ITERATOR_TYPE`.
 
-Pour déterminer le type utilisé après l'évaluation, on utilisera la propriété `resultType` de l'objet `XPathResult`. Les valeurs [constantes](#constantes_d.c3.a9finies_de_xpathresult) de cette propriété sont définies dans l'annexe.
+Pour déterminer le type utilisé après l'évaluation, on utilisera la propriété `resultType` de l'objet `XPathResult`. Les valeurs [constantes](#constantes_définies_de_xpathresult) de cette propriété sont définies dans l'annexe.
 
 None Yet =====Exemple Any_Type===== \<pre> \</pre>
 
@@ -369,7 +369,7 @@ document.evaluate(
 
 #### Implémentation d'un espace de nommage par défaut pour les documents XML
 
-Comme nous l'avons vu précédemment dans la section [#Implémentation d'un résolveur d'espaces de nommage par défaut](#impl.c3.a9mentation_d.27un_r.c3.a9solveur_d.27espaces_de_nommage_par_d.c3.a9faut), le résolveur par défaut ne gère pas l'espace de nommage par défaut pour les documents XML. Par exemple, avec ce document :
+Comme nous l'avons vu précédemment dans la section [#Implémentation d'un résolveur d'espaces de nommage par défaut](#implémentation_dun_résolveur_despaces_de_nommage_par_défaut), le résolveur par défaut ne gère pas l'espace de nommage par défaut pour les documents XML. Par exemple, avec ce document :
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

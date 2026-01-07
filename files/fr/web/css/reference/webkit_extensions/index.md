@@ -105,21 +105,21 @@ Pour chacune des propriétés ci-dessous, utilisez les équivalents standard.
 - `-webkit-border-start-color`&nbsp;: Utilisez {{CSSxRef("border-inline-start-color")}}.
 - `-webkit-border-start-style`&nbsp;: Utilisez {{CSSxRef("border-inline-start-style")}}.
 - `-webkit-border-start-width`&nbsp;: Utilisez {{CSSxRef("border-inline-start-width")}}.
-- `-webkit-box-align`&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec {{CSSxRef("align-items")}}.
-- `-webkit-box-direction`&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec {{CSSxRef("flex-direction")}}.
-- {{CSSxRef("box-flex-group", "-webkit-box-flex-group")}}&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec {{CSSxRef("flex-basis")}}, {{CSSxRef("flex-grow")}} et {{CSSxRef("flex-shrink")}}.
-- `-webkit-box-flex`&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec {{CSSxRef("flex-grow")}}.
-- `-webkit-box-lines`&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec {{CSSxRef("flex-flow")}}.
-- `-webkit-box-ordinal-group`&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec {{CSSxRef("order")}}.
-- `-webkit-box-orient`&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec {{CSSxRef("flex-direction")}}.
-- `-webkit-box-pack`&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec {{CSSxRef("justify-content")}}.
+- `-webkit-box-align`&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) avec {{CSSxRef("align-items")}}.
+- `-webkit-box-direction`&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) avec {{CSSxRef("flex-direction")}}.
+- {{CSSxRef("box-flex-group", "-webkit-box-flex-group")}}&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) avec {{CSSxRef("flex-basis")}}, {{CSSxRef("flex-grow")}} et {{CSSxRef("flex-shrink")}}.
+- `-webkit-box-flex`&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) avec {{CSSxRef("flex-grow")}}.
+- `-webkit-box-lines`&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) avec {{CSSxRef("flex-flow")}}.
+- `-webkit-box-ordinal-group`&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) avec {{CSSxRef("order")}}.
+- `-webkit-box-orient`&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) avec {{CSSxRef("flex-direction")}}.
+- `-webkit-box-pack`&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) avec {{CSSxRef("justify-content")}}.
 - {{CSSxRef("-webkit-box-reflect")}}&nbsp;: Utilisez la fonction CSS {{CSSxRef("element", "element()")}}.
 
 ### C-I
 
-- `-webkit-column-break-after`&nbsp;: Utilisez la [mise en page multicolonne CSS](/fr/docs/Web/CSS/CSS_multicol_layout) avec {{CSSxRef("break-after")}}.
-- `-webkit-column-break-before`&nbsp;: Utilisez la [mise en page multicolonne CSS](/fr/docs/Web/CSS/CSS_multicol_layout) avec {{CSSxRef("break-before")}}.
-- `-webkit-column-break-inside`&nbsp;: Utilisez la [mise en page multicolonne CSS](/fr/docs/Web/CSS/CSS_multicol_layout) avec {{CSSxRef("break-inside")}}.
+- `-webkit-column-break-after`&nbsp;: Utilisez la [mise en page multicolonne CSS](/fr/docs/Web/CSS/Guides/Multicol_layout) avec {{CSSxRef("break-after")}}.
+- `-webkit-column-break-before`&nbsp;: Utilisez la [mise en page multicolonne CSS](/fr/docs/Web/CSS/Guides/Multicol_layout) avec {{CSSxRef("break-before")}}.
+- `-webkit-column-break-inside`&nbsp;: Utilisez la [mise en page multicolonne CSS](/fr/docs/Web/CSS/Guides/Multicol_layout) avec {{CSSxRef("break-inside")}}.
 - `-webkit-font-feature-settings`&nbsp;: Utilisez {{CSSxRef("font-feature-settings")}} (la version préfixée n'est pas prise en charge dans Safari).
 - `-webkit-hyphenate-character`&nbsp;: Utilisez {{CSSxRef("hyphenate-character")}}.
 - `-webkit-initial-letter`&nbsp;: Utilisez {{CSSxRef("initial-letter")}}.

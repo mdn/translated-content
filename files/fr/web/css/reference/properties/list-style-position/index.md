@@ -6,7 +6,7 @@ original_slug: Web/CSS/list-style-position
 
 {{CSSRef}}
 
-La propriété **`list-style-position`** permet de définir la position du marqueur (cf. [`::marker`](/fr/docs/Web/CSS/::marker)) de liste par rapport à la boîte principale.
+La propriété **`list-style-position`** permet de définir la position du marqueur (cf. [`::marker`](/fr/docs/Web/CSS/Reference/Selectors/::marker)) de liste par rapport à la boîte principale.
 
 {{InteractiveExample("CSS Demo: list-style-position")}}
 
@@ -94,9 +94,9 @@ La propriété `list-style-position` est définie avec l'un des mots-clés suiva
 ### Valeurs
 
 - `inside`
-  - : La boîte du marqueur ([`::marker`](/fr/docs/Web/CSS/::marker)) est la première boîte en ligne (_inline_) de la boîte principale. Le contenu de l'élément sera appliqué à la suite de la boîte du marqueur.
+  - : La boîte du marqueur ([`::marker`](/fr/docs/Web/CSS/Reference/Selectors/::marker)) est la première boîte en ligne (_inline_) de la boîte principale. Le contenu de l'élément sera appliqué à la suite de la boîte du marqueur.
 - `outside`
-  - : La boîte du marqueur ([`::marker`](/fr/docs/Web/CSS/::marker)) est en dehors de la boîte principale.
+  - : La boîte du marqueur ([`::marker`](/fr/docs/Web/CSS/Reference/Selectors/::marker)) est en dehors de la boîte principale.
 
 ## Définition formelle
 

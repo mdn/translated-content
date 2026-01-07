@@ -238,7 +238,7 @@ Si vous essayez d'envoyer le formulaire avec une date incomplète ou en dehors d
 
 {{EmbedLiveSample('', 600, 120)}}
 
-Vous trouverez ensuite la feuille de style CSS utilisée pour l'exemple. On utilise les pseudo-classes [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) afin de mettre en forme le contrôle selon que sa valeur est valide ou non. Les icônes indicatives sont placées dans un élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) séparé car, sous Chrome, le contenu généré automatiquement est placé à l'intérieur du contrôle et ne peut pas être affiché/mis en forme efficacement.
+Vous trouverez ensuite la feuille de style CSS utilisée pour l'exemple. On utilise les pseudo-classes [`:valid`](/fr/docs/Web/CSS/Reference/Selectors/:valid) et [`:invalid`](/fr/docs/Web/CSS/Reference/Selectors/:invalid) afin de mettre en forme le contrôle selon que sa valeur est valide ou non. Les icônes indicatives sont placées dans un élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) séparé car, sous Chrome, le contenu généré automatiquement est placé à l'intérieur du contrôle et ne peut pas être affiché/mis en forme efficacement.
 
 ```css
 div {

@@ -10,10 +10,10 @@ l10n:
 
 **`animation-range-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、プロパティは、タイムラインに沿ったアニメーションの適用範囲の末尾、つまり、タイムラインに沿ったアニメーションの末尾を設定するために使用します。
 
-`animation-range-end` および {{cssxref("animation-range-start")}} のプロパティは、 [`animation-range`](/ja/docs/Web/CSS/animation-range) 一括指定プロパティを使用して設定することもできます。
+`animation-range-end` および {{cssxref("animation-range-start")}} のプロパティは、 [`animation-range`](/ja/docs/Web/CSS/Reference/Properties/animation-range) 一括指定プロパティを使用して設定することもできます。
 
 > [!NOTE]
-> {{cssxref("animation-range-end")}} はリセット専用の値として {{cssxref("animation")}} の一括指定に含まれています。これは、`animation` を記載することで、前回宣言した `animation-range-end` の値が `normal` にリセットされることを意味していますが、`animation` によって固有の値を設定することはできません。 [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を作成する際には、 `animation` の一括指定を宣言した後に `animation-range-end` を宣言しないと、その効果を得ることができません。
+> {{cssxref("animation-range-end")}} はリセット専用の値として {{cssxref("animation")}} の一括指定に含まれています。これは、`animation` を記載することで、前回宣言した `animation-range-end` の値が `normal` にリセットされることを意味していますが、`animation` によって固有の値を設定することはできません。 [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)を作成する際には、 `animation` の一括指定を宣言した後に `animation-range-end` を宣言しないと、その効果を得ることができません。
 
 ## 構文
 
@@ -32,7 +32,7 @@ animation-range-end: contain 700px;
 
 ### 値
 
-`animation-range-end` に指定できる値は `normal`、{{cssxref("length-percentage")}}、`<timeline-range-name>`、`<timeline-range-name>` のいずれかとそれに続く `<length-percentage>` です。利用できる値の詳細については [`animation-range`](/ja/docs/Web/CSS/animation-range) を参照してください。
+`animation-range-end` に指定できる値は `normal`、{{cssxref("length-percentage")}}、`<timeline-range-name>`、`<timeline-range-name>` のいずれかとそれに続く `<length-percentage>` です。利用できる値の詳細については [`animation-range`](/ja/docs/Web/CSS/Reference/Properties/animation-range) を参照してください。
 
 また、 [View Timeline Ranges Visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/) も調べてみてください。異なる値が意味していることを、簡単なビジュアル形式で正確に表示させることができます。
 
@@ -169,10 +169,10 @@ p {
 
 ## 関連情報
 
-- [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline)
-- [`animation-range`](/ja/docs/Web/CSS/animation-range), [`animation-range-start`](/ja/docs/Web/CSS/animation-range-start)
-- [`scroll-timeline`](/ja/docs/Web/CSS/scroll-timeline), [`scroll-timeline-axis`](/ja/docs/Web/CSS/scroll-timeline-axis), [`scroll-timeline-name`](/ja/docs/Web/CSS/scroll-timeline-name)
+- [`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline)
+- [`animation-range`](/ja/docs/Web/CSS/Reference/Properties/animation-range), [`animation-range-start`](/ja/docs/Web/CSS/Reference/Properties/animation-range-start)
+- [`scroll-timeline`](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline), [`scroll-timeline-axis`](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline-axis), [`scroll-timeline-name`](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline-name)
 - {{cssxref("timeline-scope")}}
-- [`view-timeline-inset`](/ja/docs/Web/CSS/view-timeline-inset)
+- [`view-timeline-inset`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-inset)
 - JavaScript の同等のもの: `rangeEnd` （{{domxref("Element.animate()")}} 呼び出しで利用可能）
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)
+- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)

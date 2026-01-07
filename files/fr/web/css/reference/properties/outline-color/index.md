@@ -112,7 +112,7 @@ La propriété `outline-color` est définie avec une des valeurs listées ci-apr
 
 ## Accessibilité
 
-[L'utilisation d'un focus personnalisé](/fr/docs/Web/CSS/:focus) s'accompagne généralement d'une modification de la propriété {{cssxref("outline")}}. Si la couleur du contour est modifiée, il est nécessaire de vérifier que le contraste entre le contour et l'arrière-plan est suffisant afin que le contour puisse clairement être distingué.
+[L'utilisation d'un focus personnalisé](/fr/docs/Web/CSS/Reference/Selectors/:focus) s'accompagne généralement d'une modification de la propriété {{cssxref("outline")}}. Si la couleur du contour est modifiée, il est nécessaire de vérifier que le contraste entre le contour et l'arrière-plan est suffisant afin que le contour puisse clairement être distingué.
 
 Le ratio de contraste est déterminé en comparaisant les luminosités des deux couleurs. Pour le contraste entre un texte et son arrière-plan, les recommandations [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/intro/wcag) requièrent un ratio de 4.5:1 pour le contenu textuel et un ratio de 3:1 pour les titres ou les textes plus grands (18.66px et en gras ou 24px ou plus grand).
 
@@ -132,4 +132,4 @@ Le ratio de contraste est déterminé en comparaisant les luminosités des deux 
 
 - Le type de donnée {{cssxref("&lt;color&gt;")}}
 - Les autres propriétés relatives aux couleurs : {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} et {{cssxref("column-rule-color")}}
-- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
+- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/Guides/Colors/Applying_color)

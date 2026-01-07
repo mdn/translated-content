@@ -55,7 +55,7 @@ select {
 
 ### 従来の option のスタイル設定
 
-最新のカスタマイズ機能に対応していないブラウザー（またはそれらを使用できない古いコードベース）では、 `<option>` 要素で利用できるスタイルは、ブラウザーとオペレーティングシステムによって異なって慰安した。 Firefox と Chromium においては、オペレーティングシステムによっては、所有元の `<select>` の [`font-size`](/ja/docs/Web/CSS/font-size) が尊重されます。 Chromium は、追加で [`color`](/ja/docs/Web/CSS/color)、[`background-color`](/ja/docs/Web/CSS/background-color)、[`font-family`](/ja/docs/Web/CSS/font-family)、[`font-variant`](/ja/docs/Web/CSS/font-variant)、[`text-align`](/ja/docs/Web/CSS/text-align) が設定可能な場合があります。
+最新のカスタマイズ機能に対応していないブラウザー（またはそれらを使用できない古いコードベース）では、 `<option>` 要素で利用できるスタイルは、ブラウザーとオペレーティングシステムによって異なって慰安した。 Firefox と Chromium においては、オペレーティングシステムによっては、所有元の `<select>` の [`font-size`](/ja/docs/Web/CSS/Reference/Properties/font-size) が尊重されます。 Chromium は、追加で [`color`](/ja/docs/Web/CSS/Reference/Properties/color)、[`background-color`](/ja/docs/Web/CSS/Reference/Properties/background-color)、[`font-family`](/ja/docs/Web/CSS/Reference/Properties/font-family)、[`font-variant`](/ja/docs/Web/CSS/Reference/Properties/font-variant)、[`text-align`](/ja/docs/Web/CSS/Reference/Properties/text-align) が設定可能な場合があります。
 
 従来の `<option>` のスタイル設定についての詳細は、[フォームへの高度なスタイル設定のガイド](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)を参照してください。
 

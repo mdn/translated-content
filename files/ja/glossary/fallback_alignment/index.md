@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-[CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)では、要求された配置が実現できない場合に対処するために代替配置を指定しています。例えば、`justify-content: space-between` を指定した場合、複数の{{Glossary("alignment subject","配置対象物")}}が存在しなければなりません。存在しない場合は、代替配置が使用されます。これは、以下のように配置方法ごとに決まります。
+[CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)では、要求された配置が実現できない場合に対処するために代替配置を指定しています。例えば、`justify-content: space-between` を指定した場合、複数の{{Glossary("alignment subject","配置対象物")}}が存在しなければなりません。存在しない場合は、代替配置が使用されます。これは、以下のように配置方法ごとに決まります。
 
 - First baseline
   - : `start`
@@ -26,4 +26,4 @@ l10n:
 
 ## 関連情報
 
-- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)
+- [CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)

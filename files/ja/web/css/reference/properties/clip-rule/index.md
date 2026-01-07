@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 611edf6335e4a833a6f394d0d98b117e7b0a36bf
 ---
 
-**`clip-rule`** は [CSS](/ja/docs/Web/CSS) のプロパティで、パスの一部が他の部分と重なった場合、マスクのボックス内のピクセルが、[クリップパス](/ja/docs/Web/CSS/clip-path)で定義されたクリップするシェイプの内側にあるか、外側にあるかを決定します。
+**`clip-rule`** は [CSS](/ja/docs/Web/CSS) のプロパティで、パスの一部が他の部分と重なった場合、マスクのボックス内のピクセルが、[クリップパス](/ja/docs/Web/CSS/Reference/Properties/clip-path)で定義されたクリップするシェイプの内側にあるか、外側にあるかを決定します。
 
 `clip-rule` プロパティは、 {{SVGElement("clipPath")}} 要素内に含まれる SVG 要素にのみ適用され、要素の {{SVGAttr("clip-rule")}} 属性の値がある場合はそれを上書きします。 `clip-rule` プロパティは、基本的に {{cssxref("fill-rule")}} プロパティと同じように機能しますが、 `<clipPath>` 定義に適用される点が異なります。 CSS の {{cssxref("basic-shape")}} には何の効果もありません。
 
@@ -128,7 +128,7 @@ svg {
 
 #### CSS
 
-`<div>` 要素に {{cssxref("width")}} および {{cssxref("height")}} を設定し、 [`conic-gradient()`](/ja/docs/Web/CSS/gradient/conic-gradient) を {{cssxref("background-image")}} 値として追加します。
+`<div>` 要素に {{cssxref("width")}} および {{cssxref("height")}} を設定し、 [`conic-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/conic-gradient) を {{cssxref("background-image")}} 値として追加します。
 
 ```css hidden
 body {
@@ -279,8 +279,8 @@ div:last-of-type {
 
 - {{cssxref("fill-rule")}}
 - {{cssxref("clip-path")}}
-- [CSS クリップ入門](/ja/docs/Web/CSS/CSS_masking/Clipping)
-- [CSS マスク](/ja/docs/Web/CSS/CSS_masking)モジュール
+- [CSS クリップ入門](/ja/docs/Web/CSS/Guides/Masking/Clipping)
+- [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール
 - SVG の {{SVGAttr("clip-rule")}} 属性
 - SVG の {{SVGElement("clipPath")}} 要素
 - SVG の {{SVGAttr("fill-rule")}} 属性

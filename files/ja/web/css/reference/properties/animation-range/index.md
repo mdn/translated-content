@@ -8,14 +8,14 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`animation-range`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、タイムラインに沿ったアニメーションの適用範囲の先頭と末尾を設定します。つまり、タイムラインのどこでアニメーションが始まり、どこで終わるかを設定するために使用します。
+**`animation-range`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、タイムラインに沿ったアニメーションの適用範囲の先頭と末尾を設定します。つまり、タイムラインのどこでアニメーションが始まり、どこで終わるかを設定するために使用します。
 
 ## 構成要素のプロパティ
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`animation-range-start`](/ja/docs/Web/CSS/animation-range-start)
-- [`animation-range-end`](/ja/docs/Web/CSS/animation-range-end)
+- [`animation-range-start`](/ja/docs/Web/CSS/Reference/Properties/animation-range-start)
+- [`animation-range-end`](/ja/docs/Web/CSS/Reference/Properties/animation-range-end)
 
 ## 構文
 
@@ -52,7 +52,7 @@ animation-range: entry 10% 90%;
 
 ### 値
 
-[`animation-range-start`](/ja/docs/Web/CSS/animation-range-start) や [`animation-range-end`](/ja/docs/Web/CSS/animation-range-end) を表す 1 つまたは 2 つの値です。これらの値は以下のいずれかになります。
+[`animation-range-start`](/ja/docs/Web/CSS/Reference/Properties/animation-range-start) や [`animation-range-end`](/ja/docs/Web/CSS/Reference/Properties/animation-range-end) を表す 1 つまたは 2 つの値です。これらの値は以下のいずれかになります。
 
 - `normal`
   - : `animation-range-start` の場合はタイムラインの始まり、 `animation-range-end` の場合はタイムラインの終わりを表します。これが既定値です。
@@ -61,7 +61,7 @@ animation-range: entry 10% 90%;
 - `<timeline-range-name>`
   - : 全体のタイムライン内の固有のタイムライン範囲です。可能な値は次の通りです。
     - `cover`
-      - : 名前付きビュー進行タイムラインの全範囲を表します（詳細は [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を参照）。主体要素が最初にスクロールポートのビュー進行の可視範囲に入り始めた時点（進行度 0%）から、完全にその範囲から離れた時点（進行度 100%）までです。
+      - : 名前付きビュー進行タイムラインの全範囲を表します（詳細は [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)を参照）。主体要素が最初にスクロールポートのビュー進行の可視範囲に入り始めた時点（進行度 0%）から、完全にその範囲から離れた時点（進行度 100%）までです。
     - `contain`
       - : 名前付きビュー進行タイムラインの範囲で、主体要素がスクロールポートのビュー進行状況の可視範囲に完全に収まっている、または完全に格納している範囲を表します。
         - 主体要素がスクロールポートより小さい場合は、主体要素が最初にスクロールポートに完全に収まった点（進行度 0%）から、スクロールポートに完全に収まらなくなった点（進行度 100%）までの範囲になります。
@@ -223,9 +223,9 @@ p {
 
 ## 関連情報
 
-- [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline)
-- [`animation-range-end`](/ja/docs/Web/CSS/animation-range-end), [`animation-range-start`](/ja/docs/Web/CSS/animation-range-start)
-- [`scroll-timeline`](/ja/docs/Web/CSS/scroll-timeline), [`scroll-timeline-axis`](/ja/docs/Web/CSS/scroll-timeline-axis), [`scroll-timeline-name`](/ja/docs/Web/CSS/scroll-timeline-name)
+- [`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline)
+- [`animation-range-end`](/ja/docs/Web/CSS/Reference/Properties/animation-range-end), [`animation-range-start`](/ja/docs/Web/CSS/Reference/Properties/animation-range-start)
+- [`scroll-timeline`](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline), [`scroll-timeline-axis`](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline-axis), [`scroll-timeline-name`](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline-name)
 - {{cssxref("timeline-scope")}}
-- [`view-timeline-inset`](/ja/docs/Web/CSS/view-timeline-inset)
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)
+- [`view-timeline-inset`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-inset)
+- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)

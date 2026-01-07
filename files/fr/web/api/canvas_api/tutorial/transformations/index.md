@@ -3,7 +3,7 @@ title: Transformations
 slug: Web/API/Canvas_API/Tutorial/Transformations
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Utilisation_d'images", " Web/API/Canvas_API/Tutorial/Compositing ")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", " Web/API/Canvas_API/Tutorial/Compositing ")}}
 
 Précédemment dans ce tutoriel, nous avons étudié la [grille du canevas](/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) et le **système de coordonnées**. Jusqu'à maintenant, nous avons uniquement utilisé la grille par défaut et modifié la taille de la globalité du canevas afin de répondre à nos besoins. Les transformations que nous allons aborder dans la suite vont nous permettre, de manière plus puissante, d'effectuer des déplacements et des rotations sur la grille et même d'effectuer des mises à l'échelle.
 
@@ -276,4 +276,4 @@ draw();
 
 {{EmbedLiveSample("Exemple_pour_transform_et_setTransform", "230", "280", "canvas_transform.png")}}
 
-{{PreviousNext("Tutoriel_canvas/Utilisation_d'images", "Tutoriel_canvas/Composition")}}
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}

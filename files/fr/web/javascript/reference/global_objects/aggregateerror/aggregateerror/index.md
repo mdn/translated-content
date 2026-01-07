@@ -1,5 +1,5 @@
 ---
-title: "AggregateError : constructeur AggregateError()"
+title: Constructeur AggregateError()
 short-title: AggregateError()
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError/AggregateError
 l10n:

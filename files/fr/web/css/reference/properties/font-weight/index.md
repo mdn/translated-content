@@ -94,7 +94,7 @@ La propriété `font-weight` peut être définie grâce à l'une des valeurs sui
 - `bolder`
   - : On augmente la graisse d'un niveau par rapport à l'élément parent (selon les fontes / graisses disponibles pour la police utilisée). Le texte est plus gras.
 - `<number>`
-  - : Une valeur numérique (type [`<number>`](/fr/docs/Web/CSS/number)) comprise entre 1 et 1000. Plus la valeur est grande, plus le niveau de graisse est élevé. Ces valeurs permettent de couvrir un éventail de valeurs plus larges qu'avec `normal` et `bold`.
+  - : Une valeur numérique (type [`<number>`](/fr/docs/Web/CSS/Reference/Values/number)) comprise entre 1 et 1000. Plus la valeur est grande, plus le niveau de graisse est élevé. Ces valeurs permettent de couvrir un éventail de valeurs plus larges qu'avec `normal` et `bold`.
 
 Pour d'anciennes versions de la spécification, `font-weight` n'acceptait que les mots-clés et les valeurs numériques 100, 200, 300, 400, 500, 600, 700, 800 et 900. Les polices non-variables ne peuvent utiliser que ces valeurs (les valeurs plus fines seront converties cf. ci-après).
 

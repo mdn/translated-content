@@ -89,7 +89,7 @@ Les options de `<token-list>` incluent, dans l'ordre&nbsp;:
 1. [Jeton de nommage de groupe](#groupes_nommés)
 2. [Identifiant de regroupement](#identifiant_de_regroupement)
 3. [Jetons de détail](#jetons_de_détail)
-4. [Jeton d'autorisation web](#jeton_d'autorisation_web)
+4. [Jeton d'autorisation web](#jeton_dautorisation_web)
 
 #### Groupes nommés
 

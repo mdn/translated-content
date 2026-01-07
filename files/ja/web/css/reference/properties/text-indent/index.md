@@ -1,9 +1,8 @@
 ---
 title: text-indent
 slug: Web/CSS/Reference/Properties/text-indent
-original_slug: Web/CSS/text-indent
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`text-indent`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ブロック内のテキストの行の前に置く空白（字下げ）の幅を設定します。
@@ -34,17 +33,14 @@ text-indent: 3em hanging;
 text-indent: 3em hanging each-line;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section id="default-example">
   <div id="example-element">
     <p>
-      This text is contained within a single paragraph. This paragraph is two
-      sentences long.
+      このテキストは単一の段落に含まれています。この段落は 2 文で構成されています。
     </p>
     <p>
-      This is a new paragraph. There is a line break element
-      <code>&lt;br&gt;</code> after this sentence.<br />There it is! Notice how
-      it affects the indentation.
+      これは新しい段落です。この文の後に行改行要素 <code>&lt;br&gt;</code> があります。<br />ほら、わかりますか！インデントがどう影響するか注目してください。
     </p>
   </div>
 </section>
@@ -53,14 +49,14 @@ text-indent: 3em hanging each-line;
 ```css interactive-example
 section {
   font-size: 1.25em;
-  background-color: #483d8b;
+  background-color: darkslateblue;
   align-items: start;
 }
 
 #example-element {
   text-align: left;
-  margin: 0 0 0 3em;
-  background-color: #6a5acd;
+  margin-left: 3em;
+  background-color: slateblue;
   color: white;
 }
 ```
@@ -144,7 +140,7 @@ p {
 
 段落の字下げがある場合の一般的な組版では、最初の段落の字下げを省略します。_The Chicago Manual of Style_ によると、「中間見出しに続くテキストの最初の行は、完全に左端から始めてもよいし、通常の段落の字下げで字下げしてもよい」とされています。
 
-最初の段落とそれ以降の段落を別扱いにするには、次の例のように[次兄弟結合子](/ja/docs/Web/CSS/Next-sibling_combinator)を使います。
+最初の段落とそれ以降の段落を別扱いにするには、次の例のように[次兄弟結合子](/ja/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator)を使います。
 
 #### HTML
 
@@ -247,12 +243,12 @@ p {
 
 - [CSS を使用した HTML のスタイル付け](/ja/docs/Learn_web_development/Core/Styling_basics)
 - 関連する CSS プロパティ:
-  - [`text-justify`](/ja/docs/Web/CSS/text-justify)
-  - [`text-orientation`](/ja/docs/Web/CSS/text-orientation)
-  - [`text-overflow`](/ja/docs/Web/CSS/text-overflow)
-  - [`text-rendering`](/ja/docs/Web/CSS/text-rendering)
-  - [`text-transform`](/ja/docs/Web/CSS/text-transform)
+  - {{cssxref("text-justify")}}
+  - {{cssxref("text-orientation")}}
+  - {{cssxref("text-overflow")}}
+  - {{cssxref("text-rendering")}}
+  - {{cssxref("text-transform")}}
   - {{cssxref('hanging-punctuation')}}
 
-- [CSS テキスト装飾](/ja/docs/Web/CSS/CSS_text_decoration) CSS モジュール
-- [CSS テキスト](/ja/docs/Web/CSS/CSS_text) モジュール
+- [CSS テキスト装飾](/ja/docs/Web/CSS/Guides/Text_decoration) CSS モジュール
+- [CSS テキスト](/ja/docs/Web/CSS/Guides/Text) モジュール

@@ -29,7 +29,7 @@ querySelector(selectors)
 
 ### 返値
 
-{{domxref("Element")}} オブジェクトで、文書内で指定された [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)に最初に一致する要素を示すオブジェクト、もしくは、一致する要素がない場合は `null` を返します。
+{{domxref("Element")}} オブジェクトで、文書内で指定された [CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors)に最初に一致する要素を示すオブジェクト、もしくは、一致する要素がない場合は `null` を返します。
 
 指定されたセレクターに一致するすべての要素のリストが必要な場合は、代わりに {{domxref("Document.querySelectorAll", "querySelectorAll()")}} を使用してください。
 
@@ -42,7 +42,7 @@ querySelector(selectors)
 
 指定されたセレクターが、誤って文書内で複数回使われている ID に一致する場合は、その ID を持つ最初の要素が返されます。
 
-[CSS 擬似要素](/ja/docs/Web/CSS/Pseudo-elements)は[セレクター API](https://www.w3.org/TR/selectors-api/#grammar) で策定されている通り、何も要素を返しません。
+[CSS 擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)は[セレクター API](https://www.w3.org/TR/selectors-api/#grammar) で策定されている通り、何も要素を返しません。
 
 ### 特殊文字のエスケープ
 

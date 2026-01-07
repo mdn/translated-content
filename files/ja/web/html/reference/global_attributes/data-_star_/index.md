@@ -65,7 +65,7 @@ li:hover::after {
 - 名前にコロン (`:`) を含めてはならない（XML ではそのような名前に意味を割り当てているため）。
 - 名前に大文字を含めてはならない（XML はすべて小文字であるため）。
 
-これらは推奨事項です。これらの命名に関する推奨事項に従わなくても、エラーは発生しません。属性は、CSS の[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)を使用して照合され、属性は大文字と小文字を区別せず、属性値は区別されます。この 3 つの推奨事項に適合しない属性も、JavaScript の {{domxref("HTMLElement.dataset")}} プロパティによって認識され、ユーザーエージェントは、{{domxref("HTMLElement")}} のすべての独自のデータ属性を格納する {{domxref("DOMStringMap")}} にその属性を記載します。
+これらは推奨事項です。これらの命名に関する推奨事項に従わなくても、エラーは発生しません。属性は、CSS の[属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors)を使用して照合され、属性は大文字と小文字を区別せず、属性値は区別されます。この 3 つの推奨事項に適合しない属性も、JavaScript の {{domxref("HTMLElement.dataset")}} プロパティによって認識され、ユーザーエージェントは、{{domxref("HTMLElement")}} のすべての独自のデータ属性を格納する {{domxref("DOMStringMap")}} にその属性を記載します。
 
 {{domxref("HTMLElement.dataset")}} を使用する場合、`data-` に続く属性名には、JavaScript プロパティ名で使用できる文字（およびハイフン、これは除去されます）のみを含めることができます。属性名の `dataset` バージョンでは、 "data-" という接頭辞が除去され、残りの名前は{{Glossary("kebab_case", "ケバブケース")}}からキャメルケースに変換されます。例えば、 `element.getAttribute("data-test")` は `element.dataset.test` と同等であり、 `data-test-abc` は `HTMLElement.dataset.testAbc` （または `HTMLElement.dataset["testAbc"]`）としてアクセスできます。ハイフンの後にアルファベット以外の文字が続く `data-test-1` や `data--test` は、{{domxref("HTMLElement.dataset")}} によって認識されないため、避けるようにしてください。
 

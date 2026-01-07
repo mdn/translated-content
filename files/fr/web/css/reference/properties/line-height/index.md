@@ -8,7 +8,7 @@ original_slug: Web/CSS/line-height
 
 La propriété **`line-height`** définit la hauteur de la boîte d'une ligne.
 
-Sur les éléments de bloc, la propriété **`line-height`** indique la hauteur minimale des lignes au sein de l'élément. Sur les éléments en ligne qui ne sont pas [remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties), **`line-height`** indique la hauteur utilisée pour calculer la hauteur de la boîte d'une ligne.
+Sur les éléments de bloc, la propriété **`line-height`** indique la hauteur minimale des lignes au sein de l'élément. Sur les éléments en ligne qui ne sont pas [remplacés](/fr/docs/Web/CSS/Guides/Images/Replaced_element_properties), **`line-height`** indique la hauteur utilisée pour calculer la hauteur de la boîte d'une ligne.
 
 {{InteractiveExample("CSS Demo: line-height")}}
 

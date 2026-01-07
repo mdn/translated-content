@@ -15,7 +15,7 @@ l10n:
 >
 > 浏览器会在文档中插入文本节点，用于表示源标记中的空白字符。因此，例如通过 `Node.childNodes[0]` 获取的节点，可能指向的是一个空白文本节点，而不是作者原本想获取的实际元素节点。
 >
-> 更多信息请参阅[在 DOM 中处理空白](/zh-CN/docs/Web/CSS/CSS_text/Whitespace#在_DOM_中处理空白)。
+> 更多信息请参阅[在 DOM 中处理空白](/zh-CN/docs/Web/CSS/Guides/Text/Whitespace#在_DOM_中处理空白)。
 
 节点集合中的项是对象，而不是字符串。若要从节点对象中获取数据，应使用其属性。例如，要获取第一个子节点的名称，可以使用：`elementNodeReference.childNodes[0].nodeName`。
 

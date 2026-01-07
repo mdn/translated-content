@@ -2,14 +2,12 @@
 title: for await...of
 slug: Web/JavaScript/Reference/Statements/for-await...of
 l10n:
-  sourceCommit: 77176b1f35f73f319bb5b959e5c90db8b5a0f9ea
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
-
-{{jsSidebar("Statements")}}
 
 **`for await...of`** 文は、[非同期反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)を、[同期反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)と同様に反復処理するループを作成します。この文は [`await`](/ja/docs/Web/JavaScript/Reference/Operators/await) が使用できるコンテキスト、例えば[非同期関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function)の本体や[モジュール](/ja/docs/Web/JavaScript/Guide/Modules)内などでのみ使用できます。
 
-{{InteractiveExample("JavaScript デモ: Statement - For Await...Of", "taller")}}
+{{InteractiveExample("JavaScript デモ: for await...of 文", "taller")}}
 
 ```js interactive-example
 async function* foo() {
@@ -17,12 +15,12 @@ async function* foo() {
   yield 2;
 }
 
-(async function () {
+(async () => {
   for await (const num of foo()) {
     console.log(num);
-    // Expected output: 1
+    // 予想される結果: 1
 
-    break; // Closes iterator, triggers return
+    break; // イテレーターを閉じ、戻るようにする
   }
 })();
 ```
@@ -35,7 +33,7 @@ for await (variable of iterable)
 ```
 
 - `variable`
-  - : 一連の反復処理の各回において、値を受け取ります。[`const`](/ja/docs/Web/JavaScript/Reference/Statements/const)、[`let`](/ja/docs/Web/JavaScript/Reference/Statements/let)、[`var`](/ja/docs/Web/JavaScript/Reference/Statements/var) の何れかの宣言や、[代入文](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)のターゲットとなるもの（前もって宣言された変数やオブジェクトプロパティ）を指定することができます。
+  - : 一連の反復処理の各回において、値を受け取ります。[`const`](/ja/docs/Web/JavaScript/Reference/Statements/const)、[`let`](/ja/docs/Web/JavaScript/Reference/Statements/let)、[`var`](/ja/docs/Web/JavaScript/Reference/Statements/var) の何れかの宣言や、[代入文](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)のターゲットとなるもの （例：前回宣言された変数、オブジェクトのプロパティ、または[構造分解パターン](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)）を指定することができます。`var` をつけて宣言された変数は、ループ内のスコープではなく、つまり `for await...of` ループと同じスコープ内に存在します。
 - `iterable`
   - : 非同期反復可能オブジェクトまたは同期反復可能オブジェクト。このループが処理する一連の値の元となるものです。
 - `statement`
@@ -43,9 +41,14 @@ for await (variable of iterable)
 
 ## 解説
 
-`for await...of` ループが反復可能オブジェクトを反復処理する場合、最初に反復可能オブジェクトの [`[Symbol.asyncIterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator) メソッドを取得してそれを呼び出すと、[非同期イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)が返されます。`@asyncIterator` メソッドが存在しない場合は、次に [`[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) メソッドを探し、[同期イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol)を返します。次に、 `next()`、`return()`、`throw()` メソッドから返されるすべてのオブジェクトを解決済みまたは拒否済みのプロミスにラップし、`value` プロパティがプロミスであれば解決済みにすることで、返された同期イテレーターを非同期イテレーターにラップします。ループは、最終的な非同期イテレーターの `next()` メソッドを繰り返し呼び出して、返されるプロミスを待ち、`variable` に代入される一連の値を生成します。
+`for await...of` ループが反復可能オブジェクトを反復処理する場合、最初に反復可能オブジェクトの [`[Symbol.asyncIterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator) メソッドを取得してそれを呼び出すと、[非同期イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)が返されます。`@asyncIterator` メソッドが存在しない場合は、次に [`[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) メソッドを探し、[同期イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル)を返します。次に、 `next()`、`return()`、`throw()` メソッドから返されるすべてのオブジェクトを解決済みまたは拒否済みのプロミスにラップし、`value` プロパティがプロミスであれば解決済みにすることで、返された同期イテレーターを非同期イテレーターにラップします。ループは、最終的な非同期イテレーターの [`next()`](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル) メソッドを繰り返し呼び出して、返されるプロミスを[待ち](/ja/docs/Web/JavaScript/Reference/Operators/await)、`variable` に代入される一連の値を生成します。
 
-`for await...of` ループが早期に終了した場合（例えば、`break` 文に遭遇したり、エラーが throw された場合）、クリーンアップを実行するためにイテレーターの [`return()`](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) メソッドが呼び出されます。返されたプロミスは、ループが終了する前に待機されます。
+`for await...of` ループは、イテレーターが完了したとき（待機呼び出しした `next()` が `done: true` の入ったオブジェクトとを返したとき）に終了します。他のループ文のように、[制御フロー文](/ja/docs/Web/JavaScript/Reference/Statements#control_flow)を `statement` の内部で使用することができます。
+
+- {{jsxref("Statements/break", "break")}} は `statement` の実行を中止し、ループ後の最初の文に移動します。
+- {{jsxref("Statements/continue", "continue")}} は `statement` の実行を中止し、このループの次の反復に移動します。
+
+`for await...of` ループが早期に終了した場合（例えば、`break` 文に遭遇したり、エラーが throw された場合）、クリーンアップを実行するためにイテレーターの [`return()`](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル) メソッドが呼び出されます。返されたプロミスは、ループが終了する前に待機されます。
 
 `for await...of` は全般的に [`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループと同様に機能し、構文や意味も共通しています。いくらか違いがあります。
 
@@ -53,6 +56,14 @@ for await (variable of iterable)
 - `for await...of` は [`await`](/ja/docs/Web/JavaScript/Reference/Operators/await) が使えるコンテキストでのみ使用できます。これは[非同期関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function)の本体や[モジュール](/ja/docs/Web/JavaScript/Guide/Modules)内などです。反復可能オブジェクトが同期の場合でも、ループは反復処理のたびに返値を待つことになり、プロミスのラップ解除を繰り返すため実行速度が遅くなります。
 - `iterable` がプロミスを生成する同期反復可能オブジェクトである場合、`for await...of` は解決された値のシーケンスを生成するのに対し `for...of` はプロミスのシーケンスを生成します。（ただし、エラー処理と後始末には注意が必要です。[同期の反復可能オブジェクトおよびジェネレーターの反復処理](#同期の反復可能オブジェクトおよびジェネレーターの反復処理)を参照してください。）
 - `for await...of` では、`variable` に識別子 `async` を取ることができます（例えば `for await (async of foo)`）。`for...of` では禁止されています。
+
+`for...of` と同様、`using` 宣言を使用する場合、`of` という名前の変数を呼び出すことはできません。
+
+```js-nolint example-bad
+for await (using of of []); // SyntaxError
+```
+
+これは `using` が導入される以前、有効なコードであった `for await (using of [])` との構文的なあいまいさを避けるためです。
 
 ## 例
 
@@ -73,7 +84,7 @@ const asyncIterable = {
         return Promise.resolve({ value, done });
       },
       return() {
-        // This will be reached if the consumer called 'break' or 'return' early in the loop.
+        // ループの早い段階で消費者が 'break' または 'return' を呼び出した場合に、ここに到達します。
         return { done: true };
       },
     };
@@ -92,7 +103,7 @@ const asyncIterable = {
 
 ### 非同期のジェネレータの反復処理
 
-非同期の反復可能プロトコルを実装している非同期ジェネレーターであれば、 `for await...of` を使用して繰り返し処理を行うことができます。
+非同期の反復可能プロトコルを実装している非同期ジェネレーターであれば、 `for await...of` を使用して反復処理を行うことができます。
 
 ```js
 async function* asyncGenerator() {
@@ -184,7 +195,7 @@ for (const numOrPromise of generator()) {
 ```
 
 > [!NOTE]
-> 同期のジェネレーターから拒否されたプロミスが生み出される場合があることに注意してください。このような場合、 `for await...of` は拒否されたプロミスを消費するので、ジェネレーター内の `finally` ブロックが呼び出されません。これは、確保したリソースを `try/finally` で解放する必要がある場合は望ましくない動作になる可能性があります。
+> 同期ジェネレーターから拒否されたプロミスが生み出される場合があることに注意してください。このような場合、`for await...of` は拒否されたプロミスを消費するので、ジェネレーター内の `finally` ブロックが呼び出されません。これは、確保したリソースを `try/finally` で解放する必要がある場合は望ましくない動作になる可能性があります。
 
 ```js
 function* generatorWithRejectedPromises() {
@@ -192,9 +203,9 @@ function* generatorWithRejectedPromises() {
     yield 0;
     yield 1;
     yield Promise.resolve(2);
-    yield Promise.reject(3);
+    yield Promise.reject(new Error("failed"));
     yield 4;
-    throw 5;
+    throw new Error("throws");
   } finally {
     console.log("called finally");
   }
@@ -212,7 +223,7 @@ function* generatorWithRejectedPromises() {
 // 0
 // 1
 // 2
-// caught 3
+// caught Error: failed
 
 // compare with for-of loop:
 
@@ -226,9 +237,9 @@ try {
 // 0
 // 1
 // Promise { 2 }
-// Promise { <rejected> 3 }
+// Promise { <rejected> Error: failed }
 // 4
-// caught 5
+// caught Error: throws
 // called finally
 ```
 
@@ -247,7 +258,7 @@ try {
 // 0
 // 1
 // 2
-// caught 3
+// caught Error: failed
 // called finally
 ```
 
@@ -261,5 +272,5 @@ try {
 
 ## 関連情報
 
-- {{jsxref("Global_Objects/Symbol/asyncIterator", "Symbol.asyncIterator")}}
+- {{jsxref("Symbol.asyncIterator")}}
 - {{jsxref("Statements/for...of", "for...of")}}

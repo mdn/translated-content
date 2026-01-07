@@ -553,7 +553,7 @@ Vous pouvez maintenant ouvrir ce fichier dans un navigateur Web pour voir à quo
 - Au début du document, juste après la balise d'ouverture `<body>`, ajoutez un titre principal pour le document. Il doit être entre une balise ouvrante `<h1>` et la balise fermante `</h1>` ;
 - Modifiez le contenu du paragraphe pour ajouter un texte sur quelque chose qui vous intéresse ;
 - Mettez les mots importants en gras en les mettant entre la balise ouvrante `<strong>` et la balise fermante `</strong>` ;
-- Ajoutez un lien à votre paragraphe, comme [expliqué plus haut dans cet article](#apprentissage_actif_ajout_d'attributs_à_un_élément) ;
+- Ajoutez un lien à votre paragraphe, comme [expliqué plus haut dans cet article](#apprentissage_actif_ajout_dattributs_à_un_élément) ;
 - Ajoutez une image à votre document, en dessous du paragraphe, comme [expliqué plus haut dans cet article](#éléments_vides). Vous obtiendrez des points bonus si vous parvenez à lier une image différente (localement sur votre ordinateur ou ailleurs sur le Web).
 
 Si vous faites une erreur, vous pouvez toujours recommencer en utilisant le bouton _Réinitialiser_. Si vous êtes vraiment coincé, appuyez sur le bouton _Voir la solution_ pour l'afficher.
@@ -765,6 +765,6 @@ Vous avez atteint la fin de l'article — nous espérons que vous avez appréci�
 
 ## Voir aussi
 
-- [Appliquer une couleur aux éléments HTML avec les CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
+- [Appliquer une couleur aux éléments HTML avec les CSS](/fr/docs/Web/CSS/Guides/Colors/Applying_color)
 
 {{NextMenu("Apprendre/HTML/Introduction_à_HTML/The_head_metadata_in_HTML", "Apprendre/HTML/Introduction_à_HTML")}}

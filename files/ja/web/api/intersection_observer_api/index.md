@@ -706,7 +706,7 @@ startup();
 
 ### CSS
 
-この CSS はこの例ではあまり重要ではありません。この CSS は要素をレイアウトし、 {{cssxref("background-color")}} と {{cssxref("border")}} 属性が [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)に加わることができるようにし、要素が多少見えなくなるときの変更に影響を与えるのに使用します。
+この CSS はこの例ではあまり重要ではありません。この CSS は要素をレイアウトし、 {{cssxref("background-color")}} と {{cssxref("border")}} 属性が [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)に加わることができるようにし、要素が多少見えなくなるときの変更に影響を与えるのに使用します。
 
 ```css
 #box {

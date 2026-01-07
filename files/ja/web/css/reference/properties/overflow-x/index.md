@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-**`overflow-x`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ブロックレベル要素のコンテンツが左右の端からあふれた時にどのように表示するかを設定します。これは表示なし、スクロールバー付き、コンテンツをはみ出させる、のいずれかになります。このプロパティは、[`overflow`](/ja/docs/Web/CSS/overflow) 一括指定プロパティを使用して設定することもできます。
+**`overflow-x`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ブロックレベル要素のコンテンツが左右の端からあふれた時にどのように表示するかを設定します。これは表示なし、スクロールバー付き、コンテンツをはみ出させる、のいずれかになります。このプロパティは、[`overflow`](/ja/docs/Web/CSS/Reference/Properties/overflow) 一括指定プロパティを使用して設定することもできます。
 
 {{InteractiveExample("CSS デモ: overflow-x")}}
 
@@ -78,7 +78,7 @@ overflow-x: unset;
 - `hidden`
   - : 要素のパディングボックスに水平方向に合わせる必要がある場合は、コンテンツを切り取ります。スクロールバーは表示されません。
 - `clip`
-  - : あふれたコンテンツは、 [`overflow-clip-margin`](/ja/docs/Web/CSS/overflow-clip-margin) プロパティを使用して定義された要素のオーバーフロークリップ枠で切り取られます。その結果、コンテンツは要素のパディングボックスから `overflow-clip-margin` の値 {{cssxref("&lt;length&gt;")}} だけはみ出します（設定されていない場合は `0px` です）。 `clip` と `hidden` の違いは、 `clip` キーワードはプログラムによるスクロールも含め、すべてのスクロールを禁止することです。新しい整形コンテキストは生成されません。新しい整形コンテキストを生成するのであれば、 `overflow: clip` と共に {{cssxref("display", "display: flow-root", "#flow-root")}} を使用してください。この要素ボックスはスクロールコンテナーにはなりません。
+  - : あふれたコンテンツは、 [`overflow-clip-margin`](/ja/docs/Web/CSS/Reference/Properties/overflow-clip-margin) プロパティを使用して定義された要素のオーバーフロークリップ枠で切り取られます。その結果、コンテンツは要素のパディングボックスから `overflow-clip-margin` の値 {{cssxref("&lt;length&gt;")}} だけはみ出します（設定されていない場合は `0px` です）。 `clip` と `hidden` の違いは、 `clip` キーワードはプログラムによるスクロールも含め、すべてのスクロールを禁止することです。新しい整形コンテキストは生成されません。新しい整形コンテキストを生成するのであれば、 `overflow: clip` と共に {{cssxref("display", "display: flow-root", "#flow-root")}} を使用してください。この要素ボックスはスクロールコンテナーにはなりません。
 - `scroll`
   - : あふれたコンテンツは、水平方向にパディングボックスに合わせる必要がある場合に切り取られます。ブラウザーはコンテンツが実際に切り取られるかどうかにかかわらず、水平方向のスクロールバーを表示します。 (これで、コンテンツが変化したときにスクロールバーが表示されたり非表示になったりすることを防ぎます。) プリンターはあふれたコンテンツを印刷するかもしれません。
 - `auto`
@@ -165,5 +165,5 @@ overflow-x: unset;
 ## 関連情報
 
 - {{Cssxref("clip")}}, {{Cssxref("display")}}, {{cssxref("text-overflow")}}, {{cssxref("white-space")}}
-- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
 - [学習: コンテンツのオーバーフロー](/ja/docs/Learn_web_development/Core/Styling_basics/Overflow)

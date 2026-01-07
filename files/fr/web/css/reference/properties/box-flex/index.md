@@ -7,9 +7,9 @@ original_slug: Web/CSS/box-flex
 {{CSSRef}}{{Non-standard_header}}
 
 > [!WARNING]
-> Cette propriété est utilisée pour contrôler certaines parties du modèle de boîtes XUL. Elle ne correspond ni à l'ancienne version de la spécification pour `box-flex` ni au comportement de `-webkit-box-flex`. Voir la page [Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) pour plus d'informations sur ce qui doit être utilisé à la place.
+> Cette propriété est utilisée pour contrôler certaines parties du modèle de boîtes XUL. Elle ne correspond ni à l'ancienne version de la spécification pour `box-flex` ni au comportement de `-webkit-box-flex`. Voir la page [Flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) pour plus d'informations sur ce qui doit être utilisé à la place.
 
-Les propriétés **`-moz-box-flex`** et **`-webkit-box-flex`** définissent la façon dont une boîte `-moz-box` ou `-webkit-box` s'étend pour remplir la boîte englobante, dans la direction indiquée par la disposition de la boîte. Pour plus de détails, se référer à la page [Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) qui décrit les différentes propriétés des boîtes flexibles.
+Les propriétés **`-moz-box-flex`** et **`-webkit-box-flex`** définissent la façon dont une boîte `-moz-box` ou `-webkit-box` s'étend pour remplir la boîte englobante, dans la direction indiquée par la disposition de la boîte. Pour plus de détails, se référer à la page [Flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) qui décrit les différentes propriétés des boîtes flexibles.
 
 ```css
 /* Valeurs numériques */

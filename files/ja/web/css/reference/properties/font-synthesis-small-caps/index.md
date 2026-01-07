@@ -1,7 +1,6 @@
 ---
 title: font-synthesis-small-caps
 slug: Web/CSS/Reference/Properties/font-synthesis-small-caps
-original_slug: Web/CSS/font-synthesis-small-caps
 l10n:
   sourceCommit: 28368ab728eed206d9069f5ba5b889e990ff810c
 ---
@@ -62,7 +61,7 @@ font-synthesis-small-caps: unset;
 #### CSS
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Montserrat&display=swap";
 
 .english {
   font-family: "Montserrat", sans-serif;
@@ -89,6 +88,6 @@ font-synthesis-small-caps: unset;
 
 ## 関連情報
 
-- [font-synthesis](/ja/docs/Web/CSS/font-synthesis) shorthand, [font-synthesis-style](/ja/docs/Web/CSS/font-synthesis-style), [font-synthesis-weight](/ja/docs/Web/CSS/font-synthesis-weight)
+- [font-synthesis](/ja/docs/Web/CSS/Reference/Properties/font-synthesis) shorthand, [font-synthesis-style](/ja/docs/Web/CSS/Reference/Properties/font-synthesis-style), [font-synthesis-weight](/ja/docs/Web/CSS/Reference/Properties/font-synthesis-weight)
 - {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-weight")}}
 - [CanvasRenderingContext2D: fontVariantCaps property](/ja/docs/Web/API/CanvasRenderingContext2D/fontVariantCaps)

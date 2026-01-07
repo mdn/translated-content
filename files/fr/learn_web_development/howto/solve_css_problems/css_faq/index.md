@@ -50,7 +50,7 @@ Voire [Les sélecteurs CSS](/fr/docs/Learn_web_development/Core/Styling_basics/B
 
 Jadis, il n'y avait pas de valeur nommée "default", par exemple. Le seul moyen de retrouver la valeur par défaut d'une propriété était de déclarer à nouveau cette propriété avec sa valeur par défaut.
 
-Ce comportement est différent depuis CSS2. Une propriété CSS peut maintenant prendre la valeur [`initial`](/fr/docs/Web/CSS/initial). C'est la valeur par défaut de cette propriété, valeur définie dans les spécifications de la propriété.
+Ce comportement est différent depuis CSS2. Une propriété CSS peut maintenant prendre la valeur [`initial`](/fr/docs/Web/CSS/Reference/Values/initial). C'est la valeur par défaut de cette propriété, valeur définie dans les spécifications de la propriété.
 
 ## Comment créer un style dérivant d'un autre ?
 
