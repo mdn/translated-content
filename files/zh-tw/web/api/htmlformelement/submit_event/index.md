@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-當 {{HtmlElement("form")}} 被提交時，**`submit`** 事件會觸發。
+**`submit`** 事件會在 {{HtmlElement("form")}} 被提交時觸發。
 
 請注意 `submit` 事件是在 `<form>` 元素本身觸發，而不是在內部的任何 {{HtmlElement("button")}} 或 `{{HtmlElement('input/submit', '&lt;input type="submit"&gt;')}}` 上觸發。然而，用來表示表單提交動作已被觸發的 {{domxref("SubmitEvent")}} 包含一個 {{domxref("SubmitEvent.submitter", "submitter")}} 屬性，即為被呼叫以觸發提交請求的按鈕。
 
