@@ -53,7 +53,7 @@ L'attribut `enterkeyhint` est un attribut à valeur contrainte et accepte unique
 
 ## Voir aussi
 
-- La propriété [`HTMLElement.enterkeyhint`](/fr/docs/Web/API/HTMLElement/enterkeyhint) reflétant cet attribut
+- La propriété [`HTMLElement.enterkeyhint`](/fr/docs/Web/API/HTMLElement/enterKeyHint) reflétant cet attribut
 - L'attribut universel [`inputmode`](/fr/docs/Web/HTML/Reference/Global_attributes/inputmode)
 - L'attribut universel [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable)
 - Les attributs [`type`](/fr/docs/Web/HTML/Reference/Elements/input#input_types) et [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#htmlattrdefpattern) sur les éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input)

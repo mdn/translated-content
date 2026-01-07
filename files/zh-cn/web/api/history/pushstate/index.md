@@ -39,7 +39,7 @@ pushState(state, unused, url)
 - 改变页面的 URL 是可选的。相反，设置 `window.location = "#foo";` 仅仅会在当前 hash 不是 `#foo` 情况下，创建一条新的历史条目。
 - 你可以使用你的新历史条目关联任意数据。使用基于 hash 的方式，你需要将所有相关的数据编码为一个短字符串。
 
-注意，`pushState()` 从未引起 {{domxref("Window/hashchange_event", "hashchange")}} 事件的触发，即使新 URL 与旧 URL 仅在 hash 上不同。
+注意，`pushState()` **不会**触发 {{domxref("Window/hashchange_event", "hashchange")}} 事件，包括仅更新了 URL 的 hash 部分的情况。
 
 ## 示例
 

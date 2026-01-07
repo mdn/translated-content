@@ -487,6 +487,7 @@
 /fr/docs/Glossary/Symbol	/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /fr/docs/Glossary/Transmission_Control_Protocol_(TCP)	/fr/docs/Glossary/TCP
 /fr/docs/Glossary/XHR_(XMLHttpRequest)	/fr/docs/Glossary/XMLHttpRequest
+/fr/docs/Glossary/eTLD	/fr/docs/Glossary/Registrable_domain
 /fr/docs/Guide_JavaScript_1.5/Aperçu_de_JavaScript	/fr/docs/Web/JavaScript/Guide/Introduction
 /fr/docs/Guide_JavaScript_1.5/Boucles/L'instruction_break	/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /fr/docs/Guide_JavaScript_1.5/Boucles/L'instruction_do...while	/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling

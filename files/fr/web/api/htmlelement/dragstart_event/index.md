@@ -1,164 +1,102 @@
 ---
-title: dragstart
+title: "HTMLElement : évènement dragstart"
+short-title: dragstart
 slug: Web/API/HTMLElement/dragstart_event
+l10n:
+  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
 ---
 
-{{APIRef}}
+{{APIRef("HTML Drag and Drop API")}}
 
-L'événement **dragstart** est déclenché lorsque l'utilisateur glisse un élément ou une sélection de texte.
+L'évènement `dragstart` de l'interface {{DOMxRef("HTMLElement")}} est déclenché lorsque l'utilisateur·ice commence à déplacer un élément ou une sélection de texte.
 
-## Informations générales
+Cet évènement est annulable et peut se propager jusqu'aux objets {{DOMxRef("Document")}} et {{DOMxRef("Window")}}.
 
-- Interface
-  - : [`DragEvent`](/fr/docs/Web/API/DragEvent)
-- Propagation
-  - : Oui
-- Annulable
-  - : Oui
-- Cible
-  - : {{domxref("Document")}}, {{domxref("Element")}}
-- Action par défaut
-  - : Initie l'opération de glisser-déposer
+## Syntaxe
 
-## Properties
+On utilisera le nom de l'évènement dans des méthodes telles que {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou on définira une propriété gestionnaire d'évènements.
 
-| Property                           | Type                                                                   | Description                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ---------------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}        | [`EventTarget`](/fr/docs/Web/API/EventTarget)                          | The element that was underneath the element being dragged.                                                                                                                                                                                                                                                                                                                                                           |
-| `type` {{readonlyInline}}          | [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) | The type of event.                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `bubbles` {{readonlyInline}}       | [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)  | Whether the event normally bubbles or not                                                                                                                                                                                                                                                                                                                                                                            |
-| `cancelable` {{readonlyInline}}    | [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)  | Whether the event is cancellable or not?                                                                                                                                                                                                                                                                                                                                                                             |
-| `view` {{readonlyInline}}          | [`WindowProxy`](/fr/docs/Web/API/WindowProxy)                          | [`document.defaultView`](/fr/docs/Web/API/Document/defaultView) (`window` of the document)                                                                                                                                                                                                                                                                                                                           |
-| `detail` {{readonlyInline}}        | `long` (`float`)                                                       | 0.                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `dataTransfer`                     | DataTransfer                                                           | The data that underlies a drag-and-drop operation, known as the [drag data store](/fr/docs/Web/API/DataTransfer). Protected mode.                                                                                                                                                                                                                                                                                    |
-| `currentTarget` {{readonlyInline}} | EventTarget                                                            | The node that had the event listener attached.                                                                                                                                                                                                                                                                                                                                                                       |
-| `relatedTarget` {{readonlyInline}} | EventTarget                                                            | For `mouseover`, `mouseout`, `mouseenter` and `mouseleave` events: the target of the complementary event (the `mouseleave` target in the case of a `mouseenter` event). `null` otherwise.                                                                                                                                                                                                                            |
-| `screenX` {{readonlyInline}}       | long                                                                   | The X coordinate of the mouse pointer in global (screen) coordinates.                                                                                                                                                                                                                                                                                                                                                |
-| `screenY` {{readonlyInline}}       | long                                                                   | The Y coordinate of the mouse pointer in global (screen) coordinates.                                                                                                                                                                                                                                                                                                                                                |
-| `clientX` {{readonlyInline}}       | long                                                                   | The X coordinate of the mouse pointer in local (DOM content) coordinates.                                                                                                                                                                                                                                                                                                                                            |
-| `clientY` {{readonlyInline}}       | long                                                                   | The Y coordinate of the mouse pointer in local (DOM content) coordinates.                                                                                                                                                                                                                                                                                                                                            |
-| `button` {{readonlyInline}}        | unsigned short                                                         | The button number that was pressed when the mouse event was fired: Left button=0, middle button=1 (if present), right button=2. For mice configured for left handed use in which the button actions are reversed the values are instead read from right to left.                                                                                                                                                     |
-| `buttons` {{readonlyInline}}       | unsigned short                                                         | The buttons being pressed when the mouse event was fired: Left button=1, Right button=2, Middle (wheel) button=4, 4th button (typically, "Browser Back" button)=8, 5th button (typically, "Browser Forward" button)=16. If two or more buttons are pressed, returns the logical sum of the values. E.g., if Left button and Right button are pressed, returns 3 (=1 \| 2). [More info](/fr/docs/Web/API/MouseEvent). |
-| `mozPressure` {{readonlyInline}}   | float                                                                  | The amount of pressure applied to a touch or tabdevice when generating the event; this value ranges between 0.0 (minimum pressure) and 1.0 (maximum pressure).                                                                                                                                                                                                                                                       |
-| `ctrlKey` {{readonlyInline}}       | boolean                                                                | `true` if the control key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                      |
-| `shiftKey` {{readonlyInline}}      | boolean                                                                | `true` if the shift key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                        |
-| `altKey` {{readonlyInline}}        | boolean                                                                | `true` if the alt key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                          |
-| `metaKey` {{readonlyInline}}       | boolean                                                                | `true` if the meta key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                         |
+```js-nolint
+addEventListener("dragstart", (event) => { })
 
-## Exemple : dropzone
+ondragstart = (event) => { }
+```
 
-### HTML Content
+## Type d'évènement
+
+Un objet {{DOMxRef("DragEvent")}}. Hérite de l'objet {{DOMxRef("Event")}}.
+
+{{InheritanceDiagram("DragEvent")}}
+
+## Propriétés d'évènement
+
+_En plus des propriétés listées ci‑dessous, les propriétés de l'interface parente, {{DOMxRef("Event")}}, sont disponibles._
+
+- {{DOMxRef('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
+  - : Les données transférées lors d'une interaction de glisser‑déposer.
+
+## Exemples
+
+### Définir l'opacité au démarrage du déplacement
+
+Dans cet exemple, nous avons un élément déplaçable à l'intérieur d'un conteneur. Essayez de saisir l'élément, de le déplacer, puis de le relâcher.
+
+Nous écoutons l'évènement `dragstart` pour rendre l'élément semi‑transparent pendant le déplacement.
+
+Pour un exemple complet de glisser‑déposer, consultez la page de l'évènement {{DOMxRef("HTMLElement/drag_event", "drag")}}.
+
+#### HTML
 
 ```html
-<div class="dropzone">
-  <div
-    id="draggable"
-    draggable="true"
-    ondragstart="event.dataTransfer.setData('text/plain',null)">
-    This div is draggable
-  </div>
+<div id="container">
+  <div id="draggable" draggable="true">Ce div est déplaçable</div>
 </div>
-<div class="dropzone"></div>
-<div class="dropzone"></div>
 <div class="dropzone"></div>
 ```
 
-### CSS Content
+#### CSS
 
 ```css
+body {
+  /* Empêche l'utilisateur·ice de sélectionner du texte dans l'exemple */
+  user-select: none;
+}
+
 #draggable {
-  width: 200px;
-  height: 20px;
   text-align: center;
   background: white;
 }
 
-.dropzone {
+#container {
   width: 200px;
   height: 20px;
   background: blueviolet;
-  margin-bottom: 10px;
   padding: 10px;
+}
+
+.dragging {
+  opacity: 0.5;
 }
 ```
 
-### JavaScript Content
+#### JavaScript
 
 ```js
-var dragged;
+const source = document.getElementById("draggable");
+source.addEventListener("dragstart", (event) => {
+  // rend l'élément semi‑transparent
+  event.target.classList.add("dragging");
+});
 
-/* Les événements sont déclenchés sur les objets glissables */
-document.addEventListener("drag", function (event) {}, false);
-
-document.addEventListener(
-  "dragstart",
-  function (event) {
-    // Stocke une référence sur l'objet glissable
-    dragged = event.target;
-    // transparence 50%
-    event.target.style.opacity = 0.5;
-  },
-  false,
-);
-
-document.addEventListener(
-  "dragend",
-  function (event) {
-    // reset de la transparence
-    event.target.style.opacity = "";
-  },
-  false,
-);
-
-/* Les événements sont déclenchés sur les cibles du drop */
-document.addEventListener(
-  "dragover",
-  function (event) {
-    // Empêche default d'autoriser le drop
-    event.preventDefault();
-  },
-  false,
-);
-
-document.addEventListener(
-  "dragenter",
-  function (event) {
-    // Met en surbrillance la cible de drop potentielle lorsque l'élément glissable y entre
-    if (event.target.className == "dropzone") {
-      event.target.style.background = "purple";
-    }
-  },
-  false,
-);
-
-document.addEventListener(
-  "dragleave",
-  function (event) {
-    // reset de l'arrière-plan des potentielles cible du drop lorsque les éléments glissables les quittent
-    if (event.target.className == "dropzone") {
-      event.target.style.background = "";
-    }
-  },
-  false,
-);
-
-document.addEventListener(
-  "drop",
-  function (event) {
-    // Empêche l'action par défaut (ouvrir comme lien pour certains éléments)
-    event.preventDefault();
-    // Déplace l'élément traîné vers la cible du drop sélectionnée
-    if (event.target.className == "dropzone") {
-      event.target.style.background = "";
-      dragged.parentNode.removeChild(dragged);
-      event.target.appendChild(dragged);
-    }
-  },
-  false,
-);
+source.addEventListener("dragend", (event) => {
+  // réinitialise la transparence
+  event.target.classList.remove("dragging");
+});
 ```
 
-{{ EmbedLiveSample('Exemple_dropzone') }}
+#### Résultat
+
+{{EmbedLiveSample("Définir l'opacité au démarrage du déplacement")}}
 
 ## Spécifications
 
@@ -170,11 +108,10 @@ document.addEventListener(
 
 ## Voir aussi
 
-- [`drag`](/fr/docs/Web/API/HTMLElement/drag_event)
-- [`dragstart`](/fr/docs/Web/API/HTMLElement/dragstart_event)
-- [`dragend`](/fr/docs/Web/API/HTMLElement/dragend_event)
-- [`dragover`](/fr/docs/Web/API/HTMLElement/dragover_event)
-- [`dragenter`](/fr/docs/Web/API/HTMLElement/dragenter_event)
-- [`dragleave`](/fr/docs/Web/API/HTMLElement/dragleave_event)
-- [`dragexit`](/fr/docs/Web/API/Document/dragexit_event)
-- [`drop`](/fr/docs/Web/API/HTMLElement/drop_event)
+- Autres évènements de glisser-deposer&nbsp;:
+  - {{DOMxRef("HTMLElement/drag_event", "drag")}}
+  - {{DOMxRef("HTMLElement/dragend_event", "dragend")}}
+  - {{DOMxRef("HTMLElement/dragover_event", "dragover")}}
+  - {{DOMxRef("HTMLElement/dragenter_event", "dragenter")}}
+  - {{DOMxRef("HTMLElement/dragleave_event", "dragleave")}}
+  - {{DOMxRef("HTMLElement/drop_event", "drop")}}

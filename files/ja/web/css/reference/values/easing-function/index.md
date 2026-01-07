@@ -215,7 +215,7 @@ selectElem.addEventListener("change", () => {
 
 ## 関連情報
 
-- [CSS イージング関数](/en-US/docs/Web/CSS/Guides/Easing_functions)モジュール
+- [CSS イージング関数](/ja/docs/Web/CSS/Guides/Easing_functions)モジュール
 - [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)
 - [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)
 - [`linear()` easing generator](https://linear-easing-generator.netlify.app/) - Jake Archibald

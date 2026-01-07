@@ -44,7 +44,7 @@ Attribution-Reporting-Register-Source: <json-string>
     - `"source_event_id"` {{Optional_Inline}}
       - : Une chaîne de caractères représentant un identifiant pour la source d'attribution, qui peut être utilisée pour la relier à d'autres informations lors d'une interaction avec la source, ou agréger des informations au point de terminaison de rapport. La chaîne de caractères doit uniquement contenir un entier non signé de 64 bits au format décimal.
     - `"destination"`
-      - : Une chaîne de caractères unique ou un tableau de 1 à 3 chaînes de caractères. Ces chaînes de caractères doivent contenir une URL complète correspondant au site (schéma + [eTLD+1](/fr/docs/Glossary/eTLD)) sur lequel un déclencheur est attendu. Elles servent à faire correspondre le déclencheur d'attribution à la source lors d'une interaction avec un déclencheur.
+      - : Une chaîne de caractères unique ou un tableau de 1 à 3 chaînes de caractères. Ces chaînes de caractères doivent contenir une URL complète correspondant au site (schéma + [eTLD+1](/fr/docs/Glossary/Registrable_domain)) sur lequel un déclencheur est attendu. Elles servent à faire correspondre le déclencheur d'attribution à la source lors d'une interaction avec un déclencheur.
     - `"aggregation_keys"` {{Optional_Inline}}
       - : Un objet contenant des clés fournies par l'utilisateur·ice représentant différents points de données pour agréger les valeurs de rapport.
     - `"aggregatable_report_window"` {{Optional_Inline}}

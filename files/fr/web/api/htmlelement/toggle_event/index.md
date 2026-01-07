@@ -1,66 +1,112 @@
 ---
 title: "HTMLElement : évènement toggle"
+short-title: toggle
 slug: Web/API/HTMLElement/toggle_event
 l10n:
-  sourceCommit: 44cf523714745d626317192bfbe849b47144f3ab
+  sourceCommit: 405fc9a921068347e95211312a8c19e917c457d2
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
-L'évènement **`toggle`** de l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) se déclenche sur un élément [<i lang="en">popover</i>](/fr/docs/Web/API/Popover_API) (c'est-à-dire un élément qui a un attribut [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover) valide) juste après qu'il a été affiché ou masqué.
+L'évènement **`toggle`** de l'interface {{DOMxRef("HTMLElement")}} se déclenche sur un élément {{DOMxRef("Popover_API", "de fenêtre contextuelle", "", "nocode")}} (<i lang="en">popover</i> en anglais), un élément HTML {{HTMLElement("dialog")}} ou un élément HTML {{HTMLElement("details")}} juste après qu'il a été affiché ou masqué.
 
-- Si le <i lang="en">popover</i> passe de masqué à affiché, la propriété `event.oldState` sera définie sur `closed` et la propriété `event.newState` sera définie sur `open`.
-- Si le <i lang="en">popover</i> passe d'affiché à masqué, alors `event.oldState` sera `open` et `event.newState` sera `closed`.
+- Si la fenêtre contextuelle passe de masqué à affiché, la propriété [`event.oldState`](/fr/docs/Web/API/ToggleEvent/oldState) sera définie sur `closed` et la propriété [`event.newState`](/fr/docs/Web/API/ToggleEvent/newState) sera définie sur `open`.
+- Si la fenêtre contextuelle passe d'affiché à masqué, alors `event.oldState` sera définie sur `open` et `event.newState` sera définie sur `closed`.
 
-> [!NOTE]
-> L'évènement `toggle` se comporte différemment lorsqu'il est déclenché sur les éléments [`<details>`](/fr/docs/Web/HTML/Reference/Elements/details). Dans ce cas, il ne concerne pas les <i lang="en">popovers</i>, et se déclenche plutôt lorsque l'état `open`/`closed` d'un élément `<details>` est modifié. Consultez [la page sur l'évènement `toggle` de `HTMLDetailsElement`](/fr/docs/Web/API/HTMLElement/toggle_event) pour plus de détails.
+Cet évènement n'est pas [annulable](/fr/docs/Web/API/Event/cancelable).
 
 ## Syntaxe
 
-Utilisez le nom de l'évènement dans des méthodes comme [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener), ou définissez une propriété de gestionnaire d'évènement.
+Utilisez le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété de gestionnaire d'évènement.
 
-```js
-addEventListener("toggle", (event) => {});
+```js-nolint
+addEventListener("toggle", (event) => { })
 
-ontoggle = (event) => {};
+ontoggle = (event) => { }
 ```
 
 ## Type d'évènement
 
-[`ToggleEvent`](/fr/docs/Web/API/ToggleEvent). Hérite de [`Event`](/fr/docs/Web/API/Event).
+Un objet {{DOMxRef("ToggleEvent")}}. Hérite de l'objet {{DOMxRef("Event")}}.
 
 {{InheritanceDiagram("ToggleEvent")}}
 
 ## Exemples
 
+L'exemple de code ci-dessous montre comment l'évènement `toggle` peut être utilisé pour un élément {{DOMxRef("Popover_API", "de fenêtre contextuelle", "", "nocode")}} (<i lang="en">popover</i> en anglais).
+Le même code peut être utilisé de la même manière pour un élément HTML {{HTMLElement("dialog")}} ou {{HTMLElement("details")}}.
+
+### Exemple simple
+
+Cet exemple montre comment écouter l'évènement `toggle` et afficher le résultat dans la console.
+
+#### HTML
+
+Le code HTML se compose d'une fenêtre contextuelle et d'un bouton permettant de l'afficher ou de la masquer.
+
+```html
+<button popovertarget="mafenetre">
+  Afficher ou masquer la fenêtre contextuelle
+</button>
+<div id="mafenetre" popover>Contenu de la fenêtre contextuelle</div>
+```
+
+```html hidden
+<pre id="journaux"></pre>
+```
+
+```css hidden
+#journaux {
+  height: 150px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden
+const elementJournaux = document.querySelector("#journaux");
+function log(text) {
+  elementJournaux.innerText = `${elementJournaux.innerText}${text}\n`;
+  elementJournaux.scrollTop = elementJournaux.scrollHeight;
+}
+```
+
+#### JavaScript
+
+Le code ajoute un écouteur d'évènement pour l'évènement `toggle` et enregistre l'état.
+
 ```js
-const popover = document.getElementById("mypopover");
+const fenetreContextuelle = document.getElementById("mafenetre");
 
-//…
-
-popover.addEventListener("toggle", (event) => {
+fenetreContextuelle.addEventListener("toggle", (event) => {
   if (event.newState === "open") {
-    console.log("Le popover a été affiché");
+    log("La fenêtre contextuelle a été affichée");
   } else {
-    console.log("Le popover a été masqué");
+    log("La fenêtre contextuelle a été masquée");
   }
 });
 ```
 
-## Agrégation des évènements de basculement
+#### Resultat
 
-Il convient de souligner que les évènements `toggle` sont agrégés, ce qui signifie que si plusieurs évènements `toggle` sont déclenchés avant que la boucle d'évènements ait eu la possibilité de s'exécuter, un seul évènement sera déclenché.
+{{EmbedLiveSample("Exemple simple", '100%', 250)}}
+
+### Remarque sur l'agrégation des évènements `toggle`
+
+Si plusieurs évènements `toggle` sont déclenchés avant que la boucle d'évènements ait eu la possibilité de s'exécuter, un seul évènement sera déclenché.
+On parle alors d'«&nbsp;agrégation d'évènements&nbsp;».
 
 Par exemple&nbsp;:
 
 ```js
-popover.addEventListener("toggle", () => {
-  //…
+fenetreContextuelle.addEventListener("toggle", () => {
+  // …
 });
 
-popover.showPopover();
-popover.hidePopover();
-// `toggle` ne se déclenche qu'une seule fois
+fenetreContextuelle.showPopover();
+fenetreContextuelle.hidePopover();
+// `toggle` est déclenché une seule fois
 ```
 
 ## Spécifications
@@ -73,5 +119,6 @@ popover.hidePopover();
 
 ## Voir aussi
 
+- L'attribut HTML universel [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover)
 - [L'API Popover](/fr/docs/Web/API/Popover_API)
-- L'évènement associé&nbsp;: [`beforetoggle`](/fr/docs/Web/API/HTMLElement/beforetoggle_event)
+- L'évènement associé&nbsp;: {{DOMxRef("HTMLElement/beforetoggle_event", "beforetoggle")}}

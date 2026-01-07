@@ -1,39 +1,41 @@
 ---
-title: element.offsetWidth
+title: "HTMLElement : propriété offsetWidth"
+short-title: offsetWidth
 slug: Web/API/HTMLElement/offsetWidth
+l10n:
+  sourceCommit: 0916e1754652f3a7c663ef031faa26c98f492023
 ---
 
-{{ ApiRef() }}
+{{APIRef("HTML DOM")}}
 
-### Résumé
+La propriété en lecture seule **`offsetWidth`** de l'interface {{DOMxRef("HTMLElement")}} retourne la largeur de mise en page d'un élément, sous forme d'entier.
 
-Renvoie la largeur totale d'un élément.
+En général, `offsetWidth` est une mesure en pixels de la largeur CSS de l'élément, incluant les bordures, le remplissage et les barres de défilement verticales (si elles sont affichées). Elle n'inclut pas la largeur des pseudo-éléments comme `::before` ou `::after`.
 
-### Syntaxe
+Si l'élément est caché (par exemple, en définissant `style.display` sur l'élément ou l'un de ses ancêtres à `"none"`), alors la valeur retournée est `0`.
 
-```js
-var offsetWidth = element.offsetWidth;
-```
+## Valeur
 
-`offsetWidth` est une propriété en lecture seule.
+Un entier.
 
-### Description
+## Exemples
 
-Typiquement, l'attribut `offsetWidth` est une mesure qui comprend les bordures de l'élément, ses marges internes horizontales (padding), la barre de défilement verticale si présente et affichée, et la largeur CSS de l'élément.
+![Un élément exemple avec un grand remplissage, une bordure et une marge. offsetWidth est la largeur de mise en page de l'élément, incluant son remplissage et sa bordure, mais excluant sa marge.](dimensions-offset.png)
 
-## Exemple
+## Spécification
 
-![](dimensions-offset.png)
+{{Specifications}}
 
-### Spécification
+## Compatibilité des navigateurs
 
-`offsetWidth` fait partie du modèle objet DHTML de Microsoft Internet Explorer. Elle ne fait partie d'aucune spécification ou recommandation technique du W3C.
+{{Compat}}
 
-### Notes
+## Voir aussi
 
-`offsetWidth` est une propriété du modèle objet DHTML provenant de Microsoft Internet Explorer. On l'appelle parfois la largeur physique ou graphique d'un élément, ou sa largeur «&nbsp;border-box&nbsp;» (bordure et boîte).
-
-### Références
-
-- [_offsetWidth definition_ sur MSDN](http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/offsetwidth.asp?frame=true)
-- [_Measuring Element Dimension and Location_ sur MSDN](http://msdn.microsoft.com/workshop/author/om/measuring.asp)
+- [Déterminer les dimensions des éléments](/fr/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- La propriété {{DOMxRef("Element.clientWidth")}}
+- La propriété {{DOMxRef("Element.scrollWidth")}}
+- La propriété {{DOMxRef("HTMLElement.offsetHeight")}}
+- La propriété {{DOMxRef("HTMLElement.offsetLeft")}}
+- La propriété {{DOMxRef("HTMLElement.offsetTop")}}
+- La méthode {{DOMxRef("Element.getBoundingClientRect()")}}

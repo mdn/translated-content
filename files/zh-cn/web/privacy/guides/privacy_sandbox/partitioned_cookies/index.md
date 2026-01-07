@@ -35,7 +35,7 @@ Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 > [!NOTE]
 > 分区 cookie 必须与 `Secure` 一同设置。此外，建议在设置分区 cookie 时使用 `__Host` 前缀，以将它们绑定到主机名而不是可注册的域名。
 
-如果设置了 `Partitioned`，cookie 将使用两个键进行存储，即主机键和一个新的**分区键**。分区键基于向设置 cookie 的 URL 端点发出请求时浏览器访问的顶级 URL 的方案（scheme）和 {{Glossary("eTLD", "eTLD +1")}}。
+如果设置了 `Partitioned`，cookie 将使用两个键进行存储，即主机键和一个新的**分区键**。分区键基于向设置 cookie 的 URL 端点发出请求时浏览器访问的顶级 URL 的{{glossary("site", "站点")}}和方案（scheme）。
 
 回顾我们在上一节中描述的示例：
 
