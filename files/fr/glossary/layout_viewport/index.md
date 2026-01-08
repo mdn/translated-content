@@ -2,7 +2,7 @@
 title: Zone d'affichage pour la disposition
 slug: Glossary/Layout_viewport
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 9be502ee0f8b030908e59d30884190281acb8054
 ---
 
 La **zone d'affichage pour la disposition** ({{Glossary("viewport", "zone d'affichage")}}) est la surface sur laquelle le navigateur dessine la page web. Il s'agit de la surface totale disponible à l'affichage. La **zone d'affichage visuelle** ({{Glossary("visual viewport", "zone d'affichage visuelle")}}) correspond à la partie de la zone d'affichage pour la disposition effectivement visible à l'écran de l'utilisateur·ice.

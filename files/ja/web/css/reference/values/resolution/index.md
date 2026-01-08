@@ -1,9 +1,8 @@
 ---
 title: <resolution>
 slug: Web/CSS/Reference/Values/resolution
-original_slug: Web/CSS/resolution
 l10n:
-  sourceCommit: a075805de90029b65fa5cfcc8ea43737728320f5
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`<resolution>`** は [CSS](/ja/docs/Web/CSS) の [データ型](/ja/docs/Web/CSS/Reference/Values/Data_types) で、[解像度](/ja/docs/Web/CSS/Reference/At-rules/@media/resolution)を[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)で記述するのに使われ、出力機器のピクセル密度である解像度を表します。
@@ -33,7 +32,7 @@ l10n:
 ### メディアクエリーで使用する
 
 ```css
-@media print and (min-resolution: 300dpi) {
+@media print and (resolution >= 300dpi) {
   /* … */
 }
 
@@ -41,7 +40,7 @@ l10n:
   /* … */
 }
 
-@media (min-resolution: 2dppx) {
+@media (resolution >= 2dppx) {
   /* … */
 }
 

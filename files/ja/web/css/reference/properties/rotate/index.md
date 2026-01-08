@@ -1,9 +1,8 @@
 ---
 title: rotate
 slug: Web/CSS/Reference/Properties/rotate
-original_slug: Web/CSS/rotate
 l10n:
-  sourceCommit: 9428e6f9ac2fd4166b5cf245fb674123209787ff
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`rotate`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{CSSxRef("transform")}} とは個別に独立して回転変換を指定することができます。これは一般のユーザーインターフェイスの利用においてはより適しており、 `transform` の値で座標変換関数を指定する実際の順序を覚えておく手間を軽減します。
@@ -72,32 +71,32 @@ rotate: 3 0.5 2 45deg;
 }
 
 .front {
-  background: rgba(90, 90, 90, 0.7);
+  background: rgb(90 90 90 / 0.7);
   transform: translateZ(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
+  background: rgb(0 210 0 / 0.7);
   transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210, 0, 0, 0.7);
+  background: rgb(210 0 0 / 0.7);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0, 0, 210, 0.7);
+  background: rgb(0 0 210 / 0.7);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
+  background: rgb(210 210 0 / 0.7);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
+  background: rgb(210 0 210 / 0.7);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
@@ -129,108 +128,14 @@ rotate: revert-layer;
 rotate: unset;
 ```
 
-{{InteractiveExample("CSS デモ: rotate")}}
-
-```css interactive-example-choice
-rotate: none;
-```
-
-```css interactive-example-choice
-rotate: -45deg;
-```
-
-```css interactive-example-choice
-rotate: z 45deg;
-```
-
-```css interactive-example-choice
-rotate: x 45deg;
-```
-
-```css interactive-example-choice
-rotate: y 45deg;
-```
-
-```css interactive-example-choice
-rotate: 3 0.5 2 45deg;
-```
-
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="face front">1</div>
-    <div class="face back">2</div>
-    <div class="face right">3</div>
-    <div class="face left">4</div>
-    <div class="face top">5</div>
-    <div class="face bottom">6</div>
-  </div>
-</section>
-```
-
-```css interactive-example
-#default-example {
-  background: linear-gradient(skyblue, khaki);
-  perspective: 550px;
-}
-
-#example-element {
-  width: 100px;
-  height: 100px;
-  transform-style: preserve-3d;
-}
-
-.face {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  backface-visibility: inherit;
-  font-size: 60px;
-  color: white;
-}
-
-.front {
-  background: rgba(90, 90, 90, 0.7);
-  transform: translateZ(50px);
-}
-
-.back {
-  background: rgba(0, 210, 0, 0.7);
-  transform: rotateY(180deg) translateZ(50px);
-}
-
-.right {
-  background: rgba(210, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
-}
-
-.left {
-  background: rgba(0, 0, 210, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
-}
-
-.top {
-  background: rgba(210, 210, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
-}
-
-.bottom {
-  background: rgba(210, 0, 210, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
-}
-```
-
 ### 値
 
 - 角度値
-  - : {{CSSxRef("&lt;angle&gt;")}} で、 z 軸の周囲を該当する要素を貫いて回転させる角度を指定します。`rotate()` (二次元回転) 関数と等価です。
+  - : {{cssxref("angle")}} で、Z 軸の周囲を該当する要素を貫いて回転させる角度を指定します。`rotate()` (二次元回転) 関数と等価です。
 - x, y, z 軸と角度値
-  - : 該当する要素を回転する軸の名前 (`"x"`, "`y`", "`z"`) と、要素を貫いて回転する角度を指定する {{CSSxRef("&lt;angle&gt;")}} です。 `rotateX()`/`rotateY()`/`rotateZ()` (三次元回転) 関数と等価です。
+  - : 該当する要素を回転する軸の名前 (`x`, `y`, `z`) と、要素を貫いて回転する角度を指定する {{cssxref("angle")}} です。 `rotateX()`/`rotateY()`/`rotateZ()` (三次元回転) 関数と等価です。
 - ベクトルと角度値
-  - : 要素を回転させたい直線を表す原点を中心としたベクトルを表す 3 つの数値 {{CSSxRef("&lt;number&gt;")}} と、要素を貫いて回転する角度を指定する {{CSSxRef("&lt;angle&gt;")}} です。 `rotate3d()` (三次元回転) 関数と等価です。
+  - : 要素を回転させたい直線を表す原点を中心としたベクトルを表す 3 つの数値 {{CSSxRef("&lt;number&gt;")}} と、要素を貫いて回転する角度を指定する {{cssxref("angle")}} です。 `rotate3d()` (三次元回転) 関数と等価です。
 - `none`
   - : 回転を適用しないことを表します。
 

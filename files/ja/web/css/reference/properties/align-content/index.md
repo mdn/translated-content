@@ -1,14 +1,15 @@
 ---
 title: align-content
 slug: Web/CSS/Reference/Properties/align-content
-original_slug: Web/CSS/align-content
 l10n:
-  sourceCommit: 8b4e6b773d03959d5a5b2d02200243c4714079b9
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
-[CSS](/ja/docs/Web/CSS) の **`align-content`** プロパティは、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)の交差軸または[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)のブロック軸方向の内部のアイテムの間または周囲の空間の配分方法を設定します。
+[CSS](/ja/docs/Web/CSS) の **`align-content`** プロパティは、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)の[交差軸](/ja/docs/Glossary/Cross_Axis)に沿って、または[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)や[ブロックレベル](/ja/docs/Glossary/Block-level_content)要素のブロック軸に沿って、コンテンツアイテム間の空間および周囲の空間の分配を決定します。
 
-下記のインタラクティブデモでは、グリッドレイアウトを使用してこのプロパティの値のいくつかを説明しています。
+このプロパティは、単一行のフレックスコンテナー（つまり、`flex-wrap: nowrap` を指定したもの）には効果を持ちません。
+
+下記のインタラクティブな例では、グリッドレイアウトを使用してこのプロパティのいくつかの値を実演しています。
 
 {{InteractiveExample("CSS デモ: align-content")}}
 
@@ -51,12 +52,10 @@ align-content: space-around;
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 ```
-
-単一行のフレックスコンテナー (つまり、 `flex-wrap: nowrap` のもの) では、このプロパティは効果がありません。
 
 ## 構文
 
@@ -125,14 +124,14 @@ align-content: unset;
 - `space-evenly`
   - : 各アイテムは、配置コンテナーの中で交差軸方向に均等に配置されます。隣接するアイテム同士の間隔、先頭側の端と最初のアイテムの間のの余白、末尾側の端と最後のアイテムの間の余白は、まったく同じ幅になります。
 - `stretch`
-  - : 各アイテムの交差軸方向の寸法の合計が配置コンテナーの寸法よりも小さい場合、寸法が `auto` のアイテムは、 {{cssxref("max-height")}}/{{cssxref("max-width")}} (または同等の機能) での制約を尊重しつつ、 (比例的にではなく) 均等に引き伸ばされ、交差軸方向の寸法の合計が配置コンテナーを満たすようになります。
+  - : 各アイテムの交差軸方向の寸法の合計が配置コンテナーの寸法よりも小さい場合、寸法が `auto` のアイテムは、 {{cssxref("max-height")}}/{{cssxref("max-width")}} （または同等の機能）での制約を尊重しつつ、 (比例的にではなく) 均等に引き伸ばされ、交差軸方向の寸法の合計が配置コンテナーを満たすようになります。
 - `safe`
   - : 配置キーワードと共に使用します。選択されたキーワードによって、アイテムが配置コンテナーをあふれてデータの損失が発生する場合、アイテムは配置モードが `start` であったかのように配置されます。
 - `unsafe`
   - : 配置キーワードと共に使用します。アイテムの寸法と配置コンテナーとの関係、あふれることによってデータの損失が発生するかどうかにかかわらず、指定された値を尊重します。
 
 > [!NOTE]
-> `<content-distribution>` 値 (`space-between`, `space-around`, `space-evenly`, `stretch`) は[ブロックレイアウト](/ja/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables#align-content_and_justify-content)では効果がありません。そのブロック内のすべてのコンテンツが単一の[配置対象物](/ja/docs/Glossary/Alignment_Subject)として扱われるためです。
+> `<content-distribution>` 値 (`space-between`, `space-around`, `space-evenly`, `stretch`) は[ブロックレイアウト](/ja/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables#align-content_と_justify-content)では効果がありません。そのブロック内のすべてのコンテンツが単一の[配置対象物](/ja/docs/Glossary/Alignment_Subject)として扱われるためです。
 
 ## 公式定義
 
@@ -150,10 +149,6 @@ align-content: unset;
 
 #### HTML
 
-```html-nolint hidden
-<div class="wrapper">
-```
-
 ```html
 <section>
   <div class="olive">Olive</div>
@@ -165,46 +160,45 @@ align-content: unset;
 </section>
 ```
 
-```html-nolint hidden
+```html hidden
 <fieldset class="controls">
-    <legend>制御</legend>
-    <div class="row">
-      <label for="display">display: </label>
-      <select id="display">
-        <option value="block" selected>block</option>
-        <option value="flex">flex</option>
-        <option value="grid">grid</option>
-      </select>
-    </div>
-    <div class="row">
-      <label for="alignContent">align-content: </label>
-      <select id="alignContent">
-        <option value="normal" selected>normal</option>
-        <option value="start">start</option>
-        <option value="center">center</option>
-        <option value="end">end</option>
-        <option value="flex-start">flex-start</option>
-        <option value="flex-end">flex-end</option>
-        <option value="space-between">space-between</option>
-        <option value="space-around">space-around</option>
-        <option value="space-evenly">space-evenly</option>
-      </select>
-    </div>
-    <p>適用される CSS</p>
-    <pre>
+  <legend>制御</legend>
+  <div class="row">
+    <label for="display">display: </label>
+    <select id="display">
+      <option value="block" selected>block</option>
+      <option value="flex">flex</option>
+      <option value="grid">grid</option>
+    </select>
+  </div>
+  <div class="row">
+    <label for="alignContent">align-content: </label>
+    <select id="alignContent">
+      <option value="normal" selected>normal</option>
+      <option value="start">start</option>
+      <option value="center">center</option>
+      <option value="end">end</option>
+      <option value="flex-start">flex-start</option>
+      <option value="flex-end">flex-end</option>
+      <option value="space-between">space-between</option>
+      <option value="space-around">space-around</option>
+      <option value="space-evenly">space-evenly</option>
+    </select>
+  </div>
+  <p>適用される CSS</p>
+  <pre>
 section {
   display: <span id="displayStyle">block</span>;
   align-content: <span id="align">normal</span>
 }
-    </pre>
-  </fieldset>
-</div>
+  </pre>
+</fieldset>
 ```
 
 #### CSS
 
 ```css hidden
-.wrapper {
+body {
   font-size: 1.25rem;
   display: flex;
   gap: 1rem;
@@ -251,9 +245,7 @@ const display = document.querySelector("#display");
 const container = document.querySelector("section");
 const displayStyle = document.querySelector("#displayStyle");
 const alignStyle = document.querySelector("#align");
-document.addEventListener("load", () => {
-  updatePage();
-});
+
 alignContent.addEventListener("change", () => {
   updatePage();
 });
@@ -268,6 +260,7 @@ function updatePage() {
   alignStyle.innerText = alVal;
   displayStyle.innerText = dVal;
 }
+updatePage();
 ```
 
 #### 結果
@@ -276,7 +269,7 @@ function updatePage() {
 
 {{EmbedLiveSample("Examples", 260, 310)}}
 
-[ブロックレイアウト](/ja/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables#align-content_and_justify-content)では、子要素は単一の要素として扱われるため、 `space-between`、`space-around`、`space-evenly` の動作が異なります。
+[ブロックレイアウト](/ja/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables#align-content_と_justify-content)では、子要素は単一の要素として扱われるため、 `space-between`、`space-around`、`space-evenly` の動作が異なります。
 
 ## 仕様書
 
@@ -288,9 +281,9 @@ function updatePage() {
 
 ## 関連情報
 
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)_
-- CSS フレックスボックスガイド: _[フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)_
-- CSS グリッドガイド: _[グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/Guides/Grid_layout/Box_alignment)_
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
 - [CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)
 - [通常フローでのブロック及びインラインレイアウト](/ja/docs/Web/CSS/Guides/Display/Block_and_inline_layout)
 - [ブロックレベルコンテンツ](/ja/docs/Glossary/Block-level_content)

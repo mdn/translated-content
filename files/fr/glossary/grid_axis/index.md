@@ -2,7 +2,7 @@
 title: Axe de grille
 slug: Glossary/Grid_Axis
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 La mise en page en grille CSS (<i lang="en">CSS grid layout</i> en anglais) est une méthode de disposition bidimensionnelle permettant de disposer le contenu en _lignes_ et en _colonnes_. Ainsi, dans toute grille, nous avons deux axes. L'_axe de bloc_ ou axe des colonnes, et l'_axe en ligne_ ou axe des lignes.

@@ -1,9 +1,8 @@
 ---
 title: translate3d()
 slug: Web/CSS/Reference/Values/transform-function/translate3d
-original_slug: Web/CSS/transform-function/translate3d
 l10n:
-  sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
 **`translate3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、要素を三次元空間内で再配置します。返値は {{cssxref("&lt;transform-function&gt;")}} データ型です。
@@ -11,7 +10,7 @@ l10n:
 {{InteractiveExample("CSS デモ: translate3d()")}}
 
 ```css interactive-example-choice
-transform: translate3d(0);
+transform: translate3d(0, 0, 0);
 ```
 
 ```css interactive-example-choice
@@ -66,37 +65,37 @@ transform: translate3d(5ch, 0.4in, 5em);
 }
 
 .front {
-  background: rgba(90, 90, 90, 0.7);
+  background: rgb(90 90 90 / 0.7);
   transform: translateZ(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
+  background: rgb(0 210 0 / 0.7);
   transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210, 0, 0, 0.7);
+  background: rgb(210 0 0 / 0.7);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0, 0, 210, 0.7);
+  background: rgb(0 0 210 / 0.7);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
+  background: rgb(210 210 0 / 0.7);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
+  background: rgb(210 0 210 / 0.7);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
 
-この変換は三次元ベクトルであることが特徴です。座標は要素がそれぞれの方向にどれだけ移動するかを定義します。
+この座標変換は三次元ベクトルであることが特徴です。座標は要素がそれぞれの方向にどれだけ移動するかを定義します。
 
 ## 構文
 
@@ -107,16 +106,17 @@ translate3d(tx, ty, tz)
 ### 値
 
 - `tx`
-  - : 移動ベクトルの横座標を表す {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。
+  - : {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で、移動ベクトル [tx, ty, tz] の横軸（水平、X 成分）を表します。
 - `ty`
-  - : 移動ベクトルの縦座標を表す {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。
+  - : {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で、移動ベクトル [tx, ty, tz] の縦軸（垂直、Y 成分）を表します。
 - `tz`
-  - : 移動ベクトルの z 成分を表す {{cssxref("&lt;length&gt;")}} です。 {{cssxref("&lt;percentage&gt;")}} 値は指定できません。この場合、これを含む座標変換は無効とされます。
+  - : {{cssxref("&lt;length&gt;")}} で、移動ベクトルの z 成分を表します。
+    {{cssxref("&lt;percentage&gt;")}} 値は指定できません。この場合、これを含む座標変換 [tx, ty, tz] は無効とされます。
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col"><a href="/ja/docs/Web/CSS/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
+      <th scope="col"><a href="/ja/docs/Web/CSS/Reference/Values/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
       <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">同次座標系</a> (<a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a>)</th>
       <th scope="col">直交座標系 (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^3</a>)</th>
       <th scope="col">同次座標系 (<a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a>)</th>
@@ -133,29 +133,17 @@ translate3d(tx, ty, tz)
         ℝ^3 では線形変換ではないので、直交座標の行列で表すことはできません。
       </td>
       <td>
-        <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mi>tx</mi> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mi>ty</mi> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn> </mtd><mtd><mi>tz</mi> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi>tx</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi>ty</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mi>tz</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cccc} 1 & 0 & 0 & tx \\ 0 & 1 & 0 & ty \\ 0 & 0 & 1 & tz \\ 0 & 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
     </tr>
   </tbody>
 </table>
+
+## 形式文法
+
+{{CSSSyntax}}
 
 ## 例
 
@@ -164,9 +152,9 @@ translate3d(tx, ty, tz)
 #### HTML
 
 ```html
-<div>Static</div>
-<div class="moved">Moved</div>
-<div>Static</div>
+<div>静的</div>
+<div class="moved">移動</div>
+<div>静的</div>
 ```
 
 #### CSS
@@ -194,9 +182,9 @@ div {
 #### HTML
 
 ```html
-<div>Static</div>
-<div class="moved">Moved</div>
-<div>Static</div>
+<div>静的</div>
+<div class="moved">移動</div>
+<div>静的</div>
 ```
 
 #### CSS
