@@ -40,7 +40,7 @@ _Hérite également des propriétés de son parent, {{DOMxRef("Element")}}._
   - : Un booléen indiquant si l'élément peut être déplacé.
 - {{DOMxRef("HTMLElement.editContext")}} {{Experimental_Inline}}
   - : Retourne l'objet {{DOMxRef("EditContext")}} associé à l'élément, ou `null` s'il n'y en a pas.
-- [`HTMLElement.enterkeyhint`](/fr/docs/Web/API/HTMLElement/enterkeyhint)
+- [`HTMLElement.enterkeyhint`](/fr/docs/Web/API/HTMLElement/enterKeyHint)
   - : Une chaîne de caractères qui définit le libellé (ou l'icône) à présenter comme libellé d'action pour la touche <kbd>Entrée</kbd> des claviers virtuels.
 - {{DOMxRef("HTMLElement.hidden")}}
   - : Une chaîne de caractères ou un booléen reflétant la valeur de l'attribut [`hidden`](/fr/docs/Web/HTML/Reference/Global_attributes/hidden) de l'élément.

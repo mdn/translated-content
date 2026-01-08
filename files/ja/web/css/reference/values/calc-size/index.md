@@ -1,14 +1,13 @@
 ---
 title: calc-size()
 slug: Web/CSS/Reference/Values/calc-size
-original_slug: Web/CSS/calc-size
 l10n:
-  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 {{seecompattable}}
 
-**`calc-size()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、`auto`、 [`fit-content`](/ja/docs/Web/CSS/Reference/Values/fit-content)、[`max-content`](/ja/docs/Web/CSS/Reference/Values/max-content) などの[内在サイズ](/ja/docs/Glossary/Intrinsic_Size)値に対して計算を行うことができます。これは、通常の {{cssxref("calc()")}} 関数では対応していません。
+**`calc-size()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、`auto`、 {{cssxref("fit-content")}}、{{cssxref("max-content")}} などの[内在サイズ](/ja/docs/Glossary/Intrinsic_Size)値に対して計算を行うことができます。これは、通常の {{cssxref("calc()")}} 関数では対応していません。
 
 `calc-size()` の返値は[補間処理](/ja/docs/Glossary/Interpolation)も可能であり、サイズキーワードの値を[アニメーション](/ja/docs/Web/CSS/Guides/Animations)および[トランジション](/ja/docs/Web/CSS/Guides/Transitions)で使用することができます。事実上、プロパティ値に `calc-size()` を含めると、選択範囲に [`interpolate-size: allow-keywords`](/ja/docs/Web/CSS/Reference/Properties/interpolate-size) が自動的に適用されます。
 
@@ -42,7 +41,7 @@ calc-size(<calc-size-basis>, <calc-sum>)
 - `<calc-size-basis>`
   - : 計算を実行する値（通常は内在サイズ）。
 
-- [`<calc-sum>`](/ja/docs/Web/CSS/Reference/Values/calc-sum)
+- {{cssxref("calc-sum")}}
   - : `<calc-size-basis>` に対して実行する計算を定義する式です。
 
 ### 返値
@@ -51,7 +50,7 @@ calc-size(<calc-size-basis>, <calc-sum>)
 
 ## 解説
 
-特定のブラウザーのレイアウトアルゴリズムは、内在サイズキーワードに対して特別な動作をします。 `calc-size()` 関数は、 [`<length-percentage>`](/ja/docs/Web/CSS/Reference/Values/length-percentage) ではなく、内在サイズを表すように明示的に定義されており、それによって正確性を確保しています。 `calc-size()` を使用すると、内在サイズの数値に対して、安全かつ明確に定義された方法で計算を行うことができます。
+一部のブラウザーのレイアウトアルゴリズムは、内在サイズキーワードに対して特別な動作をします。 `calc-size()` 関数は、{{cssxref("length-percentage")}} ではなく、内在サイズを表すように明示的に定義されており、それによって正確性を確保しています。 `calc-size()` を使用すると、内在サイズの数値に対して、安全かつ明確に定義された方法で計算を行うことができます。
 
 ### 最初の引数（`<calc-size-basis>`）の有効な値
 
@@ -105,7 +104,7 @@ calc-size(<calc-size-basis>, <calc-sum>)
 
 ### 2 つ目の引数の有効な値 (`<calc-sum>`)
 
-2 つ目の `calc-size()` 引数は、[`<calc-sum>`](/ja/docs/Web/CSS/Reference/Values/calc-sum) 式です。
+2 つ目の `calc-size()` 引数は、{{cssxref("calc-sum")}} 式です。
 
 この式では、
 
@@ -113,11 +112,11 @@ calc-size(<calc-size-basis>, <calc-sum>)
 - オペランドには、`size` およびコンテキストで意味のある値型を含めることができます。
 - `+`、`-`、`*`、 `/` 演算子を含めることができます。
 - それ以外にも、{{cssxref("round()")}}、{{cssxref("max()")}}、あるいは入れ子にした `calc-size()` などの数学関数を含めることができます。
-- 全体的な表現は [`<length-percentage>`](/ja/docs/Web/CSS/Reference/Values/length-percentage) と一致し、 [`<length>`](/ja/docs/Web/CSS/Reference/Values/length) に解決される必要があります。
+- 全体的な表現は {{cssxref("length-percentage")}} と一致し、 {{cssxref("length")}} に解決される必要があります。
 
 ### 内在サイズの値をアニメーションできるようにする
 
-`calc-size()` の返値は補間処理が可能であり、[`<length-percentage>`](/ja/docs/Web/CSS/Reference/Values/length-percentage) 値と `calc-size()` の内在サイズ返値との間でアニメーションを実現することができます。
+`calc-size()` の返値は補間処理が可能であり、{{cssxref("length-percentage")}} 値と `calc-size()` の内在サイズ返値との間でアニメーションを実現することができます。
 
 > [!NOTE]
 > レイアウトイベントを削減し、パフォーマンスへの影響を軽減するため、可能であればボックスモデルのプロパティのアニメーションは避けるべきです（[重要なレンダリングパス > レイアウト](/ja/docs/Web/Performance/Guides/Critical_rendering_path#レイアウト)を参照）。
@@ -201,13 +200,13 @@ HTML には、子コンテンツを含む単一の {{htmlelement("section")}} �
 }
 
 section {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   border: 1px solid black;
 }
 
 h2 {
   margin: 0;
-  font-weight: 400;
+  font-weight: normal;
   font-size: 1.1rem;
   text-align: center;
   letter-spacing: 1px;
@@ -218,7 +217,7 @@ p {
 }
 ```
 
-CSS では、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout) を使用して、`<section>` 内の子要素を中央に配置し、`<section>` の `width` および `height` を `calc-size()` 関数に設定します。`width` は `fit-content` に `6rem` を加えた値に設定します。`height` は `auto` に 2 を掛けた値に設定します。
+CSS では、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout) を使用して、`<section>` 内の子要素を中央に配置し、その `<section>` の `width` および `height` を `calc-size()` 関数に設定します。`width` は `fit-content` に `6rem` を加えた値に設定します。`height` は `auto` に 2 を掛けた値に設定します。
 
 ```css
 section {
@@ -273,7 +272,7 @@ HTML には、キーボードのフォーカスを受け取ることができる
 }
 
 section {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   width: 175px;
   border-radius: 5px;
   background: #eeeeee;
@@ -293,7 +292,7 @@ main {
 
 h2 {
   margin: 0;
-  font-weight: 400;
+  font-weight: normal;
   font-size: 1.1rem;
   text-align: center;
   letter-spacing: 1px;
@@ -377,7 +376,7 @@ body {
 
 section {
   margin-top: 20px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   background: #eeeeee;
   border: 2px solid #cccccc;
   padding: 0 20px;
@@ -503,7 +502,7 @@ body {
 form {
   margin-top: 20px;
   padding: 20px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   background: #eeeeee;
   border: 2px solid #cccccc;
 }
