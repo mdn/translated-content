@@ -2,7 +2,7 @@
 title: PerformanceEventTiming
 slug: Web/API/PerformanceEventTiming
 l10n:
-  sourceCommit: 1b6ae1c429b5a495fada425cc88ec2a3c7ab77db
+  sourceCommit: cf16851e73da29823438198c4f0efcb7026b7d10
 ---
 
 {{APIRef("Performance API")}}
@@ -13,7 +13,7 @@ l10n:
 
 この API により、特定のイベント型（[下記参照](#公開されるイベント)）のイベントのタイムスタンプと処理時間が提供されるので、遅いイベントを可視化することができるようになります。例えば、ユーザー操作からそのイベントハンドラーが始まるまでの時間や、イベントハンドラーが実行するまでにかかる時間を監視することができます。
 
-この API は、{{Glossary("first input delay")}} (FID) （ユーザーがこのアプリを最初に操作した時点から、ブラウザーが実際にその操作に応答することができるまでの時間）を測定するのに特に有益です。
+この API は、{{Glossary("Interaction to Next Paint")}} (INP) （ユーザーがアプリを操作した時点から、ブラウザーが応答できるようになるまでの最長時間で、外れ値を除く）を測定するのに特に有益です。
 
 通常、 `PerformanceEventTiming` オブジェクトを扱うには、 {{domxref("PerformanceObserver")}} インスタンスを作成し、 [`observe()`](/ja/docs/Web/API/PerformanceObserver/observe) メソッドを呼び出して、 [`type`](/ja/docs/Web/API/PerformanceEntry/entryType) オプションに `"event"` または `"first-input"` を渡します。 `PerformanceObserver` オブジェクトのコールバックは、 `PerformanceEventTiming` オブジェクトのリストとともに呼び出されます。例えば[下記の例](#イベントタイミング情報の取得)をご覧ください。
 
