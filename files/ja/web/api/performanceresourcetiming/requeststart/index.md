@@ -2,7 +2,7 @@
 title: PerformanceResourceTiming.requestStart
 slug: Web/API/PerformanceResourceTiming/requestStart
 l10n:
-  sourceCommit: b3477f90eb235d08fe196373466a725050f43862
+  sourceCommit: d960038e3480d158d3b58294a4d150202331a83d
 ---
 
 {{APIRef("Performance API")}}
