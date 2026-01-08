@@ -1,7 +1,8 @@
 ---
 title: "<li> : l'élément dans une liste"
 slug: Web/HTML/Reference/Elements/li
-original_slug: Web/HTML/Element/li
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<li>`** est utilisé pour représenter un élément dans une liste. Il doit être contenu dans un élément parent&nbsp;: une liste ordonnée ({{HTMLElement("ol")}}), une liste non ordonnée ({{HTMLElement("ul")}}) ou un menu ({{HTMLElement("menu")}}). Dans les menus et les listes non ordonnées, les éléments de liste sont habituellement affichés avec des puces. Dans les listes ordonnées, ils sont habituellement affichés avec un compteur croissant à gauche, tel qu'un nombre ou une lettre.
@@ -41,18 +42,20 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
   - : Cette valeur entière indique la valeur ordinale en cours de l'élément de liste tel que défini par l'élément {{HTMLElement("ol")}}. La seule valeur autorisée pour cet attribut est un nombre, même si la liste est affichée avec des chiffres romains ou des lettres. Les éléments de la liste qui suivent celui-ci continueront la numérotation à partir de la valeur indiquée. L'attribut **value** n'a pas de signification pour les listes non ordonnées ({{HTMLElement("ul")}}) ou pour les menus ({{HTMLElement("menu")}}).
 - `type` {{Deprecated_Inline}}
   - : Cet attribut de caractère indique le type de numérotation utilisé pour la liste&nbsp;:
-    - `a` : lettres minuscules
-    - `A` : lettres majuscules
-    - `i` : chiffres romains en minuscules
-    - `I` : chiffres romains en majuscules
-    - `1` : nombres
+    - `a`&nbsp;: lettres minuscules
+    - `A`&nbsp;: lettres majuscules
+    - `i`&nbsp;: chiffres romains en minuscules
+    - `I`&nbsp;: chiffres romains en majuscules
+    - `1`&nbsp;: nombres
 
     Ce type surcharge celui utilisé par son élément parent {{HTMLElement("ol")}} si présent.
 
     > [!NOTE]
-    > Cet attribut a été déprécié&nbsp;: utilisez la propriété CSS {{cssxref("list-style-type")}} à la place.
+    > Cet attribut a été déprécié&nbsp;; utilisez la propriété CSS {{CSSxRef("list-style-type")}} à la place.
 
 ## Exemples
+
+Pour des exemples plus détaillés, voir les pages {{HTMLElement("ol")}} et {{HTMLElement("ul")}}.
 
 ### Liste ordonnée
 
@@ -68,7 +71,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 #### Résultat
 
-{{EmbedLiveSample("liste_ordonnée")}}
+{{EmbedLiveSample("Liste ordonnée")}}
 
 ### Liste ordonnée démarrant avec un indice donné
 
@@ -84,7 +87,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 #### Résultat
 
-{{EmbedLiveSample("liste_ordonnée_démarrant_avec_un_indice_donné")}}
+{{EmbedLiveSample("Liste ordonnée démarrant avec un indice donné")}}
 
 ### Liste non ordonnée
 
@@ -100,7 +103,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 #### Résultat
 
-{{EmbedLiveSample("liste_non_ordonnée")}}
+{{EmbedLiveSample("Liste non ordonnée")}}
 
 ## Résumé technique
 
@@ -158,7 +161,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLLIElement")}}</td>
+      <td>{{DOMxRef("HTMLLIElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -175,6 +178,6 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 - Les autres éléments liés aux listes&nbsp;: {{HTMLElement("ul")}}, {{HTMLElement("ol")}}, {{HTMLElement("menu")}} et {{HTMLElement("dir")}} (obsolète)&nbsp;;
 - Les propriétés CSS qui peuvent être particulièrement utiles pour mettre en forme l'élément `<li>`&nbsp;:
-  - la propriété {{cssxref("list-style")}}, pour choisir la manière d'afficher l'ordinal&nbsp;;
+  - la propriété {{CSSxRef("list-style")}}, pour choisir la manière d'afficher l'ordinal&nbsp;;
   - les [compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters), pour gérer des listes imbriquées complexes&nbsp;;
-  - la propriété {{cssxref("margin")}}, pour contrôler l'indentation de l'élément de liste.
+  - la propriété {{CSSxRef("margin")}}, pour contrôler l'indentation de l'élément de liste.
