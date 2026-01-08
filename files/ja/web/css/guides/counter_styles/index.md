@@ -77,7 +77,7 @@ l10n:
 
 ## 関連情報
 
-- [CSS リストとカウンター](/en-US/docs/Web/CSS/Guides/Lists)モジュール
-- [CSS 擬似要素](/en-US/docs/Web/CSS/Guides/Pseudo-elements)モジュール
-- [CSS 生成コンテンツ](/en-US/docs/Web/CSS/Guides/Generated_content)モジュール
+- [CSS リストとカウンター](/ja/docs/Web/CSS/Guides/Lists)モジュール
+- [CSS 擬似要素](/ja/docs/Web/CSS/Guides/Pseudo-elements)モジュール
+- [CSS 生成コンテンツ](/ja/docs/Web/CSS/Guides/Generated_content)モジュール
 - [Ready-made counter styles](https://w3c.github.io/predefined-counter-styles/#builtins) - (2023)

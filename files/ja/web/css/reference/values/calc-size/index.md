@@ -7,7 +7,7 @@ l10n:
 
 {{seecompattable}}
 
-**`calc-size()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、`auto`、 {{cssxref("fit-content")}}、{{cssxref("max-content")}} などの[内在サイズ](/ja/docs/Glossary/Intrinsic_Size)値に対して計算を行うことができます。これは、通常の {{cssxref("calc()")}} 関数では対応していません。
+**`calc-size()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、`auto`、 {{cssxref("fit-content")}}、{{cssxref("max-content")}} などの[内在サイズ](/ja/docs/Glossary/Intrinsic_Size)値に対して計算を行うことができます。これは、通常の {{cssxref("calc()")}} 関数では対応していません。
 
 `calc-size()` の返値は[補間処理](/ja/docs/Glossary/Interpolation)も可能であり、サイズキーワードの値を[アニメーション](/ja/docs/Web/CSS/Guides/Animations)および[トランジション](/ja/docs/Web/CSS/Guides/Transitions)で使用することができます。事実上、プロパティ値に `calc-size()` を含めると、選択範囲に [`interpolate-size: allow-keywords`](/ja/docs/Web/CSS/Reference/Properties/interpolate-size) が自動的に適用されます。
 
