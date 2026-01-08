@@ -1,45 +1,49 @@
 ---
-title: "<noframes> : l'élément alternatif aux frames (obsolete)"
+title: "<noframes> : l'élément de repli des cadres"
 slug: Web/HTML/Reference/Elements/noframes
-original_slug: Web/HTML/Element/noframes
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{Deprecated_Header}}
 
-L'élément HTML obsolète **`<noframes>`** est utilisé par les navigateurs qui ne supportent pas les éléments {{HTMLElement("frame")}}, ou qui sont configurés afin de ne pas les supporter.
+L'élément [HTML](/fr/docs/Web/HTML) **`<noframes>`** fournit un contenu à présenter dans les navigateurs qui ne supportent pas (ou ont désactivé le support de) l'élément {{HTMLElement("frame")}}. Bien que la plupart des navigateurs courants prennent en charge les cadres, il existe des exceptions, notamment certains navigateurs spécialisés comme certains navigateurs mobiles, ainsi que des navigateurs en mode texte.
 
-`<noframes>` accepte n'importe quel élément HTML valide dans un élément {{HTMLElement("body")}}, à l'exception des éléments {{HTMLElement("frameset")}} et {{HTMLElement("frame")}}.
+Un élément `<noframes>` peut contenir n'importe quel élément HTML autorisé dans le corps d'un document HTML, à l'exception des éléments {{HTMLElement("frameset")}} et {{HTMLElement("frame")}}, car utiliser des cadres quand ils ne sont pas supportés n'a pas de sens.
 
-Cet élément pouvait être utilisé afin d'afficher un message explicatif, destiné à l'utilisateur. Idéalement, le contenu devait présenter des fonctionnalités analogues à la _frame_ qui n'était pas prise en charge.
+`<noframes>` peut être utilisé pour présenter un message expliquant que le navigateur de l'utilisateur·ice ne supporte pas les cadres, mais il devrait idéalement être utilisé pour présenter une version alternative du site qui n'utilise pas de cadres tout en offrant les mêmes fonctionnalités ou des fonctionnalités similaires.
 
 > [!NOTE]
-> Cet élément est aussi entièrement obsolète en HTML5, et doit être evité pour se conformer au standard.
+> Cet élément est obsolète et ne doit pas être utilisé, puisque les éléments {{HTMLElement("frame")}} et {{HTMLElement("frameset")}} sont également obsolètes. Lorsque des cadres sont nécessaires, elles doivent être présentées à l'aide de l'élément {{HTMLElement("iframe")}}.
 
 ## Attributs
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Exemples
 
-### HTML
+Dans cet exemple, on voit un ensemble de cadre avec deux cadres. De plus, `<noframes>` est utilisé pour présenter un message explicatif si {{Glossary("user agent", "l'agent utilisateur")}} ne supporte pas les cadres.
 
 ```html
-<frameset cols="50%,50%">
-  <frame
-    src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/frameset" />
-  <frame src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/frame" />
-  <noframes>
-    <p>
-      Il semblerait que votre navigateur ne supporte pas les frames, ou qu'il
-      est configuré pour ne pas les autoriser.
-    </p>
-  </noframes>
-</frameset>
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Les métadonnées du document vont ici -->
+  </head>
+  <frameset rows="45%, 55%">
+    <frame
+      src="https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/frameset" />
+    <frame
+      src="https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/frame" />
+    <noframes>
+      <p>
+        Il semblerait que votre navigateur ne supporte pas les frames, ou qu'il
+        est configuré pour ne pas les autoriser.
+      </p>
+    </noframes>
+  </frameset>
+</html>
 ```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples","100%","100%")}}
 
 ## Spécifications
 
@@ -51,5 +55,5 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
 ## Voir aussi
 
-- {{HTMLElement("frameset")}}
-- {{HTMLElement("frame")}}
+- L'élément {{HTMLElement("frameset")}}
+- L'élément {{HTMLElement("frame")}}
