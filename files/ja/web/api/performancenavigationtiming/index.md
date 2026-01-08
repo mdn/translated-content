@@ -2,7 +2,7 @@
 title: PerformanceNavigationTiming
 slug: Web/API/PerformanceNavigationTiming
 l10n:
-  sourceCommit: 922c2b0f37e2f13887c50efe47e62bc23d94c3aa
+  sourceCommit: 11e09e7c584658fbfbecd2f00ae66e546cd54cc0
 ---
 
 {{APIRef("Performance API")}}
@@ -54,7 +54,7 @@ l10n:
 - {{domxref('PerformanceNavigationTiming.redirectCount')}} {{ReadOnlyInline}}
   - : 現在の閲覧コンテキストでの最後のリダイレクト以外のナビゲーション以降のリダイレクト数を表す数値。
 - {{domxref('PerformanceNavigationTiming.type')}} {{ReadOnlyInline}}
-  - : 文字列で、ナビゲーションの種類を表します。 `"navigate"`、`"reload"`、`"back_forward"`、`"prerender"` のいずれかです。
+  - : 文字列で、ナビゲーションの種類を表します。 `"navigate"`、`"reload"`、`"back_forward"` のいずれかです。
 - {{domxref('PerformanceNavigationTiming.unloadEventEnd')}} {{ReadOnlyInline}}
   - : {{domxref("DOMHighResTimeStamp")}} で、ユーザーエージェントが前の文書の [`unload`](/ja/docs/Web/API/Window/unload_event) イベントを完了した直後の時間と等しい時間値を表します。
 - {{domxref('PerformanceNavigationTiming.unloadEventStart')}} {{ReadOnlyInline}}
