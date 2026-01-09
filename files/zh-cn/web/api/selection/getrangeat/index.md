@@ -3,7 +3,7 @@ title: Selection：getRangeAt() 方法
 short-title: getRangeAt()
 slug: Web/API/Selection/getRangeAt
 l10n:
-  sourceCommit: 4f35a8237ee0842beb9cfef3354e05464ad7ce1a
+  sourceCommit: 7a9bb2446815454a7f905e17e6f4d652c891316a
 ---
 
 {{ ApiRef("DOM") }}
