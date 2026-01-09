@@ -42,7 +42,6 @@ traverseTo(key, options)
 - `InvalidStateError` {{domxref("DOMException")}}
   - : {{domxref("Navigation.currentEntry")}}의 {{domxref("NavigationHistoryEntry.index")}} 값이 -1인 경우(즉, 현재 {{domxref("Document")}}가 아직 활성 상태가 아님), 혹은 내비게이션 히스토리 목록에 지정한 key를 가진 {{domxref("NavigationHistoryEntry")}}가 없는 경우, 현재 {{domxref("Document")}}가 언로드(종료)되는 중인 경우에 발생합니다.
 
-
 ## 예제
 
 ### 홈 버튼 설정하기
