@@ -1,9 +1,8 @@
 ---
 title: clip-rule
 slug: Web/CSS/Reference/Properties/clip-rule
-original_slug: Web/CSS/clip-rule
 l10n:
-  sourceCommit: 611edf6335e4a833a6f394d0d98b117e7b0a36bf
+  sourceCommit: 13f5bce7caf7be6e4156655d827e5927091310b9
 ---
 
 **`clip-rule`** は [CSS](/ja/docs/Web/CSS) のプロパティで、パスの一部が他の部分と重なった場合、マスクのボックス内のピクセルが、[クリップパス](/ja/docs/Web/CSS/Reference/Properties/clip-path)で定義されたクリップするシェイプの内側にあるか、外側にあるかを決定します。
@@ -93,7 +92,7 @@ svg {
 
 #star3 path {
   fill: none;
-  stroke: #000;
+  stroke: black;
   stroke-width: 1;
 }
 ```
@@ -155,10 +154,10 @@ div {
 
 ```css
 div:first-of-type {
-  clip-path: url(#star1);
+  clip-path: url("#star1");
 }
 div:last-of-type {
-  clip-path: url(#star2);
+  clip-path: url("#star2");
 }
 ```
 
@@ -183,7 +182,7 @@ div:last-of-type {
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50">
-  <g stroke="#123" fill="#BCD">
+  <g stroke="#112233" fill="#bbccdd">
     <!-- 以下、基本的な長方形とクリップパスの視覚化 -->
     <rect x="10" y="10" width="30" height="30" />
     <path
@@ -229,7 +228,7 @@ div:last-of-type {
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50">
-  <g stroke="#123" fill="#BCD">
+  <g stroke="#112233" fill="#bbccdd">
     <!-- 以下、基本的な長方形とクリップパスの視覚化 -->
     <rect x="10" y="10" width="30" height="30" />
     <path
