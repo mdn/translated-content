@@ -25,8 +25,9 @@ l10n:
   - : `"navigation"` を返します。
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
   - : [文書の URL](/ja/docs/Web/API/Document/URL) を返します。
+    [テキストフラグメント](/ja/docs/Web/URI/Reference/Fragment/Text_fragments) およびその他のフラグメントディレクティブは URL から削除されることに注意してください。
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
-  - : 値 "`0`" を持つ {{domxref("DOMHighResTimeStamp")}} を返します。
+  - : 値 `0` を持つ {{domxref("DOMHighResTimeStamp")}} を返します。
 - {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
   - : {{domxref("PerformanceNavigationTiming.loadEventEnd")}} と {{domxref("PerformanceEntry.startTime")}} の各プロパティの差である {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。
 
@@ -39,6 +40,8 @@ l10n:
 
 - {{domxref('PerformanceNavigationTiming.activationStart')}} {{ReadOnlyInline}} {{experimental_inline}}
   - : {{domxref("DOMHighResTimeStamp")}} で、文書が事前レンダリングを始めてから有効になるまでの時間を表します。
+- {{domxref('PerformanceNavigationTiming.criticalCHRestart')}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : {{domxref("DOMHighResTimeStamp")}} で、{{HTTPHeader("Critical-CH")}} HTTP レスポンスヘッダーの不一致により接続の再開が発生した時刻を表します。
 - {{domxref('PerformanceNavigationTiming.domComplete')}} {{ReadOnlyInline}}
   - : {{domxref("DOMHighResTimeStamp")}} で、ブラウザーが現在の文書の現在の文書レディネスを*[完了](https://html.spec.whatwg.org/multipage/syntax.html#the-end)*に設定する直前の時間と等しい時間値を表します。
 - {{domxref('PerformanceNavigationTiming.domContentLoadedEventEnd')}} {{ReadOnlyInline}}
@@ -51,6 +54,8 @@ l10n:
   - : {{domxref("DOMHighResTimeStamp")}} で、現在の文書の [`load`](/ja/docs/Web/API/Window/load_event) イベントが完了した時刻を表します。
 - {{domxref('PerformanceNavigationTiming.loadEventStart')}} {{ReadOnlyInline}}
   - : {{domxref("DOMHighResTimeStamp")}} で、現在の文書の [`load`](/ja/docs/Web/API/Window/load_event) イベントが発生する直前の時間と等しい時間値を表します。
+- {{domxref('PerformanceNavigationTiming.notRestoredReasons')}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : {{domxref('NotRestoredReasons')}} オブジェクトで、現在の文書がバック/フォワードキャッシュ ({{Glossary("bfcache")}}) から復元されなかった理由に関する情報を表します。
 - {{domxref('PerformanceNavigationTiming.redirectCount')}} {{ReadOnlyInline}}
   - : 現在の閲覧コンテキストでの最後のリダイレクト以外のナビゲーション以降のリダイレクト数を表す数値。
 - {{domxref('PerformanceNavigationTiming.type')}} {{ReadOnlyInline}}
