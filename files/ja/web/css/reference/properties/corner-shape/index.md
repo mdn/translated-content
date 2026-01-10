@@ -214,7 +214,7 @@ div {
 
 この例のマークアップでは、単一の {{htmlelement("div")}} 要素の中にいくらかのコンテンツがあります。
 
-```html live-sample___styles-following-corner-shape
+```html-nolint live-sample___styles-following-corner-shape
 <div>
   border、outline、box-shadow、 overflow、backdrop-filter など一部のスタイルは、角の形状に従います。これはデザインの様々な側面が衝突しないようにするのに役立ちます。ご覧の通り、興味深い視覚効果を生み出す可能性があるため、デザインを慎重にテストする必要があります。
 </div>
