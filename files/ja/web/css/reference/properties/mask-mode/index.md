@@ -1,9 +1,8 @@
 ---
 title: mask-mode
 slug: Web/CSS/Reference/Properties/mask-mode
-original_slug: Web/CSS/mask-mode
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`mask-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、マスクされる要素に設定します。 {{cssxref("mask-image")}} で定義されたマスクを、輝度とアルファマスクのどちらで扱うかを設定します。
@@ -44,7 +43,7 @@ mask-mode: unset;
 ## 解説
 
 マスクは、その透過率、およびマスクの型に応じて輝度を、マスクする要素に伝達します。
-マスクの型が {{cssxref("&lt;image&gt;")}} の場合、既定では、マスク画像のアルファ値によって、マスクされた要素の各部分の表示/非表示が決まります。マスクが不透明な部分は、マスクされた要素の対応する部分も表示されます。マスクが半透明な部分は、要素も半透明になり、その部分の要素は非表示になります。これは、`mask-mode` プロパティが `match-source` に設定されているか、または既定で `match-source` の場合、`<image>` マスクの既定の動作です。また、`mask-mode` が明示的に `alpha` に設定されている場合は、常にこの動作になります。
+マスクの型が {{cssxref("image")}} の場合、既定では、マスク画像のアルファ値によって、マスクされた要素の各部分の表示/非表示が決まります。マスクが不透明な部分は、マスクされた要素の対応する部分も表示されます。マスクが半透明な部分は、要素も半透明になり、その部分の要素は非表示になります。これは、`mask-mode` プロパティが `match-source` に設定されているかデフォルト値である場合の `<image>` マスクのデフォルト動作であり、`mask-mode` が明示的に `alpha` に設定されている場合には常にこの動作となります。
 
 ### luminance を理解する
 
@@ -95,7 +94,7 @@ mask-mode: unset;
 ```css
 div {
   background: blue linear-gradient(red, blue);
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mdn.svg);
+  mask-image: url("https://mdn.github.io/shared-assets/images/examples/mdn.svg");
 }
 
 .alpha {
@@ -144,4 +143,6 @@ div {
 - {{cssxref("mask-image")}}
 - {{cssxref("mask")}} 一括指定
 - [CSS マスク入門](/ja/docs/Web/CSS/Guides/Masking/Introduction)
+- [CSS のマスクプロパティ](/ja/docs/Web/CSS/Guides/Masking/Mask_properties)
+- [複数のマスクの宣言](/ja/docs/Web/CSS/Guides/Masking/Multiple_masks)
 - [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール

@@ -1,9 +1,8 @@
 ---
 title: mask-border-source
 slug: Web/CSS/Reference/Properties/mask-border-source
-original_slug: Web/CSS/mask-border-source
 l10n:
-  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`mask-border-source`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[マスク境界](/ja/docs/Web/CSS/Reference/Properties/mask-border)を生成するのに使われる元の画像を設定します。
@@ -17,7 +16,7 @@ l10n:
 mask-border-source: none;
 
 /* <image> 値 */
-mask-border-source: url(image.jpg);
+mask-border-source: url("image.jpg");
 mask-border-source: linear-gradient(to top, red, yellow);
 
 /* グローバル値 */
@@ -32,7 +31,7 @@ mask-border-source: unset;
 
 - `none`
   - : マスク境界は使用されません。
-- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("image")}}
   - : マスク境界に使用する画像への参照です。
 
 ## 公式定義
@@ -50,17 +49,17 @@ mask-border-source: unset;
 このプロパティは、まだどこでも対応されていないようです。このプロパティが対応されるようになれば、境界マスクのソースを定義する役割を果たすことになります。
 
 ```css
-mask-border-source: url(image.jpg);
+mask-border-source: url("image.jpg");
 ```
 
 Chromium ベースのブラウザーは、このプロパティの古い版 — `mask-box-image-source` — に接頭辞つきで対応しています。
 
 ```css
--webkit-mask-box-image-source: url(image.jpg);
+-webkit-mask-box-image-source: url("image.jpg");
 ```
 
 > [!NOTE]
-> [`mask-border`](/ja/docs/Web/CSS/Reference/Properties/mask-border) ページでは動作する例を (Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
+> {{cssxref("mask-border")}} ページでは動作する例を (Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
 
 ## 仕様書
 

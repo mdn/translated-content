@@ -1,9 +1,8 @@
 ---
 title: mask-position
 slug: Web/CSS/Reference/Properties/mask-position
-original_slug: Web/CSS/mask-position
 l10n:
-  sourceCommit: 14e9ec66f59c8c97242e9863b2d19902522638ae
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`mask-position`** は [CSS](/ja/docs/Web/CSS) プロパティで、定義されたマスク画像それぞれについて、 {{cssxref("mask-origin")}} で設定されたマスク位置レイヤーに対する初期位置を設定します。
@@ -90,7 +89,7 @@ mask-position: unset;
 
 #### パーセント値
 
-{{cssxref("&lt;percentage&gt;")}} 値は、コンテナーの幅に対するマスクの水平位置の値を、左端を基準として表します。ただし、オフセットはマスクの端からボックスの端までの距離ではありません。マスク画像の寸法は[コンテナーの寸法から差し引かれます](/ja/docs/Web/CSS/Reference/Properties/background-position#regarding_percentages)、そしてその結果の値のパーセント値が、ボックスの左端からの直接のオフセットとして使用されます。これは、 [`background-position` のパーセント値](/ja/docs/Web/CSS/Reference/Properties/background-position#regarding_percentages)と同じです。
+{{cssxref("&lt;percentage&gt;")}} 値は、コンテナーの幅に対するマスクの水平位置の値を、左端を基準として表します。ただし、オフセットはマスクの端からボックスの端までの距離ではありません。マスク画像の寸法は[コンテナーの寸法から差し引かれます](/ja/docs/Web/CSS/Reference/Properties/background-position#パーセント値について)、そしてその結果の値のパーセント値が、ボックスの左端からの直接のオフセットとして使用されます。これは、 [`background-position` のパーセント値](/ja/docs/Web/CSS/Reference/Properties/background-position#パーセント値について)と同じです。
 
 算出式は次のとおりです。
 
@@ -154,7 +153,7 @@ div {
   margin-bottom: 10px;
   background: blue linear-gradient(red, blue);
 
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("/shared-assets/images/examples/mask-star.svg");
   mask-repeat: no-repeat;
   mask-position: top right;
 }
@@ -172,11 +171,17 @@ div {
 
 ## 関連情報
 
+- {{cssxref("background-position")}}
 - {{cssxref("mask-image")}}
 - {{cssxref("mask-origin")}}
 - {{cssxref("mask-repeat")}}
 - {{cssxref("mask-size")}}
 - {{cssxref("mask")}} 一括指定
+- {{cssxref("mask-border")}}
+- {{cssxref("mask-border-outset")}}
+- [CSS マスク入門](/ja/docs/Web/CSS/Guides/Masking/Introduction)
+- [CSS のマスクプロパティ](/ja/docs/Web/CSS/Guides/Masking/Mask_properties)
+- [複数のマスクの宣言](/ja/docs/Web/CSS/Guides/Masking/Multiple_masks)
 - [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール
 - {{cssxref("background-position")}}
 - {{cssxref("&lt;position&gt;")}}

@@ -1,9 +1,8 @@
 ---
 title: clip-path
 slug: Web/CSS/Reference/Properties/clip-path
-original_slug: Web/CSS/clip-path
 l10n:
-  sourceCommit: 611edf6335e4a833a6f394d0d98b117e7b0a36bf
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`clip-path`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のどの部分を表示するかを設定するクリッピング領域を作ります。具体的には、領域の内部の部分は表示され、外側の部分は非表示になります。
@@ -71,7 +70,7 @@ section {
 clip-path: none;
 
 /* <clip-source> 値 */
-clip-path: url(resources.svg#c1);
+clip-path: url("resources.svg#c1");
 
 /* <geometry-box> 値 */
 clip-path: margin-box;
@@ -111,7 +110,7 @@ clip-path: unset;
 
 - `<clip-source>`
   - : {{cssxref("url_value", "&lt;url&gt;")}} で、[SVG](/ja/docs/Web/SVG) の {{SVGElement("clipPath")}} 要素を参照します。
-- {{cssxref("&lt;basic-shape&gt;")}}
+- {{cssxref("basic-shape")}}
   - : `<geometry-box>` 値で寸法と位置が定義されるシェイプです。ジオメトリーボックスが指定されない場合、参照ボックスとして `border-box` が使用されます。以下のいずれかです。
     - {{cssxref("basic-shape/inset","inset()")}}
       - : 内部の長方形を定義します。
@@ -210,7 +209,7 @@ div:last-of-type {
 
 前回の例を拡張して、異なる `<basic-shape>` 値を持つ同じ三角形を作成し、{{cssxref("basic-shape/shape", "shape()")}} および {{cssxref("basic-shape/path", "path()")}} 関数を使用してクリップパスを作成する方法、および `shape()` がより柔軟なソリューションである点を示します。
 
-最初の要素のクリップパスを定義するには `path()` を使用し、2 つ目の要素のクリップパスを定義するには `shape()` を使用します。どちらも、既定の `border-box` を参照ボックスとして使用します。
+最初の要素のクリップパスを定義するには `path()` を使用し、2 つ目の要素は `shape()` を使用します。どちらも、既定の `border-box` を参照ボックスとして使用します。
 
 ```css live-sample___shapes2 live-sample___shapes3
 div {
@@ -301,11 +300,11 @@ div {
 
 ```css
 .window {
-  clip-path: url(#window);
+  clip-path: url("#window");
 }
 
 .cross {
-  clip-path: url(#cross);
+  clip-path: url("#cross");
   align-content: center;
 }
 ```
@@ -361,7 +360,7 @@ HTML には、クリップされる `<img>`、星形の `<clipPath>`、および
 ```css
 #clipped {
   margin-bottom: 20px;
-  clip-path: url(#star);
+  clip-path: url("#star");
 }
 ```
 

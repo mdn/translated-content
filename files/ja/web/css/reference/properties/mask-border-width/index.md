@@ -1,9 +1,8 @@
 ---
 title: mask-border-width
 slug: Web/CSS/Reference/Properties/mask-border-width
-original_slug: Web/CSS/mask-border-width
 l10n:
-  sourceCommit: ab279632b84d201ae9ddd3db3981bf0b01573371
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`mask-border-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[マスク境界](/ja/docs/Web/CSS/Reference/Properties/mask-border)の幅を設定します。
@@ -68,7 +67,7 @@ mask-border-width: unset;
 
 ### 基本的な使用
 
-`mask-border-width` は、境界マスクの幅を定義します。このプロパティを [`mask-border-slice`](/ja/docs/Web/CSS/Reference/Properties/mask-border-slice) と異なる値に設定すると、スライスは境界マスクに合わせて拡大縮小されます。
+`mask-border-width` は、境界マスクの幅を定義します。このプロパティを {{cssxref("mask-border-slice")}} と異なる値に設定すると、スライスは境界マスクに合わせて拡大縮小されます。
 
 ```css
 /* 最終的なマスクは幅 20px に縮小 */
@@ -83,7 +82,7 @@ Chromium ベースのブラウザーは、このプロパティの古い版 — 
 ```
 
 > [!NOTE]
-> [`mask-border`](/ja/docs/Web/CSS/Reference/Properties/mask-border) ページでは動作する例を（Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して）挙げていますので、効果について分かるでしょう。
+> {{cssxref("mask-border")}} ページでは動作する例を（Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して）挙げていますので、効果について分かるでしょう。
 
 ## 仕様書
 

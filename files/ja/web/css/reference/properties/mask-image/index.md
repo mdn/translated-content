@@ -1,9 +1,8 @@
 ---
 title: mask-image
 slug: Web/CSS/Reference/Properties/mask-image
-original_slug: Web/CSS/mask-image
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`mask-image`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のマスクレイヤーとして使用する画像を設定し、マスク画像のアルファチャンネルと、 {{cssxref("mask-mode")}} プロパティの値に応じて、マスク画像の色の輝度に基づいて、マスク画像が設定されている要素の領域を非表示にします。
@@ -15,14 +14,14 @@ l10n:
 mask-image: none;
 
 /* <mask-source> 値 */
-mask-image: url(masks.svg#mask1);
+mask-image: url("masks.svg#mask1");
 
 /* <image> 値 */
-mask-image: linear-gradient(rgb(0 0 0 / 100%), transparent);
-mask-image: image(url(mask.png), skyblue);
+mask-image: linear-gradient(black, transparent);
+mask-image: image(url("mask.png"), skyblue);
 
 /* 複数の値 */
-mask-image: url(mask.png), linear-gradient(black 25%, transparent 35%);
+mask-image: url("mask.png"), linear-gradient(black 25%, transparent 35%);
 
 /* グローバル値 */
 mask-image: inherit;
@@ -36,16 +35,18 @@ mask-image: unset;
 
 - `none`
   - : このキーワードは、透明な黒い画像レイヤーとして解釈されます。
+
 - `<mask-source>`
   - : {{cssxref("url_value", "&lt;url&gt;")}} による {{SVGElement("mask")}} または CSS 画像への参照です。
-- {{cssxref("&lt;image&gt;")}}
+
+- {{cssxref("image")}}
   - : マスク画像レイヤーとして使用される画像の値です。
 
 ## 解説
 
 `mask-image` プロパティは、適用される要素の一部を非表示にするマスクを提供します。値は、マスク参照のカンマ区切りリストです。それぞれのマスク参照は、`<image>`、`<mask-source>`、またはキーワード `none` です。
 
-`<image>` には、[CSS グラデーション](/ja/docs/Web/CSS/Reference/Values/gradient) などの生成画像を含む、あらゆる種類の画像を指定することができます。
+`<image>` には、[CSS グラデーション](/ja/docs/Web/CSS/Reference/Values/gradient)などの生成画像を含む、あらゆる種類の画像を指定することができます。
 
 `mask-image` プロパティの値に 1 つの値しか指定されておらず、その値が `none` の場合、マスク効果は現れません。複数の値が指定されている場合、リストに含まれる `none` 値は直接的な効果は持ちませんが、同じリスト内の他の `mask-*` 値は、透明な黒のマスクレイヤーに適用され、視覚的な効果はありません。
 
@@ -133,7 +134,7 @@ img {
 
 ```css
 img:first-of-type {
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("https://mdn.github.io/shared-assets/images/examples/mask-star.svg");
 }
 ```
 
@@ -164,7 +165,7 @@ img {
   mask-position: center;
   mask-repeat: no-repeat;
   mask-image:
-    url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg),
+    url("https://mdn.github.io/shared-assets/images/examples/mask-star.svg"),
     repeating-radial-gradient(transparent 0 5px, black 5px 10px);
 }
 ```
@@ -242,16 +243,16 @@ img {
 
 ```css
 #green {
-  mask-image: url(#greenMask);
+  mask-image: url("#greenMask");
 }
 #stroke {
-  mask-image: url(#strokeMask);
+  mask-image: url("#strokeMask");
 }
 #both {
-  mask-image: url(#bothMask);
+  mask-image: url("#bothMask");
 }
 #alphaMode {
-  mask-image: url(#black);
+  mask-image: url("#black");
 }
 
 body:has(:checked) img {
@@ -284,5 +285,8 @@ body:has(:checked) img {
 - {{cssxref("mask-size")}}
 - {{cssxref("mask-border")}}
 - {{cssxref("clip-path")}}
+- {{cssxref("background-image")}}
 - [CSS マスク入門](/ja/docs/Web/CSS/Guides/Masking/Introduction)
+- [CSS のマスクプロパティ](/ja/docs/Web/CSS/Guides/Masking/Mask_properties)
+- [複数のマスクの宣言](/ja/docs/Web/CSS/Guides/Masking/Multiple_masks)
 - [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール
