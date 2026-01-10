@@ -50,8 +50,7 @@ l10n:
 ```html
 <div>
   <p id="source" draggable="true">
-    选中该元素并将其拖动到可放置区域，随后释放选择以移动该元素。 to move the
-    element.
+    选中该元素并将其拖动到可放置区域，随后释放选择以移动该元素。
   </p>
 </div>
 <div id="target">可放置区域</div>
