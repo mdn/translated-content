@@ -1,9 +1,8 @@
 ---
 title: clip
 slug: Web/CSS/Reference/Properties/clip
-original_slug: Web/CSS/clip
 l10n:
-  sourceCommit: 758ddcdfb06f53955fa3c05dd32e7e4e53fd3009
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 {{Deprecated_Header}}
