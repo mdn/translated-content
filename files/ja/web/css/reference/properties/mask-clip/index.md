@@ -155,7 +155,7 @@ body {
 - {{cssxref("mask-border")}}
 - {{cssxref("clip-path")}}
 - {{cssxref("background-clip")}}
-- [CSS クリップ入門](/en-US/docs/Web/CSS/Guides/Masking/Clipping)
+- [CSS クリップ入門](/ja/docs/Web/CSS/Guides/Masking/Clipping)
 - [CSS マスク入門](/ja/docs/Web/CSS/Guides/Masking/Introduction)
 - [CSS のマスクプロパティ](/ja/docs/Web/CSS/Guides/Masking/Mask_properties)
 - [複数のマスクの宣言](/ja/docs/Web/CSS/Guides/Masking/Multiple_masks)
