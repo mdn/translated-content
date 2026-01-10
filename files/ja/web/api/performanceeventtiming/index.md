@@ -138,7 +138,7 @@ const exposedEventsList = [...performance.eventCounts.keys()];
 
 - {{domxref("PerformanceEventTiming.cancelable")}} {{ReadOnlyInline}}
   - : 関連するイベントの [`cancelable`](/ja/docs/Web/API/Event/cancelable) プロパティを返します。
-- {{domxref("PerformanceEventTiming.interactionId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("PerformanceEventTiming.interactionId")}} {{ReadOnlyInline}}
   - : 関連するイベントを発生させたユーザー操作を一意に識別する ID を返します。
 - {{domxref("PerformanceEventTiming.processingStart")}} {{ReadOnlyInline}}
   - : イベント配信が開始された時刻を表す {{domxref("DOMHighResTimeStamp")}} を返します。ユーザー操作からイベントハンドラーが実行し始めるまでの時間を計測するには、 `processingStart-startTime` を計算します。
@@ -186,67 +186,6 @@ observer.observe({ type: "event", buffered: true });
 observer.observe({ type: "event", durationThreshold: 16, buffered: true });
 ```
 
-### First Input Delay (FID) の報告
-
-{{Glossary("first input delay")}} または FID は、ユーザーが最初にページを操作した時（つまり、リンクをクリックしたりボタンをタップしたりした時）から、その操作に応答してブラウザーが実際にイベントハンドラーの処理を始めることができるまでの時刻を測定します。
-
-```js
-// Keep track of whether (and when) the page was first hidden, see:
-// https://github.com/w3c/page-visibility/issues/29
-// NOTE: ideally this check would be performed in the document <head>
-// to avoid cases where the visibility state changes before this code runs.
-let firstHiddenTime = document.visibilityState === "hidden" ? 0 : Infinity;
-document.addEventListener(
-  "visibilitychange",
-  (event) => {
-    firstHiddenTime = Math.min(firstHiddenTime, event.timeStamp);
-  },
-  { once: true },
-);
-
-// Sends the passed data to an analytics endpoint. This code
-// uses `/analytics`; you can replace it with your own URL.
-function sendToAnalytics(data) {
-  const body = JSON.stringify(data);
-  // Use `navigator.sendBeacon()` if available,
-  // falling back to `fetch()`.
-  (navigator.sendBeacon && navigator.sendBeacon("/analytics", body)) ||
-    fetch("/analytics", { body, method: "POST", keepalive: true });
-}
-
-// Use a try/catch instead of feature detecting `first-input`
-// support, since some browsers throw when using the new `type` option.
-// https://webkit.org/b/209216
-try {
-  function onFirstInputEntry(entry) {
-    // Only report FID if the page wasn't hidden prior to
-    // the entry being dispatched. This typically happens when a
-    // page is loaded in a background tab.
-    if (entry.startTime < firstHiddenTime) {
-      const fid = entry.processingStart - entry.startTime;
-
-      // Report the FID value to an analytics endpoint.
-      sendToAnalytics({ fid });
-    }
-  }
-
-  // Create a PerformanceObserver that calls
-  // `onFirstInputEntry` for each entry.
-  const po = new PerformanceObserver((entryList) => {
-    entryList.getEntries().forEach(onFirstInputEntry);
-  });
-
-  // Observe entries of type `first-input`, including buffered entries,
-  // i.e. entries that occurred before calling `observe()` below.
-  po.observe({
-    type: "first-input",
-    buffered: true,
-  });
-} catch (e) {
-  // Do nothing if the browser doesn't support this API.
-}
-```
-
 ## 仕様書
 
 {{Specifications}}
@@ -254,3 +193,8 @@ try {
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{domxref("Intersection_Observer_API")}}
+- {{domxref("Page_Visibility_API")}}
