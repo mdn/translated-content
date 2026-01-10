@@ -1,21 +1,23 @@
 ---
 title: "<menu> : l'élément de menu"
 slug: Web/HTML/Reference/Elements/menu
-original_slug: Web/HTML/Element/menu
 l10n:
-  sourceCommit: 9b73bdea5458572f77a401596fef9a06ed8bba1b
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<menu>`** est une alternative sémantique à [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul), mais est traité par les navigateurs, et en termes d'accessibilité comme un élément [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul). Il représente une liste d'éléments non-ordonnée (chaque élément de la liste étant représenté par un élément [`<li>`](/fr/docs/Web/HTML/Reference/Elements/li)).
+L'élément [HTML](/fr/docs/Web/HTML) **`<menu>`** est une alternative sémantique à {{HTMLElement("ul")}}, mais il est traité par les navigateurs (et exposé dans l'arbre d'accessibilité) comme identique à {{HTMLElement("ul")}}. Il représente une liste non ordonnée d'éléments (représentés par des éléments {{HTMLElement("li")}}).
 
-{{InteractiveExample("HTML Demo: &lt;menu&gt;", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;menu&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <div class="news">
-  <a href="#">NASA’s Webb Delivers Deepest Infrared Image of Universe Yet</a>
+  <a href="#"
+    >Le télescope Webb de la NASA livre l'image infrarouge la plus profonde de
+    l'univers à ce jour</a
+  >
   <menu>
-    <li><button id="save">Save for later</button></li>
-    <li><button id="share">Share this news</button></li>
+    <li><button id="save">Enregistrer pour plus tard</button></li>
+    <li><button id="share">Partager cette actualité</button></li>
   </menu>
 </div>
 ```
@@ -38,11 +40,11 @@ menu {
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 
-Les éléments `<menu>` et [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul) représentent tous les deux une liste non-ordonnée d'éléments. [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul) doit être utilisés pour des éléments qui doivent uniquement être affichés alors que `<menu>` était initialement conçu pour des éléments interactifs.
+Les éléments `<menu>` et {{HTMLElement("ul")}} représentent tous les deux une liste non-ordonnée d'éléments. {{HTMLElement("ul")}} doit être utilisés pour des éléments qui doivent uniquement être affichés alors que `<menu>` était initialement conçu pour des éléments interactifs.
 
 > [!NOTE]
 > Dans d'anciennes versions de la spécification HTML, l'élément `<menu>` pouvait être utilisé pour représenter un menu contextuel. Cette fonctionnalité est désormais considérée comme obsolète et ne fait plus partie de la spécification.
@@ -95,7 +97,7 @@ button {
 
 #### Résultat
 
-{{EmbedLiveSample("", "100%", 100)}}
+{{EmbedLiveSample("Barre d'outils", "100%", 100)}}
 
 ## Résumé technique
 
@@ -103,37 +105,40 @@ button {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/HTML/Content_categories">Catégories de contenu</a>
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories">Catégories de contenu</a>
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Content_categories#contenu_de_flux">Contenu de flux</a> et <a href="/fr/docs/Web/HTML/Content_categories#contenu_tangible">contenu tangible</a> si au moins un enfant du menu est un élément <a href="/fr/docs/Web/HTML/Element/li"><code>&lt;li&gt;</code></a>.
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux">Contenu de flux</a>. Si au moins un enfant du menu est un élément {{HTMLElement("li")}}&nbsp;: <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_tangible">contenu tangible</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
-      <td>Zéro ou plusieurs occurrences de <a href="/fr/docs/Web/HTML/Element/li"><code>&lt;li&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/script"><code>&lt;script&gt;</code></a>, et <a href="/fr/docs/Web/HTML/Element/template"><code>&lt;template&gt;</code></a>
-      </td>
+      <td>Zéro ou plusieurs occurrences de {{HTMLElement("li")}}, {{HTMLElement("script")}} et {{HTMLElement("template")}}.</td>
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>Aucune balise ne doit être omise</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>
       <td>
-        Tout élément qui accepte du <a href="/fr/docs/Web/HTML/Content_categories#contenu_de_flux">contenu de flux</a>.
+        Tout élément qui accepte du <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux">contenu de flux</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Rôle ARIA implicite</th>
       <td>
-        <a href="/fr/docs/Web/Accessibility/ARIA/Roles/List_role"><code>list</code></a>
+        <code
+          ><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/list_role"
+            >list</a
+          ></code
+        >
       </td>
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
       <td>
-        <a href="/fr/docs/Web/Accessibility/ARIA/Roles/directory_role"><code>directory</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a></code>, <a href="/fr/docs/Web/Accessibility/ARIA/Roles/menu_role"><code>menu</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Roles/menubar_role"><code>menubar</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Roles/radiogroup_role"><code>radiogroup</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Roles/tablist_role"><code>tablist</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Roles/toolbar_role"><code>toolbar</code></a> ou <a href="/fr/docs/Web/Accessibility/ARIA/Roles/tree_role"><code>tree</code></a>
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/directory_role"><code>directory</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role">listbox</a></code>, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role"><code>menu</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role"><code>menubar</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role"><code>radiogroup</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role"><code>tablist</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role"><code>toolbar</code></a> ou <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role"><code>tree</code></a>
       </td>
     </tr>
     <tr>
@@ -153,7 +158,4 @@ button {
 
 ## Voir aussi
 
-- Les autres éléments HTML relatifs aux listes&nbsp;:
-  - [`<ol>`](/fr/docs/Web/HTML/Reference/Elements/ol)
-  - [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul)
-  - [`<li>`](/fr/docs/Web/HTML/Reference/Elements/li)
+- Les autres éléments HTML relatifs aux listes&nbsp;: {{HTMLElement("ol")}}, {{HTMLElement("ul")}} et {{HTMLElement("li")}}.

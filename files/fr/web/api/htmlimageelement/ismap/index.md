@@ -3,18 +3,16 @@ title: "HTMLImageElement : propriété isMap"
 short-title: isMap
 slug: Web/API/HTMLImageElement/isMap
 l10n:
-  sourceCommit: cd701f10306c8b0b9690532ff808df826818a04f
+  sourceCommit: 754b68246f4e69e404309fee4a1699e047e43994
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété {{domxref("HTMLImageElement")}} **`isMap`** est
-un booléen qui indique que l'image doit être utilisée par une image réactive côté serveur.
-Ceci ne peut être utilisé que sur des images placées dans un élément {{HTMLElement("a")}}.
+La propriété {{DOMxRef("HTMLImageElement")}} **`isMap`** est
+un booléen qui indique que l'image doit être utilisée par une image réactive côté serveur. Ceci ne peut être utilisé que sur des images placées dans un élément {{HTMLElement("a")}}.
 
 > [!NOTE]
-> Pour des raisons d'accessibilité, il convient généralement d'éviter d'utiliser
-> des images réactives côté serveur, car elles nécessitent l'usage de la souris. Utilisez plutôt une [image réactive côté client](/fr/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image).
+> Pour des raisons d'accessibilité, il convient généralement d'éviter d'utiliser des images réactives côté serveur, car elles nécessitent l'usage de la souris. Utilisez plutôt une [image réactive côté client](/fr/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image).
 
 ## Valeur
 

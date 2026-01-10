@@ -3,42 +3,36 @@ title: "HTMLImageElement : propriété align"
 short-title: align
 slug: Web/API/HTMLImageElement/align
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 1f00512e3c9a20b5bb927db529bb5d639e346d96
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}{{Deprecated_Header}}
 
-La propriété **`align`** (_obsolète_) de l'interface {{domxref("HTMLImageElement")}} est une chaîne de caractères qui indique comment positionner l'image par rapport à son conteneur.
+La propriété _obsolète_ **`align`** de l'interface {{DOMxRef("HTMLImageElement")}} est une chaîne de caractères qui indique comment positionner l'image par rapport à son conteneur.
 
-Il est recommandé d'utiliser à la place la propriété CSS {{cssxref("vertical-align")}}, qui fonctionne aussi pour les images malgré son nom. Vous pouvez également utiliser la propriété {{cssxref("float")}} pour faire flotter l'image à la marge gauche ou droite.
-
-La propriété `align` reflète l'attribut HTML [`align`](/fr/docs/Web/HTML/Reference/Elements/img#align).
+Il est recommandé d'utiliser à la place la propriété CSS {{CSSxRef("vertical-align")}}, qui fonctionne aussi pour les images malgré son nom. Vous pouvez également utiliser la propriété {{CSSxRef("float")}} pour faire flotter l'image à la marge gauche ou droite.
 
 ## Valeur
 
-Une chaîne de caractères définissant l'une des valeurs suivantes, qui définit le mode d'alignement de l'image.
+Une chaîne de caractères dont la valeur est l'une des suivantes&nbsp;: `top`, `middle`, `bottom`, `left` ou `right`. Pour leur signification, voir la référence HTML [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img#align).
 
-### Alignement sur la ligne de base
+## Exemples
 
-Ces trois valeurs définissent l'alignement de l'élément par rapport à la ligne de base du texte. Il convient de les remplacer par la propriété CSS {{cssxref("vertical-align")}}.
+### Définir l'attribut `align`
 
-- `bottom`
-  - : Le bord inférieur de l'image doit être aligné verticalement avec la ligne de base du texte courant. **Valeur par défaut.**
-- `middle`
-  - : Le centre de l'objet doit être aligné verticalement avec la ligne de base courante.
-- `top`
-  - : Le bord supérieur de l'objet doit être aligné verticalement avec la ligne de base courante.
+```js example-bad
+const img = new Image();
+img.src = "example.png";
+img.align = "top";
+```
 
-Il est à noter que {{cssxref("vertical-align")}} propose plusieurs autres options de valeur&nbsp;; vous pouvez les envisager lors de la migration de votre code.
+Au lieu d'utiliser la propriété obsolète `align`, il est préférable de définir la propriété CSS `vertical-align`&nbsp;:
 
-### Positionnement horizontal des images
-
-Les valeurs `left` et `right` n'affectent pas l'alignement par rapport à la ligne de base. Elles font plutôt «&nbsp;flotter&nbsp;» l'image à la marge gauche ou droite, permettant au texte suivant d'entourer l'image. Il est préférable d'utiliser la propriété CSS {{cssxref("float")}}, avec la valeur `left` ou `right`.
-
-- `left`
-  - : Positionne l'image pour que son bord gauche soit aligné avec la marge courante. Tout texte qui suit s'écoulera contre le bord droit de l'image.
-- `right`
-  - : Positionne l'image pour que son bord droit soit aligné avec la marge droite. Le texte suivant s'écoulera le long du bord gauche de l'image.
+```js example-good
+const img = new Image();
+img.src = "example.png";
+img.style.verticalAlign = "top";
+```
 
 ## Spécifications
 

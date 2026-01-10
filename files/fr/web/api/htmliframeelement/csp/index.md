@@ -1,22 +1,18 @@
 ---
-title: HTMLIFrameElement.csp
+title: "HTMLIFrameElement : propriété csp"
+short-title: csp
 slug: Web/API/HTMLIFrameElement/csp
+l10n:
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{SeeCompatTable}}{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-La propriété **`csp`** de l'interface {{domxref("HTMLIFrameElement")}} spécifie la [stratégie de sécurité du contenu (en anglais <i lang="en">Content Security Policy (CSP)</i>)](/fr/docs/Web/HTTP/Guides/CSP) qu'un document embarqué doit accepter de respecter.
+La propriété **`csp`** de l'interface {{DOMxRef("HTMLIFrameElement")}} définit la [stratégie de sécurité du contenu](/fr/docs/Web/HTTP/Guides/CSP) (<i lang="en">Content Security Policy</i> en anglais) qu'un document embarqué doit accepter de respecter.
 
-## Syntaxe
+## Valeur
 
-```js
-var csp = HTMLIFrameElement.csp;
-HTMLIFrameElement.csp = csp;
-```
-
-### Valeur
-
-Une [stratégie de sécurité du contenu](https://w3c.github.io/webappsec-cspee/#dom-htmliframeelement-csp).
+Une stratégie de sécurité du contenu.
 
 ## Spécifications
 

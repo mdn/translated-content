@@ -1,9 +1,8 @@
 ---
 title: "<meta> : l'élément de métadonnées"
 slug: Web/HTML/Reference/Elements/meta
-original_slug: Web/HTML/Element/meta
 l10n:
-  sourceCommit: c7a8b2584452bcd5d2c135b637f4ec659ff74b99
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<meta>`** représente toute information de {{Glossary("Metadata","métadonnées")}} qui ne peut pas être représentée par un des autres éléments de métadonnées, tels que {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} ou {{HTMLElement("title")}}.
@@ -17,7 +16,7 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<meta>`** représente toute information
 
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 > [!NOTE]
 > L'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta/name) possède une signification spécifique pour l'élément `<meta>`.

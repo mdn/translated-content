@@ -1,9 +1,8 @@
 ---
 title: "<ol> : l'élément de liste ordonnée"
 slug: Web/HTML/Reference/Elements/ol
-original_slug: Web/HTML/Element/ol
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<ol>`** représente une liste ordonnée, généralement affichée sous forme de liste numérotée.
@@ -31,10 +30,10 @@ li {
 
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
-- `compact` {{Deprecated_inline}} {{non-standard_inline}}
-  - : Cet attribut booléen suggère que la liste doit être affichée dans un style compact. L'interprétation de cet attribut dépend du navigateur. Utilisez plutôt le [CSS](/fr/docs/Web/CSS)&nbsp;: pour obtenir un effet similaire à l'attribut `compact`, la propriété CSS {{cssxref("line-height")}} peut être utilisée avec une valeur de `80%`.
+- `compact` {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Cet attribut booléen suggère que la liste doit être affichée dans un style compact. L'interprétation de cet attribut dépend du navigateur. Utilisez plutôt le [CSS](/fr/docs/Web/CSS)&nbsp;: pour obtenir un effet similaire à l'attribut `compact`, la propriété CSS {{CSSxRef("line-height")}} peut être utilisée avec une valeur de `80%`.
 - **`reversed`**
   - : Cet attribut booléen indique que les éléments de la liste sont dans l'ordre inverse. Les éléments sont numérotés de haut en bas.
 - **`start`**

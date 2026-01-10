@@ -1,14 +1,13 @@
 ---
 title: "<rt> : l'élément de texte Ruby"
 slug: Web/HTML/Reference/Elements/rt
-original_slug: Web/HTML/Element/rt
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<rt>`** indique la composante texte d'une annotation Ruby, il est notamment utilisé pour la prononciation, la traduction ou la translitération des caractères d'Asie orientale. Cet élément est toujours contenu dans un élément {{HTMLElement("ruby")}}.
 
-L'élément HTML **`<rt>`** indique la composante texte d'une annotation Ruby, il est notamment utilisé pour la prononciation, la traduction ou la translitération des caractères d'Asie orientale. Cet élément est toujours contenu dans un élément {{HTMLElement("ruby")}}.
-
-{{InteractiveExample("HTML Demo: &lt;rt&gt;", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;rt&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <ruby>
@@ -22,18 +21,22 @@ ruby {
 }
 ```
 
+Voir l'article sur l'élément {{HTMLElement("ruby")}} pour plus d'exemples.
+
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Exemples
 
-### Avec prise en charge de ruby
+### Utiliser les annotations ruby
 
-#### HTML
+Cet exemple fournit la translitération en Romaji pour les caractères kanji à l'intérieur de l'élément {{HTMLElement("ruby")}}&nbsp;:
 
 ```html
-<ruby> 漢 <rt>Kan</rt> 字 <rt>ji</rt> </ruby>
+<ruby>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>
 ```
 
 ```css hidden
@@ -44,23 +47,57 @@ body {
 
 #### Résultat
 
-{{EmbedLiveSample("Avec_prise_en_charge_de_ruby","100%","130")}}
+{{EmbedLiveSample("Utiliser les annotations ruby", 600, 60)}}
 
-### Sans prise en charge de ruby
+## Résumé technique
 
-Pour un navigateur sans prise en charge de Ruby, on aurait le résultat suivant :
-
-```html hidden
-漢 Kan 字 ji
-```
-
-```css hidden
-body {
-  font-size: 22px;
-}
-```
-
-{{EmbedLiveSample("Sans_prise_en_charge_de_ruby", 600, 60)}}
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
+          >Catégories de contenu</a>
+      </th>
+      <td>Aucune.</td>
+    </tr>
+    <tr>
+      <th scope="row">Contenu autorisé</th>
+      <td>
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
+          >Contenu phrasé</a>.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omission de balise</th>
+      <td>
+        La balise de fin peut être omise si l'élément <code>&#x3C;rt></code> est
+        immédiatement suivi d'un élément <code>&#x3C;rt></code> ou
+        {{HTMLElement("rp")}}, ou s'il n'y a plus de contenu dans
+        l'élément parent
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Parents autorisés</th>
+      <td>Un élément {{HTMLElement("ruby")}}.</td>
+    </tr>
+    <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
+          >Pas de rôle correspondant <sup>(angl.)</sup></a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôles ARIA autorisés</th>
+      <td>Tous les rôles sont autorisés.</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface DOM</th>
+      <td>{{DOMxRef("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Spécifications
 
@@ -72,8 +109,8 @@ body {
 
 ## Voir aussi
 
-- {{HTMLElement("ruby")}}
-- {{HTMLElement("rp")}}
-- {{HTMLElement("rb")}}
-- {{HTMLElement("rtc")}}
-- {{CSSXRef("text-transform", "text-transform: full-size-kana")}}
+- L'élément {{HTMLElement("ruby")}}
+- L'élément {{HTMLElement("rp")}}
+- L'élément {{HTMLElement("rb")}}
+- L'élément {{HTMLElement("rtc")}}
+- Les propriétés et valeurs CSS {{CSSxRef("text-transform", "text-transform: full-size-kana")}}
