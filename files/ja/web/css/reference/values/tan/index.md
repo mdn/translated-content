@@ -1,12 +1,11 @@
 ---
 title: tan()
 slug: Web/CSS/Reference/Values/tan
-original_slug: Web/CSS/tan
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**`tan()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、数値の正接を返す三角関数です。値は `−infinity` から `infinity` までの範囲になります。この関数には単一の計算が含まれており、引数の結果をラジアンとして解釈して、{{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;angle&gt;")}} のいずれかに解決する必要があります。
+**`tan()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、数値の正接を返す三角関数です。値は `−infinity` から `infinity` までの範囲になります。この関数には単一の計算が含まれており、引数の結果をラジアンとして解釈して、{{cssxref("&lt;number&gt;")}} または {{cssxref("angle")}} のいずれかに解決する必要があります。
 
 ## 構文
 
@@ -30,7 +29,7 @@ width: calc(100px * tan(e));
 `tan(angle)` 関数は、引数として 1 つの値のみを受け入れます。
 
 - `angle`
-  - : {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;angle&gt;")}} に解決される計算式。単位のない数値を指定すると、 {{cssxref("&lt;angle&gt;")}} を表すラジアン数として解釈されます。
+  - : {{cssxref("&lt;number&gt;")}} または {{cssxref("angle")}} に解決される計算式。単位のない数値を指定すると、 {{cssxref("angle")}} を表すラジアン数として解釈されます。
 
 ### 返値
 
@@ -107,3 +106,4 @@ body {
 - {{CSSxRef("acos")}}
 - {{CSSxRef("atan")}}
 - {{CSSxRef("atan2")}}
+- [CSS 型付き演算の使用](/ja/docs/Web/CSS/Guides/Values_and_units/Using_typed_arithmetic)

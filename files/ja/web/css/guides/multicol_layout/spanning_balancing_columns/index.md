@@ -1,9 +1,8 @@
 ---
 title: 段抜きと段の均衡
 slug: Web/CSS/Guides/Multicol_layout/Spanning_balancing_columns
-original_slug: Web/CSS/CSS_multicol_layout/Spanning_balancing_columns
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 このガイドでは、段組みコンテナー内で段抜きを作成する方法、段がどのように充足されるかを制御する方法を見てみます。
@@ -50,7 +49,7 @@ body {
 h2 {
   column-span: all;
   background-color: #4d4e53;
-  color: #fff;
+  color: white;
 }
 ```
 
@@ -94,7 +93,7 @@ body {
 h2 {
   column-span: all;
   background-color: #4d4e53;
-  color: #fff;
+  color: white;
 }
 ```
 
@@ -149,7 +148,7 @@ article {
 }
 h2 {
   background-color: #4d4e53;
-  color: #fff;
+  color: white;
   column-span: all;
 }
 ```
@@ -190,7 +189,7 @@ body {
 }
 h2 {
   background-color: #4d4e53;
-  color: #fff;
+  color: white;
 }
 img {
   max-width: 100%;
@@ -228,7 +227,7 @@ body {
 }
 h2 {
   background-color: #4d4e53;
-  color: #fff;
+  color: white;
 }
 img {
   max-width: 100%;
@@ -245,4 +244,4 @@ img {
 
 ## 次のステップ
 
-次のガイドでは、[段組みがはみ出しをどう扱うか](/ja/docs/Web/CSS/Guides/Multicol_layout/Handling_overflow)を、段の中とコンテナーに合う数よりも多くの段ができる場合の両方について学習します。
+次のガイドでは、[段組みがオーバーフローをどう扱うか](/ja/docs/Web/CSS/Guides/Multicol_layout/Handling_overflow)を、段の中とコンテナーに合う数よりも多くの段ができる場合の両方について学習します。

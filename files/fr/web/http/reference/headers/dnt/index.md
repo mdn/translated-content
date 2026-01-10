@@ -23,7 +23,7 @@ DNT est obsolète au profit de [Global Privacy Control <sup>(angl.)</sup>](https
       <td>{{Glossary("Request header", "En-tête de requête")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden_request_header", "Nom d'en-tête interdit")}}</th>
+      <th scope="row">{{Glossary("Forbidden_request_header", "En-tête de requête interdit")}}</th>
       <td>oui</td>
     </tr>
   </tbody>

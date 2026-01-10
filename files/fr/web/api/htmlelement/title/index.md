@@ -1,33 +1,26 @@
 ---
-title: HTMLElement.title
+title: "HTMLElement : propriété title"
+short-title: title
 slug: Web/API/HTMLElement/title
+l10n:
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("HTML DOM")}}
 
-La propriété **`HTMLElement.title`** représente le titre de l'élément, le texte habituellement affiché dans une fenêtre contextuelle d''info-bulle' lorsque la souris survole le nœud affiché.
+La propriété **`title`** de l'interface {{DOMxRef("HTMLElement")}} représente le titre de l'élément&nbsp;: le texte généralement affiché dans une «&nbsp;info-bulle&nbsp;» lorsque la souris survole le nœud.
 
-> [!NOTE]
-> Si un nœud n'a pas d'attribut `title`, alors l'action par défaut est de l'hériter de son nœud parent, qui peut à son tour l'hériter de son nœud parent, etc..
->
-> ```html
-> <div title="InfoCool">
->   <div title="">le survol de la souris ici fera apparaître "InfoCool"</div>
->   <div title=" ">le survol de la souris ici ne fera rien apparaître</div>
-> </div>
-> ```
+## Valeur
 
-## Syntaxe
+Une chaîne de caractères.
+
+## Exemples
 
 ```js
-var chn = element.title;
-element.title = chn;
-```
-
-## Exemple
-
-```js
-bouton1.title = "cliquer pour rafraîchir";
+const link = document.createElement("a");
+link.innerText = "raisins";
+link.href = "https://fr.wikipedia.org/wiki/Raisin";
+link.title = "Page Wikipédia sur les raisins";
 ```
 
 ## Spécifications
@@ -40,4 +33,4 @@ bouton1.title = "cliquer pour rafraîchir";
 
 ## Voir aussi
 
-- L'attribut HTML global [**title**](/fr/docs/Web/HTML/Reference/Global_attributes/title).
+- L'attribut HTML universel [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title)

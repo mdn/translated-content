@@ -1,12 +1,11 @@
 ---
 title: opacity()
 slug: Web/CSS/Reference/Values/filter-function/opacity
-original_slug: Web/CSS/filter-function/opacity
 l10n:
-  sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**`opacity()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、入力画像のサンプルに透過性を適用します。結果は {{cssxref("&lt;filter-function&gt;")}} です。
+**`opacity()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、入力画像のサンプルに透過性を適用します。結果は {{cssxref("filter-function")}} です。
 
 {{InteractiveExample("CSS デモ: opacity()")}}
 
@@ -51,8 +50,12 @@ opacity(amount)
 
 ### 引数
 
-- `amount`
+- `amount` {{Optional_Inline}}
   - : 変換の度合いで、 {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で指定します。 `0%` の値では完全に透明になり、 `100%` の値では入力が変更されないままになります。 `0%` と `100%` の間の値は、効果の割合です。{{Glossary("interpolation","補間")}}の初期値は `1` です。
+
+## 形式文法
+
+{{CSSSyntax}}
 
 ## 例
 
@@ -61,7 +64,9 @@ opacity(amount)
 ```css
 opacity(0%)   /* 完全に透過 */
 opacity(50%)  /* 50% 透過 */
-opacity(1)    /* 効果なし */
+
+opacity()     /* 効果なし */
+opacity(1)
 ```
 
 ## 仕様書
@@ -74,7 +79,7 @@ opacity(1)    /* 効果なし */
 
 ## 関連情報
 
-- その他の {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティの値で使用できる {{cssxref("&lt;filter-function&gt;")}} 関数には、次のものがあります。
+- その他の {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティの値で使用できる {{cssxref("filter-function")}} 関数には、次のものがあります。
   - {{cssxref("filter-function/blur", "blur()")}}
   - {{cssxref("filter-function/brightness", "brightness()")}}
   - {{cssxref("filter-function/contrast", "contrast()")}}
