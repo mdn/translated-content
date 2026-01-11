@@ -1,6 +1,6 @@
 ---
 title: DataTransfer：items 属性
-shortTitle: items
+short-title: items
 slug: Web/API/DataTransfer/items
 l10n:
   sourceCommit: 8285d415db211ae9efe04752d9dab1b574450ee8
