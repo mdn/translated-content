@@ -1,46 +1,45 @@
 ---
 title: "@import"
 slug: Web/CSS/Reference/At-rules/@import
-original_slug: Web/CSS/@import
 l10n:
-  sourceCommit: 9944f7b12ef1a6aecd54d4b2f0c188a82fdeaaf0
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`@import`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、スタイルルールを他の有効なスタイルシートからインポートするために使用します。
-`@import` ルールはスタイルシートの最上位で、他のアットルール（[@charset](/ja/docs/Web/CSS/Reference/At-rules/@charset) や [@layer](/ja/docs/Web/CSS/Reference/At-rules/@layer)）やスタイル宣言の前に定義する必要があり、そうしなければ無視されます。
+`@import` ルールはスタイルシートの最上位で、他のアットルール（[@charset](/ja/docs/Web/CSS/Reference/At-rules/@charset) や [@layer](/ja/docs/Web/CSS/Reference/At-rules/@layer) を除く）やスタイル宣言の前に定義する必要があり、そうしなければ無視されます。
 
 ## 構文
 
 ```css
 @import url;
 @import url layer;
-@import url layer(layer-name);
-@import url layer(layer-name) supports(supports-condition);
-@import url layer(layer-name) supports(supports-condition) list-of-media-queries;
-@import url layer(layer-name) list-of-media-queries;
-@import url supports(supports-condition);
-@import url supports(supports-condition) list-of-media-queries;
-@import url list-of-media-queries;
+@import url layer(レイヤー名);
+@import url layer(レイヤー名) supports(対応条件);
+@import url layer(レイヤー名) supports(対応条件) メディアクエリーリスト;
+@import url layer(レイヤー名) メディアクエリーリスト;
+@import url supports(対応条件);
+@import url supports(対応条件) メディアクエリーリスト;
+@import url メディアクエリーリスト;
 ```
 
 内容は次の通りです。
 
 - _url_
   - : インポートするリソースの位置を表す {{CSSxRef("string")}} または {{cssxref("url_value", "&lt;url&gt;")}} です。 URL は絶対パスでも相対パスでも構いません。
-- _list-of-media-queries_
+- _メディアクエリーリスト_
   - : [メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)のカンマ区切りのリストで、リンクした URL で定義された CSS ルールを適用するためのメディアに依存した条件を指定します。ブラウザーが対応していないメディアクエリーの場合、リンクされたリソースは読み込まれません。
-- _layer-name_
+- _レイヤー名_
   - : リンクされたリソースのコンテンツがインポートされる[カスケードレイヤー](/ja/docs/Web/CSS/Reference/At-rules/@layer)の名前です。詳しくは [`layer()`](/ja/docs/Web/CSS/@import/layer_function) を参照してください。
-- _supports-condition_
+- _対応条件_
   - : このスタイルシートをインポートするために、ブラウザーが対応している必要がある特性を示します。
-    ブラウザーが _supports-condition_ で指定された条件に適合しない場合、リンクされたスタイルシートを取得しないことがあり、他にもパスを通してダウンロードしても読み込むことはできません。
+    ブラウザーが _対応条件_ で指定された条件に適合しない場合、リンクされたスタイルシートを取得しないことがあり、他にもパスを通してダウンロードしても読み込むことはできません。
     `supports()` の構文は {{CSSxRef("@supports")}} で記述されているものとほぼ同じですので、より完全なリファレンスはそちらのトピックを参照してください。
 
 `@import` を `layer` キーワードまたは `layer()` 関数とともに使用すると、外部スタイルシート（フレームワーク、ウィジェットスタイルシート、ライブラリーなど）をレイヤーにインポートすることができます。
 
 ## 解説
 
-ルールのインポートは、 {{CSSxRef("@charset")}} ルールと [`@layer`](/ja/docs/Web/CSS/Reference/At-rules/@layer) 文を作成するレイヤーを除き、他のすべての種類のルールよりも前に来る必要があります。
+ルールのインポートは、 {{CSSxRef("@charset")}} ルールと {{cssxref("@layer")}} 文を作成するレイヤーを除き、他のすべての種類のルールよりも前に来る必要があります。
 
 ```css example-bad
 * {
@@ -82,7 +81,7 @@ l10n:
 
 ```css
 @import "custom.css";
-@import url("chrome://communicator/skin/");
+@import url("chrome://communicator/skin/communicator.css");
 ```
 
 上の 2 つの例では、 _url_ を `<string>` として指定する方法と `url()` 関数として指定する方法を示しています。
@@ -112,14 +111,14 @@ l10n:
 
 上記の例では、基本的な宣言構文を使って対応条件を示しています。
 `supports()` で CSS 関数を指定することもでき、対応していてユーザーエージェントで評価できる場合は `true` と評価されます。
-例えば、下記のコードでは、[子結合子](/ja/docs/Web/CSS/Reference/Selectors/Child_combinator) (`selector()`) と `font-tech()` 関数の両方を条件とする `@import` を表示しています。
+例えば、下記のコードでは、[子結合子](/ja/docs/Web/CSS/Reference/Selectors/Child_combinator) (`selector()`) と `font-tech()` 関数の両方を条件とする `@import` を示しています。
 
 ```css
 @import "whatever.css"
   supports((selector(h2 > p)) and (font-tech(color-COLRv1)));
 ```
 
-### カスケードレイヤーへのCSSルールのインポート
+### カスケードレイヤーへの CSS ルールのインポート
 
 ```css
 @import "theme.css" layer(utilities);

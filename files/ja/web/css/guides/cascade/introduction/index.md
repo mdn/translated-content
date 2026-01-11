@@ -1,14 +1,14 @@
 ---
 title: CSS カスケード入門
+short-title: 入門
 slug: Web/CSS/Guides/Cascade/Introduction
-original_slug: Web/CSS/CSS_cascade/Cascade
 l10n:
-  sourceCommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **カスケード**は、異なるソースから来るプロパティ値を組み合わせる方法を定義するアルゴリズムです。カスケードでは、複数の[オリジン](#オリジンの種類)や[カスケードレイヤー](/ja/docs/Web/CSS/Reference/At-rules/@layer)の宣言が要素のプロパティに値を設定する場合に、何が優先されるかを定義します。
 
-これは*カスケーディング*スタイルシートという名前で強調されているように、 CSS の中心を占めるものです。[セレクター](/ja/docs/Web/CSS/Guides/Selectors)が要素に一致する場合、優先順位の低いオリジンやレイヤーのセレクターがより高い[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)を持っていたとしても、優先順位の最も高いオリジンのプロパティ値が適用されます。
+これは**カスケーディング**スタイルシートという名前で強調されているように、 CSS の中心を占めるものです。[セレクター](/ja/docs/Web/CSS/Guides/Selectors)が要素に一致する場合、優先順位の低いオリジンやレイヤーのセレクターがより高い[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)を持っていたとしても、優先順位の最も高いオリジンのプロパティ値が適用されます。
 
 この記事では、カスケードとは何か、 {{Glossary("CSS")}} の[宣言](/ja/docs/Web/API/CSSStyleDeclaration)をカスケードする順番、そしてウェブ開発者にどのように影響するかを説明します。
 
@@ -26,7 +26,7 @@ CSS カスケードアルゴリズムの役割は、 CSS プロパティの正�
 
 ユーザーエージェントスタイルシートに関するいくつかの制約は HTML 仕様書によって設定されていますが、ブラウザーにはまだ多くの自由度があります。つまり、ブラウザーごとに大きな違いがあります。開発プロセスを簡素化するために、ウェブ開発者は多くの場合、 CSS リセットスタイルシート（例えば [normalize.css](https://github.com/necolas/normalize.css)）を使用して、あらゆるブラウザーが特定のニーズに合わせて変更を開始する前に、共通のプロパティ値を既知の状態にします。
 
-ユーザーエージェントスタイルシートがプロパティの隣に [`!important`](/ja/docs/Web/CSS/Guides/Cascade/Specificity#important_の例外) を含み、それを "important" にしない限り、リセットスタイルシートを含む作成者スタイルによって宣言されたスタイルは、関連するセレクターの詳細度にかかわらず、ユーザーエージェントスタイルより優先さ れます。
+ユーザーエージェントスタイルシートがプロパティの隣に [`!important`](/ja/docs/Web/CSS/Guides/Cascade/Specificity#important_の例外) を含み、それを "important" にしない限り、リセットスタイルシートを含む作成者スタイルによって宣言されたスタイルは、関連するセレクターの詳細度にかかわらず、ユーザーエージェントスタイルより優先されます。
 
 ### 作成者スタイルシート
 
@@ -38,7 +38,7 @@ CSS カスケードアルゴリズムの役割は、 CSS プロパティの正�
 
 ### カスケードレイヤー
 
-カスケード順序は、オリジンの種類に基づきます。オリジンタイプ内のカスケードは、その種類の中での[カスケードレイヤー](/ja/docs/Web/CSS/Reference/At-rules/@layer)の宣言順序に基づきます。ユーザーエージェント、作成者、ユーザーのすべてのオリジンについて、スタイルは名前付きまたは無名のレイヤーの内部または外部で宣言することができます。 [`layer`, `layer()`](/ja/docs/Web/CSS/Reference/At-rules/@import) または [`@layer`](/ja/docs/Web/CSS/Reference/At-rules/@layer) を使って宣言した場合、スタイルは指定された名前のレイヤーに、名前が提供されていない場合は無名のレイヤーに配置されます。レイヤーの外側で宣言されたスタイルは、最後に宣言された匿名のレイヤーに属するものとして扱われます。
+カスケード順序は、オリジンの種類に基づきます。オリジンタイプ内のカスケードは、その種類の中での[カスケードレイヤー](/ja/docs/Web/CSS/Reference/At-rules/@layer)の宣言順序に基づきます。ユーザーエージェント、作成者、ユーザーのすべてのオリジンについて、スタイルは名前付きまたは無名のレイヤーの内部または外部で宣言することができます。 [`layer`, `layer()`](/ja/docs/Web/CSS/Reference/At-rules/@import) または {{cssxref("@layer")}} を使って宣言した場合、スタイルは指定された名前のレイヤーに、名前が提供されていない場合は無名のレイヤーに配置されます。レイヤーの外側で宣言されたスタイルは、最後に宣言された匿名のレイヤーに属するものとして扱われます。
 
 各オリジンの種類内のカスケードレイヤーの説明に入る前に、カスケードのオリジンの種類について見てみましょう。
 
@@ -54,7 +54,7 @@ CSS カスケードアルゴリズムの役割は、 CSS プロパティの正�
    | 1              | ユーザーエージェント（ブラウザー） | 通常         |
    | 2              | ユーザー                           | 通常         |
    | 3              | 作成者（開発者）                   | 通常         |
-   | 4              | CSS @keyframes アニメーション      |              |
+   | 4              | CSS キーフレームアニメーション     |              |
    | 5              | 作成者（開発者）                   | `!important` |
    | 6              | ユーザー                           | `!important` |
    | 7              | ユーザーエージェント（ブラウザー） | `!important` |
@@ -203,11 +203,11 @@ margin-left: 3px;
 
 ```html
 <style>
-  @import unlayeredStyles.css;
-  @import AStyles.css layer(A);
-  @import moreUnlayeredStyles.css;
-  @import BStyles.css layer(B);
-  @import CStyles.css layer(C);
+  @import "unlayeredStyles.css";
+  @import "AStyles.css" layer(A);
+  @import "moreUnlayeredStyles.css";
+  @import "BStyles.css" layer(B);
+  @import "CStyles.css" layer(C);
   p {
     color: red;
     padding: 1em !important;
@@ -352,7 +352,7 @@ CSS 宣言のみが、つまりプロパティ/値の組だけが、カスケー
 
 表示属性とは、スタイル設定に影響を与えるソース文書の属性です。例えば、非推奨の `align` 属性を含めることができる場合、この属性はいくつかの HTML 要素の配置を設定します。また、 `fill` 属性は、SVG 図形やテキストの描画に使用できる色を定義し、SVG アニメーションの最終状態を定義します。表示属性は作成者スタイルですが、カスケードには関与しません。
 
-ユーザーエージェントが HTML の表示属性に対応している場合、 HTML と SVG に記載された有効な表示属性（[`align`](/ja/docs/Web/HTML/Reference/Elements/img#align) 属性や [`fill`](/ja/docs/Web/SVG/Reference/Attribute/fill) 属性など）は、対応する CSS ルールに変換され（すべての SVG の表示属性は CSS プロパティとしても対応しています）、作成者スタイルシートに、他のスタイルよりも優先順位が `0` のスタイルとして挿入されます。
+ユーザーエージェントが HTML の表示属性に対応している場合、 HTML と SVG に含まれる有効な表示属性（[`align`](/ja/docs/Web/HTML/Reference/Elements/img#align) 属性や [`fill`](/ja/docs/Web/SVG/Reference/Attribute/fill) 属性など）は、対応する CSS ルールに変換され（すべての SVG のプレゼンテーション属性は CSS プロパティとしても対応しています）、作成者スタイルシートに、他のスタイルよりも優先順位が高い詳細度が `0` のスタイルとして挿入されます。
 
 表示属性は `!important` で宣言できません。
 
@@ -414,11 +414,11 @@ p {
 
 ## 関連情報
 
+- [CSS カスケードと継承](/ja/docs/Web/CSS/Guides/Cascade)モジュール
 - [学習: 競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [学習: カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
-- [CSS カスケードと継承](/ja/docs/Web/CSS/Guides/Cascade)モジュール
 - [CSS の構文](/ja/docs/Web/CSS/Guides/Syntax/Introduction)
 - [詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)
 - [継承](/ja/docs/Web/CSS/Guides/Cascade/Inheritance)
 - [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)
-- [初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値), [計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値), [使用値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#使用値), [実効値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#実効値)
+- 値: [初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値), [計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値), [使用値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#使用値), [実効値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#実効値)
