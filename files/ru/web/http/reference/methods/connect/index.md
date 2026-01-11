@@ -27,7 +27,7 @@ slug: Web/HTTP/Reference/Methods/CONNECT
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Idempotent","Идемпотентный")}}
+        {{Glossary("Idempotent", "Идемпотентный")}}
       </th>
       <td>Нет</td>
     </tr>
