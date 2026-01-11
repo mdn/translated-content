@@ -293,7 +293,7 @@ CSP に `default-src` または `script-src` ディレクティブが含まれ�
 
 - `javascript:` URL 内の JavaScript
 
-  ```html
+  ```html-nolint
   <a href="javascript:console.log('javascript: URL からこんにちは')">ここをクリック</a>
   ```
 
