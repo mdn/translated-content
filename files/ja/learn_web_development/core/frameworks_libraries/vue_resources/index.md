@@ -53,8 +53,6 @@ Vue について詳しく知りたい場合は、次のサイトをご覧くだ�
 
 Vue CLI はウェブにアプリケーションを公開するためのツールを提供しています。使い方は以下の通りです。
 
-The Vue CLI also provides us with tools for preparing our app for publishing to the web. You can do this like so:
-
 - ローカルサーバーを立ち上げている場合、ターミナルから <kbd>Ctrl</kbd> \+ <kbd>C</kbd>を押して、サーバーを止めてください。
 
 - 次に、コンソールで`npm run build` (または、`yarn build`)を行ってください。
