@@ -1,6 +1,9 @@
 ---
 title: DataTransfer：dropEffect 属性
+short-title: dropEffect
 slug: Web/API/DataTransfer/dropEffect
+l10n:
+  sourceCommit: 8285d415db211ae9efe04752d9dab1b574450ee8
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
