@@ -1,13 +1,15 @@
 ---
-title: DataTransfer.setData()
+title: DataTransfer：setData() 方法
 slug: Web/API/DataTransfer/setData
+l10n:
+  sourceCommit: 8285d415db211ae9efe04752d9dab1b574450ee8
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataTransfer.setData()`** 方法用来设置拖动操作的[拖动数据](/zh-CN/docs/Web/API/DataTransfer)为指定的数据和类型。如果给定类型的数据不存在，则将其添加到拖动数据存储的末尾，使得 {{domxref("DataTransfer.types","types")}} 列表中的最后一个项目将是新类型。如果给定类型的数据已经存在，现有数据将被替换为相同的位置。即当替换相同类型的数据时，{{domxref("DataTransfer.types","types")}} 列表的顺序不会更改。
 
-示例数据类型包括 `text/plain` 和 `text/uri-list`.
+示例数据类型包括 `text/plain` 和 `text/uri-list`。
 
 ## 语法
 
@@ -32,7 +34,7 @@ setData(format, data)
 
 - 在 `dragstart` 处理器中，我们使用 `setData()` 将 `<p>` 元素的 `id` 添加到 {{domxref("DataTransfer")}} 对象中。
 
-- 在 `drop` 处理器中，我们检索 `id` 并使用它将 `<p>` 元素移动到目标中。
+- 在 `drop` 处理器中，我们检索 `id` 并使用它将相应的 `<p>` 元素移动到目标中。
 
 #### HTML
 
