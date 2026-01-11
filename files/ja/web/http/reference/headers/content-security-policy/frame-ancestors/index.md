@@ -1,17 +1,21 @@
 ---
-title: "CSP: frame-ancestors"
+title: "Content-Security-Policy: frame-ancestors ディレクティブ"
+short-title: frame-ancestors
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: a2b29d9159294f1437e0adf49cdf3019e9c1c24b
 ---
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) である **`frame-ancestors`** ディレクティブは {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("object")}} 、{{HTMLElement("embed")}} などを使ってページを埋め込むことのできる親を指定します。
 
-このディレクティブを `'none'` にすることは、 {{HTTPHeader("X-Frame-Options")}}`: deny`（これは古いブラウザーも同様に対応しています）を設定するのに似ています。
+このディレクティブを `'none'` にすることは、 {{HTTPHeader("X-Frame-Options", "X-Frame-Options: deny")}}（これは古いブラウザーも同様に対応しています）を設定するのに似ています。
 
 > [!NOTE]
 > **`frame-ancestors`** は、ページを埋め込むことができる親ソースを指定することができます。
 > これは、ページ内の iframe をどこから読み込むかを指定する **`frame-src`** とは異なります。
+
+> [!NOTE]
+> **`frame-ancestors`** ディレクティブは、[それぞれの祖先を検証します](https://w3c.github.io/webappsec-csp/#frame-ancestors-and-frame-options)。どの祖先も一致しない場合、読み込みは取り消される可能性があります。したがって、入れ子フレームを使用する際には、末端フレームの **`frame-ancestors`** ディレクティブですべての祖先を許可する必要があります。
 
 <table class="properties">
   <tbody>
