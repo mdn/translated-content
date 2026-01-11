@@ -1,5 +1,5 @@
 ---
-title: DataTransfer.clearData()
+title: DataTransfer：clearData() 方法
 slug: Web/API/DataTransfer/clearData
 l10n:
   sourceCommit: 8285d415db211ae9efe04752d9dab1b574450ee8
