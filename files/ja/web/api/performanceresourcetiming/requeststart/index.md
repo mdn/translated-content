@@ -20,6 +20,10 @@ l10n:
 - リソースがオリジン間リクエストで取得され、HTTP の {{HTTPHeader("Timing-Allow-Origin")}} レスポンスヘッダーが使用されなかった場合は `0` となります。
 - リソースがキャンセルされたリクエストである場合は `0` です。
 
+{{domxref("PerformanceResourceTiming.firstInterimResponseStart", "firstInterimResponseStart")}} が 0 以外の値である場合、[対応しているブラウザー](#browser_compatibility)では、その値は `requestStart` と同じ値であることを示します。
+
+中間レスポンスがない場合、`requestStart` は `finalResponseHeadersStart` と同じ値になり、`firstInterimResponseStart` は 0 になります。
+
 ## 例
 
 ### リクエスト時間の計測
