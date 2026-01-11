@@ -3,7 +3,7 @@ title: CSS レイアウト入門
 short-title: 入門
 slug: Learn_web_development/Core/CSS_layout/Introduction
 l10n:
-  sourceCommit: be1922d62a0d31e4e3441db0e943aed8df736481
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{NextMenu("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout")}}
