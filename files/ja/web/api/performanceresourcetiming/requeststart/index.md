@@ -5,7 +5,7 @@ l10n:
   sourceCommit: d960038e3480d158d3b58294a4d150202331a83d
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 **`requestStart`** は読み取り専用プロパティで、ブラウザーがサーバー、キャッシュ、またはローカルリソースにリソースのリクエストを開始する直前の {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。トランスポート接続が失敗してブラウザーがリクエストを終了すると、返される値は再試行要求の開始になります。
 
