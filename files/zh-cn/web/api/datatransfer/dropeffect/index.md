@@ -1,5 +1,5 @@
 ---
-title: DataTransfer.dropEffect
+title: DataTransfer：dropEffect 属性
 slug: Web/API/DataTransfer/dropEffect
 ---
 
