@@ -71,7 +71,7 @@ POST <request-target>["?"<query>] HTTP/1.1
     これはオリジンサーバーへのリクエストでは絶対パス（例: `/path/to/file.html`）であり、プロキシーへのリクエストでは絶対 URL（例: `http://www.example.com/path/to/file.html`）です。
 - `<query>` {{optional_inline}}
   - : 疑問符 `?` で始まるオプションのクエリ成分。
-   多くの場合、`key=value` という形で識別情報を伝達するために使用されます。
+    多くの場合、`key=value` という形で識別情報を伝達するために使用されます。
 
 ## 例
 
