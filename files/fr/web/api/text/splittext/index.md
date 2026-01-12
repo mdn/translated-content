@@ -1,50 +1,70 @@
 ---
-title: Text.splitText()
+title: "Text : méthode splitText()"
+short-title: splitText()
 slug: Web/API/Text/splitText
+l10n:
+  sourceCommit: d0e6d8d712a33b9d3c7a9fb9a8ba85d4dd1b7002
 ---
 
-{{apiref("DOM")}}
+{{APIRef("DOM")}}
 
-La méthode **`Text.splitText()`** sépare le nœud {{domxref("Text")}} en deux nœuds au niveau de l'indice spécifié, et conserve les deux nœuds dans l'arbre en tant que voisins.
+La méthode **`splitText()`** de l'interface {{DOMxRef("Text")}} divise le nœud {{DOMxRef("Text")}} en deux nœuds à l'indice défini, en gardant les deux nœuds dans l'arbre en tant que voisins.
 
-Après la séparation, le nœud actuel contient tout le texte jusqu'à l'indice spécifié, et un nœud nouvellement créé du même type contient le texte restant. Le nœud nouvellement créé est retourné à l'appelant. Si le nœud original avait un parent, le nouveau nœud est inséré en tant que voisin suivant du nœud original. Si l'indice est égal à la longueur du nœud original, le nœud nouvellement créé ne contient pas de données.
+Après la séparation, le nœud actuel contient tout le contenu jusqu'à l'indice défini, et un nœud nouvellement créé du même type contient le texte restant. Le nœud nouvellement créé est retourné à l'appelant. Si le nœud original avait un parent, le nouveau nœud est inséré en tant que voisin suivant du nœud original. Si l'indice est égal à la longueur du nœud original, le nœud nouvellement créé ne contient pas de données.
 
-Des nœuds texte séparés peuvent être concaténés en utilisant la méthode {{domxref("Node.normalize()")}}.
-
-Une {{domxref("DOMException")}} avec la valeur `INDEX_SIZE_ERR` est levée si l'indice spécifié est négatif ou est supérieur au nombre d'unités 16-bit dans le texte du nœud&nbsp;; une {{domxref("DOMException")}} avec la valeur `NO_MODIFICATION_ALLOWED_ERR` est levée si le nœud est en lecture seule.
+Les nœuds texte séparés peuvent être concaténés en utilisant la méthode {{DOMxRef("Node.normalize()")}}.
 
 ## Syntaxe
 
-```js
-noeudRemplacant = noeudTexte.splitText(indice);
+```js-nolint
+splitText(offset)
 ```
 
-## Exemple
+### Paramètres
 
-Dans cet exemple, le nœud texte d'un {{HTMLElement("p")}} est séparé en deux nœuds texte et un {{HTMLElement("span")}} est inséré entre les deux.
+- `offset`
+  - : L'indice juste avant lequel le nœud texte doit être coupé.
+
+### Valeur de retour
+
+Retourne le nœud {{DOMxRef("Text")}} nouvellement créé qui contient le texte après l'indice défini.
+
+### Exceptions
+
+- `IndexSizeError` {{DOMxRef("DOMException")}}
+  - : Levée si l'indice défini est négatif ou supérieur au nombre d'unités 16 bits dans le texte du nœud.
+- `NoModificationAllowedError` {{DOMxRef("DOMException")}}
+  - : Levée si le nœud est en lecture seule.
+
+## Exemples
+
+Dans cet exemple, le texte d'un élément HTML {{HTMLElement("p")}} est séparé en deux nœuds texte et un élément HTML {{HTMLElement("u")}} est inséré entre les deux.
 
 ```html
-<body>
-  <p id="p">foobar</p>
-
-  <script type="text/javascript">
-    var p = document.getElementById("p");
-    var noeudTexte = p.firstChild;
-
-    // coupe entre foo et bar
-    var noeudRemplacant = noeudTexte.splitText(3);
-
-    // crée un span avec ' contenu du span '
-    var span = document.createElement("span");
-    span.appendChild(document.createTextNode(" contenu du span "));
-
-    // ajoute le span avant 'bar'
-    p.insertBefore(span, noeudRemplacant);
-
-    // le résultat est <p id="p">foo<span> contenu du span </span>bar</p>
-  </script>
-</body>
+<p>tototata</p>
 ```
+
+```js
+const p = document.querySelector("p");
+
+// Récupère le contenu de <p> en tant que nœud texte
+const toto = p.firstChild;
+
+// Sépare 'tototata' en deux nœuds texte, 'toto' et 'tata',
+// et stocke 'tata' dans une constante
+const tata = toto.splitText(4);
+
+// Crée un élément <u> contenant « nouveau contenu »
+const u = document.createElement("u");
+u.appendChild(document.createTextNode(" nouveau contenu "));
+
+// Ajoute <u> avant 'tata'
+p.insertBefore(u, tata);
+
+// Le résultat est : <p>toto<u> nouveau contenu </u>tata</p>
+```
+
+{{EmbedLiveSample("Exemples", 700, 70)}}
 
 ## Spécifications
 
@@ -56,5 +76,5 @@ Dans cet exemple, le nœud texte d'un {{HTMLElement("p")}} est séparé en deux 
 
 ## Voir aussi
 
-- L'interface {{domxref("Text")}} à laquelle cette méthode appartient.
-- La méthode opposée&nbsp;: {{domxref("Node.normalize")}}.
+- L'interface {{DOMxRef("Text")}} à laquelle cette méthode appartient.
+- La méthode opposée&nbsp;: {{DOMxRef("Node.normalize")}}.
