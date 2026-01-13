@@ -3,7 +3,7 @@ title: Firefox 147 pour les développeurs
 short-title: Firefox 147
 slug: Mozilla/Firefox/Releases/147
 l10n:
-  sourceCommit: fbe2cf456ae1eb39d0386dd1d7e836f84d84518d
+  sourceCommit: fa422ef89f5da5c7bc10a03f8e84b01b8132061c
 ---
 
 Cet article présente les informations concernant les changements de Firefox 147 qui concernent les développeur·euse·s.
@@ -15,6 +15,15 @@ Firefox 147 est sorti le [13 janvier 2026 <sup>(angl.)</sup>](https://whattraini
 
 - Lorsque vous sélectionnez un [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) (tel que {{CSSxRef("::before")}} ou {{CSSxRef("::after")}}) dans le panneau HTML de l'Inspecteur, vous pouvez désormais modifier le sélecteur de la règle correspondante dans le panneau CSS.
   ([bogue Firefox 1998704 <sup>(angl.)</sup>](https://bugzil.la/1998704)).
+- Lors d'une transition de vue, les pseudo-éléments {{CSSxRef("::view-transition")}} apparaissent désormais dans le panneau Éléments. ([bogue Firefox 1996608 <sup>(angl.)</sup>](https://bugzil.la/1996608)).
+- Lors d'une transition de vue, les animations associées apparaissent désormais dans le panneau Animations. ([bogue Firefox 1995296 <sup>(angl.)</sup>](https://bugzil.la/1995296)).
+- Les éléments avec un {{CSSxRef("anchor-name")}} valide reçoivent un badge «&nbsp;anchor&nbsp;» dans le panneau Éléments. ([bogue Firefox 1895196 <sup>(angl.)</sup>](https://bugzil.la/1895196)).
+- Les règles {{CSSxRef("@position-try")}} associées à un élément mis en surbrillance sont désormais affichées dans le panneau Règles CSS. ([bogue Firefox 1895176 <sup>(angl.)</sup>](https://bugzil.la/1895176)).
+- Les charges utiles JSON peuvent être importées dans Firefox Profiler depuis le visualiseur JSON à l'aide d'un nouveau bouton. Cela fournit une répartition de la taille de la ressource. ([bogue Firefox 1997209 <sup>(angl.)</sup>](https://bugzil.la/1997209)).
+
+### HTML
+
+Aucun changement notable.
 
 ### SVG
 
