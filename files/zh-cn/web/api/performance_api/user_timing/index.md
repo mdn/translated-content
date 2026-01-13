@@ -22,7 +22,7 @@ l10n:
 
 ### 添加性能标记
 
-要开始测量应用程序功能的性能，第一步是在代码的关键位置添加命名性能标记。理想情况下，需要遍历整个代码库，确定关键路径和重要任务，确保这些任务能够快速执行。
+要开始测量应用程序功能的性能，第一步是在代码的关键位置添加具名性能标记。理想情况下，需要遍历整个代码库，确定关键路径和重要任务，确保这些任务能够快速执行。
 
 {{domxref("Performance.mark","performance.mark()")}} 方法用于创建 {{domxref("PerformanceMark")}}。该方法接受一个参数——标记的 `name`，如下例所示：
 
@@ -63,7 +63,7 @@ console.log(loginMeasure.duration);
 
 {{domxref("Performance.measure()")}} 方法也可通过选项对象进行配置，因此可以执行更高级的测量，或通过 `detail` 属性提供额外信息。
 
-例如，可通过 [`click` 事件](/zh-CN/docs/Web/API/Element/click_event) 中的 [`event.timestamp`](/zh-CN/docs/Web/API/Event/timeStamp) 属性精确获取用户点击登录按钮的时间点，并将其与 UI 更新时刻（此处为 `"login-finished"` 标记）进行时间差测量。
+例如，可通过 [`click` 事件](/zh-CN/docs/Web/API/Element/click_event)中的 [`event.timestamp`](/zh-CN/docs/Web/API/Event/timeStamp) 属性精确获取用户点击登录按钮的时间点，并将其与 UI 更新时刻（此处为 `"login-finished"` 标记）进行时间差测量。
 
 ```js
 loginButton.addEventListener("click", (clickEvent) => {
