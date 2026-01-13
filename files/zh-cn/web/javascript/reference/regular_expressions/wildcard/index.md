@@ -17,7 +17,7 @@ l10n:
 
 `.` 匹配除[行终止符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#行终止符)之外的任意字符。若设置 [`s`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll) 标志，`.` 也会匹配行终止符。
 
-`.` 匹配的确切字符集取决于正则表达式是否启用 [Unicode 感知模式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_感知模式)。若启用 Unicode 感知模式，`.` 匹配任意 Unicode 码点；否则匹配任意 UTF-16 码元。例如：
+`.` 匹配的确切字符集取决于正则表达式是否启用 [Unicode 感知模式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_感知模式)。若启用 Unicode 感知模式，`.` 匹配任意 Unicode 码位；否则匹配任意 UTF-16 码元。例如：
 
 ```js
 /../.test("😄"); // true；以代理对形式匹配两个 UTF-16 码元
