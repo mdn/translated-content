@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-當 `HTMLDialogElement` 物件所代表的 {{htmlelement("dialog")}} 被關閉時，將會在該物件上觸發 `close` 事件。
+`close` 事件會在 `HTMLDialogElement` 物件所代表的 {{htmlelement("dialog")}} 被關閉時，在該物件上觸發。
 
 此事件不可取消，且不會冒泡。
 
