@@ -2,9 +2,6 @@
 title: Array.prototype.toSpliced()
 short-title: toSpliced()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toSpliced
-page-type: javascript-instance-method
-browser-compat: javascript.builtins.Array.toSpliced
-sidebar: jsref
 l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
