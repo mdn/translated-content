@@ -16,7 +16,7 @@ l10n:
 ## 语法
 
 ```js-nolint
-window.moveTo(x, y)
+moveTo(x, y)
 ```
 
 ### 参数
