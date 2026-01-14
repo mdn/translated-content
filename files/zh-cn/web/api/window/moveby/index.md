@@ -16,7 +16,7 @@ l10n:
 ## 语法
 
 ```js-nolint
-window.moveBy(deltaX, deltaY)
+moveBy(deltaX, deltaY)
 ```
 
 ### 参数
