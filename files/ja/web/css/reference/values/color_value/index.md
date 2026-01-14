@@ -458,7 +458,7 @@ div:nth-child(6) {
 
 - {{CSSXref("opacity")}}: 要素レベルで透明度を定義するプロパティ
 - {{cssxref("hue")}}: 色を色相の角度で表すデータ型
-- {{CSSXref("color")}}, {{CSSXref("background-color")}}, {{CSSXref("border-color")}}, {{CSSXref("box-shadow")}}, {{CSSXref("outline-color")}}, {{CSSXref("text-shadow")}}:  `<color>` を使用する共通のプロパティ
+- {{CSSXref("color")}}, {{CSSXref("background-color")}}, {{CSSXref("border-color")}}, {{CSSXref("box-shadow")}}, {{CSSXref("outline-color")}}, {{CSSXref("text-shadow")}}: `<color>` を使用する共通のプロパティ
 - {{CSSXref("color_value/color")}} 関数
 - [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color)
 - [相対色の使用](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)
