@@ -61,4 +61,4 @@ function budge() {
 
 ## 参见
 
-- {{domxref("window.moveTo()")}}
+- {{domxref("Window.moveTo()")}}
