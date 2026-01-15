@@ -24,7 +24,7 @@ dataTransfer.dropEffect;
 
 ### 值
 
-一个代表拖动操作效果的 {{domxref("DOMString")}}，可能的值有：
+一个代表拖动操作效果的字符串。可能的值有：
 
 - `copy`
   - : 在新位置生成源项的副本
