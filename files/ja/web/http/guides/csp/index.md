@@ -2,7 +2,7 @@
 title: コンテンツセキュリティポリシー (CSP)
 slug: Web/HTTP/Guides/CSP
 l10n:
-  sourceCommit: 2d9fd5822658f1943d1749aeb741bf989f7b6a20
+  sourceCommit: dc788bf0ea36cb1ebe809c82aaae2c77cb3e18c0
 ---
 
 **コンテンツセキュリティポリシー** (CSP) は、特定の種類のセキュリティ脅威のリスクを防止または最小限に抑えるのに役立つ機能です。これは、ウェブサイトからブラウザーへの一連の指示で構成されており、サイトを構成するコードが実行できることを制限するようにブラウザーに指示します。
@@ -21,7 +21,7 @@ CSP には他にも、[クリックジャッキング](/ja/docs/Web/Security/Att
 
 CSP は、 {{httpheader("Content-Security-Policy")}} レスポンスヘッダーでブラウザーに配信する必要があります。これは、メイン文書だけでなく、すべてのリクエストに対するすべてのレスポンスに設定する必要があります。
 
-また、文書の {{htmlelement("meta")}} 要素の [`http-equiv`](/ja/docs/Web/HTML/Reference/Elements/meta#http-equiv) 属性を使用して指定することもできます。これは、静的リソースのみを持つクライアント側でレンダリングされる{{glossary("SPA", "単一ページアプリ")}}など、サーバーインフラストラクチャに依存することを避けたい場合などに便利なオプションです。ただし、このオプションは CSP のすべての機能に対応しているわけではありません。
+また、文書の {{htmlelement("meta")}} 要素の [`http-equiv`](/ja/docs/Web/HTML/Reference/Elements/meta/http-equiv) 属性を使用して指定することもできます。これは、静的リソースのみを持つクライアント側でレンダリングされる{{glossary("SPA", "単一ページアプリ")}}など、サーバーインフラストラクチャに依存することを避けたい場合などに便利なオプションです。ただし、このオプションは CSP のすべての機能に対応しているわけではありません。
 
 ポリシーは、セミコロンで区切られた一連の「ディレクティブ」として指定します。各ディレクティブは、セキュリティポリシーの異なる側面を制御します。各ディレクティブには、名前、その後に空白、その後に値が続きます。ディレクティブによって構文が異なる場合があります。
 
@@ -79,7 +79,10 @@ XSS 攻撃は、攻撃者が作成した可能性のある入力 （URL 引数�
 - インラインイベントハンドラー
 
   ```html
-  <img onmouseover="console.log(`ハックされました！`)" />
+  <img
+    onmouseover="console.log(`ハックされました！`)"
+    src="thumbnail.jpg"
+    alt="" />
   ```
 
 - `javascript:` URL
@@ -88,7 +91,7 @@ XSS 攻撃は、攻撃者が作成した可能性のある入力 （URL 引数�
   <iframe src="javascript:console.log(`ハックされました！`)"></iframe>
   ```
 
-- A string argument to an unsafe API like [`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval):
+- 安全ではない API、たとえば [`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) などの文字列引数
 
   ```js
   eval("console.log(`ハックされました！`)");
@@ -290,8 +293,8 @@ CSP に `default-src` または `script-src` ディレクティブが含まれ�
 
 - `javascript:` URL 内の JavaScript
 
-  ```html
-  <a href="javascript:console.log('javascript: URL からこんにちは')"></a>
+  ```html-nolint
+  <a href="javascript:console.log('javascript: URL からこんにちは')">ここをクリック</a>
   ```
 
 `unsafe-inline` キーワードを使用すると、この制限を上書きすることができます。例えば、次のディレクティブは、すべてのリソースが同じオリジンであることを要求しますが、インライン JavaScript は許可します。
@@ -329,9 +332,13 @@ Content-Security-Policy: default-src 'self' 'unsafe-inline'
   setTimeout("console.log('setTimeout からこんにちは')", 1);
   ```
 
-`unsafe-eval` キーワードを使用してこの動作を上書きすることができます。 `unsafe-inline` と同様、その理由も同様です。**開発者は `unsafe-eval` を使用することは避けるべきです。** `eval()` の使用をすべて除去することが困難な場合もあります。このような状況では、 [Trusted Types API](/ja/docs/Web/API/Trusted_Types_API) を使用することで、入力が定義されたポリシーに確実に適合するようにして、安全性を高めることができます。
+`unsafe-eval` キーワードを使用してこの動作を上書きすることができます。 `unsafe-inline` と同様、その理由も同様です。**開発者は `unsafe-eval` を使用することは避けるべきです。**
 
-unsafe-inline` とは異なり、`unsafe-eval` キーワードは、ノンス式またはハッシュ式が含まれているディレクティブ内でも動作します。
+`eval()` やその他のメソッドの使用をすべて除去することが困難な場合もあります。このような状況では、 [信頼型 API](/ja/docs/Web/API/Trusted_Types_API) を使用することで、入力が定義されたポリシーに確実に適合するようにして、安全性を高めることができます。
+この場合、`trusted-types-eval`キーワードを使用して動作を上書きしましょう。
+`unsafe-inline`とは異なり、信頼型が対応しており有効になっているブラウザーでのみ動作を上書きします。これにより、信頼型に対応していないブラウザーではメソッドがブロックされたままになります。
+
+`unsafe-inline` とは異なり、`unsafe-eval` キーワードは、ノンス式またはハッシュ式が含まれているディレクティブ内でも動作します。
 
 ### 厳格な CSP
 
@@ -375,14 +382,14 @@ Content-Security-Policy:
 例えば、次のような文書を考えてみましょう。
 
 ```html
-<html>
+<html lang="ja">
   <head>
     <script
       src="./main.js"
       integrity="sha256-gEh1+8U9S1vkEuQSmmUMTZjyNSu5tIoECP4UXIEjMTk="></script>
   </head>
   <body>
-    <h1>Example page!</h1>
+    <h1>ページの例</h1>
   </body>
 </html>
 ```
@@ -412,7 +419,7 @@ CSP に `'strict-dynamic'` を追加すると、 "main.js" は "main2.js" を読
 ```http
 Content-Security-Policy:
   script-src 'sha256-gEh1+8U9S1vkEuQSmmUMTZjyNSu5tIoECP4UXIEjMTk='
-  strict-dynamic
+  'strict-dynamic'
 ```
 
 キーワード `'strict-dynamic'` を使用すると、特にウェブサイトがサードパーティのスクリプトを使用している場合に、ノンスまたはハッシュベースの CSP を簡単に作成および維持することができます。ただし、このキーワードを使用すると、CSP のセキュリティが低下します。なぜなら、記載したスクリプトが XSS の潜在的なソースに基づいて `<script>` 要素を作成した場合、CSP はそれらを保護しないからです。
@@ -422,7 +429,7 @@ Content-Security-Policy:
 上記で、CSP ではインライン JavaScript が既定で禁止されていることを説明しました。ノンスまたはハッシュを使用すると、開発者はインライン `<script>` タグを使用することができますが、インラインイベントハンドラー、`javascript:` URL、`eval()` の使用など、その他の禁止されているパターンを除去するためにコードをリファクタリングする必要があります。例えば、インラインイベントハンドラーは普通、 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} の呼び出しに置き換えるべきです。
 
 ```html-nolint example-bad
-<p onclick="console.log('インラインイベントハンドラーからこんにちは')">クリックしてね</p>
+<p onclick="console.log('インラインイベントハンドラーからこんにちは')">ここをクリック</p>
 ```
 
 ```html
