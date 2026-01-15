@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Loops
 original_slug: Learn/JavaScript/Building_blocks/Looping_code
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
 
 Les langages de programmation sont très utiles pour effectuer des tâches répétitives, allant de calculs basiques jusqu'à peu près n'importe quelle autre situation où vous avez un certain nombre d'actions similaires à répéter. Ici, nous allons étudier les structures de boucle disponible dans JavaScript qui répondent à un tel besoin.
 
@@ -267,7 +267,7 @@ for (let i = 0; i < cats.length; i++) {
 
 ## Quitter une boucle avec break
 
-Si vous voulez quitter une boucle avant que toutes les itérations aient été terminées, vous pouvez utiliser l'instruction [`break`](/fr/docs/Web/JavaScript/Reference/Statements/break). Nous l'avons déjà rencontré dans l'article précédent lorsque nous examinions les [instructions `switch`](/fr/docs/Learn/JavaScript/Building_blocks/conditionals#instruction_switch)&nbsp;: lorsqu'un argument est rencontré dans une instruction switch qui correspond à l'expression d'entrée, l'instruction break quitte immédiatement l'instruction switch et passe au code après elle.
+Si vous voulez quitter une boucle avant que toutes les itérations aient été terminées, vous pouvez utiliser l'instruction [`break`](/fr/docs/Web/JavaScript/Reference/Statements/break). Nous l'avons déjà rencontré dans l'article précédent lorsque nous examinions les [instructions `switch`](/fr/docs/Learn_web_development/Core/Scripting/Conditionals#instruction_switch)&nbsp;: lorsqu'un argument est rencontré dans une instruction switch qui correspond à l'expression d'entrée, l'instruction break quitte immédiatement l'instruction switch et passe au code après elle.
 
 C'est la même chose avec les boucles&nbsp;: un `break` quittera immédiatement la boucle et fera passer le navigateur sur n'importe quel code qui le suit.
 
@@ -661,7 +661,7 @@ Nous vous avons déjà fourni les éléments suivants&nbsp;:
 - `refused.textContent +=` — le début de la ligne qui va concaténer un élément à la fin du `refused.textContent`.
 - `admitted.textContent +=` — le début de la ligne qui va concaténer un élément à la fin du `admitted.textContent`.
 
-Question bonus&nbsp;: après avoir accompli les tâches ci-dessus, il vous restera deux listes de noms séparées par des virgules, mais elles seront mal présentées&nbsp;: il y aura des virgules à la fin de chacune d'elles. Pouvez-vous faire en sorte d'écrire des lignes de code qui coupent les dernières virgules dans chacune d'elles, et ajoute un arrêt total à la fin&nbsp;? Jetez un œil à l'article [Méthodes utiles pour les chaînes de caractères](/fr/docs/Learn/JavaScript/First_steps/Useful_string_methods) pour obtenir de l'aide.
+Question bonus&nbsp;: après avoir accompli les tâches ci-dessus, il vous restera deux listes de noms séparées par des virgules, mais elles seront mal présentées&nbsp;: il y aura des virgules à la fin de chacune d'elles. Pouvez-vous faire en sorte d'écrire des lignes de code qui coupent les dernières virgules dans chacune d'elles, et ajoute un arrêt total à la fin&nbsp;? Jetez un œil à l'article [Méthodes utiles pour les chaînes de caractères](/fr/docs/Learn_web_development/Core/Scripting/Useful_string_methods) pour obtenir de l'aide.
 
 Si vous faites une erreur, vous pourrez toujours ré-initialiser l'exemple avec le bouton «&nbsp;Reset&nbsp;». Si vous êtes vraiment bloqué, appuyez sur le bouton «&nbsp;Show solution&nbsp;» pour voir une solution.
 
@@ -846,7 +846,7 @@ Nous recommandons `for`, au moins pour commencer, car elle est probablement la p
 
 Cet article vous a révélé les concepts basiques et les différentes options disponibles pour créer des boucles en JavaScript. Vous devriez à présent être en mesure de comprendre en quoi les boucles constituent un bon mécanisme lorsqu'il s'agit de répéter une action dans le code, et vous devez être impatient de les utiliser dans vos propres exemples&nbsp;!
 
-S'il y a quelque chose que vous n'avez pas compris, n'hésitez pas à relire l'article ou à [nous contacter](/fr/docs/Learn#nous_contacter) pour demander de l'aide.
+S'il y a quelque chose que vous n'avez pas compris, n'hésitez pas à relire l'article ou à [nous contacter](/fr/docs/Learn_web_development#nous_contacter) pour demander de l'aide.
 
 ## Voir aussi
 
@@ -856,4 +856,4 @@ S'il y a quelque chose que vous n'avez pas compris, n'hésitez pas à relire l'a
 - [`break`](/fr/docs/Web/JavaScript/Reference/Statements/break) et [`continue`](/fr/docs/Web/JavaScript/Reference/Statements/continue)
 - [<i lang="en">What's the Best Way to Write a JavaScript For Loop?</i> (en anglais)](https://www.impressivewebs.com/javascript-for-loop/) — quelques bonnes pratiques en matière de boucles
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}

@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Testing/Testing_strategies
 original_slug: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Introduction","Learn_web_development/Extensions/Testing/HTML_and_CSS", "Learn_web_development/Extensions/Testing")}}
 
 Cet article commence en donnant un aperçu sur le sujet des tests sur navigateurs (croisé), répondant aux questions telles que "qu'est-ce que le test en navigateur croisé ?", "Quels sont les problèmes les plus communs que vous allez rencontrer ?", et "quelles sont les principales approches pour tester, identifier, et fixer les problèmes ?"
 
@@ -195,7 +195,7 @@ Certaines grandes entreprises ont des labos d'appareils qui stockent une sélect
 Nous couvrirons chacune des autres options plus bas.
 
 > [!NOTE]
-> Certains efforts ont été effectué afin de créer des labos d'appareils accessibles au public — voir [Open Device Labs](https://opendevicelab.com/).
+> Certains efforts ont été effectué afin de créer des labos d'appareils accessibles au public — voir [Open Device Labs <sup>(angl.)</sup>](https://www.smashingmagazine.com/2016/11/worlds-best-open-device-labs/).
 
 > [!NOTE]
 > Nous devons aussi prendre en considération l'accessibilité — il y a plusieurs outils utiles que vous pouvez installer sur votre machine afin de faciliter les tests d'accessibilité, mais nous les couvrirons dans l'article Gestion des problèmes communs d'accessibilité, plus tard dans le cours.
@@ -307,4 +307,4 @@ Après avoir lu cet article vous devriez maintenant avoir une bonne idée de ce 
 
 La prochaine fois nous tournerons notre attention sur les problèmes concrets de votre code que vos tests peuvent révéler, en commençant avec le HTML et le CSS.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Introduction","Learn_web_development/Extensions/Testing/HTML_and_CSS", "Learn_web_development/Extensions/Testing")}}

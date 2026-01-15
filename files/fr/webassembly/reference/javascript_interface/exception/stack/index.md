@@ -6,9 +6,9 @@ original_slug: WebAssembly/JavaScript_interface/Exception/stack
 
 {{WebAssemblySidebar}}
 
-La propriété en lecture seule **`stack`**, rattachée à une instance d'[`Exception`](/fr/docs/WebAssembly/JavaScript_interface/Exception) _peut_ contenir une trace de pile d'appels pour une exception levée par du code WebAssembly.
+La propriété en lecture seule **`stack`**, rattachée à une instance d'[`Exception`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Exception) _peut_ contenir une trace de pile d'appels pour une exception levée par du code WebAssembly.
 
-Par défaut, les exceptions levées par du code WebAssembly n'incluent pas la pile d'appels. Si le code WebAssembly doit fournir une pile d'appels, il doit appeler une fonction JavaScript pour créer l'exception et passer le paramètre `options.traceStack=true` au [constructeur](/fr/docs/WebAssembly/JavaScript_interface/Exception/Exception). La machine virtuelle peut ensuite attacher la pile d'appels à l'exception lorsqu'elle est levée.
+Par défaut, les exceptions levées par du code WebAssembly n'incluent pas la pile d'appels. Si le code WebAssembly doit fournir une pile d'appels, il doit appeler une fonction JavaScript pour créer l'exception et passer le paramètre `options.traceStack=true` au [constructeur](/fr/docs/WebAssembly/Reference/JavaScript_interface/Exception/Exception). La machine virtuelle peut ensuite attacher la pile d'appels à l'exception lorsqu'elle est levée.
 
 > [!NOTE]
 > Les traces de pile d'appels ne sont pas envoyées par défaut depuis du code WebAssembly afin d'améliorer les performances. La possibilité d'ajouter les traces de pile d'appels à ces exceptions est un outil pour le développement, il ne s'agit pas d'une pratique recommandée plus largement.
@@ -94,5 +94,5 @@ En passant `{traceStack: true}`, on indique à la machine virtuelle WebAssembly 
 ## Voir aussi
 
 - [Aperçu général de WebAssembly](/fr/docs/WebAssembly)
-- [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [Concepts WebAssembly](/fr/docs/WebAssembly/Guides/Concepts)
+- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Guides/Using_the_JavaScript_API)

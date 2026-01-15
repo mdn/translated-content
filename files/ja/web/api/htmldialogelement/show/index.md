@@ -1,8 +1,9 @@
 ---
 title: "HTMLDialogElement: show() メソッド"
+short-title: show()
 slug: Web/API/HTMLDialogElement/show
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 7cd51a73ad94df604db79ccacbbe0513d0967650
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -23,64 +24,67 @@ show()
 
 なし ({{jsxref("undefined")}})。
 
+### 例外
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : ダイアログが既に開いておりモーダルである場合（つまり、すでに {{domxref("HTMLDialogElement.showModal()")}} で開かれている場合）、例外が発生します。
+
 ## 例
 
 次の例は単純なボタンで、クリックするとフォームを含むダイアログ ({{htmlelement("dialog")}}) を `show()` メソッドで開きます。ここから、_Cancel_ ボタンをクリックしてダイアログを閉じたり（{{domxref("HTMLDialogElement.close()")}} メソッドで）、submit ボタンでフォームを送信したりすることができます。
 
 ```html
-<!-- Simple pop-up dialog box, containing a form -->
+<!-- フォームを含む単純なポップアップダイアログボックス -->
 <dialog id="favDialog">
   <form method="dialog">
     <section>
       <p>
-        <label for="favAnimal">Favorite animal:</label>
+        <label for="favAnimal">好きな動物:</label>
         <select id="favAnimal" name="favAnimal">
           <option></option>
-          <option>Brine shrimp</option>
-          <option>Red panda</option>
-          <option>Spider monkey</option>
+          <option>ブラインシュリンプ</option>
+          <option>レッサーパンダ</option>
+          <option>クモザル</option>
         </select>
       </p>
     </section>
     <menu>
-      <button id="cancel" type="reset">Cancel</button>
-      <button type="submit">Confirm</button>
+      <button id="cancel" type="reset">キャンセル</button>
+      <button type="submit">確認</button>
     </menu>
   </form>
 </dialog>
 
 <menu>
-  <button id="updateDetails">Update details</button>
+  <button id="updateDetails">詳細を更新</button>
 </menu>
+```
 
-<script>
-  (() => {
-    const updateButton = document.getElementById("updateDetails");
-    const cancelButton = document.getElementById("cancel");
-    const dialog = document.getElementById("favDialog");
-    dialog.returnValue = "favAnimal";
+```js
+const updateButton = document.getElementById("updateDetails");
+const cancelButton = document.getElementById("cancel");
+const dialog = document.getElementById("favDialog");
+dialog.returnValue = "favAnimal";
 
-    function openCheck(dialog) {
-      if (dialog.open) {
-        console.log("Dialog open");
-      } else {
-        console.log("Dialog closed");
-      }
-    }
+function openCheck(dialog) {
+  if (dialog.open) {
+    console.log("Dialog open");
+  } else {
+    console.log("Dialog closed");
+  }
+}
 
-    // Update button opens a modeless dialog
-    updateButton.addEventListener("click", () => {
-      dialog.show();
-      openCheck(dialog);
-    });
+// 更新ボタンでモーダルダイアログを開く
+updateButton.addEventListener("click", () => {
+  dialog.show();
+  openCheck(dialog);
+});
 
-    // Form cancel button closes the dialog box
-    cancelButton.addEventListener("click", () => {
-      dialog.close("animalNotChosen");
-      openCheck(dialog);
-    });
-  })();
-</script>
+// フォームのキャンセルボタンでダイアログボックスを閉じる
+cancelButton.addEventListener("click", () => {
+  dialog.close("animalNotChosen");
+  openCheck(dialog);
+});
 ```
 
 ## 仕様書

@@ -1,11 +1,10 @@
 ---
 title: ネットワークリクエストを JavaScript で作成
+short-title: ネットワークリクエスト
 slug: Learn_web_development/Core/Scripting/Network_requests
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 0cc63ce1d7f43eb98746a908a9aba68ef6a36f7b
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/DOM_scripting","Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Core/Scripting")}}
 
@@ -58,7 +57,10 @@ l10n:
 
 ## フェッチ API
 
-それでは、フェッチ API の例をいくつか見てみましょう。
+この節では、フェッチ API の例をいくつか見てみましょう。
+
+下記にある例はある程度の複雑さを持ち、Fetch APIを実際のコンテキストでどのように使用するかを示しています。これまでフェッチを使用したことがない場合は、 Scrimba の [First fetch](https://scrimba.com/frontend-path-c0j/~0lu?via=mdn) <sup>
+[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> のインタラクティブチュートリアルから始めることをお勧めします。とても単純な導入手順を追って説明する手順を提供しています。
 
 ### テキストコンテンツの読み取り
 
@@ -184,7 +186,7 @@ fetch("products.json")
 - サーバーがエラー（[`404 Not Found`](/ja/docs/Web/HTTP/Reference/Status/404) のような値）を返さなかったかどうか調べます。もしエラーが発生した場合は、そのエラーを報告します。
 - レスポンスに対して {{domxref("Response.json","json()")}} を呼び出します。これにより、データは [JSON オブジェクト](/ja/docs/Learn_web_development/Core/Scripting/JSON)として取得されます。`response.json()` が返すプロミス値を返します。
 
-次に、返されたプロミスの `then()` メソッドに、関数を渡します。この関数には、レスポンスデータを JSON として含むオブジェクトが渡され、それを `initialize()` 関数に渡します。この関数は、ユーザーインターフェイスにすべての製品を表示する処理を開始します。
+次に、返されたプロミスの `then()` メソッドに、関数を渡します。この関数には、レスポンスデータを JSON として含むオブジェクトが渡され、それを `initialize()` 関数に渡します。この `initialize()` は、ユーザーインターフェイスにすべての製品を表示する処理を開始します。
 
 エラーを処理するために、連鎖の最後に `.catch()` ブロックを連鎖させています。これは、何らかの理由でプロミスが失敗した場合に実行されます。その中には、引数として渡される関数、 `err` オブジェクトが含まれています。この `err` オブジェクトを使用して、発生したエラーがどういうものかを伝えられます。ここでは単純な `console.error()` を使用して伝えています。
 
@@ -242,8 +244,8 @@ try {
 
 1. 新しい `XMLHttpRequest` オブジェクトを作成します。
 2. [`open()`](/ja/docs/Web/API/XMLHttpRequest/open) メソッドを呼び出して、初期化します。
-3. [`load`](/ja/docs/Web/API/XMLHttpRequest/load_event) イベントにイベントリスナーを追加します。このイベントは、レスポンスが正常に完了したときに発行されます。リスナーでは、データを指定して `initialize()` を呼び出します。
-4. [`error`](/ja/docs/Web/API/XMLHttpRequest/error_event) イベントにイベントリスナーを追加し、リクエストがエラーになったときに発行されるようにします。
+3. [`load`](/ja/docs/Web/API/XMLHttpRequestEventTarget/load_event) イベントにイベントリスナーを追加します。このイベントは、レスポンスが正常に完了したときに発行されます。リスナーでは、データを指定して `initialize()` を呼び出します。
+4. [`error`](/ja/docs/Web/API/XMLHttpRequestEventTarget/error_event) イベントにイベントリスナーを追加し、リクエストがエラーになったときに発行されるようにします。
 5. リクエストを送信します。
 
 また、 `open()` や `send()` で発生したエラーを処理するために、全体を [try...catch](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) ブロックで囲む必要があります。

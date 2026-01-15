@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
 ---
 
-{{GlossarySidebar}}
-
 **无障碍描述**（Accessible Description）是可以提供额外的信息给辅助技术，以帮助用户理解该元素及其上下文的用户界面元素的描述。它是与 HTML 或 SVG 元素相关联的文本描述，可以为辅助技术提供元素除{{glossary("accessible name", "无障碍名称")}}之外的描述内容。这对于依赖于像是{{glossary("Screen_reader", "屏幕阅读器")}}这样的辅助技术的用户而言尤其重要。元素的无障碍描述是{{glossary("accessibility tree", "无障碍树")}}的一部分。
 
 例如，{{htmlelement("table")}} 的无障碍描述是其首个 {{htmlelement("caption")}} 的内容。在一个复杂的数据表中，一两句描述表格的内容就可以为表格提供一段描述信息。这也可以是表格前后（视觉上以及源代码中的顺序）的正文段落。如果在源代码中不是这个顺序，或者想要为此特定建立一个关联，就可以使用 [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) 属性来关联表格及其描述文本。

@@ -7,7 +7,8 @@ slug: Web/API/HTMLTableRowElement/insertCell
 
 La méthode **`HTMLTableRowElement.insertCell()`** insère une nouvelle cellule ({{HtmlElement("td")}}) dans une ligne de tableau ({{HtmlElement("tr")}}) et renvoie une référence sur cette cellule.
 
-> **Note :** `insertCell()` insère la cellule directement dans la ligne. La cellule n'a pas besoin d'être ajoutée séparément comme cela serait le cas si {{domxref("Document.createElement()")}} avait été utilisé pour créer le nouvel élément `<td>`.
+> [!NOTE]
+> `insertCell()` insère la cellule directement dans la ligne. La cellule n'a pas besoin d'être ajoutée séparément comme cela serait le cas si {{domxref("Document.createElement()")}} avait été utilisé pour créer le nouvel élément `<td>`.
 
 ## Syntaxe
 

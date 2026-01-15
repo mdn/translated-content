@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Loops
 original_slug: Learn/JavaScript/Building_blocks/Looping_code
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals", "Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals", "Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}
 
 다수의 기본적인 계산에서부터 완료해야 할 비슷한 작업들을 가지고 있는 상황들에 대해서까지, 프로그래밍 언어는 반복적인 작업을 빠르게 완료하는 데 대단히 유용합니다. 여기서 우리는 그러한 필요를 다루는 JavaScript에서 이용 가능한 반복문 구조를 살펴볼 것입니다.
 
@@ -258,7 +258,8 @@ for (let i = 0; i < cats.length; i++) {
 > [!NOTE]
 > 여러분은 이 [예제 코드를 Github](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html)에서 또한 찾아볼 수 있습니다 (또한 [실제로 작동하는 모습도 볼 수 있습니다](https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html)).
 
-> **경고:** **중요**: 모든 반복문과 마찬가지로 — for 문에서, 초기화식(initializer)이 결국 조건이 true가 아닌 지점에 닿도록, 경우에 따라, 증가되거나 혹은 감소되게 해야만 합니다. 만약 그렇지 않다면, 반복문은 영원히 계속될 것이고, 브라우저가 강제로 멈추게 하거나, 브라우저가 멈출(crash) 것입니다. 이것은 **무한 루프**(infinite loop)라고 불립니다.
+> [!WARNING]
+> **중요**: 모든 반복문과 마찬가지로 — for 문에서, 초기화식(initializer)이 결국 조건이 true가 아닌 지점에 닿도록, 경우에 따라, 증가되거나 혹은 감소되게 해야만 합니다. 만약 그렇지 않다면, 반복문은 영원히 계속될 것이고, 브라우저가 강제로 멈추게 하거나, 브라우저가 멈출(crash) 것입니다. 이것은 **무한 루프**(infinite loop)라고 불립니다.
 
 ## break로 반복문 종료하기
 
@@ -510,7 +511,8 @@ do {
 > [!NOTE]
 > 다시 말하지만, 이것은 예상한 바와 같이 똑같이 동작합니다 — 한 번 봐 보세요 [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (또한 [전체 소스 코드](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html)도 보세요).
 
-> **경고:** **중요**: 모든 반복문과 마찬가지로 — while과 do...while문에서, 조건이 결국 false가 되도록, 경우에 따라, 초기화식이 증가되거나 감소되게 해야만 합니다.만약 그렇지 않다면, 반복문은 영원히 계속될 것이고, 브라우저가 강제로 멈추게 하거나, 브라우저가 멈출(crash) 것입니다. 이것은 **무한 루프**(infinite loop)라고 불립니다.
+> [!WARNING]
+> **중요**: 모든 반복문과 마찬가지로 — while과 do...while문에서, 조건이 결국 false가 되도록, 경우에 따라, 초기화식이 증가되거나 감소되게 해야만 합니다.만약 그렇지 않다면, 반복문은 영원히 계속될 것이고, 브라우저가 강제로 멈추게 하거나, 브라우저가 멈출(crash) 것입니다. 이것은 **무한 루프**(infinite loop)라고 불립니다.
 
 ## 직접 해보기: 카운트 다운 시작!
 
@@ -885,4 +887,4 @@ do {
 - [break](/ko/docs/Web/JavaScript/Reference/Statements/break) 과 [continue](/ko/docs/Web/JavaScript/Reference/Statements/continue) 레퍼런스
 - <p class="entry-title"><a href="https://www.impressivewebs.com/javascript-for-loop/">JavaScript For 반복문을 작성하는 가장 좋은 방법이 무엇인가?</a> — 몇몇 고급 반복문 습관</p>
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}

@@ -52,7 +52,8 @@ input {
 - `name`
   - : 그룹과 연관지을 이름.
 
-    > **참고:** `<fieldset>`에 대한 설명은 자신이 포함한 첫 번째 {{htmlelement("legend")}} 요소가 담당합니다.
+    > [!NOTE]
+    > `<fieldset>`에 대한 설명은 자신이 포함한 첫 번째 {{htmlelement("legend")}} 요소가 담당합니다.
 
 ## CSS 스타일링
 

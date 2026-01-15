@@ -2,7 +2,7 @@
 title: WebAssembly コードの読み込みと実行
 slug: WebAssembly/Guides/Loading_and_running
 l10n:
-  sourceCommit: 3c13d9a0c239ed31ae861486393952bc03e0b5bd
+  sourceCommit: 0cc63ce1d7f43eb98746a908a9aba68ef6a36f7b
 ---
 
 JavaScript で WebAssembly を使用するには、まずコンパイル/インスタンス化の前にモジュールをメモリーにプルする必要があります。この記事では、WebAssembly バイトコードをフェッチするために使用できるさまざまなメカニズムのリファレンスと、それをコンパイル/インスタンス化して実行する方法について説明します。
@@ -89,7 +89,7 @@ WebAssembly.instantiateStreaming(fetch("myModule.wasm"), importObject).then(
 1. {{domxref("XMLHttpRequest()")}} インスタンスを生成して、{{domxref("XMLHttpRequest.open","open()")}} メソッドでリクエストをオープン、リクエストメソッドを `GET` に設定し、フェッチするためのパスを宣言します。
 2. キーは {{domxref("XMLHttpRequest.responseType","responseType")}} を使用してレスポンスタイプを `'arraybuffer'` にすることです。
 3. 次に {{domxref("XMLHttpRequest.send()")}} を使用してリクエストします。
-4. そのあと、ダウンロードが終了したときに {{domxref("XMLHttpRequest.load_event", "load")}} のイベントハンドラーから関数を実行します。この関数内で {{domxref("XMLHttpRequest.response", "response")}} プロパティから array buffer を取得し、Fetch で行ったように [`WebAssembly.instantiate()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static) メソッドに渡します。
+4. そのあと、ダウンロードが終了したときに {{domxref("XMLHttpRequestEventTarget/load_event", "load")}} のイベントハンドラーから関数を実行します。この関数内で {{domxref("XMLHttpRequest.response", "response")}} プロパティから array buffer を取得し、Fetch で行ったように [`WebAssembly.instantiate()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static) メソッドに渡します。
 
 最終的なコードは以下のようになります。
 

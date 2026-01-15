@@ -60,7 +60,8 @@ new Intl.DateTimeFormat(locales, options);
         - "`medium`"
         - "`short`"
 
-        > **Note :** `dateStyle` peut être utilisée avec `timeStyle`, mais pas avec les autres options (comme `weekday`, `hour`, `month`, etc.).
+        > [!NOTE]
+        > `dateStyle` peut être utilisée avec `timeStyle`, mais pas avec les autres options (comme `weekday`, `hour`, `month`, etc.).
 
     - `timeStyle`
       - : Le style de formatage des heures à utiliser avec `format()`. Les valeurs possibles sont&nbsp;:
@@ -69,7 +70,8 @@ new Intl.DateTimeFormat(locales, options);
         - "`medium`"
         - "`short`"
 
-        > **Note :** `timeStyle` peut être utilisée avec `dateStyle`, mais pas avec les autres options (comme `weekday`, `hour`, `month`, etc.).
+        > [!NOTE]
+        > `timeStyle` peut être utilisée avec `dateStyle`, mais pas avec les autres options (comme `weekday`, `hour`, `month`, etc.).
 
     - `calendar`
       - : Le calendrier à utiliser. Les valeurs possibles sont&nbsp;: "`buddhist`", "`chinese`", " `coptic`", "`ethiopia`", "`ethiopic`", "`gregory`", "`hebrew`", "`indian`", "`islamic`", "`iso8601`", "`japanese`", "`persian`", "`roc`".

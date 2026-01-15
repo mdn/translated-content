@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Overflow
 original_slug: Learn/CSS/Building_blocks/Overflowing_content
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_different_text_directions", "Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics")}}
 
 이번 수업에서는 CSS 의 또 다른 중요한 개념인 — **overflow** 를 살펴봅니다. Overflow 는 박스 안에 편안하게 담기에는 너무 많은 내용이 있을 때 발생합니다. 이 안내서에서는 내용과 관리 방법에 대해 설명합니다.
 
@@ -88,7 +88,8 @@ overflow 가 발생했을 때, CSS 가 기본적으로 어떻게 동작하는지
 
 `scroll` 과 마찬가지로 스크롤 막대를 유발할 내용이 충분한 지 여부에 따라 스크롤 크기에 스크롤 막대가 나타납니다.
 
-> **참고:** `overflow` 속성을 사용하여 두 개의 값을 전달하여 x 와 y 스크롤을 지정할 수 있습니다. 두 개의 키워드가 지정되면, 첫 번째 키워드는 `overflow-x` 에 적용되고 두 번째 키워드는 `overflow-y` 에 적용됩니다. 그렇지 않으면 `overflow-x` 및 `overflow-y` 가 모두 같은 값으로 설정됩니다. 예를 들어, `overflow: scroll hidden` 은 `overflow-x` 를 `scroll` 로, `overflow-y` 를 `hidden` 으로 설정합니다.
+> [!NOTE]
+> `overflow` 속성을 사용하여 두 개의 값을 전달하여 x 와 y 스크롤을 지정할 수 있습니다. 두 개의 키워드가 지정되면, 첫 번째 키워드는 `overflow-x` 에 적용되고 두 번째 키워드는 `overflow-y` 에 적용됩니다. 그렇지 않으면 `overflow-x` 및 `overflow-y` 가 모두 같은 값으로 설정됩니다. 예를 들어, `overflow: scroll hidden` 은 `overflow-x` 를 `scroll` 로, `overflow-y` 를 `hidden` 으로 설정합니다.
 
 박스에 넣을 수 있는 것보다 많은 내용이 있는 경우 스크롤 막대만 표시하려면, `overflow: auto` 를 사용하십시오. 이 경우 스크롤 막대를 표시할 지 여부를 결정하는 것은 브라우저에게 맡겨져 있습니다. 데스크톱 브라우저는 일반적으로 overflow 를 유발할 수 있는 충분한 콘텐츠가 있는 경우에만 그렇게 합니다.
 
@@ -110,4 +111,4 @@ CSS 에는 **Block Formatting Context** (BFC) 의 개념이 있습니다. 이것
 
 이 짧은 수업은 overflow 개념을 소개했습니다; 이제 CSS 가 넘쳐나는 내용을 보이지 않게 만들려고 하지만 데이터가 손실될 수 있음을 이해합니다. overflow 가능성을 관리할 수 있으며 실수로 overflow 문제가 발생하지 않도록 작업을 테스트해야 합니다.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_different_text_directions", "Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics")}}

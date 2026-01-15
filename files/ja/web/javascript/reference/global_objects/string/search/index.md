@@ -1,15 +1,14 @@
 ---
 title: String.prototype.search()
+short-title: search()
 slug: Web/JavaScript/Reference/Global_Objects/String/search
 l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`search()`** は {{jsxref("String")}} 値のメソッドで、正規表現とこの文字列の一致する箇所を検索し、文字列内の最初に一致する箇所の位置を返します。
 
-{{InteractiveExample("JavaScript デモ: String.search()")}}
+{{InteractiveExample("JavaScript デモ: String.prototype.search()")}}
 
 ```js interactive-example
 const paragraph = "I think Ruth's dog is cuter than your dog!";
@@ -18,10 +17,10 @@ const paragraph = "I think Ruth's dog is cuter than your dog!";
 const regex = /[^\w\s']/g;
 
 console.log(paragraph.search(regex));
-// Expected output: 41
+// 予想される結果: 41
 
 console.log(paragraph[paragraph.search(regex)]);
-// Expected output: "!"
+// 予想される結果: "!"
 ```
 
 ## 構文
@@ -43,7 +42,7 @@ search(regexp)
 
 ## 解説
 
-`String.prototype.search()` 自体の実装はとてもシンプルです。引数の文字列を最初の引数として `Symbol.search` メソッドを呼び出すだけです。実際の実装は [`RegExp.prototype[Symbol.search]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search) から来ています。
+`String.prototype.search()` の実装は、引数に対応する `Symbol.search` メソッドを、最初の引数として文字列を指定して呼び出すだけという、それ以上のことは何も行いません。実際の実装は [`RegExp.prototype[Symbol.search]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search) から来ています。
 
 `regexp` の `g` フラグは `search()` の結果には影響がなく、検索は常に正規表現の `lastIndex` が 0 であるかのように行われます。`search()` の動作についての詳しい情報は、[`RegExp.prototype[Symbol.search]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search) を参照してください。
 

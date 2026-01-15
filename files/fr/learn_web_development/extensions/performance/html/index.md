@@ -6,7 +6,7 @@ original_slug: Learn/Performance/HTML
 
 {{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/javascript_performance", "Learn/Performance/CSS", "Learn/Performance")}}
 
-HTML est par défaut rapide et accessible. Il est du devoir de toute personne développant des sites web et des applications de s'assurer que ces deux caractéristiques sont préservées lors de la création ou de la modification de code HTML. Des difficultés peuvent apparaître par exemple lorsque la taille de fichier d'un élément [`<video>`](/fr/docs/Web/HTML/Element/video) est trop importante, ou lorsqu'une page web n'est pas optimisée pour les appareils mobiles. Ce module a pour but de présenter les fonctionnalités clés de HTML qui sont liées aux performances, et qui peuvent améliorer drastiquement la qualité de vos pages web.
+HTML est par défaut rapide et accessible. Il est du devoir de toute personne développant des sites web et des applications de s'assurer que ces deux caractéristiques sont préservées lors de la création ou de la modification de code HTML. Des difficultés peuvent apparaître par exemple lorsque la taille de fichier d'un élément [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video) est trop importante, ou lorsqu'une page web n'est pas optimisée pour les appareils mobiles. Ce module a pour but de présenter les fonctionnalités clés de HTML qui sont liées aux performances, et qui peuvent améliorer drastiquement la qualité de vos pages web.
 
 <table class="standard-table">
   <tbody>
@@ -36,18 +36,18 @@ HTML est par défaut rapide et accessible. Il est du devoir de toute personne d�
 
 ## Éléments & attributs ayant un impact sur les performances
 
-- [L'élément `<picture>`](/fr/docs/Web/HTML/Element/picture)
-- [L'élément `<video>`](/fr/docs/Web/HTML/Element/video)
-- [L'élément `<source>`](/fr/docs/Web/HTML/Element/source)
-- [L'élément et l'attribut `<img> srcset`](/fr/docs/Web/HTML/Element/img#attributes)
-  - [Images adaptatives](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [L'élément `<picture>`](/fr/docs/Web/HTML/Reference/Elements/picture)
+- [L'élément `<video>`](/fr/docs/Web/HTML/Reference/Elements/video)
+- [L'élément `<source>`](/fr/docs/Web/HTML/Reference/Elements/source)
+- [L'élément et l'attribut `<img> srcset`](/fr/docs/Web/HTML/Reference/Elements/img#attributes)
+  - [Images adaptatives](/fr/docs/Web/HTML/Guides/Responsive_images)
 
-- [Préchargement du contenu avec `rel="preload"`](/fr/docs/Web/HTML/Attributes/rel/preload) - [(https://w3c.github.io/preload/ - en anglais](https://w3c.github.io/preload/))
+- [Préchargement du contenu avec `rel="preload"`](/fr/docs/Web/HTML/Reference/Attributes/rel/preload) - [(https://w3c.github.io/preload/ - en anglais](https://w3c.github.io/preload/))
 - Attributs `async` / `defer`
-- [L'élément `<iframe>`](/fr/docs/Web/HTML/Element/iframe)
-- [L'élément `<object>`](/fr/docs/Web/HTML/Element/object)
-- [L'élément `<script>`](/fr/docs/Web/HTML/Element/script)
-- [L'attribut `rel`](/fr/docs/Web/HTML/Attributes/rel)
+- [L'élément `<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe)
+- [L'élément `<object>`](/fr/docs/Web/HTML/Reference/Elements/object)
+- [L'élément `<script>`](/fr/docs/Web/HTML/Reference/Elements/script)
+- [L'attribut `rel`](/fr/docs/Web/HTML/Reference/Attributes/rel)
 
 ## Conclusion
 
@@ -55,10 +55,10 @@ HTML est par défaut rapide et accessible. Il est du devoir de toute personne d�
 
 ## Voir aussi
 
-- [L'élément `<picture>`](/fr/docs/Web/HTML/Element/picture)
-- [L'élément `<video>`](/fr/docs/Web/HTML/Element/video)
-- [L'élément `<source>`](/fr/docs/Web/HTML/Element/source)
-- [L'attribut `srcset` de l'élément `<img>`](/fr/docs/Web/HTML/Element/img#attributs)
-  - [Images adaptatives](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Préchargement du contenu avec `rel="preload"`](/fr/docs/Web/HTML/Attributes/rel/preload)
+- [L'élément `<picture>`](/fr/docs/Web/HTML/Reference/Elements/picture)
+- [L'élément `<video>`](/fr/docs/Web/HTML/Reference/Elements/video)
+- [L'élément `<source>`](/fr/docs/Web/HTML/Reference/Elements/source)
+- [L'attribut `srcset` de l'élément `<img>`](/fr/docs/Web/HTML/Reference/Elements/img#attributs)
+  - [Images adaptatives](/fr/docs/Web/HTML/Guides/Responsive_images)
+- [Préchargement du contenu avec `rel="preload"`](/fr/docs/Web/HTML/Reference/Attributes/rel/preload)
 - [(https://w3c.github.io/preload/ - en anglais](https://w3c.github.io/preload/))

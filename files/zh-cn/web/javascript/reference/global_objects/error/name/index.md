@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 6b728699f5f38f1070a94673b5e7afdb1102a941
 ---
 
-{{JSRef}}
-
 `Error.prototype` 的 **`name`** 数据属性是所有 {{jsxref("Error")}} 实例所共享的。它表示当前错误类型的名称。对于 `Error.prototype.name`，其初始值为 `"Error"`。像 {{jsxref("TypeError")}} 和 {{jsxref("SyntaxError")}} 这样的子类会提供它们自己的 `name` 属性。
 
 ## 值

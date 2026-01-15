@@ -48,7 +48,8 @@ second.onchange = function () {
 
 Pour l'exemple en entier, voir [Basic dedicated worder example](https://github.com/mdn/simple-web-worker) ([démonstration](https://mdn.github.io/simple-web-worker/)).
 
-> **Note :** `postMessage()` peut n'envoyer qu'un objet à la fois. Comme ci-dessus, si vous voulez envoyez plusieurs valeurs, vous pouvez utiliser un tableau.
+> [!NOTE]
+> `postMessage()` peut n'envoyer qu'un objet à la fois. Comme ci-dessus, si vous voulez envoyez plusieurs valeurs, vous pouvez utiliser un tableau.
 
 ### Exemple de transfert
 

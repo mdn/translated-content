@@ -196,14 +196,14 @@ l10n:
 - `imagesrcset`
   - : `rel="preload"` 와 `as="image"` 에 한하여, `imagesrcset` 특성은 `img` 요소에 사용되는 적절한 리소스를 해당 `srcset` 과 `sizes` 특성으로 preload 하도록 하는 [소스 세트 특성](https://html.spec.whatwg.org/multipage/images.html#srcset-attribute)입니다.
 - `integrity`
-  - : 인라인 메타데이터를 포함합니다. 브라우저에게 가져오도록 지시하려는 리소스(파일)의 Base64로 인코딩된 암호학적 해시입니다. 이를 이용해 브라우저는 가져온 리소스가 예기치 못한 조작 없이 전달되었는지 확인할 수 있습니다. [하위 리소스 무결성](/ko/docs/Web/Security/Subresource_Integrity)을 참고하십시오.
+  - : 인라인 메타데이터를 포함합니다. 브라우저에게 가져오도록 지시하려는 리소스(파일)의 Base64로 인코딩된 암호학적 해시입니다. 이를 이용해 브라우저는 가져온 리소스가 예기치 못한 조작 없이 전달되었는지 확인할 수 있습니다. [하위 리소스 무결성](/ko/docs/Web/Security/Defenses/Subresource_Integrity)을 참고하십시오.
 - `media`
-  - : 연결된 리소스를 적용할 미디어를 명시합니다. 값으로는 반드시 미디어 유형이나 [미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries)를 사용해야 합니다. `media` 특성은 사용자 에이전트가 현재 장치에 맞춰 최적의 스타일시트를 선택하도록 할 수 있으므로 주로 외부 스타일시트를 연결할 때 유용합니다.
+  - : 연결된 리소스를 적용할 미디어를 명시합니다. 값으로는 반드시 미디어 유형이나 [미디어 쿼리](/ko/docs/Web/CSS/Guides/Media_queries)를 사용해야 합니다. `media` 특성은 사용자 에이전트가 현재 장치에 맞춰 최적의 스타일시트를 선택하도록 할 수 있으므로 주로 외부 스타일시트를 연결할 때 유용합니다.
 
     > [!NOTE]
     >
-    > - HTML 4에서는 이 특성의 값으로 사용할 수 있는 `print`, `screen`, `aural`, `braille` 등과 같은 값을 공백으로 구분한 미디어 설명 문자열 목록, 예를 들어, 미디어 유형 및 그룹([media types and groups](/ko/docs/Web/CSS/@media))일 수 있습니다.HTML5에서는 이를 확장하여 HTML 4에서 허용되는 값 외에 어떤 유형의 [미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries)든 사용할 수 있습니다.
-    > - [CSS3 Media Queries](/ko/docs/Web/CSS/CSS_media_queries)를 지원하지 않는 브라우저는 이를 타당한 링크로 인식하지 않을 수 있으므로 HTML 4에 정의되어 있는 제한된 media query의 집합을 이용한 폴백(fallback) 링크를 설정하는 것을 잊지 말기 바랍니다.
+    > - HTML 4에서는 이 특성의 값으로 사용할 수 있는 `print`, `screen`, `aural`, `braille` 등과 같은 값을 공백으로 구분한 미디어 설명 문자열 목록, 예를 들어, 미디어 유형 및 그룹([media types and groups](/ko/docs/Web/CSS/Reference/At-rules/@media))일 수 있습니다.HTML5에서는 이를 확장하여 HTML 4에서 허용되는 값 외에 어떤 유형의 [미디어 쿼리](/ko/docs/Web/CSS/Guides/Media_queries)든 사용할 수 있습니다.
+    > - [CSS3 Media Queries](/ko/docs/Web/CSS/Guides/Media_queries)를 지원하지 않는 브라우저는 이를 타당한 링크로 인식하지 않을 수 있으므로 HTML 4에 정의되어 있는 제한된 media query의 집합을 이용한 폴백(fallback) 링크를 설정하는 것을 잊지 말기 바랍니다.
 
 - `referrerpolicy`
   - : 리소스를 가져올 때 사용할 레퍼러를 나타내는 문자열입니다.
@@ -257,7 +257,8 @@ l10n:
     따라서 이 특성은 `rel` 특성의 값과 비교했을 때 반대되는 관계를 정의합니다.
     `rev` 특성의 [연결 유형 값](/ko/docs/Web/HTML/Reference/Attributes/rel)은 [`rel`](#rel)에서 사용 가능한 값들과 유사합니다.
 
-    > **참고:** `rev`를 사용하는 대신, 반대되는 [연결 유형 값](/ko/docs/Web/HTML/Reference/Attributes/rel)을 가지는 [`rel`](#rel) 특성을 사용하십시오.
+    > [!NOTE]
+    > `rev`를 사용하는 대신, 반대되는 [연결 유형 값](/ko/docs/Web/HTML/Reference/Attributes/rel)을 가지는 [`rel`](#rel) 특성을 사용하십시오.
     > 예를 들어, `made`의 역방향 링크를 설정하려면 `author`를 명시해야 합니다. 또한 이 특성은 "리비전(revision)"의 축약어가 아니며, 버전 번호와 함께 사용되어서는 안됩니다. 많은 사이트에서 이런 식으로 오용하고 있습니다.
 
 ## 예제
@@ -344,7 +345,8 @@ l10n:
   onerror="sheetError()" />
 ```
 
-> **참고:** `load` 이벤트는 스타일시트를 포함한 불러온 모든 콘텐츠가 로드되고 분석된 뒤, style이 콘텐츠에 적용 시작되기 직전에 발생합니다.
+> [!NOTE]
+> `load` 이벤트는 스타일시트를 포함한 불러온 모든 콘텐츠가 로드되고 분석된 뒤, style이 콘텐츠에 적용 시작되기 직전에 발생합니다.
 
 ### Preload 예제
 

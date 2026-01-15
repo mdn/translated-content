@@ -16,7 +16,7 @@ Vous pouvez récuperer un objet `Header` via les propriétés {{domxref("Request
 Un objet implémentant `Headers` peut directement être utilisé dans une structure {{jsxref("Statements/for...of", "for...of")}}, au lieu de{{domxref('Headers.entries()', 'entries()')}}: `for (var p of myHeaders)` est équivalent à `for (var p of myHeaders.entries())`.
 
 > [!NOTE]
-> Vous pouvez trouver plus d'informations à propos des Headers disponibles en lisant la page suivante : [HTTP headers](/fr/docs/Web/HTTP/Headers).
+> Vous pouvez trouver plus d'informations à propos des Headers disponibles en lisant la page suivante : [HTTP headers](/fr/docs/Web/HTTP/Reference/Headers).
 
 ## Constructeur
 
@@ -93,5 +93,5 @@ mesHeaders.get("Content-Type"); // doit retourner 'text/xml'
 ## Voir aussi
 
 - [API ServiceWorker](/fr/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/fr/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/fr/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/fr/docs/Web/HTTP)

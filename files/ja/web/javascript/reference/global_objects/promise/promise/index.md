@@ -1,15 +1,14 @@
 ---
 title: Promise() コンストラクター
+short-title: Promise()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/Promise
 l10n:
-  sourceCommit: 1edfd3d5da5e1a559adb5d3a6a56beaed14845d6
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Promise`** コンストラクターは、主にまだプロミスに対応していない関数をラップするために使用します。
 
-{{InteractiveExample("JavaScript デモ: Promise Constructor", "taller")}}
+{{InteractiveExample("JavaScript デモ: Promise() コンストラクター", "taller")}}
 
 ```js interactive-example
 const promise1 = new Promise((resolve, reject) => {
@@ -20,11 +19,11 @@ const promise1 = new Promise((resolve, reject) => {
 
 promise1.then((value) => {
   console.log(value);
-  // Expected output: "foo"
+  // 予想される結果: "foo"
 });
 
 console.log(promise1);
-// Expected output: [object Promise]
+// 予想される結果: [object Promise]
 ```
 
 ## 構文

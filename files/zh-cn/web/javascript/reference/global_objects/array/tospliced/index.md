@@ -3,8 +3,6 @@ title: Array.prototype.toSpliced()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toSpliced
 ---
 
-{{JSRef}}
-
 {{jsxref("Array")}} 实例的 **`toSpliced()`** 方法是 {{jsxref("Array/splice", "splice()")}} 方法的[复制](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)版本。它返回一个新数组，并在给定的索引处删除和/或替换了一些元素。
 
 ## 语法

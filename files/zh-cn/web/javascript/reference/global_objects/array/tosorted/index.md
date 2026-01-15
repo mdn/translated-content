@@ -3,8 +3,6 @@ title: Array.prototype.toSorted()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toSorted
 ---
 
-{{JSRef}}
-
 {{jsxref("Array")}} 实例的 **`toSorted()`** 方法是 {{jsxref("Array/sort", "sort()")}} 方法的[复制方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)版本。它返回一个新数组，其元素按升序排列。
 
 ## 语法

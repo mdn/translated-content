@@ -10,7 +10,8 @@ original_slug: Web/HTML/Global_attributes/itemscope
 
 모든 HTML 요소는 `itemscope` 특성을 가질 수 있습니다. `itemscope`를 가졌으나 연결된 `itemtype`이 없는 경우 반드시 연관된 `itemref`를 가져야 합니다.
 
-> **참고:** `itemtype` 특성을 더 알아보려면 <http://schema.org/Thing>을 방문하세요.
+> [!NOTE]
+> `itemtype` 특성을 더 알아보려면 <http://schema.org/Thing>을 방문하세요.
 
 ### 간단한 예제
 

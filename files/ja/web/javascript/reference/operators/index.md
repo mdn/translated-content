@@ -2,10 +2,8 @@
 title: 式と演算子
 slug: Web/JavaScript/Reference/Operators
 l10n:
-  sourceCommit: 8cf6d8c10adf3ce5370f8a3f180bec11112d4d44
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Operators")}}
 
 この節では、JavaScript 言語のすべての演算子、式、キーワードについて記述しています。
 
@@ -49,7 +47,7 @@ JavaScript での基本的なキーワードと一般的な式です。これら
 - {{jsxref("Operators/Property_accessors", "プロパティアクセサー", "", 1)}}
   - : プロパティアクセス演算子はオブジェクトのプロパティやメソッドへのアクセス (`object.property` や `object["property"]`) を提供します。
 - {{jsxref("Operators/Optional_chaining", "?.")}}
-  - : オプショナルチェーン演算子は、参照が [nullish](/ja/docs/Glossary/Nullish)（[`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) または [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined)）であった場合にエラーを発生させる代わりに `undefined` を返します。
+  - : オプショナルチェーン演算子は、参照が[ヌル値](/ja/docs/Glossary/Nullish)（[`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) または [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined)）であった場合にエラーを発生させる代わりに `undefined` を返します。
 - {{jsxref("Operators/new", "new")}}
   - : `new` 演算子はコンストラクターのインスタンスを作成します。
 - {{jsxref("Operators/new.target", "new.target")}}
@@ -57,7 +55,7 @@ JavaScript での基本的なキーワードと一般的な式です。これら
 - {{jsxref("Operators/import.meta", "import.meta")}}
   - : コンテキストに依存したメタデータを JavaScript モジュールへ公開するオブジェクトです。
 - {{jsxref("Operators/super", "super")}}
-  - : `super`キーワードは親オブジェクトのコンストラクタを呼び出したり、親オブジェクトのプロパティにアクセスしたりすることができます。
+  - : `super`キーワードは親オブジェクトのコンストラクターを呼び出したり、親オブジェクトのプロパティにアクセスしたりすることができます。
 - {{jsxref("Operators/import", "import()")}}
   - : `import()` 構文を使うと、モジュールを非同期かつ動的に、潜在的にモジュールでない環境に読み込むことができます。
 
@@ -176,7 +174,7 @@ JavaScript での基本的なキーワードと一般的な式です。これら
 - {{jsxref("Operators/Logical_OR", "||")}}
   - : 論理和 (OR) です。
 - {{jsxref("Operators/Nullish_coalescing", "??")}}
-  - : Null 合体演算子です。
+  - : ヌル値合体演算子です。
 
 ### 条件（三項）演算子
 
@@ -185,7 +183,7 @@ JavaScript での基本的なキーワードと一般的な式です。これら
 
 ### 代入演算子
 
-代入演算子は、右辺のオペランドに基づいて、値を左辺のオペランドに代入します。
+代入演算子は、右オペランドに基づいて、値を左オペランドに代入します。
 
 - {{jsxref("Operators/Assignment", "=")}}
   - : 代入演算子です。
@@ -218,7 +216,7 @@ JavaScript での基本的なキーワードと一般的な式です。これら
 - {{jsxref("Operators/Logical_OR_assignment", "||=")}}
   - : 論理和代入です。
 - {{jsxref("Operators/Nullish_coalescing_assignment", "??=")}}
-  - : 論理 Null 合体代入です。
+  - : 論理ヌル値合体代入です。
 - [`[a, b] = arr`, `{ a, b } = obj`](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)
   - : 構造分解は、配列やオブジェクトのプロパティを、配列やオブジェクトリテラルに似た構文を使用して変数に代入します。
 

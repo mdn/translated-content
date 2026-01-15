@@ -1,21 +1,30 @@
 ---
-title: Window.focus()
+title: "Window : méthode focus()"
+short-title: focus()
 slug: Web/API/Window/focus
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef}}
 
-## Résumé
-
-Demande la mise au premier plan de la fenêtre. Cet appel peut échouer en fonction des réglages utilisateurs, et ne garantit pas que la fenêtre sera au-dessus des autres au retour de cette méthode.
+Demande à placer la fenêtre au premier plan. Cette opération peut échouer selon les paramètres utilisateur et la fenêtre n'est pas garantie d'être au premier plan avant la fin de l'exécution de cette méthode.
 
 ## Syntaxe
 
-```js
-window.focus();
+```js-nolint
+focus()
 ```
 
-## Exemple
+### Paramètres
+
+Aucun.
+
+### Valeur de retour
+
+Aucune ({{jsxref("undefined")}}).
+
+## Exemples
 
 ```js
 if (clicked) {
@@ -26,3 +35,7 @@ if (clicked) {
 ## Spécifications
 
 {{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}

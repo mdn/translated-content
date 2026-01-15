@@ -1,13 +1,12 @@
 ---
 title: Object.fromEntries()
+short-title: fromEntries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`Object.fromEntries()`** 静的メソッドは、キーと値の組み合わせのリストをオブジェクトに変換します。
+**`Object.fromEntries()`** は静的メソッドで、キーと値の組み合わせのリストをオブジェクトに変換します。
 
 {{InteractiveExample("JavaScript デモ: Object.fromEntries()")}}
 
@@ -20,7 +19,7 @@ const entries = new Map([
 const obj = Object.fromEntries(entries);
 
 console.log(obj);
-// Expected output: Object { foo: "bar", baz: 42 }
+// 予想される結果: Object { foo: "bar", baz: 42 }
 ```
 
 ## 構文
@@ -108,6 +107,7 @@ console.log(object2);
 ## 関連情報
 
 - [`Object.fromEntries` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
+- [es-shims による `Object.fromEntries` のポリフィル](https://www.npmjs.com/package/object.fromentries)
 - {{jsxref("Object.entries()")}}
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.values()")}}

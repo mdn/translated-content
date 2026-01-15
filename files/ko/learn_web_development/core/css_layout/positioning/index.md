@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/CSS_layout/Positioning
 original_slug: Learn/CSS/CSS_layout/Positioning
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn_web_development/Core/CSS_layout")}}
 
 당신이 일반 문서 레이아웃 대열에서 요소를 끄집어 내어, 그것이 다르게 행동하게 만들수 있게 해주는 것이 위치잡기다. 예를 들어 상대 요소 위에 놓거나 브라우저 뷰 포트 내부의 동일한 위치를 항상 유지하게 해준다. 이 문서는 서로 다른 {{cssxref("position")}} 값을 설명하고, 그 걸 사용하는 방법에 대해서도 설명한다.
 
@@ -57,7 +57,8 @@ HTML 요소에 적용될 수 있는 여러 가지 유형의 위치잡기가 존�
 
 이제 저장하고 새로고침하면 두 번째 단락의 배경 색깔이 업데이트된 것을 제외하고 다른 차이가 없다는 것이 확인될 것입니다. 아무 문제없습니다. 앞에서 얘기했듯이 정적 위치잡기는 기본값으로 주어진 동작입니다!
 
-> **참고:** **주석**: 이 시점에 예제의 실제 구현 장면을 [`1_static-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html)에서 볼 수 있습니다.([소스 코드는 여기서 보세요](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html)).
+> [!NOTE]
+> **주석**: 이 시점에 예제의 실제 구현 장면을 [`1_static-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html)에서 볼 수 있습니다.([소스 코드는 여기서 보세요](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html)).
 
 ## 상대 위치잡기
 
@@ -221,14 +222,15 @@ span {
 > [!NOTE]
 > 당신이 필요하다면 요소의 크기를 재지정하기 위해 {{cssxref("top")}}, {{cssxref("bottom")}}과 {{cssxref("left")}}, {{cssxref("right")}}를 사용할 수 있습니다. 당신이 위치잡기한 요소에 `top: 0; bottom: 0; left: 0; right: 0;`과 `margin: 0;`를 지정한 뒤 어떻게 되냐 보십시요! 해보고 다시 원상태로 돌리십시요...
 
-> **참고:** **주석**: 그렇습니다. 여백이 위치잡기한 요소에 여전히 영향을 미칩니다. 그러나 마진 축소 영향은 업습니다.
+> [!NOTE]
+> **주석**: 그렇습니다. 여백이 위치잡기한 요소에 여전히 영향을 미칩니다. 그러나 마진 축소 영향은 업습니다.
 
 > [!NOTE]
 > 당신은 [`3_absolute-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html)에서 예제를 확인할 수 있습니다([소스 코드를 보세요](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/3_absolute-positioning.html)).
 
 ### 위치잡기 상황
 
-어떤 요소가 절대 위치잡기의 기준이 되는 "콘테이너 요소"입니까? 이것은 위치잡기 요소의 조상에 지정된 위치 속성의 여하에 따라 많이 달라집니다. (See [콘테이너 블록 식별하기](/ko/docs/Web/CSS/CSS_display/Containing_block#identifying_the_containing_block)).
+어떤 요소가 절대 위치잡기의 기준이 되는 "콘테이너 요소"입니까? 이것은 위치잡기 요소의 조상에 지정된 위치 속성의 여하에 따라 많이 달라집니다. (See [콘테이너 블록 식별하기](/ko/docs/Web/CSS/Guides/Display/Containing_block#identifying_the_containing_block)).
 
 조상 요소가 명시적으로 정의된 위치 속성을 가지고 있지 않으면 초깃값으로 모든 조상 요소에 정적 위치가 부여됩니다. 그에 따른 결과, 절대적 위치잡기한 요소는 **initial containing block**에 포함되게 됩니다. 초기 콘테이너 블록은 브라우저 뷰포트 크기의 용적을 가지며, 자신도 {{htmlelement("html")}} 요소를 포함하는 블록입니다. 간단히 말해서, 절대적 위치잡기한 요소는 {{htmlelement("html")}} 요소의 외부에 포함되어 초기 뷰포트 기준과 비례한 곳에 위치하게 됩니다.
 
@@ -683,7 +685,7 @@ body {
 
 기본적인 위치잡기를 가지고 놀이삼아 시험해 보니 재미있었을 것이다; 비록 이것이 완전체 레이아웃에 사용할 수 있는 방법은 아니지만, 여러분이 보았다시피 이것이 알맞은 용도로 사용될 수 있는 많은 작업들이 있다.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn_web_development/Core/CSS_layout")}}
 
 ## 참조 항목
 

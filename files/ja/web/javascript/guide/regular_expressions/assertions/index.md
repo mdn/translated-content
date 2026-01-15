@@ -2,29 +2,27 @@
 title: アサーション
 slug: Web/JavaScript/Guide/Regular_expressions/Assertions
 l10n:
-  sourceCommit: 2c762771070a207d410a963166adf32213bc3a45
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("JavaScript Guide")}}
 
 アサーションには、 行や単語の先頭・末尾を示す境界や、（先読み、後読み、条件式を含む）何らかの方法で照合が可能なことを示す、その他のパターンが含まれます。
 
-{{InteractiveExample("JavaScript デモ: RegExp Assertions", "taller")}}
+{{InteractiveExample("JavaScript デモ: 正規表現のアサーション", "taller")}}
 
 ```js interactive-example
 const text = "A quick fox";
 
 const regexpLastWord = /\w+$/;
 console.log(text.match(regexpLastWord));
-// Expected output: Array ["fox"]
+// 予想される結果: Array ["fox"]
 
 const regexpWords = /\b\w+\b/g;
 console.log(text.match(regexpWords));
-// Expected output: Array ["A", "quick", "fox"]
+// 予想される結果: Array ["A", "quick", "fox"]
 
 const regexpFoxQuality = /\w+(?= fox)/;
 console.log(text.match(regexpFoxQuality));
-// Expected output: Array ["quick"]
+// 予想される結果: Array ["quick"]
 ```
 
 ## 種類
@@ -226,8 +224,8 @@ console.log(fruitsStartsWithNotA); // [ 'Watermelon', 'Orange', 'Strawberry' ]
 const fruitsWithDescription = ["Red apple", "Orange orange", "Green Avocado"];
 
 // 単語の終わりに 'en' または 'ed' を含む記述を選択します。
-const enEdSelection = fruitsWithDescription.filter((descr) =>
-  /(en|ed)\b/.test(descr),
+const enEdSelection = fruitsWithDescription.filter((description) =>
+  /(?:en|ed)\b/.test(description),
 );
 
 console.log(enEdSelection); // [ 'Red apple', 'Green Avocado' ]

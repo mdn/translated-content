@@ -1,22 +1,27 @@
 ---
 title: String.prototype.fixed()
+short-title: fixed()
 slug: Web/JavaScript/Reference/Global_Objects/String/fixed
 l10n:
-  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{Deprecated_Header}}
 
-**`fixed()`** メソッドは、文字列を {{HTMLElement("tt")}} 要素に埋め込み (`<tt>str</tt>`)、文字列が固定ピッチフォントで表示されるような文字列を生成します。
+**`fixed()`** は {{jsxref("String")}} 値のメソッドで、この文字列を {{HTMLElement("tt")}} 要素に埋め込み (`<tt>str</tt>`)、この文字列が固定幅フォントで表示されるような文字列を生成します。
 
-> [!WARNING]
-> [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_ラッパーメソッド)はすべて非推奨となっており、互換性目的のみで標準化されています。代わりに [DOM API](/ja/docs/Web/API/Document_Object_Model) の [`document.createElement()`](/ja/docs/Web/API/Document/createElement) などを使用してください。
+> [!NOTE]
+> [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_ラッパーメソッド)はすべて非推奨となっており、互換性目的のみで標準化されています。 `fixed()` の場合、 `<tt>` 要素自体が HTML 仕様から除去され、使用できなくなりました。ウェブ開発者は、代わりに [CSS](/ja/docs/Web/CSS) プロパティを使用してください。
 
 ## 構文
 
 ```js-nolint
 fixed()
 ```
+
+### 引数
+
+なし。
 
 ### 返値
 
@@ -26,11 +31,27 @@ fixed()
 
 ### fixed() の使用
 
-下記の例は、 `fixed` メソッドを使用して文字列の表示方法を変更します。
+以下のコードは、 HTML 文字列を作成し、それを文書の本体に置き換えます。
 
 ```js
-const worldString = "世界のみなさん、こんにちは！";
-console.log(worldString.fixed()); // "<tt>世界のみなさん、こんにちは！</tt>"
+const contentString = "Hello, world";
+
+document.body.innerHTML = contentString.fixed();
+```
+
+これにより、次の HTML が生成されます。
+
+```html
+<tt>Hello, world</tt>
+```
+
+> [!WARNING]
+> このマークアップは、`tt` が有効な要素でなくなったため、不正です。
+
+`fixed()` を使用して HTML テキストを直接作成する代わりに、CSS を使用してフォントを操作してください。例えば、 {{domxref("HTMLElement/style", "element.style")}} 属性を使用して、 {{cssxref("font-family")}} を操作することができます。
+
+```js
+document.getElementById("yourElemId").style.fontFamily = "monospace";
 ```
 
 ## 仕様書
@@ -44,6 +65,6 @@ console.log(worldString.fixed()); // "<tt>世界のみなさん、こんにち�
 ## 関連情報
 
 - [`String.prototype.fixed` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.bold()")}}
-- {{jsxref("String.prototype.italics()")}}
-- {{jsxref("String.prototype.strike()")}}
+- [es-shims による `String.prototype.fixed` のポリフィル](https://www.npmjs.com/package/es-string-html-methods)
+- [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_ラッパーメソッド)
+- {{HTMLElement("tt")}}

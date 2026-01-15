@@ -2,10 +2,8 @@
 title: async function 式
 slug: Web/JavaScript/Reference/Operators/async_function
 l10n:
-  sourceCommit: 9a7e014bc1ee2ce53751b47adbe48d3180bc2d54
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Operators")}}
 
 **`async function`** キーワードは、式の中で非同期関数を定義するために使用できます。
 

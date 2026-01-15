@@ -3,8 +3,6 @@ title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
 ---
 
-{{JSRef}}
-
 **`String`** 对象用于表示和操作字符序列。
 
 ## 描述

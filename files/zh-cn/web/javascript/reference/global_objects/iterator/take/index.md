@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 2ce8f6f9d08cd6f10b77c4853ef5494c690b56b1
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 {{jsxref("Iterator")}} 实例的 **`take()`** 方法返回一个新的[迭代器辅助方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator#迭代器辅助方法)，该迭代器辅助方法生成此迭代器中给定数量的元素，然后终止。
 

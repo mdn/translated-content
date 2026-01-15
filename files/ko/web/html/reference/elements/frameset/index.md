@@ -10,7 +10,8 @@ original_slug: Web/HTML/Element/frameset
 
 `<frameset>`은 HTML element로써 {{HTMLElement("frame")}} element을 포함하고 사용된다.
 
-> **참고:**frame의 사용이 지금 {{HTMLElement("iframe")}}의 사용에 따라줄어드는 추세이기 때문에 , 이 element는 최근 웹사이트에서 잘 쓰이지 않는다.
+> [!NOTE]
+> frame의 사용이 지금 {{HTMLElement("iframe")}}의 사용에 따라줄어드는 추세이기 때문에 , 이 element는 최근 웹사이트에서 잘 쓰이지 않는다.
 
 ## 속성(=Attributes)
 

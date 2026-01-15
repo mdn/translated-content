@@ -12,7 +12,7 @@ slug: Web/API/Element
 _`Element` hérite des propriétés de son interface parente : [`Node`](/fr/docs/Web/API/Node) (et donc indirectement des propriétés du parent de celle-ci : [`EventTarget`](/fr/docs/Web/API/EventTarget))._
 
 - [`Element.assignedSlot`](/fr/docs/Web/API/Element/assignedSlot){{readonlyInline}}
-  - : Renvoie un objet [`HTMLSlotElement`](/fr/docs/Web/API/HTMLSlotElement) représentant l'emplacement ([`<slot>`](/fr/docs/Web/HTML/Element/slot)) dans lequel le nœud est inséré.
+  - : Renvoie un objet [`HTMLSlotElement`](/fr/docs/Web/API/HTMLSlotElement) représentant l'emplacement ([`<slot>`](/fr/docs/Web/HTML/Reference/Elements/slot)) dans lequel le nœud est inséré.
 - [`Element.attributes`](/fr/docs/Web/API/Element/attributes) {{readOnlyInline}}
   - : Renvoie un objet [`NamedNodeMap`](/fr/docs/Web/API/NamedNodeMap) contenant les attributs affectés de l'élément HTML correspondant.
 - [`Element.childElementCount`](/fr/docs/Web/API/Element/childElementCount) {{readonlyInline}}
@@ -298,7 +298,7 @@ _`Element` hérite des méthodes fournit par la classe parente [`Node`](/fr/docs
 On peut écouter ces évènements en utilisant la méthode `addEventListener()` ou en affectant un gestionnaire d'évènement à la propriété `onnomevenement` de cette interface.
 
 - [`cancel`](/fr/docs/Web/API/HTMLDialogElement/cancel_event)
-  - : Déclenché sur un élément [`<dialog>`](/fr/docs/Web/HTML/Element/dialog) lorsque la personne indique au navigateur le souhait de fermer la boîte de dialogue courante. Un navigateur pourra par exemple déclencher cet évènement lors d'un appui sur la touche
+  - : Déclenché sur un élément [`<dialog>`](/fr/docs/Web/HTML/Reference/Elements/dialog) lorsque la personne indique au navigateur le souhait de fermer la boîte de dialogue courante. Un navigateur pourra par exemple déclencher cet évènement lors d'un appui sur la touche
 
     <kbd>Echap</kbd>
 
@@ -311,7 +311,7 @@ On peut écouter ces évènements en utilisant la méthode `addEventListener()` 
 - [`select`](/fr/docs/Web/API/HTMLInputElement/select_event)
   - : Déclenché lors de la sélection de texte. Également disponible via la propriété [`onselect`](/fr/docs/Web/API/HTMLInputElement/select_event).
 - [`show`](/fr/docs/Web/API/Element/show_event)
-  - : Déclenché lorsqu'un évènement [`contextmenu`](/fr/docs/Web/API/Element/contextmenu_event) a été déclenché ou a bouillonné sur un élément qui dispose de l'attribut [`contextmenu`](/fr/docs/Web/HTML/Element/menu) attribute. {{deprecated_inline}} Également disponible via la propriété [`onshow`](/fr/docs/Web/API/GlobalEventHandlers/onshow).
+  - : Déclenché lorsqu'un évènement [`contextmenu`](/fr/docs/Web/API/Element/contextmenu_event) a été déclenché ou a bouillonné sur un élément qui dispose de l'attribut [`contextmenu`](/fr/docs/Web/HTML/Reference/Elements/menu) attribute. {{deprecated_inline}} Également disponible via la propriété [`onshow`](/fr/docs/Web/API/GlobalEventHandlers/onshow).
 - [`wheel`](/fr/docs/Web/API/Element/wheel_event)
   - : Déclenché lorsque l'utilisateur fait tourner la molette d'un appareil de pointage (généralement une souris). Également disponible via la propriété [`onwheel`](/fr/docs/Web/API/Element/wheel_event).
 

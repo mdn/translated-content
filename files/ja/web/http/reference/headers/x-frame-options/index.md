@@ -1,17 +1,15 @@
 ---
-title: X-Frame-Options
+title: X-Frame-Options ヘッダー
+short-title: X-Frame-Options
 slug: Web/HTTP/Reference/Headers/X-Frame-Options
-original_slug: Web/HTTP/Headers/X-Frame-Options
 l10n:
-  sourceCommit: 2b44e3e665ceb5f4336089695aa5f617b1baf33c
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-{{deprecated_header}}
+> [!NOTE]
+> このヘッダーで提供されるオプションよりも包括的な設定については、{{HTTPHeader("Content-Security-Policy")}} ヘッダーの {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} ディレクティブを参照してください。
 
-> [!WARNING]
-> このヘッダーの代わりに、 {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} ディレクティブを {{HTTPHeader("Content-Security-Policy")}} ヘッダーで使用してください。
-
-**`X-Frame-Options`** は [HTTP](/ja/docs/Web/HTTP) のレスポンスヘッダーで、ブラウザーがページを {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("embed")}}、{{HTMLElement("object")}} の中に表示することを許可するかどうかを示すために使用します。サイトはコンテンツが他のサイトに埋め込まれないよう保証することで、[クリックジャッキング](/ja/docs/Web/Security/Attacks#クリックジャッキング)攻撃を防ぐために使用することができます。
+HTTP の **`X-Frame-Options`** は {{Glossary("response header", "レスポンスヘッダー")}} で、ブラウザーがページを {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("embed")}}、{{HTMLElement("object")}} の中に表示することを許可するかどうかを示すために使用することができます。サイトはこれを使用して、コンテンツが他のサイトに埋め込まれないよう保証することで、[クリックジャッキング](/ja/docs/Web/Security/Attacks#クリックジャッキング)攻撃を防ぐことができます。
 
 セキュリティが強化されるのは、ユーザーが `X-Frame-Options` に対応したブラウザーを使用して文書にアクセスした場合のみです。
 
@@ -30,8 +28,6 @@ l10n:
 
 ## 構文
 
-`X-Frame-Options` には 2 つの有効なディレクティブがあります。
-
 ```http
 X-Frame-Options: DENY
 X-Frame-Options: SAMEORIGIN
@@ -39,19 +35,17 @@ X-Frame-Options: SAMEORIGIN
 
 ### ディレクティブ
 
-`DENY` を指定した場合は、フレームにページを他のサイトから読み込もうとした時だけでなく、同じサイトから読み込もうとした時にも失敗します。一方、 `SAMEORIGIN` を指定した場合は、フレームの中のページを含むサイトが、ページを提供しているサイトと同じである限り、フレーム内でページを利用することができます。
-
 - `DENY`
-  - : ページをフレーム内に表示することは、それを試みているサイトが何であろうとできません。
-- `SAMEORIGIN` {{deprecated_inline}}
-  - : ページは、すべての祖先フレームがページ自体と同じオリジンである場合にのみ表示できます。
+  - : ページは、どのサイトから試みられてもフレーム内で表示できません。他のサイトから読み込まれた場合だけでなく、同じサイトから読み込まれた場合でも、ブラウザーがページをフレーム内で読み込もうとする試みは失敗します。
+- `SAMEORIGIN`
+  - : ページは、そのフレームの祖先がすべてページ自体と同じオリジンである場合にのみ表示できます。ページをフレームで含むサイトが、ページを提供するサイトと同じである限り、フレーム内でページを使用することが可能です。
 - `ALLOW-FROM origin` {{deprecated_inline}}
   - : これは古いディレクティブです。このディレクティブを持つレスポンスヘッダーに遭遇した現行のブラウザーは、そのヘッダーを完全に無視します。 HTTP の {{HTTPHeader("Content-Security-Policy")}} ヘッダーには {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} ディレクティブがありますので、そちらを使用してください。
 
 ## 例
 
-> [!NOTE]
-> X-Frame-Options を {{HTMLElement("meta")}} 要素に設定しても（例えば、`<meta http-equiv="X-Frame-Options" content="deny">`）効果はありません。 `X-Frame-Options` は HTTP ヘッダーを通じて設定された場合のみ動作します。
+> [!WARNING]
+> X-Frame-Options を {{HTMLElement("meta")}} 要素に設定しても（例えば、`<meta http-equiv="X-Frame-Options" content="deny">`）効果はありません。 `X-Frame-Options` は以下の例で示すように、 HTTP ヘッダーを通じて設定された場合のみ動作します。
 
 ### Apache の設定
 
@@ -118,7 +112,8 @@ http-response set-header X-Frame-Options SAMEORIGIN
 `X-Frame-Options` ヘッダーを [helmet](https://helmetjs.github.io/) を使用して `SAMEORIGIN` に設定するには、サーバー設定に次のものを追加してください。
 
 ```js
-const helmet = require("helmet");
+import helmet from "helmet";
+
 const app = express();
 app.use(
   helmet({

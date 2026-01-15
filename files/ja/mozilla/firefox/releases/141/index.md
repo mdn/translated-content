@@ -1,9 +1,9 @@
 ---
 title: Firefox 141 for developers
-short-title: Firefox 141 (Stable)
+short-title: Firefox 141
 slug: Mozilla/Firefox/Releases/141
 l10n:
-  sourceCommit: bd4faec13d4e90c342bededd2378671311f186a0
+  sourceCommit: 36522b6e730a3517a0060106610ef00e79953044
 ---
 
 このページでは、開発者に影響する Firefox 141 の変更点をまとめています。
@@ -26,6 +26,7 @@ Firefox 141 は、米国時間 [2025 年 7 月 22 日](https://whattrainisitnow.
 - [`variants`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/variants) アクセサプロパティを {{jsxref("Intl.Locale")}} のインスタンスでサポートしました。
   このプロパティはロケールに関連づけられたバリアントを、ダッシュ記号 (`-`) で区切られた識別子の文字列で返します。
   これはロケールの文字列を手動で解析または変更することに代わる、言語識別子のバリアントサブタグを取得および設定する堅牢な手段を提供します ([Firefox bug 1970161](https://bugzil.la/1970161))。
+- {{jsxref("Statements/using", "using")}} および {{jsxref("Statements/await_using", "await using")}} 宣言、{{jsxref("DisposableStack")}}、{{jsxref("AsyncDisposableStack")}} および {{jsxref("SuppressedError")}} オブジェクト、{{jsxref("Symbol.dispose")}} および {{jsxref("Symbol.asyncDispose")}} ウェルノウンシンボルを含む、明示的な [リソース管理](/ja/docs/Web/JavaScript/Guide/Resource_management) API をサポートしました。これらの機能は、ファイルハンドルやストリームリーダーなどがスコープから外れたときにリソースの自動的なクリーンアップを確実に行うことで、リソースリークの削減やエラーハンドリングの簡素化につながります ([Firefox bug 1967744](https://bugzil.la/1967744))。
 
 ### HTTP
 
@@ -49,6 +50,7 @@ Firefox 141 は、米国時間 [2025 年 7 月 22 日](https://whattrainisitnow.
 
 #### 一般
 
+- 実験的な CDP (Chrome DevTools Protocol) の実装を Firefox から削除しました。合わせて、設定項目 `remote.active-protocols` のサポートも廃止しました。このトピックについて、詳しくは [Firefox Developer Experience](https://fxdx.dev/cdp-retirement-in-firefox/) で確認できます ([Firefox bug 1882096](https://bugzil.la/1882096))。
 - 一時的に提供した設定項目 `remote.system-access-check.enabled` を削除しました。この設定は、テストの実行中に Firefox の chrome スコープで WebDriver を使用するときのシステムアクセス確認を無効化するためには使用できなくなりました ([Firefox bug 1955007](https://bugzil.la/1955007))。
 
 #### WebDriver BiDi

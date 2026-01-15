@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 PHP（PHP：Hypertext Preprocessor 的递归缩写）是一个开源服务器端脚本语言，可被嵌入在 HTML 中，用以构建网络应用程序和动态网站。
 
 ## 示例

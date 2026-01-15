@@ -1,12 +1,9 @@
 ---
 title: ナビゲーションおよびリソースタイミング
 slug: Web/Performance/Guides/Navigation_and_resource_timings
-original_slug: Web/Performance/Navigation_and_resource_timings
 l10n:
-  sourceCommit: 83f30ecaaeb6227dc0d4551f71eb8be1cacb8e94
+  sourceCommit: 4a1d696e78d9aa0a3ca571cbc0aab9ba90258235
 ---
-
-{{QuickLinksWithSubPages("/ja/docs/Web/Performance")}}
 
 **ナビゲーションタイミング**は、ブラウザーによる文書ナビゲーションイベントを測定する指標です。**リソースタイミング**は、アプリケーションのリソースの読み込みに関する詳細なネットワークタイミングの測定値です。どちらも同じ読み取り専用のプロパティを提供しますが、ナビゲーションタイミングはメイン文書の時間を測定するのに対し、リソースタイミングはそのメイン文書内の呼び出されるすべての資産やリソース、およびリソースのリクエストされたリソースの時刻を提供します。
 
@@ -162,7 +159,7 @@ let time = window.performance.timing;
         {{domxref("PerformanceTiming.unloadEventEnd","unloadEventEnd")}}
       </td>
       <td>
-        <code><a href="/ja/docs/Web/API/Window/unload_event">unload</a></code>イベントハンドラーが完了したとき。前回の文書がない場合、または前回の文書やリダイレクト先の文書が同じオリジンでない場合、返される値は <code>0</code> です。
+        <code><a href="/ja/docs/Web/API/Window/unload_event">unload</a></code> イベントハンドラーが完了したとき。前回の文書がない場合、または前回の文書やリダイレクト先の文書が同じオリジンでない場合、返される値は <code>0</code> です。
       </td>
     </tr>
     <tr>
@@ -228,7 +225,7 @@ const tls = time.requestStart - time.secureConnectionStart;
 
 ### 最初のバイトまでの時間
 
-[最初のバイトまでの時間](/ja/docs/Glossary/Time_to_first_byte) は、 `performanceTiming` APIが利用可能な `navigationStart` （ナビゲーションの開始）から `responseStart` （レスポンスデータの最初のバイトを受信）までの時間です。
+[最初のバイトまでの時間](/ja/docs/Glossary/Time_to_first_byte) は、 `navigationStart` （ナビゲーションの開始）から `responseStart` （レスポンスデータの最初のバイトを受信）までの時間であり、 `performanceTiming` API で利用可能です。
 
 ```js
 const ttfb = time.responseStart - time.navigationStart;
@@ -268,7 +265,7 @@ const tls = time.requestStart - time.secureConnectionStart;
 
 ## パフォーマンス項目 API
 
-上記の一般的なパフォーマンスタイミングは非推奨ですが、完全に対応しています。{{domxref('PerformanceEntry', 'パフォーマンス項目 API')}} が登場し、ナビゲーションやリソースの読み込みプロセスに沿って時刻を指定したり計測したりすることができるようになりました。マークを作成することもできます。
+上記の一般的なパフォーマンスタイミングは非推奨ですが、完全に対応しています。[パフォーマンス項目 API](/ja/docs/Web/API/PerformanceEntry) が登場し、ナビゲーションやリソースの読み込みプロセスに沿って時刻を指定したり計測したりすることができるようになりました。マークを作成することもできます。
 
 ```js
 performance.getEntriesByType("navigation").forEach((navigation) => {
@@ -324,7 +321,7 @@ const timing = performance.getEntriesByType("navigation")[0];
 const protocol = timing.nextHopProtocol;
 ```
 
-リソースをフェッチするために使用したネットワークプロトコルを返します。この場合は `http/2` のために `h2` を返します。
+リソースを読み取るために使用したネットワークプロトコルを返します。この場合は `http/2` のために `h2` を返します。
 
 ### 圧縮
 

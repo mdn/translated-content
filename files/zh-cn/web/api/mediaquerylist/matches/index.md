@@ -15,7 +15,7 @@ slug: Web/API/MediaQueryList/matches
 
 ## 示例
 
-该示例通过使用 [`orientation`](/zh-CN/docs/Web/CSS/@media/orientation) 媒体查询特性来创建一个媒体查询，以检测视口横纵方向的变化：
+该示例通过使用 [`orientation`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/orientation) 媒体查询特性来创建一个媒体查询，以检测视口横纵方向的变化：
 
 ```js
 function addMQListener(mq, callback) {
@@ -45,8 +45,8 @@ addMQListener(window.matchMedia("(orientation:landscape)"), (event) => {
 
 ## 参见
 
-- [媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [在代码中使用媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+- [媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using)
+- [在代码中使用媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Testing)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

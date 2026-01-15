@@ -2307,17 +2307,17 @@
       "javierpolit"
     ]
   },
-  "Learn_web_development/Core/Structuring_content/Mozilla_splash_page": {
-    "modified": "2020-07-16T22:25:06.606Z",
-    "contributors": [
-      "Loba25",
-      "henardemiguel"
-    ]
-  },
   "Learn_web_development/Core/Structuring_content/Planet_data_table": {
     "modified": "2020-07-16T22:25:29.339Z",
     "contributors": [
       "IXTRUnai"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/Splash_page": {
+    "modified": "2020-07-16T22:25:06.606Z",
+    "contributors": [
+      "Loba25",
+      "henardemiguel"
     ]
   },
   "Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content": {

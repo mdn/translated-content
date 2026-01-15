@@ -3,7 +3,8 @@ title: Ajax 시작하기
 slug: conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e
 ---
 
-> **경고:** **중요**: 해당 문서는 2018/07/31 (원문 : 2018/04/23) 에 마지막으로 번역되었습니다. 원문의 변경이 잦아 내용이 다를 수 있으니 참고하십시오.
+> [!WARNING]
+> **중요**: 해당 문서는 2018/07/31 (원문 : 2018/04/23) 에 마지막으로 번역되었습니다. 원문의 변경이 잦아 내용이 다를 수 있으니 참고하십시오.
 
 본 문서는 AJAX의 기본을 익힐수 있도록 해주며, 두 가지 간단한 훈련용 예제를 제공합니다.
 
@@ -167,11 +168,14 @@ if (httpRequest.status === 200) {
 - 브라우저는 서버로 요구를 보내고 `onreadystatechange` 에 설정된 `alertContents()` 함수가 수행됩니다;
 - `alertContents()` 함수는 서버로부터 응답을 받았는지와 정상적으로 처리된 응답인지를 검사하여 정상적인 경우 `test.html` 파일의 내용을 파라미터로 `alert()` 함수를 호출합니다.
 
-> **참고:** **주의**: Internet Explorer에서 정적 HTML 파일이 아닌 XML 파일을 받기 위한 request를 보내려면 응답 헤더를 반드시 설정해주어야 합니다. 헤더에 `Content-Type: application/xml`을 설정해주지 않으면 IE는 XML 요소에 접근하고자 할 때 "Object Expected" 예외에러를 발생시킵니다.
+> [!NOTE]
+> **주의**: Internet Explorer에서 정적 HTML 파일이 아닌 XML 파일을 받기 위한 request를 보내려면 응답 헤더를 반드시 설정해주어야 합니다. 헤더에 `Content-Type: application/xml`을 설정해주지 않으면 IE는 XML 요소에 접근하고자 할 때 "Object Expected" 예외에러를 발생시킵니다.
 
-> **참고:** **주의 2**: 헤더에 `Cache-Control: no-cache` 를 설정 하지 않는다면, 브라우저는 응답을 캐싱하고 다시 요청하지 않을 수 있습니다. 이는 디버깅하기 매우 어려워 질 수 있음을 기억하십시오. 또는 GET 파라미터로 timestamp(시간정보)나 난수를 추가하면 캐싱을 방지할 수 있습니다. ([캐싱 우회](/ko/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#bypassing_the_cache)를 참고하세요)
+> [!NOTE]
+> **주의 2**: 헤더에 `Cache-Control: no-cache` 를 설정 하지 않는다면, 브라우저는 응답을 캐싱하고 다시 요청하지 않을 수 있습니다. 이는 디버깅하기 매우 어려워 질 수 있음을 기억하십시오. 또는 GET 파라미터로 timestamp(시간정보)나 난수를 추가하면 캐싱을 방지할 수 있습니다. ([캐싱 우회](/ko/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#bypassing_the_cache)를 참고하세요)
 
-> **참고:** **주의 3**: 만약 `httpRequest` 변수가 전역적으로 사용되면, `makeRequest()` 함수를 호출하는 여러 함수들 사이에서 경쟁 상태(race condition)가 발생할 수 있으며, 이 경우 다른 데이터를 덮어쓰게 됩니다. `XMLHttpRequest` 인스턴스는 함수 내의 지역 변수로 선언하는 것을 권장합니다.
+> [!NOTE]
+> **주의 3**: 만약 `httpRequest` 변수가 전역적으로 사용되면, `makeRequest()` 함수를 호출하는 여러 함수들 사이에서 경쟁 상태(race condition)가 발생할 수 있으며, 이 경우 다른 데이터를 덮어쓰게 됩니다. `XMLHttpRequest` 인스턴스는 함수 내의 지역 변수로 선언하는 것을 권장합니다.
 
 통신 에러 (서버가 다운되는 상황 등) 상황에서, status 필드를 접근하려 하면 `onreadystatechange` 메서드에서 예외에러를 발생 시킬 것입니다. 이러한 문제를 예방하기 위해서 `if...then` 구문을 `try…catch` 구문으로 감싸주세요.
 

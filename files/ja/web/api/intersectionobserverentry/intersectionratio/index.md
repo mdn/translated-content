@@ -3,12 +3,12 @@ title: "IntersectionObserverEntry: intersectionRatio プロパティ"
 short-title: intersectionRatio
 slug: Web/API/IntersectionObserverEntry/intersectionRatio
 l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+  sourceCommit: fe47429d64ffaacb24f5130523442aeaabf26ac6
 ---
 
 {{APIRef("Intersection Observer API")}}
 
-{{domxref("IntersectionObserverEntry")}} インターフェイスの読み取り専用の **`intersectionRatio`** プロパティは、対象の要素が現在どの程度見えているかを、ルートの交差比率で 0.0 から 1.0 の間の値で示します。
+**`intersectionRatio`** は {{domxref("IntersectionObserverEntry")}} インターフェイスの読み取り専用のプロパティで、対象の要素が現在どの程度見えているかを、ルートの交差比率で 0.0 から 1.0 の間の値で示します。
 
 ## 値
 

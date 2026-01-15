@@ -238,7 +238,8 @@ HTML에는 두가지 종류의 요소(Element) 가 있습니다. 블록 레벨 �
 > [!NOTE]
 > 이 주제에서 사용되는 "블럭(block)"과 "인라인(inline)"의 뜻은 [the types of CSS boxes](/ko/docs/Learn_web_development/Core/Styling_basics/Box_model#types_of_css_boxes)에서 사용하고 있는 같은 단어와 혼돈하면 안 됩니다. 기본적으로는 상관관계가 있지만 CSS 표시 유형을 변경해도 요소의 범주는 변경되지 않으며 요소가 포함할 수 있는 요소와 요소가 포함될 수 있는 요소에는 영향을 주지 않는다. HTML5가 이러한 용어들을 삭제했던 이유 중 하나는 이러한 다소 흔한 혼란을 막기 위해서였다.
 
-> **참고:** [Block-level elements](/ko/docs/Glossary/Block-level_content)문서와 [Inline elements](/ko/docs/Glossary/Inline-level_content)문서를 참고하면 블럭과 인라인 요소에 대한 유용한 내용을 찾을 수 있습니다.
+> [!NOTE]
+> [Block-level elements](/ko/docs/Glossary/Block-level_content)문서와 [Inline elements](/ko/docs/Glossary/Inline-level_content)문서를 참고하면 블럭과 인라인 요소에 대한 유용한 내용을 찾을 수 있습니다.
 
 ### 빈 요소(Empty elements)
 
@@ -728,7 +729,7 @@ HTML에서 문자 `<`,`>`, `"`및 `&`는 특수 문자입니다. 이들은 HTML 
 {{ EmbedLiveSample('Entity_references_Including_special_characters_in_HTML', 700, 200, "", "", "hide-codepen-jsfiddle") }}
 
 > [!NOTE]
-> HTML의 [문자 인코딩이 UTF-8로 설정](/ko/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#specifying_your_document's_character_encoding)되어 있기 때문에 최신 브라우저는 실제 기호를 잘 처리하므로 다른 기호에 대해서는 엔티티 참조를 사용할 필요가 없습니다.
+> HTML의 [문자 인코딩이 UTF-8로 설정](/ko/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#specifying_your_document's_character_encoding)되어 있기 때문에 최신 브라우저는 실제 기호를 잘 처리하므로 다른 기호에 대해서는 엔티티 참조를 사용할 필요가 없습니다.
 
 ## HTML 주석
 

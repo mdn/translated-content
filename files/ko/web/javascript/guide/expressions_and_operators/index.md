@@ -3,7 +3,7 @@ title: 표현식과 연산자
 slug: Web/JavaScript/Guide/Expressions_and_operators
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_strings")}}
 
 이번 장에서는 JavaScript의 표현식과 함께 할당, 비교, 산술, 비트 계산, 논리, 문자열, 삼항 등 다양한 연산자를 살펴보겠습니다.
 
@@ -388,7 +388,8 @@ const var2 = 4;
   </tbody>
 </table>
 
-> **참고:** `=>`는 연산자가 아니라
+> [!NOTE]
+> `=>`는 연산자가 아니라
 > [화살표 함수](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions)의 표기법입니다.
 
 ### 산술 연산자
@@ -1070,4 +1071,4 @@ super([arguments]); // 부모 생성자 호출
 super.functionOnParent([arguments]);
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
+{{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_strings")}}

@@ -13,9 +13,9 @@ Ces éléments peuvent être importants, mais n'ont pas d'impact direct sur l'af
 
 Il n'existe que deux éléments HTML qui appartiennent à cette catégorie&nbsp;:
 
-- [`<script>`](/fr/docs/Web/HTML/Element/script)
-- [`<template>`](/fr/docs/Web/HTML/Element/template)
+- [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script)
+- [`<template>`](/fr/docs/Web/HTML/Reference/Elements/template)
 
 ## Voir aussi
 
-- [Les éléments de prise en charge des scripts dans la référence HTML](/fr/docs/Web/HTML/Content_categories#éléments_supports_de_script)
+- [Les éléments de prise en charge des scripts dans la référence HTML](/fr/docs/Web/HTML/Guides/Content_categories#éléments_supports_de_script)

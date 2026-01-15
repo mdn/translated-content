@@ -4,7 +4,7 @@ slug: Web/JavaScript/Guide/Numbers_and_strings
 original_slug: Web/JavaScript/Guide/Numbers_and_dates
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_et_Opérateurs", "Web/JavaScript/Guide/Formatage_du_texte")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "Web/JavaScript/Guide/Numbers_and_strings")}}
 
 Ce chapitre illustre le fonctionnement des nombres et des dates en JavaScript grâce aux concepts, objets et fonctions utilisables avec ce langage. Cela inclut notamment l'écriture de nombre selon différentes bases (décimale, binaire, hexadécimale) et l'utilisation de l'objet global {{jsxref("Math")}}.
 
@@ -16,7 +16,7 @@ Le format IEEE-754 permet de représenter des valeurs entre ±2^−1022 et ±2^+
 
 Le type {{jsxref("BigInt")}} est une addition récente à JavaScript qui permet de représenter de grands entiers. Toutefois, il n'est pas possible de mélanger les `BigInt` et les nombres ({{jsxref("Number")}}) dans les mêmes opérations et on ne peut pas utiliser l'objet {{jsxref("Math")}} avec les valeurs `BigInt`.
 
-Voir également [les types de données et structures JavaScript](/fr/docs/Web/JavaScript/Data_structures) pour l'articulation des types primitifs en JavaScript.
+Voir également [les types de données et structures JavaScript](/fr/docs/Web/JavaScript/Guide/Data_structures) pour l'articulation des types primitifs en JavaScript.
 
 Il est possible d'utiliser quatre types de littéraux numériques : décimal, binaire, octal et hexadécimal.
 
@@ -323,4 +323,4 @@ L'instruction qui suit concatène la valeur de `minutes` à `calc`. Si la valeur
 
 Enfin, une expression conditionnelle est utilisée pour ajouter "P.M." à `calc` si `heures` vaut 12 ou plus, sinon ce sera la chaîne "A.M." qui sera ajoutée à la fin de `calc`.
 
-{{PreviousNext("Web/JavaScript/Guide/Expressions_et_Opérateurs", "Web/JavaScript/Guide/Formatage_du_texte")}}
+{{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "Web/JavaScript/Guide/Numbers_and_strings")}}

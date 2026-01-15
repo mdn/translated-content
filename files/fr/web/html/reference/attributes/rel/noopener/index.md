@@ -1,19 +1,19 @@
 ---
-title: "Types de liens : noopener"
+title: rel="noopener"
 slug: Web/HTML/Reference/Attributes/rel/noopener
 original_slug: Web/HTML/Attributes/rel/noopener
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+Le mot-clé **`noopener`** pour l'attribut [`rel`](/fr/docs/Web/HTML/Reference/Attributes/rel) des éléments HTML {{HTMLElement("a")}}, {{HTMLElement("area")}} et {{HTMLElement("form")}} indique au navigateur de naviguer vers la ressource cible sans donner au nouveau contexte de navigation l'accès au document d'origine — en ne définissant pas la propriété {{DOMxRef("Window.opener")}} sur la fenêtre ouverte (elle retourne `null`).
 
-Le mot-clé **`noopener`** de l'attribut [`rel`](/fr/docs/Web/HTML/Attributes/rel) des éléments {{HTMLElement("a")}}, {{HTMLElement("area")}} et {{HTMLElement("form")}} indique au navigateur d'ouvrir la ressource cible sans que le nouveau contexte de navigation ne reçoive d'accès au document précédent (le moteur ne définit alors pas {{DOMxRef("Window.opener")}} sur le nouveau contexte, sa valeur sera `null`).
+C'est particulièrement utile lors de l'ouverture de liens non fiables, afin de garantir qu'ils ne puissent pas altérer le document d'origine via la propriété {{DOMxRef("Window.opener")}} ([À propos de rel=noopener <sup>(angl.)</sup>](https://mathiasbynens.github.io/rel-noopener)), tout en continuant à fournir l'en-tête HTTP `Referer` (sauf si `noreferrer` est également utilisé).
 
-Ceci est tout spécialement utile lors de l'ouverture de liens non vérifiés/fiables, afin de s'assurer qu'ils ne peuvent pas trafiquer le document d'origine via la propriété {{DOMxRef("Window.opener")}} (pour plus de détails, voir [cet article en anglais concernant `rel=noopener`](https://mathiasbynens.github.io/rel-noopener/)), tout en fournissant néanmoins l'en-tête HTTP `Referer` (à moins que `noreferrer` soit également utilisé).
-
-Veuillez noter que lorsque `noopener` est utilisé, les noms de cibles non vides et différents de `_top`, `_self` et `_parent` sont tous traités en tant que `_blank` pour déterminer si le lien doit s'ouvrir ou non dans un nouvel onglet/fenêtre.
+Notez que lorsque `noopener` est utilisé, les noms de cible non vides autres que `_top`, `_self` et `_parent` sont tous traités comme `_blank` pour décider d'ouvrir une nouvelle fenêtre ou un nouvel onglet.
 
 > [!NOTE]
-> L'utilisation de `target="_blank"` sur des éléments `<a>` fournit désormais implicitement le même comportement pour l'attribut `rel` que si l'on avait utilisé `rel="noopener"`, c'est à dire l'absence de mise en place de `window.opener`. Voir la [compatibilité navigateur](/fr/docs/Web/HTML/Element/a#browser_compatibility) pour plus d'informations sur l'implémentation actuelle dans les navigateurs.
+> Définir `target="_blank"` sur les éléments `<a>`, `<area>` et `<form>` fournit implicitement le même comportement que `rel="noopener"`, ce qui ne définit pas `window.opener`.
 
 ## Spécifications
 

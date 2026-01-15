@@ -153,8 +153,8 @@ Les guides et didacticiels suivants sont une excellente ressource pour apprendre
 
 ## Voir aussi
 
-- [Graphics on the web](/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Drawing graphics](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
+- [Graphics on the web](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_images)
+- [Drawing graphics](/fr/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics)
 - [WebGL API](/fr/docs/Web/API/WebGL_API): Graphiques 2D et 3D sur le web
 - [Canvas API](/fr/docs/Web/API/Canvas_API): Le dessin en 2D pour le web
 - [Canvas tutorial](/fr/docs/Web/API/Canvas_API/Tutorial)

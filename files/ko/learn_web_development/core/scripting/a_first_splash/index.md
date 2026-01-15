@@ -6,7 +6,7 @@ l10n:
   sourceCommit: eab7a9c4c0d4251829e19500fa94865f9b5f56c7
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn_web_development/Core/Scripting/What_went_wrong", "conflicting/Learn_web_development/Core/Scripting")}}
 
 JavaScript에 관한 약간의 이론과, JavaScript가 할 수 있는 일을 알아봤으니 이제 간단한 JavaScript 프로그램을 만들어보면서 개발 과정이 어떤 느낌인지 알아보겠습니다. "숫자 알아맞히기" 게임을 차근차근 따라 만들어봅시다.
 
@@ -139,7 +139,8 @@ let resetButton;
 
 - 마지막 두 변수는 플레이어가 사용한 턴 수인 1과, 지금은 없지만 이 글의 뒤에서 추가할 초기화 버튼의 참조를 저장하기 위해 사용합니다.
 
-> **참고:** [바로 다음 글](/ko/docs/Learn_web_development/Core/Scripting/Variables)을 시작으로, 이후 과정에서 변수와 상수에 대해 많이 배울 수 있습니다.
+> [!NOTE]
+> [바로 다음 글](/ko/docs/Learn_web_development/Core/Scripting/Variables)을 시작으로, 이후 과정에서 변수와 상수에 대해 많이 배울 수 있습니다.
 
 ### 함수
 
@@ -163,7 +164,8 @@ checkGuess();
 
 키보드의 <kbd>Return</kbd>/<kbd>Enter</kbd> 키를 누르면 `I am a placeholder`라는 경고 창이 나타날 겁니다. 이로써, 우리 코드 안에 호출할 때마다 경고 창을 띄우는 함수를 정의했습니다.
 
-> **참고:** [이후 과정](/ko/docs/Learn_web_development/Core/Scripting/Functions)에서 함수에 대해 많이 배울 수 있습니다.
+> [!NOTE]
+> [이후 과정](/ko/docs/Learn_web_development/Core/Scripting/Functions)에서 함수에 대해 많이 배울 수 있습니다.
 
 ### 연산자
 
@@ -513,4 +515,4 @@ guessField.focus();
 
 예제 따라 해보기가 끝났습니다. 마지막까지 오셨군요. 축하합니다! 최종 코드를 직접 실행해 보거나, MDN에서 준비한 [최종판을 시험해 보세요](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html). 여러분의 예제 코드가 잘 돌아가지 않으면 완성본의 [소스 코드](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)와 비교해 보세요.
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn_web_development/Core/Scripting/What_went_wrong", "conflicting/Learn_web_development/Core/Scripting")}}

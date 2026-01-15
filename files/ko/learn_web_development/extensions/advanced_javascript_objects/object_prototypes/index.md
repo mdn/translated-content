@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_protot
 original_slug: Learn/JavaScript/Objects/Object_prototypes
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 Javascript에서는 객체를 상속하기 위하여 프로토타입이라는 방식을 사용합니다. 본 문서에서는 프로토타입 체인이 동작하는 방식을 설명하고 이미 존재하는 생성자에 메소드를 추가하기 위해 프로토타입 속성을 사용하는 법을 알아봅니다.
 
@@ -131,7 +131,8 @@ var myString = "This is my string.";
 
 `myString` 인스턴스가 생성되는 즉시 [`split()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/split), [`indexOf()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf), [`replace()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/replace)등의 문자열을 위한 유용한 메소드들을 사용할 수 있는 이유입니다.
 
-> **경고:** **Important**: `prototype` 속성은 Javascript에서 가장 헷갈리는 명칭중 하나입니다. — 보통 `this`가 현재 객체의 프로토타입 객체를 가리킬 것이라 오해하지만 그렇지 않죠. (프로토타입 객체는 `__proto__` 속성으로 접근 가능한 내장 객체인 것 기억 하시나요?). 대신에 `prototype` 속성은 상속 시키려는 멤버들이 정의된 객체를 가리킵니다.
+> [!WARNING]
+> **Important**: `prototype` 속성은 Javascript에서 가장 헷갈리는 명칭중 하나입니다. — 보통 `this`가 현재 객체의 프로토타입 객체를 가리킬 것이라 오해하지만 그렇지 않죠. (프로토타입 객체는 `__proto__` 속성으로 접근 가능한 내장 객체인 것 기억 하시나요?). 대신에 `prototype` 속성은 상속 시키려는 멤버들이 정의된 객체를 가리킵니다.
 
 ## create() 다시보기
 
@@ -197,7 +198,8 @@ instanceName.constructor.name;
 person1.constructor.name;
 ```
 
-> **참고:** `constructor.name` 는 변경이 가능하므로(상속이나 바인딩, 전처리, 트랜스파일러 등에 의해) 복잡한 로직에 적용하기 위해서는 [`instanceof`](/ko/docs/Web/JavaScript/Reference/Operators/instanceof) 연산자를 사용하세요.
+> [!NOTE]
+> `constructor.name` 는 변경이 가능하므로(상속이나 바인딩, 전처리, 트랜스파일러 등에 의해) 복잡한 로직에 적용하기 위해서는 [`instanceof`](/ko/docs/Web/JavaScript/Reference/Operators/instanceof) 연산자를 사용하세요.
 
 ## 프로토타입 수정하기
 
@@ -284,4 +286,4 @@ Test.prototype.y = function() { ... };
 
 다음 글에서는 직접 만든 객체간의 상속을 구현하는 방법에 대해 알아봅시다.
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

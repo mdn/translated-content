@@ -1,29 +1,28 @@
 ---
 title: Set.prototype.delete()
+short-title: delete()
 slug: Web/JavaScript/Reference/Global_Objects/Set/delete
 l10n:
-  sourceCommit: 88d71e500938fa8ca969fe4fe3c80a5abe23d767
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`delete()`** は {{jsxref("Set")}} インターフェイスのメソッドで、指定された値がこの集合にあれば、取り除きます。
 
 {{InteractiveExample("JavaScript デモ: Set.prototype.delete()")}}
 
 ```js interactive-example
-const set1 = new Set();
-set1.add({ x: 10, y: 20 }).add({ x: 20, y: 30 });
+const set = new Set();
+set.add({ x: 10, y: 20 }).add({ x: 20, y: 30 });
 
-// Delete any point with `x > 10`.
-set1.forEach((point) => {
+// `x > 10` であるすべての点を削除
+set.forEach((point) => {
   if (point.x > 10) {
-    set1.delete(point);
+    set.delete(point);
   }
 });
 
-console.log(set1.size);
-// Expected output: 1
+console.log(set.size);
+// 予想される結果: 1
 ```
 
 ## 構文

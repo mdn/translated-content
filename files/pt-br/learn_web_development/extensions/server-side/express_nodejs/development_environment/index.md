@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/development_en
 original_slug: Learn/Server-side/Express_Nodejs/development_environment
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 Agora que você sabe para que serve o Express, nós vamos lhe mostrar como configurar e testar o ambiente Node/Express no Windows, Linux (Ubuntu) e macOS. Independentemente do sistema operacional que você prefere, este artigo deve lhe proporcionar o que você precisa para desenvolver aplicativos em Express.
 
@@ -67,7 +67,8 @@ Outras dependências, como database drivers, engine para templates, ferramentas 
 
 Para utilizar o Express, você terá que instalar o Nodejs e o [NPM](https://docs.npmjs.com/) em seu sistema operacional. Nas seções a seguir, vamos explicar o jeito mais fácil de instalar a versão LTS do Nodejs no Ubuntu Linux 16.04, macOS e Windows 10.
 
-> **Nota:** **Dica:** As seções abaixo mostram o jeito mais fácil de instalar o NPM nos Sistemas Operacionais. Se você utilizar outro sistema ou quer ver uma abordagem diferente para as plataformas atuais acesse [Instalando Node.js via NPM](https://nodejs.org/en/download/package-manager/) (nodejs.org).
+> [!NOTE]
+> **Dica:** As seções abaixo mostram o jeito mais fácil de instalar o NPM nos Sistemas Operacionais. Se você utilizar outro sistema ou quer ver uma abordagem diferente para as plataformas atuais acesse [Instalando Node.js via NPM](https://nodejs.org/en/download/package-manager/) (nodejs.org).
 
 ### Windows e macOS
 
@@ -88,7 +89,8 @@ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-> **Aviso:** **Atenção:** Não faça a instalação direto do repositório normal do Ubuntu pois ele contém versões antigas do Node.
+> [!WARNING]
+> **Atenção:** Não faça a instalação direto do repositório normal do Ubuntu pois ele contém versões antigas do Node.
 
 ### Testando a instalação do Nodejs e do NPM
 
@@ -378,7 +380,7 @@ No próximo artigo, nós vamos iniciar um tutorial para construir uma aplicaçã
 - [Installing Express](http://expressjs.com/en/starter/installing.html) (expressjs.com)
 - [Express Application Generator](https://expressjs.com/en/starter/generator.html) (expressjs.com)
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 ## Outros módulos
 

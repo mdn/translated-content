@@ -133,7 +133,7 @@ ARIA 行見出しを作成するには、要素に `role="rowheader"` を追加�
 </table>
 ```
 
-上記は、表を書く際のセマンティックな方法です。ARIA ロールは、表のネイティブセマンティクス、したがって表行見出しが抹消される場合（[display プロパティを flex または grid に設定する](/ja/docs/Web/CSS/display#accessibility) など）にのみ必要です。
+上記は、表を書く際のセマンティックな方法です。ARIA ロールは、表のネイティブセマンティクス、したがって表行見出しが抹消される場合（[display プロパティを flex または grid に設定する](/ja/docs/Web/CSS/Reference/Properties/display#accessibility) など）にのみ必要です。
 
 ### 追加の利点
 

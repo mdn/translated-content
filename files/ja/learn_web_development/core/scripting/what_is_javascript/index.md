@@ -83,7 +83,7 @@ function updateName() {
 }
 ```
 
-{{ EmbedLiveSample('A_high-level_definition', '100%', 80) }}
+{{ EmbedLiveSample('A_high-level_definition', '100%', 80, , , , , 'allow-modals') }}
 
 テキストラベルの最新バージョンをクリックしてみて、何が起きるのか見てみましょう。（このデモは GitHub でも見られます。[ソースコード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/javascript-label.html)または[ライブ実行](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html)を参照してください。）
 
@@ -278,7 +278,7 @@ CSS では {{htmlelement("link")}} 要素を使用することで外部のスタ
    }
    ```
 
-4. 保存してブラウザーを更新してください。ボタンをクリックしても効果がないことが分かるでしょう。ブラウザーのコンソールを確認すると、 `Cross-origin request blocked` という内容のエラーが表示されます。これは、多くの外部リソースと同様に、JavaScript モジュールは HTML と[同じオリジン](/ja/docs/Web/Security/Same-origin_policy)から読み込む必要があり、 `file://` URL は適格ではないためです。この問題を修正するには、 2 つの方法があります。
+4. 保存してブラウザーを更新してください。ボタンをクリックしても効果がないことが分かるでしょう。ブラウザーのコンソールを確認すると、 `Cross-origin request blocked` という内容のエラーが表示されます。これは、多くの外部リソースと同様に、JavaScript モジュールは HTML と[同じオリジン](/ja/docs/Web/Security/Defenses/Same-origin_policy)から読み込む必要があり、 `file://` URL は適格ではないためです。この問題を修正するには、 2 つの方法があります。
    - お勧めする解決策は、[ローカルテストサーバーをセットアップ](/ja/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)することです。サーバープログラムが動作し、ポート `8000` で `apply-javascript-external.html` と `script.js` ファイルを配信している状態で、ブラウザーを開き、 `http://localhost:8000` にアクセスします。
    - ローカルサーバーが実行できない場合は、 `<script type="module" src="script.js"></script>` の代わりに `<script defer src="script.js"></script>` を使用することもできます。 詳細は下記[スクリプトの読み込み方針](#スクリプトの読み込み方針)を参照してください。 しかし、チュートリアルの他の部分で使用する機能は、いずれにせよローカルの HTTP サーバーが必要となる場合があることに注意してください。
 5. これでウェブサイトは以前と同じように動作しますが、 JavaScript は外部ファイルから取得するようになります。

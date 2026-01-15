@@ -29,7 +29,8 @@ cache.match(request, { options }).then(function (response) {
 
 Une {{jsxref("Promise", "Promesse")}} qui est résolue en la première {{domxref("Response", "Réponse")}} qui match la requête, ou en {{jsxref("undefined")}} si aucune requête n'est trouvée.
 
-> **Note :** `Cache.match()` est quasiment identique à {{domxref("Cache.matchAll()")}}, si ce n'est qu'elle est résolue en `response[0]` (la première réponse qui matche) plutôt que `response[]` (un tableau de toutes les réponses qui matchent).
+> [!NOTE]
+> `Cache.match()` est quasiment identique à {{domxref("Cache.matchAll()")}}, si ce n'est qu'elle est résolue en `response[0]` (la première réponse qui matche) plutôt que `response[]` (un tableau de toutes les réponses qui matchent).
 
 ## Exemples
 

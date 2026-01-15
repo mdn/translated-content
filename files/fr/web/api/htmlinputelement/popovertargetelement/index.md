@@ -7,9 +7,9 @@ l10n:
 
 {{APIRef("DOM")}}
 
-La propriété **`popoverTargetElement`** de l'interface [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) permet de lire et définir l'élément <i lang="en">popover</i> à contrôler via un élément [`<input>`](/fr/docs/Web/HTML/Element/input) avec l'attribut `type="button"`.
+La propriété **`popoverTargetElement`** de l'interface [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) permet de lire et définir l'élément <i lang="en">popover</i> à contrôler via un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) avec l'attribut `type="button"`.
 
-Elle est l'équivalent JavaScript de l'attribut HTML [`popovertarget`](/fr/docs/Web/HTML/Element/input#l_attribut_popovertarget).
+Elle est l'équivalent JavaScript de l'attribut HTML [`popovertarget`](/fr/docs/Web/HTML/Reference/Elements/input#l_attribut_popovertarget).
 
 ## Valeur
 
@@ -21,7 +21,7 @@ Cet exemple montre une utilisation simple l'API Popover, en définissant un él�
 
 ### HTML
 
-Tout d'abord, nous définissons un élément HTML `<input type="button">` que nous utiliserons pour afficher et masquer le <i lang="en">popover</i>, et un `<div>` qui sera le <i lang="en">popover</i>. Dans ce cas, nous ne définissons pas l'attribut [`popovertargetaction`](/fr/docs/Web/HTML/Element/input#popovertargetaction) sur l'élément `<input type="button">` ou l'attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) sur l'élément `<div>`, car nous le ferons de manière programmatique.
+Tout d'abord, nous définissons un élément HTML `<input type="button">` que nous utiliserons pour afficher et masquer le <i lang="en">popover</i>, et un `<div>` qui sera le <i lang="en">popover</i>. Dans ce cas, nous ne définissons pas l'attribut [`popovertargetaction`](/fr/docs/Web/HTML/Reference/Elements/input#popovertargetaction) sur l'élément `<input type="button">` ou l'attribut [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover) sur l'élément `<div>`, car nous le ferons de manière programmatique.
 
 ```html
 <input id="toggleBtn" type="button" value="Afficher/masquer le popover" />

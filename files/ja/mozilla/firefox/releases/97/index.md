@@ -20,11 +20,11 @@ slug: Mozilla/Firefox/Releases/97
   短縮名の `color-adjust` は非推奨になります。
   詳しくは [Firefox バグ 747595](https://bugzil.la/747595) をご覧ください。
 
-- CSS カスケードレイヤーをデフォルトで有効にしました。[`@layer`](/ja/docs/Web/CSS/@layer) ルールでカスケードレイヤーを宣言します。カスケードレイヤーではスタイルの宣言や、`layer()` 関数を使用して [`@import`](/ja/docs/Web/CSS/@import) ルールでインポートすることができます。詳しくは [Firefox バグ 1699217](https://bugzil.la/1699217) をご覧ください。
+- CSS カスケードレイヤーをデフォルトで有効にしました。[`@layer`](/ja/docs/Web/CSS/Reference/At-rules/@layer) ルールでカスケードレイヤーを宣言します。カスケードレイヤーではスタイルの宣言や、`layer()` 関数を使用して [`@import`](/ja/docs/Web/CSS/Reference/At-rules/@import) ルールでインポートすることができます。詳しくは [Firefox バグ 1699217](https://bugzil.la/1699217) をご覧ください。
 
 - カスケードレイヤーのプロパティの値を前のカスケードレイヤーでマッチする規則にロールバックできる、{{cssxref("revert-layer")}} グローバル CSS キーワードを追加しました。このキーワードは CSS のショートハンドプロパティ {{cssxref("all")}} を含む、任意のプロパティで適用できます。詳しくは [Firefox バグ 1699220](https://bugzil.la/1699220) をご覧ください。
 
-- CSS の [`scrollbar-gutter`](/ja/docs/Web/CSS/scrollbar-gutter) プロパティをサポートしました。これはスクロールバーのために予約された領域を開発者が制御できるようにして、コンテンツの増加による不必要なレイアウトの変化を防ぐことができます。
+- CSS の [`scrollbar-gutter`](/ja/docs/Web/CSS/Reference/Properties/scrollbar-gutter) プロパティをサポートしました。これはスクロールバーのために予約された領域を開発者が制御できるようにして、コンテンツの増加による不必要なレイアウトの変化を防ぐことができます。
   詳しくは [Firefox バグ 1715112](https://bugzil.la/1715112) をご覧ください。
 
 ### JavaScript

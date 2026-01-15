@@ -11,12 +11,12 @@ Cet article fournit des conseils sur l'utilisation des informations d'orientatio
 
 ## Utiliser l'orientation pour tourner un élément
 
-La façon la plus directe de passer [des données d'orientation](/fr/docs/Web/API/Window/deviceorientation_event) à [une transformation 3D](/fr/docs/Web/CSS/transform) consiste à utiliser respectivement les valeurs `alpha`, `gamma`, et `beta` pour `rotateZ`, `rotateX` et `rotateY`.
+La façon la plus directe de passer [des données d'orientation](/fr/docs/Web/API/Window/deviceorientation_event) à [une transformation 3D](/fr/docs/Web/CSS/Reference/Properties/transform) consiste à utiliser respectivement les valeurs `alpha`, `gamma`, et `beta` pour `rotateZ`, `rotateX` et `rotateY`.
 
-Il faut toutefois garder à l'esprit que [le système de coordonnées pour les informations d'orientation de l'appareil](/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained) est différent du [système de coordonnées CSS](/fr/docs/Web/CSS/CSSOM_view/Coordinate_systems). Le premier système suit [la règle de la main droite](https://fr.wikipedia.org/wiki/R%C3%A8gle_de_la_main_droite) et l'axe Y va croissant vers le haut, alors que le second système suit [la règle de la main gauche](https://fr.wikipedia.org/wiki/R%C3%A8gle_de_la_main_gauche) et l'axe Y va croissant vers le bas. De plus, les rotations d'orientation de l'appareil devraient toujours être appliquées selon l'ordre Z - X' - Y''. Cet ordre ne correspond pas à certaines [transformations CSS](/fr/docs/Web/CSS/CSS_transforms). Ces différences ont des conséquences pratiques&nbsp;:
+Il faut toutefois garder à l'esprit que [le système de coordonnées pour les informations d'orientation de l'appareil](/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained) est différent du [système de coordonnées CSS](/fr/docs/Web/API/CSSOM_view_API/Coordinate_systems). Le premier système suit [la règle de la main droite](https://fr.wikipedia.org/wiki/R%C3%A8gle_de_la_main_droite) et l'axe Y va croissant vers le haut, alors que le second système suit [la règle de la main gauche](https://fr.wikipedia.org/wiki/R%C3%A8gle_de_la_main_gauche) et l'axe Y va croissant vers le bas. De plus, les rotations d'orientation de l'appareil devraient toujours être appliquées selon l'ordre Z - X' - Y''. Cet ordre ne correspond pas à certaines [transformations CSS](/fr/docs/Web/CSS/Guides/Transforms). Ces différences ont des conséquences pratiques&nbsp;:
 
 - L'ordre des rotations importe&nbsp;: il faut s'assurer que les rotations alpha, beta et gamma sont appliquées dans cet ordre.
-- La transformation CSS [`rotate3d()`](/fr/docs/Web/CSS/transform-function/rotate3d) et les fonctions [DOMMatrixReadOnly.rotate()](/fr/docs/Web/API/DOMMatrixReadOnly/rotate) et [DOMMatrix.rotateSelf()](/fr/docs/Web/API/DOMMatrix/rotateSelf) appliquent les rotations dans l'ordre Z - Y' - X'' (et non Z - X' - Y''). Il n'est donc pas possible d'appliquer les rotations alpha, beta et gamma dans le bon ordre en utilisant un seul appel. Il faut appliquer chaque rotation individuellement, dans le bon ordre.
+- La transformation CSS [`rotate3d()`](/fr/docs/Web/CSS/Reference/Values/transform-function/rotate3d) et les fonctions [DOMMatrixReadOnly.rotate()](/fr/docs/Web/API/DOMMatrixReadOnly/rotate) et [DOMMatrix.rotateSelf()](/fr/docs/Web/API/DOMMatrix/rotateSelf) appliquent les rotations dans l'ordre Z - Y' - X'' (et non Z - X' - Y''). Il n'est donc pas possible d'appliquer les rotations alpha, beta et gamma dans le bon ordre en utilisant un seul appel. Il faut appliquer chaque rotation individuellement, dans le bon ordre.
 - Étant donné les différences de systèmes de coordonnées mentionnées avant, les rotations alpha et beta doivent être inversées (celles autour des axes Z et X), car elles pointent dans des directions opposées, et il faut garder l'angle gamma (celui autour de l'axe Y) tel quel.
 
   Voici un fragment de code qui résume cela&nbsp;:
@@ -80,5 +80,5 @@ function orient(aa) {
 
 ## Voir aussi
 
-- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [Utiliser les transformations CSS](/fr/docs/Web/CSS/Guides/Transforms/Using)
 - [Détecter l'orientation de l'appareil](/fr/docs/Web/API/Device_orientation_events/Detecting_device_orientation)

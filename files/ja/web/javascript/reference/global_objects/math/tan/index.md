@@ -1,13 +1,12 @@
 ---
 title: Math.tan()
+short-title: tan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tan
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`Math.tan()`** 静的メソッドは、数値の正接（タンジェント）を返します。
+**`Math.tan()`** は静的メソッドで、数値の正接（タンジェント）を返します。
 
 {{InteractiveExample("JavaScript デモ: Math.tan()")}}
 
@@ -17,13 +16,13 @@ function getTanFromDegrees(degrees) {
 }
 
 console.log(getTanFromDegrees(0));
-// Expected output: 0
+// 予想される結果: 0
 
 console.log(getTanFromDegrees(45));
-// Expected output: 0.9999999999999999
+// 予想される結果: 0.9999999999999999
 
 console.log(getTanFromDegrees(90));
-// Expected output: 16331239353195370
+// 予想される結果: 16331239353195370
 ```
 
 ## 構文

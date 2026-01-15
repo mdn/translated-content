@@ -11,7 +11,8 @@ original_slug: WebAssembly/JavaScript_interface/instantiate_static
 - 기본 오버로드는 [typed array](/ko/docs/Web/JavaScript/Guide/Typed_arrays) 또는 {{jsxref ( "ArrayBuffer")}}의 형태로 WebAssembly 바이너리 코드를 취해 컴파일 및 인스턴스화를 한 번에 수행합니다. 반환 된 Promise는 컴파일 된 {{jsxref ( "WebAssembly.Module")}} 및 첫 번째 {{jsxref ( "WebAssembly.Instance")}}로 해석됩니다.
 - 두번째 오버로드는 이미 컴파일 된 {{jsxref ( "WebAssembly.Module")}}을 취하여 해당 `Module`의 `Instance`로 해석되는 `Promise`을 반환합니다. 이 overload는 `Module`이 이미 컴파일된 경우 유용합니다.
 
-> **경고:** **중요 :** **이 방법은 wasm 모듈을 가져와 인스턴스화하는 가장 효율적인 방법은 아닙니다. 가능하다면 원시 바이트 코드에서 모듈을 모두 한 단계로 가져오고, 컴파일하고 인스턴스화하는 대신 최신 {{jsxref ( "WebAssembly.instantiateStreaming ()")}} 메서드를 사용해야합니다. {{jsxref ( "ArrayBuffer")}} 로의 변환이 필요합니다.**
+> [!WARNING]
+> **중요 :** **이 방법은 wasm 모듈을 가져와 인스턴스화하는 가장 효율적인 방법은 아닙니다. 가능하다면 원시 바이트 코드에서 모듈을 모두 한 단계로 가져오고, 컴파일하고 인스턴스화하는 대신 최신 {{jsxref ( "WebAssembly.instantiateStreaming ()")}} 메서드를 사용해야합니다. {{jsxref ( "ArrayBuffer")}} 로의 변환이 필요합니다.**
 
 ## Syntax
 

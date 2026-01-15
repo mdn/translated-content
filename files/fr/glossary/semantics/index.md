@@ -47,7 +47,7 @@ Ce sont quelques-uns des éléments sémantiques ([source](http://www.w3schools.
 
 ### Culture générale
 
-- [Référence des éléments HTML](/fr/docs/Web/HTML/Element#inline_text_semantics) sur MDN
-- [Problèmes résolus par HTML5](/fr/docs/Web/HTML/Element/Heading_Elements#problèmes_résolus_par_html5) sur MDN
+- [Référence des éléments HTML](/fr/docs/Web/HTML/Reference/Elements#inline_text_semantics) sur MDN
+- [Problèmes résolus par HTML5](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements#problèmes_résolus_par_html5) sur MDN
 - [HTML5 Semantic Elements](http://www.w3schools.com/html/html5_semantic_elements.asp) sur w3schools
 - [Sémantique des langages de programmation](https://fr.wikipedia.org/wiki/Sémantique_des_langages_de_programmation) sur Wikipédia

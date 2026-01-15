@@ -3,8 +3,6 @@ title: Array.prototype.findLast()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
 ---
 
-{{JSRef}}
-
 **`findLast()`** 方法反向迭代数组，并返回满足提供的测试函数的第一个元素的值。如果没有找到对应元素，则返回 {{jsxref("undefined")}}。
 
 如果你需要找到：

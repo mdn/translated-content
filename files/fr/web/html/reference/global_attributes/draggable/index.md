@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/draggable
 
 {{HTMLSidebar("Global_attributes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`draggable`** est un attribut à valeur contrainte qui indique si l'élément peut être déplacé avec la souris dans un geste de glisser-déposer lorsqu'on utilise l'API _[Drag & Drop](/fr/docs/Web/API/HTML_Drag_and_Drop_API)_ ou les fonctionnalités natives du navigateur. Les valeurs autorisées pour cet attribut sont les suivantes :
+L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`draggable`** est un attribut à valeur contrainte qui indique si l'élément peut être déplacé avec la souris dans un geste de glisser-déposer lorsqu'on utilise l'API _[Drag & Drop](/fr/docs/Web/API/HTML_Drag_and_Drop_API)_ ou les fonctionnalités natives du navigateur. Les valeurs autorisées pour cet attribut sont les suivantes :
 
 - `true` : qui indique que l'élément peut être déplacé à la souris
 - `false` : qui indique que l'élément ne peut pas être déplacé à la souris
@@ -37,4 +37,4 @@ Par défaut, seules les sélections de texte, les images et les liens peuvent ê
 
 ## Voir aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
+- [Les différents attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)

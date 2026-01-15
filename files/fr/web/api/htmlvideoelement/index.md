@@ -7,7 +7,7 @@ slug: Web/API/HTMLVideoElement
 
 L'interface **`HTMLVideoElement`** fournit des propriétés et des méthodes spéciales pour manipuler des objets vidéo. Elle hérite également des propriétés et des méthodes de [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement) et de [`HTMLElement`](/fr/docs/Web/API/HTMLElement).
 
-La liste des [formats multimédias pris en charge](/fr/docs/Web/Media/Formats) varie d'un navigateur à l'autre. Vous pouvez fournir votre vidéo dans un format unique que tous les navigateurs pertinents prennent en charge, ou fournir plusieurs sources vidéo dans des formats suffisamment différents couverts par les différents navigateurs que vous ciblez.
+La liste des [formats multimédias pris en charge](/fr/docs/Web/Media/Guides/Formats) varie d'un navigateur à l'autre. Vous pouvez fournir votre vidéo dans un format unique que tous les navigateurs pertinents prennent en charge, ou fournir plusieurs sources vidéo dans des formats suffisamment différents couverts par les différents navigateurs que vous ciblez.
 
 {{InheritanceDiagram(600, 140)}}
 
@@ -16,15 +16,15 @@ La liste des [formats multimédias pris en charge](/fr/docs/Web/Media/Formats) v
 _Cette interface hérite des propriétés de ses interfaces ancêtres :_ _{{domxref("HTMLMediaElement")}} et_ _{{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLVideoElement.height")}}
-  - : Une chaîne de caractères {{domxref("DOMString")}} qui reflète la valeur de l'attribut HTML [`height`](/fr/docs/Web/HTML/Element/video#height) indiquant la hauteur de la zone d'affichage, en pixels.
+  - : Une chaîne de caractères {{domxref("DOMString")}} qui reflète la valeur de l'attribut HTML [`height`](/fr/docs/Web/HTML/Reference/Elements/video#height) indiquant la hauteur de la zone d'affichage, en pixels.
 - {{domxref("HTMLVideoElement.poster")}}
-  - : Une chaîne de caractères {{domxref("DOMString")}} qui reflète la valeur de l'attribut [`poster`](/fr/docs/Web/HTML/Element/video#poster) qui indique une image à afficher tant qu'aucune donnée vidéo n'est disponible.
+  - : Une chaîne de caractères {{domxref("DOMString")}} qui reflète la valeur de l'attribut [`poster`](/fr/docs/Web/HTML/Reference/Elements/video#poster) qui indique une image à afficher tant qu'aucune donnée vidéo n'est disponible.
 - {{domxref("HTMLVideoElement.videoHeight")}} {{readonlyInline}}
   - : Un entier non signé qui indique la hauteur intrinsèque de la ressource, exprimée en pixels CSS, ou 0 tant que le média n'est pas disponible.
 - {{domxref("HTMLVideoElement.videoWidth")}} {{readonlyInline}}
   - : Un entier non signé qui indique la largeur intrinsèque de la ressource, exprimée en pixels CSS, ou 0 tant que le média n'est pas disponible.
 - {{domxref("HTMLVideoElement.width")}}
-  - : Une chaîne de caractères {{domxref("DOMString")}} qui reflète la valeur de l'attribut HTML [`width`](/fr/docs/Web/HTML/Element/video#width) indiquant la largeur de la zone d'affichage, en pixels.
+  - : Une chaîne de caractères {{domxref("DOMString")}} qui reflète la valeur de l'attribut HTML [`width`](/fr/docs/Web/HTML/Reference/Elements/video#width) indiquant la largeur de la zone d'affichage, en pixels.
 
 ### Propriétés spécifiques à Gecko
 
@@ -78,4 +78,4 @@ _Hérite des méthodes de son parent {{domxref("HTMLMediaElement")}} et de son a
 ## Voir aussi
 
 - L'élément HTML qui implémente cette interface {{HTMLElement("video")}}.
-- [Les formats médias pris en charge](/fr/docs/Web/Media/Formats)
+- [Les formats médias pris en charge](/fr/docs/Web/Media/Guides/Formats)

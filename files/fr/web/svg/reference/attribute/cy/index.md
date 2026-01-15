@@ -2,13 +2,17 @@
 title: cy
 slug: Web/SVG/Reference/Attribute/cy
 original_slug: Web/SVG/Attribute/cy
+l10n:
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{SVGRef}}
 
 L'attribut **`cy`** définit la coordonnée de l'axe y pour le point central d'un élément.
 
-Trois éléments utilisent cet attribut: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, et {{SVGElement("radialGradient")}}
+Trois éléments utilisent cet attribut&nbsp;:
+
+- {{SVGElement("circle")}}
+- {{SVGElement("ellipse")}}
+- {{SVGElement("radialGradient")}}
 
 ## Exemple
 
@@ -33,7 +37,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', '100%', 300)}}
+{{EmbedLiveSample('exemple', '100%', 300)}}
 
 ## circle
 
@@ -43,9 +47,7 @@ Pour un élément {{SVGElement('circle')}}, `cy` définit la coordonnée y de so
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td><a href="/fr/docs/Web/CSS/length-percentage">
-        <code>&lt;length-percentage&gt;</code>
-      </a></td>
+      <td>{{cssxref("length-percentage")}}</td>
     </tr>
     <tr>
       <th scope="row">Valeur par défaut</th>
@@ -59,7 +61,7 @@ Pour un élément {{SVGElement('circle')}}, `cy` définit la coordonnée y de so
 </table>
 
 > [!NOTE]
-> À partir de SVG2, `cy` est une _propriété de géométrie_, ce qui signifie que cet attribut peut être utilisé comme propriété CSS pour les cercles.
+> La coordonnée y du centre de l'élément `<circle>` peut aussi être définie avec la _propriété de géométrie_ {{cssxref("cy")}}. Si elle est définie en CSS, la valeur de la propriété `cy` l'emporte sur la valeur de l'attribut `cy`.
 
 ## ellipse
 
@@ -69,9 +71,7 @@ Pour un élément {{SVGElement('ellipse')}}, `cy` définit la coordonnée y de s
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td><a href="/fr/docs/Web/CSS/length-percentage">
-        <code>&lt;length-percentage&gt;</code>
-      </a></td>
+      <td>{{cssxref("length-percentage")}}</td>
     </tr>
     <tr>
       <th scope="row">Valeur par défaut</th>
@@ -85,18 +85,18 @@ Pour un élément {{SVGElement('ellipse')}}, `cy` définit la coordonnée y de s
 </table>
 
 > [!NOTE]
-> À partir de SVG2, `cy` est une _propriété de géométrie_, ce qui signifie que cet attribut peut être utilisé comme propriété CSS pour les ellipses.
+> La coordonnée y du centre de l'élément `<ellipse>` peut aussi être définie avec la _propriété de géométrie_ {{cssxref("cy")}}. Si elle est définie en CSS, la valeur de la propriété `cy` l'emporte sur la valeur de l'attribut `cy`.
 
 ## radialGradient
 
-Pour un élément {{SVGElement('radialGradient')}}, `cy` définit la coordonnées x du plus grand cercle pour le dégradé radial (c'est-à-dire du plus externe). Le dégradé sera dessiné de telle façon que la [limite de dégradé](/fr/docs/Web/SVG/Element/stop) de **100%** corresponde au périmètre de ce plus grand cercle.
+Pour un élément {{SVGElement('radialGradient')}}, `cy` définit la coordonnées y du plus grand cercle pour le dégradé radial (c'est-à-dire du plus externe).
 
 <table class="standard-table">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td><a href="/fr/docs/Web/CSS/length-percentage">
-        <code>&lt;length-percentage&gt;</code>
+      <td><a href="/fr/docs/Web/SVG/Guides/Content_type#length">
+        <code>&lt;length&gt;</code>
       </a></td>
     </tr>
     <tr>
@@ -110,7 +110,7 @@ Pour un élément {{SVGElement('radialGradient')}}, `cy` définit la coordonnée
   </tbody>
 </table>
 
-#### Autre exemple
+### Exemple
 
 ```css hidden
 html,
@@ -166,7 +166,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('radialGradient', 150, '100%')}}
+{{EmbedLiveSample('exemple', 150, '100%')}}
 
 ## Spécifications
 
@@ -174,5 +174,8 @@ svg {
 
 ## Voir aussi
 
-- [`cx`](/fr/docs/Web/SVG/Attribute/cx)
-- [`r`](/fr/docs/Web/SVG/Attribute/r)
+- {{SVGAttr("cx")}}
+- {{SVGAttr("r")}}
+- {{SVGAttr("rx")}}
+- {{SVGAttr("ry")}}
+- Les propriétés de géométrie&nbsp;: {{cssxref("cx")}}, {{cssxref("cy")}}, {{cssxref("r")}}, {{cssxref("rx")}}, {{cssxref("ry")}}, {{cssxref("x")}}, {{cssxref("y")}}, {{cssxref("width")}} et {{cssxref("height")}}

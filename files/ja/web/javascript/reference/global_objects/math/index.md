@@ -2,10 +2,8 @@
 title: Math
 slug: Web/JavaScript/Reference/Global_Objects/Math
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Math`** は名前空間オブジェクトで、数学的な定数と関数を提供する静的プロパティおよびメソッドがあります。
 
@@ -109,6 +107,8 @@ l10n:
   - : 入力値のハイパーボリックサイン (双曲線正弦) を返します。
 - {{jsxref("Math.sqrt()")}}
   - : 入力値の平方根を返します。
+- {{jsxref("Math.sumPrecise()")}}
+  - : 渡された反復可能オブジェクトの数値の合計を返します。中間結果における浮動小数点精度の損失を回避します。
 - {{jsxref("Math.tan()")}}
   - : 入力値のタンジェント (正接) を返します。
 - {{jsxref("Math.tanh()")}}

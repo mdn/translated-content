@@ -59,7 +59,7 @@ if (condition) {
 Ici nous avons:
 
 1. Le mot‑clé `if` suivie de parenthèses.
-2. Une condition à évaluer, placée entre les parenthèses (typiquement «&nbsp;cette valeur est‑elle plus grande que cet autre valeur&nbsp;? » ou «&nbsp;cette valeur existe‑t‑elle ?&nbsp;»). Cette condition se servira des [opérateurs de comparaison](/fr/docs/Learn/JavaScript/First_steps/Math#comparison_operators) que nous avons étudié dans le précédent module, et renverra `true` ou `false`.
+2. Une condition à évaluer, placée entre les parenthèses (typiquement «&nbsp;cette valeur est‑elle plus grande que cet autre valeur&nbsp;? » ou «&nbsp;cette valeur existe‑t‑elle ?&nbsp;»). Cette condition se servira des [opérateurs de comparaison](/fr/docs/Learn_web_development/Core/Scripting/Math#comparison_operators) que nous avons étudié dans le précédent module, et renverra `true` ou `false`.
 3. Une paire d'accolades, à l'intérieur de laquelle se trouve du code — cela peut être n'importe quel code voulu&nbsp;; il sera exécuté seulement si la condition renvoie `true`.
 4. Le mot‑clé `else`.
 5. Une autre paire d'accolades, à l'intérieur de laquelle se trouve du code différent — tout code souhaité et il sera exécuté seulement si la condition ne renvoie pas `true`.
@@ -164,7 +164,7 @@ function setWeather() {
 
 ### Une note sur les opérateurs de comparaison
 
-Les opérateurs de comparaison sont utilisés pour tester les conditions dans nos instructions conditionnelles. Nous avons d'abord regardé les opérateurs de comparaison dans notre [Mathématiques de base en JavaScript — nombres et opérateurs](/fr/docs/Learn/JavaScript/First_steps/Math#opérateurs_de_comparaison) article. Nos choix sont :
+Les opérateurs de comparaison sont utilisés pour tester les conditions dans nos instructions conditionnelles. Nous avons d'abord regardé les opérateurs de comparaison dans notre [Mathématiques de base en JavaScript — nombres et opérateurs](/fr/docs/Learn_web_development/Core/Scripting/Math#opérateurs_de_comparaison) article. Nos choix sont :
 
 - `===` et `!==` — teste si une valeur est identique ou non à une autre.
 - `<` and `>` —teste si une valeur est inférieure ou non à une autre.
@@ -640,11 +640,11 @@ window.addEventListener("load", updateCode);
 
 ## Conclusion
 
-C'est tout ce qu'il est nécessaire de connaître à propos des structures conditionnelles en JavaScript pour le moment&nbsp;! Je pense que vous avez assurément compris ces concepts et travaillé les exemples aisément&nbsp;; s'il y a quelque chose que vous n'avez pas compris, relisez cet article à nouveau, ou bien [contactez‑nous](/fr/docs/Learn#nous_contacter) pour une aide.
+C'est tout ce qu'il est nécessaire de connaître à propos des structures conditionnelles en JavaScript pour le moment&nbsp;! Je pense que vous avez assurément compris ces concepts et travaillé les exemples aisément&nbsp;; s'il y a quelque chose que vous n'avez pas compris, relisez cet article à nouveau, ou bien [contactez‑nous](/fr/docs/Learn_web_development#nous_contacter) pour une aide.
 
 ## Voir aussi
 
-- [Opérateurs de comparaison](/fr/docs/Learn/JavaScript/First_steps/Math#opérateurs_de_comparaison)
+- [Opérateurs de comparaison](/fr/docs/Learn_web_development/Core/Scripting/Math#opérateurs_de_comparaison)
 - [Les instructions conditionnelles](/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#les_instructions_conditionnelles)
 - [Référence if...else](/fr/docs/Web/JavaScript/Reference/Statements/if...else)
 - [Référence opérateur conditionnel (ternaire)](/fr/docs/Web/JavaScript/Reference/Operators/Conditional_operator)

@@ -11,4 +11,4 @@ En {{Glossary("HTML")}} une balise est utilisée pour créer un {{Glossary("elem
 
 - [Élément HTML](https://fr.wikipedia.org/wiki/Élément_HTML) sur Wikipédia
 - [Balises HTML sur W3](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)
-- [Introduction au HTML](/fr/docs/Learn/HTML/Introduction_to_HTML)
+- [Introduction au HTML](/fr/docs/Learn_web_development/Core/Structuring_content)

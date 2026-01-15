@@ -12,8 +12,8 @@ Les requêtes conditionnelles HTTP s'exécutent différemment en fonction de la 
 
 Les comportements différents sont définis par la méthode qu'utilise la requête et par un ensemble d'en-têtes propres aux préconditions :
 
-- Pour une méthode [safe](/fr/docs/Glossary/Safe) comme [`GET`](/fr/docs/Web/HTTP/Methods/GET), qui est généralement utilisée pour récupérer un document, la requête conditionnelle peut être utilisée afin de renvoyer le document uniquement si c'est pertinent. Cela économise de la bande passante.
-- Pour les méthodes [unsafe](/fr/docs/Glossary/Safe) comme [`PUT`](/fr/docs/Web/HTTP/Methods/PUT), qui permet généralement d'uploader un document, la requête conditionnelle peut servir à charger le document, uniquement si l'original sur lequel la requête est basée est le même que celui stocké sur le serveur.
+- Pour une méthode [safe](/fr/docs/Glossary/Safe) comme [`GET`](/fr/docs/Web/HTTP/Reference/Methods/GET), qui est généralement utilisée pour récupérer un document, la requête conditionnelle peut être utilisée afin de renvoyer le document uniquement si c'est pertinent. Cela économise de la bande passante.
+- Pour les méthodes [unsafe](/fr/docs/Glossary/Safe) comme [`PUT`](/fr/docs/Web/HTTP/Reference/Methods/PUT), qui permet généralement d'uploader un document, la requête conditionnelle peut servir à charger le document, uniquement si l'original sur lequel la requête est basée est le même que celui stocké sur le serveur.
 
 ## Validateurs
 
@@ -27,13 +27,13 @@ Comparer les versions d'une même ressource est un peu délicat : en fonction du
 - _Une validation forte_, utilisée quand une vérification à l'octet près est demandée, par exemple pour reprendre un téléchargement.
 - _Une validation faible_, utilisée quand l'agent-utilisateur doit seulement déterminer si deux ressources ont le même contenu. Ils sont égaux même s'ils ont des différences minimes comme des publicités différentes ou un pied de page avec une date différente.
 
-La sorte de la vérification est indépendante du validateur utilisé. [`Last-Modified`](/fr/docs/Web/HTTP/Headers/Last-Modified) et [`ETag`](/fr/docs/Web/HTTP/Headers/ETag) permettent les deux types de validation bien que la complexité d'implémentation côté serveur soit variable. HTTP se sert de la validation forte par défaut et spécifie quand la validation faible peut être employée.
+La sorte de la vérification est indépendante du validateur utilisé. [`Last-Modified`](/fr/docs/Web/HTTP/Reference/Headers/Last-Modified) et [`ETag`](/fr/docs/Web/HTTP/Reference/Headers/ETag) permettent les deux types de validation bien que la complexité d'implémentation côté serveur soit variable. HTTP se sert de la validation forte par défaut et spécifie quand la validation faible peut être employée.
 
 ### Validation forte
 
 La validation forte consiste à garantir que la ressource est identique à celle à laquelle elle est comparée, à l'octet près. Cette validation est obligatoire pour certains en-têtes et correspond au comportement par défaut pour d'autres. La validation forte est stricte et peut être difficile à garantir côté serveur mais cela garantit qu'à aucun moment une donnée n'est perdue, parfois au détriment de la performance.
 
-Il est assez difficile d'avoir un identifiant unique pour la validation forte avec [`Last-Modified`](/fr/docs/Web/HTTP/Headers/Last-Modified). On le fait souvent en employant une [`ETag`](/fr/docs/Web/HTTP/Headers/ETag) avec le hachage MD5 de la ressource (ou un dérivé).
+Il est assez difficile d'avoir un identifiant unique pour la validation forte avec [`Last-Modified`](/fr/docs/Web/HTTP/Reference/Headers/Last-Modified). On le fait souvent en employant une [`ETag`](/fr/docs/Web/HTTP/Reference/Headers/ETag) avec le hachage MD5 de la ressource (ou un dérivé).
 
 ### Validation faible
 
@@ -44,33 +44,33 @@ La validation faible diffère de la validation forte, car elle considère que de
 Plusieurs en-têtes HTTP, appelées en-têtes conditionels, permettent de conditionner les requêtes :
 
 - [`If-Match`](/fr/docs/Web/HTTP/Headers/If-Match)
-  - : Réussit si la [`ETag`](/fr/docs/Web/HTTP/Headers/ETag) de la ressource distante est égal à un de ceux listés dans cet en-tête. Par défaut, à moins que l'ETag soit préfixé par `'W/'`, c'est une validation forte.
-- [`If-None-Match`](/fr/docs/Web/HTTP/Headers/If-None-Match)
-  - : Réussit si la [`ETag`](/fr/docs/Web/HTTP/Headers/ETag) de la ressource distante est différent de tout ceux listés dans l'en-tête. Par défaut, à moins que l'ETag soit préfixé par `'W/'`, c'est une validation forte.
-- [`If-Modified-Since`](/fr/docs/Web/HTTP/Headers/If-Modified-Since)
-  - : Réussit si la date [`Last-Modified`](/fr/docs/Web/HTTP/Headers/Last-Modified) de la ressource distante est plus récente que celle donnée dans l'en-tête.
+  - : Réussit si la [`ETag`](/fr/docs/Web/HTTP/Reference/Headers/ETag) de la ressource distante est égal à un de ceux listés dans cet en-tête. Par défaut, à moins que l'ETag soit préfixé par `'W/'`, c'est une validation forte.
+- [`If-None-Match`](/fr/docs/Web/HTTP/Reference/Headers/If-None-Match)
+  - : Réussit si la [`ETag`](/fr/docs/Web/HTTP/Reference/Headers/ETag) de la ressource distante est différent de tout ceux listés dans l'en-tête. Par défaut, à moins que l'ETag soit préfixé par `'W/'`, c'est une validation forte.
+- [`If-Modified-Since`](/fr/docs/Web/HTTP/Reference/Headers/If-Modified-Since)
+  - : Réussit si la date [`Last-Modified`](/fr/docs/Web/HTTP/Reference/Headers/Last-Modified) de la ressource distante est plus récente que celle donnée dans l'en-tête.
 - [`If-Unmodified-Since`](/fr/docs/Web/HTTP/Headers/If-Unmodified-Since)
-  - : Réussit si la date [`Last-Modified`](/fr/docs/Web/HTTP/Headers/Last-Modified) de la ressource distante est plus ancienne ou égale à celle donnée dans l'en-tête.
+  - : Réussit si la date [`Last-Modified`](/fr/docs/Web/HTTP/Reference/Headers/Last-Modified) de la ressource distante est plus ancienne ou égale à celle donnée dans l'en-tête.
 - [`If-Range`](/fr/docs/Web/HTTP/Headers/If-Range)
-  - : Similaire à [`If-Match`](/fr/docs/Web/HTTP/Headers/If-Match), ou [`If-Unmodified-Since`](/fr/docs/Web/HTTP/Headers/If-Unmodified-Since), mais peut n'avoir qu'un seul ETag, ou une date. Si ça ne correspond pas, la requête est rejetée et à la place d'un statut de réponse [`206`](/fr/docs/Web/HTTP/Status/206) `Partial Content`, un [`200`](/fr/docs/Web/HTTP/Status/200) `OK` est envoyé avec la totalité de la ressource.
+  - : Similaire à [`If-Match`](/fr/docs/Web/HTTP/Headers/If-Match), ou [`If-Unmodified-Since`](/fr/docs/Web/HTTP/Headers/If-Unmodified-Since), mais peut n'avoir qu'un seul ETag, ou une date. Si ça ne correspond pas, la requête est rejetée et à la place d'un statut de réponse [`206`](/fr/docs/Web/HTTP/Reference/Status/206) `Partial Content`, un [`200`](/fr/docs/Web/HTTP/Reference/Status/200) `OK` est envoyé avec la totalité de la ressource.
 
 ## Cas d'utilisation
 
 ### Mise à jour du cache
 
-Le cas d'utilisation le plus commun pour les requêtes conditionnelles est la mise à jour du'uncache. Avec un cache vide ou absent, la ressource demandée est renvoyée avec un statut [`200`](/fr/docs/Web/HTTP/Status/200) `OK`.
+Le cas d'utilisation le plus commun pour les requêtes conditionnelles est la mise à jour du'uncache. Avec un cache vide ou absent, la ressource demandée est renvoyée avec un statut [`200`](/fr/docs/Web/HTTP/Reference/Status/200) `OK`.
 
 ![La requête émise lorsque le cache est vide déclenche le téléchargement de la ressource et les deux valeurs de validation son prevent itt envoyés en en-tête. Le cache est alors rempli.](cache1.png)
 
-Avec la ressource, les validateurs sont renvoyés dans les en-têtes. Dans cet exemple, deux validateurs [`Last-Modified`](/fr/docs/Web/HTTP/Headers/Last-Modified) et [`ETag`](/fr/docs/Web/HTTP/Headers/ETag) sont envoyés, mais il pourrait tout aussi bien n'y en avoir qu'un. Ces validateurs sont en cache avec la ressource (comme toutes les en-têtes) et seront utilisés pour embarquer les requêtes conditionnelles quand le cache est périmé.
+Avec la ressource, les validateurs sont renvoyés dans les en-têtes. Dans cet exemple, deux validateurs [`Last-Modified`](/fr/docs/Web/HTTP/Reference/Headers/Last-Modified) et [`ETag`](/fr/docs/Web/HTTP/Reference/Headers/ETag) sont envoyés, mais il pourrait tout aussi bien n'y en avoir qu'un. Ces validateurs sont en cache avec la ressource (comme toutes les en-têtes) et seront utilisés pour embarquer les requêtes conditionnelles quand le cache est périmé.
 
-Tant que le cache n'est pas obsolète, aucune requête n'est émise. Mais une fois qu'il est dépassé, il est principalement contrôlé par l'en-tête [`Cache-Control`](/fr/docs/Web/HTTP/Headers/Cache-Control), le client n'utilise pas directement la valeur en cache mais publie une requête conditionnelle. La valeur du validateur est employé comme paramètre des en-têtes [`If-Modified-Since`](/fr/docs/Web/HTTP/Headers/If-Modified-Since) et [`If-Match`](/fr/docs/Web/HTTP/Headers/If-Match).
+Tant que le cache n'est pas obsolète, aucune requête n'est émise. Mais une fois qu'il est dépassé, il est principalement contrôlé par l'en-tête [`Cache-Control`](/fr/docs/Web/HTTP/Reference/Headers/Cache-Control), le client n'utilise pas directement la valeur en cache mais publie une requête conditionnelle. La valeur du validateur est employé comme paramètre des en-têtes [`If-Modified-Since`](/fr/docs/Web/HTTP/Reference/Headers/If-Modified-Since) et [`If-Match`](/fr/docs/Web/HTTP/Headers/If-Match).
 
-Si la ressource n'a pas changé, le serveur renvoie une réponse [`304`](/fr/docs/Web/HTTP/Status/304) `Not Modified`. Cela rafraîchit le cache et le client peut se servir de la valeur en cache. Bien qu'il y ait un aller-retour requête-réponse qui consomme quelques ressources, cette méthode est plus efficace que de transmettre à nouveau la totalité de la ressource via le réseau.
+Si la ressource n'a pas changé, le serveur renvoie une réponse [`304`](/fr/docs/Web/HTTP/Reference/Status/304) `Not Modified`. Cela rafraîchit le cache et le client peut se servir de la valeur en cache. Bien qu'il y ait un aller-retour requête-réponse qui consomme quelques ressources, cette méthode est plus efficace que de transmettre à nouveau la totalité de la ressource via le réseau.
 
 ![Avec un cache périmé, la requête conditionnelle est envoyée. Le serveur peut déterminer si une ressource a changé et, dans ce cas, décider de ne pas la renvoyer si c'est la même.](httpcache2.png)
 
-Si la ressource a changé, le serveur renvoie simplement une réponse [`200 OK`](/fr/docs/Web/HTTP/Status/200) avec la nouvelle version de la ressource comme si la requête n'était pas conditionnelle et le client utilise cette nouvelle ressource et la met en cache.
+Si la ressource a changé, le serveur renvoie simplement une réponse [`200 OK`](/fr/docs/Web/HTTP/Reference/Status/200) avec la nouvelle version de la ressource comme si la requête n'était pas conditionnelle et le client utilise cette nouvelle ressource et la met en cache.
 
 ![Dans le cas où la ressource a changé, elle est renvoyée, comme si la requête n'était pas conditionnelle.](httpcache3.png)
 
@@ -86,7 +86,7 @@ Un serveur qui supporte le téléchargement partiel le diffuse en envoyant un en
 
 ![Le client reprend la requête en indiquant l'intervalle dont il a besoin et les préconditions en vérifiant les validateurs de la requêtes obtenues partiellement.](httpresume2.png)
 
-Le principe est simple, mais il y a un problème potentiel : si la ressource téléchargée a été modifiée entre deux téléchargements, les données reçues correspondront à deux versions différentes de la ressource et le fichier final sera corrompu. Pour prévenir cela, des en-têtes conditionnelles sont employées. Il y a deux manières de faire : la plus flexible utilise [`If-Modified-Since`](/fr/docs/Web/HTTP/Headers/If-Modified-Since) et de [`If-Match`](/fr/docs/Web/HTTP/Headers/If-Match), le serveur retourne alors une erreur si la pré-condition n'est pas satisfaite et le client reprend le téléchargement depuis le début :
+Le principe est simple, mais il y a un problème potentiel : si la ressource téléchargée a été modifiée entre deux téléchargements, les données reçues correspondront à deux versions différentes de la ressource et le fichier final sera corrompu. Pour prévenir cela, des en-têtes conditionnelles sont employées. Il y a deux manières de faire : la plus flexible utilise [`If-Modified-Since`](/fr/docs/Web/HTTP/Reference/Headers/If-Modified-Since) et de [`If-Match`](/fr/docs/Web/HTTP/Headers/If-Match), le serveur retourne alors une erreur si la pré-condition n'est pas satisfaite et le client reprend le téléchargement depuis le début :
 
 ![Lorsque la ressource partiellement téléchargée a été modifiée, les préconditions échoueront et la ressource devra à nouveau être téléchargée entièrement.](httpresume3.png)
 
@@ -100,7 +100,7 @@ Cette solution est plus efficace mais légèrement moins flexible puisqu'un seul
 
 Une opération commune des applications web est la mise à jour de documents distants. Cela arrive fréquemment dans tout système de fichiers ou dans les applications de contrôle de source. Toute application qui permet de stocker des ressources distantes a besoin de ce mécanisme. Les sites comme les wikis et autres CMS s'en servent habituellement.
 
-Vous pouvez l'implémenter avec la méthode [`PUT`](/fr/docs/Web/HTTP/Methods/PUT). Le client lit d'abord les fichiers originaux, les modifie et finalement, les envoie au serveur.
+Vous pouvez l'implémenter avec la méthode [`PUT`](/fr/docs/Web/HTTP/Reference/Methods/PUT). Le client lit d'abord les fichiers originaux, les modifie et finalement, les envoie au serveur.
 
 ![Mettre à jour un fichier avec PUT est assez simple tant qu'il n'y a pas de concurrence.](httplock1.png)
 
@@ -114,15 +114,15 @@ Les requêtes conditionnelles permettent d'implémenter l'algorithme de contrôl
 
 ![Les requêtes conditionnelles permettent d'implémenter un mécanisme de verrou optimiste : c'est le plus rapide qui gagne et les autres reçoivent une erreur.](httplock3.png)
 
-Ce ci est implémenté par les en-têtes [`If-Match`](/fr/docs/Web/HTTP/Headers/If-Match) ou [`If-Unmodified-Since`](/fr/docs/Web/HTTP/Headers/If-Unmodified-Since). Si l'ETag ne correspond pas au fichier original ou si le fichier a été modifié depuis son obtention, le changement est alors simplement rejeté avec une erreur [`412`](/fr/docs/Web/HTTP/Status/412) `Precondition Failed`. C'est maintenant à l'initiative du client que se réglera l'erreur : soit en prévenant le client de redémarrer avec la nouvelle version, soit en présentant au client les différences entre les deux versions pour l'aider à choisir les modifications à conserver.
+Ce ci est implémenté par les en-têtes [`If-Match`](/fr/docs/Web/HTTP/Headers/If-Match) ou [`If-Unmodified-Since`](/fr/docs/Web/HTTP/Headers/If-Unmodified-Since). Si l'ETag ne correspond pas au fichier original ou si le fichier a été modifié depuis son obtention, le changement est alors simplement rejeté avec une erreur [`412`](/fr/docs/Web/HTTP/Reference/Status/412) `Precondition Failed`. C'est maintenant à l'initiative du client que se réglera l'erreur : soit en prévenant le client de redémarrer avec la nouvelle version, soit en présentant au client les différences entre les deux versions pour l'aider à choisir les modifications à conserver.
 
 ### Gérer le premier téléchargement d'une ressource
 
-Le premier téléchargement d'une ressource est un des cas résultant du comportement précédent. Comme toute mise à jour d'une ressource, le téléchargement va faire l'objet d'une situation de compétition si deux clients essaient un enregistrement au même instant. Pour éviter cela, les en-têtes conditionnels peuvent être employés : on ajoute [`If-None-Match`](/fr/docs/Web/HTTP/Headers/If-None-Match) avec la valeur particulière `'*'`, représentant n'importe quel etag. La requête aboutira seulement si la ressource n'existait pas avant :
+Le premier téléchargement d'une ressource est un des cas résultant du comportement précédent. Comme toute mise à jour d'une ressource, le téléchargement va faire l'objet d'une situation de compétition si deux clients essaient un enregistrement au même instant. Pour éviter cela, les en-têtes conditionnels peuvent être employés : on ajoute [`If-None-Match`](/fr/docs/Web/HTTP/Reference/Headers/If-None-Match) avec la valeur particulière `'*'`, représentant n'importe quel etag. La requête aboutira seulement si la ressource n'existait pas avant :
 
 ![Comme pour un upload normal, le premier upload d'une ressource est sujet à une situation de compétition. If-None-Match peut empêcher cela.](httpfirst.png)
 
-`If-None-Match` fonctionnera seulement avec les serveurs compatibles HTTP/1.1 (et postérieurs). Si vous n'avez pas la certitude que le serveur soit compatible, vous devez d'abord envoyer une requête [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD) à la ressource pour vérifier.
+`If-None-Match` fonctionnera seulement avec les serveurs compatibles HTTP/1.1 (et postérieurs). Si vous n'avez pas la certitude que le serveur soit compatible, vous devez d'abord envoyer une requête [`HEAD`](/fr/docs/Web/HTTP/Reference/Methods/HEAD) à la ressource pour vérifier.
 
 ## Conclusion
 

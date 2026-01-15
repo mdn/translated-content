@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Multiplication
 
 {{jsSidebar("Operators")}}
 
-곱하기 연산자(`*`)는 두 연산자의 곱을 구합니다.
+곱하기 연산자(`*`)는 두 피연산자의 곱을 구합니다.
 
 {{InteractiveExample("JavaScript Demo: Expressions - Multiplication operator")}}
 

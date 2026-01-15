@@ -1,15 +1,16 @@
 ---
 title: String.prototype.anchor()
+short-title: anchor()
 slug: Web/JavaScript/Reference/Global_Objects/String/anchor
 l10n:
-  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{Deprecated_Header}}
 
-**`anchor()`** メソッドは、{{HTMLElement("a")}} 要素に name を付けたものに文字列を埋め込んだ文字列 (`<a name="...">str</a>`) を生成します。
+**`anchor()`** は {{jsxref("String")}} 値のメソッドで、{{HTMLElement("a")}} 要素に name を付けたものに文字列を埋め込んだ文字列 (`<a name="...">str</a>`) を生成します。
 
-> [!WARNING]
+> [!NOTE]
 > [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_ラッパーメソッド)はすべて非推奨となっており、互換性目的のみで標準化されています。代わりに [DOM API](/ja/docs/Web/API/Document_Object_Model) の [`document.createElement()`](/ja/docs/Web/API/Document/createElement) などを使用してください。
 >
 > HTML 仕様書では {{HTMLElement("a")}} 要素に `name` 属性を設定することを許容しなくなりましたので、このメソッドが生成するものは妥当なマークアップになりません。
@@ -33,16 +34,30 @@ anchor(name)
 
 ### anchor() の使用
 
-```js
-const myString = "Table of Contents";
+以下のコードは、 HTML 文字列を作成し、それを文書の本体に置き換えます。
 
-document.body.innerHTML = myString.anchor("contents_anchor");
+```js
+const contentString = "Hello, world";
+
+document.body.innerHTML = contentString.anchor("hello");
 ```
 
 以下の HTML が生成されます。
 
 ```html
-<a name="contents_anchor">Table of Contents</a>
+<a name="hello">Hello, world</a>
+```
+
+> [!WARNING]
+> このマークアップは不正です。`name` は {{HTMLElement("a")}} 要素の有効な属性ではなくなったためです。
+
+`anchor()` を使用して HTML テキストを直接作成する代わりに、[`document.createElement()`](/ja/docs/Web/API/Document/createElement) などの DOM API を使用しましょう。例を示します。
+
+```js
+const contentString = "Hello, world";
+const elem = document.createElement("a");
+elem.innerText = contentString;
+document.body.appendChild(elem);
 ```
 
 ## 仕様書
@@ -56,4 +71,6 @@ document.body.innerHTML = myString.anchor("contents_anchor");
 ## 関連情報
 
 - [`String.prototype.anchor` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.link()")}}
+- [es-shims による `String.prototype.anchor` のポリフィル](https://www.npmjs.com/package/es-string-html-methods)
+- [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_ラッパーメソッド)
+- {{HTMLElement("a")}}

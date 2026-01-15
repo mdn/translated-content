@@ -8,7 +8,7 @@ l10n:
 
 {{LearnSidebar}}
 
-L'objectif de cette évaluation est de vous aider à vérifier votre compréhension du [modèle de boîte CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model).
+L'objectif de cette évaluation est de vous aider à vérifier votre compréhension du [modèle de boîte CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model).
 
 > [!NOTE]
 > Vous pouvez tester des solutions dans les éditeurs interactifs présents sur cette page. Toutefois il peut toutefois être plus utile de télécharger le code et de passer par un éditeur en ligne comme [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) pour travailler sur les exercices.
@@ -27,7 +27,8 @@ Essayez de mettre à jour le code éditable ci-dessous pour reproduire l'exemple
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/box-model/box-models.html", '100%', 1100)}}
 
-> **Remarque :** [Téléchargez le code de départ pour cet exercice](https://github.com/mdn/css-examples/blob/main/learn/tasks/box-model/box-models-download.html) afin de travailler avec votre propre éditeur ou avec un éditeur en ligne.
+> [!CALLOUT]
+> [Téléchargez le code de départ pour cet exercice](https://github.com/mdn/css-examples/blob/main/learn/tasks/box-model/box-models-download.html) afin de travailler avec votre propre éditeur ou avec un éditeur en ligne.
 
 ## Exercice n°2
 
@@ -48,7 +49,8 @@ Essayez de mettre à jour le code éditable ci-dessous pour reproduire l'exemple
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/box-model/mbp.html", '100%', 600)}}
 
-> **Remarque :** [Téléchargez le code de départ pour cet exercice](https://github.com/mdn/css-examples/blob/main/learn/tasks/box-model/mbp-download.html) afin de travailler avec votre propre éditeur ou avec un éditeur en ligne.
+> [!CALLOUT]
+> [Téléchargez le code de départ pour cet exercice](https://github.com/mdn/css-examples/blob/main/learn/tasks/box-model/mbp-download.html) afin de travailler avec votre propre éditeur ou avec un éditeur en ligne.
 
 ## Exercice n°3
 
@@ -62,7 +64,8 @@ Essayez de mettre à jour le code éditable ci-dessous pour reproduire l'exemple
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/box-model/inline-block.html", '100%', 800)}}
 
-> **Remarque :** [Téléchargez le code de départ pour cet exercice](https://github.com/mdn/css-examples/blob/main/learn/tasks/box-model/inline-block-download.html) afin de travailler avec votre propre éditeur ou avec un éditeur en ligne.
+> [!CALLOUT]
+> [Téléchargez le code de départ pour cet exercice](https://github.com/mdn/css-examples/blob/main/learn/tasks/box-model/inline-block-download.html) afin de travailler avec votre propre éditeur ou avec un éditeur en ligne.
 
 ## Évaluation et aide
 

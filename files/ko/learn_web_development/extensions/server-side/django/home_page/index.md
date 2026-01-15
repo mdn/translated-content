@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Home_page
 original_slug: Learn/Server-side/Django/Home_page
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn_web_development/Extensions/Server-side/Django")}}
 
 우리는 이제 첫 전체 페이지를 보여주는 코드를 추가할 때가 되었습니다 — [LocalLibrary](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) website를 위한 홈페이지를요. 이 홈페이지는 각각의 모델 타입마다 갖고 있는 레코드들의 숫자를 보여주고, 우리의 다른 페이지들로 이동할 수 있는 사이드바 내비게이션 링크들을 제공합니다. 이 섹션에서 우리는 기본 URL 맵과 뷰들을 작성하고, 데이터베이스에서 레코드들을 가져오고 그리고 탬플릿을 사용하는 것에 대한 연습 경험을 가질 수 있습니다.
 
@@ -16,7 +16,7 @@ original_slug: Learn/Server-side/Django/Home_page
         <a href="/ko/docs/Learn/Server-side/Django/Introduction"
           >Django Introduction</a
         >을 읽어보세요. 이전 튜토리얼들을 완료하세요 (<a
-          href="/ko/docs/Learn/Server-side/Django/Admin_site"
+          href="/ko/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site"
           >Django Tutorial Part 4: Django admin site</a
         >
         포함).
@@ -72,7 +72,8 @@ original_slug: Learn/Server-side/Django/Home_page
 
 우리가 만들 첫 번째 페이지는 index page입니다 (`catalog/`). index 페이지는 데이터베이스 안의 서로 다른 레코드들의 생성된 "개수(count)" 와 함께 몇 가지 정적 HTML을 포함합니다. 이것이 작동하도록 하기 위해서 우리는 URL 매핑, 뷰 그리고 탬플릿을 생성하겠습니다.
 
-> **참고:** **주의**:이 섹션에 조금 더 집중해 봅시다. 대부분의 정보들이 우리가 생성할 다른 페이지들에도 적용되기 때문입니다.
+> [!NOTE]
+> **주의**:이 섹션에 조금 더 집중해 봅시다. 대부분의 정보들이 우리가 생성할 다른 페이지들에도 적용되기 때문입니다.
 
 ### URL 매핑
 
@@ -86,7 +87,8 @@ urlpatterns += [
 ]
 ```
 
-> **참고:** **주의**: 장고는 import 함수 django.urls.include()를 만날 때 마다 지정된 마지막 문자에서 문자열을 나누고, 나머지 부분 문자열을 추가 작업을 위해 포함된 URLconf 모듈로 보냅니다.
+> [!NOTE]
+> **주의**: 장고는 import 함수 django.urls.include()를 만날 때 마다 지정된 마지막 문자에서 문자열을 나누고, 나머지 부분 문자열을 추가 작업을 위해 포함된 URLconf 모듈로 보냅니다.
 
 우리는 또한 **/catalog/urls.py**로 이름지어진 URLConf 모듈을 위한 자리 표시자(placeholder) 파일도 생성했습니다. 그 파일에 아래 줄을 추가하세요
 
@@ -107,7 +109,8 @@ urlpatterns = [
 <a href="{% url 'index' %}">Home</a>.
 ```
 
-> **참고:** **주의**: 우리는 위 링크를 하드코딩할 수 있지만(예: `<a href="/catalog/">Home</a>`), 그렇게 하면 만약에 우리가 홈페이지를 바꿨을 때 (예: `/catalog/index`로 바꿨을 때) 탬플릿들은 더이상 알맞게 링크되지 않습니다. 반전된 url 매핑을 사용하는 것이 훨씬 유연하고 강력합니다.
+> [!NOTE]
+> **주의**: 우리는 위 링크를 하드코딩할 수 있지만(예: `<a href="/catalog/">Home</a>`), 그렇게 하면 만약에 우리가 홈페이지를 바꿨을 때 (예: `/catalog/index`로 바꿨을 때) 탬플릿들은 더이상 알맞게 링크되지 않습니다. 반전된 url 매핑을 사용하는 것이 훨씬 유연하고 강력합니다.
 
 ### View (함수-기반의)
 
@@ -208,7 +211,8 @@ view 함수의 마지막에선 HTML 페이지를 생성하고 이 페이지를 �
 
 우리는 아래 코드 조각을 LocalLibrary 웹사이트의 베이스 탬플릿으로 사용할 것입니다. 보시는 바와 같이, 이것은 HTML 코드를 조금 포함하고 `title`, `sidebar` 그리고 `content` 블럭을 정의합니다. 우리는 기본 제목과 모든 책들 및 저자들에 대한 링크를 갖고 있는 기본 사이드바를 갖고 있습니다. 둘 다 미래에 쉽게 변경하기 위해 블럭들 안에 묶여 있습니다.
 
-> **참고:** **주의**: 우리는 또한 두 개의 추가적인 탬플릿 태그를 소개합니다: `url` 과 `load static`. 이 태그들은 아래 섹션들에서 설명될 것입니다.
+> [!NOTE]
+> **주의**: 우리는 또한 두 개의 추가적인 탬플릿 태그를 소개합니다: `url` 과 `load static`. 이 태그들은 아래 섹션들에서 설명될 것입니다.
 
 새로운 파일 **base_generic.html** 을 **/locallibrary/catalog/templates/_base_generic.html_** 경로 안에 생성해서 아래 코드를 파일에 복사 붙여넣기 하세요:
 
@@ -316,7 +320,8 @@ return render(request, 'index.html', context=context)
   style="width:555px;height:540px;" />
 ```
 
-> **참고:** **주의**: 위의 샘플은 파일들의 위치를 특정하지만, 장고는 기본적으로 파일을 제공하지 않습니다. 우리는 우리가 웹사이트 뼈대를 생성했을 때([created the website skeleton](/ko/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website)) 전역 URL 매퍼(/locallibrary/locallibrary/urls.py)를 수정하여 개발 웹 서버가 파일을 제공하도록 설정했습니다만, 제품화되었을(in production)때도 파일을 제공할 수 있어야 합니다. 이것에 관해 차후에 다루겠습니다.
+> [!NOTE]
+> **주의**: 위의 샘플은 파일들의 위치를 특정하지만, 장고는 기본적으로 파일을 제공하지 않습니다. 우리는 우리가 웹사이트 뼈대를 생성했을 때([created the website skeleton](/ko/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website)) 전역 URL 매퍼(/locallibrary/locallibrary/urls.py)를 수정하여 개발 웹 서버가 파일을 제공하도록 설정했습니다만, 제품화되었을(in production)때도 파일을 제공할 수 있어야 합니다. 이것에 관해 차후에 다루겠습니다.
 
 정적 파일들로 작업하는 것에 대한 더 많은 정보는 장고 문서 안의 [Managing static files](https://docs.djangoproject.com/en/2.0/howto/static-files/) 를 참고하세요.
 
@@ -369,7 +374,8 @@ TEMPLATES = [
 
 1. LocalLibrary 기본 탬플릿([base template](#the_locallibrary_base_template))에는 `title` 블록이 정의되어 있습니다. 색인 탬플릿([index template](#the_index_template)) 안에 이 블록을 덮어쓰기하고 페이지를 위한 새로운 제목을 만들어 보세요.
 
-   > **참고:** **힌트:** [Extending templates](#extending_templates) 섹션은 블럭(block)을 생성하고 다른 탬플릿에서 블럭을 확장(extend)하는 방법을 설명합니다.
+   > [!NOTE]
+   > **힌트:** [Extending templates](#extending_templates) 섹션은 블럭(block)을 생성하고 다른 탬플릿에서 블럭을 확장(extend)하는 방법을 설명합니다.
 
 2. 대소문자 구분 없이 특정한 단어를 포함하는 장르와 책들의 개수(count)를 생성하도록 [view](<#View_(function-based)>) 를 수정하고, 결과를 `context`에 전달해 보세요. 이것은 `num_books`와 `num_instances_available`을 생성하고 사용하는 것과 비슷한 방법으로 달성할 수 있습니다. 그리고 나서 이 변수들을 포함시키기 위해 [index template](#the_index_template) 를 업데이트 하세요.
 
@@ -388,4 +394,4 @@ TEMPLATES = [
 - [Managing static files](https://docs.djangoproject.com/en/2.0/howto/static-files/) (Django docs)
 - [Django shortcut functions](https://docs.djangoproject.com/en/2.0/topics/http/shortcuts/#django.shortcuts.render) (Django docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn_web_development/Extensions/Server-side/Django")}}

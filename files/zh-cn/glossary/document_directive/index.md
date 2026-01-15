@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
-{{GlossarySidebar}}
-
 {{Glossary("CSP", "内容安全策略")}}中，**文档指令**（document directive）用于 {{HTTPHeader("Content-Security-Policy")}} 标头，并管理应用安全策略的文档或 [worker](/zh-CN/docs/Web/API/Web_Workers_API) 运行环境的属性。
 
 文档指令不将 {{CSP("default-src")}} 指令作为回退机制。

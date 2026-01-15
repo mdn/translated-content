@@ -1,23 +1,22 @@
 ---
-title: window.parent
+title: "Window: parent プロパティ"
+short-title: parent
 slug: Web/API/Window/parent
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{ APIRef() }}
+{{APIRef}}
 
-## 概要
-
-現在のウィンドウ、または、サブフレームの親ウィンドウへの参照を返します。
+**`Window.parent`** プロパティは、現在のウィンドウ、または、サブフレームの親への参照を返します。
 
 ウィンドウが親を持たない場合、`parent` プロパティは、それ自身への参照となります。
 
 ウィンドウが {{htmlelement("iframe")}} 、{{htmlelement("object")}} 、あるいは、{{htmlelement("frame")}} で読み込まれた場合、その親ウィンドウは、ウィンドウを埋め込んだ要素が存在するウィンドウとなります。
 
-## 構文
+## 値
 
-```
-parentWindow = window.parent
-```
+`Window` または {{htmlelement("iframe")}} です。
 
 ## 例
 
@@ -29,7 +28,11 @@ if (window.parent !== window.top) {
 
 ## 仕様書
 
-- [HTML Standard](https://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#dom-parent)
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
 
 ## 関連情報
 

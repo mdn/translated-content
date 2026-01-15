@@ -32,10 +32,10 @@ Plus de détails dans [cet article](https://hacks.mozilla.org/2013/11/firefox-de
 
 ### HTML
 
-- La valeur `color` de l'attribut {{HTMLElement("input")}} [`type`](/fr/docs/Web/HTML/Element/input#type) a été implémentée sur les plates-formes de bureau. Il était déjà disponible sur les mobiles.
-- La directive `allow-popups` est désormais prise en charge avec l'attribut [`sandbox`](/fr/docs/Web/HTML/Element/iframe#sandbox) de l'élément {{HTMLElement("iframe")}} ([bug Firefox 766282](https://bugzil.la/766282)).
+- La valeur `color` de l'attribut {{HTMLElement("input")}} [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) a été implémentée sur les plates-formes de bureau. Il était déjà disponible sur les mobiles.
+- La directive `allow-popups` est désormais prise en charge avec l'attribut [`sandbox`](/fr/docs/Web/HTML/Reference/Elements/iframe#sandbox) de l'élément {{HTMLElement("iframe")}} ([bug Firefox 766282](https://bugzil.la/766282)).
 - Le mélange d'éléments HTML à l'aide de la propriété {{cssxref("mix-blend-mode")}} a été implémenté. La préférence `layout.css.mix-blend-mode.enabled` doit être définie sur `true` ([bug Firefox 902525](https://bugzil.la/902525)).
-- L'attribut [`typemustmatch`](/fr/docs/Web/HTML/Element/object#typemustmatch) de l'élément {{HTMLElement("object")}} est désormais pris en charge ([bug Firefox 827160](https://bugzil.la/827160)).
+- L'attribut [`typemustmatch`](/fr/docs/Web/HTML/Reference/Elements/object#typemustmatch) de l'élément {{HTMLElement("object")}} est désormais pris en charge ([bug Firefox 827160](https://bugzil.la/827160)).
 
 ### JavaScript
 

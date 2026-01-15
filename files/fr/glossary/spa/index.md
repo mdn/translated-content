@@ -12,7 +12,7 @@ Cela permet donc aux utilisateurs d'utiliser des sites web sans charger de nouve
 ## Voir aussi
 
 - [Application web monopage](https://fr.wikipedia.org/wiki/Application_web_monopage) sur Wikipédia
-- [Comprendre les frameworks JavaScript côté client](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
+- [Comprendre les frameworks JavaScript côté client](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
 - [Glossaire](/fr/docs/Glossary)
   - [API](/fr/docs/Glossary/API)
   - [AJAX](/fr/docs/Glossary/AJAX)

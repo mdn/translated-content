@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}
 
 이 글에서는 화면 크기, 해상도 및 기타 기능이 매우 다양한 기기에서 잘 작동하는 이미지인 반응형 이미지의 개념에 대해 알아보고 이를 구현하는 데 도움이 되는 HTML이 제공하는 도구를 살펴봅니다. 이를 통해 다양한 기기에서 성능을 개선할 수 있습니다. 반응형 이미지는 [반응형 디자인](/ko/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)의 한 부분일 뿐이며, 향후 학습해야 할 CSS 주제입니다.
 
@@ -176,7 +176,8 @@ img {
 
 ![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](picture-element-wide.png)![Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen](picture-element-narrow.png)
 
-> **참고:** `media` 속성은 아트 디렉션 시나리오에서만 사용해야 하며, `media`를 사용하는 경우 `sizes` 속성 내에 미디어 조건도 제공하지 마세요.
+> [!NOTE]
+> `media` 속성은 아트 디렉션 시나리오에서만 사용해야 하며, `media`를 사용하는 경우 `sizes` 속성 내에 미디어 조건도 제공하지 마세요.
 
 ### CSS나 JavaScript를 사용하면 안 되는 이유는 무엇인가요?
 
@@ -209,4 +210,4 @@ img {
 - {{htmlelement("picture")}}
 - {{htmlelement("source")}}
 
-{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}

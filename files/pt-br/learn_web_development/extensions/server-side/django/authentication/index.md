@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Authentication
 original_slug: Learn/Server-side/Django/Authentication
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Neste tutorial, mostraremos como permitir que os usuários efetuem login no seu site com suas próprias contas e como controlar o que eles podem fazer e ver com base em se eles estão ou não conectados e em suas permissões. Como parte desta demonstração, estenderemos o [LocalLibrary](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) website, adicionando páginas de login e logout e páginas específicas do usuário e da equipe para visualizar os livros emprestados.
 
@@ -14,7 +14,7 @@ Neste tutorial, mostraremos como permitir que os usuários efetuem login no seu 
       <th scope="row">Pré-requisitos:</th>
       <td>
         Conclua todos os tópicos do tutorial anterior, incluindo
-        <a href="/pt-BR/docs/Learn/Server-side/Django/Sessions"
+        <a href="/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Sessions"
           >Django Tutorial Part 7: Sessions framework</a
         >.
       </td>
@@ -122,7 +122,8 @@ Nesta seção, mostramos como integrar o sistema padrão no site _LocalLibrary_ 
 > [!NOTE]
 > Você não precisa usar nenhum desses códigos, mas é provável que queira, porque isso facilita muito as coisas. Você quase certamente precisará alterar o código de manipulação de formulários se alterar seu modelo de usuário (um tópico avançado!), Mas, mesmo assim, ainda poderá usar as funções padrão das views.
 
-> **Nota:**Nesse caso, poderíamos colocar razoavelmente as páginas de autenticação, incluindo os URLs e modelos, dentro do nosso aplicativo de catálogo. No entanto, se tivéssemos vários aplicativos, seria melhor separar esse comportamento de login compartilhado e disponibilizá-lo em todo o site, e é isso que mostramos aqui!
+> [!NOTE]
+> Nesse caso, poderíamos colocar razoavelmente as páginas de autenticação, incluindo os URLs e modelos, dentro do nosso aplicativo de catálogo. No entanto, se tivéssemos vários aplicativos, seria melhor separar esse comportamento de login compartilhado e disponibilizá-lo em todo o site, e é isso que mostramos aqui!
 
 ### URLs do Projeto
 
@@ -137,7 +138,8 @@ urlpatterns += [
 
 Navegue até URL `http://127.0.0.1:8000/accounts/` (observe a barra à direita!) e o Django mostrará um erro que não foi possível encontrar esse URL e listará todos os URLs que ele tentou. A partir disso, você pode ver os URLs que funcionarão, por exemplo:
 
-> **Nota:**O uso do método acima adiciona os seguintes URLs com nomes entre colchetes, que podem ser usados para reverter os mapeamentos de URL. Você não precisa implementar mais nada - o mapeamento de URL acima mapeia automaticamente os URLs mencionados abaixo.
+> [!NOTE]
+> O uso do método acima adiciona os seguintes URLs com nomes entre colchetes, que podem ser usados para reverter os mapeamentos de URL. Você não precisa implementar mais nada - o mapeamento de URL acima mapeia automaticamente os URLs mencionados abaixo.
 >
 > ```python
 > accounts/ login/ [name='login']
@@ -186,7 +188,8 @@ TEMPLATES = [
 
 ### Template de login
 
-> **Aviso:** **Importante**: Os modelos de autenticação fornecidos neste artigo são uma versão muito básica/ligeiramente modificada dos modelos de login de demonstração do Django. Pode ser necessário personalizá-los para seu próprio uso!
+> [!WARNING]
+> **Importante**: Os modelos de autenticação fornecidos neste artigo são uma versão muito básica/ligeiramente modificada dos modelos de login de demonstração do Django. Pode ser necessário personalizá-los para seu próprio uso!
 
 Crie um novo arquivo HTML chamado **/locallibrary/templates/registration/login.html** e forneça o seguinte conteúdo:
 
@@ -685,7 +688,8 @@ No início deste artigo, mostramos como criar uma página para o usuário atual,
 
 Você deve seguir o mesmo padrão da outra view. A principal diferença é que você precisará restringir a visualização apenas a bibliotecários. Você pode fazer isso com base no fato de o usuário ser um membro da equipe (decorator da função: `staff_member_required`, variável do template: `user.is_staff`) mas recomendamos que você use a permissão `can_mark_returned` e `PermissionRequiredMixin`, conforme descrito na seção anterior.
 
-> **Aviso:** **Importante**: Lembre-se de não usar seu superusuário para testes baseados em permissões (as verificações de permissão sempre retornam verdadeiras para os superusuários, mesmo que uma permissão ainda não tenha sido definida!). Em vez disso, crie um usuário bibliotecário e adicione o recurso necessário.
+> [!WARNING]
+> **Importante**: Lembre-se de não usar seu superusuário para testes baseados em permissões (as verificações de permissão sempre retornam verdadeiras para os superusuários, mesmo que uma permissão ainda não tenha sido definida!). Em vez disso, crie um usuário bibliotecário e adicione o recurso necessário.
 
 Quando terminar, sua página será semelhante à captura de tela abaixo.
 
@@ -703,4 +707,4 @@ Em nosso próximo artigo, veremos como você pode usar os formulários Django pa
 - [Usando o sistema (default) de Autenticação do Django](https://docs.djangoproject.com/en/2.1/topics/auth/default//) (Django docs)
 - [Introdução a views baseadas em classe > Decorating class-based views](https://docs.djangoproject.com/en/2.1/topics/class-based-views/intro/#decorating-class-based-views) (Django docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django")}}

@@ -24,7 +24,8 @@ JavaScript와 [Java 프로그래밍 언어](<https://ko.wikipedia.org/wiki/%EC%9
 
 JavaScript 사양과 관련 기술에 대한 자세한 내용은 [JavaScript 기술 개요](/ko/docs/Web/JavaScript/Reference/JavaScript_technologies_overview)를 참조하세요.
 
-> **알림:** **프론트 엔드 웹 개발자가 되고 싶으신가요?**
+> [!CALLOUT]
+> **프론트 엔드 웹 개발자가 되고 싶으신가요?**
 >
 > 목표 달성에 필요한 모든 필수 정보가 포함된 과정을 마련했습니다.
 >

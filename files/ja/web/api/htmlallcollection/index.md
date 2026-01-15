@@ -55,7 +55,7 @@ if (document.all) {
 しかし、他のすべてのコンテキストでは `document.all` はオブジェクトのままです。例えば次の通りです。
 
 - これは `undefined` や `null` と[厳密等価](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality)ではありません。
-- [null 合体演算子](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) (`??`) や[オプショナルチェーン演算子](/ja/docs/Web/JavaScript/Reference/Operators/Optional_chaining) (`?.`) の左辺に使用しても、式が短絡することはありません。
+- [ヌル値合体演算子](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) (`??`) や[オプショナルチェーン演算子](/ja/docs/Web/JavaScript/Reference/Operators/Optional_chaining) (`?.`) の左辺に使用しても、式が短絡することはありません。
 
 ## 仕様書
 

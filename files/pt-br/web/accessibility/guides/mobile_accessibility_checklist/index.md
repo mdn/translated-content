@@ -61,6 +61,8 @@ Este documento contém uma lista concisa de requisitos para desenvolvedores de a
 - Eventos de toque só **DEVEM** ser ativados no evento `touchend`.
 - Alvos tocáveis **DEVEM** ser largos o suficiente para o usuário interagir (veja o [BBC Mobile Accessibility Guidelines](https://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size) para ver as _guidelines_ sobre tamanhos de alvos tocáveis .)
 
-> **Nota:** [Tanaguru's automated accessibility testing service](http://www.tanaguru.com/) fornece uma maneira útil para descobrir alguns erros de acessibilidade que ocorrem em páginas web, ou instalando aplicativos web (ex: Firefox OS.) Você pode encontrar mais sobre a técnica de implementação do Tanaguru, como também contribuir para o projeto [tanaguru.org](http://tanaguru.org/).
+> [!NOTE]
+> [Tanaguru's automated accessibility testing service](http://www.tanaguru.com/) fornece uma maneira útil para descobrir alguns erros de acessibilidade que ocorrem em páginas web, ou instalando aplicativos web (ex: Firefox OS.) Você pode encontrar mais sobre a técnica de implementação do Tanaguru, como também contribuir para o projeto [tanaguru.org](http://tanaguru.org/).
 
-> **Nota:** [A versão original desse documento](http://yzen.github.io/2014/04/30/mobile-accessibility-checklist.html) foi escrita por [Yura Zenevich](http://yzen.github.io/).
+> [!NOTE]
+> [A versão original desse documento](http://yzen.github.io/2014/04/30/mobile-accessibility-checklist.html) foi escrita por [Yura Zenevich](http://yzen.github.io/).

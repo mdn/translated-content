@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 45268b07c84a04b45d46bcdf104e2b33be00adcf
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout")}}
 
 CSS 그리드 레이아웃은 웹페이지를 위한 이차원 레이아웃 시스템입니다. 이 기능을 통해 콘텐츠를 행과 열에 배치할 수 있으며 복잡한 레이아웃을 직접 직관적으로 구축할 수 있는 많은 기능이 있습니다. 이 글은 페이지 레이아웃을 시작하기 위해 필요한 모든 것을 알려드립니다.
 
@@ -166,7 +166,8 @@ body {
 
 {{ EmbedLiveSample('Flexible_grids_with_the_fr_unit', '100%', 400) }}
 
-> **참고:** `fr` 단위는 _전체_ 공간이 아닌 _이용 가능한_ 공간을 분배합니다. 따라서 당신의 트랙 중 하나가 자기 내부에 뭔가 큰 공간을 차지한다면 공유할 수 있는 여유 공간이 줄어들 것입니다.
+> [!NOTE]
+> `fr` 단위는 _전체_ 공간이 아닌 _이용 가능한_ 공간을 분배합니다. 따라서 당신의 트랙 중 하나가 자기 내부에 뭔가 큰 공간을 차지한다면 공유할 수 있는 여유 공간이 줄어들 것입니다.
 
 ### 트랙 사이 간격
 
@@ -219,7 +220,8 @@ body {
 
 {{ EmbedLiveSample('Gaps_between_tracks', '100%', 400) }}
 
-> **참고:** `gap` 속성(`column-gap`, `row-gap`, `gap`)은 예전에는 `grid-` 접두사를 사용하곤 했습니다. 사양은 변경되었지만 접두사가 붙은 버전은 별칭으로 유지됩니다. 안전을 보장하고 코드의 보안을 강화하려면 두 속성을 모두 추가할 수 있습니다.
+> [!NOTE]
+> `gap` 속성(`column-gap`, `row-gap`, `gap`)은 예전에는 `grid-` 접두사를 사용하곤 했습니다. 사양은 변경되었지만 접두사가 붙은 버전은 별칭으로 유지됩니다. 안전을 보장하고 코드의 보안을 강화하려면 두 속성을 모두 추가할 수 있습니다.
 >
 > ```css
 > .container {
@@ -367,7 +369,7 @@ body {
 
 ## 라인 기반 배치
 
-이제 우리는 그리드를 만드는 것에서 그리드에 사물을 배치하는 것으로 넘어갑니다. 우리의 그리드에는 항상 라인이 있으며, 이 라인은 1에서 시작하며, 문서의 [CSS Writing Modes](/ko/docs/Web/CSS/CSS_writing_modes)와 관련이 있습니다. 예를 들어 영어(왼쪽에서 오른쪽으로 작성)의 경우 그리드의 왼쪽에 열 1줄이 있고 상단에 행 1줄이 있으며, 아랍어(오른쪽에서 왼쪽으로 작성)의 경우 열 1줄이 오른쪽에 있습니다.
+이제 우리는 그리드를 만드는 것에서 그리드에 사물을 배치하는 것으로 넘어갑니다. 우리의 그리드에는 항상 라인이 있으며, 이 라인은 1에서 시작하며, 문서의 [CSS Writing Modes](/ko/docs/Web/CSS/Guides/Writing_modes)와 관련이 있습니다. 예를 들어 영어(왼쪽에서 오른쪽으로 작성)의 경우 그리드의 왼쪽에 열 1줄이 있고 상단에 행 1줄이 있으며, 아랍어(오른쪽에서 왼쪽으로 작성)의 경우 열 1줄이 오른쪽에 있습니다.
 
 시작 라인과 끝 라인을 지정하여 이 라인에 따라 사물을 정렬할 수 있습니다. 다음 속성을 사용하여 이 작업을 수행합니다.
 
@@ -704,9 +706,9 @@ aside {
 
 ## 참조 항목
 
-- [CSS 그리드 안내서](/ko/docs/Web/CSS/CSS_grid_layout#guides)
+- [CSS 그리드 안내서](/ko/docs/Web/CSS/Guides/Grid_layout#guides)
 - [CSS 그리드 검사기: Examine grid layouts](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
 - [CSS-Tricks Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) : 그리드에 대한 모든 것을 시각적으로 알기 쉽게 설명하는 글
 - [Grid Garden](https://cssgridgarden.com/) : 그리드의 기본을 배우고 더 잘 이해할 수 있는 교육용 게임입니다.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout")}}

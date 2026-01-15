@@ -72,7 +72,8 @@ new Intl.DateTimeFormat(locales, options);
         - "`medium`"
         - "`short`"
 
-        > **참고:** `dateStyle`은 `timeStyle`과 함께 사용할 수 있지만, 다른 옵션인 `weekday`, `hour`, `month` 등과는 함께 사용할 수 없습니다.
+        > [!NOTE]
+        > `dateStyle`은 `timeStyle`과 함께 사용할 수 있지만, 다른 옵션인 `weekday`, `hour`, `month` 등과는 함께 사용할 수 없습니다.
 
     - `timeStyle`
       - : `format()`을 호출했을 때 사용할 시간 서식입니다. 가능한 값은 다음을 포함합니다.
@@ -81,7 +82,8 @@ new Intl.DateTimeFormat(locales, options);
         - "`medium`"
         - "`short`"
 
-        > **참고:** `timeStyle`은 `dateStyle`과 함께 사용할 수 있지만, 다른 옵션인 `weekday`, `hour`, `month` 등과는 함께 사용할 수 없습니다.
+        > [!NOTE]
+        > `timeStyle`은 `dateStyle`과 함께 사용할 수 있지만, 다른 옵션인 `weekday`, `hour`, `month` 등과는 함께 사용할 수 없습니다.
 
     - `calendar`
       - : 역법입니다. "`buddhist`",

@@ -12,7 +12,7 @@ Maintenant que notre programme peut faire tourner un cube 3D, appliquons lui une
 La première chose à faire est d'ajouter le code pour charger les textures. Dans notre cas, nous utiliserons une texture unique, appliquée à chacune des six faces de notre cube en rotation ; mais la même technique peut être utilisée un nombre quelconque de textures.
 
 > [!NOTE]
-> Il est important de noter que le chargement des textures suit les [règles inter-domaines](/fr/docs/Web/HTTP/CORS) donc vous pouvez seulement charger des textures depuis les sites pour lesquels votre contenu a l'approbation CORS. Voir les textures inter-domaines ci-dessous pour plus de détails.
+> Il est important de noter que le chargement des textures suit les [règles inter-domaines](/fr/docs/Web/HTTP/Guides/CORS) donc vous pouvez seulement charger des textures depuis les sites pour lesquels votre contenu a l'approbation CORS. Voir les textures inter-domaines ci-dessous pour plus de détails.
 
 Le code qui charge la texture ressemble à ce qui suit&nbsp;:
 
@@ -294,7 +294,7 @@ Arrivés ce point, le cube en rotation devrait être prêt à fonctionner.
 
 ## Textures inter-domaines
 
-Le chargement des textures WebGL est soumis aux contrôles d'accès inter-domaines. Pour que votre contenu puisse charger une texture d'un autre domaine, une approbation CORS doit être obtenue. Voir le [Contrôle d'accès HTTP](/fr/docs/Web/HTTP/CORS) pour plus de détails sur CORS.
+Le chargement des textures WebGL est soumis aux contrôles d'accès inter-domaines. Pour que votre contenu puisse charger une texture d'un autre domaine, une approbation CORS doit être obtenue. Voir le [Contrôle d'accès HTTP](/fr/docs/Web/HTTP/Guides/CORS) pour plus de détails sur CORS.
 
 Voir cet [article sur hacks.mozilla.org](https://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) pour une explication de l'utilisation des images approuvées CORS comme textures WebGL, avec [un exemple complet](https://people.mozilla.org/~bjacob/webgltexture-cors-js.html).
 

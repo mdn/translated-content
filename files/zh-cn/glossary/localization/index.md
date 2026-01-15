@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5f5daffff583dffcf4650a8812bc228807a1b34d
 ---
 
-{{GlossarySidebar}}
-
 **本地化**（l10n）是使软件用户界面适应特定文化环境的过程。
 
 以下是本地化过程中经常考虑的因素：

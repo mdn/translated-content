@@ -18,7 +18,8 @@ fetch(url).then(function (response) {
 
 Pour des opérations plus complexes, il faut utiliser {{domxref("Cache.put","Cache.put()")}} directement.
 
-> **Note :** `add()` écrasera toute paire clé/valeur précedemment stockée en cache et qui correspond à la requête.
+> [!NOTE]
+> `add()` écrasera toute paire clé/valeur précedemment stockée en cache et qui correspond à la requête.
 
 ## Syntaxe
 

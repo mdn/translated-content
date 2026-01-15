@@ -2,26 +2,24 @@
 title: for...of
 slug: Web/JavaScript/Reference/Statements/for...of
 l10n:
-  sourceCommit: 3f91fdcc678991410f4f5adcbff44d1b3b1ede88
+  sourceCommit: b6a36de3428f4b42c7707c8f190a349db13bf531
 ---
-
-{{jsSidebar("Statements")}}
 
 **`for...of`** 文は、[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)をソースとした一連の値を処理するループを実行します。反復可能オブジェクトには、
 たとえば組み込みの {{jsxref("Array")}}, {{jsxref("String")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{domxref("NodeList")}}（およびその他の DOM コレクション）、同様に {{jsxref("Functions/arguments", "arguments")}} オブジェクトや、[ジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/function*)から生成される[ジェネレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Generator)、ユーザー定義の反復可能オブジェクトなどがあります。
 
-{{InteractiveExample("JavaScript デモ: Statement - For...Of")}}
+{{InteractiveExample("JavaScript デモ: for...of 文")}}
 
 ```js interactive-example
-const array1 = ["a", "b", "c"];
+const array = ["a", "b", "c"];
 
-for (const element of array1) {
+for (const element of array) {
   console.log(element);
 }
 
-// Expected output: "a"
-// Expected output: "b"
-// Expected output: "c"
+// 予想される結果: "a"
+// 予想される結果: "b"
+// 予想される結果: "c"
 ```
 
 ## 構文
@@ -32,7 +30,7 @@ for (variable of iterable)
 ```
 
 - `variable`
-  - : 反復処理の各回において、一連のデータから値を受け取ります。[`const`](/ja/docs/Web/JavaScript/Reference/Statements/const), [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let), [`var`](/ja/docs/Web/JavaScript/Reference/Statements/var) の何れかで定義されたものか、[代入](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)のターゲットとなります（以前に宣言した変数や、オブジェクトプロパティ、[構造分解パターン](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)など）。`var` で宣言された変数はループのローカル変数ではなく、すなわち `for...of` ループと同じスコープになります。
+  - : 反復処理の各回において、一連のデータから値を受け取ります。[`const`](/ja/docs/Web/JavaScript/Reference/Statements/const), [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let), [`var`](/ja/docs/Web/JavaScript/Reference/Statements/var), [`using`](/ja/docs/Web/JavaScript/Reference/Statements/using), [`await using`](/ja/docs/Web/JavaScript/Reference/Statements/await_using) の何れかで定義されたものか、[代入](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)のターゲットとなります（以前に宣言した変数や、オブジェクトプロパティ、[構造分解パターン](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)など）。`var` で宣言された変数はループのローカル変数にはなりません。すなわち `for...of` ループと同じスコープになります。
 - `iterable`
   - : 反復可能オブジェクトです。ループを実行する一連の値の元となるものです。
 - `statement`
@@ -68,6 +66,17 @@ for (let value of iterable) {
 > [!NOTE]
 > 反復処理ごとに新しい変数が作成されます。ループ本体内で変数を再代入しても、反復可能オブジェクト（この場合は配列）の元の値には影響しません。
 
+{{jsxref("Statements/using", "using")}} または {{jsxref("Statements/await_using", "await using")}} 宣言を使用して宣言された変数は、ループの反復が完了するたびに破棄されます（また、`await using` は反復の終了時に暗黙の `await` を発生させます）。ただし、ループが早期終了した場合、イテレーター内に残っている未訪問の値は破棄されません（現在の値は破棄されます）。
+
+```js
+const resources = [dbConnection1, dbConnection2, dbConnection3];
+
+for (using dbConnection of resources) {
+  dbConnection.query("...");
+  // dbConnection はここで破棄される
+}
+```
+
 [構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)を使用して複数のローカル変数に代入することもできますし、 `for (x.y of iterable)` のようなプロパティアクセサーを使用して、オブジェクトプロパティに値を代入することもできます。
 
 しかし、特別なルールにより、変数名として `async` を使用することは禁じられています。これは無効な構文です。
@@ -78,6 +87,14 @@ for (async of [1, 2, 3]); // SyntaxError: The left-hand side of a for-of loop ma
 ```
 
 これは、[`for`](/ja/docs/Web/JavaScript/Reference/Statements/for) ループである有効なコード `for (async of => {};)` との構文のあいまいさを避けるためです。
+
+同様に、`using` 宣言を使用する場合、変数に `of` と名付けることはできません。
+
+```js-nolint example-bad
+for (using of of []); // SyntaxError
+```
+
+これは、`using` が導入される前に有効だったコード `for (using of [])` との構文上の曖昧さを避けるためです。
 
 ## 例
 

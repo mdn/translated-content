@@ -17,7 +17,7 @@ Plus généralement, ces fils créés par le système d'exploitation sont extrê
 
 ## Voir aussi
 
-- [JavaScript asynchrone](/fr/docs/Learn/JavaScript/Asynchronous)
+- [JavaScript asynchrone](/fr/docs/Learn_web_development/Extensions/Async_JS)
 - [API Web worker](/fr/docs/Web/API/Web_Workers_API)
 - [API Service worker](/fr/docs/Web/API/Service_Worker_API)
 - [Fil d'exécution principal (entrée du glossaire)](/fr/docs/Glossary/Main_thread)

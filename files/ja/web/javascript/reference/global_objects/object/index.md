@@ -2,22 +2,20 @@
 title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`Object`** 型は [JavaScript のデータ型](/ja/docs/Web/JavaScript/Guide/Data_structures)の一つを表します。これは様々なキー付きコレクションとより複雑な実態を格納するために使用されます。 Object は {{jsxref("Object/Object", "Object()")}} コンストラクターまたは[オブジェクト初期化子/リテラル構文](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)を使用して生成することができます。
+**`Object`** 型は [JavaScript のデータ型](/ja/docs/Web/JavaScript/Guide/Data_structures)の一つを表します。これは様々なキー付きコレクションとより複雑な実体を格納するために使用されます。 Object は {{jsxref("Object/Object", "Object()")}} コンストラクターまたは[オブジェクト初期化子/リテラル構文](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)を使用して生成することができます。
 
 ## 解説
 
-JavaScript のほぼすべての[オブジェクト](/ja/docs/Web/JavaScript/Guide/Data_structures#オブジェクト)が `Object` のインスタンスです。一般的なオブジェクトは、プロパティを (メソッドを含めて) `Object.prototype` から継承していますが、これらのプロパティはシャドウ化 (別名オーバーライド) されている場合があります。 `Object.prototype` を継承しないオブジェクトは、 [`null` プロトタイプ](#null-プロトタイプオブジェクト)を持つオブジェクトか、その他の `null` プロトタイプオブジェクトの子孫だけです。
+JavaScript のほぼすべての[オブジェクト](/ja/docs/Web/JavaScript/Guide/Data_structures#オブジェクト)が `Object` のインスタンスです。一般的なオブジェクトは、プロパティを（メソッドを含めて） `Object.prototype` から継承していますが、これらのプロパティはシャドウ化（別名オーバーライド）されている場合があります。 `Object.prototype` を継承しないオブジェクトは、 [`null` プロトタイプ](#null-プロトタイプオブジェクト)を持つオブジェクトか、その他の `null` プロトタイプオブジェクトの子孫だけです。
 
-`Object` プロトタイプオブジェクトへの変更は、その変更の対象となるプロパティやメソッドがプロトタイプチェーンに沿ってさらにオーバーライドされない限り、プロトタイプチェーンを通して**すべての**オブジェクトに反映されます。これはとても強力ですが、オブジェクトの動作をオーバーライドしたり拡張したりするのは潜在的に危険をはらむ仕組みでもあります。より安全にするために、 `Object.prototype` は JavaScript のコア言語で唯一、[不変のプロトタイプ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf#解説)を持つオブジェクトです。 `Object.prototype` のプロトタイプは常に `null` であり、変更できません。
+`Object.prototype` オブジェクトへの変更は、その変更の対象となるプロパティやメソッドがプロトタイプチェーンに沿ってさらにオーバーライドされない限り、プロトタイプチェーンを通して**すべての**オブジェクトに反映されます。これはとても強力ですが、オブジェクトの動作をオーバーライドしたり拡張したりするのは潜在的に危険をはらむ仕組みでもあります。より安全にするために、 `Object.prototype` は JavaScript のコア言語で唯一、[不変のプロトタイプ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf#解説)を持つオブジェクトです。 `Object.prototype` のプロトタイプは常に `null` であり、変更できません。
 
 ### Object の prototype プロパティ
 
-インスタンスから `Object.prototype` メソッドを直接呼び出すことは避けるべきです。特に、多態性が意図されていないメソッド（つまり、初期の動作だけが意味を持ち、子孫オブジェクトが意味のある方法でそれを上書きすることはできないメソッド）は避けるべきです。 `Object.prototype` から子孫するすべてのオブジェクトは、同じ名前を持つが、期待するものとはまったく異なる意味づけを持つ、カスタムの自分自身でプロパティを定義することができます。さらに、これらのプロパティは [`null` プロトタイプオブジェクト](#null_プロトタイプオブジェクト)には継承されません。オブジェクトを作業するための現行の JavaScript ユーティリティはすべて[静的](#静的メソッド)です。もっと具体的には、次の通りです。
+インスタンスから `Object.prototype` のメソッドを直接呼び出すことは避けるべきです。特に、多態性が意図されていないメソッド（つまり、初期の動作だけが意味を持ち、子孫オブジェクトが意味のある方法でそれを上書きすることはできないメソッド）は避けるべきです。 `Object.prototype` から子孫するすべてのオブジェクトは、同じ名前を持つが、期待するものとはまったく異なる意味づけを持つ、カスタムの自分自身でプロパティを定義することができます。さらに、これらのプロパティは [`null` プロトタイプオブジェクト](#null_プロトタイプオブジェクト)には継承されません。オブジェクトを作業するための現行の JavaScript ユーティリティはすべて[静的](#静的メソッド)です。もっと具体的には、次の通りです。
 
 - [`valueOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf)、[`toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toString)、[`toLocaleString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString) は多態的な実装として存在し、オブジェクトが賢明な振る舞いを持つ自分自身の実装を定義していることを期待する必要があるので、インスタンスメソッドとして呼び出すことができます。しかし、`valueOf()` と `toString()` は通常、[型変換](/ja/docs/Web/JavaScript/Guide/Data_structures#型変換)によって暗黙のうちに呼び出されるので、コードの中で自分で呼び出す必要はありません。
 - [`__defineGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)、[`__defineSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)、[`__lookupGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)、[`__lookupSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__) は非推奨であり、使用すべきではありません。代わりに静的な代替である {{jsxref("Object.defineProperty()")}} や {{jsxref("Object.getOwnPropertyDescriptor()")}} を使用してください。
@@ -301,13 +299,12 @@ const current = Object.prototype.valueOf;
 Object.prototype.valueOf = function (...args) {
   if (Object.hasOwn(this, "-prop-value")) {
     return this["-prop-value"];
-  } else {
-    // 私のオブジェクトのようには見えないので、現在の動作をできる限り再現して、
-    // 既定の動作にフォールバックします。
-    // apply は、他のいくつかの言語における "super" のような動作をします。
-    // valueOf() は引数を取りませんが、他のフックによっては取るかもしれません。
-    return current.apply(this, args);
   }
+  // 私のオブジェクトのようには見えないので、現在の動作をできる限り再現して、
+  // 既定の動作にフォールバックします。
+  // apply は、他のいくつかの言語における "super" のような動作をします。
+  // valueOf() は引数を取りませんが、他のフックによっては取るかもしれません。
+  return current.apply(this, args);
 };
 ```
 

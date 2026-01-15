@@ -92,7 +92,8 @@ hgroup p {
 
 ## 사용 일람
 
-> **참고:** `<hgroup>` 요소는 W3C HTML5 명세에서 제거되었고, WHATWG판 HTML에만 남아있습니다. 그러나 대부분의 브라우저에서 부분적으로 구현 중이므로 사라지지는 않을 것으로 보입니다.
+> [!NOTE]
+> `<hgroup>` 요소는 W3C HTML5 명세에서 제거되었고, WHATWG판 HTML에만 남아있습니다. 그러나 대부분의 브라우저에서 부분적으로 구현 중이므로 사라지지는 않을 것으로 보입니다.
 > 다만, `<hgroup>` 요소의 주요 목적이 [HTML 명세의 개요 알고리즘](/ko/docs/Web/HTML/HTML5_문서의_섹션과_윤곽)에서 제목의 표시 방법을 설정하기 위함이며, **어떠한 브라우저도 개요 알고리즘을 구현하지 않았음**을 고려할 때, `<hgroup>`의 의미는 이론적으로만 유효합니다.
 > W3C HTML5 명세에서 `<hgroup>` 없이 [부제, 보조 제목, 태그라인의 마크업 방법](https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#common-idioms-without-dedicated-elements)에 대한 조언을 제공하고 있습니다.
 

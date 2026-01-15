@@ -31,4 +31,4 @@ Aucun ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)
 
 ## Voir aussi
 
-- [Validation des contraintes](/fr/docs/Web/HTML/Constraint_validation)
+- [Validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation)

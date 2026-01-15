@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/skeleton_website
 original_slug: Learn/Server-side/Django/skeleton_website
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django")}}
 
 O segundo artigo do tutorial de Django mostra uma forma de criar o "esqueleto" de um website, permitindo que você possa ampliá-lo com caracteristicas especificas do site, caminhos (patchs), modelos (models), visualizações (views) e templates.
 
@@ -17,7 +17,7 @@ O segundo artigo do tutorial de Django mostra uma forma de criar o "esqueleto" d
           >Configurar um ambiente de desenvolvimento Django</a
         >. Ter lido
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website"
+          href="https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website"
           >Tutorial Django: Website de uma Biblioteca Local</a
         >.
       </td>
@@ -319,7 +319,8 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 ```
 
-> **Aviso:** **Importante**: Você precisará executar os comandos acima sempre que alterar seus models de uma forma que afete a estrutura de dados que precisa ser armazenada (incluindo adição e remoção de todos models e campos individuais).
+> [!WARNING]
+> **Importante**: Você precisará executar os comandos acima sempre que alterar seus models de uma forma que afete a estrutura de dados que precisa ser armazenada (incluindo adição e remoção de todos models e campos individuais).
 
 O comando `makemigrations` _cria_ (mas não aplica) as migrações para todos aplicativos instalados em seu projeto (você pode especificar o nome do aplicativo para executar apenas uma migração para um único projeto). Isso te permite checar o código para essas migrações antes delas serem aplicadas — quando você é experiente em Django, você pode escolher ajustá-los um pouco!
 
@@ -380,4 +381,4 @@ Como o escopo para o [website Local Library](/pt-BR/docs/Learn_web_development/E
 - [Codificando seu primeiro app Django - parte 1](https://docs.djangoproject.com/en/2.0/intro/tutorial01/) (Documentação Django)
 - [Aplicativos](https://docs.djangoproject.com/en/2.0/ref/applications/#configuring-applications) (Documentação Django). Contém informações de como configurar aplicativos.
 
-{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django")}}

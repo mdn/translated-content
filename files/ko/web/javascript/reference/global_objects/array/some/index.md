@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.some()
+short-title: some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
 ---
 
@@ -7,7 +8,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/some
 
 **`some()`** 메서드는 배열 안의 어떤 요소라도 주어진 판별 함수를 적어도 하나라도 통과하는지 테스트합니다. 만약 배열에서 주어진 함수가 true을 반환하면 true를 반환합니다. 그렇지 않으면 false를 반환합니다. 이 메서드는 배열을 변경하지 않습니다.
 
-{{InteractiveExample("JavaScript Demo: Array.some()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.some()")}}
 
 ```js interactive-example
 const array = [1, 2, 3, 4, 5];

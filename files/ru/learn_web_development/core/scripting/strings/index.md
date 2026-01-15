@@ -3,7 +3,7 @@ title: Работа с текстом — строки в JavaScript
 slug: Learn_web_development/Core/Scripting/Strings
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/Math", "Learn/JavaScript/Первые_шаги/Useful_string_methods", "Learn/JavaScript/Первые_шаги")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting/Useful_string_methods", "conflicting/Learn_web_development/Core/Scripting")}}
 
 Теперь мы обратим внимание на строки — в программировании так называют части текста. В этой статье мы рассмотрим все распространённые вещи, которые вы должны действительно знать о строках при изучении JavaScript, например, создание строк, экранирование кавычек в строках и объединение строк вместе.
 
@@ -142,7 +142,7 @@ button.onclick = function () {
 };
 ```
 
-{{ EmbedLiveSample('Конкатенация_строк_в_контексте', '100%', 50, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Конкатенация_строк_в_контексте', '100%', 50, , , , , 'allow-modals') }}
 
 Здесь мы используем функцию {{domxref ("Window.prompt ()", "Window.prompt ()")}} в строке 4, которая просит пользователя ответить на вопрос через всплывающее диалоговое окно, а затем сохраняет введённый текст внутри заданной переменной — в этом случае **`name`**. Затем мы используем функцию {{domxref ("Window.alert ()", "Window.alert ()")}} в строке 5 для отображения другого всплывающего окна, содержащего строку, которую мы собрали из двух строковых литералов и переменной `name`.
 
@@ -229,4 +229,4 @@ console.log(output);
 
 Итак, это основы строк, используемых в JavaScript. В следующей статье мы рассмотрим некоторые из встроенных методов, доступных для строк в JavaScript и то, как мы можем использовать их для управления нашими строками только в той форме, в которой мы хотим.
 
-{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/Math", "Learn/JavaScript/Первые_шаги/Useful_string_methods", "Learn/JavaScript/Первые_шаги")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting/Useful_string_methods", "conflicting/Learn_web_development/Core/Scripting")}}

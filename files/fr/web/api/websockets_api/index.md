@@ -45,7 +45,7 @@ L'**API WebSocket** est une technologie évoluée qui permet d'ouvrir un canal d
 
 ## Ressources liées
 
-- [AJAX](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [AJAX](/fr/docs/Learn_web_development/Core/Scripting/Network_requests)
 - [JavaScript](/fr/docs/Web/JavaScript)
 
 ## Spécifications

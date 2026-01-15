@@ -1,11 +1,10 @@
 ---
 title: Math.cosh()
+short-title: cosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cosh
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Math.cosh()`** は静的メソッドで、数値の双曲線余弦（ハイパーボリックコサイン）を返します。
 
@@ -19,16 +18,16 @@ l10n:
 
 ```js interactive-example
 console.log(Math.cosh(0));
-// Expected output: 1
+// 予想される結果: 1
 
 console.log(Math.cosh(1));
-// Expected output: 1.543080634815244 (approximately)
+// 予想される結果: 1.543080634815244 （およそ）
 
 console.log(Math.cosh(-1));
-// Expected output: 1.543080634815244 (approximately)
+// 予想される結果: 1.543080634815244 （およそ）
 
 console.log(Math.cosh(2));
-// Expected output: 3.7621956910836314
+// 予想される結果: 3.7621956910836314
 ```
 
 ## 構文
@@ -74,6 +73,7 @@ Math.cosh(Infinity); // Infinity
 ## 関連情報
 
 - [`Math.cosh` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
+- [es-shims による `Math.cosh` のポリフィル](https://www.npmjs.com/package/math.cosh)
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.asinh()")}}
 - {{jsxref("Math.atanh()")}}

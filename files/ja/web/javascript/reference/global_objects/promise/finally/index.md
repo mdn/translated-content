@@ -1,11 +1,10 @@
 ---
 title: Promise.prototype.finally()
+short-title: finally()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`finally()`** は {{jsxref("Promise")}} インスタンスのメソッドで、プロミスが決定したとき（履行されたか拒否されたかのどちらか）に呼び出される関数を準備します。直ちに他の {{jsxref("Promise")}} オブジェクトを返すため、プロミスの他のメソッドを[連鎖](/ja/docs/Web/JavaScript/Guide/Using_promises#連鎖)呼び出しすることができます。
 
@@ -120,6 +119,7 @@ fetch(myRequest)
 ## 関連情報
 
 - [`Promise.prototype.finally` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-promise)
+- [es-shims による `Promise.prototype.finally` のポリフィル](https://www.npmjs.com/package/promise.prototype.finally)
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.prototype.then()")}}
 - {{jsxref("Promise.prototype.catch()")}}

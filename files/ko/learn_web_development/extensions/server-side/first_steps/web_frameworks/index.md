@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks
 original_slug: Learn/Server-side/First_steps/Web_frameworks
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn_web_development/Extensions/Server-side/First_steps")}}
 
 이전 기사에서는 웹 클라이언트와 서버 간의 통신 모습, HTTP 요청 및 응답의 성격, 서버 측 웹 애플리케이션이 웹 브라우저의 요청에 응답하기 위해 수행해야하는 작업에 대해 설명했습니다. 이러한 지식을 바탕으로, 지금 시간에는 웹 프레임 워크가 어떻게 그러한 작업을 간단히 만드는지 탐색하고, 당신의 첫 서버측 애플리케이션을 위한 프레임 워크를 어떻게 선택하는지 의견을 드리겠습니다.
 
@@ -15,7 +15,7 @@ original_slug: Learn/Server-side/First_steps/Web_frameworks
       <td>
         기본적인 컴퓨터 활용법. HTTP 요청을 서버측 코드가 어떻게 다루고
         응답하는지에 대한 높은 수준의 이해 (<a
-          href="https://developer.mozilla.org/ko/docs/Learn/Server-side/First_steps/Client-Server_overview"
+          href="https://developer.mozilla.org/ko/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview"
           >Client-Server overview</a
         >를 참고 하십시오).
       </td>
@@ -191,7 +191,8 @@ def youngest(request):
 
 프로그래밍을 처음 접하는 생초보라면 "학습 편의성"에 따라 프레임 워크를 선택하게 될 것입니다. 언어 자체의 "사용 편의성"외에도 고품질 문서 / 자습서 및 새로운 사용자를 돕는 활동적인 커뮤니티가 가장 소중한 리소스입니다. 우리는 [Django](https://www.djangoproject.com/) (Python) 와 [Express](http://expressjs.com/) (Node/JavaScript)를 선택하여 강의 후반에 예제를 작성했습니다. 배우기 쉽고 지원을 잘 받고 있기 때문입니다.
 
-> **참고:** [Django](https://www.djangoproject.com/) (Python) 와 [Express](http://expressjs.com/) (Node/JavaScript)의 메인 웹사이트로 가보십시오, 그리고 문서와 커뮤니티를 확인하십시오.
+> [!NOTE]
+> [Django](https://www.djangoproject.com/) (Python) 와 [Express](http://expressjs.com/) (Node/JavaScript)의 메인 웹사이트로 가보십시오, 그리고 문서와 커뮤니티를 확인하십시오.
 >
 > 1. (위 링크들의) 메인 사이트를 둘러보기
 >    - Documentation 메뉴에 링크들(Documentation, Guide, API Reference, Getting Started등)을 클릭해보십시오.
@@ -292,4 +293,4 @@ This article has shown that web frameworks can make it easier to develop and mai
 
 For the next article in this module we'll change direction slightly and consider web security.
 
-{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn_web_development/Extensions/Server-side/First_steps")}}

@@ -3,134 +3,69 @@ title: Apprendre le développement web
 slug: Learn_web_development
 original_slug: Learn
 l10n:
-  sourceCommit: c4a970a5ab72ff68139e27739acae66b97d7e09a
+  sourceCommit: 02eafb53ee0b481bc4a60e7da630811201fe228a
 ---
 
-{{LearnSidebar}}
+## Compétences essentielles pour les nouveaux·elles développeur·euse·s front-end
 
-Bienvenue dans l'espace d'apprentissage (<i lang="en">Learning Area</i>) de MDN. Cet ensemble d'articles a pour but de fournir aux développeuses et développeurs web débutants tout ce qui est nécessaire pour commencer à développer des sites web.
+Bienvenue sur MDN **Apprendre le développement web** (aussi appelé **Apprendre**). Cette ressource propose un ensemble structuré de tutoriels pour enseigner les compétences et pratiques essentielles afin de devenir un·e développeur·euse front-end accompli·e, ainsi que des défis et des ressources complémentaires recommandées.
 
-Le but de cette section de MDN n'est pas de vous faire passer de «&nbsp;débutant&nbsp;» à «&nbsp;expert&nbsp;», mais plutôt de vous mettre à l'aise avec les technologies. À partir de là, vous devriez être capable de vous débrouiller par vous-même, en utilisant [le reste du contenu de MDN](/fr/) et d'autres ressources intermédiaires ou avancées.
+## À propos d'Apprendre le développement web
 
-Si vous débutez complètement, le développement web peut être un réel défi&nbsp;: notre but est de simplifier suffisamment le sujet pour que vous appreniez facilement, tout en vous fournissant assez de détails pour que vous soyez autonome. Vous devriez vous sentir chez vous, que vous soyez étudiant·e apprenant le développement web (de votre propre gré ou dans le cadre de vos études), un·e enseignant·e recherchant des supports de cours, une amatrice ou un amateur ou encore quelqu'un qui souhaite simplement comprendre comment fonctionnent le Web et ses technologies.
-
-> [!CALLOUT]
->
-> Vous voulez devenir développeuse ou développeur web front-end&nbsp;?
->
-> Nous avons mis au point un cours qui comprend toutes les informations essentielles dont vous avez besoin pour atteindre votre objectif.
->
-> [Commencer](/fr/curriculum/)
-
-## Par où commencer&nbsp;?
-
-- Je débute complètement
-  - : Si vous débutez totalement dans le développement web, nous vous recommandons de commencer par travailler notre module [«&nbsp;Premiers pas sur le Web&nbsp;»](/fr/docs/Learn/Getting_started_with_the_web), qui est une introduction pratique au développement web.
-- Au-delà des bases
-  - : Si vous possédez déjà quelques connaissances, l'étape suivante consiste à étudier en détail [HTML](/fr/docs/Glossary/HTML) et [CSS](/fr/docs/Glossary/CSS)&nbsp;: débutez avec notre module [Introduction à HTML](/fr/docs/Learn/HTML/Introduction_to_HTML), puis voyez le module [Introduction à CSS](/fr/docs/Learn/CSS/First_steps).
-- Écrire des scripts
-  - : Si vous êtes déjà à l'aise avec le HTML et les CSS, ou si vous êtes plutôt intéressé par le codage, voyez le [JavaScript](/fr/docs/Glossary/JavaScript) ou le développement côté serveur. Commencez par nos modules [JavaScript&nbsp;: premiers pas](/fr/docs/Learn/JavaScript/First_steps) et [Premiers pas côté serveur](/fr/docs/Learn/Server-side/First_steps).
-- Les <i lang="en">frameworks</i> et l'outillage
-  - : Lorsque vous aurez appris l'essentiel de HTML, CSS, et JavaScript, vous devriez étudier [les outils de développement web côté client](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools) et éventuellement approfondir [les <i lang="en">frameworks</i> JavaScript côté client](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks), ainsi que [la programmation web côté serveur](/fr/docs/Learn/Server-side).
+- Enseigne les compétences et connaissances essentielles dont chaque développeur·euse front-end a besoin pour réussir sa carrière et rester pertinent·e dans le secteur, comme défini dans le [Programme MDN](/fr/curriculum/).
+- Créé par la communauté MDN et enrichi grâce aux retours d'étudiant·e·s, d'enseignant·e·s et de développeur·euse·s de la communauté web au sens large.
+- Conçu pour vous faire passer de «&nbsp;débutant·e&nbsp;» à «&nbsp;à l'aise&nbsp;» (et non de «&nbsp;débutant·e&nbsp;» à «&nbsp;expert·e&nbsp;»), en vous donnant suffisamment de connaissances pour utiliser des ressources plus avancées (comme [le reste de MDN](/fr/)).
 
 > [!NOTE]
-> Notre [glossaire](/fr/docs/Glossary) fournit des définitions de la terminologie employée. Si vous avez des questions particulières à propos du développement web, la section sur les [questions fréquentes](/fr/docs/Learn/Common_questions) pourra éventuellement vous aider.
+> Dernière mise à jour&nbsp;: août 2025 ([voir le journal des modifications](/fr/docs/Learn_web_development/Changelog)).
 
-## Sujets abordés
+## Vous ne savez pas par où commencer ?
 
-Voici une liste des sujets abordés dans la zone d'apprentissage de MDN.
+- Jamais codé auparavant&nbsp;?
+  - : Nos [modules de démarrage](/fr/docs/Learn_web_development/Getting_started) proposent des tutoriels d'installation et des concepts essentiels pour les débutant·e·s complet·e·s. Commencez ici si vous débutez totalement (c'est-à-dire que vous n'avez pas encore installé d'éditeur de code ni écrit de code).
+- Vous souhaitez maîtriser l'essentiel&nbsp;?
+  - : Nos [modules de base](/fr/docs/Learn_web_development/Core) offrent un ensemble structuré de tutoriels pour enseigner les compétences et pratiques essentielles afin de devenir un·e développeur·euse front-end accompli·e.
+- Au-delà des bases&nbsp;?
+  - : Nos [modules d'extension](/fr/docs/Learn_web_development/Extensions) couvrent des compétences supplémentaires utiles à acquérir au fur et à mesure que vous élargissez vos connaissances et développez des spécialisations. Passez à ceux-ci après avoir terminé nos modules de base.
+- Vous travaillez dans un établissement scolaire&nbsp;?
+  - : Utilisez nos modules pour guider votre enseignement, consultez notre [page Enseignant·e·s](/fr/docs/Learn_web_development/Educators) pour plus d'idées, ou inscrivez vos étudiant·e·s au [Frontend Developer Career Path de Scrimba <sup>(angl.)</sup>](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn)<sup>[_Partenaire d'apprentissage MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations)</sup>.
 
-- [Débuter avec le développement web](/fr/docs/Learn/Getting_started_with_the_web)
-  - : Une introduction pratique au développement web pour les personnes qui commencent tout juste.
-- [HTML — structuration du Web](/fr/docs/Learn/HTML)
-  - : Le HTML est le langage utilisé pour structurer les diverses parties d'un contenu et définir leur signification et leur rôle. Cet article vous enseigne le HTML en détail.
-- [CSS — mise en forme du Web](/fr/docs/Learn/CSS)
-  - : CSS est le langage que nous pouvons aussi bien utiliser pour styliser et mettre en forme les contenus web que pour ajouter des comportements tel l'animation. Cet article couvre exhaustivement les CSS.
-- [JavaScript — des scripts dynamiques coté client](/fr/docs/Learn/JavaScript)
-  - : C'est le langage de script utilisé pour ajouter des fonctionnalités dynamiques aux pages web. Cet article enseigne les fondamentaux nécessaires pour comprendre et écrire aisément du JavaScript.
-- [Les formulaires web — Manipuler les données saisies par les utilisatrices et utilisateurs](/fr/docs/Learn/Forms)
-  - : Les formulaires web sont un outil puissant pour interagir avec les utilisatrices et utilisateurs. Ils permettent notamment de collecter des données et aux personnes de contrôler l'interface utilisée. Dans ces articles, nous verrons les aspects essentiels sur la structure, la mise en forme et les interactions avec les formulaires web.
-- [Accessibilité — rendre le Web utilisable par tous](/fr/docs/Learn/Accessibility)
-  - : L'accessibilité consiste à rendre le contenu web disponible au plus grand nombre de personnes possible quels que soient leur handicap, leur matériel, leur résidence ou autres différences. Cet article fournit tout le savoir nécessaire.
-- [Performances du Web - rendre les sites web rapides et dynamiques](/fr/docs/Learn/Performance)
-  - : La performance web est l'art de s'assurer que les applications web se téléchargent rapidement et sont réactives aux interactions, indépendamment de la bande passante, de la taille de l'écran, du réseau ou des capacités de l'appareil.
-- [MathML](/fr/docs/Learn/MathML)
-  - : MathML est un langage utilisé pour écrire des formules mathématiques dans les pages web (avec des fractions, indices, exposants, racines, intégrales, sommes, etc.).
-- [Outils et tests](/fr/docs/Learn/Tools_and_testing)
-  - : Cette rubrique présente les outils utilisés pour faciliter le développement web, tels que les outils de test inter-navigateurs, les <i lang="en">linters</i>, les outils de transformation et de mise en forme, les systèmes de gestion de version, les outils de déploiement, ainsi que des <i lang="en">frameworks</i> JavaScript côté client.
-- [Programmation de site web coté serveur](/fr/docs/Learn/Server-side)
-  - : Même si vous êtes focalisé·e·s sur le développement côté client, il est toujours utile de connaître le mode de fonctionnement des serveurs et les fonctionnalités du code côté serveur. Cette rubrique fournit une introduction générale sur le fonctionnement côté serveur et des didacticiels détaillant la manière de créer une application côté serveur à l'aide de deux environnements applicatifs populaires&nbsp;: Django (en Python) et Express (Node.js).
+## Testez vos compétences
 
-## Exercices et évaluations
+Tout au long du parcours, vous trouverez plusieurs articles conçus pour vous aider à évaluer si vous avez compris ce que nous vous enseignons. Il existe deux types d'articles&nbsp;:
 
-Dans cette section de MDN, de nombreux modules contiennent des articles avec des exercices et des évaluations que vous pourrez suivre. Voici quelques conseils pour en tirer le meilleur parti.
+- Les articles «&nbsp;Testez vos compétences&nbsp;» sont plus fréquents et évaluent votre connaissance d'une fonctionnalité isolée comme les liens HTML, le modèle de boîte CSS ou les fonctions JavaScript.
+- Les «&nbsp;Défis&nbsp;» sont plus rares et testent votre capacité à utiliser plusieurs fonctionnalités ensemble pour créer un site web ou un programme complet.
 
-Il existe deux types de tâches dans ces modules&nbsp;:
+La plupart des questions comportent des blocs de code HTML/CSS/JavaScript qui montrent le code de départ pour chaque tâche. La méthode recommandée pour les réaliser est d'appuyer sur le bouton **«&nbsp;Exécuter&nbsp;»** dans l'un des blocs de code pour ouvrir l'exemple dans le [MDN Playground](/fr/play), puis de modifier le code selon les instructions de la question.
 
-- Les **exercices d'apprentissage actif** (par exemple dans [Prendre des décisions dans le code - les conditions](/fr/docs/Learn/JavaScript/Building_blocks/conditionals#apprentissage_actif_un_calendrier_simple))
-- Des **évaluations** plus approfondies à la fin de chaque module (voir par exemple [Construire une galerie d'images](/fr/docs/Learn/JavaScript/Building_blocks/Image_gallery))
+Si vous faites une erreur, vous pouvez réinitialiser votre travail à l'aide du bouton Réinitialiser dans le MDN Playground. Si vous êtes vraiment bloqué·e, vous pouvez (généralement) consulter la solution en bas de chaque section de question, ou [demander de l'aide](#nous_contacter).
 
-Pour la plupart de ces exercices, consultez les dépôts GitHub associés (la plupart des fichiers sont disponibles dans les dépôts [`mdn/learning-area`](https://github.com/mdn/learning-area/), et [`mdn/css-examples`](https://github.com/mdn/css-examples/tree/main/learn)).
+> [!NOTE]
+> Si vous préférez travailler dans votre propre éditeur ou dans un éditeur en ligne (comme [CodePen](https://codepen.io/) ou [JSFiddle](https://jsfiddle.net/)), vous pouvez copier le code du MDN Playground dans l'environnement de votre choix.
 
-Chaque évaluation et exercice dispose d'un guide de notation et des solutions recommandées qui vous permettront d'évaluer votre travail.
+Certaines questions ne comportent pas de blocs de code de départ et vous demandent plutôt de télécharger des fichiers de démarrage pour travailler sur votre machine locale. Parfois, cela est dû à la complexité de la question, parfois c'est simplement pour varier les approches.
 
-## Obtenir nos exemples de code
+## Récupérer nos exemples de code
 
-Les exemples de code que vous rencontrerez dans l'Espace d'apprentissage sont tous [disponibles sur GitHub](https://github.com/mdn/learning-area/). Si vous souhaitez les copier tous sur votre ordinateur, le plus simple est de [télécharger un ZIP de la dernière branche du code principal](https://codeload.github.com/mdn/learning-area/zip/main).
+Tous les exemples de code que vous rencontrerez dans la zone d'apprentissage sont [disponibles sur GitHub <sup>(angl.)</sup>](https://github.com/mdn/learning-area/)&nbsp;:
 
-Si vous préférez copier le dépôt d'une manière plus flexible qui permet des mises à jour automatiques, vous pouvez suivre les instructions plus complexes&nbsp;:
-
-1. [Installer Git](https://git-scm.com/downloads) sur votre machine. C'est le logiciel sous-jacent de contrôle de version sur lequel GitHub fonctionne.
-2. [S'inscrire pour obtenir un compte GitHub](https://github.com/join).
-3. Une fois inscrit, se connecter dans [github.com](https://github.com) avec votre nom d'utilisateur et votre mot de passe.
-4. Ouvrir l'[invite de commande](https://www.lifewire.com/how-to-open-command-prompt-2618089) (Windows) ou un terminal ([Linux](https://help.ubuntu.com/community/UsingTheTerminal), [macOS](http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)).
-5. Pour copier depuis le dépôt de l'espace d'apprentissage un répertoire nommé «&nbsp;learning-area&nbsp;» à l'emplacement courant dans votre ordinateur, utilisez la commande suivante&nbsp;:
-
-   ```bash
-   git clone https://github.com/mdn/learning-area
-   ```
-
-6. Vous pouvez maintenant saisir le répertoire et retrouver les fichiers recherchés (soit avec votre explorateur de fichiers ou avec la [commande `cd`](<https://fr.wikipedia.org/wiki/Cd_(commande)>)).
-
-Vous pouvez mettre à jour le dépôt de `learning-area` pour tout changement intervenu sur la branche principale `main` du dépôt GitHub en parcourant les étapes suivantes&nbsp;:
-
-1. Dans votre terminal/invite de commande, allez dans le répertoire `learning-area` avec `cd`. Par exemple, si vous êtes dans son répertoire parent&nbsp;:
-
-   ```bash
-   cd learning-area
-   ```
-
-2. Mettez à jour le dépôt avec la commande&nbsp;:
-
-   ```bash
-   git pull
-   ```
+- Le moyen le plus simple de les obtenir est de [télécharger un ZIP de la dernière branche principale du code <sup>(angl.)</sup>](https://codeload.github.com/mdn/learning-area/zip/main).
+- Si vous êtes à l'aise avec Git et GitHub, vous pouvez aussi choisir de cloner le dépôt.
 
 ## Nous contacter
 
-Si vous voulez nous contacter au sujet de quoi que ce soit, le meilleur moyen est de nous [contacter](/fr/docs/MDN/Community/Communication_channels). N'hésitez pas à nous faire part de tout ce que vous pensez être erroné ou manquant sur le site, des demandes de nouveaux sujets d'apprentissage, des demandes d'aide pour des éléments que vous ne comprenez pas ou toute autre question ou préoccupation.
+Si vous souhaitez nous contacter pour quelque raison que ce soit, utilisez les [canaux de communication](/fr/docs/MDN/Community/Communication_channels). Nous serions ravi·e·s d'avoir votre retour sur tout ce que vous pensez être erroné ou manquant sur le site, vos suggestions de nouveaux sujets d'apprentissage, vos demandes d'aide sur des points que vous ne comprenez pas, ou toute autre question ou préoccupation.
 
-Si vous souhaitez aider à développer/améliorer le contenu, jetez un coup d'œil à la [façon dont vous pouvez aider](/fr/docs/MDN/Community/Contributing), et contactez-nous&nbsp;! Nous sommes plus qu'heureux de parler avec vous, que vous soyez apprenti, un enseignant, un développeur web expérimenté ou quelqu'un d'autre intéressé à améliorer l'expérience d'apprentissage.
+Si vous souhaitez contribuer à l'amélioration du contenu, consultez [comment vous pouvez aider](/fr/docs/MDN/Community) et contactez-nous&nbsp;! Nous serons ravi·e·s d'échanger avec vous, que vous soyez apprenant·e, enseignant·e, développeur·euse web expérimenté·e ou toute autre personne souhaitant améliorer l'expérience d'apprentissage.
 
 ## Voir aussi
 
-- [Mozilla Developer Newsletter (en anglais)](https://www.mozilla.org/fr/newsletter/developer/)
-  - : Notre newsletter pour les développeuses et développeurs web, une grande aide pour tous niveaux de compétence.
-- [Learn JavaScript (en anglais)](https://learnjavascript.online/)
-  - : Une excellente ressource pour les futurs développeurs web - Apprenez JavaScript dans un environnement interactif, avec des leçons courtes et des tests interactifs, avec une évaluation automatisée. Les 40 premières leçons sont gratuites, et le cours complet est disponible contre un petit paiement unique.
-- [Web demystified](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g)
-  - : Une grande série de vidéos expliquant les principes fondamentaux du Web, destinée aux débutants absolus en matière de développement web. Créé par [Jérémie Patonnier](https://mastodon.roflcopter.fr/@JeremiePat).
-- [Codecademy (en anglais)](https://www.codecademy.com/)
-  - : Un site interactif pour apprendre les langages de programmation à partir du début.
-- [BitDegree (en anglais)](https://www.bitdegree.org/learn/)
-  - : Théorie de base du codage avec un processus d'apprentissage ludique. Principalement destiné aux débutants.
-- [Code.org](https://code.org/)
-  - : Théories de codage de base et pratique, destiné essentiellement aux enfants et aux débutants.
-- [The Odin Project (en anglais)](https://www.theodinproject.com/)
-  - : Un parcours libre et <i lang="en">open source</i> allant d'un niveau débutant à avancé.
-- [freeCodeCamp.org](https://www.freecodecamp.org/)
-  - : Site interactif avec didacticiels et projets pour apprendre le développement web.
-- [Web literacy map](https://foundation.mozilla.org/en/initiatives/web-literacy/core-curriculum/)
-  - : Un _framework_ pour l'initiation à la maîtrise du Web et aux compétences du XXI<sup>e</sup> siècle, qui donne également accès à des activités d'enseignement classées par catégorie.
-- [Edabit](https://edabit.com/challenges)
-  - : Des milliers de défis JavaScript interactifs.
+- [Le parcours professionnel d'un développeur front-end <sup>(angl.)</sup>](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_Partenaire d'apprentissage MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations)</sup>
+  - : [Scrimba <sup>(angl.)</sup>](https://scrimba.com?via=mdn) Le _Parcours professionnel d'un développeur front-end_ enseigne tout ce qu'il faut savoir pour devenir un·e développeur·euse front-end compétent·e, avec des leçons interactives ludiques, des défis, des enseignant·e·s expérimenté·e·s et une communauté bienveillante. Passez de zéro à votre premier emploi front-end&nbsp;! De nombreux modules du cours sont disponibles gratuitement en version autonome.
+- [Codecademy <sup>(angl.)</sup>](https://www.codecademy.com/)
+  - : Un excellent site interactif pour apprendre les langages de programmation depuis le début.
+- [freeCodeCamp.org <sup>(angl.)</sup>](https://www.freecodecamp.org/)
+  - : Site interactif avec tutoriels et projets pour apprendre le développement web.
+- [Apprendre JavaScript](https://learnjavascript.online/)
+  - : Une excellente ressource pour les futur·e·s développeur·euse·s web — Apprenez JavaScript dans un environnement interactif, avec des leçons courtes et des tests interactifs, guidé·e par une évaluation automatisée. Les 40 premières leçons sont gratuites, et le cours complet est disponible pour un petit paiement unique.

@@ -1,26 +1,25 @@
 ---
 title: String.prototype.localeCompare()
+short-title: localeCompare()
 slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 l10n:
-  sourceCommit: cda36825f2a7e12f0ebff9d9f257dae8a1171dbd
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`localeCompare()`** メソッドは、参照文字列がソート順で指定された文字列の前か後か、または同じかを示す数値を返します。[`Intl.Collator` API](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) に対応している実装では、このメソッドは単に `Intl.Collator` を呼び出します。
+**`localeCompare()`** は {{jsxref("String")}} 値のメソッドで、参照文字列がソート順で指定された文字列の前か後か、または同じかを示す数値を返します。[`Intl.Collator` API](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) に対応している実装では、このメソッドは単に `Intl.Collator` を呼び出します。
 
 大量の文字列を比較する場合、例えば巨大な配列を並べ替えしている時は、{{jsxref("Intl.Collator")}} オブジェクトを生成してそれが提供する {{jsxref("Intl/Collator/compare", "compare()")}} メソッドを使用したほうがいいでしょう。
 
-{{InteractiveExample("JavaScript デモ: String.localeCompare()")}}
+{{InteractiveExample("JavaScript デモ: String.prototype.localeCompare()")}}
 
 ```js interactive-example
 const a = "réservé"; // With accents, lowercase
 const b = "RESERVE"; // No accents, uppercase
 
 console.log(a.localeCompare(b));
-// Expected output: 1
+// 予想される結果: 1
 console.log(a.localeCompare(b, "en", { sensitivity: "base" }));
-// Expected output: 0
+// 予想される結果: 0
 ```
 
 ## 構文

@@ -7,7 +7,7 @@ l10n:
 ---
 
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/Svelte_components", "Learn_web_development/Core/Frameworks_libraries")}}
 
 이제 마크업과 스타일이 준비되었으므로 Svelte 할 일 목록 앱에 필요한 기능 개발을 시작할 수 있습니다. 이 문서에서는 변수와 props를 사용한 동적인 앱을 만들어 할 일을 추가 및 삭제하고, 완료로 표시하거나 상태별로 필터링할 수 있습니다.
 
@@ -340,7 +340,8 @@ Svelte 컴파일러는 배후에서 종속성 트리를 만들기 위해 코드�
 
    `addTodo()` 함수의 끝에 `todos = todos`를 추가하면 문제가 해결되지만, 함수의 끝에 포함시켜야 하는 것이 이상해 보입니다. 대신 `push()` 메서드를 제거하고 [확산 구문](/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax)을 사용하여 동일한 결과를 얻습니다. `todos` 배열에 새로운 개체를 추가한 것과 동일한 `todos` 배열을 할당합니다.
 
-   > **참고:** `Array`에는 여러 가지 변경 연산자가 있습니다. [`push()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/push), [`pop()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/pop), [`splice()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/splice), [`shift()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/shift), [`unshift()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift), [`reverse()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse) 및 [`sort()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/sort). 연산자를 사용하면 종종 추적하기 어려운 부작용과 버그가 발생합니다. 확산 구문을 사용하여 `push()`로 배열 변경을 피하는 것은 좋은 사례로 간주됩니다.
+   > [!NOTE]
+   > `Array`에는 여러 가지 변경 연산자가 있습니다. [`push()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/push), [`pop()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/pop), [`splice()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/splice), [`shift()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/shift), [`unshift()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift), [`reverse()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse) 및 [`sort()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/sort). 연산자를 사용하면 종종 추적하기 어려운 부작용과 버그가 발생합니다. 확산 구문을 사용하여 `push()`로 배열 변경을 피하는 것은 좋은 사례로 간주됩니다.
 
    `addTodo()`를 다음과 같이 업데이트합니다.
 
@@ -494,4 +495,4 @@ REPL에서 코드의 현재 상태를 보려면 다음에 방문하십시오.
 
 우리는 사용자가 할 일을 편집할 수 있는 기능을 더 추가할 것입니다.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/Svelte_components", "Learn_web_development/Core/Frameworks_libraries")}}

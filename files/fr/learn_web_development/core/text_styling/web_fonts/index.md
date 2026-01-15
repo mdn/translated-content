@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Text_styling/Web_fonts
 original_slug: Learn/CSS/Styling_text/Web_fonts
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling/Typesetting_a_homepage", "Learn_web_development/Core/Text_styling")}}
 
 Dans le premier article du module, nous avons exploré les fonctions CSS de base disponibles pour composer du texte. Dans cet article, nous allons plus loin et explorons les polices web en détail : comment télécharger des polices personnalisées en même temps que la page Web, pour donner un style plus varié et personnalisé au texte.
 
@@ -33,7 +33,7 @@ Dans le premier article du module, nous avons exploré les fonctions CSS de base
 
 ## Rappel : familles de fontes
 
-Comme nous l'avons vu dans [Initiation à la mise en forme du texte](/fr/docs/Learn/CSS/Styling_text/Fundamentals), les fontes appliquées aux HTML sont contrôlées par la propriété {{cssxref("font-family")}}. Elle accepte un ou plusieurs noms de familles de fontes et le navigateur parcourt la liste jusqu'à trouver la fonte disponible sur le système sur lequel il tourne :
+Comme nous l'avons vu dans [Initiation à la mise en forme du texte](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals), les fontes appliquées aux HTML sont contrôlées par la propriété {{cssxref("font-family")}}. Elle accepte un ou plusieurs noms de familles de fontes et le navigateur parcourt la liste jusqu'à trouver la fonte disponible sur le système sur lequel il tourne :
 
 ```css
 p {
@@ -41,7 +41,7 @@ p {
 }
 ```
 
-Ce système fonctionne bien, mais généralement, le choix des développeurs Web en matière de polices sont limités. Il n'y en a qu'une poignée dont la disponibilité soit garantie sur tous les systèmes courants — les polices dites [Web-safe](/fr/docs/Learn/CSS/Styling_text/Fundamentals#polices_web_sûres). La pile de polices vous permet de préciser la police préférable, puis la police alternative sûre pour le Web, puis la police par défaut du système, mais cela induit du travail supplémentaire de tests pour s'assurer que le désign reste correct avec chaque police, etc.
+Ce système fonctionne bien, mais généralement, le choix des développeurs Web en matière de polices sont limités. Il n'y en a qu'une poignée dont la disponibilité soit garantie sur tous les systèmes courants — les polices dites [Web-safe](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals#polices_web_sûres). La pile de polices vous permet de préciser la police préférable, puis la police alternative sûre pour le Web, puis la police par défaut du système, mais cela induit du travail supplémentaire de tests pour s'assurer que le désign reste correct avec chaque police, etc.
 
 ## Fontes Web
 
@@ -183,4 +183,4 @@ Elle est désignée sous le vocable «&nbsp;bulletproof @font-face syntax&nbsp;�
 
 Maintenant que vous avez travaillé nos articles sur les principes fondamentaux pour composer du texte, il est temps de tester votre compréhension de la chose avec notre évaluation pour le module&nbsp;: composition d'une page d'accueil d'une école communale.
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling/Typesetting_a_homepage", "Learn_web_development/Core/Text_styling")}}

@@ -195,7 +195,8 @@ Você pode definir vários retornos de chamada diferentes dentro da definição 
 
 - `connectedCallback`: Chamado sempre que o custom element é anexado a um elemento conectado ao documento. Isso acontecerá sempre que o nó for movido e pode acontecer antes que o conteúdo do elemento tenha sido totalmente analisado.
 
-  > **Nota:** `connectedCallback` pode ser chamado assim que seu elemento não estiver mais conectado, use {{domxref("Node.isConnected")}} para ter certeza.
+  > [!NOTE]
+  > `connectedCallback` pode ser chamado assim que seu elemento não estiver mais conectado, use {{domxref("Node.isConnected")}} para ter certeza.
 
 - `disconnectedCallback`: Invocado sempre que o custom element é desconectado do documento DOM.
 - `adoptedCallback`: Invocado sempre que o custom element é movido para um novo documento.

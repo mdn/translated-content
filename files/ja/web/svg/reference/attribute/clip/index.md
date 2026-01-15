@@ -2,7 +2,7 @@
 title: clip
 slug: Web/SVG/Reference/Attribute/clip
 l10n:
-  sourceCommit: 611edf6335e4a833a6f394d0d98b117e7b0a36bf
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
 {{deprecated_header}}

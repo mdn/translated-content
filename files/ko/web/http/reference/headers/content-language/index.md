@@ -36,7 +36,8 @@ Content-Language: de-DE, en-CA
 - `language-tag`
   - : 다중 언어 태그는 쉼표로 구분됩니다. 각 언어 태그는 하이프 문자("`-`", `%x2D`)로 구분되는, 한 개 이상의 대소문자를 구분하지 않는 서브태그의 연속입니다. 대부분의 경우, 언어 태그는 관련 언어군 (예를 들어, "`en`" = English)을 나타내는 주요 언어로 구성되는데, 그 뒤에는 해당 언어의 범위를 정제하거나 좁혀주는 d일련의 서브태그가 올 수 있습니다 (예, "`en-CA`" = 캐나다에서 사용되는 영어의 변종).
 
-> **참고:** **알아둘 것:** 언어 태그는 공식적으로 [RFC 5646](https://tools.ietf.org/html/rfc5646)에 정의되어 있으며, 그에 이어 사용될 [언어 코드](https://en.wikipedia.org/wiki/Language_code)에 대해서 [ISO 639](https://en.wikipedia.org/wiki/ISO_639) 표준이 있습니다(더 정확히는 [ISO 639-1 코드 목록](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)).
+> [!NOTE]
+> **알아둘 것:** 언어 태그는 공식적으로 [RFC 5646](https://tools.ietf.org/html/rfc5646)에 정의되어 있으며, 그에 이어 사용될 [언어 코드](https://en.wikipedia.org/wiki/Language_code)에 대해서 [ISO 639](https://en.wikipedia.org/wiki/ISO_639) 표준이 있습니다(더 정확히는 [ISO 639-1 코드 목록](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)).
 
 ## 예제
 

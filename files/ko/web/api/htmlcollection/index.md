@@ -7,7 +7,8 @@ slug: Web/API/HTMLCollection
 
 **`HTMLCollection`** 인터페이스는 요소의 문서 내 순서대로 정렬된 일반 컬렉션({{jsxref("Functions/arguments", "arguments")}}처럼 배열과 유사한 객체)을 나타내며 리스트에서 선택할 때 필요한 메서드와 속성을 제공합니다.
 
-> **참고:** `HTMLCollection`의 이름은 현대적 DOM의 이전, 구성요소로 HTML 요소만 지닐 수 있었던 시절에 정해졌습니다.
+> [!NOTE]
+> `HTMLCollection`의 이름은 현대적 DOM의 이전, 구성요소로 HTML 요소만 지닐 수 있었던 시절에 정해졌습니다.
 
 HTML DOM 내의 `HTMLCollection`은 문서가 바뀔 때 실시간으로 업데이트됩니다.
 

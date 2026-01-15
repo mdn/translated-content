@@ -23,8 +23,8 @@ La dernière ligne du fichier HTML appelle le fichier JavaScript `app.js`. C'est
 Lorsqu'une personne visite la page, nous vérifions s'il existe déjà des données dans le stockage local. À la première visite, il n'y aura pas de données. Lorsqu'une personne sélectionne deux dates et soumet le formulaire pour la première fois, il faut&nbsp;:
 
 1. Créer un titre "`<h2>Cycles antérieurs</h2>`"
-2. Créer une liste non-ordonnée avec un élément [`<ul>`](/fr/docs/Web/HTML/Element/ul)
-3. Remplir l'élément `<ul>` avec un seul élément [`<li>`](/fr/docs/Web/HTML/Element/li) qui contient les informations du cycle en question
+2. Créer une liste non-ordonnée avec un élément [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul)
+3. Remplir l'élément `<ul>` avec un seul élément [`<li>`](/fr/docs/Web/HTML/Reference/Elements/li) qui contient les informations du cycle en question
 4. Sauvegarder les données dans le stockage local
 
 Pour les saisies ultérieures, il faut&nbsp;:
@@ -38,14 +38,14 @@ Les personnes ayant déjà utilisé l'application auront des données existantes
 
 1. Récupérer les données enregistrées dans le stockage local
 2. Créer un titre "`<h2>Cycles antérieurs</h2>`"
-3. Créer une liste non-ordonnée avec un élément [`<ul>`](/fr/docs/Web/HTML/Element/ul)
-4. Remplir l'élément `<ul>` avec un élément [`<li>`](/fr/docs/Web/HTML/Element/li) pour chaque cycle menstruel enregistré dans le stockage local.
+3. Créer une liste non-ordonnée avec un élément [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul)
+4. Remplir l'élément `<ul>` avec un élément [`<li>`](/fr/docs/Web/HTML/Reference/Elements/li) pour chaque cycle menstruel enregistré dans le stockage local.
 
 Cette application a uniquement pour objectif d'enseigner les fondamentaux pour convertir une application web en PWA. Aussi, elle ne contient pas les fonctionnalités nécessaires à une application réelle comme la validation du formulaire, la vérification des erreurs ou encore les fonctionnalités pour éditer ou supprimer un enregistrement. N'hésitez pas à ajouter ces fonctionnalités et à adapter les exemples donnés pour créer l'application qui correspond à vos objectifs d'apprentissage et à vos besoins.
 
 ## Envoi du formulaire
 
-La page contient un formulaire, l'élément HTML [`<form>`](/fr/docs/Web/HTML/Element/form), doté de sélecteurs de date pour saisir les dates de début et de fin de chaque cycle menstruel. Les sélecteurs de date sont des éléments HTML [`<input>`](/fr/docs/Web/HTML/Element/input) de type [`date`](/fr/docs/Web/HTML/Element/input/date), dotés respectivement des [identifiants (`id`)](/fr/docs/Web/HTML/Global_attributes/id) `start-date` et `end-date`.
+La page contient un formulaire, l'élément HTML [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form), doté de sélecteurs de date pour saisir les dates de début et de fin de chaque cycle menstruel. Les sélecteurs de date sont des éléments HTML [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) de type [`date`](/fr/docs/Web/HTML/Reference/Elements/input/date), dotés respectivement des [identifiants (`id`)](/fr/docs/Web/HTML/Reference/Global_attributes/id) `start-date` et `end-date`.
 
 Le formulaire n'a pas de méthode ou d'action déclarée dans le HTML. À la place, nous ajoutons un gestionnaire d'évènement au formulaire à l'aide de la méthode [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener). Lorsqu'on tente d'envoyer le formulaire, on empêche l'envoi par défaut du formulaire, on enregistre les données du nouveau cycle menstruel et on affiche ce cycle ainsi que les précédents, puis on réinitialise le formulaire.
 
@@ -115,15 +115,15 @@ function verifierDatesInvalides(dateDebut, dateFin) {
 }
 ```
 
-Dans une version plus robuste de cette application, il faudrait aussi inclure des messages d'erreur explicatifs pour indiquer où l'erreur se situe. Une application correcte indiquerait l'erreur, puis placerait le focus sur le contrôle de formulaire concerné, tout en utilisant [les régions dynamiques ARIA](/fr/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) pour communiquer ces informations aux outils d'assistance.
+Dans une version plus robuste de cette application, il faudrait aussi inclure des messages d'erreur explicatifs pour indiquer où l'erreur se situe. Une application correcte indiquerait l'erreur, puis placerait le focus sur le contrôle de formulaire concerné, tout en utilisant [les régions dynamiques ARIA](/fr/docs/Web/Accessibility/ARIA/Guides/Live_regions) pour communiquer ces informations aux outils d'assistance.
 
 ## Stockage local
 
 On utilise [l'API <i lang="en">Web Storage</i>](/fr/docs/Web/API/Web_Storage_API), et plus précisément [`window.localStorage`](/fr/docs/Web/API/Window/localStorage) pour enregistrer les paires de dates de début et de fin dans un objet JSON en chaîne de caractères dans l'espace de stockage local.
 
-[Le stockage local (<i lang="en">local storage</i>)](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage#stocker_des_données_simples_—_web_storage) a quelques limitations, mais il suffira aux besoins de notre application. Nous utilisons ici le stockage local pour avoir une application et qui fonctionne uniquement côté client. Cela signifie que les données seront uniquement stockées dans un navigateur d'un appareil donné. Toute suppression des données du navigateur entraînera la perte des cycles enregistrés localement. On peut voir ce point comme une limitation ou comme un avantage pour ce cas précis&nbsp;: les données des cycles menstruels sont personnelles et on pourra se soucier de la vie privée et de la diffusion de ces données sur d'autres appareils ou navigateurs.
+[Le stockage local (<i lang="en">local storage</i>)](/fr/docs/Learn_web_development/Extensions/Client-side_APIs/Client-side_storage#stocker_des_données_simples_—_web_storage) a quelques limitations, mais il suffira aux besoins de notre application. Nous utilisons ici le stockage local pour avoir une application et qui fonctionne uniquement côté client. Cela signifie que les données seront uniquement stockées dans un navigateur d'un appareil donné. Toute suppression des données du navigateur entraînera la perte des cycles enregistrés localement. On peut voir ce point comme une limitation ou comme un avantage pour ce cas précis&nbsp;: les données des cycles menstruels sont personnelles et on pourra se soucier de la vie privée et de la diffusion de ces données sur d'autres appareils ou navigateurs.
 
-Pour une application plus robuste, on pourra employer d'autres outils [de stockage côté client](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage) comme [IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB) (IDB) et les <i lang="en">service workers</i> (que nous verrons plus tard) qui ont de meilleures performances.
+Pour une application plus robuste, on pourra employer d'autres outils [de stockage côté client](/fr/docs/Learn_web_development/Extensions/Client-side_APIs/Client-side_storage) comme [IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB) (IDB) et les <i lang="en">service workers</i> (que nous verrons plus tard) qui ont de meilleures performances.
 
 Parmi les limites de `localStorage`, il y a&nbsp;:
 

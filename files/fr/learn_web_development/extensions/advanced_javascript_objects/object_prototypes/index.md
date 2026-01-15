@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_protot
 original_slug: Learn/JavaScript/Objects/Object_prototypes
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 Les prototypes sont un mécanisme au sein de JavaScript qui permettent aux objets JavaScript d'hériter des propriétés d'autres objets. Les prototypes implémentent un héritage différent de celui rencontré dans les langages de programmation objets habituels. Dans cet article, nous allons aborder ces différences, nous allons aussi voir comment la chaîne de prototypage fonctionne. Nous verrons aussi comment les propriétés prototypes peuvent être utilisées afin d'ajouter des méthodes à des constructeurs existants.
 
@@ -80,7 +80,7 @@ Cette méthode renvoie simplement la valeur de l'objet pour lequel elle est appe
 > Encore une fois, il est important d'insister sur le fait que les méthodes et attributs ne sont **pas** copiés d'un objet à un autre, mais qu'on y accède à chaque fois en remontant la chaine de prototypage.
 
 > [!NOTE]
-> Il n'existe pas de façon officielle d'accéder directement au prototype d'un objet donné. Les «&nbsp;liens&nbsp;» entre les éléments de la chaine sont définis au sein d'une propriété interne appelée `[[prototype]]` définie dans la spécification de JavaScript. (voir [ECMAScript](/fr/docs/Web/JavaScript/JavaScript_technologies_overview)). Néanmoins, la plupart des navigateurs modernes implémentent l'attribut [`__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) (deux tirets soulignés ou _underscore_ de chaque côté) qui contient le prototype objet d'un objet. Vous pouvez tenter `personne1.__proto__` et `personne1.__proto__.__proto__` pour voir à quoi ressemble une chaine de prototypage dans la console&nbsp;!
+> Il n'existe pas de façon officielle d'accéder directement au prototype d'un objet donné. Les «&nbsp;liens&nbsp;» entre les éléments de la chaine sont définis au sein d'une propriété interne appelée `[[prototype]]` définie dans la spécification de JavaScript. (voir [ECMAScript](/fr/docs/Web/JavaScript/Reference/JavaScript_technologies_overview)). Néanmoins, la plupart des navigateurs modernes implémentent l'attribut [`__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) (deux tirets soulignés ou _underscore_ de chaque côté) qui contient le prototype objet d'un objet. Vous pouvez tenter `personne1.__proto__` et `personne1.__proto__.__proto__` pour voir à quoi ressemble une chaine de prototypage dans la console&nbsp;!
 
 ## L'attribut prototype&nbsp;: là où l'on définit les éléments héritables
 
@@ -268,4 +268,4 @@ Cet article a traité des prototypes objet en JavaScript, en incluant la chaine 
 
 Dans le prochain article, nous verrons comment appliquer l'héritage entre deux de nos propres objets.
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

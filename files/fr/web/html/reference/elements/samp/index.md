@@ -68,7 +68,7 @@ samp {
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 
@@ -83,7 +83,7 @@ samp {
 ```
 
 > [!NOTE]
-> S'il vous faut un élément qui serve de conteneur pour une valeur produite par le site ou l'application, vous devriez utiliser [`<output>`](/fr/docs/Web/HTML/Element/output) plutôt que `<samp>`.
+> S'il vous faut un élément qui serve de conteneur pour une valeur produite par le site ou l'application, vous devriez utiliser [`<output>`](/fr/docs/Web/HTML/Reference/Elements/output) plutôt que `<samp>`.
 
 ## Exemples
 
@@ -107,7 +107,7 @@ Dans cet exemple simple, un paragraphe contient une mention d'un résultat d'un 
 
 ### Sortie incluant une entrée utilisateur
 
-Il est possible d'imbriquer un élément [`<kbd>`](/fr/docs/Web/HTML/Element/kbd) dans un bloc `<samp>` afin de représenter un fragment de texte saisi par la personne. Par exemple, si on souhaite retranscrire une session d'un terminal (sous Linux ou macOS), on pourra utiliser le code suivant.
+Il est possible d'imbriquer un élément [`<kbd>`](/fr/docs/Web/HTML/Reference/Elements/kbd) dans un bloc `<samp>` afin de représenter un fragment de texte saisi par la personne. Par exemple, si on souhaite retranscrire une session d'un terminal (sous Linux ou macOS), on pourra utiliser le code suivant.
 
 #### HTML
 
@@ -121,7 +121,7 @@ MD5 ("Coucou monde") = b961d9fb0ef48ff051fb67625abd0022
 </pre>
 ```
 
-On notera l'utilisation de [`<span>`](/fr/docs/Web/HTML/Element/span) qui permet de personnaliser l'apparence de certaines portions du texte (comme l'invite ou le curseur). On notera également l'utilisation de `<kbd>` afin de représenter la commande saisie dans l'invite.
+On notera l'utilisation de [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) qui permet de personnaliser l'apparence de certaines portions du texte (comme l'invite ou le curseur). On notera également l'utilisation de `<kbd>` afin de représenter la commande saisie dans l'invite.
 
 #### CSS
 
@@ -157,7 +157,7 @@ Cela permet simplement de colorer légèrement l'invite et le curseur. On utilis
 
 ## Voir aussi
 
-- [`<code>`](/fr/docs/Web/HTML/Element/code)
-- [`<kbd>`](/fr/docs/Web/HTML/Element/kbd)
-- [`<pre>`](/fr/docs/Web/HTML/Element/pre)
-- [`<output>`](/fr/docs/Web/HTML/Element/output)
+- [`<code>`](/fr/docs/Web/HTML/Reference/Elements/code)
+- [`<kbd>`](/fr/docs/Web/HTML/Reference/Elements/kbd)
+- [`<pre>`](/fr/docs/Web/HTML/Reference/Elements/pre)
+- [`<output>`](/fr/docs/Web/HTML/Reference/Elements/output)

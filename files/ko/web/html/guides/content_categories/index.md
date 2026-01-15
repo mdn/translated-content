@@ -55,9 +55,11 @@ original_slug: Web/HTML/Content_categories
 
 {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}.
 
-> **참고:** {{HTMLElement("header")}} 요소는 보통 제목을 포함하지만 제목 콘텐츠는 아닙니다.
+> [!NOTE]
+> {{HTMLElement("header")}} 요소는 보통 제목을 포함하지만 제목 콘텐츠는 아닙니다.
 
-> **참고:** {{HTMLElement("hgroup")}} 요소는 HTML5의 완성 전에 W3C HTML에서 제거됐으나, 여전히 WHATWG 명세의 일부이며 대부분의 브라우저에서 부분적으로나마 지원하고 있습니다.
+> [!NOTE]
+> {{HTMLElement("hgroup")}} 요소는 HTML5의 완성 전에 W3C HTML에서 제거됐으나, 여전히 WHATWG 명세의 일부이며 대부분의 브라우저에서 부분적으로나마 지원하고 있습니다.
 
 ### 구문 콘텐츠
 

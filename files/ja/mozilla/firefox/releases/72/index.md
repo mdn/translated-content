@@ -26,7 +26,7 @@ Firefox 72 は、米国時間 2020 年 1 月 7 日にリリースされました
 
 [インスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html):
 
-- [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) メディア特性のさまざまな値の [シミュレーターを有効化する設定](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#view-media-rules-for-color-scheme-preference) が可能になりました ([Firefox バグ 1550804](https://bugzil.la/1550804))。
+- [`prefers-color-scheme`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) メディア特性のさまざまな値の [シミュレーターを有効化する設定](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#view-media-rules-for-color-scheme-preference) が可能になりました ([Firefox バグ 1550804](https://bugzil.la/1550804))。
 
 #### 廃止
 
@@ -38,8 +38,8 @@ _変更なし。_
 
 ### CSS
 
-- CSS Shadow Parts が有効になりました。これは [`part` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/part) や [`::part` 擬似要素](/ja/docs/Web/CSS/::part) が含まれており、スタイル設定のためにシャドウホストが自身のシャドウツリーから選択した要素を選択的に出力ページへ公開できます ([Firefox バグ 1559074](https://bugzil.la/1559074))。
-- [CSS モーションパス](/ja/docs/Web/CSS/CSS_motion_path) を実装しました ([Firefox バグ 1582554](https://bugzil.la/1582554) および [実装目的](https://groups.google.com/forum/#!topic/mozilla.dev.platform/nOOIRsuxvuc) をご覧ください)。以下のプロパティが含まれます。
+- CSS Shadow Parts が有効になりました。これは [`part` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/part) や [`::part` 擬似要素](/ja/docs/Web/CSS/Reference/Selectors/::part) が含まれており、スタイル設定のためにシャドウホストが自身のシャドウツリーから選択した要素を選択的に出力ページへ公開できます ([Firefox バグ 1559074](https://bugzil.la/1559074))。
+- [CSS モーションパス](/ja/docs/Web/CSS/Guides/Motion_path) を実装しました ([Firefox バグ 1582554](https://bugzil.la/1582554) および [実装目的](https://groups.google.com/forum/#!topic/mozilla.dev.platform/nOOIRsuxvuc) をご覧ください)。以下のプロパティが含まれます。
   - {{cssxref("offset")}}
   - {{cssxref("offset-path")}}
   - {{cssxref("offset-anchor")}}
@@ -56,7 +56,7 @@ _変更なし。_
 
 ### JavaScript
 
-- [Null 合体演算子](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) を実装しました ([Firefox バグ 1566141](https://bugzil.la/1566141))。
+- [ヌル値合体演算子](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)を実装しました ([Firefox バグ 1566141](https://bugzil.la/1566141))。
 
 ### API
 

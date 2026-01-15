@@ -46,7 +46,8 @@ Se você deseja contribuir para esta wiki, você deve tornar sua documentação 
 
 Alguns conteúdos mais antigos foram disponibilizados sob uma licença diferente das citadas acima; estas são indicadas no final de cada página em um [Alternate License Block](/Project:en/Examples/Alternate_License_Block).
 
-> **Aviso:** **Importante:** Nenhuma nova página deve ser criada usando licenças alternativas.
+> [!WARNING]
+> **Importante:** Nenhuma nova página deve ser criada usando licenças alternativas.
 
 Os direitos de cópia para materiais de contribuição permanecem com o(a) autor(a), a menos que ele(a) os atribua a outra pessoa.
 

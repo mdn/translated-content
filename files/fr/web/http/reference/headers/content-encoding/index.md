@@ -12,14 +12,10 @@ Il est recommandé de compresser les données autant que possible et donc d'util
   <tbody>
     <tr>
       <th scope="row">Type d'en-tête</th>
-      <td><a href="/fr/docs/Glossaire/En-tête_entité">En-tête d'entité</a></td>
+      <td>{{Glossary("Entity_header", "En-tête d'entité")}}</td>
     </tr>
     <tr>
-      <th scope="row">
-        <a href="/fr/docs/Glossaire/Forbidden_header_name"
-          >Nom d'en-tête interdit</a
-        >
-      </th>
+      <th scope="row">{{Glossary("Forbidden_request_header", "En-tête de requête interdit")}}</th>
       <td>Non</td>
     </tr>
   </tbody>

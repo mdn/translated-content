@@ -34,7 +34,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Math
 
 ## 메서드
 
-> **참고:** **참고:** 삼각 함수(`sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, `atan2()`)는 매개변수와 반환값 모두 호도법(라디안)을 사용합니다.
+> [!NOTE]
+> [!NOTE]
+> 삼각 함수(`sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, `atan2()`)는 매개변수와 반환값 모두 호도법(라디안)을 사용합니다.
 >
 > 라디안 값을 각도 값으로 변환하려면 `(Math.PI / 180)`으로 나누세요. 반대로 각도 값에 곱하면 라디안 값이 됩니다.
 

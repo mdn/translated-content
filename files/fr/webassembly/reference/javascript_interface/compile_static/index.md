@@ -8,10 +8,10 @@ l10n:
 
 {{WebAssemblySidebar}}
 
-La méthode statique **`WebAssembly.compile()`**, permet de compiler un module ([`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module)) à partir d'un code binaire WebAssembly. Cette fonction est utile lorsqu'il est nécessaire de compiler un module avant de l'instancier (dans les autres cas, la méthode [`WebAssembly.instantiate()`](/fr/docs/WebAssembly/JavaScript_interface/instantiate_static) sera plus pertinente).
+La méthode statique **`WebAssembly.compile()`**, permet de compiler un module ([`WebAssembly.Module`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Module)) à partir d'un code binaire WebAssembly. Cette fonction est utile lorsqu'il est nécessaire de compiler un module avant de l'instancier (dans les autres cas, la méthode [`WebAssembly.instantiate()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static) sera plus pertinente).
 
 > [!NOTE]
-> Les pages web qui utilisent une [CSP](/fr/docs/Web/HTTP/CSP) stricte peuvent bloquer la compilation WebAssembly et l'exécution des modules. Pour plus d'informations pour l'autorisation de la compilation et de l'exécution, voir [la directive CSP `script-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
+> Les pages web qui utilisent une [CSP](/fr/docs/Web/HTTP/Guides/CSP) stricte peuvent bloquer la compilation WebAssembly et l'exécution des modules. Pour plus d'informations pour l'autorisation de la compilation et de l'exécution, voir [la directive CSP `script-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src).
 
 ## Syntaxe
 
@@ -26,12 +26,12 @@ WebAssembly.compile(bufferSource);
 
 ### Valeur de retour
 
-Une promesse ([`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)) dont la valeur de résolution est une instance de [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module) qui représente le module compilé.
+Une promesse ([`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)) dont la valeur de résolution est une instance de [`WebAssembly.Module`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Module) qui représente le module compilé.
 
 ### Exceptions
 
 - Si `bufferSource` n'est pas un tableau typé, une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) sera levée.
-- Si la compilation échoue, la promesse sera rompue avec une exception [`WebAssembly.CompileError`](/fr/docs/WebAssembly/JavaScript_interface/CompileError).
+- Si la compilation échoue, la promesse sera rompue avec une exception [`WebAssembly.CompileError`](/fr/docs/WebAssembly/Reference/JavaScript_interface/CompileError).
 
 ## Exemples
 
@@ -49,7 +49,7 @@ fetch("simple.wasm")
 ```
 
 > [!NOTE]
-> Dans la plupart des cas, mieux vaudra utiliser [`WebAssembly.compileStreaming()`](/fr/docs/WebAssembly/JavaScript_interface/compileStreaming_static) qui est plus efficace que `compile()`.
+> Dans la plupart des cas, mieux vaudra utiliser [`WebAssembly.compileStreaming()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming_static) qui est plus efficace que `compile()`.
 
 ## Spécifications
 
@@ -62,5 +62,5 @@ fetch("simple.wasm")
 ## Voir aussi
 
 - [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Guides/Concepts)
+- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Guides/Using_the_JavaScript_API)

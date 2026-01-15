@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Async_JS/Promises
 original_slug: Learn/JavaScript/Asynchronous/Promises
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn_web_development/Extensions/Async_JS")}}
 
 **Les promesses (ou <i lang="en">promises</i> en anglais)** sont une brique fondamentale pour la programmation asynchrone en JavaScript. Une promesse est un objet renvoyé par une fonction asynchrone et qui représente l'état courant de l'opération. Au moment où la promesse est renvoyée à l'appelant, l'opération n'est généralement pas terminée, mais la promesse fournit des méthodes pour gérer la réussite ou l'échec de l'opération.
 
@@ -31,7 +31,7 @@ Avec une API fonctionnant avec des promesses, la fonction asynchrone démarre l'
 > Dans cet article, nous étudierons les promesses en copiant des fragments de code dans la console JavaScript du navigateur. Pour ceci&nbsp;:
 >
 > 1. Ouvrez un nouvel onglet dans votre navigateur et allez sur la page <https://example.org>.
-> 2. Dans cet onglet, ouvrez la console JavaScript [des outils de développement du navigateur](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
+> 2. Dans cet onglet, ouvrez la console JavaScript [des outils de développement du navigateur](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools).
 > 3. Lorsqu'un exemple est présent dans cet article, copiez le contenu dans la console. Vous devrez recharger la page à chaque exemple pour éviter que la console affiche une erreur sur la redéclaration de `fetchPromise()`.
 
 Dans cet exemple, nous téléchargerons le fichier JSON situé à l'adresse <https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json>, et nous afficherons des informations à son sujet.
@@ -69,7 +69,7 @@ Requête initiée…
 Réponse reçue : 200
 ```
 
-On notera que `Requête initiée…` est affiché avant d'avoir reçu une réponse. À la différence d'une fonction synchrone, `fetch()` produit sa valeur de retour alors que la requête est toujours en cours, ce qui permet à notre programme de rester réactif. La réponse affiche [le code de statut HTTP](/fr/docs/Web/HTTP/Status) `200` (OK), ce qui indique que la requête a réussi.
+On notera que `Requête initiée…` est affiché avant d'avoir reçu une réponse. À la différence d'une fonction synchrone, `fetch()` produit sa valeur de retour alors que la requête est toujours en cours, ce qui permet à notre programme de rester réactif. La réponse affiche [le code de statut HTTP](/fr/docs/Web/HTTP/Reference/Status) `200` (OK), ce qui indique que la requête a réussi.
 
 Ça ressemble beaucoup à l'exemple du précédent article où nous avions ajouté des gestionnaires d'évènements à l'objet [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest). Ici, à la place, on passe un gestionnaire à la méthode `then()` de la promesse renvoyée par l'opération.
 
@@ -182,7 +182,7 @@ Pour commencer, une promesse peut être dans l'un de ces trois états&nbsp;:
 - **Rompue** (ou échouée ou <i lang="en">rejected</i> en anglais)
   - : La fonction asynchrone a échoué. Lorsqu'une promesse est rompue, c'est le gestionnaire passé à sa méthode `catch()` qui est appelé.
 
-On notera ici que la réussite ou l'échec dépend de l'API en question. Ainsi, l'API `fetch()` considèrera qu'une requête a réussi dans le cas où le serveur renvoie une erreur HTTP comme [`404 Not Found`](/fr/docs/Web/HTTP/Status/404), mais qu'elle a échoué si une erreur réseau a empêché l'envoi de la requête.
+On notera ici que la réussite ou l'échec dépend de l'API en question. Ainsi, l'API `fetch()` considèrera qu'une requête a réussi dans le cas où le serveur renvoie une erreur HTTP comme [`404 Not Found`](/fr/docs/Web/HTTP/Reference/Status/404), mais qu'elle a échoué si une erreur réseau a empêché l'envoi de la requête.
 
 On utilise parfois le terme **réglée** (<i lang="en">settled</i> en anglais) pour désigner les deux cas de réussite et d'échec (autrement dit, pour dire que l'opération asynchrone n'est plus en cours).
 
@@ -401,4 +401,4 @@ De nombreuses API web modernes utilisent les promesses, comme [WebRTC](/fr/docs/
 - [Nous avons un problème avec les promesses (en anglais)](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html), un billet de Nolan Lawson
 - [Parlons un peu de notre façon de parler des promesses (en anglais)](https://thenewtoys.dev/blog/2021/02/08/lets-talk-about-how-to-talk-about-promises/)
 
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn_web_development/Extensions/Async_JS")}}

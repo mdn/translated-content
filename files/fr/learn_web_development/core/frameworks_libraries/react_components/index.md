@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 06754bc607017d19a7f088df7d6b0b7b635cbe58
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state", "Learn_web_development/Core/Frameworks_libraries")}}
 
 Jusqu'à présent, notre application est monolithique. Avant de pouvoir en faire quelque chose, nous devons la scinder en composants gérables et descriptifs. React n'a pas de règles strictes sur ce qui est et n'est pas un composant&nbsp;: c'est à vous de décider&nbsp;! Dans cet article, nous allons vous montrer une façon judicieuse de diviser notre application en composants.
 
@@ -63,7 +63,7 @@ export default function Todo() {
 }
 ```
 
-Jusque-là tout va bien, mais notre composant doit retourner quelque chose&nbsp;! Retournez au fichier `src/App.js`, copiez le premier [`<li>`](/fr/docs/Web/HTML/Element/li) de la liste non ordonnée, puis collez-le dans `Todo.js` afin que ce dernier contienne ceci&nbsp;:
+Jusque-là tout va bien, mais notre composant doit retourner quelque chose&nbsp;! Retournez au fichier `src/App.js`, copiez le premier [`<li>`](/fr/docs/Web/HTML/Reference/Elements/li) de la liste non ordonnée, puis collez-le dans `Todo.js` afin que ce dernier contienne ceci&nbsp;:
 
 ```jsx
 export default function Todo() {
@@ -191,7 +191,7 @@ Si vous changez la <i lang="en">prop</i> `completed` de chaque composant `<Todo 
 
 ### Identifiez-vous
 
-À l'heure actuelle, notre composant `<Todo />` fournit le même attribut `id`, avec la valeur `todo-0`, pour chaque tâche. Cela ne respecte pas les règles HTML, car les [identifiants (`id`)](/fr/docs/Web/HTML/Global_attributes/id) doivent être uniques (ils sont utilisés comme identifiants uniques pour les fragments de document, CSS, JavaScript, etc.). Cela signifie que nous devons donner à notre composant une prop `id` qui prend une valeur unique pour chaque `Todo`.
+À l'heure actuelle, notre composant `<Todo />` fournit le même attribut `id`, avec la valeur `todo-0`, pour chaque tâche. Cela ne respecte pas les règles HTML, car les [identifiants (`id`)](/fr/docs/Web/HTML/Reference/Global_attributes/id) doivent être uniques (ils sont utilisés comme identifiants uniques pour les fragments de document, CSS, JavaScript, etc.). Cela signifie que nous devons donner à notre composant une prop `id` qui prend une valeur unique pour chaque `Todo`.
 
 Pour suivre le même schéma qu'au départ, donnons à chaque instance du composant `<Todo />` un identifiant au format `todo-i`, où `i` est incrémenté d'une unité à chaque fois&nbsp;:
 
@@ -443,4 +443,4 @@ Avec cela, nous sommes _presque_ prêts à aborder l'interactivité dans notre a
 
 Nous voilà à la fin de cet article où nous avons approfondi la façon de décomposer notre application en composants et de traiter leur rendu efficacement. Nous allons maintenant examiner comment gérer les évènements dans React et commencer à ajouter de l'interactivité.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state", "Learn_web_development/Core/Frameworks_libraries")}}

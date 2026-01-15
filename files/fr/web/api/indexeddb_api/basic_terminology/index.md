@@ -47,7 +47,7 @@ Si vous avez l'habitude de travailler avec d'autres types de base de données, I
   Cette règle de sécurité qui porte sur IndexedDB empêche les applications d'accéder aux données des autres origines. Ainsi, bien qu'une application ou une page située sur [http://www.example.com/app/](https://www.example.com/app/) puisse récupérer des données à propos de [http://www.example.com/dir/](https://www.example.com/dir/), car elles partagent la même origine&nbsp;; elle ne peut pas récupérer des données provenant de [http://www.example.com:8080/dir/](https://www.example.com:8080/dir/) (le port est différent) ou de <https://www.example.com/dir/> (le protocole est différent), car les origines sont différentes.
 
   > [!NOTE]
-  > Le contenu tiers d'une fenêtre (par exemple celui d'une [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)) peut accéder au magasin IndexedDB de l'origine dans laquelle il est embarqué, à moins que le navigateur soit paramétré [pour ne jamais accepter les cookies tiers](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection) (voir [le bug 1147821](https://bugzilla.mozilla.org/show_bug.cgi?id=1147821)).
+  > Le contenu tiers d'une fenêtre (par exemple celui d'une [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe)) peut accéder au magasin IndexedDB de l'origine dans laquelle il est embarqué, à moins que le navigateur soit paramétré [pour ne jamais accepter les cookies tiers](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection) (voir [le bug 1147821](https://bugzilla.mozilla.org/show_bug.cgi?id=1147821)).
 
 ### Limitations
 

@@ -1,58 +1,41 @@
 ---
-title: Utiliser le rôle status
+title: "ARIA : rôle status"
+short-title: status
 slug: Web/Accessibility/ARIA/Reference/Roles/status_role
 original_slug: Web/Accessibility/ARIA/Roles/status_role
+l10n:
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{AccessibilitySidebar}}
+Le rôle `status` définit une [région dynamique](/fr/docs/Web/Accessibility/ARIA/Guides/Live_regions) contenant des informations de conseil pour l'utilisateur·ice qui ne sont pas assez importantes pour être une [`alerte`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role).
 
-### Description
+## Description
 
-Cette technique présente l'utilisation du rôle [status](https://www.w3.org/TR/wai-aria/roles#status) et décrit les effets produits sur les navigateurs et les technologies d'assistance.
+Un `status` est un type de [région dynamique](/fr/docs/Web/Accessibility/ARIA/Guides/Live_regions) fournissant des informations de conseil qui ne sont pas assez importantes pour justifier une alerte, laquelle interromprait immédiatement l'annonce de l'activité courante de l'utilisateur·ice. Il est souvent, mais pas nécessairement, présenté sous forme de barre d'état.
 
-Le rôle `status` est un type de [zone live](https://www.w3.org/WAI/PF/aria/terms#def_liveregion) et un conteneur dont le contenu est un message d'informations destiné à l'utilisateur. Ce message n'est pas assez important pour justifier une [alerte](https://www.w3.org/TR/wai-aria/roles#alert). Il est souvent présenté comme une barre d'état. Lorsque le rôle est ajouté à un élément, le navigateur émettra un événement `status` accessible aux produits de technologies d'assistance qui pourront alors le notifier à l'utilisateur.
+Ne donnez pas de ciblage au status lorsque son contenu est mis à jour. Les régions dynamiques sont conçues pour informer les utilisateur·ice·s des mises à jour dynamiques survenues dans d'autres zones de la page web courante, mais qui ne nécessitent pas d'interrompre l'activité courante de l'utilisateur·ice par un changement de contexte. Si la situation exige de déplacer la sélection, alors l'utilisation d'un `status` ou d'une autre région dynamique n'est probablement pas appropriée.
 
-Le contenu des informations d'état doit être fourni dans un objet d'état et il faut s'assurer que cet objet ne reçoive pas le focus. Si une autre partie de la page contrôle ce qui s'affiche dans l'objet d'état, la relation doit être explicitement définie à l'aide de l'attribut [`aria-controls`](https://www.w3.org/TR/wai-aria/states_and_properties#aria-controls).
+Les éléments avec le rôle status ont une valeur implicite de [`aria-live`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) à `polite` et une valeur implicite de [`aria-atomic`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic) à `true`.
 
-Les technologies d'assistance devraient réserver des cellules dans la grille Braille pour rendre l'état.
+### Propriétés, états et rôles WAI-ARIA associés
 
-### Effets possibles sur les agents utilisateurs et les technologies d'assistance
+- [`aria-atomic`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic)
+  - : Définit si les technologies d'assistance doivent présenter toute la région modifiée ou seulement une partie. Les éléments avec le rôle `status` ont une valeur implicite de `aria-atomic` à `true`.
 
-Lorsque le rôle `status` est ajouté à un élément, ou qu'un tel élément devient visible, l'agent utilisateur devrait suivre les étapes suivantes&nbsp;:
+- [`aria-live`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)
+  - : Définit quand la technologie d'assistance doit informer l'utilisateur·ice des mises à jour du contenu. Les éléments avec le rôle `status` ont une valeur implicite de `aria-live` à `polite`, ce qui signifie que les lecteurs d'écran annoncent les changements dans le log lorsque l'utilisateur·ice est inactif·ve.
 
-- Présenter l'élément ayant un rôle de `status` à l'API d'accessibilité du système d'exploitation&nbsp;;
-- Déclencher un événement `status` accessible à l'aide l'API d'accessibilité du système d'exploitation si elle le prend en charge.
+- [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) ou [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
+  - : Certains lecteurs d'écran annoncent le nom d'un élément status avant d'annoncer son contenu. Si un nom est visible, référencez-le avec `aria-labelledby`. Inclure un `aria-label` permet de faire précéder le contenu visible d'un élément status par un texte qui n'est pas affiché lorsque le lecteur d'écran lit le contenu. Nommer un status n'est pas obligatoire&nbsp;: si rien n'est approprié, ces deux attributs peuvent être omis.
 
-Les technologies d'assistance devraient être à l'écoute de tels événements et les notifier à l'utilisateur en conséquence&nbsp;:
+## Spécifications
 
-- Les lecteurs d'écran peuvent fournir une touche spécifique pour annoncer l'état actuel et ce dernier devrait présenter les contenus des états des zones live. Cela devrait être annoncé lorsque l'utilisateur est inactif, à moins que l'attribut `aria-live=”assertive”` soit défini dans quel cas l'utilisateur peut être interrompu&nbsp;;
-- Les loupes d'écran devraient agrandir l'objet d'état.
+{{Specifications}}
 
-> [!NOTE]
-> Il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
+## Voir aussi
 
-### Exemples
-
-#### Exemple 1&nbsp;: ajout du rôle `status` dans le code HTML
-
-L'extrait de code ci-dessous montre comment le rôle `status` est ajouté directement dans le code source HTML.
-
-```html
-<p role="status">Vos modifications ont été automatiquement enregistrées.</p>
-```
-
-#### Exemples concrets
-
-### Notes
-
-### Attributs ARIA utilisés
-
-- [status](https://www.w3.org/TR/wai-aria/roles#status).
-
-### Techniques ARIA connexes
-
-- Rôle [alert](https://www.w3.org/TR/wai-aria/roles#alert).
-
-### Autres ressources
-
-- Bonnes pratiques ARIA – Implémentation des zones live&nbsp;: [#LiveRegions](https://www.w3.org/TR/wai-aria-practices/#LiveRegions).
+- [ARIA&nbsp;: rôle `alert`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role)
+- [ARIA&nbsp;: rôle `log`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/log_role)
+- [ARIA&nbsp;: rôle `marquee`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/marquee_role)
+- [ARIA&nbsp;: rôle `timer`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/timer_role)
+- [Régions dynamiques ARIA](/fr/docs/Web/Accessibility/ARIA/Guides/Live_regions)

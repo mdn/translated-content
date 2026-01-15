@@ -79,7 +79,8 @@ O formato de áudio MP3(.mp3 audio/mpeg; diferente do áudio MP3 no MP4 containe
 
 O formato WAVE, com o codec de áudio PCM (codec WAVE "1") tem suporte nos navegadores Gecko(Firefox) e Safari no desktop e dispositivos móveis. Arquivos com o formato WAVE tipicamente tem a extensão ".wav".
 
-> **Nota:** **Nota: Veja** [RFC 2361](https://www.rfc-editor.org/rfc/rfc2361.txt) para ver registros do codec WAVE
+> [!NOTE]
+> **Nota: Veja** [RFC 2361](https://www.rfc-editor.org/rfc/rfc2361.txt) para ver registros do codec WAVE
 
 Gecko reconhece os seguintes tipos MIME em arquivos de áudio WAVE:
 

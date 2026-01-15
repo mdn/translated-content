@@ -2,10 +2,8 @@
 title: Function
 slug: Web/JavaScript/Reference/Global_Objects/Function
 l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Function`** オブジェクトは[関数](/ja/docs/Web/JavaScript/Reference/Functions)についてのメソッドを提供します。 JavaScript では、すべての関数が実際には `Function` オブジェクトです。
 
@@ -52,7 +50,7 @@ l10n:
 
 ## 例
 
-### Funciton コンストラクターと関数宣言の違い
+### Function コンストラクターと関数宣言の違い
 
 `Function` コンストラクターで生成された関数は、生成コンテキストにクロージャを作りません。つまり常にグローバルスコープで生成されます。これを実行すると、 `Function` コンストラクターの呼び出し元のスコープは入らず、自身のローカル変数とグローバル変数だけにアクセスできます。これは関数式のコードに {{jsxref("Global_Objects/eval", "eval()")}} を使うのとは異なります。
 

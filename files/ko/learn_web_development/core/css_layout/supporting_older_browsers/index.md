@@ -6,7 +6,7 @@ original_slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods", "Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension", "Learn_web_development/Core/CSS_layout")}}
 
 이 모듈에서는 Flexbox 및 Grid를 디자인의 기본 레이아웃 메서드로 사용할 것을 권고합니다. 그러나 당신이 사용한 메서드를 지원하지 않는 브라우저나 이전 브라우저를 사용해 당신의 사이트를 방문하는 사람들이 있을 겁니다. 이런 일은 웹상에서 항상 있는 일입니다. 즉 새로운 기능이 개발됨에 따라 서로 다른 브라우저가 서로 다른 것들의 우선 순위를 정합니다. 이 문서는 구식 기술의 사용자들을 외면하지 않고도 최신 웹 기술을 사용하는 방법에 대해 설명합니다.
 
@@ -97,7 +97,8 @@ CSS 규격에는 두 가지 레이아웃 메서드가 동일한 항목에 적용
 
 {{ EmbedLiveSample('예제1', '100%', '200') }}
 
-> **참고:** {{cssxref("clear")}} 속성도 마찬가지로 정리된 항목이 grid가 되자마자 효력을 상실합니다. 따라서 정리된 footer가 딸린 레이아웃을 가질 수 있으며, 이 레이아웃이 grid 레이아웃으로 전환됩니다.
+> [!NOTE]
+> {{cssxref("clear")}} 속성도 마찬가지로 정리된 항목이 grid가 되자마자 효력을 상실합니다. 따라서 정리된 footer가 딸린 레이아웃을 가질 수 있으며, 이 레이아웃이 grid 레이아웃으로 전환됩니다.
 
 ### 대체 메서드
 
@@ -230,4 +231,4 @@ Flexbox 및 그리드를 지원하는 대부분의 브라우저를 사용하면 
 - [feature query가 포함된 중첩된 웹 디자인](https://24ways.org/2017/cascading-web-design/)
 - [feature query 사용하기 (동영상)](https://gridbyexample.com/learn/2016/12/24/learning-grid-day24/)
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods", "Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension", "Learn_web_development/Core/CSS_layout")}}

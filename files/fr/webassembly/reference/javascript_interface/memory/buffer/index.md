@@ -6,7 +6,7 @@ original_slug: WebAssembly/JavaScript_interface/Memory/buffer
 
 {{WebAssemblySidebar}}
 
-La propriété **`buffer`**, rattachée au prototype de l'objet [`Memory`](/fr/docs/WebAssembly/JavaScript_interface/Memory), renvoie le tampon (_buffer_) contenu dans l'espace mémoire.
+La propriété **`buffer`**, rattachée au prototype de l'objet [`Memory`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Memory), renvoie le tampon (_buffer_) contenu dans l'espace mémoire.
 
 ## Syntaxe
 
@@ -42,5 +42,5 @@ WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
 ## Voir aussi
 
 - [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Guides/Concepts)
+- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Guides/Using_the_JavaScript_API)

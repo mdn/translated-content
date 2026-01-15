@@ -1,24 +1,23 @@
 ---
 title: String.prototype.startsWith()
+short-title: startsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/startsWith
 l10n:
-  sourceCommit: a92a2bb31cf5d79808878701f0344a4eabf12963
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`startsWith()`** は {{jsxref("String")}} 値のメソッドで、文字列が引数で指定された文字列で始まるかを判定して `true` か `false` を返します。
 
-**`startsWith()`** メソッドは文字列が引数で指定された文字列で始まるかを判定して `true` か `false` を返します。
-
-{{InteractiveExample("JavaScript デモ: String.startsWith()")}}
+{{InteractiveExample("JavaScript デモ: String.prototype.startsWith()")}}
 
 ```js interactive-example
-const str1 = "Saturday night plans";
+const str = "Saturday night plans";
 
-console.log(str1.startsWith("Sat"));
-// Expected output: true
+console.log(str.startsWith("Sat"));
+// 予想される結果: true
 
-console.log(str1.startsWith("Sat", 3));
-// Expected output: false
+console.log(str.startsWith("Sat", 3));
+// 予想される結果: false
 ```
 
 ## 構文
@@ -71,6 +70,7 @@ console.log(str.startsWith("not to be", 10)); // true
 ## 関連情報
 
 - [`String.prototype.startsWith` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims による `String.prototype.startsWith` のポリフィル](https://www.npmjs.com/package/string.prototype.startsWith)
 - {{jsxref("String.prototype.endsWith()")}}
 - {{jsxref("String.prototype.includes()")}}
 - {{jsxref("String.prototype.indexOf()")}}

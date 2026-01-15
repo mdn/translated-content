@@ -15,7 +15,7 @@ l10n:
 
 2021 年以降各ブラウザーは、映画産業で広く用いられる _[P3](https://ja.wikipedia.org/wiki/DCI-P3)_ や _[Rec. 2020](https://ja.wikipedia.org/wiki/Rec._2020)_ など、そのほかの色域についての機能も提供するようになりました。
 
-[`color-gamut`](/ja/docs/Web/CSS/@media/color-gamut) という[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)を使えば、より広範囲の色域を対応する機器に向けて、様々な色域を定義することができます。そうした機器では RGB の色域外の色を、専用の CSS 関数で記述することができます。例えば、 [`lch()`](/ja/docs/Web/CSS/color_value/lch) を使えば LCH 円筒座標系を用いることができますし、 [`lab()`](/ja/docs/Web/CSS/color_value/lab) を使えば Lab 座標系を使うことができます。
+[`color-gamut`](/ja/docs/Web/CSS/Reference/At-rules/@media/color-gamut) という[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)を使えば、より広範囲の色域を対応する機器に向けて、様々な色域を定義することができます。そうした機器では RGB の色域外の色を、専用の CSS 関数で記述することができます。例えば、 [`lch()`](/ja/docs/Web/CSS/Reference/Values/color_value/lch) を使えば LCH 円筒座標系を用いることができますし、 [`lab()`](/ja/docs/Web/CSS/Reference/Values/color_value/lab) を使えば Lab 座標系を使うことができます。
 
 ## 関連情報
 

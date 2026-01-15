@@ -1,11 +1,10 @@
 ---
 title: Math.random()
+short-title: random()
 slug: Web/JavaScript/Reference/Global_Objects/Math/random
 l10n:
-  sourceCommit: 0aba9992d39210d5b8a8b204c5baafd3b31c4e25
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Math.random()`** は静的メソッドで、 0 以上 1 未満の範囲で浮動小数点の擬似乱数を返します。その範囲ではほぼ均一な分布で、ユーザーは必要なだけ範囲の拡大をすることができます。実装側で乱数生成アルゴリズムの初期シードを選択します。ユーザーが初期シードを選択、またはリセットすることは出来ません。
 
@@ -20,13 +19,13 @@ function getRandomInt(max) {
 }
 
 console.log(getRandomInt(3));
-// Expected output: 0, 1 or 2
+// 予想される結果: 0, 1 or 2
 
 console.log(getRandomInt(1));
-// Expected output: 0
+// 予想される結果: 0
 
 console.log(Math.random());
-// Expected output: a number from 0 to <1
+// 予想される結果: 0 以上 1 未満の数値
 ```
 
 ## 構文
@@ -37,7 +36,7 @@ Math.random()
 
 ### 引数
 
-なし
+なし。
 
 ### 返値
 

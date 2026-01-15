@@ -7,7 +7,7 @@ l10n:
 
 {{Deprecated_Header}}
 
-**`mathsize`** [全局属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)设置 MathML 元素的[字体大小](/zh-CN/docs/Web/CSS/font-size)。
+**`mathsize`** [全局属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)设置 MathML 元素的[字体大小](/zh-CN/docs/Web/CSS/Reference/Properties/font-size)。
 
 > [!NOTE]
 > 尽可能使用 CSS 对 MathML 进行样式设置。`mathsize` 属性只应包含在不支持 CSS 的应用程序中，并且如果设置的话，其将被 CSS `font-size` 属性值覆盖。

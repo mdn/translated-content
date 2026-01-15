@@ -41,7 +41,7 @@ toSpliced(start, skipCount, item1, item2, /* …, */ itemN)
 
 ### 返値
 
-`start`, `item1`, `item2`, …, `itemN` より前のすべての要素と、 `start + skipCount` より後のすべての要素からなる新しい配列です。
+`start` より前のすべての要素、 `item1`, `item2`, …, `itemN` と、 `start + skipCount` 以降のすべての要素からなる新しい配列です。
 
 ## 解説
 

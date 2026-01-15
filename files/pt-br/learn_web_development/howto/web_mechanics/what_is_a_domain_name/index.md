@@ -67,7 +67,8 @@ Você não pode "comprar um nome de domínio". Você paga pelo direito de usar u
 
 As empresas chamadas registradoras usam registros de nome de domínio para acompanhar as informações técnicas e administrativas que conectam você a seu nome de domínio.
 
-> **Nota:** **Nota :** Alguns nomes de domínios podem não ter um registrador encarregado de acompanhar. Por exemplo, todo o nome sob o domínio .fire é gerenciado pela Amazon.
+> [!NOTE]
+> Alguns nomes de domínios podem não ter um registrador encarregado de acompanhar. Por exemplo, todo o nome sob o domínio .fire é gerenciado pela Amazon.
 
 #### Encontrando um nome de domínio disponível
 
@@ -128,7 +129,8 @@ O processo é bastante simples:
 
 Bancos de dados DNS são armazenados em todos os servidores DNS em todo o mundo, e todos esses servidores referem-se a alguns chamados "servidores de nome autoritativo" ou "servidores DNS de nível superior". Sempre que seu registrador cria ou atualiza qualquer informação para um determinado domínio, a informação deve ser atualizada em todo banco de dados DNS. Cada servidor DNS que conhece um determinado domínio armazena as informações por algum tempo antes de serem automaticamente invalidadas e atualizadas (o servidor DNS cosulta novamente um servidor autoritativo). Assim, leva algum tempo para que os servidores DNS que conhecem esse nome de domínio obtenham as informações atualizadas.
 
-> **Nota:** **Note :** This time is often called **propagation time**. However this term is not precise since the update is not propagating itself (top → down). DNS servers queried by your computer (down) are the ones that fetch the information from the authoritative server (top) when they need it.
+> [!NOTE]
+> This time is often called **propagation time**. However this term is not precise since the update is not propagating itself (top → down). DNS servers queried by your computer (down) are the ones that fetch the information from the authoritative server (top) when they need it.
 
 ### Como funciona uma solicitação de DNS?
 

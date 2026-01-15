@@ -1,11 +1,10 @@
 ---
 title: Map[Symbol.species]
+short-title: "[Symbol.species]"
 slug: Web/JavaScript/Reference/Global_Objects/Map/Symbol.species
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Map[Symbol.species]`** は静的アクセサープロパティで、 `Map` オブジェクトをコピーする方法を示す未使用のアクセサープロパティです。
 
@@ -21,7 +20,7 @@ Map[Symbol.species]
 
 ## 解説
 
-species アクセサープロパティは `Map` オブジェクトの既定のコンストラクターを返します。サブクラスのコンストラクターは、コンストラクターに代入して変更することによりオーバーライドすることができます。
+`[Symbol.species]` アクセサープロパティは `Map` オブジェクトの既定のコンストラクターを返します。サブクラスのコンストラクターは、コンストラクターを代入して変更することによりオーバーライドすることができます。
 
 > [!NOTE]
 > このプロパティは現在、どの `Map` のメソッドからも使われていません。
@@ -30,10 +29,10 @@ species アクセサープロパティは `Map` オブジェクトの既定の�
 
 ### 通常のオブジェクトの species
 
-species プロパティは既定のコンストラクター関数を返しますので、`Map` オブジェクトには `Map` コンストラクターを返します。
+`[Symbol.species]` プロパティは既定のコンストラクター関数を返しますので、`Map` オブジェクトには `Map` コンストラクターを返します。
 
 ```js
-Map[Symbol.species]; // function Map()
+Map[Symbol.species]; // 関数 Map()
 ```
 
 ### 派生オブジェクトの species

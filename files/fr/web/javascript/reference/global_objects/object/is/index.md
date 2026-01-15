@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/is
 
 {{JSRef}}
 
-La méthode **`Object.is()`** permet de déterminer si deux valeurs sont [les mêmes](/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness).
+La méthode **`Object.is()`** permet de déterminer si deux valeurs sont [les mêmes](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness).
 
 ## Syntaxe
 
@@ -26,7 +26,7 @@ Un booléen indiquant si les arguments ont la même valeur.
 
 ## Description
 
-`Object.is()` permet de déterminer si deux valeurs sont [identiques](/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness). Deux valeurs sont considérées identiques si :
+`Object.is()` permet de déterminer si deux valeurs sont [identiques](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness). Deux valeurs sont considérées identiques si :
 
 - elles sont toutes les deux {{jsxref("undefined")}}
 - elles sont toutes les deux {{jsxref("null")}}
@@ -39,9 +39,9 @@ Un booléen indiquant si les arguments ont la même valeur.
   - sont toutes les deux égales à {{jsxref("NaN")}}
   - sont non-nulles, ne sont pas `NaN` et ont toutes les deux la même valeur
 
-Attention, ce n'est pas la même égalité qu'avec l'opérateur {{jsxref("Opérateurs/Opérateurs_de_comparaison", "==", "#.C3.89galit.C3.A9_simple_(.3D.3D)")}}. L'opérateur == applique différentes conversions à chaque opérande (si ils ne sont pas du même type) avant de tester l'égalité (d'où le comportement `"" == false` qui donne `true`), `Object.is` ne convertit aucune des deux valeurs.
+Attention, ce n'est pas la même égalité qu'avec l'opérateur {{jsxref("Opérateurs/Opérateurs_de_comparaison", "==", "#égalité_simple_(==)")}}. L'opérateur == applique différentes conversions à chaque opérande (si ils ne sont pas du même type) avant de tester l'égalité (d'où le comportement `"" == false` qui donne `true`), `Object.is` ne convertit aucune des deux valeurs.
 
-Cette égalité est également différente de l'égalité stricte qu'on peut avoir avec l'opérateur {{jsxref("Opérateurs/Opérateurs_de_comparaison", "===", "#.C3.89galit.C3.A9_stricte_(.3D.3D.3D)")}}. L'opérateur === (et également l'opérateur ==) considère que `-0` et `+0` sont égales et que {{jsxref("Number.NaN")}} n'est pas égal à {{jsxref("NaN")}}.
+Cette égalité est également différente de l'égalité stricte qu'on peut avoir avec l'opérateur {{jsxref("Opérateurs/Opérateurs_de_comparaison", "===", "#égalité_stricte_(===)")}}. L'opérateur === (et également l'opérateur ==) considère que `-0` et `+0` sont égales et que {{jsxref("Number.NaN")}} n'est pas égal à {{jsxref("NaN")}}.
 
 ## Exemples
 
@@ -93,5 +93,5 @@ if (!Object.is) {
 
 ## Voir aussi
 
-- [Guide JavaScript : L'égalité en JavaScript](/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness) qui illustre les trois manières de comparer en JavaScript
+- [Guide JavaScript : L'égalité en JavaScript](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness) qui illustre les trois manières de comparer en JavaScript
 - {{jsxref("Opérateurs/Opérateurs_de_comparaison","Les opérateurs de comparaison","",1)}}

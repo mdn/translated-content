@@ -241,7 +241,7 @@ body {
 接下來修改 `body` 元素。以下依序介紹一些常見的宣告：
 
 - `width: 600px;` — 將 body 寬度固定為 600 像素
-- `margin: 0 auto;` — When you set two values on a property like `margin` or `padding`, the first value affects the element's top **and** bottom side (make it `0` in this case), and the second value the left **and** right side (here, `auto` is a special value that divides the available horizontal space evenly between left and right). You can also use one, three, or four values, as documented [here](/zh-TW/docs/Web/CSS/margin#Values).
+- `margin: 0 auto;` — When you set two values on a property like `margin` or `padding`, the first value affects the element's top **and** bottom side (make it `0` in this case), and the second value the left **and** right side (here, `auto` is a special value that divides the available horizontal space evenly between left and right). You can also use one, three, or four values, as documented [here](/zh-TW/docs/Web/CSS/Reference/Properties/margin#Values).
 - `background-color: #FF9500;` — as before, this sets the element's background color. I used a sort of reddish orange for the body as opposed to dark blue for the `html` element. Go ahead and experiment. Feel free to use `white` or whatever you like.
 - `padding: 0 20px 20px 20px;` — we have four values set on the padding, to make a bit of space around our content. This time we are setting no padding on the top of the body, and 20 pixels on the left, bottom and right. The values set top, right, bottom, left, in that order.
 - `border: 5px solid black;` — this simply sets a 5 pixel wide solid black border on all sides of the body.
@@ -282,7 +282,7 @@ img {
 Finally, we'll center the image to make it look better. We could use the `margin: 0 auto` trick again as we did earlier for the body, but we also need to do something else. The body element is **block level**, meaning it takes up space on the page and can have margin and other spacing values applied to it. Images, on the other hand, are **inline** elements, meaning they can't. So to apply margins to the image, we have to give the image block-level behavior using `display: block;`.
 
 > [!NOTE]
-> Don't worry if you don't yet understand `display: block;` and the block-level/inline distinction. You will as you study CSS in more depth. You can find out more about the different available display values at our [display reference page](/zh-TW/docs/Web/CSS/display).
+> Don't worry if you don't yet understand `display: block;` and the block-level/inline distinction. You will as you study CSS in more depth. You can find out more about the different available display values at our [display reference page](/zh-TW/docs/Web/CSS/Reference/Properties/display).
 
 ## 結論
 

@@ -39,7 +39,7 @@ Une chaîne de caractères qui représente la date indiquée, dans un format ang
 
 Les instances de {{jsxref("Date")}} représentent un point précis dans le temps. Appeler {{jsxref("Date.prototype.toString", "toString")}} retournera la date formatée sous une forme lisible par un humain, en anglais américain. Pour le moteur JavaScript [SpiderMonkey](/fr/docs/SpiderMonkey), ceci consiste en : la partie « date » (jour, mois et année) suivie de la partie « heure » (heures, minutes, secondes et fuseau horaire). Il est parfois préférable d'obtenir uniquement la partie « date » ; ceci est possible grâce à la méthode `toDateString()`.
 
-La méthode `toDateString()` est particulièrement utile car, pour les moteurs implémentant fidèlement [ECMA-262](/fr/docs/Web/JavaScript/JavaScript_technologies_overview), il peut y avoir certaines différences dans la chaîne de caractères produite par `toString()` sur les objets `Date`. Le format dépend de l'implémentation et les techniques simples de découpage de texte peuvent ne pas produire un résultat cohérent à travers les différents moteurs.
+La méthode `toDateString()` est particulièrement utile car, pour les moteurs implémentant fidèlement [ECMA-262](/fr/docs/Web/JavaScript/Reference/JavaScript_technologies_overview), il peut y avoir certaines différences dans la chaîne de caractères produite par `toString()` sur les objets `Date`. Le format dépend de l'implémentation et les techniques simples de découpage de texte peuvent ne pas produire un résultat cohérent à travers les différents moteurs.
 
 ## Exemples
 

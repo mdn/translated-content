@@ -3,7 +3,7 @@ title: Object.prototype.__defineGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 ---
 
-{{JSRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 > [!NOTE]
 > 此特性已弃用，建议使用[对象初始化语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)或 {{jsxref("Object.defineProperty()")}} API 来定义 [getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get)。该方法的行为只针对 Web 兼容性进行了规定，在任何平台上都不需要实现该方法。它可能无法在所有地方正常工作。

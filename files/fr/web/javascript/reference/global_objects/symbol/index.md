@@ -178,5 +178,5 @@ obj[Object(sym)]; // toujours 1
 - [Une prothèse d'émulation de `Symbol` dans la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
 - [La page du glossaire sur le type de données symbole](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
 - [`typeof`](/fr/docs/Web/JavaScript/Reference/Operators/typeof)
-- [Types et structures de données en JavaScript](/fr/docs/Web/JavaScript/Data_structures)
+- [Types et structures de données en JavaScript](/fr/docs/Web/JavaScript/Guide/Data_structures)
 - [L'article ES6 en détails sur les symboles, disponible sur tech.mozfr.org](https://tech.mozfr.org/post/2015/06/21/ES6-en-details-%3A-les-symboles)

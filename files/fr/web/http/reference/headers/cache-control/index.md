@@ -1,33 +1,40 @@
 ---
-title: Cache-Control
+title: En-tête Cache-Control
+short-title: Cache-Control
 slug: Web/HTTP/Reference/Headers/Cache-Control
-original_slug: Web/HTTP/Headers/Cache-Control
 l10n:
-  sourceCommit: 2f22893feecd8ef6f4d6f7fa8458cf8c1734d921
+  sourceCommit: fd4cf672d03417a8a391a74db10dfda3cb1e8443
 ---
 
-L'en-tête HTTP **`Cache-Control`** contient des _directives_ (c'est-à-dire des instructions), dans les requêtes et dans les réponses, pour contrôler [la mise en cache](/fr/docs/Web/HTTP/Caching) dans les navigateurs et caches partagées (par exemple les <i lang="en">proxies</i>, CDN).
+L'en-tête HTTP **`Cache-Control`** contient des _directives_ (c'est-à-dire des instructions), dans les requêtes et dans les réponses, pour contrôler [la mise en cache](/fr/docs/Web/HTTP/Guides/Caching) dans les navigateurs et caches partagées (par exemple les <i lang="en">proxies</i>, CDN).
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Type d'en-tête</th>
       <td>
-        <a href="/fr/docs/Glossary/Request_header">En-tête de requête</i>, <a href="/fr/docs/Glossary/Response_header">en-tête de réponse</i>
+        {{Glossary("Request header", "En-tête de requête")}},
+        {{Glossary("Response header", "En-tête de réponse")}}
       </td>
     </tr>
     <tr>
-      <th scope="row"><a href="/fr/docs/Glossary/Forbidden_header_name">Nom d'en-tête interdit</a></th>
+      <th scope="row">{{Glossary("Forbidden request header", "En-tête de requête interdit")}}</th>
       <td>Non</td>
     </tr>
     <tr>
-      <th scope="row"><a href="/fr/docs/Glossary/CORS-safelisted_response_header">En-tête de réponse sûr pour le CORS</th>
+      <th scope="row">
+        {{Glossary("CORS-safelisted response header", "En-tête de réponse sûr pour le CORS")}}
+      </th>
       <td>Oui</td>
     </tr>
   </tbody>
 </table>
 
 ## Syntaxe
+
+```http
+Cache-Control: <directive>, <directive>, ...
+```
 
 Les directives pour la mise en cache suivent les règles suivantes&nbsp;:
 
@@ -75,13 +82,13 @@ Cette section définit les termes utilisés dans ce document, certains provenant
 - Réutilisation des réponses
   - : Réutiliser des réponses mises en cache pour les requêtes suivantes.
 - Revalidation de la réponse
-  - : Demander au serveur d'origine si la réponse stockée est toujours [fraîche](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness). Généralement, la revalidation est réalisée avec une requête conditionnelle.
+  - : Demander au serveur d'origine si la réponse stockée est toujours [fraîche](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness). Généralement, la revalidation est réalisée avec une requête conditionnelle.
 - Réponse fraîche
-  - : Indique que la réponse est [fraîche](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness). Cela signifie en général que la réponse peut être utilisée pour les requêtes suivantes, selon les directives de la requête.
+  - : Indique que la réponse est [fraîche](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness). Cela signifie en général que la réponse peut être utilisée pour les requêtes suivantes, selon les directives de la requête.
 - Réponse périmée
-  - : Indique que la réponse est [périmée](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness). Cela signifie en général que la réponse ne peut être réutilisée telle quelle. Le stockage du cache ne doit pas nécessairement retirer immédiatement des réponses périmées, car une revalidation pourrait modifier la réponse et la faire devenir [fraîche](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness) à nouveau.
+  - : Indique que la réponse est [périmée](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness). Cela signifie en général que la réponse ne peut être réutilisée telle quelle. Le stockage du cache ne doit pas nécessairement retirer immédiatement des réponses périmées, car une revalidation pourrait modifier la réponse et la faire devenir [fraîche](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness) à nouveau.
 - Âge
-  - : Le temps écoulé depuis la génération de la réponse. Il s'agit d'un critère pour déterminer si une réponse est [fraîche](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness) ou [périmée](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness).
+  - : Le temps écoulé depuis la génération de la réponse. Il s'agit d'un critère pour déterminer si une réponse est [fraîche](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness) ou [périmée](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness).
 
 ## Directives
 
@@ -91,16 +98,18 @@ Cette section indique les directives qui jouent un rôle pour la mise en cache, 
 
 #### `max-age`
 
-La directive de réponse `max-age=N` indique que la réponse reste [fraîche](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness) jusqu'à _N_ secondes après la génération de la réponse.
+La directive de réponse `max-age=N` indique que la réponse reste [fraîche](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness) jusqu'à _N_ secondes après la génération de la réponse.
 
 ```http
 Cache-Control: max-age=604800
 ```
 
-Cela indique que les caches peuvent stocker cette réponse et la réutiliser pour les requêtes suivantes tant qu'elle est [fraîche](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness).
+Cela indique que les caches peuvent stocker cette réponse et la réutiliser pour les requêtes suivantes tant qu'elle est [fraîche](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness).
 
 On notera que `max-age` ne correspond pas au temps écoulé depuis que la réponse a été reçue, il s'agit du temps écoulé depuis que la réponse a été générée sur le serveur d'origine.
-Ainsi, si les autres caches situés sur la route réseau empruntée par la réponse stockent la réponse pendant 100 secondes (en l'indiquant avec l'en-tête de réponse `Age`), le cache du navigateur déduira 100 secondes de la durée de fraîcheur.
+Ainsi, si les autres caches situés sur la route réseau empruntée par la réponse stockent la réponse pendant 100 secondes (en l'indiquant avec l'en-tête de réponse `Age`), le cache du navigateur déduira 100 secondes de la [durée de fraîcheur](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_et_durabilité_en_fonction_de_lâge).
+
+Si la valeur de `max-age` est négative (par exemple, `-1`) ou n'est pas un entier (par exemple, `3599.99`), alors le comportement de la mise en cache n'est pas défini. Il est recommandé aux caches de traiter la valeur comme si elle était `0` (cela est indiqué dans la section [Calcul de la durée de fraîcheur <sup>(angl.)</sup>](https://httpwg.org/specs/rfc9111.html#calculating.freshness.lifetime) de la spécification HTTP).
 
 ```http
 Cache-Control: max-age=604800
@@ -109,7 +118,8 @@ Age: 100
 
 #### `s-maxage`
 
-La directive de réponse `s-maxage` indique également la durée pendant laquelle la réponse est [fraîche](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness) (de façon analogue à `max-age`), mais s'applique spécifiquement aux caches partagés. Ceux-ci ignoreront `max-age` si `s-maxage` est présente.
+La directive de réponse `s-maxage` indique également la durée pendant laquelle la réponse est [fraîche](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness) (de façon analogue à `max-age`), mais s'applique spécifiquement aux caches partagés.
+La directive `s-maxage` est ignorée par les caches privés et remplace la valeur définie par la directive `max-age` ou l'en-tête `Expires` pour les caches partagés, si elles sont présentes.
 
 ```http
 Cache-Control: s-maxage=604800
@@ -129,7 +139,7 @@ On notera que `no-cache` ne signifie pas «&nbsp;ne pas mettre en cache&nbsp;».
 
 #### `must-revalidate`
 
-La directive de réponse `must-revalidate` indique que la réponse peut être stockée dans les caches et peut être réutilisée tant qu'elle est [fraîche](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness). Si la réponse devient [périmée](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness), elle doit être revalidée avec le serveur d'origine avant de pouvoir être réutilisée.
+La directive de réponse `must-revalidate` indique que la réponse peut être stockée dans les caches et peut être réutilisée tant qu'elle est [fraîche](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness). Si la réponse devient [périmée](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness), elle doit être revalidée avec le serveur d'origine avant de pouvoir être réutilisée.
 
 On utilise généralement `must-revalidate` avec `max-age`.
 
@@ -137,7 +147,7 @@ On utilise généralement `must-revalidate` avec `max-age`.
 Cache-Control: max-age=604800, must-revalidate
 ```
 
-HTTP permet aux caches de réutiliser [des réponses périmées](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness) lorsqu'ils sont déconnectés du serveur d'origine. `must-revalidate` permet d'éviter ce fonctionnement, soit la réponse enregistrée est revalidée auprès du serveur d'origine, soit une réponse 504 (<i lang="en">Gateway Timeout</i>) est générée.
+HTTP permet aux caches de réutiliser [des réponses périmées](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness) lorsqu'ils sont déconnectés du serveur d'origine. `must-revalidate` permet d'éviter ce fonctionnement, soit la réponse enregistrée est revalidée auprès du serveur d'origine, soit une réponse 504 (<i lang="en">Gateway Timeout</i>) est générée.
 
 #### `proxy-revalidate`
 
@@ -203,11 +213,9 @@ Certains intermédiaires transforment du contenu pour différentes raisons. Par 
 
 `no-transform` indique à l'intermédiaire (qu'il s'agisse d'un cache ou non) qu'il ne faut pas transformer le contenu de la réponse.
 
-[Google Web Light](https://developers.google.com/search/docs/advanced/mobile/web-light) est un exemple d'un tel intermédiaire. Il convertit les images afin de minimiser les données stockées en cache ou transmises sur une connexion lente et prend en charge `no-transform` comme moyen d'éviter cette transformation.
-
 #### `immutable`
 
-La directive de réponse `immutable` indique que la réponse ne sera pas mise à jour tant qu'elle est [fraîche](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness).
+La directive de réponse `immutable` indique que la réponse ne sera pas mise à jour tant qu'elle est [fraîche](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness).
 
 ```http
 Cache-Control: public, max-age=604800, immutable
@@ -219,7 +227,7 @@ Une bonne pratique pour les ressources statiques consiste à inclure des version
 <script src=https://example.com/react.0.0.0.js></script>
 ```
 
-Lorsqu'on recharge une page dans le navigateur, ce dernier enverra des requêtes conditionnelles pour la validation auprès du serveur d'origine. Toutefois, il n'est pas nécessaire de revalider ce type de ressources statiques, même lorsqu'on recharge une page, car elles ne sont jamais modifiées. `immutable` indique au cache que la réponse est immuable tant qu'elle est [fraîche](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness) et évite ces requêtes conditionnelles superflues envers le serveur.
+Lorsqu'on recharge une page dans le navigateur, ce dernier enverra des requêtes conditionnelles pour la validation auprès du serveur d'origine. Toutefois, il n'est pas nécessaire de revalider ce type de ressources statiques, même lorsqu'on recharge une page, car elles ne sont jamais modifiées. `immutable` indique au cache que la réponse est immuable tant qu'elle est [fraîche](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness) et évite ces requêtes conditionnelles superflues envers le serveur.
 
 Lorsqu'on utilise une stratégie de casse-cache pour des ressources auxquelles on applique une valeur élevée de `max-age`, on peut également utiliser `immutable` pour éviter une revalidation.
 
@@ -231,27 +239,27 @@ La directive de réponse `stale-while-revalidate` indique que le cache peut réu
 Cache-Control: max-age=604800, stale-while-revalidate=86400
 ```
 
-Dans l'exemple qui précède, la réponse est [fraîche](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness) pendant 7 jours (604800s). Après 7 jours, elle devient [périmée](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness), mais le cache peut être réutilisé pour les requêtes qui sont faites le jour suivant (86400s), tant que la revalidation de la réponse a lieu en arrière-plan.
+Dans l'exemple qui précède, la réponse est [fraîche](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness) pendant 7 jours (604800s). Après 7 jours, elle devient [périmée](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness), mais le cache peut être réutilisé pour les requêtes qui sont faites le jour suivant (86400s), tant que la revalidation de la réponse a lieu en arrière-plan.
 
-La revalidation [rafraîchira](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness) le cache à nouveau et la réponse apparaîtra donc comme toujours [fraîche](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness) aux clients pendant cette période, masquant ainsi la latence induite par une revalidation.
+La revalidation [rafraîchira](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness) le cache à nouveau et la réponse apparaîtra donc comme toujours [fraîche](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness) aux clients pendant cette période, masquant ainsi la latence induite par une revalidation.
 
-Si aucune requête n'a lieu pendant cette période intermédiaire, le cache devient [périmé](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness) et la prochaine requête revalidera le cache normalement.
+Si aucune requête n'a lieu pendant cette période intermédiaire, le cache devient [périmé](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness) et la prochaine requête revalidera le cache normalement.
 
 #### `stale-if-error`
 
-La directive de réponse `stale-if-error` indique que le cache peut réutiliser une réponse [périmée](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness) lorsqu'un serveur d'origine répond avec une erreur (500, 502, 503, ou 504).
+La directive de réponse `stale-if-error` indique que le cache peut réutiliser une réponse [périmée](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness) lorsqu'un serveur d'origine répond avec une erreur (500, 502, 503, ou 504).
 
 ```http
 Cache-Control: max-age=604800, stale-if-error=86400
 ```
 
-Dans l'exemple précédent, la réponse est [fraîche](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness) pendant 7 jours (604800s). Après 7 jours, le cache devient [périmé](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness), mais peut être utilisé jusqu'à un jour après (86400s) si le serveur répond avec une erreur.
+Dans l'exemple précédent, la réponse est [fraîche](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness) pendant 7 jours (604800s). Après 7 jours, le cache devient [périmé](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness), mais peut être utilisé jusqu'à un jour après (86400s) si le serveur répond avec une erreur.
 
-Une fois cette période écoulée, la réponse enregistrée devient [périmée](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness). Cela signifie que le client recevra une réponse d'erreur telle que fournie par le serveur d'origine.
+Une fois cette période écoulée, la réponse enregistrée devient [périmée](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness). Cela signifie que le client recevra une réponse d'erreur telle que fournie par le serveur d'origine.
 
-## Directives de requête
+### Directives de requête
 
-### `no-cache`
+#### `no-cache`
 
 La directive de requête `no-cache` demande aux caches de valider la réponse auprès du serveur d'origine avant toute réutilisation.
 
@@ -259,11 +267,11 @@ La directive de requête `no-cache` demande aux caches de valider la réponse au
 Cache-Control: no-cache
 ```
 
-`no-cache` permet aux clients de demander la réponse la plus à jour, même si le cache dispose d'une réponse [fraîche](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness).
+`no-cache` permet aux clients de demander la réponse la plus à jour, même si le cache dispose d'une réponse [fraîche](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness).
 
 Les navigateurs ajoutent généralement `no-cache` aux requêtes effectuées lors d'un **rechargement forcé** d'une page.
 
-### `no-store`
+#### `no-store`
 
 La directive de requête `no-store` permet à un client de demander à ce qu'un cache ne stocke pas la requête et la réponse correspondante, même si la réponse du serveur d'origine pourrait être enregistrée.
 
@@ -273,7 +281,7 @@ Cache-Control: no-store
 
 On notera que la plupart des navigateurs principaux ne prennent pas en charge les requêtes avec `no-store`.
 
-### `max-age`
+#### `max-age`
 
 La directive de requête `max-age=N` indique que le client autorise une réponse enregistrée qui est générée sur le serveur d'origine dans les `N` secondes, où `N` est un nombre positif (pouvant être `0`).
 
@@ -293,13 +301,10 @@ Cache-Control: max-age=0
 
 Si la valeur de `max-age` est négative (par exemple `-1`) ou n'est pas un entier (par exemple, `3599.99`), le comportement pour la mise en cache n'est pas défini. Toutefois, la section sur [le calcul pour la durée de la fraîcheur](https://httpwg.org/specs/rfc7234.html#calculating.freshness.lifetime) de la spécification HTTP indique&nbsp;:
 
-> Les caches sont incités à considérer les réponses portant des informations de fraîcheur invalides comme étant périmées.
+#### `max-stale`
 
-Autrement dit, pour toute valeur de `max-age` qui n'est ni entière, ni positive, on incite à traiter la valeur comme si elle était `0`.
-
-### `max-stale`
-
-La directive de requête `max-stale=N` indique que le client permet l'utilisation d'une réponse enregistrée [périmée](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness) dans les `N` secondes.
+La directive de requête `max-stale=N` indique que le client permet l'utilisation d'une réponse enregistrée [périmée](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness) dans les `N` secondes.
+Si aucune valeur _N_ n'est définie, le client acceptera une réponse périmée quel que soit son âge.
 
 ```http
 Cache-Control: max-stale=3600
@@ -311,9 +316,9 @@ Les clients peuvent utiliser cet en-tête lorsque le serveur d'origine est inacc
 
 On notera que la plupart des navigateurs principaux ne prennent pas en charge les requêtes avec `max-stale`.
 
-### `min-fresh`
+#### `min-fresh`
 
-La directive de requête `min-fresh=N` indique que le client permet d'utiliser une réponse enregistrée qui est [fraîche](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness) pendant au moins `N` secondes.
+La directive de requête `min-fresh=N` indique que le client permet d'utiliser une réponse enregistrée qui est [fraîche](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness) pendant au moins `N` secondes.
 
 ```http
 Cache-Control: min-fresh=600
@@ -321,17 +326,22 @@ Cache-Control: min-fresh=600
 
 Dans l'exemple qui précède, si la réponse avec `Cache-Control: max-age=3600` avait été enregistrée en cache 51 minutes auparavant, le cache ne pourrait pas réutiliser cette réponse.
 
-Les clients peuvent utiliser cet en-tête pour demander une réponse qui soit [fraîche](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness), **et** qui ne soit pas mise à jour pour une durée donnée.
+Les clients peuvent utiliser cet en-tête pour demander une réponse qui soit [fraîche](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness), **et** qui ne soit pas mise à jour pour une durée donnée.
 
 On notera que la plupart des navigateurs principaux ne prennent pas en charge les requêtes avec `min-fresh`.
 
-### `no-transform`
+#### `no-transform`
 
 Équivalent à `no-transform` telle que définie pour les réponses, mais ici pour les requêtes.
 
-### `only-if-cached`
+#### `only-if-cached`
 
 Le client indique que le cache devrait obtenir une réponse déjà mise en cache. Si un cache possède une réponse enregistrée, celle-ci est réutilisée.
+
+#### `stale-if-error`
+
+La directive de requête `stale-if-error` indique que le navigateur souhaite recevoir un contenu périmé en cas d'erreur de la part d'un serveur intermédiaire pour une origine donnée.
+Cette fonctionnalité n'est prise en charge par aucun navigateur (voir [Compatibilité des navigateurs](#compatibilité_des_navigateurs)).
 
 ## Cas d'usage
 
@@ -354,9 +364,7 @@ En théorie, si les directives rentrent en conflit, c'est la plus restrictive qu
 ```http example-bad
 # Conflit entre les directives
 Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
-```
 
-```http example-good
 # Équivalent à
 Cache-Control: no-store
 ```
@@ -407,13 +415,13 @@ Pour le contenu généré dynamiquement ou pour le contenu statique qui est souv
 
 Si on ne précise pas d'en-tête `Cache-Control` alors qu'on souhaite ne pas mettre en cache la réponse, on pourra obtenir des résultats inattendus. En effet, par défaut, un cache peut décider d'une mise en cache en fonction d'heuristiques. Si on souhaite appliquer des règles pour la mise en cache, il faudra les préciser explicitement avec l'en-tête `Cache-Control`.
 
-Ajouter la directive `no-cache` à la réponse entraînera la revalidation du serveur, et une réponse [fraîche](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness) sera servie à chaque fois, et si le client dispose déjà d'une nouvelle réponse, le serveur répondra simplement `304 Not Modified`.
+Ajouter la directive `no-cache` à la réponse entraînera la revalidation du serveur, et une réponse [fraîche](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness) sera servie à chaque fois, et si le client dispose déjà d'une nouvelle réponse, le serveur répondra simplement `304 Not Modified`.
 
 ```http
 Cache-Control: no-cache
 ```
 
-La plupart des caches HTTP/1.0 ne prennent pas en charge la directive `no-cache`, et historiquement, `max-age=0` a été utilisé comme contournement. Toutefois, `max-age=0` pouvait causer la réutilisation d'une [réponse périmée](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness) lorsque le cache était déconnecté du serveur d'origine. `must-revalidate` pallie ce problème. C'est pourquoi, ce qui suit est équivalent à `no-cache`.
+La plupart des caches HTTP/1.0 ne prennent pas en charge la directive `no-cache`, et historiquement, `max-age=0` a été utilisé comme contournement. Toutefois, `max-age=0` pouvait causer la réutilisation d'une [réponse périmée](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness) lorsque le cache était déconnecté du serveur d'origine. `must-revalidate` pallie ce problème. C'est pourquoi, ce qui suit est équivalent à `no-cache`.
 
 ```http
 Cache-Control: max-age=0, must-revalidate
@@ -423,11 +431,12 @@ Ceci étant écrit, avec un cache moderne, il suffit d'utiliser `no-cache` à la
 
 ### Supprimer les informations déjà enregistrées en cache
 
-Malheureusement, il n'existe pas de directives pour supprimer les réponses déjà enregistrées dans les caches.
+Il n'existe aucune directive de cache permettant de supprimer les réponses déjà enregistrées dans les caches sur les serveurs _intermédiaires_.
 
-Imaginons qu'un client ou qu'un cache enregistre une réponse [fraîche](/fr/docs/Web/HTTP/Caching#fraîcheur_freshness) pour un chemin donné et qu'il n'effectue aucune requête vers le serveur. Il n'y a rien que le serveur pourrait faire à ce moment.
+Imaginons qu'un client ou qu'un cache enregistre une réponse [fraîche](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_freshness) pour un chemin donné et qu'il n'effectue aucune requête vers le serveur. Il n'y a rien que le serveur pourrait faire à ce moment.
 
-Sinon, `Clear-Site-Data` peut nettoyer le cache du navigateur pour un site. Mais cela a ses limites, toutes les réponses stockées pour un site sont supprimées, et cela ne s'applique qu'aux navigateurs, pas aux caches partagés.
+[`Clear-Site-Data: cache`](/fr/docs/Web/HTTP/Reference/Headers/Clear-Site-Data#cache) peut nettoyer le cache du navigateur pour un site. Mais cela a ses limites, toutes les réponses stockées pour un site sont supprimées, et cela ne s'applique qu'aux navigateurs, pas aux caches partagés.
+Notez que cela n'affectera pas les caches partagés ou intermédiaires.
 
 ## Spécifications
 
@@ -439,10 +448,10 @@ Sinon, `Clear-Site-Data` peut nettoyer le cache du navigateur pour un site. Mais
 
 ## Voir aussi
 
-- [Mise en cache avec HTTP](/fr/docs/Web/HTTP/Caching)
-- [Tutoriel sur la mise en cache pour les équipes web](https://www.mnot.net/cache_docs/)
-- [Bonnes pratiques pour la mise en cache et pièges liés à `max-age` (en anglais)](https://jakearchibald.com/2016/caching-best-practices/)
-- [`Cache-Control` pour les civils (en anglais)](https://csswizardry.com/2019/03/cache-control-for-civilians/)
-- [RFC 7234 — Hypertext Transfer Protocol (HTTP/1.1)&nbsp;: mise en cache (en anglais)](https://httpwg.org/specs/rfc7234.html)
-- [RFC 5861 — Extensions HTTP à `Cache-Control` pour le contenu périmé (en anglais)](https://httpwg.org/specs/rfc5861.html)
-- [RFC 8246 — Réponses HTTP immuables (en anglais)](https://httpwg.org/specs/rfc8246.html)
+- [La mise en cache avec HTTP](/fr/docs/Web/HTTP/Guides/Caching)
+- [Tutoriel sur la mise en cache pour les équipes web <sup>(angl.)</sup>](https://www.mnot.net/cache_docs/)
+- [Bonnes pratiques pour la mise en cache et pièges liés à `max-age` <sup>(angl.)</sup>](https://jakearchibald.com/2016/caching-best-practices/)
+- [`Cache-Control` pour les civils <sup>(angl.)</sup>](https://csswizardry.com/2019/03/cache-control-for-civilians/)
+- [RFC 9111 — Mise en cache HTTP <sup>(angl.)</sup>](https://httpwg.org/specs/rfc9111.html)
+- [RFC 5861 — Extensions HTTP à `Cache-Control` pour le contenu périmé <sup>(angl.)</sup>](https://httpwg.org/specs/rfc5861.html)
+- [RFC 8246 — Réponses HTTP immuables <sup>(angl.)</sup>](https://httpwg.org/specs/rfc8246.html)

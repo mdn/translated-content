@@ -1,14 +1,53 @@
 ---
 title: "Attribut HTML : minlength"
+short-title: minlength
 slug: Web/HTML/Reference/Attributes/minlength
 original_slug: Web/HTML/Attributes/minlength
+l10n:
+  sourceCommit: 635820782735cd00f71ce3929ff9377b091f8995
 ---
 
-{{HTMLSidebar}}
+L'attribut **`minlength`** définit la [longueur minimale de chaîne de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/length) que l'utilisateur·rice peut saisir dans un élément HTML {{HTMLElement('input')}} ou un élément {{HTMLElement('textarea')}}. L'attribut doit avoir une valeur entière supérieure ou égale à 0.
 
-L'attribut **`minlength`** définit le nombre minimal de caractères (sous forme d'unités de code UTF-16) que l'utilisateur peut saisir dans un élément [`<input>`](/fr/docs/Web/HTML/Element/input) ou [`<textarea>`](/fr/docs/Web/HTML/Element/textarea). Il doit s'agir d'une valeur entière égale ou supérieure à 0. Si aucune longueur minimale n'est spécifiée, ou si une valeur invalide est spécifiée, l'entrée n'a pas de longueur minimale. Cette valeur doit être inférieure ou égale à la valeur de [`maxlength`](/fr/docs/Web/HTML/Attributes/maxlength), sinon la valeur ne sera jamais valide, car il est impossible de satisfaire aux deux critères.
+La longueur est mesurée en {{Glossary("UTF-16", "unités de code UTF-16")}}, ce qui correspond souvent, mais pas toujours, au nombre de caractères. Si aucun `minlength` n'est spécifié, ou si une valeur invalide est spécifiée, la saisie n'a pas de longueur minimale. Cette valeur doit être inférieure ou égale à la valeur de [`maxlength`](/fr/docs/Web/HTML/Reference/Attributes/maxlength), sinon la saisie ne sera jamais valide, car il est impossible de satisfaire les deux critères.
 
-L'entrée échouera à la validation des contraintes si la longueur de la valeur textuelle du champ est inférieure à `minlength` unités de code UTF-16, avec [`validityState.tooShort`](/fr/docs/Web/API/validityState/tooShort) retournant `true`. La validation des contraintes n'est appliquée que lorsque la valeur est modifiée par l'utilisateur. En cas d'échec de la soumission, certains navigateurs affichent un message d'erreur indiquant la longueur minimale requise et la longueur actuelle.
+Le champ échouera à la validation des contraintes si la longueur du texte saisi est inférieure au nombre d'unités de code UTF-16 défini par `minlength`, avec {{DOMxRef('validityState.tooShort')}} retournant `true`. La validation des contraintes n'est appliquée que lorsque la valeur est modifiée par l'utilisateur·rice. En cas d'échec de la soumission, certains navigateurs afficheront un message d'erreur indiquant la longueur minimale requise et la longueur actuelle.
+
+`minlength` n'implique pas l'attribut [`required`](/fr/docs/Web/HTML/Reference/Attributes/required)&nbsp;: un champ ne viole la contrainte `minlength` que si l'utilisateur·rice a saisi une valeur. Si un champ n'est pas `required`, une chaîne vide peut être soumise même si `minlength` est défini.
+
+{{InteractiveExample("Démonstration HTML&nbsp;: minlength", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="name">Nom du produit&nbsp;:</label>
+<input
+  id="name"
+  name="name"
+  type="text"
+  value="Shampoing"
+  minlength="3"
+  maxlength="20"
+  required />
+
+<label for="description">Description du produit&nbsp;:</label>
+<textarea
+  id="description"
+  name="description"
+  minlength="10"
+  maxlength="40"
+  required></textarea>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:valid,
+textarea:valid {
+  background-color: palegreen;
+}
+```
 
 ## Exemples
 
@@ -45,9 +84,9 @@ input:invalid:focus {
 
 ## Voir aussi
 
-- L'attribut [`maxlength`](/fr/docs/Web/HTML/Attributes/maxlength)
-- L'attribut [`size`](/fr/docs/Web/HTML/Attributes/size)
-- L'attribut [`pattern`](/fr/docs/Web/HTML/Attributes/pattern)
-- [Validation des contraintes](/fr/docs/Web/HTML/Constraint_validation)
-- L'API [Constraint validation](/fr/docs/Learn/Forms/Form_validation)
-- L'élément [`<input>`](/fr/docs/Web/HTML/Element/input)
+- L'attribut [`maxlength`](/fr/docs/Web/HTML/Reference/Attributes/maxlength)
+- L'attribut [`size`](/fr/docs/Web/HTML/Reference/Attributes/size)
+- L'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Attributes/pattern)
+- [Validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation)
+- [Validation de formulaire](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- L'élément HTML {{HTMLElement('input')}}

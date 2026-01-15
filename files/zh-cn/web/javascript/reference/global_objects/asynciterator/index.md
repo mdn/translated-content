@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
 ---
 
-{{JSRef}}
-
 **`AsyncIterator`** 对象是符合[异步迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)的对象，其提供了 `next()` 方法用以返回一个兑现为迭代器结果对象的 promise。`AsyncIterator.prototype` 对象是一个隐藏的全局对象，所有内置的异步迭代器都继承自它。其提供了 [`[Symbol.asyncIterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator/Symbol.asyncIterator) 方法，该方法返回异步迭代器对象本身，使异步迭代器也[异步可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)。
 
 注意，`AsyncIterator` *不是*全局对象，尽管将来会出现[异步迭代器辅助方法提案](https://github.com/tc39/proposal-async-iterator-helpers)。所有内置异步迭代器共享的 `AsyncIterator.prototype` 对象可以通过以下代码获得：

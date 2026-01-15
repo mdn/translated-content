@@ -2,47 +2,42 @@
 title: "<title> : l'élément de titre du document"
 slug: Web/HTML/Reference/Elements/title
 original_slug: Web/HTML/Element/title
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<title>`** définit le titre du document (qui est affiché dans la barre de titre du {{glossary("Browser", "navigateur")}} ou dans l'onglet de la page). Il ne contient que du texte&nbsp;; les balises HTML présentes dans l'élément, le cas échéant, sont également traitées comme du texte brut.
 
-L'élément **`<title>`** définit le titre du document (qui est affiché dans la barre de titre du navigateur ou dans l'onglet de la page). Cet élément ne peut contenir que du texte, les balises qu'il contiendrait seraient ignorées.
+```html
+<title>Le journal du festival de heavy metal de Mamie</title>
+```
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 
 L'élément `<title>` est toujours utilisé au sein de l'élément {{HTMLElement("head")}} de la page.
 
-### Référencement (SEO)
+### Titres de page et référencement (SEO)
 
-Le titre d'une page fait partie des éléments principaux qui sont scannés lors de l'indexation d'une page. C'est aussi le texte qui est affiché parmi les résultats du moteur de recherche, de façon proéminente et donc visible par les utilisateurs qui trouvent votre site grâce à un moteur de recherche.
+Le contenu du titre d'une page peut avoir des implications importantes pour l'optimisation pour les moteurs de recherche ({{glossary("SEO")}}). En général, un titre long et descriptif fonctionne mieux que des titres courts ou génériques. Le contenu du titre est l'un des éléments utilisés par les algorithmes des moteurs de recherche pour décider de l'ordre d'affichage des pages dans les résultats. De plus, le titre est la première «&nbsp;accroche&nbsp;» qui attire l'attention des lecteurs·rices parcourant la page de résultats.
 
-Aussi, mieux vaudra avoir des titres descriptifs plutôt que des titres trop courts ou vagues.
+Quelques conseils pour composer de bons titres&nbsp;:
 
-Quelques observations :
-
-- On pourra éviter les titres sur un ou deux mots.
-- La longueur affichée pour les titres dans les résultats d'un moteur de recherche se situe entre 55 et 60 caractères. Si le titre est plus long, on veillera à ce que les concepts majeurs apparaissent avant cette longueur.
-- Attention aux entités (les chevrons HTML pourront être affichés différemment entre les navigateurs).
-- Le titre doit être intelligible et pas une simple concaténation de mots-clés.
-- Le titre devra être unique pour un même site.
-
-## Exemples
-
-```html
-<title>Et voici le titre de ma page !</title>
-```
+- Évitez les titres d'un ou deux mots. Utilisez une phrase descriptive, ou une association terme-définition pour les pages de glossaire ou de référence.
+- Les moteurs de recherche affichent généralement les 55 à 60 premiers caractères d'un titre de page. Le texte au-delà peut être tronqué, donc essayez de ne pas dépasser cette longueur. Si vous devez utiliser un titre plus long, assurez-vous que les parties importantes apparaissent en premier et qu'aucun élément essentiel ne soit dans la partie susceptible d'être coupée.
+- N'utilisez pas de «&nbsp;blocs de mots-clés&nbsp;». Si votre titre n'est qu'une liste de mots, les algorithmes risquent de faire baisser la position de votre page dans les résultats.
+- Essayez de rendre vos titres aussi uniques que possible sur votre site. Les titres dupliqués ou quasi identiques peuvent entraîner des résultats de recherche inexacts.
 
 ## Accessibilité
 
-Il est important de fournir une valeur pour l'attribut `title` qui décrit le but de la page de façon claire et concise.
+Il est important de fournir un titre précis et concis pour décrire l'objectif de la page.
 
-Les personnes utilisant des outils d'assistance peuvent utiliser le titre de la page afin de déterminer rapidement ce qu'elle contient. Ainsi, il peut ne pas être nécessaire de naviguer « dans » la page, ce qui peut prendre du temps et être source de confusion si, ce faisant, on doit déterminer le but de la page.
+Une technique de navigation courante pour les utilisateurs·rices de technologies d'assistance consiste à lire le titre de la page et à en déduire le contenu. En effet, naviguer dans une page pour en déterminer le contenu peut être long et source de confusion. Les titres doivent être uniques pour chaque page d'un site, en mettant idéalement en avant le but principal de la page en premier, suivi du nom du site. Suivre ce modèle permet de s'assurer que le but principal de la page est annoncé en premier par un lecteur d'écran. Cela offre une bien meilleure expérience que d'entendre d'abord le nom du site avant le titre unique de la page, pour chaque page visitée sur un même site.
 
-#### Exemple
+### Exemple
 
 ```html
 <title>Menu - Restaurant chinois Maison bleue - Commande en ligne</title>
@@ -58,7 +53,13 @@ Mettre à jour la valeur de `title` afin de refléter un changement d'état impo
 ```
 
 - [Comprendre les règles WCAG 2.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_—_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
-- [_Understanding Success Criterion 2.4.2 | W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html)
+- [Comprendre le critère de réussite 2.4.2 | W3C Comprendre les WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html)
+
+## Exemples
+
+```html
+<title>Et voici le titre de ma page !</title>
+```
 
 ## Résumé technique
 
@@ -66,12 +67,12 @@ Mettre à jour la valeur de `title` afin de refléter un changement d'état impo
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
           >Catégories de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_méta-données"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_méta-données"
           >Contenu de méta-données</a
         >.
       </td>
@@ -79,9 +80,7 @@ Mettre à jour la valeur de `title` afin de refléter un changement d'état impo
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
-        Du texte qui n'est pas du blanc entre éléments (<em
-          >inter-element whitespace</em
-        >).
+        Du texte qui n'est pas un {{glossary("whitespace", "espace")}} entre éléments.
       </td>
     </tr>
     <tr>
@@ -99,8 +98,16 @@ Mettre à jour la valeur de `title` afin de refléter un changement d'état impo
       </td>
     </tr>
     <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
+          >Pas de rôle correspondant <sup>(angl.)</sup></a
+        >
+      </td>
+    </tr>
+    <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
+      <td>Aucun <code>role</code> autorisé.</td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
@@ -116,3 +123,7 @@ Mettre à jour la valeur de `title` afin de refléter un changement d'état impo
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- L'élément SVG {{SVGElement("title")}}

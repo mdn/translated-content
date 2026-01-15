@@ -50,7 +50,8 @@ function reloadPageWithHash() {
 }
 ```
 
-> **Nota:**O exemplo acima funciona em situações onde `location.hash` não precisa ser retida. Contudo, em navegadores baseados em Gecko, definindo `location.pathname` desta forma irá apagar qualquer informação em `location.hash`, enquanto que no WebKit(e possivelmente em outro navegador), definir o pathname não vai alterar o hash. Se você precisa mudar o pathname mas manter o hash como é, use o `método replace()`, que deve funcionar de forma consistente em todos os navegadores.
+> [!NOTE]
+> O exemplo acima funciona em situações onde `location.hash` não precisa ser retida. Contudo, em navegadores baseados em Gecko, definindo `location.pathname` desta forma irá apagar qualquer informação em `location.hash`, enquanto que no WebKit(e possivelmente em outro navegador), definir o pathname não vai alterar o hash. Se você precisa mudar o pathname mas manter o hash como é, use o `método replace()`, que deve funcionar de forma consistente em todos os navegadores.
 
 ### Exemplo #4: Mostrar as propriedades da URL atual em um alerta
 
@@ -379,7 +380,8 @@ A URL atual com "?Some%20data" anexada é enviada para o servidor (se nenhuma a�
 </html>
 ```
 
-> **Nota:**A função `showNode` é também um exemplo de uso do ciclo`for sem uma section statement.`Neste caso **o ponto e vírgula é sempre colocado imediatamente depois da declaração do ciclo.**
+> [!NOTE]
+> A função `showNode` é também um exemplo de uso do ciclo`for sem uma section statement.`Neste caso **o ponto e vírgula é sempre colocado imediatamente depois da declaração do ciclo.**
 
 ... a mesma coisa mas com uma animação de rolagem na página:
 

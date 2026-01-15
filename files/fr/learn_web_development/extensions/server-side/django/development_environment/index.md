@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/development_environmen
 original_slug: Learn/Server-side/Django/development_environment
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Maintenant que vous savez à quoi sert Django, nous allons vous montrer comment mettre en place et tester un environnement de développement Django sous Windows, Linux (Ubuntu) et macOS — Peu importe votre système d'exploitation, cet article devrait vous fournir de quoi commencer à développer des applications Django.
 
@@ -38,7 +38,7 @@ L'environnement de développement correspond à une installation de Django sur v
 
 Le principal outil que fournit Django est un ensemble de scripts Python utilisés pour créer et travailler avec des projets Django, ainsi qu'un simple _serveur web de développement_ que vous pouvez utiliser pour tester en local (i.e. sur votre propre ordinateur, pas sur un serveur web externe) des applications web Django dans votre navigateur web.
 
-Il y a plusieurs autres outils annexes, qui font partie de l'environnement de développement, que nous ne couvrirons pas ici. Cela inclut des choses comme un [éditeur de texte](/fr/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors) ou un IDE pour éditer votre code, et un outil de gestion de contrôle de version comme Git pour gérer en toute prudence les différentes versions de votre code. Nous supposerons ici que vous avez déjà un éditeur de texte installé.
+Il y a plusieurs autres outils annexes, qui font partie de l'environnement de développement, que nous ne couvrirons pas ici. Cela inclut des choses comme un [éditeur de texte](/fr/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors) ou un IDE pour éditer votre code, et un outil de gestion de contrôle de version comme Git pour gérer en toute prudence les différentes versions de votre code. Nous supposerons ici que vous avez déjà un éditeur de texte installé.
 
 ### Quelles sont les options d'installation de Django ?
 
@@ -52,7 +52,7 @@ Django est extrêmement flexible sur sa manière d'être installé et configuré
 Chacune de ces options requiert une configuration et une installation légèrement différente. Les sous-sections ci-dessous vous expliquent différents choix. Dans le reste de l'article, nous vous montrerons comment installer Django sur un nombre restreint de systèmes d'exploitation, et nous supposerons que cette installation aura été suivie pour tout le reste du module.
 
 > [!NOTE]
-> D'autres options d'installation possibles sont traitées dans la documentation officielle de Django. Les liens vers la [documentation appropriée peuvent-être trouvés ci-dessous](/fr/docs/Learn/Server-side/Django/development_environment).
+> D'autres options d'installation possibles sont traitées dans la documentation officielle de Django. Les liens vers la [documentation appropriée peuvent-être trouvés ci-dessous](/fr/docs/Learn_web_development/Extensions/Server-side/Django/development_environment).
 
 #### Quels systèmes d'exploitation sont supportés ?
 
@@ -411,4 +411,4 @@ Dans la section test vous avez aussi vu comment créer un nouveau site web Djang
 - [How to install Django — Complete guide](https://docs.djangoproject.com/en/2.1/topics/install/) (Django docs) - includes information on how to remove Django
 - [How to install Django on Windows](https://docs.djangoproject.com/en/2.1/howto/windows/) (Django docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django")}}

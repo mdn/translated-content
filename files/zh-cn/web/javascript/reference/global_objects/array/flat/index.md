@@ -3,8 +3,6 @@ title: Array.prototype.flat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flat
 ---
 
-{{JSRef}}
-
 **`flat()`** 方法创建一个新的数组，并根据指定深度递归地将所有子数组元素拼接到新的数组中。
 
 {{InteractiveExample("JavaScript Demo: Array.flat()")}}

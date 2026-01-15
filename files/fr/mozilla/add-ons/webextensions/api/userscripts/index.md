@@ -42,5 +42,5 @@ Pour utiliser l'API, appelez `{{WebExtAPIRef("userScripts.register","register()"
 
 ## Voir aussi
 
-- [Working with `userScripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/Working_with_userScripts)
+- [Working with `userScripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/Working_with_userScripts)
 - {{WebExtAPIRef("contentScripts","browser.contentScripts")}}

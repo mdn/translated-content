@@ -2,7 +2,7 @@
 title: IntersectionObserver
 slug: Web/API/IntersectionObserver
 l10n:
-  sourceCommit: 21d3e89589aaf9e5cfa667de679134513ab833f3
+  sourceCommit: 1b61fe3aa68b972468514d5ab13ed93497b13a96
 ---
 
 {{APIRef("Intersection Observer API")}}
@@ -14,18 +14,25 @@ l10n:
 ## コンストラクター
 
 - {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}}
-  - : 新しい `IntersectionObserver` オブジェクトを生成します。これは対象の要素の可視性が 1 つまたは複数の閾値を通過したことを検出したときに、指定されたコールバック関数を実行します。
+  - : 新しい `IntersectionObserver` オブジェクトを生成します。これは対象の要素の可視性が 1 つまたは複数のしきい値を通過したことを検出したときに、指定されたコールバック関数を実行します。
 
-## プロパティ
+## インスタンスプロパティ
 
+- {{domxref("IntersectionObserver.delay")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : 整数で、オブザーバーからの通知間の最小遅延時間を示します。
 - {{domxref("IntersectionObserver.root")}} {{ReadOnlyInline}}
   - : {{domxref("Element")}} または {{domxref("Document")}} であり、この外接矩形が交差を検査するときに外接ボックスとして使用されます。 `root` の値がコンストラクターに渡されなかったり、 `null` が渡されたりした場合は、最上位の文書のビューポートが使用されます。
 - {{domxref("IntersectionObserver.rootMargin")}} {{ReadOnlyInline}}
   - : 交差状態を計算するときにルートの{{Glossary('bounding box', '外接ボックス')}}に適用されるオフセットの矩形で、計算に使用するルートの矩形を縮小または拡大させます。このプロパティから返される値は、内部的な要件に合わせて変化するので、コンストラクターを呼び出したときに指定したものと同じにならないことがあります。それぞれのオフセットはピクセル数 (`px`) またはパーセント値 (`%`) で表すことができます。既定値は "0px 0px 0px 0px" です。
+- {{domxref("IntersectionObserver.scrollMargin")}} {{ReadOnlyInline}}
+  - : 交差ルートから対象までのパス上のそれぞれの{{glossary("scroll container", "スクロールコンテナー")}}に適用されるオフセット矩形。これにより、交差計算に使用されるクリップ矩形が効果的に縮小または拡張されます。
+    このプロパティが返す値は、コンストラクター呼び出し時に指定された値と同一ではない場合があります。
 - {{domxref("IntersectionObserver.thresholds")}} {{ReadOnlyInline}}
-  - : 閾値のリストで、交差領域と監視対象の外接ボックス領域との比を昇順に並べます。あるターゲットの閾値を超えると、そのターゲットに対する通知が生成されます。コンストラクターに値が渡されなかった場合、 0 が使用されます。
+  - : しきい値のリストで、交差領域と監視対象の外接ボックス領域との比を昇順に並べます。あるターゲットのしきい値を超えると、そのターゲットに対する通知が生成されます。コンストラクターに値が渡されなかった場合、 0 が使用されます。
+- {{domxref("IntersectionObserver.trackVisibility")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : 論理値で、この `IntersectionObserver` が対象の可視性が損なわれていないことを調べるかどうかを表します。
 
-## メソッド
+## インスタンスメソッド
 
 - {{domxref("IntersectionObserver.disconnect()")}}
   - : `IntersectionObserver` オブジェクトによる対象の監視を停止します。

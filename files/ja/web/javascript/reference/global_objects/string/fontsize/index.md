@@ -1,16 +1,17 @@
 ---
 title: String.prototype.fontsize()
+short-title: fontsize()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
 l10n:
-  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{Deprecated_Header}}
 
-**`fontcolor()`** メソッドは、文字列を {{HTMLElement("font")}} 要素に埋め込み (`<font size="...">str</font>`)、文字列が指定されたフォントサイズで表示されるようにする文字列を生成します。
+**`fontsize()`** は {{jsxref("String")}} 値のメソッドで、この文字列を {{HTMLElement("font")}} 要素に埋め込み (`<font size="...">str</font>`)、この文字列が指定されたフォントサイズで表示されるようにする文字列を生成します。
 
 > [!NOTE]
-> [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_ラッパーメソッド)はすべて非推奨となっており、互換性目的のみで標準化されています。`fontsize()` の場合、`<font>` 要素は [HTML5](/ja/docs/Glossary/HTML5) で廃止されており、今後使用するべきではありません。代わりにウェブ開発者は [CSS](/ja/docs/Web/CSS) プロパティを使用してください。
+> [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_ラッパーメソッド)はすべて非推奨となっており、互換性目的のみで標準化されています。`fontsize()` の場合、`<font>` 要素は HTML 仕様書から除去されており、今後使用するべきではありません。代わりにウェブ開発者は [CSS](/ja/docs/Web/CSS) プロパティを使用してください。
 
 ## 構文
 
@@ -35,20 +36,27 @@ fontsize(size)
 
 ### fontsize() の使用
 
-以下の例では文字列のメソッドを使用して、文字列の大きさを変更しています。
+以下のコードは、HTML 文字列を作成し、それで文書の本体を置き換えます。
 
 ```js
-const worldString = "Hello, world";
+const contentString = "Hello, world";
 
-console.log(worldString.small()); // <small>Hello, world</small>
-console.log(worldString.big()); // <big>Hello, world</big>
-console.log(worldString.fontsize(7)); // <font size="7">Hello, world</font>
+document.body.innerHTML = contentString.fontsize(7);
 ```
 
-{{domxref("HTMLElement/style", "element.style")}} オブジェクトを使用すると、要素の `style` 属性を使用して、次のようにもっと汎用的に操作することができます。
+これにより、次の HTML が生成されます。
+
+```html
+<font size="7">Hello, world</font>
+```
+
+> [!WARNING]
+> このマークアップは不正です。`font` は有効な要素でなくなったためです。
+
+`fontsize( )` を使用して HTML テキストを直接作成する代わりに、 CSS を使用してフォントを操作するべきです。例えば、 {{domxref("HTMLElement/style", "element.style")}} 属性を使用して {{cssxref("font-size")}} を操作することができます。
 
 ```js
-document.getElementById("yourElemId").style.fontSize = "0.7em";
+document.getElementById("yourElemId").style.fontSize = "7pt";
 ```
 
 ## 仕様書
@@ -62,5 +70,6 @@ document.getElementById("yourElemId").style.fontSize = "0.7em";
 ## 関連情報
 
 - [`String.prototype.fontsize` のポリフィルは (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.big()")}}
-- {{jsxref("String.prototype.small()")}}
+- [es-shims による `String.prototype.fontsize` のポリフィル](https://www.npmjs.com/package/es-string-html-methods)
+- [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_ラッパーメソッド)
+- {{HTMLElement("font")}}

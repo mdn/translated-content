@@ -3,8 +3,6 @@ title: SQL 注入
 slug: Glossary/SQL_Injection
 ---
 
-{{GlossarySidebar}}
-
 **SQL 注入**（SQL injection）利用了未驗證使用者輸入的網頁應用程式。駭客可以透過網頁應用程式傳送 SQL 命令給後端資料庫執行。
 
 SQL 注入能在未授權的情況下存取資料庫或直接從資料庫取得資料。許多數據洩露肇因於 SQL 注入。

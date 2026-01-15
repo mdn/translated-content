@@ -269,7 +269,7 @@ new Promise(tetheredGetNumber)
 
 ### Exemple interactif
 
-Dans le court exemple qui suit, on illustre le mécanisme d'une `Promise`. La méthode `testPromise()` est appelée chaque fois qu'on clique sur l'élément [`<button>`](/fr/docs/Web/HTML/Element/button). Cette méthode crée une promesse qui sera tenue grâce à la fonction [`setTimeout()`](/fr/docs/Web/API/Window/setTimeout), et avec la valeur comptePromesse (nombre commençant à 1) après `1s` à `3s` (aléatoire). Le constructeur Promise() est utilisé pour créer la promesse.
+Dans le court exemple qui suit, on illustre le mécanisme d'une `Promise`. La méthode `testPromise()` est appelée chaque fois qu'on clique sur l'élément [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button). Cette méthode crée une promesse qui sera tenue grâce à la fonction [`setTimeout()`](/fr/docs/Web/API/Window/setTimeout), et avec la valeur comptePromesse (nombre commençant à 1) après `1s` à `3s` (aléatoire). Le constructeur Promise() est utilisé pour créer la promesse.
 
 Le fait que la promesse soit tenue est simplement enregistré via un _callback_ sur `p1.then()`. Quelques indicateurs illustrent la manière dont la partie synchrone est découplée de la partie asynchrone.
 

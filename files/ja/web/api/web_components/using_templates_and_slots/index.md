@@ -2,7 +2,7 @@
 title: テンプレートとスロットの使用
 slug: Web/API/Web_components/Using_templates_and_slots
 l10n:
-  sourceCommit: bc7e82aa6db60568d7146ee285918550bbe4b8ce
+  sourceCommit: 886f2641ae90a70858c5e7d0d20959c70ee44d9d
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -67,7 +67,7 @@ customElements.define(
   <style>
     p {
       color: white;
-      background-color: #666;
+      background-color: #666666;
       padding: 5px;
     }
   </style>
@@ -118,11 +118,43 @@ HTML 文書に次のように追加するだけで利用できるようになり
 > [!NOTE]
 > スロットに挿入することができるノードは「スロット可能 (Slottable)」ノードと呼ばれます。ノードがスロットに挿入されたとき、「スロットされている」と言います。
 
-> [!NOTE]
-> 無名の {{HTMLElement("slot")}} には、カスタム要素のトップレベルの子ノードのうち [`slot`](/ja/docs/Web/HTML/Reference/Global_attributes/slot) 属性を持たないすべてのノードが入ります。これにはテキストノードも含まれます。
-
 簡単な例での説明は以上です。
 もっと実行してみたい場合は、 [GitHub 上にあります](https://github.com/mdn/web-components-examples/tree/main/simple-template)（[ライブ実行版](https://mdn.github.io/web-components-examples/simple-template/)もあります）。
+
+`name` 属性はシャドウルートごとに一意である必要があります。同じ名前のスロットが 2 つ存在する場合、一致する `slot` 属性を持つ要素はすべて、その名前を持つまず `<slot>` に代入されます。ただし `slot` 属性自体は一意である必要はありません。 `<slot>` は、一致する `slot` 属性を持つ複数の要素によって埋められることができます。
+
+`name` 属性と `slot` 属性はどちらも既定で空文字列となるため、 `slot` 属性を指定しない要素は `name` 属性を指定しない `<slot>` （無名スロットまたは既定のスロット）に代入されます。例を以下に示します。
+
+```html
+<template id="custom-paragraph">
+  <style>
+    p {
+      color: white;
+      background-color: #666666;
+      padding: 5px;
+    }
+  </style>
+  <p>
+    <slot name="my-text">既定のテキスト</slot>
+    <slot></slot>
+  </p>
+</template>
+```
+
+その後、このように使用することができます。
+
+```html
+<my-paragraph>
+  <span slot="my-text">Let's have some different text!</span>
+  <span>This will go into the unnamed slot</span>
+  <span>This will also go into the unnamed slot</span>
+</my-paragraph>
+```
+
+この例では、
+
+- `slot="my-text"` をつけたコンテンツは、名前付きスロットに格納されます。
+- 他のコンテンツは自動的に無名スロットに配置されます。
 
 ## より踏み込んだ例
 
@@ -161,7 +193,7 @@ HTML 文書に次のように追加するだけで利用できるようになり
     }
     h4 span {
       background: #217ac0;
-      padding: 2px 6px 2px 6px;
+      padding: 2px 6px;
     }
     h4 span {
       border: 1px solid #cee9f9;

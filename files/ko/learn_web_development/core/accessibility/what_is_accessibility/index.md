@@ -132,7 +132,8 @@ l10n:
 
 당신이 접근성에 대해 고민하고 생각하고 있다는 것을 드러내기 위해서는 사이트에 접근성 설명을 발행하는 것이 좋습니다. 접근성에 대한 당신의 정책과 어떤 노력을 기울였는지 게시해두세요. 누군가 사이트에서 접근성 문제를 발견했다고 알려준다면, 공감하며 대화하고 문제 해결을 위해 합리적인 절차를 거치세요.
 
-> **참고:** [Handling common accessibility problems article](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility) 에서 보다 세부적으로 테스트 되어야 하는 접근성에 대해 다룹니다.
+> [!NOTE]
+> [Handling common accessibility problems article](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility) 에서 보다 세부적으로 테스트 되어야 하는 접근성에 대해 다룹니다.
 
 요약하자면,
 

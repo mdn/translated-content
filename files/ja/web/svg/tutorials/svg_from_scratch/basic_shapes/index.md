@@ -1,14 +1,11 @@
 ---
 title: 基本図形
 slug: Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes
-original_slug: Web/SVG/Tutorial/Basic_Shapes
 l10n:
-  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}
-
-{{ PreviousNext("Web/SVG/Tutorial/Positions", "Web/SVG/Tutorial/Paths") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Positions", "Web/SVG/Tutorials/SVG_from_scratch/Paths") }}
 
 ほとんどの SVG の描画に使われる基本的な図形がいくつかあります。これらの図形の目的は、その名前からかなり明白です。それらの位置や大きさを決定する引数のいくつかが与えられていますが、要素のリファレンスにはおそらくより正確で完全な説明と、ここでは取り上げない他のプロパティが含まれているでしょう。しかし、これらはほとんどの SVG 文書で使用されるため、ある種の紹介をする必要があります。
 
@@ -42,9 +39,9 @@ l10n:
 > [!NOTE]
 > `stroke`, `stroke-width`, `fill` の各属性は、後のチュートリアルで説明します。
 
-### 長方形
+### 矩形
 
-{{SVGElement("rect")}} 要素は画面に長方形を描画します。画面上の長方形の位置や形状を操作する、 6 種類の基本的な属性があります。右側の長方形は `rx` および `ry` 属性があり、これは角を丸くしています。これらを設定しない場合、初期値は `0` になります。
+{{SVGElement("rect")}} 要素は画面に矩形を描画します。画面上の矩形の位置や形状を操作する、 6 種類の基本的な属性があります。右側の矩形は `rx` および `ry` 属性があり、これは角を丸くしています。これらを設定しない場合、初期値は `0` になります。
 
 ```xml
 <rect x="10" y="10" width="30" height="30"/>
@@ -52,17 +49,17 @@ l10n:
 ```
 
 - `x`
-  - : 長方形の左上の角の位置を示す、X 座標です。
+  - : 矩形の左上の角の位置を示す、X 座標です。
 - `y`
-  - : 長方形の左上の角の位置を示す、Y 座標です。
+  - : 矩形の左上の角の位置を示す、Y 座標です。
 - `width`
-  - : 長方形の幅です。
+  - : 矩形の幅です。
 - `height`
-  - : 長方形の高さです。
+  - : 矩形の高さです。
 - `rx`
-  - : 長方形の角の、X 軸方向の半径です。
+  - : 矩形の角の、X 軸方向の半径です。
 - `ry`
-  - : 長方形の角の、Y 軸方向の半径です。
+  - : 矩形の角の、Y 軸方向の半径です。
 
 ### 円
 
@@ -129,7 +126,7 @@ l10n:
 {{SVGElement("polygon")}} は {{SVGElement("polyline")}} と似ており、点のリストを結ぶ直線で構成されています。しかし、多角形の場合、パスは自動的に最後の点と最初の点を結び、閉じた形状を作成します。
 
 > [!NOTE]
-> 長方形は多角形の一種なので、多角形を使用して角丸のない `<rect/>` 要素を作成することができます。
+> 矩形は多角形の一種なので、多角形を使用して角丸のない `<rect/>` 要素を作成することができます。
 
 ```xml
 <polygon points="50, 160 55, 180 70, 180 60, 190 65, 205 50, 195 35, 205 40, 190 30, 180 45, 180"/>
@@ -151,4 +148,4 @@ l10n:
 - `d`
   - : 点のリストと、パスの描画方法に関する情報です。詳しくは[パス](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)の節を参照してください。
 
-{{ PreviousNext("Web/SVG/Tutorial/Positions", "Web/SVG/Tutorial/Paths") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Positions", "Web/SVG/Tutorials/SVG_from_scratch/Paths") }}

@@ -1,16 +1,17 @@
 ---
 title: String.prototype.substr()
+short-title: substr()
 slug: Web/JavaScript/Reference/Global_Objects/String/substr
 l10n:
-  sourceCommit: 270351317fdaa57ba9123a19aa281e9e40bb0baa
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{Deprecated_Header}}
 
-**`substr()`** メソッドは、文字列の一部を、指定した位置から後方向に指定した文字数だけ返します。
+**`substr()`** は {{jsxref("String")}} 値のメソッドで、この文字列の一部を、指定した位置から後方向に指定した文字数だけ返します。
 
 > [!NOTE]
-> `substr()` は ECMAScript 仕様書の主要部にはありません。[付録 B: ウェブブラウザーのための追加 ECMAScript 機能](https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html) で定義されており、ブラウザー以外のランタイムでは通常オプションです。従って、コードのクロスプラットフォームの親和性を最大にするには、代わりに標準の [`String.prototype.substring()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/substring) または [`String.prototype.slice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/slice) メソッドを使用するよう勧められています。これら 3 つのメソッドの比較が [`String.prototype.substring()` page](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/substring#the_difference_between_substring_and_substr) にあります。
+> `substr()` は ECMAScript 仕様書にはありません。[付録 B: ウェブブラウザーのための追加 ECMAScript 機能](https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html) で定義されており、ブラウザー以外のランタイムでは通常オプションです。従って、コードのクロスプラットフォームの親和性を最大にするには、代わりに標準の [`String.prototype.substring()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/substring) または [`String.prototype.slice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/slice) メソッドを使用するよう勧められています。これら 3 つのメソッドの比較が [`String.prototype.substring()` page](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/substring#the_difference_between_substring_and_substr) にあります。
 
 {{InteractiveExample("JavaScript デモ: String.substr()")}}
 
@@ -18,10 +19,10 @@ l10n:
 const str = "Mozilla";
 
 console.log(str.substr(1, 2));
-// Expected output: "oz"
+// 予想される結果: "oz"
 
 console.log(str.substr(2));
-// Expected output: "zilla"
+// 予想される結果: "zilla"
 ```
 
 ## 構文
@@ -59,6 +60,8 @@ substr(start, length)
 
 ### substr() の使用
 
+<!-- cSpell:ignore ozilla -->
+
 ```js
 const aString = "Mozilla";
 
@@ -83,5 +86,6 @@ console.log(aString.substr(20, 2)); // ''
 ## 関連情報
 
 - [`String.prototype.substr` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims による `String.prototype.substr` のポリフィル](https://www.npmjs.com/package/string.prototype.substr)
 - {{jsxref("String.prototype.slice()")}}
 - {{jsxref("String.prototype.substring()")}}

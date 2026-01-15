@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Accessibility/Mobile
 original_slug: Learn/Accessibility/Mobile
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Multimedia","Learn_web_development/Core/Accessibility/Accessibility_troubleshooting", "Learn_web_development/Core/Accessibility")}}
 
 L'accès Web sur les appareils mobiles étant si populaire et les plates-formes populaires telles qu'IOS et Android disposant d'outils d'aide à l'accessibilité complets, il est important de prendre en compte l'accessibilité de votre contenu Web sur ces plates-formes. Cet article examine les considérations relatives à l'accessibilité spécifiques aux mobiles.
 
@@ -15,7 +15,7 @@ L'accès Web sur les appareils mobiles étant si populaire et les plates-formes 
       <td>
         Connaissances de base en informatique, compréhension de base de HTML,
         CSS et JavaScript et compréhension de la <a
-          href="/fr/docs/Learn/Accessibility"
+          href="/fr/docs/Learn_web_development/Core/Accessibility"
           >previous articles in the course</a
         >.
       </td>
@@ -34,7 +34,7 @@ L'accès Web sur les appareils mobiles étant si populaire et les plates-formes 
 
 L'état de l'accessibilité - et la prise en charge des normes Web en général - est bon pour les appareils mobiles modernes. Le temps où les appareils mobiles utilisaient des technologies Web complètement différentes des navigateurs de bureau, forçait les développeurs à utiliser le sniffing de navigateur et à leur servir des sites complètement séparés (même si de nombreuses entreprises détectent encore l'utilisation d'appareils mobiles et leur servent un domaine distinct).
 
-De nos jours, les appareils mobiles en général peuvent gérer des sites Web "complets", et les principales plates-formes ont même des lecteurs d'écran intégrés pour permettre aux utilisateurs malvoyants de les utiliser avec succès. Les navigateurs mobiles modernes ont tendance à avoir un bon support pour [WAI-ARIA](/fr/docs/Learn/Accessibility/WAI-ARIA_basics), aussi
+De nos jours, les appareils mobiles en général peuvent gérer des sites Web "complets", et les principales plates-formes ont même des lecteurs d'écran intégrés pour permettre aux utilisateurs malvoyants de les utiliser avec succès. Les navigateurs mobiles modernes ont tendance à avoir un bon support pour [WAI-ARIA](/fr/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics), aussi
 
 Pour rendre un site Web accessible et utilisable sur mobile, il vous suffit de suivre les bonnes pratiques générales en matière de conception de sites Web et d'accessibilité.
 
@@ -175,7 +175,7 @@ Essayons la navigation Web avec VoiceOver:
 
 ## Mécanismes de contrôle
 
-Dans notre article relatif à l'accessibilité CSS et JavaScript, nous avons examiné l'idée d'événements spécifiques à un certain type de mécanisme de contrôle (see [Mouse-specific events](/fr/docs/Learn/Accessibility/CSS_and_JavaScript#mouse-specific_events)). En résumé, cela pose des problèmes d'accessibilité car d'autres mécanismes de contrôle ne peuvent pas activer la fonctionnalité associée.
+Dans notre article relatif à l'accessibilité CSS et JavaScript, nous avons examiné l'idée d'événements spécifiques à un certain type de mécanisme de contrôle (see [Mouse-specific events](/fr/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#mouse-specific_events)). En résumé, cela pose des problèmes d'accessibilité car d'autres mécanismes de contrôle ne peuvent pas activer la fonctionnalité associée.
 
 Par exemple, l'événement [click](/fr/docs/Web/API/Element/click_event) est bon en termes d'accessibilité - un gestionnaire d'événements associé peut être appelé en cliquant sur l'élément sur lequel il est défini, en le sélectionnant et en appuyant sur Entrée / Retour ou en le tapant sur un périphérique à écran tactile. Essayez notre [simple-button-example.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-button-example.html) exemple ([see it running live](https://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html)) pour voir ce que nous entendons. .
 
@@ -212,13 +212,13 @@ Nous avons fourni un exemple simple qui montre comment utiliser simultanément l
 
 ## Responsive design
 
-[Responsive design](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design) a l'habitude de faire en sorte que vos mises en page et les autres fonctionnalités de vos applications changent de manière dynamique en fonction de facteurs tels que la taille de l'écran et la résolution, de sorte qu'elles soient utilisables et accessibles aux utilisateurs de différents types d'appareils. .
+[Responsive design](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design) a l'habitude de faire en sorte que vos mises en page et les autres fonctionnalités de vos applications changent de manière dynamique en fonction de facteurs tels que la taille de l'écran et la résolution, de sorte qu'elles soient utilisables et accessibles aux utilisateurs de différents types d'appareils. .
 
 En particulier, les problèmes les plus courants auxquels le mobile doit faire face sont les suivants:
 
-- Adéquation des mises en page pour les appareils mobiles. Une mise en page à plusieurs colonnes ne fonctionnera pas aussi bien sur un écran étroit, par exemple, et il faudra peut-être augmenter la taille du texte pour le rendre lisible. Ces problèmes peuvent être résolus en créant une mise en page réactive utilisant des technologies telles que [media queries](/fr/docs/Web/CSS/CSS_media_queries), [viewport](/fr/docs/Mozilla/Mobile/Viewport_meta_tag), et [flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox).
-- Conserver les tailles d'image téléchargées. En général, les appareils de petite taille n'auront pas besoin d'images aussi volumineuses que leurs homologues de bureau, et ils risquent davantage d'être sur des connexions réseau lentes. Par conséquent, il est sage de servir des images plus petites sur des dispositifs à écran étroit, le cas échéant. Vous pouvez gérer cela en utilisant [responsive image techniques](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
-- Penser aux hautes résolutions. De nombreux appareils mobiles ont des écrans haute résolution et ont donc besoin d'images de résolution supérieure pour que l'affichage puisse continuer à être net et net. Encore une fois, vous pouvez servir des images selon vos besoins en utilisant des techniques d'image réactives. De plus, de nombreuses exigences en matière d'images peuvent être satisfaites grâce au format d'images vectorielles SVG, bien pris en charge par les navigateurs actuels. SVG a une petite taille de fichier et restera net quelle que soit la taille affichée (voir [Adding vector graphics to the web](/fr/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) pour plus de détails ).
+- Adéquation des mises en page pour les appareils mobiles. Une mise en page à plusieurs colonnes ne fonctionnera pas aussi bien sur un écran étroit, par exemple, et il faudra peut-être augmenter la taille du texte pour le rendre lisible. Ces problèmes peuvent être résolus en créant une mise en page réactive utilisant des technologies telles que [media queries](/fr/docs/Web/CSS/Guides/Media_queries), [viewport](/fr/docs/Mozilla/Mobile/Viewport_meta_tag), et [flexbox](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox).
+- Conserver les tailles d'image téléchargées. En général, les appareils de petite taille n'auront pas besoin d'images aussi volumineuses que leurs homologues de bureau, et ils risquent davantage d'être sur des connexions réseau lentes. Par conséquent, il est sage de servir des images plus petites sur des dispositifs à écran étroit, le cas échéant. Vous pouvez gérer cela en utilisant [responsive image techniques](/fr/docs/Web/HTML/Guides/Responsive_images).
+- Penser aux hautes résolutions. De nombreux appareils mobiles ont des écrans haute résolution et ont donc besoin d'images de résolution supérieure pour que l'affichage puisse continuer à être net et net. Encore une fois, vous pouvez servir des images selon vos besoins en utilisant des techniques d'image réactives. De plus, de nombreuses exigences en matière d'images peuvent être satisfaites grâce au format d'images vectorielles SVG, bien pris en charge par les navigateurs actuels. SVG a une petite taille de fichier et restera net quelle que soit la taille affichée (voir [Adding vector graphics to the web](/fr/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML) pour plus de détails ).
 
 **Note:** Nous ne fournirons pas une analyse complète des techniques de conception réactive ici, car elles sont couvertes ailleurs au sein de MDN (voir les liens ci-dessus).
 
@@ -266,4 +266,4 @@ Dans cet article, nous vous avons fourni des détails sur les problèmes courant
 - [Guidelines For Mobile Web Development](https://www.smashingmagazine.com/guidelines-for-mobile-web-development/) — Une liste d'articles dans Smashing Magazine couvrant différentes techniques de conception de sites Web mobiles.
 - [Make your site work on touch devices](http://www.creativebloq.com/javascript/make-your-site-work-touch-devices-51411644) — Article utile sur l'utilisation d'événements tactiles pour que les interactions fonctionnent sur les appareils mobiles.
 
-{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Multimedia","Learn_web_development/Core/Accessibility/Accessibility_troubleshooting", "Learn_web_development/Core/Accessibility")}}

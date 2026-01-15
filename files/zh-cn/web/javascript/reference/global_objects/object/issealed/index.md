@@ -3,8 +3,6 @@ title: Object.isSealed()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isSealed
 ---
 
-{{JSRef}}
-
 **`Object.isSealed()`** 静态方法判断一个对象是否被密封。
 
 {{InteractiveExample("JavaScript Demo: Object.isSealed()")}}

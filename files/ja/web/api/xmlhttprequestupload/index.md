@@ -2,48 +2,26 @@
 title: XMLHttpRequestUpload
 slug: Web/API/XMLHttpRequestUpload
 l10n:
-  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
+  sourceCommit: 0cc63ce1d7f43eb98746a908a9aba68ef6a36f7b
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
-**`XMLHttpRequestUpload`** インターフェイスは、特定の{{domxref("XMLHttpRequest")}}のアップロード処理を表します。これは _opaque_ オブジェクトで、基盤であるブラウザー依存のアップロード処理を表します。これは{{domxref("XMLHttpRequestEventTarget")}}であり、{{domxref("XMLHttpRequest.upload")}}を呼び出すことで取得できます。
-
-{{AvailableInWorkers("notservice")}}
+**`XMLHttpRequestUpload`** インターフェイスは、特定の{{domxref("XMLHttpRequest")}}のアップロード処理を表します。これは不透明オブジェクトで、基盤であるブラウザー依存のアップロード処理を表します。これは{{domxref("XMLHttpRequestEventTarget")}}であり、{{domxref("XMLHttpRequest.upload")}}を呼び出すことで取得できます。
 
 {{InheritanceDiagram}}
 
 ## インスタンスプロパティ
 
-_このインターフェイスに特有のプロパティはありませんが、 {{domxref("XMLHttpRequestEventTarget")}} および {{domxref("EventTarget")}} から継承したプロパティがあります。_
+_このインターフェイスに固有のプロパティはありませんが、 {{domxref("XMLHttpRequestEventTarget")}} および {{domxref("EventTarget")}} から継承したプロパティがあります。_
 
 ## インスタンスメソッド
 
-_このインターフェイスに特有のメソッドはありませんが、 {{domxref("XMLHttpRequestEventTarget")}} および {{domxref("EventTarget")}} から継承したメソッドがあります。_
+_このインターフェイスに固有のメソッドはありませんが、 {{domxref("XMLHttpRequestEventTarget")}} および {{domxref("EventTarget")}} から継承したメソッドがあります。_
 
 ## イベント
 
-- {{domxref("XMLHttpRequestUpload/abort_event", "abort")}}
-  - : リクエストが中止された場合に、例えばプログラムが {{domxref("XMLHttpRequest.abort()")}} を呼び出したために発行されます。
-    `onabort` イベントハンドラープロパティでも利用できます。
-- {{domxref("XMLHttpRequestUpload/error_event", "error")}}
-  - : リクエストがエラーに遭遇したときに発行されます。
-    `onerror` イベントハンドラープロパティでも利用できます。
-- {{domxref("XMLHttpRequestUpload/load_event", "load")}}
-  - : リクエストトランザクションが成功裏に完了したときに発行されます。
-    `onload` イベントハンドラープロパティでも利用できます。
-- {{domxref("XMLHttpRequestUpload/loadend_event", "loadend")}}
-  - : リクエストが成功した場合（{{domxref("XMLHttpRequest/load_event", "load")}} の後）または失敗した場合（{{domxref("XMLHttpRequestUpload/abort_event", "abort")}} または {{domxref("XMLHttpRequest/error_event", "error")}} の後）に発行されます。
-    `onloadend` イベントハンドラープロパティでも利用できます。
-- {{domxref("XMLHttpRequestUpload/loadstart_event", "loadstart")}}
-  - : リクエストがデータの読み込みを開始したときに発行されます。
-    `onloadstart` イベントハンドラープロパティでも利用できます。
-- {{domxref("XMLHttpRequestUpload/progress_event", "progress")}}
-  - : リクエストがより多くのデータを受け取ったときに定期的に発行されます。
-    `onprogress` イベントハンドラープロパティでも利用できます。
-- {{domxref("XMLHttpRequestUpload/timeout_event", "timeout")}}
-  - : あらかじめ設定された時間が経過し、進行が終了したときに発行されます。
-    `ontimeout` イベントハンドラープロパティでも利用できます。
+_このインターフェイスに固有のイベントはありませんが、 {{domxref("XMLHttpRequestEventTarget")}} から継承したイベントがあります。_
 
 ## 例
 
@@ -71,7 +49,7 @@ _このインターフェイスに特有のメソッドはありませんが、 
         <input type="file" id="file" />
       </p>
       <p>
-        <progress />
+        <progress></progress>
       </p>
       <p>
         <output></output>
@@ -102,7 +80,7 @@ main {
 
 label[for="file"] {
   background-color: lightgrey;
-  padding: 10px 10px;
+  padding: 10px;
 }
 
 progress {

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 62681c2ef134407009c5c11fa679db1f485e016d
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
+{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
 
 L'objectif de ce chapitre est de mieux comprendre certains des concepts fondamentaux de CSS que sont la cascade, la spécificité et l'héritage. Tous les trois contrôlent la façon dont le CSS est appliqué au HTML et comment les éventuels conflits entre les déclarations de style sont résolus.
 
@@ -29,15 +29,15 @@ Bien que ce chapitre puisse sembler plus théorique voire académique que d'autr
 
 CSS est l'acronyme pour **<i lang="en">Cascading Style Sheets</i>** (soit «&nbsp;feuilles de style en cascade&nbsp;» en français). Comprendre cette notion de _cascade_, présente dans cet acronyme, est fondamental pour comprendre CSS.
 
-Lorsque vous travaillerez sur un projet, vous rencontrerez peut-être une règle CSS dont vous pensez qu'elle devrait s'appliquer à un élément, mais qui ne fonctionne pas. Il arrive souvent que le problème vienne de deux règles qui appliquent différentes valeurs pour la même propriété sur le même élément. [**La cascade**](/fr/docs/Web/CSS/Cascade) et [**la spécificité**](/fr/docs/Web/CSS/Specificity) sont des mécanismes qui contrôlent quelle règle s'applique lorsqu'un tel conflit se produit. Autrement dit, la règle qui met en forme votre élément peut ne pas être celle à laquelle vous vous attendez et comprendre ces mécanismes vous aidera à diagnostiquer, corriger voire éviter ces problèmes.
+Lorsque vous travaillerez sur un projet, vous rencontrerez peut-être une règle CSS dont vous pensez qu'elle devrait s'appliquer à un élément, mais qui ne fonctionne pas. Il arrive souvent que le problème vienne de deux règles qui appliquent différentes valeurs pour la même propriété sur le même élément. [**La cascade**](/fr/docs/Web/CSS/Guides/Cascade/Introduction) et [**la spécificité**](/fr/docs/Web/CSS/Guides/Cascade/Specificity) sont des mécanismes qui contrôlent quelle règle s'applique lorsqu'un tel conflit se produit. Autrement dit, la règle qui met en forme votre élément peut ne pas être celle à laquelle vous vous attendez et comprendre ces mécanismes vous aidera à diagnostiquer, corriger voire éviter ces problèmes.
 
-Un autre concept fondamental est [**l'héritage**](/fr/docs/Web/CSS/Inheritance). Celui-ci décrit comment certaines propriétés CSS héritent ou non par défaut des valeurs appliquées aux éléments parents. Là aussi, cela peut être une source de confusion si on ne comprend pas ce mécanisme alors qu'on observe un comportement inattendu.
+Un autre concept fondamental est [**l'héritage**](/fr/docs/Web/CSS/Guides/Cascade/Inheritance). Celui-ci décrit comment certaines propriétés CSS héritent ou non par défaut des valeurs appliquées aux éléments parents. Là aussi, cela peut être une source de confusion si on ne comprend pas ce mécanisme alors qu'on observe un comportement inattendu.
 
 Commençons par un aperçu rapide de ces notions avant de les détailler une à une puis d'étudier leurs interactions entre elles et avec votre code CSS. Cela peut sembler complexe de prime abord, mais au fur et à mesure que vous écrirez du CSS, ce fonctionnement deviendra plus naturel.
 
 ### Cascade
 
-Les feuilles de style forment une [**cascade**](/fr/docs/Web/CSS/Cascade). Sous une forme très simple, cela signifie que l'origine, la couche de cascade et l'ordre des règles CSS comptent. Lorsque deux règles de la même couche de cascade s'appliquent et ont la même spécificité, c'est celle qui est définie dans la dernière feuille de style qui sera utilisée.
+Les feuilles de style forment une [**cascade**](/fr/docs/Web/CSS/Guides/Cascade/Introduction). Sous une forme très simple, cela signifie que l'origine, la couche de cascade et l'ordre des règles CSS comptent. Lorsque deux règles de la même couche de cascade s'appliquent et ont la même spécificité, c'est celle qui est définie dans la dernière feuille de style qui sera utilisée.
 
 Dans l'exemple qui suit, il y a deux règles qui pourraient s'appliquer à l'élément `<h1>`. Le contenu de cet élément `<h1>` est, en fin de compte, coloré en bleu. Dans cet exemple, les deux règles proviennent de la même source et ont un sélecteur identique&nbsp;: elles ont donc la même spécificité et c'est alors la dernière règle, selon l'ordre du code source, qui l'emporte.
 
@@ -45,7 +45,7 @@ Dans l'exemple qui suit, il y a deux règles qui pourraient s'appliquer à l'él
 
 ### Spécificité
 
-[La spécificité](/fr/docs/Web/CSS/Specificity) est l'algorithme utilisé par le navigateur pour décider la valeur qui est appliquée à un élément pour une propriété donnée. Si plusieurs blocs de style utilisent différents sélecteurs qui configurent la même propriété avec différentes valeurs et qui ciblent le même élément, c'est la spécificité qui permet de décider la valeur de propriété qui est appliquée à l'élément. La spécificité est une mesure de la précision d'un sélecteur&nbsp;:
+[La spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity) est l'algorithme utilisé par le navigateur pour décider la valeur qui est appliquée à un élément pour une propriété donnée. Si plusieurs blocs de style utilisent différents sélecteurs qui configurent la même propriété avec différentes valeurs et qui ciblent le même élément, c'est la spécificité qui permet de décider la valeur de propriété qui est appliquée à l'élément. La spécificité est une mesure de la précision d'un sélecteur&nbsp;:
 
 - Un sélecteur d'élément est peu spécifique&nbsp;: il sélectionnera tous les éléments d'un type donné sur la page. Il a donc moins de poids. Les sélecteurs de pseudo-éléments ont la même spécificité que les sélecteurs d'éléments.
 - Un sélecteur de classe sera plus spécifique&nbsp;: il sélectionnera uniquement les éléments d'une page qui ont une valeur d'attribut `class` donnée. Il a donc un poids plus important. Les sélecteurs d'attributs et de pseudo-classes ont le même poids que les sélecteurs de classes.
@@ -64,14 +64,14 @@ Ainsi, si on définit des valeurs pour les propriétés `color` et `font-family`
 
 {{EmbedGHLiveSample("css-examples/learn/cascade/inheritance-simple.html", '100%', 650)}}
 
-L'héritage ne concerne pas toutes les propriétés. Ainsi, si on fixe [`width`](/fr/docs/Web/CSS/width) à `50%` sur un élément, cela ne signifie pas que tous ses descendants auront une largeur égale à 50% de celle de leur parent. Si c'était le cas, CSS serait inutilement complexe.
+L'héritage ne concerne pas toutes les propriétés. Ainsi, si on fixe [`width`](/fr/docs/Web/CSS/Reference/Properties/width) à `50%` sur un élément, cela ne signifie pas que tous ses descendants auront une largeur égale à 50% de celle de leur parent. Si c'était le cas, CSS serait inutilement complexe.
 
 > [!NOTE]
-> Sur chaque page MDN documentant une propriété CSS, vous pourrez voir un encart intitulé «&nbsp;Définition formelle&nbsp;» qui indique les caractéristiques de cette propriété et notamment son caractère hérité ou non. Voir [la section de la définition formelle pour la propriété `color`](/fr/docs/Web/CSS/color#définition_formelle) comme exemple.
+> Sur chaque page MDN documentant une propriété CSS, vous pourrez voir un encart intitulé «&nbsp;Définition formelle&nbsp;» qui indique les caractéristiques de cette propriété et notamment son caractère hérité ou non. Voir [la section de la définition formelle pour la propriété `color`](/fr/docs/Web/CSS/Reference/Properties/color#définition_formelle) comme exemple.
 
 ## Comprendre l'héritage
 
-Commençons par approfondir l'héritage. Dans l'exemple qui suit, nous avons un élément [`<ul>`](/fr/docs/Web/HTML/Element/ul) qui contient deux niveaux imbriqués de listes non ordonnées. Pour l'élément `<ul>` extérieur, nous avons indiqué une bordure, un remplissage (<i lang="en">padding</i>) et une couleur de police.
+Commençons par approfondir l'héritage. Dans l'exemple qui suit, nous avons un élément [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul) qui contient deux niveaux imbriqués de listes non ordonnées. Pour l'élément `<ul>` extérieur, nous avons indiqué une bordure, un remplissage (<i lang="en">padding</i>) et une couleur de police.
 
 La propriété `color` est une propriété héritée. Aussi, la valeur de la propriété `color` s'appliquent aux enfants directs ainsi qu'aux enfants indirects. Dans notre exemple, la valeur s'applique donc pour les éléments `<li>` qui sont des enfants directs et pour les éléments de la première liste imbriquée. On a ajouté la classe `special` à la deuxième liste imbriquée pour y appliquer une autre couleur. Les enfants de celle-ci héritent donc de cette autre valeur.
 
@@ -85,19 +85,19 @@ L'information sur l'héritage ou non de la propriété est présente sur les pag
 
 CSS fournit 5 valeurs spéciales et universelles pour les propriétés afin de contrôler l'héritage. Ainsi, chaque propriété CSS acceptera ces valeurs&nbsp;:
 
-- [`inherit`](/fr/docs/Web/CSS/inherit)
+- [`inherit`](/fr/docs/Web/CSS/Reference/Values/inherit)
   - : Applique la valeur de l'élément parent sur l'élément ciblé. Cela «&nbsp;force&nbsp;» l'héritage.
-- [`initial`](/fr/docs/Web/CSS/initial)
-  - : Applique la [valeur initiale](/fr/docs/Web/CSS/initial_value) de la propriété sur l'élément ciblé.
-- [`revert`](/fr/docs/Web/CSS/revert)
-  - : Réinitialise la valeur de la propriété de l'élément ciblé avec la mise en forme par défaut du navigateur. Cette valeur agit comme [`unset`](/fr/docs/Web/CSS/unset) dans la plupart des cas.
+- [`initial`](/fr/docs/Web/CSS/Reference/Values/initial)
+  - : Applique la [valeur initiale](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale) de la propriété sur l'élément ciblé.
+- [`revert`](/fr/docs/Web/CSS/Reference/Values/revert)
+  - : Réinitialise la valeur de la propriété de l'élément ciblé avec la mise en forme par défaut du navigateur. Cette valeur agit comme [`unset`](/fr/docs/Web/CSS/Reference/Values/unset) dans la plupart des cas.
 - [`revert-layer`](/fr/docs/Web/CSS/revert-layer)
-  - : Réinitialise la valeur de la propriété de l'élément ciblé avec celle établie dans une [couche de cascade](/fr/docs/Web/CSS/@layer) précédente.
-- [`unset`](/fr/docs/Web/CSS/unset)
+  - : Réinitialise la valeur de la propriété de l'élément ciblé avec celle établie dans une [couche de cascade](/fr/docs/Web/CSS/Reference/At-rules/@layer) précédente.
+- [`unset`](/fr/docs/Web/CSS/Reference/Values/unset)
   - : Réinitialise la propriété avec sa valeur naturelle. Autrement dit, si la propriété est naturellement héritée, ce mot-clé sera synonyme de `inherit`, sinon, il sera synonyme de `initial`.
 
 > [!NOTE]
-> Voir [la section sur les types d'origine](/fr/docs/Web/CSS/Cascade#types_dorigine) pour plus d'informations sur ces valeurs et leur fonctionnement.
+> Voir [la section sur les types d'origine](/fr/docs/Web/CSS/Guides/Cascade/Introduction#types_dorigine) pour plus d'informations sur ces valeurs et leur fonctionnement.
 
 Utilisons un exemple avec une liste de liens pour observer comment ces valeurs fonctionnent. Dans l'éditeur qui suit, vous pouvez éditer le CSS et voir l'effet de vos changements. Utilisez cette interactivité pour mieux comprendre le comportement de HTML et de CSS.
 
@@ -112,7 +112,7 @@ Dans notre exemple&nbsp;:
 
 ### Réinitialiser les valeurs de toutes les propriétés
 
-La propriété CSS raccourcie [`all`](/fr/docs/Web/CSS/all) peut être utilisée afin d'appliquer une valeur d'héritage à (presque) toutes les propriétés. Cette propriété peut utiliser l'une des 5 valeurs d'héritage vues avant (`inherit`, `initial`, `revert`, `revert-layer`, ou `unset`). Il s'agit d'une méthode pratique pour annuler les modifications appliquées à des mises en forme et revenir à un point de départ connu avant d'appliquer d'autres modifications.
+La propriété CSS raccourcie [`all`](/fr/docs/Web/CSS/Reference/Properties/all) peut être utilisée afin d'appliquer une valeur d'héritage à (presque) toutes les propriétés. Cette propriété peut utiliser l'une des 5 valeurs d'héritage vues avant (`inherit`, `initial`, `revert`, `revert-layer`, ou `unset`). Il s'agit d'une méthode pratique pour annuler les modifications appliquées à des mises en forme et revenir à un point de départ connu avant d'appliquer d'autres modifications.
 
 Dans l'exemple qui suit, on a deux blocs de citation. Le premier est mis en forme avec une règle qui cible l'élément. Le second est mis en forme via une classe appliquée à l'élément et qui définit la propriété `all` avec la valeur `unset`.
 
@@ -162,9 +162,9 @@ La spécificité d'un sélecteur est mesurée selon 3 composantes différentes, 
   - : On marque un point dans cette colonne pour chaque sélecteur d'élément ou de pseudo-élément contenu dans le sélecteur composite.
 
 > [!NOTE]
-> Le sélecteur universel ([`*`](/fr/docs/Web/CSS/Universal_selectors)), [les combinateurs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators) (`+`, `>`, `~`, ' '), et le sélecteur d'ajustement de spécificité ([`:where()`](/fr/docs/Web/CSS/:where)) et ses paramètres n'ont pas d'effet sur la spécificité.
+> Le sélecteur universel ([`*`](/fr/docs/Web/CSS/Reference/Selectors/Universal_selectors)), [les combinateurs](/fr/docs/Learn_web_development/Core/Styling_basics/Combinators) (`+`, `>`, `~`, ' '), et le sélecteur d'ajustement de spécificité ([`:where()`](/fr/docs/Web/CSS/Reference/Selectors/:where)) et ses paramètres n'ont pas d'effet sur la spécificité.
 
-Les pseudo-classes de négation ([`:not()`](/fr/docs/Web/CSS/:not)), de sélection relationnelle ([`:has()`](/fr/docs/Web/CSS/:has)), et de correspondance ([`:is()`](/fr/docs/Web/CSS/:is)) n'ont pas d'effet par elles-mêmes sur la spécificité, ce sont leurs paramètres qui ont un impact. La contribution à la spécificité du sélecteur de chacune de ses pseudo-classes est égale à la spécificité la plus grande parmi les paramètres qui lui sont passés.
+Les pseudo-classes de négation ([`:not()`](/fr/docs/Web/CSS/Reference/Selectors/:not)), de sélection relationnelle ([`:has()`](/fr/docs/Web/CSS/Reference/Selectors/:has)), et de correspondance ([`:is()`](/fr/docs/Web/CSS/Reference/Selectors/:is)) n'ont pas d'effet par elles-mêmes sur la spécificité, ce sont leurs paramètres qui ont un impact. La contribution à la spécificité du sélecteur de chacune de ses pseudo-classes est égale à la spécificité la plus grande parmi les paramètres qui lui sont passés.
 
 Le tableau qui suit illustre quelques exemples pour une approche plus concrète. N'hésitez pas à les décomposer et assurez vous de bien comprendre la spécificité obtenue. Nous n'avons pas encore abordé tous les sélecteurs en détails, mais vous pourrez trouver leurs documentations respectives sur MDN au sein de [la référence des sélecteurs](/fr/docs/Web/CSS/CSS_Selectors/Selectors_and_combinators).
 
@@ -193,7 +193,7 @@ Que se passe-t-il ici&nbsp;? Pour commencer, nous ne nous intéressons qu'aux se
 
 ### Styles en incise dans le document
 
-Les styles en incise du document (c'est-à-dire les déclarations de style présentes dans les attributs [`style`](/fr/docs/Web/HTML/Global_attributes#style)) l'emportent sur toutes les règles déclarées dans les feuilles de style, quelle que soit leur spécificité. De telles déclarations n'utilisent pas de sélecteurs, mais on peut considérer leur spécificité comme 1-0-0-0, l'emportant ainsi toujours sur toute autre spécificité, quel que soit le nombre d'identifiants dans le sélecteur composite.
+Les styles en incise du document (c'est-à-dire les déclarations de style présentes dans les attributs [`style`](/fr/docs/Web/HTML/Reference/Global_attributes#style)) l'emportent sur toutes les règles déclarées dans les feuilles de style, quelle que soit leur spécificité. De telles déclarations n'utilisent pas de sélecteurs, mais on peut considérer leur spécificité comme 1-0-0-0, l'emportant ainsi toujours sur toute autre spécificité, quel que soit le nombre d'identifiants dans le sélecteur composite.
 
 ### `!important`
 
@@ -208,9 +208,9 @@ Prenons un exemple où nous avons deux paragraphes, dont un qui porte un identif
 
 Voyons ce qui se passe ici (vous pouvez retirer certaines des propriétés et observer ce qui se produit si vous ne comprenez pas de prime abord)&nbsp;:
 
-1. Vous pouvez voir que les valeurs de [`color`](/fr/docs/Web/CSS/color) et [`padding`](/fr/docs/Web/CSS/padding) ont été appliquées avec la troisième règle mais que ce n'est pas le cas de [`background-color`](/fr/docs/Web/CSS/background-color). Pourquoi ça&nbsp;? Les trois déclarations devraient s'appliquer, car elles arrivent après dans l'ordre du code source, l'emportant ainsi sur les règles précédentes.
+1. Vous pouvez voir que les valeurs de [`color`](/fr/docs/Web/CSS/Reference/Properties/color) et [`padding`](/fr/docs/Web/CSS/Reference/Properties/padding) ont été appliquées avec la troisième règle mais que ce n'est pas le cas de [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color). Pourquoi ça&nbsp;? Les trois déclarations devraient s'appliquer, car elles arrivent après dans l'ordre du code source, l'emportant ainsi sur les règles précédentes.
 2. Toutefois, ce sont les règles précédentes qui l'emportent avec les sélecteurs de classe qui ont une spécificité supérieure aux sélecteurs d'éléments.
-3. Les deux éléments ont une [classe](/fr/docs/Web/HTML/Global_attributes#class) `better`, et le second porte en plus [l'identifiant](/fr/docs/Web/HTML/Global_attributes#id) `winning`. Comme les identifiants ont une spécificité _toujours supérieure_ à celle des classes (on peut uniquement avoir un seul élément avec un identifiant donné sur une page, mais de nombreux éléments peuvent se partager une même classe), l'arrière-plan rouge et la bordure noire de 1 pixel devraient s'appliquer au second élément et le premier devrait avoir un arrière-plan gris sans bordure, tel qu'indiqué par la classe.
+3. Les deux éléments ont une [classe](/fr/docs/Web/HTML/Reference/Global_attributes#class) `better`, et le second porte en plus [l'identifiant](/fr/docs/Web/HTML/Reference/Global_attributes#id) `winning`. Comme les identifiants ont une spécificité _toujours supérieure_ à celle des classes (on peut uniquement avoir un seul élément avec un identifiant donné sur une page, mais de nombreux éléments peuvent se partager une même classe), l'arrière-plan rouge et la bordure noire de 1 pixel devraient s'appliquer au second élément et le premier devrait avoir un arrière-plan gris sans bordure, tel qu'indiqué par la classe.
 4. En réalité, le second élément récupère bien l'arrière-plan rouge, mais pas la bordure&nbsp;? Pourquoi&nbsp;? C'est l'effet du marqueur `!important` dans la deuxième règle. Ajouter `!important` après `border: none` signifie que cette déclaration l'emportera sur toutes les valeurs de `border` des règles précédentes, même si le sélecteur d'identifiant possède une spécificité supérieure.
 
 > [!NOTE]
@@ -242,7 +242,7 @@ Les déclarations conflictuelles seront appliquées dans l'ordre suivant. Celles
 
 ### Ordre des couches de cascade
 
-[Les couches de cascade](/fr/docs/Web/CSS/@layer) constituent un sujet avancé qui ne vous sera peut-être pas utile immédiatement. Toutefois, il est important de comprendre comment les différentes couches forment une cascade.
+[Les couches de cascade](/fr/docs/Web/CSS/Reference/At-rules/@layer) constituent un sujet avancé qui ne vous sera peut-être pas utile immédiatement. Toutefois, il est important de comprendre comment les différentes couches forment une cascade.
 
 Lorsqu'on déclare du CSS dans des couches de cascade, la précédence est déterminée par l'ordre de déclaration des couches. Les styles CSS déclarés en dehors des couches sont combinés ensemble, selon leur ordre de déclaration, dans une couche anonyme, agissant comme la dernière couche déclarée. Lorsqu'il y a conflit entre des styles normaux (et pas importants), ce sont les couches ultérieures qui l'emportent sur les couches antérieures. Pour les styles importants (marqués avec `!important`), cet ordre est inversé et ce sont les styles importants des couches antérieures qui l'emportent sur les styles importants des couches ultérieures ou des styles de la couche anonyme. Les styles en incise dans le document l'emportent sur n'importe quel style du site, quelle que soit la couche.
 
@@ -260,7 +260,7 @@ Vous avez terminé l'article, mais avez-vous mémorisé les informations essenti
 
 ## Résumé
 
-Si vous avez compris une bonne partie de cet article, vous êtes sur la bonne voie pour comprendre les mécaniques fondamentales de CSS. Dans le prochain module, nous verrons [le modèle de boîtes](/fr/docs/Learn/CSS/Building_blocks/The_box_model) en détails.
+Si vous avez compris une bonne partie de cet article, vous êtes sur la bonne voie pour comprendre les mécaniques fondamentales de CSS. Dans le prochain module, nous verrons [le modèle de boîtes](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) en détails.
 
 Si vous n'avez pas encore complètement compris la cascade, la spécificité et l'héritage, pas de souci&nbsp;! Il s'agit très certainement des notions les plus avancées parmi ces modules et qui restent délicates, même pour les personnes dont le développement web est le métier. Nous vous conseillons de revenir à cet article quelques fois au fur et à mesure du parcours pour réviser ces notions.
 

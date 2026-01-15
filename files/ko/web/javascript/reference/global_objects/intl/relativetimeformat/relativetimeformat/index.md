@@ -17,7 +17,8 @@ new Intl.RelativeTimeFormat(locales)
 new Intl.RelativeTimeFormat(locales, options)
 ```
 
-> **참고:** `Intl.RelativeTimeFormat()` 생성자는 오직
+> [!NOTE]
+> `Intl.RelativeTimeFormat()` 생성자는 오직
 > [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)와 함께 사용할 수 있습니다.
 > `new` 없이 호출하면 {{jsxref("TypeError")}}가 발생합니다.
 

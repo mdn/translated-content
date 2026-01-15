@@ -16,13 +16,13 @@ L'élément **`<animateMotion>`** permet d'animer un élément le long d'un chem
 
 ### Attributs globaux
 
-- [Attributs à traitement conditionnel](/fr/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [Attributs fondamentaux](/fr/docs/Web/SVG/Attribute#core) »
-- [Attributs d'événements d'animation](/fr/docs/Web/SVG/Attribute#animationevent) »
-- [Attributs XLink](/fr/docs/Web/SVG/Attribute#xlink) »
-- [Attributs d'animation de timing](/fr/docs/Web/SVG/Attribute#animationtiming) »
-- [Attributs d'animation de valeurs](/fr/docs/Web/SVG/Attribute#animationvalue) »
-- [Attributs d'animation d'ajout](/fr/docs/Web/SVG/Attribute#animationaddition) »
+- [Attributs à traitement conditionnel](/fr/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
+- [Attributs fondamentaux](/fr/docs/Web/SVG/Reference/Attribute#core) »
+- [Attributs d'événements d'animation](/fr/docs/Web/SVG/Reference/Attribute#animationevent) »
+- [Attributs XLink](/fr/docs/Web/SVG/Reference/Attribute#xlink) »
+- [Attributs d'animation de timing](/fr/docs/Web/SVG/Reference/Attribute#animationtiming) »
+- [Attributs d'animation de valeurs](/fr/docs/Web/SVG/Reference/Attribute#animationvalue) »
+- [Attributs d'animation d'ajout](/fr/docs/Web/SVG/Reference/Attribute#animationaddition) »
 - {{ SVGAttr("externalResourcesRequired") }}
 
 ### Attributs spécifiques

@@ -1,29 +1,28 @@
 ---
 title: Object.seal()
+short-title: seal()
 slug: Web/JavaScript/Reference/Global_Objects/Object/seal
 l10n:
-  sourceCommit: 0c2f10d728d1018f1b21c3e96267c5d586ff0ae3
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
-
-**`Object.seal()`** 静的メソッドは、オブジェクトを封印します。オブジェクトを封印すると、[拡張を抑止し](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)、既存のすべてのプロパティを構成不可にします。封印されたオブジェクトは、固定されたプロパティ一式を持ちます。新しいプロパティを追加したり、既存のプロパティを除去したり、列挙可能性や構成可能性を変更したり、プロトタイプを再割り当てしたりすることはできません。既存のプロパティの値は、書き込み可能である限り変更することができます。 `seal()` は渡したオブジェクトを返します。
+**`Object.seal()`** は静的メソッドで、オブジェクトを封印します。オブジェクトを封印すると、[拡張を抑止し](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)、既存のすべてのプロパティを構成不可にします。封印されたオブジェクトは、固定されたプロパティ一式を持ちます。新しいプロパティを追加したり、既存のプロパティを除去したり、列挙可能性や構成可能性を変更したり、プロトタイプを再割り当てしたりすることはできません。既存のプロパティの値は、書き込み可能である限り変更することができます。 `seal()` は渡したオブジェクトを返します。
 
 {{InteractiveExample("JavaScript デモ: Object.seal()")}}
 
 ```js interactive-example
-const object1 = {
-  property1: 42,
+const object = {
+  foo: 42,
 };
 
-Object.seal(object1);
-object1.property1 = 33;
-console.log(object1.property1);
-// Expected output: 33
+Object.seal(object);
+object.foo = 33;
+console.log(object.foo);
+// 予想される結果: 33
 
-delete object1.property1; // Cannot delete when sealed
-console.log(object1.property1);
-// Expected output: 33
+delete object.foo; // 封印時は削除不可
+console.log(object.foo);
+// 予想される結果: 33
 ```
 
 ## 構文

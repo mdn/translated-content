@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3dbbefa32758e2a1ca9a37c2788370c06aae2738
 ---
 
-{{GlossarySidebar}}
-
 **JavaScript 引擎**是解析和执行 {{glossary("JavaScript")}} 代码的解释器。现代 JavaScript 引擎使用即时编译（JIT）将 JavaScript 代码转换为可由计算机处理器执行的机器码。JavaScript 引擎通常由 Web {{glossary("browser", "浏览器")}}开发和使用，用于运行客户端代码，也可用于如 {{glossary("Node.js")}} 这样的服务端环境。
 
 在浏览器中，JavaScript 引擎通过{{glossary("DOM", "文档对象模型")}}和 {{glossary("WebIDL", "Web IDL")}} 绑定与渲染引擎协同工作。一些 JavaScript 引擎还可以在与常规 JavaScript 代码相同的沙箱中执行 {{glossary("WebAssembly")}} 代码。

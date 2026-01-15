@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}
 
 [링크](/ko/docs/Learn_web_development/Core/Structuring_content/Creating_links)의 스타일을 지정할 때는 의사 클래스를 사용하여 링크의 상태를 효과적으로 스타일링하는 방법을 이해하는 것이 중요합니다. 탐색 메뉴 및 탭과 같이 콘텐츠가 다양한 공통 인터페이스 기능에서 사용할 링크의 스타일을 지정하는 방법도 알아야 합니다. 이 글에서는 이 두 가지 주제를 모두 살펴보겠습니다.
 
@@ -383,9 +383,11 @@ a[href^="http"] {
 
 여기까지입니다. 위의 능동적 학습 섹션을 다시 한 번 살펴보고 이 새로운 기법을 사용해 보세요!
 
-> **참고:** `href` 값이 이상하게 보이는데, 여기서는 실제로 아무데도 연결되지 않는 더미 링크를 사용했습니다. 그 이유는 실제 링크를 사용하면 라이브 예제가 임베드된 `<iframe>`에 외부 사이트가 로드되어 예제가 손실될 수 있기 때문입니다.
+> [!NOTE]
+> `href` 값이 이상하게 보이는데, 여기서는 실제로 아무데도 연결되지 않는 더미 링크를 사용했습니다. 그 이유는 실제 링크를 사용하면 라이브 예제가 임베드된 `<iframe>`에 외부 사이트가 로드되어 예제가 손실될 수 있기 때문입니다.
 
-> **참고:** [배경](/ko/docs/Learn_web_development/Core/Styling_basics)과 [반응형 웹 디자인](/ko/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)에 아직 익숙하지 않더라도 다른 곳에서 설명되어 있으니 걱정하지 마세요.
+> [!NOTE]
+> [배경](/ko/docs/Learn_web_development/Core/Styling_basics)과 [반응형 웹 디자인](/ko/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)에 아직 익숙하지 않더라도 다른 곳에서 설명되어 있으니 걱정하지 마세요.
 
 ## 버튼으로 링크 스타일링하기
 
@@ -465,4 +467,4 @@ CSS에는 컨테이너와 컨테이너에 포함된 링크에 대한 스타일�
 
 이 글이 링크에 대해 알아야 할 모든 것을 알려드렸기를 바랍니다. 스타일링 텍스트 모듈의 마지막 글에서는 웹사이트에 [사용자 정의 글꼴](/ko/docs/Learn_web_development/Core/Text_styling/Web_fonts)(또는 더 잘 알려진 웹 글꼴)을 사용하는 방법에 대해 자세히 설명합니다.
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}

@@ -1733,7 +1733,8 @@ Safari 지원이 빠져있지만 WebM 컨테이너를 쓸 수 있고 Safari 사�
    </video>
    ```
 
-> **참고:** {{HTMLElement("&lt;video&gt;")}} 엘리먼트는 자식으로 {{HTMLElement("source")}} 엘리먼트 유무에 상관 없이 `</video>` 닫기 태그가 필요하다는 것을 잊지 마세요.
+> [!NOTE]
+> {{HTMLElement("&lt;video&gt;")}} 엘리먼트는 자식으로 {{HTMLElement("source")}} 엘리먼트 유무에 상관 없이 `</video>` 닫기 태그가 필요하다는 것을 잊지 마세요.
 
 ### 고품질 비디오 제공을 위한 추천
 

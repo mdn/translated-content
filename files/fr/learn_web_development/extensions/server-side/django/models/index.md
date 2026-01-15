@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Models
 original_slug: Learn/Server-side/Django/Models
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Ce troisième article est consacré aux modèles de données pour les sites web générés avec Django. Après une définition et une présentation de la notion de modèle de données, il explique comment les déclarer, choisir le type de champs et quelques méthodes d'accès au modèle de données via Django.
 
@@ -14,7 +14,7 @@ Ce troisième article est consacré aux modèles de données pour les sites web 
       <th scope="row">Pré-requis:</th>
       <td>
         <p>
-          <a href="/fr/docs/Learn/Server-side/Django/skeleton_website"
+          <a href="/fr/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website"
             >Django didactique Section 2: Créer le squelette du site web.</a
           >
         </p>
@@ -36,7 +36,7 @@ Ce troisième article est consacré aux modèles de données pour les sites web 
 
 Les applications web Django donnent accès aux données enregistrées dans une base à l'aide d'une classe d'objets _models_. Une classe d'objet héritée de _models_ définit une _structure de données_ ainsi que le type, la taille et la nature des champs de cette structure de données. Cela inclut aussi la valeur par défaut, les options ou listes d'option, les informations pour l'aide en ligne ou la définition des étiquettes des champs des formulaires. La définition du modèle de données est une abstraction indépendante du gestionnaire de base de données associé ; une fois choisi le gestionnaire est sollicité par le biais des objets Python/Django et vous n'interagissez pas directement avec lui. Votre rôle est alors de décrire le modèle de données par le biais d'objets appropriés et Django prend en charge les communications avec la base de données.
 
-Ce chapitre vous montre sur la base du [site web d'une bibliothèque locale](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website) comment concevoir, créer et manipuler les données par l'intermédiaire du modèle de données.
+Ce chapitre vous montre sur la base du [site web d'une bibliothèque locale](/fr/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) comment concevoir, créer et manipuler les données par l'intermédiaire du modèle de données.
 
 ## Concevoir le modèle de données de la bibliothèque locale
 
@@ -453,4 +453,4 @@ A ce stade, il est prématuré de créer le site web, nous allons simplement uti
 - [Création de requêtes](https://docs.djangoproject.com/fr/2.2/topics/db/queries/) (Documentation Django)
 - [Référence de l'API QuerySet](https://docs.djangoproject.com/fr/2.2/ref/models/querysets/) (Documentation Django)
 
-{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django")}}

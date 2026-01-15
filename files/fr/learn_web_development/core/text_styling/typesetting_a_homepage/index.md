@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Text_styling/Typesetting_a_homepage
 original_slug: Learn/CSS/Styling_text/Typesetting_a_homepage
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}
 
 Dans cette évaluation, nous testerons votre compréhension de toutes les techniques pour la composition de textes à l'écran présentées au cours de ce module&nbsp;: elle consiste à créer la page d'accueil du site d'une école communale. Vous ne devriez avoir que du plaisir tout au long de ce parcours.
 
@@ -88,12 +88,12 @@ La capture d'écran ci-après montre un exemple possible du design terminé&nbsp
 
 Si vous faites cet exercice dans le cadre d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur pour notation. Si vous faites de l'auto-formation, vous pouvez obtenir le guide de notation très facilement en le demandant sur [le fil de discussion à propos de cet exercice](https://discourse.mozilla.org/t/fundamental-css-comprehension-assessment/24682) ou par l'intermédiaire du canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Faites l'exercice d'abors, il n'y rien à gagner en trichant !
 
-{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{PreviousMenu("Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}
 
 ## Dans ce module
 
-- [Initiation à la mise en forme du texte](/fr/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Style de listes](/fr/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Mise en forme des liens](/fr/docs/Learn/CSS/Styling_text/Styling_links)
-- [Polices de caractères web](/fr/docs/Learn/CSS/Styling_text/Web_fonts)
+- [Initiation à la mise en forme du texte](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals)
+- [Style de listes](/fr/docs/Learn_web_development/Core/Text_styling/Styling_lists)
+- [Mise en forme des liens](/fr/docs/Learn_web_development/Core/Text_styling/Styling_links)
+- [Polices de caractères web](/fr/docs/Learn_web_development/Core/Text_styling/Web_fonts)
 - Composition d'une page d'accueil d'une école de communauté

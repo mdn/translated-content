@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **页面加载时间**是指从[导航开始](/zh-CN/docs/Web/API/PerformanceTiming/navigationStart)到[加载事件开始](/zh-CN/docs/Web/API/PerformanceTiming/loadEventStart)的时间。
 
 ```js

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
 ---
 
-{{GlossarySidebar}}
-
 静态方法（或*静态函数*）是一种被定义为{{Glossary("object", "对象")}}成员的{{Glossary("method", "方法")}}，但可以直接从 API 对象的构造函数访问，而无需通过构造函数创建的对象实例访问。
 
 在 [Web API](/zh-CN/docs/Web/API) 中，静态方法是由接口定义的，但可以在不实例化该类型对象的情况下调用。

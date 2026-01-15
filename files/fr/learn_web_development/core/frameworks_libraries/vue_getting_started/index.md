@@ -58,7 +58,7 @@ Pour une bonne comparaison (mais potentiellement biaisée) entre Vue et plusieur
 
 ## Installation
 
-Pour utiliser Vue dans un site existant, vous pouvez déposer l'un des éléments suivants sur une page. Cela vous permet de commencer à utiliser Vue sur les sites existants, c'est pourquoi Vue se targue d'être un cadre progressif. Il s'agit d'une excellente option lors de la migration d'un projet existant à l'aide d'une bibliothèque comme JQuery à Vue. Avec cette méthode, vous pouvez utiliser un grand nombre des fonctionnalités de base de Vue, telles que les attributs, les composants personnalisés et la gestion des données.[`<script>`](/fr/docs/Web/HTML/Element/script)
+Pour utiliser Vue dans un site existant, vous pouvez déposer l'un des éléments suivants sur une page. Cela vous permet de commencer à utiliser Vue sur les sites existants, c'est pourquoi Vue se targue d'être un cadre progressif. Il s'agit d'une excellente option lors de la migration d'un projet existant à l'aide d'une bibliothèque comme JQuery à Vue. Avec cette méthode, vous pouvez utiliser un grand nombre des fonctionnalités de base de Vue, telles que les attributs, les composants personnalisés et la gestion des données.[`<script>`](/fr/docs/Web/HTML/Reference/Elements/script)
 
 - Script de développement (Non optimisé, mais inclut les avertissements de console. Idéal pour le développement
 
@@ -78,7 +78,7 @@ However, this approach has some limitations. To build more complex apps, you'll 
 2. npm or yarn.
 
 > [!NOTE]
-> If you don't have the above installed, find out [more about installing npm and Node.js](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups) here.
+> If you don't have the above installed, find out [more about installing npm and Node.js](/fr/docs/Learn_web_development/Getting_started/Environment_setup/Command_line#adding_powerups) here.
 
 To install the CLI, run the following command in your terminal:
 
@@ -226,7 +226,7 @@ If you navigate to the "local" address in a new browser tab (this should be some
 
 ## Making a couple of changes
 
-Let's make our first change to the app — we'll delete the Vue logo. Open the `App.vue` file, and delete the [`<img>`](/fr/docs/Web/HTML/Element/img) element from the template section:
+Let's make our first change to the app — we'll delete the Vue logo. Open the `App.vue` file, and delete the [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) element from the template section:
 
 ```html
 <img alt="Vue logo" src="./assets/logo.png" />

@@ -7,7 +7,8 @@ slug: Web/API/KeyboardEvent
 
 Les objets **`KeyboardEvent`** décrivent l'interaction d'un utilisateur avec le clavier. Chaque événement décrit une touche&nbsp;; le type d'événement (`keydown`, `keypress`, ou `keyup`) identifie quel type d'activité a été effectué.
 
-> **Note :** `KeyboardEvent` indique exactement ce qui est en train de se passer sur une touche. Lorsque vous devez gérer une saisie de texte, utilisez l'événement `input` HTML5 à la place. Par exemple, si un utilisateur saisit du texte à partir d'un système d'écriture à la main comme une tablette PC, les événements touche peuvent ne pas être déclenchés.
+> [!NOTE]
+> `KeyboardEvent` indique exactement ce qui est en train de se passer sur une touche. Lorsque vous devez gérer une saisie de texte, utilisez l'événement `input` HTML5 à la place. Par exemple, si un utilisateur saisit du texte à partir d'un système d'écriture à la main comme une tablette PC, les événements touche peuvent ne pas être déclenchés.
 
 ## Constructeur
 

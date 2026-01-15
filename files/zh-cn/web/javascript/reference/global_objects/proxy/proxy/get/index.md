@@ -3,8 +3,6 @@ title: handler.get()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
 ---
 
-{{JSRef}}
-
 **`handler.get()`** 方法用于拦截对象的读取属性操作。
 
 ## 语法

@@ -2,10 +2,10 @@
 title: WebSocketStream でクライアントを書く
 slug: Web/API/WebSockets_API/Using_WebSocketStream
 l10n:
-  sourceCommit: d102514706e844bd642850aa340c9645c74bf70c
+  sourceCommit: 7a418e5d057adb45a0c7c4ec3b03baa8c3be18f4
 ---
 
-{{DefaultAPISidebar("WebSockets API")}}{{non-standard_header}}
+{{DefaultAPISidebar("WebSockets API")}}
 
 {{domxref("WebSocketStream")}} API は、{{jsxref("Promise", "プロミス", "", 1)}}ベースのもうひとつの選択肢であり、クライアントサイドの WebSocket 接続の作成と使用にWebSocket を使用します。 `WebSocketStream` は、[ストリーム API](/ja/docs/Web/API/Streams_API) を使用してメッセージの送受信を処理するため、ソケット接続はストリームの[背圧](/ja/docs/Web/API/Streams_API/Concepts#背圧)を自動的に利用することができ（開発者による追加の操作は不要）、アプリケーションのボトルネックを回避するために読み取りまたは書き込みの速度を調整することができます。
 
@@ -29,13 +29,13 @@ WebSocket クライアントを作成するには、まず新しい `WebSocketSt
 const wss = new WebSocketStream("wss://example.com/wss");
 ```
 
-また、カスタムプロトコルや {{domxref("AbortSignal")}} を含むオプションオブジェクトを受け取ることもできます（[接続の切断](#接続の切断)を参照）。
+また、独自のプロトコルや {{domxref("AbortSignal")}} が含まれている `options` オブジェクトを取ることもできます。 `AbortSignal` は、[ハンドシェイク](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake)が完了する前（つまり、 {{domxref("WebSocketStream.opened", "opened")}} プロミスが解決する前）に接続試行を中止するために使用できます。これは通常、接続タイムアウトの実装に使用されます。例えば、以下のコードはハンドシェイクが完了するのに 5 秒以上かかる場合、タイムアウトします。
 
 ```js
 const controller = new AbortController();
 const queueWSS = new WebSocketStream("wss://example.com/queue", {
   protocols: ["amqp", "mqtt"],
-  signal: controller.signal,
+  signal: AbortSignal.timeout(5000),
 });
 ```
 
@@ -77,36 +77,25 @@ while (true) {
 
 ## 接続の切断
 
-`WebSocketStream` により、以前に `WebSocket` の {{domxref("WebSocket.close_event", "close")}} および {{domxref("WebSocket.error_event", "error")}} イベントで利用可能だった情報は、{{domxref("WebSocketStream.closed", "closed")}} プロパティで利用できるようになりました。これは、終了コード（[`CloseEvent` ステータスコード](/ja/docs/Web/API/CloseEvent/code#値)の完全なリストを参照）とサーバーが接続を終了した理由を示す理由を含むオブジェクトで履行されるプロミスを返します。
-
-```js
-const { code, reason } = await wss.closed;
-```
-
-前述の通り、WebSocket 接続は {{domxref("AbortController")}} を使用して終了することができます。必要な {{domxref("AbortSignal")}} は、`WebSocketStream` コンストラクターの作成時に渡され、必要に応じて {{domxref("AbortController.abort()")}} を呼び出すことができます。
-
-```js
-const controller = new AbortController();
-const wss = new WebSocketStream("wss://example.com/wss", {
-  signal: controller.signal,
-});
-
-// しばらく後
-
-controller.abort();
-```
-
-他に、{{domxref("WebSocketStream.close()")}} メソッドを使用して接続を閉じることもできます。これは主に、カスタムコードや理由を指定したい場合に利用されます。
+接続を閉じるには、 {{domxref("WebSocketStream.close()")}} メソッドを呼び出します。オプションで[終了コード](/ja/docs/Web/API/CloseEvent/code#value)と理由を渡すことができます。
 
 ```js
 wss.close({
-  code: 4000,
+  closeCode: 4000,
   reason: "Night draws to a close",
 });
 ```
 
 > [!NOTE]
 > 使用するサーバーの設定やステータスコードによっては、サーバーが、終了理由に適した有効なコードを優先して、カスタムコードを無視することがあります。
+
+基盤となる {{domxref("WritableStream")}} または {{domxref("WritableStreamDefaultWriter")}} を閉じることで、接続も閉じられます。
+
+接続の終了を処理するには、 {{domxref("WebSocketStream.closed", "closed")}} プロミスの解決を待機します。
+
+```js
+const { closeCode, reason } = await wss.closed;
+```
 
 ## 完全なサンプルクライアント
 
@@ -137,7 +126,7 @@ function writeToScreen(message) {
 }
 ```
 
-次に、`WebSocketStream` を検出する `if ... else` 構造を作成し、対応していないブラウザーに対して情報メッセージを出力します。
+次に、`WebSocketStream` を検出する `if...else` 構造を作成し、対応していないブラウザーに対して情報メッセージを出力します。
 
 ```js
 if (!("WebSocketStream" in self)) {
@@ -212,7 +201,7 @@ wss.closed.then((result) => {
 ```js
 closeBtn.addEventListener("click", () => {
   wss.close({
-    code: 1000,
+    closeCode: 1000,
     reason: "That's all folks",
   });
 
@@ -222,80 +211,64 @@ closeBtn.addEventListener("click", () => {
 
 ### 完全なリスト
 
-```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>WebSocketStream Test</title>
-  </head>
+```js
+const output = document.querySelector("#output");
+const closeBtn = document.querySelector("#close");
 
-  <body>
-    <h2>WebSocketStream Test</h2>
-    <p>Sends a ping every five seconds</p>
-    <button id="close" disabled>Close socket connection</button>
-    <div id="output"></div>
-    <script>
-      const output = document.querySelector("#output");
-      const closeBtn = document.querySelector("#close");
+function writeToScreen(message) {
+  const pElem = document.createElement("p");
+  pElem.textContent = message;
+  output.appendChild(pElem);
+}
 
-      function writeToScreen(message) {
-        const pElem = document.createElement("p");
-        pElem.textContent = message;
-        output.appendChild(pElem);
+if (!("WebSocketStream" in self)) {
+  writeToScreen("Your browser does not support WebSocketStream");
+} else {
+  const wsURL = "ws://127.0.0.1/";
+  const wss = new WebSocketStream(wsURL);
+
+  console.log(wss.url);
+
+  async function start() {
+    const { readable, writable, extensions, protocol } = await wss.opened;
+    writeToScreen("CONNECTED");
+    closeBtn.disabled = false;
+    const reader = readable.getReader();
+    const writer = writable.getWriter();
+
+    writer.write("ping");
+    writeToScreen("SENT: ping");
+
+    while (true) {
+      const { value, done } = await reader.read();
+      writeToScreen(`RECEIVED: ${value}`);
+      if (done) {
+        break;
       }
 
-      if (!("WebSocketStream" in self)) {
-        writeToScreen("Your browser does not support WebSocketStream");
-      } else {
-        const wsURL = "ws://127.0.0.1/";
-        const wss = new WebSocketStream(wsURL);
+      setTimeout(() => {
+        writer.write("ping");
+        writeToScreen("SENT: ping");
+      }, 5000);
+    }
+  }
 
-        console.log(wss.url);
+  start();
 
-        async function start() {
-          const { readable, writable, extensions, protocol } = await wss.opened;
-          writeToScreen("CONNECTED");
-          closeBtn.disabled = false;
-          const reader = readable.getReader();
-          const writer = writable.getWriter();
+  wss.closed.then((result) => {
+    writeToScreen(
+      `DISCONNECTED: code ${result.closeCode}, message "${result.reason}"`,
+    );
+    console.log("Socket closed", result.closeCode, result.reason);
+  });
 
-          writer.write("ping");
-          writeToScreen("SENT: ping");
+  closeBtn.addEventListener("click", () => {
+    wss.close({
+      closeCode: 1000,
+      reason: "That's all folks",
+    });
 
-          while (true) {
-            const { value, done } = await reader.read();
-            writeToScreen(`RECEIVED: ${value}`);
-            if (done) {
-              break;
-            }
-
-            setTimeout(() => {
-              writer.write("ping");
-              writeToScreen("SENT: ping");
-            }, 5000);
-          }
-        }
-
-        start();
-
-        wss.closed.then((result) => {
-          writeToScreen(
-            `DISCONNECTED: code ${result.closeCode}, message "${result.reason}"`,
-          );
-          console.log("Socket closed", result.closeCode, result.reason);
-        });
-
-        closeBtn.addEventListener("click", () => {
-          wss.close({
-            code: 1000,
-            reason: "That's all folks",
-          });
-
-          closeBtn.disabled = true;
-        });
-      }
-    </script>
-  </body>
-</html>
+    closeBtn.disabled = true;
+  });
+}
 ```

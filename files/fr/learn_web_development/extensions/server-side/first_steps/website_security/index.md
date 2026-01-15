@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/First_steps/Website_security
 original_slug: Learn/Server-side/First_steps/Website_security
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/Premiers_pas")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}
 
 La sécurité d'un site web exige de la vigilance dans tous les aspects de sa conception et de son utilisation. Cet article d'introduction ne fera pas de vous un gourou de la sécurité des sites web, mais il vous aidera à comprendre d'où viennent les menaces et ce que vous pouvez faire pour renforcer votre application web contre les attaques les plus courantes.
 
@@ -144,6 +144,6 @@ Les frameworks web peuvent aider à atténuer beaucoup des vulnérabilités les 
 
 Cet article a présenté le concept de sécurité web et quelques-unes des menaces courantes vis-à-vis desquelles il faut se protéger. Le plus important à comprendre est qu'une application web ne peut pas faire confiance aux données provenant du navigateur ! Les données des utilisateurs doivent toutes être nettoyées avant d'être affichées ou utilisées dans les requêtes SQL ou dans les appels systèmes.
 
-C'est la fin de [ce module](/fr/docs/Learn/Server-side/First_steps), couvrant vos premiers pas dans le développement d'un site web côté serveur. Nous espérons que vous avez apprécié apprendre les concepts fondamentaux. Vous êtes désormais apte à choisir un framework web et à commencer à programmer.
+C'est la fin de [ce module](/fr/docs/Learn_web_development/Extensions/Server-side/First_steps), couvrant vos premiers pas dans le développement d'un site web côté serveur. Nous espérons que vous avez apprécié apprendre les concepts fondamentaux. Vous êtes désormais apte à choisir un framework web et à commencer à programmer.
 
-{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
+{{PreviousMenu("Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}

@@ -1,13 +1,12 @@
 ---
 title: Number.EPSILON
+short-title: EPSILON
 slug: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`Number.EPSILON`** プロパティは、1 と 1 より大きな最小の浮動小数点数の差を表します。
+**`Number.EPSILON`** は静的データプロパティで、 1 と 1 より大きな最小の浮動小数点数の差を表します。
 
 {{InteractiveExample("JavaScript デモ: Number.EPSILON")}}
 
@@ -15,10 +14,10 @@ l10n:
 const result = Math.abs(0.2 - 0.3 + 0.1);
 
 console.log(result);
-// Expected output: 2.7755575615628914e-17
+// 予想される結果: 2.7755575615628914e-17
 
 console.log(result < Number.EPSILON);
-// Expected output: true
+// 予想される結果: true
 ```
 
 ## 値
@@ -102,4 +101,5 @@ console.log(equal(x + y, z, 2000 * Number.EPSILON)); // true
 ## 関連情報
 
 - [`Number.EPSILON` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-number)
-- 所属先の {{jsxref("Number")}} オブジェクト
+- [es-shims による `Number.EPSILON` のポリフィル](https://www.npmjs.com/package/es-constants)
+- {{jsxref("Number")}}

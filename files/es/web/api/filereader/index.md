@@ -45,7 +45,7 @@ Mira el artículo _[Using files from web applications](/es/docs/Web/API/File_API
 - {{domxref("FileReader.onloadstart")}}
   - : Un controlador para el evento [`loadstart`](/es/docs/Web/API/XMLHttpRequest/loadstart_event). Este evento se activa cada vez que comienza la lectura.
 - {{domxref("FileReader.onloadend")}}
-  - : Un controlador para el evento [`loadend`](/es/docs/Web/API/XMLHttpRequest/loadend_event). Este evento se activa cada vez que la operación de lecura se ha completado (ya sea con éxito o fallo).
+  - : Un controlador para el evento [`loadend`](/es/docs/Web/API/XMLHttpRequestEventTarget/loadend_event). Este evento se activa cada vez que la operación de lecura se ha completado (ya sea con éxito o fallo).
 - {{domxref("FileReader.onprogress")}}
   - : Un controlador para el evento [`progress`](/es/docs/Web/API/XMLHttpRequest/progress_event). Este evento se activa mientras se está leyendo el contenido del objeto {{domxref("Blob")}}.
 

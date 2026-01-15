@@ -49,11 +49,11 @@ l10n:
   - : 由于在移动设备上访问 Web 非常流行，并且所有移动平台都有功能齐全的 Web 浏览器，但可能存在带宽、CPU 和电池寿命的限制，因此考虑这些平台上 Web 内容的性能非常重要。这篇文章探讨了移动设备特有的性能考虑因素。
 - [Web 性能的商业案例](/zh-CN/docs/Learn_web_development/Extensions/Performance/business_case_for_performance)
   - : 开发人员可以采取许多措施来提高系统的性能，但是什么样的速度才算快？如何说服管理层重视这些努力？一旦优化完成，如何确保系统不会再次出现性能问题？这篇文章将探讨如何说服管理层、如何培养性能文化和制定性能预算，并介绍确保系统不会出现性能回退的方法。
+- [Web 性能最佳时间和技巧](/zh-CN/docs/Learn_web_development/Extensions/Performance/Best_practices)
+  - : 本文涵盖了几个基础主题，并提供了深入探讨每个主题性能提升的链接。除了 HTML、CSS、JavaScript 和媒体文件的前端主题外，还涵盖了有许多与 Web 性能相关的 API、开发者工具、最佳实践和不良做法。
 
 ## 参见
 
-- [Web 性能资源](/zh-CN/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics)
-  - : 除了 HTML、CSS、JavaScript 和媒体文件的前端组件外，还有可以使应用程序变慢的特性和可以使应用程序在主观和客观上都变快的特性。有许多与 Web 性能相关的 API、开发者工具、最佳实践和不良实践。在这里，我们将介绍这些特性的基本知识，并针对每个主题都提供了更深入地提升性能的链接。
 - [响应式图像](/zh-CN/docs/Web/HTML/Guides/Responsive_images)
   - : 在这篇文章中，我们将学习响应式图像的概念——在屏幕尺寸、分辨率和其他特征差异很大的设备上表现良好的图像——并了解 HTML 提供的帮助实现它们的工具。这有助于提高不同设备的性能。响应式图像只是[响应式设计](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)的一部分，这是你未来要学习的 CSS 主题。
 - [MDN 上主要的 Web 性能部分](/zh-CN/docs/Web/Performance)

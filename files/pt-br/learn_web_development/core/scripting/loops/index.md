@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Loops
 original_slug: Learn/JavaScript/Building_blocks/Looping_code
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "conflicting/Learn_web_development/Core/Scripting")}}
 
 As linguagens de programação são muito úteis para concluir rapidamente tarefas repetitivas, desde vários cálculos básicos até praticamente qualquer outra situação em que você tenha muitos itens semelhantes para manipular. Aqui, veremos as estruturas de loop disponíveis no JavaScript que ajudam com essas necessidades..
 
@@ -222,7 +222,8 @@ Isso nos dá a seguinte saída:
 
 {{ EmbedLiveSample('Hidden_code_2', '100%', 60, "", "", "hide-codepen-jsfiddle") }}
 
-> **Nota:**Você pode encontrar este [código de exemplo no GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html) (também [veja em execução](https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html)).
+> [!NOTE]
+> Você pode encontrar este [código de exemplo no GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html) (também [veja em execução](https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html)).
 
 Aqui mostra um loop sendo usado para iterar os itens em uma matriz e fazer algo com cada um deles - um padrão muito comum em JavaScript. Aqui:
 
@@ -257,9 +258,11 @@ for (var i = 0; i < cats.length; i++) {
 }
 ```
 
-> **Nota:**Você pode encontrar este [código de exemplo no GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html) (também [veja em execução](https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html)).
+> [!NOTE]
+> Você pode encontrar este [código de exemplo no GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html) (também [veja em execução](https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html)).
 
-> **Aviso:** **Importante**: Com **for** - como acontece com todos os loops - você deve certificar-se de que o inicializador está iterado(configurado) para que ele atinja a condição de saída. Caso contrário, o loop continuará indefinidamente executando e o navegador irá forçá-lo a parar ou falhará. Isso é chamado de **loop infinito**.
+> [!WARNING]
+> **Importante**: Com **for** - como acontece com todos os loops - você deve certificar-se de que o inicializador está iterado(configurado) para que ele atinja a condição de saída. Caso contrário, o loop continuará indefinidamente executando e o navegador irá forçá-lo a parar ou falhará. Isso é chamado de **loop infinito**.
 
 ## Saindo do loop com o break
 
@@ -474,7 +477,8 @@ while (i < cats.length) {
 }
 ```
 
-> **Nota:**Isso ainda funciona da mesma forma esperada — dê uma olhada no [código em execução](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (também veja o [código fonte completo](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html)).
+> [!NOTE]
+> Isso ainda funciona da mesma forma esperada — dê uma olhada no [código em execução](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (também veja o [código fonte completo](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html)).
 
 O [do...while](/pt-BR/docs/Web/JavaScript/Reference/Statements/do...while) loop é muito semelhante, mas fornece uma variação na estrutura while:
 
@@ -507,9 +511,11 @@ do {
 } while (i < cats.length);
 ```
 
-> **Nota:**Novamente, isso funciona exatamente como esperado - dê uma olhada nele [executando no GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (veja também o [código fonte completo](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html)).
+> [!NOTE]
+> Novamente, isso funciona exatamente como esperado - dê uma olhada nele [executando no GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (veja também o [código fonte completo](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html)).
 
-> **Aviso:** **Importante:** Com while e do ... while - como em todos os loops - você deve certificar-se de que o inicializador esteja iterado para que ele atinja a condição de saída. Caso contrário, o loop continuará indefinidamente e o navegador irá forçá-lo a parar ou falhará. Isso é chamado de loop infinito.
+> [!WARNING]
+> **Importante:** Com while e do ... while - como em todos os loops - você deve certificar-se de que o inicializador esteja iterado para que ele atinja a condição de saída. Caso contrário, o loop continuará indefinidamente e o navegador irá forçá-lo a parar ou falhará. Isso é chamado de loop infinito.
 
 ## Aprendizado ativo: contagem regressiva!
 
@@ -875,4 +881,4 @@ If there is anything you didn't understand, feel free to read through the articl
 - [break](/pt-BR/docs/Web/JavaScript/Reference/Statements/break) and [continue](/pt-BR/docs/Web/JavaScript/Reference/Statements/continue) references
 - [What's the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — some advanced loop best practices
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "conflicting/Learn_web_development/Core/Scripting")}}

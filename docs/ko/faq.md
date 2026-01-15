@@ -16,7 +16,7 @@ MDN 문서의 편집이 자유로운 특정 기간으로 인해 이상한 번역
 
 **4. Issue의 라벨은 어떻게 붙이나요?**
 
-라벨은 Git Action으로 [labeler.yml](https://github.com/mdn/translated-content/blob/main/.github/labeler.yml) 설정 파일을 통해 자동으로 PR을 생성하여 리뷰 요청 시 붙여지고 있습니다. label을 붙이는 권한은 `@mdn/yari-content-ko` 팀에게 있으므로, 오류가 있다면 배정 받은 리뷰어에게 말씀드려서 해결하실 수 있습니다.
+라벨은 Git Action으로 [labeler.yml](https://github.com/mdn/translated-content/blob/main/.github/labeler.yml) 설정 파일을 통해 자동으로 PR을 생성하여 리뷰 요청 시 붙여지고 있습니다. label을 붙이는 권한은 `@mdn/ko-content` 팀에게 있으므로, 오류가 있다면 배정 받은 리뷰어에게 말씀드려서 해결하실 수 있습니다.
 
 **5. content(en) 레포에는 index.md 파일로 저장되어 있는데, translated-content(ko) 레포에는 index.html 으로 되어 있습니다. 이런 경우에는 translated-content 레포의 index.html 파일이 번역된 index.md 파일로 교체되어도 되는건가요? 꼭 .html 포멧을 지켜야 한다 같은 규칙이 있는지 궁금합니다.**
 

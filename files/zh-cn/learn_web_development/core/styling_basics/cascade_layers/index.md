@@ -3,11 +3,11 @@ title: 层叠层
 slug: Learn_web_development/Core/Styling_basics/Cascade_layers
 ---
 
-这一课的目的是向你介绍[层叠层](/zh-CN/docs/Web/CSS/@layer)，这是一个更高级的特性，它建立在 [CSS 层叠](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)和 [CSS 优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)的基本概念之上。
+这一课的目的是向你介绍[层叠层](/zh-CN/docs/Web/CSS/Reference/At-rules/@layer)，这是一个更高级的特性，它建立在 [CSS 层叠](/zh-CN/docs/Web/CSS/Guides/Cascade/Introduction)和 [CSS 优先级](/zh-CN/docs/Web/CSS/Guides/Cascade/Specificity)的基本概念之上。
 
 如果你是 CSS 的新手，刚开始可能会觉得这部分的内容与本课程的其他部分相比不太相关，而且有些学术化。然而，了解层叠层的基本知识对于你在项目中遇到它们时会非常有帮助。随着你对 CSS 的不断使用，理解层叠层以及如何充分利用它们的功能将能够避免在处理来自不同团队、插件和开发人员的 CSS 代码库时遇到的很多问题。
 
-当你使用来自多个源的 CSS，或当存在冲突的 CSS 选择器和竞争优先级时，又或者当你考虑使用 [`!important`](/zh-CN/docs/Web/CSS/important) 时，层叠层最为相关。
+当你使用来自多个源的 CSS，或当存在冲突的 CSS 选择器和竞争优先级时，又或者当你考虑使用 [`!important`](/zh-CN/docs/Web/CSS/Reference/Values/important) 时，层叠层最为相关。
 
 <table>
   <tbody>
@@ -39,17 +39,17 @@ slug: Learn_web_development/Core/Styling_basics/Cascade_layers
 CSS 中的 C 代表“层叠”。这是样式层叠在一起的方法。用户代理经过几个非常明确定义的步骤来确定每个元素的每个属性的值。我们将在这里简要列出这些步骤，然后深入研究第 4 步——层叠层，就是你来到这里学习的内容：
 
 1. **相关声明**：找到所有具有匹配每个元素的选择器的声明代码块。
-2. **重要性**：根据规则是普通还是重要对规则进行排序。重要的样式是指设置了 [`!important`](/zh-CN/docs/Web/CSS/important) 标志的样式。
+2. **重要性**：根据规则是普通还是重要对规则进行排序。重要的样式是指设置了 [`!important`](/zh-CN/docs/Web/CSS/Reference/Values/important) 标志的样式。
 3. **来源**：在两个按重要性划分的分组内，按作者、用户或用户代理这几个来源对规则进行排序。
 4. **层**：在六个按重要性和来源划分的分组内，按层叠层进行排序。普通声明的层顺序是从创建的第一个到最后一个，然后是未分层的普通样式。对于重要的样式，这个顺序是反转的，但保持未分层的重要样式优先权最低。
-5. **优先级**：对于来源层中优先权相同的竞争样式，按[优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)对声明进行排序。
+5. **优先级**：对于来源层中优先权相同的竞争样式，按[优先级](/zh-CN/docs/Web/CSS/Guides/Cascade/Specificity)对声明进行排序。
 6. **出现顺序**：当两个来源层的优先权相同的选择器具有相同的优先级时，最后声明的具有最高优先级的选择器的属性值获胜。
 
 对于每一步，只有“仍在运行”的声明才会进入下一轮“竞争”。如果只有一个声明在运行，那么它就“赢了”，后续的步骤就没有意义了。
 
 ### 来源和层叠
 
-有三种[层叠来源类型](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade#来源类型)：用户代理样式表、用户样式表和作者样式表。浏览器根据来源和重要性将每个声明分为六个来源分组。有八个优先权级别：六个来源分组、正在过渡的属性和正在动画的属性。优先权的顺序是从具有最低优先权的普通用户代理样式，到当前应用的动画中的样式，到具有最高优先权的重要用户代理样式，再到正在过渡的样式：
+有三种[层叠来源类型](/zh-CN/docs/Web/CSS/Guides/Cascade/Introduction#来源类型)：用户代理样式表、用户样式表和作者样式表。浏览器根据来源和重要性将每个声明分为六个来源分组。有八个优先权级别：六个来源分组、正在过渡的属性和正在动画的属性。优先权的顺序是从具有最低优先权的普通用户代理样式，到当前应用的动画中的样式，到具有最高优先权的重要用户代理样式，再到正在过渡的样式：
 
 1. 用户代理普通样式
 2. 用户普通样式
@@ -64,9 +64,9 @@ CSS 中的 C 代表“层叠”。这是样式层叠在一起的方法。用户�
 
 ### 来源和优先级
 
-对于每个属性，“获胜”的声明是来自基于权重（普通或重要）具有优先权的来源的声明。暂时忽略层，来自具有最高优先权的来源的值将被应用。如果获胜来源对于一个元素有多个属性声明，那么将比较这些竞争属性值的选择器的[优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)。不同来源之间的选择器从不比较优先级。
+对于每个属性，“获胜”的声明是来自基于权重（普通或重要）具有优先权的来源的声明。暂时忽略层，来自具有最高优先权的来源的值将被应用。如果获胜来源对于一个元素有多个属性声明，那么将比较这些竞争属性值的选择器的[优先级](/zh-CN/docs/Web/CSS/Guides/Cascade/Specificity)。不同来源之间的选择器从不比较优先级。
 
-在下面的例子中，有两个链接。第一个没有应用作者样式，所以只有用户代理样式被应用（以及你个人的用户样式，如果有的话）。第二个被作者样式设置了 [`text-decoration`](/zh-CN/docs/Web/CSS/text-decoration) 和 [`color`](/zh-CN/docs/Web/CSS/color)，即使作者样式表中的选择器具有 [`0-0-0`](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity#选择器类型) 的优先级。作者样式“获胜”的原因是，当来自不同来源的样式发生冲突时，具有优先权的来源的规则被应用，而不管没有优先权的来源中的优先级如何。
+在下面的例子中，有两个链接。第一个没有应用作者样式，所以只有用户代理样式被应用（以及你个人的用户样式，如果有的话）。第二个被作者样式设置了 [`text-decoration`](/zh-CN/docs/Web/CSS/Reference/Properties/text-decoration) 和 [`color`](/zh-CN/docs/Web/CSS/Reference/Properties/color)，即使作者样式表中的选择器具有 [`0-0-0`](/zh-CN/docs/Web/CSS/Guides/Cascade/Specificity#选择器类型) 的优先级。作者样式“获胜”的原因是，当来自不同来源的样式发生冲突时，具有优先权的来源的规则被应用，而不管没有优先权的来源中的优先级如何。
 
 ```html live-sample___basic-cascade
 <p><a href="https://example.org">User agent styles</a></p>
@@ -82,7 +82,7 @@ CSS 中的 C 代表“层叠”。这是样式层叠在一起的方法。用户�
 
 {{EmbedLiveSample("basic-cascade")}}
 
-在撰写本文时，用户代理样式表中“竞争”的选择器是 `a:any-link`，它具有 `0-1-1` 的优先级权重。虽然这大于作者样式表中 `0-0-0` 的选择器，但即使你当前的用户代理中的选择器不同，也没关系：作者和用户代理来源之间从不比较优先级权重。了解更多关于[如何计算优先级权重](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity#优先级是如何计算的？)。
+在撰写本文时，用户代理样式表中“竞争”的选择器是 `a:any-link`，它具有 `0-1-1` 的优先级权重。虽然这大于作者样式表中 `0-0-0` 的选择器，但即使你当前的用户代理中的选择器不同，也没关系：作者和用户代理来源之间从不比较优先级权重。了解更多关于[如何计算优先级权重](/zh-CN/docs/Web/CSS/Guides/Cascade/Specificity#优先级是如何计算的？)。
 
 来源优先权总是胜过选择器优先级。如果一个元素属性被多个来源中的普通样式声明所设置，那么作者样式表将总是覆盖用户或用户代理样式表中声明的冗余普通属性。如果样式是重要的，那么用户代理样式表将总是胜过作者和用户样式。层叠来源优先权确保了不同来源之间的优先级冲突永远不会发生。
 
@@ -96,7 +96,7 @@ CSS 中的 C 代表“层叠”。这是样式层叠在一起的方法。用户�
 
 类似于我们有六个基于来源和重要性的优先权级别，层叠层使我们能够在这些来源中创建子来源级别的优先权。
 
-在六个来源中的每一个，都可以有多个层叠层。[层创建的顺序](/zh-CN/docs/Web/CSS/@layer)非常重要。层创建的顺序确定了同一来源内层的优先权顺序。
+在六个来源中的每一个，都可以有多个层叠层。[层创建的顺序](/zh-CN/docs/Web/CSS/Reference/At-rules/@layer)非常重要。层创建的顺序确定了同一来源内层的优先权顺序。
 
 在普通来源中，层按照创建的顺序排序。优先权顺序是从首个创建的层到最后一个层，然后是未分层的普通样式。
 
@@ -122,7 +122,7 @@ CSS 中的 C 代表“层叠”。这是样式层叠在一起的方法。用户�
 
 层叠层允许创建嵌套层。每个层叠层可以包含嵌套层。
 
-例如，可以将组件库导入到 `components` 层中。常规层叠层将组件库添加到作者来源中，消除与其他作者样式的优先级冲突。在 `components` 层内部，开发人员可以选择定义各种主题，每个主题作为单独的嵌套层。这些嵌套层的顺序可以根据媒体查询（参见下面的[层创建和媒体查询](#层创建和媒体查询)部分），例如视口大小或[方向](/zh-CN/docs/Web/CSS/@media/orientation)来定义。这些嵌套层提供了一种创建不基于优先级冲突的主题的方式。
+例如，可以将组件库导入到 `components` 层中。常规层叠层将组件库添加到作者来源中，消除与其他作者样式的优先级冲突。在 `components` 层内部，开发人员可以选择定义各种主题，每个主题作为单独的嵌套层。这些嵌套层的顺序可以根据媒体查询（参见下面的[层创建和媒体查询](#层创建和媒体查询)部分），例如视口大小或[方向](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/orientation)来定义。这些嵌套层提供了一种创建不基于优先级冲突的主题的方式。
 
 嵌套层的能力非常适用于开发组件库、框架、第三方小部件和主题的任何人。
 
@@ -138,7 +138,7 @@ CSS 中的 C 代表“层叠”。这是样式层叠在一起的方法。用户�
 
 - 使用 `@layer` 声明 at 规则，使用 `@layer` 后跟一个或多个层的名称来声明层。这将创建一个没有分配任何样式的具名层。
 - 使用 `@layer` 块 at 规则，在块中的所有样式都将添加到一个命名或未命名的层中。
-- 使用具有 `layer` 关键字或 `layer()` 函数的 [`@import`](/zh-CN/docs/Web/CSS/@import) 规则，将导入文件的内容分配到该层中。
+- 使用具有 `layer` 关键字或 `layer()` 函数的 [`@import`](/zh-CN/docs/Web/CSS/Reference/At-rules/@import) 规则，将导入文件的内容分配到该层中。
 
 在尚未初始化具有相同名称的层的情况下，这三种方法中的任何一种都会创建一个层。如果在 `@layer` at 规则或带有 `layer()` 的 `@import` 中没有提供层名称，则将创建一个新的匿名层。
 
@@ -151,7 +151,7 @@ CSS 中的 C 代表“层叠”。这是样式层叠在一起的方法。用户�
 
 层的顺序由 CSS 中层出现的顺序确定。使用 `@layer` 后跟一个或多个层的名称而不分配任何样式是定义[层顺序](#根据层的顺序确定优先权)的一种方式。
 
-[`@layer`](/zh-CN/docs/Web/CSS/@layer) CSS at 规则用于声明层叠层，并在存在多个层叠层时定义优先权顺序。以下规则按照列出的顺序声明了三个层：
+[`@layer`](/zh-CN/docs/Web/CSS/Reference/At-rules/@layer) CSS at 规则用于声明层叠层，并在存在多个层叠层时定义优先权顺序。以下规则按照列出的顺序声明了三个层：
 
 ```css
 @layer theme，layout，utilities;
@@ -258,7 +258,7 @@ body {
 
 #### 层创建和媒体查询
 
-如果你使用[媒体](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)或[特性](/zh-CN/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)查询来定义层，且媒体不匹配或特征不被支持，则不会创建该层。下面的示例展示了改变设备或浏览器的尺寸可能会改变层的顺序。在这个示例中，我们只在更宽的浏览器中创建 `site` 层。然后我们按顺序为 `page` 和 `site` 层分配样式。
+如果你使用[媒体](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using)或[特性](/zh-CN/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)查询来定义层，且媒体不匹配或特征不被支持，则不会创建该层。下面的示例展示了改变设备或浏览器的尺寸可能会改变层的顺序。在这个示例中，我们只在更宽的浏览器中创建 `site` 层。然后我们按顺序为 `page` 和 `site` 层分配样式。
 
 ```html live-sample___media-order
 <h1>Is this heading underlined?</h1>
@@ -290,9 +290,9 @@ body {
 
 ### 使用 @import 将样式表导入具名层和匿名层
 
-[`@import`](/zh-CN/docs/Web/CSS/@import) 规则允许用户直接从其他样式表导入样式规则到 CSS 文件或 {{htmlelement('style')}} 元素中。
+[`@import`](/zh-CN/docs/Web/CSS/Reference/At-rules/@import) 规则允许用户直接从其他样式表导入样式规则到 CSS 文件或 {{htmlelement('style')}} 元素中。
 
-导入样式表时，必须在样式表或 `<style>` 块中的任何 CSS 样式之前定义 `@import` 语句。`@import` 语句必须出现在最前面，在任何样式之前，但可以在创建一个或多个层而不向这些层分配任何样式的 `@layer` 规则之后（`@import` 也可以在 [`@charset`](/zh-CN/docs/Web/CSS/@charset) 规则之后）。
+导入样式表时，必须在样式表或 `<style>` 块中的任何 CSS 样式之前定义 `@import` 语句。`@import` 语句必须出现在最前面，在任何样式之前，但可以在创建一个或多个层而不向这些层分配任何样式的 `@layer` 规则之后（`@import` 也可以在 [`@charset`](/zh-CN/docs/Web/CSS/Reference/At-rules/@charset) 规则之后）。
 
 你可以将样式表导入具名层、嵌套具名层或匿名层。以下层分别将样式表导入 `components` 层、`components` 层中的嵌套 `dialog` 层和一个未命名层：
 
@@ -309,7 +309,7 @@ body {
 @import url(sm-icons.css) layer(social);
 ```
 
-你可以使用[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)和[特性查询](/zh-CN/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)根据特定条件导入样式并创建层。以下将样式表导入到 `international` 层，但前提是浏览器支持 `display: ruby`，而且被导入的文件取决于屏幕的宽度。
+你可以使用[媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using)和[特性查询](/zh-CN/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)根据特定条件导入样式并创建层。以下将样式表导入到 `international` 层，但前提是浏览器支持 `display: ruby`，而且被导入的文件取决于屏幕的宽度。
 
 ```css
 @import url("ruby-narrow.css") layer(international) supports(display: ruby) and

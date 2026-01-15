@@ -3,7 +3,7 @@ title: RegExp.lastParen ($+)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastParen
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{non-standard_header}}
 
 **lastParen** 非标准属性是正则表达式的静态和只读属性，包含匹配到的最后一个子串（如果存在）。`RegExp.$+`是这一属性的别名。
 

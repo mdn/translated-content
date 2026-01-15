@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3918b803fda416a26fc2b7a62976d2cd87187460
 ---
 
-{{JSRef}}
-
 **`Promise()`** 构造函数创建 {{jsxref("Promise")}} 对象。它主要用于封装尚未支持 Promise 的基于回调的 API。
 
 {{InteractiveExample("JavaScript Demo: Promise Constructor", "taller")}}

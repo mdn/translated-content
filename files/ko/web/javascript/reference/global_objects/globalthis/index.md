@@ -25,7 +25,8 @@ console.log(canMakeHTTPRequest());
 
 {{js_property_attributes(1, 0, 1)}}
 
-> **참고:** `globalThis` 속성은 구성 및 쓰기가 가능하므로 코드 작성자가 신뢰할 수 없는 코드를 실행할 때 숨길 수 있고 전역 객체 노출을 방지할 수 있습니다.
+> [!NOTE]
+> `globalThis` 속성은 구성 및 쓰기가 가능하므로 코드 작성자가 신뢰할 수 없는 코드를 실행할 때 숨길 수 있고 전역 객체 노출을 방지할 수 있습니다.
 
 ## 설명
 

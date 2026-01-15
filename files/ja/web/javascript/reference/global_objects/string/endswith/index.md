@@ -1,29 +1,28 @@
 ---
 title: String.prototype.endsWith()
+short-title: endsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/endsWith
 l10n:
-  sourceCommit: a92a2bb31cf5d79808878701f0344a4eabf12963
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`endsWith()`** は {{jsxref("String")}} 値のメソッドで、文字列が引数で指定された文字列で終わるかを判定して `true` か `false` を返します。
 
-**`endsWith()`** メソッドは文字列が引数で指定された文字列で終わるかを判定して `true` か `false` を返します。
-
-{{InteractiveExample("JavaScript デモ: String.endsWith()")}}
+{{InteractiveExample("JavaScript デモ: String.prototype.endsWith()")}}
 
 ```js interactive-example
 const str1 = "Cats are the best!";
 
 console.log(str1.endsWith("best!"));
-// Expected output: true
+// 予想される結果: true
 
 console.log(str1.endsWith("best", 17));
-// Expected output: true
+// 予想される結果: true
 
 const str2 = "Is this a question?";
 
 console.log(str2.endsWith("question"));
-// Expected output: false
+// 予想される結果: false
 ```
 
 ## 構文
@@ -76,6 +75,7 @@ console.log(str.endsWith("to be", 19)); // true
 ## 関連情報
 
 - [`String.prototype.endsWith` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims による `String.prototype.endsWith` のポリフィル](https://www.npmjs.com/package/string.prototype.endswith)
 - {{jsxref("String.prototype.startsWith()")}}
 - {{jsxref("String.prototype.includes()")}}
 - {{jsxref("String.prototype.indexOf()")}}

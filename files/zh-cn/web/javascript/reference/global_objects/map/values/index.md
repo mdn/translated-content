@@ -3,8 +3,6 @@ title: Map.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Map/values
 ---
 
-{{JSRef}}
-
 {{jsxref("Map")}} 实例的 **`values()`** 方法返回一个新的 [_map 迭代器_](/zh-CN/docs/Web/JavaScript/Reference/Iteration)对象，该对象包含此 map 中每个元素的值，按插入顺序排列。
 
 {{InteractiveExample("JavaScript Demo: Map.prototype.values")}}

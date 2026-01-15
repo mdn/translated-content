@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.toLocaleString()
+short-title: toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 l10n:
   sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6

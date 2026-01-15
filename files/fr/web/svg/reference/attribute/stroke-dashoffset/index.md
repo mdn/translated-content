@@ -8,7 +8,8 @@ original_slug: Web/SVG/Attribute/stroke-dashoffset
 
 L'attribut **`stroke-dashoffset`** décale la position de départ des pointillés sur les lignes SVG.
 
-> **Note :** `stroke-dashoffset` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
+> [!NOTE]
+> `stroke-dashoffset` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
 
 Cet attribut peut être appliqué sur tous les éléments, en revanche il n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}
 

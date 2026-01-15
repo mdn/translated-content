@@ -1,24 +1,23 @@
 ---
 title: String.prototype.trimStart()
+short-title: trimStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimStart
 l10n:
-  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`trimStart()`** は {{jsxref("String")}} 値のメソッドで、元の文字列を変更せずに、文字列の先頭のホワイトスペースを削除した新しい文字列を返します。`trimLeft()` はこのメソッドの別名です。
 
-**`trimStart()`** メソッドは、元の文字列を変更せずに、文字列の先頭のホワイトスペースを削除した新しい文字列を返します。`trimLeft()` はこのメソッドの別名です。
-
-{{InteractiveExample("JavaScript デモ: String.trimStart()")}}
+{{InteractiveExample("JavaScript デモ: String.prototype.trimStart()")}}
 
 ```js interactive-example
 const greeting = "   Hello world!   ";
 
 console.log(greeting);
-// Expected output: "   Hello world!   ";
+// 予想される結果: "   Hello world!   ";
 
 console.log(greeting.trimStart());
-// Expected output: "Hello world!   ";
+// 予想される結果: "Hello world!   ";
 ```
 
 ## 構文
@@ -29,6 +28,10 @@ trimStart()
 trimLeft()
 ```
 
+### 引数
+
+なし。
+
 ### 返値
 
 `str` の先頭のホワイトスペースを取り除いた新しい文字列です。ホワイトスペースは[ホワイトスペース](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#ホワイトスペース)文字と[改行文字](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#改行文字)で定義します。
@@ -37,7 +40,7 @@ trimLeft()
 
 ### 別名
 
-{{jsxref("String/trim", "trim()")}} が標準化された後、エンジンは標準外の `trimLeft` メソッドも実装しました。しかし {{jsxref("String/padEnd", "padEnd()")}} との整合を取るため、このメソッドが標準化された際、`trimStart` という名前が選択されました。ウェブの互換性の理由から、`trimLeft` も `trimStart` の別名として残っており、全く同じ関数オブジェクトを示します。エンジンによっては次のような意味になります。
+{{jsxref("String/trim", "trim()")}} が標準化された後、エンジンは標準外の `trimLeft` メソッドも実装しました。しかし {{jsxref("String/padStart", "padStart()")}} との整合を取るため、このメソッドが標準化された際、`trimStart` という名前が選択されました。ウェブの互換性の理由から、`trimLeft` も `trimStart` の別名として残っており、全く同じ関数オブジェクトを示します。エンジンによっては次のような意味になります。
 
 ```js
 String.prototype.trimLeft.name === "trimStart";
@@ -70,5 +73,6 @@ console.log(str); // 'foo  '
 ## 関連情報
 
 - [`String.prototype.trimStart` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims による `String.prototype.trimStart` のポリフィル](https://www.npmjs.com/package/string.prototype.trimstart)
 - {{jsxref("String.prototype.trim()")}}
 - {{jsxref("String.prototype.trimEnd()")}}

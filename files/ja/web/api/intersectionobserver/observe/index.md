@@ -3,18 +3,19 @@ title: "IntersectionObserver: observe() メソッド"
 short-title: observe()
 slug: Web/API/IntersectionObserver/observe
 l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+  sourceCommit: fe47429d64ffaacb24f5130523442aeaabf26ac6
 ---
 
 {{APIRef("Intersection Observer API")}}
 
-{{domxref("IntersectionObserver")}} の **`observe()`** メソッドは、要素を `IntersectionObserver` によって監視される対象要素に追加します。
-各オブザーバーはそれぞれ一連の閾値と一つのルートを持っていますが、複数の対象要素について可視部分の変化を監視することができます。
+**`observe()`** は {{domxref("IntersectionObserver")}} インターフェイスのメソッドで、要素をこの `IntersectionObserver` によって監視される対象要素に追加します。
+各オブザーバーはそれぞれ一連のしきい値と一つのルートを持っていますが、複数の対象要素について可視部分の変化を監視することができます。
 
 要素の監視を停止するには、 {{domxref("IntersectionObserver.unobserve()")}} を呼び出してください。
 
-指定された要素の可視率がオブザーバーの可視率の閾値を通過したとき（{{domxref("IntersectionObserver.thresholds")}} を参照）、オブザーバーのコールバックが実行されます。
-このコールバックは、発生した交差の変化を表す {{domxref("IntersectionObserverEntry")}} オブジェクトの配列を受け取ります。この構成によって、 1 回のコールバック呼び出しにつき複数の要素の交差状態の変化を処理することができます。
+指定された要素の可視率がオブザーバーの可視率のしきい値を通過したとき（{{domxref("IntersectionObserver.thresholds")}} を参照）、オブザーバーのコールバックが実行されます。
+このコールバックは、発生した交差の変化を表す {{domxref("IntersectionObserverEntry")}} オブジェクトの配列を受け取ります。
+この設計により、複数の要素の交差状態の変化が、単一のコールバック関数の呼び出しによって処理されることに注意してください。
 
 > [!NOTE]
 > オブザーバーの[コールバック](/ja/docs/Web/API/IntersectionObserver/IntersectionObserver#callback)は、 `observe()` が呼び出された後の最初のレンダリングサイクルで、ビューポートに対する監視要素の移動がなくても、常に呼び出されます。

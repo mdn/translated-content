@@ -26,7 +26,7 @@ Un booléen qui vaut `true` ou `false` selon que le jeton se trouve dans la list
 
 ## Exemples
 
-Dans l'exemple suivant, nous récupérons la liste des classes définies dans un élément [`<span>`](/fr/docs/Web/HTML/Element/span) en tant que `DOMTokenList` en utilisant [`Element.classList`](/fr/docs/Web/API/Element/classList). Lors d'un clic sur le texte, nous remplaçons alors un jeton dans la liste et écrivons la liste dans le [`Node.textContent`](/fr/docs/Web/API/Node/textContent) du `<span>`.
+Dans l'exemple suivant, nous récupérons la liste des classes définies dans un élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) en tant que `DOMTokenList` en utilisant [`Element.classList`](/fr/docs/Web/API/Element/classList). Lors d'un clic sur le texte, nous remplaçons alors un jeton dans la liste et écrivons la liste dans le [`Node.textContent`](/fr/docs/Web/API/Node/textContent) du `<span>`.
 
 ### HTML
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 83f30ecaaeb6227dc0d4551f71eb8be1cacb8e94
 ---
 
-{{GlossarySidebar}}
-
 **HTTPS RR**（**_HTTPS 资源记录_**）是一种 DNS 记录类型，用于传递如何通过 {{Glossary("HTTPS")}} 访问服务的配置信息和参数。
 
 *HTTPS 资源记录*可以用于优化使用 HTTPS 连接服务的过程。此外，*HTTPS 资源记录*的存在表明，所有有用的 {{Glossary("HTTP")}} 资源在源站点上都可以通过 HTTPS 访问，这意味着浏览器可以安全地将对该域的连接从 HTTP 升级到 HTTPS。

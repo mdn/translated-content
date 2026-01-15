@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 72d4c8678b172f558eca279d98abf23395e0d9a4
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 La programmation orientée objet est un paradigme de programmation fondamental pour de nombreux langages de programmation, dont Java et C++. Dans cet article, nous fournirons un aperçu des notions de base de la programmation orientée objet et décrirons trois concepts&nbsp;:
 
@@ -25,7 +25,7 @@ Après ces descriptions, nous verrons en JavaScript comment les constructeurs et
   <tbody>
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
-      <td>Compréhension des fonctions en JavaScript, notions de bases de JavaScript (voir <a href="/fr/docs/Learn/JavaScript/First_steps">Premiers pas</a> et <a href="/fr/docs/Learn/JavaScript/Building_blocks">Blocs de construction</a >), et notions de base sur les objets (voir <a href="/fr/docs/Learn/JavaScript/Objects/Basics">Introduction aux objets</a> et <a href="/fr/docs/Learn/JavaScript/Objects/Object_prototypes">Prototypes d'objet</a>).</td>
+      <td>Compréhension des fonctions en JavaScript, notions de bases de JavaScript (voir <a href="/fr/docs/Learn/JavaScript/First_steps">Premiers pas</a> et <a href="/fr/docs/Learn/JavaScript/Building_blocks">Blocs de construction</a >), et notions de base sur les objets (voir <a href="/fr/docs/Learn/JavaScript/Objects/Basics">Introduction aux objets</a> et <a href="/fr/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes">Prototypes d'objet</a>).</td>
     </tr>
     <tr>
       <th scope="row">Objectifs&nbsp;:</th>
@@ -218,7 +218,7 @@ Pour les langages qui n'ont pas cette notion, les développeuses et développeur
 
 Dans cet article, nous avons décrit les fonctionnalités de base d'un langage de programmation orienté objet et qui utilise les classes, comme Java ou C++.
 
-Dans les deux articles précédents, nous avions vu deux fonctionnalités de JavaScript&nbsp;: [les constructeurs](/fr/docs/Learn/JavaScript/Objects/Basics) et [les prototypes](/fr/docs/Learn/JavaScript/Objects/Object_prototypes). Ces fonctionnalités sont liées à certains des concepts orientés objet vus ci-dessus.
+Dans les deux articles précédents, nous avions vu deux fonctionnalités de JavaScript&nbsp;: [les constructeurs](/fr/docs/Learn_web_development/Core/Scripting/Object_basics) et [les prototypes](/fr/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes). Ces fonctionnalités sont liées à certains des concepts orientés objet vus ci-dessus.
 
 - **Les constructeurs** JavaScript fournissent de quoi écrire une définition de classe pour définir la structure d'un objet, dont ses méthodes, à un seul endroit. Toutefois, les prototypes peuvent aussi être utilisés dans ce cas. Ainsi, si une méthode est définie sur la propriété `prototype` du constructeur, tous les objets créés avec le constructeur auront la méthode via leur prototype et il ne sera pas nécessaire de la définir dans le constructeur.
 
@@ -238,4 +238,4 @@ Dans cet article, nous avons vu les fonctionnalités de base offertes par la pro
 
 Dans le prochain article, nous verrons les fonctionnalités de JavaScript qui permettent de réaliser une programmation orientée objet basée sur des classes.
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

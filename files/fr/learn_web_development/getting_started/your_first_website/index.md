@@ -1,51 +1,43 @@
 ---
-title: Commencer avec le Web
+title: Votre premier site web
 slug: Learn_web_development/Getting_started/Your_first_website
 original_slug: Learn/Getting_started_with_the_web
+l10n:
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{LearnSidebar}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Command_line", "Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started")}}
 
-_Commencer avec le Web_ est une suite concise d'articles vous présentant la pratique du développement web. Vous installerez les outils nécessaires pour construire une simple page web et publier votre code.
+Ce module vous initie aux aspects pratiques du développement web. Vous allez rassembler les ressources et écrire le code pour construire une page web simple, puis la publier pour que tout le monde puisse la voir.
 
-## L'histoire de votre premier site web
+Créer un site professionnel demande beaucoup de travail, donc si vous débutez dans le développement web, nous vous encourageons à commencer petit. Vous ne créerez pas un autre Facebook tout de suite, mais il n'est pas difficile de mettre en ligne votre propre site web simple, alors commençons par là.
 
-Créer un site web professionnel nécessite beaucoup de travail. C'est pourquoi, si vous débutez, nous vous encourageons à commencer par quelque chose de simple. Vous n'allez pas bâtir un nouveau Facebook dès le départ, mais il n'est pas bien compliqué de mettre en ligne votre propre site web. C'est par là que nous allons commencer.
+## Prérequis
 
-En parcourant les articles listés ci-dessous, vous pourrez créer votre première page web et la mettre en ligne. Allons-y !
+Ce module ne demande aucune connaissance préalable des technologies web, mais vous devez déjà être à l'aise avec l'utilisation de votre système d'exploitation, y compris l'utilisation du système de fichiers et la navigation sur le web. Vous devez avoir un éditeur de code et plusieurs navigateurs web installés.
 
-### [Installer les outils de base](/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
+Si ce n'est pas le cas, nous vous suggérons de suivre d'abord le module sur la [Mise en place de l'environnement](/fr/docs/Learn_web_development/Getting_started/Environment_setup).
 
-Beaucoup d'outils sont disponibles afin de construire un site web. Si vous débutez, vous serez peut-être perturbé par la quantité d'éditeurs de code, de "frameworks" ou encore d'outils de tests disponibles. Dans [cet article](/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software) nous décrivons, pas à pas, comment installer les seuls outils strictement nécessaires afin de développer un site web.
+## Tutoriels
 
-### [Quel sera l'aspect de votre site ?](/fr/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
+- [À quoi ressemblera votre site web&nbsp;?](/fr/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like)
+  - : Avant de commencer à écrire le code de votre site, vous devez d'abord le planifier. Quelles informations souhaitez-vous mettre en avant&nbsp;? Quelles polices et couleurs allez-vous utiliser&nbsp;? Nous allons présenter ici une méthode simple que vous pouvez suivre pour planifier le contenu et la conception de votre site.
 
-Avant de commencer à écrire le code de votre site web, vous devez d'abord le concevoir. Quelles informations choisissez-vous de mettre en avant ? Quelles polices de caractères et quelles couleurs utiliser ? Dans [cet article](/fr/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like), nous vous proposons une méthode simple pour planifier au mieux le contenu et la conception de votre site.
+- [Créer le contenu](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)
+  - : HTML (**H**yper**T**ext **M**arkup **L**anguage, pour Langage de balisage hypertexte en français) est le code utilisé pour structurer une page web et son contenu. Par exemple, le contenu peut être structuré en paragraphes, en liste à puces, ou à l'aide d'images et de tableaux de données. Cet article fournit une compréhension de base du HTML et de ses fonctions, et vous montre comment créer le contenu de base de votre premier site web.
 
-### [Gestion des fichiers](/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
+- [Mettre en forme le contenu](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content)
+  - : CSS (Cascading Style Sheets, pour Feuilles de style en cascade) est le code qui met en forme le contenu web. _Mettre en forme le contenu_ vous guide sur ce dont vous avez besoin pour commencer. Nous répondrons à des questions comme&nbsp;: Comment rendre le texte rouge&nbsp;? Comment afficher du contenu à un endroit précis dans la mise en page&nbsp;? Comment décorer votre page avec des images et des couleurs de fond&nbsp;?
 
-Un site web contient plusieurs types de fichiers (texte, code, feuilles de styles, multimedia, etc.). Construire un site web revient à créer une structure dans laquelle ces fichiers peuvent interagir les uns avec les autres. Dans [cet article](/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files), nous détaillerons cette problématique tout en expliquant comment donner une structure cohérente à votre site web.
+- [Ajouter de l'interactivité](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity)
+  - : JavaScript est un langage de programmation qui ajoute de l'interactivité aux sites web. Cela intervient dans les jeux, dans le comportement des réponses lors de l'appui sur des boutons ou lors de la saisie de données dans des formulaires, avec du style dynamique, de l'animation, etc. Cet article vous aide à débuter avec JavaScript et à mieux comprendre ce qui est possible.
 
-### [Les bases de HTML](/fr/docs/Learn/Getting_started_with_the_web/HTML_basics)
+- [Publier votre site web](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
+  - : Une fois que vous avez écrit le code et organisé les fichiers qui composent votre site, vous devez tout mettre en ligne pour que les gens puissent le trouver. Cet article explique comment mettre votre site d'exemple en ligne facilement.
 
-Hypertext Markup Language (HTML) correspond au code que vous utiliserez pour structurer les différents contenus en ligne. Par exemple, le contenu sera‑t‑il un ensemble de paragraphes, ou une liste à puces ? Y aura‑t‑il des images insérées&nbsp;? Aurai‑je une table de données&nbsp;? Sans vous submerger, [Les bases du HTML](/fr/docs/Learn/Getting_started_with_the_web/HTML_basics) vous donne assez d'informations pour que vous soyez un familier du HTML.
-
-### [Les bases des CSS](/fr/docs/Learn/Getting_started_with_the_web/CSS_basics)
-
-Les _Cascading Stylesheets_ (CSS) (« feuilles de styles en cascade ») reçoivent le code à utiliser pour mettre en forme votre site Web. Par exemple, voulez‑vous que le texte soit en noir ou en rouge&nbsp;? Où le contenu doit‑il être placé sur l'écran&nbsp;? Quelles devront être les images de fond et les couleurs utilisées pour décorer votre site web&nbsp;? [«&nbsp;Les bases des CSS&nbsp;»](/fr/docs/Learn/Getting_started_with_the_web/CSS_basics) vous apprendra tout ce dont vous avez besoin pour commencer.
-
-### [Les bases de JavaScript](/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-
-JavaScript est le langage de programmation à utiliser pour ajouter des fonctionnalités interactives dans vos sites Web, par exemple des jeux, les événements déclenchés lorsqu'un bouton est pressé ou lorsque des données sont entrées dans un formulaire, des effets de style dynamiques, des animations, etc. [Les bases de JavaScript](/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics) vous offrent un aperçu des possibilités de ce puissant langage et vous montre comment commencer à l'utiliser.
-
-### [Publier votre site web](/fr/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-
-Une fois votre code écrit et la structure des fichiers organisée, vous devez tout mettre en ligne pour permettre son accès aux autres. [Publier votre site Web](/fr/docs/Learn/Getting_started_with_the_web/Publishing_your_website) décrit comment mettre en ligne votre site web avec un effort minimum.
-
-### [Le fonctionnement du Web](/fr/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
-
-Une succession d'opérations complexes, dont vous n'avez pas forcément à vous soucier, intervient chaque fois que vous accédez à votre site Web favori. [Le fonctionnement du Web](/fr/docs/Learn/Getting_started_with_the_web/How_the_Web_works) décrit ce qui se passe lorsque vous affichez un site web sur votre ordinateur.
+{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Command_line", "Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started")}}
 
 ## Voir aussi
 
-[Le Web démystifié](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g)&nbsp;: une grande série de vidéos expliquant les fondamentaux du Web, visant à parfaire des débutants dans le développement Web. Créée par [Jérémie Patonnier](https://twitter.com/JeremiePat).
+- [Le parcours d'un développeur Front-end <sup>(angl.)</sup>](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_Partenaire d'apprentissage MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations)</sup>
+  - : [Scrimba <sup>(angl.)</sup>](https://scrimba.com/?via=mdn) _Le parcours d'un développeur Front-end_ enseigne tout ce qu'il faut savoir pour devenir un·e développeur·euse front-end compétent·e, avec des leçons interactives ludiques, des défis, des enseignant·e·s expérimenté·e·s et une communauté bienveillante. Passez de zéro à votre premier emploi front-end&nbsp;! De nombreux modules du cours sont disponibles gratuitement en version autonome.

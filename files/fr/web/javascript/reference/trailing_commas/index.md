@@ -134,7 +134,7 @@ function f(...p,) {} // SyntaxError: parameter after rest parameter
 
 ### Les virgules finales et la décomposition
 
-On peut aussi utiliser une virgule finale dans l'opérande gauche lorsqu'on utilise [l'affectation par décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)&nbsp;:
+On peut aussi utiliser une virgule finale dans l'opérande gauche lorsqu'on utilise [l'affectation par décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring)&nbsp;:
 
 ```js-nolint
 // Décomposition d'un tableau avec

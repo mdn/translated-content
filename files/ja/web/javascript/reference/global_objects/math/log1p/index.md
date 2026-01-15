@@ -1,11 +1,10 @@
 ---
 title: Math.log1p()
+short-title: log1p()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log1p
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Math.log1p()`** は静的メソッドで、 `1 + x` の（[e](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/E) を底とした）自然対数を返します。ここで `x` は引数です。
 
@@ -19,16 +18,16 @@ l10n:
 
 ```js interactive-example
 console.log(Math.log1p(1));
-// Expected output: 0.6931471805599453
+// 予想される結果: 0.6931471805599453
 
 console.log(Math.log1p(0));
-// Expected output: 0
+// 予想される結果: 0
 
 console.log(Math.log1p(-1));
-// Expected output: -Infinity
+// 予想される結果: -Infinity
 
 console.log(Math.log1p(-2));
-// Expected output: NaN
+// 予想される結果: NaN
 ```
 
 ## 構文
@@ -82,6 +81,7 @@ Math.log1p(Infinity); // Infinity
 ## 関連情報
 
 - [`Math.log1p` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
+- [es-shims による `Math.log1p` のポリフィル](https://www.npmjs.com/package/math.log1p)
 - {{jsxref("Math.exp()")}}
 - {{jsxref("Math.log()")}}
 - {{jsxref("Math.expm1()")}}

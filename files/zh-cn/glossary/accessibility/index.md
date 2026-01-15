@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
 ---
 
-{{GlossarySidebar}}
-
 _无障碍_（Accessibility，缩写：**A11Y**）意味着让尽可能多的人（包括能力受限的）能够使用网站。实现此目标的最常见做法是确保无障碍技术可以正常访问内容。这些技术包括{{glossary("screen reader", "屏幕阅读器")}}、屏幕放大镜、语音识别工具以及替代输入设备等。
 
 你可以使用类似 [Lighthouse](https://developer.chrome.google.cn/docs/lighthouse/accessibility/scoring) 和 [Firefox 无障碍检查器](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html)这样的工具衡量你的网站的无障碍水平。

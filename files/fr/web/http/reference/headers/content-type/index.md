@@ -17,7 +17,7 @@ Dans les requêtes, (telles que {{HTTPMethod("POST")}} ou {{HTTPMethod("PUT")}})
       <td>En-tête d'entité</td>
     </tr>
     <tr>
-      <th scope="row">Nom d'en-tête interdit</th>
+      <th scope="row">{{Glossary("Forbidden_request_header", "En-tête de requête interdit")}}</th>
       <td>Non</td>
     </tr>
     <tr>
@@ -37,7 +37,7 @@ Content-Type: multipart/form-data; boundary=something
 ## Directives
 
 - `media-type`
-  - : Le [type MIME](/fr/docs/Web/HTTP/MIME_types) de la ressource ou des données.
+  - : Le [type MIME](/fr/docs/Web/HTTP/Guides/MIME_types) de la ressource ou des données.
 - `charset`
   - : L'encodage utilisé pour les caractères des données.
 - `boundary`

@@ -22,7 +22,8 @@ l10n:
 - {{domxref("HTMLLabelElement.htmlFor")}}
   - : 라벨이 지정된 컨트롤의 ID 문자열을 포함합니다. 이는 [`for`](/ko/docs/Web/HTML/Reference/Elements/label#for) 특성을 반영합니다.
 
-> **참고:** `for` 특성을 프로그래밍 방식으로 지정하기 위해서는, [`htmlFor`](/ko/docs/Web/API/HTMLLabelElement/htmlFor) 을 사용하세요.
+> [!NOTE]
+> `for` 특성을 프로그래밍 방식으로 지정하기 위해서는, [`htmlFor`](/ko/docs/Web/API/HTMLLabelElement/htmlFor) 을 사용하세요.
 
 ## 인스턴스 메서드
 

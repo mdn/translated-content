@@ -8,7 +8,8 @@ original_slug: Web/SVG/Attribute/stroke
 
 L'attribut **`stroke`** définit la couleur (ou n'importe quelle méthode de remplissage, comme un gradient ou motif) a utiliser pour dessiner le contour d'une forme SVG.
 
-> **Note :** `stroke` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
+> [!NOTE]
+> `stroke` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
 
 Cet attribut peut être appliqué à tout élément, en revanche il n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}
 
