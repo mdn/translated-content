@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-{{domxref("Selection")}} 接口的 **`type`** 只读属性会返回用于描述当前选区类型的一个字符串。
+{{domxref("Selection")}} 接口的 **`type`** 只读属性会返回用于描述当前选区类型的字符串。
 
 ## 值
 
