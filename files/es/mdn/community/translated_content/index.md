@@ -30,7 +30,7 @@ Hemos _congelado_ todo el contenido localizado (lo que significa que no aceptare
 ### Francés (fr)
 
 - Discusiones: [Matrix (canal #l10n-fr)](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org)
-- Colaboradores actuales: [cw118](https://github.com/cw118), [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb)
+- Colaboradores actuales: [cw118](https://github.com/cw118), [tristantheb](https://github.com/tristantheb)
 
 ### Japonés (ja)
 
