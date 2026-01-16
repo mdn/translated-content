@@ -8,7 +8,7 @@ l10n:
 
 {{ ApiRef("DOM") }}
 
-**`Selection.toString()`** 方法会返回一个字符串，该字符串表示当前选区对象所代表的内容，也就是当前被选中的文本。
+**`Selection.toString()`** 方法会返回一个表示当前选区对象所代表内容（也就是当前被选中的文本）的字符串。
 
 ## 语法
 
@@ -32,7 +32,7 @@ toString()
 
 ```js
 alert(window.getSelection()); // 实际上会调用的方法
-alert(window.getSelection().toString()); // 实际被有效调用的方法
+alert(window.getSelection().toString()); // 实际被真正调用的方法
 ```
 
 ## 规范
