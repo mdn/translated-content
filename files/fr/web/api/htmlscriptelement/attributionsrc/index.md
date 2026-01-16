@@ -3,10 +3,10 @@ title: "HTMLScriptElement : propriété attributionSrc"
 short-title: attributionSrc
 slug: Web/API/HTMLScriptElement/attributionSrc
 l10n:
-  sourceCommit: 58cc81b21f777d745877ec1430df8ba2852ff411
+  sourceCommit: e936e7271df947f25184a5ba8a21445bbd4d056c
 ---
 
-{{APIRef("Attribution Reporting API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("Attribution Reporting API")}}{{SecureContext_Header}}{{Deprecated_Header}}
 
 La propriété **`attributionSrc`** de l'interface {{DOMxRef("HTMLScriptElement")}} permet d'obtenir et de définir l'attribut [`attributionsrc`](/fr/docs/Web/HTML/Reference/Elements/script#attributionsrc) sur un élément {{HTMLElement("script")}} par le biais du code, reflétant la valeur de cet attribut. `attributionsrc` spécifie que vous souhaitez que le navigateur envoie un en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}} lors de la requête de la ressource du script.
 
@@ -73,4 +73,4 @@ scriptElem.attributionSrc = `${encodedUrlA} ${encodedUrlB}`;
 
 ## Voir aussi
 
-- L'API [Attribution Reporting](/fr/docs/Web/API/Attribution_Reporting_API).
+- [L'API Attribution Reporting](/fr/docs/Web/API/Attribution_Reporting_API).
