@@ -19,10 +19,10 @@ SSR の利点は次のとおりです。
 
 SSR と CSR はどちらもパフォーマンス面でトレードオフがあり、 SSR と CSR を組み合わせることで両方の手法の利点を活かすことができます。例えば、サーバーは空のプレースホルダを含むページのスケルトンを生成し、クライアントは必要に応じて追加データを取得してページを更新することができます。
 
-## See also
+## 関連情報
 
-- [Introduction to client-side frameworks > server-side rendering](/en-US/docs/Learn_web_development/Core/Frameworks_libraries/Introduction#server-side_rendering)
-- [Server-side scripting](https://en.wikipedia.org/wiki/Server-side_scripting) on Wikipedia
-- {{glossary("CSR", "Client-side rendering")}}
-- {{glossary("SSG", "Static site generator")}}
-- {{glossary("SPA", "Single-page application")}}
+- [クライアントサイドフレームワークの概要 > サーバーサイドレンダリング](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Introduction#サーバーサイドレンダリング)
+- [サーバサイドスクリプト](https://ja.wikipedia.org/wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%82%B5%E3%82%A4%E3%83%89%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88) on Wikipedia
+- {{glossary("CSR", "クライアントサイドレンダリング")}}
+- {{glossary("SSG", "静的サイトジェネレーター")}}
+- {{glossary("SPA", "単一ページアプリケーション")}}
