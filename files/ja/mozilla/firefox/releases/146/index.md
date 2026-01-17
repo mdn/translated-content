@@ -67,7 +67,7 @@ Firefox 146 は、米国時間 [2025 年 12 月 9 日](https://whattrainisitnow.
 ## アドオン開発者向けの変更点一覧
 
 - {{WebExtAPIRef("browsingData.removeLocalStorage")}} および {{WebExtAPIRef("browsingData.remove")}} ({{WebExtAPIRef("browsingData.DataTypeSet")}} に `localStorage` が設定された場合) が、[`sessionStorage`](/ja/docs/Web/API/Window/sessionStorage) からオブジェクトを削除するようになりました ([Firefox bug 1886894](https://bugzil.la/1886894))。
-- {{WebExtAPIRef("proxy.onRequest")}} API で、{{WebExtAPIRef("proxy.ProxyInfo")}} 戻り値型において MASQUE プロキシ (QUIC のプロキシトンネル) をサポートしました ([Firefox bug 1988988](https://bugzil.la/1988988) および [Firefox bug 1998894](https://bugzil.la/1998894))
+- {{WebExtAPIRef("proxy.onRequest")}} API で、{{WebExtAPIRef("proxy.ProxyInfo")}} 戻り値型において MASQUE プロキシー (QUIC のプロキシートンネル) をサポートしました ([Firefox bug 1988988](https://bugzil.la/1988988) および [Firefox bug 1998894](https://bugzil.la/1998894))
 
 ## 実験的なウェブ機能
 
