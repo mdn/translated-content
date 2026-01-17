@@ -169,7 +169,7 @@ L'arrière-plan défini sur un élément d'une couche ne sera visible que si les
 
 ### Légendes
 
-Fournir un élément {{HTMLElement("caption")}} pour légender le tableau avec une description claire et concise permet aux utilisateurs de décider s'ils doivent lire le contenu du tableau ou le passer.
+Fournir un élément {{HTMLElement("caption")}} pour légender le tableau avec une description claire et concise permet aux utilisateur·ice·s de décider s'ils doivent lire le contenu du tableau ou le passer.
 
 Une telle légende fournit une aide pour les personnes qui naviguent avec des outils d'assistance comme des lecteurs d'écran.
 
