@@ -321,7 +321,7 @@ Comme `firstClone` est un `DocumentFragment`, seuls ses enfants sont ajoutés à
           >contenu phrasé</a
         >,
         <a
-          href="/fr/docs/Web/Guide/HTML/Catégories_de_contenu#éléments_supports_de_script"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#éléments_supports_de_script"
           >élément destiné aux scripts</a
         >.
       </td>
@@ -346,11 +346,11 @@ Comme `firstClone` est un `DocumentFragment`, seuls ses enfants sont ajoutés à
           >contenu phrasé</a
         >, ou
         <a
-          href="/fr/docs/Web/Guide/HTML/Catégories_de_contenu#éléments_supports_de_script"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#éléments_supports_de_script"
           >des éléments destinés aux scripts</a
         >. L'élément {{HTMLElement("colgroup")}} est également autorisé
         s'il n'a pas l'attribut
-        <a href="/fr/docs/Web/HTML/Element/colgroup#span"><code>span</code></a>.
+        <a href="/fr/docs/Web/HTML/Reference/Elements/colgroup#span"><code>span</code></a>.
       </td>
     </tr>
     <tr>
