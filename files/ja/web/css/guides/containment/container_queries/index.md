@@ -1,9 +1,9 @@
 ---
 title: CSS コンテナークエリー
+short-title: コンテナークエリー
 slug: Web/CSS/Guides/Containment/Container_queries
-original_slug: Web/CSS/CSS_containment/Container_queries
 l10n:
-  sourceCommit: 8905094f4366d2e4d5876a3d75b88880d0aba60b
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 コンテナークエリーを使用すると、特定の要素について、そのコンテナーの次のような属性に基づいてスタイルを設定することができます。
@@ -14,20 +14,20 @@ l10n:
 
 コンテナークエリーは、[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)の代替となるもので、ビューポートサイズや他の端末の特性に基づいて要素にスタイルを適用します。
 
-この記事では、コンテナークエリーを用いて、特にサイズコンテナークエリーに焦点を当てた使い方の紹介をしています。他にも、[スタイル](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#コンテナースタイルクエリー)や[スクロール状態コンテナー](/ja/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)クエリーについて詳しく解説しているガイドもあります。
+この記事では、コンテナークエリーを用いて、特にサイズコンテナークエリーに焦点を当てた使い方の紹介をしています。他にも、[スタイル](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#コンテナースタイルクエリー)や[スクロール状態](/ja/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)コンテナークエリーについて詳しく解説しているガイドもあります。
 
 ![2 つの異なる種類のクエリー。ブラウザーの全幅であるビューポートの幅に基づくメディアクエリーと、コンテナー要素の幅であるコンテナーコンテキストの幅に基づくコンテナークエリー。](container-query.svg)
 
 ## コンテナークエリーの使用
 
-コンテナークエリーを使用するには、要素で**コンテナーコンテキスト**を宣言し、後でこのコンテナーの寸法をクエリーしたいとブラウザーが認識できるようにする必要があります。
+コンテナークエリーはコンテナーの種類に基づいてスタイルを適用するのに対し、コンテナーサイズクエリーはコンテナーの寸法に基づいてスタイルを適用します。コンテナーサイズクエリーを使用するには、要素に**コンテナーコンテキスト**を宣言する必要があります。これにより、ブラウザーは後でこのコンテナーの寸法をクエリする可能性があることを認識します。
 これを行うには、 {{cssxref("container-type")}} プロパティに `size`、`inline-size`、`normal` の値を指定して使用します。
 
 これらの値は以下のような効果があります。
 
 - `size`
   - : クエリーは、コンテナーの[インラインおよびブロック](/ja/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#ブロック軸とインライン軸)軸の寸法に基づきます。
-    レイアウト、スタイル設定、[サイズ抑制](/ja/docs/Web/CSS/Guides/Containment/Using)をコンテナーに適用します。
+    レイアウト、スタイル設定、サイズ[抑制](/ja/docs/Web/CSS/Guides/Containment/Using)をコンテナーに適用します。
 - `inline-size`
   - : クエリーは、コンテナーの[インライン](/ja/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#ブロック軸とインライン軸)軸の寸法に基づきます。
     その要素にレイアウト、スタイル設定、インラインサイズ抑制を適用します。
@@ -64,7 +64,7 @@ l10n:
 }
 
 /* コンテナーが 700px より広い場合 */
-@container (min-width: 700px) {
+@container (width > 700px) {
   .card h2 {
     font-size: 2em;
   }
@@ -92,7 +92,7 @@ l10n:
 そして、 `@container` アットルールを用いて、このコンテナーコンテキストを対象とすることができます。
 
 ```css
-@container sidebar (min-width: 700px) {
+@container sidebar (width > 700px) {
   .card {
     font-size: 2em;
   }
@@ -119,7 +119,7 @@ l10n:
 この単位は、クエリーするコンテナーの寸法に相対する長さを指定します。
 コンテナーに対する相対的な長さの単位を使用する成分は、具体的な長さの値を再計算する必要がなく、様々なコンテナーでより柔軟に使用することができます。
 
-クエリに該当するコンテナーが利用できない場合、コンテナーのクエリー長の単位は、既定でその軸の［小さなビューポート単位］（/ja/docs/Web/CSS/length#small_viewport_units） (`sv*`) に設定されます。
+クエリに該当するコンテナーが利用できない場合、コンテナーのクエリー長の単位は、デフォルトでその軸の[小さなビューポート単位](/ja/docs/Web/CSS/Reference/Values/length#小ビューポート単位) (`sv*`) に設定されます。
 
 コンテナークエリーの長さの単位は以下の通りです。
 
@@ -133,7 +133,7 @@ l10n:
 次の例では、 `cqi` 単位を用いて、コンテナーのインラインサイズに基づいて見出しのフォントサイズを設定しています。
 
 ```css
-@container (min-width: 700px) {
+@container (width > 700px) {
   .card h2 {
     font-size: max(1.5em, 1.23em + 2cqi);
   }
@@ -157,7 +157,7 @@ l10n:
 ビューポートが小さい端末用に一列のレイアウトを使用したい場合は、メディアクエリーを使用してグリッドテンプレートを変更することができます。
 
 ```css
-@media (max-width: 700px) {
+@media (width <= 700px) {
   .card {
     grid-template-columns: 1fr;
   }

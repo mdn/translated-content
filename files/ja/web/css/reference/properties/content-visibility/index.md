@@ -1,9 +1,8 @@
 ---
 title: content-visibility
 slug: Web/CSS/Reference/Properties/content-visibility
-original_slug: Web/CSS/content-visibility
 l10n:
-  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`content-visibility`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素がそのコンテンツをレンダリングするかどうかを制御するとともに、強力な抑制のセットを強制することで、必要になるまでユーザーエージェントが大量のレイアウトとレンダリングの作業を省略できるようにします。基本的に、ユーザーエージェントは、レイアウトやペイントなどの要素のレンダリング作業を必要になるまでスキップできるため、最初のページの読み込みがはるかに高速になります。
@@ -35,15 +34,15 @@ content-visibility: hidden;
 .container {
   width: 140px;
   height: 140px;
-  border: 3px solid rgb(64, 28, 163);
-  background-color: rgb(135, 136, 184);
+  border: 3px solid rgb(64 28 163);
+  background-color: rgb(135 136 184);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .child {
-  border: 3px solid rgb(64, 28, 163);
+  border: 3px solid rgb(64 28 163);
   background-color: wheat;
   color: black;
   width: 80%;
@@ -73,7 +72,7 @@ content-visibility: unset;
 ### 値
 
 - `visible`
-  - : 効果なし。要素のコンテンツは通常通りにレイアウトおよび描画されます。
+  - : 効果なし。要素のコンテンツは通常通りにレイアウトおよび描画されます。これがデフォルト値です。
 - `hidden`
   - : 要素は[そのコンテンツを読み飛ばします](/ja/docs/Web/CSS/Guides/Containment/Using#コンテンツのスキップ)。読み飛ばされたコンテンツは、ページ内検索やタブ順序ナビゲーションなどのユーザーエージェント機能でアクセス可能になることはなく、また選択可能やフォーカス可能にもなりません。これは、コンテンツに `display: none` を設定することに似ています。
 - `auto`
@@ -95,7 +94,7 @@ content-visibility: unset;
 `content-visibility` を [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)でアニメーションさせる場合、 `content-visibility` に [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior) を設定する必要があります。これにより、 `content-visibility` のトランジションが有効になります。
 
 > [!NOTE]
-> 要素の `content-visibility` 値をトランジションさせるとき、 [`display`](/ja/docs/Web/CSS/Reference/Properties/display#display_のアニメーション) をトランジションさせるときのように、 [`@starting-style`](/ja/docs/Web/CSS/Reference/At-rules/@starting-style) ブロックを使用して、トランジションするプロパティの開始値の集合を提供する必要はありません。これは `content-visibility` が `display` のように要素を DOM から隠すのではなく、要素のコンテンツのレンダリングをスキップするだけだからです。
+> 要素の `content-visibility` 値をトランジションさせるとき、 [`display`](/ja/docs/Web/CSS/Reference/Properties/display#display_のアニメーション) をトランジションさせるときのように、{{cssxref("@starting-style")}} ブロックを使用して、トランジションするプロパティの開始値の集合を提供する必要はありません。これは `content-visibility` が `display` のように要素を DOM から隠すのではなく、要素のコンテンツのレンダリングをスキップするだけだからです。
 
 ## 公式定義
 
@@ -214,23 +213,19 @@ document.querySelectorAll("button.toggle").forEach((button) => {
 
 #### HTML
 
-```html
+```html-nolint
 <p>
-  Click anywhere on the screen or press any key to toggle the
-  <code>&lt;div&gt;</code> content between hidden and showing.
+  画面にどこかをクリックするか、任意のキーを押すと、<code>&lt;div&gt;</code> のコンテンツが非表示と表示の間で切り替わります。
 </p>
 
 <div>
-  This is a <code>&lt;div&gt;</code> element that animates between
-  <code>content-visibility: hidden;</code>and
-  <code>content-visibility: visible;</code>. We've also animated the text color
-  to create a smooth animation effect.
+  これは <code>&lt;div&gt;</code> 要素で、<code>content-visibility: hidden;</code> と <code>content-visibility: visible;</code> の間をアニメーションします。テキストの色も同時にアニメーションさせ、滑らかなアニメーション効果を作成しています。
 </div>
 ```
 
 #### CSS
 
-CSS では、最初に `<div>` に `content-visibility: hidden;` を設定し、そのコンテンツを隠します。次に `@keyframes` アニメーションを設定し、 `<div>` を表示させたり非表示にしたりするためのクラスに取り付けて、 `content-visibility` と [`color`](/ja/docs/Web/CSS/Reference/Properties/color) をアニメーション化することで、コンテンツが表示/非表示になる滑らかなアニメーション効果が得られます。
+CSS では、最初に `<div>` に `content-visibility: hidden;` を設定し、そのコンテンツを隠します。次に `@keyframes` アニメーションを設定し、 `<div>` を表示させたり非表示にしたりするためのクラスに取り付けて、 `content-visibility` と {{cssxref("color")}} をアニメーションさせることで、コンテンツが表示/非表示になる滑らかなアニメーション効果が得られます。
 
 ```css
 div {
@@ -258,24 +253,24 @@ div {
 @keyframes show {
   0% {
     content-visibility: hidden;
-    color: rgb(0 0 0 / 0%);
+    color: transparent;
   }
 
   100% {
     content-visibility: visible;
-    color: rgb(0 0 0 / 100%);
+    color: black;
   }
 }
 
 @keyframes hide {
   0% {
     content-visibility: visible;
-    color: rgb(0 0 0 / 100%);
+    color: black;
   }
 
   100% {
     content-visibility: hidden;
-    color: rgb(0 0 0 / 0%);
+    color: transparent;
   }
 }
 ```
@@ -319,6 +314,6 @@ function showHide() {
 ## 関連情報
 
 - [CSS コンテナー](/ja/docs/Web/CSS/Guides/Containment)
-- [`contain-intrinsic-size`](/ja/docs/Web/CSS/Reference/Properties/contain-intrinsic-size)
+- {{cssxref("contain-intrinsic-size")}}
 - {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
 - [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/articles/content-visibility) (web.dev)

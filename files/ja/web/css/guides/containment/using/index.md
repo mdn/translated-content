@@ -1,16 +1,16 @@
 ---
-title: CSS コンテナーの使用
+title: CSS 抑制の使用
+short-title: 抑制の使用
 slug: Web/CSS/Guides/Containment/Using
-original_slug: Web/CSS/CSS_containment/Using_CSS_containment
 l10n:
-  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-CSS コンテナー (CSS containment) は、ウェブページの表示性能を向上させるために、開発者がページの任意のサブツリーをページのそれ以外の部分から独立させることができます。もしページの一部が独立していることをブラウザーが知っていれば、レンダリングを最適化し、表示性能を向上させることができます。
+CSS 抑制 (CSS containment) は、ウェブページの表示性能を向上させるために、開発者がページの任意のサブツリーをページのそれ以外の部分から独立させることができます。もしページの一部が独立していることをブラウザーが知っていれば、レンダリングを最適化し、表示性能を向上させることができます。
 
 {{cssxref("contain")}} と {{cssxref("content-visibility")}} プロパティを使うことで、開発者はユーザーエージェントに、要素がコンテンツをすべて表示すべきかどうか、また画面外にあるときにコンテンツを表示すべきかどうかを知らせることができます。ユーザーエージェントは、必要に応じて要素に抑制を適用し、必要なときまでレイアウトやレンダリングを延期することができます。
 
-このガイドでは、 CSS コンテナーの基本的な目的と、 `contain` と `content-visibility` を活用してユーザー体験を向上させる方法について記述しています。
+このガイドでは、CSS コンテナーの基本的な目的と、`contain` と `content-visibility` を活用してユーザー体験を向上させる方法について記述しています。
 
 ## 基本的な例
 
@@ -82,7 +82,7 @@ article {
 }
 ```
 
-描画抑制は、基本的に、ボックスを[主要ボックス](/ja/docs/Web/CSS/Guides/Display/Visual_formatting_model#主ボックス)のパディング境界でクリッピングします。視覚的なはみ出しは行われません。 `paint` 抑制にも `layout` 抑制と同じことが当てはまります（上記を参照）。
+描画抑制は、基本的に、ボックスを[主ボックス](/ja/docs/Web/CSS/Guides/Display/Visual_formatting_model#主ボックス)のパディング境界でクリッピングします。視覚的なはみ出しは行われません。 `paint` 抑制にも `layout` 抑制と同じことが当てはまります（上記を参照）。
 
 もうひとつの利点は、包含ボックスが画面外にある場合、ブラウザーはその内包する要素を描く必要がないことです — これらはそのボックスによって完全に内包されているので、画面外にあるに違いないからです。
 
@@ -101,7 +101,7 @@ article {
 ```css
 article {
   contain: size;
-  contain-intrinsic-size: 100vw auto;
+  contain-intrinsic-size: 100vw auto none;
 }
 ```
 
@@ -114,7 +114,7 @@ article {
 ```
 
 名前に反して、スタイル抑制は、[シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) や {{cssxref("@scope")}} のようにスタイルのスコープを提供するものではありません。
-`style` 値の主な用途は、 [CSS カウンター](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters) がある要素で変更され、それがツリーの残りの部分に影響する可能性がある状況を防ぐことです。
+`style` 値の主な用途は、 [CSS カウンター](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters)がある要素で変更され、それがツリーの残りの部分に影響する可能性がある状況を防ぐことです。
 
 `contain: style` を使用すると、{{cssxref("counter-increment")}} と {{cssxref("counter-set")}} プロパティがそのサブツリーにのみ限定された新しいカウンターを作成することを保証します。
 
@@ -136,7 +136,7 @@ article {
 ```css
 article {
   contain: strict;
-  contain-intrinsic-size: 80vw auto;
+  contain-intrinsic-size: 80vw auto none;
 }
 ```
 
@@ -145,7 +145,7 @@ The above is the same as:
 ```css
 article {
   contain: size layout paint style;
-  contain-intrinsic-size: 80vw auto;
+  contain-intrinsic-size: 80vw auto none;
 }
 ```
 
@@ -187,7 +187,7 @@ article {
 これは上記のどちらの場合でも起こりますが、 `content-visibility: auto` の場合、コンテンツは検索でき、フォーカスを受け取ることができ、関連性のないものから関連性のあるものへと移行することができます。これは `content-visibility: hidden` では起こりません。
 
 > [!NOTE]
-> `content-visibility: hidden` から visible 値へのアニメーションには {{cssxref("transition-behavior", "transition-behavior:&nbsp;allow-discrete")}} と {{cssxref("@starting-style")}} スタイルを設定する必要があります。詳しくは、 [`display` および `content-visibility` のトランジション](/ja/docs/Web/CSS/Guides/Transitions/Using#display_と_content-visibility_のトランジション) を参照してください。
+> `content-visibility: hidden` から visible 値へのアニメーションには {{cssxref("transition-behavior", "transition-behavior:&nbsp;allow-discrete")}} と {{cssxref("@starting-style")}} スタイルを設定する必要があります。詳しくは、[`display` および `content-visibility` のトランジション](/ja/docs/Web/CSS/Guides/Transitions/Using#display_と_content-visibility_のトランジション) を参照してください。
 
 ## 関連情報
 
