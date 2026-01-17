@@ -32,8 +32,7 @@ Firefox 147 は、米国時間 [2026 年 1 月 13 日](https://whattrainisitnow.
 
 ### CSS
 
-- [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning) をデフォルトで有効にしました 
-  ([Firefox bug 1988225](https://bugzil.la/1988225))。
+- [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning) をデフォルトで有効にしました ([Firefox bug 1988225](https://bugzil.la/1988225))。
   - バージョン 147 で値 [`anchor-center`](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#centering_on_the_anchor_using_anchor-center) を追加しました。これは、アンカー位置指定した要素をアンカーの中央に配置するために便利な方法を提供します。この値は {{cssxref("align-items")}}、{{cssxref("align-self")}}、{{cssxref("justify-items")}}、{{cssxref("justify-self")}}、{{cssxref("place-items")}}、{{cssxref("place-self")}} プロパティで使用できます ([Firefox bug 1909339](https://bugzil.la/1909339))。
   - バージョン 147 で {{cssxref("position-anchor")}} の値 `none` を追加しました。これは [CSS アンカー](/ja/docs/Web/CSS/Guides/Anchor_positioning) とアンカーに位置指定された要素の間の、暗黙的または明示的な関連づけを削除できます ([Firefox bug 1999972](https://bugzil.la/1999972))。
 - 互換性を高めるため、`-webkit-` 接頭辞をつけた {{cssxref("perspective")}} プロパティを単位がない値 (たとえば、`-webkit-perspective: 800`) でサポートしました ([Firefox bug 1362499](https://bugzil.la/1362499))。
