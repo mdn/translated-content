@@ -1,9 +1,9 @@
 ---
 title: CSS リストとカウンター
+short-title: リストとカウンター
 slug: Web/CSS/Guides/Lists
-original_slug: Web/CSS/CSS_lists
 l10n:
-  sourceCommit: c642cf3df8c5bf401d9b69f9e7182a874b1e010b
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **CSS リストとカウンター** (CSS lists and counters) モジュールにより、リストアイテムの箇条書き記号のスタイルや位置を指定したり、文字列、カウンターなどのの組み合わせによる値を操作したりすることができます。
@@ -55,7 +55,7 @@ l10n:
   - {{cssxref("@counter-style")}} アットルール
   - [`<counter-style-name>`](/ja/docs/Web/CSS/Reference/At-rules/@counter-style#counter-style-name) データ型
   - [`<symbol>`](/ja/docs/Web/CSS/Reference/At-rules/@counter-style/symbols#値) データ型
-  - {{cssxref("symbols", "symbols()")}} 関数
+  - {{cssxref("symbols()")}} 関数
 
 - {{HTMLElement("ol")}} の `start`、`reversed`、`type` 属性
 - {{HTMLElement("ul")}} の `type` 属性

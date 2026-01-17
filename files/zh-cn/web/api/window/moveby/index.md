@@ -1,41 +1,44 @@
 ---
-title: Window.moveBy()
+title: Window：moveBy() 方法
+short-title: moveBy()
 slug: Web/API/Window/moveBy
+l10n:
+  sourceCommit: 20c51db7895b1b6f41d4fa90e71830f4b6678eea
 ---
 
 {{APIRef}}
 
-## 概述
+{{domxref("Window")}} 接口的 **`moveBy()`** 方法将当前窗口移动指定的距离。
 
-根据指定的值，移动当前窗口。
+> [!NOTE]
+> 该函数相对于窗口的当前位置移动窗口。而 {{domxref("window.moveTo()")}} 则将窗口移动到一个绝对位置。
 
 ## 语法
 
-```plain
-window.moveBy(deltaX, deltaY)
+```js-nolint
+moveBy(deltaX, deltaY)
 ```
 
 ### 参数
 
-- `deltaX` 表示窗口在水平方向移动的像素值。
-- `deltaY` 表示窗口在垂直方向移动的像素值。
+- `deltaX`
+  - : 窗口水平移动的像素数。正值向右移动，负值向左移动。
+- `deltaY`
+  - : 窗口垂直移动的像素数。正值向下移动，负值向上移动。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
 
 ## 示例
+
+这个示例将窗口向右移动 10 像素，向上移动 10 像素。
 
 ```js
 function budge() {
   moveBy(10, -10);
 }
 ```
-
-## 备注
-
-可以使用负值作为该函数的参数。该函数产生相对移动，而 {{domxref("window.moveTo")}} 产生一个绝对移动。
-
-从 Firefox 7 开始，依据[下面的规则](https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24)，不能再移动一个浏览器里的窗口。
-
-1. 不能移动非 window\.open 创建的窗口或 Tab。
-2. 当一个窗口里有多于一个 Tab 时，不能移动该窗口。
 
 ## 规范
 
@@ -45,11 +48,17 @@ function budge() {
 
 {{Compat}}
 
-从 Firefox 7 开始，网站在[以下情况下](https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24)将不能再移动浏览器窗口。
+从 Firefox 7 开始，网站在[以下情况下](https://bugzil.la/565541#c24)将不能再移动浏览器窗口。
 
 1. 不能移动不是由 {{domxref("Window.open()")}} 创建的窗口或标签页。
 2. 当一个窗口里有多于一个标签页时，不能移动该窗口或其中的标签页。
 
+> [!NOTE]
+> 这个函数可能不会同步地移动窗口。
+> 在某些环境中（比如 Wayland，或移动设备）它可能根本不会移动窗口。
+> 目前没有办法监听移动事件，详见
+> [CSS 工作组问题 #7693](https://github.com/w3c/csswg-drafts/issues/7693)。
+
 ## 参见
 
-- {{domxref("window.moveTo()")}}
+- {{domxref("Window.moveTo()")}}

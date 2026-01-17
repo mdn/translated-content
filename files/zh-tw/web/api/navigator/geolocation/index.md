@@ -1,22 +1,23 @@
 ---
-title: Navigator.geolocation
+title: Navigator：geolocation 屬性
+short-title: geolocation
 slug: Web/API/Navigator/geolocation
+l10n:
+  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
 
-{{APIRef("Geolocation API")}}
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-**`Navigator.geolocation`** 回傳一個唯讀的 {{domxref("Geolocation")}} 物件，透過這個物件可以存取設備的位置訊息。同時也允許網站或應用程式根據使用者的位置提供客製化的結果。
+**`Navigator.geolocation`** 唯讀屬性會回傳一個 {{domxref("Geolocation")}} 物件，讓 Web 內容能存取裝置的位置。這允許網站或應用程式根據使用者的位置提供自訂的結果。
 
 > [!NOTE]
-> 因為隱私的因素，當網頁要求存取位置資訊時，用戶會被提示通知並且詢問授權與否。注意不同的瀏覽器在詢問授權時有各自不同的策略和方式。
+> 基於安全考量，當網頁嘗試存取位置資訊時，會通知使用者並要求授權。請注意，每個瀏覽器都有其請求此權限的政策與方法。
 
-## 語法
+## 值
 
-```plain
-geo = navigator.geolocation
-```
+一個 {{domxref("Geolocation")}} 物件。
 
-## 規格
+## 規範
 
 {{Specifications}}
 
@@ -24,6 +25,6 @@ geo = navigator.geolocation
 
 {{Compat}}
 
-## 請參考
+## 參見
 
-- [Using geolocation](/zh-TW/docs/Web/API/Geolocation_API)
+- [使用 Geolocation API](/zh-TW/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)

@@ -26,7 +26,7 @@ slug: Mozilla/Add-ons/Contact_us
 
 #### セキュリティ欠陥
 
-アドオンのセキュリティ欠陥を見つけた場合は、それが Mozilla のサイトで提供しているものでなくても、私たちまでお知らせ下さい。私たちは開発者と協力して問題を修正します。 連絡は[非公開で](https://www.mozilla.org/projects/security/security-bugs-policy.html)、 [Bugzilla](https://bugzilla.mozilla.org/enter_bug.cgi?product=addons.mozilla.org&component=Add-on%20Security&maketemplate=Add-on%20Security%20Bug&bit-23=1&rep_platform=All&op_sys=All) または [amo-admins@mozilla.com 宛てのメール](mailto:amo-admins@mozilla.com)でお願いします。
+アドオンのセキュリティ欠陥を見つけた場合は、それが Mozilla のサイトで提供しているものでなくても、私たちまでお知らせ下さい。私たちは開発者と協力して問題を修正します。 連絡は[非公開で](https://www.mozilla.org/projects/security/security-bugs-policy.html)、 [Bugzilla](https://bugzilla.mozilla.org/enter_bug.cgi?product=addons.mozilla.org&component=Add-on%20Security&maketemplate=Add-on%20Security%20Bug&bit-23=1&rep_platform=All&op_sys=All) にお願いします。
 
 #### サイト addons.mozilla.org (AMO)のバグ
 

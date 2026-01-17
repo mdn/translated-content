@@ -467,6 +467,6 @@ h1 {
   - [タッチイベント](/ja/docs/Web/API/Touch_events)は、タッチ画面やトラックパッド上の指（またはスタイラス）の動きを解釈する機能を提供し、複雑なタッチベースのユーザーインターフェイスの高品質な対応を可能にします。
   - [pointer](/ja/docs/Web/CSS/Reference/At-rules/@media/pointer) または [any-pointer](/ja/docs/Web/CSS/Reference/At-rules/@media/any-pointer) メディアクエリーを使用すると、タッチ対応端末で異なる CSS を読み込むことができます。
 - [CSS-Tricks guide to media queries](https://css-tricks.com/a-complete-guide-to-css-media-queries/)
-- [The Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_MDN 学習パートナー_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> Scrimba では、楽しいインタラクティブなレッスンや課題、知識豊富な講師陣、そして支援的なコミュニティを通じて、有能なフロントエンドウェブ開発者になるために必要なすべてを学べます。ゼロから始めて、初めてのフロントエンド職をゲットしましょう。コースの多くの要素は、独立した無料版として利用可能です。これにはレスポンシブデザインに関するモジュールも含まれます。
+- [The Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> Scrimba では、楽しいインタラクティブなレッスンや課題、知識豊富な講師陣、そして支援的なコミュニティを通じて、有能なフロントエンドウェブ開発者になるために必要なすべてを学べます。ゼロから始めて、初めてのフロントエンド職をゲットしましょう。コースの多くの要素は、独立した無料版として利用可能です。これにはレスポンシブデザインに関するモジュールも含まれます。
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
