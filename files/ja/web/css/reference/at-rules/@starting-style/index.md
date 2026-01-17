@@ -1,9 +1,8 @@
 ---
 title: "@starting-style"
 slug: Web/CSS/Reference/At-rules/@starting-style
-original_slug: Web/CSS/@starting-style
 l10n:
-  sourceCommit: 0326d9301650304ef67a56e88b542b160093042e
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`@starting-style`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、トランジションさせる要素に設定されるプロパティ群の開始値を定義するために使用します。これらのプロパティは、最初に要素のスタイルが更新されたとき、つまり要素が前回読み込まれたページに最初に表示されたときに設定されるものです。
@@ -23,11 +22,12 @@ l10n:
 2. 既存のルールセット内に入れ子にする方法。この場合、そのルールセットによってすでに選択されている要素のプロパティ値を定義する 1 つ以上の宣言が入ります。
 
    ```css
-   selector { /* 既存のルールセット */
+   selector {
+     /* 既存のルールセット */
      /* ... */
 
      @starting-style {
-       宣言
+       /* 宣言 */
      }
    }
    ```
@@ -64,7 +64,7 @@ l10n:
 ```
 
 > [!NOTE]
-> `@starting-style` アットルールと「元ルール」の{{cssxref("specificity", "詳細度")}}は同じになります。確実にスタイル設定が反映されるようにするには、 `@starting-style` アットルールを「元ルール」の後に記載してください。もし `@starting-style` アットルールを「元ルール」の前に指定すると、元のスタイル設定が開始時のスタイル設定を上書きします。
+> `@starting-style` アットルールと「元ルール」の[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)は同じになります。確実にスタイル設定が反映されるようにするには、 `@starting-style` アットルールを「元ルール」の後に記載してください。もし `@starting-style` アットルールを「元ルール」の前に指定すると、元のスタイル設定が開始時のスタイル設定を上書きします。
 
 入れ子方式を使用してポップオーバーの開始スタイルを指定するには、 `@starting-style` ブロックを「元ルール」の中に入れます。
 
@@ -88,7 +88,7 @@ l10n:
 
 ## 形式文法
 
-{{csssyntax}}
+{{CSSSyntaxRaw(`@starting-style = @starting-style { <rule-list> }`)}}
 
 ## 例
 
@@ -226,7 +226,7 @@ btn.addEventListener("click", () => {
 
 ```css
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 [popover]:popover-open {
@@ -261,7 +261,7 @@ html {
 
 /* ポップオーバーの背後のトランジション */
 [popover]::backdrop {
-  background-color: rgb(0 0 0 / 0%);
+  background-color: transparent;
   transition:
     display 0.7s allow-discrete,
     overlay 0.7s allow-discrete,
@@ -278,7 +278,7 @@ html {
 独立した開始スタイルのブロックを指定します。 */
 @starting-style {
   [popover]:popover-open::backdrop {
-    background-color: rgb(0 0 0 / 0%);
+    background-color: transparent;
   }
 }
 ```
@@ -328,17 +328,18 @@ const sectionElem = document.querySelector("section");
 
 btn.addEventListener("click", createColumn);
 
-function randomColor() {
+function randomBackground() {
   function randomNum() {
     return Math.floor(Math.random() * 255);
   }
+  const baseColor = `${randomNum()} ${randomNum()} ${randomNum()}`;
 
-  return `rgb(${randomNum()} ${randomNum()} ${randomNum()})`;
+  return `linear-gradient(to right, rgb(${baseColor} / 0), rgb(${baseColor} / 0.5))`;
 }
 
 function createColumn() {
   const divElem = document.createElement("div");
-  divElem.style.backgroundColor = randomColor();
+  divElem.style.background = randomBackground();
 
   const closeBtn = document.createElement("button");
   closeBtn.textContent = "✖";
@@ -398,11 +399,6 @@ div {
   flex: 1;
   border: 1px solid gray;
   position: relative;
-  background: linear-gradient(
-    to right,
-    rgb(255 255 255 / 0%),
-    rgb(255 255 255 / 50%)
-  );
   opacity: 1;
   scale: 1 1;
 
@@ -446,7 +442,7 @@ div > button {
 
 - `div { ... }` ルールにトランジションさせたいプロパティの終了状態を指定します。
 - `@starting-style` ブロック内のプロパティでトランジションの開始状態を指定します。
-- `.fade-out` ルールの中で消滅アニメーションを指定します。これは、閉じるボタンが押されたときに JavaScript が `<div>` 要素に割り当てるクラスです。透明度と変倍の終了状態を設定するほかに、 `<div>` 要素に `display: none` を設定します。 UI から除去されたときにすぐに利用できなくなるようにします。
+- `.fade-out` ルールの中で消滅アニメーションを指定します。これは、閉じるボタンが押されたときに JavaScript が `<div>` 要素に割り当てるクラスです。透明度と変倍の終了状態を設定するほかに、 `<div>` 要素に [`display: none`](/ja/docs/Web/CSS/Reference/Properties/display) を設定します。 UI から除去されたときにすぐに利用できなくなるようにします。
 - {{cssxref("transition")}} のリストを `div { ... }` ルールの中で指定し、 `opacity`、`scale`、`display` をアニメーションさせます。 `display` については、アニメーションするように一括指定によって {{cssxref("transition-behavior", "transition-behavior: allow-discrete")}} の値も設定されることに注意してください。
 
 #### 結果

@@ -3,7 +3,7 @@ title: "Element: transitionend イベント"
 short-title: transitionend
 slug: Web/API/Element/transitionend_event
 l10n:
-  sourceCommit: 1b094710cd2816a6669ce616b6f56d0a5b25e6ad
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{APIRef}}
@@ -18,10 +18,10 @@ l10n:
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-```js
-addEventListener("transitionend", (event) => {});
+```js-nolint
+addEventListener("transitionend", (event) => { })
 
-ontransitionend = (event) => {};
+ontransitionend = (event) => { }
 ```
 
 ## イベント型
@@ -68,7 +68,7 @@ transition.ontransitionend = () => {
 次の例では、単純な {{htmlelement("div")}} 要素に遅延を含むトランジションをスタイル設定しています。
 
 ```html
-<div class="transition"></div>
+<div class="transition">ここにポインターを当ててください</div>
 <div class="message"></div>
 ```
 
@@ -76,15 +76,15 @@ transition.ontransitionend = () => {
 .transition {
   width: 100px;
   height: 100px;
-  background: rgba(255, 0, 0, 1);
+  background: red;
   transition-property: transform, background;
   transition-duration: 2s;
-  transition-delay: 2s;
+  transition-delay: 1s;
 }
 
 .transition:hover {
   transform: rotate(90deg);
-  background: rgba(255, 0, 0, 0);
+  background: transparent;
 }
 ```
 
@@ -111,7 +111,7 @@ el.addEventListener("transitionend", () => {
 });
 ```
 
-{{ EmbedLiveSample('Live_example', '100%', '150px') }}
+{{ EmbedLiveSample('ライブ例', '100%', '150px') }}
 
 `transitionend` イベントは両方向に発生します。ボックスの回転が完了し、不透明度が方向に応じて 0 または 1 になったときです。
 

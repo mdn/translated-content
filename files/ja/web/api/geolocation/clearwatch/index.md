@@ -3,12 +3,12 @@ title: "Geolocation: clearWatch() メソッド"
 short-title: clearWatch()
 slug: Web/API/Geolocation/clearWatch
 l10n:
-  sourceCommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
+  sourceCommit: 049b078b0fff80875027b89802b0399138df63a6
 ---
 
 {{securecontext_header}}{{ APIref("Geolocation API") }}
 
-**`Geolocation.clearWatch()`** メソッドは、以前 {{domxref("Geolocation.watchPosition()")}} によって登録された位置情報/エラーの監視ハンドラーを解除するために使用します。
+**`clearWatch()`** は {{domxref("Geolocation")}} インターフェイスのメソッドで、以前 {{domxref("Geolocation.watchPosition()")}} によって登録された位置情報/エラーの監視ハンドラーを解除するために使用します。
 
 ## 構文
 
@@ -36,7 +36,7 @@ function success(pos) {
   const crd = pos.coords;
 
   if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
-    console.log("Congratulations, you've reached the target!");
+    console.log("おめでとうございます。目的地に到着しました。");
     navigator.geolocation.clearWatch(id);
   }
 }

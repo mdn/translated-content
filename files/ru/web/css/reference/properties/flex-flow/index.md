@@ -33,7 +33,7 @@ flex-flow: unset;
 
 {{cssinfo}}
 
-Больше информации и свойств описано в [Using CSS flexible boxes](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox).
+Больше информации и свойств описано в [Using CSS flexible boxes](/ru/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts).
 
 ## Синтаксис
 
@@ -64,4 +64,4 @@ element {
 
 ## Смотрите также
 
-- [Using CSS flexible boxes](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Using CSS flexible boxes](/ru/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)

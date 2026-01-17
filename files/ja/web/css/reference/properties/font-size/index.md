@@ -1,9 +1,8 @@
 ---
 title: font-size
 slug: Web/CSS/Reference/Properties/font-size
-original_slug: Web/CSS/font-size
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
 **`font-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントの大きさを定義します。フォントの大きさを変更すると、フォントの大きさに相対的な {{cssxref("&lt;length&gt;")}} の単位例えば `em`, `ex`, なども更新されます。
@@ -190,9 +189,9 @@ span {
 
 ### ex
 
-`em` の単位と同様に、`ex` の単位を使用して設定された要素の `font-size` は、計算または動的に行われます。全く同じように動作しますが、`ex` の単位を使用して `font-size` プロパティを設定する場合、`font-size` はページで使用されている[最初に利用可能なフォント](https://www.w3.org/TR/css-fonts-3/#first-available-font)の x-height に等しいことを除いては、同じように動作します。数値は、要素の継承された `font-size` と `font-size` の複合体を相対的に乗算します。
+`em` の単位と同様に、`ex` の単位を使用して設定された要素の `font-size` は、計算または動的に行われます。全く同じように動作しますが、`ex` の単位を使用して `font-size` プロパティを設定する場合、`font-size` はページで使用されている[最初に利用可能なフォント](https://drafts.csswg.org/css-fonts/#first-available-font)の x 高 (x-height) に等しいことを除いては、同じように動作します。数値は、要素の継承された `font-size` と `font-size` の複合体を相対的に乗算します。
 
-`ex` などの[フォントに関する長さの単位](https://drafts.csswg.org/css-values-4/#font-relative-length)の詳細な説明はW3C Editor's Draftを参照してください。
+`ex` などの[フォントに関する長さの単位](https://drafts.csswg.org/css-values-4/#font-relative-length)の詳細な説明は W3C Editor's Draft を参照してください。
 
 ## 公式定義
 
@@ -251,4 +250,5 @@ span {
 - {{cssxref("font-weight")}}
 - {{cssxref("math-depth")}}
 - {{cssxref("math-style")}}
+- SVG の {{SVGAttr("font-size")}} 属性
 - [学習: 基本的なテキストとフォントのスタイル設定](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)

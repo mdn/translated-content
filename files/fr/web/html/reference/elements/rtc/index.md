@@ -1,48 +1,56 @@
 ---
 title: "<rtc> : l'élément de conteneur de texte Ruby"
 slug: Web/HTML/Reference/Elements/rtc
-original_slug: Web/HTML/Element/rtc
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+{{Deprecated_Header}}
 
-L'élément **`<rtc>`** permet d'ajouter des notations Ruby sémantiques. Il est donc « proche » des éléments liées à la représentation Ruby comme {{HTMLElement("rb")}}, {{HTMLElement("ruby")}}. Les éléments {{HTMLElement("rb")}} peuvent être annotés pour la prononciation ({{HTMLElement("rt")}}) ou pour la sémantique ({{HTMLElement("rtc")}}).
+L'élément [HTML](/fr/docs/Web/HTML) **`<rtc>`** sert à regrouper les annotations sémantiques des caractères présentés dans un ruby d'éléments {{HTMLElement("rb")}} utilisés à l'intérieur d'un élément {{HTMLElement("ruby")}}. Les éléments {{HTMLElement("rb")}} peuvent avoir à la fois des annotations de prononciation ({{HTMLElement("rt")}}) et des annotations sémantiques (`<rtc>`).
 
-{{InteractiveExample("HTML Demo: &lt;rtc&gt;", "tabbed-standard")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;rtc&gt;", "tabbed-standard")}}
 
 ```html interactive-example
-<ruby xml:lang="zh-Hant" style="ruby-position: under;">
-    <rbc>
-        <rb>馬</rb><rp>(</rp><rt>mǎ</rt><rp>)</rp>
-        <rb>來</rb><rp>(</rp><rt>lái</rt><rp>)</rp>
-        <rb>西</rb><rp>(</rp><rt>xī</rt><rp>)</rp>
-        <rb>亞</rb><rp>(</rp><rt>yà</rt><rp>)</rp>
-    </rbc>
-    <rtc xml:lang="en" style="ruby-position: over;">
-        <rp>(</rp><rt>Malaysia</rt><rp>)</rp>
-    </rtc>
+<ruby lang="zh-Hant">
+  <rbc>
+    <rb>馬</rb><rp>(</rp><rt>mǎ</rt><rp>)</rp>
+    <rb>來</rb><rp>(</rp><rt>lái</rt><rp>)</rp>
+    <rb>西</rb><rp>(</rp><rt>xī</rt><rp>)</rp>
+    <rb>亞</rb><rp>(</rp><rt>yà</rt><rp>)</rp>
+  </rbc>
+  <rtc lang="fr">
+    <rp>(</rp><rt>Malaisie</rt><rp>)</rp>
+  </rtc>
 </ruby>
 ```
 
 ```css interactive-example
 ruby {
   font-size: 2em;
+  ruby-position: under;
+}
+
+rtc {
+  ruby-position: over;
 }
 ```
 
 ## Attributs
 
-Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Exemples
 
-### HTML
-
 ```html
-<ruby>
-  <rb>旧</rb> <rt>jiù</rt> <rb>金</rb> <rt>jīn</rt> <rb>山</rb> <rt>shān</rt>
-  <rtc>San Francisco</rtc>
-</ruby>
+<div class="info">
+  <ruby>
+    <rbc>
+      <rb>旧</rb><rt>jiù</rt> <rb>金</rb><rt>jīn</rt> <rb>山</rb><rt>shān</rt>
+    </rbc>
+    <rtc>San Francisco</rtc>
+  </ruby>
+</div>
 ```
 
 ```css hidden
@@ -54,7 +62,7 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Referen
 
 ### Résultat
 
-{{EmbedLiveSample("",600,120)}}
+{{EmbedLiveSample("Exemples", 600, 120)}}
 
 ## Résumé technique
 
@@ -63,7 +71,7 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Referen
     <tr>
       <th scope="row">
         <dfn
-          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
+          ><a href="/fr/docs/Web/HTML/Guides/Content_categories"
             >Catégories de contenu</a
           ></dfn
         >
@@ -75,7 +83,7 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Referen
       <td>
         Du
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
         >
         ou des éléments {{HTMLElement("rt")}}.
@@ -100,7 +108,7 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Referen
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
+      <td>{{DOMxRef("HTMLElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -115,8 +123,7 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Referen
 
 ## Voir aussi
 
-- {{HTMLElement("ruby")}}
-- {{HTMLElement("rp")}}
-- {{HTMLElement("rb")}}
-- {{HTMLElement("rt")}}
-- {{HTMLElement("rtc")}}
+- L'élément {{HTMLElement("ruby")}}
+- L'élément {{HTMLElement("rp")}}
+- L'élément {{HTMLElement("rb")}}
+- L'élément {{HTMLElement("rt")}}

@@ -3,7 +3,7 @@ title: 함수
 slug: Web/JavaScript/Guide/Functions
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}
 
 함수는 JavaScript에서 기본 구성 요소 중 하나입니다. JavaScript의 함수는 작업을 수행하거나 값을 계산하는 명령문의 집합인 프로시저(procedure)와 비슷하지만, 프로시저가 함수로 쓰이려면 입력을 반드시 받아야 하고 입력과 명확한 관계가 있는 출력을 반환해야 합니다. 함수를 사용하려면 함수를 호출할 스코프 내에서 함수를 정의해야 합니다.
 
@@ -761,4 +761,4 @@ JavaScript에는 몇 가지 최상위 레벨의 내장 함수가 있습니다:
 - {{jsxref("Global_Objects/unescape", "unescape()")}} {{deprecated_inline}}
   - 곧 사라질 **`unescape()`** 메소드는 문자열에서 확장 비트열이 확장 비트열이 나타내는 문자로 바뀌어진 문자열로 계산합니다. {{jsxref("Global_Objects/escape", "escape")}}에서 확장 비트열이 소개될 것입니다. `unescape()` 메소드가 곧 사라지기 때문에, {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} or {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} 를 대신 사용하세요.
 
-{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
+{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}

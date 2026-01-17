@@ -538,6 +538,7 @@
 /zh-CN/docs/Glossary/Simple_response_header	/zh-CN/docs/Glossary/CORS-safelisted_response_header
 /zh-CN/docs/Glossary/Transferable_objects	/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects
 /zh-CN/docs/Glossary/XHR_(XMLHttpRequest)	/zh-CN/docs/Glossary/XMLHttpRequest
+/zh-CN/docs/Glossary/eTLD	/zh-CN/docs/Glossary/Registrable_domain
 /zh-CN/docs/Glossary/主轴	/zh-CN/docs/Glossary/Main_Axis
 /zh-CN/docs/Glossary/交叉轴	/zh-CN/docs/Glossary/Cross_Axis
 /zh-CN/docs/Glossary/代理服务器	/zh-CN/docs/Glossary/Proxy_server

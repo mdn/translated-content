@@ -1,9 +1,8 @@
 ---
 title: ::placeholder
 slug: Web/CSS/Reference/Selectors/::placeholder
-original_slug: Web/CSS/::placeholder
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::placeholder`** représente [le texte de substitution](/fr/docs/Web/HTML/Reference/Elements/input#placeholder) pour un élément {{HTMLElement("input")}} ou {{HTMLElement("textarea")}}.
@@ -34,7 +33,7 @@ input::placeholder {
   placeholder="Il doit comporter 10 chiffres" />
 ```
 
-Seul le sous-ensemble des propriétés CSS qui s'appliquent au pseudo-élément {{cssxref("::first-line")}} peut être utilisé dans une règle utilisant `::placeholder` dans son sélecteur.
+Seul le sous-ensemble des propriétés CSS qui s'appliquent au pseudo-élément {{CSSxRef("::first-line")}} peut être utilisé dans une règle utilisant `::placeholder` dans son sélecteur.
 
 > [!NOTE]
 > Par défaut, dans la plupart des navigateurs, le texte de substitution est écrit en gris clair.
@@ -65,7 +64,7 @@ La valeur du contraste est déterminée en comparant la luminosité de la couleu
 
 #### Utilisabilité
 
-Les textes de substitution avec un contraste suffisamment élevé peuvent être pris pour des textes saisis par l'utilisateur·ice. De plus, les textes de substitution disparaissent lorsqu'une personne saisit du contenu dans l'élément {{htmlelement("input")}}. Pour ces deux raisons, les textes de subsitution peuvent gêner la complétion du formulaire, notamment pour les personnes souffrant de troubles cognitifs.
+Les textes de substitution avec un contraste suffisamment élevé peuvent être pris pour des textes saisis par l'utilisateur·ice. De plus, les textes de substitution disparaissent lorsqu'une personne saisit du contenu dans l'élément {{HTMLElement("input")}}. Pour ces deux raisons, les textes de subsitution peuvent gêner la complétion du formulaire, notamment pour les personnes souffrant de troubles cognitifs.
 
 Une autre méthode consiste à fournir cette information en l'incluant à proximité du champ mais en dehors et d'utiliser l'attribut [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) afin de relier l'élément {{HTMLElement("input")}} à l'indication associée.
 
@@ -89,7 +88,7 @@ Le texte de substitution apparaîtra avec le même style que le contenu textuel 
 
 ### Libellés
 
-Les textes de substitution ne doivent pas remplacer les éléments {{htmlelement("label")}}. Sans libellé associé grâce à [`for`](/fr/docs/Web/HTML/Reference/Elements/label#for) et à [`id`](/fr/docs/Web/HTML/Reference/Global_attributes#id), les outils d'assistance tels que les lecteurs d'écran ne peuvent pas correctement analyser les éléments {{htmlelement("input")}}.
+Les textes de substitution ne doivent pas remplacer les éléments {{HTMLElement("label")}}. Sans libellé associé grâce à [`for`](/fr/docs/Web/HTML/Reference/Elements/label#for) et à [`id`](/fr/docs/Web/HTML/Reference/Global_attributes#id), les outils d'assistance tels que les lecteurs d'écran ne peuvent pas correctement analyser les éléments {{HTMLElement("input")}}.
 
 - [_Placeholders in Form Fields Are Harmful_ — Nielsen Norman Group <sup>(angl.)</sup>](https://www.nngroup.com/articles/form-design-placeholders/)
 
@@ -122,7 +121,7 @@ input::placeholder {
 
 ### Texte opaque
 
-Certains navigateurs rendent le texte de substitution moins opaque. Si vous souhaitez un texte entièrement opaque, définissez explicitement la valeur de la propriété {{CSSXref("color")}}. La valeur [`currentColor`](/fr/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) peut être utilisée pour avoir la même couleur que l'élément d'entrée correspondant.
+Certains navigateurs rendent le texte de substitution moins opaque. Si vous souhaitez un texte entièrement opaque, définissez explicitement la valeur de la propriété {{CSSxRef("color")}}. La valeur [`currentColor`](/fr/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) peut être utilisée pour avoir la même couleur que l'élément d'entrée correspondant.
 
 #### HTML
 
@@ -169,7 +168,7 @@ input {
 
 ## Voir aussi
 
-- La pseudo-classe {{cssxref(":placeholder-shown")}} de mise en forme d'un élément qui _a_ un texte de substitution actif.
+- La pseudo-classe {{CSSxRef(":placeholder-shown")}} de mise en forme d'un élément qui _a_ un texte de substitution actif.
 - Les éléments HTML associés&nbsp;:
   - {{HTMLElement("input")}}
   - {{HTMLElement("textarea")}}

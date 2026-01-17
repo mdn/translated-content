@@ -2,7 +2,7 @@
 title: CORS
 slug: Glossary/CORS
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
 **CORS** (Partage de ressource cross-origin) est un mécanisme qui consiste à transmettre des {{Glossary("HTTP_header", "entêtes HTTP")}}, qui déterminent s'il faut ou non bloquer les requêtes à des ressources restreintes sur une page web qui se trouve sur un domaine externe au domaine dont la ressource est originaire.

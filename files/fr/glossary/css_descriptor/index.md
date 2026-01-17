@@ -2,7 +2,7 @@
 title: Descripteur (CSS)
 slug: Glossary/CSS_Descriptor
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Un **descripteur CSS** définit les caractéristiques des [règles @](/fr/docs/Web/CSS/Guides/Syntax/At-rules). Celles-ci autorisent les valeurs sous la forme de descripteurs. Chaque règle est composée d'un sélecteur et d'un descripteur. Le descripteur a&nbsp;:
