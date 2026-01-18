@@ -647,8 +647,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       <td>
         <p>
           Pour ces éléments, cet attribut définit la hauteur occupée par
-          l'élément. Pour les autres éléments, on utilisera la propriété CSS
-          <a href="/fr/docs/Web/CSS/height"><code>height</code></a>.
+          l'élément. Pour les autres éléments, on utilisera la propriété CSS {{CSSxRef("height")}}.
         </p>
         <div class="note notecard">
           <p>
@@ -722,7 +721,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/Security/Subresource_Integrity"
+        <a href="/fr/docs/Web/Security/Defenses/Subresource_Integrity"
           ><code>integrity</code></a
         >
       </td>
@@ -730,7 +729,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       <td>
         <p>
           Définit une valeur
-          <a href="/fr/docs/Web/Security/Subresource_Integrity">Subresource Integrity</a>
+          <a href="/fr/docs/Web/Security/Defenses/Subresource_Integrity">Subresource Integrity</a>
           qui permet aux navigateurs de vérifier ce qu'ils récupèrent.
         </p>
       </td>

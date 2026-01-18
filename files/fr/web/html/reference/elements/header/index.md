@@ -131,7 +131,7 @@ Lorsqu'il est placé à l'intérieur d'un {{HTMLElement("article")}}, d'un {{HTM
         <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
         >
-        mais sans élément descendant qui soit <code>&lt;header&gt;</code> ou <a href="/fr/docs/Web/HTML/Element/footer"><code>&lt;footer&gt;</code></a>.
+        mais sans élément descendant qui soit <code>&lt;header&gt;</code> ou {{HTMLElement("footer")}}.
       </td>
     </tr>
     <tr>
@@ -145,8 +145,8 @@ Lorsqu'il est placé à l'intérieur d'un {{HTMLElement("article")}}, d'un {{HTM
         <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >contenu de flux</a
         >. Il est à noter qu'un élément <code>&lt;header&gt;</code> ne doit pas
-        descendre d'un élément <a href="/fr/docs/Web/HTML/Element/address"><code>&lt;address&gt;</code></a>,
-        <a href="/fr/docs/Web/HTML/Element/footer"><code>&lt;footer&gt;</code></a> ou d'un autre élément
+        descendre d'un élément {{HTMLElement("address")}},
+        {{HTMLElement("footer")}} ou d'un autre élément
         <code>&lt;header&gt;</code>.
       </td>
     </tr>
