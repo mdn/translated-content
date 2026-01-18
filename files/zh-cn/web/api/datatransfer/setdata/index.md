@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML Drag and Drop API")}}
 
-**`DataTransfer.setData()`** 方法用来设置拖动操作的[拖动数据](/zh-CN/docs/Web/API/DataTransfer)为指定的数据和类型。如果给定类型的数据不存在，则将其添加到拖动数据存储的末尾，使得 {{domxref("DataTransfer.types","types")}} 列表中的最后一个项目将是新类型。如果给定类型的数据已经存在，现有数据将被替换为相同的位置。即当替换相同类型的数据时，{{domxref("DataTransfer.types","types")}} 列表的顺序不会更改。
+**`DataTransfer.setData()`** 方法用来设置拖动操作的[拖动数据](/zh-CN/docs/Web/API/DataTransfer)为指定的数据和类型。如果给定类型的数据不存在，则将其添加到拖动数据存储的末尾，使得 {{domxref("DataTransfer.types","types")}} 列表中的最后一个项目将是新类型。如果给定类型的数据已经存在，则现有数据将在相同的位置被替换。即当替换相同类型的数据时，{{domxref("DataTransfer.types","types")}} 列表的顺序不会更改。
 
 示例数据类型包括 `text/plain` 和 `text/uri-list`。
 
