@@ -425,7 +425,7 @@ tbody > tr > td:last-of-type {
 
 ## Voir aussi
 
-- [Apprendre&nbsp;: bases des tableaux HTML](/fr/docs/Learn/HTML/Tables/Basics)
+- [Apprendre&nbsp;: bases des tableaux HTML](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - Autres éléments liés aux tableaux&nbsp;: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}
 - La propriété CSS {{CSSxRef("background-color")}} pour définir la couleur d'arrière-plan de chaque cellule du corps
 - La propriété CSS {{CSSxRef("border")}} pour contrôler les bordures des cellules du corps
