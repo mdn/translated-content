@@ -1,7 +1,8 @@
 ---
 title: text-orientation
 slug: Web/CSS/Reference/Properties/text-orientation
-original_slug: Web/CSS/text-orientation
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`text-orientation`** は [CSS](/ja/docs/Web/CSS) のプロパティで、行内のテキストの向きを設定します。このプロパティは縦書きのテキスト ({{cssxref("writing-mode")}} が `horizontal-tb` 以外の場合) でのみ効果があります。これは縦書きを使用する言語の表示を制御したり、縦書きの表見出しを作成したりするのに有用です。
@@ -42,7 +43,8 @@ text-orientation: use-glyph-orientation;
 /* グローバル値 */
 text-orientation: inherit;
 text-orientation: initial;
-text-orientation: initial;
+text-orientation: revert;
+text-orientation: revert-layer;
 text-orientation: unset;
 ```
 
@@ -51,11 +53,11 @@ text-orientation: unset;
 ### 値
 
 - `mixed`
-  - : 横書き用の文字を右に 90° 回転させ、縦書き用の文字は自然に配置します。既定値です。
+  - : 横書きの文字（訳注：ラテン文字など）は右に 90° 回転させ、縦書きの文字（訳注：漢字など）は自然に配置します。デフォルト値です。
 - `upright`
-  - : 横書き用の文字を、縦書き用の字形と同様に自然に (正立で) 配置します。なお、このキーワードはすべての文字を左書きと見なします。 {{cssxref("direction")}} の使用値は `ltr` に強制されます。
+  - : 横書きの文字を、縦書きの文字と同様に自然に（正立で）配置します。なお、このキーワードはすべての文字を左書きと見なします。 {{cssxref("direction")}} の使用値は `ltr` に強制されます。
 - `sideways`
-  - : 全行を横書きで書いて 90° 回転したように配置します。
+  - : 文字を横書きでレイアウトし、行全体を時計回りに 90 度回転させます。
 - `sideways-right`
   - : `sideways` の別名です。これは互換性のために維持されています。
 - `use-glyph-orientation`
@@ -69,7 +71,7 @@ text-orientation: unset;
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### HTML
 
