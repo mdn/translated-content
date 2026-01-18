@@ -1,12 +1,11 @@
 ---
 title: quotes
 slug: Web/CSS/Reference/Properties/quotes
-original_slug: Web/CSS/quotes
 l10n:
-  sourceCommit: b2c8dcdae36907a87d1d1b9393ca4a35ebc765d6
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-[CSS](/ja/docs/Web/CSS) の **`quotes`** プロパティは、HTML の {{HTMLElement("q")}} 要素に自動的に追加される引用符、または CSS の [`content`](/ja/docs/Web/CSS/Reference/Properties/content) プロパティの `open-quotes` または `close-quotes` 値を使用して追加される引用符（`no-open-quote` および `no-close-quote` を使用して省略される場合もあります）を、ブラウザーがどのようにレンダリングするかを設定します。
+[CSS](/ja/docs/Web/CSS) の **`quotes`** プロパティは、HTML の {{HTMLElement("q")}} 要素に自動的に追加される引用符、または CSS の {{cssxref("content")}} プロパティの `open-quotes` または `close-quotes` 値を使用して追加される引用符（`no-open-quote` および `no-close-quote` を使用して省略される場合もあります）を、ブラウザーがどのようにレンダリングするかを設定します。
 
 {{InteractiveExample("CSS デモ: quotes")}}
 
@@ -80,7 +79,7 @@ quotes: unset;
     どの引用符のペアが使用されるかは、引用符の深さ、つまり入れ子レベルによって決まります。これは、現在の出現箇所までの、生成されたテキスト全体における `<q>` 引用符または `open-quote` （または `no-open-quote`） の出現回数から、`</q>`、`close-quote`、`no-close-quote` として出現する閉じ引用符の出現回数を引いたものです。深さが 0 の場合は最初のペアが使用され、深さが 1 の場合は 2 つ目のペアが使用されます。
 
 > [!NOTE]
-> The CSS `content` property value `open-quote` increments and `no-close-quote` decrements the quoting level, but does not insert a quotation marks.
+> CSS の `content` プロパティの値 `open-quote` は引用レベルを増加させ、`no-close-quote` は減少させますが、引用符自体は挿入しません。
 
 ## 公式定義
 
@@ -122,7 +121,6 @@ quotes: unset;
       >, - писал Раджу.
     </p>
   </li>
-  <ul></ul>
 </ul>
 ```
 

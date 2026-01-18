@@ -1,7 +1,8 @@
 ---
 title: unicode-bidi
 slug: Web/CSS/Reference/Properties/unicode-bidi
-original_slug: Web/CSS/unicode-bidi
+l10n:
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`unicode-bidi`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("direction")}} プロパティと共に、文書内の双方向テキストの扱いを指定します。例えば、テキストブロックに左書き (LTR) と右書き (RTL) の両方のテキストが含まれている場合、ユーザーエージェントは、複雑な Unicode アルゴリズムを用いてテキストの表示方法を決定します。 `unicode-bidi` プロパティは、このアルゴリズムを上書きして開発者がテキストの埋め込みを制御できるようにします。
@@ -52,6 +53,7 @@ unicode-bidi: plaintext;
 unicode-bidi: inherit;
 unicode-bidi: initial;
 unicode-bidi: revert;
+unicode-bidi: revert-layer;
 unicode-bidi: unset;
 ```
 
@@ -112,3 +114,5 @@ unicode-bidi: unset;
 ## 関連情報
 
 - {{Cssxref("direction")}}
+- SVG の {{SVGAttr("unicode-bidi")}} 属性
+- [テキストの様々な方向の扱い](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)
