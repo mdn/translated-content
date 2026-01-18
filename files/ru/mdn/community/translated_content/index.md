@@ -45,7 +45,7 @@ slug: MDN/Community/Translated_content
 ### Французский (`fr`)
 
 - Обсуждения: [Matrix (`#l10n-fr`)](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org)
-- Активные участники: [cw118](https://github.com/cw118), [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb)
+- Активные участники: [cw118](https://github.com/cw118), [tristantheb](https://github.com/tristantheb)
 
 ### Японский (`ja`)
 

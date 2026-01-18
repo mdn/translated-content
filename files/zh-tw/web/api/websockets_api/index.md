@@ -2,7 +2,7 @@
 title: WebSocket API (WebSocket)
 slug: Web/API/WebSockets_API
 l10n:
-  sourceCommit: bba3b20fda0f5b9893df4f2226eb95433ac3152f
+  sourceCommit: dc788bf0ea36cb1ebe809c82aaae2c77cb3e18c0
 ---
 
 {{DefaultAPISidebar("WebSockets API")}}{{AvailableInWorkers}}
@@ -17,7 +17,7 @@ WebSocket API 提供了兩種建立和使用 Web Socket 連線的替代機制：
 此外，[WebTransport API](/zh-TW/docs/Web/API/WebTransport_API) 預計將在許多應用程式中取代 WebSocket API。WebTransport 是一個多功能、低階的 API，它提供了背壓和許多 `WebSocket` 或 `WebSocketStream` 都不支援的功能，例如單向串流、亂序傳遞，以及透過資料包進行的不可靠資料傳輸。WebTransport 的使用比 WebSockets 更複雜，其跨瀏覽器支援也不那麼廣泛，但它能夠實現複雜的解決方案。如果標準的 WebSocket 連線很適合你的使用案例，並且你需要廣泛的瀏覽器相容性，你應該使用 WebSockets API 來快速上手。然而，如果你的應用程式需要非標準的自訂解決方案，那麼你應該使用 WebTransport API。
 
 > [!NOTE]
-> 雖然 WebSocket 連線在功能上與標準的 Unix 風格通訊端有些相似，但它們之間沒有關聯。
+> 如果頁面有一個開啟的 WebSocket 連線，瀏覽器可能不會將其加入 {{glossary("bfcache")}}。因此，當使用者結束使用頁面時，關閉連線是一個好的做法。參見[使用 bfcache](/zh-TW/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications#使用_bfcache)。
 
 ## 介面
 
@@ -35,7 +35,7 @@ WebSocket API 提供了兩種建立和使用 Web Socket 連線的替代機制：
 HTTP 標頭用於 [WebSocket 交握](/zh-TW/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#websocket_交握)中：
 
 - {{HTTPHeader("Sec-WebSocket-Key")}}
-  - : 一個 HTTP 請求標頭，包含來自用戶端的 nonce。這在 [WebSocket 開啟交握](/zh-TW/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#websocket_交握) 中用來驗證用戶端明確打算開啟一個 WebSocket。它由瀏覽器自動新增。
+  - : 一個 HTTP 請求標頭，包含來自用戶端的 {{Glossary("Nonce", "nonce")}}。這在 [WebSocket 開啟交握](/zh-TW/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#websocket_交握) 中用來驗證用戶端明確打算開啟一個 WebSocket。它由瀏覽器自動新增。
 - {{HTTPHeader("Sec-WebSocket-Accept")}}
   - : 一個 HTTP {{glossary("response header", "回應標頭")}}，用於 _WebSocket 開啟交握_ 中，表示伺服器願意升級到 WebSocket 連線。指令中的值是根據對應請求中 `Sec-WebSocket-Key` 的值計算出來的。
 - {{HTTPHeader("Sec-WebSocket-Version")}}

@@ -32,7 +32,7 @@ Si vous avez besoin d'aide ou si vous avez des questions, n'hésitez pas à cont
 ### Français (`fr`)
 
 - Discussions&nbsp;: [Matrix (`#l10n-fr`)](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org)
-- Contributeurs actuels&nbsp;: [cw118](https://github.com/cw118), [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb)
+- Contributeurs actuels&nbsp;: [cw118](https://github.com/cw118), [tristantheb](https://github.com/tristantheb)
 
 ### Japonais (`ja`)
 

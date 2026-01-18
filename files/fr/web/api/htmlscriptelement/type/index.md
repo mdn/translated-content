@@ -3,7 +3,7 @@ title: "HTMLScriptElement : propriété type"
 short-title: type
 slug: Web/API/HTMLScriptElement/type
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 9f7e7e9075e9f2b1937d2c8000f52a8ff76bff52
 ---
 
 {{APIRef("HTML DOM")}}
@@ -32,12 +32,12 @@ Pour plus d'informations, veuillez consulter l'attribut [`type`](/fr/docs/Web/HT
 ## Exemples
 
 ```html
-<script id="el" type="text/javascript"></script>
+<script id="el" type="module"></script>
 ```
 
 ```js
 const el = document.getElementById("el");
-console.log(el.type); // Affiche : "text/javascript"
+console.log(el.type); // Affiche : "module"
 ```
 
 ## Spécifications

@@ -9,7 +9,7 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<search>`** est un conteneur représent
 
 ## Attributs
 
-Cet élément inclut uniquement les [attributs globaux](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 
@@ -42,7 +42,7 @@ Cet exemple démontre l'utilisation de `<search>` comme conteneur pour une reche
 
 #### Résultat
 
-{{EmbedLiveSample('Header search form')}}
+{{EmbedLiveSample('Formulaire de recherche dans l'en-tête')}}
 
 ### Application Web de recherche
 
@@ -75,7 +75,7 @@ Cet exemple démontre le contenu potentiel du DOM lors de l'inclusion dynamique 
 
 #### Résultat
 
-{{EmbedLiveSample('application_web_de_recherche')}}
+{{EmbedLiveSample('Application Web de recherche')}}
 
 > [!NOTE]
 > Rappelez-vous que certains utilisateurs n'ont pas JavaScript, et aucun de vos utilisateurs n'a JavaScript en cours d'exécution jusqu'à ce que le JavaScript soit téléchargé, analysé et exécuté avec succès. Assurez-vous que vos utilisateurs peuvent accéder au contenu de votre site avec JavaScript désactivé.
@@ -107,7 +107,7 @@ This example demonstrates a page with two search features. The first is a global
 
 #### Résultat
 
-{{EmbedLiveSample('recherches_multiples')}}
+{{EmbedLiveSample('Recherches multiples')}}
 
 ## Résumé technique
 
@@ -145,7 +145,7 @@ This example demonstrates a page with two search features. The first is a global
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
+      <td>{{DOMxRef("HTMLElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -160,10 +160,5 @@ This example demonstrates a page with two search features. The first is a global
 
 ## Voir aussi
 
-- Autres éléments liés à la recherche&nbsp;:
-  - {{HTMLElement("header")}}
-  - {{HTMLElement("footer")}}
-  - {{HTMLElement("aside")}}
-  - {{HTMLElement("nav")}}
-  - {{HTMLElement("form")}}
-- [ARIA: le rôle de recherche](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/search_role)
+- Autres éléments liés à la recherche&nbsp;: {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}}, {{HTMLElement("form")}}
+- [ARIA: le rôle `search`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/search_role)

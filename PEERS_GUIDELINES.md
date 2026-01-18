@@ -26,7 +26,6 @@ The review teams for each locale are:
   - [nathipg](https://github.com/nathipg)
 - French (`fr`) content — the [yari-content-fr](https://github.com/orgs/mdn/teams/yari-content-fr) team, which consists of:
   - [cw118](https://github.com/cw118)
-  - [SphinxKnight](https://github.com/SphinxKnight)
   - [tristantheb](https://github.com/tristantheb)
 - Japanese (`ja`) content — the [yari-content-ja](https://github.com/orgs/mdn/teams/yari-content-ja) team, which consists of:
   - [hmatrjp](https://github.com/hmatrjp)

@@ -1,36 +1,42 @@
 ---
-title: <strike>
+title: "<strike> : l'élément obsolète de texte barré"
 slug: Web/HTML/Reference/Elements/strike
-original_slug: Web/HTML/Element/strike
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{deprecated_header}}{{HTMLSidebar}}
+{{Deprecated_Header}}
 
-L'élément HTML **`<strike>`** permet de représenter du texte barré ou avec une ligne le traversant.
+L'élément [HTML](/fr/docs/Web/HTML) **`<strike>`** permet de représenter du texte barré ou avec une ligne le traversant.
 
-> [!NOTE]
-> Comme tous les éléments se limitant à la présentation, {{HTMLElement("strike")}} a été déprécié en HTML 4 et XHTML 1, et rendu obsolète dans HTML5. Si on souhaite représente du contenu _supprimé_, on utilisera l'élément {{HTMLElement("del")}} ; dans les autres cas, on utilisera un élément {{HTMLElement("s")}}.
+> [!WARNING]
+> Cet élément est obsolète dans HTML 4 et XHTML 1, et supprimé dans le [HTML Living Standard <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/obsolete.html#strike). Si cela est sémantiquement approprié, c'est-à-dire s'il représente du contenu _supprimé_, utilisez plutôt {{HTMLElement("del")}}. Dans tous les autres cas, utilisez {{HTMLElement("s")}}.
 
 ## Attributs
 
-Cet élément n'a aucun autre attribut en dehors [des attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes), communs à tous les éléments.
-
-## Interface DOM
-
-Cet élément implémente l'interface {{domxref("HTMLElement")}}.
-
-> [!NOTE]
-> Jusqu'à Gecko 1.9.2 inclus, Firefox implémente l'interface {{domxref("HTMLSpanElement")}} pour cet élément.
+Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Exemples
 
 ```html
-<strike> Plat du jour : Saumon </strike> ÉPUISÉ
+&lt;strike&gt;: <strike>Plat du jour&nbsp;: Saumon</strike> ÉPUISÉ<br />
+&lt;s&gt;: <s>Plat du jour&nbsp;: Saumon</s> ÉPUISÉ
 ```
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples","100%","140")}}
+{{EmbedLiveSample("Exemples")}}
+
+## Résumé technique
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Interface DOM</th>
+      <td>{{DOMxRef("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Spécifications
 
@@ -42,6 +48,6 @@ Cet élément implémente l'interface {{domxref("HTMLElement")}}.
 
 ## Voir aussi
 
-- L'élément {{HTMLElement("s")}}, proche de {{HTMLElement("strike")}}, également obsolète
-- L'élément {{HTMLElement("del")}} qui doit être utilisé lorsque le contenu a été _supprimé_
-- La propriété CSS {{cssxref("text-decoration")}} qui permet d'obtenir le même effet visuel que l'élément {{HTMLElement("strike")}}
+- L'élément {{HTMLElement("s")}}
+- L'élément {{HTMLElement("del")}} qui doit être utilisé lorsque le contenu a été _supprimé_.
+- La propriété CSS {{CSSxRef("text-decoration")}} qui peut être utilisée pour mettre en forme du texte barré.

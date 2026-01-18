@@ -1,21 +1,29 @@
 ---
-title: HTMLSelectElement.setCustomValidity()
+title: "HTMLSelectElement : méthode setCustomValidity()"
+short-title: setCustomValidity()
 slug: Web/API/HTMLSelectElement/setCustomValidity
+l10n:
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("HTML DOM")}}
 
-La méthode **`HTMLSelectElement.setCustomValidity()`** définit le message de validation personnalisé de l'élément sélectionné avec le message renseigné. Utiliser une chaîne de caractère vide indique que l'élément _n'a pas_ de message d'erreur de validation personnalisé.
+La méthode **`setCustomValidity()`** de l'interface {{DOMxRef("HTMLSelectElement")}} définit le message de validation personnalisé de l'élément sélectionné avec le message renseigné. Utiliser une chaîne de caractère vide indique que l'élément _n'a pas_ de message d'erreur de validation personnalisé.
 
 ## Syntaxe
 
-```js
-ElmSelectionne.setCustomValidity(message);
+```js-nolint
+setCustomValidity(string)
 ```
 
 ### Paramètres
 
-- _message_ est le {{domxref("DOMString")}} contenant le message d'erreur.
+- `string`
+  - : La chaîne de caractères contenant le message d'erreur. Une chaîne vide supprime toute erreur de validité personnalisée.
+
+### Valeur de retour
+
+Aucune ({{JSxRef("undefined")}}).
 
 ## Spécifications
 
@@ -27,4 +35,4 @@ ElmSelectionne.setCustomValidity(message);
 
 ## Voir aussi
 
-- [Validation du formulaire](/fr/docs/Web/HTML/Guides/Constraint_validation).
+- [Validation du formulaire](/fr/docs/Web/HTML/Guides/Constraint_validation)

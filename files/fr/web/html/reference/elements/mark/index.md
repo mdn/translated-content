@@ -7,7 +7,7 @@ l10n:
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<mark>`** représente du texte qui est **marqué** ou **surligné** à des fins de référence ou de notation, en raison de la pertinence du passage marqué dans le contexte qui l'entoure.
 
-{{InteractiveExample("HTML Demo: &lt;mark&gt;", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;mark&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>Résultats de recherche pour «&nbsp;salamandre&nbsp;»&nbsp;:</p>

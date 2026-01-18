@@ -31,7 +31,7 @@ l10n:
 ### フランス語 (`fr`)
 
 - ディスカッション: [Matrix (`#l10n-fr`)](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org)
-- 現在の管理者: [cw118](https://github.com/cw118), [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb)
+- 現在の管理者: [cw118](https://github.com/cw118), [tristantheb](https://github.com/tristantheb)
 
 ### 日本語 (`ja`)
 
