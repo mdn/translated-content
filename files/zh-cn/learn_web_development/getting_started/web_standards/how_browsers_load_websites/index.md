@@ -1,8 +1,6 @@
 ---
 title: 浏览器如何加载网页
 slug: Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites
-page-type: tutorial-chapter
-sidebar: learnsidebar
 ---
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Soft_skills", "Learn_web_development/Getting_started/Web_standards")}}
