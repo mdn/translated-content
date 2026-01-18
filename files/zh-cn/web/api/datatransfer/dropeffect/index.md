@@ -78,7 +78,7 @@ const target = document.getElementById("target");
 
 source.addEventListener("dragstart", (ev) => {
   console.log(
-    `dragStart: dropEffect = ${ev.dataTransfer.dropEffect} ; effectAllowed = ${ev.dataTransfer.effectAllowed}`,
+    `dragStart：dropEffect = ${ev.dataTransfer.dropEffect}；effectAllowed = ${ev.dataTransfer.effectAllowed}`,
   );
 
   // 将该元素的 id 添加到拖动负载中，以便放置事件的处理器能分清要将哪个元素添加到树中
@@ -88,7 +88,7 @@ source.addEventListener("dragstart", (ev) => {
 
 target.addEventListener("drop", (ev) => {
   console.log(
-    `drop: dropEffect = ${ev.dataTransfer.dropEffect} ; effectAllowed = ${ev.dataTransfer.effectAllowed}`,
+    `drop：dropEffect = ${ev.dataTransfer.dropEffect}；effectAllowed = ${ev.dataTransfer.effectAllowed}`,
   );
   ev.preventDefault();
 
