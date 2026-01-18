@@ -5,13 +5,13 @@ l10n:
   sourceCommit: f81599343ec5bd4571b3adaa1c6e4d5ded60b8e1
 ---
 
-`aria-label` 属性定义了用于为交互元素命名的字符串值（只要该元素的角色没有[禁止命名](#关联角色)）。
+`aria-label` 属性定义了用于为元素命名的字符串值（只要该元素的角色没有[禁止命名](#关联角色)）。
 
 ## 描述
 
 有时，元素缺少定义默认{{Glossary("accessible_name", "无障碍名称")}}，或者无障碍名称并不准确描述元素的内容，且在 DOM 中没有可见内容可以与对象相关联以赋予其含义。一个常见的示例是包含 SVG 图标但没有随附任何文本的按钮。
 
-当元素不是[禁止列表](#关联角色)其一，没有无障碍名称或或无障碍名称不准确，且在 DOM 中没有可见内容可以通过 [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 属性引用时，你可以使用 `aria-label` 属性为设置了该属性的交互元素提供标签字符串，进而能为交互元素提供无障碍名称。
+当元素不在[禁止列表](#关联角色)中，没有无障碍名称或或无障碍名称不准确，且在 DOM 中没有可见内容可以通过 [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 属性引用时，你可以使用 `aria-label` 属性为设置了该属性的交互元素提供标签字符串，进而能为交互元素提供无障碍名称。
 
 以下代码示例演示了如何使用 `aria-label` 属性为 `<button>` 元素提供无障碍名称的示例。在这个示例中，按钮由一个 SVG 图形组成而未包含任何文本内容。因此，要让屏幕阅读器用户理解按钮的功能（此示例中即“关闭”）而言，你就必须要使用 `aria-label`。
 
@@ -37,7 +37,7 @@ document.querySelector("button").addEventListener("click", () => {
 ```
 
 > [!NOTE]
-> `aria-label` 旨在命名隐式或显式角色并不禁止命名的元素。若元素包含可参考的可见标签，且能从中取得元素命名时，我们强烈建议优先使用 `aria-labelledby` 而非 `aria-label`
+> `aria-label` 旨在命名隐式或显式角色并不禁止命名的元素。若元素包含可参考的可见标签，且能从中取得元素命名时，我们强烈建议优先使用 `aria-labelledby` 而非 `aria-label`。
 
 大多数内容都有一个从其直接包装元素的文本内容生成的无障碍名称。无障碍名称也可以通过某些属性或相关元素创建。
 
@@ -108,4 +108,4 @@ document.querySelector("button").addEventListener("click", () => {
 - {{HTMLElement('label')}} 元素
 - [`aria-description`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description)
 - [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
-- MDN 博客中的[使用 HTML 地标角色来提高无障碍性](/zh-CN/blog/aria-accessibility-html-landmark-roles/)（2023）
+- MDN 博客中的[使用 HTML 地标角色来提高无障碍性](/en-US/blog/aria-accessibility-html-landmark-roles/)（2023）
