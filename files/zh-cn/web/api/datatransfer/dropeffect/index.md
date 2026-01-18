@@ -12,7 +12,7 @@ l10n:
 
 当 {{domxref("DataTransfer")}} 被创建时，`dropEffect` 被设置为一个字符串。读取该值会返回它的当前值。设置该值时，若新值是下面列出的值中的一个，这个属性的值就会被设置为这个新的值，其他的值都会被忽略。
 
-对于 [`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event) 和 [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event) 事件，`dropEffect` 会根据用户的请求的行为进行初始化。具体如何初始化和浏览器平台有关，但是通常来讲，用户可以通过按住修改键（如 alt 键）来修改预期行为。当我们期望得到一个指定的行为时而不是用户的请求行为时，可以通过 [`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event) 和 [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event) 事件处理修改 `dropEffect` 的值。
+对于 [`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event) 和 [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event) 事件，`dropEffect` 会根据用户的请求的行为进行初始化。具体如何初始化和浏览器平台有关，但是通常来讲，用户可以通过按住修改键（如 alt 键）来修改预期行为。当我们期望得到一个指定的行为时而不是用户的请求行为时，可以通过 [`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event) 和 [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event) 事件的事件处理器处理修改 `dropEffect` 的值。
 
 对于 [`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event) 和 [`dragend`](/zh-CN/docs/Web/API/HTMLElement/dragend_event) 事件，`dropEffect` 会被设置为想要得到的值，即最后一次 [`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event) 或 [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event) 事件后 `dropEffect` 的值。例如，在一个 [`dragend`](/zh-CN/docs/Web/API/HTMLElement/dragend_event) 事件中，如果期望得到的 dropEffect 是“move”，那么被拖动的数据会从源中移除。
 
