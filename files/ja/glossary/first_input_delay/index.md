@@ -1,5 +1,5 @@
 ---
-title: First_input_delay
+title: First Input Delay (FID)
 slug: Glossary/First_input_delay
 l10n:
   sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
