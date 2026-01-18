@@ -75,7 +75,7 @@ caption {
 
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
-### Attributs dépréciés ou obsolètes
+### Attributs obsolètes
 
 Les attributs suivants sont obsolètes et ne doivent plus être utilisés. Ils sont documentés ci-dessous uniquement pour référence lors de la mise à jour de code existant et pour leur intérêt historique.
 
