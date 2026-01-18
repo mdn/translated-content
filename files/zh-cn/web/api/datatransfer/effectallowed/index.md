@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML Drag and Drop API")}}
 
-**`DataTransfer.effectAllowed`** 属性指定拖放操作所允许的效果。_copy_ 操作用于指示被拖动的数据将从当前位置复制到放置位置。_move_ 操作用于指定被拖动的数据将被移动。_link_ 操作用于指示将在源和放置位置之间创建某种形式的关系或连接。
+**`DataTransfer.effectAllowed`** 属性指定拖动操作所允许的效果。_copy_ 操作用于指示被拖动的数据将从当前位置复制到放置位置。_move_ 操作用于指定被拖动的数据将被移动。_link_ 操作用于指示将在源位置和放置位置之间创建某种形式的关系或连接。
 
 你应在 {{domxref("HTMLElement/dragstart_event", "dragstart")}} 事件中为拖动源设置预期拖动效果。在 {{domxref("HTMLElement/dragenter_event", "dragenter")}} 和 {{domxref("HTMLElement/dragover_event", "dragover")}} 事件处理器中，该属性将被设置为在
 {{domxref("HTMLElement/dragstart_event", "dragstart")}} 事件期间分配的任何值，因此，你可以使用 `effectAllowed` 来确定什么效果被允许使用。
@@ -28,7 +28,7 @@ l10n:
 - `copyMove`
   - : 允许 _copy_ 或者 _move_ 操作。
 - `link`
-  - : 可以在新地方建立与源项目的链接。
+  - : 可能在新位置建立与源项目的链接。
 - `linkMove`
   - : 允许 _link_ 或者 _move_ 操作。
 - `move`
@@ -36,9 +36,9 @@ l10n:
 - `all`
   - : 允许所有的操作。
 - `uninitialized`
-  - : 效果没有设置时的默认值，则等同于 _all_。
+  - : 效果未设置时的默认值，等同于 _all_。
 
-向 `effectAllowed` 赋其他值的操作无效。
+向 `effectAllowed` 赋其他值的操作无效，其取值不会被修改。
 
 ## 示例
 
