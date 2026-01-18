@@ -67,7 +67,7 @@ Pour récapituler, chaque `<section>` doit être identifiée, généralement en 
 
 ##### Résultat
 
-{{EmbedLiveSample('Avant')}}
+{{EmbedLiveSample("Avant")}}
 
 #### Après
 
@@ -80,7 +80,7 @@ Pour récapituler, chaque `<section>` doit être identifiée, généralement en 
 
 ##### Résultat
 
-{{EmbedLiveSample('Après')}}
+{{EmbedLiveSample("Après")}}
 
 ### Utiliser une section sans titre
 
@@ -108,7 +108,7 @@ Ou bien une barre de boutons pour contrôler votre application&nbsp;? Celle-ci n
 
 #### Résultat
 
-{{EmbedLiveSample('Utiliser une section sans titre')}}
+{{EmbedLiveSample("Utiliser une section sans titre")}}
 
 Selon le contenu, inclure un titre peut aussi être bénéfique pour le référencement, c'est donc une option à considérer.
 

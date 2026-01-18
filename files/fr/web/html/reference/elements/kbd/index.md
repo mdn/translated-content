@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 6ed02a2b0e0d891f7d3b4c2a6b1d9cc05c90ed9c
 ---
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<kbd>`** représente une portion de texte en ligne désignant une saisie de texte de l'utilisateur·ice à partir d'un clavier, d'une commande vocale ou de tout autre dispositif de saisie de texte. Par convention, l'{{Glossary("user agent", "agent utilisateur")}} affiche le contenu d'un élément `<kbd>` en utilisant sa police monospace par défaut, bien que cela ne soit pas imposé par la norme HTML.
+L'élément [HTML](/fr/docs/Web/HTML) **`<kbd>`** représente une portion de texte en ligne désignant une saisie de texte de l'utilisateur·ice à partir d'un clavier, d'une commande vocale ou de tout autre dispositif de saisie de texte. Par convention, {{Glossary("user agent", "l'agent utilisateur")}} affiche le contenu d'un élément `<kbd>` en utilisant sa police monospace par défaut, bien que cela ne soit pas imposé par la norme HTML.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;kbd&gt;", "tabbed-shorter")}}
 
@@ -64,7 +64,7 @@ D'autres éléments peuvent être utilisés en association avec `<kbd>` afin de 
 
 #### Résultat
 
-{{EmbedLiveSample('Exemple simple', 350, 80)}}
+{{EmbedLiveSample("Exemple simple", 350, 80)}}
 
 ### Représenter les frappes de touches dans une saisie
 
@@ -100,11 +100,11 @@ Sans mise en forme particulière, voici le résultat obtenu&nbsp;:
 
 #### Avec mise en forme
 
-On peut alors ajouter un peu de CSS :
+On peut alors ajouter un peu de CSS&nbsp;:
 
 ##### CSS
 
-On ajoute un règle pour les les éléments `<kbd>` avec la classe `"key"` afin de représenter les touches d'un clavier :
+On ajoute un règle pour les les éléments `<kbd>` avec la classe `"key"` afin de représenter les touches d'un clavier&nbsp;:
 
 ```css
 kbd > kbd {
@@ -116,7 +116,7 @@ kbd > kbd {
 
 ##### HTML
 
-On met à jour le code HTML afin d'utiliser cette classe :
+On met à jour le code HTML afin d'utiliser cette classe&nbsp;:
 
 ```html
 <p>
@@ -132,7 +132,7 @@ On met à jour le code HTML afin d'utiliser cette classe :
 
 ### Saisie restituée
 
-En imbriquant un élément `<kbd>` dans un élément {{HTMLElement("samp")}}, on peut représenter une saisie qui est restituée à l'utilisateur (à la façon d'un écho).
+En imbriquant un élément `<kbd>` dans un élément {{HTMLElement("samp")}}, on peut représenter une saisie qui est restituée à l'utilisateur·ice (à la façon d'un écho).
 
 #### HTML
 

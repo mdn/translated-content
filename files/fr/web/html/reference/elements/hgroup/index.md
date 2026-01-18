@@ -68,7 +68,7 @@ L'élément `<hgroup>` en tant que tel n'a pas d'effet sur le plan (<i lang="en"
 
 ### Résultat
 
-{{EmbedLiveSample('Exemples')}}
+{{EmbedLiveSample("Exemples")}}
 
 ## Résumé technique
 

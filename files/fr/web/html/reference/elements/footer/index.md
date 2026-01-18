@@ -53,7 +53,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 Avant la publication de Safari 13, le [rôle de repère](/fr/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics#signpostslandmarks) `contentinfo` n'était pas correctement exposé par [VoiceOver <sup>(angl.)</sup>](https://help.apple.com/voiceover/info/guide/). Si vous devez prendre en charge les anciens navigateurs Safari, ajoutez `role="contentinfo"` à l'élément `footer` pour vous assurer que le landmark sera correctement exposé.
 
-- En rapport&nbsp;: [WebKit Bugzilla&nbsp;: 146930 - AX : Les éléments natifs HTML (header, footer, main, aside, nav) devraient fonctionner de la même manière que les points de repère ARIA, parfois ce n'est pas le cas <sup>(angl.)</sup>](https://webkit.org/b/146930)
+- En rapport&nbsp;: [WebKit Bugzilla&nbsp;: 146930 - AX&nbsp;: Les éléments natifs HTML (header, footer, main, aside, nav) devraient fonctionner de la même manière que les points de repère ARIA, parfois ce n'est pas le cas <sup>(angl.)</sup>](https://webkit.org/b/146930)
 
 ## Exemples
 
@@ -84,7 +84,7 @@ footer {
 
 ### Résultat
 
-{{EmbedLiveSample('Exemples')}}
+{{EmbedLiveSample("Exemples")}}
 
 ## Résumé technique
 

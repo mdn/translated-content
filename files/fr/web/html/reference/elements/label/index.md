@@ -87,7 +87,7 @@ Le contrôle de formulaire auquel un libellé est associé est appelé le _contr
 <label for="username">Nom d'utilisateur·ice oublié&nbsp;?</label>
 ```
 
-Les éléments pouvant être associés à un élément `<label>` incluent {{HTMLElement('button')}}, {{HTMLElement('input')}} (sauf pour `type="hidden"`), {{HTMLElement('meter')}}, {{HTMLElement('output')}}, {{HTMLElement('progress')}}, {{HTMLElement('select')}} et {{HTMLElement('textarea')}}.
+Les éléments pouvant être associés à un élément `<label>` incluent {{HTMLElement("button")}}, {{HTMLElement("input")}} (sauf pour `type="hidden"`), {{HTMLElement("meter")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}} et {{HTMLElement("textarea")}}.
 
 ## Accessibilité
 
