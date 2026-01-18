@@ -45,16 +45,11 @@ dataTransfer.dropEffect;
 
 ```html
 <div>
-  <p id="source" ondragstart="dragstart_handler(event);" draggable="true">
+  <p id="source" draggable="true">
     选中这一元素，拖动它到可放置区域，然后释放选择以移动该元素。
   </p>
 </div>
-<div
-  id="target"
-  ondrop="drop_handler(event);"
-  ondragover="dragover_handler(event);">
-  可放置区域
-</div>
+<div id="target">可放置区域</div>
 ```
 
 ### CSS
@@ -78,44 +73,38 @@ div {
 ### JavaScript
 
 ```js
-function dragstart_handler(ev) {
+const source = document.getElementById("source");
+const target = document.getElementById("target");
+
+source.addEventListener("dragstart", (ev) => {
   console.log(
-    "dragStart: dropEffect = " +
-      ev.dataTransfer.dropEffect +
-      ". effectAllowed = " +
-      ev.dataTransfer.effectAllowed,
+    `dragStart: dropEffect = ${ev.dataTransfer.dropEffect} ; effectAllowed = ${ev.dataTransfer.effectAllowed}`,
   );
 
   // 将该元素的 id 添加到拖动负载中，以便放置事件的处理器能分清要将哪个元素添加到树中
   ev.dataTransfer.setData("text", ev.target.id);
   ev.dataTransfer.effectAllowed = "move";
-}
+});
 
-function drop_handler(ev) {
+target.addEventListener("drop", (ev) => {
   console.log(
-    "drop: dropEffect = " +
-      ev.dataTransfer.dropEffect +
-      ". effectAllowed = " +
-      ev.dataTransfer.effectAllowed,
+    `drop: dropEffect = ${ev.dataTransfer.dropEffect} ; effectAllowed = ${ev.dataTransfer.effectAllowed}`,
   );
   ev.preventDefault();
 
   // 获取目标的 id 并将被移动的元素添加到目标的 DOM 中
-  var data = ev.dataTransfer.getData("text");
+  const data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
-}
+});
 
-function dragover_handler(ev) {
+target.addEventListener("dragover", (ev) => {
   console.log(
-    "dragOver: dropEffect = " +
-      ev.dataTransfer.dropEffect +
-      " ; effectAllowed = " +
-      ev.dataTransfer.effectAllowed,
+    `dragOver：dropEffect = ${ev.dataTransfer.dropEffect}；effectAllowed = ${ev.dataTransfer.effectAllowed}`,
   );
   ev.preventDefault();
   // 设置 dropEffect 为 move
   ev.dataTransfer.dropEffect = "move";
-}
+});
 ```
 
 {{EmbedLiveSample('示例', 300, 250)}}
