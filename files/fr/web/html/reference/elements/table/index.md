@@ -7,7 +7,7 @@ l10n:
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<table>`** représente des données tabulaires, c'est-à-dire des informations présentées dans un tableau à deux dimensions composé de lignes et de colonnes de cellules contenant des données.
 
-{{InteractiveExample("HTML Demo: &lt;table&gt;", "tabbed-taller")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;table&gt;", "tabbed-taller")}}
 
 ```html interactive-example
 <table>

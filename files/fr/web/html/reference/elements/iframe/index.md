@@ -154,7 +154,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - `width`
   - : La largeur du cadre en pixels CSS. La valeur par défaut est `300`.
 
-### Attributs dépréciés
+### Attributs obsolètes
 
 - `align` {{Deprecated_Inline}}
   - : Cet attribut obsolète permettait de définir l'alignement de l'_iframe_ par rapport à son contexte englobant.

@@ -136,7 +136,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
         Les développeur·euse·s doivent utiliser un type MIME valide qui n'est pas un type MIME JavaScript pour indiquer des blocs de données.
         Tous les autres attributs seront ignorés, y compris l'attribut `src`.
 
-### Attributs dépréciés
+### Attributs obsolètes
 
 - `charset` {{Deprecated_Inline}}
   - : Si présent, sa valeur doit correspondre (sans tenir compte de la casse) à `utf-8` selon {{Glossary("ASCII")}}. Il est inutile de définir l'attribut `charset`, car les documents doivent utiliser UTF-8 et l'élément `script` hérite de l'encodage du document.
