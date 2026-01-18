@@ -59,7 +59,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - `title`
   - : Cet attribut indique un ensemble [de feuilles de style alternatif](/fr/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet).
 
-### Attributs dépréciés ou obsolètes
+### Attributs obsolètes
 
 - `type` {{Deprecated_Inline}}
   - : Cet attribut définit le langage de la feuille de style sous la forme d'un type MIME (le jeu de caractères ne doit pas être indiqué). Cet attribut est optionnel, la valeur par défaut est `text/css`.
