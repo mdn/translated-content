@@ -1,15 +1,14 @@
 ---
 title: TypedArray.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toString
 l10n:
-  sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`toString()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、指定された配列とその要素を表す文字列を返します。このメソッドは {{jsxref("Array.prototype.toString()")}} と同じアルゴリズムです。
 
-{{InteractiveExample("JavaScript デモ: TypedArray.toString()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.toString()", "shorter")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
@@ -17,7 +16,7 @@ const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
 const uint8String = uint8.toString();
 
 console.log(uint8String.startsWith("10"));
-// Expected output: true
+// 予想される結果: true
 ```
 
 ## 構文

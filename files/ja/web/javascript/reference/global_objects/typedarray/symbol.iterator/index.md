@@ -1,11 +1,10 @@
 ---
 title: TypedArray.prototype[Symbol.iterator]()
+short-title: "[Symbol.iterator]()"
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator
 l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`[Symbol.iterator]()`** は {{jsxref("TypedArray")}} インスタンスのプロパティで、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を実装し、型付き配列を[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)や {{jsxref("Statements/for...of", "for...of")}} ループのような反復可能オブジェクトを想定するほとんどの構文で利用できるようにするためのものです。この型付き配列の各要素の値を返す[配列イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)を返します。
 
@@ -15,15 +14,15 @@ l10n:
 
 ```js interactive-example
 const uint8 = new Uint8Array([10, 20, 30]);
-const iterator1 = uint8[Symbol.iterator]();
+const iterator = uint8[Symbol.iterator]();
 
-for (const value of iterator1) {
+for (const value of iterator) {
   console.log(value);
 }
 
-// Expected output: 10
-// Expected output: 20
-// Expected output: 30
+// 予想される結果: 10
+// 予想される結果: 20
+// 予想される結果: 30
 ```
 
 ## 構文
@@ -78,7 +77,7 @@ console.log(arrIter.next().value); // 50
 ## 関連情報
 
 - [`TypedArray.prototype[Symbol.iterator]` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}
 - {{jsxref("TypedArray.prototype.keys()")}}

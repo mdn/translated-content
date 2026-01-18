@@ -2,14 +2,12 @@
 title: const
 slug: Web/JavaScript/Reference/Statements/const
 l10n:
-  sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Statements")}}
 
 **`const`** 宣言はブロックスコープのローカル変数（定数）を宣言します。定数の値は[代入演算子](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)を使用して再代入することができませんが、定数が[オブジェクト](/ja/docs/Web/JavaScript/Guide/Data_structures#オブジェクト)であった場合、そのプロパティを追加したり、更新したり、削除したりすることができます。
 
-{{InteractiveExample("JavaScript デモ: Statement - Const")}}
+{{InteractiveExample("JavaScript デモ: const 宣言")}}
 
 ```js interactive-example
 const number = 42;
@@ -18,12 +16,12 @@ try {
   number = 99;
 } catch (err) {
   console.log(err);
-  // Expected output: TypeError: invalid assignment to const 'number'
-  // (Note: the exact output may be browser-dependent)
+  // 予想される結果: TypeError: invalid assignment to const 'number'
+  // （注：正確な結果はブラウザー依存です）
 }
 
 console.log(number);
-// Expected output: 42
+// 予想される結果: 42
 ```
 
 ## 構文
@@ -35,7 +33,7 @@ const name1 = value1, name2 = value2, /* …, */ nameN = valueN;
 ```
 
 - `nameN`
-  - : 宣言する変数名。それぞれ、正当な JavaScript [識別子](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#識別子)または[分割結合パターン](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)でなければなりません。
+  - : 宣言する変数名。それぞれ、正当な JavaScript [識別子](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#識別子)または[構造分解バインドパターン](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)でなければなりません。
 - `valueN`
   - : 変数の初期値。正式な式であれば何でもかまいません。
 
@@ -75,7 +73,7 @@ const FOO; // SyntaxError: Missing initializer in const declaration
 // MY_FAV を定数として定義して、その値を 7 にします
 const MY_FAV = 7;
 
-console.log("my favorite number is: " + MY_FAV);
+console.log(`my favorite number is: ${MY_FAV}`);
 ```
 
 ```js-nolint example-bad

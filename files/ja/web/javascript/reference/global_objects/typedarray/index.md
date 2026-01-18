@@ -2,29 +2,10 @@
 title: TypedArray
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 4bfeb5a89c1528da7cb7847a9ccb93f9b00290f0
 ---
 
-{{JSRef}}
-
 **_TypedArray_** オブジェクトは、背後にある[バイナリーデータバッファー](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)の、配列風のビューを表します。 `TypedArray` という名称のグローバルプロパティがあるわけではなく、また直接 `TypedArray` コンストラクターが見えるわけではありません。代わりに、さまざまなグローバルプロパティがあり、それらの値は後述するように特定の要素の型における型付き配列のコンストラクターになります。下記のページで、それぞれの要素を持つ片引き配列で使用できる共通のプロパティやメソッドを確認できます。
-
-{{InteractiveExample("JavaScript デモ: TypedArray Constructor")}}
-
-```js interactive-example
-// Create a TypedArray with a size in bytes
-const typedArray1 = new Int8Array(8);
-typedArray1[0] = 32;
-
-const typedArray2 = new Int8Array(typedArray1);
-typedArray2[1] = 42;
-
-console.log(typedArray1);
-// Expected output: Int8Array [32, 0, 0, 0, 0, 0, 0, 0]
-
-console.log(typedArray2);
-// Expected output: Int8Array [32, 42, 0, 0, 0, 0, 0, 0]
-```
 
 ## 解説
 
@@ -244,7 +225,7 @@ new TypedArray(buffer, byteOffset, length)
 - {{jsxref("TypedArray.prototype.entries()")}}
   - : 配列内のすべての位置に対するキー／値の組を含む、新しい配列イテレーターを返します。 {{jsxref("Array.prototype.entries()")}} も参照してください。
 - {{jsxref("TypedArray.prototype.every()")}}
-  - : 配列内のすべての要素が関数によって提供されたテストに合格するかどうかテストを実行します。 {{jsxref("Array.prototype.every()")}} も参照してください。
+  - : 配列内の要素のうち、指定されたテスト関数を満たさない要素が 1 つでも見つかった場合に `false` を返します。それ以外の場合は `true` を返します。{{jsxref("Array.prototype.every()")}} も参照してください。
 - {{jsxref("TypedArray.prototype.fill()")}}
   - : 開始位置から終了位置までのすべての要素に固定値を設定します。 {{jsxref("Array.prototype.fill()")}} も参照してください。
 - {{jsxref("TypedArray.prototype.filter()")}}
@@ -282,7 +263,7 @@ new TypedArray(buffer, byteOffset, length)
 - {{jsxref("TypedArray.prototype.slice()")}}
   - : 配列の一部を取り出して新しい配列を返します。 {{jsxref("Array.prototype.slice()")}} も参照してください。
 - {{jsxref("TypedArray.prototype.some()")}}
-  - : ある配列の少なくとも 1 つの要素が与えられたテスト関数を満たした場合に `true` を返します。 {{jsxref("Array.prototype.some()")}} も参照してください。
+  - : 配列内で指定されたテスト関数を満たす要素を 1 つでも見つけた場合、`true` を返します。それ以外の場合は `false` を返します。{{jsxref("Array.prototype.some()")}} も参照してください。
 - {{jsxref("TypedArray.prototype.sort()")}}
   - : 配列の要素をソートし、その結果を返します。 {{jsxref("Array.prototype.sort()")}} も参照してください。
 - {{jsxref("TypedArray.prototype.subarray()")}}

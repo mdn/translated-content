@@ -1,11 +1,10 @@
 ---
 title: TypedArray.prototype.with()
+short-title: with()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/with
 l10n:
-  sourceCommit: a815a95e4ab4adf391d8a7bc66a3abbce1a686d8
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`with()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、[ブラケット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors#ブラケット記法)を使用して指定された位置の値を変更することの[コピーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#コピーメソッドと変更メソッド)版です。これは指定されたインデックスの要素を指定された値で置き換えた新しい配列の添字を返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.with()")}} と同じです。
 
