@@ -257,7 +257,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     > [!NOTE]
     > Cet attribut est invalide si l'élément `<img>` est à l'intérieur d'un élément {{htmlelement("a")}} ou d'un élément {{htmlelement("button")}}.
 
-### Attributs dépréciés
+### Attributs obsolètes
 
 - `align` {{deprecated_inline}}
   - : Aligne l'image au sein de son contexte englobant. À la place de cet attribut, on privilégiera les propriétés {{glossary("CSS")}} {{cssxref('float')}} et/ou {{cssxref('vertical-align')}}. Les valeurs autorisées pour cet attribut sont&nbsp;:

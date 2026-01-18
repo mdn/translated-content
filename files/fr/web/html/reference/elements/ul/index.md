@@ -37,7 +37,7 @@ li li {
 
 À l'instar des différents éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
-### Attributs dépréciés ou obsolètes
+### Attributs obsolètes
 
 - `compact`{{Deprecated_inline}}
   - : Cet attribut booléen fournit une indication pour afficher la liste en mode compact. L'interprétation de cet attribut est laissée à la discrétion de l'agent utilisateur et ne fonctionne pas pour tous les navigateurs.

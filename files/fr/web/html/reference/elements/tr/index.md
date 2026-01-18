@@ -84,7 +84,7 @@ La construction de tableau peut parfois demander un peu de pratique. Au-delà de
 
 À l'instar de tous les éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes). Il existe également plusieurs attributs dépréciés à éviter désormais, mais qui peuvent être utiles pour comprendre du code ancien.
 
-### Attributs dépréciés ou obsolètes
+### Attributs obsolètes
 
 - **`align`**{{deprecated_inline}}
   - : Une chaîne de caractère qui définit l'alignement horizontal pour le contenu de chaque cellule. C'est un raccourci pour définir l'alignement sur l'ensemble de la ligne plutôt que pour chaque cellule. Les valeurs possibles sont :
