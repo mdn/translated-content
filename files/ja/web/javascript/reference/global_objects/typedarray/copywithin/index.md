@@ -1,24 +1,23 @@
 ---
 title: TypedArray.prototype.copyWithin()
+short-title: copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin
 l10n:
-  sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`copyWithin()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、この型付き配列の一部を同じ型付き配列の別の場所にシャローコピーし、この型付き配列の長さを変更せずに返します。このメソッドは {{jsxref("Array.prototype.copyWithin()")}} と同じアルゴリズムです。
 
-{{InteractiveExample("JavaScript デモ: TypedArray.copyWithin()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.copyWithin()")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
 
-// Insert position, start position, end position
+// 挿入位置、開始位置、終了位置
 uint8.copyWithin(3, 1, 3);
 
 console.log(uint8);
-// Expected output: Uint8Array [1, 2, 3, 2, 3, 6, 7, 8]
+// 予想される結果: Uint8Array [1, 2, 3, 2, 3, 6, 7, 8]
 ```
 
 ## 構文
