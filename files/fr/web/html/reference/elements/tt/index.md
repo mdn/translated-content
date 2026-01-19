@@ -71,7 +71,7 @@ tt {
 Par défaut, le contenu de l'élément `<tt>` est affiché avec la police à chasse fixe par défaut du navigateur. Comme vu dans l'exemple précédent, il est possible de surcharger cette police.
 
 > [!NOTE]
-> Les règles de style propres à l'utilisateur sont prioritaires par rapport aux feuilles de style d'un site ou d'une application web.
+> Les règles de style propres à l'utilisateur·ice sont prioritaires par rapport aux feuilles de style d'un site ou d'une application web.
 
 Bien que cet élément n'ait pas été officiellement déprécié en HTML 4.01, son utilisation a été déconseillée pour privilégier d'autres éléments HTML ou une mise en forme via CSS. L'élément `<tt>` est désormais obsolète en HTML5.
 
