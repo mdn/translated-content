@@ -83,7 +83,7 @@ syntax: "*";
   - : あらゆる有効な {{cssxref("&lt;transform-function&gt;")}} の値です。
 - `"<transform-list>"`
   - : 有効な {{cssxref("&lt;transform-function&gt;")}} の値のリストです。
-  これは `"<transform-function>+"` と等価です。
+    これは `"<transform-function>+"` と等価です。
 - `"<url>"`
   - : あらゆる有効な {{cssxref("url_value", "&lt;url&gt;")}} の値です。
 
