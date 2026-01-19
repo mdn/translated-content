@@ -107,7 +107,7 @@ Dans l'exemple qui suit, on affiche différentes cases à cocher pour représent
 </fieldset>
 ```
 
-{{EmbedLiveSample('Gérer plusieurs cases à cocher', 600, 100)}}
+{{EmbedLiveSample("Gérer plusieurs cases à cocher", 600, 100)}}
 
 Dans cet exemple on voit que chaque case à cocher utilise le même attribut `name`. Si les deux cases sont cochées lorsque le formulaire est envoyé, la chaîne des paires nom/valeur qui sera envoyée au serveur sera&nbsp;: `interest=coding&interest=music`. Lorsque les données parviennent au serveur, on peut ainsi récupérer un tableau des valeurs sélectionnées (voir [la question StackOverflow&nbsp;: Gérer plusieurs cases à cocher avec une seule variable côté serveur <sup>(angl.)</sup>](https://stackoverflow.com/questions/18745456/handle-multiple-checkboxes-with-a-single-serverside-variable) par exemple).
 
@@ -129,7 +129,7 @@ Afin qu'une case à cocher soit sélectionnée par défaut, il suffit de placer 
 </fieldset>
 ```
 
-{{EmbedLiveSample('Cocher certaines cases par défaut', 600, 100)}}
+{{EmbedLiveSample("Cocher certaines cases par défaut", 600, 100)}}
 
 ### Fournir une zone cliquable plus grande pour vos cases à cocher
 

@@ -20,7 +20,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - `name` {{Deprecated_Inline}}
   - : Cet attribut sert à nommer les frames. Sans nommage, tous les liens seront ouverts dans la frame où ils se trouvent. Voir [`target`](/fr/docs/Web/HTML/Reference/Elements/a#target) pour plus d'informations.
 - `noresize` {{Deprecated_Inline}}
-  - : Cet attribut empêche aux utilisateurs de redimensionner les frames.
+  - : Cet attribut empêche aux utilisateur·ice·s de redimensionner les frames.
 - `scrolling` {{Deprecated_Inline}}
   - : Cet attribut définit l'existence des barres de défilement. Si cet attribut n'est pas utilisé, le navigateur mettre une barre de défilement si nécessaire. Il y a deux options&nbsp;: `"yes"` pour afficher les barres de défilement même quand ce n'est pas nécessaire, et `"no"` pour ne pas afficher les barres de défilement même quand c'est nécessaire.
 - `marginheight` {{Deprecated_Inline}}

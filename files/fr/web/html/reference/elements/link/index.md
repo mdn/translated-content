@@ -32,7 +32,7 @@ Certains types sont assez fréquents. Ainsi, pour l'icône présentant le site d
 <link rel="icon" href="favicon.ico" />
 ```
 
-Il existe différents types de relations pour préciser les icônes et qui permettent notamment de cibler certaines plateformes mobiles :
+Il existe différents types de relations pour préciser les icônes et qui permettent notamment de cibler certaines plateformes mobiles&nbsp;:
 
 ```html
 <link
@@ -233,14 +233,14 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
       Il s'agit du comportement par défaut de l'agent utilisateur si aucune autre règle n'est précisée.
     - `origin` signifie que le référent sera l'origine de la page (schéma, hôte et port).
     - `origin-when-cross-origin` signifie que lors d'une navigation vers d'autres origines, le référent se limite au schéma, à l'hôte et au port, tandis que sur la même origine, le chemin est inclus.
-    - `unsafe-url` signifie que le référent inclut l'origine et le chemin (mais ni le fragment, ni le mot de passe ou le nom d'utilisateur).
+    - `unsafe-url` signifie que le référent inclut l'origine et le chemin (mais ni le fragment, ni le mot de passe ou le nom d'utilisateur·ice).
       Ce cas n'est pas sécurisé car il peut laisser fuiter des origines et des chemins de ressources TLS vers des origines non sécurisées.
 
 - `rel`
   - : Cet attribut indique la relation qui existe entre le document lié et le document courant. L'attribut doit être une liste, séparée par des espaces, de [types de lien](/fr/docs/Web/HTML/Reference/Attributes/rel).
 - `sizes`
-  - : Cet attribut définit les dimensions des icônes pour le média contenu dans la ressource. Cet attribut doit uniquement être présent lorsque [`rel`](#rel) contient le type de lien `icon`. Il peut prendre l'une des valeurs suivantes :
-    - `any` : l'icône peut être redimensionnée à volonté car elle utilise un format vectoriel (par exemple `image/svg+xml`).
+  - : Cet attribut définit les dimensions des icônes pour le média contenu dans la ressource. Cet attribut doit uniquement être présent lorsque [`rel`](#rel) contient le type de lien `icon`. Il peut prendre l'une des valeurs suivantes&nbsp;:
+    - `any`&nbsp;: l'icône peut être redimensionnée à volonté car elle utilise un format vectoriel (par exemple `image/svg+xml`).
     - une liste de tailles, séparées par des espaces, dont chacune est de la forme `<largeur en pixels>x<hauteur en pixels>` ou `<largeur en pixels>X<hauteur en pixels>`. Pour chacune de ces dimensions, il doit exister une image correspondante dans la ressource.
 
     > [!NOTE]
@@ -291,7 +291,7 @@ Pour associer une feuille de style à la page courante, on utilisera la syntaxe 
 
 Pour un document, on peut indiquer [plusieurs feuilles de style alternatives](/fr/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet).
 
-L'utilisateur pourra choisir parmi ces feuilles de style via le menu « Affichage > Style de la page ». Ainsi, un utilisateur pourra voir différentes versions d'une même page.
+L'utilisateur·ice pourra choisir parmi ces feuilles de style via le menu «&nbsp;Affichage > Style de la page&nbsp;». Ainsi, un·e utilisateur·ice pourra voir différentes versions d'une même page.
 
 ```html
 <link href="default.css" rel="stylesheet" title="Mise en forme par défaut" />
@@ -394,7 +394,7 @@ le rendu de la page sera bloqué jusqu'à ce que la ressource et ses sous-ressou
       </th>
       <td>
         Contenu de métadonnées. Si <a href="/fr/docs/Web/HTML/Reference/Global_attributes#itemprop"><code>itemprop</code></a> est
-        présent :
+        présent&nbsp;:
         <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >contenu de flux</a
         >
@@ -432,7 +432,7 @@ le rendu de la page sera bloqué jusqu'à ce que la ressource et ses sous-ressou
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun <code>role</code> autorisé.</td>
+      <td>Aucun <code>role</code> autorisé</td>
     </tr>
     <tr>
       <th>Interface DOM</th>

@@ -309,8 +309,8 @@ Les éléments `<input>` peuvent utiliser les [attributs universels](/fr/docs/We
 | [`formmethod`](#formmethod)                   | `image`, `submit`                                                        | La méthode HTTP à utiliser pour envoyer le formulaire                                                                     |
 | [`formnovalidate`](#formnovalidate)           | `image`, `submit`                                                        | Surcharge la validation du contrôle dictée par le formulaire pour l'envoi de ce dernier                                   |
 | [`formtarget`](#formtarget)                   | `image`, `submit`                                                        | Le contexte de navigation à utiliser pour l'envoi du formulaire                                                           |
-| [`height`](#height)                           | `image`                                                                  | Analogue à l'attribut `height` de l'élément {{HTMLElement('img')}}&nbsp;; la hauteur de l'image                           |
-| [`list`](#list)                               | tous sauf `hidden`, `password`, `checkbox`, `radio` et les boutons       | La valeur de l'attribut `id` de l'élément {{HTMLElement('datalist')}} fournissant les options d'autocomplétion            |
+| [`height`](#height)                           | `image`                                                                  | Analogue à l'attribut `height` de l'élément {{HTMLElement("img")}}&nbsp;; la hauteur de l'image                           |
+| [`list`](#list)                               | tous sauf `hidden`, `password`, `checkbox`, `radio` et les boutons       | La valeur de l'attribut `id` de l'élément {{HTMLElement("datalist")}} fournissant les options d'autocomplétion            |
 | [`max`](#max)                                 | `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`     | La valeur maximale                                                                                                        |
 | [`maxlength`](#maxlength)                     | `text`, `search`, `url`, `tel`, `email`, `password`                      | La longueur maximale (en nombre de caractères) de l'attribut `value`                                                      |
 | [`min`](#min)                                 | `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`     | La valeur minimale                                                                                                        |
@@ -324,11 +324,11 @@ Les éléments `<input>` peuvent utiliser les [attributs universels](/fr/docs/We
 | [`readonly`](#readonly)                       | tous sauf `hidden`, `range`, `color`, `checkbox`, `radio` et les boutons | Un booléen indiquant que la valeur n'est pas éditable                                                                     |
 | [`required`](#required)                       | tous sauf `hidden`, `range`, `color` et les boutons                      | Un booléen indiquant que la valeur est requise ou que le contrôle doit être coché avant de pouvoir envoyer le formulaire  |
 | [`size`](#size)                               | `text`, `search`, `url`, `tel`, `email`, `password`                      | La taille du contrôle                                                                                                     |
-| [`src`](#src)                                 | `image`                                                                  | Analogue à l'attribut `src` de l'élément {{HTMLElement('img')}}&nbsp;; indique l'emplacement de l'image                   |
+| [`src`](#src)                                 | `image`                                                                  | Analogue à l'attribut `src` de l'élément {{HTMLElement("img")}}&nbsp;; indique l'emplacement de l'image                   |
 | [`step`](#step)                               | `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`     | Un incrément pour les valeurs valides                                                                                     |
 | [`type`](#type)                               | tous                                                                     | Le type de contrôle de formulaire                                                                                         |
 | [`value`](#value)                             | tous sauf `image`                                                        | La valeur initiale du contrôle                                                                                            |
-| [`width`](#width)                             | `image`                                                                  | Analogue à l'attribut `width` de l'élément {{HTMLElement('img')}}                                                         |
+| [`width`](#width)                             | `image`                                                                  | Analogue à l'attribut `width` de l'élément {{HTMLElement("img")}}                                                         |
 
 Certains attributs non-standard supplémentaires sont listés après les descriptions des attributs standard.
 
@@ -379,7 +379,7 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
     > Ainsi, si une case à cocher dont l'attribut `name` vaut `fruit` et dont l'attribut `value` vaut `cerise`, si la case est cochée, les données envoyées avec le formulaire contiendront `fruit=cerise`. Si la case à cocher n'est pas active, elle ne fera pas partie des données envoyées. Pour les cases à cocher et les boutons radio, la valeur par défaut de l'attribut `value` est `on`.
 
 - `colorspace` {{Experimental_Inline}}
-  - : Valide uniquement pour le type d'entrée `color`, l'attribut `colorspace` définit l'{{Glossary("Color_space", "espace colorimétrique")}} utilisé par l'entrée `type="color"`. Les valeurs {{Glossary("enumerated", "énumérées")}} possibles sont&nbsp;:
+  - : Valide uniquement pour le type d'entrée `color`, l'attribut `colorspace` définit {{Glossary("Color_space", "l'espace colorimétrique")}} utilisé par l'entrée `type="color"`. Les valeurs {{Glossary("enumerated", "énumérées")}} possibles sont&nbsp;:
     - `"limited-srgb"`&nbsp;: La couleur se situe dans l'espace colorimétrique {{Glossary("RGB", "sRGB")}}. Cela inclut les fonctions {{CSSxRef("color_value/rgb", "rgb()")}}, {{CSSxRef("color_value/hsl", "hsl()")}}, {{CSSxRef("color_value/hwb", "hwb()")}}, et les valeurs {{CSSxRef("hex-color")}}. La valeur de couleur est limitée à 8 bits par composant `r`, `g` et `b`. C'est la valeur par défaut.
     - `"display-p3"`&nbsp;: L'[espace colorimétrique Display P3](/fr/docs/Glossary/Color_space#display-p3), par exemple `color(display-p3 1.84 -0.19 0.72 / 0.6)`
 
@@ -389,7 +389,7 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
     ```html
     <form action="page.html" method="post">
       <label
-        >Fruit :
+        >Fruit&nbsp;:
         <input type="text" name="fruit" dirname="fruit.dir" value="cerise"
       /></label>
       <input type="submit" />
@@ -428,7 +428,7 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 - `height`
   - : Uniquement valide pour le type `image`, cet attribut indique la hauteur de l'image à afficher sur un bouton d'envoi graphique. Voir la page détaillée sur le type {{HTMLElement("input/image", "image")}}.
 - `id`
-  - : Un attribut universel, valide pour tous les éléments (y compris `<input>` quel que soit le type), qui définit un identifiant unique au sein du document Son but est de pouvoir cibler un élément précis (pour la mise en forme ou pour créer un lien vers cet élément par exemple). C'est la valeur de cet attribut qui sera utilisée comme valeur de l'attribut `for` d'un élément {{HTMLElement('label')}} pour relier le libellé au champ correspondant. Voir {{HTMLElement('label')}}.
+  - : Un attribut universel, valide pour tous les éléments (y compris `<input>` quel que soit le type), qui définit un identifiant unique au sein du document Son but est de pouvoir cibler un élément précis (pour la mise en forme ou pour créer un lien vers cet élément par exemple). C'est la valeur de cet attribut qui sera utilisée comme valeur de l'attribut `for` d'un élément {{HTMLElement("label")}} pour relier le libellé au champ correspondant. Voir {{HTMLElement("label")}}.
 - `inputmode`
   - : Un attribut universel, valide pour tous les éléments, qui fournit une indication au navigateur quant au type de clavier virtuel à utiliser pour l'édition de l'élément ou de son contenu. Les valeurs possibles sont `none`, `text`, `tel`, `url`, `email`, `numeric`, `decimal` et `search`.
 - `list`
@@ -504,7 +504,7 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
     Si l'attribut `pattern` est présent mais sans valeur ou que celle-ci est valide, aucune expression rationnelle n'est appliquée et l'attribut est ignoré. Si la valeur de `pattern` est valide et que la valeur du champ ne respecte pas le motif, le champ échouera à [la validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation) et empêchera l'envoi du formulaire.
 
     > [!NOTE]
-    > En utilisant l'attribut `pattern`, il faut également informer l'utilisatrice ou l'utilisateur quant au format attendu, en ajoutant un texte explicatif à proximité. On peut aussi inclure un attribut [`title`](#title) pour expliquer les contraintes à respecter&nbsp;: la plupart des navigateurs afficheront le titre sous la forme d'une bulle d'information. Attention, une explication visible est nécessaire pour une accessibilité correcte, la bulle d'information fournie par `title` n'est qu'une amélioration secondaire.
+    > En utilisant l'attribut `pattern`, il faut également informer l'utilisateur·ice quant au format attendu, en ajoutant un texte explicatif à proximité. On peut aussi inclure un attribut [`title`](#title) pour expliquer les contraintes à respecter&nbsp;: la plupart des navigateurs afficheront le titre sous la forme d'une bulle d'information. Attention, une explication visible est nécessaire pour une accessibilité correcte, la bulle d'information fournie par `title` n'est qu'une amélioration secondaire.
 
     Voir [la validation côté client](#validation_côté_client) pour plus d'information.
 
@@ -623,7 +623,7 @@ Les attributs qui suivent ne sont pas standard et sont disponibles dans certains
     L'évènement `search` est soumis à une limitation de fréquence&nbsp;: il n'est pas envoyé plus fréquemment qu'un intervalle défini par l'implémentation.
 
 - `orient` {{Non-standard_Inline}}
-  - : Semblable à la propriété CSS non-standard `-moz-orient` pour les éléments {{HTMLElement('progress')}} et {{HTMLElement('meter')}}, cet attribut définit l'orientation de la piste du curseur. Les valeurs possibles pour cet attribut sont `horizontal` (la piste est affichée horizontalement) et `vertical` (la piste est affichée verticalement). Voir [Créer des contrôles de formulaire verticaux](/fr/docs/Web/CSS/Guides/Writing_modes/Vertical_controls) pour une approche moderne permettant de créer des contrôles de formulaire verticaux.
+  - : Semblable à la propriété CSS non-standard `-moz-orient` pour les éléments {{HTMLElement("progress")}} et {{HTMLElement("meter")}}, cet attribut définit l'orientation de la piste du curseur. Les valeurs possibles pour cet attribut sont `horizontal` (la piste est affichée horizontalement) et `vertical` (la piste est affichée verticalement). Voir [Créer des contrôles de formulaire verticaux](/fr/docs/Web/CSS/Guides/Writing_modes/Vertical_controls) pour une approche moderne permettant de créer des contrôles de formulaire verticaux.
 
 - `results` {{Non-standard_Inline}}
   - : Uniquement pris en charge par Safari, cet attribut est une valeur numérique qui permet de surcharger le nombre de résultats à afficher dans la liste des suggestions de l'élément `<input>` à partir des requêtes précédentes.
@@ -642,7 +642,7 @@ Les méthodes suivantes sont fournies par l'interface {{DOMxRef("HTMLInputElemen
 - {{DOMxRef("HTMLInputElement.checkValidity", "checkValidity()")}}
   - : Renvoie `true` si la valeur de l'élément respecte les conditions de validité, `false` sinon et, dans ce dernier cas, déclenche un évènement {{DOMxRef("HTMLInputElement.invalid_event", "invalid")}} sur l'élément.
 - {{DOMxRef("HTMLInputElement.reportValidity", "reportValidity()")}}
-  - : Renvoie `true` si la valeur de l'élément respecte les conditions de validité, `false` sinon et, dans ce dernier cas, déclenche un évènement {{DOMxRef("HTMLInputElement.invalid_event", "invalid")}} sur l'élément et, si l'évènement n'est pas annulé, rapporte ce problème à l'utilisatrice ou l'utilisateur.
+  - : Renvoie `true` si la valeur de l'élément respecte les conditions de validité, `false` sinon et, dans ce dernier cas, déclenche un évènement {{DOMxRef("HTMLInputElement.invalid_event", "invalid")}} sur l'élément et, si l'évènement n'est pas annulé, rapporte ce problème à l'utilisateur·ice.
 - {{DOMxRef("HTMLInputElement.select", "select()")}}
   - : Sélectionne tout le contenu de l'élément `<input>` sous réserve que son contenu soit sélectionnable. Pour les éléments qui n'ont pas de contenu texte qui puisse être sélectionné (par exemple un sélecteur de couleur ou un calendrier), cette méthode n'a pas d'effet.
 - {{DOMxRef("HTMLInputElement.setCustomValidity", "setCustomValidity()")}}
@@ -749,7 +749,7 @@ Les éléments de saisie, en tant qu'éléments remplacés, ont quelques fonctio
 
 #### Exemple d'utilisation des pseudo-classes
 
-On peut mettre en forme le libellé d'une case à cocher selon que la case est cochée ou non. Dans cet exemple, on adapte les propriétés {{CSSxRef('color')}} et {{CSSxRef('font-weight')}} de l'élément {{HTMLElement('label')}} situé immédiatement après une case cochée. On applique aucune mise en forme si l'élément `input` n'est pas coché.
+On peut mettre en forme le libellé d'une case à cocher selon que la case est cochée ou non. Dans cet exemple, on adapte les propriétés CSS {{CSSxRef("color")}} et {{CSSxRef("font-weight")}} de l'élément {{HTMLElement("label")}} situé immédiatement après une case cochée. On applique aucune mise en forme si l'élément `input` n'est pas coché.
 
 ```html hidden
 <input id="checkboxInput" type="checkbox" />
@@ -820,7 +820,7 @@ input.custom {
 
 #### Résultat
 
-{{EmbedLiveSample('caret-color', 500, 80)}}
+{{EmbedLiveSample("caret-color", 500, 80)}}
 
 ### `field-sizing`
 
@@ -857,18 +857,20 @@ Il ne suffit pas d'avoir un texte normal à côté de l'élément `<input>`. Pou
 
 ```html
 <!-- inaccessible -->
-<p>Veuillez saisir votre nom : <input id="name" type="text" size="30" /></p>
+<p>
+  Veuillez saisir votre nom&nbsp;: <input id="name" type="text" size="30" />
+</p>
 
 <!-- libellé implicite -->
 <p>
   <label
-    >Veuillez saisir votre nom : <input id="name" type="text" size="30"
+    >Veuillez saisir votre nom&nbsp;: <input id="name" type="text" size="30"
   /></label>
 </p>
 
 <!-- libellé explicite -->
 <p>
-  <label for="name">Veuillez saisir votre nom : </label
+  <label for="name">Veuillez saisir votre nom&nbsp;: </label
   ><input id="name" type="text" size="30" />
 </p>
 ```
@@ -903,7 +905,7 @@ Pour les types de champ dont le domaine des valeurs possibles est périodique (a
 <input type="time" min="20:00" max="08:00" name="overnight" />
 ```
 
-Certains attributs et valeurs peuvent causer une erreur {{DOMxRef('ValidityState')}} spécifique&nbsp;:
+Certains attributs et valeurs peuvent causer une erreur {{DOMxRef("ValidityState")}} spécifique&nbsp;:
 
 <table class="no-markdown">
   <caption>Objets d'erreur de validité selon les attributs <code>&lt;input&gt;</code> et leurs valeurs</caption>
@@ -917,44 +919,44 @@ Certains attributs et valeurs peuvent causer une erreur {{DOMxRef('ValidityState
   <tbody>
     <tr>
       <td><a href="#max"><code>max</code></a></td>
-      <td>{{DOMxRef('ValidityState.rangeOverflow')}}</td>
+      <td>{{DOMxRef("ValidityState.rangeOverflow")}}</td>
       <td>Se produit lorsque la valeur est supérieure à la valeur maximale définie par l'attribut <code>max</code>.</td>
     </tr>
     <tr>
       <td><a href="#maxlength"><code>maxlength</code></a></td>
-      <td>{{DOMxRef('ValidityState.tooLong')}}</td>
+      <td>{{DOMxRef("ValidityState.tooLong")}}</td>
       <td>Se produit lorsque le nombre de caractères du champ est supérieur à la valeur définie par l'attribut <code>maxlength</code>.</td>
     </tr>
     <tr>
       <td><a href="#min"><code>min</code></a></td>
-      <td>{{DOMxRef('ValidityState.rangeUnderflow')}}</td>
+      <td>{{DOMxRef("ValidityState.rangeUnderflow")}}</td>
       <td>Se produit lorsque la valeur est inférieure à la valeur minimale définie par l'attribut <code>min</code>.</td>
     </tr>
     <tr>
       <td><a href="#minlength"><code>minlength</code></a></td>
-      <td>{{DOMxRef('ValidityState.tooShort')}}</td>
+      <td>{{DOMxRef("ValidityState.tooShort")}}</td>
       <td>Se produit lorsque le nombre de caractères du champ est inférieur à la valeur définie par l'attribut <code>minlength</code>.</td>
     </tr>
     <tr>
       <td><a href="#pattern"><code>pattern</code></a></td>
-      <td>{{DOMxRef('ValidityState.patternMismatch')}}</td>
+      <td>{{DOMxRef("ValidityState.patternMismatch")}}</td>
       <td>Se produit lorsque l'attribut <code>pattern</code> contient une expression rationnelle valide et que la valeur du champ ne respecte pas celle-ci.</td>
     </tr>
     <tr>
       <td><a href="#required"><code>required</code></a></td>
-      <td>{{DOMxRef('ValidityState.valueMissing')}}</td>
+      <td>{{DOMxRef("ValidityState.valueMissing")}}</td>
       <td>Se produit lorsque l'attribut <code>required</code> est présent et mais sa valeur est <code>null</code> ou que le bouton radio ou la case à cocher n'est pas sélectionné.
       </td>
     </tr>
     <tr>
       <td><a href="#step"><code>step</code></a></td>
-      <td>{{DOMxRef('ValidityState.stepMismatch')}}</td>
+      <td>{{DOMxRef("ValidityState.stepMismatch")}}</td>
       <td>Se produit lorsque la valeur ne respecte pas l'incrément imposé par l'attribut <code>step</code>. L'incrément par défaut vaut <code>1</code>, ce qui signifie que seules les valeurs entières sont valides pour le type <code>number</code> si <code>step</code> est absent. Utiliser <code>step="any"</code> empêchera de déclencher cette erreur.
       </td>
     </tr>
     <tr>
       <td><a href="#type"><code>type</code></a></td>
-      <td>{{DOMxRef('ValidityState.typeMismatch')}}</td>
+      <td>{{DOMxRef("ValidityState.typeMismatch")}}</td>
       <td>Se produit lorsque la valeur ne correspond pas au type, par exemple si une adresse électronique ne contient pas le caractère <code>@</code> ou si une URL ne contient pas de protocole.</td>
     </tr>
   </tbody>
@@ -966,17 +968,17 @@ On peut définir des limites sur les valeurs acceptables et les navigateurs qui 
 
 En plus des erreurs décrites dans le tableau qui précède, l'interface `ValidityState` contient les propriétés booléennes en lecture seule `badInput`, `valid`, et `customError`. Cet objet possède les propriétés suivantes&nbsp;:
 
-- {{DOMxRef('ValidityState.valueMissing')}}
-- {{DOMxRef('ValidityState.typeMismatch')}}
-- {{DOMxRef('ValidityState.patternMismatch')}}
-- {{DOMxRef('ValidityState.tooLong')}}
-- {{DOMxRef('ValidityState.tooShort')}}
-- {{DOMxRef('ValidityState.rangeUnderflow')}}
-- {{DOMxRef('ValidityState.rangeOverflow')}}
-- {{DOMxRef('ValidityState.stepMismatch')}}
-- {{DOMxRef('ValidityState.badInput')}}
-- {{DOMxRef('ValidityState.valid')}}
-- {{DOMxRef('ValidityState.customError')}}
+- {{DOMxRef("ValidityState.valueMissing")}}
+- {{DOMxRef("ValidityState.typeMismatch")}}
+- {{DOMxRef("ValidityState.patternMismatch")}}
+- {{DOMxRef("ValidityState.tooLong")}}
+- {{DOMxRef("ValidityState.tooShort")}}
+- {{DOMxRef("ValidityState.rangeUnderflow")}}
+- {{DOMxRef("ValidityState.rangeOverflow")}}
+- {{DOMxRef("ValidityState.stepMismatch")}}
+- {{DOMxRef("ValidityState.badInput")}}
+- {{DOMxRef("ValidityState.valid")}}
+- {{DOMxRef("ValidityState.customError")}}
 
 Pour chacune de ces propriétés booléennes, une valeur à `true` indique que la raison de validation correspondante peut avoir échoué, exception faite de la propriété `valid` qui, si elle vaut `true`, indique que la valeur de l'élément respecte l'ensemble des contraintes.
 
@@ -1006,7 +1008,7 @@ Si vous souhaitez afficher un message d'erreur spécifique lorsqu'un champ est i
 ```html
 <form>
   <label for="name"
-    >Veuillez saisir un nom d'utilisateur (avec des lettres en minuscules ou
+    >Veuillez saisir un nom d'utilisateur·ice (avec des lettres en minuscules ou
     majuscules)&nbsp;:
   </label>
   <input type="text" name="name" id="name" required pattern="[A-Za-z]+" />
@@ -1029,11 +1031,11 @@ nameInput.addEventListener("input", () => {
 nameInput.addEventListener("invalid", () => {
   if (nameInput.value === "") {
     nameInput.setCustomValidity(
-      `Veuillez saisir un nom d'utilisateur non vide !`,
+      `Veuillez saisir un nom d'utilisateur·ice non vide !`,
     );
   } else {
     nameInput.setCustomValidity(
-      `Un nom d'utilisateur ne peut contenir que des lettres en minuscules ou majuscules. Essayez à nouveau.`,
+      `Un nom d'utilisateur·ice ne peut contenir que des lettres en minuscules ou majuscules. Essayez à nouveau.`,
     );
   }
 });
@@ -1041,7 +1043,7 @@ nameInput.addEventListener("invalid", () => {
 
 L'exemple ainsi construit produira le résultat suivant&nbsp;:
 
-{{EmbedLiveSample('Exemple de message d'erreur de validation sur mesure')}}
+{{EmbedLiveSample("Exemple de message d'erreur de validation sur mesure")}}
 
 En résumé&nbsp;:
 

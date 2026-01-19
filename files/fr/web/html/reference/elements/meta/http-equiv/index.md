@@ -27,7 +27,7 @@ Parmi celles-ci&nbsp;:
     Utilisez plutôt l'attribut [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang).
 - `content-type`
   - : Déclare le [type de média (type MIME)](/fr/docs/Web/HTTP/Guides/MIME_types) et l'encodage des caractères du document.
-    L'attribut `content` doit valoir «&nbsp;text/html; charset=utf-8&nbsp;» si spécifié.
+    L'attribut `content` doit valoir «&nbsp;text/html; charset=utf-8&nbsp;» si défini.
     Cela équivaut à un élément `<meta>` avec l'attribut [`charset`](/fr/docs/Web/HTML/Reference/Elements/meta#charset) et impose la même restriction sur le placement dans le document.
     Ne peut être utilisé que dans les documents servis avec le type de média `text/html` — pas dans les documents XML (`application/xml` ou `application/xhtml+xml`).
     Voir l'en-tête HTTP {{HTTPHeader("Content-Type")}}.
@@ -49,8 +49,8 @@ Parmi celles-ci&nbsp;:
   - : Définit un cookie pour le document.
     Les navigateurs ignorent désormais cette directive&nbsp;: utilisez l'en-tête HTTP {{HTTPHeader("Set-Cookie")}} ou {{DOMxRef("Document/cookie", "document.cookie")}} à la place.
 - `x-ua-compatible` {{Deprecated_Inline}}
-  - : Utilisé par les anciennes versions du désormais obsolète {{Glossary("Microsoft Internet Explorer")}} pour se conformer au comportement spécifié.
-    Si spécifié, l'attribut `content` doit avoir la valeur «&nbsp;IE=edge&nbsp;».
+  - : Utilisé par les anciennes versions du désormais obsolète {{Glossary("Microsoft Internet Explorer")}} pour se conformer au comportement défini.
+    Si défini, l'attribut `content` doit avoir la valeur «&nbsp;IE=edge&nbsp;».
     Les agents utilisateur ignorent désormais cette directive.
     Le nom provient de l'en-tête HTTP `X-UA-Compatible`.
 

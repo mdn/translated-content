@@ -78,7 +78,7 @@ ctx.fillRect(10, 10, 100, 100);
 
 ### Résultat
 
-{{EmbedLiveSample('Exemples', 600, 150)}}
+{{EmbedLiveSample("Exemples", 600, 150)}}
 
 ## Résumé technique
 
@@ -112,7 +112,7 @@ ctx.fillRect(10, 10, 100, 100);
         à l'exception des éléments {{HTMLElement("a")}},
         {{HTMLElement("button")}}, {{HTMLElement("input")}}
         dont l'attribut
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-type"
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#type"
           ><code>type</code></a
         >
         vaut <code>checkbox</code>, <code>radio</code>, ou <code>button</code>.
@@ -171,6 +171,6 @@ ctx.fillRect(10, 10, 100, 100);
 - [Guide Safari HTML Canvas <sup>(angl.)</sup>](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html) sur Apple (2013)
 - [`CanvasRenderingContext2D` — contexte de dessin 2D pour un élément `<canvas>` <sup>(angl.)</sup>](https://developer.apple.com/documentation/webkitjs/canvasrenderingcontext2d) sur Apple.com
 - [L'API WebGL](/fr/docs/Web/API/WebGL_API)
-- L'élément HTML {{HTMLElement("img")}}
+- L'élément {{HTMLElement("img")}}
 - [SVG](/fr/docs/Web/SVG)
 - [Vidéo et audio HTML](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)

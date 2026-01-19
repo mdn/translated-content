@@ -18,7 +18,7 @@ Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Ref
   <!-- élément d'ancre qui mène à un fichier externe -->
   <a href="https://www.mozilla.org/">Lien externe</a>
 </noscript>
-<p>Elle est où, la poulette ?</p>
+<p>Elle est où, la poulette&nbsp;?</p>
 ```
 
 ### Résultat avec JavaScript activé
