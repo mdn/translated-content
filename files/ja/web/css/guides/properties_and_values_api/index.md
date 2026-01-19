@@ -66,11 +66,11 @@ CSS.registerProperty({
 ### アットルールと記述子
 
 - {{cssxref("@property")}}
-  - [syntax](/ja/docs/Web/CSS/Reference/At-rules/@property#descriptors) 記述子
-    - [`+` および `#`](/ja/docs/Web/CSS/Reference/At-rules/@property#descriptors) 量化子
-    - [`|`](/ja/docs/Web/CSS/Reference/At-rules/@property#descriptors) 結合子
-  - [inherits](/ja/docs/Web/CSS/Reference/At-rules/@property#descriptors) 記述子
-  - [initial-value](/ja/docs/Web/CSS/Reference/At-rules/@property#descriptors) 記述子
+  - [syntax](/ja/docs/Web/CSS/Reference/At-rules/@property#解説) 記述子
+    - [`+` および `#`](/ja/docs/Web/CSS/Reference/At-rules/@property#解説) 量化子
+    - [`|`](/ja/docs/Web/CSS/Reference/At-rules/@property#解説) 結合子
+  - [inherits](/ja/docs/Web/CSS/Reference/At-rules/@property#解説) 記述子
+  - [initial-value](/ja/docs/Web/CSS/Reference/At-rules/@property#解説) 記述子
 
 ### インターフェイスと API
 
