@@ -1,18 +1,18 @@
 ---
 title: CSS プロパティと値 API
+short-title: プロパティと値 API
 slug: Web/CSS/Guides/Properties_and_values_API
-original_slug: Web/CSS/CSS_properties_and_values_API
 l10n:
-  sourceCommit: d74e7839bc166b9d652abc9cdcfe99de448efb2a
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **CSS プロパティと値 API** (CSS properties and values API) モジュールは、モジュールは、新しい CSS プロパティを登録するための方法を定義し、プロパティのデータ型、継承動作、そしてオプションとして初期値を定義します。
 この API は、 [CSS 変数のカスケードのためのカスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables)モジュールにおける、 CSS において[二重ダッシュ構文 (`--`)](/ja/docs/Web/CSS/Reference/Properties/--*) を使用したカスタムプロパティが定義できる機能をを拡張します。
-CSS プロパティと値 API は API における [CSS Houdini](/ja/docs/Web/CSS/Guides/Properties_and_values_API/Houdini) の傘下にあります。
+CSS プロパティと値 API は API における [CSS Houdini](/ja/docs/Web/API/Houdini_APIs) の傘下にあります。
 
 カスタムプロパティを使用すると、プロジェクト全体で値を再利用できるため、複雑なスタイルシートや繰り返しの多いスタイルシートを簡素化できます。
 基本的なカスタムプロパティは、 [CSS 変数のカスケードのためのカスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables)モジュールで定義されています。
-CSS プロパティと値 API はこのモジュールを拡張し、このモジュールを拡張し、 CSS で [`@property`](/ja/docs/Web/CSS/Reference/At-rules/@property) アットルールを使用したり、 JavaScript で {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}} メソッドを使用したりして、カスタムプロパティにメタデータを追加できるようにします。
+CSS プロパティと値 API はこのモジュールを拡張し、このモジュールを拡張し、 CSS で {{cssxref("@property")}} アットルールを使用したり、 JavaScript で {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}} メソッドを使用したりして、カスタムプロパティにメタデータを追加できるようにします。
 
 登録が CSS であれ JavaScript であれ、カスタムプロパティにメタデータを設定することで、ブラウザーがコンテキストに応じて使用できる期待されるデータ型を提供し、初期値を定義し、継承を制御することができます。
 
@@ -56,21 +56,21 @@ CSS.registerProperty({
 <div class="box"><p>トランジション付きの線形グラデーション</p></div>
 ```
 
-{{EmbedLiveSample("",600,120)}}
+{{EmbedLiveSample("Properties and values API in action",600,120)}}
 
-このボックスは[背景](/ja/docs/Web/CSS/Reference/Properties/background) が `--stop-color` （カスタムプロパティ）から [`lavenderblush`](/ja/docs/Web/CSS/Reference/Values/named-color) までの[線形グラデーション](/ja/docs/Web/CSS/Reference/Values/gradient/linear-gradient)で構成されています。
+このボックスの[背景](/ja/docs/Web/CSS/Reference/Properties/background)は[線形グラデーション](/ja/docs/Web/CSS/Reference/Values/gradient/linear-gradient)で構成されており、`--stop-color` （カスタムプロパティ）から [`lavenderblush`](/ja/docs/Web/CSS/Reference/Values/named-color) まで変化します。
 最初、 `--stop-color` の値は `cornflowerblue` に設定されていますが、ボックスにカーソルを合わせると、 2 秒かけて `--stop-color` の[トランジション](/ja/docs/Web/CSS/Reference/Properties/transition) が `aquamarine` まで遷移します（`linear-gradient(to right, aquamarine, lavenderblush)`）。
 
 ## リファレンス
 
-### アットルール
+### アットルールと記述子
 
 - {{cssxref("@property")}}
-  - [syntax](/ja/docs/Web/CSS/Reference/At-rules/@property#descriptors) 記述子
-    - [`+` and `#`](/ja/docs/Web/CSS/Reference/At-rules/@property#descriptors) 量化子
-    - [`|`](/ja/docs/Web/CSS/Reference/At-rules/@property#descriptors) 結合子
-  - [inherits](/ja/docs/Web/CSS/Reference/At-rules/@property#descriptors) 記述子
-  - [initial-value](/ja/docs/Web/CSS/Reference/At-rules/@property#descriptors) 記述子
+  - [syntax](/ja/docs/Web/CSS/Reference/At-rules/@property#解説) 記述子
+    - [`+` および `#`](/ja/docs/Web/CSS/Reference/At-rules/@property#解説) 量化子
+    - [`|`](/ja/docs/Web/CSS/Reference/At-rules/@property#解説) 結合子
+  - [inherits](/ja/docs/Web/CSS/Reference/At-rules/@property#解説) 記述子
+  - [initial-value](/ja/docs/Web/CSS/Reference/At-rules/@property#解説) 記述子
 
 ### インターフェイスと API
 
@@ -81,8 +81,9 @@ CSS.registerProperty({
 
 - [CSS プロパティと値 API の使用](/ja/docs/Web/API/CSS_Properties_and_Values_API/guide)
   - : CSS や JavaScript でカスタムプロパティを登録する方法について、未定義値や無効値の扱い方、代替、継承などのヒントを交えて解説しています。
-
-- [CSS Houdini](/ja/docs/Web/API/Houdini_APIs)
+- [CSS Houdini](/ja/docs/Web/CSS/Guides/Properties_and_values_API/Houdini)
+  - : Houdini リソース（CSS モジュール、API ガイド、外部リソースを含む）のリファレンスガイド。
+- [Houdini API](/ja/docs/Web/API/Houdini_APIs)
   - : CSS Houdini とは何か、その利点について、利用可能な API とそのステータスの一覧とともに説明します。
 
 ## 関連概念

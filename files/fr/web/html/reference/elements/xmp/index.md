@@ -1,19 +1,20 @@
 ---
-title: <xmp>
+title: "<xmp> : l'élément de texte préformaté"
 slug: Web/HTML/Reference/Elements/xmp
-original_slug: Web/HTML/Element/xmp
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{deprecated_header}}{{HTMLSidebar}}
+{{Deprecated_Header}}
 
-L'élément HTML **`<xmp>`** (pour _example_) affiche le texte entre les balises d'ouverture et de fermeture sans interpréter le HTML qu'il contient et en utilisant une police à chasse fixe. La spécification HTML 2 recommande un affichage suffisamment large pour contenir 80 caractères par ligne.
+L'élément [HTML](/fr/docs/Web/HTML) **`<xmp>`** affiche le texte entre les balises de début et de fin sans interpréter le HTML contenu et en utilisant une police à chasse fixe. La spécification HTML2 recommandait un affichage suffisamment large pour permettre 80 caractères par ligne.
 
 > [!NOTE]
 > Ne pas utiliser cet élément.
 >
-> - Il a été déprécié depuis HTML3.2 et n'a pas été implémenté d'une manière cohérente. Il a été complètement retiré du langage dans HTML5.
-> - Utilisez l'élément {{HTMLElement("pre")}} ou, si sémantiquement approprié, l'élément {{HTMLElement("code")}}. Notez qu'il vous faudra échapper les caractères '`<`' et '`>`' pour qu'ils ne soient pas interprétés.
-> - Une police à chasse fixe peut être obtenu sur n'importe quel élément en utilisant des règles [CSS](/fr/docs/Web/CSS), par la valeur `monospace` avec la propriété {{cssxref("font-family")}}.
+> - Il est obsolète depuis HTML3.2 et n'a jamais été implémenté de façon cohérente. Il a été complètement supprimé du HTML actuel.
+> - Utilisez l'élément {{HTMLElement("pre")}} ou, si cela est sémantiquement approprié, l'élément {{HTMLElement("code")}} à la place. Notez qu'il faudra échapper le caractère `<` en `&lt;` et le caractère `&` en `&amp;` pour éviter qu'ils ne soient interprétés comme du balisage.
+> - Une police à chasse fixe peut aussi être obtenue sur n'importe quel élément, en appliquant un style [CSS](/fr/docs/Web/CSS) approprié utilisant `monospace` comme valeur générique pour la propriété CSS {{CSSxRef("font-family")}}.
 
 ## Attributs
 
@@ -21,10 +22,11 @@ Cet élément n'a aucun autre attribut en dehors [des attributs universels](/fr/
 
 ## Interface DOM
 
-Cet élément implémente l'interface {{domxref('HTMLElement')}}.
+Cet élément implémente l'interface {{DOMxRef("HTMLElement")}}.
 
-> [!NOTE]
-> Jusqu'à Gecko 1.9.2 inclus, Firefox implémentait l'interface {{domxref('HTMLSpanElement')}} pour cet élément.
+## Spécifications
+
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
@@ -33,4 +35,4 @@ Cet élément implémente l'interface {{domxref('HTMLElement')}}.
 ## Voir aussi
 
 - Les éléments {{HTMLElement("pre")}} et {{HTMLElement("code")}} qui doivent être utilisés à la place.
-- Les éléments {{HTMLElement("plaintext")}} et {{HTMLElement("listing")}}, similaires à {{HTMLElement("xmp")}} mais également obsolètes.
+- L'élément {{HTMLElement("plaintext")}}, similaire à `<xmp>` mais également obsolète.

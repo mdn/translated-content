@@ -1,40 +1,39 @@
 ---
 title: "<tfoot> : l'élément de pied de tableau"
 slug: Web/HTML/Reference/Elements/tfoot
-original_slug: Web/HTML/Element/tfoot
+l10n:
+  sourceCommit: 7c28cd21b705e7b7664d53b4d7822469ea8e6e15
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<tfoot>`** encapsule un ensemble de lignes de tableau (éléments {{HTMLElement("tr")}}), indiquant qu'elles constituent le pied d'un tableau avec des informations sur les colonnes du tableau. Il s'agit généralement d'un récapitulatif des colonnes, par exemple une somme des nombres présents dans une colonne.
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<tfoot>`** permet de définir un ensemble de lignes qui résument les colonnes d'un tableau.
-
-{{InteractiveExample("HTML Demo: &lt;tfoot&gt;", "tabbed-taller")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;tfoot&gt;", "tabbed-taller")}}
 
 ```html interactive-example
 <table>
   <caption>
-    Council budget (in £) 2018
+    Budget du conseil (en livres sterling) 2018
   </caption>
   <thead>
     <tr>
-      <th scope="col">Items</th>
-      <th scope="col">Expenditure</th>
+      <th scope="col">Articles</th>
+      <th scope="col">Dépenses</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">Donuts</th>
-      <td>3,000</td>
+      <th scope="row">Beignets</th>
+      <td>3 000</td>
     </tr>
     <tr>
-      <th scope="row">Stationery</th>
-      <td>18,000</td>
+      <th scope="row">Fournitures de bureau</th>
+      <td>18 000</td>
     </tr>
   </tbody>
   <tfoot>
     <tr>
-      <th scope="row">Totals</th>
-      <td>21,000</td>
+      <th scope="row">Total</th>
+      <td>21 000</td>
     </tr>
   </tfoot>
 </table>
@@ -44,7 +43,7 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<tfoot>`** permet de définir un ensemb
 thead,
 tfoot {
   background-color: #2c5e77;
-  color: #fff;
+  color: white;
 }
 
 tbody {
@@ -75,34 +74,176 @@ td {
 }
 ```
 
+## Attributs
+
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+
+### Attributs obsolètes
+
+Les attributs qui suivent sont dépréciés et ne devraient pas être utilisés. Ils sont uniquement documentés à des fins historiques et pour la mise à jour du code existant qui les utiliserait.
+
+- `align` {{Deprecated_Inline}}
+  - : Définit l'alignement horizontal de chaque cellule du pied de tableau. Les valeurs {{Glossary("enumerated", "énumérées")}} possibles sont `left`, `center`, `right`, `justify` et `char`. Lorsque cela est pris en charge, la valeur `char` aligne le contenu textuel sur le caractère défini dans l'attribut [`char`](#char) et sur le décalage défini par l'attribut [`charoff`](#charoff). Utilisez plutôt la propriété CSS {{CSSxRef("text-align")}}, car cet attribut est obsolète.
+
+- `bgcolor` {{Deprecated_Inline}}
+  - : Définit la couleur d'arrière-plan de chaque cellule du pied de tableau. La valeur est une couleur HTML&nbsp;; soit un [code RGB hexadécimal à 6 chiffres](/fr/docs/Web/CSS/Reference/Values/hex-color), préfixé d'un `#`, soit un [mot-clé de couleur](/fr/docs/Web/CSS/Reference/Values/named-color). Les autres valeurs CSS {{CSSxRef("&lt;color&gt;")}} ne sont pas prises en charge. Utilisez la propriété CSS {{CSSxRef("background-color")}} à la place, car cet attribut est obsolète.
+
+- `char` {{Deprecated_Inline}}
+  - : Ne fait rien. Il était à l'origine destiné à définir l'alignement du contenu sur un caractère de chaque cellule du pied de tableau. Les valeurs typiques incluent un point (`.`) pour aligner des nombres ou des valeurs monétaires. Si [`align`](#align) n'est pas défini à `char`, cet attribut est ignoré.
+
+- `charoff` {{Deprecated_Inline}}
+  - : Ne fait rien. Il était à l'origine destiné à définir le nombre de caractères de décalage du contenu de la cellule du pied de tableau par rapport au caractère d'alignement défini par l'attribut [`char`](#char).
+
+- `valign` {{Deprecated_Inline}}
+  - : Définit l'alignement vertical de chaque cellule du pied de tableau. Les valeurs {{Glossary("enumerated", "énumérées")}} possibles sont `baseline`, `bottom`, `middle` et `top`. Utilisez la propriété CSS {{CSSxRef("vertical-align")}} à la place, car cet attribut est obsolète.
+
+## Notes d'utilisation
+
+- L'élément `<tfoot>` est placé après les éléments {{HTMLElement("caption")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("thead")}}, {{HTMLElement("tbody")}} et {{HTMLElement("tr")}}.
+- Avec les éléments associés {{HTMLElement("thead")}} et {{HTMLElement("tbody")}}, l'élément `<tfoot>` fournit des informations {{Glossary("semantics", "sémantiques")}} utiles et peut être utilisé lors de l'affichage à l'écran ou à l'impression. Définir de tels groupes de contenu de tableau fournit également des informations contextuelles précieuses pour les technologies d'assistance, y compris les lecteurs d'écran et les moteurs de recherche.
+- Lors de l'impression d'un document, dans le cas d'un tableau sur plusieurs pages, le pied du tableau indique généralement des informations qui sont affichées comme un récapitulatif intermédiaire sur chaque page.
+
+## Exemples
+
+Voir {{HTMLElement("table")}} pour un exemple complet de tableau présentant les standards courants et les bonnes pratiques.
+
+### Tableau avec pied de tableau
+
+Cet exemple montre un tableau divisé en une section d'en-tête avec les en-têtes de colonnes, une section de corps avec les données principales du tableau, et une section de pied récapitulant les données d'une colonne.
+
+#### HTML
+
+Les éléments {{HTMLElement("thead")}}, {{HTMLElement("tbody")}} et `<tfoot>` servent à structurer un tableau de base en sections {{Glossary("semantics", "sémantiques")}}. L'élément `<tfoot>` représente la section de pied du tableau, qui contient une ligne ({{HTMLElement("tr")}}) représentant la moyenne calculée des valeurs de la colonne «&nbsp;Crédits&nbsp;».
+
+Pour placer les cellules du pied dans les bonnes colonnes, l'attribut [`colspan`](/fr/docs/Web/HTML/Reference/Elements/th#colspan) est utilisé sur l'élément {{HTMLElement("th")}} pour étendre la cellule d'en-tête de ligne sur les trois premières colonnes du tableau. La seule cellule de données ({{HTMLElement("td")}}) du pied est automatiquement placée à l'endroit approprié, c'est-à-dire la quatrième colonne, la valeur omise de l'attribut [`colspan`](/fr/docs/Web/HTML/Reference/Elements/td#colspan) étant par défaut `1`. De plus, l'attribut [`scope`](/fr/docs/Web/HTML/Reference/Elements/th#scope) est défini à `row` sur la cellule d'en-tête ({{HTMLElement("th")}}) du pied pour indiquer explicitement que cette cellule d'en-tête du pied est liée aux cellules du tableau de la même ligne, qui dans notre exemple est la seule cellule de données de la ligne du pied contenant la moyenne calculée.
+
+```html
+<table>
+  <thead>
+    <tr>
+      <th>Identifiant de l'étudiant</th>
+      <th>Nom</th>
+      <th>Spécialité</th>
+      <th>Crédits</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>3741255</td>
+      <td>Jones, Martha</td>
+      <td>Informatique</td>
+      <td>240</td>
+    </tr>
+    <tr>
+      <td>3971244</td>
+      <td>Nim, Victor</td>
+      <td>Littérature</td>
+      <td>220</td>
+    </tr>
+    <tr>
+      <td>4100332</td>
+      <td>Petrov, Alexandra</td>
+      <td>Astrophysique</td>
+      <td>260</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th colspan="3" scope="row">Crédits moyens</th>
+      <td>240</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+#### CSS
+
+Quelques règles CSS de base sont utilisées pour mettre en forme et mettre en valeur le pied du tableau afin que les cellules du pied se distinguent des données du corps du tableau.
+
+```css
+tfoot {
+  border-top: 3px dotted rgb(160 160 160);
+  background-color: #2c5e77;
+  color: white;
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+
+thead {
+  border-bottom: 2px solid rgb(160 160 160);
+  background-color: #2c5e77;
+  color: white;
+}
+
+tbody {
+  background-color: #e4f0f5;
+}
+```
+
+```css hidden
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+tr > td:last-of-type {
+  text-align: center;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Exemples", 650, 180)}}
+
+## Résumé technique
+
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories">Catégories de contenu</a>
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories">Catégories de contenu</a>
       </th>
       <td>Aucune.</td>
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
-      <td>Zéro ou plusieurs éléments <a href="/fr/docs/Web/HTML/Element/tr"><code>&lt;tr&gt;</code></a>.</td>
+      <td>Zéro ou plusieurs éléments {{HTMLElement("tr")}}.</td>
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
       <td>
-        La balise de début est obligatoire. La balise de fin peut être absente s'il n'y a plus d'autre contenu dans l'élément <a href="/fr/docs/Web/Element/table"><code>&lt;table&gt;</code></a>.
+        La balise de début est obligatoire. La balise de fin peut être absente s'il n'y a plus d'autre contenu dans l'élément {{HTMLElement("table")}}.
       </td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>
       <td>
-        Un élément <a href="/fr/docs/Web/Element/table"><code>&lt;table&gt;</code></a>. L'élément <code>&lt;tfoot&gt;</code> doit apparaître après l'élément <a href="/fr/docs/Web/Element/caption"><code>&lt;caption&gt;</code></a>, l'élément <a href="/fr/docs/Web/Element/colgroup"><code>&lt;colgroup&gt;</code></a> ou l'élément <a href="/fr/docs/Web/Element/thead"><code>&lt;thead&gt;</code></a>, <a href="/fr/docs/Web/Element/tbody"><code>&lt;tbody&gt;</code></a> ou <a href="/fr/docs/Web/Element/tr"><code>&lt;tr&gt;</code></a>. En HTML4, l'élément <code>&lt;tfoot&gt;</code> ne peut pas être placé après un élément <a href="/fr/docs/Web/Element/tbody"><code>&lt;tbody&gt;</code></a> ou <a href="/fr/docs/Web/Element/tr"><code>&lt;tr&gt;</code></a> (ce qui contredit la règle imposée en HTML5).
+        Un élément {{HTMLElement("table")}}. L'élément <code>&lt;tfoot&gt;</code> doit apparaître après l'élément {{HTMLElement("caption")}}, l'élément {{HTMLElement("colgroup")}} ou l'élément {{HTMLElement("thead")}}, {{HTMLElement("tbody")}} ou {{HTMLElement("tr")}}. En HTML4, l'élément <code>&lt;tfoot&gt;</code> ne peut pas être placé après un élément {{HTMLElement("tbody")}} ou {{HTMLElement("tr")}} (ce qui contredit la règle imposée en HTML5).
       </td>
     </tr>
     <tr>
       <th scope="row">Rôle ARIA implicite</th>
       <td>
-        <a href="/fr/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role"><code>rowgroup</code></a>
+        <code
+          ><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role"
+            >rowgroup</a
+          ></code
+        >
       </td>
     </tr>
     <tr>
@@ -111,67 +252,10 @@ td {
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td><a href="/fr/docs/Web/API/HTMLTableSectionElement"><code>HTMLTableSectionElement</code></a></td>
+      <td>{{DOMxRef("HTMLTableSectionElement")}}</td>
     </tr>
   </tbody>
 </table>
-
-## Attributs
-
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
-
-### Attributs dépréciés
-
-Les attributs qui suivent sont dépréciés et ne devraient pas être utilisés. Ils sont uniquement documentés à des fins historiques et pour la mise à jour du code existant qui les utiliserait.
-
-- `align` {{Deprecated_inline}}
-  - : Cet attribut à valeurs définit l'alignement horizontal pour le contenu de chaque cellule de la colonne. Les valeurs possibles sont&nbsp;:
-    - `left`
-      - : Le contenu de la cellule est aligné à gauche de la cellule.
-    - `center`
-      - : Le contenu de la cellule est centré horizontalement.
-    - `right`
-      - : Le contenu de la cellule est aligné à droite de la cellule.
-    - `justify`
-      - : Insère des espaces dans le contenu textuel afin que le contenu de la cellule soit justifié.
-    - `char`
-      - : Aligne le contenu textuel de la cellule selon un caractère spécial avec un décalage minimum définis par les attributs `char` et `charoff`.
-
-    Si cet attribut n'est pas renseigné, la valeur `left` est prise par défaut.
-
-    > [!NOTE]
-    > Pour réaliser le même effet qu'avec les valeurs `left`, `center`, `right` ou `justify`, utilisez la propriété CSS [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align) sur cet élément.
-    >
-    > - Pour réaliser le même effet qu'avec `char`, vous pouvez, en CSS3, utiliser la valeur de `char` comme valeur pour la propriété [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align) (non implémenté à date).
-
-- `bgcolor` {{Deprecated_inline}}
-  - : Cet attribut définit la couleur d'arrière-plan. Sa valeur est [un code hexadécimal RGB sur 6 chiffres](/fr/docs/Web/CSS/Reference/Values/color_value#les_couleurs_rgb), préfixé d'un '`#`' ou un des [mots-clés de couleurs prédéfinis](/fr/docs/Web/CSS/Reference/Values/color_value#les_mots-clés).
-
-    Pour réaliser un effet équivalent, on utilisera plutôt la propriété CSS [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color).
-
-- `char` {{Deprecated_inline}}
-  - : Cet attribut est utilisé pour définir le caractère sur lequel aligner les cellules d'une colonne. Les valeurs de cet attribut contiennent généralement un point (.) pour aligner des nombres ou des valeurs monétaires. Si l'attribut `align` ne vaut pas `char`, l'attribut est ignoré.
-
-- `charoff` {{Deprecated_inline}}
-  - : Cet attribut est utilisé pour indiquer le décalage, en nombre de caractères, depuis le caractère définit par l'attribut `char` à appliquer au contenu des cellules.
-
-- `valign` {{Deprecated_inline}}
-  - : Cet attribut définit l'alignement vertical du texte des cellules de la colonne. Les valeurs possibles pour cet attribut sont&nbsp;:
-    - `baseline`
-      - : Aligne le texte à la ligne la plus basse possible en utilisant la [ligne de base](https://fr.wikipedia.org/wiki/Ligne_de_base_%28typographie%29) des caractères. Si les caractères ont tous la même taille, cela aura le même effet que la valeur `bottom`.
-    - `bottom`
-      - : Place le texte au plus bas de la cellule.
-    - `middle`
-      - : Centre verticalement le texte dans la cellule.
-    - `top`
-      - : Place le texte au plus haut de la cellule.
-
-    > [!NOTE]
-    > Cet attribut étant maintenant obsolète (et n'étant plus pris en charge), il est fortement déconseillé de l'utiliser. La propriété CSS [`vertical-align`](/fr/docs/Web/CSS/Reference/Properties/vertical-align) doit être utilisée à la place.
-
-## Exemples
-
-Consulter la page [`<table>`](/fr/docs/Web/HTML/Reference/Elements/table) pour des exemples d'utilisation sur `<tfoot>`.
 
 ## Spécifications
 
@@ -183,16 +267,9 @@ Consulter la page [`<table>`](/fr/docs/Web/HTML/Reference/Elements/table) pour d
 
 ## Voir aussi
 
-- Les autres éléments HTML relatifs aux tableaux&nbsp;:
-  - [`<caption>`](/fr/docs/Web/HTML/Reference/Elements/caption)
-  - [`<col>`](/fr/docs/Web/HTML/Reference/Elements/col)
-  - [`<colgroup>`](/fr/docs/Web/HTML/Reference/Elements/colgroup)
-  - [`<table>`](/fr/docs/Web/HTML/Reference/Elements/table)
-  - [`<tbody>`](/fr/docs/Web/HTML/Reference/Elements/tbody)
-  - [`<td>`](/fr/docs/Web/HTML/Reference/Elements/td)
-  - [`<th>`](/fr/docs/Web/HTML/Reference/Elements/th)
-  - [`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead)
-  - [`<tr>`](/fr/docs/Web/HTML/Reference/Elements/tr)
-- Les propriétés et pseudo-classes CSS qui peuvent s'avérer utiles pour mettre en forme l'élément `<tfoot>`&nbsp;:
-  - La pseudo-classe [`:nth-child`](/fr/docs/Web/CSS/Reference/Selectors/:nth-child) qui permet de définir l'alignement des cellules de la colonne
-  - La propriété [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align) qui permet d'aligner le contenu des différentes cellules par rapport à un même caractère (comme le point ou la virgule)
+- [Apprendre&nbsp;: bases des tableaux HTML](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
+- Les autres éléments HTML relatifs aux tableaux&nbsp;: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}
+- Propriété CSS {{CSSxRef("background-color")}} pour définir la couleur d'arrière-plan de chaque cellule du pied de tableau
+- Propriété CSS {{CSSxRef("border")}} pour contrôler les bordures des cellules du pied de tableau
+- Propriété CSS {{CSSxRef("text-align")}} pour aligner horizontalement le contenu de chaque cellule du pied de tableau
+- Propriété CSS {{CSSxRef("vertical-align")}} pour aligner verticalement le contenu de chaque cellule du pied de tableau
