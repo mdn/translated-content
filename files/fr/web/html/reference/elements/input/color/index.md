@@ -249,5 +249,5 @@ Le résultat final ressemble à ceci&nbsp;:
 
 ## Voir aussi
 
-- La propriété API {{DOMxRef('HTMLInputElement.alpha')}}
-- La propriété API {{DOMxRef('HTMLInputElement.colorspace')}}
+- La propriété API {{DOMxRef("HTMLInputElement.alpha")}}
+- La propriété API {{DOMxRef("HTMLInputElement.colorspace")}}

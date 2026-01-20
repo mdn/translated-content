@@ -8,7 +8,7 @@ l10n:
 
 La valeur **`importmap`** de l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/script/type) pour l'élément HTML {{HTMLElement("script")}} indique que le contenu de l'élément contient une carte d'import (<i lang="en">import map</i>).
 
-Une carte d'import est un objet JSON qui permet aux développeuses et développeurs de contrôler la façon dont le navigateur résout les spécificateurs de modules lors de l'import [des modules JavaScript](/fr/docs/Web/JavaScript/Guide/Modules).
+Une carte d'import est un objet JSON qui permet aux développeur·euse·s de contrôler la façon dont le navigateur résout les spécificateurs de modules lors de l'import [des modules JavaScript](/fr/docs/Web/JavaScript/Guide/Modules).
 Elle fournit une correspondance entre le texte utilisé comme spécificateur de module dans [une instruction `import`](/fr/docs/Web/JavaScript/Reference/Statements/import) ou [un opérateur `import()`](/fr/docs/Web/JavaScript/Reference/Operators/import) et la valeur correspondante qui remplacera le texte lors de la résolution du spécificateur.
 L'objet JSON doit respecter [le format de représentation JSON des cartes d'import](#représentation_json_des_cartes_dimport).
 

@@ -112,7 +112,7 @@ Cet élément n'a pas d'autres attributs que les [attributs universels](/fr/docs
 
 ### Résultat
 
-{{EmbedLiveSample('Exemples', '', 570)}}
+{{EmbedLiveSample("Exemples", "", 570)}}
 
 ## Résumé technique
 

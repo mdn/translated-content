@@ -69,7 +69,7 @@ li span {
 
 #### Résultat
 
-{{EmbedLiveSample('Exemple 2')}}
+{{EmbedLiveSample("Exemple 2")}}
 
 ## Résumé technique
 

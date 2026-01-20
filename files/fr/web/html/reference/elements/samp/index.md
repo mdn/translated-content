@@ -32,7 +32,7 @@ Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Ref
 
 ## Notes d'utilisation
 
-Il est possible d'utiliser une règle CSS afin de surcharger la police par défaut utilisée par le navigateur pour les éléments `<samp>`. On rappelle ici que les préférences de l'utilisatrice ou de l'utilisateur peuvent également prendre le pas sur les feuilles de styles des documents.
+Il est possible d'utiliser une règle CSS afin de surcharger la police par défaut utilisée par le navigateur pour les éléments `<samp>`. On rappelle ici que les préférences de l'utilisateur·ice peuvent également prendre le pas sur les feuilles de styles des documents.
 
 Voici un exemple de règle permettant de surcharger la police par défaut pour ces éléments&nbsp;:
 

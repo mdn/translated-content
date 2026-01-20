@@ -7,7 +7,7 @@ l10n:
 ---
 
 La valeur **`robots`** pour l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta/name) de l'élément HTML {{HTMLElement("meta")}} (souvent appelée «&nbsp;balise robots&nbsp;») définit le comportement d'exploration et d'indexation que les {{Glossary("Crawler", "robots d'exploration")}} web doivent utiliser avec la page.
-Si elle est spécifiée, vous définissez les instructions pour les robots dans l'attribut [`content`](/fr/docs/Web/HTML/Reference/Elements/meta#content) de l'élément `<meta>` sous forme de liste de règles séparées par des virgules.
+Si elle est définie, vous définissez les instructions pour les robots dans l'attribut [`content`](/fr/docs/Web/HTML/Reference/Elements/meta#content) de l'élément `<meta>` sous forme de liste de règles séparées par des virgules.
 
 Par exemple, pour indiquer aux robots qu'une page doit être exclue de leurs index de recherche, on peut utiliser la valeur `noindex`&nbsp;:
 

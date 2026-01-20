@@ -35,12 +35,12 @@ Cet éléments inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glo
   - : Un attribut booléen qui indique que la vidéo doit automatiquement être lancée dès qu'elle peut être jouée sans être arrêtée par le chargement des données.
 
     > [!NOTE]
-    > Les navigateurs modernes bloquent l'audio (ou les vidéos avec une piste audio non assurée) de la lecture automatique, car les sites qui jouent automatiquement l'audio peuvent être une expérience désagréable pour les utilisateurs et les utilisatrices. Consultez notre [Guide sur la lecture automatique](/fr/docs/Web/Media/Guides/Autoplay) pour plus d'informations sur la façon d'utiliser correctement cette dernière.
+    > Les navigateurs modernes bloquent l'audio (ou les vidéos avec une piste audio non assurée) de la lecture automatique, car les sites qui jouent automatiquement l'audio peuvent être une expérience désagréable pour les utilisateur·ice·s. Consultez notre [Guide sur la lecture automatique](/fr/docs/Web/Media/Guides/Autoplay) pour plus d'informations sur la façon d'utiliser correctement cette dernière.
 
     Pour désactiver la vidéo automatique, `autoplay="false"` ne fonctionnera pas&nbsp;; La vidéo sera automatiquement lue si l'attribut est présent dans le tag `<video>`. Pour supprimer la lecture automatique, l'attribut doit être complètement supprimé.
 
 - `controls`
-  - : Si cet attribut est présent, le navigateur affichera des contrôles pour permettre à l'utilisateur de contrôler la lecture de la vidéo, le volume et la mise sur pause.
+  - : Si cet attribut est présent, le navigateur affichera des contrôles pour permettre à l'utilisateur·ice de contrôler la lecture de la vidéo, le volume et la mise sur pause.
 - `controlslist`
   - : L'attribut [`controlslist` <sup>(angl.)</sup>](https://wicg.github.io/controls-list/explainer.html), lorsqu'il est indiqué, aide le navigateur à choisir les contrôles à afficher pour la manipulation du média lorsque l'attribut `controls` est utilisé.
 
@@ -78,7 +78,7 @@ Cet éléments inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glo
   - : Cet attribut à [valeur contrainte](/fr/docs/Glossary/Enumerated) est une indication destinée au navigateur sur la meilleure façon de charger la vidéo (selon l'auteur de la page). Il peut prendre l'une des valeurs suivantes :
     - `none`&nbsp;: la vidéo ne doit pas être préchargée.
     - `metadata`&nbsp;: seules les métadonnées de la vidéo (sa durée par exemple) sont récupérées.
-    - `auto`&nbsp;: le fichier entier peut être téléchargé, même si l'utilisateur ne s'en sert pas.
+    - `auto`&nbsp;: le fichier entier peut être téléchargé, même si l'utilisateur·ice ne s'en sert pas.
     - la _chaîne de caractères vide_ (`""`)&nbsp;: synonyme de la valeur `auto`.
 
     La valeur par défaut peut être différente selon le navigateur. La spécification conseille d'utiliser la valeur `metadata`.
@@ -181,9 +181,9 @@ Il n'y a pas de considérations particulières pour la mise en forme de `<video>
 ### Ajouter des sous-titres et d'autres pistes de texte synchronisées
 
 Les pistes de texte synchronisées pour les sous-titres, les sous-titres codés, les titres de chapitres, etc. peuvent être ajoutées de manière déclarative en imbriquant l'élément {{HTMLElement("track")}}.
-Les pistes sont spécifiées dans le [Format de fichier de pistes de texte pour vidéos Web (WebVTT)](/fr/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format) (fichier `.vtt`).
+Les pistes sont définies dans le [Format de fichier de pistes de texte pour vidéos Web (WebVTT)](/fr/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format) (fichier `.vtt`).
 
-Par exemple, le code HTML ci-dessous inclut le fichier «&nbsp;captions.vtt&nbsp;», qui sera utilisé pour superposer des sous-titres codés sur la vidéo si l'utilisateur active cette fonctionnalité.
+Par exemple, le code HTML ci-dessous inclut le fichier «&nbsp;captions.vtt&nbsp;», qui sera utilisé pour superposer des sous-titres codés sur la vidéo si l'utilisateur·ice active cette fonctionnalité.
 
 ```html
 <video controls src="video.webm">
@@ -278,7 +278,7 @@ Les sous-titres ne doivent pas masquer le sujet principal de la vidéo. Ils peuv
 
 ### Source unique
 
-Cet exemple lit une vidéo lorsqu'il est activé, fournissant à l'utilisateur les commandes vidéo par défaut du navigateur pour contrôler la lecture.
+Cet exemple lit une vidéo lorsqu'il est activé, fournissant à l'utilisateur·ice les commandes vidéo par défaut du navigateur pour contrôler la lecture.
 
 #### HTML
 

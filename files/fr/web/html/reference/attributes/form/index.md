@@ -28,23 +28,23 @@ Bien qu'il ne soit pas nécessaire de définir la valeur de l'attribut sur l'`id
 
 L'attribut `form` peut être utilisé pour associer un contrôle de formulaire imbriqué dans un `<form>` à un autre `<form>`.
 
-Dans cet exemple, le champ `<input>` du nom d'utilisateur est imbriqué dans le `internalForm`, mais l'attribut `form` dissocie ce contrôle de son formulaire ancêtre et l'associe à `externalForm` à la place&nbsp;:
+Dans cet exemple, le champ `<input>` du nom d'utilisateur·ice est imbriqué dans le `internalForm`, mais l'attribut `form` dissocie ce contrôle de son formulaire ancêtre et l'associe à `externalForm` à la place&nbsp;:
 
 ```html
 <form id="externalForm"></form>
 <form id="internalForm">
-  <label for="username">Nom d'utilisateur&nbsp;:</label>
+  <label for="username">Nom d'utilisateur·ice&nbsp;:</label>
   <input form="externalForm" type="text" name="username" id="username" />
 </form>
 ```
 
-Dans ce cas, le nom d'utilisateur sera envoyé lors de la soumission de `externalForm`, tandis que `internalForm` n'aura aucun contrôle de formulaire associé.
+Dans ce cas, le nom d'utilisateur·ice sera envoyé lors de la soumission de `externalForm`, tandis que `internalForm` n'aura aucun contrôle de formulaire associé.
 
 ### Non-héritage de l'attribut `form`
 
 L'attribut `form` n'associe que l'élément sur lequel il est défini. Ce comportement n'est pas hérité. Par exemple, lorsque l'attribut `form` est défini sur un élément `<fieldset>`, il n'associe que le `<fieldset>`&nbsp;; il **n'associe pas** automatiquement les contrôles de formulaire imbriqués dans ce `<fieldset>`.
 
-Dans cet exemple, le `<fieldset>` et le champ `<input>` du nom d'utilisateur sont associés à `exampleForm` et inclus dans la {{DOMxRef("HTMLFormControlsCollection")}} de la propriété {{DOMxRef("HTMLFormElement.elements")}}, mais le champ `password` ne l'est pas. Seul le champ `username` sera inclus lors de la soumission de `exampleForm`&nbsp;:
+Dans cet exemple, le `<fieldset>` et le champ `<input>` du nom d'utilisateur·ice sont associés à `exampleForm` et inclus dans la {{DOMxRef("HTMLFormControlsCollection")}} de la propriété {{DOMxRef("HTMLFormElement.elements")}}, mais le champ `password` ne l'est pas. Seul le champ `username` sera inclus lors de la soumission de `exampleForm`&nbsp;:
 
 ```html
 <form id="exampleForm"></form>
@@ -52,7 +52,7 @@ Dans cet exemple, le `<fieldset>` et le champ `<input>` du nom d'utilisateur son
 <fieldset form="exampleForm">
   <legend>Informations de connexion</legend>
   <label
-    >Nom d'utilisateur&nbsp;:
+    >Nom d'utilisateur·ice&nbsp;:
     <input form="exampleForm" type="text" name="username"
   /></label>
   <label>Mot de passe&nbsp;: <input type="password" name="password" /></label>
@@ -86,7 +86,9 @@ Cet exemple montre comment des éléments liés à un formulaire peuvent être a
 
 ```html
 <form id="loginForm">
-  <label>Nom d'utilisateur&nbsp;: <input type="text" name="username" /></label>
+  <label
+    >Nom d'utilisateur·ice&nbsp;: <input type="text" name="username"
+  /></label>
 </form>
 
 <label

@@ -42,7 +42,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 - `shadowrootserializable`
   - : Définit la valeur de la propriété {{DOMxRef("ShadowRoot.serializable")}} d'un objet {{DOMxRef("ShadowRoot")}} créé avec cet élément à `true`.
-    Si défini, la racine d'ombre peut être sérialisée en appelant les méthodes {{DOMxRef('Element.getHTML()')}} ou {{DOMxRef('ShadowRoot.getHTML()')}} avec le paramètre `options.serializableShadowRoots` défini à `true`.
+    Si défini, la racine d'ombre peut être sérialisée en appelant les méthodes {{DOMxRef("Element.getHTML()")}} ou {{DOMxRef("ShadowRoot.getHTML()")}} avec le paramètre `options.serializableShadowRoots` défini à `true`.
     La valeur par défaut est `false`.
 
 ## Notes d'utilisation
@@ -297,7 +297,7 @@ container.appendChild(secondClone);
 
 Comme `firstClone` est un `DocumentFragment`, seuls ses enfants sont ajoutés à `container` lorsque `appendChild` est appelé&nbsp;; les gestionnaires d'évènements de `firstClone` ne sont pas copiés. En revanche, comme un gestionnaire d'évènements est ajouté au premier _nœud enfant_ de `secondClone`, le gestionnaire est copié lors de l'appel à `appendChild`, et le clic fonctionne comme attendu.
 
-{{EmbedLiveSample('Les données sur le DocumentFragment ne sont pas clonées')}}
+{{EmbedLiveSample("Les données sur le DocumentFragment ne sont pas clonées")}}
 
 ## Résumé technique
 
@@ -383,7 +383,7 @@ Comme `firstClone` est un `DocumentFragment`, seuls ses enfants sont ajoutés à
 ## Voir aussi
 
 - Les attributs HTML [`part`](/fr/docs/Web/HTML/Reference/Global_attributes/part) et [`exportparts`](/fr/docs/Web/HTML/Reference/Global_attributes/exportparts)
-- L'élément HTML {{HTMLElement("slot")}}
+- L'élément {{HTMLElement("slot")}}
 - Les pseudo-classes CSS {{CSSxRef(":has-slotted")}}, {{CSSxRef(":host")}}, {{CSSxRef(":host_function", ":host()")}} et {{CSSxRef(":host-context", ":host-context()")}}
 - Les pseudo-éléments CSS {{CSSxRef("::part")}} et {{CSSxRef("::slotted")}}
 - L'interface API {{DOMxRef("ShadowRoot")}}

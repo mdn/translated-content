@@ -10,7 +10,7 @@ l10n:
 
 Certains navigateurs proposent des suggestions d'écriture aux utilisateur·ice·s qui saisissent du texte dans des champs éditables. Les suggestions apparaissent généralement sous forme de texte grisé positionné après le curseur, complétant la phrase de l'utilisateur·ice. Bien que cela puisse être utile, les développeur·euse·s peuvent souhaiter désactiver les suggestions d'écriture dans certains cas, par exemple lorsqu'il est proposé des suggestions spécifiques au site.
 
-L'attribut `writingsuggestions` peut être défini sur des champs éditables tels que les éléments {{HTMLElement('input')}} ou {{HTMLElement('textarea')}}, ou sur d'autres éléments HTML pour contrôler le comportement des suggestions du navigateur sur des sections d'une page, ou sur l'ensemble de la page.
+L'attribut `writingsuggestions` peut être défini sur des champs éditables tels que les éléments {{HTMLElement("input")}} ou {{HTMLElement("textarea")}}, ou sur d'autres éléments HTML pour contrôler le comportement des suggestions du navigateur sur des sections d'une page, ou sur l'ensemble de la page.
 
 ## Syntaxe
 

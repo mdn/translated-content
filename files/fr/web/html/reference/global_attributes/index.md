@@ -58,7 +58,7 @@ En plus des attributs universels HTML, il existe également les attributs univer
 - [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id)
   - : Définit un identifiant (<abbr>ID</abbr>) qui doit être unique dans tout le document. Il sert à identifier l'élément lors de la création de liens (avec un identifiant de fragment), de scripts ou de mise en forme (avec le CSS).
 - [`inert`](/fr/docs/Web/HTML/Reference/Global_attributes/inert)
-  - : Un booléen qui fait que le navigateur ignore les événements d'entrée utilisateur pour l'élément. Utile lorsque des événements de clic sont présents.
+  - : Un booléen qui fait que le navigateur ignore les événements d'entrée utilisateur·ice pour l'élément. Utile lorsque des événements de clic sont présents.
 - [`inputmode`](/fr/docs/Web/HTML/Reference/Global_attributes/inputmode)
   - : Fournit une indication au navigateur sur le type de configuration du clavier virtuel à utiliser lors de la modification de cet élément ou de son contenu. Principalement utilisé sur les éléments HTML {{HTMLElement("input")}}, mais utilisable sur n'importe quel élément en mode [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable).
 - [`is`](/fr/docs/Web/HTML/Reference/Global_attributes/is)
@@ -84,7 +84,7 @@ En plus des attributs universels HTML, il existe également les attributs univer
 - [`part`](/fr/docs/Web/HTML/Reference/Global_attributes/part)
   - : Une liste de noms de parties séparés par des espaces pour l'élément. Les noms de parties permettent au CSS de cibler et de mettre en forme des éléments spécifiques dans un arbre d'ombre (<i lang="en">shadow tree</i> en anglais) via le pseudo-élément {{CSSxRef("::part")}}.
 - [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover)
-  - : Utilisé pour désigner un élément comme élément popover (voir l'{{DOMxRef("Popover API", "API Popover", "", "nocode")}}). Les éléments popover sont masqués via `display: none` jusqu'à ce qu'ils soient ouverts via un élément déclencheur/contrôle (par exemple, un `<button>` ou `<input type="button">` avec l'attribut [`popovertarget`](/fr/docs/Web/HTML/Reference/Elements/button#popovertarget)) ou un appel à {{DOMxRef("HTMLElement.showPopover()")}}.
+  - : Utilisé pour désigner un élément comme élément popover (voir {{DOMxRef("Popover API", "l'API Popover", "", "nocode")}}). Les éléments popover sont masqués via `display: none` jusqu'à ce qu'ils soient ouverts via un élément déclencheur/contrôle (par exemple, un `<button>` ou `<input type="button">` avec l'attribut [`popovertarget`](/fr/docs/Web/HTML/Reference/Elements/button#popovertarget)) ou un appel à {{DOMxRef("HTMLElement.showPopover()")}}.
 - [`role`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles)
   - : Les rôles définissent la signification sémantique du contenu, permettant aux lecteurs d'écran et autres outils de présenter et de prendre en charge l'interaction avec un objet d'une manière cohérente avec les attentes des utilisateur·ice·s pour ce type d'objet. Les rôles sont ajoutés aux éléments HTML via `role="role_type"`, où `role_type` est le nom d'un rôle dans la spécification ARIA.
 - [`slot`](/fr/docs/Web/HTML/Reference/Global_attributes/slot)
@@ -123,7 +123,7 @@ En plus des attributs universels HTML, il existe également les attributs univer
 
 Les attributs HTML de gestionnaire d'événements sont déconseillés&nbsp;: voir la [référence des attributs HTML](/fr/docs/Web/HTML/Reference/Attributes#event_handler_attributes) pour leur fonctionnement.
 
-Bien que les attributs listés ci-dessous s'appliquent à tous les éléments, ils ne sont pas utiles sur tous les éléments. Par exemple, l'attribut HTML `onvolumechange` est accepté par tous les éléments et attache un écouteur d'événement pour `volumechange`, mais seuls les éléments média recevront un événement `volumechange` déclenché par le navigateur. Pour les autres éléments, vous pouvez uniquement utiliser {{DOMxRef("EventTarget.dispatchEvent()")}} pour déclencher manuellement un tel événement. [Certains attributs](/fr/docs/Web/HTML/Reference/Elements/body#event_attributes) peuvent être spécifiés sur {{HTMLElement("body")}}, mais ils écouteront alors les événements sur `window`.
+Bien que les attributs listés ci-dessous s'appliquent à tous les éléments, ils ne sont pas utiles sur tous les éléments. Par exemple, l'attribut HTML `onvolumechange` est accepté par tous les éléments et attache un écouteur d'événement pour `volumechange`, mais seuls les éléments média recevront un événement `volumechange` déclenché par le navigateur. Pour les autres éléments, vous pouvez uniquement utiliser {{DOMxRef("EventTarget.dispatchEvent()")}} pour déclencher manuellement un tel événement. [Certains attributs](/fr/docs/Web/HTML/Reference/Elements/body#event_attributes) peuvent être définis sur {{HTMLElement("body")}}, mais ils écouteront alors les événements sur `window`.
 
 - [`onabort`](/fr/docs/Web/API/HTMLMediaElement/abort_event)
 - [`onanimationcancel`](/fr/docs/Web/API/Element/animationcancel_event)

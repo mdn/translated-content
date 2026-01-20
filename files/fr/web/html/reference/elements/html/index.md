@@ -12,10 +12,10 @@ L'élément HTML **`<html>`** représente la racine d'un document HTML ou XHTML.
 
 Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
-- `version`{{deprecated_inline}}
-  - : Définit la version du document HTML <i lang="en">{{glossary("Doctype", "Document Type Definition")}}</i> qui s'applique pour le document courant. Cet attribut n'est pas nécessaire car il est redondant avec l'information de version se trouvant dans la déclaration de type du document (_doctype_).
+- `version` {{Deprecated_Inline}}
+  - : Définit la version du document HTML <i lang="en">{{Glossary("Doctype", "Document Type Definition")}}</i> qui s'applique pour le document courant. Cet attribut n'est pas nécessaire car il est redondant avec l'information de version se trouvant dans la déclaration de type du document (_doctype_).
 - `xmlns`
-  - : Définit l'{{glossary("Namespace", "espace de noms")}} {{glossary("XML")}} du document. La valeur par défaut est `"http://www.w3.org/1999/xhtml"`. Ceci est requis dans les documents analysés avec des {{glossary("parser", "analyseurs")}} XML, et optionnel dans les documents text/html.
+  - : Définit {{Glossary("Namespace", "l'espace de noms")}} {{Glossary("XML")}} du document. La valeur par défaut est `"http://www.w3.org/1999/xhtml"`. Ceci est requis dans les documents analysés avec des {{Glossary("parser", "analyseurs")}} XML, et optionnel dans les documents text/html.
 
 ## Exemples
 
@@ -75,11 +75,11 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun <code>role</code> autorisé.</td>
+      <td>Aucun <code>role</code> autorisé</td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLHtmlElement")}}</td>
+      <td>{{DOMxRef("HTMLHtmlElement")}}</td>
     </tr>
   </tbody>
 </table>

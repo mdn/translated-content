@@ -200,7 +200,7 @@ Le contenu sectionnant peut être libellé en utilisant une combinaison des attr
 </footer>
 ```
 
-{{EmbedLiveSample('exemples_de_contenu_sectionné','100%','190')}}
+{{EmbedLiveSample("Exemples de contenu sectionné", "100%", 190)}}
 
 Avec cet exemple, un lecteur d'écran annoncera la présence de deux sections [`<nav>`](/fr/docs/Web/HTML/Reference/Elements/nav), la première appelée «&nbsp;Navigation primaire&nbsp;» et l'autre appelée «&nbsp;Navigation du pied de page&nbsp;». Si les libellés n'avaient pas été fournis, la personne aurait dû consulter le contenu de chaque élément `<nav>` afin de déterminer leur utilité.
 
@@ -226,7 +226,7 @@ On utilise ici tous les niveaux de titre.
 
 #### Résultat
 
-{{EmbedLiveSample('Tous les niveaux', 280, 370)}}
+{{EmbedLiveSample("Tous les niveaux", 280, 370)}}
 
 ### Une page d'exemple
 
@@ -252,7 +252,7 @@ Ici, on utilise des titres avec du contenu intercalaire.
 
 #### Résultat
 
-{{EmbedLiveSample('une_page_dexemple', '280', '630')}}
+{{EmbedLiveSample("Une page d'exemple", 280, 630)}}
 
 ## Résumé technique
 

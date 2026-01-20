@@ -87,7 +87,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 #### Résultat
 
-{{EmbedLiveSample('Une feuille de style simple', '100%', 100)}}
+{{EmbedLiveSample("Une feuille de style simple", "100%", 100)}}
 
 ### Utiliser plusieurs éléments `<style>`
 
@@ -121,11 +121,11 @@ Dans cet exemple, on utilise deux éléments `<style>`, on peut voir comment les
 
 #### Résultat
 
-{{EmbedLiveSample('Utiliser plusieurs éléments `<style>`', '100%', 100)}}
+{{EmbedLiveSample("Utiliser plusieurs éléments `<style>`", "100%", 100)}}
 
 ### Utiliser une requête média
 
-Dans cet exemple (basé sur le précédent), on ajoute un attribut `media` sur le deuxième élément `<style>` afin que les règles correspondantes ne soient appliquées que si la largeur de la zone d'affichage (_viewport_) est inférieure à 500 pixels.
+Dans cet exemple (basé sur le précédent), on ajoute un attribut `media` sur le deuxième élément `<style>` afin que les règles correspondantes ne soient appliquées que si la largeur de la zone d"affichage (_viewport_) est inférieure à 500 pixels.
 
 ```html
 <!doctype html>
@@ -155,7 +155,7 @@ Dans cet exemple (basé sur le précédent), on ajoute un attribut `media` sur l
 
 #### Résultat
 
-{{EmbedLiveSample('Utiliser une requête média', '100%', 100)}}
+{{EmbedLiveSample("Utiliser une requête média", "100%", 100)}}
 
 ## Résumé technique
 

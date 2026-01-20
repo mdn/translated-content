@@ -1,14 +1,15 @@
 ---
 title: ::highlight()
 slug: Web/CSS/Reference/Selectors/::highlight
-original_slug: Web/CSS/::highlight
 l10n:
-  sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`::highlight()`** は CSS の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、スタイルをカスタムハイライトに適用します。
 
 カスタムハイライトは、 {{domxref("Range")}} オブジェクトの集合であり、 {{domxref("HighlightRegistry")}} を使用してウェブページに登録されます。
+
+`::highlight()` 擬似要素は、すべての表示強調擬似要素に共通する特別な継承モデルに従います。この継承の仕組みの詳細については、[表示強調擬似要素の継承](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements#highlight_pseudo-elements_inheritance)の節を参照してください。
 
 ## 利用可能なプロパティ
 
@@ -47,31 +48,31 @@ l10n:
 }
 
 ::highlight(rainbow-color-1) {
-  color: #ad26ad;
+  color: violet;
   text-decoration: underline;
 }
 ::highlight(rainbow-color-2) {
-  color: #5d0a99;
+  color: purple;
   text-decoration: underline;
 }
 ::highlight(rainbow-color-3) {
-  color: #0000ff;
+  color: blue;
   text-decoration: underline;
 }
 ::highlight(rainbow-color-4) {
-  color: #07c607;
+  color: green;
   text-decoration: underline;
 }
 ::highlight(rainbow-color-5) {
-  color: #b3b308;
+  color: yellow;
   text-decoration: underline;
 }
 ::highlight(rainbow-color-6) {
-  color: #ffa500;
+  color: orange;
   text-decoration: underline;
 }
 ::highlight(rainbow-color-7) {
-  color: #ff0000;
+  color: red;
   text-decoration: underline;
 }
 ```
@@ -124,5 +125,6 @@ for (let i = 0; i < textNode.textContent.length; i++) {
 
 ## 関連情報
 
-- [CSS カスタムハイライト API](/ja/docs/Web/API/CSS_Custom_Highlight_API)
+- [CSS カスタムハイライト API](/ja/docs/Web/CSS/Guides/Custom_highlight_API) モジュール
+- [CSS カスタムハイライト](/ja/docs/Web/API/CSS_Custom_Highlight_API) API
 - [CSS 擬似要素](/ja/docs/Web/CSS/Guides/Pseudo-elements)モジュール

@@ -139,7 +139,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 ## Voir aussi
 
 - L'élément {{HTMLElement("template")}}
-- L'attribut HTML [`slot`](/fr/docs/Web/HTML/Reference/Global_attributes/slot)
+- L'attribut [`slot`](/fr/docs/Web/HTML/Reference/Global_attributes/slot)
 - Le pseudo-élément CSS {{CSSxRef("::slotted")}}
 - La pseudo-classe CSS {{CSSxRef(":has-slotted")}}
 - Le module [de portée CSS](/fr/docs/Web/CSS/Guides/Scoping)

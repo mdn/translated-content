@@ -1,17 +1,11 @@
 ---
-title: ::first-line (:first-line)
+title: ::first-line
 slug: Web/CSS/Reference/Selectors/::first-line
-original_slug: Web/CSS/::first-line
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`::first-line`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、[ブロックレベル要素](/ja/docs/Web/CSS/Guides/Display/Visual_formatting_model#block-level_elements_and_block_boxes)の最初の行にスタイルを適用します。なお、最初の行の長さは要素の幅、文書の幅、文字列のフォントの大きさなど、様々な要因に左右されます。
-
-```css
-/* <p> の最初の行を選択 */
-p::first-line {
-  color: red;
-}
-```
+**`::first-line`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、[ブロックコンテナー](/ja/docs/Web/CSS/Guides/Display/Visual_formatting_model#ブロックコンテナー)の先頭行にスタイルを適用します。
 
 {{InteractiveExample("CSS デモ: ::first-line", "tabbed-shorter")}}
 
@@ -33,8 +27,12 @@ p::first-line {
 </p>
 ```
 
+`::first-line` の効果は、要素内のテキストの先頭行の長さとコンテンツによって制限されます。先頭行の長さは、要素の幅、文書の幅、テキストのフォントサイズなど、多くの要因に依存します。要素の最初の子（先頭行の最初の部分となる）がインラインテーブルなどのインラインブロックレベル要素である場合、`::first-line` は効果を持ちません。
+
 > [!NOTE]
-> CSS3 では `::first-line` という (二重コロン付き) 表記が、[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)と[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)を見分けやすくするために導入されました。ブラウザーでは CSS2 で導入された `:first-line` も使用できます。
+> [Selectors Level 3](https://drafts.csswg.org/selectors-3/#first-line) では二重コロン (`::`) を導入し、[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)を単一コロン (`:`) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)と見分けやすくしています。ブラウザーは `::first-line` と、CSS2 で導入された `:first-line` の両方を受け付けます。
+
+CSS の {{CSSXref("background")}} の目的上、`::first-line` 擬似要素はインラインレベル要素と同様に扱われます。つまり、左揃えの先頭行では、背景が右マージンまで完全に広がらない場合があります。
 
 ## 利用可能なプロパティ
 
@@ -48,30 +46,42 @@ p::first-line {
 
 ## 構文
 
-{{csssyntax}}
+```css
+::first-line {
+  /* ... */
+}
+```
 
 ## 例
 
-### HTML
+### 段落の先頭行のスタイル設定
 
-```html
+#### HTML
+
+```html-nolint
 <p>
-  スタイルはこの段落の最初の行にのみ適用されます。
+  スタイルはこの段落の先頭行にのみ適用されます。
   その後のすべての文字列は普通のスタイルになります。分かりますか？
 </p>
 
-<span
-  >ブロックレベル要素ではないので、この文字列の最初の行は、
-  特殊なスタイルになりません。</span
->
+<span>
+  ブロックレベル要素ではないので、この文字列の先頭行は、特殊なスタイルになりません。
+</span>
 ```
 
-### CSS
+#### CSS
+
+```css hidden
+* {
+  font-size: 20px;
+  font-family: sans-serif;
+}
+```
 
 ```css
 ::first-line {
   color: blue;
-  text-transform: uppercase;
+  font-weight: bold;
 
   /* 警告: これらを使用しないでください */
   /* ::first-line 擬似要素では多くのプロパティが無効になります */
@@ -82,7 +92,53 @@ p::first-line {
 
 ### 結果
 
-{{EmbedLiveSample('Examples', 350, 160)}}
+{{EmbedLiveSample('styling_first_line_of_a_paragraph', 350, 130)}}
+
+### SVG の text 要素の先頭行をスタイル設定
+
+この例では、SVG の {{SVGElement("text")}} 要素の先頭行を `::first-line` 擬似要素を使用してスタイル設定します。
+
+> [!NOTE]
+> 執筆時点で、この機能は[対応が限定されています](#ブラウザーの互換性)。
+
+#### HTML
+
+```html-nolint
+<svg viewBox="0 0 320 150">
+  <text y="20">Here is an English paragraph
+that is broken into multiple lines
+in the source code so that it can
+be more easily read and edited
+in a text editor.
+  </text>
+</svg>
+```
+
+#### CSS
+
+SVG の `<text>` 要素を複数行に折り返すには、{{cssxref("white-space", "", "#svg_の_text_要素内の複数行")}} CSS プロパティを使用します。その後、`::first-line` 擬似要素で最初の行を選択します。
+
+```css hidden
+text {
+  font-size: 20px;
+  font-family: sans-serif;
+}
+```
+
+```css
+text {
+  white-space: break-spaces;
+}
+
+text::first-line {
+  fill: blue;
+  font-weight: bold;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample("styling_the_first_line_of_a_SVG_text_element", "100%", 150)}}
 
 ## 仕様書
 
@@ -95,3 +151,4 @@ p::first-line {
 ## 関連情報
 
 - {{cssxref("::first-letter")}}
+- {{cssxref("white-space")}}

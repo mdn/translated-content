@@ -37,7 +37,7 @@ L'élément `<selectedcontent>` contient un clone du contenu de l'élément {{HT
 ### Inertie de `<selectedcontent>`
 
 Par défaut, tout `<button>` à l'intérieur d'un élément `<select>` est [inerte](/fr/docs/Web/HTML/Reference/Global_attributes/inert). Par conséquent, tout le contenu de ce bouton — y compris `<selectedcontent>` — est aussi inerte.
-Cela signifie que les utilisateurs ne peuvent pas interagir avec ou sélectionner le contenu de `<selectedcontent>`.
+Cela signifie que les utilisateur·ice·s ne peuvent pas interagir avec ou sélectionner le contenu de `<selectedcontent>`.
 
 ### Mise en forme du contenu de l'option sélectionnée avec CSS
 

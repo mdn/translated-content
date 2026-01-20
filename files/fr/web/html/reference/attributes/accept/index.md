@@ -34,7 +34,7 @@ input {
 
 ## Présentation
 
-La propriété `accept` est un attribut du type {{HTMLElement("input/file", "file")}} de l'élément HTML {{HTMLElement("input")}}. Elle était auparavant prise en charge sur l'élément HTML {{HTMLElement("form")}}, mais a été supprimée au profit de {{HTMLElement("input/file", "file")}}.
+La propriété `accept` est un attribut du type `{{HTMLElement("input/file", "file")}}` de l'élément HTML {{HTMLElement("input")}}. Elle était auparavant prise en charge sur l'élément HTML {{HTMLElement("form")}}, mais a été supprimée au profit de `{{HTMLElement("input/file", "file")}}`.
 
 Comme un type de fichier donné peut être identifié de plusieurs manières, il est utile de fournir un ensemble complet de spécificateurs de type lorsque vous avez besoin de fichiers d'un type précis, ou d'utiliser le joker pour indiquer que tout format de ce type est accepté.
 
@@ -78,15 +78,15 @@ Lorsque cet attribut est utilisé sur un champ permettant de sélectionner un fi
 </p>
 ```
 
-{{EmbedLiveSample('Exemples', '', 160)}}
+{{EmbedLiveSample("Exemples", "", 160)}}
 
 Notez que le dernier exemple vous permet de sélectionner plusieurs images. Voir l'attribut [`multiple`](multiple) pour plus d'informations.
 
 ## Spécification de type de fichier unique
 
-Un **spécificateur de type de fichier unique** est une chaîne qui décrit un type de fichier pouvant être sélectionné par l'utilisateur dans un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) de type `file`. Chaque spécificateur unique de type de fichier peut prendre l'une des formes suivantes&nbsp;:
+Un **spécificateur de type de fichier unique** est une chaîne qui décrit un type de fichier pouvant être sélectionné par l'utilisateur·ice dans un élément {{HTMLElement("input")}} de type `file`. Chaque spécificateur unique de type de fichier peut prendre l'une des formes suivantes&nbsp;:
 
-- Une extension de nom de fichier valide et insensible à la casse, commençant par un caractère point (« . »). Par exemple&nbsp;: `.jpg`, `.pdf`, ou `.doc`.
+- Une extension de nom de fichier valide et insensible à la casse, commençant par un caractère point (`.`). Par exemple&nbsp;: `.jpg`, `.pdf`, ou `.doc`.
 - Une chaîne de type MIME valide, sans extension.
 - La chaîne de caractères `audio/*` signifiant "tout fichier audio".
 - La chaîne de caractères `vidéo/*` signifiant "tout fichier vidéo".
@@ -122,24 +122,24 @@ div {
 
 Cela produit le résultat suivant&nbsp;:
 
-{{EmbedLiveSample('Utilisation des champs pour saisir des fichiers', 650, 100)}}
+{{EmbedLiveSample("Utilisation des champs pour saisir des fichiers", 650, 100)}}
 
 > [!NOTE]
-> Vous pouvez trouver cet exemple sur GitHub également - voir le [code source <sup>(angl.)</sup>)](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html), et aussi [le fonctionnement en direct <sup>(angl.)</sup>)](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
+> Vous pouvez trouver cet exemple sur GitHub également - voir le [code source <sup>(angl.)</sup>)](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html), et aussi [le fonctionnement en direct <sup>(angl.)</sup>)](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
 
-Quel que soit le dispositif ou le système d'exploitation de l'utilisateur, l'entrée de fichier fournit un bouton qui ouvre une boîte de dialogue de sélection de fichier permettant à l'utilisateur de choisir un fichier.
+Quel que soit le dispositif ou le système d'exploitation de l'utilisateur·ice, l'entrée de fichier fournit un bouton qui ouvre une boîte de dialogue de sélection de fichier permettant à l'utilisateur·ice de choisir un fichier.
 
-L'inclusion de l'attribut [`multiple`](/fr/docs/Web/HTML/Reference/Elements/input#multiple), comme indiqué ci-dessus, spécifie que plusieurs fichiers peuvent être choisis en même temps. L'utilisateur peut choisir plusieurs fichiers dans le sélecteur de fichiers de n'importe quelle manière permise par la plateforme qu'il a choisie (par exemple, en maintenant la touche <kbd>Maj</kbd> ou <kbd>Ctrl</kbd>, puis en cliquant). Si vous souhaitez que l'utilisateur ne choisisse qu'un seul fichier par `<input>`, omettez l'attribut `multiple`.
+L'inclusion de l'attribut [`multiple`](/fr/docs/Web/HTML/Reference/Elements/input#multiple), comme indiqué ci-dessus, spécifie que plusieurs fichiers peuvent être choisis en même temps. L'utilisateur·ice peut choisir plusieurs fichiers dans le sélecteur de fichiers de n'importe quelle manière permise par la plateforme qu'il a choisie (par exemple, en maintenant la touche <kbd>Maj</kbd> ou <kbd>Ctrl</kbd>, puis en cliquant). Si vous souhaitez que l'utilisateur·ice ne choisisse qu'un seul fichier par `<input>`, omettez l'attribut `multiple`.
 
 ### Restreindre les types de fichier acceptés
 
-Souvent, vous ne voudrez pas que l'utilisateur puisse choisir n'importe quel type de fichier arbitraire ; au contraire, vous voudrez souvent qu'il sélectionne des fichiers d'un ou plusieurs types spécifiques. Par exemple, si votre entrée de fichier permet aux utilisateurs de télécharger une photo de profil, vous voulez probablement qu'ils sélectionnent des formats d'image compatibles avec le Web, tels que {{Glossary("JPEG")}} ou {{Glossary("PNG")}}.
+Souvent, vous ne voudrez pas que l'utilisateur·ice puisse choisir n'importe quel type de fichier arbitraire&nbsp;; au contraire, vous voudrez souvent qu'il sélectionne des fichiers d'un ou plusieurs types spécifiques. Par exemple, si votre entrée de fichier permet aux utilisateur·ice·s de télécharger une photo de profil, vous voulez probablement qu'ils ou elles sélectionnent des formats d'image compatibles avec le Web, tels que {{Glossary("JPEG")}} ou {{Glossary("PNG")}}.
 
-Les types de fichiers acceptables peuvent être spécifiés avec l'attribut [`accept`](/fr/docs/Web/HTML/Reference/Elements/input/file#attr-accept), qui prend une liste d'extensions de fichiers ou de types MIME autorisés séparés par des virgules. Quelques exemples&nbsp;:
+Les types de fichiers acceptables peuvent être définis avec l'attribut [`accept`](/fr/docs/Web/HTML/Reference/Elements/input/file#accept), qui prend une liste d'extensions de fichiers ou de types MIME autorisés séparés par des virgules. Quelques exemples&nbsp;:
 
 - `accept="image/png"` ou `accept=".png"` — Accepter les fichiers PNG.
 - `accept="image/png, image/jpeg"` ou `accept=".png, .jpg, .jpeg"` — Accepter les fichiers PNG ou JPEG.
-- `accept="image/*"` — Accepter tout fichier ayant un type MIME `image/*`. (De nombreux appareils mobiles permettent également à l'utilisateur de prendre une photo avec l'appareil photo lorsque cette option est utilisée).
+- `accept="image/*"` — Accepter tout fichier ayant un type MIME `image/*`. (De nombreux appareils mobiles permettent également à l'utilisateur·ice de prendre une photo avec l'appareil photo lorsque cette option est utilisée).
 - `accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"` — Accepter tout ce qui ressemble à un document MS Word.
 
 Examinons un exemple plus complet&nbsp;:
@@ -166,7 +166,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample('Restreindre les types de fichier acceptés', 650, 100)}}
+{{EmbedLiveSample("Restreindre les types de fichier acceptés", 650, 100)}}
 
 ## Spécifications
 

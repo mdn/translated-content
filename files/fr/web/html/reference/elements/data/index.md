@@ -47,7 +47,7 @@ Dans l'exemple suivant, on affiche des noms de produits avec des codes correspon
 
 ### Résultat
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample("Examples")}}
 
 ## Résumé technique
 

@@ -56,7 +56,7 @@ Vous pouvez définir une valeur par défaut pour le champ en incluant une date e
   value="2017-06-01T08:30" />
 ```
 
-{{EmbedLiveSample('', 600, 60)}}
+{{EmbedLiveSample("", 600, 60)}}
 
 Il convient de noter que les formats de date et d'heure affichés diffèrent de la véritable valeur&nbsp;; la date et l'heure affichées sont formatées selon la locale de l'utilisateur·ice telle que rapportée par son système d'exploitation, tandis que la valeur de date/heure est toujours formatée `YYYY-MM-DDTHH:mm`. Lorsque la valeur ci-dessus est envoyée au serveur, par exemple, elle ressemblera à `party-date=2024-06-01T08:30`.
 
@@ -161,7 +161,7 @@ Voyons un exemple&nbsp;; ici, nous avons défini des valeurs minimales et maxima
 
 Si vous essayez d'envoyer le formulaire avec une date incomplète (ou en dehors de l'intervalle indiqué), le navigateur affichera une erreur. Essayez de tester l'exemple maintenant&nbsp;:
 
-{{EmbedLiveSample('Validation', 600, 120)}}
+{{EmbedLiveSample("Validation", 600, 120)}}
 
 Voici le CSS utilisé dans l'exemple ci-dessus. Ici, nous utilisons les propriétés CSS {{CSSxRef(":valid")}} et {{CSSxRef(":invalid")}} pour mettre en forme le champ selon que la valeur courante est valide ou non. Nous plaçons les icônes sur un {{HTMLElement("span")}} à côté du champ de saisie.
 
@@ -210,7 +210,7 @@ L'utilisation la plus simple de `<input type="datetime-local">` consiste en une 
 </form>
 ```
 
-{{EmbedLiveSample('Utilisation simple de `datetime-local`', 600, 40)}}
+{{EmbedLiveSample("Utilisation simple de `datetime-local`", 600, 40)}}
 
 ### Définir des dates et heures maximales et minimales
 
@@ -231,9 +231,9 @@ Vous pouvez utiliser les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/
 </form>
 ```
 
-{{EmbedLiveSample('Définir des dates et heures maximales et minimales', 600, 40)}}
+{{EmbedLiveSample("Définir des dates et heures maximales et minimales", 600, 40)}}
 
-Seuls les jours de juin 2025 peuvent être sélectionnés. Selon le navigateur utilisé, les heures en dehors des valeurs spécifiées peuvent ne pas être sélectionnables. Dans d'autres navigateurs, les dates et heures invalides sont sélectionnables mais correspondront à {{CSSxRef(":invalid")}} et {{CSSxRef(":out-of-range")}} et échoueront à la [validation](#validation).
+Seuls les jours de juin 2025 peuvent être sélectionnés. Selon le navigateur utilisé, les heures en dehors des valeurs définies peuvent ne pas être sélectionnables. Dans d'autres navigateurs, les dates et heures invalides sont sélectionnables mais correspondront à {{CSSxRef(":invalid")}} et {{CSSxRef(":out-of-range")}} et échoueront à la [validation](#validation).
 
 Dans certains navigateurs (Safari), le sélecteur de date semble permettre n'importe quelle date, mais la valeur sera limitée à l'intervalle valide lorsqu'une date est sélectionnée.
 

@@ -2,10 +2,10 @@
 title: InterestEvent
 slug: Web/API/InterestEvent
 l10n:
-  sourceCommit: e00212a2a707a57b49b58b37a6a6c978aaef2bbd
+  sourceCommit: 0563b7d83916b234fa637483211889e573df9440
 ---
 
-{{APIRef("Popover API")}}
+{{APIRef("Popover API")}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 L'interface **`InterestEvent`** représente un événement qui se déclenche lorsque l'intérêt est montré ou perdu sur un [invocateur d'intérêt](/fr/docs/Web/API/Popover_API/Using_interest_invokers) (<i lang="en">interest invoker</i>).
 
@@ -15,14 +15,14 @@ Il s'agit de l'objet événement pour les événements {{DOMxRef("HTMLElement.in
 
 ## Constructeur
 
-- {{DOMxRef("InterestEvent.InterestEvent", "InterestEvent()")}}
+- {{DOMxRef("InterestEvent.InterestEvent", "InterestEvent()")}} {{Experimental_Inline}}
   - : Crée un objet `InterestEvent`.
 
 ## Propriétés d'instance
 
 _Cette interface hérite des propriétés de son parent, {{DOMxRef("Event")}}._
 
-- {{DOMxRef("InterestEvent.source")}} {{ReadOnlyInline}}
+- {{DOMxRef("InterestEvent.source")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Une instance d'objet {{DOMxRef("Element")}} représentant l'élément invocateur d'intérêt sur lequel l'intérêt a été montré ou perdu, déclenchant l'événement.
 
 ## Exemples

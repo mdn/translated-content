@@ -7,7 +7,7 @@ l10n:
   sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
 ---
 
-L'attribut `autocomplete` permet aux développeur·euse·s web de définir si, et dans quelle mesure, l'{{Glossary("user agent", "agent utilisateur")}} est autorisé à fournir une aide automatisée pour remplir les champs d'un formulaire, ainsi que d'indiquer au navigateur le type d'information attendu dans le champ.
+L'attribut `autocomplete` permet aux développeur·euse·s web de définir si, et dans quelle mesure, {{Glossary("user agent", "l'agent utilisateur")}} est autorisé à fournir une aide automatisée pour remplir les champs d'un formulaire, ainsi que d'indiquer au navigateur le type d'information attendu dans le champ.
 
 Il est disponible sur les éléments HTML {{HTMLElement("input")}} qui acceptent une valeur textuelle ou numérique, sur les éléments HTML {{HTMLElement("textarea")}}, {{HTMLElement("select")}} et {{HTMLElement("form")}}.
 
@@ -49,7 +49,7 @@ Si un élément {{HTMLElement("input")}}, {{HTMLElement("select")}} ou {{HTMLEle
 >
 > 1. aient un attribut `name` et/ou `id`
 > 2. soient descendants d'un élément `<form>`
-> 3. appartiennent à un formulaire ayant un bouton {{HTMLElement("input/submit", "submit")}}
+> 3. appartiennent à un formulaire ayant un bouton `{{HTMLElement("input/submit", "submit")}}`
 
 Si la même liste de jetons est utilisée dans plusieurs contrôles de formulaire, l'agent utilisateur remplira automatiquement toutes les occurrences de la même valeur `autocomplete` avec la même donnée.
 
@@ -72,7 +72,7 @@ La valeur de l'attribut est soit le mot-clé `off` ou `on`, soit une `<token-lis
   - : Le navigateur n'est pas autorisé à saisir automatiquement des valeurs pour ce champ. Cette valeur peut être utilisée lorsque le document ou l'application fournit son propre mécanisme d'autocomplétion ou lorsque des raisons de sécurité imposent de ne pas pouvoir saisir la valeur automatiquement.
 
     > [!NOTE]
-    > Dans la plupart des navigateurs modernes, définir `autocomplete` à `"off"` n'empêchera pas un gestionnaire de mots de passe de demander à l'utilisateur·rice s'il·elle souhaite enregistrer le nom d'utilisateur et le mot de passe, ou de remplir automatiquement ces informations dans un formulaire de connexion. Voir [l'article sur l'autoremplissage des champs de connexion](/fr/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields).
+    > Dans la plupart des navigateurs modernes, définir `autocomplete` à `"off"` n'empêchera pas un gestionnaire de mots de passe de demander à l'utilisateur·rice s'il·elle souhaite enregistrer le nom d'utilisateur·ice et le mot de passe, ou de remplir automatiquement ces informations dans un formulaire de connexion. Voir [l'article sur l'autoremplissage des champs de connexion](/fr/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields).
 
 - `on`
   - : Le navigateur est autorisé à compléter automatiquement le champ. Aucune indication supplémentaire n'est fournie quant au type de donnée attendu et c'est donc au navigateur d'utiliser une heuristique pour proposer des valeurs pertinentes.
@@ -80,7 +80,7 @@ La valeur de l'attribut est soit le mot-clé `off` ou `on`, soit une `<token-lis
 - `<token-list>`
   - : Un ensemble ordonné de [jetons séparés par des espaces](#jetons_de_la_liste_de_jetons) composé de jetons de détail d'autoremplissage, précédés éventuellement de jetons de section et de regroupement «&nbsp;billing&nbsp;» (facturation) ou «&nbsp;shipping&nbsp;» (livraison). Les numéros de téléphone, adresses e-mail et protocoles de messagerie sont précédés d'un jeton identifiant le type de destinataire.
 
-Voir [la spécification WHATWG](https://html.spec.whatwg.org/multipage/forms.html#autofill) pour plus de détails.
+Voir [la spécification WHATWG <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/forms.html#autofill) pour plus de détails.
 
 ### Jetons de la liste de jetons
 
@@ -168,7 +168,7 @@ Lorsque le champ de formulaire n'est pas un numéro de téléphone, une adresse 
       - : Un surnom ou pseudonyme.
 
 - `username`
-  - : Un nom d'utilisateur ou de compte.
+  - : Un nom d'utilisateur·ice ou de compte.
 - `new-password`
   - : Un nouveau mot de passe. Lors de la création d'un compte ou d'un changement de mot de passe, cela doit être utilisé pour un champ «&nbsp;Saisissez votre nouveau mot de passe&nbsp;» ou «&nbsp;Confirmez le nouveau mot de passe&nbsp;», par opposition à un champ général «&nbsp;Saisissez votre mot de passe actuel&nbsp;». Cela peut être utilisé par le navigateur pour éviter de remplir accidentellement un mot de passe existant et pour proposer une aide à la création d'un mot de passe sécurisé.
 - `current-password`
@@ -221,7 +221,7 @@ Lorsque le champ de formulaire n'est pas un numéro de téléphone, une adresse 
 - `transaction-currency`
   - : La devise dans laquelle la transaction doit être effectuée.
 - `transaction-amount`
-  - : Le montant, exprimé dans la devise spécifiée par `transaction-currency`, de la transaction pour un formulaire de paiement.
+  - : Le montant, exprimé dans la devise définie par `transaction-currency`, de la transaction pour un formulaire de paiement.
 - `language`
   - : Une langue préférée, indiquée sous la forme d'une {{Glossary("BCP 47 language tag", "balise de langue BCP 47")}} valide.
 - `bday`
@@ -263,7 +263,7 @@ Les quatre niveaux administratifs pour les adresses (`address-level1` jusqu'à `
 
 ### Disposition du formulaire
 
-Étant donné qu'une adresse s'écrit différemment selon le pays, il peut être utile, si possible, de fournir différentes dispositions de formulaires pour les utilisateurs (éventuellement en fonction de leur locale) pour faciliter la saisie de leur adresse pour leur pays.
+Étant donné qu'une adresse s'écrit différemment selon le pays, il peut être utile, si possible, de fournir différentes dispositions de formulaires pour les utilisateur·ice·s (éventuellement en fonction de leur locale) pour faciliter la saisie de leur adresse pour leur pays.
 
 ### Variations
 
@@ -329,9 +329,9 @@ Une adresse au Japon est généralement **écrite sur une ligne**, dans un ordre
 
 ## Voir aussi
 
-- L'élément HTML {{HTMLElement("input")}}
-- L'élément HTML {{HTMLElement("select")}}
-- L'élément HTML {{HTMLElement("textarea")}}
-- L'élément HTML {{HTMLElement("form")}}
+- L'élément {{HTMLElement("input")}}
+- L'élément {{HTMLElement("select")}}
+- L'élément {{HTMLElement("textarea")}}
+- L'élément {{HTMLElement("form")}}
 - [Les formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms)
 - [Les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)

@@ -35,7 +35,7 @@ bdo {
 }
 ```
 
-Les caractères du texte sont dessinés à partir du point de départ dans la direction donnée ; l'orientation des caractères individuels n'est pas affectée (les caractères ne sont donc pas dessinés vers l'arrière, par exemple).
+Les caractères du texte sont dessinés à partir du point de départ dans la direction donnée&nbsp;; l'orientation des caractères individuels n'est pas affectée (les caractères ne sont donc pas dessinés vers l'arrière, par exemple).
 
 ## Attributs
 
@@ -138,4 +138,4 @@ La spécification HTML 4 ne définissait pas d'évènement pour cet élément. I
 
 ## Voir aussi
 
-- L'élément HTML {{HTMLElement("bdi")}}
+- L'élément {{HTMLElement("bdi")}}

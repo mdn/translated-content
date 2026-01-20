@@ -38,7 +38,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     - Un descripteur de largeur optionnel — un entier positif suivi directement de `"w"`, comme `300w`.
     - Un descripteur de densité de pixels optionnel — un nombre décimal positif suivi directement de `"x"`, comme `2x`.
 
-    Chaque chaînes de caractères de la liste doit comporter soit un descripteur de largeur, soit un descripteur de densité de pixels pour être valide. Ces deux descripteurs ne doivent pas être utilisés ensemble&nbsp;; un seul doit être utilisé de façon cohérente dans toute la liste. La valeur de chaque descripteur dans la liste doit être unique. Le navigateur choisit l'image la plus adéquate à afficher à un instant donné en fonction de ces descripteurs. Si les descripteurs ne sont pas spécifiés, la valeur par défaut utilisée est `1x`. Si l'attribut `sizes` est également présent, chaque chaînes de caractères doit inclure un descripteur de largeur. Si le navigateur ne prend pas en charge `srcset`, alors `src` sera utilisé pour la source d'image par défaut.
+    Chaque chaînes de caractères de la liste doit comporter soit un descripteur de largeur, soit un descripteur de densité de pixels pour être valide. Ces deux descripteurs ne doivent pas être utilisés ensemble&nbsp;; un seul doit être utilisé de façon cohérente dans toute la liste. La valeur de chaque descripteur dans la liste doit être unique. Le navigateur choisit l'image la plus adéquate à afficher à un instant donné en fonction de ces descripteurs. Si les descripteurs ne sont pas définis, la valeur par défaut utilisée est `1x`. Si l'attribut `sizes` est également présent, chaque chaînes de caractères doit inclure un descripteur de largeur. Si le navigateur ne prend pas en charge `srcset`, alors `src` sera utilisé pour la source d'image par défaut.
 
 - `sizes`
   - : Définit une liste de tailles de sources qui décrit la largeur finale affichée de l'image. Autorisé si le parent de `<source>` est {{HTMLElement("picture")}}. Interdit si le parent est {{HTMLElement("audio")}} ou {{HTMLElement("video")}}.
@@ -92,7 +92,7 @@ Cet exemple montre comment proposer une vidéo dans différents formats&nbsp;: W
 
 ### Utiliser l'attribut `media` avec `<video>`
 
-Cet exemple montre comment proposer un fichier source alternatif pour les fenêtres de visualisation dépassant une certaine largeur. Lorsque l'environnement de navigation d'un utilisateur remplit la condition `media` définie, l'élément `<source>` associé est choisi. Le contenu de son attribut `src` est alors demandé et rendu. Si la condition `media` ne correspond pas, le navigateur passe à la `<source>` suivante dans la liste. La deuxième option `<source>` dans le code ci-dessous n'a pas de condition `media`, elle sera donc sélectionnée pour tous les autres contextes de navigation.
+Cet exemple montre comment proposer un fichier source alternatif pour les fenêtres de visualisation dépassant une certaine largeur. Lorsque l'environnement de navigation d'un·e utilisateur·ice remplit la condition `media` définie, l'élément `<source>` associé est choisi. Le contenu de son attribut `src` est alors demandé et rendu. Si la condition `media` ne correspond pas, le navigateur passe à la `<source>` suivante dans la liste. La deuxième option `<source>` dans le code ci-dessous n'a pas de condition `media`, elle sera donc sélectionnée pour tous les autres contextes de navigation.
 
 ```html
 <video controls>

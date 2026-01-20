@@ -144,7 +144,7 @@ function updateButton() {
 
 ### Désactiver et activer un bouton
 
-Pour désactiver un bouton, définissez l'attribut global [`disabled`](/fr/docs/Web/HTML/Reference/Attributes/disabled) sur celui-ci, comme ceci&nbsp;:
+Pour désactiver un bouton, définissez l'attribut universel [`disabled`](/fr/docs/Web/HTML/Reference/Attributes/disabled) sur celui-ci, comme ceci&nbsp;:
 
 ```html
 <input type="button" value="Je suis désactivé" disabled />

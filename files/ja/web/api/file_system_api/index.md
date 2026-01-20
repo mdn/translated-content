@@ -38,7 +38,7 @@ l10n:
 
 ### ファイルの保存
 
-- 非同期ハンドルでは、{{domxref('FileSystemWritableFileStream')}} インターフェイスを使います。保存したいデータを {{domxref('Blob')}}、{{jsxref("String")}} オブエクト、文字列リテラル、{{jsxref('ArrayBuffer', 'buffer')}} のいずれかの形式にしたら、ストリームを開いてデータをファイルに保存できます。既存のファイルも新しいファイルも保存先にできます。
+- 非同期ハンドルでは、{{domxref('FileSystemWritableFileStream')}} インターフェイスを使います。保存したいデータを {{domxref('Blob')}}、{{jsxref("String")}} オブジェクト、文字列リテラル、{{jsxref('ArrayBuffer', 'buffer')}} のいずれかの形式にしたら、ストリームを開いてデータをファイルに保存できます。既存のファイルも新しいファイルも保存先にできます。
 - 同期的に {{domxref('FileSystemSyncAccessHandle')}} では、{{domxref('FileSystemSyncAccessHandle.write', 'write()')}} メソッドを用いて変更をファイルに書き込みます。特定のタイミングで変更をディスクに書き込みたい場合は、{{domxref('FileSystemSyncAccessHandle.flush', 'flush()')}} を呼ぶことができます。(これを呼ばない場合、下層のオペレーティングシステムに任せて都合のいいときに処理させることができ、ほとんどの場合はこれでいいでしょう)
 
 ## インターフェイス

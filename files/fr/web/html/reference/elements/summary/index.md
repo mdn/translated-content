@@ -50,13 +50,13 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Ref
 
 Un élément `<summary>` peut contenir des éléments de titre, du texte simple ou tout contenu HTML pouvant être placé au sein d'un paragraphe.
 
-Un élément `<summary>` peut uniquement être utilisé comme le premier élément fils d'un élément `<details>`. Lorsque l'utilisateur clique sur le résumé, l'élément `<details>` parent change d'état (affiché ou masqué) et un évènement {{DOMxRef("HTMLElement/toggle_event", "toggle")}} est envoyé à l'élément `<details>` (ce qui permet de détecter un changement d'état via un script).
+Un élément `<summary>` peut uniquement être utilisé comme le premier élément fils d'un élément `<details>`. Lorsque l'utilisateur·ice clique sur le résumé, l'élément `<details>` parent change d'état (affiché ou masqué) et un évènement {{DOMxRef("HTMLElement/toggle_event", "toggle")}} est envoyé à l'élément `<details>` (ce qui permet de détecter un changement d'état via un script).
 
 Le contenu de l'élément `<details>` fournit la {{Glossary("accessible description", "description accessible")}} pour l'élément `<summary>`.
 
 ### Libellé par défaut
 
-Si le premier enfant d'un élément `<details>` n'est pas un élément `<summary>`, l'{{Glossary("user agent", "agent utilisateur")}} utilisera une chaîne de caractères par défaut (généralement «&nbsp;Détails&nbsp;») comme libellé pour la boîte de révélation.
+Si le premier enfant d'un élément `<details>` n'est pas un élément `<summary>`, {{Glossary("user agent", "l'agent utilisateur")}} utilisera une chaîne de caractères par défaut (généralement «&nbsp;Détails&nbsp;») comme libellé pour la boîte de révélation.
 
 ### Mise en forme par défaut
 
@@ -189,7 +189,7 @@ details:last-of-type summary::-webkit-details-marker {
 }
 ```
 
-Le CSS inclut le [sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) `[open]`, qui ne correspond que lorsque l'attribut `open` est présent (c'est-à-dire lorsque l'élément `<details>` est ouvert). Les pseudo-classes {{CSSxRef(":first-of-type")}} et {{CSSxRef(":last-of-type")}} ciblent respectivement le premier et le dernier élément du même type. Nous avons inclus le pseudo-élément préfixé `-webkit-` dans une pseudo-classe {{CSSxRef(":is()")}} car elle accepte une [liste de sélecteurs tolérante](/fr/docs/Web/CSS/Reference/Selectors/Selector_list#forgiving_selector_list)&nbsp;: si le pseudo-élément préfixé est invalide dans un navigateur, tout le bloc de sélecteurs ne sera pas invalidé. Nous avons aussi utilisé la [syntaxe imbriquée de CSS](/fr/docs/Web/CSS/Nesting_selector). Voir le module [Sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors).
+Le CSS inclut le [sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) `[open]`, qui ne correspond que lorsque l'attribut `open` est présent (c'est-à-dire lorsque l'élément `<details>` est ouvert). Les pseudo-classes {{CSSxRef(":first-of-type")}} et {{CSSxRef(":last-of-type")}} ciblent respectivement le premier et le dernier élément du même type. Nous avons inclus le pseudo-élément préfixé `-webkit-` dans une pseudo-classe {{CSSxRef(":is()")}} car elle accepte une [liste de sélecteurs tolérante](/fr/docs/Web/CSS/Reference/Selectors/Selector_list#liste_de_sélecteurs_tolérante)&nbsp;: si le pseudo-élément préfixé est invalide dans un navigateur, tout le bloc de sélecteurs ne sera pas invalidé. Nous avons aussi utilisé la [syntaxe imbriquée de CSS](/fr/docs/Web/CSS/Nesting_selector). Voir le module [Sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors).
 
 #### HTML
 

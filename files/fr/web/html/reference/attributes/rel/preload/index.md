@@ -55,7 +55,7 @@ Dans l'exemple ci-dessus, nous préchargeons nos fichiers CSS et JavaScript afin
 - appliquer la bonne [stratégie de sécurité du contenu](/fr/docs/Web/HTTP/Guides/CSP) aux ressources&nbsp;;
 - mettre en place les bons en-têtes de requêtes {{HTTPHeader("Accept")}} pour les ressources.
 
-### Quels types de contenu peuvent être préchargés&nbsp;?
+### Quels types de contenu peuvent être préchargés ?
 
 De nombreux différents types de contenu peuvent être préchargés. Les valeurs possibles de l'attribut `as` sont les suivantes&nbsp;:
 
@@ -98,7 +98,7 @@ Notez que pour les utilisateur·ice·s dont le navigateur prend en charge à la 
 
 Il est donc déconseillé d'indiquer le préchargement pour plusieurs types d'une même ressource. La bonne pratique est d'indiquer le préchargement uniquement pour le type que la majorité des utilisateur·ice·s va réellement utiliser. C'est pourquoi le code de l'exemple ci-dessus n'indique pas le préchargement pour l'image au format `image/webp`.
 
-Cependant, l'absence de préchargement n'empêche pas l'image `image/webp` d'être réellement utilisée par celles et ceux qui en ont besoin : pour les utilisateur·ice·s dont le navigateur ne prend pas en charge `image/avif` mais prend en charge `image/webp`, le code de l'exemple ci-dessus fait toujours que l'image au format `image/webp` est utilisée — mais cela se fait sans aussi indiquer le préchargement inutilement pour la majorité des autres utilisateur·ice·s.
+Cependant, l'absence de préchargement n'empêche pas l'image `image/webp` d'être réellement utilisée par celles et ceux qui en ont besoin&nbsp;: pour les utilisateur·ice·s dont le navigateur ne prend pas en charge `image/avif` mais prend en charge `image/webp`, le code de l'exemple ci-dessus fait toujours que l'image au format `image/webp` est utilisée — mais cela se fait sans aussi indiquer le préchargement inutilement pour la majorité des autres utilisateur·ice·s.
 
 ## Récupération de l'activation du <i lang="en">CORS</i>
 
@@ -181,7 +181,7 @@ Dans cet exemple nous incluons les attributs `media` dans notre élément `<link
 
 Cela augmente les chances que la police sera disponible lors du rendu de la page, et diminue les risques de <i lang="en">FOUT</i> (pour <i lang="en">flash of unstyled text</i>, soit «&nbsp;flash de texte sans mis en forme&nbsp;» en français).
 
-Il sera dommage de limiter le préchargement aux images, voyez plus loin&nbsp;! On pourrait imaginer de précharger l'affichage d'un diagramme SVG si le visiteur se trouve sur un petit écran avec une bande passante ou une disponibilité CPU plus limitée, ou encore de précharger des morceaux de JavaScript complexes utilisés pour faire fonctionner une modélisation 3D interactive uniquement si les ressources du visiteur sont suffisantes.
+Il sera dommage de limiter le préchargement aux images, voyez plus loin&nbsp;! On pourrait imaginer de précharger l'affichage d'un diagramme SVG si le·a visiteur·euse se trouve sur un petit écran avec une bande passante ou une disponibilité CPU plus limitée, ou encore de précharger des morceaux de JavaScript complexes utilisés pour faire fonctionner une modélisation 3D interactive uniquement si les ressources de la visiteuse ou du visiteur sont suffisantes.
 
 ## Scripts et préchargement
 

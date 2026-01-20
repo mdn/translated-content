@@ -14,21 +14,21 @@ L'élément HTML `<marquee>` est obsolète et son utilisation est fortement déc
 ## Attributs
 
 - `behavior` {{Deprecated_Inline}}
-  - : Définit comment le texte defile à l'intérieur du `<marquee>`. Les valeurs possibles sont `scroll`, `slide` et `alternate`. Si aucune valeur n'est spécifiée, la valeur par défaut est `scroll`.
+  - : Définit comment le texte defile à l'intérieur du `<marquee>`. Les valeurs possibles sont `scroll`, `slide` et `alternate`. Si aucune valeur n'est définie, la valeur par défaut est `scroll`.
 - `bgcolor` {{Deprecated_Inline}}
   - : Définit la couleur de fond en utilisant le nom de la couleur ou son code hexadécimal.
 - `direction` {{Deprecated_Inline}}
-  - : Définit la direction du défilement dans le `<marquee>`. Les valeurs possibles sont `left`, `right`, `up` et `down`. SI aucune valeur n'est spécifiée, la valeur par défaut est `left`.
+  - : Définit la direction du défilement dans le `<marquee>`. Les valeurs possibles sont `left`, `right`, `up` et `down`. SI aucune valeur n'est définie, la valeur par défaut est `left`.
 - `height` {{Deprecated_Inline}}
   - : Définit la hauteur en pixels ou en pourcentage.
 - `hspace` {{Deprecated_Inline}}
   - : Définit la marge horizontale.
 - `loop` {{Deprecated_Inline}}
-  - : Définit le nombre de fois que le marquee va faire défiler le texte. Si aucune valeur n'est spécifiée, la valeur par défaut est -1, ce qui signifie que le marquee va défiler indéfiniment.
+  - : Définit le nombre de fois que le marquee va faire défiler le texte. Si aucune valeur n'est définie, la valeur par défaut est -1, ce qui signifie que le marquee va défiler indéfiniment.
 - `scrollamount` {{Deprecated_Inline}}
   - : Définit la quantité de défilement de chaque défilement en pixels. La valeur par défaut est 6.
 - `scrolldelay` {{Deprecated_Inline}}
-  - : Définit l'intervalle entre chaque défilement en millisecondes. La valeur par défaut est 85. Notez que toute valeur inférieure à 60 sera ignorée et 60 sera utilisé à la place, à moins que`truespeed`ne soit spécifié.
+  - : Définit l'intervalle entre chaque défilement en millisecondes. La valeur par défaut est 85. Notez que toute valeur inférieure à 60 sera ignorée et 60 sera utilisé à la place, à moins que `truespeed` ne soit défini.
 - `truespeed` {{Deprecated_Inline}}
   - : Par défaut, les valeurs de `scrolldelay` inférieures à 60 sont ignorées. Si `truespeed` est présent, ces valeurs ne seront pas ignorées.
 - `vspace` {{Deprecated_Inline}}

@@ -236,7 +236,7 @@ Les lignes du tableau sont définies avec des éléments {{HTMLElement("tr")}}, 
 
 #### Résultat
 
-Il n'y a aucune [mise en forme CSS](/fr/docs/Web/CSS) personnalisée ni aucune [feuille de style utilisateur](/fr/docs/Web/CSS/Guides/Cascade/Introduction#feuilles_de_style_du_site) appliquée à ce tableau. La mise en forme provient uniquement de la [feuille de style de l'agent utilisateur](/fr/docs/Web/CSS/Guides/Cascade/Introduction#feuilles_de_style_de_lagent_utilisateur).
+Il n'y a aucune [mise en forme CSS](/fr/docs/Web/CSS) personnalisée ni aucune [feuille de style utilisateur·ice](/fr/docs/Web/CSS/Guides/Cascade/Introduction#feuilles_de_style_du_site) appliquée à ce tableau. La mise en forme provient uniquement de la [feuille de style de l'agent utilisateur](/fr/docs/Web/CSS/Guides/Cascade/Introduction#feuilles_de_style_de_lagent_utilisateur).
 
 {{EmbedLiveSample("Tableau simple", 650, 80)}}
 
@@ -708,7 +708,7 @@ th {
 }
 ```
 
-La règle CSS suivante définit le {{CSSxRef("background-color")}} de tous les éléments {{HTMLElement("tr")}} dans l'en-tête du tableau (spécifié avec {{HTMLElement("thead")}}). Ensuite, la bordure inférieure de l'en-tête est définie comme une ligne de deux pixels de large. Remarquez cependant que nous utilisons le sélecteur CSS {{CSSxRef(":nth-of-type")}} pour appliquer la propriété CSS {{CSSxRef("border-bottom")}} à la _deuxième_ ligne de l'en-tête. Pourquoi&nbsp;? Parce que l'en-tête est composé de deux lignes dont certaines cellules sont fusionnées. Il y a donc réellement deux lignes&nbsp;; appliquer le style à la première ligne ne donnerait pas le résultat attendu&nbsp;:
+La règle CSS suivante définit le {{CSSxRef("background-color")}} de tous les éléments {{HTMLElement("tr")}} dans l'en-tête du tableau (défini avec {{HTMLElement("thead")}}). Ensuite, la bordure inférieure de l'en-tête est définie comme une ligne de deux pixels de large. Remarquez cependant que nous utilisons le sélecteur CSS {{CSSxRef(":nth-of-type")}} pour appliquer la propriété CSS {{CSSxRef("border-bottom")}} à la _deuxième_ ligne de l'en-tête. Pourquoi&nbsp;? Parce que l'en-tête est composé de deux lignes dont certaines cellules sont fusionnées. Il y a donc réellement deux lignes&nbsp;; appliquer le style à la première ligne ne donnerait pas le résultat attendu&nbsp;:
 
 ```css
 thead > tr {
@@ -720,7 +720,7 @@ thead > tr:nth-of-type(2) {
 }
 ```
 
-Stylisons les deux cellules d'en-tête «&nbsp;Adhéré&nbsp;» et «&nbsp;Annulé&nbsp;» avec des teintes vertes et rouges pour représenter le «&nbsp;positif&nbsp;» d'un nouveau membre et le «&nbsp;négatif&nbsp;» d'une adhésion annulée. Ici, nous ciblons la dernière ligne de la section d'en-tête du tableau à l'aide du sélecteur CSS {{CSSxRef(":last-of-type")}} et appliquons une couleur verdâtre à la première cellule d'en-tête («&nbsp;Adhéré&nbsp;») et une teinte rougeâtre à la seconde («&nbsp;Annulé&nbsp;») :
+Stylisons les deux cellules d'en-tête «&nbsp;Adhéré&nbsp;» et «&nbsp;Annulé&nbsp;» avec des teintes vertes et rouges pour représenter le «&nbsp;positif&nbsp;» d'un nouveau membre et le «&nbsp;négatif&nbsp;» d'une adhésion annulée. Ici, nous ciblons la dernière ligne de la section d'en-tête du tableau à l'aide du sélecteur CSS {{CSSxRef(":last-of-type")}} et appliquons une couleur verdâtre à la première cellule d'en-tête («&nbsp;Adhéré&nbsp;») et une teinte rougeâtre à la seconde («&nbsp;Annulé&nbsp;»)&nbsp;:
 
 ```css
 thead > tr:last-of-type > th:nth-of-type(1) {
@@ -1031,7 +1031,7 @@ tr:last-child td {
 
 #### Résultat
 
-{{EmbedLiveSample('Affichage de grands tableaux dans de petits espaces', '100%', 240)}}
+{{EmbedLiveSample("Affichage de grands tableaux dans de petits espaces", "100%", 240)}}
 
 ## Résumé technique
 

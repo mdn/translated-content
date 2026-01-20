@@ -28,7 +28,7 @@ Cet élément n'a aucun autre attribut en dehors des [attributs universels](/fr/
 
 {{Specifications}}
 
-Cet élément implémente l'interface {{DOMxRef('HTMLElement')}}.
+Cet élément implémente l'interface {{DOMxRef("HTMLElement")}}.
 
 ## Compatibilité des navigateurs
 

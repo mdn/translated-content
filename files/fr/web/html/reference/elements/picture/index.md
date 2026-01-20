@@ -22,7 +22,7 @@ Le navigateur examine chaque élément enfant `<source>` et choisit la meilleure
 </picture>
 ```
 
-Pour décider quelle URL charger, l'{{Glossary("user agent", "agent utilisateur")}} examine les attributs [`srcset`](/fr/docs/Web/HTML/Reference/Elements/source#srcset), [`media`](/fr/docs/Web/HTML/Reference/Elements/source#media) et [`type`](/fr/docs/Web/HTML/Reference/Elements/source#type) de chaque élément `<source>` afin de sélectionner une image compatible qui correspond le mieux à la disposition actuelle et aux capacités de l'appareil d'affichage.
+Pour décider quelle URL charger, {{Glossary("user agent", "l'agent utilisateur")}} examine les attributs [`srcset`](/fr/docs/Web/HTML/Reference/Elements/source#srcset), [`media`](/fr/docs/Web/HTML/Reference/Elements/source#media) et [`type`](/fr/docs/Web/HTML/Reference/Elements/source#type) de chaque élément `<source>` afin de sélectionner une image compatible qui correspond le mieux à la disposition actuelle et aux capacités de l'appareil d'affichage.
 
 L'élément `<img>` a deux rôles&nbsp;:
 
