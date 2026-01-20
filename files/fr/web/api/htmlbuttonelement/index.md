@@ -2,7 +2,7 @@
 title: HTMLButtonElement
 slug: Web/API/HTMLButtonElement
 l10n:
-  sourceCommit: e00212a2a707a57b49b58b37a6a6c978aaef2bbd
+  sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
 ---
 
 {{APIRef("HTML DOM")}}
@@ -34,7 +34,7 @@ _Hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
   - : Un booléen indiquant que le formulaire ne doit pas être validé lors de sa soumission. Si défini, cet attribut remplace l'attribut [`novalidate`](/fr/docs/Web/HTML/Reference/Elements/form#novalidate) de l'élément HTML {{HTMLElement("form")}} qui possède ce bouton.
 - {{DOMxRef("HTMLButtonElement.formTarget")}}
   - : Une chaîne de caractères représentant un nom ou un mot-clé indiquant où afficher la réponse reçue après la soumission du formulaire. Si défini, cet attribut remplace l'attribut [`target`](/fr/docs/Web/HTML/Reference/Elements/form#target) de l'élément HTML {{HTMLElement("form")}} qui possède ce bouton.
-- {{DOMxRef("HTMLButtonElement.interestForElement")}} {{Experimental_Inline}}
+- {{DOMxRef("HTMLButtonElement.interestForElement")}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : Obtient ou définit l'élément cible d'un invocateur d'intérêt, dans les cas où l'élément HTML {{HTMLElement("button")}} associé est défini comme un [invocateur d'intérêt](/fr/docs/Web/API/Popover_API/Using_interest_invokers#création_dun_invocateur_dinteret).
 - {{DOMxRef("HTMLButtonElement.labels")}} {{ReadOnlyInline}}
   - : Un objet {{DOMxRef("NodeList")}} représentant une liste d'éléments {{HTMLElement("label")}} qui sont des étiquettes pour ce bouton.

@@ -2,7 +2,7 @@
 title: "<button> : l'élément représentant un bouton"
 slug: Web/HTML/Reference/Elements/button
 l10n:
-  sourceCommit: e00212a2a707a57b49b58b37a6a6c978aaef2bbd
+  sourceCommit: 995f8bcede5aa8ca40921b030deef7524ce9e1a3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<button>`** est un élément interactif qui peut être activé avec une souris, un clavier, un doigt, une commande vocale ou tout autre technologie d'assistance. Une fois activé, il peut déclencher une action tel qu'envoyer un [formulaire](/fr/docs/Learn_web_development/Extensions/Forms) ou ouvrir une boite de dialogue.
@@ -111,7 +111,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     - `_parent`&nbsp;: Charge la réponse dans le contexte de navigation parent de celui en cours. S'il n'y a pas de parent, cette option se comporte de la même manière que `_self`.
     - `_top`&nbsp;: Charge la réponse dans le contexte de navigation de niveau supérieur (c'est-à-dire le contexte de navigation qui est un ancêtre du contexte actuel, et qui n'a pas de parent). S'il n'y a pas de parent, cette option se comporte de la même manière que `_self`.
 
-- `interestfor` {{Experimental_Inline}}
+- `interestfor` {{Experimental_Inline}} {{Non-standard_Inline}}
   - : Définit l'élément `<button>` comme un **invocateur d'intérêt** (<i lang="en">interest invoker</i>). Sa valeur est l'`id` de l'élément cible, qui sera affecté d'une manière ou d'une autre (généralement affiché ou masqué) lorsque l'intérêt est montré ou perdu sur l'élément invocateur (par exemple au survol/fin de survol ou à la sélection/perte de sélection). Voir [Utilisation des invocateurs d'intérêt](/fr/docs/Web/API/Popover_API/Using_interest_invokers) pour plus de détails et d'exemples.
 
 - `name`
