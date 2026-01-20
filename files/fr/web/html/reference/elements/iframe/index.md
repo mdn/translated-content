@@ -2,7 +2,7 @@
 title: "<iframe> : l'élément de cadre intégré"
 slug: Web/HTML/Reference/Elements/iframe
 l10n:
-  sourceCommit: dd868507df863ab4f37d53c960c76e20e9ee365f
+  sourceCommit: da2d33b62be6362222d83dae5ce1f381d263a51c
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<iframe>`** représente un {{Glossary("Browsing context", "contexte de navigation")}} imbriqué, intégrant une autre page HTML dans la page courante.
@@ -55,7 +55,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     > [!NOTE]
     > Cet attribut est considéré comme historique et a été redéfini avec `allow="payment"`.
 
-- `browsingtopics` {{Experimental_Inline}} {{Non-standard_Inline}}
+- `browsingtopics` {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Un attribut booléen qui, s'il est présent, indique que les sujets sélectionnés pour l'utilisateur·ice courant·e doivent être envoyés avec la requête pour la source de l'`<iframe>`. Voir [Utilisation de l'API Topics](/fr/docs/Web/API/Topics_API/Using) pour plus de détails.
 
 - `credentialless` {{Experimental_Inline}}

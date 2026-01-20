@@ -3,7 +3,7 @@ title: "<a> : l'élément d'ancre"
 slug: Web/HTML/Reference/Elements/a
 original_slug: Web/HTML/Element/a
 l10n:
-  sourceCommit: e00212a2a707a57b49b58b37a6a6c978aaef2bbd
+  sourceCommit: e936e7271df947f25184a5ba8a21445bbd4d056c
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<a>`** (ou élément d'_ancre_), avec [son attribut `href`](#href), crée un hyperlien vers des pages web, des fichiers, des adresses e-mail, des emplacements dans la même page ou toute autre ressource accessible par une URL.
@@ -87,7 +87,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
   - : Donne des indications sur le langage humain de l'URL liée. Aucune fonctionnalité intégrée. Les valeurs autorisées sont les mêmes que [l'attribut universel `lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang).
 - `ping`
   - : Contient une liste d'URL séparées par des espaces vers lesquelles sont envoyées des requêtes {{HTTPMethod("POST")}} avec le corps `PING` lorsque l'utilisateur·ice suit le lien. Cet attribut est généralement utilisé pour tracer un·e utilisateur·ice.
-- `interestfor` {{Experimental_Inline}}
+- `interestfor` {{Experimental_Inline}} {{Non-standard_Inline}}
   - : Définit l'élément `<a>` comme un **invocateur d'intérêt** (<i lang="en">interest invoker</i>). Sa valeur est l'`id` de l'élément cible, qui sera affecté d'une manière ou d'une autre (généralement affiché ou masqué) lorsque l'intérêt est montré ou perdu sur l'élément invocateur (par exemple au survol/fin de survol ou à la sélection/perte de sélection). Voir [Utilisation des invocateurs d'intérêt](/fr/docs/Web/API/Popover_API/Using_interest_invokers) pour plus de détails et d'exemples.
 - `referrerpolicy`
   - : Détermine la quantité d'informations du [référent](/fr/docs/Web/HTTP/Reference/Headers/Referer) à envoyer lors du suivi du lien.
