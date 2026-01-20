@@ -31,7 +31,7 @@ Tan pronto como un navegador implementa una funcionalidad, MDN intenta documenta
 
 ## Distinción importante
 
-No confundas JavaScript con el [lenguaje de programación Java](https://en.wikipedia.org/wiki/Java_\(programming_language\)) — **JavaScript _no es_ "Java Interpretado"**. Ambos "Java" y "JavaScript" son marcas o marcas registradas de Oracle en los Estados Unidos y otros países. Sin embargo, los dos lenguajes de programación tienen sintaxis, semántica y usos muy diferentes.
+No confundas JavaScript con el [lenguaje de programación Java](<https://en.wikipedia.org/wiki/Java_(programming_language)>) — **JavaScript _no es_ "Java Interpretado"**. Ambos "Java" y "JavaScript" son marcas o marcas registradas de Oracle en los Estados Unidos y otros países. Sin embargo, los dos lenguajes de programación tienen sintaxis, semántica y usos muy diferentes.
 
 > [!CALLOUT]
 > **¿Quieres transformarte en un desarrollador web front-end?**
