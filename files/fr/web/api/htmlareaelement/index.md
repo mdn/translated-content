@@ -31,7 +31,7 @@ _Hérite des propriétés de son parent {{DOMxRef("HTMLElement")}}._
   - : Une chaîne de caractères qui reflète l'attribut HTML [`href`](/fr/docs/Web/HTML/Reference/Elements/area#href), contenant une URL valide de la ressource liée.
 - {{DOMxRef("HTMLAreaElement.interestForElement")}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : Obtient ou définit l'élément cible d'un invocateur d'intérêt, dans les cas où l'élément HTML {{HTMLElement("area")}} associé est défini comme un [invocateur d'intérêt](/fr/docs/Web/API/Popover_API/Using_interest_invokers#création_dun_invocateur_dinteret).
-- {{DOMxRef("HTMLAreaElement.noHref")}} {{Deprecated_Inline}}
+- `HTMLAreaElement.noHref` {{Deprecated_Inline}}
   - : Un booléen indiquant si la zone est inactive (`true`) ou active (`false`).
 - {{DOMxRef("HTMLAreaElement.origin")}} {{ReadOnlyInline}}
   - : Retourne une chaîne de caractères contenant l'origine de l'URL, c'est-à-dire son schéma, son domaine et son port.
