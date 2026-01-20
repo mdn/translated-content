@@ -7,13 +7,31 @@ slug: Web/JavaScript
 
 **JavaScript** (**JS**) es un lenguaje de programación ligero, interpretado (o compilado {{Glossary("Just_In_Time_Compilation", "justo-a-tiempo")}}) con {{Glossary("First-class Function", "funciones de primera clase")}}. Si bien es más conocido como el lenguaje de scripting para páginas web, [muchos entornos fuera del navegador](https://en.wikipedia.org/wiki/JavaScript#Other_usage) también lo usan, tal como {{Glossary("Node.js")}}, [Apache CouchDB](https://couchdb.apache.org/) y [Adobe Acrobat](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/). JavaScript es un lenguaje [basado en prototipos](/es/docs/Glossary/Prototype-based_programming), con [recolección de basura](/es/docs/Glossary/Garbage_collection), [dinámico](/es/docs/Glossary/Dynamic_typing), que soporta múltiples paradigmas como imperativo, funcional y orientado a objetos.
 
-Las capacidades dinámicas de JavaScript incluyen construcción de objetos en tiempo de ejecución, listas de parámetros variables, variables de función, creación dinámica de scripts (mediante [`eval`](/es/docs/Web/JavaScript/Reference/Global_Objects/eval)), introspección de objetos (mediante [`for...in`](/es/docs/Web/JavaScript/Reference/Statements/for...in) y [utilidades de `Object`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object#static_methods)), y recuperación de código fuente (las funciones de JavaScript almacenan su texto fuente y pueden recuperarse mediante [`toString()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Function/toString)).
+## Capacidades clave
+
+Las capacidades dinámicas de JavaScript incluyen:
+
+- Construcción de objetos en tiempo de ejecución
+- Listas de parámetros variables
+- Variables de función
+- Creación dinámica de scripts (mediante [`eval`](/es/docs/Web/JavaScript/Reference/Global_Objects/eval))
+- Introspección de objetos (mediante [`for...in`](/es/docs/Web/JavaScript/Reference/Statements/for...in) y [utilidades de `Object`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object#static_methods))
+- Recuperación de código fuente (las funciones de JavaScript almacenan su texto fuente y pueden recuperarse mediante [`toString()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Function/toString))
+
+## Alcance y estándares
 
 Esta sección está dedicada al lenguaje JavaScript en sí, y no a las partes que son específicas de las páginas web u otros entornos host. Para información acerca de {{Glossary("API","APIs")}} específicas para páginas Web, consulta [APIs Web](/es/docs/Web/API) y {{Glossary("DOM")}}.
 
-El estándar para JavaScript es [ECMAScript](/es/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview) (ECMA-262) y [la especificación de la API para la Internacionalización de ECMAScript](https://tc39.es/ecma402/) (ECMA-402). La documentación en MDN está basada enteramente en las últimas versiones preliminares de ECMA-262 y ECMA-402. Y en algunos casos donde algunas [propuestas para nuevas funciones para ECMAScript](https://github.com/tc39/proposals) ya hayan sido implementadas en los navegadores, la documentación y algunos artículos de MDN pueden hacer uso de algunas de estas funciones.
+Los estándares para JavaScript son:
 
-No confundas JavaScript con el [lenguaje de programación Java](<https://es.wikipedia.org/wiki/Java_(lenguaje_de_programaci%C3%B3n)>). Ambos "Java" y "JavaScript" son marcas o marcas registradas de Oracle en los Estados Unidos y otros países. Sin embargo, los dos lenguajes de programación tienen sintaxis, semántica y usos muy diferentes.
+- [Especificación del Lenguaje ECMAScript](https://tc39.es/ecma262/) (ECMA-262)
+- [Especificación de la API de Internacionalización de ECMAScript](https://tc39.es/ecma402/) (ECMA-402)
+
+Tan pronto como un navegador implementa una funcionalidad, MDN intenta documentarla. En casos donde [propuestas para nuevas funciones de ECMAScript](https://github.com/tc39/proposals) ya han sido implementadas en navegadores, la documentación puede usar algunas de esas nuevas funciones — típicamente entre las [etapas](https://tc39.es/process-document/) 3 y 4, generalmente antes de que la especificación sea publicada oficialmente.
+
+## Distinción importante
+
+No confundas JavaScript con el [lenguaje de programación Java](https://en.wikipedia.org/wiki/Java_\(programming_language\)) — **JavaScript _no es_ "Java Interpretado"**. Ambos "Java" y "JavaScript" son marcas o marcas registradas de Oracle en los Estados Unidos y otros países. Sin embargo, los dos lenguajes de programación tienen sintaxis, semántica y usos muy diferentes.
 
 > [!CALLOUT]
 > **¿Quieres transformarte en un desarrollador web front-end?**
