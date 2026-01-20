@@ -1,9 +1,8 @@
 ---
 title: ::file-selector-button
 slug: Web/CSS/Reference/Selectors/::file-selector-button
-original_slug: Web/CSS/::file-selector-button
 l10n:
-  sourceCommit: 62c5c3f5655002f230bf0153fbdf8a883611014a
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
 **`::file-selector-button`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、{{HTMLElement("input") }} 要素の [`type="file"`](/ja/docs/Web/HTML/Reference/Elements/input/file) のボタンを表します。
@@ -25,7 +24,7 @@ input::file-selector-button {
 ```
 
 ```html interactive-example
-<label for="avatar">Choose a profile picture:</label><br />
+<label for="avatar">プロフィール画像を選択:</label><br />
 
 <input id="avatar" type="file" name="avatar" accept="image/png, image/jpeg" />
 ```
@@ -33,7 +32,9 @@ input::file-selector-button {
 ## 構文
 
 ```css
-selector::file-selector-button
+::file-selector-button {
+  /* ... */
+}
 ```
 
 ## 例
@@ -142,5 +143,4 @@ input[type="file"]::file-selector-button:hover {
 
 - [WebKit の CSS 拡張](/ja/docs/Web/CSS/Reference/Webkit_extensions)
 - [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
-- [ファイルとディレクトリー項目 API の Firefox における対応](/ja/docs/Web/API/File_and_Directory_Entries_API)
 - [`<input type="file">`](/ja/docs/Web/HTML/Reference/Elements/input/file)
