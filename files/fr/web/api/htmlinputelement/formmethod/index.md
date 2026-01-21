@@ -41,4 +41,4 @@ inputElement.formMethod = "post";
 - La propriété {{DOMxRef("HTMLFormElement.method")}}
 - L'élément HTML `{{HTMLElement("input/submit", "&lt;input type=\"submit\"&gt;")}}`
 - L'élément HTML `{{HTMLElement("input/image", "&lt;input type=\"image\"&gt;")}}`
-- [Envoyer des données de formulaire](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- [Envoyer des données de formulaire](/fr/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
