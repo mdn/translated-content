@@ -1,71 +1,75 @@
 ---
 title: HTMLVideoElement
 slug: Web/API/HTMLVideoElement
+l10n:
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
 
 {{APIRef("HTML DOM")}}
 
-L'interface **`HTMLVideoElement`** fournit des propriétés et des méthodes spéciales pour manipuler des objets vidéo. Elle hérite également des propriétés et des méthodes de [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement) et de [`HTMLElement`](/fr/docs/Web/API/HTMLElement).
+Implémentée par l'élément HTML {{HTMLElement("video")}}, l'interface **`HTMLVideoElement`** fournit des propriétés et méthodes particulières pour manipuler les objets vidéo. Elle hérite également des propriétés et méthodes de {{DOMxRef("HTMLMediaElement")}} et {{DOMxRef("HTMLElement")}}.
 
-La liste des [formats multimédias pris en charge](/fr/docs/Web/Media/Guides/Formats) varie d'un navigateur à l'autre. Vous pouvez fournir votre vidéo dans un format unique que tous les navigateurs pertinents prennent en charge, ou fournir plusieurs sources vidéo dans des formats suffisamment différents couverts par les différents navigateurs que vous ciblez.
+La liste des [formats médias pris en charge](/fr/docs/Web/Media/Guides/Formats) varie d'un navigateur à l'autre. Vous devez soit fournir votre vidéo dans un format unique pris en charge par tous les navigateurs concernés, soit fournir plusieurs sources vidéo dans suffisamment de formats différents pour couvrir tous les navigateurs que vous souhaitez prendre en charge.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
-## Propriétés
+## Propriétés d'instance
 
-_Cette interface hérite des propriétés de ses interfaces ancêtres :_ _{{domxref("HTMLMediaElement")}} et_ _{{domxref("HTMLElement")}}._
+_Hérite des propriétés de son interface parente, {{DOMxRef("HTMLMediaElement")}} et de {{DOMxRef("HTMLElement")}}._
 
-- {{domxref("HTMLVideoElement.height")}}
-  - : Une chaîne de caractères {{domxref("DOMString")}} qui reflète la valeur de l'attribut HTML [`height`](/fr/docs/Web/HTML/Reference/Elements/video#height) indiquant la hauteur de la zone d'affichage, en pixels.
-- {{domxref("HTMLVideoElement.poster")}}
-  - : Une chaîne de caractères {{domxref("DOMString")}} qui reflète la valeur de l'attribut [`poster`](/fr/docs/Web/HTML/Reference/Elements/video#poster) qui indique une image à afficher tant qu'aucune donnée vidéo n'est disponible.
-- {{domxref("HTMLVideoElement.videoHeight")}} {{readonlyInline}}
-  - : Un entier non signé qui indique la hauteur intrinsèque de la ressource, exprimée en pixels CSS, ou 0 tant que le média n'est pas disponible.
-- {{domxref("HTMLVideoElement.videoWidth")}} {{readonlyInline}}
-  - : Un entier non signé qui indique la largeur intrinsèque de la ressource, exprimée en pixels CSS, ou 0 tant que le média n'est pas disponible.
-- {{domxref("HTMLVideoElement.width")}}
-  - : Une chaîne de caractères {{domxref("DOMString")}} qui reflète la valeur de l'attribut HTML [`width`](/fr/docs/Web/HTML/Reference/Elements/video#width) indiquant la largeur de la zone d'affichage, en pixels.
+- {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
+  - : Indique si l'agent utilisateur doit suggérer le mode image dans l'image aux utilisateur·ice·s ou non.
+- {{DOMxRef("HTMLVideoElement.height")}}
+  - : Une chaîne de caractères qui reflète l'attribut HTML [`height`](/fr/docs/Web/HTML/Reference/Elements/video#height), qui indique la hauteur de la zone d'affichage, en pixels CSS.
+- {{DOMxRef("HTMLVideoElement.poster")}}
+  - : Une chaîne de caractères qui reflète l'attribut HTML [`poster`](/fr/docs/Web/HTML/Reference/Elements/video#poster), qui indique une image à afficher tant qu'aucune donnée vidéo n'est disponible.
+- {{DOMxRef("HTMLVideoElement.videoHeight")}} {{ReadOnlyInline}}
+  - : Retourne une valeur entière non signée indiquant la hauteur intrinsèque de la ressource en pixels CSS, ou 0 si aucun média n'est encore disponible.
+- {{DOMxRef("HTMLVideoElement.videoWidth")}} {{ReadOnlyInline}}
+  - : Retourne une valeur entière non signée indiquant la largeur intrinsèque de la ressource en pixels CSS, ou 0 si aucun média n'est encore disponible.
+- {{DOMxRef("HTMLVideoElement.width")}}
+  - : Une chaîne de caractères qui reflète l'attribut HTML [`width`](/fr/docs/Web/HTML/Reference/Elements/video#width), qui indique la largeur de la zone d'affichage, en pixels CSS.
 
-### Propriétés spécifiques à Gecko
+### Propriétés spécifiques à Firefox
 
-- {{domxref("HTMLVideoElement.mozParsedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
-  - : Un entier non signé indiquant le nombre de _frames_ qui ont été analysées (_parsed_) depuis la ressource média.
-- {{domxref("HTMLVideoElement.mozDecodedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
-  - : Un entier non signé indiquant le nombre de _frames_ qui ont été décodées en images.
-- {{domxref("HTMLVideoElement.mozPresentedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
-  - : Un entier non signé indiquant le nombre de _frames_ décodées qui ont été présentées au canal de rendu pour l'affichage.
-- {{domxref("HTMLVideoElement.mozPaintedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
-  - : Un entier non signé indiquant le nombre de _frames_ présentées et qui ont été affichées à l'écran.
-- {{domxref("HTMLVideoElement.mozFrameDelay")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
-  - : Un double indiquant le retard, exprimé en secondes, pour l'affichage de la dernière _frame_ affichée.
-- {{domxref("HTMLVideoElement.mozHasAudio")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
-  - : Un booléen indiquant s'il y a de l'audio associé à cette vidéo.
+- `HTMLVideoElement.mozParsedFrames` {{ReadOnlyInline}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Retourne un `unsigned long` indiquant le nombre d'images vidéo qui ont été analysées depuis la ressource média.
+- `HTMLVideoElement.mozDecodedFrames` {{ReadOnlyInline}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Retourne un `unsigned long` indiquant le nombre d'images vidéo analysées qui ont été décodées en images.
+- `HTMLVideoElement.mozPresentedFrames` {{ReadOnlyInline}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Retourne un `unsigned long` indiquant le nombre d'images décodées qui ont été présentées au pipeline de rendu pour affichage.
+- `HTMLVideoElement.mozPaintedFrames` {{ReadOnlyInline}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Retourne un `unsigned long` indiquant le nombre d'images présentées qui ont été affichées à l'écran.
+- `HTMLVideoElement.mozFrameDelay` {{ReadOnlyInline}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Retourne un `double` indiquant le temps de retard, en secondes, de la dernière image vidéo affichée.
+- `HTMLVideoElement.mozHasAudio` {{ReadOnlyInline}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Retourne un booléen indiquant s'il y a de l'audio associé à la vidéo.
 
-### Propriétés spécifiques à Microsoft
+## Méthodes d'instances
 
-- {{DOMxRef("HTMLVideoElement.msFrameStep()")}} {{Non-standard_Inline}}
-  - : Permet d'avancer ou de reculer la vidéo d'une _frame_.
-- {{DOMxRef("HTMLVideoElement.msHorizontalMirror")}} {{Non-standard_Inline}}
-  - : Permet d'indiquer ou de définir si la vidéo est inversée horizontalement dans l'affichage.
-- {{DOMxRef("HTMLVideoElement.msInsertVideoEffect()")}} {{Non-standard_Inline}}
-  - : Ajoute l'effet vidéo indiqué dans le canal de rendu.
-- {{DOMxRef("HTMLVideoElement.msIsLayoutOptimalForPlayback")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
-  - : Indique si la vidéo peut être affichée plus efficacement.
-- {{DOMxRef("HTMLVideoElement.msIsStereo3D")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
-  - : Un booléen qui détermine si le système considère que la vidéo chargée est en stéréo 3D. La valeur `true` indique que la source est en stéro 3D.
-- {{DOMxRef("HTMLVideoElement.msZoom")}} {{Non-standard_Inline}}
-  - : Contrôle si le cadre de la vidéo est réduit pour s'inscrire dans la zone d'affichage de la vidéo (autrement dit : si la vidéo est zoomée/tronquée pour s'inscrire dans la zone correspondante).
+_Hérite des méthodes de son interface parente, {{DOMxRef("HTMLMediaElement")}} et de {{DOMxRef("HTMLElement")}}._
 
-## Méthodes
-
-_Hérite des méthodes de son parent {{domxref("HTMLMediaElement")}} et de son ancêtre {{domxref("HTMLElement")}}._
-
-- {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} {{experimental_inline}}
-  - : Cette méthode renvoie un objet {{domxref("VideoPlaybackQuality")}} contenant les métriques/statistiques sur la lecture actuelle avec des informations comme le nombre d'images sautées ou corrompues ainsi que le nombre total d'images.
+- {{DOMxRef("HTMLVideoElement.cancelVideoFrameCallback()")}}
+  - : Annule une fonction de rappel de trame vidéo précédemment enregistrée (voir {{DOMxRef("HTMLVideoElement.requestVideoFrameCallback", "requestVideoFrameCallback()")}}).
+- {{DOMxRef("HTMLVideoElement.getVideoPlaybackQuality()")}}
+  - : Retourne un objet {{DOMxRef("VideoPlaybackQuality")}} qui contient les métriques de lecture actuelles. Ces informations incluent, par exemple, le nombre d'images perdues ou corrompues ainsi que le nombre total d'images.
+- {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
+  - : Demande à l'agent utilisateur de passer la vidéo en mode image dans l'image.
+- {{DOMxRef("HTMLVideoElement.requestVideoFrameCallback()")}}
+  - : Enregistre une fonction de rappel qui s'exécute lorsqu'une nouvelle trame vidéo est envoyée au compositeur. Cela permet aux développeur·euse·s d'effectuer des opérations efficaces sur chaque trame vidéo.
 
 ## Évènements
 
-_Hérite des méthodes de son parent {{domxref("HTMLMediaElement")}} et de son ancêtre {{domxref("HTMLElement")}}._ Pour écouter ces évènements, on utilisera [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) ou on affectera un gestionnaire d'évènement avec la propriété `on<NomEvenement>` (ex. `onclick`) de l'interface.
+_Hérite des évènements de son interface parente, {{DOMxRef("HTMLMediaElement")}} et de {{DOMxRef("HTMLElement")}}._
+
+Écoutez ces évènements en utilisant {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} ou en assignant un gestionnaire d'évènement à la propriété `oneventname` de cette interface.
+
+- {{DOMxRef("HTMLVideoElement.enterpictureinpicture_event", "enterpictureinpicture")}}
+  - : Déclenché lorsque le `HTMLVideoElement` passe avec succès en mode image dans l'image.
+- {{DOMxRef("HTMLVideoElement.leavepictureinpicture_event", "leavepictureinpicture")}}
+  - : Déclenché lorsque le `HTMLVideoElement` quitte avec succès le mode image dans l'image.
+- {{DOMxRef("HTMLVideoElement.resize_event", "resize")}}
+  - : Déclenché lorsque l'une ou les deux propriétés {{DOMxRef("HTMLVideoElement.videoWidth", "videoWidth")}} et {{DOMxRef("HTMLVideoElement.videoHeight", "videoHeight")}} viennent d'être mises à jour.
 
 ## Spécifications
 
@@ -77,5 +81,5 @@ _Hérite des méthodes de son parent {{domxref("HTMLMediaElement")}} et de son a
 
 ## Voir aussi
 
-- L'élément HTML qui implémente cette interface {{HTMLElement("video")}}.
+- L'élément HTML qui implémente cette interface&nbsp;: {{HTMLElement("video")}}.
 - [Les formats médias pris en charge](/fr/docs/Web/Media/Guides/Formats)
