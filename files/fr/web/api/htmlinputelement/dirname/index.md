@@ -33,5 +33,5 @@ inputElement.dirName = "rtl";
 ## Voir aussi
 
 - La propriété {{DOMxRef("HTMLTextAreaElement.dirName")}}
-- [L'attribut `dir`](/fr/docs/Web/HTML/Global_attributes/dir)
-- [Envoyer des données de formulaire](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- [L'attribut `dir`](/fr/docs/Web/HTML/Reference/Global_attributes/dir)
+- [Envoyer des données de formulaire](/fr/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)

@@ -46,5 +46,5 @@ console.log(inputElement.formNoValidate);
 - L'élément HTML {{HTMLElement("form")}}
 - La propriété {{DOMxRef("HTMLFormElement.noValidate")}}
 - La propriété {{DOMxRef("HTMLButtonElement.formNoValidate")}}
-- [Apprendre&nbsp;: Validation de formulaire côté client](/fr/docs/Learn/Forms/Form_validation)
+- [Apprendre&nbsp;: Validation de formulaire côté client](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - [Guide&nbsp;: Validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation)
