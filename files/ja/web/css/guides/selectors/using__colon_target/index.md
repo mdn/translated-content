@@ -2,9 +2,8 @@
 title: セレクターでの :target 擬似クラスの使い方
 short-title: :target の使い方
 slug: Web/CSS/Guides/Selectors/Using_:target
-original_slug: Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 URL が [URL フラグメント識別子](/ja/docs/Web/URI/Reference/Fragment#fragment)を使用して文書内の特定の箇所を指している場合、ユーザーにはそのことがわかりにくい場合があります。このガイドでは、CSS を使用して URL のターゲットに注意を向け、使いやすさを向上させる方法について説明します。
