@@ -22,7 +22,8 @@ slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Images
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/images/images1.html", '100%', 700)}}
 
-> **Примечание:** [Загрузите файл](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/tasks/images/images1-download.html) для этой задачи, чтобы работать в вашем редакторе или в онлайн-редакторе.
+> [!NOTE]
+> [Загрузите файл](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/tasks/images/images1-download.html) для этой задачи, чтобы работать в вашем редакторе или в онлайн-редакторе.
 
 ## Изображения в HTML №2
 
@@ -32,7 +33,8 @@ slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Images
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/images/images2.html", '100%', 700)}}
 
-> **Примечание:** [Загрузите файл](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/tasks/images/images2-download.html) для этой задачи, чтобы работать в вашем редакторе или в онлайн-редакторе.
+> [!NOTE]
+> [Загрузите файл](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/tasks/images/images2-download.html) для этой задачи, чтобы работать в вашем редакторе или в онлайн-редакторе.
 
 ## Изображения в HTML №3
 
@@ -42,7 +44,8 @@ slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Images
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/images/images3.html", '100%', 700)}}
 
-> **Примечание:** [Загрузите файл](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/tasks/images/images3-download.html) для этой задачи, чтобы работать в вашем редакторе или в онлайн-редакторе.
+> [!NOTE]
+> [Загрузите файл](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/tasks/images/images3-download.html) для этой задачи, чтобы работать в вашем редакторе или в онлайн-редакторе.
 
 ## Оценка или дополнительная помощь
 

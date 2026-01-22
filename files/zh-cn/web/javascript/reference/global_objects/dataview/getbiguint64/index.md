@@ -3,8 +3,6 @@ title: DataView.prototype.getBigUint64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getBigUint64
 ---
 
-{{JSRef}}
-
 {{jsxref("DataView")}} 的 **`getBigUint64()`** 方法，从 `DataView` 的指定的字节偏移量位置读取 8 个字节，并将其解析为一个无符号 64 位整数（unsigned long long）。
 
 {{InteractiveExample("JavaScript Demo: DataView.getBigUint64()")}}

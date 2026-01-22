@@ -3,8 +3,6 @@ title: Map
 slug: Web/JavaScript/Reference/Global_Objects/Map
 ---
 
-{{JSRef}}
-
 **`Map`** 对象保存键值对，并且能够记住键的原始插入顺序。任何值（对象或者{{Glossary("Primitive", "原始值")}}）都可以作为键或值。
 
 {{InteractiveExample("JavaScript Demo: Map", "taller")}}

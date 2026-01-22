@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`CSSKeyframesRule`** 接口表示 CSS 动画的完整关键帧集合的对象。它对应于整个 {{cssxref("@keyframes")}} [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)的内容。
+**`CSSKeyframesRule`** 接口表示 CSS 动画的完整关键帧集合的对象。它对应于整个 {{cssxref("@keyframes")}} [at 规则](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules)的内容。
 
 {{InheritanceDiagram}}
 

@@ -51,7 +51,7 @@ l10n:
   </tbody>
 </table>
 
-値の説明については、 [CSS の `font-size`](/ja/docs/Web/CSS/font-size#値) プロパティを参照してください。
+値の説明については、 [CSS の `font-size`](/ja/docs/Web/CSS/Reference/Properties/font-size#値) プロパティを参照してください。
 
 ## 仕様書
 

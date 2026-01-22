@@ -3,7 +3,7 @@ title: "Учебник Express часть 4: Маршруты и контрол�
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/routes
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 В этом уроке мы настроим маршруты (код обработки URL) с "фиктивными" функциями-обработчиками для всех конечных точек ресурса, которые нам понадобятся на веб-сайте [LocalLibrary](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website). По завершении мы получим модульную структуру для нашего кода обработки маршрута, который будет расширен реальными функциями-обработчиками в следующих статьях. У нас также будет хорошее понимание того, как создавать модульные маршруты с помощью Express!
 
@@ -641,7 +641,7 @@ app.use("/catalog", catalogRouter); // Add catalog routes to middleware chain.
 - [Basic routing](http://expressjs.com/en/starter/basic-routing.html) Основы маршрутизации (документация Express)
 - [Routing guide](http://expressjs.com/en/guide/routing.html) Руководство по маршрутизации (документация Express)
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 ## In this module
 

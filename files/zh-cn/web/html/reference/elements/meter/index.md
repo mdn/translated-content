@@ -147,6 +147,6 @@ label {
 
 ## 参见
 
-- [创建垂直表单控件](/zh-CN/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
+- [创建垂直表单控件](/zh-CN/docs/Web/CSS/Guides/Writing_modes/Vertical_controls)
 - {{HTMLElement("progress")}}
 - {{cssxref("::-webkit-meter-bar")}}、{{cssxref("::-webkit-meter-inner-element") }}、{{cssxref("::-webkit-meter-even-less-good-value")}}、{{cssxref("::-webkit-meter-optimum-value")}}、{{cssxref("::-webkit-meter-suboptimum-value")}}：非标准的伪元素

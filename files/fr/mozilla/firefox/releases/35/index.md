@@ -48,12 +48,12 @@ Liens:
 
 ### CSS
 
-- La proprieté [`mask-type`](/fr/docs/Web/CSS/mask-type) a été activée par défaut ([bug 1058519](https://bugzilla.mozilla.org/show_bug.cgi?id=1058519)).
-- La propieté [`filter`](/fr/docs/Web/CSS/filter) est maintenant activée par défaut ([bug 1057180](https://bugzilla.mozilla.org/show_bug.cgi?id=1057180)).
-- La fonction [`@font-face`](/fr/docs/Web/CSS/@font-face) est maintenant compatible avec les polices de type WOFF2 ([bug 1064737](https://bugzilla.mozilla.org/show_bug.cgi?id=1064737)).
+- La proprieté [`mask-type`](/fr/docs/Web/CSS/Reference/Properties/mask-type) a été activée par défaut ([bug 1058519](https://bugzilla.mozilla.org/show_bug.cgi?id=1058519)).
+- La propieté [`filter`](/fr/docs/Web/CSS/Reference/Properties/filter) est maintenant activée par défaut ([bug 1057180](https://bugzilla.mozilla.org/show_bug.cgi?id=1057180)).
+- La fonction [`@font-face`](/fr/docs/Web/CSS/Reference/At-rules/@font-face) est maintenant compatible avec les polices de type WOFF2 ([bug 1064737](https://bugzilla.mozilla.org/show_bug.cgi?id=1064737)).
 - La notation fonctionnelle [`symbol()`](</fr/docs/Web/CSS/symbol()>) est maintenant supportée([bug 966168](https://bugzilla.mozilla.org/show_bug.cgi?id=966168)).
 - L'API CSS Font Loading a été implémentée ([bug 1028497](https://bugzilla.mozilla.org/show_bug.cgi?id=1028497)).
-- En utilisant [`-moz-appearance`](/fr/docs/Web/CSS/appearance) avec la valeur `none` sur un menu de type `select`, le bouton déroulant est maintenant supprimé ([bug 649849](https://bugzilla.mozilla.org/show_bug.cgi?id=649849)).
+- En utilisant [`-moz-appearance`](/fr/docs/Web/CSS/Reference/Properties/appearance) avec la valeur `none` sur un menu de type `select`, le bouton déroulant est maintenant supprimé ([bug 649849](https://bugzilla.mozilla.org/show_bug.cgi?id=649849)).
 - La propriété accessor `element.style["css-property-name"]` a maintenant été ajoutée pour correspondre aux autres navigateurs ([bug 958887](https://bugzilla.mozilla.org/show_bug.cgi?id=958887 'FIXED: Add support for element.style["css-property-name"] non-standard extension')).
 
 ### HTML
@@ -95,7 +95,7 @@ Liens:
 
 ### MathML
 
-- La fonction `dtls` OpenType (via les CSS [`font-feature-settings`](/fr/docs/Web/CSS/font-feature-settings) sur la feuille de styles par défaut) est maintenant appliquée automatiquement aux éléments MathML lors du positionnement des scripts au-dessus (e.g. dotless i with mathematical hat).
+- La fonction `dtls` OpenType (via les CSS [`font-feature-settings`](/fr/docs/Web/CSS/Reference/Properties/font-feature-settings) sur la feuille de styles par défaut) est maintenant appliquée automatiquement aux éléments MathML lors du positionnement des scripts au-dessus (e.g. dotless i with mathematical hat).
 
 ### SVG
 
@@ -108,7 +108,7 @@ _Aucun changement._
 ## Réseau & Sécurité
 
 - L'entête HTTP/2 `alt-svc` est maintenant supportée ([bug 1003448](https://bugzilla.mozilla.org/show_bug.cgi?id=1003448)).
-- L'extension [Public Key Pinning](/fr/docs/Web/Security/Certificate_Transparency) pour HTTP (HPKP) a été implementée ([bug 787133](https://bugzilla.mozilla.org/show_bug.cgi?id=787133)).
+- L'extension [Public Key Pinning](/fr/docs/Web/Security/Defenses/Certificate_Transparency) pour HTTP (HPKP) a été implementée ([bug 787133](https://bugzilla.mozilla.org/show_bug.cgi?id=787133)).
 
 ## Changements pour les modules et les développeurs Mozilla
 
@@ -133,42 +133,3 @@ _Aucun changement._
 ## Voir aussi
 
 - [Compatibilité web pour Firefox 35](/fr/docs/Mozilla/Firefox/Releases/35/Site_Compatibility)
-
-## Anciennes versions
-
-- [Firefox 34 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/34)
-- [Firefox 33 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/33)
-- [Firefox 32 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/32)
-- [Firefox 31 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/31)
-- [Firefox 30 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/30)
-- [Firefox 29 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/29)
-- [Firefox 28 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/28)
-- [Firefox 27 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/27)
-- [Firefox 26 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/26)
-- [Firefox 25 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/25)
-- [Firefox 24 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/24)
-- [Firefox 23 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/23)
-- [Firefox 22 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/22)
-- [Firefox 21 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/21)
-- [Firefox 20 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/20)
-- [Firefox 19 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/19)
-- [Firefox 18 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/18)
-- [Firefox 17 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/17)
-- [Firefox 16 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/16)
-- [Firefox 15 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/15)
-- [Firefox 14 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/14)
-- [Firefox 13 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/13)
-- [Firefox 12 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/12)
-- [Firefox 11 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/11)
-- [Firefox 10 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/10)
-- [Firefox 9 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/9)
-- [Firefox 8 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/8)
-- [Firefox 7 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/7)
-- [Firefox 6 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/6)
-- [Firefox 5 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/5)
-- [Firefox 4 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/4)
-- [Firefox 3.6 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/3.6)
-- [Firefox 3.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/3.5)
-- [Firefox 3 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/3)
-- [Firefox 2 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/2)
-- [Firefox 1.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/1.5)

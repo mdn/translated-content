@@ -3,8 +3,6 @@ title: Array.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
 ---
 
-{{JSRef}}
-
 **`every()`** 方法测试一个数组内的所有元素是否都能通过指定函数的测试。它返回一个布尔值。
 
 {{InteractiveExample("JavaScript Demo: Array.every()", "shorter")}}

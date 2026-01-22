@@ -51,7 +51,7 @@ Voici la structure que nous allons utiliser
 </html>
 ```
 
-Cette structure contient des informations de base comme le titre du document ([`<title>`](/fr/docs/Web/HTML/Reference/Elements/title)), un peu de CSS pour définir la largeur ([`width`](/fr/docs/Web/CSS/width)) et la hauteur ([`height`](/fr/docs/Web/CSS/height)) du canevas ([`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas)), ici 100% pour remplir tout l'espace disponible.
+Cette structure contient des informations de base comme le titre du document ([`<title>`](/fr/docs/Web/HTML/Reference/Elements/title)), un peu de CSS pour définir la largeur ([`width`](/fr/docs/Web/CSS/Reference/Properties/width)) et la hauteur ([`height`](/fr/docs/Web/CSS/Reference/Properties/height)) du canevas ([`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas)), ici 100% pour remplir tout l'espace disponible.
 
 Le premier élément [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) inclut la bibliothèque Three.js dans la page. Nous écrirons notre code dans le deuxième élément `<script>`. Nous avons déjà inclus deux variables utilitaires pour stocker la largeur et la hauteur de la fenêtre (respectivement `WIDTH` et `HEIGHT`).
 

@@ -14,7 +14,7 @@ CSS フォント読み込み API は、フォントリソースを動的に読�
 
 ## 概念と使用方法
 
-CSSスタイルシートでは、カスタムフォントを使用することができます。 [`@font-face`](/ja/docs/Web/CSS/@font-face) ルールでダウンロードするフォントを指定し、 [`font-family`](/ja/docs/Web/CSS/font-family) プロパティで要素に適用します。
+CSSスタイルシートでは、カスタムフォントを使用することができます。 [`@font-face`](/ja/docs/Web/CSS/Reference/At-rules/@font-face) ルールでダウンロードするフォントを指定し、 [`font-family`](/ja/docs/Web/CSS/Reference/Properties/font-family) プロパティで要素に適用します。
 フォントがダウンロードされるこの点は、ユーザーエージェントによって制御されます。
 ほとんどのエージェントは、フォントが最初に必要になったときだけ取得して読み込むため、知覚できるほどの遅延が生じることがあります。
 
@@ -22,7 +22,7 @@ CSS フォント読み込み API は、フォントフェイスがいつ取得�
 フォントフェイスを文書やワーカーのフォントフェイス集合に追加することで、ユーザーエージェントは必要に応じて関連するフォントリソースを自動的に取得し読み込むことができます。
 フォントフェイスは、フォントフェイス集合に追加される前でも後でも読み込むことができますが、描画に使用する前に必ず設定するには追加しなければなりません。
 
-フォントフェイスは{{domxref('FontFace')}}オブジェクトで定義します。このオブジェクトは CSS [`@font-face`](/ja/docs/Web/CSS/@font-face) ルールとほぼ同じ方法で、バイナリーまたは URL フォントのソースとフォントの他のプロパティを指定します。
+フォントフェイスは{{domxref('FontFace')}}オブジェクトで定義します。このオブジェクトは CSS [`@font-face`](/ja/docs/Web/CSS/Reference/At-rules/@font-face) ルールとほぼ同じ方法で、バイナリーまたは URL フォントのソースとフォントの他のプロパティを指定します。
 `FontFace` オブジェクトは、 {{domxref("Document.fonts")}} と {{domxref("WorkerGlobalScope.fonts")}} を使用してそれぞれ文書またはワーカー {{domxref('FontFaceSet')}} に追加されます。
 作者は `FontFace` または `FontFaceSet` を使用してフォントのダウンロードを起動し、読み込み完了を監視することができます。
 `FontFaceSet` を使用すると、さらに、ページで必要なすべてのフォントが読み込まれ、文書レイアウトが完了したときに判断することができます。
@@ -35,7 +35,7 @@ CSS フォント読み込み API は、フォントフェイスがいつ取得�
 ### フォントフェイスの定義
 
 フォントフェイスは [`FontFace` コンストラクター](/ja/docs/Web/API/FontFace/FontFace) を使用して作成します。コンストラクターは引数としてフォントファミリー、フォントソース、オプションの記述子を取ります。
-これらの引数の書式と文法は、同等の [`@font-face`](/ja/docs/Web/CSS/@font-face) 定義と同じです。
+これらの引数の書式と文法は、同等の [`@font-face`](/ja/docs/Web/CSS/Reference/At-rules/@font-face) 定義と同じです。
 
 フォントソースは [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) に入ったバイナリーデータでも、フォントリソースの URL でもかまいません。
 URL ソースを使用する典型的なフォントフェイス定義は下記のようになります。

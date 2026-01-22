@@ -3,8 +3,6 @@ title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
 ---
 
-{{JSRef}}
-
 **`RegExp`** 对象用于将文本与一个模式匹配。
 
 有关正则表达式的介绍，请阅读 [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)中的[正则表达式章节](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)。

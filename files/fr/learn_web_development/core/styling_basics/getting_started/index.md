@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Getting_started
 original_slug: Learn/CSS/First_steps/How_CSS_is_structured
 ---
 
-{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/What_is_CSS", "Learn_web_development/Core/Styling_basics/Getting_started")}}
 
 Vous avez maintenant une idée plus claire de CSS. Vous connaissez les bases de son fonctionnement. Il est temps d'explorer plus avant la structure du langage lui-même. Nous avons déjà rencontré nombre des concepts apparaissant dans ce tutoriel ; reportez vous aux leçons précédentes si un concept vous semble peu clair.
 
@@ -24,7 +24,7 @@ Vous avez maintenant une idée plus claire de CSS. Vous connaissez les bases de 
         <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction à HTML</a
         >), et une idée de
-        <a href="/fr/docs/Learn/CSS/First_steps/How_CSS_works"
+        <a href="/fr/docs/Learn_web_development/Core/Styling_basics/What_is_CSS"
           >Comment fonctionne CSS</a
         >.
       </td>
@@ -249,7 +249,7 @@ Au premier abord, les règles de cascade et de spécificité peuvent sembler com
 
 Au niveau le plus fondamental, CSS se compose de deux blocs de construction :
 
-- **Propriétés** : des identifiants lisibles par l'homme indiquant les caractéristiques stylistiques ([`font-size`](/fr/docs/Web/CSS/font-size), [`width`](/fr/docs/Web/CSS/width), [`background-color`](/fr/docs/Web/CSS/background-color), par exemple) que vous souhaitez modifier ;
+- **Propriétés** : des identifiants lisibles par l'homme indiquant les caractéristiques stylistiques ([`font-size`](/fr/docs/Web/CSS/Reference/Properties/font-size), [`width`](/fr/docs/Web/CSS/Reference/Properties/width), [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color), par exemple) que vous souhaitez modifier ;
 - **Valeurs** : une valeur est attribuée à chaque propriété spécifiée. Elle indique comment vous souhaitez modifier ces caractéristiques stylistiques (par exemple, en modifiant la couleur de la police, la largeur ou l'arrière-plan).
 
 L'image ci-dessous met en évidence une propriété et une valeur uniques. Le nom de la propriété est `color` et la valeur `blue`.
@@ -268,11 +268,11 @@ Définir les propriétés CSS sur des valeurs spécifiques est la fonction princ
 
 **Recherchez différentes valeurs possibles pour les propriétés suivantes puis écrivez des règles CSS qui les appliquent à différents éléments HTML :**
 
-- **[`font-size`](/fr/docs/Web/CSS/font-size)**
-- **[`width`](/fr/docs/Web/CSS/width)**
-- **[`background-color`](/fr/docs/Web/CSS/background-color)**
-- **[`color`](/fr/docs/Web/CSS/color)**
-- **[`border`](/fr/docs/Web/CSS/border)**
+- **[`font-size`](/fr/docs/Web/CSS/Reference/Properties/font-size)**
+- **[`width`](/fr/docs/Web/CSS/Reference/Properties/width)**
+- **[`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color)**
+- **[`color`](/fr/docs/Web/CSS/Reference/Properties/color)**
+- **[`border`](/fr/docs/Web/CSS/Reference/Properties/border)**
 
 > [!WARNING]
 > Si la propriété est inconnue ou si la valeur est invalide pour une propriété donnée, la déclaration est considérée comme _invalide_ et complètement ignorée par le moteur CSS du navigateur.
@@ -311,7 +311,7 @@ La page devrait s'afficher comme ceci :
 
 Une fonction est composée du nom de la fonction suivi d'une paire de parenthèses entre lesquelles sont placées les valeurs autorisées pour cette fonction. Dans le cas de l'exemple `calc()` ci-dessus, on demande que la largeur de cette zone soit égale à 90% de la largeur du bloc conteneur, moins 30 pixels. Ce n'est pas quelque chose que l'on peut calculer à l'avance et simplement entrer la valeur dans le CSS, car on ne sait pas ce que seront 90%. Comme pour toutes les valeurs, chaque fonction a sa page de documentation sur MDN avec des exemples d'utilisation pour en voir le fonctionnement.
 
-Un autre exemple serait les différentes valeurs de la propriété [`<transform>`](/fr/docs/Web/CSS/transform), telles que `rotate()`.
+Un autre exemple serait les différentes valeurs de la propriété [`<transform>`](/fr/docs/Web/CSS/Reference/Properties/transform), telles que `rotate()`.
 
 #### Exemple transform
 
@@ -335,21 +335,21 @@ La page devrait s'afficher comme ceci :
 
 **Essayez de rechercher différentes valeurs des propriétés suivantes et d'écrire des règles CSS qui les appliquent à différents éléments HTML :**
 
-- **[`transform`](/fr/docs/Web/CSS/transform)**
-- **[`background-image`](/fr/docs/Web/CSS/background-image), en particulier les valeurs de dégradé**
-- **[`color`](/fr/docs/Web/CSS/color), en particulier les valeurs rgb/rgba/hsl/hsla**
+- **[`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)**
+- **[`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image), en particulier les valeurs de dégradé**
+- **[`color`](/fr/docs/Web/CSS/Reference/Properties/color), en particulier les valeurs rgb/rgba/hsl/hsla**
 
 ## @rules
 
 e
 
-Nous n'avons pas rencontré jusqu'ici les [`@rules`](/fr/docs/Web/CSS/CSS_syntax/At-rule) (prononcer "at-rules"). Ce sont des règles spéciales dictant un comportement CSS. Certaines `@rules` simples sont composées d'un nom et d'une valeur. Par exemple, pour importer une feuille de style additionnelle dans le CSS principal on utilisera `@import` :
+Nous n'avons pas rencontré jusqu'ici les [`@rules`](/fr/docs/Web/CSS/Guides/Syntax/At-rules) (prononcer "at-rules"). Ce sont des règles spéciales dictant un comportement CSS. Certaines `@rules` simples sont composées d'un nom et d'une valeur. Par exemple, pour importer une feuille de style additionnelle dans le CSS principal on utilisera `@import` :
 
 ```css
 @import "styles2.css";
 ```
 
-L'une des `@rules` les plus fréquemment rencontrée est `@media`, qui permet d'utiliser les [<i lang="en">media queries</i>](/fr/docs/Web/CSS/CSS_media_queries) pour appliquer CSS seulement quand certaines conditions sont vérifiées (par ex. quand la résolution de l'écran dépasse une certaine valeur, ou quand l'écran dépasse une certaine largeur).
+L'une des `@rules` les plus fréquemment rencontrée est `@media`, qui permet d'utiliser les [<i lang="en">media queries</i>](/fr/docs/Web/CSS/Guides/Media_queries) pour appliquer CSS seulement quand certaines conditions sont vérifiées (par ex. quand la résolution de l'écran dépasse une certaine valeur, ou quand l'écran dépasse une certaine largeur).
 
 Dans le CSS ci-dessous, une règle donne à l'élément `<body>` un fond rose. La section `@media` ne s'appliquera que dans les navigateurs dont la fenêtre est plus large que 30em. Dans ce cas la couleur de fond sera redéfinie à bleue.
 
@@ -371,7 +371,7 @@ Tout au long de nos tutoriels CSS, vous rencontrerez d'autres `@rules`.
 
 ## Raccourcis
 
-Certaines propriétés comme [`font`](/fr/docs/Web/CSS/font), [`background`](/fr/docs/Web/CSS/background), [`padding`](/fr/docs/Web/CSS/padding), [`border`](/fr/docs/Web/CSS/border), ou [`margin`](/fr/docs/Web/CSS/margin) sont appelées **propriétés raccourci** — elles permettent d'attribuer plusieurs couples propriété : valeur en une seule ligne. On gagne du temps et le code est plus joli.
+Certaines propriétés comme [`font`](/fr/docs/Web/CSS/Reference/Properties/font), [`background`](/fr/docs/Web/CSS/Reference/Properties/background), [`padding`](/fr/docs/Web/CSS/Reference/Properties/padding), [`border`](/fr/docs/Web/CSS/Reference/Properties/border), ou [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin) sont appelées **propriétés raccourci** — elles permettent d'attribuer plusieurs couples propriété : valeur en une seule ligne. On gagne du temps et le code est plus joli.
 
 Par exemple, la ligne suivante :
 
@@ -584,4 +584,4 @@ Le navigateur ne connaît pas la propriété `padding-` . Les noms de propriét�
 
 Il est utile de comprendre, au moins dans les grandes lignes, comment votre navigateur calcule le rendu d'une page web à partir des fichiers HTML et CSS. Dans la prochaine leçon — [Comment CSS fonctionne](/fr/docs/Learn_web_development/Core/Styling_basics/What_is_CSS) — nous examinerons donc ce point.
 
-{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/What_is_CSS", "Learn_web_development/Core/Styling_basics/Getting_started")}}

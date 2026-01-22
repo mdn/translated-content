@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 509fde687ed349da8017a546f9cf094163f24844
 ---
 
-{{JSRef}}
-
 {{jsxref("SharedArrayBuffer")}} 实例的 **`growable`** 访问器属性返回该 `SharedArrayBuffer` 是否可增大。
 
 ## 描述

@@ -6,7 +6,7 @@ original_slug: Learn/Getting_started_with_the_web/JavaScript_basics
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}
 
 JavaScript는 여러분의 웹사이트에 상호작용성(예를 들면, 게임, 버튼이 눌리거나 폼에 자료가 입력될 때 반응, 동적인 스타일링과 애니메이션)을 더해 주는 프로그래밍 언어입니다. 이 글은 여러분이 이 흥미로운 언어를 시작하는 것을 도와드리고 가능한 것에 대한 아이디어를 제공할 것입니다.
 
@@ -358,4 +358,4 @@ function setUserName() {
 
 여기서, 우리는 JavaScript의 겉을 살짝 맛봤습니다. 즐겁게 배우셨고, 더 깊게 학습하고 싶으시다면, [JavaScript 안내서](/ko/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792) 페이지로 가보세요.
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}

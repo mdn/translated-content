@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms
 original_slug: Learn/Server-side/Express_Nodejs/forms
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 このチュートリアルでは、Pug を使用して Express で HTML フォームを操作する方法、特にデータベースからドキュメントを作成、更新、削除するためのフォームを作成する方法を説明します。
 
@@ -223,4 +223,4 @@ NPM の Express、Node、およびサードパーティのパッケージは、�
 
 - [express-validator](https://www.npmjs.com/package/express-validator) (npm ドキュメント).
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

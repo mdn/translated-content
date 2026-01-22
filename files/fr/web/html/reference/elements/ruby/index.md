@@ -1,14 +1,15 @@
 ---
-title: <ruby>
+title: "<ruby> : l'élément d'annotation de Ruby"
 slug: Web/HTML/Reference/Elements/ruby
-original_slug: Web/HTML/Element/ruby
+l10n:
+  sourceCommit: e66301dff87e1ac68bd5e6e9dace12ead3eded6f
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<ruby>`** représente de petites annotations affichées au-dessus, en dessous ou à côté du texte de base, généralement utilisées pour indiquer la prononciation des caractères d'Asie orientale. Il peut aussi servir à annoter d'autres types de texte, mais cet usage est moins courant.
 
-L'élément HTML **`<ruby>`** représente une annotation ruby. Les annotations Ruby servent à afficher la prononciation des caractères d'Asie orientale.
+Le terme _ruby_ vient d'[une unité de mesure utilisée par les typographes <sup>(angl.)</sup>](<https://en.wikipedia.org/wiki/Agate_(typography)>), représentant la plus petite taille à laquelle un texte peut être imprimé sur du papier journal tout en restant lisible.
 
-{{InteractiveExample("HTML Demo: &lt;ruby&gt;", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;ruby&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <ruby> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby>
@@ -22,13 +23,11 @@ ruby {
 
 ## Attributs
 
-Cet élément inclut uniquement les [attributs globaux](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Exemples
 
-### Annoter un caractère
-
-#### HTML
+### Exemple 1 : Caractère
 
 ```html
 <ruby>
@@ -38,11 +37,9 @@ Cet élément inclut uniquement les [attributs globaux](/fr/docs/Web/HTML/Refere
 
 #### Résultat
 
-{{EmbedLiveSample("Annoter_un_caractère")}}
+{{EmbedLiveSample("Exemple 1 : Caractère")}}
 
-### Annoter un mot
-
-#### HTML
+### Exemple 2 : Mot
 
 ```html
 <ruby> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby>
@@ -50,7 +47,7 @@ Cet élément inclut uniquement les [attributs globaux](/fr/docs/Web/HTML/Refere
 
 #### Résultat
 
-{{EmbedLiveSample("Annoter_un_mot")}}
+{{EmbedLiveSample("Exemple 2 : Mot")}}
 
 ## Résumé technique
 
@@ -58,30 +55,25 @@ Cet élément inclut uniquement les [attributs globaux](/fr/docs/Web/HTML/Refere
   <tbody>
     <tr>
       <th scope="row">
-        <dfn
-          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-            >Catégories de contenu</a
-          ></dfn
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
+          >Catégories de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu de phrasé</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
-          >contenu tangible</a
-        >.
+        >, contenu tangible.
       </td>
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >Contenu de phrasé</a
         >.
       </td>
@@ -94,9 +86,17 @@ Cet élément inclut uniquement les [attributs globaux](/fr/docs/Web/HTML/Refere
       <th scope="row">Parents autorisés</th>
       <td>
         Tout élément qui accepte du <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu de phrasé</a
         >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
+          >Pas de rôle correspondant <sup>(angl.)</sup></a
+        >
       </td>
     </tr>
     <tr>
@@ -105,7 +105,7 @@ Cet élément inclut uniquement les [attributs globaux](/fr/docs/Web/HTML/Refere
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
+      <td>{{DOMxRef("HTMLElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -120,9 +120,7 @@ Cet élément inclut uniquement les [attributs globaux](/fr/docs/Web/HTML/Refere
 
 ## Voir aussi
 
-- {{HTMLElement("rt")}}
-- {{HTMLElement("rp")}}
-- {{HTMLElement("rb")}}
-- {{HTMLElement("rtc")}}
-- {{HTMLElement("rbc")}}
-- {{CSSXRef("text-transform", "text-transform: full-size-kana")}}
+- L'élément {{HTMLElement("rt")}}
+- L'élément {{HTMLElement("rp")}}
+- La propriété CSS {{CSSxRef("ruby-overhang")}}
+- Les propriétés et valeurs CSS {{CSSxRef("text-transform", "text-transform: full-size-kana")}}

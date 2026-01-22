@@ -377,4 +377,4 @@ function MyObject(name, message) {
 
 В обоих примерах выше методы определяются один раз — в прототипе. И все объекты, использующие данный прототип, будут использовать это определение без дополнительного расхода вычислительных ресурсов. Смотрите подробное описание в статье [Подробнее об объектной модели](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 
-{{PreviousNext("Web/JavaScript/Equality_comparisons_and_sameness")}}
+{{PreviousNext("Web/JavaScript/Guide/Equality_comparisons_and_sameness")}}

@@ -19,5 +19,5 @@ slug: Web/HTML/Reference/Global_attributes/slot
 - HTML {{HTMLElement("slot")}} 元素
 - HTML {{HTMLElement("template")}} 元素
 - CSS {{CSSXref("::slotted")}} 伪元素
-- [CSS 域](/zh-CN/docs/Web/CSS/CSS_scoping)模块
+- [CSS 域](/zh-CN/docs/Web/CSS/Guides/Scoping)模块
 - [Web 组件](/zh-CN/docs/Web/API/Web_components)

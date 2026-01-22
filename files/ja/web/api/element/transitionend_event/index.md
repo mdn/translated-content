@@ -3,12 +3,12 @@ title: "Element: transitionend イベント"
 short-title: transitionend
 slug: Web/API/Element/transitionend_event
 l10n:
-  sourceCommit: 1b094710cd2816a6669ce616b6f56d0a5b25e6ad
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{APIRef}}
 
-**`transitionend`** イベントは、 [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)が完了したときに発生します。トランジションが完了前に削除された場合、例えば {{cssxref("transition-property")}} が削除されたり、 {{cssxref("display")}} が `none` に設定されたりした場合、イベントは生成されません。
+**`transitionend`** イベントは、 [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions/Using)が完了したときに発生します。トランジションが完了前に削除された場合、例えば {{cssxref("transition-property")}} が削除されたり、 {{cssxref("display")}} が `none` に設定されたりした場合、イベントは生成されません。
 
 `transitionend` イベントは二つの方向で発生します。トランジション終了の状態まで遷移し終わったときと、既定またはトランジションがない状態まで完全に戻ったときです。トランジションに待ち時間や実行時間がない場合、両方が 0 秒またはどちらも宣言されていなかった場合、トランジションは発生せず、トランジションイベントは発生しません。 `transitioncancel` イベントが発生すると、 `transitionend` イベントは発生しません。
 
@@ -18,10 +18,10 @@ l10n:
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-```js
-addEventListener("transitionend", (event) => {});
+```js-nolint
+addEventListener("transitionend", (event) => { })
 
-ontransitionend = (event) => {};
+ontransitionend = (event) => { }
 ```
 
 ## イベント型
@@ -39,7 +39,7 @@ _親である {{domxref("Event")}} から継承したプロパティもありま
 - {{domxref("TransitionEvent.elapsedTime")}} {{ReadOnlyInline}}
   - : float` で、このイベントが発行されたときにトランジションが実行されていた時間を秒単位で表します。この値は {{cssxref("transition-delay")}} プロパティの影響を受けません。
 - {{domxref("TransitionEvent.pseudoElement")}} {{ReadOnlyInline}}
-  - : 文字列で、アニメーションが実行する[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)の名前が入ります。トランジションが擬似要素上で実行されず、要素上で実行される場合は空文字列 (`''`) です。
+  - : 文字列で、アニメーションが実行する[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)の名前が入ります。トランジションが擬似要素上で実行されず、要素上で実行される場合は空文字列 (`''`) です。
 
 ## 例
 
@@ -68,7 +68,7 @@ transition.ontransitionend = () => {
 次の例では、単純な {{htmlelement("div")}} 要素に遅延を含むトランジションをスタイル設定しています。
 
 ```html
-<div class="transition"></div>
+<div class="transition">ここにポインターを当ててください</div>
 <div class="message"></div>
 ```
 
@@ -76,15 +76,15 @@ transition.ontransitionend = () => {
 .transition {
   width: 100px;
   height: 100px;
-  background: rgba(255, 0, 0, 1);
+  background: red;
   transition-property: transform, background;
   transition-duration: 2s;
-  transition-delay: 2s;
+  transition-delay: 1s;
 }
 
 .transition:hover {
   transform: rotate(90deg);
-  background: rgba(255, 0, 0, 0);
+  background: transparent;
 }
 ```
 
@@ -111,7 +111,7 @@ el.addEventListener("transitionend", () => {
 });
 ```
 
-{{ EmbedLiveSample('Live_example', '100%', '150px') }}
+{{ EmbedLiveSample('ライブ例', '100%', '150px') }}
 
 `transitionend` イベントは両方向に発生します。ボックスの回転が完了し、不透明度が方向に応じて 0 または 1 になったときです。
 

@@ -1,23 +1,36 @@
 ---
-title: URLs de type ressource
+title: URLs de ressource
+short-title: "resource:"
 slug: Web/URI/Reference/Schemes/resource
-original_slug: Web/URI/Schemes/resource
+l10n:
+  sourceCommit: 466ca1db767535c1aa9984b4e6c0db41b3a53475
 ---
+
+{{Non-standard_Header}}
 
 Les URLs de type ressource sont les URLs préfixées à l'aide du schéma `resource:`. Elles sont utilisées par Firefox ainsi que les modules complémentaires pour charger des ressources de manière interne, néanmoins, certaines informations associées sont disponibles pour les sites auxquels le navigateur accède.
 
 ## Syntaxe
 
-Les URLs de type ressource sont composées de deux parties, un préfixe (`resource:`) et l'URL qui dirige vers la ressource que l'on souhaite charger :
-
-```
-resource://<url>
+```url
+resource://<path>
 ```
 
-Voici un exemple :
+- `resource:`
+  - : Le schéma de l'URL.
+- `<path>`
+  - : Un chemin pointant vers la ressource à charger.
 
-```
+Exemple&nbsp;:
+
+```url
 resource://gre/res/svg.css
+```
+
+Lorsque des flèches sont présentes dans l'URL de ressource («&nbsp;->&nbsp;»), cela signifie que le premier fichier charge le suivant&nbsp;:
+
+```url
+resource://<File-loader> -> <File-loaded>
 ```
 
 Pour plus de détails, vous pouvez consulter [Identifier des ressources sur le Web](/fr/docs/Web/URI).
@@ -28,17 +41,21 @@ Dans cet article, nous abordons les URIs ressources qui sont utilisées par Fire
 
 Étant donné que les informations partagées par les URLs `resource:` sont accessibles par les sites web, une page web pourrait être en mesure d'exécuter un script pour inspecter les ressources internes à Firefox telles que les préférences par défaut, ce qui pourrait constituer un problème important de confidentialité et de sécurité.
 
-Par exemple, [ce script sur Browserleaks](https://www.browserleaks.com/firefox) détaille les éléments accessibles de Firefox lorsque l'on appelle l'URL ressource. Le code de ce script est accessible à l'adresse <https://browserleaks.com/firefox#more>.
+Par exemple, [ce script sur Browserleaks <sup>(angl.)</sup>](https://www.browserleaks.com/firefox) détaille les éléments accessibles de Firefox lorsque l'on appelle l'URL ressource. Le code de ce script est accessible à l'adresse <https://browserleaks.com/firefox#more>.
 
-Le fichier [firefox.js](https://searchfox.org/mozilla-central/rev/48ea452803907f2575d81021e8678634e8067fc2/browser/app/profile/firefox.js#575) passe les noms des préférences et leurs valeurs à la fonction `pref()`.
+Le fichier firefox.js transmet les noms et valeurs de préférences à la fonction `pref()`. Par exemple&nbsp;:
+
+```url
+http://searchfox.org/mozilla-central/rev/48ea452803907f2575d81021e8678634e8067fc2/browser/app/profile/firefox.js#575
+```
 
 Les sites web peuvent aisément récupérer les préférences par défaut de Firefox en contournant la fonction `pref()` et en utilisant le script `resource:///defaults/preferences/firefox.js`.
 
-De plus, certaines valeurs par défaut diffèrent selon les versions ou les installations, parmi lesquelles le système d'exploitation ou la langue d'utilisation, il est donc possible d'identifier les utilisateurs de manière distincte.
+De plus, certaines valeurs par défaut diffèrent selon les versions ou les installations, parmi lesquelles le système d'exploitation ou la langue d'utilisation, il est donc possible d'identifier les utilisateur·ice·s de manière distincte.
 
 ## Solution
 
-Afin de résoudre ce problème, Mozilla a modifié le comportement du chargement des URLs ressource via [bug Firefox 863246](https://bugzil.la/863246), rendu disponible à partir de Firefox 57 (Quantum).
+Afin de résoudre ce problème, Mozilla a modifié le comportement du chargement des URLs ressource via [bug Firefox 863246 <sup>(angl.)</sup>](https://bugzil.la/863246), rendu disponible à partir de [Firefox 57 (Quantum)](/fr/docs/Mozilla/Firefox/Releases/57).
 
 Auparavant, les sites web étaient capables d'accéder à n'importe quelle URI `resource:`, celles de Firefox mais aussi celles des modules complémentaires. Ce comportement est désormais interdit par défaut.
 
@@ -49,14 +66,14 @@ Firefox nécessite néanmoins le chargement des ressources au sein d'un contenu 
 
 ## Spécifications
 
-`resource:` n'est pas défini dans une spécification RFC.
+`resource:` n'est défini dans aucune spécification.
 
 ## Compatibilité des navigateurs
 
-resource: est disponible uniquement dans Firefox.
+`resource:` est disponible uniquement dans Firefox.
 
 ## Voir aussi
 
-- [Identifier des ressources sur le Web](/fr/docs/Web/URI)
-- [Qu'est-ce qu'une URL ?](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
-- [Liste des schémas URI maintenue par l'IANA](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml) (`resource:` est [définie ici](https://www.iana.org/assignments/uri-schemes/prov/resource))
+- [URIs](/fr/docs/Web/URI)
+- [Qu'est-ce qu'une URL&nbsp;?](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
+- [Liste des schémas URI maintenue par l'IANA <sup>(angl.)</sup>](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml) (`resource:` est [défini ici <sup>(angl.)</sup>](https://www.iana.org/assignments/uri-schemes/prov/resource))

@@ -1,11 +1,11 @@
 ---
 title: IPv6
 slug: Glossary/IPv6
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
-
-**IPv6** est la version actuelle du {{glossary("protocol","protocole")}} sous-jacent de communication pour {{glossary("Internet")}}. Lentement IPv6 remplace {{Glossary("IPv4")}}, entre autres raisons parce que IPv6 permet d'avoir de nombreuses {{Glossary("IP address","adresses IP")}} différentes.
+**IPv6** est la version actuelle du {{Glossary("protocol", "protocole")}} sous-jacent de communication pour {{Glossary("Internet")}}. Lentement IPv6 remplace {{Glossary("IPv4")}}, entre autres raisons parce que IPv6 permet d'avoir de nombreuses {{Glossary("IP address", "adresses IP")}} différentes.
 
 ## Voir aussi
 

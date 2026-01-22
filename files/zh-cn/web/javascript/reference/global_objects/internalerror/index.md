@@ -3,7 +3,7 @@ title: InternalError
 slug: Web/JavaScript/Reference/Global_Objects/InternalError
 ---
 
-{{JSRef}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
 **`InternalError` 对象**表示出现在 JavaScript 引擎内部的错误。通常描述某种数量过多的情况，例如：
 

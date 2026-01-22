@@ -12,7 +12,7 @@ l10n:
 
 Ces éléments sont masqués avec `display: none` jusqu'au déclenchement de leur ouverture par un élément qui les contrôle (c'est-à-dire un élément `<button>` ou `<input type="button">` doté d'un attribut [`popovertarget`](/fr/docs/Web/HTML/Reference/Elements/button#popovertarget)) ou par un appel à la méthode [`HTMLElement.showPopover()`](/fr/docs/Web/API/HTMLElement/showPopover).
 
-Lors de leur ouverture, les éléments marqués avec `popover` seront affichés par-dessus les autres éléments, dans la [couche supérieure](/fr/docs/Glossary/Top_layer) et ne seront pas influencés par la mise en forme de leur parent pour la position ([`position`](/fr/docs/Web/CSS/position)) ou le dépassement ([`overflow`](/fr/docs/Web/CSS/overflow)).
+Lors de leur ouverture, les éléments marqués avec `popover` seront affichés par-dessus les autres éléments, dans la [couche supérieure](/fr/docs/Glossary/Top_layer) et ne seront pas influencés par la mise en forme de leur parent pour la position ([`position`](/fr/docs/Web/CSS/Reference/Properties/position)) ou le dépassement ([`overflow`](/fr/docs/Web/CSS/Reference/Properties/overflow)).
 
 Pour plus d'informations sur l'utilisation de ces fonctionnalités, voir [la page de présentation de l'API <i lang="en">Popover</i>](/fr/docs/Web/API/Popover_API).
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
-
 {{jsxref("TypedArray")}} 实例的 **`byteOffset`** 访问器属性返回该类型化数组相对于其 {{jsxref("ArrayBuffer")}} 或 {{jsxref("SharedArrayBuffer")}} 开始位置的偏移量（以字节为单位）。
 
 ## 描述

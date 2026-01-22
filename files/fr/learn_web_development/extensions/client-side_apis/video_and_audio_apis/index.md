@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs
 original_slug: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Client-side_storage", "Learn/JavaScript/Client-side_web_APIs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics", "Learn_web_development/Extensions/Client-side_APIs/Client-side_storage", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 HTML5 fournit des éléments pour intégrer du multimédia dans les documents — {{htmlelement("video")}} et {{htmlelement("audio")}} — et qui viennent avec leurs propres APIs pour contrôler la lecture, se déplacer dans le flux, etc*.* Cet article montre comment réaliser les tâches les plus communes, comme créer des contrôles de lectures personnalisés.
 
@@ -481,4 +481,4 @@ Voici quelques suggestions de modifications à apporter à l'exemple que nous av
 - Les pages référence {{htmlelement("video")}} et {{htmlelement("audio")}}.
 - [Formats pris en charge par les éléments HTML audio et vidéo](/fr/docs/Web/Media/Guides/Formats).
 
-{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics", "Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}

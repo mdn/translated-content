@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 458eb9af74287fd15ef8ba9f4ba9aa3423c4cac3
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn/CSS/Building_blocks/Organizing", "Learn_web_development/Core/Styling_basics")}}
 
 Lorsqu'on écrit du CSS, on peut rencontrer certaines situations où le CSS ne fait pas vraiment ce qu'on attend de lui. Que faire quand rien ne se passe alors qu'un sélecteur devrait cibler un élément&nbsp;? Pourquoi une boîte est-elle d'une taille différente que celle souhaitée&nbsp;? Dans cet article, nous vous guiderons pour le débogage des problèmes CSS et l'utilisation des outils de développement des navigateurs pour le diagnostic.
 
@@ -143,11 +143,11 @@ Bien que les navigateurs s'attendent à du code CSS et HTML bien écrit, ils s'a
 
 ### Est-ce que la propriété et la valeur sont prises en charge par le navigateur utilisé&nbsp;?
 
-Les navigateurs ignorent le CSS qu'ils ne prennent pas en charge. Si la propriété ou la valeur utilisée n'est pas prise en charge par le navigateur utilisé pour tester, rien ne cassera, mais le CSS ne sera pas appliqué. Les outils de développement mettront généralement en avant les propriétés et valeurs qu'ils ne prennent pas en charge. Dans la capture d'écran qui suit, on voit que le navigateur ne prend pas en charge la valeur `subgrid` pour [`grid-template-columns`](/fr/docs/Web/CSS/grid-template-columns).
+Les navigateurs ignorent le CSS qu'ils ne prennent pas en charge. Si la propriété ou la valeur utilisée n'est pas prise en charge par le navigateur utilisé pour tester, rien ne cassera, mais le CSS ne sera pas appliqué. Les outils de développement mettront généralement en avant les propriétés et valeurs qu'ils ne prennent pas en charge. Dans la capture d'écran qui suit, on voit que le navigateur ne prend pas en charge la valeur `subgrid` pour [`grid-template-columns`](/fr/docs/Web/CSS/Reference/Properties/grid-template-columns).
 
 ![Une image des outils de développement de Firefox où la règle grid-template-columns: subgrid est barrée, car la valeur subgrid n'est pas prise en charge.](no-support.png)
 
-Vous pouvez également consulter les tableaux de compatibilité des navigateurs en bas de chaque page MDN des propriétés. Ces tableaux contiennent les informations de prise en charge pour chaque propriété, avec un détail des différents usages et valeurs si la compatibilité est différente. [Voir le tableau de compatibilité pour la propriété `shape-outside`](/fr/docs/Web/CSS/shape-outside#compatibilité_des_navigateurs).
+Vous pouvez également consulter les tableaux de compatibilité des navigateurs en bas de chaque page MDN des propriétés. Ces tableaux contiennent les informations de prise en charge pour chaque propriété, avec un détail des différents usages et valeurs si la compatibilité est différente. [Voir le tableau de compatibilité pour la propriété `shape-outside`](/fr/docs/Web/CSS/Reference/Properties/shape-outside#compatibilité_des_navigateurs).
 
 ### Est-ce que quelque chose outrepasse votre CSS&nbsp;?
 
@@ -180,4 +180,4 @@ Et voilà, nous avons vu une introduction au débogage de CSS qui devrait vous d
 
 Dans le dernier article de ce module, nous verrons comment [organiser votre code CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing).
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn/CSS/Building_blocks/Organizing", "Learn_web_development/Core/Styling_basics")}}

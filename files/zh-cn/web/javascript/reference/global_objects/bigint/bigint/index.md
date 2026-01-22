@@ -3,8 +3,6 @@ title: BigInt() constructor
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
 ---
 
-{{JSRef}}
-
 **`BigInt()`** 构造函数用来创建 {{jsxref("BigInt")}} 对象。
 
 ## 语法

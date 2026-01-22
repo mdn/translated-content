@@ -18,7 +18,7 @@ _Также свойства наследуются от родителя {{domx
 - {{domxref("AnimationEvent.elapsedTime")}} {{readonlyInline}}
   - : Является числом с плавающей точкой, которое задаёт количество времени от начала анимации в секундах, когда это событие отклонено, несмотря на какое-либо время анимация была остановлена.Для события "animationstart" , elapsedTime равно `0.0` если не было заданно отрицательное значение для {{cssxref("animation-delay")}}, в этом случае событие будет срабатывать с elapsedTime содержащим `(-1 * delay)`.
 - {{domxref("AnimationEvent.pseudoElement")}} {{readonlyInline}}
-  - : Является {{domxref("DOMString")}}, начинающийся с '::', содержащий имя [псевдо-элемента](/ru/docs/Web/CSS/Pseudo-elements),на котором работает анимация.Если анимация не работает на псевдо-элементе, но работает на элементе,значит указанна пустая строка ' '.
+  - : Является {{domxref("DOMString")}}, начинающийся с '::', содержащий имя [псевдо-элемента](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-elements),на котором работает анимация.Если анимация не работает на псевдо-элементе, но работает на элементе,значит указанна пустая строка ' '.
 
 ## Конструктор
 
@@ -42,5 +42,5 @@ _Также наследуют методы от родителя {{domxref("Eve
 
 ## Смотрите также
 
-- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Использование CSS-анимации](/ru/docs/Web/CSS/Guides/Animations/Using)
 - Анимация связанных CSS-свойств и по правилам: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Accessibility/Mobile
 original_slug: Learn/Accessibility/Mobile
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Multimedia","Learn_web_development/Core/Accessibility/Accessibility_troubleshooting", "Learn_web_development/Core/Accessibility")}}
 
 L'accès Web sur les appareils mobiles étant si populaire et les plates-formes populaires telles qu'IOS et Android disposant d'outils d'aide à l'accessibilité complets, il est important de prendre en compte l'accessibilité de votre contenu Web sur ces plates-formes. Cet article examine les considérations relatives à l'accessibilité spécifiques aux mobiles.
 
@@ -15,7 +15,7 @@ L'accès Web sur les appareils mobiles étant si populaire et les plates-formes 
       <td>
         Connaissances de base en informatique, compréhension de base de HTML,
         CSS et JavaScript et compréhension de la <a
-          href="/fr/docs/Learn/Accessibility"
+          href="/fr/docs/Learn_web_development/Core/Accessibility"
           >previous articles in the course</a
         >.
       </td>
@@ -216,7 +216,7 @@ Nous avons fourni un exemple simple qui montre comment utiliser simultanément l
 
 En particulier, les problèmes les plus courants auxquels le mobile doit faire face sont les suivants:
 
-- Adéquation des mises en page pour les appareils mobiles. Une mise en page à plusieurs colonnes ne fonctionnera pas aussi bien sur un écran étroit, par exemple, et il faudra peut-être augmenter la taille du texte pour le rendre lisible. Ces problèmes peuvent être résolus en créant une mise en page réactive utilisant des technologies telles que [media queries](/fr/docs/Web/CSS/CSS_media_queries), [viewport](/fr/docs/Mozilla/Mobile/Viewport_meta_tag), et [flexbox](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox).
+- Adéquation des mises en page pour les appareils mobiles. Une mise en page à plusieurs colonnes ne fonctionnera pas aussi bien sur un écran étroit, par exemple, et il faudra peut-être augmenter la taille du texte pour le rendre lisible. Ces problèmes peuvent être résolus en créant une mise en page réactive utilisant des technologies telles que [media queries](/fr/docs/Web/CSS/Guides/Media_queries), [viewport](/fr/docs/Mozilla/Mobile/Viewport_meta_tag), et [flexbox](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox).
 - Conserver les tailles d'image téléchargées. En général, les appareils de petite taille n'auront pas besoin d'images aussi volumineuses que leurs homologues de bureau, et ils risquent davantage d'être sur des connexions réseau lentes. Par conséquent, il est sage de servir des images plus petites sur des dispositifs à écran étroit, le cas échéant. Vous pouvez gérer cela en utilisant [responsive image techniques](/fr/docs/Web/HTML/Guides/Responsive_images).
 - Penser aux hautes résolutions. De nombreux appareils mobiles ont des écrans haute résolution et ont donc besoin d'images de résolution supérieure pour que l'affichage puisse continuer à être net et net. Encore une fois, vous pouvez servir des images selon vos besoins en utilisant des techniques d'image réactives. De plus, de nombreuses exigences en matière d'images peuvent être satisfaites grâce au format d'images vectorielles SVG, bien pris en charge par les navigateurs actuels. SVG a une petite taille de fichier et restera net quelle que soit la taille affichée (voir [Adding vector graphics to the web](/fr/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML) pour plus de détails ).
 
@@ -266,4 +266,4 @@ Dans cet article, nous vous avons fourni des détails sur les problèmes courant
 - [Guidelines For Mobile Web Development](https://www.smashingmagazine.com/guidelines-for-mobile-web-development/) — Une liste d'articles dans Smashing Magazine couvrant différentes techniques de conception de sites Web mobiles.
 - [Make your site work on touch devices](http://www.creativebloq.com/javascript/make-your-site-work-touch-devices-51411644) — Article utile sur l'utilisation d'événements tactiles pour que les interactions fonctionnent sur les appareils mobiles.
 
-{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Multimedia","Learn_web_development/Core/Accessibility/Accessibility_troubleshooting", "Learn_web_development/Core/Accessibility")}}

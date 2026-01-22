@@ -3,7 +3,7 @@ title: Ajout de styles et de couleurs
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Formes_géométriques", "Dessin_de_texte_avec_canvas")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
 
 Dans le chapitre sur [les formes géométriques](/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes), nous avons utilisé les styles de lignes et de remplissage par défaut. Ici, nous allons explorer les options de canvas à notre disposition pour rendre nos dessins un peu plus attrayants. Vous apprendrez comment ajouter des couleurs différentes, des styles de ligne, des dégradés, des motifs et des ombres à vos dessins.
 
@@ -750,4 +750,4 @@ draw();
 
 {{EmbedLiveSample("Règles_de_remplissage_Canvas", "110", "110", "fill-rule.png")}}
 
-{{PreviousNext("Tutoriel_canvas/Formes_géométriques", "Dessin_de_texte_avec_canvas")}}
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}

@@ -38,6 +38,6 @@ print()
 
 ## 參見
 
-- [列印](/zh-TW/docs/Web/CSS/CSS_media_queries/Printing)
+- [列印](/zh-TW/docs/Web/CSS/Guides/Media_queries/Printing)
 - {{ domxref("window.beforeprint_event", "beforeprint") }} 事件
 - {{ domxref("window.afterprint_event", "afterprint") }} 事件

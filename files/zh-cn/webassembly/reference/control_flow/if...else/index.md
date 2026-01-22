@@ -1,5 +1,6 @@
 ---
-title: if...else
+title: if...else：Wasm 文本指令
+short-title: if...else
 slug: WebAssembly/Reference/Control_flow/if...else
 l10n:
   sourceCommit: c0fc8c988385a0ce8ff63887f9a3263caf55a1f9
@@ -7,7 +8,7 @@ l10n:
 
 **`if`** 语句在栈顶项为真（非零）时执行一条语句。当条件为假（0）时，执行另一条语句。
 
-{{InteractiveExample("Wat Demo: if...else", "tabbed-taller")}}
+{{InteractiveExample("Wat 演示：if...else", "tabbed-taller")}}
 
 ```wat interactive-example
 (module

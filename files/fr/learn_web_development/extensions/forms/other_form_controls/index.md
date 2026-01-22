@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/Other_form_controls
 original_slug: Learn/Forms/Other_form_controls
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}
 
 Voyons maintenant les fonctionnalités des éléments de formulaire qui ne sont pas des éléments `<input>`. C'est le cas par exemple des listes déroulantes, des champs textes sur plusieurs lignes mais aussi d'autres fonctionnalités comme l'élément [`<output>`](/fr/docs/Web/HTML/Reference/Elements/output) (croisé dans l'article précédent), et des barres de progression.
 
@@ -84,7 +84,7 @@ La capacité à redimensionner un élément `<textarea>` se contrôle grâce à 
 - `block` et `inline`
   - : Ces valeurs logiques permettent le redimensionnement selon la direction de bloc ou la direction de ligne (qui varie selon la directionnalité du texte, voir [Gérer les différentes directions du texte](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions) pour en savoir plus).
 
-Vous pouvez manipuler l'exemple interactif situé en haut de la page de référence pour [`resize`](/fr/docs/Web/CSS/resize) afin de voir comment ces valeurs fonctionnent.
+Vous pouvez manipuler l'exemple interactif situé en haut de la page de référence pour [`resize`](/fr/docs/Web/CSS/Reference/Properties/resize) afin de voir comment ces valeurs fonctionnent.
 
 ## Contrôles de listes déroulantes
 
@@ -316,4 +316,4 @@ Au cours des derniers articles, nous avons vu qu'il existe de nombreux types de 
 
 Maintenant que vous en savez un peu plus sur le HTML derrière les différents contrôles de formulaire, voyons [comment les mettre en forme](/fr/docs/Learn_web_development/Extensions/Forms/Styling_web_forms).
 
-{{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}

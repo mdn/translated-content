@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Basic_selectors
 original_slug: Learn/CSS/Building_blocks/Selectors
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}
 
 En {{Glossary( "CSS")}} los selectores se utilizan para delimitar los elementos {{glossary("HTML")}} de nuestra página web a los que queremos aplicar estilo. Hay una amplia variedad de selectores CSS, lo que permite una gran precisión a la hora de seleccionar elementos a los que aplicar estilo. En este artículo y sus subartículos veremos con detalle todos los tipos y el modo como funcionan.
 
@@ -142,8 +142,7 @@ a[title] {
 O incluso hacer una selección basada en la presencia de un atributo que tiene un valor particular asignado:
 
 ```css
-a[href="https://example.com"]
-{
+a[href="https://example.com"] {
 }
 ```
 
@@ -176,7 +175,7 @@ article > p {
 
 Echa un vistazo a esta tabla de referencia de selectores que contiene enlaces directos a los distintos tipos de selectores que se explican en nuestra sección de aprendizaje o en MDN, o bien sigue adelante e inicia tu viaje para averiguar cómo funcionan en [Selectores de tipo, de clase y de ID](/es/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors).
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}
 
 ## Tabla de referencia de selectores
 

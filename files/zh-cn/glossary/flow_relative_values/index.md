@@ -29,5 +29,5 @@ CSS 属性的效果可以是一维的或二维的。例如，{{cssxref("text-ali
 
 ## 参见
 
-- [CSS 逻辑属性与值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)模块
-- [逻辑属性与值的基本概念](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values)
+- [CSS 逻辑属性与值](/zh-CN/docs/Web/CSS/Guides/Logical_properties_and_values)模块
+- [逻辑属性与值的基本概念](/zh-CN/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts)

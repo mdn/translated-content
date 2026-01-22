@@ -112,7 +112,7 @@ Firefox 70 は、米国時間 2019 年 10 月 22 日 にリリースされまし
 
 ### WebDriver conformance (Marionette)
 
-- `WebDriver:TakeScreenshot` コマンドを、[Fission](https://wiki.mozilla.org/Project_Fission) 互換に更新しました。[クロスオリジン](/ja/docs/Web/Security/Same-origin_policy) iframe 由来のコンテンツが、ページのスクリーンショットに含まれるようになります。あるいは chrome スコープから呼び出したとき、ブラウザーウィンドウの内部に、アクティブなタブの内容が見えるようになります ([Firefox バグ 1559592](https://bugzil.la/1559592))。
+- `WebDriver:TakeScreenshot` コマンドを、[Fission](https://wiki.mozilla.org/Project_Fission) 互換に更新しました。[クロスオリジン](/ja/docs/Web/Security/Defenses/Same-origin_policy) iframe 由来のコンテンツが、ページのスクリーンショットに含まれるようになります。あるいは chrome スコープから呼び出したとき、ブラウザーウィンドウの内部に、アクティブなタブの内容が見えるようになります ([Firefox バグ 1559592](https://bugzil.la/1559592))。
 - `WebDriver:TakeScreenshot` が、ハイライトに使用する DOM 要素のリストを受け入れないようになりました ([Firefox バグ 1575511](https://bugzil.la/1575511))。
 - `WebDriver:ExecuteScript` および `WebDriver:ExecuteAsyncScript` が、`window.onunload` をウェブに公開される方法で設定しないようになりました ([Firefox バグ 1568991](https://bugzil.la/1568991))。
 

@@ -257,7 +257,8 @@ div {
 > [!NOTE]
 > Рабочий пример можно найти на GitHub по адресу [fruit-length.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-length.html) ([исходный код](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-length.html).)
 
-> **Примечание:** `<input type="number">` (и другие типы, такие как `range` и `date`) могут также принимать атрибут [`step`](/ru/docs/Web/HTML/Attributes/step), который задаёт шаг увеличения или уменьшения значения при использовании кнопок вверх и вниз. В примере выше мы явно не указывали атрибут `step`, поэтому он получает значение по умолчанию, равное `1`. Это значит, что дробные числа, такие как 3.2, будут не валидными.
+> [!NOTE]
+> `<input type="number">` (и другие типы, такие как `range` и `date`) могут также принимать атрибут [`step`](/ru/docs/Web/HTML/Attributes/step), который задаёт шаг увеличения или уменьшения значения при использовании кнопок вверх и вниз. В примере выше мы явно не указывали атрибут `step`, поэтому он получает значение по умолчанию, равное `1`. Это значит, что дробные числа, такие как 3.2, будут не валидными.
 
 ### Полный пример
 
@@ -436,7 +437,8 @@ email.addEventListener("input", function (event) {
 
 {{EmbedGHLiveSample("learning-area/html/forms/form-validation/custom-error-message.html", '100%', 80)}}
 
-> **Примечание:**: Данный пример можно найти на GitHub по адресу [custom-error-message.html](https://mdn.github.io/learning-area/html/forms/form-validation/custom-error-message.html) (отдельно можно найти [исходный код](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/custom-error-message.html).)
+> [!NOTE]
+> Данный пример можно найти на GitHub по адресу [custom-error-message.html](https://mdn.github.io/learning-area/html/forms/form-validation/custom-error-message.html) (отдельно можно найти [исходный код](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/custom-error-message.html).)
 
 #### Более подробный пример
 
@@ -548,7 +550,7 @@ email.addEventListener("input", function (event) {
 });
 
 form.addEventListener("submit", function (event) {
-  // Если поле email валдно, позволяем форме отправляться
+  // Если поле email валидно, позволяем форме отправляться
 
   if (!email.validity.valid) {
     // Если поле email не валидно, отображаем соответствующее сообщение об ошибке
@@ -580,7 +582,7 @@ function showError() {
 
 Комментарии объясняют логику хорошо, но кратко:
 
-- При каждом изменении значения поля, мы производим его валидацию. Если данные валидны, удаляем ранее отображаемые сообщения об ошибках. Если данные не валдны, запускаем `showError()`, чтобы показать соответствующую ошибку.
+- При каждом изменении значения поля, мы производим его валидацию. Если данные валидны, удаляем ранее отображаемые сообщения об ошибках. Если данные не валидны, запускаем `showError()`, чтобы показать соответствующую ошибку.
 - При каждой попытке отправить форму, мы снова производим валидацию. Если данные валидны, позволяем отправку формы. Если данные не валидны, запускам `showError()`, чтобы показать соответствующее сообщение об ошибке, а также предотвращаем отправку формы с помощью [`preventDefault()`](/ru/docs/Web/API/Event/preventDefault).
 - Функция `showError()` использует различные свойства объекта `validity` поля ввода, чтобы определить тип ошибки и отобразить соответсвущее сообщение.
 

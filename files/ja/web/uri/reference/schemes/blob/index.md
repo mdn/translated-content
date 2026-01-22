@@ -8,7 +8,7 @@ l10n:
 
 **blob （またはオブジェクト） URL**、すなわち blob: スキームが接頭辞として付いた URL を使用すると、 {{domxref("Blob")}} や {{domxref("MediaSource")}} を、 {{HTMLElement("img")}} 要素など、URL でのみ使用するように設計されている他の API と統合することができます。 blob URL は、ローカルで生成されたデータのダウンロードを開始したり、そのデータに移動したりするためにも使用できます。これらは不透明な識別子として設計されているため（つまり、手書きで記述してはいけません）、 {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} や {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} 関数を使用して管理する必要があります。
 
-blob URL は [data URL](/ja/docs/Web/URI/Reference/Schemes/data) とよく似ています。どちらも、メモリー内のリソースを URL として表すことができます。違いは、データ URL はリソースを自身に埋め込み、サイズに厳しい制限があるのに対し、 blob URL はバックエンドの `Blob` または `MediaSource` を必要とし、より大きなリソースを表すことができる点です。
+blob URL は [data URL](/ja/docs/Web/URI/Reference/Schemes/data) とよく似ています。どちらも、メモリー内のリソースを URL として表すことができます。違いは、data URL はリソースを自身に埋め込み、サイズに厳しい制限があるのに対し、 blob URL はバックエンドの `Blob` または `MediaSource` を必要とし、より大きなリソースを表すことができる点です。
 
 ## 構文
 

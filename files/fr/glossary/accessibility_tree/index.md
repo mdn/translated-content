@@ -33,7 +33,7 @@ Toujours à l'état de brouillon au sein du Web Incubator Community Group en avr
 - [ARIA](/fr/docs/Web/Accessibility/ARIA)
 - [Initiative pour l'accessibilité du Web du W3C (WAI) <sup>(angl.)</sup>](https://www.w3.org/WAI/)
 - [Applications Internet Riches et Accessibles (WAI-ARIA) <sup>(angl.)</sup>](https://w3c.github.io/aria/)
-- Termes de glossaire associés&nbsp;:
+- Termes associés du glossaire&nbsp;:
   - {{Glossary("Accessibility", "Accessibilité")}}
   - {{Glossary("Accessible description", "Description accessible")}}
   - {{Glossary("Accessible name", "Nom accessible")}}

@@ -23,7 +23,7 @@ slug: Learn_web_development/Core/CSS_layout
 - [介绍 CSS 布局](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Introduction)
   - : 本文将重述一些我们在之前的模块中已经涉及的 CSS 布局功能——例如不同的 {{cssxref("display")}} 值——并介绍我们将在本单元中涵盖的一些概念。
 - [弹性盒](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Flexbox)
-  - : [弹性盒](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox) 是一种新技术，但在如今各个浏览器都广泛支持的情况下，它已经开始准备广泛应用了。弹性盒子提供了工具，允许快速创建曾经被证明用 CSS 很难实现的一些复杂，灵活的布局和功能。本文将解释所有的基本原理。
+  - : [弹性盒](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases) 是一种新技术，但在如今各个浏览器都广泛支持的情况下，它已经开始准备广泛应用了。弹性盒子提供了工具，允许快速创建曾经被证明用 CSS 很难实现的一些复杂，灵活的布局和功能。本文将解释所有的基本原理。
 - [网格](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Grids)
   - : 网格是一个成熟的设计工具，许多现代网站布局是基于规则网格。在本文中，我们将看看基于网格的设计，以及如何使用 CSS 来创建网格——两者都通过现在的工具，和刚刚开始在浏览器中可用的新技术。
 - [浮动](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Floats)

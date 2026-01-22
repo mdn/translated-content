@@ -3,8 +3,6 @@ title: TypedArray.prototype.subarray()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/subarray
 ---
 
-{{JSRef}}
-
 {{jsxref("TypedArray")}} 实例的 `subarray()` 返回一个新的、基于相同 {{jsxref("ArrayBuffer")}}、元素类型也相同的类型化数组。开始的索引将会被包括，而结束的索引将不会被包括。
 
 {{InteractiveExample("JavaScript Demo: TypedArray.subarray()")}}

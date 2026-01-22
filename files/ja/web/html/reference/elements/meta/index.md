@@ -31,7 +31,7 @@ l10n:
     属性名が `http-equivalent` の短縮形なのは、利用できる値が同等の HTTP ヘッダーの名前だからです。
 - `media`
   - : `media` 属性は、 `content` 属性で定義されたテーマ色を適用するメディアを定義します。
-    値は[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)で、属性が指定されていない場合は既定で `all` になります。
+    値は[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)で、属性が指定されていない場合は既定で `all` になります。
     この属性は、要素の [`name`](/ja/docs/Web/HTML/Reference/Elements/meta/name) 属性が [`theme-color`](/ja/docs/Web/HTML/Reference/Elements/meta/name/theme-color) に設定されている場合にのみ関連します。
     それ以外の場合、効果はありませんので、含めないでください。
 - [`name`](/ja/docs/Web/HTML/Reference/Elements/meta/name)

@@ -142,7 +142,7 @@ const text = await new Response(blob).text();
 const text = await blob.text();
 ```
 
-`FileReader` の他のメソッドを使用することで、Blob の内容を文字列またはデータ URL として読み込むことができます。
+`FileReader` の他のメソッドを使用することで、Blob の内容を文字列または data URL として読み込むことができます。
 
 ## 仕様書
 

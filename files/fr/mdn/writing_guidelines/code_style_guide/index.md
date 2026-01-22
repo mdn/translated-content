@@ -1,12 +1,11 @@
 ---
-title: Règles pour la mise en forme des exemples de code
+title: Guide pour rédiger des exemples de code
+short-title: Style de code
 slug: MDN/Writing_guidelines/Code_style_guide
 original_slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 l10n:
-  sourceCommit: b88cde84dd8596f6a56ee509d2a6b754a3e05ba0
+  sourceCommit: 7ff752fba26e0bb950998bb5476157ff96c7d314
 ---
-
-{{MDNSidebar}}
 
 Les règles qui sont décrites dans cet article concernent la mise en forme des exemples de code, quel que soit le langage de programmation concerné. Pour savoir quel contenu inclure lors de l'écriture d'exemples de code, veuillez vous référer [au guide stylistique](/fr/docs/MDN/Writing_guidelines/Writing_style_guide#exemples_de_code).
 
@@ -19,207 +18,143 @@ Pour les règles spécifiques à chaque langage, voir ces différents articles&n
 
 ## Bonnes pratiques générales
 
-Dans cette section, nous verrons les bonnes pratiques pour la création d'un exemple de code minimal et compréhensible pour illustrer l'utilisation d'une fonctionnalité donnée.
+Il y a une considération essentielle à garder à l'esprit&nbsp;: **les lecteur·ice·s vont copier-coller les exemples dans leur propre code et peuvent les mettre en production.**
+Vous devez donc vous assurer que les exemples de code sont utilisables, respectent les bonnes pratiques généralement admises et ne font rien qui puisse rendre une application non sécurisée, inefficace, lourde ou inaccessible.
 
-Les exemples de code ajoutés sur MDN devraient être&nbsp;:
+Si l'exemple de code n'est pas exécutable ou prêt pour la production, ajoutez un avertissement dans un commentaire de code et dans le texte explicatif&nbsp;: par exemple, s'il ne s'agit que d'un extrait et non d'un exemple complet, précisez-le. Cela signifie aussi que vous devez fournir toutes les informations nécessaires pour exécuter l'exemple, y compris les dépendances et les instructions d'installation.
 
-- Suffisamment simples pour être compris
-- Et suffisamment complexes pour réaliser quelque chose d'intéressant, voire d'utile.
+Les exemples de code doivent être suffisamment simples pour être compréhensibles, mais assez complexes pour faire quelque chose d'intéressant, et (de préférence) d'utile.
+L'objectif n'est pas forcément de produire un code efficace ou astucieux qui impressionne les expert·e·s et offre de grandes fonctionnalités, mais plutôt de partager des exemples réduits et fonctionnels qui peuvent être compris et assimilés le plus rapidement possible.
 
-Il y a un point qu'il faut garder en tête&nbsp;: **les personnes qui lisent les exemples vont copier/coller l'exemple de code dans leurs fichiers et éventuellement l'utiliser en production**.
+Quelques recommandations générales supplémentaires&nbsp;:
 
-Aussi, vous devez vous assurer que l'exemple de code est utilisable, qu'il suit les bonnes pratiques généralement utilisées, et qu'il **ne fait rien** qui puisse rendre une application moins sécurisée, inefficace, alourdie par du code inutile ou inaccessible. Si l'exemple de code n'est pas fonctionnel ou ne doit pas être utilisé en production, assurez-vous d'inclure un avertissement dans un commentaire du code et dans le texte de description. Ainsi, s'il ne s'agit que d'un fragment de code partiel et pas d'un exemple complet, indiquez-le clairement. Cela signifie également qu'il faut fournir **l'ensemble** des informations nécessaires à l'exécution du code (y compris les dépendances et les instructions d'installation).
+- Les exemples de code doivent être courts et idéalement ne montrer que la fonctionnalité qui vous intéresse immédiatement.
+- Rédigez votre code pour qu'il soit aussi compréhensible que possible, même si ce n'est pas la façon la plus efficace de l'écrire.
+- N'incluez pas de code serveur, bibliothèques, frameworks, préprocesseurs ou autres dépendances inutiles. Ils rendent le code moins portable et plus difficile à exécuter et à comprendre. Utilisez du code natif quand c'est possible.
+- N'assumez pas la connaissance de bibliothèques, frameworks, préprocesseurs ou autres fonctionnalités non natives par les lecteur·ice·s. Par exemple, utilisez des noms de classes qui ont du sens dans l'exemple plutôt que des noms adaptés à BEM ou Bootstrap.
+- Soyez inclusif·ive dans vos exemples de code&nbsp;: les lecteur·ice·s de MDN viennent du monde entier, avec des origines, religions, âges, genres, etc. variés. Veillez à ce que le texte des exemples reflète cette diversité et soit inclusif.
+- N'utilisez pas de fonctionnalités obsolètes pour aller plus vite (comme les éléments de présentation {{HTMLElement("big")}} ou {{DOMxRef("Document.write", "document.write()")}})&nbsp;: faites-le correctement.
+- Dans le cas de démos d'API, si vous utilisez plusieurs API ensemble, indiquez quelles API sont incluses et quelles fonctionnalités proviennent de chacune.
 
-Les exemples de code devraient, autant que possible, se suffire à eux-mêmes et être faciles à comprendre. Le but n'est pas nécessairement de produire du code optimal et intelligent pour impressionner des experts et fournir des fonctionnalités incroyables, mais plutôt d'avoir des exemples circonscrits qui puissent être compris aussi rapidement que possible.
+### Compatibilité des navigateurs
 
-Parmi les bonnes pratiques&nbsp;:
+Lorsque vous créez des exemples de code pour une technologie qui n'est pas encore disponible dans tous les principaux navigateurs, pensez à utiliser la [détection de fonctionnalités](/fr/docs/Learn_web_development/Extensions/Testing/Feature_detection) pour proposer un comportement de repli ou informer l'utilisateur·ice que son navigateur n'est pas encore pris en charge.
+Ne spécifiez pas les navigateurs pris en charge ni leurs versions dans les commentaires de code ou dans le texte, car ces informations deviennent rapidement obsolètes.
 
-- L'exemple de code doit être concis et idéalement n'illustrer que la fonctionnalité en question.
-- On inclut **uniquement** le code essentiel à l'exemple. Une grande quantité de code qui n'est pas pertinent peut vite devenir source de confusion ou de distraction. Si vous souhaitez fournir un exemple complet, plus long, veuillez utiliser [un de nos dépôts GitHub](https://github.com/mdn/) (ou JSBin, Codepen, ou un service semblable) puis fournir le lien vers la version complète avant ou après l'exemple.
-- Utilisez du code «&nbsp;nature&nbsp;» dès que possible. N'incluez pas de code côté serveur ou de bibliothèques, de <i lang="en">frameworks</i> ou de préprocesseurs. Ils rendent le code moins portable et plus compliqué à comprendre.
-- Ne partez pas du principe que les personnes qui lisent ces exemples connaissent telle bibliothèque, tel <i lang="en">framework</i>, tel préprocesseur ou telle autre fonctionnalité non native. Ainsi, on utilisera par exemple des noms de classes qui ont du sens dans l'exemple plutôt que des noms de classes qui pourraient avoir du sens pour les utilisatrices et utilisateurs de BEM ou Bootstrap.
-- Écrivez votre code afin qu'il soit aussi propre et compréhensible que possible, même si ce n'est pas la formulation la plus efficace. Mieux vaut un exemple compréhensible qu'un exemple théoriquement optimal mais difficile à déchiffrer.
-- N'utilisez pas de mauvaises pratiques à des fins de concision (comme des éléments de présentation comme [`<big>`](/fr/docs/Web/HTML/Reference/Elements/big) ou [`document.write()`](/fr/docs/Web/API/Document/write). Mieux vaut un exemple légèrement plus long et bien écrit qu'un exemple qui contient des tournures déconseillées.
-- Pour les démonstrations d'API, si vous utilisez plusieurs API ensemble, indiquez les API qui sont incluses et quelles fonctionnalités proviennent de chacune.
+## Style et formatage du code sur MDN
 
-## Règles pour le formatage
+Les opinions sur l'indentation correcte, les espaces et la longueur des lignes ont toujours été controversées. Les discussions sur ces sujets détournent de la création et de la maintenance du contenu.
+Sur MDN Web Docs, nous utilisons [Prettier <sup>(angl.)</sup>](https://prettier.io/) comme formateur de code pour garder un style cohérent et éviter les discussions hors sujet. Vous pouvez consulter notre [fichier de configuration <sup>(angl.)</sup>](https://github.com/mdn/content/blob/main/.prettierrc.json) pour connaître les règles actuelles, et lire la [documentation de Prettier <sup>(angl.)</sup>](https://prettier.io/docs/index.html).
 
-Ces règles décrivent le formatage à respecter pour les exemples de code sur MDN. Il s'agit également de règles qui peuvent être utiles pour l'écriture de code de façon générale.
+En plus du formatage automatisé, il existe quelques autres règles pour que les exemples de code sur MDN soient bien rendus.
 
-### Indentation
+### Choisir le bon langage
 
-- On utilise une indentation avec deux espaces par tabulation pour tous les exemples de code.
-- On place l'accolade ouvrante (`{`) sur la même ligne que l'instruction qui ouvre le bloc.
+Pour garantir un bon formatage et une coloration syntaxique correcte des blocs de code, indiquez correctement le langage du bloc de code.
+Consultez la page [Blocs de code d'exemple dans le Markdown MDN](/fr/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#blocs_de_code_dexemple) pour la liste des langages pris en charge par MDN, ainsi que les détails pour demander un nouveau langage.
 
-```html example-good
-<div>
-  <p>Voici mon paragraphe.</p>
-</div>
+Si le bloc de code est du pseudo-code, la sortie d'une commande ou n'est pas un langage de programmation, indiquez le langage `plain`&nbsp;:
+
+````md
+```plain
+StaleElementReferenceException: The element reference of ABD-123 is stale…
 ```
+````
 
-```js example-good
-function maFonction() {
-  if (bidule) {
-    console.log("Et ça marche.");
-  }
-}
-```
-
-### Espaces
-
-On ajoute un espace entre une instruction de contrôle ou de boucle et la parenthèse ouvrante correspondante.
-
-```js example-good
-if (condition) {
-  /* on gère la condition */
-} else {
-  /* on gère le cas alternatif */
-}
-```
+> [!WARNING]
+> Si le langage souhaité n'est pas encore pris en charge par MDN, n'indiquez **pas** un langage similaire, car cela peut avoir des effets indésirables sur le formatage Prettier et la coloration syntaxique.
 
 ### Longueur des lignes de code
 
-- La longueur des lignes de code ne doit pas nécessiter de défilement horizontal pour qu'elles soient lues.
-- En règle générale, on recommande d'avoir des lignes qui ont au plus 80 caractères (64 pour [les exemples interactifs](https://github.com/mdn/interactive-examples)).
-- Pour les longues lignes, on passe à la ligne à des emplacements naturels pour faciliter la lisibilité, mais sans sacrifier les bonnes pratiques.
-
-Ainsi, ce qui suit n'est pas idéal&nbsp;:
+Les lignes de code ne doivent pas être si longues qu'elles nécessitent un défilement horizontal pour être lues.
+Coupez les longues lignes à des endroits naturels pour faciliter la lisibilité, mais sans sacrifier les bonnes pratiques.
+Par exemple, ce qui suit n'est pas idéal&nbsp;:
 
 ```js example-bad
-let alice =
-  "Pendant un bout de chemin le trou allait tout droit comme un tunnel, puis tout à coup il plongeait perpendiculairement d'une façon si brusque qu'Alice se sentit tomber comme dans un puits d'une grande profondeur, avant même d'avoir pensé à se retenir.";
+let tommyCat =
+  "Said Tommy the Cat as he reeled back to clear whatever foreign matter may have nestled its way into his mighty throat. Many a fat alley rat had met its demise while staring point blank down the cavernous barrel of this awesome prowling machine.";
 ```
 
-Et ceci est mieux, mais un peu étrange à lire&nbsp;:
+Ceci est mieux, mais un peu étrange à lire&nbsp;:
 
 ```js
-const alice =
-  "Pendant un bout de chemin le trou allait tout droit comme un tunnel, " +
-  "puis tout à coup il plongeait perpendiculairement d'une façon si brusque qu'Alice " +
-  "se sentit tomber comme dans un puits d'une grande profondeur, avant même d'avoir " +
-  "pensé à se retenir.";
+const tommyCat =
+  "Said Tommy the Cat as he reeled back to clear whatever foreign " +
+  "matter may have nestled its way into his mighty throat. Many a fat alley rat " +
+  "had met its demise while staring point blank down the cavernous barrel of " +
+  "this awesome prowling machine.";
 ```
 
-Une meilleure solution consistera ici à utiliser un gabarit de chaîne de caractères&nbsp;:
+Une meilleure solution consiste à utiliser un gabarit de chaîne de caractères&nbsp;:
 
 ```js example-good
-const alice = `Pendant un bout de chemin le trou allait tout droit comme un tunnel,
-puis tout à coup il plongeait perpendiculairement d'une façon si
-brusque qu'Alice se sentit tomber comme dans un puits d'une grande
-profondeur, avant même d'avoir pensé à se retenir.`;
-```
-
-```js example-good
-if (
-  obj.CONDITION ||
-  obj.AUTRE_CONDITION ||
-  obj.UNE_AUTRE_CONDITION ||
-  obj.ENCORE_UNE_AUTRE_CONDITION
-) {
-  /* quelque chose */
-}
-
-const toolkitProfileService = Components.classes[
-  "@mozilla.org/toolkit/profile-service;1"
-].createInstance(Components.interfaces.nsIToolkitProfileService);
+const tommyCat = `Said Tommy the Cat as he reeled back to clear whatever foreign
+  matter may have nestled its way into his mighty throat. Many a fat alley rat
+  had met its demise while staring point blank down the cavernous barrel of
+  this awesome prowling machine.`;
 ```
 
 ### Hauteur des blocs de code
 
-Les blocs de code doivent être aussi longs que nécessaire, mais pas plus. On visera idéalement une longueur de 15 à 25 lignes. Si un bloc de code devient beaucoup plus grand, on pensera à illustrer le fragment le plus utile et à renvoyer vers l'exemple complet, situé sur un dépôt GitHub ou un outil de partage de code web.
+Les blocs de code doivent être aussi longs que nécessaire, mais pas plus. Idéalement, visez une longueur courte, entre 15 et 25 lignes. Si un bloc de code doit être beaucoup plus long, montrez la partie la plus utile et faites un lien vers un exemple complet sur un dépôt GitHub, un Gist ou un CodePen, par exemple.
 
-#### Formatage du code dans le texte
+### Formatage du code en ligne
 
-On utilisera la balise [`<code>`](/fr/docs/Web/HTML/Reference/Elements/code) pour indiquer les noms de fonctions, de variables, de méthodes et les mots-clés.
-Par exemple&nbsp;: «&nbsp;nous allons illustrer la fonction `totoTiti()`&nbsp;».
+Utilisez la syntaxe de code en ligne pour marquer les noms de fonctions, de variables et de méthodes. Par exemple&nbsp;: «&nbsp;la fonction `texteFrancais()`&nbsp;» s'écrit en markdown&nbsp;:
 
-**Les noms de méthodes devraient être suivies par une paire de parenthèses.** Ainsi, on écrira&nbsp;: `faireQuelqueChose()`. Les parenthèses permettent de distinguer les méthodes des autres termes relatifs au code.
+```md
+la fonction `texteFrancais()`
+```
+
+Les noms de méthodes doivent être suivis d'une paire de parenthèses&nbsp;: par exemple, `faireQuelqueChoseDutile()`. Les parenthèses permettent de distinguer les méthodes des autres termes de code.
 
 ## Règles pour un affichage correct
 
-Les règles qui suivent doivent être suivies pour s'assurer que les exemples de code s'affichent correctement sur MDN. Il est aussi utile de garder à l'esprit l'adaptativité nécessaire pour que les exemples puissent être utiles sur les appareils mobiles.
+Ces règles doivent être suivies pour garantir que les exemples de code que vous écrivez s'affichent correctement sur MDN Web Docs. Pensez aussi à l'adaptabilité pour que les exemples soient utiles sur mobile.
 
-### Taille pour l'affichage des résultats d'exemples de code
+### Taille pour l'affichage des exemples de code
 
-- **La largeur doit être fixée à 100%**
-  - : La zone centrale principale pour afficher le contenu sur MDN a une largeur de 700px et les exemples de code embarqués doivent avoir un aspect correct avec cette largeur.
-- **La hauteur doit être inférieure à 700px**
-  - : Nous recommandons d'utiliser cette hauteur maximale pour une meilleure lisibilité à l'écran.
-
-### Couleurs pour les résultats d'exemples de code
-
-- On utilisera les mots-clés pour les couleurs de base, par exemple&nbsp;:
-
-  ```css example-good
-  color: black;
-  color: white;
-  color: red;
-  ```
-
-- On utilisera la fonction `rgb()` pour les couleurs complexes (y compris les couleurs semi-transparentes)&nbsp;:
-
-  ```css example-good
-  color: rgb(0, 0, 0, 0.5);
-  color: rgb(248, 242, 230);
-  ```
-
-- Pour les couleurs hexadécimales, on les écrira en minuscules&nbsp;:
-
-  ```css example-good
-  color: #058ed9;
-  color: #a39a92;
-  ```
-
-- On utilisera la forme courte lorsque c'est pertinent&nbsp;:
-
-  ```css example-good
-  color: #ff0;
-  color: #fff;
-  ```
+- **La largeur doit être fixée à 100&nbsp;%**&nbsp;: la zone centrale principale sur MDN Web Docs fait environ 700px de large sur ordinateur, donc les exemples de code embarqués doivent avoir un rendu correct à cette largeur.
+- **La hauteur doit être inférieure à 700px**&nbsp;: nous recommandons de respecter cette hauteur pour une lisibilité maximale à l'écran.
 
 ### Indiquer un bon ou un mauvais exemple
 
-Vous aurez pu voir sur cette page que les blocs de code indiquant des bonnes pratiques sont affichés avec une coche verte dans le coin supérieur droit et que ceux qui décrivent des mauvaises pratiques sont affichés avec une croix dans un disque rouge.
+Vous remarquerez sur cette page que les blocs de code qui illustrent de bonnes pratiques sont affichés avec une coche verte dans le coin supérieur droit, et ceux qui illustrent de mauvaises pratiques sont affichés avec une croix blanche dans un disque rouge.
 
-Vous pouvez utiliser cette mise en forme pour les exemples de code. Ce n'est pas nécessaire de l'utiliser partout, uniquement pour les fois où on souhaite distinguer clairement les bonnes et les mauvaises pratiques associées à une fonctionnalité.
+Vous pouvez utiliser ce style lors de la rédaction d'exemples de code. Il n'est pas nécessaire de l'utiliser partout, uniquement là où vous souhaitez distinguer clairement les bonnes et mauvaises pratiques dans les exemples.
 
-Pour obtenir ce rendu, on commencera par écrire le bloc de code avec la chaîne de caractères indiquant le langage, par exemple&nbsp;:
+Un bloc de code est écrit en markdown avec des «&nbsp;fences&nbsp;» pour délimiter le bloc, suivi du langage dans la chaîne d'information. Par exemple&nbsp;:
 
+````md
 ```js
 function maFonction() {
   console.log("Coucou !");
 }
 ```
+````
 
-Pour représenter le bloc de code d'un bon ou d'un mauvais exemple, utilisez le mot-clé `example-good` ou `example-bad` après la chaîne de caractères indiquant le langage&nbsp;:
+Pour représenter le bloc de code comme un bon ou un mauvais exemple, ajoutez `example-good` ou `example-bad` après le langage, comme ceci&nbsp;:
 
-````plain
+````md
 ```html example-good
-<p class="brush: js example-good">
+<p>Bon exemple</p>
 ```
 
 ```html example-bad
-<p class="brush: js example-bad">
+<p>Mauvais exemple</p>
 ```
 ````
 
 Cela sera affiché ainsi&nbsp;:
 
 ```html example-good
-<p class="brush: js example-good"></p>
+<p>Bon exemple</p>
 ```
 
 ```html example-bad
-<p class="brush: js example-bad"></p>
+<p>Mauvais exemple</p>
 ```
 
-### Traduction des exemples de code
+## Règles pour l'utilisation de texte de substitution
 
-Pour la traduction en français, on veillera à suivre les principes généraux suivants&nbsp;:
-
-- Pour les exemples simples, on traduit les noms des variables, des fonctions en respectant l'esprit de l'exemple anglais. Les paragraphes de texte inclus dans les exemples peuvent utiliser des textes en français.
-- On veillera notamment à traduire `foo`, `bar`, `baz`, `doSomething()` par des équivalents en français (respectivement `toto`, `truc`, `machin`, `faireQuelqueChose()`). Une lectrice ou un lecteur francophone qui découvre un langage ne doit pas penser que le terme `foo`, par exemple, est un mot-clé de ce langage (il s'agit d'un terme anglais générique).
-- On fera attention à ne pas traduire les mots-clés qui sont propres à la syntaxe du langage en question&nbsp;: l'exemple doit rester valide&nbsp;!
-- Pour les exemples plus complexes ou développés, on pourra garder des éléments en anglais si on s'attend à ce qu'un tel code puisse être utilisé dans une base de code avec du contenu déjà en anglais. Dans le doute, on traduira.
-
-L'anglais ne doit pas être une barrière pour une personne francophone qui lirait un exemple sur MDN afin d'apprendre à utiliser telle fonctionnalité, tel langage ou telle API.
+Utilisez le texte de substitution lorem-ipsum généré depuis [lipsum.com <sup>(angl.)</sup>](https://www.lipsum.com/) ou l'extension VS Code [Lorem ipsum <sup>(angl.)</sup>](https://marketplace.visualstudio.com/items?itemName=Tyriar.lorem-ipsum). Le texte lorem-ipsum standard est inclus dans notre configuration du correcteur orthographique, il ne sera donc pas signalé comme faute de frappe dans les IDE ou lors des tests en relecture de code. Utiliser un texte de substitution cohérent facilite la relecture des exemples, surtout lorsqu'il apparaît plusieurs fois. Cela permet aussi de bien distinguer les exemples à but illustratif et d'éviter de distraire les lecteur·ice·s avec du contenu hors sujet.

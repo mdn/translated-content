@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.font`** 属性指定绘制文字所使用的当前字体样式。使用和 [CSS 字体](/zh-CN/docs/Web/CSS/font)描述符相同的字符串值。
+Canvas 2D API 的 **`CanvasRenderingContext2D.font`** 属性指定绘制文字所使用的当前字体样式。使用和 [CSS 字体](/zh-CN/docs/Web/CSS/Reference/Properties/font)描述符相同的字符串值。
 
 ## 值
 

@@ -3,7 +3,7 @@ title: Les modules JavaScript
 slug: Web/JavaScript/Guide/Modules
 ---
 
-{{jsSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Métaprogrammation")}}
+{{jsSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}
 
 Ce guide aborde l'ensemble des notions vous permettant d'utiliser la syntaxe des modules en JavaScript.
 
@@ -581,4 +581,4 @@ Voici quelques notes pour aider à comprendre et à diagnostiquer les problèmes
 - [Utiliser les modules JavaScript sur le Web](https://developers.google.com/web/fundamentals/primers/modules), un article par Addy Osmani et Mathias Bynens (en anglais)
 - Livre d'Axel Rauschmayer (en anglais)&nbsp;: [Exploring JS: Modules](https://exploringjs.com/es6/ch_modules.html)
 
-{{Previous("Web/JavaScript/Guide/Métaprogrammation")}}
+{{Previous("Web/JavaScript/Guide/Meta_programming")}}

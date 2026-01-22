@@ -3,7 +3,7 @@ title: Practical positioning examples
 slug: Learn_web_development/Core/CSS_layout/Practical_positioning_examples
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout")}}
 
 Основы позиционирования, приведённые в последней статье, мы теперь рассмотрим, как создать некоторые примеры реального мира, чтобы проиллюстрировать, какие вещи вы можете сделать с позиционированием.
 
@@ -17,7 +17,8 @@ slug: Learn_web_development/Core/CSS_layout/Practical_positioning_examples
 
 ![](tabbed-info-box.png)
 
-> **Примечание:**Вы можете увидеть, что готовый пример работает в прямом эфире [info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)). Проверьте его, чтобы понять, что вы будете строить в этом разделе статьи.
+> [!NOTE]
+> Вы можете увидеть, что готовый пример работает в прямом эфире [info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)). Проверьте его, чтобы понять, что вы будете строить в этом разделе статьи.
 
 Возможно, вы думаете: «Почему бы просто не создавать отдельные вкладки в виде отдельных веб-страниц и просто иметь вкладки, переходящие на отдельные страницы, чтобы создать эффект?» Этот код был бы проще, да, но тогда каждый отдельный «просмотр страницы» на самом деле был бы вновь загруженной веб-страницей, что затрудняло бы сохранение информации между представлениями и интеграцию этой функции в более крупный дизайн пользовательского интерфейса. Кроме того, так называемые «одностраничные приложения» становятся очень популярными - особенно для мобильных веб-интерфейсов - потому что все, что обслуживается как один файл, сокращает количество HTTP-запросов, необходимых для просмотра всего содержимого, тем самым повышая производительность.
 
@@ -426,7 +427,7 @@ So there you have it — a rather clever JavaScript-free way to create a togglin
 
 So that rounds off our look at positioning — by now, you should have an idea of how the basic mechanics work, as well as understanding how to start applying these to building some interesting UI features. Don't worry if you didn't get this all immediately — positioning is a fairly advanced topic, and you can always work through the articles again to aid your understanding. The next subject we'll turn to is Flexbox.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout")}}
 
 ## In this module
 

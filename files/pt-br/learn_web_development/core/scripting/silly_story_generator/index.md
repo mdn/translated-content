@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Silly_story_generator
 original_slug: Learn/JavaScript/First_steps/Silly_story_generator
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting")}}
 
 Nesta avaliação, você será encarregado de utilizar parte do conhecimento que você adquiriu nos artigos deste módulo e aplicá-lo para criar um aplicativo divertido que gera histórias bobas aleatórias. Divirta-se!
 
@@ -104,4 +104,4 @@ Completando a função `result()`:
 
 Se você estiver seguindo esta avaliação como parte de um curso organizado, você está apto a entregar seu trabalho ao seu professor/mentor para avaliação. Se você é auto-didata, então você pode consultar o guia de marcação com bastante facilidade perguntando no [tópico do Discurso da área de aprendizagem](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294), ou no no canal [#mdn](irc://irc.mozilla.org/mdn) IRC no [IRC Mozilla](https://wiki.mozilla.org/IRC). Tente realizar o exercício primeiro — não há nada a ganhar com a trapaça!
 
-{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+{{PreviousMenu("Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting")}}

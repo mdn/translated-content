@@ -132,7 +132,7 @@ span {
 일부 속성은 상속되지 않습니다 — 예를 들어 요소에 {{cssxref("width")}} 를 50% 로 설정하면, 모든 하위 항목의 너비가 부모 너비의 50% 가 되지 않습니다. 이 경우, CSS 는 사용하기가 매우 어려울 것입니다!
 
 > [!NOTE]
-> MDN CSS 속성 참조 페이지에서 일반적으로 specifications 섹션의 맨 아래에 기술 정보 박스가 있습니다. 여기에는 해당 속성의 상속 여부를 포함하여 해당 속성에 대한 여러 데이터 요소가 나열되어 있습니다. 예를 들어, [color 속성 Specifications 섹션](/ko/docs/Web/CSS/color#specifications) 을 참조 하십시오.
+> MDN CSS 속성 참조 페이지에서 일반적으로 specifications 섹션의 맨 아래에 기술 정보 박스가 있습니다. 여기에는 해당 속성의 상속 여부를 포함하여 해당 속성에 대한 여러 데이터 요소가 나열되어 있습니다. 예를 들어, [color 속성 Specifications 섹션](/ko/docs/Web/CSS/Reference/Properties/color#specifications) 을 참조 하십시오.
 
 ## 개념이 함께 작동하는 방식 이해하기
 
@@ -336,7 +336,7 @@ h2 {
 > [!NOTE]
 > 범용 선택자 (`*`), 결합자 (`+`, `>`, `~`, ' ') 및 부정 pseudo-class (`:not`) 는 우선 순위에 영향을 미치지 않습니다.
 
-다음 표는 기분을 전환하기 위해 몇 가지 분리된 예를 보여줍니다. 이것들을 살펴보고 왜 그들이 우리에게 그들에게 주어진 우선 순위를 가지고 있는지 이해하도록 하십시오. 선택자는 아직 자세히 다루지 않았지만, MDN [선택자 참조](/ko/docs/Web/CSS/CSS_selectors) 에서 각 선택자의 세부 정보를 찾을 수 있습니다.
+다음 표는 기분을 전환하기 위해 몇 가지 분리된 예를 보여줍니다. 이것들을 살펴보고 왜 그들이 우리에게 그들에게 주어진 우선 순위를 가지고 있는지 이해하도록 하십시오. 선택자는 아직 자세히 다루지 않았지만, MDN [선택자 참조](/ko/docs/Web/CSS/Guides/Selectors) 에서 각 선택자의 세부 정보를 찾을 수 있습니다.
 
 | 선택자                                                                                                        | Thousands | Hundreds | Tens | Ones | Total specificity |
 | ------------------------------------------------------------------------------------------------------------- | --------- | -------- | ---- | ---- | ----------------- |
@@ -543,4 +543,4 @@ p#addSpecificity {
 
 스타일이 예상대로 적용되지 않는 이상한 문제가 발생하면 여기를 다시 참조 하십시오. 우선 순위 문제일 수 있습니다.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Cascade_layers", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Cascade_layers", "Learn_web_development/Core/Styling_basics")}}

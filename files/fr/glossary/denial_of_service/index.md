@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-Le **Déni de Service** (ou <abbr>DoS</abbr> pour<i lang="en">Denial of Service</i> en anglais) est une attaque réseau qui empêche l'utilisation légitime des ressources d'un {{glossary("server", "serveur")}} en surchargeant celui-ci de requêtes.
+Le **Déni de Service** (ou <abbr>DoS</abbr> pour<i lang="en">Denial of Service</i> en anglais) est une attaque réseau qui empêche l'utilisation légitime des ressources d'un {{Glossary("server", "serveur")}} en surchargeant celui-ci de requêtes.
 
 Les ordinateurs disposent de ressources limitées, puissance de calcul ou mémoire par exemple. Lorsqu'elles atteignent leurs limites, le programme peut se bloquer ou planter, ce qui le rend indisponible. Une attaque DoS consiste en diverses techniques pour saturer ces ressources et faire en sorte qu'un serveur ou un réseau ne soit plus disponible pour ses utilisateurs légitimes, ou au moins pour faire fonctionner le serveur plus lentement.
 

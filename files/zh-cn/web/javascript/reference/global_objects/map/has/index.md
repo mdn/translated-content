@@ -3,8 +3,6 @@ title: Map.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Map/has
 ---
 
-{{JSRef}}
-
 {{jsxref("Map")}} 实例的 **`has()`** 方法返回一个布尔值，指示具有指定键的元素是否存在。
 
 {{InteractiveExample("JavaScript Demo: Map.prototype.has()")}}

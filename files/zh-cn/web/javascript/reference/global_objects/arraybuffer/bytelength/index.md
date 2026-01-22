@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 16bacf2194dc9e9ff6ee5bcc65316547cf88a8d9
 ---
 
-{{JSRef}}
-
 {{jsxref("ArrayBuffer")}} 实例的 `byteLength` 访问器属性返回该数组缓冲区的长度（以字节为单位）。
 
 {{InteractiveExample("JavaScript Demo: ArrayBuffer.byteLength")}}

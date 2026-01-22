@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
-
 **`Atomics`** 命名空间对象包含对 {{jsxref("SharedArrayBuffer")}} 和 {{jsxref("ArrayBuffer")}} 对象执行原子操作的静态方法。
 
 ## 描述

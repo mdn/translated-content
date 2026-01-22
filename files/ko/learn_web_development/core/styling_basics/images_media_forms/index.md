@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Images_media_forms
 original_slug: Learn/CSS/Building_blocks/Images_media_form_elements
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics")}}
 
 이번 수업에서는 특별한 요소들을 CSS에서 어떻게 다루는지 살펴볼 것입니다. 이미지, 기타 미디어 및 양식 요소는 일반 박스와 다르게 CSS를 사용해서 스타일을 지정할 수 있다는 특징 덕분에 약간 다르게 작동합니다. 무엇이 가능하고 불가능한지 이해하는 것은 약간의 불편함을 줄이는 데 도움이 될 수 있으며, 이 수업에서는 여러분이 알아야 할 주요 사항들을 다룰 것입니다.
 
@@ -47,7 +47,7 @@ original_slug: Learn/CSS/Building_blocks/Images_media_form_elements
 
 ## 대체 (Replaced) 요소
 
-이미지와 비디오는 **[대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)** 로 설명됩니다. 즉, CSS 는 이러한 요소의 내부 레이아웃에 영향을 줄 수 없으며 — 다른 요소중에서 페이지의 위치에만 영향을 줍니다. 그러나 우리가 볼 수 있듯이 CSS 는 이미지로 할 수 있는 다양한 일들이 있습니다.
+이미지와 비디오는 **[대체 요소](/ko/docs/Web/CSS/Guides/Images/Replaced_element_properties)** 로 설명됩니다. 즉, CSS 는 이러한 요소의 내부 레이아웃에 영향을 줄 수 없으며 — 다른 요소중에서 페이지의 위치에만 영향을 줍니다. 그러나 우리가 볼 수 있듯이 CSS 는 이미지로 할 수 있는 다양한 일들이 있습니다.
 
 이미지 및 비디오와 같은 특정 대체 요소도 **종횡비 (aspect ratio)** 를 갖는 것으로 설명됩니다. 이는 가로 (x) 및 세로 (y) 크기를 가지며, 기본적으로 파일의 고유 크기를 사용하여 표시됨을 의미합니다.
 
@@ -196,4 +196,4 @@ textarea {
 
 이 수업에서는 CSS 에서 이미지, 미디어 및 기타 특이한 요소로 작업할 때 발생할 수 있는 몇 가지 차이점을 강조했습니다. 다음 기사에서는 HTML 표의 스타일을 지정해야할 때 유용한 몇 가지 팁을 살펴보겠습니다.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics")}}

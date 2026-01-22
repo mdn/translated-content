@@ -767,6 +767,6 @@ HTML のコメントを書くには、特別なマーカーである `<!--` と 
 
 ## 関連情報
 
-- [CSS を使って HTML 要素に色をつける](/ja/docs/Web/CSS/CSS_colors/Applying_color)
+- [CSS を使って HTML 要素に色をつける](/ja/docs/Web/CSS/Guides/Colors/Applying_color)
 
 {{NextMenu("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content")}}

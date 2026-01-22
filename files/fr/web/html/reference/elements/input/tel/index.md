@@ -124,7 +124,7 @@ L'attribut `placeholder` est une chaîne de caractères qui fournit une indicati
 Si le contenu du contrôle utilise une direction (écriture de gauche à droite ou de droite à gauche), mais que le texte indicatif doit être présenté dans la direction inverse, vous pouvez utiliser des caractères de formatage pour l'algorithme bidirectionnel Unicode dans la valeur. Voir [comment utiliser des contrôles Unicode pour le texte bidirectionnel](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus d'informations.
 
 > [!NOTE]
-> On évitera d'utiliser l'attribut `placeholder` si possible. Il n'est pas aussi utile que d'autres sur le plan sémantique pour expliquer le formulaire et il peut causer des problèmes techniques avec le contenu. Voir [Utilisation de libellés et de textes indicatifs](/fr/docs/Web/HTML/Reference/Elements/input#utilisation_de_libell%c3%a9s) pour plus d'informations.
+> On évitera d'utiliser l'attribut `placeholder` si possible. Il n'est pas aussi utile que d'autres sur le plan sémantique pour expliquer le formulaire et il peut causer des problèmes techniques avec le contenu. Voir [Utilisation de libellés et de textes indicatifs](/fr/docs/Web/HTML/Reference/Elements/input#utilisation_de_libellés) pour plus d'informations.
 
 ### `readonly`
 
@@ -135,7 +135,7 @@ Un attribut booléen qui, s'il est présent, indique que le champ ne peut pas ê
 
 ### `size`
 
-L'attribut `size` est une valeur numérique qui indique la largeur idéale du champ, exprimée en nombre de caractères. Sa valeur doit être un nombre supérieur à 0 et la valeur par défaut est 20. Comme les caractères peuvent avoir une largeur différente entre eux, on ne doit pas s'attendre à ce que cette taille permette exactement de voir les n caractères, le contrôle résultant pourra être plus étroit ou plus large que le nombre indiqué en fonction des caractères saisis et de la police (voir la propriété CSS [`font`](/fr/docs/Web/CSS/font)) utilisée.
+L'attribut `size` est une valeur numérique qui indique la largeur idéale du champ, exprimée en nombre de caractères. Sa valeur doit être un nombre supérieur à 0 et la valeur par défaut est 20. Comme les caractères peuvent avoir une largeur différente entre eux, on ne doit pas s'attendre à ce que cette taille permette exactement de voir les n caractères, le contrôle résultant pourra être plus étroit ou plus large que le nombre indiqué en fonction des caractères saisis et de la police (voir la propriété CSS [`font`](/fr/docs/Web/CSS/Reference/Properties/font)) utilisée.
 
 Cet attribut _n'impose pas_ de limite sur le nombre de caractères qui peuvent être saisis. Il indique uniquement, de façon approximative, le nombre de caractères visibles au même moment. Pour imposer une contrainte de taille sur la longueur maximale de la valeur saisissable, on pourra utiliser l'attribut [`maxlength`](#maxlength).
 
@@ -543,7 +543,7 @@ input:valid + span:after {
 
 ## Voir aussi
 
-- [Le guide sur les formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\)
+- [Le guide sur les formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms)
 - [Les formulaires et l'accessibilité](/fr/docs/Web/Accessibility/ARIA)
 - [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input)
   - [`<input type="text">`](/fr/docs/Web/HTML/Reference/Elements/input/text)

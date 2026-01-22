@@ -3,8 +3,6 @@ title: String() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/String/String
 ---
 
-{{JSRef}}
-
 **`String()`** 构造函数创建 {{jsxref("String")}} 对象。当作为函数调用时，它返回 String 类型的原始值。
 
 ## 语法

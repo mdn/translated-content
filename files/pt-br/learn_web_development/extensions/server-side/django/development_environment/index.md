@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/development_environmen
 original_slug: Learn/Server-side/Django/development_environment
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Agora que você sabe para que serve o Django, nós iremos te mostrar como instalar, configurar e testar um ambiente de desenvolvimento no Windows, Linux (Ubuntu), e macOS - seja qual for o sistema operacional (SO) que você usar, este artigo deve fornecê-lo o suficiente para conseguir começar a desenvolver aplicativos Django.
 
@@ -409,4 +409,4 @@ Na seção _Testando sua instalação_ você viu brevemente como criar um websit
 - [Como instalar Django — Guia completo](https://docs.djangoproject.com/en/2.1/topics/install/) (documentação Django) - inclui informações para remover o Django
 - [Como instalar Django no Windows](https://docs.djangoproject.com/en/2.1/howto/windows/) (documentação Django)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django")}}

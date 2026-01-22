@@ -3,8 +3,6 @@ title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
 ---
 
-{{JSRef}}
-
 **`Promise`** 对象表示异步操作最终的完成（或失败）以及其结果值。
 
 若想了解 promise 的工作方式以及如何使用它们，我们建议你先阅读[使用 Promise](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)。

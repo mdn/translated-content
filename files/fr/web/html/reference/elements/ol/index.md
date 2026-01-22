@@ -1,9 +1,8 @@
 ---
 title: "<ol> : l'élément de liste ordonnée"
 slug: Web/HTML/Reference/Elements/ol
-original_slug: Web/HTML/Element/ol
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<ol>`** représente une liste ordonnée, généralement affichée sous forme de liste numérotée.
@@ -31,30 +30,30 @@ li {
 
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
-- `compact` {{Deprecated_inline}} {{non-standard_inline}}
-  - : Cet attribut booléen suggère que la liste doit être affichée dans un style compact. L'interprétation de cet attribut dépend du navigateur. Utilisez plutôt le [CSS](/fr/docs/Web/CSS)&nbsp;: pour obtenir un effet similaire à l'attribut `compact`, la propriété CSS {{cssxref("line-height")}} peut être utilisée avec une valeur de `80%`.
+- `compact` {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Cet attribut booléen suggère que la liste doit être affichée dans un style compact. L'interprétation de cet attribut dépend du navigateur. Utilisez plutôt le [CSS](/fr/docs/Web/CSS)&nbsp;: pour obtenir un effet similaire à l'attribut `compact`, la propriété CSS {{CSSxRef("line-height")}} peut être utilisée avec une valeur de `80%`.
 - **`reversed`**
   - : Cet attribut booléen indique que les éléments de la liste sont dans l'ordre inverse. Les éléments sont numérotés de haut en bas.
 - **`start`**
   - : Un nombre entier à partir duquel on commence à compter pour les éléments de la liste. Toujours un chiffre arabique (1, 2, 3, etc.), même lorsque le `type` de numérotation est constitué de lettres ou de chiffres romains. Par exemple, pour commencer à numéroter les éléments à partir de la lettre "d" ou du chiffre romain "iv", utilisez `start="4"`.
 - **`type`**
-  - : Définit le type de numérotation :
+  - : Définit le type de numérotation&nbsp;:
     - `a` pour les lettres minuscules
     - `A` pour les lettres majuscules
     - `i` pour les chiffres romains minuscules
     - `I` pour les chiffres romains majuscules
     - `1` pour les chiffres (par défaut)
 
-    Le type spécifié est utilisé pour l'ensemble de la liste, sauf si un attribut différent [`type`](/fr/docs/Web/HTML/Reference/Elements/li#attr-type) est utilisé sur un élément {{HTMLElement("li")}} fermé.
+    Le type défini est utilisé pour l'ensemble de la liste, sauf si un attribut différent [`type`](/fr/docs/Web/HTML/Reference/Elements/li#type) est utilisé sur un élément {{HTMLElement("li")}} fermé.
 
     > [!NOTE]
     > À moins que le type du numéro de la liste n'ait de l'importance (comme dans les documents juridiques ou techniques où les éléments sont référencés par leur numéro/lettre), utilisez plutôt la propriété CSS {{CSSxRef("list-style-type")}}.
 
 ## Note d'utilisation
 
-En général, les éléments d'une liste ordonnée s'affichent avec un [marqueur](/fr/docs/Web/CSS/::marker) précédant l'élément, tel qu'un chiffre ou une lettre.
+En général, les éléments d'une liste ordonnée s'affichent avec un [marqueur](/fr/docs/Web/CSS/Reference/Selectors/::marker) précédant l'élément, tel qu'un chiffre ou une lettre.
 
 Les éléments `<ol>` et {{HTMLElement("ul")}} (ou le synonyme {{HTMLElement("menu")}}) peuvent s'imbriquer aussi profondément que vous le souhaitez, alternant entre `<ol>` et `<ul>` (ou `<menu>`) comme vous le souhaitez.
 
@@ -102,7 +101,7 @@ Pour déterminer la liste à utiliser, essayez de modifier l'ordre des élément
 ```html
 <p>
   Les places d'arrivée des concurrents qui ne sont pas dans le cercle des
-  gagnants :
+  gagnants&nbsp;:
 </p>
 
 <ol start="4">
@@ -256,6 +255,6 @@ Pour déterminer la liste à utiliser, essayez de modifier l'ordre des élément
 - Les autres éléments HTML relatifs aux listes&nbsp;: {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}
 - Les propriétés CSS pouvant servir à la mise en forme de l'élément `<ol>`&nbsp;:
   - {{CSSxRef("list-style")}} permet de choisir la façon dont les nombres ordinaux sont affichés,
-  - [Les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) sont utiles pour gérer les listes imbriquées complexes,
+  - [Les compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters) sont utiles pour gérer les listes imbriquées complexes,
   - {{CSSxRef("line-height")}} permet d'obtenir le même effet que l'attribut `compact` qui est déprécié,
   - {{CSSxRef("margin")}} permet de contrôler l'indentation de la liste.

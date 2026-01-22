@@ -32,7 +32,7 @@ slug: Mozilla/Firefox/Releases/82
 
 ### HTTP
 
-- HTML [`<a>`](/ja/docs/Web/HTML/Reference/Elements/a) 要素で `download` 属性が設定されている場合 ([同一オリジンの URL](/ja/docs/Web/Security/Same-origin_policy)) に、[`Content-Disposition`](/ja/docs/Web/HTTP/Reference/Headers/Content-Disposition) ヘッダーの `inline` ディレクティブが無視されるようになりました。`Content-Disposition` ヘッダーの `filename` を設定すると、`download` 属性で指定したファイル名より優先して使用されますので注意してください ([Firefox バグ 1658877](https://bugzil.la/1658877))。
+- HTML [`<a>`](/ja/docs/Web/HTML/Reference/Elements/a) 要素で `download` 属性が設定されている場合 ([同一オリジンの URL](/ja/docs/Web/Security/Defenses/Same-origin_policy)) に、[`Content-Disposition`](/ja/docs/Web/HTTP/Reference/Headers/Content-Disposition) ヘッダーの `inline` ディレクティブが無視されるようになりました。`Content-Disposition` ヘッダーの `filename` を設定すると、`download` 属性で指定したファイル名より優先して使用されますので注意してください ([Firefox バグ 1658877](https://bugzil.la/1658877))。
 
 ### API
 

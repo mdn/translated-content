@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 85d7482697cc2bf407c58e809a2a754180d6714c
 ---
 
-{{JSRef}}
-
 **`splice()`** 方法[就地](https://zh.wikipedia.org/wiki/原地算法)移除或者替换已存在的元素和/或添加新的元素。
 
 要创建一个删除和/或替换部分内容而不改变原数组的新数组，请使用 {{jsxref("Array/toSpliced", "toSpliced()")}}。要访问数组的一部分而不修改它，参见 {{jsxref("Array.prototype.slice()", "slice()")}}。
