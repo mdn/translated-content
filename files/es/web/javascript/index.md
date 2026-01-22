@@ -5,7 +5,7 @@ slug: Web/JavaScript
 
 {{JsSidebar}}
 
-**JavaScript** (**JS**) es un lenguaje de programación ligero, interpretado (o compilado {{Glossary("Just_In_Time_Compilation", "justo-a-tiempo")}}) con {{Glossary("First-class Function", "funciones de primera clase")}}. Si bien es más conocido como el lenguaje de scripting para páginas web, [muchos entornos fuera del navegador](https://en.wikipedia.org/wiki/JavaScript#Other_usage) también lo usan, tal como {{Glossary("Node.js")}}, [Apache CouchDB](https://couchdb.apache.org/) y [Adobe Acrobat](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/). JavaScript es un lenguaje [basado en prototipos](/es/docs/Glossary/Prototype-based_programming), con [recolección de basura](/es/docs/Glossary/Garbage_collection), [dinámico](/es/docs/Glossary/Dynamic_typing), que soporta múltiples paradigmas como imperativo, funcional y orientado a objetos.
+**JavaScript** (**JS**) es un lenguaje de programación ligero, interpretado (o compilado {{Glossary("Just_In_Time_Compilation", "justo-a-tiempo")}}) con {{Glossary("First-class Function", "funciones de primera clase")}}. Si bien es más conocido como el lenguaje de scripting para páginas web, [muchos entornos fuera del navegador](https://es.wikipedia.org/wiki/JavaScript) también lo usan, tal como {{Glossary("Node.js")}}, [Apache CouchDB](https://couchdb.apache.org/) y [Adobe Acrobat](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/). JavaScript es un lenguaje [basado en prototipos](/es/docs/Glossary/Prototype-based_programming), con [recolección de basura](/es/docs/Glossary/Garbage_collection), [dinámico](/es/docs/Glossary/Dynamic_typing), que soporta múltiples paradigmas como imperativo, funcional y orientado a objetos.
 
 ## Capacidades clave
 
@@ -24,14 +24,14 @@ Esta sección está dedicada al lenguaje JavaScript en sí, y no a las partes qu
 
 Los estándares para JavaScript son:
 
-- [Especificación del Lenguaje ECMAScript](https://tc39.es/ecma262/) (ECMA-262)
+- [Especificación oficial del lenguaje ECMAScript](https://tc39.es/ecma262/) (ECMA-262)
 - [Especificación de la API de Internacionalización de ECMAScript](https://tc39.es/ecma402/) (ECMA-402)
 
 Tan pronto como un navegador implementa una funcionalidad, MDN intenta documentarla. En casos donde [propuestas para nuevas funciones de ECMAScript](https://github.com/tc39/proposals) ya han sido implementadas en navegadores, la documentación puede usar algunas de esas nuevas funciones — típicamente entre las [etapas](https://tc39.es/process-document/) 3 y 4, generalmente antes de que la especificación sea publicada oficialmente.
 
 ## Distinción importante
 
-No confundas JavaScript con el [lenguaje de programación Java](<https://en.wikipedia.org/wiki/Java_(programming_language)>) — **JavaScript _no es_ "Java Interpretado"**. Ambos "Java" y "JavaScript" son marcas o marcas registradas de Oracle en los Estados Unidos y otros países. Sin embargo, los dos lenguajes de programación tienen sintaxis, semántica y usos muy diferentes.
+No confundas JavaScript con el [lenguaje de programación Java](<https://es.wikipedia.org/wiki/Java_(lenguaje_de_programación)>) — **JavaScript _no es_ "Java Interpretado"**. Ambos "Java" y "JavaScript" son marcas o marcas registradas de Oracle en los Estados Unidos y otros países. Sin embargo, los dos lenguajes de programación tienen sintaxis, semántica y usos muy diferentes.
 
 > [!CALLOUT]
 > **¿Quieres transformarte en un desarrollador web front-end?**
