@@ -39,7 +39,7 @@
     "mdast-util-from-markdown": "^2.0.2",
     "ora": "^9.1.0",
     "prettier": "3.8.1",
-    "unist-util-visit": "^5.0.0",
+    "unist-util-visit": "^5.1.0",
     "yargs": "^18.0.0"
   },
   "devDependencies": {
