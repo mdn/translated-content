@@ -22,20 +22,20 @@ l10n:
 > 
 > ### 试试我们伙伴的视频课程
 >
-> 感兴趣来听一下与我们文章互补的交互式的视频课程？Scrimba 的[前端开发者生涯路径](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn)<sup>[_MDN 学习伙伴_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>也提供在 MDN 课程中所教授的主题内容。
+> 感兴趣来听一下与我们文章互补的交互式的视频课程？Scrimba 的[前端开发者生涯路径](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn)<sup>[_MDN 学习合作伙伴_](/zh-CN/docs/MDN/Writing_guidelines/Learning_content#伙伴链接与嵌入)</sup>也提供在 MDN 课程中所教授的主题内容。
 >
 > <mdn-scrim-inline url="https://scrimba.com/s06icdv" scrimtitle="Scrimba + MDN"></scrim-inline>
 
 ## 不知道从何开始？
 
 - 从未进行过编程？
-  - ：我们的[入门模块](/zh-CN/docs/Learn_web_development/Getting_started)为完全初学者提供了设置教程和基本概念及背景知识。如果你完全没有编程经验（比如还没安装代码编辑器或写过代码），建议从这里开始。
+  - : 我们的[入门模块](/zh-CN/docs/Learn_web_development/Getting_started)为完全初学者提供了设置教程和基本概念及背景知识。如果你完全没有编程经验（比如还没安装代码编辑器或写过代码），建议从这里开始。
 - 想要掌握核心内容？
-  - ：我们的[核心模块](/zh-CN/docs/Learn_web_development/Core)提供了一套结构化教程，帮助你掌握成为成功前端开发者所需的核心技能和实践。
+  - : 我们的[核心模块](/zh-CN/docs/Learn_web_development/Core)提供了一套结构化教程，帮助你掌握成为成功前端开发者所需的核心技能和实践。
 - 想要更进一步？
-  - ：我们的[扩展模块](/zh-CN/docs/Learn_web_development/Extensions)涵盖了你在扩展知识和发展专长时需要学习的有用技能。完成核心模块后可以继续学习这些内容。
+  - : 我们的[扩展模块](/zh-CN/docs/Learn_web_development/Extensions)涵盖了你在扩展知识和发展专长时需要学习的有用技能。完成核心模块后可以继续学习这些内容。
 - 在学校工作？
-  - ：你可以用我们的模块指导教学，访问[教师页面](/zh-CN/docs/Learn_web_development/Educators)获取更多想法，或让学生报名 Scrimba 的[前端开发者职业路径](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn)<sup>[_MDN 学习合作伙伴_](/zh-CN/docs/MDN/Writing_guidelines/Learning_content#伙伴链接与嵌入)</sup>。
+  - : 你可以用我们的模块指导教学，访问[教师页面](/zh-CN/docs/Learn_web_development/Educators)获取更多想法。
 
 ## 测试你的技能
 
@@ -69,10 +69,10 @@ l10n:
 ## 参见
 
 - [前端开发者职业路径](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_MDN 学习合作伙伴_](/zh-CN/docs/MDN/Writing_guidelines/Learning_content#伙伴链接与嵌入)</sup>
-  - ：[Scrimba](https://scrimba.com?via=mdn) 的*前端开发者职业路径*提供了成为合格前端开发者所需的全部知识，包含有趣的互动课程和挑战、专业的讲师和支持社区。从零基础到找到第一份前端工作！课程中许多内容可免费单独学习。
+  - : [Scrimba](https://scrimba.com?via=mdn) 的*前端开发者职业路径*提供了成为合格前端开发者所需的全部知识，包含有趣的互动课程和挑战、专业的讲师和支持社区。从零基础到找到第一份前端工作！课程中许多内容可免费单独学习。
 - [Codecademy](https://www.codecademy.com/)
-  - ：一个非常适合零基础学习编程语言的互动网站。
+  - : 一个非常适合零基础学习编程语言的互动网站。
 - [freeCodeCamp.org](https://www.freecodecamp.org/)
-  - ：提供互动教程和项目，帮助你学习 Web 开发。
+  - : 提供互动教程和项目，帮助你学习 Web 开发。
 - [Learn JavaScript](https://learnjavascript.online/)
-  - ：非常适合初学者的 JavaScript 学习资源——在互动环境中学习 JavaScript，课程短小精悍，配有自动评测。前 40 课免费，也只需要一次小支出即可购入完整课程。
+  - : 非常适合初学者的 JavaScript 学习资源——在互动环境中学习 JavaScript，课程短小精悍，配有自动评测。前 40 课免费，也只需要一次小支出即可购入完整课程。
