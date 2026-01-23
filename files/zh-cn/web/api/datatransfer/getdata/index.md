@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`DataTransfer.getData()`** 方法接受指定类型的拖放数据（字符串形式）。如果拖放行为没有操作任何数据，会返回一个空字符串。
+**`DataTransfer.getData()`** 方法查询指定类型的拖放数据（字符串形式）。如果拖放操作没有包含任何数据，此方法会返回一个空字符串。
 
 数据类型示例包括 `text/plain` 和 `text/uri-list`。
 
@@ -37,7 +37,7 @@ getData(format)
 
 ```html
 <div id="div1">
-  <span id="drag" draggable="true">将我拖动到另一盒中</span>
+  <span id="drag" draggable="true">将我拖动到另一个盒子中</span>
 </div>
 <div id="div2"></div>
 ```
@@ -99,6 +99,6 @@ function drop(dropEvent) {
 
 ## 参见
 
-- [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
-- [拖动操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [使用拖动数据存储](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
+- [拖放](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
+- [拖拽操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [使用拖拽数据存储](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
