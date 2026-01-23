@@ -2,12 +2,12 @@
 title: DataTransfer
 slug: Web/API/DataTransfer
 l10n:
-  sourceCommit: 8285d415db211ae9efe04752d9dab1b574450ee8
+  sourceCommit: 0b5859108411e47d228a4bb9f30a5556ab17f63c
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
 
-**`DataTransfer`** 对象用于保存拖放（drag and drop）过程中的数据。它可以保存一项或多项数据，其中的数据项可以是一种或者多种数据类型。
+**`DataTransfer`** 对象用于保存上下文间的数据传输，如在拖放操作、剪切板读写中的那些数据。它可以保存一项或多项，每项都可以是同一种或多种数据类型的数据。
 
 `DataTransfer` 主要旨在服务 [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)（用于 {{domxref("DragEvent.dataTransfer")}} 属性）。其在 HTML 拖放一节中得到定义，但也用于其他 API，如 {{domxref("ClipboardEvent.clipboardData")}} 和 {{domxref("InputEvent.dataTransfer")}}。但是，其他 API 只使用该接口的其中一部分，忽略了部分属性（如 `dropEffect`）。`DataTransfer` 文档将主要讨论拖放操作中该对象的使用方式。你应该参考相应 API 的文档以了解在其他上下文环境中 `DataTransfer` 的使用方式。
 
@@ -22,17 +22,17 @@ l10n:
   - : 获取当前选定的拖放操作类型或者设置的为一个新的类型。值必须是 `none`、`copy`、`link` 或 `move` 之一。
 - {{domxref("DataTransfer.effectAllowed")}}
   - : 提供所有可用的操作类型。值必须是 `none`、`copy`、`copyLink`、`copyMove`、`link`、`linkMove`、`move`、`all` 或 `uninitialized` 之一。
-- {{domxref("DataTransfer.files")}}
-  - : 包含数据传输中可用的所有本地文件的列表。如果拖动操作不涉及拖动文件，则该属性为空列表。
+- {{domxref("DataTransfer.files")}} {{ReadOnlyInline}}
+  - : 包含数据传输中可用的所有本地文件的列表。如果拖拽操作不涉及拖拽文件，则该属性为空列表。
 - {{domxref("DataTransfer.items")}} {{readonlyInline}}
-  - : 提供包含所有拖动数据列表的 {{domxref("DataTransferItemList")}} 对象。
+  - : 提供包含所有拖拽数据列表的 {{domxref("DataTransferItemList")}} 对象。
 - {{domxref("DataTransfer.types")}} {{readonlyInline}}
   - : 提供 [`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event) 事件中设置的格式的字符串数组。
 
 ## 实例方法
 
 - {{domxref("DataTransfer.addElement()")}} {{experimental_inline}} {{non-standard_inline}}
-  - : 设置给定元素的拖动源。这将成为 {{domxref("HTMLElement/drag_event", "drag")}} 和 {{domxref("HTMLElement/dragend_event", "dragend")}} 事件能被触发的元素而非默认对象（被拖动的结点）。该方法为 Firefox 特有方法。
+  - : 设置给定元素的拖拽源。这将成为 {{domxref("HTMLElement/drag_event", "drag")}} 和 {{domxref("HTMLElement/dragend_event", "dragend")}} 事件能被触发的元素而非默认对象（被拖拽的结点）。该方法为 Firefox 特有方法。
 - {{domxref("DataTransfer.clearData()")}}
   - : 删除与给定类型关联的数据。类型参数是可选的。如果类型为空或未指定，则删除与所有类型关联的数据。如果指定类型的数据不存在，或者 DataTransfer 中不包含任何数据，则该方法不会产生任何效果。
 - {{domxref("DataTransfer.getData()")}}
@@ -40,7 +40,7 @@ l10n:
 - {{domxref("DataTransfer.setData()")}}
   - : 设置给定类型的数据。如果该类型的数据不存在，则将其添加到末尾，以便类型列表中的最后一项将是新的格式。如果该类型的数据已经存在，则在相同位置替换现有数据。
 - {{domxref("DataTransfer.setDragImage()")}}
-  - : 用于设置自定义的拖动图像。
+  - : 用于设置自定义的拖拽图像。
 
 ## 示例
 
@@ -58,42 +58,48 @@ l10n:
     <legend>&lt;input /></legend>
     <input type="text" />
     <table class="center">
-      <tr>
-        <th scope="row">操作类型</th>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">内容类型</th>
-        <td></td>
-      </tr>
+      <tbody>
+        <tr>
+          <th scope="row">操作类型</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">内容类型</th>
+          <td></td>
+        </tr>
+      </tbody>
     </table>
   </fieldset>
   <fieldset>
     <legend>&lt;textarea /></legend>
     <textarea></textarea>
     <table class="center">
-      <tr>
-        <th scope="row">操作类型</th>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">内容类型</th>
-        <td></td>
-      </tr>
+      <tbody>
+        <tr>
+          <th scope="row">操作类型</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">内容类型</th>
+          <td></td>
+        </tr>
+      </tbody>
     </table>
   </fieldset>
   <fieldset>
     <legend>&lt;div contenteditable /></legend>
     <div contenteditable></div>
     <table class="center">
-      <tr>
-        <th scope="row">操作类型</th>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">内容类型</th>
-        <td></td>
-      </tr>
+      <tbody>
+        <tr>
+          <th scope="row">操作类型</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">内容类型</th>
+          <td></td>
+        </tr>
+      </tbody>
     </table>
   </fieldset>
   <p class="center">
@@ -178,5 +184,5 @@ form.addEventListener("reset", () => {
 ## 参见
 
 - [拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
-- [拖动操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [使用拖动数据存储](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
+- [拖拽操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [使用拖拽数据存储](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
