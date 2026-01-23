@@ -2,14 +2,14 @@
 title: 学习 Web 开发
 slug: Learn_web_development
 l10n:
-  sourceCommit: 774d1671140c0fe80c1e460e54d68ce4f66cd3ce
+  sourceCommit: 57bc2729e3963907c0b54158ae1a31318a2ebbd1
 ---
 
 欢迎来到 MDN **学习 Web 开发区**（也被大家称为**学习区**）。我们在此提供一组结构化的教程指南，帮助你掌握要成为一名成功的前端开发者所需要具备的核心技巧与实践方式，同时也为你提供了若干挑战与推荐的进阶资源。
 
 ## 关于学习 Web 开发
 
-- 向所有前端开发者提供核心技巧与知识，帮助他们取得职业成功与成为业界有价值的开发者，就如在 [MDN Curriculum](/zh-CN/curriculum/) 中所定义的那样。
+- 向所有前端开发者提供核心技巧与知识，帮助他们取得职业成功与成为业界有价值的开发者，就如在 [MDN 课程](/en-US/curriculum/)中所定义的那样。
 
 - 学习区内容由 MDN 社区创建，并不断经由学生、教师与更广阔 Web 社区提供的建议进一步优化。
 
@@ -33,7 +33,7 @@ l10n:
 
 在整个课程中，你会遇到多篇旨在帮助你检验学习效果的文章。主要有两种类型：
 
-- “测试你的技能”文章出现频率较高，主要考查你对某个单一知识点（如 HTML 链接、CSS 盒模型或 JavaScript 函数）的掌握情况。
+- “技能测试”文章出现频率较高，主要考查你对某个单一知识点（如 HTML 链接、CSS 盒模型或 JavaScript 函数）的掌握情况。
 - “挑战”出现频率较低，主要考查你能否将多个知识点结合起来，完成一个完整的网站或程序。
 
 大多数问题都包含 HTML/CSS/JavaScript 代码块，展示每个任务的起始代码。推荐点击代码块中的 **“Play”** 按钮，在 [MDN Playground](/zh-CN/play) 中打开示例，然后根据题目要求编辑代码完成任务。
@@ -61,7 +61,7 @@ l10n:
 ## 参见
 
 - [前端开发者职业路径](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_MDN 学习合作伙伴_](/zh-CN/docs/MDN/Writing_guidelines/Learning_content#伙伴链接与嵌入)</sup>
-  - ：[Scrimba](https://scrimba.com?via=mdn) 的 _前端开发者职业路径_ 提供了成为合格前端开发者所需的全部知识，包含有趣的互动课程和挑战、专业的讲师和支持社区。从零基础到找到第一份前端工作！课程中许多内容可免费单独学习。
+  - ：[Scrimba](https://scrimba.com?via=mdn) 的*前端开发者职业路径*提供了成为合格前端开发者所需的全部知识，包含有趣的互动课程和挑战、专业的讲师和支持社区。从零基础到找到第一份前端工作！课程中许多内容可免费单独学习。
 - [Codecademy](https://www.codecademy.com/)
   - ：一个非常适合零基础学习编程语言的互动网站。
 - [freeCodeCamp.org](https://www.freecodecamp.org/)
