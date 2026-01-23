@@ -19,14 +19,14 @@ AbortSignal.any(iterable)
 ### 参数
 
 - `iterable`
-  - : 中止信号的[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)（例如 {{jsxref("Array")}}）。
+  - : 中止信号的[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)（例如 {{jsxref("Array")}}）。
 
 ### 返回值
 
-一个 {{domxref("AbortSignal")}}：
+{{domxref("AbortSignal")}}，其状态为：
 
-- **已中止**，如果给定的中止信号中有任何一个已经被中止。返回的 {{domxref("AbortSignal")}} 的 `reason` 将被设置为第一个已中止的中止信号的{{domxref("AbortSignal.reason", "中止原因")}}。
-- **异步中止**，当 `iterable` 中的任何中止信号被中止时。{{domxref("AbortSignal.reason", "reason")}}将被设置为第一个被中止的中止信号的中止原因。
+- **已中止**，如果给定的中止信号中有任何一个已经被中止。返回的 {{domxref("AbortSignal")}} 的 `reason` 将被设置为第一个已中止的中止信号的 {{domxref("AbortSignal.reason", "reason")}}。
+- **异步中止**，当 `iterable` 中的任何中止信号被中止时。{{domxref("AbortSignal.reason", "reason")}} 将被设置为第一个被中止的中止信号的中止原因。
 
 ## 示例
 
