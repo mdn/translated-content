@@ -484,7 +484,6 @@
 /fr/docs/Glossary/Self-Executing_Anonymous_Function	/fr/docs/Glossary/IIFE
 /fr/docs/Glossary/Simple_header	/fr/docs/Glossary/CORS-safelisted_request_header
 /fr/docs/Glossary/Simple_response_header	/fr/docs/Glossary/CORS-safelisted_response_header
-/fr/docs/Glossary/Symbol	/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /fr/docs/Glossary/Transmission_Control_Protocol_(TCP)	/fr/docs/Glossary/TCP
 /fr/docs/Glossary/XHR_(XMLHttpRequest)	/fr/docs/Glossary/XMLHttpRequest
 /fr/docs/Glossary/eTLD	/fr/docs/Glossary/Registrable_domain
