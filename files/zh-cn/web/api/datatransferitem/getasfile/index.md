@@ -40,13 +40,13 @@ function dropHandler(ev) {
         ev.target.appendChild(document.getElementById(s));
       });
     } else if (item.kind === "string" && item.type.match("^text/html")) {
-      // 拖动数据项时 HTML
+      // 拖拽数据项时 HTML
       console.log("… Drop: HTML");
     } else if (item.kind === "string" && item.type.match("^text/uri-list")) {
-      // 拖动数据项是 URI
+      // 拖拽数据项是 URI
       console.log("… Drop: URI");
     } else if (item.kind === "file" && item.type.match("^image/")) {
-      // 拖动数据项是图像文件
+      // 拖拽数据项是图像文件
       const f = item.getAsFile();
       console.log("… Drop: File");
     }
