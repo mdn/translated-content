@@ -1,9 +1,8 @@
 ---
 title: shape
 slug: Web/CSS/Reference/At-rules/@media/shape
-original_slug: Web/CSS/@media/shape
 l10n:
-  sourceCommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{SeeCompatTable}}
@@ -70,9 +69,12 @@ h1 {
 
 ## ブラウザーの互換性
 
-この機能を実装しているブラウザーはありません。
+今のところ、この機能に対応しているブラウザーはありません。
 
 ## 関連情報
 
 - [メディアクエリーの使用](/ja/docs/Web/CSS/Guides/Media_queries/Using)
 - [@media](/ja/docs/Web/CSS/Reference/At-rules/@media)
+- [CSS 円形ディスプレイ](/ja/docs/Web/CSS/Guides/Round_display)モジュール
+- [環境変数の使用](/ja/docs/Web/CSS/Guides/Environment_variables/Using)
+- [CSS 環境変数](/ja/docs/Web/CSS/Guides/Environment_variables)モジュール

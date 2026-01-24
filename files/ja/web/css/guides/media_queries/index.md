@@ -116,7 +116,7 @@ CSS メディアクエリーレベル 5 では、`environment-blending`, `nav-co
   - {{DOMxRef("MediaList")}} インターフェイス
     - {{DOMxRef("MediaList.mediaText", "mediaText")}} プロパティ
   - {{DOMxRef("MediaQueryListEvent")}} オブジェクト
-- [Device Posture API](/ja/docs/Web/API/Device_Posture_API)
+- [端末形態 API](/ja/docs/Web/API/Device_Posture_API)
   - {{cssxref("@media/device-posture", "device-posture")}} 記述子
 - HTML
   - `sizes` 属性（[`<img>`](/ja/docs/Web/HTML/Reference/Elements/img#sizes)、[`<link>`](/ja/docs/Web/HTML/Reference/Elements/link#sizes)、{{HTMLElement("picture")}} の [`<source>`](/ja/docs/Web/HTML/Reference/Elements/source#sizes)）

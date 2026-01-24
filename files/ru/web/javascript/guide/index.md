@@ -5,7 +5,7 @@ slug: Web/JavaScript/Guide
 
 {{jsSidebar("JavaScript Guide")}}
 
-"Руководство по JavaScript" покажет вам как использовать [JavaScript](/ru/docs/Web/JavaScript) и даст общее представление о языке. Если вам нужна исчерпывающая информация о возможностях языка, посмотрите [руководство JavaScript](/ru/docs/Web/JavaScript/Reference).
+Руководство показывает, как использовать [JavaScript](/ru/docs/Web/JavaScript) и даёт общее представление о языке. Исчерпывающую информацию о возможностях языка можно найти в [справочнике по JavaScript](/ru/docs/Web/JavaScript/Reference).
 
 ## Главы
 
