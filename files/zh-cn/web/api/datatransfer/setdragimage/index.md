@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML Drag and Drop API")}}
 
-发生拖动时，会从拖动目标（{{domxref("HTMLElement/dragstart_event", "dragstart")}}事件触发的元素）处生成一张半透明图像，并在拖动过程中使其跟随鼠标指针。这个图片是自动创建的，你不需要自己去创建它。然而，如果你希望设置一张自定义图像，则可以使用 **`DataTransfer.setDragImage()`** 方法，通常是一个 {{HTMLElement("image")}} 元素，但也可以是{{HTMLElement("canvas")}} 或任何其他图像元素。
+当发生拖拽时，会从拖拽目标（{{domxref("HTMLElement/dragstart_event", "dragstart")}}事件触发的元素）处生成一张半透明图像，并在拖拽过程中使其跟随鼠标指针。这个图片是自动创建的，你不需要自己去创建它。然而，如果你希望设置一张自定义图像，则可以使用 **`DataTransfer.setDragImage()`** 方法，通常是一个 {{HTMLElement("image")}} 元素，但也可以是{{HTMLElement("canvas")}} 或任何其他图像元素。
 
 该方法的 `x` 和 `y` 坐标是图像应该相对于鼠标指针出现的偏移量。坐标指定鼠标指针相对于图片的偏移量。例如，要使图像居中，请使用图像宽度和高度的一半。
 
@@ -23,11 +23,11 @@ setDragImage(imgElement, xOffset, yOffset)
 ### 参数
 
 - `imgElement`
-  - : 作为拖动反馈图像的 {{domxref("Element")}} 元素。
+  - : 作为拖拽反馈图像的 {{domxref("Element")}} 元素。
 
-    如果 {{domxref("Element")}} 是图像元素，则设置拖动数据存储位图为该元素的图像（以其固有大小）；否则，将拖动数据存储位图设置为从给定元素生成的图像（目前尚未规范确切的机制）。
+    如果 {{domxref("Element")}} 是图像元素，则设置拖拽数据存储位图为该元素的图像（以其固有大小）；否则，将拖拽数据存储位图设置为从给定元素生成的图像（目前尚未规范确切的机制）。
 
-    需要注意，如果 {{domxref("Element")}} 是一个已有的 {{domxref("HTMLElement")}}，则它需要在视口中可见才能作为拖动反馈图像显示。或者，你也可以专门为此目的创建一个可能在屏幕外的新 DOM 元素。
+    需要注意，如果 {{domxref("Element")}} 是一个已有的 {{domxref("HTMLElement")}}，则它需要在视口中可见才能作为拖拽反馈图像显示。或者，你也可以专门为此目的创建一个可能在屏幕外的新 DOM 元素。
 
 - `xOffset`
   - : 指示图像中的横向偏移量的 `long`。
@@ -45,7 +45,7 @@ setDragImage(imgElement, xOffset, yOffset)
 ```html
 <div>
   <p id="source" draggable="true">
-    选中该元素并将其拖动到可放置区域，然后释放选择以移动该元素。
+    选中该元素并将其拖拽到可放置区域，然后释放选择以移动该元素。
   </p>
 </div>
 <div id="target">可放置区域</div>
@@ -69,12 +69,12 @@ div {
 const source = document.getElementById("source");
 const target = document.getElementById("target");
 
-// 创建一张图像并将其作为拖动图形；你可以使用你所希望使用的图片 URL
+// 创建一张图像并将其作为拖拽图形；你可以使用你所希望使用的图片 URL
 const img = new Image();
 img.src = "/shared-assets/images/examples/favicon32.png";
 
 source.addEventListener("dragstart", (ev) => {
-  // 设置拖动格式与数据（在此示例中使用事件目标的 id 作为数据）
+  // 设置拖拽格式与数据（在此示例中使用事件目标的 id 作为数据）
   ev.dataTransfer.setData("text/plain", ev.target.id);
   ev.dataTransfer.setDragImage(img, 10, 10);
 });
@@ -104,5 +104,5 @@ target.addEventListener("drop", (ev) => {
 ## 参见
 
 - [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
-- [拖动操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [使用拖动数据存储](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
+- [拖拽操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [使用拖拽数据存储](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
