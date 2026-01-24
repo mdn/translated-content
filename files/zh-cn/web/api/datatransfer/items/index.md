@@ -8,24 +8,24 @@ l10n:
 
 {{APIRef("HTML Drag and Drop API")}}
 
-{{domxref("DataTransfer")}} 接口的 `items` 只读属性返回表示拖动操作中被拖动的项的 {{domxref("DataTransferItem", "DataTransferItem")}} 对象的 {{domxref("DataTransferItemList", "DataTransferItemList")}} 列表，每个被拖动的对象对应一个列表项。当操作没有项目时列表为空
+{{domxref("DataTransfer")}} 接口的 `items` 只读属性返回表示拖拽操作中被拖拽的项的 {{domxref("DataTransferItem", "DataTransferItem")}} 对象的 {{domxref("DataTransferItemList", "DataTransferItemList")}} 列表，每个被拖拽的对象对应一个列表项。当操作没有项目时列表为空
 
 ## 取值
 
-包含表示拖动操作中被拖动的项的 {{domxref("DataTransferItem")}} 对象的 {{domxref("DataTransferItemList")}} 对象，每个被拖动的对象对应一个列表项。如果拖动操作中没有数据，则列表为空。
+包含表示拖拽操作中被拖拽的项的 {{domxref("DataTransferItem")}} 对象的 {{domxref("DataTransferItemList")}} 对象，每个被拖拽的对象对应一个列表项。如果拖拽操作中没有数据，则列表为空。
 
 ## 示例
 
-### 记录被拖动的项目
+### 记录被拖拽的项目
 
-本示例使用 `items` 来记录被拖动项目的信息。
+本示例使用 `items` 来记录被拖拽项目的信息。
 
 #### HTML
 
 ```html
 <ul>
-  <li id="source1" draggable="true">将项目一拖动到可放置区域</li>
-  <li id="source2" draggable="true">将项目二拖动到可放置区域</li>
+  <li id="source1" draggable="true">将项目一拖拽到可放置区域</li>
+  <li id="source2" draggable="true">将项目二拖拽到可放置区域</li>
 </ul>
 <div id="target">可放置区域</div>
 
@@ -50,7 +50,7 @@ div {
 ```js
 function dragstartHandler(ev) {
   console.log(`dragstart: target.id = ${ev.target.id}`);
-  // 将此元素的 id 添加到拖动负载中，以便放置处理器知道将哪个元素添加到树中
+  // 将此元素的 id 添加到拖拽负载中，以便放置处理器知道将哪个元素添加到树中
   ev.dataTransfer.setData("text/plain", ev.target.id);
   ev.dataTransfer.effectAllowed = "move";
 }
@@ -89,7 +89,7 @@ reset.addEventListener("click", () => document.location.reload());
 
 #### 结果
 
-{{EmbedLiveSample("记录被拖动的项目", 0, 400)}}
+{{EmbedLiveSample("记录被拖拽的项目", 0, 400)}}
 
 ## 规范
 
@@ -102,5 +102,5 @@ reset.addEventListener("click", () => document.location.reload());
 ## 参见
 
 - [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
-- [拖动操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [使用拖动数据存储](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
+- [拖拽操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [使用拖拽数据存储](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
