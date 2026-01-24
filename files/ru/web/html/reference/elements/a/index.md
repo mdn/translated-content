@@ -5,10 +5,18 @@ slug: Web/HTML/Reference/Elements/a
 
 {{HTMLSidebar}}
 
-HTML-элемент `<a>` определяет гиперссылку для перехода на определённое место на странице или на другую страницу в Интернете. Также он может быть использован (в устаревшем варианте) для создания якоря — это место назначения для гиперссылок внутри страницы: так ссылки не ограничены только в перемещении между страницами.
+HTML-элемент `<a>` (или якорный элемент), с атрибутом `href` определяет гиперссылку для перехода на определённое место на странице или на другую страницу в Интернете, гиперссылку на файлы, адреса электронной почты, или на что-либо ещё, к чему может обращаться URL-адрес.
+
+Содержимое каждого элемента `<a>` должно указывать на место назначения ссылки. Если в элементе присутствует атрибут `href`, то нажатие клавиши enter при наведении фокуса на элемент <a> активирует его.
 
 ```html
-<a href="https://developer.mozilla.org">MDN</a>
+<p>You can reach Michael at:</p>
+
+<ul>
+  <li><a href="https://example.com">Website</a></li>
+  <li><a href="mailto:m.bluth@example.com">Email</a></li>
+  <li><a href="tel:+123456789">Phone</a></li>
+</ul>
 ```
 
 | [Категории контента](/ru/docs/Web/HTML/Guides/Content_categories) | [Основной поток](/ru/docs/Web/HTML/Guides/Content_categories#%d0%9e%d1%81%d0%bd%d0%be%d0%b2%d0%bd%d0%be%d0%b9_%d0%bf%d0%be%d1%82%d0%be%d0%ba), [текстовый контент](/ru/docs/Web/HTML/Guides/Content_categories#phrasing_content), [интерактивный контент](/ru/docs/Web/HTML/Guides/Content_categories#interactive_content), скрытый контент.                                                                                                                                                                                             |
