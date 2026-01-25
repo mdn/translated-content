@@ -1,6 +1,6 @@
 ---
 title: Range.collapsed
-slug: Web/API/Range/collapsed
+slug: Web/API/AbstractRange/collapsed
 ---
 
 {{ APIRef("DOM") }}
