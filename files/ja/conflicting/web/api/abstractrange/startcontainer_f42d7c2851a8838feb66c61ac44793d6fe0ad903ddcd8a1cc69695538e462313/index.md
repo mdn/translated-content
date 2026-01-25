@@ -1,7 +1,10 @@
 ---
 title: "StaticRange: startContainer プロパティ"
 short-title: startContainer
-slug: Web/API/StaticRange/startContainer
+slug: conflicting/Web/API/AbstractRange/startContainer_f42d7c2851a8838feb66c61ac44793d6fe0ad903ddcd8a1cc69695538e462313
+page-type: web-api-instance-property
+browser-compat: api.AbstractRange.startContainer
+original_slug: Web/API/StaticRange/startContainer
 l10n:
   sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---

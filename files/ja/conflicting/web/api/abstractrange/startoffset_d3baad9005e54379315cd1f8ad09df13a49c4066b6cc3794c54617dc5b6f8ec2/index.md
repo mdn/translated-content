@@ -1,7 +1,10 @@
 ---
 title: "Range: startOffset プロパティ"
 short-title: startOffset
-slug: Web/API/Range/startOffset
+slug: conflicting/Web/API/AbstractRange/startOffset_d3baad9005e54379315cd1f8ad09df13a49c4066b6cc3794c54617dc5b6f8ec2
+page-type: web-api-instance-property
+browser-compat: api.AbstractRange.startOffset
+original_slug: Web/API/Range/startOffset
 l10n:
   sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---

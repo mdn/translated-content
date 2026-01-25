@@ -64,7 +64,6 @@ Firefox はいくつかの拡張を [CSS](/ja/docs/Web/CSS) に行っており�
 - `-moz-border-start-width` {{deprecated_inline}}: 対応していません。{{CSSxRef("border-inline-start-width")}} を使用してください。
 - {{CSSxRef("box-sizing", "-moz-box-sizing")}} {{deprecated_inline}}: 接頭辞付き版もまだ対応しています。
 
-
 ### C
 
 - `-moz-column-count` {{deprecated_inline}}: 対応していません。{{CSSxRef("column-count")}} を使用してください。

@@ -1,7 +1,10 @@
 ---
 title: "Range: collapsed プロパティ"
 short-title: collapsed
-slug: Web/API/Range/collapsed
+slug: conflicting/Web/API/AbstractRange/collapsed_bb573fe51b2b71e08a41fd32a8812e0ceb60cca4ac78752b2db7aa6902dbe001
+page-type: web-api-instance-property
+browser-compat: api.AbstractRange.collapsed
+original_slug: Web/API/Range/collapsed
 l10n:
   sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---

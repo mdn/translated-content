@@ -1,7 +1,10 @@
 ---
 title: "StaticRange: endOffset プロパティ"
 short-title: endOffset
-slug: Web/API/StaticRange/endOffset
+slug: conflicting/Web/API/AbstractRange/endOffset
+page-type: web-api-instance-property
+browser-compat: api.AbstractRange.endOffset
+original_slug: Web/API/StaticRange/endOffset
 l10n:
   sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---
