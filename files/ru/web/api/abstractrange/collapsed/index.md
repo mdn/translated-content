@@ -1,9 +1,6 @@
 ---
 title: Range.collapsed
 slug: Web/API/AbstractRange/collapsed
-page-type: web-api-instance-property
-browser-compat: api.AbstractRange.collapsed
-original_slug: Web/API/Range/collapsed
 ---
 
 {{ APIRef("DOM") }}
