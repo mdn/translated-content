@@ -3,7 +3,7 @@ title: "AbstractRange: startContainer プロパティ"
 short-title: startContainer
 slug: Web/API/AbstractRange/startContainer
 l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+  sourceCommit: f314991b236fce81b712a6df59e4643de0f98449
 ---
 
 {{APIRef("DOM")}}
