@@ -9,14 +9,20 @@ HTML-элемент `<a>` (или якорный элемент), с атриб�
 
 Содержимое каждого элемента `<a>` должно указывать на место назначения ссылки. Если в элементе присутствует атрибут `href`, то нажатие клавиши enter при наведении фокуса на элемент <a> активирует его.
 
-```html
-<p>You can reach Michael at:</p>
+```html interactive-example
+<p>Связаться с Иваном можно следующими способами:</p>
 
 <ul>
-  <li><a href="https://example.com">Website</a></li>
-  <li><a href="mailto:m.bluth@example.com">Email</a></li>
-  <li><a href="tel:+123456789">Phone</a></li>
+  <li><a href="https://example.com">Веб-сайт</a></li>
+  <li><a href="mailto:ivan@example.com">Электронная почта</a></li>
+  <li><a href="tel:+123456789">Телефон</a></li>
 </ul>
+```
+
+```css interactive-example
+li {
+  margin-bottom: 0.5rem;
+}
 ```
 
 | [Категории контента](/ru/docs/Web/HTML/Guides/Content_categories) | [Основной поток](/ru/docs/Web/HTML/Guides/Content_categories#%d0%9e%d1%81%d0%bd%d0%be%d0%b2%d0%bd%d0%be%d0%b9_%d0%bf%d0%be%d1%82%d0%be%d0%ba), [текстовый контент](/ru/docs/Web/HTML/Guides/Content_categories#phrasing_content), [интерактивный контент](/ru/docs/Web/HTML/Guides/Content_categories#interactive_content), скрытый контент.                                                                                                                                                                                             |
