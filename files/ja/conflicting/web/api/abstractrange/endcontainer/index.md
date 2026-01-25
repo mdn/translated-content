@@ -1,7 +1,10 @@
 ---
 title: "StaticRange: endContainer プロパティ"
 short-title: endContainer
-slug: Web/API/StaticRange/endContainer
+slug: conflicting/Web/API/AbstractRange/endContainer
+page-type: web-api-instance-property
+browser-compat: api.AbstractRange.endContainer
+original_slug: Web/API/StaticRange/endContainer
 l10n:
   sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---

@@ -1,7 +1,10 @@
 ---
 title: "StaticRange: collapsed プロパティ"
 short-title: collapsed
-slug: Web/API/StaticRange/collapsed
+slug: conflicting/Web/API/AbstractRange/collapsed
+page-type: web-api-instance-property
+browser-compat: api.AbstractRange.collapsed
+original_slug: Web/API/StaticRange/collapsed
 l10n:
   sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---

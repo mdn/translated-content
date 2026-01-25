@@ -1,7 +1,10 @@
 ---
 title: "Range: endContainer プロパティ"
 short-title: endContainer
-slug: Web/API/Range/endContainer
+slug: conflicting/Web/API/AbstractRange/endContainer_b288c8bbc401b6148515c83684e709465dc1b909d4ab5b3802a2a6c7ac383188
+page-type: web-api-instance-property
+browser-compat: api.AbstractRange.endContainer
+original_slug: Web/API/Range/endContainer
 l10n:
   sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---

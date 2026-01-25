@@ -1,7 +1,10 @@
 ---
 title: "Range: endOffset プロパティ"
 short-title: endOffset
-slug: Web/API/Range/endOffset
+slug: conflicting/Web/API/AbstractRange/endOffset_3301e460a31a527ddc988c3a3f1e76a177a4d5481f654f21598be4387f3121b2
+page-type: web-api-instance-property
+browser-compat: api.AbstractRange.endOffset
+original_slug: Web/API/Range/endOffset
 l10n:
   sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---

@@ -17698,33 +17698,8 @@
       "oreno4649"
     ]
   },
-  "Web/API/Range/collapsed": {
-    "modified": "2020-07-23T11:30:31.557Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "basemnassar11",
-      "Luna8bit",
-      "Mgjbot",
-      "Shimono"
-    ]
-  },
   "Web/API/Range/commonAncestorContainer": {
     "modified": "2020-10-15T22:23:26.049Z",
-    "contributors": [
-      "mfuji09",
-      "oreno4649"
-    ]
-  },
-  "Web/API/Range/endContainer": {
-    "modified": "2020-10-15T22:23:26.617Z",
-    "contributors": [
-      "mfuji09",
-      "oreno4649"
-    ]
-  },
-  "Web/API/Range/endOffset": {
-    "modified": "2020-10-15T22:23:26.521Z",
     "contributors": [
       "mfuji09",
       "oreno4649"
@@ -17745,20 +17720,6 @@
       "mfuji09",
       "fscholz",
       "sou3ilow"
-    ]
-  },
-  "Web/API/Range/startContainer": {
-    "modified": "2020-10-15T22:23:26.223Z",
-    "contributors": [
-      "mfuji09",
-      "oreno4649"
-    ]
-  },
-  "Web/API/Range/startOffset": {
-    "modified": "2020-10-15T22:23:26.372Z",
-    "contributors": [
-      "mfuji09",
-      "oreno4649"
     ]
   },
   "Web/API/ReadableByteStreamController": {
@@ -43842,6 +43803,45 @@
     "contributors": [
       "Uemmra3",
       "kenji-yamasaki"
+    ]
+  },
+  "conflicting/Web/API/AbstractRange/collapsed_bb573fe51b2b71e08a41fd32a8812e0ceb60cca4ac78752b2db7aa6902dbe001": {
+    "modified": "2020-07-23T11:30:31.557Z",
+    "contributors": [
+      "mfuji09",
+      "fscholz",
+      "basemnassar11",
+      "Luna8bit",
+      "Mgjbot",
+      "Shimono"
+    ]
+  },
+  "conflicting/Web/API/AbstractRange/endContainer_b288c8bbc401b6148515c83684e709465dc1b909d4ab5b3802a2a6c7ac383188": {
+    "modified": "2020-10-15T22:23:26.617Z",
+    "contributors": [
+      "mfuji09",
+      "oreno4649"
+    ]
+  },
+  "conflicting/Web/API/AbstractRange/endOffset_3301e460a31a527ddc988c3a3f1e76a177a4d5481f654f21598be4387f3121b2": {
+    "modified": "2020-10-15T22:23:26.521Z",
+    "contributors": [
+      "mfuji09",
+      "oreno4649"
+    ]
+  },
+  "conflicting/Web/API/AbstractRange/startContainer": {
+    "modified": "2020-10-15T22:23:26.223Z",
+    "contributors": [
+      "mfuji09",
+      "oreno4649"
+    ]
+  },
+  "conflicting/Web/API/AbstractRange/startOffset_d3baad9005e54379315cd1f8ad09df13a49c4066b6cc3794c54617dc5b6f8ec2": {
+    "modified": "2020-10-15T22:23:26.372Z",
+    "contributors": [
+      "mfuji09",
+      "oreno4649"
     ]
   },
   "conflicting/Web/API/Document": {
