@@ -2,12 +2,12 @@
 title: Range
 slug: Web/API/Range
 l10n:
-  sourceCommit: 2937558d5ed1e03d7f60b2de71dd9c17f490166e
+  sourceCommit: f314991b236fce81b712a6df59e4643de0f98449
 ---
 
 {{APIRef("DOM")}}
 
-**`Range`** インターフェイスは、ノードやテキストノードの部品を含むことができる文書の範囲を表します。
+**`Range`** インターフェイスは、特定のノードやテキストノードの部分を含むことができる文書の範囲を表します。
 
 範囲は {{ domxref("Document.createRange()") }} メソッドにより生成することができます。また、 {{domxref("Selection")}} オブジェクトの {{domxref("Selection/getRangeAt", "getRangeAt()")}} メソッドや {{domxref("Document")}} オブジェクトの {{domxref("Document/caretRangeFromPoint", "caretRangeFromPoint()")}} メソッドにより取得することもできます。
 
@@ -15,27 +15,17 @@ l10n:
 
 {{InheritanceDiagram}}
 
-## インスタンスプロパティ
-
-_継承しているプロパティはありません。_
-
-- {{domxref("Range.collapsed")}} {{ReadOnlyInline}}
-  - : 論理値で、範囲の始点と終点が同じ位置にあるか否かを示します。
-- {{domxref("Range.commonAncestorContainer")}} {{ReadOnlyInline}}
-  - : `startContainer` と `endContainer` をともに含む、最も深い {{ domxref("Node") }} を返します。
-- {{domxref("Range.endContainer")}} {{ReadOnlyInline}}
-  - : `Range` の終点を含む {{ domxref("Node") }} を返します。
-- {{domxref("Range.endOffset")}} {{ReadOnlyInline}}
-  - : `endContainer` の中での `Range` の終点の位置を示す数字を返します。
-- {{domxref("Range.startContainer")}} {{ReadOnlyInline}}
-  - : `Range` の始点を含む {{ domxref("Node") }} を返します。
-- {{domxref("Range.startOffset")}} {{ReadOnlyInline}}
-  - : `startContainer` の中での `Range` の始点の位置を示す数字を返します。
-
 ## コンストラクター
 
 - {{ domxref("Range.Range()", "Range()") }}
-  - : 始点および終点がグローバルな {{domxref("Document")}} である `Range` オブジェクトを返します。
+  - : 先頭および末尾がグローバルな {{domxref("Document")}} である `Range` オブジェクトを返します。
+
+## インスタンスプロパティ
+
+_親インターフェイスである {{domxref("AbstractRange")}} から継承したプロパティもあります。_
+
+- {{domxref("Range.commonAncestorContainer")}} {{ReadOnlyInline}}
+  - : `startContainer` と `endContainer` をともに含む、最も深い {{ domxref("Node") }} を返します。
 
 ## インスタンスメソッド
 
