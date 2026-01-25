@@ -281,7 +281,7 @@ body {
 
 下の例では、`polygon()` を使って、テキストを追うための形状を作成しました。どの値を変更しても、形状がどのように変化するかを見ることができます。
 
-```html hidden live-sample___polygon
+```html-nolint hidden live-sample___polygon
 <div class="box">
   <div class="shape"></div>
   <p>
