@@ -3,8 +3,6 @@ title: 'TypeError: can''t define property "x": "obj" is not extensible'
 slug: Web/JavaScript/Reference/Errors/Cant_define_property_object_not_extensible
 ---
 
-{{jsSidebar("Errors")}}
-
 ## 错误提示
 
 ```plain

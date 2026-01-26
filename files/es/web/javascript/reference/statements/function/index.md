@@ -18,11 +18,9 @@ function nombre([parametro1] [,parametro2] [..., parametroN]) {sentencias}
 ```
 
 - `nombre`
-
   - : El nombre de la función.
 
 - `parametroN`
-
   - : El nombre de un argumento que se pasa a la función. Una función puede tener hasta 255 argumentos.
 
 - `sentencias`

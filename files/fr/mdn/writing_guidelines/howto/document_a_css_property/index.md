@@ -1,11 +1,10 @@
 ---
 title: Comment documenter une propriété CSS
+short-title: Documenter une propriété CSS
 slug: MDN/Writing_guidelines/Howto/Document_a_CSS_property
 l10n:
-  sourceCommit: 1e208a73d7f2b6da8012a7ff6a717371b70f1791
+  sourceCommit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
 ---
-
-{{MDNSidebar}}
 
 Au fur et à mesure que les normes [CSS](/fr/docs/Web/CSS) évoluent, de nouvelles propriétés sont ajoutées. La [référence CSS](/fr/docs/Web/CSS/Reference) sur MDN Web Docs doit être maintenue à jour avec ces développements. Cet article fournit des instructions pas à pas pour créer une page de référence des propriétés CSS.
 
@@ -42,4 +41,4 @@ Lorsque vous créez une page de référence, vous devez ajouter des exemples. Po
 > [!NOTE]
 > Si l'anglais n'est pas votre langue maternelle ou que vous ne l'utilisez pas couramment, n'hésitez pas à demander une relecture en français via le canal [#l10n-fr](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org) pour assurer la clarté de votre contribution.
 
-Après avoir créé la page de la propriété, soumettez-la en tant que [<i lang="en">Pull Request</i>](https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request). Un membre de notre équipe de révision sera automatiquement désigné pour réviser votre page.
+Après avoir créé la page de la propriété, soumettez-la en tant que <i lang="en">Pull Request</i>. Un membre de notre équipe de révision sera automatiquement désigné pour réviser votre page.

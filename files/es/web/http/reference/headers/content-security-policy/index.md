@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Security-Policy
 original_slug: Web/HTTP/Headers/Content-Security-Policy
 ---
 
-{{HTTPSidebar}}
-
 La cabecera HTTP **`Content-Security-Policy`** en la respuesta permite a los administradores de un sitio web controlar los recursos que el User-Agent puede cargar a una pagina. Con algunas (Poquísimas) excepciones, las políticas implican principalmente especificar el servidor de origen la protección de puntos finales del script. Esto ayuda a protegerse contra ataques Cross-site scripting ({{Glossary("XSS")}}).
 
 Para mas información, ve también este articulo en [Content Security Policy (CSP)](/es/docs/Web/HTTP/Guides/CSP).
@@ -38,7 +36,6 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 #### Lista de Content Security Policy Fetch directives
 
 - {{CSP("child-src")}}
-
   - : Define los origenes válidos para [web workers](/es/docs/Web/API/Web_Workers_API) y contextos de navegación anidados cargados usando elementos como {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}.
 
     > [!WARNING]
@@ -59,7 +56,6 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("media-src")}}
   - : Especifica origenes válidos para carga de archivos usando elementos como {{HTMLElement("audio")}} , {{HTMLElement("video")}} y {{HTMLElement("track")}}.
 - {{CSP("object-src")}}
-
   - : Specifies valid sources for the {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements.
 
     Elements controlled by `object-src` are perhaps coincidentally considered legacy HTML elements and aren't recieving new standardized features (such as the security attributes `sandbox` or `allow` for `<iframe>`). Therefore it is **recommended** to restrict this fetch-directive (e.g. explicitly set `object-src 'none'` if possible).
@@ -84,7 +80,7 @@ Document directives govern the properties of a document or [worker](/es/docs/Web
 - {{CSP("plugin-types")}}
   - : Restricts the set of plugins that can be embedded into a document by limiting the types of resources which can be loaded.
 - {{CSP("sandbox")}}
-  - : Enables a sandbox for the requested resource similar to the {{HTMLElement("iframe")}} [`sandbox`](/es/docs/Web/HTML/Element/iframe#sandbox) attribute.
+  - : Enables a sandbox for the requested resource similar to the {{HTMLElement("iframe")}} [`sandbox`](/es/docs/Web/HTML/Reference/Elements/iframe#sandbox) attribute.
 - {{CSP("disown-opener")}} {{deprecated_inline}}
   - : Ensures a resource will disown its opener when navigated to.
 
@@ -104,7 +100,6 @@ Navigation directives govern to which location a user can navigate to or submit 
 Reporting directives control the reporting process of CSP violations. See also the {{HTTPHeader("Content-Security-Policy-Report-Only")}} header.
 
 - {{CSP("report-uri")}} {{deprecated_inline}}
-
   - : Instructs the user agent to report attempts to violate the Content Security Policy. These violation reports consist of {{Glossary("JSON")}} documents sent via an HTTP `POST` request to the specified URI.
 
     > [!WARNING]

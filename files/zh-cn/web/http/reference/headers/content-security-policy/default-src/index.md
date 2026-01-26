@@ -3,8 +3,6 @@ title: CSP：default-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/default-src
 ---
 
-{{HTTPSidebar}}
-
 HTTP {{HTTPHeader("Content-Security-Policy")}}（CSP）的 **`default-src`** 指令可以为其他 CSP {{Glossary("fetch directive", "fetch 指令")}}提供回退。对于以下列出的指令，假如不存在的话，那么用户代理会查找并应用 `default-src` 指令的值：
 
 - {{CSP("child-src")}}

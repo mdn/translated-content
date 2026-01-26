@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 83f30ecaaeb6227dc0d4551f71eb8be1cacb8e94
 ---
 
-{{GlossarySidebar}}
-
 OpenSSL 是开源的 {{glossary("TLS")}}、{{glossary("SSL")}} 实现。
 
 ## 参见

@@ -19,9 +19,7 @@ new ResizeObserver(callback)
 ### 引数
 
 - `callback`
-
   - : 監視中のものに寸法の変更が発生するたびに呼び出される関数です。この関数は 2 つの引数で呼び出されます。
-
     - `entries`
       - : {{domxref('ResizeObserverEntry')}} オブジェクトの配列で、それぞれの変更の後で要素の新しい寸法にアクセスするために使用することができます。
     - `observer`

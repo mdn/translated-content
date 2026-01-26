@@ -33,9 +33,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `newState`
       - : {{WebExtAPIRef('idle.IdleState')}}. Le nouvel état est inactif.
 
@@ -58,8 +56,6 @@ browser.idle.onStateChanged.addListener(newState);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.idle`](https://developer.chrome.com/docs/extensions/reference/api/idle). Cette documentation est dérivée de [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

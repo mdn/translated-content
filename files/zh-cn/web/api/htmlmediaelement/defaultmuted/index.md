@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLMediaElement.defaultMuted`** 属性反映了 HTML 属性 [`muted`](/zh-CN/docs/Web/HTML/Element/video#muted)。该属性用于表明媒体元素的音频输出是否默认为静音。此属性没有动态效果，使用 {{domxref("HTMLMediaElement.muted", "muted")}} 属性来静音和取消静音。
+**`HTMLMediaElement.defaultMuted`** 属性反映了 HTML 属性 [`muted`](/zh-CN/docs/Web/HTML/Reference/Elements/video#muted)。该属性用于表明媒体元素的音频输出是否默认为静音。此属性没有动态效果，使用 {{domxref("HTMLMediaElement.muted", "muted")}} 属性来静音和取消静音。
 
 ## 返回值
 

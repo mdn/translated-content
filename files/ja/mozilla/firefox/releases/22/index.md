@@ -3,8 +3,6 @@ title: Firefox 22 for developers
 slug: Mozilla/Firefox/Releases/22
 ---
 
-{{FirefoxSidebar}}
-
 Gecko 22 を搭載した Firefox 22 は米国時間 2013 年 6 月 25 日にリリースされました。このページでは、開発者に影響する Firefox 22 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -39,7 +37,7 @@ Gecko 22 を搭載した Firefox 22 は米国時間 2013 年 6 月 25 日にリ�
 
 ### CSS
 
-- [CSS Flexbox layout](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) をデフォルトで有効にしました ([Firefox バグ 841876](https://bugzil.la/841876))。
+- [CSS Flexbox layout](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) をデフォルトで有効にしました ([Firefox バグ 841876](https://bugzil.la/841876))。
 - 仕様書の変更に従って、{{cssxref("min-width")}} および {{cssxref("min-height")}} の初期値を flexbox アイテムでも `0` に戻しました ([Firefox バグ 848539](https://bugzil.la/848539))。
 - CSS 条件文 ({{cssxref("@supports")}} および {{domxref("CSS.supports")}}) をデフォルトで有効にしました ([Firefox バグ 855455](https://bugzil.la/855455))。
 - {{cssxref("background")}} 短縮プロパティで {{cssxref("background-clip")}} および {{cssxref("background-origin")}} プロパティをサポートしました ([Firefox バグ 570896](https://bugzil.la/570896))。

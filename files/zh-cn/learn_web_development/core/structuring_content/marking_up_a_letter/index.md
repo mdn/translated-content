@@ -1,31 +1,18 @@
 ---
-title: 标记信件
+title: 挑战：标记信件
 slug: Learn_web_development/Core/Structuring_content/Marking_up_a_letter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content")}}
 
 写信是每个人的必备技能，它也是测验文本格式化技能的一个不错的办法呀！本次测验要求你为你一封写好的信做出标记，以测验你基础和高级的 HTML 文本格式化技能，包括超链接等等。此外将测验你对一些 HTML `<head>` 内容的熟悉程度。
-
-<table>
- <tbody>
-  <tr>
-   <th scope="row">前提：</th>
-   <td>阅读并掌握以下文章的内容：<a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax">开始学习 HTML</a>、<a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">“头”里有什么？HTML 元信息</a>、<a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML 文字处理初步</a>、<a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links">创建超链接</a>和<a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features">高级文字格式</a>。</td>
-  </tr>
-  <tr>
-   <th scope="row">学习目标：</th>
-   <td>测验对 HTML 文本格式和超链接基本和高级用法、HTML <code>&lt;head&gt;</code> 内容的理解程度。</td>
-  </tr>
- </tbody>
-</table>
 
 ## 起点
 
 开始测验之前，请先下载[信件的原始文本](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt)和 [CSS 代码](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/marking-up-a-letter-start/css.txt)。然后用文本编辑器（用 [CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/) 等在线编辑工具亦可）创建一个新的 `.html` 文件来进行测验。
 
 > [!NOTE]
-> 如果你遇到了困难，请联系我们以寻求帮助——见本页面底部的[评估或进一步帮助](#评估或进一步帮助)。
+> 如果你遇到了困难，可以通过[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)联系我们。
 
 ## 项目概要
 
@@ -65,17 +52,5 @@ slug: Learn_web_development/Core/Structuring_content/Marking_up_a_letter
 以下截图展示了这封信标记完成后可能的外观。
 
 ![Example](letter-update.png)
-
-## 评估或进一步帮助
-
-如果你希望对自己的工作成果进行打分评估，或者遇到了困难并希望寻求帮助：
-
-1. 将你完成的内容放到在线、可分享的编辑器，如：[CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/)。
-2. 在 [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250) 中发贴寻求打分评估或帮助。你的贴子需要包含：
-
-   - 一个描述的标题，如：“Assessment wanted for Marking up a letter”。
-   - 你尝试的详细过程，以及你希望我们能够做什么，例如：你遇到了困难，想要寻求帮助；或希望得到打分评估。
-   - 一个指向用于打分评估或寻求帮助的示例代码的链接（使用上文中提到的任意一种在线的、可分享的编辑器）。这是一种很好的形式——如果别人没法看到你的代码，他们很难对你提供代码上的帮助。
-   - 一个指向实际任务或评估页面的链接，以便我们找到你需要得到帮助的问题。
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content")}}

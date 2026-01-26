@@ -43,7 +43,7 @@ if (elem.requestFullscreen) {
 
 ### 当全屏请求失败时
 
-你并不总是可以进入全屏模式。例如 {{HTMLElement("iframe")}} 元素具有 [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen) 属性，可选择是否允许将其内容以全屏模式显示。另外，几种特定的内容，比如窗体插件（windowed plug-ins），不能以全屏模式显示。尝试将不能以全屏模式显示的元素（或者此元素的父元素和后代元素）的时候，全屏请求将不起作用。而相应元素会收到一个 `fullscreenerror` 事件。当全屏请求失败时，Firefox 会在 Web 控制台上打印一条错误信息解释请求为什么失败。但是在 Chrome 和新版的 Opera 中，不会生成这样的警告。
+你并不总是可以进入全屏模式。例如 {{HTMLElement("iframe")}} 元素具有 [`allowfullscreen`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen) 属性，可选择是否允许将其内容以全屏模式显示。另外，几种特定的内容，比如窗体插件（windowed plug-ins），不能以全屏模式显示。尝试将不能以全屏模式显示的元素（或者此元素的父元素和后代元素）的时候，全屏请求将不起作用。而相应元素会收到一个 `fullscreenerror` 事件。当全屏请求失败时，Firefox 会在 Web 控制台上打印一条错误信息解释请求为什么失败。但是在 Chrome 和新版的 Opera 中，不会生成这样的警告。
 
 > [!NOTE]
 > 全屏请求必须在事件处理器中调用，否则将会被拒绝。
@@ -129,4 +129,4 @@ function toggleFullScreen() {
 - {{DOMxRef("Document.fullscreen")}}
 - {{DOMxRef("Document.fullscreenElement")}}
 - {{CSSxRef(":fullscreen")}}, {{CSSxRef("::backdrop")}}
-- [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen)
+- [`allowfullscreen`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)

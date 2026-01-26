@@ -3,7 +3,7 @@ title: Trabajando con objetos
 slug: Web/JavaScript/Guide/Working_with_objects
 ---
 
-{{jsSidebar("Guía de JavaScript")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
+{{jsSidebar("Guía de JavaScript")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain")}}
 
 JavaScript está diseñado en un paradigma simple basado en objetos. Un objeto es una colección de propiedades, y una propiedad es una asociación entre un nombre (o _clave_) y un valor. El valor de una propiedad puede ser una función, en cuyo caso la propiedad es conocida como un método. Además de los objetos que están predefinidos en el navegador, puedes definir tus propios objetos. Este capítulo describe cómo usar objetos, propiedades, funciones y métodos; y cómo crear tus propios objectos.
 
@@ -287,7 +287,7 @@ fish.displayType(); // Muestra: Fishes
 
 ## Herencia
 
-Todos los objetos en JavaScript heredan de al menos otro objeto. El objeto del que se hereda se conoce como el prototipo, y las propiedades heredadas se pueden encontrar en el objeto `prototype` del constructor. Para más información consulta [Herencia y cadena prototipos](/es/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+Todos los objetos en JavaScript heredan de al menos otro objeto. El objeto del que se hereda se conoce como el prototipo, y las propiedades heredadas se pueden encontrar en el objeto `prototype` del constructor. Para más información consulta [Herencia y cadena prototipos](/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 
 ## Propiedades del objeto indexado
 
@@ -526,4 +526,4 @@ Para obtener más información sobre los operadores de comparación, consulta [O
 - Para profundizar más, lee sobre los [detalles del modelo de objetos de JavaScript](/es/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain).
 - Para obtener más información sobre las clases de ECMAScript 2015 (una forma alternativa de crear objetos), lee el capítulo [Clases de JavaScript](/es/docs/Web/JavaScript/Reference/Classes).
 
-{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain")}}

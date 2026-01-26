@@ -7,9 +7,9 @@ l10n:
 
 {{deprecated_header}}{{APIRef("HTML DOM")}}
 
-已过时的 **`HTMLFontElement.color`** 属性是一个反映 [`color`](/zh-CN/docs/Web/HTML/Element/font#color) HTML 属性的字符串，包含命名颜色或以十六进制 #RRGGBB 格式指定的颜色。
+已过时的 **`HTMLFontElement.color`** 属性是一个反映 [`color`](/zh-CN/docs/Web/HTML/Reference/Elements/font#color) HTML 属性的字符串，包含命名颜色或以十六进制 #RRGGBB 格式指定的颜色。
 
-字符串的格式必须遵循以下 HTML 微语法（参见 [`<color>`](/zh-CN/docs/Web/CSS/color_value)）之一：
+字符串的格式必须遵循以下 HTML 微语法（参见 [`<color>`](/zh-CN/docs/Web/CSS/Reference/Values/color_value)）之一：
 
 | 微语法                   | 描述                              | 示例                      |
 | ------------------------ | --------------------------------- | ------------------------- |

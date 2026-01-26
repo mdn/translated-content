@@ -12,7 +12,7 @@ l10n:
 
 ## 値
 
-文字列で、コンテナーの [`id`](/ja/docs/Web/HTML/Global_attributes/id) 属性が入ります。
+文字列で、コンテナーの [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性が入ります。
 
 ## 仕様書
 

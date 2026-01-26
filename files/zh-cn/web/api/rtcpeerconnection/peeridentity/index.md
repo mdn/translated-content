@@ -13,7 +13,8 @@ slug: Web/API/RTCPeerConnection/peerIdentity
 
 当验证远程的身份 ID 出错时，promise 将返回拒绝。如果目标节点身份不存在，`peerIdentity` 将被设为 一个 promise 对象，并重启验证过程（一个断言）, 直到成功或者不再想继续。
 
-> **备注：** {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}} 返回的 promise 将不会成功返回，除非目标节点身份信息可用。如不可用，则`setRemoteDescription()` 将被拒绝。若无目标节点 ID，就不不需要等`setRemoteDescription()` 这个返回验证成功了。
+> [!NOTE]
+> {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}} 返回的 promise 将不会成功返回，除非目标节点身份信息可用。如不可用，则`setRemoteDescription()` 将被拒绝。若无目标节点 ID，就不不需要等`setRemoteDescription()` 这个返回验证成功了。
 
 ## 示例
 

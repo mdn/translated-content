@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 37163d27e0625a83a3f8633fe58b9041867adeaa
 ---
 
-{{CSSRef}}
-
 La propiedad **`text-decoration-line`** de [CSS](/es/docs/Web/CSS) establece el tipo de decoración que se utiliza en el texto de un elemento, como un subrayado o un sobrerayado.
 
 {{InteractiveExample("CSS Demo: text-decoration-line")}}

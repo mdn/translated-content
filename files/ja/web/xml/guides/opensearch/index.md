@@ -37,7 +37,6 @@ OpenSearch 記述ファイルは、[検索プラグインの自動検出](#検�
 - InputEncoding
   - : 検索エンジンへ送信する入力欄に使用する[文字エンコーディング](/ja/docs/Glossary/Character_encoding)です。
 - Image
-
   - : 検索エンジンのアイコンの URL です。可能であれば、 16×16 の画像を `image/x-icon` 形式で (`/favicon.ico` など)、 および 64×64 の画像を `image/jpeg` または `image/png` 形式で含めてください。
 
     この URL には [`data:` URL スキーム](/ja/docs/Web/URI/Reference/Schemes/data)を使用することもできます。 (`data:` URL はアイコンファイルから [The `data:` URL kitchen](https://software.hixie.ch/utilities/cgi/data/data) で生成することができます。)
@@ -56,11 +55,9 @@ OpenSearch 記述ファイルは、[検索プラグインの自動検出](#検�
     ![Firefox の検索ボックスに表示される Google の検索候補](searchsuggestionsample.png)
 
 - Url
-
   - : 検索に使う 1 つまたは複数の URL を記述します。 `template` 属性は検索クエリーのベース URL を指定します。
 
     Firefox は 3 種類の URL に対応しています。
-
     - `type="text/html"` は実際の検索結果そのものの URL を指定します。
     - `type="application/x-suggestions+json"` は検索候補を読み取るための URL を指定します。 Firefox 63 以降では、 `type="application/json"` をこの別名として受け付けます。
     - `type="application/x-moz-keywordsearch"` はロケーションバーに入力されるキーワード検索の際に使用する URL を指定します。これは Firefox のみが対応しています。

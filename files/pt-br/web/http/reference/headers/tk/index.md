@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Tk
 original_slug: Web/HTTP/Headers/Tk
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de resposta **`Tk`** indica o status de rastreamento que foi aplicado à requisição correspondente.
 
 <table class="properties">

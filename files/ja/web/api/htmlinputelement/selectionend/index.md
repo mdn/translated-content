@@ -10,7 +10,8 @@ l10n:
 
 **`selectionEnd`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、選択テキストの末尾のインデックスを表す数値です。選択がない場合、これは現在のテキスト入力カーソル位置の直後の文字のオフセットを返します。
 
-> **メモ:** [WHATWG のフォーム仕様書](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply)によると、 `selectionEnd` プロパティは text、search、URL、tel、password の各入力型にのみ適用されます。現行のブラウザーでは、それ以外の入力型に `selectionEnd` プロパティを設定すると例外が発生します。さらに、テキスト以外の入力要素で `selectionEnd` プロパティにアクセスすると、このプロパティは `null` を返します。
+> [!NOTE]
+> [WHATWG のフォーム仕様書](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply)によると、 `selectionEnd` プロパティは text、search、URL、tel、password の各入力型にのみ適用されます。現行のブラウザーでは、それ以外の入力型に `selectionEnd` プロパティを設定すると例外が発生します。さらに、テキスト以外の入力要素で `selectionEnd` プロパティにアクセスすると、このプロパティは `null` を返します。
 
 `selectionEnd` が `selectionStart` よりも小さくなった場合、両者は `selectionEnd` と扱われます。
 

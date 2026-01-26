@@ -76,7 +76,8 @@ Para {{SVGElement('animate')}}, o atributo `fill` define o estado final de uma a
 
 ## animateColor
 
-> **Aviso:**A partir da versão de animação para modelos SVG2 {{SVGElement('animateColor')}} está obsoleto e não deve ser utilizado. Ao invés disso utilize {{SVGElement('animate')}}.
+> [!WARNING]
+> A partir da versão de animação para modelos SVG2 {{SVGElement('animateColor')}} está obsoleto e não deve ser utilizado. Ao invés disso utilize {{SVGElement('animate')}}.
 
 Para {{SVGElement('animateColor')}}, o atributo `fill` define o estado final de uma animação.
 

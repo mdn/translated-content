@@ -51,7 +51,7 @@ slug: Web/API/Canvas_API/Manipulating_video_using_canvas
 
 从这里带出的关键有：
 
-1. 这篇文档布置了两个 [`canvas`](/zh-CN/docs/Web/HTML/Element/canvas) 元素，分别带着 ID 为 `c1` 和 `c2` 的属性。Canvas `c1` 用于显示原视频的当前帧，而 `c2` 用于显示执行了色度键控效果后的视频；`c2` 预先加载将被用于替换视频中绿幕（绿色背景）的静态图像。
+1. 这篇文档布置了两个 [`canvas`](/zh-CN/docs/Web/HTML/Reference/Elements/canvas) 元素，分别带着 ID 为 `c1` 和 `c2` 的属性。Canvas `c1` 用于显示原视频的当前帧，而 `c2` 用于显示执行了色度键控效果后的视频；`c2` 预先加载将被用于替换视频中绿幕（绿色背景）的静态图像。
 2. JavaScript 代码从一个名为 `main.js` 的脚本引入；这个脚本使用 JavaScript 1.8 特性，所以在 22 行引入脚本时它的 version（版本）是指定的。
 3. 当文档加载时，在 `main.js` 里的 `processor.doLoad()` 方法开始执行。
 

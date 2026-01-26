@@ -21,7 +21,6 @@ getUserMedia(constraints, successCallback, errorCallback)
 - `constraints`
   - : {{domxref("MediaStreamConstaints")}} 对象指定了请求使用媒体的类型，还有每个类型的所需要的参数。具体细节请参见 {{domxref("MediaDevices.getUserMedia()")}} 方法下面的 [constraints](/zh-CN/docs/Web/API/MediaDevices/getUserMedia#parameters) 部分。
 - `successCallback`
-
   - : 当调用成功后，successCallback 中指定的函数就被调用，包含了媒体流的 {{domxref("MediaStream")}} 对象作为它的参数，你可以把媒体流对象赋值给合适的元素，然后使用它，就像下面的例子一样：
 
     ```js
@@ -35,7 +34,6 @@ getUserMedia(constraints, successCallback, errorCallback)
     ```
 
 - `errorCallback`
-
   - : 当调用失败，errorCallback 中指定的函数就会被调用，{{domxref("MediaStreamError")}} 对象作为它唯一的参数；此对象基于 {{domxref("DOMException")}} 对象构建。错误码描述见参见以下：
 
     | 错误                    | 描述                               |

@@ -34,7 +34,7 @@ l10n:
 
 `aria-brailleroledescription` 属性は、支援技術がロールの名前を点字でローカライズして表現する方法を上書きするため、値が不適切であると、ユーザーは点字ディスプレイ上の要素を理解して操作できなくなります。
 
-[`aria-roledescription`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) が与えられている場合にのみ `aria-brailleroledescription` を使用してください。ただし、`aria-roledescription`の値が点字で機能する場合は、その属性の点字バージョンは必要ありません。一般に `aria-brailleroledescription` は、点字では `aria-roledescription` が冗長すぎるという、まれな場合にのみ使用してください。
+[`aria-roledescription`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription) が与えられている場合にのみ `aria-brailleroledescription` を使用してください。ただし、`aria-roledescription`の値が点字で機能する場合は、その属性の点字バージョンは必要ありません。一般に `aria-brailleroledescription` は、点字では `aria-roledescription` が冗長すぎるという、まれな場合にのみ使用してください。
 
 覚えておくべきいくつかのルール:
 
@@ -46,7 +46,8 @@ l10n:
 > [!WARNING]
 > コンテンツが Unicode 点字パターンのみの場合、値はユーザーの優先翻訳テーブルに従って翻訳されません。
 
-> **メモ:** `aria-roledescription` をそのまま `aria-brailleroledescription` に使用しないでください。`aria-roledescription` が適切な点字表現を提供しない場合にのみ、この属性を含めてください。
+> [!NOTE]
+> `aria-roledescription` をそのまま `aria-brailleroledescription` に使用しないでください。`aria-roledescription` が適切な点字表現を提供しない場合にのみ、この属性を含めてください。
 
 次の場合、`aria-brailleroledescription` の値は点字ユーザーに公開されません:
 
@@ -73,5 +74,5 @@ l10n:
 ## 関連情報
 
 - {{domxref("Element.ariaBrailleRoleDescription")}}
-- [`aria-roledescription`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription).
+- [`aria-roledescription`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription).
 - [`Element.ariaRoleDescription`](/ja/docs/Web/API/Element/ariaRoleDescription)

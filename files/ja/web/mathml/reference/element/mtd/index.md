@@ -22,9 +22,9 @@ MathML の `<mtd>` 要素は表組み・行列のセルを表します。{{ Math
 - href
   - : Used to set a hyperlink to a specified URI.
 - mathbackground
-  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/ja/docs/Web/CSS/color_value#color_keywords).
+  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/ja/docs/Web/CSS/Reference/Values/color_value#color_keywords).
 - mathcolor
-  - : The text color. You can use `#rgb`, `#rrggbb` and [HTML color names](/ja/docs/Web/CSS/color_value#color_keywords).
+  - : The text color. You can use `#rgb`, `#rrggbb` and [HTML color names](/ja/docs/Web/CSS/Reference/Values/color_value#color_keywords).
 - rowalign
   - : セル内の垂直方向の揃えを指定します。{{ MathMLElement("mtable") }} や {{ MathMLElement("mtr") }} で指定された値を上書きします。
     取り得る値は `axis`，`baseline`，`bottom，center，top` です。

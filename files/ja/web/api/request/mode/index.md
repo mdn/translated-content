@@ -19,19 +19,15 @@ l10n:
 以下の値のいずれかです。
 
 - `same-origin`
-
   - : このモードを設定してほかのオリジンにリクエストをした場合、結果はエラーになります。リクエストが常に同一オリジンに行われることを保証するために使用できます。
 
 - `no-cors`
-
   - : オリジン間リクエストの CORS を無効にします。レスポンスは不透明となり、ヘッダーと本体は JavaScript では利用できません。
 
 - `cors`
-
   - : このリクエストがオリジン間リクエストであれば、[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/Guides/CORS) の仕組みを使用します。
 
 - `navigate`
-
   - : ナビゲーションに対応しているモードです。 `navigate` 値は HTML ナビゲーションでのみ使用されることを意図しています。 navigate リクエストは文書内のナビゲーションをするときだけ作成されます。
 
 #### 既定のモード
@@ -40,7 +36,7 @@ l10n:
 
 たとえば、 `Request` オブジェクトが {{domxref("Request.Request", "Request()")}} コンストラクターで生成された場合、 `mode` の値は `cors` に設定されます。
 
-しかし、リクエストが {{domxref("Request.Request", "Request()")}} コンストラクター以外で生成された場合は、ふつう `no-cors` がモードとして設定されます。たとえば、マークアップから生成された埋め込みリソースのようなリクエストは、 [`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin) 属性が設定されていない限り、 `no-cors`を利用します。そのようなものの例として、 {{HTMLElement("link")}} や {{HTMLElement("script")}} 要素（ただしモジュールを除く）、 {{HTMLElement("img")}}、{{HTMLElement("audio")}}、{{HTMLElement("video")}}、{{HTMLElement("object")}}、{{HTMLElement("embed")}}、{{HTMLElement("iframe")}} 要素などが存在します。
+しかし、リクエストが {{domxref("Request.Request", "Request()")}} コンストラクター以外で生成された場合は、ふつう `no-cors` がモードとして設定されます。たとえば、マークアップから生成された埋め込みリソースのようなリクエストは、 [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) 属性が設定されていない限り、 `no-cors`を利用します。そのようなものの例として、 {{HTMLElement("link")}} や {{HTMLElement("script")}} 要素（ただしモジュールを除く）、 {{HTMLElement("img")}}、{{HTMLElement("audio")}}、{{HTMLElement("video")}}、{{HTMLElement("object")}}、{{HTMLElement("embed")}}、{{HTMLElement("iframe")}} 要素などが存在します。
 
 ## 例
 

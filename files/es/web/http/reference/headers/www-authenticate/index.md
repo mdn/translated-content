@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/WWW-Authenticate
 original_slug: Web/HTTP/Headers/WWW-Authenticate
 ---
 
-{{HTTPSidebar}}
-
 La cabezera de la respuesta HTTP **`WWW-Authenticate`** define el método de autentificación que debe ser utilizado para acceder al recurso solicitado.
 
 La cabezera `WWW-Authenticate` es enviada junto al estado {{HTTPStatus("401")}} `Unauthorized` en la respuesta.

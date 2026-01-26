@@ -39,7 +39,6 @@ Where:
 - \<gradient>
   - : La función -webkit-gradient que se usará como imagen de máscara.
 - none
-
   - : Para especificar que la caja del borde no va a tener imagen de máscara.
 
 - \<length>

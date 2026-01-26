@@ -7,7 +7,8 @@ l10n:
 
 {{MDNSidebar}}
 
-> **メモ:** _この説明文全体を削除してから公開してください。_
+> [!NOTE]
+> _この説明文全体を削除してから公開してください。_
 >
 > **訳注:** このテンプレートは翻訳記事用です。新たな記事を執筆する場合は、英語版を参照してください。日本語の単独記事を立項することはできません。）
 >
@@ -29,10 +30,10 @@ l10n:
 >
 > - **title**
 >   - : タイトルの見出しで、ページの先頭に表示されます。書式は _:NameOfTheSelector_ です。
->     例えば、 [`:hover`](/ja/docs/Web/CSS/:hover) セレクターのタイトルは _:hover_ です。
+>     例えば、 [`:hover`](/ja/docs/Web/CSS/Reference/Selectors/:hover) セレクターのタイトルは _:hover_ です。
 > - **slug**
 >   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。 これは `Web/CSS/:NameOfTheSelector` のような書式です。
->     例えば、 [`:hover`](/ja/docs/Web/CSS/:hover) セレクターのスラッグは `Web/CSS/:hover` です。
+>     例えば、 [`:hover`](/ja/docs/Web/CSS/Reference/Selectors/:hover) セレクターのスラッグは `Web/CSS/:hover` です。
 > - **sourceCommit**
 >   - : （翻訳記事のみ）この記事の翻訳元となる英語版記事を GitHub にコミットした際のコミット ID を記述します。 GitHub 上で英語版記事のコミット ID を確認してください。
 >
@@ -67,7 +68,7 @@ l10n:
 >
 > _公開する前に、この説明文全体を削除することを忘れないでください。_
 
-{{CSSRef}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 概要段落 - 始めに、セレクターの名前とそれが何をするのかを説明してください。これはできれば 1 つか 2 つの短い文章にしてください。
 

@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef}}
 
-**`DOMContentLoaded`** イベントは、HTML の文書が完全に読み込まれ構文解析され、すべての遅延スクリプト（[`<script defer src="…">`](/ja/docs/Web/HTML/Element/script#defer) および [`<script type="module">`](/ja/docs/Web/HTML/Element/script#module)）がダウンロードされ、実行されたときに発生します。画像、サブフレーム、非同期スクリプトの読み込みの完了は待ちません。
+**`DOMContentLoaded`** イベントは、HTML の文書が完全に読み込まれ構文解析され、すべての遅延スクリプト（[`<script defer src="…">`](/ja/docs/Web/HTML/Reference/Elements/script#defer) および [`<script type="module">`](/ja/docs/Web/HTML/Reference/Elements/script#module)）がダウンロードされ、実行されたときに発生します。画像、サブフレーム、非同期スクリプトの読み込みの完了は待ちません。
 
 `DOMContentLoaded` はスタイルシートの読み込みを待ちませんが、遅延スクリプトはスタイルシートの読み込みを待ちますし、`DOMContentLoaded` イベントは遅延スクリプトの後にキューイングされます。また、遅延や非同期でないスクリプト（`<script>` など）は、すでに解釈できるスタイルシートの読み込みを待ちます。
 

@@ -3,7 +3,7 @@ title: 語法與型別
 slug: Web/JavaScript/Guide/Grammar_and_types
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
+{{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 
 本章討論 JavaScript 的基本語法與基礎資料類型、包括變數、常數、字元常數
 
@@ -265,7 +265,6 @@ MY_OBJECT.key = "otherValue";
 最新 ECMAScript 標準定義以下七種資料型別:
 
 - 六種基本({{Glossary("Primitive", "primitives")}})資料型別 :
-
   - {{Glossary("Boolean")}}. `true` and `false`.
   - {{Glossary("null")}}. A special keyword denoting a null value. Because JavaScript is case-sensitive, `null` is not the same as `Null`, `NULL`, or any other variant.
   - {{Glossary("undefined")}}. A top-level property whose value is undefined.

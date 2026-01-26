@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d7143e171b5f18fb37a686a7d4947db417fd74f3
 ---
 
-{{AddonSidebar}}
-
 安装并启用来自给定 URL 的主题扩展。
 
 此 API 需要“management”[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)，并且仅适用于已签名的主题。

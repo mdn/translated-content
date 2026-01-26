@@ -321,7 +321,7 @@ El producto final se ve así. Si su navegador es compatible con la API de captur
 
 ## Seguridad
 
-Para poder funcionar cuando la [Política de permisos](/es/docs/Web/HTTP/Permissions_Policy) está habilitada, necesitarás el permiso `display-capture`. Esto se puede hacer usando el encabezado {{Glossary("HTTP")}} {{HTTPHeader("Permissions-Policy")}} o, si está usando la API de captura de pantalla en un {{HTMLElement("iframe") }}, el atributo [`allow`](/es/docs/Web/HTML/Element/iframe#allow) del elemento `<iframe>`.
+Para poder funcionar cuando la [Política de permisos](/es/docs/Web/HTTP/Permissions_Policy) está habilitada, necesitarás el permiso `display-capture`. Esto se puede hacer usando el encabezado {{Glossary("HTTP")}} {{HTTPHeader("Permissions-Policy")}} o, si está usando la API de captura de pantalla en un {{HTMLElement("iframe") }}, el atributo [`allow`](/es/docs/Web/HTML/Reference/Elements/iframe#allow) del elemento `<iframe>`.
 
 Por ejemplo, esta línea en los encabezados HTTP habilitará la API de captura de pantalla para el documento y cualquier elemento {{HTMLElement("iframe")}} incrustado que se cargue desde el mismo origen:
 

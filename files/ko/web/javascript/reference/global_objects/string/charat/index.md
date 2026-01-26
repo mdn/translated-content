@@ -128,7 +128,7 @@ function getWholeChar(str, i) {
 }
 ```
 
-[비구조화 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)을 허용하는 ECMAScript 2016 환경에서는 아래 예제 코드가 더 간결하고, 문자가 [서러게이트 페어](https://ko.wikipedia.org/wiki/UTF-16)가 되는 것을 허용할 때는 증가해야 하는 변수를 자동적으로 증가하기에 위의 코드보다 다소 더 유연합니다.
+[비구조화 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring)을 허용하는 ECMAScript 2016 환경에서는 아래 예제 코드가 더 간결하고, 문자가 [서러게이트 페어](https://ko.wikipedia.org/wiki/UTF-16)가 되는 것을 허용할 때는 증가해야 하는 변수를 자동적으로 증가하기에 위의 코드보다 다소 더 유연합니다.
 
 ```js
 var str = "A\uD87E\uDC04Z"; // We could also use a non-BMP character directly

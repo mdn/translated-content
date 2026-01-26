@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 **`Date`** 通用 HTTP 标头包含了消息创建时的日期和时间。
 
 > [!WARNING]

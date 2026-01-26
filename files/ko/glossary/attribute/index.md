@@ -48,5 +48,5 @@ console.log(attr.value); // `Modified placeholder`를 출력합니다.
 
 ## 같이 보기
 
-- [HTML 특성 참고서](/ko/docs/Web/HTML/Attributes)
-- HTML [전역 특성](/ko/docs/Web/HTML/Global_attributes)
+- [HTML 특성 참고서](/ko/docs/Web/HTML/Reference/Attributes)
+- HTML [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)

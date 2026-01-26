@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLOptionsCollection`** インターフェイスは、 HTML の [`<option>`](/ja/docs/Web/HTML/Element/option) 要素の集合を（文書内の順序で）表し、リストから選択すると共に、任意で項目を変更することもできるメソッドやプロパティを提供します。このオブジェクトが返されるのは、 [select](/ja/docs/Web/API/HTMLSelectElement) の `options` プロパティからのみです。
+**`HTMLOptionsCollection`** インターフェイスは、 HTML の [`<option>`](/ja/docs/Web/HTML/Reference/Elements/option) 要素の集合を（文書内の順序で）表し、リストから選択すると共に、任意で項目を変更することもできるメソッドやプロパティを提供します。このオブジェクトが返されるのは、 [select](/ja/docs/Web/API/HTMLSelectElement) の `options` プロパティからのみです。
 
 {{InheritanceDiagram}}
 

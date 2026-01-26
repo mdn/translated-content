@@ -1,24 +1,30 @@
 ---
 title: Comment
 slug: Web/API/Comment
+l10n:
+  sourceCommit: dcbb1d99185118360cc84b3a0e935e77fe0a03e3
 ---
 
 {{ ApiRef("DOM") }}
 
-**`Comment`** 接口代表标签（markup）之间的文本符号（textual notations）。尽管它通常不会显示出来，但是在查看源码时可以看到它们。在 HTML 和 XML 里，注释（Comments）为 '`<!--`' 和 '`-->`' 之间的内容。在 XML 里，注释中不能出现字符序列 '`--`'。
+**`Comment`** 接口表示标记中的文本注释；虽然这些注释通常不会在页面上显示出来，但它们可以在源代码视图中被查看和阅读。
 
-## 属性
+注释在 HTML 和 XML 中表示为位于 `<!--` 和 `-->` 之间的内容。在 XML 中（例如在 SVG 或 MathML 标记中），注释中不能包含 `--` 字符序列。
 
-_该接口没有特定的属性，但是从其父类 {{domxref("CharacterData")}} 继承属性，以及间接从 {{domxref("Node")}} 继承部分属性。_
+{{InheritanceDiagram}}
+
+## 实例属性
+
+_该接口没有特定的属性，但从其父接口 {{domxref("CharacterData")}} 继承属性，并间接从 {{domxref("Node")}} 接口继承属性。_
 
 ## 构造函数
 
-- {{ domxref("Comment.Comment()", "Comment()") }} {{experimental_inline}}
-  - : 使用文本内容作为参数，返回一个 `Comment` 对象。
+- {{ domxref("Comment.Comment()", "Comment()") }}
+  - : 返回一个新的 `Comment` 对象，以其参数作为文本内容。如果未提供参数，则默认值为一个空字符串 `''`。
 
-## 方法
+## 实例方法
 
-该接口没有特定的方法，但从其父类 {{domxref("CharacterData")}} 继承方法，以及间接从 {{domxref("Node")}} 继承部分方法。
+_该接口没有特定的方法，但从其父接口 {{domxref("CharacterData")}} 继承方法，并间接从 {{domxref("Node")}} 继承基础方法。_
 
 ## 规范
 
@@ -30,4 +36,4 @@ _该接口没有特定的属性，但是从其父类 {{domxref("CharacterData")}
 
 ## 参见
 
-- [DOM 接口索引](/zh-CN/docs/Web/API/Document_Object_Model#dom_接口)
+- [DOM API](/zh-CN/docs/Web/API/Document_Object_Model)

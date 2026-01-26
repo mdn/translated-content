@@ -20,9 +20,7 @@ read(buffer, options)
 - `buffer`
   - : 一个表示要将文件内容读取到的缓冲区的 {{jsxref("ArrayBuffer")}} 或者 `ArrayBufferView` 对象（例如一个 {{jsxref("DataView")}}）。注意：你无法直接操作 `ArrayBuffer` 中的内容，应该先创建一个像 {{jsxref("Int8Array")}} 或者 {{jsxref("DataView")}} 这样的类型化数组对象，用来把缓冲区表示成特定的格式，然后再用类型化数组对象来读写缓冲区的内容。
 - `options` {{optional_inline}}
-
   - : 一个包含以下属性的选项对象：
-
     - `at`
       - : 一个表示应当从文件何处开始读取的字节偏移量数字。
 

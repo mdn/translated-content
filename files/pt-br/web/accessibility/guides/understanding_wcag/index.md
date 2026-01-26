@@ -31,13 +31,11 @@ O WCAG 2.1 inclui:
 
 - todo WCAG 2.0 (verbatim, palavra por palavra)
 - 17 novos Critérios de Sucesso para os níveis A / AA / AAA, endereçando principalmente as necessidades de usuários nas seguintes áreas:
-
   - Acessibilidade Móvel
   - Baixa Visão
   - Cognitiva
 
 - Leia mais sobre o WCAG 2.1:
-
   - Deque: [WCAG 2.1: What is Next for Accessibility Guidelines](https://www.deque.com/blog/wcag-2-1-what-is-next-for-accessibility-guidelines/)
   - TPG: [Web Content Accessibility Guidelines (WCAG) 2.1](https://developer.paciellogroup.com/blog/2018/06/web-content-accessibility-guidelines-wcag-2-1/)
 

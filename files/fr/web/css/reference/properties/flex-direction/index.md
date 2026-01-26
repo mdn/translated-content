@@ -1,0 +1,169 @@
+---
+title: flex-direction
+slug: Web/CSS/Reference/Properties/flex-direction
+original_slug: Web/CSS/flex-direction
+---
+
+{{CSSRef}}
+
+La propriété **`flex-direction`** définit la façon dont les éléments flexibles sont placés dans un conteneur flexible : elle définit l'axe principal et la direction des éléments (normale ou inversée).
+
+{{InteractiveExample("CSS Demo: flex-direction")}}
+
+```css interactive-example-choice
+flex-direction: row;
+```
+
+```css interactive-example-choice
+flex-direction: row-reverse;
+```
+
+```css interactive-example-choice
+flex-direction: column;
+```
+
+```css interactive-example-choice
+flex-direction: column-reverse;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div>Item One</div>
+    <div>Item Two</div>
+    <div>Item Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  width: 80%;
+  display: flex;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  width: 60px;
+  margin: 10px;
+}
+```
+
+On notera que les valeurs `row` et `row-reverse` sont impactées par la direction du conteneur. Si [`dir`](/fr/docs/Web/HTML/Reference/Global_attributes#dir) vaut `ltr`, `row` représente l'axe horizontal allant de la gauche vers la droite et `row-reverse` représente le même axe allant de la droite vers la gauche. Si `dir` vaut `rtl`, `row` correspondra à l'axe horizontal orienté de la droite vers la gauche et `row-reverse` de la gauche vers la droite.
+
+Pour plus d'informations, voir la page [Utiliser les boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts).
+
+## Syntaxe
+
+```css
+/* La direction suit une ligne */
+flex-direction: row;
+
+/* Semblable à <row> mais dans */
+/* la direction opposée        */
+flex-direction: row-reverse;
+
+/* Les lignes de texte sont */
+/* empilées                 */
+flex-direction: column;
+
+/* Semblable à <column> mais dans */
+/* la direction opposée           */
+flex-direction: column-reverse;
+
+/* Valeurs globales */
+flex-direction: inherit;
+flex-direction: initial;
+flex-direction: unset;
+```
+
+### Valeurs
+
+- `row`
+  - : L'axe principal du conteneur flexible suit la direction du texte. Les points **main-start** et **main-end** vont dans la même direction que le contenu.
+- `row-reverse`
+  - : L'axe principal du conteneur flexible suit la direction du texte. Les points **main-start** et **main-end** vont dans la direction opposée au contenu.
+- `column`
+  - : L'axe principal du conteneur flexible suit l'axe de bloc (perpendiculaire à la direction du texte). Les points **main-start** et **main-end** correspondent aux points **before** et **after** de {{cssxref("writing-mode")}}.
+- `column-reverse`
+  - : Se comporte comme `column` mais **main-start** et **main-end** sont échangés.
+
+## Définition formelle
+
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
+
+## Exemples
+
+### HTML
+
+```html
+<h4>Un exemple avec column-reverse</h4>
+<div id="content">
+  <div class="box" style="background-color:red;">A</div>
+  <div class="box" style="background-color:lightblue;">B</div>
+  <div class="box" style="background-color:yellow;">C</div>
+</div>
+<h4>Un exemple avec row-reverse</h4>
+<div id="content1">
+  <div class="box" style="background-color:red;">A</div>
+  <div class="box" style="background-color:lightblue;">B</div>
+  <div class="box" style="background-color:yellow;">C</div>
+</div>
+```
+
+### CSS
+
+```css
+#content {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #c3c3c3;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#content1 {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #c3c3c3;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+}
+```
+
+### Résultat
+
+{{EmbedLiveSample('Exemples', '', '300')}}
+
+## Accessibilité
+
+Lorsqu'on utilise `flex-direction` avec les valeurs `row-reverse` ou `column-reverse`, on crée une déconnexion entre la présentation visuelle du contenu et l'ordre du DOM. Cela aura un impact négatif pour les utilisateurs qui naviguent à l'aide d'outils d'assistance tels que les les lecteurs d'écran. Si l'ordre visuel est important, les utilisateurs de lecteurs d'écran n'auront pas accès à l'ordre correct pour la lecture.
+
+- [Les boîtes flexibles et la déconnexion par rapport à la navigation au clavier, Tink (en anglais)](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)
+- [L'importance de l'ordre de la source, Adrian Roselli (en anglais)](https://adrianroselli.com/2015/09/source-order-matters.html)
+- [Comprendre les règles 1.3 du WCAG](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
+- [Comprendre les critères de réussite 1.3.2 WCAG 2.0, W3C (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html)
+
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- Guide CSS sur les boîtes flexibles : _[Concepts de base](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)_
+- Guide CSS sur les boîtes flexibles : _[Ordonner les éléments flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)_

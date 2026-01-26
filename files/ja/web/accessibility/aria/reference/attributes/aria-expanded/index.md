@@ -19,7 +19,7 @@ l10n:
 
 ### ボタン
 
-ウィジェットを切り替えるボタンは、切り替えられるウィジェットの [`id`](/ja/docs/Web/HTML/Global_attributes/id) が `aria-controls` に設定され、`aria-expanded` がウィジェットの現在の状態に設定されている必要があります。
+ウィジェットを切り替えるボタンは、切り替えられるウィジェットの [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) が `aria-controls` に設定され、`aria-expanded` がウィジェットの現在の状態に設定されている必要があります。
 
 ```html
 <button aria-expanded="false" aria-controls="widget1">Toggle widget</button>
@@ -54,7 +54,8 @@ l10n:
 </p>
 ```
 
-> **メモ:** `aria-expanded` 属性の存在は制御を示します。他の要素の展開状態を制御しない要素にこの属性を含めないようにしてください。
+> [!NOTE]
+> `aria-expanded` 属性の存在は制御を示します。他の要素の展開状態を制御しない要素にこの属性を含めないようにしてください。
 
 ### Treeitems
 
@@ -67,11 +68,9 @@ l10n:
 ## 値
 
 - `false`
-
   - : この要素が所有または制御するグループ化要素は折りたたまれています。
 
 - `true`
-
   - : この要素が所有または制御するグループ化要素は展開されています。
 
 - `undefined` (既定値)
@@ -118,4 +117,4 @@ l10n:
 - [`aria-controls`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls)
 - [`aria-owns`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns)
 - [`aria-hidden`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden)
-- HTML [`hidden`](/ja/docs/Web/HTML/Global_attributes/hidden) 属性
+- HTML [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性

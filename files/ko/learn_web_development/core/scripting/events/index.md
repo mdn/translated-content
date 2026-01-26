@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Events
 original_slug: Learn/JavaScript/Building_blocks/Events
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Return_values","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}
 
 이벤트(event)란 여러분이 프로그래밍하고 있는 시스템에서 일어나는 사건(action) 혹은 발생(occurrence)인데, 이는 여러분이 원한다면 그것들에 어떠한 방식으로 응답할 수 있도록 시스템이 말해주는 것입니다. 예를 들자면, 만약 유저가 웹페이지에 있는 버튼을 고른다면, 여러분은 그 사건에 인포메이션 박스를 표시함으로써 응답하기를 원할지도 모릅니다. 이 문서에서는, 우리는 이벤트에 대한 몇몇 중요한 개념을 논하고, 그것들이 브라우저에서 어떻게 작동하는지 살펴봅니다. 이것은 완전한 공부가 되지 않을 것입니다; 단지 지금 단계에서 여러분이 알아야 할 필요가 있는 것입니다.
 
@@ -82,7 +82,7 @@ btn.onclick = function () {
 };
 ```
 
-이 코드에서, {{domxref("Document.querySelector()")}} 함수를 사용하여, 우리는 `btn` 상수 내부에 버튼에 대한 참조를 저장했습니다. 우리는 또한 무작위의 숫자를 반환하는 함수를 정의했습니다. 코드의 세번째 부분은 이벤트 핸들러입니다. `btn` 상수는 [`<button>`](/ko/docs/Web/HTML/Element/button) 요소를 가리키고, 이 타입의 객체는 발생시킬 수 있는 얼마간의 이벤트를 가지고 있으므로, 이벤트 핸들러를 사용 가능합니다. [`onclick`](/ko/docs/Web/API/Element/click_event) 이벤트 핸들러 프로퍼티를 무작위의 RGB 색상을 생성하고 그것과 같은 [`<body>`](/ko/docs/Web/HTML/Element/body) [`background-color`](/ko/docs/Web/CSS/background-color)를 설정하는 코드를 포함하는 익명함수에 설정함으로써, 우리는 [`click`](/ko/docs/Web/API/Element/click_event) 이벤트 발생에 귀를 기울이고 있습니다.
+이 코드에서, {{domxref("Document.querySelector()")}} 함수를 사용하여, 우리는 `btn` 상수 내부에 버튼에 대한 참조를 저장했습니다. 우리는 또한 무작위의 숫자를 반환하는 함수를 정의했습니다. 코드의 세번째 부분은 이벤트 핸들러입니다. `btn` 상수는 [`<button>`](/ko/docs/Web/HTML/Reference/Elements/button) 요소를 가리키고, 이 타입의 객체는 발생시킬 수 있는 얼마간의 이벤트를 가지고 있으므로, 이벤트 핸들러를 사용 가능합니다. [`onclick`](/ko/docs/Web/API/Element/click_event) 이벤트 핸들러 프로퍼티를 무작위의 RGB 색상을 생성하고 그것과 같은 [`<body>`](/ko/docs/Web/HTML/Reference/Elements/body) [`background-color`](/ko/docs/Web/CSS/Reference/Properties/background-color)를 설정하는 코드를 포함하는 익명함수에 설정함으로써, 우리는 [`click`](/ko/docs/Web/API/Element/click_event) 이벤트 발생에 귀를 기울이고 있습니다.
 
 이 코드는 언제든지 `<button>` 요소에서 click 이벤트가 발생될 때, 즉 언제든지 유저가 그것을 선택했을 때, 실행됩니다.
 
@@ -629,7 +629,7 @@ video.onclick = function (e) {
 
 ## 실력을 평가해 보세요!
 
-이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 문서를 읽기 전에 이 문서의 내용을 잘 학습하고 이해하셨는지 확인하실 수 있습니다 — [실력을 평가해 보세요: 이벤트](/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Events).
+이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 문서를 읽기 전에 이 문서의 내용을 잘 학습하고 이해하셨는지 확인하실 수 있습니다 — [실력을 평가해 보세요: 이벤트](/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills/Events).
 
 ## 결론
 
@@ -646,4 +646,4 @@ video.onclick = function (e) {
 - [이벤트 순서](https://www.quirksmode.org/js/events_order.html) (캡처링과 버블링에 대한 논의) — Peter-Paul Koch가 작성한 뛰어나게 상세한 글
 - [이벤트 접근](https://www.quirksmode.org/js/events_access.html) (이벤트 객체에 대한 논의) — Peter-Paul Koch가 작성한 또 다른 뛰어나게 상세한 글
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Return_values","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}

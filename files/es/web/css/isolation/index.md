@@ -3,8 +3,6 @@ title: Isolation
 slug: Web/CSS/isolation
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad CSS **`isolation`** define si el elemento debe crear un nuevo {{glossary("stacking context")}}.

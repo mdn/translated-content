@@ -3,7 +3,7 @@ title: Vue 中的条件渲染：编辑现有的待办事项
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_conditional_rendering
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties","Learn_web_development/Core/Frameworks_libraries/Vue_refs_focus_management", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties","Learn_web_development/Core/Frameworks_libraries/Vue_refs_focus_management", "Learn_web_development/Core/Frameworks_libraries")}}
 
 是时候添加一个我们仍然缺少，但十分重要的功能了——编辑现有的待办事项。为此，我们将利用 Vue 的条件渲染（即 `v-if` 和 `v-else`）来让我们能在现有待办视图和用于更新待办的编辑视图之间切换。我们还将实现删除待办事项的功能。
 

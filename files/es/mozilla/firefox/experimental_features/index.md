@@ -3,8 +3,6 @@ title: Funciones experimentales de Firefox
 slug: Mozilla/Firefox/Experimental_features
 ---
 
-{{FirefoxSidebar}}
-
 Para probar nuevas características, Mozilla publica una versión de prueba del navegador Firefox, [Firefox Nightly](https://nightly.mozilla.org/), cada día. Características experimentales, por ejemplo implementaciones de estándares de plataforma Web, están disponibles. Esta página lista características que están en versiones Nightly de Firefox junto con información sobre cómo activarlas, si es necesario. Puedes probar tus sitios Web y aplicaciones antes de que se lancen las características y confirmar que todo seguirá funcionando con las últimas prestaciones de tecnología Web.
 
 Para probar esas características experimentales, necesitas descargar [Firefox Nightly](https://nightly.mozilla.org/) o [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/).

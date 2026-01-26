@@ -51,7 +51,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar
   - : 中華民国暦 (中華民国)
 - `islamicc`
   - : シビル（アルゴリズム）アラビア暦
-    > **警告:** `islamicc` 暦は非推奨です。 `islamic-civil` を使用してください。
+    > [!WARNING]
+    > `islamicc` 暦は非推奨です。 `islamic-civil` を使用してください。
 
 ## 例
 

@@ -19,13 +19,13 @@ Aprenda a programar em JavaScript com guias e tutoriais.
 
 ### Para iniciantes
 
-Vá para a [Área de aprendizado de JavaScript](/pt-BR/docs/Learn/JavaScript) se você quer aprender JavaScript mas não tem experiência prévia com JavaScript ou programação. Os módulos completos que estão disponíveis lá são os seguintes:
+Vá para a [Área de aprendizado de JavaScript](/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting_785964b4c0711553d2bf3130baef052c6d78a03b4ce249eeb9d1ce2be1e3c308) se você quer aprender JavaScript mas não tem experiência prévia com JavaScript ou programação. Os módulos completos que estão disponíveis lá são os seguintes:
 
-- [Primeiros passos em JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps)
+- [Primeiros passos em JavaScript](/pt-BR/docs/Learn_web_development/Core/Scripting)
   - : Respostas para algumas perguntas básicas como _O que é JavaScript?_, _Com o que se parece?_ e _O que se pode fazer?_, bem como funcionalidades importantes do JavaScript, tais como variáveis, strings, números e vetores.
-- [Elementos básicos do JavaScript](/pt-BR/docs/Learn/JavaScript/Building_blocks)
+- [Elementos básicos do JavaScript](/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting)
   - : Continuamos nossa cobertura das funcionalidades fundamentais do JavaScript, direcionando nossa atenção para tipos de blocos de código encontrados comumente, como expressões condicionais, laços, funções e eventos.
-- [Introduzindo objetos em JavaScript](/pt-BR/docs/Learn/JavaScript/Objects)
+- [Introduzindo objetos em JavaScript](/pt-BR/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
   - : O entendimento da natureza da orientação à objetos do JavaScript é importante se você quiser levar o seu conhecimento da linguagem para o próximo nível e escrever códigos mais eficientes, por isso oferecemos esse módulo para te ajudar.
 
 ### Guia do JavaScript
@@ -35,24 +35,24 @@ Vá para a [Área de aprendizado de JavaScript](/pt-BR/docs/Learn/JavaScript) se
 
 ### Intermediário
 
-- [Uma re-introdução ao JavaScript](/pt-BR/docs/Web/JavaScript/Language_overview)
+- [Uma re-introdução ao JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Language_overview)
   - : Uma visão geral para aqueles que _pensam_ que conhecem JavaScript.
-- [Estruturas de dados do JavaScript](/pt-BR/docs/Web/JavaScript/Data_structures)
+- [Estruturas de dados do JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Data_structures)
   - : Um resumo das estruturas de dados disponíveis em JavaScript.
-- [Comparações de igualdade e uniformidade](/pt-BR/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+- [Comparações de igualdade e uniformidade](/pt-BR/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)
   - : O JavaScript fornece três operações diferentes para comparar valores: igualdade estrita utilizando `===`, igualdade ampla usando `==` e o método {{jsxref("Global_Objects/Object/is", "Object.is()")}}.
 
 ### Avançado
 
-- [Herança e a cadeia de protótipos](/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Herança e a cadeia de protótipos](/pt-BR/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
   - : Explicação da herança baseada em protótipos, que costuma ser amplamente mal entendida e subestimada.
 - [Modo estrito](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode)
   - : O modo estrito define que você não pode usar nenhuma variável antes de inicializá-la. É uma variante restrita do ECMAScript 5, para um desempenho mais performático e uma depuração mais fácil.
 - [Vetores JavaScript tipados](/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays)
   - : Vetores JavaScript tipados oferecem um mecanismo para acesso a dados binários brutos.
-- [Gerenciamento de memória](/pt-BR/docs/Web/JavaScript/Memory_management)
+- [Gerenciamento de memória](/pt-BR/docs/Web/JavaScript/Guide/Memory_management)
   - : Ciclo de vida da memória e coleta de lixo em JavaScript.
-- [Modelo de concorrência e o loop de eventos](/pt-BR/docs/Web/JavaScript/Event_loop)
+- [Modelo de concorrência e o loop de eventos](/pt-BR/docs/Web/JavaScript/Reference/Execution_model)
   - : JavaScript tem um modelo de concorrência baseado em _loop de eventos_.
 
 ## Referência
@@ -74,7 +74,7 @@ Ferramentas úteis para escrever e depurar seu código **JavaScript**.
 
 - [Ferramentas do Firefox para desenvolvedores](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
   - : [Scratchpad](/pt-BR/docs/Tools/Scratchpad), [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html), [JavaScript Profiler](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html), [Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) e muito mais.
-- [JavaScript Shells](/pt-BR/docs/Web/JavaScript/JavaScript_technologies_overview)
+- [JavaScript Shells](/pt-BR/docs/Web/JavaScript/Reference/JavaScript_technologies_overview)
   - : Um shell JavaScript permite que você teste rapidamente fragmentos de código JavaScript.
 - [TogetherJS](https://togetherjs.com/)
   - : Colaboração fácil. Ao adicionar o TogetherJS ao seu site, seus usuários podem ajudar uns aos outros em tempo real!

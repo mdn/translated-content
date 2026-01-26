@@ -3,8 +3,6 @@ title: text-decoration-color
 slug: Web/CSS/text-decoration-color
 ---
 
-{{ CSSRef }}
-
 ## Resumen
 
 La propiedad **`text-decoration-color`** establece el color usado cuando se dibujan subrayados o líneas a través del texto, especificadas por la propiedad {{ cssxref("text-decoration-line") }}. El color especificado será el mismo para los tres tipos de línea.

@@ -5,7 +5,7 @@ slug: Web/CSS/animation
 
 {{CSSRef}}
 
-A propriedade [CSS](/pt-BR/docs/Web/CSS) [abreviada](/pt-BR/docs/Web/CSS/Shorthand_properties) **`animation`**, aplica uma animação entre estilos. É uma abreviação de {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, e {{cssxref("animation-play-state")}}.
+A propriedade [CSS](/pt-BR/docs/Web/CSS) [abreviada](/pt-BR/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`animation`**, aplica uma animação entre estilos. É uma abreviação de {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, e {{cssxref("animation-play-state")}}.
 
 {{InteractiveExample("CSS Demo: animation")}}
 
@@ -87,7 +87,6 @@ Cada animação individual é especificada como:
 - zero, uma ou duas ocorrências do valor {{cssxref("&lt;time&gt;")}}
 
 - zero ou uma ocorrência dos seguintes valores:
-
   - {{cssxref("animation", "&lt;single-easing-function&gt;", "#single-easing-function")}}
   - {{cssxref("animation", "&lt;single-animation-iteration-count&gt;", "#single-animation-iteration-count")}}
   - {{cssxref("animation", "&lt;single-animation-direction&gt;", "#single-animation-direction")}}

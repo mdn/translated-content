@@ -3,8 +3,6 @@ title: 书本实例详情页面与自我挑战
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
 ---
 
-{{LearnSidebar}}
-
 ## 书本实例详情页面
 
 `BookInstance` 详情页面需要展示每一个 `BookInstance` 的信息，使用其（自动生成的）`_id` 字段值进行标识。它包含了 `Book` 名称（作为*书本细节页面*的链接）以及记录中的其他信息。

@@ -173,7 +173,7 @@ h1 ~ p {
 
 ## 入れ子による複雑なセレクターの作成
 
-[CSS 入れ子モジュール](/ja/docs/Web/CSS/CSS_nesting/Using_CSS_nesting#結合子)により、結合子を使って[複雑なセレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複雑なセレクター)を作るルールを書くことができます。
+[CSS 入れ子モジュール](/ja/docs/Web/CSS/Guides/Nesting/Using#結合子)により、結合子を使って[複雑なセレクター](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#複雑なセレクター)を作るルールを書くことができます。
 
 ```css
 p {
@@ -185,7 +185,7 @@ p ~ img {
 }
 ```
 
-[`&` 入れ子セレクター](/ja/docs/Web/CSS/Nesting_selector)も、複雑なセレクターを作成するために使用されることがあります。
+[`&` 入れ子セレクター](/ja/docs/Web/CSS/Reference/Selectors/Nesting_selector)も、複雑なセレクターを作成するために使用されることがあります。
 
 ```css
 p {
@@ -244,7 +244,7 @@ ul > li[class="a"] {
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks)を参照してください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors)を参照してください。
 
 ## まとめ
 

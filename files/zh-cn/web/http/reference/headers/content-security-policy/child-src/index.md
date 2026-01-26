@@ -3,8 +3,6 @@ title: "CSP: child-src"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/child-src
 ---
 
-{{HTTPSidebar}}
-
 HTTP {{HTTPHeader("Content-Security-Policy")}}（CSP 内容安全策略）中的 **`child-src`** 指令定义了使用如 {{HTMLElement("frame")}} 和 {{HTMLElement("iframe")}} 等元素在加载 [web worker](/zh-CN/docs/Web/API/Web_Workers_API) 和嵌套浏览上下文时的有效来源。对于 worker 来说，不合规的请求会被用户代理当作致命的网络错误处理。
 
 <table class="properties">

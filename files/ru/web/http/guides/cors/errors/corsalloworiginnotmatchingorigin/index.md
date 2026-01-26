@@ -3,8 +3,6 @@ title: "Причина: CORS заголовок 'Access-Control-Allow-Origin' н
 slug: Web/HTTP/Guides/CORS/Errors/CORSAllowOriginNotMatchingOrigin
 ---
 
-{{HTTPSidebar}}
-
 ## Reason
 
 ```

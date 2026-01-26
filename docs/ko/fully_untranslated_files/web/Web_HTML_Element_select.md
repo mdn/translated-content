@@ -7,7 +7,34 @@ slug: Web/HTML/Element/select
 
 **HTML `<select>` 요소**는 옵션 메뉴를 제공하는 컨트롤을 나타냅니다.
 
-{{EmbedInteractiveExample("pages/tabbed/select.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;select&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="pet-select">Choose a pet:</label>
+
+<select name="pets" id="pet-select">
+  <option value="">--Please choose an option--</option>
+  <option value="dog">Dog</option>
+  <option value="cat">Cat</option>
+  <option value="hamster">Hamster</option>
+  <option value="parrot">Parrot</option>
+  <option value="spider">Spider</option>
+  <option value="goldfish">Goldfish</option>
+</select>
+```
+
+```css interactive-example
+label {
+  font-family: sans-serif;
+  font-size: 1rem;
+  padding-right: 10px;
+}
+
+select {
+  font-size: 0.9rem;
+  padding: 2px 5px;
+}
+```
 
 위의 예제는 일반적인 `<select>` 사용법을 시연합니다. {{htmlelement("label")}}과 연결해 접근성을 향상할 수 있도록 [`id`](/ko/docs/Web/HTML/Global_attributes#id) 특성을, 서버로 전송할 데이터의 이름을 위해 [`name`](/ko/docs/Web/HTML/Element/select#name) 특성을 적용했습니다. 메뉴의 각 옵션은 `<select>` 안의 {{htmlelement("option")}}으로 정의합니다.
 

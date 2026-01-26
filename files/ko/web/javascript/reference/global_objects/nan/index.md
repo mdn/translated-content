@@ -97,7 +97,7 @@ arr.includes(NaN); // true
 arr.findIndex((n) => Number.isNaN(n)); // 2
 ```
 
-`NaN`과 그 비교에 대한 자세한 내용은 [평등 비교 및 동일성](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness)를 참조.
+`NaN`과 그 비교에 대한 자세한 내용은 [평등 비교 및 동일성](/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)를 참조.
 
 ### 눈에 띄게 구별되는 NaN 값
 

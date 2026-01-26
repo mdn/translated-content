@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e6fcda9d35359bbfec32ddb42086468701f57ee5
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 126 の変更点をまとめています。Firefox 126 は、米国時間 [2024 年 5 月 14 日](https://whattrainisitnow.com/release/?version=126) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -44,25 +42,24 @@ l10n:
 - [`URL.parse()`](/ja/docs/Web/API/URL/parse_static) 静的メソッドで [`URL`](/ja/docs/Web/API/URL) オブジェクトの生成をサポートしました。これは渡したパラメーターが有効な `URL` でない場合に `null` を返しますので、[`URL` コンストラクター](/ja/docs/Web/API/URL/URL) で `URL` オブジェクトを生成するための、例外を発生させない代替手段として使用できます ([Firefox bug 1823354](https://bugzil.la/1823354))。
 - [Screen Wake Lock API](/ja/docs/Web/API/Screen_Wake_Lock_API) をサポートしました。ウェブアプリケーションがアクティブな間は、スクリーンを暗くしたりロックしたりしないように要求できます。これはナビゲーションや読書のアプリケーション、および通常は起動したままにして使用中は通常のタッチ操作を受け取らない、その他のアプリケーションで特に役に立ちます。この API は保護されたコンテキストで {{domxref("Navigator.wakeLock")}} を通して使用でき、{{domxref("WakeLock")}} を返します。wake lock の状態を監視したり手動で解放したりするために使用できる {{domxref("WakeLockSentinel")}} を要求できます ([Firefox bug 1589554](https://bugzil.la/1589554)、[Firefox bug 1874849](https://bugzil.la/1874849))。
 - [`RTCIceCandidate`](/ja/docs/Web/API/RTCIceCandidate) で、未実装の `relayProtocol` および `url` プロパティを除くすべてのプロパティやメソッドをサポートして、仕様書に準拠するようになりました。`RTCIceCandidate` のプロパティで以下の変更があります:
-
   - 以下のプロパティは読み取り専用になりました: [`candidate`](/ja/docs/Web/API/RTCIceCandidate/candidate)、[`sdpMid`](/ja/docs/Web/API/RTCIceCandidate/sdpMid)、[`sdpMLineIndex`](/ja/docs/Web/API/RTCIceCandidate/sdpMLineIndex)、[`usernameFragment`](/ja/docs/Web/API/RTCIceCandidate/usernameFragment)。
   - 以下のプロパティを追加しました: [`foundation`](/ja/docs/Web/API/RTCIceCandidate/foundation)、[`component`](/ja/docs/Web/API/RTCIceCandidate/component)、[`priority`](/ja/docs/Web/API/RTCIceCandidate/priority)、[`address`](/ja/docs/Web/API/RTCIceCandidate/address)、[`protocol`](/ja/docs/Web/API/RTCIceCandidate/protocol)、[`port`](/ja/docs/Web/API/RTCIceCandidate/port)、[`type`](/ja/docs/Web/API/RTCIceCandidate/type)、[`tcpType`](/ja/docs/Web/API/RTCIceCandidate/tcpType)、[`relatedAddress`](/ja/docs/Web/API/RTCIceCandidate/relatedAddress)、[`relatedPort`](/ja/docs/Web/API/RTCIceCandidate/relatedPort)、[`usernameFragment`](/ja/docs/Web/API/RTCIceCandidate/usernameFragment)。
 
   ([Firefox bug 1322186](https://bugzil.la/1322186))
 
-- 要素で有効な CSS [zoom](/ja/docs/Web/CSS/zoom) を取得する、読み取り専用の {{domxref("Element.currentCSSZoom")}} プロパティをサポートしました ([Firefox bug 1880189](https://bugzil.la/1880189))。
+- 要素で有効な CSS [zoom](/ja/docs/Web/CSS/Reference/Properties/zoom) を取得する、読み取り専用の {{domxref("Element.currentCSSZoom")}} プロパティをサポートしました ([Firefox bug 1880189](https://bugzil.la/1880189))。
 
 #### DOM
 
 - カスタム要素の状態を定義して、CSS セレクターを使用してそれらをマッチさせる機能をサポートしました。
-  カスタム状態は要素の {{domxref("ElementInternals.states")}} プロパティ ({{domxref("CustomStateSet")}}) で追加または削除できる、カスタム識別子として表されます。CSS の [`:state()`](/ja/docs/Web/CSS/:state) 擬似クラスはカスタム識別子を引数として持ち、識別子が状態セットに含まれているカスタム要素にマッチします ([Firefox bug 1887543](https://bugzil.la/1887543))。
+  カスタム状態は要素の {{domxref("ElementInternals.states")}} プロパティ ({{domxref("CustomStateSet")}}) で追加または削除できる、カスタム識別子として表されます。CSS の [`:state()`](/ja/docs/Web/CSS/Reference/Selectors/:state) 擬似クラスはカスタム識別子を引数として持ち、識別子が状態セットに含まれているカスタム要素にマッチします ([Firefox bug 1887543](https://bugzil.la/1887543))。
 - 選択範囲の方向を示す {{domxref("Selection.direction")}} プロパティをサポートしました ([Firefox bug 1867058](https://bugzil.la/1867058))。
 
 #### Media、WebRTC、Web Audio
 
 #### 廃止
 
-- マーキーの [`bounce`](/ja/docs/Web/API/HTMLMarqueeElement#bounce)、[`finish`](/ja/docs/Web/API/HTMLMarqueeElement#finish)、[`start`](/ja/docs/Web/API/HTMLMarqueeElement#start) イベントを [`HTMLMarqueeElement`](/ja/docs/Web/API/HTMLMarqueeElement) から削除しました。また [`<marquee>` HTML 要素](/ja/docs/Web/HTML/Element/marquee) で定義されている、イベントに対応する [イベントハンドラー属性](/ja/docs/Web/HTML/Element/marquee#イベントハンドラー) も削除しました ([Firefox bug 1689705](https://bugzil.la/1689705))。
+- マーキーの [`bounce`](/ja/docs/Web/API/HTMLMarqueeElement#bounce)、[`finish`](/ja/docs/Web/API/HTMLMarqueeElement#finish)、[`start`](/ja/docs/Web/API/HTMLMarqueeElement#start) イベントを [`HTMLMarqueeElement`](/ja/docs/Web/API/HTMLMarqueeElement) から削除しました。また [`<marquee>` HTML 要素](/ja/docs/Web/HTML/Reference/Elements/marquee) で定義されている、イベントに対応する [イベントハンドラー属性](/ja/docs/Web/HTML/Reference/Elements/marquee#イベントハンドラー) も削除しました ([Firefox bug 1689705](https://bugzil.la/1689705))。
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 

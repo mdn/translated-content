@@ -3,8 +3,6 @@ title: font-style
 slug: Web/CSS/font-style
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad `font-style` permite definir el aspecto de una familia tipográfica entre los valores: `normal`, italic (cursiva) y `oblique`.

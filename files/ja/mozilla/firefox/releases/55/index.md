@@ -3,8 +3,6 @@ title: Firefox 55 for developers
 slug: Mozilla/Firefox/Releases/55
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました。このページでは、開発者に影響する Firefox 55 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -18,17 +16,17 @@ Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました
 
 ### HTML
 
-- [`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) を `true` に設定した要素で、テキストの別の行を分けるために {{htmlelement("div")}} 要素を使用するようになりました。これは、他の現行ブラウザーに Firefox を合わせるためです ([Firefox バグ 1297414](https://bugzil.la/1297414))。詳しくは[マークアップ生成の違い](/ja/docs/Web/HTML/Global_attributes/contenteditable#マークアップ生成の違い) をご覧ください。
+- [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) を `true` に設定した要素で、テキストの別の行を分けるために {{htmlelement("div")}} 要素を使用するようになりました。これは、他の現行ブラウザーに Firefox を合わせるためです ([Firefox バグ 1297414](https://bugzil.la/1297414))。詳しくは[マークアップ生成の違い](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable#マークアップ生成の違い) をご覧ください。
 - Nightly で、`dom.forms.datetime` をデフォルトで有効にしました ([Firefox バグ 1366188](https://bugzil.la/1366188))。
 
 ### CSS
 
 - {{cssxref("transform-box")}} プロパティをデフォルトで有効にしました ([Firefox バグ 1208550](https://bugzil.la/1208550))。
-- [frames() イージング関数](</ja/docs/Web/CSS/easing-function#the_frames()_class_of_timing-functions>) を実装しました ([Firefox バグ 1248340](https://bugzil.la/1248340))。
+- [frames() イージング関数](</ja/docs/Web/CSS/Reference/Values/easing-function#the_frames()_class_of_timing-functions>) を実装しました ([Firefox バグ 1248340](https://bugzil.la/1248340))。
 - {{cssxref("text-justify")}} プロパティを実装しました ([Firefox バグ 1343512](https://bugzil.la/1343512), [Firefox バグ 276079](https://bugzil.la/276079)).
 - \[css-grid] repeat() 内で {{cssxref("fit-content")}} が、意図せず最大限に制限したサイズで領域を確保してしまう問題を修正しました ([Firefox バグ 1359060](https://bugzil.la/1359060))。
 - {{cssxref("float")}} / {{cssxref("clear")}} の論理値 `inline-start` および `inline-end` は、以前から実装していましたが Release チャンネルでは無効化していました。これを、すべてのチャンネルにおいてデフォルトで有効化しました ([Firefox バグ 1253919](https://bugzil.la/1253919))。
-- 設定項目 `layout.css.variables.enabled` を完全に削除しました。[CSS 変数](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) の機能は常にデフォルトで有効であり、無効化できません ([Firefox バグ 1312328](https://bugzil.la/1312328))。
+- 設定項目 `layout.css.variables.enabled` を完全に削除しました。[CSS 変数](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) の機能は常にデフォルトで有効であり、無効化できません ([Firefox バグ 1312328](https://bugzil.la/1312328))。
 - 独自仕様である `-moz-context-properties` プロパティを実装しました ([Firefox バグ 1058040](https://bugzil.la/1058040))。
 - 角度の単位がつかない 0 度の値が、{{cssxref("gradient/linear-gradient", "linear-gradient()")}} で正しく解釈されない問題を修正しました ([Firefox バグ 1363292](https://bugzil.la/1363292))。
 - {{cssxref("::cue")}} 擬似要素をサポートしました。これは、メディア要素内で提供するテキストキューにマッチします ([Firefox バグ 1318542](https://bugzil.la/1318542))。
@@ -74,7 +72,6 @@ Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました
 
 - 内部で選択範囲が動いたときに editing hosts がどのようにフォーカスを得るかについて、他のブラウザーへ合わせるために [Selection API](/ja/docs/Web/API/Selection) を更新しました ([Firefox バグ 1318312](https://bugzil.la/1318312))。詳しくは[編集ホストのフォーカス変更に関する選択 API の挙動](/ja/docs/Web/API/Selection#編集ホストのフォーカス変更に関する選択_api_の挙動)をご覧ください。
 - 最近の仕様の変更に合致するよう、{{domxref("Selection")}} API を更新しました ([Firefox バグ 1359371](https://bugzil.la/1359371)):
-
   - {{domxref("Selection.collapse", "collapse()")}} および {{domxref("Selection.extend", "extend()")}} メソッドの `offset` 引数を省略可能にしました。
   - {{domxref("Selection.collapse", "collapse()")}} メソッドの `node` 引数を null にすることが可能になりました。
   - {{domxref("Selection.containsNode", "containsNode()")}} メソッドの `partialContainment` 引数が省略可能になりました。
@@ -86,7 +83,7 @@ Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました
 #### Workers
 
 - ワーカーおよび共有ワーカーを、識別用の `name` プロパティをつけて作成できるようになりました。{{domxref("Worker.Worker", "Worker()")}} および {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} コンストラクター、{{domxref("DedicatedWorkerGlobalScope")}} および {{domxref("SharedWorkerGlobalScope")}} インターフェイスをご覧ください ([Firefox バグ 1364297](https://bugzil.la/1364297))。
-- {{domxref("setTimeout()")}} および {{domxref("setInterval()")}} が、バックグラウンドのタブでトラッキングスクリプトに対して最小間隔の調整を課すようになりました。[トラッキングスクリプトのタイムアウトを制限する](/ja/docs/Web/API/Window/setTimeout#トラッキングスクリプトのタイムアウトを制限する)をご覧ください ([Firefox バグ 1355311](https://bugzil.la/1355311))。
+- {{domxref("Window.setTimeout", "setTimeout()")}} および {{domxref("Window.setInterval", "setInterval()")}} が、バックグラウンドのタブでトラッキングスクリプトに対して最小間隔の調整を課すようになりました。[トラッキングスクリプトのタイムアウトを制限する](/ja/docs/Web/API/Window/setTimeout#トラッキングスクリプトのタイムアウトを制限する)をご覧ください ([Firefox バグ 1355311](https://bugzil.la/1355311))。
 
 #### Service Workers/Push
 
@@ -119,8 +116,8 @@ Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました
 
 ### セキュリティ
 
-- {{domxref("Geolocation")}} API が、[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts) である場合に限り利用可能になりました ([Firefox バグ 1072859](https://bugzil.la/1072859))。
-- {{domxref("Storage API")}} が、[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts) である場合に限り利用可能になりました ([Firefox バグ 1268804](https://bugzil.la/1268804))。
+- {{domxref("Geolocation")}} API が、[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts) である場合に限り利用可能になりました ([Firefox バグ 1072859](https://bugzil.la/1072859))。
+- {{domxref("Storage API")}} が、[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts) である場合に限り利用可能になりました ([Firefox バグ 1268804](https://bugzil.la/1268804))。
 - localhost で、混在コンテンツの読み込みを許可しました ([Firefox バグ 903966](https://bugzil.la/903966))。
 - リモートの JAR ファイルの読み込みを再び無効化しました ([Firefox バグ 1329336](https://bugzil.la/1329336))。詳しくは [Security and the jar protocol](/ja/docs/Mozilla/Security/Security_and_the_jar_protocol) をご覧ください。
 
@@ -137,9 +134,9 @@ Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました
 
 ### HTML
 
-- `xml:base` 属性を、[`style`](/ja/docs/Web/HTML/Global_attributes/style) 属性内に現れるパスのベース URL として使用できなくなりました。 例えば `<div xml:base="https://example.com/" style="background:url(picture.jpg)"></div>` のような使い方です ([Firefox バグ 1350521](https://bugzil.la/1350521))。style 属性向け xml:base が無効化されました。
-- 他のブラウザーがサポートしていないため、Firefox 55 から content ドキュメントでは {{htmlelement("style")}} 要素の [`scoped`](/ja/docs/Web/HTML/Element/style#scoped) 属性を設定 (`layout.css.scoped-style.enabled`) で無効化しました。
-- {{htmlelement("meta")}} 要素の [`http-equiv`](/ja/docs/Web/HTML/Element/meta#http-equiv) 属性で、不明瞭な値である `MSThemeCompatible` のサポートを Gecko から削除しました。他にサポートする現行ブラウザーがなく、また互換性の問題が発生していました ([Firefox バグ 966240](https://bugzil.la/966240))。
+- `xml:base` 属性を、[`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style) 属性内に現れるパスのベース URL として使用できなくなりました。 例えば `<div xml:base="https://example.com/" style="background:url(picture.jpg)"></div>` のような使い方です ([Firefox バグ 1350521](https://bugzil.la/1350521))。style 属性向け xml:base が無効化されました。
+- 他のブラウザーがサポートしていないため、Firefox 55 から content ドキュメントでは {{htmlelement("style")}} 要素の [`scoped`](/ja/docs/Web/HTML/Reference/Elements/style#scoped) 属性を設定 (`layout.css.scoped-style.enabled`) で無効化しました。
+- {{htmlelement("meta")}} 要素の [`http-equiv`](/ja/docs/Web/HTML/Reference/Elements/meta#http-equiv) 属性で、不明瞭な値である `MSThemeCompatible` のサポートを Gecko から削除しました。他にサポートする現行ブラウザーがなく、また互換性の問題が発生していました ([Firefox バグ 966240](https://bugzil.la/966240))。
 
 ### CSS
 

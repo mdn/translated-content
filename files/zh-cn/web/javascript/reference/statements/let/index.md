@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 66149c2238e1beb7fc65dd998968aa0638c874a3
 ---
 
-{{jsSidebar("Statements")}}
-
 **`let`** 声明用于声明可重新赋值的块级作用域局部变量，并且可以选择将其初始化为一个值。
 
 {{InteractiveExample("JavaScript Demo: Statement - Let")}}
@@ -121,7 +119,8 @@ let i = 10;
 console.log(typeof undeclaredVariable); // "undefined"
 ```
 
-> **备注：** `let` 和 `const` 声明仅在当前脚本被处理时才会被处理。如果在一个 HTML 中有两个以脚本模式运行的 `<script>` 元素，那么第一个脚本不会受到第二个脚本中顶层 `let` 或 `const` 变量的暂时性死区限制，尽管如果你在第一个脚本中声明了一个 `let` 或 `const` 变量，在第二个脚本中再次声明它将会导致[重复声明错误](#重复声明)。
+> [!NOTE]
+> `let` 和 `const` 声明仅在当前脚本被处理时才会被处理。如果在一个 HTML 中有两个以脚本模式运行的 `<script>` 元素，那么第一个脚本不会受到第二个脚本中顶层 `let` 或 `const` 变量的暂时性死区限制，尽管如果你在第一个脚本中声明了一个 `let` 或 `const` 变量，在第二个脚本中再次声明它将会导致[重复声明错误](#重复声明)。
 
 ### 重复声明
 

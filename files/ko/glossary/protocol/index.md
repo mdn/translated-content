@@ -13,8 +13,7 @@ l10n:
 
 - 위키백과 [통신 프로토콜](https://ko.wikipedia.org/wiki/%ED%86%B5%EC%8B%A0_%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C)
 - [RFC 공식 인터넷 프로토콜 표준](https://www.rfc-editor.org/standards)
-- [HTTP 개요](/ko/docs/Web/HTTP/Overview)
+- [HTTP 개요](/ko/docs/Web/HTTP/Guides/Overview)
 - 용어사전:
-
   - {{glossary("TCP")}}
   - {{glossary("Packet")}}

@@ -3,8 +3,6 @@ title: font-variant-alternates
 slug: Web/CSS/font-variant-alternates
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad CSS **`font-variant-alternates`** controla el uso de glifos alternos. Estos glifos alternos pueden ser referenciados por nombres alternativos en {{cssxref("@font-feature-values")}}.
@@ -47,7 +45,6 @@ font-variant-alternates: unset;
 - `swash()`
   - : Esta función habilita la muestra de glifos de tipografía [swash](http://en.wikipedia.org/wiki/Swash_%28typography%29). El parámetro es un nombre específico de fuente mapeado a un número. Corresponde a los valores de OpenType `swsh` y `cswh`, como `swsh 2` y `cswh 2`.
 - `ornaments()`
-
   - : Esta función habilita la muestra de ornamentas, que son [florones](http://en.wikipedia.org/wiki/Fleuron_%28typography%29) y otros glifos de estilo dingbat. El parámetro es un nombre específico de fuente mapeado a un número. Corresponde al valor de OpenType `ornm`, como `ornm 2`.
 
     > [!NOTE]

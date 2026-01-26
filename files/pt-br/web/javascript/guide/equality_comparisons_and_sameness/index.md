@@ -222,7 +222,6 @@ Além da forma como trata [`NaN`](/pt-BR/docs/Web/JavaScript/Reference/Global_Ob
 Aqui está uma lista exaustiva de métodos e operadores integrados que pode causar uma distinção entre -0 e +0 a manifestar-se em seu código:
 
 - [`- (negação unário)`](/pt-BR/docs/Web/JavaScript/Reference/Operators#-_.28unary_negation.29)
-
   - : É óbvio que negando 0 produz -0. Mas a abstração de uma expressão pode causar -0 a fluência em quanto você não percebe isso. Por exemplo, considere:
 
     ```js
@@ -238,7 +237,6 @@ Aqui está uma lista exaustiva de métodos e operadores integrados que pode caus
   [`Math.pow`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/pow)
 
   [`Math.round`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round)
-
   - : É possível que um -0 para ser introduzido em uma expressão como um valor de retorno desses métodos, em alguns casos, mesmo quando nenhum -0 exista como um dos parâmetros. Por exemplo, usando [Math.pow](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/pow) para levantar -[Infinity](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Infinity) a potência de qualquer número, expoente ímpar negativo avaliada como -0. Consulte a documentação para os métodos individuais.
 
 - [`Math.floor`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)
@@ -252,7 +250,6 @@ Aqui está uma lista exaustiva de métodos e operadores integrados que pode caus
   [`Math.sqrt`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt)
 
   [`Math.tan`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/tan)
-
   - : É possível obter um -0 valor de retorno para fora destes métodos em alguns casos em que um -0 existe como um dos parâmetros. Por exemplo, `Math.min(-0, +0)` resulte em -0. Consulte a documentação para os métodos individuais.
 
 - [\~](/pt-BR/docs/Web/JavaScript/Reference/Operators)
@@ -260,7 +257,6 @@ Aqui está uma lista exaustiva de métodos e operadores integrados que pode caus
   [<<](/pt-BR/docs/Web/JavaScript/Reference/Operators)
 
   [>>](/pt-BR/docs/Web/JavaScript/Reference/Operators)
-
   - : Cada um destes operadores usa o algoritmo ToInt32 internamente. Uma vez que existe apenas uma representação para 0 no tipo integer de 32 bits interno, -0 não vai sobreviver a uma ida e volta após uma operação inversa. Por exemplo, tanto `Object.is(~~(-0), -0)` e `Object.is(-0 << 2 >> 2, -0)` avaliar como `false`.
 
 Baseando-se em [`Object.is`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is) quando a sinalização de zeros não é levado em conta podem ser perigosos. Claro que, quando a intenção é fazer a distinção entre `-0` e `+0`, isso faz exatamente o que é desejado.

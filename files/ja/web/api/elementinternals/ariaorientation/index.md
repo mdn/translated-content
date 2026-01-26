@@ -8,9 +8,10 @@ l10n:
 
 {{APIRef("Web Components")}}
 
-**`ariaOrientation`** は {{domxref("Element")}} インターフェイスのプロパティで、この要素の方向が横方向、縦方向、または不明/あいまいであることを示す [`aria-orientation`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) 属性を反映します。
+**`ariaOrientation`** は {{domxref("Element")}} インターフェイスのプロパティで、この要素の方向が横方向、縦方向、または不明/あいまいであることを示す [`aria-orientation`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation) 属性を反映します。
 
-> **メモ:** `ElementInternals` に aria 属性を設定すると、カスタム要素に既定の意味づけを定義することができます。これらは作成者が定義した属性によって上書きされる可能性がありますが、作成者が属性を削除したり、まったく追加しなかった場合でも、確実に既定の意味づけを保持することができます。より詳しい情報は、 [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object) を参照してください。
+> [!NOTE]
+> `ElementInternals` に aria 属性を設定すると、カスタム要素に既定の意味づけを定義することができます。これらは作成者が定義した属性によって上書きされる可能性がありますが、作成者が属性を削除したり、まったく追加しなかった場合でも、確実に既定の意味づけを保持することができます。より詳しい情報は、 [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object) を参照してください。
 
 ## 値
 

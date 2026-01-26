@@ -49,7 +49,6 @@ PHP (再帰的な頭文字語で PHP: Hypertext Preprocessor) はオープンソ
 2. Wikipedia 上の [PHP](https://ja.wikipedia.org/wiki/PHP)
 3. Wikibooks 上の [PHP](https://ja.wikibooks.org/wiki/PHP)
 4. 関連用語:
-
    1. {{Glossary("Java")}}
    2. {{Glossary("JavaScript")}}
    3. {{Glossary("Python")}}

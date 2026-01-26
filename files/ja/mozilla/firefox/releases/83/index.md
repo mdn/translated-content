@@ -3,8 +3,6 @@ title: Firefox 83 for developers
 slug: Mozilla/Firefox/Releases/83
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 83 の変更点をまとめています。Firefox 83 は、2020 年 11 月 17 日にリリースされました。
 
 > [!NOTE]
@@ -25,7 +23,7 @@ slug: Mozilla/Firefox/Releases/83
 ### CSS
 
 - ベンダー接頭辞がつく `:-moz-any()` を、標準の {{CSSxRef(":is", ":is()")}} CSS 擬似クラス関数の別名にしました ([Firefox バグ 1666086](https://bugzil.la/1666086))。
-- [CSS Conic Gradients](/ja/docs/Web/CSS/gradient/conic-gradient) をサポートしました ([Firefox バグ 1632351](https://bugzil.la/1632351)) および ([Firefox バグ 1175958](https://bugzil.la/1175958))。
+- [CSS Conic Gradients](/ja/docs/Web/CSS/Reference/Values/gradient/conic-gradient) をサポートしました ([Firefox バグ 1632351](https://bugzil.la/1632351)) および ([Firefox バグ 1175958](https://bugzil.la/1175958))。
 
 ### JavaScript
 
@@ -42,7 +40,7 @@ _変更なし。_
 ### WebDriver conformance (Marionette)
 
 - `WebDriver:SwitchToShadowRoot` の予備的なサポートを削除しました。これは WebDriver の仕様書にまだ追加されていません ([Firefox バグ 1662468](https://bugzil.la/1662468))。
-- `WebDriver:Back` および `WebDriver:Forward` で、削除された [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) によってナビゲーションが発生したときに Marionette がハングアップする不具合を修正しました ([Firefox バグ 1672758](https://bugzil.la/1672758))。
+- `WebDriver:Back` および `WebDriver:Forward` で、削除された [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) によってナビゲーションが発生したときに Marionette がハングアップする不具合を修正しました ([Firefox バグ 1672758](https://bugzil.la/1672758))。
 
 ## アドオン開発者向けの変更点
 

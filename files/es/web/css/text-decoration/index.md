@@ -3,8 +3,6 @@ title: text-decoration
 slug: Web/CSS/text-decoration
 ---
 
-{{CSSRef}}
-
 La propiedad CSS **`text-decoration`** se usa para establecer el formato de texto a subrayado (`underline`) y suprarrayado (`overline`), tachado (`line-through`) o parpadeo (`blink`). El subrayado y el suprarrayado son posicionados bajo el texto, mientras la línea a través de éste se posiciona por encima.
 
 Las decoraciones de texto se dibujan a través de los elementos descendientes. Esto significa que no es posible deshabilitar la decoración en un descendiente si la propiedad se especifica en un elemento ancestro. Por ejemplo, en el código `<p>Este texto tiene <em>algunas palabras enfatizadas</em> en él.</p>`, la regla de estilos `p { text-decoration: underline; }` causará que el párrafo entero tenga subrayado. La regla `em { text-decoration: none; }` no causará ningún cambio; el párrafo entero seguirá subrayado. Sin embargo, la regla `em { text-decoration: overline; }` causará una segunda decoración que aparecerá sobre "algunas palabras enfatizadas".

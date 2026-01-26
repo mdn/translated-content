@@ -3,8 +3,6 @@ title: break
 slug: Web/JavaScript/Reference/Statements/break
 ---
 
-{{jsSidebar("Statements")}}
-
 **break 陳述句**會中斷目前的迭代、{{jsxref("Statements/switch", "switch")}} 或 {{jsxref("Statements/label", "label")}} 陳述句，並將程式流程轉到被中斷之陳述句後的陳述句。
 
 {{InteractiveExample("JavaScript Demo: Statement - Break")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 6b01400b286e8bdfa7060d56af84757dd4b8de48
 ---
 
-{{GlossarySidebar}}
-
 **来回通信延迟（RTT）** 是指数据包从发送到目的地再到返回到源站所需的总时间。可以使用 `ping` 命令来确定网络和服务器之间的 RTT。
 
 ```bash

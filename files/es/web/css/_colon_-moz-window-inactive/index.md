@@ -3,8 +3,6 @@ title: :-moz-window-inactive
 slug: Web/CSS/:-moz-window-inactive
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) `:-moz-window-inactive` selecciona cualquier elemento mientras está en una ventana inactiva.

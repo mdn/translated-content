@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b86c026ce4413be2a6b084ad5877dd641c32756e
 ---
 
-{{AddonSidebar}}
-
 WebExtension 的 JavaScript API 可在扩展的[后台脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts)和扩展打包的任何其他文档中使用，包括[浏览器操作](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/User_interface_components#浏览器操作)或[页面操作](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/User_interface_components#页面操作)弹窗、[侧边栏](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/User_interface_components#侧边栏)、[选项页](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/User_interface_components#选项页)或[新标签页](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides)。这些 API 中的一些也可以被扩展的[内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#内容脚本)访问（请参见[内容脚本指南中的列表](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_api)）。
 
 要使用更强大的 API，你需要在扩展的 `manifest.json` 中[请求权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。

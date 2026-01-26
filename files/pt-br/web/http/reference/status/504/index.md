@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/504
 original_slug: Web/HTTP/Status/504
 ---
 
-{{HTTPSidebar}}
-
 O código de resposta de erro HTTP **`504 Gateway Timeout`** indica que o servidor, enquanto atuando como gateway ou proxy, não conseguiu responder em tempo.
 
 Um [Gateway](https://pt.wikipedia.org/wiki/Gateway) pode referir-se a diferentes elementos de rede e um erro 504 geralmente é algo que você não pode consertar, mas solicitar uma correção no servidor web ou proxy no qual você está tentando acessar.

@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt8
 
 **`getInt8()`** メソッドは、符号付き 8 ビット整数 (byte) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置から読み取ります。
 
-{{InteractiveExample("JavaScript Demo: DataView.getInt8()")}}
+{{InteractiveExample("JavaScript デモ: DataView.getInt8()")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

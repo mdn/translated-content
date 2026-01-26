@@ -3,8 +3,6 @@ title: Browser styles
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
 ---
 
-{{AddonSidebar}}
-
 扩展程序包含的某些 UI 组件，例如： [popups](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), [sidebars](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), [options pages](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) ，实际上可以用如下方式统一定义：
 
 1. 创建一个 HTML 文件用于描述该 UI 组件的页面结构
@@ -32,7 +30,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
     <tr>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/HTML/Element/button">&#x3C;button></a></code
+          ><a href="/zh-CN/docs/Web/HTML/Reference/Elements/button">&#x3C;button></a></code
         >
       </td>
       <td>
@@ -45,7 +43,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
       <td>
         <p>
           <code
-            ><a href="/zh-CN/docs/Web/HTML/Element/select"
+            ><a href="/zh-CN/docs/Web/HTML/Reference/Elements/select"
               >&#x3C;select></a
             ></code
           >
@@ -64,7 +62,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
     <tr>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/HTML/Element/textarea"
+          ><a href="/zh-CN/docs/Web/HTML/Reference/Elements/textarea"
             >&#x3C;textarea></a
           ></code
         >
@@ -79,7 +77,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
       <td>
         Parent of an
         <code
-          ><a href="/zh-CN/docs/Web/HTML/Element/input">&#x3C;input></a></code
+          ><a href="/zh-CN/docs/Web/HTML/Reference/Elements/input">&#x3C;input></a></code
         >
       </td>
       <td>

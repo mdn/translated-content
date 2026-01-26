@@ -51,7 +51,7 @@ const header = (
 );
 ```
 
-この式は、 HTML の [`<header>`](/ja/docs/Web/HTML/Element/header) 要素の内部に [`<h1>`](/ja/docs/Web/HTML/Element/Heading_Elements) 要素があることを表します。 `{subject}` を囲む中括弧は、アプリケーションに `subject` 定数の値を読み取り、それを `<h1>` に挿入するように指示します。
+この式は、 HTML の [`<header>`](/ja/docs/Web/HTML/Reference/Elements/header) 要素の内部に [`<h1>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements) 要素があることを表します。 `{subject}` を囲む中括弧は、アプリケーションに `subject` 定数の値を読み取り、それを `<h1>` に挿入するように指示します。
 
 React で使用すると、前のスニペットの JSX は次のようにコンパイルされます。
 
@@ -159,7 +159,7 @@ function AuthorCredit(props) {
 />
 ```
 
-これにより、最終的に次の [`<figure>`](/ja/docs/Web/HTML/Element/figure) 要素がブラウザーにレンダリングされます。その構造は `AuthorCredit` コンポーネントで定義されているとおりであり、そのコンテンツは次のようになります。 `AuthorCredit` コンポーネント呼び出しに含まれるプロパティで定義されます。
+これにより、最終的に次の [`<figure>`](/ja/docs/Web/HTML/Reference/Elements/figure) 要素がブラウザーにレンダリングされます。その構造は `AuthorCredit` コンポーネントで定義されているとおりであり、そのコンテンツは次のようになります。 `AuthorCredit` コンポーネント呼び出しに含まれるプロパティで定義されます。
 
 ```html
 <figure>

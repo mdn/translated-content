@@ -15,4 +15,4 @@ l10n:
 
 - 위키백과의 [지배자](<https://en.wikipedia.org/wiki/Dominator_(graph_theory)>)
 - [지배자](https://firefox-source-docs.mozilla.org/devtools-user/memory/dominators/index.html)
-- [가비지 컬렉션](/ko/docs/Web/JavaScript/Memory_management#garbage_collection)
+- [가비지 컬렉션](/ko/docs/Web/JavaScript/Guide/Memory_management#garbage_collection)

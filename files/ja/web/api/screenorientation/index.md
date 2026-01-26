@@ -23,7 +23,7 @@ l10n:
 ### イベントハンドラー
 
 - {{DOMxRef("ScreenOrientation.onchange")}}
-  - : 画面の向きが変わるたびに呼ばれる[イベントハンドラー](/ja/docs/Web/Events/Event_handlers)です。
+  - : 画面の向きが変わるたびに呼ばれる[イベントハンドラー](/ja/docs/Web/API/Document_Object_Model/Events)です。
 
 ## インスタンスメソッド
 

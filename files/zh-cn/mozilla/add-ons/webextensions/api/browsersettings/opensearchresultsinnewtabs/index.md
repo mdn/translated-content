@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 一个 {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} 对象，其底层值是布尔值。
 
 如果设置为 `true`，当用户在浏览器的搜索框中选择一个项目时，搜索结果会显示在一个新标签页中。如果设置为 `false`（默认值），搜索结果会显示在当前标签页中。

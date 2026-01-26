@@ -30,7 +30,8 @@ JavaScript ではコンテンツを変更でき、CSS ではレイアウトを�
 
 `aria-owns` の使用例として、視覚的には親メニューの近くに配置されているが、視覚的な表示に影響するため親メニュー内の DOM にネストできないポップアップサブメニューが挙げられます。この場合、サブメニューを親メニューの子としてスクリーンリーダーに提示するために `aria-owns` を使用します。
 
-> **メモ:** `aria-owns` 属性は、DOM から親子関係を判別できない場合にのみ使用してください。
+> [!NOTE]
+> `aria-owns` 属性は、DOM から親子関係を判別できない場合にのみ使用してください。
 
 要素に `aria-owns` と DOM の子要素の両方がある場合、子要素の順序は次のようになります:
 
@@ -43,7 +44,8 @@ JavaScript ではコンテンツを変更でき、CSS ではレイアウトを�
 
 所有されている要素の所有者が 1 つだけであることを確認してください。1 つの要素の `id` を他の複数の要素の `aria-owns` 属性に指定しないでください。要素の所有者は 1 つだけです。
 
-> **警告:** `aria-owns` は [現在全ての最新ブラウザーでサポート](https://a11ysupport.io/tech/aria/aria-owns_attribute) されていますが、`aria-owns` は iOS 17.3 および macOS 14.3 より前の iOS および macOS で VoiceOver を使用しているユーザーには公開されない可能性があります。
+> [!WARNING]
+> `aria-owns` は [現在全ての最新ブラウザーでサポート](https://a11ysupport.io/tech/aria/aria-owns_attribute) されていますが、`aria-owns` は iOS 17.3 および macOS 14.3 より前の iOS および macOS で VoiceOver を使用しているユーザーには公開されない可能性があります。
 
 ## 値
 

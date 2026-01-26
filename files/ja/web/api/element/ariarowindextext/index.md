@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
-**`ariaRowIndexText`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-rowindextext`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext) 属性の値を反映し、aria-rowindex の人間が読むための代替テキストを定義します。
+**`ariaRowIndexText`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-rowindextext`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindextext) 属性の値を反映し、aria-rowindex の人間が読むための代替テキストを定義します。
 
 ## 値
 

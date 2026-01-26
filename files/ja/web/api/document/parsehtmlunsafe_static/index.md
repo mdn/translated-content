@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-**`parseHTMLUnsafe()`** は {{domxref("Document")}} オブジェクトの静的メソッドで、HTML の文字列（[宣言的なシャドウルート](/ja/docs/Web/HTML/Element/template#宣言的なシャドウルート)を含む可能性があるもの）を解釈し、新しい {{domxref("Document")}} インスタンスを生成するために使用します。
+**`parseHTMLUnsafe()`** は {{domxref("Document")}} オブジェクトの静的メソッドで、HTML の文字列（[宣言的なシャドウルート](/ja/docs/Web/HTML/Reference/Elements/template#宣言的なシャドウルート)を含む可能性があるもの）を解釈し、新しい {{domxref("Document")}} インスタンスを生成するために使用します。
 
 メソッド名の接尾辞 "Unsafe" は、 `<script>` 要素が構文解析中に評価されないのに対し、このメソッドは他にも安全でない可能性のある XSS 関連の入力をサニタイズしないことを示します。
 

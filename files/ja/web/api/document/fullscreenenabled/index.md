@@ -10,7 +10,7 @@ l10n:
 
 **`fullscreenEnabled`** は {{domxref("Document")}} インターフェイスの読み取り専用プロパティで、全画面モードが使用できるかどうかを示します。
 
-全画面モードは、文書内にウィンドウ化されたプラグインを含まないページ、および文書内のすべての {{HTMLElement("iframe")}} 要素が [`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen) 属性を持つページに限り使用することができます。
+全画面モードは、文書内にウィンドウ化されたプラグインを含まないページ、および文書内のすべての {{HTMLElement("iframe")}} 要素が [`allowfullscreen`](/ja/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen) 属性を持つページに限り使用することができます。
 
 このプロパティは読み取り専用ですが、変更されても（厳格モードでも）例外を発生させません。セッターは何もしないので、無視されます。
 
@@ -48,4 +48,4 @@ function requestFullscreen() {
 - {{domxref("Document.exitFullscreen()")}}
 - {{domxref("Document.fullscreenElement")}}
 - {{cssxref(":fullscreen")}} および {{cssxref("::backdrop")}}
-- {{HTMLElement("iframe")}} 要素の [`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen) 属性
+- {{HTMLElement("iframe")}} 要素の [`allowfullscreen`](/ja/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen) 属性

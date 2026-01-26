@@ -21,9 +21,7 @@ createWritable(options)
 ### 参数
 
 - `options` {{optional_inline}}
-
   - : 一个包含以下属性的对象：
-
     - `keepExistingData` {{optional_inline}}
       - : {{jsxref('Boolean', '布尔值', '', 1)}}，默认为 `false`。当设为 `true` 时，如果文件存在，则现将现有文件的内容复制到临时文件，否则临时文件初始时内容为空。
     - `mode` {{optional_inline}} {{non-standard_inline}}
@@ -92,7 +90,7 @@ async function writeFile(fileHandle, contents) {
 </ol>
 ```
 
-文本输入字段和写入文本按钮最初通过 [`disabled`](/zh-CN/docs/Web/HTML/Attributes/disabled) 属性设置为禁用——直到用户选择要写入的文件时，它们才应被使用。
+文本输入字段和写入文本按钮最初通过 [`disabled`](/zh-CN/docs/Web/HTML/Reference/Attributes/disabled) 属性设置为禁用——直到用户选择要写入的文件时，它们才应被使用。
 
 ```css hidden
 li {

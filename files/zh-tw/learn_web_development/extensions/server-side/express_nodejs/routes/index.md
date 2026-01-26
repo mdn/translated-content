@@ -3,7 +3,7 @@ title: "Express 教學 4: 路由與控制器"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/routes
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 在本教程中，我們將為最終在 本地圖書館 網站中需要的所有資源端點，搭配 "空殼" 處理函式來配置路由 (URL handling code) 。完成後，我們的路由處理源碼將會有模組化結構，在接下來的文章中，我們可以用真實的處理函式加以擴充。我們也會對如何使用 Express 創建模組化路由，有更好的理解。
 

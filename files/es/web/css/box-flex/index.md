@@ -3,8 +3,6 @@ title: -moz-box-flex
 slug: Web/CSS/box-flex
 ---
 
-{{CSSRef}}
-
 > [!WARNING]
 > Esta propiedad es para controlar parte del modelo de caja XUL. No coincide ni con el antiguo borrador del módulo CSS para el diseño de caja flexibles '`box-flex`' (que se basa en esta propiedad) ni con el comportamiento de '`-webkit-box-flex`' (que se basa en esos borradores).
 

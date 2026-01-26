@@ -20,15 +20,15 @@ _親インターフェイスである {{domxref("HTMLMediaElement")}} および 
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
   - : ユーザーエージェントがユーザーにピクチャインピクチャを提案するかしないかを示します。
 - {{domxref("HTMLVideoElement.height")}}
-  - : 文字列で、 HTML の [`height`](/ja/docs/Web/HTML/Element/video#height) 属性を反映し、表示領域の高さを CSS ピクセル数で指定します。
+  - : 文字列で、 HTML の [`height`](/ja/docs/Web/HTML/Reference/Elements/video#height) 属性を反映し、表示領域の高さを CSS ピクセル数で指定します。
 - {{domxref("HTMLVideoElement.poster")}}
-  - : 文字列で、 HTML の [`poster`](/ja/docs/Web/HTML/Element/video#poster) 属性を反映し、動画データが利用できないときに表示する画像を指定します。
+  - : 文字列で、 HTML の [`poster`](/ja/docs/Web/HTML/Reference/Elements/video#poster) 属性を反映し、動画データが利用できないときに表示する画像を指定します。
 - {{domxref("HTMLVideoElement.videoHeight")}} {{ReadOnlyInline}}
   - : 符号なし整数値で、リソースの内在的な高さを CSS ピクセル数で示す値を返します。メディアが利用できない場合は 0 を返します。
 - {{domxref("HTMLVideoElement.videoWidth")}} {{ReadOnlyInline}}
   - : 符号なし整数値で、リソースの内在的な幅を CSS ピクセル数で示す値を返します。メディアが利用できない場合は 0 を返します。
 - {{domxref("HTMLVideoElement.width")}}
-  - : 文字列で、HTML の [`width`](/ja/docs/Web/HTML/Element/video#width) 属性を反映し、表示領域の幅を CSS ピクセル数で指定します。
+  - : 文字列で、HTML の [`width`](/ja/docs/Web/HTML/Reference/Elements/video#width) 属性を反映し、表示領域の幅を CSS ピクセル数で指定します。
 
 ### Firefox 固有のプロパティ
 

@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Encoding
 original_slug: Web/HTTP/Headers/Content-Encoding
 ---
 
-{{HTTPSidebar}}
-
 La cabecera **`Content-Encoding`** es usada para comprimir el media-type. Cuando está presente, su valor indica qué codificación de contenido adicional ha sido aplicada al cuerpo de la entidad. Permite al cliente saber cómo decodificar para obtener el media-type referido por la cabecera `Content-Type`.
 
 Se recomienda comprimir los datos tanto como sea posible y por lo tanto utilizar este campo, pero algunos tipos de recursos, como imágenes JPEG, ya están comprimidos. A veces, el uso de compresión adicional no reduce el tamaño de la petición e incluso puede hacer que la petición sea más larga.

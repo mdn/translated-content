@@ -3,8 +3,6 @@ title: 原因：CORS header 'Access-Control-Allow-Origin' does not match 'xyz'
 slug: Web/HTTP/Guides/CORS/Errors/CORSAllowOriginNotMatchingOrigin
 ---
 
-{{HTTPSidebar}}
-
 ## 原因
 
 ```plain

@@ -2,7 +2,7 @@
 title: IndexedDB の主な特徴と基本用語
 slug: Web/API/IndexedDB_API/Basic_Terminology
 l10n:
-  sourceCommit: f2088b8912ef205a737551441d54b73507bd3ac6
+  sourceCommit: 941ade970fd7ebad52af692b6ac27cfd96f94100
 ---
 
 {{DefaultAPISidebar("IndexedDB")}}
@@ -179,7 +179,7 @@ IndexedDB の主な特徴と主要な用語を理解できたら、より具体�
 
 ## 関連情報
 
-- [Indexed Database API 仕様書](https://www.w3.org/TR/IndexedDB/)
+- [Indexed Database API 仕様書](https://w3c.github.io/IndexedDB/)
 - [IndexedDB API リファレンス](/ja/docs/Web/API/IndexedDB_API)
 - [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - [IndexedDB — The Store in Your Browser](<https://learn.microsoft.com/en-us/previous-versions/msdn10/gg679063(v=msdn.10)>)

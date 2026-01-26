@@ -22,9 +22,7 @@ forEach(callback, thisArg)
 ### 引数
 
 - `callback`
-
   - : それぞれの要素に対して実行される関数で、以下の引数が渡されます。
-
     - `value`
       - : `URLSearchParams` オブジェクトで現在処理中の項目の値です。
     - `key`

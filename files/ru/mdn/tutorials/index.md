@@ -13,14 +13,14 @@ slug: MDN/Tutorials
   - : Что такое HTML, что он делает, его краткая история, и что представляет собой структура HTML документа. В последующих статьях мы подробнее рассмотрим отдельные части HTML.
 - [Базовая структура веб-страницы](https://reference.sitepoint.com/html/page-structure) (SitePoint)
   - : Узнайте как HTML элементы сочетаются в общую картину.
-- [MDN HTML Element Reference](/ru/docs/Web/HTML/Element)
+- [MDN HTML Element Reference](/ru/docs/Web/HTML/Reference/Elements)
   - : Комплексный справочник для HTML элементов, и, как различные браузеры поддерживают их.
 - [HTML Challenges](https://wikiversity.org/wiki/Web_Design/HTML_Challenges) (Wikiversity)
   - : Используйте эти задачки, чтобы отточить свои HTML навыки (для примера, "Какой элемент нужно использовать - \<h2> или \<STRONG>?"), фокусируясь на смысле разметки.
 
 ### Продвинутый уровень
 
-- [Tips for Authoring Fast-Loading HTML Pages](/ru/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages)
+- [Tips for Authoring Fast-Loading HTML Pages](/ru/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages)
   - : Оптимизация веб-страниц, для большей адаптивности сайта и снижения нагрузки на веб-сервера и подключение к Интернету
 - [HTML5 Tutorials](https://www.html5rocks.com/tutorials/) (HTML5 Rocks)
   - : Совершите экскурсию в код, который использует возможности HTML5.
@@ -124,7 +124,7 @@ slug: MDN/Tutorials
 
 - [Using CSS Transforms](/ru/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
   - : Как применять поворот, наклон, масштабирование и перемещение при помощи CSS
-- [CSS Transitions](/ru/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [CSS Transitions](/ru/docs/Web/CSS/Guides/Transitions/Using)
   - : CSS переходы, спецификация CSS3 по этой теме, как анимировать изменения стилей в CSS, вместо того, чтобы делать их "сразу".
 - [Quick Guide to Implement Web Fonts with @font-face](https://www.html5rocks.com/tutorials/webfonts/quick/) (HTML5 Rocks)
   - : Возможности @font-face в CSS3, создание собственных шрифтов и работа с ними.

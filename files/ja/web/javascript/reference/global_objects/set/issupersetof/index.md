@@ -1,11 +1,10 @@
 ---
 title: Set.prototype.isSupersetOf()
+short-title: isSupersetOf()
 slug: Web/JavaScript/Reference/Global_Objects/Set/isSupersetOf
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`isSupersetOf()`** は {{jsxref("Set")}} インスタンスのメソッドで、集合を取り、与えられた集合のすべての要素がこの Set にあることを示す論理値を返します。
 
@@ -86,6 +85,7 @@ console.log(set2.isSupersetOf(set1)); // true
 ## 関連情報
 
 - [`Set.prototype.isSupersetOf` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#new-set-methods)
+- [es-shims による `Set.prototype.isSupersetOf` のポリフィル](https://www.npmjs.com/package/set.prototype.issupersetof)
 - {{jsxref("Set.prototype.difference()")}}
 - {{jsxref("Set.prototype.intersection()")}}
 - {{jsxref("Set.prototype.isDisjointFrom()")}}

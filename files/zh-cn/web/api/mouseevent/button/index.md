@@ -11,7 +11,8 @@ slug: Web/API/MouseEvent/button
 
 用户可能会改变鼠标按键的配置，因此当一个事件的 **`MouseEvent.button`** 值为 0 时，它可能不是由物理上设备最左边的按键触发的。但是对于一个标准按键布局的鼠标来说就会是左键。
 
-> **备注：** {{domxref("MouseEvent.buttons")}} 属性可指示任意鼠标事件中鼠标的按键情况，因此不要把它和 MouseEvent.button 属性弄混淆了。
+> [!NOTE]
+> {{domxref("MouseEvent.buttons")}} 属性可指示任意鼠标事件中鼠标的按键情况，因此不要把它和 MouseEvent.button 属性弄混淆了。
 
 ## 语法
 

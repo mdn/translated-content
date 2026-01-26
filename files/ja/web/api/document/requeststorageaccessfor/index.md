@@ -36,7 +36,7 @@ requestStorageAccessFor(requestedOrigin)
   - : 現在の {{domxref("Document")}} がまだアクティブ化されたいない場合に発生します。
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if:
-    - 文書のウィンドウが[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)ではない場合。
+    - 文書のウィンドウが[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)ではない場合。
     - この文書が最上位の文書でない場合。
     - この文書のオリジンが `null` であった場合。
     - 指定された `requestedOrigin` が[不透明](https://html.spec.whatwg.org/multipage/browsers.html#concept-origin-opaque)であった場合。
@@ -85,7 +85,7 @@ function rSAFor() {
 }
 ```
 
-`requestStorageAccessFor()` の呼び出しが成功した後、[CORS](/ja/docs/Web/HTTP/Guides/CORS) / [`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin) を含む場合、クロスサイトリクエストはクッキーを入れることができます。このようなリクエストは [`credentials: "include"`](/ja/docs/Web/API/RequestInit#credentials) オプションを用い、リソースは `crossorigin="use-credentials"` 属性を記載しなければなりません。
+`requestStorageAccessFor()` の呼び出しが成功した後、[CORS](/ja/docs/Web/HTTP/Guides/CORS) / [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) を含む場合、クロスサイトリクエストはクッキーを入れることができます。このようなリクエストは [`credentials: "include"`](/ja/docs/Web/API/RequestInit#credentials) オプションを用い、リソースは `crossorigin="use-credentials"` 属性を記載しなければなりません。
 
 例えば、次のようにします。
 

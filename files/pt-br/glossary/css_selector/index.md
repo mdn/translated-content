@@ -37,7 +37,6 @@ Nessa primeira regra do CSS, eu estou selecionando o elemento da div estilizando
 ### Conhecimento geral
 
 - Seletores básicos
-
   - [Tipos de seletores](/pt-BR/docs/Web/CSS/Type_selectors) `elementname`
   - [Classes seletoras](/pt-BR/docs/Web/CSS/Class_selectors) `.classname`
   - [ID seletores](/pt-BR/docs/Web/CSS/ID_selectors) `#idname`
@@ -46,7 +45,6 @@ Nessa primeira regra do CSS, eu estou selecionando o elemento da div estilizando
   - `Seletores de estado a:active, a:visited`
 
 - Combinadores
-
   - [Seletores de irmão adjacentes](/pt-BR/docs/Web/CSS/Next-sibling_combinator) `A + B`
   - [Seletores de irmãos gerais](/pt-BR/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
   - [Seletores filhos](/pt-BR/docs/Web/CSS/Child_combinator) `A > B`

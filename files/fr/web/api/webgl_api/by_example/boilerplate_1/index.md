@@ -3,7 +3,7 @@ title: Modèle 1
 slug: Web/API/WebGL_API/By_example/Boilerplate_1
 ---
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Tailles_de_canvas_et_WebGL","Apprendre/WebGL/Par_exemple/Créer_une_animation_avec_découpe_et_applique")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Canvas_size_and_WebGL","Web/API/WebGL_API/By_example/Scissor_animation")}}
 
 Dans cet article, on décrit les fragments de code qui seront réutilisés pour les exemples suivants (où ils seront masqués pour une meilleur lisibilité). Parmi ce code, on définit une fonction JavaScript utilitaire qui permet de simplifier l'initialisation de WebGL.
 
@@ -86,4 +86,4 @@ function getRenderingContext() {
 
 Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/boilerplate-1).
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Tailles_de_canvas_et_WebGL","Apprendre/WebGL/Par_exemple/Créer_une_animation_avec_découpe_et_applique")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Canvas_size_and_WebGL","Web/API/WebGL_API/By_example/Scissor_animation")}}

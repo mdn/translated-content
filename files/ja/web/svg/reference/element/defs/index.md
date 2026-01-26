@@ -1,14 +1,11 @@
 ---
 title: <defs>
 slug: Web/SVG/Reference/Element/defs
-original_slug: Web/SVG/Element/defs
 l10n:
-  sourceCommit: 2f43f506240fa6c866cc3bc2d018364ae49421d9
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}
-
-**`<defs>`** 要素は、後で使用するグラフィックオブジェクトを格納するために使われます。 `<defs>` 要素内に作成されたオブジェクトは直接レンダリングされません。オブジェクトを表示するには（例えば {{SVGElement("use")}} 要素で）参照する必要があります。
+**`<defs>`** は [SVG](/ja/docs/Web/SVG) の要素で、後で使用するグラフィックオブジェクトを格納するために使われます。 `<defs>` 要素内に作成されたオブジェクトは直接レンダリングされません。オブジェクトを表示するには（例えば {{SVGElement("use")}} 要素で）参照する必要があります。
 
 グラフィックオブジェクトはどこからでも参照することができますが、これらのオブジェクトを `<defs>` 要素の内部で定義することは SVG コンテンツの理解しやすさを促進し、文書全体のアクセシビリティに有益です。
 
@@ -41,7 +38,7 @@ svg {
 
 {{EmbedLiveSample('Example', 150, '100%')}}
 
-## 利用コンテキスト
+## 使用コンテキスト
 
 {{svginfo}}
 

@@ -4,11 +4,9 @@ slug: Web/HTTP/Reference/Headers/Content-Security-Policy
 original_slug: Web/HTTP/Headers/Content-Security-Policy
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de resposta HTTP **`Content-Security-Policy`** permite aos administradores do site, ter controle sobre os recursos que o agente de usuário é permitido carregar para uma certa página. Com algumas pequenas exceções, políticas majoritariamente envolvem especificar as origens do servidor e pontos de acessos dos _scripts_. Isso ajuda contra ataques de _scripting_ entre sites ({{Glossary("XSS")}}).
 
-Para mais informações, veja o artigo introdutório em [Política de Segurança de Conteúdo (_Content Security Policy_)(CSP)](/pt-BR/docs/Web/HTTP/CSP).
+Para mais informações, veja o artigo introdutório em [Política de Segurança de Conteúdo (_Content Security Policy_)(CSP)](/pt-BR/docs/Web/HTTP/Guides/CSP).
 
 <table class="properties">
   <tbody>
@@ -38,7 +36,6 @@ Diretivas de busca (_Fetch directives_) controlam as localizações dos quais ce
 #### Lista de Diretivas de busca de Política de Segurança de Conteúdo (CSP)
 
 - {{CSP("child-src")}}
-
   - : Define uma origem válida para [web workers](/pt-BR/docs/Web/API/Web_Workers_API) e contextos aninhados de navegação carregados usando elementos como {{HTMLElement("frame")}} e {{HTMLElement("iframe")}}.
 
     > [!WARNING]
@@ -59,7 +56,6 @@ Diretivas de busca (_Fetch directives_) controlam as localizações dos quais ce
 - {{CSP("media-src")}}
   - : Especifica origens válidas para carregar dados de media usando os elementos {{HTMLElement("audio")}} , {{HTMLElement("video")}} e {{HTMLElement("track")}}.
 - {{CSP("object-src")}}
-
   - : Especifica origens válidas para os elementos {{HTMLElement("object")}}, {{HTMLElement("embed")}}, e {{HTMLElement("applet")}}.
 
     > [!NOTE]
@@ -115,7 +111,6 @@ Diretivas de Relatório controlam o processo de reportar as violações CSP. Vej
 #### Lista de Diretivas de Relatório da Política de Segurança de Conteúdo
 
 - {{CSP("report-uri")}}{{deprecated_inline}}
-
   - : Instrui ao agente de usuário para reportar tentativas de violaçnao de Política de Segurança de Conteúdo. Esses relatórios de violação consistem de documentos {{Glossary("JSON")}} enviados por requisição HTTP `POST` para uma URI especificada.
 
     > [!WARNING]
@@ -201,7 +196,7 @@ Veja as [Mozilla Web Security Guidelines](https://infosec.mozilla.org/guidelines
 ## Veja também
 
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
-- [Aprenda sobre: Content Security Policy](/pt-BR/docs/Web/HTTP/CSP)
+- [Aprenda sobre: Content Security Policy](/pt-BR/docs/Web/HTTP/Guides/CSP)
 - [Segurança de Conteúdo em Extensões Web](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
 - [Adotando uma política estrita](https://csp.withgoogle.com/docs/strict-csp.html)
 - [Avaliador CSP](https://csp-evaluator.withgoogle.com/) - Avalie sua Política de Segurança de Conteúdo

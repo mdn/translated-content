@@ -39,7 +39,7 @@ Otro ejemplo de lo que se puede hacer con el operador coma es procesar antes de 
 function myFunc() {
   var x = 0;
 
-  return (x += 1), x; // the same as return ++x;
+  return ((x += 1), x); // the same as return ++x;
 }
 ```
 

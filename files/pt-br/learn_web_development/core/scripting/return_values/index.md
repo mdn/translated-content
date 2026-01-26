@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Return_values
 original_slug: Learn/JavaScript/Building_blocks/Return_values
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Events", "conflicting/Learn_web_development/Core/Scripting")}}
 
 Há um último conceito essencial para discutirmos neste curso, para fechar nossa visão das funções — valores de retorno. Algumas funções não retornam um valor significativo após a conclusão, mas outras o fazem, e é importante entender quais são seus valores, como utilizá-los em seu código e como fazer com que suas próprias funções personalizadas retornem valores úteis. Nós vamos cobrir tudo isso abaixo.
 
@@ -176,11 +176,11 @@ Este exercício trouxe alguns pontos importantes além de ser um estudo sobre co
 
 Então, temos isso — funções são divertidas, muito úteis e, embora haja muito o que falar em relação à sua sintaxe e funcionalidade, bastante compreensíveis, dados os artigos certos para se estudar.
 
-Se houver algo que você não entendeu, fique à vontade para ler o artigo novamente ou entre em [contato conosco](/pt-BR/docs/Learn#contact_us) para pedir ajuda.
+Se houver algo que você não entendeu, fique à vontade para ler o artigo novamente ou entre em [contato conosco](/pt-BR/docs/Learn_web_development#contact_us) para pedir ajuda.
 
 ## Veja também
 
 - [Funções detalhadas](/pt-BR/docs/Web/JavaScript/Reference/Functions) — um guia detalhado cobrindo informações relacionadas a funções mais avançadas.
 - [Funções de retorno de chamada em JavaScript](https://www.impressivewebs.com/callback-functions-javascript/) — um padrão JavaScript comum é passar uma função para outra função como um argumento, que é então chamado dentro da primeira função. Isso está um pouco além do escopo deste curso, mas vale a pena ser estudado em pouco tempo.
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Events", "conflicting/Learn_web_development/Core/Scripting")}}

@@ -86,7 +86,7 @@ Alguna información, llamada datos tabulares, necesita ser organizada en tablas 
 
 ### Imágenes y multimedia avanzada
 
-- [Cómo agregar una imagen receptiva a una página web](/es/docs/Web/HTML/Responsive_images)
+- [Cómo agregar una imagen receptiva a una página web](/es/docs/Web/HTML/Guides/Responsive_images)
 - [Cómo agregar una imagen vectorial a una página web](/es/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)
 - [Cómo agregar un mapa de visitas sobre una imagen](/es/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image)
 

@@ -27,7 +27,8 @@ HTML 드래그 앤 드롭은 {{domxref("Event","DOM event model")}} 과 _{{domxr
 | {{domxref('HTMLElement/dragstart_event', 'dragstart')}} | {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} | 사용자가 요소나 텍스트 블록을 드래그하기 시작했을 때 발생한다. ([드래그 시작하기](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragstart)를 보시오.)                |
 | {{domxref('HTMLElement/drop_event', 'drop')}}           | {{domxref('GlobalEventHandlers.ondrop','ondrop')}}           | 요소나 텍스트 블록을 적합한 드롭 대상에 드롭했을 때 발생한다. ([드롭하기](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragstart)를 보시오.)                        |
 
-> **참고:** `참고: dragstart`와 `dragend` 이벤트는 파일을 브라우저로 드래그할 때는 발생하지 않습니다.
+> [!NOTE]
+> `참고: dragstart`와 `dragend` 이벤트는 파일을 브라우저로 드래그할 때는 발생하지 않습니다.
 
 ## 인터페이스
 
@@ -56,7 +57,7 @@ Mozilla와 Firefox는 표준 드래그 앤 드롭 모델에서 제공하지 않�
 
 ### 어떤 것이 *draggable*인지 확인하기
 
-하나의 요소를 draggable로 만들기 위해서는 [`draggable`](/ko/docs/Web/HTML/Global_attributes#draggable)와 {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} 전역 이벤트 핸들러를 아래 예제 코드와 같이 추가해야합니다.
+하나의 요소를 draggable로 만들기 위해서는 [`draggable`](/ko/docs/Web/HTML/Reference/Global_attributes#draggable)와 {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} 전역 이벤트 핸들러를 아래 예제 코드와 같이 추가해야합니다.
 
 ```js
 function dragstart_handler(ev) {
@@ -84,7 +85,7 @@ function dragstart_handler(ev) {
 <p id="p1" draggable="true">This element is draggable.</p>
 ```
 
-추가 정보를 위해 [draggable attribute reference](/ko/docs/Web/HTML/Global_attributes/draggable)와 [Drag operations guide](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#draggableattribute)를 참고하세요.
+추가 정보를 위해 [draggable attribute reference](/ko/docs/Web/HTML/Reference/Global_attributes/draggable)와 [Drag operations guide](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#draggableattribute)를 참고하세요.
 
 ### 드래그 데이터 정의하기
 

@@ -3,8 +3,6 @@ title: function* 表达式
 slug: Web/JavaScript/Reference/Operators/function*
 ---
 
-{{jsSidebar("Operators")}}
-
 **`function*`** 关键字可以在表达式内部定义一个生成器函数。
 
 {{InteractiveExample("JavaScript Demo: Expressions - function* expression")}}

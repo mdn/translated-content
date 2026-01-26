@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 `BrowserSetting` 是一个表示浏览器设置的对象。
 
 它提供了方法来设置和获取设置的基础值，清除扩展程序对其进行的任何更改，和监听其值的变化。

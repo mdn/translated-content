@@ -40,16 +40,15 @@ L'objet {{domxref("MouseEvent")}}, passé au gestionnaire d'évènement (lorsque
 
 ### Internet Explorer
 
-Internet Explorer 8 & 9 souffrent d'un bug où les éléments avec une {{cssxref("background-color")}} calculée qui vaut [`transparent`](/fr/docs/Web/CSS/color_value#transparent_keyword) qui recouvrent d'autres éléments ne recevront pas d'évènements `click`. Les évènements `click` toucheront les éléments en dessous à la place.
+Internet Explorer 8 & 9 souffrent d'un bug où les éléments avec une {{cssxref("background-color")}} calculée qui vaut [`transparent`](/fr/docs/Web/CSS/Reference/Values/color_value#transparent_keyword) qui recouvrent d'autres éléments ne recevront pas d'évènements `click`. Les évènements `click` toucheront les éléments en dessous à la place.
 
 Quelques méthodes de contournement pour ce bug :
 
 - Pour IE9 :
-
   - Utiliser {{cssxref("background-color")}}`: rgba(0,0,0,0)`
-  - Appliquer {{cssxref("opacity")}}`: 0` et une valeur explicite pour {{cssxref("background-color")}} qui ne soit pas [`transparent`](/fr/docs/Web/CSS/color_value#transparent_keyword)
+  - Appliquer {{cssxref("opacity")}}`: 0` et une valeur explicite pour {{cssxref("background-color")}} qui ne soit pas [`transparent`](/fr/docs/Web/CSS/Reference/Values/color_value#transparent_keyword)
 
-- Pour IE8 et IE9 : appliquer `filter: alpha(opacity=0);` et une valeur explicite pour {{cssxref("background-color")}} qui ne soit pas [`transparent`](/fr/docs/Web/CSS/color_value#transparent_keyword)
+- Pour IE8 et IE9 : appliquer `filter: alpha(opacity=0);` et une valeur explicite pour {{cssxref("background-color")}} qui ne soit pas [`transparent`](/fr/docs/Web/CSS/Reference/Values/color_value#transparent_keyword)
 
 ### Safari Mobile
 
@@ -109,9 +108,8 @@ Essayez de cliquer rapidement sur le bouton pour augmenter le nombre de clic. Ap
 
 ## Voir aussi
 
-- [Une introduction aux évènements](/fr/docs/Learn/JavaScript/Building_blocks/Events)
+- [Une introduction aux évènements](/fr/docs/Learn_web_development/Core/Scripting/Events)
 - D'autres évènements connexes
-
   - [`mouseup`](/fr/docs/Web/API/Element/mouseup_event)
   - [`mousedown`](/fr/docs/Web/API/Element/mousedown_event)
   - [`mousemove`](/fr/docs/Web/API/Element/mousemove_event)

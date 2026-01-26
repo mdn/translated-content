@@ -47,14 +47,12 @@ Instâncias de {{jsxref("Date")}} herdam o método `toString()` de {{jsxref("Dat
 - espaço
 - A _string_ "GMT"
 - Sinal do deslocamento do fuso horário, pode ser:
-
   - "+" para deslocamentos positivos (0 ou maior)
   - "-" para deslocamentos negativos (menores que 0)
 
 - Dois dígitos da hora do deslocamento, e.g. "14"
 - Dois dígitos dos minutos do deslocamento, e.g. "00"
 - Opcionalmente, um nome de fuso horário consistindo de:
-
   - espaço
   - parênteses esquerdo, i.e. "("
   - Uma representação de _string_ dependente da implementação do fuso horário, que pode ser uma abreviação ou o nome completo (não há um padrão para nomes ou abreviação de fusos horários), e.g. "Line Islands Time" ou "LINT"

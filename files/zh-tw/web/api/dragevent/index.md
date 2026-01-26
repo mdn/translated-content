@@ -1,63 +1,50 @@
 ---
 title: DragEvent
 slug: Web/API/DragEvent
+l10n:
+  sourceCommit: a4675b9077ae32f989c7ecac94f454db2653c4fc
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
 
-**`DragEvent`** 介面是一種 {{domxref("Event","DOM event")}}，定義了拖放操作時產生的事件物件。使用者藉由把指標裝置 (例如滑鼠) 放到有效區域並拖移到另一個新的位置 ( 如另外一個 DOM 元素 ) 來開始一個拖動的動作。 而應用程式可以自由地決定互動的方式來達到符合該應用程式的使用情境。
+**`DragEvent`** 介面是用來表示拖曳與放置的互動行為的 [DOM 事件](/zh-TW/docs/Web/API/Event)。使用者透過在觸控表面上放置指標裝置（例如滑鼠），然後將指標拖曳至新位置（例如另一個 DOM 元素）來啟動拖曳動作。應用程式可以依照其特定需求自由詮釋拖曳與放置的互動。
 
-This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref("Event")}}.
+此介面從 {{domxref("MouseEvent")}} 和 {{domxref("Event")}} 繼承屬性。
 
-## 屬性
+{{InheritanceDiagram}}
 
-- {{domxref('DragEvent.dataTransfer')}} {{readonlyInline}}
-  - : The data that is transferred during a drag and drop interaction.
+## 實例屬性
 
-## 建構式
+- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
+  - : 在拖曳與放置互動期間所傳輸的資料。
 
-Although this interface has a constructor, it is not possible to create a useful DataTransfer object from script, since {{domxref("DataTransfer")}} objects have a processing and security model that is coordinated by the browser during drag-and-drops.
+## 建構子
+
+雖然此介面有建構子，但無法透過腳本建立有用的 DataTransfer 物件，因為 {{domxref("DataTransfer")}} 物件具有在拖曳與放置操作期間由瀏覽器協調的處理和安全模型。
 
 - {{domxref("DragEvent.DragEvent", "DragEvent()")}}
-  - : Creates a synthetic and untrusted DragEvent.
+  - : 建立一個合成的、不可信任的 DragEvent。
 
-## 事件類型
+## 事件型別
 
-- [`drag`](/zh-TW/docs/Web/API/HTMLElement/drag_event)
-  - : 在『被選擇的物件』被拖曳時觸發。
-- [`dragend`](/zh-TW/docs/Web/API/HTMLElement/dragend_event)
-  - : 在『被選擇的物件』結束拖曳時觸發 (就是放開滑鼠鍵、或按下 Esc 鍵時)。
-- [`dragenter`](/zh-TW/docs/Web/API/HTMLElement/dragenter_event)
-  - : 當『被選擇的物件』被拖曳到『可以當目標的物件』時, 在『進入』該目標物件上方的瞬間觸發。注意, 不是『被選擇的物件』觸發此事件, 而是『可以當目標的物件』。
-- [`dragleave`](/zh-TW/docs/Web/API/HTMLElement/dragleave_event)
-  - : 當『被選擇的物件』被拖曳到『可以當目標的物件』時, 在『離開』該目標物件上方的瞬間觸發。注意, 不是『被選擇的物件』觸發此事件, 而是『可以當目標的物件』。
-- [`dragover`](/zh-TW/docs/Web/API/HTMLElement/dragover_event)
-  - : 當『被選擇的物件』被拖曳到『可以當目標的物件』的上方時觸發 (頻率大約每秒數次)。注意, 不是『被選擇的物件』觸發此事件, 而是『可以當目標的物件』 。
-- [`dragstart`](/zh-TW/docs/Web/API/HTMLElement/dragstart_event)
-  - : 在『被選擇的物件』開始拖曳時觸發。
-- [`drop`](/zh-TW/docs/Web/API/HTMLElement/drop_event)
-  - : 當『被選擇的物件』被拖曳、放到『目標物件』時觸發。注意, 不是『被選擇的物件』觸發此事件, 而是『目標物件』。
-
-## 通用事件處理器
-
-- {{domxref('GlobalEventHandlers.ondrag')}}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the [`drag`](/zh-TW/docs/Web/API/HTMLElement/drag_event) event.
-- {{domxref('GlobalEventHandlers.ondragend')}}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the [`dragend`](/zh-TW/docs/Web/API/HTMLElement/dragend_event) event.
-- {{domxref('GlobalEventHandlers.ondragenter')}}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the [`dragenter`](/zh-TW/docs/Web/API/HTMLElement/dragenter_event) event.
-- {{domxref('GlobalEventHandlers.ondragleave')}}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the [`dragleave`](/zh-TW/docs/Web/API/HTMLElement/dragleave_event) event.
-- {{domxref('GlobalEventHandlers.ondragover')}}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the [`dragover`](/zh-TW/docs/Web/API/HTMLElement/dragover_event) event.
-- {{domxref('GlobalEventHandlers.ondragstart')}}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the [`dragstart`](/zh-TW/docs/Web/API/HTMLElement/dragstart_event) event.
-- {{domxref('GlobalEventHandlers.ondrop')}}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the [`drop`](/zh-TW/docs/Web/API/HTMLElement/drop_event) event.
+- {{domxref("HTMLElement/drag_event", "drag")}}
+  - : 當某個元素或文字選取正在被拖曳時觸發此事件。
+- {{domxref("HTMLElement/dragend_event", "dragend")}}
+  - : 當拖曳操作結束（例如釋放滑鼠按鍵或按下 Esc 鍵）時觸發此事件。
+- {{domxref("HTMLElement/dragenter_event", "dragenter")}}
+  - : 當被拖曳的元素或文字選取進入有效的放置目標時觸發此事件。
+- {{domxref("HTMLElement/dragleave_event", "dragleave")}}
+  - : 當被拖曳的元素或文字選取離開有效的放置目標時觸發此事件。
+- {{domxref("HTMLElement/dragover_event", "dragover")}}
+  - : 當某個元素或文字選取正在被拖曳，且滑鼠指標位於有效的放置目標上時觸發（每 50 毫秒觸發一次此事件（若滑鼠未移動）；若滑鼠正在移動，觸發速度更快，約為每 5 毫秒（慢速移動）到 1 毫秒（快速移動）之間。這種觸發模式與 {{domxref("Element/mouseover_event", "mouseover")}} 不同）。
+- {{domxref("HTMLElement/dragstart_event", "dragstart")}}
+  - : 當使用者開始拖曳某個元素或文字選取時觸發此事件。
+- {{domxref("HTMLElement/drop_event", "drop")}}
+  - : 當元素或文字選取被放置在有效的放置目標上時觸發此事件。
 
 ## 範例
 
-An Example of each property, constructor, event type and global event handlers is included in their respective reference page.
+各屬性、建構子、事件型別與全域事件處理器的範例，請參見其各自的參考頁面。
 
 ## 規範
 
@@ -69,8 +56,7 @@ An Example of each property, constructor, event type and global event handlers i
 
 ## 參見
 
-- [HTML 拖放 API](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API)
+- [拖曳與放置](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API)
 - [拖曳操作](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推薦拖曳類型](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [拖拽和放置多個項目](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
-- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)
+- [建議的拖曳類型](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [DataTransfer 測試——貼上或拖曳](https://codepen.io/tech_query/pen/MqGgap)

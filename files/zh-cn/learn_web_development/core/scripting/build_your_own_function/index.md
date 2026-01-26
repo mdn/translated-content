@@ -3,7 +3,7 @@ title: 创建你自己的函数
 slug: Learn_web_development/Core/Scripting/Build_your_own_function
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Functions","Learn_web_development/Core/Scripting/Return_values", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Functions","Learn_web_development/Core/Scripting/Return_values", "Learn_web_development/Core/Scripting")}}
 
 我们在之前的文章里大多学的是理论，这篇文章将提供一个练习的机会——你将练习构建一些你自己风格的函数。在练习过程中，我们也会解释一些针对函数的更深层的实用细节。
 
@@ -291,7 +291,7 @@ btn.onclick = displayMessage();
 
 ## 技能测试！
 
-你已经来到了本文章的结尾，但是你还能记得最重要的知识吗？你可以在离开这里找到一些更深度的测试来证实你已经记住了这些知识——查看[技能测试：函数](/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Functions)（英文）。后两章文本包含了这个测试需要的技能，所以你可能先需要阅读再尝试该测试。
+你已经来到了本文章的结尾，但是你还能记得最重要的知识吗？你可以在离开这里找到一些更深度的测试来证实你已经记住了这些知识——查看[技能测试：函数](/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills/Functions)。后两章文本包含了这个测试需要的技能，所以你可能先需要阅读再尝试该测试。
 
 ## 结论
 

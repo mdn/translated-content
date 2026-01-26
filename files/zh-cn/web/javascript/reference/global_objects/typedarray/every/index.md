@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4e32a881872958fdf928d8b4d42189fba2e11459
 ---
 
-{{JSRef}}
-
 {{jsxref("TypedArray")}} 实例的 **`every()`** 方法测试类型化数组的所有元素是否都能够通过由提供的函数实现的测试。其返回一个布尔值。这个方法的算法与 {{jsxref("Array.prototype.every()")}} 相同。
 
 {{InteractiveExample("JavaScript Demo: TypedArray.every()")}}

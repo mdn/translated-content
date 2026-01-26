@@ -31,7 +31,6 @@ WEBVTT
 - Необязательный знак порядка байтов (BOM).
 - Строка "`WEBVTT`".
 - Дополнительный текстовый заголовок справа от `WEBVTT.`
-
   - Должен быть хотя бы один пробел после `WEBVTT.`
   - Вы можете использовать его, чтобы добавить описание к файлу.
   - Вы можете использовать что угодно в текстовом заголовке, кроме перевода строки или "`-->`".
@@ -301,7 +300,7 @@ Here are a few examples:
 
 A cue timing indicates when the cue is shown. It has a start and end time which are represented by timestamps. The end time must be greater than the start time, and the start time must be greater than or equal to all previous start times. Cues may have overlapping timings.
 
-If the WebVTT file is being used for chapters ({{HTMLElement("track")}} [`kind`](/ru/docs/Web/HTML/Global_attributes#kind) is `chapters`) then the file cannot have overlapping timings.
+If the WebVTT file is being used for chapters ({{HTMLElement("track")}} [`kind`](/ru/docs/Web/HTML/Reference/Global_attributes#kind) is `chapters`) then the file cannot have overlapping timings.
 
 Each cue timing contains five components:
 
@@ -368,9 +367,7 @@ The cue settings are added to the right of the cue timings. There must be one or
     - `lr`
       - : The writing direction is left to right
 - `line`
-
   - : If vertical is not set, specifies where the text appears vertically. If vertical is set, line specifies where text appears horizontally. Its value can be:
-
     - a line number
       - : The number is the height of the first line of the cue as it appears on the video. Positive numbers indicate top down and negative numbers indicate bottom up.
     - a percentage
@@ -384,7 +381,6 @@ The cue settings are added to the right of the cue timings. There must be one or
     | `line:100%` | bottom             | left          | right         |
 
 - `position`
-
   - : Specifies where the text will appear horizontally. If vertical is set, position specifies where the text will appear vertically. The value is a percentage, that is an integer (no decimals) between 0 and 100 inclusive followed by a percent sign (%).
 
     | Position        | `vertical` omitted | `vertical:rl` | `vertical:lr` |
@@ -393,7 +389,6 @@ The cue settings are added to the right of the cue timings. There must be one or
     | `position:100%` | right              | bottom        | bottom        |
 
 - `size`
-
   - : Specifies the width of the text area. If vertical is set, size specifies the height of the text area. The value is a percentage, that is an integer (no decimals) between 0 and 100 inclusive followed by a percent sign (%).
 
     | Size        | `vertical` omitted | `vertical:rl` | `vertical:lr` |
@@ -402,7 +397,6 @@ The cue settings are added to the right of the cue timings. There must be one or
     | `size:50%`  | half width         | half height   | half height   |
 
 - `align`
-
   - : Specifies the alignment of the text. Text is aligned within the space given by the size cue setting if it is set.
 
     | Align          | `vertical` omitted    | `vertical:rl`       | `vertical:lr`       |
@@ -441,10 +435,9 @@ In addition to the three escape sequences mentioned above, there are fours other
 
 ### Cue payload text tags
 
-There are a number of tags, such as `<b>`, that can be used. However, if the WebVTT file is used in a {{HTMLElement("track")}} element where the attribute [`kind`](/ru/docs/Web/HTML/Global_attributes#kind) is `chapters` then you cannot use tags.
+There are a number of tags, such as `<b>`, that can be used. However, if the WebVTT file is used in a {{HTMLElement("track")}} element where the attribute [`kind`](/ru/docs/Web/HTML/Reference/Global_attributes#kind) is `chapters` then you cannot use tags.
 
 - Timestamp tag
-
   - : The timestamp must be greater that the cue's start timestamp, greater than any previous timestamp in the cue payload, and less than the cue's end timestamp. The _active text_ is the text between the timestamp and the next timestamp or to the end of the payload if there is not another timestamp in the payload. Any text before the _active text_ in the payload is _previous text_. Any text beyond the _active text_ is _future text_. This enables karaoke style captions.
 
     ```plain
@@ -464,7 +457,6 @@ There are a number of tags, such as `<b>`, that can be used. However, if the Web
 The following tags are the HTML tags allowed in a cue and require opening and closing tags (e.g., `<b>text</b>`).
 
 - Class tag (`<c></c>`)
-
   - : Style the contained text using a CSS class.
 
     ```xml
@@ -472,7 +464,6 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
     ```
 
 - Italics tag (`<i></i>`)
-
   - : Italicize the contained text.
 
     ```xml
@@ -480,7 +471,6 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
     ```
 
 - Bold tag (`<b></b>`)
-
   - : Bold the contained text.
 
     ```xml
@@ -488,7 +478,6 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
     ```
 
 - Underline tag (`<u></u>`)
-
   - : Underline the contained text.
 
     ```xml
@@ -496,7 +485,6 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
     ```
 
 - Ruby tag (`<ruby></ruby>`)
-
   - : Used with ruby text tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e., small annotative characters above other characters).
 
     ```xml
@@ -504,7 +492,6 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
     ```
 
 - Ruby text tag (`<rt></rt>`)
-
   - : Used with ruby tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e., small annotative characters above other characters).
 
     ```xml
@@ -512,7 +499,6 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
     ```
 
 - Voice tag (`<v></v>`)
-
   - : Similar to class tag, also used to style the contained text using CSS.
 
     ```xml
@@ -601,4 +587,4 @@ Prior to Firefox 58, the `REGION` keyword was creating {{domxref("VTTRegion")}} 
 
 ## Смотрите также
 
-- The CSS [`::cue` and `::cue()`](/ru/docs/Web/CSS/::cue) pseudo-elements
+- The CSS [`::cue` and `::cue()`](/ru/docs/Web/CSS/Reference/Selectors/::cue) pseudo-elements

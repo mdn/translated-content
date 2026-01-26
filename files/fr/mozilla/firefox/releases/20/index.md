@@ -3,16 +3,14 @@ title: Firefox 20 pour les développeurs
 slug: Mozilla/Firefox/Releases/20
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 20 est sorti le 2 avril 2013. Cette page résume les principaux changements dans Firefox 20 qui sont utiles aux développeurs.
 
 ## Changements pour les développeurs Web
 
 ### HTML
 
-- Le support de l'attribut [`download`](/fr/docs/Web/HTML/Element/a#download) sur les éléments {{HTMLElement("a")}} et {{HTMLElement("area")}} a été ajouté ([bug Firefox 676619](https://bugzil.la/676619)).
-- La valeur `auto` pour [l'attribut global](/fr/docs/Web/HTML/Global_attributes) [`dir`](/fr/docs/Web/HTML/Global_attributes#attr-dir) a été implémenté ([bug Firefox 548206](https://bugzil.la/548206)).
+- Le support de l'attribut [`download`](/fr/docs/Web/HTML/Reference/Elements/a#download) sur les éléments {{HTMLElement("a")}} et {{HTMLElement("area")}} a été ajouté ([bug Firefox 676619](https://bugzil.la/676619)).
+- La valeur `auto` pour [l'attribut global](/fr/docs/Web/HTML/Reference/Global_attributes) [`dir`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-dir) a été implémenté ([bug Firefox 548206](https://bugzil.la/548206)).
 
 ### JavaScript
 
@@ -23,7 +21,7 @@ Firefox 20 est sorti le 2 avril 2013. Cette page résume les principaux changeme
 
 ### CSS
 
-- [CSS Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) est désormais disponible par défaut, uniquement dans les versions préliminaires (hors Bêta). Elle peut être activée dans la version finale en modifiant une préférence dans about:config.
+- [CSS Flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) est désormais disponible par défaut, uniquement dans les versions préliminaires (hors Bêta). Elle peut être activée dans la version finale en modifiant une préférence dans about:config.
 - La propriété `mask-type` de la [spécification CSS Masking](https://dvcs.w3.org/hg/FXTF/raw-file/tip/masking/index.html) a été ajoutée ([bug Firefox 793617](https://bugzil.la/793617)).
 
 ### DOM

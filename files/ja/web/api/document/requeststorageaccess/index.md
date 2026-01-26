@@ -25,9 +25,7 @@ requestStorageAccess(types)
 ### 引数
 
 - `types` {{optional_inline}}
-
   - : 分離されていないどの状態にアクセスするかを制御するプロパティを格納したオブジェクトです。指定しない場合、プロパティの既定値は `false` です。利用できるプロパティは以下のとおりです。
-
     - `all`
       - : 論理値で、利用可能なすべての分離されていない状態をアクセス可能にすべきかどうかを示します。
     - `cookies`
@@ -72,7 +70,7 @@ requestStorageAccess(types)
     - `types` 引数が与えられており、すべてのプロパティが `false` である場合。
 - `NotAllowedError` {{domxref("DOMException")}}
   - : 次のような場合に発生します。
-    - 文書のウィンドウが[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)ではない場合。
+    - 文書のウィンドウが[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)ではない場合。
     - {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によって、使用がブロックされた場合。
     - この文書または最上位の文書のオリジンが `null` である場合。
     - 埋め込まれた {{htmlelement("iframe")}} がサンドボックス化されており、`allow-storage-access-by-user-activation` トークンが設定されていない場合。

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b30a10c08b986ebabd44733fb62f67667350403e
 ---
 
-{{AddonSidebar}}
-
 获取浏览器操作的徽章文本颜色。
 
 > [!NOTE]
@@ -29,9 +27,7 @@ browser.action.getBadgeTextColor(
 ### 参数
 
 - `details`
-
   - : `object`。
-
     - `tabId` {{optional_inline}}
       - : `integer`，指定要获取徽标文本颜色的标签页。
     - `windowId` {{optional_inline}}

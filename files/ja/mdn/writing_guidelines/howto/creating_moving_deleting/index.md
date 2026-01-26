@@ -98,7 +98,8 @@ yarn content move <from-slug> <to-slug> [locale]
 
 5. プルリクエストを作成します。
 
-> **メモ:** `yarn content move` は自動的に `_redirects.txt` ファイルに必要なリダイレクト情報を追加し、古い場所から新しい場所にリダイレクトされるようにします。手動で `_redirects.txt` ファイルを編集しないでください！手動で編集するとミスが入り込みやすくなります。ファイルを移さずにリダイレクトを追加したい場合は、 [MDN Web Docs チャットルーム](/ja/docs/MDN/Community/Communication_channels#チャットルーム) で MDN Web Docs チームに相談してください。
+> [!NOTE]
+> `yarn content move` は自動的に `_redirects.txt` ファイルに必要なリダイレクト情報を追加し、古い場所から新しい場所にリダイレクトされるようにします。手動で `_redirects.txt` ファイルを編集しないでください！手動で編集するとミスが入り込みやすくなります。ファイルを移さずにリダイレクトを追加したい場合は、 [MDN Web Docs チャットルーム](/ja/docs/MDN/Community/Communication_channels#チャットルーム) で MDN Web Docs チームに相談してください。
 
 ## ページの削除
 

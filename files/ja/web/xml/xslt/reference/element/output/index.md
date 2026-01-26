@@ -1,14 +1,11 @@
 ---
 title: <xsl:output>
 slug: Web/XML/XSLT/Reference/Element/output
-original_slug: Web/XSLT/Reference/Element/output
 l10n:
-  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-{{XsltSidebar}}
-
-`<xsl:output>` 要素は出力文書の特性を制御します。Netscape で正しく機能するには、method 属性を持つこの要素を使用する必要があります。 7.0 より `method="text"` は期待通りに機能します。
+`<xsl:output>` 要素は出力文書の特性を制御します。 Netscape で正しく機能するには、 method 属性を持つこの要素を使用する必要があります。 7.0 より `method="text"` は期待通りに機能します。
 
 ### 構文
 
@@ -28,7 +25,7 @@ l10n:
 
 ### 必須属性
 
-なし
+なし。
 
 ### 任意属性
 
@@ -39,19 +36,19 @@ l10n:
 - `encoding`
   - : 出力文書の `encoding` 属性の値を指定します。
 - `omit-xml-declaration`
-  - : XML 宣言を出力に含めるかどうかを示します。許容可能な値は "`yes`" または "`no`" です。
-- `standalone` (サポートされていません)
-  - : 存在する場合、出力文書でスタンドアロン宣言が発生しその値が返されることを示します。許容可能な値は "yes" または "no" です。
+  - : XML 宣言を出力に含めるかどうかを示します。許容可能な値は `yes` または `no` です。
+- `standalone` (対応していません)
+  - : 存在する場合、出力文書でスタンドアロン宣言が発生しその値が返されることを示します。許容可能な値は `yes` または `no` です。
 - `doctype-public`
   - : 出力文書の `DOCTYPE` 宣言の `PUBLIC` 属性の値を指定します。
 - `doctype-system`
   - : 出力文書の `DOCTYPE` 宣言の `SYSTEM` 属性の値を指定します。
 - `cdata-section-elements`
   - : テキストの内容を `CDATA` セクションとして記述する要素をリストします。要素は空白で区切る必要があります。
-- `indent` (サポートされていません)
+- `indent` (対応していません)
   - : 階層構造を示すために出力を字下げするかどうかを指定します。
-- `media-type` (サポートされていません)
-  - : 出力ドキュメントの MIME タイプを指定します。
+- `media-type` (対応していません)
+  - : 出力文書の MIME タイプを指定します。
 
 ### 種類
 
@@ -61,6 +58,6 @@ l10n:
 
 XSLT, section 16.
 
-### Gecko のサポート
+## Gecko の対応
 
-部分的なサポート。上記のコメントを参照してください。
+部分的に対応。上記のコメントを参照してください。

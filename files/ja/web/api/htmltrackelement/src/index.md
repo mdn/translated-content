@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLTrackElement.src`** プロパティは、テキストトラックのデータの URL を示す {{HTMLElement("track")}} 要素の [`src`](/ja/docs/Web/HTML/Element/track#src) 属性の値を反映したものです。
+**`HTMLTrackElement.src`** プロパティは、テキストトラックのデータの URL を示す {{HTMLElement("track")}} 要素の [`src`](/ja/docs/Web/HTML/Reference/Elements/track#src) 属性の値を反映したものです。
 
 ## 値
 

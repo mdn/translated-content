@@ -1,24 +1,38 @@
 ---
-title: XMLHttpRequest.statusText
+title: XMLHttpRequest：statusText 属性
+short-title: statusText
 slug: Web/API/XMLHttpRequest/statusText
+l10n:
+  sourceCommit: be1922d62a0d31e4e3441db0e943aed8df736481
 ---
 
-{{APIRef('XMLHttpRequest')}}只读属性 **`XMLHttpRequest.statusText`** 返回了`XMLHttpRequest` 请求中由服务器返回的一个[`DOMString`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String) 类型的文本信息，这则信息中也包含了响应的数字状态码。不同于使用一个数字来指示的状态码[`XMLHTTPRequest.status`](/zh-CN/docs/Web/API/XMLHttpRequest/status)，这个属性包含了返回状态对应的文本信息，例如"OK"或是"Not Found"。如果请求的状态[`readyState`](/zh-CN/docs/Web/API/XMLHttpRequest/readyState)的值为"UNSENT"或者"OPENED"，则这个属性的值将会是一个空字符串。如果服务器未明确指定一个状态文本信息，则`statusText`的值将会被自动赋值为"OK"。
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
-## 例子
+**`XMLHttpRequest.statusText`** 只读属性返回一个包含由 HTTP 服务器返回的响应状态消息的字符串。与表示数值状态码的 [`XMLHttpRequest.status`](/zh-CN/docs/Web/API/XMLHttpRequest/status) 不同，此属性包含响应状态的*文本*，例如“OK”或“Not Found”。如果请求的 [`readyState`](/zh-CN/docs/Web/API/XMLHttpRequest/readyState) 处于 `UNSENT` 或 `OPENED` 状态，则 `statusText` 的值将为空字符串。
+
+如果服务器响应未明确指定状态文本，`statusText` 将采用默认值“OK”。
+
+> [!NOTE]
+> 通过 HTTP/2 连接的响应其状态消息将始终为空字符串，因为 HTTP/2 不支持状态消息。
+
+## 值
+
+字符串。
+
+## 示例
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 console.log("0 UNSENT", xhr.statusText);
 
 xhr.open("GET", "/server", true);
 console.log("1 OPENED", xhr.statusText);
 
-xhr.onprogress = function () {
+xhr.onprogress = () => {
   console.log("3 LOADING", xhr.statusText);
 };
 
-xhr.onload = function () {
+xhr.onload = () => {
   console.log("4 DONE", xhr.statusText);
 };
 
@@ -42,7 +56,8 @@ xhr.send(null);
 
 {{Compat}}
 
-## 参考内容
+## 参见
 
-- List of [HTTP response codes](/zh-CN/docs/Web/HTTP/Reference/Status)
+- [HTTP 状态码](/zh-CN/docs/Web/HTTP/Reference/Status)列表
 - [HTTP](/zh-CN/docs/Web/HTTP)
+- [WHATWG Fetch 动态标准](https://fetch.spec.whatwg.org/#concept-response-status-message)

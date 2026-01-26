@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 获取最近获得焦点的窗口——通常是“最上层”的窗口。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
@@ -22,9 +20,7 @@ let gettingWindow = browser.windows.getLastFocused(
 ### 参数
 
 - `getInfo` {{optional_inline}}
-
   - : `object`.
-
     - `populate` {{optional_inline}}
       - : `boolean`。若为 `true`，则 {{WebExtAPIRef('windows.Window')}} 对象将包含 `tabs` 属性，其中包含表示窗口中打开的标签页的 {{WebExtAPIRef('tabs.Tab')}} 对象列表。如果扩展的清单文件包含 `"tabs"` 权限或匹配的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)，则 `Tab` 对象仅包含 `url`、`title` 和 `favIconUrl` 属性。
     - `windowTypes` {{optional_inline}}

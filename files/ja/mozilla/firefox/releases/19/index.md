@@ -3,8 +3,6 @@ title: Firefox 19 for developers
 slug: Mozilla/Firefox/Releases/19
 ---
 
-{{FirefoxSidebar}}
-
 Gecko 19 を搭載した Firefox 19 は米国時間 2013 年 2 月 19 日にリリースされました。このページでは、開発者に影響する Firefox 19 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧

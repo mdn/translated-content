@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Text_styling/Styling_lists
 original_slug: Learn/CSS/Styling_text/Styling_lists
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}
 
 [목록](/ko/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#lists) 은 대부분 다른 텍스트처럼 작동하지만, 알아야 할 목록과 관련된 몇 가지 CSS 속성과 고려해야 할 모범 사례가 있습니다. 이 기사는 모든 것을 설명합니다.
 
@@ -20,7 +20,7 @@ original_slug: Learn/CSS/Styling_text/Styling_lists
         <a href="/ko/docs/Learn/CSS/Introduction_to_CSS"
           >CSS 소개</a
         > 둘러보기),
-        <a href="/ko/docs/Learn/CSS/Styling_text/Fundamentals"
+        <a href="/ko/docs/Learn_web_development/Core/Text_styling/Fundamentals"
           >CSS 글꼴과 폰트 기본</a
         >.
       </td>
@@ -263,7 +263,7 @@ ul {
 
 ### start
 
-[`start`](/ko/docs/Web/HTML/Element/ol#start) 속성을 사용하면 1이 아닌 숫자부터 카운트하는 목록을 시작할 수 있습니다. 예시는 다음과 같습니다.
+[`start`](/ko/docs/Web/HTML/Reference/Elements/ol#start) 속성을 사용하면 1이 아닌 숫자부터 카운트하는 목록을 시작할 수 있습니다. 예시는 다음과 같습니다.
 
 ```html
 <ol start="4">
@@ -282,7 +282,7 @@ ul {
 
 ### reversed
 
-[`reversed`](/ko/docs/Web/HTML/Element/ol#reversed) 속성은 목록을 위로 카운트하는 대신 카운트 다운을 시작합니다. 예시는 다음과 같습니다.
+[`reversed`](/ko/docs/Web/HTML/Reference/Elements/ol#reversed) 속성은 목록을 위로 카운트하는 대신 카운트 다운을 시작합니다. 예시는 다음과 같습니다.
 
 ```html
 <ol start="4" reversed>
@@ -304,7 +304,7 @@ ul {
 
 ### value
 
-[`value`](/ko/docs/Web/HTML/Element/ol#value) 속성을 사용하면 목록 항목을 특정 숫자 값으로 설정할 수 있습니다. 예시는 다음과 같습니다.
+[`value`](/ko/docs/Web/HTML/Reference/Elements/ol#value) 속성을 사용하면 목록 항목을 특정 숫자 값으로 설정할 수 있습니다. 예시는 다음과 같습니다.
 
 ```html
 <ol>
@@ -432,4 +432,4 @@ CSS counters는 목록 계산 및 스타일 지정을 사용자 지정하기 위
 
 몇 가지 관련 기본 원칙과 특정 속성을 알고 있으면 목록의 스타일을 비교적 쉽게 익힐 수 있습니다. 다음 본문에서는 스타일링 기술을 연결하는 방법을 살펴보겠습니다.
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 `privacy.services` 属性包含了控制浏览器或第三方提供的服务的隐私相关设置。每个属性都是一个 {{WebExtAPIRef("types.BrowserSetting")}} 对象。
 
 ## 属性

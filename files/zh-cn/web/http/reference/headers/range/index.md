@@ -3,9 +3,7 @@ title: Range
 slug: Web/HTTP/Reference/Headers/Range
 ---
 
-{{HTTPSidebar}}
-
-The **`Range`** 是一个请求首部，告知服务器返回文件的哪一部分。在一个 `Range` 首部中，可以一次性请求多个部分，服务器会以 multipart 文件的形式将其返回。如果服务器返回的是范围响应，需要使用 {{HTTPStatus("206")}} `Partial Content` 状态码。假如所请求的范围不合法，那么服务器会返回 {{HTTPStatus("416")}} `Range Not Satisfiable` 状态码，表示客户端错误。服务器允许忽略 `Range` 首部，从而返回整个文件，状态码用 {{HTTPStatus("200")}} 。
+**`Range`** {{Glossary("request header", "请求标头")}}告知服务器返回文件的哪一部分。在一个 `Range` 标头中，可以一次性请求多个部分，服务器会以 multipart 文件的形式将其返回。如果服务器返回的是范围响应，需要使用 {{HTTPStatus("206")}} `Partial Content` 状态码。假如所请求的范围不合法，那么服务器会返回 {{HTTPStatus("416")}} `Range Not Satisfiable` 状态码，表示客户端错误。服务器允许忽略 `Range` 标头，从而返回整个文件，状态码用 {{HTTPStatus("200")}} 。
 
 | Header type                           | {{Glossary("Request header")}} |
 | ------------------------------------- | ------------------------------ |
@@ -13,20 +11,17 @@ The **`Range`** 是一个请求首部，告知服务器返回文件的哪一部�
 
 ## 语法
 
-```plain
+```http
 Range: <unit>=<range-start>-
 Range: <unit>=<range-start>-<range-end>
-Range: <unit>=<range-start>-<range-end>, <range-start>-<range-end>
-Range: <unit>=<range-start>-<range-end>, <range-start>-<range-end>, <range-start>-<range-end>
+Range: <unit>=<range-start>-<range-end>, …, <range-startN>-<range-endN>
+Range: <unit>=-<suffix-length>
 ```
 
 ## 指令
 
 - \<unit>
-  - : 范围所采用的单位，通常是字节（bytes）。
-
-<!---->
-
+  - : 范围所采用的单位，通常是字节（byte）。
 - \<range-start>
   - : 一个整数，表示在特定单位下，范围的起始值。
 - \<range-end>

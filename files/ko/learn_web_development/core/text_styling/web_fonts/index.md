@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 45268b07c84a04b45d46bcdf104e2b33be00adcf
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling/Typesetting_a_homepage", "Learn_web_development/Core/Text_styling")}}
 
 이 과정의 첫 번째 기사에서 우리는 폰트와 텍스트를 꾸미는데 가능한 CSS 기본 기능들에 대해서 살펴보았습니다. 이 글에서는 더 나아가 웹 폰트를 자세히 살펴보겠습니다. 웹 페이지에서 사용자 정의 폰트를 사용하여 보다 다양한 사용자 정의 텍스트 스타일을 지정하는 방법을 살펴보겠습니다.
 
@@ -208,4 +208,4 @@ Fontsquirrel에서 생성한 `@font-face` 구문을 살펴봅시다. 다음은 �
 
 텍스트 스타일링의 기본에 대한 글을 살펴봤으니, 이제 과정에 대한 평가를 통해 이해도를 테스트할 시간입니다. [커뮤니티 학교 홈페이지 조판](/ko/docs/Learn_web_development/Core/Text_styling/Typesetting_a_homepage).
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling/Typesetting_a_homepage", "Learn_web_development/Core/Text_styling")}}

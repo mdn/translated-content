@@ -18,7 +18,6 @@ function.call(thisArg[, arg1[, arg2[, ...]]])
 ### Parametros
 
 - `thisArg` {{optional_inline}}
-
   - : El valor a usar como `this` cuando se llama a _`function`_.
 
     > [!WARNING]

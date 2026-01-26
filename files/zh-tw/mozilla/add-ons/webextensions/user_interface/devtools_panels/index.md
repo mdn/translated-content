@@ -3,8 +3,6 @@ title: 開發工具面板
 slug: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 ---
 
-{{AddonSidebar}}
-
 > [!NOTE]
 > Firefox 54 以後可以使用這個功能。
 

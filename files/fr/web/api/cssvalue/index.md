@@ -10,7 +10,6 @@ slug: Web/API/CSSValue
 - {{domxref("CSSValue.cssText")}}
   - : Une {{domxref ("DOMString")}} représentant la valeur actuelle.
 - {{domxref("CSSValue.cssValueType")}} {{readonlyInline}}
-
   - : Un raccourci non signé ( `unsigned short` ) représentant un code définissant le type de valeur. Les valeurs possibles sont:
 
     <table class="standard-table">

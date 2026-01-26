@@ -2,16 +2,14 @@
 title: async function
 slug: Web/JavaScript/Reference/Statements/async_function
 l10n:
-  sourceCommit: 3f91fdcc678991410f4f5adcbff44d1b3b1ede88
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Statements")}}
 
 **`async function`** 宣言は、与えられた名前で新しい非同期関数の{{Glossary("binding","バインド")}}を作成します。その関数の本体の中では `await` キーワードを使うことができ、ます。`async` および `await` キーワードを使用することで、プロミスベースの非同期の動作を、プロミスチェーンを明示的に構成する必要なく、よりすっきりとした方法で書くことができます。
 
 非同期関数は [`async function` 式](/ja/docs/Web/JavaScript/Reference/Operators/async_function)を使用して定義することもできます。
 
-{{InteractiveExample("JavaScript Demo: Statement - Async", "taller")}}
+{{InteractiveExample("JavaScript デモ: async function 宣言", "taller")}}
 
 ```js interactive-example
 function resolveAfter2Seconds() {
@@ -26,7 +24,7 @@ async function asyncCall() {
   console.log("calling");
   const result = await resolveAfter2Seconds();
   console.log(result);
-  // Expected output: "resolved"
+  // 予想される結果: "resolved"
 }
 
 asyncCall();
@@ -69,7 +67,8 @@ async function name(param0, param1, /* …, */ paramN) {
 >
 > `await` は [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules)では単独で使用することができます。
 
-> **メモ:** `async`/`await` の目的は、プロミスベースの API を利用するのに必要な構文を簡素化することです。 `async`/`await` の動作は、[ジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)とプロミスの組み合わせに似ています。
+> [!NOTE]
+> `async`/`await` の目的は、プロミスベースの API を利用するのに必要な構文を簡素化することです。 `async`/`await` の動作は、[ジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)とプロミスの組み合わせに似ています。
 
 非同期関数は常にプロミスを返します。非同期関数の返値が明示的にプロミスでない場合は、暗黙的にプロミスでラップされます。
 
@@ -153,7 +152,9 @@ foo();
 ```js
 async function foo() {
   const p1 = new Promise((resolve) => setTimeout(() => resolve("1"), 1000));
-  const p2 = new Promise((_, reject) => setTimeout(() => reject("2"), 500));
+  const p2 = new Promise((_, reject) =>
+    setTimeout(() => reject(new Error("failed")), 500),
+  );
   const results = [await p1, await p2]; // こうしないでください。 Promise.all または Promise.allSettled を使用してください。
 }
 foo().catch(() => {}); // すべてのエラーを浅くしようとする...

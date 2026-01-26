@@ -14,4 +14,4 @@ slug: Glossary/String
 ### 일반적인 지식
 
 - Wikipedia의 [String (computer science)](<https://en.wikipedia.org/wiki/String_(computer_science)>)
-- [JavaScript data types and data structures](/ko/docs/Web/JavaScript/Data_structures#string_type)
+- [JavaScript data types and data structures](/ko/docs/Web/JavaScript/Guide/Data_structures#string_type)

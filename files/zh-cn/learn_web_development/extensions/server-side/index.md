@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8184fa218341dbb193ce6adaa1240c89fae045ec
 ---
 
-{{LearnSidebar}}
-
 **_动态网站_**——**服务器端编程**主题的一系列模块展示了如何创建动态网站；这些网站能够根据 HTTP 请求提供定制化的信息。这些模块提供了服务器端编程的总体介绍，以及如何使用 Django（Python）和 Express（Node.js/JavaScript）Web 框架创建基本应用程序的特定入门指南。
 
 大多数主要网站都使用某种服务器端技术来根据需要动态显示数据。例如，想象一下亚马逊上有多少产品，以及 Facebook 上发布了多少帖子。使用不同的静态页面显示所有这些内容将非常低效，因此，这些网站显示静态模板（使用 [HTML](/zh-CN/docs/Learn_web_development/Core/Structuring_content)、[CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics) 和 [JavaScript](/zh-CN/docs/Learn_web_development/Core/Scripting) 构建），然后在需要时动态更新这些模板内的数据，例如当你想在亚马逊上查看不同的产品时。

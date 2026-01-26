@@ -23,8 +23,6 @@ console.log(obj.prop);
 // Expected output: 42
 ```
 
-El código de este ejemplo interactivo está almacenado en un repositorio de GitHub. Si quieres contribuir al proyecto de ejemplos interactivos, puedes clonar <https://github.com/mdn/interactive-examples> y enviarnos un _pull request_.
-
 ## Sintaxis
 
 ```

@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Range
 original_slug: Web/HTTP/Headers/Content-Range
 ---
 
-{{HTTPSidebar}}
-
 **`Content-Range`** レスポンスの HTTP ヘッダーは、全体のメッセージのどこにメッセージが含まれているかを示します。
 
 <table class="properties">
@@ -15,7 +13,7 @@ original_slug: Web/HTTP/Headers/Content-Range
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>いいえ</td>
     </tr>
     <tr>

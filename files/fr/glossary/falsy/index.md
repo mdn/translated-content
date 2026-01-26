@@ -1,13 +1,29 @@
 ---
 title: Falsy (Valeurs de type fausses)
 slug: Glossary/Falsy
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
-
-Les valeurs fausses (**falsy**) sont des valeurs évaluées comme fausses quand elles sont évaluées dans un contexte {{Glossary("Boolean","booléen")}}.
+Les valeurs fausses (**<i lang="en">falsy</i>** en anglais) sont des valeurs évaluées comme fausses quand elles sont évaluées dans un contexte {{Glossary("Boolean", "booléen")}}.
 
 {{Glossary("JavaScript")}} utilise le type {{Glossary("Type_Conversion", "contrainte")}} dans les contextes Booléens comme les {{Glossary("Conditional", "conditions")}} et les {{Glossary("Loop", "boucles")}}.
+
+Le tableau suivant fournit la liste complète des valeurs _fausses_ (<i lang="en">falsy</i>) en JavaScript&nbsp;:
+
+| Valeur                      | Type                 | Description                                                                                                                                           |
+| --------------------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{Glossary("null")}}        | Null                 | Le mot-clé [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) — l'absence de toute valeur.                                                    |
+| {{Glossary("undefined")}}   | Undefined            | [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) — la valeur primitive.                                                      |
+| `false`                     | Booléen              | Le mot-clé [`false`](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words).                                                               |
+| {{Glossary("NaN")}}         | Nombre               | [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN) — n'est pas un nombre.                                                                  |
+| `0`                         | Nombre               | Le zéro {{JSxRef("Number")}}, y compris aussi `0.0`, `0x0`, etc.                                                                                      |
+| `-0`                        | Nombre               | Le zéro négatif {{JSxRef("Number")}}, y compris aussi `-0.0`, `-0x0`, etc.                                                                            |
+| `0n`                        | BigInt               | Le zéro {{JSxRef("BigInt")}}, y compris aussi `0x0n`, etc. Notez qu'il n'existe pas de zéro négatif {{JSxRef("BigInt")}} — l'opposé de `0n` est `0n`. |
+| `""`                        | Chaîne de caractères | Valeur de [chaîne](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) vide, y compris aussi `''` et ` `` `.                                     |
+| {{DOMxRef("document.all")}} | Objet                | Le seul objet falsy en JavaScript est l'objet natif {{DOMxRef("document.all")}}.                                                                      |
+
+Les valeurs `null` et `undefined` sont aussi {{Glossary("nullish", "nulle")}}.
 
 ## Exemples
 
@@ -45,17 +61,24 @@ if (NaN) {
 if ("") {
   // Le code ici ne sera pas exécuté
 }
-
-if (document.all) {
-  // Le code ici ne sera pas exécuté
-}
 ```
 
-`document.all` a été utilisé par le passé pour détecter le navigateur et la [spécification HTML définit une infraction délibérée](https://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#dom-document-all) aux standards ECMAScript afin de garder une compatibilité ascendante (`if (document.all) { // Code Internet Explorer ici (Sauf IE11) }` ou en utilisant `document.all` sans vérifier s'il existe d'abord : `document.all.foo`).
+### L'opérateur logique ET, &&
 
-Parfois écrit falsey, bien qu'en anglais, transformer un mot en adjectif avec un _-y_ fait disparaître tout e final (noise => noisy, ice => icy, shine => shiny) .
+Si le premier objet est un booléen négatif, il retourne cet objet&nbsp;:
+
+```js
+console.log(false && "dog");
+// ↪ false
+
+console.log(0 && "dog");
+// ↪ 0
+```
 
 ## Voir aussi
 
-- {{Glossary("Truthy")}}
-- {{Glossary("Boolean")}}
+- Termes associés du glossaire&nbsp;:
+  - {{Glossary("Truthy", "Valeur vraie")}}
+  - {{Glossary("Type_coercion", "Coercition")}}
+  - {{Glossary("Boolean", "Booléen")}}
+- [Coercition booléenne](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean#coercion_booléenne)

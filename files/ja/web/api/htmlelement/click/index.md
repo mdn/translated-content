@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLElement.click()`** メソッドは、要素のマウスクリックをシミュレートします。要素上で呼び出されると、その要素の {{domxref("Element/click_event", "click")}} イベントが発生します（[`disabled`](/ja/docs/Web/HTML/Attributes/disabled) 属性が設定されている場合を除く）。
+**`HTMLElement.click()`** メソッドは、要素のマウスクリックをシミュレートします。要素上で呼び出されると、その要素の {{domxref("Element/click_event", "click")}} イベントが発生します（[`disabled`](/ja/docs/Web/HTML/Reference/Attributes/disabled) 属性が設定されている場合を除く）。
 
 ## 構文
 
@@ -60,7 +60,6 @@ function myFunction() {
 ## 関連情報
 
 - 関連するイベントハンドラー
-
   - {{domxref("Element.click_event", "Element.onclick")}}
   - {{domxref("Element.dblclick_event", "Element.ondblclick")}}
   - {{domxref("Element.auxclick_event", "Element.onauxclick")}}

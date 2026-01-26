@@ -3,8 +3,6 @@ title: 在互联网上做一件事要花费多少？
 slug: Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
 ---
 
-{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
-
 参与互联网（运营网站）并不像看起来那么便宜。本文中我们将讨论你所需的花费及理由。
 
 <table>

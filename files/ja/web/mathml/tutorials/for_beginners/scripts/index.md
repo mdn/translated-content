@@ -8,7 +8,7 @@ l10n:
 
 {{MathMLRef}}
 
-{{PreviousMenuNext("Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides/Tables", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Fractions_and_roots", "Web/MathML/Tutorials/For_beginners/Tables", "Web/MathML/Guides")}}
 
 基本的な数学記法の復習を続け、添字つきの MathML 要素の構築に焦点を当てます。
 
@@ -60,7 +60,7 @@ l10n:
 - 添字内のテキストは小さくなります。
 
 > [!NOTE]
-> MathML 要素 `<msub>` と `<msup>` は HTML の [`<sub>`](/ja/docs/Web/HTML/Element/sub) や [`<sup>`](/ja/docs/Web/HTML/Element/sup) 要素とは異なります。これらにより、テキストに限らず、任意の MathML サブツリーを添字として提供することができます。
+> MathML 要素 `<msub>` と `<msup>` は HTML の [`<sub>`](/ja/docs/Web/HTML/Reference/Elements/sub) や [`<sup>`](/ja/docs/Web/HTML/Reference/Elements/sup) 要素とは異なります。これらにより、テキストに限らず、任意の MathML サブツリーを添字として提供することができます。
 
 ## 真下付き文字と真上付き文字
 
@@ -464,4 +464,4 @@ math {
 - [`<mover>` 要素](/ja/docs/Web/MathML/Reference/Element/mover)
 - [`<munderover>` 要素](/ja/docs/Web/MathML/Reference/Element/munderover)
 
-{{PreviousMenuNext("Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides/Tables", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Fractions_and_roots", "Web/MathML/Tutorials/For_beginners/Tables", "Web/MathML/Guides")}}

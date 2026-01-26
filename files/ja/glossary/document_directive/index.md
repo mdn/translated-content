@@ -14,14 +14,12 @@ slug: Glossary/Document_directive
 ## 関連情報
 
 - 関連用語:
-
   - {{Glossary("CSP")}}
   - {{Glossary("Reporting directive", "報告ディレクティブ")}}
   - {{Glossary("Fetch directive", "フェッチディレクティブ")}}
   - {{Glossary("Navigation directive", "ナビゲーションディレクティブ")}}
 
 - リファレンス
-
   - <https://www.w3.org/TR/CSP/#directives-document>
   - {{HTTPHeader("Content-Security-Policy/upgrade-insecure-requests", "upgrade-insecure-requests")}}
   - {{HTTPHeader("Content-Security-Policy/block-all-mixed-content", "block-all-mixed-content")}}

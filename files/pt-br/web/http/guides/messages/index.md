@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Messages
 original_slug: Web/HTTP/Messages
 ---
 
-{{HTTPSidebar}}
-
 Dados são trocados entre servidor e cliente por meio de mensagens HTTP. Há dois tipos de mensagens: _requisições_ (requests) enviadas pelo cliente para disparar uma ação no servidor, e _respostas_ (responses), a réplica do servidor.
 
 Mensagens HTTP são compostas de informação textual codificada em ASCII, e se espalham por multiplas linhas. Em HTTP/1.1, e versões anteriores do protocolo, estas mensagens eram abertamente enviadas através da conexão. Em HTTP/2, a mensagem antes legível por humanos é agora dividida em quadros HTTP, resultando em otimização e melhora de desempenho.
@@ -33,9 +31,8 @@ A linha inicial e os cabeçalhos HTTP da mensagem HTTP são conjuntamente chamad
 
 Requisições HTTP são mensagens enviadas pelo cliente para iniciar uma ação no servidor. Suas linhas iniciais contêm três elementos:
 
-1. Um _[método HTTP](/pt-BR/docs/Web/HTTP/Methods)_, um verbo (como {{HTTPMethod("GET")}}, {{HTTPMethod("PUT")}} ou {{HTTPMethod("POST")}}) ou um nome (como {{HTTPMethod("HEAD")}} ou {{HTTPMethod("OPTIONS")}}), que descrevem a ação a ser executada. Por exemplo, `GET` indica que um recurso deve ser obtido ou `POST` significa que dados são inseridos no servidor (criando ou modificando um recurso, ou gerando um documento temporário para mandar de volta).
+1. Um _[método HTTP](/pt-BR/docs/Web/HTTP/Reference/Methods)_, um verbo (como {{HTTPMethod("GET")}}, {{HTTPMethod("PUT")}} ou {{HTTPMethod("POST")}}) ou um nome (como {{HTTPMethod("HEAD")}} ou {{HTTPMethod("OPTIONS")}}), que descrevem a ação a ser executada. Por exemplo, `GET` indica que um recurso deve ser obtido ou `POST` significa que dados são inseridos no servidor (criando ou modificando um recurso, ou gerando um documento temporário para mandar de volta).
 2. O _alvo da requisição_, normalmente um {{glossary("URL")}}, ou o caminho absoluto do protocolo, porta e domínio são em geral caracterizados pelo contexto da requisição. O formato deste alvo varia conforme o método HTTP. Pode ser
-
    - Um caminho absoluto, seguido de um `'?'` e o texto da consulta. Esta é a forma mais comum, conhecida como a _forma original_, e é usada com os métodos `GET`, `POST`, `HEAD`, e `OPTIONS`.
      `POST / HTTP/1.1 GET /background.png HTTP/1.0 HEAD /test.html?query=alibaba HTTP/1.1 OPTIONS /anypage.html HTTP/1.0`
    - Uma URL completa, conhecida como a _forma absoluta_, usada principalmente com `GET` quando conectado a um proxy.
@@ -49,7 +46,7 @@ Requisições HTTP são mensagens enviadas pelo cliente para iniciar uma ação 
 
 ### Cabeçalhos
 
-[Cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Headers) de uma requisição seguem a mesma estrutura básica de um cabeçalho HTTP: uma cadeia de caracteres insensível à caixa seguida de dois pontos (`':'`) e um valor cuja estrutura depende do cabeçalho. O cabeçalho inteiro, incluindo o valor, consiste em uma única linha, que pode ser bem grande.
+[Cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Reference/Headers) de uma requisição seguem a mesma estrutura básica de um cabeçalho HTTP: uma cadeia de caracteres insensível à caixa seguida de dois pontos (`':'`) e um valor cuja estrutura depende do cabeçalho. O cabeçalho inteiro, incluindo o valor, consiste em uma única linha, que pode ser bem grande.
 
 Há numerosos cabeçalhos de requisição disponíveis. Eles podem ser divididos em vários grupos:
 
@@ -66,7 +63,7 @@ A parte final da requisição é o corpo. Nem todas as requisições tem um: as 
 Corpos podem ser divididos, a grosso modo, em duas categorias:
 
 - Corpos de recurso-simples, consistindo em um único arquivo, definido pelos dois cabeçalhos: {{HTTPHeader("Content-Type")}} e {{HTTPHeader("Content-Length")}}.
-- [Corpos de recurso-múltiplo](/pt-BR/docs/Web/HTTP/MIME_types#multipartform-data), consistindo em um corpo de múltiplas partes, cada uma contendo uma porção diferente de informação. Este é tipicamente associado à [Formulários HTML](/pt-BR/docs/Learn/Forms).
+- [Corpos de recurso-múltiplo](/pt-BR/docs/Web/HTTP/Guides/MIME_types#multipartform-data), consistindo em um corpo de múltiplas partes, cada uma contendo uma porção diferente de informação. Este é tipicamente associado à [Formulários HTML](/pt-BR/docs/Learn_web_development/Extensions/Forms).
 
 ## Respostas HTTP
 
@@ -82,7 +79,7 @@ Uma linha de status típica se parece com: `HTTP/1.1 404 Not Found.`
 
 ### Cabeçalhos
 
-[Cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Headers) para respostas seguem a mesma estrutura de qualquer outro cabeçalho: uma cadeia de caracteres insensível à caixa seguida de dois pontos (`':'`) e um valor cuja estrutura depende do tipo de cabeçalho. O cabeçalho inteiro, incluindo o valor, consiste em uma única linha.
+[Cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Reference/Headers) para respostas seguem a mesma estrutura de qualquer outro cabeçalho: uma cadeia de caracteres insensível à caixa seguida de dois pontos (`':'`) e um valor cuja estrutura depende do tipo de cabeçalho. O cabeçalho inteiro, incluindo o valor, consiste em uma única linha.
 
 Há numerosos cabeçalhos de resposta disponíveis. Eles podem ser divididos em vários grupos:
 
@@ -100,7 +97,7 @@ Corpos podem ser divididos, a grosso modo, em três categorias:
 
 - Corpos de recurso simples que consistem em um único arquivo de tamanho conhecido, definido pelos dois cabeçalhos: {{HTTPHeader("Content-Type")}} e {{HTTPHeader("Content-Length")}}.
 - Corpos de recurso simples que consistem em um único arquivo de tamanho desconhecido, codificado aos pedaços com {{HTTPHeader("Transfer-Encoding")}} ajustado para `chunked`.
-- [Corpos de recurso múltiplo](/pt-BR/docs/Web/HTTP/MIME_types#multipartform-data), que consiste em um corpo com múltiplas partes, cada uma contendo diferentes seções de informação. Estes são relativamente raros.
+- [Corpos de recurso múltiplo](/pt-BR/docs/Web/HTTP/Guides/MIME_types#multipartform-data), que consiste em um corpo com múltiplas partes, cada uma contendo diferentes seções de informação. Estes são relativamente raros.
 
 ## Quadros HTTP/2
 

@@ -12,7 +12,8 @@ l10n:
 
 既定では `true` で、既定のアクションを実行してもよいことを表します。このプロパティを `false` に設定すると、既定のアクションを阻止します。
 
-> **メモ:** `returnValue` は DOM 標準に採用されましたが、主に既存のコードをサポートするために存在しています。この古いなプロパティの代わりに {{DOMxRef("Event.preventDefault", "preventDefault()")}} と {{domxref("Event.defaultPrevented", "defaultPrevented")}} を使用してください。
+> [!NOTE]
+> `returnValue` は DOM 標準に採用されましたが、主に既存のコードをサポートするために存在しています。この古いなプロパティの代わりに {{DOMxRef("Event.preventDefault", "preventDefault()")}} と {{domxref("Event.defaultPrevented", "defaultPrevented")}} を使用してください。
 
 ## 値
 

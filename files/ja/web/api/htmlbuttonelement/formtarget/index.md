@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`formTarget`** は {{domxref("HTMLButtonElement")}} インターフェイスのプロパティで、送信される {{HtmlElement("form")}} のレスポンスが表示されるタブ、ウィンドウ、iframe です。これは、この {{HTMLElement("button")}} 要素の [`formtarget`](/ja/docs/Web/HTML/Element/button#formtarget) 属性の値を反映します。
+**`formTarget`** は {{domxref("HTMLButtonElement")}} インターフェイスのプロパティで、送信される {{HtmlElement("form")}} のレスポンスが表示されるタブ、ウィンドウ、iframe です。これは、この {{HTMLElement("button")}} 要素の [`formtarget`](/ja/docs/Web/HTML/Reference/Elements/button#formtarget) 属性の値を反映します。
 
 この値は、フォームをこのボタンから送信する場合に、 {{domxref("HTMLFormElement")}} インターフェイスの {{domxref("HTMLFormElement.target", "target")}} プロパティを上書きします。このプロパティは取得することも設定することもできます。設定されていない場合、値は空文字列 (`""`) となります。
 

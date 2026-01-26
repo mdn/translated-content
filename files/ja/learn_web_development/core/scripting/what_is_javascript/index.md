@@ -83,7 +83,7 @@ function updateName() {
 }
 ```
 
-{{ EmbedLiveSample('A_high-level_definition', '100%', 80) }}
+{{ EmbedLiveSample('A_high-level_definition', '100%', 80, , , , , 'allow-modals') }}
 
 テキストラベルの最新バージョンをクリックしてみて、何が起きるのか見てみましょう。（このデモは GitHub でも見られます。[ソースコード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/javascript-label.html)または[ライブ実行](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html)を参照してください。）
 
@@ -278,7 +278,7 @@ CSS では {{htmlelement("link")}} 要素を使用することで外部のスタ
    }
    ```
 
-4. 保存してブラウザーを更新してください。ボタンをクリックしても効果がないことが分かるでしょう。ブラウザーのコンソールを確認すると、 `Cross-origin request blocked` という内容のエラーが表示されます。これは、多くの外部リソースと同様に、JavaScript モジュールは HTML と[同じオリジン](/ja/docs/Web/Security/Same-origin_policy)から読み込む必要があり、 `file://` URL は適格ではないためです。この問題を修正するには、 2 つの方法があります。
+4. 保存してブラウザーを更新してください。ボタンをクリックしても効果がないことが分かるでしょう。ブラウザーのコンソールを確認すると、 `Cross-origin request blocked` という内容のエラーが表示されます。これは、多くの外部リソースと同様に、JavaScript モジュールは HTML と[同じオリジン](/ja/docs/Web/Security/Defenses/Same-origin_policy)から読み込む必要があり、 `file://` URL は適格ではないためです。この問題を修正するには、 2 つの方法があります。
    - お勧めする解決策は、[ローカルテストサーバーをセットアップ](/ja/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)することです。サーバープログラムが動作し、ポート `8000` で `apply-javascript-external.html` と `script.js` ファイルを配信している状態で、ブラウザーを開き、 `http://localhost:8000` にアクセスします。
    - ローカルサーバーが実行できない場合は、 `<script type="module" src="script.js"></script>` の代わりに `<script defer src="script.js"></script>` を使用することもできます。 詳細は下記[スクリプトの読み込み方針](#スクリプトの読み込み方針)を参照してください。 しかし、チュートリアルの他の部分で使用する機能は、いずれにせよローカルの HTTP サーバーが必要となる場合があることに注意してください。
 5. これでウェブサイトは以前と同じように動作しますが、 JavaScript は外部ファイルから取得するようになります。
@@ -346,7 +346,6 @@ HTML が解釈できるようになった後にのみ JavaScript を実行する
 - 前述の内蔵 JavaScript の例では、スクリプト要素は文書本体の一番下に配置されているため、 HTML 本体の残りの部分が構文解析された後にのみ実行されます。
 - 上記のような外部 JavaScript の例では、スクリプト要素は HTML 本体の構文解析が行われる前に文書のヘッド部に配置されます。しかし、 `<script type="module">` を使用しているため、コードは[モジュール](/ja/docs/Web/JavaScript/Guide/Modules)として扱われ、ブラウザーは HTML がすべて処理されるまで JavaScript モジュールの実行を待ちます。（外部スクリプトを本体の最後に配置することもできます。しかし、 HTML の量が多くネットワークが遅い場合、ブラウザーがスクリプトを取得し読み込むことを開始するまでに多くの時間がかかる可能性があるため、外部スクリプトをヘッド部に配置する方が通常は望ましいです。）
 - それでも文書のヘッド部でモジュール以外のスクリプトを使用したい場合は、ページ全体が表示されないようにブロックされたり、 HTML が解釈される前に実行されてエラーが発生したりする可能性があります。
-
   - 外部スクリプトにおいては、 `defer` （または HTML が利用できるようになるまで待つ必要がないのであれば `async`）属性を {{htmlelement("script")}} 要素に設定してください。
   - 内蔵スクリプトにおいては、コードを [`DOMContentLoaded` イベントリスナー](/ja/docs/Web/API/Document/DOMContentLoaded_event)で囲んでください。
 

@@ -26,7 +26,8 @@ var insertedNode = parentNode.insertBefore(newNode, referenceNode);
 - `referenceNode`
   - : Le nœud avant lequel `newNode` est inséré. Si c'est `null`, alors `newNode` est inséré à la fin des nœuds enfants de `parentNode`.
 
-> **Note :** _`referenceNode`_ **n'est pas** un paramètre facultatif — vous devez explicitement transmettre un `Node` ou `null`. Ne pas le fournir ou transmettre des valeurs invalides provoque des [comportements différents](https://code.google.com/p/chromium/issues/detail?id=419780) selon les différentes versions des navigateurs.
+> [!NOTE]
+> _`referenceNode`_ **n'est pas** un paramètre facultatif — vous devez explicitement transmettre un `Node` ou `null`. Ne pas le fournir ou transmettre des valeurs invalides provoque des [comportements différents](https://code.google.com/p/chromium/issues/detail?id=419780) selon les différentes versions des navigateurs.
 
 ### Valeur de retour
 

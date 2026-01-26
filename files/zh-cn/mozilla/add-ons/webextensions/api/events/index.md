@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a16fecbf75f71fc11e03ef6cd0b0c34ad6f3d480
 ---
 
-{{AddonSidebar}}
-
 由分发事件的 API 所使用的常见类型。
 
 ## 类型

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4ecbac9e89961a132c1e7f5493ec94f60dcb1ee4
 ---
 
-{{CSSRef}}
-
 La propiedad abreviada de CSS **`text-wrap`** controla cómo se envuelve el texto dentro de un elemento. Los diferentes valores proporcionan:
 
 - Mejoras tipográficas, por ejemplo, longitudes de línea más equilibradas en títulos divididos.
@@ -115,7 +113,7 @@ Cuando el contenido estilizado se limitará a un número corto de líneas, como 
 
 Para secciones de texto más largas, se puede usar `text-wrap: pretty`. Tenga en cuenta que `pretty` tiene un efecto negativo en el rendimiento, por lo que solo debe usarse para bloques de texto más largos cuando el diseño es más importante que la velocidad.
 
-El valor `stable` mejora la experiencia del usuario cuando se usa en [`contenteditable`](/es/docs/Web/HTML/Global_attributes/contenteditable) (contenido que es editable). Este valor asegura que, a medida que el usuario está editando texto, las líneas anteriores en el área que se está editando permanezcan estables.
+El valor `stable` mejora la experiencia del usuario cuando se usa en [`contenteditable`](/es/docs/Web/HTML/Reference/Global_attributes/contenteditable) (contenido que es editable). Este valor asegura que, a medida que el usuario está editando texto, las líneas anteriores en el área que se está editando permanezcan estables.
 
 ## Definición formal
 

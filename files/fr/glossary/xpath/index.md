@@ -11,7 +11,7 @@ slug: Glossary/XPath
 
 ### Référence technique
 
-- [Documentation XPath sur MDN](/fr/docs/Web/XPath)
+- [Documentation XPath sur MDN](/fr/docs/Web/XML/XPath)
 - [Spécification XPath](https://www.w3.org/TR/xpath-30/)
 
 ### Culture générale

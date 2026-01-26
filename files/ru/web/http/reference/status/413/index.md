@@ -3,8 +3,6 @@ title: 413 Payload Too Large
 slug: Web/HTTP/Reference/Status/413
 ---
 
-{{HTTPSidebar}}
-
 Код HTTP **`413 Payload Too Large`** , указывает, что объект запроса больше, чем ограничения, определённые сервером; сервер может закрыть соединение или вернуть поле {{HTTPHeader("Retry-After")}}.
 
 ## Статус

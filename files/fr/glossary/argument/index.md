@@ -2,12 +2,10 @@
 title: Argument
 slug: Glossary/Argument
 l10n:
-  sourceCommit: d842f8c32316dbe36cff9fc5e0e777602e32d958
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
-
-Un **argument** est une [valeur](/fr/docs/Glossary/Value) ([primitive](/fr/docs/Glossary/Primitive) ou [objet](/fr/docs/Glossary/Object)) passée en tant qu'entrée à une [fonction](/fr/docs/Glossary/Function).
+Les **arguments** sont des {{Glossary("value", "valeurs")}} ({{Glossary("primitive")}} ou {{Glossary("object", "objet")}}) passées en tant qu'entrée à une {{Glossary("function", "fonction")}}. Ne confondez pas les arguments avec les {{Glossary("parameter", "paramètres")}}, qui sont les noms utilisés dans la définition de la fonction pour se référer aux arguments.
 
 Par exemple&nbsp;:
 
@@ -38,6 +36,9 @@ function exemple(parametre) {
 
 ## Voir aussi
 
-- [Argument](<https://fr.wikipedia.org/wiki/Argument_(informatique)>) sur Wikipédia
 - [Différence entre paramètre et argument](/fr/docs/Glossary/Parameter#paramètres_versus_arguments)
-- L'objet [`arguments`](/fr/docs/Web/JavaScript/Reference/Functions/arguments) en [JavaScript](/fr/docs/Glossary/JavaScript)
+- L'objet JavaScript {{JSxRef("Functions/arguments", "arguments")}}
+- Termes associés du glossaire&nbsp;:
+  - {{Glossary("Function", "Fonction")}}
+  - {{Glossary("Parameter", "Paramètre")}}
+  - {{Glossary("JavaScript")}}

@@ -3,8 +3,6 @@ title: 505 HTTP Version Not Supported
 slug: Web/HTTP/Reference/Status/505
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`505 HTTP Version Not Supported`** код состояния ответа указывает, что версия HTTP, используемая в запросе, не поддерживается сервером.
 
 ## Статус

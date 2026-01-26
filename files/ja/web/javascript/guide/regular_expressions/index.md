@@ -2,7 +2,7 @@
 title: 正規表現
 slug: Web/JavaScript/Guide/Regular_expressions
 l10n:
-  sourceCommit: c16a0ee78e5142b3bfcdaf57d595add3ce825f13
+  sourceCommit: d45eb906aeda78dfc2677471d8e58f72ecae8d65
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Representing_dates_times", "Web/JavaScript/Guide/Indexed_collections")}}
@@ -142,12 +142,15 @@ JavaScript では、正規表現はオブジェクトでもあります。これ
   </tbody>
 </table>
 
-> **メモ:** [もっと大きな早見表もあります](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet) （個別の記事の一部を集約しただけです）。
+> [!NOTE]
+> [もっと大きな早見表もあります](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet) （個別の記事の一部を集約しただけです）。
 
 ### エスケープ
 
-特殊文字を文字として使う必要がある場合 (例えば、実際に `"*"` を検索する場合)、その前にバックスラッシュを付けてエスケープする必要があります。
-例えば、 `"a"` に `"*"` が続き、さらに `"b"` が続くものを検索するには、 `/a\*b/` と使用します。バックスラッシュは `"*"` を「エスケープ」し、特殊文字ではなく文字として扱うようにします。
+特殊文字を文字として使う必要がある場合 (例えば、実際に `"*"` を検索する場合)、その前にバックスラッシュを付けてエスケープすべきです。例えば、 `"a"` に `"*"` が続き、さらに `"b"` が続くものを検索するには、 `/a\*b/` と使用します。バックスラッシュは `"*"` を「エスケープ」し、特殊文字ではなく文字として扱うようにします。
+
+> [!NOTE]
+> 多くの場合、特殊文字を照合しようとするとき、エスケープの代わりに[文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)で囲むことができます。例えば `/a[*]b/` のようにします。
 
 同様に、もし正規表現リテラルを書いていてスラッシュ ("/") と照合する必要がある場合は、スラッシュをエスケープする必要があります（そうしないとスラッシュでパターンが終了します）。
 例えば、 "/example/" という文字列とそれに続く 1 文字以上のアルファベットを探すには、 `/\/example\/[a-z]+/i` とします。それぞれのスラッシュの前にバックスラッシュを置くことによって、スラッシュを文字として扱います。
@@ -200,7 +203,7 @@ const myArray = /d(b+)d/g.exec("cdbbdbsbz");
 // /d(b+)d/g.exec('cdbbdbsbz') は配列 [ 'dbbd', 'bb', index: 1, input: 'cdbbdbsbz' ] を出力する。
 ```
 
-(異なる動作についての詳しい情報は[`exec()` におけるグローバル検索フラグの使用](#exec_におけるグローバル検索フラグの使用)を参照してください。)
+（異なる動作についての詳しい情報は [`exec()` におけるグローバル検索フラグの使用](#exec_におけるグローバル検索フラグの使用)を参照してください。）
 
 ある文字列から正規表現を組み立てたい場合は、次のスクリプトのような方法があります。
 
@@ -272,18 +275,18 @@ const myArray = myRe.exec("cdbbdbsbz");
 ```js
 const myRe = /d(b+)d/g;
 const myArray = myRe.exec("cdbbdbsbz");
-console.log(`The value of lastIndex is ${myRe.lastIndex}`);
+console.log(`lastIndex の値は ${myRe.lastIndex} です`);
 
-// "The value of lastIndex is 5"
+// "lastIndex の値は 5 です"
 ```
 
 しかし、このスクリプトの場合は次のようになります。
 
 ```js
 const myArray = /d(b+)d/g.exec("cdbbdbsbz");
-console.log(`The value of lastIndex is ${/d(b+)d/g.lastIndex}`);
+console.log(`lastIndex の値は ${/d(b+)d/g.lastIndex} です`);
 
-// "The value of lastIndex is 0"
+// "lastIndex の値は 0 です"
 ```
 
 この 2 つの文中の `/d(b+)d/g` は異なる正規表現オブジェクトであるため、 `lastIndex` プロパティの値も異なります。
@@ -299,7 +302,7 @@ console.log(`The value of lastIndex is ${/d(b+)d/g.lastIndex}`);
 | `d`    | 一致した部分文字列の位置を生成します。                                                         | {{jsxref("RegExp/hasIndices", "hasIndices")}}   |
 | `g`    | グローバル検索を行います。                                                                     | {{jsxref("RegExp/global", "global")}}           |
 | `i`    | 大文字・小文字を区別しない検索です。                                                           | {{jsxref("RegExp/ignoreCase", "ignoreCase")}}   |
-| `m`    | `^` および `$` が改行文字の隣で一致するようになります。                                        | {{jsxref("RegExp/multiline", "multiline")}}     |
+| `m`    | `^` と `$` を、文字列全体ではなくそれぞれの行の先頭と末尾に一致するようにします。              | {{jsxref("RegExp/multiline", "multiline")}}     |
 | `s`    | `.` が改行文字に一致するようにします。                                                         | {{jsxref("RegExp/dotAll", "dotAll")}}           |
 | `u`    | "unicode" です。パターンを一連の Unicode コードポイントとして扱います。                        | {{jsxref("RegExp/unicode", "unicode")}}         |
 | `v`    | Unicodeの機能がさらに追加された `u` モードのアップグレード。                                   | {{jsxref("RegExp/unicodeSets", "unicodeSets")}} |

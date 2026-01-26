@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Text_styling/Styling_links
 original_slug: Learn/CSS/Styling_text/Styling_links
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}
 
 A la hora de dar estilo a los [enlaces](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links), es importante comprender cómo utilizar las pseudoclases para diseñar los estados de un enlace de manera efectiva y cómo diseñar enlaces para su uso en diversas funciones de interfaz comunes, como menús y pestañas de navegación. Veremos todos estos temas en este artículo.
 
@@ -182,7 +182,6 @@ Poner los dos juntos nos da este resultado:
 - La tercera regla usa el selector `a` para eliminar el subrayado de texto predeterminado y el contorno en el estado de foco (que de todos modos varía dependiendo del navegador), y añade una pequeña cantidad de área de relleno a cada enlace (todo esto se aclarará más adelante).
 - A continuación, utilizamos los selectores `a:link` y `a:visited` para establecer un par de variaciones de color en los enlaces no visitados y visitados, para que se distingan.
 - Las dos reglas siguientes usan `a:focus` y `a:hover` para establecer colores de fondo diferentes para los enlaces con el foco y los enlaces activados con el paso del cursor, y además un subrayado para que el enlace destaque aún más. Aquí destacamos dos aspectos:
-
   - El subrayado se ha creado usando {{cssxref("border-bottom")}} y no {{cssxref("text-decoration")}}, y es que algunas personas lo prefieren porque el primero tiene mejores opciones en cuanto a estilo, y se dibuja un poco más abajo, por lo que no pisa los trazos descendentes de la palabra que se subraya (por ejemplo, los trazos de la g o la y).
   - El valor {{cssxref ("border-bottom")}} se ha establecido en `1px solid` sin especificar ningún color. Así, el borde adopta el mismo color que el texto del elemento, lo que es útil en casos en los que el texto es de un color diferente en cada caso.
 
@@ -361,7 +360,7 @@ También usamos {{cssxref("background-size")}} para especificar el tamaño de la
 
 Finalmente, establecemos un área de relleno a la derecha ({{cssxref ("padding-right")}}) para los enlaces, para crear un espacio en que aparezca la imagen de fondo, de modo que no se superponga con el texto.
 
-Un último apunte: ¿cómo seleccionamos solo los enlaces externos? Bueno, si escribes tus enlaces [HTML](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links) de forma adecuada, solo deberías usar URL absolutos para los enlaces externos. Para enlazar con otras partes del mismo sitio web, resulta más eficiente usar enlaces relativos. Por lo tanto, el texto «http» solo debe aparecer en los enlaces externos y es posible seleccionarlos con un [selector de atributos](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#selectores_de_atributo): `a[href*="http"]` selecciona los elementos {{HTMLElement ( "a")}}, pero solo si tienen un atributo [`href`](/es/docs/Web/HTML/Element/a#href) con un valor que contiene «http» en algún lugar de su contenido textual.
+Un último apunte: ¿cómo seleccionamos solo los enlaces externos? Bueno, si escribes tus enlaces [HTML](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links) de forma adecuada, solo deberías usar URL absolutos para los enlaces externos. Para enlazar con otras partes del mismo sitio web, resulta más eficiente usar enlaces relativos. Por lo tanto, el texto «http» solo debe aparecer en los enlaces externos y es posible seleccionarlos con un [selector de atributos](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#selectores_de_atributo): `a[href*="http"]` selecciona los elementos {{HTMLElement ( "a")}}, pero solo si tienen un atributo [`href`](/es/docs/Web/HTML/Reference/Elements/a#href) con un valor que contiene «http» en algún lugar de su contenido textual.
 
 Eso es todo. Vuelve a la sección de aprendizaje activo anterior ¡y prueba esta nueva técnica!
 
@@ -444,7 +443,6 @@ Vamos a explicar qué pasa aquí, y nos vamos a centrar en los aspectos más int
 - Nuestra segunda regla elimina el área de relleno ({{cssxref ("padding")}}) predeterminada del elemento {{htmlelement ("ul")}} y establece un ancho para abarcar el 100% del contenedor externo (el {{htmlelement ("body")}}, en este caso).
 - Los elementos {{htmlelement ("li")}} por defecto suelen ser elementos de bloque (repasa los [tipos de cajas CSS](/es/docs/Learn_web_development/Core/Styling_basics/Box_model)), lo que significa que ocupan sus propias líneas. En este caso, creamos una lista de enlaces horizontal, para lo que en la tercera regla establecemos la propiedad {{cssxref ("display")}} en el valor `inline`, que ubica todos los elementos de la lista sobre la misma línea porque ahora se comportan como elementos de línea.
 - La cuarta regla (que da formato al elemento {{htmlelement("a")}}) es la más complicada. Vamos a verla paso a paso:
-
   - Como en los ejemplos anteriores, comenzamos por desactivar las propiedades predeterminadas {{cssxref ("text-decoration")}} y {{cssxref ("outline")}}, ya que no queremos que estropeen nuestro aspecto.
   - A continuación, configuramos la propiedad {{cssxref ("display")}} en el valor `inline-block`: los elementos {{htmlelement ("a")}} se muestran en línea de forma predeterminada y, aunque no queremos que ocupe más de una línea, como haría un valor de `block`, queremos poderlos dimensionar: `inline-block` nos permite hacerlo.
   - Ahora nos centramos en el tamaño. Queremos llenar todo el ancho del elemento de lista {{htmlelement ("ul")}} y dejar un pequeño margen entre cada botón (pero ningún hueco en el borde derecho), y queremos los 5 botones del mismo tamaño. Para hacer esto, establecemos el atributo {{cssxref ("width")}} en 19,5%, y el atributo {{cssxref ("margin-right")}} en 0,625%. Observa que el ancho completo suma 100,625%, lo que haría caer el último botón `<ul>` a la siguiente línea por desbordamiento. Sin embargo, lo restituimos al 100% con la siguiente regla, que selecciona solo el último elemento `<a>` de la lista y elimina de él el margen. ¡Hecho!
@@ -457,4 +455,4 @@ Vamos a explicar qué pasa aquí, y nos vamos a centrar en los aspectos más int
 
 Esperamos que este artículo te haya proporcionado todo lo que necesitas saber acerca de los enlaces... ¡por ahora! En el artículo final de nuestro módulo de aplicar estilo al texto detallaremos cómo usar tipos de letra personalizados para sitios web (o tipos de letra para web, como se les conoce comúnmente).
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}

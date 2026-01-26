@@ -167,7 +167,7 @@ var listeHTML = liste("u", "Un", "Deux", "Trois");
 
 ### Paramètres du reste, paramètres par défaut et décomposition
 
-L'objet `arguments` peut être utilisé en combinaison avec [les paramètres du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters), [les paramètres par défaut](/fr/docs/Web/JavaScript/Reference/Functions/Default_parameters) ou [les paramètres décomposés](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+L'objet `arguments` peut être utilisé en combinaison avec [les paramètres du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters), [les paramètres par défaut](/fr/docs/Web/JavaScript/Reference/Functions/Default_parameters) ou [les paramètres décomposés](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring).
 
 ```js
 function toto(...args) {
@@ -176,7 +176,7 @@ function toto(...args) {
 toto(1, 2, 3); // [1, 2, 3]
 ```
 
-Toutefois, pour les fonctions utilisées en mode non-strict, un **objet `arguments`** n'est fourni à l'intérieur de la fonction uniquement si celle-ci n'utilise pas de [paramètres du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters), pas de [paramètres par défaut](/fr/docs/Web/JavaScript/Reference/Functions/Default_parameters) ou de [paramètre décomposé](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). Par exemple, dans la fonction suivante, qui utilise un paramètre par défaut, ce sera 10 qui sera renvoyé (et non 100) :
+Toutefois, pour les fonctions utilisées en mode non-strict, un **objet `arguments`** n'est fourni à l'intérieur de la fonction uniquement si celle-ci n'utilise pas de [paramètres du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters), pas de [paramètres par défaut](/fr/docs/Web/JavaScript/Reference/Functions/Default_parameters) ou de [paramètre décomposé](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring). Par exemple, dans la fonction suivante, qui utilise un paramètre par défaut, ce sera 10 qui sera renvoyé (et non 100) :
 
 ```js
 function truc(a = 1) {

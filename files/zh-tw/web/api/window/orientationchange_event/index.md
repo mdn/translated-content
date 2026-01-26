@@ -1,37 +1,47 @@
 ---
-title: "Window: orientationchange event"
+title: Window：orientationchange 事件
 slug: Web/API/Window/orientationchange_event
+l10n:
+  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
 ---
 
-{{APIRef}}
+{{APIRef}}{{Deprecated_Header}}
 
-`orientationchange` 事件在設備方向改變時被觸發。
+當裝置的方向改變時，會觸發 `orientationchange` 事件。
 
-| 冒泡       | No                                                                      |
-| ---------- | ----------------------------------------------------------------------- |
-| 可取消     | No                                                                      |
-| 介面       | {{domxref("Event")}}                                                    |
-| 事件處理器 | [`onorientationchange`](/zh-TW/docs/Web/API/Window/onorientationchange) |
+此事件不可取消且不會冒泡。
+
+此事件已被棄用。請改為監聽 {{domxref("ScreenOrientation")}} 介面的 {{domxref("ScreenOrientation.change_event", "change")}} 事件。
+
+## 語法
+
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名稱，或設定事件處理器屬性。
+
+```js-nolint
+addEventListener("orientationchange", (event) => { })
+
+onorientationchange = (event) => { }
+```
+
+## 事件類型
+
+一個通用的 {{domxref("Event")}}。
 
 ## 範例
 
-可於 [`addEventListener`](/zh-TW/docs/Web/API/EventTarget/addEventListener) 方法中使用 `abort` 事件：
+你可以在 {{domxref("EventTarget/addEventListener", "addEventListener")}} 方法中使用 `orientationchange` 事件：
 
 ```js
-window.addEventListener("orientationchange", function () {
-  console.log(
-    "the orientation of the device is now " + screen.orientation.angle,
-  );
+window.addEventListener("orientationchange", (event) => {
+  console.log(`裝置現在的方向是 ${event.target.screen.orientation.angle}`);
 });
 ```
 
-或使用 [`onorientationchange`](/zh-TW/docs/Web/API/Window/onorientationchange) 事件處理器屬性：
+或使用 `onorientationchange` 事件處理器屬性：
 
 ```js
-window.onorientationchange = function () {
-  console.log(
-    "the orientation of the device is now " + screen.orientation.angle,
-  );
+window.onorientationchange = (event) => {
+  console.log(`裝置現在的方向是 ${event.target.screen.orientation.angle}`);
 };
 ```
 

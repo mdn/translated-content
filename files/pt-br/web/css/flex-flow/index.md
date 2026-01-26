@@ -5,7 +5,7 @@ slug: Web/CSS/flex-flow
 
 {{CSSRef}}
 
-A propriedade [CSS](/pt-BR/docs/Web/CSS) **`flex-flow`** é uma [junção](/pt-BR/docs/Web/CSS/Shorthand_properties) das propriedades {{cssxref("flex-direction")}} e {{cssxref("flex-wrap")}}.
+A propriedade [CSS](/pt-BR/docs/Web/CSS) **`flex-flow`** é uma [junção](/pt-BR/docs/Web/CSS/CSS_cascade/Shorthand_properties) das propriedades {{cssxref("flex-direction")}} e {{cssxref("flex-wrap")}}.
 
 {{InteractiveExample("CSS Demo: flex-flow")}}
 

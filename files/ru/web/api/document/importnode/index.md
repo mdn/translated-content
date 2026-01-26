@@ -22,9 +22,7 @@ var node = document.importNode(externalNode, deep);
 - _externalNode_
   - : Внешний `Node` или `DocumentFragment`, который импортируется в настоящий документ.
 - _deep_
-
   - : Булеан, контролирующий, необходимо ли импортировать всё DOM поддерево узла _externalNode_.
-
     - Если _deep_ установлен в `true`, _узел externalNode_ и все его потомки будут скопированы.
     - Если _deep_ установлен в `false`, импортируется только _externalNode_ — новый узел не будет содержать потомков.
 

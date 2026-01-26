@@ -43,13 +43,11 @@ toLocaleString(locales, options)
 В реализациях, поддерживающих [`Intl.NumberFormat` API](/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat), эти параметры соответствуют параметрам конструктора [`Intl.NumberFormat()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat). Реализации без поддержки `Intl.NumberFormat` должны игнорировать оба параметра, используя локаль и формат возвращаемой строки определяемые самой реализацией.
 
 - `locales` {{optional_inline}}
-
   - : Строка с языковым тегом BCP 47 или массив таких строк. Соответствует параметру [`locales`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#locales) конструктора `Intl.NumberFormat().
 
     В реализациях без поддержки `Intl.NumberFormat` этот параметр игнорируется и обычно используется локаль устройства.
 
 - `options` {{optional_inline}}
-
   - : Объект определяющий выходной формат. Соответствует параметру [`options`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options) конструктора `Intl.NumberFormat()`.
 
     В реализациях без поддержки `Intl.NumberFormat` этот параметр игнорируется.

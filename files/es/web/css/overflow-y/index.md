@@ -3,8 +3,6 @@ title: overflow-y
 slug: Web/CSS/overflow-y
 ---
 
-{{CSSRef}}
-
 La propiedad [CSS](/es/docs/Web/CSS) **`overflow-y`** define qué se debe mostrar cuando el contenido se desborda de los extremos superior e inferior de un elemento en bloque.
 
 > [!NOTE]
@@ -51,8 +49,6 @@ overflow-y: auto;
   text-align: left;
 }
 ```
-
-El código para este ejemplo interactivo está almacenado en un repositorio de GitHub. Si quieres contribuir con el proyecto de ejemplos interactivos, por favor clone <https://github.com/mdn/interactive-examples> y envíanos un pull request.
 
 ## Sintaxis
 

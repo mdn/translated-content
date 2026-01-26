@@ -83,7 +83,7 @@ MDN의 많은 작업은 문서 작성과 코드 예제를 중심으로 이루어
 
 ## 매뉴얼 읽기
 
-좋은 오픈 소스 프로젝트는 항상 기여자가 문서에 쉽게 접근할 수 있도록 합니다. GitHub 프로젝트에서는 보통 저장소의 CONTRIBUTING.md 파일이나, 때로 프로젝트의 README.md 파일에 있습니다. 문서화 프로젝트인 MDN 콘텐츠는 [README](https://github.com/mdn/content/blob/main/README.md)와 웹사이트에 기여자를 위한 문서가 잘 정리되어 있습니다 (참조 [MDN 웹 문서에 기여하기](/ko/docs/MDN/Community/Contributing)).
+좋은 오픈 소스 프로젝트는 항상 기여자가 문서에 쉽게 접근할 수 있도록 합니다. GitHub 프로젝트에서는 보통 저장소의 CONTRIBUTING.md 파일이나, 때로 프로젝트의 README.md 파일에 있습니다. 문서화 프로젝트인 MDN 콘텐츠는 [README](https://github.com/mdn/content/blob/main/README.md)와 웹사이트에 기여자를 위한 문서가 잘 정리되어 있습니다 (참조 [MDN 웹 문서에 기여하기](/ko/docs/conflicting/MDN/Community)).
 
 도움을 요청하는 것을 두려워하지 마세요. 동시에 질문하기 전에 항상 먼저 스스로 답을 찾으려고 노력하셔야 합니다. 이렇게 하면 프로젝트에 대한 지식을 쌓고 덜 의존적으로 활동할 수 있게 되며, 다른 기여자들에게 불필요한 부담을 주지 않을 수 있습니다.
 

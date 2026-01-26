@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format
 
 **`Intl.RelativeTimeFormat.prototype.format()`** メソッドは `value` や `unit` を、この {{jsxref("Intl.RelativeTimeFormat")}} オブジェクトのロケールと整形オプションに従って整形します。
 
-{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat.prototype.format")}}
+{{InteractiveExample("JavaScript デモ: Intl.RelativeTimeFormat.prototype.format")}}
 
 ```js interactive-example
 const rtf1 = new Intl.RelativeTimeFormat("en", { style: "short" });

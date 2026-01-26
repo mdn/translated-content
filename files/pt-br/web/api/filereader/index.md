@@ -27,7 +27,6 @@ Consulte [Usando arquivos de aplicativos da Web](/pt-BR/docs/Web/API/File_API/Us
 - {{domxref("FileReader.error")}} {{ReadOnlyInline}}
   - : Um {{domxref("DOMException")}} representando o erro que ocorreu durante a leitura do arquivo.
 - {{domxref("FileReader.readyState")}} {{ReadOnlyInline}}
-
   - : Um número que indica o estado do `FileReader`. Este é um dos seguintes:
 
     | Nome      | Valor | Descrição                                    |

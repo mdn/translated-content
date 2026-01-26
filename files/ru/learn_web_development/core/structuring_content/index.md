@@ -27,7 +27,6 @@ slug: Learn_web_development/Core/Structuring_content
 - [Мультимедиа и встраивание](/ru/docs/Learn/HTML/Multimedia_and_embedding)
   - : В этом модуле рассматривается использование HTML для подключения мультимедиа-контента к вашим веб-страницам, включая различные способы встраивания изображений, видео и аудио и даже других веб-страниц.
 - [HTML Таблицы](/ru/docs/conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics)
-
   - : Представление табличных данных на веб-странице в понятном, {{glossary("Accessibility", "доступном")}} образе, может стать проблемой. Этот модуль описывает основы табличной разметки, а также более сложные функции, такие как реализация подписок и резюме.
 
 - [HTML Формы](/ru/docs/Learn_web_development/Extensions/Forms)

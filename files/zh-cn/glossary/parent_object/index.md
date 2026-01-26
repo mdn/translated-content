@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 给定{{glossary("property", "属性")}}或{{glossary("method", "方法")}}所属的{{glossary("object", "对象")}}。
 
 ## 参见

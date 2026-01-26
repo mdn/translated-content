@@ -1,28 +1,27 @@
 ---
 title: Math.trunc()
+short-title: trunc()
 slug: Web/JavaScript/Reference/Global_Objects/Math/trunc
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Math.trunc()`** 関数は、引数として与えた数の小数部の桁を取り除くことによって整数部を返します。
 
-{{InteractiveExample("JavaScript Demo: Math.trunc()")}}
+{{InteractiveExample("JavaScript デモ: Math.trunc()")}}
 
 ```js interactive-example
 console.log(Math.trunc(13.37));
-// Expected output: 13
+// 予想される結果: 13
 
 console.log(Math.trunc(42.84));
-// Expected output: 42
+// 予想される結果: 42
 
 console.log(Math.trunc(0.123));
-// Expected output: 0
+// 予想される結果: 0
 
 console.log(Math.trunc(-0.123));
-// Expected output: -0
+// 予想される結果: -0
 ```
 
 ## 構文
@@ -42,7 +41,7 @@ Math.trunc(x)
 
 ## 解説
 
-他の 3 つの `Math` メソッド、{{jsxref("Math.floor()")}}、{{jsxref("Math.ceil()")}}、{{jsxref("Math.round()")}} とは異なり、 `Math.trunc()` の動作は非常にシンプルで分かりやすいです。引数が正の数または負の数であるかに関わらず、ただ小数点とそれ以降にある数字を*切り捨て*ます。
+`Math.trunc()` の処理は、他の 3 つの `Math` メソッド、{{jsxref("Math.floor()")}}、{{jsxref("Math.ceil()")}}、{{jsxref("Math.round()")}} よりも直感的です。引数が正の数か負の数かに関わらず、小数点とその右側の桁を切り詰め（切り捨て）ます。
 
 `trunc()` は `Math` オブジェクトの静的なメソッドなので、自ら生成した `Math` オブジェクトのメソッドとしてではなく、常に、`Math.trunc()` として使用してください (`Math` オブジェクトにはコンストラクタがありません)。
 
@@ -67,7 +66,7 @@ Math.trunc(Infinity); // Infinity
 > [!WARNING]
 > 無視できないエッジケースがあるため、これは `Math.trunc()` のポリフィルにはなりません。
 
-ビット演算はオペランドを 32 ビット整数に変換します。一般的なテクニックは以下の通りです。
+ビット演算はオペランドを32ビット整数に変換するため、従来は浮動小数点数を切り捨てるために利用されてきました。一般的なテクニックは以下の通りです。
 
 ```js
 const original = 3.14;

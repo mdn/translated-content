@@ -44,7 +44,7 @@ _このインターフェイスは親である {{domxref("Event")}} からプロ
 
 ## 例
 
-あるスクリプトが、次のようなコードを使用して、別の [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) のような異なる閲覧コンテキストにメッセージを送信するとします。
+あるスクリプトが、次のようなコードを使用して、別の [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) のような異なる閲覧コンテキストにメッセージを送信するとします。
 
 ```js
 const targetFrame = window.top.frames[1];

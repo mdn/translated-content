@@ -3,7 +3,7 @@ title: MathML 使用入门
 slug: Web/MathML/Tutorials/For_beginners/Getting_started
 ---
 
-{{LearnSidebar}}{{NextMenu("Web/MathML/Guides/Text_containers", "Web/MathML/Guides")}}
+{{NextMenu("Web/MathML/Tutorials/For_beginners/Text_containers", "Web/MathML/Tutorials/For_beginners")}}
 
 在本文中，我们将使用一个简单的 HTML 文档，了解如何在其中添加 MathML 公式，并顺便介绍一些元素。
 
@@ -98,7 +98,7 @@ MathML 使用与 HTML 相同的语法来表示元素和属性的树形结构。�
 > 这对应于 LaTeX 中的*行内*公式（用美元符号 `$...$` 包围）和*展示*公式（用 `\[...\]` 包围）的概念。
 
 > [!NOTE]
-> 上述提到的外观变化实际上是由 [`math-style`](/zh-CN/docs/Web/CSS/math-style) 属性控制的，该属性初始值为代表 `<math display="block">` 的 `normal`，其他情况下为 `compact`。在某些 MathML 子树中，此属性可能会自动变为 `compact`，但在本入门教程中我们将忽略这个细微差别。这与 LaTeX 类似。
+> 上述提到的外观变化实际上是由 [`math-style`](/zh-CN/docs/Web/CSS/Reference/Properties/math-style) 属性控制的，该属性初始值为代表 `<math display="block">` 的 `normal`，其他情况下为 `compact`。在某些 MathML 子树中，此属性可能会自动变为 `compact`，但在本入门教程中我们将忽略这个细微差别。这与 LaTeX 类似。
 
 ## 使用 \<mrow> 元素进行分组
 
@@ -200,7 +200,7 @@ MathML 使用与 HTML 相同的语法来表示元素和属性的树形结构。�
 - [`<math>` 元素](/zh-CN/docs/Web/MathML/Reference/Element/math)
 - [`<mfrac>` 元素](/zh-CN/docs/Web/MathML/Reference/Element/mfrac)
 - [`<mrow>` 元素](/zh-CN/docs/Web/MathML/Reference/Element/mrow)
-- [`math-style` 属性](/zh-CN/docs/Web/CSS/math-style)
-- [`math-depth` 属性](/zh-CN/docs/Web/CSS/math-depth)
+- [`math-style` 属性](/zh-CN/docs/Web/CSS/Reference/Properties/math-style)
+- [`math-depth` 属性](/zh-CN/docs/Web/CSS/Reference/Properties/math-depth)
 
-{{NextMenu("Web/MathML/Guides/Text_containers", "Web/MathML/Guides")}}
+{{NextMenu("Web/MathML/Tutorials/For_beginners/Text_containers", "Web/MathML/Tutorials/For_beginners")}}

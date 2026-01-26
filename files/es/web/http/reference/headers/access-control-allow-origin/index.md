@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Origin
 original_slug: Web/HTTP/Headers/Access-Control-Allow-Origin
 ---
 
-{{HTTPSidebar}}
-
 El encabezado de respuesta **`Access-Control-Allow-Origin`** indica si los recursos de la respuesta pueden ser compartidos con el {{glossary("origin", "origen")}} dado.
 
 <table class="properties">
@@ -36,7 +34,7 @@ Access-Control-Allow-Origin: null
 ## Directivas
 
 - `*`
-  - : Para las peticiones _sin credenciales_, el servidor puede especificar el caracter "\*" como un comodín, permitiendo a cualquier origen acceder al recurso. El acceso será permitido solamente para las peticiones hechas con el atributo [`crossorigin`](/es/docs/Web/HTML/Global_attributes#crossorigin) definido como `"anonymous"`. Intentar usar el comodín con credenciales [resultará en un error](/es/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials).
+  - : Para las peticiones _sin credenciales_, el servidor puede especificar el caracter "\*" como un comodín, permitiendo a cualquier origen acceder al recurso. El acceso será permitido solamente para las peticiones hechas con el atributo [`crossorigin`](/es/docs/Web/HTML/Reference/Global_attributes#crossorigin) definido como `"anonymous"`. Intentar usar el comodín con credenciales [resultará en un error](/es/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials).
 - `<origen>`
   - : Especifica que origen puede acceder al recurso. Sólo se puede especificar un origen.
 

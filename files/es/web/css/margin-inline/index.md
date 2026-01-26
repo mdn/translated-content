@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
 ---
 
-{{CSSRef}}
-
 La [propiedad abreviada](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties) de [CSS](/es/docs/Web/CSS) **`margin-inline`** es una propiedad abreviada que define los márgenes lógicos de inicio y final en línea de un elemento, que se asignan a márgenes físicos según el modo de escritura, la direccionalidad y la orientación del texto del elemento.
 
 {{InteractiveExample("CSS Demo: margin-inline")}}

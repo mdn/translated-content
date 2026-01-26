@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 使用 `topSites` API 可获取包含用户经常访问的页面的数组。
 
 浏览器维护此列表以帮助用户轻松返回这些地方。例如，Firefox 默认提供了在“新标签”页中显示的最常访问页面的列表。

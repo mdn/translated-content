@@ -2,12 +2,13 @@
 title: サイドバー
 slug: MDN/Writing_guidelines/Page_structures/Sidebars
 l10n:
-  sourceCommit: 269fa421f0a79b18f6000a26baebe30c74571b1f
+  sourceCommit: b16d05494dd1252531451ebc3e995ea0f2a9007b
 ---
 
-MDN のページにはすべてサイドバーが設置されています。そのほとんどは、 YAML ファイルでデータ構造を定義し、マクロ呼び出しを使用してページにサイドバーを挿入する標準システムで作成されています。
+すべての MDN のページにはサイドバーを付けます。
+そのほとんどは、 YAML ファイルでデータ構造を定義し、フロントマターまたはマクロによってページにサイドバーを記載するシステムを使用して作成されています。
 
-このガイドでは、サイドバーがどのように動作するのかを学び、必要に応じて既存のサイドバーを編集したり、新しいサイドバーを作成したりする方法を習得します。また、標準システムを使用していないものについても詳しく説明します。
+このガイドでは、サイドバーがどのように動作するのかを学び、必要に応じて既存のサイドバーを編集したり、新しいサイドバーを作成したりする方法を学びます。
 
 > [!NOTE]
 > サイドバーを編集している場合は、書式化とリダイレクトの同期に `yarn tool` コマンドを使用することができます。
@@ -17,55 +18,24 @@ MDN のページにはすべてサイドバーが設置されています。そ�
 
 それぞれのサイドバーには、対応する YAML ファイルが MDN の `content` リポジトリーの [`files/sidebars`](https://github.com/mdn/content/tree/main/files/sidebars) ディレクトリーの中にあります。このファイルでは、サイドバーリンクの階層構造、それぞれのリンクが指し示すべき URL、およびオプションのカスタム見出し/リンクテキストを定義しています。必要に応じて、これらのテキストをさまざまな言語にローカライズすることができます。
 
-例として、現在見ているページを例にとると、サイドバーの構造は [`mdnsidebar.yaml`](https://github.com/mdn/content/blob/main/files/sidebars/mdnsidebar.yaml) ファイルで定義されています。
+あなたが見ているこのページは、 [`mdnsidebar.yaml`](https://github.com/mdn/content/blob/main/files/sidebars/mdnsidebar.yaml) ファイルで定義されたサイドバーがあります。
 
-サイドバーは、対応するマクロ呼び出し `\{{MDNSidebar}}` を[文書のソース](https://raw.githubusercontent.com/mdn/content/refs/heads/main/files/ja/mdn/writing_guidelines/page_structures/sidebars/index.md)内のフロントマターのすぐ下に記載することで、現在のページ（および同じ文書ツリー内のページにも）に表示されます。
+このページ（および同じ文書ツリーのすべてのページ）のサイドバーは、フロントマター項目の `sidebar` を[文書のソース](https://raw.githubusercontent.com/mdn/content/refs/heads/main/files/ja/mdn/writing_guidelines/page_structures/sidebars/index.md)内に記載することで表示されています。
 
 ```md
 ---
 title: サイドバー
 slug: MDN/Writing_guidelines/Page_structures/Sidebars
 l10n:
-  sourceCommit: 269fa421f0a79b18f6000a26baebe30c74571b1f
+  sourceCommit: b16d05494dd1252531451ebc3e995ea0f2a9007b
 ---
 
-\{{MDNSidebar}}
+すべての MDN のページにはサイドバーを付けます。
 ```
 
-フロントマターとは、ダッシュで区切られた間のコンテンツを指します。ソースに `\{{MDNSidebar}}` マクロ呼び出しを記載すると、システムは同じ名前の YAML ファイルを `files/sidebars` ディレクトリー内で探します。ファイルが見つかると、サイドバーのレンダリングと、 1 つまたは複数の順序付きリスト（{{htmlelement("ol")}}要素）としてページ上に配置する処理が自動的に行われます。
+フロントマターとは、ダッシュの連続で区切られた間のコンテンツを指します。フロントマターに `sidebar: mdnsidebar` を記載すると、システムは同じ名前の YAML ファイルを `files/sidebars` ディレクトリー内で探します。ファイルが見つかると、サイドバーのレンダリングと、 1 つまたは複数の順序付きリスト（{{htmlelement("ol")}}要素）としてページ上に配置する処理が自動的に行われます。
 
 このページに戻る前に、サイドバーの周りをナビゲート操作してみてください。 通常、ページをナビゲートすると、現在いる節のリンクリストが展開され、他にも展開される一方で、他にもが折りたたまれ、現在いるページが強調表示されることに気づくでしょう。
-
-## 標準のサイドバーの例
-
-他にもよく見かける標準的なサイドバーには、次のものがあります。
-
-- `\{{CSSRef}}`
-
-  - : すべての [CSS](/ja/docs/Web/CSS) ページに存在します。
-
-- `\{{GlossarySidebar}}`
-
-  - : すべての[glossary](/ja/docs/Glossary)ページに存在します。
-
-- `\{{LearnSidebar}}`
-
-  - : [ウェブ開発の学習](/ja/docs/Learn_web_development)の中にあるすべてのページに存在します。
-
-- `\{{HTMLSidebar}}`
-
-  - : [HTML](/ja/docs/Web/HTML) のドキュメントのためのサイドバーを生成します。
-
-- `\{{HTTPSidebar}}`
-
-  - : [HTTP ドキュメント](/ja/docs/Web/HTTP) のためのサイドバーを生成します。
-
-- `\{{PWASidebar}}`
-
-  - : [プログレッシブウェブアプリ (PWA)](/ja/docs/Web/Progressive_web_apps) のドキュメントのためのサイドバーを生成します。
-
-> [!NOTE]
-> 使用する適切なマクロは[ページの種類](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types)に依存します。各ページ種類の[テンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types#ページテンプレート)には、そのページ種類に適したマクロが記載されています。
 
 ## サイドバーの YAML の構文の解説
 
@@ -80,23 +50,24 @@ sidebar:
   # サイドバー定義の始まり
 ```
 
-### 基本的な単一のリンク
+### 単一のリンク
 
-サイドバーに基本的な単一のリンクを作成するには、 YAML リストアイテムに相対 URL が含めて記述してください。
+サイドバーに単一のリンクを作成するには、 YAML リストアイテムに相対 URL が含めて記述してください。
 
 ```yaml
 sidebar:
-  - /MDN/Changelog
+  - /MDN/Writing_guidelines/Page_structures/Sidebars
 ```
 
-この URL は MDN の URL 構造における `docs` ディレクトリーに対する相対パスであるため、例えば `/MDN/Changelog` は https://developer.mozilla.org/ja/docs/MDN/Changelog へのリンクを生成します。システムは自動的にリンク先のページの文書タイトルをリンクテキストとして使用します。
+URL は MDN の URL 構造内の `docs` ディレクトリーからの相対 URL です。例えば、`/MDN/Writing_guidelines/Page_structures/Sidebars` はこのページへのリンクを生成します。システムは、リンク先のページの文書タイトルをリンクテキストとして自動的に使用します。
+ページがフロントマターに `short-title` キーがある場合、そのキーがサイドバーのリンク表示テキストとして代わりに使用されます。
 
-独自のリンクテキストを使用したい場合は、リストアイテム内に 2 つのキーを記述する必要があります。 1 つは、独自のリンクテキストを持つ `title`、もう 1 つは、相対 URL を持つ `link` です。次の例では、 MDN Web Docs の変更履歴へのリンクを前回と同様に作成しますが、リンクテキストは独自の "Our changelog" になります。
+文書の `title` でも `short-title` でもない独自のリンクテキストを使用したい場合は、リストアイテム内に 2 つのキーを記述する必要があります。 1 つは、独自のリンクテキストを持つ `title`、もう 1 つは、前述のような相対 URL を持つ `link` です。次の例では、このページへのリンクを前回と同様に作成しますが、リンクテキストは独自の「サイドバーを書く」になります。
 
 ```yaml
 sidebar:
-  - title: Our changelog
-    link: /MDN/Changelog
+  - title: サイドバーを書く
+    link: /MDN/Writing_guidelines/Page_structures/Sidebars
 ```
 
 ### セクションタイトル
@@ -143,16 +114,11 @@ sidebar:
         children:
           - /MDN/Community
           - /MDN/Community/Getting_started
-          - /MDN/Community/Our_repositories
-          - /MDN/Community/Translated_content
           - /MDN/Community/Security_vulnerability_response
       - /MDN/Community/Open_source_etiquette
       - /MDN/Community/Communication_channels
       - /MDN/Community/Discussions
-      - /MDN/Community/Learn_forum
-      - /MDN/Community/Issues
-      - /MDN/Community/Pull_requests
-      - /MDN/Community/Roles_teams
+# etc.
 ```
 
 なお、`details` キーにも注意してください。これは、ページが最初に読み込まれた際に、リストアイテムの子リストが閉じられた状態で表示されるか、開かれた状態で表示されるかを制御します。利用可能な値は次の通りです。
@@ -250,36 +216,7 @@ sidebar:
   title: Selectors
   tags: css-selector
   details: closed
-- type: listSubPages
-  path: /Web/CSS
-  title: Combinators
-  tags: css-combinator
-  details: closed
-- type: listSubPages
-  path: /Web/CSS
-  title: Pseudo-classes
-  tags: css-pseudo-class
-  details: closed
-- type: listSubPages
-  path: /Web/CSS
-  title: Pseudo-elements
-  tags: css-pseudo-element
-  details: closed
-- type: listSubPages
-  path: /Web/CSS
-  title: At-rules
-  tags: css-at-rule
-  details: closed
-- type: listSubPages
-  path: /Web/CSS
-  title: Functions
-  tags: css-function
-  details: closed
-- type: listSubPages
-  path: /Web/CSS
-  title: Types
-  tags: css-type
-  details: closed
+# etc.
 ```
 
 ### テキスト文字列のローカライズ
@@ -290,7 +227,7 @@ sidebar:
 
 ```yaml
 - type: listSubPages
-  path: /Web/HTML/Element/input
+  path: /Web/HTML/Reference/Elements/input
   title: Input_types
   details: closed
   code: true
@@ -326,7 +263,7 @@ l10n:
 - https://developer.mozilla.org/fr/docs/Web/HTML
 - https://developer.mozilla.org/ja/docs/Web/HTML
 
-MDNのロケールにアクセスし、特定のプレースホルダに対して値が定義されていない場合、既定では `en-US` バージョンが使用されます。 `en-US` バージョンが定義されていない場合、リテラルプレースホルダテキストが表示されます（上記の場合、 `Input_types` となります）。
+MDN のロケールにアクセスし、特定のプレースホルダに対して値が定義されていない場合、既定では `en-US` バージョンが使用されます。 `en-US` バージョンが定義されていない場合、リテラルプレースホルダテキストが表示されます（上記の場合、 `Input_types` となります）。
 
 ## 標準外のサイドバー
 

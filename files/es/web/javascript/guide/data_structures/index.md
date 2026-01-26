@@ -23,7 +23,6 @@ foo = true; // foo ahora es un booleano
 El último estándar ECMAScript define nueve tipos:
 
 - Seis **tipos de datos** {{Glossary("Primitive", "primitivos")}}, controlados por el {{jsxref("Operators/typeof", "operador typeof")}}
-
   - {{Glossary("Undefined")}}: `typeof instance === "undefined"`
   - {{Glossary("Boolean")}}: `typeof instance === "boolean"`
   - {{Glossary("Number")}}: `typeof instance === "number"`
@@ -32,7 +31,7 @@ El último estándar ECMAScript define nueve tipos:
   - {{Glossary("Symbol")}}: `typeof instance === "symbol"`
 
 - {{Glossary("Null")}}: `typeof instance === "object"`. Tipo {{Glossary("Primitive", "primitivo")}} especial que tiene un uso adicional para su valor: si el objeto no se hereda, se muestra `null`;
-- {{Glossary("Object")}}: `typeof instance === "object"`. Tipo estructural especial que no es de datos pero para cualquier instancia de objeto [construido](/es/docs/Learn/JavaScript/Objects#the_constructor) que también se utiliza como estructuras de datos: new {{jsxref("Object")}}, new {{jsxref("Array")}}, new {{jsxref("Map")}}, new {{jsxref("Set")}}, new {{jsxref("WeakMap")}}, new {{jsxref("WeakSet")}}, new {{jsxref("Date")}} y casi todo lo hecho con la [palabra clave `new`](/es/docs/Web/JavaScript/Reference/Operators/new);
+- {{Glossary("Object")}}: `typeof instance === "object"`. Tipo estructural especial que no es de datos pero para cualquier instancia de objeto [construido](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects#the_constructor) que también se utiliza como estructuras de datos: new {{jsxref("Object")}}, new {{jsxref("Array")}}, new {{jsxref("Map")}}, new {{jsxref("Set")}}, new {{jsxref("WeakMap")}}, new {{jsxref("WeakSet")}}, new {{jsxref("Date")}} y casi todo lo hecho con la [palabra clave `new`](/es/docs/Web/JavaScript/Reference/Operators/new);
 - {{Glossary("Function")}}: una estructura sin datos, aunque también responde al operador `typeof`: `typeof instance === "function"`. Esta simplemente es una forma abreviada para funciones, aunque cada constructor de funciones se deriva del constructor `Object`.
 
 Ten en cuenta que el único propósito valioso del uso del operador `typeof` es verificar el tipo de dato. Si deseamos verificar cualquier Tipo Estructural derivado de `Object`, no tiene sentido usar `typeof` para eso, ya que siempre recibiremos "`object`". La forma correcta de comprobar qué tipo de Objeto estamos usando es la palabra clave {{jsxref("Operators/instanceof", "instanceof")}}. Pero incluso en ese caso, puede haber conceptos erróneos.
@@ -61,7 +60,8 @@ El tipo `Number` es un [valor en formato binario de 64 bits de doble precisión 
 
 Para verificar el valor disponible más grande o el valor más pequeño disponible dentro de {{jsxref("Infinity", "±Infinity")}}, puedes usar las constantes {{jsxref("Number.MAX_VALUE")}} o {{jsxref("Number.MIN_VALUE")}}.
 
-> **Nota:** **A partir de ECMAScript 2015**, también puedes comprobar si un número está en el rango de números de punto flotante de doble precisión mediante {{jsxref("Number.isSafeInteger()")}} así como {{jsxref("Number.MAX_SAFE_INTEGER")}} y {{jsxref("Number.MIN_SAFE_INTEGER")}}.Más allá de este rango, los enteros en JavaScript ya no son seguros y serán una aproximación de punto flotante de doble precisión del valor.
+> [!NOTE]
+> **A partir de ECMAScript 2015**, también puedes comprobar si un número está en el rango de números de punto flotante de doble precisión mediante {{jsxref("Number.isSafeInteger()")}} así como {{jsxref("Number.MAX_SAFE_INTEGER")}} y {{jsxref("Number.MIN_SAFE_INTEGER")}}.Más allá de este rango, los enteros en JavaScript ya no son seguros y serán una aproximación de punto flotante de doble precisión del valor.
 
 El tipo `number` solo tiene un entero con dos representaciones: `0` se representa como `-0` y `+0`. (`0` es un alias de `+0`).
 
@@ -152,12 +152,12 @@ Asocia una clave con un valor y tiene los siguientes atributos:
 
 **Atributos de una propiedad `data`**
 
-| Atributo         | Tipo                         | Descripción                                                                                                                                                                                                                                            | Valor predeterminado |
-| ---------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------- |
-| [[Value]]        | Cualquier tipo de JavaScript | El valor recuperado por un captador de acceso `get` a la propiedad.                                                                                                                                                                                    | `undefined`          |
-| [[Writable]]     | `Boolean`                    | Si es `false`, el [[Value]] de la propiedad no se puede cambiar.                                                                                                                                                                                       | `false`              |
-| [[Enumerable]]   | `Boolean`                    | Si es `true`, la propiedad se enumerará en bucles [`for...in`](/es/docs/Web/JavaScript/Reference/Statements/for...in). Consulta también [Enumerabilidad y posesión de propiedades](/es/docs/Web/JavaScript/Enumerability_and_ownership_of_properties). | `false`              |
-| [[Configurable]] | `Boolean`                    | Si es `false`, la propiedad no se puede eliminar, no se puede cambiar a una propiedad de acceso descriptor y los atributos que no sean [[Value]] y [[Writable]] no se pueden cambiar.                                                                  | `false`              |
+| Atributo         | Tipo                         | Descripción                                                                                                                                                                                                                                                  | Valor predeterminado |
+| ---------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------- |
+| [[Value]]        | Cualquier tipo de JavaScript | El valor recuperado por un captador de acceso `get` a la propiedad.                                                                                                                                                                                          | `undefined`          |
+| [[Writable]]     | `Boolean`                    | Si es `false`, el [[Value]] de la propiedad no se puede cambiar.                                                                                                                                                                                             | `false`              |
+| [[Enumerable]]   | `Boolean`                    | Si es `true`, la propiedad se enumerará en bucles [`for...in`](/es/docs/Web/JavaScript/Reference/Statements/for...in). Consulta también [Enumerabilidad y posesión de propiedades](/es/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties). | `false`              |
+| [[Configurable]] | `Boolean`                    | Si es `false`, la propiedad no se puede eliminar, no se puede cambiar a una propiedad de acceso descriptor y los atributos que no sean [[Value]] y [[Writable]] no se pueden cambiar.                                                                        | `false`              |
 
 **Atributos obsoletos (a partir de ECMAScript 3, renombrado en ECMAScript 5).**
 

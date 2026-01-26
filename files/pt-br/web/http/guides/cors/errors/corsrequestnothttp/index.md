@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/CORS/Errors/CORSRequestNotHttp
 original_slug: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 ---
 
-{{HTTPSidebar}}
-
 ## Razão
 
 ```
@@ -28,5 +26,5 @@ Em resposta ao [CVE-2019-11730](https://www.mozilla.org/pt-BR/security/advisorie
 
 - [CORS errors](/pt-BR/docs/Web/HTTP/CORS/Errors)
 - Glossário: {{Glossary("CORS")}}
-- [CORS introduction](/pt-BR/docs/Web/HTTP/CORS)
+- [CORS introduction](/pt-BR/docs/Web/HTTP/Guides/CORS)
 - [What is a URL?](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)

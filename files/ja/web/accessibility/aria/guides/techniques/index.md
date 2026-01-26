@@ -38,45 +38,45 @@ ARIA は、要素に適用できる意味づけを定義しており、これら
 - [`checkbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
 - [`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
 - [`link`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/link_role)
-- [`menuitem`](/ja/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
-- [`menuitemcheckbox`](/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
-- [`menuitemradio`](/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
+- [`menuitem`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role)
+- [`menuitemcheckbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role)
+- [`menuitemradio`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)
 - [`option`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
 - [`progressbar`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role)
 - [`radio`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
-- [`scrollbar`](/ja/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
-- [`searchbox`](/ja/docs/Web/Accessibility/ARIA/Roles/searchbox_role)
-- [`separator`](/ja/docs/Web/Accessibility/ARIA/Roles/separator_role) （フォーカス可能な場合）
+- [`scrollbar`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role)
+- [`searchbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role)
+- [`separator`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role) （フォーカス可能な場合）
 - [`slider`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
 - [`spinbutton`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
 - [`switch`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
 - [`tab`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)
-- [`tabpanel`](/ja/docs/Web/Accessibility/ARIA/Roles/tabpanel_role)
+- [`tabpanel`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role)
 - [`textbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)
-- [`treeitem`](/ja/docs/Web/Accessibility/ARIA/Roles/treeitem_role)
+- [`treeitem`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role)
 
 ### 複合ロール
 
 以下のテクニックでは、それぞれの複合ロールとその必須および任意の子ロールについて説明します。
 
-- [`combobox`](/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role)
-- [`grid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role) （[`row`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role), [`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role), [`rowheader`](/ja/docs/Web/Accessibility/ARIA/Roles/rowheader_role), [`columnheader`](/ja/docs/Web/Accessibility/ARIA/Roles/columnheader_role) ロールを含む）
+- [`combobox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)
+- [`grid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role) （[`row`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role), [`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role), [`rowheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role), [`columnheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role) ロールを含む）
 - [`listbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role) （[`option`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role) ロールを含む）
-- [`menu`](/ja/docs/Web/Accessibility/ARIA/Roles/menu_role)
-- [`menubar`](/ja/docs/Web/Accessibility/ARIA/Roles/menubar_role)
-- [`radiogroup`](/ja/docs/web/accessibility/aria/roles/radiogroup_role) （[`radio role`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role) を参照）
-- [`tablist`](/ja/docs/Web/Accessibility/ARIA/Roles/tablist_role) （[`tab`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) および [`tabpanel`](/ja/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) ロールを含む）
-- [`tree`](/ja/docs/Web/Accessibility/ARIA/Roles/tree_role)
-- [`treegrid`](/ja/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
+- [`menu`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role)
+- [`menubar`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role)
+- [`radiogroup`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role) （[`radio role`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role) を参照）
+- [`tablist`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role) （[`tab`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) および [`tabpanel`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role) ロールを含む）
+- [`tree`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role)
+- [`treegrid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
 
 ### 文書構造ロール
 
 - [`application`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
 - [`article`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/article_role)
 - [`cell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
-- [`columnheader`](/ja/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-- [`definition`](/ja/docs/Web/Accessibility/ARIA/Roles/definition_role)
-- [`directory`](/ja/docs/Web/Accessibility/ARIA/Roles/directory_role)
+- [`columnheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`definition`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/definition_role)
+- [`directory`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/directory_role)
 - [`document`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/document_role)
 - [`feed`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/feed_role)
 - [`figure`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/figure_role)
@@ -85,14 +85,14 @@ ARIA は、要素に適用できる意味づけを定義しており、これら
 - [`img`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/img_role)
 - [`list`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/list_role)
 - [`listitem`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role)
-- [`math`](/ja/docs/Web/Accessibility/ARIA/Roles/math_role)
+- [`math`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/math_role)
 - [`none`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/none_role)
-- [`note`](/ja/docs/Web/Accessibility/ARIA/Roles/note_role)
+- [`note`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/note_role)
 - [`presentation`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role)
 - [`row`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
 - [`rowgroup`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role)
-- [`rowheader`](/ja/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
-- [`separator`](/ja/docs/Web/Accessibility/ARIA/Roles/separator_role)
+- [`rowheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
+- [`separator`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role)
 - [`table`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)
 - [`term`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/term_role)
 - [`toolbar`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role)
@@ -113,9 +113,9 @@ ARIA は、要素に適用できる意味づけを定義しており、これら
 
 - [`alert`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role)
 - [`log`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/log_role)
-- [`marquee`](/ja/docs/Web/Accessibility/ARIA/Roles/marquee_role)
+- [`marquee`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/marquee_role)
 - [`status`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/status_role)
-- [`timer`](/ja/docs/Web/Accessibility/ARIA/Roles/timer_role)
+- [`timer`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/timer_role)
 
 ### ウィンドウロール
 
@@ -131,37 +131,37 @@ ARIA は、要素に適用できる意味づけを定義しており、これら
 - [`aria-current`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current)
 - [`aria-disabled`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)
 - [`aria-errormessage`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage)
-- [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
-- [`aria-haspopup`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup)
+- [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)
+- [`aria-haspopup`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup)
 - [`aria-hidden`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden)
-- [`aria-invalid`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
+- [`aria-invalid`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid)
 - [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
 - [`aria-level`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level)
-- [`aria-modal`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-modal)
+- [`aria-modal`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal)
 - [`aria-multiline`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiline)
-- [`aria-multiselectable`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable)
-- [`aria-orientation`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-orientation)
-- [`aria-placeholder`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-placeholder)
-- [`aria-pressed`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
-- [`aria-readonly`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
-- [`aria-required`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-required)
-- [`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
-- [`aria-sort`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-sort)
-- [`aria-valuemax`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
-- [`aria-valuemin`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin)
-- [`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow)
-- [`aria-valuetext`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext)
+- [`aria-multiselectable`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable)
+- [`aria-orientation`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation)
+- [`aria-placeholder`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-placeholder)
+- [`aria-pressed`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed)
+- [`aria-readonly`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly)
+- [`aria-required`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required)
+- [`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected)
+- [`aria-sort`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort)
+- [`aria-valuemax`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax)
+- [`aria-valuemin`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin)
+- [`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow)
+- [`aria-valuetext`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext)
 
 ### ライブリージョン属性
 
 - [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)
-- [`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
+- [`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant)
 - [`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic)
 - [`aria-busy`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)
 
 ### ドラッグ＆ドロップ属性
 
-- [`aria-dropeffect`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-dropeffect) {{deprecated_inline}}
+- [`aria-dropeffect`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-dropeffect) {{deprecated_inline}}
 - [`aria-grabbed`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-grabbed) {{deprecated_inline}}
 
 ### 関係属性
@@ -172,16 +172,16 @@ ARIA は、要素に適用できる意味づけを定義しており、これら
 - [`aria-colspan`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colspan)
 - [`aria-controls`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls)
 - [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
-- [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-details)
+- [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details)
 - [`aria-errormessage`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage)
-- [`aria-flowto`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-flowto)
+- [`aria-flowto`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-flowto)
 - [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
-- [`aria-owns`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
-- [`aria-posinset`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)
-- [`aria-rowcount`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount)
-- [`aria-rowindex`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex)
-- [`aria-rowspan`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan)
-- [`aria-setsize`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
+- [`aria-owns`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns)
+- [`aria-posinset`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset)
+- [`aria-rowcount`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowcount)
+- [`aria-rowindex`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex)
+- [`aria-rowspan`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowspan)
+- [`aria-setsize`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize)
 
 ### MicrosoftEdge 固有のプロパティ
 

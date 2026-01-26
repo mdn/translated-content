@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/has
 
 静的な **`Reflect.has()`** メソッドは、機能としては [`in` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/in)のように動作します。
 
-{{InteractiveExample("JavaScript Demo: Reflect.has()")}}
+{{InteractiveExample("JavaScript デモ: Reflect.has()")}}
 
 ```js interactive-example
 const object1 = {

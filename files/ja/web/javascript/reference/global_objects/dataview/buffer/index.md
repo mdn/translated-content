@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/buffer
 
 **`buffer`** アクセサープロパティは、この `DataView` の構築時に参照された {{jsxref("ArrayBuffer")}} または {{jsxref("SharedArrayBuffer")}} を表します。
 
-{{InteractiveExample("JavaScript Demo: DataView.buffer")}}
+{{InteractiveExample("JavaScript デモ: DataView.buffer")}}
 
 ```js interactive-example
 // Create an ArrayBuffer

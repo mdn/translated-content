@@ -3,8 +3,6 @@ title: Array.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/slice
 ---
 
-{{JSRef}}
-
 **`slice()`** 方法會回傳一個新陣列物件，為原陣列選擇之 `begin` 至 `end`（不含 `end`）部分的淺拷貝（shallow copy）。而原本的陣列將不會被修改。
 
 {{InteractiveExample("JavaScript Demo: Array.slice()")}}

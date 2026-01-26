@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/503
 original_slug: Web/HTTP/Status/503
 ---
 
-{{HTTPSidebar}}
-
 O código de resposta de erro de servidor **`503 Service Unavailable`** do HTTP indica que o servidor não está pronto para lidar com a requisição.
 
 Causas comuns são um servidor que está em manutenção ou sobrecarregado. Esta resposta deve ser usada para condições temporárias, e o cabeçalho HTTP {{HTTPHeader("Retry-After")}} deve, se possível, conter o tempo estimado para restabelecimento do serviço.

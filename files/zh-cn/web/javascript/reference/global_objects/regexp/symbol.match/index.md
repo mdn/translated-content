@@ -3,8 +3,6 @@ title: RegExp.prototype[Symbol.match]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match
 ---
 
-{{JSRef}}
-
 {{jsxref("RegExp")}} 实例的 **`[Symbol.match]()`** 方法指定了 [`String.prototype.match()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/match) 的行为。此外，它的存在（或不存在）可能会影响对象是否被视为正则表达式。
 
 {{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.match]()")}}

@@ -46,7 +46,7 @@ while (boite.firstChild) {
 
 Les éléments de la collection de noeuds sont des objets et non des chaînes de caractères. Pour en obtenir les données, vous devez utiliser leurs propriétés (par exemple `elementNodeReference.childNodes[1].nodeName` pour obtenir son nom, etc.)
 
-L'objet [`document`](/fr/docs/Web/API/Document) lui-même a deux enfants&nbsp;: la déclaration [Doctype](/fr/docs/DOM/document.doctype) et l'élément racine, généralement appelés `documentElement` . (Dans les documents (X)HTML il s'agit d'éléments [`HTML`](/fr/docs/Web/HTML/Element/html)).
+L'objet [`document`](/fr/docs/Web/API/Document) lui-même a deux enfants&nbsp;: la déclaration [Doctype](/fr/docs/DOM/document.doctype) et l'élément racine, généralement appelés `documentElement` . (Dans les documents (X)HTML il s'agit d'éléments [`HTML`](/fr/docs/Web/HTML/Reference/Elements/html)).
 
 `childNodes` inclut tous les noeuds enfants, y compris les noeuds qui ne sont pas des éléments comme les noeuds texte et commentaire. Pour obtenir une collection des seuls éléments, utilisez {{domxref("ParentNode.children")}} à la place.
 

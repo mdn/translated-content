@@ -5,8 +5,6 @@ l10n:
   sourceCommit: cde9330e9bbaddea72febf44dcc3a7db16fe1a11
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Your_first_website")}}
 
 CSS（层叠样式表）是为 web 内容添加样式的代码。*CSS 基础*将介绍 CSS 入门知识。我们会解答像这样的问题：怎样将文本设置为红色？怎样将内容显示在屏幕的特定位置？怎样用背景图片或颜色来装饰网页？
@@ -243,9 +241,9 @@ body {
 这里有几条 {{htmlelement("body")}} 元素的声明，我们来逐条查看：
 
 - `width: 600px;` 强制文档体永远保持 600 像素宽。
-- `margin: 0 auto;` 当你在 `margin` 或 `padding` 这样的属性上设置两个值时，第一个值影响元素的*上下*方向（在这个例子中设置为 `0`）；第二个值影响*左右*方向。（这里，`auto` 是一个特殊的值，它将可用的水平空间平均分配给左边和右边）。如 [margin 语法](/zh-CN/docs/Web/CSS/margin#语法)中所记载的那样，你也可以使用一个、两个、三个或四个值。
+- `margin: 0 auto;` 当你在 `margin` 或 `padding` 这样的属性上设置两个值时，第一个值影响元素的*上下*方向（在这个例子中设置为 `0`）；第二个值影响*左右*方向。（这里，`auto` 是一个特殊的值，它将可用的水平空间平均分配给左边和右边）。如 [margin 语法](/zh-CN/docs/Web/CSS/Reference/Properties/margin#语法)中所记载的那样，你也可以使用一个、两个、三个或四个值。
 - `background-color: #FF9500;` 如前文所述，指定元素的背景颜色。我们给 body 用了一种略微偏红的橘色以与深蓝色的 {{htmlelement("html")}} 元素形成反差，你也可以尝试其他颜色。
-- `padding: 0 20px 20px 20px;` 我们给内边距设置了四个值，目的是给内容四周留出一点空间。这一次我们不设置 body 上方的内边距，设置右边、下方、左边的内边距为 20 像素。值以上、右、下、左的顺序排列。与 `margin` 一样，你也可以像 [padding 语法](/zh-CN/docs/Web/CSS/padding#语法)中所记载的那样，使用一个、两个、三个或四个值。
+- `padding: 0 20px 20px 20px;` 我们给内边距设置了四个值，目的是给内容四周留出一点空间。这一次我们不设置 body 上方的内边距，设置右边、下方、左边的内边距为 20 像素。值以上、右、下、左的顺序排列。与 `margin` 一样，你也可以像 [padding 语法](/zh-CN/docs/Web/CSS/Reference/Properties/padding#语法)中所记载的那样，使用一个、两个、三个或四个值。
 - `border: 5px solid black;` 这是为边框的宽度、样式和颜色设置的值。在本例中，是 body 四周的一个 5 像素宽的纯黑色边框。
 
 ### 定位页面主标题并添加样式
@@ -291,7 +289,7 @@ img {
 > 上面的做法假定所选图片小于 body 的宽度（600 像素）。超过 600 像素的图片会溢出 body 并占据页面的其他位置。要解决这个问题，可以：1）使用[图片编辑器](https://zh.wikipedia.org/wiki/點陣圖圖像編輯器) 减小图片宽度；2）用 CSS 限制图片大小，将 `<img>` 元素 {{cssxref("width")}} 属性的值设置为小于 600 像素的值。
 
 > [!NOTE]
-> 如果你暂时不能理解 `display: block`、块级元素和行级元素之间的差别也没关系；随着你对 CSS 学习的深入，你将明白这个问题。在 [display 参考页面](/zh-CN/docs/Web/CSS/display)能找到更多有关不同的 display 值的信息。
+> 如果你暂时不能理解 `display: block`、块级元素和行级元素之间的差别也没关系；随着你对 CSS 学习的深入，你将明白这个问题。在 [display 参考页面](/zh-CN/docs/Web/CSS/Reference/Properties/display)能找到更多有关不同的 display 值的信息。
 
 ## 总结
 

@@ -34,5 +34,5 @@ element.contentEditable = "true"
 ## 相关链接
 
 - {{domxref("HTMLElement.isContentEditable")}}
-- 全局属性 [contenteditable](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable)
+- 全局属性 [contenteditable](/zh-CN/docs/Web/HTML/Reference/Global_attributes/contenteditable)
 - [Why ContentEditable is Terrible, Or: How the Medium Editor Works](https://medium.com/medium-eng/why-contenteditable-is-terrible-122d8a40e480)

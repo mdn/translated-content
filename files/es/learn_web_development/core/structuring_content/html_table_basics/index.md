@@ -215,8 +215,8 @@ En resumen, es una mala idea usar tablas para el diseño en lugar de las [técni
 Ya hemos hablado bastante sobre la teoría de las tablas, así que veamos un ejemplo práctico y construyamos una tabla simple.
 
 1. En primer lugar, haz una copia local de [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) y [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) en un directorio nuevo de tu ordenador.
-2. El contenido de cada tabla está delimitado entre estas dos etiquetas: **[`<table></table>`](/es/docs/Web/HTML/Element/table)**. Añádelas al cuerpo de tu código HTML.
-3. El contenedor más pequeño dentro de una tabla es una celda, que se crea con un elemento **[`<td>`](/es/docs/Web/HTML/Element/td)** ('td' significa 'table data', _datos de tabla_). Añade lo siguiente dentro de tus etiquetas de tabla:
+2. El contenido de cada tabla está delimitado entre estas dos etiquetas: **[`<table></table>`](/es/docs/Web/HTML/Reference/Elements/table)**. Añádelas al cuerpo de tu código HTML.
+3. El contenedor más pequeño dentro de una tabla es una celda, que se crea con un elemento **[`<td>`](/es/docs/Web/HTML/Reference/Elements/td)** ('td' significa 'table data', _datos de tabla_). Añade lo siguiente dentro de tus etiquetas de tabla:
 
    ```html
    <td>Hola, soy tu primera celda.</td>
@@ -233,7 +233,7 @@ Ya hemos hablado bastante sobre la teoría de las tablas, así que veamos un eje
 
 Como verás, las celdas no se colocan una debajo de la otra, sino que se alinean automáticamente entre sí en la misma fila. Cada elemento \<td> crea una sola celda, y juntas forman la primera fila. Cada celda que agregamos hace crecer la fila.
 
-Para detener el crecimiento de esta fila y comenzar a colocar las celdas posteriores en una segunda fila, necesitamos usar el elemento **[`<tr>`](/es/docs/Web/HTML/Element/tr)** ('tr' significa 'table row', _fila de tabla_). Vamos a verlo en detalle.
+Para detener el crecimiento de esta fila y comenzar a colocar las celdas posteriores en una segunda fila, necesitamos usar el elemento **[`<tr>`](/es/docs/Web/HTML/Reference/Elements/tr)** ('tr' significa 'table row', _fila de tabla_). Vamos a verlo en detalle.
 
 1. Coloca las cuatro celdas que has creado dentro de las etiquetas `<tr>`, de esta forma:
 
@@ -365,7 +365,7 @@ El problema aquí es que, si bien puedes distinguir lo que sucede, no es tan fá
 Intentemos mejorar esta tabla.
 
 1. Primero, haz una copia local de nuestros archivos [dogs-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table.html) y [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) en un directorio nuevo de tu ordenador. El HTML contiene el mismo ejemplo sobre perros que viste arriba.
-2. Para reconocer los encabezados de la tabla como encabezados, tanto visual como semánticamente, puedes usar el elemento **[`<th>`](/es/docs/Web/HTML/Element/th)** ('th' significa 'table header', _encabezado de tabla_). Funciona exactamente igual que un `<td>`, excepto que denota un encabezado, no una celda normal. Entra en el código HTML, y cambiar todos los elementos `<td>` que delimitan los encabezados de tabla por elementos `<th>`.
+2. Para reconocer los encabezados de la tabla como encabezados, tanto visual como semánticamente, puedes usar el elemento **[`<th>`](/es/docs/Web/HTML/Reference/Elements/th)** ('th' significa 'table header', _encabezado de tabla_). Funciona exactamente igual que un `<td>`, excepto que denota un encabezado, no una celda normal. Entra en el código HTML, y cambiar todos los elementos `<td>` que delimitan los encabezados de tabla por elementos `<th>`.
 3. Guarda tu HTML y cárgalo en un navegador. Los encabezados deberían verse como tal.
 
 > [!NOTE]
@@ -459,7 +459,7 @@ Usemos `colspan` y `rowspan` para mejorar esta tabla.
 
 ## Proporcionar un estilo común a las columnas
 
-Hay una última característica de la que queremos hablar en este artículo antes de continuar. El HTML tiene un método para definir información de estilo para una columna completa de datos en un solo lugar: los elementos **[`<col>`](/es/docs/Web/HTML/Element/col)** y **[`<colgroup>`](/es/docs/Web/HTML/Element/colgroup)**. Estos atributos existen porque especificar el estilo de las columnas puede resultar enojoso e ineficiente; en general hay que especificar la información de estilo en _cada_ `<td>` o `<th>` de la columna, o utilizar un selector complejo como {{cssxref(":nth-child()")}}.
+Hay una última característica de la que queremos hablar en este artículo antes de continuar. El HTML tiene un método para definir información de estilo para una columna completa de datos en un solo lugar: los elementos **[`<col>`](/es/docs/Web/HTML/Reference/Elements/col)** y **[`<colgroup>`](/es/docs/Web/HTML/Reference/Elements/colgroup)**. Estos atributos existen porque especificar el estilo de las columnas puede resultar enojoso e ineficiente; en general hay que especificar la información de estilo en _cada_ `<td>` o `<th>` de la columna, o utilizar un selector complejo como {{cssxref(":nth-child()")}}.
 
 Tomemos el ejemplo sencillo siguiente:
 

@@ -3,8 +3,6 @@ title: Extra lives
 slug: Games/Tutorials/2D_breakout_game_Phaser/Extra_lives
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Win_the_game", "Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens")}}
 
 Este es el **paso 13** de 16 del tutorial [Gamedev Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). Puedes encontrar el código fuente tal y cómo queda al completar la lección en [Gamedev-Phaser-Content-Kit/demos/lesson13.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson13.html).

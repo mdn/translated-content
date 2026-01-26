@@ -1,12 +1,9 @@
 ---
 title: <xsl:element>
 slug: Web/XML/XSLT/Reference/Element/element
-original_slug: Web/XSLT/Reference/Element/element
 l10n:
-  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
-
-{{XsltSidebar}}
 
 `<xsl:element>` 要素は、出力文書に要素を作成します。
 
@@ -38,6 +35,6 @@ l10n:
 
 XSLT, section 7.1.2.
 
-### Gecko のサポート
+## Gecko の対応
 
-サポート済み
+サポート済み。

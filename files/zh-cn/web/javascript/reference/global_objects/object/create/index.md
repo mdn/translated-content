@@ -3,8 +3,6 @@ title: Object.create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
 ---
 
-{{JSRef}}
-
 **`Object.create()`** 静态方法以一个现有对象作为原型，创建一个新对象。
 
 {{InteractiveExample("JavaScript Demo: Object.create()", "taller")}}

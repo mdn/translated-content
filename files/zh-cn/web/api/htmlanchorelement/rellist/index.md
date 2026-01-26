@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLAnchorElement.relList`** 只读属性反映了 [`rel`](/zh-CN/docs/Web/HTML/Attributes/rel) 属性。它是一个实时的 {{domxref("DOMTokenList")}}，包含表示由 {{HTMLElement("a")}} 元素代表的资源与当前文档之间关系的链接类型。
+**`HTMLAnchorElement.relList`** 只读属性反映了 [`rel`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel) 属性。它是一个实时的 {{domxref("DOMTokenList")}}，包含表示由 {{HTMLElement("a")}} 元素代表的资源与当前文档之间关系的链接类型。
 
 该属性本身是只读的，意味着你不能将其替换为另一个 {{domxref("DOMTokenList")}}，但其内容仍然可以被修改。
 

@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Referrer-Policy
 original_slug: Web/HTTP/Headers/Referrer-Policy
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho HTTP **`Referrer-Policy`** controla quanta [informação de referência](/pt-BR/docs/Web/Security/Referer_header:_privacy_and_security_concerns) (enviado pelo cabeçalho {{HTTPHeader("Referer")}}) deve ser incluída nas requisições.
 
 <table class="properties">
@@ -42,7 +40,6 @@ Referrer-Policy: unsafe-url
 - `no-referrer`
   - : O cabeçalho {{HTTPHeader("Referer")}} será omitido completamente. Nenhuma informação de referência será enviada junto com as requisições.
 - `no-referrer-when-downgrade` (padrão)
-
   - : Este é o comportamento padrão quando nenhuma política é especificada, ou se o valor provido é inválido. A origem, caminho e cadeia de consulta ({{glossary("origin")}}, {{glossary("path")}}, and {{glossary("querystring")}}) da URL são enviadas como referência quando os níveis de protocolo de segurança continuam os mesmos (HTTP→HTTP, HTTPS→HTTPS) ou melhora (HTTP→HTTPS), mas não é enviado para destinos menos seguros (HTTPS→HTTP).
 
     > [!NOTE]
@@ -60,7 +57,6 @@ Referrer-Policy: unsafe-url
 - `strict-origin-when-cross-origin`
   - : Envia a origem, caminho e cadeia de consulta quando performando uma requisição de mesma origem, somente envia a origem quando o nível do protocolo de segurança se mantém o mesmo durante uma requisição entre origens (HTTPS→HTTPS), e envia nenhum cabeçalho para destinatários menos seguros (HTTPS→HTTP).
 - `unsafe-url`
-
   - : Envia a origem, o caminho e a cadeia de consulta quando performando qualquer requisição, independente da segurança.
 
     > [!WARNING]

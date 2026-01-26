@@ -29,7 +29,6 @@ getBattery()
 ### Исключения
 
 - `NotAllowedError` {{domxref("DOMException")}}
-
   - : Использование этой функциональности заблокировано [Permissions Policy](/ru/docs/Web/HTTP/Guides/Permissions_Policy).
 
 - `SecurityError` {{domxref("DOMException")}}

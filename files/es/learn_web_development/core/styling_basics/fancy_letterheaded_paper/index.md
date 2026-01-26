@@ -7,7 +7,7 @@ l10n:
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics/Cool-looking_box", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "conflicting/Learn_web_development/Core/Styling_basics_3fe7b053115cdfdcdb658e88312276a96d81de42552c60589901728cd9cfb3b3", "Learn_web_development/Core/Styling_basics")}}
 
 Si quieres causar una buena impresión, escribir una carta en un bonito papel con membrete puede ser un muy buen comienzo. En este desafío, crearás una plantilla en línea para lograr ese aspecto.
 
@@ -32,7 +32,6 @@ Se te han proporcionado los archivos necesarios para crear una plantilla de pape
 
 - Aplica el CSS al HTML.
 - Agrega un estilo de fondo a la carta que:
-
   - Fija la imagen superior a la parte superior de la carta
   - Fija la imagen inferior a la parte inferior de la carta
   - Agrega un gradiente semitransparente sobre la parte superior de ambos fondos anteriores que le da a la carta un poco de textura. Hazlo ligeramente oscuro cerca de la parte superior e inferior, pero completamente transparente para una gran parte del centro.
@@ -58,4 +57,4 @@ La siguiente captura de pantalla muestra un ejemplo de cómo podría verse el di
 
 ![Página completa A4 con borde decorativo superior e inferior compuesto de formas naranjas y rojas, y una insignia roja y verde con la leyenda Compañía asombrosa escrita en ella, debajo del borde superior. Encima del borde inferior hay una dirección postal.](letterhead.png)
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics/Cool-looking_box", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "conflicting/Learn_web_development/Core/Styling_basics_3fe7b053115cdfdcdb658e88312276a96d81de42552c60589901728cd9cfb3b3", "Learn_web_development/Core/Styling_basics")}}

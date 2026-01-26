@@ -23,7 +23,6 @@ gen.throw(exception);
 Un {{jsxref("Object")}} avec deux propriétés :
 
 - `done` (un booléen)
-
   - Qui vaut `true` lorsque l'itérateur a fini de parcourir la suite. Dans ce cas, `value` correspondra éventuellement à la valeur de retour de l'itérateur.
   - Qui vaut `false` si l'itérateur a pu produire la prochaine valeur de la série.
 

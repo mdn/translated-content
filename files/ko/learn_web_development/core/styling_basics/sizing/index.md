@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Sizing
 original_slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics")}}
 
 지금까지 다양한 수업에서는 CSS 를 사용하여 웹 페이지의 항목 크기를 조정하는 여러가지 방법을 살펴 보았습니다. 디자인의 다양한 기능이 얼마나 큰지 이해하는 것이 중요하며, 이 수업에서는 CSS 를 통해 요소의 크기를 결정하는 다양한 방법을 요약하고 크기 조정과 관련하여 향후 도움이 될 몇 가지 용어를 정의합니다.
 
@@ -104,7 +104,8 @@ HTML 요소는 CSS 의 영향을 받기 전에 설정한 자연스러운 크기�
 
 이 기술은 이미지를 반응형으로 만드는 데 사용되므로 더 작은 장치에서 볼 때 이미지가 적절하게 축소됩니다. 그러나 이 기술을 사용하여 실제로 큰 이미지를 로드한 다음 브라우저에서 축소하면 안됩니다. 이미지는 디자인에 표시되는 가장 큰 크기보다 커야합니다. 지나치게 큰 이미지를 다운로드하면, 사이트 속도가 느려질 수 있으며, 데이터 요금제인 경우 더 많은 비용이 발생할 수 있습니다.
 
-> **참고:** [반응형 이미지 기술](/ko/docs/Web/HTML/Responsive_images) 에 대해 자세히 알아보십시오.
+> [!NOTE]
+> [반응형 이미지 기술](/ko/docs/Web/HTML/Guides/Responsive_images) 에 대해 자세히 알아보십시오.
 
 ## Viewport 단위
 
@@ -122,4 +123,4 @@ viewport 에 따라 크기를 조정하면 디자인에 유용할 수 있습니�
 
 이번 수업에서는 웹에서 크기를 조정할 때 발생할 수 있는 몇 가지 주요 문제에 대해 설명합니다. [CSS 레이아웃](/ko/docs/Learn_web_development/Core/CSS_layout) 으로 이동할 때, 크기 조정은 다양한 레이아웃 방법을 익히는 데 매우 중요하므로 계속 진행하기 전에 여기에서 개념을 이해하는 것이 좋습니다.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics")}}

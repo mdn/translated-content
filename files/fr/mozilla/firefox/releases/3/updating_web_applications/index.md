@@ -3,8 +3,6 @@ title: Mise à jour des applications Web pour Firefox 3
 slug: Mozilla/Firefox/Releases/3/Updating_web_applications
 ---
 
-{{FirefoxSidebar}}
-
 Un certain nombre de changements présents dans Firefox 3 pourraient affecter votre site ou application Web. Vous pourriez en outre tirer parti de plusieurs de ses nouvelles fonctionnalités. Cet article servira de point de départ au fur et à mesure de la mise à jour de votre contenu pour bénéficier au maximum des possibilités de Firefox 3.
 
 ### Changements dans le DOM

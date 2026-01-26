@@ -3,7 +3,7 @@ title: Expresiones Regulares
 slug: Web/JavaScript/Guide/Regular_expressions
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("conflicting/Web/JavaScript/Guide/Numbers_and_strings", "Web/JavaScript/Guide/Indexed_collections")}}
 
 Las expresiones regulares son patrones que se utilizan para hacer coincidir combinaciones de caracteres en cadenas. En JavaScript, las expresiones regulares también son objetos. Estos patrones se utilizan con los métodos {{jsxref("RegExp.exec", "exec()")}} y {{jsxref("RegExp.test", "test()")}} de {{jsxref("RegExp")}}, y con {{jsxref("String.match", "match()")}}, {{jsxref("String.matchAll", "matchAll()")}}, {{jsxref("String.replace", "replace()")}}, {{jsxref("String.replaceAll", "replaceAll()")}}, {{jsxref("String.search", "search()")}} y {{jsxref("String.split", "split()")}} métodos de {{jsxref("String")}}. Este capítulo describe las expresiones regulares de JavaScript.
 
@@ -65,7 +65,8 @@ Si deseas ver todos los caracteres especiales que se pueden usar en expresiones 
 | `*`, `+`, `?`, `x{n}`, `x{n,}`, `x{n,m}`                                                                                     | [Cuantificadores](/es/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)                                       |
 | `\p{UnicodeProperty}`, `\P{UnicodeProperty}`                                                                                 | [Escapes de propiedades Unicode](/es/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape) |
 
-> **Nota:** [También está disponible una hoja de referencia más grande](/es/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet) (solo agregando partes de esos artículos individuales).
+> [!NOTE]
+> [También está disponible una hoja de referencia más grande](/es/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet) (solo agregando partes de esos artículos individuales).
 
 ### Escapando
 
@@ -341,4 +342,4 @@ function testInfo(phoneInput) {
 - [Visualizador de expresiones regulares](https://extendsclass.com/regex-tester.html)
   - : Un probador de expresiones regulares visual en línea.
 
-{{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
+{{PreviousNext("conflicting/Web/JavaScript/Guide/Numbers_and_strings", "Web/JavaScript/Guide/Indexed_collections")}}

@@ -27,9 +27,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Function that will be called when this event occurs. The function will be passed an object with the following properties:
-
     - `url`
       - : `String`. URL of the page visited.
     - `title`
@@ -57,8 +55,6 @@ browser.history.onTitleChanged.addListener(handleTitleChanged);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

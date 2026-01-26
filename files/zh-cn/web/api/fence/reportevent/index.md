@@ -9,7 +9,8 @@ l10n:
 
 {{domxref("Fence")}} 接口的 **`reportEvent()`** 方法通过[信标](/zh-CN/docs/Web/API/Beacon_API)触发报告数据的提交，将数据发送到通过[受保护的受众 API](https://developers.google.cn/privacy-sandbox/private-advertising/protected-audience) 的 {{domxref("InterestGroupReportingScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} 方法注册的一个或多个特定 URL，以收集广告竞价结果。
 
-> **备注：** {{domxref("Fence.setReportEventDataForAutomaticBeacons", "setReportEventDataForAutomaticBeacons()")}} 提供类似的报告数据提交功能，除非提交是通过导航而不是显式的方法调用触发的。
+> [!NOTE]
+> {{domxref("Fence.setReportEventDataForAutomaticBeacons", "setReportEventDataForAutomaticBeacons()")}} 提供类似的报告数据提交功能，除非提交是通过导航而不是显式的方法调用触发的。
 
 ## 语法
 

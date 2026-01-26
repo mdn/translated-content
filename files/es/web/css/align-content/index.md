@@ -3,8 +3,6 @@ title: align-content
 slug: Web/CSS/align-content
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad [CSS](/es/docs/Web/CSS) `align-content` ajusta las líneas dentro de un contenedor flex cuando hay espacio extra en el eje transversal.

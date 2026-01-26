@@ -66,7 +66,8 @@ BigInt.asIntN(bits, bigint)
 ===>      1001 (이진수) = -7n
 ```
 
-> **참고:** `BigInt` 값은 언제나 이진수 2의 보수로 인코딩됩니다.
+> [!NOTE]
+> `BigInt` 값은 언제나 이진수 2의 보수로 인코딩됩니다.
 
 {{jsxref("Number.prototype.toExponential()")}}와 같은 유사한 언어 API와 달리 `asIntN`은 {{jsxref("BigInt")}}의 정적 속성이므로 항상 BigInt 값의 메서드가 아닌 `BigInt.asIntN()`으로 사용합니다. `asIntN()`을 "표준 라이브러리 함수"로 노출하면 [asm.js와의 상호 운용](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs)을 할 수 있습니다.
 

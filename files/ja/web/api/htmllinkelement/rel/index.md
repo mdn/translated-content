@@ -8,9 +8,9 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLLinkElement.rel`** プロパティは [`rel`](/ja/docs/Web/HTML/Attributes/rel) 属性を反映します。これは、空白で区切られたリンク種別のリストの入った文字列であり、{{HTMLElement("link")}} 要素で表されるリソースと現在の文書との関係を示します。
+**`HTMLLinkElement.rel`** プロパティは [`rel`](/ja/docs/Web/HTML/Reference/Attributes/rel) 属性を反映します。これは、空白で区切られたリンク種別のリストの入った文字列であり、{{HTMLElement("link")}} 要素で表されるリソースと現在の文書との関係を示します。
 
-この属性の最も一般的な使用法は、外部のスタイルシートへのリンクを指定する場合です。プロパティに `stylesheet` を設定し、 [`href`](/ja/docs/Web/HTML/Element/link#href) 属性にページをフォーマットする外部スタイルシートの URL を設定します。
+この属性の最も一般的な使用法は、外部のスタイルシートへのリンクを指定する場合です。プロパティに `stylesheet` を設定し、 [`href`](/ja/docs/Web/HTML/Reference/Elements/link#href) 属性にページをフォーマットする外部スタイルシートの URL を設定します。
 
 ## 値
 

@@ -4,13 +4,13 @@ slug: Web/JavaScript/Guide/Numbers_and_strings
 original_slug: Web/JavaScript/Guide/Numbers_and_dates
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "conflicting/Web/JavaScript/Guide/Numbers_and_strings")}}
 
 Este capítulo apresenta como utilizar números e datas em JavaScript.
 
 ## Números
 
-Em Javascript, todos os números são implementados em [double-precision 64-bit binary format IEEE 754](https://en.wikipedia.org/wiki/Double-precision_floating-point_format) (Por exemplo, um número entre -(253 -1) e 253 -1). **Não havendo especificação de tipo Integer**. Além de ser capaz de representar números de ponto flutuante, o tipo de número tem três valores simbólicos: `+`{{jsxref("Infinity")}}, `-`{{jsxref("Infinity")}}, and {{jsxref("NaN")}} (not-a-number). Veja também [Estruturas e Tipos de Dados em Javascript](/pt-BR/docs/Web/JavaScript/Data_structures) em contexto com outros tipos primitivos em JavaScript.
+Em Javascript, todos os números são implementados em [double-precision 64-bit binary format IEEE 754](https://en.wikipedia.org/wiki/Double-precision_floating-point_format) (Por exemplo, um número entre -(253 -1) e 253 -1). **Não havendo especificação de tipo Integer**. Além de ser capaz de representar números de ponto flutuante, o tipo de número tem três valores simbólicos: `+`{{jsxref("Infinity")}}, `-`{{jsxref("Infinity")}}, and {{jsxref("NaN")}} (not-a-number). Veja também [Estruturas e Tipos de Dados em Javascript](/pt-BR/docs/Web/JavaScript/Guide/Data_structures) em contexto com outros tipos primitivos em JavaScript.
 
 Você pode usar quatro tipos de números literais: decimal, binário, octal, e hexadecimal.
 
@@ -249,4 +249,4 @@ A próxima declaração anexa um valor `minuto` a `temp`. Se o valor de minuto f
 
 Finalmente, a expressão condicional anexa "P.M." a `temp` se `hora` for 12 ou maior; senão ela anexa "A.M." a `temp`.
 
-{{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
+{{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "conflicting/Web/JavaScript/Guide/Numbers_and_strings")}}

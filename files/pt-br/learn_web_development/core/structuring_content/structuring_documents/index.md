@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Structuring_documents
 original_slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}Além de definir as partes individuais de sua página (como "um parágrafo" ou "uma imagem"),
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Debugging_HTML", "Learn_web_development/Core/Structuring_content")}}Além de definir as partes individuais de sua página (como "um parágrafo" ou "uma imagem"),
 
 o {{glossary("HTML")}} também conta com vários elementos de nível de bloco usados para definir as áreas de seu site (como "o cabeçalho", "o menu de navegação", "a coluna de conteúdo príncipal"). Este artigo explora como planejar uma estrutura básica de website, e escrever o HTML para representar essa estrutura.
 
@@ -67,7 +67,7 @@ Isso ocorre porque os visuais não contam toda a história. Usamos cor e tamanho
 > [!NOTE]
 > Nota: as pessoas daltônicas representam cerca de 4% da população mundial ou, em outras palavras, aproximadamente 1 em cada 12 homens e 1 em cada 200 mulheres são daltônicas. Cegos e deficientes visuais representam cerca de 4-5% da população mundial (em 2012 havia 285 milhões de pessoas no mundo, enquanto a população total era de cerca de 7 bilhões).
 
-Em seu código HTML, você pode marcar seções de conteúdo com base em sua funcionalidade. Você pode usar elementos que representam as seções de conteúdo descritas acima sem ambigüidade, e tecnologias assistivas, como leitores de tela, podem reconhecer esses elementos e ajudar com tarefas como "localizar a navegação principal". "ou" encontre o conteúdo principal. " Como mencionamos anteriormente no curso, há um número de [consequências de não usar a estrutura de elemento e semâtica certas para o trabalho certo.](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#por_que_precisamos_de_estrutura)
+Em seu código HTML, você pode marcar seções de conteúdo com base em sua funcionalidade. Você pode usar elementos que representam as seções de conteúdo descritas acima sem ambigüidade, e tecnologias assistivas, como leitores de tela, podem reconhecer esses elementos e ajudar com tarefas como "localizar a navegação principal". "ou" encontre o conteúdo principal. " Como mencionamos anteriormente no curso, há um número de [consequências de não usar a estrutura de elemento e semâtica certas para o trabalho certo.](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#por_que_precisamos_de_estrutura)
 
 Para implementar essa marcação semântica, o HTML fornece tags dedicadas que você pode usar para representar essas seções, por exemplo:
 
@@ -198,9 +198,9 @@ Reserve um tempo para examinar o código e entendê-lo - os comentários dentro 
 
 - {{HTMLElement('main')}} é para o conteúdo único dessa página.Use \<main> apenas uma vez por página, e o coloca diretamente dentro do {{HTMLElement('body')}}. Não é ideal aninhar ele dentro de qualquer outro elemento senão o elemento \<body>.
 - {{HTMLElement('article')}} inclui um bloco de conteúdo relacionado o qual faz sentido por si só, sem o restante da página (por exemplo, uma postagem singular dum blog).
-- {{HTMLElement('section')}} é similar com \<article>, mas ele é mais para agrupar uma única parte de página que constitui em um único pedaço de funcionalidade (por exemplo, um minimapa, ou um conjunto de manchetes e resumo). É considerado boa prática começar cada seção com um [título](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals); observe também que você pode dividir um \<article>s em diferentes \<section>s, ou \<section>s em diferentes \<article>s, dependendo do contexto.
+- {{HTMLElement('section')}} é similar com \<article>, mas ele é mais para agrupar uma única parte de página que constitui em um único pedaço de funcionalidade (por exemplo, um minimapa, ou um conjunto de manchetes e resumo). É considerado boa prática começar cada seção com um [título](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs); observe também que você pode dividir um \<article>s em diferentes \<section>s, ou \<section>s em diferentes \<article>s, dependendo do contexto.
 - {{HTMLElement('aside')}} é para conteúdo que não está relacionados diretamente com os conteúdos principais, mas que podem providenciar informações complementares a esses (entradas de glossários, biografia do autor, links relacionados, etc.).
-- {{HTMLElement('header')}} representa um grupo de conteúdo introdutório. Se ele for um elemento filho do {{HTMLElement('body')}}, Ele é um header global da página do site, mas se for um elemento filho de um {{HTMLElement('article')}} ou {{HTMLElement('section')}}, é definido como um header específico para essa seção ( tenta não confundir isso com [títulos e cabeçalhos](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adicionando_um_título)).
+- {{HTMLElement('header')}} representa um grupo de conteúdo introdutório. Se ele for um elemento filho do {{HTMLElement('body')}}, Ele é um header global da página do site, mas se for um elemento filho de um {{HTMLElement('article')}} ou {{HTMLElement('section')}}, é definido como um header específico para essa seção ( tenta não confundir isso com [títulos e cabeçalhos](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#adicionando_um_título)).
 - {{HTMLElement('nav')}} contém a funcionalidade principal de navegação da página. Links secundários, etc., não iria na navegação
 - {{HTMLElement('footer')}} representa um grupo de conteúdo final da página.
 
@@ -309,4 +309,4 @@ Nesse ponto, você deve ter uma idéia melhor sobre como estruturar uma página 
 
 - [Seções e estruturas de um documento HTML5](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document): Guia avançado para elementos semânticos do HTML5 e o algoritmo de estrutura de tópicos do HTML5.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Debugging_HTML", "Learn_web_development/Core/Structuring_content")}}

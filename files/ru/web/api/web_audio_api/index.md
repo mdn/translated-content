@@ -348,7 +348,6 @@ function voiceMute() {
 ### Quicklinks
 
 1. **Guides**
-
    1. [Basic concepts behind Web Audio API](/ru/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)
    2. [Using the Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
    3. [Visualizations with Web Audio API](/ru/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
@@ -356,12 +355,10 @@ function voiceMute() {
    5. [Porting webkitAudioContext code to standards based AudioContext](/ru/docs/Web/API/Web_Audio_API)
 
 2. **Examples**
-
    1. [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/)
    2. [Violent Theremin](https://mdn.github.io/violent-theremin/)
 
 3. **Interfaces**
-
    1. {{domxref("AnalyserNode")}}
    2. {{domxref("AudioBuffer")}}
    3. {{domxref("AudioBufferSourceNode")}}

@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Credentials
 original_slug: Web/HTTP/Headers/Access-Control-Allow-Credentials
 ---
 
-{{HTTPSidebar}}
-
 El encabezado de respuesta **`Access-Control-Allow-Credentials`** le dice al navegador si exponer la respuesta al código JavaScript (del frontend) cuando el modo credenciales en la petición es incluído.
 
 Cuando las credenciales de una petición ({{domxref("Request.credentials")}}) es `include`, los navegadores sólo expondran la respuesta al código JavaScript del frontend si el valor de `Access-Control-Allow-Credentials` es `true`.

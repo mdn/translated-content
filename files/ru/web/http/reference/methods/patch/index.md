@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3138c50f08e9fba1176aa77dbbfdb33e22357ddd
 ---
 
-{{HTTPSidebar}}
-
 **Метод запроса HTTP `PATCH`** частично изменяет ресурс.
 
 В какой-то степени `PATCH` можно назвать аналогом действия «обновить» из {{Glossary("CRUD")}} (однако не следует путать HTTP и {{Glossary("CRUD")}} — это две разные вещи).
@@ -33,7 +31,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Safe", "Безопасный")}}
+        {{Glossary("Safe/HTTP", "Безопасный")}}
       </th>
       <td>Нет</td>
     </tr>

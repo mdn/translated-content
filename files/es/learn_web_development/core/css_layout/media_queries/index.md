@@ -8,7 +8,7 @@ l10n:
 
 {{learnsidebar}}
 
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout/Fundamental_layout_comprehension", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_Design", "Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension", "Learn_web_development/Core/CSS_layout")}}
 
 Las **media queries (consulta de medios) en CSS** te dan una forma de aplicar CSS solo cuando el navegador y el entorno del dispositivo coinciden con una regla que especifiques, por ejemplo, "el área de visualización es más ancha que 480 píxeles". Las media queries son una parte clave del diseño web adaptativo, ya que te permiten crear diferentes diseños según el tamaño del área de visualización, pero también se pueden utilizar para detectar otras cosas sobre el entorno en el que se está ejecutando tu sitio, por ejemplo, si el usuario está utilizando una pantalla táctil en lugar de un ratón.
 
@@ -550,13 +550,13 @@ Si observas el código fuente HTML en el ejemplo anterior, verás el siguiente e
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
-Esta es la [etiqueta meta de la ventana gráfica](/es/docs/Web/HTML/Viewport_meta_tag) — existe como una forma de controlar cómo los navegadores móviles representan el contenido. Esto es necesario porque, de forma predeterminada, la mayoría de los navegadores móviles mienten sobre el ancho de su área de visualización. Los sitios no adaptativos suelen verse muy mal cuando se representan en un área de visualización estrecha, por lo que los navegadores móviles generalmente representan el sitio con un ancho de área de visualización más ancho que el ancho real del dispositivo de forma predeterminada (generalmente 980 píxeles) y luego reducen el resultado representado para que quepa en la pantalla.
+Esta es la [etiqueta meta de la ventana gráfica](/es/docs/Web/HTML/Guides/Viewport_meta_element) — existe como una forma de controlar cómo los navegadores móviles representan el contenido. Esto es necesario porque, de forma predeterminada, la mayoría de los navegadores móviles mienten sobre el ancho de su área de visualización. Los sitios no adaptativos suelen verse muy mal cuando se representan en un área de visualización estrecha, por lo que los navegadores móviles generalmente representan el sitio con un ancho de área de visualización más ancho que el ancho real del dispositivo de forma predeterminada (generalmente 980 píxeles) y luego reducen el resultado representado para que quepa en la pantalla.
 
 Todo esto está muy bien, pero significa que los sitios adaptativos no van a funcionar como se espera. Si el ancho del área de visualización se informa como 980 píxeles, entonces los diseños móviles (por ejemplo, creados utilizando una media query de `@media screen and (max-width: 600px) { }`) no se representarán como se espera.
 
 Para solucionar esto, incluir una etiqueta meta de la ventana gráfica como la anterior en tu página le dice al navegador "no representes el contenido con un área de visualización de 980 píxeles — represéntalo utilizando el ancho real del dispositivo en su lugar, y establece un nivel de escala inicial predeterminado para una mejor consistencia". Las media queries se activarán entonces como se espera.
 
-Hay una serie de otras opciones que puedes poner dentro del atributo `content` de la etiqueta meta de la ventana gráfica — consulta [Usando la etiqueta meta de la ventana gráfica para controlar el diseño en navegadores móviles](/es/docs/Web/HTML/Viewport_meta_tag) para obtener más detalles.
+Hay una serie de otras opciones que puedes poner dentro del atributo `content` de la etiqueta meta de la ventana gráfica — consulta [Usando la etiqueta meta de la ventana gráfica para controlar el diseño en navegadores móviles](/es/docs/Web/HTML/Guides/Viewport_meta_element) para obtener más detalles.
 
 ## ¿Realmente necesitas una media query?
 
@@ -626,4 +626,4 @@ También podrías experimentar con la adición de diferentes componentes y ver s
 
 Bien, casi hemos llegado al final de este módulo. Terminemos dándote un desafío para poner a prueba tu comprensión.
 
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout/Fundamental_layout_comprehension", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_Design", "Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension", "Learn_web_development/Core/CSS_layout")}}

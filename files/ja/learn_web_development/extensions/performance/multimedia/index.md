@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0a9bfb1aee6b1b88c14acd3f66501cc01320f184
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/measuring_performance", "Learn/Performance/video", "Learn/Performance")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Measuring_performance", "Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance")}}
 
 画像や動画といったメディアは、平均的なウェブサイトでダウンロード量の 70% 以上を占めています。ダウンロードのパフォーマンスという観点からは、メディアを減らし、ファイルサイズを縮小することは、低いハードルであると言えます。この記事では、ウェブパフォーマンスを向上させるために画像や動画を最適化することについて見ていきます。
 
@@ -88,7 +88,7 @@ SVGを最適化するための良いオンラインツールとしては、[SVGO
 - [AVIF](/ja/docs/Web/Media/Guides/Formats/Image_types#avif_画像) — 高性能でロイヤリティフリーの画像形式であるため、画像とアニメーション画像の両方に適しています（WebP よりもさらに効率的ですが、対応はそれほど広くありません）。これで Chrome、Opera、Firefox で対応しています。[以前の画像形式を AVIF に変換するオンラインツール](https://avif.io/)も参照してください。
 - **JPEG2000** — かつては JPEG の後継とされていましたが、Safari でのみ対応しています。プログレッシブ表示にも対応していません。
 
-JPEG-XR と JPEG2000 の対応も狭く、デコードするコストも考慮すると、JPEG の対抗馬は WebP しかありません。そのため、画像も WebP で提供することができます。これは、`<picture>` 要素で [type 属性](/ja/docs/Web/HTML/Element/picture#the_type_attribute)を備えた `<source>` 要素により補助することで実現することができます。
+JPEG-XR と JPEG2000 の対応も狭く、デコードするコストも考慮すると、JPEG の対抗馬は WebP しかありません。そのため、画像も WebP で提供することができます。これは、`<picture>` 要素で [type 属性](/ja/docs/Web/HTML/Reference/Elements/picture#the_type_attribute)を備えた `<source>` 要素により補助することで実現することができます。
 
 もし、この作業がすべて複雑で、チームにとって負担が大きいと感じるのであれば、画像 CDN として使用できるオンラインサービスもあります。このサービスは、画像をリクエストされた機器や ブラウザーの種類に応じて、その場で正しい画像形式を自動配信してくれます。[Cloudinary](https://cloudinary.com/blog/make_all_images_on_your_website_responsive_in_3_easy_steps) や [Image Engine](https://imageengine.io/) が代表的なものです。
 
@@ -104,7 +104,7 @@ JPEG-XR と JPEG2000 の対応も狭く、デコードするコストも考慮�
 
 #### 最適なサイズでの提供
 
-画像配信では、「ひとつのサイズですべてをカバーする」手法は最良の結果をもたらしません。つまり、小さな画面にはより小さな解像度の画像を、大きな画面にはその逆の画像を配信したいものです。また、高 DPI 画面（例えば "Retina"）の機器には、より高解像度の画像を提供したいものです。そのため、中間画像のバリエーションをたくさん作成するだけでなく、正しいファイルを正しいブラウザーに提供する方法も必要です。そこで、`<picture>` と `<source>` 要素に [media](/ja/docs/Web/HTML/Element/source#media) や [sizes](/ja/docs/Web/HTML/Element/source#sizes) 属性を付けてアップグレードする必要があるのです。これらの属性をすべて組み合わせる方法についての詳しい記事は[こちら](https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/)にあります。
+画像配信では、「ひとつのサイズですべてをカバーする」手法は最良の結果をもたらしません。つまり、小さな画面にはより小さな解像度の画像を、大きな画面にはその逆の画像を配信したいものです。また、高 DPI 画面（例えば "Retina"）の機器には、より高解像度の画像を提供したいものです。そのため、中間画像のバリエーションをたくさん作成するだけでなく、正しいファイルを正しいブラウザーに提供する方法も必要です。そこで、`<picture>` と `<source>` 要素に [media](/ja/docs/Web/HTML/Reference/Elements/source#media) や [sizes](/ja/docs/Web/HTML/Reference/Elements/source#sizes) 属性を付けてアップグレードする必要があるのです。これらの属性をすべて組み合わせる方法についての詳しい記事は[こちら](https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/)にあります。
 
 高解像度画面に関して、興味深い効果が 2 つあります。
 
@@ -156,4 +156,4 @@ img {
 
 この章では、画像の最適化について見ていきました。これで、平均的なウェブサイトの平均帯域幅の合計の半分を最適化する方法について、全般的に理解したことになります。これは、ユーザーの帯域幅を消費し、ページ読み込みを遅くするメディアの種類の 1 つに過ぎません。次に、帯域幅消費の 20% を占める動画の最適化について見ていきましょう。
 
-{{PreviousMenuNext("Learn/Performance/measuring_performance", "Learn/Performance/video", "Learn/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Measuring_performance", "Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance")}}

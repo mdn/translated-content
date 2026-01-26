@@ -3,8 +3,6 @@ title: Number() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/Number/Number
 ---
 
-{{JSRef}}
-
 **`Number()`** 构造函数创建 {{jsxref("Number")}} 对象。当作为函数调用时，它返回 Number 类型的原始值。
 
 ## 语法

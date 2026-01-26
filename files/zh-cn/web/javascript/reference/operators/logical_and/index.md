@@ -3,8 +3,6 @@ title: 逻辑与（&&）
 slug: Web/JavaScript/Reference/Operators/Logical_AND
 ---
 
-{{jsSidebar("Operators")}}
-
 当且仅当所有操作数为 `true` 时，一组布尔操作数的**逻辑与**（**`&&`**，逻辑连接）运算结果为 `true`，否则为 `false`。
 
 一般来说，当从左到右求值时，该操作符返回第一个{{Glossary("falsy","假值")}}操作数的值；如果它们都是{{Glossary("truthy","真值")}}，则返回最后一个操作数的值。

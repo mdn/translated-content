@@ -1,11 +1,12 @@
 ---
 title: Object.prototype.__defineGetter__()
+short-title: __defineGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 l10n:
-  sourceCommit: fd326b574aadcd78924a5a223f15e289e45a7f1d
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 > [!NOTE]
 > この機能は非推奨となり、[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)は[オブジェクト初期化子の構文](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)または {{jsxref("Object.defineProperty()")}} API を使用して定義する方法に置き換えられました。このメソッドの動作はウェブの互換性だけのために仕様化されたものであり、どのプラットフォームでも実装することを要求されているわけではありません。どこでも動作するとは限りません。

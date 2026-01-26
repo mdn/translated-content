@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 **`Content-Encoding`** は{{Glossary("representation header", "表現ヘッダー")}}で、表現（メッセージの内容）に適用されているエンコード方式とその順番を保持しています。
 これによって受信者は、元の内容の形式を取得するために、その表現をデコードする方法を知ることができます。
 コンテンツのエンコード方式は、主に元のメディア形式に関する情報を失うことなくメッセージデータを圧縮するために使用されます。
@@ -23,7 +21,7 @@ l10n:
       <td>{{Glossary("Representation header", "表現ヘッダー")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>いいえ</td>
     </tr>
   </tbody>

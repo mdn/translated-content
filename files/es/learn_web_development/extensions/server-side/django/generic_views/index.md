@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Generic_views
 original_slug: Learn/Server-side/Django/Generic_views
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Este tutorial extiende nuestro sitio web de la [BibliotecaLocal](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), añadiendo páginas de listas y detalles de libros y autores. Aquí aprenderemos sobre vistas genéricas basadas en clases, y mostraremos cómo éstas pueden reducir la cantidad de código que tienes que escribir para casos de uso común. También entraremos en el manejo de URL en gran detalle, mostrando cómo realizar un emparejamiento de patrones básico.
 
@@ -16,7 +16,7 @@ Este tutorial extiende nuestro sitio web de la [BibliotecaLocal](/es/docs/Learn_
         <p>
           Completa todos los tópicos anteriores del tutorial, incluyendo
           <a
-            href="https://developer.mozilla.org/es/docs/Learn/Server-side/Django/Home_page"
+            href="https://developer.mozilla.org/es/docs/Learn_web_development/Extensions/Server-side/Django/Home_page"
             >Tutorial de Django Parte 5: Creación de tu página de inicio</a
           >.
         </p>
@@ -469,7 +469,8 @@ def book_detail_view(request,pk):
 
 Primero, la vista intenta recuperar el registro del libro específico desde el modelo. Si esto falla, la vista debería lanzar una excepción de tipo `Http404` para indicar que el libro "no se encuentra". El último paso es, como de costumbre, llamar a `render()` con el nombre de la plantilla y la información del libro en el parámetro `context` (como un diccionario).
 
-> **Nota:** `get_object_or_404()` (que se muestra comentado arriba), es un atajo conveniente para lanzar una excepción de tipo `Http404` si el registro no se encuentra.
+> [!NOTE]
+> `get_object_or_404()` (que se muestra comentado arriba), es un atajo conveniente para lanzar una excepción de tipo `Http404` si el registro no se encuentra.
 
 ### Creando la plantilla de Vista de Detalle
 
@@ -682,4 +683,4 @@ En los siguientes artículos extenderemos esta biblioteca para añadir soporte p
 - [Etiquetas de plantilla y filtros incluídos](https://docs.djangoproject.com/en/1.10/ref/templates/builtins) (documentación de Django).
 - [Paginación](https://docs.djangoproject.com/en/1.10/topics/pagination/) (documentación de Django)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django")}}

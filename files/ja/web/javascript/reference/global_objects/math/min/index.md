@@ -1,27 +1,26 @@
 ---
 title: Math.min()
+short-title: min()
 slug: Web/JavaScript/Reference/Global_Objects/Math/min
 l10n:
-  sourceCommit: 88d71e500938fa8ca969fe4fe3c80a5abe23d767
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+**`Math.min()`** は静的メソッドで、入力引数として与えられた数値のうち最小の値を返します。引数がない場合は {{jsxref("Infinity")}} を返します。
 
-**`Math.min()`** は静的メソッドで、引数で渡されたもののうち最小の値を返します。引数がない場合は {{jsxref("Infinity")}} を返します。
-
-{{InteractiveExample("JavaScript Demo: Math.min()")}}
+{{InteractiveExample("JavaScript デモ: Math.min()")}}
 
 ```js interactive-example
 console.log(Math.min(2, 3, 1));
-// Expected output: 1
+// 予想される結果: 1
 
 console.log(Math.min(-2, -3, -1));
-// Expected output: -3
+// 予想される結果: -3
 
-const array1 = [2, 3, 1];
+const array = [2, 3, 1];
 
-console.log(Math.min(...array1));
-// Expected output: 1
+console.log(Math.min(...array));
+// 予想される結果: 1
 ```
 
 ## 構文

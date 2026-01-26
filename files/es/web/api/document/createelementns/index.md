@@ -22,7 +22,6 @@ var element = document.createElementNS(namespaceURI, qualifiedName[, options]);
 - `qualifiedName`
   - : _String_ que especifica el tipo del elemento a ser creado. La propiedad [nodeName](/es/docs/Web/API/Node/nodeName) del elemento creado es inicializada con el valor `qualifiedName`.
 - `options`{{optional_inline}}
-
   - : Un objeto opcional `ElementCreationOptions` que contiene una sola propiedad llamada `is`, cuyo valor es el nombre de la etiqueta para un elemento personalizado previamente definido usando `customElements.define()`. Para retro compatibilidad con versiones previas de la [Especificación de Elementos Personalizados](https://www.w3.org/TR/custom-elements/), algunos navegadores te permitirán pasar un _String_ aquí en lugar de un _Objeto_, donde el valor del _String_ es el nombre de la etiqueta del elemento personalizado. Ver [Extendiendo elementos HTML nativos](https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml) para más información sobre como usar este parámetro.
 
     Al nuevo elemento le será dado un atributo `is` cuyo valor es el nombre de la etiqueta del elemento personalizado. Los elementos personalizados son una característica experimental disponible solo en algunos navegadores.

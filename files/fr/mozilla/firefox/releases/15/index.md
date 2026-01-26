@@ -3,8 +3,6 @@ title: Firefox 15 pour les développeurs
 slug: Mozilla/Firefox/Releases/15
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 15, basé sur Gecko 15.0, est sorti le 28 août 2012. Cette page résume les principaux changements dans Firefox 15 qui sont utiles aux développeurs.
 
 ## Changements pour les développeurs Web
@@ -56,7 +54,7 @@ Firefox 15, basé sur Gecko 15.0, est sorti le 28 août 2012. Cette page résume
 - Les opérateurs mathématiques peuvent désormais utiliser les polices téléchargeables spécifiés avec {{cssxref("@font-face")}}. Cela permet à [l'extension MathML-fonts](https://addons.mozilla.org/en-US/firefox/addon/mathml-fonts/) de travailler également avec les opérateurs extensibles.
 - L'attribut `selection` de {{MathMLElement("maction")}} est désormais uniquement pris en compte avec l'actiontype `toggle`.
 - [L'obsolète et contraignant namedspace](https://www.w3.org/TR/MathML3/chapter3.html#id.3.3.4.2.1) a été supprimé ([bug Firefox 673759](https://bugzil.la/673759)).
-- La prise en charge de la syntaxe des valeurs de [Length](/fr/docs/Web/MathML/Values) et {{MathMLElement("mpadded")}} a été améliorée selon la spécification MathML3.
+- La prise en charge de la syntaxe des valeurs de [Length](/fr/docs/Web/MathML/Reference/Values) et {{MathMLElement("mpadded")}} a été améliorée selon la spécification MathML3.
 - Les nouveaux opérateurs MathML pour les maths arabes ont été ajoutés au dictionnaire opérateur ([bug Firefox 757125](https://bugzil.la/757125)).
 
 ### Réseau
@@ -68,7 +66,7 @@ Firefox 15, basé sur Gecko 15.0, est sorti le 28 août 2012. Cette page résume
 ### Changements dans les interfaces
 
 - `nsIDOMWindowUtils`
-  - : `aModifiers` de `sendMouseEvent()`, `sendTouchEvent()`, `sendMouseEventToWindow()`, `sendMouseScrollEvent()` et `sendKeyEvent()` supporte toutes les touches de modification qui sont supportées par [`KeyboardEvent.getModifierState()`](/fr/docs/DOM/KeyboardEvent#getModifierState%28%29). Utiliser les valeurs `MODIFIER_*`. Et désormais le 5ème paramètre de `sendKeyEvent()` est changé d'un `boolean` vers un `unsigned long`. Pour la compatibilité ascendante, si l'appelant passe `true` ou `false`, le comportement n'est pas changé. Ce changement permet aux appelants d'indiquer l'emplacement de la touche.
+  - : `aModifiers` de `sendMouseEvent()`, `sendTouchEvent()`, `sendMouseEventToWindow()`, `sendMouseScrollEvent()` et `sendKeyEvent()` supporte toutes les touches de modification qui sont supportées par [`KeyboardEvent.getModifierState()`](</fr/docs/DOM/KeyboardEvent#getModifierState()>). Utiliser les valeurs `MODIFIER_*`. Et désormais le 5ème paramètre de `sendKeyEvent()` est changé d'un `boolean` vers un `unsigned long`. Pour la compatibilité ascendante, si l'appelant passe `true` ou `false`, le comportement n'est pas changé. Ce changement permet aux appelants d'indiquer l'emplacement de la touche.
 - `nsIBrowserHistory`
   - : La méthode `hidePage()` n'a jamais été implémentée, et a été entièrement supprimée dans cette version. La méthode `addPageWithDetails()` a également été supprimée dans le cadre des travaux pour faire une API [Places](/fr/docs/Places) asynchrone ; à la place, utilisez plutôt `mozIAsyncHistory.updatePlaces()`. De plus, l'attribut `count` a été retiré, il ne renvoyé pas un comptage réel à certain moment (à la place, il indiqué simplement si les entrées existées). Vous pouvez utiliser à la place `nsINavHistoryService.hasHistoryEntries`.
 

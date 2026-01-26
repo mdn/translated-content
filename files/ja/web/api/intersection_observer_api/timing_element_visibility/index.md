@@ -2,7 +2,7 @@
 title: 交差オブザーバー API による要素の表示時間設定
 slug: Web/API/Intersection_Observer_API/Timing_element_visibility
 l10n:
-  sourceCommit: f3fc65ee0761db2cd7e3092f67d88be328bd1660
+  sourceCommit: bc9f7bec1ab48f29d241e38a9f1598f783f6b60a
 ---
 
 {{DefaultAPISidebar("Intersection Observer API")}}
@@ -19,7 +19,7 @@ l10n:
 
 ### サイト構造: HTML
 
-サイトの構成はそれほど複雑ではありません。 [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout)を使用してスタイル設定とレイアウトを行うので、ここではかなり素直に行うことができます。
+サイトの構成はそれほど複雑ではありません。 [CSS グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)を使用してスタイル設定とレイアウトを行うので、ここではかなり素直に行うことができます。
 
 ```html
 <div class="wrapper">
@@ -164,7 +164,7 @@ article h2 {
 .ad {
   height: 96px;
   padding: 6px;
-  border-color: #555;
+  border-color: #555555;
   border-style: solid;
   border-width: 1px;
 }
@@ -186,7 +186,7 @@ article h2 {
   font-size: 14px;
   bottom: 30px;
   border: 1px solid black;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgb(255 255 255 / 50%);
 }
 ```
 
@@ -200,7 +200,7 @@ article h2 {
 let contentBox;
 
 let nextArticleID = 1;
-const visibleAds = new Set();
+let visibleAds = new Set();
 let previouslyVisibleAds = null;
 
 let adObserver;
@@ -220,7 +220,7 @@ let refreshIntervalID = 0;
 - `adObserver`
   - : 広告と `<main>` 要素の境界との交差を追跡するために使用される {{domxref("IntersectionObserver")}} が格納されます。
 - `refreshIntervalID`
-  - : {{domxref("setInterval()")}} によって返されるインターバル ID を格納するために使用されます。このインターバルは、広告の内容を定期的に更新する際に発生させるために使用されます。
+  - : {{domxref("Window.setInterval", "setInterval()")}} によって返されるインターバル ID を格納するために使用されます。このインターバルは、広告の内容を定期的に更新する際に発生させるために使用されます。
 
 #### セットアップ
 
@@ -266,7 +266,7 @@ function handleVisibilityChange() {
   if (document.hidden) {
     if (!previouslyVisibleAds) {
       previouslyVisibleAds = visibleAds;
-      visibleAds = [];
+      visibleAds = new Set();
       previouslyVisibleAds.forEach((adBox) => {
         updateAdTimer(adBox);
         adBox.dataset.lastViewStarted = 0;
@@ -290,7 +290,7 @@ function handleVisibilityChange() {
 
 #### 交差状態の変化の処理
 
-ブラウザーのイベントループを通過するたびに、それぞれの {{domxref("IntersectionObserver")}} は、その対象要素のどれかがオブザーバーの交差比率の閾値のどれかを通過したかどうか調べます。それぞれのオブザーバーについて、対象のリストがコンパイルされ、オブザーバーのコールバックに {{domxref("IntersectionObserverEntry")}} オブジェクトの配列として送信されます。コールバックである `intersectionCallback()` は以下のようにしています。
+ブラウザーのイベントループを通過するたびに、それぞれの {{domxref("IntersectionObserver")}} は、その対象要素のどれかがオブザーバーの交差比率のしきい値のどれかを通過したかどうか調べます。それぞれのオブザーバーについて、対象のリストがコンパイルされ、オブザーバーのコールバックに {{domxref("IntersectionObserverEntry")}} オブジェクトの配列として送信されます。コールバックである `intersectionCallback()` は以下のようにしています。
 
 ```js
 function intersectionCallback(entries) {
@@ -317,11 +317,11 @@ function intersectionCallback(entries) {
 
 前回述べたように、 {{domxref("IntersectionObserver")}} コールバックは、交差オブザーバーの比率の 1 つよりも可視性が高くなった、または低くなったオブザーバーの対象要素のすべての配列を入力として受け取ります。これらの各項目は {{domxref("IntersectionObserverEntry")}} 型であり、反復処理されます。対象要素がルートと交差している場合、不明瞭な状態から可視状態に遷移したことがわかります。75% 以上可視状態になった場合は、広告を可視状態とみなし、広告の `dataset.lastViewStarted` 属性を {{domxref("IntersectionObserverEntry.time", "entry.time")}} の遷移時刻に設定し、広告を `visibleAds` セットに追加して、時間の経過と共に処理することが分かるようにタイマーを開始します。
 
-広告が交差しない状態に遷移した場合、その広告を表示可能な広告の集合から削除します。次に、1 つの特別な動作があります。{{domxref("IntersectionObserverEntry.intersectionRatio", "entry.ratio")}} が 0.0 であるかどうか調べます。0 である場合、その要素は完全に見えなくなったということを意味します。この場合、広告が少なくとも合計 1 分間表示されていれば、これから作成する `replaceAd()` という関数を呼び出して、既存の広告を新しい広告に置き換えます。こうすることで、ユーザーは時刻とともに様々な広告を目にすることになりますが、広告は見えない間だけ置き換えるので、結果的にスムーズな使い勝手になります。
+広告が交差しない状態に遷移した場合、その広告を表示可能な広告の集合から削除します。次に、1 つの特別な動作があります。{{domxref("IntersectionObserverEntry.intersectionRatio", "entry.intersectionRatio")}} が 0.0 であるかどうか調べます。0 である場合、その要素は完全に見えなくなったということを意味します。この場合、広告が少なくとも合計 1 分間表示されていれば、これから作成する `replaceAd()` という関数を呼び出して、既存の広告を新しい広告に置き換えます。こうすることで、ユーザーは時刻とともに様々な広告を目にすることになりますが、広告は見えない間だけ置き換えるので、結果的にスムーズな使い勝手になります。
 
 #### 定期的なアクションの処理
 
-インターバルハンドラーである `handleRefreshInterval()` は、 `startup()` 関数（[上記](#セットアップ)）の中で {{domxref("setInterval()")}} を呼び出すことにより、 1 秒に 1 回程度呼び出されるようになります。この関数の主な仕事は、 1 秒ごとにタイマーを更新し、各広告内で描画するタイマーを更新するために再描画をスケジュールすることです。
+インターバルハンドラーである `handleRefreshInterval()` は、 `startup()` 関数（[上記](#セットアップ)）の中で {{domxref("Window.setInterval", "setInterval()")}} を呼び出すことにより、 1 秒に 1 回程度呼び出されるようになります。この関数の主な仕事は、 1 秒ごとにタイマーを更新し、各広告内で描画するタイマーを更新するために再描画をスケジュールすることです。
 
 ```js
 function handleRefreshInterval() {
@@ -372,7 +372,7 @@ function updateAdTimer(adBox) {
 }
 ```
 
-要素の表示時間を追跡するために、すべての広告で 2 つのカスタムデータ属性（[`data-*`](/ja/docs/Web/HTML/Global_attributes/data-*) を参照）を使用しています。
+要素の表示時間を追跡するために、すべての広告で 2 つのカスタムデータ属性（[`data-*`](/ja/docs/Web/HTML/Reference/Global_attributes/data-*) を参照）を使用しています。
 
 - `lastViewStarted`
   - : 文書が作成された時刻を基準にして、広告の表示回数が最後に更新された、または広告が最後に表示されるようになった時刻をミリ秒単位で指定します。広告を最後に調べた時刻に広告が表示されていなかった場合は 0 です。
@@ -404,7 +404,7 @@ function drawAdTimer(adBox) {
 
 このコードでは、広告のタイマーをその ID である `"timer"` を使用して見つけ、広告の `totalViewTime` を 1000 で割って経過した秒数を計算します。次に、タイマーの {{domxref("HTMLElement/innerText", "innerText")}} にその時刻を表す文字列を m:ss 形式で設定する前に経過した分と秒の値を計算します。 {{jsxref("String.padStart()")}} メソッドを使用して、秒数が 10 未満の場合は 2 桁になるようにパディングしています。
 
-### ページコンテンツの構築
+#### ページコンテンツの構築
 
 `buildContents()` 関数は、[スタートアップコード](#セットアップ)から呼び出され、表示する記事や広告を選択して文書内に挿入します。
 
@@ -455,7 +455,7 @@ function createArticle(contents) {
 }
 ```
 
-まず、`<article>` 要素を作成し、その ID を固有の値 `nextArticleID` に設定します（これは 1 から始まり、各記事ごとに増えていきます）。次に、記事のタイトルのために {{HTMLElement("h2")}} 要素を作成して追加し、`contents` の HTML をこの記事に追加しています。最後に、 `nextArticleID` をインクリメントして（次の要素が新しい固有の ID を取得するように）、新しい `<article>` 要素を呼び出し元に返します。
+まず、`<article>` 要素を作成し、その ID を固有の値 `nextArticleID` に設定します（これは 1 から始まり、各記事ごとに増えていきます）。次に、記事のタイトルのために {{HTMLElement("Heading_Elements", "h2")}} 要素を作成して追加し、`contents` の HTML をこの記事に追加しています。最後に、 `nextArticleID` をインクリメントして（次の要素が新しい固有の ID を取得するように）、新しい `<article>` 要素を呼び出し元に返します。
 
 #### 広告の作成
 
@@ -465,7 +465,7 @@ function createArticle(contents) {
 function loadRandomAd(replaceBox) {
   const ads = [
     {
-      bgcolor: "#cec",
+      bgcolor: "#cceecc",
       title: "Eat Green Beans",
       body: "Make your mother proud—they're good for you!",
     },
@@ -480,7 +480,7 @@ function loadRandomAd(replaceBox) {
       body: "Love really does make the world go round…",
     },
     {
-      bgcolor: "#fee",
+      bgcolor: "#ffeeee",
       title: "Flexbox Florist",
       body: "When life's layout gets complicated, send flowers.",
     },
@@ -534,7 +534,7 @@ function loadRandomAd(replaceBox) {
 - `adBox`
   - : これを、広告を表わす要素に設定します。ページに追加される新しい広告の場合、これは {{domxref("Document.createElement()")}} で作成されます。既存の広告を置き換える場合、これは指定された広告要素 (`replaceBox`) に設定します。
 - `title`
-  - : 広告のタイトルを表す {{HTMLElement("h2")}} 要素を保持します。
+  - : 広告のタイトルを表す {{HTMLElement("Heading_Elements", "h2")}} 要素を保持します。
 - `body`
   - : 広告の本文を表す {{HTMLElement("p")}} を保持します。
 - `timerElem`
@@ -544,7 +544,7 @@ function loadRandomAd(replaceBox) {
 
 もし `replaceBox` に値が指定された場合、それを広告要素として使用します。そのためには、まず {{domxref("IntersectionObserver.unobserve()")}} を呼び出して要素の監視を終了させます。次に、広告を構成する各要素（広告ボックス自体、タイトル、本体、およびタイマーボックス）のローカル変数がすべて、既存の広告の対応する要素に設定されます。
 
-replaceBox に値が指定されなかった場合は、新しい広告要素を作成します。広告の新しい {{HTMLElement("div")}} 要素を作成し、そのクラス名を `"ad"` に設定することでプロパティを確立します。次に、広告のタイトル要素を、本体や表示タイマーと共に作成します。これらは、それぞれ {{HTMLElement("h2")}}, {{HTMLElement("p")}}, {{HTMLElement("div")}} 要素になります。これらの要素を `adBox` 要素に付加します。
+replaceBox に値が指定されなかった場合は、新しい広告要素を作成します。広告の新しい {{HTMLElement("div")}} 要素を作成し、そのクラス名を `"ad"` に設定することでプロパティを確立します。次に、広告のタイトル要素を、本体や表示タイマーと共に作成します。これらは、それぞれ {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("p")}}, {{HTMLElement("div")}} 要素になります。これらの要素を `adBox` 要素に付加します。
 
 その後、コードのパスは再び繰り返しになります。広告の背景色は新しい広告のレコードで指定された値に設定され、要素のクラスとコンテンツも適切に設定されます。
 
@@ -583,7 +583,7 @@ function replaceAd(adBox) {
 
 出来上がったページは、このようになります。上下にスクロールして、可視性の変化が各広告のタイマーにどのように影響するかを試してみてください。また、各広告は表示されてから 1 分後に置き換えられること（ただし、広告を最初にスクロールして表示から外し、再び戻す必要があります）、文書内のタブがバックグラウンドにある間はタイマーが一時停止することに注意してください。ただし、ブラウザーを別のウィンドウで覆っても、タイマーは一時停止しません。
 
-{{EmbedLiveSample("Building_the_site", 750, 800)}}
+{{EmbedLiveSample("サイトの構築", 750, 800)}}
 
 ## 関連情報
 

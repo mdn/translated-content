@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
-{{GamesSidebar}}
-
 이 페이지에는 다양한 형태의 웹 게임을 효과적으로 만들기 위해 중요한 여러가지 튜토리얼들을 포함하고 있습니다.
 
 - [순수 JavaScript를 사용한 2D 게임](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)

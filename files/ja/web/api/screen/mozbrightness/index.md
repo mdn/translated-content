@@ -1,6 +1,9 @@
 ---
-title: Screen.mozBrightness
+title: "Screen: mozBrightness プロパティ"
+short-title: mozBrightness
 slug: Web/API/Screen/mozBrightness
+l10n:
+  sourceCommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
 ---
 
 {{APIRef("CSSOM")}}{{Deprecated_Header}}{{Non-standard_Header}}

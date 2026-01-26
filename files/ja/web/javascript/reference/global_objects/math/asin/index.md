@@ -1,11 +1,10 @@
 ---
 title: Math.asin()
+short-title: asin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asin
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Math.asin()`** は静的メソッドで、数値の逆正弦（アークサイン）をラジアン単位で返します。
 
@@ -15,19 +14,19 @@ l10n:
 </math>
 <!-- prettier-ignore-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.asin()")}}
+{{InteractiveExample("JavaScript デモ: Math.asin()")}}
 
 ```js interactive-example
-// Calculates angle of a right-angle triangle in radians
+// 直角三角形の角度をラジアンで計算する
 function calcAngle(opposite, hypotenuse) {
   return Math.asin(opposite / hypotenuse);
 }
 
 console.log(calcAngle(6, 10));
-// Expected output: 0.6435011087932844
+// 予想される結果: 0.6435011087932844
 
 console.log(calcAngle(5, 3));
-// Expected output: NaN
+// 予想される結果: NaN
 ```
 
 ## 構文

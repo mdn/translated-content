@@ -5,7 +5,7 @@ slug: Web/API/FeaturePolicy
 
 {{APIRef("Feature Policy")}}
 
-L'interface `FeaturePolicy` de l'[API Feature Policy](/fr/docs/Web/HTTP/Permissions_Policy) représente l'ensemble des règles appliquées au contexte d'exécution courant.
+L'interface `FeaturePolicy` de l'[API Feature Policy](/fr/docs/Web/HTTP/Guides/Permissions_Policy) représente l'ensemble des règles appliquées au contexte d'exécution courant.
 
 ## Méthodes de FeaturePolicy
 

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Accessibility/CSS_and_JavaScript
 original_slug: Learn/Accessibility/CSS_and_JavaScript
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}
 
 CSS y JavaScript, cuando se usan correctamente, también tienen el potencial de permitir experiencias web accesibles... o pueden dañar significativamente la accesibilidad si se usan incorrectamente. Este artículo describe algunas de las mejores prácticas de CSS y JavaScript que deben tenerse en cuenta para garantizar que incluso el contenido complejo sea lo más accesible posible.
 
@@ -214,7 +214,8 @@ A los usuarios de lectores de pantalla no les importa nada de esto: están conte
 
 Por otro lado, no debes usar {{cssxref ("visibility")}}`: hidden` o {{cssxref ("display")}}`: none`, porque ocultan el contenido de los lectores de pantalla. A menos que, por supuesto, exista una buena razón por la que desees ocultar este contenido a los lectores de pantalla.
 
-> **Nota:** [Invisible Content Just for Screen Reader Users](https://webaim.org/techniques/css/invisiblecontent/) tiene muchos más detalles útiles sobre este tema.
+> [!NOTE]
+> [Invisible Content Just for Screen Reader Users](https://webaim.org/techniques/css/invisiblecontent/) tiene muchos más detalles útiles sobre este tema.
 
 ### Acepta que los usuarios pueden saltarse tus estilos
 
@@ -339,7 +340,8 @@ Explicaremos estos atributos en nuestro próximo artículo, que cubre [WAI-ARIA]
 > [!NOTE]
 > Algunos de vosotros probablemente estaréis pensando en el hecho de que los formularios HTML5 tienen mecanismos de validación integrados como los atributos `required`, `min` / `minlength` y `max` / `maxlength` (consultad la referencia del elemento {{htmlelement("input")}} para más información). No los hemos usado en la demostración porque la compatibilidad entre navegadores es irregular (por ejemplo, solo funciona en IE10 y versiones superiores).
 
-> **Nota:** [Usable and Accessible Form Validation and Error Recovery](https://webaim.org/techniques/formvalidation/), de WebAIM, proporciona más información útil sobre la validación de formularios accesibles.
+> [!NOTE]
+> [Usable and Accessible Form Validation and Error Recovery](https://webaim.org/techniques/formvalidation/), de WebAIM, proporciona más información útil sobre la validación de formularios accesibles.
 
 ### Otros potenciales problemas de accesibilidad de JavaScript
 
@@ -377,4 +379,4 @@ Esperamos que este artículo te haya brindado una buena cantidad de detalles y c
 
 ¡Siguiente parada, WAI-ARIA!
 
-{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}

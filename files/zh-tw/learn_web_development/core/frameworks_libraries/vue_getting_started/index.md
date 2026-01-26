@@ -3,7 +3,7 @@ title: Vue 入門
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_getting_started
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Vue_first_component", "Learn_web_development/Core/Frameworks_libraries")}}
+{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Vue_first_component", "Learn_web_development/Core/Frameworks_libraries")}}
 
 現在來介紹我們的第三個框架 Vue 。在這篇文章中，我們會介紹 Vue 的背景，如何安裝 Vue 及建立一個新專案，學習整個 Vue 專案的高階架構及一個獨立的元件，學習如何在本地端運行專案，以及開始建構我們的範例。
 
@@ -50,7 +50,7 @@ Vue 是一個新穎的 Javascript 框架，它提供了很多有用的功能來�
 
 ## 安裝
 
-如果要在既有的專案中使用 Vue ，你可以把以下任一個 [`<script>`](/zh-TW/docs/Web/HTML/Element/script) 標籤加到你的頁面中，這樣你就可以開始在專案中使用 Vue ，這也是為什麼 Vue 宣稱自己是一個漸進式的框架。它提供了一個很好的機會，你可以把一些使用函式庫（像是 JQuery ）的專案轉變成使用 Vue ，如此一來，你就可以使用很多 Vue 的核心功能，像是屬性、客製化元件以及資料管理。
+如果要在既有的專案中使用 Vue ，你可以把以下任一個 [`<script>`](/zh-TW/docs/Web/HTML/Reference/Elements/script) 標籤加到你的頁面中，這樣你就可以開始在專案中使用 Vue ，這也是為什麼 Vue 宣稱自己是一個漸進式的框架。它提供了一個很好的機會，你可以把一些使用函式庫（像是 JQuery ）的專案轉變成使用 Vue ，如此一來，你就可以使用很多 Vue 的核心功能，像是屬性、客製化元件以及資料管理。
 
 - 開發環境版本（非優化版本，包含了有幫助的命令列警告。適合開發階段）
 
@@ -120,7 +120,6 @@ CLI 會開始建構你的專案，並且安裝所需的相依套件。
 - `babel.config.js` ：這是 [Babel](https://babeljs.io/) 的組態檔案，在開發階段我們可以使用一些 Javascript 的新功能，透過這個檔案轉換成在產品環境可以跨瀏覽器運行的舊版語法。你也可以在這個檔案裡註冊額外的 babel 套件。
 - `.browserslistrc` ：這是 [Browserslist](https://github.com/browserslist/browserslist) 的組態檔案。你可以透過它來控制需要對哪些瀏覽器進行支持與優化
 - `public` ：這個資料夾包含了所有發布的靜態檔案，這些檔案在建置過程不會經過 [Webpack](https://webpack.js.org/) 加工。（但是有一個例外： `index.html` 會有一些處理）。
-
   - `favicon.ico` ：這是應用程式的 favicon。目前是 Vue 的標誌。
   - `index.html` ：這是應用程式的模板。你的 Vue 應用程式會透過這個 HTML 頁面來運行，你也可以使用 lodash 樣板語言在這個頁面穿插一些值。
 
@@ -128,7 +127,6 @@ CLI 會開始建構你的專案，並且安裝所需的相依套件。
     > 這個模板不是用來管理你的應用程式的版面－而是用來管理應用程式以外的靜態 HTML 檔案，只有在使用一些進階的功能才需要修改這個檔案。
 
 - `src` ：這個資料夾是 Vue 專案的核心。
-
   - `main.js` ：這是應用程式的進入點。目前，這個檔案會初始化你的 Vue 應用程式並定義要將應用掛載到 `index.html` 檔案中的哪個 HTML 元素。通常還會在這個檔案註冊全域性元件或載入其他 Vue 函式庫。
   - `App.vue` ：這是 Vue 應用程式的根節點元件。往下看可以了解更多關於 Vue 元件的說明。
   - `components` ：你可以把你的元件放在這個資料夾。目前它只有放一個範例元件。
@@ -206,7 +204,7 @@ INFO  Starting development server...
 
 ## 做一些改變
 
-現在讓我們來對應用程式做一些改變——刪除 Vue logo 。打開 `App.vue` 檔案，從 template 區塊刪除 [`<img>`](/zh-TW/docs/Web/HTML/Element/img) 元素：
+現在讓我們來對應用程式做一些改變——刪除 Vue logo 。打開 `App.vue` 檔案，從 template 區塊刪除 [`<img>`](/zh-TW/docs/Web/HTML/Reference/Elements/img) 元素：
 
 ```html
 <img alt="Vue logo" src="./assets/logo.png" />

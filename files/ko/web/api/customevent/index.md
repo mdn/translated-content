@@ -41,4 +41,4 @@ slug: Web/API/CustomEvent
 ## 같이 보기
 
 - {{domxref("Window.postMessage()")}}
-- [이벤트 생성 및 발동](/ko/docs/Web/Events/Creating_and_triggering_events)
+- [이벤트 생성 및 발동](/ko/docs/Web/API/Document_Object_Model/Events)

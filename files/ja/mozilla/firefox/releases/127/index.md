@@ -5,24 +5,21 @@ l10n:
   sourceCommit: 81b27da7107783b4a4d9ff245a99d93f6d3efc3a
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 127 の変更点をまとめています。Firefox 127 は、米国時間 [2024 年 6 月 11 日](https://whattrainisitnow.com/release/?version=127) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### HTML
 
-- `data:` および `javascript:` URL が、`<base>` 要素の [`href`](/ja/docs/Web/HTML/Element/base#href) 属性で禁止されました ([Firefox bug 1850967](https://bugzil.la/1850967))。
+- `data:` および `javascript:` URL が、`<base>` 要素の [`href`](/ja/docs/Web/HTML/Reference/Elements/base#href) 属性で禁止されました ([Firefox bug 1850967](https://bugzil.la/1850967))。
 
 ### CSS
 
-- [`conic-gradient()`](/ja/docs/Web/CSS/gradient/conic-gradient)、[`linear-gradient()`](/ja/docs/Web/CSS/gradient/linear-gradient)、[`radial-gradient()`](/ja/docs/Web/CSS/gradient/radial-gradient) 関数で作成するグラデーション、および繰り返しのグラデーションの [`repeating-conic-gradient()`](/ja/docs/Web/CSS/gradient/repeating-conic-gradient)、[`repeating-linear-gradient()`](/ja/docs/Web/CSS/gradient/repeating-linear-gradient)、[`repeating-radial-gradient()`](/ja/docs/Web/CSS/gradient/repeating-radial-gradient) 関数で、[`<color-interpolation-method>`](/ja/docs/Web/CSS/color-interpolation-method) の使用をサポートしました ([Firefox bug 1861363](https://bugzil.la/1861363))。
+- [`conic-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/conic-gradient)、[`linear-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/linear-gradient)、[`radial-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/radial-gradient) 関数で作成するグラデーション、および繰り返しのグラデーションの [`repeating-conic-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient)、[`repeating-linear-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/repeating-linear-gradient)、[`repeating-radial-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/repeating-radial-gradient) 関数で、[`<color-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/color-interpolation-method) の使用をサポートしました ([Firefox bug 1861363](https://bugzil.la/1861363))。
 
 ### JavaScript
 
 - [`Set`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set) の、以下のメソッドをサポートしました ([Firefox bug 1868423](https://bugzil.la/1868423)):
-
   - [`Set.prototype.intersection()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/intersection) — 自身の Set と指定した Set の両方に存在する要素を持つ、新しい Set を返します。
   - [`Set.prototype.union()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/union) — 自身の Set と指定した Set にあるすべての要素を持つ、新しい Set を返します。
   - [`Set.prototype.difference()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/difference) — 自身の Set に存在するが指定した Set には存在しない要素を持つ、新しい Set を返します。
@@ -39,7 +36,7 @@ l10n:
 
 - 安全なコンテンツで、Firefox は音声、動画、画像のサブリソースの要求を自動的に HTTP から HTTPS へアップグレードして、その他のメディアの HTTP 要求はブロックするようになりました。メディアのホストが HTTPS をサポートしてないためアップグレードした要求が失敗した場合は、メディアを見つけられません。
   これは、コンテンツが HTTPS で安全に提供されている場合はすべてのサブリソースも安全に提供されること、そうでない場合はまったく提供されないことを保証します。
-  ページが [混在コンテンツ](/ja/docs/Web/Security/Mixed_content) を表示することがなくなったため、ページが混在コンテンツを含むことを示すアイコンも Firefox から削除しました。また、コンソールで混在コンテンツの警告を、要求がアップグレードされたことを表す警告に置き換えました ([Firefox bug 1779757](https://bugzil.la/1779757))。
+  ページが [混在コンテンツ](/ja/docs/Web/Security/Defenses/Mixed_content) を表示することがなくなったため、ページが混在コンテンツを含むことを示すアイコンも Firefox から削除しました。また、コンソールで混在コンテンツの警告を、要求がアップグレードされたことを表す警告に置き換えました ([Firefox bug 1779757](https://bugzil.la/1779757))。
 
 ### API
 
@@ -85,7 +82,7 @@ l10n:
 
 - **相対的な色で `calc()` カラーチャンネルをサポート:** `layout.css.relative-color-syntax.enabled`。
 
-  CSS の [`calc()`](/ja/docs/Web/CSS/calc) 関数で、[相対的な色](/ja/docs/Web/CSS/CSS_colors/Relative_colors#using_math_functions) のカラーチャンネルを解析できるようになりました ([Firefox bug 1889561](https://bugzil.la/1889561))。
+  CSS の [`calc()`](/ja/docs/Web/CSS/Reference/Values/calc) 関数で、[相対的な色](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors#using_math_functions) のカラーチャンネルを解析できるようになりました ([Firefox bug 1889561](https://bugzil.la/1889561))。
 
 - **JavaScript `Float16Array` 型付き配列**: `javascript.options.experimental.float16array`。
 

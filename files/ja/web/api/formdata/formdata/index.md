@@ -33,7 +33,7 @@ new FormData(form, submitter)
 - {{jsxref("TypeError")}}
   - : 指定した `submitter` が{{Glossary("submit button", "送信ボタン")}}でない場合に発生します。
 - `NotFoundError` {{domxref("DOMException")}}
-  - : 指定した `submitter` が `form` のメンバーでない場合に発生します。`submitter` はフォーム要素の子孫であるか、フォームを参照する [`form`](/ja/docs/Web/HTML/Element/input#form) 属性がなければなりません。
+  - : 指定した `submitter` が `form` のメンバーでない場合に発生します。`submitter` はフォーム要素の子孫であるか、フォームを参照する [`form`](/ja/docs/Web/HTML/Reference/Elements/input#form) 属性がなければなりません。
 
 ## 例
 
@@ -114,5 +114,5 @@ for (const [key, value] of formData) {
 
 ## 関連情報
 
-- [FormData オブジェクトの使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
+- [FormData オブジェクトの使い方](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

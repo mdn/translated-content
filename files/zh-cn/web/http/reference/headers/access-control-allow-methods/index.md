@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3eea6ef9070a54ffd6379164ff9fd39db66b5172
 ---
 
-{{HTTPSidebar}}
-
 **`Access-Control-Allow-Methods`** 响应标头指定了在响应{{glossary("preflight request", "预检请求")}}时访问资源所允许的一个或多个方法。
 
 <table class="properties">

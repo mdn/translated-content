@@ -38,13 +38,11 @@ RegExp(motif[, marqueurs])
 ### Paramètres
 
 - `motif`
-
   - : Le texte de l'expression rationnelle.
 
     Avec ES5, ce peut être un autre objet `RegExp` ou une valeur littérale (uniquement lorsqu'on utilise la notation avec la fonction / le constructeur). Un motif peut contenir [des caractères spéciaux](/fr/docs/Web/JavaScript/Guide/Regular_expressions) pour cibler un ensemble plus large de valeurs que ce que permet une chaîne de caractère littérale.
 
 - `marqueurs`
-
   - : Si cet argument est utilisé, c'est une chaîne de caractères qui contient les marqueurs à ajouter à l'expression rationnelle.
 
     Si c'est un objet qui est fourni pour le motif, les marqueurs fournis par ce deuxième paramètre remplaceront les marqueurs provenant de l'objet (et `lastIndex` sera réinitialisé à `0`) (ES2015).
@@ -52,7 +50,6 @@ RegExp(motif[, marqueurs])
     Si `marqueurs` n'est pas indiqué comme argument et que le premier paramètre est un objet représentant une expression rationnelle, les marqueurs de ce dernier (y compris `lastIndex`) seront recopiés sur la nouvelle instance.
 
     `marqueurs` peut contenir toute combinaison avec les caractères suivants&nbsp;:
-
     - `d` (indices)
       - : Génère les indices des positions pour les sous-chaînes correspondantes.
     - `g` (recherche globale)

@@ -202,7 +202,7 @@ simple example code 를 다시한번 살펴보면, `ReadableStream()` 생성자�
 
 ### ReadableStream controllers
 
-ReadableStrem() 생성자에 인자로 전달된 객체안의 `start()` 와 `pull()` 메서드에 controller라는 인자가 전달되는 것을 볼수 있습니다. 이것은 {{domxref("ReadableStreamDefaultController")}} 클래스의 인스턴스이며 우리의 스트림을 제어하는데 사용 됩니다.
+ReadableStream() 생성자에 인자로 전달된 객체안의 `start()` 와 `pull()` 메서드에 controller라는 인자가 전달되는 것을 볼수 있습니다. 이것은 {{domxref("ReadableStreamDefaultController")}} 클래스의 인스턴스이며 우리의 스트림을 제어하는데 사용 됩니다.
 
 우리의 예제에서, 우리는 fetch된 body로부터 chunk의 값을 읽은 뒤 그 값을 커스텀 스트림에 집어 넣기 위해 Controller의 {{domxref("ReadableStreamDefaultController.enqueue","enqueue()")}} 메서드를 상용하고 있습니다.
 

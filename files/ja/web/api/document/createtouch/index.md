@@ -10,7 +10,8 @@ l10n:
 
 **`Document.createTouch()`** メソッドは、新しい {{DOMxRef("Touch")}} オブジェクトを生成して返します。
 
-> **メモ:** {{domxref("TouchEvent.TouchEvent", "TouchEvent()")}} コンストラクターを使用してください。
+> [!NOTE]
+> {{domxref("TouchEvent.TouchEvent", "TouchEvent()")}} コンストラクターを使用してください。
 
 ## 構文
 

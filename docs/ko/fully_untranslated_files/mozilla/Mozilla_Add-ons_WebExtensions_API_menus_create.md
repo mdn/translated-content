@@ -23,9 +23,7 @@ browser.menus.create(
 ### 매개변수
 
 - `createProperties`
-
   - : `object`. 새 메뉴 항목의 속성들
-
     - `checked` {{optional_inline}}
       - : `boolean`. checkbox나 radio 항목의 초기값: 선택은 `true`, 선택이 아니면 `false`. radio 항목이라면 그룹 중에서 하나만 선택된 것으로 할 수 있다.
     - `command` {{optional_inline}}</dt>
@@ -43,7 +41,6 @@ browser.menus.create(
     - `enabled` {{optional_inline}}
       - : `boolean`. 메뉴 항목이 사용 가능한지 아닌지를 지정한다. 기본값은 `true`.
     - `icons` {{optional_inline}}
-
       - : `object`. One or more custom icons to display next to the item. Custom icons can only be set for items appearing in submenus. This property is an object with one property for each supplied icon: the property's name should include the icon's size in pixels, and path is relative to the icon from the extension's root directory. The browser tries to choose a 16x16 pixel icon for a normal display or a 32x32 pixel icon for a high-density display. To avoid any scaling, you can specify icons like this:
 
         ```json
@@ -72,13 +69,11 @@ browser.menus.create(
     - `targetUrlPatterns` {{optional_inline}}
       - : `array` of `string`. Similar to `documentUrlPatterns`, but lets you filter based on the `href` of anchor tags and the `src` attribute of img/audio/video tags. This parameter supports any URL scheme, even those that are usually not allowed in a match pattern.
     - `title` {{optional_inline}}
-
       - : `string`. The text to be displayed in the item. Mandatory unless `type` is "separator".
 
         You can use "`%s`" in the string. If you do this in a menu item, and some text is selected in the page when the menu is shown, then the selected text will be interpolated into the title. For example, if `title` is "Translate '%s' to Pig Latin" and the user selects the word "cool", then activates the menu, then the menu item's title will be: "Translate 'cool' to Pig Latin".
 
         If the title contains an ampersand "&" then the next character will be used as an access key for the item, and the ampersand will not be displayed. Exceptions to this are:
-
         - If the next character is also an ampersand: then a single ampersand will be displayed and no access key will be set. In effect, "&&" is used to display a single ampersand.
         - If the next characters are the interpolation directive "%s": then the ampersand will not be displayed and no access key will be set.
         - If the ampersand is the last character in the title: then the ampersand will not be displayed and no access key will be set.

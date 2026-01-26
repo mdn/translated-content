@@ -11,9 +11,9 @@ slug: Web
 
 ## 웹 개발자를 위한 문서
 
-- [웹 개발자 안내서](/ko/docs/Web/Guide)
+- [웹 개발자 안내서](/ko/docs/MDN/Guides)
   - : 웹 개발자 안내서는 원하는 것과 필요한 것을 웹으로 만들 때 유용한 도움말을 제공합니다.
-- [웹 개발자를 위한 자습서](/ko/docs/Web/Tutorials)
+- [웹 개발자를 위한 자습서](/ko/docs/MDN/Tutorials)
   - : HTML, CSS, JavaScript, Web API에 대한 단계별 학습을 제공하는 문서 목록입니다.
 - [접근성](/ko/docs/Web/Accessibility)
   - : 가능한 한 많은 사람들이 웹사이트를 사용할 수 있게 합니다. 비록 이러한 사람들의 능력이 어떤 식으로든 제한되어 있는 경우에도 말이죠.
@@ -52,7 +52,7 @@ slug: Web
   - : 웹드라이버(WebDriver)는 브라우저를 사용하는 실제 사람의 행위를 모방하여 원격으로 브라우저를 제어하는 브라우저-자동화 메커니즘입니다. 웹 앱의 브라우저간 테스트를 위해 폭넓게 사용합니다.
 - [Web Extensions](/ko/docs/Mozilla/Add-ons/WebExtensions)
   - : 웹 확장 기능(Web Extensions)은 브라우저에서 사용자에게 향상된 기능을 제공합니다. 광고 및 기타 컨텐츠 차단, 페이지 모양 사용자 지정 등을 수행할 수 있습니다.
-- [Web App Manifests](/ko/docs/Web/Manifest)
+- [Web App Manifests](/ko/docs/Web/Progressive_web_apps/Manifest)
   - : 웹 앱 매니페스트(Web App Manifest)를 사용하면 사용자가 세로/가로 화면 방향과 디스플레이 모드(예: 전체 화면)를 미리 설정하여 장치의 홈 스크린에 웹 앱을 설치할 수 있습니다.
 - [프로그레시브 웹 앱(PWAs)](/ko/docs/Web/Progressive_web_apps)
   - : 프로그레시브 웹 앱(Progressive Web App)은 네이티브 모바일 앱과 유사한 사용자 경험을 제공합니다.

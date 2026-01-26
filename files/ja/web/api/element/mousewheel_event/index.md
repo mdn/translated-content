@@ -40,7 +40,6 @@ _このインターフェイスには、祖先である {{DOMxRef("MouseEvent")}
 - {{DOMxRef("WheelEvent.deltaZ")}} {{ReadOnlyInline}}
   - : z 軸のスクロール量を表す `double` を返します。
 - {{DOMxRef("WheelEvent.deltaMode")}} {{ReadOnlyInline}}
-
   - : `delta*` 値のスクロール量の単位を表す `unsigned long` を返します。指定可能な値は次の通りです。
 
     | 定数                         | 値     | 説明                                                                                            |

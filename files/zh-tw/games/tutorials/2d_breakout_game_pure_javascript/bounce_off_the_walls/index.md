@@ -2,12 +2,10 @@
 title: 撞擊牆壁
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
 l10n:
-  sourceCommit: b0d4232c133f19213742db2286d2c293ce71f674
+  sourceCommit: 14acf1aa7885157debdf1b6111f4bd10c064ec60
 ---
 
-{{GamesSidebar}}
-
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
 
 這是 [Gamedev Canvas 教程](/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)的**第 3 步**（共 10 步）。你可以在 [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html) 找到課後完整的原始碼。
 
@@ -150,9 +148,10 @@ function startGame() {
   setInterval(draw, 10);
 }
 
-document.getElementById("runButton").addEventListener("click", function () {
+const runButton = document.getElementById("runButton");
+runButton.addEventListener("click", () => {
   startGame();
-  this.disabled = true;
+  runButton.disabled = true;
 });
 ```
 
@@ -165,4 +164,4 @@ document.getElementById("runButton").addEventListener("click", function () {
 
 我們現在已經到了球既移動又保持在遊戲板上的階段。在第四章中，我們將看看如何實現可控的球拍——請參見[球拍和鍵盤控制](/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls)。
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}

@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("DOM") }}
 
-**`links`** は {{domxref("Document")}} インターフェイスの読み取り専用プロパティで、文書中のすべての {{HTMLElement("area")}} 要素および {{HTMLElement("a")}} 要素のうち、[href](/ja/docs/Web/HTML/Element/a#href) 属性の値があるものの集合を返します。
+**`links`** は {{domxref("Document")}} インターフェイスの読み取り専用プロパティで、文書中のすべての {{HTMLElement("area")}} 要素および {{HTMLElement("a")}} 要素のうち、[href](/ja/docs/Web/HTML/Reference/Elements/a#href) 属性の値があるものの集合を返します。
 
 ## 値
 

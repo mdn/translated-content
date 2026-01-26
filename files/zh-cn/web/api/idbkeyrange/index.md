@@ -24,13 +24,11 @@ slug: Web/API/IDBKeyRange
 如果以下条件为 true，则键包含在键范围中：
 
 - 键范围的下界值为以下值或符合以下条件之一时：
-
   - `undefined`
   - 低于正在被鉴定的键值
   - 等于正在被鉴定的键值，且键范围的 `lowerOpen` 属性为 `false`.
 
 - 键范围的上界值为以下值或符合以下条件之一时：
-
   - `undefined`
   - 高于正在被鉴定的键值
   - 等于正在被鉴定的键值，且键范围的 `upperOpen` 属性为 `false`.

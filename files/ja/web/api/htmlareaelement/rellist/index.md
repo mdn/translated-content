@@ -1,13 +1,14 @@
 ---
 title: "HTMLAreaElement: relList プロパティ"
+short-title: relList
 slug: Web/API/HTMLAreaElement/relList
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLAreaElement.relList`** 読み取り専用プロパティは、[`rel`](/ja/docs/Web/HTML/Attributes/rel) 属性を反映しています。これは生きた {{domxref("DOMTokenList")}} で、 {{HTMLElement("area")}} 要素で表されるリソースと現在の文書との間の関係を示すリンク種別のセットが入ります。
+**`HTMLAreaElement.relList`** 読み取り専用プロパティは、[`rel`](/ja/docs/Web/HTML/Reference/Attributes/rel) 属性を反映しています。これは生きた {{domxref("DOMTokenList")}} で、 {{HTMLElement("area")}} 要素で表されるリソースと現在の文書との間の関係を示すリンク種別のセットが入ります。
 
 このプロパティ自体は読み取り専用です。 つまり、 {{domxref("DOMTokenList")}} を別のものに置き換えることはできませんが、その内容は変更できます。
 

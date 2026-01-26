@@ -3,8 +3,6 @@ title: position
 slug: Web/CSS/position
 ---
 
-{{CSSRef}}
-
 La propiedad **`position`** de [CSS](/es/docs/Web/CSS) especifica cómo un elemento es posicionado en el documento. Las propiedades {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, y {{Cssxref("left")}} determinan la ubicación final de los elementos posicionados.
 
 {{InteractiveExample("CSS Demo: position")}}
@@ -101,8 +99,6 @@ section {
 }
 ```
 
-El código fuente de este ejemplo interactivo se encuentra almacenado en un repositorio de GitHub. Si quisiera contribuir al proyecto de ejemplos interactivos, por favor clone <https://github.com/mdn/interactive-examples> y envíenos sus contribuciones como un pull request.
-
 ### Tipos de posicionamiento
 
 - Un **elemento posicionado** es un elemento cuyo valor [computado](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d) de `position` es `relative`, `absolute`, `fixed`, o `sticky`. (En otras palabras, cualquiera excepto `static`).
@@ -128,19 +124,16 @@ La propiedad `position` es especificada como una palabra única elegida de la si
 - `relative`
   - : El elemento es posicionado de acuerdo al flujo normal del documento, y luego es desplazado _con relación a sí mismo_, con base en los valores de `top`, `right`, `bottom`, and `left`. El desplazamiento no afecta la posición de ningún otro elemento; por lo que, el espacio que se le da al elemento en el esquema de la página es el mismo como si la posición fuera `static`. Este valor crea un nuevo [contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context), donde el valor de `z-index` no es `auto`. El efecto que tiene `relative` sobre los elementos `table-*-group`, `table-row`, `table-column`, `table-cell`, y `table-caption` no está definido.
 - `absolute`
-
   - : El elemento es removido del flujo normal del documento, sin crearse espacio alguno para el elemento en el esquema de la página. Es posicionado relativo a su ancestro posicionado más cercano, si lo hay; de lo contrario, se ubica relativo al [bloque contenedor](/es/docs/Web/CSS/Containing_block) inicial. Su posición final está determinada por los valores de `top`, `right`, `bottom`, y `left`.
 
     Este valor crea un nuevo [contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context) cuando el valor de `z-index` no es `auto`. Elementos absolutamente posicionados pueden tener margen, y no colapsan con ningún otro margen.
 
 - `fixed`
-
   - : El elemento es removido del flujo normal del documento, sin crearse espacio alguno para el elemento en el esquema de la página. Es posicionado con relación al [bloque contenedor](/es/docs/Web/CSS/Containing_block) inicial establecido por el {{glossary("viewport")}}, excepto cuando uno de sus ancestros tiene una propiedad `transform`, `perspective`, o `filter` establecida en algo que no sea `none` (ver [CSS Transforms Spec](https://www.w3.org/TR/css-transforms-1/#propdef-transform)), en cuyo caso ese ancestro se comporta como el bloque contenedor. (Notar que hay inconsistencias del navegador con `perspective` y `filter` contribuyendo a la formación del bloque contenedor.) Su posición final es determinada por los valores de `top`, `right`, `bottom`, y `left`.
 
     Estos valores siempre crean un nuevo [contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context). En documentos impresos, el elemento se coloca en la misma posición en _cada página_.
 
 - `sticky` {{experimental_inline}}
-
   - : El elemento es posicionado de acuerdo al flujo normal del documento, y luego es desplazado _con relación a su ancestro que se desplace más cercano y su_ [bloque contenedor](/es/docs/Web/CSS/Containing_block) (ancestro en nivel de bloque más cercano) incluyendo elementos relacionados a tablas, basados en los valores de `top`, `right`, `bottom`, y `left`. El desplazamiento no afecta la posición de ningún otro elmento.
 
     Estos valores siempre crean un nuevo [contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context). Nótese que un elemento sticky se "adhiere" a su ancestro más cercano que tiene un "mecanismo de desplazamiento" (creado cuando el `overflow` es `hidden`, `scroll`, `auto`, o bien `overlay`), aún si ese ancestro no es el ancestro con desplazamiento más cercano. Esto inhibe efectivamente el comportamiento "sticky" (ver el [Github issue en W3C CSSWG](https://github.com/w3c/csswg-drafts/issues/865)).

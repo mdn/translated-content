@@ -29,14 +29,11 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `id`
       - : `string`. L'ID du nouvel élément de favori.
 
     <!---->
-
     - `bookmark`
       - : {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}. Informations sur le nouvel élément de favori.
 
@@ -60,8 +57,6 @@ browser.bookmarks.onCreated.addListener(handleCreated);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

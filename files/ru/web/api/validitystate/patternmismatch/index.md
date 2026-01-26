@@ -5,9 +5,9 @@ slug: Web/API/ValidityState/patternMismatch
 
 {{APIRef("HTML DOM")}}
 
-Доступное только для чтения свойство **`patternMismatch`** объекта **[`ValidityState`](/ru/docs/Web/API/ValidityState)** указывает, соответствует ли значение {{HTMLElement("input")}} шаблону, указанному в атрибуте [`pattern`](/ru/docs/Web/HTML/Attributes/pattern).
+Доступное только для чтения свойство **`patternMismatch`** объекта **[`ValidityState`](/ru/docs/Web/API/ValidityState)** указывает, соответствует ли значение {{HTMLElement("input")}} шаблону, указанному в атрибуте [`pattern`](/ru/docs/Web/HTML/Reference/Attributes/pattern).
 
-Если поле поддерживает атрибут [`pattern`](/ru/docs/Web/HTML/Attributes/pattern), это значит, что {{HTMLElement("input")}} содержит `type` {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}} или {{HTMLElement("input/search", "search")}} и в значении атрибута задано валидное регулярное выражение. Если значение не соответствует ограничениям, заданным в [`pattern`](/ru/docs/Web/HTML/Attributes/pattern), свойство `patternMismatch` будет `true`.
+Если поле поддерживает атрибут [`pattern`](/ru/docs/Web/HTML/Reference/Attributes/pattern), это значит, что {{HTMLElement("input")}} содержит `type` {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}} или {{HTMLElement("input/search", "search")}} и в значении атрибута задано валидное регулярное выражение. Если значение не соответствует ограничениям, заданным в [`pattern`](/ru/docs/Web/HTML/Reference/Attributes/pattern), свойство `patternMismatch` будет `true`.
 
 ## Примеры
 
@@ -42,7 +42,7 @@ slug: Web/API/ValidityState/patternMismatch
 </p>
 ```
 
-Здесь у нас есть 3 поля для номера телефона северной Америки, помещённых внутрь `label`. В каждом поле, как определено в атрибуте [`pattern`](/ru/docs/Web/HTML/Attributes/pattern), ожидается ввод 3, 3 и 4 символов соответственно.
+Здесь у нас есть 3 поля для номера телефона северной Америки, помещённых внутрь `label`. В каждом поле, как определено в атрибуте [`pattern`](/ru/docs/Web/HTML/Reference/Attributes/pattern), ожидается ввод 3, 3 и 4 символов соответственно.
 
 Если значения слишком длинные, слишком короткие или содержат не цифровые символы, `patternMismatch` будет `true`. Если `true`, элемент соответствует CSS-псевдоклассу{{cssxref(":invalid")}}.
 
@@ -69,6 +69,6 @@ input:invalid {
 
 ## Смотрите также
 
-- [Валидация ограничений](/ru/docs/Web/HTML/Constraint_validation)
+- [Валидация ограничений](/ru/docs/Web/HTML/Guides/Constraint_validation)
 - [Формы: Валидация форм](/ru/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - [Регулярные выражения](/ru/docs/Web/JavaScript/Guide/Regular_expressions)

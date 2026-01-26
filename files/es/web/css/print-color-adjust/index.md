@@ -3,7 +3,7 @@ title: -webkit-print-color-adjust
 slug: Web/CSS/print-color-adjust
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 

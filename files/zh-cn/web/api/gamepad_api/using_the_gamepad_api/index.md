@@ -105,7 +105,6 @@ window.addEventListener("gamepadconnected", function (e) {
 - `mapping`: 一个用来指示浏览器是否已将设备上的控件重新映射到已知布局的字符串。目前只有一个受支持的已知布局 - [standard gamepad](https://dvcs.w3.org/hg/gamepad/raw-file/default/gamepad.html#remapping)(标准控制器)。如果浏览器能够将设备上的控件映射为该布局，`mapping` 属性将会为字符串 `standard`。
 - `connected`: 一个用来指示控制器是否连接到系统的布尔值。如果已连接则为 `True`；反之则为 `False`。
 - `buttons`: 一个表示设备上按钮的 {{ domxref("GamepadButton") }} 数组对象。每个 {{ domxref("GamepadButton") }} 都含有一个 `pressed` 和一个 `value` 属性：
-
   - `pressed` 属性是一个表示按钮当前是按下 (`true`) 还是没按下 (`false`) 的布尔值。
   - `value` 属性是一个表示已触发模拟按钮 (例如目前很多控制器的线性/段式扳机键) 的值的浮点值。值的范围被规范为 0.0 到 1.0。0.0 表示没被按下的按钮，1.0 表示被完全按下的按钮。
 

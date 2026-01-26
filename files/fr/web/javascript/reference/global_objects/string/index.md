@@ -171,7 +171,6 @@ d'être passée à la ligne parce que sinon
 - [`String.fromCodePoint(num1 [, ...[,numN]])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/fromCodePoint)
   - : Renvoie une chaîne de caractères créée en utilisant la séquence indiquée de points de code.
 - [`String.raw()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/raw)
-
   - : Renvoie une chaîne de caractères créée à partir d'un gabarit de chaîne de caractères brut.
 
 ## Propriétés des instances
@@ -228,13 +227,11 @@ d'être passée à la ligne parce que sinon
 - [`String.prototype.substring(indexStart [, indexEnd])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/substring)
   - : Renvoie une nouvelle chaîne de caractères contenant les caractères de la chaîne courante, situés à partir de l'indice donné ou entre les indices donnés.
 - [`String.prototype.toLocaleLowerCase( [locale, ...locales])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase)
-
   - : Renvoie une conversion en minuscules de la chaîne de caractères courante qui respecte la locale indiquée.
 
     Pour la plupart des langues, cela renverra la même valeur que [`toLowerCase()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase).
 
 - [`String.prototype.toLocaleUpperCase( [locale, ...locales])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase)
-
   - : Renvoie une conversion en majuscules de la chaîne de caractères courante qui respecte la locale indiquée.
 
     Pour la plupart des langues, cela renverra la même valeur que [`toUpperCase()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase).
@@ -264,31 +261,31 @@ d'être passée à la ligne parce que sinon
 > Elles ont des possibilités limitées et ne concernent qu'une petite sous-partie des éléments et attributs HTML disponibles.
 
 - [`String.prototype.anchor()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/anchor)
-  - : [`<a name="name">`](/fr/docs/Web/HTML/Element/a#attr-name) (cible hypertexte)
+  - : [`<a name="name">`](/fr/docs/Web/HTML/Reference/Elements/a#attr-name) (cible hypertexte)
 - [`String.prototype.big()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/big)
-  - : [`<big>`](/fr/docs/Web/HTML/Element/big)
+  - : [`<big>`](/fr/docs/Web/HTML/Reference/Elements/big)
 - [`String.prototype.blink()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/blink)
   - : [`<blink>`](/fr/docs/Web/HTML/Element/blink)
 - [`String.prototype.bold()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/bold)
-  - : [`<b>`](/fr/docs/Web/HTML/Element/b)
+  - : [`<b>`](/fr/docs/Web/HTML/Reference/Elements/b)
 - [`String.prototype.fixed()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/fixed)
-  - : [`<tt>`](/fr/docs/Web/HTML/Element/tt)
+  - : [`<tt>`](/fr/docs/Web/HTML/Reference/Elements/tt)
 - [`String.prototype.fontcolor()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/fontcolor)
-  - : [`<font color="color">`](/fr/docs/Web/HTML/Element/font#attr-color)
+  - : [`<font color="color">`](/fr/docs/Web/HTML/Reference/Elements/font#attr-color)
 - [`String.prototype.fontsize()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/fontsize)
-  - : [`<font size="size">`](/fr/docs/Web/HTML/Element/font#attr-size)
+  - : [`<font size="size">`](/fr/docs/Web/HTML/Reference/Elements/font#attr-size)
 - [`String.prototype.italics()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/italics)
-  - : [`<i>`](/fr/docs/Web/HTML/Element/i)
+  - : [`<i>`](/fr/docs/Web/HTML/Reference/Elements/i)
 - [`String.prototype.link()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/link)
-  - : [`<a href="url">`](/fr/docs/Web/HTML/Element/a#attr-href) (lien d'une URL)
+  - : [`<a href="url">`](/fr/docs/Web/HTML/Reference/Elements/a#attr-href) (lien d'une URL)
 - [`String.prototype.small()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/small)
-  - : [`<small>`](/fr/docs/Web/HTML/Element/small)
+  - : [`<small>`](/fr/docs/Web/HTML/Reference/Elements/small)
 - [`String.prototype.strike()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/strike)
-  - : [`<strike>`](/fr/docs/Web/HTML/Element/strike)
+  - : [`<strike>`](/fr/docs/Web/HTML/Reference/Elements/strike)
 - [`String.prototype.sub()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/sub)
-  - : [`<sub>`](/fr/docs/Web/HTML/Element/sub)
+  - : [`<sub>`](/fr/docs/Web/HTML/Reference/Elements/sub)
 - [`String.prototype.sup()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/sup)
-  - : [`<sup>`](/fr/docs/Web/HTML/Element/sup)
+  - : [`<sup>`](/fr/docs/Web/HTML/Reference/Elements/sup)
 
 ## Exemples
 
@@ -313,7 +310,7 @@ for (let i = 0, n = valeursEntree.length; i < n; ++i) {
 
 ## Voir aussi
 
-- [Formatage du texte dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Text_formatting)
+- [Formatage du texte dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Numbers_and_strings)
 - [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 - [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)
 - [Les chaînes binaires](/fr/docs/Web/API/Window/btoa)

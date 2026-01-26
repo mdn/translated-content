@@ -3,8 +3,6 @@ title: Array.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 ---
 
-{{JSRef}}
-
 **`findIndex()`** 方法將依據提供的測試函式，尋找陣列中符合的元素，並返回其 **index**（索引）。如果沒有符合的對象，將返回 -1 。
 
 {{InteractiveExample("JavaScript Demo: Array.findIndex()")}}
@@ -29,9 +27,7 @@ arr.findIndex(callback[, thisArg])
 ### 參數
 
 - `callback`
-
   - : 針對陣列中的每個元素，都會執行該回呼函式，執行時會自動傳入下面三個參數：
-
     - `element`
       - : 當前元素。
     - `index`{{optional_inline}}

@@ -3,8 +3,6 @@ title: Cache-Control
 slug: Web/HTTP/Reference/Headers/Cache-Control
 ---
 
-{{HTTPSidebar}}
-
 **`Cache-Control`** 標頭中的*指令*用來控制 HTTP 請求、回應的[快取](/zh-TW/docs/Web/HTTP/Guides/Caching)行為。HTTP 請求跟回應可以擁有不同的快取控制指令。
 
 | Header type                                     | {{Glossary("General header")}} |
@@ -113,7 +111,6 @@ Cache-Control: stale-if-error=<秒數>
 想要禁止快取一個資源，你可以在回應中設定這個標頭：
 
 - Good
-
   - : `Cache-Control: no-store`
 
     > **這個:** `no-store` 指令使得回應再也不會被儲存，但它無法防止使用先前儲存、而且仍有效的快取。多設定 `max-age=0` 可以強制執行驗證（也就會清除既有快取）。

@@ -42,7 +42,8 @@ async function handleTransition() {
 }
 ```
 
-> **メモ:** `isBackNavigation` は組み込み機能ではありません。これは理論的な機能で、[ナビゲーション API](/ja/docs/Web/API/Navigation_API) などを使用して実装できるかもしれません。
+> [!NOTE]
+> `isBackNavigation` は組み込み機能ではありません。これは理論的な機能で、[ナビゲーション API](/ja/docs/Web/API/Navigation_API) などを使用して実装できるかもしれません。
 
 ## 仕様書
 

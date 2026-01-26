@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 返回强制门户检测页面的规范 URL。只读。
 
 ## 浏览器兼容性

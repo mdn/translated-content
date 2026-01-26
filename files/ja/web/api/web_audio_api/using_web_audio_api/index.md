@@ -162,7 +162,7 @@ track.connect(gainNode).connect(audioContext.destination);
 
 gain の既定値は 1 です。これは現在の音量を同じに維持します。 gain は最小値がおよそ-3.4 で最大値はおよそ 3.4 です。ここで boombox は gain を最大 2 (元の音量の倍)、最小 0 (結果的に音声をミュートします) の範囲で動かせるようにします。
 
-ユーザーがこれを制御できるようにしましょう。 — [range 入力](/ja/docs/Web/HTML/Element/input/range)を使用します。
+ユーザーがこれを制御できるようにしましょう。 — [range 入力](/ja/docs/Web/HTML/Reference/Elements/input/range)を使用します。
 
 ```html
 <input type="range" id="volume" min="0" max="2" value="1" step="0.01" />

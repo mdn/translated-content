@@ -10,7 +10,8 @@ l10n:
 
 **`HTMLTableRowElement.insertCell()`** メソッドは、新しいセル ({{HtmlElement("td")}}) を表の行 ({{HtmlElement("tr")}}) に挿入し、そのセルの参照を返します。
 
-> **メモ:** `insertCell()` はセルを直接行に挿入します。 {{domxref("Document.createElement()")}} を使用して新しい `<td>` 要素を作成した場合のように、 {{domxref("Node.appendChild()")}} を使用して個別にセルを追加する必要はありません。
+> [!NOTE]
+> `insertCell()` はセルを直接行に挿入します。 {{domxref("Document.createElement()")}} を使用して新しい `<td>` 要素を作成した場合のように、 {{domxref("Node.appendChild()")}} を使用して個別にセルを追加する必要はありません。
 >
 > ただし、 `insertCell()` を使用して新しい `<th>` 要素を作成することはできません。
 

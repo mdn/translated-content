@@ -1,14 +1,11 @@
 ---
 title: <xsl:if>
 slug: Web/XML/XSLT/Reference/Element/if
-original_slug: Web/XSLT/Reference/Element/if
 l10n:
-  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-{{XsltSidebar}}
-
-`<xsl:if>` 要素にはテスト属性とテンプレートが含まれています。テストが真と評価された場合、テンプレートは処理されます。これは、他の言語の if 文に似ています。ただし、if-then-else ステートメントの機能を実現するには、`<xsl:when>` と `<xsl:otherwise>` の子要素を 1 つずつ持つ `<xsl:choose>` 要素を使用します。
+`<xsl:if>` 要素にはテスト属性とテンプレートが含まれています。テストが真と評価された場合、テンプレートは処理されます。これは、他の言語の if 文に似ています。ただし、 if-then-else 文の機能を実現するには、`<xsl:when>` と `<xsl:otherwise>` の子要素を 1 つずつ持つ `<xsl:choose>` 要素を使用します。
 
 ### 構文
 
@@ -35,6 +32,6 @@ l10n:
 
 XSL section 9.1.
 
-### Gecko のサポート
+## Gecko の対応
 
-サポート済み
+対応済み。

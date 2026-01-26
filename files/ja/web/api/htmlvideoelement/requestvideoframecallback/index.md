@@ -35,15 +35,11 @@ requestVideoFrameCallback(callback)
 ### 引数
 
 - `callback`
-
   - : 新しい映像フレームが合成エンジンに送信された際に実行されるコールバック関数。これには 2 つの引数が含まれています。
-
     - `now`
       - : コールバックが呼び出された時刻を表す {{domxref("DOMHighResTimeStamp")}} です。
     - `metadata`
-
       - : 以下のプロパティを持つオブジェクトです。
-
         - `expectedDisplayTime`: ブラウザーがフレームの表示を期待する時刻を表す {{domxref("DOMHighResTimeStamp")}} です。
         - `height`: メディアピクセル数で表した数値で、映像フレームの縦の長さ（アスペクト比の調整なしで表示可能なデコード済みピクセル）を表します。
         - `mediaTime`: 提示されたフレームのメディアプレゼンテーションタイムスタンプを表す秒単位の数値。これは、{{domxref("HTMLMediaElement.currentTime")}}タイムライン上のフレームのタイムスタンプと等価です。
@@ -53,12 +49,12 @@ requestVideoFrameCallback(callback)
         - `width`: メディアピクセル数で表した数値で、映像フレームの幅（アスペクト比の調整なしで表示可能なデコード済みピクセル）を表します。
 
         {{domxref("WebRTC_API", "WebRTC", "", "nocode")}} アプリケーションで使用される `requestVideoFrameCallback()` コールバック内では、追加のメタデータプロパティが利用できる場合があります。
-
         - `captureTime`: フレームがキャプチャされた時刻を表す {{domxref("DOMHighResTimeStamp")}} です。これは、ローカルまたはリモートソースからの映像フレームに適用されます。リモートソースの場合、キャプチャ時刻は、クロック同期と RTCP 送信者レポートを使用して RTP タイムスタンプをキャプチャ時刻に変換することで推定されます。
         - `receiveTime`: プラットフォームがエンコードされたフレームを受信した時刻を表す {{domxref("DOMHighResTimeStamp")}} です。これはリモートソースからの映像フレームに適用されます。具体的には、このフレームに属する最後のパケットがネットワーク経由で受信された時刻に対応します。
         - `rtpTimestamp`: この映像フレームに付随する RTP タイムスタンプを表す数値です。
 
-> **メモ:** `width` と `height` は、場合によっては {{domxref("HTMLVideoElement.videoWidth")}} および {{domxref("HTMLVideoElement.videoHeight")}} と異なる場合があります（例えば、アナモフィック動画は長方形のピクセルを持つことがあります）。
+> [!NOTE]
+> `width` と `height` は、場合によっては {{domxref("HTMLVideoElement.videoWidth")}} および {{domxref("HTMLVideoElement.videoHeight")}} と異なる場合があります（例えば、アナモフィック動画は長方形のピクセルを持つことがあります）。
 
 ### 返値
 

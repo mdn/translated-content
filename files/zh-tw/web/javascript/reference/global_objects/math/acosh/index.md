@@ -2,10 +2,8 @@
 title: Math.acosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acosh
 l10n:
-  sourceCommit: e8320dfbed49d37589d0fe759ef6506885f340f7
+  sourceCommit: b6cab42cf7baf925f2ef6a2c98db0778d9c2ec46
 ---
-
-{{JSRef}}
 
 **`Math.acosh()`** 靜態方法回傳數字的反雙曲餘弦值。也就是說，
 

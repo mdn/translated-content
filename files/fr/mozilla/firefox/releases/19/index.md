@@ -3,8 +3,6 @@ title: Firefox 19 pour les développeurs
 slug: Mozilla/Firefox/Releases/19
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 19, basé sur Gecko 19.0, est sorti le 19 février 2013. Cette page résume les principaux changements dans Firefox 19 qui sont utiles aux développeurs.
 
 Vous voulez aider à documenter Firefox 19 ? Regardez la [liste des bugs qui ont besoin de rédaction](http://beta.elchi3.de/doctracker/#list=fx&version=19.0) et lancez-vous !
@@ -43,7 +41,8 @@ Le support des [XForms](/fr/docs/XForms) a été [**retiré**](http://www.philip
 
 ## Changements pour les développeurs d'add-ons et les développeurs Mozilla
 
-> **Note :** [`nsresult`](/fr/docs/XPCOM_API_Reference/nsresult) est maintenant fortement typé, c'est un changement majeur dans Firefox 19. Cela permet de détecter plus facilement les bugs causés par la mauvaise gestion des valeurs retournées mais peut empêcher des codes actuels de fonctionner si [`nsresult`](/fr/docs/XPCOM_API_Reference/nsresult) fait de mauvaises suppositions concernant ces valeurs.
+> [!NOTE]
+> [`nsresult`](/fr/docs/XPCOM_API_Reference/nsresult) est maintenant fortement typé, c'est un changement majeur dans Firefox 19. Cela permet de détecter plus facilement les bugs causés par la mauvaise gestion des valeurs retournées mais peut empêcher des codes actuels de fonctionner si [`nsresult`](/fr/docs/XPCOM_API_Reference/nsresult) fait de mauvaises suppositions concernant ces valeurs.
 
 - `getBrowserSelection()` retourne dorénavant le texte sélectionné dans un input de type `text`. Ainsi, `gContextMenu.isTextSelected` vaudra `true` quand l'utilisateur sélectionne du texte depuis un champ texte qui n'est pas de type `password`. ([bug Firefox 565717](https://bugzil.la/565717))
 - [Dict.jsm](/fr/docs/Mozilla/JavaScript_code_modules/Dict.jsm): [`Dict()`](/fr/docs/Mozilla/JavaScript_code_modules/Dict.jsm#Creating_a_dictionary) accepte maintenant les String JSON. [`Dict.toJSON()`](/fr/docs/Mozilla/JavaScript_code_modules/Dict.jsm#toJSON) a été ajouté et retourne un String JSON. ([bug Firefox 727967](https://bugzil.la/727967))

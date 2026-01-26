@@ -1,15 +1,16 @@
 ---
 title: "HTMLAreaElement: hash プロパティ"
+short-title: hash
 slug: Web/API/HTMLAreaElement/hash
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 8cc63f7e6619446ea38f6a38c457a597a9af564b
 ---
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLAreaElement.hash`** プロパティは、`'#'` の後に URL のフラグメント識別子が続く文字列を返します。
+**`hash`** は {{domxref("HTMLAreaElement")}} インターフェイスのプロパティで、この `<area>` 要素の `href` における、 `"#"` に続くフラグメント識別子の文字列を返します。 URL にフラグメント識別子がない場合、このプロパティには空の文字列 `""` が入ります。
 
-フラグメントは [URL デコード](https://ja.wikipedia.org/wiki/パーセントエンコーディング)されません。 URL にフラグメント識別子がない場合、このプロパティには空の文字列 `""` が含まれます。
+詳しくは {{domxref("URL.hash")}} を参照してください。
 
 ## 値
 
@@ -41,7 +42,7 @@ l10n:
 
 ```js
 const area = document.getElementById("mdn-circle");
-area.hash; // returns '#ExampleSection'
+area.hash; // '#ExampleSection'
 ```
 
 ## 仕様書

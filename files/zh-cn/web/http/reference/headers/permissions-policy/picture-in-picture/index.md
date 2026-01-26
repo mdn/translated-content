@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP {{HTTPHeader("Permissions-Policy")}} 标头 `picture-in-picture` 指令控制是否允许当前文档以{{domxref("Picture-in-Picture API", "画中画", "", "nocode")}}模式播放视频。
 

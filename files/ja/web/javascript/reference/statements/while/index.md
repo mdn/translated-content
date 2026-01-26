@@ -9,7 +9,7 @@ l10n:
 
 **`while`** 文は、テスト条件が真と評価されている間、指定された文を実行するループを作成します。条件はその文を実行する前に評価されます。
 
-{{InteractiveExample("JavaScript Demo: Statement - While")}}
+{{InteractiveExample("JavaScript デモ: Statement - While")}}
 
 ```js interactive-example
 let n = 0;
@@ -32,7 +32,6 @@ while (condition)
 - `condition`
   - : ループを通過するごとに、その前に評価される式。この条件が[真と評価された](/ja/docs/Glossary/Truthy)場合は、 `statement` が実行されます。条件が[偽と評価された](/ja/docs/Glossary/Falsy)場合は、実行は `while` ループの後の文に続きます。
 - `statement`
-
   - : 条件が真と評価されている間に実行される文。ループ内で複数の文を実行する場合は、{{jsxref("Statements/block", "ブロック", "", 1)}}文 (`{ /* ... */ }`) を使用してそれらの文をグループ化してください。
 
     メモ: {{jsxref("Statements/break", "break")}} 文を使用すると、条件が真と評価される前にループを停止することができます。

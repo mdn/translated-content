@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms
 original_slug: Learn/Server-side/Express_Nodejs/forms
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 このチュートリアルでは、Pug を使用して Express で HTML フォームを操作する方法、特にデータベースからドキュメントを作成、更新、削除するためのフォームを作成する方法を説明します。
 
@@ -49,7 +49,6 @@ original_slug: Learn/Server-side/Express_Nodejs/forms
 
 - `action`: フォームが送信されたときに処理のためにデータが送信される URL です。これが設定されていない場合(または空の文字列が設定されている場合)、フォームは現在のページ URL に戻って送信されます。
 - `method`: データを送信するために使用される HTTP メソッド: `POST` または `GET`.
-
   - `POST`メソッドは、データがサーバーのデータベースに変更をもたらす場合は、常に使用されるべきです。なぜならクロスサイトフォージェリ要求攻撃に対してより耐性を持たせることができるからです。
   - `GET`メソッドは、ユーザーデータを変更しないフォーム（検索フォームなど）にのみ使用してください。URL をブックマークや共有できるようにしたい場合におすすめです。
 
@@ -62,7 +61,6 @@ original_slug: Learn/Server-side/Express_Nodejs/forms
 上の図のように、フォーム処理のコードが必要とする主なものは以下の通りです。
 
 1. ユーザーが最初に要求したときにデフォルトのフォームを表示します。
-
    - フォームには空白のフィールドが含まれていたり (新しいレコードを作成している場合など)、初期値があらかじめ入力されていたり (レコードを変更している場合や、デフォルトの初期値がある場合など) します。
 
 2. ユーザーから送信されたデータを、通常は HTTP `POST`リクエストで受信します。
@@ -225,4 +223,4 @@ NPM の Express、Node、およびサードパーティのパッケージは、�
 
 - [express-validator](https://www.npmjs.com/package/express-validator) (npm ドキュメント).
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

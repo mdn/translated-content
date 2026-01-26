@@ -1,16 +1,13 @@
 ---
 title: エクスポートされた WebAssembly 関数
 slug: WebAssembly/Guides/Exported_functions
-original_slug: WebAssembly/Exported_functions
 l10n:
-  sourceCommit: 0cfdd279edb09f70fbeb52c67ecc2876da5ce32d
+  sourceCommit: df9d06402163f77fc3e2d327ab63f9dd4af15b38
 ---
-
-{{WebAssemblySidebar}}
 
 エクスポートされた WebAssembly 関数は WebAssembly 関数が JavaScript でどのように表現されるのか、この記事では、もう少し詳しく説明します。
 
-## エクスポートされた...とは?
+## エクスポートされた...とは
 
 エクスポートされた WebAssembly 関数は、 WebAssembly 関数を表現する JavaScript の単なるラッパーです。呼び出されると、バックグラウンドでいくつかの動作を行います。引数を Wasm で使える型に（例えば、 JavaScript の数値を Int32 に）変換し、Wasm モジュール内の関数に渡し、実行し、結果を変換して JavaScript 側に戻します。
 
@@ -23,7 +20,7 @@ l10n:
 
 ## 例
 
-物事を明らかにするために例を見ていきましょう（例は GitHub の [table-set.html](https://github.com/mdn/webassembly-examples/blob/master/other-examples/table-set.html) と [動作例](https://mdn.github.io/webassembly-examples/other-examples/table-set.html)、Wasm の [テキスト表現](https://github.com/mdn/webassembly-examples/blob/master/ja-api-examples/table.wat) を参照してください）。
+物事を明らかにするために例を見ていきましょう（例は GitHub の [table-set.html](https://github.com/mdn/webassembly-examples/blob/main/other-examples/table-set.html) と [動作例](https://mdn.github.io/webassembly-examples/other-examples/table-set.html)、Wasm の [テキスト表現](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table.wat) を参照してください）。
 
 ```js
 const otherTable = new WebAssembly.Table({ element: "anyfunc", initial: 2 });

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
 ---
 
-{{jsSidebar("Statements")}}
-
 静态 **`import`** 声明用于导入由另一个模块导出的只读动态（live）{{Glossary("binding", "绑定")}}。导入的绑定被称为*动态绑定*，因为它们会由导出绑定的模块更新，但导入模块不能重新赋值。
 
 要在源文件中使用 `import` 声明，该文件必须被运行时解释为[模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)。在 HTML 中，这可以通过在 {{HTMLElement("script")}} 标签中添加 `type="module"` 来实现。模块会自动以[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)解释。
@@ -32,9 +30,7 @@ import "module-name";
 - `defaultExport`
   - : 引用模块默认导出的名称。必须是有效的 JavaScript 标识符。
 - `module-name`
-  - : 要导入的模块。访问修饰符与主机相关。其通常是包含目标模块的 `.js` 文件的相对或绝对路径名。在 Node 中，通常在引用 `node_modules` 中的包时使用不添加扩展名的导入。某些特定的打包工具可能允许不添加扩展名的导入模块方式，请检查你的环境以确定导入方式。模块名只允许单引号和双引号的字符串。
-- `module-name`
-  - : 要导入的模块。模块的路径或名称是由运行环境决定的。这通常是指向包含模块的 `.js` 文件的相对或绝对路径。在 Node 环境中，没有扩展名的导入通常指向 `node_modules` 中的包。某些打包工具可能允许导入没有扩展名的文件；请检查你的环境。只允许使用单引号和双引号的字符串。
+  - : 要导入的模块。模块的路径或名称是由运行环境决定的。这通常是指向包含模块的 `.js` 文件的相对或绝对路径。在 Node 环境中，没有扩展名的导入通常指向 `node_modules` 中的包。某些打包工具可能允许导入没有扩展名的文件；请检查你的环境。模块名只允许使用单引号和双引号的字符串。
 - `name`
   - : 模块对象的名称，将用作引用导入时的命名空间。必须是一个有效的 JavaScript 标识符。
 - `exportN`
@@ -93,7 +89,8 @@ export { a as "a-b" };
 import { "a-b" as a } from "/modules/my-module.js";
 ```
 
-> **备注：** `import { x, y } from "mod"` 并不等同于 `import defaultExport from "mod"` 然后从 `defaultExport` 中解构出 `x` 和 `y`。具名导入和默认导入是 JavaScript 模块中不同的语法。
+> [!NOTE]
+> `import { x, y } from "mod"` 并不等同于 `import defaultExport from "mod"` 然后从 `defaultExport` 中解构出 `x` 和 `y`。具名导入和默认导入是 JavaScript 模块中不同的语法。
 
 #### 默认导入
 

@@ -8,7 +8,6 @@ slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 Margin collapsing ocorre em três casos básicos:
 
 - Irmãos adjacentes
-
   - : As margens de irmãos adjacentes são colapsadas (execeto quando o último irmão precisar ser [limpado](/pt-BR/docs/Web/CSS/clear) devido ao uso de floats em elementos anteriores ). Por exemplo:
 
     ```html

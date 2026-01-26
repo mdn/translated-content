@@ -1,15 +1,14 @@
 ---
-title: "Glossaire MDN : définitions des termes du Web"
+title: Glossaire des termes du Web
+short-title: Glossaire
 slug: Glossary
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
-
-Les technologies Web font l'objet d'un important jargon et utilisent des abréviation utilisées dans la documentation et le code. Ce glossaire fournit une définition des mots et abréviations qui vous seront nécessaires pour pouvoir comprendre et utiliser le Web.
+Les technologies Web font l'objet d'un important jargon et utilisent de nombreux acronymes et abréviations dans la documentation, le code et d'autres contextes.
+Ce glossaire fournit les définitions des mots et abréviations que vous devez connaître pour comprendre et développer efficacement pour le Web.
 
 Vous pouvez parcourir les termes du glossaire en utilisant la barre latérale.
 
-> [!NOTE]
-> Le glossaire et sa traduction en français sont en constante évolution. Vous pouvez aider en [traduisant les pages correspondantes depuis l'anglais](/fr/docs/MDN/Community/Contributing/Translated_content) ou en améliorant les pages existantes.
+Vous pouvez contribuer en ajoutant [de nouveaux termes](/fr/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary) ou en améliorant les définitions existantes.

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/measuring_performance", "Learn/Performance/video", "Learn/Performance")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Measuring_performance", "Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance")}}
 
 미디어 파일(이미지 + 비디오)은 평균적으로 웹사이트에서 다운로드되는 용량의 약 70% 이상을 차지합니다. 다운로드 성능 측면에서 미디어를 없애거나 파일 크기를 줄이는 것은 어렵지 않습니다. 이 글에서는 웹 성능을 개선하기 위해 이미지와 비디오를 최적화하는 방법을 살펴봅니다.
 
@@ -46,7 +46,7 @@ l10n:
 
 ### 로딩 전략
 
-대부분의 웹사이트에서 가장 큰 개선 사항 중 하나는 방문자의 스크롤 여부와 무관하게 초기 페이지 로드 시 이미지를 모두 다운로드하는 대신, 스크롤을 해야 볼 수 있는 이미지를 [지연 로딩](/ko/docs/Web/Performance/Lazy_loading)하는 것입니다. [lazysizes](https://github.com/aFarkas/lazysizes)와 같은 많은 JavaScript 라이브러리가 지연된 로딩을 구현하고 있으며, 웹 브라우저 제조사들도 내장 `lazyload` 속성을 실험적 기능으로 제공하고 있습니다.
+대부분의 웹사이트에서 가장 큰 개선 사항 중 하나는 방문자의 스크롤 여부와 무관하게 초기 페이지 로드 시 이미지를 모두 다운로드하는 대신, 스크롤을 해야 볼 수 있는 이미지를 [지연 로딩](/ko/docs/Web/Performance/Guides/Lazy_loading)하는 것입니다. [lazysizes](https://github.com/aFarkas/lazysizes)와 같은 많은 JavaScript 라이브러리가 지연된 로딩을 구현하고 있으며, 웹 브라우저 제조사들도 내장 `lazyload` 속성을 실험적 기능으로 제공하고 있습니다.
 
 이미지를 로딩된 이후에는 이미지 형식 자체를 들여다봐야 합니다.
 
@@ -58,7 +58,8 @@ l10n:
 
 어떤 파일 형식이 가장 적합한지는 이미지의 특성에 따라 다릅니다.
 
-> **참고:** [이미지 파일 유형과 형식 가이드](/ko/docs/Web/Media/Formats/Image_types)에서 이미지 유형에 대한 일반적인 정보를 찾을 수 있습니다.
+> [!NOTE]
+> [이미지 파일 유형과 형식 가이드](/ko/docs/Web/Media/Formats/Image_types)에서 이미지 유형에 대한 일반적인 정보를 찾을 수 있습니다.
 
 [SVG](/ko/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics) 형식은 색상이 적고 사실적이지 않은 이미지에 더 적합합니다. SVG 형식을 사용하려면 원본 이미지를 벡터 그래픽 형식으로 쓸 수 있어야 합니다. 만약 원본 이미지가 비트맵 형식으로만 존재한다면 [PNG](/ko/docs/Web/Media/Formats/Image_types#png_portable_network_graphics) 형식이 대안이 될 수 있습니다. 이런 주제의 유형으로는 로고, 일러스트, 차트, 아이콘 등이 있습니다. (참고: SVG는 아이콘 폰트보다 훨씬 낫습니다!) SVG와 PNG 모두 투명도를 지원합니다.
 
@@ -150,4 +151,4 @@ img {
 
 이 섹션에선 이미지 최적화에 대해 살펴보았습니다. 이제 평균 웹사이트 데이터 전송량의 절반에 달하는 부분을 최적화하는 방법에 대해 전체적으로 이해했을 것입니다. 이미지는 사용자들의 데이터 전송량을 소모하고 페이지 로딩을 느리게 하는 단 하나의 미디어 유형일 뿐입니다. 다음에는 데이터 전송량의 소모의 20%를 차지하는 비디오를 최적화하는 방법에 대해서 살펴보겠습니다.
 
-{{PreviousMenuNext("Learn/Performance/measuring_performance", "Learn/Performance/video", "Learn/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Measuring_performance", "Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance")}}

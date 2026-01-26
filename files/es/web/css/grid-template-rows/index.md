@@ -3,8 +3,6 @@ title: grid-template-rows
 slug: Web/CSS/grid-template-rows
 ---
 
-{{CSSRef}}
-
 La propiedad CSS **`grid-template-rows`** define el nombre de las líneas y las funciones de tamaño de línea de {{glossary("grid rows", "grid rows")}}.
 
 {{InteractiveExample("CSS Demo: grid-template-rows")}}
@@ -112,7 +110,6 @@ Esta propiedad puede especificarse como:
 - {{cssxref("minmax", "minmax(min, max)")}}
   - : Es una notación funcional que define un rango de tamaño, mayor o igual que _min_, y menor o igual que _max_. Si _max_ es menor a _min_, entonces _max_ es ignorado y la función es tratada como _min_. Como un máximo, un valor `<flex>` ajusta el factor de flexibilad de la vía. Es inválido utilizarlo como un mínimo.
 - `auto`
-
   - : Es una palabra clave que es idéntica al contenido máximo si es un máximo. Como un mínimo representa el mínimo más grande (según lo especificado por {{cssxref("min-width")}}/{{cssxref("min-height")}}) de los elementos de la cuadrícula ocupando la vía.
 
     > [!NOTE]

@@ -3,8 +3,6 @@ title: font
 slug: Web/CSS/font
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad {{ Cssxref("font") }} permite establecer de una sola vez los valores para todas las propiedades: {{ Cssxref("font-style") }}, {{ Cssxref("font-variant") }}, {{ Cssxref("font-weight") }}, {{ Cssxref("font-size") }}, {{ Cssxref("line-height") }} y {{ Cssxref("font-family") }} en una hoja de estilo.

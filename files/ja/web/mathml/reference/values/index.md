@@ -1,18 +1,16 @@
 ---
 title: MathML の属性値
+short-title: 属性値
 slug: Web/MathML/Reference/Values
-original_slug: Web/MathML/Values
 l10n:
-  sourceCommit: 1bb0a2834d8e90495319ee9e52ecbc55e856e913
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
-
-{{MathMLRef}}
 
 ## MathML 固有の型
 
-[CSS データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)に加え、一部の MathML 属性は以下の型を受け入れます。
+[CSS データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)に加え、一部の MathML 属性は以下の型を受け入れます。
 
-- `<unsigned-integer>`: [`<integer>`](/ja/docs/Web/CSS/integer) で、最初の文字が U+002D HYPHEN-MINUS character (-) でも U+002B PLUS SIGN (+) でもないものです。例えば `1234` です。
+- `<unsigned-integer>`: [`<integer>`](/ja/docs/Web/CSS/Reference/Values/integer) で、最初の文字が U+002D HYPHEN-MINUS character (-) でも U+002B PLUS SIGN (+) でもないものです。例えば `1234` です。
 - `<boolean>`: `true` または `false` の文字列で、論理値を表します。
 
 ## MathML における古い長さ

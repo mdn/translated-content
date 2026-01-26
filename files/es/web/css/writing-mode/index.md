@@ -3,7 +3,7 @@ title: writing-mode
 slug: Web/CSS/writing-mode
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 ## Resumen
 

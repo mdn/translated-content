@@ -3,7 +3,7 @@ title: 函数
 slug: Web/JavaScript/Guide/Functions
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}
+{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}
 
 函数是 JavaScript 中的基本组件之一。JavaScript 中的函数类似于过程——一组执行任务或计算值的语句。但要成为函数，这个过程应该接受输入并返回与输入存在某些明显关系的输出。要使用一个函数，你必须将其定义在你希望调用它的作用域内。
 
@@ -569,7 +569,8 @@ console.log(myConcat("。", "智者", "罗勒", "牛至", "胡椒", "香菜"));
 // "智者。罗勒。牛至。胡椒。香菜。"
 ```
 
-> **备注：** `arguments` 变量只是“类数组”，而不是数组。它与数组类似，有索引编号和 `length` 属性。尽管如此，它并不*具备* Array 对象的所有数组操作方法。
+> [!NOTE]
+> `arguments` 变量只是“类数组”，而不是数组。它与数组类似，有索引编号和 `length` 属性。尽管如此，它并不*具备* Array 对象的所有数组操作方法。
 
 更多信息请阅读 JavaScript 参考中的 {{jsxref("Function")}} 对象。
 

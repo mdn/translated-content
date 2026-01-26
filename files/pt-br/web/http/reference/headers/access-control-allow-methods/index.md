@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Methods
 original_slug: Web/HTTP/Headers/Access-Control-Allow-Methods
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de resposta **`Access-Control-Allow-Methods`** especifica o método ou métodos permitidos quando acessando o recurso em resposta a uma {{glossary("preflight request")}}.
 
 <table class="properties">
@@ -31,9 +29,9 @@ Access-Control-Allow-Methods: *
 ## Diretivas
 
 - \<método>
-  - : Lista separada por vírgula com os [métodos de requisição HTTP](/pt-BR/docs/Web/HTTP/Methods).
+  - : Lista separada por vírgula com os [métodos de requisição HTTP](/pt-BR/docs/Web/HTTP/Reference/Methods).
 - `*` (coringa)
-  - : O valor "`*`" só conta como valor coringa para requisições sem credenciais (requisições sem [cookies HTTP](/pt-BR/docs/Web/HTTP/Cookies) ou informação de autenticação HTTP). Em requisições com credenciais, isso é tratado como o nome de método literal "`*`" sem qualquer semântica especial.
+  - : O valor "`*`" só conta como valor coringa para requisições sem credenciais (requisições sem [cookies HTTP](/pt-BR/docs/Web/HTTP/Guides/Cookies) ou informação de autenticação HTTP). Em requisições com credenciais, isso é tratado como o nome de método literal "`*`" sem qualquer semântica especial.
 
 ## Exemplos
 

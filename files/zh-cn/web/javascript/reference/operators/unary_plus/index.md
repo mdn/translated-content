@@ -3,8 +3,6 @@ title: 一元加（+）
 slug: Web/JavaScript/Reference/Operators/Unary_plus
 ---
 
-{{jsSidebar("Operators")}}
-
 **一元加**（**`+`**）运算符在其操作数之前并计算其操作数，但会尝试将其[转换为数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)，如果它还不是的话。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Unary plus operator", "taller")}}

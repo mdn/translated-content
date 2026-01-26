@@ -16,14 +16,12 @@ l10n:
 ## 같이 보기
 
 - [용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("CSP")}}
   - {{Glossary("Reporting directive")}}
   - {{Glossary("Document directive")}}
   - {{Glossary("Navigation directive")}}
 
 - 참고서
-
   - <https://www.w3.org/TR/CSP/#directives-fetch>
   - {{HTTPHeader("Content-Security-Policy/upgrade-insecure-requests", "upgrade-insecure-requests")}}
   - {{HTTPHeader("Content-Security-Policy/block-all-mixed-content", "block-all-mixed-content")}}

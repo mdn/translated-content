@@ -17,9 +17,10 @@ l10n:
 この要素の属性には、[グローバル MathML 属性](/ja/docs/Web/MathML/Reference/Global_attributes)の他、以下の非推奨属性があります。
 
 - `subscriptshift` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) で、下付き文字部分を本体のベースラインから下げる最小量を示します。
+  - : [`<length-percentage>`](/ja/docs/Web/CSS/Reference/Values/length-percentage) で、下付き文字部分を本体のベースラインから下げる最小量を示します。
 
-> **メモ:** `superscriptshift` 属性については、ブラウザーによっては[古い MathML の長さ](/ja/docs/Web/MathML/Reference/Values#古い_mathml_における長さ)も受け入れられるかもしれません。
+> [!NOTE]
+> `superscriptshift` 属性については、ブラウザーによっては[古い MathML の長さ](/ja/docs/Web/MathML/Reference/Values#古い_mathml_における長さ)も受け入れられるかもしれません。
 
 ## 例
 

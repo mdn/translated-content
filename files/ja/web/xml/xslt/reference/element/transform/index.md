@@ -1,15 +1,12 @@
 ---
 title: <xsl:transform>
 slug: Web/XML/XSLT/Reference/Element/transform
-original_slug: Web/XSLT/Reference/Element/transform
 l10n:
-  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
-
-{{XsltSidebar}}
 
 `<xsl:transform>` 要素は [`<xsl:stylesheet>`](/ja/docs/Web/XML/XSLT/Reference/Element/stylesheet) 要素とまったく同じです。
 
-### Gecko のサポート
+## Gecko の対応
 
-サポート済み
+対応済み。

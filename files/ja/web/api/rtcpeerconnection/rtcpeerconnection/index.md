@@ -17,11 +17,8 @@ new RTCPeerConnection(configuration);
 ### 引数
 
 - `configuration` {{optional_inline}}
-
   - : 新しい接続を構成するためのオプションを提供するオブジェクトです。
-
     - `bundlePolicy` {{optional_inline}}
-
       - : リモートの相手が [SDP BUNDLE 規格](https://webrtcstandards.info/sdp-bundle/)に対応していない場合に、候補の交渉を処理する方法を指定します。
         リモートのエンドポイントが BUNDLE に対応している場合、使用したポリシーに関わら ず、交渉の完了時にすべてのメディアトラックとデータチャネルが 1 つのトランスポートにバンドルされ、最初に作成された余分なトランスポートはその時点で閉じられます。
 
@@ -29,7 +26,6 @@ new RTCPeerConnection(configuration);
         つまり、一方のピアの単一の IP とポートから、もう一方のピアの単一の IP とポートへ、同じトランスポートプロトコルを使用して流れます。
 
         これは以下の文字列値のいずれかでなければならず、そうでない場合は `balanced` とみなされます。
-
         - `balanced`
           - : ICE エージェントは、最初に追加されたコンテンツの種類（音声、映像、データチャネル）ごとに 1 つの {{domxref("RTCDtlsTransport")}} を作成します。
             リモートエンドポイントがBUNDLEに対応していない場合、これらの DTLS トランスポートのそれぞれは、 1 つの種類のデータに対するすべての通信を処理します。
@@ -41,7 +37,6 @@ new RTCPeerConnection(configuration);
             リモートエンドポイントが BUNDLE に対応していない場合、 1 つのトラックのみが交渉され、残りは無視されます。
 
     - `certificates` {{optional_inline}}
-
       - : 接続が認証に使用する {{domxref("RTCCertificate")}} 型のオブジェクトの {{jsxref("Array")}} です。
         このプロパティが指定されていない場合、資格情報のセットは各 {{domxref("RTCPeerConnection")}} インスタンスに対して自動的に生成されます。
         1 つの接続で使用される資格情報は 1 つだけですが、複数のアルゴリズムに資格情報を提供することで、状況によっては接続に成功する確率が向上する場合があります。
@@ -51,7 +46,6 @@ new RTCPeerConnection(configuration);
         > この構成オプションは、最初に指定した後は変更できません。いったん資格情報が設定されると、今後 {{domxref("RTCPeerConnection.setConfiguration()")}} を呼び出す際には、このプロパティは無視されます。
 
     - `iceCandidatePoolSize` {{optional_inline}}
-
       - : 先読みされる ICE 候補プールのサイズを指定する、符号なし 16 ビット整数値です。
         既定値は 0 （候補の先読みをしない）です。
         接続を試みる前に ICE エージェントに ICE 候補のフェッチを開始させ、 {{domxref("RTCPeerConnection.setLocalDescription()")}} が呼ばれたときにすでに検査できるようにすると、よりすばやく接続できるようになる場合があります。
@@ -64,11 +58,9 @@ new RTCPeerConnection(configuration);
         これらは通常、 STUN サーバーや TURN サーバーです。
         これが指定されていない場合、 STUN や TURN サーバーがない状態で接続が試みられ、ローカルピアーに接続が制限されます。
     - `iceTransportPolicy` {{optional_inline}}
-
       - : 現在の ICE トランスポートポリシー。
         ポリシーが指定されていない場合、既定で `all` とみなされ、すべての候補が考慮されるようになります。
         指定できる値は次のとおりです。
-
         - `"all"`
           - : ICE の候補はすべて考慮されます。
         - `"public"` {{deprecated_inline}}
@@ -80,9 +72,7 @@ new RTCPeerConnection(configuration);
       - : 文字列で、 {{domxref("RTCPeerConnection")}} のターゲットピア ID を指定します。
         この値が設定されている場合（既定値は `null`）、 `RTCPeerConnection` は与えられた名前での認証に成功しない限り、リモートピアに接続しないようにします。
     - `rtcpMuxPolicy` {{optional_inline}}
-
       - : 非多重 RTCP に対応するために、 ICE の候補を収集する際に使用する RTCP mux ポリシー。指定可能な値は以下のとおりです。
-
         - `negotiate`
           - : ICE エージェントに {{Glossary("RTP")}} と {{Glossary("RTCP")}} 候補の両方を収集するように指示します。
             リモートピアが RTCP を多重化できる場合、 RTCP 候補は、対応する RTP 候補の上に多重化されます。

@@ -1,12 +1,9 @@
 ---
 title: rotate
 slug: Web/SVG/Reference/Attribute/rotate
-original_slug: Web/SVG/Attribute/rotate
 l10n:
-  sourceCommit: 052d4c77d0346c43351c50de9ea5e834af365779
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{SVGRef}}
 
 `rotate` 属性は、アニメーションする要素が、 {{SVGElement("animateMotion")}} 要素で指定されたパスに沿って移動する際に、どのように回転させるかを指定します。
 

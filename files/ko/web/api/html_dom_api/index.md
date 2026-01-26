@@ -41,7 +41,7 @@ HTML 표준에 의해 `Document`에 추가된 기능은 다음과 같습니다.
 
 - 문서가 로드된 {{DOMxRef("Document/location", "location", "", "1")}}, {{DOMxRef("Document/cookie", "cookies", "", "1")}}, {{DOMxRef("Document/lastModified", "modification date", "", "1")}}, {{DOMxRef("Document/referrer", "referring site", "", "1")}} 등 페이지를 로드할 때, {{Glossary("HTTP")}} 헤더에서 제공하는 다양한 정보에 접근할 수 있도록 지원합니다.
 - 문서의 {{HTMLElement("head")}} 블록 및 {{DOMxRef("Document/body", "body", "", "1")}}에 포함된 {{DOMxRef("Document/images", "images", "", "1")}}, {{DOMxRef("Document/links", "links", "", "1")}}, {{DOMxRef("Document/scripts", "scripts", "", "1")}} 등의 목록에 접근합니다.
-- {{DOMxRef("Document/hasFocus", "focus", "", "1")}}를 조사하고 [편집 가능한 콘텐츠](/ko/docs/Web/HTML/Global_attributes/contenteditable)에 대한 명령을 실행하여 사용자와 상호 작용할 수 있도록 지원합니다.
+- {{DOMxRef("Document/hasFocus", "focus", "", "1")}}를 조사하고 [편집 가능한 콘텐츠](/ko/docs/Web/HTML/Reference/Global_attributes/contenteditable)에 대한 명령을 실행하여 사용자와 상호 작용할 수 있도록 지원합니다.
 - {{DOMxRef("MouseEvent", "mouse", "", "1")}} 및 {{DOMxRef("KeyboardEvent", "keyboard", "", "1")}} 이벤트, {{DOMxRef("HTML_Drag_and_Drop_API", "drag and drop", "", "1")}}, {{DOMxRef("HTMLMediaElement", "media control", "", "1")}} 등에 접근할 수 있도록 HTML 표준에 정의된 문서 이벤트용 이벤트 핸들러입니다.
 - {{DOMxRef("HTMLElement/copy_event", "copy", "", "1")}}, {{DOMxRef("HTMLElement/cut_event", "cut", "", "1")}} 및 {{DOMxRef("HTMLElement/paste_event", "paste", "", "1")}}와 같은 요소와 문서 모두에 전달할 수 있는 이벤트 핸들러를 제공합니다.
 
@@ -365,8 +365,8 @@ nameField.addEventListener("input", (event) => {
 
 ### 참고서
 
-- [HTML 요소 참고서](/ko/docs/Web/HTML/Element)
-- [HTML 특성 참고서](/ko/docs/Web/HTML/Attributes)
+- [HTML 요소 참고서](/ko/docs/Web/HTML/Reference/Elements)
+- [HTML 특성 참고서](/ko/docs/Web/HTML/Reference/Attributes)
 - {{DOMxRef("Document_Object_Model", "Document Object Model (DOM)", "", "1")}} 참고서
 
 ### 안내서

@@ -25,8 +25,6 @@ Les valeurs de ce type sont des objets. Ils contiennent les proriétés suivante
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/api/sessions).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

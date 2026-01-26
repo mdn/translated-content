@@ -32,4 +32,4 @@ link.title = "维基百科页面上的葡萄";
 
 ## 参见
 
-- HTML [**title**](/zh-CN/docs/Web/HTML/Global_attributes/title) 全局属性。
+- HTML [**title**](/zh-CN/docs/Web/HTML/Reference/Global_attributes/title) 全局属性。

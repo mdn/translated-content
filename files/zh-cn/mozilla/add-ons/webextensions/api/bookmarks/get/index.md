@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 85126f83684f5c62f346e360248cf88f3ba4bc8d
 ---
 
-{{AddonSidebar}}
-
 **`bookmarks.get()`** 方法用于检索与给定 {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} 的 ID 或此类 ID 的数组匹配的节点。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。

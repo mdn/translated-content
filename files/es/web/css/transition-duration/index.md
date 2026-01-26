@@ -3,8 +3,6 @@ title: transition-duration
 slug: Web/CSS/transition-duration
 ---
 
-{{CSSRef}}
-
 La propiedad de [CSS](/es/docs/Web/CSS) **`transition-duration`** establece el tiempo que debe tardar una animación de transición en completarse. Por defecto, el valor es de `0s`, esto quiere decir que no se producirá ninguna animación.
 
 {{InteractiveExample("CSS Demo: transition-duration")}}
@@ -52,8 +50,6 @@ transition-property: margin-right, color;
   margin-right: 40%;
 }
 ```
-
-La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, por favor clone <https://github.com/mdn/interactive-examples> y envíenos un pull reques.
 
 Se puede especificar múltiples duraciones; cada duración va a ser aplicada a la propiedad correspondiente según lo especificado en la propiedad {{ cssxref("transition-property") }}, que actuará como una lista maestra. Si se especifican menos duraciones en la lista maestra, el agente de usuario repetirá la lista de duraciones. Si hay más duraciones, la lista simplemente se trunca al tamaño correcto. En ambos casos, la declaración CSS sigue siendo válida
 

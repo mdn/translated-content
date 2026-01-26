@@ -28,9 +28,7 @@ set(options)
 或
 
 - `options` {{optional_inline}}
-
   - : 一个包括以下属性的对象：
-
     - `domain` {{Optional_Inline}}
       - : 记录 cookie 域名的字符串。默认为 `null`。
     - `expires` {{Optional_Inline}}
@@ -42,9 +40,7 @@ set(options)
     - `path` {{Optional_Inline}}
       - : 记录 cookie 路径的字符串。默认为 `/`。
     - `sameSite` {{Optional_Inline}}
-
       - : 以下 [`SameSite`](/zh-CN/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 的值之一：
-
         - `"strict"`
           - : Cookie 只会在第一方上下文中发送，不会与第三方网站发起的请求一起发送。
         - `"lax"`

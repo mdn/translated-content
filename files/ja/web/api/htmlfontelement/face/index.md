@@ -8,7 +8,7 @@ l10n:
 
 {{deprecated_header}}{{ APIRef("HTML DOM") }}
 
-廃止された **`HTMLFontElement.face`** プロパティは、HTML の [`face`](/ja/docs/Web/HTML/Element/font#face) 属性を反映した文字列で、1 つ以上のフォント名のカンマ区切りリストが入ります。
+廃止された **`HTMLFontElement.face`** プロパティは、HTML の [`face`](/ja/docs/Web/HTML/Reference/Elements/font#face) 属性を反映した文字列で、1 つ以上のフォント名のカンマ区切りリストが入ります。
 
 文書テキストは既定スタイルで、クライアントのブラウザーが対応している先頭のフォントフェイスで描画されます。指定されたフォントがローカルシステムにインストールされていない場合、ブラウザーは通常、そのシステムのプロポーショナルまたは固定幅フォントを既定します。
 

@@ -393,7 +393,7 @@ Porém este, é um exemplo ruim para link:
 ```
 
 > [!NOTE]
-> Você pode encontrar muito mais sobre implementação de link e melhores práticas no artigo [Criando hyperlinks](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks). Você também pode ver alguns bons e maus exemplos em [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) e [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html).
+> Você pode encontrar muito mais sobre implementação de link e melhores práticas no artigo [Criando hyperlinks](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Creating_links). Você também pode ver alguns bons e maus exemplos em [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) e [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html).
 
 Os rótulos de formulário (labels) também são importantes para dar a você uma ideia sobre o que precisa ser preenchido em cada entrada de formulário. O seguinte exemplo aparentemente é bem razoável:
 
@@ -494,7 +494,7 @@ Isso destaca a importância de não apenas usar nomes de arquivos significativos
 Uma coisa a considerar é se as imagens possuem algum significado dentro de seu conteúdo ou se elas são puramente decorativas. Se eles são decorativas, é melhor apenas incluí-las na página como imagens de fundo através de CSS.
 
 > [!NOTE]
-> Leia [Imagens em HTML](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML) e [Imagens Responsivas](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) para obter mais informações sobre a implementação de imagens e melhores práticas.
+> Leia [Imagens em HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content/HTML_images) e [Imagens Responsivas](/pt-BR/docs/Web/HTML/Responsive_images) para obter mais informações sobre a implementação de imagens e melhores práticas.
 
 Se você quiser fornecer informações contextuais extras, deverá colocá-las no texto ao redor da imagem ou dentro de um atributo de título (`title`), como mostrado acima. Nesse caso, a maioria dos leitores de tela lerá o texto alternativo, o atributo de título e o nome do arquivo. Além disso, os navegadores exibem o texto do título como dicas de ferramentas quando estão sobre o mouse.
 
@@ -510,7 +510,8 @@ Vamos dar uma olhada rápida no quarto método:
 
 Nesse caso, não estamos usando o atributo `alt` - em vez disso, apresentamos nossa descrição da imagem como um parágrafo de texto regular, atribuímos um `id` e, em seguida, usamos o atributo `aria-labelledby` para nos referirmos a esse `id`, que faz com que os leitores de tela usem esse parágrafo como o texto/rótulo alternativo para essa imagem. Isso é especialmente útil se você quiser usar o mesmo texto como um rótulo para várias imagens - algo que não é possível com `alt`.
 
-> **Nota:** `aria-labelledby` é parte da especificação [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/), que permite aos desenvolvedores adicionar uma semântica extra à sua marcação para melhorar a acessibilidade do leitor de tela quando necessário. Para saber mais sobre como funciona, leia nosso [artigo básico sobre WAI-ARIA](/pt-BR/docs/Learn/Accessibility/WAI-ARIA_basics).
+> [!NOTE]
+> `aria-labelledby` é parte da especificação [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/), que permite aos desenvolvedores adicionar uma semântica extra à sua marcação para melhorar a acessibilidade do leitor de tela quando necessário. Para saber mais sobre como funciona, leia nosso [artigo básico sobre WAI-ARIA](/pt-BR/docs/Learn/Accessibility/WAI-ARIA_basics).
 
 ### Outros mecanismos alternativos de textos
 

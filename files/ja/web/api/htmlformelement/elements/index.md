@@ -31,7 +31,7 @@ HTML 5 より前のバージョンでは、返されるオブジェクトは {{d
 
 - {{HTMLElement("button")}}
 - {{HTMLElement("fieldset")}}
-- {{HTMLElement("input")}} （ただし、 [`type`](/ja/docs/Web/HTML/Element/input#type) が `"image"` であるものは、過去の経緯から除外されています）。
+- {{HTMLElement("input")}} （ただし、 [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) が `"image"` であるものは、過去の経緯から除外されています）。
 - {{HTMLElement("object")}}
 - {{HTMLElement("output")}}
 - {{HTMLElement("select")}}
@@ -68,7 +68,7 @@ const inputByName = inputs["username"];
 
 ### フォームコントロールへのアクセス
 
-この例では、フォームの要素リストを取得し、そのリストを反復処理して、何らかの処理を行えるように [`"text"`](/ja/docs/Web/HTML/Element/input/text) 型の {{HTMLElement("input")}} 要素を探すものです。
+この例では、フォームの要素リストを取得し、そのリストを反復処理して、何らかの処理を行えるように [`"text"`](/ja/docs/Web/HTML/Reference/Elements/input/text) 型の {{HTMLElement("input")}} 要素を探すものです。
 
 ```js
 const inputs = document.getElementById("my-form").elements;

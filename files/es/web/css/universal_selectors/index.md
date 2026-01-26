@@ -3,8 +3,6 @@ title: Selectores universales
 slug: Web/CSS/Universal_selectors
 ---
 
-{{CSSRef}}
-
 El **selector universal** CSS (`*`) coincide con elementos de cualquier tipo.
 
 ```css

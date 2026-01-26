@@ -3,8 +3,6 @@ title: import
 slug: Web/JavaScript/Reference/Statements/import
 ---
 
-{{jsSidebar("Statements")}}
-
 **import** 宣告用於引入由另一個模塊所導出的綁定。被引入的模塊，無論是否宣告{{jsxref("Strict_mode","strict mode","嚴謹模式")}}，都會處於該模式。`import` 宣告無法用於嵌入式腳本（embedded scripts）。
 
 There is also a function-like dynamic **`import()`**, which does not require scripts of `type="module"`.

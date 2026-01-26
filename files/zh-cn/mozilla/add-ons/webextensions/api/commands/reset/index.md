@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 将给定命令的描述和快捷键重置为扩展的 [`commands` manifest.json 键](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)中指定的值。
 
 这有效地撤销了使用 {{WebExtAPIRef("commands.update()")}} 函数对命令所做的任何更改。

@@ -1,11 +1,10 @@
 ---
 title: Proxy() コンストラクター
+short-title: Proxy()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 l10n:
-  sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Proxy()`** コンストラクターは {{jsxref("Proxy")}} オブジェクトを生成します。
 
@@ -15,7 +14,8 @@ l10n:
 new Proxy(target, handler)
 ```
 
-> **メモ:** `Proxy()` は、[`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を使ってのみ構築することができます。`new` なしで呼び出そうとすると、{{jsxref("TypeError")}} が発生します。
+> [!NOTE]
+> `Proxy()` は、[`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を使ってのみ構築することができます。`new` なしで呼び出そうとすると、{{jsxref("TypeError")}} が発生します。
 
 ### 引数
 

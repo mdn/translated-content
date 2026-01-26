@@ -3,7 +3,7 @@ title: Types et grammaire
 slug: Web/JavaScript/Guide/Grammar_and_types
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 
 Ce chapitre décrit les bases de la grammaire et des types de données JavaScript.
 
@@ -39,7 +39,7 @@ La syntaxe utilisée pour **les commentaires** est la même que celle utilisée 
 ```
 
 > [!NOTE]
-> Vous pourrez également rencontrer une troisième forme de commentaires au début de certains fichiers JavaScript comme `#!/usr/bin/env node`. Ce type de commentaire indique le chemin d'un interpréteur JavaScript spécifique pour exécuter le script. Pour plus de détails, voir la page sur [les commentaires d'environnement](</fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Commentaire_d'environnement_(hashbang)>).
+> Vous pourrez également rencontrer une troisième forme de commentaires au début de certains fichiers JavaScript comme `#!/usr/bin/env node`. Ce type de commentaire indique le chemin d'un interpréteur JavaScript spécifique pour exécuter le script. Pour plus de détails, voir la page sur [les commentaires d'environnement](</fr/docs/Web/JavaScript/Reference/Lexical_grammar#commentaire_denvironnement_(hashbang)>).
 
 ## Déclarations
 
@@ -277,7 +277,6 @@ console.log(MON_TABLEAU); // ["HTML", "CSS", "JavaScript"]
 La dernière version du standard ECMAScript définit sept types de données :
 
 - Six types de données primitifs :
-
   - Type booléen : `true` et `false`.
   - Type nul (`null`), un mot-clé spécial pour indiquer une valeur nulle (au sens informatique). JavaScript étant sensible à la casse, `null` n'est pas `Null`, `NULL`, ou toute autre variante.
   - Un type pour les valeurs indéfinies (`undefined`).
@@ -680,4 +679,4 @@ Ce chapitre est centré sur les bases de la syntaxe, les déclarations et les ty
 
 Dans le chapitre suivant, on abordera les structures conditionnelles, permettant de diriger le flux d'instructions et la gestion des erreurs.
 
-{{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs")}}
+{{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}

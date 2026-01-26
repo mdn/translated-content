@@ -7,7 +7,22 @@ slug: Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
 
 Les groupes permettent de regrouper différents motifs ensemble et les groupes de capture permettent d'extraire des informations supplémentaires quant aux correspondances entre une expression rationnelle et une chaîne de caractères. Les références arrière correspondent au groupe précédemment capturé dans la même expression rationnelle.
 
-{{EmbedInteractiveExample("pages/js/regexp-groups-ranges.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp Groups and backreferences")}}
+
+```js interactive-example
+// Groups
+const imageDescription = "This image has a resolution of 1440×900 pixels.";
+const regexpSize = /([0-9]+)×([0-9]+)/;
+const match = imageDescription.match(regexpSize);
+console.log(`Width: ${match[1]} / Height: ${match[2]}.`);
+// Expected output: "Width: 1440 / Height: 900."
+
+// Backreferences
+const findDuplicates = "foo foo bar";
+const regex = /\b(\w+)\s+\1\b/g;
+console.log(findDuplicates.match(regex));
+// Expected output: Array ["foo foo"]
+```
 
 ## Types
 
@@ -149,7 +164,6 @@ console.log(lines.join("\n"));
 
 - [Une prothèse d'émulation pour les groupes de capture nommés](https://github.com/zloirock/core-js#ecmascript-string-and-regexp), disponible avec la bibliothèque [`core-js`](https://github.com/zloirock/core-js)
 - [Guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions)
-
   - [Classes de caractères](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
   - [Assertions](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
   - [Quantificateurs](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)

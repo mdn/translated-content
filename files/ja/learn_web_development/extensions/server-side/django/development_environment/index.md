@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 4d9375ca739df44ef52cd026de9a20aaff60d9aa
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Django がどういうものかわかったところで、Windows、Linux (Ubuntu)、および macOS で Django 開発環境をセットアップしてテストする方法を説明します。一般的なオペレーティングシステムを使っていれば、Django アプリケーションの開発が始められます。
 
@@ -142,7 +142,6 @@ python3 -V
 Python 3 は [python.org](https://www.python.org/) から（_pip3_ ツールとともに）簡単にインストールできます。
 
 1. 必要なインストーラーをダウンロードします。
-
    1. <https://www.python.org/downloads/macos/> へ移動します。
    2. Django 5.0 が動作する最新の[対応しているバージョン](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django)の安定版リリースをダウンロードしてください。
       （執筆時点では、これは Python 3.11.8 です）。
@@ -162,7 +161,6 @@ pip3 list
 Windows には既定で Python は含まれていませんが、[python.org](https://www.python.org/) から pip3 ツールと一緒に簡単にインストールできます。
 
 1. 必要なインストーラーをダウンロードします。
-
    1. <https://www.python.org/downloads/windows/> へ移動します。
    2. Django 5.0 が動作する最新の[対応しているバージョン](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django)の安定版リリースをダウンロードしてください。
       （執筆時点では、これは Python 3.11.8 です）。
@@ -238,7 +236,8 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **メモ:** `VIRTUALENVWRAPPER_PYTHON` および `VIRTUALENVWRAPPER_VIRTUALENV_ARGS` 変数は、Python 3 の通常のインストール場所を指し、`source /usr/local/bin/virtualenvwrapper.sh` は `virtualenvwrapper.sh` スクリプトの通常の場所を指します。テスト時に virtualenv が動作しない場合は、Python とスクリプトが予想される場所にあることを確認してから、起動ファイルを適切に変更してください。
+> [!NOTE]
+> `VIRTUALENVWRAPPER_PYTHON` および `VIRTUALENVWRAPPER_VIRTUALENV_ARGS` 変数は、Python 3 の通常のインストール場所を指し、`source /usr/local/bin/virtualenvwrapper.sh` は `virtualenvwrapper.sh` スクリプトの通常の場所を指します。テスト時に virtualenv が動作しない場合は、Python とスクリプトが予想される場所にあることを確認してから、起動ファイルを適切に変更してください。
 >
 > システムでの正しい場所は、`which virtualenvwrapper.sh` と `which python3` というコマンドを使って見つけることができます。
 
@@ -281,7 +280,8 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **メモ:** `VIRTUALENVWRAPPER_PYTHON` 変数は Python 3 の通常のインストール場所を指し、`source /usr/local/bin/virtualenvwrapper.sh` は `virtualenvwrapper.sh` スクリプトの通常の場所を指しています。テスト時に virtualenv が動作しない場合は、 Python とスクリプトが予想される場所にあることを確認してから、起動ファイルを適切に変更してください。
+> [!NOTE]
+> `VIRTUALENVWRAPPER_PYTHON` 変数は Python 3 の通常のインストール場所を指し、`source /usr/local/bin/virtualenvwrapper.sh` は `virtualenvwrapper.sh` スクリプトの通常の場所を指しています。テスト時に virtualenv が動作しない場合は、 Python とスクリプトが予想される場所にあることを確認してから、起動ファイルを適切に変更してください。
 >
 > たとえば、macOS での 1 つのインストールテストでは、スタートアップファイルに次の行が必要になりました:
 >
@@ -432,7 +432,6 @@ Git（と GitHub）は、コードを格納する最上位の「バケツ」と�
 2. ログインしたら、上のツールバーの **+** リンクをクリックし、**New repository** を選択します。
 3. このフォームのフィールドをすべて埋めてください。
    これらは必須ではありませんが、強く推奨します。
-
    - リポジトリーの名前を"django_local_library" と入力します。
    - 新しいリポジトリーの説明を "Local Library website written in Django" と入力します。
    - リポジトリーは "Public" を選択します (既定)。
@@ -610,4 +609,4 @@ Django 開発環境をあなたのコンピューター上で稼働できるよ�
 - [How to install Django — Complete guide](https://docs.djangoproject.com/en/5.0/topics/install/) （Django ドキュメント） - Django を削除する方法ついての情報が含まれています
 - [How to install Django on Windows](https://docs.djangoproject.com/en/5.0/howto/windows/) （Django ドキュメント）
 
-{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django")}}

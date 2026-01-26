@@ -1,20 +1,16 @@
 ---
 title: cursor
 slug: Web/SVG/Reference/Attribute/cursor
-original_slug: Web/SVG/Attribute/cursor
 l10n:
-  sourceCommit: bea339d321513fc6d66d95c8f0305b9387fa57bb
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{SVGRef}}
-
-[SVG 属性リファレンスホーム](/ja/docs/Web/SVG/Reference/Attribute)
 
 `cursor` 属性は、マウスポインタが要素の上にあるときに表示されるマウスカーソルを指定します。
 
-この属性は CSS の {{cssxref("cursor")}} プロパティと全く同じ動作をしますが、 {{ SVGElement("cursor") }} 要素に対応しているブラウザーであれば [\<FuncIRI>](/ja/docs/Web/SVG/Guides/Content_type#funciri) 記法を使用して使用することができます。
+> [!NOTE]
+> プレゼンテーション属性であるため、 `cursor` には対応する CSS プロパティ {{cssxref("cursor")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
 
-プレゼンテーション属性として、 CSS スタイルシート内で直接プロパティとして使用することもできます。詳しくは CSS の {{cssxref("cursor")}} を参照してください。
+この属性は CSS の {{cssxref("cursor")}} プロパティと全く同じ動作をしますが、 {{ SVGElement("cursor") }} 要素に対応しているブラウザーであれば [\<FuncIRI>](/ja/docs/Web/SVG/Guides/Content_type#funciri) 記法を使用して使用することができます。
 
 ## 使用コンテキスト
 
@@ -38,7 +34,7 @@ l10n:
       <td>可</td>
     </tr>
     <tr>
-      <th scope="row">標準化文書</th>
+      <th scope="row">正規ドキュメント</th>
       <td>
         <a href="https://www.w3.org/TR/SVG11/interact.html#CursorProperty"
           >SVG 1.1 (2nd Edition)</a
@@ -65,4 +61,4 @@ l10n:
 
 ## 関連情報
 
-- {{cssxref("cursor")}}
+- CSS の {{cssxref("cursor")}} プロパティ

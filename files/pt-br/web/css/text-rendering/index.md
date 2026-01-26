@@ -28,7 +28,6 @@ text-rendering:  auto | optimizeSpeed | optimizeLegibility | geometricPrecision 
 - `optimizeLegibility`
   - : O navegador prioriza legibilidade sobre a velocidade de renderização e precisão geométrica. Essa propriedade habilita o kerning e ligatures opcionais.
 - `geometricPrecision`
-
   - : O browser prioriza a precisão geométrica sobre a velocidade de renderização e legibilidade. Alguns aspectos de fontes - tais como kerning - não se escala linearmente e, dessa forma, `geometricPrecision` pode tornar essas fontes visualmente boas.
 
     Em SVG, quando o texto é escalado para cima ou para baixo, os navegadores calculam o tamanho final do texto (que é o tamanho de fonte específicado e a escala aplicada) e requer uma fonte de tamanho computado à partir das fontes do sistema. Mas se você requer um tamanho de fonte de, digamos, 9 com a escala de 140%, o resultado do tamanho da fonte de 12.6 não explicitamente existe no sistema, então o browser ira arredondar o tamanho da fonte para 12.

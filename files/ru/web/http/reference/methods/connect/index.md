@@ -3,8 +3,6 @@ title: CONNECT
 slug: Web/HTTP/Reference/Methods/CONNECT
 ---
 
-{{HTTPSidebar}}
-
 **HTTP `CONNECT` method** запускает двустороннюю связь с запрошенным ресурсом. Метод можно использовать для открытия туннеля.
 
 К примеру, метод CONNECT может использоваться для доступа к сайту, который использует {{Glossary("SSL")}} ({{Glossary("HTTPS")}}). Клиент запрашивает HTTP-прокси-сервер для туннелирования TCP-соединения с желаемым назначением. Затем сервер переходит к подключению от имени клиента. После того, как соединение установлено сервером, прокси-сервер продолжает проксировать поток TCP к клиенту и от него.
@@ -19,20 +17,24 @@ slug: Web/HTTP/Reference/Methods/CONNECT
     </tr>
     <tr>
       <th scope="row">Успешный ответ имеет тело</th>
-      <td>Да</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Безопасный")}}</th>
       <td>Нет</td>
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Идемпотентный")}}
+        {{Glossary("Safe/HTTP", "Безопасный")}}
       </th>
       <td>Нет</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Кешируемый")}}</th>
+      <th scope="row">
+        {{Glossary("Idempotent", "Идемпотентный")}}
+      </th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Cacheable", "Кешируемый")}}
+      </th>
       <td>Нет</td>
     </tr>
     <tr>

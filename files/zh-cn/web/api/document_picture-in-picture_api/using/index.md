@@ -127,7 +127,7 @@ async function togglePictureInPicture() {
 
 ## 画中画模式下目标样式
 
-{{cssxref("@media/display-mode", "display-mode")}} [媒体特性](/zh-CN/docs/Web/CSS/@media#媒体特性) 的 `picture-in-picture` 值允许开发人员根据文档是否以画中画模式显示来将 CSS 应用于文档。基本用法如下：
+{{cssxref("@media/display-mode", "display-mode")}} [媒体特性](/zh-CN/docs/Web/CSS/Reference/At-rules/@media#媒体特性) 的 `picture-in-picture` 值允许开发人员根据文档是否以画中画模式显示来将 CSS 应用于文档。基本用法如下：
 
 ```css
 @media (display-mode: picture-in-picture) {
@@ -211,7 +211,8 @@ documentPictureInPicture.addEventListener("enter", (event) => {
 });
 ```
 
-> **备注：** {{domxref("DocumentPictureInPictureEvent")}} 事件对象包含一个 `window` 属性，用于访问画中画窗口。
+> [!NOTE]
+> {{domxref("DocumentPictureInPictureEvent")}} 事件对象包含一个 `window` 属性，用于访问画中画窗口。
 
 ## 访问元素并处理事件
 

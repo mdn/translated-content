@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Cookies
 original_slug: Web/HTTP/Cookies
 ---
 
-{{HTTPSidebar}}
-
 Una cookie HTTP, cookie web o cookie de navegador es una pequeña pieza de datos que un servidor envía a el navegador web del usuario. El navegador guarda estos datos y los envía de regreso junto con la nueva petición al mismo servidor. Las cookies se usan generalmente para decirle al servidor que dos peticiones tienen su origen en el mismo navegador web lo que permite, por ejemplo, mantener la sesión de un usuario abierta. Las cookies permiten recordar la información de estado en vista a que el protocolo HTTP es un protocolo sin estado.
 
 Las cookies se utilizan principalmente con tres propósitos:
@@ -80,7 +78,7 @@ Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
 
 Una cookie segura sólo se envía al servidor con una petición cifrada sobre el protocolo HTTPS. Incluso con `Secure`, no debería almacenarse _nunca_ información sensible en la cookies, ya que son inherentemente inseguras y este flag no puede ofrecer protección real. A partir de Chrome 52 y Firefox 52, los sitios inseguros (`http:`) no pueden establecer cookies con la directiva `Secure`.
 
-Para prevenir ataques cross-site scripting ([XSS](/es/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss)), las cookies `HttpOnly` son inaccesibles desde la API de Javascript {{domxref("Document.cookie")}}; Solamente se envían al servidor. Por ejemplo, las cookies que persisten sesiones del lado del servidor no necesitan estar disponibles para JavaScript, por lo que debería establecerse el flag `HttpOnly`.
+Para prevenir ataques cross-site scripting ([XSS](/es/docs/Web/Security/Attacks#cross-site_scripting_xss)), las cookies `HttpOnly` son inaccesibles desde la API de Javascript {{domxref("Document.cookie")}}; Solamente se envían al servidor. Por ejemplo, las cookies que persisten sesiones del lado del servidor no necesitan estar disponibles para JavaScript, por lo que debería establecerse el flag `HttpOnly`.
 
 ```
 Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
@@ -143,7 +141,7 @@ Tenga en cuenta las cuestiones de seguridad en la siguiente sección [Seguridad]
 
 ### Secuestro de session y XSS
 
-Las cookies son utilizadas a menudo en aplicaciones web para identificar a un usuario y su sesión autenticada, así que el robo de una cookie puede implicar el secuestro de la sesión del usuario autenticado. Las formas más comunes de robar cookies incluyen ingeniería social o la explotación de una vulnerabilidad [XSS](/es/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss) de la aplicación.
+Las cookies son utilizadas a menudo en aplicaciones web para identificar a un usuario y su sesión autenticada, así que el robo de una cookie puede implicar el secuestro de la sesión del usuario autenticado. Las formas más comunes de robar cookies incluyen ingeniería social o la explotación de una vulnerabilidad [XSS](/es/docs/Web/Security/Attacks#cross-site_scripting_xss) de la aplicación.
 
 ```js
 new Image().src =
@@ -178,10 +176,9 @@ Se presentan aquí algunas técnicas que se deberían usar para evitar que estas
 
 - Los endpoints GET no deben tener acciones de modificación, y si esto se necesita se debería requerir una petición POST. Además los endpoints POST no debería aceptar la intercambiabilidad de aceptar peticiones GET con parametros en _query string_
 - Un token CSRF debería ser incluido en cada elemento `<form>` mediante un input oculto. Este token debe ser único para cada usuario y almacenado (por ejemplo, en una _cookie_). De esta forma el servidor puede mirar si el valor requerido es enviado, y en cierto modo lo idea sería descartar la petición si el valor no concuerda con lo esperado.
-
   - Este método de protección recae en la imposibilidad de que un atacante pueda predecir este token autogenerado en cada inicio de sesión. Cabe aclarar que este token debería ser regenerado en cada inicio de sesión.
 
-- Al igual que con [XSS](/es/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss), el filtrado de entrada es importante.
+- Al igual que con [XSS](/es/docs/Web/Security/Attacks#cross-site_scripting_xss), el filtrado de entrada es importante.
 - Debería de existir siempre un requerimiento de confirmación para cualquier acción delicada,.
 - Las cookies empleadas en acciones delicadas deberían de tener una vida útil breve.
 - Para más prevención visita [OWASP CSRF prevention cheat sheet](<https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet>).

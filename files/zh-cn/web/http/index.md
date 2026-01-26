@@ -3,8 +3,6 @@ title: HTTP
 slug: Web/HTTP
 ---
 
-{{HTTPSidebar}}
-
 **_超文本传输协议_**（HTTP）是一个用于传输超媒体文档（例如 HTML）的[应用层](https://zh.wikipedia.org/wiki/应用层)协议。它是为 Web 浏览器与 Web 服务器之间的通信而设计的，但也可以用于其他目的。HTTP 遵循经典的[客户端—服务端模型](https://zh.wikipedia.org/wiki/主從式架構)，客户端打开一个连接以发出请求，然后等待直到收到服务器端响应。HTTP 是[无状态协议](http://zh.wikipedia.org/wiki/无状态协议)，这意味着服务器不会在两个请求之间保留任何数据（状态）。
 
 ## 教程

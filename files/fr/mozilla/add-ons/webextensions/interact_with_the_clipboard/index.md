@@ -28,7 +28,7 @@ Cette section décrit les options permettant d'écrire des données dans le pres
 
 ### Utiliser l'API Clipboard
 
-L'API Clipboard permet d'écrire des données arbitraires dans le presse-papier de votre extension. Pour utiliser cette API, il faut la permission `"clipboardRead"` ou `"clipboardWrite"` dans le fichier `manifest.json`. Cette API étant uniquement disponible [pour les contextes sécurisés](/fr/docs/Web/Security/Secure_Contexts), on ne peut pas l'utiliser pour un script de contenu qui s'exécute sur une page servie en HTTP mais uniquement sur des pages servies en HTTPS.
+L'API Clipboard permet d'écrire des données arbitraires dans le presse-papier de votre extension. Pour utiliser cette API, il faut la permission `"clipboardRead"` ou `"clipboardWrite"` dans le fichier `manifest.json`. Cette API étant uniquement disponible [pour les contextes sécurisés](/fr/docs/Web/Security/Defenses/Secure_Contexts), on ne peut pas l'utiliser pour un script de contenu qui s'exécute sur une page servie en HTTP mais uniquement sur des pages servies en HTTPS.
 
 Pour les scripts de page, la permission `"clipboard-write"` doit être demandée via l'API [`navigator.permissions`](/fr/docs/Web/API/Permissions). Cette permission peut ensuite être vérifiée avec [`navigator.permissions.query()`](/fr/docs/Web/API/Permissions/query)&nbsp;:
 
@@ -68,7 +68,7 @@ Prenons comme exemple une fenêtre contenant le fragment de HTML suivant&nbsp;:
 <input id="input" type="text" /> <button id="copy">Copier</button>
 ```
 
-Pour que le bouton `"copy"` copie effectivement le contenu de l'élément [`<input>`](/fr/docs/Web/HTML/Element/input), on pourra utiliser un code comme celui-ci&nbsp;:
+Pour que le bouton `"copy"` copie effectivement le contenu de l'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input), on pourra utiliser un code comme celui-ci&nbsp;:
 
 ```js
 function copy() {
@@ -104,7 +104,8 @@ Selon le navigateur, le code présenté juste avant pourra ne pas fonctionner. P
 
 Pour permettre ce cas d'usage, il faut demander la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"clipboardWrite"`. Cette dernière permettra d'écrire dans le presse-papier en dehors des gestionnaires d'évènements éphémères déclenchés par une action de l'utilisatrice ou de l'utilisateur.
 
-> **Note :** [`document.execCommand()`](/fr/docs/Web/API/Document/execCommand) ne fonctionne pas pour les champs de formulaire avec `type="hidden"`, les éléments avec l'attribut HTML `"hidden"`, ou ceux ciblés par une règle CSS contenant `"display: none;"`.
+> [!NOTE]
+> [`document.execCommand()`](/fr/docs/Web/API/Document/execCommand) ne fonctionne pas pour les champs de formulaire avec `type="hidden"`, les éléments avec l'attribut HTML `"hidden"`, ou ceux ciblés par une règle CSS contenant `"display: none;"`.
 
 ### Considérations spécifiques à chaque navigateur
 
@@ -122,7 +123,7 @@ Cette section décrit les options disponibles pour lire ou copier des données d
 
 ### Utiliser l'API Clipboard
 
-Les méthodes de l'API Clipboard [`navigator.clipboard.readText()`](/fr/docs/Web/API/Clipboard/readText) et [`navigator.clipboard.read()`](/fr/docs/Web/API/Clipboard/read) permettent de lire du texte ou des données binaires depuis le presse-papier [dans les contextes sécurisés](/fr/docs/Web/Security/Secure_Contexts). Cela permet d'accéder aux données du presse-papier sans avoir à les coller au préalable dans un élément éditable.
+Les méthodes de l'API Clipboard [`navigator.clipboard.readText()`](/fr/docs/Web/API/Clipboard/readText) et [`navigator.clipboard.read()`](/fr/docs/Web/API/Clipboard/read) permettent de lire du texte ou des données binaires depuis le presse-papier [dans les contextes sécurisés](/fr/docs/Web/Security/Defenses/Secure_Contexts). Cela permet d'accéder aux données du presse-papier sans avoir à les coller au préalable dans un élément éditable.
 
 Une fois que la permission `"clipboard-read"` a été demandée via [l'API Permissions](/fr/docs/Web/API/Permissions_API), il est possible de lire depuis le presse-papier. Ce fragment de code illustre la récupération du texte depuis le presse-papier et remplace le contenu de l'élément ayant l'identifiant `"outbox"` avec ce texte.
 
@@ -142,7 +143,7 @@ Prenons ce fragment de HTML&nbsp;:
 <textarea id="output"></textarea> <button id="paste">Coller</button>
 ```
 
-Pour transformer le contenu de l'élément [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) avec l'identifiant `"output"` en utilisant celui du presse-papier lorsque l'utilisateur clique sur le bouton ([`<button>`](/fr/docs/Web/HTML/Element/button)) `"paste"`, on pourra utiliser le code qui suit&nbsp;:
+Pour transformer le contenu de l'élément [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea) avec l'identifiant `"output"` en utilisant celui du presse-papier lorsque l'utilisateur clique sur le bouton ([`<button>`](/fr/docs/Web/HTML/Reference/Elements/button)) `"paste"`, on pourra utiliser le code qui suit&nbsp;:
 
 ```js
 function paste() {
@@ -157,7 +158,7 @@ document.querySelector("#paste").addEventListener("click", paste);
 
 ### Considérations spécifiques à chaque navigateur
 
-Firefox prend en charge [la permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"clipboardRead"` à partir de la version 54 mais la prise en charge porte uniquement sur le collage au sein d'éléments [en mode éditable](/fr/docs/Web/HTML/Global_attributes/contenteditable), ce qui limite à [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) pour les scripts de contenu. Pour les scripts d'arrière-plan, tout élément pourra être mis en mode éditable.
+Firefox prend en charge [la permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"clipboardRead"` à partir de la version 54 mais la prise en charge porte uniquement sur le collage au sein d'éléments [en mode éditable](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable), ce qui limite à [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea) pour les scripts de contenu. Pour les scripts d'arrière-plan, tout élément pourra être mis en mode éditable.
 
 ## Compatibilité des navigateurs
 
@@ -167,5 +168,5 @@ Firefox prend en charge [la permission](/fr/docs/Mozilla/Add-ons/WebExtensions/m
 
 - [API Clipboard](/fr/docs/Web/API/Clipboard_API)
 - [API Permissions](/fr/docs/Web/API/Permissions_API)
-- [Rendre le contenu éditable](/fr/docs/Web/HTML/Global_attributes/contenteditable)
-- [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#attr-contenteditable)
+- [Rendre le contenu éditable](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable)
+- [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-contenteditable)

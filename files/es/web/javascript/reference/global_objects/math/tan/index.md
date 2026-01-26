@@ -24,8 +24,6 @@ console.log(getTanFromDegrees(90));
 // Expected output: 16331239353195370
 ```
 
-La fuente para este ejemplo interactivo se encuentra almacenada en un repositorio de GitHub. Si quieres contribuir al proyecto de ejemplos interactivos, por favor, clona el repositorio en este link: <https://github.com/mdn/interactive-examples> y envíanos un _Pull Request_.
-
 ## Sintaxis
 
 ```

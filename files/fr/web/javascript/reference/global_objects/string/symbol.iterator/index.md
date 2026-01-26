@@ -8,7 +8,20 @@ original_slug: Web/JavaScript/Reference/Global_Objects/String/@@iterator
 
 La méthode **`[@@iterator]()`** renvoie un nouvel objet [`Iterator`](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) qui itère sur les points de code (codets) d'une chaîne de caractères, en renvoyant chaque point de code sous forme d'une chaîne de caractères.
 
-{{EmbedInteractiveExample("pages/js/string-iterator.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.iterator")}}
+
+```js interactive-example
+const iterable1 = {};
+
+iterable1[Symbol.iterator] = function* () {
+  yield 1;
+  yield 2;
+  yield 3;
+};
+
+console.log([...iterable1]);
+// Expected output: Array [1, 2, 3]
+```
 
 ## Syntaxe
 

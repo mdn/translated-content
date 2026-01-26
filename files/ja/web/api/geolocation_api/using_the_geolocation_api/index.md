@@ -2,10 +2,10 @@
 title: 位置情報 API の使用
 slug: Web/API/Geolocation_API/Using_the_Geolocation_API
 l10n:
-  sourceCommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
+  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
+{{DefaultAPISidebar("Geolocation API")}}
 
 位置情報 API (Geolocation API) により、ユーザーは希望すれば自身の場所をウェブアプリケーションに通知することができるようになります。この記事では、その使い方の基本を説明します。
 
@@ -42,7 +42,8 @@ navigator.geolocation.getCurrentPosition((position) => {
 
 位置情報が変化した場合（端末が移動した時や、より正確な位置情報が得られた時）は、位置情報の更新と同時に呼び出されるコールバック関数を指定することができます。これは {{domxref("Geolocation.watchPosition","watchPosition()")}} 関数を使うことで実現できますが、こちらの入力引数は {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} と同じです。コールバック関数は繰り返し呼び出され、ブラウザーは移動に応じて位置情報を更新したり、位置の特定に別の技術を使用することでより詳細な位置情報を提供したりすることが可能です。エラー発生時に呼び出されるコールバック関数は `getCurrentPosition()` と同様に任意指定であり、繰り返し呼び出される場合があります。
 
-> **メモ:** {{domxref("Geolocation.watchPosition","watchPosition()")}} を使用する際に、先に {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} を呼び出す必要はありません。
+> [!NOTE]
+> {{domxref("Geolocation.watchPosition","watchPosition()")}} を使用する際に、先に {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} を呼び出す必要はありません。
 
 ```js
 const watchID = navigator.geolocation.watchPosition((position) => {
@@ -86,7 +87,7 @@ const watchID = navigator.geolocation.watchPosition(success, error, options);
 
 ユーザーの位置は {{domxref("GeolocationPosition")}} オブジェクトインスタンスを使用して記述され、それ自体が {{domxref("GeolocationCoordinates")}} オブジェクトインスタンスを含んでいます。
 
-`GeolocationPosition` インスタンスが持つ情報は 2 つだけで、 `coords` プロパティは `GeolocationCoordinates` インスタンスを持っており、 `timestamp` プロパティは位置データが取得された時刻を表す、ミリ秒単位の [Unix 時刻](/ja/docs/Glossary/Unix_time)を持っています。
+`GeolocationPosition` インスタンスが持つ情報は 2 つだけで、 `coords` プロパティは `GeolocationCoordinates` インスタンスを持っており、 `timestamp` プロパティは位置データが取得された時刻を表す、ミリ秒単位の {{Glossary("Unix time", "Unix 時刻")}}を持っています。
 
 `GeolocationCoordinates` インスタンスにはいくつかのプロパティがありますが、最も一般的に使用されるのは `latitude` と `longitude` の 2 つで、これは地図上に位置を描画するために必要なものです。そのため、多くの Geolocation 成功コールバックはとてもシンプルに見えます。
 
@@ -133,7 +134,7 @@ button {
 ```html
 <button id="find-me">現在の位置を表示</button><br />
 <p id="status"></p>
-<a id="map-link" target="_blank"></a>
+<a id="map-link" href="" target="_blank">位置不明</a>
 ```
 
 ### JavaScript

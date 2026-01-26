@@ -1,11 +1,9 @@
 ---
-title: Accept-Ranges
+title: Accept-Ranges 標頭
 slug: Web/HTTP/Reference/Headers/Accept-Ranges
 l10n:
-  sourceCommit: 442db82028668b17b888ee439468ae2ac9d589a5
+  sourceCommit: ee756fd51ccbc4820a4b334aa753648650ad1d51
 ---
-
-{{HTTPSidebar}}
 
 HTTP **`Accept-Ranges`** {{Glossary("response header", "回應標頭")}}是伺服器用來通知其支援的[範圍請求](/zh-TW/docs/Web/HTTP/Guides/Range_requests)，允許用戶端請求資源的一部分或多個部分。此標頭的值表示可用來定義範圍的單位。
 

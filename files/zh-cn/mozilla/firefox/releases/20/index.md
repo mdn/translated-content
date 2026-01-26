@@ -3,16 +3,14 @@ title: Firefox 20 for developers
 slug: Mozilla/Firefox/Releases/20
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 20 正式版发布于 2013 年 4 月 2 日。
 
 ## Web 开发者需要注意的变化
 
 ### HTML
 
-- 实现了{{HTMLElement("a")}}和{{HTMLElement("area")}}元素上的[`download`](/zh-CN/docs/Web/HTML/Element/a#download)属性 ([Firefox bug 676619](https://bugzil.la/676619)).
-- [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) [`dir`](/zh-CN/docs/Web/HTML/Global_attributes#attr-dir) 的值开始支持 `auto` ([Firefox bug 548206](https://bugzil.la/548206)).
+- 实现了{{HTMLElement("a")}}和{{HTMLElement("area")}}元素上的[`download`](/zh-CN/docs/Web/HTML/Reference/Elements/a#download)属性 ([Firefox bug 676619](https://bugzil.la/676619)).
+- [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes) [`dir`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#attr-dir) 的值开始支持 `auto` ([Firefox bug 548206](https://bugzil.la/548206)).
 
 ### JavaScript
 
@@ -23,7 +21,7 @@ Firefox 20 正式版发布于 2013 年 4 月 2 日。
 
 ### CSS
 
-- [CSS Flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)默认开启，不需要设置 about:config.
+- [CSS Flexbox](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)默认开启，不需要设置 about:config.
 - 实现了 [CSS Masking specification](https://dvcs.w3.org/hg/FXTF/raw-file/tip/masking/index.html) 中的 `mask-type` 属性（[Firefox bug 793617](https://bugzil.la/793617)）。
 
 ### DOM

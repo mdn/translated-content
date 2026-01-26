@@ -20,7 +20,6 @@ l10n:
 - [JavaScript에서 메서드의 정의](/ko/docs/Web/JavaScript/Reference/Functions/Method_definitions) (전통적인 구문과 새로운 약어의 비교)
 - [JavaScript 내장 메서드 목록](/ko/docs/Web/JavaScript/Reference)
 - [MDN Web Docs 용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("function")}}
   - {{Glossary("object")}}
   - {{Glossary("property")}}

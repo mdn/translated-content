@@ -16,11 +16,11 @@ l10n:
 _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 
 - {{domxref("HTMLFontElement.color")}} {{Deprecated_Inline}}
-  - : 一个反映 [`color`](/zh-CN/docs/Web/HTML/Element/font#color) HTML 属性的字符串，包含命名颜色或以十六进制 #RRGGBB 格式指定的颜色。
+  - : 一个反映 [`color`](/zh-CN/docs/Web/HTML/Reference/Elements/font#color) HTML 属性的字符串，包含命名颜色或以十六进制 #RRGGBB 格式指定的颜色。
 - {{domxref("HTMLFontElement.face")}} {{Deprecated_Inline}}
-  - : 一个反映 [`face`](/zh-CN/docs/Web/HTML/Element/font#face) HTML 属性的字符串，包含一个或多个字体名称的逗号分隔列表。
+  - : 一个反映 [`face`](/zh-CN/docs/Web/HTML/Reference/Elements/font#face) HTML 属性的字符串，包含一个或多个字体名称的逗号分隔列表。
 - {{domxref("HTMLFontElement.size")}} {{Deprecated_Inline}}
-  - : 一个反映 [`size`](/zh-CN/docs/Web/HTML/Element/font#size) HTML 属性的字符串，包含从 1 到 7 的字体大小或相对于默认值 3 的数字，例如 -2 或 +1。
+  - : 一个反映 [`size`](/zh-CN/docs/Web/HTML/Reference/Elements/font#size) HTML 属性的字符串，包含从 1 到 7 的字体大小或相对于默认值 3 的数字，例如 -2 或 +1。
 
 ## 实例方法
 

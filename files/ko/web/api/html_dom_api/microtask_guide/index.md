@@ -5,7 +5,7 @@ slug: Web/API/HTML_DOM_API/Microtask_guide
 
 {{APIRef("HTML DOM")}}
 
-**마이크로태스크**는 자신을 생성한 함수 또는 프로그램이 종료됐고 [JavaScript 실행 스택](/ko/docs/Web/JavaScript/Event_loop#스택)이 빈 후에, 그러나 {{glossary("user agent", "사용자 에이전트")}}가 스크립트 실행 환경을 운용하기 위해 사용하는 이벤트 루프로 통제권을 넘기기는 전에 실행되는 짧은 함수입니다.
+**마이크로태스크**는 자신을 생성한 함수 또는 프로그램이 종료됐고 [JavaScript 실행 스택](/ko/docs/Web/JavaScript/Reference/Execution_model#스택)이 빈 후에, 그러나 {{glossary("user agent", "사용자 에이전트")}}가 스크립트 실행 환경을 운용하기 위해 사용하는 이벤트 루프로 통제권을 넘기기는 전에 실행되는 짧은 함수입니다.
 
 이때의 이벤트 루프는 브라우저의 주 이벤트 루프 또는 [웹 워커](/ko/docs/Web/API/Web_Workers_API)를 구동하는 이벤트 루프입니다. 따라서 마이크로태스크를 이용하면 다른 스크립트의 실행을 방해할 위험을 감수하지 않으면서도, 사용자 에이전트가 반응하기 전에 주어진 함수를 실행할 수 있습니다.
 

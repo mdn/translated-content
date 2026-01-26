@@ -19,9 +19,7 @@ new NDEFRecord(options)
 ### 引数
 
 - `options`
-
   - : 以下のプロパティを持つオブジェクトです。
-
     - `data` {{optional_inline}}
       - : 転送されるデータが入ります。文字列のオブジェクトまたはリテラル、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}、またはネストされたレコードの配列のいずれかです。
     - `encoding` {{optional_inline}}
@@ -33,15 +31,12 @@ new NDEFRecord(options)
     - `mediaType` {{optional_inline}}
       - : 有効な [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)です。
     - `recordType`
-
       - : 文字列で、 `data` に格納されたデータの型を示します。以下の値の何れかである必要があります。
-
         - `"absolute-url"`
 
           データへの絶対 URL です。
 
           `"empty"`
-
           - : 空の {{domxref("NDEFRecord")}} です。
 
         - `"mime"`

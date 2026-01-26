@@ -43,7 +43,6 @@ Hereda de: [EventTarget](/es/docs/Web/API/EventTarget)
 Detecte estos eventos usando `addEventListener()` o asignando un detector de eventos a la propiedad `oneventname` de esta interfaz.
 
 - [`close`](/es/docs/Web/API/IDBDatabase/close_event)
-
   - : Un evento activado cuando la conexión de la base de datos se cierra inesperadamente.
 
 - [`versionchange`](/es/docs/Web/API/IDBDatabase/versionchange_event)

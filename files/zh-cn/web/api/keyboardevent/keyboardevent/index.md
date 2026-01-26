@@ -19,9 +19,7 @@ new KeyboardEvent(type, options)
 - _typeArg_
   - : {{domxref("DOMString")}} 类型，表示事件名称。
 - _KeyboardEventInit_{{optional_inline}}
-
   - : `KeyboardEventInit` 字典，有以下几种值：
-
     - `"key"`, 可选，默认为 `""`, {{domxref("DOMString")}} 类型，设置 {{domxref("KeyboardEvent.key")}} 的值。
     - `"code"`, 可选，默认为 `""`, {{domxref("DOMString")}} 类型，设置{{domxref("KeyboardEvent.code")}} 的值。
     - `"location"`, 可选，默认为 `0`, `unsigned long`类型，设置 {{domxref("KeyboardEvent.location")}} 的值。
@@ -35,7 +33,8 @@ new KeyboardEvent(type, options)
     - `"keyCode"`, 可选，默认为 `0`, `unsigned long` 类型，设置{{domxref("KeyboardEvent.keyCode")}} (已废弃) 的值。
     - `"which"`, 可选，默认为 `0`, `unsigned long` 类型，设置{{domxref("KeyboardEvent.which")}} (已废弃) 的值。
 
-    > **备注：** `KeyboardEventInit` 字典也可以接受来自 {{domxref("UIEvent.UIEvent", "UIEventInit")}} 和 {{domxref("Event.Event", "EventInit")}} 的字典字段值。
+    > [!NOTE]
+    > `KeyboardEventInit` 字典也可以接受来自 {{domxref("UIEvent.UIEvent", "UIEventInit")}} 和 {{domxref("Event.Event", "EventInit")}} 的字典字段值。
 
 ## 规范
 

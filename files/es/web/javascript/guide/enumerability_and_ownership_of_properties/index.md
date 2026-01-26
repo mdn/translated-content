@@ -11,11 +11,8 @@ Las propiedades enumerables son aquellas propiedades cuyo indicador enumerable i
 **Propiedad, enumerabilidad y posesión — métodos integrados de detección, recuperación e iteración.**
 
 - Funcionalidad
-
   - : &#x20;
-
     - Detección
-
       - : **Propia del Objeto**
 
         | Enumerable                                                                                                                                           | No enumerable                                                                                                                                                                                      | Enumerable y no enumerable                                           |
@@ -33,7 +30,6 @@ Las propiedades enumerables son aquellas propiedades cuyo indicador enumerable i
         No disponible sin código adicional
 
     - Recuperación
-
       - : **Propia del Objeto**
 
         | Enumerable                                                                                                                                                                                                              | No enumerable                                                                                                                                                                                                                                                                                  | Enumerable y no enumerable                                                                                                                                       |
@@ -49,7 +45,6 @@ Las propiedades enumerables son aquellas propiedades cuyo indicador enumerable i
         No disponible sin código adicional
 
     - Iterable
-
       - : **Propia del Objeto**
 
         | Enumerable                                                                                                                                                                                                              | No enumerable                                                                                                                                                                                                                                                                                  | Enumerable y no enumerable                                                                                                                                       |

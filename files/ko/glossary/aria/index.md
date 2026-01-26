@@ -14,7 +14,7 @@ l10n:
 ## 같이 보기
 
 - [ARIA 역할](/ko/docs/Web/Accessibility/ARIA/Roles)
-- [ARIA 상태 및 속성: `aria-*` 속성](/ko/docs/Web/Accessibility/ARIA/Attributes)
+- [ARIA 상태 및 속성: `aria-*` 속성](/ko/docs/Web/Accessibility/ARIA/Reference/Attributes)
 - [ARIA](/ko/docs/Web/Accessibility/ARIA)
 - [ARIA 안내서](/ko/docs/Web/Accessibility/ARIA/ARIA_Guides)
 - [WAI-ARIA 명세](https://w3c.github.io/aria/)

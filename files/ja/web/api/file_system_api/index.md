@@ -27,7 +27,8 @@ l10n:
 > [!NOTE]
 > API の機能を使う際に投げられる可能性がある例外は、仕様書での定義に沿って関連するページに一覧が載っています。しかし、 API と下層のオペレーティングシステムの相互作用により、状況はより複雑になります。[仕様書でエラーの対応関係を一覧にする](https://github.com/whatwg/fs/issues/57)ための提案がなされており、ここに有用な関連情報があります。
 
-> **メモ:** {{domxref("FileSystemHandle")}} をベースとするオブジェクトは、{{domxref("IndexedDB API", "IndexedDB", "", "nocode")}} のデータベースのインスタンスにシリアライズしたり、{{domxref("window.postMessage", "postMessage()")}} を介して転送したりできます。
+> [!NOTE]
+> {{domxref("FileSystemHandle")}} をベースとするオブジェクトは、{{domxref("IndexedDB API", "IndexedDB", "", "nocode")}} のデータベースのインスタンスにシリアライズしたり、{{domxref("window.postMessage", "postMessage()")}} を介して転送したりできます。
 
 ### オリジンプライベートファイルシステム
 
@@ -37,7 +38,7 @@ l10n:
 
 ### ファイルの保存
 
-- 非同期ハンドルでは、{{domxref('FileSystemWritableFileStream')}} インターフェイスを使います。保存したいデータを {{domxref('Blob')}}、{{jsxref("String")}} オブエクト、文字列リテラル、{{jsxref('ArrayBuffer', 'buffer')}} のいずれかの形式にしたら、ストリームを開いてデータをファイルに保存できます。既存のファイルも新しいファイルも保存先にできます。
+- 非同期ハンドルでは、{{domxref('FileSystemWritableFileStream')}} インターフェイスを使います。保存したいデータを {{domxref('Blob')}}、{{jsxref("String")}} オブジェクト、文字列リテラル、{{jsxref('ArrayBuffer', 'buffer')}} のいずれかの形式にしたら、ストリームを開いてデータをファイルに保存できます。既存のファイルも新しいファイルも保存先にできます。
 - 同期的に {{domxref('FileSystemSyncAccessHandle')}} では、{{domxref('FileSystemSyncAccessHandle.write', 'write()')}} メソッドを用いて変更をファイルに書き込みます。特定のタイミングで変更をディスクに書き込みたい場合は、{{domxref('FileSystemSyncAccessHandle.flush', 'flush()')}} を呼ぶことができます。(これを呼ばない場合、下層のオペレーティングシステムに任せて都合のいいときに処理させることができ、ほとんどの場合はこれでいいでしょう)
 
 ## インターフェイス

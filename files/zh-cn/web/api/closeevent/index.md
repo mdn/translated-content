@@ -17,7 +17,6 @@ slug: Web/API/CloseEvent
 _该接口也继承了其父类 {{domxref("Event")}} 的属性。_
 
 - {{domxref("CloseEvent.code")}} {{readOnlyInline}}
-
   - : 返回一个 unsigned short 类型的数字，表示服务端发送的关闭码，以下为已分配的状态码。
 
     | 状态码        | ?名称                  | ?描述                                                                                                                                        |

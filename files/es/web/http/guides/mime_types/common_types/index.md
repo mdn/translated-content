@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/MIME_types/Common_types
 original_slug: Web/HTTP/MIME_types/Common_types
 ---
 
-{{HTTPSidebar}}
-
 Aquí está una lista completa de tipos de MIME, asociados por tipo de documentos y ordenados por su extensión común.
 
 Dos tipos primarios de MIME son importantes para el rol de tipos por defecto:

@@ -1,16 +1,15 @@
 ---
 title: "false"
 slug: Web/XML/XPath/Reference/Functions/false
-original_slug: Web/XPath/Reference/Functions/false
+l10n:
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
-
-{{XsltSidebar}}{{ XsltRef() }}
 
 `false` 関数は論理値 false を返します。
 
-### 構文
+## 構文
 
-```
+```plain
 false()
 ```
 
@@ -22,16 +21,16 @@ false()
 
 この関数は比較の一部として役立ちます。
 
-```
+```xml
 <xsl:if test="boolean((1 &gt; 2) = false())">
- The expression evaluates as true
+  The expression evaluates as true
 </xsl:if>
 ```
 
-### 定義
+## 仕様書
 
-[XPath 1.0 4.3](https://www.w3.org/TR/xpath#function-false)
+[XPath 1.0 4.3](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-false)
 
-### Gecko での対応
+## Gecko の対応
 
 対応済み。

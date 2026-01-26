@@ -16,7 +16,7 @@ l10n:
 _親である {{domxref("HTMLElement")}} から継承したプロパティがあります。_
 
 - {{domxref("HTMLQuoteElement.cite")}}
-  - : 文字列で、HTML の [`cite`](/ja/docs/Web/HTML/Element/blockquote#cite) 属性を反映し、引用元の URL を表します。
+  - : 文字列で、HTML の [`cite`](/ja/docs/Web/HTML/Reference/Elements/blockquote#cite) 属性を反映し、引用元の URL を表します。
 
 ## インスタンスメソッド
 

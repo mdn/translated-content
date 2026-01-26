@@ -3,8 +3,6 @@ title: RegExp() constructor
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 ---
 
-{{JSRef}}
-
 **`RegExp`** 用于创建正则表达式对象，该对象用于将文本与一个模式匹配
 
 阅读[JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)中的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)一节以了解正则表达式。
@@ -40,7 +38,6 @@ RegExp(pattern[, flags])
 - `pattern`
   - : 正则表达式的文本。从 ES5 开始，这也可以是另一个 `RegExp` 对象或文字（仅用于两个 RegExp 构造函数符号）。模式可以包含[特殊字符](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions#使用特殊字符)来匹配比字面值字符串更广泛的值范围。
 - `flags`
-
   - : 如果指定，`flags` 是包含要添加的标志的字符串。
 
     或者，如果为模式提供了一个对象，flags 字符串将替换该对象的任何标志 (并且`lastIndex`将重置为 0)(从 ES2015 开始)。
@@ -48,7 +45,6 @@ RegExp(pattern[, flags])
     如果没有指定`flags`并且提供了一个正则表达式对象，则该对象的 flags(和 lastIndex 值) 将被复制。
 
     `flags` 可包含下列任何字符的组合：
-
     - `g` （全局匹配）
       - : 找到所有的匹配，而不是在第一个匹配之后停止。
     - `i` （忽略大小写）

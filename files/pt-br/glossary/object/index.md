@@ -13,4 +13,4 @@ slug: Glossary/Object
 
 - [Object-oriented programming](https://pt.wikipedia.org/wiki/Programação_orientada_a_objetos) on Wikipedia
 - {{jsxref("Object")}} in the [JavaScript reference](/pt-BR/docs/Web/JavaScript/Reference)
-- [Object data structures in JavaScript](/pt-BR/docs/Web/JavaScript/Data_structures#objects)
+- [Object data structures in JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Data_structures#objects)

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 16d3095f33bd0655b01098ce662e3014510fdef6
 ---
 
-{{GamesSidebar}}
-
 Une scène 3D dans un jeu, même la plus simple qui soit, contient des éléments standard comme des formes situées dans un système de coordonnées, une caméra pour les voir, des lumières et des matériaux pour améliorer son esthétique, des animations pour la rendre vivante, etc. **Three.js**, comme avec toute autre bibliothèque 3D, fournit des fonctions d'assistance intégrées pour vous aider à implémenter plus rapidement les fonctionnalités 3D courantes. Dans cet article, nous vous expliquerons les bases de l'utilisation de Three.js, notamment la configuration d'un environnement de développement, la structure du code HTML nécessaire, les objets fondamentaux de ThreeJS et la manière de créer une démonstration de base.
 
 > [!NOTE]
@@ -53,9 +51,9 @@ Voici la structure que nous allons utiliser
 </html>
 ```
 
-Cette structure contient des informations de base comme le titre du document ([`<title>`](/fr/docs/Web/HTML/Element/title)), un peu de CSS pour définir la largeur ([`width`](/fr/docs/Web/CSS/width)) et la hauteur ([`height`](/fr/docs/Web/CSS/height)) du canevas ([`<canvas>`](/fr/docs/Web/HTML/Element/canvas)), ici 100% pour remplir tout l'espace disponible.
+Cette structure contient des informations de base comme le titre du document ([`<title>`](/fr/docs/Web/HTML/Reference/Elements/title)), un peu de CSS pour définir la largeur ([`width`](/fr/docs/Web/CSS/Reference/Properties/width)) et la hauteur ([`height`](/fr/docs/Web/CSS/Reference/Properties/height)) du canevas ([`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas)), ici 100% pour remplir tout l'espace disponible.
 
-Le premier élément [`<script>`](/fr/docs/Web/HTML/Element/script) inclut la bibliothèque Three.js dans la page. Nous écrirons notre code dans le deuxième élément `<script>`. Nous avons déjà inclus deux variables utilitaires pour stocker la largeur et la hauteur de la fenêtre (respectivement `WIDTH` et `HEIGHT`).
+Le premier élément [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) inclut la bibliothèque Three.js dans la page. Nous écrirons notre code dans le deuxième élément `<script>`. Nous avons déjà inclus deux variables utilitaires pour stocker la largeur et la hauteur de la fenêtre (respectivement `WIDTH` et `HEIGHT`).
 
 Avant de poursuivre, copiez ce code dans un fichier nommé `index.html` dans votre répertoire de travail.
 
@@ -74,7 +72,7 @@ document.body.appendChild(renderer.domElement);
 
 Nous créons un nouveau rendu WebGL, définissons sa taille pour qu'elle occupe tout l'espace disponible à l'écran et ajoutons la structure DOM à la page. Vous avez peut-être remarqué le paramètre `antialias` dans la première ligne, cela évite les effets de [crénelage](https://fr.wikipedia.org/wiki/Crénelage) pour les bords des formes. La méthode `setClearColor()` définit notre arrière-plan avec une couleur gris clair au lieu du noir par défaut.
 
-Ajoutez ce code dans notre deuxième balise [`<script>`](/fr/docs/Web/HTML/Element/script) du fichier `index.html`, juste en dessous du commentaire JavaScript.
+Ajoutez ce code dans notre deuxième balise [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) du fichier `index.html`, juste en dessous du commentaire JavaScript.
 
 ## Scène
 

@@ -20,7 +20,6 @@ new Blob(blobParts, options)
 ### 引数
 
 - `blobParts` {{optional_inline}}
-
   - : [反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)オブジェクト、例えば {{jsxref("Array")}} などです。その中身が {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}、{{domxref("Blob")}}、文字列などのオブジェクト、またはそのようなオブジェクトの何れかが混合したもので、それが {{domxref("Blob")}} の中に入れられます。
     文字列は正規化された Unicode でなければならず、孤立サロゲートは {{jsxref("String.prototype.toWellFormed()")}} と同じアルゴリズムを使用して無害化されます。
 

@@ -3,8 +3,6 @@ title: Babylon.js を使った基本的なデモの作成
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js
 ---
 
-{{GamesSidebar}}
-
 [Babylon.js](https://www.babylonjs.com/) は開発者に使われている最も有名な 3D ゲームエンジンです。他のどんな 3D と同様に、より迅速に共通の3D機能を実装するのを助けるプラグイン機能を提供します。この記事では Babylon.js を使った基礎を通じて開発環境の構築、必要な HTML 構造、 JavaScript の書き方を提供します。
 
 まずは、画面の内側へレンダリングされた立方体という簡単なデモを作成してみることにします。もし、すでにこの基本デモの作成[シリーズ](/ja/docs/Games/Techniques/3D_on_the_web) ([Three.js](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js), [PlayCanvas](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas), [A-Frame](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame)) を通して作業をしたことがある人（あるいは、他の 3D ライブラリーに精通している人）は、 Babylon.js がカメラ、光、オブジェクトという同じような概念で動作することに気づくでしょう。

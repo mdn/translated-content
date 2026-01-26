@@ -3,8 +3,6 @@ title: Entendiendo el colapso de margen
 slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 ---
 
-{{CSSRef}}
-
 Los márgenes [Top](/es/docs/Web/CSS/margin-top) y [bottom](/es/docs/Web/CSS/margin-bottom) de los bloques a veces están combinados (colapsados) en un solo margen cuyo tamaño es el mayor de los márgenes combinados, un comportamiento conocido como **colapso de margen**. Ten en cuenta que los márgenes de [flotantes](/es/docs/Web/CSS/float) y elementos con [posición absoluta](/es/docs/Web/CSS/position) nunca colapsan.
 
 El colapso de margen ocurre en tres casos básicos:

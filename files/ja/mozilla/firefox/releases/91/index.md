@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 91 の変更点をまとめています。Firefox 91 は 2021 年 8 月 10 日にリリースされました。
 
 > [!NOTE]
@@ -35,7 +33,7 @@ l10n:
 
 ### HTTP
 
-- [Gamepad API](/ja/docs/Web/API/Gamepad_API) が [保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts) を要求するようになりました ([Firefox バグ 1704005](https://bugzil.la/1704005))。
+- [Gamepad API](/ja/docs/Web/API/Gamepad_API) が [保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts) を要求するようになりました ([Firefox バグ 1704005](https://bugzil.la/1704005))。
 
 ### API
 

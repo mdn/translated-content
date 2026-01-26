@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Status/101
 original_slug: Web/HTTP/Status/101
 ---
 
-{{HTTPSidebar}}El código de respuesta **`101 Switching Protocols`** que el servidor está cambiando de protocolo al solicitado por un cliente que mandó un mensaje incluyendo la cabecera {{HTTPHeader("Upgrade")}}.
+El código de respuesta **`101 Switching Protocols`** que el servidor está cambiando de protocolo al solicitado por un cliente que mandó un mensaje incluyendo la cabecera {{HTTPHeader("Upgrade")}}.
 
 El servidor incluye en esta respuesta una cabecera {{HTTPHeader("Upgrade")}} para indicar a qué protocolo ha cambiado. El proceso se describe en detalle en el artículo [Protocol upgrade mechanism](/es/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism).
 

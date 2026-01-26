@@ -27,7 +27,6 @@ slug: Web/API/Touch_events/Using_Touch_Events
 - {{domxref("TouchEvent.touches","touches")}} - список всех точек касания, находящихся в данный момент на экране
 - {{domxref("TouchEvent.targetTouches","targetTouches")}} - список точек касания на целевом DOM-элементе
 - {{domxref("TouchEvent.changedTouches","changedTouches")}} - список точек касания, элементы которых зависят от типа связанного события:
-
   - Для события [`touchstart`](/ru/docs/Web/API/Element/touchstart_event) - список точек касания, которые стали активными во время события
   - Для события [`touchmove`](/ru/docs/Web/API/Element/touchmove_event) - список точек касания, которые изменились с последнего события
   - Для события [`touchend`](/ru/docs/Web/API/Element/touchend_event) - список точек касания, которые были удалены с поверхности (то есть, набор точек касания, соответствующих пальцам, которые больше не касаются поверхности)

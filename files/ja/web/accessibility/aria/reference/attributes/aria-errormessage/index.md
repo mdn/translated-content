@@ -12,9 +12,9 @@ l10n:
 
 ## 解説
 
-ユーザーが作成したエラーがある場合、その存在を知らせ、修正する方法を指示したいものです。 2 つの属性を使用する必要があります。 [`aria-invalid="true"`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-invalid) を設定してオブジェクトがエラー状態であることを定義し、そして、 `aria-errormessage` 属性を追加し、その値としてそのオブジェクトのエラーメッセージテキストを格納する要素の `id` を指定します。
+ユーザーが作成したエラーがある場合、その存在を知らせ、修正する方法を指示したいものです。 2 つの属性を使用する必要があります。 [`aria-invalid="true"`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid) を設定してオブジェクトがエラー状態であることを定義し、そして、 `aria-errormessage` 属性を追加し、その値としてそのオブジェクトのエラーメッセージテキストを格納する要素の `id` を指定します。
 
-`aria-errormessage` 属性は、オブジェクトの値が有効でない場合、すなわち [`aria-invalid`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-invalid) が `true` に設定されている場合にのみ使用しましょう。
+`aria-errormessage` 属性は、オブジェクトの値が有効でない場合、すなわち [`aria-invalid`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid) が `true` に設定されている場合にのみ使用しましょう。
 オブジェクトが有効で `aria-errormessage` 属性を記載する場合は、参照する要素が非表示であり、そこに含まれるメッセージには関連がないことを確認してください。
 
 `aria-errormessage` が関連する場合、参照する要素はユーザーがエラーメッセージを見たり聞いたりできるように可視でなければなりません。
@@ -77,22 +77,22 @@ l10n:
 
 - [`application`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
 - [`checkbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
-- [`combobox`](/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role)
+- [`combobox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)
 - [`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
 - [`listbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role)
-- [`radiogroup`](/ja/docs/Web/Accessibility/ARIA/Roles/radiogroup_role)
+- [`radiogroup`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role)
 - [`slider`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
 - [`spinbutton`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
 - [`textbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)
-- [`tree`](/ja/docs/Web/Accessibility/ARIA/Roles/tree_role)
+- [`tree`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role)
 
 継承しているロール:
 
-- [`columnheader`](/ja/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-- [`rowheader`](/ja/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
-- [`searchbox`](/ja/docs/Web/Accessibility/ARIA/Roles/searchbox_role)
+- [`columnheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`rowheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
+- [`searchbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role)
 - [`switch`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
-- [`treegrid`](/ja/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
+- [`treegrid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
 
 ## 仕様書
 
@@ -102,6 +102,6 @@ l10n:
 
 - HTML の [`invalid`](/ja/docs/Web/HTML/Global_attributes/invalid) 属性
 - CSS の {{CSSxref(':invalid')}} 擬似クラス
-- [`aria-invalid`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
+- [`aria-invalid`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid)
 - [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
 - [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)

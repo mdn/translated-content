@@ -100,7 +100,7 @@ if(!("nextElementSibling" in document.documentElement)){
 
 - [`nextSibling`](/zh-CN/docs/DOM/Node.nextSibling)
 - [`childElementCount`](/zh-CN/docs/Web/API/Element/childElementCount)
-- [`children`](/zh-CN/docs/DOM/Element.children)
-- [`firstElementChild`](/zh-CN/docs/DOM/Element.firstElementChild)
-- [`lastElementChild`](/zh-CN/docs/DOM/Element.lastElementChild)
+- [`children`](/zh-CN/docs/Web/API/Element/children)
+- [`firstElementChild`](/zh-CN/docs/Web/API/Element/firstElementChild)
+- [`lastElementChild`](/zh-CN/docs/Web/API/Element/lastElementChild)
 - [`previousElementSibling`](/zh-CN/docs/Web/API/Element/previousElementSibling)

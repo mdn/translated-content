@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Variables
 original_slug: Learn/JavaScript/First_steps/Variables
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting")}}
 
 Depois de ler os últimos artigos, você deve saber agora o que é o JavaScript, o que ele pode fazer para você, como você usa isso junto com outras tecnologias da web e as características principais de alto nível. Neste artigo, iremos ao básico, vendo como trabalhar com a maioria dos blocos de construção básicos de JavaScript - Variáveis.
 
@@ -14,7 +14,7 @@ Depois de ler os últimos artigos, você deve saber agora o que é o JavaScript,
 
 ## Ferramentas que você precisa
 
-Ao longo deste artigo, pediremos que você digite linhas de código para testar seu entendimento do conteúdo. Se você estiver utilizando um navegador em um computador, o melhor lugar para digitar seus código de exemplos é o console JavaScript do seu navegador (veja o artigo [O que são as ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) para mais informações sobre como acessar essa ferramenta).
+Ao longo deste artigo, pediremos que você digite linhas de código para testar seu entendimento do conteúdo. Se você estiver utilizando um navegador em um computador, o melhor lugar para digitar seus código de exemplos é o console JavaScript do seu navegador (veja o artigo [O que são as ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) para mais informações sobre como acessar essa ferramenta).
 
 No entanto, nós também providenciamos um simples console JavaScript incorporado à página logo abaixo para que você inserir o código, caso não esteja usando um navegador com um console JavaScript facilmente disponível, ou se achar o console incorporado mais confortável.
 
@@ -347,10 +347,10 @@ diasNaSemana = 8;
 
 ## Teste suas habilidades!
 
-Você chegou ao final deste artigo, mas consegue se lembrar das informações mais importantes? Você pode encontrar alguns testes adicionais para verificar se você reteve essas informações antes de prosseguir — veja [Teste suas habilidades: variáveis](/pt-BR/docs/Learn/JavaScript/First_steps/Test_your_skills:_variables).
+Você chegou ao final deste artigo, mas consegue se lembrar das informações mais importantes? Você pode encontrar alguns testes adicionais para verificar se você reteve essas informações antes de prosseguir — veja [Teste suas habilidades: variáveis](/pt-BR/docs/Learn_web_development/Core/Scripting/Test_your_skills:_variables).
 
 ## Sumário
 
 Por agora você deve saber razoavelmente sobre variáveis JavaScript e como criá-las. No próximo artigo Vamos focar nos números em mais detalhes, vendo como fazer matemática básica no JavaScript.
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Maths", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn/JavaScript/First_steps/Maths", "Learn_web_development/Core/Scripting")}}

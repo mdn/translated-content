@@ -5,22 +5,22 @@ slug: Web/SVG
 
 {{SVGRef}}
 
-**[Comenzando con SVG](/es/docs/Web/SVG/Tutorial)**
+**[Comenzando con SVG](/es/docs/Web/SVG/Tutorials/SVG_from_scratch)**
 Este tutorial te ayudará a comenzar a usar SVG.
 
-**Gráficos vectoriales escalables** **(SVG)** es un lenguaje de marcado [XML](/es/docs/Web/XML/XML_introduction) para describir [gráficos vectoriales](https://es.wikipedia.org/wiki/Gr%C3%A1fico_vectorial)en dos dimensiones. Básicamente, es a los gráficos lo que [HTML](/es/docs/Web/HTML) es al texto.
+**Gráficos vectoriales escalables** **(SVG)** es un lenguaje de marcado [XML](/es/docs/Web/XML/Guides/XML_introduction) para describir [gráficos vectoriales](https://es.wikipedia.org/wiki/Gr%C3%A1fico_vectorial)en dos dimensiones. Básicamente, es a los gráficos lo que [HTML](/es/docs/Web/HTML) es al texto.
 
 SVG es un estándar Web abierto basado en texto. Está expresamente diseñado para trabajar con otros estándares web como [CSS](/es/docs/Web/CSS), [DOM](/es/docs/Web/API/Document_Object_Model), y [SMIL](/es/docs/Web/SVG/SVG_animation_with_SMIL).
 
 ## Documentación
 
-- [Referencia de elementos SVG](/es/docs/Web/SVG/Element)
+- [Referencia de elementos SVG](/es/docs/Web/SVG/Reference/Element)
   - : Detalles sobre cada uno de los elementos SVG.
-- [Referencia de atributos SVG](/es/docs/Web/SVG/Attribute)
+- [Referencia de atributos SVG](/es/docs/Web/SVG/Reference/Attribute)
   - : Detalles sobre cada uno de los atributos SVG.
 - [Referencia del interfaz DOM SVG](/es/docs/Web/API/Document_Object_Model#svg_interfaces)
   - : Detalles acerca del API SVG DOM, para interacción con JavaScript.
-- [Aplicando efectos SVG a contenido HTML](/es/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [Aplicando efectos SVG a contenido HTML](/es/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
   - : SVG trabaja con with {{Glossary("HTML")}}, {{Glossary("CSS")}} and {{Glossary("JavaScript")}}. Usa SVG para [mejorar una página HTML normal o aplicación web](/es/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction).
 
 ## Comunidad

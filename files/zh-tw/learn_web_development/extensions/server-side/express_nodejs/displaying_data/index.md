@@ -3,7 +3,7 @@ title: "Express 教程 5: 呈現圖書館數據"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/routes", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/routes", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 我們現在準備好要新增網頁，以顯示本地圖書館網站的書本與其它資料。這些網頁將包括一個主頁 ，顯示我們每個模型的型態有多少筆紀錄，以及我們所有模型的清單與細節頁面。藉此，我們將得到從數據庫取得紀錄、以及使用樣版的實務經驗。
 

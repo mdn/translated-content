@@ -65,7 +65,6 @@ Google Chrome、Chromium 和 Safari 必须根据输入字符确定值。如果�
 
 - 如果键盘布局是支持 ASCII 的键盘布局（即，可以输入 ASCII 字母），则使用 0 或者根据下面的附加规则计算。
 - 否则，即键盘布局不支持 ASCII，使用环境中安装的具有最高优先级的支持 ASCII 的键盘布局：
-
   - 如果按备用键盘布局上的键输入一个 ASCII 字母或数字，请使用 keycode。
   - 否则，使用 0 或者根据下面的附加规则计算。
 
@@ -75,9 +74,7 @@ Google Chrome、Chromium 和 Safari 必须根据输入字符确定值。如果�
 > 这些附加规则的目的是为了使键盘布局映射 unicode 字符映射到美国键盘标点符号的用户可以使用只支持 ASCII 的键盘或者美国键盘布局的 Firefox 的 web 应用。否则，新映射的 `keyCode` 值可能会和其他按键冲突。例如，如果当前键盘布局是俄语，`"Period"` 键 和 `"Slash"` 键的 `keyCode` 都会是 `190`（`KeyEvent.DOM_VK_PERIOD`）。如果你需要区分这些按键但是你自己又不想支持世界上所有的键盘布局，你可能应该使用 {{domxref("KeyboardEvent.code")}}。
 
 1. 如果运行 macOS 或者 Linux:
-
    1. 如果你当前的键盘布局不支持 ASCII 并且候选支持 ASCII 键盘布局可用。
-
       1. 如果候选支持 ASCII 的键盘布局仅通过未修改的键产生 ASCII 字符，请对该字符使用`keyCode`。
       2. 如果候选支持 ASCII 的键盘布局产生带有 Shift 键修饰符的 ASCII 字符，请对该字符使用`keyCode`。
       3. 否则，在美国键盘布局激活时，使用使用`keyCode`表示由按键产生的 ASCII 字符。
@@ -85,7 +82,6 @@ Google Chrome、Chromium 和 Safari 必须根据输入字符确定值。如果�
    2. 否则，在美国键盘布局激活时，使用使用`keyCode`表示由按键产生的 ASCII 字符。
 
 2. 如果运行 Windows：
-
    1. 当美国键盘布局激活时，使用映射到 Windows 的相同虚拟键代码的按键产生的 ASCII 字符的`keyCode`值。
 
 由标准位置的可打印键引起的每个浏览器的 keydown 事件的 keycode 值

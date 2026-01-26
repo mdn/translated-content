@@ -3,7 +3,7 @@ title: JavaScript 型別陣列
 slug: Web/JavaScript/Guide/Typed_arrays
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Iterators_and_generators")}}
+{{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Iterators_and_generators")}}
 
 當 Webapp 有了視頻、音頻操作，及用 [WebSocket](/zh-TW/docs/Web/API/WebSockets_API) 存取原始資料等等的功能而變得越來越強大，讓 JavaScript 代碼可以快速、簡單地操作原始二進制資料的好處就越來越明顯。以前唯一的解法是視原始資料為[字串](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String)並用 [`charCodeAt()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt) 方法讀取資料緩衝的位元組。
 

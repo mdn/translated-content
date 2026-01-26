@@ -3,8 +3,6 @@ title: MathML 入门概述
 slug: Web/MathML/Guides
 ---
 
-{{LearnSidebar}}
-
 MathML 是用于在网页中编写数学公式的标记语言。本单元将为你提供一个轻松的开始，帮助你掌握 MathML 的基本原理、语法和如何在 HTML 中开始使用它。
 
 ## 前提

@@ -3,13 +3,12 @@ title: CSS Tutorials
 slug: Web/CSS/Tutorials
 ---
 
-{{CSSRef}}
-
 Aprender CSS puede ser una tarea desalentadora. Para ayudarte, hemos escrito numerosos **tutoriales acerca de CSS.** Algunos estan dirigidos a principiantes, y mientras que otros presentan complejas características para ser usadas por usuarios mas avanzados.
 
 Esta página enlista todo el contenido, con una descripción corta. Estan agrupados por grado de complejidad, para que escogas lo mas apropiado para tu nivel.
 
-> **Nota:** **Debemos de usar tags de "grado de dificultad" en las páginas de este tutorial para que las listas basadas en grados de dificultad puedan ser automáticamente construidas.**
+> [!NOTE]
+> **Debemos de usar tags de "grado de dificultad" en las páginas de este tutorial para que las listas basadas en grados de dificultad puedan ser automáticamente construidas.**
 
 ## Turorial CSS Nivel Principiante
 

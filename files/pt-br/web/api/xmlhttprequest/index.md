@@ -7,7 +7,7 @@ slug: Web/API/XMLHttpRequest
 
 {{APIRef("XMLHttpRequest API")}}
 
-`XMLHttpRequest` é um objeto que fornece funcionalidade ao cliente para transferir dados entre um cliente e um servidor. Ele fornece uma maneira fácil de recuperar dados de um URL sem ter que fazer uma atualização de página inteira. Isso permite que uma página da Web atualize apenas uma parte do conteúdo sem interromper o que o usuário esteja fazendo. XMLHttpRequest é usado constantemente na programação de [AJAX](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data).
+`XMLHttpRequest` é um objeto que fornece funcionalidade ao cliente para transferir dados entre um cliente e um servidor. Ele fornece uma maneira fácil de recuperar dados de um URL sem ter que fazer uma atualização de página inteira. Isso permite que uma página da Web atualize apenas uma parte do conteúdo sem interromper o que o usuário esteja fazendo. XMLHttpRequest é usado constantemente na programação de [AJAX](/pt-BR/docs/Learn_web_development/Core/Scripting/Network_requests).
 
 `XMLHttpRequest` foi originalmente projetado pela Microsoft e adotado pela Mozilla, Apple e Google. Está sendo padronizado pela [WHATWG](https://xhr.spec.whatwg.org/). Apesar do nome, XMLHttpRequest pode ser usado para recuperar qualquer tipo de dados, e não apenas XML, suportando também, protocolos diferentes de [HTTP](/pt-BR/HTTP) (incluindo file e ftp ).
 
@@ -439,9 +439,7 @@ XMLHttpRequest (
 ##### Parâmetros (não-padrão)
 
 - `objParameters`
-
   - : Há dois sinalizadores que você pode definir:
-
     - `mozAnon`
       - : Boolean: Definir esse sinalizador de true fará com que o navegador para não expor a origem e as [credenciais do usuário](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials) ao buscar recursos. Mais importante, isto significa que os cookies não será enviado a menos que explicitamente adicionado usando setRequestHeader.
     - `mozSystem`
@@ -529,7 +527,7 @@ Se os dados são um Document , ele é serializado antes de serem enviados. Ao en
 
 Se são uma nsIInputStream , deve ser compatível com nsIUploadChannel 's setUploadStream() método. Nesse caso, um cabeçalho Content-Length é adicionado ao pedido, com o seu valor obtido usando nsIInputStream 's available() método. Quaisquer cabeçalhos incluídos na parte superior da corrente são tratados como parte do corpo da mensagem. MIMEType da transmissão deve ser especificado definindo o cabeçalho Content-Type usando o [`setRequestHeader()`](</en/nsIXMLHttpRequest#setRequestHeader()> "/en/XMLHttpRequest#setRequestHeader()") método antes de chamar send().
 
-A melhor maneira de enviar conteúdo binário (como em arquivos de upload) está usando[ArrayBuffers](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) ou [Blobs](/pt-BR/docs/Web/API/Blob) em conjuncton com o send() método. No entanto, se você quiser enviar uma [stringifiable](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) dados brutos, use o [`sendAsBinary()`](</pt-BR/docs/DOM/XMLHttpRequest#sendAsBinary()>) método em vez disso.
+A melhor maneira de enviar conteúdo binário (como em arquivos de upload) está usando[ArrayBuffers](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) ou [Blobs](/pt-BR/docs/Web/API/Blob) em conjuncton com o send() método. No entanto, se você quiser enviar uma [stringifiable](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) dados brutos, use o [`sendAsBinary()`](</pt-BR/docs/Web/API/XMLHttpRequest#sendAsBinary()>) método em vez disso.
 
 ### setRequestHeader()
 
@@ -555,7 +553,8 @@ void setRequestHeader(
 
 Inicializa o objeto para uso a partir do código C ++.
 
-> **Aviso:** **Nota:** Este método não deve ser chamado a partir do JavaScript.
+> [!WARNING]
+> **Nota:** Este método não deve ser chamado a partir do JavaScript.
 
 ```
 [noscript] void init(
@@ -650,14 +649,12 @@ avegadores mais recentes, incluindo o Firefox, também suporta ouvir as XMLHttpR
 ## Veja também
 
 - MDN artigos sobre XMLHttpRequest:
-
   - [AJAX - Getting Started](/pt-BR/docs/conflicting/Web/Guide/AJAX)
   - [Using XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
   - [HTML in XMLHttpRequest](/pt-BR/HTML_in_XMLHttpRequest)
   - [`FormData`](/pt-BR/docs/DOM/XMLHttpRequest/FormData)
 
 - XMLHttpRequest referencias da W3C e navegador fornecedores:
-
   - [W3C: XMLHttpRequest](https://www.w3.org/TR/XMLHttpRequest1/) (base features)
   - [W3C: XMLHttpRequest](https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) (latest editor's draft with extensions to the base functionality, formerly XMLHttpRequest Level 2
   - [Microsoft documentation](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp)

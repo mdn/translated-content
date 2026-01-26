@@ -145,6 +145,6 @@ _Frameworks web_ podem ajudar a mitigar muitas das vulnerabilidades mais comuns.
 
 Este artigo explicou o conceito de segurança na web e algumas das ameaças mais comuns contra as quais o site deve tentar se proteger. Mais importante, você deve entender que uma aplicação web não pode confiar em nenhum dado do navegador. Todos os dados do usuário devem ser limpos antes de serem exibidos ou usados em consultas SQL e chamadas do sistema de arquivos.
 
-Com este artigo, você chegou ao final [deste módulo](/pt-BR/docs/Learn/Server-side/First_steps), abordando seus primeiros passos na programação de sites em relação ao servidor. Esperamos que você tenha gostado de aprender esses conceitos fundamentais e agora esteja pronto para selecionar um _Framework web_ e iniciar a programação.
+Com este artigo, você chegou ao final [deste módulo](/pt-BR/docs/Learn_web_development/Extensions/Server-side/First_steps), abordando seus primeiros passos na programação de sites em relação ao servidor. Esperamos que você tenha gostado de aprender esses conceitos fundamentais e agora esteja pronto para selecionar um _Framework web_ e iniciar a programação.
 
 {{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}

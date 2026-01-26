@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 86e302046641b6c4885d21bc0dc0ddd2f57db2e5
 ---
 
-{{GamesSidebar}}
-
 このページでは、さまざまなタイプのウェブゲームを効果的に作成するためのワークフローを紹介する、複数のチュートリアルシリーズを掲載しています。
 
 - [純粋な JavaScript を使ったブロック崩しゲーム](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)

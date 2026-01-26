@@ -57,8 +57,8 @@ ARIA の使用に関する第一のルールは、「要素を再利用して AR
 
 ## 関連情報
 
-- [`<input type="button">`](/ja/docs/Web/HTML/Element/input/button)
-- [`<input type="submit">`](/ja/docs/Web/HTML/Element/input/submit)
+- [`<input type="button">`](/ja/docs/Web/HTML/Reference/Elements/input/button)
+- [`<input type="submit">`](/ja/docs/Web/HTML/Reference/Elements/input/submit)
 - {{HTMLElement('button')}}
 - [`aria-checked`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)
 - [`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected)

@@ -1,12 +1,9 @@
 ---
 title: 404 Not Found
 slug: Web/HTTP/Reference/Status/404
-original_slug: Web/HTTP/Status/404
 l10n:
-  sourceCommit: ef46a4ac6bfec3e33c9209244e7cb1a9206165d6
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`404 Not Found`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、サーバーがリクエストされたリソースを見つけることができないことを示します。
 404 ページにつながるリンクは、壊れたリンクまたは死んだリンクと呼ばれ、[リンク切れ](https://ja.wikipedia.org/wiki/リンク切れ)の対象となることがあります。

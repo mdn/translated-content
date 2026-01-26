@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d86e14de2e66319fc0a0ec0539a05400dea5a453
 ---
 
-{{AddonSidebar}}
-
 <table class="fullwidth-table">
   <tbody>
     <tr>

@@ -11,5 +11,5 @@ _Атрибут_ является частью {{Glossary("tag", "тега")}}, 
 
 ### Техническая информация
 
-- [Справочник атрибутов HTML](/ru/docs/Web/HTML/Attributes)
-- Информация о [глобальных атрибутах](/ru/docs/Web/HTML/Global_attributes) HTML
+- [Справочник атрибутов HTML](/ru/docs/Web/HTML/Reference/Attributes)
+- Информация о [глобальных атрибутах](/ru/docs/Web/HTML/Reference/Global_attributes) HTML

@@ -12,7 +12,7 @@ l10n:
 它反映 {{HTMLElement("link")}} 元素的 `href` 属性。如果元素没有 `href` 属性，则此属性的值为空字符串（`""`）。
 
 > [!NOTE]
-> 每个 `<link>` 元素都必须包含 `href` 属性或 [`imagesrcset`](/zh-CN/docs/Web/HTML/Element/link#imagesrcset) 属性中的一个或两个。这意味着，对于每个有效的 `<link>`，此属性或 {{domxref("HTMLLinkElement.imageSrcset", "imageSrcset")}} 都不会为空。
+> 每个 `<link>` 元素都必须包含 `href` 属性或 [`imagesrcset`](/zh-CN/docs/Web/HTML/Reference/Elements/link#imagesrcset) 属性中的一个或两个。这意味着，对于每个有效的 `<link>`，此属性或 {{domxref("HTMLLinkElement.imageSrcset", "imageSrcset")}} 都不会为空。
 
 ## 值
 

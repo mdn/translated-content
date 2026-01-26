@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 请求移除给定 {{WebExtAPIRef("permissions.Permissions")}} 对象中列出的权限。
 
 `Permissions` 参数可以包含 `origins` 属性（[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)数组），或者可以包含 `permissions` 属性（[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)数组），又或者同时包含两个属性。这些权限必须来自 [`optional_permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) manifest.json 键中定义的权限集合。

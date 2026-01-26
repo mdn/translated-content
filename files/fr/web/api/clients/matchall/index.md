@@ -16,9 +16,7 @@ ServiceWorkerClients.matchAll(options).then(function (clients) {
 ### Paramètres
 
 - `options`
-
   - : L'objet `option` vous permet de définir les options pour l'opération. Les options disponibles sont :
-
     - `includeUncontrolled`: Un {{domxref("Boolean")}} — défini à `true`, l'opération retournera tous les services worker clients qui sont de la même origine que le service worker courant. Sinon, elle ne retournera que le service worker client controllé par le service worker courant. La valeur par défaut est `false`.
     - `type`: Défini le type de client que vous voulez observer. Les types disponibles sont `window`, `worker`, `sharedworker`, et `all`. La valeur par défaut est `all`.
 

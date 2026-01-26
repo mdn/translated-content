@@ -9,13 +9,13 @@ l10n:
 {{APIRef("HTML DOM")}}
 
 **`fetchPriority`** は {{domxref("HTMLImageElement")}} インターフェイスのプロパティで、ブラウザーが他の画像と比較して、画像の取得をどのように優先させるべきかというヒントを表します。
-これは {{htmlelement("img")}} 要素の [`fetchpriority`](/ja/docs/Web/HTML/Element/img#fetchpriority) 属性を反映します。
+これは {{htmlelement("img")}} 要素の [`fetchpriority`](/ja/docs/Web/HTML/Reference/Elements/img#fetchpriority) 属性を反映します。
 
 このプロパティにより、開発者は、読み込みプロセスの初期段階で特定の画像を読み込むことが、ブラウザーが内部優先度を割り当てる際に合理的に推論できる範囲よりも、ユーザーエクスペリエンスに多かれ少なかれ影響を与えることを示すことができます。
 これにより、ブラウザーは優先度を増減することができ、場合によっては、通常よりも早くまたは遅く画像を読み込むことができます。
 過剰または不適切に優先度を設定するとパフォーマンスが低下する可能性があるため、このプロパティは慎重に使用すべきです。
 
-取得優先度を使用することで[事前読み込み](/ja/docs/Web/HTML/Attributes/rel/preload)を補完することができ、既定の優先度が高い影響の少ないリソースよりも優先度を高く設定することができます。例えば、開発者が特定の画像がウェブサイトの {{glossary("Largest contentful paint")}} (LCP) に大きく影響していることを把握している場合、その画像に [`<link rel="preload">`](/ja/docs/Web/HTML/Attributes/rel/preload) を追加し、さらに `fetchpriority` プロパティを使用して優先度を高く設定することができます。
+取得優先度を使用することで[事前読み込み](/ja/docs/Web/HTML/Reference/Attributes/rel/preload)を補完することができ、既定の優先度が高い影響の少ないリソースよりも優先度を高く設定することができます。例えば、開発者が特定の画像がウェブサイトの {{glossary("Largest contentful paint")}} (LCP) に大きく影響していることを把握している場合、その画像に [`<link rel="preload">`](/ja/docs/Web/HTML/Reference/Attributes/rel/preload) を追加し、さらに `fetchpriority` プロパティを使用して優先度を高く設定することができます。
 
 取得操作の内部優先度と、優先度に対する `fetchPriority` の影響は、いずれも完全にブラウザーに依存していることに注意してください。
 

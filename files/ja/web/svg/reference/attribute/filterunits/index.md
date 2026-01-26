@@ -1,14 +1,11 @@
 ---
 title: filterUnits
 slug: Web/SVG/Reference/Attribute/filterUnits
-original_slug: Web/SVG/Attribute/filterUnits
 l10n:
-  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}
-
-**`filterUnits`** 属性は、 {{ SVGAttr("x") }}, {{ SVGAttr("y") }}, {{ SVGAttr("width") }}, {{ SVGAttr("height") }} 属性の座標系を定義します。
+**`filterUnits`** 属性は、 {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}} 属性の座標系を定義します。
 
 この属性は以下の SVG 要素で使用することができます。
 

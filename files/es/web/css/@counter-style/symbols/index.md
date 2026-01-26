@@ -3,8 +3,6 @@ title: symbols
 slug: Web/CSS/@counter-style/symbols
 ---
 
-{{CSSRef}}
-
 ## Summary
 
 El descriptor `symbols` es usado para definir los símbolos que usará un sistema de conteo específico para construir una representación de conteo. Un símbolo puede ser un texto, una imagen o un identificador. El descriptor symbols debe ser especificado cuando el valor del descriptor {{cssxref('system')}} es _cyclic_, _numeric_, _alphabetic_, _symbolic_, o _fixed_. Cuando se usa el sistema _additive_, el descriptor {{cssxref('additive-symbols')}} es usado para especificar los símbolos.

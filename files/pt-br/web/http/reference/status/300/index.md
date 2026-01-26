@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/300
 original_slug: Web/HTTP/Status/300
 ---
 
-{{HTTPSidebar}}
-
 O código de resposta HTTP do status de redirecionamento **`300 Multiple Choices`** indica que a requisição tem uma ou mais possíveis respostas. O agente de usuário ou o usuário devem escolher uma delas. Como não há forma padrão de se escolher uma das respostas, esse código de resposta é raramente usado.
 
 Se o servidor tem uma escolha de preferência, ele deve gerar um cabeçalho {{HTTPHeader("Localização")}}.

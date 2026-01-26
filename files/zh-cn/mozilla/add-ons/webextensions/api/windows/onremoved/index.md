@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 当窗口被关闭时触发。
 
 ## 语法
@@ -31,9 +29,7 @@ browser.windows.onRemoved.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 事件触发时调用的函数。该函数接收以下参数：
-
     - `windowId`
       - : `integer`。关闭的窗口 ID。
 

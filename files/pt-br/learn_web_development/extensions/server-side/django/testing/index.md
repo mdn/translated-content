@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Testing
 original_slug: Learn/Server-side/Django/Testing
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django")}}
 
 À medida que websites crescem, eles se tornam mais difíceis de testar manualmente. Não apenas mais para testar, mas, as interações entre componentes tornam-se mais complexas, uma pequena mudança em uma área pode impactar outras áreas, portanto mais mudanças serão necessárias para garantir que tudo permaneça funcionando e erros não sejam introduzidos à medida que mais alterações forem feitas. Uma maneira de mitigar esses problemas é escrever testes automatizados, que podem ser executados facilmente e confiavelmente toda vez que você faz uma alteração. Este tutorial mostra como automatizar testes unitários do seu website utilizando o _framework_ de testes do Django.
 
@@ -14,7 +14,7 @@ original_slug: Learn/Server-side/Django/Testing
       <th scope="row">Pré-requisitos:</th>
       <td>
         Complete todos os tópicos de tutoriais anteriores, incluindo
-        <a href="/pt-BR/docs/Learn/Server-side/Django/Forms"
+        <a href="/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Forms"
           >Tutorial Django Parte 9: Trabalhando com formulários</a
         >.
       </td>
@@ -31,7 +31,7 @@ original_slug: Learn/Server-side/Django/Testing
 
 ## Visão Geral
 
-A [Local Library](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website) atualmente tem páginas para mostrar listas de todos livros e autores, visualização detalhada para itens `Book` e `Author`, uma página para renovar `BookInstance`s, e páginas para criar, atualizar e excluir itens `Author` (e também registros de `Book`, se você completou o desafio no [forms tutorial](/pt-BR/docs/Learn/Server-side/Django/Forms)). Mesmo com este site relativamente pequeno, navegar manualmente por cada página e verificar superficialmente se tudo funciona como esperado pode levar vários minutos. À medida que fizemos mudanças e aumentamos o site, o tempo necessário para verificar manualmente se tudo funciona "devidamente" só aumentará. Se continuássemos como estamos, eventuamente estaríamos gastando a maior parte do tempo testando, e muito pouco tempo aprimorando nosso código.
+A [Local Library](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) atualmente tem páginas para mostrar listas de todos livros e autores, visualização detalhada para itens `Book` e `Author`, uma página para renovar `BookInstance`s, e páginas para criar, atualizar e excluir itens `Author` (e também registros de `Book`, se você completou o desafio no [forms tutorial](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Forms)). Mesmo com este site relativamente pequeno, navegar manualmente por cada página e verificar superficialmente se tudo funciona como esperado pode levar vários minutos. À medida que fizemos mudanças e aumentamos o site, o tempo necessário para verificar manualmente se tudo funciona "devidamente" só aumentará. Se continuássemos como estamos, eventuamente estaríamos gastando a maior parte do tempo testando, e muito pouco tempo aprimorando nosso código.
 
 Testes automatizados podem realmente ajudar com este problema! Os benefícios óbvios são que eles podem ser executados muito mais rápido que testes manuais, podem testar com um nível mais baixo de detalhes, e testa exatamente a mesma funcionalidade (testadores humanos não são nem de longe tão confiáveis!). Por serem rápidos, testes automatizados podem ser executados mais regularmente, e se um teste falhar, eles apontam exatamente para onde o código não está funcionando como esperado .
 
@@ -50,7 +50,8 @@ Há inúmeros tipos, níveis, e classificações de testes e abordagens de teste
 - Testes de integração
   - : Verifica como agrupamentos de componentes funcionam quando utilizados juntos. Testes de integração estão cientes das interações necessárias entre componentes, mas não necessariamente das operações internas de cada componente. Eles podem abranger agrupamentos simples de componentes através de todo website.
 
-> **Nota:**Outros tipos de testes comuns incluem caixa preta (black box), caixa branca (white box), manual, automatizado, canário (canary), fumaça (smoke), conformidade (conformance), aceitação (acceptance), funcional (functional), sistema (system), _performance_, carga (load) e testes de _stress_. Procure-os para mais informaçãos.
+> [!NOTE]
+> Outros tipos de testes comuns incluem caixa preta (black box), caixa branca (white box), manual, automatizado, canário (canary), fumaça (smoke), conformidade (conformance), aceitação (acceptance), funcional (functional), sistema (system), _performance_, carga (load) e testes de _stress_. Procure-os para mais informaçãos.
 
 ### O que o Django fornece para testes?
 
@@ -129,7 +130,7 @@ catalog/
 Crie uma estrutura de arquivos como mostrado acima em seu projeto _LocalLibrary_. O **\_\_init\_\_.py** deve ser um arquivo vazio (isso informa ao Python que o diretório é um pacote). Você pode criar os três arquivos de teste copiando e renomeando o arquivo de teste do "esqueleto" **/catalog/tests.py**.
 
 > [!NOTE]
-> O arquivo de teste **/catalog/tests.py** do "esqueleto", foi criado automaticamente quando nós [construimos o "esqueleto" do website Django](/pt-BR/docs/Learn/Server-side/Django/skeleton_website). É perfeitamente "legal" colocar todos seus testes dentro dele, mas se você testar devidamente, você acabará rapidamente com um arquivo de teste muito grande e incontrolável.
+> O arquivo de teste **/catalog/tests.py** do "esqueleto", foi criado automaticamente quando nós [construimos o "esqueleto" do website Django](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website). É perfeitamente "legal" colocar todos seus testes dentro dele, mas se você testar devidamente, você acabará rapidamente com um arquivo de teste muito grande e incontrolável.
 >
 > Exclua o arquivo do "esqueleto", pois não precisamos dele.
 
@@ -232,7 +233,8 @@ Destroying test database for alias 'default'...
 
 Aqui vemos que tivemos uma falha no teste e podemos ver exatamente qual função falhou e por quê (essa falha é esperada, porque `False` não é `True`!).
 
-> **Nota:** **Dica:** A coisa mais importante para aprender com a saída do teste acima é que é muito mais valioso se você utilizar nomes descritivos/informativos para seus objetos e métodos.
+> [!NOTE]
+> **Dica:** A coisa mais importante para aprender com a saída do teste acima é que é muito mais valioso se você utilizar nomes descritivos/informativos para seus objetos e métodos.
 
 O texto acima mostrado em **negrito** normalmente não apareceria na saída do teste (isso é gerado pelas funções `print()` em nossos teste). Isso mostra como o método `setUpTestData()` é chamdo uma vez para classe e `setUp()` é chamado antes de cada método.
 
@@ -270,7 +272,8 @@ python3 manage.py test catalog.tests.test_models.YourTestClass.test_one_plus_one
 
 Agora que sabemos como executar nosso testes e que tipo de coisas precisams testar, vamos ver alguns exemplos práticos.
 
-> **Nota:**Não escreveremos todos os testes possíveis, mas isso deve lhe dar uma ideia de como testes trabalham e o que mais você pode fazer.
+> [!NOTE]
+> Não escreveremos todos os testes possíveis, mas isso deve lhe dar uma ideia de como testes trabalham e o que mais você pode fazer.
 
 ### Models
 
@@ -949,4 +952,4 @@ O próximo e último tutorial mostra como você pode implantar seu maravilhoso (
 - [Workshop: Desenvolvimento web Orientado a Testes com Django](http://test-driven-django-development.readthedocs.io/en/latest/index.html) (San Diego Python, 2014)
 - [Testando no Django (Parte 1) - Melhores práticas e Exemplos](https://realpython.com/blog/python/testing-in-django-part-1-best-practices-and-examples/) (RealPython, 2013)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django")}}

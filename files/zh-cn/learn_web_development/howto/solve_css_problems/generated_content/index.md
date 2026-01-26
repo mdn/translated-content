@@ -3,8 +3,6 @@ title: 使用 CSS 添加文档内容
 slug: Learn_web_development/Howto/Solve_CSS_problems/Generated_content
 ---
 
-{{LearnSidebar}}
-
 本文介绍了一些通过 CSS 改变文档内容的方法。这样，仅修改样式表你就能把文本内容及图片添加到文档。
 
 CSS 的一个重要优势是它可以帮助你将文档内容和其样式分离。但是有时候在样式而非文档中定义一些内容也是很有用的。当内容与文档结构紧密相关的时候，你可以在样式表中定义文本和图片内容。

@@ -3,8 +3,6 @@ title: outline-offset
 slug: Web/CSS/outline-offset
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad CSS **`outline-offset`** es usada para establecer el espacio entre un contorno {{ cssxref("outline") }} y el límite o borde de un elemento. Un contorno es una línea que se dibuja al rededor de los elementos, fuera de los límites de su borde.

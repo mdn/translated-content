@@ -8,7 +8,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Se
 
 **`[Symbol.iterator]()`** メソッドは、[iterable プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)の一部で、`Intl.Segmenter` オブジェクトのエントリーを反復処理できる新しいイテレーターオブジェクトを返します。各エントリーは、オブジェクトとして返されます。
 
-{{InteractiveExample("JavaScript Demo: Segments.prototype[Symbol.iterator]()")}}
+{{InteractiveExample("JavaScript デモ: Segments.prototype[Symbol.iterator]()")}}
 
 ```js interactive-example
 const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });

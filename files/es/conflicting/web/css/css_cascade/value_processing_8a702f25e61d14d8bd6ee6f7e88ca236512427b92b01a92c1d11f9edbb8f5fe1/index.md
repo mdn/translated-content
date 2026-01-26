@@ -4,8 +4,6 @@ slug: conflicting/Web/CSS/CSS_cascade/Value_processing_8a702f25e61d14d8bd6ee6f7e
 original_slug: Web/CSS/CSS_cascade/specified_value
 ---
 
-{{CSSRef}}
-
 El **valor especificado** (**specified value**) de una propiedad CSS es establecido de una de las siguientes maneras:
 
 1. Si la hoja de estilos del documento tiene un valor especificado para la propiedad, éste será usado. Por ejemplo, si la propiedad {{cssxref("color")}} es establecida con valor `green`, el color del texto del elemento que corresponda será verde.

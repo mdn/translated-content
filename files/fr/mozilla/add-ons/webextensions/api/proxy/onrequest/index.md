@@ -45,11 +45,9 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `listener`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction passera un seul argument, qui est un objet {{WebExtAPIRef("proxy.RequestDetails")}} contenant les détails de la requête.
 
     L'écouteur peut renvoyer l'un des éléments suivants:
-
     - un objet {{WebExtAPIRef("proxy.ProxyInfo")}}
     - un tableau d'objets `proxy.ProxyInfo`
     - Une `Promise` qui se résout en un objet `ProxyInfo`

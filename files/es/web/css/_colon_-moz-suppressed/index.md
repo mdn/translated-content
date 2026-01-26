@@ -3,7 +3,7 @@ title: :-moz-suppressed
 slug: Web/CSS/:-moz-suppressed
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{Non-standard_header}}
 
 ## Resumen
 

@@ -111,7 +111,6 @@ target.addEventListener("dragleave", (event) => {
 ## 参见
 
 - 其他拖放事件：
-
   - {{domxref("HTMLElement/drag_event", "drag")}}
   - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
   - {{domxref("HTMLElement/dragend_event", "dragend")}}
@@ -120,7 +119,6 @@ target.addEventListener("dragleave", (event) => {
   - {{domxref("HTMLElement/drop_event", "drop")}}
 
 - 其他目标上的此事件：
-
   - {{domxref("Window")}}：{{domxref("Window/dragleave_event", "dragleave")}} 事件
   - {{domxref("Document")}}：{{domxref("Document/dragleave_event", "dragleave")}} 事件
   - {{domxref("SVGElement")}}：{{domxref("SVGElement/dragleave_event", "dragleave")}} 事件

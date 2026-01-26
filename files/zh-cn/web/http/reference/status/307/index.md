@@ -3,8 +3,6 @@ title: 307 Temporary Redirect
 slug: Web/HTTP/Reference/Status/307
 ---
 
-{{HTTPSidebar}}
-
 {{Glossary("HTTP")}} **`307 Temporary Redirect`**，临时重定向响应状态码，表示请求的资源暂时地被移动到了响应的 {{HTTPHeader("Location")}} 首部所指向的 URL 上。
 
 原始请求中的请求方法和消息主体会在重定向请求中被重用。在确实需要将重定向请求的方法转换为 {{HTTPMethod("GET")}} 的场景下，可以考虑使用 {{HTTPStatus("303", "303 See Other")}} 状态码。例如，在使用 {{HTTPMethod("PUT")}} 方法进行文件上传操作时，如果需要返回一条确认信息（例如“你已经成功上传了 XYZ”），而不是返回上传的资源本身，就可以使用这个状态码。

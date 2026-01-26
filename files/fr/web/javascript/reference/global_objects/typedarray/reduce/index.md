@@ -29,9 +29,7 @@ typedarray.reduce(callback[, valeurInitiale])
 ### Paramètres
 
 - `callback`
-
   - : La fonction à exécuter sur chaque valeur du tableau typé. Elle utilise quatre arguments :
-
     - `valeurPrécédente`
       - : La valeur renvoyée précédemment par l'appel précédent à `callback`. Dans le cadre du premier élément, ce sera `valeurInitiale` si ce paramètre est fourni (voir ci-après).
     - `valeurCourante`

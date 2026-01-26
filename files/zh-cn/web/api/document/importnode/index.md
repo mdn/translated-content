@@ -17,9 +17,7 @@ importNode(externalNode, deep)
 - `externalNode`
   - : 导入当前文档的外部 {{domxref("Node")}} 或 {{domxref("DocumentFragment")}}。
 - `deep` {{ optional_inline() }}
-
   - : 一个布尔值，默认为 `false`。表明是否要导入 `externalNode` 的整个 DOM 子树。
-
     - `deep` 设置为 `true`，则拷贝 `externalNode` 和它的所有后代。
     - `deep` 设置为 `false`，则仅拷贝 `externalNode`——新的节点没有后代。
 

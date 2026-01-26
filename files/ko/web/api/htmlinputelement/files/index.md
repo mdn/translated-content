@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("File and Directory Entries API")}}
 
-**`HTMLInputElement.files`** 속성은 [`<input type="file">`](/ko/docs/Web/HTML/Element/input/file) 요소로 선택한 {{domxref("FileList")}}에 접근할 수 있습니다.
+**`HTMLInputElement.files`** 속성은 [`<input type="file">`](/ko/docs/Web/HTML/Reference/Elements/input/file) 요소로 선택한 {{domxref("FileList")}}에 접근할 수 있습니다.
 
 ## 값
 

@@ -6,7 +6,7 @@ original_slug: Web/API/HTMLMediaElement/onerror
 
 {{APIRef("HTML DOM")}}
 
-**`onerror`** は {{domxref("HTMLMediaElement")}} インターフェイスのプロパティで、 {{domxref("HTMLMediaElement/error_event", "error")}} イベントを処理するための[イベントハンドラー](/ja/docs/Web/Events/Event_handlers)です。
+**`onerror`** は {{domxref("HTMLMediaElement")}} インターフェイスのプロパティで、 {{domxref("HTMLMediaElement/error_event", "error")}} イベントを処理するための[イベントハンドラー](/ja/docs/Web/API/Document_Object_Model/Events)です。
 
 `error` イベントは、メディアを読み込んだり実行しようとしたときに何らかのエラーが発生したときに発生します。
 

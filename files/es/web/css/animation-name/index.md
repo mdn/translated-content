@@ -3,7 +3,7 @@ title: animation-name
 slug: Web/CSS/animation-name
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 ## Resumen
 

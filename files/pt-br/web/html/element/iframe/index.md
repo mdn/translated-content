@@ -42,17 +42,13 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 - `remote` {{non-standard_inline}}
   - : Carrega a página do _frame_ em um processo separado.
 - `scrolling`
-
   - : Enumerated attribute indicating when the browser should provide a scroll bar (or other scrolling device) for the frame:
-
     - `auto`: Só quando necessário.
     - `yes`: Sempre mostrar uma barra de rolagem.
     - `no`: Nunca mostrar uma barra de rolagem.
 
 - `sandbox`
-
   - : If specified as an empty string, this attribute enables extra restrictions on the content that can appear in the inline frame. The value of the attribute can either be an empty string (all the restrictions are applied), or a space-separated list of tokens that lift particular restrictions. Valid tokens are:
-
     - `allow-same-origin`: Allows the content to be treated as being from its normal origin. If this keyword is not used, the embedded content is treated as being from a unique origin.
     - `allow-top-navigation`: Allows the embedded browsing context to navigate (load) content to the top-level browsing context. If this keyword is not used, this operation is not allowed.
     - `allow-forms`: Allows the embedded browsing context to submit forms. If this keyword is not used, this operation is not allowed.

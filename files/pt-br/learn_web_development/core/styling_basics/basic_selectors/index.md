@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Basic_selectors
 original_slug: Learn/CSS/Building_blocks/Selectors
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors", "conflicting/Learn_web_development/Core/Styling_basics_fa344166552fbe2c038b1254d9d96dc0de5d79eb64d0ca3e5784a17f79fd0333")}}
 
 Em {{Glossary("CSS")}}, os seletores são usados para direcionar os elementos {{glossary("HTML")}} em nossas páginas da web que queremos estilizar. Há uma grande variedade de seletores CSS disponíveis, permitindo uma precisão refinada ao selecionar os elementos a serem estilizados. Neste artigo e seus sub-artigos, examinaremos os diferentes tipos em grande detalhe, vendo como eles funcionam.
 
@@ -147,8 +147,7 @@ a[title] {
 Ou até mesmo faça uma seleção com base na presença de um atributo com um valor específico:
 
 ```css
-a[href="https://example.com"]
-{
+a[href="https://example.com"] {
 }
 ```
 
@@ -179,24 +178,24 @@ article > p {
 
 ## Próximos passos
 
-Você pode dar uma olhada na tabela de referência de seletores abaixo para obter links diretos para os vários tipos de seletores nesta seção Aprender ou no MDN em geral, ou continuar para iniciar sua jornada descobrindo sobre [seletores de tipo, classe e ID](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors) .
+Você pode dar uma olhada na tabela de referência de seletores abaixo para obter links diretos para os vários tipos de seletores nesta seção Aprender ou no MDN em geral, ou continuar para iniciar sua jornada descobrindo sobre [seletores de tipo, classe e ID](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors) .
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors", "conflicting/Learn_web_development/Core/Styling_basics_fa344166552fbe2c038b1254d9d96dc0de5d79eb64d0ca3e5784a17f79fd0333")}}
 
 ## Tabela de referência de seletores
 
 A tabela a seguir fornece uma visão geral dos seletores disponíveis para uso, juntamente com links para as páginas deste guia que mostram como usar cada tipo de seletor. Também incluí um link para a página MDN de cada seletor, onde você pode verificar as informações de suporte do navegador. Você pode usar isso como uma referência para voltar quando precisar consultar os seletores mais tarde no material, ou quando você experimentar CSS em geral.
 
-| Seletor                                                                         | Exemplo             | Tutorial CSS                                                                                                                   |
-| ------------------------------------------------------------------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| [Type selector](/pt-BR/docs/Web/CSS/Type_selectors)                             | `h1 { }`            | [Type selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#type_selectors)                   |
-| [Universal selector](/pt-BR/docs/Web/CSS/Universal_selectors)                   | `* { }`             | [The universal selector](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#the_universal_selector)   |
-| [Class selector](/pt-BR/docs/Web/CSS/Class_selectors)                           | `.box { }`          | [Class selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#class_selectors)                 |
-| [id selector](/pt-BR/docs/Web/CSS/ID_selectors)                                 | `#unique { }`       | [ID selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#id_selectors)                       |
-| [Attribute selector](/pt-BR/docs/Web/CSS/Attribute_selectors)                   | `a[title] { }`      | [Attribute selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)                                     |
-| [Pseudo-class selectors](/pt-BR/docs/Web/CSS/Pseudo-classes)                    | `p:first-child { }` | [Pseudo-classes](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#what_is_a_pseudo-class)    |
-| [Pseudo-element selectors](/pt-BR/docs/Web/CSS/Pseudo-elements)                 | `p::first-line { }` | [Pseudo-elements](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#what_is_a_pseudo-element) |
-| [Descendant combinator](/pt-BR/docs/Web/CSS/Descendant_combinator)              | `article p`         | [Descendant combinator](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Combinators#Descendant_Selector)                       |
-| [Child combinator](/pt-BR/docs/Web/CSS/Child_combinator)                        | `article > p`       | [Child combinator](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Combinators#Child_combinator)                               |
-| [Adjacent sibling combinator](/pt-BR/docs/Web/CSS/Next-sibling_combinator)      | `h1 + p`            | [Adjacent sibling](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Combinators#Adjacent_sibling)                               |
-| [General sibling combinator](/pt-BR/docs/Web/CSS/Subsequent-sibling_combinator) | `h1 ~ p`            | [General sibling](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Combinators#General_sibling)                                 |
+| Seletor                                                                         | Exemplo             | Tutorial CSS                                                                                                                       |
+| ------------------------------------------------------------------------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| [Type selector](/pt-BR/docs/Web/CSS/Type_selectors)                             | `h1 { }`            | [Type selectors](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors#type_selectors)                 |
+| [Universal selector](/pt-BR/docs/Web/CSS/Universal_selectors)                   | `* { }`             | [The universal selector](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors#the_universal_selector) |
+| [Class selector](/pt-BR/docs/Web/CSS/Class_selectors)                           | `.box { }`          | [Class selectors](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors#class_selectors)               |
+| [id selector](/pt-BR/docs/Web/CSS/ID_selectors)                                 | `#unique { }`       | [ID selectors](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors#id_selectors)                     |
+| [Attribute selector](/pt-BR/docs/Web/CSS/Attribute_selectors)                   | `a[title] { }`      | [Attribute selectors](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)                                   |
+| [Pseudo-class selectors](/pt-BR/docs/Web/CSS/Pseudo-classes)                    | `p:first-child { }` | [Pseudo-classes](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#what_is_a_pseudo-class)        |
+| [Pseudo-element selectors](/pt-BR/docs/Web/CSS/Pseudo-elements)                 | `p::first-line { }` | [Pseudo-elements](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#what_is_a_pseudo-element)     |
+| [Descendant combinator](/pt-BR/docs/Web/CSS/Descendant_combinator)              | `article p`         | [Descendant combinator](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Combinators#Descendant_Selector)                           |
+| [Child combinator](/pt-BR/docs/Web/CSS/Child_combinator)                        | `article > p`       | [Child combinator](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Combinators#Child_combinator)                                   |
+| [Adjacent sibling combinator](/pt-BR/docs/Web/CSS/Next-sibling_combinator)      | `h1 + p`            | [Adjacent sibling](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Combinators#Adjacent_sibling)                                   |
+| [General sibling combinator](/pt-BR/docs/Web/CSS/Subsequent-sibling_combinator) | `h1 ~ p`            | [General sibling](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Combinators#General_sibling)                                     |

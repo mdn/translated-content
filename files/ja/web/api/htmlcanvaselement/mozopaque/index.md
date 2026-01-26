@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Canvas API")}}{{deprecated_header}}{{non-standard_header}}
 
-標準外の **`HTMLCanvasElement.mozOpaque`** プロパティは論理値で、この {{HTMLElement("canvas")}} 要素の [`moz-opaque`](/ja/docs/Web/HTML/Element/canvas#moz-opaque) 属性を反映します。これは、半透明の要素があるかどうかをキャンバスに知らせるものです。半透明がないことがキャンバスに伝われば、描画性能を最適化することができます。
+標準外の **`HTMLCanvasElement.mozOpaque`** プロパティは論理値で、この {{HTMLElement("canvas")}} 要素の [`moz-opaque`](/ja/docs/Web/HTML/Reference/Elements/canvas#moz-opaque) 属性を反映します。これは、半透明の要素があるかどうかをキャンバスに知らせるものです。半透明がないことがキャンバスに伝われば、描画性能を最適化することができます。
 
 > [!NOTE]
 > これは、{{domxref("HTMLCanvasElement.getContext()")}} で描画コンテキストを作成する際に、`alpha` オプションを `false` に設定することで標準化されました。`mozOpaque` を使用することは避けてください。Firefox は将来的に対応をやめる予定です。
@@ -44,5 +44,5 @@ canvas.mozOpaque = false;
 ## 関連情報
 
 - {{domxref("HTMLCanvasElement")}}: `HTMLCanvasElement.mozOpaque` プロパティを定義するのに使用するインターフェイス
-- [`moz-opaque`](/ja/docs/Web/HTML/Element/canvas#moz-opaque): {{HTMLElement("canvas")}} 要素の HTML 属性
+- [`moz-opaque`](/ja/docs/Web/HTML/Reference/Elements/canvas#moz-opaque): {{HTMLElement("canvas")}} 要素の HTML 属性
 - [Optimizing your JavaScript game for Firefox OS](https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/)

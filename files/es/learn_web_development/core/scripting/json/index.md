@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/JSON
 original_slug: Learn/JavaScript/Objects/JSON
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 JavaScript Object Notation (JSON) es un formato basado en texto estándar para representar datos estructurados en la sintaxis de objetos de JavaScript. Es comúnmente utilizado para transmitir datos en aplicaciones web (por ejemplo: enviar algunos datos desde el servidor al cliente, así estos datos pueden ser mostrados en páginas web, o vice versa). Se enfrentará a menudo con él, así que este artículo le entrega todo lo que necesita saber para trabajar con JSON utilizando JavaScript, incluyendo el análisis JSON para acceder a los datos en su interior, y cómo crear JSON.
 
@@ -175,7 +175,6 @@ Para obtener el JSON se utilizará un API llamado {{domxref("XMLHttpRequest")}} 
    ```
 
    Esto requiere al menos dos parámetros — Existen otros parámetros opcionales disponibles. Sólo se requieren los dos obligatorios para este ejemplo:
-
    - El método HTTP a usar cuando se hace una solicitud en red. En este caso `GET` es adecuado, dado que sólo se estan recuperando algunos datos simples.
    - La URL a la que se realiza la solicitud — esta es la URL del archivo que se almacenó antes.
 
@@ -326,4 +325,4 @@ En este artículo se ha entregado una guía simple para utilizar JSON en sus pro
 - [HTTP request methods](/es/docs/Web/HTTP/Reference/Methods)
 - [Official JSON web site with link to ECMA standard](http://json.org)
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

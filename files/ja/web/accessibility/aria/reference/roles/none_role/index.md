@@ -8,7 +8,7 @@ l10n:
 
 `none` ロールは [`presentation`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) ロールの別名です。どちらも、要素の暗黙の ARIA の意味づけを除去し、アクセシビリティツリーに公開されないようにします。
 
-詳しくは [`presentation`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) ロールをさh勝してください。
+詳しくは [`presentation`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) ロールを参照してください。
 
 <section id="Quick_links">
 

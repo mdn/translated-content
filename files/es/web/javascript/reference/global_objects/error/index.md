@@ -139,7 +139,8 @@ try {
 
 #### Objeto `Error` personalizado ES5
 
-> **Advertencia:** **Todos** los navegadores incluyen el constructor `CustomError` en el seguimiento de la pila cuando se usa una declaración de prototipo.
+> [!WARNING]
+> **Todos** los navegadores incluyen el constructor `CustomError` en el seguimiento de la pila cuando se usa una declaración de prototipo.
 
 ```js
 function CustomError(foo, message, fileName, lineNumber) {

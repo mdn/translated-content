@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Cookie
 original_slug: Web/HTTP/Headers/Cookie
 ---
 
-{{HTTPSidebar}}
-
 El encabezado **`Cookie`** de una solicitud HTTP contiene [cookies HTTP](/es/docs/Web/HTTP/Guides/Cookies) almacenadas y enviadas previamente por el servidor con el encabezado (**`header`**) {{HTTPHeader("Set-Cookie")}}
 
 Los encabezados `Cookie` puede ser omitidos por completo, si las preferencias de privacidad del navegador están configuradas para bloquearlos, por ejemplo.

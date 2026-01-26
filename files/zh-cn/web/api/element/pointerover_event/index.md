@@ -51,7 +51,6 @@ function init() {
 ## 参见
 
 - 相关事件
-
   - [`gotpointercapture`](/zh-CN/docs/Web/API/Element/gotpointercapture_event)
   - [`lostpointercapture`](/zh-CN/docs/Web/API/Element/lostpointercapture_event)
   - [`pointerenter`](/zh-CN/docs/Web/API/Element/pointerenter_event)

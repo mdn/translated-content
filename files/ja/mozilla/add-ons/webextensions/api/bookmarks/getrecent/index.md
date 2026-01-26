@@ -21,9 +21,7 @@ browser.bookmarks.getRecent(
 - `numberOfItems`
   - : 取得する要素の最大個数を指定する整数です。最近追加された要素のうち、ここで指定した個数までが戻り値のリストに含まれます。
 - `callback`
-
   - : リストが取得された際に実行される関数です。この関数には以下の引数が渡ります。
-
     - `results`
       - : 各要素が 1 つのブックマークノードを表す {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} オブジェクトの {{jsxref("array")}}
 
@@ -48,7 +46,7 @@ chrome.bookmarks.getRecent(1, gotMostRecent);
 {{WebExtExamples}}
 
 > [!NOTE]
-> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-getRecent) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードに基づいて作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-getRecent) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードに基づいて作成されています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

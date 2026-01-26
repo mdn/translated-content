@@ -27,9 +27,7 @@ var newArray = arr.filter(callback(currentValue[, index[, array]])[, thisArg])
 ### Parámetros
 
 - `callback`
-
   - : Función que **comprueba cada elemento** del array para ver si cumple la condición (también llamada predicado). Retorna `true` si el elemento la cumple o en caso contrario retornará `false`. Acepta tres parámetros:
-
     - `currentValue`
       - : El elemento actual del array que está siendo procesado.
     - `index` {{optional_inline}}

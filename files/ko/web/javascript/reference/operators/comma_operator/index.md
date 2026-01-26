@@ -57,7 +57,7 @@ for (let i = 0, j = 9; i <= 9; i++, j--) {
 ```js
 var a, b, c;
 
-(a = b = 3), (c = 4); // 콘솔에는 4를 반환
+((a = b = 3), (c = 4)); // 콘솔에는 4를 반환
 console.log(a); // 3 (제일 왼쪽)
 
 var x, y, z;
@@ -74,7 +74,7 @@ console.log(x); // 6 (제일 오른쪽)
 function myFunc() {
   var x = 0;
 
-  return (x += 1), x; // ++x 와 같은 효과
+  return ((x += 1), x); // ++x 와 같은 효과
 }
 ```
 

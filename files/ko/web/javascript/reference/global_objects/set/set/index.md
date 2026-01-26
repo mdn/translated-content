@@ -31,12 +31,12 @@ new Set()
 new Set(iterable)
 ```
 
-> **참고:** `Set()`은 오직 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)와 함께 생성할 수 있습니다. `new` 없이 생성을 시도하면 {{jsxref("TypeError")}}가 발생합니다.
+> [!NOTE]
+> `Set()`은 오직 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)와 함께 생성할 수 있습니다. `new` 없이 생성을 시도하면 {{jsxref("TypeError")}}가 발생합니다.
 
 ### 매개변수
 
 - `iterable` {{optional_inline}}
-
   - : [순회 가능한 객체](/ko/docs/Web/JavaScript/Reference/Statements/for...of)가 전달되면 모든 요소가 새로운 `Set`에 추가됩니다.
 
     이 매개변수를 지정하지 않거나 값이 `null`일 경우 새로운 `Set`은 비어있게 됩니다.

@@ -103,7 +103,6 @@ Por lo general, al enseñar los detalles de la sintaxis de CSS, es más claro y 
   ```
 
 - Las abreviaturas CSS pueden tener posibles inconvenientes adicionales: se establecen valores predeterminados para partes de la sintaxis que no estableces explícitamente, lo que puede producir reinicios inesperados de valores que has establecido anteriormente en la cascada u otros efectos esperados. La propiedad {{cssxref("grid")}}, por ejemplo, establece todos los siguientes valores predeterminados para los elementos que no se especifican:
-
   - {{cssxref("grid-template-rows")}}: `none`
   - {{cssxref("grid-template-columns")}}: `none`
   - {{cssxref("grid-template-areas")}}: `none`
@@ -148,7 +147,6 @@ En una hoja de estilo que contiene estilos de [_media queries_](/es/docs/Web/CSS
 ## Selectores
 
 - No uses selectores de ID porque:
-
   - Son menos flexibles; no puedes agregar más si descubres que necesitas más de uno.
   - Son más difíciles de anular porque tienen una especificidad mayor que las clases.
 

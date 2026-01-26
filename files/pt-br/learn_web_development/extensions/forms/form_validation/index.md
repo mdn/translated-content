@@ -44,7 +44,7 @@ Queremos tornar o preenchimento de formulários da web o mais fácil possível. 
 
 - **Nos queremos que o dado correto e no formato correto** — nossa aplicação não irá trabalhar de forma correta se os dados dos nossos usuarios estivem armazenados em formato incorreto, ou quando esses dados são omitidos.
 - **Quemos proteger os dados dos nossos usuários** — Forçarnosos usuários a fornecer senhas seguras facilita na proteção das informações da conta do usuário.
-- **Queremos proteger nos mesmos** — Existem diversas maneiras de um usuário malicioso usar formulários desprotegidos para danificar nossa aplicação (veja [Website security](/pt-BR/docs/Learn/Server-side/First_steps/Website_security)).
+- **Queremos proteger nos mesmos** — Existem diversas maneiras de um usuário malicioso usar formulários desprotegidos para danificar nossa aplicação (veja [Website security](/pt-BR/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)).
 
   > [!WARNING]
   > Nunca confie nos dados passados do cliente para o servidor. Mesmo que seu formulário seja validado de maneira correta e previna a má formação de inputs no lado do cliente, um usuário malicioso ainda pode roubar o request da conexão.
@@ -54,7 +54,6 @@ Queremos tornar o preenchimento de formulários da web o mais fácil possível. 
 Existem dois tipos diferentes de validação de formulários que você encontrará na web:
 
 - **Validação do lado do cliente** é a validação que ocorre no navegador antes que os dados sejam enviados ao servidor. Isso é mais fácil de usar do que a validação do lado do servidor, pois fornece uma resposta instantânea. Isso pode ser ainda subdividido:
-
   - A validação **JavaScript** é codificada usando JavaScript. É completamente customizável.
   - **Validação de formulário integrada** usando recursos de validação de formulário HTML5. Isso geralmente não requer JavaScript. A validação de formulário integrada tem melhor desempenho, mas não é tão personalizável quanto o JavaScript.
 
@@ -231,7 +230,8 @@ Aqui está o exemplo rodando ao vivo:
 
 {{EmbedLiveSample("Constraining_the_length_of_your_entries", "100%", 100)}}
 
-> **Nota:** `<input type="number">` (e outros tipos, como `range`) também podem receber um atributo [`step`](/pt-BR/docs/Web/HTML/Element/input#step), que especifica o que incrementar o valor aumentará ou diminuirá quando os controles de entrada forem usados (como os botões numéricos para cima e para baixo).
+> [!NOTE]
+> `<input type="number">` (e outros tipos, como `range`) também podem receber um atributo [`step`](/pt-BR/docs/Web/HTML/Element/input#step), que especifica o que incrementar o valor aumentará ou diminuirá quando os controles de entrada forem usados (como os botões numéricos para cima e para baixo).
 
 ### Exemplo completo
 
@@ -350,7 +350,7 @@ Essas mensagens automatizadas têm duas desvantagens:
 
 Para personalizar a aparência e o texto dessas mensagens, você deve usar JavaScript; não há como fazer isso usando apenas HTML e CSS.
 
-HTML5 fornece a [API de validação de restrição](/pt-BR/docs/Learn/Forms/Form_validation) para verificar e personalizar o estado de um elemento de formulário. Entre outras coisas, é possível alterar o texto da mensagem de erro. Vejamos um exemplo rápido:
+HTML5 fornece a [API de validação de restrição](/pt-BR/docs/Learn_web_development/Extensions/Forms/Form_validation) para verificar e personalizar o estado de um elemento de formulário. Entre outras coisas, é possível alterar o texto da mensagem de erro. Vejamos um exemplo rápido:
 
 ```html
 <form>
@@ -554,9 +554,7 @@ Para validar um formulário, você deve se fazer algumas perguntas:
 - O que devo fazer se o formulário não validar?
   - : Isso é claramente uma questão de interface do usuário. Você tem que decidir como o formulário se comportará: O formulário envia os dados mesmo assim? Você deve destacar os campos que estão com erro? Você deve exibir mensagens de erro?
 - Como posso ajudar o usuário a corrigir dados inválidos?
-
   - : Para diminuir a frustração do usuário, é muito importante fornecer o máximo de informações úteis possível para orientá-lo na correção de suas entradas. Você deve oferecer sugestões iniciais para que eles saibam o que é esperado, bem como mensagens de erro claras. Se você quiser se aprofundar nos requisitos da interface do usuário de validação de formulário, há alguns artigos úteis que você deve ler:
-
     - SmashingMagazine: [Form-Field Validation: The Errors-Only Approach](http://uxdesign.smashingmagazine.com/2012/06/27/form-field-validation-errors-only-approach/)
     - SmashingMagazine: [Validação de formulário da Web: práticas recomendadas e tutoriais](http://www.smashingmagazine.com/2009/07/07/web-form-validation-best-practices-and-tutorials/)
     - Seis revisões: [Práticas recomendadas para dicas e validação em formulários da Web](http://sixrevisions.com/user-interface/best-practices-for-hints-and-validation-in-web-forms/)
@@ -735,11 +733,9 @@ O resultado fica assim:
 Como você pode ver, não é issodifícil construir um sistema de validação por conta própria. A parte difícil é torná-lo genérico o suficiente para usá-lo em várias plataformas e em qualquer formulário que você possa criar. Existem muitas bibliotecas disponíveis para realizar a validação de formulários; você não deve hesitar em usá-los. Aqui estão alguns exemplos:
 
 - Biblioteca independente
-
   - [Validate.js](http://rickharrison.github.com/validate.js/)
 
 - plug-in jQuery:
-
   - [Validação](http://bassistance.de/jquery-plugins/jquery-plugin-validation/)
 
 #### Validação remota

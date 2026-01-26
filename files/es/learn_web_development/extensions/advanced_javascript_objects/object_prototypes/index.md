@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_protot
 original_slug: Learn/JavaScript/Objects/Object_prototypes
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 Los prototipos son un mecanismo mediante el cual los objetos en JavaScript heredan características entre sí. En este artículo, explicaremos como funcionan los prototipos y también cómo se pueden usar las propiedades de estos para añadir métodos a los contructores existentes.
 
@@ -112,7 +112,8 @@ var myString = "Esto es mi String.";
 
 `myString` inmediatamente tiene una serie de métodos útiles disponibles en él, como [`split()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/split), [`indexOf()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf), [`replace()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replace), etc.
 
-> **Advertencia:** **Importante**: La propiedad `prototype` es una de las partes más confusamente nombradas de JavaScript - podría pensarse que `this` apunta al objeto prototipo del objeto actual, pero no lo hace (es un objeto interno al que puede accederse mediante `__proto__`, ¿recuerda?). en su lugar, `prototype` es una propiedad que contiene un objeto en el que se definen los miembros que se desea que se hereden.
+> [!WARNING]
+> **Importante**: La propiedad `prototype` es una de las partes más confusamente nombradas de JavaScript - podría pensarse que `this` apunta al objeto prototipo del objeto actual, pero no lo hace (es un objeto interno al que puede accederse mediante `__proto__`, ¿recuerda?). en su lugar, `prototype` es una propiedad que contiene un objeto en el que se definen los miembros que se desea que se hereden.
 
 ## Revisando create()
 
@@ -266,4 +267,4 @@ Este articulo ha cubierto prototipos de objeto JavaScript, incluyendo como las c
 
 En el proximos articulo vamos a ver como puedes implementar la herencia de funcionalidades entre dos de tus propios objetos personalizados.
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

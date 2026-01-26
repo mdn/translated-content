@@ -20,10 +20,10 @@ Se você tiver dúvidas sobre os tópicos que gostaria de ver cobertos ou que es
 
 ## Onde começar
 
-- Iniciante: Se você é um iniciante no desenvolvimento web, recomendamos que você comece trabalhando no nosso módulo [Introdução à Web](/pt-BR/docs/Learn/Getting_started_with_the_web), que fornece uma introdução prática ao desenvolvimento web.
-- Perguntas específicas: Se você tiver uma pergunta específica sobre desenvolvimento web, nossa seção [Perguntas comuns](/pt-BR/docs/Learn/Common_questions) pode ter algo para ajudá-lo.
-- Além do básico: Se você já possui um pouco de conhecimento, o próximo passo é aprender {{glossary ("HTML")}} e {{glossary ("CSS")}} em detalhes: comece com o módulo [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML) e vá para nosso módulo [Primeiros passos com CSS](/pt-BR/docs/Learn/CSS/First_steps).
-- Passando para o script: Se você já está familiarizado com HTML e CSS ou se interessa principalmente por codificação, deve passar para o {{glossary ("JavaScript")}} ou para o desenvolvimento no servidor. Comece com nossos módulo [Primeiros passos com JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps) e [Primeiros passos programando o site no servidor](/pt-BR/docs/Learn/Server-side/First_steps).
+- Iniciante: Se você é um iniciante no desenvolvimento web, recomendamos que você comece trabalhando no nosso módulo [Introdução à Web](/pt-BR/docs/Learn_web_development/Getting_started/Your_first_website), que fornece uma introdução prática ao desenvolvimento web.
+- Perguntas específicas: Se você tiver uma pergunta específica sobre desenvolvimento web, nossa seção [Perguntas comuns](/pt-BR/docs/Learn_web_development/Howto) pode ter algo para ajudá-lo.
+- Além do básico: Se você já possui um pouco de conhecimento, o próximo passo é aprender {{glossary ("HTML")}} e {{glossary ("CSS")}} em detalhes: comece com o módulo [Introdução ao HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content) e vá para nosso módulo [Primeiros passos com CSS](/pt-BR/docs/Learn_web_development/Core/Styling_basics).
+- Passando para o script: Se você já está familiarizado com HTML e CSS ou se interessa principalmente por codificação, deve passar para o {{glossary ("JavaScript")}} ou para o desenvolvimento no servidor. Comece com nossos módulo [Primeiros passos com JavaScript](/pt-BR/docs/Learn_web_development/Core/Scripting) e [Primeiros passos programando o site no servidor](/pt-BR/docs/Learn_web_development/Extensions/Server-side/First_steps).
 
 > [!NOTE]
 > Nosso [glossário](/pt-BR/docs/Glossary) fornece definições de terminologia.
@@ -32,23 +32,23 @@ Se você tiver dúvidas sobre os tópicos que gostaria de ver cobertos ou que es
 
 A seguir, uma lista de todos os tópicos abordados na área de aprendizado da MDN.
 
-- [Intordução à Web](/pt-BR/docs/Learn/Getting_started_with_the_web)
+- [Intordução à Web](/pt-BR/docs/Learn_web_development/Getting_started/Your_first_website)
   - : Fornece uma introdução prática ao desenvolvimento da web para iniciantes.
-- [HTML - Estruturando a Web](/pt-BR/docs/Learn/HTML)
+- [HTML - Estruturando a Web](/pt-BR/docs/conflicting/Learn_web_development/Core/Structuring_content_0e54a30456ec839b11e09e00670da56cde64ba985c2eb3da9b7805515585e95d)
   - : HTML é a linguagem que usamos para estruturar as diferentes partes do nosso conteúdo e definir qual é o seu significado ou propósito. Este tópico ensina HTML em detalhes.
-- [CSS - Estilizando a Web](/pt-BR/docs/Learn/CSS)
+- [CSS - Estilizando a Web](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics)
   - : CSS é a linguagem que podemos usar para estilizar e esquematizar nosso conteúdo web, além de adicionar comportamentos como animação. Este tópico fornece uma cobertura abrangente de CSS.
-- [JavaScript — Script dinamico do lado do cliente](/pt-BR/docs/Learn/JavaScript)
+- [JavaScript — Script dinamico do lado do cliente](/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting_785964b4c0711553d2bf3130baef052c6d78a03b4ce249eeb9d1ce2be1e3c308)
   - : JavaScript é a linguagem de script usada para adicionar funcionalidade dinâmica a páginas da web. Este tópico ensina todos os elementos essenciais necessários para se sentir confortável com a escrita e a compreensão do JavaScript.
-- [Formulários web - Trabalhando com dados do usuário](/pt-BR/docs/Learn/Forms)
+- [Formulários web - Trabalhando com dados do usuário](/pt-BR/docs/Learn_web_development/Extensions/Forms)
   - : Os formulários web são uma ferramenta muito poderosa para interagir com os usuários - geralmente são usados para coletar dados dos usuários ou permitir que eles controlem uma interface do usuário. Nos artigos listados abaixo, abordaremos todos os aspectos essenciais da estruturação, estilo e interação com os formulários web.
-- [Acessibilidade - torne a web utilizável por todos](/pt-BR/docs/Learn/Accessibility)
+- [Acessibilidade - torne a web utilizável por todos](/pt-BR/docs/Learn_web_development/Core/Accessibility)
   - : Acessibilidade é a prática de disponibilizar o conteúdo web para o maior número possível de pessoas, independentemente da deficiência, dispositivo, localidade ou outros fatores de diferenciação. Este tópico fornece tudo o que você precisa saber.
 - [Desempenho da Web - tornando os sites rápidos e responsivos](/pt-BR/docs/Aprender/Performance)
   - : O desempenho da Web é a arte de garantir que os aplicativos façam download rápido e respondam à interação do usuário, independentemente da capacidade, tamanho da tela, rede ou recursos do dispositivo.
-- [Ferramentas e testes](/pt-BR/docs/Learn/Tools_and_testing)
+- [Ferramentas e testes](/pt-BR/docs/Learn_web_development/Extensions/Testing)
   - : Este tópico aborda as ferramentas que os desenvolvedores usam para facilitar seu trabalho, como ferramentas de teste entre navegadores, linters, formatadores, ferramentas de transformação, sistemas de controle de versão e ferramentas de implantação.
-- [Programação do site no servidor](/pt-BR/docs/Learn/Server-side)
+- [Programação do site no servidor](/pt-BR/docs/Learn_web_development/Extensions/Server-side)
   - : Mesmo se você estiver se concentrando no desenvolvimento web do lado do cliente, ainda é útil saber como os servidores e os recursos de código do lado do servidor funcionam. Este tópico fornece uma introdução geral sobre como funciona o lado do servidor e tutoriais detalhados que mostram como criar um aplicativo do lado do servidor usando duas frameworks populares - Django (Python) e Express (Node.js).
 
 ## Obtendo nossos exemplos de código

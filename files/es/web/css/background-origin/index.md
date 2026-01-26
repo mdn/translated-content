@@ -3,8 +3,6 @@ title: background-origin
 slug: Web/CSS/background-origin
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad background-origin especifica el área de origen de un fondo o imagen en determinada caja. para que la propiedad [background-position](/es/docs/Web/CSS/background-position) calcule la posición de inicio de un fondo o imagen definida por la propiedad [background-image](/es/docs/Web/CSS/background-image).

@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt16
 
 **`getInt16()`** メソッドは、符号付き 16 ビット整数 (short) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置から読み取ります。
 
-{{InteractiveExample("JavaScript Demo: DataView.getInt16()")}}
+{{InteractiveExample("JavaScript デモ: DataView.getInt16()")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

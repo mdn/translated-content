@@ -3,8 +3,6 @@ title: Introducción al Desarrollo de Juegos en HTML5 con Phaser y la API de Ori
 slug: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 ---
 
-{{GamesSidebar}}
-
 ## Introducción
 
 En este tutorial iremos a través del proceso de construcción de un juego en HTML5 para móviles que utilizará las _APIs_ de [Orientación para Dispositivos](/es/docs/Web/Aplicaciones/Build/gather_and_modify_data/responding_to_device_orientation_changes) y [Vibración](/es/docs/Web/API/Vibration_API) para mejorar la jugabilidad y estará construido utilizando el _framework_ [Phaser](http://phaser.io/). Se recomienda tener conocimientos básicos de JavaScript para sacar mayor provecho a este tutorial.

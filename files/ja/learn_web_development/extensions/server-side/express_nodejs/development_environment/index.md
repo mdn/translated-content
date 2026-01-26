@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 96512135176d935cdf209c49bc9eae6025b0a9a5
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 [Express](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction#express_の紹介) の目的が理解できたので、Windows、Linux (Ubuntu)、および macOS 上で Node/Express 開発環境をセットアップしてテストする方法を説明します。どのような一般的な OS を使用していても、この記事では Express アプリケーションの開発を開始するために必要なものを提供します。
 
@@ -267,7 +267,8 @@ Node 自体の次に、[npm](https://docs.npmjs.com/) は Node アプリケー�
    これは "express" モジュールをインポートし、それを使用して 3000 番ポートで HTTP リクエストを待機するサーバー (`app`) を作成し、サーバーをテストするために使用できるブラウザー URL を説明するメッセージをコンソールに出力します。
    `app.get()` 関数は、指定された URL パス ('/') で HTTP の `GET` リクエストにのみ応答します。この場合、関数を呼び出して _Hello World!_ メッセージを送信します。
 
-   > **メモ:** `` `Example app listening on port ${port}!` `` の逆引用符で、`$port` の値を文字列に埋め込みます。
+   > [!NOTE]
+   > `` `Example app listening on port ${port}!` `` の逆引用符で、`$port` の値を文字列に埋め込みます。
 
 5. コマンドプロンプトでスクリプトを使用して node を呼び出すことでサーバーを起動できます。
 
@@ -307,7 +308,8 @@ npm install eslint --save-dev
 
 依存関係の定義と取得に加えて、**package.json** ファイルに名前付きスクリプトを定義し、npm を呼び出してそれらを [run-script](https://docs.npmjs.com/cli/run-script) コマンドで実行することもできます。このアプローチは、実行中のテストや開発の一部を自動化したり、ツールチェーン (たとえば JavaScript の縮小、画像の縮小、コードの LINT/分析などのツールの実行) を構築したりするためによく使用されます。
 
-> **メモ:** [Gulp](https://gulpjs.com/) や [Grunt](https://gruntjs.com/) のようなタスクランナーもテストや他の外部ツールを実行するために使うことができます。
+> [!NOTE]
+> [Gulp](https://gulpjs.com/) や [Grunt](https://gruntjs.com/) のようなタスクランナーもテストや他の外部ツールを実行するために使うことができます。
 
 たとえば、前の節で指定した eslint 開発依存関係を実行するためのスクリプトを定義するには、次のスクリプトブロックを **package.json** ファイルに追加します (アプリケーションソースが /src/js フォルダーにあると仮定します)。
 
@@ -439,4 +441,4 @@ DEBUG コマンドは有用なロギングを作成し、その結果、以下�
 - [Express Application Generator](https://expressjs.com/ja/starter/generator.html) (expressjs.com)
 - [Using Node.js with Windows subsystem for Linux](https://docs.microsoft.com/windows/dev-environment/javascript/) (docs.microsoft.com)
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

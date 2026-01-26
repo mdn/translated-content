@@ -19,9 +19,7 @@ forEach(callbackFn, thisArg)
 ### 引数
 
 - `callbackFn`
-
   - : それぞれの要素について呼び出される関数で、3 つの引数を取ります。
-
     - `currentValue`
       - : 処理中の現在の要素の値。
     - `index` {{optional_inline}}

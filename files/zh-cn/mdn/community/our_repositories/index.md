@@ -44,7 +44,7 @@ slug: MDN/Community/Our_repositories
 
 - **核心内容**：<https://github.com/mdn/content>。MDN Web 文档内容最重要的仓库——这是存储网站所有核心英文内容的地方，也是你对页面内容进行所有标准更改的地方。
 - **MDN Web 文档平台**：<https://github.com/mdn/yari>。这是存储 MDN Web 文档平台的地方，如果你想对我们的高级页面结构或渲染机制进行更改，就需要去这里。
-- **浏览器兼容性数据**：<https://github.com/mdn/browser-compat-data>。这是存储用于生成我们参考页上的浏览器兼容性表格的数据的地方（[示例](/zh-CN/docs/Web/HTML/Element/progress#浏览器兼容性)）。如果你对 Web 特性的浏览器兼容性有所了解，或者愿意并且能够进行一些研究和/或实验，你可以帮助更新 MDN 的[浏览器兼容性数据](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md)。
+- **浏览器兼容性数据**：<https://github.com/mdn/browser-compat-data>。这是存储用于生成我们参考页上的浏览器兼容性表格的数据的地方（[示例](/zh-CN/docs/Web/HTML/Reference/Elements/progress#浏览器兼容性)）。如果你对 Web 特性的浏览器兼容性有所了解，或者愿意并且能够进行一些研究和/或实验，你可以帮助更新 MDN 的[浏览器兼容性数据](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md)。
 - **交互示例**：<https://github.com/mdn/interactive-examples>。这个仓库存储了许多参考页顶部的示例代码块（[示例](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/globalThis)）。可以在这里编辑这些示例。
 - **Bob** 又名 Builder of Bits：<https://github.com/mdn/bob>。这个仓库存储了用于生成许多参考页顶部的漂亮的可编辑、可复制的示例（[示例](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/globalThis)）的渲染代码。
 - **本地化内容**：<https://github.com/mdn/translated-content>。这是存储本地化内容的地方。如果你想帮助将页面翻译成我们[活跃维护的语言环境](https://github.com/mdn/translated-content#locales)之一，请前往这里。

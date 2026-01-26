@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 **Trailer** レスポンスヘッダーにより、メッセージ本体の送信中に動的に生成される可能性のあるメタデータ（メッセージの完全性チェック、デジタル署名、後処理のステータスなど）を提供するために、送信者がチャンクされたメッセージの終わりに追加のフィールドを含めることが可能になります。
 
 > [!NOTE]
@@ -24,7 +22,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>はい</td>
     </tr>
   </tbody>
@@ -39,10 +37,8 @@ Trailer: header-names
 ## ディレクティブ
 
 - `header-names`
-
   - : チャンクされたメッセージのトレーラー部分に存在する HTTP ヘッダーフィールド。
     以下のヘッダーフィールドは**許可されていません**。
-
     - メッセージフレーミングヘッダー（{{HTTPHeader("Transfer-Encoding")}} や
       {{HTTPHeader("Content-Length")}} など）
     - ルーティングヘッダー（{{HTTPHeader("Host")}}）

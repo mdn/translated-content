@@ -66,9 +66,9 @@ O tipo de caixa aplicada em um elemento é definida pela propriedade {{cssxref("
 
 Nesse ponto, é melhor também explicar os tipos de exibição interna ( **inner** ) e externa ( **outer** ). Como mencionado acima, as caixas em CSS têm um tipo de exibição externa, que detalha se a caixa é em bloco ou em linha.
 
-Caixas possuem também um tipo de display _inner_, que determina como elementos dentro da caixa são posicionados. Por default, os elementos dentro de uma caixa são posicionados em um fluxo normal ( **[normal flow](/pt-BR/docs/Learn/CSS/CSS_layout/Normal_Flow)** ), significando que eles se comportam como qualquer outro bloco e elementos inline (como explicado acima).
+Caixas possuem também um tipo de display _inner_, que determina como elementos dentro da caixa são posicionados. Por default, os elementos dentro de uma caixa são posicionados em um fluxo normal ( **[normal flow](/pt-BR/docs/conflicting/Learn_web_development/Core/CSS_layout/Introduction)** ), significando que eles se comportam como qualquer outro bloco e elementos inline (como explicado acima).
 
-Podemos, no entando, alterar o tipo de exibição (display) interna usando valores `display` como `flex`. Se definirmos `display: flex;` em um elemento, o tipo de exibição externo será `block`, mas o tipo de exibição interna será alterada para `flex`. Todos os filhos diretos desta caixa se tornarão itens flexíveis e serão dispostos de acordo com as regras estabelecidas na especificação [Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox), que você aprenderá mais tarde.
+Podemos, no entando, alterar o tipo de exibição (display) interna usando valores `display` como `flex`. Se definirmos `display: flex;` em um elemento, o tipo de exibição externo será `block`, mas o tipo de exibição interna será alterada para `flex`. Todos os filhos diretos desta caixa se tornarão itens flexíveis e serão dispostos de acordo com as regras estabelecidas na especificação [Flexbox](/pt-BR/docs/Learn_web_development/Core/CSS_layout/Flexbox), que você aprenderá mais tarde.
 
 > [!NOTE]
 > Para ler mais sobre valores de exibição (display) e como caixas funcionam nos layouts `block` e `inline`, dê uma olhada no guia MDN sobre [Block e Inline Layout](/pt-BR/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
@@ -184,7 +184,7 @@ In the below example, you can see two boxes. Both have a class of `.box`, which 
 
 ### Use browser DevTools to view the box model
 
-Your [browser developer tools](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) can make understanding the box model far easier. If you inspect an element in Firefox's DevTools, you can see the size of the element plus its margin, padding, and border. Inspecting an element in this way is a great way to find out if your box is really the size you think it is!
+Your [browser developer tools](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) can make understanding the box model far easier. If you inspect an element in Firefox's DevTools, you can see the size of the element plus its margin, padding, and border. Inspecting an element in this way is a great way to find out if your box is really the size you think it is!
 
 ![Inspecting the box model of an element using Firefox DevTools](box-model-devtools.png)
 

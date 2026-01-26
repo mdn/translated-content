@@ -3,8 +3,6 @@ title: マウス操作
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up")}}
 
 これは、[ゲーム開発キャンバスチュートリアル](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) の 10 ステップ中 **9 ステップ目**になります。このレッスンを終えた後のソースコードは、[Gamedev-Canvas-workshop/lesson9.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html)で見ることができます。

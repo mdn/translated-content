@@ -3,7 +3,7 @@ title: MDN のコードサンプル
 short-title: コードサンプル
 slug: MDN/Writing_guidelines/Page_structures/Code_examples
 l10n:
-  sourceCommit: 269fa421f0a79b18f6000a26baebe30c74571b1f
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 MDN では、私たちが文書化しているウェブプラットフォーム機能の使用方法を示す多数のコード例を見ることができます。
@@ -76,7 +76,7 @@ console.log(test);
 [JavaScript の `Array.concat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/concat#試してみましょう) の使用法は、このマクロの良くできた例であり、markdown ソースでは次のようになります。
 
 ````md
-\{{InteractiveExample("JavaScript Demo: Array.concat()", "shorter")}}
+\{{InteractiveExample("JavaScript デモ: Array.concat()", "shorter")}}
 
 ```js interactive-example
 const array1 = ["a", "b", "c"];

@@ -14,7 +14,7 @@ slug: Web/API/HTMLTimeElement
 _Наследует свойства от родителя {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLTimeElement.dateTime")}}
-  - : Это {{domxref("DOMString")}} который отражает [`datetime`](/ru/docs/Web/HTML/Element/time#datetime) HTML атрибут, содержащий понятный для машин формат даты и времени.
+  - : Это {{domxref("DOMString")}} который отражает [`datetime`](/ru/docs/Web/HTML/Reference/Elements/time#datetime) HTML атрибут, содержащий понятный для машин формат даты и времени.
 
 ## Методы
 

@@ -167,7 +167,8 @@ try {
 }
 ```
 
-> **メモ:** {{domxref("AbortSignal/timeout_static", "AbortSignal.timeout()")}} を使用したときとは異なり、最終的な中止がタイムアウトによって発生したのかどうかを判断する方法はありません。
+> [!NOTE]
+> {{domxref("AbortSignal/timeout_static", "AbortSignal.timeout()")}} を使用したときとは異なり、最終的な中止がタイムアウトによって発生したのかどうかを判断する方法はありません。
 
 ### 中止可能な API の実装
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 当用户点击通知并且点击的并不是通知的按钮时触发（对于点击按钮的事件，参见 {{WebExtAPIRef("notifications.onButtonClicked")}}）。
 
 ## 语法
@@ -31,9 +29,7 @@ browser.notifications.onClicked.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 当此事件发生时调用的函数。该函数需要你传递下列参数：
-
     - `notificationId`
       - : `string`。用户点击的通知的 ID。
 

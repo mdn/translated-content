@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
 original_slug: Learn/Forms/Sending_and_retrieving_form_data
 ---
 
-Em muitos casos, a finalidade de [HTML Form](/pt-BR/docs/Learn/Forms) Um é enviar dados para um servidor. O servidor processa os dados e envia uma resposta ao usuário. Isso parece simples, mas é importante manter algumas coisas em mente para garantir que os dados não danifiquem o servidor ou causem problemas para seus usuários.
+Em muitos casos, a finalidade de [HTML Form](/pt-BR/docs/Learn_web_development/Extensions/Forms) Um é enviar dados para um servidor. O servidor processa os dados e envia uma resposta ao usuário. Isso parece simples, mas é importante manter algumas coisas em mente para garantir que os dados não danifiquem o servidor ou causem problemas para seus usuários.
 
 ## Para onde vão os dados?
 
@@ -52,7 +52,8 @@ Muitas páginas mais antigas usam a seguinte notação para indicar que os dados
 <form action="#"></form>
 ```
 
-> **Nota:** **Nota: É possível especificar um URL que use o protocolo HTTPS (HTTP seguro). Quando você fizer isso, os dados são criptografados junto com o resto da solicitação, mesmo se o formulário em si é hospedado em uma página insegura acessada usando HTTP. Por outro lado, se o formulário estiver hospedado na página segura, mas você especificar um URL HTTP inseguro com o atributo [`action`](/pt-BR/docs/Web/HTML/Element/form#action), todos os navegadores exibirão um aviso de segurança para o usuário cada vez que Tente enviar dados porque os dados não serão criptografados.**
+> [!NOTE]
+> **Nota: É possível especificar um URL que use o protocolo HTTPS (HTTP seguro). Quando você fizer isso, os dados são criptografados junto com o resto da solicitação, mesmo se o formulário em si é hospedado em uma página insegura acessada usando HTTP. Por outro lado, se o formulário estiver hospedado na página segura, mas você especificar um URL HTTP inseguro com o atributo [`action`](/pt-BR/docs/Web/HTML/Element/form#action), todos os navegadores exibirão um aviso de segurança para o usuário cada vez que Tente enviar dados porque os dados não serão criptografados.**
 
 #### o atributo [`method`](/pt-BR/docs/Web/HTML/Element/form#method)
 
@@ -203,9 +204,11 @@ Por exemplo:
 </form>
 ```
 
-> **Nota:** **Nota: Alguns navegadores suportam**[`multiple`](/pt-BR/docs/Web/HTML/Element/input#multiple) Atributo no {{HTMLElement("input")}} Elemento para enviar mais de um arquivo com apenas um elemento de entrada. Como o servidor lida com esses arquivos realmente depende da tecnologia usada no servidor. Como mencionado anteriormente, usando um quadro fará sua vida muito mais fácil.
+> [!NOTE]
+> **Nota: Alguns navegadores suportam**[`multiple`](/pt-BR/docs/Web/HTML/Element/input#multiple) Atributo no {{HTMLElement("input")}} Elemento para enviar mais de um arquivo com apenas um elemento de entrada. Como o servidor lida com esses arquivos realmente depende da tecnologia usada no servidor. Como mencionado anteriormente, usando um quadro fará sua vida muito mais fácil.
 
-> **Aviso:** **Aviso: Muitos servidores são configurados com um limite de tamanho para arquivos e solicitações HTTP, a fim de evitar abusos. É importante verificar esse limite com o administrador do servidor antes de enviar um arquivo.**
+> [!WARNING]
+> **Aviso: Muitos servidores são configurados com um limite de tamanho para arquivos e solicitações HTTP, a fim de evitar abusos. É importante verificar esse limite com o administrador do servidor antes de enviar um arquivo.**
 
 ## Preocupações com segurança
 
@@ -253,7 +256,7 @@ You should avoid many/most problems if you follow these three rules, but it's al
 
 ## Conclusion
 
-As you can see, sending form data is easy, but securing an application can be tricky. Just remember that a front-end developer is not the one who should define the security model of the data. Yes, as we'll see, it's possible to [perform client side data validation](/pt-BR/docs/Learn/Forms/Form_validation) but the server can't trust this validation because it has no way to truly know what really happens on the client side.
+As you can see, sending form data is easy, but securing an application can be tricky. Just remember that a front-end developer is not the one who should define the security model of the data. Yes, as we'll see, it's possible to [perform client side data validation](/pt-BR/docs/Learn_web_development/Extensions/Forms/Form_validation) but the server can't trust this validation because it has no way to truly know what really happens on the client side.
 
 ## See also
 

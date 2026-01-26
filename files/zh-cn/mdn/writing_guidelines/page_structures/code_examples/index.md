@@ -48,10 +48,6 @@ const test = "Hello";
 console.log(test);
 ```
 
-另外，你可能想显示含有代码输出结果的静态图像。比如：
-
-![Screenshot of a console output in developer tools](console-example.png)
-
 ## 交互示例
 
 交互式示例主要用于 MDN 参考页面的顶部——我们的目标是提供这些示例，以提高其对初学者和其他想要在看到所查找的所有细节之前快速理解一个例子的读者的价值。关于交互式示例，有几个重要的限制需要注意：

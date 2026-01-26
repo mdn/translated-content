@@ -3,7 +3,7 @@ title: Iteratores e geradores
 slug: Web/JavaScript/Guide/Iterators_and_generators
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Meta_programming")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain", "Web/JavaScript/Guide/Meta_programming")}}
 
 Processar cada item em uma coleção é uma operação muito comum. O JavaScript disponibiliza uma série de maneiras de iterar sobre uma coleção, desde um simples laço {{jsxref("Statements/for","for")}}, até um {{jsxref("Global_Objects/Array/map","map()")}} e também com o {{jsxref("Global_Objects/Array/filter","filter()")}}. Iteradores e Geradores trazem o conceito da interação ocorrer diretamente no núcleo da linguagem e prover um mecanismo para a customização do comportamento dos laços {{jsxref("Statements/for...of","for...of")}}.
 
@@ -47,7 +47,7 @@ console.log(it.next().done); // true
 
 Um objeto é iterável **(iterable),** se ele define seu comportamento de iteração, como no caso de quais valores percorridos em um laço do tipo {{jsxref("Statements/for...of", "for..of")}}. Alguns tipos embutidos, como o {{jsxref("Array")}}, ou o {{jsxref("Map")}}, têm um comportamento iterável padrão, enquanto outros tipos (como o{{jsxref("Object")}}) não possuem.
 
-Para que um objeto seja **iterable**, o objeto precisa implementar o método **@@iterator**, significando que o objeto (ou um dos objetos na cadeia de prototipagem - [prototype chain](/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)) precisa ter uma propriedade com uma chave {{jsxref("Symbol.iterator")}}:
+Para que um objeto seja **iterable**, o objeto precisa implementar o método **@@iterator**, significando que o objeto (ou um dos objetos na cadeia de prototipagem - [prototype chain](/pt-BR/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)) precisa ter uma propriedade com uma chave {{jsxref("Symbol.iterator")}}:
 
 ### Iterables definidos pelo usuário
 
@@ -158,4 +158,4 @@ Se um yield não for encontrado durante o processo de lançamento de um thrown e
 
 Generators têm o método {{jsxref("Global_Objects/Generator/return","return(value)")}} que retorna o valor pego e finaliza o generator.
 
-{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Meta_programming")}}
+{{PreviousNext("conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain", "Web/JavaScript/Guide/Meta_programming")}}

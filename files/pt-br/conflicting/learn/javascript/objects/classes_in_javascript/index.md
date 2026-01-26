@@ -3,7 +3,7 @@ title: JavaScript orientado a objetos para iniciantes
 slug: conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Object_basics", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 Com o básico fora do caminho, agora vamos nos concentrar no JavaScript orientado a objetos (OOJS) — Este artigo apresenta uma visão básica da teoria de programação orientada a objeto (OOP), em seguida, explora como o JavaScript emula as classes de objetos através de funções de construtor e como criar instâncias de objeto.
 
@@ -45,7 +45,7 @@ Os objetos podem conter dados e códigos relacionados, que representam informaç
 
 Vamos considerar um programa simples que exibe informações sobre os alunos e professores de uma escola. Aqui vamos olhar para a teoria OOP em geral, não no contexto de qualquer linguagem de programação específica.
 
-Para começar, poderíamos retornar ao nosso tipo de objeto Person do nosso [primeiro artigo de objetos](/pt-BR/docs/Learn/JavaScript/Objects/Basics), que define os dados genéricos e a funcionalidade de uma pessoa. Há muitas coisas que você poderia saber sobre uma pessoa (endereço, altura, tamanho do sapato, perfil de DNA, número de passaporte, traços de personalidade significativos ...), mas neste caso estamos interessados apenas em mostrar seu nome, idade, sexo e interesses, e também queremos ser capazes de escrever uma breve introdução sobre eles com base nesses dados e fazê-los dizer oi. Isso é conhecido como **abstração** — criando um modelo simples de uma coisa mais complexa, que representa seus aspectos mais importantes de uma forma que é fácil trabalhar com os objetivos do nosso programa.
+Para começar, poderíamos retornar ao nosso tipo de objeto Person do nosso [primeiro artigo de objetos](/pt-BR/docs/Learn_web_development/Core/Scripting/Object_basics), que define os dados genéricos e a funcionalidade de uma pessoa. Há muitas coisas que você poderia saber sobre uma pessoa (endereço, altura, tamanho do sapato, perfil de DNA, número de passaporte, traços de personalidade significativos ...), mas neste caso estamos interessados apenas em mostrar seu nome, idade, sexo e interesses, e também queremos ser capazes de escrever uma breve introdução sobre eles com base nesses dados e fazê-los dizer oi. Isso é conhecido como **abstração** — criando um modelo simples de uma coisa mais complexa, que representa seus aspectos mais importantes de uma forma que é fácil trabalhar com os objetivos do nosso programa.
 
 ![](person-diagram.png)
 
@@ -232,7 +232,7 @@ Além disso, há alguns problemas com nosso método `bio()` — a saída sempre 
 
 ## Outras maneiras de criar instâncias de objeto
 
-Até agora, vimos duas maneiras diferentes de criar uma instância de objeto — [declarar um literal de objeto](/pt-BR/docs/Learn/JavaScript/Objects/Basics#object_basics), e usar uma função de construtor (veja acima).
+Até agora, vimos duas maneiras diferentes de criar uma instância de objeto — [declarar um literal de objeto](/pt-BR/docs/Learn_web_development/Core/Scripting/Object_basics#object_basics), e usar uma função de construtor (veja acima).
 
 Isso faz sentido, mas existem outras maneiras — queremos familiarizá-lo com essas informações caso você as encontre em suas viagens pela Web.
 
@@ -299,14 +299,14 @@ Este artigo forneceu uma visão simplificada da teoria orientada a objetos — i
 
 No próximo artigo, vamos explorar os protótipos de objetos JavaScript.
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Object_basics", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 ## Neste módulo
 
-- [O básico de objetos](/pt-BR/docs/Learn/JavaScript/Objects/Basics)
+- [O básico de objetos](/pt-BR/docs/Learn_web_development/Core/Scripting/Object_basics)
 - [Orientação a objetos em JavaScript para iniciantes](/pt-BR/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript)
-- [Protótipos de objetos](/pt-BR/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Herença em JavaScript](/pt-BR/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
-- [Trabalhando com dados em JSON](/pt-BR/docs/Learn/JavaScript/Objects/JSON)
-- [Prática de construção de objetos](/pt-BR/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adicionando melhorias no nossa demo bolas saltitantes](/pt-BR/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)
+- [Protótipos de objetos](/pt-BR/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes)
+- [Herença em JavaScript](/pt-BR/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript)
+- [Trabalhando com dados em JSON](/pt-BR/docs/Learn_web_development/Core/Scripting/JSON)
+- [Prática de construção de objetos](/pt-BR/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice)
+- [Adicionando melhorias no nossa demo bolas saltitantes](/pt-BR/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features)

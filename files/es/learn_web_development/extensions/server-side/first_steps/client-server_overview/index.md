@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/First_steps/Client-Server_ove
 original_slug: Learn/Server-side/First_steps/Client-Server_overview
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Introduction", "Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}
 
 Ahora que conoces el propósito y los beneficios potenciales de la programación de lado-servidor vamos a examinar en detalle lo que ocurre cuando un servidor recibe una "petición dinámica" desde un explorador web. Ya que el código de lado servidor de la mayoría de los sitios web gestiona peticiones y respuestas de formas similares, este artículo te ayudará a entender lo que necesitas hacer para escribir la mayor parte de tu propio código.
 
@@ -38,7 +38,6 @@ Esta petición incluye:
 
 - Una URL que identifica el servidor de destino y un recurso (ej. un fichero HTML, un punto de datos particular en el servidor, o una herramienta a ejecutar).
 - Un método que define la acción requerida (por ejemplo, obtener un fichero o salvar o actualizar algunos datos). Los diferentes métodos/verbos y sus acciones asociadas se listan debajo:
-
   - `GET`: Obtener un recurso específico (ej. un fichero HTML que contiene información acerca de un producto o una lista de productos).
   - `POST`: Crear un nuevo recurso (ej. añadir un nuevo artículo a una wiki, añadir un nuevo contacto a una base de datos).
   - `HEAD`: Obtener la información de los metadatos sobre un recurso específico sin obtener el cuerpo entero tal como haría `GET`. Podrías, por ejemplo, usar una petición `HEAD` para encontrar la última vez que un recurso fue actualizado, y a continuación usar la petición `GET` (más "cara") para descargar el recurso sólo si éste ha cambiado.
@@ -47,7 +46,6 @@ Esta petición incluye:
   - `TRACE`, `OPTIONS`, `CONNECT`, `PATCH`: Estos verbos son para tareas menos comunes/avanzadas, por lo que no los trataremos aquí.
 
 - Se puede codificar información adicional con la petición (por ejemplo, datos de un formulario HTML). La información puede ser codificada como:
-
   - Parámetros URL: Las peticiones `GET` codifican los datos en la URL enviada al servidor añadiendo al final pares nombre/valor — por ejemplo, `http://mysite.com?name=Fred&age=11`. Siempre encontrarás un signo de interrogación(`?`) separando los parámetros URL del resto de la misma, un signo igual (`=`) separando cada nombre de su valor asociado y un ampersand (`&`) separando cada par. Los parámetros URL son inherentemente "inseguros" ya que pueden ser modificados por los usuarios y ser enviados de nuevo. Como consecuencia los parámetros URL/peticiones `GET` no se usan para peticiones de actualización de datos en el servidor.
   - Datos `POST`. Las peticiones `POST` añaden nuevos recursos, cuyos datos están codificados dentro del cuerpo de la petición.
   - Cookies de lado cliente. Los Cookies contienen datos de sesión acerca del cliente, incluyendo las claves que el servidor puede usar para determinar su estado de incio de sesión y los permisos/accesos a los recursos.
@@ -318,4 +316,4 @@ En este punto deberías tener una buena visión general de las operaciones que e
 
 En el módulo siguiente te ayudaremos a elegir el mejor Framework Web para tu primer sitio.
 
-{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Introduction", "Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}

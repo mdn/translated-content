@@ -11,7 +11,7 @@ l10n:
 
 {{jsxref("Operators/class", "クラス式", "", 1)}}を使ってクラスを定義することもで、その場合は再定義やクラス名の省略ができます。同じスコープで**クラス宣言**を同じ名前で行おうとすると、{{jsxref("SyntaxError")}} が発生します。
 
-{{InteractiveExample("JavaScript Demo: Statement - Class")}}
+{{InteractiveExample("JavaScript デモ: Statement - Class")}}
 
 ```js interactive-example
 class Polygon {

@@ -7,7 +7,8 @@ l10n:
 
 {{MDNSidebar}}
 
-> **メモ:** _この説明文全体を削除してから公開してください。_
+> [!NOTE]
+> _この説明文全体を削除してから公開してください。_
 >
 > **訳注:** このテンプレートは翻訳記事用です。新たな記事を執筆する場合は、英語版を参照してください。日本語の単独記事を立項することはできません。）
 >
@@ -29,10 +30,10 @@ l10n:
 >
 > - **title**
 >   - : `title` の値はページの先頭に表示されます。タイトルの書式は _NameOfTheFunction()_ です。
->     例えば、 [`pow()`](/ja/docs/Web/CSS/pow) プロパティのタイトルは _pow()_ です。
+>     例えば、 [`pow()`](/ja/docs/Web/CSS/Reference/Values/pow) プロパティのタイトルは _pow()_ です。
 > - **slug**
 >   - : `slug` の値は`https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。 これは `Web/CSS/NameOfTheFunction` のような書式です。スラッグには括弧が付かないことに注意してください。
->     例えば、 [`pow()`](/ja/docs/Web/CSS/pow) 関数のスラッグは `Web/CSS/pow` です。
+>     例えば、 [`pow()`](/ja/docs/Web/CSS/Reference/Values/pow) 関数のスラッグは `Web/CSS/pow` です。
 > - **sourceCommit**
 >   - : （翻訳記事のみ）この記事の翻訳元となる英語版記事を GitHub にコミットした際のコミット ID を記述します。 GitHub 上で英語版記事のコミット ID を確認してください。
 >
@@ -69,7 +70,7 @@ l10n:
 >
 > _この説明文全体を削除してから公開してください。_
 
-{{CSSRef}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 ページのコンテンツは導入段落から始めましょう。関数名から始め、それが何をするのかを買いてください。
 これはできれば 1 つか 2 つの短い文章にしてください。

@@ -3,8 +3,6 @@ title: Array.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 ---
 
-{{JSRef}}
-
 **`lastIndexOf()`** 方法會回傳給定元素於陣列中最後一個被找到之索引，若不存在於陣列中則回傳 -1。搜尋的方向為由陣列尾部向後（即向前）尋找，啟始於 `fromIndex`。
 
 {{InteractiveExample("JavaScript Demo: Array.lastIndexOf()")}}

@@ -1,14 +1,28 @@
 ---
 title: <path>
 slug: Web/SVG/Reference/Element/path
-original_slug: Web/SVG/Element/path
 l10n:
-  sourceCommit: 2f43f506240fa6c866cc3bc2d018364ae49421d9
+  sourceCommit: ac806e34aba086be141689c64dc4dd73636fbd62
 ---
 
-{{SVGRef}}
+**`<path>`** は [SVG](/ja/docs/Web/SVG) の要素で、図形を定義する汎用的な要素です。全ての基本図形は path 要素によって定義することができます。
 
-**`<path>`** [SVG](/ja/docs/Web/SVG)要素は図形を定義する汎用的な要素です。全ての基本図形は path 要素によって定義されます。
+## 使用コンテキスト
+
+{{svginfo}}
+
+## 属性
+
+- {{SVGAttr("d")}}
+  - : この属性は、図形のパスを定義します。
+    _値の型_: **\<string>**; _デフォルト値_: `''`; _アニメーション_: **可**
+- {{SVGAttr("pathLength")}}
+  - : この属性は、ユーザー単位系でのパスの全長を指定することを可能にします。
+    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number); _デフォルト値_: _none_; _アニメーション_: **可**
+
+## DOM インターフェイス
+
+この要素は {{domxref("SVGPathElement")}} インターフェイスを実装しています。
 
 ## 例
 
@@ -33,19 +47,6 @@ svg {
 
 {{EmbedLiveSample('Example', 100, 100)}}
 
-## 属性
-
-- {{SVGAttr("d")}}
-  - : この属性は、図形のパスを定義します。
-    _値の型_: **\<string>** ; _既定値_: `''`; _アニメーション_: **可**
-- {{SVGAttr("pathLength")}}
-  - : この属性は、ユーザー単位系でのパスの全長を指定することを可能にします。
-    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number) ; _既定値_: _none_; _アニメーション_: **可**
-
-## 使用可能な場所
-
-{{svginfo}}
-
 ## 仕様書
 
 {{Specifications}}
@@ -57,4 +58,4 @@ svg {
 ## 関連情報
 
 - SVG 基本図形: {{ SVGElement('circle') }}, {{ SVGElement('ellipse') }}, {{ SVGElement('line') }}, {{ SVGElement('polygon') }}, {{ SVGElement('polyline') }}, {{ SVGElement('rect') }}
-- [The MDN SVG "Getting Started" チュートリアル : Path](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)
+- [MDN の「ゼロから始める SVG 入門」チュートリアル : パス](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)

@@ -3,8 +3,6 @@ title: ボールを動かす
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
 
 これは、[ゲーム開発キャンバスチュートリアル](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) の 10 ステップ中 **2 ステップ目**になります。このレッスンを終えた後のソースコードは、[Gamedev-Canvas-workshop/lesson2.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson02.html)で見ることができます。
@@ -13,7 +11,7 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 
 ## 描画ループを定義する
 
-キャンバスを毎フレーム、定期的に更新し続けるためには、何度も実行されるような関数を定義する必要があります。この関数には画像の位置を変えたりするために毎回違う値が与えらます。 JavaScript のタイミング関数、例えば {{domxref("setInterval()")}} や {{domxref("window.requestAnimationFrame()", "requestAnimationFrame()")}} を用いれば同じ関数を何度も実行できます。
+キャンバスを毎フレーム、定期的に更新し続けるためには、何度も実行されるような関数を定義する必要があります。この関数には画像の位置を変えたりするために毎回違う値が与えらます。 JavaScript のタイミング関数、例えば {{domxref("Window.setInterval", "setInterval()")}} や {{domxref("window.requestAnimationFrame()", "requestAnimationFrame()")}} を用いれば同じ関数を何度も実行できます。
 
 現在 HTML ファイル内にある JavaScript を、最初の 2 行を除いてすべて削除し、その下に以下のように追加してください。`draw()` 関数は `setInterval` 内で 10 ミリ秒ごとに実行されます。
 

@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Headers/Accept-CH
 original_slug: Web/HTTP/Headers/Accept-CH
 ---
 
-{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
+{{securecontext_header}}{{SeeCompatTable}}
 
 **`Accept-CH`** ヘッダーはサーバーによって設定され、クライアントが後続のリクエストに含める{{glossary("Client Hints", "クライアントヒント")}}ヘッダーを指定します。
 
@@ -18,7 +18,7 @@ original_slug: Web/HTTP/Headers/Accept-CH
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Forbidden header name","禁止ヘッダー名")}}
+        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
       </th>
       <td>?</td>
     </tr>

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 获取定义侧边栏内容的 HTML 文档的 URL。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
@@ -22,9 +20,7 @@ let gettingPanel = browser.sidebarAction.getPanel(
 ### 参数
 
 - `details`
-
   - : `object`。包含下列属性的对象：
-
     - `tabId` {{optional_inline}}
       - : `integer`。获取特定于给定标签页的侧边栏的面板。
     - `windowId` {{optional_inline}}

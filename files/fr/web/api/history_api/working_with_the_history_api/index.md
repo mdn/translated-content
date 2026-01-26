@@ -12,13 +12,11 @@ L'API <i lang="en">History</i> permet à un site web d'interagir avec l'historiq
 L'interface principale de cette API est l'interface [`History`](/fr/docs/Web/API/History) qui définit deux ensembles de méthodes&nbsp;:
 
 - Les méthodes pour naviguer vers une page de l'historique&nbsp;:
-
   - [`History.back()`](/fr/docs/Web/API/History/back)
   - [`History.forward()`](/fr/docs/Web/API/History/forward)
   - [`History.go()`](/fr/docs/Web/API/History/go)
 
 - Les méthodes pour modifier l'historique de la session&nbsp;:
-
   - [`History.pushState()`](/fr/docs/Web/API/History/pushState)
   - [`History.replaceState()`](/fr/docs/Web/API/History/replaceState)
 
@@ -133,7 +131,7 @@ Dans cet exemple, nous appelons `pushState()` avec trois arguments&nbsp;:
 - `""`
   - : Cet argument est nécessaire pour la rétrocompatibilité avec les anciens sites et devrait toujours être une chaîne de caractères vide.
 - `creature`
-  - : Cette valeur sera utilisée comme URL pour l'entrée d'historique. Elle sera affichée dans la barre d'URL du navigateur et utilisée comme valeur pour l'en-tête [`Referer`](/fr/docs/Web/HTTP/Headers/Referer) des requêtes HTTP effectuées par la page. Cette valeur doit avoir la [même origine](/fr/docs/Glossary/Same-origin_policy) que la page.
+  - : Cette valeur sera utilisée comme URL pour l'entrée d'historique. Elle sera affichée dans la barre d'URL du navigateur et utilisée comme valeur pour l'en-tête [`Referer`](/fr/docs/Web/HTTP/Reference/Headers/Referer) des requêtes HTTP effectuées par la page. Cette valeur doit avoir la [même origine](/fr/docs/Glossary/Same-origin_policy) que la page.
 
 ## Utiliser l'évènement `popstate`
 

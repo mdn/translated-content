@@ -3,8 +3,6 @@ title: Referrer-Policy
 slug: Web/HTTP/Reference/Headers/Referrer-Policy
 ---
 
-{{HTTPSidebar}}
-
 **`Referrer-Policy`** 首部用来监管哪些访问来源信息——会在 {{HTTPHeader("Referer")}} 中发送——应该被包含在生成的请求当中。
 
 | Header type                           | {{Glossary("Response header")}} |
@@ -37,13 +35,12 @@ Referrer-Policy: unsafe-url
 - `origin-when-cross-origin`
   - : 对于同源的请求，会发送完整的 URL 作为引用地址，但是对于非同源请求仅发送文件的源。
 - `same-origin`
-  - : 对于[同源的请求](/zh-CN/docs/Web/Security/Same-origin_policy)会发送引用地址，但是对于非同源请求则不发送引用地址信息。
+  - : 对于[同源的请求](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)会发送引用地址，但是对于非同源请求则不发送引用地址信息。
 - `strict-origin`
   - : 在同等安全级别的情况下，发送文件的源作为引用地址 (HTTPS->HTTPS)，但是在降级的情况下不会发送 (HTTPS->HTTP)。
 - `strict-origin-when-cross-origin`（默认值）
   - : 对于同源的请求，发送来源、路径以及查询字符串。对于在相同安全级别的情况下（HTTPS→HTTPS）的跨源请求，仅发送来源。在目标的安全级别下降的情况下（HTTPS→HTTP）则不发送 {{HTTPHeader("Referer")}} 标头。
 - `unsafe-url`
-
   - : 无论是同源请求还是非同源请求，都发送完整的 URL（移除参数信息之后）作为引用地址。
 
     > [!NOTE]
@@ -128,11 +125,10 @@ Referrer-Policy: no-referrer, strict-origin-when-cross-origin
 
 - [HTTP referer on Wikipedia](https://zh.wikipedia.org/wiki/HTTP_referer)
 - 其他设定页面引用策略的方式：
-
-  - A {{HTMLElement("meta")}} element with a [name of `referrer`](/zh-CN/docs/Web/HTML/Element/meta#attr-name).
+  - A {{HTMLElement("meta")}} element with a [name of `referrer`](/zh-CN/docs/Web/HTML/Reference/Elements/meta#attr-name).
   - A `referrerpolicy` attribute on an {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}}, or {{HTMLElement("link")}} element.
   - The `noreferrer` link relation on an a, area, or link element (`rel="noreferrer"`).
   - When using [Fetch](/zh-CN/docs/Web/API/Fetch_API): {{domxref("Request.referrerPolicy")}}
 
-- [同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)
+- [同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)
 - [Tighter Control Over Your Referrers – Mozilla Security Blog](https://blog.mozilla.org/security/2015/01/21/meta-referrer/)

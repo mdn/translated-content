@@ -3,7 +3,7 @@ title: Отладка CSS
 slug: Learn_web_development/Core/Styling_basics/Debugging_CSS
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn/CSS/Building_blocks/Organizing", "Learn_web_development/Core/Styling_basics")}}
 
 Порой, при написании CSS, вы будете сталкиваться с проблемой, при которой будет казаться, что CSS не делает того, чего вы ожидаете от него. Возможно, вы считаете, что определённый селектор должен соответствовать элементу, но ничего не происходит, или поле имеет размер, отличный от ожидаемого. Эта статья поможет вам с тем, как отладить CSS проблемы и покажет вам как DevTools (инструменты разработчика), включённые во все современные браузеры, могут помочь разобраться с тем, что происходит.
 
@@ -158,13 +158,12 @@ In the instance that your problem is actually a bug in a browser, then a reduced
 
 As you become more experienced with CSS, you will find that you get faster at figuring out issues. However even the most experienced of us sometimes find ourselves wondering what on earth is going on. Taking a methodical approach, making a reduced test case, and explaining the issue to someone else will usually result in a fix being found.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn/CSS/Building_blocks/Organizing", "Learn_web_development/Core/Styling_basics")}}
 
 ## In this module
 
 1. [Cascade and inheritance](/ru/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 2. [CSS selectors](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
-
    - [Type, class, and ID selectors](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors)
    - [Attribute selectors](/ru/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
    - [Pseudo-classes and pseudo-elements](/ru/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)

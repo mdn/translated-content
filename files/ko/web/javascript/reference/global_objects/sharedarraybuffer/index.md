@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 
 **`SharedArrayBuffer`** 객체는 제네릭, 고정된 길이의 원시 바이너리 데이터 버퍼를 표현하는데 사용됩니다. {{jsxref("ArrayBuffer")}} 객체와 유사하지만, 공유된 메모리상의 뷰를 생성하는데 사용될 수 있습니다. `ArrayBuffer` 와는 달리, `SharedArrayBuffer` 는 분리될 수 없습니다.
 
-> **참고:** [Spectre](https://meltdownattack.com/) 에대한 응답으로 2018년 1월 5일에 `SharedArrayBuffer` 는 모든 주요 브라우저에서 기본적으로 비활성화되어있음을 참고하세요. Chrome 은 사이트 격리 기능을 사용하여 Spectre 스타일 취약점으로부터 보호될 수 있는 플랫폼상의 [v67 에서 이를 다시 활성화](https://bugs.chromium.org/p/chromium/issues/detail?id=821270)하였습니다.
+> [!NOTE]
+> [Spectre](https://meltdownattack.com/) 에대한 응답으로 2018년 1월 5일에 `SharedArrayBuffer` 는 모든 주요 브라우저에서 기본적으로 비활성화되어있음을 참고하세요. Chrome 은 사이트 격리 기능을 사용하여 Spectre 스타일 취약점으로부터 보호될 수 있는 플랫폼상의 [v67 에서 이를 다시 활성화](https://bugs.chromium.org/p/chromium/issues/detail?id=821270)하였습니다.
 
 {{InteractiveExample("JavaScript Demo: SharedArrayBuffer Constructor")}}
 

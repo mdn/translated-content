@@ -1,22 +1,16 @@
 ---
 title: DOM (Document Object Model)
 slug: Glossary/DOM
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+Le **DOM** (<i lang="en">Document Object Model</i> en anglais) est une {{Glossary("API")}} qui représente et permet d'interagir avec tout document de langage de balisage basé sur {{Glossary("HTML")}} ou {{Glossary("XML")}}. Le DOM est un modèle de document chargé dans le {{Glossary("browser", "navigateur")}} et représentant le document sous forme d'arbre de {{Glossary("Node/DOM", "nœuds")}}, ou **arbre DOM**, où chaque nœud représente une partie du document (par exemple, un {{Glossary("element", "élément")}}, une chaîne de texte ou un commentaire).
 
-Le DOM (Document Object Model) est une [API](/fr/docs/Glossary/API) qui représente et interagit avec tous types de documents [HTML](/fr/docs/Glossary/HTML) ou [XML](/fr/docs/Glossary/XML). Le DOM est un modèle de document chargé dans le [navigateur](/fr/docs/Glossary/Browser). La représentation du document est un arbre nodal. Chaque nœud représente une partie du document (par exemple, un [élément](/fr/docs/Glossary/Element), une chaîne de caractères ou un commentaire).
+Le DOM est l'une des {{Glossary("API")}} les plus utilisées sur le {{Glossary("World Wide Web", "Web")}}, car il permet au code exécuté dans un navigateur d'accéder à chaque nœud du document et d'interagir avec lui. Les nœuds peuvent être créés, déplacés et modifiés. Des gestionnaires d'événements peuvent être ajoutés aux nœuds et déclenchés lors de la survenue d'un événement donné.
 
-Le DOM est l'une des [API](/fr/docs/Glossary/API) les plus utilisées sur le [Web](/fr/docs/Glossary/World_Wide_Web) parce qu'elle autorise du code exécuté dans un navigateur à accéder et interagir avec chaque nœud dans le document. Les nœuds peuvent être créés, déplacés et modifiés. Des écouteurs d'évènements (« _event listeners_ ») peuvent être ajoutés à des nœuds et déclenchés par un évènement donné.
+## Voir aussi
 
-À l'origine, DOM n'était pas standardisé. Il ne l'a été que lorsque les navigateurs ont commencé à implémenter [JavaScript](/fr/docs/Glossary/JavaScript). Le DOM qui découle de cette période initiale est parfois appelé DOM 0. À l'heure actuelle, le W3C édicte les spécifications de la norme DOM
-
-1. [<i lang="en">Document Object Model</i> (DOM)](https://fr.wikipedia.org/wiki/Document_Object_Model) sur Wikipédia
-2. [La documentation du DOM sur MDN](/fr/docs/Web/API/Document_Object_Model)
-3. [Les références du DOM](https://dom.spec.whatwg.org/)
-4. [Glossaire](/fr/docs/Glossary)
-
-   1. [API](/fr/docs/Glossary/API)
-   2. [HTML](/fr/docs/Glossary/HTML)
-   3. [XML](/fr/docs/Glossary/XML)
-   4. [World Wide Web](/fr/docs/Glossary/World_Wide_Web)
+- [La documentation du DOM](/fr/docs/Web/API/Document_Object_Model) sur MDN
+- [La norme DOM <sup>(angl.)</sup>](https://dom.spec.whatwg.org/)
+- [Document Object Model](https://fr.wikipedia.org/wiki/Document_Object_Model) sur Wikipédia

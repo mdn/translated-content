@@ -30,7 +30,6 @@ getUserMedia(constraints, successCallback, errorCallback)
 - `constraints`
   - : 要求するメディアの種類と、それぞれの種類に対する要求事項を指定するオブジェクトです。詳細は、最新の {{domxref("MediaDevices.getUserMedia()")}} メソッドの[定数](/ja/docs/Web/API/MediaDevices/getUserMedia#引数)の節と、[能力と制約と設定](/ja/docs/Web/API/Media_Capture_and_Streams_API/Constraints)の記事を参照してください。
 - `successCallback`
-
   - : メディアアクセスの要求が承認されたときに呼び出される関数です。この関数は、メディアストリームを含む {{domxref("MediaStream")}} オブジェクトの単一の引数で呼び出されます。コールバックは、次の例のようにストリームを任意のオブジェクト ({{HTMLElement("audio")}} や {{HTMLElement("video")}} 要素など) に割り当てることができます。
 
     ```js

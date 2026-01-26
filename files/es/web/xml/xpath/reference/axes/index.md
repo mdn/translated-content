@@ -8,9 +8,9 @@ l10n:
 
 {{XsltSidebar}}
 
-Hay trece ejes diferentes en la especificación [XPath](/es/docs/Web/XPath). Un eje representa una relación con el nodo actual y se utiliza para ubicar nodos relativos a ese nodo en el árbol.
+Hay trece ejes diferentes en la especificación [XPath](/es/docs/Web/XML/XPath). Un eje representa una relación con el nodo actual y se utiliza para ubicar nodos relativos a ese nodo en el árbol.
 
-Para obtener más información sobre el uso de expresiones XPath, consulte la sección [Lecturas adicionales](/es/docs/Web/XSLT/Transforming_XML_with_XSLT#for_further_reading) al final de [Transformación de XML con XSLT](/es/docs/Web/XSLT/Transforming_XML_with_XSLT). Consulte también la sección ['ejes' (axes) en la especificación xpath] (https://www.w3.org/TR/xpath-30/#axes).
+Para obtener más información sobre el uso de expresiones XPath, consulte la sección [Lecturas adicionales](/es/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT#for_further_reading) al final de [Transformación de XML con XSLT](/es/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT). Consulte también la sección ['ejes' (axes) en la especificación xpath] (https://www.w3.org/TR/xpath-30/#axes).
 
 - `ancestor`
   - : Indica todos los ancestros del nodo actual comenzando con el nodo principal y viajando hasta el nodo raíz.

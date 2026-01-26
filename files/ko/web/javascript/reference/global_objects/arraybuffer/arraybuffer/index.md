@@ -26,7 +26,8 @@ new ArrayBuffer(length)
 new ArrayBuffer(length, options)
 ```
 
-> **참고:** `ArrayBuffer()`는 오직 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로만 생성할 수 있습니다. `new` 없이 호출을 시도하면 {{jsxref("TypeError")}} 예외가 발생합니다.
+> [!NOTE]
+> `ArrayBuffer()`는 오직 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로만 생성할 수 있습니다. `new` 없이 호출을 시도하면 {{jsxref("TypeError")}} 예외가 발생합니다.
 
 ### 매개변수
 
@@ -73,7 +74,8 @@ const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
 buffer.resize(12);
 ```
 
-> **참고:** `maxByteLength`는 사용 사례에 맞게 가능한 가장 작은 값으로 설정하는 것이 좋습니다. 메모리 부족 오류의 위험을 줄이려면 `1073741824`(1GB)를 초과하지 않아야 합니다.
+> [!NOTE]
+> `maxByteLength`는 사용 사례에 맞게 가능한 가장 작은 값으로 설정하는 것이 좋습니다. 메모리 부족 오류의 위험을 줄이려면 `1073741824`(1GB)를 초과하지 않아야 합니다.
 
 ## 명세서
 

@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Referrer-Policy
 original_slug: Web/HTTP/Headers/Referrer-Policy
 ---
 
-{{HTTPSidebar}}
-
 La cabecera **`Referrer-Policy`** de HTTP determina qué datos de referente, de entre los que se envían con la cabecera {{HTTPHeader("Referer")}}, deben incluirse con las solicitudes realizadas.
 
 <table class="properties">
@@ -53,7 +51,6 @@ Referrer-Policy: unsafe-url
 - strict-origin-when-cross-origin
   - : Se enviará un URL completo al realizarse una solicitud de origen equivalente, se enviará únicamente el origen del documento a destinos igual de seguros _a priori_ (HTTPS → HTTPS) y no se enviará ninguna cabecera a destinos menos seguros (HTTPS → HTTP).
 - unsafe-url
-
   - : Se enviará un URL completo al realizarse una solicitud de origen equivalente o de origen transversal.
 
     > [!NOTE]
@@ -93,10 +90,9 @@ Referrer-Policy: unsafe-url
 
 - [Referente HTTP en Wikipedia](https://es.wikipedia.org/wiki/HTTP_referer)
 - Otras maneras de definir una directiva de referentes:
-
-  - Un elemento {{HTMLElement("meta")}} con un [nombre de `referrer`](/es/docs/Web/HTML/Element/meta#attr-name).
+  - Un elemento {{HTMLElement("meta")}} con un [nombre de `referrer`](/es/docs/Web/HTML/Reference/Elements/meta#attr-name).
   - Un atributo `referrerpolicy` en un elemento {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}} o {{HTMLElement("link")}}.
-  - La [relación de enlace](/es/docs/Web/HTML/Attributes/rel) `noreferrer` en un elemento a, area o link (`rel="noreferrer"`).
+  - La [relación de enlace](/es/docs/Web/HTML/Reference/Attributes/rel) `noreferrer` en un elemento a, area o link (`rel="noreferrer"`).
   - Al utilizar [Fetch](/es/docs/Web/API/Fetch_API): {{domxref("Request.referrerPolicy")}}
 
 - [Directiva de origen equivalente](/es/docs/Web/Security/Same-origin_policy)

@@ -36,7 +36,6 @@ str.slice(startIndex[, endIndex])
 ### Paramêtros
 
 - `startIndex`
-
   - : É o índice, de base zero, onde se inicia a extração. Se for um número negativo, será o mesmo que executar _`str.length + startIndex`_ (por exemplo, se _`startIndex`_ for _`-3`_, será o mesmo que executar _`str.length - 3`_).
 
     ```js
@@ -52,7 +51,6 @@ str.slice(startIndex[, endIndex])
     ```
 
 - `endIndex`
-
   - : Opcional. É o índice, de base zero, onde termina a extração. O caractere que possuir este índice não será incluso.
 
     Se omitido ou possuir valor de _`undefined`_, ou for maior que `str.length`, _`slice()`_ extrairá até o fim da string.

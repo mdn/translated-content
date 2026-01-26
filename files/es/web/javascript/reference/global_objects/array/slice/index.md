@@ -7,8 +7,6 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/slice
 
 `El método slice()` devuelve una copia de una parte del array dentro de un nuevo array empezando por _inicio_ hasta _fin_ (_fin_ no incluido). El array original no se modificará.
 
-El código fuente de esta demostración interactiva está alojado en un repositorio Github. Si desea contribuir con ella, por favor clone <https://github.com/mdn/interactive-examples> y envíenos un _"pull request"_.
-
 ## Sintaxis
 
 ```
@@ -18,7 +16,6 @@ arr.slice([inicio [, fin]])
 ## Parámetros
 
 - `inicio`
-
   - : Índice donde empieza la extracción. El primer elemento corresponde con el índice 0.
 
     Si el índice especificado es negativo, indica un desplazamiento desde el final del array.`slice(-2)` extrae los dos últimos elementos del array
@@ -28,7 +25,6 @@ arr.slice([inicio [, fin]])
     Si `inicio` es mayor a la longitud del array, se devuelve un array vacío.
 
 - `fin`
-
   - : Índice que marca el final de la extracción. `slice` extrae hasta, pero sin incluir el final.
 
     `slice(1,4)` extrae desde el segundo elemento hasta el cuarto (los elementos con índices 1, 2, y 3).

@@ -3,8 +3,6 @@ title: Box alignment in CSS Grid Layout
 slug: Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
 ---
 
-{{CSSRef}}
-
 Si estás familiarizado con [flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout) Entonces ya habrás encontrado la forma en que los items flexibles pueden ser alineados correctamente dentro de un contendor flex. Estas propiedades de alineación que encontramos por primera vez en la especificación de flexbox se han trasladado a una nueva especificación llamada [Box Alignment Level 3](https://drafts.csswg.org/css-align/). Esta especificación tiene detalles de cómo debería funcionar la alineación en todos los diferentes métodos de diseño.
 
 Cada método de diseño que implemente Box Alignment tendrá algunas diferencias debido a que cada método tiene características y restricciones diferentes (y acciones heredadas), por lo que es imposible hacer la alineación exactamente de la misma forma en todos los ámbitos. La especificación Box Alignment tiene detalles para cada método, sin embargo, te decepcionaría si intentaras alinear en muchos métodos en este momento, pues el soporte aún no está disponible para todos los navegadores. Donde sí tenemos soporte de navegador para las propiedades de alineación y distribución de espacio de la especificación Box Alignment es en grid layout.
@@ -653,7 +651,6 @@ Setting auto margins, using `margin-right` or `margin-left` however, or absolute
 2. [**CSS Reference**](/es/docs/Web/CSS/Reference)
 3. [CSS Grid Layout](/es/docs/Web/CSS/CSS_grid_layout)
 4. **Guides**
-
    1. [Basics concepts of grid layout](/es/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
    2. [Relationship to other layout methods](/es/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
    3. [Line-based placement](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
@@ -667,7 +664,6 @@ Setting auto margins, using `margin-right` or `margin-left` however, or absolute
    11. [Realizing common layouts using grids](/es/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 5. **Properties**
-
    1. [grid](/es/docs/Web/CSS/grid)
    2. [grid-area](/es/docs/Web/CSS/grid-area)
    3. [grid-auto-columns](/es/docs/Web/CSS/grid-auto-columns)
@@ -688,7 +684,6 @@ Setting auto margins, using `margin-right` or `margin-left` however, or absolute
    18. [grid-template-rows](/es/docs/Web/CSS/grid-template-rows)
 
 6. **Glossary**
-
    1. [Grid](/es/docs/Glossary/Grid)
    2. [Grid lines](/es/docs/Glossary/Grid_Lines)
    3. [Grid tracks](/es/docs/Glossary/Grid_tracks)

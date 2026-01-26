@@ -15,7 +15,8 @@ var elements = document.getElementsByTagName(name);
 - _elements_ 는 트리에 나타난 순서대로 발견된 살아있는 {{domxref("HTMLCollection")}} 입니다(하지만 아래 노트를 보세요).
 - _name_ 은 엘리먼트의 이름을 나타내는 문자열입니다. 특수 문자 "\*" 은 모든 엘리먼트를 나타냅니다.
 
-> **참고:** [최신 W3C 명세](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html)에서는 _elements_ 가 `HTMLCollection` 라고 하지만, WebKit 브라우저에서는 {{domxref("NodeList")}} 를 반환합니다. 자세한 내용은 [Firefox bug 14869](https://bugzil.la/14869) 버그를 확인하시기 바랍니다.
+> [!NOTE]
+> [최신 W3C 명세](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html)에서는 _elements_ 가 `HTMLCollection` 라고 하지만, WebKit 브라우저에서는 {{domxref("NodeList")}} 를 반환합니다. 자세한 내용은 [Firefox bug 14869](https://bugzil.la/14869) 버그를 확인하시기 바랍니다.
 
 ## 예시
 

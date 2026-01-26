@@ -10,7 +10,7 @@ Nós vimos muito sobre texto até aqui nesse curso, mas a internet seria muito c
 
 ## Pré-requisitos
 
-Antes de iniciar esse módulo, você deve ter um conhecimento razoável de HTML, como previamente abrangido em [introdução a HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML). Se você não estudou esse módulo (ou algo similar), estude-o primeiro e depois retorne!
+Antes de iniciar esse módulo, você deve ter um conhecimento razoável de HTML, como previamente abrangido em [introdução a HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content). Se você não estudou esse módulo (ou algo similar), estude-o primeiro e depois retorne!
 
 > [!NOTE]
 > Se você está trabalhando em um computador/tablet/outro dispositivo onde você não tem a habilidade de criar seus próprios arquivos, você pode testar (maior parte) dos exemplos de códigos em um programa online para codar tais como [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
@@ -19,15 +19,15 @@ Antes de iniciar esse módulo, você deve ter um conhecimento razoável de HTML,
 
 Esse módulo contém os seguintes artigos, que vão passar por todos os fundamentos para inserir multimídia em páginas da web.
 
-- [Imagens em HTML](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [Imagens em HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content/HTML_images)
   - : Existem outros tipos de multimídia para considerar, porém é lógico começar com o modesto elemento {{htmlelement("img")}} , usado para inserir uma simples imagem em uma página da web. Nesse artigo vamos aprender a usar esse elemento com mais profundidade, incluindo os básicos, anotando com legendas usando {{htmlelement("figure")}} e como se relaciona com imagens de fundo em CSS.
-- [Conteúdo em áudio e video](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [Conteúdo em áudio e video](/pt-BR/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
   - : Agora nós iremos aprender como usar os elementos HTML5 {{htmlelement("video")}} e {{htmlelement("audio")}} , para inserir video e audio em nossa página; incluindo o basico, fornecendo acesso a diferentes tipos de arquivo para navegadores diferentes, adicionando legenda , e como adicionar alternativas para navegadores mais antigos.
-- [De \<object> para \<iframe> — outras tecnologias incorporadas](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
+- [De \<object> para \<iframe> — outras tecnologias incorporadas](/pt-BR/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies)
   - : A essa altura, nós gostariamos de avançar alguns passos sobre um conjunto de elementos que permitem você incorporar uma ampla variedade de tipos de conteúdo na suas páginas web: os elementos {{htmlelement("iframe")}}, {{htmlelement("embed")}} e {{htmlelement("object")}}. `<iframe>`s servem para incorporar outras páginas web, enquanto as outras duas permitem você incorporar PDFs, SVG, e até mesmo Flash — uma tecnologia cada vez menos presente, mas que ainda é possível você encontrar de forma quase regular.
-- [Adicionando gráficos vetoriais à Web](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
+- [Adicionando gráficos vetoriais à Web](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)
   - : Gráficos vetoriais podem ser muito úteis em determinadas situações. Diferente dos formatos comuns, como PNG/JPG, eles não sofrem distorção/pixelização quando o zoom é ampliado — podendo continuar com a mesma qualidade quando alterado em escala. Esse artigo irá introduzir a você o que são os gráficos vetoriais e como incluir o formato {{glossary("SVG")}} nas páginas web.
-- [Imagens responsivas](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [Imagens responsivas](/pt-BR/docs/Web/HTML/Responsive_images)
   - : Com a atual variedade de tipos de dispositivos capazes de navegar na web - de celulares móveis à computadores pessoais - um conceito essencial para dominar o mundo web moderno é o design responsivo. Este se refere à criação de páginas web que podem automaticamente mudar seus atributos para se adaptar a diferentes resoluções e tamanhos de tela. Isso será explorado em mais detalhes em um módulo CSS posterior, mas, por enquanto, iremos verificar as ferramentas HTML disponíveis para criar imagens responsivas, incluindo o elemento {{htmlelement("picture")}}.
 
 ## Testes de Conhecimentos

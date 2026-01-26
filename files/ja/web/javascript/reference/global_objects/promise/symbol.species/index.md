@@ -1,15 +1,15 @@
 ---
 title: Promise[Symbol.species]
+short-title: "[Symbol.species]"
 slug: Web/JavaScript/Reference/Global_Objects/Promise/Symbol.species
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Promise[Symbol.species]`** アクセサープロパティは、プロミスのメソッドからの返値を構築するのに使用されるコンストラクターを返します。
 
-> **警告:** `Symbol.species` が存在すると、任意のコードの実行が可能になり、セキュリティ上の脆弱性を生み出す可能性があります。また、特定の最適化も非常に難しくなります。エンジンの実装者は[この機能を削除するかどうか調査](https://github.com/tc39/proposal-rm-builtin-subclassing)しています。可能であれば、この機能に頼ることは避けてください。
+> [!WARNING]
+> `Symbol.species` が存在すると、任意のコードの実行が可能になり、セキュリティ上の脆弱性を生み出す可能性があります。また、特定の最適化も非常に難しくなります。エンジンの実装者は[この機能を削除するかどうか調査](https://github.com/tc39/proposal-rm-builtin-subclassing)しています。可能であれば、この機能に頼ることは避けてください。
 
 ## 構文
 

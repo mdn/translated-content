@@ -18,9 +18,7 @@ new CompressionStream(format)
 ### 引数
 
 - `format`
-
   - : 以下の使用可能な圧縮形式のうちのいずれかです。
-
     - `"gzip"`
     - `"deflate"`
     - `"deflate-raw"`

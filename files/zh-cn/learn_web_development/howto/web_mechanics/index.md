@@ -3,8 +3,6 @@ title: Web 机制
 slug: Learn_web_development/Howto/Web_mechanics
 ---
 
-{{LearnSidebar}}
-
 本部分涵盖与 Web 生态系统的一般知识及其工作原理相关的问题。
 
 - [互联网是怎么工作的？](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work)

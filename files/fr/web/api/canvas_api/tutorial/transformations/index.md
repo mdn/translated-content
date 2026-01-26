@@ -3,7 +3,7 @@ title: Transformations
 slug: Web/API/Canvas_API/Tutorial/Transformations
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Utilisation_d'images", " Web/API/Canvas_API/Tutorial/Compositing ")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", " Web/API/Canvas_API/Tutorial/Compositing ")}}
 
 Précédemment dans ce tutoriel, nous avons étudié la [grille du canevas](/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) et le **système de coordonnées**. Jusqu'à maintenant, nous avons uniquement utilisé la grille par défaut et modifié la taille de la globalité du canevas afin de répondre à nos besoins. Les transformations que nous allons aborder dans la suite vont nous permettre, de manière plus puissante, d'effectuer des déplacements et des rotations sur la grille et même d'effectuer des mises à l'échelle.
 
@@ -218,7 +218,6 @@ draw();
 Enfin, les méthodes de transformation suivantes appliquent des modifications directement à la matrice de transformation.
 
 - {{domxref("CanvasRenderingContext2D.transform", "transform(a, b, c, d, e, f)")}}
-
   - : Multiplie la matrice de transformation actuelle avec la matrice décrite par ses arguments. La matrice de transformation est décrite par :
 
     <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{array} \right]</annotation></semantics></math>
@@ -277,4 +276,4 @@ draw();
 
 {{EmbedLiveSample("Exemple_pour_transform_et_setTransform", "230", "280", "canvas_transform.png")}}
 
-{{PreviousNext("Tutoriel_canvas/Utilisation_d'images", "Tutoriel_canvas/Composition")}}
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}

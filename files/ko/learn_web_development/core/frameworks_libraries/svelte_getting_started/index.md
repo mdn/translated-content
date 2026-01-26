@@ -6,7 +6,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started","Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 
 이 문서에는 [Svelte 프레임워크](https://svelte.dev/)에 대한 빠른 소개를 제공합니다.
 Svelte가 어떻게 작동하는지, 지금까지 본 나머지 프레임워크 및 도구와 Svelte가 어떻게 다른지 살펴보겠습니다. 그런 다음 개발 환경을 설정하고, 샘플 앱을 만들고, 프로젝트 구조를 이해하고, 로컬에서 실행하고 프로덕션용으로 빌드하는 방법을 배웁니다.
@@ -276,7 +276,7 @@ CSS 작업 경험이 있는 경우 다음 스니펫을 쉽게 이해할 수 있�
 </style>
 ```
 
-[`<h1>`](/ko/docs/Web/HTML/Element/Heading_Elements) 요소에 스타일을 적용하고 있습니다. `<h1>` 요소가 포함된 다른 컴포넌트는 어떻게 될까요?
+[`<h1>`](/ko/docs/Web/HTML/Reference/Elements/Heading_Elements) 요소에 스타일을 적용하고 있습니다. `<h1>` 요소가 포함된 다른 컴포넌트는 어떻게 될까요?
 
 Svelte에서 컴포넌트의 `<style>` 블록 내부 CSS는 해당 컴포넌트로만 범위가 지정됩니다. 이는 컴포넌트 스타일의 해시를 기반으로 하는 선택한 요소에 클래스를 추가하여 작동합니다.
 
@@ -444,7 +444,6 @@ REPL을 시작하려면 브라우저를 열고 <https://svelte.dev/repl>로 이�
 - 코드 위의 막대를 사용하면 `.svelte` 및 `.js` 파일을 만들고 재배열할 수 있습니다. 폴더 안에 파일을 만들려면 `components/MyComponent.svelte`와 같이 전체 경로 이름을 지정하기만 하면 됩니다. 폴더가 자동으로 생성됩니다.
 - 해당 막대 위에는 REPL의 제목이 있습니다. 그것을 클릭하여 편집하세요.
 - 오른쪽에는 3개의 탭이 있습니다.
-
   - _Result_ 탭에는 앱 출력이 표시되며 하단에 콘솔이 제공됩니다.
   - _JS output_ 탭에서는 Svelte에서 생성된 JavaScript 코드를 검사하고 컴파일러 옵션을 설정할 수 있습니다.
   - _CSS output_ 탭에는 Svelte에서 생성한 CSS가 표시됩니다.

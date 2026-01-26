@@ -3,8 +3,6 @@ title: 按位或（|）
 slug: Web/JavaScript/Reference/Operators/Bitwise_OR
 ---
 
-{{jsSidebar("Operators")}}
-
 **按位或**（**`|`**）运算符在其中一个或两个操作数对应的二进制位为 `1` 时，该位的结果值为 `1`。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Bitwise OR", "shorter")}}

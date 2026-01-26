@@ -8,7 +8,8 @@ original_slug: Web/API/GlobalEventHandlers
 
 La combinación («_mixin_» en inglés) **`GlobalEventHandlers`** describe los controladores de eventos comunes a varias interfaces como {{DOMxRef("HTMLElement")}}, {{DOMxRef("Document")}} o {{DOMxRef("Window")}}. Cada una de estas interfaces puede, por supuesto, agregar más controladores de eventos además de los que se enumeran a continuación.
 
-> **Nota:** `GlobalEventHandlers` es una combinación («_mixin_») y no una interfaz; en realidad, no puedes crear un objeto de tipo `GlobalEventHandlers`.
+> [!NOTE]
+> `GlobalEventHandlers` es una combinación («_mixin_») y no una interfaz; en realidad, no puedes crear un objeto de tipo `GlobalEventHandlers`.
 
 ## Propiedades
 
@@ -97,7 +98,7 @@ Estos controladores de eventos se definen en el mixin {{DOMxRef("GlobalEventHand
 - {{DOMxRef("GlobalEventHandlers.onloadedmetadata")}}
   - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`loadedmetadata`](/es/docs/Web/API/HTMLMediaElement/loadedmetadata_event).
 - {{DOMxRef("GlobalEventHandlers.onloadend")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`loadend`](/es/docs/Web/API/XMLHttpRequest/loadend_event) (cuando el progreso se haya detenido en la carga de un recurso).
+  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`loadend`](/es/docs/Web/API/XMLHttpRequestEventTarget/loadend_event) (cuando el progreso se haya detenido en la carga de un recurso).
 - {{DOMxRef("GlobalEventHandlers.onloadstart")}}
   - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`loadstart`](/es/docs/Web/API/XMLHttpRequest/loadstart_event) (cuando el progreso ha comenzado a cargar un recurso).
 - {{DOMxRef("GlobalEventHandlers.onlostpointercapture")}}

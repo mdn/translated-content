@@ -2,10 +2,8 @@
 title: ドメイン名とは
 slug: Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name
 l10n:
-  sourceCommit: 6b01400b286e8bdfa7060d56af84757dd4b8de48
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
-
-{{QuicklinksWithSubPages("/ja/Learn/Common_questions")}}
 
 <table>
   <tbody>
@@ -17,7 +15,9 @@ l10n:
     </tr>
     <tr>
       <th scope="row">目標:</th>
-      <td>ドメイン名とはどのようなもので、どのように働くのか、なぜ重要なのかを学びます。</td>
+      <td>
+        ドメイン名とはどのようなもので、どのように働くのか、なぜ重要なのかを学びます。
+      </td>
     </tr>
   </tbody>
 </table>
@@ -43,19 +43,16 @@ l10n:
 これらのそれぞれの部分は、ドメイン名全体に関する特定の情報を提供します。
 
 - {{Glossary("TLD")}} （トップレベルドメイン）
-
   - : TLD は最も一般的な情報を提供します。 TLD は、ドメイン名の背後にあるサービスの全般的な目的をユーザーに伝えます。多くの一般的な TLD (`.com`, `.org`, `.net`) はウェブサービスが特定の基準を満たしていることを要求しませんが、 TLD によってはより厳密な基準を適用するため、目的がより明確になります。例えば、
-
     - `.jp`, `.us`, `.fr`, `.se` などのローカル TLD では、サービスを特定の言語で提供しているか、特定の国でホスティングされていることを要求します。これらは、特定の言語や国のリソースであることを示しているとみなされます。
     - `.gov` や `.go.jp` を含む TLD は、政府機関のみが使用できます。
     - `.edu` や `.ac.jp` のような TLD は教育・学術機関のみで使用されていると見なされます。
 
     TLD にはラテン文字だけでなく特殊文字も含めることができ、長さは最大 63 文字ですが、ほとんどは 2 〜 3 文字です。
 
-    TLD の完全なリストは [ICANN が管理しています](https://www.icann.org/resources/pages/tlds-2012-02-25-en)。
+    TLD の完全なリストは [ICANN が管理しています](https://www.icann.org/en/contracted-parties/registry-operators/resources/list-of-top-level-domains)。
 
 - ラベル（またはコンポーネント）
-
   - : ラベルは、TLD に続くものです。ラベルは大文字と小文字を区別しない文字の並びで、 1 ～ 63 文字の長さです。 `A` から `Z` の文字、 `0` から `9` の数字、および `-` 文字（ラベルの最初または最後の文字であってはならない）のみで構成されます。 `a`, `97`, `hello-strange-person-16-how-are-you` はすべて有効なラベルの例です。
 
     TLD の直前にあるラベルは、**二次レベルドメイン** (SLD) とも呼ばれます。
@@ -164,4 +161,4 @@ DNS データベースは世界中のすべての DNS サーバーに格納さ�
 - 実際にやってみたいのであれば、そろそろ[ウェブページの構造](/ja/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts)の設計と構造を探求するのがよいでしょう。
 - また、ウェブサイトを構築するためのいくつかの面で費用がかかることも注目に値します。[ウェブサイトを構築するのにかかる費用](/ja/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)を参照してください。
 - あるいはウィキペディアで[ドメイン名](https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E5%90%8D)についてもっと読んでください。
-- DNS がどのように機能するかについての楽しくカラフルな説明も[ここ](https://howdns.works/)にあります。
+- [DNS がどのように機能するか](https://howdns.works/)（英語）のチュートリアルには、楽しくカラフルな説明があります。

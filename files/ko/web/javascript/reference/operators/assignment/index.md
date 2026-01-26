@@ -54,4 +54,4 @@ x = y = z; // x, y, z 는 모두 25입니다.
 ## 같이 보기
 
 - [JavaScript 가이드에서 할당 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
-- [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring)

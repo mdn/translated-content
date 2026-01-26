@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8cb0caef8175e1772f13ef7bc761f9616e2c5a4b
 ---
 
-{{jsSidebar("Operators")}}
-
 **可选链运算符（`?.`）** 用于访问对象的属性或调用函数。如果使用此运算符访问的对象或调用的函数是 {{jsxref("undefined")}} 或 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)，则表达式会短路并计算为 {{jsxref("undefined")}}，而不是抛出错误。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Optional chaining operator", "taller")}}

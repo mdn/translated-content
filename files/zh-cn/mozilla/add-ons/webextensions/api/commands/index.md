@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b4fd56711aebae6dcd86ad6c5bf1ce25f52347d4
 ---
 
-{{AddonSidebar}}
-
 监听用户执行你已使用 [`commands` manifest.json 键](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)注册的命令。
 
 ## 类型

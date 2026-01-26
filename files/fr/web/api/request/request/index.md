@@ -16,19 +16,14 @@ var maRequete = new Request(entree[, init]);
 ### Paramètres
 
 - _entree_
-
   - : Définit la ressource que vous souhaitez récupérer. Cela peut être soit :
-
     - Une {{domxref("USVString")}} contenant l'URL directe de la ressource que vous voulez récupérer.
     - Un objet {{domxref("Request")}}, ce qui crée en fait une copie. Notez les mises à jour de comportement suivantes pour conserver la sécurité, tout en rendant le constructeur moins susceptible de déclencher des exceptions :
-
       - Si cet objet existe depuis une autre origine lors de l'appel du constructeur, le {{domxref("Request.referrer")}} est enlevé.
       - Si cet objet a un {{domxref("Request.mode")}} à `navigate`, la valeur de `mode` est convertie en `same-origin`.
 
 - _init_ {{optional_inline}}
-
   - : Un objet d'options contenant tous les paramètres personnalisés que vous voulez appliquer à la requête. Les options possibles sont :
-
     - `method`: La méthode de la requête, par ex., `GET`, `POST`.
     - `headers`: Tous les entêtes que vous voulez ajouter à votre requête, contenus dans un objet {{domxref("Headers")}} ou un littéral d'objet avec des valeurs {{domxref("ByteString")}}.
     - `body`: Tout corps que vous voulez ajouter à votre requête : cela peut être un objet {{domxref ("Blob")}}, {{domxref ("BufferSource")}}, {{domxref ("FormData")}}, {{domxref ("URLSearchParams")}}, {{domxref ("USVString")}} ou {{domxref ("ReadableStream")}}. Notez qu'une requête utilisant la méthode GET ou HEAD ne peut pas avoir de corps .
@@ -37,7 +32,7 @@ var maRequete = new Request(entree[, init]);
     - `cache`: Le [mode de cache](/fr/docs/Web/API/Request/cache) que vous voulez utiliser pour la requête.
     - `redirect`: Le mode de redirection à utiliser : `follow`, `error`, ou `manual`. Dans Chrome, le défaut est `manual` avant Chrome 47 et `follow` à partir de Chrome 47.
     - `referrer`: Une {{domxref("USVString")}} indiquant `no-referrer`, `client`, ou une URL. La valeur par défaut est `client`.
-    - `integrity`: Contient la valeur d'[intégrité de la sous ressource](/fr/docs/Web/Security/Subresource_Integrity) de la requête (par ex.., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
+    - `integrity`: Contient la valeur d'[intégrité de la sous ressource](/fr/docs/Web/Security/Defenses/Subresource_Integrity) de la requête (par ex.., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
 
 ## Erreurs
 
@@ -129,5 +124,5 @@ var copie = new Request(maRequete);
 ## Voir aussi
 
 - [L'API ServiceWorker](/fr/docs/Web/API/Service_Worker_API)
-- [Le contrôle d'accès HTTP (CORS)](/fr/docs/Web/HTTP/CORS)
+- [Le contrôle d'accès HTTP (CORS)](/fr/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/fr/docs/Web/HTTP)

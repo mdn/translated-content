@@ -3,8 +3,6 @@ title: HTTP 响应状态码
 slug: Web/HTTP/Reference/Status
 ---
 
-{{HTTPSidebar}}
-
 HTTP 响应状态码用来表明特定 [HTTP](/zh-CN/docs/Web/HTTP) 请求是否成功完成。
 响应被归为以下五大类：
 
@@ -28,14 +26,12 @@ HTTP 响应状态码用来表明特定 [HTTP](/zh-CN/docs/Web/HTTP) 请求是否
 - {{HTTPStatus(102, "102 Processing")}} ({{Glossary("WebDAV")}})
   - : 此代码表示服务器已收到并正在处理该请求，但当前没有响应可用。
 - {{HTTPStatus(103, "103 Early Hints")}}
-  - : 此状态代码主要用于与 {{HTTPHeader("Link")}} 链接头一起使用，以允许用户代理在服务器准备响应阶段时开始预加载 [preloading](/zh-CN/docs/Web/HTML/Attributes/rel/preload) 资源。
+  - : 此状态代码主要用于与 {{HTTPHeader("Link")}} 链接头一起使用，以允许用户代理在服务器准备响应阶段时开始预加载 [preloading](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preload) 资源。
 
 ## 成功响应
 
 - {{HTTPStatus(200, "200 OK")}}
-
   - : 请求成功。成功的含义取决于 HTTP 方法：
-
     - `GET`: 资源已被提取并在消息正文中传输。
     - `HEAD`: 实体标头位于消息正文中。
     - `PUT` or `POST`: 描述动作结果的资源在消息体中传输。

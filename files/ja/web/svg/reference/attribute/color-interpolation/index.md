@@ -1,12 +1,9 @@
 ---
 title: color-interpolation
 slug: Web/SVG/Reference/Attribute/color-interpolation
-original_slug: Web/SVG/Attribute/color-interpolation
 l10n:
-  sourceCommit: 8a818c64bd0bcca2dda90a1b89d2a1c966a33c55
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{SVGRef}}
 
 **`color-interpolation`** 属性は、グラデーションの補間、色のアニメーション、アルファ合成に用いる色空間を指定します。
 
@@ -15,10 +12,10 @@ l10n:
 
 color-interpolation プロパティは、色の操作を sRGB 色空間で行うか (光のエネルギーがリニアな) linearized RGB 色空間で行うかを選択します。適切な色空間を選択したら、コンポーネント単位での補間を行います。
 
-子要素が背景とブレンドされるときは、ブレンドの種類は親要素の `color-interpolation` の値ではなく、子要素の `color-interpolation` プロパティの値によって決まります。{{SVGAttr("href")}} または廃止された {{SVGAttr("xlink:href")}} 属性で他のグラデーションを参照しているグラデーションでは、{{SVGAttr("fill")}} または {{SVGAttr("stroke")}} プロパティで直接参照されているグラデーション要素のプロパティの値を用います。色をアニメーションするときは、アニメーションが行われる要素の `color-interpolation` プロパティの値に従って色の補間を行います。
+子要素が背景と混合されるときは、混合の種類は親要素の `color-interpolation` の値ではなく、子要素の `color-interpolation` プロパティの値によって決まります。{{SVGAttr("href")}} または廃止された {{SVGAttr("xlink:href")}} 属性で他のグラデーションを参照しているグラデーションでは、{{SVGAttr("fill")}} または {{SVGAttr("stroke")}} プロパティで直接参照されているグラデーション要素のプロパティの値を用います。色をアニメーションするときは、アニメーションが行われる要素の `color-interpolation` プロパティの値に従って色の補間を行います。
 
 > [!NOTE]
-> プレゼンテーション属性なので、{{CSSXref("color-interpolation")}} は CSS のプロパティとして使用できます。
+> プレゼンテーション属性であるため、 `color-interpolation` には対応する CSS プロパティ {{cssxref("color-interpolation")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
 
 この属性は、以下の SVG 要素で使用できます。
 
@@ -75,7 +72,7 @@ color-interpolation プロパティは、色の操作を sRGB 色空間で行う
 - `sRGB`
   - : 色の補間を sRGB 色空間で行うべきであることを表します。
 - `linearRGB`
-  - : 色の補間を [sRGB の仕様書](https://webstore.iec.ch/publication/6169)に記述されている通りの linearized RGB 色空間で行うべきであることを表します。
+  - : 色の補間を [sRGB の仕様書](https://webstore.iec.ch/en/publication/6169)に記述されている通りのリニア RGB 色空間で行うべきであることを表します。
 
 ## 例
 
@@ -89,9 +86,11 @@ svg {
 }
 ```
 
-```html
+```html-nolint
 <svg width="450" height="70">
-  <title>color-interpolation 属性の無い linearGradient の例</title>
+  <title>
+    color-interpolation 属性の無い linearGradient の例
+  </title>
   <defs>
     <linearGradient id="gradientDefault">
       <stop offset="0%" stop-color="white" />
@@ -116,9 +115,11 @@ svg {
 
 この 2 番目の SVG では、`<linearGradient>` 要素に `color-interpolation` 属性が設定され、値は `linearRGB` になっています。
 
-```html
+```html-nolint
 <svg width="450" height="70">
-  <title>color-interpolation 属性を用いた linearGradient の例</title>
+  <title>
+    color-interpolation 属性を用いた linearGradient の例
+  </title>
   <defs>
     <linearGradient id="gradientLinearRGB" color-interpolation="linearRGB">
       <stop offset="0%" stop-color="white" />
@@ -143,9 +144,11 @@ svg {
 
 この 3 番目の SVG では、`<radialGradient>` 要素に `color-interpolation` 属性は設定されておらず、デフォルト値の `sRGB` が用いられます。
 
-```html
+```html-nolint
 <svg width="450" height="70">
-  <title>color-interpolation 属性なしの radialGradient の例</title>
+  <title>
+    color-interpolation 属性なしの radialGradient の例
+  </title>
   <defs>
     <radialGradient id="none">
       <stop offset="0%" stop-color="red" />
@@ -161,9 +164,11 @@ svg {
 
 この 4 番目の SVG では、`<radialGradient>` 要素に `color-interpolation` 属性が設定され、値は `linearRGB` になっています。
 
-```html
+```html-nolint
 <svg width="450" height="70">
-  <title>color-interpolation 属性を用いた radialGradient の例</title>
+  <title>
+    color-interpolation 属性を用いた radialGradient の例
+  </title>
   <defs>
     <radialGradient id="radLinearRGB" color-interpolation="linearRGB">
       <stop offset="0%" stop-color="red" />
@@ -197,7 +202,7 @@ svg {
 
 - {{SVGElement("linearGradient")}}
 - {{SVGElement("radialGradient")}}
-- {{CSSXref("color-interpolation")}}
+- CSS の {{cssxref("color-interpolation")}} プロパティ
 - [sRGB の仕様書](https://webstore.iec.ch/publication/6169)
 - {{SVGAttr("color-interpolation-filters")}}
 - [Computer color is broken](https://www.youtube.com/watch?v=LKnqECcg6Gw) — linearRGB の人気のデモ

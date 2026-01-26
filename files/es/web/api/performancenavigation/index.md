@@ -17,9 +17,7 @@ Un objeto de este tipo puede ser optenido con el llamado del atributo de solo le
 _La interfaz `PerformanceNavigation` no hereda ninguna propiedad._
 
 - {{deprecated_inline}} {{domxref("PerformanceNavigation.type")}} {{readonlyInline}}
-
   - : Un `unsigned short` el cual indica cómo la navegación en esta página fue hecha. Los valores posibles son:u
-
     - `TYPE_NAVIGATE` (0)
       - : La página fue accesada por un link, un marcador, un formulario enviado, o un script, o escribiendo la URL en la barra de direcciones.
     - `TYPE_RELOAD` (1)

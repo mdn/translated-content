@@ -17,5 +17,4 @@ l10n:
 
 - [Input 메서드](https://en.wikipedia.org/wiki/Input_method)
 - [용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("I18N")}}

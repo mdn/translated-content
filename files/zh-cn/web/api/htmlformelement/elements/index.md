@@ -28,7 +28,7 @@ l10n:
 
 - {{HTMLElement("button")}}
 - {{HTMLElement("fieldset")}}
-- {{HTMLElement("input")}}（由于历史原因，[`type`](/zh-CN/docs/Web/HTML/Element/input#type) 类型为 `"image"` 的元素都将被省略）。
+- {{HTMLElement("input")}}（由于历史原因，[`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 类型为 `"image"` 的元素都将被省略）。
 - {{HTMLElement("object")}}
 - {{HTMLElement("output")}}
 - {{HTMLElement("select")}}
@@ -57,7 +57,7 @@ const inputByName = inputs["username"];
 
 ### 访问表单控件
 
-此示例获取表单的元素列表，然后遍历该列表，查找类型为 [`"text"`](/zh-CN/docs/Web/HTML/Element/input/text) 的 {{HTMLElement("input")}} 元素，以便对它们执行某种形式的处理。
+此示例获取表单的元素列表，然后遍历该列表，查找类型为 [`"text"`](/zh-CN/docs/Web/HTML/Reference/Elements/input/text) 的 {{HTMLElement("input")}} 元素，以便对它们执行某种形式的处理。
 
 ```js
 const inputs = document.getElementById("my-form").elements;

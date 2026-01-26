@@ -7,11 +7,11 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLTimeElement.dateTime`** 属性是一个反映 [`datetime`](/zh-CN/docs/Web/HTML/Element/time#datetime) HTML 属性的字符串，包含元素日期和时间值的机器可读形式。
+**`HTMLTimeElement.dateTime`** 属性是一个反映 [`datetime`](/zh-CN/docs/Web/HTML/Reference/Elements/time#datetime) HTML 属性的字符串，包含元素日期和时间值的机器可读形式。
 
 ## 值
 
-一个字符串。对于有效的字符串格式，请参见 [`datetime` 有效值](/zh-CN/docs/Web/HTML/Element/time#有效的日期时间值)。
+一个字符串。对于有效的字符串格式，请参见 [`datetime` 有效值](/zh-CN/docs/Web/HTML/Reference/Elements/time#有效的日期时间值)。
 
 ## 示例
 

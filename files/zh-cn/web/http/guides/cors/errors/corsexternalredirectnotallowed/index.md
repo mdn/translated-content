@@ -3,8 +3,6 @@ title: 原因：CORS request external redirect not allowed
 slug: Web/HTTP/Guides/CORS/Errors/CORSExternalRedirectNotAllowed
 ---
 
-{{HTTPSidebar}}
-
 ## 原因
 
 ```plain

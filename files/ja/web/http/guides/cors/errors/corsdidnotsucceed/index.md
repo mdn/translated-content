@@ -1,12 +1,9 @@
 ---
 title: "Reason: CORS request did not succeed"
 slug: Web/HTTP/Guides/CORS/Errors/CORSDidNotSucceed
-original_slug: Web/HTTP/Guides/CORS/Errors/CORSDidNotSucceed
 l10n:
-  sourceCommit: 7c7c127e8486f6b0467cfaaeb8c86ac874bea4b2
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
-
-{{HTTPSidebar}}
 
 ## 理由
 

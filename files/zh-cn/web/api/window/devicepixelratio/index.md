@@ -165,6 +165,6 @@ body {
 
 ## 参见
 
-- [Media queries](/zh-CN/docs/Web/CSS/CSS_media_queries)
-- [Using media queries](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [CSS `resolution` media query](/zh-CN/docs/Web/CSS/@media/resolution)
+- [Media queries](/zh-CN/docs/Web/CSS/Guides/Media_queries)
+- [Using media queries](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using)
+- [CSS `resolution` media query](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/resolution)

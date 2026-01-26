@@ -4,15 +4,14 @@ slug: Web/HTTP/Reference/Headers/X-Content-Type-Options
 original_slug: Web/HTTP/Headers/X-Content-Type-Options
 ---
 
-{{HTTPSidebar}}
-
 El encabezado HTTP de respuesta **`X-Content-Type-Options`** es un marcador utilizado por el servidor para indicar que los [tipos MIME](/es/docs/Web/HTTP/Guides/MIME_types) anunciados en los encabezados {{HTTPHeader("Content-Type")}} no se deben cambiar ni seguir. Esto permite desactivar el [MIME type sniffing](/es/docs/Web/HTTP/Guides/MIME_types#mime_sniffing), o, en otras palabras, es una manera de decir que los webmasters sabían lo que estaban haciendo.
 
 Este encabezado fue introducido por Microsoft en IE 8 para que los webmasters bloquearan el rastreo de contenido, pudiendo transformar tipos MIME no ejecutables en tipos MIME ejecutables. Desde entonces, otros navegadores lo han introducido, incluso con algoritmos de detección MIME menos agresivos.
 
 Los evaluadores de seguridad del sitio suelen esperar que este encabezado aparezca.
 
-> **Nota:** `nosniff` solo se aplican a los tipos "`script`" y "`style`". Además la aplicación de `nosniff` a las imágenes resulto ser [incompatible con los sitios web existentes](https://github.com/whatwg/fetch/issues/395).
+> [!NOTE]
+> `nosniff` solo se aplican a los tipos "`script`" y "`style`". Además la aplicación de `nosniff` a las imágenes resulto ser [incompatible con los sitios web existentes](https://github.com/whatwg/fetch/issues/395).
 
 | Header type                           | {{Glossary("Response header")}} |
 | ------------------------------------- | ------------------------------- |

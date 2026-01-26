@@ -10,7 +10,7 @@ l10n:
 
 **`CanvasRenderingContext2D.wordSpacing`** は[キャンバス API](/ja/docs/Web/API/Canvas_API) のプロパティで、テキストを描画する際の単語間の空間を指定します。
 
-これは CSS の [`word-spacing`](/ja/docs/Web/CSS/word-spacing) プロパティに相当します。
+これは CSS の [`word-spacing`](/ja/docs/Web/CSS/Reference/Properties/word-spacing) プロパティに相当します。
 
 ## 値
 

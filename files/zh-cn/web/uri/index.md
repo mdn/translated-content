@@ -7,7 +7,7 @@ l10n:
 
 **统一资源标识符**（URI）用于标识 Web 上的“资源”。URI 通常用作 [HTTP](/zh-CN/docs/Web/HTTP) 请求的目标，在这种情况下，URI 代表物理资源的位置，如文档、照片、二进制数据。最常见的 URI 类型是统一资源定位符（{{glossary("URL")}}），它被称为 _Web 地址_。
 
-URI 在其他地方使用时，如 HTML `<a>` 链接的 [`href`](/zh-CN/docs/Web/HTML/Element/a#href)，可用于触发获取资源以外的行为，包括打开电子邮件客户端、发送文本信息或执行 JavaScript。
+URI 在其他地方使用时，如 HTML `<a>` 链接的 [`href`](/zh-CN/docs/Web/HTML/Reference/Elements/a#href)，可用于触发获取资源以外的行为，包括打开电子邮件客户端、发送文本信息或执行 JavaScript。
 
 ## URL 和 URN
 

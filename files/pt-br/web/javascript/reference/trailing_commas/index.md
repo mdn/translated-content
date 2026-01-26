@@ -115,7 +115,7 @@ function f(...p,) {} // SyntaxError: parâmetro após parâmetro de repouso
 ### Trailing commas em desestruturação
 
 Também é permitida uma vírgula no lado esquerdo quando se usa
-[atribuição de desestruturação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
+[atribuição de desestruturação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring):
 
 ```js
 // desestruturação de array com trailing comma

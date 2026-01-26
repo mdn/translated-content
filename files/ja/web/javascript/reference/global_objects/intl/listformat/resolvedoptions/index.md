@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/resolvedOptions
 
 **`Intl.ListFormat.prototype.resolvedOptions()`** メソッドは、現在の {{jsxref("Intl.ListFormat")}} オブジェクトの構築時に計算されたロケールとスタイル整形オプションを反映したプロパティを持つ新しいオブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Intl.ListFormat.prototype.resolvedOptions()")}}
+{{InteractiveExample("JavaScript デモ: Intl.ListFormat.prototype.resolvedOptions()")}}
 
 ```js interactive-example
 const deListFormatter1 = new Intl.ListFormat("de-DE", { type: "disjunction" });

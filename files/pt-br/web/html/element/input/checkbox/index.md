@@ -7,7 +7,36 @@ slug: Web/HTML/Element/input/checkbox
 
 {{htmlelement ("input")}} elementos do tipo **`checkbox`** são renderizados por padrão como caixas quadradas que são marcadas (com uma marca de verificação) quando ativadas, como as que você veria em um formulário do governo. A aparência exata depende de da configuração de sistema operacional sobre o qual o navegador está sendo executado. Caixas de seleção permitem que você selecione valores únicos para envio em um formulário (ou não).
 
-{{EmbedInteractiveExample ("pages/tabbed/input-checkbox.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;checkbox&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<fieldset>
+  <legend>Choose your monster's features:</legend>
+
+  <div>
+    <input type="checkbox" id="scales" name="scales" checked />
+    <label for="scales">Scales</label>
+  </div>
+
+  <div>
+    <input type="checkbox" id="horns" name="horns" />
+    <label for="horns">Horns</label>
+  </div>
+</fieldset>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 > **Note:** **Nota** : [Os botões de opção](/pt-BR/docs/Web/HTML/Element/input/radio) são semelhantes às caixas de seleção, mas com uma distinção importante: os botões de opção são agrupados em um conjunto no qual apenas um botão pode ser selecionado por vez, enquanto as caixas de seleção permitem ativar e desativar valores únicos. Quando existem vários controles, os botões de opção permitem que um seja selecionado de todos, enquanto as caixas de seleção permitem que vários valores sejam selecionados.
 

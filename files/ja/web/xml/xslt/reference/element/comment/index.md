@@ -1,12 +1,9 @@
 ---
 title: <xsl:comment>
 slug: Web/XML/XSLT/Reference/Element/comment
-original_slug: Web/XSLT/Reference/Element/comment
 l10n:
-  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
-
-{{XsltSidebar}}
 
 `<xsl:comment>` 要素は出力文書にコメントを書き込みます。テキストのみを含める必要があります。
 
@@ -20,11 +17,11 @@ l10n:
 
 ### 必須属性
 
-なし
+なし。
 
 ### 任意属性
 
-なし
+なし。
 
 ### 種類
 
@@ -34,6 +31,6 @@ l10n:
 
 XSLT, section 7.4.
 
-### Gecko のサポート
+## Gecko の対応
 
-サポート済み
+サポート済み。

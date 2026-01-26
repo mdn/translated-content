@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/String/match
 
 El método **`match()`** devuelve todas las ocurrencias de una [expresión regular](/es/docs/Web/JavaScript/Guide/Regular_expressions) dentro de una _cadena_.
 
-{{EmbedInteractiveExample('pages/js/string-match.html', 'shorter')}}
+{{InteractiveExample("JavaScript Demo: String.match()", 'shorter')}}
+
+```js interactive-example
+const paragraph = "The quick brown fox jumps over the lazy dog. It barked.";
+const regex = /[A-Z]/g;
+const found = paragraph.match(regex);
+
+console.log(found);
+// Expected output: Array ["T", "I"]
+```
 
 ## Sintaxis
 
@@ -18,7 +27,6 @@ match(regexp)
 ### Parámetros
 
 - `regexp`
-
   - : Un objeto de expresión regular o cualquier objeto que tenga un método [`Symbol.match`](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/match).
 
     Si `regexp` no es un objeto `RegExp` y no tiene un método `Symbol.match`, se convierte implícitamente en {{jsxref('RegExp')}} usando `new RegExp(regexp)`.

@@ -35,7 +35,6 @@ slug: Web/Accessibility/ARIA/Reference/Roles/checkbox_role
 ### Связанные ARIA-роли, ARIA-состояния и ARIA-свойства
 
 - aria-checked
-
   - : Значение `aria-checked` определяет состояние чекбокса. Этот атрибут может принимать одно из трёх значений:
 
     `true`
@@ -61,7 +60,6 @@ slug: Web/Accessibility/ARIA/Reference/Roles/checkbox_role
 - onclick
   - : Обрабатывает клики, которые изменяют состояние чекбокса, меняя значение атрибута `aria-checked` и внешний вид чекбокса так, чтобы он выглядел отмеченным млм неотмеченным для зрячего пользователя.
 - onKeyPress
-
   - : Обрабатывает случай, когда пользователь нажимает&#x20;
 
     <kbd>Пробел</kbd>

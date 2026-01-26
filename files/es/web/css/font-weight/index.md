@@ -3,8 +3,6 @@ title: font-weight
 slug: Web/CSS/font-weight
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad **`font-weight`** de [CSS](/es/docs/Web/CSS) especifica el peso o grueso de la letra. Algunos tipos de letra sólo están disponibles en `normal` y `bold`.

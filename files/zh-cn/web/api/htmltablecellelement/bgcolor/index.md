@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
-**`HTMLTableCellElement.bgColor`** 属性用于设置单元格的背景色或者检索已弃用的 [`bgColor`](/zh-CN/docs/Web/HTML/Element/td#bgcolor) 属性的值（如果存在）。
+**`HTMLTableCellElement.bgColor`** 属性用于设置单元格的背景色或者检索已弃用的 [`bgColor`](/zh-CN/docs/Web/HTML/Reference/Elements/td#bgcolor) 属性的值（如果存在）。
 
 > [!NOTE]
 > 此属性已弃用，且应使用 CSS 设置背景色。使用 {{cssxref("background-color")}} 属性代替。
@@ -24,7 +24,7 @@ l10n:
 
 ## 示例
 
-使用 CSS `background-color` 代替。在 {{cssxref("background-color")}} 页面有个[带有 HTML 表格元素的 `background-color`](/zh-CN/docs/Web/CSS/background-color#着色表) 可用。
+使用 CSS `background-color` 代替。在 {{cssxref("background-color")}} 页面有个[带有 HTML 表格元素的 `background-color`](/zh-CN/docs/Web/CSS/Reference/Properties/background-color#着色表) 可用。
 
 ## 规范
 

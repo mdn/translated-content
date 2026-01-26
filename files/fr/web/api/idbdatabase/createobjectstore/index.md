@@ -24,7 +24,6 @@ var objectStore = db.createObjectStore(name, optionalParameters);
 - `name`
   - : Le nom du magasin d'objet à ajouter. Il est possible d'ajouter un magasin d'objet dont le nom est la chaîne vide (!).
 - `optionalParameters` {{optional_inline}}
-
   - : Un objet qui permet de décrire plus finement le magasin d'objets avec ces propriétés :
 
     | Propriété       | Description                                                                                                                                                                           |

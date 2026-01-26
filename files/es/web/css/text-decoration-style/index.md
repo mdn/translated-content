@@ -3,8 +3,6 @@ title: text-decoration-style
 slug: Web/CSS/text-decoration-style
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad CSS **`text-decoration-style`** define el estilo de las líneas especificadas por {{ cssxref("text-decoration-line") }}. El estilo aplica a todas las líneas, no hay manera de establecer diferentes estilos para cada línea definida por `text-decoration-line`.
@@ -32,7 +30,6 @@ text-decoration-style: unset;
 ### Valores
 
 - `solid double dotted dashed wavy`
-
   - : Es una de las siguientes palabras clave:
 
     | Palabra clave                        | Descripción                  | Comentario                                                                    |

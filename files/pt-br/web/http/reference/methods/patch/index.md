@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Methods/PATCH
 original_slug: Web/HTTP/Methods/PATCH
 ---
 
-{{HTTPSidebar}}
-
 O **método de requisição HTTP PATCH** aplica modificações parciais a um recurso.
 
 O método HTTP {{HTTPMethod("PUT")}} permite apenas substituições completas de um documento. Em contraste ao `PUT`, o método `PATCH` não é idempotente, ou seja, requisições sucessivas idênticas _podem_ obter efeitos distintos. Todavia, é possível realizar requisições `PATCH` de modo a serem idempotentes.

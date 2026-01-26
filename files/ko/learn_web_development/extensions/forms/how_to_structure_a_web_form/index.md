@@ -8,7 +8,7 @@ l10n:
 
 HTML폼을 만들떄 구조화 하는것은 중요한 것이다. 이것은 두가지 이유로 중요하다. 폼이 사용 할수 있다는 것을 보장하고 접근성도 늘릴수 있기 떄문이다.(즉 장애인들도 쉽게 사용할 수 있다.) HTML 폼의 [접근성](/ko/docs/Web/Accessibility)은 중요한 점이고 어떻게 폼 접근성을 높일 수 있는지 볼것이다.
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}
 
 기본 사항을 다룬 후에는 이제 폼의 다른 부분에 구조와 의미를 부여하는 데 사용되는 요소들을 좀 더 자세히 살펴보겠습니다.
 
@@ -159,7 +159,7 @@ HTML폼을 만들떄 구조화 하는것은 중요한 것이다. 이것은 두�
 
 {{EmbedLiveSample("Multiple_labels", 120, 120)}}
 
-위의 문단은 필수 요소에대한 규칙을 설명합니다. 이 규칙은 필수요소를 만나기 전에 시각적으로 확인하는 사용자와 스크린 리더와 같은 보조 기술을 사용하는 사용자가 해당 규칙을 알 수 있도록 '이전'에 포함되어야 합니다. 이 방법은 사용자에게 애스터리스크의 의미를 알려주는데 도움이 됩니다. 그러나 이것으로는 부족합니다. 스크린리더는 애스터리스크를 '별표'라고 읽어줍니다. 시각적인 마우스 사용자가 마우스 호버하면 '필수'가 표시되어야 하는데, 이는 `title` 속성을 사용하여 달성할 수 있습니다. `title` 속성이 스크린 리더에서 읽히는 것은 스크린 리더의 설정에 다라 달라지므로 항상 스크린 리더에서 읽히는 [`aria-label`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-label) 속성 또한 추가하는 것이 더 신뢰할 수 있습니다.
+위의 문단은 필수 요소에대한 규칙을 설명합니다. 이 규칙은 필수요소를 만나기 전에 시각적으로 확인하는 사용자와 스크린 리더와 같은 보조 기술을 사용하는 사용자가 해당 규칙을 알 수 있도록 '이전'에 포함되어야 합니다. 이 방법은 사용자에게 애스터리스크의 의미를 알려주는데 도움이 됩니다. 그러나 이것으로는 부족합니다. 스크린리더는 애스터리스크를 '별표'라고 읽어줍니다. 시각적인 마우스 사용자가 마우스 호버하면 '필수'가 표시되어야 하는데, 이는 `title` 속성을 사용하여 달성할 수 있습니다. `title` 속성이 스크린 리더에서 읽히는 것은 스크린 리더의 설정에 다라 달라지므로 항상 스크린 리더에서 읽히는 [`aria-label`](/ko/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 속성 또한 추가하는 것이 더 신뢰할 수 있습니다.
 
 위의 예시들은 효과적으로 사용하기 위해 순서대로 개선되었습니다.
 
@@ -340,7 +340,7 @@ HTML폼을 만들떄 구조화 하는것은 중요한 것이다. 이것은 두�
 
 - [A List Apart: _Sensible Forms: A Form Usability Checklist_](https://alistapart.com/article/sensibleforms/)
 
-{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}
 
 ### 고급 주제
 

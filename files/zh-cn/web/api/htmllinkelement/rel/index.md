@@ -7,9 +7,9 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLLinkElement")}} 接口的 **`rel`** 属性反映 [`rel`](/zh-CN/docs/Web/HTML/Attributes/rel) 属性。它是一个字符串，包含由空格分隔的链接类型列表，这些类型指示由 {{HTMLElement("link")}} 元素表示的资源与当前文档之间的关系。
+{{domxref("HTMLLinkElement")}} 接口的 **`rel`** 属性反映 [`rel`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel) 属性。它是一个字符串，包含由空格分隔的链接类型列表，这些类型指示由 {{HTMLElement("link")}} 元素表示的资源与当前文档之间的关系。
 
-此属性最常见的用途是指定一个外部样式表的链接：将属性设置为 `stylesheet`，并将 [`href`](/zh-CN/docs/Web/HTML/Element/link#href) 属性设置为外部样式表的 URL，以便格式化页面。
+此属性最常见的用途是指定一个外部样式表的链接：将属性设置为 `stylesheet`，并将 [`href`](/zh-CN/docs/Web/HTML/Reference/Elements/link#href) 属性设置为外部样式表的 URL，以便格式化页面。
 
 ## 值
 

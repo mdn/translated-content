@@ -3,8 +3,6 @@ title: WebRTC data channels
 slug: Games/Techniques/WebRTC_data_channels
 ---
 
-{{GamesSidebar}}
-
 {{SeeCompatTable}}
 
 La API [WebRTC](/es/docs/Web/API/WebRTC_API) (Web Real-Time Communications - Comunicaciones WEB en tiempo real) es principalmente conocida por dar soporte en las comunicaciones de audio y video; sin embargo también ofrece canales de datos punto a punto. Este artículo explica más sobre esto y te muestra como usar librerias para implementar canales de datos en tu juego.

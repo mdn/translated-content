@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Math
 
 L'objet **`Math`** est un objet natif dont les méthodes et propriétés permettent l'utilisation de constantes et fonctions mathématiques. Cet objet n'est pas une fonction.
 
-> **Attention :** `Math` fonctionne avec le type {{jsxref("Number")}}. Il ne fonctionne pas avec les grands entiers/{{jsxref("BigInt")}}.
+> [!WARNING]
+> `Math` fonctionne avec le type {{jsxref("Number")}}. Il ne fonctionne pas avec les grands entiers/{{jsxref("BigInt")}}.
 
 ## Description
 
@@ -84,7 +85,6 @@ Les constantes sont définies avec la précision des nombres réels en JavaScrip
 - {{jsxref("Objets_globaux/Math/imul", "Math.imul(x, y)")}}
   - : Retourne le résultat de la multiplication d'entiers sur 32 bits.
 - {{jsxref("Objets_globaux/Math/log", "Math.log(x)")}}
-
   - : Retourne le logarithme naturel (log
 
     <sub>e</sub>

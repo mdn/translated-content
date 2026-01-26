@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLHeadingElement`** 接口表示不同的标题元素，[从 `<h1>` 到 `<h6>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements)，它从 {{domxref("HTMLElement")}} 接口继承方法和属性。
+**`HTMLHeadingElement`** 接口表示不同的标题元素，[从 `<h1>` 到 `<h6>`](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements)，它从 {{domxref("HTMLElement")}} 接口继承方法和属性。
 
 {{InheritanceDiagram}}
 

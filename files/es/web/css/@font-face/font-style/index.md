@@ -3,8 +3,6 @@ title: font-style
 slug: Web/CSS/@font-face/font-style
 ---
 
-{{CSSRef}}
-
 ## Summary
 
 La propiedad CSS "font-style" permite a los autores esepcificar estilos de fuente para las fuentes especificadas en la regla "`@font-face`".
@@ -24,11 +22,9 @@ font-style: oblique;
 ### Values
 
 - **`normal`**
-
   - : Selecciona la version normal del estilo de fuente.
 
 - **`italic`**
-
   - : Especifica que el estilo de fuente es la versión en _cursiva_ de la fuente normal.
 
 - **`oblique`**

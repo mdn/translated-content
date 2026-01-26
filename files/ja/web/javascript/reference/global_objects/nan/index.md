@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/NaN
 
 {{js_property_attributes(0,0,0)}}
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - NaN")}}
+{{InteractiveExample("JavaScript デモ: Standard built-in objects - NaN")}}
 
 ```js interactive-example
 function sanitize(x) {

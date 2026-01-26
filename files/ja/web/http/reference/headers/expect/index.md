@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Expect
 original_slug: Web/HTTP/Headers/Expect
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`Expect`** リクエストヘッダーは、リクエストを正しく扱うためにサーバーが実行する必要があると期待されていることを示します。
 
 仕様書で定義されている期待は `Expect: 100-continue` だけで、サーバーが応答するべきことは以下の通りです。
@@ -27,7 +25,7 @@ HTTP の **`Expect`** リクエストヘッダーは、リクエストを正し�
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
       </th>
       <td>はい</td>
     </tr>

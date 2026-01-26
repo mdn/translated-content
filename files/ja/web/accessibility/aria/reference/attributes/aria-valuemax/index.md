@@ -9,13 +9,14 @@ l10n:
 
 ## 解説
 
-`aria-valuemax` 属性は、範囲ウィジェットで許可される最大値を定義します。これは、{{HTMLElement('progress')}}、{{HTMLElement('meter')}}、および [`range`](/ja/docs/Web/HTML/Element/input/range)、[`number`](/ja/docs/Web/HTML/Element/input/number) と全ての日付型の {{HTMLElement('input')}} の `max` 属性に似ています。
+`aria-valuemax` 属性は、範囲ウィジェットで許可される最大値を定義します。これは、{{HTMLElement('progress')}}、{{HTMLElement('meter')}}、および [`range`](/ja/docs/Web/HTML/Reference/Elements/input/range)、[`number`](/ja/docs/Web/HTML/Reference/Elements/input/number) と全ての日付型の {{HTMLElement('input')}} の `max` 属性に似ています。
 
 非セマンティック要素で [`meter`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role)、[`scrollbar`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role)、[`slider`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)、および [`spinbutton`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role) を含む範囲型ロールを作成する場合、`aria-valuemax` を使用して最小値より大きい最大値を定義できます。これは `slider`、`scrollbar` および `spinbutton` の必須属性です。
 
 最小値と最大値を宣言すると、支援技術が範囲のサイズをユーザーに伝えることができます。最小値は [`aria-valuemin`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin) で定義されます。
 
-> **警告:** [`range`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/range_role) ロール自体は [「抽象ロール」](/ja/docs/Web/Accessibility/ARIA/Reference/Roles#6._抽象ロール) であるため、**使用しないで**ください。`aria-valuemax` 属性は、`range` ロールの全てのサブタイプで使用されます。
+> [!WARNING]
+> [`range`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/range_role) ロール自体は [「抽象ロール」](/ja/docs/Web/Accessibility/ARIA/Reference/Roles#6._抽象ロール) であるため、**使用しないで**ください。`aria-valuemax` 属性は、`range` ロールの全てのサブタイプで使用されます。
 
 ## 例
 
@@ -69,6 +70,6 @@ l10n:
 ## 関連情報
 
 - [`range` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/range_role)
-- [`<input type="range">` 要素の `max` 属性](/ja/docs/Web/HTML/Element/input/range#max)
+- [`<input type="range">` 要素の `max` 属性](/ja/docs/Web/HTML/Reference/Elements/input/range#max)
 - [`aria-valuemin`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin)
 - [`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow)

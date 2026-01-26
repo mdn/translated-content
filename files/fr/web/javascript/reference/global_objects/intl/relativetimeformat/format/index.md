@@ -3,7 +3,22 @@ title: Intl.RelativeTimeFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format
 ---
 
-{{JSRef}}La méthode **`Intl.RelativeTimeFormat.prototype.format()`** permet de formater une valeur avec une unité selon des options de locale et de formatage stockées dans l'objet {{jsxref("RelativeTimeFormat")}}.{{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-format.html")}}
+{{JSRef}}La méthode **`Intl.RelativeTimeFormat.prototype.format()`** permet de formater une valeur avec une unité selon des options de locale et de formatage stockées dans l'objet {{jsxref("RelativeTimeFormat")}}.
+
+{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat.prototype.format")}}
+
+```js interactive-example
+const rtf1 = new Intl.RelativeTimeFormat("en", { style: "short" });
+
+console.log(rtf1.format(3, "quarter"));
+// Expected output: "in 3 qtrs."
+
+console.log(rtf1.format(-1, "day"));
+// Expected output: "1 day ago"
+
+console.log(rtf1.format(10, "seconds"));
+// Expected output: "in 10 sec."
+```
 
 ## Syntaxe
 

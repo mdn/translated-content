@@ -88,7 +88,7 @@ getFirstSubsentence("Thank you."); // "Thank you"
 
 先読みを用いることで、文字列を異なるパターンで複数回照合することができます。これにより、差集合（X であるが Y ではない）や交差集合（X と Y の両方である）といった複雑な関係を発生させることができます。
 
-以下の例は、[識別子](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers)であり、[予約語](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words)でないものに一致します（ここでは簡潔にするために 3 つの予約語のみを示しています。この論理和には、さらに予約語を加えることができます。`[$_\p{ID_Start}][$\u200c\u200d\p{ID_Continue}]*` という構文は、言語依存の識別子文字列の集合を正確に記述しています。詳しくは、識別子については[字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#識別子)を、`\p` エスケープについては [Unicode 文字クラスエスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)を参照してください。
+以下の例は、[識別子](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#識別子)であり、[予約語](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#予約語)でないものに一致します（ここでは簡潔にするために 3 つの予約語のみを示しています。この論理和には、さらに予約語を加えることができます。`[$_\p{ID_Start}][$\u200c\u200d\p{ID_Continue}]*` という構文は、言語依存の識別子文字列の集合を正確に記述しています。詳しくは、識別子については[字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#識別子)を、`\p` エスケープについては [Unicode 文字クラスエスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)を参照してください。
 
 ```js
 function isValidIdentifierName(str) {

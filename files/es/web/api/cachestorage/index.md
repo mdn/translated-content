@@ -20,9 +20,11 @@ Usa {{domxref("CacheStorage.match()")}} para verificar si un {{domxref("Request"
 
 Puede acceder a `CacheStorage` a través de la propiedad global {{domxref("caches")}}.
 
-> **Nota:** `CacheStorage` siempre rechaza con un `SecurityError` en orígenes que no son de confianza (es decir, aquellos que no usan HTTPS, aunque esta definición probablemente se volverá más compleja en el futuro). Al probar en Firefox, puede evitar esto marcando la opción **Activar service workers bajo HTTP (cuando la caja de herramientas esté abierta)** en el menú de opciones/engranaje de las Herramientas de desarrollador de Firefox. Además, debido a que `CacheStorage` requiere acceso al sistema de archivos, es posible que no esté disponible en modo privado en Firefox.
+> [!NOTE]
+> `CacheStorage` siempre rechaza con un `SecurityError` en orígenes que no son de confianza (es decir, aquellos que no usan HTTPS, aunque esta definición probablemente se volverá más compleja en el futuro). Al probar en Firefox, puede evitar esto marcando la opción **Activar service workers bajo HTTP (cuando la caja de herramientas esté abierta)** en el menú de opciones/engranaje de las Herramientas de desarrollador de Firefox. Además, debido a que `CacheStorage` requiere acceso al sistema de archivos, es posible que no esté disponible en modo privado en Firefox.
 
-> **Nota:** {{domxref("CacheStorage.match()")}} es un método conveniente. Se puede implementar una funcionalidad equivalente para hacer coincidir una entrada de caché devolviendo una matriz de nombres de caché desde {{domxref("CacheStorage.keys()")}}, abriendo cada caché con {{domxref("CacheStorage.open()")}}, y haciendo coincidir el que quieras con {{domxref("Cache.match()")}}.
+> [!NOTE]
+> {{domxref("CacheStorage.match()")}} es un método conveniente. Se puede implementar una funcionalidad equivalente para hacer coincidir una entrada de caché devolviendo una matriz de nombres de caché desde {{domxref("CacheStorage.keys()")}}, abriendo cada caché con {{domxref("CacheStorage.open()")}}, y haciendo coincidir el que quieras con {{domxref("Cache.match()")}}.
 
 {{AvailableInWorkers}}
 

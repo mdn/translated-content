@@ -2,32 +2,46 @@
 title: Baseline (compatibilité)
 slug: Glossary/Baseline/Compatibility
 l10n:
-  sourceCommit: 36527a8af0f396e8b84de3cda578d9e0fe1860f4
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+**Baseline** identifie la disponibilité des fonctionnalités de la plateforme web dans les principaux navigateurs, y compris les API, les propriétés CSS et la syntaxe JavaScript. Baseline décrit les fonctionnalités web comme étant soit largement disponibles, soit nouvellement disponibles. Les fonctionnalités qui ne répondent pas aux critères Baseline sont considérées comme ayant une disponibilité limitée.
 
-**<i lang="en">Baseline</i>** identifie les fonctionnalités prises en charge par l'ensemble des navigateurs. Les développeuses et développeurs web peuvent partir du principe que les fonctionnalités <i lang="en">Baseline</i> fonctionnent sans problème dans les navigateurs récents.
+Baseline prend en compte la prise en charge dans les navigateurs suivants&nbsp;:
 
-Une fonctionnalité <i lang="en">Baseline</i>, comme une API, un ensemble de propriétés CSS ou une syntaxce JavaScript, fonctionnera de façon homogène depuis au moins la version antérieure à la version actuelle pour l'ensemble des navigateurs connus (Chrome, Edge, Firefox, et Safari).
+- Apple Safari (iOS)
+- Apple Safari (macOS)
+- Google Chrome (Android)
+- Google Chrome (bureau)
+- Microsoft Edge (bureau)
+- Mozilla Firefox (Android)
+- Mozilla Firefox (bureau)
 
-## Badges
+Baseline est un résumé de la compatibilité des navigateurs. Ce n'est pas un substitut à l'accessibilité, à l'utilisabilité, à la performance, à la sécurité ou à d'autres tests. Baseline ne vous indique pas forcément si une fonctionnalité fonctionne avec&nbsp;:
 
-🟢 Sur une page MDN, si vous voyez un bandeau <i lang="en">Baseline</i> vert, vous pouvez partir du principe que la fonctionnalité correspondante est implémentée dans la version actuelle et précédente des navigateurs.
+- Des appareils ou versions de navigateurs plus anciens
+- Des navigateurs non couverts par la définition Baseline, comme les webviews des systèmes d'exploitation
+- Des technologies d'assistance, comme les lecteurs d'écran.
 
-🟡 Si vous voyez un bandeau jaune indiquant que la fonctionnalité ne fait pas encore partie de <i lang="en">Baseline</i>, il vous faudra vérifier les données de compatibilité et tester la fonctionnalité. Vous pouvez également attendre qu'elle soit ajoutée à <i lang="en">Baseline</i>.
+## Badges Baseline
 
-## Considérations supplémentaires
+![Widget vert avec coche : Baseline, largement disponible. Quatre logos de navigateurs, tous avec des coches.](high.png)
 
-<i lang="en">Baseline</i> doit être vu comme un guide général, qui ne couvre pas l'ensemble des situations. Si votre site ou application doit fonctionner dans un navigateur pour une version à support à long terme, ou dans un navigateur ou appareil plus ancien (éventuellement non couvert par <i lang="en">Baseline</i>), il vous appartiendra de tester et de consulter les données de compatibilité détaillées sur MDN ou [caniuse.com](https://caniuse.com/) avant de déployer une fonctionnalité donnée.
+Les fonctionnalités indiquées comme **largement disponibles** bénéficient d'un historique de prise en charge cohérent dans chacun des navigateurs Baseline depuis au moins 2,5 ans.
 
-## Contribuer
+![Widget bleu avec coche : Baseline 2022, nouvellement disponible. Quatre logos de navigateurs, tous avec des coches.](limited.png)
 
-<i lang="en">Baseline</i> est un projet participatif, mené par le groupe communautaire W3C WebDX, qui base ses données sur les données de compatibilité des navigateurs fournies par MDN. Si vous avez des questions, souhaitez mettre à jour ou étendre les données de <i lang="en">Baseline</i>, n'hésitez pas à vous rendre sur [web-platform-dx/web-features (en anglais)](https://github.com/web-platform-dx/web-features) pour participer.
+Les fonctionnalités indiquées comme **nouvellement disponibles** fonctionnent au moins dans la dernière version stable de chacun des navigateurs Baseline, mais peuvent ne pas fonctionner avec des navigateurs ou appareils plus anciens.
+
+![Widget gris avec croix : disponibilité limitée. Quatre logos de navigateurs, deux avec des coches, deux avec des croix.](low.png)
+
+Les fonctionnalités indiquées avec une **disponibilité limitée** ne sont _pas_ encore disponibles dans tous les navigateurs.
 
 ## Voir aussi
 
-- [Tester sur plusieurs navigateurs](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing)
-- [Le dépôt GitHub web-platform-dx/web-features](https://github.com/web-platform-dx/web-features)
-- [Le groupe communautaire W3C WebDX](https://www.w3.org/community/webdx/)
-- [Le dépôt GitHub mdn/browser-compat-data](https://github.com/mdn/browser-compat-data)
+- [Tests](/fr/docs/Learn_web_development/Extensions/Testing)
+- [Dépôt web-platform-dx/web-features <sup>(angl.)</sup>](https://github.com/web-platform-dx/web-features)
+- [Groupe communautaire W3C WebDX <sup>(angl.)</sup>](https://www.w3.org/community/webdx/)
+- [Dépôt mdn/browser-compat-data <sup>(angl.)</sup>](https://github.com/mdn/browser-compat-data)
+- [caniuse.com <sup>(angl.)</sup>](https://caniuse.com/)
+- [a11ysupport.io <sup>(angl.)</sup>](https://a11ysupport.io/)

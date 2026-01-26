@@ -1,12 +1,9 @@
 ---
 title: Rust から WebAssembly にコンパイル
 slug: WebAssembly/Guides/Rust_to_Wasm
-original_slug: WebAssembly/Rust_to_Wasm
 l10n:
-  sourceCommit: 4a6dacf8c68925a8538585be3b2728bcb271241e
+  sourceCommit: 6d2000984203c51f1aad49107ebcebe14d3c1238
 ---
-
-{{WebAssemblySidebar}}
 
 Rust のコードがあれば、それを [WebAssembly](/ja/docs/WebAssembly) (Wasm) にコンパイルすることができます。このチュートリアルでは、Rust プロジェクトを WebAssembly にコンパイルし、既存のウェブアプリケーションで使用する方法を示します。
 
@@ -17,9 +14,9 @@ Rust と WebAssembly には、主に 2 つの用途があります。
 - アプリケーション全体を構築する — ウェブアプリ全体を Rust ベースで構築します。
 - アプリケーションの一部を構築する — 既存の JavaScript フロントエンドの内部で Rust を使用します。
 
-今のところ、Rust チームは後者のケースに焦点を当てているので、ここではこれについて説明します。前者の場合、[`yew`](https://github.com/DenisKolodin/yew) のようなプロジェクトをチェックアウトしてください。
+今のところ、Rust チームは後者のケースに焦点を当てているので、ここではこれについて説明します。前者の場合、[`yew`](https://github.com/yewstack/yew) や [leptos](https://github.com/leptos-rs/leptos) のようなプロジェクトをチェックアウトしてください。
 
-このチュートリアルでは、Rust で npm パッケージを構築するためのツールである `wasm-pack` を使用して npm パッケージを構築します。このパッケージには WebAssembly と JavaScript のコードしか含まれていないため、パッケージのユーザーは Rust をインストールする必要がありません。WebAssembly で書かれていることにすら気づかないかもしれません。
+このチュートリアルでは、Rust で JavaScript パッケージを構築するためのツールである `wasm-pack` を使用してパッケージを構築します。このパッケージには WebAssembly と JavaScript コードのみが含まれているため、ユーザーは Rust をインストールする必要はありません。Rust で記述されていることにも気付かないかもしれません。
 
 ## Rust 開発環境のセットアップ
 
@@ -27,7 +24,7 @@ Rust と WebAssembly には、主に 2 つの用途があります。
 
 ### Rust のインストール
 
-[Install Rust](https://www.rust-lang.org/install.html) ページに行って指示に従い、Rust をインストールしてください。これによって "rustup" と呼ばれる複数のバージョンの Rust を管理できるようにするツールがインストールされます。既定の設定では、通常の Rust 開発で使いたいであろう最新の安定版 Rust リリースをインストールします。rustup は Rust コンパイラーの `rustc` や Rust のパッケージマネージャーの `cargo` や Rust の標準ライブラリーの `rust-std` やいくつかの助けになるドキュメント — `rust-docs` をインストールします。
+[Install Rust](https://www.rust-lang.org/tools/install) ページに行って指示に従い、Rust をインストールしてください。これによって "rustup" と呼ばれる複数のバージョンの Rust を管理できるようにするツールがインストールされます。既定の設定では、通常の Rust 開発で使いたいであろう最新の安定版 Rust リリースをインストールします。rustup は Rust コンパイラーの `rustc` や Rust のパッケージマネージャーの `cargo` や Rust の標準ライブラリーの `rust-std` やいくつかの助けになるドキュメント — `rust-docs` をインストールします。
 
 > [!NOTE]
 > インストール後のメモで、cargo の `bin` ディレクトリーをシステムの `PATH` に追加する必要があるという点に注意してください。これは自動的に追加されるはずですが、有効にするためにターミナルを再起動する必要があります。
@@ -45,8 +42,7 @@ cargo install wasm-pack
 セットアップは以上です。 Rust で新しいパッケージを作りましょう。個人的なプロジェクトを置いておく場所へ移動して以下を実行してください。
 
 ```bash
-$ cargo new --lib hello-wasm
-     Created library `hello-wasm` project
+cargo new --lib hello-wasm
 ```
 
 これにより新たなライブラリーが出発に必要なものすべてと一緒に `hello-wasm` という名前のサブディレクトリーに作成されます。
@@ -57,31 +53,36 @@ $ cargo new --lib hello-wasm
     └── lib.rs
 ```
 
-まず `Cargo.toml` があります。これはビルドを設定するためのファイルです。もし `Gemfile` を Bundler から使ったり、`package.json` を npm から使ったりしたことがあるなら、なじみがあるでしょう。cargo は両者と似たような動作をします。
+まず `Cargo.toml` があります。これはビルドを設定するためのファイルです。これは、Bundler の `Gemfile` や npm の `package.json` とよく似た動作をします。
 
-次に、 Cargo はいくつかの Rust コードを `src/lib.rs` に生成してくれています。
+Cargo はいくつかの Rust コードを `src/lib.rs` に生成してくれています。
 
 ```rust
+pub fn add(left: u64, right: u64) -> u64 {
+    left + right
+}
+
 #[cfg(test)]
 mod tests {
+    use super::*;
+
     #[test]
     fn it_works() {
-        assert_eq!(2 + 2, 4);
+        let result = add(2, 2);
+        assert_eq!(result, 4);
     }
 }
 ```
 
-このチュートリアルでは、このテストコードはまったく使わないので、消してください。
-
 ### Rust を書いてみよう
 
-代わりに以下のコードを `src/lib.rs` に書き込みましょう。
+上記で生成された `src/lib.rs` コードは使用しません。次のコードに置き換えてください。
 
 ```rust
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
-extern {
+extern "C" {
     pub fn alert(s: &str);
 }
 
@@ -103,9 +104,9 @@ use wasm_bindgen::prelude::*;
 
 ライブラリーは Rust では「クレート」と呼ばれます。
 
-理解できましたか？ _Cargo_ が*クレート*を取り入れるのです。
+理解できましたか？ _Cargo_ がクレートを取り入れるのです。
 
-3 行目にはコードをライブラリーから自分のコードにインポートする `use` コマンドがあります。この場合、`wasm_bindgen::prelude` モジュールにあるものすべてをインポートしています。これらの機能は次の節で使用します。
+1 行目にはコードをライブラリーから自分のコードにインポートする `use` コマンドがあります。この場合、`wasm_bindgen::prelude` モジュールにあるものすべてをインポートしています。これらの機能は次の節で使用します。
 
 次の節に移動する前に、もう少し `wasm-bindgen` について話しておいたほうがいいでしょう。
 
@@ -119,7 +120,7 @@ use wasm_bindgen::prelude::*;
 
 ```rust
 #[wasm_bindgen]
-extern {
+extern "C" {
     pub fn alert(s: &str);
 }
 ```
@@ -165,7 +166,7 @@ authors = ["Your Name <you@example.com>"]
 description = "A sample project with wasm-pack"
 license = "MIT/Apache-2.0"
 repository = "https://github.com/yourgithubusername/hello-wasm"
-edition = "2018"
+edition = "2021"
 
 [lib]
 crate-type = ["cdylib"]
@@ -176,19 +177,21 @@ wasm-bindgen = "0.2"
 
 自分自身のリポジトリーを記入し、`git` が `authors` フィールドに使用するものと同じ情報を使用してください。
 
-追加する大部分は下にあるものです。最初の部分 — `[lib]` — は Rust にパッケージの cdylib バージョンをビルドするよう伝えます。何を意味するかはこのチュートリアルでは掘り下げません。もっと知るには、[Cargo](https://doc.rust-lang.org/cargo/guide/) と [Rust Linkage](https://doc.rust-lang.org/reference/linkage.html) のドキュメンテーションを調べてください。
+追加する大部分は下にあるものです。最初の部分 — `[lib]` — は Rust にパッケージの cdylib バージョンをビルドするよう伝えます。何を意味するかはこのチュートリアルでは掘り下げません。もっと知るには、[Cargo](https://doc.rust-lang.org/cargo/guide/) と [Rust Linkage](https://doc.rust-lang.org/reference/linkage.html) のドキュメントを調べてください。
 
 第二の項は `[dependencies]` の項です。ここで Cargo にどのバージョンの `wasm-bindgen` に依存させるかを知らせます。今回の場合、バージョン `0.2.z` のいずれかのものです (`0.3.0` やそれ以上ではありません)。
 
 ### パッケージのビルド
 
-すべてのセットアップが完了したので、ビルドしましょう。ターミナルに以下のものを入力してください。
+設定が完了しましたので、パッケージを構築しましょう。生成されたコードは、ネイティブ ES モジュールと Node.js で使用します。そのため、`wasm-pack build` の [`--target` 引数](https://rustwasm.github.io/docs/wasm-pack/commands/build.html#target)を使用して、生成する WebAssembly と JavaScript の種類を指定します。
+
+まず、 `hello-wasm` ディレクトリー内で次のコマンドを実行します。
 
 ```bash
 wasm-pack build --target web
 ```
 
-このコマンドは多くのことをします (そして時間がかかます。特に初めて `wasm-pack` を実行したときはそうです)。それらについて詳しく学ぶには、[Mozilla Hacks のこのブログ投稿](https://hacks.mozilla.org/2018/04/hello-wasm-pack/)を確認してください。手短に説明すると、`wasm-pack build` は次のことをします。
+このコマンドは多くのことをします。これらについて詳しく学ぶには、[Mozilla Hacks のこのブログ投稿](https://hacks.mozilla.org/2018/04/hello-wasm-pack/)を確認してください。手短に説明すると、`wasm-pack build` は次のことをします。
 
 1. Rust コードを WebAssembly にコンパイルする。
 2. `wasm-bindgen` をその WebAssembly に対して実行し、WebAssembly ファイルを npm が理解できるモジュールにラップする JavaScript ファイルを生成する。
@@ -198,10 +201,6 @@ wasm-pack build --target web
 
 最終的な結果は？ npm パッケージが `pkg` ディレクトリーに生成されます。
 
-#### コードサイズについての余談
-
-生成された WebAssembly のコードサイズについて確認すると、それはおそらく数百キロバイトでしょう。Rust にはサイズの最適化をまったく指示しておらず、最適化すればサイズを大幅に削減できます。これはこのチュートリアルの脱線ですが、もしもっと学習したいなら、Rust WebAssembly Working Group の[.wasm のサイズの縮小](https://rustwasm.github.io/book/game-of-life/code-size.html#shrinking-wasm-size)を確認してください。
-
 ## パッケージのウェブでの利用
 
 さて、コンパイルされた Wasm モジュールが入手できたので、ブラウザーで動かしてみましょう。
@@ -210,7 +209,7 @@ wasm-pack build --target web
 ```plain
 ├── Cargo.lock
 ├── Cargo.toml
-├── index.html
+├── index.html  <-- 新しい index.html ファイル
 ├── pkg
 │   ├── hello_wasm.d.ts
 │   ├── hello_wasm.js
@@ -237,6 +236,7 @@ wasm-pack build --target web
   <body>
     <script type="module">
       import init, { greet } from "./pkg/hello_wasm.js";
+
       init().then(() => {
         greet("WebAssembly");
       });
@@ -256,65 +256,44 @@ wasm-pack build --target web
 
 ## npm でパッケージが利用できるようにする
 
-WebAssembly モジュールを npm で使用する場合、いくつかの変更が必要です。
+npm パッケージを構築しているため、 Node.js および npm をインストールしておく必要があります。
 
-まず、Rust を target bundler オプションで再コンパイルすることから始めましょう。
+Node.js および npm を取得するには、[Get npm!](https://docs.npmjs.com/getting-started/) ページに移動し、指示に従ってください。このチュートリアルは、node 20 を対象としています。
+Node のバージョンを切り替えるには、[nvm](https://github.com/nvm-sh/nvm) を使用することができます。
+
+npm で WebAssembly モジュールを使用するには、いくつかの変更を行う必要があります。まず、ターゲットとして bundler オプションを指定して Rust を再コンパイルすることから始めましょう。
 
 ```bash
 wasm-pack build --target bundler
 ```
 
-### Node.js と npm のインストール
-
-npmパッケージを構築しているので、Node.jsと npm をインストールしておく必要があります。
-
-Node.js と npm を入手するには、 [Get npm!](https://docs.npmjs.com/getting-started/) ページへ移動して指示に従ってください。
-このチュートリアルでは node 16 をターゲットとしていますので、node のバージョンを切り替えたい場合は、[nvm](https://github.com/nvm-sh/nvm) を使用してください。
-
-次に、インストールした他の JavaScript パッケージがこのパッケージを利用できるようにするために、`npm link` を使用しましょう。
-
-```bash
-cd pkg
-npm link
-```
-
-Rust で書かれ、 WebAssembly にコンパイルされた npm パッケージができました。JavaScript から利用する準備ができており、ユーザーが Rust をインストールすることを必要としません。コードに含まれているのは WebAssembly コードであり、Rust のソースではないのです。
+これで、Rust で記述され、WebAssembly にコンパイルされた npm パッケージができました。これは JavaScript から使用でき、ユーザーが Rust をインストールしている必要はありません。含まれているコードは、Rust ソースではなく WebAssembly コードです。
 
 ### パッケージのウェブでの利用
 
-この新たなパッケージを利用するウェブサイトを構築しましょう。多くの人が様々なバンドラーツールで npm のパッケージを利用していますが、このチュートリアルではそのうちの一つである `webpack` を使用します。これは若干複雑ですが、現実的なユースケースを示します。
+新しい npm パッケージを使用するウェブサイトを構築しましょう。多くの人々は、さまざまなバンドラツールを通じて npm パッケージを使用しています。このチュートリアルでは、そのうちの 1 つである `webpack` を使用します。これは少し複雑ですが、現実的な用途を示しています。
 
-`pkg` ディレクトリーの外に戻り、新たなディレクトリー `site` を作成し、そこでこれを試してみましょう。
+試してみるために、`hello-wasm` ディレクトリー内に `site` という新しいディレクトリーを作成しましょう。
+まだ npm レジストリーにパッケージを公開していないので、`npm i /path/to/package` を使用してローカルバージョンからインストールすることができます。
+[`npm link`](https://docs.npmjs.com/cli/v10/commands/npm-link/) を使用することもできますが、このデモではローカルパスからインストールする方が便利です。
 
 ```bash
-cd ..
-mkdir site
-cd site
-npm link hello-wasm
+mkdir site && cd site
+npm i ../pkg
 ```
 
-新しいファイル `package.json` を作成し、次のコードをそこに書き込んでください。
+`webpack` の開発依存関係をインストールします。
 
-```json
-{
-  "scripts": {
-    "serve": "webpack-dev-server"
-  },
-  "dependencies": {
-    "hello-wasm": "^0.1.0"
-  },
-  "devDependencies": {
-    "webpack": "^4.25.1",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
-  }
-}
+```bash
+npm i -D webpack@5 webpack-cli@5 webpack-dev-server@5 copy-webpack-plugin@12
 ```
 
 次に、Webpack を設定する必要があります。`webpack.config.js` を作成し、そこに次のことを記入してください。
 
 ```js
+const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
+
 module.exports = {
   entry: "./index.js",
   output: {
@@ -322,20 +301,48 @@ module.exports = {
     filename: "index.js",
   },
   mode: "development",
+  experiments: {
+    asyncWebAssembly: true,
+  },
+  plugins: [
+    new CopyPlugin({
+      patterns: [{ from: "index.html" }],
+    }),
+  ],
 };
 ```
 
-次に、HTML ファイルで参照される `index.js` を作成し、以下の内容を追加してください。
+package.json に、先ほど作成した設定ファイルを使用して webpack を実行する build および serve スクリプトを追加します。
 
-```js
-import("./node_modules/hello-wasm/hello_wasm.js").then((js) => {
-  js.greet("WebAssembly with npm");
-});
+```json
+{
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "serve": "webpack serve --config webpack.config.js --open"
+  },
+  "dependencies": {
+    "hello-wasm": "file:../pkg"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^12.0.2",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
+  }
+}
 ```
 
-これは新しいモジュールを `node_modules` フォルダーからインポートします。これは最善の方法ではないと思いますが、デモなので、これでいいでしょう。一度そのモジュールが読み込まれると、そこから `greet` 関数を呼び出し、`"WebAssembly"` を文字列として渡します。ここに特別なことはなにもありませんが、Rust コードを呼び出していることに注意してください。JavaScript コードから観察する限り、これはただの普通のモジュールです。
+次に、`index.js` という名前付きファイルを作成し、以下のコンテンツを記述してください。
 
-最後に、JavaScript を読み込むための HTML ファイルを追加します。`index.html` ファイルを作成し、以下の内容を追加してください。
+```js
+import * as wasm from "hello-wasm";
+
+wasm.greet("WebAssembly with npm");
+```
+
+これにより、`node_modules` フォルダーからモジュールがインポートされ、`greet` 関数が呼び出され、`"WebAssembly with npm"` が文字列として渡されます。ここでは特別なことは何も行われていないにもかかわらず、Rust コードが呼び出されていることにご注目ください。JavaScript コードからは、これは通常のモジュールにすぎません。
+
+最後に、JavaScript を読み込むための HTML ファイルを追加する必要があります。`index.html` ファイルを作成し、次の内容を追加してください。
 
 ```html
 <!doctype html>
@@ -353,10 +360,10 @@ import("./node_modules/hello-wasm/hello_wasm.js").then((js) => {
 `hello-wasm/site` ディレクトリーは次のようになります。
 
 ```plain
+├── node_modules
 ├── index.html
 ├── index.js
-├── node_modules
-│   └── hello-wasm -> ../../pkg
+├── package-lock.json
 ├── package.json
 └── webpack.config.js
 ```
@@ -364,14 +371,36 @@ import("./node_modules/hello-wasm/hello_wasm.js").then((js) => {
 ファイルを作りました。これを試してみましょう。
 
 ```bash
-npm install
 npm run serve
 ```
 
-これでウェブサーバーが起動します。 `http://localhost:8080` を読み込んでください。 `Hello, WebAssembly!` と書かれたアラートボックスが画面に出てくるはずです。JavaScript からの Rust の呼び出しと Rust からの JavaScript の呼び出しに成功しました。
+これにより、ウェブサーバーが起動し、 `http://localhost:8080` が開きます。画面に `Hello, WebAssembly with npm!` というテキストを含むアラートボックスが表示されます。これで、 npm で Rust モジュールを正常に使用できるようになりました。
+
+ローカル開発以外で WebAssembly を使用したい場合は、hello-wasm ディレクトリー内で `pack` コマンドと `publish` コマンドを使用してパッケージを公開することができます。
+
+```bash
+wasm-pack pack
+npm notice
+npm notice 📦  hello-wasm@0.1.0
+npm notice Tarball Contents
+npm notice 2.9kB hello_wasm_bg.js
+npm notice 16.7kB hello_wasm_bg.wasm
+npm notice 85B hello_wasm.d.ts
+npm notice 182B hello_wasm.js
+npm notice 549B package.json
+...
+hello-wasm-0.1.0.tgz
+[INFO]: 🎒  packed up your package!
+```
+
+npm に公開するには、[npm アカウント](https://www.npmjs.com/)が必要であり、 [`npm adduser`](https://docs.npmjs.com/cli/v10/commands/npm-adduser/) を使用してマシンを認証する必要があります。準備ができたら、内部で `npm publish` を呼び出す `wasm-pack` を使用して公開することができます。
+
+```bash
+wasm-pack publish
+```
 
 ## おわりに
 
 ここでチュートリアルは終わりです。あなたの役に立ったと思われることを望みます。
 
-この領域にはたくさんの進行中の刺激的な仕事があります。もしそれをもっとよくするのを手伝いたいなら、 [the Rust WebAssembly Working Group](https://fitzgeraldnick.com/2018/02/27/wasm-domain-working-group.html) を確認してください。
+この世界では、エキサイティングな作業がたくさん行われています。さらに改善にご協力いただける方は、[Rust および WebAssembly ワーキンググループ](https://github.com/rustwasm/team/blob/master/README.md#get-involved)（英語）をご覧ください。

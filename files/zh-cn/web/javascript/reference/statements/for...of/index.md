@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a71b8929628a2187794754c202ad399fe357141b
 ---
 
-{{jsSidebar("Statements")}}
-
 **`for...of`** 语句执行一个循环，该循环处理来自[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)的值序列。可迭代对象包括内置对象的实例，例如 {{jsxref("Array")}}、{{jsxref("String")}}、{{jsxref("TypedArray")}}、{{jsxref("Map")}}、{{jsxref("Set")}}、{{domxref("NodeList")}}（以及其他 DOM 集合），还包括 {{jsxref("Functions/arguments", "arguments")}} 对象、由[生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)生成的[生成器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Generator)，以及用户定义的可迭代对象。
 
 {{InteractiveExample("JavaScript Demo: Statement - For...Of")}}
@@ -173,7 +171,7 @@ foo(1, 2, 3);
 
 ### 迭代 NodeList
 
-下面的示例通过迭代一个 [`NodeList`](/zh-CN/docs/Web/API/NodeList) DOM 集合，为直接位于 [`<article>`](/zh-CN/docs/Web/HTML/Element/article) 元素下的段落添加一个 `read` 类。
+下面的示例通过迭代一个 [`NodeList`](/zh-CN/docs/Web/API/NodeList) DOM 集合，为直接位于 [`<article>`](/zh-CN/docs/Web/HTML/Reference/Elements/article) 元素下的段落添加一个 `read` 类。
 
 ```js
 const articleParagraphs = document.querySelectorAll("article > p");

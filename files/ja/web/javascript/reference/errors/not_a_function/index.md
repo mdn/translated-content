@@ -27,11 +27,9 @@ TypeError: "x" is not a function
 多くの組み込み関数はコールバック関数を必要とします。これらのメソッドを正しく呼び出すためには、関数を引数に指定する必要があります。
 
 - {{jsxref("Array")}} もしくは {{jsxref("TypedArray")}} オブジェクトを操作する場合:
-
   - {{jsxref("Array.prototype.every()")}}, {{jsxref("Array.prototype.some()")}}, {{jsxref("Array.prototype.forEach()")}}, {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.filter()")}}, {{jsxref("Array.prototype.reduce()")}}, {{jsxref("Array.prototype.reduceRight()")}}, {{jsxref("Array.prototype.find()")}}
 
 - {{jsxref("Map")}} もしくは {{jsxref("Set")}} を操作する場合:
-
   - {{jsxref("Map.prototype.forEach()")}}, {{jsxref("Set.prototype.forEach()")}}
 
 ## 例

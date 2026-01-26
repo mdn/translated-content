@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`readOnly`** は {{DOMxRef("HTMLInputElement")}} インターフェイスのプロパティで、{{htmlelement("input")}} の値をユーザーが変更できないことを示します。これは {{htmlelement("input")}} 要素の [`readonly`](/ja/docs/Web/HTML/Element/input#readonly) 論理属性を反映したもので、属性が存在する場合は `true` を返し、省略されている場合は `false` を返します。
+**`readOnly`** は {{DOMxRef("HTMLInputElement")}} インターフェイスのプロパティで、{{htmlelement("input")}} の値をユーザーが変更できないことを示します。これは {{htmlelement("input")}} 要素の [`readonly`](/ja/docs/Web/HTML/Reference/Elements/input#readonly) 論理属性を反映したもので、属性が存在する場合は `true` を返し、省略されている場合は `false` を返します。
 
 {{domxref("HTMLInputElement.disabled", "disabled")}} プロパティが true であるフォームコントロールとは異なり、`readOnly` プロパティが true の値である場合、クリックやコントロール内の選択ができなくはなりません。
 

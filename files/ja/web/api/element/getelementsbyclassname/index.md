@@ -34,7 +34,7 @@ getElementsByClassName(names)
 逆もしかりです。 `names` に一致しなくなったりツリーから外された要素は、すぐにコレクションから除外されます。
 
 > [!NOTE]
-> クラス名は[後方互換モード](/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)では大文字・小文字が区別されず、それ以外では区別されます。
+> クラス名は[後方互換モード](/ja/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)では大文字・小文字が区別されず、それ以外では区別されます。
 
 ## 例
 

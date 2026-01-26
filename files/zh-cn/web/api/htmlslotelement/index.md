@@ -36,7 +36,7 @@ _还继承了其父接口 {{domxref("HTMLElement")}} 的事件。_
 使用 {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} 或通过将事件监听器赋值给该接口的 `oneventname` 属性来监听这些事件。
 
 - {{domxref('HTMLSlotElement.slotchange_event', 'slotchange')}}
-  - : 当插槽中包含的节点发生变化时，在 `HTMLSlotElement` 实例（[`<slot>`](/zh-CN/docs/Web/HTML/Element/slot) 元素）上触发此事件。
+  - : 当插槽中包含的节点发生变化时，在 `HTMLSlotElement` 实例（[`<slot>`](/zh-CN/docs/Web/HTML/Reference/Elements/slot) 元素）上触发此事件。
 
 ## 示例
 

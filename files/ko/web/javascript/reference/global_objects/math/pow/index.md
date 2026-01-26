@@ -4,7 +4,24 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/pow
 ---
 
 {{JSRef}}**`Math.pow()`**함수는`base^exponent`처럼
-`base` 에 `exponent`를 제곱한 값을 반환합니다.{{EmbedInteractiveExample("pages/js/math-pow.html")}}
+`base` 에 `exponent`를 제곱한 값을 반환합니다.
+
+{{InteractiveExample("JavaScript Demo: Math.pow()")}}
+
+```js interactive-example
+console.log(Math.pow(7, 3));
+// Expected output: 343
+
+console.log(Math.pow(4, 0.5));
+// Expected output: 2
+
+console.log(Math.pow(7, -2));
+// Expected output: 0.02040816326530612
+//                  (1/49)
+
+console.log(Math.pow(-7, 0.5));
+// Expected output: NaN
+```
 
 ## 문법
 

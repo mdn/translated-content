@@ -10,7 +10,8 @@ l10n:
 
 **`referrer`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、ユーザーエージェントによってリクエストのリファラーが設定されます（`client` や `no-referrer`、URL、など）。
 
-> **メモ:** `referrer` の値が `no-referrer` だった場合、空文字が返されます。
+> [!NOTE]
+> `referrer` の値が `no-referrer` だった場合、空文字が返されます。
 
 ## 値
 

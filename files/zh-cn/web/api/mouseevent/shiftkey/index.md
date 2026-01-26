@@ -1,59 +1,52 @@
 ---
-title: MouseEvent.shiftKey
+title: MouseEvent：shiftKey 属性
 slug: Web/API/MouseEvent/shiftKey
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
 {{APIRef("UI Events")}}
 
-**`MouseEvent.shiftKey`** 是只读属性，指出触发鼠标事件时是否按住了 `shift` 键
+**`MouseEvent.shiftKey`** 只读属性是用于指示在某个鼠标事件发生时，<kbd>shift</kbd> 键是否被按下的布尔值。
 
-## Syntax
+## 值
 
-```plain
-var shiftKeyPressed = instanceOfMouseEvent.shiftKey
+布尔值，其中 `true` 表示按键已按下，而 `false` 表示按键*未*按下。
+
+## 示例
+
+此示例会在触发 {{domxref("Element/click_event", "click")}} 事件时记录 `shiftKey` 属性。
+
+### HTML
+
+```html
+<p>单击任意位置以测试 <code>shiftKey</code> 属性。</p>
+<p id="log"></p>
 ```
 
-### Return value
-
-A boolean
-
-## Example
+### JavaScript
 
 ```js
-<html>
-<head>
-<title>shiftKey example</title>
+let log = document.querySelector("#log");
+document.addEventListener("click", logKey);
 
-<script type="text/javascript">
-
-function showChar(e){
-  alert(
-    "Key Pressed: " + String.fromCharCode(e.charCode) + "\n"
-    + "charCode: " + e.charCode + "\n"
-    + "SHIFT key pressed: " + e.shiftKey + "\n"
-    + "ALT key pressed: " + e.altKey + "\n"
-  );
+function logKey(e) {
+  log.textContent = `按下 shift 键：${e.shiftKey}`;
 }
-
-</script>
-</head>
-
-<body onkeypress="showChar(event);">
-<p>Press any character key, with or without holding down
- the SHIFT key.<br />
-You can also use the SHIFT key together with the ALT key.</p>
-</body>
-</html>
 ```
 
-## Specifications
+### 结果
+
+{{EmbedLiveSample("示例")}}
+
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
 - {{ domxref("MouseEvent") }}

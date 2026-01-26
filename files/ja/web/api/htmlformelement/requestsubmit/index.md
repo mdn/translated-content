@@ -20,7 +20,6 @@ requestSubmit(submitter)
 ### 引数
 
 - `submitter` {{optional_inline}}
-
   - : このフォームのメンバーである{{Glossary("submit button", "送信ボタン")}}です。
 
     `submitter` が `form*` 属性を指定している場合、このフォームの送信動作を[上書きします](/ja/docs/Glossary/Submit_button#フォームの動作の上書き)（`formmethod="POST"` など）。
@@ -38,7 +37,7 @@ requestSubmit(submitter)
 - {{jsxref("TypeError")}}
   - : 指定された `submitter` が{{Glossary("submit button", "送信ボタン")}}でなかった場合に発生します。
 - `NotFoundError` {{domxref("DOMException")}}
-  - : 指定された `submitter` が、 `requestSubmit()` が呼び出されたフォームのメンバーでない場合に発生します。submitter は form 要素の子孫であるか、フォームを参照する [`form`](/ja/docs/Web/HTML/Element/input#form) 属性を持たなければなりません。
+  - : 指定された `submitter` が、 `requestSubmit()` が呼び出されたフォームのメンバーでない場合に発生します。submitter は form 要素の子孫であるか、フォームを参照する [`form`](/ja/docs/Web/HTML/Reference/Elements/input#form) 属性を持たなければなりません。
 
 ## 使用上の注意
 

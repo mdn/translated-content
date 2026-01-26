@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
 
 **`Intl.Locale.prototype.toString()`** は、このロケールの完全な[ロケール識別子文字列](https://www.unicode.org/reports/tr35/#Unicode_locale_identifier)を返します。
 
-{{InteractiveExample("JavaScript Demo: Intl.Locale.prototype.toString()")}}
+{{InteractiveExample("JavaScript デモ: Intl.Locale.prototype.toString()")}}
 
 ```js interactive-example
 const french = new Intl.Locale("fr-Latn-FR", {
@@ -25,8 +25,6 @@ console.log(french.toString());
 console.log(korean.toString());
 // Expected output: "ko-Kore-KR-u-kf-upper-kn"
 ```
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## 構文
 

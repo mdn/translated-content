@@ -18,7 +18,6 @@ playEffect(type, params)
 ### 参数
 
 - `type`
-
   - : 表示所需效果的字符串。这可能因硬件类型而异，可能的值为 `"dual-rumble"`（双重隆隆声）或 `"vibration"`（振动）。
 
 - `params`

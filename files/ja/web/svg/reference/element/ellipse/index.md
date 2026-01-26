@@ -1,17 +1,14 @@
 ---
 title: <ellipse>
 slug: Web/SVG/Reference/Element/ellipse
-original_slug: Web/SVG/Element/ellipse
 l10n:
-  sourceCommit: 2e5fc06de139c56873a20ec4bc3bf5600ea3cbef
+  sourceCommit: 34c204f8f6c3f7ac60ebb23fca9798680aee9956
 ---
 
-{{SVGRef}}
-
-**`<ellipse>`** 要素は SVG の基本的な図形であり、中心となる座標と x 方向と y 方向の半径両方を指定し、楕円を生成します。
+**`<ellipse>`** は [SVG](/ja/docs/Web/SVG) の要素で、 SVG の基本的な図形であり、中心となる座標と x 方向と y 方向の半径両方を指定し、楕円を生成するために使用されます。
 
 > [!NOTE]
-> 楕円要素は楕円の傾きを指定することはできません（例えば、45 度の角度で傾斜した楕円を描画したい場合）が、{{SVGAttr("transform")}} 属性を使用することで回転させることは可能です。
+> 楕円要素では楕円の傾きを指定することはできません（例えば、45 度の角度で傾斜した楕円を描画したい場合）が、 {{SVGAttr("transform")}} 属性を使用することで回転させることは可能です。
 
 ## 例
 
@@ -50,7 +47,7 @@ svg {
     _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number) ; _既定値_: _none_; _アニメーション_: **可**
 
 > [!NOTE]
-> SVG2 以降、`cx`、`cy`、`rx`、`ry` は、ジオメトリー属性であり、これらの属性は要素の CSS プロパティとして使用することもできます。
+> SVG2 以降、`cx`、`cy`、`rx`、`ry` は、幾何属性であり、これらの属性は要素の CSS プロパティとして使用することもできます。
 
 ## 使用可能な場所
 

@@ -28,7 +28,6 @@ createObjectStore(name, options)
 - `name`
   - : 作成するために新しいオブジェクトストアの名前です。なお、空の名前でオブジェクトストアを作成することも可能です。
 - `options` {{optional_inline}}
-
   - : 属性がメソッドのオプション引数であるオプションオブジェクトです。以下のプロパティがあります。
     - `keyPath` {{optional_inline}}
       - : 新しいオブジェクトストアで使用するための[キーパス](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#キーパス)。空または指定しなかった場合、オブジェクトストアはキーパスなしで作成され、[アウトオブラインキー](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#アウトオブラインキー)を使用します。

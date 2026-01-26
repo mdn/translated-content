@@ -3,8 +3,6 @@ title: Firefox 1.5 para Desarrolladores
 slug: Mozilla/Firefox/Releases/1.5
 ---
 
-{{FirefoxSidebar}}
-
 ### Firefox 1.5
 
 Se ha lanzado Firefox 1.5 y ya se puede descargar **[descarga](https://www.mozilla.com/firefox/)**. Este programa esta basado en el motor de [Gecko](/es/Gecko) 1.8, esta nueva versión del navegador mejora su ya magnífico soporte a los estándares web y proporciona nuevas capacidades que hacen posible una nueva generación de aplicaciones web. Algunas de las nuevas características de Firefox 1.5 son: soporte de CSS2 y CSS3 mejorado, APIs para programar gráficos en 2D por medio de `<canvas>`, o gráficos vectoriales con [SVG](/es/docs/Web/SVG) 1.1, [XForms](/es/XForms) y eventos XML, así como muchas mejoras en DHTML, JavaScript y DOM.

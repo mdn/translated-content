@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 5bd9fe2b25c6eee2a14d0406ce7116998fa48c13
 ---
 
-{{HTTPSidebar}}
-
 **`Transfer-Encoding`** ヘッダーは、ネットワーク上のノード間でメッセージを転送する際に使用するエンコード方式を指定します。
 
 > [!WARNING]
@@ -31,7 +29,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
       </th>
       <td>はい</td>
     </tr>

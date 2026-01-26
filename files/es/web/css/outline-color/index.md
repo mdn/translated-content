@@ -3,8 +3,6 @@ title: outline-color
 slug: Web/CSS/outline-color
 ---
 
-{{CSSRef}}
-
 La propiedad CSS **`outline-color`** establece el color del contorno de un elemento.
 
 {{InteractiveExample("CSS Demo: outline-color")}}

@@ -55,9 +55,7 @@ O `<textarea>` O elemento também aceita vários atributos comuns para formar `<
 Este elemento inclui os atributos globais.
 
 - `autocapitalize` {{non-standard_inline}}
-
   - : Este é um atributo não padrão suportado pelo WebKit no iOS (portanto, quase todos os navegadores executados no iOS, incluindo Safari, Firefox e Chrome), que controla se e como o valor do texto deve ser automaticamente capitalizado quando é inserido / editado pelo do utilizador. Os valores não preteridos estão disponíveis no iOS 5 e posterior. Os valores possíveis são:
-
     - `none`: Desativa completamente a capitalização automática.
     - `sentences`: Coloque automaticamente em maiúscula a primeira letra das frases.
     - `words`: Coloque em maiúscula automaticamente a primeira letra das palavras.
@@ -66,9 +64,7 @@ Este elemento inclui os atributos globais.
     - `off`: {{deprecated_inline()}} Descontinuado desde o iOS 5.
 
 - `autocomplete`
-
   - : Este atributo indica se o valor do controle pode ser preenchido automaticamente pelo navegador. Os valores possíveis são:
-
     - `off`: The user must explicitly enter a value into this field for every use, or the document provides its own auto-completion method; the browser does not automatically complete the entry.
     - `on`: O navegador pode concluir automaticamente o valor com base nos valores inseridos pelo usuário durante os usos anteriores.
 
@@ -89,7 +85,6 @@ Este elemento inclui os atributos globais.
 - `name`
   - : O nome do controle.
 - `placeholder`
-
   - : Uma dica para o usuário sobre o que pode ser inserido no controle. Retornos de carro ou feeds de linha no texto do espaço reservado devem ser tratados como quebras de linha ao renderizar a dica.
 
     > **Note:** **Nota: Os espaços reservados devem ser usados apenas para mostrar um exemplo do tipo de dados que deve ser inserido em um formulário; eles não substituem uma adequada** {{HTMLElement("label")}} elemento vinculado à entrada. Veja [Labels e placeholders](/pt-BR/docs/Web/HTML/Element/input#labels_and_placeholders) para uma explicação completa.
@@ -101,17 +96,13 @@ Este elemento inclui os atributos globais.
 - `rows`
   - : O número de linhas de texto visíveis para o controle.
 - `spellcheck`
-
   - : Especifica se o `<textarea>`está sujeito a verificação ortográfica pelo navegador / SO subjacente. o valor pode ser:
-
     - `true`: Indica que o elemento precisa ter sua ortografia e gramática verificadas.
     - `default` :Indica que o elemento deve agir de acordo com um comportamento padrão, possivelmente com base no próprio elemento pai `spellcheck` valor.
     - `false` : Indica que o elemento não deve ter verificação ortográfica.
 
 - `wrap`
-
   - : Indica como o controle quebra o texto. Os valores possíveis são:
-
     - `hard`: O navegador insere automaticamente quebras de linha (CR + LF) para que cada linha não tenha mais que a largura do controle; a `cols` O atributo também deve ser especificado para que isso entre em vigor.
     - `soft`: O navegador garante que todas as quebras de linha no valor consistam em um par CR + LF, mas não insira nenhuma quebra de linha adicional.
     - `off` {{non-standard_inline}}: Como `soft` mas muda a aparência para `white-space: pre` segmentos de linha que excedam `cols` não estão embrulhados e os `<textarea>` torna-se rolável horizontalmente.

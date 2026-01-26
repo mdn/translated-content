@@ -3,8 +3,6 @@ title: Groups and ranges
 slug: Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
 ---
 
-{{jsSidebar("JavaScript Guide")}}
-
 组和范围表示表达式字符的 组和范围
 
 {{InteractiveExample("JavaScript Demo: RegExp Groups and backreferences")}}
@@ -218,7 +216,6 @@ do {
 ## 参见
 
 - [正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
-
   - [字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
   - [断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
   - [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)

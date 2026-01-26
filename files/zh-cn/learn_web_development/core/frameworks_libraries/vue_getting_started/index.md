@@ -3,8 +3,6 @@ title: 开始使用 Vue
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_getting_started
 ---
 
-{{LearnSidebar}}
-
 {{NextMenu("Learn_web_development/Core/Frameworks_libraries/Vue_first_component", "Learn_web_development/Core/Frameworks_libraries")}}
 
 现在让我们介绍 Vue，我们的第三个框架。在本文中，我们将了解一点 Vue 的背景知识，了解如何安装它并创建一个新项目，研究整个项目和单个组件的高级结构，了解如何在本地运行项目，并为开始构建示例做好准备。
@@ -48,7 +46,7 @@ Vue 是一个现代 JavaScript 框架提供了有用的设施渐进增强——�
 
 ## 安装 Vue
 
-要在现有站点中使用 Vue，可以通过 [`<script>`](/zh-CN/docs/Web/HTML/Element/script) 元素在页面中使用。这使你可以开始在现有站点上使用 Vue，这就是 Vue 引以为傲的渐进式框架的原因。当使用 JQuery 这样的库将现有项目迁移到 Vue 时，这是一个很好的选择。通过这种方法，你可以使用 Vue 的许多核心功能，例如属性、自定义组件和数据管理。
+要在现有站点中使用 Vue，可以通过 [`<script>`](/zh-CN/docs/Web/HTML/Reference/Elements/script) 元素在页面中使用。这使你可以开始在现有站点上使用 Vue，这就是 Vue 引以为傲的渐进式框架的原因。当使用 JQuery 这样的库将现有项目迁移到 Vue 时，这是一个很好的选择。通过这种方法，你可以使用 Vue 的许多核心功能，例如属性、自定义组件和数据管理。
 
 - 开发环境版本（未经优化，但包含了对开发有帮助的控制台警告）
 
@@ -129,8 +127,7 @@ Done. Now run:
   - `favicon.ico`：这个是项目的图标，当前就是 Vue 的 logo。
 - `index.html`：你的 Vue 应用会从这个 HTML 页面运行。
 - `src`：这个是 Vue 应用的核心代码目录。
-
-  - `main.js`：这是应用的入口文件。目前它会初始化 Vue 应用并且制定将应用挂载到 `index.html` 文件中的哪个 HTML 元素上。通常还会做一些注册全局组件或者添额外的 Vue 库的操作。
+  - `main.js`：这是应用的入口文件。目前它会初始化 Vue 应用并且指定将应用挂载到 `index.html` 文件中的哪个 HTML 元素上。通常还会做一些注册全局组件或者添额外的 Vue 库的操作。
   - `App.vue`：这是 Vue 应用的根节点组件，往下看可以了解更多关注 Vue 组件的信息。
   - `components`：这是用来存放自定义组件的目录，目前里面只有一个示例组件。
   - `assets`：这个目录用来存放像 CSS、图片这种静态资源，但是因为它们属于代码目录下，所以可以用 webpack 来操作和处理。意思就是你可以使用一些像 [Sass/SCSS](https://sass-lang.com/) 或者 [Stylus](https://stylus-lang.com/) 这样的预处理器。
@@ -194,7 +191,7 @@ import TheWelcome from "./components/TheWelcome.vue";
 
 ## 做一些改动
 
-对应用作出第一步改动——删除 Vue logo。打开 `App.vue` 文件，在 template 部分删除 [`<img>`](/zh-CN/docs/Web/HTML/Element/img) 元素。
+对应用作出第一步改动——删除 Vue logo。打开 `App.vue` 文件，在 template 部分删除 [`<img>`](/zh-CN/docs/Web/HTML/Reference/Elements/img) 元素。
 
 ```vue
 <img

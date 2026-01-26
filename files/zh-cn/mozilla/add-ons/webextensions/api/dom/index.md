@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0c163056cfe83fba519b757f15d2e20f83eddaff
 ---
 
-{{AddonSidebar}}
-
 访问仅特殊扩展程序可用的 DOM 特性。
 
 ## 函数

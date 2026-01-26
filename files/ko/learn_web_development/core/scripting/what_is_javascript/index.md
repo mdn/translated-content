@@ -79,7 +79,7 @@ function updateName() {
 }
 ```
 
-{{ EmbedLiveSample('A_high-level_definition', '100%', 80) }}
+{{ EmbedLiveSample('A_high-level_definition', '100%', 80, , , , , 'allow-modals') }}
 
 이 마지막 버전의 텍스트 레이블을 클릭하여 어떤 일이 발생하는지 확인해 보세요. (이 데모는 GitHub에서 찾을 수 있습니다 - [소스코드](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/javascript-label.html) 또는 [실행된 모습](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html)을 확인해보세요)
 
@@ -111,7 +111,7 @@ API는 일반적으로 두 개의 범주로 나뉩니다.
   이것이 [Google 지도](https://www.google.com/maps)가 사용자의 위치를 찾아 지도에 표시하는 방법입니다.
 - {{domxref("Canvas_API","Canvas")}}와 {{domxref("WebGL_API","WebGL")}} API를 사용하면 애니메이션 2D 및 3D 그래픽을 만들 수 있습니다.
   두 웹 기술을 사용해서 만들 수 있는 놀라운 결과를 엿보려면 [Chrome Experiments](https://experiments.withgoogle.com/collection/chrome)와 [webglsamples](https://webglsamples.org/)를 방문하세요.
-- {{domxref("HTMLMediaElement")}}와 {{domxref("WebRTC API", "WebRTC")}}를 포함하는 [오디오와 비디오 API](/ko/docs/Web/Media/Audio_and_video_delivery)를 사용하면 웹 페이지에서 바로 오디오 및 비디오를 재생하거나 웹 카메라에서 비디오를 가져와 다른 사람의 컴퓨터에 표시하는 등 멀티미디어로 정말 흥미로운 작업을 할 수 있습니다. (간단한 [스냅샷 데모](https://chrisdavidmills.github.io/snapshot/)를 방문해서 감을 잡아보세요.)
+- {{domxref("HTMLMediaElement")}}와 {{domxref("WebRTC API", "WebRTC")}}를 포함하는 [오디오와 비디오 API](/ko/docs/Web/Media/Guides/Audio_and_video_delivery)를 사용하면 웹 페이지에서 바로 오디오 및 비디오를 재생하거나 웹 카메라에서 비디오를 가져와 다른 사람의 컴퓨터에 표시하는 등 멀티미디어로 정말 흥미로운 작업을 할 수 있습니다. (간단한 [스냅샷 데모](https://chrisdavidmills.github.io/snapshot/)를 방문해서 감을 잡아보세요.)
 
 > [!NOTE]
 > 위의 데모 중 상당수는 구형 브라우저에서 작동하지 않으므로 실험할 때는 Firefox, Chrome, Edge, Opera와 같은 최신 브라우저를 사용하여 코드를 실행하는 것이 좋습니다.
@@ -333,7 +333,8 @@ for (const button of buttons) {
 이 속성은 `onclick` 속성보다 약간 길 수 있지만 페이지에 있는 버튼의 수나 추가 또는 제거된 버튼의 수에 관계없이 모든 버튼에 대해 작동합니다.
 JavaScript는 변경할 필요가 없습니다.
 
-> **참고:** `apply-javascript.html` 버전을 편집하고 파일에 버튼을 몇 개 더 추가해 보세요.
+> [!NOTE]
+> `apply-javascript.html` 버전을 편집하고 파일에 버튼을 몇 개 더 추가해 보세요.
 > 브라우저를 새로고침해보면, 아무 버튼을 누르더라도 새로운 문단이 생성되는 모습을 볼 수 있습니다.
 > 멋지지 않나요?
 
@@ -365,7 +366,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 이 경우 스크립트와 HTML이 동시에 로드되어 코드가 작동합니다.
 
-> **참고:** `defer` 특성이 오류를 예방하므로, 외부 예제에서는 `DOMContentLoaded` 이벤트를 사용하지 않았습니다.
+> [!NOTE]
+> `defer` 특성이 오류를 예방하므로, 외부 예제에서는 `DOMContentLoaded` 이벤트를 사용하지 않았습니다.
 > `defer`은 외부 스크립트에서만 작동하기 때문에 내부 JavaScript 예제에서는 `defer` 솔루션을 사용하지 않았습니다.
 
 고전적인 방법은 스크립트 요소를 본문의 맨 마지막(`</body>` 태그 바로 앞)에 배치하는 것입니다. 그러면 모든 HTML을 읽은 후에 스크립트를 불러오게 됩니다.

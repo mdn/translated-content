@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **密码套件**是密钥交换算法、认证算法、大容量数据{{Glossary("cipher","加密算法")}}和消息认证码算法的组合。
 
 在 {{Glossary("TLS")}} 的{{Glossary("cryptosystem","密码系统")}}中，客户端与服务端在安全通信之前，需要协商出密码套件，一个典型的密码套件类似于 ECDHE_RSA_WITH_AES_128_GCM_SHA256 或 ECDHE-RSA-AES128-GCM-SHA256，代表着：

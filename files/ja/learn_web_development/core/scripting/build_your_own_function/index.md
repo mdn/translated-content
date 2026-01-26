@@ -236,7 +236,8 @@ btn.addEventListener("click", displayMessage());
 
 1. まず始めに、この実習に必要なアイコン（[warning](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/icons/warning.png) と [chat](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/icons/chat.png)）を GitHub からダウンロードしてください。 HTML ファイルと同じ場所にある `icons` という新しいフォルダーに保存してください。
 
-   > **メモ:** [iconfinder.com](https://www.iconfinder.com/) にある warning と chat のアイコンは [Nazarrudin Ansyari](https://www.iconfinder.com/nazarr) によってデザインされたものです。ありがとう！（実際のアイコンのページは移動か削除されています。）
+   > [!NOTE]
+   > [iconfinder.com](https://www.iconfinder.com/) にある warning と chat のアイコンは [Nazarrudin Ansyari](https://www.iconfinder.com/nazarr) によってデザインされたものです。ありがとう！（実際のアイコンのページは移動か削除されています。）
 
 2. 次に、 HTML ファイル内の CSS を探します。私たちは、アイコンの道を作るためにいくつかの変更を行います。まず `.msgBox` の幅を次のように更新します。
 
@@ -294,7 +295,7 @@ btn.addEventListener("click", displayMessage());
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 関数](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Functions)を見てください。このテストは次の記事でカバーしているスキルを求めていますので、テストの前にそちらを読むほうが良いかもしれません。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 関数](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Functions)を見てください。このテストは次の記事でカバーしているスキルを求めていますので、テストの前にそちらを読むほうが良いかもしれません。
 
 ## まとめ
 

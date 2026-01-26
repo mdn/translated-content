@@ -332,9 +332,7 @@ Si deseas contribuir a este documento, edita también [el artículo original](/e
 - UnicodeBinaryPropertyName
   - : El nombre de una [propiedad binaria](https://tc39.es/ecma262/#table-binary-unicode-properties). Por ejemplo: [`ASCII`](https://unicode.org/reports/tr18/#General_Category_Property), [`Alpha`](https://unicode.org/reports/tr44/#Alphabetic), `Math`, [`Diacrítica`](https://unicode.org/reports/tr44/#Diacritic), [`Emoji`](https://unicode.org/reports/tr51/#Emoji_Properties), [`Hex_Digit`](https://unicode.org/reports/tr44/#Hex_Digit), `Math`, [`Espacio_blanco`](https://unicode.org/reports/tr44/#White_Space), etc. Consulta [Unicode Data PropList.txt](https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt) para obtener más información.
 - UnicodePropertyName
-
   - : El nombre de una propiedad [no binaria](https://tc39.es/ecma262/#table-nonbinary-unicode-properties):
-
     - [General_Category](https://unicode.org/reports/tr18/#General_Category_Property) (`gc`)
     - [Script](https://unicode.org/reports/tr24/#Script) (`sc`)
     - [Script_Extensions](https://unicode.org/reports/tr24/#Script_Extensions) (`scx`)

@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
-**`getHighEntropyValues()`** は {{domxref("NavigatorUAData")}} インターフェイスのメソッドで、ユーザーエージェントが返す _高エントロピー_ 値を格納した辞書オブジェクトで解決される {{jsxref("Promise")}} を返し案す。
+**`getHighEntropyValues()`** は {{domxref("NavigatorUAData")}} インターフェイスのメソッドで、ユーザーエージェントが返す _高エントロピー_ 値を格納した辞書オブジェクトで解決される {{jsxref("Promise")}} を返します。
 
 > [!NOTE]
 > 「高エントロピー」「低エントロピー」という用語は、これらの値がブラウザーについて明らかにする情報の量を示します。
@@ -25,9 +25,7 @@ getHighEntropyValues(hints)
 ### 引数
 
 - `hints`
-
   - : 返すべきヒントを格納した配列で、 1 つまたは複数を指定します。
-
     - `"architecture"`
     - `"bitness"`
     - `"formFactor"`

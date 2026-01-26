@@ -18,9 +18,7 @@ var gamepadEvent = new GamepadEvent(typeArg, options)
 - _typeArg_
   - : 一个 {{domxref("DOMString")}} ，必须为 `gamepadconnected` 或 `gamepaddisconnected`。
 - _options_ {{optional_inline}}
-
   - : 选项如下所示：
-
     - `gamepad`: 一个 {{domxref("Gamepad")}} 实例，描述了与事件相关的控制器（对象）。
 
 ## 规范

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP **`402 Payment Required`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼是一個**非標準**的回應狀態碼，保留供未來使用。
 

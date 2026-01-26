@@ -147,7 +147,7 @@ var max = Math.max.apply(null, nombres);
 var min = Math.min.apply(null, nombres);
 
 /* vs. algorithme trivial avec une boucle */
-(max = -Infinity), (min = +Infinity);
+((max = -Infinity), (min = +Infinity));
 
 for (var i = 0; i < nombres.length; i++) {
   if (nombres[i] > max) max = nombres[i];

@@ -1,17 +1,14 @@
 ---
 title: stroke-dashoffset
 slug: Web/SVG/Reference/Attribute/stroke-dashoffset
-original_slug: Web/SVG/Attribute/stroke-dashoffset
 l10n:
-  sourceCommit: 005cc1fd55aadcdcbd9aabbed7d648a275f8f23a
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{SVGRef}}
 
 **`stroke-dashoffset`** 属性は、関連する破線をレンダリングするうえで、オフセットを定義するプレゼンテーション属性です。
 
 > [!NOTE]
-> プレゼンテーション属性である `stroke-dashoffset` は、CSS プロパティとして使用することができます。
+> プレゼンテーション属性であるため、 `stroke-dashoffset` には対応する CSS プロパティ {{cssxref("stroke-dashoffset")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
 
 この属性は以下の SVG 要素で使用することができます。
 
@@ -135,3 +132,7 @@ svg {
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- CSS の {{cssxref("stroke-dashoffset")}} プロパティ

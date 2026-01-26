@@ -10,7 +10,6 @@ Essas palavras-chave definem se um elemento gera caixas de exibição.
 ## Sintaxe
 
 - `contents` {{Experimental_Inline}}
-
   - : Esses elementos não produzem uma caixa específica por si mesmos. Eles são substituídos por sua pseudo-caixa e suas caixas filho. Observe que a especificação CSS Display Level 3 define como o `contents`
 
     o valor deve afetar "elementos incomuns" - elementos que não são renderizados apenas pelos conceitos da caixa CSS, como elementos substituídos. Consulte o Apêndice B: Efeitos da exibição: conteúdo em Elementos incomuns para obter mais detalhes.
@@ -96,7 +95,6 @@ As implementações atuais na maioria dos navegadores removerão da árvore de a
 ## Veja também
 
 - {{CSSxRef("display")}}
-
   - {{CSSxRef("&lt;display-outside&gt;")}}
   - {{CSSxRef("&lt;display-inside&gt;")}}
   - {{CSSxRef("&lt;display-listitem&gt;")}}

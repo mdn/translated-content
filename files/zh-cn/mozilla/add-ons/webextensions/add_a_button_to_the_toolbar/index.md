@@ -3,7 +3,7 @@ title: Add a button to the toolbar
 slug: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
 ---
 
-{{AddonSidebar}}工具栏按钮是 webextensions 的一种主要 UI 组件，它在浏览器的工具栏中作为图标显示。当用户点击图标时，就会发生下面两种事件中的一样：
+工具栏按钮是 webextensions 的一种主要 UI 组件，它在浏览器的工具栏中作为图标显示。当用户点击图标时，就会发生下面两种事件中的一样：
 
 - 如果按钮有弹出菜单，则显示该弹出。弹出菜单是一个临时对话，它必须使用 HTML，CSS，JavaScript 语言表示。
 - 如果没有弹出菜单，则生成一个单击事件，你可以在代码中监听该事件并执行其他响应。
@@ -198,7 +198,6 @@ button/
 - [`browser_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) manifest key
 - [`browserAction`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) API
 - Browser action examples:
-
   - [beastify](https://github.com/mdn/webextensions-examples/tree/main/beastify)
   - [Bookmark it!](https://github.com/mdn/webextensions-examples/tree/main/bookmark-it)
   - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/main/favourite-colour)
@@ -208,5 +207,4 @@ button/
 - [`page_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key
 - [`pageAction`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API
 - Page action examples:
-
   - [chill-out](https://github.com/mdn/webextensions-examples/tree/main/chill-out)

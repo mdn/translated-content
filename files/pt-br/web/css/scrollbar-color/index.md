@@ -34,7 +34,6 @@ scrollbar-color: unset;
 ### Valores
 
 - `<scrollbar-color>`
-
   - : Define a cor da scrollbar.
 
     | `auto`            | Valor padrão de renderização do background da scrollbar (Track), caso não sejam definidos outros valores.                   |

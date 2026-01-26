@@ -105,7 +105,7 @@ Portanto, parte do código está implementando a funcionalidade de cada bibliote
 
 O documento HTML gerado carrega o arquivo JavaScript e grava stdout em um {{htmlelement("textarea")}}. Se o aplicativo usar OpenGL, o HTML também conterá um elemento {{htmlelement("canvas")}} usado como destino de renderização. É muito fácil modificar a saída do Emscripten e transformá-la em qualquer aplicativo da web que você precisar.
 
-Você pode encontrar a documentação completa em Emscripten em [emscripten.org](http://emscripten.org), e um guia para implementar a cadeia de ferramentas e compilar seu próprio aplicativo C/C ++ no wasm em [Compiling from C/C++ to WebAssembly](/pt-BR/docs/WebAssembly/C_to_Wasm).
+Você pode encontrar a documentação completa em Emscripten em [emscripten.org](http://emscripten.org), e um guia para implementar a cadeia de ferramentas e compilar seu próprio aplicativo C/C ++ no wasm em [Compiling from C/C++ to WebAssembly](/pt-BR/docs/WebAssembly/Guides/C_to_Wasm).
 
 ### Escrevendo WebAssembly diretamente
 
@@ -132,4 +132,4 @@ Este artigo apresentou a você uma explicação sobre o que é o WebAssembly, po
 - [WebAssembly articles on Mozilla Hacks blog](https://hacks.mozilla.org/category/webassembly/)
 - [WebAssembly on Mozilla Research](https://research.mozilla.org/webassembly/)
 - [Loading and running WebAssembly code](/pt-BR/docs/WebAssembly/Loading_and_running) — descubra como carregar seu próprio módulo WebAssembly numa página web.
-- [Using the WebAssembly JavaScript API](/pt-BR/docs/WebAssembly/Using_the_JavaScript_API) — descubra como utilizar outras características importantes do WebAssembly JavaScript API.
+- [Using the WebAssembly JavaScript API](/pt-BR/docs/WebAssembly/Guides/Using_the_JavaScript_API) — descubra como utilizar outras características importantes do WebAssembly JavaScript API.

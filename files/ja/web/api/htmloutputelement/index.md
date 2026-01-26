@@ -16,13 +16,13 @@ _このインターフェイスには、親である {{domxref("HTMLElement")}} 
 - {{domxref("HTMLOutputElement.defaultValue")}}
   - : 文字列で、要素の既定値を表します。初期値は空文字列です。
 - {{domxref("HTMLOutputElement.form")}} {{ReadOnlyInline}}
-  - : {{domxref("HTMLFormElement")}} で、コントロールに関連付けられたフォームを表し、定義されていれば HTML の [`form`](/ja/docs/Web/HTML/Element/output#form) 属性を反映します。
+  - : {{domxref("HTMLFormElement")}} で、コントロールに関連付けられたフォームを表し、定義されていれば HTML の [`form`](/ja/docs/Web/HTML/Reference/Elements/output#form) 属性を反映します。
 - {{domxref("HTMLOutputElement.htmlFor")}} {{ReadOnlyInline}}
-  - : {{domxref("DOMTokenList")}} で、HTML の [`for`](/ja/docs/Web/HTML/Element/output#for) 要素を反映し、計算値の `value` に寄与する（または他の形で影響する）同じ文書内の他の要素の ID のリストが入ります。
+  - : {{domxref("DOMTokenList")}} で、HTML の [`for`](/ja/docs/Web/HTML/Reference/Elements/output#for) 要素を反映し、計算値の `value` に寄与する（または他の形で影響する）同じ文書内の他の要素の ID のリストが入ります。
 - {{domxref("HTMLOutputElement.labels")}} {{ReadOnlyInline}}
   - : {{domxref("NodeList")}} で、この要素に関連付けられた {{HTMLElement("label")}} 要素です。
 - {{domxref("HTMLOutputElement.name")}}
-  - : 文字列で、 HTML の [`name`](/ja/docs/Web/HTML/Element/output#name) 属性を反映し、フォームデータと共に送信されるコントロールの名前が入ります。
+  - : 文字列で、 HTML の [`name`](/ja/docs/Web/HTML/Reference/Elements/output#name) 属性を反映し、フォームデータと共に送信されるコントロールの名前が入ります。
 - {{domxref("HTMLOutputElement.type")}} {{ReadOnlyInline}}
   - : 文字列で "`output`" です。
 - {{domxref("HTMLOutputElement.validationMessage")}} {{ReadOnlyInline}}
@@ -41,7 +41,6 @@ _このインターフェイスには、親である {{domxref("HTMLElement")}} 
 - {{domxref("HTMLOutputElement.checkValidity()")}}
   - : 要素の妥当性をチェックし、チェック結果を論理値で返します。
 - {{domxref("HTMLOutputElement.reportValidity()")}}
-
   - : このメソッドは、もしあれば、要素の制約に関する問題をユーザーに報告します。問題があれば、要素上で {{domxref("HTMLInputElement/invalid_event", "invalid")}} イベントを発生させ、 `false` を返します。問題がなければ `true` を返します。
 
     問題が報告された場合、ユーザーエージェントは要素にフォーカスを移し、文書のスクロール位置を変更したり、他の動作を行ったりして要素にユーザーの関心を集めることがあります。この要素に複数の問題が同時に発生した場合、ユーザーエージェントは複数の制約検証を報告することがあります。要素が表示されない場合、ユーザーエージェントはユーザーに通知する代わりに実行中のスクリプトにエラーを報告することがあります。

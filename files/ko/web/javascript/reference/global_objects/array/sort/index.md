@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.sort()
+short-title: sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 ---
 
@@ -9,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 
 정렬 속도와 복잡도는 각 구현방식에 따라 다를 수 있습니다.
 
-{{InteractiveExample("JavaScript Demo: Array.sort()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.sort()")}}
 
 ```js interactive-example
 const months = ["March", "Jan", "Feb", "Dec"];

@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/DNT
 original_slug: Web/HTTP/Headers/DNT
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de requisição **`DNT`** (**D**o **N**ot **T**rack) indica a preferência do usuário de permitir ser "seguido". Ele indica se o usuário prefere privacidade ao invés de conteúdo personalizado.
 
 <table class="properties">
@@ -61,6 +59,5 @@ navigator.doNotTrack; // "0" or "1"
 - [What Does the "Track" in "Do Not Track" Mean? – EFF](https://www.eff.org/deeplinks/2011/02/what-does-track-do-not-track-mean)
 - [donottrack.us](https://donottrack.us/)
 - Ajuda das configurações DNT dos navegadores:
-
   - [Firefox](https://www.mozilla.org/pt-BR/firefox/dnt/)
   - [Chrome](https://support.google.com/chrome/answer/2790761)

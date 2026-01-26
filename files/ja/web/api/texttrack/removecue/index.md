@@ -29,7 +29,8 @@ removeCue(cue)
 - `NotFoundError` {{domxref("DOMException")}}
   - : 指定されたキューがキューのリストに見つからなかった場合に発生します。
 
-> **メモ:** {{domxref("TextTrackCue")}} インターフェイスは、 {{domxref("VTTCue")}} などの他のキューインターフェイスの親クラスとして使用される抽象的なクラスです。したがって、キューを追加する場合は `TextTrackCue` を継承したキュー型のいずれかを使用することになります。
+> [!NOTE]
+> {{domxref("TextTrackCue")}} インターフェイスは、 {{domxref("VTTCue")}} などの他のキューインターフェイスの親クラスとして使用される抽象的なクラスです。したがって、キューを追加する場合は `TextTrackCue` を継承したキュー型のいずれかを使用することになります。
 
 ## 例
 

@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`style`** は {{domxref("SVGElement")}} の読み取り専用プロパティで、要素のインラインスタイルを、動的な {{domxref("CSSStyleDeclaration")}} オブジェクトの形で返します。このオブジェクトはその要素のすべてのスタイルプロパティの一覧を含み、要素のインラインの [`style`](/ja/docs/Web/HTML/Global_attributes/style) 属性で定義されている属性にのみ値が割り当てられています。
+**`style`** は {{domxref("SVGElement")}} の読み取り専用プロパティで、要素のインラインスタイルを、動的な {{domxref("CSSStyleDeclaration")}} オブジェクトの形で返します。このオブジェクトはその要素のすべてのスタイルプロパティの一覧を含み、要素のインラインの [`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style) 属性で定義されている属性にのみ値が割り当てられています。
 
 一括指定プロパティは展開されます。`style="border-top: 1px solid black"` と設定すると、代わりに個別指定プロパティ ({{cssxref("border-top-color")}}, {{cssxref("border-top-style")}}, {{cssxref("border-top-width")}}) が設定されます。
 

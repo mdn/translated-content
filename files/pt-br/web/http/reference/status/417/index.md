@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/417
 original_slug: Web/HTTP/Status/417
 ---
 
-{{HTTPSidebar}}
-
 O codigo de erro de cliente HTTP **`417 Expectation Failed`** indica que a expectativa enviada no cabeçalho da requisição {{HTTPHeader("Expect")}} não foi suprida.
 
 Veja o cabeçalho {{HTTPHeader("Expect")}} para mais detalhes.

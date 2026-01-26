@@ -3,8 +3,6 @@ title: 权限策略
 slug: Web/HTTP/Guides/Permissions_Policy
 ---
 
-{{HTTPSidebar}}
-
 **权限策略**为网站开发人员提供了明确声明哪些特性可以或不可以在网站上使用的机制。定义一组“策略”，限制网站代码可以访问哪些 API，或者修改浏览器对某些特性的默认行为。这使你能够执行最佳做法（即使是在代码库的发展过程中），也可以更安全地编排第三方内容。
 
 权限策略与{{Glossary("CSP","内容安全策略")}}相似，但是它控制的是特性而非安全行为。
@@ -38,7 +36,7 @@ slug: Web/HTTP/Guides/Permissions_Policy
 权限策略提供两种指定策略的方法：
 
 - {{httpheader("Permissions-Policy")}} HTTP 标头，控制收到的响应和页面内任何嵌入的内容（包括 {{htmlelement("iframe")}}）。
-- {{htmlelement("iframe")}} 的 [`allow`](/zh-CN/docs/Web/HTML/Element/iframe#attributes) 属性，控制在特定 {{htmlelement("iframe")}} 中使用的特性。
+- {{htmlelement("iframe")}} 的 [`allow`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#attributes) 属性，控制在特定 {{htmlelement("iframe")}} 中使用的特性。
 
 这些是独立的，但又是相关的——详见[嵌入式内容的继承策略](#嵌入式内容的继承策略)。
 
@@ -94,7 +92,8 @@ slug: Web/HTTP/Guides/Permissions_Policy
 ("https://example.com" "https://a.example.com" "https://b.example.com" "https://c.example.com")
 ```
 
-> **备注：** `"https://*.example.com"` 不匹配 `"https://example.com"`。
+> [!NOTE]
+> `"https://*.example.com"` 不匹配 `"https://example.com"`。
 
 允许列表示例：
 

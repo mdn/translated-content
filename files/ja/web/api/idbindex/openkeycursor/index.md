@@ -13,7 +13,8 @@ l10n:
 
 キー範囲が指定されないか `null` の場合は、範囲は全レコードを含みます。
 
-> **メモ:** `openKeyCursor()` が返すカーソルは、[`IDBIndex.openCursor`](/ja/docs/Web/API/IDBIndex/openCursor) とは違い、参照される値を用意しません。
+> [!NOTE]
+> `openKeyCursor()` が返すカーソルは、[`IDBIndex.openCursor`](/ja/docs/Web/API/IDBIndex/openCursor) とは違い、参照される値を用意しません。
 > これにより、キーのリストをより効率よく得ることができます。
 
 {{AvailableInWorkers}}

@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 
 静的な **`Reflect.construct()`** メソッドは {{jsxref("Operators/new", "new")}} 演算子のように、ただし関数として動作します。これは `new target(...args)` の呼び出しと同等です。このメソッドはオプションを追加することで、別なプロトタイプを指定することができます。
 
-{{InteractiveExample("JavaScript Demo: Reflect.construct()", "taller")}}
+{{InteractiveExample("JavaScript デモ: Reflect.construct()", "taller")}}
 
 ```js interactive-example
 function func1(a, b, c) {

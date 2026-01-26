@@ -3,8 +3,6 @@ title: font-size
 slug: Web/CSS/font-size
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad `font-size` especifica la dimensión de la letra. Este tamaño puede, a su vez, alterar el aspecto de alguna otra cosa, ya que se usa para calcular la longitud de las unidades `em` y `ex`.

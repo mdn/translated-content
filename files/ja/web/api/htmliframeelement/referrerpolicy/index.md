@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef}}
 
-**`HTMLIFrameElement.referrerPolicy`** プロパティは HTML の {{HTMLElement("iframe")}} 要素の [`referrerpolicy`](/ja/docs/Web/HTML/Element/iframe#referrerpolicy) 属性を反映し、リソースの取得時にどのリファラーを送信するかを定義します。
+**`HTMLIFrameElement.referrerPolicy`** プロパティは HTML の {{HTMLElement("iframe")}} 要素の [`referrerpolicy`](/ja/docs/Web/HTML/Reference/Elements/iframe#referrerpolicy) 属性を反映し、リソースの取得時にどのリファラーを送信するかを定義します。
 
 ## 値
 
@@ -22,13 +22,12 @@ l10n:
 - `origin-when-cross-origin`
   - : 同一オリジンリクエストを行う場合は完全な URL を送信し、それ以外の場合は文書のオリジンのみを送信します。
 - `same-origin`
-  - : リファラーは[同一サイトオリジン](/ja/docs/Web/Security/Same-origin_policy)には送信されますが、オリジン間リクエストではリファラー情報が送信されません。
+  - : リファラーは[同一サイトオリジン](/ja/docs/Web/Security/Defenses/Same-origin_policy)には送信されますが、オリジン間リクエストではリファラー情報が送信されません。
 - `strict-origin`
   - : プロトコルのセキュリティレベルが変わらない場合（例: HTTPS→HTTPS）だけ、文書のオリジンをリファラーとして送信し、セキュリティレベルの低い宛先（例: HTTPS→HTTP）には送信しないようにします。
 - `strict-origin-when-cross-origin` (default)
   - : これは、ポリシーが指定されていない場合のユーザーエージェントの既定の動作です。同一オリジンリクエストを行う場合は完全な URL を送信し、プロトコルのセキュリティレベルが変わらない場合はオリジンのみを送信し（例: HTTPS→HTTPS）、セキュリティレベルの低い宛先にはヘッダーを送信しません（例: HTTPS→HTTP）。
 - `unsafe-url`
-
   - : 同一オリジンまたはオリジン間リクエストを実行するときに、完全な URL を送信します。
 
     > [!NOTE]

@@ -33,7 +33,7 @@ MediaStream Recording API 사용하기 문서에서는 하드웨어 장치로 �
 </div>
 ```
 
-두 개의 열로 구성된 메인 인터페이스를 보여줍니다. 왼쪽에는 시작 버튼과 {{HTMLElement("video")}} 요소가 배치되어 있는데, 이 요소는 사용자 카메라에서 촬영하는 영상을 미리 보여줍니다. 스트림이 카메라에서 도착하는 즉시 영상이 표시되도록 [`autoplay`](/ko/docs/Web/HTML/Element/video#autoplay) 속성을 사용하며, [`muted`](/ko/docs/Web/HTML/Element/video#muted) 속성을 지정해 사용자의 마이크 소리가 스피커로 출력되어 피드백 루프가 발생하지 않도록 합니다.
+두 개의 열로 구성된 메인 인터페이스를 보여줍니다. 왼쪽에는 시작 버튼과 {{HTMLElement("video")}} 요소가 배치되어 있는데, 이 요소는 사용자 카메라에서 촬영하는 영상을 미리 보여줍니다. 스트림이 카메라에서 도착하는 즉시 영상이 표시되도록 [`autoplay`](/ko/docs/Web/HTML/Reference/Elements/video#autoplay) 속성을 사용하며, [`muted`](/ko/docs/Web/HTML/Reference/Elements/video#muted) 속성을 지정해 사용자의 마이크 소리가 스피커로 출력되어 피드백 루프가 발생하지 않도록 합니다.
 
 ```html
 <div class="right">
@@ -44,7 +44,7 @@ MediaStream Recording API 사용하기 문서에서는 하드웨어 장치로 �
 </div>
 ```
 
-오른쪽에는 중지 버튼과 녹화된 영상을 재생할 `<video>` 요소가 있습니다. 재생 패널에는 autoplay 속성이 없어서 미디어가 도착하자마자 자동 재생되지 않으며, [`controls`](/ko/docs/Web/HTML/Element/video#controls) 속성이 지정되어 있어 사용자가 재생, 일시 정지 등 다양한 조작을 할 수 있습니다.
+오른쪽에는 중지 버튼과 녹화된 영상을 재생할 `<video>` 요소가 있습니다. 재생 패널에는 autoplay 속성이 없어서 미디어가 도착하자마자 자동 재생되지 않으며, [`controls`](/ko/docs/Web/HTML/Reference/Elements/video#controls) 속성이 지정되어 있어 사용자가 재생, 일시 정지 등 다양한 조작을 할 수 있습니다.
 
 재생 요소 아래에는 녹화된 비디오를 다운로드할 수 있는 버튼이 있습니다.
 
@@ -242,9 +242,9 @@ startButton.addEventListener(
 - {{domxref("MediaDevices.getUserMedia")}}를 호출하여 비디오와 오디오 트랙이 모두 포함된 새로운 {{domxref("MediaStream")}}을 요청합니다. 이것이 우리가 녹화할 스트림입니다.
 - `getUserMedia()`가 반환한 프로미스가 이행되면 {{HTMLElement("video")}} 요소의 {{domxref("HTMLMediaElement.srcObject","srcObject")}} 속성이 입력 스트림으로 설정되어, 사용자의 카메라에서 캡처되는 영상이 미리보기 상자에 표시됩니다. `<video>` 요소가 음소거되어 있으므로 오디오는 재생되지 않습니다. 이후 "Download" 버튼의 링크도 해당 스트림을 참조하도록 설정됩니다. 그리고 Firefox에서는 {{domxref("HTMLMediaElement.captureStream()")}} 메서드에 접두어가 붙어 있기 때문에, `preview.captureStream()`이 `preview.mozCaptureStream()`을 호출하도록 조정합니다. 마지막으로, 미리보기 오디오가 재생되기 시작하면 이행되는 새로운 {{jsxref("Promise")}}가 생성되어 반환됩니다.
 - 미리보기 비디오가 재생되기 시작하면, 녹화할 미디어가 준비되었음을 알 수 있으므로, 앞서 생성한 [`startRecording()`](#미디어_녹화_시작) 함수를 호출합니다. 이때 미리보기 비디오 스트림(녹화할 소스 미디어)과 녹화할 시간(밀리초 단위)을 나타내는 `recordingTimeMS`를 인자로 전달합니다. 앞서 언급한 대로, `startRecording()` 함수는 녹화가 완료되면 녹화된 미디어 데이터 청크를 담은 {{domxref("Blob")}} 객체 배열을 인자로 받아 이행 핸들러를 실행하는 {{jsxref("Promise")}}를 반환합니다.
-- 녹화 과정의 이행 핸들러는 `recordedChunks`라는 변수에 담긴 미디어 데이터 `Blob` 배열을 입력값으로 받습니다. 먼저, {{domxref("Blob.Blob", "Blob()")}} 생성자가 객체 배열을 하나의 객체로 이어 붙인다는 점을 활용하여, 이 청크들을 MIME 타입이 `"video/webm"`인 {{domxref("Blob")}}으로 병합합니다. 그다음, {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}을 사용해 blob을 참조하는 URL을 생성하고, 이 URL을 녹화된 비디오 재생 요소의 [`src`](/ko/docs/Web/HTML/Element/video#src) 속성과 다운로드 버튼의 링크 대상으로 지정합니다.
+- 녹화 과정의 이행 핸들러는 `recordedChunks`라는 변수에 담긴 미디어 데이터 `Blob` 배열을 입력값으로 받습니다. 먼저, {{domxref("Blob.Blob", "Blob()")}} 생성자가 객체 배열을 하나의 객체로 이어 붙인다는 점을 활용하여, 이 청크들을 MIME 타입이 `"video/webm"`인 {{domxref("Blob")}}으로 병합합니다. 그다음, {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}을 사용해 blob을 참조하는 URL을 생성하고, 이 URL을 녹화된 비디오 재생 요소의 [`src`](/ko/docs/Web/HTML/Reference/Elements/video#src) 속성과 다운로드 버튼의 링크 대상으로 지정합니다.
 
-  그런 다음 다운로드 버튼의 [`download`](/ko/docs/Web/HTML/Element/a#download) 속성이 설정됩니다. `download` 속성은 불리언 값도 될 수 있지만, 문자열로 설정하여 다운로드되는 파일의 이름으로 사용할 수도 있습니다. 따라서 다운로드 링크의 `download` 속성을 "RecordedVideo.webm"으로 지정하면, 버튼을 클릭했을 때 그 내용이 녹화된 비디오인 `"RecordedVideo.webm"` 파일이 다운로드되도록 브라우저에 지시하는 것입니다.
+  그런 다음 다운로드 버튼의 [`download`](/ko/docs/Web/HTML/Reference/Elements/a#download) 속성이 설정됩니다. `download` 속성은 불리언 값도 될 수 있지만, 문자열로 설정하여 다운로드되는 파일의 이름으로 사용할 수도 있습니다. 따라서 다운로드 링크의 `download` 속성을 "RecordedVideo.webm"으로 지정하면, 버튼을 클릭했을 때 그 내용이 녹화된 비디오인 `"RecordedVideo.webm"` 파일이 다운로드되도록 브라우저에 지시하는 것입니다.
 
 - 녹화된 미디어의 크기와 형식은 두 비디오와 다운로드 버튼 아래의 로그 영역에 출력됩니다.
 - 모든 `Promise`의 `catch()`는 우리의 `log()` 함수를 호출하여 오류를 로그 영역에 출력합니다.

@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint32
 
 **`getUint32()`** メソッドは、符号なし 32 ビット整数 (unsigned long) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置から読み取ります。
 
-{{InteractiveExample("JavaScript Demo: DataView.getUint32()")}}
+{{InteractiveExample("JavaScript デモ: DataView.getUint32()")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

@@ -1,17 +1,14 @@
 ---
 title: 操作可能
 slug: Web/Accessibility/Guides/Understanding_WCAG/Operable
-original_slug: Web/Accessibility/Understanding_WCAG/Operable
 l10n:
-  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
-
-{{AccessibilitySidebar}}
 
 この記事では、ウェブコンテンツ・アクセシビリティガイドライン（WCAG）2.0 および 2.1 の**操作可能**原則に概説されている達成基準に準拠するようにウェブコンテンツを作成する方法についての実用的なアドバイスを提供します。 操作可能とは、ユーザーインターフェイス・コンポーネントとナビゲーションが操作可能でなければならないということです。
 
 > [!NOTE]
-> 操作可能の W3C の定義とそのガイドラインおよび達成基準を読むには、[原則 2: 操作可能 — ユーザーインターフェイス・コンポーネントとナビゲーションが操作可能でなければならない](https://www.w3.org/TR/WCAG21/#operable)（英語）を参照してください。
+> 操作可能の W3C の定義とそのガイドラインおよび達成基準を読むには、[原則 2: 操作可能 — ユーザーインターフェイス・コンポーネントとナビゲーションが操作可能でなければならない](https://w3c.github.io/wcag/guidelines/22/#operable)（英語）を参照してください。
 
 ## ガイドライン 2.1 — キーボードアクセス可能: キーボードから全ての機能を利用可能にする
 
@@ -33,10 +30,10 @@ l10n:
         可能な限り組み込みのコントロールを使用するべきで（例えば、フォームコントロール間のタブ移動）、必要な場合にのみカスタム機能を組み込むべきです。
       </td>
       <td>
-        <a href="/ja/docs/Learn/Accessibility/HTML#ui_コントロール"
-          >UI コントロール</a
+        <a href="/ja/docs/Learn_web_development/Core/Accessibility/HTML#可能であれば意味のある_ui_コントロールを使う"
+          >可能な限り意味づけされた UI コントロールを使用する</a
         >と<a
-          href="/ja/docs/Learn/Accessibility/HTML#キーボードアクセシビリティを呼び戻すように盛り込む"
+          href="/ja/docs/Learn_web_development/Core/Accessibility/HTML#キーボードアクセシビリティを呼び戻すように盛り込む"
           >キーボードアクセシビリティを呼び戻すように盛り込む</a
         >を参照してください。
       </td>
@@ -45,7 +42,7 @@ l10n:
       <td>2.1.2 キーボードを閉じ込めない (A)</td>
       <td>
         <p>
-          キーボードを使用してある機能のセクションに入るときは、キーボード*のみ*を使用してそのセクションから再び出ることができるべきです。 例えば、フォーカスのあるボタンの上で <kbd>Enter</kbd> / <kbd>Return</kbd> を押してオプションウィンドウを開いたら、キーボードを使ってそのウィンドウを再び閉じてメインコンテンツに戻ることができるようにすべきです。
+          キーボードを使用してある機能のセクションに入るときは、キーボード<em>のみ</em>を使用してそのセクションから再び出ることができるべきです。 例えば、フォーカスのあるボタンの上で <kbd>Enter</kbd> / <kbd>Return</kbd> を押してオプションウィンドウを開いたら、キーボードを使ってそのウィンドウを再び閉じてメインコンテンツに戻ることができるようにすべきです。
         </p>
         <p>
           キーボードユーザーをアプリの特定のセクションに閉じ込めないようにするために、これは非常に重要です。
@@ -56,13 +53,13 @@ l10n:
     <tr>
       <td>2.1.3 キーボード — 全機能 (AAA)</td>
       <td>
-        これは、基準 2.1.1 を超えるさらなる段階です。 AAA 準拠を達成するためには、全ての機能はキーボード操作を使用してアクセス可能であるべきです。例外はありません。
+        これは、基準 2.1.1 を超えるさらなる段階です。 AAA 準拠を達成するためには、全ての機能がキーボード操作を使用してアクセス可能であるべきです。例外はありません。
       </td>
       <td>
-        <a href="/ja/docs/Learn/Accessibility/HTML#ui_コントロール"
-          >UI コントロール</a
+        <a href="/ja/docs/Learn_web_development/Core/Accessibility/HTML#可能であれば意味のある_ui_コントロールを使う"
+          >可能な限り意味づけされた UI コントロールを使用する</a
         >と<a
-          href="/ja/docs/Learn/Accessibility/HTML#キーボードアクセシビリティを呼び戻すように盛り込む"
+          href="/ja/docs/Learn_web_development/Core/Accessibility/HTML#キーボードアクセシビリティを呼び戻すように盛り込む"
           >キーボードアクセシビリティを呼び戻すように盛り込む</a
         >を参照してください。
       </td>
@@ -70,11 +67,6 @@ l10n:
     <tr>
       <td>
         2.1.4 文字キーショートカット (A)
-        <em
-          ><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
-            >2.1 で追加</a
-          ></em
-        >（英語）
       </td>
       <td>
         単一文字キーショートカットが存在する場合は、単一文字キーショートカットをオフにするか、再マップするか、関連するユーザーインターフェイス・コンポーネントにフォーカスがあるときにのみアクティブにするか、いずれか一つ以上ができるようにします。
@@ -89,7 +81,8 @@ l10n:
   </tbody>
 </table>
 
-> **メモ:** [ガイドライン 2.1: キーボードアクセス可能: キーボードから全ての機能を利用可能にする](https://www.w3.org/TR/WCAG21/#keyboard-accessible)（英語）に関する WCAG の説明も参照してください。
+> [!NOTE]
+> [ガイドライン 2.1: キーボードアクセス可能: キーボードから全ての機能を利用可能にする](https://w3c.github.io/wcag/guidelines/22/#keyboard-accessible)（英語）に関する WCAG の説明も参照してください。
 
 ## ガイドライン 2.2 — 十分な時間: コンテンツを読んで使用するのに十分な時間をユーザーに提供する
 
@@ -152,11 +145,6 @@ l10n:
     <tr>
       <td>
         2.2.6 タイムアウト (AAA)
-        <em
-          ><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
-            >2.1 で追加</a
-          ></em
-        >（英語）
       </td>
       <td>
         <p>
@@ -172,7 +160,8 @@ l10n:
   </tbody>
 </table>
 
-> **メモ:** [ガイドライン 2.2: 十分な時間: コンテンツを読んで使用するのに十分な時間をユーザーに提供する](https://www.w3.org/TR/WCAG21/#enough-time)（英語）に関する WCAG の説明も参照してください。
+> [!NOTE]
+> [ガイドライン 2.2: 十分な時間: コンテンツを読んで使用するのに十分な時間をユーザーに提供する](https://w3c.github.io/wcag/guidelines/22/#enough-time)（英語）に関する WCAG の説明も参照してください。
 
 ## ガイドライン 2.3 — 発作と身体的反応: 発作や身体的反応を引き起こすことが知られている方法でコンテンツをデザインしないでください
 
@@ -189,7 +178,7 @@ l10n:
   <tbody>
     <tr>
       <td>2.3.1 点滅は 3 回、またはしきい値未満にする (A)</td>
-      <td>コンテンツには、1 秒間に 3 回以上点滅する局面がないか、または点滅するコンテンツが受け入れられる<a href="https://www.w3.org/TR/WCAG20/#general-thresholddef">点滅および赤色点滅のしきい値</a>を下回るようにする。</td>
+      <td>コンテンツには、1 秒間に 3 回以上点滅する局面がないか、または点滅するコンテンツが受け入れられる<a href="https://w3c.github.io/wcag/guidelines/22/#dfn-general-flash-and-red-flash-thresholds">点滅および赤色点滅のしきい値</a>を下回るようにする。</td>
       <td></td>
     </tr>
     <tr>
@@ -198,14 +187,15 @@ l10n:
       <td></td>
     </tr>
     <tr>
-      <td>2.3.3 操作によるアニメーション (AAA) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">2.1 で追加</a></em>（英語）</td>
+      <td>2.3.3 操作によるアニメーション (AAA)</td>
       <td>ユーザーが操作によるアニメーションを無効にできるようにする（アニメーションが必須でない限り）。</td>
-      <td><a href="https://www.w3.org/TR/WCAG21/#animation-from-interactions">操作によるアニメーションを理解する</a>（英語）</td>
+      <td><a href="https://w3c.github.io/wcag/guidelines/22/#animation-from-interactions">操作によるアニメーションを理解する</a>（英語）</td>
     </tr>
   </tbody>
 </table>
 
-> **メモ:** [ガイドライン 2.3: 発作と身体的反応: 発作や身体的反応を引き起こすことが知られている方法でコンテンツをデザインしないでください](https://www.w3.org/TR/WCAG21/#seizures-and-physical-reactions)（英語）に関する WCAG の説明も参照してください。
+> [!NOTE]
+> [ガイドライン 2.3: 発作と身体的反応: 発作や身体的反応を引き起こすことが知られている方法でコンテンツをデザインしないでください](https://w3c.github.io/wcag/guidelines/22/#seizures-and-physical-reactions)（英語）に関する WCAG の説明も参照してください。
 
 ## ガイドライン 2.4 — ナビゲート可能: ユーザーがナビゲートし、コンテンツを見つけ、どこにいるのかを判断するのに役立つ方法を提供する
 
@@ -239,7 +229,7 @@ l10n:
       </td>
       <td>
         <a
-          href="/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#タイトルをつける"
+          href="/ja/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#タイトルをつける"
           >タイトルをつける</a
         >を参照してください。
       </td>
@@ -251,22 +241,22 @@ l10n:
       </td>
       <td>
         コントロールへのタブ移動に関する一般的なアドバイスについては、
-        <a href="/ja/docs/Learn/Accessibility/HTML#ui_コントロール"
-          >UI コントロール</a
+        <a href="/ja/docs/Learn_web_development/Core/Accessibility/HTML#可能であれば意味のある_ui_コントロールを使う"
+          >可能な限り意味づけされた UI コントロールを使用する</a
         >を参照してください。
-        要素を独特なレイアウトに配置する必要がある場合は、ソースの順序が適切であることを確認してから、<a href="/ja/docs/Learn/CSS/CSS_layout/Positioning">配置</a>などの CSS 機能を使用してレイアウトを扱うことをお勧めします。
+        要素を独特なレイアウトに配置する必要がある場合は、ソースの順序が適切であることを確認してから、<a href="/ja/docs/Learn_web_development/Core/CSS_layout/Positioning">配置</a>などの CSS 機能を使用してレイアウトを扱うことをお勧めします。
       </td>
     </tr>
     <tr>
       <td>2.4.4 リンクの目的（文脈にそった） (A)</td>
       <td>
-        リンクの目的や行き先は、リンクテキストから、またはその周囲（例えば、周囲のテキスト）から決定できるようになっていること。 例外は、リンクの目的が全てのユーザーにとってあいまいな場合です（これに関する有用な説明については、<a href="https://www.w3.org/TR/WCAG20/#ambiguouslinkdef"
+        リンクの目的や行き先は、リンクテキストから、またはその周囲（例えば、周囲のテキスト）から決定できるようになっていること。 例外は、リンクの目的が全てのユーザーにとってあいまいな場合です（これに関する有用な説明については、<a href="https://w3c.github.io/wcag/guidelines/22/#dfn-ambiguous-to-users-in-general"
           >一般的にユーザーにとってあいまい</a
         >（英語）を参照してください）。
       </td>
       <td>
-        <a href="/ja/docs/Learn/Accessibility/HTML#意味の通るテキストラベル"
-          >意味の通るテキストラベル</a
+        <a href="/ja/docs/Learn_web_development/Core/Accessibility/HTML#意味の通るテキストラベルを使う"
+          >意味の通るテキストラベルを使う</a
         >を参照してください。 また、同じテキストの複数のコピーが異なる場所にリンクされている場合は最小限に抑えるべきです。 これはスクリーンリーダーのユーザーにとって問題となる可能性があり、リンクの一覧が文脈から外れて表示されることがよくあります。全てが「ここをクリック」、「ここをクリック」、「ここをクリック」とラベル付けされたいくつかのリンクは混乱を招くでしょう。
       </td>
     </tr>
@@ -281,15 +271,15 @@ l10n:
         </p>
       </td>
       <td>
-        これらのメカニズムのほとんどは、単純な HTML 機能を使用して作成できます。 例えば、<a
-          href="/ja/docs/Learn/Forms/Basic_native_form_controls#search_field"
+        これらのメカニズムのほとんどは、全機能の対応がある HTML 機能を使用して作成できます。 例えば、<a
+          href="/ja/docs/Learn_web_development/Extensions/Forms/HTML5_input_types#検索フィールド"
           >検索フィールド</a
         >、<a
-          href="/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#アクティブラーニング_ナビゲーションメニューの作成"
+          href="/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links#アクティブラーニング_ナビゲーションメニューの作成"
           >ナビゲーションメニューの作成</a
         >、<a
-          href="/ja/docs/Learn/CSS/Styling_text/Styling_links#styling_links_as_buttons"
-          >ボタンとしてのリンクのスタイル設定</a
+          href="/ja/docs/Learn_web_development/Core/Text_styling/Styling_links#リンクをボタンとしてスタイル設定"
+          >リンクをボタンとしてスタイル設定</a
         >を参照してください。
       </td>
     </tr>
@@ -300,22 +290,21 @@ l10n:
       </td>
       <td>
         <p>
-          See
-          <a href="/ja/docs/Learn/Accessibility/HTML#ui_コントロール"
-            >UI コントロール</a
+          <a href="/ja/docs/Learn_web_development/Core/Accessibility/HTML#可能であれば意味のある_ui_コントロールを使う"
+            >可能な限り意味づけされた UI コントロールを使用する</a
           >、<a
-            href="/ja/docs/Learn/Accessibility/HTML#意味の通るテキストラベル"
-            >意味の通るテキストラベル</a
+            href="/ja/docs/Learn_web_development/Core/Accessibility/HTML#意味の通るテキストラベルを使う"
+            >意味の通るテキストラベルを使う</a
           >、<a
-            href="/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#基本_見出しと段落"
+            href="/ja/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
             >見出しと段落の基本</a
           >、<a
-            href="/ja/docs/Learn/Forms/How_to_structure_a_web_form#the_%3clabel%3e_element"
+            href="/ja/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form#label_要素"
             >&#x3C;label> 要素</a
           >を参照してください。
         </p>
         <p>
-          なお、構造上それらを簡単に区別できる場合を除き、見出しやラベルの重複は避けるべきです（例えば、「詳細情報」が複数ある場合）。
+          なお、構造上それらを簡単に区別できる場合を除き、見出しやラベルの重複は避けるべきです（例えば、「詳細情報」が複数あるなど）。
         </p>
       </td>
     </tr>
@@ -326,8 +315,8 @@ l10n:
       </td>
       <td>
         <a
-          href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#using_native_keyboard_accessibility"
-          >ネイティブなキーボード・アクセシビリティの使用</a
+          href="/ja/docs/Learn_web_development/Core/Accessibility/HTML#可能であれば意味のある_ui_コントロールを使う"
+            >可能な限り意味づけされた UI コントロールを使用する</a
         >を参照してください。
       </td>
     </tr>
@@ -344,9 +333,8 @@ l10n:
         この基準は 2.4.4 に基づいており、AAA に準拠するためには、コンテキストから外れていてもリンクの目的やリンク先はリンクテキストのみから決定可能であるべきであると述べています。
       </td>
       <td>
-        See
-        <a href="/ja/docs/Learn/Accessibility/HTML#意味の通るテキストラベル"
-          >意味の通るテキストラベル</a
+        <a href="/ja/docs/Learn_web_development/Core/Accessibility/HTML#意味の通るテキストラベルを使う"
+            >意味の通るテキストラベルを使う</a
         >を参照してください。 また、同じテキストの複数のコピーが異なる場所にリンクされている場合は最小限に抑えるべきです。 これはスクリーンリーダーのユーザーにとって問題となる可能性があり、リンクの一覧がコンテキストから外れて表示されることがよくあります。全てが「ここをクリック」、「ここをクリック」、「ここをクリック」とラベル付けされたいくつかのリンクは混乱を招くでしょう。
       </td>
     </tr>
@@ -363,7 +351,7 @@ l10n:
       <td>
         <p>
           <a
-            href="/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#基本_見出しと段落"
+            href="/ja/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
             >見出しと段落の基本</a
           >を参照してください。
         </p>
@@ -391,8 +379,7 @@ l10n:
 <tr>
   <td> 2.4.13 フォーカスの外見 (AAA)</td>
   <td>
-    <p>キーボードのフォーカスインジケーターが表示されている場合、フォーカスインジケーター
-    の領域は以下すべてを満たしていること。</p>
+    <p>キーボードのフォーカスインジケーターが表示されている場合、フォーカスインジケーターの領域は以下すべてを満たしていること。</p>
     <ul>
       <li>少なくとも、フォーカスされていないコンポーネントまたはサブコンポーネントの<code>2px</code>の太い外周の面積と同じ大きさでなければなりません。これは、コンポーネントのコンテンツ、境界線、背景を記載し、外側の影やグロー効果を除きます。</li>
       <li>フォーカス状態と非フォーカス状態の同一ピクセル間で少なくとも 3:1 のコントラスト比がある必要があります。</li>
@@ -410,7 +397,8 @@ l10n:
   </tbody>
 </table>
 
-> **メモ:** [ガイドライン 2.4: ナビゲート可能：ユーザーがナビゲートし、コンテンツを見つけ、どこにいるのかを判断するのに役立つ方法を提供する](https://www.w3.org/TR/WCAG21/#navigable)（英語）に関する WCAG の説明も参照してください。
+> [!NOTE]
+> [ガイドライン 2.4: ナビゲート可能：ユーザーがナビゲートし、コンテンツを見つけ、どこにいるのかを判断するのに役立つ方法を提供する](https://w3c.github.io/wcag/guidelines/22/#navigable)（英語）に関する WCAG の説明も参照してください。
 
 ## ガイドライン 2.5 — 入力様式: キーボードを超えた様々な入力を通して機能をユーザーが操作しやすくする
 
@@ -426,43 +414,43 @@ l10n:
  </thead>
  <tbody>
   <tr>
-   <td>2.5.1 ポインタージェスチャー (A) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">2.1 で追加</a></em></td>
+   <td>2.5.1 ポインタージェスチャー (A)</td>
    <td>ポインターで操作できる全ての機能が、シングルポイントのアクションで操作できること。 パスベースやマルチポイントのジェスチャーが、機能を操作するために必要ではないこと。例外があります。</td>
    <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/pointer-gestures.html">ポインタージェスチャーを理解する</a>（英語）</td>
   </tr>
   <tr>
-   <td>2.5.2 ポインターキャンセル (A) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">2.1 で追加</a></em></td>
+   <td>2.5.2 ポインターキャンセル (A)</td>
    <td>シングルポインターを使用して操作できる機能については、次のうち少なくとも 1 つが当てはまること。1) ダウンイベントを使用しないこと、2) 中止や元に戻す機能があること、3) アップイベントが逆の意味を表すこと、4) 必要不可欠であること。</td>
    <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html">ポインターキャンセルを理解する</a>（英語）</td>
   </tr>
   <tr>
-   <td>2.5.3 名前のラベル (A) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">2.1 で追加</a></em></td>
+   <td>2.5.3 名前のラベル (A)</td>
    <td>表示可能なテキストラベルを含む各ユーザーインターフェイス・コンポーネントについて、確実にアクセス可能な名前がラベルの表示可能なテキストと一致する（または含まれる）ようにすること。</td>
    <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html">名前のラベルを理解する</a>（英語）</td>
   </tr>
   <tr>
-   <td>2.5.4 動きによる作動 (A) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">2.1 で追加</a></em></td>
+   <td>2.5.4 動きによる作動 (A)</td>
    <td>a）デバイスの動き（揺れ、傾きのような）、または b）デバイスのセンサー（カメラを含む）によって検出されたユーザーのジェスチャーによって引き起こされる可能性のある機能について、次の両方が当てはまることを確認します。 1) 動きによる作動を無効にすることができ、2) 機能をデバイスの動きやユーザーのジェスチャーを使用せずに動作させることができること。 例外があります。</td>
    <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html">動きによる作動を理解する</a>（英語）</td>
   </tr>
   <tr>
-   <td>2.5.5 ターゲットサイズ (AAA) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">2.1 で追加</a></em></td>
+   <td>2.5.5 ターゲットサイズ (AAA)</td>
    <td>アクション可能アイテムのタッチターゲットのサイズは、幅と高さの両方で 44 CSS ピクセル以上にする必要があります。 例外があります。</td>
    <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/target-size.html">ターゲットサイズを理解する</a>（英語）</td>
   </tr>
   <tr>
-   <td>2.5.6 同時入力メカニズム (AAA) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">2.1 で追加</a></em></td>
+   <td>2.5.6 同時入力メカニズム (AAA)</td>
    <td>タッチスクリーン、キーボード、マウス、音声コマンド、その他の入力機器でデジタルコンテンツを操作するときに、さまざまな入力モードを使用したり切り替えたりできることを確認します。 本質的な例外があります。</td>
    <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/concurrent-input-mechanisms.html">同時入力メカニズムを理解する</a>（英語）</td>
  </tr>
  <tr>
  <td> 2.5.8 ターゲットサイズの最小値 (AA)</td>
- <td> ポインター入力の対象とするサイズは、以下の領域を除き、横 `24px`、縦 `24px` 以上であること。
+ <td> ポインター入力の対象とするサイズは、以下の領域を除き、横 <code>24px</code>、縦 <code>24px</code> 以上であること。
  <ul>
-  <li> <strong>空間:</strong>`24px x 24px` 未満のターゲットは、直径 `24px` の円が各ターゲットのバウンディングボックスの中央にあると仮定した場合、円が他のターゲットや他のサイズの小さいターゲットの円と交差しないように配置されていること。</li>
-  <li> <strong>等価:</strong>同じ機能を実現するこの標準を満たす別なコントロールが、同じページで利用できること。</li>
+  <li> <strong>空間:</strong> <code>24px x 24px</code> 未満のターゲットは、直径 <code>24px</code> の円が各ターゲットのバウンディングボックスの中央にあると仮定した場合、円が他のターゲットや他のサイズの小さいターゲットの円と交差しないように配置されていること。</li>
+  <li> <strong>等価:</strong> 同じ機能を実現するこの標準を満たす別なコントロールが、同じページ内で利用できること。</li>
   <li> <strong>インライン:</strong> 対象が、行の高さまたは周囲の非対象テキストによってサイズが制約されるテキストの行内に配置されていること。</li>
-  <li> <strong>ユーザーエージェントコントロール:</strong> 対象のサイズがユーザーエージェントによって決定されたものであり、作者によって変更されたものではないこと。</li>
+  <li> <strong>ユーザーエージェントコントロール:</strong> 対象のサイズがユーザーエージェントによって決定されたものであり、制作者によって変更されたものではないこと。</li>
   <li> <strong>必須:</strong> 対象とする特定の表示が、伝達される情報にとって必須であるか、法的に要求されていること。</li>
  </ul>
  <td><a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">ターゲットサイズの最小値を理解する</a>（英語）を確認してください。</td>
@@ -471,12 +459,12 @@ l10n:
  </tbody>
 </table>
 
-> **メモ:** [ガイドライン 2.5: 入力様式: キーボードを超えた様々な入力を通して機能をユーザーが操作しやすくする](https://www.w3.org/TR/WCAG21/#input-modalities)（英語）に関する WCAG の説明も参照してください。
+> [!NOTE]
+> [ガイドライン 2.5: 入力様式: キーボードを超えた様々な入力を通して機能をユーザーが操作しやすくする](https://w3c.github.io/wcag/guidelines/22/#input-modalities)（英語）に関する WCAG の説明も参照してください。
 
 ## 関連情報
 
 - [WCAG](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG)
-
   1. [知覚可能](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
   2. 操作可能
   3. [理解可能](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)

@@ -115,7 +115,6 @@ align-content: unset;
 - `normal`
   - : The items are packed in their default position as if no `align-content` value was set.
 - `baseline`, `first baseline`, `last baseline`
-
   - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
 
     ![the baseline is the line upon which most letters "sit" and below which descenders extend.](410px-typography_line_terms.svg.png)

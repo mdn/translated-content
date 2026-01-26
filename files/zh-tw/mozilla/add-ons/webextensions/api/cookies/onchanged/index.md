@@ -3,8 +3,6 @@ title: cookies.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/onChanged
 ---
 
-{{AddonSidebar}}
-
 {{WebExtAPIRef("cookies")}} API 的 `onChanged` 事件會在 cookie 設定或刪除時觸發。
 
 請注意，更新 cookie 的屬性要透過以下兩個步驟實做：
@@ -36,13 +34,9 @@ browser.cookies.onChanged.hasListener(listener);
 ### 參數
 
 - `callback`
-
   - : 能被呼叫的 callback 函式會在此事件發生的時候觸發。函式會 passed 以下參數：
-
     - `changeInfo`
-
       - : 一個含有觸發事件資訊的 `object`。它有兩個屬性：
-
         - `removed`
           - : 一個 `boolean`。如果 cookie 被刪除則為 `true`，否則為 `false`。
         - `cookie`
@@ -76,8 +70,6 @@ browser.cookies.onChanged.addListener(function (changeInfo) {
 
 > [!NOTE]
 > 此 API 基於 Chromium 的 [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies) API 而來，文件改作自 Chromium 程式碼裡的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json)。
->
-> Microsoft Edge 的相容資訊來自微軟公司，原文以創用 CC 姓名標示 3.0 美國版條款授權大眾使用。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

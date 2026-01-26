@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 original_slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics/Handling_different_text_directions", "Learn_web_development/Core/Styling_basics")}}
 
 En este artículo, veremos algunas de las cosas creativas que puedes hacer con los fondos y los bordes de CSS. Añadir degradados, imágenes de fondo o redondear esquinas; los fondos y los bordes son la solución para una gran cantidad de cuestiones de estilo en CSS.
 
@@ -161,7 +161,8 @@ Por último, también puedes usar una sintaxis de 4 valores para indicar una dis
 
 {{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/position.html", '100%', 800)}}
 
-> **Nota:** `background-position` es una propiedad abreviada de {{cssxref("background-position-x")}} y {{cssxref("background-position-y")}}, que te permiten configurar los diferentes valores de posición del eje por separado.
+> [!NOTE]
+> `background-position` es una propiedad abreviada de {{cssxref("background-position-x")}} y {{cssxref("background-position-y")}}, que te permiten configurar los diferentes valores de posición del eje por separado.
 
 ### Degradados de fondo
 
@@ -311,4 +312,4 @@ En este artículo hemos expuesto bastantes conceptos y puedes ver que hay mucho 
 
 En el próximo artículo descubriremos cómo interacciona el modo de escritura de tu documento con tu CSS. ¿Qué sucede cuando el texto no fluye de izquierda a derecha?
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics/Handling_different_text_directions", "Learn_web_development/Core/Styling_basics")}}

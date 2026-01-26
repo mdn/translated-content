@@ -1,14 +1,11 @@
 ---
 title: cx
 slug: Web/SVG/Reference/Attribute/cx
-original_slug: Web/SVG/Attribute/cx
 l10n:
-  sourceCommit: fceea994be5c930065bb1f2b45bee9ac38de491c
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}
-
-**`cx`** 属性は中心の X 座標を定義します。
+**`cx`** 属性は中心点の X 座標を定義します。
 
 この属性は次の SVG 要素で使用できます。
 
@@ -46,7 +43,7 @@ svg {
 
 ## circle
 
-{{SVGElement('circle')}} に対して、 `cx` は図形の X 軸の中心を定義します。
+{{SVGElement('circle')}} に対して、 `cx` は図形の中心の X 座標を定義します。
 
 <table class="properties">
   <tbody>
@@ -65,11 +62,12 @@ svg {
   </tbody>
 </table>
 
-> **メモ:** `<circle>` の中心の X 座標は {{cssxref("cx")}} 幾何プロパティでも定義できます。 CSS で設定した場合、 `cx` プロパティの値がこの `cx` 属性の値を上書きします。
+> [!NOTE]
+> `<circle>` の中心の X 座標は {{cssxref("cx")}} 幾何プロパティでも定義できます。 CSS で設定した場合、 `cx` プロパティの値がこの `cx` 属性の値を上書きします。
 
 ## ellipse
 
-{{SVGElement('ellipse')}}に対して、`cx`は、図形の X 軸の中心を定義します。
+{{SVGElement('ellipse')}} に対して、 `cx` は図形の中心の X 座標を定義します。
 
 <table class="properties">
   <tbody>
@@ -88,11 +86,12 @@ svg {
   </tbody>
 </table>
 
-> **メモ:** `<ellipse>` の中心の X 座標は {{cssxref("cx")}} 幾何プロパティでも定義できます。 CSS で設定した場合、 `cx` プロパティの値がこの `cx` 属性の値を上書きします。
+> [!NOTE]
+> `<ellipse>` の中心の X 座標は {{cssxref("cx")}} 幾何プロパティでも定義できます。 CSS で設定した場合、 `cx` プロパティの値がこの `cx` 属性の値を上書きします。
 
 ## radialGradient
 
-{{SVGElement('radialGradient')}}に対して、`cx`は、放射状勾配の終端円の X 軸の中心を定義します。
+{{SVGElement('radialGradient')}} に対して、 `cx` は、放射グラデーションの終端円の X 軸座標を定義します。
 
 <table class="properties">
   <tbody>

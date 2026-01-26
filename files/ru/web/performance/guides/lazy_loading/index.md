@@ -48,16 +48,16 @@ JavaScript, CSS и HTML могут быть разделены на неболь
 
 По умолчанию, загрузка шрифтов откладывается на тот момент, пока дерево рендера (render tree) не сформировано полностью. Это приводит к тому, что текст страницы может появиться не сразу.
 
-Вы можете переопределить такое поведение и загрузить шрифты заранее, используя `<link rel="preload">`, [CSS font-display свойство](/ru/docs/Web/CSS/@font-face/font-display) или [Font Loading API](/ru/docs/Web/API/CSS_Font_Loading_API).
+Вы можете переопределить такое поведение и загрузить шрифты заранее, используя `<link rel="preload">`, [CSS font-display свойство](/ru/docs/Web/CSS/Reference/At-rules/@font-face/font-display) или [Font Loading API](/ru/docs/Web/API/CSS_Font_Loading_API).
 
-Смотрите также: [Element Link](/ru/docs/Web/HTML/Element/link)
+Смотрите также: [Element Link](/ru/docs/Web/HTML/Reference/Elements/link)
 
 ### Изображения
 
 Очень часто веб-страницы содержат множество изображений, загрузка которых заметно нагружает канал передачи данных и увеличивает длительность загрузки. Подавляющая часть этих изображений находятся за видимой областью экрана и не являются необходимым ([non-critical](/ru/docs/Web/Performance/Guides/Critical_rendering_path)), а для взаимодействия с пользователем требуют действия (например, прокрутки до них).
 
 **Атрибут Loading**
-Атрибут [`loading`](/ru/docs/Web/HTML/Element/img#loading) элемента {{HTMLElement("img")}} (или [`loading`](/ru/docs/Web/HTML/Element/iframe#loading) атрибут для {{HTMLElement("iframe")}}) могут быть использованы, чтобы указать браузеру на необходимость отложить загрузку изображений / iframe до тех пор, пока пользователь не доскроллит до них.
+Атрибут [`loading`](/ru/docs/Web/HTML/Reference/Elements/img#loading) элемента {{HTMLElement("img")}} (или [`loading`](/ru/docs/Web/HTML/Element/iframe#loading) атрибут для {{HTMLElement("iframe")}}) могут быть использованы, чтобы указать браузеру на необходимость отложить загрузку изображений / iframe до тех пор, пока пользователь не доскроллит до них.
 
 ```
 <img src="image.jpg" loading="lazy" alt="..." />

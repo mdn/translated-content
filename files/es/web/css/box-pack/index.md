@@ -3,8 +3,6 @@ title: -moz-box-pack
 slug: Web/CSS/box-pack
 ---
 
-{{CSSRef}}
-
 > [!WARNING]
 > Esta propiedad es parte del módulo estándar original para el diseño de las cajas CSS Flexible que fue sustituida por un nuevo estándar.
 

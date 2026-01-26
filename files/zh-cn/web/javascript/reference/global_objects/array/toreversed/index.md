@@ -3,8 +3,6 @@ title: Array.prototype.toReversed()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toReversed
 ---
 
-{{JSRef}}
-
 {{jsxref("Array")}} 实例的 **`toReversed()`** 方法是 {{jsxref("Array/reverse", "reverse()")}} 方法对应的[复制](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)版本。它返回一个元素顺序相反的新数组。
 
 ## 语法

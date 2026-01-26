@@ -3,8 +3,6 @@ title: X-Forwarded-Host
 slug: Web/HTTP/Reference/Headers/X-Forwarded-Host
 ---
 
-{{HTTPSidebar}}
-
 The **`X-Forwarded-Host`** (XFH) 是一个事实上的标准首部，用来确定客户端发起的请求中使用 {{HTTPHeader("Host")}} 指定的初始域名。
 
 反向代理（如负载均衡服务器、CDN 等）的域名或端口号可能会与处理请求的源头服务器有所不同，在这种情况下，X-Forwarded-Host 可以用来确定哪一个域名是最初被用来访问的。

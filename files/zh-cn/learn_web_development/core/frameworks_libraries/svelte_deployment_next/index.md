@@ -5,7 +5,7 @@ l10n:
   sourceCommit: e769461724eef53106e9e44656d95b99c4d520e5
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Svelte_TypeScript", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Svelte_TypeScript", "Learn_web_development/Core/Frameworks_libraries")}}
 
 在上一篇文章中，我们了解了 Svelte 对 TypeScript 的支持，以及如何使用它使应用程序更加健壮。在本文中，我们将学习如何部署应用程序并将其发布到在线环境，并分享一些你应该继续使用的资源，以继续你的 Svelte 学习之旅。
 
@@ -159,7 +159,7 @@ export default {
 
 ### 使用 Vercel 进行部署
 
-部署 Svelte 应用程序的方式中，其中最简单的一种是使用 [Vercel](https://vercel.com/home)。Vercel 是一个专门为静态站点定制的云平台，它对大多数常见的前端工具都有开箱即用的支持，其中包括 Svelte。
+部署 Svelte 应用程序的方式中，其中最简单的一种是使用 [Vercel](https://vercel.com/home)。Vercel 是一个专门为静态站点优化定制的云平台，对大多数常见的前端工具都有开箱即用的支持，其中就包括了 Svelte。
 
 要部署应用程序，请按照以下步骤进行操作。
 

@@ -18,9 +18,7 @@ browser.alarms.clearAll(
 ### 引数
 
 - `callback`
-
   - : `function`. この関数には以下の引数が渡ります。
-
     - `wasCleared`
       - : `boolean`. アラームが解除された場合は `true` が、それ以外の場合は `false` が入ります。Chrome の場合は常に `true` が入ることに注意してください。
 

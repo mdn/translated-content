@@ -3,8 +3,6 @@ title: DELETE
 slug: Web/HTTP/Reference/Methods/DELETE
 ---
 
-{{HTTPSidebar}}
-
 **Метод запроса HTTP DELETE** удаляет указанный ресурс.
 
 <table class="properties">
@@ -19,7 +17,7 @@ slug: Web/HTTP/Reference/Methods/DELETE
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Safe","Безопасный")}}
+        {{Glossary("Safe/HTTP", "Безопасный")}}
       </th>
       <td>Нет</td>
     </tr>

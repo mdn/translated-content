@@ -3,7 +3,7 @@ title: Что внутри "head"? Метаданные в HTML
 slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 Элемент {{glossary("Head", "head")}} HTML-документа не отображается на странице в веб-браузере. Он содержит такую информацию, как:
 
@@ -56,7 +56,6 @@ slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
 ### Активное изучение: разбор простого примера
 
 1. Чтобы приступить к активному изучению, скачайте страницу [title-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html) из нашего GitHub-репозитория. Это можно сделать двумя способами:
-
    1. Скопируйте и вставьте код страницы в новый текстовый файл в своём редакторе кода, затем сохраните его в любом удобном месте.
    2. Нажмите на странице кнопку "Raw", нажмите _Файл > Сохранить Как..._ в меню браузера и выберите папку для сохранения.
 
@@ -199,25 +198,18 @@ slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
 <link
   rel="apple-touch-icon-precomposed"
   sizes="144x144"
-  href="https://developer.mozilla.org/static/img/favicon144.png" />
+  href="favicon144.png" />
 <!-- Для iPhone с Retina-экраном высокого разрешения: -->
 <link
   rel="apple-touch-icon-precomposed"
   sizes="114x114"
-  href="https://developer.mozilla.org/static/img/favicon114.png" />
+  href="favicon114.png" />
 <!-- Для iPad первого и второго поколения: -->
-<link
-  rel="apple-touch-icon-precomposed"
-  sizes="72x72"
-  href="https://developer.mozilla.org/static/img/favicon72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png" />
 <!-- Для iPhone, iPod Touch без Retina и устройств с Android 2.1+: -->
-<link
-  rel="apple-touch-icon-precomposed"
-  href="https://developer.mozilla.org/static/img/favicon57.png" />
+<link rel="apple-touch-icon-precomposed" href="favicon57.png" />
 <!-- Для других случаев - обычный favicon -->
-<link
-  rel="shortcut icon"
-  href="https://developer.mozilla.org/static/img/favicon32.png" />
+<link rel="shortcut icon" href="favicon32.png" />
 ```
 
 В комментариях указано, для чего используется каждая иконка — например, при добавлении страницы на домашний экран iPad будет использована иконка в высоком разрешении.
@@ -260,7 +252,7 @@ slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
 
 ## Основной язык HTML страницы
 
-Наконец, стоит отметить, что вы можете (и действительно должны) установить язык для своей страницы. Это можно сделать, добавив [атрибут lang](/ru/docs/Web/HTML/Global_attributes/lang) в открывающий HTML-тег (как в примере [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html): и как показано ниже):
+Наконец, стоит отметить, что вы можете (и действительно должны) установить язык для своей страницы. Это можно сделать, добавив [атрибут lang](/ru/docs/Web/HTML/Reference/Global_attributes/lang) в открывающий HTML-тег (как в примере [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html): и как показано ниже):
 
 ```
 <html lang="en-US">
@@ -284,4 +276,4 @@ slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
 
 На этом заканчивается наш беглый обзор по HTML-блоку head — с его помощью вы можете делать гораздо больше, но исчерпывающий обзор будет скучным и запутанным на этом этапе, мы же сейчас хотели дать вам представление о самых распространённых вещах, которые вы можете там найти! В следующей статье мы рассмотрим основы разметки текста в HTML.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "conflicting/Learn_web_development/Core/Structuring_content")}}

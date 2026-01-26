@@ -3,7 +3,7 @@ title: :-moz-first-node
 slug: Web/CSS/:-moz-first-node
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{Non-standard_header}}
 
 ## Resumen
 

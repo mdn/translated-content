@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 当扩展设置的任何闹钟触发时触发。
 
 ## 语法
@@ -31,9 +29,7 @@ browser.alarms.onAlarm.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 在此事件发生时调用的函数。此函数接收以下参数：
-
     - `alarm`
       - : {{WebExtAPIRef('alarms.Alarm')}}。触发的闹钟。使用 `Alarm.name` 来确定触发了哪个闹钟。
 

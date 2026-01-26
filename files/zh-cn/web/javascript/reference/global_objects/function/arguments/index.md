@@ -3,9 +3,10 @@ title: Function.prototype.arguments
 slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
 ---
 
-{{JSRef}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{Deprecated_Header}}{{Non-standard_Header}}
 
-> **备注：** {{jsxref("Function")}} 对象的 `arguments` 属性已被弃用。访问 `arguments` 对象的推荐方式是在函数内部引用可用的 {{jsxref("Functions/arguments", "arguments")}} 变量。
+> [!NOTE]
+> {{jsxref("Function")}} 对象的 `arguments` 属性已被弃用。访问 `arguments` 对象的推荐方式是在函数内部引用可用的 {{jsxref("Functions/arguments", "arguments")}} 变量。
 
 {{jsxref("Function")}} 实例的 **`arguments`** 访问器属性返回传递给该函数的参数。对于[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)、箭头函数、异步函数和生成器函数，访问 `arguments` 属性会抛出 {{jsxref("TypeError")}}。
 

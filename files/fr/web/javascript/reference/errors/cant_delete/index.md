@@ -19,7 +19,7 @@ TypeError: Cannot delete property 'x' of #<Object> (Chrome)
 
 ## Quel est le problème ?
 
-Une instruction demande la suppression d'une propriété [non-configurable](/fr/docs/Web/JavaScript/Data_structures#propriétés). L'attribut `configurable` permet de contrôler si la propriété peut être supprimée de l'objet auquel elle est rattachée et si ces attributs (en dehors de `writable`) peuvent être modifiés.
+Une instruction demande la suppression d'une propriété [non-configurable](/fr/docs/Web/JavaScript/Guide/Data_structures#propriétés). L'attribut `configurable` permet de contrôler si la propriété peut être supprimée de l'objet auquel elle est rattachée et si ces attributs (en dehors de `writable`) peuvent être modifiés.
 
 Cette erreur ne se produit qu'en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode). En mode non-strict, l'opération de suppression renverra `false`.
 

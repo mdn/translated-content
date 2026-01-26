@@ -5,8 +5,6 @@ l10n:
   sourceCommit: eec174a08a5003da32f53e694c45eda3377b4d18
 ---
 
-{{AddonSidebar}}
-
 允许扩展程序解析域名。
 
 要使用此 API，扩展程序必须在其 [`manifest.json`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件中请求“dns”[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。

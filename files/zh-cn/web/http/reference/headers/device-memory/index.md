@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4458494807b6f4898d504b6c0af0a45f8031cbf3
 ---
 
-{{HTTPSidebar}}{{securecontext_header}}
+{{securecontext_header}}
 
 **`Device-Memory`** [设备客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints#设备客户端提示)请求标头的字段指示客户端设备上可用内存的近似大小。该标头属于{{DOMxRef("Device Memory API", "设备内存 API", "", "nocode")}}。
 
@@ -72,7 +72,6 @@ Device-Memory: 1
 - {{DOMxRef("Navigator.deviceMemory")}}
 - {{DOMxRef("WorkerNavigator.deviceMemory")}}
 - 设备客户端提示
-
   - {{HTTPHeader("Content-DPR")}}
   - {{HTTPHeader("DPR")}}
   - {{HTTPHeader("Viewport-Width")}}

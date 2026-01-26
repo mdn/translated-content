@@ -16,9 +16,7 @@ element.insertAdjacentText(position, element);
 ### Paramètres
 
 - position
-
   - : Une {{domxref("DOMString")}} (_chaîne de caractères_) représentant la position par rapport à l'`element` ; elle doit être l'une des chaînes suivantes :
-
     - `'beforebegin'` : avant l'`element` lui-même ;
     - `'afterbegin'` : à l'intérieur de l'`element`, avant son premier enfant ;
     - `'beforeend'` : à l'intérieur de l'`element`, avant son dernier enfant ;

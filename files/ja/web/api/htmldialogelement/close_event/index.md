@@ -3,7 +3,7 @@ title: "HTMLDialogElement: close イベント"
 short-title: close
 slug: Web/API/HTMLDialogElement/close_event
 l10n:
-  sourceCommit: 981ab25c61986b40213d0c84131432438d5a7903
+  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
 ---
 
 {{APIRef}}
@@ -16,10 +16,10 @@ l10n:
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用したり、イベントハンドラープロパティを設定したりします。
 
-```js
-addEventListener("close", (event) => {});
+```js-nolint
+addEventListener("close", (event) => { })
 
-onclose = (event) => {};
+onclose = (event) => { }
 ```
 
 ## イベント型
@@ -89,5 +89,5 @@ closeButton.addEventListener("click", () => {
 
 ## 関連情報
 
-- HTML の [`<dialog>`](/ja/docs/Web/HTML/Element/dialog) 要素
+- HTML の [`<dialog>`](/ja/docs/Web/HTML/Reference/Elements/dialog) 要素
 - [`Event`](/ja/docs/Web/API/Event) インターフェイス

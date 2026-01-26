@@ -16,7 +16,6 @@ _Cette interface hérite de propriétés de la part de son parent, {{domxref("No
 - ...
 
   {{domxref("DocumentType.entities")}} {{readonlyInline}} {{deprecated_inline}}
-
   - : Une {{domxref ("NamedNodeMap")}} des entités déclarées dans la DTD. Chaque noeud de cette carte implémente l'interface {{domxref ("Entity")}}.
 
 - {{domxref("DocumentType.internalSubset")}} {{readonlyInline}} {{deprecated_inline}}

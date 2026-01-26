@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP {{HTTPHeader("Permissions-Policy")}} 标头的 `local-fonts` 指令控制当前文档是否允许通过 {{DOMxRef("Window.queryLocalFonts()")}} 方法收集用户本地安装的字体的数据。
 

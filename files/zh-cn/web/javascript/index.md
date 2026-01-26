@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 26e2f9883e0e73def04c0e86fec6da3ec42e66b3
 ---
 
-{{JsSidebar}}
-
 **JavaScript**（**JS**）是一种具有{{Glossary("First-class Function", "函数优先")}}特性的轻量级、解释型或者说[即时编译型](https://zh.wikipedia.org/wiki/即時編譯)的编程语言。虽然作为 Web 页面中的脚本语言被人所熟知，但是它也被用到了很多[非浏览器环境](https://zh.wikipedia.org/wiki/JavaScript#其他)中，例如 {{Glossary("Node.js")}}、[Apache CouchDB](https://couchdb.apache.org)、[Adobe Acrobat](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/) 等。进一步说，JavaScript 是一种[基于原型](/zh-CN/docs/Glossary/Prototype-based_programming)、多范式、[单线程](/zh-CN/docs/Glossary/Thread)的[动态](/zh-CN/docs/Glossary/Dynamic_typing)语言，并且支持面向对象、命令式和声明式（如函数式编程）风格。
 
 JavaScript 的动态特性包括运行时对象的构造、变量参数列表、函数变量、动态脚本创建（通过 [`eval`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval)）、对象内枚举（通过 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 和 [`Object` 工具方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#静态方法)）和源代码恢复（JavaScript 函数会存储其源代码文本，可以使用 [`toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toString) 进行检索）。
@@ -51,7 +49,7 @@ JavaScript 核心语言特性（大部分是纯 [ECMAScript](/zh-CN/docs/Web/Jav
 ### 中级
 
 - [理解客户端 Javascript 框架](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries)
-  - : JavaScript 框架是现代前端 Web 开发必不可少的一部分，为开发者构建可扩展、交互式的 Web 应用程序提供了经过验证的工具。这个模块讨论一些客户端框架如何工作以及如何集成到工具集的基础背景知识，接着是一个讨论现在最流行框架的系列教程。
+  - : JavaScript 框架是现代前端 Web 开发中不可或缺的一部分，它为开发者提供了构建可扩展、交互式 Web 应用的成熟工具。如今，许多企业已将框架作为标准开发工具链的一部分，因此越来越多的前端开发岗位都要求具备框架使用经验。本系列文章将提供一个轻松的入门指南，帮助你开始学习这些框架。
 - [JavaScript 语言概述](/zh-CN/docs/Web/JavaScript/Guide/Language_overview)
   - : JavaScript 基础语法和语义概述：帮助来自其他编程语言的读者加速学习。
 - [JavaScript 数据结构](/zh-CN/docs/Web/JavaScript/Guide/Data_structures)

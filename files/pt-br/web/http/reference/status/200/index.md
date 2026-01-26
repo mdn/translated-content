@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/200
 original_slug: Web/HTTP/Status/200
 ---
 
-{{HTTPSidebar}}
-
 O código HTTP **`200 OK`** é a resposta de status de sucesso que indica que a requisição foi bem sucedida. Uma resposta 200 é cacheável por padrão.
 
 O significado de sucesso depende do método de requisição HTTP:
@@ -35,4 +33,4 @@ O resultado de sucesso de um {{HTTPMethod("PUT")}} ou {{HTTPMethod("DELETE")}} g
 
 ## Veja também
 
-- [HTTP request methods](/pt-BR/docs/Web/HTTP/Methods)
+- [HTTP request methods](/pt-BR/docs/Web/HTTP/Reference/Methods)

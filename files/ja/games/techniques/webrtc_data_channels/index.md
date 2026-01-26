@@ -3,8 +3,6 @@ title: WebRTC データチャネル
 slug: Games/Techniques/WebRTC_data_channels
 ---
 
-{{GamesSidebar}}
-
 [WebRTC](/ja/docs/Web/API/WebRTC_API) (Web Real-Time Communications、ウェブリアルタイム通信) API は、主に音声や動画の通信に対応していることで知られていますが、ピアツーピアのデータチャネルも提供されています。この記事では、このことについて詳しく説明し、ゲームにデータチャンネルを搭載するためにライブラリーを使用する方法を紹介します。
 
 ## データチャネルとは?

@@ -16,19 +16,16 @@ LTR의 반대인, {{Glossary("RTL")}} (오른쪽에서 왼쪽으로 읽는 특�
 ## 같이 보기
 
 - [MDN 웹 문서 용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("locale")}}
   - {{Glossary("Localization")}}
   - {{Glossary("LTR")}}
   - {{Glossary("RTL")}}
 
-- [HTML 전역 속성](/ko/docs/Web/HTML/Global_attributes)
-
-  - [dir](/ko/docs/Web/HTML/Global_attributes#dir)
-  - [lang](/ko/docs/Web/HTML/Global_attributes#lang)
+- [HTML 전역 속성](/ko/docs/Web/HTML/Reference/Global_attributes)
+  - [dir](/ko/docs/Web/HTML/Reference/Global_attributes#dir)
+  - [lang](/ko/docs/Web/HTML/Reference/Global_attributes#lang)
 
 - [CSS](/ko/docs/Web/CSS)
-
   - {{cssxref(":dir")}}
   - {{cssxref("direction")}}
   - {{cssxref("unicode-bidi")}}

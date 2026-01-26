@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Date
 original_slug: Web/HTTP/Headers/Date
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho geral HTTP **`Date`** contém a data e a hora que a mensagem foi gerada.
 
 > [!WARNING]

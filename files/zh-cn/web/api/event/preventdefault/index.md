@@ -5,7 +5,7 @@ slug: Web/API/Event/preventDefault
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
 
-{{domxref("Event")}} 接口的 **`preventDefault()`** 方法，告诉{{Glossary("user agent", "用户代理")}}：如果此事件没有被显式处理，它默认的动作也不应该照常执行。
+{{domxref("Event")}} 接口的 **`preventDefault()`** 方法，告诉{{Glossary("user agent", "用户代理")}}：此事件被显式处理，它默认的动作（例如页面滚动、链接跳转或粘贴文本）不应该照常执行。
 
 此事件仍会继续传播，除非碰到事件监听器调用 {{domxref("Event.stopPropagation", "stopPropagation()")}} 或 {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}} 才停止传播。
 

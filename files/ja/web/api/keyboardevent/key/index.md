@@ -136,7 +136,8 @@ btnReset.addEventListener("click", (e) => {
 
 {{EmbedLiveSample('KeyboardEvent_sequence_example')}}
 
-> **メモ:** {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} と {{domxref("HTMLElement/input_event", "input")}} イベントで使用されている {{domxref("InputEvent")}} インターフェイスを完全に実装していないブラウザーでは、誤ったログ出力をする可能性があります。
+> [!NOTE]
+> {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} と {{domxref("HTMLElement/input_event", "input")}} イベントで使用されている {{domxref("InputEvent")}} インターフェイスを完全に実装していないブラウザーでは、誤ったログ出力をする可能性があります。
 
 ### ケース 1
 

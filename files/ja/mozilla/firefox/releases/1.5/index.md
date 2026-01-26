@@ -3,8 +3,6 @@ title: Firefox 1.5 for developers
 slug: Mozilla/Firefox/Releases/1.5
 ---
 
-{{FirefoxSidebar}}
-
 Gecko 1.8 エンジンに基づいて、Firefox 1.5 はクラス最高の標準サポートを改善し、次世代のウェブアプリケーションを可能にする新しい機能を提供しました。Firefox 1.5 では、CSS2 と CSS3、SVG 1.1 と \<canvas>、XForms と XML イベント、さらに多くの DHTML、JavaScript、DOM 拡張を介したスクリプト可能でプログラム可能な 2D グラフィックスの API のサポートが強化されています。
 
 ## 開発ツール
@@ -28,7 +26,7 @@ Firefox 1.5 での新機能のいくつかを紹介します。
   - : SVG を XHTML ページの中でどのように利用し、JavaScript と CSS を通常の XHTML でのスクリプトと同様な方法で画像を操作する方法について学習します。[SVG in Firefox](/ja/docs/SVG_in_Firefox) も読み、 Firefox における SVG 実装の問題点と現状について学習してください。
 - [Canvas での画像の描き方](/ja/docs/Web/API/Canvas_API/Tutorial)
   - : 新しい `<canvas>` タグについて、Firefox においてどのようにグラフやその他のオブジェクトを描くかについて学習します。
-- [CSS3 Columns](/ja/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
+- [CSS3 Columns](/ja/docs/Web/CSS/Guides/Multicol_layout/Using)
   - : CSS3 に提案されている自動マルチカラムテキストレイアウトの新規サポートについて学習します。
 - [Firefox 1.5 のキャッシュを利用する](/ja/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching)
   - : `bfcache` と、進む・戻る機能をどのように高速化したかについて学習します。

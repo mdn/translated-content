@@ -148,7 +148,6 @@ target.addEventListener("drop", (event) => {
 ## 参见
 
 - 其他拖放事件：
-
   - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
   - {{domxref("HTMLElement/dragend_event", "dragend")}}
   - {{domxref("HTMLElement/dragover_event", "dragover")}}
@@ -157,7 +156,6 @@ target.addEventListener("drop", (event) => {
   - {{domxref("HTMLElement/drop_event", "drop")}}
 
 - 其他目标上的此事件：
-
   - {{domxref("Window")}}：{{domxref("Window/drag_event", "drag")}} 事件
   - {{domxref("Document")}}：{{domxref("Document/drag_event", "drag")}} 事件
   - {{domxref("SVGElement")}}：{{domxref("SVGElement/drag_event", "drag")}} 事件

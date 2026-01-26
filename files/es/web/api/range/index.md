@@ -32,7 +32,7 @@ Un rango puede ser creado usando el método [`createRange`](/es/docs/Web/API/Doc
 
 Estos métodos definen el punto de inicio y fin de un rango.
 
-- [setStart](/es/docs/Web/API/range/setStart)
+- [setStart](/es/docs/Web/API/Range/setStart)
   - : Define la posición inicial de un rango.
 - [setEnd](/es/docs/Web/API/range/setEnd)
   - : Define la posición final de un rango.

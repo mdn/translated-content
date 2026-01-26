@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5026c14bd6d2b6b377289aadac7eceae9282e806
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content/Structuring_documents", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 В HTML для форматирования текста есть много других элементов, не рассмотренных в статье [Основы редактирования текста в HTML](/ru/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs). Элементы, описанные в этой статье, не так часто используются, но всё же полезны для понимания (и это всё ещё будет не полный список элементов). Здесь вы узнаете о цитатах, списках описаний, компьютерном коде и другом виде текстовых элементов, подстрочном и надстрочном тексте, контактной информации и других типах текста.
 
@@ -238,7 +238,7 @@ textarea.onkeyup = () => {
 
 ### Блочные цитаты
 
-Если часть содержимого уровня блока (будь то абзац, несколько абзацев, список и т.д.) цитируется из другого источника, вы должны обернуть её внутри элемента {{htmlelement("blockquote")}}, чтобы обозначить это, и указать URL-адрес, указывающий на источник цитаты, внутри атрибута [`cite`](/ru/docs/Web/HTML/Element/blockquote#cite). Например, следующая разметка берётся из страницы элемента MDN **`<blockquote>`**:
+Если часть содержимого уровня блока (будь то абзац, несколько абзацев, список и т.д.) цитируется из другого источника, вы должны обернуть её внутри элемента {{htmlelement("blockquote")}}, чтобы обозначить это, и указать URL-адрес, указывающий на источник цитаты, внутри атрибута [`cite`](/ru/docs/Web/HTML/Reference/Elements/blockquote#cite). Например, следующая разметка берётся из страницы элемента MDN **`<blockquote>`**:
 
 ```html
 <p>
@@ -286,7 +286,7 @@ textarea.onkeyup = () => {
 
 ### Цитирование
 
-Содержимое атрибута [`cite`](/ru/docs/Web/HTML/Element/blockquote#cite) выглядит полезным, но, к сожалению, браузерам, программам чтения с экрана и т.д. оно на самом деле мало чем помогает. Невозможно заставить браузер отображать содержимое атрибута `cite` без написания собственного решения с использованием JavaScript или CSS. Если вы хотите, чтобы источник цитирования был доступен на странице, то необходимо добавить ссылку.
+Содержимое атрибута [`cite`](/ru/docs/Web/HTML/Reference/Elements/blockquote#cite) выглядит полезным, но, к сожалению, браузерам, программам чтения с экрана и т.д. оно на самом деле мало чем помогает. Невозможно заставить браузер отображать содержимое атрибута `cite` без написания собственного решения с использованием JavaScript или CSS. Если вы хотите, чтобы источник цитирования был доступен на странице, то необходимо добавить ссылку.
 
 Элемент {{htmlelement("cite")}} может содержать имя используемого источника, напрмер, название книги. Нет причин, по которым вы не могли бы связать текст внутри `<cite>` с источником цитаты:
 
@@ -466,7 +466,7 @@ textarea.onkeyup = () => {
 
 ## Аббревиатуры
 
-Другой довольно часто встречающийся элемент — это {{htmlelement("abbr")}}, используемый для обёртывания аббревиатур или акронимов. Он обеспечивает расшифровку сокращения (с помощью атрибута [`title`](/ru/docs/Web/HTML/Global_attributes#title)).
+Другой довольно часто встречающийся элемент — это {{htmlelement("abbr")}}, используемый для обёртывания аббревиатур или акронимов. Он обеспечивает расшифровку сокращения (с помощью атрибута [`title`](/ru/docs/Web/HTML/Reference/Global_attributes#title)).
 
 ### Пример аббревиатур
 
@@ -780,6 +780,6 @@ HTML также предоставляет элемент {{htmlelement("time")}
 
 ## Заключение
 
-На этом мы завершаем наше изучение семантики текста HTML. Имейте в виду, что в этом курсе мы рассмотрели не все существующие текстовые элементы HTML. Мы хотели показать основные элементы, а также некоторые из наиболее распространённых из них, которые вы встретите в реальной жизни или, по крайней мере, которые могут показаться вам интересными. Чтобы найти гораздо больше HTML-элементов, вы можете взглянуть на наш [справочник элементов HTML](/ru/docs/Web/HTML/Element). В следующей статье мы рассмотрим элементы HTML, которые вы будете использовать для [структурирования HTML-документа](/ru/docs/Learn_web_development/Core/Structuring_content/Structuring_documents).
+На этом мы завершаем наше изучение семантики текста HTML. Имейте в виду, что в этом курсе мы рассмотрели не все существующие текстовые элементы HTML. Мы хотели показать основные элементы, а также некоторые из наиболее распространённых из них, которые вы встретите в реальной жизни или, по крайней мере, которые могут показаться вам интересными. Чтобы найти гораздо больше HTML-элементов, вы можете взглянуть на наш [справочник элементов HTML](/ru/docs/Web/HTML/Reference/Elements). В следующей статье мы рассмотрим элементы HTML, которые вы будете использовать для [структурирования HTML-документа](/ru/docs/Learn_web_development/Core/Structuring_content/Structuring_documents).
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content/Structuring_documents", "conflicting/Learn_web_development/Core/Structuring_content")}}

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Text_styling/Styling_lists
 original_slug: Learn/CSS/Styling_text/Styling_lists
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}
 
 Las [listas](/es/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#lists) se comportan como cualquier otro texto en su mayor parte, pero hay algunas propiedades CSS específicas de las listas que debes conocer y algunas prácticas recomendadas a tener en cuenta. Este artículo te lo explica.
 
@@ -18,7 +18,7 @@ Las [listas](/es/docs/Learn_web_development/Core/Structuring_content/Headings_an
         <a href="/es/docs/Learn/HTML/Introduccion_a_HTML">introducción a HTML</a
         >), nociones de cómo trabaja con CSS (estudio
         <a href="/es/docs/Learn/CSS/First_steps">introducción a CSS</a>),
-        <a href="/es/docs/Learn/CSS/Styling_text/Fundamentals"
+        <a href="/es/docs/Learn_web_development/Core/Text_styling/Fundamentals"
           >Conocimientos básicos de CSS para texto y tipos de letra</a
         >.
       </td>
@@ -228,7 +228,6 @@ Aquí hemos hecho lo siguiente:
   la misma cantidad para los elementos de la lista. De este modo, todos los elementos de la lista siguen alineados con los elementos de la lista ordenada y las descripciones, pero los elementos de lista tienen algo de relleno (`padding`) para poder insertar las imágenes de fondo. Si no hiciéramos esto, las imágenes de fondo se solaparían con el texto de los elementos de la lista y quedaría un aspecto desordenado.
 - Establecer la propiedad {{cssxref("list-style-type")}} en `none`, para que no aparezca la viñeta predeterminada. En lugar de ello, vamos a utilizar las propiedades {{cssxref("background")}} para manejar las viñetas.
 - Insertar una viñeta en cada elemento de la lista sin ordenar. Las propiedades relevantes son las siguientes:
-
   - {{cssxref("background-image")}}: Proporciona la ruta que apunta al archivo de imagen que quieres usar como viñeta.
   - {{cssxref("background-position")}}: Define en qué lugar del elemento seleccionado va a aparecer la imagen; en este caso le decimos `0 0`, que significa que la viñeta va a aparecer en el extremo superior izquierdo de cada elemento de lista.
   - {{cssxref("background-size")}}: Establece el tamaño de la imagen de fondo. En teoría queremos que las viñetas sean del mismo tamaño que los elementos de lista (o solo un poco menores o mayores). Utilizamos un tamaño de `1.6rem` (`16px`), que encaja muy bien con el área de relleno de `20px` que hemos elegido para que quepa la viñeta; 16 px más 4 px de espacio entre la viñeta y el texto del elemento de lista funciona bien.
@@ -266,7 +265,7 @@ A veces puedes querer numerar las listas de manera diferente, por ejemplo, que e
 
 ### start
 
-El atributo [`start`](/es/docs/Web/HTML/Element/ol#start) te permite empezar la numeración de la lista en un número diferente de 1. Observa el ejemplo siguiente:
+El atributo [`start`](/es/docs/Web/HTML/Reference/Elements/ol#start) te permite empezar la numeración de la lista en un número diferente de 1. Observa el ejemplo siguiente:
 
 ```html
 <ol start="4">
@@ -285,7 +284,7 @@ Este código da el resultado siguiente:
 
 ### reversed
 
-El atributo [`reversed`](/es/docs/Web/HTML/Element/ol#reversed) empieza la lista contando hacia atrás, en lugar de hacia adelante. Observa el ejemplo siguiente:
+El atributo [`reversed`](/es/docs/Web/HTML/Reference/Elements/ol#reversed) empieza la lista contando hacia atrás, en lugar de hacia adelante. Observa el ejemplo siguiente:
 
 ```html
 <ol start="4" reversed>
@@ -307,7 +306,7 @@ Da el resultado siguiente:
 
 ### value
 
-El atributo [`value`](/es/docs/Web/HTML/Element/ol#value) te permite establecer para tus elementos de lista unos valores numéricos específicos. Observa el ejemplo siguiente:
+El atributo [`value`](/es/docs/Web/HTML/Reference/Elements/ol#value) te permite establecer para tus elementos de lista unos valores numéricos específicos. Observa el ejemplo siguiente:
 
 ```html
 <ol>
@@ -435,4 +434,4 @@ Los contadores CSS proporcionan herramientas avanzadas para la personalización 
 
 La aplicación de estilo a listas se domina con relativa facilidad una vez que conoces algunos principios básicos y propiedades específicas asociados. En el artículo siguiente vamos a continuar con las técnicas de aplicación de estilo a enlaces.
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}

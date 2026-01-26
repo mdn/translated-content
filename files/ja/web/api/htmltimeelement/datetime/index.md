@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLTimeElement.dateTime`** プロパティは文字列で、HTML の [`datetime`](/ja/docs/Web/HTML/Element/time#datetime) 属性を反映し、要素の日付と時刻の値を機械可読な形で保持します。
+**`HTMLTimeElement.dateTime`** プロパティは文字列で、HTML の [`datetime`](/ja/docs/Web/HTML/Reference/Elements/time#datetime) 属性を反映し、要素の日付と時刻の値を機械可読な形で保持します。
 
 文字列の形式は以下の HTML のマイクロ構文に従わなければなりません。
 

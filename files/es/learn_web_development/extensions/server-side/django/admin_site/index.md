@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Admin_site
 original_slug: Learn/Server-side/Django/Admin_site
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Ahora que hemos creado modelos para el sitio web de la [BibliotecaLocal](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), usaremos el sitio de administración de Django para añadir algunos datos de libros "reales". Primero mostraremos cómo registrar los modelos en el sitio de administración y luego te mostraremos cómo iniciar sesión y crear algunos datos. Al final del artículo mostraremos algunas formas en las que puedes mejorar más adelante la presentación del sitio de Administración.
 
@@ -15,7 +15,7 @@ Ahora que hemos creado modelos para el sitio web de la [BibliotecaLocal](/es/doc
       <td>
         Primero completa:
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Server-side/Django/Models"
+          href="https://developer.mozilla.org/es/docs/Learn_web_development/Extensions/Server-side/Django/Models"
           >Tutorial Django Parte 3: Uso de modelos</a
         >.
       </td>
@@ -130,13 +130,11 @@ Django hace un gran trabajo al crear un sitio de administración básico usando 
 Posteriormente puedes personalizar la interfaz para hacerla incluso más fácil de usar. Algunas de las cosas que puedes hacer son:
 
 - Vistas de lista:
-
   - Añadir campos e información adicional desplegada para cada registro.
   - Añadir filtros para seleccionar qué registros se listan, basados en fechas u otros tipos de valores (ej. estado de préstamo del libro).
   - Añadir opciones adicionales al menú _Action_ en las vistas de lista y elegir en qué lugar del formulario se despliega este menú.
 
 - Vistas de detalle:
-
   - Elegir qué campos desplegar (o excluir), junto con su orden, agrupamiento, si son editables, el tipo de control a usarse, orientación, etc.
   - Añadir campos relacionados a un registro para permitir la edición en cadena (ej. proveer la capacidad de añadir y editar registros de libros mientras estás creando su registro de autor).
 
@@ -344,4 +342,4 @@ Hemos aprendido mucho en esta sección, así que es hora de que intentes algunas
 - [Escribiendo tu primera aplicación Django, parte 2: Introducción a Django Admin](https://docs.djangoproject.com/en/1.10/intro/tutorial02/#introducing-the-django-admin) (Django docs)
 - [El sitio de administración de Django](https://docs.djangoproject.com/en/1.10/ref/contrib/admin/) (Django Docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django")}}

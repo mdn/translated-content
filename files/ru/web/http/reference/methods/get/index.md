@@ -3,8 +3,6 @@ title: GET
 slug: Web/HTTP/Reference/Methods/GET
 ---
 
-{{HTTPSidebar}}
-
 **HTTP-метод `GET`** запрашивает представление указанного ресурса. `GET`-запросы должны только получать данные.
 
 <table class="properties">
@@ -19,7 +17,7 @@ slug: Web/HTTP/Reference/Methods/GET
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Safe", "Безопасный")}}
+        {{Glossary("Safe/HTTP", "Безопасный")}}
       </th>
       <td>Да</td>
     </tr>

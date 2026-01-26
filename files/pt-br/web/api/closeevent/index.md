@@ -17,7 +17,6 @@ Um `CloseEvent` é enviado aos clientes que usam {{Glossary("WebSockets")}} quan
 _Esta interface também herda as propriedades de seu objeto pai, {{domxref("Event")}}._
 
 - {{domxref("CloseEvent.code")}} {{readOnlyInline}}
-
   - : Retorna um valor `unsigned short` contendo o código de encerramento enviado pelo servidor. Os seguintes valores são status de códigos permitidos. As definições seguintes são originadas da página da IANA \[[Ref](https://www.iana.org/assignments/websocket/websocket.xml#close-code-number)]. Observe que os códigos 1xxx são exclusivamente Websockets internos e não para os mesmos propósitos dos dados enviados (como quando o protocolo da camada de aplicação é invalido). Os únicos códigos que permitem especificação no Firefox são o 1000 e do 3000 ao 4999 \[[Source](https://searchfox.org/mozilla-central/rev/bf81d741ff5dd11bb364ef21306da599032fd479/dom/websocket/WebSocket.cpp#2533), [Bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1467107)].
 
     | Código de Status | Nome                   | Descrição                                                                                                                                                                                                                             |

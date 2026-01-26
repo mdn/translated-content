@@ -21,7 +21,6 @@ Plusieurs événements plus spécifiques sont basés sur `MouseEvent`, y compris
 _Cette interface hérite aussi des propriétés de ses parents_ _{{domxref("UIEvent")}} et {{domxref("Event")}}._
 
 - {{domxref("MouseEvent.altKey")}} {{readonlyinline}}
-
   - : renvoie `true` (_vrai_) si la touche
 
     <kbd>alt</kbd>
@@ -37,7 +36,6 @@ _Cette interface hérite aussi des propriétés de ses parents_ _{{domxref("UIEv
 - {{domxref("MouseEvent.clientY")}} {{readonlyinline}}
   - : La coordonnée en Y du pointeur de la souris dans les coordonnées locales (contenu du DOM).
 - {{domxref("MouseEvent.ctrlKey")}} {{readonlyinline}}
-
   - : renvoie `true` si la touche
 
     <kbd>ctrl</kbd>
@@ -45,7 +43,6 @@ _Cette interface hérite aussi des propriétés de ses parents_ _{{domxref("UIEv
     est pressée alors que l'événement est lancé.
 
 - {{domxref("MouseEvent.metaKey")}} {{readonlyinline}}
-
   - : renvoie `true` si la touche
 
     <kbd>méta</kbd>
@@ -73,7 +70,6 @@ _Cette interface hérite aussi des propriétés de ses parents_ _{{domxref("UIEv
 - {{domxref("MouseEvent.screenY")}} {{readonlyinline}}
   - : La coordonnée en Y du pointeur de la souris de façon globale (par rapport à l'écran).
 - {{domxref("MouseEvent.shiftKey")}} {{readonlyinline}}
-
   - : renvoie `true` si la touche
 
     <kbd>Maj</kbd>

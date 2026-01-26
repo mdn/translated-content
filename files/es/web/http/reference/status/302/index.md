@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/302
 original_slug: Web/HTTP/Status/302
 ---
 
-{{HTTPSidebar}}
-
 El código de estado de redirección HTTP **`302 Found`** indica que el recurso solicitado ha sido movido temporalmente a la URL dada por las cabeceras {{HTTPHeader("Location")}}. Un navegador redirecciona a esta página, pero los motores de búsqueda no actualizan sus enlaces al recurso ( hablando en lenguaje SEO, se suele decir que el link juice no es enviado a la nueva URL).
 
 Incluso si la especificación requiere el método, y el cuerpo, no debe ser alterado cuando la redirección se completa, no todos los user-agents se conforman aquí, y tu puedes encontrar software inestable por ahí. Por la tanto se recomienda poner el código `302` sólo como respuesta a los métodos {{HTTPMethod("GET")}} o {{HTTPMethod("HEAD")}} , y usar en cambio {{HTTPStatus("307")}} `Temporary Redirect` , ya que el método de cambio está explicitamente prohibido en ese caso.

@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/setInt32
 
 **`setInt32()`** メソッドは、符号付き 32 ビット整数 (long) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置に格納します。
 
-{{InteractiveExample("JavaScript Demo: DataView.setInt32()")}}
+{{InteractiveExample("JavaScript デモ: DataView.setInt32()")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

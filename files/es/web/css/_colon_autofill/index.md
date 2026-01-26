@@ -3,7 +3,7 @@ title: :-webkit-autofill
 slug: Web/CSS/:autofill
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 

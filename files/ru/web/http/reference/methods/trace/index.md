@@ -3,8 +3,6 @@ title: TRACE
 slug: Web/HTTP/Reference/Methods/TRACE
 ---
 
-{{HTTPSidebar}}
-
 **HTTP Метод `TRACE`** выполняет проверку обратной связи по пути к целевому ресурсу, предоставляя полезный механизм отладки.
 
 Конечный получатель запроса должен отразить полученное сообщение, исключая некоторые поля описанные ниже, назад клиенту как тело сообщения с ответом 200 (`OK`) с заголовком {{httpheader("Content-Type")}} `message/http`. Конечный получатель это либо исходный сервер, либо первый сервер получивший значение {{httpheader("Max-Forwards")}} в запросе.
@@ -17,13 +15,13 @@ slug: Web/HTTP/Reference/Methods/TRACE
     </tr>
     <tr>
       <th scope="row">Успешный ответ имеет тело</th>
-      <td>Нет</td>
+      <td>Да</td>
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Safe", "Безопасный")}}
+        {{Glossary("Safe/HTTP", "Безопасный")}}
       </th>
-      <td>Нет</td>
+      <td>Да</td>
     </tr>
     <tr>
       <th scope="row">

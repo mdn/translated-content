@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 `bookmarks.BookmarkTreeNode` 类型的对象表示书签树中的一个节点，其中每个节点可以是一个书签、一个书签文件夹或一个分隔符。子节点根据它们在父文件夹中的 `index` 排序。
 
 ## 类型

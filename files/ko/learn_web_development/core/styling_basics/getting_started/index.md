@@ -6,7 +6,7 @@ l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("conflicting/Learn_web_development/Core/Styling_basics/What_is_CSS", "conflicting/Learn_web_development/Core/Styling_basics/Getting_started", "conflicting/Learn_web_development/Core/Styling_basics")}}
 
 이 글에서는 간단한 HTML 문서를 가져와서 CSS 를 적용하여 언어에 대한 실질적인 내용을 학습합니다.
 
@@ -144,7 +144,7 @@ li {
 
 지금까지 HTML 요소 이름을 기반으로 요소의 스타일을 지정했습니다. 문서에서 해당 유형의 모든 요소가 동일하게 표시되기를 원하는 한 작동합니다. 대부분의 경우에 해당되지 않으므로 다른 요소를 변경하지 않고 요소의 하위 부분을 선택할 수 있는 방법을 찾아야 합니다. 이를 수행하는 가장 일반적인 방법은 HTML 요소에 class 를 추가하고 해당 class 를 대상으로 하는 것입니다.
 
-- HTML 문서에서, 두 번째 목록 항목에 [class 속성](/ko/docs/Web/HTML/Global_attributes/class) 을 추가하십시오. 이제 목록은 다음과 같습니다.
+- HTML 문서에서, 두 번째 목록 항목에 [class 속성](/ko/docs/Web/HTML/Reference/Global_attributes/class) 을 추가하십시오. 이제 목록은 다음과 같습니다.
 
 ```html
 <ul>
@@ -221,7 +221,7 @@ h1 + p {
 
 ## 상태에 따른 스타일링
 
-이 자습서에서 살펴볼 스타일링의 마지막 유형은 상태에 따라 스타일을 지정할 수 있는 기능입니다. 이에 대한 간단한 예제는 링크 스타일링 입니다. 링크의 스타일을 지정할 때 [`<a>`](/ko/docs/Web/HTML/Element/a) (앵커) 요소를 대상으로 해야합니다. 방문되지 않았는지, 방문 중인지, 마우스 오버인지, 키보드를 통한 포커스 또는 클릭 (활성화) 여부에 따라 상태가 다릅니다. CSS 를 사용하여 이러한 다양한 상태를 대상으로 할 수 있습니다. 아래 CSS 는 방문하지 않은 링크는 분홍색이고 방문한 링크는 녹색입니다.
+이 자습서에서 살펴볼 스타일링의 마지막 유형은 상태에 따라 스타일을 지정할 수 있는 기능입니다. 이에 대한 간단한 예제는 링크 스타일링 입니다. 링크의 스타일을 지정할 때 [`<a>`](/ko/docs/Web/HTML/Reference/Elements/a) (앵커) 요소를 대상으로 해야합니다. 방문되지 않았는지, 방문 중인지, 마우스 오버인지, 키보드를 통한 포커스 또는 클릭 (활성화) 여부에 따라 상태가 다릅니다. CSS 를 사용하여 이러한 다양한 상태를 대상으로 할 수 있습니다. 아래 CSS 는 방문하지 않은 링크는 분홍색이고 방문한 링크는 녹색입니다.
 
 ```css
 a:link {
@@ -288,4 +288,4 @@ body h1 + p .special {
 
 다음 수업에서는 [CSS의 구조](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics/Getting_started)에 대해 살펴 볼 것입니다.
 
-{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("conflicting/Learn_web_development/Core/Styling_basics/What_is_CSS", "conflicting/Learn_web_development/Core/Styling_basics/Getting_started", "conflicting/Learn_web_development/Core/Styling_basics")}}

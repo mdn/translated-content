@@ -1,16 +1,13 @@
 ---
 title: SVG におけるその他のコンテンツ
 slug: Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG
-original_slug: Web/SVG/Tutorial/Other_content_in_SVG
 l10n:
-  sourceCommit: 32d1c9ff83019f8efae3e7987a55e83035e4b926
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Clipping_and_masking", "Web/SVG/Tutorials/SVG_from_scratch/Filter_effects") }}
 
-{{ PreviousNext("Web/SVG/Tutorial/Clipping_and_masking", "Web/SVG/Tutorial/Filter_effects") }}
-
-長方形や円といったグラフィックの基本要素とは別に、 SVG は画像内に他の種類のコンテンツを埋め込むための一連の要素も同様に用意しています。
+矩形や円といったグラフィックの基本要素とは別に、 SVG は画像内に他の種類のコンテンツを埋め込むための一連の要素も同様に用意しています。
 
 ### ラスター画像の埋め込み
 
@@ -31,7 +28,7 @@ HTML における img 要素と同様に、SVG には同じ用途の `image` 要
     width="128"
     height="146"
     transform="rotate(45)"
-    href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/image/mdn_logo_only_color.png" />
+    href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/image/mdn_logo_only_color.png" />
 </svg>
 ```
 
@@ -43,8 +40,9 @@ SVG は XML アプリケーションであることから、_常に_ SVG 文書�
 
 `foreignObject` 要素は、SVG に XHTML を埋め込むのによい手段です。長いテキストがある場合、SVG の `text` 要素より HTML のレイアウトの方がより適切かつ使いやすくなります。他によく挙げられる使い方として、MathML の式の埋め込みがあります。これは SVG を科学分野で応用する場合に、SVG と MathML を統合するためにとてもよい方法です。
 
-> **メモ:** `foreignObject` のコンテンツは、ビューアーによって処理できなければならないことを覚えておいてください。スタンドアロンの SVG ビューアーは、HTML や MathML のレンダリングができないでしょう。
+> [!NOTE]
+> `foreignObject` のコンテンツは、ビューアーによって処理できなければならないことを覚えておいてください。スタンドアロンの SVG ビューアーは、HTML や MathML のレンダリングができないでしょう。
 
 `foreignObject` は SVG の要素ですので、`image` と同様に SVG のあらゆる技術を用いることができ、そのコンテンツに適用されます。
 
-{{ PreviousNext("Web/SVG/Tutorial/Clipping_and_masking", "Web/SVG/Tutorial/Filter_effects") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Clipping_and_masking", "Web/SVG/Tutorials/SVG_from_scratch/Filter_effects") }}

@@ -3,8 +3,6 @@ title: Bugs importants corrigés dans Firefox 3
 slug: Mozilla/Firefox/Releases/3/Notable_bugs_fixed
 ---
 
-{{FirefoxSidebar}}
-
 Cet article fait la liste des corrections importantes faisant partie de Firefox 3 qui ne sont pas nécessairement évidentes à trouver dans la documentation.
 
 - Si une erreur se produit à l'analyse d'un overlay, l'overlay n'est pas appliqué. Les erreurs d'analyse apparaissent dans la console d'erreurs. ([bug Firefox 355755](https://bugzil.la/355755))

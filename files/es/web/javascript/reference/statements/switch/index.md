@@ -30,7 +30,6 @@ switch (expresión) {
 - `expresión`
   - : Es una expresión que es comparada con el valor de cada instancia `case`.
 - `case valorN`
-
   - : Una instancia `case valorN` es usada para ser comparada con la `expresión`. Si la `expresión` coincide con el `valorN`, las declaraciones dentro de la instancia `case` se ejecutan hasta que se encuentre el final de la declaración `switch` o hasta encontrar una interrupción `break`.
 
 - `default`

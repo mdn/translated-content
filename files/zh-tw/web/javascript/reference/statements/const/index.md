@@ -3,8 +3,6 @@ title: const
 slug: Web/JavaScript/Reference/Statements/const
 ---
 
-{{jsSidebar("Statements")}}
-
 Constants (常數) 有點像使用 [`let`](/zh-TW/docs/Web/JavaScript/Reference/Statements/let) 所宣告的變數，具有區塊可視範圍。常數不能重複指定值，也不能重複宣告。
 
 {{InteractiveExample("JavaScript Demo: const declaration")}}
@@ -62,7 +60,7 @@ const MY_FAV = 7;
 MY_FAV = 20;
 
 // MY_FAV 是 7
-console.log('我喜歡的數字是: ' + MY_FAV);
+console.log("我喜歡的數字是: " + MY_FAV);
 
 // 嘗試重複宣告同名的常數，將會發生錯誤 -  Uncaught SyntaxError: Identifier 'MY_FAV' has already been declared
 const MY_FAV = 20;
@@ -75,39 +73,39 @@ let MY_FAV = 20;
 
 // 很重要，請注意區塊可視範圍的特性。
 if (MY_FAV === 7) {
-    // 以下式子沒有問題，並且會建立一個名叫 MY_FAV 的具有區塊可視範圍的變數。
-    // (等同於使用 let 來宣告一個具有區塊可視範圍的非常數變數。)
-    let MY_FAV = 20;
+  // 以下式子沒有問題，並且會建立一個名叫 MY_FAV 的具有區塊可視範圍的變數。
+  // (等同於使用 let 來宣告一個具有區塊可視範圍的非常數變數。)
+  let MY_FAV = 20;
 
-    // MY_FAV 現在變成 20
-    console.log('我喜歡的數字是：' + MY_FAV);
+  // MY_FAV 現在變成 20
+  console.log("我喜歡的數字是：" + MY_FAV);
 
-    // 這會將變數懸掛於全域，而導致錯誤。(與常數同名)
-    var MY_FAV = 20;
+  // 這會將變數懸掛於全域，而導致錯誤。(與常數同名)
+  var MY_FAV = 20;
 }
 
 // MY_FAV 仍然是 7
-console.log('我喜歡的數字是：' + MY_FAV);
+console.log("我喜歡的數字是：" + MY_FAV);
 
 // 發生錯誤 - Uncaught SyntaxError: Missing initializer in const declaration
 const FOO;
 
 // 常數的值可以是一個物件
-const MY_OBJECT = {'key': 'value'};
+const MY_OBJECT = { key: "value" };
 
 // 嘗試覆寫該物件將會發生錯誤 - Uncaught TypeError: Assignment to constant variable.
-MY_OBJECT = {'OTHER_KEY': 'value'};
+MY_OBJECT = { OTHER_KEY: "value" };
 
 // 然而, 物件的屬性並沒有被保護,
 // 所以，以下敘述式沒有問題。
-MY_OBJECT.key = 'otherValue'; // Use Object.freeze() to make object immutable
+MY_OBJECT.key = "otherValue"; // Use Object.freeze() to make object immutable
 
 // 對陣列來說也是一樣
 const MY_ARRAY = [];
 // 可以把項目加到陣列中。
-MY_ARRAY.push('A'); // ["A"]
+MY_ARRAY.push("A"); // ["A"]
 // 然而，對這個變數指定新陣列，將會發生錯誤 - Uncaught TypeError: Assignment to constant variable.
-MY_ARRAY = ['B'];
+MY_ARRAY = ["B"];
 ```
 
 ## 規範

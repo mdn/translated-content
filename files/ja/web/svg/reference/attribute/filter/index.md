@@ -1,17 +1,14 @@
 ---
 title: filter
 slug: Web/SVG/Reference/Attribute/filter
-original_slug: Web/SVG/Attribute/filter
 l10n:
-  sourceCommit: 829db137a01feb14af7beaec178a3ea0118b4777
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}
-
-**`filter`** 属性は、　{{SVGElement("filter")}}　要素で定義したフィルター効果を指定します。
+**`filter`** 属性は、 {{SVGElement("filter")}} 要素で定義したフィルター効果を指定します。
 
 > [!NOTE]
-> プレゼンテーション属性として、 `filter` は CSS プロパティとして使用することができます。詳しい情報は {{cssxref("filter", "CSS の filter")}} を参照してください。
+> プレゼンテーション属性であるため、 `filter` には対応する CSS プロパティ {{cssxref("filter")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
 
 プレゼンテーション属性として、任意の要素に適用することができますが、効果があるのは[コンテナー要素](/ja/docs/Web/SVG/Reference/Element#コンテナー要素)（{{SVGElement("defs")}} 要素以外を除く）、すべての[グラフィック要素](/ja/docs/Web/SVG/Reference/Element#グラフィック要素)、および {{SVGElement("use")}} 要素のみです。
 
@@ -46,11 +43,11 @@ svg {
       <td>
         <code>none</code>
         <a
-          href="/ja/docs/Web/CSS/Value_definition_syntax#single_bar"
+          href="/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#single_bar"
           title="Single bar: exactly one of the entities must be present"
           >|</a
         >
-        <code>&#x3C;filter-function-list></code>
+        <code>&#x3C;filter-value-list></code>
       </td>
     </tr>
     <tr>
@@ -64,7 +61,7 @@ svg {
   </tbody>
 </table>
 
-値の説明は {{cssxref("filter", "CSS filter")}} プロパティを参照してください。
+値の説明は CSS の {{cssxref("filter")}} プロパティを参照してください。
 
 ## 仕様書
 
@@ -77,4 +74,4 @@ svg {
 ## 関連情報
 
 - {{SVGElement("filter")}}
-- {{cssxref("filter","CSS filter")}}
+- CSS の {{cssxref("filter")}} プロパティ

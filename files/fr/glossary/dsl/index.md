@@ -2,10 +2,8 @@
 title: DSL
 slug: Glossary/DSL
 l10n:
-  sourceCommit: cdb0dad4aeabda32b85c397f5e45304f95edc0d1
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-
-{{GlossarySidebar}}
 
 L'acronyme **DSL** peut avoir plusieurs significations selon le contexte. Il peut faire référence à&nbsp;:
 
@@ -13,4 +11,4 @@ L'acronyme **DSL** peut avoir plusieurs significations selon le contexte. Il peu
 
 ## Voir aussi
 
-- [La page d'homonymie Wikipédia](https://fr.wikipedia.org/wiki/DSL)
+- [DSL](https://fr.wikipedia.org/wiki/DSL) sur Wikipédia

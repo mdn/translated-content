@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-**`HTMLAnchorElement.referrerPolicy`** 属性反映 {{HTMLElement("a")}} 元素的 HTML [`referrerpolicy`](/zh-CN/docs/Web/HTML/Element/a#referrerpolicy) 属性，该属性定义获取资源时发送哪个来源地址（referrer）。
+**`HTMLAnchorElement.referrerPolicy`** 属性反映 {{HTMLElement("a")}} 元素的 HTML [`referrerpolicy`](/zh-CN/docs/Web/HTML/Reference/Elements/a#referrerpolicy) 属性，该属性定义获取资源时发送哪个来源地址（referrer）。
 
 ## 值
 
@@ -22,7 +22,7 @@ l10n:
 - `origin-when-cross-origin`
   - : 在执行同源请求时发送完整的 URL，但在其他情况下仅发送文档的来源。
 - `same-origin`
-  - : 对于[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)，将会发送来源地址，但跨源请求将不包含任何来源地址信息。
+  - : 对于[同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)，将会发送来源地址，但跨源请求将不包含任何来源地址信息。
 - `strict-origin`
   - : 当协议安全级别保持不变（HTTPS → HTTPS）时仅发送文档的源作为来源地址，但不发送到安全性较低的目的地（HTTPS → HTTP）。
 - `strict-origin-when-cross-origin` (default)

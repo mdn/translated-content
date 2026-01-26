@@ -31,7 +31,6 @@ WebVTT 的结构由以下部分组成，其中一些是可选的，如下所示�
 - 一个可选的字节顺序标记（BOM）。
 - 字符串“`WEBVTT`”。
 - `WEBVTT` 右侧的可选文本标题。
-
   - `WEBVTT` 之后必须有一个空格。
   - 你可以通过此方式向文本添加描述。
   - 你可以在文本标题中使用除换行符和“`-->`”字符外的任何内容。
@@ -301,7 +300,7 @@ Some time ago in a place rather distant....
 
 cue 时间线指示 cue 何时显示。它用时间戳表示开始和结束的时间。结束的时间一定大于开始的时间，并且开始时间必须大于或者等于所有之前开始的时间。cue 可能具有重叠的时间。
 
-如果 webVTT 文件用于 chapters（{{HTMLElement("track")}} 的 [`kind`](/zh-CN/docs/Web/HTML/Global_attributes#kind) 是 `chapters`），那么文件中不能有重叠的时间。
+如果 webVTT 文件用于 chapters（{{HTMLElement("track")}} 的 [`kind`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#kind) 是 `chapters`），那么文件中不能有重叠的时间。
 
 每个 cue 的时间线都包含五个部分：
 
@@ -368,9 +367,7 @@ cue 设置被增加在 cue 时间线的右侧。在 cue 时间线和第一个设
     - `lr`
       - : 书写方向从左向右。
 - `line`
-
   - : 如果没有设置垂直方向，那么指定文本垂直方向显示的位置。如果设置了垂直，line 指定文本出现的水平位置。它的值可能是：
-
     - 数字
       - : 数字表示视频中显示的 cue 第一行的高度。正数表示自上而下，负数表示自下而上。
     - 百分比
@@ -384,7 +381,6 @@ cue 设置被增加在 cue 时间线的右侧。在 cue 时间线和第一个设
     | `line:100%` | bottom             | left          | right         |
 
 - `position`
-
   - : 指定字幕水平出现的位置。如果设置了垂直方向，position 指定文本垂直方向出现的位置。当值是一个百分比，其必须是一个 0 到 100 之间的整数，包括 0 和 100（不是小数），并且其后必须跟随一个百分比符号（%）。
 
     | Position        | `vertical` omitted | `vertical:rl` | `vertical:lr` |
@@ -393,7 +389,6 @@ cue 设置被增加在 cue 时间线的右侧。在 cue 时间线和第一个设
     | `position:100%` | right              | bottom        | bottom        |
 
 - `size`
-
   - : 指定字幕区域到宽度。如果设置了垂直方向，size 指定了文本区域到高度。当值是一个百分比，其必须是一个 0 到 100 之间的整数，包括 0 和 100（不是小数），并且其后必须跟随一个百分比符号（%）。
 
     | Size        | `vertical` omitted | `vertical:rl` | `vertical:lr` |
@@ -402,7 +397,6 @@ cue 设置被增加在 cue 时间线的右侧。在 cue 时间线和第一个设
     | `size:50%`  | half width         | half height   | half height   |
 
 - `align`
-
   - : 指定文本的对齐方式。如果设置了字幕，则在 cue 设置的 size 给出的空间中对齐。
 
     | Align          | `vertical` omitted    | `vertical:rl`       | `vertical:lr`       |
@@ -441,10 +435,9 @@ cue 文本的有效内容不能包含 `-->` 字符串、和号字符（`&`）或
 
 ### cue 有效内容的文本标签
 
-这里有一些标签，例如 `<b>`。然而，如果 WebVTT 文件在 [`kind`](/zh-CN/docs/Web/HTML/Global_attributes#kind) 属性是 `chapters` 的 {{HTMLElement("track")}} 元素中使用，那么你无法使用这些标签。
+这里有一些标签，例如 `<b>`。然而，如果 WebVTT 文件在 [`kind`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#kind) 属性是 `chapters` 的 {{HTMLElement("track")}} 元素中使用，那么你无法使用这些标签。
 
 - 时间戳标签
-
   - : 时间戳必须大于 cue 开始的时间戳，大于在 cue 有效内容中任意之前的时间戳，并且小于 cue 结束的时间戳。_活动的文本_（active text）是指当前时间戳和下一个时间戳之间的文本或者如果有效内容中没有其他时间戳，则一直到有效内容末尾的文本。有效内容中*活动的文本*之前的任何文本都是*之前已出现的文本*（previous text）。*活动的文本*之后的文本都是*未来即将出现的文本*（future text）。这启用了 karaoke 风格的字幕。
 
     ```plain
@@ -464,7 +457,6 @@ cue 文本的有效内容不能包含 `-->` 字符串、和号字符（`&`）或
 以下标签是 cue 中允许的 HTML 标签，并且需要闭合（例如 `<b>text</b>`）。
 
 - 类标签（`<c></c>`）
-
   - : 使用 CSS 类对包含的文本进行样式设置。
 
     ```xml
@@ -472,7 +464,6 @@ cue 文本的有效内容不能包含 `-->` 字符串、和号字符（`&`）或
     ```
 
 - 斜体标签（`<i></i>`）
-
   - : 将包含的文本斜体化。
 
     ```xml
@@ -480,7 +471,6 @@ cue 文本的有效内容不能包含 `-->` 字符串、和号字符（`&`）或
     ```
 
 - 粗体标签（`<b></b>`）
-
   - : 将包含的文本粗体化。
 
     ```xml
@@ -488,7 +478,6 @@ cue 文本的有效内容不能包含 `-->` 字符串、和号字符（`&`）或
     ```
 
 - 下划线标签（`<u></u>`）
-
   - : 给包含的文本加下划线
 
     ```xml
@@ -496,7 +485,6 @@ cue 文本的有效内容不能包含 `-->` 字符串、和号字符（`&`）或
     ```
 
 - Ruby 标签（`<ruby></ruby>`）
-
   - : 使用 ruby 文本标签展示 [ruby 字符](https://en.wikipedia.org/wiki/Ruby_character)（即其他字符上的小的注解字符）。
 
     ```xml
@@ -504,7 +492,6 @@ cue 文本的有效内容不能包含 `-->` 字符串、和号字符（`&`）或
     ```
 
 - Ruby 文本标签（`<rt></rt>`）
-
   - : 使用 ruby 文本标签展示 [ruby 字符](https://en.wikipedia.org/wiki/Ruby_character)（即其他字符上的小的注解字符）。
 
     ```xml
@@ -512,7 +499,6 @@ cue 文本的有效内容不能包含 `-->` 字符串、和号字符（`&`）或
     ```
 
 - 声音标签（`<v></v>`）
-
   - : 与类标签类似，也用于使用 CSS 设置包含文本的样式。
 
     ```xml
@@ -601,4 +587,4 @@ WebVTT 在 Firefox 24 的首选项 `media.webvtt.enabled` 之后实现，默认�
 
 ## 参见
 
-- CSS 伪类 [`::cue` 和 `::cue()`](/zh-CN/docs/Web/CSS/::cue)
+- CSS 伪类 [`::cue` 和 `::cue()`](/zh-CN/docs/Web/CSS/Reference/Selectors/::cue)

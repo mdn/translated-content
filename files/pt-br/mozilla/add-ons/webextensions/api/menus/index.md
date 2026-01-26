@@ -168,7 +168,8 @@ browser.menus.create(
 
 {{WebExtExamples("h2")}}
 
-> **Nota:** **Reconhecimentos**Esta API é baseada na API [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) do Chromium. Esta documentação é derivada do [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) do código do Chromium .
+> [!NOTE]
+> **Reconhecimentos**Esta API é baseada na API [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) do Chromium. Esta documentação é derivada do [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) do código do Chromium .
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

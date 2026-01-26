@@ -3,8 +3,6 @@ title: Object.values()
 slug: Web/JavaScript/Reference/Global_Objects/Object/values
 ---
 
-{{JSRef}}
-
 **`Object.values()`** 静态方法返回一个给定对象的自有可枚举字符串键属性值组成的数组。
 
 {{InteractiveExample("JavaScript Demo: Object.values()")}}

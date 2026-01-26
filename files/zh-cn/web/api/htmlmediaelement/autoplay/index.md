@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLMediaElement.autoplay`** 属性反映了 HTML [`autoplay`](/zh-CN/docs/Web/HTML/Element/video#autoplay) 属性，表示是否应在有足够的媒体资源加载完成且无需中断的情况下自动开始播放。
+**`HTMLMediaElement.autoplay`** 属性反映了 HTML [`autoplay`](/zh-CN/docs/Web/HTML/Reference/Elements/video#autoplay) 属性，表示是否应在有足够的媒体资源加载完成且无需中断的情况下自动开始播放。
 
 如果媒体元素的源是 {{domxref("MediaStream")}} 且其 `autoplay` 属性为 `true`，则该元素在激活时（即 {{domxref("MediaStream.active")}} 为 `true`）将开始播放。
 

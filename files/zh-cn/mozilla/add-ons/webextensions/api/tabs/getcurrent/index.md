@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 获取一个包含当前脚本所在标签页信息的 {{WebExtAPIRef("tabs.Tab")}} 对象。
 
 > [!NOTE]

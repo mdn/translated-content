@@ -1,14 +1,17 @@
 ---
 title: Conversion de type
 slug: Glossary/Type_Conversion
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+La conversion de type (ou transtypage) désigne le transfert de données d'un type de donnée vers un autre. _Conversion implicite_ se produit lorsque le compilateur (pour les langages compilés) ou l'environnement d'exécution (pour les langages de script comme {{Glossary("JavaScript")}}) convertit automatiquement les types de données. Le code source peut également exiger qu'une conversion ait lieu de manière _explicite_.
 
-La conversion de type (ou transtypage) est le transfert d'une donnée d'un type de donnée vers un autre. Une _conversion implicite_ se produit quand le compilateur affecte les types de donnée automatiquement, mais le code source peut aussi demander à ce qu'une conversion ait lieu de manière _explicite_. Exemples simples : étant donnée l'instruction `5+2.0`, l'entier `5` est converti implicitement en nombre à virgule flottante, mais avec l'instruction `Number("0x11")`, la chaîne "0x11" est explicitement convertie en valeur numérique 17.
+Par exemple, pour l'expression `"foo" + 1`, le {{Glossary("Number", "nombre")}} `1` est converti implicitement en {{Glossary("String", "chaîne de caractères")}} et l'expression retourne `"foo1"`. Pour l'appel `Number("0x11")`, la chaîne `"0x11"` est convertie explicitement en le nombre `17`.
 
-## Pour en savoir plus
-
-### Culture générale
+## Voir aussi
 
 - [Conversion de type](https://fr.wikipedia.org/wiki/Conversion_de_type) sur Wikipédia
+- Termes associés du glossaire&nbsp;:
+  - {{Glossary("Type")}}
+  - {{Glossary("Type coercion", "Coercition de type")}}

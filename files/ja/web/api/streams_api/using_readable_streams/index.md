@@ -126,7 +126,8 @@ if (done) {
 }
 ```
 
-> **メモ:** `close()` は、ここで説明している元のストリームではなく、新しいカスタムストリームの一部です。 次の節でカスタムストリームについて詳しく説明します。
+> [!NOTE]
+> `close()` は、ここで説明している元のストリームではなく、新しいカスタムストリームの一部です。 次の節でカスタムストリームについて詳しく説明します。
 
 `done` が `true` でない場合、読み込んだ新しいチャンク（結果オブジェクトの `value` プロパティに含まれる）を処理してから、再度 `pump()` 関数を呼び出して次のチャンクを読み込みます。
 
@@ -513,9 +514,10 @@ readableStream
 
 ただし、カスタムストリームも `ReadableStream` インスタンスであるため、それにリーダーを取りつけることができます。 例として、単純なランダムストリーム（[Simple random stream](https://github.com/mdn/dom-examples/blob/main/streams/simple-random-stream/index.html)）のデモをご覧ください（[ライブも参照](https://mdn.github.io/dom-examples/streams/simple-random-stream/)）。これはカスタムストリームを作成し、いくつかのランダムな文字列をキューに入れてから、\[文字列の生成を停止] ボタンが押されるとストリームからデータを再度読み取ります。
 
-> **メモ:** {{domxref("FetchEvent.respondWith()")}} を使用してストリームを消費するためには、キューに入ったストリームコンテンツは {{jsxref("Uint8Array")}} 型でなければなりません。例えば、 {{domxref("TextEncoder")}} を使用してエンコードされます。
+> [!NOTE]
+> {{domxref("FetchEvent.respondWith()")}} を使用してストリームを消費するためには、キューに入ったストリームコンテンツは {{jsxref("Uint8Array")}} 型でなければなりません。例えば、 {{domxref("TextEncoder")}} を使用してエンコードされます。
 
-カスタムストリームのコンストラクターには、{{domxref("setInterval()")}} 呼び出しを使用して 1 秒ごとにランダムな文字列を生成する `start()` メソッドがあります。 次に、{{domxref("ReadableStreamDefaultController.enqueue()")}} を使用してストリームに入れます。 ボタンが押されると、インターバルがキャンセルされ、 `readStream()` と呼ばれる関数が呼び出されて、データをストリームから再度読み取ります。 また、チャンクをストリームのキューへ入れることを止めたため、ストリームを閉じます。
+カスタムストリームのコンストラクターには、{{domxref("Window.setInterval", "setInterval()")}} 呼び出しを使用して 1 秒ごとにランダムな文字列を生成する `start()` メソッドがあります。 次に、{{domxref("ReadableStreamDefaultController.enqueue()")}} を使用してストリームに入れます。 ボタンが押されると、インターバルがキャンセルされ、 `readStream()` と呼ばれる関数が呼び出されて、データをストリームから再度読み取ります。 また、チャンクをストリームのキューへ入れることを止めたため、ストリームを閉じます。
 
 ```js
 let interval;

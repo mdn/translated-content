@@ -100,9 +100,9 @@ lfo.start();
 
 #### AudioParam 사용 일람
 
-`AudioNode` 출력을 하나 이상의 {{
-  domxref("AudioParam") }}에 연결하는 것은 가능하고, 하나 이상의 AudioNode 출력을 하나의 {{
-  domxref("AudioParam") }}에 다수의 `connect()` 호출과 함께 연결하는 것은 가능합니다. 그러므로 [팬 인과 팬 아웃](/ko/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#fan-in_and_fan-out)이 지원됩니다.
+`AudioNode` 출력을 하나 이상의
+{{ domxref("AudioParam") }}에 연결하는 것은 가능하고, 하나 이상의 AudioNode 출력을 하나의
+{{ domxref("AudioParam") }}에 다수의 `connect()` 호출과 함께 연결하는 것은 가능합니다. 그러므로 [팬 인과 팬 아웃](/ko/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#fan-in_and_fan-out)이 지원됩니다.
 
 {{ domxref("AudioParam") }}은 자신에게 연결된 모든 `AudioNode` 출력으로부터 렌더링된 오디오 데이터를 취하고 그 데이터를 [다운 믹싱](/ko/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing)함으로써 모노로 변환합니다 (만약 데이터가 이미 모노가 아니라면). 다음으로, {{ domxref("AudioParam") }}은 그 데이터를 그러한 다른 출력들과, 고유한 파라미터 값과 함께 섞을 것입니다. (고유한 파라미터 값이란 {{ domxref("AudioParam") }}이 보통 어떠한 오디오 연결 없이 가지는 값이며, 이는 이 파라미터에 예정된 모든 타임라인 변화를 포함합니다.)
 

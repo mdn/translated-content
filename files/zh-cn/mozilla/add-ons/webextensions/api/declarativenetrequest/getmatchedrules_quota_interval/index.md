@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 以分钟为单位指定的，可以进行 {{WebExtAPIRef("declarativeNetRequest.MAX_GETMATCHEDRULES_CALLS_PER_INTERVAL")}} 次 {{WebExtAPIRef("declarativeNetRequest.getMatchedRules")}} 调用的时间间隔。额外的调用会立即失败，并导致 Promise 被拒绝。与用户手势相关的调用不受配额限制。
 
 其值为 `10`。

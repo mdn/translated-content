@@ -30,9 +30,7 @@ arr.map(callback[, thisArg])
 ### Parâmetros
 
 - `callback`
-
   - : Função cujo retorno produz o elemento do novo Array. Recebe três argumentos:
-
     - `valorAtual`
       - : O valor do elemento original do Array de origem.
     - `indice`

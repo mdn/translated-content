@@ -17,33 +17,24 @@ l10n:
 国際化された拡張機能は、他の拡張機能と同じ機能 — [バックグラウンドスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts)、[コンテンツスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)など — を含む他、さまざまなロケールに切り替えられるような追加の部分もあります。これは下記のディレクトリーツリーのように要約されます:
 
 - extension-root-directory/
-
   - \_locales
-
     - en
-
       - messages.json
-
         - 英語メッセージ (文字列)
 
     - de
-
       - messages.json
-
         - ドイツ語メッセージ (文字列)
 
     - etc.
 
   - manifest.json
-
     - ロケール依存のメタデータ
 
   - myJavascript.js
-
     - ブラウザーロケールや、ロケール固有メッセージなどを取得する JavaScript
 
   - myStyles.css
-
     - ロケール依存の CSS
 
 それぞれの新機能を順に見ていきましょう— 以下の節は拡張機能を国際化するときのそれぞれのステップを表しています。
@@ -92,7 +83,8 @@ l10n:
 
 このファイルは標準の JSON — メンバーがそれぞれに `message` と `description`. を含む名前付きオブジェクトです。すべての項目が文字列です; `$URL$` はプレースホルダーで、拡張機能から呼ばれる `notificationContent` メンバーに置き換えられます。[マニフェスト内のローカライズ済み文字列を取得する](#マニフェスト内のローカライズ済み文字列を取得する)の節でその方法を学びます。
 
-> **メモ:** `messages.json` ファイルの中身についての詳しい情報は[ロケール固有のメッセージリファレンス](/ja/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference)にあります。
+> [!NOTE]
+> `messages.json` ファイルの中身についての詳しい情報は[ロケール固有のメッセージリファレンス](/ja/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference)にあります。
 
 ## manifest.json を国際化する
 
@@ -234,25 +226,17 @@ You clicked https://developer.mozilla.org.
 下記の例を見てみます。
 
 - extension-root-directory/
-
   - \_locales
-
     - en_GB
-
       - messages.json
-
         - `{ "colorLocalized": { "message": "colour", "description": "Color." }, /* … */ }`
 
       en
-
       - messages.json
-
         - `{ "colorLocalized": { "message": "color", "description": "Color." }, /* … */ }`
 
     - fr
-
       - messages.json
-
         - `{ "colorLocalized": { "message": "couleur", "description": "Color." }, /* … */}`
 
 `default_locale` が `fr` にセットされ、ブラウザーの現在のロケールが `en_GB` と仮定します:

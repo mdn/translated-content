@@ -16,17 +16,16 @@ l10n:
 _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 
 - {{domxref("HTMLTrackElement.kind")}}
-  - : 反映 [`kind`](/zh-CN/docs/Web/HTML/Element/track#kind) HTML 属性的字符串，指示如何使用文本轨道。可能的值有：`subtitles`、`captions`、`descriptions`、`chapters` 或 `metadata`。
+  - : 反映 [`kind`](/zh-CN/docs/Web/HTML/Reference/Elements/track#kind) HTML 属性的字符串，指示如何使用文本轨道。可能的值有：`subtitles`、`captions`、`descriptions`、`chapters` 或 `metadata`。
 - {{domxref("HTMLTrackElement.src")}}
-  - : 反映 [`src`](/zh-CN/docs/Web/HTML/Element/track#src) HTML 属性的字符串，指示文本轨道数据的地址。
+  - : 反映 [`src`](/zh-CN/docs/Web/HTML/Reference/Elements/track#src) HTML 属性的字符串，指示文本轨道数据的地址。
 - {{domxref("HTMLTrackElement.srclang")}}
-  - : 反映 [`srclang`](/zh-CN/docs/Web/HTML/Element/track#srclang) HTML 属性的字符串，指示文本轨道数据的语言。
+  - : 反映 [`srclang`](/zh-CN/docs/Web/HTML/Reference/Elements/track#srclang) HTML 属性的字符串，指示文本轨道数据的语言。
 - {{domxref("HTMLTrackElement.label")}}
-  - : 反映 [`label`](/zh-CN/docs/Web/HTML/Element/track#label) HTML 属性的字符串，指示轨道的用户可读的标题。
+  - : 反映 [`label`](/zh-CN/docs/Web/HTML/Reference/Elements/track#label) HTML 属性的字符串，指示轨道的用户可读的标题。
 - {{domxref("HTMLTrackElement.default")}}
-  - : 反映 [`default`](/zh-CN/docs/Web/HTML/Element/track#default) 属性的布尔值，如果用户的偏好没有指示另一个轨道更合适，则指示要启用该轨道。
+  - : 反映 [`default`](/zh-CN/docs/Web/HTML/Reference/Elements/track#default) 属性的布尔值，如果用户的偏好没有指示另一个轨道更合适，则指示要启用该轨道。
 - {{domxref("HTMLTrackElement.readyState")}} {{ReadOnlyInline}}
-
   - : 返回 `unsigned short` 显示轨道的准备状态：
 
     | 常量      | 值  | 描述                                                                                                  |

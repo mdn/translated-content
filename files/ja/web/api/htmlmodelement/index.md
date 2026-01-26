@@ -16,9 +16,9 @@ l10n:
 _親である {{domxref("HTMLElement")}} から継承したプロパティがあります。_
 
 - {{domxref("HTMLModElement.cite")}}
-  - : 文字列で、 HTML の [`cite`](/ja/docs/Web/HTML/Element/del#cite) 属性の値を反映します。変更点についての説明を含むリソースの URI が入ります。
+  - : 文字列で、 HTML の [`cite`](/ja/docs/Web/HTML/Reference/Elements/del#cite) 属性の値を反映します。変更点についての説明を含むリソースの URI が入ります。
 - {{domxref("HTMLModElement.dateTime")}}
-  - : 文字列で、 HTML の [`datetime`](/ja/docs/Web/HTML/Element/del#datetime) 属性の値を反映します。変更されたタイムスタンプを示す日時文字列が入ります。
+  - : 文字列で、 HTML の [`datetime`](/ja/docs/Web/HTML/Reference/Elements/del#datetime) 属性の値を反映します。変更されたタイムスタンプを示す日時文字列が入ります。
 
 ## 仕様書
 

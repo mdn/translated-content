@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
-**`elementTiming`** は {{domxref("Element")}} インターフェイスのプロパティで、{{domxref("PerformanceElementTiming")}} API で監視する要素を特定します。`elementTiming` プロパティは [`elementtiming`](/ja/docs/Web/HTML/Attributes/elementtiming) 属性の値を反映します。
+**`elementTiming`** は {{domxref("Element")}} インターフェイスのプロパティで、{{domxref("PerformanceElementTiming")}} API で監視する要素を特定します。`elementTiming` プロパティは [`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming) 属性の値を反映します。
 
 ## 値
 
@@ -18,7 +18,7 @@ l10n:
 
 ### `elementTiming` の値をログ出力
 
-この例では、[`elementtiming`](/ja/docs/Web/HTML/Attributes/elementtiming) 属性を {{HTMLElement("img")}} 要素に追加することで、監視する画像を設定します。
+この例では、[`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming) 属性を {{HTMLElement("img")}} 要素に追加することで、監視する画像を設定します。
 
 ```html
 <img
@@ -48,4 +48,4 @@ console.log(el.elementTiming); // "big-image"
 ## 関連情報
 
 - {{domxref("PerformanceElementTiming")}}
-- HTML の [`elementtiming`](/ja/docs/Web/HTML/Attributes/elementtiming) 属性
+- HTML の [`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming) 属性

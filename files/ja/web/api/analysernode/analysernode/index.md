@@ -22,9 +22,7 @@ new AnalyserNode(context, options)
 - `context`
   - : {{domxref("AudioContext")}} または {{domxref("OfflineAudioContext")}} への参照です。
 - `options` {{optional_inline}}
-
   - : 以下のプロパティを持つオブジェクトです。すべて省略可能です。
-
     - `fftSize`
       - : [周波数領域](https://ja.wikipedia.org/wiki/周波数領域)を解析するための [FFT](https://ja.wikipedia.org/wiki/高速フーリエ変換) の望ましい初期サイズです。
         既定値は `2048` です。

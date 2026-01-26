@@ -89,4 +89,4 @@ Os links influenciam a rapidez com que um mecanismo de pesquisa se vincula ao se
 Agora você vai querer configurar algumas páginas da web com links.
 
 - Para obter mais informações teóricas, aprenda sobre [URLs e sua estrutura](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), já que cada link aponta para um URL.
-- Quer algo um pouco mais prático? O [Criando hyperlinks](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) _(em inglês)_, artigo da nossa [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML) _(em inglês)_, explica como implementar links em detalhes.
+- Quer algo um pouco mais prático? O [Criando hyperlinks](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Creating_links) _(em inglês)_, artigo da nossa [Introdução ao HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content) _(em inglês)_, explica como implementar links em detalhes.

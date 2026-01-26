@@ -3,7 +3,7 @@ title: React 新手入門
 slug: Learn_web_development/Core/Frameworks_libraries/React_getting_started
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 
 在本文中，我們將向 React 打個招呼。我們將探索其背後與範例的一些細節，在自己電腦設置基本的 React 工具鏈環境，並建立一個簡單入門的應用程式——好瞭解 React 基本架構。
 
@@ -62,9 +62,9 @@ React 在許多設計模式中利用了現代 JavaScript 特性。它與 JavaScr
 const heading = <h1>Mozilla Developer Network</h1>;
 ```
 
-這個`heading`變數又稱為**JSX expression（JSX 表達式）**。React 可以在我們的應用程式中使用它，以渲染顯示[`<h1>`](/zh-TW/docs/Web/HTML/Element/Heading_Elements)標籤
+這個`heading`變數又稱為**JSX expression（JSX 表達式）**。React 可以在我們的應用程式中使用它，以渲染顯示[`<h1>`](/zh-TW/docs/Web/HTML/Reference/Elements/Heading_Elements)標籤
 
-假如我們出於語義化的原因，想要將`heading`包裹在[`<header>`](/zh-TW/docs/Web/HTML/Element/header)標籤中，那該怎麼做呢？JSX 方法允許我們將元素互相嵌套，就像我們在使用 HTML 一樣：
+假如我們出於語義化的原因，想要將`heading`包裹在[`<header>`](/zh-TW/docs/Web/HTML/Reference/Elements/header)標籤中，那該怎麼做呢？JSX 方法允許我們將元素互相嵌套，就像我們在使用 HTML 一樣：
 
 ```js
 const header = (
@@ -85,7 +85,7 @@ const header = (
 > );
 > ```
 >
-> 然而，這樣寫看起來有點不對勁，因為這段表達式[`<header>`](/zh-TW/docs/Web/HTML/Element/header)的開始標籤沒有縮排到與其對應結束標籤相同的位置。
+> 然而，這樣寫看起來有點不對勁，因為這段表達式[`<header>`](/zh-TW/docs/Web/HTML/Reference/Elements/header)的開始標籤沒有縮排到與其對應結束標籤相同的位置。
 
 當然，若沒有其他的幫助，你的瀏覽器是無法直接讀取解析 JSX 的，當編譯完成（藉由使用像[Babel](https://babeljs.io/)或[Parcel](https://parceljs.org/)之類的工具），我們的 header 表達式看起來像這樣：
 
@@ -107,7 +107,7 @@ const header = React.createElement(
 
 有很多方法可以使用 React，但我們將使用命令行界面（CLI）工具 create-react-app。如前面所說，它可以透過安裝一些套件和創建一些文件檔案以處理上面描述的工具，使其可以用來加速開發 React 應用程式的過程。
 
-是可以[不使用 create-react-app 就將 React 加入到網站裡](https://zh-hant.reactjs.org/docs/add-react-to-a-website.html)的，藉由複製一些[`<script>`](/zh-TW/docs/Web/HTML/Element/script)元素並加進 HTML 檔案中即可，但 create-react-app CLI 確實是開發 React 應用程式的常見起點。使用它可以讓你花更少的時間在設置上，好使用更多的時間專注在建構應用程式上。
+是可以[不使用 create-react-app 就將 React 加入到網站裡](https://zh-hant.reactjs.org/docs/add-react-to-a-website.html)的，藉由複製一些[`<script>`](/zh-TW/docs/Web/HTML/Reference/Elements/script)元素並加進 HTML 檔案中即可，但 create-react-app CLI 確實是開發 React 應用程式的常見起點。使用它可以讓你花更少的時間在設置上，好使用更多的時間專注在建構應用程式上。
 
 ### 環境要求
 
@@ -180,7 +180,7 @@ moz-todo-react
 
 The **`src`** directory is where we'll spend most of our time, as it's where the source code for our application lives.
 
-The **`public`** directory contains files that will be read by your browser while you're developing the app; the most important of these is `index.html`. React injects your code into this file so that your browser can run it. There's some other markup that helps create-react-app function, so take care not to edit it unless you know what you're doing. You very much should change the text inside the [`<title>`](/zh-TW/docs/Web/HTML/Element/title) element in this file to reflect the title of your application. Accurate page titles are important for accessibility!
+The **`public`** directory contains files that will be read by your browser while you're developing the app; the most important of these is `index.html`. React injects your code into this file so that your browser can run it. There's some other markup that helps create-react-app function, so take care not to edit it unless you know what you're doing. You very much should change the text inside the [`<title>`](/zh-TW/docs/Web/HTML/Reference/Elements/title) element in this file to reflect the title of your application. Accurate page titles are important for accessibility!
 
 The `public` directory will also be published when you build and deploy a production version of your app. We won't cover deployment in this tutorial, but you should be able to use a similar solution to that described in our [Deploying our app](/zh-TW/docs/Learn_web_development/Extensions/Client-side_tools/Deployment) tutorial.
 
@@ -269,9 +269,9 @@ function App() {
 
 The `App` function returns a JSX expression. This expression defines what your browser ultimately renders to the DOM.
 
-Some elements in the expression have attributes, which are written just like in HTML, following a pattern of `attribute="value"`. On line 3, the opening [`<div>`](/zh-TW/docs/Web/HTML/Element/div) tag has a `className` attribute. This is the same as the [`class`](/zh-TW/docs/Web/HTML/Global_attributes/class) attribute in HTML, but because JSX is JavaScript, we can't use the word `class` — it's reserved, meaning JavaScript already uses it for a specific purpose and it would cause problems here in our code. A few other HTML attributes are written differently in JSX than they are in HTML too, for the same kind of reason. We'll cover them as we encounter them.
+Some elements in the expression have attributes, which are written just like in HTML, following a pattern of `attribute="value"`. On line 3, the opening [`<div>`](/zh-TW/docs/Web/HTML/Reference/Elements/div) tag has a `className` attribute. This is the same as the [`class`](/zh-TW/docs/Web/HTML/Reference/Global_attributes/class) attribute in HTML, but because JSX is JavaScript, we can't use the word `class` — it's reserved, meaning JavaScript already uses it for a specific purpose and it would cause problems here in our code. A few other HTML attributes are written differently in JSX than they are in HTML too, for the same kind of reason. We'll cover them as we encounter them.
 
-Take a moment to change the [`<p>`](/zh-TW/docs/Web/HTML/Element/p) tag on line 6 so that it reads "Hello, world!", then save your file. You'll notice that this change is immediately rendered in the development server running at `http://localhost:3000` in your browser. Now delete the [`<a>`](/zh-TW/docs/Web/HTML/Element/a) tag and save; the "Learn React" link will be gone.
+Take a moment to change the [`<p>`](/zh-TW/docs/Web/HTML/Reference/Elements/p) tag on line 6 so that it reads "Hello, world!", then save your file. You'll notice that this change is immediately rendered in the development server running at `http://localhost:3000` in your browser. Now delete the [`<a>`](/zh-TW/docs/Web/HTML/Reference/Elements/a) tag and save; the "Learn React" link will be gone.
 
 Your `App` component should now look like this:
 

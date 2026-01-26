@@ -26,7 +26,8 @@ var elementoInserido = elementoPai.insertBefore(novoElemento, elementoDeReferenc
 
 Se _elementoDeReferencia_ for `null`, _novoElemento_ será inserido no fim da lista de nós filhos.
 
-> **Nota:** `elementoDeReferencia` não é um parâmetro opcional - você deve passar explicitamente um `Node` ou `null`. Deixar de fornecer ou passar valores inválidos pode [ter comportamento diferente](https://code.google.com/p/chromium/issues/detail?id=419780) em diferentes versões de navegadores.
+> [!NOTE]
+> `elementoDeReferencia` não é um parâmetro opcional - você deve passar explicitamente um `Node` ou `null`. Deixar de fornecer ou passar valores inválidos pode [ter comportamento diferente](https://code.google.com/p/chromium/issues/detail?id=419780) em diferentes versões de navegadores.
 
 ### Return value
 

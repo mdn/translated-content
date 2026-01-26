@@ -10,7 +10,8 @@ Web Audio 표준은 [WebKit](https://webkit.org/)에서 처음 구현되었고, 
 
 Web Audio 명세를 구현하는 (Gecko와 같은) 새로운 엔진들은 오직 명세의 공식, 최종 버전만을 구현하는데, 이것이 의미하는 바는 `webkitAudioContext`나 Web Audio 명세에서의 오래된 명명 규칙을 사용하는 코드는 Web Audio 구현을 따르는 것에서 별도의 조작 없이 즉시 작동하지 않을지도 모른다는 것입니다. 이 글은 개발자들이 이런 문제들을 만날 가능성이 있는 영역들을 요약하기를 시도하고 어떻게 그런 코드를 각각 다른 브라우저 엔진들에서 작동할 {{domxref("AudioContext")}}에 기반한 표준으로 이동할지에 대한 예제들을 제공합니다.
 
-> **참고:** [webkitAudioContext monkeypatch](https://github.com/cwilso/webkitAudioContext-MonkeyPatch)라 불리는 라이브러리가 있는데, 이는 `webkitAudioContext`를 겨냥하는 대부분의 코드를 별도의 조작 없이 `AudioContext`에 기반한 표준에서 작동하게 만들기 위해 이 변화들 중 일부를 자동적으로 수정하지만, 이것은 현재 아래의 모든 경우들을 다루지 않고 있습니다. 이것에 의해 자동적으로 다뤄지는 API들의 목록을 보기 위해서는 이 라이브러리의 [README 파일](https://github.com/cwilso/webkitAudioContext-MonkeyPatch/blob/gh-pages/README.md)을 참고해 보세요.
+> [!NOTE]
+> [webkitAudioContext monkeypatch](https://github.com/cwilso/webkitAudioContext-MonkeyPatch)라 불리는 라이브러리가 있는데, 이는 `webkitAudioContext`를 겨냥하는 대부분의 코드를 별도의 조작 없이 `AudioContext`에 기반한 표준에서 작동하게 만들기 위해 이 변화들 중 일부를 자동적으로 수정하지만, 이것은 현재 아래의 모든 경우들을 다루지 않고 있습니다. 이것에 의해 자동적으로 다뤄지는 API들의 목록을 보기 위해서는 이 라이브러리의 [README 파일](https://github.com/cwilso/webkitAudioContext-MonkeyPatch/blob/gh-pages/README.md)을 참고해 보세요.
 
 ## 생성자 메서드에서의 변화
 

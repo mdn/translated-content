@@ -36,7 +36,7 @@ let var1 [= value1] [, var2 [= value2]] [, ..., varN [= valueN]];
 - `valueN` {{optional_inline}}
   - : 각각의 변수 선언에 대해, 유효한 JavaScript 표현식을 지정해 변수의 초기 값을 지정할 수 있습니다.
 
-이 구문 대신 [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)을 사용해서 변수를 선언할 수도 있습니다.
+이 구문 대신 [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring)을 사용해서 변수를 선언할 수도 있습니다.
 
 ```js
 let { bar } = foo; // foo = { bar: 10, baz: 12 };
@@ -51,7 +51,8 @@ let { bar } = foo; // foo = { bar: 10, baz: 12 };
 
 왜 키워드의 이름이 "**let**"이 됐는지에 대한 설명은 [여기](https://stackoverflow.com/questions/37916940/why-was-the-name-let-chosen-for-block-scoped-variable-declarations-in-javascri)서 읽을 수 있습니다.
 
-> **참고:** `let` 변수가 가진 다양한 문제는, `let` 변수 선언을 현재 스코프의 맨 위에서 수행해서 피할 수 있습니다.
+> [!NOTE]
+> `let` 변수가 가진 다양한 문제는, `let` 변수 선언을 현재 스코프의 맨 위에서 수행해서 피할 수 있습니다.
 > (가독성에 영향을 줄 수 있습니다)
 
 ## 예제
@@ -91,7 +92,7 @@ console.log(this.y); // undefined
 
 ### 비공개 멤버 모사
 
-[생성자](/ko/docs/Glossary/Constructor)와 `let`을 함께 사용하면 [클로저](/ko/docs/Web/JavaScript/Closures)를 사용하지 않아도 비공개 멤버를 나타낼 수 있습니다.
+[생성자](/ko/docs/Glossary/Constructor)와 `let`을 함께 사용하면 [클로저](/ko/docs/Web/JavaScript/Guide/Closures)를 사용하지 않아도 비공개 멤버를 나타낼 수 있습니다.
 
 ```js
 var Thing;
@@ -181,7 +182,8 @@ switch (x) {
 
 `let` 변수는 초기화하기 전에는 읽거나 쓸 수 없습니다(선언 구문에 초기 값을 지정하지 않은 경우 `undefined`로 초기화함). 초기화 전에 접근을 시도하면 {{jsxref("ReferenceError")}}가 발생합니다.
 
-> **참고:** {{jsxref("Statements/var", "var")}} 변수와 다른 점으로, `var`의 경우 선언 전에 접근할 시 `undefined`입니다.
+> [!NOTE]
+> {{jsxref("Statements/var", "var")}} 변수와 다른 점으로, `var`의 경우 선언 전에 접근할 시 `undefined`입니다.
 
 변수 스코프의 맨 위에서 변수의 초기화 완료 시점까지의 변수는 "일시적 사각지대"(Temporal Dead Zone, TDZ)에 들어간 변수라고 표현합니다.
 

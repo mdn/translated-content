@@ -27,10 +27,8 @@ Response.json(data, options)
 - `data`
   - : レスポンス本体として使用する JSON データ。
 - `options` {{optional_inline}}
-
   - : レスポンスの設定（ステータスコード、ステータステキスト、ヘッダーなど）の入ったオプションオブジェクト。
     これは、{{domxref("Response.Response", "Response()")}} コンストラクターのオプション引数と同じです。
-
     - `status`
       - : レスポンスのステータスコード、例えば `200` です。
     - `statusText`

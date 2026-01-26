@@ -59,10 +59,10 @@ Geralmente é recomendável que se utilize classes sempre que possível, utiliza
 
 - Usar classes torna seu código extensível — Mesmo que você tenha apenas um elemento a ser estilizado agora, você pode querer adicionar as mesmas regras a outros elementos futuramente.
 - Classes permitem que você estilize diversos elementos. Sendo assim, classes podem ajudar a desenvolver folhas de estilo menores; mais enchutas, já que regras podem ser facilmente reutilizadas entre elementos. Isso não só ajuda na manutenção da folha de estilo, como também agiliza a renderização de páginas, principalmente em conexões lentas.
-- Seletores de classes tem menor [especificidade](/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity) do que seletores de id, o que torna as regras de estilização mais fáceis de serem sobrepostas.
+- Seletores de classes tem menor [especificidade](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#specificity) do que seletores de id, o que torna as regras de estilização mais fáceis de serem sobrepostas.
 
 > [!NOTE]
-> Veja [Seletores](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors) para mais informações.
+> Veja [Seletores](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) para mais informações.
 
 ## Como eu redefino o valor padrão de uma propriedade?
 
@@ -92,7 +92,7 @@ h1 {
 
 ## Como eu derivo um estilo de outro?
 
-CSS não exatamente permite que um estilo seja definido com os termos de outro. (Veja [as notas de Eric Meyer sobre a posição do grupo de trabalho a respeito do assunto](http://archivist.incutio.com/viewlist/css-discuss/2685)). Entretanto, é possível atingir o mesmo efeito designando diversas classes a um elemento, e [Variáveis CSS](/pt-BR/docs/Web/CSS/Using_CSS_custom_properties) agora providenciam uma forma de definir informações sobre um estilo em um lugar e reutilizar estas informações em diversos outros lugares.
+CSS não exatamente permite que um estilo seja definido com os termos de outro. (Veja [as notas de Eric Meyer sobre a posição do grupo de trabalho a respeito do assunto](http://archivist.incutio.com/viewlist/css-discuss/2685)). Entretanto, é possível atingir o mesmo efeito designando diversas classes a um elemento, e [Variáveis CSS](/pt-BR/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) agora providenciam uma forma de definir informações sobre um estilo em um lugar e reutilizar estas informações em diversos outros lugares.
 
 ## Como eu aplico diversas classes a um elemento?
 
@@ -228,7 +228,7 @@ O uso do seletor \* também deve ser minimizado por ser um seletor lento, especi
 
 ### Especificidade em CSS
 
-Quando multiplas regras são aplicadas a um elemento, a regra a ser renderizada depende de sua [especificidade](/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity). O estilo _inline_ (regras de estilo definidas no atributo `style` de um elemento HTML) tem a mais alta especificidade e irá sobrepor qualquer seletor. Seletores de ID tem a segunda mais alta especificidade, com seletores de classes vindo logo após e, eventualmente, seletores de elementos (tags). Tendo isso em mente, a cor do texto da {{htmlelement("div")}} abaixo terá a cor vermelha.
+Quando multiplas regras são aplicadas a um elemento, a regra a ser renderizada depende de sua [especificidade](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#specificity). O estilo _inline_ (regras de estilo definidas no atributo `style` de um elemento HTML) tem a mais alta especificidade e irá sobrepor qualquer seletor. Seletores de ID tem a segunda mais alta especificidade, com seletores de classes vindo logo após e, eventualmente, seletores de elementos (tags). Tendo isso em mente, a cor do texto da {{htmlelement("div")}} abaixo terá a cor vermelha.
 
 ```html
 <style>

@@ -32,7 +32,8 @@ l10n:
 - {{jsxref("String.prototype.replace()")}} および {{jsxref("String.prototype.replaceAll()")}} メソッドの `replacement` コールバック関数の `pN` 引数
 - 同じパターン内の[後方参照](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)
 
-> **メモ:** `exec()` の結果の配列でも、キャプチャグループは `1`、`2` などの番号でアクセスされますが、これは要素 `0`` が一致するもの全体であるためです。`\0` は後方参照ではなく、NUL 文字の[文字エスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)です。
+> [!NOTE]
+> `exec()` の結果の配列でも、キャプチャグループは `1`、`2` などの番号でアクセスされますが、これは要素 `0`` が一致するもの全体であるためです。`\0` は後方参照ではなく、NUL 文字の[文字エスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)です。
 
 正規表現コード内のキャプチャグループは、その結果と一対一に対応します。キャプチャグループが一致しない場合（例えば、それが[論理和](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)の一致しない選択肢に属する場合）、対応する結果は未定義です。
 

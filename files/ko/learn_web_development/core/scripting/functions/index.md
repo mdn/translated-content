@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Functions
 original_slug: Learn/JavaScript/Building_blocks/Functions
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}
 
 코딩에 있어서 또 하나의 필수적인 개념은 **함수**인데, 이는 하나의 일을 하는 코드 조각을 정의된 블록 안에 저장하고, 같은 코드를 여러 번 타이핑하기보다는, 하나의 짧은 명령을 사용하여 여러분이 그 함수가 필요할 때 언제든지 그 코드를 호출할 수 있게 합니다. 이 문서에서 우리는 기본 문법(syntax), 어떻게 함수를 호출하고(invoke) 정의하는지, 스코프(scope), 그리고 매개변수(parameter)와 같은 함수 뒤에 있는 핵심적인 개념들을 탐구할 것입니다.
 
@@ -382,7 +382,8 @@ function greeting() {
 > [!NOTE]
 > 같은 스코프 규칙은 반복문 (예: `for() { ... }`)과 조건문(conditional blocks) (예: `if() { ... }`)에 적용되지 않습니다. — 이것들은 아주 비슷하게 생겼지만, 같은 것이 아닙니다! 헷갈리지 않도록 조심하세요.
 
-> **참고:** [ReferenceError: "x" is not defined](/ko/docs/Web/JavaScript/Reference/Errors/Not_defined) 오류는 여러분이 마주칠 가장 일반적인 것들 중 하나입니다. 만약 여러분이 이 오류를 얻었고 여러분이 문제의 변수를 정의했다는 것이 확실하다면, 그것이 어떤 스코프 안에 들어있는지 확인해 보세요.
+> [!NOTE]
+> [ReferenceError: "x" is not defined](/ko/docs/Web/JavaScript/Reference/Errors/Not_defined) 오류는 여러분이 마주칠 가장 일반적인 것들 중 하나입니다. 만약 여러분이 이 오류를 얻었고 여러분이 문제의 변수를 정의했다는 것이 확실하다면, 그것이 어떤 스코프 안에 들어있는지 확인해 보세요.
 
 ### 함수 내부의 함수
 
@@ -436,7 +437,7 @@ function subFunction3(value) {
 
 ## 실력을 평가해 보세요!
 
-이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 문서를 읽기 전에 이 문서의 내용을 잘 학습하고 이해하셨는지 확인하실 수 있습니다 — [실력을 평가해 보세요: 함수](/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Functions). 이 테스트들은 다음 두 문서에서 다뤄지는 기술들을 요구하므로, 여러분은 그 문서들을 이 테스트를 시도해 보기 전에 먼저 읽기를 원할지도 모릅니다.
+이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 문서를 읽기 전에 이 문서의 내용을 잘 학습하고 이해하셨는지 확인하실 수 있습니다 — [실력을 평가해 보세요: 함수](/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills/Functions). 이 테스트들은 다음 두 문서에서 다뤄지는 기술들을 요구하므로, 여러분은 그 문서들을 이 테스트를 시도해 보기 전에 먼저 읽기를 원할지도 모릅니다.
 
 ## 결론
 
@@ -448,4 +449,4 @@ function subFunction3(value) {
 - [함수 참고서](/ko/docs/Web/JavaScript/Reference/Functions)
 - [기본 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters), [화살표 함수](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions) — 고급 개념 참고서
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}

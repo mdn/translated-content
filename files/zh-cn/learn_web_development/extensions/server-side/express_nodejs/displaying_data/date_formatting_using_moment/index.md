@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8d5440dbd259fd6eea32b4f4a200f25257d1bf41
 ---
 
-{{LearnSidebar}}
-
 我们模型的默认日期呈现很难看：_Fri Apr 10 2020 12:49:58 GMT+0800 (中国标准时间)_。在本节中，我们将展示如何更新上一节中的*书本实例列表*页面，以更友好的格式显示 `due_date` 字段：2023 年 4 月 10 日。
 
 我们使用的方法是在 `BookInstance` 模型中创建一个返回格式化日期的虚拟屬性。我们将使用 [luxon](https://www.npmjs.com/package/luxon) 来做格式化，这是一个功能强大、现代化并且非常友好的 JavaScript 日期库，用于解析、验证、操作、格式化和本地化日期。

@@ -1,28 +1,27 @@
 ---
 title: Math.sign()
+short-title: sign()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sign
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Math.sign()`** 静的メソッドは 1 または -1 を返し、引数として渡された値の符号を表します。入力値が 0 または -0 ならば、そのまま返します。
 
-{{InteractiveExample("JavaScript Demo: Math.sign()")}}
+{{InteractiveExample("JavaScript デモ: Math.sign()")}}
 
 ```js interactive-example
 console.log(Math.sign(3));
-// Expected output: 1
+// 予想される結果: 1
 
 console.log(Math.sign(-3));
-// Expected output: -1
+// 予想される結果: -1
 
 console.log(Math.sign(0));
-// Expected output: 0
+// 予想される結果: 0
 
 console.log(Math.sign("-3"));
-// Expected output: -1
+// 予想される結果: -1
 ```
 
 ## 構文
@@ -76,6 +75,7 @@ Math.sign(); // NaN
 ## 関連情報
 
 - [`Math.sign` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
+- [es-shims による `Math.sign` のポリフィル](https://www.npmjs.com/package/math.sign)
 - {{jsxref("Math.abs()")}}
 - {{jsxref("Math.ceil()")}}
 - {{jsxref("Math.floor()")}}

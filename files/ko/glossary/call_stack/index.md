@@ -71,6 +71,5 @@ greeting();
 
 - 위키피디아의 [콜 스택](https://ko.wikipedia.org/wiki/%EC%BD%9C_%EC%8A%A4%ED%83%9D)
 - [용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("Call stack")}}
   - {{Glossary("Function")}}

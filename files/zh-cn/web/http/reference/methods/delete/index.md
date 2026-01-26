@@ -3,8 +3,6 @@ title: DELETE
 slug: Web/HTTP/Reference/Methods/DELETE
 ---
 
-{{HTTPSidebar}}
-
 **HTTP `DELETE` 请求方法**用于删除指定的资源。
 
 <table class="properties">

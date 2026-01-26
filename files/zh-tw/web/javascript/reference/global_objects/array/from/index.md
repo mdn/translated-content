@@ -3,8 +3,6 @@ title: Array.from()
 slug: Web/JavaScript/Reference/Global_Objects/Array/from
 ---
 
-{{JSRef}}
-
 **`Array.from()`** 方法會從類陣列（array-like）或是可迭代（iterable）物件建立一個新的 `Array` 實體。
 
 {{InteractiveExample("JavaScript Demo: Array.from()")}}

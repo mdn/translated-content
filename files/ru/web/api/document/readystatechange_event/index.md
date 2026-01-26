@@ -12,7 +12,6 @@ slug: Web/API/Document/readystatechange_event
 - Спецификация
   - : [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#current-document-readiness)
 - Интерфейс
-
   - : Event
 
 - Всплывает

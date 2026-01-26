@@ -4,8 +4,6 @@ slug: orphaned/Web/HTTP/Headers/Large-Allocation
 original_slug: Web/HTTP/Headers/Large-Allocation
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de resposta não padronizado **`Large-Allocation`** diz ao nevagador que a página que está sendo carregada vai performar uma grande alocação. Ele é atualmente implementado somente no Firefox, mas é inofensivo para ser enviado para qualquer navegador.
 
 Aplicações [WebAssembly](/pt-BR/docs/WebAssembly) ou _asm.js_ podem usar grandes blocos contíguos de memória alocada. Para jogos complexos, por exemplo, estas alocações podem ser bem grandes, algumas vezes grandes na escala de 1GB. O `Large-Allocation` diz ao navegador que o conteúdo web que será carregado vai querer performar uma grande alocação de memória contígua e o navegador pode reagir a este cabeçalho iniciando um processo dedicado para carregador o documento, por exemplo.

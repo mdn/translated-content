@@ -30,7 +30,6 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Getting_started
 渲染過程包括以下内容：
 
 1. 我們先看一下`svg`根元素：
-
    - 不使用類似(X)HTML 的文檔聲明，因為基於 SVG 的 DTD 會造成很多問題，弊大於利。
    - 為了明確 SVG 版本，`version` 和 baseProfile 兩個屬性必須要寫
    - 作為 XML 方言，SVG 必須始終绑定正確的命名空間（xmlns 属性）。更多資訊，請參考[命名空間速成班頁面](/zh-TW/docs/Web/SVG/Guides/Namespaces_crash_course)
@@ -43,7 +42,6 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Getting_started
 
 - 首先要注意的是元素渲染的順序，SVG 的全局規則是：靠後的元素，將在靠前的元素上面渲染。
 - 在 web 上，SVG 可以直接放進瀏覽器裡顯示，或者通過以下幾種方式嵌入到 HTML 文檔中顯示：
-
   - 如果是 XHTML 文檔，並且響應端接受 application/xhtml+xml 類型，SVG 就可以在 XML 源裡直接嵌入
   - 如果是 HTML5 文檔，並且瀏覽器支持 HTML5，SVG 也可以直接嵌入，但是語法上需要修改，以符合 HTML5 規範。
   - SVG 可以通過 Object 元素引入:

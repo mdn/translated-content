@@ -2,12 +2,10 @@
 title: Autorité de certification
 slug: Glossary/Certificate_authority
 l10n:
-  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
-
-Une **autorité de certification** (AC, ou CA en anglais) est une organisation qui [signe](/fr/docs/Glossary/Signature/Security) des [certificats numériques](/fr/docs/Glossary/Digital_certificate) et leurs [clés publiques](/fr/docs/Glossary/Key), affirmant ainsi que les informations et les clés contenues sont correctes.
+Une **autorité de certification** (<abbr>AC</abbr>, ou <abbr title="Certificate Authority" lang="en">CA</abbr> en anglais) est une organisation qui {{Glossary("Signature/Security", "signe")}} des {{Glossary("Digital certificate", "certificats numériques")}} et leurs {{Glossary("Key", "clés publiques")}}, affirmant ainsi que les informations et les clés contenues sont correctes.
 
 Pour un certificat numérique d'un site web, ces informations comprennent au minimum le nom de l'organisation ayant demandé le certificat numérique (par exemple, Mozilla Corporation), le site pour lequel il est destiné (par exemple, mozilla.org), et l'autorité de certification.
 
@@ -20,4 +18,4 @@ Les autorités de certification font partie de [l'infrastructure à clés publiq
 
 - [Autorité de certification](https://fr.wikipedia.org/wiki/Autorit%C3%A9_de_certification) sur Wikipédia
 - [Infrastructure à clés publiques](https://fr.wikipedia.org/wiki/Infrastructure_%C3%A0_cl%C3%A9s_publiques) sur Wikipédia
-- [La liste des certificats racines incluse dans le code Mozilla](https://wiki.mozilla.org/CA/Included_Certificates)
+- [La liste des certificats racines incluse dans le code Mozilla <sup>(angl.)</sup>](https://wiki.mozilla.org/CA/Included_Certificates)

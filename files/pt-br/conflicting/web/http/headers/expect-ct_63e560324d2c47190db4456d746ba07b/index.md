@@ -3,7 +3,7 @@ title: Public-Key-Pins-Report-Only
 slug: conflicting/Web/HTTP/Headers/Expect-CT_63e560324d2c47190db4456d746ba07b
 ---
 
-{{HTTPSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 > [!NOTE]
 > O mecanismo de Fixação de Chave Pública (_Public Key Pinning_) foi depreciado em favor do [Certificado de Transparência (Certificate Transparency)](/pt-BR/docs/Web/Security/Certificate_Transparency) e do cabeçalho {{HTTPHeader("Expect-CT")}}.

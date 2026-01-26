@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toString
 l10n:
   sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
@@ -10,7 +11,7 @@ l10n:
 {{jsxref("Array")}} 인스턴스의 **`toString()`** 메서드는
 지정된 배열 및 그 요소를 나타내는 문자열을 반환합니다.
 
-{{InteractiveExample("JavaScript Demo: Array.toString()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.toString()", "shorter")}}
 
 ```js interactive-example
 const array1 = [1, 2, "a", "1a"];

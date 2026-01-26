@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaSort`** は {{domxref("Element")}} インターフェイスのプロパティで、表やグリッド内の項目が昇順か降順かを示す [`aria-sort`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-sort) 属性の値を反映します。
+**`ariaSort`** は {{domxref("Element")}} インターフェイスのプロパティで、表やグリッド内の項目が昇順か降順かを示す [`aria-sort`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort) 属性の値を反映します。
 
 ## 値
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 当标签页缩放时触发。
 
 ## 语法
@@ -31,9 +29,7 @@ browser.tabs.onZoomChange.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 此事件发生时调用的函数。该函数接收以下参数：
-
     - `ZoomChangeInfo`
       - : `object`。关于缩放事件的信息。详见 [ZoomChangeInfo](#zoomchangeinfo_2) 部分。
 

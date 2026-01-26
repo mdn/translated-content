@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/format
 
 **`format()`** メソッドは、リストの言語固有の表現を文字列で返します。
 
-{{InteractiveExample("JavaScript Demo: Intl.ListFormat", "taller")}}
+{{InteractiveExample("JavaScript デモ: Intl.ListFormat", "taller")}}
 
 ```js interactive-example
 const vehicles = ["Motorcycle", "Bus", "Car"];
@@ -30,8 +30,6 @@ const formatter3 = new Intl.ListFormat("en", { style: "narrow", type: "unit" });
 console.log(formatter3.format(vehicles));
 // Expected output: "Motorcycle Bus Car"
 ```
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## 構文
 

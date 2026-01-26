@@ -45,9 +45,7 @@ gl.uniform1iv(samplerCubeUniformLoc, [v]); // для samplerCube или масс
 - location
   - : {{domxref("WebGLUniformLocation")}} объект содержащий uniform атрибут для его изменения.
 - `value, v0, v1, v2, v3`
-
   - : Новое значение для uniform переменной. Допустимые типы:
-
     - Тип float {{jsxref("Number")}} для этого типа (методы с "f").
     - Последовательность чисел с плавающей точкой (пример {{jsxref("Float32Array")}} или {{jsxref("Array")}} чисел) для векторных методов с плавающей точкой (методы с "fv").
     - Тип {{jsxref("Number")}} для этого типа (методы с "i").

@@ -19,7 +19,6 @@ No es parte de ninguna especificación. Es un pseudo-elemento propietario y espe
 
 - {{cssxref("::-webkit-slider-thumb")}}
 - Pseudo-elementos similares usados en otros navegadores:
-
   - {{cssxref("::-ms-track")}}
   - {{cssxref("::-moz-range-track")}}
 

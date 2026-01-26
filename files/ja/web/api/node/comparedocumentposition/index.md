@@ -52,7 +52,8 @@ if (head.compareDocumentPosition(body) & Node.DOCUMENT_POSITION_FOLLOWING) {
 }
 ```
 
-> **メモ:** `compareDocumentPosition()` の返値はビットマスクですので、意味のある結果を得るには[ビット AND 演算子](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)を使用する必要があります。
+> [!NOTE]
+> `compareDocumentPosition()` の返値はビットマスクですので、意味のある結果を得るには[ビット AND 演算子](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)を使用する必要があります。
 
 ## 仕様書
 

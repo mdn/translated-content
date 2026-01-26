@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 有关单个闹钟的信息。此对象可以由 {{WebExtAPIRef('alarms.get()')}} 和 {{WebExtAPIRef('alarms.getAll()')}} 返回，也会被传递到 {{WebExtAPIRef('alarms.onAlarm')}} 监听器中。
 
 ## 类型

@@ -22,13 +22,11 @@ pushState(state, unused, url)
 ### 引数
 
 - `state`
-
   - : この `state` (状態)オブジェクトは、`pushState()` によって作られる新しい履歴項目に関連した JavaScript オブジェクトです。ユーザーが新規の `state` に移動したときはいつも、 {{domxref("Window/popstate_event", "popstate")}} イベントが発行され、イベントの `state` プロパティは、履歴項目の `state` オブジェクトのコピーを含みます。
 
     `state` オブジェクトは、シリアライズ可能なあらゆものとなりえます。 Firefox では状態オブジェクトをユーザーのディスクに保存してブラウザーを再起動した後にも復帰できるため、 `state` オブジェクトのシリアライズ表現に 16 MiB の上限を課しています。これを超える大きさの状態オブジェクトを `pushState()` に渡した場合、このメソッドで例外が発生します。これ以上のスペースが必要な場合、{{domxref("Window.sessionStorage", "sessionStorage")}} や {{domxref("Window.localStorage", "localStorage")}} を使用することをお勧めします。
 
 - `unused`
-
   - : この引数は歴史的な理由のために存在しており、省略することはできません。空文字を渡すことが、将来このメソッドに変更が加えられたときに安全です。
 
 - `url` {{optional_inline}}

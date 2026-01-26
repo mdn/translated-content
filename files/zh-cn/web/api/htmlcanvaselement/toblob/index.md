@@ -35,7 +35,7 @@ toBlob(callback, type, quality)
 ### 异常
 
 - `SecurityError`
-  - : canvas“[被污染](/zh-CN/docs/Web/HTML/CORS_enabled_image)”的情况下不能使用此方法。
+  - : canvas“[被污染](/zh-CN/docs/Web/HTML/How_to/CORS_enabled_image)”的情况下不能使用此方法。
 
 ## 示例
 

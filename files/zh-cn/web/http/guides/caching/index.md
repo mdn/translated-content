@@ -3,8 +3,6 @@ title: HTTP 缓存
 slug: Web/HTTP/Guides/Caching
 ---
 
-{{HTTPSidebar}}
-
 ## 概览
 
 HTTP 缓存会存储与请求关联的响应，并将存储的响应复用于后续请求。
@@ -51,7 +49,7 @@ Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
 
 然而，近年来，随着 HTTPS 变得越来越普遍，客户端/服务器通信变得加密，在许多情况下，路径中的代理缓存只能传输响应而不能充当缓存。因此，在这种情况下，无需担心甚至无法看到响应的过时代理缓存的实现。
 
-另一方面，如果 {{Glossary("TLS")}} 桥接代理通过在 PC 上安装来自组织管理的 {{Glossary("Certificate_authority", "CA")}} 证书，以中间人方式解密所有通信，并执行访问控制等，则可以查看响应的内容并将其缓存。但是，由于[证书透明度（certificate transparency）](/zh-CN/docs/Web/Security/Certificate_Transparency)在最近几年变得很普遍，并且一些浏览器只允许使用证书签署时间戳（signed certificate timestamp）颁发的证书，因此这种方法需要应用于企业策略。在这样的受控环境中，无需担心代理缓存“已过时且未更新”。
+另一方面，如果 {{Glossary("TLS")}} 桥接代理通过在 PC 上安装来自组织管理的 {{Glossary("Certificate_authority", "CA")}} 证书，以中间人方式解密所有通信，并执行访问控制等，则可以查看响应的内容并将其缓存。但是，由于[证书透明度（certificate transparency）](/zh-CN/docs/Web/Security/Defenses/Certificate_Transparency)在最近几年变得很普遍，并且一些浏览器只允许使用证书签署时间戳（signed certificate timestamp）颁发的证书，因此这种方法需要应用于企业策略。在这样的受控环境中，无需担心代理缓存“已过时且未更新”。
 
 #### 托管缓存
 
@@ -227,7 +225,7 @@ Cache-Control: max-age=3600
 
 ### ETag/If-None-Match
 
-`ETag` 响应标头的值是服务器生成的任意值。服务器对于生成值没有任何限制，因此服务器可以根据他们选择的任何方式自由设置值——例如主体内容的哈希或版本号。
+`ETag` 响应标头的值是服务器生成的任意值。服务器对于生成值没有任何限制，因此服务器可以根据他们选择的任何方式自由设置值——例如主体内容的散列或版本号。
 
 举个例子，如果 `ETag` 标头使用了 hash 值，`index.html` 资源的 hash 值是 `deadbeef`，响应如下：
 
@@ -419,7 +417,7 @@ fetch("/", { cache: "reload" });
 
 ### 避免重新验证
 
-永远不会改变的内容应该被赋予一个较长的 `max-age`，方法是使用缓存破坏——也就是说，在请求 URL 中包含版本号、哈希值等。
+永远不会改变的内容应该被赋予一个较长的 `max-age`，方法是使用缓存破坏——也就是说，在请求 URL 中包含版本号、散列值等。
 
 但是，当用户重新加载时，即使服务器知道内容是不可变的，也会发送重新验证请求。
 
@@ -463,7 +461,7 @@ Cache-Control: max-age=31536000
 
 共享缓存主要位于源服务器之前，旨在减少到源服务器的流量。
 
-因此，如果多个相同的请求同时到达共享缓存，中间缓存将代表自己将单个请求转发到源，然后源可以将结果重用于所有客户端。这称为**_请求折叠_**。
+因此，如果多个相同的请求同时到达共享缓存，中间缓存将代表自己将单个请求转发到源，然后源可以将结果重用于所有客户端。这称为***请求折叠***。
 
 当请求同时到达时会发生请求折叠，因此即使响应中给出了 `max-age=0` 或 `no-cache`，它也会被重用。
 
@@ -513,7 +511,7 @@ Cache-Control: no-cache, private
 
 所以上面的 HTML 用 `max-age` 缓存 `bundle.js` 和 `build.css` 变得很困难。
 
-因此，你可以使用包含基于版本号或哈希值的更改部分的 URL 来提供 JavaScript 和 CSS。一些方法如下所示。
+因此，你可以使用包含基于版本号或散列值的更改部分的 URL 来提供 JavaScript 和 CSS。一些方法如下所示。
 
 ```plain
 # version in filename
@@ -583,7 +581,7 @@ Cache-Control: max-age=2592000
 
 不要忘记设置 `Last-Modified` 和 `ETag` 标头，以便在重新加载时不必重新传输资源。对于预构建的静态文件生成这些标头很容易。
 
-这里的 `ETag` 值可能是文件的哈希值。
+这里的 `ETag` 值可能是文件的散列值。
 
 ```http
 # response for bundle.v123.js

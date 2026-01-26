@@ -3,7 +3,7 @@ title: 문법과 자료형
 slug: Web/JavaScript/Guide/Grammar_and_types
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/소개", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 
 이 장은 JavaScript의 기본 문법과 변수 선언, 자료형 및 리터럴을 다룹니다.
 
@@ -82,7 +82,7 @@ ISO 8859-1 혹은 Unicode 문자(가령 `å` 나 `ü`)도 식별자에 사용할
 - `var x = 42`와 같이 {{jsxref("Statements/var", "var")}} 키워드로 변수를 선언할 수 있습니다. 이 구문은 실행 맥락에 따라 **지역 및 전역 변수**를 선언하는데 모두 사용될 수 있습니다.
 - `let y = 13`와 같이 {{jsxref("Statements/const", "const")}} 혹은 {{jsxref("Statements/let", "let")}} 키워드로 변수를 선언할 수 있습니다. 이 구문은 블록 스코프 지역 변수를 선언하는데 사용될 수 있습니다. 아래 [변수 스코프](#변수_스코프)를 참고하세요.
 
-[구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) 구문을 사용하여 [객체 리터럴](#객체_리터럴)에서 값을 풀기 위해 변수를 선언할 수 있습니다. 예를 들면, `let { bar } = foo`. 이 구문은 `bar`라는 이름의 변수를 생성하고 `foo` 객체에 있는 동일한 이름의 키에 해당하는 값을 변수에 할당합니다.
+[구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring) 구문을 사용하여 [객체 리터럴](#객체_리터럴)에서 값을 풀기 위해 변수를 선언할 수 있습니다. 예를 들면, `let { bar } = foo`. 이 구문은 `bar`라는 이름의 변수를 생성하고 `foo` 객체에 있는 동일한 이름의 키에 해당하는 값을 변수에 할당합니다.
 
 간단히 변수에 값을 할당 할 수도 있습니다. 예를 들어, `x = 42` 와 같은 구문은 [**선언되지 않은 전역변수**](/ko/docs/Web/JavaScript/Reference/Statements/var#설명)를 만듭니다. 뿐만 아니라, JavaScript의 엄격한 경고를 만들어냅니다. 선언되지 않은 전역변수는 의도되지 않은 동작을 만들어내고는 합니다. 따라서 선언되지 않은 전역변수를 사용하면 안됩니다.
 
@@ -303,7 +303,6 @@ console.log(MY_ARRAY); //logs ['HTML','CSS','JAVASCRIPT'];
 최신 ECMAScript 표준은 8가지 데이터 형을 정의합니다.
 
 - 7가지 {{Glossary("Primitive", "원시")}} 데이터 형
-
   1. {{Glossary("Boolean")}}. `true`와 `false`
   2. {{Glossary("null")}}. null 값을 나타내는 특별한 키워드. (JavaScript는 대소문자를 구분하므로, `null`은 `Null`, `NULL` 혹은 다른 변형과도 다릅니다.)
   3. {{Glossary("undefined")}}. 값이 정의되어 있지 않은 최상위 속성.
@@ -794,4 +793,4 @@ and so is foo.`;
 
 다음 장에서는, 흐름 제어 구조와 에러 처리를 살펴 볼 것입니다.
 
-{{PreviousNext("Web/JavaScript/Guide/소개", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
+{{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}

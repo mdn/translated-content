@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLLinkElement")}} 接口的 **`relList`** 只读属性反映了 [`rel`](/zh-CN/docs/Web/HTML/Attributes/rel) 属性。它是一个实时的 {{domxref("DOMTokenList")}}，包含表示由 {{HTMLElement("link")}} 元素代表的资源与当前文档之间关系的链接类型集合。
+{{domxref("HTMLLinkElement")}} 接口的 **`relList`** 只读属性反映了 [`rel`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel) 属性。它是一个实时的 {{domxref("DOMTokenList")}}，包含表示由 {{HTMLElement("link")}} 元素代表的资源与当前文档之间关系的链接类型集合。
 
 该属性本身是只读的，这意味着你不能用另一个 {{domxref("DOMTokenList")}} 来替换它，但返回的列表内容是可以更改的。
 

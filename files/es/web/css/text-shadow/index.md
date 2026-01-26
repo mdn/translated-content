@@ -3,8 +3,6 @@ title: text-shadow
 slug: Web/CSS/text-shadow
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad **`text-shadow`** agrega sombra al texto. Acepta una lista de sombras separadas por coma, para aplicarlas al texto y a la propiedad {{cssxref("text-decoration","text-decorations")}} del elemento.
@@ -45,7 +43,6 @@ text-shadow: unset;
 ### Valores
 
 - \<color>
-
   - : Opcional. Puede ser especificado antes o después de los valores de offset. Si el color no es especificado, se usa el predeterminado del agente usuario.
 
     > [!NOTE]

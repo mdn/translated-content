@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a35e5b74ecbe13a768edf765a4666fb81a5153a1
 ---
 
-{{FirefoxSidebar}}
-
 もしあなたが開発者で、Firefox 3 における新機能全体について情報を得ようとしているなら、ここは理解を深めるのに最も適した場所です。この記事は、Firefox 3 に追加された機能をカバーする新しい記事の一覧を提供します。小さな変更が必ずしもすべてカバーされているわけではありませんが、主要な改善を学ぶ助けにはなるでしょう。
 
 ## Firefox 3 の開発者向け新機能
@@ -23,7 +21,7 @@ l10n:
   - : Firefox 3 でサポートされた標準化されていない API を利用して、キャンバス内にテキストを描画できるようになりました。
 - [キャンバスの座標変換の対応](/ja/docs/Web/API/Canvas_API/Tutorial/Transformations#transforms)
   - : Firefox がキャンバスの `transform()` と `setTransform()` メソッドをサポートするようになりました。
-- [マイクロフォーマットの使用](/ja/docs/Web/HTML/microformats)
+- [マイクロフォーマットの使用](/ja/docs/Web/HTML/Guides/Microformats)
   - : Firefox にマイクロフォーマットを扱うための API が実装されました。
 - [ドラッグ & ドロップイベント](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
   - : Firefox 3 は、ドラッグが開始されるときと終了したときにドラッグ操作に対するソースノードへ送られる新しいイベントをサポートします。

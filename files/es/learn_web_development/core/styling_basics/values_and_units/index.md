@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Values_and_units
 original_slug: Learn/CSS/Building_blocks/Values_and_units
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}
 
 Todas las propiedades que se utilizan en CSS tienen un valor o un conjunto de valores que esa propiedad admite, y echar un vistazo a cualquier página de propiedades en MDN te ayudará a comprender qué valores admite una propiedad en particular. En este artículo veremos algunos de los valores y unidades más comunes en uso.
 
@@ -112,7 +112,7 @@ Las unidades de longitud relativa son relativas a algo más, por ejemplo, al tam
 
 En el ejemplo siguiente puedes ver cómo se comportan algunas unidades de longitud relativa y absoluta. La primera caja tiene un ancho ({{cssxref ("width")}}) establecido en píxeles. Como unidad absoluta, este ancho será siempre el mismo aunque lo demás cambie.
 
-La segunda caja tiene un ancho establecido en unidades `vw` (ancho de ventana). Este valor es relativo al ancho de la ventana gráfica, por lo que 10vw es el 10 por ciento del ancho de la ventana gráfica. Si cambiases el ancho de la ventana de tu navegador, el tamaño de la caja cambiaría. Sin embargo, esto no te va a funcionar porque este ejemplo se ha incrustado en la página usando [`<iframe>`](/es/docs/Web/HTML/Element/iframe). Para verlo en acción debes [probar el ejemplo después de abrirlo en una pestaña independiente de tu navegador](https://mdn.github.io/css-examples/learn/values-units/length.html).
+La segunda caja tiene un ancho establecido en unidades `vw` (ancho de ventana). Este valor es relativo al ancho de la ventana gráfica, por lo que 10vw es el 10 por ciento del ancho de la ventana gráfica. Si cambiases el ancho de la ventana de tu navegador, el tamaño de la caja cambiaría. Sin embargo, esto no te va a funcionar porque este ejemplo se ha incrustado en la página usando [`<iframe>`](/es/docs/Web/HTML/Reference/Elements/iframe). Para verlo en acción debes [probar el ejemplo después de abrirlo en una pestaña independiente de tu navegador](https://mdn.github.io/css-examples/learn/values-units/length.html).
 
 La tercera caja utiliza unidades `em`. Son unidades relativas al tamaño de la letra. Hemos establecido un tamaño de fuente de `1em` en el contenido {{htmlelement ("div")}}, que tiene una clase `.wrapper`. Si cambias este valor a `1.5em`, verás que el tamaño de letra de todos los elementos aumenta, pero solo se amplía el ancho en el último elemento, porque el ancho es relativo a ese tamaño de letra.
 
@@ -283,4 +283,4 @@ Lo que debes recordar es que cada propiedad tiene una lista definida de valores 
 
 Por ejemplo, comprender que [`<image>`](/es/docs/Web/CSS/image) también te permite crear un degradado de color es útil, ¡pero quizás no sea un conocimiento obvio!
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}

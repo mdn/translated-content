@@ -38,5 +38,5 @@ can be placed inside the individual table cells.
 ## Смотрите также
 
 - {{domxref("HTMLElement.isContentEditable")}}
-- The [contenteditable](/ru/docs/Web/HTML/Global_attributes/contenteditable) global attribute.
+- The [contenteditable](/ru/docs/Web/HTML/Reference/Global_attributes/contenteditable) global attribute.
 - [Why ContentEditable is Terrible, Or: How the Medium Editor Works](https://medium.com/medium-eng/why-contenteditable-is-terrible-122d8a40e480)

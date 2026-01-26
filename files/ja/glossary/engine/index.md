@@ -1,14 +1,12 @@
 ---
-title: Engine
+title: Engine (エンジン)
 slug: Glossary/Engine
+l10n:
+  sourceCommit: b49ed0d28c2cfb0f39be603a62d37bcc1ec407dc
 ---
 
 {{GlossarySidebar}}
 
-{{glossary("JavaScript")}} エンジンは、 JavaScript のプログラムを構文解析して実行するインタープリターです。
+**エンジン** という用語は、文脈に応じていくつかの意味を持つことがあります。以下のうちいずれかを指す場合があります。
 
-## 詳細情報
-
-### 一般知識
-
-- Wikipedia の [JavaScript エンジン](https://ja.wikipedia.org/wiki/JavaScriptエンジン)の記事
+{{GlossaryDisambiguation}}

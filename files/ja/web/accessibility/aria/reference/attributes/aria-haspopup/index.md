@@ -25,7 +25,8 @@ ARIA では、表示されることがトリガーされたときに他のコン
 
 [`menubar`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role) を作成する場合、親の [`menuitem`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role) には `aria-haspopup="menu"`（または `true` ）を設定する必要があります。メニューを開くボタンには [`button`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role) ロールを設定するか、できれば {{HTMLElement('button')}} 要素である必要があり、さらに `aria-haspopup="menu"`（または `true` ）を設定する必要があります。ポップアップメニューを持つ [`Tab`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) 要素にも `aria-haspopup="menu"` を設定する必要があります。Webサイトのナビゲーションを作成するために `menubar` を使用しないでください。
 
-> **メモ:** [`combobox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role) ロールを持つ要素には暗黙的な `listbox` が `aria-haspopup` の値として設定されます。
+> [!NOTE]
+> [`combobox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role) ロールを持つ要素には暗黙的な `listbox` が `aria-haspopup` の値として設定されます。
 
 ## 値
 

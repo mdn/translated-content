@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLMetaElement`** 接口包含关于 HTML 中以 [`<meta>`](/zh-CN/docs/Web/HTML/Element/meta) 元素形式提供的文档的描述性元数据。该接口继承 {{domxref("HTMLElement")}} 接口中描述的所有属性和方法。
+**`HTMLMetaElement`** 接口包含关于 HTML 中以 [`<meta>`](/zh-CN/docs/Web/HTML/Reference/Elements/meta) 元素形式提供的文档的描述性元数据。该接口继承 {{domxref("HTMLElement")}} 接口中描述的所有属性和方法。
 
 {{InheritanceDiagram}}
 
@@ -38,7 +38,7 @@ _没有特定的方法，从其父接口 {{domxref("HTMLElement")}} 继承方法
 
 ### 设置页面描述性元数据
 
-以下示例创建一个新的 `<meta>` 元素，其 `name` 属性设置为 [`description`](/zh-CN/docs/Web/HTML/Element/meta/name#html_规范中定义的标准元数据名称)，`content` 属性设置文档的描述，并附加到文档 `<head>` 上。
+以下示例创建一个新的 `<meta>` 元素，其 `name` 属性设置为 [`description`](/zh-CN/docs/Web/HTML/Reference/Elements/meta/name#html_规范中定义的标准元数据名称)，`content` 属性设置文档的描述，并附加到文档 `<head>` 上。
 
 ```js
 const meta = document.createElement("meta");
@@ -50,7 +50,7 @@ document.head.appendChild(meta);
 
 ### 设置视口元数据
 
-以下示例显示如何创建一个新的 `<meta>` 元素，其 `name` 属性设置为 [`viewport`](/zh-CN/docs/Web/HTML/Element/meta/name#其他规范中定义的标准元数据名称)，`content` 属性设置视口大小，并附加到文档 `<head>` 上。
+以下示例显示如何创建一个新的 `<meta>` 元素，其 `name` 属性设置为 [`viewport`](/zh-CN/docs/Web/HTML/Reference/Elements/meta/name#其他规范中定义的标准元数据名称)，`content` 属性设置视口大小，并附加到文档 `<head>` 上。
 
 ```js
 const meta = document.createElement("meta");
@@ -59,7 +59,7 @@ meta.content = "width=device-width, initial-scale=1";
 document.head.appendChild(meta);
 ```
 
-关于设置视口的更多信息，请参见[视口基础知识](/zh-CN/docs/Web/HTML/Viewport_meta_tag#视口基础知识)。
+关于设置视口的更多信息，请参见 [`<meta name="viewport">`](/zh-CN/docs/Web/HTML/Reference/Elements/meta/name/viewport)。
 
 ## 规范
 

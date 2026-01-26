@@ -50,19 +50,16 @@ browser-compat: api.feature
 以下宏用于在页眉呈现状态横幅：
 
 - `\{{SeeCompatTable}}`
-
   - : 用于 `experimental` 状态。它会生成**实验性状态**横幅：
 
     {{SeeCompatTable}}
 
 - `\{{Non-standard_Header}}`
-
   - : 用于 `non-standard` 状态。它会生成**非标准状态**横幅：
 
     {{Non-standard_Header}}
 
 - `\{{Deprecated_Header}}`
-
   - : 用于 `deprecated` 状态。它会生成**已弃用状态**横幅：
 
     {{deprecated_header}}

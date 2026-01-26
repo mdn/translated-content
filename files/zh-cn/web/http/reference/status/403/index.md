@@ -3,8 +3,6 @@ title: 403 Forbidden
 slug: Web/HTTP/Reference/Status/403
 ---
 
-{{HTTPSidebar}}
-
 状态码 **`403 Forbidden`** 代表客户端错误，指的是服务器端有能力处理该请求，但是拒绝授权访问。
 
 这个状态类似于 {{HTTPStatus("401")}}，但进入 {{HTTPStatus("403")}}状态后即使重新验证也不会改变该状态。该访问是长期禁止的，并且与应用逻辑密切相关（例如没有足够的权限访问该资源）。

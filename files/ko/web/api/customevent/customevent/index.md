@@ -48,7 +48,7 @@ obj.dispatchEvent(dogFound);
 // 콘솔에 "cat"과 "dog"가 기록됨
 ```
 
-[이벤트 생성 및 발동](/ko/docs/Web/Events/Creating_and_triggering_events) 문서에서 더 많은 예제를 확인하세요.
+[이벤트 생성 및 발동](/ko/docs/Web/API/Document_Object_Model/Events) 문서에서 더 많은 예제를 확인하세요.
 
 ## 명세서
 
@@ -61,4 +61,4 @@ obj.dispatchEvent(dogFound);
 ## 함께 보기
 
 - {{domxref("CustomEvent")}}
-- [이벤트 생성 및 발동](/ko/docs/Web/Events/Creating_and_triggering_events)
+- [이벤트 생성 및 발동](/ko/docs/Web/API/Document_Object_Model/Events)

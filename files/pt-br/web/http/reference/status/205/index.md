@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/205
 original_slug: Web/HTTP/Status/205
 ---
 
-{{HTTPSidebar}}
-
 O código de estado HTTP **`205 Reset Content`** informa ao cliente para reconfigurar a visualização do documento, para, por exemplo, limpar o conteúdo de um formulário, redefinir um estado da tela ou atualizar a interface do usuário.
 
 ## Status
@@ -22,7 +20,7 @@ O código de estado HTTP **`205 Reset Content`** informa ao cliente para reconfi
 
 ## Compatibility Notes
 
-- O comportamento do Browser é diferente se a resposta de forma errada incluir um Body nas conexões persistentes, veja [204 No Content](/pt-BR/docs/Web/HTTP/Status/204) para mais detalhes.
+- O comportamento do Browser é diferente se a resposta de forma errada incluir um Body nas conexões persistentes, veja [204 No Content](/pt-BR/docs/Web/HTTP/Reference/Status/204) para mais detalhes.
 
 ## See also
 

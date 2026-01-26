@@ -1,11 +1,10 @@
 ---
 title: Array.prototype[Symbol.unscopables]
+short-title: "[Symbol.unscopables]"
 slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables
 l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`[Symbol.unscopables]`** は `Array.prototype` のデータプロパティで、すべての {{jsxref("Array")}} インスタンスで共有されます。 ES2015 以前の ECMAScript 標準には含まれておらず、 [`with`](/ja/docs/Web/JavaScript/Reference/Statements/with) 文のバインドの目的では無視されるプロパティ名を含んでいます。
 

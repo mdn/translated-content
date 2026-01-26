@@ -255,7 +255,6 @@ MDN の特定の参照領域（JavaScript、CSS、HTML 要素、SVG など）の
 以下のマクロはすべてのリファレンスページに記載されていますが、すべてのページ型でも対応しています。
 
 - `\{{Compat}}` / `\{{Compat(&lt;feature>)}}` / `\{{Compat(&lt;feature>, &lt;depth>)}}`
-
   - : 引数として渡した機能の [互換性一覧表](/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) を生成します。引数が指定されていない場合、フロントマターで `browser-compat` によって定義された機能が既定で指定されます。オプションの depth 引数は、どの程度の深さのサブ機能を表に追加するかを設定します。省略した場合は、既定で 1 となり、BCD から最初のレベルのサブ機能のデータのみが掲載されるという意味になります。
 
 - `\{{Specifications}}` / `\{{Specifications(&lt;feature>)}}`

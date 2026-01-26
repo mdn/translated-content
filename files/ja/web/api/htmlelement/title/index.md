@@ -33,4 +33,4 @@ link.title = "ブドウに関するウィキペディアのページ";
 
 ## 関連情報
 
-- HTML の [**title**](/ja/docs/Web/HTML/Global_attributes/title) グローバル属性
+- HTML の [**title**](/ja/docs/Web/HTML/Reference/Global_attributes/title) グローバル属性

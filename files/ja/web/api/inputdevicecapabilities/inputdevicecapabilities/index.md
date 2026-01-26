@@ -23,9 +23,7 @@ new InputDeviceCapabilities(InputDeviceCapabilitiesInit)
 ### 引数
 
 - `InputDeviceCapabilitiesInit` {{optional_inline}}
-
   - : 一連の機器能力を格納する辞書オブジェクト。以下のプロパティを持ちます。
-
     - `fireTouchEvents`: 機器でタッチイベントが配信されるかどうかを示す論理値です。
 
 ## 仕様書

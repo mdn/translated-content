@@ -2,12 +2,10 @@
 title: Web 游戏开发简介
 slug: Games/Introduction
 l10n:
-  sourceCommit: e72890bafe775a38620def9a74beda8cf9c47411
+  sourceCommit: 21addd31954b2629ab3e186dacdf7edca813dc7d
 ---
 
-{{GamesSidebar}}
-
-现代 web 已经高速发展成为一个不仅能够用来创建高质量的酷炫游戏，同时也能够用来分发这些游戏的平台。
+现代 web 已经高速发展成为一个不仅能够用来创建高质量的酷炫游戏，同时也能够用来分发这些游戏的平台。本文将向你介绍将 web 作为游戏平台的诸多优势，以及实现这一切所需的技术。
 
 它能够制作的游戏种类可以和桌面端以及原生系统相当。采用现代 web 技术和较新的浏览器，完全有可能做出令人印象深刻的顶级页面游戏。我们这里所说的，并不是很久之前就采用 Flash® 制作出的简单卡牌游戏或者多人社交游戏，而是 3D 动作射击游戏、RPG 游戏等等。得益于 [JavaScript](/zh-CN/docs/Web/JavaScript) 实时编译技术性能的大幅提升，以及新开放的 API。在制作运行在浏览器（或者是基于 [HTML5](/zh-CN/docs/Glossary/HTML5) 技术支持的设备）上的游戏时，我们不用妥协。
 
@@ -25,7 +23,7 @@ l10n:
   <tbody>
     <tr>
       <td><strong>音频</strong></td>
-      <td><a href="/zh-CN/docs/Web/API/Web_Audio_API">Web Audio API</a></td>
+      <td><a href="/zh-CN/docs/Web/API/Web_Audio_API">Web 音频 API</a></td>
     </tr>
     <tr>
       <td><strong>图形</strong></td>
@@ -104,7 +102,7 @@ l10n:
   - : 如果你想你的用户能够使用游戏手柄或其他游戏控制器来控制游戏，你需要这个 API。
 - [HTML](/zh-CN/docs/Web/HTML) 和 [CSS](/zh-CN/docs/Web/CSS)
   - : 二者合璧，可以构建、设计并对你的游戏界面进行布局。HTML 有一个提供 2D 图形的元素，即 {{HTMLElement("canvas")}}。
-- [HTML audio](/zh-CN/docs/Web/HTML/Element/audio)
+- [HTML audio](/zh-CN/docs/Web/HTML/Reference/Elements/audio)
   - : {{HTMLElement("audio")}} 元素可以用来播放一些简单的音效和音乐。如果你想要更多的参与，可以学习 [Web 音频 API](/zh-CN/docs/Web/API/Web_Audio_API) 来深入了解音频处理的力量！
 - [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API)
   - : 一个强大的数据存储 API，用来在电脑或者设备上保存用户自己的数据。这是用来保存游戏的状态和其他最近的信息的好方法，这样在需要的时候不用每次重新下载。也可以用来让你的游戏在用户没有连接到网络的情况下也能继续玩（例如在飞机上的数小时）。

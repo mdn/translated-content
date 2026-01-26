@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 扩展添加的会话范围规则的规则集 ID。
 
 其值为 `"_session"`。

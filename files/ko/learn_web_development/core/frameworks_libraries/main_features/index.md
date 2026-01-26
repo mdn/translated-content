@@ -6,7 +6,7 @@ l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Introduction","Learn_web_development/Core/Frameworks_libraries/React_getting_started", "Learn_web_development/Core/Frameworks_libraries")}}
 
 주요 JavaScript 프레임워크는 DOM 업데이트하는 방식, 브라우저 이벤트 처리하는 법 그리고 즐거운 개발자 경험 제공을 제공하는 방식에 있어 차이가 있습니다. 이 기사에서는 "빅 4" 프레임워크의 주요 기능을 살펴보고, 프레임워크가 높은 수준에서 작용하는 방식과 프레임워크 간의 차이점을 살펴봅니다.
 
@@ -50,7 +50,7 @@ const header = (
 );
 ```
 
-이 표현식은 [`<h1>`](/ko/docs/Web/HTML/Element/Heading_Elements)이 있는 HTML [`<header>`](/ko/docs/Web/HTML/Element/header) 요소를 나타냅니다. 4행에서 `subject` 주변의 중괄호는 애플리케이션이 `subject` 상수의 값을 읽고 이를 `<h1>`에 삽입하도록 지시합니다.
+이 표현식은 [`<h1>`](/ko/docs/Web/HTML/Reference/Elements/Heading_Elements)이 있는 HTML [`<header>`](/ko/docs/Web/HTML/Reference/Elements/header) 요소를 나타냅니다. 4행에서 `subject` 주변의 중괄호는 애플리케이션이 `subject` 상수의 값을 읽고 이를 `<h1>`에 삽입하도록 지시합니다.
 
 React와 함께 사용하면, 이전 코드 조각의 JSX가 다음과 같이 컴파일됩니다.
 
@@ -158,7 +158,7 @@ function AuthorCredit(props) {
 />
 ```
 
-그러면 궁극적으로 다음 [`<figure>`](/ko/docs/Web/HTML/Element/figure) 요소가 렌더링됩니다. 구조는 `AuthorCredit` 컴포넌트에 정의된 대로, 콘텐츠는`AuthorCredit` 컴포넌트 호출에 포함된 속성에 정의된 대로 표시됩니다.
+그러면 궁극적으로 다음 [`<figure>`](/ko/docs/Web/HTML/Reference/Elements/figure) 요소가 렌더링됩니다. 구조는 `AuthorCredit` 컴포넌트에 정의된 대로, 콘텐츠는`AuthorCredit` 컴포넌트 호출에 포함된 속성에 정의된 대로 표시됩니다.
 
 ```html
 <figure>
@@ -328,4 +328,4 @@ it("Increments the count when clicked", () => {
 - [Svelte](/ko/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started)
 - [Angular](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Introduction","Learn_web_development/Core/Frameworks_libraries/React_getting_started", "Learn_web_development/Core/Frameworks_libraries")}}

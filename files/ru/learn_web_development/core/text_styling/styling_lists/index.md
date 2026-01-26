@@ -3,7 +3,7 @@ title: Стилизация списков
 slug: Learn_web_development/Core/Text_styling/Styling_lists
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}
 
 [Списки](/ru/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#lists), по-большому счету, ведут себя также как любой другой текст, но существуют некоторые специфичные настройки CSS, о которых вы должны знать. В этой статье они все описываются.
 
@@ -205,7 +205,6 @@ ul li {
 - Установили {{cssxref("padding-left")}} элемента {{htmlelement("ul")}} с `40px` по умолчанию на `20px`, затем установили то же самое количество в пунктах списка. Это для того, чтобы все пункты списка продолжали выравниваться с порядком пунктов списка и описаний списка описаний, но пункты списка имеют некоторый padding для фоновых изображений чтобы сидеть внутри. Если бы мы не сделали этого, то фоновые изображения накладывались бы с текстом пунктов списка, что выглядело бы неряшливо.
 - Установили {{cssxref("list-style-type")}} на `none`, для того чтобы маркеры не появлялись по умолчанию. Мы собираемся использовать свойства {{cssxref("background")}} для управления маркерами.
 - Вставили маркер в каждый пункт неупорядоченного списка. Соответствующие свойства, следующие:
-
   - {{cssxref("background-image")}}: Указывает путь к файлу изображения, который вы хотите использовать в качестве маркера.
   - {{cssxref("background-position")}}: Определяет где в фоне выбранного элемента появится изображение — в данном случае мы говорим `0 0`, что значит что маркер будет появляться в самом верху слева каждого пункта списка.
   - {{cssxref("background-size")}}: Задаёт размер фонового изображения. В идеале мы хотим, чтоб маркеры были того же размера что и пункты списка (или самую малость меньше или крупнее). Мы используем размер `1.6rem` (`16px`), что очень хорошо сочетается с отступом (padding) `20px`, который мы позволили разместить внутри маркера — 16px плюс 4px интервала между маркером и текстом пункта списка работают хорошо.
@@ -243,7 +242,7 @@ ul {
 
 ### start
 
-Атрибут [`start`](/ru/docs/Web/HTML/Element/ol#start) позволит вам начать счёт списка с цифры отличной от 1. Например:
+Атрибут [`start`](/ru/docs/Web/HTML/Reference/Elements/ol#start) позволит вам начать счёт списка с цифры отличной от 1. Например:
 
 ```html
 <ol start="4">
@@ -262,7 +261,7 @@ ul {
 
 ### reversed
 
-Атрибут [`reversed`](/ru/docs/Web/HTML/Element/ol#reversed) начнёт отсчёт по убыванию вместо возрастания. Например:
+Атрибут [`reversed`](/ru/docs/Web/HTML/Reference/Elements/ol#reversed) начнёт отсчёт по убыванию вместо возрастания. Например:
 
 ```html
 <ol start="4" reversed>
@@ -284,7 +283,7 @@ ul {
 
 ### value
 
-Атрибут [`value`](/ru/docs/Web/HTML/Element/ol#value) позволит вам установить специфичные цифровые значения к пунктам списка. Например:
+Атрибут [`value`](/ru/docs/Web/HTML/Reference/Elements/ol#value) позволит вам установить специфичные цифровые значения к пунктам списка. Например:
 
 ```html
 <ol>
@@ -412,4 +411,4 @@ window.addEventListener("load", drawOutput);
 
 В плане стилизации списки сравнительно легко освоить, как только вы освоите несколько связанных базовых принципов и специфичные свойства. В следующей статье мы перейдём к методам стилизации ссылок.
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}

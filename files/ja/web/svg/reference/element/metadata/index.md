@@ -1,14 +1,11 @@
 ---
 title: <metadata>
 slug: Web/SVG/Reference/Element/metadata
-original_slug: Web/SVG/Element/metadata
 l10n:
-  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}
-
-**`<metadata>`** は [SVG](/ja/docs/Web/SVG) 要素で、この要素は SVG コンテンツにメタデータを追加します。メタデータはデータに関する構造化された情報です。`<metadata>` のコンテンツは他の {{Glossary("XML")}} {{Glossary("namespace", "名前空間")}}の要素、例えば {{Glossary("RDF")}}、[FOAF](https://ja.wikipedia.org/wiki/Friend_of_a_Friend) などでなければなりません。
+**`<metadata>`** は [SVG](/ja/docs/Web/SVG) の要素で、この要素は SVG コンテンツにメタデータを追加します。メタデータはデータに関する構造化された情報です。`<metadata>` のコンテンツは他の {{Glossary("XML")}} {{Glossary("namespace", "名前空間")}}の要素、例えば {{Glossary("RDF")}}、[FOAF](https://ja.wikipedia.org/wiki/Friend_of_a_Friend) などでなければなりません。
 
 ## 使用可能な場所
 

@@ -14,9 +14,7 @@ l10n:
 - `name`
   - : 一个字符串，应设置为 `HKDF`。
 - `hash`
-
   - : 表示要使用的[摘要算法](/zh-CN/docs/Web/API/SubtleCrypto/digest#支持的算法)的字符串。这可能是以下之一：
-
     - `SHA-1`
     - `SHA-256`
     - `SHA-384`

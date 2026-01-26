@@ -5,7 +5,7 @@ slug: Web/API/ValidityState/typeMismatch
 
 {{APIRef("HTML DOM")}}
 
-Доступное только для чтения свойство **`typeMismatch`** объекта **[`ValidityState`](/ru/docs/Web/API/ValidityState)** указывает, соответствует ли изменённое пользователем значение {{HTMLElement("input")}} ограничениям атрибута [`type`](/ru/docs/Web/HTML/Element/input#input_types).
+Доступное только для чтения свойство **`typeMismatch`** объекта **[`ValidityState`](/ru/docs/Web/API/ValidityState)** указывает, соответствует ли изменённое пользователем значение {{HTMLElement("input")}} ограничениям атрибута [`type`](/ru/docs/Web/HTML/Reference/Elements/input#input_types).
 
 Если атрибут `type` получает типы вроде {{HTMLElement("input/email", "email")}} или {{HTMLElement("input/url", "url")}}, а значение не соответствует ограничениям данного типа, свойство `typeMismatch` будет true.
 
@@ -47,7 +47,7 @@ input:invalid {
 
 В примере выше в обоих полях происходит `typeMismatch`, потому что email-адрес является просто доменом, а URL не содержит протокол
 
-`typeMismatch` происходит при несоответствии [`значения`](/ru/docs/Web/HTML/Attributes/value), заданного в атрибуте [`type`](/ru/docs/Web/HTML/Element/input#%3cinput%3e_types) и содержимым поля. `typeMismatch` является лишь одной из возможных ошибок и возможна только для полей {{HTMLElement("input/email", "email")}} и {{HTMLElement("input/url", "url")}}. Когда введённое значение не соответствует ожидаемому для других полей ввода, в зависимости от типа поля будут возникать разные ошибки. Например, если в поле {{HTMLElement("input/number", "number")}} ввести значение не являющееся числом с плавающей запятой, `badInput` будет `true`. Если `обязательное поле email не заполнено`, {{domxref('ValidityState.valueMissing','valueMissing')}} будет `true`.
+`typeMismatch` происходит при несоответствии [`значения`](/ru/docs/Web/HTML/Attributes/value), заданного в атрибуте [`type`](/ru/docs/Web/HTML/Reference/Elements/input#%3cinput%3e_types) и содержимым поля. `typeMismatch` является лишь одной из возможных ошибок и возможна только для полей {{HTMLElement("input/email", "email")}} и {{HTMLElement("input/url", "url")}}. Когда введённое значение не соответствует ожидаемому для других полей ввода, в зависимости от типа поля будут возникать разные ошибки. Например, если в поле {{HTMLElement("input/number", "number")}} ввести значение не являющееся числом с плавающей запятой, `badInput` будет `true`. Если `обязательное поле email не заполнено`, {{domxref('ValidityState.valueMissing','valueMissing')}} будет `true`.
 
 ## Спецификации
 
@@ -59,6 +59,6 @@ input:invalid {
 
 ## Смотрите также
 
-- [Валидация ограничений](/ru/docs/Web/HTML/Constraint_validation)
+- [Валидация ограничений](/ru/docs/Web/HTML/Guides/Constraint_validation)
 - [Валидация форм на стороне клиента](/ru/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - [Регулярные выражения](/ru/docs/Web/JavaScript/Guide/Regular_expressions)

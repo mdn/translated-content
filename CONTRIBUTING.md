@@ -11,7 +11,7 @@ Before contributing to translated content, we strongly recommend learning about 
 
 We also strongly recommend reading the [Translation guidelines][].
 
-In addition to the requirements described in the upstream contributing guide, there are additional prerequesites you must have when contributing to this repository:
+In addition to the requirements described in the upstream contributing guide, there are additional prerequisites you must have when contributing to this repository:
 
 - **Moderate knowledge of the English language:** You must have a good enough understanding of the English language to be able to decipher the meaning of a page while translating. (For simple typo fixes, this is not required.)
 - **Fluency in the downstream locale:** You must be able to fluently speak the language you are contributing to.
@@ -72,11 +72,11 @@ Once that is done, you will also need to fork and clone this repository by follo
 
    (the `.env` file will be created for you if it does not already exist.)
 
-3. Run the command `yarn start` to start the local server at `localhost:5042`.
+3. Run the command `npm start` to start the local server at `localhost:5042`.
 
 #### Working in the translated-content repo
 
-This repo has exactly the same folder structure and concepts as the [upstream content repo](https://github.com/mdn/content). The main difference is in the setup you need to do before you can start editing. It is mostly the same, but there is a little bit more to consider. Primarily, commands such as `yarn content` are only available from the upstream content repo; linting commands are available here, however, as they often use different configuration.
+This repo has exactly the same folder structure and concepts as the [upstream content repo](https://github.com/mdn/content). The main difference is in the setup you need to do before you can start editing. It is mostly the same, but there is a little bit more to consider. Primarily, commands such as `npm run content` are only available from the upstream content repo; linting commands are available here, however, as they often use different configuration.
 
 ## Contributing to MDN translated content
 
@@ -93,7 +93,6 @@ To create a new translation for a page that does not yet have one, perform the f
 1. Find the source file in the upstream content repository. (ex. `/path/to/content/files/en-us/mdn/index.md`)
 2. Copy the file to the appropriate locale's folder. (ex. `cp /path/to/content/files/en-us/mdn/index.md files/fr/mdn/index.md`)
 3. Update the front matter of the document.
-
    1. Remove excess front matter properties (see [Translation guidelines][] to see which ones should be kept).
    2. Localize the `title` and `short-title` (if present)
    3. Add a new `l10n.sourceCommit` key, which contains the commit hash of the latest commit that modified the file. You can do this by running `git log <file>`.

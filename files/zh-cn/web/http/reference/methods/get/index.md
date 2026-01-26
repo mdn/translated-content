@@ -3,8 +3,6 @@ title: GET
 slug: Web/HTTP/Reference/Methods/GET
 ---
 
-{{HTTPSidebar}}
-
 **HTTP `GET` 方法**请求指定资源的表示。使用 `GET` 的请求应该只用于请求数据，而不应该包含数据。
 
 > [!NOTE]

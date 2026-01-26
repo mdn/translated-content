@@ -39,9 +39,9 @@ onmousedown = (event) => {};
 - {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
   - : (버튼이 있는 경우) 마우스 이벤트 발생 시점에 누르고 있던 버튼 번호입니다.
 - {{domxref("MouseEvent.clientX")}} {{ReadOnlyInline}}
-  - : [뷰포트 좌표계](/ko/docs/Web/CSS/CSSOM_view/Coordinate_systems#뷰포트)에서 마우스 포인터의 X 좌표입니다.
+  - : [뷰포트 좌표계](/ko/docs/Web/API/CSSOM_view_API/Coordinate_systems#뷰포트)에서 마우스 포인터의 X 좌표입니다.
 - {{domxref("MouseEvent.clientY")}} {{ReadOnlyInline}}
-  - : [뷰포트 좌표계](/ko/docs/Web/CSS/CSSOM_view/Coordinate_systems#뷰포트)에서 마우스 포인터의 Y 좌표입니다.
+  - : [뷰포트 좌표계](/ko/docs/Web/API/CSSOM_view_API/Coordinate_systems#뷰포트)에서 마우스 포인터의 Y 좌표입니다.
 - {{domxref("MouseEvent.ctrlKey")}} {{ReadOnlyInline}}
   - : 마우스 이벤트 발생 시점에 <kbd>control</kbd>이 눌려있었으면 `true`를 반환합니다.
 - {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{ReadOnlyInline}}
@@ -65,9 +65,9 @@ onmousedown = (event) => {};
 - {{domxref("MouseEvent.relatedTarget")}} {{ReadOnlyInline}}
   - : 존재하는 경우, 이벤트의 보조 대상입니다.
 - {{domxref("MouseEvent.screenX")}} {{ReadOnlyInline}}
-  - : [화면 좌표계](/ko/docs/Web/CSS/CSSOM_view/Coordinate_systems#화면)에서 마우스 포인터의 X 좌표입니다.
+  - : [화면 좌표계](/ko/docs/Web/API/CSSOM_view_API/Coordinate_systems#화면)에서 마우스 포인터의 X 좌표입니다.
 - {{domxref("MouseEvent.screenY")}} {{ReadOnlyInline}}
-  - : [화면 좌표계](/ko/docs/Web/CSS/CSSOM_view/Coordinate_systems#화면)에서 마우스 포인터의 Y 좌표입니다.
+  - : [화면 좌표계](/ko/docs/Web/API/CSSOM_view_API/Coordinate_systems#화면)에서 마우스 포인터의 Y 좌표입니다.
 - {{domxref("MouseEvent.shiftKey")}} {{ReadOnlyInline}}
   - : 마우스 이벤트 발생 시점에 <kbd>shift</kbd>가 눌려있었으면 `true`를 반환합니다
 - {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{ReadOnlyInline}}

@@ -3,7 +3,7 @@ title: -moz-image-rect
 slug: Web/CSS/-moz-image-rect
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{Non-standard_header}}
 
 ## Resumen
 

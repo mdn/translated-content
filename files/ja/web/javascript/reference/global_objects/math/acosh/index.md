@@ -1,11 +1,10 @@
 ---
 title: Math.acosh()
+short-title: acosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acosh
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Math.acosh()`** は静的メソッドで、数値の双曲線余弦（ハイパーボリックアークコサイン）を返します。
 
@@ -15,20 +14,20 @@ l10n:
 </math>
 <!-- prettier-ignore-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.acosh()")}}
+{{InteractiveExample("JavaScript デモ: Math.acosh()")}}
 
 ```js interactive-example
 console.log(Math.acosh(0.999999999999));
-// Expected output: NaN
+// 予想される結果: NaN
 
 console.log(Math.acosh(1));
-// Expected output: 0
+// 予想される結果: 0
 
 console.log(Math.acosh(2));
-// Expected output: 1.3169578969248166
+// 予想される結果: 1.3169578969248166
 
 console.log(Math.acosh(2.5));
-// Expected output: 1.566799236972411
+// 予想される結果: 1.566799236972411
 ```
 
 ## 構文
@@ -72,6 +71,7 @@ Math.acosh(Infinity); // 無限大
 ## 関連情報
 
 - [`Math.acosh` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
+- [es-shims による `Math.acosh` のポリフィル](https://www.npmjs.com/package/math.acosh)
 - {{jsxref("Math.asinh()")}}
 - {{jsxref("Math.atanh()")}}
 - {{jsxref("Math.cosh()")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
 ---
 
-{{CSSRef}}
-
 La propiedad **`filter`** de [CSS](/es/docs/Web/CSS) aplica efectos gráficos como desenfoque o cambio de color a un elemento. Los filtros se usan comúnmente para ajustar la representación de imágenes, fondos y bordes.
 
 Varias [funciones](#funciones), como `blur()` y `contrast()`, están disponibles para ayudarte a lograr efectos predefinidos.
@@ -280,4 +278,4 @@ Los filtros se aplican en orden. Esta es la razón por la cual las sombras paral
 - Módulo de [composición y combinación](/es/docs/Web/CSS/CSS_compositing_and_blending) de CSS, incluidas las propiedades CSS {{cssxref("background-blend-mode")}} y {{cssxref("mix-blend-mode")}}.
 - La propiedad CSS {{cssxref("mask")}}
 - [SVG](/es/docs/Web/SVG), incluido el elemento SVG {{SVGElement("filter")}} y el atributo SVG {{SVGAttr("filter")}}.
-- [Aplicación de efectos SVG al contenido HTML](/es/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [Aplicación de efectos SVG al contenido HTML](/es/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

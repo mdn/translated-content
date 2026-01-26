@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/setFloat64
 
 **`setFloat64()`** メソッドは、符号付き 64 ビット浮動小数点数 (double) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置に格納します。
 
-{{InteractiveExample("JavaScript Demo: DataView.setFloat32()")}}
+{{InteractiveExample("JavaScript デモ: DataView.setFloat32()")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

@@ -3,10 +3,10 @@ title: "XMLHttpRequest: send() メソッド"
 short-title: send()
 slug: Web/API/XMLHttpRequest/send
 l10n:
-  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 {{domxref("XMLHttpRequest")}} の **`send()`** メソッドは、リクエストをサーバーに送信します。
 
@@ -26,11 +26,9 @@ send(body)
 ### 引数
 
 - `body` {{optional_inline}}
-
   - : XHR のリクエストの中で送られる本文データです。次のものが使用できます。
-
     - {{domxref("Document")}}: 送信前にシリアライズされている場合。
-    - `XMLHttpRequestBodyInit`: [Fetch の仕様書](https://fetch.spec.whatwg.org/#typedefdef-xmlhttprequestbodyinit)によれば、{{domxref("Blob")}}、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}、{{domxref("FormData")}}、{{domxref("URLSearchParams")}}、文字列リテラル、オブジェクトが利用できます。
+    - `XMLHttpRequestBodyInit`: [Fetch の仕様書](https://fetch.spec.whatwg.org/#typedefdef-xmlhttprequestbodyinit)によれば、{{domxref("Blob")}}、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}、{{domxref("FormData")}}、{{domxref("URLSearchParams")}}、文字列が利用できます。
     - `null`
 
     body に値が設定されていない場合、既定値の `null` が使用されます。
@@ -95,5 +93,5 @@ xhr.send("foo=bar&lorem=ipsum");
 
 ## 関連情報
 
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [XMLHttpRequest の使い方](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - [XMLHttpRequest における HTML の扱い](/ja/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)

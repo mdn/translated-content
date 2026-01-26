@@ -3,8 +3,6 @@ title: resize
 slug: Web/CSS/resize
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad resize de CSS permite controlar la capacidad de cambio de tamaño de un elemento.
@@ -37,7 +35,8 @@ resize: unset;
 - `vertical`
   - : El elemento efrece un mecanismo que permite al usuario cambiar el tamaño del elemento sólo verticalmente.
 
-> **Nota:** `resize` no aplica abloques en los cuales la propiedad {{cssxref("overflow")}} es configurada como `visible`.
+> [!NOTE]
+> `resize` no aplica abloques en los cuales la propiedad {{cssxref("overflow")}} es configurada como `visible`.
 
 ### Sintaxis formal
 

@@ -1,14 +1,11 @@
 ---
 title: <filter>
 slug: Web/SVG/Reference/Element/filter
-original_slug: Web/SVG/Element/filter
 l10n:
-  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}
-
-**`<filter>`** は [SVG](/ja/docs/Web/SVG) の要素で、原子フィルタープリミティブをグループ化してカスタムフィルター効果を定義します。それ自身はレンダリングされませんが、 SVG 要素の {{SVGAttr("filter")}} 属性や SVG/HTML 要素の {{Glossary("CSS")}} の {{cssxref("filter")}} プロパティで使用しなければなりません。
+**`<filter>`** は [SVG](/ja/docs/Web/SVG) の要素で、原子フィルタープリミティブをグループ化してカスタムフィルター効果を定義します。これ自身はレンダリングされず、 SVG 要素の {{SVGAttr("filter")}} 属性や SVG/HTML 要素の {{Glossary("CSS")}} の {{cssxref("filter")}} プロパティで使用する必要があります。
 
 ## 使用コンテキスト
 

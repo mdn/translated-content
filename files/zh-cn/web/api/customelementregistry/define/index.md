@@ -26,9 +26,7 @@ define(name, constructor, options)
 - constructor
   - : 自定义元素构造器。
 - options {{optional_inline}}
-
   - : 控制元素如何定义。目前有一个选项支持：
-
     - `extends`. 指定继承的已创建的元素。被用于创建自定义元素。
 
 ### 返回值

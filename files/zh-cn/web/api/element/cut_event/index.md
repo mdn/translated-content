@@ -1,6 +1,5 @@
 ---
 title: Element：cut 事件
-short-title: cut
 slug: Web/API/Element/cut_event
 ---
 
@@ -18,7 +17,7 @@ slug: Web/API/Element/cut_event
 
 事件处理器不可以*读取*剪贴板数据。
 
-可以构建和派发一个[合成](/zh-CN/docs/Web/Events/Creating_and_triggering_events) `cut` 事件，但这不会影响系统剪贴板或文档内容。
+可以构建和派发一个[合成](/zh-CN/docs/Web/API/Document_Object_Model/Events) `cut` 事件，但这不会影响系统剪贴板或文档内容。
 
 ## 语法
 
@@ -85,6 +84,5 @@ source.addEventListener("cut", (event) => {
 
 ## 参见
 
-- 相关联事件：{{domxref("Element/copy_event", "copy")}}、{{domxref("Element/paste_event", "paste")}}
-- {{domxref("Document")}} 目标上的这个事件：{{domxref("Document/cut_event", "cut")}}
-- {{domxref("Window")}} 目标上的这个事件：{{domxref("Window/cut_event", "cut")}}
+- {{domxref("Element/copy_event", "copy")}} 事件
+- {{domxref("Element/paste_event", "paste")}} 事件

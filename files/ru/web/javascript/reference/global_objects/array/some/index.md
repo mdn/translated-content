@@ -31,9 +31,7 @@ arr.some(callback(element[, index[, array]])[, thisArg])
 ### Параметры
 
 - `callback`
-
   - : Функция проверки каждого элемента, принимает три аргумента:
-
     - `element`
       - : Текущий обрабатываемый элемент массива.
     - `index`{{Optional_inline}}

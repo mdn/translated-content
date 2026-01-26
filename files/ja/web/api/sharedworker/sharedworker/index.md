@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Web Workers API")}}
 
-**`SharedWorker()`** コンストラクターは、指定された URL でスクリプトを実行する {{domxref("SharedWorker")}} オブジェクトを作成します。このスクリプトは[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)に従わなければなりません。
+**`SharedWorker()`** コンストラクターは、指定された URL でスクリプトを実行する {{domxref("SharedWorker")}} オブジェクトを作成します。このスクリプトは[同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)に従わなければなりません。
 
 > [!NOTE]
 > ブラウザーメーカー間で、 data URL が同じ元であるかどうかについての見解の相違があります。 Firefox 10.0 以降では data URL を受け入れることができますが、他のすべてのブラウザーではその限りではありません。
@@ -28,9 +28,7 @@ new SharedWorker(aURL, options)
 - `name` {{optional_inline}}
   - : ワーカーのスコープを表す {{domxref("SharedWorkerGlobalScope")}} の識別名を指定する文字列で、同じ共有ワーカーのインスタンスの作成やデバッグに有用です。
 - `options` {{optional_inline}}
-
   - : オブジェクトのインスタンスを作成する際に設定することができる、オプションプロパティを格納したオブジェクト。利用できるプロパティは以下のとおりです。
-
     - `type`
       - : 作成するワーカーの種類を指定する文字列です。この値には `classic` または `module` を指定することができます。指定しない場合、既定では `classic` が使用されます。
     - `credentials`

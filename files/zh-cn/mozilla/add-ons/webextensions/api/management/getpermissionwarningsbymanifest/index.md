@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 当用户安装或升级附加组件时，浏览器可能会警告用户该附加组件请求的任何特别强大的[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。并非所有权限都会导致警告，而且此行为在各个浏览器之间并没有统一的标准。
 
 给定 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件的文本，该函数会以字符串数组的形式返回生成的关于该附加组件的权限警告。

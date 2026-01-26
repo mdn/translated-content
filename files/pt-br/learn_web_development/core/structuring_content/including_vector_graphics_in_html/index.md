@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Including_vector_graphics_i
 original_slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/General_embedding_technologies", "Web/HTML/Responsive_images", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 Vector graphics are very useful in many circumstances — they have small file sizes and are highly scalable, so they don't pixelate when zoomed in or blown up to a large size. In this article we'll show you how to include one in your webpage.
 
@@ -97,7 +97,7 @@ In this section we'll go through the different ways in which you can add SVG vec
 
 ### The quick way: {{htmlelement("img")}}
 
-To embed an SVG via an {{htmlelement("img")}} element, you just need to reference it in the src attribute as you'd expect. You will need a `height` or a `width` attribute (or both if your SVG has no inherent aspect ratio). If you have not already done so, please read [Images in HTML](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML).
+To embed an SVG via an {{htmlelement("img")}} element, you just need to reference it in the src attribute as you'd expect. You will need a `height` or a `width` attribute (or both if your SVG has no inherent aspect ratio). If you have not already done so, please read [Images in HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content/HTML_images).
 
 ```html
 <img
@@ -168,7 +168,7 @@ You can also open up the SVG file in a text editor, copy the SVG code, and paste
 
 ### How to embed an SVG with an {{htmlelement("iframe")}}
 
-You can open SVG images in your browser just like webpages. So embedding an SVG document with an `<iframe>` is done just like we studied in [From \<object> to \<iframe> — other embedding technologies](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies).
+You can open SVG images in your browser just like webpages. So embedding an SVG document with an `<iframe>` is done just like we studied in [From \<object> to \<iframe> — other embedding technologies](/pt-BR/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies).
 
 Here's a quick review:
 
@@ -340,4 +340,4 @@ In the last article of this module we will explore responsive images in detail, 
 - [Accessibility benefits of SVG](https://www.w3.org/TR/SVG-access/)
 - [How to scale SVGs](https://css-tricks.com/scale-svg/) (it's not as simple as raster graphics!)
 
-{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/General_embedding_technologies", "Web/HTML/Responsive_images", "conflicting/Learn_web_development/Core/Structuring_content")}}

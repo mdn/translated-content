@@ -1,29 +1,11 @@
 ---
-title: 测验：无障碍疑难解答
+title: 挑战：无障碍疑难解答
 slug: Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Mobile","Learn_web_development/Core/Design_for_developers", "Learn_web_development/Core/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Mobile","Learn_web_development/Core/Design_for_developers", "Learn_web_development/Core/Accessibility")}}
 
 在本模块的测验环节中，我们将呈现一个含有若干无障碍问题的简单网站，你需要对它进行诊断并修复这些问题。
-
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">先决条件：</th>
-      <td>
-        基础的计算机知识，对 HTML、CSS 和 JavaScript 有基础的理解，理解<a
-          href="/zh-CN/docs/Learn_web_development/Core/Accessibility"
-          >本课程的前期内容</a
-        >。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">目标：</th>
-      <td>测试对无障碍的基础知识的理解情况。</td>
-    </tr>
-  </tbody>
-</table>
 
 ## 开始之前
 
@@ -38,7 +20,7 @@ slug: Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
 你会看到评估的起始状态的显示有一些差异/问题——这主要是由于标记的不同，这反过来又导致一些样式问题，因为 CSS 没有被正确应用。不要担心——你将在接下来的章节中解决这些问题！
 
 > [!NOTE]
-> 如果你卡住了，就可以寻求帮助——请参阅本页面底部的[测验或进一步的帮助](#测验或进一步的帮助)章节。
+> 如果你遇到了困难，可以通过[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)联系我们。
 
 ## 项目简要
 
@@ -82,17 +64,5 @@ slug: Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
 ### 其他考虑
 
 你能再列举两个能使网站无障碍体验更佳的改进意见吗？
-
-## 测验或进一步的帮助
-
-如果你需要对你的工作进行评估，或遇见一些问题并想寻求帮助：
-
-1. 将你的工作放置在可分享在线编辑器中，如 [CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/)。
-2. 在 [MDN Discourse forum Learning 分类](https://discourse.mozilla.org/c/mdn/learn/250) 中撰写帖子，寻求评估或/和帮助。你的帖子应该包含：
-
-   - 一个描述性的标题，例如“Assessment wanted for Accessibility troubleshooting”。
-   - 你已经尝试了哪些细节，想让我们做些什么（例如获取帮助，或寻求评估）。
-   - 在一个在线可共享的编辑器（例如第 1 步中提到的那些）中，提供你想要评估或需要帮助的例子的链接。这是一个很好的做法，如果你不能看到他们的代码，就很难帮助别人解决编码问题。
-   - 一个链接到实际任务或测验页面的链接，通过这个链接我们可以明白你寻求帮助的问题。
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/Mobile","Learn_web_development/Core/Design_for_developers", "Learn_web_development/Core/Accessibility")}}

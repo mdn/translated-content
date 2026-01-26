@@ -3,7 +3,7 @@ title: 媒体查询入门指南
 slug: Learn_web_development/Core/CSS_layout/Media_queries
 ---
 
-{{learnsidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout/Fundamental_layout_comprehension", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_Design", "Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension", "Learn_web_development/Core/CSS_layout")}}
 
 **CSS 媒体查询**为你提供了一种应用 CSS 的方法，仅在浏览器和设备的环境与你指定的规则相匹配的时候 CSS 才会真的被应用，例如“视口宽于 480 像素”的时候。媒体查询是响应式 Web 设计的关键部分，因为它允许你按照视口的尺寸创建不同的布局，不过它也可以用来探测和你的站点运行的环境相关联的其他条件，比如用户是在使用触摸屏还是鼠标。在本节课，你将会先学习到媒体查询的语法，然后继续在一个被安排好的示例中使用它，这个示例还会告诉你一个简单的设计是可以怎么被弄成响应式的。
 
@@ -107,7 +107,7 @@ slug: Learn_web_development/Core/CSS_layout/Media_queries
 
 实践中，使用最小值和最大值对响应式设计有很多的用处，所以你会很少见到`width`或`height` 单独使用的情况。
 
-还有许多其他媒体特征可以供你测试，尽管于 4 级和 5 级媒体查询规范中引入了一些新特征，它们受浏览器支持仍然有限。在 MDN 上，每个特征都已经同浏览器支持信息一同记载下来，你可以在[使用媒体查询：媒体特征](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#media_features)中找到一张完整的列表。
+还有许多其他媒体特征可以供你测试，尽管于 4 级和 5 级媒体查询规范中引入了一些新特征，它们受浏览器支持仍然有限。在 MDN 上，每个特征都已经同浏览器支持信息一同记载下来，你可以在[使用媒体查询：媒体特征](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using#media_features)中找到一张完整的列表。
 
 #### 朝向
 
@@ -420,7 +420,7 @@ article {
 
 ## 技能测试！
 
-你已经到了此文的结尾，但是你能记住最重要的信息吗？你可以在继续之前，找一个测试来验证下你是否已经掌握了这些信息。见[技能测试：响应式 Web 设计](/zh-CN/docs/Learn_web_development/Core/CSS_layout/rwd_skills)。
+你已经到了此文的结尾，但是你能记住最重要的信息吗？你可以在继续之前，找一个测试来验证下你是否已经掌握了这些信息。见[技能测试：响应式 Web 设计](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design)。
 
 ## 小结
 
@@ -430,4 +430,4 @@ article {
 
 你还能通过加入不同的组件进行实验，看下加入媒体查询，或者使用类似弹性盒或者网格的布局方式，哪个是让组件可响应的最佳途径。经常是没有什么对错的，你应该实验下，看看哪个对你的设计和内容效果最好。
 
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout/Fundamental_layout_comprehension", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_Design", "Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension", "Learn_web_development/Core/CSS_layout")}}

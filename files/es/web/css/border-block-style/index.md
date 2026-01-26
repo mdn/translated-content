@@ -3,7 +3,7 @@ title: border-block-style
 slug: Web/CSS/border-block-style
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`border-block-style`** [CSS](/es/docs/Web/CSS) property defines the style of the logical block borders of an element, que se asigna al estilo de borde físico dependiendo del modo de escritura, la direccionalidad y la orientación del texto del elemento. Esto corresponde a las propiedades {{cssxref("border-top-style")}} y {{cssxref("border-bottom-style")}}, o {{cssxref("border-left-style")}}, y {{cssxref("border-right-style")}} dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
 

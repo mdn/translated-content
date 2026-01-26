@@ -3,8 +3,6 @@ title: <frequency>
 slug: Web/CSS/frequency
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 El tipo de dato [CSS](/es/docs/Web/CSS) `<frequency>` denota una dimensión en frecuencia, como el tono de una voz hablando. Consisste en un valor {{cssxref("&lt;number&gt;")}} seguido inmediatamente por la unidad. Como en cualquier dimensión CSS, no hay espacio entre la unidad literal y el número.

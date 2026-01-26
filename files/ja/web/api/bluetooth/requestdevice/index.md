@@ -21,19 +21,14 @@ requestDevice(options)
 ### 引数
 
 - `options` {{optional_inline}}
-
   - : 機器の選択に関するオプションを設定するオブジェクトです。
     以下のオプションが利用可能です。
-
     - `filters` {{optional_inline}}
-
       - : 照合する機器のプロパティを示すフィルターオブジェクトの配列です。
         フィルターオブジェクトに照合するには、機器はフィルターのすべての値（指定する `services`、`name`、`namePrefix` など）に一致しなければなりません。
 
         各フィルターは以下のプロパティを持つオブジェクトの配列で構成されます。
-
         - `services` {{optional_inline}}
-
           - : Bluetooth 機器が対応しなければならない Bluetooth GATT (Generic Attribute Profile) サービスを示す値の配列。
             それぞれの値は [GATT 割り当てられたサービスリスト](https://github.com/WebBluetoothCG/registries/blob/master/gatt_assigned_services.txt)にある有効な名前、例えば `'battery_service'` や `'blood_pressure'` です。
             また、`'0000180F-0000-1000-8000-00805f9b34fb'` のようなサービスの完全な UUID、または短い 16 ビット (`0x180F`) または 32 ビットのエイリアスを渡すこともできます。
@@ -45,10 +40,8 @@ requestDevice(options)
           - : 照合する接頭辞を格納した文字列。
             この文字列で始まる名前の機器すべてに一致します。
         - `manufacturerData` {{optional_inline}}
-
           - : Bluetooth Low Energy (BLE) の広告パケットの製造元データと照合するオブジェクトの配列。 <!-- BluetoothManufacturerDataFilterInit -->
             それぞれのフィルターオブジェクトには以下のプロパティがあります。
-
             - `companyIdentifier`
               - : 必須で端末の製造元を識別する番号。
                 会社識別子は、Bluetooth 仕様書の[割り当て番号](https://www.bluetooth.com/specifications/assigned-numbers/)の第 7 節に掲載されています。
@@ -60,10 +53,8 @@ requestDevice(options)
               - : これにより、サービスデータの `dataPrefix` の一部のバイトをマスクすることで、製造者データ内の一部のバイトに対して照合することができます。
 
         - `serviceData` {{optional_inline}} <!-- BluetoothServiceDataFilterInit -->
-
           - : Bluetooth Low Energy (BLE) の広告パケット内のサービスデータと照合するオブジェクトの配列。 <!-- BluetoothServiceDataFilterInit -->
             それぞれのフィルターオブジェクトには以下のプロパティがあります。
-
             - `service`
               - : GATT サービス名、サービス UUID、または UUID 16 ビットまたは 32 ビットフォーム。
                 これは [`services`](#services) 配列の要素と同じ値を取ります。
@@ -77,13 +68,11 @@ requestDevice(options)
       - : 照合から除外する端末の特性を示すフィルターオブジェクトの配列。
         配列要素のプロパティは [`filters`](#filters) と同じです。
     - `optionalServices` {{optional_inline}}
-
       - : オプションのサービス識別子の配列。
 
         識別子は [`services`](#services) 配列の要素（GATT サービス名、サービスワーカースクリプト (service UUID)、UUID short 16-bit または 32-bit form）と同じ値を導きます。
 
     - `optionalManufacturerData` {{optional_inline}}
-
       - : オプションで、整数による製造者コードの配列。
         これは [`companyIdentifier`](#companyidentifier) と同じ値を取ります。
 
@@ -91,7 +80,6 @@ requestDevice(options)
         これは、許可プロンプトでユーザーに表示する機器を制御するフィルターに制約されることなく、Bluetooth 機器から受信したデータへの関心をコードで指定することができるので便利です。
 
     - `acceptAllDevices` {{optional_inline}}
-
       - : リクエストされたスクリプトがすべての Bluetooth 端末を受け入れることができることを示す論理値。
         既定値は `false` です。
 

@@ -20,9 +20,7 @@ var querying = browser.tabs.query(
 ### Paramètres
 
 - `queryInfo`
-
   - : `object`. La fonction `query()` obtiendra uniquement les onglets dont les propriétés correspondent aux propriétés incluses ici. Pour en savoir plus sur ces propriétés, consultez la documentation {{WebExtAPIRef("tabs.Tab")}}.
-
     - `active`{{optional_inline}}
       - : `boolean`. Si les onglets sont actifs dans leurs fenêtres.
     - `audible`{{optional_inline}}
@@ -147,8 +145,6 @@ querying.then(logTabs, onError);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

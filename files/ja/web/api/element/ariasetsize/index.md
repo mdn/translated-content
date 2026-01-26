@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaSetSize`** は {{domxref("Element")}} インターフェイスのプロパティで、リスト項目またはツリー項目の現在の設定にある項目の数を定義する [`aria-setsize`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) 属性の値を反映します。
+**`ariaSetSize`** は {{domxref("Element")}} インターフェイスのプロパティで、リスト項目またはツリー項目の現在の設定にある項目の数を定義する [`aria-setsize`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize) 属性の値を反映します。
 
 ## 値
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b30a10c08b986ebabd44733fb62f67667350403e
 ---
 
-{{AddonSidebar}}
-
 设置浏览器操作的徽章文本（徽章将显示在图标上方）。
 
 > [!NOTE]
@@ -27,11 +25,8 @@ browser.action.setBadgeText(
 ### 参数
 
 - `details`
-
   - : 一个含有下列属性的对象：
-
     - `text`
-
       - : `string` 或 `null`，可以传入任意长度的字符串，但空间只能容纳大约四个字符。
 
         若你不希望显示徽章，可以使用空字符串 `""`。

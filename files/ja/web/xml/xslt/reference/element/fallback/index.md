@@ -1,14 +1,11 @@
 ---
 title: <xsl:fallback>
 slug: Web/XML/XSLT/Reference/Element/fallback
-original_slug: Web/XSLT/Reference/Element/fallback
 l10n:
-  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-{{XsltSidebar}}
-
-`<xsl:fallback>` 要素は指定された拡張子 (または、最終的には新しいバージョン) 要素がサポートされていない場合に使用するテンプレートを指定します。
+`<xsl:fallback>` 要素は指定された拡張（または、最終的には新しいバージョンの）要素に対応していない場合に使用するテンプレートを指定します。
 
 ### 構文
 
@@ -34,6 +31,6 @@ l10n:
 
 XSLT, section 15
 
-### Gecko のサポート
+## Gecko の対応
 
-現時点ではサポートされていません。
+現時点では対応していません。

@@ -5,22 +5,20 @@ l10n:
   sourceCommit: 1ee49b729dc4cd02b862d910f279861f4b30e704
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 18 は米国時間 2013 年 1 月 8 日にリリースされました。このページでは、開発者に影響する Firefox 18 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### HTML
 
-- {{HTMLElement("ol")}} 要素の [`reversed`](/ja/docs/Web/HTML/Element/ol#reversed) 属性をサポートしました。([Firefox バグ 601912](https://bugzil.la/601912))
-- {{HTMLElement("link")}} 要素の [`crossorigin`](/ja/docs/Web/HTML/Element/link#crossorigin) 属性をサポートしました。([Firefox バグ 786564](https://bugzil.la/786564))
-- {{HTMLElement("iframe")}} 要素の [`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen) 属性が実装され、接頭辞つきの古いもの [`mozallowfullscreen`](/ja/docs/Web/HTML/Element/iframe#mozallowfullscreen) は非推奨になりました。
+- {{HTMLElement("ol")}} 要素の [`reversed`](/ja/docs/Web/HTML/Reference/Elements/ol#reversed) 属性をサポートしました。([Firefox バグ 601912](https://bugzil.la/601912))
+- {{HTMLElement("link")}} 要素の [`crossorigin`](/ja/docs/Web/HTML/Reference/Elements/link#crossorigin) 属性をサポートしました。([Firefox バグ 786564](https://bugzil.la/786564))
+- {{HTMLElement("iframe")}} 要素の [`allowfullscreen`](/ja/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen) 属性が実装され、接頭辞つきの古いもの [`mozallowfullscreen`](/ja/docs/Web/HTML/Reference/Elements/iframe#mozallowfullscreen) は非推奨になりました。
 
 ### CSS
 
 - {{cssxref("min-width")}} と {{cssxref("min-height")}} の初期値が `auto` へ変更されました。(これはフレックスアイテムにのみ効果があります。なぜなら、他のアイテムでは従来の初期値である `0` になるためです) ([Firefox バグ 763689](https://bugzil.la/763689))
-- カスケードが更新されました。ページ作者の `!important` ルールが [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)を上書きするようになりました。 ([Firefox バグ 783714](https://bugzil.la/783714))
+- カスケードが更新されました。ページ作者の `!important` ルールが [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations/Using)を上書きするようになりました。 ([Firefox バグ 783714](https://bugzil.la/783714))
 - {{cssxref("background")}} 一括指定プロパティが、内部で指定された CSS3 の{{cssxref("background-size")}} プロパティを理解するようになりました。 ([Firefox バグ 570326](https://bugzil.la/570326))
 - CSS フレックスボックスモジュールの初期実装が導入されました。既定では無効化されていますが、 `layout.css.flexbox.enabled` 設定を true に設定すると有効化されます。([Firefox バグ 666041](https://bugzil.la/666041))
 

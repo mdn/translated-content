@@ -204,23 +204,20 @@ transform-origin: revert-layer;
 transform-origin: unset;
 ```
 
-A propriedade `transform-origin` pode ser especificada usando um, dois ou três valores, onde cada valor representa um deslocamento. Deslocamentos que não são definidos explicitamente são redefinidos para seus respectivos [valores iniciais](/pt-BR/docs/Web/CSS/initial_value).
+A propriedade `transform-origin` pode ser especificada usando um, dois ou três valores, onde cada valor representa um deslocamento. Deslocamentos que não são definidos explicitamente são redefinidos para seus respectivos [valores iniciais](/pt-BR/docs/Web/CSS/CSS_cascade/initial_value).
 
 Se um único valor {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} for definido, ele representa o deslocamento horizontal.
 
 Se dois ou mais valores forem definidos e nenhum deles for uma palavra-chave, ou a única palavra-chave utilizada for `center`, então o primeiro valor representa o deslocamento horizontal e o segundo representa o deslocamento vertical.
 
 - Sintaxe de um valor:
-
   - O valor deve ser um {{cssxref("&lt;length&gt;")}}, um {{cssxref("&lt;percentage&gt;")}}, ou uma das palavras-chave `left`, `center`, `right`, `top` e `bottom`.
 
 - Sintaxe de dois valores:
-
   - Um valor deve ser um {{cssxref("&lt;length&gt;")}}, um {{cssxref("&lt;percentage&gt;")}}, ou uma das palavras-chave `left`, `center` e `right`.
   - O outro valor deve ser um {{cssxref("&lt;length&gt;")}}, um {{cssxref("&lt;percentage&gt;")}}, ou uma das palavras-chave `top`, `center` e `bottom`.
 
 - Sintaxe de três valores:
-
   - Os dois primeiros valores são os mesmos da sintaxe de dois valores.
   - O terceiro valor deve ser um {{cssxref("&lt;length&gt;")}}. Ele representa sempre o deslocamento Z.
 

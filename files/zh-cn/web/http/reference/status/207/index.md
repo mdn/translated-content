@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---
 
-{{HTTPSidebar}}
-
 > [!NOTE]
 > 返回*资源集合*的能力属于 {{Glossary("WebDAV")}} 协议（可能由访问 WebDAV 服务器的 Web 应用程序接收）。浏览器访问网页时永远不会遇到此状态码。
 

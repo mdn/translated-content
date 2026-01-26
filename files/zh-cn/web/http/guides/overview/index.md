@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5f0ee8a970aded9221273700aa8c5be964d6c1c1
 ---
 
-{{HTTPSidebar}}
-
 **HTTP** 是一种用作获取诸如 HTML 文档这类资源的{{glossary("protocol","协议")}}。它是 Web 上进行任何数据交换的基础，同时，也是一种客户端—服务器（client-server）协议，也就是说，请求是由接受方——通常是 Web 浏览器——发起的。完整网页文档通常由文本、布局描述、图片、视频、脚本等资源构成。
 
 ![由来自不同服务器的多个资源组成的单个 Web 文档。](https://mdn.github.io/shared-assets/images/diagrams/http/overview/fetching-a-page.svg)

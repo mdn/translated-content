@@ -3,8 +3,6 @@ title: flex-grow
 slug: Web/CSS/flex-grow
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad **`flex-grow`** de [CSS](/es/docs/Web/CSS) especifica el factor de crecimiento de un elemento flexible (que tiene asignado display:flex), en su dirección principal. El factor de crecimiento especifica qué cantidad del espacio restante dentro del contenedor flexible, debería ocupar el item en cuestión.

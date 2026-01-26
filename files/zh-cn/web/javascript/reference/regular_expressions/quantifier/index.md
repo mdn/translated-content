@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
 ---
 
-{{jsSidebar}}
-
 **量词**会将[原子](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions#原子)重复一定的次数。量词被置于其适用的原子项之后。
 
 ## 语法

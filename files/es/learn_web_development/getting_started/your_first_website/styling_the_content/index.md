@@ -4,7 +4,7 @@ slug: Learn_web_development/Getting_started/Your_first_website/Styling_the_conte
 original_slug: Learn/Getting_started_with_the_web/CSS_basics
 ---
 
-{{LearnSideBar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics","Learn/Getting_started_with_the_web")}}
+{{LearnSideBar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity","Learn_web_development/Getting_started/Your_first_website")}}
 
 CSS (_Hojas de Estilo en Cascada_) es el código que usas para dar estilo a tu página web. _CSS Básico_ te lleva a través de lo que tú necesitas para empezar. Contestará a preguntas del tipo: ¿Cómo hago mi texto rojo o negro? ¿Cómo hago que mi contenido se muestre en tal y tal lugar de la pantalla? ¿Cómo decoro mi página web con imágenes de fondo y colores?
 
@@ -184,7 +184,7 @@ body {
 }
 ```
 
-Ahora tienes varias declaraciones en el elemento [body](/es/docs/Web/HTML/Element/body). Revisa una por una:
+Ahora tienes varias declaraciones en el elemento [body](/es/docs/Web/HTML/Reference/Elements/body). Revisa una por una:
 
 - `width: 600px;` — esto hará que el cuerpo siempre tenga 600 píxeles de ancho.
 - `margin: 0 auto;` — cuando seleccionas dos valores dentro de propiedades como `margin` o `padding`, el primer valor afectará los lados superior (top) **e** inferior (bottom) (en este caso haciéndolo en 0), y el segundo valor los lados izquierdo (left) **y** derecho (right) (aquí, `auto` es un valor especial que divide el espacio disponible entre derecha e izquierda). Puedes usar esta propiedad con uno, dos, tres o cuatro valores como se explica en la [sintaxis de padding](/es/docs/Web/CSS/padding#sintaxis).
@@ -245,4 +245,4 @@ Si te atoraste, puedes comparar tu trabajo con el [código del ejemplo finalizad
 
 Aquí, solo has arañado la superficie de CSS. Si quieres encontrar más, puedes ir a la [página de aprendizaje de CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1).
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics","Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity","Learn_web_development/Getting_started/Your_first_website")}}

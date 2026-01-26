@@ -8,7 +8,8 @@ l10n:
 
 {{APIRef("DOM")}}
 
-> **警告:** `createEvent` とともに使用される多くのメソッド (`initCustomEvent` など) は非推奨です。
+> [!WARNING]
+> `createEvent` とともに使用される多くのメソッド (`initCustomEvent` など) は非推奨です。
 > 代わりに [イベントのコンストラクター](/ja/docs/Web/API/CustomEvent) を使用してください。
 
 指定された型の[イベント](/ja/docs/Web/API/Event)を作成します。返されるオブジェクトは最初に初期化する必要があり、その後で {{domxref("EventTarget.dispatchEvent")}} へ渡すことができます。
@@ -64,4 +65,4 @@ elem.dispatchEvent(event);
 
 ## 関連情報
 
-- [イベントの作成と発行](/ja/docs/Web/Events/Creating_and_triggering_events)
+- [イベントの作成と発行](/ja/docs/Web/API/Document_Object_Model/Events)

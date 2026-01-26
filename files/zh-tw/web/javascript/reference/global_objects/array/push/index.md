@@ -3,8 +3,6 @@ title: Array.prototype.push()
 slug: Web/JavaScript/Reference/Global_Objects/Array/push
 ---
 
-{{JSRef}}
-
 **`push()`** 方法會添加一個或多個元素至陣列的末端，並且回傳陣列的新長度。
 
 {{InteractiveExample("JavaScript Demo: Array.push()")}}

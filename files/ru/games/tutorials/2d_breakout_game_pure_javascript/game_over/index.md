@@ -3,7 +3,7 @@ title: Game over
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 ---
 
-{{GamesSidebar}}{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Создаём_зону_кирпичей")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Создаём_зону_кирпичей")}}
 
 Это - 5-й шаг из 10 из [Gamedev Canvas tutorial](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Вы можете найти исходный код к этому уроку в [Gamedev-Canvas-workshop/lesson5.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html).
 

@@ -3,8 +3,6 @@ title: 451 Unavailable For Legal Reasons
 slug: Web/HTTP/Reference/Status/451
 ---
 
-{{HTTPSidebar}}
-
 HTTP-код ответа **`451 Unavailable For Legal Reasons`** указывает, что пользователь запросил ресурс, который недоступен по юридическим причинам, например веб-страница, заблокированная из-за судебных исков.
 
 ## Статус

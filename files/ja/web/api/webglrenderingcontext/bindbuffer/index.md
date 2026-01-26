@@ -19,16 +19,13 @@ bindBuffer(target, buffer)
 ### 引数
 
 - `target`
-
   - : 結合する場所 (ターゲット) の {{domxref("WebGL_API/Types", "GLenum")}} です。以下の値を指定することができます。
-
     - `gl.ARRAY_BUFFER`
       - : 頂点の属性を含むバッファーで、頂点座標、テクスチャ座標データや、頂点色データのようなものです。
     - `gl.ELEMENT_ARRAY_BUFFER`
       - : 要素の位置指定に使われるバッファーです。
 
     {{domxref("WebGL2RenderingContext", "WebGL 2 のコンテキスト", "", 1)}}を使用している場合は、更に以下の値を利用することができます。
-
     - `gl.COPY_READ_BUFFER`
       - : バッファーオブジェクトを他へコピーするためのバッファーです。
     - `gl.COPY_WRITE_BUFFER`

@@ -5,9 +5,7 @@ l10n:
   sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
 ---
 
-{{GlossarySidebar}}
-
-**网格区域**是网格中由一个或者多个{{glossary("grid cell", "网格单元")}}组成的一个矩形区域。当你[基于网格线定位](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)来放置项目或者使用[具名网格区域](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)定义区域时，会创建网格区域。
+**网格区域**是网格中由一个或者多个{{glossary("grid cell", "网格单元")}}组成的一个矩形区域。当你[基于网格线定位](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)来放置项目或者使用[具名网格区域](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)定义区域时，会创建网格区域。
 
 ![显示一个被高光突出的网格区域](1_grid_area.png)
 
@@ -77,6 +75,6 @@ l10n:
 ### 扩展阅读
 
 - CSS 网格布局指南：
-  - [网格布局的基本概念](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-  - [网格模板区域](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+  - [网格布局的基本概念](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+  - [网格模板区域](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)
 - CSS 网格布局规范中[网格区域的定义](https://drafts.csswg.org/css-grid/#grid-area-concept)

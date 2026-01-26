@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8a9085b96d0135920be9b281d4500ff72a7a8369
 ---
 
-{{HTTPSidebar}}
-
 **HTTP `CONNECT` 方法**用於與請求的資源建立雙向通訊。它可用於打開隧道。
 
 例如，`CONNECT` 方法可用於訪問使用 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}）的網站。用戶端請求 HTTP {{Glossary("Proxy server", "代理伺服器")}}將 [TCP](/zh-TW/docs/Glossary/TCP) 連接以隧道方式傳輸到所需目的地。然後代理伺服器代表用戶端建立連接。一旦連接建立，代理伺服器將繼續將 TCP 流從用戶端轉發到用戶端。

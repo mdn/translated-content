@@ -2,7 +2,7 @@
 title: 橫幅與通知
 slug: MDN/Writing_guidelines/Page_structures/Banners_and_notices
 l10n:
-  sourceCommit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
+  sourceCommit: 359403526b7b802cdb09b90acf28577b959076d0
 ---
 
 橫幅與通知會顯示在某些頁面中（特別是 API 參考文件），以突顯會影響描述內容使用方式的重要因素。例如，橫幅用於突顯某個介面、方法或屬性已被棄用、不應在產品程式碼中使用，或只能在安全上下文中使用。
@@ -13,7 +13,7 @@ l10n:
 
 ## 橫幅巨集加入的位置
 
-橫幅使用巨集加入，且通常插入在頁面後設資料下方與側邊欄巨集並列。例如，在下方區塊中，`\{{SecureContext_Header}}` 巨集用來表示 {{domxref("AudioDecoder")}} 介面僅能在[安全上下文](/zh-TW/docs/Web/Security/Secure_Contexts)中使用、`\{{AvailableInWorkers}}` 巨集用來表示 {{domxref("AudioDecoder")}} 介面僅能在 [Window 上下文](/zh-TW/docs/Web/API/Window)與[專用 Worker 上下文](/zh-TW/docs/Web/API/DedicatedWorkerGlobalScope)中使用，而 `\{{SeeCompatTable}}` 則用來表示該介面為實驗性技術。
+橫幅使用巨集加入，且通常插入在頁面後設資料下方與側邊欄巨集並列。例如，在下方區塊中，`\{{SecureContext_Header}}` 巨集用來表示 {{domxref("AudioDecoder")}} 介面僅能在[安全上下文](/zh-TW/docs/Web/Security/Defenses/Secure_Contexts)中使用、`\{{AvailableInWorkers}}` 巨集用來表示 {{domxref("AudioDecoder")}} 介面僅能在 [Window 上下文](/zh-TW/docs/Web/API/Window)與[專用 Worker 上下文](/zh-TW/docs/Web/API/DedicatedWorkerGlobalScope)中使用，而 `\{{SeeCompatTable}}` 則用來表示該介面為實驗性技術。
 
 ```md
 ---
@@ -32,7 +32,7 @@ browser-compat: api.AudioDecoder
 
 必須手動加入下列巨集：
 
-- `\{{SecureContext_Header}}`——這會產生一個**安全上下文**橫幅，表示該技術僅能在[安全上下文](/zh-TW/docs/Web/Security/Secure_Contexts)中使用。
+- `\{{SecureContext_Header}}`——這會產生一個**安全上下文**橫幅，表示該技術僅能在[安全上下文](/zh-TW/docs/Web/Security/Defenses/Secure_Contexts)中使用。
 - `\{{AvailableInWorkers}}`——這會產生一個**可在 Worker 使用**通知，表示該技術在 [Worker 上下文](/zh-TW/docs/Web/API/Web_Workers_API)中可用。
 
 ## 自動加入的橫幅
@@ -43,7 +43,7 @@ browser-compat: api.AudioDecoder
 - `\{{Deprecated_Header}}`——產生一個**已棄用**橫幅，表示[不建議](/zh-TW/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#已棄用)使用該技術。
 - `\{{Non-standard_Header}}`——產生一個**非標準**橫幅，表示該技術並非屬於任何形式規範的一部分，即使多個瀏覽器均有實作。
 
-若要更改這些值，請[更新瀏覽器相容性儲存庫中的功能狀態](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Feature_status#如何增加或更新功能狀態)。
+若要更改這些值，請[更新瀏覽器相容性儲存庫中的功能狀態](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Feature_status#功能狀態是如何新增或更新的)。
 
 > [!NOTE]
 > 雖然你可以在內容中手動更新這些巨集，但與瀏覽器相容性資料不符的值將會被取代或移除。

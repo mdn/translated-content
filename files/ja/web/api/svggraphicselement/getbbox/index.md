@@ -9,7 +9,8 @@ slug: Web/API/SVGGraphicsElement/getBBox
 
 メモ: `getBBox` は要素がまだレンダリングされていない場合でも、メソッドが呼び出されたときに実際の境界ボックスを返します。また、要素またはその親に適用される変換は無視します。
 
-> **メモ:** `getBBox` は {{domxref("Element.getBoundingClientRect()", "getBoundingClientRect()")}} とは異なる値を返します。後者はビューポートからの相対値を返します。
+> [!NOTE]
+> `getBBox` は {{domxref("Element.getBoundingClientRect()", "getBoundingClientRect()")}} とは異なる値を返します。後者はビューポートからの相対値を返します。
 
 ## 構文
 

@@ -18,6 +18,5 @@ l10n:
 - 위키백과의 [문자 인코딩](https://en.wikipedia.org/wiki/Character_encoding)
 - 위키백과의 [글자 깨짐](https://ko.wikipedia.org/wiki/%EA%B8%80%EC%9E%90_%EA%B9%A8%EC%A7%90)
 - [용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("Character")}}
   - {{Glossary("Unicode")}}

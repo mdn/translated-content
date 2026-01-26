@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLDataElement")}} 接口的 **`value`** 属性返回反映 [`value`](/zh-CN/docs/Web/HTML/Element/data#value) HTML 属性的字符串。
+{{domxref("HTMLDataElement")}} 接口的 **`value`** 属性返回反映 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/data#value) HTML 属性的字符串。
 
 ### 值
 

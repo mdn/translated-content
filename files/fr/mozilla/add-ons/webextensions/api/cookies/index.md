@@ -14,34 +14,26 @@ Pour utiliser cette API, vous devez inclure l'[API permission](/fr/docs/Mozilla/
 Pour utiliser cette API, un module complémentaire doit spécifier la [permission d'API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "cookies" dans son manifest, ainsi que les [permissions host](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) pour tous les sites pour lesquels il souhaite accéder aux cookies. L'add-on peut lire ou écrire des cookies qui pourraient être lus ou écrits par une URL correspondant aux permissions de l'hôte. Par exemple :
 
 - `http://*.example.com/`
-
   - : Un module complémentaire avec cette autorisation d'hôte peut :
-
     - Lire un cookie non sécurisé pour `www.example.com`, avec n'importe quel chemin.
     - Écrire un cookie ou non sécurisé pour `www.example.com`, avec n'importe quel chemin.
 
     Il ne peut _pas_ :
-
     - Lire un cookie sécurisé pour `www.example.com`.
 
 - `http://www.example.com/`
-
   - : Un module complémentaire avec cette permission d'hôte peut :
-
     - Lire un cookie non sécurisé pour `www.example.com`, avec n'importe quel chemin.
     - Lire un cookie non sécurisé pour `.example.com`, avec n'importe quel chemin.
     - Écrire un cookie sécurisé ou non sécurisé pour `www.example.com` avec n'importe quel chemin.
     - Écrire un cookie sécurisé ou non sécurisé pour `.example.com` avec n'importe quel chemin.
 
     Il ne peut _pas_ :
-
     - Lire ou écrire un cookie pour `foo.example.com`.
     - Lire ou écrire un cookie pour `foo.www.example.com`.
 
 - `*://*.example.com/`
-
   - : Un module complémentaire avec çà permission d'hôtes n add-on with this host permission may:
-
     - Read or write a secure or non-secure cookie for `www.example.com` with any path.
 
 ## Isolement de la première partie

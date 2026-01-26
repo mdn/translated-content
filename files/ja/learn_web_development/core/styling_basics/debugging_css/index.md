@@ -7,7 +7,7 @@ l10n:
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics", "Learn_web_development/Core/Styling_basics")}}
 
 CSS を書いていると、CSS が期待通りに動作しない、という問題に遭遇することがあります。あるセレクターがある要素に一致するはずなのに何も起こらないとか、ボックスの大きさが思っていたのと違うとか。この記事では、CSS の問題をデバッグする方法について説明し、現行のブラウザーすべてに記載されている開発者ツールを使って、何が起こっているのかを探す方法を示します。
 
@@ -149,7 +149,7 @@ CSS の問題を解決する場合、開発者ツールは非常に役立ちま�
 
 ![subgrid の値に対応していないため、 grid-template-columns: subgrid に線が引かれているブラウザー開発者ツールの画像。](no-support.png)
 
-また、MDN の各プロパティページの下部にあるブラウザーの互換性の表を見ることもできます。これらの表は、そのプロパティのブラウザーの対応状況を示しており、そのプロパティの一部の使用法がサポートされていて、他の使用法が対応していない場合は分類されていることが多いです。 [`grid-template-columns` プロパティの互換性一覧表を参照してください](/ja/docs/Web/CSS/grid-template-columns#ブラウザーの互換性)。
+また、MDN の各プロパティページの下部にあるブラウザーの互換性の表を見ることもできます。これらの表は、そのプロパティのブラウザーの対応状況を示しており、そのプロパティの一部の使用法がサポートされていて、他の使用法が対応していない場合は分類されていることが多いです。 [`grid-template-columns` プロパティの互換性一覧表を参照してください](/ja/docs/Web/CSS/Reference/Properties/grid-template-columns#ブラウザーの互換性)。
 
 ### どこかで CSS が上書きされていないか
 
@@ -187,4 +187,4 @@ CSS を使いこなせるようになると、問題を発見するのが早く�
 - [Firefox > Examine and edit CSS](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html), Firefox Source Docs
 - [Chrome > View and change CSS](https://developer.chrome.com/docs/devtools/css/), developer.chrome.com
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics", "Learn_web_development/Core/Styling_basics")}}

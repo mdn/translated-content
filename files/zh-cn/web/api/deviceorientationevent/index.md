@@ -17,7 +17,6 @@ slug: Web/API/DeviceOrientationEvent
 - {{domxref("DeviceOrientationEvent.alpha")}} {{readonlyinline}}
   - : 一个表示设备绕 z 轴旋转的角度（范围在 0-360 之间）的数字
 - {{domxref("DeviceOrientationEvent.beta")}} {{readonlyinline}}
-
   - : 一个表示设备绕 x 轴旋转（范围在－180 到 180 之间）的数字，从前到后的方向为正方向。
 
 - {{domxref("DeviceOrientationEvent.gamma")}} {{readonlyinline}}

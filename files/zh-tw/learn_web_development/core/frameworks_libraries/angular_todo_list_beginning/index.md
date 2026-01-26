@@ -3,7 +3,7 @@ title: 開始開發我們的 Angular 待辦事項應用程式
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_getting_started","Learn_web_development/Core/Frameworks_libraries/Angular_styling", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_getting_started","Learn_web_development/Core/Frameworks_libraries/Angular_styling", "Learn_web_development/Core/Frameworks_libraries")}}
 
 此刻，我們已準備好使用 Angular 來創建我們的待辦事項應用程式。完成後的應用程式將具有顯示待辦項目列表，並包含編輯、刪除與新增項目等功能。在本篇中，你將學到應用程式的結構，以及建立一個可顯示待辦項目的基礎列表。
 

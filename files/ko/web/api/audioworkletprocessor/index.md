@@ -9,7 +9,8 @@ slug: Web/API/AudioWorkletProcessor
 
 ## 생성자
 
-> **참고:** `AudioWorkletProcessor` 와 이것으로부터 파생된 클래스들은 사용자에 의해 제공된 코드로부터 직접적으로 초기화될 수 없습니다. 대신, 이것들은 오직 연관된 {{domxref("AudioWorkletNode")}}들의 생성에 의해서만 내부적으로 생성됩니다. 파생된 클래스의 생성자는 options 객체와 함께 호출되므로, 여러분은 사용자 정의 초기화 절차를 수행할 수 있습니다 — 자세한 사항은 생성자 페이지를 참고하세요.
+> [!NOTE]
+> `AudioWorkletProcessor` 와 이것으로부터 파생된 클래스들은 사용자에 의해 제공된 코드로부터 직접적으로 초기화될 수 없습니다. 대신, 이것들은 오직 연관된 {{domxref("AudioWorkletNode")}}들의 생성에 의해서만 내부적으로 생성됩니다. 파생된 클래스의 생성자는 options 객체와 함께 호출되므로, 여러분은 사용자 정의 초기화 절차를 수행할 수 있습니다 — 자세한 사항은 생성자 페이지를 참고하세요.
 
 - {{domxref("AudioWorkletProcessor.AudioWorkletProcessor", "AudioWorkletProcessor()")}}
   - : `AudioWorkletProcessor` 객체의 새 인스턴스를 생성합니다.
@@ -43,7 +44,6 @@ _`AudioWorkletProcessor` 인터페이스는 어떠한 이벤트에도 응답하�
 
 1. 별도의 파일을 생성합니다.
 2. 그 파일에서
-
    1. `AudioWorkletProcessor` 클래스를 확장하고 (["클래스 파생" 섹션](#클래스_파생)을 참고하세요) 여러분만의 {{domxref("AudioWorkletProcessor.process", "process()")}} 메서드를 그 안에 제공하세요.
    2. {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} 메서드를 사용해 프로세서를 등록하세요.
 

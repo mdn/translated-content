@@ -2,7 +2,7 @@
 title: IntersectionObserverEntry
 slug: Web/API/IntersectionObserverEntry
 l10n:
-  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
+  sourceCommit: f9f48866f02963e752717310b76a70d5bdaf554c
 ---
 
 {{APIRef("Intersection Observer API")}}
@@ -26,7 +26,7 @@ l10n:
 - {{domxref("IntersectionObserverEntry.target")}} {{ReadOnlyInline}}
   - : ルートとの交差状態が変化した {{domxref("Element")}} です。
 - {{domxref("IntersectionObserverEntry.time")}} {{ReadOnlyInline}}
-  - : {{domxref("DOMHighResTimeStamp")}} で、この `IntersectionObserver` の[時刻の起点](/ja/docs/Web/API/DOMHighResTimeStamp#時刻の起点)を基準にして、交差が記録された時刻を示します。
+  - : {{domxref("DOMHighResTimeStamp")}} で、この `IntersectionObserver` の[時刻の起点](/ja/docs/Web/API/Performance/timeOrigin)を基準にして、交差が記録された時刻を示します。
 
 ## メソッド
 

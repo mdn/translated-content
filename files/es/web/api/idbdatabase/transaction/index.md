@@ -72,7 +72,6 @@ var objectStore = transaction.objectStore("toDoList");
 ## Parámetros
 
 - storeNames
-
   - : Son los nombres de los almacenes de objetos e índices que están en el ámbito de la nueva transacción, declarados como un arreglo de cadenas de texto. Especifíca solamente aquellos a los que necesitas acceso.
     Si necesitas acceder a un solo almacén, puedes especificar su nombre como una cadena. Por tanto las siguientes líneas son equivalentes:
 
@@ -90,7 +89,6 @@ var objectStore = transaction.objectStore("toDoList");
     Pasar un arreglo vació como parámetro arrojará una excepción.
 
 - mode
-
   - : _Opcional_. Los tipos de acceso que pueden desempeñarse en la transacción. Las transacciones son abiertas en uno de tres modos: `readonly [sólo lectura], readwrite [lectura/escritura],` y `readwriteflush [descarga de lectura/escritura]` (no-estándar, sólo para Firefox). El modo `versionchange [cambio de versión]` no puede ser especificado aquí. Si no provees un parámetro, el modo predeterminado será `readonly [sólo lectura]`. Para evitar ralentizar las cosas, no abras una transacción `readwrite [lectura/escritura]` a menos que realmente necesites escribir en la base de datos.
 
     Si necesitas abrir un almacén de objetos en modo `readwrite` para cambiar los datos, usa lo siguiente:

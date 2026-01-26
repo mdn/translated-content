@@ -2,36 +2,97 @@
 title: ウェブワーカーが使用できる関数やクラス
 slug: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 l10n:
-  sourceCommit: 6fefcdd237a377af5c066dc2734c118feadbbef9
+  sourceCommit: 407e167070e81eec6ca2231326242e3e354b9cd5
 ---
 
-{{DefaultAPISidebar("Web Workers API") }}
+{{DefaultAPISidebar("Web Workers API")}}
 
-標準的な [JavaScript](/ja/docs/Web/JavaScript) の関数群（{{jsxref("String")}}、{{jsxref("Array")}}、{{jsxref("Object")}}、{{jsxref("JSON")}} など）に加えて、DOM からワーカーに利用できる様々な関数があります。この記事ではそれらの機能のリストを提供します。
+標準的な [JavaScript](/ja/docs/Web/JavaScript) の関数群（{{jsxref("String")}}、{{jsxref("Array")}}、{{jsxref("Object")}}、{{jsxref("JSON")}} など）に加えて、ワーカーで利用できる様々な関数（や API）があります。この記事ではそれらの機能の一覧を提供します。
 
 ## ワーカーのコンテキストと関数
 
-**ワーカーは、現在のウィンドウとは異なるグローバルコンテキストで実行されます。** {{domxref("Window")}} はワーカーでは直接使用することができませんが、共通のミックスイン (`WindowOrWorkerGlobalScope`) で定義されている同じメソッドの多くが利用でき、 {{domxref("WorkerGlobalScope")}} から派生した以下のようなコンテキストからワーカーが利用できます。
+ワーカーでは、次の機能が利用できます。
 
-- {{domxref("DedicatedWorkerGlobalScope")}} （専用ワーカー向け）
-- {{domxref("SharedWorkerGlobalScope")}} （共有ワーカー向け）
-- {{domxref("ServiceWorkerGlobalScope")}} （[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)向け）
+- {{domxref("WorkerGlobalScope.atob()")}}
+- {{domxref("WorkerGlobalScope.btoa()")}}
+- {{domxref("WorkerGlobalScope.clearInterval()")}}
+- {{domxref("WorkerGlobalScope.clearTimeout()")}}
+- {{domxref("WorkerGlobalScope.createImageBitmap()")}}
+- {{domxref("WorkerGlobalScope.dump()")}} {{non-standard_inline}}
+- {{domxref("WorkerGlobalScope.fetch()")}}
+- {{domxref("WorkerGlobalScope.queueMicrotask()")}}
+- {{domxref("WorkerGlobalScope.reportError()")}}
+- {{domxref("WorkerGlobalScope.setInterval()")}}
+- {{domxref("WorkerGlobalScope.setTimeout()")}}
+- {{domxref("WorkerGlobalScope.structuredClone()")}}
+- {{domxref("DedicatedWorkerGlobalScope.postMessage()")}} （専用ワーカーのみ）
+- {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}} （専用ワーカーのみ）
+- {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()")}} （専用ワーカーのみ）
 
-すべてのワーカーとメインスレッドで共通の関数には（`WindowOrWorkerGlobalScope` にあるもの）には、 {{domxref("atob", "atob()")}}, {{domxref("btoa", "btoa()")}}, {{domxref("clearInterval", "clearInterval()")}}, {{domxref("clearTimeout()")}}, {{domxref("Window.dump()", "dump()")}} {{non-standard_inline}}, {{domxref("setInterval()")}}, {{domxref("setTimeout()")}} などがあります。
+以下の関数は、ワーカーで**のみ**使用することができます。
 
-以下の機能は、ワーカーで**のみ**使用することができます。
+- {{domxref("WorkerGlobalScope.importScripts()")}}
 
-- {{domxref("WorkerGlobalScope.importScripts", "WorkerGlobalScope.importScripts()")}} （すべてのワーカー）
-- {{domxref("DedicatedWorkerGlobalScope.postMessage")}} （専用ワーカーのみ）
-
-## ワーカーで使用できる API
+## ワーカーで使用できる Web API
 
 > [!NOTE]
-> 掲載されている API に特定のバージョンのプラットフォームが対応している場合、一般にウェブワーカーで動作するとみなすことができます。
+> 掲載されている API が特定のバージョンのプラットフォームで対応している場合、通常、ウェブワーカーでも利用可能であると想定することができます。また、サイト <https://worker-playground.glitch.me/> を使用して、特定のオブジェクト/関数の対応を検査することもできます。
 
-以下の Web API はワーカーで利用することができます。 {{domxref("Broadcast_Channel_API","Broadcast Channel API")}}, {{domxref("Cache", "Cache API")}}, {{domxref("Channel_Messaging_API", "Channel Messaging API")}}, {{domxref("Console API", "Console API")}}, {{domxref("Crypto")}}, {{domxref("CustomEvent")}}, `DOMRequest` と `DOMCursor`, {{domxref("Fetch_API", "Fetch")}}, {{domxref("FileReader")}}, {{domxref("FileReaderSync")}} (only works in workers!), {{domxref("FormData")}}, {{domxref("ImageData")}}, {{domxref("IndexedDB_API", "IndexedDB")}}, [ネットワーク情報 API](/ja/docs/Web/API/Network_Information_API), {{domxref("Notifications_API", "通知", "", 1)}}, {{domxref("Performance")}}, {{domxref("PerformanceEntry")}}, {{domxref("PerformanceMeasure")}}, {{domxref("PerformanceMark")}}, {{domxref("PerformanceObserver")}}, {{domxref("PerformanceResourceTiming")}}, {{jsxref("Promise")}}, [サーバー送信イベント](/ja/docs/Web/API/Server-sent_events), {{domxref("ServiceWorkerRegistration")}}, {{domxref("TextEncoder")}} と {{domxref("TextDecoder")}}, {{ domxref("URL") }}, [WebGL](/ja/docs/Web/API/WebGL_API) と {{domxref("OffscreenCanvas")}}, {{domxref("WebSocket")}}, {{domxref("XMLHttpRequest")}} （ただし `responseXML` および `channel` 属性は常に null）。
+以下の Web API はワーカーで利用することができます。
 
-ワーカーは他のワーカーを起動することもできるため、 {{domxref("Worker")}}, {{domxref("WorkerGlobalScope")}}, {{domxref("WorkerLocation")}}, {{domxref("WorkerNavigator")}} の各 API も利用することができます。
+- {{domxref("Background Fetch API", "バックグラウンドフェッチ API", "", "nocode")}}
+- {{domxref("Background Synchronization API", "バックグラウンド同期 API", "", "nocode")}}
+- {{domxref("Barcode Detection API", "バーコード検出 API", "", "nocode")}}
+- {{domxref("Broadcast Channel API", "ブロードキャストチャンネル API", "", "nocode")}}
+- {{domxref("Canvas API", "キャンバス API", "", "nocode")}}
+- {{domxref("Channel Messaging API", "チャンネルメッセージング API", "", "nocode")}}
+- {{domxref("Compression Streams API", "圧縮ストリーム API", "", "nocode")}}
+- {{domxref("Compute Pressure API", "", "", "nocode")}}
+- {{domxref("Console API", "コンソール API", "", "nocode")}}
+- {{domxref("Content Index API", "", "", "nocode")}}
+- {{domxref("Cookie Store API", "", "", "nocode")}} （サービスワーカーのみ）
+- {{domxref("CSS Font Loading API", "", "", "nocode")}}
+- {{domxref("Encoding API", "エンコーディング API", "", "nocode")}}
+- {{domxref("Fetch API", "フェッチ API", "", "nocode")}}
+- {{domxref("File API", "ファイル API", "", "nocode")}}
+- {{domxref("File System API", "ファイルシステム API", "", "nocode")}}
+- {{domxref("Idle Detection API", "", "", "nocode")}}
+- {{domxref("IndexedDB API", "", "", "nocode")}}
+- {{domxref("Media Capabilities API", "", "", "nocode")}}
+- {{domxref("Media Source Extensions API", "", "", "nocode")}} （専用ワーカーのみ）
+- {{domxref("Network Information API", "", "", "nocode")}}
+- {{domxref("Notifications API", "", "", "nocode")}}
+- {{domxref("Payment Handler API", "", "", "nocode")}}
+- {{domxref("Performance API", "", "", "nocode")}}
+- {{domxref("Permissions API", "", "", "nocode")}}
+- {{domxref("Prioritized Task Scheduling API", "", "", "nocode")}}
+- {{domxref("Push API", "", "", "nocode")}}
+- {{domxref("Reporting API", "", "", "nocode")}}
+- {{domxref("Server-Sent Events", "", "", "nocode")}}
+- {{domxref("Service Worker API", "", "", "nocode")}}
+- {{domxref("Streams API", "", "", "nocode")}}
+- {{domxref("Trusted Types API", "", "", "nocode")}}
+- {{domxref("URL API", "", "", "nocode")}}
+- {{domxref("URL Pattern API", "", "", "nocode")}}
+- {{domxref("User-Agent Client Hints API", "", "", "nocode")}}
+- {{domxref("Web Crypto API", "", "", "nocode")}}
+- {{domxref("Web Locks API", "", "", "nocode")}}
+- {{domxref("Web Serial API", "", "", "nocode")}}
+- {{domxref("Web Periodic Background Synchronization API", "", "", "nocode")}}
+- {{domxref("WebCodecs API", "", "", "nocode")}}
+- {{domxref("WebGL API", "", "", "nocode")}}
+- {{domxref("WebGPU API", "", "", "nocode")}}
+- {{domxref("WebHID API", "", "", "nocode")}} （専用ワーカーとサービスワーカーのみ）
+- {{domxref("WebUSB API", "", "", "nocode")}}
+- {{domxref("WebSockets API", "", "", "nocode")}}
+- {{domxref("XMLHttpRequest API", "", "", "nocode")}}
+
+ワーカーは他のワーカーを起動することもできるため、次の各 API も利用することができます。
+
+- {{domxref("Worker")}}
+- {{domxref("WorkerGlobalScope")}}
+- {{domxref("WorkerLocation")}}
+- {{domxref("WorkerNavigator")}}
 
 ## 関連情報
 

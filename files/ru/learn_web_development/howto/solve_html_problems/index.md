@@ -75,7 +75,7 @@ HTML определяет лишь структуру документа. Для
 ### Представление данных
 
 - [Как отображать числовые данные с помощью HTML](/ru/docs/Learn/HTMLHowto/Represent_numeric_values_with_HTML)
-- [How to use data attributes](/ru/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
+- [How to use data attributes](/ru/docs/Web/HTML/How_to/Use_data_attributes)
 - [How to associate human readable content with arbitrary computer data structures](/ru/docs/Learn/HTML/Howto/Associate_human_readable_content_with_arbitrary_computer_data_structures)
 
 ### Интерактивность
@@ -91,7 +91,7 @@ HTML определяет лишь структуру документа. Для
 
 ### Продвинутые изображения и мультимедиа images & multimedia
 
-- [How to add responsive image to a webpage](/ru/docs/Web/HTML/Responsive_images)
+- [How to add responsive image to a webpage](/ru/docs/Web/HTML/Guides/Responsive_images)
 - [How to add vector image to a webpage](/ru/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)
 - [How to add a hit map on top of an image](/ru/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image)
 
@@ -105,4 +105,4 @@ HTML не одноязычен. Он имеет поддержку средст�
 
 ### Производительность
 
-- [Как ускорить загрузку HTML страниц](/ru/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages)
+- [Как ускорить загрузку HTML страниц](/ru/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages)

@@ -3,8 +3,6 @@ title: outline-style
 slug: Web/CSS/outline-style
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad CSS **`outline-style`** es usada para establecer el estilo del contorno de un elemento. Un contorno es una línea que se dibuja al rededor de elementos, fuera de los límites del borde, para resaltar un elemento.

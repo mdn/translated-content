@@ -34,7 +34,6 @@ attr(data-something, 'default');
 - `nome-do-atributo`
   - : É o nome do atributo HTML do elemento referenciado no CSS.
 - `<tipo-ou-unidade>` {{experimental_inline}}
-
   - : É uma palavra-chave representando tanto o tipo quanto o valor do atributo, ou sua unidade, assim como no HTML alguns atributos tem unidades implícitas. Se o uso de `<tipo-ou-unidade>` como um valor para determinado atributo for inválido, a expressão `attr()` será inválida também. Se omitida, o padrão será `string`. A lista de valores válidos é:
 
     | Palavra-chave                                                                                                | Tipo Associado                    | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                   | Valor Padrão                                                                                   |

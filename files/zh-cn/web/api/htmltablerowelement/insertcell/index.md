@@ -9,7 +9,8 @@ l10n:
 
 {{domxref("HTMLTableRowElement")}} 接口的 **`insertCell()`** 方法将一个新单元格（{{HtmlElement("td")}}）插入到表行（{{HtmlElement("tr")}}）中，然后返回新单元格的引用。
 
-> **备注：** `insertCell()` 将单元格直接插入行中，如果使用 {{domxref("Document.createElement()")}} 创建新的 `<td>` 元素，则不需要使用 {{domxref("Node.appendChild()")}} 单独追加单元格。
+> [!NOTE]
+> `insertCell()` 将单元格直接插入行中，如果使用 {{domxref("Document.createElement()")}} 创建新的 `<td>` 元素，则不需要使用 {{domxref("Node.appendChild()")}} 单独追加单元格。
 >
 > 你不能使用 `insertCell()` 来创建一个新的 `<th>` 元素。
 

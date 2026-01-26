@@ -3,8 +3,6 @@ title: cookies.CookieStore
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
 ---
 
-{{AddonSidebar}}
-
 {{WebExtAPIRef("cookies")}} API 的 `CookieStore` 型別代表瀏覽器中的 cookie 存放空間。
 
 不同瀏覽模式（browsing mode）的視窗，有不同的 cookie 存放空間：例如隱私/隱身模式的視窗，會使用來自非隱私/隱身模式視窗的個別 cookie 存放空間。
@@ -41,8 +39,6 @@ getting.then(logStores);
 
 > [!NOTE]
 > 此 API 基於 Chromium 的 [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies) API 而來，文件改作自 Chromium 程式碼裡的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json)。
->
-> Microsoft Edge 的相容資訊來自微軟公司，原文以創用 CC 姓名標示 3.0 美國版條款授權大眾使用。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

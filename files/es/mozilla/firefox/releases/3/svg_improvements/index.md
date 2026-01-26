@@ -3,15 +3,12 @@ title: Mejoras SVG en Firefox 3
 slug: Mozilla/Firefox/Releases/3/SVG_improvements
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 3 ofrece una mejor implementación de [Gráficos Vectoriales Escalables (SVG)](/es/docs/Web/SVG) en comparación con versiones anteriores de Firefox. Aunque estas características están documentadas en otros sitios, este artículo puede servir como una lista que indique fácilmente qué características se han añadido en Firefox 3.
 
 - Se ha implementado el elemento `foreignObject` ([Error 326966 en Firefox](https://bugzil.la/326966)). Vea la [especificación](https://www.w3.org/TR/SVG11/extend.html#ForeignObjectElement) o [este artículo](https://weblogs.mozillazine.org/roc/archives/2006/06/the_future_is_now.html) para más detalles.
 - Implementado el elemento `pattern` ([especificación](https://www.w3.org/TR/SVG11/pservers.html#PatternElement)).
 - Implementado el elemento `mask` ([especificación](https://www.w3.org/TR/SVG11/masking.html#MaskElement)).
 - Implementados nuevos filtros ([especificación](https://www.w3.org/TR/SVG11/filters.html)):
-
   - `filter`
   - `feDistantLight`
   - `fePointLight`

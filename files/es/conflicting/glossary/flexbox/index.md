@@ -4,8 +4,6 @@ slug: conflicting/Glossary/Flexbox
 original_slug: Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
 ---
 
-{{CSSRef}}
-
 Flexbox es muy compatible con los navegadores modernos, sin embargo, hay algunos problemas con los que puede encontrarse. En esta guía, veremos qué tan bien se admite flexbox en los navegadores, y veremos algunos posibles problemas, recursos y métodos para crear soluciones y fallos.
 
 ## La historia de flexbox

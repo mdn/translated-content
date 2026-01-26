@@ -1,31 +1,15 @@
 ---
 title: RegExp[Symbol.species]
+short-title: "[Symbol.species]"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 6ba4f3b350be482ba22726f31bbcf8ad3c92a9c6
 ---
-
-{{JSRef}}
 
 **`RegExp[Symbol.species]`** は静的なアクセサープロパティで、特定の `RegExp` メソッドのコピーされた正規表現を構築するのに使用されたコンストラクターを返します。
 
-> **警告:** `[Symbol.species]` が存在すると、任意のコードの実行が可能になり、セキュリティ上の脆弱性が生じる可能性があります。また、ある種の最適化も非常に難しくなります。エンジンの実装者たちは、[この機能を削除するかどうか調査しています](https://github.com/tc39/proposal-rm-builtin-subclassing)。可能であれば、この機能に頼ることは避けてください。
-
-{{InteractiveExample("JavaScript Demo: RegExp[Symbol.species]")}}
-
-```js interactive-example
-class MyRegExp extends RegExp {
-  // Overwrite MyRegExp species to the parent RegExp constructor
-  static get [Symbol.species]() {
-    return RegExp;
-  }
-}
-
-const regex1 = new MyRegExp("foo", "g");
-
-console.log(regex1.test("football"));
-// Expected output: true
-```
+> [!WARNING]
+> `[Symbol.species]` が存在すると、任意のコードの実行が可能になり、セキュリティ上の脆弱性が生じる可能性があります。また、ある種の最適化も非常に難しくなります。エンジンの実装者たちは、[この機能を削除するかどうか調査しています](https://github.com/tc39/proposal-rm-builtin-subclassing)。可能であれば、この機能に頼ることは避けてください。
 
 ## 構文
 
@@ -53,7 +37,7 @@ class RegExp {
 この多相的な実装により、派生したサブクラスの `Symbol.species` も既定でコンストラクター自身を返すようになります。
 
 ```js
-class SubRegExp extends SubRegExp {}
+class SubRegExp extends RegExp {}
 SubRegExp[Symbol.species] === SubRegExp; // true
 ```
 

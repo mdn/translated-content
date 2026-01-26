@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f68449a8d7d8c04b1cdc90b22e780b202c4a1ff4
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 53 は、米国時間 2017 年 4 月 19 日にリリースされました。この記事では、ウェブ開発者だけでなく、Firefox や Gecko の開発者、アドオン開発者にとっても有益な変更点を掲載しています。
 
 ## ウェブ開発者向けの変更
@@ -22,7 +20,7 @@ Firefox 53 は、米国時間 2017 年 4 月 19 日にリリースされまし�
 
 #### 新機能
 
-- すべての `mask-*` 個別指定プロパティ ([CSS マスク](/ja/docs/Web/CSS/CSS_masking) をご覧ください) が、デフォルトで使用可能になりました ([Firefox バグ 1251161](https://bugzil.la/1251161))。
+- すべての `mask-*` 個別指定プロパティ ([CSS マスク](/ja/docs/Web/CSS/Guides/Masking) をご覧ください) が、デフォルトで使用可能になりました ([Firefox バグ 1251161](https://bugzil.la/1251161))。
 - {{cssxref("caret-color")}} プロパティを追加しました ([Firefox バグ 1063162](https://bugzil.la/1063162))。
 - {{cssxref("place-items")}}/{{cssxref("place-self")}}/{{cssxref("place-content")}} 一括指定プロパティを実装しました ([Firefox バグ 1319958](https://bugzil.la/1319958))。
 - {{cssxref("display")}} プロパティに値 `flow-root` を追加しました ([Firefox バグ 1322191](https://bugzil.la/1322191))。
@@ -57,7 +55,7 @@ Firefox 53 は、米国時間 2017 年 4 月 19 日にリリースされまし�
 - {{domxref("CompositionEvent.CompositionEvent", "CompositionEvent")}} コンストラクターを実装しました ([Firefox バグ 1002256](https://bugzil.la/1002256))。
 - {{domxref("MouseEvent.clientX")}}/{{domxref("MouseEvent.clientY")}} の別名である {{domxref("MouseEvent.x")}} および {{domxref("MouseEvent.y")}} を実装しました ([Firefox バグ 424390](https://bugzil.la/424390))。
 - {{domxref("Element/auxclick_event", "auxclick")}} イベントと、これに対応するイベントハンドラーを実装しました ([Firefox バグ 1304044](https://bugzil.la/1304044))。
-- {{domxref("Element/transitioncancel_event", "transitioncancel")}} イベントが、[トランジション](/ja/docs/Web/CSS/CSS_transitions) をキャンセルした後に発生するようになりました。
+- {{domxref("Element/transitioncancel_event", "transitioncancel")}} イベントが、[トランジション](/ja/docs/Web/CSS/Guides/Transitions) をキャンセルした後に発生するようになりました。
 
 ### DOM
 
@@ -105,7 +103,6 @@ Firefox 53 は、米国時間 2017 年 4 月 19 日にリリースされまし�
 ### HTTP/ネットワーク
 
 - {{HTTPHeader("Referrer-Policy")}} の既定値をユーザーが設定できる設定項目 `network.http.referer.userControlPolicy` を、Gecko の `about:config` に追加しました ([Firefox バグ 1304623](https://bugzil.la/1304623))。以下の値を使用できます:
-
   - 0 — `no-referrer`
   - 1 — `same-origin`
   - 2 — `strict-origin-when-cross-origin`

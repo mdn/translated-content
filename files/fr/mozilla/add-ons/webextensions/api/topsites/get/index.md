@@ -28,9 +28,7 @@ var gettingTopSites = browser.topSites.get();
 ### Paramètres
 
 - `options`
-
   - : `object`. Options pour modifier la liste des pages retournées. Il peut s'agir de l'une des propriétés suivantes :
-
     - `includeBlocked` {{optional_inline}}
       - : `Boolean`. Inclure les pages que l'utilisateur a supprimées de la page "Nouvel onglet". La valeur par défaut est `false`.
     - `includeFavicon` {{optional_inline}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: eec174a08a5003da32f53e694c45eda3377b4d18
 ---
 
-{{AddonSidebar}}
-
 确定用户连接的强制门户状态。强制门户页面是在用户首次连接到 Wi-Fi 网络时显示的网页。用户在强制门户页面上提供信息或执行操作以获得更广泛的网络资源访问权限，例如接受条款和条件或进行付款。
 
 使用此 API 需要具有“captivePortal”[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。

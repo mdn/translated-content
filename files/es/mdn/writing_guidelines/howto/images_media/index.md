@@ -210,7 +210,6 @@ Planea cuidadosamente lo que realmente vas a grabar y practica los pasos varias 
 
 - No comiences un video en medio de un proceso, considera si el espectador tendrá suficiente contexto para que tus acciones tengan sentido. Por ejemplo, en un video breve de DevTools, es una buena idea comenzar abriendo las DevTools para permitir que el espectador se oriente.
 - Considera cuáles son tus acciones, ralentízalas y hazlas obvias. Siempre que tengas que realizar una acción (digamos, hacer clic en un ícono), hazlo lento y hazlo obvio. Entonces, por ejemplo:
-
   - Mueve el mouse sobre el ícono.
   - Resalta o haz zoom (no siempre, dependiendo de si se siente necesario).
   - Haz una pausa por un momento.

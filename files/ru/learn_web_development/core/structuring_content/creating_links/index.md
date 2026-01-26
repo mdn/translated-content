@@ -3,7 +3,7 @@ title: Создание гиперссылок
 slug: Learn_web_development/Core/Structuring_content/Creating_links
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 Гиперссылки очень важны — именно они делают Интернет _сетью_. В этой статье представлен синтаксис, необходимый для создания ссылки, а также обсуждаются лучшие практики обращения со ссылками.
 
@@ -13,7 +13,7 @@ slug: Learn_web_development/Core/Structuring_content/Creating_links
       <th scope="row">Предварительные требования:</th>
       <td>
         Базовое знание HTML, описанное в разделе <a href="/ru/docs/Learn/HTML/Introduction_to_HTML/Getting_started">«Начало работы с HTML»</a>. Знакомство с форматированием текста, которое описано в разделе
-        <a href="/ru/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">«Основы редактирования текста в HTML»</a>.
+        <a href="/ru/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs">«Основы редактирования текста в HTML»</a>.
       </td>
     </tr>
     <tr>
@@ -36,7 +36,7 @@ slug: Learn_web_development/Core/Structuring_content/Creating_links
 
 ## Анатомия ссылки
 
-Простая ссылка создаётся путём обёртывания текста (или другого содержимого, смотрите [Ссылки-блоки](#ссылки-блоки)), который вы хотите превратить в ссылку, в элемент {{htmlelement ("a")}}, и придания этому элементу атрибута [`href`](/ru/docs/Web/HTML/Element/a#href) (который также известен как **гипертекстовая ссылка,** или **цель**), который будет содержать веб-адрес, на который вы хотите указать ссылку.
+Простая ссылка создаётся путём обёртывания текста (или другого содержимого, смотрите [Ссылки-блоки](#ссылки-блоки)), который вы хотите превратить в ссылку, в элемент {{htmlelement ("a")}}, и придания этому элементу атрибута [`href`](/ru/docs/Web/HTML/Reference/Elements/a#href) (который также известен как **гипертекстовая ссылка,** или **цель**), который будет содержать веб-адрес, на который вы хотите указать ссылку.
 
 ```html
 <p>
@@ -137,7 +137,7 @@ URL-адреса используют пути для поиска файлов.
 
 ### Фрагменты документа
 
-Можно ссылаться на определённую часть документа HTML (известную как **фрагмент документа**), а не только на верхнюю часть документа. Для этого вам сначала нужно назначить атрибут [`id`](/ru/docs/Web/HTML/Global_attributes#id) элементу, с которым вы хотите связаться. Обычно имеет смысл ссылаться на определённый заголовок, поэтому это выглядит примерно так:
+Можно ссылаться на определённую часть документа HTML (известную как **фрагмент документа**), а не только на верхнюю часть документа. Для этого вам сначала нужно назначить атрибут [`id`](/ru/docs/Web/HTML/Reference/Global_attributes#id) элементу, с которым вы хотите связаться. Обычно имеет смысл ссылаться на определённый заголовок, поэтому это выглядит примерно так:
 
 ```html
 <h2 id="Почтовый_адрес">Почтовый адрес</h2>
@@ -295,7 +295,7 @@ _**Плохой** текст ссылки:_ [Нажми сюда](https://firefo
 
 В результате получим ссылку вида: [Отправить письмо для nowhere](mailto:nowhere@mozilla.org).
 
-Сам адрес электронной почты не является обязательным для заполнения. Если оставить это поле пустым (в поле [`href`](/ru/docs/Web/HTML/Element/a#href) оставить только "mailto:"), откроется новое исходящее сообщение почтовой программой, в поле получателя будет пусто. Это можно использовать для кнопки "Поделиться".
+Сам адрес электронной почты не является обязательным для заполнения. Если оставить это поле пустым (в поле [`href`](/ru/docs/Web/HTML/Reference/Elements/a#href) оставить только "mailto:"), откроется новое исходящее сообщение почтовой программой, в поле получателя будет пусто. Это можно использовать для кнопки "Поделиться".
 
 ### Особенности и детали
 
@@ -325,4 +325,4 @@ _**Плохой** текст ссылки:_ [Нажми сюда](https://firefo
 
 Этой информации достаточно для создания ссылок! Вы вернётесь к ссылкам позже, когда начнёте изучать стили. Дальше вы рассмотрите семантику текста и более сложные и необычные возможности, которые будут полезны при создании контента сайта. В следующей главе будет рассматриваться продвинутое форматирование текста.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "conflicting/Learn_web_development/Core/Structuring_content")}}

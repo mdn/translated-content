@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_protot
 original_slug: Learn/JavaScript/Objects/Object_prototypes
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 Protótipos são o mecanismo pelo qual objetos JavaScript herdam recursos uns dos outros. Neste artigo, explicamos como as cadeias de protótipos funcionam e observamos como a propriedade prototype pode ser usada para adicionar métodos aos construtores existentes.
 
@@ -133,9 +133,10 @@ var myString = "This is my string.";
 `myString` imediatamente tem vários métodos úteis disponíveis, como [`split()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split), [`indexOf()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf), [`replace()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace), etc.
 
 > [!NOTE]
-> Vale a pena ler nosso guia mais aprofundado sobre [Como usar protótipos em JavaScript](/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#using_prototypes_in_javascript), uma vez que você tenha entendido esta seção e queira saber mais. Esta seção é intencionalmente simplificada para tornar esses conceitos um pouco mais fáceis de entender quando você os conhecer pela primeira vez.
+> Vale a pena ler nosso guia mais aprofundado sobre [Como usar protótipos em JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#using_prototypes_in_javascript), uma vez que você tenha entendido esta seção e queira saber mais. Esta seção é intencionalmente simplificada para tornar esses conceitos um pouco mais fáceis de entender quando você os conhecer pela primeira vez.
 
-> **Aviso:** **Importante**: A propriedade `prototype` é uma das partes com o nome mais confuso do JavaScript — você pode pensar que `this` aponta para o objeto de protótipo do objeto atual, mas não (esse é um objeto interno que pode ser acessado por `__proto__`, lembra?) . Em vez disso, `prototype` é uma propriedade que contém um objeto no qual você define os membros que deseja herdar.
+> [!WARNING]
+> **Importante**: A propriedade `prototype` é uma das partes com o nome mais confuso do JavaScript — você pode pensar que `this` aponta para o objeto de protótipo do objeto atual, mas não (esse é um objeto interno que pode ser acessado por `__proto__`, lembra?) . Em vez disso, `prototype` é uma propriedade que contém um objeto no qual você define os membros que deseja herdar.
 
 ## Revisitando create()
 
@@ -289,4 +290,4 @@ Este artigo abrangeu protótipos de objetos JavaScript, incluindo como cadeias d
 
 No próximo artigo, veremos como você pode implementar a herança de funcionalidade entre dois dos seus próprios objetos personalizados.
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

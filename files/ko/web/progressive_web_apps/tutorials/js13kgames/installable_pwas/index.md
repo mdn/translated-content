@@ -71,7 +71,7 @@ slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 - `theme_color`: 운영 체제에 의해 사용될 UI를 위한 주요 색상입니다.
 - `background_color`: 스플래시 화면과 설치하는 동안 사용될 배경 색상입니다.
 
-웹 manifest를 위한 최소 요구 사항은 `name`과 적어도 하나(`src`, `size`, `type`을 포함)의 아이콘입니다. `description`, `short_name`, `start_url`은 권장사항입니다. 위에서 나열한 항목 외 더 많은 항목들이 있습니다. [Web App Manifest 레퍼런스](/ko/docs/Web/Manifest)에서 자세한 내용에 대해 확인하시기 바랍니다.
+웹 manifest를 위한 최소 요구 사항은 `name`과 적어도 하나(`src`, `size`, `type`을 포함)의 아이콘입니다. `description`, `short_name`, `start_url`은 권장사항입니다. 위에서 나열한 항목 외 더 많은 항목들이 있습니다. [Web App Manifest 레퍼런스](/ko/docs/Web/Progressive_web_apps/Manifest)에서 자세한 내용에 대해 확인하시기 바랍니다.
 
 ## 홈 화면에 추가
 

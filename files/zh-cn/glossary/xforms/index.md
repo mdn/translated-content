@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **XForms** 是一种使用 {{glossary("XML")}} 格式来构建 Web 表单和处理表单数据的约定。
 
 > [!NOTE]

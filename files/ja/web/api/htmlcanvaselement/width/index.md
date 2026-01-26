@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Canvas API")}}
 
-**`HTMLCanvasElement.width`** プロパティは CSS ピクセル数として解釈される正の整数であり、この {{HTMLElement("canvas")}} 要素の [`width`](/ja/docs/Web/HTML/Element/canvas#width) 属性を反映します。この属性が指定されなかった場合、または負の数など、無効な値をが設定された場合、既定値の `300` が使用されます。
+**`HTMLCanvasElement.width`** プロパティは CSS ピクセル数として解釈される正の整数であり、この {{HTMLElement("canvas")}} 要素の [`width`](/ja/docs/Web/HTML/Reference/Elements/canvas#width) 属性を反映します。この属性が指定されなかった場合、または負の数など、無効な値をが設定された場合、既定値の `300` が使用されます。
 
 これはキャンバスのサイズを制御する 2 つのプロパティのうちの 1 つで、もう一方は {{domxref("HTMLCanvasElement.height")}} です。
 

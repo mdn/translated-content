@@ -5,8 +5,6 @@ l10n:
   sourceCommit: eec174a08a5003da32f53e694c45eda3377b4d18
 ---
 
-{{AddonSidebar}}
-
 允许扩展修改某些全局浏览器设置。此 API 的每个属性都是一个 {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} 对象，提供修改特定设置的能力。
 
 由于这些是全局设置，扩展之间可能会产生冲突。有关如何处理冲突的详细信息，请参阅 [`BrowserSetting.set()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set) 的文档。
