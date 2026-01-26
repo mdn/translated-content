@@ -19,7 +19,7 @@ l10n:
 > 最后更新时间：2025 年八月（参见[更新记录](/zh-CN/docs/Learn_web_developement/Changelog)）。
 
 > [!CALLOUT]
-> 
+>
 > ### 试试我们伙伴的视频课程
 >
 > 感兴趣来听一下与我们文章互补的交互式的视频课程？Scrimba 的[前端开发者生涯路径](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn)<sup>[_MDN 学习合作伙伴_](/zh-CN/docs/MDN/Writing_guidelines/Learning_content#伙伴链接与嵌入)</sup>也提供在 MDN 课程中所教授的主题内容。
