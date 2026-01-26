@@ -301,8 +301,8 @@ Access-Control-Max-Age: 86400
 
 Но если невозможно внести эти изменения, то возможен другой способ:
 
-1. Сделайте [простой запрос](#простые_запросы) для определения (используя [Response.url](/ru/docs/Web/API/Response/url) для Fetch API, или [XHR.responseURL](/ru/docs/Web/API/XMLHttpRequest/responseURL), чтобы определить, на каком URL завершится настоящий предварительный запрос).
-2. Сделайте другой запрос ("настоящий" запрос), используя URL адрес, полученный вами из [Response.url](/ru/docs/Web/API/Response/url) или [XMLHttpRequest.responseURL](/ru/docs/Web/API/XMLHttpRequest/responseURL) на первом этапе.
+1. Сделайте [простой запрос](#простые_запросы) используя [Response.url](/ru/docs/Web/API/Response/url) для Fetch API или [XHR.responseURL](/ru/docs/Web/API/XMLHttpRequest/responseURL), чтобы определить, на каком URL завершится настоящий предварительный запрос.
+2. Сделайте другой запрос ("настоящий" запрос), используя URL адрес, полученный из [Response.url](/ru/docs/Web/API/Response/url) или [XMLHttpRequest.responseURL](/ru/docs/Web/API/XMLHttpRequest/responseURL) на первом этапе.
 
 Однако, если запрос инициирует предварительную проверку из-за наличия в запросе заголовка `Authorization`, вы не сможете обойти ограничение, используя описанные выше шаги. И вы вообще не сможете обойти это, если у вас нет контроля над сервером, на который делается запрос.
 
