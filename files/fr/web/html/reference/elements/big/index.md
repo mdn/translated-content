@@ -66,7 +66,7 @@ Cet exemple utilise la propriété CSS {{CSSxRef("font-size")}} pour augmenter l
 
 ## Interface DOM
 
-Cet élément implémente l'interface {{DOMxRef('HTMLElement')}}.
+Cet élément implémente l'interface {{DOMxRef("HTMLElement")}}.
 
 ## Spécifications
 

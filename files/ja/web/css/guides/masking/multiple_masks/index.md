@@ -1,9 +1,9 @@
 ---
 title: 複数のマスクの宣言
+short-title: 複数のマスク
 slug: Web/CSS/Guides/Masking/Multiple_masks
-original_slug: Web/CSS/CSS_masking/Multiple_masks
 l10n:
-  sourceCommit: 09877330004e55244a9e8eee2ca04a750970f72d
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 CSS マスクは、画像を使用して、要素のどの領域を表示するか、または半透明にするかを定義する手法です。CSS マスクは、アルファチャンネル、および場合によっては適用されたマスク画像の色の明るさに基づいて、要素の一部を選択的に表示または非表示にします。
@@ -16,7 +16,7 @@ CSS マスクは、 1 つ以上のマスクレイヤーで構成されます。�
 
 CSS マスクは、すべての HTML 要素およびほとんどの SVG 要素に適用できます。マスクは、1 つ以上の合成マスクレイヤーで構成できます。複数のレイヤーは、{{cssxref("mask")}} 一括指定プロパティまたは {{cssxref("mask-image")}} プロパティでカンマ区切りで定義します。値が `none` に設定されている場合でも、レイヤーとしてカウントされます。
 
-それぞれのマスクレイヤーは、マスクの基準ボックスを基準にして位置決めされる [マスク画像](/ja/docs/Web/CSS/Reference/Properties/mask-image) を含めることができます。画像のサイズ変更、繰り返し、クリップが可能です。複数のマスク画像を含める場合、マスクレイヤーの合成や結合の方法を定義することができます。（これらの機能については、このガイドで簡単に紹介しています。詳細と例については、[マスクプロパティガイド](/ja/docs/Web/CSS/CSS_masking/Mask_properties)を参照してください。）
+それぞれのマスクレイヤーは、マスクの基準ボックスを基準にして位置決めされる [マスク画像](/ja/docs/Web/CSS/Reference/Properties/mask-image) を含めることができます。画像のサイズ変更、繰り返し、クリップが可能です。複数のマスク画像を含める場合、マスクレイヤーの合成や結合の方法を定義することができます。（これらの機能については、このガイドで簡単に紹介しています。詳細と例については、[マスクプロパティのガイド](/ja/docs/Web/CSS/Guides/Masking/Mask_properties)を参照してください。）
 
 ### 複数のマスクレイヤーの構文
 
@@ -55,15 +55,16 @@ mask-border-width: auto;
 }
 
 .raster-mask {
-  mask-image: url(alphaImage.png);
+  mask-image: url("alphaImage.png");
 }
 
 .mask-element-mask {
-  mask-image: url(#svg-mask);
+  mask-image: url("#svg-mask");
 }
 ```
 
 [マスクの入門ガイド](/ja/docs/Web/CSS/Guides/Masking) では、さまざまな種類のマスク画像とそのモードについて紹介しています。
+
 `mask-image` プロパティは、{{cssxref("background-image")}} プロパティと似ています。 `background-image` プロパティと同様に、複数のマスク画像を含めるには、画像の値をカンマで区切ります。
 
 ```css
@@ -99,8 +100,8 @@ mask: 100px 100px no-repeat;
 ```css
 .masked-element {
   mask-image:
-    url(alphaImage.png), linear-gradient(to right, black, transparent),
-    radial-gradient(circle, white 50%, transparent 75%), none, url(#svg-mask);
+    url("alphaImage.png"), linear-gradient(to right, black, transparent),
+    radial-gradient(circle, white 50%, transparent 75%), none, url("#svg-mask");
 }
 ```
 
@@ -111,8 +112,8 @@ mask: 100px 100px no-repeat;
 ```css
 .masked-element {
   mask:
-    url(alphaImage.png), linear-gradient(to right, black, transparent),
-    radial-gradient(circle, white 50%, transparent 75%), none, url(#svg-mask);
+    url("alphaImage.png"), linear-gradient(to right, black, transparent),
+    radial-gradient(circle, white 50%, transparent 75%), none, url("#svg-mask");
 }
 ```
 
@@ -144,7 +145,7 @@ mask: 100px 100px no-repeat;
 
 カンマで区切られた `mask` コンポーネントプロパティのリスト内のそれぞれの `mask-*` 値は、別個のマスクレイヤーに適用されます。前述のように、要素には複数のマスクレイヤーを適用することができます。レイヤーの数は、 `mask-image` または `mask` プロパティにカンマで区切られた値の数によって決まります。それぞれの `mask-*` 値は、順番にマスクレイヤーと照合されます。 `mask-*` プロパティの値の数値がマスクレイヤーの数よりも多い場合、余分な値は無視されます。マスク要素のプロパティの値がマスクレイヤーの数よりも少ない場合、 `mask-*` 値は繰り返されます。
 
-これらの個々のプロパティの詳細については、[CSS マスクプロパティ](/ja/docs/Web/CSS/CSS_masking/Mask_properties) を参照してください。
+これらの個々のプロパティの詳細については、[CSS マスクプロパティ](/ja/docs/Web/CSS/Guides/Masking/Mask_properties) を参照してください。
 
 ## 一括指定成分プロパティの並び順
 
@@ -176,23 +177,23 @@ mask: 100px 100px no-repeat;
 
 ```css
 mask:
-  url(star.svg) bottom 2em right 4em / auto 2vw no-repeat padding-box
+  url("star.svg") bottom 2em right 4em / auto 2vw no-repeat padding-box
     content-box luminance,
-  url(circle.svg) 100px 100px / 50% repeat-x border-box padding-box alpha;
+  url("circle.svg") 100px 100px / 50% repeat-x border-box padding-box alpha;
 ```
 
 1 組の `<length-percentage>` 値が存在する場合、`mask-position` プロパティが設定され、`mask-size` は `auto` になります。レイヤーに `mask-size` と `mask-position` の両方が含まれている場合、`mask-size` プロパティの値は `mask-position` プロパティの値の後ろに記述し、値はスラッシュ (`/`) で区切る必要があります。`mask-size` が `mask-position` の有効な値ではない値に設定されている場合でも、スラッシュが要求されます。
 
 ```css example-bad
-mask: url(star.svg) contain;
-mask: url(star.svg) 10px 10px cover;
-mask: url(star.svg) top right 100px 100px;
+mask: url("star.svg") contain;
+mask: url("star.svg") 10px 10px cover;
+mask: url("star.svg") top right 100px 100px;
 ```
 
 ```css example-good
-mask: url(star.svg) 10px 10px / cover;
-mask: url(star.svg) top 100px right 100px;
-mask: url(star.svg) top right / 100px 100px;
+mask: url("star.svg") 10px 10px / cover;
+mask: url("star.svg") top 100px right 100px;
+mask: url("star.svg") top right / 100px 100px;
 ```
 
 `mask` 一括指定を使用してマスクレイヤーに `mask-size` を指定するには、その直前にスラッシュを付けた `mask-position` 値を含める必要があります。
@@ -203,6 +204,6 @@ mask: url(star.svg) top right / 100px 100px;
 ## 関連情報
 
 - [CSS マスク入門](/ja/docs/Web/CSS/Guides/Masking/Introduction)
-- [CSS マスクプロパティ](/ja/docs/Web/CSS/CSS_masking/Mask_properties)
+- [CSS マスクプロパティ](/ja/docs/Web/CSS/Guides/Masking/Mask_properties)
 - [CSS クリップ入門](/ja/docs/Web/CSS/Guides/Masking/Clipping)
 - [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール

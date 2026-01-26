@@ -1,21 +1,24 @@
 ---
-title: "<tt> : l'élément de texte de téléscripteur (obsolète)"
+title: "<tt> : l'élément de texte de téléscripteur"
 slug: Web/HTML/Reference/Elements/tt
-original_slug: Web/HTML/Element/tt
+l10n:
+  sourceCommit: 9cfc2285428932f448a1747e347b1e35a3e0172b
 ---
 
-{{deprecated_header}}{{HTMLSidebar}}
+{{Deprecated_Header}}
 
-L'élément HTML **`<tt>`** (pour _Teletype Text_) crée un élément en ligne, écrit dans la police à chasse fixe par défaut du navigateur. Cet élément a été conçu pour mettre en forme du texte comme s'il apparaissait sur un affichage à largeur fixe tel qu'un téléscripteur.
+L'élément [HTML](/fr/docs/Web/HTML) **`<tt>`** crée du texte en ligne présenté avec la police monospace par défaut de {{Glossary("user agent", "l'agent utilisateur")}}. Cet élément a été conçu pour rendre du texte tel qu'il serait affiché sur un dispositif à largeur fixe, comme un téléscripteur, un écran texte ou une imprimante ligne.
 
-Cet élément est désormais obsolète et un élément {{HTMLElement("code")}}, {{HTMLElement("kbd")}}, {{HTMLElement("samp")}} ou {{HTMLElement("var")}} pourra être utilisé à la place s'il faut afficher du texte en incise avec une police à chasse fixe. On pourra utiliser l'élément {{HTMLElement("pre")}} pour afficher un bloc de contenu préformaté (également généralement affiché dans une police à chasse fixe).
+Les termes **non proportionnel**, **monotype** et **monospace** sont utilisés de façon interchangeable et ont le même sens général&nbsp;: ils décrivent une police dont tous les caractères ont le même nombre de pixels en largeur.
+
+Cependant, cet élément est obsolète. Vous devriez utiliser les éléments plus sémantiquement appropriés {{HTMLElement("code")}}, {{HTMLElement("kbd")}}, {{HTMLElement("samp")}} ou {{HTMLElement("var")}} pour le texte en ligne devant être présenté en monospace, ou la balise {{HTMLElement("pre")}} pour du contenu devant être présenté comme un bloc séparé.
 
 > [!NOTE]
-> Si aucun de ces éléments ne correspond à la sémantique portée par votre contenu (lorsque, par exemple, il ne s'agit que d'un effet de mise en forme), vous pouvez utiliser un élément {{HTMLElement("span")}} mis en forme avec CSS (par exemple la propriété {{cssxref("font-family")}}).
+> Si aucun des éléments sémantiques n'est approprié à votre cas d'utilisation (par exemple, si vous devez afficher du contenu dans une police non proportionnelle), envisagez d'utiliser l'élément {{HTMLElement("span")}}, en le stylant via CSS selon vos besoins. La propriété {{CSSxRef("font-family")}} est un bon point de départ.
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Exemples
 
@@ -34,11 +37,11 @@ Cet exemple utilise `<tt>` afin d'afficher le texte affiché et saisi dans un te
 
 #### Résultat
 
-{{EmbedLiveSample("Exemple_simple", 650, 80)}}
+{{EmbedLiveSample("Exemple simple", 650, 80)}}
 
 ### Surcharger la police par défaut
 
-Il est possible de surcharger la police par défaut utilisée pour cet élément grâce à CSS :
+Il est possible de surcharger la police par défaut utilisée pour cet élément grâce à CSS&nbsp;:
 
 #### CSS
 
@@ -61,14 +64,14 @@ tt {
 
 #### Résultat
 
-{{EmbedLiveSample("Surcharger_la_police_par_défaut", 650, 80)}}
+{{EmbedLiveSample("Surcharger la police par défaut", 650, 80)}}
 
 ## Notes d'utilisation
 
 Par défaut, le contenu de l'élément `<tt>` est affiché avec la police à chasse fixe par défaut du navigateur. Comme vu dans l'exemple précédent, il est possible de surcharger cette police.
 
 > [!NOTE]
-> Les règles de style propres à l'utilisateur sont prioritaires par rapport aux feuilles de style d'un site ou d'une application web.
+> Les règles de style propres à l'utilisateur·ice sont prioritaires par rapport aux feuilles de style d'un site ou d'une application web.
 
 Bien que cet élément n'ait pas été officiellement déprécié en HTML 4.01, son utilisation a été déconseillée pour privilégier d'autres éléments HTML ou une mise en forme via CSS. L'élément `<tt>` est désormais obsolète en HTML5.
 
@@ -78,18 +81,18 @@ Bien que cet élément n'ait pas été officiellement déprécié en HTML 4.01, 
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
           >Catégories de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
         >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
         >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_tangible"
           >contenu tangible</a
         >.
       </td>
@@ -97,7 +100,7 @@ Bien que cet élément n'ait pas été officiellement déprécié en HTML 4.01, 
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >Contenu phrasé</a
         >.
       </td>
@@ -110,7 +113,7 @@ Bien que cet élément n'ait pas été officiellement déprécié en HTML 4.01, 
       <th scope="row">Parents autorisés</th>
       <td>
         Tout élément qui accepte du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
         >.
       </td>
@@ -121,7 +124,7 @@ Bien que cet élément n'ait pas été officiellement déprécié en HTML 4.01, 
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
+      <td>{{DOMxRef("HTMLElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -136,8 +139,5 @@ Bien que cet élément n'ait pas été officiellement déprécié en HTML 4.01, 
 
 ## Voir aussi
 
-- {{HTMLElement("code")}}
-- {{HTMLElement("var")}}
-- {{HTMLElement("kbd")}}
-- {{HTMLElement("samp")}}
-- {{HTMLElement("pre")}}
+- Les éléments sémantiques {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("kbd")}} et {{HTMLElement("samp")}}
+- L'élément {{HTMLElement("pre")}} pour afficher des blocs de texte préformaté

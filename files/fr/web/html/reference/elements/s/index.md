@@ -1,46 +1,33 @@
 ---
-title: <s>
+title: "<s> : l'élément de texte barré"
 slug: Web/HTML/Reference/Elements/s
-original_slug: Web/HTML/Element/s
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<s>`** affiche du texte barré. Utilisez l'élément `<s>` pour représenter des choses qui ne sont plus pertinentes ou plus exactes. Cependant, `<s>` n'est pas approprié pour indiquer les modifications d'un document&nbsp;; pour cela, utilisez les éléments {{HTMLElement("del")}} et {{HTMLElement("ins")}}, selon le cas.
 
-L'élément HTML **`<s>`** permet d'afficher du texte qui est barré car il n'est plus pertinent ou car il est obsolète. `<s>` ne doit pas être employé pour indiquer des éditions dans un document (on utilisera alors {{HTMLElement("del")}} et {{HTMLElement("ins")}}).
-
-{{InteractiveExample("HTML Demo: &lt;s&gt;", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;s&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
-<p><s>There will be a few tickets available at the box office tonight.</s></p>
+<p><s>Quelques billets sont disponibles à la billetterie ce soir.</s></p>
 
-<p>SOLD OUT!</p>
+<p>ÉPUISÉ&nbsp;!</p>
 ```
 
 ```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
 s {
+  /* Ajoutez vos styles ici */
 }
 ```
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
-
-## Exemples
-
-### HTML
-
-```html
-<p><s>Le plat du jour : saumon à la hollandaise</s> <em>plus disponible</em></p>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples")}}
+Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Accessibilité
 
-Par défaut, la plupart des outils d'assistance n'annoncent pas la présence de l'élément `s`. On peut le rendre annonçable via la propriété CSS {{cssxref("content")}} et grâce aux pseudo-éléments {{cssxref("::before")}} et {{cssxref("::after")}}.
+Par défaut, la plupart des outils d'assistance n'annoncent pas la présence de l'élément `s`. On peut le rendre annonçable via la propriété CSS {{CSSxRef("content")}} et grâce aux pseudo-éléments {{CSSxRef("::before")}} et {{CSSxRef("::after")}}.
 
 ```css
 s::before,
@@ -65,8 +52,25 @@ s::after {
 
 Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment ces annonces pour éviter une verbosité trop importante. Il est donc important de ne pas abuser de cette technique et de ne l'appliquer qu'à des situations où il est nécessaire de comprendre que du contenu a été rayé.
 
-- [_Short note on making your mark (more accessible) | The Paciello Group_ (en anglais)](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/)
-- [_Tweaking Text Level Styles | Adrian Roselli_ (en anglais)](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+- [Note brève sur la manière de rendre votre marque plus accessible | The Paciello Group <sup>(angl.)</sup>](https://www.tpgi.com/short-note-on-making-your-mark-more-accessible/)
+- [Ajuster les styles au niveau du texte | Adrian Roselli <sup>(angl.)</sup>](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+
+## Exemples
+
+```css
+.sold-out {
+  text-decoration: line-through;
+}
+```
+
+```html
+<s>Le plat du jour&nbsp;: Saumon</s> ÉPUISÉ<br />
+<span class="sold-out">Le plat du jour&nbsp;: Saumon</span> ÉPUISÉ
+```
+
+### Résultat
+
+{{EmbedLiveSample("Exemples")}}
 
 ## Résumé technique
 
@@ -74,16 +78,16 @@ Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment c
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/HTML/Attributs_universels"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
           >Catégories de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >Contenu phrasé</a
         >
         ou
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >contenu de flux</a
         >.
       </td>
@@ -91,7 +95,7 @@ Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment c
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >Contenu phrasé</a
         >.
       </td>
@@ -104,9 +108,18 @@ Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment c
       <th scope="row">Parents autorisés</th>
       <td>
         Tout élément qui accepte du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
         >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <code
+          ><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#rôles_structurels_avec_équivalents_html">deletion</a
+          ></code
+        >
       </td>
     </tr>
     <tr>
@@ -115,7 +128,7 @@ Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment c
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
+      <td>{{DOMxRef("HTMLElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -130,6 +143,6 @@ Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment c
 
 ## Voir aussi
 
-- {{deprecated_inline}} {{HTMLElement("strike")}} qui était un ancien synonyme de `<s>`, désormais obsolète et qui ne doit plus être utilisé sur le Web
-- {{HTMLElement("del")}} qui est utilisé afin d'indiquer des données ou des portions de texte qui ont été supprimées
-- La propriété CSS {{cssxref("text-decoration-line")}} qui permet de contrôler l'aspect de la ligne utilisée sur le contenu de l'élément {{HTMLElement("s")}}
+- L'élément {{HTMLElement("strike")}}, alter ego de l'élément `<s>`, est obsolète et ne doit plus être utilisé sur les sites Web.
+- L'élément {{HTMLElement("del")}} doit être utilisé à la place si les données ont été _supprimées_.
+- La propriété CSS {{CSSxRef("text-decoration-line")}} doit être utilisée pour reproduire l'aspect visuel antérieur de l'élément `<s>`.

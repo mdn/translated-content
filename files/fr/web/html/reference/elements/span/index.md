@@ -1,57 +1,75 @@
 ---
-title: <span>
+title: "<span> : l'élément de contenu en ligne générique"
 slug: Web/HTML/Reference/Elements/span
-original_slug: Web/HTML/Element/span
+l10n:
+  sourceCommit: f2d281d86396bcd2dcecfdabd5837b1590132aa6
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<span>`** est un conteneur générique en ligne (<i lang="en">inline</i> en anglais) pour les contenus phrasés. Il ne représente rien de particulier. Il peut être utilisé pour grouper des éléments afin de les mettre en forme (grâce aux attributs [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class) ou [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) et aux règles [CSS](/fr/docs/Web/CSS)) ou parce qu'ils partagent certaines valeurs d'attribut comme [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang). Il doit uniquement être utilisé lorsqu'aucun autre élément sémantique n'est approprié. `<span>` est très proche de l'élément {{HTMLElement("div")}}, mais l'élément {{HTMLElement("div")}} est [un élément de bloc](/fr/docs/Glossary/Block-level_content), alors que `<span>` est {{Glossary("Inline-level_content", "un élément en ligne")}}.
 
-L'élément HTML **`<span>`** est un conteneur générique en ligne (_inline_) pour les contenus phrasés. Il ne représente rien de particulier. Il peut être utilisé pour grouper des éléments afin de les mettre en forme (grâce aux attributs [`class`](/fr/docs/Web/HTML/Reference/Global_attributes#class) ou [`id`](/fr/docs/Web/HTML/Reference/Global_attributes#id) et aux règles [CSS](/fr/docs/Web/CSS)) ou parce qu'ils partagent certaines valeurs d'attribut comme [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes#lang). Il doit uniquement être utilisé lorsqu'aucun autre élément sémantique n'est approprié. `<span>` est très proche de l'élément {{HTMLElement("div")}}, mais l'élément `<div>` est [un élément de bloc](/fr/docs/Glossary/Block-level_content), alors que `<span>` est [un élément en ligne](/fr/docs/Glossary/Inline-level_content).
-
-{{InteractiveExample("HTML Demo: &lt;span&gt;", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;span&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>
-  Add the <span class="ingredient">basil</span>,
-  <span class="ingredient">pine nuts</span> and
-  <span class="ingredient">garlic</span> to a blender and blend into a paste.
+  Ajoutez le <span class="ingredient">basilic</span>,
+  <span class="ingredient">pignon de pin</span> et
+  <span class="ingredient">ail</span> dans un mixeur et mixez jusqu'à obtenir
+  une pâte.
 </p>
 
 <p>
-  Gradually add the <span class="ingredient">olive oil</span> while running the
-  blender slowly.
+  Ajoutez progressivement l'<span class="ingredient">huile d'olive</span> en
+  faisant tourner le mixeur lentement.
 </p>
 ```
 
 ```css interactive-example
 span.ingredient {
-  color: #f00;
+  color: red;
 }
 ```
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Exemples
 
-### HTML
+### Exemple 1
+
+#### HTML
 
 ```html
 <p><span>Un peu de texte</span></p>
 ```
 
-### CSS
+#### Résultat
+
+{{EmbedLiveSample("Exemple 1")}}
+
+### Exemple 2
+
+#### HTML
+
+```html
+<li>
+  <span>
+    <a href="portfolio.html" target="_blank">Voir mon cahier de projets</a>
+  </span>
+</li>
+```
+
+#### CSS
 
 ```css
-p span {
-  background: green;
+li span {
+  background: gold;
 }
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample("Exemples","100%","100")}}
+{{EmbedLiveSample("Exemple 2")}}
 
 ## Résumé technique
 
@@ -59,58 +77,59 @@ p span {
   <tbody>
     <tr>
       <th scope="row">
-        <dfn
-          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-            >Catégories de contenu</a
-          ></dfn
-        >
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories">Catégories de contenu</a>
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
         >.
       </td>
     </tr>
     <tr>
-      <th scope="row"><dfn>Contenu autorisé</dfn></th>
+      <th scope="row">Contenu autorisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >Contenu phrasé</a
         >.
       </td>
     </tr>
     <tr>
-      <th scope="row"><dfn>Omission de balises</dfn></th>
+      <th scope="row">Omission de balises</th>
       <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
-      <th scope="row"><dfn>Parents autorisés</dfn></th>
+      <th scope="row">Parents autorisés</th>
       <td>
         Tout élément acceptant du
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
         >, ou tout élément acceptant du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >contenu de flux</a
         >.
       </td>
     </tr>
     <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
+          >Pas de rôle correspondant <sup>(angl.)</sup></a
+        >
+      </td>
+    </tr>
+    <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>Any</td>
+      <td>Tous les rôles sont autorisés</td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>
-        {{domxref("HTMLSpanElement")}} (avant HTML 5, l'interface
-        était {{domxref("HTMLElement")}})
-      </td>
+      <td>{{DOMxRef("HTMLSpanElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -125,4 +144,4 @@ p span {
 
 ## Voir aussi
 
-- {{HTMLElement("div")}}
+- L'élément {{HTMLElement("div")}}

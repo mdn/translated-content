@@ -1,18 +1,13 @@
 ---
 title: "<rp> : l'élément de parenthèses alternatif aux annotations Ruby"
 slug: Web/HTML/Reference/Elements/rp
-original_slug: Web/HTML/Element/rp
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<rp>`** est utilisé pour fournir des parenthèses de repli pour les navigateurs qui ne prennent pas en charge l'affichage des annotations ruby avec l'élément {{HTMLElement("ruby")}}. Un élément `<rp>` doit entourer chacune des parenthèses ouvrantes et fermantes qui encadrent l'élément {{HTMLElement("rt")}} contenant le texte de l'annotation.
 
-L'élément HTML **`<rp>`** est utilisé pour fournir ce qui fera office de parenthèse aux navigateurs qui ne prennent pas en charge les annotations Ruby.
-
-Les annotations Ruby permettent d'afficher la prononciation des caractères d'Asie orientale, notamment lors de l'usage de caractères furigana Japonais ou bopomofo Taïwanais.
-
-Un élément `<rp>` devrait encadrer chaque parenthèse ouvrante et fermante englobant l'élément {{HTMLElement("rt")}} contenant les annotations.
-
-{{InteractiveExample("HTML Demo: &lt;rp&gt;", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;rp&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <ruby>
@@ -28,13 +23,17 @@ ruby {
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+
+## Notes d'utilisation
+
+- Les annotations ruby servent à afficher la prononciation des caractères d'Asie orientale, comme les furigana japonais ou les caractères bopomofo taïwanais. L'élément `<rp>` est utilisé lorsque l'élément {{HTMLElement("ruby")}} n'est pas pris en charge&nbsp;; le contenu de `<rp>` indique ce qui doit être affiché pour signaler la présence d'une annotation ruby, généralement des parenthèses.
 
 ## Exemples
 
-### Avec prise en charge de ruby
+### Utiliser les annotations ruby
 
-#### HTML
+Cet exemple utilise les annotations ruby pour afficher les équivalents [Romaji](https://fr.wikipedia.org/wiki/R%C5%8Dmaji) pour chaque caractère.
 
 ```html
 <ruby>
@@ -50,11 +49,13 @@ body {
 
 #### Résultat
 
-{{EmbedLiveSample("Avec_prise_en_charge_de_ruby","300","150")}}
+{{EmbedLiveSample("Utiliser les annotations ruby", 600, 60)}}
+
+Voir l'article sur l'élément {{HTMLElement("ruby")}} pour de plus amples exemples.
 
 ### Sans prise en charge de ruby
 
-Avec un navigateur ne prenant pas en charge les annotations Ruby, on aurait :
+Avec un navigateur ne prenant pas en charge les annotations Ruby, on aurait&nbsp;:
 
 ```html hidden
 漢 (Kan) 字 (ji)
@@ -66,7 +67,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample("Sans_prise_en_charge_de_ruby", 600, 60)}}
+{{EmbedLiveSample("Sans prise en charge de ruby", 600, 60)}}
 
 ## Résumé technique
 
@@ -74,10 +75,8 @@ body {
   <tbody>
     <tr>
       <th scope="row">
-        <dfn
-          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-            >Catégories de contenu</a
-          ></dfn
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
+          >Catégories de contenu</a
         >
       </th>
       <td>Aucune.</td>
@@ -85,10 +84,7 @@ body {
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
-        <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >Contenu phrasé</a
-        >. Texte.
+        Texte.
       </td>
     </tr>
     <tr>
@@ -109,12 +105,20 @@ body {
       </td>
     </tr>
     <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
+          >Pas de rôle correspondant <sup>(angl.)</sup></a
+        >
+      </td>
+    </tr>
+    <tr>
       <th scope="row">Rôles ARIA autorisés</th>
       <td>Tous les rôles sont autorisés.</td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
+      <td>{{DOMxRef("HTMLElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -129,7 +133,7 @@ body {
 
 ## Voir aussi
 
-- {{HTMLElement("ruby")}}
-- {{HTMLElement("rt")}}
-- {{HTMLElement("rb")}}
-- {{HTMLElement("rtc")}}
+- L'élément {{HTMLElement("ruby")}}
+- L'élément {{HTMLElement("rt")}}
+- L'élément {{HTMLElement("rb")}}
+- L'élément {{HTMLElement("rtc")}}

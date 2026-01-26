@@ -74,7 +74,7 @@ Dans cet exemple, un bloc `<nav>` est utilisé pour contenir une liste non ordon
 </nav>
 ```
 
-{{EmbedLiveSample('unordered-list')}}
+{{EmbedLiveSample("unordered-list")}}
 
 La sémantique de l'élément `nav` est de fournir des liens. Cependant, un élément `nav` n'a pas besoin de contenir une liste, il peut aussi contenir d'autres types de contenu. Dans ce bloc de navigation, les liens sont fournis dans du texte&nbsp;:
 
@@ -104,7 +104,7 @@ La sémantique de l'élément `nav` est de fournir des liens. Cependant, un él�
 </nav>
 ```
 
-{{EmbedLiveSample('prose')}}
+{{EmbedLiveSample("prose")}}
 
 ## Résumé technique
 

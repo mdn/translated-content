@@ -2,7 +2,7 @@
 title: "<iframe> : l'élément de cadre intégré"
 slug: Web/HTML/Reference/Elements/iframe
 l10n:
-  sourceCommit: dd868507df863ab4f37d53c960c76e20e9ee365f
+  sourceCommit: da2d33b62be6362222d83dae5ce1f381d263a51c
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<iframe>`** représente un {{Glossary("Browsing context", "contexte de navigation")}} imbriqué, intégrant une autre page HTML dans la page courante.
@@ -55,7 +55,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     > [!NOTE]
     > Cet attribut est considéré comme historique et a été redéfini avec `allow="payment"`.
 
-- `browsingtopics` {{Experimental_Inline}} {{Non-standard_Inline}}
+- `browsingtopics` {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Un attribut booléen qui, s'il est présent, indique que les sujets sélectionnés pour l'utilisateur·ice courant·e doivent être envoyés avec la requête pour la source de l'`<iframe>`. Voir [Utilisation de l'API Topics](/fr/docs/Web/API/Topics_API/Using) pour plus de détails.
 
 - `credentialless` {{Experimental_Inline}}
@@ -98,7 +98,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     - `strict-origin-when-cross-origin` (par défaut)
       - : Envoie de l'URL complète pour les requêtes de même origine, seule l'origine est envoyée lorsque le protocole de sécurité est le même (HTTPS→HTTPS) et aucun en-tête n'est envoyé pour une destination moins sécurisée (HTTPS→HTTP).
     - `unsafe-url`
-      - : Le référent inclura l'origine et le chemin (mais pas le [fragment](/fr/docs/Web/API/HTMLAnchorElement/hash), le [mot de passe](/fr/docs/Web/API/HTMLAnchorElement/password) ou le [nom utilisateur](/fr/docs/Web/API/HTMLAnchorElement/username)). **Cette valeur n'est pas sûre**, car elle peut entraîner des fuites d'origine ou de chemin provenant de ressources sécurisées avec TLS vers des origines non sécurisées.
+      - : Le référent inclura l'origine et le chemin (mais pas le [fragment](/fr/docs/Web/API/HTMLAnchorElement/hash), le [mot de passe](/fr/docs/Web/API/HTMLAnchorElement/password) ou le [nom utilisateur·ice](/fr/docs/Web/API/HTMLAnchorElement/username)). **Cette valeur n'est pas sûre**, car elle peut entraîner des fuites d'origine ou de chemin provenant de ressources sécurisées avec TLS vers des origines non sécurisées.
 
 - `sandbox`
   - : Cet attribut permet d'appliquer des restrictions sur le contenu qui peut apparaître dans l'`<iframe>`. Si cet attribut vaut la chaîne de caractères vide, toutes les restrictions sont appliquées, sinon, on peut utiliser une liste de mots-clés séparés par des espaces pour définir des restrictions précises. Les mots-clés qui peuvent être utilisés sont&nbsp;:
@@ -127,14 +127,14 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     - `allow-top-navigation`
       - : Permet à la ressource de naviguer le contexte de navigation de plus haut niveau (celui nommé `_top`).
     - `allow-top-navigation-by-user-activation`
-      - : Permet à la ressource de naviguer le contexte de navigation de plus haut niveau, mais uniquement si cela est initié par un geste utilisateur.
+      - : Permet à la ressource de naviguer le contexte de navigation de plus haut niveau, mais uniquement si cela est initié par un geste de l'utilisateur·ice.
     - `allow-top-navigation-to-custom-protocols`
       - : Permet les navigations vers des protocoles non-`http` intégrés au navigateur ou [enregistrés par un site](/fr/docs/Web/API/Navigator/registerProtocolHandler). Cette fonctionnalité est également activée par les mots-clés `allow-popups` ou `allow-top-navigation`.
 
     > [!NOTE]
     >
     > - Lorsque le document intégré possède la même origine que la page englobante, il est **fortement déconseillé** d'utiliser à la fois `allow-scripts` et `allow-same-origin`, car cela permettrait au document intégré de retirer l'attribut `sandbox` — le rendant aussi peu sûr que de ne pas utiliser `sandbox` du tout.
-    > - La mise en bac à sable est inutile si un attaquant peut afficher du contenu en dehors d'un `iframe` sandboxé — par exemple si le visiteur ouvre le cadre dans un nouvel onglet. Un tel contenu devrait également être servi depuis une _origine séparée_ pour limiter les dommages potentiels.
+    > - La mise en bac à sable est inutile si un attaquant peut afficher du contenu en dehors d'un `iframe` sandboxé — par exemple si le·a visiteur·euse ouvre le cadre dans un nouvel onglet. Un tel contenu devrait également être servi depuis une _origine séparée_ pour limiter les dommages potentiels.
 
     > [!NOTE]
     > Lorsqu'on redirige l'utilisateur·ice, ouvre une fenêtre popup ou un nouvel onglet depuis une page intégrée dans un `<iframe>` avec l'attribut `sandbox`, le nouveau contexte de navigation est soumis aux mêmes restrictions `sandbox`. Cela peut poser des problèmes — par exemple, si une page intégrée dans un `<iframe>` sans l'attribut `sandbox="allow-forms"` ou `sandbox="allow-popups-to-escape-sandbox"` ouvre un nouveau site dans un onglet séparé, l'envoi d'un formulaire dans ce nouveau contexte de navigation échouera silencieusement.
@@ -154,7 +154,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - `width`
   - : La largeur du cadre en pixels CSS. La valeur par défaut est `300`.
 
-### Attributs dépréciés
+### Attributs obsolètes
 
 - `align` {{Deprecated_Inline}}
   - : Cet attribut obsolète permettait de définir l'alignement de l'_iframe_ par rapport à son contexte englobant.
@@ -230,7 +230,7 @@ Cet exemple intègre la page <https://example.org> dans un cadre intégré. C'es
 
 #### Résultat
 
-{{EmbedLiveSample('Une iframe simple', 640, 400)}}
+{{EmbedLiveSample("Une iframe simple", 640, 400)}}
 
 ### Intégrer du code source dans un \<iframe>
 
@@ -270,7 +270,7 @@ Voici comment écrire les séquences d'échappement lorsque vous utilisez `srcdo
 
 #### Résultat
 
-{{ EmbedLiveSample('Intégrer du code source dans un iframe', 640, 300)}}
+{{EmbedLiveSample("Intégrer du code source dans un iframe", 640, 300)}}
 
 ## Résumé technique
 

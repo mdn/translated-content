@@ -5,7 +5,7 @@ l10n:
   sourceCommit: a1765c2cad20118be0dad322d3548908787b5791
 ---
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<figure>`** représente un contenu autonome, éventuellement accompagné d'une légende facultative, qui est spécifiée à l'aide de l'élément {{HTMLElement("figcaption")}}. La figure, sa légende et son contenu sont référencés comme une seule unité.
+L'élément [HTML](/fr/docs/Web/HTML) **`<figure>`** représente un contenu autonome, éventuellement accompagné d'une légende facultative, qui est définie à l'aide de l'élément {{HTMLElement("figcaption")}}. La figure, sa légende et son contenu sont référencés comme une seule unité.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;figure&gt;", "tabbed-shorter")}}
 

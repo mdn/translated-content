@@ -1,15 +1,15 @@
 ---
 title: SDP
 slug: Glossary/SDP
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
-
-**SDP** (Session Description {{glossary("Protocol")}}) est le standard décrivant une connexion {{Glossary("P2P","pair-à-pair")}}. SDP contient le {{Glossary("codec")}}, l'adresse source, et des informations temporelles pour l'audio et la vidéo.
+**SDP** (Session Description {{Glossary("Protocol")}}) est le standard décrivant une connexion {{Glossary("P2P","pair-à-pair")}}. SDP contient le {{Glossary("codec")}}, l'adresse source, et des informations temporelles pour l'audio et la vidéo.
 
 Voici un message SDP typique :
 
-```
+```plain
 v=0
 o=alice 2890844526 2890844526 IN IP4 host.anywhere.com
 s=
@@ -27,7 +27,5 @@ SDP n'est jamais employé seul, mais des protocoles comme {{Glossary("RTP")}} et
 
 ## Voir aussi
 
-### Culture générale
-
 - [Protocoles WebRTC](/fr/docs/Web/API/WebRTC_API/Protocols)
-- [SDP](https://fr.wikipedia.org/wiki/Session_Description_Protocol) sur Wikipédia
+- [Session Description Protocol](https://fr.wikipedia.org/wiki/Session_Description_Protocol) sur Wikipédia

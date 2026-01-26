@@ -68,7 +68,7 @@ L'élément `<hgroup>` en tant que tel n'a pas d'effet sur le plan (<i lang="en"
 
 ### Résultat
 
-{{EmbedLiveSample('Exemples')}}
+{{EmbedLiveSample("Exemples")}}
 
 ## Résumé technique
 
@@ -97,7 +97,7 @@ L'élément `<hgroup>` en tant que tel n'a pas d'effet sur le plan (<i lang="en"
     <tr>
       <th scope="row">Parents autorisés</th>
       <td>
-        Tout élément qui accepte du <a href="/fr/docs/Web/HTML/Guides/Content_categories#Contenu_de_flux">contenu de flux</a>.
+        Tout élément qui accepte du <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux">contenu de flux</a>.
       </td>
     </tr>
     <tr>
