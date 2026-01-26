@@ -1,10 +1,12 @@
 ---
 title: "スキルテスト: ボックスモデル"
-short-title: ボックスモデル
+short-title: "テスト: ボックスモデル"
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model
 l10n:
-  sourceCommit: 2f16610802bfbdf6394ca919557a4369b1236e10
+  sourceCommit: d0be159e6119ff73453bea6d224f0a2056307aa4
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics")}}
 
 このスキルテストの目的は、 [CSS ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)を理解しているかどうかを評価することです。
 
@@ -18,23 +20,23 @@ l10n:
 
 埋め込みのスクリームを見て、指示に従ってコードを編集し、タイムライン上の課題（小さな幽霊のアイコン）を完了してください。完了したら、スクリームの再生を再開して、教師の解答が自分の解答と一致するかどうかを調べることができます。
 
-<scrim-inline url="https://scrimba.com/learn-html-and-css-c0p/~01s" scrimtitle="Margin shorthand" survey="true"></scrim-inline>
+<mdn-scrim-inline url="https://scrimba.com/learn-html-and-css-c0p/~01s" scrimtitle="Margin shorthand" survey="true"></scrim-inline>
 -->
 
 ## 課題 1
 
 この課題では、下記の 2 種類のボックスがあり、 1 つは標準ボックスモデル、もう 1 つは代替ボックスモデルを使用しています。 `.alternate` クラスに宣言を追加して 2 つ目のボックスの幅を変更し、最初のボックスの視覚的な幅と一致するようにしましょう。
 
-最終的には下記画像のようになるはずです。
+最終的には下記のようになるはずです。
 
-![2 つの同じ大きさのボックス](mdn-box-model1.png)
+{{EmbedLiveSample("box-model1-finish", "", "540px")}}
 
-```html live-sample___box-models
+```html live-sample___box-model1-start live-sample___box-model1-finish
 <div class="box">標準ボックスモデルを使用しています。</div>
 <div class="box alternate">代替ボックスモデルを使用しています。</div>
 ```
 
-```css live-sample___box-models
+```css live-sample___box-model1-start live-sample___box-model1-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -52,14 +54,16 @@ body {
 }
 ```
 
-{{EmbedLiveSample("box-models", "", "540px")}}
+この課題の最初の状態はこちらです。
+
+{{EmbedLiveSample("box-model1-start", "", "540px")}}
 
 <details>
 <summary>ここをクリックすると、模範解答を表示します。</summary>
 
 2 つ目のブロックの高さと幅を大きくし、パディングと境界線のサイズを追加する必要があります。
 
-```css
+```css live-sample___box-model1-finish
 .alternate {
   box-sizing: border-box;
   width: 390px;
@@ -79,15 +83,15 @@ body {
 - 2em の左マージン
 - すべての辺に 1em のパディング
 
-最終的には下記画像のようになるはずです。
+最終的には下記のようになるはずです。
 
-![点線の境界線の付いたボックス](mdn-box-model2.png)
+{{EmbedLiveSample("box-model2-finish", "100%", "140px")}}
 
-```html live-sample___mbp
+```html live-sample___box-model2-start live-sample___box-model2-finish
 <div class="box">標準ボックスモデルを使用しています。</div>
 ```
 
-```css live-sample___mbp
+```css live-sample___box-model2-start live-sample___box-model2-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -96,7 +100,9 @@ body {
 }
 ```
 
-{{EmbedLiveSample("mbp")}}
+この課題の最初の状態はこちらです。
+
+{{EmbedLiveSample("box-model2-start", "100%", "100px")}}
 
 <details>
 <summary>ここをクリックすると、模範解答を表示します。</summary>
@@ -104,7 +110,7 @@ body {
 この作業には、マージン、境界線、パディングのプロパティを正しく使用することが含まれます。
 個別指定プロパティ（{{cssxref("margin-top")}}、{{cssxref("margin-right")}} など）を使用することもできますが、すべての辺にマージンとパディングを設定する場合は、一括指定を使用するのがより良い選択でしょう。
 
-```css
+```css live-sample___box-model2-finish
 .box {
   border: 5px dotted black;
   margin: 20px 1em 40px 2em;
@@ -120,11 +126,11 @@ body {
 
 この課題を完了するには、要素をインラインのまま維持しながら、マージン、パディング、および境界線のサイズが他の行でも尊重されるように CSS を更新してください。
 
-最終的には下記画像のようになるはずです。
+最終的には下記のようになるはずです。
 
-![インラインボックスとその周りのテキストの間に空間があります。](mdn-box-model3.png)
+{{EmbedLiveSample("box-model3-finish", "100%", "260px")}}
 
-```html live-sample___inline-block
+```html live-sample___box-model3-start live-sample___box-model3-finish
 <div class="box">
   <p>
     Veggies es bonus vobis, <span>proinde vos postulo</span> essum magis
@@ -140,7 +146,7 @@ body {
 </div>
 ```
 
-```css live-sample___inline-block
+```css live-sample___box-model3-start live-sample___box-model3-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -152,7 +158,9 @@ body {
 }
 ```
 
-{{EmbedLiveSample("inline-block")}}
+この課題の最初の状態はこちらです。
+
+{{EmbedLiveSample("box-model3-start", "100%", "220px")}}
 
 <details>
 <summary>ここをクリックすると、模範解答を表示します。</summary>
@@ -160,7 +168,7 @@ body {
 この課題を解決するには、異なる {{cssxref("display")}} 値を使用するタイミングを理解することが要求されます。
 `display: inline-block` を追加すると、ブロック方向のマージン、境界線、パディングにより、他にも行が要素から押し出されるようになります。
 
-```css
+```css live-sample___box-model3-finish
 .box span {
   background-color: pink;
   border: 5px solid black;
@@ -170,3 +178,5 @@ body {
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics")}}
