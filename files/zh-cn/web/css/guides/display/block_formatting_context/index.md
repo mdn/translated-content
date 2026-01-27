@@ -160,12 +160,12 @@ section {
 
 在这个示例中我们有两个相邻的 {{HTMLElement("div")}} 元素，每个元素在垂直方向上含有 `10px` 的外边距。由于外边距折叠作用，垂直方向上它们之间将具有 `10px` 的间距，而不是所期望的 `20px`。
 
-```html live-sample__margin-collapsing
+```html
 <div class="blue"></div>
 <div class="red"></div>
 ```
 
-```css live-sample__margin-collapsing
+```css
 .blue,
 .red {
   height: 50px;
@@ -181,20 +181,20 @@ section {
 }
 ```
 
-{{EmbedLiveSample("margin-collapsing", 120, 170)}}
+{{EmbedLiveSample("外边距折叠示例", 120, 170)}}
 
 #### 防止外边距折叠
 
 在这个示例中，我们将第二个 `<div>` 包裹在另外一个外部 `<div>` 之中，并在外部 `<div>` 中使用 `overflow: hidden` 创建一个新的 BFC。此新 BFC 可防止嵌套 `<div>` 的边距与外部 `<div>` 的边距发生折叠。
 
-```html live-sample__prevent-margin-collapsing
+```html
 <div class="blue"></div>
 <div class="outer">
   <div class="red"></div>
 </div>
 ```
 
-```css live-sample__prevent-margin-collapsing
+```css
 .blue,
 .red {
   height: 50px;
@@ -215,7 +215,7 @@ section {
 }
 ```
 
-{{EmbedLiveSample("prevent-margin-collapsing", 120, 170)}}
+{{EmbedLiveSample("防止外边距折叠_2", 120, 170)}}
 
 ## 规范
 
