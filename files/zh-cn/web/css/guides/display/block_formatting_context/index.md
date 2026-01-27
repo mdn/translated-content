@@ -160,12 +160,12 @@ section {
 
 在这个示例中我们有两个相邻的 {{HTMLElement("div")}} 元素，每个元素在垂直方向上含有 `10px` 的外边距。由于外边距折叠作用，垂直方向上它们之间将具有 `10px` 的间距，而不是所期望的 `20px`。
 
-```html
+```html live-sample__margin-collapsing
 <div class="blue"></div>
 <div class="red"></div>
 ```
 
-```css
+```css live-sample__margin-collapsing
 .blue,
 .red {
   height: 50px;
@@ -181,7 +181,7 @@ section {
 }
 ```
 
-{{EmbedLiveSample("外边距折叠示例", 120, 170)}}
+{{EmbedLiveSample("margin-collapsing", 120, 170)}}
 
 #### 防止外边距折叠
 
