@@ -1360,5 +1360,3 @@ Firefox 使用以下启发式方法来确定验证用户输入的语言（至少
 - [发送表单数据](/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
 - [表单约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)
 - [为 HTML 表单添加样式](/zh-CN/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
-- [HTML 表单高级样式](/zh-CN/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
-- [CSS 属性兼容性表格](/zh-CN/docs/Learn_web_development/Extensions/Forms)
