@@ -152,7 +152,7 @@ section {
 
 {{EmbedLiveSample("排除外部浮动", 200, 330)}}
 
-### 防止外边距重叠
+### 防止外边距折叠
 
 你可以创建新的 BFC 避免两个相邻元素之间的[外边距折叠](/zh-CN/docs/Web/CSS/Guides/Box_model/Margin_collapsing)。
 
