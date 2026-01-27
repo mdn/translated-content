@@ -1,5 +1,5 @@
 ---
-title: "Sélecteurs d'imbrication &"
+title: Sélecteurs d'imbrication &
 slug: Web/CSS/Reference/Selectors/Nesting_selector
 l10n:
   sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
@@ -48,7 +48,7 @@ Lorsque le navigateur analyse les sélecteurs imbriqués, il ajoute automatiquem
 }
 ```
 
-Lorsque la règle imbriquée doit être attachée (sans espace) à la règle parente, par exemple lors de l'utilisation d'une {{CSSxRef('Pseudo-classes', 'pseudo-class')}} ou de la création de [sélecteurs composés](/fr/docs/Web/CSS/Guides/Selectors/Selector_structure#sélecteur_composé), le sélecteur d'imbrication `&` doit être immédiatement préfixé pour obtenir l'effet souhaité.
+Lorsque la règle imbriquée doit être attachée (sans espace) à la règle parente, par exemple lors de l'utilisation d'une {{CSSxRef("Pseudo-classes", "pseudo-classe")}} ou de la création de [sélecteurs composés](/fr/docs/Web/CSS/Guides/Selectors/Selector_structure#sélecteur_composé), le sélecteur d'imbrication `&` doit être immédiatement préfixé pour obtenir l'effet souhaité.
 
 Prenons un exemple où l'on souhaite styliser un élément, en fournissant des styles à appliquer en permanence, et en imbriquant certains styles à appliquer uniquement au survol. Si le sélecteur d'imbrication `&` n'est pas inclus, un espace est ajouté et on obtient un ensemble de règles qui applique les styles imbriqués à tout _descendant survolé du sélecteur de la règle parente_. Ce n'est cependant pas le comportement souhaité.
 
