@@ -15,22 +15,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Object
 
 ### Свойства прототипа Object
 
-Вы должны избегать вызова любых методов `Object.prototype` напрямую из экземпляра, особенно тех, которые не предназначены для полиморфизма (т.е. только их начальное поведение имеет смысл, и никакой объект-наследник не может переопределить их осмысленным образом). Все объекты, происходящие от `Object.prototype`, могут определить собственное свойство с тем же именем, но с совершенно иной семантикой от ожидаемой. Кроме того, эти свойства не наследуются [`объектами с null-прототипом`](#null-prototype_objects). Все современные утилиты JavaScript для работы с объектами являются [статическими](#static_methods). Более конкретно:
+Следует избегать прямого вызова методов `Object.prototype` из экземпляра, особенно тех, которые не предназначены для полиморфизма (то есть имеет смысл только их начальное поведение, и объект-наследник не может переопределить его осмысленным образом). Все объекты, являющиеся потомками `Object.prototype`, могут определять собственное свойство с тем же именем, но с совершенно иной семантикой. Кроме того, эти свойства не наследуются объектами с `null`-прототипом. Все современные утилиты JavaScript для работы с объектами являются статическими:
 
-- Методы [`valueOf()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf), [`toString()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) и [`toLocaleString()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString) существуют для того, чтобы быть полиморфными, и вы можете ожидать, что объект определит собственную реализацию с логичным поведением, поэтому их можно вызывать как методы экземпляра. Однако методы `valueOf()` и `toString()` обычно вызываются неявно через [преобразование типа](/ru/docs/Web/JavaScript/Guide/Data_structures#type_coercion), поэтому вам не нужно вызывать их вручную в своем коде.
-- Методы [`__defineGetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__), [`__defineSetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__), [`__lookupGetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__) и [`__lookupSetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__) устарели и не должны использоваться. Вместо них используйте статические альтернативы {{jsxref("Object.defineProperty()")}} и {{jsxref("Object.getOwnPropertyDescriptor()")}}.
-- Свойство [`__proto__`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) устарело и не должно использоваться. Вместо него используйте статические методы {{jsxref("Object.getPrototypeOf()")}} и {{jsxref("Object.setPrototypeOf()")}}.
+- Методы [`valueOf()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf), [`toString()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) и [`toLocaleString()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString) являются полиморфными, и следует ожидать, что объект определит собственную реализацию с разумным поведением, поэтому их можно вызывать как методы экземпляра. Однако методы `valueOf()` и `toString()` обычно вызываются неявно через [преобразование типа](/ru/docs/Web/JavaScript/Guide/Data_structures#type_coercion), поэтому не нужно вызывать их явно в своем коде.
+- Методы [`__defineGetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__), [`__defineSetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__), [`__lookupGetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__) и [`__lookupSetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__) являются устаревшими и не должны использоваться. Вместо них следует использовать статические альтернативы {{jsxref("Object.defineProperty()")}} и {{jsxref("Object.getOwnPropertyDescriptor()")}}.
+- Свойство [`__proto__`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) является устаревшим и не должно использоваться. Его альтернативы — статические методы {{jsxref("Object.getPrototypeOf()")}} и {{jsxref("Object.setPrototypeOf()")}}.
 - Методы [`propertyIsEnumerable()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable) и [`hasOwnProperty()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) можно заменить на статические методы {{jsxref("Object.getOwnPropertyDescriptor()")}} и {{jsxref("Object.hasOwn()")}}, соответственно.
-- Метод [`isPrototypeOf()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf) обычно можно заменить на [`instanceof`](/ru/docs/Web/JavaScript/Reference/Operators/instanceof), если вы проверяете свойство `prototype` конструктора.
+- Метод [`isPrototypeOf()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf) обычно можно заменить на [`instanceof`](/ru/docs/Web/JavaScript/Reference/Operators/instanceof) для проверки свойства `prototype` конструктора.
 
-В случае, когда семантически эквивалентный статический метод не существует, или если вы действительно хотите использовать метод `Object.prototype`, следует напрямую вызвать метод [`call()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/call) от `Object.prototype` на целевом объекте, чтобы предотвратить наличие у объекта переопределяющего свойства, которое может вызвать неожиданные результаты.
+В случае, когда семантически эквивалентный статический метод не существует или действительно необходимо использовать метод из `Object.prototype`, следует вызвать метод [`call()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/call) для целевого объекта, чтобы предотвратить появление у объекта переопределённого свойства, которое может привести к неожиданным результатам.
 
 ```js
 const obj = {
   foo: 1,
-  // Вы не должны определять такой метод в своем собственном объекте,
-  // но вы можете не иметь возможности предотвратить это, если
-  // получаете объект из внешнего источника данных
+  // Не следует определять такой метод в собственном объекте,
+  // но может не быть возможности предотвратить это, если
+  // объект получен из внешнего источника данных
   propertyIsEnumerable() {
     return false;
   },
