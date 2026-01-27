@@ -187,14 +187,14 @@ section {
 
 在这个示例中，我们将第二个 `<div>` 包裹在另外一个外部 `<div>` 之中，并在外部 `<div>` 中使用 `overflow: hidden` 创建一个新的 BFC。此新 BFC 可防止嵌套 `<div>` 的边距与外部 `<div>` 的边距发生折叠。
 
-```html
+```html live-sample__prevent-margin-collapsing
 <div class="blue"></div>
 <div class="outer">
   <div class="red"></div>
 </div>
 ```
 
-```css
+```css live-sample__prevent-margin-collapsing
 .blue,
 .red {
   height: 50px;
@@ -215,7 +215,7 @@ section {
 }
 ```
 
-{{EmbedLiveSample("防止外边距折叠", 120, 170)}}
+{{EmbedLiveSample("prevent-margin-collapsing", 120, 170)}}
 
 ## 规范
 
