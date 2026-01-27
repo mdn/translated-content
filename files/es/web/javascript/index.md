@@ -1,6 +1,8 @@
 ---
 title: JavaScript
 slug: Web/JavaScript
+l10n:
+  sourceCommit: 04158640487c17d515de8078c9307a2f906377d0
 ---
 
 **JavaScript** (**JS**) es un lenguaje de programación ligero, interpretado (o compilado {{Glossary("Just_In_Time_Compilation", "justo-a-tiempo")}}) con {{Glossary("First-class Function", "funciones de primera clase")}}. Si bien es más conocido como el lenguaje de scripting para páginas web, [muchos entornos fuera del navegador](https://es.wikipedia.org/wiki/JavaScript) también lo usan, tal como {{Glossary("Node.js")}}, [Apache CouchDB](https://couchdb.apache.org/) y [Adobe Acrobat](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/). JavaScript es un lenguaje [basado en prototipos](/es/docs/Glossary/Prototype-based_programming), con [recolección de basura](/es/docs/Glossary/Garbage_collection), [dinámico](/es/docs/Glossary/Dynamic_typing), que soporta múltiples paradigmas como imperativo, funcional y orientado a objetos.
@@ -13,7 +15,7 @@ Los estándares para JavaScript son la [Especificación del Lenguaje ECMAScript]
 
 No confundas JavaScript con el [lenguaje de programación Java](<https://es.wikipedia.org/wiki/Java_(lenguaje_de_programación)>) — **JavaScript _no es_ "Java Interpretado"**. Ambos "Java" y "JavaScript" son marcas o marcas registradas de Oracle en los Estados Unidos y otros países. Sin embargo, los dos lenguajes de programación tienen sintaxis, semántica y usos muy diferentes.
 
-La documentación de JavaScript sobre las características principales del lenguaje (puro [ECMAScript](/es/docs/Web/JavaScript/Reference/JavaScript_technologies_overview), en su mayor parte) incluye lo siguiente:
+La documentación de JavaScript sobre las características principales del lenguaje ([ECMAScript](/es/docs/Web/JavaScript/Reference/JavaScript_technologies_overview) puro, en su mayor parte) incluye lo siguiente:
 
 - La [Guía de JavaScript](/es/docs/Web/JavaScript/Guide)
 - La [Referencia de JavaScript](/es/docs/Web/JavaScript/Reference)
