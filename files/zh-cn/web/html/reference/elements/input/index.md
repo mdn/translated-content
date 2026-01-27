@@ -504,7 +504,6 @@ label {
 
     > [!NOTE]
     > 如果使用了 `pattern` 属性，要在附近告知用户所期望的输入格式。你可以包含 [`title`](#title) 属性来解释满足模式的需求说明，大多数浏览器将它们显示为工具提示（tooltip）。对于无障碍来说，视觉的解释是必要的，工具提示是一种改进点。
-    
     参见[客户端验证](#客户端验证)一节以了解更多信息。
 
 - [`placeholder`](/zh-CN/docs/Web/HTML/Reference/Attributes/placeholder)
