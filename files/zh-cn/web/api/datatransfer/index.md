@@ -32,7 +32,7 @@ l10n:
 ## 实例方法
 
 - {{domxref("DataTransfer.addElement()")}} {{experimental_inline}} {{non-standard_inline}}
-  - : 设置给定元素的拖拽源。这将成为 {{domxref("HTMLElement/drag_event", "drag")}} 和 {{domxref("HTMLElement/dragend_event", "dragend")}} 事件能被触发的元素而非默认对象（被拖拽的结点）。该方法为 Firefox 特有方法。
+  - : 设置给定元素的拖拽源。这将成为 {{domxref("HTMLElement/drag_event", "drag")}} 和 {{domxref("HTMLElement/dragend_event", "dragend")}} 事件能被触发的元素而非默认对象（被拖拽的节点）。该方法为 Firefox 特有方法。
 - {{domxref("DataTransfer.clearData()")}}
   - : 删除与给定类型关联的数据。类型参数是可选的。如果类型为空或未指定，则删除与所有类型关联的数据。如果指定类型的数据不存在，或者 DataTransfer 中不包含任何数据，则该方法不会产生任何效果。
 - {{domxref("DataTransfer.getData()")}}
