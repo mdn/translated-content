@@ -1,6 +1,9 @@
 ---
 title: Range：endOffset 属性
-slug: Web/API/Range/endOffset
+slug: conflicting/Web/API/AbstractRange/endOffset
+page-type: web-api-instance-property
+browser-compat: api.AbstractRange.endOffset
+original_slug: Web/API/Range/endOffset
 l10n:
   sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---

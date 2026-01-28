@@ -1,6 +1,9 @@
 ---
 title: Range.endContainer
-slug: Web/API/Range/endContainer
+slug: conflicting/Web/API/AbstractRange/endContainer
+page-type: web-api-instance-property
+browser-compat: api.AbstractRange.endContainer
+original_slug: Web/API/Range/endContainer
 ---
 
 {{ApiRef("DOM")}}

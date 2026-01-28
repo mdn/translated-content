@@ -1,6 +1,9 @@
 ---
 title: Range：startContainer 属性
-slug: Web/API/Range/startContainer
+slug: conflicting/Web/API/AbstractRange/startContainer
+page-type: web-api-instance-property
+browser-compat: api.AbstractRange.startContainer
+original_slug: Web/API/Range/startContainer
 l10n:
   sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---

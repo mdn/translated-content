@@ -1,6 +1,9 @@
 ---
 title: Range：collapsed 属性
-slug: Web/API/Range/collapsed
+slug: conflicting/Web/API/AbstractRange/collapsed
+page-type: web-api-instance-property
+browser-compat: api.AbstractRange.collapsed
+original_slug: Web/API/Range/collapsed
 l10n:
   sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
