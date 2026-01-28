@@ -1,9 +1,9 @@
 ---
 title: WebIDL ファイルに含まれる情報
 slug: MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file
+l10n:
+  sourceCommit: c053b4b3bb0f34736e9f4402d4254830670af723
 ---
-
-{{MDNSidebar}}
 
 API についての記事を書くとき、情報源はたくさんあります。仕様書にはモデルと同様に何が実装されるべきかが記述され、実装には実際にブラウザーに置かれたものが記述されています。 WebIDL ファイルは、 API に関する情報のすべてではありませんが、多くの情報を提供する非常に凝縮された方法です。この記事では、 WebIDL 構文を理解するためのリファレンスを提供します。
 
@@ -14,10 +14,9 @@ IDL は **_Interface Definition Language_** の略で、 API を記述するた�
 WebIDL は複数の場所で見つけることができます。
 
 - それぞれの仕様書には、本文の中に WebIDL が含まれています：これは、正確な定義を伝えるのにとても便利な方法です。これらは、API の構文を記述しています。正規のリファレンスではありますが、実際の実装とは異なる可能性があることを念頭に置いておく必要があります。 MDN では、実用的でありたいと考えており、ウェブプラットフォームが実際にどうであるか、理想的にどうあるべきかを文書化するものではありません。ですから、そこにあるものを実装でダブルチェックしてください（そして、矛盾を発見したら遠慮なくバグを報告してください）。
-
 - 3 つのブラウザーエンジンが、ツールチェーンの一部として（修正された） WebIDL を使用しています。 Gecko、Chromium/Blink、そして WebCore/WebKit です。 Chromium 以前の Edge では内部的に WebIDL を使用していましたが、残念ながらこれらは公開されていません。
-  - Gecko では、すべての WebIDL ファイルは 1 つのディレクトリー <https://dxr.mozilla.org/mozilla-central/source/dom/webidl/> にまとめられています。拡張子は `.webidl` です。Gecko のソースツリーには他にも `*.idl` ファイルがありますが、それらは WebIDL ではないので無視してかまいません。古いバージョンの Gecko には WebIDL が散在しており、 WebIDL の代わりに Mozilla の IDL を使ってウェブインターフェイスを記述しているものもありますが、最近の Gecko のコードでは問題ありません。
-  - Chromium では、ソースコードの [`renderer/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/) ディレクトリーのサブツリーである [`core/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/core/) と [`modules/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/modules/) の 2 ヶ所に配置されます。 Chromium のソースコードには、他の場所にも IDL ファイルがありますが、これらはテストシステムの一部であり、API の実装には関係ありません。
+  - Gecko では、すべての WebIDL ファイルは 1 つのディレクトリー <https://searchfox.org/firefox-main/source/dom/webidl/> にまとめられています。拡張子は `.webidl` です。Gecko のソースツリーには他にも `*.idl` ファイルがありますが、それらは WebIDL ではないので無視してかまいません。古いバージョンの Gecko には WebIDL が散在しており、 WebIDL の代わりに Mozilla の IDL を使ってウェブインターフェイスを記述しているものもありますが、最近の Gecko のコードでは問題ありません。
+  - Chromium では、ソースコードの [`renderer/`](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/) ディレクトリーのサブツリーである [`core/`](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/) と [`modules/`](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/modules/) の 2 ヶ所に配置されます。 Chromium のソースコードには、他の場所にも IDL ファイルがありますが、これらはテストシステムの一部であり、API の実装には関係ありません。
   - WebCore の場合は、ソースコードのあちこちに散らばっているので、もう少し掘り下げる必要があります。例：<https://github.com/WebKit/webkit/blob/main/Source/WebCore/html/DOMTokenList.idl>
 
 ## WebIDL のさまざまな方言
@@ -101,7 +100,7 @@ IDL で [HTMLHyperlinkElementUtils](https://html.spec.whatwg.org/multipage/links
 - [`HTMLAnchorElement.hash`](/ja/docs/Web/API/HTMLAnchorElement/hash)
 - [`HTMLAreaElement.hash`](/ja/docs/Web/API/HTMLAreaElement/hash)
 
-互換性データについては、 [BCD におけるミックスインのデータガイドライン](https://github.com/mdn/browser-compat-data/blob/main/docs/index.md)を参照してください。
+互換性データについては、 [BCD におけるミックスインのデータガイドライン](https://github.com/mdn/browser-compat-data/tree/main/docs/data-guidelines)を参照してください。
 
 ### 古いミックスインの構文
 
@@ -169,7 +168,7 @@ interface DedicatedWorkerGlobalScope : WorkerGlobalScope {…}
 ### 設定
 
 > [!NOTE]
-> この情報は Gecko 固有のものであり、ブラウザー互換性 の節でのみ使用されるべきものです。
+> この情報は Gecko 固有のものであり、ブラウザー互換性の節でのみ使用されるべきものです。
 
 Gecko では、コンストラクター、プロパティ、メソッドを含む部分インターフェイスの可用性は、プリファレンス（通常 "pref" と呼ばれます）によって制御されることがあります。これは WebIDL でもマークされています。
 
@@ -184,7 +183,8 @@ interface SpeechSynthesis {
 
 ここでは `media.webspeech.synth.enabled` が `SpeechSynthesis` インターフェイスとそのプロパティを制御します（完全なリストは 3 つだけではありません）。
 
-> **注意:** 環境設定の既定値は、 WebIDL で直接利用できません（Gecko を使用している製品ごとに異なる場合があります）。
+> [!NOTE]
+> 環境設定の既定値は、 WebIDL で直接利用できません（Gecko を使用している製品ごとに異なる場合があります）。
 
 ### システムコードでのみ使用可能なもの
 
@@ -217,6 +217,17 @@ readonly attribute MediaError? error;
 
 このプロパティの値は `MediaError` 型のオブジェクトです。疑問符 (`'?'`) は `null` の値を取ることができることを示し、ドキュメントでは*いつ*これが発生するかを説明する必要があります。疑問符がない場合、 `error` プロパティを `null` にすることはできません。
 
+プロパティの型には、角括弧で囲まれた文字列（`[LegacyNullToEmptyString]` など）である拡張属性を接頭辞として付加することができます。こうした拡張属性は、本文で説明しなければならない特別な動作を示します。以下に、型の標準拡張属性のリストと、追加すべき記述を示します。
+
+- `[LegacyNullToEmptyString]`
+  - : `null` 値は標準的ではない方法で文字列に変換されます。標準的な方法は `"null"` 文字列に変換することですが、この場合 `""` に変換されます。
+
+    記事の「値」の節の終わりに、次のようないくつかの段落を追加してください：
+
+    `null` 値に設定された場合、その `null` 値は空文字列（`""`）に変換されるため、`elt.innerHTML = null` は `elt.innerHTML = ""` と同等です。
+
+    この小さなインラインの例は、プロパティごとに適用する必要があります。
+
 ### プロパティへの書き込み権限
 
 ```webidl
@@ -231,6 +242,12 @@ readonly attribute MediaError? error;
 
 > [!NOTE]
 > 値を「返す」と表現できるのは、読み取り専用のプロパティのみです。読み取り専用でないプロパティは、値を設定するために使用することもできます。
+
+一部のプロパティには `[PutForwards=xyz]` の注釈が付けられています。これは、そのプロパティが別のオブジェクトへの参照であり、新しい値が代入されると、その代入が参照先のオブジェクトの `xyz` プロパティに転送されることを意味します。
+
+記事の「値」の節の終わりに、次のような段落を追加してください。
+
+`style` プロパティ自体は、`CSSStyleDeclaration` オブジェクトを置き換えることができないという意味で読み取り専用ですが、`style` プロパティに直接代入することは可能です。これは、その {{domxref("CSSStyleDeclaration/cssText", "cssText")}} プロパティへの代入と同等です。同時に、`CSSStyleDeclaration` オブジェクトは、{{domxref("CSSStyleDeclaration/setProperty", "setProperty()")}} メソッドと {{domxref("CSSStyleDeclaration/removeProperty", "removeProperty()")}} メソッドを使用して変更することも可能です。
 
 ### 例外の発生
 
@@ -254,7 +271,7 @@ partial interface Blob {
 
 ### 例外を発生させない
 
-Webidl の意味論に従わない場合、`[SetterThrows]` や `[GetterThrows]` が設定されていなくても、例外が発生することがよくあります。例えば、厳格モードにおいて、読み取り専用のプロパティを新しい値に設定しようとすると、つまり、その暗黙のセッターを呼び出そうとすると、読み取り専用のプロパティは厳格モードで例外を発生します。
+WebIDL の意味論に従わない場合、`[SetterThrows]` や `[GetterThrows]` が設定されていなくても、例外が発生することがよくあります。例えば、厳格モードにおいて、読み取り専用のプロパティを新しい値に設定しようとすると、つまり、その暗黙のセッターを呼び出そうとすると、読み取り専用のプロパティは厳格モードで例外を発生します。
 
 大抵は互換性のためですが、この動作は時に煩わしいものです。これを防ぐために、無操作なセッターを作る（つまり、プロパティを新しい値に設定しようとする試みを黙って無視する）ために、 `[LenientSetter]` 注釈を使用することができます。
 
@@ -338,17 +355,22 @@ Gecko では、いくつかのプロパティの使用可否は、環境設定�
 DOMString canPlayType(DOMString type);
 ```
 
-このメソッドの名前は `canPlayType` で、`HTMLMediaElement` インターフェイスに属しているため、ドキュメントでは `HTMLMediaElement.canPlayType()` （メソッドであることを示す括弧を付けて） と呼ぶことにしています。ページへのリンクは、コンテキストが明白で曖昧でない場合、インターフェイスのプレフィックスを使用する \\{{domxref('HTMLMediaElement.canPlayType()')}} か、接頭辞を使用しない \\{{domxref('HTMLMediaElement.canPlayType', 'canPlayType()')}} かのどちらかで行われます。括弧は常に付けるようにしてください。
+このメソッドの名前は `canPlayType` で、`HTMLMediaElement` インターフェイスに属しているため、ドキュメントでは `HTMLMediaElement.canPlayType()` （メソッドであることを示す括弧を付けて） と呼ぶことにしています。ページへのリンクは、コンテキストが明白で曖昧でない場合、インターフェイスの接頭辞を使用する \\{{domxref('HTMLMediaElement.canPlayType()')}} か、接頭辞を使用しない \\{{domxref('HTMLMediaElement.canPlayType', 'canPlayType()')}} かのどちらかで行われます。括弧は常に付けるようにしてください。
 
 ### 引数
 
-```js
+```webidl
 TextTrack addTextTrack(TextTrackKind kind,
                        optional DOMString label = "",
                        optional DOMString language = "");
 ```
 
-メソッドの引数は、メソッドサブページの構文の節に記載されています。 WebIDL では、括弧の間にカンマで区切られたリストとして順番に記載されています。それぞれの引数には名前（上記参照）と型（例：`'？'`は `null`値が有効であることを意味します）があります。マークされている場合、引数をメソッド呼び出しに含めることは任意であり、構文の節に記載する際に \\{{OptionalInline}} フラグを指定する必要があります。引数の既定値は、等号 (`'='`) の後に表示されます。
+メソッドの引数は、メソッドサブページの構文の節に記載されています。 WebIDL では、括弧の間にカンマで区切られたリストとして順番に記載されています。それぞれの引数には名前（上記参照）と型（例：`'？'`は `null`値が有効であることを意味します）があります。マークされている場合、引数をメソッド呼び出しに含めることは任意であり、構文の節に記載する際に \\{{optional_inline}} フラグを指定する必要があります。引数の既定値は、等号 (`'='`) の後に表示されます。
+
+引数型は、拡張属性（例: `[LegacyNullToEmptyString]`）を使用して特別な動作が記述されることがあります。以下にそのような属性のリストと、説明文に追加すべき内容を示します。
+
+- `[LegacyNullToEmptyString]`
+  - : 引数の説明の終わりに、「[`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) の値は、空文字列 (`""`) と同じように扱われます。」という文を追加してください。
 
 ### 返値の型
 
@@ -445,6 +467,8 @@ iterable<valueType>
 
 このようなイテレーターは，`for (const p in object)` という構文を `for (const p in object.entries())` の省略形として使うことを可能にします。インターフェイスの説明の中に、このことに関する文を追加しています。
 
+反復処理する対象の値は、以下のいずれかの方法で定義できます。
+
 - WebIDL ファイルでは、`iterable<valueType>` 表記を用います。例えば {{domxref('DOMTokenList')}} を参照してください。
 - インターフェイスがインデックス付きプロパティに対応している場合、 WebIDL ファイルに暗黙的に記述されます。これはインターフェイスが `unsigned long` 型の引数を持つ `getter` メソッドを持つことが示されます。
 - WebIDL ファイルの外側、付随する散文。このような散文は通常仕様の中に得られ、通常は「[反復処理する値](https://webidl.spec.whatwg.org/#dfn-value-iterator)は…」で始まります。
@@ -471,7 +495,7 @@ iterable<keyType, valueType>
 
 ### 集合風メソッド
 
-このインターフェイスは _set-like_ として定義することができます。つまり、順序付きの値の集合を表すもので、 `entries()`, `keys()`, `values()`, `forEach(),` と `has()` (`size` 属性も持ちます) のメソッドを持っています。また、このインターフェイスを実装したオブジェクトに対して {{jsxref("Statements/for...of", "for...of")}} を使用することもサポートしています。 set-like には、接頭辞として `readonly` を付けることも、付けないこともできます。read-only でない場合は、セットを変更するためのメソッド `add()`, `clear()`, `delete()` も実装されています。
+このインターフェイスは _set-like_ として定義することができます。つまり、順序付きの値の集合を表すもので、 `entries()`, `keys()`, `values()`, `forEach()`, `has()` (`size` 属性も持ちます) のメソッドを持っています。また、このインターフェイスを実装したオブジェクトに対して {{jsxref("Statements/for...of", "for...of")}} を使用することもサポートしています。 set-like には、接頭辞として `readonly` を付けることも、付けないこともできます。read-only でない場合は、セットを変更するためのメソッド `add()`, `clear()`, `delete()` も実装されています。
 
 ```webidl
 setlike<valueType>
