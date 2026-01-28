@@ -12,7 +12,7 @@ l10n:
 
 ## 值
 
-包含時間戳記的數字，以毫秒為單位的 {{Glossary("Unix time")}}。
+包含時間戳記的數字，以毫秒為單位的 {{Glossary("Unix time", "Unix 時間")}}。
 
 ## 規範
 
