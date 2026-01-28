@@ -1,9 +1,8 @@
 ---
 title: text-emphasis-position
 slug: Web/CSS/Reference/Properties/text-emphasis-position
-original_slug: Web/CSS/text-emphasis-position
 l10n:
-  sourceCommit: a7482281c4570bb7f932dce381f510d87ddf9924
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`text-emphasis-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、圏点が描かれる位置を設定します。 [`<ruby>`](/ja/docs/Web/HTML/Reference/Elements/ruby) 要素で描画されたテキストと同様、圏点のために十分な空間がない場合は、行の高さが広げられます。
@@ -37,12 +36,10 @@ text-emphasis-position: over right;
 writing-mode: vertical-rl;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section id="default-example">
   <p>
-    I'd far rather be
-    <span class="transition-all" id="example-element">happy than right</span>
-    any day.
+    いつでも、<span class="transition-all" id="example-element">正しいことより幸せ</span>である方がはるかに良い。
   </p>
 </section>
 ```
@@ -184,8 +181,10 @@ text-emphasis-position: unset;
 
 #### HTML
 
-```html hidden
-<p class="unsupported">ブラウザーが <code>auto</code> の値に対応していません。</p>
+```html-nolint hidden
+<p class="unsupported">
+  このブラウザーは <code>auto</code> の値に対応していません。
+</p>
 <label for="position">圏点の位置:</position>
 <select id="position">
   <option value="auto">auto</option>
