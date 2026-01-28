@@ -1,5 +1,5 @@
 ---
-title: "GeolocationPosition: coords 屬性"
+title: GeolocationPosition：coords 屬性
 short-title: coords
 slug: Web/API/GeolocationPosition/coords
 l10n:
