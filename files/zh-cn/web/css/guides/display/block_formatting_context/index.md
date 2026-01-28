@@ -12,9 +12,9 @@ l10n:
 - 文档的根元素（`<html>`）。
 - 浮动元素（即 {{ cssxref("float") }} 值不为 `none` 的元素）。
 - 绝对定位元素（{{ cssxref("position") }} 值为 `absolute` 或 `fixed` 的元素）。
-- 行内块元素（{{ cssxref("display") }} 值为 `inline-block` 的元素）。这是 {{htmlelement("button")}} 和按钮 {{htmlelement("input")}} 元素的默认显示类型。
-- 表格单元格（{{ cssxref("display") }} 值为 `table-cell`，HTML 表格单元格默认值）。
-- 表格标题（{{ cssxref("display") }} 值为 `table-caption`，HTML 表格标题默认值）。
+- 行内块元素（具有 {{cssxref("display", "display: inline-block")}} 的元素）。这是 {{htmlelement("button")}} 和按钮 {{htmlelement("input")}} 元素的默认显示类型。
+- 表格单元格（具有 {{cssxref("display", "display: table-cell")}}（HTML 表格单元格默认值）的元素）。
+- 表格标题（具有 {{cssxref("display", "display: table-caption")}}（HTML 表格标题默认值）的元素）。
 - 匿名表格单元格元素，由包括 {{cssxref("display", "display: table")}}（HTML 表格默认值）、`table-row`（表格行默认值）、`table-row-group`（表格体默认值）、`table-header-group`（表格头部默认值）、`table-footer-group`（表格尾部默认值）的元素隐式创建，或 `inline-table`。
 - 具有 {{cssxref("display", "display: flow-root")}} 的元素。
 - 弹性项（具有 {{cssxref("display", "display: flex")}} 或 `inline-flex` 元素的直接子元素），如果它们本身既不是[弹性](/zh-CN/docs/Glossary/Flex_Container)、[网格](/zh-CN/docs/Glossary/Grid_Container)也不是[表格](/zh-CN/docs/Web/CSS/Guides/Table)容器。
@@ -28,7 +28,7 @@ l10n:
 
 - 包含内部浮动。
 - 排除外部浮动。
-- 阻止[外边距重叠](/zh-CN/docs/Web/CSS/Guides/Box_model/Margin_collapsing)。
+- 阻止[外边距折叠](/zh-CN/docs/Web/CSS/Guides/Box_model/Margin_collapsing)。
 
 弹性/网格容器（通过设置元素的 {{ cssxref("display") }} 为 `flex`、`grid`、`inline-flex` 和 `inline-grid`）建立新的弹性/网格格式化上下文。这些与块格式化上下文类似，但弹性布局或网格容器内部不存在可用的浮动子元素。不过，这些格式化上下文确实会排除外部浮动元素并抑制边距合并。
 
