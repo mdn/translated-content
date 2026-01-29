@@ -1,16 +1,15 @@
 ---
 title: color-index
 slug: Web/CSS/Reference/At-rules/@media/color-index
-original_slug: Web/CSS/@media/color-index
 l10n:
-  sourceCommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
+  sourceCommit: 6ef7bc04d63cf8b512bdbea149a6cb875cc063e3
 ---
 
 **`color-index`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、出力端末の色参照テーブルの項目数を調べるために使用します。
 
 ## 構文
 
-`color-index` 特性は {{cssxref("&lt;integer&gt;")}} 値で指定し、出力端末の色参照テーブルの項目数を表します。 (端末がそのようなテーブルを使用していなければ、値はゼロになります)。これは範囲を持つ特性であり、つまり接頭辞の付いた **`min-color-index`** および **`max-color-index`** という変化形を使用して、それぞれ最小値と最大値を問い合わせることができます。
+`color-index` 特性は {{cssxref("&lt;integer&gt;")}} 値で指定し、出力端末の色参照テーブルの項目数を表します。（端末がそのようなテーブルを使用していなければ、値はゼロになります。）これは範囲を持つ特性であり、接頭辞の付いた **`min-color-index`** および **`max-color-index`** という変化形を使用して、それぞれ最小値と最大値を問い合わせることができます。
 
 ## 例
 
@@ -51,11 +50,11 @@ p {
 この HTML は、256色以上を持つ端末に専用のスタイルシートを適用します。
 
 ```html
-<link rel="stylesheet" href="http://foo.bar.com/base.css" />
+<link rel="stylesheet" href="https://cdn.example.com/base.css" />
 <link
   rel="stylesheet"
-  media="all and (min-color-index: 256)"
-  href="http://foo.bar.com/color-stylesheet.css" />
+  media="(color-index >= 256)"
+  href="https://cdn.example.com/color-stylesheet.css" />
 ```
 
 ## 仕様書
