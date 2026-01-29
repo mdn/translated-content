@@ -42688,40 +42688,5 @@
     "contributors": [
       "Cyandev"
     ]
-  },
-  "conflicting/Web/API/AbstractRange/collapsed": {
-    "modified": "2019-03-23T22:22:29.507Z",
-    "contributors": [
-      "GentleMint",
-      "Smart"
-    ]
-  },
-  "conflicting/Web/API/AbstractRange/endContainer": {
-    "modified": "2019-03-18T21:42:17.127Z",
-    "contributors": [
-      "Hyiker"
-    ]
-  },
-  "conflicting/Web/API/AbstractRange/endOffset": {
-    "modified": "2020-10-15T22:04:46.141Z",
-    "contributors": [
-      "Carllllo",
-      "gnepnaiL-oahZ"
-    ]
-  },
-  "conflicting/Web/API/AbstractRange/startContainer": {
-    "modified": "2019-03-23T22:02:05.516Z",
-    "contributors": [
-      "li5454yong"
-    ]
-  },
-  "conflicting/Web/API/AbstractRange/startOffset": {
-    "modified": "2020-10-15T21:28:32.328Z",
-    "contributors": [
-      "Carllllo",
-      "teoli",
-      "khalid32",
-      "Losses"
-    ]
   }
 }
