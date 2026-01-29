@@ -3,7 +3,7 @@ title: <ident>
 slug: Web/CSS/Reference/Values/ident
 original_slug: Web/CSS/ident
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<ident>`** désigne une chaîne de caractères arbitraire utilisée comme {{Glossary("identifier", "identifiant")}}.
@@ -70,5 +70,5 @@ _Ce type n'est pas un vrai type mais un type de commodité utilisé pour simplif
 
 ## Voir aussi
 
-- Le type de donnée {{CSSXref("&lt;custom-ident&gt;")}}
-- Le type de donnée {{CSSXref("&lt;dashed-ident&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;custom-ident&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;dashed-ident&gt;")}}

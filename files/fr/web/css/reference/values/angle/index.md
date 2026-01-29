@@ -3,7 +3,7 @@ title: <angle>
 slug: Web/CSS/Reference/Values/angle
 original_slug: Web/CSS/angle
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<angle>`** représente une valeur d'angle exprimée en degrés, grades, radians ou tours. Il est utilisé, par exemple, dans les {{CSSxRef("&lt;gradient&gt;")}} et dans certaines fonctions {{CSSxRef("transform")}}.
@@ -118,7 +118,7 @@ Il peut être précédé d'un seul signe `+` ou `-`. Les nombres positifs repré
 ## Voir aussi
 
 - [Types de données CSS](/fr/docs/Web/CSS/Reference/Values/Data_types)
-- Le type de donnée [`<gradient>`](/fr/docs/Web/CSS/Reference/Values/gradient)
+- Le type de donnée {{CSSxRef("gradient")}}
 - Transformations CSS de rotation&nbsp;: [`rotate()`](/fr/docs/Web/CSS/Reference/Values/transform-function/rotate), [`rotate3d()`](/fr/docs/Web/CSS/Reference/Values/transform-function/rotate3d), [`rotateX()`](/fr/docs/Web/CSS/Reference/Values/transform-function/rotateX), [`rotateY()`](/fr/docs/Web/CSS/Reference/Values/transform-function/rotateY), [`rotateZ()`](/fr/docs/Web/CSS/Reference/Values/transform-function/rotateZ)
 - [Transformations CSS](/fr/docs/Web/CSS/Guides/Transforms)
 - [Utiliser les transformations CSS](/fr/docs/Web/CSS/Guides/Transforms/Using)

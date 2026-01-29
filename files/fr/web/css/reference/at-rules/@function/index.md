@@ -2,7 +2,7 @@
 title: "@function"
 slug: Web/CSS/Reference/At-rules/@function
 l10n:
-  sourceCommit: 1dcf976e9b654679c762568812562b1a2361c755
+  sourceCommit: 6ad108adad746bd7ed79b5b32d8d3e05e5ec685a
 ---
 
 {{SeeCompatTable}}
@@ -22,11 +22,11 @@ La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) *
 Les différentes parties de la syntaxe `@function` sont les suivantes&nbsp;:
 
 - `--function-name`
-  - : Le nom identifiant de la fonction, un [`<dashed-ident>`](/fr/docs/Web/CSS/Reference/Values/dashed-ident) qui commence par `--` et est suivi d'un identifiant défini par l'utilisateur·ice. Il est sensible à la casse.
+  - : Le nom identifiant de la fonction, un {{CSSxRef("&lt;dashed-ident&gt;")}} qui commence par `--` et est suivi d'un identifiant défini par l'utilisateur·ice. Il est sensible à la casse.
 - `<function-parameter>#?` {{Optional_Inline}}
   - : Zéro ou plusieurs définitions de paramètres de fonction. Plusieurs définitions de paramètres sont séparées par des virgules. Chaque paramètre se compose de&nbsp;:
     - `--param-name`
-      - : Un nom de [propriété personnalisée CSS](/fr/docs/Web/CSS/Reference/Properties/--*) pour identifier le paramètre, un [`<dashed-ident>`](/fr/docs/Web/CSS/Reference/Values/dashed-ident) qui commence par `--` et est suivi d'un identifiant défini par l'utilisateur·ice. Il est sensible à la casse. Les paramètres de fonction peuvent être considérés comme des propriétés personnalisées localement portées au corps de la fonction.
+      - : Un nom de [propriété personnalisée CSS](/fr/docs/Web/CSS/Reference/Properties/--*) pour identifier le paramètre, un {{CSSxRef("&lt;dashed-ident&gt;")}} qui commence par `--` et est suivi d'un identifiant défini par l'utilisateur·ice. Il est sensible à la casse. Les paramètres de fonction peuvent être considérés comme des propriétés personnalisées localement portées au corps de la fonction.
     - `<css-type>` {{Optional_Inline}}
       - : Un type de données CSS ou une fonction {{CSSxRef("type()")}} qui définit le ou les types de données acceptés pour le paramètre. Si ce n'est pas défini, tout type de données sera valide pour le paramètre (équivalent à `type(*)`).
     - `<default-value>` {{Optional_Inline}}
@@ -55,7 +55,7 @@ Une fonction CSS typique ressemble à ceci&nbsp;:
 }
 ```
 
-La fonction porte le nom `--transparent` et prend deux propriétés personnalisées comme paramètres, `--color` et `--alpha`, qui peuvent être utilisées localement dans le corps de la fonction. Le corps contient une seule ligne, qui est un descripteur `result` définissant la valeur retournée par la fonction. La valeur du descripteur `result` utilise la [syntaxe de couleur relative CSS](/fr/docs/Web/CSS/Guides/Colors/Using_relative_colors) pour convertir la valeur d'entrée `--color` en une couleur [`oklch()`](/fr/docs/Web/CSS/Reference/Values/color_value/oklch) avec la valeur du canal alpha spécifiée dans la valeur d'entrée `--alpha`.
+La fonction porte le nom `--transparent` et prend deux propriétés personnalisées comme paramètres, `--color` et `--alpha`, qui peuvent être utilisées localement dans le corps de la fonction. Le corps contient une seule ligne, qui est un descripteur `result` définissant la valeur retournée par la fonction. La valeur du descripteur `result` utilise la [syntaxe de couleur relative CSS](/fr/docs/Web/CSS/Guides/Colors/Using_relative_colors) pour convertir la valeur d'entrée `--color` en une couleur {{CSSxRef("color_value/oklch")}} avec la valeur du canal alpha spécifiée dans la valeur d'entrée `--alpha`.
 
 Vous pouvez ensuite appeler cette fonction partout où vous souhaitez produire une version semi-transparente d'une couleur existante, par exemple&nbsp;:
 
@@ -295,7 +295,7 @@ p {
 
 #### Résultat
 
-{{ EmbedLiveSample('basic-example', '100%', '150px') }}
+{{EmbedLiveSample("basic-example", "100%", 150)}}
 
 ## Spécifications
 
@@ -311,4 +311,4 @@ p {
 - Le type de données {{CSSxRef("&lt;dashed-function&gt;")}}
 - La fonction [`type()`](/fr/docs/Web/CSS/Reference/Values/type)
 - [Utiliser les fonctions personnalisées CSS](/fr/docs/Web/CSS/Guides/Custom_functions_and_mixins/Using_custom_functions)
-- Le module des [Fonctions et mixins personnalisés CSS](/fr/docs/Web/CSS/Guides/Custom_functions_and_mixins)
+- Le module [des fonctions et mixins personnalisés CSS](/fr/docs/Web/CSS/Guides/Custom_functions_and_mixins)

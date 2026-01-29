@@ -2,7 +2,7 @@
 title: "@property"
 slug: Web/CSS/Reference/At-rules/@property
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 6ad108adad746bd7ed79b5b32d8d3e05e5ec685a
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@property`** fait partie de l'ensemble d'API [CSS Houdini](/fr/docs/Web/API/Houdini_APIs). Elle permet aux développeur·euse·s de définir explicitement des [propriétés CSS personnalisées](/fr/docs/Web/CSS/Reference/Properties/--*), avec vérification et contrainte de type, définition de valeurs par défaut et choix de l'héritage ou non de la propriété personnalisée.
@@ -19,9 +19,20 @@ La règle `@property` permet d'enregistrer une propriété personnalisée direct
 }
 ```
 
-Le nom de la propriété personnalisée est un [`<dashed-ident>`](/fr/docs/Web/CSS/Reference/Values/dashed-ident) qui commence par `--` et est suivi d'un identifiant valide défini par l'utilisateur·ice. Il est sensible à la casse.
+Le nom de la propriété personnalisée est un {{CSSxRef("dashed-ident")}} qui commence par `--` et est suivi d'un identifiant valide défini par l'utilisateur·ice. Il est sensible à la casse.
 
 ### Descripteurs
+
+- {{CSSxRef("@property/syntax","syntax")}}
+  - : Une chaîne de caractères qui décrit les types de valeurs autorisées pour la propriété personnalisée enregistrée.
+    Il peut s'agir d'un nom de type de donnée (comme `<color>`, `<length>`, ou `<number>`, etc.), avec des multiplicateurs (`+`, `#`) et des combinateurs (`|`), ou d'un identifiant personnalisé.
+    Voir la page du descripteur [syntax](/fr/docs/Web/CSS/Reference/At-rules/@property/syntax) pour plus de détails.
+- {{CSSxRef("@property/inherits","inherits")}}
+  - : Un booléen qui contrôle si l'enregistrement de la propriété personnalisée défini par `@property` est hérité par défaut.
+- {{CSSxRef("@property/initial-value","initial-value")}}
+  - : Une valeur qui définit la valeur de départ de la propriété.
+
+## Description
 
 Les conditions suivantes doivent être respectées pour que la règle `@property` soit valide&nbsp;:
 
@@ -62,7 +73,7 @@ Le code suivant utilise la règle CSS `@property` pour définir une propriété 
 }
 ```
 
-On définit une seconde propriété personnalisée, `--item-color`, en utilisant [JavaScript](/fr/docs/Web/JavaScript) au lieu de CSS. La méthode JavaScript {{DOMxRef('CSS.registerProperty_static', 'registerProperty()')}} est équivalente à la règle `@property`. La propriété est définie avec une valeur initiale `aqua`, n'accepte que des valeurs de type [`<color>`](/fr/docs/Web/CSS/Reference/Values/color_value), et n'est pas héritée.
+On définit une seconde propriété personnalisée, `--item-color`, en utilisant [JavaScript](/fr/docs/Web/JavaScript) au lieu de CSS. La méthode JavaScript {{DOMxRef('CSS.registerProperty_static', 'registerProperty()')}} est équivalente à la règle `@property`. La propriété est définie avec une valeur initiale `aqua`, n'accepte que des valeurs de type {{CSSxRef("&lt;color&gt;")}}, et n'est pas héritée.
 
 ```js
 window.CSS.registerProperty({
@@ -106,7 +117,7 @@ On utilise les deux propriétés personnalisées pour mettre en forme les élém
 }
 ```
 
-{{ EmbedLiveSample('utiliser_property_pour_enregistrer_et_utiliser_une_propriété_personnalisée', '100%', '250px') }}
+{{EmbedLiveSample("Utiliser `@property` pour enregistrer et utiliser une propriété personnalisée", "100%", 250)}}
 
 Les deux propriétés personnalisées, `--item-size: 20%` et `--item-color: orange;`, sont définies sur le parent `container`, ce qui remplace les valeurs par défaut `40%` et `aqua` définies lors de la création de ces propriétés. La taille est héritée, la couleur ne l'est pas.
 
@@ -118,7 +129,7 @@ Pour l'élément trois, la valeur de `--item-size` est définie sur `1000px`. Bi
 
 ### Animer la valeur d'une propriété personnalisée
 
-Dans cet exemple, on définit une propriété personnalisée appelée `--progress` avec `@property`&nbsp;: elle accepte des valeurs de type [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage) et a une valeur initiale de `25%`. On utilise `--progress` pour définir la position des arrêts de couleur dans un {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}, spécifiant où le vert s'arrête et où le noir commence. On anime ensuite la valeur de `--progress` jusqu'à `100%` sur 2,5 secondes, ce qui donne l'effet d'une barre de progression animée.
+Dans cet exemple, on définit une propriété personnalisée appelée `--progress` avec `@property`&nbsp;: elle accepte des valeurs de type {{CSSxRef("&lt;percentage&gt;")}} et a une valeur initiale de `25%`. On utilise `--progress` pour définir la position des arrêts de couleur dans un {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}, spécifiant où le vert s'arrête et où le noir commence. On anime ensuite la valeur de `--progress` jusqu'à `100%` sur 2,5 secondes, ce qui donne l'effet d'une barre de progression animée.
 
 ```html
 <div class="bar"></div>
@@ -151,7 +162,7 @@ Dans cet exemple, on définit une propriété personnalisée appelée `--progres
 }
 ```
 
-{{ EmbedLiveSample('animer_la_valeur_dune_propriété_personnalisée', '100%', '60px') }}
+{{EmbedLiveSample("Animer la valeur d'une propriété personnalisée", "100%", 60)}}
 
 ## Spécifications
 
@@ -164,9 +175,9 @@ Dans cet exemple, on définit une propriété personnalisée appelée `--progres
 ## Voir aussi
 
 - La fonction {{CSSxRef("var()")}}
-- [API Propriétés et valeurs CSS](/fr/docs/Web/API/CSS_Properties_and_Values_API)
-- [API Peinture CSS](/fr/docs/Web/API/CSS_Painting_API)
-- [API Typage de modèle d'objet CSS](/fr/docs/Web/API/CSS_Typed_OM_API)
+- [L'API Propriétés et valeurs CSS](/fr/docs/Web/API/CSS_Properties_and_Values_API)
+- [L'API Peinture CSS](/fr/docs/Web/API/CSS_Painting_API)
+- [L'API Typage de modèle d'objet CSS](/fr/docs/Web/API/CSS_Typed_OM_API)
 - [CSS Houdini](/fr/docs/Web/API/Houdini_APIs)
 - [Guide d'utilisation des propriétés CSS personnalisées (variables)](/fr/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)
-- [Module des propriétés CSS personnalisées pour les variables en cascade](/fr/docs/Web/CSS/Guides/Cascading_variables)
+- Le module [des propriétés CSS personnalisées pour les variables en cascade](/fr/docs/Web/CSS/Guides/Cascading_variables)

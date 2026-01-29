@@ -3,7 +3,7 @@ title: <gradient>
 slug: Web/CSS/Reference/Values/gradient
 original_slug: Web/CSS/gradient
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<gradient>`** permet de représenter une {{CSSxRef("&lt;image&gt;")}} contenant un dégradé entre deux ou plusieurs couleurs. Un dégradé CSS n'est pas une couleur CSS (type {{CSSxRef("&lt;color&gt;")}}) mais une image [sans dimension intrinsèque](/fr/docs/Web/CSS/Reference/Values/image) (elle n'a aucune taille naturelle ou ratio), sa taille réelle sera celle de l'élément auquel elle est appliquée.

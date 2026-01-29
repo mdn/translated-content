@@ -1165,7 +1165,7 @@ Il s'agit d'étendre l'API [Payment Request](/fr/docs/Web/API/Payment_Request_AP
 
 ### API Visual Viewport
 
-L'API [Visual Viewport](/fr/docs/Web/API/Visual_Viewport_API) (qu'on peut traduire en « zone d'affichage visuelle ») donne accès à des informations décrivant la position de [la zone d'affichage visuelle](/fr/docs/Glossary/visual_viewport) relative au document et à la zone de contenu de la fenêtre. Elle contient également des évènements pour surveiller les évolutions. Voir [le bug 1550390](https://bugzilla.mozilla.org/show_bug.cgi?id=1550390) pour plus de détails. Il n'est pas prévu de fournir cette API sur la version pour ordinateur de bureau, voir [le bug 1551302](https://bugzilla.mozilla.org/show_bug.cgi?id=1551302) si besoin.
+L'API [Visual Viewport](/fr/docs/Web/API/Visual_Viewport_API) (qu'on peut traduire en « zone d'affichage visuelle ») donne accès à des informations décrivant la position de [la zone d'affichage visuelle](/fr/docs/Glossary/Visual_Viewport) relative au document et à la zone de contenu de la fenêtre. Elle contient également des évènements pour surveiller les évolutions. Voir [le bug 1550390](https://bugzilla.mozilla.org/show_bug.cgi?id=1550390) pour plus de détails. Il n'est pas prévu de fournir cette API sur la version pour ordinateur de bureau, voir [le bug 1551302](https://bugzilla.mozilla.org/show_bug.cgi?id=1551302) si besoin.
 
 <table class="standard-table">
   <thead>

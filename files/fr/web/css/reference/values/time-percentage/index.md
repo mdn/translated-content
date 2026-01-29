@@ -2,7 +2,7 @@
 title: <time-percentage>
 slug: Web/CSS/Reference/Values/time-percentage
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<time-percentage>`** représente une valeur qui peut être soit un {{CSSxRef("time")}}, soit un {{CSSxRef("percentage")}}.
@@ -62,4 +62,4 @@ Lorsqu'un `<time-percentage>` est spécifié comme type autorisé, cela signifie
 
 - Le type de donnée {{CSSxRef("&lt;percentage&gt;")}}
 - Le type de donnée {{CSSxRef("&lt;time&gt;")}}
-- Module [des valeurs et unités CSS](/fr/docs/Web/CSS/Guides/Values_and_units)
+- Le module [des valeurs et unités CSS](/fr/docs/Web/CSS/Guides/Values_and_units)

@@ -3,12 +3,12 @@ title: <named-color>
 slug: Web/CSS/Reference/Values/named-color
 original_slug: Web/CSS/named-color
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: 865da9174c0ef94d65378a97e2e890f28613bdf1
 ---
 
-Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<named-color>`** correspond au nom d'une couleur, comme `red`, `blue`, `black` ou `lightseagreen`. Syntaxiquement, un `<named-color>` est équivalent à un {{CSSXRef("&lt;ident&gt;")}}.
+Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<named-color>`** correspond au nom d'une couleur, comme `red`, `blue`, `black` ou `lightseagreen`. Syntaxiquement, un `<named-color>` est équivalent à un {{CSSxRef("&lt;ident&gt;")}}.
 
-Une valeur `<named-color>` peut être utilisée partout où une valeur {{CSSXRef("&lt;color&gt;")}} est acceptée.
+Une valeur `<named-color>` peut être utilisée partout où une valeur {{CSSxRef("&lt;color&gt;")}} est acceptée.
 
 ## Syntaxe
 
@@ -894,9 +894,9 @@ Dans [CSS Colors Niveau 4 <sup>(angl.)</sup>](https://drafts.csswg.org/css-color
 
 Le mot-clé `transparent` représente une couleur entièrement transparente. Cela rend l'arrière-plan derrière l'élément coloré totalement visible. Techniquement, `transparent` est un raccourci pour `rgb(0 0 0 / 0%)`.
 
-Pour éviter des comportements inattendus, par exemple dans un {{cssxref("gradient")}}, la spécification CSS actuelle indique que `transparent` doit être calculé dans l'[espace colorimétrique alpha-prémultiplié <sup>(angl.)</sup>](https://drafts.csswg.org/css-color/#interpolation-alpha). Cependant, les anciens navigateurs peuvent le traiter comme du noir avec une valeur alpha de `0`.
+Pour éviter des comportements inattendus, par exemple dans un {{CSSxRef("gradient")}}, la spécification CSS actuelle indique que `transparent` doit être calculé dans l'[espace colorimétrique alpha-prémultiplié <sup>(angl.)</sup>](https://drafts.csswg.org/css-color/#interpolation-alpha). Cependant, les anciens navigateurs peuvent le traiter comme du noir avec une valeur alpha de `0`.
 
-Le mot-clé `transparent` n'était pas une vraie couleur dans CSS Niveau 2 (Révision 1). C'était un mot-clé spécial qui pouvait être utilisé à la place d'une valeur `<color>` classique sur deux propriétés CSS&nbsp;: {{Cssxref("background")}} et {{Cssxref("border")}}. Il a été ajouté essentiellement pour permettre aux développeur·euse·s d'écraser une couleur unie héritée. Avec l'arrivée des canaux alpha dans CSS Colors Niveau 3, `transparent` a été redéfini comme une vraie couleur. Il peut désormais être utilisé partout où une valeur `<color>` est acceptée.
+Le mot-clé `transparent` n'était pas une vraie couleur dans CSS Niveau 2 (Révision 1). C'était un mot-clé spécial qui pouvait être utilisé à la place d'une valeur `<color>` classique sur deux propriétés CSS&nbsp;: {{CSSxRef("background")}} et {{CSSxRef("border")}}. Il a été ajouté essentiellement pour permettre aux développeur·euse·s d'écraser une couleur unie héritée. Avec l'arrivée des canaux alpha dans CSS Colors Niveau 3, `transparent` a été redéfini comme une vraie couleur. Il peut désormais être utilisé partout où une valeur `<color>` est acceptée.
 
 ## Description
 
@@ -920,7 +920,7 @@ Bien que de nombreux mots-clés proviennent de [X11](https://fr.wikipedia.org/wi
 
 ## Exemples
 
-### Utilisation des couleurs nommées
+### Utiliser des couleurs nommées
 
 #### HTML
 
@@ -964,7 +964,7 @@ Bien que de nombreux mots-clés proviennent de [X11](https://fr.wikipedia.org/wi
 
 #### Résultat
 
-{{EmbedLiveSample("Utilisation des couleurs nommées")}}
+{{EmbedLiveSample("Utiliser des couleurs nommées")}}
 
 ## Spécifications
 
@@ -976,4 +976,4 @@ Bien que de nombreux mots-clés proviennent de [X11](https://fr.wikipedia.org/wi
 
 ## Voir aussi
 
-- Le type de donnée {{CSSXRef("&lt;color&gt;")}} dont la définition `<named-color>` est une partie constitutive.
+- Le type de donnée {{CSSxRef("&lt;color&gt;")}} dont la définition `<named-color>` est une partie constitutive.

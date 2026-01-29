@@ -3,7 +3,7 @@ title: <color-interpolation-method>
 slug: Web/CSS/Reference/Values/color-interpolation-method
 original_slug: Web/CSS/color-interpolation-method
 l10n:
-  sourceCommit: 3b34c98c3f1dcbeb35d56e40c003037c60888870
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<color-interpolation-method>`** représente l'espace colorimétrique utilisé pour l'interpolation entre des valeurs {{CSSxRef("&lt;color&gt;")}}. Il peut être utilisé pour remplacer l'espace colorimétrique d'interpolation par défaut dans les notations fonctionnelles liées à la couleur comme {{CSSxRef("color_value/color-mix", "color-mix()")}} et {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}.
@@ -75,7 +75,7 @@ L'exemple suivant montre l'effet de l'utilisation de différents espaces colorim
 
 #### Résultat
 
-{{EmbedLiveSample("comparaison_des_espaces_colorimétriques_dinterpolation_avec_des_dégradés", "100%", 250)}}
+{{EmbedLiveSample("Comparaison des espaces colorimétriques d'interpolation avec des dégradés", "100%", 250)}}
 
 ### Interpolation des couleurs dans les dégradés répétitifs
 
@@ -135,7 +135,7 @@ Nous avons utilisé les mêmes deux couleurs dans chaque dégradé pour illustre
 
 #### Résultat
 
-{{EmbedLiveSample("interpolation_des_couleurs_dans_les_dégradés_répétitifs", "100%", 250)}}
+{{EmbedLiveSample("Interpolation des couleurs dans les dégradés répétitifs", "100%", 250)}}
 
 La comparaison entre la première et la deuxième boîte montre la différence d'interpolation entre deux couleurs dans des espaces colorimétriques différents.
 La comparaison entre la deuxième et la troisième boîte met en évidence la différence entre les {{CSSxRef("&lt;hue-interpolation-method&gt;")}}, la dégradé linéaire utilisant la méthode courte (par défaut) et la dégradé radiale utilisant la méthode longue.
@@ -150,5 +150,5 @@ La comparaison entre la deuxième et la troisième boîte met en évidence la di
 
 ## Voir aussi
 
-- {{CSSxRef("&lt;color&gt;")}}, {{CSSxRef("&lt;gradient&gt;")}}
-- {{CSSxRef("&lt;hue-interpolation-method&gt;")}}
+- Les types de donnée {{CSSxRef("&lt;color&gt;")}}, {{CSSxRef("&lt;gradient&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;hue-interpolation-method&gt;")}}

@@ -3,7 +3,7 @@ title: <calc-sum>
 slug: Web/CSS/Reference/Values/calc-sum
 original_slug: Web/CSS/calc-sum
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<calc-sum>`** représente une expression qui effectue un calcul dans n'importe quelle [fonction mathématique CSS](/fr/docs/Web/CSS/Reference/Values/Functions#les_fonctions_mathématiques). L'expression réalise une opération arithmétique d'addition ou de soustraction entre deux valeurs.

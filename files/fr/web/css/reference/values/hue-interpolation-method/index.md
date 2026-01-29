@@ -3,12 +3,12 @@ title: <hue-interpolation-method>
 slug: Web/CSS/Reference/Values/hue-interpolation-method
 original_slug: Web/CSS/hue-interpolation-method
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<hue-interpolation-method>`** représente l'algorithme utilisé pour l'interpolation entre des valeurs de type {{CSSXref("&lt;hue&gt;")}}.
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<hue-interpolation-method>`** représente l'algorithme utilisé pour l'interpolation entre des valeurs de type {{CSSxRef("&lt;hue&gt;")}}.
 La méthode d'interpolation spécifie comment trouver un point médian entre deux valeurs de teinte en se basant sur une roue chromatique.
-Elle est utilisée comme composant du type de donnée {{CSSXref("&lt;color-interpolation-method&gt;")}}.
+Elle est utilisée comme composant du type de donnée {{CSSxRef("&lt;color-interpolation-method&gt;")}}.
 
 Lors de l'interpolation de valeurs `<hue>`, l'algorithme d'interpolation de teinte utilise par défaut [`shorter`](#shorter).
 
@@ -83,7 +83,7 @@ Une particularité de `increasing` et `decreasing` est que lorsque la différenc
 
 ### Comparaison des algorithmes d'interpolation de teinte
 
-L'exemple suivant montre l'effet de l'utilisation de différents algorithmes d'interpolation de teinte dans une fonction {{CSSXref("gradient/linear-gradient", "linear-gradient()")}}.
+L'exemple suivant montre l'effet de l'utilisation de différents algorithmes d'interpolation de teinte dans une fonction {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}.
 
 #### HTML
 
@@ -232,5 +232,5 @@ p {
 
 ## Voir aussi
 
-- Le type de donnée {{CSSXref("&lt;color-interpolation-method&gt;")}}
-- Le type de donnée {{CSSXref("&lt;hue&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;color-interpolation-method&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;hue&gt;")}}

@@ -2,7 +2,7 @@
 title: <shape>
 slug: Web/CSS/Reference/Values/shape
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 {{Deprecated_Header}}

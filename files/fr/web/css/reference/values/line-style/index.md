@@ -3,23 +3,23 @@ title: <line-style>
 slug: Web/CSS/Reference/Values/line-style
 original_slug: Web/CSS/line-style
 l10n:
-  sourceCommit: 39a17e10bc078c6e76717683b26a5b20d9d9c574
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) {{glossary("enumerated", "énuméré")}} [CSS](/fr/docs/Web/CSS) **`<line-style>`** représente des mots-clés qui définissent le style d'une ligne, ou l'absence de ligne. Les valeurs de mot-clé `<line-style>` sont utilisées dans les propriétés [border](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders) et [column](/fr/docs/Web/CSS/Guides/Multicol_layout), aussi bien en version longue qu'en version abrégée&nbsp;:
+Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) {{Glossary("enumerated", "énuméré")}} [CSS](/fr/docs/Web/CSS) **`<line-style>`** représente des mots-clés qui définissent le style d'une ligne, ou l'absence de ligne. Les valeurs de mot-clé `<line-style>` sont utilisées dans les propriétés [border](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders) et [column](/fr/docs/Web/CSS/Guides/Multicol_layout), aussi bien en version longue qu'en version abrégée&nbsp;:
 
-- {{cssxref("border")}}, {{cssxref("border-style")}}
-- {{cssxref("border-block")}}, {{cssxref("border-block-style")}}
-- {{cssxref("border-block-end")}}, {{cssxref("border-block-end-style")}}
-- {{cssxref("border-block-start")}}, {{cssxref("border-block-start-style")}}
-- {{cssxref("border-bottom")}}, {{cssxref("border-bottom-style")}}
-- {{cssxref("border-inline")}}, {{cssxref("border-inline-style")}}
-- {{cssxref("border-inline-end")}}, {{cssxref("border-inline-end-style")}}
-- {{cssxref("border-inline-start")}}, {{cssxref("border-inline-start-style")}}
-- {{cssxref("border-left")}}, {{cssxref("border-left-style")}}
-- {{cssxref("border-right")}}, {{cssxref("border-right-style")}}
-- {{cssxref("border-top")}}, {{cssxref("border-top-style")}}
-- {{cssxref("column-rule")}}, {{cssxref("column-rule-style")}}
+- {{CSSxRef("border")}}, {{CSSxRef("border-style")}}
+- {{CSSxRef("border-block")}}, {{CSSxRef("border-block-style")}}
+- {{CSSxRef("border-block-end")}}, {{CSSxRef("border-block-end-style")}}
+- {{CSSxRef("border-block-start")}}, {{CSSxRef("border-block-start-style")}}
+- {{CSSxRef("border-bottom")}}, {{CSSxRef("border-bottom-style")}}
+- {{CSSxRef("border-inline")}}, {{CSSxRef("border-inline-style")}}
+- {{CSSxRef("border-inline-end")}}, {{CSSxRef("border-inline-end-style")}}
+- {{CSSxRef("border-inline-start")}}, {{CSSxRef("border-inline-start-style")}}
+- {{CSSxRef("border-left")}}, {{CSSxRef("border-left-style")}}
+- {{CSSxRef("border-right")}}, {{CSSxRef("border-right-style")}}
+- {{CSSxRef("border-top")}}, {{CSSxRef("border-top-style")}}
+- {{CSSxRef("column-rule")}}, {{CSSxRef("column-rule-style")}}
 
 ## Syntaxe
 
@@ -44,12 +44,12 @@ Le type énuméré `<line-style>` accepte l'une des valeurs listées ci-dessous&
 - `ridge`
   - : Affiche une bordure avec un aspect en relief. Cette valeur est l'opposée de `groove`.
 - `inset`
-  - : Affiche une bordure qui donne l'impression que l'élément est enfoncé. Cette valeur est l'opposée de `outset`. Lorsqu'elle est appliquée à une bordure de cellule de tableau et que {{cssxref("border-collapse")}} est défini sur `collapsed`, cette valeur se comporte comme `groove`.
+  - : Affiche une bordure qui donne l'impression que l'élément est enfoncé. Cette valeur est l'opposée de `outset`. Lorsqu'elle est appliquée à une bordure de cellule de tableau et que {{CSSxRef("border-collapse")}} est défini sur `collapsed`, cette valeur se comporte comme `groove`.
 - `outset`
-  - : Affiche une bordure qui donne l'impression que l'élément est en relief. Cette valeur est l'opposée de `inset`. Lorsqu'elle est appliquée à une cellule de tableau avec {{cssxref("border-collapse")}} défini sur `collapsed`, cette valeur se comporte comme `ridge`.
+  - : Affiche une bordure qui donne l'impression que l'élément est en relief. Cette valeur est l'opposée de `inset`. Lorsqu'elle est appliquée à une cellule de tableau avec {{CSSxRef("border-collapse")}} défini sur `collapsed`, cette valeur se comporte comme `ridge`.
 
 > [!NOTE]
-> Lorsque `<outline-style>` est utilisé comme type de valeur pour les propriétés {{cssxref("outline")}} et {{cssxref("outline-style")}}, il est similaire à `<line-style>`, mais ne prend pas en charge `hidden` et inclut la valeur `auto`. Lorsque `auto` est défini, la valeur `<line-style>` définie par l'agent utilisateur est utilisée.
+> Lorsque `<outline-style>` est utilisé comme type de valeur pour les propriétés {{CSSxRef("outline")}} et {{CSSxRef("outline-style")}}, il est similaire à `<line-style>`, mais ne prend pas en charge `hidden` et inclut la valeur `auto`. Lorsque `auto` est défini, la valeur `<line-style>` définie par l'agent utilisateur est utilisée.
 
 ## Syntaxe formelle
 
@@ -61,7 +61,7 @@ Le premier exemple présente toutes les valeurs de mot-clé `<line-style>`. Le s
 
 ### Définir les styles de ligne
 
-Cet exemple montre toutes les valeurs `<line-style>` utilisées pour les propriétés CSS {{cssxref("border-style")}} et {{cssxref("column-rule-style")}}.
+Cet exemple montre toutes les valeurs `<line-style>` utilisées pour les propriétés CSS {{CSSxRef("border-style")}} et {{CSSxRef("column-rule-style")}}.
 
 #### HTML
 
@@ -198,7 +198,7 @@ p + p {
 
 #### Résultat
 
-{{EmbedLiveSample("Defining_line_styles", "500", "800")}}
+{{EmbedLiveSample("Définir les styles de ligne", 500, 800)}}
 
 Vous remarquerez que la bordure noire n'est pas toujours noire.
 
@@ -208,7 +208,7 @@ Cet exemple illustre le choix du style de ligne et de la couleur. Avec certaines
 
 #### CSS
 
-Les quatre côtés de chaque `<div>` ont une valeur `<line-style>` différente, et chaque élément de la liste utilise une valeur {{cssxref("color_value", "&lt;color>")}} différente. Nous utilisons le [contenu généré](/fr/docs/Web/CSS/Reference/Properties/content) pour afficher le CSS déclaré en ligne.
+Les quatre côtés de chaque `<div>` ont une valeur `<line-style>` différente, et chaque élément de la liste utilise une valeur {{CSSxRef("color_value", "&lt;color>")}} différente. Nous utilisons le [contenu généré](/fr/docs/Web/CSS/Reference/Properties/content) pour afficher le CSS déclaré en ligne.
 
 ```css hidden live-sample___line_style_colors
 body {
@@ -230,7 +230,7 @@ div {
 
 #### JavaScript
 
-Le JavaScript crée dynamiquement des éléments {{HTMLElement("div")}}, chacun ayant une valeur `border-color` différente.
+Le JavaScript crée dynamiquement des éléments HTML {{HTMLElement("div")}}, chacun ayant une valeur `border-color` différente.
 
 ```js live-sample___line_style_colors
 // prettier-ignore
@@ -253,7 +253,7 @@ for (const c of colors) {
 
 #### Résultat
 
-{{EmbedLiveSample("line_style_colors", "500", "200")}}
+{{EmbedLiveSample("Définir les styles et couleurs de ligne", 500, 200)}}
 
 Remarquez que la couleur presque noire `#000001` peut être différente du noir pur, et que le contraste entre les bords clairs et foncés est plus visible avec des couleurs claires.
 

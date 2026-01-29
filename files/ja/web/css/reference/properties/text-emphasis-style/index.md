@@ -1,9 +1,8 @@
 ---
 title: text-emphasis-style
 slug: Web/CSS/Reference/Properties/text-emphasis-style
-original_slug: Web/CSS/text-emphasis-style
 l10n:
-  sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`text-emphasis-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、圏点の表示を設定します。設定やリセットに一括指定の {{cssxref("text-emphasis")}} を使用することもできます。
@@ -26,12 +25,10 @@ text-emphasis-style: "x";
 text-emphasis-style: filled double-circle;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section id="default-example">
   <p>
-    I'd far rather be
-    <span class="transition-all" id="example-element">happy than right</span>
-    any day.
+    いつでも、<span class="transition-all" id="example-element">正しいことより幸せ</span>である方がはるかに良い。
   </p>
 </section>
 ```
@@ -50,10 +47,8 @@ text-emphasis-style: none; /* 圏点なし */
 
 /* <string> 値 */
 text-emphasis-style: "x";
-text-emphasis-style: "点";
 text-emphasis-style: "\25B2";
 text-emphasis-style: "*";
-text-emphasis-style: "foo"; /* 使用するべきではない。計算されるか 'f' のみが表示される */
 
 /* キーワード値 */
 text-emphasis-style: filled;
