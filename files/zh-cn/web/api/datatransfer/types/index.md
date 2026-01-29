@@ -48,7 +48,7 @@ document.querySelectorAll("li").forEach((item) => {
 });
 
 function dragstart_handler(ev) {
-  log(`dragStart：target.id = ${ev.target.id}`);
+  log(`拖拽开始：target.id = ${ev.target.id}`);
 
   // 将该元素的 id 添加到拖拽负载中，以便放置事件的处理器能分清要将哪个元素添加到树中
   ev.dataTransfer.setData("text/plain", ev.target.id);
@@ -96,6 +96,6 @@ target.addEventListener("dragover", (ev) => {
 
 ## 参见
 
-- [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
+- [拖放](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
 - [拖拽操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [使用拖拽数据存储](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
