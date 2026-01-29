@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML Drag and Drop API")}}
 
-只读的 **`DataTransferItem.kind`** 属性返回 {{domxref("DataTransferItem")}} 对象所代表的*拖拽数据项*的类型，即 `string` 或 `file`。
+**`DataTransferItem.kind`** 只读属性返回 {{domxref("DataTransferItem")}} 对象所代表的*拖拽数据项*的类型（`string` 或 `file`）。
 
 ## 值
 
