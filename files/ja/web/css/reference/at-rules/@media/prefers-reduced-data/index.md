@@ -1,9 +1,8 @@
 ---
 title: prefers-reduced-data
 slug: Web/CSS/Reference/At-rules/@media/prefers-reduced-data
-original_slug: Web/CSS/@media/prefers-reduced-data
 l10n:
-  sourceCommit: b64538dc77e9a6181b882bd54bdbb307c1430ba8
+  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
 ---
 
 {{SeeCompatTable}}
@@ -29,7 +28,7 @@ l10n:
 > [!NOTE]
 > 現在、この特性を実装しているブラウザーはありませんので、以下の例は動作しません。
 
-この例では、 `montserrat-regular.woff2` フォントファイルは先読みもダウンロードもされません。もしユーザーがデータを削減従っているのであれば、この場合「[システムフォントスタック](https://css-tricks.com/snippets/css/system-font-stack/)」が予備フォントとして機能することになります。
+この例では、`montserrat-regular.woff2` フォントファイルは先読みもダウンロードもされません。もしユーザーがデータを削減従っているのであれば、この場合「[システムフォントスタック](https://css-tricks.com/snippets/css/system-font-stack/)」が予備フォントとして機能することになります。
 
 ### HTML
 
@@ -50,9 +49,9 @@ l10n:
 ```css
 @media (prefers-reduced-data: no-preference) {
   @font-face {
-    font-family: Montserrat;
+    font-family: "Montserrat";
     font-style: normal;
-    font-weight: 400;
+    font-weight: normal;
     font-display: swap;
     /* latin */
     src:
@@ -68,18 +67,14 @@ l10n:
 
 body {
   font-family:
-    Montserrat,
+    "Montserrat",
     -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
-    Roboto,
-    Helvetica,
-    Arial,
-    "Microsoft YaHei",
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol";
+    "Roboto",
+    "Helvetica",
+    "Arial",
+    sans-serif;
 }
 ```
 
