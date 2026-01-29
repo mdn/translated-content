@@ -42,7 +42,7 @@ Web 动画 API 向 {{domxref("document")}} 和 {{domxref("element")}} 添加了�
 - {{domxref("Element.animate()")}}
   - : 用于在元素上创建和播放动画的快捷方式。它返回创建的 {{domxref("Animation")}} 对象实例。
 - {{domxref("Element.getAnimations()")}}
-  - : 返回一个包含当前影响元素或计划在未来影响元素的 {{domxref("Animation|)}} 对象的数组。
+  - : 返回一个包含当前影响元素或计划在未来影响元素的 {{domxref("Animation")}} 对象的数组。
 
 ## 规范
 
