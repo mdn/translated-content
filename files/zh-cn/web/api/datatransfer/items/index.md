@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML Drag and Drop API")}}
 
-{{domxref("DataTransfer")}} 接口的 `items` 只读属性返回表示拖拽操作中被拖拽的项的 {{domxref("DataTransferItem", "DataTransferItem")}} 对象的 {{domxref("DataTransferItemList", "DataTransferItemList")}} 列表，每个被拖拽的对象对应一个列表项。当操作没有项目时列表为空
+{{domxref("DataTransfer")}} 接口的 `items` 只读属性返回表示拖拽操作中的{{domxref("DataTransferItem","数据传输项", "", "nocode")}}的{{domxref("DataTransferItemList", "列表", "", "nocode)}}，每个被拖拽的对象对应一个列表项。当操作没有项目时列表为空
 
 ## 取值
 
@@ -101,6 +101,6 @@ reset.addEventListener("click", () => document.location.reload());
 
 ## 参见
 
-- [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
+- [拖放](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
 - [拖拽操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [使用拖拽数据存储](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
