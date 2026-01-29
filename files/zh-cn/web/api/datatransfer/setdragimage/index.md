@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML Drag and Drop API")}}
 
-当发生拖拽时，会从拖拽目标（{{domxref("HTMLElement/dragstart_event", "dragstart")}}事件触发的元素）处生成一张半透明图像，并在拖拽过程中使其跟随鼠标指针。这个图片是自动创建的，你不需要自己去创建它。然而，如果你希望设置一张自定义图像，则可以使用 **`DataTransfer.setDragImage()`** 方法，通常是一个 {{HTMLElement("image")}} 元素，但也可以是{{HTMLElement("canvas")}} 或任何其他图像元素。
+当发生拖拽时，会从拖拽目标（触发 {{domxref("HTMLElement/dragstart_event", "dragstart")}} 事件的元素）处生成一张半透明图像，并在拖拽过程中保持该图像一直跟随鼠标指针。这个图片是自动创建的而无需额外创建，但如果你希望设置一张自定义图像，则你可以使用 **`DataTransfer.setDragImage()`** 方法。图像通常是一个 {{HTMLElement("image")}} 元素，但也可以是{{HTMLElement("canvas")}} 或任何其他图像元素。
 
 该方法的 `x` 和 `y` 坐标是图像应该相对于鼠标指针出现的偏移量。坐标指定鼠标指针相对于图片的偏移量。例如，要使图像居中，请使用图像宽度和高度的一半。
 
@@ -103,6 +103,6 @@ target.addEventListener("drop", (ev) => {
 
 ## 参见
 
-- [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
+- [拖放](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
 - [拖拽操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [使用拖拽数据存储](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
