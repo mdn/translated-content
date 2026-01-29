@@ -11,7 +11,7 @@ l10n:
 
 可以使用[方括号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors#方括号表示法) `[]` 访问各个项。
 
-`DataTransferItemList` 最初是为 [HTML 拖拽 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API) 设计的，并且仍然在 HTML 拖拽部分中定义，但现在也被其他 API 使用，例如 {{domxref("ClipboardEvent.clipboardData")}} 和 {{domxref("InputEvent.dataTransfer")}}。`DataTransferItemList` 的文档将主要讨论其在拖拽操作中的使用，而在其他场景中使用 `DataTransferItemList` 时，你应参考相应 API 的文档。
+`DataTransferItemList` 最初是为 [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API) 设计的，并且仍然在 HTML 拖放部分中定义，但现在也被其他 API 使用，例如 {{domxref("ClipboardEvent.clipboardData")}} 和 {{domxref("InputEvent.dataTransfer")}}。`DataTransferItemList` 的文档将主要讨论其在拖放操作中的使用，而在其他场景中使用 `DataTransferItemList` 时，你应参考相应 API 的文档。
 
 该接口没有构造函数。
 
@@ -31,7 +31,7 @@ l10n:
 
 ## 示例
 
-此示例展示了如何使用拖拽。
+此示例展示了如何使用拖放。
 
 ### HTML
 
@@ -69,19 +69,19 @@ const source = document.getElementById("source");
 const target = document.getElementById("target");
 
 source.addEventListener("dragstart", (ev) => {
-  console.log("dragStart");
+  console.log("拖拽开始");
 
   // 添加元素的 ID 到拖拽负荷中，以便于放置处理器清楚要将什么元素添加到其树中
   const dataList = ev.dataTransfer.items;
   dataList.add(ev.target.id, "text/plain");
 
   // 添加其他项目作为拖拽负荷
-  dataList.add("<p>Paragraph…</p>", "text/html");
+  dataList.add("<p>段落……</p>", "text/html");
   dataList.add("http://www.example.org", "text/uri-list");
 });
 
 source.addEventListener("dragend", (ev) => {
-  console.log("dragEnd");
+  console.log("拖拽结束");
   const dataList = ev.dataTransfer.items;
 
   // 清除剩余的拖拽数据
@@ -89,32 +89,32 @@ source.addEventListener("dragend", (ev) => {
 });
 
 target.addEventListener("drop", (ev) => {
-  console.log("Drop");
+  console.log("放置");
   ev.preventDefault();
 
   // 遍历放下的项目并记录它们的数据
   for (const item of ev.dataTransfer.items) {
     if (item.kind === "string" && item.type.match(/^text\/plain/)) {
-      // 该项为目标结点
+      // 该项为目标节点
       item.getAsString((s) => {
         ev.target.appendChild(document.getElementById(s));
       });
     } else if (item.kind === "string" && item.type.match(/^text\/html/)) {
       // 拖动数据项为 HTML
       item.getAsString((s) => {
-        console.log(`… Drop：HTML = ${s}`);
+        console.log(`……放置：HTML = ${s}`);
       });
     } else if (item.kind === "string" && item.type.match(/^text\/uri-list/)) {
       // 拖动数据项为 URI
       item.getAsString((s) => {
-        console.log(`… Drop：URI = ${s}`);
+        console.log(`……放置：URI = ${s}`);
       });
     }
   }
 });
 
 target.addEventListener("dragover", (ev) => {
-  console.log("dragOver");
+  console.log("拖拽经过");
   ev.preventDefault();
 
   // 设置 dropEffect 为 move
