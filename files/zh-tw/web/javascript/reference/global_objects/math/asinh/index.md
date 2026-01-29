@@ -2,7 +2,7 @@
 title: Math.asinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asinh
 l10n:
-  sourceCommit: b6cab42cf7baf925f2ef6a2c98db0778d9c2ec46
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
 **`Math.asinh()`** 靜態方法回傳數字的反雙曲正弦值。也就是說，

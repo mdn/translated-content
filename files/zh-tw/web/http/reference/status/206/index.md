@@ -2,7 +2,7 @@
 title: 206 Partial Content
 slug: Web/HTTP/Reference/Status/206
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 HTTP **`206 Partial Content`** [成功回應](/zh-TW/docs/Web/HTTP/Reference/Status#成功回應)狀態碼是為了回應[範圍請求](/zh-TW/docs/Web/HTTP/Guides/Range_requests)而發送的。回應主體包含請求的 {{HTTPHeader("Range")}} 標頭中所指定的資料範圍。

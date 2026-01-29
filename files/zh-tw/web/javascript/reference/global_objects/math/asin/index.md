@@ -2,7 +2,7 @@
 title: Math.asin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asin
 l10n:
-  sourceCommit: b6cab42cf7baf925f2ef6a2c98db0778d9c2ec46
+  sourceCommit: 0fb5a7e4cc045ba0b1dc453624f196309d9bea10
 ---
 
 **`Math.asin()`** 靜態方法回傳數字的反正弦值（單位為弧度）。也就是說，
@@ -75,3 +75,4 @@ Math.asin(2); // NaN
 - {{jsxref("Math.cos()")}}
 - {{jsxref("Math.sin()")}}
 - {{jsxref("Math.tan()")}}
+- CSS {{cssxref("asin()")}} 函式
