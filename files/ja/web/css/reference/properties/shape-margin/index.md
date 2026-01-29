@@ -1,7 +1,8 @@
 ---
 title: shape-margin
 slug: Web/CSS/Reference/Properties/shape-margin
-original_slug: Web/CSS/shape-margin
+l10n:
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`shape-margin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{cssxref("shape-outside")}} を使用して作成された CSS シェイプのマージンを設定します。
@@ -24,18 +25,11 @@ shape-margin: 1em;
 shape-margin: 5%;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section class="default-example" id="default-example">
   <div class="example-container">
     <div class="transition-all" id="example-element"></div>
-    We had agreed, my companion and I, that I should call for him at his house,
-    after dinner, not later than eleven o’clock. This athletic young Frenchman
-    belongs to a small set of Parisian sportsmen, who have taken up “ballooning”
-    as a pastime. After having exhausted all the sensations that are to be found
-    in ordinary sports, even those of “automobiling” at a breakneck speed, the
-    members of the “Aéro Club” now seek in the air, where they indulge in all
-    kinds of daring feats, the nerve-racking excitement that they have ceased to
-    find on earth.
+    私と同行者は、夕食後、遅くとも 11 時までに彼の家に迎えにいくことで合意していた。この運動神経抜群の若いフランス人は、気球乗りを趣味とするパリのスポーツ愛好家たちの小さなグループに属している。通常のスポーツで得られるあらゆる感覚、猛スピードでの「自動車運転」のスリルさえも尽くした後、「エアロクラブ」のメンバーたちは今や空へと目を向け、あらゆる種類の危険な技に興じながら、地上ではもはや探せなくなった神経をすり減らすような興奮を求めている。
   </div>
 </section>
 ```
@@ -73,6 +67,7 @@ shape-margin: 60%;
 shape-margin: inherit;
 shape-margin: initial;
 shape-margin: revert;
+shape-margin: revert-layer;
 shape-margin: unset;
 ```
 
@@ -91,20 +86,14 @@ shape-margin: unset;
 
 ## 例
 
-<h3 id="Adding_a_margin_to_a_polygon">多角形にマージンを追加</h3>
+### 多角形にマージンを追加
 
 #### HTML
 
-```html
+```html-nolint
 <section>
   <div class="shape"></div>
-  We are not quite sure of any one thing in biology; our knowledge of geology is
-  relatively very slight, and the economic laws of society are uncertain to
-  every one except some individual who attempts to set them forth; but before
-  the world was fashioned the square on the hypotenuse was equal to the sum of
-  the squares on the other two sides of a right triangle, and it will be so
-  after this world is dead; and the inhabitant of Mars, if one exists, probably
-  knows its truth as we know it.
+  生物学において我々は確信できることは何一つない。地質学に関する我々の知識は相対的にとてもわずかであり、社会の経済法則はそれを設定しようとする一部の個人を除いて誰にとっても不確かである。しかし世界が形作られる前から、直角三角形において斜辺の二乗は他の 2 種類の辺の二乗の和に等しく、この世界が滅びた後もそれは変わらない。火星に生命体が存在する場合、おそらく彼らは我々が知るのと同様にその真実を知っているだろう。
 </section>
 ```
 
@@ -144,4 +133,4 @@ section {
 - [CSS シェイプの概要](/ja/docs/Web/CSS/Guides/Shapes/Overview)
 - {{cssxref("shape-outside")}}
 - {{cssxref("shape-image-threshold")}}
-- {{cssxref("&lt;basic-shape&gt;")}}
+- {{cssxref("basic-shape")}}

@@ -1,7 +1,8 @@
 ---
 title: shape-image-threshold
 slug: Web/CSS/Reference/Properties/shape-image-threshold
-original_slug: Web/CSS/shape-image-threshold
+l10n:
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`shape-image-threshold`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("shape-outside")}} の値に指定された画像によってシェイプを抽出するために使用するアルファチャネルのしきい値を設定します。
@@ -11,7 +12,7 @@ original_slug: Web/CSS/shape-image-threshold
 ```css interactive-example-choice
 shape-outside: linear-gradient(
   50deg,
-  rgb(77, 26, 103),
+  rgb(77 26 103),
   transparent 80%,
   transparent
 );
@@ -21,7 +22,7 @@ shape-image-threshold: 0.2;
 ```css interactive-example-choice
 shape-outside: linear-gradient(
   50deg,
-  rgb(77, 26, 103),
+  rgb(77 26 103),
   transparent 80%,
   transparent
 );
@@ -31,25 +32,18 @@ shape-image-threshold: 0.4;
 ```css interactive-example-choice
 shape-outside: linear-gradient(
   50deg,
-  rgb(77, 26, 103),
+  rgb(77 26 103),
   transparent 80%,
   transparent
 );
 shape-image-threshold: 0.6;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section class="default-example" id="default-example">
   <div class="example-container">
     <div class="transition-all" id="example-element"></div>
-    We had agreed, my companion and I, that I should call for him at his house,
-    after dinner, not later than eleven o’clock. This athletic young Frenchman
-    belongs to a small set of Parisian sportsmen, who have taken up “ballooning”
-    as a pastime. After having exhausted all the sensations that are to be found
-    in ordinary sports, even those of “automobiling” at a breakneck speed, the
-    members of the “Aéro Club” now seek in the air, where they indulge in all
-    kinds of daring feats, the nerve-racking excitement that they have ceased to
-    find on earth.
+    私と同行者は、夕食後、遅くとも 11 時までに彼の家に迎えにいくことで合意していた。この運動神経抜群の若いフランス人は、気球乗りを趣味とするパリのスポーツ愛好家たちの小さなグループに属している。通常のスポーツで得られるあらゆる感覚、猛スピードでの「自動車運転」のスリルさえも尽くした後、「エアロクラブ」のメンバーたちは今や空へと目を向け、あらゆる種類の危険な技に興じながら、地上ではもはや探せなくなった神経をすり減らすような興奮を求めている。
   </div>
 </section>
 ```
@@ -67,7 +61,7 @@ shape-image-threshold: 0.6;
   margin: 20px;
   background-image: linear-gradient(
     50deg,
-    rgb(77, 26, 103),
+    rgb(77 26 103),
     transparent 80%,
     transparent
   );
@@ -86,6 +80,7 @@ shape-image-threshold: 0.7;
 shape-image-threshold: inherit;
 shape-image-threshold: initial;
 shape-image-threshold: revert;
+shape-image-threshold: revert-layer;
 shape-image-threshold: unset;
 ```
 
@@ -104,7 +99,7 @@ shape-image-threshold: unset;
 
 ## 例
 
-<h3 id="Aligning_text_to_a_gradient">グラデーションへのテキストの配置</h3>
+### グラデーションへのテキストの配置
 
 この例では、グラデーションの背景画像を持つ {{HTMLElement("div")}} ブロックを作成します。グラデーションは `shape-outside` を使用して CSS シェイプとして確立されているので、グラデーションの中のピクセルのうち 20% よりも大きい不透過度 (つまり、アルファコンポーネントが 0.2 よりも大きいピクセル) はシェイプの一部とみなされます。
 
@@ -142,7 +137,7 @@ shape-image-threshold: unset;
 
 シェイプは画像ファイルではなく、線形グラデーションの {{cssxref("background-image")}} を使用して定義されています。同じグラデーションが、 {{cssxref("shape-outside")}} プロパティを使用して、浮動領域を設定するためにシェイプが取得される画像としても使用されます。
 
-シェイプの部分として扱うグラデーション内のピクセルは 20% の不透過度がしきい値なので、 `shape-image-threadhold` の値を `0.2` にして使用して作成しています。
+シェイプの部分として扱うグラデーション内のピクセルは 20% の不透過度がしきい値なので、 `shape-image-threshold` の値を `0.2` にして使用して作成しています。
 
 #### 結果
 
@@ -160,6 +155,6 @@ shape-image-threshold: unset;
 
 - [CSS シェイプ](/ja/docs/Web/CSS/Guides/Shapes)
 - [CSS シェイプの概要](/ja/docs/Web/CSS/Guides/Shapes/Overview)
-- {{cssxref("&lt;basic-shape&gt;")}}
+- {{cssxref("basic-shape")}}
 - {{cssxref("shape-outside")}}
 - {{cssxref("shape-margin")}}
