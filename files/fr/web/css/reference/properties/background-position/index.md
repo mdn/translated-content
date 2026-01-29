@@ -1,16 +1,13 @@
 ---
 title: background-position
 slug: Web/CSS/Reference/Properties/background-position
-original_slug: Web/CSS/background-position
 l10n:
-  sourceCommit: 70b1b8ac18d3e3346645d4ee5155f654c83d96e0
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`background-position`** définit la position initiale de chaque image d'arrière-plan. La position est relative à la couche de position définie par {{CSSxRef("background-origin")}}.
 
-La propriété [CSS](/fr/docs/Web/CSS) **`background-position`** permet de définir la position initiale, relative à l'origine définie par [`background-origin`](/fr/docs/Web/CSS/Reference/Properties/background-origin), pour chaque image d'arrière-plan.
-
-{{InteractiveExample("CSS Demo: background-position")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: background-position")}}
 
 ```css interactive-example-choice
 background-position: top;
@@ -54,24 +51,22 @@ background-position: right 35% bottom 45%;
 ## Syntaxe
 
 ```css
-/* Valeurs utilisant un mot-clé */
+/* Valeurs avec un mot-clé */
 background-position: top;
 background-position: bottom;
 background-position: left;
 background-position: right;
 background-position: center;
 
-/* Valeurs proportionnelles à la boîte */
-/* Type <percentage>                   */
+/* Valeur de pourcentage <percentage> */
 background-position: 25% 75%;
 
-/* Valeurs de longueur */
-/* Type <length>       */
+/* Valeur de longueur <length> */
 background-position: 0 0;
 background-position: 1cm 2cm;
 background-position: 10ch 8em;
 
-/* Plusieurs valeurs pour plusieurs arrières-plans */
+/* Plusieurs images */
 background-position:
   0 0,
   center;
@@ -95,31 +90,28 @@ La propriété `background-position` peut être définie grâce à une ou plusie
 ### Valeurs
 
 - `<position>`
-  - : Une valeur [`<position>`](/fr/docs/Web/CSS/Reference/Properties/position). Une position définit un couple de coordonnées XY qui permet de placer un objet par rapport aux bords de la boîte d'un élément. Une position peut être définie avec une à quatre valeurs. Si deux valeurs qui ne sont pas des mots-clés sont utilisées, la première représente la position horizontale et la seconde la position verticale. Si une seule valeur est indiquée, la deuxième sera `center` par défaut. Si trois ou quatre valeurs sont utilisées, les valeurs de longueur-pourcentage sont des décalages relatifs au(x) mot(s)-clé(s) précédent(s).
+  - : Une valeur {{CSSxRef("&lt;position&gt;")}}. Une position définit un couple de coordonnées XY qui permet de placer un objet par rapport aux bords de la boîte d'un élément. Une position peut être définie avec une à quatre valeurs. Si deux valeurs qui ne sont pas des mots-clés sont utilisées, la première représente la position horizontale et la seconde la position verticale. Si une seule valeur est indiquée, la deuxième sera `center` par défaut. Si trois ou quatre valeurs sont utilisées, les valeurs de longueur-pourcentage sont des décalages relatifs au(x) mot(s)-clé(s) précédent(s).
 
     **Définition avec une valeur&nbsp;:** la valeur peut être&nbsp;:
     - Le mot-clé `center` qui centre l'image.
     - Un mot-clé parmi `top`, `left`, `bottom`, `right`. Ce mot-clé indique le bord par rapport auquel placer l'élément. Pour l'autre dimension, on utilisera la moitié de la boîte (50%) et l'élément sera placé au milieu de cet axe.
-    - Une longueur ([`<length>`](/fr/docs/Web/CSS/Reference/Values/length)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)). Cette valeur définit l'abscisse du point par rapport au bord gauche. L'ordonnée est fixée à 50%.
+    - Une longueur ({{CSSxRef("&lt;length&gt;")}}) ou un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}). Cette valeur définit l'abscisse du point par rapport au bord gauche. L'ordonnée est fixée à 50%.
 
     **Définition avec deux valeurs&nbsp;:** la première valeur définit l'abscisse (la coordonnée horizontale X) et la seconde définit l'ordonnée (la coordonnée verticale Y). Chaque valeur peut être&nbsp;:
     - Un des mots-clés parmi `top`, `left`, `bottom`, `right`. Si `left` ou `right` est utilisé, la valeur définit l'abscisse et l'autre définira l'ordonnée. Si `top` ou `bottom` est indiqué, cette valeur définira l'ordonnée et l'autre valeur définira X.
-    - Une valeur de longueur ([`<length>`](/fr/docs/Web/CSS/Reference/Values/length)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)). Si l'autre valeur vaut `left` ou `right`, cette valeur définira l'ordonnée par rapport au bord haut. Si l'autre valeur est `top` ou `bottom`, cette valeur définira l'abscisse relativement au bord gauche. Si les deux valeurs sont des longueurs ou des pourcentages, la première définira l'abscisse et la seconde l'ordonnée.
-
-    > [!NOTE]
-    > Si une valeur est `top` ou `bottom`, la seconde ne peut pas être `top` ou `bottom`. Si une valeur est `left` ou `right`, la seconde ne peut pas être `left` ou `right`. Autrement dit, les combinaisons `top top`, `bottom bottom`, `top bottom`, `bottom top`, `right right`, `left left`, `left right` et `right left` seront considérées comme invalides.
-    - L'ordre des mots-clés n'est pas important, le navigateur pourra les réarranger si besoin. Ainsi, `top left` et `left top` auront le même effet. En revanche, si on associe une longueur ([`<length>`](/fr/docs/Web/CSS/Reference/Values/length)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)) avec un mot-clé, l'ordre est important et la valeur définissant l'abscisse doit arriver avant l'ordonnée&nbsp;: `right 20px` ne sera pas équivalent à `20px right` et cette dernière forme sera invalide. Les valeurs `left 20%` ou `20% bottom` sont valides car les abscisses et ordonnées sont bien rangées.
-
+    - Une valeur de longueur ({{CSSxRef("&lt;length&gt;")}}) ou un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}). Si l'autre valeur vaut `left` ou `right`, cette valeur définira l'ordonnée par rapport au bord haut. Si l'autre valeur est `top` ou `bottom`, cette valeur définira l'abscisse relativement au bord gauche. Si les deux valeurs sont des longueurs ou des pourcentages, la première définira l'abscisse et la seconde l'ordonnée.
+    - Notez que si une valeur est `top` ou `bottom`, la seconde ne peut pas être `top` ou `bottom`. Si une valeur est `left` ou `right`, la seconde ne peut pas être `left` ou `right`. Autrement dit, les combinaisons `top top`, `bottom bottom`, `top bottom`, `bottom top`, `right right`, `left left`, `left right` et `right left` seront considérées comme invalides.
+    - L'ordre des mots-clés n'est pas important, le navigateur pourra les réarranger si besoin. Ainsi, `top left` et `left top` auront le même effet. En revanche, si on associe une longueur ({{CSSxRef("&lt;length&gt;")}}) ou un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) avec un mot-clé, l'ordre est important et la valeur définissant l'abscisse doit arriver avant l'ordonnée&nbsp;: `right 20px` ne sera pas équivalent à `20px right` et cette dernière forme sera invalide. Les valeurs `left 20%` ou `20% bottom` sont valides car les abscisses et ordonnées sont bien rangées.
     - La valeur par défaut est `left top` ou `0% 0%`.
 
     **Définition avec 3 valeurs&nbsp;:** Deux valeurs sont des mots-clés et la troisième est le décalage appliqué à la valeur qui précède.
     - La première valeur est l'un des mots-clés `top`, `left`, `bottom`, `right`, ou `center`. Si `left` ou `right` sont fournis, cela définit la position sur l'axe horizontale et si `top` or `bottom` sont fournis, cela définit la position sur l'axe vertical et l'autre mot-clé définit la position sur l'axe horizontal.
-    - La longueur (type [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)) ou le pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)), s'il est utilisé en deuxième valeur, sera considéré comme le décalage à appliquer pour la première valeur. S'il s'agit de la troisième valeur, ce sera le décalage à appliquer à la deuxième valeur.
+    - La longueur (type {{CSSxRef("&lt;length&gt;")}}) ou le pourcentage (type {{CSSxRef("&lt;percentage&gt;")}}), s'il est utilisé en deuxième valeur, sera considéré comme le décalage à appliquer pour la première valeur. S'il s'agit de la troisième valeur, ce sera le décalage à appliquer à la deuxième valeur.
     - Il n'y a qu'une seule longueur ou qu'un seul pourcentage attendu pour définir le décalage de la valeur précédente. Toute combinaison d'un mot-clé avec deux longueurs ou deux pourcentages sera considérée comme invalide.
 
     **Définition avec 4 valeurs&nbsp;:** La première et la troisième valeur sont des mots-clés pour la position horizontale d'une part et verticale d'autre part. La deuxième et la quatrième valeur sont des décalages pour les valeurs qui les précèdent&nbsp;:
     - La première et la troisième valeur utilisent l'un des mots-clés suivant&nbsp;: `top`, `left`, `bottom`, `right`. Si `left` ou `right` sont utilisés, cela définit la position horizontale. Si `top` ou `bottom` sont utilisés, cela définit la position verticale et l'autre mot-clé définit alors la valeur horizontale.
-    - La deuxième et la quatrième valeur sont des longueurs ([`<length>`](/fr/docs/Web/CSS/Reference/Values/length)) ou des pourcentages ([`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)). La deuxième valeur est le décalage pour le premier mot-clé tandis que la quatrième valeur est le décalage correspondant au deuxième mot-clé.
+    - La deuxième et la quatrième valeur sont des longueurs ({{CSSxRef("&lt;length&gt;")}}) ou des pourcentages ({{CSSxRef("&lt;percentage&gt;")}}). La deuxième valeur est le décalage pour le premier mot-clé tandis que la quatrième valeur est le décalage correspondant au deuxième mot-clé.
 
 ### À propos des pourcentages
 
@@ -160,29 +152,30 @@ On notera donc que si l'image d'arrière-plan a les mêmes dimensions que le con
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
-### Exemples utilisant plusieurs images
+### Positionner des images d'arrière-plan
 
-Dans cet exemple, on a trois éléments jaunes qui ont chacun une étoile située différemment. Le rectangle final possède deux images d'arrière-plan, chacune à une position différente.
+Chacun de ces trois exemples utilise la propriété {{CSSxRef("background")}} pour créer un élément rectangulaire jaune contenant une image d'étoile. Dans chaque exemple, l'étoile est à une position différente. Le troisième exemple montre comment définir des positions pour deux images d'arrière-plan différentes dans un même élément.
 
 #### HTML
 
 ```html
-<div class="exemple_un">Premier exemple</div>
-<div class="exemple_deux">Deuxième exemple</div>
-<div class="exemple_trois">Troisième exemple</div>
+<div class="exemple-un">Premier exemple</div>
+<div class="exemple-deux">Deuxième exemple</div>
+<div class="exemple-trois">Troisième exemple</div>
 ```
 
 #### CSS
 
 ```css
+/* Partagé entre tous les <div> */
 div {
   background-color: #ffee99;
   background-repeat: no-repeat;
@@ -192,10 +185,10 @@ div {
 }
 
 /* On utilise la propriété raccourcie background */
-.exemple_un {
+.exemple-un {
   background: url("star-transparent.gif") #ffee99 2.5cm bottom no-repeat;
 }
-.exemple_deux {
+.exemple-deux {
   background: url("star-transparent.gif") #ffee99 left 4em bottom 1em no-repeat;
 }
 
@@ -204,7 +197,7 @@ Plusieurs images d'arrière-plan chacune positionnée
 différemment, on voit les virgules dans les déclarations.
 L'ordre est le même entre background-image et -position.
 */
-.exemple_trois {
+.exemple-trois {
   background-image: url("star-transparent.gif"), url("cat-front.png");
   background-position:
     0px 0px,
@@ -214,7 +207,7 @@ L'ordre est le même entre background-image et -position.
 
 #### Résultat
 
-{{EmbedLiveSample('', 420, 320)}}
+{{EmbedLiveSample("Positionner des images d'arrière-plan", 420, 200)}}
 
 ## Spécifications
 
@@ -226,9 +219,7 @@ L'ordre est le même entre background-image et -position.
 
 ## Voir aussi
 
-- [Gérer plusieurs arrières-plans](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
-- [`background-position-x`](/fr/docs/Web/CSS/Reference/Properties/background-position-x)
-- [`background-position-y`](/fr/docs/Web/CSS/Reference/Properties/background-position-y)
-- [`background-position-inline`](/fr/docs/Web/CSS/background-position-inline)
-- [`background-position-block`](/fr/docs/Web/CSS/background-position-block)
-- [`transform-origin`](/fr/docs/Web/CSS/Reference/Properties/transform-origin)
+- La propriété {{CSSxRef("background-position-x")}}
+- La propriété {{CSSxRef("background-position-y")}}
+- [Utiliser plusieurs arrières-plans](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
+- La propriété {{CSSxRef("transform-origin")}}
