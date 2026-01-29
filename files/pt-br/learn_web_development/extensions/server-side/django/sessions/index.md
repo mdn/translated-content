@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Sessions
 original_slug: Learn/Server-side/Django/Sessions
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication_and_sessions", "Learn_web_development/Extensions/Server-side/Django")}}Esse tutorial estende nosso site [LocalLibrary](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), adicionando um contador de visitas baseado em sessões à página inicial. Esse é um exemplo relativamente simples, mas capaz de mostrar como você pode usar a estrutura de sessão do framework para providenciar um comportamento persistente para usuários anônimos em seu próprio site.
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication_and_sessions", "Learn_web_development/Extensions/Server-side/Django")}}Esse tutorial estende nosso site [LocalLibrary](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), adicionando um contador de visitas baseado em sessões à página inicial. Esse é um exemplo relativamente simples, mas capaz de mostrar como você pode usar a estrutura de sessão do framework para providenciar um comportamento persistente para usuários anônimos em seu próprio site.
 
 <table class="learn-box standard-table">
   <tbody>
