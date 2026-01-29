@@ -1,10 +1,13 @@
 ---
 title: path()
 slug: Web/CSS/Reference/Values/basic-shape/path
-original_slug: Web/CSS/basic-shape/path
+l10n:
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**`path()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 SVG のパス文字列を受け取り、 [CSS シェイプ](/ja/docs/Web/CSS/Guides/Shapes)や CSS モーションパスで描画される形状を有効にするために使用します。
+**`path()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、[SVG パス](/ja/docs/Web/SVG/Reference/Element/path)文字列を受け取り、 [CSS シェイプ](/ja/docs/Web/CSS/Guides/Shapes)や CSS モーションパスで描かれるを図形を有効にするために使用します。`path()` 関数は、{{cssxref("basic-shape")}} データ型の値です。これは、CSS の {{cssxref("offset-path")}} および {{cssxref("clip-path")}} プロパティ、それに SVG の [`d`](/ja/docs/Web/SVG/Reference/Attribute/d) 属性で使用できます。
+
+`path()` 関数を使用する際にはいくつかの制限があります。パスは単一の文字列として定義する必要があるため、変数（`var()` 関数）を使用して独自のパスを作成することはできません。同時に、パス内のすべての長さは暗黙的に[ピクセル](/ja/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#絶対的な長さの単位) (`px`) 単位で定義され、それ以外の単位は使用できません。[`shape()`](/ja/docs/Web/CSS/Reference/Values/basic-shape/shape) 関数は `path()` 関数よりも柔軟性があります。
 
 {{InteractiveExample("CSS デモ: path()")}}
 
@@ -33,11 +36,11 @@ clip-path: path(
 
 ```css interactive-example
 #default-example {
-  background: #fe9;
+  background: #ffee99;
 }
 
 #example-element {
-  background: linear-gradient(to bottom right, #f52, #05f);
+  background: linear-gradient(to bottom right, #ff5522, #0055ff);
   width: 100%;
   height: 100%;
 }
@@ -45,42 +48,91 @@ clip-path: path(
 
 ## 構文
 
-{{cssxref("offset-path")}} や {{SVGAttr("d")}} で使用する場合:
-
 ```css
-path(<string>)
-```
+path("M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80")
 
-{{cssxref("clip-path")}} で使用する場合:
-
-```css
-path([<'fill-rule'>,]?<string>)
+/* clip-path のみで使用される */
+path(evenodd,"M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80")
 ```
 
 ### 引数
 
-- `<'fill-rule'>`
-  - : パス内の塗りつぶしルールです。
-    指定可能な値は `nonzero` または `evenodd` です。
-    既定値は `nonzero` です。
-    詳細は[塗りつぶしルール](/ja/docs/Web/SVG/Reference/Attribute/fill-rule)を参照してください。
-- `<string>`
-  - : 文字列で、[SVG パス](/ja/docs/Web/SVG/Reference/Element/path)を定義する[データ文字列](/ja/docs/Web/SVG/Reference/Attribute/d)です。
+- [`<fill-rule>`](/ja/docs/Web/SVG/Reference/Attribute/fill-rule) {{optional_inline}}
+  - : パス内の塗りつぶしルールです。指定可能な値は次の通りです。
+    - `nonzero`: ある点が図形の内側にあるとみなされるのは、点から描画された光線がパス区間を左から右へ通過する数が右から左へ通過する数よりも多く、その結果がゼロ以外の値となる場合です。これが、`<fill-rule>` が省略された場合のデフォルト値です。
+
+    - `evenodd`: ある点が図形の内側にあるとみなされるのは、その点から引かれた光線が横切るパス区間の数が奇数の場合です。これは、光線が図形に入るたびに、同数の回数だけ出ていないことを意味し、対応する出口のない奇数の進入回数を示します。
+
+    > [!WARNING]
+    > `<fill-rule>` は {{cssxref("offset-path")}} では対応しておらず、使用するとプロパティが無効になります。
+
+- {{cssxref("string")}}
+  - : 引用符に囲まれた[データ文字列](/ja/docs/Web/SVG/Reference/Attribute/d)で、[SVG パス](/ja/docs/Web/SVG/Reference/Element/path)を定義します。SVG パスデータ文字列には、[パスコマンド](/ja/docs/Web/SVG/Reference/Attribute/d#パスコマンド)が含まれており、暗黙的にピクセル単位を使用します。空のパスは無効と見なされます。
+
+### 返値
+
+{{cssxref("basic-shape")}} 値を返します。
+
+## 形式文法
+
+{{csssyntax}}
 
 ## 例
 
-### path() の正しい値の例
+### `path()` 関数を `offset-path` 値として使用
 
-```css
-path("M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
-path(evenodd,"M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
+次の例では、ボールが移動する楕円形のパスを作成するために、`path()` 関数が {{cssxref("offset-path")}} 値として指定されています。
+
+```html
+<div id="path">
+  <div id="ball"></div>
+</div>
+<button>アニメーション</button>
 ```
 
-### offset-path の値として使用
+```css
+#path {
+  margin: 40px;
+  width: 400px;
+  height: 200px;
 
-`path()` 関数が、アイテムが一周するためのパスを作成するために使用されています。いずれかの値を変更すると、パスがきれいに円を描かなくなります。
+  /* 灰色の坂を描画 */
+  background: radial-gradient(at 50% 0%, transparent 70%, grey 70%, grey 100%);
+}
 
-{{EmbedGHLiveSample("css-examples/path/offset-path.html", '100%', 960)}}
+#ball {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 50%;
+
+  /* 楕円形のパスをマーク */
+  offset-path: path("M 15 15 A 6 5.5 10 0 0 385 15");
+}
+```
+
+```js
+const btn = document.querySelector("button");
+const ball = document.getElementById("ball");
+
+btn.addEventListener("click", () => {
+  btn.setAttribute("disabled", true);
+  setTimeout(() => btn.removeAttribute("disabled"), 6000);
+
+  ball.animate(
+    // オフセットのパスをアニメーション
+    { offsetDistance: [0, "100%"] },
+    {
+      duration: 1500,
+      iterations: 4,
+      easing: "cubic-bezier(.667,0.01,.333,.99)",
+      direction: "alternate",
+    },
+  );
+});
+```
+
+{{EmbedLiveSample("Use as the value of offset-path", "100%", 350)}}
 
 ### SVG パスで d 属性の値を変更する
 
@@ -97,7 +149,7 @@ svg {
   height: 100%;
 }
 
-/* This path is displayed on hover*/
+/* ホバー時にこのパスを表示 */
 #svg_css_ex1:hover path {
   d: path("M20,80 L50,20 L80,80");
 }
@@ -126,6 +178,6 @@ svg {
 ## 関連情報
 
 - {{cssxref("&lt;shape-outside&gt;")}}
-- [CSS シェイプ](/ja/docs/Web/CSS/Guides/Shapes)
+- [CSS シェイプ](/ja/docs/Web/CSS/Guides/Shapes)モジュール
 - [CSS シェイプの概要](/ja/docs/Web/CSS/Guides/Shapes/Overview)
-- [SVG Path Syntax Illustrated Guide](https://css-tricks.com/svg-path-syntax-illustrated-guide/)
+- [The SVG `path` syntax: an illustrated guide](https://css-tricks.com/svg-path-syntax-illustrated-guide/) - CSS-tricks (2021)

@@ -1,9 +1,8 @@
 ---
 title: <basic-shape>
 slug: Web/CSS/Reference/Values/basic-shape
-original_slug: Web/CSS/basic-shape
 l10n:
-  sourceCommit: 511208efe18c7a042bad9859dc797e944a1c16ed
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`<basic-shape>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、{{cssxref("clip-path")}}、{{cssxref("shape-outside")}}、{{cssxref("offset-path")}} の各プロパティで使用されるシェイプを表します。
@@ -49,11 +48,11 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
 
 ```css interactive-example
 #default-example {
-  background: #fe9;
+  background: #ffee99;
 }
 
 #example-element {
-  background: linear-gradient(to bottom right, #f52, #05f);
+  background: linear-gradient(to bottom right, #ff5522, #0055ff);
   width: 100%;
   height: 100%;
 }
@@ -61,128 +60,154 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
 
 ## 構文
 
-`<basic-shape>` データ型は、以下に挙げた基本シェイプ関数のうちの一つで定義します。
+`<basic-shape>` データ型は、[コンテナーの辺からの距離](#コンテナーの辺からの距離による矩形の構文)、[座標距離](#座標による矩形の構文)、[一連の寸法](#寸法による矩形の構文)によって生成する矩形、[円](#円の構文)、[楕円](#楕円の構文)、[多角形](#多角形の構文)、[パス](#パスの構文)、それに[作成者が生成したシェイプ](#シェイプの構文)などを生成します。これらの基本シェイプは、1 つの `<basic_shape>` CSS 関数を使用して定義され、それぞれの値にはシェイプ固有の構文に従う引数が必要です。
 
-シェイプを作成するときは、 `<basic-shape>` の値を使用するそれぞれのプロパティで参照ボックスを定義します。シェイプの座標系は参照ボックスの左上隅が原点で、X 座標が右方向、Y 座標が下方向になります。パーセント値で表現された長さはすべて、参照ボックスの寸法を使用して算出されます。
+### 共通の引数
 
-既定の参照ボックスは `margin-box` であり、`shape-outside: circle(50%)` を使用して円を生成すると下記のようになります。形状はマージンボックスを参照して定義されています。
+いくつかの基本シェイプ関数に共通する引数には、以下のものがあります。
 
-![Firefox DevTools の Shape Inspector で円を検査している図。ボックスモデルのさまざまな部分が強調表示されています。](shapes-reference-box.png)
+- `round <'border-radius'>`
+  - : 角丸を定義します。[コンテナーの辺からの距離による矩形](#コンテナーの辺からの距離による矩形の構文)、 [距離による矩形](#座標による矩形の構文)、および[寸法による矩形](#寸法による矩形の構文)を定義します。これらは CSS の {{cssxref("border-radius")}} 一括指定プロパティと同じ構文を使用します。
 
-### シェイプ関数
+- `<shape-radius>`
+  - : [円](#円の構文)または[楕円](#楕円の構文)の半径を定義します。有効な値には、{{cssxref("length")}}、{{cssxref("percentage")}}、`closest-side`（デフォルト）、`farthest-side` があります。負の値は無効です。
 
-以下のシェイプに対応しています。`<basic-shape>` 値はすべて関数表記であり、[値定義構文](/ja/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)で定義されます。
+    `closest-side` キーワード値は、シェイプの中心から参照ボックスの最も近い辺までの距離を用いて半径の長さを作成します。`farthest-side` キーワード値は、シェイプの中心から参照ボックスの最も遠い辺までの距離を用います。
 
-- `{{cssxref("basic-shape/inset","inset()")}}`
-  - : 内部の長方形を定義します。
+- `<position>`
+  - : [円](#円の構文)または[楕円](#楕円の構文)の中心位置 ({{cssxref("&lt;position&gt;")}}) を定義します。省略した場合、デフォルトは `center` です。
 
-    ```css
-    inset( <length-percentage>{1,4} [ round <`border-radius`> ]? )
-    ```
+- `<fill-rule>`
+  - : 塗りつぶしルール ({{SVGAttr("fill-rule")}}) を設定します。これは基本シェイプの[多角形](#多角形の構文)、[パス](#パスの構文)、[シェイプ](#シェイプの構文)で定義されたシェイプの内部を塗りつぶす方法を決定します。可能な値は `nonzero`（デフォルト）と `evenodd` です。
 
-    最初の 4 つの引数が与えられたときは、参照ボックス内部のそれぞれ上、右、下、左からみた、内部の矩形における各辺の位置を定義するオフセットを表します。これらの引数は {{cssxref("margin")}} 一括指定の構文に従い、1 つ、2 つ、3 つ、4 つの値で全四辺を設定することができます。
+    > [!NOTE]
+    > `<fill-rule>` は {{cssxref("offset-path")}} では対応しておらず、使用するとプロパティが無効になります。
 
-    オプションの `round <'border-radius'>` 引数は、内部の矩形の角の丸みを、 CSS の [`border-radius`](/ja/docs/Web/CSS/Reference/Properties/border-radius) 一括指定プロパティと同じ構文を使用して定義します。
+### 矩形の構文: `<basic-shape-rect>`
 
-    内部の矩形で 2 つの距離の組み合わせが、その軸の長さを超えていた場合（たとえば左右の距離がそれぞれ 75% に設定された場合など）は、何も領域を囲まないシェイプを定義します。この仕様書によれば、これは空の浮動領域を生成します。
+`<basic-shape-rect>` 型は `<basic-shape>` 型のサブセットであり、{{cssxref("basic-shape/inset","inset()")}}、{{cssxref("basic-shape/rect","rect()")}}、{{cssxref("basic-shape/xywh","xywh()")}} など、矩形を生成することに限定された基本シェイプ関数を表します。
 
-- `{{cssxref("basic-shape/rect","rect()")}}`
-  - : 参照ボックスの上端と左端から指定した距離を用いて矩形を定義します。
+[`polygon()`](/ja/docs/Web/CSS/Reference/Values/basic-shape/polygon)、[`path()`](/ja/docs/Web/CSS/Reference/Values/basic-shape/path)、[`shape()`](/ja/docs/Web/CSS/Reference/Values/basic-shape/shape) 関数も矩形を生成するために使用できますが、これらは四辺形かつ直角の形状に限定されません。
 
-    ```css
-    rect( [ <length-percentage> | auto ]{4} [ round <`border-radius`> ]? )
-    ```
+#### コンテナーの辺からの距離による矩形の構文
 
-    矩形を作成するためには 4 つの値を指定します。 4 つの値はそれぞれ `<length>` か `<percentage>` かキーワード `auto` です。 `rect()` 関数を使用する場合、矩形の幅と高さは定義しません。矩形の寸法は、参照ボックスのサイズとオフセット値に依存します。
+{{cssxref("basic-shape/inset","inset()")}} 関数は、変からの距離で矩形を生成します。そのサイズは、コンテナーの 4 つの辺それぞれからの距離によって定義され、オプションで角を丸めることもできます。
 
-    オプションの `round <'border-radius'>` 引数は、内部の矩形の角の丸みを、 CSS の [`border-radius`](/ja/docs/Web/CSS/Reference/Properties/border-radius) 一括指定プロパティと同じ構文を使用して定義します。
-
-- `{{cssxref("basic-shape/xywh","xywh()")}}`
-  - : 参照ボックスの上端と左端からの指定された距離と、指定された矩形の幅と高さを用いて矩形を定義します。
-
-    ```css
-    xywh( <length-percentage>{2} <length-percentage [0,∞]>{2} [ round <`border-radius`> ]? )
-    ```
-
-    オプションの `round <'border-radius'>` 引数は、内部の矩形の角の丸みを、 [`border-radius`](/ja/docs/Web/CSS/Reference/Properties/border-radius) 一括指定の構文を使用して定義します。
-
-- `{{cssxref("basic-shape/circle","circle()")}}`
-  - : 半径と位置を使用して円を定義します。
-
-    ```css
-    circle( <shape-radius>? [ at <position> ]? )
-    ```
-
-    引数 `<shape-radius>` は _r_、つまり円の半径を表します。負の数は無効です。ここでパーセント値を指定すると、参照ボックスの幅と高さを使用して `sqrt(width^2+height^2)/sqrt(2)` としての割合になります。
-
-    引数 {{cssxref("&lt;position&gt;")}} は円の中心を定義します。省略時は既定で中央になります。
-
-- `{{cssxref("basic-shape/ellipse","ellipse()")}}`
-  - : 2 つの半径と位置を使用して楕円を定義します。
-
-    ```css
-    ellipse( [ <shape-radius>{2} ]? [ at <position> ]? )
-    ```
-
-    引数 `<shape-radius>` は、rx と ry、つまり楕円の横半径と縦半径を、この順で表します。どちらの半径も負の値は無効です。ここでパーセント値を指定すると、参照ボックスの幅 (rx 値の場合) と高さ (ry 値の場合) に対する割合になります。
-
-    引数 position は楕円の中心を定義します。省略時は既定で中央になります。
-
-- `{{cssxref("basic-shape/polygon","polygon()")}}`
-  - : SVG の {{SVGAttr("fill-rule")}} と一連の頂点を使用して多角形を定義します。
-
-    ```css
-    polygon( <fill-rule>? [ <shape-arg> <shape-arg> ]# )
-    ```
-
-    `<fill-rule>` は多角形の内部を決めるために使用される塗りつぶし規則 ({{SVGAttr("fill-rule")}}) を表します。指定可能な値は `nonzero` と `evenodd` です。省略時の既定値は `nonzero` です。
-
-    リスト内にある引数の組は、 _xi_ および _yi_ すなわち多角形の i 番目の頂点の X 座標と Y 座標を表します。
-
-- `{{cssxref("path","path()")}}`
-  - : SVG の {{SVGAttr("fill-rule")}} と SVG の[パス定義](/ja/docs/Web/SVG/Reference/Attribute/d)を使用してシェイプを定義します。
-
-    ```css
-    path( [ <fill-rule>, ]? <string> )
-    ```
-
-    省略可能な `<fill-rule>` は多角形の内部を決めるために使用される塗りつぶし規則 ({{SVGAttr("fill-rule")}}) を表します。指定可能な値は `nonzero` と `evenodd` です。省略時の既定値は `nonzero` です。
-
-    必須の \<string> は、引用符で囲まれた [SVG パス](/ja/docs/Web/SVG/Reference/Attribute/d)です。
-
-上記で定義されていない引数は、以下のように定義されています。
-
-```css
-<shape-arg> = <length> | <percentage>
-<shape-radius> = <length> | <percentage> | closest-side | farthest-side
+```plain
+inset( <length-percentage>{1,4} [ round <'border-radius'> ]? )
 ```
 
-円や楕円の半径を定義します。省略時の既定値は `closest-side` です。
+最初の 4 つの引数が与えられたときは、参照ボックス内部のそれぞれ上、右、下、左からみた、内部の矩形における各辺の位置を定義するオフセットを表します。これらの引数は {{cssxref("margin")}} 一括指定の構文に従い、1 つ、2 つ、3 つ、4 つの値で全四辺を設定することができます。
 
-`closest-side` はシェイプの中心から参照ボックスの最も近い辺までの距離を使用します。円の場合、これはあらゆる方向で最も近い辺です。楕円の場合、その軸で最も近い辺です。
+ある寸法に対する辺からの距離のペアの合計がその寸法の 100% を超える場合、両方の値は比例して縮小され、その合計が 100% になるように調整されます。例えば、`inset(90% 10% 60% 10%)` の値では、上部の辺からの距離が `90%`、下部の辺からの距離が `60%` となります。これらの値は `inset(60% 10% 40% 10%)` に比例して縮小されます。領域を囲まず、{{cssxref("shape-margin")}} を持たないこのようなシェイプは、折り返しに影響を与えません。
 
-`farthest-side` はシェイプの中心から参照ボックスの最も遠い辺までの距離を使用します。円の場合、これはあらゆる方向で最も遠い辺です。楕円の場合、その軸で最も遠い辺です。
+#### 座標による矩形の構文
+
+{{cssxref("basic-shape/rect","rect()")}} 関数は、参照ボックスの上端および左端からの指定距離を用いて矩形を定義し、オプションで角を丸めることができます。
+
+```plain
+rect( [ <length-percentage> | auto ]{4} [ round <'border-radius'> ]? )
+```
+
+`rect()`関数を使用する場合、矩形の幅と高さを定義しません。代わりに、参照ボックスのサイズと 4 つのオフセット値によって決定される矩形を作成するために、4 つの値を指定します。それぞれの値は {{cssxref("length")}}、{{cssxref("percentage")}}、キーワード値 `auto` のいずれかです。`auto` キーワードは、上辺と左辺の値では `0%`、下辺と右辺の値では `100%` として解釈されます。
+
+#### 寸法による矩形の構文
+
+{{cssxref("basic-shape/xywh","xywh()")}} 関数は、参照ボックスの左端 (`x`) および上端 (`y`) からの指定距離に位置し、指定された幅 (`w`) と高さ (`h`) で大きさが定義される矩形を定義します。角の丸めはオプションです。
+
+```plain
+xywh( <length-percentage>{2} <length-percentage [0,∞]>{2} [ round <'border-radius'> ]? )
+```
+
+### 円の構文
+
+{{cssxref("basic-shape/circle","circle()")}} 関数は、半径と位置を使用して円を定義します。
+
+```plain
+circle( <shape-radius>? [ at <position> ]? )
+```
+
+引数 `<shape-radius>` は円の半径を {{cssxref("length")}} または {{cssxref("percentage")}} で表します。ここでパーセント値は、参照ボックスの幅と高さを使用して `sqrt(width^2+height^2)/sqrt(2)` としての割合になります。省略された場合、半径は `closest-side` で定義されます。
+
+### 楕円の構文
+
+{{cssxref("basic-shape/ellipse","ellipse()")}} 関数は、2 つの半径と位置を用いて楕円を定義します。
+
+```plain
+ellipse( [ <shape-radius>{2} ]? [ at <position> ]? )
+```
+
+引数 `<shape-radius>` は、_rx_ と _ry_、つまり楕円の X 軸半径と Y 軸半径を、この順で表します。これらの値は {{cssxref("length")}} または {{cssxref("percentage")}} で指定します。ここでパーセント値を指定すると、参照ボックスの使用幅（rx 値）および使用高（ry 値）に対して解決されます。半径値が 1 つしか指定されていない場合、`ellipse()` シェイプ関数は不正となります。値が指定されていない場合は、`50% 50%` が使用されます。
+
+### 多角形の構文
+
+{{cssxref("basic-shape/polygon","polygon()")}} 関数は、塗りつぶしルール（SVG の {{SVGAttr("fill-rule")}}）と座標の集合を使用して多角形を定義します。
+
+```plain
+polygon( <'fill-rule'>? , [ <length-percentage> <length-percentage> ]# )
+```
+
+この関数は、カンマ区切りの座標ペアのリストを受け取ります。それぞれのペアは空白で区切られた 2 つの `<length-percentage>` 値で構成され、_xi_ と _yi_ のペアを表します。これらの値は、位置 _i_（2 本の線が交わる頂点）における多角形の x 軸および y 軸座標を表します。
+
+### パスの構文
+
+{{cssxref("basic-shape/path","path()")}} 関数は、SVG の塗りつぶしルール ({{SVGAttr("fill-rule")}}) と[パス定義](/ja/docs/Web/SVG/Reference/Attribute/d)を使用してシェイプを定義します。
+
+```plain
+path( <'fill-rule'>? , <string> )
+```
+
+必須の `<string>` は、引用符で囲まれた文字列として指定される [SVG パス] (/ja/docs/Web/SVG/Reference/Attribute/d) です。`path()` 関数は {{cssxref("shape-outside")}} プロパティの値としては有効ではありません。
+
+### シェイプの構文
+
+{{cssxref("basic-shape/shape","shape()")}} 関数は、最初の始点と一連のシェイプコマンドを用いてシェイプを定義します。
+
+```plain
+shape( <'fill-rule'>? from <coordinate-pair> , <shape-command># )
+```
+
+`from <coordinate-pair>` 引数は最初のシェイプコマンドの始点を表し、`<shape-command>` は 1 つ以上のシェイプコマンドを定義します。これらは [SVG パスコマンド](/ja/docs/Web/SVG/Reference/Attribute/d#パスコマンド) に類似しています。`shape()` 関数は {{cssxref("shape-outside")}} プロパティの値としては有効ではありません。
 
 ## 解説
 
+シェイプを定義する際、参照ボックスは `<basic-shape>` の値を使用するプロパティによって規定されます。シェイプの座標系は、デフォルトで要素のマージンボックスの左上角を原点とし、x軸は右方向、y軸は下方向に向かいます。パーセント値で表現されるすべての長さは、参照ボックスのサイズから解決されます。
+
+デフォルトの参照ボックスは [`margin-box`](/ja/docs/Web/CSS/Reference/Values/box-edge#margin-box) であり、下記画像に示した通りです。この画像は `shape-outside: circle(50%)` を使用して生成された円を示し、ブラウザーの開発者ツールで確認できるボックスモデルの異なる部分を強調しています。ここで定義されているシェイプはマージンボックスを参照して定義されています。
+
+![Firefox 開発者ツールのシェイプインスペクターで検査した円の画像。ボックスモデルの異なる部分が強調表示されています。](shapes-reference-box.png)
+
 ### 基本シェイプの計算値
 
-`<basic-shape>` 関数の中の値は、以下の例外を除けば、規定通りに計算されます。
+`<basic-shape>` 関数のにおける値は、以下の条件を除けば、規定通りに計算されます。
 
-- 省略された値は既定値として含められ計算されます。
-- {{cssxref("&lt;position&gt;")}} 値が `circle()` または `ellipse()` で使用されると、それぞれを絶対的な長さやパーセント値で指定し、左上を原点とした (水平と垂直) オフセットの組として計算されます。
-- [`<border-radius>`](/ja/docs/Web/CSS/Reference/Properties/border-radius) が `inset()` で使用されると、全 8 つの {{cssxref("length")}} またはパーセント値のリストとして展開され計算されます。
+- 省略された値は、デフォルト値が用いられます。
+- {{cssxref("position_value", "&lt;position&gt;")}} 値が `circle()` または `ellipse()` で使用されると、参照ボックスの左上角からのオフセットのペアとして計算されます。最初のオフセットは水平方向、2つ目のは垂直方向です。それぞれのオフセットは {{cssxref("length-percentage")}} 値で指定されます。
+- [`<border-radius>`](/ja/docs/Web/CSS/Reference/Properties/border-radius) の値が `inset()` で使用されると、全 8 つの {{cssxref("length")}} または {{cssxref("percentage")}} のリストとして展開されます。
+- {{cssxref("basic-shape/inset","inset()")}}、{{cssxref("basic-shape/rect","rect()")}}、{{cssxref("basic-shape/xywh","xywh()")}} 関数は同等の `inset()` 関数に計算されます。
 
 ### 基本シェイプの補間
 
-ある `<basic-shape>` と他のものの間でアニメーションが行われるとき、以下の規則が適用されます。シェイプ関数の中の値は単なるリストとして{{Glossary("interpolation", "補間")}}が行われます。リストの値は可能であれば {{cssxref("&lt;length&gt;")}}、 {{cssxref("&lt;percentage&gt;")}}、 {{cssxref("calc", "calc()")}} として補間されます。リストの値がこれらの型以外で同じであれば、それらの値は補間が行われます。
+2 つの `<basic-shape>` 関数間でアニメーションを行う場合、以下の{{Glossary("interpolation", "補間処理")}}ルールが続きます。それぞれの `<basic-shape>` 関数の引数値はリストを形成します。2 つのシェイプ間での補間処理が行われるためには、両方のシェイプが同じ参照ボックスを使用し、両方の `<basic-shape>` リスト内の値の数と種類が一致している必要があります。
 
-- どちらのシェイプも同じ参照ボックスを使う必要があります。
-- 両方のシェイプが同じ型で、型が `ellipse()` または `circle()` で、半径に `closest-side` または `farthest-side` のキーワードが使われていない場合、シェイプ関数のそれぞれの値の間で補間が行われます。
-- 両方のシェイプの型が `inset()` の場合、シェイプ関数のそれぞれの値の間で補間が行われます。
-- 両方のシェイプの型が `polygon()` で、両方の多角形が同じ数の角を持っており、同じ `<fill-rule>` を使用している場合、シェイプ関数のそれぞれの値の間で補間が行われます。
-- 両方のシェイプの型が `path()` の場合、両方の文字列が同じ数でパスデータコマンドの型が同じ順序であれば、実数でそれぞれのパスデータコマンドが補間されます。
-- それ以外の場合は補間が行われません。
+2 つの `<basic-shape>` 関数のリスト内のそれぞれの値は、その計算値が {{cssxref("number")}}、{{cssxref("length")}}、{{cssxref("percentage")}}、{{cssxref("angle")}}、{{cssxref("calc()")}} として計算された値に基づいて補間処理が行われます。値がこれらのデータ型に該当しない場合でも、補間対象の 2 つの基本シェイプ関数間で値が同一である場合（`nonzero` など）、補間処理が行われることがあります。
+
+- **両方のシェイプが `ellipse()` または `circle()` 型の場合**: 補間処理は、それぞれの対応する値の半径が {{cssxref("length")}} または {{cssxref("percentage")}}（`closest-side` や `farthest-side` などのキーワードではなく）で指定されている場合に適用されます。
+
+- **両方のシェイプが `inset()` 型の場合**: それぞれの対応する値の間に補間処理が適用されます。
+
+- **両方のシェイプが `polygon()` 型の場合**: 補間処理は、対応するそれぞれの値が同じ `<fill-rule>` を使用し、カンマ区切りの座標ペアの数が同じ場合に適用されます。
+
+- **両方のシェイプが `path()` 型の場合**: 補間処理は、両方の図形のパス文字列の[パスデータコマンド](/ja/docs/Web/SVG/Reference/Attribute/d#path_commands)の数、種類、順序が一致する場合、それぞれの引数に対して {{cssxref("&lt;number&gt;")}} として適用されます。
+
+- **両方のシェイプが `shape()` 型の場合**: 対応するそれぞれの値間で補間処理が適用されます。これらは同一のコマンドキーワードを持ち、同じ `<by-to>` キーワードを使用している場合に限ります。{{cssxref("clip-path")}} プロパティで `shape()` が使用されている場合、2 つの図形は同時に同じ `<fill-rule>` も持っている場合に補間されます。
+  - `<curve-command>` または `<smooth-command>` を使用した場合は、制御点の数が一致すると補間処理が行われます。
+
+  - `<arc-command>` を異なる `<arc-sweep>` 方向で使用した場合、補間結果は時計回り (`cw`) になります。異なる `<arc-size>` キーワードを使用した場合、サイズは `large` 値を用いて補間されます。
+
+- **一方の図形が `path()` 型で、もう一方が `shape()` 型であった場合**: パスデータコマンドのリストが数と順序の両方で同一である場合、それぞれの対応する値の間に補間処理が適用されます。補間された図形は `shape()` 関数であり、同じパスデータコマンドのリストを維持します。
+
+それ以外の場合、補間処理は行われず、アニメーションは離散的になります。
 
 ## 例
 
@@ -260,7 +285,10 @@ div {
 
 ## 関連情報
 
-- このデータ型を使用するプロパティ: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
-- [CSS シェイプ](/ja/docs/Web/CSS/Guides/Shapes)モジュール
+- このデータ型を使用するプロパティ: {{cssxref("clip-path")}}, {{cssxref("offset-path")}}, {{cssxref("shape-outside")}}
+- SVG のシェイプ要素: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
 - [CSS シェイプの概要](/ja/docs/Web/CSS/Guides/Shapes/Overview)
+- [CSS シェイプ](/ja/docs/Web/CSS/Guides/Shapes)モジュール
+- [CSS マスク入門](/ja/docs/Web/CSS/Guides/Masking/Introduction)
+- [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール
 - [CSS シェイプのパスを編集する — Firefox 開発者ツール](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html)

@@ -1,12 +1,11 @@
 ---
 title: polygon()
 slug: Web/CSS/Reference/Values/basic-shape/polygon
-original_slug: Web/CSS/basic-shape/polygon
 l10n:
-  sourceCommit: c5613708408042af5889be39cfb203799879175b
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**`polygon()`** は [CSS](/ja/docs/Web/CSS) の関数で、{{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)の一つです。[多角形](https://ja.wikipedia.org/wiki/多角形)を描画するために使用します。 1 つ以上の座標のペアを指定し、それぞれが形状の頂点を表します。
+**`polygon()`** は [CSS](/ja/docs/Web/CSS) の関数で、{{cssxref("basic-shape")}} [データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)の一つです。[多角形](https://ja.wikipedia.org/wiki/多角形)を描画するために使用します。 1 つ以上の座標のペアを指定し、それぞれが図形の頂点を表します。
 
 {{InteractiveExample("CSS デモ: polygon()")}}
 
@@ -34,11 +33,11 @@ clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 
 ```css interactive-example
 #default-example {
-  background: #fe9;
+  background: #ffee99;
 }
 
 #example-element {
-  background: linear-gradient(to bottom right, #f52, #05f);
+  background: linear-gradient(to bottom right, #ff5522, #0055ff);
   width: 100%;
   height: 100%;
 }
@@ -62,7 +61,7 @@ polygon(evenodd, 0% 0%, 50% 50%, 0% 100%)
 
 `polygon()` の引数はカンマとオプションの空白で区切られます。最初の引数はオプションの [`<fill-rule>`](/ja/docs/Web/SVG/Reference/Attribute/fill-rule) 値です。追加の引数は多角形を定義する点です。この点はそれぞれ x/y 座標 {{cssxref("length-percentage")}} の値を空間で区切ったもので、例えば左/上隅は "0 0"、右下隅は "100% 100%" となります。
 
-メモ: SVG の [`<polygon>`](/ja/docs/Web/SVG/Reference/Element/polygon) 要素には、[`fill-rule`](/ja/docs/Web/SVG/Reference/Attribute/fill-rule) と [`points`](/ja/docs/Web/SVG/Reference/Attribute/points) の独立した属性があり、`points` は区切り文字としてスペースとカンマを柔軟に使用できます。 CSS の `polygon()` では区切り文字に対するルールは厳密に適用されます。
+メモ: SVG の [`<polygon>`](/ja/docs/Web/SVG/Reference/Element/polygon) 要素には、[`fill-rule`](/ja/docs/Web/SVG/Reference/Attribute/fill-rule) と [`points`](/ja/docs/Web/SVG/Reference/Attribute/points) の独立した属性があり、`points` は区切り文字として空白とカンマを柔軟に使用できます。 CSS の `polygon()` では区切り文字に対するルールは厳密に適用されます。
 
 ### 値
 
@@ -98,7 +97,7 @@ clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 
 これは、左上 (`0% 0%`), 右上 (`100% 0%`), 右下 (`100% 100%`), 左下 (`0% 100%`) の 4 つの角の座標を指定することで、親コンテンツの大きさの長方形の図形を作成します。
 
-## 公式定義
+## 形式文法
 
 {{csssyntax}}
 
