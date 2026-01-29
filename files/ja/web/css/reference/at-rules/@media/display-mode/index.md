@@ -1,16 +1,15 @@
 ---
 title: display-mode
 slug: Web/CSS/Reference/At-rules/@media/display-mode
-original_slug: Web/CSS/@media/display-mode
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`display-mode`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、ウェブアプリが通常のブラウザータブで表示されているか、スタンドアロンアプリや全画面モードなどの別の方法で表示されているかを検査することができます。
 
 例えば、
 
-- [プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps)は、マニフェストで [`display`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/display) メンバーを設定することで、[表示モードを設定することができます](/ja/docs/Web/Progressive_web_apps/How_to/Create_a_standalone_app)。この場合、 `display-mode` の値は、設定された値を識別します（ただし、リクエストされたモードにブラウザーが対応していない場合があるため、マニフェストでリクエストされた値と同じではない場合があることに注意してください）。
+- [プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps)では、マニフェストで [`display`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/display) メンバーを設定することで、[表示モードを設定することができます](/ja/docs/Web/Progressive_web_apps/How_to/Create_a_standalone_app)。この場合、 `display-mode` の値は、設定された値を識別します（ただし、リクエストされたモードにブラウザーが対応していない場合があるため、マニフェストでリクエストされた値と同じではない場合があることに注意してください）。
 
 - どのウェブアプリも、[全画面 API](/ja/docs/Web/API/Fullscreen_API) または[文書ピクチャインピクチャ API](/ja/docs/Web/API/Document_Picture-in-Picture_API) を使用して表示モードを設定することができます。この場合、 `display-mode` の値が設定されたモードを識別します。
 
@@ -38,7 +37,7 @@ l10n:
 ### 端末が全画面モード時に使用される CSS
 
 ```css
-@media all and (display-mode: fullscreen) {
+@media (display-mode: fullscreen) {
   body {
     margin: 0;
     border: 5px solid black;
@@ -59,7 +58,7 @@ l10n:
 
 @media (display-mode: picture-in-picture) and (prefers-color-scheme: dark) {
   body {
-    background: #333;
+    background: #333333;
   }
 
   a {

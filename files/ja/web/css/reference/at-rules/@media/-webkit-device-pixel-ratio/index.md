@@ -1,15 +1,14 @@
 ---
 title: -webkit-device-pixel-ratio
 slug: Web/CSS/Reference/At-rules/@media/-webkit-device-pixel-ratio
-original_slug: Web/CSS/@media/-webkit-device-pixel-ratio
 l10n:
-  sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`-webkit-device-pixel-ratio`** は [CSS](/ja/docs/Web/CSS) の標準外の論理[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、標準の [`resolution`](/ja/docs/Web/CSS/Reference/At-rules/@media/resolution) メディア特性の代替です。
 
 > [!NOTE]
-> 可能であれば、代わりに標準のメディア特性である [`resolution`](/ja/docs/Web/CSS/Reference/At-rules/@media/resolution) メディア特性クエリーを使用してください。子の接頭辞付きのメディアクエリーは WebKit の特性であり、他のブラウザーエンジンは対応していない可能性があります。下記の[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
+> できるだけ、代わりに標準のメディア特性である [`resolution`](/ja/docs/Web/CSS/Reference/At-rules/@media/resolution) メディア特性クエリーを使用してください。この接頭辞付きのメディアクエリーは WebKit の機能であり、他のブラウザーエンジンは対応していない可能性があります。下記の[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
 
 ## 構文
 
@@ -18,7 +17,7 @@ l10n:
 ### 値
 
 - {{cssxref("&lt;number&gt;")}}
-  - : CSS の [`px`](/ja/docs/Web/CSS/Reference/Values/length#absolute_length_units) を表すために使われるデバイスピクセルの数です。この値は `<number>` であり、構文的に単位を許可しておらず、暗黙の単位は [`dppx`](/ja/docs/Web/CSS/Reference/Values/resolution#units) です。
+  - : CSS の [`px`](/ja/docs/Web/CSS/Reference/Values/length#絶対的な長さの単位) を表すために使われるデバイスピクセルの数です。この値は `<number>` であり、構文的に単位を許可しておらず、暗黙の単位は [`dppx`](/ja/docs/Web/CSS/Reference/Values/resolution#単位) です。
 
 ## 実装
 

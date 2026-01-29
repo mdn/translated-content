@@ -1,15 +1,14 @@
 ---
 title: -webkit-transform-3d
 slug: Web/CSS/Reference/At-rules/@media/-webkit-transform-3d
-original_slug: Web/CSS/@media/-webkit-transform-3d
 l10n:
-  sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`-webkit-transform-3d`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で [WebKit 拡張](/ja/docs/Web/CSS/Reference/Webkit_extensions)であり、ベンダー接頭辞付きの CSS 3D {{cssxref("transform")}} に対応していれば値が `true` になります。
 
 > [!NOTE]
-> このメディア特性は現在、[大部分のブラウザーで対応しています](#ブラウザーの互換性)が、可能であれば、代わりに {{cssxref("@supports")}} 機能クエリーを使用してください。
+> このメディア特性は現在、[大部分のブラウザーが対応しています](#ブラウザーの互換性)が、可能であれば、代わりに {{cssxref("@supports")}} 機能クエリーを使用してください。
 
 ## 構文
 

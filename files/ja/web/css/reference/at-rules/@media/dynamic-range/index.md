@@ -1,9 +1,8 @@
 ---
 title: dynamic-range
 slug: Web/CSS/Reference/At-rules/@media/dynamic-range
-original_slug: Web/CSS/@media/dynamic-range
 l10n:
-  sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`dynamic-range`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、{{glossary("user agent", "ユーザーエージェント")}}および出力機器が対応している明るさ、コントラスト比、および色深度の組み合わせを検査することができます。
