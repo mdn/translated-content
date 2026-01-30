@@ -38,7 +38,7 @@ Access-Control-Allow-Origin: *
 
 设置标头的指令取决于你的 Web 服务器。
 
-例如，在 **Apache**（[文档](https://httpd.apache.org/docs/2.4/mod/mod_headers.html#header)）中，将下面一行添加到服务器的配置中（在相应的 `<Directory>`、`<Location>`、`<Files>` 或 `<VirtualHost>` 部分中）。配置通常位于 `.conf`（`httpd.conf` 和 `apache.conf` 是这些文件的通用名称）或 `.htaccess` 文件中。
+例如，在 **Apache**（[文档](https://httpd.apache.org/docs/2.4/mod/mod_headers.html#header)），将下面一行添加到服务器的配置中（在相应的 `<Directory>`、`<Location>`、`<Files>` 或 `<VirtualHost>` 部分中）。配置通常位于 `.conf`（`httpd.conf` 和 `apache.conf` 是这些文件的通用名称）或 `.htaccess` 文件中。
 
 ```apacheconf
 Header set Access-Control-Allow-Origin 'https://example.com'
