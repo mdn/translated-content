@@ -15,7 +15,7 @@ l10n:
 此方法*不会*从拖拽操作中删除文件，因此如果在拖拽文件，则可能会在 {{domxref("DataTransfer.types")}} 列表中存在类型为 `"Files"` 的条目。
 
 > [!NOTE]
-> 因为拖拽操作只能在 {{domxref("HTMLElement/dragstart_event", "dragstart")}} 的处理器中存储其数据，因此你只能在该事件中调用此方法。
+> > 因为拖拽操作的数据存储只在 {{domxref("HTMLElement/dragstart_event", "dragstart")}} 的处理器中可写，因此你只能在此事件的处理器中调用此方法。
 
 ## 语法
 
@@ -56,6 +56,7 @@ span.tweaked {
   margin: 1em 0;
   padding: 1em 2em;
 }
+
 #source {
   color: blue;
   border: 1px solid black;
@@ -68,68 +69,76 @@ span.tweaked {
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", function () {
-  // 选择 HTML 元素
-  var draggable = document.getElementById("source");
-  var dropable = document.getElementById("target");
-  var status = document.getElementById("status");
-  var data = document.getElementById("data");
-  var dropped = false;
-  // 注册事件处理器
-  draggable.addEventListener("dragstart", dragStartHandler);
-  draggable.addEventListener("dragend", dragEndHandler);
-  dropable.addEventListener("dragover", dragOverHandler);
-  dropable.addEventListener("dragleave", dragLeaveHandler);
-  dropable.addEventListener("drop", dropHandler);
-  function dragStartHandler(event) {
-    status.textContent = "拖拽中";
-    // 修改目标元素的边框以表示已开始拖拽
-    event.currentTarget.style.border = "1px dashed blue";
-    // 首先清除现有的剪贴板内容；这将影响所有类型，因为我们没有指定特定类型。
-    event.dataTransfer.clearData();
-    // 设置拖拽的格式和数据（使用事件目标的 id 作为数据）
-    event.dataTransfer.setData("text/plain", event.target.id);
-    data.textContent = event.dataTransfer.getData("text/plain");
+// 选择 HTML 元素
+const draggable = document.getElementById("source");
+const droppable = document.getElementById("target");
+const status = document.getElementById("status");
+const data = document.getElementById("data");
+let dropped = false;
+
+// 注册事件处理器
+draggable.addEventListener("dragstart", dragStartHandler);
+draggable.addEventListener("dragend", dragEndHandler);
+droppable.addEventListener("dragover", dragOverHandler);
+droppable.addEventListener("dragleave", dragLeaveHandler);
+droppable.addEventListener("drop", dropHandler);
+
+function dragStartHandler(event) {
+  status.textContent = "拖拽中";
+  // 修改目标元素的边框以表示已开始拖拽
+  event.currentTarget.style.border = "1px dashed blue";
+  // 首先清除现有的剪贴板内容；这将影响所有类型，因为我们没有指定特定类型。
+  event.dataTransfer.clearData();
+  // 设置拖拽的格式和数据（使用事件目标的 id 作为数据）
+  event.dataTransfer.setData("text/plain", event.target.id);
+  data.textContent = event.dataTransfer.getData("text/plain");
+}
+
+function dragEndHandler(event) {
+  if (!dropped) {
+    status.textContent = "取消拖拽";
   }
-  function dragEndHandler(event) {
-    if (!dropped) {
-      status.textContent = "取消拖拽";
-    }
-    data.textContent = event.dataTransfer.getData("text/plain") || "空";
-    // 修改边框以表示不再继续拖拽
-    event.currentTarget.style.border = "1px solid black";
-    if (dropped) {
-      // 移除所有事件监听器
-      draggable.removeEventListener("dragstart", dragStartHandler);
-      draggable.removeEventListener("dragend", dragEndHandler);
-      dropable.removeEventListener("dragover", dragOverHandler);
-      dropable.removeEventListener("dragleave", dragLeaveHandler);
-      dropable.removeEventListener("drop", dropHandler);
-    }
+  data.textContent = event.dataTransfer.getData("text/plain") || "空";
+  // 修改边框以表示不再继续拖拽
+  event.currentTarget.style.border = "1px solid black";
+  if (dropped) {
+    // 移除所有事件监听器
+    draggable.removeEventListener("dragstart", dragStartHandler);
+    draggable.removeEventListener("dragend", dragEndHandler);
+    dropable.removeEventListener("dragover", dragOverHandler);
+    dropable.removeEventListener("dragleave", dragLeaveHandler);
+    dropable.removeEventListener("drop", dropHandler);
   }
-  function dragOverHandler(event) {
-    status.textContent = "可放下";
-    event.preventDefault();
-  }
-  function dragLeaveHandler(event) {
-    status.textContent = "拖拽中（可释放）";
-    event.preventDefault();
-  }
-  function dropHandler(event) {
-    dropped = true;
-    status.textContent = "已放下";
-    event.preventDefault();
-    // 获取与事件格式 « text » 关联的数据
-    var _data = event.dataTransfer.getData("text/plain");
-    var element = document.getElementById(_data);
-    // 将拖拽源元素附加到事件的目标元素
-    event.target.appendChild(element);
-    // 更改 CSS 样式和显示的文本
-    element.style.cssText =
-      "border: 1px solid black;display: block; color: red";
-    element.textContent = "我在可放下的区域内！";
-  }
-});
+}
+
+function dragOverHandler(event) {
+  status.textContent = "可放下";
+  event.preventDefault();
+}
+
+function dragLeaveHandler(event) {
+  status.textContent = "拖拽中（可释放）";
+  event.preventDefault();
+}
+
+function dropHandler(event) {
+  dropped = true;
+
+  status.textContent = "已放下";
+
+  event.preventDefault();
+
+  // 获取与事件格式 « text » 关联的数据
+  const _data = event.dataTransfer.getData("text/plain");
+  const element = document.getElementById(_data);
+
+  // 将拖拽源元素附加到事件的目标元素
+  event.target.appendChild(element);
+
+  // 更改 CSS 样式和显示的文本
+  element.style.cssText = "border: 1px solid black;display: block; color: red";
+  element.textContent = "我在可放下的区域内！";
+}
 ```
 
 {{EmbedLiveSample('示例', 300, 250)}}
