@@ -12,7 +12,7 @@ l10n:
 
 如果调用此方法时没有传入参数，或者参数为空字符串，则将删除所有类型的数据。
 
-此方法不会从拖拽操作中删除文件，因此如果在拖拽文件，则可能会在 {{domxref("DataTransfer.types")}} 列表中存在类型为 `"Files"` 的条目。
+此方法*不会*从拖拽操作中删除文件，因此如果在拖拽文件，则可能会在 {{domxref("DataTransfer.types")}} 列表中存在类型为 `"Files"` 的条目。
 
 > [!NOTE]
 > 因为拖拽操作只能在 {{domxref("HTMLElement/dragstart_event", "dragstart")}} 的处理器中存储其数据，因此你只能在该事件中调用此方法。
@@ -75,7 +75,7 @@ window.addEventListener("DOMContentLoaded", function () {
   var status = document.getElementById("status");
   var data = document.getElementById("data");
   var dropped = false;
-  // 注册事件处理程序
+  // 注册事件处理器
   draggable.addEventListener("dragstart", dragStartHandler);
   draggable.addEventListener("dragend", dragEndHandler);
   dropable.addEventListener("dragover", dragOverHandler);
