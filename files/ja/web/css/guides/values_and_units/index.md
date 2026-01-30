@@ -235,7 +235,7 @@ CSS の値と単位のモジュールでは、{{cssxref("frequency")}} および
 
 - [CSS 画像](/ja/docs/Web/CSS/Guides/Images)モジュール
   - {{cssxref("image")}}
-  - {{cssxref("&lt;gradient&gt;")}}
+  - {{cssxref("gradient")}}
 
 ## 仕様書
 

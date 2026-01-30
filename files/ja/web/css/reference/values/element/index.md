@@ -119,6 +119,6 @@ element(id)
 - {{cssxref("image/image", "image()")}}
 - {{cssxref("image/image-set", "image-set()")}}
 - {{cssxref("image")}}
-- {{cssxref("&lt;gradient&gt;")}}
+- {{cssxref("gradient")}}
 - {{cssxref("cross-fade", "cross-fade()")}}
 - {{domxref("document.mozSetImageElement()")}}
