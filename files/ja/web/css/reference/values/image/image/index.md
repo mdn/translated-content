@@ -166,7 +166,7 @@ ul {
 - {{CSSxRef("element", "element()")}}
 - {{cssxref("url_value", "&lt;url&gt;")}}
 - {{CSSxRef("clip-path")}}
-- {{CSSxRef("&lt;gradient&gt;")}}
+- {{CSSxRef("gradient")}}
 - {{CSSxRef("image/image-set", "image-set()")}}
 - {{CSSxRef("cross-fade", "cross-fade()")}}
 - [CSS 画像](/ja/docs/Web/CSS/Guides/Images)モジュール

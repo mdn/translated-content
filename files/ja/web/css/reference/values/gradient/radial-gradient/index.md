@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
-**`radial-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 2 つ以上の色の連続的な推移が原点から放射状に広がる画像を生成します。形状は円形または楕円形になります。関数の結果は {{cssxref("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{cssxref("image")}} の特殊形です。
+**`radial-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 2 つ以上の色の連続的な推移が原点から放射状に広がる画像を生成します。形状は円形または楕円形になります。関数の結果は {{cssxref("gradient")}} データ型のオブジェクトであり、これは {{cssxref("image")}} の特殊形です。
 
 {{InteractiveExample("CSS デモ: radial-gradient()")}}
 

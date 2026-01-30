@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
-**`repeating-linear-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、反復線形グラデーションによる画像を生成します。 {{cssxref("gradient/linear-gradient", "linear-gradient()")}} と似ており、同じ引数を取りますが、両方向に無限に色経由点を繰り返してコンテナー全体を埋めます。関数の返値は {{cssxref("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{cssxref("image")}} の特殊型です。
+**`repeating-linear-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、反復線形グラデーションによる画像を生成します。 {{cssxref("gradient/linear-gradient", "linear-gradient()")}} と似ており、同じ引数を取りますが、両方向に無限に色経由点を繰り返してコンテナー全体を埋めます。関数の返値は {{cssxref("gradient")}} データ型のオブジェクトであり、これは {{cssxref("image")}} の特殊型です。
 
 {{InteractiveExample("CSS デモ: repeating-linear-gradient()")}}
 

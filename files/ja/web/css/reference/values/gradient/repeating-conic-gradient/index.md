@@ -68,7 +68,7 @@ repeating-conic-gradient(in hsl shorter hue, red, blue 90deg, green 180deg)
 
 ## 解説
 
-反復扇形グラデーションの例にはスターバーストがあります。 `repeating-conic-gradient()` 関数の返値は {{CSSxRef("&lt;gradient&gt;")}} データ型のオブジェクトで、これは {{cssxref("image")}} の特殊形です。
+反復扇形グラデーションの例にはスターバーストがあります。 `repeating-conic-gradient()` 関数の返値は {{CSSxRef("gradient")}} データ型のオブジェクトで、これは {{cssxref("image")}} の特殊形です。
 
 最初と最後の色経由点がどちらも 0 度以上か 360 度未満になっていない場合、 conic-gradient は繰り返されません。
 

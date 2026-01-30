@@ -36,7 +36,7 @@ CSS 画像モジュールは {{CSSxRef("image/image", "image()")}} 関数も定�
 
 ### データ型
 
-- {{CSSxRef("&lt;gradient&gt;")}}
+- {{CSSxRef("gradient")}}
 - {{cssxref("image")}}
 
 ## ガイド
