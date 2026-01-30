@@ -25,7 +25,7 @@ Le pseudo-élément `::column` n'accepte que les propriétés de défilement qui
 
 Le pseudo-élément `::column` peut avoir un pseudo-élément {{CSSxRef("::scroll-marker")}}. D'autres pseudo-éléments comme {{CSSxRef("::before")}} et {{CSSxRef("::after")}} ne sont pas générés sur `::column`. L'application de `::column::scroll-marker` crée un marqueur pour chaque colonne du {{Glossary("scroll container", "conteneur de défilement")}} d'origine, les pseudo-éléments `::scroll-marker` héritant de l'élément d'origine du pseudo-élément `::column` plutôt que du `::column` lui-même.
 
-Cela est utile pour les [carrousels CSS](/fr/docs/Web/CSS/CSS_overflow/CSS_carousels)&nbsp;: `::column` peut être utilisé pour générer des pseudo-éléments `::scroll-marker` pour chaque colonne, et les définir comme [cibles de défilement](/fr/docs/Glossary/Scroll_snap#snap_target) en utilisant [accrochage de défilement CSS](/fr/docs/Web/CSS/Guides/Scroll_snap).
+Cela est utile pour les [carrousels CSS](/fr/docs/Web/CSS/Guides/Overflow/CSS_carousels)&nbsp;: `::column` peut être utilisé pour générer des pseudo-éléments `::scroll-marker` pour chaque colonne, et les définir comme [cibles de défilement](/fr/docs/Glossary/Scroll_snap#snap_target) en utilisant [accrochage de défilement CSS](/fr/docs/Web/CSS/Guides/Scroll_snap).
 
 Bien que le style qui peut être appliqué à `::column` soit très limité, il pourrait être étendu à l'avenir. Toutes les propriétés et valeurs prises en charge à l'avenir seront limitées à celles qui n'affectent pas la mise en page.
 
@@ -214,7 +214,7 @@ ul::column::scroll-marker:target-current {
 
 Essayez d'appuyer sur les marqueurs de défilement pour sauter directement à chaque page. Notez comment le marqueur actuel est mis en surbrillance afin que vous puissiez voir où vous en êtes dans la pagination. Essayez également de tabuler vers le groupe de marqueurs de défilement, puis utilisez les touches de direction pour faire défiler chaque page.
 
-Voir la [création de carrousels CSS](/fr/docs/Web/CSS/CSS_overflow/CSS_carousels) pour plus d'exemples de carrousels.
+Voir la [création de carrousels CSS](/fr/docs/Web/CSS/Guides/Overflow/CSS_carousels) pour plus d'exemples de carrousels.
 
 ## Spécifications
 
@@ -230,7 +230,7 @@ Voir la [création de carrousels CSS](/fr/docs/Web/CSS/CSS_overflow/CSS_carousel
 - Le pseudo-élément {{CSSxRef("::scroll-marker")}}
 - Le pseudo-élément {{CSSxRef("::scroll-marker-group")}}
 - La pseudo-classe {{CSSxRef(":target-current")}}
-- [Création de carrousels CSS](/fr/docs/Web/CSS/CSS_overflow/CSS_carousels)
+- [Création de carrousels CSS](/fr/docs/Web/CSS/Guides/Overflow/CSS_carousels)
 - Le module de [Mise en page multi-colonnes CSS](/fr/docs/Web/CSS/Guides/Multicol_layout)
 - Le module de [Débordement CSS](/fr/docs/Web/CSS/Guides/Overflow)
 - [Galerie CSS de carrousels <sup>(angl.)</sup>](https://chrome.dev/carousel/) sur chrome.dev (2025)

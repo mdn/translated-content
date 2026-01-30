@@ -256,7 +256,7 @@ function sepia() {
 
 ## Guides
 
-- [Utiliser les effets de filtre CSS](/fr/docs/Web/CSS/CSS_filter_effects/Using_filter_effects)
+- [Utiliser les effets de filtre CSS](/fr/docs/Web/CSS/Guides/Filter_effects/Using_filter_effects)
   - : Présentation des concepts liés aux effets de filtre CSS, incluant les propriétés, les fonctions de filtre et les filtres SVG, avec une explication des valeurs de filtre, de l'ordre des sources et des interactions entre valeurs.
 
 ## Concepts associés

@@ -284,6 +284,6 @@ div {
 - Éléments SVG&nbsp;: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
 - [Présentation des formes CSS](/fr/docs/Web/CSS/Guides/Shapes/Overview)
 - Le module de [formes CSS](/fr/docs/Web/CSS/Guides/Shapes)
-- [Introduction au masquage CSS](/fr/docs/Web/CSS/CSS_masking/Masking)
+- [Introduction au masquage CSS](/fr/docs/Web/CSS/Guides/Masking/Masking)
 - Le module de [masquage CSS](/fr/docs/Web/CSS/Guides/Masking)
 - [Modifier les chemins de forme dans Firefox Developer Tools <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html)

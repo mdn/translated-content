@@ -64,7 +64,7 @@ ol {
 
 ## Paramètres
 
-La pseudo-classe `:where()` nécessite une [liste de sélecteurs](/fr/docs/Web/CSS/CSS_selectors/Selector_structure#liste_de_sélecteurs), une liste séparée par des virgules d'un ou plusieurs sélecteurs, comme argument.
+La pseudo-classe `:where()` nécessite une [liste de sélecteurs](/fr/docs/Web/CSS/Guides/Selectors/Selector_structure#liste_de_sélecteurs), une liste séparée par des virgules d'un ou plusieurs sélecteurs, comme argument.
 
 ### Analyse permissive de la liste des sélecteurs
 

@@ -206,7 +206,7 @@ Le module des valeurs et unités CSS introduit également les types de données 
 
 ## Modules associés
 
-- Le module de [cascade et héritage CSS](/fr/docs/Web/CSS/CSS_cascade)
+- Le module de [cascade et héritage CSS](/fr/docs/Web/CSS/Guides/Cascad)
   - {{cssxref("initial")}}
   - {{cssxref("inherit")}}
   - {{cssxref("revert")}}

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@container`** est une règle conditionnelle de groupe qui applique des styles à un [contexte de conteneur](/fr/docs/Web/CSS/CSS_containment/Container_queries#nommer_les_contextes_de_conteneur).
+La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@container`** est une règle conditionnelle de groupe qui applique des styles à un [contexte de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_queries#nommer_les_contextes_de_conteneur).
 Les déclarations de style sont filtrées par une condition et appliquées au conteneur si la condition est vraie.
 La condition est évaluée lorsque la taille du conteneur interrogé, le [`<style-feature>`](#requêtes_de_style_de_conteneur) ou l'état de défilement changent.
 
@@ -460,12 +460,12 @@ Voir [Utiliser les requêtes d'état de défilement de conteneur](/fr/docs/Web/C
 
 ## Voir aussi
 
-- [Utiliser les requêtes de conteneur](/fr/docs/Web/CSS/CSS_containment/Container_queries)
-- [Utiliser les requêtes de taille et de style de conteneur](/fr/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
+- [Utiliser les requêtes de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_queries)
+- [Utiliser les requêtes de taille et de style de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)
 - [Utiliser les requêtes d'état de défilement de conteneur](/fr/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
 - La propriété {{CSSxRef("container-name")}}
 - La propriété {{CSSxRef("container-type")}}
 - La propriété {{CSSxRef("contain")}}
 - La propriété {{CSSxRef("content-visibility")}}
 - Le module de [Compartimentation CSS](/fr/docs/Web/CSS/Guides/Containment)
-- [Fonctions de règles @ CSS](/fr/docs/Web/CSS/CSS_syntax/At-rule_functions)
+- [Fonctions de règles @ CSS](/fr/docs/Web/CSS/Guides/Syntax/At-rule_functions)

@@ -27,7 +27,7 @@ Ce module ne définit aucune propriété, [types de données](/fr/docs/Web/CSS/R
 - [Déclaration CSS](/fr/docs/Web/API/CSS_Object_Model/CSS_Declaration)
 - [Bloc de déclaration CSS](/fr/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block)
 - [Fonction CSS](/fr/docs/Web/CSS/Reference/Values/Functions)
-- [Gestion d'erreur](/fr/docs/Web/CSS/CSS_syntax/Error_handling)
+- [Gestion d'erreur](/fr/docs/Web/CSS/Guides/Syntax/Error_handling)
 - [Règle de style](/fr/docs/Web/API/CSSStyleRule)
 
 ### Termes du glossaire
@@ -45,7 +45,7 @@ Ce module ne définit aucune propriété, [types de données](/fr/docs/Web/CSS/R
 - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
   - : Explique la grammaire formelle pour définir les valeurs valides des propriétés et fonctions CSS, ainsi que les contraintes sémantiques. Un guide pour comprendre les types de valeurs composants CSS, les combinateurs et les multiplicateurs.
 
-- [Gestion des erreurs CSS](/fr/docs/Web/CSS/CSS_syntax/Error_handling)
+- [Gestion des erreurs CSS](/fr/docs/Web/CSS/Guides/Syntax/Error_handling)
   - : Vue d'ensemble de la façon dont les navigateurs gèrent le CSS invalide.
 
 - [Premiers pas avec CSS&nbsp;: la syntaxe CSS](/fr/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#css_syntax_basics)
@@ -57,7 +57,7 @@ Le module des [sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors)&nbsp;:
 
 - [Spécificité CSS](/fr/docs/Web/CSS/Guides/Cascade/Specificity)
 
-Le module de [cascade et héritage CSS](/fr/docs/Web/CSS/CSS_cascade)&nbsp;:
+Le module de [cascade et héritage CSS](/fr/docs/Web/CSS/Guides/Cascad)&nbsp;:
 
 - La règle {{cssxref("@import")}}
 - L'indicateur {{cssxref("important")}}
@@ -97,6 +97,6 @@ La spécification [WHATWG](/fr/docs/Glossary/WHATWG)&nbsp;:
 
 ## Voir aussi
 
-- Les [fonctions des règles @ CSS](/fr/docs/Web/CSS/CSS_syntax/At-rule_functions)
+- Les [fonctions des règles @ CSS](/fr/docs/Web/CSS/Guides/Syntax/At-rule_functions)
 - Le module de [sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors)
 - Le module de [valeurs et unités CSS](/fr/docs/Web/CSS/Guides/Values_and_units)

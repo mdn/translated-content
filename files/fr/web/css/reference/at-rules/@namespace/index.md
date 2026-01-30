@@ -98,4 +98,4 @@ svg|a {
 ## Voir aussi
 
 - [Introduction aux espaces de noms](/fr/docs/Web/SVG/Guides/Namespaces_crash_course)
-- [Fonctions des règles @ CSS](/fr/docs/Web/CSS/CSS_syntax/At-rule_functions)
+- [Fonctions des règles @ CSS](/fr/docs/Web/CSS/Guides/Syntax/At-rule_functions)

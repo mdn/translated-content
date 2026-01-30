@@ -23,9 +23,9 @@ Les valeurs de couleur générées peuvent être utilisées partout où le type 
 ## Voir aussi
 
 - [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/Guides/Colors/Applying_color)
-- [Valeurs de couleur CSS](/fr/docs/Web/CSS/CSS_colors/Color_values)
-- [Utiliser la couleur à bon escient](/fr/docs/Web/CSS/CSS_colors/Using_color_wisely)
-- [Utiliser des couleurs relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors)
+- [Valeurs de couleur CSS](/fr/docs/Web/CSS/Guides/Colors/Color_values)
+- [Utiliser la couleur à bon escient](/fr/docs/Web/CSS/Guides/Colors/Using_color_wisely)
+- [Utiliser des couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Relative_colors)
 - [Comprendre la couleur et la luminance](/fr/docs/Web/Accessibility/Guides/Colors_and_Luminance)
 - [WCAG 1.4.1: Contraste de la couleur](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)
 - [Apprendre&nbsp;: Arrière-plans et bordures](/fr/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)

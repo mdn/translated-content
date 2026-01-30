@@ -123,7 +123,7 @@ La différence entre les deux est que la spécificité de `:is()` correspond à 
 
 ### Liste de sélecteurs relatifs
 
-Une liste de sélecteurs relatifs est une liste de sélecteurs séparés par des virgules, analysée comme des [sélecteurs relatifs](/fr/docs/Web/CSS/CSS_selectors/Selector_structure#sélecteur_relatif), qui commencent par un combinateur explicite ou implicite.
+Une liste de sélecteurs relatifs est une liste de sélecteurs séparés par des virgules, analysée comme des [sélecteurs relatifs](/fr/docs/Web/CSS/Guides/Selectors/Selector_structure#sélecteur_relatif), qui commencent par un combinateur explicite ou implicite.
 
 ```css
 h2:has(+ p, + ul.red) {
