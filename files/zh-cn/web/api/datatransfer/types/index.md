@@ -3,7 +3,7 @@ title: DataTransfer：types 属性
 short-title: types
 slug: Web/API/DataTransfer/types
 l10n:
-  sourceCommit: 8285d415db211ae9efe04752d9dab1b574450ee8
+  sourceCommit: f336c5b6795a562c64fe859aa9ee2becf223ad8a
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
@@ -16,7 +16,7 @@ l10n:
 
 ## 示例
 
-下述示例展示了使用 `types` 和 {{domxref("DataTransfer.items","items")}} 属性的具体使用方式：
+下述示例展示了 `types` 和 {{domxref("DataTransfer.items","items")}} 属性的具体使用方式：
 
 ```html
 <ul>
