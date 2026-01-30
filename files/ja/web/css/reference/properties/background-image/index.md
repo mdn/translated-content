@@ -65,7 +65,7 @@ background-image: revert-layer;
 background-image: unset;
 ```
 
-それぞれの背景画像は、キーワード `none` または {{cssxref("&lt;image&gt;")}} 値として指定されます。
+それぞれの背景画像は、キーワード `none` または {{cssxref("image")}} 値として指定されます。
 
 複数の背景画像を指定するには、複数の値をカンマで区切って指定してください。
 
@@ -74,7 +74,7 @@ background-image: unset;
 - `none`
   - : 画像を用いないことを表すキーワード。
 - `<image>`
-  - : 表示する背景を記述する {{cssxref("&lt;image&gt;")}}。[複数の背景](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)に対応している場合は、カンマ区切りで複数指定することができます。
+  - : 表示する背景を記述する {{cssxref("image")}}。[複数の背景](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)に対応している場合は、カンマ区切りで複数指定することができます。
 
 ## 解説
 
