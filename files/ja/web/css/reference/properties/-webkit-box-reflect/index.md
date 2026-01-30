@@ -38,7 +38,7 @@ original_slug: Web/CSS/-webkit-box-reflect
   - : どの方向に反射するかを示すキーワードです。
 - {{CSSxRef("&lt;length&gt;")}}
   - : 反射の大きさを示します。
-- {{CSSxRef("&lt;image&gt;")}}
+- {{cssxref("image")}}
   - : 反射に適用されるマスクを記述します。
 
 ## 公式定義

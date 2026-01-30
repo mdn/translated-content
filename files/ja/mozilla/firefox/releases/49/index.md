@@ -240,7 +240,7 @@ Firefox 49 より、サイトが正しく機能するために必要ではない
   - `-webkit-box-align`
   - `-webkit-box-pack`
 
-- {{cssxref("&lt;image&gt;")}} の値について:
+- {{cssxref("image")}} の値について:
   - `-webkit-linear-gradient()`、`-webkit-radial-gradient()`、`-webkit-repeating-linear-gradient()`、`-webkit-repeating-radial-gradient()` 関数は、接頭辞なしの同等物に紐づけています。
   - 旧式の `-webkit-gradient` をサポートします (また、正規のグラデーションに変換します)。
 
