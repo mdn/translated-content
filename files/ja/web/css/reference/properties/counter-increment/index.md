@@ -1,9 +1,8 @@
 ---
 title: counter-increment
 slug: Web/CSS/Reference/Properties/counter-increment
-original_slug: Web/CSS/counter-increment
 l10n:
-  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`counter-increment`** は [CSS](/ja/docs/Web/CSS) のプロパティで、指定された値によって [CSS カウンター](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters)の値を増加または減少させたり、すべてのカウンターまたは個々のカウンターが変化することを防いだりするためのプロパティです。
@@ -32,7 +31,7 @@ counter-increment: example-counter -5;
 
 ```html interactive-example
 <section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">Counter value:</div>
+  <div class="transition-all" id="example-element">カウンター値:</div>
 </section>
 ```
 
@@ -163,7 +162,7 @@ i {
 
 - カウンターのプロパティ: {{cssxref("counter-set")}}, {{cssxref("counter-reset")}}
 - カウンターのアットルール: {{cssxref("@counter-style")}}
-- カウンターの関数: {{cssxref("counter", "counter()")}} および {{cssxref("counters", "counters()")}}
+- カウンターの関数: {{cssxref("counter()")}} および {{cssxref("counters()")}}
 - [CSS カウンターの使用](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters)ガイド
 - [CSS リストとカウンター](/ja/docs/Web/CSS/Guides/Lists)モジュール
 - [CSS カウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)モジュール

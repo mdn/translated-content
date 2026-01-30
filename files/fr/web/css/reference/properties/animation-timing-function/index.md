@@ -1,14 +1,15 @@
 ---
 title: animation-timing-function
 slug: Web/CSS/Reference/Properties/animation-timing-function
-original_slug: Web/CSS/animation-timing-function
+l10n:
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`animation-timing-function`** définit la façon dont une animation progresse pendant la durée de chaque cycle.
 
-La propriété **`animation-timing-function`** définit la façon dont une animation CSS doit se dérouler au fur et à mesure de chaque cycle. Cette propriété prendra comme valeurs une ou plusieurs fonctions {{cssxref("easing-function")}}.
+Il est souvent pratique d'utiliser la propriété raccourcie {{CSSxRef("animation")}} pour définir toutes les propriétés d'animation en une seule fois.
 
-{{InteractiveExample("CSS Demo: animation-timing-function")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: animation-timing-function")}}
 
 ```css interactive-example-choice
 animation-timing-function: linear;
@@ -29,7 +30,7 @@ animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
 ```html interactive-example
 <section class="flex-column" id="default-example">
   <div class="animating" id="example-element"></div>
-  <button id="play-pause">Play</button>
+  <button id="play-pause">Lecture</button>
 </section>
 ```
 
@@ -41,7 +42,7 @@ animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
   animation-play-state: paused;
   background-color: #1766aa;
   border-radius: 50%;
-  border: 5px solid #333;
+  border: 5px solid #333333;
   color: white;
   height: 150px;
   margin: auto;
@@ -72,25 +73,19 @@ animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
 ```
 
 ```js interactive-example
-"use strict";
+const el = document.getElementById("example-element");
+const button = document.getElementById("play-pause");
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const button = document.getElementById("play-pause");
-
-  button.addEventListener("click", () => {
-    if (el.classList.contains("running")) {
-      el.classList.remove("running");
-      button.textContent = "Play";
-    } else {
-      el.classList.add("running");
-      button.textContent = "Pause";
-    }
-  });
+button.addEventListener("click", () => {
+  if (el.classList.contains("running")) {
+    el.classList.remove("running");
+    button.textContent = "Lecture";
+  } else {
+    el.classList.add("running");
+    button.textContent = "Pause";
+  }
 });
 ```
-
-Généralement, on pourra utiliser la propriété raccourcie {{cssxref("animation")}} pour définir l'ensemble des propriétés liées à une animation.
 
 ## Syntaxe
 
@@ -104,11 +99,18 @@ animation-timing-function: linear;
 animation-timing-function: step-start;
 animation-timing-function: step-end;
 
-/* Valeurs fonctionnelles */
-animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
-animation-timing-function: steps(4, end);
+/* Valeurs de la fonction cubic-bezier() */
+animation-timing-function: cubic-bezier(0.42, 0, 1, 1); /* ease-in */
+animation-timing-function: cubic-bezier(0, 0, 0.58, 1); /* ease-out */
+animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1); /* ease-in-out */
 
-/* Valeurs avec une fonction en escalier */
+/* Valeurs de la fonction linear() */
+animation-timing-function: linear(0, 0.25, 1);
+animation-timing-function: linear(0 0%, 0.25 50%, 1 100%);
+animation-timing-function: linear(0, 0.25 50% 75%, 1);
+animation-timing-function: linear(0, 0.25 50%, 0.25 75%, 1);
+
+/* Valeurs de la fonction steps() */
 animation-timing-function: steps(4, jump-start);
 animation-timing-function: steps(10, jump-end);
 animation-timing-function: steps(20, jump-none);
@@ -116,59 +118,71 @@ animation-timing-function: steps(5, jump-both);
 animation-timing-function: steps(6, start);
 animation-timing-function: steps(8, end);
 
-/* Définition de temporisations pour plusieurs animations */
+/* Animations multiples */
 animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
 
 /* Valeurs globales */
 animation-timing-function: inherit;
 animation-timing-function: initial;
+animation-timing-function: revert;
+animation-timing-function: revert-layer;
 animation-timing-function: unset;
 ```
 
-Pour les animations cadencées (_keyframed_), la fonction s'applique entre chaque étape (ou [`@keyframes`](/fr/docs/Web/CSS/Reference/At-rules/@keyframes)) plutôt que sur l'animation dans son ensemble. Autrement dit, la fonction de _timing_ est appliquée au début et à la fin de l'étape de l'animation.
-
-Une fonction de progression pour une animation qui est définie pour une étape sera appliquée à cette étape en particulier. Si aucune fonction n'est définie pour l'étape, ce sera la fonction de progression de toute l'animation qui sera utilisée.
-
 ### Valeurs
 
-- `<timing-function>`
-  - : Chaque valeur {{cssxref("easing-function")}} représente une fonction temporelle à rattacher à une animation définie grâce à {{cssxref("animation-name")}}.
+- {{CSSxRef("easing-function")}}
+  - : La fonction d'assouplissement qui correspond à une animation donnée, telle que définie par {{CSSxRef("animation-name")}}.
 
-    Les valeurs avec des mots-clés (`ease`, `linear`, `ease-in-out`, etc.) correspondent à une courbe de Bézier cubique fixe avec quatre valeurs prédéfinies; La fonction `cubic-bezier()` permet de paramétrer une courbe spécifique. Les fonctions en escalier permettent de diviser l'animation en intervalles de même durée.
-    - `ease`
-      - : Correspond à `cubic-bezier(0.25, 0.1, 0.25, 1.0)` : c'est la valeur par défaut, la vitesse de l'animation augmente au milieu de celle-ci puis ralentit à la fin.
+    Les valeurs des mots-clés en dehors des étapes (`ease`, `linear`, `ease-in-out`, etc.) représentent des courbes de Bézier cubiques avec des valeurs fixes en quatre points, tandis que la valeur de la fonction `cubic-bezier()` permet de définir des valeurs qui ne sont pas prédéfinies. La fonction d'assouplissement `steps()` divise le temps d'entrée en un nombre défini d'intervalles de longueur égale. Ces paramètres comprennent un nombre d'étapes et la position d'étape.
     - `linear`
-      - : Correspond à `cubic-bezier(0.0, 0.0, 1.0, 1.0)` : l'animation s'effectue à vitesse constante.
+      - : Égal à `cubic-bezier(0.0, 0.0, 1.0, 1.0)`, anime à vitesse constante.
+    - `ease`
+      - : Égal à `cubic-bezier(0.25, 0.1, 0.25, 1.0)`, valeur par défaut, accélère vers le milieu de l'animation, puis ralentit à la fin.
     - `ease-in`
-      - : Correspond à `cubic-bezier(0.42, 0, 1.0, 1.0)` : l'animation commence doucement puis la vitesse augmente jusqu'à ce qu'elle soit terminée.
+      - : Égal à `cubic-bezier(0.42, 0, 1.0, 1.0)`, commence lentement, la vitesse de la transition augmente jusqu'à la fin.
     - `ease-out`
-      - : Correspond à `cubic-bezier(0, 0, 0.58, 1.0)` : l'animation commence rapidement puis ralentit jusqu'à la fin.
+      - : Égal à `cubic-bezier(0, 0, 0.58, 1.0)`, commence rapidement puis ralentit jusqu'à la fin de l'animation.
     - `ease-in-out`
-      - : Correspond à `cubic-bezier(0.42, 0, 0.58, 1.0)` : l'animation commence lentement, accèlere puis ralentit à nouveau avant la fin.
-    - `cubic-bezier(p1, p2, p3, p4)`
-      - : Une courbe de Bézier paramétrable à l'aide de quatre coefficient compris entre 0 et 1.
-    - `steps( n, <jumpterm>)`
-      - : L'animation s'effectue selon _n_ étapes de durées égales. Ainsi, si n vaut 5, l'animation se composera de cinq paliers. Selon la valeur du paramètre _jumpterm_, ces paliers se trouveront entre 0%, 20%, 40%, 60% et 80%, ou entre 20%, 40%, 60%, 80% et 100%, or ou inclueront également 0% et 100% (soit 0%, 25%, 50%, 75% et 100%) :
+      - : Égal à `cubic-bezier(0.42, 0, 0.58, 1.0)`, les propriétés animées commencent lentement, accélèrent, puis ralentissent à nouveau.
+
+    - `cubic-bezier(<number [0,1]> , <number> , <number [0,1]> , <number>)`
+      - : Une courbe de Bézier cubique définie par l'auteur·ice, où la première et la troisième valeur doivent être comprises entre 0 et 1.
+
+    - `linear(<number> <percentage>{1,2}, …)`
+      - : La fonction interpole linéairement entre les points d'arrêt d'assouplissement fournis. Un point d'arrêt est un couple composé d'une progression de sortie et d'un pourcentage d'entrée. Le pourcentage d'entrée est optionnel et est déduit s'il n'est pas précisé. Si aucun pourcentage d'entrée n'est fourni, alors les premier et dernier points d'arrêt sont fixés à `0%` et `100%` respectivement, et les points d'arrêt intermédiaires reçoivent des valeurs de pourcentage obtenues par interpolation linéaire entre les points précédents et suivants les plus proches qui possèdent une valeur de pourcentage.
+
+    - `steps(<integer>, <step-position>)`
+      - : Affiche une itération d'animation en _n_ étapes le long de la transition, chaque étape ayant la même durée. Par exemple, si _n_ vaut 5, il y a 5 étapes. Selon la position d'étape choisie, l'animation marque une pause temporaire à 0%, 20%, 40%, 60% et 80%, ou à 20%, 40%, 60%, 80% et 100%, ou effectue 5 étapes entre 0% et 100%, ou inclut aussi les marques 0%, 25%, 50%, 75% et 100%&nbsp;:
         - `jump-start`
-          - : La fonction est continue à gauche et le premier saut se produit au début de l'animation.
+          - : Fonction continue à gauche, le premier saut a lieu au début de l'animation.
         - `jump-end`
-          - : La fonction est continue à droite et le dernier saut se produit à la fin de l'animation.
+          - : Fonction continue à droite, le dernier saut a lieu à la fin de l'animation. C'est la valeur par défaut.
         - `jump-none`
-          - : Il n'y a aucune rupture au début ou à la fin. Il y a un palier constant après 0% et un palier constant avant 100% (chacun durant 1/n).
+          - : Aucun saut ni au début ni à la fin, ce qui retire une étape lors de l'itération. L'animation reste à 0% puis à 100%, chacun pendant 1/n de la durée.
         - `jump-both`
-          - : Une pause est présente aux niveaux 0% et 100%, ce qui ajoute un niveau pendant l'animation.
+          - : Comprend des pauses aux marques 0% et 100%, ce qui ajoute une étape pendant l'itération de l'animation.
         - `start`
-          - : Identique à `jump-start.`
+          - : Identique à `jump-start`.
         - `end`
-          - : Identique à `jump-end.`
+          - : Identique à `jump-end`.
 
     - `step-start`
-      - : Synonyme de `steps(1, jump-start)`
+      - : Équivalent à `steps(1, jump-start)`
     - `step-end`
-      - : Synonyme de `steps(1, jump-end)`
+      - : Équivalent à `steps(1, jump-end)`
 
 > [!NOTE]
-> Lorsqu'on définit plusieurs valeurs, séparées par des virgules, sur une propriété `animation-*`, elles seront affectées selon leur ordre aux différentes animations listées par {{cssxref("animation-name")}}. Si le nombre de valeurs n'est pas le même que le nombre d'animation, voir [Paramétrer plusieurs valeurs de propriétés pour les animations](/fr/docs/Web/CSS/Guides/Animations/Using#utiliser_plusieurs_valeurs_pour_différentes_animations).
+> Lorsque vous indiquez plusieurs valeurs séparées par des virgules sur une propriété `animation-*`, elles sont appliquées aux animations dans l'ordre dans lequel les {{CSSxRef("animation-name")}} apparaissent. Pour les situations où le nombre d'animations et de valeurs de propriété `animation-*` ne correspond pas, voir [Définir plusieurs valeurs de propriété d'animation](/fr/docs/Web/CSS/Guides/Animations/Using#définir_plusieurs_valeurs_de_propriétés_danimation).
+
+> [!NOTE]
+> `animation-timing-function` a le même effet lors de la création [d'animations CSS pilotées par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations) que pour les animations classiques basées sur le temps.
+
+## Description
+
+Il est possible de définir des fonctions d'assouplissement sur des images clés (<i lang="en">keyframes</i> en anglais) individuelles dans une règle {{CSSxRef("@keyframes")}}. Si aucune **`animation-timing-function`** n'est définie sur une image clé, la valeur correspondante de **`animation-timing-function`** de l'élément auquel l'animation est appliquée est utilisée pour cette image clé.
+
+Dans une image clé, `animation-timing-function` est un descripteur spécifique à la règle, et non la propriété du même nom. Le minutage n'est pas animé. Au contraire, la fonction d'assouplissement d'une image clé est appliquée propriété par propriété, de l'image clé sur laquelle elle est définie jusqu'à la prochaine image clé définissant cette propriété, ou jusqu'à la fin de l'animation s'il n'y a pas d'image clé suivante définissant cette propriété. Par conséquent, une **`animation-timing-function`** définie sur l'image clé **`100%`** ou **`to`** ne sera jamais utilisée.
 
 ## Définition formelle
 
@@ -180,125 +194,358 @@ Une fonction de progression pour une animation qui est définie pour une étape 
 
 ## Exemples
 
-### Courbes de Bézier cubiques
+Tous les exemples de cette section animent les propriétés `width` et `background-color` de plusieurs éléments `<div>` avec différentes valeurs de `animation-timing-function`. La largeur est animée de `0` à `100%`, et la couleur de fond est animée de vert clair à magenta.
+
+### Exemples de la fonction `linear`
+
+Cet exemple montre les effets de différentes valeurs de la fonction d'assouplissement `linear()`.
 
 ```html hidden
 <div class="parent">
-  <div class="ease">ease</div>
-  <div class="easein">ease-in</div>
-  <div class="easeout">ease-out</div>
-  <div class="easeinout">ease-in-out</div>
-  <div class="linear">linear</div>
-  <div class="cb">cubic-bezier(0.2,-2,0.8,2)</div>
+  <div class="linear">Valeurs de 'linear'</div>
+  <div class="linear-fn1">linear(0, 0.5 50%, 1)</div>
+  <div class="linear-fn2">linear(0, 0.25 75%, 1)</div>
+  <div class="linear-fn3">linear(0, 0.75 25%, 1)</div>
+  <div class="linear-fn4">linear(0, 0.5 25% 75%, 1)</div>
+  <div class="linear-fn5">linear(0, 0.25 45%, 0.75 55%, 0.5 70%, 1)</div>
+  <div class="linear-fn6">linear(0, 1.2 50%, 0.75 80%, 1)</div>
+  <div class="linear-fn7">linear(0, 0.5 75%, 1 120%)</div>
 </div>
+<div class="x-axis"><span>25%</span><span>50%</span><span>75%</span></div>
+<button>Jouer l'animation</button>
+```
+
+```js hidden
+const btn = document.querySelector("button");
+const divs = document.querySelectorAll(".parent > div[class]");
+
+btn.addEventListener("click", () => {
+  btn.setAttribute("disabled", "true");
+  for (const div of divs) {
+    div.classList.remove("animate");
+    void div.offsetWidth;
+    div.classList.add("animate");
+  }
+  setTimeout(() => {
+    btn.removeAttribute("disabled");
+  }, 11000);
+});
 ```
 
 ```css hidden
-.parent > div[class] {
-  animation-name: changeme;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  margin-bottom: 4px;
+.x-axis {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80vw;
+  margin-left: 4px;
 }
+
+.parent {
+  background: linear-gradient(
+    to right,
+    white 24.8%,
+    grey 24.8%,
+    grey 25.2%,
+    white 25.2%,
+    white 49.8%,
+    grey 49.8%,
+    grey 50.2%,
+    white 50.2%,
+    white 74.8%,
+    grey 74.8%,
+    grey 75.2%,
+    white 75.2%
+  );
+  width: 80vw;
+  font-family: monospace;
+  font-weight: bold;
+  border: 2px solid grey;
+}
+
+.animate {
+  animation-name: changeme;
+}
+
+.parent > div[class] {
+  animation-fill-mode: forwards;
+  animation-duration: 10s;
+
+  width: 0;
+  margin-bottom: 4px;
+  padding: 5px 0;
+  box-sizing: border-box;
+  text-wrap: nowrap;
+  background-color: lime;
+}
+
 @keyframes changeme {
   0% {
-    min-width: 12em;
-    width: 12em;
-    background-color: black;
-    border: 1px solid red;
-    color: white;
+    width: 0em;
   }
   100% {
-    width: 90vw;
-    min-width: 24em;
-    background-color: magenta;
-    color: yellow;
-    border: 1px solid orange;
+    width: 100%;
+    background-color: orange;
   }
 }
-```
 
-```css
-.ease {
-  animation-timing-function: ease;
-}
-.easein {
-  animation-timing-function: ease-in;
-}
-.easeout {
-  animation-timing-function: ease-out;
-}
-.easeinout {
-  animation-timing-function: ease-in-out;
-}
 .linear {
   animation-timing-function: linear;
 }
-.cb {
-  animation-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
+.linear-fn1 {
+  animation-timing-function: linear(0, 0.5 50%, 1);
+}
+.linear-fn2 {
+  animation-timing-function: linear(0, 0.25 75%, 1);
+}
+.linear-fn3 {
+  animation-timing-function: linear(0, 0.75 25%, 1);
+}
+.linear-fn4 {
+  animation-timing-function: linear(0, 0.5 25% 75%, 1);
+}
+.linear-fn5 {
+  animation-timing-function: linear(0, 0.25 45%, 0.75 55%, 0.5 70%, 1);
+}
+.linear-fn6 {
+  animation-timing-function: linear(0, 1.2 50%, 0.75 80%, 1);
+}
+.linear-fn7 {
+  animation-timing-function: linear(0, 0.5 75%, 1 120%);
 }
 ```
 
-{{EmbedLiveSample("Courbes_de_Bézier_cubiques")}}
+{{EmbedLiveSample("Exemples de la fonction `linear`", 600, 300)}}
 
-### Fonctions en escalier
+L'image suivante montre les graphiques de toutes les valeurs de la fonction `linear()` utilisées dans cet exemple. La progression d'entrée (le temps) est représentée sur l'axe des abscisses (x) et la progression de sortie sur l'axe des ordonnées (y). Selon la syntaxe, la progression d'entrée varie de 0 à 100%, et la sortie varie de 0 à 1.
+
+![Une image montrant les graphiques de la fonction 'linear'](https://mdn.github.io/shared-assets/images/diagrams/css/animation-easing/linear-function-graphs.png)
+
+Notez que la sortie peut aller vers l'avant ou vers l'arrière.
+
+### Exemples avec Cubic-Bézier
+
+Cet exemple montre les effets de différentes fonctions d'assouplissement de courbe de Bézier.
 
 ```html hidden
 <div class="parent">
-  <div class="jump-start">jump-start</div>
-  <div class="jump-end">jump-end</div>
-  <div class="jump-both">jump-both</div>
-  <div class="jump-none">jump-none</div>
-  <div class="start">start</div>
-  <div class="end">end</div>
-  <div class="step-start">step-start</div>
-  <div class="step-end">step-end</div>
+  <div class="linear">linear</div>
+  <div class="ease">ease</div>
+  <div class="ease-in">ease-in</div>
+  <div class="ease-out">ease-out</div>
+  <div class="ease-in-out">ease-in-out</div>
+  <div class="cb">cubic-bezier(.5, -0.5, 1, 1.5)</div>
 </div>
+<div class="x-axis"><span>50%</span></div>
+<button>Jouer l'animation</button>
+```
+
+```js hidden
+const btn = document.querySelector("button");
+const divs = document.querySelectorAll(".parent > div[class]");
+
+btn.addEventListener("click", () => {
+  btn.setAttribute("disabled", "true");
+  for (const div of divs) {
+    div.classList.remove("animate");
+    void div.offsetWidth;
+    div.classList.add("animate");
+  }
+  setTimeout(() => {
+    btn.removeAttribute("disabled");
+  }, 11000);
+});
 ```
 
 ```css hidden
-.parent > div[class] {
-  animation-name: changeme;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  margin-bottom: 4px;
+.x-axis {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80vw;
+  margin-left: 4px;
 }
+
+.parent {
+  background: linear-gradient(
+    to right,
+    white 49.8%,
+    grey 49.8%,
+    grey 50.2%,
+    white 50.2%
+  );
+  width: 80vw;
+  font-family: monospace;
+  font-weight: bold;
+  border: 2px solid grey;
+}
+
+.animate {
+  animation-name: changeme;
+}
+
+.parent > div[class] {
+  animation-fill-mode: forwards;
+  animation-duration: 10s;
+
+  width: 0;
+  margin-bottom: 4px;
+  padding: 5px 0;
+  box-sizing: border-box;
+  text-wrap: nowrap;
+  background-color: lime;
+}
+
 @keyframes changeme {
   0% {
-    min-width: 12em;
-    width: 12em;
-    background-color: black;
-    border: 1px solid red;
-    color: white;
+    width: 0em;
   }
   100% {
-    width: 90vw;
-    min-width: 24em;
-    background-color: magenta;
-    color: yellow;
-    border: 1px solid orange;
+    width: 100%;
+    background-color: orange;
+  }
+}
+
+.linear {
+  animation-timing-function: linear;
+}
+.ease {
+  animation-timing-function: ease;
+}
+.ease-in {
+  animation-timing-function: ease-in;
+}
+.ease-out {
+  animation-timing-function: ease-out;
+}
+.ease-in-out {
+  animation-timing-function: ease-in-out;
+}
+.cb {
+  animation-timing-function: cubic-bezier(0.5, -0.5, 1, 1.5);
+}
+```
+
+{{EmbedLiveSample("Exemples avec Cubic-Bézier", 600, 250)}}
+
+L'image suivante montre les graphiques de toutes les valeurs de la fonction cubic bézier utilisées dans cet exemple. La progression d'entrée (le temps) varie de 0 à 1 et la progression de sortie varie de 0 à 1.
+
+![Une image montrant les graphiques de la fonction 'cubic-bezier'](https://mdn.github.io/shared-assets/images/diagrams/css/animation-easing/cubic-bezier-function-graphs.png)
+
+### Exemples d'étape
+
+Cet exemple montre les effets de plusieurs valeurs de la fonction d'assouplissement steps.
+
+```html hidden
+<div class="parent">
+  <div class="linear">linear</div>
+  <div class="start">steps(4, start)</div>
+  <div class="jump-start">steps(4, jump-start)</div>
+  <div class="end">steps(4, end)</div>
+  <div class="jump-end">steps(4, jump-end)</div>
+  <div class="jump-both">steps(4, jump-both)</div>
+  <div class="jump-none">steps(4, jump-none)</div>
+  <div class="step-start">step-start</div>
+  <div class="step-end">step-end</div>
+</div>
+<div class="x-axis"><span>25%</span><span>50%</span><span>75%</span></div>
+<button>Jouer l'animation</button>
+```
+
+```js hidden
+const btn = document.querySelector("button");
+const divs = document.querySelectorAll(".parent > div[class]");
+
+btn.addEventListener("click", () => {
+  btn.setAttribute("disabled", "true");
+  for (const div of divs) {
+    div.classList.remove("animate");
+    void div.offsetWidth;
+    div.classList.add("animate");
+  }
+  setTimeout(() => {
+    btn.removeAttribute("disabled");
+  }, 11000);
+});
+```
+
+```css hidden
+.x-axis {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80vw;
+  margin-left: 4px;
+}
+
+.parent {
+  background: linear-gradient(
+    to right,
+    white 24.8%,
+    grey 24.8%,
+    grey 25.2%,
+    white 25.2%,
+    white 49.8%,
+    grey 49.8%,
+    grey 50.2%,
+    white 50.2%,
+    white 74.8%,
+    grey 74.8%,
+    grey 75.2%,
+    white 75.2%
+  );
+  width: 80vw;
+  font-family: monospace;
+  font-weight: bold;
+  border: 2px solid grey;
+}
+
+.animate {
+  animation-name: changeme;
+}
+
+.parent > div[class] {
+  animation-fill-mode: forwards;
+  animation-duration: 10s;
+
+  width: 0;
+  margin-bottom: 4px;
+  padding: 5px 0;
+  box-sizing: border-box;
+  text-wrap: nowrap;
+  background-color: lime;
+}
+
+@keyframes changeme {
+  0% {
+    width: 0em;
+  }
+  100% {
+    width: 100%;
+    background-color: orange;
   }
 }
 ```
 
-```css
-.jump-start {
-  animation-timing-function: steps(5, jump-start);
+```css hidden
+.linear {
+  animation-timing-function: linear;
 }
-.jump-end {
-  animation-timing-function: steps(5, jump-end);
-}
-.jump-none {
-  animation-timing-function: steps(5, jump-none);
-}
-.jump-both {
-  animation-timing-function: steps(5, jump-both);
-}
+
 .start {
-  animation-timing-function: steps(5, start);
+  animation-timing-function: steps(4, start);
+}
+.jump-start {
+  animation-timing-function: steps(4, jump-start);
 }
 .end {
-  animation-timing-function: steps(5, end);
+  animation-timing-function: steps(4, end);
+}
+.jump-end {
+  animation-timing-function: steps(4, jump-end);
+}
+.jump-both {
+  animation-timing-function: steps(4, jump-both);
+}
+.jump-none {
+  animation-timing-function: steps(4, jump-none);
 }
 .step-start {
   animation-timing-function: step-start;
@@ -308,7 +555,11 @@ Une fonction de progression pour une animation qui est définie pour une étape 
 }
 ```
 
-{{EmbedLiveSample("Fonctions_en_escalier")}}
+{{EmbedLiveSample("Exemples d'étape", 600, 350)}}
+
+L'image suivante montre les graphiques de toutes les valeurs de la fonction `step()` utilisées dans cet exemple. La progression d'entrée (le temps) et la progression de sortie varient de 0 à 1.
+
+![Image montrant les graphiques de la fonction 'step'](https://mdn.github.io/shared-assets/images/diagrams/css/animation-easing/step-function-graphs.png)
 
 ## Spécifications
 
@@ -321,5 +572,8 @@ Une fonction de progression pour une animation qui est définie pour une étape 
 ## Voir aussi
 
 - [Utiliser les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)
-- {{cssxref('easing-function')}}
-- L'API JavaScript {{domxref("AnimationEvent")}}
+- La propriété {{CSSxRef('easing-function')}}
+- Le module [des fonctions d'assouplissement CSS](/fr/docs/Web/CSS/Guides/Easing_functions)
+- L'interface API {{DOMxRef("AnimationEvent")}}
+- [Outil de génération de courbes de Bézier <sup>(angl.)</sup>](https://cubic-bezier.com/)
+- Les autres propriétés d'animation associées&nbsp;: {{CSSxRef("animation")}}, {{CSSxRef("animation-composition")}}, {{CSSxRef("animation-delay")}}, {{CSSxRef("animation-direction")}}, {{CSSxRef("animation-duration")}}, {{CSSxRef("animation-fill-mode")}}, {{CSSxRef("animation-iteration-count")}}, {{CSSxRef("animation-name")}}, {{CSSxRef("animation-play-state")}}, {{CSSxRef("animation-timeline")}}

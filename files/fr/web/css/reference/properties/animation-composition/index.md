@@ -1,14 +1,11 @@
 ---
 title: animation-composition
 slug: Web/CSS/Reference/Properties/animation-composition
-original_slug: Web/CSS/animation-composition
 l10n:
-  sourceCommit: 70ee2d938e88ea59098a51076be5acc0a0920319
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
-
-La propriété [CSS](/fr/docs/Web/CSS) **`animation-composition`** définit une [opération composite](/fr/docs/Glossary/Composite_operation) à utiliser lorsque plusieurs animations touchent simultanément la même propriété.
+La propriété [CSS](/fr/docs/Web/CSS) **`animation-composition`** définit une {{Glossary("Composite_operation", "opération composite")}} à utiliser lorsque plusieurs animations touchent simultanément la même propriété.
 
 ## Syntaxe
 
@@ -32,7 +29,7 @@ animation-composition: unset;
 ```
 
 > [!NOTE]
-> Lorsqu'on indique plusieurs valeurs, séparées par des virgules, à une propriété `animation-*`, celles-ci seront appliquées aux animations selon leur ordre d'apparition dans [`animation-name`](/fr/docs/Web/CSS/Reference/Properties/animation-name). Si le nombre d'animations et de compositions est différent, les valeurs de `animation-composition` seront réutilisées en bouclant depuis le début, jusqu'à ce que toutes les animations aient reçue une valeur `animation-composition`. Pour plus d'informations, voir [définir les valeurs de propriétés pour plusieurs animations](/fr/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values).
+> Lorsqu'on indique plusieurs valeurs, séparées par des virgules, à une propriété `animation-*`, celles-ci seront appliquées aux animations selon leur ordre d'apparition dans {{CSSxRef("animation-name")}}. Si le nombre d'animations et de compositions est différent, les valeurs de `animation-composition` seront réutilisées en bouclant depuis le début, jusqu'à ce que toutes les animations aient reçue une valeur `animation-composition`. Pour plus d'informations, voir [définir plusieurs valeurs de propriétés d'animation](/fr/docs/Web/CSS/Guides/Animations/Using#définir_plusieurs_valeurs_de_propriétés_danimation).
 
 ### Valeurs
 
@@ -45,7 +42,7 @@ animation-composition: unset;
 
 ## Description
 
-Chaque propriété ciblée par une règle @ [`@keyframes`](/fr/docs/Web/CSS/Reference/At-rules/@keyframes) est associée avec une pile d'effets. La valeur de la pile d'effets est calculée en combinant la valeur _sous-jacente_ d'une propriété CSS dans une règle de style avec la valeur _d'effet_ de cette propriété dans l'image-clé (<i lang="en">keyframe</i>). La propriété `animation-composition` aide à indiquer la façon dont sont combinées la valeur sous-jacente et la valeur d'effet.
+Chaque propriété ciblée par une règle {{CSSxRef("@keyframes")}} est associée avec une pile d'effets. La valeur de la pile d'effets est calculée en combinant la valeur _sous-jacente_ d'une propriété CSS dans une règle de style avec la valeur _d'effet_ de cette propriété dans l'image-clé (<i lang="en">keyframe</i>). La propriété `animation-composition` aide à indiquer la façon dont sont combinées la valeur sous-jacente et la valeur d'effet.
 
 Par exemple, dans le fragment CSS qui suit, `blur(5px)` est la valeur sous-jacente, et `blur(10px)` est la valeur d'effet. La propriété `filter` est modifiée par les deux animations, `pulse` et `brightness-pulse`. La propriété `animation-composition` indique l'opération à réaliser afin de produire l'effet final, après avoir combiné l'effet de la valeur sous-jacente et de la valeur d'effet.
 
@@ -77,11 +74,11 @@ Prenons l'hypothèse d'autres valeurs que celle utilisée avant pour `animation-
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -110,6 +107,24 @@ L'exemple qui suit illustre les effets des différentes valeurs de `animation-co
 
 Ici, la valeur sous-jacente est `translateX(50px) rotate(45deg)`.
 
+```css hidden
+.container {
+  width: 230px;
+  height: 200px;
+  background: cyan;
+  display: inline-block;
+  text-align: center;
+}
+
+.target {
+  width: 20px;
+  height: 50px;
+  background: green;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+```
+
 ```css
 @keyframes slide {
   20%,
@@ -123,18 +138,9 @@ Ici, la valeur sous-jacente est `translateX(50px) rotate(45deg)`.
     background: orange;
   }
 }
-.container {
-  width: 240px;
-  height: 220px;
-  background: cyan;
-  display: inline-block;
-}
+
 .target {
-  width: 20px;
-  height: 50px;
-  background: green;
-  border-radius: 10px;
-  transform: translateX(50px) rotate(45deg);
+  transform: translateX(30px) rotate(45deg);
   animation: slide 5s linear infinite;
 }
 .target:hover {
@@ -153,7 +159,7 @@ Ici, la valeur sous-jacente est `translateX(50px) rotate(45deg)`.
 
 #### Résultat
 
-{{EmbedLiveSample("","100%","450")}}
+{{EmbedLiveSample("Comprendre les valeurs de `animation-composition`", "100%", 250)}}
 
 - Avec `replace`, la valeur d'effet finale pour la propriété `transform` pour l'image-clé `20%, 40%` est `translateX(100px)` (qui remplace complètement la valeur sous-jacente `translateX(50px) rotate(45deg)`). Dans ce cas, l'élément pivote de `45deg` vers `0deg`, car l'animation part de la valeur par défaut pour l'élément jusqu'à la valeur d'absence de rotation, comme défini à la progression de 20%. Il s'agit du comportement par défaut.
 - Avec `add`, la valeur d'effet finale pour la propriété `transform` pour l'image-clé `20%, 40%` est `translateX(50px) rotate(45deg)`, suivie par `translateX(100px)`. L'élément est donc déplacé de `50px` vers la droite, tourné de `45deg`, puis translaté de `100px` supplémentaires le long de l'axe X nouvellement orienté.
@@ -171,3 +177,4 @@ Ici, la valeur sous-jacente est `translateX(50px) rotate(45deg)`.
 
 - [Utiliser des animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)
 - [La propriété `composite` de l'interface `KeyFrameEffect` de l'API Web Animations](/fr/docs/Web/API/KeyframeEffect/composite)
+- Les autres propriétés d'animation associées&nbsp;: {{CSSxRef("animation")}}, {{CSSxRef("animation-delay")}}, {{CSSxRef("animation-direction")}}, {{CSSxRef("animation-duration")}}, {{CSSxRef("animation-fill-mode")}}, {{CSSxRef("animation-iteration-count")}}, {{CSSxRef("animation-name")}}, {{CSSxRef("animation-play-state")}}, {{CSSxRef("animation-timeline")}}, {{CSSxRef("animation-timing-function")}}

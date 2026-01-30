@@ -1,14 +1,15 @@
 ---
 title: background-position-y
 slug: Web/CSS/Reference/Properties/background-position-y
-original_slug: Web/CSS/background-position-y
+l10n:
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`background-position-y`** définit la position verticale initiale de chaque image d'arrière-plan. La position est relative à la couche de position définie par {{CSSxRef("background-origin")}}.
 
-La propriété **`background-position-y`** définit la position verticale initiale de chaque image d'arrière-plan. La position est relative à l'origine définie par {{cssxref("background-origin")}}.
+La valeur de cette propriété est remplacée par toute déclaration des propriétés raccourcies {{CSSxRef("background")}} ou {{CSSxRef("background-position")}} appliquées à l'élément après elle.
 
-{{InteractiveExample("CSS Demo: background-position-y")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: background-position-y")}}
 
 ```css interactive-example-choice
 background-position-y: top;
@@ -45,39 +46,34 @@ background-position-y: bottom 32px;
 }
 ```
 
-> [!NOTE]
-> La valeur de cette propriété sera surchargée par n'importe quelle déclaration avec {{cssxref("background")}} ou {{cssxref("background-position")}} située après la déclaration.
-
 ## Syntaxe
 
 ```css
 /* Valeurs avec un mot-clé */
 background-position-y: top;
-background-position-y: bottom;
 background-position-y: center;
+background-position-y: bottom;
 
-/* Valeurs proportionnelles */
-/* Type <percentage>        */
+/* Valeur en pourcentage <percentage> */
 background-position-y: 25%;
 
-/* Valeurs de longueur */
-/* Type <length>       */
+/* Valeurs de longueur <length> */
 background-position-y: 0px;
 background-position-y: 1cm;
 background-position-y: 8em;
 
-/* Déclaration indiquant un décalage  */
-/* relatif à un des côtés de la boîte */
+/* Valeurs de décalage relatif */
 background-position-y: bottom 3px;
 background-position-y: bottom 10%;
 
-/* Gestion de plusieurs valeurs */
-/* pour plusieurs arrières-plan */
+/* Valeurs multiples */
 background-position-y: 0px, center;
 
 /* Valeurs globales */
 background-position-y: inherit;
 background-position-y: initial;
+background-position-y: revert;
+background-position-y: revert-layer;
 background-position-y: unset;
 ```
 
@@ -89,10 +85,10 @@ background-position-y: unset;
   - : L'image d'arrière-plan est centrée verticalement par rapport à la zone dédiée à l'arrière-plan.
 - `bottom`
   - : Le bas de l'image d'arrière-plan est aligné avec le bas de la zone dédiée à l'arrière-plan.
-- `<length>`
-  - : Une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) qui définit le décalage vertical de l'arrière-plan correspondant par rapport au bord haut de la zone d'arrière-plan. Si aucun côté n'est indiqué, l'écart fera référence au bord haut. Certains navigateurs permettent d'indiquer un décalage par rapport au côté bas.
-- `<percentage>`
-  - : Une valeur en pourcentages (type {{cssxref("&lt;percentage&gt;")}}) qui définit le décalage vertical de l'arrière-plan correspondant par rapport à un bord horizontal de la zone d'arrière-plan, proportionnellement à la hauteur de la zone. Si aucun côté n'est indiqué, l'écart fera référence au bord haut. Une valeur de 100% indique que le bas de l'image d'arrière-plan sera aligné avec le bas du conteneur et une valeur de 50% centrera l'image.
+- {{CSSxRef("&lt;length&gt;")}}
+  - : Le décalage du bord horizontal de l'image d'arrière-plan par rapport au bord horizontal supérieur correspondant de la couche de position d'arrière-plan. (Certains navigateurs permettent d'utiliser le bord inférieur pour le décalage.)
+- {{CSSxRef("&lt;percentage&gt;")}}
+  - : Le décalage de la position verticale de l'image d'arrière-plan par rapport au conteneur. Une valeur de 0% signifie que le bord supérieur de l'image d'arrière-plan est aligné avec le bord supérieur du conteneur, et une valeur de 100% signifie que le bord _inférieur_ de l'image d'arrière-plan est aligné avec le bord _inférieur_ du conteneur. Ainsi, une valeur de 50% centre l'image d'arrière-plan verticalement.
 
 ## Définition formelle
 
@@ -101,6 +97,64 @@ background-position-y: unset;
 ## Syntaxe formelle
 
 {{CSSSyntax}}
+
+## Exemples
+
+### Exemple simple
+
+L'exemple suivant montre une implémentation d'image d'arrière-plan, avec la position horizontale de l'arrière-plan et la position verticale de l'arrière-plan utilisées pour définir séparément la position horizontale et la position verticale de l'image.
+
+#### HTML
+
+```html
+<div></div>
+```
+
+#### CSS
+
+```css
+div {
+  width: 300px;
+  height: 300px;
+  background-color: skyblue;
+  background-image: url("https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Exemple simple", "100%", 300)}}
+
+### Valeurs relatives aux côtés
+
+L'exemple suivant montre la prise en charge de la syntaxe de décalage relatif aux côtés, qui permet de décaler l'arrière-plan à partir de n'importe quel bord.
+
+#### HTML
+
+```html
+<div></div>
+```
+
+#### CSS
+
+```css
+div {
+  width: 300px;
+  height: 300px;
+  background-color: seagreen;
+  background-image: url("https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png");
+  background-repeat: no-repeat;
+  background-position-x: right 20px;
+  background-position-y: bottom 10px;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Valeurs relatives aux côtés", "100%", 300)}}
 
 ## Spécifications
 
@@ -112,8 +166,6 @@ background-position-y: unset;
 
 ## Voir aussi
 
-- {{cssxref("background-position")}}
-- {{cssxref("background-position-x")}}
-- {{cssxref("background-position-inline")}}
-- {{cssxref("background-position-block")}}
-- [Manipuler plusieurs arrière-plans](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
+- La propriété {{CSSxRef("background-position")}}
+- La propriété {{CSSxRef("background-position-x")}}
+- [Utiliser plusieurs arrière-plans](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)

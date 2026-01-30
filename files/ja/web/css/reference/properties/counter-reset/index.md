@@ -1,12 +1,11 @@
 ---
 title: counter-reset
 slug: Web/CSS/Reference/Properties/counter-reset
-original_slug: Web/CSS/counter-reset
 l10n:
-  sourceCommit: cdc0015b727804fa293bb33e5abcefce688729ab
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**`counter-reset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 [CSS カウンター](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters)を指定された値で初期化します。要素の数値から 1 までカウントアップするカウンター、および要素の数値から 1 までカウントダウンするカウンターを作成することができます。
+**`counter-reset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、名前付きの [CSS カウンター](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters)を作成し、指定された値で初期化します。要素の数値から 1 までカウントアップするカウンター、および要素の数値から 1 までカウントダウンするカウンターを作成することができます。
 
 {{InteractiveExample("CSS デモ: counter-reset")}}
 
@@ -59,7 +58,7 @@ h2 {
 }
 
 h2::before {
-  content: "Chapter " counters(chapter-count, ".") ": ";
+  content: "第 " counters(chapter-count, ".") " 章: ";
 }
 ```
 
@@ -75,7 +74,7 @@ counter-reset: my-counter -3;
 /* 逆光カウンターを、既定の初期値で作成 */
 counter-reset: reversed(my-counter);
 
-/* 逆光カウンターを作成し、 "-1" で初期化  */
+/* 逆光カウンターを作成し、 "-1" で初期化 */
 counter-reset: reversed(my-counter) -1;
 
 /* 逆光カウンターと通常のカウンターを同時に作成 */
@@ -109,13 +108,13 @@ counter-reset: unset;
 `counter-reset` プロパティは、通常のカウンターと、対応しているブラウザーでは逆行カウンターの両方を生成することができます。通常のカウンターと逆行カウンターを、空白で区切って複数作成することができます。カウンターは、単独の名前、または空白で区切られた名前と値の組み合わせとすることができます。
 
 > [!WARNING]
-> [`counter-reset` と `counter-set` プロパティには違い](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters#difference_between_counter-set_and_counter-reset)があります。 `counter-reset` を使用してカウンターを作成した後、 {{cssxref("counter-set")}} プロパティを使用してその値を調整することができます。 `counter-reset` プロパティは名前とは裏腹にカウンターの作成と初期化に使用され、一方、 `counter-set` プロパティは既存のカウンターの値をリセットするために使用されるため、これは直感に反しています。
+> [`counter-reset` と `counter-set` プロパティには違い](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters#counter-set_と_counter-reset_の違い)があります。`counter-reset` を使用してカウンターを作成した後、 {{cssxref("counter-set")}} プロパティを使用してその値を調整することができます。これは直感的ではありません。名前にもかかわらず、`counter-reset` プロパティはカウンターの作成と初期化に使用され、一方、`counter-set` プロパティは既存のカウンターの値をリセットするために使用されるからです。
 
 より高い詳細度を持つセレクターで `counter-increment: none` を設定すると、より低い詳細度を持つセレクターで設定された名前付きカウンターの作成が上書きされます。
 
 ### 既定の初期値
 
-通常および逆行カウンターの既定の初期値により、最も一般的な 2 つの番号付けパターン、すなわち 1 から要素数までのカウントアップと、要素数から 1 までのカウントダウンは簡単に実装できます。名前付きカウンターにカウンター値を指定することで、カウンターをある整数値から始めて、カウントアップやカウントダウンをするようにすることができます。
+通常および逆行カウンターの既定の初期値により、最も一般的な 2 つの番号付けパターン、すなわち 1 から要素数までのカウントアップと、要素数から 1 までのカウントダウンが実装できます。名前付きカウンターにカウンター値を指定することで、カウンターをある整数値から始めて、カウントアップやカウントダウンをするようにすることができます。
 
 通常のカウンターは、リセット値が提供されていない場合、 `0` になっています。既定では、通常のカウンターは 1 つずつ増加しますが、 {{cssxref("counter-increment")}} で調整することができます。
 
@@ -238,10 +237,10 @@ li::before {
 ## 関連情報
 
 - [CSS カウンターの使用](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters)
-- {{cssxref("counter-increment")}}
-- {{cssxref("counter-set")}}
-- {{cssxref("@counter-style")}}
-- {{cssxref("counter", "counter()")}} および {{cssxref("counters", "counters()")}} 関数
+- {{cssxref("counter-increment")}} プロパティ
+- {{cssxref("counter-set")}} プロパティ
+- {{cssxref("@counter-style")}} アットルール
+- {{cssxref("counter()")}} および {{cssxref("counters()")}} 関数
 - {{cssxref("content")}} プロパティ
 - {{cssxref("::marker")}} 擬似クラス
 - [CSS リストとカウンター](/ja/docs/Web/CSS/Guides/Lists)モジュール
