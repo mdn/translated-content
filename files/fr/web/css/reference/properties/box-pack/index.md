@@ -1,15 +1,20 @@
 ---
 title: box-pack
 slug: Web/CSS/Reference/Properties/box-pack
-original_slug: Web/CSS/box-pack
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_Header}}{{Deprecated_Header}}
 
 > [!WARNING]
-> Cette propriété fait partie de la première version du standard pour les boîtes flexibles (_flexbox_) et sera remplacée dans une prochaine version.
+> Cette propriété fait partie de la première version du standard pour les boîtes flexibles (<i lang="en">flexbox</i> en anglais) et sera remplacée dans une prochaine version.
 
-Les propriétés CSS **`-moz-box-pack`** et **`-webkit-box-pack`** définissent la façon dont une boîte `-moz-box` ou `-webkit-box` groupe son contenu dans la direction de la disposition. L'effet de cette propriété n'est visible que s'il reste de l'espace supplémentaire dans la boîte. Pour plus de détails, se référer à la page [Flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) qui décrit les différentes propriétés des boîtes flexibles.
+Les propriétés [CSS](/fr/docs/Web/CSS) **`-moz-box-pack`** et **`-webkit-box-pack`** définissent la façon dont une boîte `-moz-box` ou `-webkit-box` groupe son contenu dans la direction de la disposition. L'effet de cette propriété n'est visible que s'il reste de l'espace supplémentaire dans la boîte. Pour plus de détails, se référer à la page [Flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) qui décrit les différentes propriétés des boîtes flexibles.
+
+La direction de la disposition dépend de l'orientation de l'élément&nbsp;: horizontale ou verticale.
+
+## Syntaxe
 
 ```css
 /*  Valeurs avec un mot-clé */
@@ -24,13 +29,7 @@ box-pack: initial;
 box-pack: unset;
 ```
 
-Voir la page [Flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) pour plus d'informations.
-
-La direction de la disposition dépend de l'orientation de l'élément : horizontale ou verticale.
-
-## Syntaxe
-
-Cette propriété se définit grâce à l'un des mots-clés définis ci-après.
+La propriété `box-pack` est définie avec l'une des valeurs de mot-clé listées ci-dessous.
 
 ### Valeurs
 
@@ -43,13 +42,48 @@ Cette propriété se définit grâce à l'un des mots-clés définis ci-après.
 - `justify`
   - : L'espace est réparti entre chacun des éléments fils sans qu'un espace soit placé avant le premier fils ou après le dernier. S'il y a un seul élément fils, la valeur est synonyme de `start`.
 
+## Notes
+
+Le bord de la boîte désigné comme _début_ pour le regroupement dépend de l'orientation et de la direction de la boîte&nbsp;:
+
+- Pour les éléments horizontaux, le _début_ est le bord supérieur.
+- Pour les éléments verticaux, le _début_ est le bord gauche.
+
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <th></th>
+      <th><strong>Normal</strong></th>
+      <th><strong>Inverse</strong></th>
+    </tr>
+    <tr>
+      <th><strong>Horizontal</strong></th>
+      <td>gauche</td>
+      <td>droit</td>
+    </tr>
+    <tr>
+      <th><strong>Vertical</strong></th>
+      <td>hau</td>
+      <td>bas</td>
+    </tr>
+  </tbody>
+</table>
+
+Le bord opposé au début est désigné comme la _fin_.
+
+Si le regroupement utilise l'attribut `pack` de l'élément, le style est ignoré.
+
+## Définition formelle
+
+{{CSSInfo}}
+
 ### Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntaxRaw(`box-pack = start | center | end | justify`)}}
 
 ## Exemples
 
-### CSS
+### Exemples avec `box-pack`
 
 ```css
 div.exemple {
@@ -85,8 +119,6 @@ div.exemple p {
 }
 ```
 
-### HTML
-
 ```html
 <div class="exemple">
   <p>Je serai 2nd en partant du bas de div.exemple, centré horizontalement.</p>
@@ -94,41 +126,11 @@ div.exemple p {
 </div>
 ```
 
-### Résultat
-
-{{EmbedLiveSample('Exemples', 310, 310)}}
-
-## Notes
-
-Le « début » et la « fin » de la boîte dépendent de l'orientation et de la direction de la boîte. Voici le tableau indiquant le début de la boîte en fonction de l'orientation et de la direction :
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th></th>
-      <th><strong>Normal</strong></th>
-      <th><strong>Inverse</strong></th>
-    </tr>
-    <tr>
-      <th><strong>Horizontal</strong></th>
-      <td>gauche</td>
-      <td>droit</td>
-    </tr>
-    <tr>
-      <th><strong>Vertical</strong></th>
-      <td>hau</td>
-      <td>bas</td>
-    </tr>
-  </tbody>
-</table>
-
-Si le regroupement utilise l'attribut `pack` de l'élément, le style est ignoré.
+{{EmbedLiveSample("Exemples avec `box-pack`", 310, 310)}}
 
 ## Spécifications
 
-Cette propriété n'est pas standard mais une propriété semblable est apparue [avec les brouillons de spécification pour les boîtes flexibles CSS3](https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/) et a été remplacée dans les versions suivantes de la spécification.
-
-{{cssinfo}}
+Ne fait partie d'aucun standard.
 
 ## Compatibilité des navigateurs
 
@@ -136,6 +138,6 @@ Cette propriété n'est pas standard mais une propriété semblable est apparue 
 
 ## Voir aussi
 
-- {{cssxref("box-orient")}},
-- {{cssxref("box-direction")}},
-- {{cssxref("box-align")}}
+- La propriété {{CSSxRef("box-orient")}}
+- La propriété {{CSSxRef("box-direction")}}
+- La propriété {{CSSxRef("box-align")}}
