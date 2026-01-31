@@ -1,10 +1,11 @@
 ---
 title: Valeurs et unités CSS
+short-title: Valeurs et unités
 slug: Learn_web_development/Core/Styling_basics/Values_and_units
 original_slug: Learn/CSS/Building_blocks/Values_and_units
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fixing_blog_styles", "Learn_web_development/Core/Styling_basics/Test_your_skills/Values", "Learn_web_development/Core/Styling_basics")}}
 
 Chaque propriété utilisée en CSS possède un type de valeur qui définit l'ensemble des valeurs autorisées pour cette propriété. Visiter des pages de propriétés sur MDN vous aidera à comprendre les valeurs associées à un type de valeur, qui sont valides pour une propriété particulière. Dans cette leçon, nous allons observer quelques-uns des types de valeur les plus fréquemment utilisés, ainsi que leurs valeurs et unités les plus communes.
 
@@ -13,25 +14,14 @@ Chaque propriété utilisée en CSS possède un type de valeur qui définit l'en
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Maîtrise élémentaire de l'informatique,
-        <a
-          href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >suite logicielle de base installée</a
-        >, compétences élémentaires pour
-        <a
-          href="/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers"
-          >travailler avec des fichiers</a
-        >, connaissance de base du HTML (cf.
-        <a href="/fr/docs/Apprendre/HTML/Introduction_à_HTML"
-          >Introduction à HTML</a
-        >), et une idée de
-        <a href="/fr/docs/Learn/CSS/First_steps/How_CSS_works"
-          >Comment fonctionne CSS</a
-        >.
+        Notions de base en HTML (étudiez
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >Syntaxe HTML de base</a
+        >), <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started">Syntaxe CSS de base</a>, <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">Sélecteurs CSS</a>.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif&nbsp;:</th>
+      <th scope="row">Objectifs d'apprentissage&nbsp;:</th>
       <td>
         Apprendre les différents types de valeurs et d'unités utilisés dans les
         propriétés CSS.
@@ -285,4 +275,4 @@ La notion cruciale à garder en mémoire est que chaque propriété possède une
 
 Par exemple, comprendre le type [`<image>`](/fr/docs/Web/CSS/Reference/Values/image) vous permettra de comprendre comment créer un dégradé de couleur. C'est utile mais ce n'est pas forcément évident de prime abord.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fixing_blog_styles", "Learn_web_development/Core/Styling_basics/Test_your_skills/Values", "Learn_web_development/Core/Styling_basics")}}

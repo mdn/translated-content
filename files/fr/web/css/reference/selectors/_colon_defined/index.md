@@ -1,12 +1,11 @@
 ---
 title: :defined
 slug: Web/CSS/Reference/Selectors/:defined
-original_slug: Web/CSS/:defined
 l10n:
-  sourceCommit: 886f2641ae90a70858c5e7d0d20959c70ee44d9d
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:defined`** représente n'importe quel élément ayant été défini. Cela inclut les éléments standards provenant du navigateur, ainsi que les éléments personnalisés («&nbsp;_custom elements_&nbsp;») ayant correctement été définis (c'est-à-dire grâce à la méthode [`CustomElementRegistry.define()`](/fr/docs/Web/API/CustomElementRegistry/define)).
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:defined`** représente n'importe quel élément ayant été défini. Cela inclut les éléments standards provenant du navigateur, ainsi que les éléments personnalisés («&nbsp;_custom elements_&nbsp;») ayant correctement été définis (c'est-à-dire grâce à la méthode {{DOMxRef("CustomElementRegistry.define()")}}).
 
 ```css
 /* Cette règle cible tout élément défini */
@@ -36,7 +35,7 @@ Dans cette démonstration, nous définissons un élément personnalisé de base 
 
 #### HTML
 
-Le code HTML suivant utilise l'élément personnalisé, mais celui-ci n'a pas encore été défini. Nous incluons également un élément {{htmlelement("button")}} qui définira l'élément personnalisé lorsqu'on cliquera dessus, ce qui vous permettra de voir son état avant et après la définition.
+Le code HTML suivant utilise l'élément personnalisé, mais celui-ci n'a pas encore été défini. Nous incluons également un élément {{HTMLElement("button")}} qui définira l'élément personnalisé lorsqu'on cliquera dessus, ce qui vous permettra de voir son état avant et après la définition.
 
 ```html
 <custom-element>
@@ -105,11 +104,11 @@ custom-element:defined::before {
 }
 ```
 
-Nous avons également utilisé le pseudo-élément [`::before`](/fr/docs/Web/CSS/Reference/Selectors/::before) pour afficher un message superposé «&nbsp;Chargement...&nbsp;» jusqu'à ce que l'élément soit défini. Une fois défini, il est supprimé en définissant le [`content`](/fr/docs/Web/CSS/Reference/Properties/content) sur une chaîne vide.
+Nous avons également utilisé le pseudo-élément {{CSSxRef("::before")}} pour afficher un message superposé «&nbsp;Chargement...&nbsp;» jusqu'à ce que l'élément soit défini. Une fois défini, il est supprimé en définissant le {{CSSxRef("content")}} sur une chaîne vide.
 
 #### JavaScript
 
-Le JavaScript suivant a été utilisé pour définir l'élément personnalisé. Pour vous permettre de voir l'état de l'élément personnalisé avant et après sa définition, nous exécutons la méthode {{domxref(« CustomElementRegistry.define », « define() »)}} lorsque vous cliquez sur le bouton.
+Le JavaScript suivant a été utilisé pour définir l'élément personnalisé. Pour vous permettre de voir l'état de l'élément personnalisé avant et après sa définition, nous exécutons la méthode {{DOMxRef("CustomElementRegistry.define", "define()")}} lorsque vous cliquez sur le bouton.
 
 ```js
 const btn = document.querySelector("#btn");

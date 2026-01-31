@@ -1,9 +1,8 @@
 ---
 title: font-language-override
 slug: Web/CSS/Reference/Properties/font-language-override
-original_slug: Web/CSS/font-language-override
 l10n:
-  sourceCommit: 4ecbac9e89961a132c1e7f5493ec94f60dcb1ee4
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`font-language-override`** は [CSS](/ja/docs/Web/CSS) のプロパティで、書体で言語に固有の字形の使用を制御します。

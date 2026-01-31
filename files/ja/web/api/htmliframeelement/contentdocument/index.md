@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-iframe とその iframe の親文書が[同一オリジン](/ja/docs/Web/Security/Same-origin_policy)であった場合、[`Document`](/ja/docs/Web/API/Document)（すなわち、インラインフレーム内の閲覧コンテキスト内にあるアクティブな文書）を返します。そうでなければ `null` を返します。
+iframe とその iframe の親文書が[同一オリジン](/ja/docs/Web/Security/Defenses/Same-origin_policy)であった場合、[`Document`](/ja/docs/Web/API/Document)（すなわち、インラインフレーム内の閲覧コンテキスト内にあるアクティブな文書）を返します。そうでなければ `null` を返します。
 
 ## contentDocument の例
 

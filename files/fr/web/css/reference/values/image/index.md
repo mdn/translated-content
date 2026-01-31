@@ -3,7 +3,7 @@ title: <image>
 slug: Web/CSS/Reference/Values/image
 original_slug: Web/CSS/image
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<image>`** représente une image en deux dimensions.
@@ -12,7 +12,7 @@ Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/do
 
 Le type de données `<image>` peut être représenté avec l'une des valeurs suivantes&nbsp;:
 
-- Une image portée par une valeur de type {{cssxref("url_value", "&lt;url&gt;")}}
+- Une image portée par une valeur de type {{CSSxRef("url_value", "&lt;url&gt;")}}
 - Une valeur de type {{CSSxRef("&lt;gradient&gt;")}} qui représente un dégradé
 - Une partie d'une page web définie par la fonction {{CSSxRef("element","element()")}}
 - Une image, un fragment d'image ou une zone de couleur définie par la fonction {{CSSxRef("image/image","image()")}}
@@ -61,7 +61,7 @@ Les navigateurs ne fournissent pas d'informations particulières quant aux image
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 

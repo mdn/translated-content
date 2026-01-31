@@ -1,12 +1,11 @@
 ---
 title: font-display
 slug: Web/CSS/Reference/At-rules/@font-feature-values/font-display
-original_slug: Web/CSS/@font-feature-values/font-display
 l10n:
-  sourceCommit: a4ae225903c2784a3d74b43f311e05f208e42c91
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`font-display`** は {{cssxref("@font-feature-values")}} アットルールの記述子は、フォントフェイスがダウンロードされるかどうか、いつかに応じて、どのように表示されるかの既定値を設定します。 `@font-feature-values` ブロック内で `font-display` 記述子に値を設定すると、 `@font-face` アットルールの `font-display` 記述子の既定値を、同じ {{cssxref("@font-face/font-family", "font-family")}} 値を持つすべてのフォントに対して設定します。
+**`font-display`** は {{cssxref("@font-feature-values")}} アットルールの記述子で、フォントフェイスがダウンロード済みで利用可能であるかどうか、いつなのかに基づいて、どのようにフォントフェイスを表示するかのデフォルト値を定めます。`@font-feature-values` ブロック内で `font-display` 記述子に値を設定すると、{{cssxref("@font-face")}} アットルールの `font-display` 記述子のデフォルト値を、同じ {{cssxref("@font-face/font-family", "font-family")}} 値を持つすべてのフォントに対して設定します。
 
 ## 構文
 
@@ -65,7 +64,7 @@ font-display: optional;
 
 ## ブラウザーの互換性
 
-この機能を実装しているブラウザーはありません。
+今のところ、この機能を実装しているブラウザーはありません。
 
 ## 関連情報
 

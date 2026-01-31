@@ -1,27 +1,28 @@
 ---
 title: 页面可见性 API
 slug: Web/API/Page_Visibility_API
+l10n:
+  sourceCommit: 21ed9a1338b207e8a39064583c19d9f720235235
 ---
 
 {{DefaultAPISidebar("Page Visibility API")}}
 
-页面可见性 API 提供了一些事件，你可以通过查看这些事件来了解文档何时变为可见或隐藏，还提供了一些功能来查看页面的当前可见性状态。
+页面可见性 API 提供了一些事件，你可以通过查看这些事件来了解文档何时变为可见或隐藏，还提供了一些特性来查看页面的当前可见性状态。
 
 通过让页面在文档不可见时避免执行不必要的任务，这对于节省资源和提高性能特别有用。
 
 ## 概念与用途
 
-当用户最小化窗口或切换到另一个标签页时，API 会发送 {{domxref("document.visibilitychange_event", "visibilitychange")}} 事件，让监听者知道页面的状态已发生变化。你可以检测到该事件并执行某些操作或采取不同的行为。例如，如果你的 web 应用正在播放视频，当用户将标签页放到后台时，它可以暂停视频，当用户返回标签页时，它又可以恢复播放。用户不会失去在视频中的位置，视频的配乐也不会干扰新的前台标签页中的音频，用户在此期间也不会错过任何视频。
+当用户最小化窗口、切换到另一个标签页，或文档被其他窗口完全遮挡时，API 会发送 {{domxref("document.visibilitychange_event", "visibilitychange")}} 事件，让监听者知道页面的状态已发生变化。你可以检测到该事件并执行某些操作或采取不同的行为。例如，如果你的 web 应用正在播放视频，当用户将标签页放到后台时，它可以暂停视频，当用户返回标签页时，它又可以恢复播放。用户不会失去在视频中的位置，视频的配乐也不会干扰新的前台标签页中的音频，用户在此期间也不会错过任何视频。
 
 {{HTMLElement("iframe")}} 的可见性状态与父文档相同。使用 CSS 属性（如 {{cssxref("display", "display: none;")}}）隐藏 `<iframe>` 不会触发可见性事件，也不会改变框架内文档的状态。
 
-### 使用情景
+### 用例
 
-让我们来看看页面可见性 API 的几个使用案例。
+让我们来看看页面可见性 API 的几个用例。
 
 - 网站有图片轮播效果，只有在用户观看轮播的时候，才会自动展示下一张幻灯片。
 - 显示信息仪表盘的应用程序不希望在页面不可见时轮询服务器进行更新。
-- 页面想要检测何时正在预渲染，以便可以准确的计算页面浏览量。
 - 当设备进入待机模式（用户按下电源键关闭屏幕）时，网站想要关闭设备声音。
 
 开发人员在过去使用不完善的代理来检测这一点。例如，通过观察 window 上的 {{domxref("Window/blur_event", "blur")}} 和 {{domxref("Window/focus_event", "focus")}} 事件，可以帮助你了解页面何时不是活动页面，但这并不能告诉你，页面实际上已被用户隐藏。页面可见性 API 可解决这一问题。
@@ -31,7 +32,7 @@ slug: Web/API/Page_Visibility_API
 
 ### 制定有助于后台页面性能的策略
 
-在页面可见性 API 之外，用户代理会采取许多策略来减轻后台或隐藏选项卡对性能的影响。这些可能包括：
+在页面可见性 API 之外，用户代理会采取许多策略来减轻后台或隐藏标签页对性能的影响。这些可能包括：
 
 - 大多数浏览器会停止向后台标签页或隐藏的 {{ HTMLElement("iframe") }} 发送 {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} 回调，以提高性能和电池寿命。
 - 在后台或不活动标签页中，{{domxref("Window.setTimeout", "setTimeout()")}} 等计时器会被限流，以帮助提高性能。详情请参阅[延迟时间超过指定时间的原因](/zh-CN/docs/Web/API/Window/setTimeout#延时比指定值更长的原因)。
@@ -45,7 +46,7 @@ slug: Web/API/Page_Visibility_API
 某些进程不受这种限流行为的影响。在这种情况下，可以使用页面可见性 API 来减少标签页隐藏时对性能的影响。
 
 - 正在播放音频的标签页被视为前台进程，不会被限流。
-- 运行使用实时网络连接（[WebSocket](/zh-CN/docs/Web/API/WebSockets_API) 和 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)）的代码的标签页不会被限流，以避免关闭这些连接时超时和意外关闭。
+- 运行使用实时网络连接（[WebSocket](/zh-CN/docs/Web/API/WebSockets_API) 和 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)）的代码的标签页不会被限流，以避免这些连接超时关闭或意外断开。
 - 为了避免超时，[IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 进程也没有限流。
 
 ## 对其他接口的扩展
@@ -54,12 +55,12 @@ slug: Web/API/Page_Visibility_API
 
 页面可见性 API 为 {{domxref("Document")}} 接口添加了以下属性：
 
-- {{domxref("Document.hidden")}} {{deprecated_inline}} {{ReadOnlyInline}}
-  - : 如果页面处于隐藏状态，则返回 `true`，否则返回 `false`。
+- {{domxref("Document.hidden")}} {{ReadOnlyInline}}
+  - : 如果页面处于对用户隐藏的状态，则返回 `true`，否则返回 `false`。
 - {{domxref("Document.visibilityState")}} {{ReadOnlyInline}}
   - : 说明文档当前可见性状态的字符串。可能的值有：
     - `visible`
-      - : 页面内容至少部分可见。在实践中，这意味着页面是非最小化窗口的前景选项卡。
+      - : 页面内容至少部分可见。在实践中，这意味着页面是非最小化窗口的前台标签页。
     - `hidden`
       - : 页面内容对用户不可见，原因可能是文档标签页在后台或属于最小化窗口的一部分，也可能是设备屏幕关闭。
 
@@ -74,7 +75,13 @@ slug: Web/API/Page_Visibility_API
 
 ### 在页面隐藏时暂停音频
 
-该示例会在用户切换到不同标签页时暂停音频，并在用户切换回标签页时播放音频。
+此示例在页面隐藏时暂停音频播放，并在页面再次可见时恢复播放。`<audio>` 元素的控制按钮允许用户在播放和暂停音频之间切换。布尔值 `playingOnHide` 用于防止在页面切换至 `visible` 状态时播放音频——前提是该媒体在页面隐藏时未处于播放状态。
+
+```css hidden
+audio {
+  width: 100%;
+}
+```
 
 #### HTML
 
@@ -89,13 +96,14 @@ slug: Web/API/Page_Visibility_API
 ```js
 const audio = document.querySelector("audio");
 
-// 处理页面可见性变化：
-// - 如果页面隐藏，暂停音频
-// - 如果页面显示，播放音频
+let playingOnHide = false;
+
 document.addEventListener("visibilitychange", () => {
   if (document.hidden) {
+    playingOnHide = !audio.paused;
     audio.pause();
-  } else {
+  } else if (playingOnHide) {
+    // 页面已显示！若音频处于“隐藏时播放”状态，继续播放
     audio.play();
   }
 });
@@ -103,9 +111,7 @@ document.addEventListener("visibilitychange", () => {
 
 #### 结果
 
-{{EmbedLiveSample("在页面隐藏时暂停音频", "", 100)}}
-
-试着播放音频，然后切换到不同的标签页，然后再返回。
+{{EmbedLiveSample("在页面隐藏时暂停音频", "", 50)}}
 
 ## 规范
 
@@ -114,3 +120,9 @@ document.addEventListener("visibilitychange", () => {
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("Document.visibilityState")}}
+- {{domxref("Document.hidden")}}
+- [使用交叉观察器 API 实现元素可见性计时](/zh-CN/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)

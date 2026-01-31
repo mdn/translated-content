@@ -25,7 +25,7 @@ _Больше деталей и изменений смотрите в [блог
 
 ### CSS
 
-- [CSS variables](/ru/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) have been implemented ([Firefox bug 773296](https://bugzil.la/773296)). Mozilla Hacks article can be found [here](https://hacks.mozilla.org/2013/12/css-variables-in-firefox-nightly/). They are enabled by default only for non-release builds (on release builds flip the pref `layout.css.variables.enabled` to `true` if you want to play with them).
+- [CSS variables](/ru/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) have been implemented ([Firefox bug 773296](https://bugzil.la/773296)). Mozilla Hacks article can be found [here](https://hacks.mozilla.org/2013/12/css-variables-in-firefox-nightly/). They are enabled by default only for non-release builds (on release builds flip the pref `layout.css.variables.enabled` to `true` if you want to play with them).
 - Добавлена поддержка {{cssxref("visibility")}}`: collapse` в
   Flexboxes ([Firefox bug 783470](https://bugzil.la/783470)).
 - Свойство {{cssxref("box-sizing")}} больше не нуждается в префиксе ([Firefox bug 243412](https://bugzil.la/243412)).

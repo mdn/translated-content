@@ -1,17 +1,16 @@
 ---
 title: translate3d()
 slug: Web/CSS/Reference/Values/transform-function/translate3d
-original_slug: Web/CSS/transform-function/translate3d
+l10n:
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
-{{CSSRef}}
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`translate3d()`** repositionne un élément dans l'espace 3D. Son résultat est de type {{CSSxRef("&lt;transform-function&gt;")}}.
 
-La fonction CSS **`translate3d()`** permet de déplacer un élément dans l'espace tridimensionnel. Cette transformation est définie à l'aide d'un vecteur dont les coordonnées définissent l'amplitude du déplacement pour chaque direction.
-
-{{InteractiveExample("CSS Demo: translate3d()")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: translate3d()")}}
 
 ```css interactive-example-choice
-transform: translate3d(0);
+transform: translate3d(0, 0, 0);
 ```
 
 ```css interactive-example-choice
@@ -66,37 +65,37 @@ transform: translate3d(5ch, 0.4in, 5em);
 }
 
 .front {
-  background: rgba(90, 90, 90, 0.7);
+  background: rgb(90 90 90 / 0.7);
   transform: translateZ(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
+  background: rgb(0 210 0 / 0.7);
   transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210, 0, 0, 0.7);
+  background: rgb(210 0 0 / 0.7);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0, 0, 210, 0.7);
+  background: rgb(0 0 210 / 0.7);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
+  background: rgb(210 210 0 / 0.7);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
+  background: rgb(210 0 210 / 0.7);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
 
-La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function).
+Cette transformation est caractérisée par un vecteur tridimensionnel [tx, ty, tz]. Ses coordonnées définissent de combien l'élément se déplace dans chaque direction.
 
 ## Syntaxe
 
@@ -107,55 +106,47 @@ translate3d(tx, ty, tz)
 ### Valeurs
 
 - `tx`
-  - : Une valeur de type [`<length>`](/fr/docs/Web/CSS/Reference/Values/length) ou [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage) qui représente l'abscisse du vecteur de translation (équivalente au déplacement horizontal).
+  - : Est une longueur ({{CSSxRef("&lt;length&gt;")}}) ou un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) représentant l'abscisse (composante horizontale, x) du vecteur de déplacement [tx, ty, tz].
 - `ty`
-  - : Une valeur de type [`<length>`](/fr/docs/Web/CSS/Reference/Values/length) ou [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage) qui représente l'ordonnée du vecteur de translation (équivalente au déplacement vertical).
+  - : Est une longueur ({{CSSxRef("&lt;length&gt;")}}) ou un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) représentant l'ordonnée (composante verticale, y) du vecteur de déplacement [tx, ty, tz].
 - `tz`
-  - : Une valeur de type [`<length>`](/fr/docs/Web/CSS/Reference/Values/length) qui représente la composante en profondeur du vecteur de translation (équivalente au déplacement en profondeur). La valeur ne peut pas être de type [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage), si c'est le cas, la règle décrivant la transformation sera considérée comme invalide.
+  - : Est une longueur ({{CSSxRef("&lt;length&gt;")}}) représentant la composante z du vecteur de déplacement. Elle ne peut pas être une valeur {{CSSxRef("&lt;percentage&gt;")}}&nbsp;; dans ce cas, la propriété contenant la transformation est considérée comme invalide [tx, ty, tz].
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
+      <th scope="col"><a href="/fr/docs/Web/CSS/Reference/Values/transform-function#le_système_de_coordonnées_cartésiennes">Coordonnées cartésiennes</a> sur <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^2 <sup>(angl.)</sup></a></th>
+      <th scope="col"><a href="https://fr.wikipedia.org/wiki/Coordonn%C3%A9es_homog%C3%A8nes">Coordonnées homogènes</a> sur <a href="https://fr.wikipedia.org/wiki/Plan_projectif_r%C3%A9el">ℝℙ^2</a></th>
+      <th scope="col">Coordonnées cartésiennes sur <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^3 <sup>(angl.)</sup></a></th>
+      <th scope="col">Coordonnées homogènes sur <a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3 <sup>(angl.)</sup></a></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td colspan="2">
         <p>
-          Cette transformation s'applique en trois dimensions et ne peut donc
-          être représentée sur le plan.
+          Cette transformation s'applique à l'espace 3D et ne peut pas être représentée sur le plan.
         </p>
       </td>
       <td>
-        Une translation n'est pas une transformation linéaire de ℝ<sup>3</sup>
-        et ne peut donc pas être représentée par une matrice dans le système
-        cartésien.
+        Un déplacement n'est pas une transformation linéaire dans ℝ^3 et ne peut pas être représenté par une matrice de coordonnées cartésiennes.
       </td>
       <td>
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>tx</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>ty</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>tz</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
-            ></mfenced
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi>tx</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi>ty</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mi>tz</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cccc} 1 & 0 & 0 & tx \\ 0 & 1 & 0 & ty \\ 0 & 0 & 1 & tz \\ 0 & 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
     </tr>
   </tbody>
 </table>
 
+## Syntaxe formelle
+
+{{CSSSyntax}}
+
 ## Exemples
 
-### Définir une translation sur un seul axe
+### Utiliser un déplacement sur un seul axe
 
 #### HTML
 
@@ -175,17 +166,17 @@ div {
 }
 
 .moved {
-  transform: perspective(500px) translate3d(10px, 0px, 0px);
-  /* Équivalent à perspective(500px) translateX(10px)*/
+  /* Équivaut à : perspective(500px) translateX(10px) */
+  transform: perspective(500px) translate3d(10px, 0, 0px);
   background-color: pink;
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Définir_une_translation_sur_un_seul_axe","100%","250")}}
+{{EmbedLiveSample("Utiliser un déplacement sur un seul axe", 250, 250)}}
 
-### Définir une translation sur les axes X et Z
+### Combiner un déplacement sur l'axe z et l'axe x
 
 #### HTML
 
@@ -212,7 +203,7 @@ div {
 
 #### Résultat
 
-{{EmbedLiveSample("Définir_une_translation_sur_les_axes_X_et_Z","100%","250")}}
+{{EmbedLiveSample("Combiner un déplacement sur l'axe z et l'axe x", 250, 250)}}
 
 ## Spécifications
 
@@ -224,5 +215,6 @@ div {
 
 ## Voir aussi
 
-- [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function)
+- La prorpiété {{CSSxRef("transform")}}
+- Le type de donnée {{CSSxRef("&lt;transform-function&gt;")}}
+- La prorpiété {{CSSxRef("translate")}}

@@ -1,9 +1,8 @@
 ---
 title: radial-gradient()
 slug: Web/CSS/Reference/Values/gradient/radial-gradient
-original_slug: Web/CSS/gradient/radial-gradient
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
 **`radial-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 2 つ以上の色の連続的な推移が原点から放射状に広がる画像を生成します。形状は円形または楕円形になります。関数の結果は {{cssxref("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{cssxref("&lt;image&gt;")}} の特殊形です。
@@ -19,7 +18,13 @@ background: radial-gradient(closest-side, #3f87a6, #ebf8e1, #f69d3c);
 ```
 
 ```css interactive-example-choice
-background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
+background: radial-gradient(
+  circle at 100%,
+  #333333,
+  #333333 50%,
+  #eeeeee 75%,
+  #333333 75%
+);
 ```
 
 ```css interactive-example-choice
@@ -54,7 +59,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)
 radial-gradient(circle at center in hsl longer hue, red 0, blue, green 100%)
 ```
 
-放射グラデーションは、グラデーションの中心（0% の楕円の位置）と、末端図形（100% の楕円）の大きさと形状を示すことで指定します。
+放射グラデーションは、グラデーションの中心（楕円の 0% の位置）と、末端図形（楕円の 100% の位置）の大きさと形状を示すことで指定します。
 
 ## 値
 
@@ -74,7 +79,7 @@ radial-gradient(circle at center in hsl longer hue, red 0, blue, green 100%)
     | `farthest-side`   | `closest-side` と同様ですが、末端図形がその中心から最も遠い辺 (または縦と横の辺) に接するように大きさが調整される点が異なります。             |
     | `farthest-corner` | 既定値で、グラデーションの末端図形は、ボックスの中心から最も遠い頂点に接するように大きさが調整されます。                                      |
 
-    `<ending-shape>` を `circle` と指定した場合、大きさを明示的に [`<length>`](/ja/docs/Web/CSS/Reference/Values/length) として与えることができ、円形の広がりの大きさを明示的に指定します。負の値は不正です。
+    `<ending-shape>` を `circle` と指定した場合、大きさを明示的に {{cssxref("length")}} として与えることができ、円形の広がりの大きさを明示的に指定します。負の値は不正です。
 
     `<ending-shape>` を `ellipse` と指定するか省略した場合、大きさを 2 つの {{cssxref("length-percentage")}} で指定して明示的な楕円の大きさを指定することができます。 1 つ目の値は水平の広がり、 2 つ目の値は垂直の広がりです。パーセント値はグラデーションボックスの対応する長さからの相対値です。負の値は不正です。
 
@@ -87,7 +92,7 @@ radial-gradient(circle at center in hsl longer hue, red 0, blue, green 100%)
 
 ## 解説
 
-他のグラデーションと同様、放射グラデーションは[内在的な寸法を持ちません](/ja/docs/Web/CSS/Reference/Values/image#補間)。つまり、自然な寸法や推奨される寸法、推奨される縦横比もありません。具体的な寸法は、適用先の要素の寸法に一致します。
+他のグラデーションと同様、放射グラデーションは[内在的な寸法を持ちません](/ja/docs/Web/CSS/Reference/Values/image#解説)。つまり、自然な寸法や推奨される寸法、推奨される縦横比もありません。具体的な寸法は、適用先の要素の寸法に一致します。
 
 繰り返してコンテナーを埋める放射グラデーションを生成するには、代わりに {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}} 関数を使用してください。
 
@@ -147,8 +152,8 @@ radial-gradient(circle at center in hsl longer hue, red 0, blue, green 100%)
 .radial-gradient {
   background-image: radial-gradient(
     farthest-corner at 40px 40px,
-    #f35 0%,
-    #43e 100%
+    #ff3355 0%,
+    #4433ee 100%
   );
 }
 ```

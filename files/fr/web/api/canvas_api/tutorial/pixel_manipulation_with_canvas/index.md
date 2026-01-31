@@ -3,7 +3,7 @@ title: Manipulation de pixels avec canvas
 slug: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}
 
 Jusqu'à présent, nous n'avons pas examiné dans le détail les pixels réels de notre canevas. Avec l'objet ImageData, vous pouvez directement lire et écrire dans le tableau de données de l'image, pour manipuler les pixels un par un. Nous verrons également comment le lissage (anticrénelage) de l'image peut être contrôlé et comment sauvegarder des images depuis votre canevas.
 
@@ -280,4 +280,4 @@ Vous pouvez également créer un {{domxref ("Blob")}} à partir du canevas.
 - [Manipulating video using canvas](/fr/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
 - [Canevas, images et pixels – par Christian Heilmann (en)](https://codepo8.github.io/canvas-images-and-pixels/)
 
-{{PreviousNext("Tutoriel_canvas/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}

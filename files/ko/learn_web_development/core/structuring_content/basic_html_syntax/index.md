@@ -729,7 +729,7 @@ HTML에서 문자 `<`,`>`, `"`및 `&`는 특수 문자입니다. 이들은 HTML 
 {{ EmbedLiveSample('Entity_references_Including_special_characters_in_HTML', 700, 200, "", "", "hide-codepen-jsfiddle") }}
 
 > [!NOTE]
-> HTML의 [문자 인코딩이 UTF-8로 설정](/ko/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#specifying_your_document's_character_encoding)되어 있기 때문에 최신 브라우저는 실제 기호를 잘 처리하므로 다른 기호에 대해서는 엔티티 참조를 사용할 필요가 없습니다.
+> HTML의 [문자 인코딩이 UTF-8로 설정](/ko/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#specifying_your_document's_character_encoding)되어 있기 때문에 최신 브라우저는 실제 기호를 잘 처리하므로 다른 기호에 대해서는 엔티티 참조를 사용할 필요가 없습니다.
 
 ## HTML 주석
 

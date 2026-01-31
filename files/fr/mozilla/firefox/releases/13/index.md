@@ -1,25 +1,28 @@
 ---
 title: Firefox 13 pour les développeurs
+short-title: Firefox 13
 slug: Mozilla/Firefox/Releases/13
+l10n:
+  sourceCommit: 61912f53d01e935aea926a2226130fb4587414a9
 ---
 
-Firefox 13, basé sur Gecko 13.0, est sorti le 5 juin 2012. Cette page résume les principaux changements dans Firefox 13 qui sont utiles aux développeurs.
+Firefox 13 est sorti le 5 juin 2012. Cette page résume les principaux changements dans Firefox 13 qui sont utiles aux développeur·euse·s.
 
-## Changements pour les développeurs Web
+## Changements pour les développeur·euse·s web
 
 ### HTML
 
-- L'attribut [`cellspacing`](/fr/docs/Web/HTML/Reference/Elements/table#cellspacing) de {{htmlelement("table")}} est désormais analysé de la manière qu'il soit en mode quirks ou non. Autrement dit, si une valeur est spécifiée en pourcentage, elle est traitée comme un certain nombre de pixels, puisque les valeurs en pourcentage ne sont pas réellement autorisée selon la spécification.
-- L'élément {{htmlelement("wbr")}} a vu son comportement bi-directionnel corrigé. Il se comporte à présent comme l'Unicode `U+200B ZERO-WIDTH SPACE` et n'affecte donc plus la bi-directionnalité de son élément parent.
-- La peusdo-classe {{Cssxref(":invalid")}} peut à présent être appliquée à l'élément {{htmlelement("form")}}.
+- L'attribut [`cellspacing`](/fr/docs/Web/HTML/Reference/Elements/table#cellspacing) de {{HTMLElement("table")}} est désormais analysé de la manière qu'il soit en mode quirks ou non. Autrement dit, si une valeur est spécifiée en pourcentage, elle est traitée comme un certain nombre de pixels, puisque les valeurs en pourcentage ne sont pas réellement autorisée selon la spécification.
+- L'élément {{HTMLElement("wbr")}} a vu son comportement bi-directionnel corrigé. Il se comporte à présent comme l'Unicode `U+200B ZERO-WIDTH SPACE` et n'affecte donc plus la bi-directionnalité de son élément parent.
+- La peusdo-classe {{CSSxRef(":invalid")}} peut à présent être appliquée à l'élément {{HTMLElement("form")}}.
 
 ### CSS
 
-- L'unité `turn` de la propriété {{cssxref("&lt;angle&gt;")}} est désormais supportée (à utiliser avec la fonction CSS `rotate()`).
-- Le support d'une syntaxe de 3 à 4 valeurs pour la propriété {{cssxref("background-position")}} a été ajouté. Vous pour décaler une image de fond à partir de n'importe quel coin en écrivant par exemple "`right 10px bottom 20px`". Voir [bug Firefox 522607](https://bugzil.la/522607)
-- Le support d'une syntaxe à 2 valeurs pour la propriété {{cssxref("background-repeat")}} a été ajouté.
-- Les propriétés {{cssxref("border-radius","-moz-border-radius*")}} et {{cssxref("box-shadow","-moz-box-shadow")}} n'ont plus de préfixe (`border-radius` ou `box-shadow`). Voir [bug Firefox 693510](https://bugzil.la/693510)
-- La propriété {{cssxref("column-fill")}} a été implémentée (prefixée).
+- L'unité `turn` de la propriété {{CSSxRef("&lt;angle&gt;")}} est désormais supportée (à utiliser avec la fonction CSS `rotate()`).
+- Le support d'une syntaxe de 3 à 4 valeurs pour la propriété {{CSSxRef("background-position")}} a été ajouté. Vous pour décaler une image de fond à partir de n'importe quel coin en écrivant par exemple "`right 10px bottom 20px`". Voir [bug Firefox 522607 <sup>(angl.)</sup>](https://bugzil.la/522607)
+- Le support d'une syntaxe à 2 valeurs pour la propriété {{CSSxRef("background-repeat")}} a été ajouté.
+- Les propriétés {{CSSxRef("border-radius","-moz-border-radius*")}} et {{CSSxRef("box-shadow","-moz-box-shadow")}} n'ont plus de préfixe (`border-radius` ou `box-shadow`). Voir [bug Firefox 693510 <sup>(angl.)</sup>](https://bugzil.la/693510)
+- La propriété {{CSSxRef("column-fill")}} a été implémentée (prefixée).
 
 ### JavaScript
 
@@ -28,27 +31,27 @@ Firefox 13, basé sur Gecko 13.0, est sorti le 5 juin 2012. Cette page résume l
 
 ### DOM
 
-- L'argument `deep` de la méthode {{domxref("Node.cloneNode()")}} est désormais optionnel, comme c'est spécifié dans DOM4.
-- Les méthodes {{domxref("window.setTimeout()")}} et {{domxref("window.setInterval()")}} ne transmettent plus l'argument supplémentaire "lateness" lors du rappel de routine.
-- La méthode {{domxref("Blob","Blob.mozSlice()")}} n'a plus de préfixe.
-- Le support du constructeur {{domxref("Blob")}} a été ajouté.
+- L'argument `deep` de la méthode {{DOMxRef("Node.cloneNode()")}} est désormais optionnel, comme c'est spécifié dans DOM4.
+- Les méthodes {{DOMxRef("window.setTimeout()")}} et {{DOMxRef("window.setInterval()")}} ne transmettent plus l'argument supplémentaire "lateness" lors du rappel de routine.
+- La méthode {{DOMxRef("Blob","Blob.mozSlice()")}} n'a plus de préfixe.
+- Le support du constructeur {{DOMxRef("Blob")}} a été ajouté.
 - Le support de [`globalStorage`](/fr/docs/Web/API/Web_Storage_API#globalstorage) a été retiré.
-- La nouvelle interface {{domxref("DOMRequest")}}, utilisée pour rapporté l'état et le résultat des opérations en arrière-plan, a été ajoutée.
-- La méthode {{domxref("HTMLOptionElement", "HTMLOptionElement.index()")}} renvoie désormais `0` au lieu de l'incorrect `-1` lorsque {{HTMLElement("option")}} est à l'intérieur d'un élément {{HTMLElement("datalist")}}.
-- {{domxref("DOMException")}} a été implémenté selon la spécification DOM Level 4.
-- L'inteface {{domxref("FileError")}} a été supprimée en faveur de l'interface {{domxref("DOMError")}} selon la dernière spécification FileAPI.
-- L'objet {{domxref("Range")}} ne lance plus une `RangeException`. A la place une {{domxref("DOMException")}} est utilisée selon DOM 4.
-- {{domxref("element.getAttributeNS()")}} renvoie désormais toujours `null` au lieu d'une chaîne vide pour les attributs inexistants. Auparavant, il y avait des cas où une chaîne vide pouvait être retournée. Pour être conforme à la spécification DOM4, null doit être retourné pour les attributs inexistants.
-- L'interface {{domxref("HTMLCanvasElement")}} a maintenant une méthode non-standard, `mozFetchAsStream()`, qui fournit un flux entrant contenant les données d'image de l'élément au format spécifié.
+- La nouvelle interface `DOMRequest`, utilisée pour rapporté l'état et le résultat des opérations en arrière-plan, a été ajoutée.
+- La méthode {{DOMxRef("HTMLOptionElement", "HTMLOptionElement.index()")}} renvoie désormais `0` au lieu de l'incorrect `-1` lorsque {{HTMLElement("option")}} est à l'intérieur d'un élément {{HTMLElement("datalist")}}.
+- {{DOMxRef("DOMException")}} a été implémenté selon la spécification DOM Level 4.
+- L'inteface `FileError` a été supprimée en faveur de l'interface {{DOMxRef("DOMError")}} selon la dernière spécification FileAPI.
+- L'objet {{DOMxRef("Range")}} ne lance plus une `RangeException`. A la place une {{DOMxRef("DOMException")}} est utilisée selon DOM 4.
+- {{DOMxRef("element.getAttributeNS()")}} renvoie désormais toujours `null` au lieu d'une chaîne vide pour les attributs inexistants. Auparavant, il y avait des cas où une chaîne vide pouvait être retournée. Pour être conforme à la spécification DOM4, null doit être retourné pour les attributs inexistants.
+- L'interface {{DOMxRef("HTMLCanvasElement")}} a maintenant une méthode non-standard, `mozFetchAsStream()`, qui fournit un flux entrant contenant les données d'image de l'élément au format spécifié.
 
-### UA string
+### Chaînes de l'agent utilisateur
 
-- Firefox Mobile ou Tablet pour Android dispose désormais [d'une chaîne UA](/fr/docs/Gecko_user_agent_string_reference#Mobile_and_Tablet_indicators) pour indiquer le style et n'a plus le signe Fennec. En outre, le nombre après "Gecko /" est à présent le numéro de version de Gecko au lieu d'une date.
+- Firefox Mobile ou Tablet pour Android dispose désormais [d'une chaîne UA](/fr/docs/Web/HTTP/Reference/Headers/User-Agent/Firefox#mobile_and_tablet_indicators) pour indiquer le style et n'a plus le signe Fennec. En outre, le nombre après "Gecko /" est à présent le numéro de version de Gecko au lieu d'une date.
 - La chaîne UA n'affiche plus le numéro de correctif Gecko ou le statut de version dans le numéro de version ; le numéro de version est à présent toujours de la forme "X.Y", où X est le numéro de version majeur et Y le mineur. Par exemple, "13.0" ou "14.1". Il n'y aura plus quelque chose comme "14.0.1b1".
 
 ### SVG
 
-- L'interface DOM {{domxref("SVGStringList")}} est désormais indexable comme [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) (voir [bug Firefox 722071](https://bugzil.la/722071)).
+- L'interface DOM {{DOMxRef("SVGStringList")}} est désormais indexable comme [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) (voir [bug Firefox 722071 <sup>(angl.)</sup>](https://bugzil.la/722071)).
 
 ### WebGL
 
@@ -56,8 +59,8 @@ Firefox 13, basé sur Gecko 13.0, est sorti le 5 juin 2012. Cette page résume l
 
 ### MathML
 
-- Le support pour l'attribut `width` sur l'élément {{MathMLElement("mtable")}} a été ajouté ([bug Firefox 722880](https://bugzil.la/722880)).
-- La [police MathJax](https://www.mathjax.org/demos/tex-samples/) est désormais utilisée comme police par défaut pour le texte mathématique are now used as the default fonts for mathematical text. Voir [les polices pour le moteur MathML de Mozilla](/fr/docs/Mozilla_MathML_Project/Fonts) pour plus d'informations.
+- Le support pour l'attribut `width` sur l'élément {{MathMLElement("mtable")}} a été ajouté ([bug Firefox 722880 <sup>(angl.)</sup>](https://bugzil.la/722880)).
+- La [police MathJax <sup>(angl.)</sup>](https://www.mathjax.org/demos/tex-samples/) est désormais utilisée comme police par défaut pour le texte mathématique are now used as the default fonts for mathematical text. Voir [les polices pour le moteur MathML de Mozilla](/fr/docs/Web/MathML/Guides/Fonts) pour plus d'informations.
 
 ### Réseau
 
@@ -71,13 +74,13 @@ Firefox 13, basé sur Gecko 13.0, est sorti le 5 juin 2012. Cette page résume l
 
 #### Améliorations du panneau de style
 
-- En cliquant sur l'en-tête d'une règle dans le [panneau de style](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#CSS_pane) ouvre à présent [l'Editeur de style](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html) correspondant au CSS.
-- Un clique droit sur une règle dans le [panneau de style](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#CSS_pane) offre à présent une option pour copier la règle dans le presse-papiers.
+- En cliquant sur l'en-tête d'une règle dans le [panneau de style <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#css-pane) ouvre à présent [l'Editeur de style <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html) correspondant au CSS.
+- Un clique droit sur une règle dans le [panneau de style <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#css-pane) offre à présent une option pour copier la règle dans le presse-papiers.
 - La saisie d'un nom de propriété inconnue, ou d'une valeur de propriété illégale, affiche une icône d'avertissement près de cette propriété.
 
 #### Amélioration de l'Ardoise
 
-- L'[Ardoise](/fr/docs/Outils/Ardoise) a maintenant une option dans le menu Aide pour vous rendre à la documentation MDN sur l'Ardoise.
+- L'_Ardoise_ a maintenant une option dans le menu Aide pour vous rendre à la documentation MDN sur l'Ardoise.
 
 ## Changements pour les développeurs de Mozilla et de modules complémentaires
 
@@ -92,21 +95,17 @@ A partir de Firefox 13, Firefox pour Windows requiert au minimum Windows XP Serv
 - Le support d'un drapeau sale a été ajouté à l'API Source Editor.
 - L'éditeur de source ne supporte plus de retomber sur un {{HTMLElement("textarea")}} au lieu d'utiliser Orion.
 - L'éditeur expose à présent les évènements focus et blur.
-- La méthode [`getIndentationString()`](/fr/docs/JavaScript_code_modules/source-editor.jsm#getIndentationString%28%29) a été ajoutée, cela renvoie la chaîne à utiliser pour l'indentation du texte dans l'éditeur.
+- La méthode [`getIndentationString()` <sup>(angl.)</sup>](https://web.archive.org/web/20210620193439/https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/source-editor.jsm#getIndentationString%28%29) a été ajoutée, cela renvoie la chaîne à utiliser pour l'indentation du texte dans l'éditeur.
 - L'éditeur de source supporte désormais la gestion d'une liste de points d'arrêt et l'affichage de l'interface utilisateur pour les basculer sur et en dehors ; toutefois, il ne fait pas la mise en œuvre des points d'arrêt. C'est à vous d'écrire du code pour le débogueur.
 - Le support pour mettre en surbrillance la ligne actuelle a été ajouté, en utilisant l'option de configuration `highlightCurrentLine`.
 
 ### ARIA
 
-- Les propriétés CSS {{cssxref("margin-left")}}, {{cssxref("margin-right")}}, {{cssxref("margin-top")}}, {{cssxref("margin-bottom")}} sont à présent toutes reflétées dans les attributs des objets ARIA avec le même nom. Voir les [attributs des objets Gecko](/fr/docs/Accessibility/AT-APIs/Gecko/Attrs) pour plus d'informations.
+- Les propriétés CSS {{CSSxRef("margin-left")}}, {{CSSxRef("margin-right")}}, {{CSSxRef("margin-top")}}, {{CSSxRef("margin-bottom")}} sont à présent toutes reflétées dans les attributs des objets ARIA avec le même nom. Voir les [attributs des objets Gecko <sup>(angl.)</sup>](https://web.archive.org/web/20210120101715/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/Accessibility/AT-APIs/Gecko/Attrs) pour plus d'informations.
 
 ### Interfaces
 
 - L'interface `nsIScreen` supporte à présent le contrôle de la rotation via le nouvel attribut `rotation`.
-- L'interface `nsIPrefBranch2` a été intégrée dans `nsIPrefBranch` ([bug Firefox 718255](https://bugzil.la/718255)).
+- L'interface `nsIPrefBranch2` a été intégrée dans `nsIPrefBranch` ([bug Firefox 718255 <sup>(angl.)</sup>](https://bugzil.la/718255)).
 - Les alias `MozOpacity`, `MozOutline`, `MozOutlineStyle`, `MozOutlineWidth`, `MozOutlineOffset` et `MozOutlineColor`, qui ont tous été retirés des précédentes versions de Gecko, ont été supprimés de `nsIDOMCSS2Properties`, qui aurait dû avoir ces alias.
 - L'attribut `excludeItemIfParentHasAnnotation` de `nsINavHistoryQueryOptions` a été retiré, avec l'opération de requête correspondante. Il existait les livemarks, qui n'existent plus.
-
-## Voir aussi
-
-{{Firefox_for_developers('12')}}

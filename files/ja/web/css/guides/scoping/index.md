@@ -1,9 +1,9 @@
 ---
 title: CSS スコープ
+short-title: スコープ
 slug: Web/CSS/Guides/Scoping
-original_slug: Web/CSS/CSS_scoping
 l10n:
-  sourceCommit: 5ca83d829b875709ef9bf0b5ae5cefef911c9c1a
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **CSS スコープ**モジュールは、[シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) の[スコープ](https://css.oddbird.net/scope/)機構を中心に、 CSS のスコープとカプセル化の機構を定義します。
@@ -22,8 +22,8 @@ CSS スタイルには、グローバルスコープと、{{Glossary("shadow tre
 ### セレクター
 
 - {{CSSXref(":host")}}
-- {{CSSXref(":host_function", ":host()")}}
-- {{CSSXref(":host-context", ":host-context()")}}
+- {{CSSXref(":host()")}}
+- {{cssxref(":host-context()")}}
 - {{CSSXref("::slotted")}}
 
 ## ガイド
@@ -51,7 +51,7 @@ CSS スタイルには、グローバルスコープと、{{Glossary("shadow tre
 
 - {{Glossary("Shadow tree", "シャドウツリー")}} （用語集の用語）
 - {{Glossary("DOM")}} （用語集の用語）
-- [複合セレクター](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#compound_selector)（用語）
+- [複合セレクター](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#複合セレクター)（用語）
 - [セレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list)（用語）
 
 - [ウェブコンポーネント](/ja/docs/Web/API/Web_components)インターフェイス、プロパティ、メソッド

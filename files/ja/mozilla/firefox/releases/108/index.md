@@ -44,7 +44,7 @@ l10n:
 
 #### Media、WebRTC、Web Audio
 
-- [Web MIDI API](/ja/docs/Web/API/Web_MIDI_API) が、[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts) で使用可能になりました。
+- [Web MIDI API](/ja/docs/Web/API/Web_MIDI_API) が、[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts) で使用可能になりました。
   [`navigator.requestMIDIAccess()`](/ja/docs/Web/API/Navigator/requestMIDIAccess) を呼び出すとアクティブな MIDI デバイスを持つユーザーに対して、API を有効にするために必要な [Site Permission Add-On](https://support.mozilla.org/ja/kb/site-permission-add-ons) のインストールを促します。
   詳しくは [Firefox バグ 1795025](https://bugzil.la/1795025) をご覧ください。
 

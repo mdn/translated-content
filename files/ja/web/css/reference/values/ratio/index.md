@@ -1,16 +1,17 @@
 ---
 title: <ratio>
 slug: Web/CSS/Reference/Values/ratio
-original_slug: Web/CSS/ratio
 l10n:
-  sourceCommit: 2ef2c905a7322f5a533cf7c96ec5a337fc614359
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`<ratio>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、幅と高さの比例関係を記述します。これは、メディアクエリー {{cssxref("@media")}} における `aspect-ratio` メディア特性の値として、コンテナークエリー {{cssxref("@container")}} における `aspect-ratio` サイズ特性の値として、 CSS {{cssxref("aspect-ratio")}} プロパティの値として使用します。
+**`<ratio>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、2 つの値の比例関係を表します。主にアスペクト比を表します。これは幅と高さの関係を表します。例えば、 `<ratio>` はメディアクエリー {{cssxref("@media")}} における `aspect-ratio` メディア特性の値として、コンテナークエリー {{cssxref("@container")}} における `aspect-ratio` サイズ特性の値として、 CSS {{cssxref("aspect-ratio")}} プロパティの値として使用します。
 
 ## 構文
 
 `<ratio>` データ型は {{cssxref("&lt;number&gt;")}} に続くフォワードスラッシュ ('/', Unicode `U+002F SOLIDUS`) と 2 つ目の {{cssxref("&lt;number&gt;")}} から成ります。数字はどちらも正の値でなければなりません。スラッシュの前後のスペースは省略可能です。最初の数字は幅を表し、 2 つ目は高さを表します。また、値として単一の {{cssxref("&lt;number&gt;")}} を指定することもできます。
+
+2 つの比率は、比率の分母の数値を用いて比較します。例えば、 16/16 は 16/9 よりも小さいです。なぜなら、前者は 1 に、後者は 1.7 にそれぞれ換算されるからです。これは、縦長の画面のアスペクト比は横長の画面よりも小さく、縦向き画像のアスペクト比は横向き画像よりも小さいということです。
 
 ### 一般的なアスペクト比
 
@@ -30,7 +31,7 @@ l10n:
 ### メディアクエリーでの使用
 
 ```css
-@media screen and (min-aspect-ratio: 16/9) {
+@media screen and (aspect-ratio >= 16/9) {
   /* … */
 }
 ```

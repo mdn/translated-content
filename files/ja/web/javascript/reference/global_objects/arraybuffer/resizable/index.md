@@ -1,25 +1,24 @@
 ---
 title: ArrayBuffer.prototype.resizable
+short-title: resizable
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/resizable
 l10n:
-  sourceCommit: d42c4bd039f84d228a339a4a15c8abf9e67cf608
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+**`resizable`** は {{jsxref("ArrayBuffer")}} インスタンスのアクセサープロパティで、この配列バッファーがサイズ変更かどうかを表します。
 
-**`resizable`** は {{jsxref("ArrayBuffer")}} インスタンスのアクセサープロパティで、この `ArrayBuffer` がサイズ変更かどうかを表します。
-
-{{InteractiveExample("JavaScript デモ: ArrayBuffer.resizable")}}
+{{InteractiveExample("JavaScript デモ: ArrayBuffer.prototype.resizable")}}
 
 ```js interactive-example
 const buffer1 = new ArrayBuffer(8, { maxByteLength: 16 });
 const buffer2 = new ArrayBuffer(8);
 
 console.log(buffer1.resizable);
-// Expected output: true
+// 予想される結果: true
 
 console.log(buffer2.resizable);
-// Expected output: false
+// 予想される結果: false
 ```
 
 ## 解説

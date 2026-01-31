@@ -1,14 +1,13 @@
 ---
 title: all
 slug: Web/CSS/Reference/Properties/all
-original_slug: Web/CSS/all
 l10n:
-  sourceCommit: 04894c8e870437317c72c597cfac183283421305
+  sourceCommit: 1bfe630bd8538b64c97c7f684f5ee647a76c1a28
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`all`** permet de réinitialiser toutes les propriétés d'un élément, à l'exception de [`unicode-bidi`](/fr/docs/Web/CSS/Reference/Properties/unicode-bidi), [`direction`](/fr/docs/Web/CSS/Reference/Properties/direction), et des [propriétés personnalisées](/fr/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties), avec leurs valeurs initiales, héritées ou qui proviennent d'une autre couche de la cascade voire d'une autre feuille de style.
+La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`all`** permet de réinitialiser toutes les propriétés d'un élément, à l'exception de {{CSSxRef("unicode-bidi")}}, {{CSSxRef("direction")}} et des [propriétés personnalisées](/fr/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties), avec leurs valeurs initiales, héritées ou qui proviennent d'une autre couche de la cascade voire d'une autre feuille de style.
 
-{{InteractiveExample("CSS Demo: all")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: all")}}
 
 ```css interactive-example-choice
 /*no all property*/
@@ -35,9 +34,10 @@ all: revert;
   <div class="example-container-bg">
     <div class="example-container">
       <p id="example-element">
-        This paragraph has a font size of 1.5rem and a color of gold. It also
-        has 1rem of vertical margin set by the user-agent. The parent of the
-        paragraph is a &lt;div&gt; with a dashed blue border.
+        Ce paragraphe a une taille de police de 1.5rem et une couleur or. Il a
+        aussi une marge verticale de 1rem définie par l'agent utilisateur. Le
+        parent du paragraphe est un &lt;div&gt; avec une bordure bleue en
+        pointillés.
       </p>
     </div>
   </div>
@@ -63,6 +63,10 @@ all: revert;
 }
 ```
 
+## Propriétés constitutives
+
+Cette propriété est une propriété raccourcie pour toutes les propriétés CSS à l'exception de {{CSSxRef("unicode-bidi")}}, {{CSSxRef("direction")}} et des [propriétés personnalisées](/fr/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties).
+
 ## Syntaxe
 
 ```css
@@ -74,23 +78,23 @@ all: revert;
 all: revert-layer;
 ```
 
-La propriété `all` est définie avec un des mots-clés globaux de CSS. On notera que la valeur de cette propriété n'a pas d'impact sur les propriétés [`unicode-bidi`](/fr/docs/Web/CSS/Reference/Properties/unicode-bidi), [`direction`](/fr/docs/Web/CSS/Reference/Properties/direction), et les [propriétés personnalisées](/fr/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties).
+La propriété `all` est définie avec un des mots-clés globaux de CSS. On notera que la valeur de cette propriété n'a pas d'impact sur les propriétés {{CSSxRef("unicode-bidi")}}, {{CSSxRef("direction")}}, et les [propriétés personnalisées](/fr/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties).
 
 ### Valeurs
 
-- [`initial`](/fr/docs/Web/CSS/Reference/Values/initial)
-  - : Ce mot-clé indique que toutes les propriétés qui sont définies pour l'élément auquel s'applique `all` devront prendre [leurs valeurs initiales](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale).
-- [`inherit`](/fr/docs/Web/CSS/Reference/Values/inherit)
-  - : Ce mot-clé indique que toutes les propriétés qui sont définies pour l'élément auquel s'applique `all` devront prendre [les valeurs héritées](/fr/docs/Web/CSS/Guides/Cascade/Inheritance).
-- [`unset`](/fr/docs/Web/CSS/Reference/Values/unset)
-  - : Ce mot-clé indique que toutes les propriétés qui s'appliquent à l'élément prendront leur valeur héritée si elles héritent par défaut, ou leur valeur initiale sinon.
-- [`revert`](/fr/docs/Web/CSS/Reference/Values/revert)
-  - : Le comportement obtenu sera différent selon l'origine de la règle&nbsp;:
+- {{CSSxRef("initial")}}
+  - : Définit que toutes les propriétés qui sont définies pour l'élément auquel s'applique `all` devront prendre [leurs valeurs initiales](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale).
+- {{CSSxRef("inherit")}}
+  - : Définit que toutes les propriétés qui sont définies pour l'élément auquel s'applique `all` devront prendre [les valeurs héritées](/fr/docs/Web/CSS/Guides/Cascade/Inheritance).
+- {{CSSxRef("unset")}}
+  - : Définit que toutes les propriétés qui s'appliquent à l'élément prendront leur valeur héritée si elles héritent par défaut, ou leur valeur initiale sinon.
+- {{CSSxRef("revert")}}
+  - : Définit le comportement obtenu sera différent selon l'origine de la règle&nbsp;:
     - Si la règle provient [du site](/fr/docs/Web/CSS/Guides/Cascade/Introduction#feuilles_de_style_du_site), `revert` remonte la [cascade](/fr/docs/Web/CSS/Guides/Cascade/Introduction) au niveau de la feuille de style de l'utilisatrice ou de l'utilisateur afin que [les valeurs définies](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_définie) soient calculées comme si aucune règle du site n'avait été définie pour l'élément. En ce qui concerne `revert`, cette origine (le site) inclut également les origines de surcharge (<i lang="en">override</i>) et d'animation.
     - Si la règle provient [d'une feuille de style de l'utilisatrice ou de l'utilisateur](/fr/docs/Web/CSS/Guides/Cascade/Introduction#feuilles_de_style_de_lutilisatrice_ou_lutilisateur), `revert` remonte [la cascade](/fr/docs/Web/CSS/Guides/Cascade/Introduction) au niveau de l'agent utilisateur afin que [les valeurs définies](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_définie) soient calculées comme si aucune règle utilisateur ou du site n'avait été spécifiée pour l'élément.
     - Si la règle provient [de l'agent utilisateur](/fr/docs/Web/CSS/Guides/Cascade/Introduction#feuilles_de_style_de_lagent_utilisateur), `revert` agira comme `unset`.
-- [`revert-layer`](/fr/docs/Web/CSS/revert-layer)
-  - : Indique que toutes les propriétés de l'élément devraient revenir à [une couche de cascade](/fr/docs/Web/CSS/Reference/At-rules/@layer) précédente existante. S'il n'existe pas de telle couche, les propriétés de l'élément reviendront à la règle correspondante existante de la couche courante ou d'une [origine](/fr/docs/Glossary/Style_origin) précédente.
+- {{CSSxRef("revert-layer")}}
+  - : Définit que toutes les propriétés de l'élément devraient revenir à [une couche de cascade](/fr/docs/Web/CSS/Reference/At-rules/@layer) précédente existante. S'il n'existe pas de telle couche, les propriétés de l'élément reviendront à la règle correspondante existante de la couche courante ou d'une [origine](/fr/docs/Glossary/Style_origin) précédente.
 
 ## Définition formelle
 
@@ -102,7 +106,7 @@ La propriété `all` est définie avec un des mots-clés globaux de CSS. On note
 
 ## Exemples
 
-Dans cet exemple, le fichier CSS contient une mise en forme pour l'élément [`<blockquote>`](/fr/docs/Web/HTML/Reference/Elements/blockquote) et pour l'élément parent [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body). Les différents résultats présentés dans la section éponyme illustrent les effets des différentes valeurs de la propriété `all` lorsqu'elle est appliquée dans la règle `blockquote`.
+Dans cet exemple, le fichier CSS contient une mise en forme pour l'élément HTML {{HTMLElement("blockquote")}} ainsi que pour l'élément parent `<body>`. Les différents résultats dans la sous-section Résultat montrent comment la mise en forme de l'élément `<blockquote>` est affectée lorsque différentes valeurs sont appliquées à la propriété `all` dans la règle `blockquote`.
 
 ### HTML
 
@@ -153,9 +157,9 @@ blockquote {
 }
 ```
 
-{{EmbedLiveSample("", "200", "125")}}
+{{EmbedLiveSample("Pas de propriété `all`", 200, 125)}}
 
-Dans ce scénario, aucune propriété `all` n'est appliquée dans la règle `blockquote`. L'élément [`<blockquote>`](/fr/docs/Web/HTML/Reference/Elements/blockquote) utilise la mise en forme par défaut du navigateur, qui lui fournit une marge, ainsi que des couleurs d'arrière-plan et de texte indiquées par la feuille de style. Il se comporte comme un [_élément de bloc_](/fr/docs/Glossary/Block-level_content)&nbsp;: le texte qui suit l'élément est placé en dessous.
+Dans ce scénario, aucune propriété `all` n'est appliquée dans la règle `blockquote`. L'élément HTML {{HTMLElement("blockquote")}} utilise la mise en forme par défaut du navigateur, qui lui fournit une marge, ainsi que des couleurs d'arrière-plan et de texte indiquées par la feuille de style. Il se comporte comme un élément _bloc_&nbsp;: le texte qui suit l'élément est placé en dessous.
 
 #### `all: initial`
 
@@ -179,9 +183,9 @@ blockquote {
 }
 ```
 
-{{EmbedLiveSample("", "200", "125")}}
+{{EmbedLiveSample("`all: initial`", 200, 125)}}
 
-Lorsque la propriété `all` vaut `initial` au sein de la règle `blockquote`, l'élément [`<blockquote>`](/fr/docs/Web/HTML/Reference/Elements/blockquote) n'utilise plus la mise en forme par défaut du navigateur&nbsp;: il s'agit maintenant d'un [_élément en ligne_](/fr/docs/Glossary/Inline-level_content) (la valeur initiale de [`display`](/fr/docs/Web/CSS/Reference/Properties/display#définition_formelle)), [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color#définition_formelle) vaut `transparent` (sa valeur initiale), [`font-size`](/fr/docs/Web/CSS/Reference/Properties/font-size#définition_formelle) vaut `medium`, et [`color`](/fr/docs/Web/CSS/Reference/Properties/color#définition_formelle) vaut `black` (là encore, sa valeur initiale).
+Lorsque la propriété `all` vaut `initial` dans la règle `blockquote`, l'élément HTML {{HTMLElement("blockquote")}} n'utilise plus la mise en forme par défaut du navigateur&nbsp;: il s'agit maintenant d'un élément _en ligne_ (valeur initiale), sa propriété [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color#définition_formelle) vaut `transparent` (valeur initiale), sa propriété [`font-size`](/fr/docs/Web/CSS/Reference/Properties/font-size#définition_formelle) vaut `medium`, et sa propriété [`color`](/fr/docs/Web/CSS/Reference/Properties/color#définition_formelle) vaut `black` (valeur initiale).
 
 #### `all: inherit`
 
@@ -205,9 +209,9 @@ blockquote {
 }
 ```
 
-{{EmbedLiveSample("", "200", "125")}}
+{{EmbedLiveSample("`all: inherit`", 200, 125)}}
 
-Dans ce cas, l'élément [`<blockquote>`](/fr/docs/Web/HTML/Reference/Elements/blockquote) n'utilise pas la mise en forme par défaut du navigateur mais hérite des valeurs de l'élément parent, [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body). L'élément `<blockquote>` est désormais un [_élément de bloc_](/fr/docs/Glossary/Block-level_content) (il hérite de cette caractéristique via la valeur de [`display`](/fr/docs/Web/CSS/Reference/Properties/display) pour `<body>`), [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color) vaut `#F0F0F0` (héritée), [`font-size`](/fr/docs/Web/CSS/Reference/Properties/font-size) vaut `small` (héritée), et [`color`](/fr/docs/Web/CSS/Reference/Properties/color) vaut `blue` (héritée).
+Dans ce cas, l'élément HTML {{HTMLElement("blockquote")}} n'utilise pas la mise en forme par défaut du navigateur. Il hérite à la place des valeurs de style de son parent {{HTMLElement("body")}}&nbsp;: il s'agit maintenant d'un élément _bloc_ (valeur héritée), sa propriété {{CSSxRef("background-color")}} vaut `#F0F0F0` (valeur héritée), sa propriété {{CSSxRef("font-size")}} vaut `small` (valeur héritée), et sa propriété {{CSSxRef("color")}} vaut `blue` (valeur héritée).
 
 #### `all: unset`
 
@@ -231,9 +235,9 @@ blockquote {
 }
 ```
 
-{{EmbedLiveSample("", "200", "125")}}
+{{EmbedLiveSample("`all: unset`", 200, 125)}}
 
-Lorsque la valeur `unset` est appliquée à la propriété `all` dans la règle `blockquote`, l'élément [`<blockquote>`](/fr/docs/Web/HTML/Reference/Elements/blockquote) n'utilise pas la mise en forme par défaut du navigateur. Comme [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color#définition_formelle) n'est pas une propriété héritée, contrairement à [`font-size`](/fr/docs/Web/CSS/Reference/Properties/font-size#définition_formelle) et [`color`](/fr/docs/Web/CSS/Reference/Properties/color#définition_formelle) qui sont héritées, l'élément `<blockquote>` est un [élément en ligne](/fr/docs/Glossary/Inline-level_content) (la valeur initiale de [`display`](/fr/docs/Web/CSS/Reference/Properties/display#définition_formelle)), [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color) vaut `transparent` (sa valeur initiale), mais [`font-size`](/fr/docs/Web/CSS/Reference/Properties/font-size) vaut toujours `small` (sa valeur héritée), et [`color`](/fr/docs/Web/CSS/Reference/Properties/color) vaut `blue` (sa valeur héritée).
+Lorsque la valeur `unset` est appliquée à la propriété `all` dans la règle `blockquote`, l'élément HTML {{HTMLElement("blockquote")}} n'utilise pas la mise en forme par défaut du navigateur. Comme la propriété [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color#définition_formelle) n'est pas héritée, tandis que [`font-size`](/fr/docs/Web/CSS/Reference/Properties/font-size#définition_formelle) et [`color`](/fr/docs/Web/CSS/Reference/Properties/color#définition_formelle) le sont, l'élément `<blockquote>` est maintenant un élément _en ligne_ (valeur initiale), sa propriété {{CSSxRef("background-color")}} vaut `transparent` (valeur initiale), mais sa propriété {{CSSxRef("font-size")}} vaut toujours `small` (valeur héritée), et sa propriété {{CSSxRef("color")}} vaut `blue` (valeur héritée).
 
 #### `all: revert`
 
@@ -257,9 +261,9 @@ blockquote {
 }
 ```
 
-{{EmbedLiveSample("", "200", "125")}}
+{{EmbedLiveSample("`all: revert`", 200, 125)}}
 
-Lorsque la propriété `all` utilise la valeur `revert` dans la règle `blockquote`, cette règle est considérée comme absente et les valeurs pour la mise en forme sont héritées de celles appliquées à l'élément parent, `<body>`. Aussi, `<blockquote>` devient [un élément de bloc](/fr/docs/Glossary/Block-level_content), [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color) vaut `#F0F0F0`, [`font-size`](/fr/docs/Web/CSS/Reference/Properties/font-size) vaut `small`, et [`color`](/fr/docs/Web/CSS/Reference/Properties/color) vaut `blue`&nbsp;: toutes ces valeurs sont héritées de la règle pour `body`.
+Lorsque la propriété `all` est définie à `revert` dans la règle `blockquote`, la règle `blockquote` est considérée comme inexistante et les valeurs des propriétés de mise en forme sont héritées de celles appliquées à l'élément parent `<body>`. Ainsi, l'élément `<blockquote>` est mis en forme comme un élément _bloc_, avec {{CSSxRef("background-color")}} vaut `#F0F0F0`, {{CSSxRef("font-size")}} vaut `small`, et {{CSSxRef("color")}} vaut `blue` — toutes ces valeurs sont héritées de la règle pour `body`.
 
 #### `all: revert-layer`
 
@@ -283,9 +287,9 @@ blockquote {
 }
 ```
 
-{{EmbedLiveSample("", "200", "125")}}
+{{EmbedLiveSample("`all: revert-layer`", 200, 125)}}
 
-Ici, on n'a pas de couche de cascade définie dans le fichier CSS et l'élément `<blockquote>` hérite donc de la mise en forme de la règle `body` qui s'applique à l'élément parent. `<blockquote>` est donc [un élément de bloc](/fr/docs/Glossary/Block-level_content), [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color) vaut `#F0F0F0`, [`font-size`](/fr/docs/Web/CSS/Reference/Properties/font-size) vaut `small`, et [`color`](/fr/docs/Web/CSS/Reference/Properties/color) vaut `blue`. Dans ce scénario, on est dans le cas où `all: revert-layer` mène au même comportement que `all: revert`.
+Il n'y a pas de couche de cascade définie dans le fichier CSS, donc l'élément `<blockquote>` hérite de la règle `body` correspondante pour sa mise en forme. L'élément `<blockquote>` est ici mis en forme comme un élément _bloc_, avec {{CSSxRef("background-color")}} vaut `#F0F0F0`, {{CSSxRef("font-size")}} vaut `small` et {{CSSxRef("color")}} vaut `blue` — toutes ces valeurs sont héritées de la règle pour `body`. Ce scénario illustre le cas où `all` défini à `revert-layer` se comporte comme si `all` était défini à `revert`.
 
 ## Spécifications
 
@@ -297,10 +301,4 @@ Ici, on n'a pas de couche de cascade définie dans le fichier CSS et l'élément
 
 ## Voir aussi
 
-Les mots-clés indiquant des valeurs globales pour CSS&nbsp;:
-
-- [`initial`](/fr/docs/Web/CSS/Reference/Values/initial)
-- [`inherit`](/fr/docs/Web/CSS/Reference/Values/inherit)
-- [`unset`](/fr/docs/Web/CSS/Reference/Values/unset)
-- [`revert`](/fr/docs/Web/CSS/Reference/Values/revert)
-- [`revert-layer`](/fr/docs/Web/CSS/revert-layer)
+Valeurs globales des mots-clés CSS&nbsp;: {{CSSxRef("initial")}}, {{CSSxRef("inherit")}}, {{CSSxRef("unset")}}, {{CSSxRef("revert")}}, {{CSSxRef("revert-layer")}}

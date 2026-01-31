@@ -1,12 +1,11 @@
 ---
 title: font-style
 slug: Web/CSS/Reference/At-rules/@font-face/font-style
-original_slug: Web/CSS/@font-face/font-style
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
 ---
 
-**`font-style`** は CSS の記述子で、 {{cssxref("@font-face")}} アットルールの中で指定されたフォントのフォントスタイルを指定することができます。
+**`font-style`** は [CSS](/ja/docs/Web/CSS) の記述子で、 {{cssxref("@font-face")}} アットルールの中で指定されたフォントのフォントスタイルを指定することができます。
 
 特定のフォントファミリーについて、同じフォントファミリーの異なるスタイルに対応する様々なフォントフェイスをダウンロードできるようにすることができ、 `font-style` 記述子を使用してフォントフェイスのスタイルを正確に指定することができます。この CSS 記述子の値は対応する {{cssxref("font-style")}} プロパティと同じです。
 
@@ -49,7 +48,7 @@ font-style: oblique 30deg 50deg;
 
 ```css
 @font-face {
-  font-family: garamond;
+  font-family: "garamond";
   src: url("garamond.ttf");
 }
 ```
@@ -64,7 +63,7 @@ font-style: oblique 30deg 50deg;
 
 ```css
 @font-face {
-  font-family: garamond;
+  font-family: "garamond";
   src: url("garamond-italic.ttf");
   font-style: italic;
 }

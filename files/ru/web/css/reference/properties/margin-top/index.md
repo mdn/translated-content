@@ -6,7 +6,7 @@ original_slug: Web/CSS/margin-top
 
 {{CSSRef}}
 
-Свойство **`margin-top`** [CSS](/ru/docs/Web/CSS) определяет [внешний отступ](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) в верхней части элемента. Положительное значение поместит элемент дальше от соседних элементов, чем обычно, а отрицательное значение поместит его ближе.
+Свойство **`margin-top`** [CSS](/ru/docs/Web/CSS) определяет [внешний отступ](/ru/docs/Web/CSS/Guides/Box_model/Introduction) в верхней части элемента. Положительное значение поместит элемент дальше от соседних элементов, чем обычно, а отрицательное значение поместит его ближе.
 
 {{InteractiveExample("CSS Demo: margin-top")}}
 
@@ -60,7 +60,7 @@ margin-top: 0;
 }
 ```
 
-Это свойство не имеет эффекта на _незамещаемых (non-[replaced](/ru/docs/Web/CSS/CSS_images/Replaced_element_properties))_ строковых (inline) элементах, таких как {{HTMLElement("span")}} или {{HTMLElement("code")}}.
+Это свойство не имеет эффекта на _незамещаемых (non-[replaced](/ru/docs/Web/CSS/Guides/Images/Replaced_element_properties))_ строковых (inline) элементах, таких как {{HTMLElement("span")}} или {{HTMLElement("code")}}.
 
 ## Синтаксис
 

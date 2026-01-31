@@ -2,7 +2,7 @@
 title: Geolocation
 slug: Web/API/Geolocation
 l10n:
-  sourceCommit: 5e98fd9cfbec6e28044a27c58bffca5ae464ec8b
+  sourceCommit: d8f04d843dd81ab8cea1cfc0577ae3c5c9b77d5c
 ---
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
@@ -22,11 +22,11 @@ _`Geolocation` インターフェイスが実装・継承しているプロパ�
 
 _`Geolocation` インターフェイスが継承しているプロパティはありません。_
 
-- {{domxref("Geolocation.getCurrentPosition()")}} {{securecontext_inline}}
+- {{domxref("Geolocation.getCurrentPosition()")}}
   - : 端末の現在位置を特定し、結果データを {{domxref("GeolocationPosition")}} オブジェクトで返します。
-- {{domxref("Geolocation.watchPosition()")}} {{securecontext_inline}}
+- {{domxref("Geolocation.watchPosition()")}}
   - : 端末の位置が変化する度に呼び出されるコールバック関数を登録し、それを識別する `long` 型の値を返します。
-- {{domxref("Geolocation.clearWatch()")}} {{securecontext_inline}}
+- {{domxref("Geolocation.clearWatch()")}}
   - : 以前に `watchPosition()` によって登録されたハンドラーを解除します。
 
 ## 仕様書

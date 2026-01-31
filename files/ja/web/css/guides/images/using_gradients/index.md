@@ -1,9 +1,9 @@
 ---
 title: CSS グラデーションの使用
+short-title: グラデーションの使用
 slug: Web/CSS/Guides/Images/Using_gradients
-original_slug: Web/CSS/CSS_images/Using_CSS_gradients
 l10n:
-  sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **CSS グラデーション**は {{cssxref("&lt;gradient&gt;")}} データ型で表現され、 2 つ以上の色の間の連続的な変化から成る {{cssxref("&lt;image&gt;")}} の特殊型です。グラデーションは 3 種類から選択することができます。線形 (_linear_) ({{cssxref("gradient/linear-gradient", "linear-gradient()")}} 関数によって生成)、放射 (_radial_) ({{cssxref("gradient/radial-gradient", "radial-gradient()")}} 関数によって生成)、扇形 (_conic_) ({{cssxref("gradient/conic-gradient", "conic-gradient()")}} 関数によって生成) の 3 種類です。 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} の各関数によって、反復グラデーションを生成することもできます。
@@ -352,9 +352,9 @@ div {
 ```css
 .stacked-linear {
   background:
-    linear-gradient(217deg, rgb(255 0 0 / 80%), rgb(255 0 0 / 0%) 70.71%),
-    linear-gradient(127deg, rgb(0 255 0 / 80%), rgb(0 255 0 / 0%) 70.71%),
-    linear-gradient(336deg, rgb(0 0 255 / 80%), rgb(0 0 255 / 0%) 70.71%);
+    linear-gradient(217deg, rgb(255 0 0 / 80%), transparent 70.71%),
+    linear-gradient(127deg, rgb(0 255 0 / 80%), transparent 70.71%),
+    linear-gradient(336deg, rgb(0 0 255 / 80%), transparent 70.71%);
 }
 ```
 
@@ -447,7 +447,7 @@ div {
 
 ```css
 .radial-gradient {
-  background: radial-gradient(red 10px, yellow 30%, #1e90ff 50%);
+  background: radial-gradient(red 10px, yellow 30%, dodgerblue 50%);
 }
 ```
 
@@ -470,7 +470,7 @@ div {
 
 ```css
 .radial-gradient {
-  background: radial-gradient(at 0% 30%, red 10px, yellow 30%, #1e90ff 50%);
+  background: radial-gradient(at 0% 30%, red 10px, yellow 30%, dodgerblue 50%);
 }
 ```
 
@@ -501,7 +501,7 @@ div {
     ellipse closest-side,
     red,
     yellow 10%,
-    #1e90ff 50%,
+    dodgerblue 50%,
     beige
   );
 }
@@ -530,7 +530,7 @@ div {
     ellipse farthest-corner at 90% 90%,
     red,
     yellow 10%,
-    #1e90ff 50%,
+    dodgerblue 50%,
     beige
   );
 }
@@ -559,7 +559,7 @@ div {
     circle closest-side at 25% 75%,
     red,
     yellow 10%,
-    #1e90ff 50%,
+    dodgerblue 50%,
     beige
   );
 }
@@ -588,7 +588,7 @@ div {
     ellipse 50% 50px,
     red,
     yellow 10%,
-    #1e90ff 50%,
+    dodgerblue 50%,
     beige
   );
 }
@@ -613,7 +613,13 @@ div {
 
 ```css
 .radial-circle-size {
-  background: radial-gradient(circle 50px, red, yellow 10%, #1e90ff 50%, beige);
+  background: radial-gradient(
+    circle 50px,
+    red,
+    yellow 10%,
+    dodgerblue 50%,
+    beige
+  );
 }
 ```
 
@@ -637,21 +643,9 @@ div {
 ```css
 .stacked-radial {
   background:
-    radial-gradient(
-      circle at 50% 0,
-      rgb(255 0 0 / 50%),
-      rgb(255 0 0 / 0%) 70.71%
-    ),
-    radial-gradient(
-      circle at 6.7% 75%,
-      rgb(0 0 255 / 50%),
-      rgb(0 0 255 / 0%) 70.71%
-    ),
-    radial-gradient(
-        circle at 93.3% 75%,
-        rgb(0 255 0 / 50%),
-        rgb(0 255 0 / 0%) 70.71%
-      )
+    radial-gradient(circle at 50% 0, rgb(255 0 0 / 50%), transparent 70.71%),
+    radial-gradient(circle at 6.7% 75%, rgb(0 0 255 / 50%), transparent 70.71%),
+    radial-gradient(circle at 93.3% 75%, rgb(0 255 0 / 50%), transparent 70.71%)
       beige;
   border-radius: 50%;
 }
@@ -707,7 +701,7 @@ div {
 
 ```css
 .conic-gradient {
-  background: conic-gradient(at 0% 30%, red 10%, yellow 30%, #1e90ff 50%);
+  background: conic-gradient(at 0% 30%, red 10%, yellow 30%, dodgerblue 50%);
 }
 ```
 
@@ -1068,6 +1062,6 @@ div {
 - グラデーション関連の CSS データ型: {{cssxref("&lt;gradient&gt;")}}, {{cssxref("&lt;image&gt;")}}
 - グラデーション関連の CSS プロパティ: {{cssxref("background")}}, {{cssxref("background-image")}}
 - [CSS Gradients Patterns Gallery, by Lea Verou](https://projects.verou.me/css3patterns/)
-- [CSS Gradients Library, by Estelle Weyl](https://standardista.com/cssgradients/)
 - [Gradient CSS Generator](https://cssgenerator.org/gradient-css-generator.html)
 - [Advanced CSS Gradient Generator](https://colorbeta.com/)
+- [HDR gradient generator](https://gradient.style/)

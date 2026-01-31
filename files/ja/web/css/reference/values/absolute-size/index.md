@@ -1,9 +1,8 @@
 ---
 title: <absolute-size>
 slug: Web/CSS/Reference/Values/absolute-size
-original_slug: Web/CSS/absolute-size
 l10n:
-  sourceCommit: 2077d0702d038c9ccc743a53d8ad1c0c21fef5be
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`<absolute-size>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、絶対サイズキーワードを記述します。このデータ型は {{cssxref("font")}} の一括指定と {{cssxref("font-size")}} プロパティで使用します。

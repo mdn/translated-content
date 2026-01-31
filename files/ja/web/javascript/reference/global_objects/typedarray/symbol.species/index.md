@@ -1,11 +1,10 @@
 ---
 title: TypedArray[Symbol.species]
+short-title: "[Symbol.species]"
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`TypedArray[Symbol.species]`** は静的アクセサープロパティで、型付き配列のメソッドの返値を構築するのに使われるコンストラクターを返します。
 

@@ -4,7 +4,7 @@ slug: Web/CSS/Guides/Grid_layout/Line-based_placement
 original_slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 ---
 
-[그리드 레이아웃의 기본 개념을 다룬 문서](/ko/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)에서 라인 번호를 사용하여 그리드에 아이템을 배치하는 방법을 잠깐 살펴본 적이 있습니다. 이번 문서에서는 이 기본적 기능이 어떻게 작동하는지를 자세히 살펴보겠습니다.
+[그리드 레이아웃의 기본 개념을 다룬 문서](/ko/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)에서 라인 번호를 사용하여 그리드에 아이템을 배치하는 방법을 잠깐 살펴본 적이 있습니다. 이번 문서에서는 이 기본적 기능이 어떻게 작동하는지를 자세히 살펴보겠습니다.
 
 그리드를 연구할 때는 번호가 매겨진 라인부터 시작하는 것이 가장 논리적일 겁니다. 왜냐하면, 그리드 레이아웃을 쓸 때마다 거기엔 항상 번호가 매겨진 라인이 있기 때문입니다. 행과 열의 각 라인에는 번호가 매겨져 있으며, 라인에 번호를 매길 때는 1번부터 시작합니다. 그리드 라인은 문서의 작성 모드를 기준으로 번호가 매겨진다는 것을 명심하십시오. 영어와 같이 왼쪽에서 오른쪽으로 읽히는 언어로 쓰인 문서에서는 1번 라인이 그리드의 맨 왼쪽에 위치합니다. 반대로 오른쪽에서 왼쪽으로 읽히는 언어의 문서에서는 1번 라인이 그리드의 맨 오른쪽에 위치하게 됩니다. 문서 작성 모드와 그리드 사이의 상호 작용에 대해서는 나중에 자세히 알아보겠습니다.
 
@@ -609,13 +609,13 @@ CSS 그리드 표준 명세서에는 {{cssxref("grid-column-gap")}}과 {{cssxref
 
 1. [**CSS**](/ko/docs/Web/CSS)
 2. [**CSS Reference**](/ko/docs/Web/CSS/Reference)
-3. [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout)
+3. [CSS 그리드 레이아웃](/ko/docs/Web/CSS/Guides/Grid_layout)
 4. **가이드**
-   1. [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-   2. [다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
-   3. [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-   4. [그리드 템플릿 영역](/ko/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-   5. [이름이 주어진 그리드 라인을 이용한 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+   1. [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+   2. [다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods)
+   3. [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+   4. [그리드 템플릿 영역](/ko/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)
+   5. [이름이 주어진 그리드 라인을 이용한 레이아웃](/ko/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)
    6. [Auto-placement in grid layout](/ko/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
    7. [Box alignment in grid layout](/ko/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
    8. [Grids, logical values and writing modes](/ko/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)

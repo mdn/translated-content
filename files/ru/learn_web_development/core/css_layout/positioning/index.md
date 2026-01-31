@@ -3,7 +3,7 @@ title: Позиционирование
 slug: Learn_web_development/Core/CSS_layout/Positioning
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn_web_development/Core/CSS_layout")}}
 
 Позиционирование позволяет вам изымать элементы из нормального потока макета документа и заставить их вести себя по-другому; например, располагаться друг на друге или всегда оставаться на одном и том же месте внутри окна просмотра браузера. Эта статья объясняет разные значения {{cssxref("position")}} и как их использовать.
 
@@ -211,7 +211,7 @@ span {
 
 ### Контекст позиционирования
 
-Какой элемент является "содержащим" относительно абсолютно позиционируемого элемента? Это очень сильно зависит от свойства позиции предка позиционируемого элемента (см. [Определение содержащего блока](/ru/docs/Web/CSS/CSS_display/Containing_block#identifying_the_containing_block)).
+Какой элемент является "содержащим" относительно абсолютно позиционируемого элемента? Это очень сильно зависит от свойства позиции предка позиционируемого элемента (см. [Определение содержащего блока](/ru/docs/Web/CSS/Guides/Display/Containing_block#identifying_the_containing_block)).
 
 Если никакие из элементов предков не имеют конкретно заданного свойства позиции, то по умолчанию все элементы предков будут иметь статическую позицию. В результате этого абсолютно позиционируемый элемент будет содержаться в **исходным содержащем блоке**. Исходный содержащий блок имеет размеры области просмотра, а также является блоком, содержащим элемент {{htmlelement("html")}}. Проще говоря, абсолютно позиционируемый элемент будет отображаться за пределами элемента {{htmlelement("html")}} и будет расположен относительно исходного окна просмотра.
 
@@ -669,7 +669,7 @@ dt {
 
 Я уверен, что вы повеселились с основами позиционирования; хотя это не является методом, который вы бы использовали для целого макета, всё же как вы видите, существует много задач, подходящих для него.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn_web_development/Core/CSS_layout")}}
 
 ## Смотрите также
 

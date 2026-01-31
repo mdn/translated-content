@@ -3,14 +3,14 @@ title: <frequency>
 slug: Web/CSS/Reference/Values/frequency
 original_slug: Web/CSS/frequency
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<frequency>`** permet de représenter des fréquences (par exemple la hauteur d'une voix). Ce type n'est actuellement utilisé pour aucune propriété CSS.
 
 ## Syntaxe
 
-Une valeur de type `<frequency>` se compose d'une valeur {{cssxref("&lt;number&gt;")}} suivi immédiatement d'une unité de fréquence. Comme pour les autres dimensions CSS, il n'y a pas d'espace entre le nombre et le littéral de l'unité.
+Une valeur de type `<frequency>` se compose d'une valeur {{CSSxRef("&lt;number&gt;")}} suivi immédiatement d'une unité de fréquence. Comme pour les autres dimensions CSS, il n'y a pas d'espace entre le nombre et le littéral de l'unité.
 
 ### Unités
 
@@ -52,5 +52,5 @@ Actuellement, aucun navigateur ne prend en charge cette fonctionnalité.
 
 ## Voir aussi
 
-- Le type de donnée {{cssxref("&lt;frequency-percentage&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;frequency-percentage&gt;")}}
 - Le module des [valeurs et unités CSS](/fr/docs/Web/CSS/Guides/Values_and_units)

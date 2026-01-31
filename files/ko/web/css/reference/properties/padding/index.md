@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Properties/padding
 original_slug: Web/CSS/padding
 ---
 
-**`padding`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 네 방향 [안쪽 여백 영역](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#padding-area)을 설정합니다. {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}의 단축 속성입니다.
+**`padding`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 네 방향 [안쪽 여백 영역](/ko/docs/Web/CSS/Guides/Box_model/Introduction#padding-area)을 설정합니다. {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}의 단축 속성입니다.
 
 {{InteractiveExample("CSS Demo: padding")}}
 
@@ -89,7 +89,7 @@ padding 속성은 한 개, 두 개, 세 개, 혹은 네 개의 값으로 지정�
 - **{{cssxref("length")}}**
   - : 여백의 크기로 고정값 사용.
 - {{cssxref("percentage")}}
-  - : 여백의 크기로 [컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block) 너비의 백분율 사용.
+  - : 여백의 크기로 [컨테이닝 블록](/ko/docs/Web/CSS/Guides/Display/Containing_block) 너비의 백분율 사용.
 
 ### 형식 구문
 
@@ -157,5 +157,5 @@ padding: 1em 3px 30px 5px;
 
 ## 같이 보기
 
-- [CSS 기본 박스 모델 입문](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [CSS 기본 박스 모델 입문](/ko/docs/Web/CSS/Guides/Box_model/Introduction)
 - {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}.

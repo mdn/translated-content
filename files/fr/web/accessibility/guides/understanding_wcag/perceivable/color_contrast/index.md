@@ -109,7 +109,7 @@ Si vous incluez du contenu non textuel tel qu'une vidéo ou une animation, vous 
 
 Pour vérifier le contraste lors du choix de vos couleurs, vous pouvez utiliser le [Vérificateur de Contraste des Couleurs <sup>(angl.)</sup>](https://webaim.org/resources/contrastchecker/) de WebAIM.
 
-Vous pouvez également vérifier le contraste des couleurs directement via les outils de développement de Firefox&nbsp;: consultez notre guide de l'[Inspecteur de l'accessibilité <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html), et en particulier la section [Vérifier les problèmes d'accessibilité <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#sélecteur_d'accessibilité). Essayez de les utiliser sur les exemples dans la section de description.
+Vous pouvez également vérifier le contraste des couleurs directement via les outils de développement de Firefox&nbsp;: consultez notre guide de l'[Inspecteur de l'accessibilité <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html), et en particulier la section [Vérifier les problèmes d'accessibilité <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#sélecteur_daccessibilité). Essayez de les utiliser sur les exemples dans la section de description.
 
 ## Critères de réussite associés aux WCAG
 

@@ -1,27 +1,29 @@
 ---
-title: 文本渲染
+title: text-rendering
 slug: Web/CSS/Reference/Properties/text-rendering
+l10n:
+  sourceCommit: e316a03cc74a78004dbba837c9d5df297e2eb0aa
 ---
 
-`text-rendering` CSS 属性定义浏览器渲染引擎如何渲染字体。浏览器会在速度、清晰度、几何精度之间进行权衡。
+**`text-rendering`** [CSS](/zh-CN/docs/Web/CSS) 属性向渲染引擎提供信息，说明在渲染文本时应针对哪些方面进行优化。
+
+浏览器会在速度、清晰度、几何精度之间进行权衡。
 
 > [!NOTE]
-> 该属性是 SVG 的属性而不是标准的 CSS 属性。但是 Gecko（Firefox）和 Webkit（Chrome、Safari）内核的浏览器允许该属性在 Windows、Mac OS 和 Linux 操作系统中应用于 HTML 和 XML 内容。
+> `text-rendering` 属性是 SVG 属性，未在任何 CSS 标准中定义。然而，Gecko 和 WebKit 浏览器允许你在 Windows、macOS 和 Linux 系统上将此属性应用于 HTML 和 XML 内容。
 
-一个视觉上很明显的效果是，`optimizeLegibility` 属性值会在某些字体（比如，微软的 _Calibri_、_Candara_、_Constantia_ 和 _Corbel_，或者 _DejaVu_ 系列字体）小于 20px 时把某些相邻字符连接起来（比如 ff、fi、fl 等）。
-
-{{cssinfo}}
+一个视觉上很明显的效果是，`optimizeLegibility` 属性值会在某些字体（比如，微软的 _Calibri_、_Candara_、_Constantia_ 和 _Corbel_，或者 _DejaVu_ 字体家族）小于 20px 时启用连字效果（比如 ff、fi、fl 等）。
 
 ## 语法
 
 ```css
-/* Keyword values */
+/* 关键字值 */
 text-rendering: auto;
 text-rendering: optimizeSpeed;
 text-rendering: optimizeLegibility;
 text-rendering: geometricPrecision;
 
-/* Global values */
+/* 全局值 */
 text-rendering: inherit;
 text-rendering: initial;
 text-rendering: revert;
@@ -32,51 +34,112 @@ text-rendering: unset;
 ### 值
 
 - `auto`
-  - : 浏览器依照某些根据去推测在绘制文本时，何时该优化速度，易读性或者几何精度。对于该值在不同浏览器中解释的差异，请看兼容性表。
+  - : 浏览器在绘制文本时，会根据经验判断何时该优化速度、易读性和几何精度。对于该值在不同浏览器中解释的差异，请看兼容性表。
+
+    `auto` 值是平衡质量与性能的良好默认选择，尤其适用于较长的纯文本内容。
+
 - `optimizeSpeed`
   - : 浏览器在绘制文本时将着重考虑渲染速度，而不是易读性和几何精度。它会使字间距和连字无效。
+
+    在资源受限的渲染场景中（例如处理器速度较慢或电池电量不足时），建议使用 `optimizeSpeed` 值。
+
 - `optimizeLegibility`
-  - : 浏览器在绘制文本时将着重考虑易读性，而不是渲染速度和几何精度。它会使字间距和连字有效。**该属性值在移动设备上会造成比较明显的性能问题**，详细查看 [text-rendering](https://css-tricks.com/almanac/properties/t/text-rendering/)。
+  - : 浏览器在绘制文本时将着重考虑易读性，而不是渲染速度和几何精度。它会使字间距和连字有效。
+
+    `optimizeLegibility` 值适用于尺寸较大但内容较短的文本（如标题或横幅），可提升其可读性。该设置同样适用于出版文章等高质量专业排版场景。但因可能影响性能，不建议用于常规文章。
+
 - `geometricPrecision`
-  - : 浏览器在绘制文本时将着重考虑几何精度，而不是渲染速度和易读性。字体的某些方面—比如字间距—不再线性缩放，所以该值可以使使用某些字体的文本看起来不错。
+  - : 浏览器在绘制文本时将着重考虑几何精度，而不是渲染速度和易读性。字体某些特性（如字距调整）无法线性缩放，因此此参数能使使用这些字体的文本呈现良好效果。
 
-    对于 SVG，当文本缩放时，浏览器会计算文本最终大小（取决于特定的字体大小和相应的缩放比例）并且从操作平台的字体系统中请求一个符合该计算值的字体大小。但如果你请求一个字体大小，比如 9 并且 140% 的缩放，这个最终的字体大小为 12.6，字体系统中明显不存在，所以浏览器会向下取整到 12。这导致文本缩放是阶梯式的。
+    在 SVG 中，当文本被放大或缩小时，浏览器会计算文本的最终尺寸（由指定字号和应用的缩放比例决定），并向平台字体系统请求该计算尺寸的字体。但若请求字号为 9 且缩放比例为 140%，计算出的 12.6 号字在字体系统中并不存在，浏览器会将其四舍五入为 12 号。这将导致文本出现阶梯状缩放效果。
 
-    但这个 geometricPrecision 特性——当被渲染引擎完全支持时——会使文本缩放是流畅的。对于大比例的缩放，你可能看到并不太漂亮的文本渲染，但这个字体大小是你期望的，而不是被 Windows 或 Linux 系统四舍五入或向下取整的字体大小。
+    但当渲染引擎完全支持 `geometricPrecision` 属性时，它能让文本实现流畅缩放。在大幅缩放时，文本渲染效果可能不够美观，但尺寸会符合预期——既不会被四舍五入到 Windows 或 Linux 支持的最近字号，也不会被舍入到更小尺寸。
 
-    **提示**: WebKit 准确地的实现了这个值，但是 Gecko 把这个值按照 `optimizeLegibility` 处理。
+    `geometricPrecision` 值既不优化可读性也不提升性能。它通常适用于 SVG 场景，此时需要图形在缩放时忠实还原文本尺寸而不失真。
+
+    > [!NOTE]
+    > WebKit 准确地的实现了这个值，但是 Gecko 把这个值按照 `optimizeLegibility` 处理。
+
+## 形式定义
+
+{{CSSInfo}}
+
+## 形式语法
+
+{{csssyntax}}
 
 ## 示例
 
-```css
-/* make sure all fonts in the HTML document display in all its glory,
-   but avoid inadequate ligatures in class foo elements */
+### 自动应用 optimizeLegibility
 
-body {
-  text-rendering: optimizeLegibility;
+以下示例说明当 `font-size` 小于 `20px` 时，浏览器会自动使用 `optimizeLegibility`。
+
+#### HTML
+
+```html
+<p class="small">LYoWAT - ff fi fl ffl</p>
+<p class="big">LYoWAT - ff fi fl ffl</p>
+```
+
+#### CSS
+
+```css
+.small {
+  font:
+    19.9px "Constantia",
+    "Times New Roman",
+    "Georgia",
+    "Palatino",
+    serif;
 }
-.foo {
-  text-rendering: optimizeSpeed;
+.big {
+  font:
+    20px "Constantia",
+    "Times New Roman",
+    "Georgia",
+    "Palatino",
+    serif;
 }
 ```
 
-#### Live Example
+#### 结果
 
-> [!NOTE]
-> 没有在 Chrome 中看出例子中的区别来，可以移步看看这篇文章 [text-rendering](https://css-tricks.com/almanac/properties/t/text-rendering/)。
+{{ EmbedLiveSample('自动应用 optimizeLegibility') }}
 
-| CSS code                                                                 | Kerning | Ligatures    |
-| ------------------------------------------------------------------------ | ------- | ------------ |
-| font: 19.9px 'DejaVu Serif',Constantia;                                  | LYoWAT  | ff fi fl ffl |
-| font: 20px 'DejaVu Serif',Constantia;                                    | LYoWAT  | ff fi fl ffl |
-| font: 3em 'DejaVu Serif',Constantia; text-rendering: optimizeSpeed;      | LYoWAT  | ff fi fl ffl |
-| font: 3em 'Dejavu Serif',Constantia; text-rendering: optimizeLegibility; | LYoWAT  | ff fi fl ffl |
+### optimizeSpeed 与 optimizeLegibility
 
-### Gecko 注释
+此示例展示了 `optimizeSpeed` 与 `optimizeLegibility` 在浏览器中的外观差异（具体效果因浏览器而异）。
 
-auto 选项的 20px 字体大小的阈值可以被 `browser.display.auto_quality_min_font_size` 值改变。
+#### HTML
 
-`optimizeSpeed` 选项在 Gecko 2.0 上已经没有效果了，因为标准的文字渲染代码已经非常快，而且目前还没有更快的渲染方法。详见 [Firefox bug 595688](https://bugzil.la/595688)。
+```html
+<p class="speed">LYoWAT - ff fi fl ffl</p>
+<p class="legibility">LYoWAT - ff fi fl ffl</p>
+```
+
+#### CSS
+
+```css
+p {
+  font:
+    1.5em "Constantia",
+    "Times New Roman",
+    "Georgia",
+    "Palatino",
+    serif;
+}
+
+.speed {
+  text-rendering: optimizeSpeed;
+}
+.legibility {
+  text-rendering: optimizeLegibility;
+}
+```
+
+#### 结果
+
+{{ EmbedLiveSample('optimizeSpeed 与 optimizeLegibility') }}
 
 ## 规范
 
@@ -85,3 +148,16 @@ auto 选项的 20px 字体大小的阈值可以被 `browser.display.auto_quality
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- [在 `<canvas>` 中绘制文本](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
+- [CSS 文本装饰](/zh-CN/docs/Web/CSS/Guides/Text_decoration) CSS 模块
+- 相关 CSS 属性
+  - [`text-decoration`](/zh-CN/docs/Web/CSS/Reference/Properties/text-decoration)（及其完整属性值，如 [`text-decoration-line`](/zh-CN/docs/Web/CSS/Reference/Properties/text-decoration-line)、[`text-decoration-style`](/zh-CN/docs/Web/CSS/Reference/Properties/text-decoration-style) 和 [`text-decoration-thickness`](/zh-CN/docs/Web/CSS/Reference/Properties/text-decoration-thickness)）
+  - [`text-emphasis`](/zh-CN/docs/Web/CSS/Reference/Properties/text-emphasis)（及其完整属性值，如 [`text-emphasis-color`](/zh-CN/docs/Web/CSS/Reference/Properties/text-emphasis-color)、[`text-emphasis-position`](/zh-CN/docs/Web/CSS/Reference/Properties/text-emphasis-position) 和 [`text-emphasis-style`](/zh-CN/docs/Web/CSS/Reference/Properties/text-emphasis-style)）
+  - [`text-shadow`](/zh-CN/docs/Web/CSS/Reference/Properties/text-shadow)
+  - [`text-transform`](/zh-CN/docs/Web/CSS/Reference/Properties/text-transform)
+
+- [SVG](/zh-CN/docs/Web/SVG) {{SVGAttr("text-rendering")}} 属性
+- [SVG 与 CSS](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/SVG_and_CSS)

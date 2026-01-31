@@ -15,7 +15,7 @@ l10n:
 
 2021년부터, 브라우저는 영화 산업에서 널리 사용되는 [P3](https://en.wikipedia.org/wiki/DCI-P3) 및 [rec2020](https://en.wikipedia.org/wiki/Rec._2020)와 같은 다른 영역에 대한 기능을 제공하기 시작했습니다.
 
-개발자는 [`color-gamut`](/ko/docs/Web/CSS/@media/color-gamut) [미디어 기능](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries)을 사용하여 더 넓은 영역을 지원하는 장치에 대해서 다양한 색상 세트를 정의할 수 있습니다. LCH 원통형 좌표계에 대해 [`lch()`](/ko/docs/Web/CSS/color_value/lch) 또는 Lab 좌표계에 대해 [`lab()`](/ko/docs/Web/CSS/color_value/lab)과 같은 특정 CSS 함수를 사용하여 RGB 영역 외부의 색상을 설명할 수 있습니다.
+개발자는 [`color-gamut`](/ko/docs/Web/CSS/Reference/At-rules/@media/color-gamut) [미디어 기능](/ko/docs/Web/CSS/Guides/Media_queries/Using)을 사용하여 더 넓은 영역을 지원하는 장치에 대해서 다양한 색상 세트를 정의할 수 있습니다. LCH 원통형 좌표계에 대해 [`lch()`](/ko/docs/Web/CSS/color_value/lch) 또는 Lab 좌표계에 대해 [`lab()`](/ko/docs/Web/CSS/color_value/lab)과 같은 특정 CSS 함수를 사용하여 RGB 영역 외부의 색상을 설명할 수 있습니다.
 
 ## 같이 보기
 

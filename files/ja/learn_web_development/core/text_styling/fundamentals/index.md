@@ -1,11 +1,10 @@
 ---
 title: 基本的なテキストとフォントのスタイル設定
+short-title: テキストとフォントの基本
 slug: Learn_web_development/Core/Text_styling/Fundamentals
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling")}}
 
@@ -49,13 +48,13 @@ HTML と CSS を使った作業ですでに経験したように、要素内の�
 - **テキストのレイアウトスタイル**: テキストの間隔やその他のレイアウト機能に影響するプロパティで、例えば、行間や文字間のスペースや、コンテンツボックス内でのテキストの配置方法などを操作できます。
 
 > [!NOTE]
-> 要素内のテキストはすべて単一の実体として影響を受けることに注意してください。 テキストの一部分を（{{htmlelement("span")}} や {{htmlelement("strong")}} など）適切な要素で囲んだり、[::first-letter](/ja/docs/Web/CSS/Reference/Selectors/::first-letter)（要素のテキストの最初の文字を選択）、[::first-line](/ja/docs/Web/CSS/Reference/Selectors/::first-line)（要素のテキストの最初の行を選択）、[::selection](/ja/docs/Web/CSS/Reference/Selectors/::selection)（現在カーソルで強調表示されているテキストを選択）のようなテキスト固有の擬似要素を使用しない限り、テキストの一部分を選択して装飾することはできません。
+> 要素内のテキストはすべて単一の実体として影響を受けることに注意してください。 テキストの一部分を（{{htmlelement("span")}} や {{htmlelement("strong")}} など）適切な要素で囲んだり、[`::first-letter`](/ja/docs/Web/CSS/Reference/Selectors/::first-letter)（要素のテキストの最初の文字を選択）、[`::first-line`](/ja/docs/Web/CSS/Reference/Selectors/::first-line)（要素のテキストの最初の行を選択）、[`::selection`](/ja/docs/Web/CSS/Reference/Selectors/::selection)（現在カーソルで強調表示されているテキストを選択）のようなテキスト固有の擬似要素を使用しない限り、テキストの一部分を選択して装飾することはできません。
 
 ## フォント
 
 フォントを装飾するためのプロパティを見るためにまっすぐに進みましょう。 この例では、次のような同じ HTML サンプルにいくつかの異なる CSS プロパティを適用します。
 
-```html
+```html live-sample___0unstyled live-sample___1color live-sample___2fonts live-sample___3font-style live-sample___4shadows live-sample___5text-align live-sample___6line-height live-sample___7letter-word-spacing
 <h1>Tommy the cat</h1>
 
 <p>Well I remember it as though it were a meal ago…</p>
@@ -68,8 +67,6 @@ HTML と CSS を使った作業ですでに経験したように、要素内の�
   had many a story to tell. But it was a rare occasion such as this that he did.
 </p>
 ```
-
-[完成した例](https://mdn.github.io/learning-area/css/styling-text/fundamentals/)は Github にあります（[ソースコード](https://github.com/mdn/learning-area/blob/main/css/styling-text/fundamentals/index.html)も参照してください）。
 
 ### 色
 
@@ -77,7 +74,7 @@ HTML と CSS を使った作業ですでに経験したように、要素内の�
 
 `color` は次のように任意の [CSS カラー単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#色)を受け入れることができます。
 
-```css live-sample___color
+```css live-sample___1color live-sample___2fonts live-sample___3font-style live-sample___4shadows live-sample___5text-align live-sample___6line-height live-sample___7letter-word-spacing
 p {
   color: red;
 }
@@ -85,21 +82,7 @@ p {
 
 これにより、次のように段落は標準のブラウザー既定の黒ではなく赤になります。
 
-```html hidden live-sample___color
-<h1>Tommy the cat</h1>
-
-<p>Well I remember it as though it were a meal ago…</p>
-
-<p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
-</p>
-```
-
-{{ EmbedLiveSample('Color', '100%', 230) }}
+{{ EmbedLiveSample('1color', '100%', 230) }}
 
 ### フォントファミリー
 
@@ -107,11 +90,14 @@ p {
 
 ```css
 p {
-  font-family: Arial;
+  font-family: "Arial";
 }
 ```
 
 これにより、ページ上のすべての段落に、どのコンピューターでも見られる arial フォントが採用されます。
+
+> [!NOTE]
+> Scrimba の [Web-safe fonts](https://scrimba.com/learn-html-and-css-c0p/~01r?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> では、フォントの重要性、ウェブセーフフォント、CSS でのフォント指定方法についてインタラクティブなガイドを提供します。さらに、知識を試すチャレンジも用意されています。
 
 #### ウェブセーフフォント
 
@@ -290,30 +276,16 @@ p {
 
 前の例に追加して、次のように段落に sans-serif フォントを付けます。
 
-```css live-sample___a_font-family_example
+```css live-sample___2fonts live-sample___3font-style live-sample___4shadows live-sample___5text-align live-sample___6line-height live-sample___7letter-word-spacing
 p {
   color: red;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 ```
 
 これにより、次のような結果が得られます。
 
-```html hidden live-sample___a_font-family_example
-<h1>Tommy the cat</h1>
-
-<p>Well I remember it as though it were a meal ago…</p>
-
-<p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
-</p>
-```
-
-{{ EmbedLiveSample('A_font-family_example', '100%', 220) }}
+{{ EmbedLiveSample('2fonts', '100%', 220) }}
 
 ### フォントサイズ
 
@@ -369,23 +341,7 @@ CSS は、テキストの視覚的な太さや強調を変更するために次�
 
 例にこれらのプロパティをいくつか追加してみましょう。
 
-新しい結果はこんな感じです。
-
-```html hidden
-<h1>Tommy the cat</h1>
-
-<p>Well I remember it as though it were a meal ago…</p>
-
-<p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
-</p>
-```
-
-```css
+```css live-sample___3font-style live-sample___4shadows live-sample___5text-align live-sample___6line-height live-sample___7letter-word-spacing
 html {
   font-size: 10px;
 }
@@ -402,11 +358,13 @@ h1 + p {
 p {
   font-size: 1.5rem;
   color: red;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 ```
 
-{{ EmbedLiveSample('Font_style_font_weight_text_transform_and_text_decoration', '100%', 260) }}
+新しい結果はこんな感じです。
+
+{{ EmbedLiveSample('3font-style', '100%', 260) }}
 
 ### テキストのドロップシャドウ
 
@@ -421,13 +379,13 @@ text-shadow: 4px 4px 5px red;
 1. 元のテキストからの影の水平方向のオフセット。これは、ほとんどの CSS の[長さとサイズの単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#長さ)を取ることができますが、最も一般的には `px` を使用します。この値は含める必要があります。
 2. 元のテキストからの影の垂直方向のオフセット。基本的に水平方向のオフセットと同じようにふるまいますが、影を左右ではなく上下に移動する点が異なります。 この値は含める必要があります。
 3. ぼかし半径。値が大きいほど、影はより広く拡散されます。 この値が含まれていない場合、既定値は 0 になり、ぼかしは行われません。 これは、ほとんどの CSS の[長さとサイズの単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#長さ)を取ることができます。
-4. 影のベースカラー — 任意の [CSS カラー単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#colors) を取ります。含まれていない場合、既定値は [`currentcolor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) であり、影の色は要素の [`color`](/ja/docs/Web/CSS/Reference/Properties/color) プロパティから導かれます。
+4. 影のベースカラー — 任意の [CSS カラー単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#colors) を取ります。含まれていない場合、既定値は [`currentColor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード) であり、影の色は要素の [`color`](/ja/docs/Web/CSS/Reference/Properties/color) プロパティから導かれます。
 
 #### 複数の影
 
 複数の影の値をカンマで区切って記述することで、次のように同じテキストに複数の影を付けることができます。
 
-```css
+```css live-sample___4shadows live-sample___5text-align live-sample___6line-height live-sample___7letter-word-spacing
 h1 {
   text-shadow:
     1px 1px 1px red,
@@ -435,44 +393,9 @@ h1 {
 }
 ```
 
-これを Tommy the cat の例の {{htmlelement("Heading_Elements", "h1")}} 要素に適用すると、結果は次のようになります。
+これを Tommy The Cat の例の {{htmlelement("Heading_Elements", "&lt;h1>")}} 要素に適用すると、結果は次のようになります。
 
-```html hidden
-<h1>Tommy the cat</h1>
-
-<p>Well I remember it as though it were a meal ago…</p>
-
-<p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
-</p>
-```
-
-```css hidden
-html {
-  font-size: 10px;
-}
-
-h1 {
-  font-size: 5rem;
-  text-transform: capitalize;
-}
-
-h1 + p {
-  font-weight: bold;
-}
-
-p {
-  font-size: 1.5rem;
-  color: red;
-  font-family: Helvetica, Arial, sans-serif;
-}
-```
-
-{{ EmbedLiveSample('Multiple_shadows', '100%', 260) }}
+{{ EmbedLiveSample('4shadows', '100%', 260) }}
 
 > [!NOTE]
 > Sitepoint の記事 [Moonlighting with CSS text-shadow](https://www.sitepoint.com/moonlighting-css-text-shadow/) で、`text-shadow` の使い方のより興味深い例を見ることができます。
@@ -490,54 +413,21 @@ p {
 - `center`: テキストを中央揃えにします。
 - `justify`: テキストを両端揃えにします。 すべてのテキストのラインが同じ幅になるように、単語の間隔を変えてテキストを広げます。 これは慎重に使用する必要があります — 特に、長い単語が多数含まれている段落に適用すると、ひどく見えます。 もしこれを使うつもりなら、{{cssxref("hyphens")}} のような他の何かを使用して、複数ラインにまたがる長い単語を分割することも考えてください。
 
-例の {{htmlelement("Heading_Elements", "h1")}} に、`text-align: center;` を適用した場合、次のようになるでしょう。
+例の {{htmlelement("Heading_Elements", "&lt;h1>")}} に、`text-align: center;` を適用した場合、次のようになるでしょう。
 
-```html hidden
-<h1>Tommy the cat</h1>
-
-<p>Well I remember it as though it were a meal ago…</p>
-
-<p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
-</p>
-```
-
-```css
-html {
-  font-size: 10px;
-}
-
+```css hidden live-sample___5text-align live-sample___6line-height live-sample___7letter-word-spacing
 h1 {
-  font-size: 5rem;
-  text-transform: capitalize;
-  text-shadow:
-    1px 1px 1px red,
-    2px 2px 1px red;
   text-align: center;
 }
-
-h1 + p {
-  font-weight: bold;
-}
-
-p {
-  font-size: 1.5rem;
-  color: red;
-  font-family: Helvetica, Arial, sans-serif;
-}
 ```
 
-{{ EmbedLiveSample('Text_alignment', '100%', 260) }}
+{{ EmbedLiveSample('5text-align', '100%', 260) }}
 
 ### 行の高さ
 
 {{cssxref("line-height")}} プロパティはテキストの各行の高さを設定します。これはほとんどの[長さとサイズの単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#長さ)をとることができますが、乗数として機能し、一般的に最良の選択肢と考えられる単位なしの値をとることもできます。 {{cssxref("font-size")}} が乗算されて `line-height` が得られます。 本文は行が離れていると、一般的に見栄えがよく、読みやすくなります。 推奨される行の高さは約 1.5 〜 2 （倍の高さ）です。テキストの行をフォントの高さの 1.6 倍に設定するには、次のようにします。
 
-```css
+```css live-sample___6line-height live-sample___7letter-word-spacing
 p {
   line-height: 1.6;
 }
@@ -545,47 +435,7 @@ p {
 
 この例の {{htmlelement("p")}} 要素にこれを適用すると、次のようになります。
 
-```html hidden
-<h1>Tommy the cat</h1>
-
-<p>Well I remember it as though it were a meal ago…</p>
-
-<p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
-</p>
-```
-
-```css
-html {
-  font-size: 10px;
-}
-
-h1 {
-  font-size: 5rem;
-  text-transform: capitalize;
-  text-shadow:
-    1px 1px 1px red,
-    2px 2px 1px red;
-  text-align: center;
-}
-
-h1 + p {
-  font-weight: bold;
-}
-
-p {
-  font-size: 1.5rem;
-  color: red;
-  font-family: Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-}
-```
-
-{{ EmbedLiveSample('Line_height', '100%', 300) }}
+{{ EmbedLiveSample('6line-height', '100%', 300) }}
 
 ### 文字と単語の間隔設定
 
@@ -593,58 +443,16 @@ p {
 
 例として、この例の {{htmlelement("p")}} 要素の最初の行に次を適用したとします。
 
-```css
+```css live-sample___7letter-word-spacing
 p::first-line {
   letter-spacing: 4px;
   word-spacing: 4px;
 }
 ```
 
-次のようになります。
+HTML は次のようにレンダリングされます。
 
-```html hidden
-<h1>Tommy the cat</h1>
-
-<p>Well I remember it as though it were a meal ago…</p>
-
-<p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
-</p>
-```
-
-```css
-html {
-  font-size: 10px;
-}
-
-h1 {
-  font-size: 5rem;
-  text-transform: capitalize;
-  text-shadow:
-    1px 1px 1px red,
-    2px 2px 1px red;
-  text-align: center;
-  letter-spacing: 2px;
-}
-
-h1 + p {
-  font-weight: bold;
-}
-
-p {
-  font-size: 1.5rem;
-  color: red;
-  font-family: Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-  letter-spacing: 1px;
-}
-```
-
-{{ EmbedLiveSample('Letter_and_word_spacing', '100%', 330) }}
+{{ EmbedLiveSample('7letter-word-spacing', '100%', 330) }}
 
 ### その他の検討に値するプロパティ
 
@@ -692,82 +500,31 @@ p {
 
 ```css
 font:
-  italic normal bold normal 3em/1.5 Helvetica,
-  Arial,
+  italic normal bold normal 3em/1.5 "Helvetica",
+  "Arial",
   sans-serif;
 ```
 
-## アクティブラーニング: テキストの装飾で遊ぶ
+## テキストの装飾で遊ぶ
 
-このアクティブラーニングセッションでは、具体的な演習はありません。 フォントやテキストのレイアウトのプロパティをいくつか試してみて、作成できるものを確認してください！ オフラインの HTML / CSS ファイルを使用してこれを行うか、下記のライブ編集可能な例にコードを入力することができます。
+では、あなたの番です。この課題では、特定の演習は用意していません。フォントやテキストレイアウトのプロパティを自由に試してみてください。どんな結果が生まれるか、ぜひ自分で確かめてみましょう！
 
-間違えた場合は、_Reset_ ボタンを使用していつでもリセットできます。
+1. 下記のコードブロックの **"Play"** をクリックし、この例を MDN Playground で編集します。
+2. 提供された空の `p { }` ルールに宣言を追加し、指定されたテキストのスタイルを変更してください。自由に創造性を発揮してください。
 
-```html hidden
-<div
-  class="body-wrapper"
-  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
-  <h2>HTML 入力</h2>
-  <textarea
-    id="code"
-    class="html-input"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-<p>Some sample text for your delight</p>
-  </textarea>
+誤った操作をした場合は、MDN Playground の _Reset_ ボタンで作業内容をクリアできます。設定可能なフォントやテキストスタイルの詳細については、本記事の前の節を参考にしてください。
 
-  <h2>CSS 入力</h2>
-  <textarea
-    id="code"
-    class="css-input"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+```html live-sample___fonts_text
+<p>お楽しみのためのサンプルテキスト</p>
+```
+
+```css-nolint live-sample___fonts_text
 p {
 
 }
-  </textarea>
-
-  <h2>出力</h2>
-  <div
-    class="output"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
-  <div class="controls">
-    <input
-      id="reset"
-      type="button"
-      value="Reset"
-      style="margin: 10px 10px 0 0;" />
-  </div>
-</div>
 ```
 
-```js hidden
-const htmlInput = document.querySelector(".html-input");
-const cssInput = document.querySelector(".css-input");
-const reset = document.getElementById("reset");
-let htmlCode = htmlInput.value;
-let cssCode = cssInput.value;
-const output = document.querySelector(".output");
-
-const styleElem = document.createElement("style");
-const headElem = document.querySelector("head");
-headElem.appendChild(styleElem);
-
-function drawOutput() {
-  output.innerHTML = htmlInput.value;
-  styleElem.textContent = cssInput.value;
-}
-
-reset.addEventListener("click", () => {
-  htmlInput.value = htmlCode;
-  cssInput.value = cssCode;
-  drawOutput();
-});
-
-htmlInput.addEventListener("input", drawOutput);
-cssInput.addEventListener("input", drawOutput);
-window.addEventListener("load", drawOutput);
-```
-
-{{ EmbedLiveSample('Active_learning_Playing_with_styling_text', 700, 800) }}
+{{ EmbedLiveSample('fonts_text', "100%", 60) }}
 
 ## まとめ
 
@@ -775,7 +532,7 @@ window.addEventListener("load", drawOutput);
 
 ## 関連情報
 
-- [Web-safe fonts](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~02b?via=mdn), Scrimba <sup>_MDN カリキュラムパートナー_</sup>
-  - : この対話型のレッスンでは、ウェブセーフフォントを見ていき、単純な例に適用する方法を指定されたフォントを使って楽しく学んでいきます。
+- [All about the CSS font-family property](https://explainers.dev/font-family/), explainers.dev
+- [Web-safe fonts](https://scrimba.com/the-frontend-developer-career-path-c0j/~02b?via=mdn), Scrimba <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
 
 {{NextMenu("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling")}}

@@ -140,4 +140,4 @@ p {
 
 - {{cssxref("clip-path")}} 속성은 배경 뿐 아니라 하나의 **요소 전체**에서 표시할 부분을 지정하는 클리핑 영역을 생성합니다.
 - 배경 속성: {{cssxref("background")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}
-- [CSS 기본 박스 모델 입문](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [CSS 기본 박스 모델 입문](/ko/docs/Web/CSS/Guides/Box_model/Introduction)
