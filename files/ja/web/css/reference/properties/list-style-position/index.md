@@ -1,9 +1,8 @@
 ---
 title: list-style-position
 slug: Web/CSS/Reference/Properties/list-style-position
-original_slug: Web/CSS/list-style-position
 l10n:
-  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`list-style-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、リストアイテムに対する {{cssxref("::marker")}} の位置を指定します。
@@ -21,7 +20,7 @@ list-style-position: outside;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div>
-    <p>NASA Notable Missions</p>
+    <p>NASA の有名なミッション</p>
     <ul class="transition-all" id="example-element">
       <li>Apollo 11: First Human Landing</li>
       <li>City in Space: The International Space Station</li>
@@ -114,23 +113,23 @@ list-style-position: unset;
 
 #### HTML
 
-```html live-sample___setting_list_item_position
+```html
+<p>リスト 1</p>
 <ul class="inside">
-  リスト 1
   <li>リストアイテム 1-1</li>
   <li>リストアイテム 1-2</li>
   <li>リストアイテム 1-3</li>
   <li>リストアイテム 1-4</li>
 </ul>
+<p>リスト 2</p>
 <ul class="outside">
-  リスト 2
   <li>リストアイテム 2-1</li>
   <li>リストアイテム 2-2</li>
   <li>リストアイテム 2-3</li>
   <li>リストアイテム 2-4</li>
 </ul>
+<p>リスト 3</p>
 <ul class="inside-img">
-  リスト 3
   <li>リストアイテム 3-1</li>
   <li>リストアイテム 3-2</li>
   <li>リストアイテム 3-3</li>
@@ -140,7 +139,7 @@ list-style-position: unset;
 
 #### CSS
 
-```css live-sample___setting_list_item_position
+```css
 .inside {
   list-style-position: inside;
   list-style-type: square;
@@ -159,7 +158,7 @@ list-style-position: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Setting_list_item_position", 200, 420)}}
+{{EmbedLiveSample("リストアイテムの位置の設定", 200, 420)}}
 
 ## 仕様書
 
