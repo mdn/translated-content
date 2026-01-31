@@ -1,102 +1,90 @@
 ---
-title: DataTransfer.types
+title: DataTransfer：types 属性
+short-title: types
 slug: Web/API/DataTransfer/types
+l10n:
+  sourceCommit: f336c5b6795a562c64fe859aa9ee2becf223ad8a
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
 
-**`DataTransfer.types`** 是只读属性。它返回一个我们在[`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event)事件中设置的拖动数据格式 (如 {{domxref("DOMString","字符串")}}) 的数组。格式顺序与拖动操作中包含的数据顺序相同。
+**`DataTransfer.types`** 只读属性返回在 {{domxref("DataTransfer.items","items")}} 中存在的可用类型。
 
-这些格式是指定数据类型或格式的 Unicode 字符串，通常由 MIME 类型给出。一些非 MIME 类型的值是由于历史遗留原因（例如“text”）而特殊设置的。
+## 值
 
-## 语法
-
-```plain
-dataTransfer.types;
-```
-
-### 返回值
-
-拖动操作中使用的数据格式数组。每种格式都是{{domxref("DOMString","字符串")}}类型。如果拖动操作不包含数据，则此数组列表将为空。如果拖动操作中包含任何文件，则其中一个类型将是 `Files`。
+数据格式的数组。每种格式都是通常为 MIME 类型的字符串，如 `text/plain` 或 `text/html`。如果拖拽操作不包含数据，则此列表将为空。如果拖拽操作中包含任何文件，则其中一个类型将是 `Files`。
 
 ## 示例
 
-这个例子展示 `types` 和 {{domxref("DataTransfer.items","items")}} 属性的用法
+下述示例展示了 `types` 和 {{domxref("DataTransfer.items","items")}} 属性的具体使用方式：
 
 ```html
-<!doctype html>
-<html lang="en">
-  <title>Examples of DataTransfer.{types,items} properties</title>
-  <meta content="width=device-width" />
-  <style>
-    div {
-      margin: 0em;
-      padding: 2em;
-    }
-    #target {
-      border: 1px solid black;
-    }
-  </style>
-  <script>
-    function dragstart_handler(ev) {
-      console.log("dragStart: target.id = " + ev.target.id);
-
-      // Add this element's id to the drag payload so the drop handler will
-      // know which element to add to its tree
-      ev.dataTransfer.setData("text/plain", ev.target.id);
-      ev.dataTransfer.effectAllowed = "move";
-    }
-
-    function drop_handler(ev) {
-      console.log("drop: target.id = " + ev.target.id);
-      ev.preventDefault();
-
-      // Get the id of the target and add the moved element to the target's DOM
-      const data = ev.dataTransfer.getData("text");
-      ev.target.appendChild(document.getElementById(data));
-
-      // Print each format type
-      for (let i = 0; i < ev.dataTransfer.types.length; i++) {
-        console.log(`… types[${i}] = ${ev.dataTransfer.types[i]}`);
-      }
-
-      // Print each item's "kind" and "type"
-      for (let i = 0; i < ev.dataTransfer.items.length; i++) {
-        console.log(
-          `… items[${i}].kind = ${ev.dataTransfer.items[i].kind}; type = ${ev.dataTransfer.items[i].type}`,
-        );
-      }
-    }
-
-    function dragover_handler(ev) {
-      console.log("dragOver");
-      ev.preventDefault();
-      // Set the dropEffect to move
-      ev.dataTransfer.dropEffect = "move";
-    }
-  </script>
-  <body>
-    <h1>
-      Examples of <code>DataTransfer</code>.{<code>types</code>,
-      <code>items</code>} properties
-    </h1>
-    <ul>
-      <li id="i1" ondragstart="dragstart_handler(event);" draggable="true">
-        Drag Item 1 to the Drop Zone
-      </li>
-      <li id="i2" ondragstart="dragstart_handler(event);" draggable="true">
-        Drag Item 2 to the Drop Zone
-      </li>
-    </ul>
-    <div
-      id="target"
-      ondrop="drop_handler(event);"
-      ondragover="dragover_handler(event);">
-      Drop Zone
-    </div>
-  </body>
-</html>
+<ul>
+  <li id="i1" draggable="true">将项目一拖拽到可放置区域</li>
+  <li id="i2" draggable="true">将项目二拖拽到可放置区域</li>
+</ul>
+<div id="target">可放置区域</div>
+<pre id="output"></pre>
 ```
+
+```css
+div {
+  margin: 0em;
+  padding: 2em;
+}
+#target {
+  border: 1px solid black;
+}
+```
+
+```js
+const output = document.getElementById("output");
+function log(msg) {
+  output.textContent += `${msg}\n`;
+}
+
+document.querySelectorAll("li").forEach((item) => {
+  item.addEventListener("dragstart", dragstart_handler);
+});
+
+function dragstart_handler(ev) {
+  log(`拖拽开始：target.id = ${ev.target.id}`);
+
+  // 将该元素的 id 添加到拖拽负载中，以便放置事件的处理器能分清要将哪个元素添加到树中
+  ev.dataTransfer.setData("text/plain", ev.target.id);
+  ev.dataTransfer.effectAllowed = "move";
+}
+
+const target = document.getElementById("target");
+
+target.addEventListener("drop", (ev) => {
+  log(`drop：target.id = ${ev.target.id}`);
+  ev.preventDefault();
+
+  // 获取目标的 id 并将移动的元素添加到目标的 DOM 中
+  const data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+
+  // 打印各格式类型
+  for (let i = 0; i < ev.dataTransfer.types.length; i++) {
+    log(`… types[${i}] = ${ev.dataTransfer.types[i]}`);
+  }
+
+  // 打印各项的“kind”和“type”
+  for (let i = 0; i < ev.dataTransfer.items.length; i++) {
+    log(
+      `… items[${i}].kind = ${ev.dataTransfer.items[i].kind}；type = ${ev.dataTransfer.items[i].type}`,
+    );
+  }
+});
+
+target.addEventListener("dragover", (ev) => {
+  ev.preventDefault();
+  ev.dataTransfer.dropEffect = "move";
+});
+```
+
+{{EmbedLiveSample("示例", "", 400)}}
 
 ## 规范
 
@@ -108,7 +96,6 @@ dataTransfer.types;
 
 ## 参见
 
-- [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
+- [拖放](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
 - [拖拽操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [使用拖拽数据存储](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
-- [DataTransfer 测试——粘贴或拖拽](https://codepen.io/tech_query/pen/MqGgap)
