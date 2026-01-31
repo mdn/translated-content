@@ -19,7 +19,7 @@ Gecko 19 を搭載した Firefox 19 は米国時間 2013 年 2 月 19 日にリ�
 - `-moz-initial` 値の接頭辞を外しました ([Firefox バグ 806068](https://bugzil.la/806068))。`-moz-initial` は当分の間、エイリアスとして残します。しかし、ウェブ開発者は `initial` に移行することを強く推奨します。
 - CSS の {{ cssxref("text-transform")}} プロパティで、日本語や中国語など固定幅の表意文字を使用したテキスト内にラテン文字をなめらかに追加できるようにするためのキーワードである `full-width` をサポートしました([Firefox バグ 774560](https://bugzil.la/774560))。
 - CSS の {{ cssxref("page-break-inside")}} を実装しました ([Firefox バグ 685012](https://bugzil.la/685012))。
-- CSS の {{ cssxref("calc", "calc()")}} 関数を、({{cssxref("&lt;gradient&gt;")}} の) `<color-stop>` で使用できるようになりました。
+- CSS の {{ cssxref("calc", "calc()")}} 関数を、({{cssxref("gradient")}} の) `<color-stop>` で使用できるようになりました。
 - CSS の {{ cssxref("@page") }} @-規則をサポートしました ([Firefox バグ 115199](https://bugzil.la/115199))。擬似クラス {{cssxref(":first")}}、{{cssxref(":right")}}、および {{cssxref(":left")}} はまだ実装されていないことに注意してください。
 - 擬似クラス {{ cssxref(":-moz-placeholder") }} は、擬似*要素* {{ cssxref("::-moz-placeholder") }} に置き換えられました ([Firefox バグ 737786](https://bugzil.la/737786))。
 

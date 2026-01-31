@@ -28,7 +28,7 @@ _詳細および他の小規模な変更点については [Mozilla Hacks ブロ
 - {{cssxref("box-sizing")}} プロパティの接頭辞を外しました ([Firefox バグ 243412](https://bugzil.la/243412))。
 - 何かがアニメーションするであろうというヒントを与える、{{cssxref("will-change")}} プロパティを追加しました。有効化するには設定項目 `layout.css.will-change.enabled` を `true` に変更しなければなりません。([Firefox バグ 940842](https://bugzil.la/940842))
 - `3e1` や `10e+0` といった指数表記を {{cssxref("&lt;number&gt;")}} 値でサポートしました ([Firefox バグ 964529](https://bugzil.la/964529))。
-- {{cssxref("&lt;gradient&gt;")}} タイプの画像を {{cssxref("border-image")}} でサポートしました ([Firefox バグ 709587](https://bugzil.la/709587))。
+- {{cssxref("gradient")}} タイプの画像を {{cssxref("border-image")}} でサポートしました ([Firefox バグ 709587](https://bugzil.la/709587))。
 - {{cssxref("touch-action")}} プロパティを実装しました。デフォルトでは無効であり、設定項目 `layout.css.touch_action.enabled` で制御します。([Firefox バグ 795567](https://bugzil.la/795567))
 - \<pre> 要素用の冗長なデフォルトスタイルを quirk.css から削除しました ([Firefox バグ 948914](https://bugzil.la/948914))。
 - CSS Variables のフォールバックを正しく実装しました (基本的な循環参照) ([Firefox バグ 950497](https://bugzil.la/950497))。

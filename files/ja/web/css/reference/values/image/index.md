@@ -12,7 +12,7 @@ l10n:
 `<image>` データ型は以下のいずれかによって表すことができます。
 
 - {{cssxref("url_value", "&lt;url&gt;")}} データ型で記述された画像。
-- {{CSSxRef("&lt;gradient&gt;")}} データ型。
+- {{CSSxRef("gradient")}} データ型。
 - {{CSSxRef("element","element()")}} 関数で定義されたウェブページの一部。
 - {{CSSxRef("image/image","image()")}} 関数で定義された画像、画像フラグメント、単色の色。
 - {{CSSxRef("cross-fade","cross-fade()")}} 関数で定義された 2 つ以上の画像の合成。
@@ -102,7 +102,7 @@ image-set("cat.jpg" 1x, "dog.jpg" 1x) /* 画像セット内の画像はすべて
 
 ## 関連情報
 
-- {{CSSxRef("&lt;gradient&gt;")}}
+- {{CSSxRef("gradient")}}
 - {{CSSxRef("element","element()")}}
 - {{CSSxRef("image/image", "image()")}}
 - {{CSSxRef("image/image-set","image-set()")}}

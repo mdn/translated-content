@@ -127,5 +127,5 @@ in <polar-color-space>[ <hue-interpolation method>]
 
 ## 関連情報
 
-- {{CSSXref("&lt;color&gt;")}}, {{CSSXref("&lt;gradient&gt;")}}
+- {{CSSXref("&lt;color&gt;")}}, {{CSSXref("gradient")}}
 - {{CSSXref("&lt;hue-interpolation-method&gt;")}}
