@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Values/image
 original_slug: Web/CSS/image
 ---
 
-**`<image>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/CSS_values_and_units/CSS_data_types)은 2차원 이미지를 나타냅니다. 이미지는 {{cssxref("&lt;url&gt;")}}로 참조하는 일반 이미지, {{cssxref("&lt;gradient&gt;")}} 또는 {{cssxref("element")}}를 사용해 동적으로 생성하는 이미지 두 종류가 있습니다. 다른 이미지 함수로는 {{cssxref("imagefunction", "image()")}}, {{cssxref("image-set")}}, {{cssxref("cross-fade")}} 등이 있습니다. 이미지는 {{CSSxRef("background-image")}}, {{CSSxRef("border-image")}}, {{CSSxRef("content")}}, {{CSSxRef("cursor")}}, {{CSSxRef("list-style-image")}} 등 많은 속성에 사용할 수 있습니다.
+**`<image>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/Reference/Values/Data_types)은 2차원 이미지를 나타냅니다. 이미지는 {{cssxref("&lt;url&gt;")}}로 참조하는 일반 이미지, {{cssxref("&lt;gradient&gt;")}} 또는 {{cssxref("element")}}를 사용해 동적으로 생성하는 이미지 두 종류가 있습니다. 다른 이미지 함수로는 {{cssxref("imagefunction", "image()")}}, {{cssxref("image-set")}}, {{cssxref("cross-fade")}} 등이 있습니다. 이미지는 {{CSSxRef("background-image")}}, {{CSSxRef("border-image")}}, {{CSSxRef("content")}}, {{CSSxRef("cursor")}}, {{CSSxRef("list-style-image")}} 등 많은 속성에 사용할 수 있습니다.
 
 ## 이미지 유형
 

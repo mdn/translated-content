@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}
 
 이 평가에서는 커뮤니티 대학 홈페이지의 텍스트 스타일을 지정하도록 하여 이 모듈에서 다룬 모든 텍스트 스타일링 기법에 대한 이해도를 테스트합니다. 여러분은 그 과정에서 재미를 느낄 수 있습니다.
 
@@ -96,4 +96,4 @@ l10n:
    - 평가받거나 도움이 필요한 예제에 대한 온라인 공유 가능 편집기 링크(위 1단계에서 설명한 대로)를 포함하세요. 코드를 볼 수 없다면 코딩 문제가 있는 사람을 도와주기 어렵기 때문에 이 방법을 사용하는 것이 좋습니다.
    - 실제 과제 또는 평가 페이지로 연결되는 링크를 통해 도움을 원하는 문제를 찾을 수 있습니다.
 
-{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{PreviousMenu("Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}

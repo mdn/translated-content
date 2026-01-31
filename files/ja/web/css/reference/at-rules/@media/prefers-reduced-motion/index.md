@@ -1,9 +1,8 @@
 ---
 title: prefers-reduced-motion
 slug: Web/CSS/Reference/At-rules/@media/prefers-reduced-motion
-original_slug: Web/CSS/@media/prefers-reduced-motion
 l10n:
-  sourceCommit: d8fbe1ea30dcc8fd707048a804f5070a729b57a7
+  sourceCommit: 77445f9812d0644dfe6975234f8ff3450efcf142
 ---
 
 > [!WARNING]
@@ -13,18 +12,12 @@ l10n:
 
 このようなアニメーションは、[前庭運動障碍](https://www.a11yproject.com/posts/understanding-vestibular-disorders/)のある人に不快感を引き起こす可能性があります。大きなオブジェクトを拡大縮小したりパンなどしたりするアニメーションは、前庭運動を引き起こす可能性があります。
 
-```css
-@media (prefers-reduced-motion: reduce) {
-  /* ユーザーの端末の設定が「動きを縮小する」に設定されている場合に適用するスタイル */
-}
-```
-
 ## 構文
 
 - `no-preference`
   - : システムが把握している設定をユーザーが行っていないことを示します。このキーワードの値は false と評価されます。
 - `reduce`
-  - : ユーザーが、端末で動きの縮小に関する設定を有効にしていることを示します。`reduce` のキーワードの値は true として評価されます。よって、`@media (prefers-reduced-motion)` は `@media (prefers-reduced-motion: reduce)` と同等です。
+  - : ユーザーが、端末で動きの縮小に関する設定を有効にしていることを示します。`reduce` のキーワードの値は true として評価されます。よって、`@media (prefers-reduced-motion)` は `@media (prefers-reduced-motion: reduce)` と同等となります。
 
 ## ユーザー設定
 
@@ -33,8 +26,11 @@ Firefox では、 `reduce` の要求は以下の場合に尊重されます。
 - GTK/GNOME: Settings > Accessibility > Seeing > Reduced animation がオンになっている場合。
   - GNOME の古いバージョンでは、 GNOME Tweaks > General タブ (バージョンによっては Appearance タブ) > Animations がオフになっている場合。
   - 他にも、 `gtk-enable-animations = false` を [GTK 3 configuration file](https://wiki.archlinux.org/title/GTK#Configuration) の `[Settings]` に追加する方法もあります。
+  - さらに、`gsettings set org.gnome.desktop.interface enable-animations false` を実行して、Firefox（および GTK バージョン 4 に頼っている他のプログラム）が `reduce` 設定を尊重するようにしてください。
 
 - Plasma/KDE: System Settings > Workspace Behavior -> General Behavior > "Animation speed" が正しくすべて "Instant" に設定されている場合。
+  - または、`~/.config/kdeglobals` の `[KDE]` セクションに `AnimationDurationFactor=0` を追加してください。
+  - あるいは、ターミナルで `kwriteconfig6 --key AnimationDurationFactor 0` を実行してください。
 - Windows 10: 設定 > 簡単操作 > ディスプレイ > アニメーションを表示する
 - Windows 11: 設定 > アクセシビリティ > 視覚効果 > アニメーション効果
 - macOS: システム設定 > アクセシビリティ > 表示 > 動きの抑制
@@ -74,7 +70,7 @@ Firefox では、 `reduce` の要求は以下の場合に尊重されます。
 
 ```css hidden
 .animation {
-  color: #fff;
+  color: white;
   font: 1.2em sans-serif;
   width: 10em;
   padding: 1em;

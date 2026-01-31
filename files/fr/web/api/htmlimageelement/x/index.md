@@ -8,9 +8,9 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-La propriété en lecture seule **`x`** de l'interface {{domxref("HTMLImageElement")}} indique la coordonnée x du bord gauche de l'élément HTML {{HTMLElement("img")}} par rapport à l'origine de l'élément racine.
+La propriété en lecture seule **`x`** de l'interface {{DOMxRef("HTMLImageElement")}} indique la coordonnée x du bord gauche de l'élément HTML {{HTMLElement("img")}} par rapport à l'origine de l'élément racine.
 
-Les propriétés `x` et {{domxref("HTMLImageElement.y", "y")}} ne sont valides pour une image que si sa propriété {{cssxref("display")}} a pour valeur calculée `table-column` ou `table-column-group`. Cela signifie que l'une de ces valeurs est définie explicitement, héritée d'un élément parent, ou appliquée parce que l'image se trouve dans une colonne définie par {{HTMLElement("col")}} ou {{HTMLElement("colgroup")}}.
+Les propriétés `x` et {{DOMxRef("HTMLImageElement.y", "y")}} ne sont valides pour une image que si sa propriété {{CSSxRef("display")}} a pour valeur calculée `table-column` ou `table-column-group`. Cela signifie que l'une de ces valeurs est définie explicitement, héritée d'un élément parent, ou appliquée parce que l'image se trouve dans une colonne définie par {{HTMLElement("col")}} ou {{HTMLElement("colgroup")}}.
 
 ## Valeur
 
@@ -20,12 +20,9 @@ Dans le schéma ci-dessous, le bord gauche correspond au bord gauche de la zone 
 
 ![Schéma montrant les relations entre les différentes boîtes associées à un élément](boxmodel-3.png)
 
-> [!NOTE]
-> La propriété `x` n'est valide que si la valeur calculée de la propriété {{cssxref("display")}} de l'image est `table-column` ou `table-column-group`&nbsp;: soit l'une de ces valeurs est définie directement sur l'élément {{HTMLElement("img")}}, soit elle est héritée d'un parent, soit l'image se trouve dans une colonne définie par {{HTMLElement("col")}} ou {{HTMLElement("colgroup")}}.
-
 ## Exemple
 
-L'exemple ci-dessous montre l'utilisation des propriétés `x` et {{domxref("HTMLImageElement.y", "y")}} de `HTMLImageElement`.
+L'exemple ci-dessous montre l'utilisation des propriétés `x` et {{DOMxRef("HTMLImageElement.y", "y")}} de `HTMLImageElement`.
 
 ### HTML
 
@@ -72,12 +69,12 @@ log(`X global de l'image : ${image.x}`);
 log(`Y global de l'image : ${image.y}`);
 ```
 
-Ce code utilise la propriété {{domxref("HTMLTableElement.rows", "rows")}} de l'élément {{HTMLElement("table")}} pour obtenir la liste des lignes du tableau.
+Ce code utilise la propriété {{DOMxRef("HTMLTableElement.rows", "rows")}} de l'élément {{HTMLElement("table")}} pour obtenir la liste des lignes du tableau.
 Il sélectionne la ligne d'index 1 (c'est-à-dire la deuxième ligne à partir du haut, car l'indexation commence à 0).
-Ensuite, il regarde l'élément {{HTMLElement("tr")}} correspondant et utilise la propriété {{domxref("HTMLTableRowElement.cells", "cells")}} pour obtenir la liste des cellules de cette ligne.
+Ensuite, il regarde l'élément {{HTMLElement("tr")}} correspondant et utilise la propriété {{DOMxRef("HTMLTableRowElement.cells", "cells")}} pour obtenir la liste des cellules de cette ligne.
 La troisième cellule (index 2) est sélectionnée.
 
-À partir de là, on récupère l'élément `<img>` de la cellule en appelant un {{domxref("Element.querySelector", "querySelector()")}} sur l'élément {{domxref("HTMLTableCellElement")}} correspondant.
+À partir de là, on récupère l'élément `<img>` de la cellule en appelant un {{DOMxRef("Element.querySelector", "querySelector()")}} sur l'élément {{DOMxRef("HTMLTableCellElement")}} correspondant.
 
 Enfin, on affiche les valeurs des propriétés `x` et `y` de l'objet `HTMLImageElement`.
 
@@ -120,3 +117,10 @@ Le tableau résultant ressemble à ceci&nbsp;:
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La propriété CSS {{CSSxRef("display")}}
+- L'élément HTML {{HTMLElement("col")}}
+- L'élément HTML {{HTMLElement("colgroup")}}
+- La propriété {{DOMxRef("HTMLImageElement.y")}}

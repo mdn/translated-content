@@ -1,18 +1,17 @@
 ---
 title: "@font-palette-values"
 slug: Web/CSS/Reference/At-rules/@font-palette-values
-original_slug: Web/CSS/@font-palette-values
 l10n:
-  sourceCommit: 81cab7a9c34e7bb3867f5d6d7e70fc73d0308087
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`@font-palette-values`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、フォントメーカーが作成した [font-palette](/ja/docs/Web/CSS/Reference/Properties/font-palette) の既定値をカスタマイズすることができます。
+**`@font-palette-values`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、フォントメーカーが作成した [font-palette](/ja/docs/Web/CSS/Reference/Properties/font-palette) のデフォルト値をカスタマイズすることができます。
 
 ## 構文
 
 ```css
 @font-palette-values --identifier {
-  font-family: Bixa;
+  font-family: "Bixa";
 }
 .my-class {
   font-palette: --identifier;
@@ -23,11 +22,11 @@ l10n:
 
 ### 記述子
 
-- [font-family](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values/font-family)
-  - : このパレットを適用できるフォントファミリーの名前を指定します。
-- [base-palette](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values/base-palette)
+- {{cssxref("@font-palette-values/base-palette", "base-palette")}}
   - : フォントメーカーが作成した、使用するベースパレットの名前またはインデックスを指定します。
-- [override-colors](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values/override-colors)
+- {{cssxref("@font-palette-values/font-family", "font-family")}}
+  - : このパレットを適用できるフォントファミリーの名前を指定します。`font-family` の名前は、`@font-palette-values` ルールが有効になるために必要です。
+- {{cssxref("@font-palette-values/override-colors", "override-colors")}}
   - : 上書きするベースパレットの色を指定します。
 
 ## 形式文法
@@ -50,9 +49,9 @@ l10n:
 #### CSS
 
 ```css
-@import url(https://fonts.googleapis.com/css2?family=Bungee+Spice);
+@import "https://fonts.googleapis.com/css2?family=Bungee+Spice";
 p {
-  font-family: "Bungee Spice";
+  font-family: "Bungee Spice", fantasy;
   font-size: 2rem;
 }
 @font-palette-values --Alternate {

@@ -7,13 +7,13 @@ l10n:
   sourceCommit: 4a1d696e78d9aa0a3ca571cbc0aab9ba90258235
 ---
 
-L'attribut **`rel`** définit la relation entre une ressource liée et le document courant. Il est valide sur {{HTMLElement('link')}}, {{HTMLElement('a')}}, {{HTMLElement('area')}} et {{HTMLElement('form')}}. Les valeurs acceptées dépendent de l'élément sur lequel l'attribut est utilisé.
+L'attribut **`rel`** définit la relation entre une ressource liée et le document courant. Il est valide sur {{HTMLElement("link")}}, {{HTMLElement("a")}}, {{HTMLElement("area")}} et {{HTMLElement("form")}}. Les valeurs acceptées dépendent de l'élément sur lequel l'attribut est utilisé.
 
 Le type de relation est donné par la valeur de l'attribut `rel`, qui, si elle est présente, doit avoir une valeur qui est un ensemble non ordonné de mots-clés uniques séparés par des espaces. Contrairement à un nom de `class`, qui n'exprime pas de sémantique, l'attribut `rel` doit exprimer des jetons qui sont sémantiquement valides à la fois pour les machines et les humain·e·s. Les registres actuels pour les valeurs possibles de l'attribut `rel` sont [registre IANA des relations de liens <sup>(angl.)</sup>](https://www.iana.org/assignments/link-relations/link-relations.xhtml), [Standard vivant HTML <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/links.html#linkTypes), et la page librement modifiable [existing-rel-values <sup>(angl.)</sup>](https://microformats.org/wiki/existing-rel-values) du wiki microformats, comme [suggéré <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/links.html#other-link-types) par le Standard vivant. Si une valeur d'attribut `rel` qui n'est présente dans aucune des trois sources ci-dessus est utilisée, certains validateurs HTML (comme [Service de validation du balisage W3C <sup>(angl.)</sup>](https://validator.w3.org/)) généreront un avertissement.
 
 Le tableau suivant présente quelques-uns des mots-clés existants les plus importants. Chaque mot-clé dans une valeur séparée par des espaces doit être unique dans cette valeur.
 
-| Valeur pour `rel`                                                                             | Description                                                                                                                                                                                                                                                                                                            | {{HTMLElement('link')}} | {{HTMLElement('a')}} and {{HTMLElement('area')}} | {{HTMLElement('form')}} |
+| Valeur pour `rel`                                                                             | Description                                                                                                                                                                                                                                                                                                            | {{HTMLElement("link")}} | {{HTMLElement("a")}} and {{HTMLElement("area")}} | {{HTMLElement("form")}} |
 | --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------------------------------------------ | ----------------------- |
 | [`alternate`](#alternate)                                                                     | Représentations alternatives du document actuel.                                                                                                                                                                                                                                                                       | Lien                    | Lien                                             | Non autorisé            |
 | [`author`](#author)                                                                           | Auteur du document ou de l'article en cours.                                                                                                                                                                                                                                                                           | Lien                    | Lien                                             | Non autorisé            |
@@ -46,14 +46,14 @@ Le tableau suivant présente quelques-uns des mots-clés existants les plus impo
 | [`tag`](#tag)                                                                                 | Donne une balise (identifiée par l'adresse donnée) qui s'applique au document actuel.                                                                                                                                                                                                                                  | Non autorisé            | Lien                                             | Non autorisé            |
 | [`terms-of-service`](#terms-of-service)                                                       | Lien vers l'accord, ou les conditions d'utilisation, entre le fournisseur du document et les utilisateur·ice·s qui souhaitent utiliser le document.                                                                                                                                                                    | Lien                    | Lien                                             | Non autorisé            |
 
-L'attribut `rel` est pertinent pour les éléments HTML {{HTMLElement('link')}}, {{HTMLElement('a')}}, {{HTMLElement('area')}} et {{HTMLElement('form')}}, mais certaines valeurs ne concernent qu'un sous-ensemble de ces éléments. Comme toutes les valeurs d'attribut de mot-clé HTML, ces valeurs ne sont pas sensibles à la casse.
+L'attribut `rel` est pertinent pour les éléments HTML {{HTMLElement("link")}}, {{HTMLElement("a")}}, {{HTMLElement("area")}} et {{HTMLElement("form")}}, mais certaines valeurs ne concernent qu'un sous-ensemble de ces éléments. Comme toutes les valeurs d'attribut de mot-clé HTML, ces valeurs ne sont pas sensibles à la casse.
 
-L'attribut `rel` n'a pas de valeur par défaut. Si l'attribut est omis ou si aucune des valeurs de l'attribut n'est prise en charge, alors le document n'a pas de relation particulière avec la ressource de destination, à part le fait qu'il existe un lien hypertexte entre les deux. Dans ce cas, sur {{HTMLElement('link')}} et {{HTMLElement('form')}}, si l'attribut `rel` est absent, ne contient aucun mot-clé, ou si aucun des mots-clés séparés par des espaces ci-dessus n'est présent, alors l'élément ne crée aucun lien. {{HTMLElement('a')}} et {{HTMLElement('area')}} créeront tout de même des liens, mais sans relation définie.
+L'attribut `rel` n'a pas de valeur par défaut. Si l'attribut est omis ou si aucune des valeurs de l'attribut n'est prise en charge, alors le document n'a pas de relation particulière avec la ressource de destination, à part le fait qu'il existe un lien hypertexte entre les deux. Dans ce cas, sur {{HTMLElement("link")}} et {{HTMLElement("form")}}, si l'attribut `rel` est absent, ne contient aucun mot-clé, ou si aucun des mots-clés séparés par des espaces ci-dessus n'est présent, alors l'élément ne crée aucun lien. {{HTMLElement("a")}} et {{HTMLElement("area")}} créeront tout de même des liens, mais sans relation définie.
 
 ## Valeurs
 
 - `alternate`
-  - : Indique une représentation alternative du document actuel. Valide pour {{HTMLElement('link')}}, {{HTMLElement('a')}} et {{HTMLElement('area')}}, la signification dépend des autres attributs présents.
+  - : Indique une représentation alternative du document actuel. Valide pour {{HTMLElement("link")}}, {{HTMLElement("a")}} et {{HTMLElement("area")}}, la signification dépend des autres attributs présents.
     - Avec le mot-clé [`stylesheet`](#stylesheet) sur un `<link>`, cela crée une [feuille de style alternative](/fr/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet).
 
       ```html
@@ -99,25 +99,25 @@ L'attribut `rel` n'a pas de valeur par défaut. Si l'attribut est omis ou si auc
       ```
 
 - `author`
-  - : Indique que le document référencé fournit des informations supplémentaires sur l'auteur·ice du document ou de l'article en cours. Pertinent pour {{HTMLElement('link')}}, {{HTMLElement('a')}} et {{HTMLElement('area')}}.
+  - : Indique que le document référencé fournit des informations supplémentaires sur l'auteur·ice du document ou de l'article en cours. Pertinent pour {{HTMLElement("link")}}, {{HTMLElement("a")}} et {{HTMLElement("area")}}.
 
-    Avec {{HTMLElement('a')}} et {{HTMLElement('area')}}, cela indique que le document lié (ou `mailto:`) fournit des informations sur l'auteur·ice de l'ancêtre {{HTMLElement('article')}} le plus proche s'il existe, sinon sur l'ensemble du document.
+    Avec {{HTMLElement("a")}} et {{HTMLElement("area")}}, cela indique que le document lié (ou `mailto:`) fournit des informations sur l'auteur·ice de l'ancêtre {{HTMLElement("article")}} le plus proche s'il existe, sinon sur l'ensemble du document.
 
-    Avec {{HTMLElement('link')}}, cela représente l'auteur·ice de l'ensemble du document.
+    Avec {{HTMLElement("link")}}, cela représente l'auteur·ice de l'ensemble du document.
 
     > [!NOTE]
     > Pour des raisons historiques, la valeur d'attribut obsolète `rev="made"` est traitée comme `rel="author"`.
 
 - `bookmark`
-  - : Pertinent comme valeur de l'attribut `rel` pour les éléments {{HTMLElement('a')}} et {{HTMLElement('area')}}. Donne un lien permanent pour l'élément parent {{HTMLElement('article')}} le plus proche, s'il existe. S'il n'y a pas d'élément `<article>` parent, donne un lien permanent pour la section à laquelle l'élément de liaison est le plus associé.
+  - : Pertinent comme valeur de l'attribut `rel` pour les éléments {{HTMLElement("a")}} et {{HTMLElement("area")}}. Donne un lien permanent pour l'élément parent {{HTMLElement("article")}} le plus proche, s'il existe. S'il n'y a pas d'élément `<article>` parent, donne un lien permanent pour la section à laquelle l'élément de liaison est le plus associé.
 - `canonical`
-  - : Valide pour {{HTMLElement('link')}}, définit l'URL préférée pour le document actuel, ce qui aide les moteurs de recherche à réduire le contenu dupliqué.
+  - : Valide pour {{HTMLElement("link")}}, définit l'URL préférée pour le document actuel, ce qui aide les moteurs de recherche à réduire le contenu dupliqué.
 - `compression-dictionary` {{Experimental_Inline}}
-  - : Valide pour {{HTMLElement('link')}}, définit un {{Glossary("Compression dictionary transport", "dictionnaire de compression")}} qui peut être utilisé pour compresser les téléchargements futurs des ressources de ce site afin que la taille des téléchargements soit plus petite qu'avec une compression standard.
+  - : Valide pour {{HTMLElement("link")}}, définit un {{Glossary("Compression dictionary transport", "dictionnaire de compression")}} qui peut être utilisé pour compresser les téléchargements futurs des ressources de ce site afin que la taille des téléchargements soit plus petite qu'avec une compression standard.
 - `dns-prefetch`
-  - : Pertinent pour l'élément {{HTMLElement('link')}} aussi bien dans le {{HTMLElement('body')}} que dans le {{HTMLElement('head')}}, indique au navigateur d'effectuer de manière préemptive la résolution DNS pour l'origine de la ressource cible. Utile pour les ressources dont l'utilisateur·ice aura probablement besoin, cela permet de réduire la latence et d'améliorer les performances lorsque l'utilisateur·ice accède effectivement à la ressource, car le navigateur aura déjà effectué la résolution DNS pour l'origine de la ressource spécifiée. Voir [dns-prefetch](/fr/docs/Web/Performance/Guides/dns-prefetch) décrit dans [resource hints <sup>(angl.)</sup>](https://w3c.github.io/resource-hints/).
+  - : Pertinent pour l'élément {{HTMLElement("link")}} aussi bien dans le {{HTMLElement("body")}} que dans le {{HTMLElement("head")}}, indique au navigateur d'effectuer de manière préemptive la résolution DNS pour l'origine de la ressource cible. Utile pour les ressources dont l'utilisateur·ice aura probablement besoin, cela permet de réduire la latence et d'améliorer les performances lorsque l'utilisateur·ice accède effectivement à la ressource, car le navigateur aura déjà effectué la résolution DNS pour l'origine de la ressource définie. Voir [dns-prefetch](/fr/docs/Web/Performance/Guides/dns-prefetch) décrit dans [resource hints <sup>(angl.)</sup>](https://w3c.github.io/resource-hints/).
 - `external`
-  - : Pertinent pour {{HTMLElement('form')}}, {{HTMLElement('a')}} et {{HTMLElement('area')}}, indique que le document référencé ne fait pas partie du site actuel. Cela peut être utilisé avec des sélecteurs d'attributs pour mettre en forme les liens externes afin d'indiquer à l'utilisateur·ice qu'il·elle va quitter le site actuel.
+  - : Pertinent pour {{HTMLElement("form")}}, {{HTMLElement("a")}} et {{HTMLElement("area")}}, indique que le document référencé ne fait pas partie du site actuel. Cela peut être utilisé avec des sélecteurs d'attributs pour mettre en forme les liens externes afin d'indiquer à l'utilisateur·ice qu'il·elle va quitter le site actuel.
 - `expect` {{Experimental_Inline}}
   - : Permet à la page d'être [bloquante pour le rendu](/fr/docs/Glossary/Render_blocking) jusqu'à ce que les parties essentielles du document soient analysées pour qu'elle s'affiche de façon cohérente. À noter que le blocage du rendu n'a lieu que si l'attribut [`blocking="render"`](/fr/docs/Web/HTML/Reference/Elements/link#blocking) est également utilisé.
 
@@ -125,9 +125,9 @@ L'attribut `rel` n'a pas de valeur par défaut. Si l'attribut est omis ou si auc
     > Voir [Stabiliser l'état de la page pour rendre les transitions inter-documents cohérentes](/fr/docs/Web/API/View_Transition_API/Using#stabiliser_létat_de_la_page_pour_rendre_les_transitions_inter-documents_cohérentes) pour plus d'informations sur son utilisation.
 
 - `help`
-  - : Pertinent pour {{HTMLElement('form')}}, {{HTMLElement('link')}}, {{HTMLElement('a')}} et {{HTMLElement('area')}}, le mot-clé `help` indique que le contenu lié fournit une aide contextuelle, donnant des informations pour le parent de l'élément définissant l'hyperlien et ses enfants. Lorsqu'il est utilisé dans un `<link>`, l'aide concerne l'ensemble du document. Lorsqu'il est inclus avec {{HTMLElement('a')}} et {{HTMLElement('area')}} et pris en charge, le curseur ({{CSSxRef('cursor')}}) par défaut sera `help` au lieu de `pointer`.
+  - : Pertinent pour {{HTMLElement("form")}}, {{HTMLElement("link")}}, {{HTMLElement("a")}} et {{HTMLElement("area")}}, le mot-clé `help` indique que le contenu lié fournit une aide contextuelle, donnant des informations pour le parent de l'élément définissant l'hyperlien et ses enfants. Lorsqu'il est utilisé dans un `<link>`, l'aide concerne l'ensemble du document. Lorsqu'il est inclus avec {{HTMLElement("a")}} et {{HTMLElement("area")}} et pris en charge, le curseur ({{CSSxRef("cursor")}}) par défaut sera `help` au lieu de `pointer`.
 - `icon`
-  - : Valide avec {{HTMLElement('link')}}, la ressource liée représente l'icône, une ressource pour représenter la page dans l'interface utilisateur, pour le document actuel.
+  - : Valide avec {{HTMLElement("link")}}, la ressource liée représente l'icône, une ressource pour représenter la page dans l'interface utilisateur, pour le document actuel.
 
     L'utilisation la plus courante de la valeur `icon` est le favicon&nbsp;:
 
@@ -159,18 +159,18 @@ L'attribut `rel` n'a pas de valeur par défaut. Si l'attribut est omis ou si auc
 - `manifest`
   - : [Manifeste d'application web](/fr/docs/Web/Progressive_web_apps/Manifest). Nécessite l'utilisation du protocole CORS pour la récupération inter-origine.
 - `modulepreload`
-  - : Utile pour améliorer les performances, et pertinent pour {{HTMLElement('link')}} n'importe où dans le document, définir `rel="modulepreload"` indique au navigateur de récupérer de manière préemptive le script (et ses dépendances) et de le stocker dans la carte des modules du document pour une évaluation ultérieure. Les liens `modulepreload` permettent de s'assurer que le chargement réseau est effectué avec le module prêt (mais non évalué) dans la carte des modules avant qu'il ne soit nécessaire. Voir aussi [`modulepreload`](/fr/docs/Web/HTML/Reference/Attributes/rel/modulepreload).
+  - : Utile pour améliorer les performances, et pertinent pour {{HTMLElement("link")}} n'importe où dans le document, définir `rel="modulepreload"` indique au navigateur de récupérer de manière préemptive le script (et ses dépendances) et de le stocker dans la carte des modules du document pour une évaluation ultérieure. Les liens `modulepreload` permettent de s'assurer que le chargement réseau est effectué avec le module prêt (mais non évalué) dans la carte des modules avant qu'il ne soit nécessaire. Voir aussi [`modulepreload`](/fr/docs/Web/HTML/Reference/Attributes/rel/modulepreload).
 - `next`
-  - : Pertinent pour {{HTMLElement('form')}}, {{HTMLElement('link')}}, {{HTMLElement('a')}} et {{HTMLElement('area')}}, la valeur `next` indique que le document actuel fait partie d'une série et que le document suivant dans la série est le document référencé. Lorsqu'il est inclus dans un `<link>`, les navigateurs peuvent supposer que le document sera récupéré ensuite et le traiter comme une indication de ressource.
+  - : Pertinent pour {{HTMLElement("form")}}, {{HTMLElement("link")}}, {{HTMLElement("a")}} et {{HTMLElement("area")}}, la valeur `next` indique que le document actuel fait partie d'une série et que le document suivant dans la série est le document référencé. Lorsqu'il est inclus dans un `<link>`, les navigateurs peuvent supposer que le document sera récupéré ensuite et le traiter comme une indication de ressource.
 - `nofollow`
-  - : Pertinent pour {{HTMLElement('form')}}, {{HTMLElement('a')}} et {{HTMLElement('area')}}, le mot-clé `nofollow` indique aux robots des moteurs de recherche d'ignorer la relation du lien. La relation nofollow peut indiquer que le propriétaire du document actuel ne cautionne pas le document référencé. Il est souvent inclus par les spécialistes du référencement qui prétendent que leurs fermes de liens ne sont pas des pages de spam.
+  - : Pertinent pour {{HTMLElement("form")}}, {{HTMLElement("a")}} et {{HTMLElement("area")}}, le mot-clé `nofollow` indique aux robots des moteurs de recherche d'ignorer la relation du lien. La relation nofollow peut indiquer que le propriétaire du document actuel ne cautionne pas le document référencé. Il est souvent inclus par les spécialistes du référencement qui prétendent que leurs fermes de liens ne sont pas des pages de spam.
 - `noopener`
-  - : Pertinent pour {{HTMLElement('form')}}, {{HTMLElement('a')}} et {{HTMLElement('area')}}, crée un contexte de navigation de haut niveau qui n'est pas un contexte de navigation auxiliaire si l'hyperlien créerait l'un ou l'autre au départ (c'est-à-dire qu'il a une valeur d'attribut `target` appropriée). Autrement dit, cela fait que le lien se comporte comme si [`window.opener`](/fr/docs/Web/API/Window/opener) était nul et que `target="_parent"` était défini.
+  - : Pertinent pour {{HTMLElement("form")}}, {{HTMLElement("a")}} et {{HTMLElement("area")}}, crée un contexte de navigation de haut niveau qui n'est pas un contexte de navigation auxiliaire si l'hyperlien créerait l'un ou l'autre au départ (c'est-à-dire qu'il a une valeur d'attribut `target` appropriée). Autrement dit, cela fait que le lien se comporte comme si [`window.opener`](/fr/docs/Web/API/Window/opener) était nul et que `target="_parent"` était défini.
 
     Ceci est l'opposé de [`opener`](#opener).
 
 - `noreferrer`
-  - : Pertinent pour {{HTMLElement('form')}}, {{HTMLElement('a')}} et {{HTMLElement('area')}}, inclure cette valeur rend le référent inconnu (aucun en-tête `Referer` ne sera inclus), et crée un contexte de navigation de haut niveau comme si `noopener` était également défini.
+  - : Pertinent pour {{HTMLElement("form")}}, {{HTMLElement("a")}} et {{HTMLElement("area")}}, inclure cette valeur rend le référent inconnu (aucun en-tête `Referer` ne sera inclus), et crée un contexte de navigation de haut niveau comme si `noopener` était également défini.
 - `opener`
   - : Crée un contexte de navigation auxiliaire si l'hyperlien créerait autrement un contexte de navigation de premier niveau qui n'est pas un contexte de navigation auxiliaire (c'est-à-dire qui a `"_blank"` comme valeur d'attribut `target`). Effectivement, c'est l'opposé de [noopener](#noopener).
 - `pingback`
@@ -183,22 +183,22 @@ L'attribut `rel` n'a pas de valeur par défaut. Si l'attribut est omis ou si auc
 - `preload`
   - : Définit que l'agent utilisateur doit récupérer et mettre en cache de manière préemptive la ressource cible pour la navigation actuelle en fonction de la destination potentielle donnée par l'attribut [`as`](/fr/docs/Web/HTML/Reference/Elements/link#as) (et la priorité associée à la destination correspondante). Voir la page pour la valeur [`preload`](/fr/docs/Web/HTML/Reference/Attributes/rel/preload).
 - `prerender` {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Définit que l'agent utilisateur doit récupérer de manière préemptive la ressource cible et la traiter de façon à fournir une réponse plus rapide à l'avenir, par exemple en récupérant ses sous-ressources ou en effectuant un rendu. Cette fonctionnalité est remplacée par la [Speculation Rules API <sup>(angl.)</sup>](/fr/docs/Web/API/Speculation_Rules_API).
+  - : Définit que l'agent utilisateur doit récupérer de manière préemptive la ressource cible et la traiter de façon à fournir une réponse plus rapide à l'avenir, par exemple en récupérant ses sous-ressources ou en effectuant un rendu. Cette fonctionnalité est remplacée par [l'API Speculation Rules](/fr/docs/Web/API/Speculation_Rules_API).
 - `prev`
-  - : Semblable au mot-clé [`next`](#next), pertinent pour {{HTMLElement('form')}}, {{HTMLElement('link')}}, {{HTMLElement('a')}} et {{HTMLElement('area')}}, la valeur `prev` indique que le document actuel fait partie d'une série et que le lien référence un document précédent dans la série.
+  - : Semblable au mot-clé [`next`](#next), pertinent pour {{HTMLElement("form")}}, {{HTMLElement("link")}}, {{HTMLElement("a")}} et {{HTMLElement("area")}}, la valeur `prev` indique que le document actuel fait partie d'une série et que le lien référence un document précédent dans la série.
 
     Remarque&nbsp;: Le synonyme `previous` est incorrect et ne doit pas être utilisé.
 
 - `privacy-policy`
-  - : Valide pour les éléments HTML {{HTMLElement('a')}}, {{HTMLElement('area')}} et {{HTMLElement('link')}}, la valeur `privacy-policy` indique que le document référencé est la politique de confidentialité qui décrit les pratiques de collecte et d'utilisation des données du document actuel.
+  - : Valide pour les éléments HTML {{HTMLElement("a")}}, {{HTMLElement("area")}} et {{HTMLElement("link")}}, la valeur `privacy-policy` indique que le document référencé est la politique de confidentialité qui décrit les pratiques de collecte et d'utilisation des données du document actuel.
 
 - `search`
-  - : Pertinent pour les éléments HTML {{HTMLElement('form')}}, {{HTMLElement('link')}}, {{HTMLElement('a')}} et {{HTMLElement('area')}}, le mot-clé `search` indique que l'hyperlien référence un document dont l'interface est spécialement conçue pour effectuer des recherches dans le document actuel, le site et les ressources associées, fournissant un lien vers une ressource qui peut être utilisée pour la recherche.
+  - : Pertinent pour les éléments HTML {{HTMLElement("form")}}, {{HTMLElement("link")}}, {{HTMLElement("a")}} et {{HTMLElement("area")}}, le mot-clé `search` indique que l'hyperlien référence un document dont l'interface est spécialement conçue pour effectuer des recherches dans le document actuel, le site et les ressources associées, fournissant un lien vers une ressource qui peut être utilisée pour la recherche.
 
     Si l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/link#type) est défini sur `application/opensearchdescription+xml`, la ressource est un plugin [OpenSearch <sup>(angl.)</sup>](/fr/docs/Web/XML/Guides/OpenSearch) qui peut être facilement ajouté à l'interface de Firefox.
 
 - `stylesheet`
-  - : Valide pour l'élément HTML {{HTMLElement('link')}}, il importe une ressource externe à utiliser comme feuille de style. L'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/link#type) n'est pas nécessaire s'il s'agit d'une feuille de style `text/css`, car c'est la valeur par défaut. Si ce n'est pas une feuille de style de type `text/css`, il est préférable de déclarer le type.
+  - : Valide pour l'élément HTML {{HTMLElement("link")}}, il importe une ressource externe à utiliser comme feuille de style. L'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/link#type) n'est pas nécessaire s'il s'agit d'une feuille de style `text/css`, car c'est la valeur par défaut. Si ce n'est pas une feuille de style de type `text/css`, il est préférable de déclarer le type.
 
     Bien que cet attribut définisse le lien comme étant une feuille de style, l'interaction avec d'autres attributs et autres termes clés dans la valeur de `rel` influence si la feuille de style est téléchargée et/ou utilisée.
 
@@ -209,15 +209,15 @@ L'attribut `rel` n'a pas de valeur par défaut. Si l'attribut est omis ou si auc
     Nécessite l'utilisation du protocole CORS pour la récupération inter-origine.
 
 - `tag`
-  - : Valide pour les éléments HTML {{HTMLElement('a')}} et {{HTMLElement('area')}}, il donne une balise (identifiée par l'adresse donnée) qui s'applique au document actuel. La valeur de balise indique que le lien fait référence à un document décrivant une balise s'appliquant au document sur lequel il se trouve. Ce type de lien n'est pas destiné aux balises dans un nuage de tags, car ces balises s'appliquent à un groupe de pages, tandis que la valeur `tag` de l'attribut `rel` concerne un seul document.
+  - : Valide pour les éléments HTML {{HTMLElement("a")}} et {{HTMLElement("area")}}, il donne une balise (identifiée par l'adresse donnée) qui s'applique au document actuel. La valeur de balise indique que le lien fait référence à un document décrivant une balise s'appliquant au document sur lequel il se trouve. Ce type de lien n'est pas destiné aux balises dans un nuage de tags, car ces balises s'appliquent à un groupe de pages, tandis que la valeur `tag` de l'attribut `rel` concerne un seul document.
 
 - `terms-of-service`
-  - : Valide pour les éléments HTML {{HTMLElement('a')}}, {{HTMLElement('area')}} et {{HTMLElement('link')}}, la valeur `terms-of-service` indique que le document référencé est les conditions d'utilisation qui décrivent les accords entre le fournisseur du document actuel et les utilisateur·ice·s qui souhaitent utiliser le document fourni.
+  - : Valide pour les éléments HTML {{HTMLElement("a")}}, {{HTMLElement("area")}} et {{HTMLElement("link")}}, la valeur `terms-of-service` indique que le document référencé est les conditions d'utilisation qui décrivent les accords entre le fournisseur du document actuel et les utilisateur·ice·s qui souhaitent utiliser le document fourni.
 
 ### Non-standard values
 
 - [`apple-touch-icon` <sup>(angl.)</sup>](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4)
-  - : Spécifie l'icône pour une application web sur un appareil iOS.
+  - : Définit l'icône pour une application web sur un appareil iOS.
 
 ## Spécifications
 
@@ -229,6 +229,6 @@ L'attribut `rel` n'a pas de valeur par défaut. Si l'attribut est omis ou si auc
 
 ## Voir aussi
 
-- La propriété JavaScript {{DOMxRef("HTMLLinkElement.relList")}}
-- La propriété JavaScript {{DOMxRef("HTMLAnchorElement.relList")}}
-- La propriété JavaScript {{DOMxRef("HTMLAreaElement.relList")}}
+- La propriété API {{DOMxRef("HTMLLinkElement.relList")}}
+- La propriété API {{DOMxRef("HTMLAnchorElement.relList")}}
+- La propriété API {{DOMxRef("HTMLAreaElement.relList")}}

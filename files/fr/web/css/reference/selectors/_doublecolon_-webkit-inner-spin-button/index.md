@@ -1,12 +1,11 @@
 ---
 title: ::-webkit-inner-spin-button
 slug: Web/CSS/Reference/Selectors/::-webkit-inner-spin-button
-original_slug: Web/CSS/::-webkit-inner-spin-button
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
-{{Non-standard_header}}
+{{Non-standard_Header}}
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-inner-spin-button`** est une [extension de WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui permet de mettre en forme la partie intérieure de la roulette qui permet de choisir la valeur d'un élément {{HTMLElement("input/number", '&lt;input type="number"&gt;')}}.
 
@@ -24,7 +23,7 @@ Ces exemples fonctionnent uniquement pour les navigateurs basés sur WebKit et B
 
 ### Changer le curseur dans les contrôles de spin
 
-Dans cet exemple, la propriété CSS {{cssxref("cursor")}} est changée en `pointer` chaque fois que le curseur est positionné sur la partie intérieure des contrôles de défilement de l'input.
+Dans cet exemple, la propriété CSS {{CSSxRef("cursor")}} est changée en `pointer` chaque fois que le curseur est positionné sur la partie intérieure des contrôles de défilement de l'input.
 
 #### HTML
 
@@ -54,5 +53,5 @@ Ce pseudo-élément ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- {{cssxref("::-webkit-textfield-decoration-container")}}
+- Le pseudo-élément {{CSSxRef("::-webkit-textfield-decoration-container")}}
 - [Mettre en forme les contrôles de formulaires - WebKit <sup>(angl.)</sup>](https://trac.webkit.org/wiki/Styling%20Form%20Controls#inputelement)

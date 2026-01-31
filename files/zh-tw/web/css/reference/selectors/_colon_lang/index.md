@@ -10,7 +10,7 @@ l10n:
 {{InteractiveExample("CSS Demo: :lang()", "tabbed-shorter")}}
 
 ```css interactive-example
-*:lang(zh_Hant) {
+*:lang(zh-Hant) {
   outline: 2px solid deeppink;
 }
 ```

@@ -589,7 +589,7 @@ Create the template file **locallibrary/catalog/templates/catalog/author_form.ht
   <form action="" method="post">
     {% csrf_token %}
     <table>
-      {{ form.as_table }}
+      \{{ form.as_table }}
     </table>
     <input type="submit" value="Submit" />
   </form>

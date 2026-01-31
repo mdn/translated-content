@@ -1,12 +1,15 @@
 ---
 title: max-content
 slug: Web/CSS/Reference/Values/max-content
-original_slug: Web/CSS/max-content
 l10n:
-  sourceCommit: 726f971467b4cdd339e29ee10403fce5b3e87f42
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-`max-content` は大きさのキーワードで、コンテンツの{{glossary("intrinsic size", "内在的な")}}最大幅や高さを表します。テキストコンテンツの場合、これはオーバーフローが発生しても、コンテンツがまったく折り返されないことを意味します。
+`max-content` はサイズ指定キーワードで、コンテンツの[内在的な最大サイズ](/ja/docs/Glossary/Intrinsic_Size#maximum_intrinsic_size)を表します。
+キーワードは、ソフトラップなしでコンテンツを表示させるために必要な最大サイズまで要素を拡大します。
+テキストコンテンツの場合、これはオーバーフローが発生しても、コンテンツがまったく折り返されないことを意味します。
+
+{{cssxref("interpolate-size")}} プロパティと {{cssxref("calc-size()")}} 関数を使用して、`max-content` を始点・終点としたアニメーションを有効にすることができます。
 
 ## 構文
 

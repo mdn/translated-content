@@ -7,12 +7,12 @@ l10n:
   sourceCommit: a1765c2cad20118be0dad322d3548908787b5791
 ---
 
-L'attribut **`pattern`** indique une [expression rationnelle](/fr/docs/Web/JavaScript/Guide/Regular_expressions) que doit respecter la valeur du contrôle du formulaire. Si une valeur non nulle (qui n'est pas `null`) ne respecte pas les contraintes portées par `pattern`, la propriété {{DOMxRef('ValidityState.patternMismatch', 'patternMismatch')}} en lecture seule, rattachée à l'objet {{DOMxRef('ValidityState')}}, vaudra `true`.
+L'attribut **`pattern`** indique une [expression rationnelle](/fr/docs/Web/JavaScript/Guide/Regular_expressions) que doit respecter la valeur du contrôle du formulaire. Si une valeur non nulle (qui n'est pas `null`) ne respecte pas les contraintes portées par `pattern`, la propriété {{DOMxRef("ValidityState.patternMismatch", "patternMismatch")}} en lecture seule, rattachée à l'objet {{DOMxRef("ValidityState")}}, vaudra `true`.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: pattern", "tabbed-shorter")}}
 
 ```html interactive-example
-<label for="username">Nom d'utilisateur&nbsp;: (3-16 caractères)</label>
+<label for="username">Nom d'utilisateur·ice&nbsp;: (3-16 caractères)</label>
 <input
   id="username"
   name="username"
@@ -42,24 +42,24 @@ input:invalid {
 
 ## Vue d'ensemble
 
-L'attribut `pattern` peut être utilisé pour les champs de type {{HTMLElement("input/text", "<code>text</code>")}}, {{HTMLElement("input/tel", "<code>tel</code>")}}, {{HTMLElement("input/email", "<code>email</code>")}}, {{HTMLElement("input/url", "<code>url</code>")}}, {{HTMLElement("input/password", "<code>password</code>")}} et {{HTMLElement("input/search", "<code>search</code>")}}.
+L'attribut `pattern` peut être utilisé pour les champs de type `{{HTMLElement("input/text", "text")}}`, `{{HTMLElement("input/tel", "tel")}}`, `{{HTMLElement("input/email", "email")}}`, `{{HTMLElement("input/url", "url")}}`, `{{HTMLElement("input/password", "password")}}` et `{{HTMLElement("input/search", "search")}}`.
 
-L'attribut `pattern`, lorsqu'il est spécifié, est une expression rationnelle que l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) du champ doit respecter pour réussir la [validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation). Il doit s'agir d'une expression rationnelle JavaScript valide, comme utilisée par le type {{JSxRef("RegExp")}}, et documentée dans notre [guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions).
+L'attribut `pattern`, lorsqu'il est défini, est une expression rationnelle que l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) du champ doit respecter pour réussir la [validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation). Il doit s'agir d'une expression rationnelle JavaScript valide, comme utilisée par le type {{JSxRef("RegExp")}}, et documentée dans notre [guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions).
 
-L'expression rationnelle du motif est compilée avec l'indicateur [`'v'`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#classe_de_caractères_en_mode_v). Cela rend l'expression [compatible Unicode](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode) et modifie la façon dont les classes de caractères sont interprétées. Cela permet l'intersection et la soustraction d'ensembles dans les classes de caractères. En plus de `]` et `\`, les caractères suivants doivent être échappés avec un antislash `\` s'ils sont littéraux&nbsp;: `(`, `)`, `[`, `{`, `}`, `/`, `-`, `|`. Avant mi-2023, l'indicateur `'u'` était utilisé&nbsp;; si vous mettez à jour un ancien code, consultez la référence [`unicodeSets`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets).
+L'expression rationnelle du motif est compilée avec l'indicateur [`"v"`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#classe_de_caractères_en_mode_v). Cela rend l'expression [compatible Unicode](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#mode_compatible_unicode) et modifie la façon dont les classes de caractères sont interprétées. Cela permet l'intersection et la soustraction d'ensembles dans les classes de caractères. En plus de `]` et `\`, les caractères suivants doivent être échappés avec un antislash `\` s'ils sont littéraux&nbsp;: `(`, `)`, `[`, `{`, `}`, `/`, `-`, `|`. Avant mi-2023, l'indicateur `"u"` était utilisé&nbsp;; si vous mettez à jour un ancien code, consultez la référence [`unicodeSets`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets).
 
 L'expression rationnelle du motif doit correspondre à l'intégralité de la valeur du champ, et non à une sous-chaîne — comme si `^(?:` était ajouté au début du motif et `)$` à la fin.
 
 Il ne faut pas entourer le texte du motif de barres obliques. Aucune expression rationnelle n'est appliquée si la valeur de l'attribut est absente, vide ou invalide.
 
-Certains types de champs prenant en charge l'attribut pattern, notamment {{HTMLElement("input/email", "<code>email</code>")}} et {{HTMLElement("input/url", "<code>url</code>")}}, ont des syntaxes de valeur attendues qui doivent être respectées. Si l'attribut pattern n'est pas présent et que la valeur ne correspond pas à la syntaxe attendue pour ce type, la propriété en lecture seule {{DOMxRef('ValidityState.typeMismatch','typeMismatch')}} de l'objet {{DOMxRef('ValidityState')}} vaudra `true`.
+Certains types de champs prenant en charge l'attribut pattern, notamment `{{HTMLElement("input/email", "email")}}` et `{{HTMLElement("input/url", "url")}}`, ont des syntaxes de valeur attendues qui doivent être respectées. Si l'attribut pattern n'est pas présent et que la valeur ne correspond pas à la syntaxe attendue pour ce type, la propriété en lecture seule {{DOMxRef("ValidityState.typeMismatch", "typeMismatch")}} de l'objet {{DOMxRef("ValidityState")}} vaudra `true`.
 
 ### Validation des contraintes
 
-Si la valeur du champ n'est pas la chaîne de caractères vide et qu'elle ne correspond pas entièrement à l'expression rationnelle, une violation de contrainte est signalée par la propriété {{DOMxRef('ValidityState.patternMismatch','patternMismatch')}} de l'objet {{DOMxRef('ValidityState')}}, qui vaudra true.
+Si la valeur du champ n'est pas la chaîne de caractères vide et qu'elle ne correspond pas entièrement à l'expression rationnelle, une violation de contrainte est signalée par la propriété {{DOMxRef("ValidityState.patternMismatch", "patternMismatch")}} de l'objet {{DOMxRef("ValidityState")}}, qui vaudra true.
 
 > [!NOTE]
-> Si l'attribut `pattern` est spécifié sans valeur, sa valeur est implicitement la chaîne de caractères vide. Ainsi, toute valeur non vide pour l'attribut value entraînera une violation de contrainte.
+> Si l'attribut `pattern` est défini sans valeur, sa valeur est implicitement la chaîne de caractères vide. Ainsi, toute valeur non vide pour l'attribut value entraînera une violation de contrainte.
 
 ### Considérations d'utilisabilité et d'accessibilité
 
@@ -83,14 +83,14 @@ Avec le fragment de code HTML suivant&nbsp;:
       type="tel"
       pattern="[0-9]{3}"
       placeholder="###"
-      aria-label="3-digit area code"
+      aria-label="Code à 3 chiffres de l'indicatif régional"
       size="2" />)-
     <input
       name="tel2"
       type="tel"
       pattern="[0-9]{3}"
       placeholder="###"
-      aria-label="3-digit prefix"
+      aria-label="Préfixe à 3 chiffres"
       size="2" />
     -
     <input
@@ -98,7 +98,7 @@ Avec le fragment de code HTML suivant&nbsp;:
       type="tel"
       pattern="[0-9]{4}"
       placeholder="####"
-      aria-label="4-digit number"
+      aria-label="Nombre à 4 chiffres"
       size="3" />
   </label>
 </p>
@@ -116,18 +116,20 @@ input:invalid {
 
 {{EmbedLiveSample("Correspondance d'un numéro de téléphone", 300, 80)}}
 
-En utilisant les attributs [`minlength`](/fr/docs/Web/HTML/Reference/Attributes/minlength) et [`maxlength`](/fr/docs/Web/HTML/Reference/Attributes/maxlength) à la place, on aurait eu les propriétés {{DOMxRef('validityState.tooLong')}} ou {{DOMxRef('validityState.tooShort')}} qui auraient valu `true`.
+En utilisant les attributs [`minlength`](/fr/docs/Web/HTML/Reference/Attributes/minlength) et [`maxlength`](/fr/docs/Web/HTML/Reference/Attributes/maxlength) à la place, on aurait eu les propriétés {{DOMxRef("ValidityState.tooLong")}} ou {{DOMxRef("ValidityState.tooShort")}} qui auraient valu `true`.
 
 ### Indiquer un motif
 
-On pourra utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#attr-pattern) afin d'indiquer une expression rationnelle qui devra être respectée par la valeur saisie pour que celle-ci soit considérée comme valide (voir [ce guide sur la validation avec les expressions rationnelles](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation#validation_selon_une_expression_régulière) pour une introduction).
+On pourra utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) afin d'indiquer une expression rationnelle qui devra être respectée par la valeur saisie pour que celle-ci soit considérée comme valide (voir [ce guide sur la validation avec les expressions rationnelles](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation#validation_selon_une_expression_régulière) pour une introduction).
 
 L'exemple qui suit permet de restreindre les valeurs saisies entre 4 et 8 caractères qui doivent également être des lettres minuscules.
 
 ```html
 <form>
   <div>
-    <label for="uname">Veuillez choisir un nom d'utilisateur&nbsp;: </label>
+    <label for="uname">
+      Veuillez choisir un nom d'utilisateur·ice&nbsp;:
+    </label>
     <input
       type="text"
       id="uname"
@@ -138,7 +140,7 @@ L'exemple qui suit permet de restreindre les valeurs saisies entre 4 et 8 caract
       title="4 à 8 lettres en minuscules" />
     <span class="validity"></span>
     <p>
-      Les noms d'utilisateurs doivent être en minuscules et contenir 4 à 8
+      Les noms d'utilisateur·ice·s doivent être en minuscules et contenir 4 à 8
       caractères.
     </p>
   </div>
@@ -178,7 +180,7 @@ input:valid + span:after {
 
 Cela donne le résultat suivant&nbsp;:
 
-{{EmbedLiveSample('Indiquer un motif', 600, 110) }}
+{{EmbedLiveSample("Indiquer un motif", 600, 110)}}
 
 ## Spécifications
 

@@ -1,10 +1,11 @@
 ---
 title: shape-outside
 slug: Web/CSS/Reference/Properties/shape-outside
-original_slug: Web/CSS/shape-outside
+l10n:
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**`shape-outside`** は [CSS](/ja/docs/Web/CSS) のプロパティで、隣接するインラインコンテンツが回り込むシェイプ (形状) を — 矩形でない場合もありますが — 定義します。既定では、インラインコンテンツはマージンボックスを回り込みます。`shape-outside` によって、この回り込みをカスタマイズし、テキストが単純なボックスではなく複雑なオブジェクトの周りを回り込めるようにします。
+**`shape-outside`** は [CSS](/ja/docs/Web/CSS) のプロパティで、隣接するインラインコンテンツが折り返すシェイプ (形状) を定義します（矩形でない場合もあります）。デフォルトでは、インラインコンテンツはマージンボックスを回り込みます。`shape-outside` によって、この回り込みをカスタマイズし、テキストが単純なボックスではなく複雑なオブジェクトの周りを回り込めるようにします。
 
 {{InteractiveExample("CSS デモ: shape-outside")}}
 
@@ -17,14 +18,14 @@ shape-outside: ellipse(130px 140px at 20% 20%);
 ```
 
 ```css interactive-example-choice
-shape-outside: url(/shared-assets/images/examples/round-balloon.png);
+shape-outside: url("/shared-assets/images/examples/round-balloon.png");
 ```
 
 ```css interactive-example-choice
 shape-outside: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section class="default-example" id="default-example">
   <div class="example-container">
     <img
@@ -32,14 +33,7 @@ shape-outside: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
       id="example-element"
       src="/shared-assets/images/examples/round-balloon.png"
       width="150" />
-    We had agreed, my companion and I, that I should call for him at his house,
-    after dinner, not later than eleven o’clock. This athletic young Frenchman
-    belongs to a small set of Parisian sportsmen, who have taken up “ballooning”
-    as a pastime. After having exhausted all the sensations that are to be found
-    in ordinary sports, even those of “automobiling” at a breakneck speed, the
-    members of the “Aéro Club” now seek in the air, where they indulge in all
-    kinds of daring feats, the nerve-racking excitement that they have ceased to
-    find on earth.
+    私と同行者は、夕食後、遅くとも 11 時までに彼の家に迎えにいくことで合意していた。この運動神経抜群の若いフランス人は、気球乗りを趣味とするパリのスポーツ愛好家たちの小さなグループに属している。通常のスポーツで得られるあらゆる感覚、猛スピードでの「自動車運転」のスリルさえも尽くした後、「エアロクラブ」のメンバーたちは今や空へと目を向け、あらゆる種類の危険な技に興じながら、地上ではもはや探せなくなった神経をすり減らすような興奮を求めている。
   </div>
 </section>
 ```
@@ -72,20 +66,22 @@ shape-outside: circle();
 shape-outside: ellipse();
 shape-outside: inset(10px 10px 10px 10px);
 shape-outside: polygon(10px 10px, 20px 20px, 30px 30px);
-shape-outside: path(
-  "M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z"
-);
+
+/* 基本シェイプでのシェイプボックス */
+shape-outside: circle() border-box;
+shape-outside: margin-box ellipse();
 
 /* <url> 値 */
-shape-outside: url(image.png);
+shape-outside: url("image.png");
 
 /* <gradient> 値 */
-shape-outside: linear-gradient(45deg, rgba(255, 255, 255, 0) 150px, red 150px);
+shape-outside: linear-gradient(45deg, white 150px, red 150px);
 
 /* グローバル値 */
-shape-outside: initial;
 shape-outside: inherit;
+shape-outside: initial;
 shape-outside: revert;
+shape-outside: revert-layer;
 shape-outside: unset;
 ```
 
@@ -98,7 +94,7 @@ shape-outside: unset;
 - `<shape-box>`
   - : 浮動領域は浮動要素の辺の形状に従って ([CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model/Introduction) で定義された通りに) 計算されます。これは`margin-box`、`border-box`、`padding-box`、`content-box` の何れかになります。この形状は {{cssxref("border-radius")}} プロパティで生成された丸い角も含みます ({{cssxref("background-clip")}} と同様の動作です)。
     - `margin-box`
-      - : マージンの外側の縁で囲まれた形状を定義します。この形状の角の半径は、対応する {{cssxref("border-radius")}} および {{cssxref("margin")}} の値で決定されます。 `border-radius / margin` の比率が `1` 以上の場合、マージンの角の半径は `border-radius + margin` です。この比率が `1` 未満の場合、マージンの角の半径は `border-radius + (margin * (1 + (ratio-1)^3))` となります。
+      - : マージンの外側の縁で囲まれた形状を定義します。この形状の角の半径は、対応する {{cssxref("border-radius")}} および {{cssxref("margin")}} の値で決定されます。 `border-radius / margin` の比率が `1` 以上の場合、マージンの角の半径は `border-radius + margin` です。この比率が `1` 未満の場合、マージンの角の半径は `border-radius + (margin * (1 + (ratio - 1) ^ 3))` となります。
     - `border-box`
       - : 境界の外側の縁で囲まれた形状を定義します。この形状は、境界の外側の形状における通常のルールに従います。
     - `padding-box`
@@ -106,23 +102,13 @@ shape-outside: unset;
     - `content-box`
       - : コンテンツの外側の縁で囲まれた形状を定義します。このボックスのそれぞれの角の半径は、 `0` と `border-radius - border-width - padding` の大きい方になります。
 
-- {{cssxref("&lt;basic-shape&gt;")}}
-  - : 浮動領域は、{{cssxref("basic-shape/inset()","inset()")}}、{{cssxref("basic-shape/circle()","circle()")}}、{{cssxref("basic-shape/ellipse()","ellipse()")}}、{{cssxref("basic-shape/polygon()","polygon()")}}、またはレベル 2 の仕様書で追加された `path()` の何れかによって生成された形状に基づいて計算されます。`<shape-box>` も提供された場合は、`<basic-shape>` 関数の参照ボックスを定義します。それ以外の場合、参照ボックスは既定で `margin-box` になります。
-- {{cssxref("&lt;image&gt;")}}
-  - : 浮動領域は指定された {{cssxref("&lt;image&gt;")}} のアルファチャンネルに基づいて、 {{cssxref("shape-image-threshold")}} で定義されたように抽出され計算されます。
+- {{cssxref("basic-shape")}}
+  - : 浮動領域は、{{cssxref("basic-shape/inset","inset()")}}、{{cssxref("basic-shape/circle","circle()")}}、{{cssxref("basic-shape/ellipse","ellipse()")}}、{{cssxref("basic-shape/polygon","polygon()")}} のいずれかの関数によって生成された形状に基づいて計算されます。`<shape-box>` も提供された場合は、`<basic-shape>` 関数の参照ボックスを定義します。それ以外の場合、参照ボックスはデフォルトで `margin-box` になります。
+- {{cssxref("image")}}
+  - : 浮動領域は指定された {{cssxref("image")}} のアルファチャンネルに基づいて、 {{cssxref("shape-image-threshold")}} で定義されたように抽出され計算されます。
 
 > [!NOTE]
-> {{glossary("User agent", "ユーザーエージェント")}}は、`shape-outside` の値に含まれるすべての URL に対して、HTML5 の仕様で定義されている CORS に対応している可能性のあるフェッチメソッドを使用する必要があります。読み取りの際、ユーザーエージェントは "Anonymous" モードを使用し、参照元をスタイルシートの URL に設定し、文書の URL を含むオリジンを設定しなければなりません。この結果、有効な代替画像がないなどのネットワークエラーが発生した場合は、**`none`** の値を指定したのと同様になります。
-
-## 補間
-
-1 つ目と 2 つ目の `<basic-shape>` の間でアニメーションを行う場合、次のルールが適用されます。シェイプ関数の中の値は、単純なリストとして補間されます。このリストの値の補間は、可能な限り {{cssxref("&lt;length&gt;")}}、{{cssxref("&lt;percentage&gt;")}}、{{cssxref("calc()")}} のいずれかとして補間されます。リストの値がこれらの型ではなく、同一であった場合 (両方のリストの同じ位置に `nonzero` があった場合など)、それらの値は補間されます。
-
-- 両方の形状は、同じ参照ボックスを使用する必要があります。
-- 両方の形状が同じ型であった場合、その型が `ellipse()` または `circle()` であり、かつどの半径にも `closest-side` や `farthest-side` のキーワードを使用していない場合は、シェイプ関数内のそれぞれの値の間で補間されます。
-- 両方の形状が `inset()` 型であった場合、シェイプ関数内のそれぞれの値の間で補間されます。
-- 両方の形状が `polygon()` 型であった場合、両方の多角形の頂点の数が同じで、同じ `<fill-rule>` を使用していた場合は、シェイプ関数内のそれぞれの値の間で補完されます。
-- それ以外の場合は、補間は行われません。
+> 画像が不正な場合、キーワード `none` が指定された場合と同様の効果が生じます。さらに、画像を使用することができる {{Glossary("CORS")}} ヘッダーと共に提供されなければなりません。
 
 ## 公式定義
 
@@ -134,18 +120,16 @@ shape-outside: unset;
 
 ## 例
 
-<h3 id="Funneling_text">漏斗状のテキスト</h3>
+### 漏斗状のテキスト
 
 #### HTML
 
-```html
+```html-nolint
 <div class="main">
   <div class="left"></div>
   <div class="right"></div>
   <p>
-    Sometimes a web page's text content appears to be funneling your attention
-    towards a spot on the page to drive you to follow a particular link.
-    Sometimes you don't notice.
+    ウェブページのテキストコンテンツが、特定のリンクをクリックさせるために、ページ上のある一点へ注意を誘導するように現れることがあります。気づかない場合もあります。
   </p>
 </div>
 ```
@@ -159,25 +143,21 @@ shape-outside: unset;
 
 .left,
 .right {
-  width: 40%;
-  height: 12ex;
   background-color: lightgray;
+  height: 12ex;
+  width: 40%;
 }
 
 .left {
-  -webkit-shape-outside: polygon(0 0, 100% 100%, 0 100%);
-  shape-outside: polygon(0 0, 100% 100%, 0 100%);
-  float: left;
-  -webkit-clip-path: polygon(0 0, 100% 100%, 0 100%);
   clip-path: polygon(0 0, 100% 100%, 0 100%);
+  float: left;
+  shape-outside: polygon(0 0, 100% 100%, 0 100%);
 }
 
 .right {
-  -webkit-shape-outside: polygon(100% 0, 100% 100%, 0 100%);
-  shape-outside: polygon(100% 0, 100% 100%, 0 100%);
-  float: right;
-  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%);
   clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  float: right;
+  shape-outside: polygon(100% 0, 100% 100%, 0 100%);
 }
 
 p {
@@ -187,7 +167,7 @@ p {
 
 #### 結果
 
-{{EmbedLiveSample("Funneling_text", "100%", 130)}}
+{{EmbedLiveSample("funneling_text", "100%", 130)}}
 
 ## 仕様書
 
@@ -201,9 +181,6 @@ p {
 
 - [CSS シェイプ](/ja/docs/Web/CSS/Guides/Shapes)
 - [CSS シェイプの概要](/ja/docs/Web/CSS/Guides/Shapes/Overview)
-- [ボックス値からのシェイプ](/ja/docs/Web/CSS/Guides/Shapes/From_box_values)
-- [基本シェイプ](/ja/docs/Web/CSS/Guides/Shapes/Using_shape-outside)
-- [画像からのシェイプ](/ja/docs/Web/CSS/Guides/Shapes/From_images)
-- {{cssxref("&lt;basic-shape&gt;")}}
+- {{cssxref("basic-shape")}}
 - {{cssxref("shape-margin")}}
 - {{cssxref("shape-image-threshold")}}

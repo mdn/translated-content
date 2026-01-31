@@ -1,19 +1,18 @@
 ---
 title: contain-intrinsic-size
 slug: Web/CSS/Reference/Properties/contain-intrinsic-size
-original_slug: Web/CSS/contain-intrinsic-size
 l10n:
-  sourceCommit: 9aff58ba641ce676db1ae5a1955ed6ef81cbc718
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-**`contain-intrinsic-size`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、要素が[サイズ拘束](/ja/docs/Web/CSS/Guides/Containment/Using#サイズ拘束)の対象である場合に、ブラウザーがレイアウトに使用する要素のサイズを設定します。
+**`contain-intrinsic-size`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、要素が[サイズ抑制](/ja/docs/Web/CSS/Guides/Containment/Using#サイズ抑制)の対象である場合に、ブラウザーがレイアウトに使用する要素のサイズを設定します。
 
 ## 構成要素のプロパティ
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`contain-intrinsic-width`](/ja/docs/Web/CSS/Reference/Properties/contain-intrinsic-width)
-- [`contain-intrinsic-height`](/ja/docs/Web/CSS/Reference/Properties/contain-intrinsic-height)
+- {{cssxref("contain-intrinsic-width")}}
+- {{cssxref("contain-intrinsic-height")}}
 
 ## 構文
 
@@ -62,15 +61,15 @@ contain-intrinsic-size: unset;
 
 ## 解説
 
-このプロパティは、[`contain: size`](/ja/docs/Web/CSS/Reference/Properties/contain) や [`content-visibility`](/ja/docs/Web/CSS/Reference/Properties/content-visibility) のような、サイズ格納を発生させる要素の横に並んだプロパティとして一般的に適用されます。
+このプロパティは、[`contain: size`](/ja/docs/Web/CSS/Reference/Properties/contain) や {{cssxref("content-visibility")}} のような、サイズ格納を発生させる要素の横に並んだプロパティとして一般的に適用されます。
 
-サイズ拘束は、ユーザーエージェントが要素をあたかも固定されたサイズを持っているかのようにレイアウトできるようにし、実際のサイズを決定するために子要素の再描画を避けることによって不必要なリフローを防ぎます（それによって使い勝手を向上させます）。
-既定では、サイズ拘束は要素をコンテンツがないものとして扱い、コンテンツに幅や高さがない場合と同様にレイアウトを折りたたむ可能性があります。
+サイズ抑制は、ユーザーエージェントが要素をあたかも固定されたサイズを持っているかのようにレイアウトできるようにし、実際のサイズを決定するために子要素の再描画を避けることによって不必要なリフローを防ぎます（それによって使い勝手を向上させます）。
+既定では、サイズ抑制は要素をコンテンツがないものとして扱い、コンテンツに幅や高さがない場合と同様にレイアウトを折りたたむ可能性があります。
 `contain-intrinsic-size` プロパティを使用すると、レイアウトに使用するサイズとして適切な値を指定することができます。
 
 `auto <length>` 値では、要素が（子要素とともに）「通常レンダリングされる」場合の要素のサイズを指定することができ、要素がコンテンツをスキップするときに代わりに指定した長さを使用できるようにします。
-これにより、[`content-visibility: auto`](/ja/docs/Web/CSS/Reference/Properties/content-visibility) を持つオフスクリーン要素は、開発者が要素のサイズを正確に推定することなく、サイズ拘束の恩恵を受けることができます。
-子要素がレンダリングされる場合、記憶された値は使用されません（サイズの格納が有効な場合、`<length>`は使用されません）。
+これにより、[`content-visibility: auto`](/ja/docs/Web/CSS/Reference/Properties/content-visibility) を持つオフスクリーン要素は、開発者が要素のサイズを正確に推定することなく、サイズ抑制の恩恵を受けることができます。
+子要素がレンダリングされる場合、記憶された値は使用されません（サイズの抑制が有効な場合、`<length>` は使用されません）。
 
 グリッドレイアウトや段組みレイアウトでは、明示的にサイズを指定すると、暗黙的なコンテンツベースの高さとは異なる扱いを受けます。
 要素は、単にその高さまでコンテンツで満たされた場合とは大幅に異なるレイアウトになるかもしれません。
@@ -104,8 +103,9 @@ contain-intrinsic-size: unset;
 <div id="container">
   <div id="auto-length-note">
     <p>
-      Your browser does not support
-      <code>contain-intrinsic-size: auto &lt;length&gt;</code>.
+      このブラウザーは
+      <code>contain-intrinsic-size: auto &lt;length&gt;</code>
+      に対応していません。
     </p>
   </div>
   <div class="auto-length">
@@ -122,8 +122,9 @@ contain-intrinsic-size: unset;
   </div>
   <div id="auto-none-note">
     <p>
-      Your browser does not support
-      <code>contain-intrinsic-size: auto none</code>.
+      このブラウザーは
+      <code>contain-intrinsic-size: auto none</code>
+      に対応していません。
     </p>
   </div>
   <div class="auto-length none">
@@ -309,7 +310,7 @@ contentVisibilitySelector.addEventListener("change", () => {
 
 #### HTML
 
-HTML は 2 つのボタン、`content-visibility` プロパティによって拘束されるコンテナー要素を定義しています。
+HTML は 2 つのボタン、`content-visibility` プロパティによって抑制されるコンテナー要素を定義しています。
 
 ```html
 <p>

@@ -3,7 +3,7 @@ title: Разметка письма
 slug: Learn_web_development/Core/Structuring_content/Marking_up_a_letter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Debugging_HTML", "Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 Мы все учимся писать письма рано или поздно; это также хороший способ испытать наши навыки форматирования! В этом задании у вас будет письмо для проверки ваших навыков форматирования текста HTML, использования гиперссылок и элемента `<head>`.
 
@@ -59,4 +59,4 @@ slug: Learn_web_development/Core/Structuring_content/Marking_up_a_letter
 
 Если вам дали это задание на каком-то курсе, просто передайте свою страницу для проверки преподавателю. Если вы учитесь сами, обратитесь на [форум, в тему этого задания](https://discourse.mozilla.org/t/marking-up-a-letter-assignment/24676), или по тегу [#mdn](irc://irc.mozilla.org/mdn) в нашем IRC-канале ([Mozilla IRC](https://wiki.mozilla.org/IRC)). Сделайте это задание сами — вам некого обманывать, кроме себя самого.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Debugging_HTML", "Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "conflicting/Learn_web_development/Core/Structuring_content")}}

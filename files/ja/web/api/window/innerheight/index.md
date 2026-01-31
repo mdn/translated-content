@@ -1,8 +1,9 @@
 ---
-title: Window.innerHeight
+title: "Window: innerHeight プロパティ"
+short-title: innerHeight
 slug: Web/API/Window/innerHeight
 l10n:
-  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 {{APIRef}}
@@ -15,7 +16,7 @@ l10n:
 
 整数値で、ウィンドウのレイアウトビューポートの高さをピクセル単位で示します。このプロパティは読み取り専用で、既定値はありません。
 
-ウィンドウの幅を変更するには、 {{domxref("Window.resizeTo", "resizeTo()")}} や {{domxref("Window.resizeBy", "resizeBy()")}} などの寸法変更メソッドの一つを呼び出してください。
+ウィンドウの高さを変更するには、 {{domxref("Window.resizeTo", "resizeTo()")}} や {{domxref("Window.resizeBy", "resizeBy()")}} などの寸法変更メソッドの一つを呼び出してください。
 
 ## 使用上の注意
 
@@ -54,11 +55,8 @@ console.log(top.innerHeight);
 
 ### HTML
 
-```html
-<p>
-  ブラウザーウィンドウの大きさを変更すると
-  <code>resize</code> イベントが発生します。
-</p>
+```html-nolint
+<p>ブラウザーウィンドウの大きさを変更すると <code>resize</code> イベントが発生します。</p>
 <p>ウィンドウの高さ: <span id="height"></span></p>
 <p>ウィンドウの幅: <span id="width"></span></p>
 ```
@@ -69,12 +67,13 @@ console.log(top.innerHeight);
 const heightOutput = document.querySelector("#height");
 const widthOutput = document.querySelector("#width");
 
-function resizeListener() {
+function updateSize() {
   heightOutput.textContent = window.innerHeight;
   widthOutput.textContent = window.innerWidth;
 }
 
-window.addEventListener("resize", resizeListener);
+updateSize();
+window.addEventListener("resize", updateSize);
 ```
 
 ### 結果

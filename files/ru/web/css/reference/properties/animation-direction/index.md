@@ -50,7 +50,7 @@ animation-direction: unset;
 
 ## Примеры
 
-Смотрите примеры [CSS а](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)нимаций.
+Смотрите примеры [CSS а](/ru/docs/Web/CSS/Guides/Animations/Using)нимаций.
 
 ## Спецификации
 
@@ -62,5 +62,5 @@ animation-direction: unset;
 
 ## Смотрите также
 
-- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Использование CSS-анимации](/ru/docs/Web/CSS/Guides/Animations/Using)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

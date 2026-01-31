@@ -2,16 +2,15 @@
 title: CSS 入れ子の使用
 short-title: 入れ子の使用
 slug: Web/CSS/Guides/Nesting/Using
-original_slug: Web/CSS/CSS_nesting/Using_CSS_nesting
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-[CSS 入れ子](/ja/docs/Web/CSS/Guides/Nesting) モジュールにより、スタイルシートをより読みやすく、よりモジュール化しやすく、より保守しやすく書くことができます。常にセレクターを繰り返すわけではないので、ファイルサイズも縮小することができます。
+[CSS 入れ子](/ja/docs/Web/CSS/Guides/Nesting)モジュールにより、スタイルシートをより読みやすく、よりモジュール化しやすく、より保守しやすく書くことができます。常にセレクターを繰り返すわけではないので、ファイルサイズも縮小することができます。
 
 CSS 入れ子は、 CSS プリプロセッサーで事前にコンパイルされるのではなく、ブラウザーで解釈できるという点で、 [Sass](https://sass-lang.com/) のような CSS プリプロセッサーとは異なります。また、 CSS 入れ子において、 [`&` 入れ子セレクターの詳細度](/ja/docs/Web/CSS/Guides/Nesting/Nesting_and_specificity)は {{cssxref(':is',':is()')}} 関数に似ており、関連するセレクターリストの中で最も高い詳細度を使用して計算されます。
 
-このガイドでは、CSSで入れ子を配置するさまざまな方法を示します。
+このガイドでは、CSS で入れ子を配置するさまざまな方法を示します。
 
 ## 子セレクター
 
@@ -156,9 +155,9 @@ label {
 ##### HTML
 
 ```html
-<h2>Heading</h2>
-<p>This is the first paragraph.</p>
-<p>This is the second paragraph.</p>
+<h2>見出し</h2>
+<p>これは最初の段落です。</p>
+<p>これは 2 番目の段落です。</p>
 ```
 
 ##### CSS
@@ -441,7 +440,7 @@ CSSOM は、次のように CSS を解釈します。
 > [!WARNING]
 > これは CSS の入れ子ではできません。[結合子](/ja/docs/Learn_web_development/Core/Styling_basics/Combinators)を用いない場合、入れ子のセレクターは[要素型セレクター](/ja/docs/Web/CSS/Reference/Selectors/Type_selectors)として扱われます。連結を許可すると、これが壊れてしまいます。
 
-[複合セレクター](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#compound_selector)では、要素型セレクターを最初に入力しなければなりません。 `&Element` （[要素型セレクター](/ja/docs/Web/CSS/Reference/Selectors/Type_selectors)）を書くと、 CSS セレクターとセレクターブロック全体が無効になります。要素型セレクターを最初に入力しなければならないので、複合セレクターは `Element&` と書かなければなりません。
+[複合セレクター](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#複合セレクター)では、要素型セレクターを最初に入力しなければなりません。 `&Element` （[要素型セレクター](/ja/docs/Web/CSS/Reference/Selectors/Type_selectors)）を書くと、 CSS セレクターとセレクターブロック全体が無効になります。要素型セレクターを最初に入力しなければならないので、複合セレクターは `Element&` と書かなければなりません。
 
 ```css example-good
 .my-class {

@@ -15,13 +15,13 @@ slug: Web/HTTP/Reference/Methods/TRACE
     </tr>
     <tr>
       <th scope="row">Успешный ответ имеет тело</th>
-      <td>Нет</td>
+      <td>Да</td>
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Safe", "Безопасный")}}
+        {{Glossary("Safe/HTTP", "Безопасный")}}
       </th>
-      <td>Нет</td>
+      <td>Да</td>
     </tr>
     <tr>
       <th scope="row">

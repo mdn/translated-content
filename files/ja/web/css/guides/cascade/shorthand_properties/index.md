@@ -1,27 +1,29 @@
 ---
 title: 一括指定プロパティ
 slug: Web/CSS/Guides/Cascade/Shorthand_properties
-original_slug: Web/CSS/CSS_cascade/Shorthand_properties
 l10n:
-  sourceCommit: 95edea913e7f0726243aff3f47b85cfd6f02d995
+  sourceCommit: 41d437c9dfc5417430d9632ce7196f5817048cbc
 ---
 
 **一括指定プロパティ** (shorthand property) は、他のいくつかの CSS プロパティを一度に設定できる CSS プロパティです。一括指定プロパティを用いると、もっと簡単に (そして普通はもっと読みやすく) スタイルシートが書け、時間や労力を節約することができます。
 
 CSS 仕様書では、同じ主題に作用する共通のプロパティの定義をグループ化するために、一括指定プロパティを定義しています。例えば、 {{cssxref("background")}} プロパティは {{cssxref("background-color")}}、 {{cssxref("background-image")}}、 {{cssxref("background-repeat")}}、{{cssxref("background-position")}} の値を定義することができる一括指定プロパティです。同様に、フォントに関連したプロパティは一括指定の {{cssxref("font")}} を使用して定義することができ、ボックスの周囲のマージンは一括指定の {{cssxref("margin")}} を使用して定義することができます。
 
-## 注意するべき場合
+## 注意すべき場合
 
-一括指定プロパティを使用する際には、いくつかの留意すべきエッジケースがあります。
+一括指定プロパティを使用する際には、いくつか例外ケースに注意する必要があります。
 
 ### プロパティの省略
 
-指定されなかった値は初期値に設定されます。つまり、以前設定した値を**上書き**することになります。例を見てください。
+指定されていない値は、一括指定によって定義されたデフォルト値に設定されます。この値はプロパティの初期値とは異なる場合があります。
+
+つまり、以前設定した値を**上書き**することになります。
+例を見てください。
 
 ```css
 p {
   background-color: red;
-  background: url(images/bg.gif) no-repeat left top;
+  background: url("images/bg.gif") no-repeat left top;
 }
 ```
 
@@ -42,34 +44,34 @@ p {
 
 ボックスの境界に関するプロパティを扱う一括指定 ({{cssxref("border-style")}}, {{cssxref("margin")}}, {{cssxref("padding")}}) は、それぞれの辺を表すために、一貫して 1 ～ 4 つの値の構文を使用します。
 
-- **値 1 つの構文:** `border-width: 1em` — 1 つの値ですべての辺を表します。 ![Box edges with one-value syntax](border1.png)
+- **値 1 つの構文:** `border-width: 1em` — 1 つの値ですべての辺を表します。 ![値 1 つの構文におけるボックスの辺](border1.png)
 
-- **値 2 つの構文:** `border-width: 1em 2em` — 最初の値は垂直、すなわち上下の辺を、次の値は水平、すなわち左右の辺を表します。 ![Box edges with two-value syntax](border2.png)
+- **値 2 つの構文:** `border-width: 1em 2em` — 最初の値は垂直、すなわち上下の辺を、次の値は水平、すなわち左右の辺を表します。 ![値 2 つの構文におけるボックスの辺](border2.png)
 
-- **値 3 つの構文:** `border-width: 1em 2em 3em` — 最初の値は上辺、 2 番目の値は水平、すなわち左右の辺、 3 番目の値は下辺を表します。 ![Box edges with three-value syntax](border3.png)
+- **値 3 つの構文:** `border-width: 1em 2em 3em` — 最初の値は上辺、 2 番目の値は水平、すなわち左右の辺、 3 番目の値は下辺を表します。 ![値 3 つの構文におけるボックスの辺](border3.png)
 
-- **値 4 つの構文:** `border-width: 1em 2em 3em 4em` — 4 つの値がそれぞれ上、右、下、左の辺を表し、これは上を起点に時計回りの順です。 ![Box edges with four-value syntax](border4.png) Top-Right-Bottom-Left の頭文字は、 _trouble_ の子音 TRBL の順と一致します。また、時計の上で針が回転する順番として覚えることもできます。 `1em` は 12 時の位置で始まり、 3 時の位置で `2em`、それから 6 時の位置で `3em`、そして 9 時の位置で `4em` です。
+- **値 4 つの構文:** `border-width: 1em 2em 3em 4em` — 4 つの値がそれぞれ上、右、下、左の辺を表し、これは上を起点に時計回りの順です。 ![値 4 つの構文におけるボックスの辺](border4.png) Top-Right-Bottom-Left の頭文字は、 _trouble_ の子音 TRBL の順と一致します。また、時計の上で針が回転する順番として覚えることもできます。 `1em` は 12 時の位置で始まり、 3 時の位置で `2em`、それから 6 時の位置で `3em`、そして 9 時の位置で `4em` です。
 
 #### ボックスの角
 
 同様に、ボックスの角に関する一括指定プロパティ ({{cssxref("border-radius")}} など) は、それぞれの角を表すために一貫して 1 ～ 4 つの値を使用します。
 
-- **値 1 つの構文:** `border-radius: 1em` — 1 つの値がすべての角を表現します。 ![Box corners with one-value syntax](corner1.png)
+- **値 1 つの構文:** `border-radius: 1em` — 1 つの値がすべての角を表現します。 ![値 1 つの構文におけるボックスの角](corner1.png)
 
-- **値 2 つの構文:** `border-radius: 1em 2em` — 最初の値は左上と右下の角、 2 番目の値は右上と左下の角を表します。 ![Box corners with two-value syntax](corner2.png)
+- **値 2 つの構文:** `border-radius: 1em 2em` — 最初の値は左上と右下の角、 2 番目の値は右上と左下の角を表します。 ![値 2 つの構文におけるボックスの角](corner2.png)
 
-- **値 3 つの構文:** `border-radius: 1em 2em 3em` — 最初の値は左上、 2 番目の値は右上と左下、 3 番目の値は右下の角をそれぞれ表します。 ![Box corners with three-value syntax](corner3.png)
+- **値 3 つの構文:** `border-radius: 1em 2em 3em` — 最初の値は左上、 2 番目の値は右上と左下、 3 番目の値は右下の角をそれぞれ表します。 ![値 3 つの構文におけるボックスの角](corner3.png)
 
 - **値 4 つの構文:**
-  `border-radius: 1em 2em 3em 4em` — 4 つの値がそれぞれ左上、右上、右下、左下を表し、これは左上を起点にした時計回りの順です。 ![Box corners with four-value syntax](corner4.png)
+  `border-radius: 1em 2em 3em 4em` — 4 つの値がそれぞれ左上、右上、右下、左下を表し、これは左上を起点にした時計回りの順です。 ![値 4 つの構文におけるボックスの角](corner4.png)
 
 ## background プロパティ
 
 以下のようなプロパティを持つ背景を考えてみましょう。
 
 ```css
-background-color: #000;
-background-image: url(images/bg.gif);
+background-color: black;
+background-image: url("images/bg.gif");
 background-repeat: no-repeat;
 background-position: left top;
 ```
@@ -77,7 +79,7 @@ background-position: left top;
 この 4 つの宣言は、たった 1 つに短縮することができます。
 
 ```css
-background: #000 url(images/bg.gif) no-repeat left top;
+background: black url("images/bg.gif") no-repeat left top;
 ```
 
 （一括指定の形式は、実際は上記の個別指定に加えて、 `background-attachment: scroll` や、 CSS3 ではいくつかの追加プロパティと等価になります。）
@@ -93,14 +95,14 @@ font-style: italic;
 font-weight: bold;
 font-size: 0.8em;
 line-height: 1.2;
-font-family: Arial, sans-serif;
+font-family: "Arial", sans-serif;
 ```
 
 この 5 つの文は、以下のように短くまとめることができます。
 
 ```css
 font:
-  italic bold 0.8em/1.2 Arial,
+  italic bold 0.8em/1.2 "Arial",
   sans-serif;
 ```
 
@@ -113,13 +115,13 @@ font:
 ```css
 border-width: 1px;
 border-style: solid;
-border-color: #000;
+border-color: black;
 ```
 
 これは、以下のように簡略化できます。
 
 ```css
-border: 1px solid #000;
+border: 1px solid black;
 ```
 
 ## margin プロパティと padding プロパティ
@@ -235,6 +237,7 @@ CSS の継承がどのように動作するかについての詳細について�
 - {{cssxref("scroll-padding-block")}}
 - {{cssxref("scroll-padding-inline")}}
 - {{cssxref("scroll-timeline")}}
+- {{cssxref("text-box")}}
 - {{cssxref("text-decoration")}}
 - {{cssxref("text-emphasis")}}
 - {{cssxref("text-wrap")}}
@@ -246,13 +249,13 @@ CSS の継承がどのように動作するかについての詳細について�
 
 ## 関連情報
 
-- [CSS の構文](/ja/docs/Web/CSS/Guides/Syntax/Introduction)
+- [CSS カスケードと継承](/ja/docs/Web/CSS/Guides/Cascade)モジュール
+- [CSS 構文入門: 宣言、ルールセット、文](/ja/docs/Web/CSS/Guides/Syntax/Introduction)
 - [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)
 - [詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)
 - [継承](/ja/docs/Web/CSS/Guides/Cascade/Inheritance)
-- [ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model/Introduction)
+- [CSS カスケード入門](/ja/docs/Web/CSS/Guides/Cascade/Introduction)
 - [学習: 競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [学習: カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
-- [CSS カスケードと継承](/ja/docs/Web/CSS/Guides/Cascade)モジュール
-- [初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値), [計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値), [使用値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#使用値), [実効値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#実効値)
+- 値: [初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値), [計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値), [使用値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#使用値), [実効値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#実効値)
 - [値定義構文](/ja/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)

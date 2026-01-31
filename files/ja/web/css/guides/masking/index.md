@@ -1,14 +1,14 @@
 ---
 title: CSS マスク
+short-title: マスク
 slug: Web/CSS/Guides/Masking
-original_slug: Web/CSS/CSS_masking
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **CSS マスク**モジュールは、視覚的要素の一部または全体を非表示にするために使用される 2 つの異なるグラフィック操作、マスクとクリップを定義します。
 
-**クリップ**では、閉じたベクトルのパス、シェイプ、多角形を**クリップパス**として定義します。クリップパス領域内のものはすべて表示されたままですが、領域外のものはすべて非表示、つまり「クリップアウト」されます。 {{cssxref("clip-path")}} プロパティは、クリップパスとして使用する {{cssxref("&lt;basic-shape&gt;")}} を指定するか、SVG {{SVGElement("clipPath")}} 要素を参照します。
+**クリップ**では、閉じたベクトルのパス、シェイプ、多角形を**クリップパス**として定義します。クリップパス領域内のものはすべて表示されたままですが、領域外のものはすべて非表示、つまり「クリップアウト」されます。 {{cssxref("clip-path")}} プロパティは、クリップパスとして使用する {{cssxref("basic-shape")}} を指定するか、SVG {{SVGElement("clipPath")}} 要素を参照します。
 
 CSS **マスク**プロパティは、要素またはその境界線にマスクを適用するために使用されます。その後、グラフィックオブジェクトが背景または境界線に描画され、マスクの不透明度または輝度に応じて、要素またはその境界線の一部が完全にまたは部分的にマスクされます。
 
@@ -36,12 +36,12 @@ CSS でのクリップとマスクは、SVG と同じ方法で動作します。
 - {{cssxref("mask-size")}}
 - {{cssxref("mask-type")}}
 - {{cssxref("mask-border")}} 一括指定
-- {{cssxref("mask-border-mode")}}
 - {{cssxref("mask-border-outset")}}
 - {{cssxref("mask-border-repeat")}}
 - {{cssxref("mask-border-slice")}}
 - {{cssxref("mask-border-source")}}
 - {{cssxref("mask-border-width")}}
+- {{cssxref("mask-border-mode")}}
 
 ### データ型
 
@@ -68,10 +68,13 @@ CSS でのクリップとマスクは、SVG と同じ方法で動作します。
 - [複数のマスクの宣言](/ja/docs/Web/CSS/Guides/Masking/Multiple_masks)
   - : マスクレイヤーの概要と、複数のマスク画像を宣言する方法について説明します。
 
+- [CSS マスクプロパティ](/ja/docs/Web/CSS/Guides/Masking/Mask_properties)
+  - : CSS マスクと `mask` 一括指定の成分プロパティの解説と例による探求です。
+
 ## 関連概念
 
 - [`<coord-box>`](/ja/docs/Web/CSS/Reference/Values/box-edge#values)
-- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("image")}}
 - {{cssxref("&lt;position&gt;")}}
 - {{cssxref("&lt;url&gt;")}}
 
@@ -88,8 +91,8 @@ CSS でのクリップとマスクは、SVG と同じ方法で動作します。
   - {{cssxref("border-image-width")}}
   - [`<repeat-style>`](/ja/docs/Web/CSS/Reference/Properties/background-repeat#values) データ型
 
-- [CSS shapes](/ja/docs/Web/CSS/Guides/Shapes)モジュール
-  - {{cssxref("&lt;basic-shape&gt;")}} データ型
+- [CSS シェイプ](/ja/docs/Web/CSS/Guides/Shapes)モジュール
+  - {{cssxref("basic-shape")}} データ型
   - {{cssxref("basic-shape/polygon","polygon()")}} 関数
   - [`<shape-box>`](/ja/docs/Web/CSS/Reference/Properties/shape-outside#shape-box) データ型
 
@@ -104,4 +107,4 @@ CSS でのクリップとマスクは、SVG と同じ方法で動作します。
 - [SVG チュートリアル: クリップとマスク](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Clipping_and_masking)
 - {{domxref("CanvasRenderingContext2D.clip()")}}
 - {{domxref("WebGLRenderingContext.colorMask()")}}
-- [PWA アイコンのマスク](/ja/docs/Web/Progressive_web_apps/How_to/Define_app_icons#support_masking)
+- [PWA アイコンのマスク](/ja/docs/Web/Progressive_web_apps/How_to/Define_app_icons#マスクの対応)

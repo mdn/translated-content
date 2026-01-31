@@ -1,16 +1,15 @@
 ---
 title: ::view-transition-new()
 slug: Web/CSS/Reference/Selectors/::view-transition-new
-original_slug: Web/CSS/::view-transition-new
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::view-transition-new()`** représente l'état de vue «&nbsp;<i lang="en">new</i>&nbsp;» d'une transition de vue — une représentation instantanée en direct de l'état après la transition.
 
-Lors d'une transition de vue, `::view-transition-new()` est inclus dans l'arbre des pseudo-éléments associés comme expliqué dans [L'arbre des pseudo-éléments de transition de vue](/fr/docs/Web/API/View_Transition_API/Using#larbre_des_pseudo-éléments_de_transition_de_vue). Il est seulement un enfant d'un {{cssxref("::view-transition-image-pair()")}}, et n'a jamais d'enfants.
+Lors d'une transition de vue, `::view-transition-new()` est inclus dans l'arbre des pseudo-éléments associés comme expliqué dans [L'arbre des pseudo-éléments de transition de vue](/fr/docs/Web/API/View_Transition_API/Using#larbre_des_pseudo-éléments_de_transition_de_vue). Il est seulement un enfant d'un {{CSSxRef("::view-transition-image-pair()")}}, et n'a jamais d'enfants.
 
-C'est un élément remplacé et peut donc être manipulé avec des propriétés telles que {{cssxref("object-fit")}} et {{cssxref("object-position")}}. Il a des dimensions naturelles égales à la taille du contenu.
+C'est un élément remplacé et peut donc être manipulé avec des propriétés telles que {{CSSxRef("object-fit")}} et {{CSSxRef("object-position")}}. Il a des dimensions naturelles égales à la taille du contenu.
 
 Le style par défaut suivant est inclus dans la feuille de style de l'agent utilisateur&nbsp;:
 
@@ -62,9 +61,9 @@ Le style par défaut suivant est inclus dans la feuille de style de l'agent util
 - `root`
   - : Fait correspondre le pseudo-élément au groupe de transition de vue par défaut `root` créé par l'agent utilisateur pour contenir la transition de vue pour l'ensemble de la page. Ce groupe inclut tout élément non affecté à son propre groupe de capture d'écran de transition de vue spécifique via la propriété `view-transition-name`.
 - `<pt-name-selector>`
-  - : Le {{cssxref("custom-ident")}} défini comme valeur de la propriété {{cssxref("view-transition-name")}}.
+  - : Le {{CSSxRef("custom-ident")}} défini comme valeur de la propriété {{CSSxRef("view-transition-name")}}.
 - `<pt-class-selector>`
-  - : Le {{cssxref("custom-ident")}} défini comme valeur de la propriété {{cssxref("view-transition-class")}} précédé d'un point (`.`).
+  - : Le {{CSSxRef("custom-ident")}} défini comme valeur de la propriété {{CSSxRef("view-transition-class")}} précédé d'un point (`.`).
 
 ## Exemples
 

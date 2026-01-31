@@ -52,7 +52,7 @@ Origin: <scheme>://<hostname>:<port>
 大まかに言うと、ユーザーエージェントが {{httpheader("Origin")}} リクエストヘッダーを追加するのは以下のものです。
 
 - {{Glossary("CORS", "オリジン間")}}リクエスト
-- [同一オリジン](/ja/docs/Web/Security/Same-origin_policy)リクエスト、ただし {{HTTPMethod("GET")}} または {{HTTPMethod("HEAD")}} リクエストを除く（すなわち、同一オリジンの {{HTTPMethod("POST")}}, {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("PUT")}}, {{HTTPMethod("PATCH")}}, {{HTTPMethod("DELETE")}} の各リクエストに追加される。）
+- [同一オリジン](/ja/docs/Web/Security/Defenses/Same-origin_policy)リクエスト、ただし {{HTTPMethod("GET")}} または {{HTTPMethod("HEAD")}} リクエストを除く（すなわち、同一オリジンの {{HTTPMethod("POST")}}, {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("PUT")}}, {{HTTPMethod("PATCH")}}, {{HTTPMethod("DELETE")}} の各リクエストに追加される。）
 
 上記のルールにはいくつかの例外があります。例えば、オリジンを跨ぐ {{HTTPMethod("GET")}} または {{HTTPMethod("HEAD")}} リクエストが [CORS モード外](/ja/docs/Web/API/Request/mode#value)で行われた場合、 `Origin` ヘッダーは追加されません。
 
@@ -91,5 +91,5 @@ Origin: https://developer.mozilla.org:80
 
 - {{HTTPHeader("Host")}}
 - {{HTTPHeader("Referer")}}
-- [同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)
+- [同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)
 - [When do browsers send the Origin header? When do browsers set the origin to null?](https://stackoverflow.com/questions/42239643/when-do-browsers-send-the-origin-header-when-do-browsers-set-the-origin-to-null/42242802) (Stack Overflow)

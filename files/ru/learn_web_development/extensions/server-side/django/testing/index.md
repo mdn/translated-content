@@ -3,7 +3,7 @@ title: "Руководство часть 10: Тестирование прил�
 slug: Learn_web_development/Extensions/Server-side/Django/Testing
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Сайты, в процессе развития и разработки, становится все сложнее тестировать вручную. Кроме такого тестирования, сложными становятся внутренние взаимодействия между компонентами - внесение небольшого изменения в одной части приложения влияет на другие. При этом, чтобы все продолжало работать нужно вносить все больше и больше изменений и, желательно так, чтобы не добавлялись новые ошибки. Одним из способов который позволяет смягчить последствия добавления изменений, является внедрение в разработку автоматического тестирования - оно должно просто и надёжно запускаться каждый раз, когда вы вносите изменения в свой код. Данное руководство рассматривает вопросы автоматизации _юнит-тестирования_ вашего сайта при помощи фреймворка Django для тестов.
 
@@ -892,4 +892,4 @@ class AuthorCreate(PermissionRequiredMixin, CreateView):
 - [Мастерская: Разработка через тесты с Django (TDD)](http://test-driven-django-development.readthedocs.io/en/latest/index.html) (San Diego Python, 2014)
 - [Тестирование в Django (Часть 1) - Лучшие практики и Примеры](https://realpython.com/blog/python/testing-in-django-part-1-best-practices-and-examples/) (RealPython, 2013)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django")}}

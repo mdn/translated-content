@@ -1,9 +1,8 @@
 ---
 title: "<link> : l'élément de lien vers des ressources externes"
 slug: Web/HTML/Reference/Elements/link
-original_slug: Web/HTML/Element/link
 l10n:
-  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<link>`** définit la relation entre le document courant et une ressource externe. Cet élément peut être utilisé pour définir un lien vers {{Glossary("CSS", "une feuille de style")}}, vers les icônes utilisées en barre de titre ou comme icône d'application sur les appareils mobiles.
@@ -19,7 +18,7 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<link>`** définit la relation entre le
 </p>
 ```
 
-Pour lier une feuille de style externe, on inclut un élément `<link>` de la forme suivante à l'intérieur de l'élément {{htmlelement("head")}}&nbsp;:
+Pour lier une feuille de style externe, on inclut un élément `<link>` de la forme suivante à l'intérieur de l'élément {{HTMLElement("head")}}&nbsp;:
 
 ```html
 <link href="main.css" rel="stylesheet" />
@@ -33,7 +32,7 @@ Certains types sont assez fréquents. Ainsi, pour l'icône présentant le site d
 <link rel="icon" href="favicon.ico" />
 ```
 
-Il existe différents types de relations pour préciser les icônes et qui permettent notamment de cibler certaines plateformes mobiles :
+Il existe différents types de relations pour préciser les icônes et qui permettent notamment de cibler certaines plateformes mobiles&nbsp;:
 
 ```html
 <link
@@ -73,7 +72,7 @@ Quelques notes d'utilisation&nbsp;:
 - Lorsque vous utilisez `<link>` pour définir une favicon sur un site qui utilise une politique de sécurité de contenu (CSP), cette politique s'applique aussi à la favicon.
   Si la favicon ne se charge pas, vérifiez que l'en-tête {{HTTPHeader("Content-Security-Policy")}} et sa [directive `img-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/img-src) n'empêchent pas son accès.
 - Les spécifications HTML et XHTML définissent des gestionnaires d'évènements pour l'élément `<link>`, mais leur usage n'est pas clairement documenté.
-- En XHTML 1.0, les {{glossary("void element", "éléments vides")}} comme `<link>` nécessitent une barre oblique finale&nbsp;: `<link />`.
+- En XHTML 1.0, les {{Glossary("void element", "éléments vides")}} comme `<link>` nécessitent une barre oblique finale&nbsp;: `<link />`.
 - WebTV prend en charge la valeur `next` pour `rel` afin de précharger la page suivante d'une série de documents.
 
 ## Attributs
@@ -197,11 +196,10 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     Si `disabled` est présent dans le HTML lors du chargement, la feuille de style ne sera pas chargée au chargement de la page.
     Elle ne sera chargée qu'à la demande, si (et lorsque) l'attribut `disabled` est retiré ou passé à `false` via un script.
 
-    Modifier la propriété `disabled` dans le DOM retire la feuille de style de la liste {{domxref("Document.styleSheets")}} du document.
+    Modifier la propriété `disabled` dans le DOM retire la feuille de style de la liste {{DOMxRef("Document.styleSheets")}} du document.
 
-- `fetchpriority`
-  - : Fournit une indication sur la priorité relative à utiliser lors de la récupération d'une ressource d'un type particulier.
-    Valeurs autorisées&nbsp;:
+- [`fetchpriority`](/fr/docs/Web/HTML/Reference/Attributes/fetchpriority)
+  - : Fournit une indication sur la priorité relative à utiliser lors de la récupération d'une ressource d'un type particulier. Valeurs autorisées&nbsp;:
     - `high`
       - : Récupère la ressource avec une priorité élevée par rapport aux autres ressources du même type.
     - `low`
@@ -211,12 +209,10 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
         Il s'agit de la valeur par défaut.
         Elle est utilisée si aucune valeur ou une valeur invalide est définie.
 
-    Voir {{domxref("HTMLLinkElement.fetchPriority")}} pour plus d'informations.
-
 - `href`
   - : Cet attribut définit l'URL de la ressource liée. L'URL utilisée peut être absolue ou relative.
 - `hreflang`
-  - : Cet attribut, purement indicatif, définit la langue de la ressource liée. La valeur doit être une {{glossary("BCP 47 language tag", "balise de langue BCP47")}} valide. Cet attribut doit uniquement être utilisé si l'attribut [`href`](/fr/docs/Web/HTML/Reference/Elements/a#href) est présent.
+  - : Cet attribut, purement indicatif, définit la langue de la ressource liée. La valeur doit être une {{Glossary("BCP 47 language tag", "balise de langue BCP47")}} valide. Cet attribut doit uniquement être utilisé si l'attribut [`href`](/fr/docs/Web/HTML/Reference/Elements/a#href) est présent.
 - `imagesizes`
   - : Pour `rel="preload"` et `as="image"` uniquement, l'attribut `imagesizes` utilise une syntaxe et une sémantique similaires à l'attribut [`sizes`](/fr/docs/Web/HTML/Reference/Elements/img#sizes), ce qui permet de précharger la ressource appropriée utilisée par un élément `img` avec des valeurs correspondantes pour ses attributs `srcset` et `sizes`.
 - `imagesrcset`
@@ -225,7 +221,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
   - : Contient des métadonnées en ligne&nbsp;: une empreinte cryptographique (hachage base64) de la ressource (fichier) que vous demandez au navigateur de récupérer.
     Le navigateur peut utiliser cette empreinte pour vérifier que la ressource récupérée n'a pas été modifiée de façon inattendue.
     Cet attribut ne doit être utilisé que lorsque l'attribut `rel` vaut `stylesheet`, `preload` ou `modulepreload`.
-    Voir [Subresource Integrity](/fr/docs/Web/Security/Subresource_Integrity).
+    Voir [Subresource Integrity](/fr/docs/Web/Security/Defenses/Subresource_Integrity).
 - `media`
   - : Cet attribut indique le média auquel s'applique la ressource liée. Sa valeur doit être un type de média ou une [requête média](/fr/docs/Web/CSS/Guides/Media_queries).
     Cet attribut est principalement utilisé pour lier des feuilles de style externes&nbsp;: il permet à l'agent utilisateur de sélectionner la plus adaptée à l'appareil utilisé.
@@ -237,14 +233,14 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
       Il s'agit du comportement par défaut de l'agent utilisateur si aucune autre règle n'est précisée.
     - `origin` signifie que le référent sera l'origine de la page (schéma, hôte et port).
     - `origin-when-cross-origin` signifie que lors d'une navigation vers d'autres origines, le référent se limite au schéma, à l'hôte et au port, tandis que sur la même origine, le chemin est inclus.
-    - `unsafe-url` signifie que le référent inclut l'origine et le chemin (mais ni le fragment, ni le mot de passe ou le nom d'utilisateur).
+    - `unsafe-url` signifie que le référent inclut l'origine et le chemin (mais ni le fragment, ni le mot de passe ou le nom d'utilisateur·ice).
       Ce cas n'est pas sécurisé car il peut laisser fuiter des origines et des chemins de ressources TLS vers des origines non sécurisées.
 
 - `rel`
   - : Cet attribut indique la relation qui existe entre le document lié et le document courant. L'attribut doit être une liste, séparée par des espaces, de [types de lien](/fr/docs/Web/HTML/Reference/Attributes/rel).
 - `sizes`
-  - : Cet attribut définit les dimensions des icônes pour le média contenu dans la ressource. Cet attribut doit uniquement être présent lorsque [`rel`](#rel) contient le type de lien `icon`. Il peut prendre l'une des valeurs suivantes :
-    - `any` : l'icône peut être redimensionnée à volonté car elle utilise un format vectoriel (par exemple `image/svg+xml`).
+  - : Cet attribut définit les dimensions des icônes pour le média contenu dans la ressource. Cet attribut doit uniquement être présent lorsque [`rel`](#rel) contient le type de lien `icon`. Il peut prendre l'une des valeurs suivantes&nbsp;:
+    - `any`&nbsp;: l'icône peut être redimensionnée à volonté car elle utilise un format vectoriel (par exemple `image/svg+xml`).
     - une liste de tailles, séparées par des espaces, dont chacune est de la forme `<largeur en pixels>x<hauteur en pixels>` ou `<largeur en pixels>X<hauteur en pixels>`. Pour chacune de ces dimensions, il doit exister une image correspondante dans la ressource.
 
     > [!NOTE]
@@ -263,16 +259,16 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 ### Attributs non-standard
 
-- `target` {{Non_standard_Inline}} {{Deprecated_Inline}}
+- `target` {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Cet attribut définit le nom de la _frame_ ou de la fenêtre qui contient la ressource liée ou qui affichera la ressource liée.
 
 ### Attributs obsolètes
 
 - `charset` {{Deprecated_Inline}}
-  - : Cet attribut définit l'encodage de la ressource lié. La valeur de cet attribut est une liste de jeux de caractères (tels que définis dans la RFC {{rfc(2045)}}) séparés par des espaces ou des virgules. La valeur par défaut de cet attribut est `iso-8859-1`.
+  - : Cet attribut définit l'encodage de la ressource lié. La valeur de cet attribut est une liste de jeux de caractères (tels que définis dans le {{RFC(2045)}}) séparés par des espaces ou des virgules. La valeur par défaut de cet attribut est `iso-8859-1`.
 
     > [!NOTE]
-    > Pour obtenir l'effet escompté, on utilisera l'en-tête HTTP {{httpheader("Content-Type")}} pour la ressource liée.
+    > Pour obtenir l'effet escompté, on utilisera l'en-tête HTTP {{HTTPHeader("Content-Type")}} pour la ressource liée.
 
 - `rev` {{Deprecated_Inline}}
   - : La valeur de cet attribut décrit le lien entre le document courant et la ressource liée (définie par l'attribut [`href`](#href)). Cet attribut définit donc la relation réciproque à la relation décrite par l'attribut `rel`. [Les types de lien](/fr/docs/Web/HTML/Reference/Attributes/rel) utilisés pour cet attribut sont semblables aux valeurs autorisés par [`rel`](#rel).
@@ -295,7 +291,7 @@ Pour associer une feuille de style à la page courante, on utilisera la syntaxe 
 
 Pour un document, on peut indiquer [plusieurs feuilles de style alternatives](/fr/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet).
 
-L'utilisateur pourra choisir parmi ces feuilles de style via le menu « Affichage > Style de la page ». Ainsi, un utilisateur pourra voir différentes versions d'une même page.
+L'utilisateur·ice pourra choisir parmi ces feuilles de style via le menu «&nbsp;Affichage > Style de la page&nbsp;». Ainsi, un·e utilisateur·ice pourra voir différentes versions d'une même page.
 
 ```html
 <link href="default.css" rel="stylesheet" title="Mise en forme par défaut" />
@@ -398,12 +394,12 @@ le rendu de la page sera bloqué jusqu'à ce que la ressource et ses sous-ressou
       </th>
       <td>
         Contenu de métadonnées. Si <a href="/fr/docs/Web/HTML/Reference/Global_attributes#itemprop"><code>itemprop</code></a> est
-        présent :
-        <a href="/fr/docs/Web/HTML/Guides/Content_categories#Contenu_de_flux"
+        présent&nbsp;:
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >contenu de flux</a
         >
         et
-        <a href="/fr/docs/Web/HTML/Guides/Content_categories#Contenu_phrasé"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
         >.
       </td>
@@ -425,7 +421,7 @@ le rendu de la page sera bloqué jusqu'à ce que la ressource et ses sous-ressou
         Tout élément qui accepte des éléments de métadonnées. Si l'attribut
         <a href="/fr/docs/Web/HTML/Reference/Global_attributes#itemprop"><code>itemprop</code></a> est présent, tout élément qui
         accepte du
-        <a href="/fr/docs/Web/HTML/Guides/Content_categories#Contenu_phrasé"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
         >.
       </td>
@@ -436,11 +432,11 @@ le rendu de la page sera bloqué jusqu'à ce que la ressource et ses sous-ressou
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun <code>role</code> autorisé.</td>
+      <td>Aucun <code>role</code> autorisé</td>
     </tr>
     <tr>
       <th>Interface DOM</th>
-      <td>{{domxref("HTMLLinkElement")}}</td>
+      <td>{{DOMxRef("HTMLLinkElement")}}</td>
     </tr>
   </tbody>
 </table>

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
 ---
 
-在 {{Glossary("CSS")}}（层叠样式表）中，**_媒体_**指的是文档要由{{Glossary("rendering engine", "渲染引擎")}}绘制到的目标。
+在 {{Glossary("CSS")}}（层叠样式表）中，***媒体***指的是文档要由{{Glossary("rendering engine", "渲染引擎")}}绘制到的目标。
 
 通常情况下，媒体是屏幕，但也可能是打印机、盲文显示器或其他类型的设备。
 

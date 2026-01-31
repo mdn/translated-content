@@ -1,12 +1,11 @@
 ---
 title: linear-gradient()
 slug: Web/CSS/Reference/Values/gradient/linear-gradient
-original_slug: Web/CSS/gradient/linear-gradient
 l10n:
-  sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
-**`linear-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、二つ以上の色の連続的な直線に沿った変化から構成される画像を生成します。結果は {{CSSxRef("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{CSSxRef("&lt;image&gt;")}} の特殊型です。
+**`linear-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、2 つ以上の色の連続的な直線に沿った変化から構成される画像を生成します。結果は {{CSSxRef("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{CSSxRef("&lt;image&gt;")}} の特殊型です。
 
 {{InteractiveExample("CSS デモ: linear-gradient()")}}
 
@@ -19,14 +18,20 @@ background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
 ```
 
 ```css interactive-example-choice
-background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%);
+background: linear-gradient(
+  to left,
+  #333333,
+  #333333 50%,
+  #eeeeee 75%,
+  #333333 75%
+);
 ```
 
 ```css interactive-example-choice
 background:
-  linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
-  linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
-  linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+  linear-gradient(217deg, rgb(255 0 0 / 0.8), transparent 70.71%),
+  linear-gradient(127deg, rgb(0 255 0 / 0.8), transparent 70.71%),
+  linear-gradient(336deg, rgb(0 0 255 / 0.8), transparent 70.71%);
 ```
 
 ```html interactive-example
@@ -44,7 +49,10 @@ background:
 ## 構文
 
 ```css
-/* 45度に傾いたグラデーションで、
+/* 単一の色の赤いグラデーション */
+linear-gradient(red)
+
+/* 45 度に傾いたグラデーションで、
    青から始まり赤で終わる */
 linear-gradient(45deg, blue, red)
 
@@ -94,15 +102,15 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%)
   - : 隣り合う色経由点の間でどのようにグラデーションが進むかを定義する{{glossary("interpolation","補間")}}のヒントです。長さによって、どの位置で二つの色経由点のグラデーション色が色の移行の中間点に達するかを定義します。省略された場合、色の移行の中間点は二つの色経由点の中点になります。
 
 > [!NOTE]
-> [CSS グラデーションにおける色経由点](#gradient_with_multiple_color_stops)の描画は、 [SVG グラデーション](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Gradients)と同じルールに従います。
+> [CSS グラデーションにおける色経由点](#線形グラデーションの構成)の描画は、 [SVG グラデーション](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Gradients)と同じルールに従います。
 
 ## 解説
 
 他のグラデーションと同様、線形グラデーションは[内在的な寸法を持ちません](/ja/docs/Web/CSS/Reference/Values/image#解説)。つまり、画像本来の寸法や、推奨される縦横比を持たないということです。実際の寸法は、適用先の要素の寸法と一致します。
 
-繰り返して領域を埋め尽くす線形グラデーションを生成するには、代わりに {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} 関数を使用してください。
+繰り返して領域を埋め尽くす線形グラデーションを生成する場合は、代わりに {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} 関数を使用してください。
 
-`<gradient>` は CSS の `<image>` データ型に所属しますので、 `<image>` が使用できるところでのみ使用できます。このため、 `linear-gradient` は {{CSSxRef("background-color")}} や、その他の {{CSSxRef("&lt;color&gt;")}} を要求するプロパティでは動作しません。
+`<gradient>` は CSS の `<image>` データ型に所属しますので、 `<image>` が使用できるところでのみ使用できます。このため、 `linear-gradient` は {{CSSxRef("background-color")}} などの {{CSSxRef("&lt;color&gt;")}} を要求するプロパティでは動作しません。
 
 ### 線形グラデーションの構成
 
@@ -207,8 +215,8 @@ body {
 ### 色相の補間
 
 ```html hidden live-sample___interpolating_with_hue
-<div class="shorter">shorter hue</div>
-<div class="longer">longer hue</div>
+<div class="shorter">shorter の色相</div>
+<div class="longer">longer の色相</div>
 ```
 
 ```css hidden live-sample___interpolating_with_hue

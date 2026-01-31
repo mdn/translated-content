@@ -3,16 +3,16 @@ title: "HTMLDialogElement : méthode requestClose()"
 short-title: requestClose()
 slug: Web/API/HTMLDialogElement/requestClose
 l10n:
-  sourceCommit: 48a1966f4fb3633ab40daa544bcb267a7794afb1
+  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
 ---
 
 {{APIRef("HTML DOM")}}
 
-La méthode **`requestClose()`** de l'interface {{domxref("HTMLDialogElement")}} demande la fermeture de l'élément {{htmlelement("dialog")}}.
+La méthode **`requestClose()`** de l'interface {{DOMxRef("HTMLDialogElement")}} demande la fermeture de l'élément HTML {{HTMLElement("dialog")}}.
 Une chaîne de caractères optionnelle peut être passée en argument, ce qui met à jour la propriété `returnValue` de la boîte de dialogue.
 
-Cette méthode diffère de {{domxref("HTMLDialogElement.close()")}} car elle déclenche d'abord un événement {{domxref("HTMLDialogElement.cancel_event", "cancel")}}, puis l'événement {{domxref("HTMLDialogElement.close_event", "close")}}.
-Les auteur·ice·s peuvent appeler {{domxref("Event.preventDefault()")}} dans le gestionnaire de l'événement `cancel` pour empêcher la fermeture de la boîte de dialogue.
+Cette méthode diffère de {{DOMxRef("HTMLDialogElement.close()")}} car elle déclenche d'abord un événement {{DOMxRef("HTMLDialogElement.cancel_event", "cancel")}}, puis l'événement {{DOMxRef("HTMLDialogElement.close_event", "close")}}.
+Les auteur·ice·s peuvent appeler {{DOMxRef("Event.preventDefault()")}} dans le gestionnaire de l'événement `cancel` pour empêcher la fermeture de la boîte de dialogue.
 
 Cette méthode expose le même comportement que le mécanisme interne de surveillance de fermeture (<i lang="en">close watcher</i> en anglais) du dialogue.
 
@@ -25,18 +25,18 @@ requestClose(returnValue)
 
 ### Paramètres
 
-- `returnValue` {{optional_inline}}
-  - : Chaîne de caractères représentant la nouvelle valeur de {{domxref("HTMLDialogElement.returnValue")}} de la boîte de dialogue.
+- `returnValue` {{Optional_Inline}}
+  - : Chaîne de caractères représentant la nouvelle valeur de {{DOMxRef("HTMLDialogElement.returnValue")}} de la boîte de dialogue.
 
 ### Valeur de retour
 
-Aucune ({{jsxref("undefined")}}).
+Aucune ({{JSxRef("undefined")}}).
 
 ## Exemples
 
-### Utilisation de requestClose()
+### Utilisation de `requestClose()`
 
-L'exemple suivant montre un simple bouton qui, lorsqu'il est cliqué, ouvre un élément {{htmlelement("dialog")}} contenant un formulaire via la méthode `showModal()`. Une fois ouvert, vous pouvez cliquer sur le bouton **X** pour demander la fermeture de la boîte de dialogue (via la méthode `HTMLDialogElement.requestClose()`), ou soumettre le formulaire avec le bouton **Valider**.
+L'exemple suivant montre un simple bouton qui, lorsqu'il est cliqué, ouvre un élément {{HTMLElement("dialog")}} contenant un formulaire via la méthode `showModal()`. Une fois ouvert, vous pouvez cliquer sur le bouton **X** pour demander la fermeture de la boîte de dialogue (via la méthode `HTMLDialogElement.requestClose()`), ou soumettre le formulaire avec le bouton **Valider**.
 
 #### HTML
 
@@ -59,15 +59,17 @@ L'exemple suivant montre un simple bouton qui, lorsqu'il est cliqué, ouvre un �
       </p>
     </section>
     <menu>
-      <button type="reset">Réinitialiser</button>
-      <button type="submit">Valider</button>
+      <li>
+        <button type="reset">Réinitialiser</button>
+      </li>
+      <li>
+        <button type="submit">Valider</button>
+      </li>
     </menu>
   </form>
 </dialog>
 
-<menu>
-  <button id="updateDetails">Mettre à jour les informations</button>
-</menu>
+<button id="updateDetails">Mettre à jour les informations</button>
 ```
 
 #### JavaScript
@@ -107,7 +109,7 @@ La soumission d'un formulaire ferme la balise `<dialog>` dans laquelle il est im
 
 #### Résultat
 
-{{ EmbedLiveSample('exemples', '100%', '200px') }}
+{{EmbedLiveSample('Exemples', '100%', 200)}}
 
 ## Spécifications
 
@@ -119,5 +121,4 @@ La soumission d'un formulaire ferme la balise `<dialog>` dans laquelle il est im
 
 ## Voir aussi
 
-- Élément HTML implémentant cette interface&nbsp;:
-  - {{HTMLElement("dialog")}}
+- L'élément HTML implémentant cette interface&nbsp;: {{HTMLElement("dialog")}}

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
 ---
 
-{{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
+{{learnsidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
 
 반응형 웹 설계 는 웹 페이지가 모든 화면 크기와 해상도에서 잘 렌더링되도록 하면서도 사용성을 보장하는 웹 디자인 접근 방식입니다. 멀티 디바이스 웹을 위한 디자인 방식입니다. 이 글에서는 이를 숙달하기 위해 사용할 수 있는 몇 가지 기술을 이해하는 데 도움이 될 것입니다.
 
@@ -55,7 +55,7 @@ HTML은 기본적으로 반응형 또는 유동적 입니다. CSS 없이 HTML만
 
 ## 미디어 쿼리
 
-[미디어 쿼리 사용하기](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries)를 사용하면 일련의 테스트(예: 사용자의 화면이 특정 너비 또는 특정 해상도보다 큰지 여부)를 실행하고 CSS를 선택적으로 적용하여 사용자의 요구에 맞게 페이지의 스타일을 지정할 수 있습니다.
+[미디어 쿼리 사용하기](/ko/docs/Web/CSS/Guides/Media_queries/Using)를 사용하면 일련의 테스트(예: 사용자의 화면이 특정 너비 또는 특정 해상도보다 큰지 여부)를 실행하고 CSS를 선택적으로 적용하여 사용자의 요구에 맞게 페이지의 스타일을 지정할 수 있습니다.
 
 예를 들어, 다음 미디어 쿼리는 현재 웹 페이지가 화면 미디어로 표시되고 있고(따라서 인쇄된 문서가 아님) 뷰포트의 너비가 `80rem` 이상인지 테스트합니다. `.container` 선택기에 대한 CSS는 이 두 가지가 참인 경우에만 적용됩니다.
 
@@ -75,7 +75,7 @@ HTML은 기본적으로 반응형 또는 유동적 입니다. CSS 없이 HTML만
 
 미디어 쿼리 블록 내에 정의된 스타일에 대한 접근 방식은 브라우저 크기 범위에 따라 {{htmlelement("link")}} 스타일 시트에 미디어 쿼리를 사용하는 것부터 각 분기점과 관련된 값을 저장하기 위해 사용자 지정 속성 변수만 포함하는 것까지 다양합니다.
 
-[미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries)에 대한 MDN 문서를 더 찾아보십시요.
+[미디어 쿼리](/ko/docs/Web/CSS/Guides/Media_queries)에 대한 MDN 문서를 더 찾아보십시요.
 
 ## 반응형 레이아웃 기술
 
@@ -211,7 +211,7 @@ h1 {
 
 위와 같이 할 때의 문제점은 텍스트가 항상 뷰포트의 크기와 관련되어 있기 때문에 사용자가 'vw' 단위를 사용하여 설정한 텍스트를 확대/축소할 수 없다는 것입니다. **따라서 뷰포트 단위만 사용하여 텍스트를 설정해서는 안 됩니다**.
 
-해결책이 있는데, [`calc()`](/ko/docs/Web/CSS/calc)를 사용하는 것입니다. `em` 또는 `rem`과 같은 고정 크기를 사용하여 설정된 값에 `vw` 단위를 추가하면 텍스트를 계속 확대/축소할 수 있습니다. 기본적으로 `vw` 단위는 확대된 값 위에 추가됩니다.
+해결책이 있는데, [`calc()`](/ko/docs/Web/CSS/Reference/Values/calc)를 사용하는 것입니다. `em` 또는 `rem`과 같은 고정 크기를 사용하여 설정된 값에 `vw` 단위를 추가하면 텍스트를 계속 확대/축소할 수 있습니다. 기본적으로 `vw` 단위는 확대된 값 위에 추가됩니다.
 
 ```css
 h1 {
@@ -252,4 +252,4 @@ h1 {
 
 - [미디어 쿼리에 대한 CSS 요령 가이드](https://css-tricks.com/a-complete-guide-to-css-media-queries/)
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}

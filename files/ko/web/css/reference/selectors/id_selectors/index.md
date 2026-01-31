@@ -19,7 +19,7 @@ original_slug: Web/CSS/ID_selectors
 #id_value { style properties }
 ```
 
-위의 구문은 [특성 선택자](/ko/docs/Web/CSS/Attribute_selectors)를 사용한 다음 구문과 동일합니다.
+위의 구문은 [특성 선택자](/ko/docs/Web/CSS/Reference/Selectors/Attribute_selectors)를 사용한 다음 구문과 동일합니다.
 
 ```
 [id=id_value] { style properties }

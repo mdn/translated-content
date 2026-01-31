@@ -16,7 +16,7 @@ Ainsi, si un agent utilisateur doit demander les ressources incluses dans une pa
       <td><a href="/fr/docs/Glossary/Request_header">En-tête de requête</a></td>
     </tr>
     <tr>
-      <th scope="row"><a href="/fr/docs/Glossary/Forbidden_header_name">Nom d'en-tête interdit</a></th>
+      <th scope="row">{{Glossary("Forbidden_request_header", "En-tête de requête interdit")}}</th>
       <td>Oui</td>
     </tr>
   </tbody>
@@ -48,7 +48,7 @@ L'en-tête `Origin` est semblable à l'en-tête [`Referer`](/fr/docs/Web/HTTP/Re
 Au sens large, les agents utilisateurs envoient l'en-tête `Origin` avec les requêtes&nbsp;:
 
 - [D'origines multiples](/fr/docs/Glossary/CORS) (<i lang="en">cross origin</i> en anglais).
-- [De même origine](/fr/docs/Web/Security/Same-origin_policy), sauf pour les requêtes utilisant les méthodes [`GET`](/fr/docs/Web/HTTP/Reference/Methods/GET) ou [`HEAD`](/fr/docs/Web/HTTP/Reference/Methods/HEAD) (autrement dit, cet en-tête est utilisé pour les requêtes avec la méthode [`POST`](/fr/docs/Web/HTTP/Reference/Methods/POST), [`OPTIONS`](/fr/docs/Web/HTTP/Reference/Methods/OPTIONS), [`PUT`](/fr/docs/Web/HTTP/Reference/Methods/PUT), [`PATCH`](/fr/docs/Web/HTTP/Reference/Methods/PATCH), et [`DELETE`](/fr/docs/Web/HTTP/Reference/Methods/DELETE)).
+- [De même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy), sauf pour les requêtes utilisant les méthodes [`GET`](/fr/docs/Web/HTTP/Reference/Methods/GET) ou [`HEAD`](/fr/docs/Web/HTTP/Reference/Methods/HEAD) (autrement dit, cet en-tête est utilisé pour les requêtes avec la méthode [`POST`](/fr/docs/Web/HTTP/Reference/Methods/POST), [`OPTIONS`](/fr/docs/Web/HTTP/Reference/Methods/OPTIONS), [`PUT`](/fr/docs/Web/HTTP/Reference/Methods/PUT), [`PATCH`](/fr/docs/Web/HTTP/Reference/Methods/PATCH), et [`DELETE`](/fr/docs/Web/HTTP/Reference/Methods/DELETE)).
 
 Il existe certaines exceptions aux règles précédentes. Par exemple, lorsqu'une requête [`GET`](/fr/docs/Web/HTTP/Reference/Methods/GET) ou [`HEAD`](/fr/docs/Web/HTTP/Reference/Methods/HEAD) est effectuée en mode [`no-cors`](/fr/docs/Web/API/Request/mode#value), l'en-tête `Origin` ne sera pas ajouté.
 
@@ -86,5 +86,5 @@ Origin: https://developer.mozilla.org:80
 
 - [`Host`](/fr/docs/Web/HTTP/Reference/Headers/Host)
 - [`Referer`](/fr/docs/Web/HTTP/Reference/Headers/Referer)
-- [Politique de même origine](/fr/docs/Web/Security/Same-origin_policy)
+- [Politique de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy)
 - [Quand les navigateurs envoient-ils l'en-tête `Origin`&nbsp;? Quand l'origine est-elle mise à `null`&nbsp;? (question Stack Overflow, en anglais)](https://stackoverflow.com/questions/42239643/when-do-browsers-send-the-origin-header-when-do-browsers-set-the-origin-to-null/42242802)

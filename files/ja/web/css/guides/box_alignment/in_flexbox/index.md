@@ -1,16 +1,28 @@
 ---
 title: フレックスボックスでのボックス配置
+short-title: フレックスボックスで
 slug: Web/CSS/Guides/Box_alignment/In_flexbox
-original_slug: Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox
 l10n:
-  sourceCommit: f11e9200b6f9d5c191051eb7ccbe7ebd44966e43
+  sourceCommit: ca5d9f9e63b460fc0c9e15ac57d9739e10e4ea0d
 ---
 
-[ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)の仕様書では、さまざまなレイアウト方式で配置がどのように働くかを詳述しています。このページでは、フレックスボックスのコンテキストにおいてボックス配置がどのように働くかを探ります。このページの目的は、フレックスボックスとボックス配置として定められた事柄を詳述するためのものですので、ボックス配置の様々なレイアウト方式の間で共通の機能について詳述した、主となる[ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)ページを合わせてお読みください。
+[ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)モジュールでは、さまざまなレイアウト方式で配置がどのように働くかを詳述しています。このガイドでは、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)のコンテキストにおいてボックス配置がどのように働くかを探ります。このガイドの目的は、フレックスボックスとボックス配置として定められた事柄を詳述するためのものですので、ボックス配置の様々なレイアウト方式の間で共通の機能について詳述した、[ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)ガイドを併せてお読みください。
 
 ## 基本的な例
 
-この例では、3 つのフレックスアイテムが {{cssxref("justify-content")}} を使用して主軸に、 {{cssxref("align-items")}} を使用して交差軸に配置されます。最初のアイテムはグループに対して設定された `align-items` の値を上書きし、 {{cssxref("align-self")}} で `center` に設定しています。
+このフレックスボックスの例では、3 つのフレックスアイテムが {{cssxref("justify-content")}} を使用して主軸に、 {{cssxref("align-items")}} を使用して交差軸に配置されます。最初のアイテムはグループに対して設定された `align-items` の値を上書きし、 {{cssxref("align-self")}} で `center` に設定しています。
+
+```css hidden live-sample___gap live-sample___flex-align-items live-sample___auto-margins
+body {
+  font-family: sans-serif;
+}
+.box > * {
+  padding: 20px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+```
 
 ```html-nolint live-sample___flex-align-items
 <div class="box">
@@ -18,15 +30,6 @@ l10n:
   <div>Two</div>
   <div>Three <br />に追加<br />テキスト</div>
 </div>
-```
-
-```css hidden live-sample___flex-align-items
-.box > * {
-  padding: 20px;
-  border: 2px solid rgb(96 139 168);
-  border-radius: 5px;
-  background-color: rgb(96 139 168 / 0.2);
-}
 ```
 
 ```css live-sample___flex-align-items
@@ -51,7 +54,7 @@ l10n:
 しかし、フレックスボックスでは `flex-direction` を `column` に設定することで、主軸を変更することができます。この場合、 `justify-content` はアイテムをブロック方向に配置します。したがって、フレックスボックスでは主軸と交差軸について次のように考えると最も簡単です。
 
 - 主軸 = `flex-direction` で設定された向き = `justify-content` で配置
-- 交差軸 = 主軸と交差 = `align-content`, `align-self`/`align-items` で配置
+- 交差軸 = 主軸と交差 = {{cssxref("align-content")}}, {{cssxref("align-self")}}/{{cssxref("align-items")}} で配置
 
 ### 主軸の配置
 
@@ -65,7 +68,7 @@ l10n:
 
 ### フレックスボックスには justify-self はない
 
-主軸では、フレックスボックスはコンテンツをグループとして扱います。アイテムをレイアウトするために必要な空間の大きさが計算され、残りの空間は配分に利用されます。`justify-content` プロパティは、どのように残りの領域を使用するかを制御します。`justify-content: flex-end` に設定すると、余分な領域はアイテムの前に配置され、`justify-content: space-around` に設定すると、その大きさアイテムの両側に配置される、などです。
+主軸では、フレックスボックスはフレックスアイテムをグループとして扱います。アイテムをレイアウトするために必要な空間の大きさが計算され、残りの空間は配分に利用されます。`justify-content` プロパティは、どのように残りの領域を使用するかを制御します。`justify-content: flex-end` に設定すると、余分な領域はアイテムの前に配置され、`justify-content: space-around` に設定すると、その大きさアイテムの両側に配置される、などです。
 
 つまり、常にアイテムのグループ全体が動き回るよう配分されるため、`justify-self` プロパティはフレックスボックスでは意味を持ちません。
 
@@ -77,7 +80,7 @@ l10n:
 
 開始点に配置された一連のフレックスアイテムのうち、1 つのアイテムで {{cssxref("margin")}} を `auto` に設定することで、分割ナビゲーションを作成できます。これは、フレックスボックスと alignment プロパティでうまくいきます。 auto のマージンに使用できる領域がなくなると、アイテムは他のすべてのフレックスアイテムと同じように動作し、空間に収まるように縮小します。
 
-```html-nolint live-sample___auto-margins
+```html live-sample___auto-margins
 <div class="box">
   <div>One</div>
   <div>Two</div>
@@ -85,15 +88,6 @@ l10n:
   <div class="push">Four</div>
   <div>Five</div>
 </div>
-```
-
-```css hidden live-sample___auto-margins
-.box > * {
-  padding: 20px;
-  border: 2px solid rgb(96 139 168);
-  border-radius: 5px;
-  background-color: rgb(96 139 168 / 0.2);
-}
 ```
 
 ```css live-sample___auto-margins
@@ -118,9 +112,9 @@ l10n:
 
 主軸では、`column-gap` プロパティは兄弟アイテムの間に固定幅の間隔を作成します。
 
-交差軸では、`row-gap` プロパティは、隣接するフレックス行の間隔を作成するので、この効果を得るには `flex-wrap` を `wrap` に設定する必要があります。
+交差軸では、`row-gap` プロパティは、隣接するフレックス行の間隔を作成するので、この効果を得るには {{cssxref("flex-wrap")}} を `wrap` に設定する必要があります。
 
-```html-nolint live-sample___gap
+```html live-sample___gap
 <div class="box">
   <div>One</div>
   <div>Two</div>
@@ -129,15 +123,6 @@ l10n:
   <div>Five</div>
   <div>Six</div>
 </div>
-```
-
-```css hidden live-sample___gap
-.box > * {
-  padding: 20px;
-  border: 2px solid rgb(96 139 168);
-  border-radius: 5px;
-  background-color: rgb(96 139 168 / 0.2);
-}
 ```
 
 ```css live-sample___gap
@@ -157,26 +142,13 @@ l10n:
 
 {{EmbedLiveSample("gap")}}
 
-## リファレンス
+## 関連情報
 
-### CSS プロパティ
-
-- {{cssxref("justify-content")}}
-- {{cssxref("align-content")}}
-- {{cssxref("place-content")}}
-- {{cssxref("justify-items")}}
-- {{cssxref("align-items")}}
-- {{cssxref("place-items")}}
-- {{cssxref("align-self")}}
-- {{cssxref("row-gap")}}
-- {{cssxref("column-gap")}}
-- {{cssxref("gap")}}
-
-### 用語集の項目
-
+- [CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)モジュール
+- [ボックス配置の概要](/ja/docs/Web/CSS/Guides/Box_alignment/Overview)
+- [グリッドレイアウトでのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
+- [段組みレイアウトのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_multi-column_layout)
+- [ブロック、絶対位置指定、表レイアウトのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables)
+- [フレックスコンテナーでのアイテム配置](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
 - {{Glossary("Cross axis", "交差軸")}}
 - {{Glossary("Main axis", "主軸")}}
-
-## ガイド
-
-- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)

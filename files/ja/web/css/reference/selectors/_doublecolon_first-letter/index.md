@@ -1,9 +1,8 @@
 ---
 title: ::first-letter
 slug: Web/CSS/Reference/Selectors/::first-letter
-original_slug: Web/CSS/::first-letter
 l10n:
-  sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`::first-letter`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、[ブロックコンテナー](/ja/docs/Web/CSS/Guides/Display/Visual_formatting_model#ブロックコンテナー)の最初の行の最初の文字にスタイルを適用します。ただし、最初の文字より前に他のコンテンツ（画像やインラインテーブルなど）がないときに限ります。
@@ -64,9 +63,9 @@ p::first-letter {
 
 ## 例
 
-### 単純なドロップキャップ
+### 基本的なドロップキャップ
 
-この例では、 `::first-letter` 擬似要素を使用して、 `<h2>` の直後の段落の最初の文字にドロップキャップ効果を作成します。
+この例では、`::first-letter` 擬似要素を使用して、 `<h2>` の直後の段落の最初の文字にドロップキャップ効果を作成します。
 
 #### HTML
 
@@ -106,7 +105,7 @@ h2 + p::first-letter {
 
 #### 結果
 
-{{ EmbedLiveSample('Simple_drop_cap', '100%', 350) }}
+{{ EmbedLiveSample('Basic_drop_cap', '100%', 350) }}
 
 ### 特殊な記号と非ラテン文字への効果
 
@@ -142,6 +141,41 @@ p::first-letter {
 #### 結果
 
 {{ EmbedLiveSample('Effect_on_special_punctuation_and_non-Latin_characters', '100%', 350) }}
+
+### 最初の文字を SVG の text 要素でスタイル設定
+
+この例では、`::first-letter` 擬似要素を使用して、SVG の {{SVGElement("text")}} 要素の最初の文字をスタイル設定します。
+
+> [!NOTE]
+> 執筆時点で、この機能は[対応が限定されています](#ブラウザーの互換性)。
+
+#### HTML
+
+```html
+<svg viewBox="0 0 300 40">
+  <text y="30">First letter in &lt;text&gt; SVG</text>
+</svg>
+```
+
+#### CSS
+
+```css
+text {
+  font-family: sans-serif;
+}
+
+text::first-letter {
+  font-family: serif;
+  font-size: 2rem;
+  font-weight: 600;
+  fill: tomato;
+  stroke: indigo;
+}
+```
+
+#### 結果
+
+{{ EmbedLiveSample("styling_first_letter_in_SVG_text_element", "100%", "100") }}
 
 ## 仕様書
 

@@ -1,12 +1,13 @@
 ---
 title: align-items
 slug: Web/CSS/Reference/Properties/align-items
-original_slug: Web/CSS/align-items
 l10n:
-  sourceCommit: a731cff4afe1132e84c29c3044c9ac4a58888f46
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
 [CSS](/ja/docs/Web/CSS) の **`align-items`** プロパティは、すべての直接の子要素に集合として {{cssxref("align-self")}} の値を設定します。フレックスボックスでは{{glossary("cross axis", "交差軸")}}方向のアイテムの配置を制御します。グリッドレイアウトでは、{{glossary("grid areas", "グリッド領域")}}におけるアイテムのブロック軸方向の配置を制御します。
+
+下記のインタラクティブな例では、グリッドレイアウトを使用してこのプロパティのいくつかの値を実演しています。
 
 {{InteractiveExample("CSS デモ: align-items")}}
 
@@ -49,12 +50,10 @@ align-items: end;
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 ```
-
-このデモは、グリッドレイアウトを使用して `align-items` のいくつかの値の動作を示しています。
 
 ## 構文
 
@@ -77,7 +76,9 @@ align-items: anchor-center;
 /* ベースラインに配置する */
 align-items: baseline;
 align-items: first baseline;
-align-items: last baseline; /* オーバーフロー配置 (位置指定要素のみ) */
+align-items: last baseline;
+
+/* オーバーフロー配置 (位置指定要素のみ) */
 align-items: safe center;
 align-items: unsafe center;
 
@@ -118,7 +119,7 @@ align-items: unset;
   - : すべてのフレックスアイテムは、[フレックスコンテナーのベースライン](https://drafts.csswg.org/css-flexbox-1/#flex-baselines)に沿って配置されます。交差軸の先頭側マージンの端とベースラインの間の距離が最大のアイテムが、行の交差軸の先頭側の端に寄せられます。
 
 - `stretch`
-  - : アイテムが配置コンテナーより小さい場合、自動サイズのアイテムは、アイテムの幅と高さの制限を尊重しながら、コンテナーを埋めるために均等に拡大されます。
+  - : アイテムの交差軸のサイズが `auto` の場合、使用されているサイズはアイテムの幅と高さの制限を尊重しつつ、コンテナーを可能な限り埋めるのに必要な長さに設定されます。アイテムが自動サイズ設定されていない場合、この値は `flex-start` に代替され、コンテナーの {{cssxref("align-content")}} が `first baseline`（または `baseline`）もしくは `last baseline` の場合には `self-start` または `self-end` に代替されます。
 
 - `anchor-center`
   - : [アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)要素の場合、関連付けられたアンカー要素のブロック方向の中心にアイテムを配置します。 [`anchor-center` を使用してアンカーの中央に配置](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#anchor-center_を使用してアンカーの中央に配置)を参照してください。
@@ -220,7 +221,7 @@ select {
 
 div > div {
   box-sizing: border-box;
-  border: 2px solid #fff;
+  border: 2px solid white;
   width: 100px;
   display: flex;
   align-items: center;
@@ -318,7 +319,7 @@ display.addEventListener("change", (evt) => {
 - {{cssxref("place-items")}} 一括指定
 - [フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
 - [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
-- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/Guides/Grid_layout/Box_alignment)
+- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
 - [CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)モジュール
 - [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)モジュール
 - [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)モジュール

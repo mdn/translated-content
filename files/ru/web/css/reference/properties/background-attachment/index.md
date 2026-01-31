@@ -114,4 +114,4 @@ p {
 
 ## Смотрите также
 
-- [Несколько фонов](/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [Несколько фонов](/ru/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)

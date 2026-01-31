@@ -84,7 +84,7 @@ l10n:
 ![브라우저에 임베드된 공룡의 기본 이미지와 그 위에 "HTML로 된 이미지"라고 쓰여 있습니다.](basic-image.png)
 
 > [!NOTE]
-> {{htmlelement("img")}} 와 {{htmlelement("video")}} 와 같은 요소들을 대체 요소라고 하기도 합니다. 그 이유는 요소의 내용과 크기가 요스 그 자체가 아니라, 외부적인 요소(이미지나 비디오)에 의해 결정되기 때문입니다. 이에 대한 자세한 내용은 [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)에서 확인할 수 있습니다.
+> {{htmlelement("img")}} 와 {{htmlelement("video")}} 와 같은 요소들을 대체 요소라고 하기도 합니다. 그 이유는 요소의 내용과 크기가 요스 그 자체가 아니라, 외부적인 요소(이미지나 비디오)에 의해 결정되기 때문입니다. 이에 대한 자세한 내용은 [대체 요소](/ko/docs/Web/CSS/Guides/Images/Replaced_element_properties)에서 확인할 수 있습니다.
 
 > [!NOTE]
 > 완성된 예제들을 [Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html)에서 확인하실 수 있습니다. ([source code](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html)도 참고하세요.)

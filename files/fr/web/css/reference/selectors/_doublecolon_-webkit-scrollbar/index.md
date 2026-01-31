@@ -1,12 +1,11 @@
 ---
 title: ::-webkit-scrollbar
 slug: Web/CSS/Reference/Selectors/::-webkit-scrollbar
-original_slug: Web/CSS/::-webkit-scrollbar
 l10n:
-  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
-{{Non-standard_header}}
+{{Non-standard_Header}}
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-scrollbar`** est une [extension de WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui permet de modifier le style de la barre de défilement associée à un élément. Il s'agit d'un pseudo-élément propriétaire, uniquement disponible pour les navigateurs WebKit.
 
@@ -95,8 +94,8 @@ Les auteur·ice·s doivent éviter de mettre en forme les barres de défilement,
 
 ### Ajouter une solution de repli pour les styles de barre de défilement
 
-Vous pouvez utiliser une règle {{cssxref("@supports")}} pour détecter si un navigateur prend en charge les propriétés standard {{cssxref("scrollbar-color")}} et {{cssxref("scrollbar-width")}}, et sinon utiliser une solution de repli avec les pseudo-éléments `::-webkit-scrollbar-*`.
-L'exemple suivant montre comment appliquer des couleurs aux barres de défilement en utilisant {{cssxref("scrollbar-color")}} si pris en charge et les pseudo-éléments `::-webkit-scrollbar-*` si ce n'est pas le cas.
+Vous pouvez utiliser une règle {{CSSxRef("@supports")}} pour détecter si un navigateur prend en charge les propriétés standard {{CSSxRef("scrollbar-color")}} et {{CSSxRef("scrollbar-width")}}, et sinon utiliser une solution de repli avec les pseudo-éléments `::-webkit-scrollbar-*`.
+L'exemple suivant montre comment appliquer des couleurs aux barres de défilement en utilisant {{CSSxRef("scrollbar-color")}} si pris en charge et les pseudo-éléments `::-webkit-scrollbar-*` si ce n'est pas le cas.
 
 #### HTML
 
@@ -170,5 +169,5 @@ Ce pseudo-élément ne fait partie d'aucun standard.
 - {{CSSxRef("scrollbar-width")}}
 - {{CSSxRef("scrollbar-color")}}
 - Billet du blog Eric W. Bailey [N'utilisez pas de barres de défilement personnalisées <sup>(angl.)</sup>](https://ericwbailey.website/published/dont-use-custom-css-scrollbars/) (2023)
-- Billet du blog Chrome [Mettre en forme les barres de défilement](https://developer.chrome.com/docs/css-ui/scrollbar-styling) (2024)
+- Billet du blog Chrome [Mettre en forme les barres de défilement <sup>(angl.)</sup>](https://developer.chrome.com/docs/css-ui/scrollbar-styling) (2024)
 - Billet du blog WebKit [sur la mise en forme des barres de défilement <sup>(angl.)</sup>](https://webkit.org/blog/363/styling-scrollbars/) (2009)

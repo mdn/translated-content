@@ -3,14 +3,14 @@ title: <frequency-percentage>
 slug: Web/CSS/Reference/Values/frequency-percentage
 original_slug: Web/CSS/frequency-percentage
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<frequency-percentage>`** représente une valeur qui peut être une valeur de type {{Cssxref("frequency")}} ou une valeur de type {{Cssxref("percentage")}}. Les valeurs de fréquence, par exemple, la hauteur d'une voix parlante, ne sont actuellement utilisées dans aucune propriété CSS.
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<frequency-percentage>`** représente une valeur qui peut être une valeur de type {{CSSxRef("frequency")}} ou une valeur de type {{CSSxRef("percentage")}}. Les valeurs de fréquence, par exemple, la hauteur d'une voix parlante, ne sont actuellement utilisées dans aucune propriété CSS.
 
 ## Syntaxe
 
-La valeur d'un `<frequency-percentage>` est soit une {{Cssxref("frequency")}}, soit un {{Cssxref("percentage")}}. Consultez leurs pages de référence respectives pour plus de détails sur leur syntaxe.
+La valeur d'un `<frequency-percentage>` est soit une {{CSSxRef("frequency")}}, soit un {{CSSxRef("percentage")}}. Consultez leurs pages de référence respectives pour plus de détails sur leur syntaxe.
 
 ## Description
 
@@ -20,7 +20,7 @@ Lorsqu'une valeur de type `<frequency-percentage>` peut être utilisée dans une
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -69,5 +69,5 @@ Actuellement, aucun navigateur ne prend en charge cette fonctionnalité.
 - Les [types de données CSS](/fr/docs/Web/CSS/Reference/Values/Data_types)
 - Les [valeurs et unités CSS](/fr/docs/Web/CSS/Guides/Values_and_units) module
 - Types de données CSS associés&nbsp;:
-  - {{cssxref("frequency", "&lt;frequency&gt;")}}
-  - {{cssxref("percentage", "&lt;percentage&gt;")}}
+  - {{CSSxRef("frequency", "&lt;frequency&gt;")}}
+  - {{CSSxRef("percentage", "&lt;percentage&gt;")}}

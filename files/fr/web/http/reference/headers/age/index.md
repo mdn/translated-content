@@ -1,40 +1,39 @@
 ---
-title: Age
+title: En-tête Age
+short-title: Age
 slug: Web/HTTP/Reference/Headers/Age
-original_slug: Web/HTTP/Headers/Age
+l10n:
+  sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
 ---
 
-L'entête HTTP {{HTTPHeader("Age")}} indique le temps en secondes pendant lequel la ressource a été stockée dans un cache proxy.
+L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`Age`** indique le temps, en secondes, pendant lequel un objet est resté dans un cache proxy.
 
-Sa valeur est généralement proche de zéro. Elle vaut 0 lorsque la ressource vient d'être rapatriée du serveur d'origine; autrement, sa valeur équivaut à la différence entre la date courante du proxy et la valeur de l'entête {{HTTPHeader("Date")}} inclus dans la réponse HTTP.
+La valeur de l'en-tête est généralement proche de zéro.
+Si la valeur est `0`, l'objet a probablement été récupéré depuis le serveur d'origine&nbsp;; sinon, la valeur est généralement calculée comme la différence entre la date courante du proxy et l'en-tête général {{HTTPHeader("Date")}} inclus dans la réponse HTTP.
 
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row">Type d'entête</th>
-      <td>Entête de réponse</td>
-    </tr>
-    <tr>
-      <th scope="row">Nom d'entête interdit</th>
-      <td>non</td>
+      <th scope="row">Type d'en-tête</th>
+      <td>{{Glossary("Response header", "En-tête de réponse")}}</td>
     </tr>
   </tbody>
 </table>
 
 ## Syntaxe
 
-```
-Age: <valeur-en-secondes>
+```http
+Age: <delta-seconds>
 ```
 
-## Directive
+## Directives
 
-- \<valeur-en-secondes>
+- `<delta-seconds>`
   - : Un entier positif indiquant le temps en secondes pendant lequel la ressource a été stockée dans un cache proxy.
 
 ## Exemple
 
-```
+```http
 Age: 24
 ```
 
@@ -48,5 +47,5 @@ Age: 24
 
 ## Voir aussi
 
-- {{HTTPHeader("Cache-Control")}}
-- {{HTTPHeader("Expires")}}
+- L'en-tête HTTP {{HTTPHeader("Cache-Control")}}
+- L'en-tête HTTP {{HTTPHeader("Expires")}}

@@ -3,10 +3,10 @@ title: drop-shadow()
 slug: Web/CSS/Reference/Values/filter-function/drop-shadow
 original_slug: Web/CSS/filter-function/drop-shadow
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`drop-shadow()`** permet d'appliquer une ombre portée sur une image. Le résultat de cette fonction est une valeur {{cssxref("&lt;filter-function&gt;")}}.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`drop-shadow()`** permet d'appliquer une ombre portée sur une image. Le résultat de cette fonction est une valeur {{CSSxRef("&lt;filter-function&gt;")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: drop-shadow()")}}
 
@@ -35,7 +35,7 @@ filter: drop-shadow(0 0 0.75rem crimson);
 En pratique, une ombre portée correspond à une version floutée et décalée du masque alpha de l'image, dessiné avec une couleur donnée et fusionné sous l'image.
 
 > [!NOTE]
-> Cette fonction s'apparente à la propriété {{Cssxref("box-shadow")}}. La propriété `box-shadow` permet de créer une ombre rectangulaire sous _la boîte entière_ d'un élément. En revanche, la fonction `drop-shadow()` permet de créer un ombre qui épouse la forme (le canal alpha) de _l'image même_.
+> Cette fonction s'apparente à la propriété {{CSSxRef("box-shadow")}}. La propriété `box-shadow` permet de créer une ombre rectangulaire sous _la boîte entière_ d'un élément. En revanche, la fonction `drop-shadow()` permet de créer un ombre qui épouse la forme (le canal alpha) de _l'image même_.
 
 ## Syntaxe
 
@@ -65,12 +65,12 @@ drop-shadow(#ee2233 0.5rem 0.5rem 1rem)
 drop-shadow(10px 10px red) drop-shadow(-5px -5px yellow)
 ```
 
-La fonction `drop-shadow()` accepte un paramètre de type `<shadow>` (tel que défini dans la documentation de {{Cssxref("box-shadow")}}), mais pour lequel le mot-clé `inset` et le paramètre `spread` ne sont pas acceptés.
+La fonction `drop-shadow()` accepte un paramètre de type `<shadow>` (tel que défini dans la documentation de {{CSSxRef("box-shadow")}}), mais pour lequel le mot-clé `inset` et le paramètre `spread` ne sont pas acceptés.
 
 ### Paramètres
 
-- `<color>` {{optional_inline}}
-  - : Définit la couleur de l'ombre. Si elle n'est pas précisée, la valeur de la propriété {{cssxref("color")}} définie sur l'élément parent est utilisée.
+- `<color>` {{Optional_Inline}}
+  - : Définit la couleur de l'ombre. Si elle n'est pas précisée, la valeur de la propriété {{CSSxRef("color")}} définie sur l'élément parent est utilisée.
 
 - `<length>`
   - : Définit la longueur de décalage de l'ombre. Ce paramètre accepte deux ou trois valeurs. Si deux valeurs sont précisées, elles correspondent à `<offset-x>` (décalage horizontal) et `<offset-y>` (décalage vertical). Une valeur négative pour `<offset-x>` place l'ombre à gauche de l'élément. Une valeur négative pour `<offset-y>` place l'ombre au-dessus de l'élément. Si une valeur n'est pas précisée, `0` est utilisé par défaut. Si une troisième valeur est précisée, elle correspond à `<standard-deviation>`, c'est-à-dire l'écart type utilisé pour la fonction de [flou gaussien](https://fr.wikipedia.org/wiki/Flou_gaussien). Plus la valeur de `<standard-deviation>` est grande, plus l'ombre sera grande et floue. Les valeurs négatives pour `<standard-deviation>` ne sont pas autorisées.
@@ -143,19 +143,19 @@ En l'absence de valeur `<color>` dans la fonction `drop-shadow()` du premier blo
 
 ## Voir aussi
 
-- Les fonctions {{cssxref("&lt;filter-function&gt;")}}&nbsp;:
-  - {{cssxref("filter-function/blur", "blur()")}}
-  - {{cssxref("filter-function/brightness", "brightness()")}}
-  - {{cssxref("filter-function/contrast", "contrast()")}}
-  - {{cssxref("filter-function/grayscale", "grayscale()")}}
-  - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-  - {{cssxref("filter-function/invert", "invert()")}}
-  - {{cssxref("filter-function/opacity", "opacity()")}}
-  - {{cssxref("filter-function/saturate", "saturate()")}}
-  - {{cssxref("filter-function/sepia", "sepia()")}}
-- La propriété {{cssxref("filter")}}
-- La propriété {{cssxref("backdrop-filter")}}
-- La propriété {{cssxref("box-shadow")}}
-- La propriété {{cssxref("text-shadow")}}
+- Les fonctions {{CSSxRef("&lt;filter-function&gt;")}}&nbsp;:
+  - {{CSSxRef("filter-function/blur", "blur()")}}
+  - {{CSSxRef("filter-function/brightness", "brightness()")}}
+  - {{CSSxRef("filter-function/contrast", "contrast()")}}
+  - {{CSSxRef("filter-function/grayscale", "grayscale()")}}
+  - {{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}}
+  - {{CSSxRef("filter-function/invert", "invert()")}}
+  - {{CSSxRef("filter-function/opacity", "opacity()")}}
+  - {{CSSxRef("filter-function/saturate", "saturate()")}}
+  - {{CSSxRef("filter-function/sepia", "sepia()")}}
+- La propriété {{CSSxRef("filter")}}
+- La propriété {{CSSxRef("backdrop-filter")}}
+- La propriété {{CSSxRef("box-shadow")}}
+- La propriété {{CSSxRef("text-shadow")}}
 - [Introduction aux ombres portées sur le texte](/fr/docs/Web/CSS/CSS_text_decoration/Text_shadows)
 - Le module des [effets de filtre CSS](/fr/docs/Web/CSS/Guides/Filter_effects)
