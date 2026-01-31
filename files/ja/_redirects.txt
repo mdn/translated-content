@@ -2512,6 +2512,7 @@
 /ja/docs/MDN/Tools/KumaScript/Troubleshooting	https://github.com/mdn/yari/blob/main/docs/kumascript/troubleshooting-errors.md
 /ja/docs/MDN/User_guide	https://github.com/mdn/yari/tree/main/docs
 /ja/docs/MDN/Writing_guidelines/Howto/Tag	/ja/docs/MDN/Writing_guidelines/Howto
+/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_landing_page_template	/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_page_template
 /ja/docs/MDN/Writing_guidelines/Page_structures/Quicklinks	/ja/docs/MDN/Writing_guidelines/Page_structures/Sidebars
 /ja/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion	/ja/docs/MDN/Writing_guidelines/Criteria_for_inclusion
 /ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide	/ja/docs/MDN/Writing_guidelines/Code_style_guide
