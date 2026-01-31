@@ -1,9 +1,8 @@
 ---
 title: list-style
 slug: Web/CSS/Reference/Properties/list-style
-original_slug: Web/CSS/list-style
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`list-style`** は CSS の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、リストのすべてのスタイルプロパティを設定します。
@@ -37,7 +36,7 @@ list-style: georgian outside url("/non-existent.svg");
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div>
-    <p>NASA Notable Missions</p>
+    <p>NASA の有名なミッション</p>
     <ul class="transition-all" id="example-element">
       <li>Apollo</li>
       <li>Hubble</li>
@@ -91,9 +90,9 @@ hr {
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`list-style-image`](/ja/docs/Web/CSS/Reference/Properties/list-style-image)
-- [`list-style-position`](/ja/docs/Web/CSS/Reference/Properties/list-style-position)
-- [`list-style-type`](/ja/docs/Web/CSS/Reference/Properties/list-style-type)
+- {{cssxref("list-style-image")}}
+- {{cssxref("list-style-position")}}
+- {{cssxref("list-style-type")}}
 
 ## 構文
 
