@@ -51,7 +51,7 @@ La pseudo-classe `:not()` présente un certain nombre de [particularités, astuc
 
 ### Paramètres
 
-La pseudo-classe `:not()` nécessite une [liste de sélecteurs](/fr/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list), une liste séparée par des virgules d'un ou plusieurs sélecteurs, comme argument. La liste ne doit pas contenir de [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements), mais tout autre sélecteur simple, composé ou complexe est autorisé.
+La pseudo-classe `:not()` nécessite une [liste de sélecteurs](/fr/docs/Web/CSS/Guides/Selectors/Selector_structure#selector_list), une liste séparée par des virgules d'un ou plusieurs sélecteurs, comme argument. La liste ne doit pas contenir de [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements), mais tout autre sélecteur simple, composé ou complexe est autorisé.
 
 ## Description
 

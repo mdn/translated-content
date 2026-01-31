@@ -72,7 +72,7 @@ _Pas de changement._
 
 ### Miscelleanous
 
-- Le support des polices [WOFF2](/fr/docs/Web/CSS/CSS_fonts/WOFF) est désormais activé par défaut dans la version finale de Firefox (Beta et Release, en plus de Nightly et Developer Edition) ([bug Firefox 1084026](https://bugzil.la/1084026)).
+- Le support des polices [WOFF2](/fr/docs/Web/CSS/Guides/Fonts/WOFF) est désormais activé par défaut dans la version finale de Firefox (Beta et Release, en plus de Nightly et Developer Edition) ([bug Firefox 1084026](https://bugzil.la/1084026)).
 - L'option de ligne de commande [`-remote`](https://wiki.mozilla.org/Firefox/CommandLineOptions#-remote_remote_command) a été supprimée ([bug Firefox 1080319](https://bugzil.la/1080319)).
 - Prise en charge des nouveaux [emoji de couleur chair Unicode 8.0](https://www.bbc.co.uk/newsbeat/article/32220611/diverse-thumbs-up-emojis-with-different-skin-tones-finally-here) ([bug Firefox 1153460](https://bugzil.la/1153460)).
 

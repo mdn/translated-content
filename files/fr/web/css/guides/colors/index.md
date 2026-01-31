@@ -77,11 +77,11 @@ Le module Couleurs CSS introduit également l'interface `CSSColorProfileRule`. A
 
 - [Appliquer la couleur aux éléments HTML avec CSS](/fr/docs/Web/CSS/Guides/Colors/Applying_color)
   - : Un guide pour utiliser CSS afin d'appliquer la couleur à différents types de contenu, y compris toutes les propriétés CSS acceptant `<color>` comme valeur.
-- [Valeurs de couleur CSS](/fr/docs/Web/CSS/CSS_colors/Color_values)
+- [Valeurs de couleur CSS](/fr/docs/Web/CSS/Guides/Colors/Color_values)
   - : Un aperçu des espaces colorimétriques et des différentes notations fonctionnelles `<color>` disponibles en CSS.
-- [Utiliser la couleur judicieusement](/fr/docs/Web/CSS/CSS_colors/Using_color_wisely)
+- [Utiliser la couleur judicieusement](/fr/docs/Web/CSS/Guides/Colors/Using_color_wisely)
   - : Théorie des couleurs et ressources, y compris comment trouver les bonnes couleurs pour créer une palette accessible, le contraste et l'impression en couleur.
-- [Utiliser les couleurs relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors)
+- [Utiliser les couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Relative_colors)
   - : Cet article explique la syntaxe relative des couleurs CSS, présente les différentes options et propose des exemples illustratifs.
 - [Convertisseur de format de couleur](/fr/docs/Web/CSS/Guides/Colors/Color_format_converter)
   - : Un outil permettant de saisir ou de choisir une couleur et de copier sa valeur correspondante dans n'importe quel [format de couleur](/fr/docs/Web/CSS/Reference/Values/color_value) CSS.

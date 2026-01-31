@@ -62,7 +62,7 @@ p ~ span {
 
 ### Utilisation du combinateur avec des sélecteurs complexes
 
-Cet exemple contient deux [sélecteurs complexes](/fr/docs/Web/CSS/CSS_selectors/Selector_structure#selecteur_complexe), tous deux utilisant le combinateur de voisins généraux&nbsp;: `.monTexte p ~ span` et `.monTexte p ~ .monTexte span`.
+Cet exemple contient deux [sélecteurs complexes](/fr/docs/Web/CSS/Guides/Selectors/Selector_structure#selecteur_complexe), tous deux utilisant le combinateur de voisins généraux&nbsp;: `.monTexte p ~ span` et `.monTexte p ~ .monTexte span`.
 
 - Le premier sélecteur complexe, `.monTexte p ~ span`, correspond à tous les `<span>` qui viennent après un paragraphe _si_ le `<span>` et le paragraphe partagent le même parent **et** ce parent ou un parent _plus haut_ de ce parent a la classe `.monTexte`.
 - Le second sélecteur complexe, `.monTexte p ~ .monTexte span`, correspond à toutes les `<span>` qui sont un descendant de l'élément parent avec la classe `.monTexte` _si_ cet élément est un voisin du paragraphe mentionné précédemment.

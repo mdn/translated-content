@@ -34,9 +34,9 @@ Le **filtrage** consiste à identifier toutes les déclarations qui s'appliquent
 - La déclaration appartient à une règle de style dont le sélecteur correspond à l'élément
 - La déclaration est syntaxiquement valide&nbsp;: le nom de propriété est reconnu par le navigateur et la valeur correspond à la syntaxe attendue pour cette propriété
 
-Seules les déclarations valides deviennent des valeurs déclarées. Les déclarations comportant des noms de propriétés invalides ou des valeurs invalides sont retirées lors du filtrage conformément aux [règles de gestion des erreurs CSS](/fr/docs/Web/CSS/CSS_syntax/Error_handling).
+Seules les déclarations valides deviennent des valeurs déclarées. Les déclarations comportant des noms de propriétés invalides ou des valeurs invalides sont retirées lors du filtrage conformément aux [règles de gestion des erreurs CSS](/fr/docs/Web/CSS/Guides/Syntax/Error_handling).
 
-Dans cet exemple, seules les déclarations {{CSSxRef("font-size")}} et {{CSSxRef("font-weight")}} sont traitées. Le [parseur CSS filtre les erreurs](/fr/docs/Web/CSS/CSS_syntax/Error_handling#css_parser_errors), en ignorant ou en «&nbsp;filtrant&nbsp;» la déclaration avec le nom de propriété invalide&nbsp;:
+Dans cet exemple, seules les déclarations {{CSSxRef("font-size")}} et {{CSSxRef("font-weight")}} sont traitées. Le [parseur CSS filtre les erreurs](/fr/docs/Web/CSS/Guides/Syntax/Error_handling#css_parser_errors), en ignorant ou en «&nbsp;filtrant&nbsp;» la déclaration avec le nom de propriété invalide&nbsp;:
 
 ```css
 p {
@@ -282,5 +282,5 @@ CSS 2.0 définissait la _valeur calculée_ comme la dernière étape du calcul d
 ## Voir aussi
 
 - Valeurs CSS pour contrôler l'héritage&nbsp;: {{CSSxRef("inherit")}}, {{CSSxRef("initial")}}, {{CSSxRef("revert")}}, {{CSSxRef("revert-layer")}} et {{CSSxRef("unset")}}
-- [Module de la cascade et de l'héritage CSS](/fr/docs/Web/CSS/CSS_cascade)
+- [Module de la cascade et de l'héritage CSS](/fr/docs/Web/CSS/Guides/Cascad)
 - [Module de la syntaxe CSS](/fr/docs/Web/CSS/Guides/Syntax)

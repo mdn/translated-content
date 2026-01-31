@@ -164,4 +164,4 @@ La propriété `word-break` est définie avec un mot-clé parmi ceux décrits ci
 
 - [`overflow-wrap`](/fr/docs/Web/CSS/Reference/Properties/overflow-wrap)
 - [`hyphens`](/fr/docs/Web/CSS/Reference/Properties/hyphens)
-- [Guide sur le retour à la ligne et la césure dans le texte](/fr/docs/Web/CSS/CSS_text/Wrapping_breaking_text)
+- [Guide sur le retour à la ligne et la césure dans le texte](/fr/docs/Web/CSS/Guides/Text/Wrapping_breaking_text)
