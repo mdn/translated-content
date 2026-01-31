@@ -1,19 +1,21 @@
 ---
 title: box-flex
 slug: Web/CSS/Reference/Properties/box-flex
-original_slug: Web/CSS/box-flex
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_Header}}{{Deprecated_Header}}
 
 > [!WARNING]
 > Cette propriété est utilisée pour contrôler certaines parties du modèle de boîtes XUL. Elle ne correspond ni à l'ancienne version de la spécification pour `box-flex` ni au comportement de `-webkit-box-flex`. Voir la page [Flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) pour plus d'informations sur ce qui doit être utilisé à la place.
 
-Les propriétés **`-moz-box-flex`** et **`-webkit-box-flex`** définissent la façon dont une boîte `-moz-box` ou `-webkit-box` s'étend pour remplir la boîte englobante, dans la direction indiquée par la disposition de la boîte. Pour plus de détails, se référer à la page [Flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) qui décrit les différentes propriétés des boîtes flexibles.
+Les propriétés [CSS](/fr/docs/Web/CSS) **`-moz-box-flex`** et **`-webkit-box-flex`** définissent comment une `-moz-box` ou une `-webkit-box` s'étend pour remplir la boîte qui la contient, dans la direction de la mise en page de la boîte englobante.
+
+## Syntaxe
 
 ```css
-/* Valeurs numériques */
-/* Type <number>      */
+/* Valeurs de type <number> */
 -moz-box-flex: 0;
 -moz-box-flex: 2;
 -moz-box-flex: 3.5;
@@ -24,26 +26,52 @@ Les propriétés **`-moz-box-flex`** et **`-webkit-box-flex`** définissent la f
 /* Valeurs globales */
 -moz-box-flex: inherit;
 -moz-box-flex: initial;
+-moz-box-flex: revert;
+-moz-box-flex: revert-layer;
 -moz-box-flex: unset;
 -webkit-box-flex: inherit;
 -webkit-box-flex: initial;
+-webkit-box-flex: revert;
+-webkit-box-flex: revert-layer;
 -webkit-box-flex: unset;
 ```
 
-## Syntaxe
+La propriété `box-flex` est définie comme un nombre ({{CSSxRef("&lt;number&gt;")}}). Si la valeur est 0, la boîte ne grandit pas. Si elle est supérieure à 0, la boîte grandit pour occuper une proportion de l'espace disponible.
 
-### Valeurs
+## Notes
 
-- `<number>`
-  - : Une valeur de type {{cssxref("&lt;number&gt;")}}. Si la valeur vaut 0, la boîte ne s'étend pas. Si elle est supérieure à 0, la boîte s'étendra sur l'espace disponible de façon proportionnelle.
+La boîte englobante distribue l'espace supplémentaire en proportion de la valeur de flex de chacun des éléments de contenu.
+
+Les éléments de contenu qui ont une valeur de flex nulle ne grandissent pas.
+
+Si un seul élément de contenu a une valeur de flex non nulle, il grandit pour occuper l'espace disponible.
+
+Les éléments de contenu qui ont la même valeur de flex grandissent de la même quantité absolue.
+
+Si la valeur de flex est définie via l'attribut `flex` de l'élément, le style est ignoré.
+
+Pour que les éléments XUL d'une boîte englobante aient la même taille, définissez l'attribut `equalsize` de la boîte englobante à la valeur `always`. Cet attribut n'a pas de propriété CSS correspondante.
+
+Une astuce pour que tous les éléments de contenu d'une boîte englobante aient la même taille consiste à leur donner tous une taille fixe (par exemple, `height: 0`), et la même valeur de `box-flex` supérieure à zéro (par exemple, `-moz-box-flex: 1`).
+
+## Définition formelle
+
+{{CSSInfo}}
 
 ### Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntaxRaw(`box-flex = <number>`)}}
 
 ## Exemples
 
-### CSS
+### Définir `box-flex`
+
+```html
+<div class="exemple">
+  <p>Je m'étends sur l'espace.</p>
+  <p>Je ne me dilate pas.</p>
+</div>
+```
 
 ```css
 div.exemple {
@@ -66,32 +94,9 @@ div.exemple > p:nth-child(2) {
 }
 ```
 
-### HTML
-
-```html
-<div class="exemple">
-  <p>Je m'étends sur l'espace.</p>
-  <p>Je ne me dilate pas.</p>
-</div>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples","200","200")}}
-
-## Notes
-
-La boîte englobante distribue l'espace supplémentaire en fonction de la valeur de `flex` de chaque élément. Les éléments pour lesquels ce coefficient est nul ne s'agrandiront pas. Si un seul élément possède un coefficient non nul, celui-ci occupera l'espace supplémentaires.
-
-Les éléments qui possèdent le même coefficient grandiront de la même façon.
-
-Si la valeur de cette propriété est définie via l'attribut XUL `flex`, la déclaration est ignorée. Afin que les éléments XUL d'une même boîte aient la même taille, on utilisera l'attribut `equalsize` avec la valeur `always`. Il n'existe pas de propriété CSS correspondante.
-
 ## Spécifications
 
-Cette propriété n'est pas une propriété standard. [Une ancienne version de la spécification CSS3 pour les boîtes flexibles](https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/) définissait une propriété `box-flex` mais ce brouillon a depuis été remplacé.
-
-{{cssinfo}}
+Ne fait partie d'aucun standard.
 
 ## Compatibilité des navigateurs
 
@@ -99,7 +104,7 @@ Cette propriété n'est pas une propriété standard. [Une ancienne version de l
 
 ## Voir aussi
 
-- {{cssxref("box-orient")}},
-- {{cssxref("box-pack")}},
-- {{cssxref("box-direction")}},
-- {{cssxref("flex")}}.
+- La propriété {{CSSxRef("box-orient")}}
+- La propriété {{CSSxRef("box-pack")}}
+- La propriété {{CSSxRef("box-direction")}}
+- La propriété {{CSSxRef("flex")}}
