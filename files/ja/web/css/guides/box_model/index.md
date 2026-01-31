@@ -1,78 +1,130 @@
 ---
 title: CSS ボックスモデル
+short-title: ボックスモデル
 slug: Web/CSS/Guides/Box_model
-original_slug: Web/CSS/CSS_box_model
 l10n:
-  sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**CSS ボックスモデル**は、要素に対して作成され、パディングやマージンを含む長方形のボックスを定義します。これは[視覚整形モデル](/ja/docs/Web/CSS/Guides/Display/Visual_formatting_model)によってレイアウトされます。
+**CSS ボックスモデル** (CSS box model) モジュールはマージン (`margin`) とパディング (`padding`) のプロパティを定義し、それが[高さ](/ja/docs/Web/CSS/Guides/Box_sizing)、[幅](/ja/docs/Web/CSS/Guides/Box_sizing)、[境界のプロパティ](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)とともに、 CSS の[ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model/Introduction)を構成します。
 
-## ボックスモデルの概要
+ウェブページ上のすべての可視要素は、[視覚整形モデル](/ja/docs/Web/CSS/Guides/Display/Visual_formatting_model)に従ってレイアウトされたボックスです。CSSプロパティはそれらのサイズ、位置、重ね合わせレベルを定義し、ボックスモデルプロパティ（およびその他のプロパティ）はそれぞれのボックスの外部サイズと周囲の空間を定義します。
 
-CSS のボックスは、テキスト、画像、その他の HTML 要素が表示されるコンテンツ領域で構成されています。この領域は、パディング、境界、マージンによって、1 つ以上の辺で囲まれることがあります。ボックスモデルは、これらの要素がどのように連携して CSS で表示されるボックスを作成するかを説明します。詳しくは、[CSS ボックスモデル入門](/ja/docs/Web/CSS/Guides/Box_model/Introduction)をご覧ください。
+それぞれのボックスには矩形のコンテンツ領域があり、その内部にテキスト、画像、その他のコンテンツが表示されます。コンテンツは、1 つ以上の辺でパディング、境界、マージンに囲まれることがあります。パディングはコンテンツの周囲に、境界線はパディングの周囲に、マージンは境界線の外側に配置されます。ボックスモデルは、これらの機能（コンテンツ、パディング、境界線、マージン）がどのように連携して CSS によって表示されるボックスを生成するのかを記述するものです。
 
-### ボックスの辺のキーワード
+![CSS ボックスモデルの構成要素](boxmodel.png)
 
-ボックスモデルの仕様書では、ボックスの各部分の辺を参照する一連のキーワードが定義されています。これらは、{{cssxref("box-sizing")}} プロパティの値など、CSS のキーワード値としても使用され、ボックスモデルがどのように寸法を計算するかを制御します。
-
-- `content-box`
-  - : そのボックスのコンテンツ領域の辺です。
-- `padding-box`
-  - : そのボックスのパディングの辺です。その方向にパディングがなかった場合は、 `content-box` と同じになります。
-- `border-box`
-  - : そのボックスの境界の辺です。その方向に境界がなかった場合は、 `padding-box` と同じになります。
-- `margin-box`
-  - : そのボックスのマージンの辺です。その方向にマージンがなかった場合は、 `border-box` と同じになります。
-- `stroke-box`
-  - : SVG では、ストロークの囲みボックスを指します。 CSS では `content-box` として扱われます。
-- `view-box`
-  - : SVG では、最も近い SVG ビューポート要素の原点ボックスを指します。これはその要素の {{svgattr("viewBox")}} 属性によって確立された初期の SVG ユーザー座標系の幅と高さを持つ長方形です。CSS では `border-box` として扱われます。
+CSS ボックスモデルモジュールは、`margin-top` や `padding-top` などの物理的（または「ページ相対」）プロパティを定義します。`margin-block-start` や `margin-inline-start`などの（テキストの方向に関連した）フロー相対プロパティは、[論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)で定義されています。ボックスモデルモジュールは、[CSS サイズ指定モジュール](/ja/docs/Web/CSS/Guides/Box_sizing)によって拡張されています。このモジュールは{{glossary("intrinsic size", "内在サイズ")}}値を導入し、少なくとも一辺が自動サイズ指定される要素に対して{{glossary("aspect ratio", "アスペクト比")}}を定義することができるようになります。
 
 ## リファレンス
 
-> [!NOTE]
-> 本仕様では、物理的なパディングとマージンのプロパティを定義しています。テキストの書字方向に関係するフローに関連したプロパティは、[論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)で定義されています。
+### プロパティ
 
-#### ボックスのマージンを制御するプロパティ
+- {{cssxref("margin")}} 一括指定
+- {{cssxref("margin-bottom")}}
+- {{cssxref("margin-left")}}
+- {{cssxref("margin-right")}}
+- {{cssxref("margin-top")}}
+- {{cssxref("margin-trim")}}
+- {{cssxref("padding")}} 一括指定
+- {{cssxref("padding-bottom")}}
+- {{cssxref("padding-left")}}
+- {{cssxref("padding-right")}}
+- {{cssxref("padding-top")}}
 
-マージンは、ボックスの境界を囲み、ボックス同士の間隔を確保するものです。
+### データ型
 
-- {{CSSxRef("margin")}}
-- {{CSSxRef("margin-bottom")}}
-- {{CSSxRef("margin-left")}}
-- {{CSSxRef("margin-right")}}
-- {{CSSxRef("margin-top")}}
-- {{CSSxRef("margin-trim")}} {{Experimental_Inline}}
-
-#### ボックスのパディングを制御するプロパティ
-
-パディングは、ボックスの境界の縁と内容物の縁の間に挿入されます。
-
-- {{CSSxRef("padding")}}
-- {{CSSxRef("padding-bottom")}}
-- {{CSSxRef("padding-left")}}
-- {{CSSxRef("padding-right")}}
-- {{CSSxRef("padding-top")}}
-
-#### その他のプロパティ
-
-ボックスモデルに関連するプロパティは他にもあり、それらは別の場所で定義されています。
-
-- [境界](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)
-  - : 境界のプロパティは、境界の太さ、描画スタイル、色を指定します。
-- [オーバーフロー](/ja/docs/Web/CSS/Reference/Properties/overflow)
-  - : 内容物が多すぎてボックスに入りきらない場合に起こることを制御します。
+- {{cssxref("box-edge")}}
+  - [`<visual-box>`](/ja/docs/Web/CSS/Reference/Values/box-edge#visual-box)
+  - [`<layout-box>`](/ja/docs/Web/CSS/Reference/Values/box-edge#layout-box)
+  - [`<paint-box>`](/ja/docs/Web/CSS/Reference/Values/box-edge#paint-box)
+  - [`<coord-box>`](/ja/docs/Web/CSS/Reference/Values/box-edge#coord-box)
+  - [`<geometry-box>`](/ja/docs/Web/CSS/Reference/Values/box-edge#geometry-box)
 
 ## ガイド
 
 - [CSS ボックスモデルの紹介](/ja/docs/Web/CSS/Guides/Box_model/Introduction)
   - : CSS の基礎的概念の 1 つである、ボックスモデルを解説します。このモデルは CSS が要素とそのコンテンツ領域、パディング領域、境界領域、マージン領域をどのように配置するかを定義しています。
+
 - [マージンの相殺の理解](/ja/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - : 2 つの隣接するマージンが 1 つに相殺されることがあります。この記事ではいつなぜそれが発生し、どのように制御するかを説明します。
+
 - [視覚整形モデル](/ja/docs/Web/CSS/Guides/Display/Visual_formatting_model)
   - : 視覚整形モデルを説明します。
+
+## 関連概念
+
+- [CSS 背景と境界](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)モジュール
+  - {{cssxref("border-width")}} 一括指定
+  - {{cssxref("border-bottom-width")}}
+  - {{cssxref("border-left-width")}}
+  - {{cssxref("border-right-width")}}
+  - {{cssxref("border-top-width")}}
+- [CSS 論理的プロパティ](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)モジュール
+  - {{CSSxRef("block-size")}}
+  - {{CSSxRef("inline-size")}}
+  - {{CSSxRef("max-block-size")}}
+  - {{CSSxRef("max-inline-size")}}
+  - {{CSSxRef("min-block-size")}}
+  - {{CSSxRef("min-inline-size")}}
+  - {{CSSxRef("margin-block")}}
+  - {{CSSxRef("margin-block-end")}}
+  - {{CSSxRef("margin-block-start")}}
+  - {{CSSxRef("margin-inline")}}
+  - {{CSSxRef("margin-inline-end")}}
+  - {{CSSxRef("margin-inline-start")}}
+  - {{CSSxRef("padding-block")}}
+  - {{CSSxRef("padding-block-end")}}
+  - {{CSSxRef("padding-block-start")}}
+  - {{CSSxRef("padding-inline")}}
+  - {{CSSxRef("padding-inline-end")}}
+  - {{CSSxRef("padding-inline-start")}}
+  - {{CSSxRef("border-block")}}
+  - {{CSSxRef("border-block-end")}}
+  - {{CSSxRef("border-block-end-width")}}
+  - {{CSSxRef("border-block-start")}}
+  - {{CSSxRef("border-block-start-width")}}
+  - {{CSSxRef("border-block-style")}}
+  - {{CSSxRef("border-block-width")}}
+  - {{CSSxRef("border-inline")}}
+  - {{CSSxRef("border-inline-end")}}
+  - {{CSSxRef("border-inline-end-width")}}
+  - {{CSSxRef("border-inline-start")}}
+  - {{CSSxRef("border-inline-start-width")}}
+  - {{CSSxRef("border-inline-width")}}
+- [CSS ボックスサイズ指定](/ja/docs/Web/CSS/Guides/Box_sizing)モジュール
+  - {{cssxref("aspect-ratio")}}
+  - {{cssxref("box-sizing")}}
+  - {{cssxref("contain-intrinsic-block-size")}}
+  - {{cssxref("contain-intrinsic-height")}}
+  - {{cssxref("contain-intrinsic-inline-size")}}
+  - {{cssxref("contain-intrinsic-size")}}
+  - {{cssxref("contain-intrinsic-width")}}
+  - {{cssxref("height")}}
+  - {{cssxref("max-height")}}
+  - {{cssxref("max-width")}}
+  - {{cssxref("min-height")}}
+  - {{cssxref("min-width")}}
+  - {{cssxref("width")}}
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
+  - {{CSSxRef("overflow")}} 一括指定
+  - {{CSSxRef("overflow-block")}}
+  - {{CSSxRef("overflow-clip-margin")}}
+  - {{CSSxRef("overflow-inline")}}
+  - {{CSSxRef("overflow-x")}}
+  - {{CSSxRef("overflow-y")}}
+  - {{CSSxRef("text-overflow")}}
 
 ## 仕様書
 
 {{Specifications}}
+
+## 関連情報
+
+- [CSS 表示方法](/ja/docs/Web/CSS/Guides/Display)モジュール
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)モジュール
+- [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)モジュール
+- [CSS 表](/ja/docs/Web/CSS/Guides/Table)モジュール
+- [CSS 位置指定レイアウト](/ja/docs/Web/CSS/Guides/Positioned_layout)モジュール
+- [CSS 断片化](/ja/docs/Web/CSS/Guides/Fragmentation)モジュール
+- [アスペクト比の理解](/ja/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)
