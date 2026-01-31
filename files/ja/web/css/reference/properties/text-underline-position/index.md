@@ -1,12 +1,11 @@
 ---
 title: text-underline-position
 slug: Web/CSS/Reference/Properties/text-underline-position
-original_slug: Web/CSS/text-underline-position
 l10n:
-  sourceCommit: 919d97a4bda8004f63f655d3f9576c27a82c8a2a
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-**`text-underline-position`** は [CSS](/ja/docs/Web/CSS) のプロパティであり、{{cssxref("text-decoration")}} プロパティの `underline` の値で設定される下線 (傍線) の位置を指定します。
+**`text-underline-position`** は [CSS](/ja/docs/Web/CSS) のプロパティであり、{{cssxref("text-decoration")}} プロパティの `underline` の値で設定される下線（傍線）の位置を指定します。
 
 {{InteractiveExample("CSS デモ: text-underline-position")}}
 
@@ -24,7 +23,7 @@ text-underline-position: under;
     <span class="transition-all" id="example-element"
       >C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub></span
     >
-    is the chemical formula for caffeine.
+    は、カフェインの化学式です。
   </p>
 </section>
 ```
@@ -63,7 +62,7 @@ text-underline-position: unset;
 ### 値
 
 - `auto`
-  - : {{glossary("user agent", "ユーザーエージェント")}}は、傍線を文字のベースラインの位置に配置するか、その下に配置するかを独自のアルゴリズムで決定します。
+  - : {{glossary("user agent", "ユーザーエージェント")}}は、傍線を{{glossary("/Baseline/Typography", "アルファベットベースライン")}}の位置に配置するか、その下に配置するかを独自のアルゴリズムで決定します。
 - `from-font`
   - : フォントファイルに推奨される位置についての情報があった場合、その値を使用します。フォントファイルにこの情報がない場合は、`auto` が設定された場合の動作と同様、ブラウザーが適切な位置を選択します。
 - `under`
@@ -123,7 +122,7 @@ p {
 
 この例では、どちらの段落にも太い下線を引いています。横書きのテキストでは `text-underline-position: under;` を使用して、下線をすべてのディセンダーの下に引いています。
 
-[`writing-mode`](/ja/docs/Web/CSS/Reference/Properties/writing-mode) を縦書きに設定した場合、必要に応じて `left` または `right` を使用して、傍線をテキストの左と右のどちらに引くか決めることができます。
+{{cssxref("writing-mode")}} を縦書きに設定した場合、必要に応じて `left` または `right` を使用して、傍線をテキストの左と右のどちらに引くか決めることができます。
 
 ライブサンプルはこのようになります。
 
