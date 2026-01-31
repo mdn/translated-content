@@ -1,9 +1,8 @@
 ---
 title: margin
 slug: Web/CSS/Reference/Properties/margin
-original_slug: Web/CSS/margin
 l10n:
-  sourceCommit: 19c64b411b90f999565db9fdb815463ba66c9714
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`margin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の全四辺の[マージン領域](/ja/docs/Web/CSS/Guides/Box_model/Introduction#マージン領域)を設定します。
@@ -92,7 +91,7 @@ margin: 2px 1em 0 auto;
 /* anchor-size() の値 */
 margin: 5% anchor-size(width);
 margin: calc(anchor-size(width) / 4) 1em 0
-  anchor-size(--myAnchor self-inline, 50px);
+  anchor-size(--my-anchor self-inline, 50px);
 
 /* キーワード値 */
 margin: auto;
@@ -116,7 +115,7 @@ margin: unset;
 
 - {{cssxref("length")}}
   - : マージンの寸法を固定値で表したものです。
-    - アンカー位置指定要素の場合、 {{cssxref("anchor-size()")}} 関数は、関連付けられたアンカー要素の幅または高さに対する相対的な {{cssxref("&lt;length&gt;")}} 値に解決されます（[アンカーサイズに基づいて要素のマージンを設定](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#setting_element_margin_based_on_anchor_size)を参照してください）。
+    - アンカー位置指定要素に対して、{{cssxref("anchor-size()")}} 関数は、関連するアンカー要素のサイズに相対的な {{cssxref("&lt;length&gt;")}} 値が相対的に設定されます（関連付けられたアンカー要素の幅または高さに基づく（[アンカーサイズに基づく要素のマージンの設定](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#アンカーサイズに基づく要素のマージンの設定)を参照）。
 
 - {{cssxref("percentage")}}
   - : マージンの寸法を[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。
@@ -215,7 +214,7 @@ margin: auto; /* 上と下: 0 のマージン     */
 
 - {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}
 - {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}}
-- 一括指定の {{cssxref("margin-block")}} と {{cssxref("margin-inline")}}
+- {{cssxref("margin-block")}} と {{cssxref("margin-inline")}} 一括指定
 - [マージンの相殺の習得](/ja/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
-- [CSS 基本ボックスモデル入門](/ja/docs/Web/CSS/Guides/Box_model/Introduction)
+- [CSS 基本ボックスモデル入門](/ja/docs/Web/CSS/Guides/Box_model/Introduction)ガイド
 - [CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model)モジュール
