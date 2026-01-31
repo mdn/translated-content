@@ -1,6 +1,5 @@
 ---
 title: "ARIA: роль checkbox"
-
 short-title: checkbox
 slug: Web/Accessibility/ARIA/Reference/Roles/checkbox_role
 ---
