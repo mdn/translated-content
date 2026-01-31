@@ -1,16 +1,18 @@
 ---
 title: counter-set
 slug: Web/CSS/Reference/Properties/counter-set
-original_slug: Web/CSS/counter-set
 l10n:
-  sourceCommit: cdc0015b727804fa293bb33e5abcefce688729ab
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`counter-set`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[CSS カウンター](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters)を指定された値に設定します。
 
-そのカウンターが存在しない場合、`counter-set`プロパティは、空白で区切られたカウンターと値のペアのリストに名前付きカウンターが含まれている場合、新しいカウンターを作成します。しかし、新しいカウンターを作成するには、 {{cssxref("counter-reset")}} プロパティを使用することをお勧めします。
+そのカウンターが存在しない場合、`counter-set` プロパティは、カウンターと値のペアの空白で区切られたリストにあるそれぞれの名前付きカウンターについて、新しいカウンターを作成します。しかし、新しいカウンターを作成するには、 {{cssxref("counter-reset")}} プロパティを使用することをお勧めします。
 
 リストに含まれている名前付きカウンターに値が設定されていない場合、そのカウンターの値は `0` に設定されます。
+
+> [!NOTE]
+> カウンターの値は {{cssxref("counter-increment")}} プロパティを使用して増減させることができます。
 
 {{InteractiveExample("CSS デモ: counter-set")}}
 
@@ -63,12 +65,9 @@ h2 {
 }
 
 h2::before {
-  content: "Chapter " counter(chapter-count) ": ";
+  content: "第 " counter(chapter-count) " 章: ";
 }
 ```
-
-> [!NOTE]
-> カウンターの値は {{cssxref("counter-increment")}} プロパティを使用して増減させることができます。
 
 ## 構文
 
@@ -141,7 +140,7 @@ h1 {
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-reset")}}
 - {{cssxref("@counter-style")}}
-- {{cssxref("counter", "counter()")}} および {{cssxref("counters", "counters()")}} 関数
+- {{cssxref("counter()")}} および {{cssxref("counters()")}} 関数
 - {{cssxref("content")}} プロパティ
 - [CSS リストとカウンター](/ja/docs/Web/CSS/Guides/Lists)モジュール
 - [CSS カウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)モジュール
