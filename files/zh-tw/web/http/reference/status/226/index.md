@@ -2,7 +2,7 @@
 title: 226 IM Used
 slug: Web/HTTP/Reference/Status/226
 l10n:
-  sourceCommit: 975650c2f6ea843d6f7cbc721aee5dbc1db907b2
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 HTTP **`226 IM Used`** [成功回應](/zh-TW/docs/Web/HTTP/Reference/Status#成功回應)狀態碼表示伺服器正在回傳一個{{Glossary("delta", "增量")}}以回應 {{HTTPMethod("GET")}} 請求。它用於*HTTP 增量編碼*的上下文中。

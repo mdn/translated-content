@@ -2,7 +2,7 @@
 title: Math.acos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acos
 l10n:
-  sourceCommit: b6cab42cf7baf925f2ef6a2c98db0778d9c2ec46
+  sourceCommit: 0fb5a7e4cc045ba0b1dc453624f196309d9bea10
 ---
 
 **`Math.acos()`** 靜態方法會回傳一個數值的反餘弦值（以弧度表示）。也就是說，
@@ -74,3 +74,4 @@ Math.acos(2); // NaN
 - {{jsxref("Math.cos()")}}
 - {{jsxref("Math.sin()")}}
 - {{jsxref("Math.tan()")}}
+- CSS {{cssxref("acos()")}} 函式

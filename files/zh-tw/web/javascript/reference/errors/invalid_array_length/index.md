@@ -2,7 +2,7 @@
 title: "RangeError: invalid array length"
 slug: Web/JavaScript/Reference/Errors/Invalid_array_length
 l10n:
-  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
 當你指定一個負數、浮點數，或超過平台支援最大值的陣列長度時，會發生 JavaScript 的「Invalid array length」例外（例如：在建立 {{jsxref("Array")}} 或 {{jsxref("ArrayBuffer")}} 時，或在設定 {{jsxref("Array/length", "length")}} 屬性時）。

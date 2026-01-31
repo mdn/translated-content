@@ -2,7 +2,7 @@
 title: 208 Already Reported
 slug: Web/HTTP/Reference/Status/208
 l10n:
-  sourceCommit: 975650c2f6ea843d6f7cbc721aee5dbc1db907b2
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 HTTP **`208 Already Reported`** [成功回應](/zh-TW/docs/Web/HTTP/Reference/Status#成功回應)狀態碼用於 {{HTTPStatus("207", "207 Multi-Status")}} 回應中，以節省空間並避免衝突。此回應專門用於基於 Web 的分散式編寫和版本控制（{{Glossary("WebDAV")}}）的上下文中。

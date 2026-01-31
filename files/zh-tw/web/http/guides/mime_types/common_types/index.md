@@ -3,7 +3,7 @@ title: 常見的媒體類型
 short-title: 常見類型
 slug: Web/HTTP/Guides/MIME_types/Common_types
 l10n:
-  sourceCommit: 7e52ccf8751ee9f4b3dd4a466979418af48c1fbe
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 本主題列出了最常見的 MIME 類型及其對應的文件類型，並按其常見的副檔名排序。
