@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/HTML_video_and_audio
 original_slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn_web_development/Core/Structuring_content/General_embedding_technologies", "conflicting/Learn_web_development/Core/Structuring_content")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_images", "Learn_web_development/Core/Structuring_content/General_embedding_technologies", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 Agora que estamos à vontade para adicionar imagens simples a uma página da Web, o próximo passo é começar a adicionar players de vídeo e áudio aos seus documentos HTML! Neste artigo vamos olhar para fazer exatamente isso com os elementos {{htmlelement("video")}} e {{htmlelement("audio")}} ; Então, vamos terminar de olhar como adicionar legendas/subtítulos aos seus vídeos.
 
