@@ -1,14 +1,13 @@
 ---
 title: box-sizing
 slug: Web/CSS/Reference/Properties/box-sizing
-original_slug: Web/CSS/box-sizing
+l10n:
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`box-sizing`** définit la façon dont la largeur totale et la hauteur totale d'un élément sont calculées.
 
-La propriété CSS **`box-sizing`** définit la façon dont la hauteur et la largeur totale d'un élément est calculée (avec [le modèle de boîte CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model)).
-
-{{InteractiveExample("CSS Demo: box-sizing")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: box-sizing")}}
 
 ```css interactive-example-choice
 box-sizing: content-box;
@@ -32,9 +31,9 @@ padding: 5px;
 ```html interactive-example
 <section id="default-example">
   <div id="example-element-parent">
-    <p>Parent container</p>
+    <p>Conteneur parent</p>
     <div class="transition-all" id="example-element">
-      <p>Child container</p>
+      <p>Conteneur enfant</p>
     </div>
   </div>
 </section>
@@ -51,7 +50,7 @@ padding: 5px;
 #example-element {
   height: 60px;
   margin: 2em auto;
-  background-color: rgba(81, 81, 81, 0.6);
+  background-color: rgb(81 81 81 / 0.6);
 }
 
 #example-element > p {
@@ -59,26 +58,17 @@ padding: 5px;
 }
 ```
 
-En CSS, la largeur et la hauteur affectées à un élément s'appliquent par défaut à la boîte de contenu (_content box_) de l'élément. Si l'élément possède une bordure (_border_) ou du remplissage (_padding_), celui-ci est ajouté à la largeur et/ou à la hauteur de la boîte affichée à l'écran. Cela signifie qu'il faut ajuster les valeurs de hauteur et de largeur afin qu'elles permettent d'ajouter n'importe quelle bordure ou n'importe quel remplissage qui serait ajouté par la suite.
-
-La propriété `box-sizing` peut être utilisée afin d'ajuster ce comportement :
-
-- `content-box` est la valeur par défaut et correspond au comportement par défaut décrit ci-avant. Si on définit un élément avec une largeur de 100 pixels, la boîte de contenu de cet élément mesurera 100 pixels de large et la largeur de la bordure et/ou du remplissage sera alors ajoutée pour constituer la largeur finalement affichée.
-- `border-box` indique au navigateur de prendre en compte la bordure et le remplissage dans la valeur définie pour la largeur et la hauteur. Autrement dit, si on définit un élément avec une largeur de 100 pixels, ces 100 pixels inclueront la bordure et le remplissage éventuellement ajoutés et c'est le contenu de la boîte qui sera compressé pour absorber cette largeur supplémentaire. Cela permet généralement de simplifier le dimensionnement des éléments.
-
-> [!NOTE]
-> Il est souvent utile de définir `box-sizing` à `border-box` aux éléments de mise en page. Cela facilite grandement la gestion de la taille des éléments et élimine généralement un certain nombre d'écueils que vous pouvez rencontrer lors de la mise en page de votre contenu. D'autre part, lors de l'utilisation de la `position: relative` ou `position: absolute`, l'utilisation de `box-sizing: content-box` permet aux valeurs de positionnement d'être relatives au contenu, et indépendantes des changements de taille des bordures et de la taille de la marge interne, ce qui est parfois souhaitable.
-
 ## Syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-box-sizing: content-box;
 box-sizing: border-box;
+box-sizing: content-box;
 
-/* Valeurs globales */
+/* Global values */
 box-sizing: inherit;
 box-sizing: initial;
+box-sizing: revert;
+box-sizing: revert-layer;
 box-sizing: unset;
 ```
 
@@ -87,11 +77,28 @@ La propriété `box-sizing` peut être définie avec l'un des mots-clés suivant
 ### Valeurs
 
 - `content-box`
-  - : C'est la valeur initiale et la valeur par défaut, spécifiée dans le standard CSS. Les propriétés {{cssxref("width")}} et {{cssxref("height")}} sont mesurées en incluant le contenu, mais pas le remplissage, la bordure, la marge extérieure ou intérieure. Les dimensions de l'élément sont donc calculées à partir de la hauteur et de la largeur du contenu (on ne tient pas compte de la bordure ou du remplissage (_padding_)). Ainsi, `.box {width: 350px; border:10px solid black;}` fournira une boîte dont la largeur vaut `370px`.
-- `border-box`
-  - : Les propriétés {{cssxref("width")}} et {{cssxref("height")}} incluent le contenu, le remplissage (_padding_), la bordure, mais pas la marge. C'est le [modèle de boîte](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) utilisé par Internet Explorer lorsque le document est en mode de compatibilité (Quirks). La boîte de contenu ne peut pas être négative et est ramenée à 0 si nécessaire, il est donc impossible d'utiliser `border-box` pour faire disparaître l'élément. Les dimensions de l'élément sont calculées comme la somme de la bordure, du remplissage (_padding_) et du contenu.
+  - : Il s'agit de la valeur initiale et par défaut, telle que définie dans la norme CSS. Les propriétés {{CSSxRef("width")}} et {{CSSxRef("height")}} incluent le contenu, mais n'incluent pas le remplissage, la bordure ou la marge. Par exemple, `.box {width: 350px; border: 10px solid black;}` affiche une boîte d'une largeur de 370px.
 
-    Ici, les dimensions de l'élément sont calculées comme suit : _largeur = bordure + marge interne + largeur du contenu_, et _hauteur = bordure + marge interne + hauteur du contenu_.
+    Ici, les dimensions de l'élément sont calculées ainsi&nbsp;: _largeur = largeur du contenu_, et _hauteur = hauteur du contenu_. (La bordure et le remplissage ne sont pas inclus dans le calcul.)
+
+- `border-box`
+  - : Les propriétés {{CSSxRef("width")}} et {{CSSxRef("height")}} incluent le contenu, le remplissage et la bordure, mais n'incluent pas la marge. Notez que le remplissage et la bordure seront à l'intérieur de la boîte. Par exemple, `.box {width: 350px; border: 10px solid black;}` affiche une boîte d'une largeur de 350px, avec une zone de contenu de 330px de large. La boîte de contenu ne peut pas être négative et est ramenée à 0, il est donc impossible d'utiliser `border-box` pour faire disparaître l'élément.
+
+    Ici, les dimensions de l'élément sont calculées ainsi&nbsp;: _largeur = bordure + marge interne + largeur du contenu_, et _hauteur = bordure + marge interne + hauteur du contenu_.
+
+## Description
+
+Par défaut, dans le [modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model/Introduction), la propriété `width` et la propriété `height` que vous attribuez à un élément ne s'appliquent qu'à la boîte de contenu de l'élément. Si l'élément possède une bordure ou un remplissage, ceux-ci sont alors ajoutés à la largeur et à la hauteur pour obtenir la taille de la boîte affichée à l'écran. Cela signifie que lorsque vous définissez `width` et `height`, vous devez ajuster la valeur que vous donnez pour tenir compte de toute bordure ou marge interne qui pourrait être ajoutée. Par exemple, si vous avez quatre boîtes avec `width: 25%;`, si l'une d'elles possède un remplissage à gauche ou à droite ou une bordure à gauche ou à droite, elles ne tiendront pas par défaut sur une seule ligne dans les contraintes du conteneur parent.
+
+La propriété `box-sizing` peut être utilisée pour ajuster ce comportement&nbsp;:
+
+- `content-box` applique le comportement par défaut du modèle de boîte CSS. Si vous définissez la largeur d'un élément à 100 pixels, alors la boîte de contenu de l'élément fera 100 pixels de large, et la largeur de toute bordure ou marge interne sera ajoutée à la largeur finale affichée, rendant l'élément plus large que 100px.
+- `border-box` indique au navigateur de prendre en compte toute bordure et marge interne dans les valeurs que vous indiquez pour la largeur et la hauteur d'un élément. Si vous définissez la largeur d'un élément à 100 pixels, ces 100 pixels incluront toute bordure ou marge interne ajoutée, et la boîte de contenu se réduira pour absorber cette largeur supplémentaire. Cela rend généralement le dimensionnement des éléments beaucoup plus simple.
+
+  `box-sizing: border-box` est le style par défaut que les navigateurs appliquent aux éléments HTML {{HTMLElement("table")}}, {{HTMLElement("select")}} et {{HTMLElement("button")}}, ainsi qu'aux éléments HTML {{HTMLElement("input")}} dont le type est `{{HTMLElement("input/radio", "radio")}}`, `{{HTMLElement("input/checkbox", "checkbox")}}`, `{{HTMLElement("input/reset", "reset")}}`, `{{HTMLElement("input/button", "button")}}`, `{{HTMLElement("input/submit", "submit")}}`, `{{HTMLElement("input/color", "color")}}` ou `{{HTMLElement("input/search", "search")}}`.
+
+> [!NOTE]
+> Il est souvent utile de définir `box-sizing` sur `border-box` pour mettre en page des éléments. Cela rend la gestion des tailles des éléments beaucoup plus simple, et élimine généralement un certain nombre de pièges que vous pouvez rencontrer lors de la mise en page de votre contenu. En revanche, lorsque vous utilisez `position: relative` ou `position: absolute`, l'utilisation de `box-sizing: content-box` permet aux valeurs de positionnement d'être relatives au contenu, et indépendantes des modifications de la bordure et du remplissage, ce qui peut parfois être souhaitable.
 
 ## Définition formelle
 
@@ -101,12 +108,21 @@ La propriété `box-sizing` peut être définie avec l'un des mots-clés suivant
 
 {{CSSSyntax}}
 
-> [!NOTE]
-> La valeur `padding-box` a été dépréciée.
-
 ## Exemples
 
-### CSS
+### Tailles de boîte avec `content-box` et `border-box`
+
+Cet exemple montre comment différentes valeurs de `box-sizing` modifient la taille affichée de deux éléments par ailleurs identiques.
+
+#### HTML
+
+```html
+<div class="content-box">Content box</div>
+<br />
+<div class="border-box">Border box</div>
+```
+
+#### CSS
 
 ```css
 div {
@@ -134,17 +150,9 @@ div {
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<div class="content-box">Content box</div>
-<br />
-<div class="border-box">Border box</div>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples","auto","200")}}
+{{EmbedLiveSample("Tailles de boîte avec `content-box` et `border-box`", "auto", 300)}}
 
 ## Spécifications
 
@@ -156,4 +164,4 @@ div {
 
 ## Voir aussi
 
-- [Apprendre : Le modèle de boîte CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model)
+- [Le modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model/Introduction)
