@@ -1,12 +1,11 @@
 ---
 title: atan2()
 slug: Web/CSS/Reference/Values/atan2
-original_slug: Web/CSS/atan2
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 1a4df4e8a562f50c4109e683e3c3637799425621
 ---
 
-**`atan2()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 `-infinity` から `infinity` までの 2 つの値の逆タンジェントを返す三角関数です。この関数は 2 つの引数を受け入れ、`-180deg` から `180deg` までの {{cssxref("&lt;angle&gt;")}} を表すラジアン数を返します。
+**`atan2()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 `-infinity` から `infinity` までの 2 つの値の逆タンジェントを返す三角関数です。この関数は 2 つの引数を受け入れ、`-180deg` から `180deg` までの {{cssxref("angle")}} を返します。
 
 ## 構文
 
@@ -36,7 +35,7 @@ transform: rotate(atan2(e, 30));
 
 ### 返値
 
-2 つの値 `x` および `y` が指定された場合、関数 `atan2(y, x)` は、正の x 軸と原点から点 `(x, y)` までの光線の間の {{cssxref("&lt;angle&gt;")}} を計算して返します。
+2 つの値 `x` および `y` が指定された場合、関数 `atan2(y, x)` は、正の x 軸と原点から点 `(x, y)` までの光線の間の {{cssxref("angle")}} を計算して返します。
 
 ## 形式文法
 
@@ -46,7 +45,7 @@ transform: rotate(atan2(e, 30));
 
 ### 要素の回転
 
-`atan2()` 関数は {{cssxref("&lt;angle&gt;")}} を返すので、要素の回転 ({{cssxref("transform-function/rotate", "rotate")}}) に使用することができます。
+`atan2()` 関数は {{cssxref("angle")}} を返すので、要素の回転 ({{cssxref("transform-function/rotate", "rotate")}}) に使用することができます。
 
 #### HTML
 

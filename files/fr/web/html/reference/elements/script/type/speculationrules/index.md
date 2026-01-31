@@ -588,4 +588,4 @@ Il n'est pas nécessaire pour les règles de type document (qui utilisent `where
 
 - [Prérendre des pages dans Chrome pour des navigations instantanées](https://developer.chrome.com/docs/web-platform/prerender-pages?hl=fr) sur developer.chrome.com
 - [Chargement spéculatif](/fr/docs/Web/Performance/Guides/Speculative_loading)
-- [API Speculation Rules](/fr/docs/Web/API/Speculation_Rules_API)
+- [L'API Speculation Rules](/fr/docs/Web/API/Speculation_Rules_API)

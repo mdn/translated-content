@@ -56,6 +56,7 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 
 ### ハ
 
+- [バックグラウンドタスク API](/ja/docs/Web/API/Background_Tasks_API)
 - [バックグラウンド同期 API](/ja/docs/Web/API/Background_Synchronization_API)
 - [バックグラウンドフェッチ API](/ja/docs/Web/API/Background_Fetch_API)
 - [バッジ API](/ja/docs/Web/API/Badging_API)

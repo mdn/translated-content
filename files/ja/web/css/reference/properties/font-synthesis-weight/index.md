@@ -1,9 +1,8 @@
 ---
 title: font-synthesis-weight
 slug: Web/CSS/Reference/Properties/font-synthesis-weight
-original_slug: Web/CSS/font-synthesis-weight
 l10n:
-  sourceCommit: 28368ab728eed206d9069f5ba5b889e990ff810c
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`font-synthesis-weight`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントファミリーに太字書体がない場合に、ブラウザーが合成するかどうかを指定します。
@@ -61,7 +60,7 @@ font-synthesis-weight: unset;
 #### CSS
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Montserrat&display=swap";
 
 .english {
   font-family: "Montserrat", sans-serif;

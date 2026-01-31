@@ -79,7 +79,7 @@ Comme un champ en lecture seule ne peut pas voir sa valeur modifiée par une int
 La seule façon de modifier dynamiquement la valeur de l'attribut readonly est via un script.
 
 > [!NOTE]
-> L'attribut `required` n'est pas autorisé sur les entrées pour lesquelles l'attribut `readonly` est spécifié.
+> L'attribut `required` n'est pas autorisé sur les entrées pour lesquelles l'attribut `readonly` est défini.
 
 ### Utilisabilité
 
@@ -89,7 +89,7 @@ Les navigateurs affichent l'attribut `readonly`.
 
 Si l'élément est en lecture seule, la valeur de l'élément ne peut pas être mise à jour par l'utilisateur·ice et ne participe pas à la validation des contraintes.
 
-## Exemple
+## Exemples
 
 ### HTML
 
@@ -122,7 +122,7 @@ Si l'élément est en lecture seule, la valeur de l'élément ne peut pas être 
 
 ### Résultat
 
-{{EmbedLiveSample('Exemple')}}
+{{EmbedLiveSample("Exemples")}}
 
 ## Spécifications
 
@@ -134,6 +134,6 @@ Si l'élément est en lecture seule, la valeur de l'élément ne peut pas être 
 
 ## Voir aussi
 
-- Les pseudo-classses {{CSSxRef(':read-only')}} et {{CSSxRef(':read-write')}}
-- L'élément {{HTMLElement('input')}}
-- L'élément {{HTMLElement('select')}}
+- Les pseudo-classses CSS {{CSSxRef(":read-only")}} et {{CSSxRef(":read-write")}}
+- L'élément {{HTMLElement("input")}}
+- L'élément {{HTMLElement("select")}}

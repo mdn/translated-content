@@ -4,38 +4,31 @@ slug: Learn_web_development/Core/Styling_basics/Combinators
 original_slug: Learn/CSS/Building_blocks/Selectors/Combinators
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors", "Learn_web_development/Core/Styling_basics")}}
 
 Les derniers sélecteurs que nous allons étudier sont appelés combinateurs, car ils combinent différents sélecteurs de façon à leur donner une relation utile et l'emplacement du contenu dans le document.
 
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis:</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Connaissances informatiques de base,
-        <a
-          href="/fr/docs/https://developer.mozilla.org/fr/docs/Apprendre/Commencer_avec_le_web/Installation_outils_de_base"
-          >les outils de base installés</a
-        >, connaissance de base de
-        <a
-          href="/fr/docs/https://developer.mozilla.org/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers"
-          >gestion des fichiers</a
-        >, les bases du HTML (voir <a
-          href="/fr/docs/Apprendre/HTML/Introduction_à_HTML"
-          >Introduction au HTML</a
-        >), et une idée du fonctionnement du CSS (voir
-        <a
-          href="/fr/docs/https://developer.mozilla.org/fr/docs/Learn/CSS/First_steps"
-          >Premiers pas avec CSS</a
-        >.)
+        Notions de base en HTML (étudiez
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >Syntaxe HTML de base</a
+        >), <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">Sélecteurs CSS de base</a>.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif:</th>
+      <th scope="row">Objectifs d'apprentissage&nbsp;:</th>
       <td>
-        En savoir plus sur les différents sélecteurs combinateurs utilisables en
-        CSS.
+        <ul>
+          <li>Le concept fondamental de combinateurs.</li>
+          <li>Combinateurs descendant et enfant.</li>
+          <li>Combinateurs de frère adjacent et de frère général.</li>
+          <li>Imbrication.</li>
+          <li>Combinaison de combinateurs avec des sélecteurs.</li>
+        <ul>
       </td>
     </tr>
   </tbody>
@@ -43,15 +36,30 @@ Les derniers sélecteurs que nous allons étudier sont appelés combinateurs, ca
 
 ## Combinateur descendant
 
-Le **combinateur descendant**— en général représenté par un seul espace (" ") — combine deux sélecteurs de sorte que les éléments choisis par le second sélecteur sont sélectionnés s'ils ont un élément ancêtre (parent, parent de parent, parent de parent de parent, etc...) qui correspond au premier sélecteur. Les sélecteurs qui utilisent un combinateur descendant sont appelés sélecteurs descendants.
+Le **combinateur descendant** — en général représenté par un seul espace (" ") — combine deux sélecteurs de sorte que les éléments choisis par le second sélecteur sont sélectionnés s'ils ont un élément ancêtre (parent, parent de parent, parent de parent de parent, etc...) qui correspond au premier sélecteur. Les sélecteurs qui utilisent un combinateur descendant sont appelés sélecteurs descendants.
 
 ```css
-body article p
+body article p {
+}
 ```
 
-Dans l'exemple ci-dessous, nous ne sélectionnons que l'élément `<p>`, qui est à l'intérieur d'un élément de classe `.box`.
+Dans l'exemple ci-dessous, nous sélectionnons uniquement l'élément `<p>` qui se trouve à l'intérieur d'un élément ayant la classe `.box`.
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/descendant.html", '100%', 500)}}
+```html live-sample___descendant
+<div class="box"><p>Le texte est dans un .box</p></div>
+<p>Le texte n'est pas dans un .box</p>
+```
+
+```css live-sample___descendant
+.box p {
+  color: red;
+}
+```
+
+{{EmbedLiveSample("descendant")}}
+
+> [!NOTE]
+> [Aparté&nbsp;: Sélecteurs composés <sup>(angl.)</sup>](https://scrimba.com/frontend-path-c0j/~0br?via=mdn) <sup>[_Partenaire d'apprentissage MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations)</sup> de Scrimba est une leçon interactive qui propose un traitement pratique des combinateurs descendants.
 
 ## Combinateur enfant
 
@@ -114,4 +122,4 @@ Nous en avons beaucoup vu dans cet article, mais pouvez-vous vous souvenir des i
 
 Ceci est la dernière section de nos leçons sur les sélecteurs. Ensuite, nous passerons à une autre partie importante du CSS - le [modèle de Boîte](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model).
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors", "Learn_web_development/Core/Styling_basics")}}

@@ -42,10 +42,10 @@ l10n:
   - [`hwb()`](/ko/docs/Web/CSS/color_value/hwb)
   - [`lab()`](/ko/docs/Web/CSS/color_value/lab)
   - [`lch()`](/ko/docs/Web/CSS/color_value/lch)
-  - [`oklab()`](/ko/docs/Web/CSS/color_value/oklab)
+  - [`oklab()`](/ko/docs/Web/CSS/Reference/Values/color_value/oklab)
   - [`oklch()`](/ko/docs/Web/CSS/color_value/oklch)
   - [`color()`](/ko/docs/Web/CSS/color_value/color)
-- [`color-contrast()`](/ko/docs/Web/CSS/color_value) {{Experimental_Inline}}
+- [`color-contrast()`](/ko/docs/Web/CSS/Reference/Values/color_value) {{Experimental_Inline}}
 - [`color-mix()`](/ko/docs/Web/CSS/color_value/color-mix)
 
 ### 자료형
@@ -62,7 +62,7 @@ l10n:
 ### 용어 사전과 키워드
 
 - {{glossary("color space")}}
-- [`currentcolor`](/ko/docs/Web/CSS/color_value#currentcolor_keyword)
+- [`currentcolor`](/ko/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword)
 - [`transparent`](/ko/docs/Web/CSS/named-color#transparent)
 
 ### 인터페이스
@@ -113,7 +113,7 @@ l10n:
 - {{glossary("Interpolation")}} 용어 사전
 - [`@font-palette-values`](/ko/docs/Web/CSS/@font-palette-values) @규칙 [`override-colors`](/ko/docs/Web/CSS/@font-palette-values/override-colors) 설명자
 - [`@color-profile`](/ko/docs/Web/CSS/@color-profile) @규칙
-- [`color-gamut`](/ko/docs/Web/CSS/@media/color-gamut) @미디어 규칙
+- [`color-gamut`](/ko/docs/Web/CSS/Reference/At-rules/@media/color-gamut) @미디어 규칙
 - [`forced-colors`](/ko/docs/Web/CSS/@media/forced-colors) @미디어 규칙
 
 ## 명세서
@@ -122,9 +122,9 @@ l10n:
 
 ## 같이 보기
 
-- [CSS 색상 조정](/ko/docs/Web/CSS/CSS_color_adjustment) 모듈과 {{cssxref("print-color-adjust")}} 속성.
-- [CSS 이미지](/ko/docs/Web/CSS/CSS_images), CSS [`<gradient>`](/ko/docs/Web/CSS/gradient) 이미지가 정의되어 있는 곳의 모듈
+- [CSS 색상 조정](/ko/docs/Web/CSS/Guides/Color_adjustment) 모듈과 {{cssxref("print-color-adjust")}} 속성.
+- [CSS 이미지](/ko/docs/Web/CSS/Guides/Images), CSS [`<gradient>`](/ko/docs/Web/CSS/Reference/Values/gradient) 이미지가 정의되어 있는 곳의 모듈
 - [`VideoColorSpace`](/ko/docs/Web/API/VideoColorSpace) 인터페이스
 - SVG [`<feColorMatrix>`](/ko/docs/Web/SVG/Element/feColorMatrix) 요소
 - [Canvas API: 스타일과 색상 적용](/ko/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#colors)
-- [색상 선택 도구](/ko/docs/Web/CSS/CSS_colors/Color_format_converter): 이 도구는 사용자 정의 색상을 만들고, 조정하고 실험하는 것을 쉽게 만들어줍니다.
+- [색상 선택 도구](/ko/docs/Web/CSS/Guides/Colors/Color_format_converter): 이 도구는 사용자 정의 색상을 만들고, 조정하고 실험하는 것을 쉽게 만들어줍니다.

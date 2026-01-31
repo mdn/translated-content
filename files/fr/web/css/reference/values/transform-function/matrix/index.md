@@ -1,18 +1,44 @@
 ---
 title: matrix()
 slug: Web/CSS/Reference/Values/transform-function/matrix
-original_slug: Web/CSS/transform-function/matrix
+l10n:
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
-{{CSSRef}}
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`matrix()`** définit une matrice de transformation homogène en 2D. Son résultat est un type de donnée {{CSSxRef("&lt;transform-function&gt;")}}.
 
-La fonction **`matrix()`** définit une matrice homogène de transformation, définie par 6 coefficients. Les paramètres de cette fonction sont ces coefficients, dans l'ordre des lignes puis des colonnes, suivis des coefficients de translation.
+> [!NOTE]
+> La fonction `matrix(a, b, c, d, tx, ty)` est une forme abrégée de `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)`.
 
-`matrix(a, b, c, d, tx, ty)` est une notation raccourcie, équivalente à `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)`.
+{{InteractiveExample("Démonstration CSS&nbsp;: matrix()")}}
+
+```css interactive-example-choice
+transform: matrix(1.2, 0.2, -1, 0.9, 0, 20);
+```
+
+```css interactive-example-choice
+transform: matrix(0.4, 0, 0.5, 1.2, 60, 10);
+```
+
+```css interactive-example-choice
+transform: matrix(0, 1, 1, 0, 0, 0);
+```
+
+```css interactive-example-choice
+transform: matrix(0.1, 1, -0.3, 1, 0, 0);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 ## Syntaxe
-
-La fonction `matrix()` s'utilise avec 6 valeurs. Les valeurs constantes sont implicites et ne sont pas passées comme paramètres. Les autres paramètres sont décrits dans l'ordre suivant d'abord les colonnes.
 
 ```css
 matrix(a, b, c, d, tx, ty)
@@ -20,70 +46,43 @@ matrix(a, b, c, d, tx, ty)
 
 ### Valeurs
 
-- `a` `b` `c` `d`
-  - : Les coefficients de la matrice, de type [`<number>`](/fr/docs/Web/CSS/Reference/Values/number), qui définissent la transformation linéaire.
-- `tx` `ty`
-  - : Les coefficients de la matrice, de type [`<number>`](/fr/docs/Web/CSS/Reference/Values/number), qui définissent la translation à appliquer.
+La fonction `matrix()` est définie avec six valeurs. Les valeurs constantes sont implicites et ne sont pas transmises en tant que paramètresénbsp;; les autres paramètres sont décrits dans l'ordre des colonnes.
 
-> [!NOTE]
-> Jusqu'à Firefox 16, Gecko permettait d'utiliser des valeurs [`<length>`](/fr/docs/Web/CSS/Reference/Values/length) pour les coefficients `tx` et `ty`.
+- _a_ _b_ _c_ _d_
+  - : Sont des nombres ({{CSSxRef("&lt;number&gt;")}}) décrivant la transformation linéaire.
+- _tx_ _ty_
+  - : Sont des nombres ({{CSSxRef("&lt;number&gt;")}}) décrivant la translation à appliquer.
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
+      <th scope="col"><a href="/fr/docs/Web/CSS/Reference/Values/transform-function#cartesian_coordinates">Cartesian coordinates</a> on <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^2</a></th>
+      <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">Homogeneous coordinates</a> on <a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a></th>
+      <th scope="col">Cartesian coordinates on <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^3</a></th>
+      <th scope="col">Homogeneous coordinates on <a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td colspan="1" rowspan="2">
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr><mtd>a</mtd><mtd>c</mtd></mtr>
-              <mtr><mtd>b</mtd><mtd>d</mtd></mtr></mtable
-            ></mfenced
-          ></math
-        >
+      <td rowspan="2">
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\begin{pmatrix} a & c \\ b & d \end{pmatrix}</annotation></semantics>
+        </math>
       </td>
       <td>
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr><mtd>a</mtd><mtd>c</mtd><mtd>tx</mtd></mtr
-              ><mtr><mtd>b</mtd><mtd>d</mtd><mtd>ty</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
-            ></mfenced
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>tx</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>ty</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{ccc} a & c & tx \\ b & d & ty \\ 0 & 0 & 1 \\ \end{array} \right)</annotation></semantics>
+        </math>
       </td>
-      <td colspan="1" rowspan="2">
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr><mtd>a</mtd><mtd>c</mtd><mtd>tx</mtd></mtr
-              ><mtr><mtd>b</mtd><mtd>d</mtd><mtd>ty</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
-            ></mfenced
-          ></math
-        >
+      <td rowspan="2">
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>tx</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>ty</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{ccc} a & c & tx \\ b & d & ty \\ 0 & 0 & 1 \\ \end{array} \right)</annotation></semantics>
+        </math>
       </td>
-      <td colspan="1" rowspan="2">
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr><mtd>a</mtd><mtd>c</mtd><mtd>0</mtd><mtd>tx</mtd></mtr
-              ><mtr><mtd>b</mtd><mtd>d</mtd><mtd>0</mtd><mtd>ty</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
-            ></mfenced
-          ></math
-        >
+      <td rowspan="2">
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mn>0</mn></mtd><mtd><mi>tx</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mn>0</mn></mtd><mtd><mi>ty</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cccc} a & c & 0 & tx \\ b & d & 0 & ty \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\ \end{array} \right)</annotation></semantics>
+        </math>
       </td>
     </tr>
     <tr>
@@ -92,33 +91,40 @@ matrix(a, b, c, d, tx, ty)
   </tbody>
 </table>
 
+Les valeurs représentent les fonctions suivantes&nbsp;:
+`matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())`.
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
+
 ## Exemples
 
 ### HTML
 
 ```html
-<p>toto</p>
-<p class="transformation">truc</p>
+<div>Normal</div>
+<div class="changed">Modifié</div>
 ```
 
 ### CSS
 
 ```css
-p {
-  width: 50px;
-  height: 50px;
-  background-color: teal;
+div {
+  width: 80px;
+  height: 80px;
+  background-color: skyblue;
 }
 
-.transformation {
-  transform: matrix(0.87, -0.5, 0, 0.87, 0, 1);
-  background-color: blue;
+.changed {
+  transform: matrix(1, 2, -1, 1, 80, 80);
+  background-color: pink;
 }
 ```
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples","100%","200")}}
+{{EmbedLiveSample("Exemples", 350, 350)}}
 
 ## Spécifications
 
@@ -130,7 +136,10 @@ p {
 
 ## Voir aussi
 
-- [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function)
-- [`matrix3d()`](/fr/docs/Web/CSS/Reference/Values/transform-function/matrix3d)
-- [Comprendre les matrices de transformations CSS (en anglais)](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)
+- La proproiété {{CSSxRef("transform")}}
+- Propriétés individuelles de transformation&nbsp;:
+  - {{CSSxRef("translate")}}
+  - {{CSSxRef("scale")}}
+  - {{CSSxRef("rotate")}}
+- Le type de donnée {{CSSxRef("&lt;transform-function&gt;")}}
+- La fonction {{CSSxRef("transform-function/matrix3d", "matrix3d()")}}

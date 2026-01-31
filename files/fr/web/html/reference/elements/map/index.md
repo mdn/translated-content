@@ -1,14 +1,13 @@
 ---
-title: <map>
+title: "<map> : l'élément de carte d'image"
 slug: Web/HTML/Reference/Elements/map
-original_slug: Web/HTML/Element/map
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<map>`** est utilisé avec des éléments {{HTMLElement("area")}} pour définir une carte d'image (une zone de lien cliquable).
 
-L'élément HTML **`<map>`** est utilisé avec des éléments {{HTMLElement("area")}} afin de définir une image cliquable divisée en régions.
-
-{{InteractiveExample("HTML Demo: &lt;map&gt;", "tabbed-standard")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;map&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <map name="infographic">
@@ -45,39 +44,44 @@ img {
 
 ## Attributs
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `name`
-  - : Cet attribut fournit un nom afin que la carte cliquable puisse être référencée. Cet attribut est obligatoire et sa valeur doit être une chaîne de caractères non-vide qui ne contient pas de blancs. La valeur de cet attribut doit être unique pour tous les éléments {{HTMLElement("map")}} du document. Si l'attribut universel `id` est utilisé, `name` devra avoir la même valeur que celui-ci.
+  - : L'attribut `name` donne un nom à la carte afin qu'elle puisse être référencée. L'attribut doit être présent et avoir une valeur non vide ne contenant aucun espace. La valeur de l'attribut `name` ne doit pas être identique à celle de l'attribut `name` d'un autre élément `<map>` dans le même document. Si l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) est également défini, les deux attributs doivent avoir la même valeur.
 
 ## Exemples
 
-### HTML
+### Carte d'image avec deux zones
+
+Cliquez sur le perroquet de gauche pour JavaScript, ou sur le perroquet de droite pour CSS.
+
+#### HTML
 
 ```html
+<!-- Photo de Juliana et Mariana Amorim sur Unsplash -->
 <map name="primary">
-  <area shape="circle" coords="75,75,75" href="left.html" />
-  <area shape="circle" coords="275,75,75" href="right.html" />
+  <area
+    shape="circle"
+    coords="75,75,75"
+    href="https://developer.mozilla.org/docs/Web/JavaScript"
+    target="_blank"
+    alt="JavaScript" />
+  <area
+    shape="circle"
+    coords="275,75,75"
+    href="https://developer.mozilla.org/docs/Web/CSS"
+    target="_blank"
+    alt="CSS" />
 </map>
 <img
   usemap="#primary"
-  src="https://via.placeholder.com/350x150"
-  alt="350 x 150 pic" />
+  src="parrots.jpg"
+  alt="Image 350 x 150 de deux perroquets" />
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample("Exemples","450","230")}}
-
-### Résultat attendu
-
-L'exemple précédent devrait faire apparaître des images semblables (en utilisant la touche <kbd>tab</kbd> de votre clavier)&nbsp;:
-
-_Pour le lien `left.html`&nbsp;:_
-![](screen_shot_2017-02-02_at_10.48.40_pm.png)
-
-_Pour le lien `right.html`&nbsp;:_
-![](screen_shot_2017-02-02_at_10.49.04_pm.png)
+{{EmbedLiveSample("Carte d'image avec deux zones", "", 250)}}
 
 ## Résumé technique
 
@@ -85,20 +89,17 @@ _Pour le lien `right.html`&nbsp;:_
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
           >Catégories de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
         >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
-          >contenu tangible</a
-        >.
+        >, contenu tangible.
       </td>
     </tr>
     <tr>
@@ -106,7 +107,7 @@ _Pour le lien `right.html`&nbsp;:_
       <td>
         Tout élément dont
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Modèle_de_contenu_transparent"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#modèle_de_contenu_transparent"
           >le modèle de contenu est transparent</a
         >.
       </td>
@@ -120,18 +121,26 @@ _Pour le lien `right.html`&nbsp;:_
       <td>
         Tout élément qui accepte
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >du contenu phrasé</a
         >.
       </td>
     </tr>
     <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
+          >Pas de rôle correspondant <sup>(angl.)</sup></a
+        >
+      </td>
+    </tr>
+    <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
+      <td>Aucun <code>role</code> autorisé</td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLMapElement")}}</td>
+      <td>{{DOMxRef("HTMLMapElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -146,5 +155,5 @@ _Pour le lien `right.html`&nbsp;:_
 
 ## Voir aussi
 
-- {{HTMLElement("a")}}
-- {{HTMLElement("area")}}
+- L'élément {{HTMLElement("a")}}
+- L'élément {{HTMLElement("area")}}

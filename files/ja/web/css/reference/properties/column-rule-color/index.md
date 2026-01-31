@@ -1,9 +1,8 @@
 ---
 title: column-rule-color
 slug: Web/CSS/Reference/Properties/column-rule-color
-original_slug: Web/CSS/column-rule-color
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`column-rule-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで段間に引かれる線（段間罫）の色を設定します。
@@ -15,15 +14,15 @@ column-rule-color: red;
 ```
 
 ```css interactive-example-choice
-column-rule-color: rgb(48, 125, 222);
+column-rule-color: rgb(48 125 222);
 ```
 
 ```css interactive-example-choice
-column-rule-color: hsla(120, 80%, 40%, 0.6);
+column-rule-color: hsl(120 80% 40% / 0.6);
 ```
 
 ```css interactive-example-choice
-column-rule-color: currentcolor;
+column-rule-color: currentColor;
 ```
 
 ```html-nolint interactive-example

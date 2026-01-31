@@ -1,26 +1,29 @@
 ---
 title: "<rb> : l'élément de base ruby"
 slug: Web/HTML/Reference/Elements/rb
-original_slug: Web/HTML/Element/rb
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+{{Deprecated_Header}}
 
-L'élément de **base ruby (`<rb>`)** est utilisé afin de délimiter le composant texte de base d'une annotation {{HTMLElement("ruby")}}. Autrement dit, le texte qui est annoté. Un élément `<rb>` devrait encadrer chaque segment atomique du texte de base.
+L'élément [HTML](/fr/docs/Web/HTML) **`<rb>`** est utilisé pour délimiter le composant de texte de base d'une annotation {{HTMLElement("ruby")}}, c'est-à-dire le texte annoté. Un élément `<rb>` doit entourer chaque segment atomique distinct du texte de base.
 
 ## Attributs
 
-Seuls les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes) peuvent être utilisés sur cet élément.
+Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 
-- Les annotations ruby sont utilisées afin d'afficher la prononciation pour les caractères d'Asie orientale tels que les caractères japonais furigana ou les caractères taïwanais bopomofo. L'élément `<rb>` permet de séparer chaque segment du texte de base ruby.
-- Bien que `<rb>` ne soit pas un élément vide, il est courant de n'inclure que la balise d'ouverture de chaque élément afin de simplifier le balisage dédié aux annotations ruby.
-- Il faut inclure un élément {{htmlelement("rt")}} pour chaque segment de base `<rb>` qu'on souhaite annoter.
+- Les annotations ruby sont utilisées afin d'afficher la prononciation pour les caractères d'Asie orientale, comme les furigana japonais ou les caractères bopomofo taïwanais. L'élément `<rb>` permet de séparer chaque segment du texte de base ruby.
+- Bien que `<rb>` ne soit pas un {{Glossary("void element", "élément vide")}}, il est courant d'inclure uniquement la balise d'ouverture de chaque élément dans le code source, afin de simplifier le balisage ruby et de le rendre plus lisible. Le navigateur complète alors l'élément lors de l'affichage.
+- Il faut inclure un élément {{HTMLElement("rt")}} pour chaque segment de base `<rb>` que l'on souhaite annoter.
 
 ## Exemples
 
-Dans cet exemple, on fournit une annotation pour le caractère original correspondant à "Kanji" :
+### Utiliser `rb`
+
+Dans cet exemple, on fournit une annotation pour le caractère original correspondant à «&nbsp;Kanji&nbsp;»&nbsp;:
 
 ```html
 <ruby>
@@ -28,13 +31,15 @@ Dans cet exemple, on fournit une annotation pour le caractère original correspo
 </ruby>
 ```
 
+Remarquez que nous avons inclus deux éléments `<rb>` pour délimiter les deux parties distinctes du texte de base ruby. L'annotation, quant à elle, est délimitée par deux éléments {{HTMLElement("rt")}}.
+
 ### Résultat
 
-{{EmbedLiveSample('')}}
+{{EmbedLiveSample("Utiliser `rb`")}}
 
-On voit ici que deux éléments `<rb>` sont inclus et permettent de délimiter les deux segments du texte de base. Pour l'annotation, chaque partie correspondante est délimitée par un élément {{htmlelement("rt")}}.
+### Annotations séparées
 
-On aurait également pu écrire cet exemple avec les deux parties du texte de base complètement séparées. Dans ce cas, il n'aurait pas été nécessaire d'inclure les éléments `<rb>` :
+Notez que l'on pourrait aussi écrire cet exemple avec les deux parties du texte de base annotées complètement séparément. Dans ce cas, il n'est pas nécessaire d'inclure les éléments `<rb>`&nbsp;:
 
 ```html
 <ruby>
@@ -44,46 +49,9 @@ On aurait également pu écrire cet exemple avec les deux parties du texte de ba
 
 #### Résultat
 
-{{EmbedLiveSample('')}}
+{{EmbedLiveSample("Annotations séparées")}}
 
-### Avec prise en charge de ruby
-
-```html hidden
-<ruby>
-  <rb>漢</rb><rb>字 </rb><rp>(</rp><rt>kan</rt><rt>ji</rt><rp>)</rp>
-</ruby>
-```
-
-```css hidden
-body {
-  font-size: 22px;
-}
-```
-
-#### Résultat
-
-{{EmbedLiveSample("", "100%", 60)}}
-
-Pour un navigateur qui ne prend pas en charge les annotations ruby, voici à quoi aurait ressemblé le résultat :
-
-### Sans prise en charge de ruby
-
-```html hidden
-漢字 (kan ji)
-```
-
-```css hidden
-body {
-  font-size: 22px;
-}
-```
-
-#### Résultat
-
-{{EmbedLiveSample("", "100%", 60)}}
-
-> [!NOTE]
-> Voir l'article sur l'élément {{HTMLElement("ruby")}} pour de plus amples exemples.
+Voir l'article sur l'élément {{HTMLElement("ruby")}} pour de plus amples exemples.
 
 ## Résumé technique
 
@@ -91,7 +59,7 @@ body {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Catégories_de_contenu"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
           >Catégories de contenu</a
         >
       </th>
@@ -101,7 +69,7 @@ body {
       <th scope="row">Contenu autorisé</th>
       <td>
         Cet élément peut être l'élément fils d'un élément
-        {{htmlelement("ruby")}}.
+        {{HTMLElement("ruby")}}.
       </td>
     </tr>
     <tr>
@@ -115,16 +83,16 @@ body {
       </td>
     </tr>
     <tr>
-      <th scope="row">Éléments parents autorisés</th>
+      <th scope="row">Parents autorisés</th>
       <td>Un élément {{HTMLElement("ruby")}}.</td>
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>N'importe quel rôle</td>
+      <td>Tous les rôles sont autorisés.</td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
+      <td>{{DOMxRef("HTMLElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -139,7 +107,7 @@ body {
 
 ## Voir aussi
 
-- {{HTMLElement("ruby")}}
-- {{HTMLElement("rt")}}
-- {{HTMLElement("rp")}}
-- {{HTMLElement("rtc")}}
+- L'élément {{HTMLElement("ruby")}}
+- L'élément {{HTMLElement("rt")}}
+- L'élément {{HTMLElement("rp")}}
+- L'élément {{HTMLElement("rtc")}}

@@ -1,17 +1,16 @@
 ---
 title: TypedArray.prototype.byteOffset
+short-title: byteOffset
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/byteOffset
 l10n:
-  sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
+  sourceCommit: 377c7d317e7ffd477bc8b1273f0e215978b76dd1
 ---
-
-{{JSRef}}
 
 **`byteOffset`** は {{jsxref("TypedArray")}} インスタンスのアクセサープロパティで、この型付き配列の {{jsxref("ArrayBuffer")}} または {{jsxref("SharedArrayBuffer")}} の開始位置からの（バイト単位の）オフセットを返します。
 
 ## 解説
 
-`byteOffset` プロパティは set アクセサープロパティが `undefined` であるアクセサープロパティです。これは、このプロパティが読み取り専用であることを意味します。値は _TypedArray_ が構築されたときに確立し、変更することができません。 _TypedArray_ は[型付き配列オブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_オブジェクト)のうちの一つです。
+`byteOffset` プロパティは設定アクセサープロパティが `undefined` であるアクセサープロパティです。これは、このプロパティが読み取り専用であることを意味します。値は型付き配列が構築された時点で確定し、変更できません。ただし、基盤となるバッファーのサイズ変更により表示範囲が有効できなくなった場合、`byteOffset` は 0 になります。
 
 ## 例
 
@@ -21,10 +20,16 @@ l10n:
 const buffer = new ArrayBuffer(8);
 
 const uint8array1 = new Uint8Array(buffer);
-uint8array1.byteOffset; // 0 (no offset specified)
+uint8array1.byteOffset; // 0 （オフセットを指定していない）
 
 const uint8array2 = new Uint8Array(buffer, 3);
-uint8array2.byteOffset; // 3 (as specified when constructing Uint8Array)
+uint8array2.byteOffset; // 3 （Uint8Array の構築時に指定したとおり）
+
+const buffer2 = new ArrayBuffer(16, { maxByteLength: 32 });
+const uint8lengthTracking = new Uint8Array(buffer2, 4);
+uint8lengthTracking.byteOffset; // 4
+buffer2.resize(3);
+uint8lengthTracking.byteOffset; // 0 （ビュー範囲が有効ではなくなった）
 ```
 
 ## 仕様書
@@ -37,5 +42,5 @@ uint8array2.byteOffset; // 3 (as specified when constructing Uint8Array)
 
 ## 関連情報
 
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}

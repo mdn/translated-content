@@ -1,19 +1,16 @@
 ---
 title: "HTMLImageElement : propriété border"
+short-title: border
 slug: Web/API/HTMLImageElement/border
 l10n:
-  sourceCommit: 4656260748aea78929639c4bf776d643d9911a82
+  sourceCommit: 1f00512e3c9a20b5bb927db529bb5d639e346d96
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}{{Deprecated_Header}}
 
-La propriété **`border`** (obsolète) de {{domxref("HTMLImageElement")}} définit le nombre de pixels d'épaisseur de la bordure entourant l'image. Une valeur de 0, qui est la valeur par défaut, indique qu'aucune bordure ne doit être dessinée.
+La propriété _obsolète_ **`border`** de l'interface {{DOMxRef("HTMLImageElement")}} définit le nombre de pixels d'épaisseur que doit avoir la bordure entourant l'image. Une valeur de 0, la valeur par défaut, indique qu'aucune bordure ne doit être dessinée. Elle reflète l'attribut de contenu [`border`](/fr/docs/Web/HTML/Reference/Elements/img#border) de l'élément HTML `<img>`.
 
-Vous ne devez _pas_ utiliser cette propriété&nbsp;! Utilisez plutôt CSS pour styliser la bordure. La propriété {{cssxref("border")}} ou ses propriétés détaillées permettent non seulement de définir l'épaisseur de la bordure, mais aussi d'appliquer de nombreuses autres options de présentation.
-
-L'épaisseur, en particulier, se contrôle avec les propriétés sensibles à l'orientation d'écriture&nbsp;: {{cssxref("border-block-start-width")}}, {{cssxref("border-block-end-width")}}, {{cssxref("border-inline-start-width")}}, {{cssxref("border-inline-end-width")}}.
-
-Pour des raisons de compatibilité (ou autres), vous pouvez utiliser les anciennes propriétés à la place (ou en complément)&nbsp;: {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}}, {{cssxref("border-left-width")}}.
+Il est recommandé d'utiliser la propriété CSS {{CSSxRef("border")}} ou ses propriétés détaillées, qui permettent non seulement de définir l'épaisseur de la bordure mais aussi d'appliquer de nombreuses autres options de mise en forme.
 
 ## Valeur
 
@@ -21,26 +18,22 @@ Une chaîne de caractères contenant une valeur entière qui définit l'épaisse
 
 Si on assigne la valeur `null`, celle-ci est convertie en chaîne vide (`""`), donc `elt.border = null` est équivalent à `elt.border = ""`.
 
-## Notes d'utilisation
+## Exemples
 
-N'utilisez pas `border`. Cette propriété est obsolète. Utilisez plutôt la propriété CSS {{cssxref("border")}} et ses propriétés détaillées pour définir les bordures autour des images.
+### Définir l'attribut `border`
 
-Par exemple, si vous avez le HTML suivant&nbsp;:
-
-```html
-<img src="image.png" border="2" />
+```js example-bad
+const img = new Image();
+img.src = "exemple.png";
+img.border = "1";
 ```
 
-Le code suivant produira le même rendu en utilisant CSS à la place de cette propriété obsolète&nbsp;:
+Au lieu d'utiliser la propriété obsolète `border`, il est préférable de définir la propriété CSS `border`&nbsp;:
 
-```html
-<img src="image.png" style="border: 2px;" />
-```
-
-Vous pouvez également préciser la couleur et d'autres caractéristiques de la bordure&nbsp;:
-
-```html
-<img src="image.png" style="border: dashed 2px #333388;" />
+```js example-good
+const img = new Image();
+img.src = "exemple.png";
+img.style.border = "1px solid black";
 ```
 
 ## Spécifications

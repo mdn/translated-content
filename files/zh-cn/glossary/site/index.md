@@ -41,4 +41,4 @@ l10n:
 
 - [URL 是什么](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
 - {{Glossary("Origin", "来源")}}
-- [同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)
+- [同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)

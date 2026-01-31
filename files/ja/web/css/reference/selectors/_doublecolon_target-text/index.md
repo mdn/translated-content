@@ -1,26 +1,25 @@
 ---
 title: ::target-text
 slug: Web/CSS/Reference/Selectors/::target-text
-original_slug: Web/CSS/::target-text
+l10n:
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
-{{SeeCompatTable}}
+**`::target-text`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、ブラウザーが [テキストフラグメント](/ja/docs/Web/URI/Reference/Fragment/Text_fragments)に対応している場合に、スクロールされたテキストを表します。これにより、作成者はそのテキスト節をどのように強調表示するかを選ぶことができます。
 
-**`::target-text`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、ブラウザーが scroll-to-text フラグメントに対応している場合にスクロール先のテキストを表します。これによって、節のテキストを強調表示させることができます。
-
-```css
-::target-text {
-  background-color: pink;
-}
-```
+`::target-text` 擬似要素は、すべての表示強調擬似要素に共通する特別な継承モデルに従います。この継承の仕組みの詳細については、[表示強調擬似要素の継承](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements#highlight_pseudo-elements_inheritance)の節を参照してください。
 
 ## 構文
 
-{{csssyntax}}
+```css
+::target-text {
+  /* ... */
+}
+```
 
 ## 例
 
-### scroll-to-text を強調表示
+### テキストフラグメントを強調表示
 
 ```css
 ::target-text {
@@ -41,4 +40,5 @@ original_slug: Web/CSS/::target-text
 
 ## 関連情報
 
-- [Text fragments](https://web.dev/text-fragments/)
+- [テキストフラグメント](/ja/docs/Web/URI/Reference/Fragment/Text_fragments)
+- {{cssxref(":target")}} （対象要素の強調表示に使用）

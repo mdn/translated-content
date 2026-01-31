@@ -1,9 +1,8 @@
 ---
 title: 継承
 slug: Web/CSS/Guides/Cascade/Inheritance
-original_slug: Web/CSS/CSS_cascade/Inheritance
 l10n:
-  sourceCommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 CSS において、**継承** (inheritance) はある要素のあるプロパティに値が指定されなかった場合の挙動を制御します。
@@ -19,7 +18,7 @@ CSS プロパティは 2 種類に分類することができます。
 
 要素の**継承プロパティ**に値が指定されなかった場合、要素はその親要素のプロパティの[計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)を取得します。文書のルート要素だけは、プロパティの概要で与えられた[初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値)を取得します。
 
-継承プロパティの一般例として [`color`](/ja/docs/Web/CSS/Reference/Properties/color) プロパティが挙げられます。以下のスタイルルールとマークアップを考えてみましょう。
+継承プロパティの一般例として {{cssxref("color")}} プロパティが挙げられます。以下のスタイルルールとマークアップを考えてみましょう。
 
 ```css
 p {
@@ -33,7 +32,7 @@ p {
 
 {{EmbedLiveSample("Inherited properties","",40)}}
 
-「強調されたテキスト」という文字列は、 `em` 要素が `p` 要素から [`color`](/ja/docs/Web/CSS/Reference/Properties/color) プロパティの値を継承する為、プロパティの初期値 (※祖先要素の何れにも color プロパティが指定されていない場合に使用される文字色) ではなく、継承値の緑色となります。
+「強調されたテキスト」という文字列は、 `em` 要素が `p` 要素から {{cssxref("color")}} プロパティの値を継承する為、プロパティの初期値（※祖先要素のいずれにも color プロパティが指定されていない場合に使用される文字色）ではなく、継承値の緑色となります。
 
 ## 非継承プロパティ
 
@@ -57,9 +56,9 @@ p {
 
 ## メモ
 
-[`inherit`](/ja/docs/Web/CSS/Reference/Values/inherit) のキーワードで、明示的に継承することを指定することができます。これはこれは継承プロパティでも非継承プロパティでも動作します。
+{{cssxref("inherit")}} のキーワードで、明示的に継承することを指定することができます。これはこれは継承プロパティでも非継承プロパティでも動作します。
 
-すべてのプロパティに値を適用する [`all`](/ja/docs/Web/CSS/Reference/Properties/all) 一括指定プロパティを使用することで、すべてのプロパティの継承を制御することができます。例えば、
+すべてのプロパティに値を適用する {{cssxref("all")}} 一括指定プロパティを使用することで、すべてのプロパティの継承を制御することができます。例えば、
 
 ```css
 p {
@@ -69,11 +68,11 @@ p {
 }
 ```
 
-これは、 [`font`](/ja/docs/Web/CSS/Reference/Properties/font) プロパティのスタイルを、ユーザーのスタイルシートがなければユーザーエージェントの既定値に、あればその値に戻します。それからフォントの寸法を倍にして、 [`font-weight`](/ja/docs/Web/CSS/Reference/Properties/font-weight) に `"bold"` を適用します。
+これは、{{cssxref("font")}} プロパティのスタイルを、ユーザーのスタイルシートがなければユーザーエージェントの既定値に、あればその値に戻します。それからフォントの寸法を倍にして、{{cssxref("font-weight")}} に `"bold"` を適用します。
 
 ### 継承のオーバーライドの一例
 
-前回の [`border`](/ja/docs/Web/CSS/Reference/Properties/border) を使用した例で、 `inherit` で継承を明示的に設定すると次のようになります。
+前回の {{cssxref("border")}} を使用した例で、 `inherit` で継承を明示的に設定すると次のようになります。
 
 ```css
 p {
@@ -99,15 +98,14 @@ em {
 
 ## 関連情報
 
-- 継承を制御する CSS 値: [`inherit`](/ja/docs/Web/CSS/Reference/Values/inherit), [`initial`](/ja/docs/Web/CSS/Reference/Values/initial), [`revert`](/ja/docs/Web/CSS/Reference/Values/revert), [`revert-layer`](/ja/docs/Web/CSS/Reference/Values/revert-layer), [`unset`](/ja/docs/Web/CSS/Reference/Values/unset)
+- 継承を制御する CSS 値: {{cssxref("inherit")}}, {{cssxref("initial")}}, {{cssxref("revert")}}, {{cssxref("revert-layer")}}, {{cssxref("unset")}}
+- [CSS カスケードと継承](/ja/docs/Web/CSS/Guides/Cascade)モジュール
 - [CSS のエラー処理](/ja/docs/Web/CSS/Guides/Syntax/Error_handling)
 - [CSS カスケード入門](/ja/docs/Web/CSS/Guides/Cascade/Introduction)
 - [学習: 競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [学習: カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
-- [CSS カスケードと継承](/ja/docs/Web/CSS/Guides/Cascade)モジュール
-- [CSS の構文](/ja/docs/Web/CSS/Guides/Syntax/Introduction)ガイド
-- [CSS 構文](/ja/docs/Web/CSS/Guides/Syntax)モジュール
+- [CSS 構文入門: 宣言、ルールセット、文](/ja/docs/Web/CSS/Guides/Syntax/Introduction)
 - [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)
-- [初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値)、[計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)、[使用値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#使用値)、[実効値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#実効値)
+- 値: [初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値)、[計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)、[使用値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#使用値)、[実効値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#実効値)
 - [値定義構文](/ja/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
 - [CSS 入れ子](/ja/docs/Web/CSS/Guides/Nesting)モジュール

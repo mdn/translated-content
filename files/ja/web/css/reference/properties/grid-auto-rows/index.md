@@ -1,9 +1,8 @@
 ---
 title: grid-auto-rows
 slug: Web/CSS/Reference/Properties/grid-auto-rows
-original_slug: Web/CSS/grid-auto-rows
 l10n:
-  sourceCommit: fb409b8972e7c03d7eb284466433a28efb850ef5
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`grid-auto-rows`** は [CSS](/ja/docs/Web/CSS) のプロパティで、暗黙的に生成されたグリッドの行{{glossary("grid tracks", "トラック")}}またはトラックのパターンの大きさを指定します。
@@ -51,7 +50,7 @@ grid-auto-rows: minmax(30px, auto);
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   font-size: 22px;
 }
@@ -134,11 +133,10 @@ grid-auto-rows: unset;
 
     最小値として使用された場合は、そのトラック内のアイテムのうち最大の最小寸法を（各アイテムの {{cssxref("min-width")}}/{{cssxref("min-height")}} で指定された寸法）を表します。これは通常、常にとは限りませんが、 {{cssxref("min-content")}} の寸法です。
 
-    {{cssxref("minmax", "minmax()")}} 記法の外で使用された場合、 `auto` は上記の最小値と最大値の間の範囲を表します。多くの場合は `minmax(min-content,max-content)` のように動作します。
+    {{cssxref("minmax()")}} 記法の外で使用された場合、 `auto` は上記の最小値と最大値の間の範囲を表します。多くの場合は `minmax(min-content,max-content)` のように動作します。
 
     > [!NOTE]
-    > トラックの寸法が `auto` の場合（かつ `auto` だけの場合）は、 {{cssxref("align-content")}} および {{cssxref("justify-content")}} プロパティによって引き伸ばすことができます。
-    > 従って既定では、トラックの寸法が `auto` の場合、グリッドコンテナー内の残りの空間を占有します。
+    > トラックの寸法が `auto` の場合（かつ `auto` だけの場合）は、 {{cssxref("align-content")}} および {{cssxref("justify-content")}} プロパティによって引き伸ばすことができます。従って既定では、トラックの寸法が `auto` の場合、グリッドコンテナー内の残りの空間を占有します。
 
 ## 公式定義
 
@@ -196,4 +194,4 @@ grid-auto-rows: unset;
 - {{cssxref("grid-auto-flow")}}
 - {{cssxref("grid")}}
 - [CSS グリッドレイアウトでの自動配置: 暗黙のグリッド内での行の大きさ](/ja/docs/Web/CSS/Guides/Grid_layout/Auto-placement#暗黙のグリッド内での行の大きさ)
-- 動画: [Introducing Grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)
+- 動画: [Introducing grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)

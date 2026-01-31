@@ -4,29 +4,27 @@ slug: Learn_web_development/Core/Structuring_content/Advanced_text_features
 original_slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks", "Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure", "Apprendre/HTML/Introduction_à_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics", "Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text", "Learn_web_development/Core/Structuring_content")}}
 
 Il y a de nombreux autres éléments HTML pour mettre en forme un texte qui n'ont pas été mentionnés dans l'article [Les concepts fondamentaux du HTML liés au texte](/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs). Les éléments abordés ici sont moins connus mais tout aussi utiles (et ce n'est aucunement une liste complète). Nous voyons ici comment marquer des citations, des listes de description, du code informatique et autres choses relatives au texte : indices et exposants, informations de contact, etc.
 
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Être familiarisé avec les bases du HTML, traitées à la page
-        <a
-          href="/fr/docs/Apprendre/HTML/Introduction_à_HTML/Getting_started"
-          >Commencer avec le HTML</a
-        >
-        et du formatage de texte HTML, décrit dans les
-        <a
-          href="/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
-          >Fondamentaux du texte HTML</a
+        Connaissances de base en HTML, comme présenté dans
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >Syntaxe HTML de base</a
+        >. Sémantique au niveau du texte comme les <a href="/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
+          >titres et paragraphes</a
+        > et les <a href="/fr/docs/Learn_web_development/Core/Structuring_content/Lists"
+          >listes</a
         >.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectifs :</th>
+      <th scope="row">Objectifs d'apprentissage&nbsp;:</th>
       <td>
         Apprendre comment utiliser des éléments HTML moins connus pour baliser
         des fonctions sémantiques avancées.
@@ -463,7 +461,7 @@ textarea.onkeyup = function () {
 
 ## Abréviations
 
-Un autre élément assez commun rencontré en se promenant dans le Web est l'élément {{htmlelement("abbr")}}. Il s'utilise pour entourer une abréviation ou un acronyme et donner le développement complet du terme (inclus dans un attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes#title)). Voyons quelques exemples :
+Un autre élément assez commun rencontré en se promenant dans le Web est l'élément {{htmlelement("abbr")}}. Il s'utilise pour entourer une abréviation ou un acronyme et donner le développement complet du terme (inclus dans un attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title)). Voyons quelques exemples :
 
 ```html
 <p>
@@ -752,4 +750,4 @@ L'exemple de base ci-dessus ne fournit qu'une simple date lisible par machine, m
 
 Nous voici arrivés à la fin de notre étude de la sémantique des textes en HTML. N'oubliez pas que ce qui précède ne constitue pas la liste exhaustive des éléments texte en HTML — nous avons essayé de couvrir essentiellement les plus courants dans la nature ou du moins ceux que nous avons pensé intéressants. Pour en voir plus, jetez un coup d'oeil à notre [Référence des éléments HTML](/fr/docs/Web/HTML/Reference/Elements) (la section [sémantique de texte en ligne](/fr/docs/Web/HTML/Reference/Elements#inline_text_semantics) serait un bon point de départ.) Dans l'article suivant, nous examinerons les éléments HTML à utiliser pour structurer les diverses parties d'un document HTML.
 
-{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks", "Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure", "Apprendre/HTML/Introduction_à_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics", "Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text", "Learn_web_development/Core/Structuring_content")}}

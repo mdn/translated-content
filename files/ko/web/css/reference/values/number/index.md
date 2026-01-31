@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Values/number
 original_slug: Web/CSS/number
 ---
 
-**`<number>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/CSS_values_and_units/CSS_data_types)은 숫자, 즉 정수 또는 실수를 표현합니다.
+**`<number>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/Reference/Values/Data_types)은 숫자, 즉 정수 또는 실수를 표현합니다.
 
 ## 구문
 

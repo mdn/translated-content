@@ -89,6 +89,6 @@ Pour aligner le contenu horizontalement, j'utilise la propriété {{CSSxRef("a
 
 ## Voir aussi
 
-- [Alignement des boîtes avec les boîtes flexibles](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
-- [Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [Modèle de boîte flexible CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout)
+- [Alignement des boîtes avec les boîtes flexibles](/fr/docs/Web/CSS/Guides/Box_alignment/In_flexbox)
+- [Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+- [Modèle de boîte flexible CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout)

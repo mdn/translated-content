@@ -1,9 +1,8 @@
 ---
 title: ::part()
 slug: Web/CSS/Reference/Selectors/::part
-original_slug: Web/CSS/::part
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::part()`** représente n'importe quel élément dans un [arbre fantôme (<i lang="en">shadow tree</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM) qui a un attribut [`part`](/fr/docs/Web/HTML/Reference/Global_attributes#part) correspondant.

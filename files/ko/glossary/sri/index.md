@@ -11,4 +11,4 @@ l10n:
 
 ## 같이 보기
 
-- [하위 자원 무결성](/ko/docs/Web/Security/Subresource_Integrity)
+- [하위 자원 무결성](/ko/docs/Web/Security/Defenses/Subresource_Integrity)

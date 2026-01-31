@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Splash_page
 original_slug: Learn_web_development/Core/Structuring_content/Mozilla_splash_page
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{PreviousMenu("Web/HTML/Guides/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 
 Dans cette partie, nous testerons vos connaissances des quelques techniques abordées dans les articles de ce module, en vous demandant d'ajouter des images et des vidéos à une super page d'accueil entièrement dédiée à Mozilla !
 
@@ -96,4 +96,4 @@ La capture d'écran suivante montre à quoi devrait ressembler la page d'accueil
 
 Si vous suivez cette étude en faisant partie d'un programme de cours organisé, vous devriez pouvoir montrer votre travail à votre professeur/mentor pour une correction. Si vous apprenez seul, alors vous pourrez obtenir des informations et des corrections en demandant sur le [fil de discussion concernant cet exercice](https://discourse.mozilla.org/t/mozilla-splash-page-assignment/24679), ou sur le canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Essayez de faire l'exercice d'abord — On ne gagne rien en trichant !
 
-{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{PreviousMenu("Web/HTML/Guides/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}

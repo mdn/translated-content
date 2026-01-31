@@ -1,18 +1,29 @@
 ---
-title: Intl.Locale.prototype.timeZones
+title: Intl.Locale.prototype.getTimeZones()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getTimeZones
 ---
 
-{{JSRef}}
-
-**`Intl.Locale.prototype.timeZones`** プロパティはアクセサープロパティで、選択した `Locale` で対応しているタイムゾーンの配列を返します。
-
-## 解説
-
-関連付けられた `Locale` で対応しているタイムゾーンを配列で返します。返されるタイムゾーンは [IANA タイムゾーン](https://en.wikipedia.org/wiki/Daylight_saving_time#IANA_time_zone_database) を表します。
+{{jsxref("Intl.Locale")}} インスタンスの **`getTimeZones()`** メソッドは、このロケールに対応しているタイムゾーンのリストを返します。
 
 > [!NOTE]
-> Unicode 言語識別子が Unicode 地域サブタグシーケンスの `-` を含んでいない場合、返される値は `undefined` です。
+> 一部のブラウザーのあるバージョンでは、このメソッドが `timeZones` と呼ばれるアクセサープロパティとして実装されていました。しかしこの実装ではアクセスするたびに新しい配列を返すため、`locale.timeZones === locale.timeZones` が `false` を返してしまい、この状況を防ぐために、現在はメソッドとして実装されています。詳細については、[ブラウザーの互換性](#ブラウザーの互換性y)の表を確認してください。
+
+## 構文
+
+```js-nolint
+getTimeZones()
+```
+
+### 引数
+
+なし。
+
+### 返値
+
+関連する `Locale` で対応しているタイムゾーンを表す文字列の配列。各値は [正規化されたIANA タイムゾーン名](/ja/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets)で、アルファベット順にソートされています。ロケール識別子に地域サブタグが含まれていない場合、返される値は `undefined` です。
+
+> [!NOTE]
+> `Temporal` の標準化では、ブラウザーは常に IANA データベースの主識別子を返すことが求められており、これは時間とともに変わる可能性があります。詳細については、[タイムゾーンとオフセット](/ja/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets)を参照してください。
 
 ## 例
 
@@ -21,18 +32,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getTimeZones
 指定された `Locale` で対応しているタイムゾーンをリストアップします。
 
 ```js
-let arEG = new Intl.Locale("ar-EG");
-console.log(arEG.timeZones); // logs ["Africa/Cairo"]
+const arEG = new Intl.Locale("ar-EG");
+console.log(arEG.getTimeZones()); // ["Africa/Cairo"]
 ```
 
 ```js
-let jaJP = new Intl.Locale("ja-JP");
-console.log(jaJP.timeZones); // logs ["Asia/Tokyo"]
+const jaJP = new Intl.Locale("ja-JP");
+console.log(jaJP.getTimeZones()); // ["Asia/Tokyo"]
 ```
 
 ```js
-let ar = new Intl.Locale("ar");
-console.log(ar.timeZones); // logs undefined
+const ar = new Intl.Locale("ar");
+console.log(ar.getTimeZones()); // undefined
 ```
 
 ## 仕様書
@@ -45,5 +56,5 @@ console.log(ar.timeZones); // logs undefined
 
 ## 関連情報
 
-- {{jsxref("Intl/Locale", "Intl.Locale")}}
-- [IANA タイムゾーンデータベース](https://en.wikipedia.org/wiki/Daylight_saving_time#IANA_time_zone_database)
+- {{jsxref("Intl.Locale")}}
+- [IANA タイムゾーンデータベース](https://en.wikipedia.org/wiki/Daylight_saving_time#IANA_time_zone_database) (Wikipedia)

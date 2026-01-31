@@ -19,9 +19,7 @@ Un champ d'en-tête `Host` doit être envoyé dans tous les messages de requête
       </td>
     </tr>
     <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name"," Nom d'en-tête interdit ")}}
-      </th>
+      <th scope="row">{{Glossary("Forbidden_request_header", "En-tête de requête interdit")}}</th>
       <td>Oui</td>
     </tr>
   </tbody>

@@ -115,7 +115,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
         <code><a href="/fr/docs/Web/HTML/Reference/Elements/link#as">as</a></code>
       </td>
       <td>{{HTMLElement("link")}}</td>
-      <td>Spécifie le type de contenu chargé par le lien.</td>
+      <td>Définit le type de contenu chargé par le lien.</td>
     </tr>
     <tr>
       <td>
@@ -302,7 +302,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
         <code><a href="/fr/docs/Web/HTML/Reference/Elements/input/color#colorspace">colorspace</a></code>
       </td>
       <td>{{HTMLElement("input")}}</td>
-      <td>Définit l'{{Glossary("Color_space", "espace colorimétrique")}} utilisé par un champ <code>type="color"</code>.</td>
+      <td>Définit {{Glossary("Color_space", "l'espace colorimétrique")}} utilisé par un champ <code>type="color"</code>.</td>
     </tr>
     <tr>
       <td>
@@ -589,7 +589,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       <td>
         Si le bouton ou le champ est un {{Glossary("submit button", "bouton d'envoi")}} (par exemple <code>type="submit"</code>),
         cet attribut définit le type d'encodage à utiliser lors de l'envoi du formulaire. Si
-        cet attribut est spécifié, il remplace l'attribut
+        cet attribut est défini, il remplace l'attribut
         <code>enctype</code> du propriétaire du formulaire
         <a href="/fr/docs/Web/HTML/Reference/Elements/form">formulaire</a>.
       </td>
@@ -601,7 +601,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
         Si le bouton ou le champ est un {{Glossary("submit button", "bouton d'envoi")}} (par exemple <code>type="submit"</code>),
         cet attribut définit la méthode d'envoi à utiliser lors de la soumission du formulaire
         (<code>GET</code>, <code>POST</code>, etc.). Si cet attribut est
-        spécifié, il remplace l'attribut <code>method</code> du propriétaire du
+        défini, il remplace l'attribut <code>method</code> du propriétaire du
         <a href="/fr/docs/Web/HTML/Reference/Elements/form">formulaire</a>.
       </td>
     </tr>
@@ -611,7 +611,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       <td>
         Si le bouton ou le champ est un {{Glossary("submit button", "bouton d'envoi")}} (par exemple <code>type="submit"</code>),
         cet attribut booléen indique que le formulaire ne doit pas être validé
-        lors de son envoi. Si cet attribut est spécifié, il remplace l'attribut
+        lors de son envoi. Si cet attribut est défini, il remplace l'attribut
         <code>novalidate</code> du propriétaire du
         <a href="/fr/docs/Web/HTML/Reference/Elements/form">formulaire</a>.
       </td>
@@ -623,7 +623,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
         Si le bouton ou le champ est un {{Glossary("submit button", "bouton d'envoi")}} (par exemple <code>type="submit"</code>),
         cet attribut définit le contexte de navigation (par exemple&nbsp;: onglet, fenêtre,
         ou cadre intégré) dans lequel afficher la réponse reçue après
-        l'envoi du formulaire. Si cet attribut est spécifié, il remplace l'attribut
+        l'envoi du formulaire. Si cet attribut est défini, il remplace l'attribut
         <code>target</code> du propriétaire du
         <a href="/fr/docs/Web/HTML/Reference/Elements/form">formulaire</a>.
       </td>
@@ -647,8 +647,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       <td>
         <p>
           Pour ces éléments, cet attribut définit la hauteur occupée par
-          l'élément. Pour les autres éléments, on utilisera la propriété CSS
-          <a href="/fr/docs/Web/CSS/height"><code>height</code></a>.
+          l'élément. Pour les autres éléments, on utilisera la propriété CSS {{CSSxRef("height")}}.
         </p>
         <div class="note notecard">
           <p>
@@ -722,7 +721,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/Security/Subresource_Integrity"
+        <a href="/fr/docs/Web/Security/Defenses/Subresource_Integrity"
           ><code>integrity</code></a
         >
       </td>
@@ -730,7 +729,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       <td>
         <p>
           Définit une valeur
-          <a href="/fr/docs/Web/Security/Subresource_Integrity">Subresource Integrity</a>
+          <a href="/fr/docs/Web/Security/Defenses/Subresource_Integrity">Subresource Integrity</a>
           qui permet aux navigateurs de vérifier ce qu'ils récupèrent.
         </p>
       </td>
@@ -1317,7 +1316,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
         {{HTMLElement("base")}}, {{HTMLElement("form")}}
       </td>
       <td>
-        Spécifie où ouvrir le document lié (dans le cas d'un élément
+        Définit où ouvrir le document lié (dans le cas d'un élément
         <code>&lt;a&gt;</code>) ou où afficher la réponse reçue
         (dans le cas d'un élément <code>&lt;form&gt;</code>)
       </td>
@@ -1430,7 +1429,7 @@ La plupart du temps, les attributs IDL renverront leurs valeurs, telles qu'elles
 
 Les attributs IDL ne sont pas toujours des chaînes de caractères. `input.maxlength` est un nombre par exemple (un entier long signé pour être précis). Lorsqu'on manipule des attributs IDL on utilisera toujours le type défini pour l'interface. Ainsi, `input.maxlength` renverra toujours un nombre et si on souhaite le définir, il faudra le faire avec un nombre, si on passe une valeur d'un autre type, cette valeur sera convertie grâce aux mécanismes de conversion habituels de JavaScript.
 
-Les attributs IDL peuvent [refléter d'autres types <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/urls-and-fetching.html) tels que les unsigned long, les URL, les booléens, etc. Malheureusement, il n'existe pas de règles claires et la façon dont les attributs IDL se comportent en conjonction avec leurs attributs de contenu correspondants, cela dépend de l'attribut. La plupart du temps, il suivra [les règles énoncées dans la spécification <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/urls-and-fetching.html), mais parfois, il ne le fera pas. Les spécifications HTML essaient de rendre cela aussi convivial que possible pour les développeurs, mais pour diverses raisons (principalement historiques), certains attributs se comportent bizarrement (`select.size`, par exemple) et vous devriez lire les spécifications pour comprendre comment ils se comportent exactement.
+Les attributs IDL peuvent [refléter d'autres types <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/urls-and-fetching.html) tels que les unsigned long, les URL, les booléens, etc. Malheureusement, il n'existe pas de règles claires et la façon dont les attributs IDL se comportent en conjonction avec leurs attributs de contenu correspondants, cela dépend de l'attribut. La plupart du temps, il suivra [les règles énoncées dans la spécification <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/urls-and-fetching.html), mais parfois, il ne le fera pas. Les spécifications HTML essaient de rendre cela aussi convivial que possible pour les développeur·euse·s, mais pour diverses raisons (principalement historiques), certains attributs se comportent bizarrement (`select.size`, par exemple) et vous devriez lire les spécifications pour comprendre comment ils se comportent exactement.
 
 ## Attributs booléens
 
@@ -1456,7 +1455,7 @@ Pour être tout à fait explicite, les valeurs `"true"` et `"false"` ne sont pas
 > [!WARNING]
 > L'utilisation des attributs de contenu du gestionnaire d'événements est déconseillée. Le mélange de HTML et de JavaScript produit souvent du code impossible à maintenir, et l'exécution des attributs du gestionnaire d'événements peut également être bloquée par les politiques de sécurité du contenu.
 
-En plus des attributs répertoriés dans le tableau ci-dessus, les [gestionnaires d'événements](/fr/docs/Web/API/Document_Object_Model/Events#utilisation_des_propriété_onevent) globaux — tel que [`onclick`](/fr/docs/Web/API/Element/click_event) — peuvent également être spécifiée comme étant des [attributs du contenu](#attribut_de_contenu_ou_attribut_idl) sur tous les éléments.
+En plus des attributs répertoriés dans le tableau ci-dessus, les [gestionnaires d'événements](/fr/docs/Web/API/Document_Object_Model/Events#utilisation_des_propriété_onevent) globaux — tel que [`onclick`](/fr/docs/Web/API/Element/click_event) — peuvent également être définis comme étant des [attributs du contenu](#attribut_de_contenu_ou_attribut_idl) sur tous les éléments.
 
 Tous les attributs du gestionnaire d'événements acceptent une chaîne de caractères. La chaîne de caractères sera utilisée pour synthétiser une [fonction JavaScript](/fr/docs/Web/JavaScript/Reference/Functions) comme `function nom(/*argument*/) {corps}`, où `nom` est le nom de l'attribut , et `corps` est la valeur de l'attribut. Le gestionnaire reçoit les mêmes paramètres que son homologue du gestionnaire d'événements JavaScript — la plupart des gestionnaires ne reçoivent qu'un seul paramètre `event`, tandis que `onerror` en reçoit cinq&nbsp;: `event`, `source`, `lineno`, `colno`, `error`. Cela signifie que vous pouvez, en général, utiliser la variable `event` dans l'attribut.
 

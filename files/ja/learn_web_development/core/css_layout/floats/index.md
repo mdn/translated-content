@@ -2,12 +2,10 @@
 title: 浮動ボックス
 slug: Learn_web_development/Core/CSS_layout/Floats
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{LearnSidebar}}
-
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Test_your_skills/Floats", "Learn_web_development/Core/CSS_layout")}}
 
 元々は、テキストブロック内の画像を浮動させるためのものだった {{cssxref("float")}} プロパティは、ウェブページで段組みのレイアウトを作成するために最もよく使用されるツールの 1 つになりました。フレックスボックスやグリッドの出現により、この記事で説明するように、これで元の目的に戻っています。
 
@@ -94,8 +92,8 @@ body {
   max-width: 900px;
   margin: 0 auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -220,8 +218,8 @@ body {
   max-width: 900px;
   margin: 0 auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -290,8 +288,8 @@ body {
   max-width: 900px;
   margin: 0 auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -326,7 +324,7 @@ body {
 
 ## 浮動ボックスを回り込むボックスのクリア
 
-これで、浮動ボックスに続く何かをクリアする方法はお分かりいただけたと思いますが、背の高い浮動ボックスと短い段落があり、両方の要素を囲むボックスがある場合、どうなるかを見てみましょう。
+これで、浮動ボックスに続く何かをクリアする方法はお分かりいただけたと思いますが、背の高い浮動ボックスと短い段落があり、両方の要素を含むボックスがある場合、どうなるかを見てみましょう。
 
 ### 問題
 
@@ -392,8 +390,8 @@ body {
   max-width: 900px;
   margin: 0 auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -464,8 +462,8 @@ body {
   max-width: 900px;
   margin: 0 auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -483,12 +481,8 @@ body {
 
 {{EmbedLiveSample('display_flow-root', '100%', 600)}}
 
-## スキルテスト
-
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 浮動ボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Floats)を見てください。
-
 ## まとめ
 
-浮動ボックスについて知っておくべきことはそれだけです。次に、位置指定について詳しく見ていきましょう。
+浮動ボックスについて知っておく必要があることは以上です。次の記事では、この知識をどれだけ理解し、定着させられたかを調べるためのテストをいくつかご紹介します。
 
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Test_your_skills/Floats", "Learn_web_development/Core/CSS_layout")}}

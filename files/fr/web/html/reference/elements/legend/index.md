@@ -1,14 +1,15 @@
 ---
-title: <legend>
+title: "<legend> : l'élément de légende de groupe de champs"
 slug: Web/HTML/Reference/Elements/legend
-original_slug: Web/HTML/Element/legend
+l10n:
+  sourceCommit: f2d281d86396bcd2dcecfdabd5837b1590132aa6
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<legend>`** représente une légende pour le contenu de son parent {{HTMLElement("fieldset")}}.
 
-L'élément HTML **\<legend>** représente une légende pour le contenu de son élément parent {{HTMLElement("fieldset")}}.
+Dans les [éléments `<select>` personnalisables](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select), l'élément `<legend>` est autorisé comme enfant de `<optgroup>`, afin de fournir un libellé facile à cibler et à mettre en forme. Cela remplace tout texte défini dans l'attribut `label` de l'élément `<optgroup>`, et possède la même sémantique.
 
-{{InteractiveExample("HTML Demo: &lt;legend&gt;", "tabbed-standard")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;legend&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <fieldset>
@@ -27,8 +28,8 @@ L'élément HTML **\<legend>** représente une légende pour le contenu de son �
 
 ```css interactive-example
 legend {
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
   padding: 3px 6px;
 }
 
@@ -39,28 +40,11 @@ input {
 
 ## Attributs
 
-Cet élément contient uniquement [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Exemples
 
-### HTML
-
-```html
-<form action="" method="post">
-  <fieldset>
-    <legend>Un champ pour le choix de la radio</legend>
-    <input type="radio" name="radio" id="radio" />
-    <label for="radio">Cliquez ici</label>
-  </fieldset>
-</form>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples","100%","100%")}}
-
-> [!NOTE]
-> Voir la page sur {{HTMLElement("form")}} pour d'autres exemples qui utilisent `<legend>`.
+Voir {{HTMLElement("form")}} pour des exemples utilisant `<legend>`.
 
 ## Résumé technique
 
@@ -68,10 +52,8 @@ Cet élément contient uniquement [les attributs universels](/fr/docs/Web/HTML/R
   <tbody>
     <tr>
       <th scope="row">
-        <dfn
-          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-            >Catégories de contenu</a
-          ></dfn
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
+          >Catégories de contenu</a
         >
       </th>
       <td>Aucune.</td>
@@ -80,9 +62,12 @@ Cet élément contient uniquement [les attributs universels](/fr/docs/Web/HTML/R
       <th scope="row">Contenu autorisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >Contenu phrasé</a
-        >.
+        >
+        et
+        <a href="/fr/docs/Web/HTML/Reference/Elements/Heading_Elements">titres</a>
+        (éléments h1 à h6).
       </td>
     </tr>
     <tr>
@@ -96,15 +81,24 @@ Cet élément contient uniquement [les attributs universels](/fr/docs/Web/HTML/R
       <td>
         Un élément {{HTMLElement("fieldset")}} dont le premier élément
         fils est cet élément <code>&#x3C;legend></code>.
+        In <a href="/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select">éléments sélection personnalisables</a>, un élément <code>&#x3C;legend></code> est autorisé comme enfant de {{HTMLElement("optgroup")}}.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
+          >Pas de rôle correspondant <sup>(angl.)</sup></a
+        >
       </td>
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
+      <td>Aucun <code>role</code> autorisé</td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLLegendElement")}}</td>
+      <td>{{DOMxRef("HTMLLegendElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -119,5 +113,4 @@ Cet élément contient uniquement [les attributs universels](/fr/docs/Web/HTML/R
 
 ## Voir aussi
 
-- Les autres éléments relatifs aux formulaires : {{HTMLElement("form")}}, {{HTMLElement("option")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}.
-- [ARIA : le rôle `form`](/fr/docs/Web/Accessibility/ARIA/Roles/Form_Role)
+- [ARIA&nbsp;: le rôle `form`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/form_role)

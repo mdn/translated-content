@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Useful_string_methods
 original_slug: Learn/JavaScript/First_steps/Useful_string_methods
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting/Arrays", "conflicting/Learn_web_development/Core/Scripting")}}
 
 이제까지 문자열의 기초를 살펴보았습니다. 이제부터 - 텍스트 문자열의 길이 찾기, 문자열 합치기 및 쪼개기 등과 같은- 내장된 메서드를 사용하여 문자열에서 수행할 수 있는 유용한 작업에 대해 생각해 봅시다. 문자열의 한 문자를 다른 문자로 대체하는 등의 작업을 수행합니다.
 
@@ -662,4 +662,4 @@ textarea.onkeyup = function () {
 
 JavaScript에서 문장과 단어들을 다룰 수 있는 프로그래밍 능력이 매우 중요하다. 웹사이트는 사람들과 소통하는 공간이기 때문이다. 이 문서는 문자열을 다룰 수 있는 기초적인 내용에 대해 다루었다. 이 내용은 앞으로 배우게 될 심화 과정에 도움이 될 것이다. 다음으로 배열에 대해 알아보겠다.
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting/Arrays", "conflicting/Learn_web_development/Core/Scripting")}}

@@ -60,8 +60,8 @@ CSS allows very advanced design techniques. These articles help demistify the ha
 
 ### Layout
 
-- [Using CSS flexible boxes](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [Using CSS multi-column layouts](/ko/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
+- [Using CSS flexible boxes](/ko/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [Using CSS multi-column layouts](/ko/docs/Web/CSS/Guides/Multicol_layout/Using)
 - [Using CSS generated content](/ko/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content)
 
 ## See also

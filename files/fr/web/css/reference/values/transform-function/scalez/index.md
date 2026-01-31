@@ -1,14 +1,13 @@
 ---
 title: scaleZ()
 slug: Web/CSS/Reference/Values/transform-function/scaleZ
-original_slug: Web/CSS/transform-function/scaleZ
+l10n:
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
-{{CSSRef}}
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`scaleZ()`** définit une transformation qui redimensionne un élément selon l'axe des z. Son résultat est de type {{CSSxRef("&lt;transform-function&gt;")}}.
 
-La fonction **`scaleZ()`** modifie la coordonnée en Z de chaque point de l'élément avec un facteur multiplicateur donné. Si ce facteur vaut 1, l'opération appliquée sera l'identité. L'homothétie n'est pas isotropique et les angles de l'élément ne sont pas conservés. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function).
-
-{{InteractiveExample("CSS Demo: scaleZ()")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: scaleZ()")}}
 
 ```css interactive-example-choice
 transform: scaleZ(1);
@@ -66,41 +65,43 @@ transform: scaleZ(-1.4);
 }
 
 .front {
-  background: rgba(90, 90, 90, 0.7);
+  background: rgb(90 90 90 / 0.7);
   transform: translateZ(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
+  background: rgb(0 210 0 / 0.7);
   transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210, 0, 0, 0.7);
+  background: rgb(210 0 0 / 0.7);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0, 0, 210, 0.7);
+  background: rgb(0 0 210 / 0.7);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
+  background: rgb(210 210 0 / 0.7);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
+  background: rgb(210 0 210 / 0.7);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
 
-`scaleZ(sz)` est une notation raccourcie équivalente à `scale3d(1, 1, sz)`.
+Cette transformation de mise à l'échelle modifie la coordonnée z de chaque point de l'élément par un facteur constant, sauf lorsque le facteur d'échelle vaut 1, auquel cas il n'y a pas de transformation. La mise à l'échelle n'est pas isotrope et les angles de l'élément ne sont pas conservés. `scaleZ(-1)` définit une [symétrie axiale](https://fr.wikipedia.org/wiki/Sym%C3%A9trie_axiale), avec l'axe z passant par l'origine (tel que défini par la propriété {{CSSxRef("transform-origin")}}).
 
-`scaleZ(-1)` définit une symétrie axiale selon l'axe Z qui passe par l'origine (définie grâce à la propriété [`transform-origin`](/fr/docs/Web/CSS/Reference/Properties/transform-origin)).
+Dans les exemples interactifs ci-dessus, [`perspective: 550px;`](/fr/docs/Web/CSS/Reference/Properties/perspective) (pour créer un volume 3D) et [`transform-style: preserve-3d;`](/fr/docs/Web/CSS/Reference/Properties/transform-style) (pour que les enfants, les 6 faces du cube, soient aussi positionnés dans un volume 3D) sont appliqués au cube.
 
-Dans les exemples interactifs ci-avant, `perspective: 500px;` a été utilisée afin de créer un espace en trois dimensions et `transform-style: preserve-3d` permet de positionner les éléments enfants dans cet espace 3D.
+> [!NOTE]
+> `scaleZ(sz)` est équivalent à
+> `scale3d(1, 1, sz)`.
 
 ## Syntaxe
 
@@ -111,51 +112,39 @@ scaleZ(s)
 ### Valeurs
 
 - `s`
-  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/Reference/Values/number) qui représente le facteur d'échelle à appliquer sur la côte (coordonnées en Z) de chaque point de l'élément.
+  - : Est un nombre ({{CSSxRef("&lt;number&gt;")}}) représentant le facteur d'échelle à appliquer sur la coordonnée z de chaque point de l'élément.
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
+      <th scope="col"><a href="/fr/docs/Web/CSS/Reference/Values/transform-function#le_système_de_coordonnées_cartésiennes">Coordonnées cartésiennes</a> sur <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^2 <sup>(angl.)</sup></a></th>
+      <th scope="col"><a href="https://fr.wikipedia.org/wiki/Coordonn%C3%A9es_homog%C3%A8nes">Coordonnées homogènes</a> sur <a href="https://fr.wikipedia.org/wiki/Plan_projectif_r%C3%A9el">ℝℙ^2</a></th>
+      <th scope="col">Coordonnées cartésiennes sur <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^3 <sup>(angl.)</sup></a></th>
+      <th scope="col">Coordonnées homogènes sur <a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3 <sup>(angl.)</sup></a></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td colspan="2">
-        Cette transformation s'applique sur l'espace en trois dimensions et ne
-        peut donc être représentée sous la forme d'une transformation plane.
+        This transformation applies to the 3D space and can't be represented on the plane.
       </td>
       <td>
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr>1<mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>s</mtd></mtr></mtable
-            ></mfenced
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi>s</mi></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{ccc} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & s \end{array} \right)</annotation></semantics>
+        </math>
       </td>
       <td>
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>s</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
-            ></mfenced
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi>s</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cccc} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & s & 0 \\ 0 & 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
     </tr>
   </tbody>
 </table>
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -163,8 +152,8 @@ scaleZ(s)
 
 ```html
 <div>Normal</div>
-<div class="perspective">Avec translation</div>
-<div class="scaled-translated">Avec mise à l'échelle</div>
+<div class="perspective">Déplacé</div>
+<div class="scaled-translated">Mis à l'échelle</div>
 ```
 
 ### CSS
@@ -177,13 +166,13 @@ div {
 }
 
 .perspective {
-  /* On ajoute une perspective pour créer un volume 3D */
+  /* Ajoute une perspective pour créer un volume 3D */
   transform: perspective(400px) translateZ(-100px);
   background-color: limegreen;
 }
 
 .scaled-translated {
-  /* On ajoute une perspective pour créer un volume 3D */
+  /* Ajoute une perspective pour créer un volume 3D */
   transform: perspective(400px) scaleZ(2) translateZ(-100px);
   background-color: pink;
 }
@@ -191,7 +180,7 @@ div {
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples","100%","200")}}
+{{EmbedLiveSample("Exemples", 200, 300)}}
 
 ## Spécifications
 
@@ -203,8 +192,13 @@ div {
 
 ## Voir aussi
 
-- [`scaleX()`](/fr/docs/Web/CSS/Reference/Values/transform-function/scaleX)
-- [`scaleY()`](/fr/docs/Web/CSS/Reference/Values/transform-function/scaleY)
-- [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function)
-- [`transform-origin`](/fr/docs/Web/CSS/Reference/Properties/transform-origin)
+- La fonction {{CSSxRef("transform-function/scaleX", "scaleX()")}}
+- La fonction {{CSSxRef("transform-function/scaleY", "scaleY()")}}
+- La propriété {{CSSxRef("transform")}}
+- Le type de donnée {{CSSxRef("&lt;transform-function&gt;")}}
+- La propriété {{CSSxRef("transform-origin")}}
+- Propriétés de transformation individuelles&nbsp;:
+  - {{CSSxRef("translate")}}
+  - {{CSSxRef("scale")}}
+  - {{CSSxRef("rotate")}}
+  - Remarque&nbsp;: il n'existe pas de propriété `skew`

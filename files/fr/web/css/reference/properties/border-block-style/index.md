@@ -1,14 +1,15 @@
 ---
 title: border-block-style
 slug: Web/CSS/Reference/Properties/border-block-style
-original_slug: Web/CSS/border-block-style
+l10n:
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`border-block-style`** définit le style des bordures logiques de bloc d'un élément, qui correspond à un style de bordure physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle peut correspondre aux propriétés {{CSSxRef("border-top-style")}} et {{CSSxRef("border-bottom-style")}}, ou {{CSSxRef("border-left-style")}} et {{CSSxRef("border-right-style")}} selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
 
-La propriété **`border-block-style`** permet de définir le style pour la bordure sur les côtés d'un élément qui correspondent à l'axe de bloc. Cette propriété logique correspond à différentes propriétés physiques selon le mode d'écriture, la direction et l'orientation du texte. Autrement dit, cette propriété correspond à [`border-top-style`](/fr/docs/Web/CSS/Reference/Properties/border-top-style) et [`border-bottom-style`](/fr/docs/Web/CSS/Reference/Properties/border-bottom-style) ou à [`border-left-style`](/fr/docs/Web/CSS/Reference/Properties/border-left-style) et [`border-right-style`](/fr/docs/Web/CSS/Reference/Properties/border-right-style) selon les valeurs des propriétés [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode), [`direction`](/fr/docs/Web/CSS/Reference/Properties/direction) et [`text-orientation`](/fr/docs/Web/CSS/Reference/Properties/text-orientation).
+Le style de bordure dans l'autre dimension peut être défini avec {{CSSxRef("border-inline-style")}}, qui définit {{CSSxRef("border-inline-start-style")}} et {{CSSxRef("border-inline-end-style")}}.
 
-{{InteractiveExample("CSS Demo: border-block-style")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: border-block-style")}}
 
 ```css interactive-example-choice
 border-block-style: dotted;
@@ -29,15 +30,15 @@ direction: rtl;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    Ceci est une boîte avec une bordure autour.
   </div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #000;
+  background-color: #eeeeee;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;
@@ -45,8 +46,6 @@ direction: rtl;
   unicode-bidi: bidi-override;
 }
 ```
-
-Pour les autres côtés, la bordure peut être mise en forme grâce à la propriété [`border-inline-style`](/fr/docs/Web/CSS/Reference/Properties/border-inline-style) qui définit [`border-inline-start-style`](/fr/docs/Web/CSS/Reference/Properties/border-inline-start-style) et [`border-inline-end-style`](/fr/docs/Web/CSS/Reference/Properties/border-inline-end-style).
 
 ## Syntaxe
 
@@ -60,13 +59,14 @@ border-block-style: groove;
 border-block-style: inherit;
 border-block-style: initial;
 border-block-style: revert;
+border-block-style: revert-layer;
 border-block-style: unset;
 ```
 
 ### Valeur
 
 - `<'border-style'>`
-  - : Le style de la ligne pour la bordure. Voir [`border-style`](/fr/docs/Web/CSS/Reference/Properties/border-style).
+  - : Le style de la ligne pour la bordure. Voir {{CSSxRef("border-style")}}.
 
 ## Définition formelle
 
@@ -74,19 +74,21 @@ border-block-style: unset;
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
-### HTML
+### Bordure en pointillés avec du texte vertical
+
+#### HTML
 
 ```html
 <div>
-  <p class="texteExemple">Texte exemple</p>
+  <p class="exempleTexte">Texte exemple</p>
 </div>
 ```
 
-### CSS
+#### CSS
 
 ```css
 div {
@@ -95,16 +97,16 @@ div {
   height: 120px;
 }
 
-.texteExemple {
+.exempleTexte {
   writing-mode: vertical-lr;
   border: 5px solid blue;
   border-block-style: dashed;
 }
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample('', 140, 140)}}
+{{EmbedLiveSample("Bordure en pointillés avec du texte vertical", 140, 140)}}
 
 ## Spécifications
 
@@ -116,6 +118,6 @@ div {
 
 ## Voir aussi
 
-- Les propriétés physiques qui correspondent à cette propriété logique&nbsp;: [`border-top-style`](/fr/docs/Web/CSS/Reference/Properties/border-top-style), [`border-right-style`](/fr/docs/Web/CSS/Reference/Properties/border-right-style), [`border-bottom-style`](/fr/docs/Web/CSS/Reference/Properties/border-bottom-style), [`border-left-style`](/fr/docs/Web/CSS/Reference/Properties/border-left-style).
-
-- [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode), [`direction`](/fr/docs/Web/CSS/Reference/Properties/direction), [`text-orientation`](/fr/docs/Web/CSS/Reference/Properties/text-orientation)
+- [Propriétés et valeurs logiques CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values)
+- Cette propriété correspond à l'une des propriétés physiques de bordure&nbsp;: {{CSSxRef("border-top-style")}}, {{CSSxRef("border-right-style")}}, {{CSSxRef("border-bottom-style")}} ou {{CSSxRef("border-left-style")}}.
+- Les propriétés {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}

@@ -1,39 +1,44 @@
 ---
-title: Boolean.prototype.valueOf()
+title: "Boolean : méthode valueOf()"
+short-title: valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`valueOf()`** des valeurs {{JSxRef("Boolean")}} retourne la valeur primitive d'un objet {{JSxRef("Boolean")}}.
 
-La méthode **`valueOf()`** renvoie la valeur primitive de l'objet {{jsxref("Boolean")}}.
-
-{{InteractiveExample("JavaScript Demo: Boolean.valueOf()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Boolean.prototype.valueOf()")}}
 
 ```js interactive-example
 const x = new Boolean();
 
 console.log(x.valueOf());
-// Expected output: false
+// Sortie attendue : false
 
 const y = new Boolean("Mozilla");
 
 console.log(y.valueOf());
-// Expected output: true
+// Sortie attendue : true
 ```
 
 ## Syntaxe
 
-```js
-bool.valueOf();
+```js-nolint
+valueOf()
 ```
+
+### Paramètres
+
+Aucun.
 
 ### Valeur de retour
 
-La valeur primitive associée à l'objet {{jsxref("Boolean")}}.
+La valeur primitive associée à l'objet {{JSxRef("Boolean")}}.
 
 ## Description
 
-La méthode `valueOf()` de {{jsxref("Boolean")}} renvoie la valeur primitive d'un objet `Boolean`, ou d'un littéral booléen.
+La méthode `valueOf()` de {{JSxRef("Boolean")}} retourne la valeur primitive d'un objet `Boolean`, ou d'un littéral booléen.
 
 Cette méthode est généralement utilisée de façon interne pas le moteur JavaScript et n'est pas utilisée explicitement dans les scripts.
 
@@ -42,8 +47,8 @@ Cette méthode est généralement utilisée de façon interne pas le moteur Java
 ### Utiliser `valueOf()`
 
 ```js
-var x = new Boolean();
-var maVar = x.valueOf(); // assigne false à maVar
+const x = new Boolean();
+const myVar = x.valueOf(); // assigne false à myVar
 ```
 
 ## Spécifications
@@ -56,4 +61,4 @@ var maVar = x.valueOf(); // assigne false à maVar
 
 ## Voir aussi
 
-- {{jsxref("Object.prototype.valueOf()")}}
+- La méthode {{JSxRef("Object.prototype.valueOf()")}}

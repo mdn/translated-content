@@ -1,15 +1,15 @@
 ---
 title: URI
 slug: Glossary/URI
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+Une **URI** (<i lang="en">Uniform Resource Identifier</i> en anglais) est une chaîne qui renvoie à une ressource.
 
-Un **URI** _(Uniform Resource Identifier)_ _(Identifiant de ressource uniforme )_ est une chaîne qui fait référence à une ressource. Les plus courantes sont les {{Glossary("URL")}}, qui identifient une ressource en donnant son emplacement sur le Web. Au contraire, les {{Glossary("URN")}} font référence à une ressource grâce à son nom, dans un environnement donné, par exemple le code ISBN d'un livre.
+Les plus courantes sont les {{Glossary("URL")}}, qui identifient la ressource en indiquant son emplacement sur le Web. Les {{Glossary("URN")}}, en revanche, réfèrent à une ressource par un nom, dans un espace de noms donné, comme l'ISBN d'un livre.
 
 ## Voir aussi
 
 - [URI](https://fr.wikipedia.org/wiki/Uniform_Resource_Identifier) sur Wikipédia
-- [RFC 3986 sur URI](https://tools.ietf.org/html/rfc3986)
-- [data URIs](/fr/docs/Web/URI/Reference/Schemes/data)
-- [www vs non-www](/fr/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs)
+- [RFC 3986 sur les URI <sup>(angl.)</sup>](https://datatracker.ietf.org/doc/html/rfc3986)

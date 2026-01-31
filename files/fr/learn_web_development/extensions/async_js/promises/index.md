@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Async_JS/Promises
 original_slug: Learn/JavaScript/Asynchronous/Promises
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn_web_development/Extensions/Async_JS")}}
 
 **Les promesses (ou <i lang="en">promises</i> en anglais)** sont une brique fondamentale pour la programmation asynchrone en JavaScript. Une promesse est un objet renvoyé par une fonction asynchrone et qui représente l'état courant de l'opération. Au moment où la promesse est renvoyée à l'appelant, l'opération n'est généralement pas terminée, mais la promesse fournit des méthodes pour gérer la réussite ou l'échec de l'opération.
 
@@ -401,4 +401,4 @@ De nombreuses API web modernes utilisent les promesses, comme [WebRTC](/fr/docs/
 - [Nous avons un problème avec les promesses (en anglais)](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html), un billet de Nolan Lawson
 - [Parlons un peu de notre façon de parler des promesses (en anglais)](https://thenewtoys.dev/blog/2021/02/08/lets-talk-about-how-to-talk-about-promises/)
 
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn_web_development/Extensions/Async_JS")}}

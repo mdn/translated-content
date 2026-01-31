@@ -1,9 +1,8 @@
 ---
 title: :host
 slug: Web/CSS/Reference/Selectors/:host
-original_slug: Web/CSS/:host
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:host`** permet de cibler l'hôte d'un _[DOM sombre (<i lang="en">shadow DOM</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM)_ contenant le CSS à utiliser pour cet hôte. Autrement dit, elle permet de sélectionner un élément personnalisé (_custom element_) depuis l'intérieur du _shadow DOM_.
@@ -67,7 +66,7 @@ function init() {
 
 ## Exemples
 
-Les fragments de code qui suivent sont extraits du dépôt d'exemple [_host-selectors_](https://github.com/mdn/web-components-examples/tree/master/host-selectors) ([voir le résultat _live_](https://mdn.github.io/web-components-examples/host-selectors/)).
+Les fragments de code qui suivent sont extraits du dépôt d'exemple [_host-selectors_ <sup>(angl.)</sup>](https://github.com/mdn/web-components-examples/tree/master/host-selectors) ([voir le résultat _live_ <sup>(angl.)</sup>](https://mdn.github.io/web-components-examples/host-selectors/)).
 
 Dans cet exemple, on dispose d'un élément personnalisé `<context-span>` qui peut contenir du texte&nbsp;:
 
@@ -110,8 +109,8 @@ La règle `:host { background: rgba(0,0,0,0.1); padding: 2px 5px; }` permet de c
 ## Voir aussi
 
 - [Les composants web](/fr/docs/Web/API/Web_components)
-- {{cssxref(":host_function", ":host()")}}
-- {{cssxref(":host-context", ":host-context()")}}
-- {{CSSxref("::slotted")}}
-- {{CSSxRef(":state",":state()")}}
+- La pseudo-classe {{CSSxRef(":host_function", ":host()")}}
+- La pseudo-classe {{CSSxRef(":host-context()")}}
+- Le pseudo-élément {{CSSxRef("::slotted")}}
+- La pseudo-classe {{CSSxRef(":state()")}}
 - Le module [CSS scoping](/fr/docs/Web/CSS/CSS_scoping)

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5026c14bd6d2b6b377289aadac7eceae9282e806
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content/Structuring_documents", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 В HTML для форматирования текста есть много других элементов, не рассмотренных в статье [Основы редактирования текста в HTML](/ru/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs). Элементы, описанные в этой статье, не так часто используются, но всё же полезны для понимания (и это всё ещё будет не полный список элементов). Здесь вы узнаете о цитатах, списках описаний, компьютерном коде и другом виде текстовых элементов, подстрочном и надстрочном тексте, контактной информации и других типах текста.
 
@@ -782,4 +782,4 @@ HTML также предоставляет элемент {{htmlelement("time")}
 
 На этом мы завершаем наше изучение семантики текста HTML. Имейте в виду, что в этом курсе мы рассмотрели не все существующие текстовые элементы HTML. Мы хотели показать основные элементы, а также некоторые из наиболее распространённых из них, которые вы встретите в реальной жизни или, по крайней мере, которые могут показаться вам интересными. Чтобы найти гораздо больше HTML-элементов, вы можете взглянуть на наш [справочник элементов HTML](/ru/docs/Web/HTML/Reference/Elements). В следующей статье мы рассмотрим элементы HTML, которые вы будете использовать для [структурирования HTML-документа](/ru/docs/Learn_web_development/Core/Structuring_content/Structuring_documents).
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content/Structuring_documents", "conflicting/Learn_web_development/Core/Structuring_content")}}

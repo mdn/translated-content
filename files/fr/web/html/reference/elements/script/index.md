@@ -1,9 +1,8 @@
 ---
 title: "<script> : l'élément de script"
 slug: Web/HTML/Reference/Elements/script
-original_slug: Web/HTML/Element/script
 l10n:
-  sourceCommit: 0e2ec54f4eb55cccad11af843d83061857918bee
+  sourceCommit: dc788bf0ea36cb1ebe809c82aaae2c77cb3e18c0
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<script>`** est utilisé pour intégrer du code ou des données exécutables&nbsp;: il sert généralement à intégrer ou référencer du code JavaScript. L'élément `<script>` peut aussi être utilisé avec d'autres langages, comme le langage de programmation GLSL de [WebGL](/fr/docs/Web/API/WebGL_API) ou {{Glossary("JSON")}}.
@@ -28,7 +27,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
     Voir la section [Compatibilité des navigateurs](#compatibilité_des_navigateurs) pour la prise en charge. Voir aussi [les scripts asynchrones avec asm.js](/fr/docs/Games/Techniques/Async_scripts).
 
-- `attributionsrc` {{Experimental_Inline}}
+- `attributionsrc` {{Deprecated_Inline}}
   - : Indique que vous souhaitez que le navigateur envoie un en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}} avec la requête de ressource du script. Côté serveur, cela sert à déclencher l'envoi d'un en-tête {{HTTPHeader("Attribution-Reporting-Register-Source")}} ou {{HTTPHeader("Attribution-Reporting-Register-Trigger")}} dans la réponse, pour enregistrer respectivement une [source d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_sources#sources_dévénements_basées_sur_javascript) ou un [déclencheur d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_triggers#déclencheurs_dattributions_basés_sur_javascript) basé sur JavaScript. L'en-tête de réponse à envoyer dépend de la valeur de l'en-tête `Attribution-Reporting-Eligible` qui a déclenché l'enregistrement.
 
     > [!NOTE]
@@ -59,7 +58,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     > Seuls les éléments HTML `script` présents dans l'en-tête du document (`<head>`) peuvent bloquer le rendu. Les scripts ne bloquent pas le rendu par défaut&nbsp;: si un élément `script` n'inclut pas `type="module"`, `async` ou `defer`, il bloque l'analyse, pas le rendu. Si un tel élément est ajouté dynamiquement, il faut définir `blocking = "render"` pour bloquer le rendu.
 
 - [`crossorigin`](/fr/docs/Web/HTML/Reference/Attributes/crossorigin)
-  - : Les balises de `script` classiques enverront un minimum d'informations à {{DOMxRef('Window.error_event', 'window.onerror')}} pour les scripts qui ne respectent pas les contrôles standard du {{Glossary("CORS")}}. Afin de disposer de plus de renseignements sur les erreurs pour les sites utilisant des domaines séparés pour des documents statiques, on pourra utiliser cet attribut. Voir [la page de réglages des attributs CORS](/fr/docs/Web/HTML/Reference/Attributes/crossorigin) pour plus d'explications quant aux valeurs valides.
+  - : Les balises de `script` classiques enverront un minimum d'informations à {{DOMxRef("Window.error_event", "window.onerror")}} pour les scripts qui ne respectent pas les contrôles standard du {{Glossary("CORS")}}. Afin de disposer de plus de renseignements sur les erreurs pour les sites utilisant des domaines séparés pour des documents statiques, on pourra utiliser cet attribut. Voir [la page de réglages des attributs CORS](/fr/docs/Web/HTML/Reference/Attributes/crossorigin) pour plus d'explications quant aux valeurs valides.
 - `defer`
   - : Cet attribut booléen permet d'indiquer au navigateur que le script doit être exécuté après l'analyse du document et avant l'évènement {{DOMxRef("Document/DOMContentLoaded_event", "DOMContentLoaded")}}.
 
@@ -91,7 +90,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     Voir {{DOMxRef("HTMLScriptElement.fetchPriority")}} pour plus d'informations.
 
 - `integrity`
-  - : Cet attribut contient des métadonnées que l'agent utilisateur peut vérifier afin de contrôler qu'une ressource téléchargée n'a pas été modifiée de façon frauduleuse. Pour plus d'informations, consulter [la page relative à l'intégrité des sous-ressources](/fr/docs/Web/Security/Subresource_Integrity).
+  - : Cet attribut contient des métadonnées que l'agent utilisateur peut vérifier afin de contrôler qu'une ressource téléchargée n'a pas été modifiée de façon frauduleuse. Pour plus d'informations, consulter [la page relative à l'intégrité des sous-ressources](/fr/docs/Web/Security/Defenses/Subresource_Integrity).
 - `nomodule`
   - : Cet attribut booléen indique que le script ne doit pas être exécuté dans les navigateurs qui prennent en charge les [modules EcmaScript](/fr/docs/Web/JavaScript/Guide/Modules). Il permet ainsi de fournir un script de repli aux anciens navigateurs qui ne gèrent pas le code JavaScript modulaire.
 - `nonce`
@@ -137,7 +136,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
         Les développeur·euse·s doivent utiliser un type MIME valide qui n'est pas un type MIME JavaScript pour indiquer des blocs de données.
         Tous les autres attributs seront ignorés, y compris l'attribut `src`.
 
-### Attributs dépréciés
+### Attributs obsolètes
 
 - `charset` {{Deprecated_Inline}}
   - : Si présent, sa valeur doit correspondre (sans tenir compte de la casse) à `utf-8` selon {{Glossary("ASCII")}}. Il est inutile de définir l'attribut `charset`, car les documents doivent utiliser UTF-8 et l'élément `script` hérite de l'encodage du document.

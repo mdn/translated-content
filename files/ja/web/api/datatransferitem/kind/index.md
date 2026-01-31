@@ -1,13 +1,14 @@
 ---
-title: DataTransferItem.kind
+title: "DataTransferItem: kind プロパティ"
+short-title: kind
 slug: Web/API/DataTransferItem/kind
 l10n:
-  sourceCommit: 78ad6b35d403777f8a7547c981300db3906ec7ef
+  sourceCommit: 8285d415db211ae9efe04752d9dab1b574450ee8
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
 
-**`DataTransferItem.kind`** プロパティは読み取り専用で、 _ドラッグデータ項目_ の種類（テキストまたはファイル）を表す {{domxref("DataTransferItem")}} を返すものです。
+**`DataTransferItem.kind`** プロパティは読み取り専用で、 _ドラッグデータ項目_ の種類（テキストまたはファイル）を表す {{domxref("DataTransferItem")}} オブジェクトを返すものです。
 
 ## 値
 
@@ -23,23 +24,22 @@ l10n:
 この例では、 `kind` プロパティを使用しています。
 
 ```js
-function drop_handler(ev) {
+function dropHandler(ev) {
   console.log("Drop");
   ev.preventDefault();
-  const data = event.dataTransfer.items;
-  for (let i = 0; i < data.length; i += 1) {
-    if (data[i].kind === "string" && data[i].type.match("^text/plain")) {
+  for (const item of ev.dataTransfer.items) {
+    if (item.kind === "string" && item.type.match("^text/plain")) {
       // This item is the target node
-      data[i].getAsString((s) => {
+      item.getAsString((s) => {
         ev.target.appendChild(document.getElementById(s));
       });
-    } else if (data[i].kind === "string" && data[i].type.match("^text/html")) {
+    } else if (item.kind === "string" && item.type.match("^text/html")) {
       // Drag data item is HTML
       console.log("… Drop: HTML");
-    } else if (data[i].kind === "file" && data[i].type.match("^image/")) {
+    } else if (item.kind === "file" && item.type.match("^image/")) {
       // Drag data item is an image file
-      const f = data[i].getAsFile();
-      console.log("… Drop: File ");
+      const f = item.getAsFile();
+      console.log("… Drop: File");
     }
   }
 }
@@ -58,4 +58,3 @@ function drop_handler(ev) {
 - [ドラッグ & ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
 - [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
-- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

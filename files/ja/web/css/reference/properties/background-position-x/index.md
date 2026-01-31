@@ -1,12 +1,13 @@
 ---
 title: background-position-x
 slug: Web/CSS/Reference/Properties/background-position-x
-original_slug: Web/CSS/background-position-x
 l10n:
-  sourceCommit: b90786a572bd01af9063ac5e515850c6bb5ddb89
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
 **`background-position-x`** は [CSS](/ja/docs/Web/CSS) のプロパティで、各背景画像における水平の初期位置を設定します。位置は {{cssxref("background-origin")}} によって設定された位置レイヤーに対する相対位置です。
+
+このプロパティの値は、その後で一括指定の {{cssxref("background")}} または {{cssxref("background-position")}} プロパティが定義されると上書きされます。
 
 {{InteractiveExample("CSS デモ: background-position-x")}}
 
@@ -44,8 +45,6 @@ background-position-x: right 32px;
   height: 100%;
 }
 ```
-
-このプロパティの値は、その後で一括指定の {{cssxref("background")}} または {{cssxref("background-position")}} プロパティが定義されると上書きされます。
 
 ## 構文
 
@@ -105,7 +104,7 @@ background-position-x: unset;
 
 ### 基本的な例
 
-次の例は、シンプルな背景画像の実装で、 background-position-x と background-position-y を使って、画像の水平方向と垂直方向の位置を別々に定義しています。
+次の例は、背景画像の実装で、 background-position-x と background-position-y を使って、画像の水平方向と垂直方向の位置を別々に定義しています。
 
 #### HTML
 
@@ -120,7 +119,7 @@ div {
   width: 300px;
   height: 300px;
   background-color: skyblue;
-  background-image: url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png);
+  background-image: url("https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: bottom;
@@ -148,7 +147,7 @@ div {
   width: 300px;
   height: 300px;
   background-color: seagreen;
-  background-image: url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png);
+  background-image: url("https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png");
   background-repeat: no-repeat;
   background-position-x: right 20px;
   background-position-y: bottom 10px;

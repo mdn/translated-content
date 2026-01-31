@@ -1,14 +1,15 @@
 ---
 title: background-blend-mode
 slug: Web/CSS/Reference/Properties/background-blend-mode
-original_slug: Web/CSS/background-blend-mode
+l10n:
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`background-blend-mode`** définit comment les images d'arrière-plan d'un élément doivent se fondre entre elles et avec la couleur d'arrière-plan de l'élément.
 
-La propriété CSS **`background-blend-mode`** définit la façon dont les images d'arrière-plan doivent être fusionnées entre elles et avec la couleur d'arrière-plan.
+Les modes de fusion doivent être définis dans le même ordre que la propriété {{CSSxRef("background-image")}}. Si la longueur des listes de modes de fusion et d'images d'arrière-plan n'est pas identique, la liste sera répétée et/ou tronquée jusqu'à ce que les longueurs correspondent.
 
-{{InteractiveExample("CSS Demo: background-blend-mode")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: background-blend-mode")}}
 
 ```css interactive-example-choice
 background-blend-mode: normal;
@@ -43,55 +44,53 @@ background-blend-mode: difference;
 }
 ```
 
-Les modes de fusions (<i lang="en">blending modes</i>) doivent être définis dans le même ordre que les images sont définies avec [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image). Si la liste des modes de fusion et la liste des images d'arrière-plan ne sont pas de la même longueur, la première liste sera répétée ou tronquée pour que les longueurs soient égales.
-
 ## Syntaxe
 
 ```css
-/* Une valeur qui s'applique à toutes les images */
+/* Une valeur */
 background-blend-mode: normal;
 
 /* Deux valeurs, chacune pour une image */
 background-blend-mode: darken, luminosity;
 
 /* Valeurs globales */
-background-blend-mode: initial;
 background-blend-mode: inherit;
+background-blend-mode: initial;
 background-blend-mode: revert;
+background-blend-mode: revert-layer;
 background-blend-mode: unset;
 ```
 
 ### Valeurs
 
-- `<blend-mode>`
-  - : Une valeur décrivant un mode de fusion (type [`<blend-mode>`](/fr/docs/Web/CSS/Reference/Values/blend-mode)) qui doit être appliqué. On peut avoir plusieurs valeurs et dans ce cas, elles doivent être séparées par des virgules.
+- {{CSSxRef("&lt;blend-mode&gt;")}}
+  - : Le mode de fusion à appliquer. Il peut y avoir plusieurs valeurs, séparées par des virgules.
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
-### CSS
+### Exemple simple
 
 ```css
-#div {
+.item {
   width: 300px;
   height: 300px;
-  background: url("br.png"), url("tr.png");
+  background: url("image1.png"), url("image2.png");
   background-blend-mode: screen;
 }
 ```
 
-### HTML
+### Essayer différents modes de fusion
 
 ```html
 <div id="div"></div>
-
 <select id="select">
   <option>normal</option>
   <option>multiply</option>
@@ -112,19 +111,24 @@ background-blend-mode: unset;
 </select>
 ```
 
-### JavaScript
+```css hidden
+#div {
+  width: 300px;
+  height: 300px;
+  background: url("br.png"), url("tr.png");
+  background-blend-mode: screen;
+}
+```
 
-```js
-document.getElementById("select").onchange = function (event) {
+```js hidden
+document.getElementById("select").onchange = (event) => {
   document.getElementById("div").style.backgroundBlendMode =
     document.getElementById("select").selectedOptions[0].innerHTML;
 };
 console.log(document.getElementById("div"));
 ```
 
-### Résultat
-
-{{EmbedLiveSample('', "330", "350")}}
+{{EmbedLiveSample("Essayer différents modes de fusion", 330, 350)}}
 
 ## Spécifications
 
@@ -136,5 +140,5 @@ console.log(document.getElementById("div"));
 
 ## Voir aussi
 
-- [`<blend-mode>`](/fr/docs/Web/CSS/Reference/Values/blend-mode)
-- [`mix-blend-mode`](/fr/docs/Web/CSS/Reference/Properties/mix-blend-mode)
+- Le type de donnée {{CSSxRef("&lt;blend-mode&gt;")}}
+- La propriété {{CSSxRef("mix-blend-mode")}}

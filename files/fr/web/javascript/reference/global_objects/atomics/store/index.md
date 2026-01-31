@@ -1,40 +1,41 @@
 ---
-title: Atomics.store()
+title: "Atomics : méthode statique store()"
+short-title: store()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/store
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode statique **`store()`** de l'objet {{JSxRef("Atomics")}} enregistre une valeur donnée à un emplacement donné du tableau partagé et retourne cette valeur.
 
-La méthode statique **`Atomics.store()`** enregistre une valeur donnée à un emplacement donné du tableau partagé et renvoie cette valeur.
-
-{{InteractiveExample("JavaScript Demo: Atomics.store()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Atomics.store()")}}
 
 ```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
+// Crée un SharedArrayBuffer avec une taille en octets
 const buffer = new SharedArrayBuffer(16);
 const uint8 = new Uint8Array(buffer);
 uint8[0] = 5;
 
 console.log(Atomics.store(uint8, 0, 2));
-// Expected output: 2
+// Résultat attendu : 2
 
 console.log(Atomics.load(uint8, 0));
-// Expected output: 2
+// Résultat attendu : 2
 ```
 
 ## Syntaxe
 
-```js
-Atomics.store(typedArray, index, valeur);
+```js-nolint
+Atomics.store(typedArray, index, value)
 ```
 
 ### Paramètres
 
 - `typedArray`
-  - : Un tableau typé entier partagé parmi {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}} ou {{jsxref("Uint32Array")}}.
+  - : Un tableau typé entier partagé parmi {{JSxRef("Int8Array")}}, {{JSxRef("Uint8Array")}}, {{JSxRef("Int16Array")}}, {{JSxRef("Uint16Array")}}, {{JSxRef("Int32Array")}}, {{JSxRef("Uint32Array")}}, {{JSxRef("BigInt64Array")}} ou {{JSxRef("BigUint64Array")}}.
 - `index`
   - : La position du tableau `typedArray` à laquelle on souhaite stocker la valeur.
-- `valeur`
+- `value`
   - : Le nombre à enregistrer.
 
 ### Valeur de retour
@@ -43,22 +44,20 @@ La valeur qui a été enregistrée.
 
 ### Exceptions
 
-- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
-- Cette méthode lève {{jsxref("TypeError")}} si `typedArray` n'est pas tableau typé partagé.
-- Cette méthode lève {{jsxref("RangeError")}} si `index` est en dehors des limites de `typedArray`.
+- {{JSxRef("TypeError")}}
+  - : Lèvee si `typedArray` n'est pas l'un des types d'entiers autorisés.
+- {{JSxRef("RangeError")}}
+  - : Levée si `index` est en dehors des limites de `typedArray`.
 
 ## Exemples
 
+### Utilisation de `store()`
+
 ```js
-var buffer = new ArrayBuffer(4); // Buffer classique
-var float32 = new Float32Array(buffer); // Nombre flottant
-var uint32 = new Uint32Array(buffer); // Représentation IEEE754
+const sab = new SharedArrayBuffer(1024);
+const ta = new Uint8Array(sab);
 
-float32[0] = 0.5;
-console.log("0x" + uint32[0].toString(16));
-
-uint32[0] = 0x3f000000; /// Représentation sur 32 bits de 0.5 (IEEE754)
-console.log(float32[0]);
+Atomics.store(ta, 0, 12); // 12
 ```
 
 ## Spécifications
@@ -71,5 +70,5 @@ console.log(float32[0]);
 
 ## Voir aussi
 
-- {{jsxref("Atomics")}}
-- {{jsxref("Atomics.load()")}}
+- L'objet {{JSxRef("Atomics")}}
+- La méthode {{JSxRef("Atomics.load()")}}
