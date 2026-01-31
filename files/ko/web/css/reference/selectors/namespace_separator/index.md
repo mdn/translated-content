@@ -23,7 +23,7 @@ myNameSpace|a {
 }
 ```
 
-[타입 선택자](/ko/docs/Web/CSS/Type_selectors)와 [전체 선택자](/ko/docs/Web/CSS/Universal_selectors)는 선택적인 네임스페이스 컴포넌트를 허용합니다. 네임스페이스가 이전에 {{CSSXref("@namespace")}}를 통해 정의되었다면 이 선택자들 앞에 네임스페이스의 이름을 네임스페이스 구분자 (`|`)로 구분하여 네임스페이스화할 수 있습니다. 이는 인라인 SVG 나 MathML가 있는 HTML이나 여러 어휘가 결합된 XML처럼 다수의 네임스페이스를 포함한 문서를 다루는 경우에 유용합니다.
+[타입 선택자](/ko/docs/Web/CSS/Reference/Selectors/Type_selectors)와 [전체 선택자](/ko/docs/Web/CSS/Reference/Selectors/Universal_selectors)는 선택적인 네임스페이스 컴포넌트를 허용합니다. 네임스페이스가 이전에 {{CSSXref("@namespace")}}를 통해 정의되었다면 이 선택자들 앞에 네임스페이스의 이름을 네임스페이스 구분자 (`|`)로 구분하여 네임스페이스화할 수 있습니다. 이는 인라인 SVG 나 MathML가 있는 HTML이나 여러 어휘가 결합된 XML처럼 다수의 네임스페이스를 포함한 문서를 다루는 경우에 유용합니다.
 
 - `ns|h1` - `ns` 네임스페이스 내 `<h1>` 요소와 일치합니다.
 - `*|h1` - 모든 `<h1>` 요소와 일치합니다.
@@ -181,9 +181,9 @@ p {
 
 ## 같이 보기
 
-- [`@namespace`](/ko/docs/Web/CSS/@namespace)
+- [`@namespace`](/ko/docs/Web/CSS/Reference/At-rules/@namespace)
 - [`Document.createElementNS()`](/ko/docs/Web/API/Document/createElementNS) 메서드
 - [`Element.namespaceURI`](/ko/docs/Web/API/Element/namespaceURI) 속성
-- [CSS 타입 선택자](/ko/docs/Web/CSS/Type_selectors)
-- [CSS 전체 선택자](/ko/docs/Web/CSS/Universal_selectors)
-- [CSS 선택자 모듈](/ko/docs/Web/CSS/CSS_selectors)
+- [CSS 타입 선택자](/ko/docs/Web/CSS/Reference/Selectors/Type_selectors)
+- [CSS 전체 선택자](/ko/docs/Web/CSS/Reference/Selectors/Universal_selectors)
+- [CSS 선택자 모듈](/ko/docs/Web/CSS/Guides/Selectors)

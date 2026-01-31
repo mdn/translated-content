@@ -60,10 +60,10 @@ svg {
 
 クローンされたノードは公開されないので、 [CSS](/ja/docs/Web/CSS) を使って `use` 要素とその隠れた子孫要素にスタイル付けをする場合は注意が必要です。[CSS の継承](/ja/docs/Web/CSS/Guides/Cascade/Inheritance)を使用して明示的に要求しない限り、CSS 属性は隠された複製の DOM によって継承されることが保証されません。
 
-セキュリティ上の理由で、ブラウザーは[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)を `use` 要素に適用して、 {{SVGAttr("href")}} 属性にあるオリジンをまたがる URL を読み込むことを拒否することがあります。現在のところ、 `use` 要素の同一オリジンポリシーを設定する方法は定義されていません。
+セキュリティ上の理由で、ブラウザーは[同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)を `use` 要素に適用して、 {{SVGAttr("href")}} 属性にあるオリジンをまたがる URL を読み込むことを拒否することがあります。現在のところ、 `use` 要素の同一オリジンポリシーを設定する方法は定義されていません。
 
 > [!WARNING]
-> セキュリティ上の理由から、 `href` 属性にデータ URI を使用してリソースを読み込むことは非推奨となっています。
+> セキュリティ上の理由から、 `href` 属性に data URL を使用してリソースを読み込むことは非推奨となっています。
 > これは、`<use href="data:...`、および [`set`](/ja/docs/Web/SVG/Reference/Element/set) または [`setAttribute`](/ja/docs/Web/API/Element/setAttribute) メソッドを使用して `href` を設定する場合にも適用されます。
 > さまざまなブラウザーのバージョンでの対応状況については、[ブラウザーの互換性](#ブラウザーの互換性)表の "Load from data: URI" を参照してください。
 

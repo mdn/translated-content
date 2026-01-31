@@ -1,12 +1,11 @@
 ---
 title: <angle>
 slug: Web/CSS/Reference/Values/angle
-original_slug: Web/CSS/angle
 l10n:
-  sourceCommit: 48813be4b5187c6a17e744e7f9ba37a146302847
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**`<angle>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、度、グラード、ラジアン、周の値で表される角度の値を表します。例えば、 {{cssxref("&lt;gradient&gt;")}} 関数や一部の {{cssxref("transform")}} 関数などで使われています。
+**`<angle>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、度、グラード、ラジアン、周の値で表される角度の値を表します。例えば、 {{cssxref("gradient")}} 関数や一部の {{cssxref("transform")}} 関数などで使われています。
 
 {{InteractiveExample("CSS デモ: &lt;angle&gt;")}}
 
@@ -29,7 +28,7 @@ transform: rotate(1.75turn);
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This box can rotate to different angles.
+    このボックスは様々な角度に回転できます。
   </div>
 </section>
 ```
@@ -118,7 +117,7 @@ transform: rotate(1.75turn);
 ## 関連情報
 
 - [CSS データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)
-- [`<gradient>`](/ja/docs/Web/CSS/Reference/Values/gradient) 型
+- {{cssxref("gradient")}} 型
 - CSS 回転変換: [`rotate()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotate), [`rotate3d()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotate3d), [`rotateX()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotateX), [`rotateY()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotateY), [`rotateZ()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotateZ)
 - [CSS 変換](/ja/docs/Web/CSS/Guides/Transforms)
 - [CSS 変換の使用](/ja/docs/Web/CSS/Guides/Transforms/Using)

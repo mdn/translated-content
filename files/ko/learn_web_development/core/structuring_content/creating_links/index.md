@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 웹을 웹답게 만든다는 점에서 하이퍼 링크는 중요합니다. 이 글에서는 링크를 만드는데 필요한 구문을 보여주고 링크의 모범 사례를 설명합니다.
 
@@ -19,7 +19,7 @@ l10n:
           >HTML 시작하기</a
         >에서 설명하는 기본적인 HTML 숙련도.
         <a
-          href="/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+          href="/ko/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
           >HTML text fundamentals</a
         >에서 설명하는 HTML 텍스트 포맷팅에 대한 지식.
       </td>
@@ -363,4 +363,4 @@ Document fragments(문서 조각)를 참조하여 현재 문서의 다른 부분
 
 이제 링크는 여기까지입니다. 어쨌든! 스타일링을 시작하면 나중에 이 과정의 링크로 돌아올 것입니다. 다음 HTML에서는 텍스트 의미론(Text Semantics)으로 돌아가서 유용하게 사용할 수 있는 고급의 다른 기능들을 살펴보도록 하겠습니다. 다음에 알아볼 내용은 [Advanced text formatting](/ko/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features)입니다.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "conflicting/Learn_web_development/Core/Structuring_content")}}

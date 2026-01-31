@@ -5,7 +5,7 @@ slug: Web/HTML/Reference/Elements/img
 
 {{HTMLSidebar}}
 
-**HTML-элемент `<img>`** встраивает изображение в документ. Это [замещаемый элемент](/ru/docs/Web/CSS/CSS_images/Replaced_element_properties).
+**HTML-элемент `<img>`** встраивает изображение в документ. Это [замещаемый элемент](/ru/docs/Web/CSS/Guides/Images/Replaced_element_properties).
 
 {{InteractiveExample("HTML Demo: &lt;img&gt;", "tabbed-standard")}}
 
@@ -150,7 +150,7 @@ slug: Web/HTML/Reference/Elements/img
 
 ## Взаимодействие с CSS
 
-`<img>` является [замещаемым элементом](/ru/docs/Web/CSS/CSS_images/Replaced_element_properties); по умолчанию он имеет значение свойства {{cssxref("display")}} равное `inline`, но его размеры по умолчанию определяются внутренними значениями (см. {{glossary("Intrinsic Size", "внутренний размер")}}) встроенного изображения. Вы можете установить на изображение такие свойства, как {{cssxref("border")}}/{{cssxref("border-radius")}}, {{cssxref("padding")}}/{{cssxref("margin")}}, {{cssxref("width")}}/{{cssxref("height")}} и так далее.
+`<img>` является [замещаемым элементом](/ru/docs/Web/CSS/Guides/Images/Replaced_element_properties); по умолчанию он имеет значение свойства {{cssxref("display")}} равное `inline`, но его размеры по умолчанию определяются внутренними значениями (см. {{glossary("Intrinsic Size", "внутренний размер")}}) встроенного изображения. Вы можете установить на изображение такие свойства, как {{cssxref("border")}}/{{cssxref("border-radius")}}, {{cssxref("padding")}}/{{cssxref("margin")}}, {{cssxref("width")}}/{{cssxref("height")}} и так далее.
 
 Однако, часто бывает полезно установить для изображений свойство {{cssxref("display")}} в значение `block`, так что вы имеете максимальный контроль над стилизацией (например, `margin: 0 auto` не работает на изображениях с `display: inline`, легче размещать изображения в контексте с окружающими элементами, когда они являются [блочными](/ru/docs/Glossary/Block-level_content)).
 

@@ -2,7 +2,7 @@
 title: 位置情報 API
 slug: Web/API/Geolocation_API
 l10n:
-  sourceCommit: 049b078b0fff80875027b89802b0399138df63a6
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
@@ -46,6 +46,29 @@ WebExtension で `Geolocation` オブジェクトを使用するには、マニ�
 - {{domxref("Navigator.geolocation")}}
   - : API のエントリーポイント。 {{domxref("Geolocation")}} オブジェクトのインスタンスを返し、そこから他のすべての機能にアクセスすることができます。
 
+## セキュリティの考慮事項
+
+Geolocation API を使用すると、[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)内でユーザーがプログラムによって位置情報にアクセスすることができるようになります。
+
+アクセスはさらに[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)ディレクティブの {{HTTPHeader("Permissions-Policy/geolocation","geolocation")}} によって制御されます。
+`geolocation` のデフォルト許可リストは `self` であり、同一オリジンのネストされたフレーム内でのみ位置情報にアクセスするその権限を許可します。
+サードパーティの利用を許可するには、 `Permissions-Policy` レスポンスヘッダーを設定して、特定のサードパーティオリジンへ権限を与えます。
+
+```http
+Permissions-Policy: geolocation=(self b.example.com)
+```
+
+それから、そのオリジンからのソースの iframe 要素に `allow="geolocation"` 属性を追加する必要があります。
+
+```html
+<iframe src="https://b.example.com" allow="geolocation"></iframe>
+```
+
+位置情報データは、その端末の所有者が共有したくない情報があることがあり、それを明らかにする可能性があります。
+したがって、{{domxref("Geolocation.getCurrentPosition()")}} または {{domxref("Geolocation.watchPosition()")}} が呼び出される際には、ユーザーが明示的なその権限をプロンプト経由で許可しなければなりません（その権限の状態が既に `granted` または `denied` である場合を除く）。
+許可されたその権限の有効期間はユーザーエージェントによって異なり、時間ベース、セッションベース、あるいは永続的であることがあります。
+[権限 API](/ja/docs/Web/API/Permissions_API) の `geolocation` 権限を使用することができます。これにより、位置情報を使用する際のアクセスが `granted`（許可済み）、`denied`（拒否済み）、または `prompt`（プロンプト表示が必要）のいずれであるかを検査することができます。
+
 ## 例
 
 例については[位置情報 API の使用](/ja/docs/Web/API/Geolocation_API/Using_the_Geolocation_API#例)を参照してください。
@@ -60,10 +83,9 @@ WebExtension で `Geolocation` オブジェクトを使用するには、マニ�
 
 ### 可用性
 
-Wi-Fi ベースの測位は Google が提供することが多いため、中国ではバニラの位置情報 API が利用できない場合があります。 [Baidu](https://lbsyun.baidu.com/index.php?title=jspopular/guide/geolocation), [Autonavi](https://lbs.amap.com/api/javascript-api/guide/services/geolocation#geolocation), [Tencent](https://lbs.qq.com/tool/component-geolocation.html) などの地域ののサードパーティプロバイダーを使用することができます。これらのサービスは、ユーザーの IP アドレスおよび/またはローカルアプリを使用して、より高度な位置情報を提供します。
+Wi-Fi ベースの測位は Google が提供することが多いため、中国ではバニラの位置情報 API が利用できない場合があります。 [Baidu](https://lbsyun.baidu.com/index.php?title=jspopular/guide/geolocation), [Autonavi](https://lbs.amap.com/api/javascript-api/guide/services/geolocation#geolocation), [Tencent](https://lbs.qq.com/tool/component-geolocation.html) などの地域ののサードパーティプロバイダーを使用することができます。これらのサービスは、ユーザーの IP アドレスやローカルアプリを使用して、より高度な位置情報を提供します。
 
 ## 関連情報
 
 - [位置情報 API の使用](/ja/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
-- [Geolocation API on w3.org](https://www.w3.org/TR/geolocation/)
 - [Who moved my geolocation?](https://hacks.mozilla.org/2013/10/who-moved-my-geolocation/) (Hacks blog)

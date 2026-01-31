@@ -8,7 +8,7 @@ l10n:
 
 {{CSSRef}}
 
-[Сокращённое свойтсов](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/ru/docs/Web/CSS) **`outline`** ) устанавливает большинство свойств обводки в одном объявлении.
+[Сокращённое свойтсов](/ru/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/ru/docs/Web/CSS) **`outline`** ) устанавливает большинство свойств обводки в одном объявлении.
 
 {{InteractiveExample("CSS Demo: outline")}}
 

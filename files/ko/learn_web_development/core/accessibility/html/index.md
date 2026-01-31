@@ -6,7 +6,7 @@ l10n:
   sourceCommit: d3cdafcdb4d22e5c55771501e7c80451a96aa032
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_accessibility","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}
 
 HTML 요소를 늘 올바른 목적에 따라 사용하는 것 만으로 수많은 웹 콘텐츠가 접근성을 갖춥니다. 이번 글에서는 접근성을 최대한으로 보장하기 위해 HTML을 어떻게 사용해야 하는지 자세히 설명합니다.
 
@@ -571,7 +571,7 @@ HTML에는 {{htmlelement("figure")}}와 어떤 종류(이미지 외에 어떤 �
 
 ### 링크 스타일링
 
-색상과 [text-decoration](/ko/docs/Web/CSS/Reference/Properties/text-decoration) 면에서 링크는 다른 텍스트 요소들과 시각적으로 다릅니다. 기본 링크는 파란색에 밑줄이 그어져있고, 방문한 경우 보라색 밑줄, 키보드 포커스가 되어있을 때는 [focus-ring](/ko/docs/Web/CSS/:focus)이 생깁니다.
+색상과 [text-decoration](/ko/docs/Web/CSS/Reference/Properties/text-decoration) 면에서 링크는 다른 텍스트 요소들과 시각적으로 다릅니다. 기본 링크는 파란색에 밑줄이 그어져있고, 방문한 경우 보라색 밑줄, 키보드 포커스가 되어있을 때는 [focus-ring](/ko/docs/Web/CSS/Reference/Selectors/:focus)이 생깁니다.
 
 색상만으로 링크가 아닌 콘텐츠와 링크를 구분해서는 안됩니다. 다른 모든 텍스트와 마찬가지로 링크 텍스트의 색은 배경 색상과 시각적인 차이를 가져야 합니다 ([4.5:1 contrast](/ko/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)). 또, 링크는 링크가 아닌 텍스트와도 시각적으로 달라야 합니다. 링크 텍스트와 주위 텍스트, 그리고 기본 상태, 방문된 상태, 포커스/활성화된 상태 사이에는 각각 적어도 3:1의 대비가 요구됩니다. 모든 상태 색상 값과 배경 색상 사이에는 4.5:1의 대비가 요구됩니다.
 
@@ -637,4 +637,4 @@ anchor를 포함해 많은 상호작용 가능한 콘텐츠들은 서로에게 �
 
 이제 당신은 대부분의 상황에서 접근성있는 HTML을 작성하는 능력을 갖췄을 것입니다. 이번 아티클에서는 아주 기본적인 내용들을 다뤘고, 남은 부분 WAI-ARIA 아티클에서 채워질 것입니다. 다음에는 CSS와 JavaScript에 대해 알아보고 모범적인 또는 잘못된 사용이 접근성에 어떻게 영향을 주는지 살펴보겠습니다.
 
-{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_accessibility","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}

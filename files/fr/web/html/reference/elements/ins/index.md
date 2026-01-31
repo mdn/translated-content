@@ -1,25 +1,21 @@
 ---
-title: <ins>
+title: "<ins> : l'élément de texte inséré"
 slug: Web/HTML/Reference/Elements/ins
-original_slug: Web/HTML/Element/ins
+l10n:
+  sourceCommit: 9cfc2285428932f448a1747e347b1e35a3e0172b
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<ins>`** représente une portion de texte qui a été ajoutée à un document. Vous pouvez utiliser l'élément {{HTMLElement("del")}} de la même manière pour indiquer une portion de texte qui a été supprimée du document.
 
-L'élément HTML **`<ins>`** représente un fragment de texte qui a été ajouté dans un document.
-
-> [!NOTE]
-> À l'inverse, on pourra utiliser l'élément {{HTMLElement("del")}} afin de représenter un fragment de texte supprimé.
-
-{{InteractiveExample("HTML Demo: &lt;ins&gt;", "tabbed-standard")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;ins&gt;", "tabbed-standard")}}
 
 ```html interactive-example
-<p>&ldquo;You're late!&rdquo;</p>
+<p>&ldquo;Vous êtes en retard&nbsp;!&rdquo;</p>
 <del>
-  <p>&ldquo;I apologize for the delay.&rdquo;</p>
+  <p>&ldquo;Je suis désolé pour le retard.&rdquo;</p>
 </del>
 <ins cite="../howtobeawizard.html" datetime="2018-05">
-  <p>&ldquo;A wizard is never late &hellip;&rdquo;</p>
+  <p>&ldquo;Un sorcier n'est jamais en retard&hellip;&rdquo;</p>
 </ins>
 ```
 
@@ -32,7 +28,7 @@ ins {
 }
 
 del {
-  background-color: #fbb;
+  background-color: #ffbbbb;
 }
 
 ins {
@@ -55,36 +51,24 @@ ins::before {
 }
 
 p {
-  margin: 0 1.8rem 0;
-  font-family: Georgia, serif;
+  margin: 0 1.8rem;
+  font-family: "Georgia", serif;
   font-size: 1rem;
 }
 ```
 
 ## Attributs
 
-On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes) pour cet élément.
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `cite`
-  - : Cet attribut définit l'URI d'une ressource qui explique la modification (par exemple, un compte-rendu de réunion ou un lien vers un rapport).
+  - : Cet attribut définit l'URI d'une ressource qui explique la modification (par exemple un lien vers le compte rendu d'une réunion ou un ticket dans un système de suivi).
 - `datetime`
-  - : Cet attribut indique la date et l'heure de la modification. La valeur de cet attribut doit être [une date valide avec une chaîne de caractères optionnelle pour l'heure](https://www.w3.org/TR/2011/WD-html5-20110525/common-microsyntaxes.html#valid-date-string-with-optional-time). Si la valeur ne peut pas être analysée comme une date, l'indication temporelle sera absente de l'élément. Voir [l'article sur les formats](/fr/docs/Web/HTML/Guides/Date_and_time_formats) pour la représentation d'[une date seule](/fr/docs/Web/HTML/Guides/Date_and_time_formats#représentation_des_dates) ou d'[une date avec une heure](/fr/docs/Web/HTML/Guides/Date_and_time_formats#représentation_des_dates_et_heures_locales).
-
-## Exemples
-
-### HTML
-
-```html
-<p>Le texte <ins>Ce texte a été ajouté</ins> original.</p>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples","100%","100%")}}
+  - : Cet attribut indique la date et l'heure de la modification et doit être une date valide avec une chaîne horaire optionnelle. Si la valeur ne peut pas être analysée comme une date avec une chaîne horaire optionnelle, l'élément n'a pas d'horodatage associé. Pour le format de la chaîne sans heure, voir [Format d'une chaîne de date valide](/fr/docs/Web/HTML/Guides/Date_and_time_formats#représentation_des_dates). Le format de la chaîne incluant la date et l'heure est décrit dans [Format d'une chaîne de date et heure locales valides](/fr/docs/Web/HTML/Guides/Date_and_time_formats#représentation_des_dates_et_heures_locales).
 
 ## Accessibilité
 
-Par défaut, la plupart des outils d'assistance n'annoncent pas la présence de l'élément `ins`. On peut le rendre annonçable via la propriété CSS {{cssxref("content")}} et grâce aux pseudo-éléments {{cssxref("::before")}} et {{cssxref("::after")}}.
+Par défaut, la plupart des outils d'assistance n'annoncent pas la présence de l'élément `ins`. On peut le rendre annonçable via la propriété CSS {{CSSxRef("content")}} et grâce aux pseudo-éléments {{CSSxRef("::before")}} et {{CSSxRef("::after")}}.
 
 ```css
 ins::before,
@@ -109,8 +93,20 @@ ins::after {
 
 Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment ces annonces pour éviter une verbosité trop importante. Il est donc important de ne pas abuser de cette technique et de ne l'appliquer qu'à des situations où il est nécessaire de comprendre que du contenu a été inséré.
 
-- [_Short note on making your mark (more accessible) | The Paciello Group_ (en anglais)](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/)
-- [_Tweaking Text Level Styles | Adrian Roselli_ (en anglais)](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+- [Brève note pour rendre vos marques plus accessibles | The Paciello Group <sup>(angl.)</sup>](https://www.tpgi.com/short-note-on-making-your-mark-more-accessible/)
+- [Ajuster les styles au niveau du texte | Adrian Roselli <sup>(angl.)</sup>](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+
+## Exemples
+
+### HTML
+
+```html
+<p>Le texte <ins>Ce texte a été ajouté</ins> original.</p>
+```
+
+### Résultat
+
+{{EmbedLiveSample("Exemples")}}
 
 ## Résumé technique
 
@@ -118,17 +114,17 @@ Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment c
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
           >Catégories de contenu</a
         >
       </th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >Contenu phrasé</a
         >
         ou
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >contenu de flux</a
         >.
       </td>
@@ -137,7 +133,7 @@ Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment c
       <th scope="row">Contenu autorisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Modèle_de_contenu_transparent"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#modèle_de_contenu_transparent"
           >Contenu transparent</a
         >.
       </td>
@@ -153,9 +149,18 @@ Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment c
       <td>
         Tout élément qui accepte du
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
         >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <code
+          ><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#rôles_structurels_avec_équivalents_html">insertion</a
+          ></code
+        >
       </td>
     </tr>
     <tr>
@@ -164,7 +169,7 @@ Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment c
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLModElement")}}</td>
+      <td>{{DOMxRef("HTMLModElement")}}</td>
     </tr>
   </tbody>
 </table>

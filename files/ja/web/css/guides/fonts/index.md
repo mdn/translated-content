@@ -1,9 +1,9 @@
 ---
 title: CSS フォント
+short-title: フォント
 slug: Web/CSS/Guides/Fonts
-original_slug: Web/CSS/CSS_fonts
 l10n:
-  sourceCommit: a7d55b06a92d339bfdf109eef85c20a262ca9032
+  sourceCommit: 93b85a5bc2b4589d93185263fd2c14381c36f821
 ---
 
 **CSS フォント**モジュールは、フォント関連のプロパティと、フォントリソースを読み込む方法を定義します。フォントファミリ、サイズ、太さなどのフォントのスタイル設定や、単一の文字に複数の字体が利用できる場合に使用する字体バリエーションを定義することができます。
@@ -32,6 +32,7 @@ CSS フォントモジュールは可変フォントにも対応しています�
 - {{cssxref("font-weight")}}
 
 - {{cssxref("font-synthesis")}} 一括指定
+- {{cssxref("font-synthesis-position")}}
 - {{cssxref("font-synthesis-small-caps")}}
 - {{cssxref("font-synthesis-style")}}
 - {{cssxref("font-synthesis-weight")}}
@@ -46,7 +47,9 @@ CSS フォントモジュールは可変フォントにも対応しています�
 - {{cssxref("font-variant-position")}}
 - {{cssxref("font-variation-settings")}}
 
-### アットルール
+仕様書では `font-width` プロパティも定義していますが、まだどのブラウザーでも対応していません。
+
+### アットルールと記述子
 
 - アットルール: {{cssxref("@font-face")}}
   - : 記述子:
@@ -64,9 +67,11 @@ CSS フォントモジュールは可変フォントにも対応しています�
     - {{cssxref("@font-face/src", "src")}}
     - {{cssxref("@font-face/unicode-range", "unicode-range")}}
 
+CSS フォントモジュールでは `font-language-override`, `font-named-instance`, `font-width`, `font-size`, `subscript-position-override`, `subscript-size-override`, `superscript-position-override`, `superscript-size-override` の各記述子も定義しています。今のところ、これらの機能に対応しているブラウザーはありません。
+
 - アットルール: {{cssxref("@font-feature-values")}}
-  - : 記述子:
-    - {{cssxref("@font-feature-values/font-display", "font-display")}}
+
+CSS フォントモジュールでは {{cssxref("@font-feature-values/font-display", "font-display")}} 記述子も定義しています。今のところ、この機能に対応しているブラウザーはありません。
 
 - アットルール: {{cssxref("@font-palette-values")}}
   - : 記述子:
@@ -87,7 +92,7 @@ CSS フォントモジュールは可変フォントにも対応しています�
 
 `font-feature-settings` 型:
 
-- [`<feature-tag-value>`](/ja/docs/Web/CSS/Reference/Properties/font-feature-settings#values)
+- [`<feature-tag-value>`](/ja/docs/Web/CSS/Reference/Properties/font-feature-settings#値)
 
 `font-format` 型:
 
@@ -95,7 +100,7 @@ CSS フォントモジュールは可変フォントにも対応しています�
 
 `font-stretch` 型:
 
-- [`<font-stretch-css3>`](/ja/docs/Web/CSS/Reference/Properties/font-stretch#values)
+- [`<font-stretch-css3>`](/ja/docs/Web/CSS/Reference/Properties/font-stretch#値)
 
 `font-tech` 型:
 
@@ -106,25 +111,25 @@ CSS フォントモジュールは可変フォントにも対応しています�
 `font-variant` 型:
 
 - [`<font-variant-css2>`](/ja/docs/Web/CSS/Reference/Properties/font-variant)
-- [`<east-asian-variant-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant#values)
-- [`<east-asian-width-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant#values)
+- [`<east-asian-variant-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant#値)
+- [`<east-asian-width-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant#値)
 
 `font-variant-ligatures` 型:
 
-- [`<common-lig-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant-ligatures#values)
-- [`<contextual-alt-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant-ligatures#values)
-- [`<discretionary-lig-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant-ligatures#values)
-- [`<historical-lig-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant-ligatures#values)
+- [`<common-lig-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant-ligatures#値)
+- [`<contextual-alt-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant-ligatures#値)
+- [`<discretionary-lig-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant-ligatures#値)
+- [`<historical-lig-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant-ligatures#値)
 
 `font-variant-numeric` 型:
 
-- [`<numeric-figure-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant-numeric#values)
-- [`<numeric-fraction-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant-numeric#values)
-- [`<numeric-spacing-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant-numeric#values)
+- [`<numeric-figure-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant-numeric#値)
+- [`<numeric-fraction-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant-numeric#値)
+- [`<numeric-spacing-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant-numeric#値)
 
 `font-weight` 型:
 
-- [`<font-weight-absolute>`](/ja/docs/Web/CSS/Reference/Properties/font-weight#values)
+- [`<font-weight-absolute>`](/ja/docs/Web/CSS/Reference/Properties/font-weight#値)
 
 ### インターフェイス
 
@@ -142,6 +147,9 @@ CSS フォントモジュールは可変フォントにも対応しています�
 
 - [OpenType フォント特性ガイド](/ja/docs/Web/CSS/Guides/Fonts/OpenType_fonts)
   - : フォント特性または変化形は、 OpenType フォントに含まれている様々な字形や文字スタイルを参照します。これらには合字 ('fi' や 'ffl' のような特殊な形の文字の組み合わせ)、カーニング (特定の字形の組み合わせにおける間隔の調整)、分数、数字のスタイル、他にもたくさんあります。これらはすべて OpenType の特性として参照され、特定のプロパティや低水準の制御プロパティ — {{cssxref("font-feature-settings")}} を通してウェブ上で使用することができます。この記事は、 CSS で OpenType フォント特性を使用することについて知る必要があるすべてのことを紹介します。
+
+- [WOFF (Web Open Font Format)](/ja/docs/Web/CSS/Guides/Fonts/WOFF)
+  - : WOFF は、TrueType、OpenType、Open Font Format に使用されているテーブルベースの `sfnt` 構造と同じ圧縮されたバージョンを使用していますが、これにメタデータと個人利用のためのデータ構造が追加されており、必要に応じて作成者とベンダーがライセンス情報を書き込むことができる予約フィールドも含まれています。
 
 - [可変フォントガイド](/ja/docs/Web/CSS/Guides/Fonts/Variable_fonts)
   - : この記事は可変フォントを使用し始めるのに役立つでしょう。

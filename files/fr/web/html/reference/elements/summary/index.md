@@ -1,9 +1,8 @@
 ---
 title: "<summary> : l'élément de révélation d'un résumé"
 slug: Web/HTML/Reference/Elements/summary
-original_slug: Web/HTML/Element/summary
 l10n:
-  sourceCommit: a1765c2cad20118be0dad322d3548908787b5791
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<summary>`** représente une boîte permettant de révéler le contenu d'un résumé ou d'une légende pour le contenu d'un élément {{HTMLElement("details")}}. En cliquant sur l'élément `<summary>`, on passe de l'état affiché à l'état masqué (et vice versa) de l'élément `<details>` parent.
@@ -14,7 +13,7 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<summary>`** représente une boîte per
 <details>
   <summary>
     J'ai des clés mais pas de portes. J'ai de l'espace mais pas de pièce. Vous
-    pouvez entrer mais ne pouvez pas sortir. Qui suis-je ?
+    pouvez entrer mais ne pouvez pas sortir. Qui suis-je&nbsp;?
   </summary>
   Un clavier.
 </details>
@@ -51,13 +50,13 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Ref
 
 Un élément `<summary>` peut contenir des éléments de titre, du texte simple ou tout contenu HTML pouvant être placé au sein d'un paragraphe.
 
-Un élément `<summary>` peut uniquement être utilisé comme le premier élément fils d'un élément `<details>`. Lorsque l'utilisateur clique sur le résumé, l'élément `<details>` parent change d'état (affiché ou masqué) et un évènement {{domxref("HTMLElement/toggle_event", "toggle")}} est envoyé à l'élément `<details>` (ce qui permet de détecter un changement d'état via un script).
+Un élément `<summary>` peut uniquement être utilisé comme le premier élément fils d'un élément `<details>`. Lorsque l'utilisateur·ice clique sur le résumé, l'élément `<details>` parent change d'état (affiché ou masqué) et un évènement {{DOMxRef("HTMLElement/toggle_event", "toggle")}} est envoyé à l'élément `<details>` (ce qui permet de détecter un changement d'état via un script).
 
-Le contenu de l'élément `<details>` fournit la {{glossary("accessible description", "description accessible")}} pour l'élément `<summary>`.
+Le contenu de l'élément `<details>` fournit la {{Glossary("accessible description", "description accessible")}} pour l'élément `<summary>`.
 
 ### Libellé par défaut
 
-Si le premier enfant d'un élément `<details>` n'est pas un élément `<summary>`, l'{{Glossary("user agent", "agent utilisateur")}} utilisera une chaîne de caractères par défaut (généralement «&nbsp;Détails&nbsp;») comme libellé pour la boîte de révélation.
+Si le premier enfant d'un élément `<details>` n'est pas un élément `<summary>`, {{Glossary("user agent", "l'agent utilisateur")}} utilisera une chaîne de caractères par défaut (généralement «&nbsp;Détails&nbsp;») comme libellé pour la boîte de révélation.
 
 ### Mise en forme par défaut
 
@@ -92,7 +91,7 @@ Un exemple simple montrant l'utilisation de `<summary>` dans un élément {{HTML
 
 #### Résultat
 
-{{EmbedLiveSample("exemple_simple", 650, 120)}}
+{{EmbedLiveSample("Exemple simple", 650, 120)}}
 
 ### Utilisation de titres
 
@@ -113,7 +112,7 @@ Il est possible d'utiliser des titres au sein d'un résumé.
 
 #### Résultat
 
-{{EmbedLiveSample("utilisation_de_titres", 650, 200)}}
+{{EmbedLiveSample("Utilisation de titres", 650, 200)}}
 
 Il existe actuellement quelques problèmes d'espacement qui peuvent être corrigés à l'aide de CSS.
 
@@ -139,15 +138,15 @@ Cet exemple ajoute une certaine sémantique à l'élément `<summary>` pour indi
 
 #### Résultat
 
-{{EmbedLiveSample("utiliser_des_éléments_html_dans_un_résumé", 650, 120)}}
+{{EmbedLiveSample("Utiliser des éléments HTML dans un résumé", 650, 120)}}
 
 ### Changer l'icône du résumé
 
-Le marqueur de l'élément `<summary>`, c'est-à-dire le triangle de révélation, peut être personnalisé avec CSS. Le marqueur peut être ciblé à l'aide du pseudo-élément {{cssxref("::marker")}}, qui accepte la propriété abrégée {{cssxref("list-style")}} ainsi que ses propriétés détaillées, comme {{cssxref("list-style-type")}}. Cela permet de remplacer le triangle par une image (généralement avec {{cssxref("list-style-image")}}) ou une chaîne de caractères (y compris des émojis). Dans cet exemple, nous remplaçons le contenu d'un widget de révélation et supprimons l'icône d'un autre en appliquant `list-style: none` avant d'ajouter une icône personnalisée via du contenu généré.
+Le marqueur de l'élément `<summary>`, c'est-à-dire le triangle de révélation, peut être personnalisé avec CSS. Le marqueur peut être ciblé à l'aide du pseudo-élément {{CSSxRef("::marker")}}, qui accepte la propriété abrégée {{CSSxRef("list-style")}} ainsi que ses propriétés détaillées, comme {{CSSxRef("list-style-type")}}. Cela permet de remplacer le triangle par une image (généralement avec {{CSSxRef("list-style-image")}}) ou une chaîne de caractères (y compris des émojis). Dans cet exemple, nous remplaçons le contenu d'un widget de révélation et supprimons l'icône d'un autre en appliquant `list-style: none` avant d'ajouter une icône personnalisée via du contenu généré.
 
 #### CSS
 
-Dans le premier widget de révélation, nous mettons en forme le `::marker`, en modifiant la propriété {{cssxref("content")}} selon l'attribut `[open]` de l'élément `<details>`. Pour le second widget, nous supprimons le marqueur avec les propriétés `list-style`, puis nous ajoutons un contenu généré stylisé avec le pseudo-élément {{cssxref("::after")}}. Nous incluons également des styles pour `::-webkit-details-marker` afin de cibler Safari. Le sélecteur pour le pseudo-élément spécifique au navigateur est inclus dans une pseudo-classe {{cssxref(":is()")}} afin de ne pas invalider la liste des sélecteurs.
+Dans le premier widget de révélation, nous mettons en forme le `::marker`, en modifiant la propriété {{CSSxRef("content")}} selon l'attribut `[open]` de l'élément `<details>`. Pour le second widget, nous supprimons le marqueur avec les propriétés `list-style`, puis nous ajoutons un contenu généré stylisé avec le pseudo-élément {{CSSxRef("::after")}}. Nous incluons également des styles pour `::-webkit-details-marker` afin de cibler Safari. Le sélecteur pour le pseudo-élément spécifique au navigateur est inclus dans une pseudo-classe {{CSSxRef(":is()")}} afin de ne pas invalider la liste des sélecteurs.
 
 ```css
 details {
@@ -190,7 +189,7 @@ details:last-of-type summary::-webkit-details-marker {
 }
 ```
 
-Le CSS inclut le [sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) `[open]`, qui ne correspond que lorsque l'attribut `open` est présent (c'est-à-dire lorsque l'élément `<details>` est ouvert). Les pseudo-classes {{cssxref(":first-of-type")}} et {{cssxref(":last-of-type")}} ciblent respectivement le premier et le dernier élément du même type. Nous avons inclus le pseudo-élément préfixé `-webkit-` dans une pseudo-classe {{cssxref(":is()")}} car elle accepte une [liste de sélecteurs tolérante](/fr/docs/Web/CSS/Reference/Selectors/Selector_list#forgiving_selector_list)&nbsp;: si le pseudo-élément préfixé est invalide dans un navigateur, tout le bloc de sélecteurs ne sera pas invalidé. Nous avons aussi utilisé la [syntaxe imbriquée de CSS](/fr/docs/Web/CSS/Nesting_selector). Voir le module [Sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors).
+Le CSS inclut le [sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) `[open]`, qui ne correspond que lorsque l'attribut `open` est présent (c'est-à-dire lorsque l'élément `<details>` est ouvert). Les pseudo-classes {{CSSxRef(":first-of-type")}} et {{CSSxRef(":last-of-type")}} ciblent respectivement le premier et le dernier élément du même type. Nous avons inclus le pseudo-élément préfixé `-webkit-` dans une pseudo-classe {{CSSxRef(":is()")}} car elle accepte une [liste de sélecteurs tolérante](/fr/docs/Web/CSS/Reference/Selectors/Selector_list#liste_de_sélecteurs_tolérante)&nbsp;: si le pseudo-élément préfixé est invalide dans un navigateur, tout le bloc de sélecteurs ne sera pas invalidé. Nous avons aussi utilisé la [syntaxe imbriquée de CSS](/fr/docs/Web/CSS/Nesting_selector). Voir le module [Sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors).
 
 #### HTML
 
@@ -214,7 +213,7 @@ Le CSS inclut le [sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/At
 
 #### Résultat
 
-{{EmbedLiveSample("changer_licône_du_résumé", 650, 400)}}
+{{EmbedLiveSample("Changer l'icône du résumé", 650, 400)}}
 
 ## Résumé technique
 
@@ -223,11 +222,11 @@ Le CSS inclut le [sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/At
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
-        <a href="/fr/docs/Web/HTML/Guides/Content_categories#Contenu_phrasé"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >Contenu phrasé</a
         >
         ou un élément décrivant du
-        <a href="/fr/docs/Web/HTML/Guides/Content_categories#Contenu_de_titre"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_titre"
           >contenu de titre</a
         >.
       </td>
@@ -244,7 +243,7 @@ Le CSS inclut le [sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/At
     </tr>
     <tr>
       <th scope="row">Rôle ARIA implicite</th>
-      <td> <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">Aucun rôle correspondant <sup>(angl.)</sup></a>.</td>
+      <td> <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">Pas de rôle correspondant <sup>(angl.)</sup></a></td>
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
@@ -252,7 +251,7 @@ Le CSS inclut le [sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/At
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
+      <td>{{DOMxRef("HTMLElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -267,4 +266,4 @@ Le CSS inclut le [sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/At
 
 ## Voir aussi
 
-- {{HTMLElement("details")}}
+- L'élément {{HTMLElement("details")}}

@@ -1,14 +1,16 @@
 ---
 title: scroll-marker-group
 slug: Web/CSS/Reference/Properties/scroll-marker-group
-original_slug: Web/CSS/scroll-marker-group
 l10n:
-  sourceCommit: 898dd2394e7b70daa2c0c212282a64ccf5938341
+  sourceCommit: 9dbcd91284ec1ec64c4d8b343c3770880dd25129
 ---
 
 {{seecompattable}}
 
-**`scroll-marker-group`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{glossary("scroll container", "スクロールコンテナー")}}に {{cssxref("::scroll-marker-group")}} 擬似要素を生成するかどうか、生成する場合、既定の視覚的およびタブ順でコンテナーのコンテンツの直前 (`before`) に配置するか、直後 (`after`) に配置するかを制御します。
+**`scroll-marker-group`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{glossary("scroll container", "スクロールコンテナー")}}要素に {{cssxref("::scroll-marker-group")}} 擬似要素を生成するかどうかを制御します。このプロパティが存在する場合、スクロールマーカーグループをデフォルトの視覚的順序およびタブ順序において、スクロールグループコンテナーの内容の前 (`before`) と後 (`after`) のどちらに配置するかも同時に指定します。
+
+> [!NOTE]
+> 複数の {{htmlelement("a")}} 要素を含む既存の要素からスクロールマーカーグループを作成するには、{{cssxref("scroll-target-group")}} プロパティを使用してください。2 つの[動作の違い](/ja/docs/Web/CSS/Reference/Properties/scroll-target-group#scroll-target-group_と_scroll-marker-group_の違い)について読んでください。
 
 ## 構文
 
@@ -38,7 +40,7 @@ scroll-marker-group: unset;
   - : 要素には `::scroll-marker-group` 擬似要素は生成されません。これが既定値です。
 
 > [!NOTE]
-> スクロールマーカーグループの視覚的な表示位置をタブ順と一致させるのが最善の手法です。 {{cssxref("::scroll-marker-group")}} にスタイルが適用されているマーカーグループをコンテンツの先頭に位置指定する場合は、 `before` を使用してタブ順の先頭に配置してください。グループをコンテンツの最後に位置指定する場合は、 `after` を使用してタブ順の最後に配置してください。
+> スクロールマーカーグループのコンテナーの視覚的な表示位置をタブ順と一致させるのが最善の手法です。 {{cssxref("::scroll-marker-group")}} にスタイルが適用されているマーカーグループをコンテンツの先頭に位置指定する場合は、`before` を使用してタブ順の先頭に配置してください。グループをコンテンツの最後に位置指定する場合は、`after` を使用してタブ順の最後に配置してください。
 
 ## 公式定義
 
@@ -50,7 +52,7 @@ scroll-marker-group: unset;
 
 ## 例
 
-`scroll-marker-group` プロパティを使用する完全な例については、「[CSS カルーセルの作成](/ja/docs/Web/CSS/Guides/Overflow/Carousels)」参照してください。
+`scroll-marker-group` プロパティを使用する完全な例については、[CSS カルーセルの作成](/ja/docs/Web/CSS/Guides/Overflow/Carousels)参照してください。
 
 ### スクロールマーカーの配置
 
@@ -107,7 +109,7 @@ ul {
 ```css
 li {
   list-style-type: none;
-  background-color: #eee;
+  background-color: #eeeeee;
   flex: 0 0 33%;
   scroll-snap-align: start;
   text-align: center;
@@ -165,7 +167,7 @@ label {
 
 {{EmbedLiveSample("Examples", '', '300')}}
 
-スクロールマーカーグループの配置に注意してください。 `before` と `after` でキーボードのタブ順がどのように異なるかを確認し、値を `none` に設定するとグループが消えることに注意してください。
+スクロールマーカーグループのコンテナーの配置に注意してください。 `before` と `after` でキーボードのタブ順がどのように異なるかを確認し、値を `none` に設定するとグループが消えることに注意してください。
 
 ## 仕様書
 
@@ -177,10 +179,13 @@ label {
 
 ## 関連情報
 
+- {{cssxref("scroll-target-group")}}
 - {{cssxref("::scroll-button()")}}
 - {{cssxref("::scroll-marker-group")}}
 - {{cssxref("::scroll-marker")}}
 - {{cssxref(":target-current")}}
+- {{cssxref(":target-before")}}
+- {{cssxref(":target-after")}}
 - [CSS によるカルーセルの作成](/ja/docs/Web/CSS/Guides/Overflow/Carousels)
 - [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
 - [CSS Carousel Gallery](https://chrome.dev/carousel/) (chrome.dev, 2025)

@@ -1,16 +1,19 @@
 ---
-title: DataTransfer()
+title: "DataTransfer: DataTransfer() コンストラクター"
+short-title: DataTransfer()
 slug: Web/API/DataTransfer/DataTransfer
+l10n:
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
 
-**`DataTransfer`** のコンストラクターは、新しい {{domxref("DataTransfer")}} オブジェクトのインスタンスを作成します。
+**`DataTransfer`** コンストラクターは、新しい {{domxref("DataTransfer")}} オブジェクトのインスタンスを作成します。
 
 ## 構文
 
-```js
-new DataTransfer();
+```js-nolint
+new DataTransfer()
 ```
 
 ### 引数

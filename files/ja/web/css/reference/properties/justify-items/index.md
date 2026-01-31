@@ -2,7 +2,7 @@
 title: justify-items
 slug: Web/CSS/Reference/Properties/justify-items
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 05e0ea073802694cc49d76d566778bd607a9511f
 ---
 
 [CSS](/ja/docs/Web/CSS) の **`justify-items`** プロパティは、ボックスのすべてのアイテムに既定の {{CSSxRef("justify-self")}} を定義し、それぞれのボックスの調整を適切な軸に沿って、既定の方法で行ないます。
@@ -57,7 +57,7 @@ justify-items: end;
 
 - ブロックレベルレイアウトでは、包含ブロック内のアイテムをインライン軸で配置します。
 - 絶対位置指定の要素では、 top, left, bottom, right の各オフセット値を反映して、包含ブロック内のアイテムをインライン軸で配置します。
-- 表のセルレイアウトでは、このプロパティは無視されます（[ブロック、絶対配置、表レイアウトのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables)を参照）
+- 表のセルレイアウトでは、このプロパティは無視されます（[ブロック、絶対位置指定、表レイアウトのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables)を参照）
 - フレックスボックスレイアウトでは、このプロパティは無視されます（[フレックスボックスでのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_flexbox)を参照）
 - グリッドレイアウトでは、グリッド領域内のアイテムに、インライン方向の整列を設定します（[グリッドレイアウトでのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)を参照）
 
@@ -90,8 +90,8 @@ justify-items: safe center;
 justify-items: unsafe center;
 
 /* 従来の配置 */
-justify-items: legacy right;
 justify-items: legacy left;
+justify-items: legacy right;
 justify-items: legacy center;
 
 /* グローバル値 */
@@ -107,7 +107,7 @@ justify-items: unset;
 - 基本キーワード: キーワード値 `normal`, `stretch` のどちらか。
 - ベースラインによる配置: `baseline` キーワードに加えて、任意で `first` または `last` のどちらか。
 - 位置による配置: `center`, `start`, `end`, `flex-start`, `flex-end`, `self-start`, `self-end`, `left`, `right` のうちの一つ。加えて任意で `safe` または `unsafe`。
-- 歴史的な配置: `legacy` キーワードに続いて、 `left` または `right` のどちらかの値。
+- 歴史的な配置: `legacy` キーワードに続いて、 `left`, `right`, `center` のいずれかの値。
 
 ### 値
 

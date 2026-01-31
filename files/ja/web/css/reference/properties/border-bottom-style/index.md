@@ -3,10 +3,13 @@ title: border-bottom-style
 slug: Web/CSS/Reference/Properties/border-bottom-style
 original_slug: Web/CSS/border-bottom-style
 l10n:
-  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
 **`border-bottom-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の下側の境界線 ({{cssxref("border")}}) のスタイルを設定します。
+
+> [!NOTE]
+> 仕様書では、異なるスタイルの境界線を角でどの様に接続するかを定義していません。
 
 {{InteractiveExample("CSS デモ: border-bottom-style")}}
 
@@ -56,9 +59,6 @@ body {
   background-color: #fff;
 }
 ```
-
-> [!NOTE]
-> 仕様書では、異なるスタイルの境界線を角でどの様に接続するかを定義していません。
 
 ## 構文
 

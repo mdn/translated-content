@@ -2,7 +2,7 @@
 title: Description accessible
 slug: Glossary/Accessible_description
 l10n:
-  sourceCommit: fd2acb039cc1caee4af10f76ffb839c8da7da5b8
+  sourceCommit: 96a73163513476fe49bfba695acedb7622135354
 ---
 
 Une **description accessible** (<i lang="en">accessible description</i> en anglais) est la description d'un élément d'interface utilisateur qui fournit des informations supplémentaires pour aider les utilisateur·ice·s de technologies d'assistance à comprendre l'élément UI et son contexte. Elle est associée à un élément HTML ou SVG et donne aux utilisateur·ice·s un contexte supplémentaire sur son but au-delà de ce qui est fourni par le {{Glossary("Accessible_name", "nom accessible")}} de l'élément. C'est particulièrement important pour les utilisateur·ice·s qui se servent de technologies d'assistance telles que {{Glossary("Screen_reader", "lecteurs d'écrans")}}. La description accessible d'un élément fait partie de {{Glossary("Accessibility_tree", "l'arbre d'accessibilité")}}.
@@ -24,7 +24,7 @@ Pour les éléments HTML, s'il n'a pas de description accessible, celle‑ci doi
 3. Les caractéristiques spécifiques à la langue qui participent au calcul de la description si la caractéristique n'est pas déjà utilisée pour définir le {{Glossary("Accessible_name", "nom accessible")}}. Par exemple&nbsp;:
    - Un {{HTMLElement("summary")}} est décrit par le contenu du {{HTMLElement("details")}} dans lequel il est imbriqué.
    - Les boutons {{HTMLElement("input")}} (avec l'attribut type `button`, `submit` ou `reset`) sont décrits par la valeur de leur attribut `value`.
-   - En SVG, le contenu de l'élément [`<desc>`](/fr/docs/Web/SVG/Reference/Element/desc), s'il est présent, sinon, le texte contenu dans les éléments descendants contenant du texte (c'est‑à‑dire [`<text>`](/fr/docs/Web/SVG/Reference/Element/text)), s'ils ne sont pas déjà utilisés pour le {{Glossary("Accessible_name", "nom accessible")}}.
+   - En SVG, le contenu de l'élément {{SVGElement("desc")}} est utilisé s'il est présent, sinon, le texte contenu dans les éléments descendants contenant du texte (c'est‑à‑dire {{SVGElement("text")}}), s'ils ne sont pas déjà utilisés pour le {{Glossary("Accessible_name", "nom accessible")}}.
 4. Si aucune des options précédentes ne fournit une description, l'attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title) est utilisé, si le `title` n'est pas le {{Glossary("Accessible_name", "nom accessible")}} de cet élément.
 5. Si aucune des options précédentes ne définit une description accessible, la description accessible est vide.
 
@@ -41,7 +41,7 @@ Les étapes de définition de la description accessible en HTML sont décrites d
 - [Initiative W3C pour l'accessibilité Web (WAI) <sup>(angl.)</sup>](https://www.w3.org/WAI/)
 - [Applications Riches d'Internet Accessible (WAI-ARIA) <sup>(angl.)</sup>](https://w3c.github.io/aria/)
 - Termes associés du glossaire&nbsp;:
-- {{Glossary("Accessibility", "Accessibilité")}}
-- {{Glossary("Accessibility_tree", "Arbre d'accessibilité")}}
-- {{Glossary("Accessible_name", "Nom accessible")}}
-- {{Glossary("ARIA")}}
+  - {{Glossary("Accessibility", "Accessibilité")}}
+  - {{Glossary("Accessibility_tree", "Arbre d'accessibilité")}}
+  - {{Glossary("Accessible_name", "Nom accessible")}}
+  - {{Glossary("ARIA")}}

@@ -1,28 +1,28 @@
 ---
 title: アニメーション可能な CSS プロパティ
+short-title: アニメーション可能なプロパティ
 slug: Web/CSS/Guides/Animations/Animatable_properties
-original_slug: Web/CSS/CSS_animated_properties
 l10n:
-  sourceCommit: 381c51574a3e6a07ee09c63493452440f046038d
+  sourceCommit: ca5d9f9e63b460fc0c9e15ac57d9739e10e4ea0d
 ---
 
-[CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)および[トランジション](/ja/docs/Web/CSS/Guides/Transitions)**アニメーション可能な**プロパティの概念に頼っており、特に指定しない限り、すべての CSS プロパティはアニメーション可能です。各プロパティのアニメーションの種類は、このプロパティに対する値の[結合](https://drafts.csswg.org/css-values/#combining-values)方法（補間、追加、累積）を決定します。トランジションは補間のみを使用しますが、アニメーションは 3 つの組み合わせ方法をすべてを使用することができます。
+[CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)および[トランジション](/ja/docs/Web/CSS/Guides/Transitions)は**アニメーション可能**なプロパティの概念に頼っており、特に指定しない限り、すべての CSS プロパティはアニメーション可能です。各プロパティのアニメーションの種類は、このプロパティに対する値の[結合](https://drafts.csswg.org/css-values/#combining-values)方法（補間、追加、累積）を決定します。トランジションは補間のみを使用しますが、アニメーションは 3 つの組み合わせ方法をすべてを使用することができます。
 
 > [!NOTE]
 > 各 CSS プロパティのアニメーションの種類は、その「公式定義」表に掲載されています（例: {{CSSXref("color", "", "#公式定義")}}）。
 
 > [!NOTE]
-> 各 CSS データ型の補間方法は、その「補間」節に記述されています（例: {{CSSXref("&lt;length&gt;", "", "#補間")}}）。
+> 各 CSS データ型の補間方法は、その「補間」の節に記述されています（例: {{CSSXref("&lt;length&gt;", "", "#補間")}}）。
 
 ## アニメーションの種類
 
-[Web Animations](https://drafts.csswg.org/web-animations-1/#animating-properties) 仕様で定義されているアニメーションの種類は主に 4 つあります。
+[Web Animations](https://drafts.csswg.org/web-animations-1/#animating-properties) 仕様書で定義されているアニメーションの種類は主に 4 つあります。
 
 - アニメーション不可
-  - : このプロパティはアニメーション可能ではありません。アニメーションのキーフレームに掲載されていても処理されず、ビュー遷移のアニメーションにも影響されません。
+  - : このプロパティはアニメーション可能ではありません。アニメーションのキーフレームに掲載されていても処理されず、トランジションの影響も受けません。
 
     > [!NOTE]
-    > アニメーション可能でないプロパティのみを対象とするアニメーション効果は、アニメーション効果の通常の動作（例えば、 {{DOMXref("Element/animationstart_event", "animationstart")}} イベントを発行する）を示します。
+    > アニメーション可能でないプロパティのみを対象とするアニメーション効果であっても、アニメーション効果の通常の動作を示します（例えば、 {{DOMXref("Element/animationstart_event", "animationstart")}} イベントを発行します）。
 
 - 離散
   - : プロパティの値は加算されず、補間は `50%` で開始値から終了値に入れ替わります。具体的には、 `p` で進行値を表すと次のようになります。
@@ -45,5 +45,8 @@ l10n:
 
 ## 関連情報
 
+- {{cssxref("transition-behavior")}}
+- {{cssxref("@starting-style")}}
+- [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)モジュール
 - [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)
 - [CSS トランジションの使用](/ja/docs/Web/CSS/Guides/Transitions/Using)

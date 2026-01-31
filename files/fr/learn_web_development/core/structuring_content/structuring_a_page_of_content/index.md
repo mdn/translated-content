@@ -1,83 +1,367 @@
 ---
-title: Structurer une page de contenu
+title: "Défi : Structurer une page de contenu"
+short-title: "Défi : Un site d'observation des oiseaux"
 slug: Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content
-original_slug: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
+l10n:
+  sourceCommit: 2e427c5c185433c5a6612c63bf877753a5fedc99
 ---
 
-{{LearnSidebar}}
-{{PreviousNext("Apprendre/HTML/Introduction_à_HTML/Marking_up_a_letter", "Apprendre/HTML/Introduction_à_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Test_your_skills/Links", "Learn_web_development/Core/Structuring_content/HTML_images", "Learn_web_development/Core/Structuring_content")}}
 
-Il est essentiel de savoir structurer une page de contenu prête à être mise en forme grâce au CSS. Cette évaluation va vous permettre de vous tester sur votre capacité à réfléchir au rendu visuel final d'une page et à choisir la sémantique structurelle appropriée pour construire une bonne mise en page.
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="row">Prérequis :</th>
-      <td>
-        Avant de commencer cette évaluation, vous devriez avoir déjà travaillé
-        sur le reste du cours, en particulier sur
-        <a
-          href="/fr/docs/Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure"
-          >Structure de Site Web et de document</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif :</th>
-      <td>
-        Tester vos connaissances sur la structure des pages web et d'une
-        représentation prospective d'un design de mise en page avec un balisage.
-      </td>
-    </tr>
-  </tbody>
-</table>
+Structurer une page de contenu en vue de la mettre en page avec du CSS est une compétence très importante à maîtriser. Dans ce défi, vous serez mis·e à l'épreuve sur votre capacité à imaginer l'apparence finale d'une page et à choisir la sémantique structurelle appropriée pour construire une mise en page dessus.
 
 ## Point de départ
 
-Pour commencer cet exercice, vous pouvez télécharger [l'archive contenant les fichiers nécessaires](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/structuring-a-page-of-content-start/assets.zip?raw=true) à cette évaluation. Elle contient :
+Pour résoudre ce défi, nous attendons de vous que vous créiez un projet de site web basique, soit dans un dossier sur le disque dur de votre ordinateur, soit en utilisant un éditeur en ligne comme [CodePen <sup>(angl.)</sup>](https://codepen.io/) ou [JSFiddle <sup>(angl.)</sup>](https://jsfiddle.net/). Une grande partie du code nécessaire est déjà fournie.
 
-- le fichier HTML auquel vous allez devoir ajouter le balisage structurel,
-- le fichier CSS pour styliser la page,
-- les images utilisées dans la page.
+1. Créez un nouveau dossier à un emplacement approprié sur votre ordinateur nommé `structuring-html-challenge` (ou ouvrez un éditeur en ligne et effectuez les étapes nécessaires pour créer un nouveau projet).
+2. Enregistrez la liste HTML suivante dans un fichier de votre dossier nommé `index.html` (ou collez-la dans le volet HTML de votre éditeur en ligne).
 
-Décompressez l'archive sur votre ordinateur, ou bien utilisez un site web comme [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) pour faire votre évaluation.
+   ```html
+   <!doctype html>
+   <html lang="fr">
+     <head>
+       <meta charset="utf-8" />
+       <title>Observation des oiseaux</title>
+       <link
+         href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300%7CCinzel+Decorative:700"
+         rel="stylesheet" />
+     </head>
 
-## Aperçu du projet
+     <body>
+       <h1>Observation des oiseaux</h1>
 
-Dans ce projet, l'objectif est d'ajouter des éléments structurels au contenu de la page d'accueil d'un site d'observation d'oiseaux pour parfaire sa mise en page. La page devra contenir :
+       Accueil Commencer Photos Matériel Forum
 
-- un en‑tête sur toute la largeur de la page avec le titre de la page, le logo du site et le menu de navigation. Le titre et le logo apparaîtront côte à côte une fois le style appliqué, et la navigation sera juste au‑dessous du menu,
-- une zone de contenu principal de deux colonnes : un bloc principal avec le texte de bienvenue et une barre latérale avec des vignettes d'images,
-- un pied de page avec les informations de droits d'auteur et les crédits.
+       <h2>Bienvenue</h2>
 
-Vous devez ajouter les enveloppes appropriées pour&nbsp;:
+       <p>
+         Bienvenue sur notre faux site d'observation des oiseaux. S'il
+         s'agissait d'un vrai site, ce serait l'endroit idéal pour en apprendre
+         plus sur l'observation des oiseaux, que vous soyez débutant·e
+         souhaitant découvrir l'ornithologie ou expert·e voulant partager idées,
+         astuces et photos avec d'autres passionné·e·s.
+       </p>
 
-- l'en-tête
-- le menu de navigation
-- le contenu principal
-- le texte de bienvenue
-- la barre latérale avec les images
-- le pied de page
+       <p>
+         Alors ne perdez pas de temps&nbsp;! Prenez ce dont vous avez besoin,
+         puis éteignez cet ordinateur et sortez profiter du grand air&nbsp;!
+       </p>
 
-Vous devez aussi
+       <h2>Photos préférées</h2>
 
-- appliquer à la page les CSS fournies en ajoutant un élément {{htmlelement("link")}} juste au‑dessous de celui existant.
+       <!-- Lier les images ici. -->
+
+       <p>
+         Cet exemple de faux site web est sous CC0 — toute partie de ce code
+         peut être réutilisée comme vous le souhaitez. Exemple original écrit
+         par Chris Mills, 2016.
+       </p>
+
+       <p>
+         <a href="http://game-icons.net/lorc/originals/dove.html"
+           >Icône colombe</a
+         >
+         par Lorc.
+       </p>
+     </body>
+   </html>
+   ```
+
+3. Enregistrez la feuille de styles CSS suivante dans un fichier de votre dossier nommé `style.css` (ou collez-la dans le volet CSS de votre éditeur en ligne).
+
+   ```css
+   /* || Paramètres généraux */
+
+   body {
+     margin: 0;
+   }
+
+   html {
+     font-size: 10px;
+     background-color: darkgrey;
+   }
+
+   body {
+     width: 70%;
+     min-width: 800px;
+     margin: 0 auto;
+   }
+
+   /* || typographie */
+
+   h1,
+   h2 {
+     font-family: "Cinzel Decorative", cursive;
+     color: #2a2a2a;
+   }
+
+   p,
+   li {
+     font-family: "Roboto Condensed", sans-serif;
+     color: #2a2a2a;
+   }
+
+   h1 {
+     font-size: 4rem;
+     text-align: center;
+     text-shadow: 2px 2px 10px black;
+   }
+
+   h2 {
+     font-size: 3rem;
+     text-align: center;
+   }
+
+   p,
+   li {
+     font-size: 1.6rem;
+     line-height: 1.5;
+   }
+
+   /* || mise en page de l'en-tête */
+
+   header {
+     margin-bottom: 10px;
+   }
+
+   main,
+   header,
+   nav,
+   article,
+   aside,
+   footer,
+   section {
+     background-color: #00ff0080;
+     padding: 1%;
+   }
+
+   h1 {
+     text-transform: uppercase;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 20px;
+   }
+
+   header img {
+     height: 60px;
+   }
+
+   nav ul {
+     padding: 0;
+     list-style-type: none;
+     display: flex;
+   }
+
+   nav li {
+     text-align: center;
+     flex: 1;
+   }
+
+   nav a {
+     font-size: 2rem;
+     text-transform: uppercase;
+     text-decoration: none;
+     color: black;
+   }
+
+   nav a:hover,
+   nav a:focus {
+     color: red;
+   }
+
+   /* || mise en page principale */
+
+   main {
+     display: flex;
+     gap: 10px;
+   }
+
+   article {
+     flex: 4;
+   }
+
+   aside {
+     flex: 1;
+   }
+
+   aside a {
+     display: block;
+     float: left;
+     width: 50%;
+   }
+
+   aside img {
+     max-width: 100%;
+   }
+
+   footer {
+     margin-top: 10px;
+   }
+   ```
+
+Par la suite, vous devrez inclure les URLs suivantes dans votre page.
+
+- `dove.png`&nbsp;: [Logo du site](https://mdn.github.io/shared-assets/images/examples/learn/birds/dove.png)
+- `favorite-bird-1.jpg`&nbsp;: [Version grand format de la première image de la barre latérale](https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-1.jpg)
+- `favorite-bird-1_th.jpg`&nbsp;: [Vignette de la première image de la barre latérale](https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-1_th.jpg)
+- `favorite-bird-2.jpg`&nbsp;: [Version grand format de la deuxième image de la barre latérale](https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-2.jpg)
+- `favorite-bird-2_th.jpg`&nbsp;: [Vignette de la deuxième image de la barre latérale](https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-2_th.jpg)
+- `favorite-bird-3.jpg`&nbsp;: [Version grand format de la troisième image de la barre latérale](https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-3.jpg)
+- `favorite-bird-3_th.jpg`&nbsp;: [Vignette de la troisième image de la barre latérale](https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-3_th.jpg)
+- `favorite-bird-4.jpg`&nbsp;: [Version grand format de la quatrième image de la barre latérale](https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-4.jpg)
+- `favorite-bird-4_th.jpg`&nbsp;: [Vignette de la quatrième image de la barre latérale](https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-4_th.jpg)
+
+## Cahier des charges du projet
+
+Pour ce projet, votre tâche consiste à prendre le contenu de la page d'accueil d'un site d'observation des oiseaux et à y ajouter des éléments structurels afin qu'une mise en page puisse lui être appliquée. Vous devrez également apporter quelques ajouts au contenu.
+
+### Ajouts de contenu
+
+1. À l'intérieur de l'élément `<h1>`, ajoutez un élément `<img>` qui inclut le logo colombe sur la page. Donnez-lui un texte alternatif vide ("").
+2. Les éléments de texte «&nbsp;Accueil&nbsp;», «&nbsp;Commencer&nbsp;», «&nbsp;Photos&nbsp;», «&nbsp;Matériel&nbsp;» et «&nbsp;Forum&nbsp;» doivent être transformés en menu de navigation.
+3. Mettez-les sous forme de liste non ordonnée.
+4. Dans chaque élément de liste, entourez le texte d'un élément `<a>` pointant vers l'URL `#` (ce qui crée un faux lien).
+5. Supprimez le commentaire `<!-- Lier les images ici. -->`. Remplacez-le par un ensemble de quatre vignettes des «&nbsp;photos préférées&nbsp;». Chacune doit inclure un texte alternatif approprié pour décrire l'image, et être entourée d'un élément `<a>` qui pointe vers la version grand format correspondante.
+
+### Exigences structurelles
+
+La structure du site doit comprendre les éléments suivants&nbsp;:
+
+1. Un en-tête qui englobe le titre principal de la page et la liste du menu de navigation.
+2. Un conteneur supplémentaire autour de la liste du menu de navigation.
+3. Une zone de contenu principale contenant deux colonnes — un article principal pour le texte de bienvenue, et une barre latérale (aside) pour les vignettes d'images.
+4. Un pied de page contenant les informations de droits d'auteur et les crédits.
+
+Autrement dit, vous devez ajouter un conteneur adapté pour&nbsp;:
+
+- L'en-tête
+- Le menu de navigation
+- Le contenu principal
+- L'article de bienvenue
+- La barre latérale d'images
+- Le pied de page
+
+### Mise en forme de la page
+
+Si nécessaire, appliquez la feuille de styles CSS fournie à la page en ajoutant un autre élément HTML {{HTMLElement("link")}} juste en dessous de celui déjà présent dans le HTML de départ (certains éditeurs de code en ligne appliquent automatiquement le CSS).
 
 ## Conseils et astuces
 
-- Utilisez le «&nbsp;[W3C HTML validator&nbsp;»](https://validator.w3.org/) pour valider votre HTML&nbsp;; vous aurez des points bonus si la validation s'opère autant que possible (la ligne «&nbsp;googleapis&nbsp;» est une ligne utilisée pour importer des polices personnalisées dans la page à partir du service «&nbsp;Google Fonts » ; elle ne sera pas validée, donc ne vous en inquiétez pas).
-- Il n'est pas nécessaire de connaître quoi que ce soit des CSS pour faire cet exercice&nbsp;; vous avez juste besoin de placer les CSS fournies dans l'élément HTML.
-- Les CSS jointes sont conçues de telle sorte que les éléments structuraux adéquats ont été ajoutés dans le balisage, ils apparaîtront en vert dans le rendu de la page.
-- Si vous êtes bloqué et ne voyez pas où mettre tel élément, cela peut vous aider de tracer un diagramme des blocs de disposition de la page et d'écrire sur chaque élément ce qui, à votre avis devrait envelopper chaque bloc.
+- Utilisez le [validateur HTML du W3C <sup>(angl.)</sup>](https://validator.w3.org/) pour détecter les erreurs involontaires dans votre HTML — afin de pouvoir les corriger.
+- Vous n'avez pas besoin de connaître le CSS pour relever ce défi&nbsp;; il vous suffit d'appliquer le CSS fourni à votre HTML.
+- Si vous êtes bloqué·e et que vous ne voyez pas quels éléments placer où, dessinez un simple schéma en blocs de la mise en page, et notez les éléments que vous pensez devoir englober chaque bloc. Cela est extrêmement utile.
 
 ## Exemple
 
-La capture d'écran suivante montre un exemple de ce à quoi la page d'accueil peut ressembler après avoir été balisée.
+La capture d'écran suivante montre un exemple de ce à quoi pourrait ressembler la page d'accueil une fois balisée. Si vous avez du mal à réaliser certains points, consultez la solution sous l'exemple interactif.
 
-![L'exemple de l'exercice complété ; une page web unique sur l'observation des oiseaux, comprenant un en-tête "Observons les oiseaux", des photos d'oiseaux et un message de bienvenue.](oiseaux.png)
+![L'exemple final pour le défi ; une page web simple sur l'observation des oiseaux, comprenant un titre « Birdwatching », des photos d'oiseaux et un message de bienvenue](example-page.png)
 
-## Évaluation
+<details>
+<summary>Cliquez ici pour afficher la solution</summary>
 
-Si cette évaluation fait partie d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur/formateur pour notation. Si vous faites de l'auto‑formation vous pouvez obtenir un guide d'auto‑évaluation en le demandant sur le [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294) ou sur le canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Essayez l'exercice d'abord — il n'y a rien à gagner à tricher&nbsp;!
+Votre HTML final devrait ressembler à ceci&nbsp;:
 
-{{PreviousMenu("Apprendre/HTML/Introduction_à_HTML/Marking_up_a_letter", "Apprendre/HTML/Introduction_à_HTML")}}
+```html
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Observation des oiseaux</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300%7CCinzel+Decorative:700"
+      rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        Observation des oiseaux
+        <img
+          src="https://mdn.github.io/shared-assets/images/examples/learn/birds/dove.png"
+          alt="logo colombe simple" />
+      </h1>
+
+      <nav>
+        <ul>
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#">Commencer</a></li>
+          <li><a href="#">Photos</a></li>
+          <li><a href="#">Matériel</a></li>
+          <li><a href="#">Forum</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <article>
+        <h2>Bienvenue</h2>
+
+        <p>
+          Bienvenue sur notre faux site d'observation des oiseaux. S'il
+          s'agissait d'un vrai site, ce serait l'endroit idéal pour en apprendre
+          plus sur l'observation des oiseaux, que vous soyez débutant·e
+          souhaitant découvrir l'ornithologie ou expert·e voulant partager
+          idées, astuces et photos avec d'autres passionné·e·s.
+        </p>
+
+        <p>
+          Alors ne perdez pas de temps&nbsp;! Prenez ce dont vous avez besoin,
+          puis éteignez cet ordinateur et sortez profiter du grand air&nbsp;!
+        </p>
+      </article>
+
+      <aside>
+        <h2>Photos préférées</h2>
+
+        <a
+          href="https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-1.jpg">
+          <img
+            src="https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-1_th.jpg"
+            alt="Petit oiseau noir, griffes noires, long bec noir et fin" />
+        </a>
+        <a
+          href="https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-2.jpg">
+          <img
+            src="https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-2_th.jpg"
+            alt="Demi-corps d'un bel oiseau au plumage bleu vif sur le cou, bec clair, huppe bleue" />
+        </a>
+        <a
+          href="https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-3.jpg">
+          <img
+            src="https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-3_th.jpg"
+            alt="Demi-corps d'un grand oiseau au plumage blanc, très long bec clair, étroit et recourbé" />
+        </a>
+        <a
+          href="https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-4.jpg">
+          <img
+            src="https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-4_th.jpg"
+            alt="Grand oiseau, plumage principalement blanc avec du noir sur le dos et l'arrière, long bec droit blanc" />
+        </a>
+      </aside>
+    </main>
+
+    <footer>
+      <p>
+        Cet exemple de faux site web est sous CC0 — toute partie de ce code peut
+        être réutilisée comme vous le souhaitez. Exemple original écrit par
+        Chris Mills, 2016.
+      </p>
+
+      <p>
+        <a href="http://game-icons.net/lorc/originals/dove.html"
+          >Icône colombe</a
+        >
+        par Lorc.
+      </p>
+    </footer>
+  </body>
+</html>
+```
+
+</details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Test_your_skills/Links", "Learn_web_development/Core/Structuring_content/HTML_images", "Learn_web_development/Core/Structuring_content")}}

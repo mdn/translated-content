@@ -1,9 +1,8 @@
 ---
 title: 詳細度
 slug: Web/CSS/Guides/Cascade/Specificity
-original_slug: Web/CSS/CSS_cascade/Specificity
 l10n:
-  sourceCommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **詳細度** (Specificity) は、ある要素に最も関連性の高い [CSS 宣言](/ja/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#css_の構文の基本)を決定するためにブラウザーが使用するアルゴリズムで、これによって、その要素に使用するプロパティ値が決定されます。詳細度のアルゴリズムは、[CSS セレクター](/ja/docs/Web/CSS/Reference#セレクター)の重みを計算し、競合する CSS 宣言の中からどのルールを要素に適用するかを決定します。
@@ -28,13 +27,13 @@ l10n:
 - TYPE 列
   - : [要素型セレクター](/ja/docs/Web/CSS/Reference/Selectors/Type_selectors)（`p`, `h1`, `td` など）、擬似要素セレクター（`::before`, `::placeholder`, それ以外のコロン 2 つの表記のセレクターすべて）を指します。一致するセレクター内での型や擬似要素ごとに、重みの値に 0-0-1 を追加します。
 - 値なし
-  - : 全称セレクター ({{CSSxRef("Universal_selectors", "*")}}) および擬似クラス {{CSSxRef(":where", ":where()")}} とその引数は、重みの計算にはカウントされませんが、要素には一致します。全称セレクターと擬似クラスの値は 0-0-0 です。これらのセレクターは詳細度の計算に影響を与えません。
+  - : 全称セレクター ({{CSSxRef("Universal_selectors", "*")}}) および擬似クラス {{cssxref(":where()")}} とその引数は、重みの計算にはカウントされませんが、要素には一致します。全称セレクターと擬似クラスの値は 0-0-0 です。これらのセレクターは詳細度の計算に影響を与えません。
 
 結合子（{{CSSxRef("Next-sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("Subsequent-sibling_combinator", "~")}}, [" "](/ja/docs/Web/CSS/Reference/Selectors/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}）は、何を選択するのかをより具体化することができますが、詳細度の重みに値を追加することはありません。
 
-`&` 結合子は詳細度の重みを追加しませんが、入れ子になったルールは詳細度を追加します。詳細度および機能性の観点では、入れ子は {{CSSxRef(":is", ":is()")}} 擬似クラスとよく似ています。
+`&` 結合子は詳細度の重みを追加しませんが、入れ子になったルールは詳細度を追加します。詳細度および機能性の観点では、入れ子は {{cssxref(":is()")}} 擬似クラスとよく似ています。
 
-入れ子と同様に、擬似クラスである {{CSSxRef(":is", ":is()")}}、{{CSSxRef(":has", ":has()")}}、否定 ({{CSSxRef(":not", ":not()")}}) 自体は重みを持ちません。しかし、これらのセレクターの引数は重みを持ちます。各セレクターの重みは、最も高い詳細度を持つセレクターのリストに掲載されているセレクターの引数から取得されます。同様に、入れ子になったセレクターの場合、入れ子になったセレクター部分が加える詳細度は、最も高い詳細度を持つ入れ子になったセレクターのカンマ区切りのリストに掲載されているセレクターです。
+入れ子と同様に、擬似クラスである {{cssxref(":is()")}}、{{cssxref(":has()")}}、否定 ({{cssxref(":not()")}}) 自体は重みを持ちません。しかし、これらのセレクターの引数は重みを持ちます。各セレクターの重みは、最も高い詳細度を持つセレクターのリストに掲載されているセレクターの引数から取得されます。同様に、入れ子になったセレクターの場合、入れ子になったセレクター部分が加える詳細度は、最も高い詳細度を持つ入れ子になったセレクターのカンマ区切りのリストに掲載されているセレクターです。
 
 [`:not()`、`:is()`、`:has()` の例外](#is、not、has、css_入れ子の例外)については、後ほど説明します。
 
@@ -59,9 +58,15 @@ input:focus,
 パスワード入力型に `required` がついている場合、 `id="myApp"` が設定された要素の内部にある場合、フォーカスがあるかどうかに関わらず、詳細度の重みは ID ひとつ、擬似クラス 2 つ、要素型 1 つなので `1-2-1` になります。なぜこの場合、詳細度の重みが `0-1-1` や `0-1-0` ではなく、 `1-2-1` になるのでしょうか？それは、詳細度の重みが最も大きい一致するセレクターから、詳細度の重みが決まるからです。重みは 3 つの列の値を左から右に比較することで決定されます。
 
 ```css
-[type="password"]             /* 0-1-0 */
-input:focus                   /* 0-1-1 */
-:root #myApp input:required   /* 1-2-1 */
+[type="password"] {
+  /* 0-1-0 */
+}
+input:focus {
+  /* 0-1-1 */
+}
+:root #myApp input:required {
+  /* 1-2-1 */
+}
 ```
 
 ### 3 つの列の比較
@@ -116,7 +121,7 @@ input.myClass {
 
 ### `:is()`、`:not()`、`:has()`、CSS 入れ子の例外
 
-全一致の擬似クラス {{CSSxRef(":is", ":is()")}}、関係擬似クラス {{CSSxRef(":has", ":has()")}}、否定擬似クラス {{CSSxRef(":not", ":not()")}} は、詳細度の計算では擬似クラスとは見なされません。それ自体は、詳細度算出のための重みを追加するものではありません。しかし、擬似クラスの括弧に渡されたセレクターの引数は、詳細度アルゴリズムの一部です。詳細度値の計算における一致するセレクターと否定の擬似クラスの重みは、引数の[重み](#セレクターの重み分類)となります。
+全一致の擬似クラス {{cssxref(":is()")}}、関係擬似クラス {{cssxref(":has()")}}、否定擬似クラス {{cssxref(":not()")}} は、詳細度の計算では擬似クラスとは見なされません。それ自体は、詳細度算出のための重みを追加するものではありません。しかし、擬似クラスの括弧に渡されたセレクターの引数は、詳細度アルゴリズムの一部です。詳細度値の計算における一致するセレクターと否定の擬似クラスの重みは、引数の[重み](#セレクターの重み分類)となります。
 
 ```css
 p {
@@ -205,7 +210,7 @@ p[style*="purple"] {
 
 important フラグを使用する際は必ずコメントを入れてください。そうすれば、コードの管理者が、なぜ CSS のアンチパターンが使用されたかを理解することができます。
 
-### !important の例外
+### `!important` の例外
 
 important とマークされた CSS 宣言は、同じカスケード層とオリジン内の他の宣言を上書きします。技術的には、 [`!important`](/ja/docs/Web/CSS/Reference/Values/important) は詳細度と何の関係もありませんが、詳細度やカスケードとは直接的に相互作用するものです。これは、スタイルシートの[カスケード](/ja/docs/Web/CSS/Guides/Cascade/Introduction)の順序を逆転させます。
 
@@ -215,9 +220,9 @@ important とマークされた CSS 宣言は、同じカスケード層とオ�
 
 `!important` を使用して外部の CSS （Bootstrap や normalize.css など）を上書きする代わりに、サードパーティのスクリプトを直接[カスケードレイヤー](/ja/docs/Web/CSS/Reference/At-rules/@layer)にインポートするようにしてください。 CSS でどうしても `!important` を使用したい場合は、用途をコメントで記述しておくと、将来のコード保守者がその宣言がなぜ important とマークされたのかを知り、それを上書きしないようにすることができます。しかし、他の開発者が制御できない状態で組み込む必要があるプラグインやフレームワークを書くときには、絶対に `!important` を使用しないでください。
 
-### :where() の例外
+### `:where()` の例外
 
-詳細度を調整する擬似クラス {{CSSxRef(":where", ":where()")}} は、常にその詳細度が 0、`0-0-0` に置き換えられています。これにより、どの要素を対象としても詳細度を上げることがない、とても特殊な CSS セレクターを作ることができるようになります。
+詳細度を調整する擬似クラス {{cssxref(":where()")}} は、常にその詳細度が 0、`0-0-0` に置き換えられています。これにより、どの要素を対象としても詳細度を上げることがない、とても特殊な CSS セレクターを作ることができるようになります。
 
 CSS を編集するアクセス権を持たない開発者が使用するサードパーティ CSS を保有する場合、可能な限り詳細度の低い CSS を作成することは良い習慣と考えられています。例えば、あなたのテーマが以下のような CSS を入れている場合は次のようにします。
 
@@ -239,35 +244,19 @@ footer a {
 
 ### `@scope` ブロックが詳細度に影響する仕組み
 
-`@scope` ブロック内にルールセットを記述しても、セレクターが使用されるスコープのルートや制限に関わらず、そのセレクターの特定の詳細度には影響しません。例えば次のようになります。
-
-```css
-@scope (.article-body) {
-  /* img はの詳細度は期待通り 0-0-1 になる */
-  img { ... }
-}
-```
-
-しかし、もし明示的に `:scope` 擬似クラスをスコープ付きセレクターの前に追加する場合は、その詳細度を計算する際に考慮する必要があります。 `:scope` は、すべての通常の擬似クラスと同様に、 0-1-0 の詳細度を持ちます。
+{{cssxref("@scope")}} ブロック内にルールセットを含めても、そのセレクターの詳細度は影響を受けません。これは、[スコープのルートと制限](/ja/docs/Web/CSS/Reference/At-rules/@scope#構文)内でセレクターが使用されるかどうかに関わらずです。
+ただし、明示的に {{cssxref(":scope")}} 擬似クラスを追加する場合は、特異性の計算時にこれを考慮する必要があります。
+`:scope` は、通常の擬似クラスと同様に、詳細度が 0-1-0 です。例を示します。
 
 ```css
 @scope (.article-body) {
   /* :scope img の詳細度 0-1-0 + 0-0-1 = 0-1-1 となる */
-  :scope img { ... }
+  :scope img {
+  }
 }
 ```
 
-`@scope` ブロック内で `&` セレクターを使用する場合、 `&` はスコープルートセレクターを表します。これは、内部的には {{cssxref(":is", ":is()")}} セレクターで囲まれたセレクターに書き換えられます。例えば、次のような場合です。
-
-```css
-@scope (figure, #primary) {
-  & img { ... }
-}
-```
-
-`& img` は `:is(figure, #primary) img` と同等です。
-
-`:is()` は最も詳細度の高い引数（この場合は `#primary`）の詳細度を取るので、スコープされた `& img` セレクターは 1-0-0 + 0-0-1 = 1-0-1 となります。
+詳しくは、[`@scope` での詳細度](/ja/docs/Web/CSS/Reference/At-rules/@scope#scope_の詳細度)を参照してください。
 
 ## 詳細度に関する頭痛の種を処理するためのヒント
 
@@ -337,14 +326,12 @@ footer a {
 
 異なるレイヤーからの 2 つのセレクターが同じ要素に一致するとき、オリジンと重要性が優先されます。負けたスタイルシートのセレクターの詳細度は関係ありません。
 
-```html
-<style>
-  @import TW.css layer();
-  p,
-  p * {
-    font-size: 1rem;
-  }
-</style>
+```css
+@import "TW.css" layer();
+p,
+p * {
+  font-size: 1rem;
+}
 ```
 
 上記の例では、ネストされたコンテンツを含むすべての段落のテキストは、 TW スタイルシートと一致するクラス名がいくつあっても、 `1rem` になります。
@@ -368,10 +355,8 @@ footer a {
 1. 重要な宣言だけを含む別個の短いスタイルシートを作成し、削除できなかった重要な宣言は特に上書きする。
 2. このスタイルシートを、他のスタイルシートにリンクする前に、 `layer()` を使用した `@import` 文を使用して、CSS の最初のインポートとしてインポートしてください。これは、 important の上書きが最初のレイヤーとしてインポートされることを保証するためのものです。
 
-```html
-<style>
-  @import importantOverrides.css layer();
-</style>
+```css
+@import "importantOverrides.css" layer();
 ```
 
 #### 方法 2
@@ -490,18 +475,17 @@ input[type="password"]:required {
 
 ## 関連情報
 
-- [「カスケードと継承」の「詳細度」](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#詳細度)
-- [SpeciFISHity](https://specifishity.com/)
-- [Specificity Calculator](https://specificity.keegan.st/): 自身の CSS ルールをテストし、理解するための対話型ウェブサイト
-- [_ID-CLASS-TYPE_ exercise](https://estelle.github.io/CSS/selectors/exercises/specificity.html) 詳細度クイズ（英語）
-- [CSS の構文](/ja/docs/Web/CSS/Guides/Syntax/Introduction)ガイド
+- [CSS カスケードと継承](/ja/docs/Web/CSS/Guides/Cascade)モジュール
+- [学習: 競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#詳細度_2)
+- [学習: カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [CSS 構文](/ja/docs/Web/CSS/Guides/Syntax) モジュール
+- [CSS 構文入門: 宣言、ルールセット、文](/ja/docs/Web/CSS/Guides/Syntax/Introduction)
 - [CSS のエラーの扱い](/ja/docs/Web/CSS/Guides/Syntax/Error_handling)
 - [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)
 - [継承](/ja/docs/Web/CSS/Guides/Cascade/Inheritance)
-- [初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値)、[計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)、[使用値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#使用値)、[実効値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#実効値)
+- 値: [初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値)、[計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)、[使用値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#使用値)、[実効値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#実効値)
 - [値定義構文](/ja/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
-- [学習: 競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
-- [学習: カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
-- [CSS カスケードと継承](/ja/docs/Web/CSS/Guides/Cascade)モジュール
 - [CSS 入れ子](/ja/docs/Web/CSS/Guides/Nesting)モジュール
+- [Specificity Calculator](https://specificity.keegan.st/): 自身の CSS ルールをテストし、理解するための対話型ウェブサイト（英語）
+- [SpeciFISHity](https://specifishity.com/) (specifishity.com): CSS の詳細度について楽しく学ぶ方法（英語）
+- [_ID-CLASS-TYPE_ exercise](https://estelle.github.io/CSS/selectors/exercises/specificity.html) 詳細度クイズ（英語）

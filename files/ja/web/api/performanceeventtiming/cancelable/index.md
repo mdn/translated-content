@@ -18,7 +18,7 @@ l10n:
 
 ### 取り消し不可のイベントを監視
 
-cancelable` プロパティは、イベントタイミング項目 ({{domxref("PerformanceEventTiming")}}) を監視するときに使用することができます。例えば、取り消される可能性のないイベントのみをログ出力して測定する場合などです。
+`cancelable` プロパティは、イベントタイミング項目 ({{domxref("PerformanceEventTiming")}}) を監視するときに使用することができます。例えば、取り消される可能性のないイベントのみをログ出力して測定する場合などです。
 
 ```js
 const observer = new PerformanceObserver((list) => {

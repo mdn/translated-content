@@ -3,16 +3,16 @@ title: <generic-family>
 slug: Web/CSS/Reference/Values/generic-family
 original_slug: Web/CSS/generic-family
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<generic-family>`** représente les mots-clés des familles de polices génériques utilisés dans la propriété abrégée {{cssxref("font")}} et la propriété longue {{cssxref("font-family")}}. Le `<generic-family>` désigne une ou plusieurs polices installées localement appartenant à cette catégorie.
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<generic-family>`** représente les mots-clés des familles de polices génériques utilisés dans la propriété abrégée {{CSSxRef("font")}} et la propriété longue {{CSSxRef("font-family")}}. Le `<generic-family>` désigne une ou plusieurs polices installées localement appartenant à cette catégorie.
 
 ## Syntaxe
 
 ### Valeurs
 
-Le type de donnée {{glossary("enumerated", "énuméré")}} `<generic-family>` se définit à l'aide de l'une des valeurs listées ci-dessous&nbsp;:
+Le type de donnée {{Glossary("enumerated", "énuméré")}} `<generic-family>` se définit à l'aide de l'une des valeurs listées ci-dessous&nbsp;:
 
 - `serif`
   - : Une «&nbsp;serif&nbsp;» est une petite ligne ou un empattement ajouté à l'extrémité d'un trait principal d'une lettre. Dans les polices à empattement, les glyphes présentent des terminaisons, des extrémités évasées ou effilées. Exemples&nbsp;: Lucida Bright, Lucida Fax, Palatino, Palatino Linotype, Palladio et URW Palladio.
@@ -58,7 +58,7 @@ Le type de donnée {{glossary("enumerated", "énuméré")}} `<generic-family>` s
 
 ## Exemples
 
-Cet exemple démontre plusieurs des valeurs énumérées `<generic-family>` pour la propriété {{cssxref("font-family")}}.
+Cet exemple démontre plusieurs des valeurs énumérées `<generic-family>` pour la propriété {{CSSxRef("font-family")}}.
 
 ### HTML
 
@@ -110,5 +110,5 @@ ul {
 
 ## Voir aussi
 
-- Propriétés utilisant ce type de donnée&nbsp;: {{cssxref("font-family")}} et {{cssxref("font")}}
+- Propriétés utilisant ce type de donnée&nbsp;: {{CSSxRef("font-family")}} et {{CSSxRef("font")}}
 - Le module des [polices CSS](/fr/docs/Web/CSS/Guides/Fonts)

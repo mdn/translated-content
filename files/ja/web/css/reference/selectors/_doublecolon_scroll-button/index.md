@@ -1,9 +1,8 @@
 ---
 title: ::scroll-button()
 slug: Web/CSS/Reference/Selectors/::scroll-button
-original_slug: Web/CSS/::scroll-button
 l10n:
-  sourceCommit: af550427ce6ddc8b22dae1f6c8a109ed4a5fbd91
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{SeeCompatTable}}
@@ -102,7 +101,7 @@ ul {
 ```css live-sample___creating-scroll-buttons live-sample___positioning-scroll-buttons
 li {
   list-style-type: none;
-  background-color: #eee;
+  background-color: #eeeeee;
   flex: 0 0 100%;
   height: 100px;
   padding-top: 20px;
@@ -120,13 +119,14 @@ ul::scroll-button(*) {
   border: 0;
   font-size: 2rem;
   background: none;
-  color: rgb(0 0 0 / 0.7);
+  color: black;
+  opacity: 0.7;
   cursor: pointer;
 }
 
 ul::scroll-button(*):hover,
 ul::scroll-button(*):focus {
-  color: rgb(0 0 0 / 1);
+  opacity: 1;
 }
 
 ul::scroll-button(*):active {
@@ -134,7 +134,7 @@ ul::scroll-button(*):active {
 }
 
 ul::scroll-button(*):disabled {
-  color: rgb(0 0 0 / 0.2);
+  opacity: 0.2;
   cursor: unset;
 }
 ```
@@ -172,12 +172,12 @@ ul::scroll-button(right) {
 
 ```css live-sample___positioning-scroll-buttons
 ul {
-  anchor-name: --myCarousel;
+  anchor-name: --my-carousel;
 }
 
 ul::scroll-button(*) {
   position: absolute;
-  position-anchor: --myCarousel;
+  position-anchor: --my-carousel;
 }
 ```
 

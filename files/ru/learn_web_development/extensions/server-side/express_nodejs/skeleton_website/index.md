@@ -5,7 +5,7 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_websi
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 Эта вторая статья в нашем [учебнике Express](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website) показывает, как создать каркас проекта веб-сайта, который позже можно будет заполнить с помощью путей сайта, шаблонов представлений и обращений к базе данных.
 
@@ -493,4 +493,4 @@ block content
 - [Express application generator](https://expressjs.com/en/starter/generator.html) (документация Express)
 - [Using template engi nes with Express](https://expressjs.com/en/guide/using-template-engines.html) (документация Express)
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

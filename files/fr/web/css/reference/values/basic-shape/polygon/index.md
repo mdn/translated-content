@@ -3,10 +3,10 @@ title: polygon()
 slug: Web/CSS/Reference/Values/basic-shape/polygon
 original_slug: Web/CSS/basic-shape/polygon
 l10n:
-  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`polygon()`** fait partie du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{cssxref("&lt;basic-shape&gt;")}}. Elle permet de dessiner un [polygone](https://fr.wikipedia.org/wiki/Polygone) en fournissant une ou plusieurs paires de coordonnées, chacune représentant un sommet de la forme.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`polygon()`** fait partie du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{CSSxRef("&lt;basic-shape&gt;")}}. Elle permet de dessiner un [polygone](https://fr.wikipedia.org/wiki/Polygone) en fournissant une ou plusieurs paires de coordonnées, chacune représentant un sommet de la forme.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: polygon()")}}
 
@@ -60,20 +60,20 @@ polygon(nonzero, 0% 0%, 50% 50%, 0% 100%)
 polygon(evenodd, 0% 0%, 50% 50%, 0% 100%)
 ```
 
-Les paramètres de `polygon()` sont séparés par une virgule et des espaces optionnels. Le premier paramètre est une valeur optionnelle [`<fill-rule>`](/fr/docs/Web/SVG/Reference/Attribute/fill-rule). Les paramètres suivants sont des points qui définissent le polygone. Chaque point est une paire de coordonnées x/y {{cssxref("length-percentage")}} séparées par un espace, par exemple «&nbsp;0 0&nbsp;» et «&nbsp;100% 100%&nbsp;» pour les coins en haut à gauche et en bas à droite.
+Les paramètres de `polygon()` sont séparés par une virgule et des espaces optionnels. Le premier paramètre est une valeur optionnelle [`<fill-rule>`](/fr/docs/Web/SVG/Reference/Attribute/fill-rule). Les paramètres suivants sont des points qui définissent le polygone. Chaque point est une paire de coordonnées x/y {{CSSxRef("length-percentage")}} séparées par un espace, par exemple «&nbsp;0 0&nbsp;» et «&nbsp;100% 100%&nbsp;» pour les coins en haut à gauche et en bas à droite.
 
 Remarque&nbsp;: l'élément SVG [`<polygon>`](/fr/docs/Web/SVG/Reference/Element/polygon) possède des attributs séparés pour [`fill-rule`](/fr/docs/Web/SVG/Reference/Attribute/fill-rule) et [`points`](/fr/docs/Web/SVG/Reference/Attribute/points), et `points` accepte indifféremment les espaces ou les virgules comme séparateurs. En CSS, les règles de séparation de `polygon()` sont strictes.
 
 ### Paramètres
 
-- [`<fill-rule>`](/fr/docs/Web/SVG/Reference/Attribute/fill-rule) {{optional_inline}}
+- [`<fill-rule>`](/fr/docs/Web/SVG/Reference/Attribute/fill-rule) {{Optional_Inline}}
   - : Valeur optionnelle `nonzero` (par défaut si omise) ou `evenodd`, qui définit la règle de remplissage.
-- {{cssxref("length-percentage")}}
+- {{CSSxRef("length-percentage")}}
   - : Chaque sommet du polygone est représenté par une paire de valeurs `<length-percentage>`, qui donne les coordonnées x/y du sommet par rapport à la [boîte de référence](/fr/docs/Web/CSS/Guides/Shapes/Using_shape-outside#the_reference_box) de la forme.
 
 ### Valeur de retour
 
-Retourne une valeur {{cssxref("basic-shape")}}.
+Retourne une valeur {{CSSxRef("basic-shape")}}.
 
 ## Description
 
@@ -90,7 +90,7 @@ La correspondance des coordonnées du conteneur peut être visualisée ainsi&nbs
 | x    | 0%      | 100%    | 100%    | 0%      | x<sub>n</sub> |
 | y    | 0%      | 0%      | 100%    | 100%    | y<sub>n</sub> |
 
-En appliquant ces coordonnées à la propriété CSS {{cssxref("clip-path")}} avec la fonction `polygon()`&nbsp;:
+En appliquant ces coordonnées à la propriété CSS {{CSSxRef("clip-path")}} avec la fonction `polygon()`&nbsp;:
 
 ```css
 clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
@@ -100,7 +100,7 @@ Cela crée un rectangle de la taille de son parent en définissant les coordonn�
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Examples
 
@@ -133,7 +133,7 @@ Les coordonnées du triangle sont le coin en haut à droite (`100% 0%`), le poin
 
 ### Définir un polygone pour shape-outside
 
-Dans cet exemple, une forme est créée pour que le texte la suive grâce à la propriété {{cssxref("shape-outside")}}.
+Dans cet exemple, une forme est créée pour que le texte la suive grâce à la propriété {{CSSxRef("shape-outside")}}.
 
 ```html
 <div class="box">
@@ -193,5 +193,5 @@ p {
 
 ## Voir aussi
 
-- Propriétés utilisant ce type de données&nbsp;: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
+- Propriétés utilisant ce type de données&nbsp;: {{CSSxRef("clip-path")}}, {{CSSxRef("shape-outside")}}
 - [Guide des formes de base](/fr/docs/Web/CSS/Guides/Shapes/Using_shape-outside)

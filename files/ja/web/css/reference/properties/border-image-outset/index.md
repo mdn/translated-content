@@ -1,9 +1,8 @@
 ---
 title: border-image-outset
 slug: Web/CSS/Reference/Properties/border-image-outset
-original_slug: Web/CSS/border-image-outset
 l10n:
-  sourceCommit: fb3ef3857ca1d77cc720deba0c12d7a3313b85b4
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`border-image-outset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[境界画像](/ja/docs/Web/CSS/Reference/Properties/border-image)が境界ボックスからはみ出す幅を設定します。
@@ -30,7 +29,7 @@ border-image-outset: 40px;
 
 ```html interactive-example
 <section id="default-example">
-  <div id="example-element">This is a box with a border around it.</div>
+  <div id="example-element">このボックスには周囲に境界があります。</div>
 </section>
 ```
 
@@ -43,7 +42,7 @@ border-image-outset: 40px;
   justify-content: center;
   padding: 50px;
   background: #fff3d4;
-  color: #000;
+  color: black;
   border: 30px solid;
   border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
     round;

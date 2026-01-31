@@ -29,7 +29,7 @@ window 用户激活状态有两种：
 - {{Glossary("Transient activation", "瞬态激活")}}（用户当前正在与页面交互）和
 - {{Glossary("Sticky activation", "粘性激活")}}（自页面加载以来，用户至少交互过一次）。
 
-有关更多信息以及需要粘性或瞬态激活的 API 列表，请参见[由用户激活控制的特性](/zh-CN/docs/Web/Security/User_activation) 。
+有关更多信息以及需要粘性或瞬态激活的 API 列表，请参见[由用户激活控制的特性](/zh-CN/docs/Web/Security/Defenses/User_activation) 。
 
 ## 示例
 
@@ -64,4 +64,4 @@ if (navigator.userActivation.hasBeenActive) {
 ## 参见
 
 - {{domxref("navigator.userActivation")}}
-- [由用户激活的控制的特性](/zh-CN/docs/Web/Security/User_activation)
+- [由用户激活的控制的特性](/zh-CN/docs/Web/Security/Defenses/User_activation)
