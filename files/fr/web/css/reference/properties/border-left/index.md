@@ -1,22 +1,13 @@
 ---
 title: border-left
 slug: Web/CSS/Reference/Properties/border-left
-original_slug: Web/CSS/border-left
+l10n:
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
-{{CSSRef}}
+La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-left`** permet de définir toutes les propriétés de la [bordure](/fr/docs/Web/CSS/Reference/Properties/border) à gauche d'un élément.
 
-La propriété **`border-left`** est une propriété raccourcie qui permet de définir la bordure gauche d'un élément
-
-Cette propriété raccourcie définit les valeurs des propriétés détaillées suivantes :
-
-- {{cssxref("border-left-width")}},
-- {{cssxref("border-left-style")}},
-- {{cssxref("border-left-color")}}.
-
-Ces propriétés permettent de décrire la bordure du côté gauche d'un élément.
-
-{{InteractiveExample("CSS Demo: border-left")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: border-left")}}
 
 ```css interactive-example-choice
 border-left: solid;
@@ -35,64 +26,78 @@ border-left: thick double #32a1ce;
 ```
 
 ```css interactive-example-choice
-border-left: 4mm ridge rgba(211, 220, 50, 0.6);
+border-left: 4mm ridge rgb(211 220 50 / 0.6);
 ```
 
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    Ceci est une boîte avec une bordure autour.
   </div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #8b008b;
+  background-color: #eeeeee;
+  color: darkmagenta;
   padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 ```
 
-> [!NOTE]
-> Les trois valeurs de la propriété raccourcie peuvent être définies dans n'importe quel ordre et une ou deux d'entre elles peuvent être absentes.
->
-> Comme pour les autres propriétés raccourcies, `border-left` définit toujours les valeurs de toutes les propriétés qu'elle peut définir, même si celles-ci ne sont pas indiquées. Pour les valeurs qui ne sont pas indiquées, on prendra les valeurs par défaut. Ainsi :
->
-> ```css
-> border-left-style: dotted;
-> border-left: thick green;
-> ```
->
-> est équivalent à :
->
-> ```css
-> border-left-style: dotted;
-> border-left: none thick green;
-> ```
->
-> et la valeur {{cssxref("border-left-style")}} fournie avant `border-left` est ignorée.
->
-> La valeur par défaut de {{cssxref("border-left-style")}} étant `none`, si on ne définit pas le style de la bordure, on aura la valeur par défaut, c'est-à-dire qu'on aura aucune bordure.
+## Propriétés constitutives
+
+Cette propriété est une propriété raccourcie pour les propriétés CSS suivantes&nbsp;:
+
+- {{CSSxRef("border-left-color")}}
+- {{CSSxRef("border-left-style")}}
+- {{CSSxRef("border-left-width")}}
 
 ## Syntaxe
 
 ```css
 border-left: 1px;
 border-left: 2px dotted;
-border-left: medium dashed green;
+border-left: medium dashed blue;
+
+/* Valeurs globales */
+border-left: inherit;
+border-left: initial;
+border-left: revert;
+border-left: revert-layer;
+border-left: unset;
 ```
+
+Les trois valeurs de la propriété raccourcie peuvent être placées dans n'importe quel ordre et une ou deux d'entre elles peuvent être omises.
 
 ### Valeurs
 
 - `<br-width>`
-  - : Voir {{cssxref("border-left-width")}}.
+  - : Voir {{CSSxRef("border-left-width")}}.
 - `<br-style>`
-  - : Voir {{cssxref("border-left-style")}}.
-- `<color>`
-  - : Voir {{cssxref("border-left-color")}}.
+  - : Voir {{CSSxRef("border-left-style")}}.
+- {{CSSxRef("&lt;color&gt;")}}
+  - : Voir {{CSSxRef("border-left-color")}}.
+
+## Description
+
+Comme pour toutes les propriétés raccourcies, `border-left` définit toujours les valeurs de toutes les propriétés qu'elle peut définir, même si elles ne sont pas définies. Celles qui ne sont pas définies prennent leur valeur par défaut. Considérez le code suivant&nbsp;:
+
+```css
+border-left-style: dotted;
+border-left: thick green;
+```
+
+Cela revient en fait au même que&nbsp;:
+
+```css
+border-left-style: dotted;
+border-left: none thick green;
+```
+
+La valeur de {{CSSxRef("border-left-style")}} fournie avant `border-left` est ignorée. Comme la valeur par défaut de {{CSSxRef("border-left-style")}} est `none`, si vous n'indiquez pas la partie `border-style`, il n'y aura pas de bordure.
 
 ## Définition formelle
 
@@ -104,26 +109,30 @@ border-left: medium dashed green;
 
 ## Exemples
 
-### CSS
+### Appliquer une bordure à gauche
+
+#### HTML
+
+```html
+<div>Ceci est une boîte avec une bordure à gauche.</div>
+```
+
+#### CSS
 
 ```css
-.exemple {
-  border-left: 3px dotted orange;
+div {
+  border-left: 4px dashed blue;
+  background-color: gold;
+  height: 100px;
+  width: 100px;
+  font-weight: bold;
+  text-align: center;
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<p class="exemple">
-  En passant elle prit sur un rayon un pot de confiture portant cette étiquette,
-  « MARMELADE D’ORANGES. »
-</p>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples","200","150")}}
+{{EmbedLiveSample("Appliquer une bordure à gauche")}}
 
 ## Spécifications
 
@@ -132,3 +141,11 @@ border-left: medium dashed green;
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La propriété {{CSSxRef("border")}}
+- La propriété {{CSSxRef("border-block")}}
+- La propriété {{CSSxRef("outline")}}
+- [Arrière-plans et bordures](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders)
+- [Apprendre CSS&nbsp;: arrière-plans et bordures](/fr/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
