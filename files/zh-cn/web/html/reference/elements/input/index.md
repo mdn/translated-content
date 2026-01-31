@@ -315,7 +315,7 @@ label {
 | [`multiple`](#multiple)                       | `email`、`file`                                                      | 布尔值。是否允许多个值                                                     |
 | [`name`](#name)                               | 所有类型                                                             | 表单的控件名称，作为键值对的一部分与表单一同提交                           |
 | [`pattern`](#pattern)                         | `text`、`search`、`url`、`tel`、`email`、`password`                  | 为了使得 `value` 有效，必须符合的模式                                      |
-| [`placeholder`](#placeholder)                 | `text`、`search`、`url`、`tel`、`email`、`password`、`number`        | 当没有值设定时，出现在表单控件上的文字                                     |     |
+| [`placeholder`](#placeholder)                 | `text`、`search`、`url`、`tel`、`email`、`password`、`number`        | 当没有值设定时，出现在表单控件上的文字                                     |
 | [`popovertarget`](#popovertarget)             | `button`                                                             | 将 `<input type="button">` 指定为弹出框元素的控制项                        |
 | [`popovertargetaction`](#popovertargetaction) | `button`                                                             | 指定弹出框控件应执行的操作                                                 |
 | [`readonly`](#readonly)                       | 除了 `hidden`、`range`、`color`、`checkbox`、`radio` 和按钮以外      | 布尔值。如果存在，其中的值将不可编辑。                                     |
