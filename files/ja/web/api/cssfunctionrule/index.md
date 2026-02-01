@@ -61,6 +61,7 @@ console.log(cssFunc.getParameters());
 - `name` プロパティは `--lighter` となります。
 - `returnType` プロパティは `<color>` となります。
 - `getParameters()` メソッドは次のような配列を返します。
+
   ```js
   [
     { name: "--color", type: "<color>" },
