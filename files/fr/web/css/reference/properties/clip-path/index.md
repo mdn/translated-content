@@ -1,9 +1,8 @@
 ---
 title: clip-path
 slug: Web/CSS/Reference/Properties/clip-path
-original_slug: Web/CSS/clip-path
 l10n:
-  sourceCommit: 82ef8b5c50a0045add71f1a06f5be1db781aede4
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`clip-path`** empêche une portion d'un élément d'être affichée en définissant une région de rognage. Seule la zone spécifique de l'élément à l'intérieur de la région sera affichée, le reste sera masqué.
@@ -78,11 +77,10 @@ section {
 /* Valeurs avec un mot-clé */
 clip-path: none;
 
-/* Valeurs pointant vers une image */
-/* Type <clip-source> */
+/* Valeurs de type <clip-source> */
 clip-path: url(resources.svg#c1);
 
-/* Valeurs de boîte */
+/* Valeurs de type <geometry-box> */
 clip-path: border-box;
 clip-path: content-box;
 clip-path: fill-box;
@@ -91,8 +89,7 @@ clip-path: padding-box;
 clip-path: stroke-box;
 clip-path: view-box;
 
-/* Valeurs géométriques <basic-shape> */
-/* avec une notation fonctionnelle */
+/* Valeurs de type <basic-shape> */
 clip-path: inset(100px 50px);
 clip-path: circle(50px at 0 100px);
 clip-path: ellipse(50px 60px at 10% 20%);
@@ -120,29 +117,29 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
 ### Valeurs
 
 - `<clip-source>`
-  - : Une {{cssxref("url_value", "&lt;url&gt;")}} qui référence un élément [SVG](/fr/docs/Web/SVG) {{SVGElement("clipPath")}}.
+  - : Une {{CSSxRef("url_value", "&lt;url&gt;")}} qui référence un élément [SVG](/fr/docs/Web/SVG) {{SVGElement("clipPath")}}.
 
-- {{cssxref("&lt;basic-shape&gt;")}}
+- {{CSSxRef("&lt;basic-shape&gt;")}}
   - : Une forme dont la taille et la position sont définies par la valeur `<geometry-box>`. Si aucune valeur de géométrie n'est fournie, `border-box` sera utilisée comme boîte de référence. La forme peut être définie avec l'une de ces valeurs&nbsp;:
-    - {{cssxref("basic-shape/inset","inset()")}}
+    - {{CSSxRef("basic-shape/inset","inset()")}}
       - : Définit un rectangle.
-    - {{cssxref("basic-shape/circle","circle()")}}
+    - {{CSSxRef("basic-shape/circle","circle()")}}
       - : Définit un cercle avec un rayon et une position.
-    - {{cssxref("basic-shape/ellipse","ellipse()")}}
+    - {{CSSxRef("basic-shape/ellipse","ellipse()")}}
       - : Définit une ellipse avec ses deux demi-rayons et une position.
-    - {{cssxref("basic-shape/polygon","polygon()")}}
+    - {{CSSxRef("basic-shape/polygon","polygon()")}}
       - : Définit un polygone en utilisant une règle de remplissage SVG et un ensemble d'arêtes.
-    - {{cssxref("basic-shape/path","path()")}}
+    - {{CSSxRef("basic-shape/path","path()")}}
       - : Définit une forme en utilisant une règle de remplissage SVG optionnelle et une définition de chemin SVG.
-    - {{cssxref("basic-shape/rect","rect()")}}
+    - {{CSSxRef("basic-shape/rect","rect()")}}
       - : Définit un rectangle en utilisant les distances spécifiées par rapport aux bords de la boîte de référence.
-    - {{cssxref("basic-shape/shape","shape()")}}
+    - {{CSSxRef("basic-shape/shape","shape()")}}
       - : Définit une forme en utilisant une règle de remplissage SVG optionnelle et des commandes de forme pour les lignes, les courbes et les arcs.
-    - {{cssxref("basic-shape/xywh","xywh()")}}
+    - {{CSSxRef("basic-shape/xywh","xywh()")}}
       - : Définit un rectangle en utilisant les distances spécifiées par rapport aux bords supérieur et gauche de la boîte de référence et les dimensions spécifiées de la largeur et de la hauteur du rectangle.
 
 - `<geometry-box>`
-  - : Si cette valeur est combinée avec une valeur `<basic-shape>`, elle définira la boîte de référence dans laquelle placer la forme. Si elle est utilisée seule, ce sont les bords de la boîte (ainsi que les éventuels coins arrondis définis avec {{cssxref("border-radius")}}) qui sont utilisés comme ligne de rognage. Cette composante peut prendre les valeurs suivantes&nbsp;:
+  - : Si cette valeur est combinée avec une valeur `<basic-shape>`, elle définira la boîte de référence dans laquelle placer la forme. Si elle est utilisée seule, ce sont les bords de la boîte (ainsi que les éventuels coins arrondis définis avec {{CSSxRef("border-radius")}}) qui sont utilisés comme ligne de rognage. Cette composante peut prendre les valeurs suivantes&nbsp;:
     - `margin-box`
       - : La [boîte de marge](/fr/docs/Web/CSS/Guides/Shapes/From_box_values#margin-box) est utilisée comme boîte de référence.
     - `border-box`
@@ -162,21 +159,21 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
   - : Aucun chemin de rognage n'est créé.
 
 > [!NOTE]
-> Si [la valeur calculée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing) est différente de `none`, cela entraînera la création d'un nouveau [contexte d'empilement](/fr/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) (de la même façon qu'{{cssxref("opacity")}} avec des valeurs différentes de `1`).
+> Si [la valeur calculée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing) est différente de `none`, cela entraînera la création d'un nouveau [contexte d'empilement](/fr/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) (de la même façon qu'{{CSSxRef("opacity")}} avec des valeurs différentes de `1`).
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
 ### Formes de base et boîtes de géométrie
 
-Dans cet exemple, deux triangles sont créés en définissant un `polygon()` comme chemin de rognage sur des éléments {{htmlelement("div")}}. Chacun a un fond de couleur unie et une épaisse {{cssxref("border")}}. Le deuxième élément `<div>` a sa boîte de référence définie sur `content-box`&nbsp;:
+Dans cet exemple, deux triangles sont créés en définissant un `polygon()` comme chemin de rognage sur des éléments HTML {{HTMLElement("div")}}. Chacun a un fond de couleur unie et une épaisse {{CSSxRef("border")}}. Le deuxième élément `<div>` a sa boîte de référence définie sur `content-box`&nbsp;:
 
 #### HTML
 
@@ -213,13 +210,13 @@ div:last-of-type {
 
 #### Résultat
 
-{{EmbedLiveSample("shapes1", "", "230")}}
+{{EmbedLiveSample("shapes1", "", 230)}}
 
 Pour le premier triangle, nous n'avons pas spécifié de boîte de référence ; elle est donc par défaut `border-box`, avec les positions 0 % et 100 % situées sur le bord extérieur de la bordure. Dans le deuxième exemple, nous avons défini la `<geometry-box>` sur `content-box`, ce qui signifie que la boîte de référence pour la forme de base est le bord extérieur de la zone de contenu, qui se trouve à l'intérieur de la boîte de remplissage. Comme notre exemple n'a pas de `padding`, il s'agit du bord intérieur de la bordure.
 
 ### Les fonctions `shape()` et `path()`
 
-En s'appuyant sur l'exemple précédent, nous créons le même triangle avec différentes valeurs de `<basic-shape>`, démontrant comment les fonctions {{cssxref("basic-shape/shape", "shape()")}} et {{cssxref("basic-shape/path", "path()")}} peuvent également être utilisées pour créer des chemins de rognage, `shape()` étant une solution plus flexible.
+En s'appuyant sur l'exemple précédent, nous créons le même triangle avec différentes valeurs de `<basic-shape>`, démontrant comment les fonctions {{CSSxRef("basic-shape/shape", "shape()")}} et {{CSSxRef("basic-shape/path", "path()")}} peuvent également être utilisées pour créer des chemins de rognage, `shape()` étant une solution plus flexible.
 
 Nous utilisons `path()` pour définir le chemin de rognage du premier élément, et `shape()` pour le second, tous deux utilisant la valeur par défaut `border-box` comme boîte de référence&nbsp;:
 
@@ -235,9 +232,9 @@ div:last-of-type {
 
 A la suite, le chemin défini avec la fonction `shape()` grandit avec l'élément, tandis que la version `path()` ne le fait pas&nbsp;:
 
-{{EmbedLiveSample("shapes2", "", "230")}}
+{{EmbedLiveSample("shapes2", "", 230)}}
 
-Parce que la fonction `shape()` permet d'utiliser des valeurs {{cssxref("percentage")}} (et [des propriétés personnalisées](/fr/docs/Web/CSS/Reference/Properties/--*) aussi), elle est plus robuste.
+Parce que la fonction `shape()` permet d'utiliser des valeurs {{CSSxRef("percentage")}} (et [des propriétés personnalisées](/fr/docs/Web/CSS/Reference/Properties/--*) aussi), elle est plus robuste.
 
 Nous allons le démontrer en augmentant la taille de l'élément sous-jacent&nbsp;:
 
@@ -248,17 +245,17 @@ div {
 }
 ```
 
-{{EmbedLiveSample("shapes3", "", "280")}}
+{{EmbedLiveSample("shapes3", "", 280)}}
 
 La visibilité, ou du moins la visibilité partielle, des quatre côtés de la bordure dans l'exemple de chemin de rognage défini par la fonction `shape()` est due aux valeurs de pourcentage permettant au chemin de grandir avec l'élément. Dans la version `path()`, l'élément a grandi, mais pas la forme. En conséquence, les bordures supérieure et gauche sont partiellement visibles tandis que les bordures droite et inférieure sont rognées.
 
 ### Le SVG comme source de rognage
 
-Dans cet exemple, nous définissons des éléments SVG {{svgElement("clipPath")}} à utiliser comme source de `clip-path`.
+Dans cet exemple, nous définissons des éléments SVG {{SVGElement("clipPath")}} à utiliser comme source de `clip-path`.
 
 #### HTML
 
-Nous incluons deux {{htmlElement("div")}} éléments et un élément `<svg>` contenant deux éléments `<clipPath>`. Un `<clipPath>` contient quatre éléments {{svgElement("rect")}} qui définissent ensemble des fenêtres, laissant un croisement d'espace vide au milieu, et l'autre contient deux éléments `<rect>` qui se croisent.
+Nous incluons deux {{HTMLElement("div")}} éléments et un élément `<svg>` contenant deux éléments `<clipPath>`. Un `<clipPath>` contient quatre éléments SVG {{SVGElement("rect")}} qui définissent ensemble des fenêtres, laissant un croisement d'espace vide au milieu, et l'autre contient deux éléments `<rect>` qui se croisent.
 
 ```html
 <svg height="0" width="0">
@@ -282,7 +279,7 @@ Nous incluons deux {{htmlElement("div")}} éléments et un élément `<svg>` con
 
 #### CSS
 
-Nous utilisons [flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) pour permettre à nos éléments de s'asseoir côte à côte avec un espace entre eux, s'il y a de l'espace disponible. Nous définissons une image de fond {{cssxref("gradient/conic-gradient", "conic-gradient()")}} sur les deux éléments `<div>`, fournissant un visuel intéressant à rogner, ainsi qu'une {{cssxref("border")}}.
+Nous utilisons [flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) pour permettre à nos éléments de s'asseoir côte à côte avec un espace entre eux, s'il y a de l'espace disponible. Nous définissons une image de fond {{CSSxRef("gradient/conic-gradient", "conic-gradient()")}} sur les deux éléments `<div>`, fournissant un visuel intéressant à rogner, ainsi qu'une {{CSSxRef("border")}}.
 
 ```css
 body {
@@ -308,7 +305,7 @@ div {
 }
 ```
 
-Nous définissons ensuite l'`id` du `<clipPath>` comme la `<clip-source>`. Nous centrons le texte dans l'exemple `cross` verticalement en utilisant {{cssxref("align-content")}}, sinon le texte serait rogné, comme c'est le cas dans l'exemple `window`.
+Nous définissons ensuite l'`id` du `<clipPath>` comme la `<clip-source>`. Nous centrons le texte dans l'exemple `cross` verticalement en utilisant {{CSSxRef("align-content")}}, sinon le texte serait rogné, comme c'est le cas dans l'exemple `window`.
 
 ```css
 .window {
@@ -323,17 +320,17 @@ Nous définissons ensuite l'`id` du `<clipPath>` comme la `<clip-source>`. Nous 
 
 #### Résultat
 
-{{EmbedLiveSample("SVG as clip source", "", "230")}}
+{{EmbedLiveSample("SVG as clip source", "", 230)}}
 
 Les éléments, y compris leur bordure et leur texte, sont rognés, seules les parties se chevauchant avec les éléments `<clipPath>` étant dessinées sur la page.
 
 ### Les différents types de valeurs
 
-Cet exemple démontre les différentes valeurs de la propriété `clip-path` rognant une {{htmlelement("img")}} HTML.
+Cet exemple démontre les différentes valeurs de la propriété `clip-path` rognant une {{HTMLElement("img")}} HTML.
 
 #### HTML
 
-Le HTML comprend une `<img>` qui sera rognée, un `<clipPath>` en forme d'étoile, et un élément {{htmlelement("select")}} pour choisir une valeur de propriété `clip-path`.
+Le HTML comprend une `<img>` qui sera rognée, un `<clipPath>` en forme d'étoile, et un élément HTML {{HTMLElement("select")}} pour choisir une valeur de propriété `clip-path`.
 
 ```html
 <img
@@ -399,12 +396,12 @@ function log(text) {
 
 #### Résultat
 
-{{EmbedLiveSample("Complete_example", 230, 300)}}
+{{EmbedLiveSample("Les différents types de valeurs", 230, 300)}}
 
 Sélectionnez différentes options pour changer la valeur de `clip-path`.
 
 > [!NOTE]
-> Quand il est possible de définir un chemin de texte, si vous souhaitez rogner une image d'arrière-plan sur du texte plutôt que sur une forme, consultez la propriété {{cssxref("background-clip")}}.
+> Quand il est possible de définir un chemin de texte, si vous souhaitez rogner une image d'arrière-plan sur du texte plutôt que sur une forme, consultez la propriété {{CSSxRef("background-clip")}}.
 
 ## Spécifications
 
@@ -416,11 +413,11 @@ Sélectionnez différentes options pour changer la valeur de `clip-path`.
 
 ## Voir aussi
 
-- {{CSSxRef("clip-rule")}}
-- {{CSSxRef("mask")}}
-- {{CSSxRef("filter")}}
-- {{cssxref("background-clip")}}
+- La propriété {{CSSxRef("clip-rule")}}
+- La propriété {{CSSxRef("mask")}}
+- La propriété {{CSSxRef("filter")}}
+- La propriété {{CSSxRef("background-clip")}}
 - [Introduction au découpage CSS](/fr/docs/Web/CSS/CSS_masking/Clipping)
-- Le module de [masquage CSS](/fr/docs/Web/CSS/Guides/Masking)
+- Le module [de masquage CSS](/fr/docs/Web/CSS/Guides/Masking)
 - L'attribut SVG {{SVGAttr("clip-path")}}
 - [Appliquer des effets SVG sur du contenu HTML](/fr/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
