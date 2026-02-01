@@ -1,26 +1,70 @@
 ---
 title: border-inline-color
 slug: Web/CSS/Reference/Properties/border-inline-color
-original_slug: Web/CSS/border-inline-color
+l10n:
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+La propriété [CSS](/fr/docs/Web/CSS) **`border-inline-color`** définit la couleur des bordures logiques en ligne d'un élément, qui correspond à une bordure physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle correspond aux propriétés {{CSSxRef("border-top-color")}} et {{CSSxRef("border-bottom-color")}}, ou {{CSSxRef("border-right-color")}} et {{CSSxRef("border-left-color")}}, selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
 
-La propriété **`border-inline-color`** définit la couleur de la bordure d'un élément sur les côtés de l'axe en ligne. Cette propriété correspondra à différentes propriétés physiques pour les couleurs de la bordure selon le mode d'écriture de l'élément, sa direction et l'orientation du texte. Autrement dit, cette propriété logique peut correspondre à {{cssxref("border-top-color")}} et {{cssxref("border-bottom-color")}} ou à {{cssxref("border-right-color")}} et {{cssxref("border-left-color")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+La couleur de la bordure dans l'autre dimension peut être définie avec {{CSSxRef("border-block-color")}}, qui définit {{CSSxRef("border-block-start-color")}} et {{CSSxRef("border-block-end-color")}}.
+
+{{InteractiveExample("Démonstration CSS&nbsp;: border-inline-color")}}
+
+```css interactive-example-choice
+border-inline-color: red;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-inline-color: #32a1ce;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-inline-color: rgb(170 50 220 / 0.6);
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    Ceci est une boîte avec une bordure autour.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eeeeee;
+  color: black;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
+
+## Syntaxe
 
 ```css
 border-inline-color: yellow;
 border-inline-color: #f5f6f7;
+
+/* Valeurs globales */
+border-inline-color: inherit;
+border-inline-color: initial;
+border-inline-color: revert;
+border-inline-color: revert-layer;
+border-inline-color: unset;
 ```
-
-Pour définir la couleur de la bordure sur l'autre dimension, on pourra utiliser la propriété logique {{cssxref("border-block-color")}} qui définit {{cssxref("border-block-start-color")}} et {{cssxref("border-block-end-color")}}.
-
-## Syntaxe
 
 ### Valeurs
 
-- `<'color'>`
-  - : La couleur de la bordure. Voir {{cssxref("color")}}.
+- {{CSSxRef("&lt;color&gt;")}}
+  - : La couleur de la bordure.
 
 ## Définition formelle
 
@@ -32,7 +76,17 @@ Pour définir la couleur de la bordure sur l'autre dimension, on pourra utiliser
 
 ## Exemples
 
-### CSS
+### Couleur de bordure avec texte vertical
+
+#### HTML
+
+```html
+<div>
+  <p class="exempleTexte">Texte d'exemple</p>
+</div>
+```
+
+#### CSS
 
 ```css
 div {
@@ -41,24 +95,16 @@ div {
   height: 120px;
 }
 
-.texteExemple {
+.exempleTexte {
   writing-mode: vertical-lr;
   border: 10px solid blue;
   border-inline-color: red;
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<div>
-  <p class="texteExemple">Texte d'exemple</p>
-</div>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples", 140, 140)}}
+{{EmbedLiveSample("Couleur de bordure avec texte vertical", 140, 140)}}
 
 ## Spécifications
 
@@ -70,11 +116,6 @@ div {
 
 ## Voir aussi
 
-- Les propriétés physiques qui peuvent correspondre à cette propriété :
-  - {{cssxref("border-top-color")}},
-  - {{cssxref("border-right-color")}},
-  - {{cssxref("border-bottom-color")}},
-  - {{cssxref("border-left-color")}}.
-
-- Les propriétés relatives aux propriétés logiques : {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
-- [bug Firefox 1297097](https://bugzil.la/1297097)
+- [Propriétés et valeurs logiques CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values)
+- Cette propriété correspond aux propriétés physiques de bordure&nbsp;: {{CSSxRef("border-top-color")}}, {{CSSxRef("border-right-color")}}, {{CSSxRef("border-bottom-color")}} ou {{CSSxRef("border-left-color")}}.
+- Les propriétés {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}
