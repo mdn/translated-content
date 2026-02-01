@@ -63,7 +63,7 @@ Dans la plupart des cas, vous devez fournir une étiquette accessible lors de l'
 
 #### Résultat
 
-{{EmbedLiveSample('Étiquetage')}}
+{{EmbedLiveSample("Étiquetage")}}
 
 ### Description d'une région particulière
 
@@ -83,7 +83,7 @@ Si l'élément `<progress>` décrit la progression du chargement d'une section d
 
 ##### Résultat
 
-{{EmbedLiveSample('Description d'une région particulière')}}
+{{EmbedLiveSample("Description d'une région particulière")}}
 
 ## Exemples
 

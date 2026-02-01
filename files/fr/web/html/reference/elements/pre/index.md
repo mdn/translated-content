@@ -194,6 +194,6 @@ if (i &lt; 10 &amp;&amp; i &gt; 0) {
 
 ## Voir aussi
 
-- Les propriétés CSS {{CSSxRef('white-space')}} et {{CSSxRef('word-break')}}
+- Les propriétés CSS {{CSSxRef("white-space")}} et {{CSSxRef("word-break")}}
 - L'entrée de glossaire {{Glossary("Character reference", "Référence de caractère")}}
 - Les éléments HTML associés&nbsp;: {{HTMLElement("code")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}

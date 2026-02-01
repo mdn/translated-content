@@ -2093,6 +2093,11 @@
 /zh-CN/docs/Web/API/RTCStats	/zh-CN/docs/Web/API/RTCStatsReport
 /zh-CN/docs/Web/API/RTCStats/id	/zh-CN/docs/Web/API/RTCStatsReport
 /zh-CN/docs/Web/API/RandomSource/getRandomValues	/zh-CN/docs/Web/API/Crypto/getRandomValues
+/zh-CN/docs/Web/API/Range/collapsed	/zh-CN/docs/Web/API/AbstractRange/collapsed
+/zh-CN/docs/Web/API/Range/endContainer	/zh-CN/docs/Web/API/AbstractRange/endContainer
+/zh-CN/docs/Web/API/Range/endOffset	/zh-CN/docs/Web/API/AbstractRange/endOffset
+/zh-CN/docs/Web/API/Range/startContainer	/zh-CN/docs/Web/API/AbstractRange/startContainer
+/zh-CN/docs/Web/API/Range/startOffset	/zh-CN/docs/Web/API/AbstractRange/startOffset
 /zh-CN/docs/Web/API/Resource_Timing_API	/zh-CN/docs/Web/API/Performance_API/Resource_timing
 /zh-CN/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API	/zh-CN/docs/Web/API/Performance_API/Resource_timing
 /zh-CN/docs/Web/API/Response/error	/zh-CN/docs/Web/API/Response/error_static
@@ -2410,7 +2415,7 @@
 /zh-CN/docs/Web/API/performance_property	/zh-CN/docs/Web/API/Window/performance
 /zh-CN/docs/Web/API/queueMicrotask	/zh-CN/docs/Web/API/Window/queueMicrotask
 /zh-CN/docs/Web/API/range.getBoundingClientRect	/zh-CN/docs/Web/API/Range/getBoundingClientRect
-/zh-CN/docs/Web/API/range.startOffset	/zh-CN/docs/Web/API/Range/startOffset
+/zh-CN/docs/Web/API/range.startOffset	/zh-CN/docs/Web/API/AbstractRange/startOffset
 /zh-CN/docs/Web/API/range.surroundContents	/zh-CN/docs/Web/API/Range/surroundContents
 /zh-CN/docs/Web/API/setInterval	/zh-CN/docs/Web/API/Window/setInterval
 /zh-CN/docs/Web/API/setTimeout	/zh-CN/docs/Web/API/Window/setTimeout

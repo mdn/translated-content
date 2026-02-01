@@ -1,9 +1,8 @@
 ---
 title: inverted-colors
 slug: Web/CSS/Reference/At-rules/@media/inverted-colors
-original_slug: Web/CSS/@media/inverted-colors
 l10n:
-  sourceCommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`inverted-colors`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、{{glossary("user agent", "ユーザーエージェント")}}またはその基盤となる OS が、すべての色を反転しているかどうかを検査するために使用することができます。
@@ -60,7 +59,7 @@ p {
 
 @media (inverted-colors: none) {
   p {
-    background: #eee;
+    background: #eeeeee;
     color: red;
   }
 }

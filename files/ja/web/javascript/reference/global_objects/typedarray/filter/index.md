@@ -1,15 +1,14 @@
 ---
 title: TypedArray.prototype.filter()
+short-title: filter()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/filter
 l10n:
-  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`filter()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、指定された関数で実装されているテストに合格した要素だけにフィルタリングされた、指定された型付き配列の一部のコピーを作成します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.filter()")}} と同じです。
 
-{{InteractiveExample("JavaScript デモ: TypedArray.filter()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.filter()")}}
 
 ```js interactive-example
 function isNegative(element, index, array) {
@@ -20,7 +19,7 @@ const int8 = new Int8Array([-10, 20, -30, 40, -50]);
 const negInt8 = int8.filter(isNegative);
 
 console.log(negInt8);
-// Expected output: Int8Array [-10, -30, -50]
+// 予想される結果: Int8Array [-10, -30, -50]
 ```
 
 ## 構文

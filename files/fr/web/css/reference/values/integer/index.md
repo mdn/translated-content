@@ -3,10 +3,10 @@ title: <integer>
 slug: Web/CSS/Reference/Values/integer
 original_slug: Web/CSS/integer
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
-Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<integer>`** est un type particulier de {{cssxref("number")}} qui représente un nombre entier positif ou négatif. Les entiers peuvent être utilisés dans de nombreuses propriétés et descripteurs CSS, comme les propriétés {{cssxref("column-count")}}, {{cssxref("counter-increment")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, {{cssxref("z-index")}} et le descripteur {{cssxref("@counter-style/range", "range")}}.
+Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<integer>`** est un type particulier de {{CSSxRef("number")}} qui représente un nombre entier positif ou négatif. Les entiers peuvent être utilisés dans de nombreuses propriétés et descripteurs CSS, comme les propriétés {{CSSxRef("column-count")}}, {{CSSxRef("counter-increment")}}, {{CSSxRef("grid-column")}}, {{CSSxRef("grid-row")}}, {{CSSxRef("z-index")}} et le descripteur {{CSSxRef("@counter-style/range", "range")}}.
 
 ## Syntaxe
 
@@ -55,4 +55,4 @@ _5          Les caractères spéciaux ne sont pas autorisés.
 
 ## Voir aussi
 
-- Le type de donnée {{cssxref("&lt;number&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;number&gt;")}}

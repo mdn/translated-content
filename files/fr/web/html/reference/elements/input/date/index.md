@@ -47,7 +47,7 @@ Vous pouvez définir une valeur par défaut pour le champ en indiquant une date 
 <input type="date" value="2017-06-01" />
 ```
 
-{{EmbedLiveSample('Valeur', 600, 40)}}
+{{EmbedLiveSample("Valeur", 600, 40)}}
 
 > [!NOTE]
 > Le format de la date affichée diffère de la valeur réelle de l'attribut `value` — la date affichée est formatée _selon la langue du navigateur de l'utilisateur·ice_, mais la valeur analysée est toujours au format `yyyy-mm-dd`.
@@ -81,7 +81,7 @@ Si les attributs `max` et `min` sont tous les deux définis, cette valeur doit �
 
 ### `step`
 
-L'attribut `step` est un nombre qui définit la granularité à laquelle la valeur doit se conformer, ou la valeur spéciale `any`, qui est décrite ci-dessous. Seules les valeurs qui sont un nombre entier de pas à partir de la base de pas sont valides. La base de pas est [`min`](#min) si elle est spécifiée, [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) sinon, ou `0` (l'époque Unix, `1970-01-01`) si aucune n'est fournie.
+L'attribut `step` est un nombre qui définit la granularité à laquelle la valeur doit se conformer, ou la valeur spéciale `any`, qui est décrite ci-dessous. Seules les valeurs qui sont un nombre entier de pas à partir de la base de pas sont valides. La base de pas est [`min`](#min) si elle est définie, [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) sinon, ou `0` (l'époque Unix, `1970-01-01`) si aucune n'est fournie.
 
 Pour les champs de type `date`, la valeur de `step` est donnée en jours et est traitée comme un nombre de millisecondes égal à 86 400 000 fois la valeur de `step` (la valeur numérique sous-jacente est en millisecondes). La valeur par défaut est 1, ce qui indique 1 jour.
 
@@ -111,13 +111,13 @@ Dans son expression la plus simple `<input type="date">` s'utilise avec un élé
 </form>
 ```
 
-{{EmbedLiveSample('Utilisation simple', 600, 40)}}
+{{EmbedLiveSample("Utilisation simple", 600, 40)}}
 
 Ce fragment de HTML envoie la date saisie avec la clé `bday` vers `https://example.com`, ce qui donne une URL résultante comme `https://example.com/?bday=1955-06-08`.
 
 ### Paramétrer une date maximale et une date minimale
 
-On peut utiliser les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max) afin de restreindre les dates qui peuvent être saisies par l'utilisatrice ou l'utilisateur. Dans l'exemple suivant, on indique une date minimum au premier avril 2017 (`2017-04-01`) et une date maximale au 30 avril 2017 (`2017-04-30`)&nbsp;:
+On peut utiliser les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max) afin de restreindre les dates qui peuvent être saisies par l'utilisateur·ice. Dans l'exemple suivant, on indique une date minimum au premier avril 2017 (`2017-04-01`) et une date maximale au 30 avril 2017 (`2017-04-30`)&nbsp;:
 
 ```html
 <form>
@@ -128,7 +128,7 @@ On peut utiliser les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/inpu
 </form>
 ```
 
-{{EmbedLiveSample('Paramétrer une date maximale et une date minimale', 600, 40)}}
+{{EmbedLiveSample("Paramétrer une date maximale et une date minimale", 600, 40)}}
 
 On ne peut donc ici que sélectionner une date en avril 2017. Seule la partie du contrôle consacrée aux jours sera éditable et on ne pourra pas sélectionner d'autres mois ou années.
 
@@ -169,7 +169,7 @@ Voyons un exemple de dates minimale et maximale, et rendons aussi le champ oblig
 
 Si on essaie de soumettre le formulaire avec une date incomplète (ou en dehors de l'intervalle indiqué), le message affichera une erreur. Vous pouvez essayer ici&nbsp;:
 
-{{EmbedLiveSample('Validation', 600, 100)}}
+{{EmbedLiveSample("Validation", 600, 100)}}
 
 Voici le CSS utilisé dans l'exemple ci-dessus. Nous utilisons les [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) {{CSSxRef(":valid")}} et {{CSSxRef(":invalid")}} pour ajouter une icône à côté du champ de saisie, selon que la valeur courante est valide ou non. Nous avons dû placer l'icône sur un {{HTMLElement("span")}} à côté du champ, et non sur le champ lui-même, car dans Chrome au moins, le contenu généré du champ est placé à l'intérieur du contrôle du formulaire et ne peut pas être mis en forme ou affiché correctement.
 
@@ -229,7 +229,7 @@ input:valid + span::after {
 
 ### Résultats
 
-{{EmbedLiveSample('Exemples', 600, 100)}}
+{{EmbedLiveSample("Exemples", 600, 100)}}
 
 ## Résumé technique
 

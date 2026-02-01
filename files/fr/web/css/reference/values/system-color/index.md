@@ -2,7 +2,7 @@
 title: <system-color>
 slug: Web/CSS/Reference/Values/system-color
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<system-color>`** reflète généralement les choix de couleurs par défaut utilisés pour les différentes parties d'une page web.

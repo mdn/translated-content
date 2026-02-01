@@ -1,9 +1,8 @@
 ---
 title: "@media"
 slug: Web/CSS/Reference/At-rules/@media
-original_slug: Web/CSS/@media
 l10n:
-  sourceCommit: 6ca92a0367203aee71e98c6c7b1501b5dc9a1fe0
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`@media`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、1 つまたは複数の[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)の結果に基づいて、スタイルシートの一部を適用するために使用することができます。これによってメディアクエリーを指定し、そのメディアクエリーがコンテンツの使用される端末に一致する場合にのみ、文書に CSS のブロックを適用することができます。
@@ -107,7 +106,7 @@ _`<media feature>`_ は、{{glossary("user agent", "ユーザーエージェン�
 - {{cssxref("@media/device-height", "device-height")}}
   - : 出力機器のレンダリング面の高さ。メディアクエリーレベル 4 で非推奨。
 - {{cssxref("@media/device-posture", "device-posture")}}
-  - : 端末の現在の姿勢、つまり、ビューポートが平らな状態か折りたたまれた状態かを検出します。 [Device Posture API](/ja/docs/Web/API/Device_Posture_API) で定義されています。
+  - : 端末の現在の姿勢、つまり、ビューポートが平らな状態か折り曲げられた状態かを検出します。[端末形態 API](/ja/docs/Web/API/Device_Posture_API) で定義されています。
 - {{cssxref("@media/device-width", "device-width")}}
   - : 出力機器のレンダリング面の幅。メディアクエリーレベル 4 で非推奨。
 - {{cssxref("@media/display-mode", "display-mode")}}
@@ -122,6 +121,8 @@ _`<media feature>`_ は、{{glossary("user agent", "ユーザーエージェン�
   - : 出力機器はグリッドとビットマップ画面のどちらを使用するか。
 - {{cssxref("@media/height", "height")}}
   - : ビューポートの高さ。
+- {{cssxref("@media/horizontal-viewport-segments", "horizontal-viewport-segments")}}
+  - : 端末に指定された数のビューポートセグメントが水平方向に並んでいるか否かを検出します。
 - {{cssxref("@media/hover", "hover")}}
   - : 主要な入力メカニズムで、ユーザーが要素上でのホバーを使用することができるか。
 - {{cssxref("@media/inverted-colors", "inverted-colors")}}
@@ -133,13 +134,10 @@ _`<media feature>`_ は、{{glossary("user agent", "ユーザーエージェン�
   - : ビューポートの向き。
 - {{cssxref("@media/overflow-block", "overflow-block")}}
   - : ビューポートをブロック軸方向にあふれたコンテンツを出力機器がどのように扱うか。
-    メディアクエリーレベル 4 で追加。
 - {{cssxref("@media/overflow-inline", "overflow-inline")}}
   - : ビューポートをインライン軸方向にあふれたコンテンツがスクロールできるか。
-    メディアクエリーレベル 4 で追加。
 - {{cssxref("@media/pointer", "pointer")}}
   - : 主要な入力メカニズムがポインティングデバイスであるか、もしそうであればどれだけ正確なものであるか。
-    メディアクエリーレベル 4 で追加。
 - {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}
   - : ユーザーが明るいまたは暗い色遣いを望んでいるかどうかを検出。
     メディアクエリーレベル 5 で追加。
@@ -161,9 +159,11 @@ _`<media feature>`_ は、{{glossary("user agent", "ユーザーエージェン�
   - : スクリプト（すなわち、 JavaScript）が有効かどうかを検出します。
     メディアクエリーレベル 5 で追加。
 - {{cssxref("@media/shape", "shape")}}
-  - : 端末の形状を検出して、長方形と丸いディスプレイを判別します。
+  - : 端末の形状を検知し、ディスプレイが矩形か円形かを判別します。
 - {{cssxref("@media/update", "update")}}
   - : どれだけの頻度で出力機器がコンテンツの表示を変更できるか。
+- {{cssxref("@media/vertical-viewport-segments", "vertical-viewport-segments")}}
+  - : 端末に指定された数のビューポートセグメントが垂直方向に並んでいるか否かを検出します。メディアクエリーレベル 5 で追加されました。
 - {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}
   - : ユーザーエージェントの動画プレーンおよび出力端末が対応している、輝度、コントラスト比、および色深度の組み合わせ。メディアクエリーレベル 5 で追加されました。
 - {{cssxref("@media/width", "width")}}
@@ -175,11 +175,11 @@ _`<media feature>`_ は、{{glossary("user agent", "ユーザーエージェン�
 - {{cssxref("@media/-webkit-device-pixel-ratio", "-webkit-device-pixel-ratio")}}
   - : CSS ピクセル当たりのデバイスピクセル数。代わりに [`resolution`](/ja/docs/Web/CSS/Reference/At-rules/@media/resolution) 特性を `dppx` 単位で使用してください。
 - {{cssxref("@media/-webkit-transform-2d", "-webkit-transform-2d")}}
-  - : ブラウザーが `-webkit` の接頭辞の付いた 2D の CSS {{cssxref("transform")}} に対応しているかどうか。代わりに [`@supports (transform)`](/ja/docs/Web/CSS/Reference/At-rules/@supports) 機能クエリーを使用してください。
+  - : ブラウザーが `-webkit` の接頭辞の付いた 2D の CSS {{cssxref("transform")}} に対応しているかどうか。代わりに機能クエリーの [`@supports (transform)`](/ja/docs/Web/CSS/Reference/At-rules/@supports) を使用してください。
 - {{cssxref("@media/-webkit-transform-3d", "-webkit-transform-3d")}}
-  - : ブラウザーが `-webkit` の接頭辞の付いた 3D の CSS {{cssxref("transform")}} に対応しているかどうか。代わりに [`@supports (transform)`](/ja/docs/Web/CSS/Reference/At-rules/@supports) 機能クエリーを使用してください。
+  - : ブラウザーが `-webkit` の接頭辞の付いた 3D の CSS {{cssxref("transform")}} に対応しているかどうか。代わりに機能クエリーの [`@supports (transform)`](/ja/docs/Web/CSS/Reference/At-rules/@supports) を使用してください。
 - {{cssxref("@media/-webkit-transition", "-webkit-transition")}}
-  - : ブラウザーが `-webkit` の接頭辞の付いた CSS {{cssxref("transition")}} に対応しているかどうか。代わりに [`@supports (transition)`](/ja/docs/Web/CSS/Reference/At-rules/@supports) 機能クエリーを使用してください。
+  - : ブラウザーが `-webkit` の接頭辞の付いた CSS {{cssxref("transition")}} に対応しているかどうか。代わりに機能クエリーの [`@supports (transition)`](/ja/docs/Web/CSS/Reference/At-rules/@supports) を使用してください。
 
 ### 論理演算子
 
@@ -289,5 +289,6 @@ _論理演算子_ `not`, `and`, `only`, `or` を使うと、複雑なメディ�
 - [CSS メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)モジュール
 - [メディアクエリーの使用](/ja/docs/Web/CSS/Guides/Media_queries/Using)
 - {{domxref("CSSMediaRule")}} インターフェイス
+- CSS の {{cssxref("@custom-media")}} アットルール
 - [Mozilla 拡張メディア特性](/ja/docs/Web/CSS/Reference/Mozilla_extensions#メディア特性)
 - [WebKit 拡張メディア特性](/ja/docs/Web/CSS/Reference/Webkit_extensions#メディア特性)

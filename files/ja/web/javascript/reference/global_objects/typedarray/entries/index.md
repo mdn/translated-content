@@ -1,15 +1,14 @@
 ---
 title: TypedArray.prototype.entries()
+short-title: entries()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
 l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`entries()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の各インデックスのキーと値を含む新しい[配列のイテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。このメソッドは {{jsxref("Array.prototype.entries()")}} と同じアルゴリズムです。
 
-{{InteractiveExample("JavaScript デモ: TypedArray.entries()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.entries()")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
@@ -19,7 +18,7 @@ eArr.next();
 eArr.next();
 
 console.log(eArr.next().value);
-// Expected output: Array [2, 30]
+// 予想される結果: Array [2, 30]
 ```
 
 ## 構文

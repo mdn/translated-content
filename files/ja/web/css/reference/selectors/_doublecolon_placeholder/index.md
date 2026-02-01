@@ -1,9 +1,8 @@
 ---
 title: ::placeholder
 slug: Web/CSS/Reference/Selectors/::placeholder
-original_slug: Web/CSS/::placeholder
 l10n:
-  sourceCommit: 59ef5b046557b45a515b654458667e6da6d0f4aa
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
 **`::placeholder`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、 {{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素の[プレイスホルダーテキスト](/ja/docs/Web/HTML/Reference/Elements/input#placeholder)を表します。
@@ -23,7 +22,7 @@ input::placeholder {
 ```
 
 ```html interactive-example
-<label for="first-name">Your phone number:</label><br />
+<label for="first-name">電話番号:</label><br />
 
 <input
   id="first-name"
@@ -31,7 +30,7 @@ input::placeholder {
   name="phone"
   minlength="9"
   maxlength="9"
-  placeholder="It must be 9 digits" />
+  placeholder="9 桁の数値で" />
 ```
 
 セレクターに `::placeholder` を使ったルールを使用できるのは、 {{cssxref("::first-line")}} 擬似要素が適用できる CSS プロパティだけです。
@@ -47,7 +46,7 @@ input::placeholder {
 }
 ```
 
-## アクセシビリティの考慮
+## アクセシビリティ
 
 ### 色のコントラスト
 
@@ -102,7 +101,7 @@ input::placeholder {
 #### HTML
 
 ```html
-<input placeholder="こちらに入力..." />
+<input placeholder="こちらに入力" />
 ```
 
 #### CSS
@@ -112,6 +111,7 @@ input::placeholder {
   color: red;
   font-size: 1.2em;
   font-style: italic;
+  opacity: 0.5;
 }
 ```
 
@@ -121,30 +121,41 @@ input::placeholder {
 
 ### 不透明なテキスト
 
-Firefox など一部のブラウザーでは、プレースホルダーの既定の {{cssxref("opacity")}} を 100% 未満に設定しています。もし、プレースホルダーのテキストを完全に不透明化したい場合は、 `opacity` に `1` を設定してください。
+一部のブラウザーではプレースホルダーテキストの不透明度が低下します。完全に不透明なテキストが必要な場合は、{{CSSXref("color")}} プロパティの値を明示的に設定してください。対応する入力要素と同じ色にするには、[`currentColor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) 値を使用することができます。
 
 #### HTML
 
 ```html
-<input placeholder="既定の透明度..." />
-<input placeholder="完全に不透明..." class="force-opaque" />
+<input placeholder="ブラウザーが設定した色" />
+<input placeholder="入力欄と同じ色" class="explicit-color" />
+<input placeholder="半透明のテキスト色" class="opacity-change" />
 ```
 
 #### CSS
 
 ```css
-::placeholder {
+input {
+  font-weight: bold;
   color: green;
 }
 
-.force-opaque::placeholder {
-  opacity: 1;
+.explicit-color::placeholder {
+  /* 入力要素と同じ色を使用し、ブラウザーでデフォルト色を設定するのを避ける */
+  color: currentColor;
+}
+
+.opacity-change::placeholder {
+  /* 半透明のテキスト */
+  color: color-mix(in srgb, currentColor 70%, transparent);
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Opaque_text", 200, 60)}}
+{{EmbedLiveSample("default_color", 200, 60)}}
+
+> [!NOTE]
+> ブラウザーによってプレースホルダーテキストのデフォルト色が異なります。例えば、Firefox は入力要素の色を不透明度 54% で使用し、Chrome は `darkgray` 色を使用します。ブラウザ間でプレースホルダーテキストの色を統一したい場合は、`color` を明示的に設定してください。
 
 ## 仕様書
 

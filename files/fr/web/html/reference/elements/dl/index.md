@@ -136,7 +136,7 @@ Les listes de définitions sont utiles lorsqu'on souhaite afficher des métadonn
 </dl>
 ```
 
-Conseil : il peut être pratique de définir un séparateur clé-valeur dans le CSS, par exemple :
+Notez qu'il peut être pratique de définir un séparateur clé-valeur dans le CSS, par exemple&nbsp;:
 
 ```css
 dt::after {

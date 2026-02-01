@@ -41,11 +41,11 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 ## Accessibilité
 
-Répartir le contenu entre différents paragraphes permet d'améliorer l'accessibilité d'une page. Les lecteurs d'écran et autres outils d'assistance fournissent des raccourcis qui permettent aux utilisateurs d'accéder rapidement au paragraphe suivant ou précédent et ainsi de naviguer plus rapidement sur la page, comme le permettent les blancs pour la navigation visuelle des autres utilisateurs.
+Répartir le contenu entre différents paragraphes permet d'améliorer l'accessibilité d'une page. Les lecteurs d'écran et autres outils d'assistance fournissent des raccourcis qui permettent aux utilisateur·ice·s d'accéder rapidement au paragraphe suivant ou précédent et ainsi de naviguer plus rapidement sur la page, comme le permettent les blancs pour la navigation visuelle des autres utilisateur·ice·s.
 
 L'utilisation de paragraphes vides (des éléments HTML `<p>` sans contenu) est problématique pour les personnes qui naviguent sur une page à l'aide d'outils d'assistance. Les lecteurs d'écran, par exemple, pourraient annoncer l'élément mais pas le contenu associé ce qui peut être frustrant ou source de confusion.
 
-S'il est nécessaire d'avoir un espace supplémentaire, on pourra utiliser des propriétés {{glossary("CSS")}} comme {{cssxref("margin")}} pour obtenir l'effet désiré.
+S'il est nécessaire d'avoir un espace supplémentaire, on pourra utiliser des propriétés {{Glossary("CSS")}} comme {{CSSxRef("margin")}} pour obtenir l'effet désiré.
 
 ```css
 p {
@@ -70,11 +70,11 @@ p {
 
 ### Résultat
 
-{{EmbedLiveSample("exemples")}}
+{{EmbedLiveSample("Exemples")}}
 
 ## Mise en forme des paragraphes
 
-Par défaut, les navigateurs séparent les paragraphes par une seule ligne vide. D'autres méthodes de séparation, comme l'indentation de la première ligne, peuvent être obtenues avec {{glossary("CSS")}}&nbsp;:
+Par défaut, les navigateurs séparent les paragraphes par une seule ligne vide. D'autres méthodes de séparation, comme l'indentation de la première ligne, peuvent être obtenues avec {{Glossary("CSS")}}&nbsp;:
 
 ### HTML
 
@@ -141,7 +141,7 @@ document.querySelector("button").addEventListener("click", (event) => {
 
 ### Résultat
 
-{{EmbedLiveSample('mise_en_forme_des_paragraphes')}}
+{{EmbedLiveSample("Mise en forme des paragraphes")}}
 
 ## Résumé technique
 
@@ -216,7 +216,7 @@ document.querySelector("button").addEventListener("click", (event) => {
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLParagraphElement")}}</td>
+      <td>{{DOMxRef("HTMLParagraphElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -231,5 +231,5 @@ document.querySelector("button").addEventListener("click", (event) => {
 
 ## Voir aussi
 
-- L'élément HTML {{HTMLElement("hr")}}
-- L'élément HTML {{HTMLElement("br")}}
+- L'élément {{HTMLElement("hr")}}
+- L'élément {{HTMLElement("br")}}

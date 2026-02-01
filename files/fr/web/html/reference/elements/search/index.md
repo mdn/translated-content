@@ -17,13 +17,13 @@ L'élément `<search>` n'est pas destiné à présenter les résultats de recher
 
 ## Accessibilité
 
-L'élément `<search>` définit un repère [`search`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/search_role). Cela supprime le besoin d'ajouter `role=search` à un élément {{HTMLElement('form')}}.
+L'élément `<search>` définit un repère [`search`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/search_role). Cela supprime le besoin d'ajouter `role=search` à un élément {{HTMLElement("form")}}.
 
 ## Exemples
 
 ### Formulaire de recherche dans l'en-tête
 
-Cet exemple démontre l'utilisation de `<search>` comme conteneur pour une recherche dans l'en-tête d'un site Web afin d'effectuer une recherche sur l'ensemble du site. Le `<search>` est un conteneur sémantique pour le {{HTMLElement("form")}} qui soumet la requête de recherche saisie par l'utilisateur à un serveur.
+Cet exemple démontre l'utilisation de `<search>` comme conteneur pour une recherche dans l'en-tête d'un site Web afin d'effectuer une recherche sur l'ensemble du site. Le `<search>` est un conteneur sémantique pour le {{HTMLElement("form")}} qui soumet la requête de recherche saisie par l'utilisateur·ice à un serveur.
 
 #### HTML
 
@@ -42,7 +42,7 @@ Cet exemple démontre l'utilisation de `<search>` comme conteneur pour une reche
 
 #### Résultat
 
-{{EmbedLiveSample('Formulaire de recherche dans l'en-tête')}}
+{{EmbedLiveSample("Formulaire de recherche dans l'en-tête")}}
 
 ### Application Web de recherche
 
@@ -75,14 +75,14 @@ Cet exemple démontre le contenu potentiel du DOM lors de l'inclusion dynamique 
 
 #### Résultat
 
-{{EmbedLiveSample('Application Web de recherche')}}
+{{EmbedLiveSample("Application Web de recherche")}}
 
 > [!NOTE]
-> Rappelez-vous que certains utilisateurs n'ont pas JavaScript, et aucun de vos utilisateurs n'a JavaScript en cours d'exécution jusqu'à ce que le JavaScript soit téléchargé, analysé et exécuté avec succès. Assurez-vous que vos utilisateurs peuvent accéder au contenu de votre site avec JavaScript désactivé.
+> Rappelez-vous que certains utilisateur·ice·s n'ont pas JavaScript, et aucun de vos utilisateur·ice·s n'a JavaScript en cours d'exécution jusqu'à ce que le JavaScript soit téléchargé, analysé et exécuté avec succès. Assurez-vous que vos utilisateur·ice·s peuvent accéder au contenu de votre site avec JavaScript désactivé.
 
 ### Recherches multiples
 
-This example demonstrates a page with two search features. The first is a global site search located on the header. The second is a search and filter based on the page context, in our example a car search.
+Cet exemple montre une page comportant deux fonctionnalités de recherche. La première est une recherche globale du site, située dans l'en-tête. La seconde est une recherche et un filtrage basés sur le contexte de la page, dans notre exemple, une recherche de voitures.
 
 #### HTML
 
@@ -107,7 +107,7 @@ This example demonstrates a page with two search features. The first is a global
 
 #### Résultat
 
-{{EmbedLiveSample('Recherches multiples')}}
+{{EmbedLiveSample("Recherches multiples")}}
 
 ## Résumé technique
 
