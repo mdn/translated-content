@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
 
 {{JSRef}}
 
-Метод **catch()** возвращает промис (`Promise(`) и работает только в случае отклонения промиса. Ведёт себя аналогично вызову {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}}.
+Метод **catch()** возвращает промис (`Promise()`) и работает только в случае отклонения промиса. Ведёт себя аналогично вызову {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}}.
 
 ## Syntax
 
