@@ -1,52 +1,52 @@
 ---
-title: 浏览器如何加载网页
+title: 浏览器如何加载网站
 slug: Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites
 ---
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Soft_skills", "Learn_web_development/Getting_started/Web_standards")}}
 
-In the previous article, we looked at an [overview of the technologies](/en-US/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model#overview_of_modern_web_technologies) that websites are built from. In this article we walk through the process by which those technologies are rendered — when a browser has received the code files and other assets that make up a web page (as covered in [How the web works](/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works)), how are they put together to create the finished experience that the user interacts with?
+在上一篇文章中，我们介绍了构建网站的[技术概述](/zh-CN/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model#overview_of_modern_web_technologies)。本文将深入探讨这些技术是如何被渲染的——当浏览器接收到构成网页的代码文件和其他资源后（如[网络工作原理](/zh-CN/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works)所述），它们是如何组合在一起，形成用户最终交互的体验的？
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">Prerequisites:</th>
+      <th scope="row">先决条件：</th>
       <td>
-        Basic familiarity with your computer operating system, web browsers, and web technologies.
+        基本熟悉您的计算机操作系统、网页浏览器及网络技术。
       </td>
     </tr>
     <tr>
-      <th scope="row">Learning outcomes:</th>
+      <th scope="row">学习目标：</th>
       <td>
         <ul>
-          <li>The different kinds of assets that are returned in an HTTP response.</li>
-          <li>How the different files are assembled by the browser to render a web page that is then displayed to the user.</li>
-          <li>Why the browser is sometimes seen as a hostile programming environment, but also an awesome programming environment.</li>
+          <li>HTTP 响应中返回的不同类型的资源。</li>
+          <li>浏览器如何组装不同的文件来渲染并显示给用户的网页。</li>
+          <li>为什么浏览器有时被视为一个充满敌意的编程环境，同时也是一个极棒的编程环境。</li>
         </ul>
       </td>
     </tr>
   </tbody>
 </table>
 
-## What files are returned in HTTP responses?
+## HTTP 响应中返回哪些文件？
 
-To summarize the [overview of web technologies](/en-US/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model#overview_of_modern_web_technologies) we looked at in the last article, HTTP responses (to requests for a web page) will generally contain some of the following file types:
+总结上一篇文章中提到的[网络技术概述](/zh-CN/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model#overview_of_modern_web_technologies)，HTTP 响应（针对网页请求）通常包含以下部分或全部文件类型：
 
-- HTML files, which specify the web page content and its structure.
-- CSS files, which specify styling and layout information.
-- JavaScript files, which specify the behavior of interactive parts of the web page.
-- Media assets such as images, videos, audio files, [PDFs](/en-US/docs/Glossary/PDF), and [SVGs](/en-US/docs/Glossary/SVG), which are embedded in web pages or otherwise displayed by the browser.
-- Other kinds of file that the browser can't handle natively and therefore hands off to a relevant app on the device to render, for example Word or Pages documents, PowerPoint slide decks, and Open Office files.
+- HTML 文件，指定网页内容及其结构。
+- CSS 文件，指定样式和布局信息。
+- JavaScript 文件，指定网页交互部分的行为。
+- 媒体资源，如图像、视频、音频文件、[PDF](/zh-CN/docs/Glossary/PDF) 和 [SVG](/zh-CN/docs/Glossary/SVG)，这些资源被嵌入网页中或由浏览器显示。
+- 其他类型的文件，浏览器无法原生处理，因此会交由设备上的相关应用程序来渲染，例如 Word 或 Pages 文档、PowerPoint 幻灯片以及 Open Office 文件。
 
-## Web page rendering
+## 网页渲染
 
-When the user navigates to a new web page (by clicking a link, or entering a web address in the browser address bar), several HTTP requests are sent, and several files are sent back in HTTP responses. The files received in these responses are processed by the browser and put together into a web page that the user can interact with. This process of assembling the pieces into a web page is called **rendering**.
+当用户导航到一个新网页（通过点击链接或在浏览器地址栏输入网址）时，会发送多个 HTTP 请求，并通过 HTTP 响应返回多个文件。浏览器处理这些响应中收到的文件，并将它们组合成用户可以交互的网页。这种将各个部分组装成网页的过程称为**渲染**。
 
-The following sections provide a high-level explanation of how a browser renders a web page. Keep in mind that this is a simplified description, and that different browsers will handle the process in different ways. However, this will still give you an idea of how things work.
+以下部分从高层次解释了浏览器如何渲染网页。请记住，这是一个简化描述，不同的浏览器会以不同的方式处理这个过程。但这仍然能让您了解其工作原理。
 
-## Handling HTML
+## 处理 HTML
 
-To start with, the HTML file that contains the web page content and defines its structure is received by the browser, and parsed. The browser converts it into a tree-like structure called a **DOM tree** (**Document Object Model**). The DOM represents the HTML document structure in the computer's memory. Take this basic HTML snippet as an example:
+首先，浏览器接收并解析包含网页内容并定义其结构的 HTML 文件。浏览器将其转换为一种树状结构，称为 **DOM 树**（**文档对象模型**）。DOM 在计算机内存中表示 HTML 文档结构。以这个基本的 HTML 代码片段为例：
 
 ```html
 <p>
@@ -57,7 +57,7 @@ To start with, the HTML file that contains the web page content and defines its 
 </p>
 ```
 
-Each element, attribute, and piece of text in the HTML becomes a **DOM node** in the tree structure. The nodes are defined by their relationship to other DOM nodes. Some elements are parents of child nodes, and child nodes have siblings. The browser will parse this HTML and create the following DOM tree from it:
+HTML 中的每个元素、属性和文本片段在树结构中成为一个 **DOM 节点**。节点通过它们与其他 DOM 节点的关系来定义。某些元素是子节点的父节点，而子节点有兄弟节点。浏览器将解析此 HTML 并从中创建以下 DOM 树：
 
 ```plain
 P
@@ -70,7 +70,7 @@ P
     └─ "JavaScript"
 ```
 
-In this DOM tree, the node corresponding to our `<p>` element is a parent. Its children include a text node and the three nodes corresponding to our `<span>` elements. The `SPAN` nodes are also parents, with text nodes as their children. When the browser renders this DOM tree, it will look like so:
+在此 DOM 树中，对应于 `<p>` 元素的节点是一个父节点。它的子节点包括一个文本节点和对应于三个 `<span>` 元素的节点。`SPAN` 节点也是父节点，其子节点是文本节点。当浏览器渲染此 DOM 树时，它将如下所示：
 
 {{EmbedLiveSample('Handling the HTML', '100%', 55)}}
 
@@ -80,25 +80,25 @@ p {
 }
 ```
 
-Certain HTML elements, when parsed, will trigger more HTTP requests:
+某些 HTML 元素在解析时会触发更多的 HTTP 请求：
 
-- {{htmlelement("link")}} elements referencing external [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics) stylesheets.
-- {{htmlelement("script")}} elements referencing external [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting) files.
-- Elements such as {{htmlelement("img")}}, {{htmlelement("video")}}, and {{htmlelement("audio")}}, which reference media files you want to embed in the web page.
+- 引用外部 [CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics) 样式表的 {{htmlelement("link")}} 元素。
+- 引用外部 [JavaScript](/zh-CN/docs/Learn_web_development/Core/Scripting) 文件的 {{htmlelement("script")}} 元素。
+- 引用您希望在网页中嵌入的媒体文件的元素，如 {{htmlelement("img")}}、{{htmlelement("video")}} 和 {{htmlelement("audio")}}。
 
-## Parsing CSS and rendering the page
+## 解析 CSS 并渲染页面
 
-Next, the CSS is handled.
+接下来，处理 CSS。
 
-1. The browser parses the CSS found on the page (either included in the HTML file, or fetched from external stylesheets), and sorts the different CSS styling rules into different "buckets" based on which HTML elements (represented in the DOM as items called **nodes**) they will be applied to. The browser then attaches styles to different elements as required (this intermediate step is called a render tree).
-2. The render tree is laid out in the structure it should appear in after the rules have been applied. This includes any images and other media files that are to be embedded in the page.
-3. The visual display of the page is shown on the screen (this stage is called painting).
+1. 浏览器解析页面上找到的 CSS（包含在 HTML 文件中或从外部样式表获取），并根据它们将应用到哪些 HTML 元素（在 DOM 中表示为称为**节点**的项）将不同的 CSS 样式规则分类到不同的“桶”中。然后浏览器根据需要将样式附加到不同的元素上（这个中间步骤称为渲染树）。
+2. 渲染树按照应用规则后应有的结构进行布局。这包括要嵌入页面中的任何图像和其他媒体文件。
+3. 页面的视觉显示在屏幕上呈现（此阶段称为绘制）。
 
-The following diagram offers a visualization of the process we've talked about so far:
+下图展示了我们目前讨论过程的示意图：
 
-![Rendering process overview](rendering.svg)
+![渲染过程概览](rendering.svg)
 
-Going back to our example, let's say the following CSS is found in the HTML file:
+回到我们的示例，假设在 HTML 文件中找到以下 CSS：
 
 ```html hidden
 <p>
@@ -116,17 +116,17 @@ span {
 }
 ```
 
-The only rule available in the CSS has a `span` selector, so the browser is able to sort the CSS very quickly! It applies that rule to each one of the three SPAN nodes in the DOM tree, giving them a black border and a lime green background, then paints the final visual representation to the screen.
+CSS 中唯一可用的规则有一个 `span` 选择器，因此浏览器能够非常快速地对 CSS 进行分类！它将此规则应用于 DOM 树中的三个 SPAN 节点中的每一个，为它们提供黑色边框和浅绿色背景，然后将最终的视觉表示绘制到屏幕上。
 
-The updated output is as follows:
+更新后的输出如下：
 
 {{EmbedLiveSample('Parsing the CSS, and rendering the page', '100%', 90)}}
 
-## Handling JavaScript
+## 处理 JavaScript
 
-After the CSS has been handled, any JavaScript found on the page (either included in the HTML file, or fetched from external script files) is parsed, interpreted, compiled, and executed. This happens at some point before the final page rendering is completed — after all, some JavaScript may affect the rendering, for example by adding nodes to the DOM or modifying existing ones.
+CSS 处理完毕后，页面上找到的任何 JavaScript（包含在 HTML 文件中或从外部脚本文件获取）将被解析、解释、编译和执行。这发生在最终页面渲染完成之前的某个时刻——毕竟，某些 JavaScript 可能会影响渲染，例如向 DOM 添加节点或修改现有节点。
 
-Returning to our example, let's say the following JavaScript is found in the HTML file:
+回到我们的示例，假设在 HTML 文件中找到以下 JavaScript：
 
 ```html hidden
 <p>
@@ -152,34 +152,34 @@ spans.forEach((span) => {
 });
 ```
 
-You don't need to understand exactly how this JavaScript works, but at a high level, it finds every SPAN node in the DOM and reverses the order of the characters in their child text nodes.
+您无需确切了解此 JavaScript 的工作原理，但从高层次看，它会查找 DOM 中的每个 SPAN 节点，并反转其子文本节点中字符的顺序。
 
-The final output is as follows:
+最终输出如下：
 
 {{EmbedLiveSample('Handling the JavaScript', '100%', 90)}}
 
-## What other rendering steps are there?
+## 还有哪些其他渲染步骤？
 
-Several other things happen during page rendering, but we won't discuss them all here. One notable additional occurrence worth mentioning is that an accessibility tree is built, based on the DOM, for assistive technologies (for example screen readers) to hook into, which enables people who are not able to see the rendered content to interact with it.
+页面渲染期间还会发生其他一些事情，但我们不在此一一讨论。值得注意的一个额外事件是，会基于 DOM 构建一个无障碍树，供辅助技术（例如屏幕阅读器）接入，从而使无法看到渲染内容的人能够与之交互。
 
-You will learn more about this later on, in our [Accessibility](/en-US/docs/Learn_web_development/Core/Accessibility) module.
+您将在我们的[无障碍](/zh-CN/docs/Learn_web_development/Core/Accessibility)模块中了解更多相关信息。
 
-## The browser: a hostile _and_ an awesome programming environment
+## 浏览器：一个充满敌意*且*极棒的编程环境
 
-Front-end web development can sometimes be frustrating, and some people consider the browser to be a hostile programming environment. This is because, unlike other programming environments, it is much harder to make guarantees about the environment your code will run on. You cannot know ahead of time all the different combinations of operating system, browser, language, location, network connection, CPU, GPU, memory, battery life, etc., that your users will have, therefore you cannot guarantee a perfect user experience for all of them.
+前端网页开发有时会令人沮丧，有些人认为浏览器是一个充满敌意的编程环境。这是因为与其他编程环境不同，很难保证您的代码将在何种环境中运行。您无法提前知道用户将拥有的所有不同的操作系统、浏览器、语言、地理位置、网络连接、CPU、GPU、内存、电池寿命等组合，因此您无法为所有用户保证完美的用户体验。
 
-Modern browsers tend to implement web standards pretty consistently, but there is still a lot of uncertainty to navigate. As a web developer, you will need to embrace that uncertainty, programming defensively and being conservative with the features you use. This relies on adhering to the [best practices](/en-US/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model#web_best_practices) outlined in the previous article.
+现代浏览器倾向于相当一致地实现网络标准，但仍然存在许多不确定性需要应对。作为网页开发者，您需要接受这种不确定性，进行防御性编程，并保守地使用功能。这依赖于遵循上一篇文章中概述的[最佳实践](/zh-CN/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model#web_best_practices)。
 
-On the upside, the web is also an awesome programming environment, for many reasons.
+从积极的一面来看，网络也是一个极棒的编程环境，原因有很多。
 
-- For a start, it is designed with universal access in mind. The web's basic state is accessible and linkable. Some of these basics are harder to achieve in other environments.
-- App delivery across the web is simple and powerful. You don't need to take your users through a complicated installation process: you just point them to a web address and off they go.
-- App updates are usually straightforward. In many cases, visitors can see new versions of an application when they reload their browser tab. You don't need to worry about getting visitors to regularly download and install software updates.
-- The web community is vibrant and helpful. As we discuss later on in our [Research and learning](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning) article, there are lots of places you can go to ask for help, and great resources available to learn from.
+- 首先，它的设计考虑了普遍访问。网络的基本状态是可访问且可链接的。其中一些基础在其他环境中更难实现。
+- 通过网络交付应用程序简单而强大。您无需让用户经历复杂的安装过程：只需指向一个网址，他们就可以开始了。
+- 应用程序更新通常很简单。在许多情况下，访问者只需重新加载浏览器标签页即可看到应用程序的新版本。您无需担心让访问者定期下载和安装软件更新。
+- 网络社区充满活力且乐于助人。正如我们稍后在[研究与学习](/zh-CN/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning)文章中讨论的那样，有很多地方可以寻求帮助，也有很多优秀的资源可供学习。
 
-## See also
+## 参见
 
-- [When and how to file bugs with browsers](/en-US/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs)
-  - : If something isn't working as expected in a browser, it could be a browser bug. This article explains how to figure out if it is, and how to file a bug report if so.
+- [何时以及如何向浏览器提交 Bug](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs)
+  - : 如果某个功能在浏览器中无法按预期工作，可能是浏览器 Bug。本文解释了如何判断是否是 Bug，以及如果是，如何提交 Bug 报告。
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Soft_skills", "Learn_web_development/Getting_started/Web_standards")}}
