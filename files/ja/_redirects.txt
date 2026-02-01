@@ -3443,7 +3443,7 @@
 /ja/docs/Web/API/Window/animationstart_event	/ja/docs/Web/API/Element/animationstart_event
 /ja/docs/Web/API/Window/arguments	/ja/docs/Web/API/Window
 /ja/docs/Web/API/Window/back	/ja/docs/Web/API/History/back
-/ja/docs/Web/API/Window/console	/ja/docs/conflicting/Web/API/console_60401d2da71e30c9a41a6920151c1b4910a6c5782043e95b996891763b305aee
+/ja/docs/Web/API/Window/console	/ja/docs/Web/API/console
 /ja/docs/Web/API/Window/content	/ja/docs/Web/API/Window
 /ja/docs/Web/API/Window/copy_event	/ja/docs/Web/API/Element/copy_event
 /ja/docs/Web/API/Window/cut_event	/ja/docs/Web/API/Element/cut_event
@@ -3518,7 +3518,7 @@
 /ja/docs/Web/API/WindowTimers/setTimeout	/ja/docs/Web/API/Window/setTimeout
 /ja/docs/Web/API/Worker/onerror	/ja/docs/Web/API/Worker/error_event
 /ja/docs/Web/API/Worker/onmessageerror	/ja/docs/Web/API/Worker/messageerror_event
-/ja/docs/Web/API/WorkerGlobalScope/console	/ja/docs/conflicting/Web/API/console
+/ja/docs/Web/API/WorkerGlobalScope/console	/ja/docs/Web/API/console
 /ja/docs/Web/API/XMLDocument/async	/ja/docs/Web/API/XMLDocument
 /ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest	/ja/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest
 /ja/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data	/ja/docs/Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data
