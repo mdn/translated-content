@@ -74,7 +74,7 @@ La valeur `auto` définit le curseur d'insertion sur `currentColor`, qui est la 
 
 ### Comprendre les curseurs d'insertion
 
-Le curseur d'insertion, et donc cette propriété, ne s'applique qu'au texte ou aux éléments pouvant accepter une saisie de texte. Le curseur apparaît dans les éléments d'interface utilisateur ayant la sélection, où les utilisateur·ice·s peuvent modifier le contenu, comme les éléments HTML {{HTMLElement("input")}} acceptant du texte libre, l'élément HTML {{HTMLElement("textarea")}}, et les éléments avec l'attribut HTML [`contenteditable`](/fr/docs/Web/HTML/Global_attributes/contenteditable).
+Le curseur d'insertion, et donc cette propriété, ne s'applique qu'au texte ou aux éléments pouvant accepter une saisie de texte. Le curseur apparaît dans les éléments d'interface utilisateur ayant la sélection, où les utilisateur·ice·s peuvent modifier le contenu, comme les éléments HTML {{HTMLElement("input")}} acceptant du texte libre, l'élément HTML {{HTMLElement("textarea")}}, et les éléments avec l'attribut HTML [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable).
 
 Le curseur peut apparaître dans les éléments `<input>` de type `password`, `text`, `search`, `tel` et `email`. Aucun curseur n'apparaît avec les types d'entrée date, `color`, `hidden`, `radio` ou `checkbox`. Certains navigateurs affichent un curseur avec le type d'entrée `number`. Il est possible, dans certains navigateurs, de faire apparaître un curseur dans des éléments qui n'ont jamais de contenu texte — par exemple, en définissant [`appearance: none`](/fr/docs/Web/CSS/Reference/Properties/appearance) et en ajoutant l'attribut `contenteditable`. Cependant, cela n'est pas recommandé.
 
