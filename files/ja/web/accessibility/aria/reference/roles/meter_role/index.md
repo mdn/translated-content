@@ -1,8 +1,9 @@
 ---
 title: "ARIA: meter ロール"
+short-title: meter
 slug: Web/Accessibility/ARIA/Reference/Roles/meter_role
 l10n:
-  sourceCommit: 50f209459d9e1db35bf0d973d7878ea4600acb8c
+  sourceCommit: 635820782735cd00f71ce3929ff9377b091f8995
 ---
 
 `meter` ロールは、メーターとして使用されている要素を識別するために使用されます。
@@ -10,7 +11,7 @@ l10n:
 > [!NOTE]
 > 可能な場合は、`meter` ロールよりもネイティブの {{HTMLElement("meter")}} 要素を使用することが推奨されます。ネイティブ要素の方がユーザーエージェントや支援技術により幅広くサポートされているためです。
 
-## 説明
+## 解説
 
 メーターは、定義された範囲内の数値をグラフィカルに表示するものです。例えば、バッテリー残量の表示などです。メーターは、意味のある最大値を持たない値には適していません。メーターは進行状況（例：読み込み状況）を示すために使用すべきではなく、これは {{HTMLElement('progress')}} 要素で伝えるべきです。
 
@@ -29,7 +30,7 @@ l10n:
 <div role="meter"><h3>Title of my meter</h3></div>
 ```
 
-`meter` の子孫はプレゼンテーショナルであるため、以下のコードは等価です：
+`meter` の子孫はプレゼンテーショナルであるため、以下のコードは等価です。
 
 ```html
 <div role="meter"><h3 role="presentation">Title of my meter</h3></div>
@@ -44,7 +45,6 @@ l10n:
 ### 関連する ARIA のロール、ステート、プロパティ
 
 - [`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow)
-- [`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow)
   - : メーターの現在の値を示す、`aria-valuemin` と `aria-valuemax` の間の十進数値に設定します。
 - [`aria-valuetext`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext)
   - : 支援技術は多くの場合、`aria-valuenow` の値をパーセンテージとして表示します。これが正確でない場合は、このプロパティを使用してメーター値を理解しやすくします。
@@ -57,7 +57,7 @@ l10n:
 
 ## 例
 
-`role="meter"` を使用したメーターの例：
+`role="meter"` を使用したメーターの例です。
 
 ```html
 <div
@@ -67,7 +67,7 @@ l10n:
   aria-valuemax="100"
   aria-labelledby="cpu_usage_label">
   <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width: 90%">
-    <rect x="0" y="0" width="100%" height="100%" fill="currentcolor"></rect>
+    <rect x="0" y="0" width="100%" height="100%" fill="currentColor"></rect>
   </svg>
 </div>
 ```
