@@ -47,7 +47,7 @@ Referer: <url>
 
 - `<url>`
   - : 現在リクエスト中のページにつながるリンクがある直前のページの、絶対または相対アドレスです。 URL フラグメント (つまり `#section`) およびユーザー情報 (`https://username:password@example.com/foo/bar/` の "username:password" の部分) は含まれません。
-  [リファラーポリシー](/ja/docs/Web/HTTP/Reference/Headers/Referrer-Policy#ディレクティブ)によっては、オリジン、パス、クエリー文字列が含まれる場合があります。
+    [リファラーポリシー](/ja/docs/Web/HTTP/Reference/Headers/Referrer-Policy#ディレクティブ)によっては、オリジン、パス、クエリー文字列が含まれる場合があります。
 
 ## 例
 
