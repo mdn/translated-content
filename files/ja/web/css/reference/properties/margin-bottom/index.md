@@ -1,9 +1,8 @@
 ---
 title: margin-bottom
 slug: Web/CSS/Reference/Properties/margin-bottom
-original_slug: Web/CSS/margin-bottom
 l10n:
-  sourceCommit: 9a3940b0231838338f65ae1c37d5b874439a3d43
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`margin-bottom`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の下側の[マージン領域](/ja/docs/Web/CSS/Guides/Box_model/Introduction#マージン領域)を設定します。正の数を指定すると、隣との間が遠くなるように配置され、負の数を指定すると、近くなるように配置します。
@@ -62,7 +61,7 @@ margin-bottom: 0;
 
 ![要素ボックスにおける CSS の margin-bottom プロパティの効果](margin-bottom.svg)
 
-このプロパティは、 {{HTMLElement("span")}} または {{HTMLElement("code")}} のような非[置換](/ja/docs/Web/CSS/Guides/Images/Replaced_element_properties)のインライン要素には効果がありません。
+このプロパティは、{{glossary("Replaced elements", "置換要素")}}ではないインライン要素、例えば {{HTMLElement("span")}} や {{HTMLElement("code")}} には効果がありません。
 
 ## 構文
 
@@ -71,6 +70,8 @@ margin-bottom: 0;
 margin-bottom: 10px; /* 絶対的な寸法 */
 margin-bottom: 1em; /* 文字の寸法からの相対 */
 margin-bottom: 5%; /* 直近のブロックコンテナーの幅からの相対 */
+margin-bottom: anchor-size(width);
+margin-bottom: calc(anchor-size(--my-anchor self-block, 20px) / 3);
 
 /* キーワード値 */
 margin-bottom: auto;
@@ -89,6 +90,8 @@ margin-bottom: unset;
 
 - {{cssxref("&lt;length&gt;")}}
   - : マージンの寸法を固定値で表したものです。
+    - アンカー位置指定要素に対して、{{cssxref("anchor-size()")}} 関数は、関連するアンカー要素のサイズに相対的な {{cssxref("&lt;length&gt;")}} 値が相対的に設定されます（関連付けられたアンカー要素の幅または高さに基づく（[アンカーサイズに基づく要素のマージンの設定](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#アンカーサイズに基づく要素のマージンの設定)を参照）。
+
 - {{cssxref("&lt;percentage&gt;")}}
   - : マージンの寸法を[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。
 - `auto`
@@ -165,7 +168,7 @@ div {
 ## 関連情報
 
 - {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-left")}}
-- 一括指定の {{cssxref("margin")}}
+- {{cssxref("margin")}} 一括指定
 - {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}}
-- 一括指定の {{cssxref("margin-block")}} と {{cssxref("margin-inline")}}
+- {{cssxref("margin-block")}} および {{cssxref("margin-inline")}} 一括指定
 - [CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model)モジュール

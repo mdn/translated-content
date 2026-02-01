@@ -1,10 +1,11 @@
 ---
 title: box-align
 slug: Web/CSS/Reference/Properties/box-align
-original_slug: Web/CSS/box-align
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_Header}}{{Deprecated_Header}}
 
 > [!WARNING]
 > Cette propriété s'inscrivait dans une ancienne version du standard pour le module CSS sur les boîtes flexibles et a été remplacée dans une nouvelle version du standard.
@@ -12,6 +13,10 @@ original_slug: Web/CSS/box-align
 La propriété [CSS](/fr/docs/Web/CSS) **`box-align`** définit comment un élément aligne son contenu par rapport à l'axe orthogonal à la disposition. L'effet obtenu ne sera visible que s'il y a de l'espace supplémentaire dans la boîte flexible.
 
 Voir la page [Flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) pour plus d'informations.
+
+La direction de la mise en page dépend de l'orientation de l'élément&nbsp;: horizontale ou verticale.
+
+## Syntaxe
 
 ```css
 /* Valeurs avec un mot-clé */
@@ -26,10 +31,6 @@ box-lines: inherit;
 box-lines: initial;
 box-lines: unset;
 ```
-
-La direction de l'élément dépend de son orientation.
-
-## Syntaxe
 
 La propriété `box-align` est paramétrée grâce à l'un des mots-clés suivants.
 
@@ -59,15 +60,26 @@ Si l'alignement est défini grâce à l'attribut HTML `align`, le style est igno
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntaxRaw(`box-align = start | center | end | baseline | stretch`)}}
 
 ## Exemples
 
-### CSS
+### Définir l'alignement des boîtes
+
+#### HTML
+
+```html
+<div class="exemple">
+  <p>Je serai deuxième en partant du bas, centré horizontalement.</p>
+  <p>Je serai en bas de div.exemple, centré horizontalement.</p>
+</div>
+```
+
+#### CSS
 
 ```css
 div.exemple {
@@ -109,19 +121,6 @@ div.exemple > p {
 }
 ```
 
-### HTML
-
-```html
-<div class="exemple">
-  <p>Je serai deuxième en partant du bas, centré horizontalement.</p>
-  <p>Je serai en bas de div.exemple, centré horizontalement.</p>
-</div>
-```
-
-### Résultat
-
-{{EmbedLiveSample("","500","500")}}
-
 ## Spécifications
 
 Cette propriété ne fait partie d'aucun standard
@@ -132,7 +131,4 @@ Cette propriété ne fait partie d'aucun standard
 
 ## Voir aussi
 
-- [`align-items`](/fr/docs/Web/CSS/Reference/Properties/align-items)
-- [`box-orient`](/fr/docs/Web/CSS/Reference/Properties/box-orient)
-- [`box-direction`](/fr/docs/Web/CSS/Reference/Properties/box-direction)
-- [`box-pack`](/fr/docs/Web/CSS/Reference/Properties/box-pack)
+- Les propriétés {{CSSxRef("align-items")}}, {{CSSxRef("box-orient")}}, {{CSSxRef("box-direction")}}, {{CSSxRef("box-pack")}}

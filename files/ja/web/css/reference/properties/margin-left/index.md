@@ -1,9 +1,8 @@
 ---
 title: margin-left
 slug: Web/CSS/Reference/Properties/margin-left
-original_slug: Web/CSS/margin-left
 l10n:
-  sourceCommit: 9a3940b0231838338f65ae1c37d5b874439a3d43
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`margin-left`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の[マージン領域](/ja/docs/Web/CSS/Guides/Box_model/Introduction#マージン領域)を設定します。正の数を指定すると、隣との間が遠くなるように配置され、負の数を指定すると、近くなるように配置します。
@@ -48,19 +47,19 @@ margin-left: 0;
 .col {
   width: 33.33%;
   border: solid #5b6dcd 10px;
-  background-color: rgba(229, 232, 252, 0.6);
+  background-color: rgb(229 232 252 / 0.6);
   flex-shrink: 0;
 }
 
 #example-element {
   border: solid 10px #ffc129;
-  background-color: rgba(255, 244, 219, 0.6);
+  background-color: rgb(255 244 219 / 0.6);
 }
 ```
 
 2 つの隣り合うボックスの垂直マージンは融合することがあります。これは[_マージンの相殺_](/ja/docs/Web/CSS/Guides/Box_model/Margin_collapsing)と呼ばれています。
 
-まれに幅の制約がきつすぎると (つまり、 `width`, `margin-left`, `border`, `padding`, コンテンツ領域, `margin-right` がすべて定義されていた場合)、 `margin-left` は無視され、 `auto` が設定されていたときと同じ計算値になります。
+まれに幅の制約が厳しすぎると (つまり、 `width`, `margin-left`, `border`, `padding`, コンテンツ領域, `margin-right` がすべて定義されていた場合)、 `margin-left` は無視され、 `auto` が設定されていたときと同じ計算値になります。
 
 ## 構文
 
@@ -69,6 +68,8 @@ margin-left: 0;
 margin-left: 10px; /* 絶対的な寸法 */
 margin-left: 1em; /* 文字の寸法からの相対 */
 margin-left: 5%; /* 直近のブロックコンテナーの幅からの相対 */
+margin-left: anchor-size(self-inline);
+margin-left: calc(anchor-size(--my-anchor width, 20px) / 4);
 
 /* キーワード値 */
 margin-left: auto;
@@ -87,6 +88,8 @@ margin-left: unset;
 
 - {{cssxref("&lt;length&gt;")}}
   - : マージンの寸法を固定値で表したものです。
+    - アンカー位置指定要素に対して、{{cssxref("anchor-size()")}} 関数は、関連するアンカー要素のサイズに相対的な {{cssxref("&lt;length&gt;")}} 値が相対的に設定されます（関連付けられたアンカー要素の幅または高さに基づく（[アンカーサイズに基づく要素のマージンの設定](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#アンカーサイズに基づく要素のマージンの設定)を参照）。
+
 - {{cssxref("&lt;percentage&gt;")}}
   - : マージンの寸法を[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。
 - `auto`
@@ -139,8 +142,7 @@ margin-left: unset;
         </tr>
         <tr>
           <th>
-            <em>すべての </em><code>table-*</code><em>、ただし </em
-            ><code>table-caption</code> <em>を除く</em>
+            すべての <code>table-*</code>、ただし <code>table-caption</code> を除く
           </th>
           <th><em>任意</em></th>
           <th><em>任意</em></th>
@@ -151,8 +153,7 @@ margin-left: unset;
         </tr>
         <tr>
           <th>
-            <em>任意、ただし</em> <code>flex</code>, <code>inline-flex</code
-            >, <code>table-*</code> <em>を除く</em>
+            任意、ただし <code>flex</code>, <code>inline-flex</code>, <code>table-*</code> を除く
           </th>
           <th><em>任意</em></th>
           <th>
@@ -229,7 +230,7 @@ margin-left: unset;
 ## 関連情報
 
 - {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}
-- 一括指定の {{cssxref("margin")}}
+- {{cssxref("margin")}} 一括指定
 - {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}}
-- 一括指定の {{cssxref("margin-block")}} と {{cssxref("margin-inline")}}
+- {{cssxref("margin-block")}} および {{cssxref("margin-inline")}} 一括指定
 - [CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model)モジュール

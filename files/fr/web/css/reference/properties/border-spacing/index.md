@@ -1,14 +1,13 @@
 ---
 title: border-spacing
 slug: Web/CSS/Reference/Properties/border-spacing
-original_slug: Web/CSS/border-spacing
+l10n:
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`border-spacing`** permet de définir la distance entre les bordures des cellules adjacentes dans un élément HTML {{HTMLElement("table")}}. Cette propriété s'applique uniquement lorsque {{CSSxRef("border-collapse")}} vaut `separate`.
 
-La propriété **`border-spacing`** définit la distance qu'il y a entre les bordures de cellules adjacentes d'un tableau (uniquement lorsque {{cssxref("border-collapse")}} vaut `separate`). Cette propriété est équivalente à l'attribut HTML déprécié [`cellspacing`](/fr/docs/Web/HTML/Reference/Elements/table#cellspacing) mais une deuxième valeur peut être utilisée afin d'obtenir un espacement vertical différent de l'espacement horizontal.
-
-{{InteractiveExample("CSS Demo: border-spacing")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: border-spacing")}}
 
 ```css interactive-example-choice
 border-spacing: 0;
@@ -26,16 +25,16 @@ border-spacing: 5px 1rem;
 <section class="default-example" id="default-example">
   <table class="transition-all" id="example-element">
     <tr>
-      <td>Cell 1.1</td>
-      <td>Cell 1.2</td>
+      <td>Cellule 1.1</td>
+      <td>Cellule 1.2</td>
     </tr>
     <tr>
-      <td>Cell 2.1</td>
-      <td>Cell 2.2</td>
+      <td>Cellule 2.1</td>
+      <td>Cellule 2.2</td>
     </tr>
     <tr>
-      <td>Cell 3.1</td>
-      <td>Cell 3.2</td>
+      <td>Cellule 3.1</td>
+      <td>Cellule 3.2</td>
     </tr>
   </table>
 </section>
@@ -54,38 +53,32 @@ td {
 }
 ```
 
-La valeur de `border-spacing` est également utilisée le long du bord extérieur du tableau, où la distance entre la bordure du tableau et les cellules dans la première/dernière colonne ou ligne est la somme du `border-spacing` approprié (horizontal ou vertical) et du {{cssxref("padding")}} correspondant (top, right, bottom ou left).
-
-> [!NOTE]
-> La propriété `border-spacing` équivaut à l'attribut déprécié `cellspacing` de l'élément `<table>`, sauf qu'il possède une seconde valeur optionnelle qui peut être utilisée pour définir différents espacements horizontaux et verticaux.
-
 ## Syntaxe
 
 ```css
-/* Une valeur de longueur */
-/* Type <length>         */
+/* Caleur de type <length> */
 border-spacing: 2px;
 
-/* La première valeur indique */
-/* l'espacement horizontal et */
-/* la seconde le vertical.    */
+/* longeur horizontale | longeur verticale */
 border-spacing: 1cm 2em;
 
 /* Valeurs globales */
 border-spacing: inherit;
 border-spacing: initial;
+border-spacing: revert;
+border-spacing: revert-layer;
 border-spacing: unset;
 ```
 
-La propriété `border-spacing` peut être définie avec une ou deux valeurs :
+La propriété `border-spacing` peut être définie avec une ou deux valeurs.
 
-- Avec une valeur de type {{cssxref("&lt;length&gt;")}}, la valeur est utilisée pour l'espacement vertical ainsi que pour l'espacement horizontal.
-- Avec deux valeurs de type {{cssxref("&lt;length&gt;")}}, la première définit l'espacement horizontal (entre les colonnes) et la seconde définit l'espacement vertical (entre les lignes).
+- Lorsque **une** valeur `<length>` est indiquée, elle définit à la fois l'espacement horizontal et vertical entre les cellules.
+- Lorsque **deux** valeurs `<length>` sont indiquées, la première valeur définit l'espacement horizontal entre les cellules (c'est-à-dire l'espace entre les cellules des _colonnes_ adjacentes), et la seconde valeur définit l'espacement vertical entre les cellules (c'est-à-dire l'espace entre les cellules des _lignes_ adjacentes).
 
 ### Valeurs
 
-- `length`
-  - : Une valeur de longueur ({{cssxref("&lt;length&gt;")}} qui décrit l'espacement entre les cellules.
+- {{CSSxRef("&lt;length&gt;")}}
+  - : La taille de l'espacement en tant que valeur fixe.
 
 ## Définition formelle
 
@@ -97,51 +90,55 @@ La propriété `border-spacing` peut être définie avec une ou deux valeurs :
 
 ## Exemples
 
-### CSS
+### Espacer et ajouter une marge aux cellules de tableau
+
+Cet exemple applique un espacement de `.5em` verticalement et de `1em` horizontalement entre les cellules d'un tableau. Remarquez que, sur les bords extérieurs, les valeurs de `padding` du tableau s'ajoutent aux valeurs de `border-spacing`.
+
+#### HTML
+
+```html
+<table>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+#### CSS
 
 ```css
 table {
-  border-collapse: separate;
-  border: 1px solid #000;
+  border-spacing: 1em 0.5em;
+  padding: 0 2em 1em 0;
+  border: 1px solid orange;
 }
 
 td {
-  border: 1px solid #000;
-  padding: 5px;
-}
-
-.unevaleur {
-  border-spacing: 5px;
-}
-
-.deuxvaleurs {
-  border-spacing: 5px 10px;
+  width: 1.5em;
+  height: 1.5em;
+  background: #d2d2d2;
+  text-align: center;
+  vertical-align: middle;
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<table class="unevaleur">
-  <tr>
-    <td>Ces cellules</td>
-    <td>sont séparées par 5px</td>
-    <td>tout autour.</td>
-  </tr>
-</table>
-<br />
-<table class="deuxvaleurs">
-  <tr>
-    <td>Ces cellules</td>
-    <td>sont séparées par 5px d'écart horizontal</td>
-    <td>et 10px d'écart vertical.</td>
-  </tr>
-</table>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples","300","300")}}
+{{EmbedLiveSample("Espacer et ajouter une marge aux cellules de tableau", 400, 200)}}
 
 ## Spécifications
 
@@ -153,6 +150,6 @@ td {
 
 ## Voir aussi
 
-- {{cssxref("border-collapse")}}
-- {{cssxref("border-style")}}
-- L'élément HTML {{htmlelement("table")}}
+- Les propriétés {{CSSxRef("border-collapse")}}, {{CSSxRef("border-style")}}
+- La propriété `border-spacing` modifie l'apparence de l'élément HTML {{HTMLElement("table")}}.
+- Le module [de tableau CSS](/fr/docs/Web/CSS/Guides/Table)

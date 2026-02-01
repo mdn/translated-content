@@ -1,22 +1,13 @@
 ---
 title: border-bottom
 slug: Web/CSS/Reference/Properties/border-bottom
-original_slug: Web/CSS/border-bottom
+l10n:
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
-{{CSSRef}}
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-bottom`** définit la bordure inférieure d'un élément. Elle définit les valeurs de {{CSSxRef("border-bottom-width")}}, {{CSSxRef("border-bottom-style")}} et {{CSSxRef("border-bottom-color")}}.
 
-La propriété **`border-bottom`** est une propriété raccourcie qui définit la bordure du côté bas d'un élément.
-
-C'est une propriété raccourcie qui synthétise :
-
-- {{cssxref("border-bottom-width")}},
-- {{cssxref("border-bottom-color")}},
-- {{cssxref("border-bottom-style")}}.
-
-Ces propriétés permettent de décrire la bordure du côté bas d'un élément.
-
-{{InteractiveExample("CSS Demo: border-bottom")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: border-bottom")}}
 
 ```css interactive-example-choice
 border-bottom: solid;
@@ -35,52 +26,48 @@ border-bottom: thick double #32a1ce;
 ```
 
 ```css interactive-example-choice
-border-bottom: 4mm ridge rgba(211, 220, 50, 0.6);
+border-bottom: 4mm ridge rgb(211 220 50 / 0.6);
 ```
 
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    Ceci est une boîte avec une bordure autour.
   </div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #8b008b;
+  background-color: #eeeeee;
+  color: darkmagenta;
   padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 ```
 
-> [!NOTE]
-> Comme pour les autres propriétés raccourcies, `border-bottom` définit toujours les valeurs de toutes les propriétés qu'elle peut définir, même si celles-ci ne sont pas indiquées. Pour les valeurs qui ne sont pas indiquées, on prendra les valeurs par défaut. Ainsi :
->
-> ```css
-> border-bottom-style: dotted;
-> border-bottom: thick green;
-> ```
->
-> est équivalent à :
->
-> ```css
-> border-bottom-style: dotted;
-> border-bottom: none thick green;
-> ```
->
-> et la valeur {{cssxref("border-bottom-style")}} fournie avant `border-bottom` est ignorée.
->
-> La valeur par défaut de {{cssxref("border-bottom-style")}} étant `none`, si on ne définit pas le style de la bordure, on aura la valeur par défaut, c'est-à-dire qu'on aura aucune bordure.
+## Propriétés constitutives
+
+Cette propriété est une propriété raccourcie pour les propriétés CSS suivantes&nbsp;:
+
+- {{CSSxRef("border-bottom-color")}}
+- {{CSSxRef("border-bottom-style")}}
+- {{CSSxRef("border-bottom-width")}}
 
 ## Syntaxe
 
 ```css
 border-bottom: 1px;
 border-bottom: 2px dotted;
-border-bottom: medium dashed green;
+border-bottom: medium dashed blue;
+
+/* Valeurs globales */
+border-bottom: inherit;
+border-bottom: initial;
+border-bottom: revert;
+border-bottom: revert-layer;
+border-bottom: unset;
 ```
 
 Les trois valeurs de la propriété raccourcie peuvent être définies dans n'importe quel ordre et une ou deux d'entre elles peuvent être absentes.
@@ -88,11 +75,29 @@ Les trois valeurs de la propriété raccourcie peuvent être définies dans n'im
 ### Valeurs
 
 - `<br-width>`
-  - : Voir {{cssxref("border-bottom-width")}}.
+  - : Voir {{CSSxRef("border-bottom-width")}}.
 - `<br-style>`
-  - : Voir {{cssxref("border-bottom-style")}}.
-- `<color>`
-  - : Voir {{cssxref("border-bottom-color")}}.
+  - : Voir {{CSSxRef("border-bottom-style")}}.
+- {{CSSxRef("&lt;color&gt;")}}
+  - : Voir {{CSSxRef("border-bottom-color")}}.
+
+## Description
+
+Comme pour toutes les propriétés raccourcies, `border-bottom` définit toujours les valeurs de toutes les propriétés qu'elle peut définir, même si elles ne sont pas indiquées. Les valeurs non indiquées prennent leur valeur par défaut. Considérez le code suivant&nbsp;:
+
+```css
+border-bottom-style: dotted;
+border-bottom: thick green;
+```
+
+Il est en réalité équivalent à celui-ci&nbsp;:
+
+```css
+border-bottom-style: dotted;
+border-bottom: none thick green;
+```
+
+La valeur de {{CSSxRef("border-bottom-style")}} fournie avant `border-bottom` est ignorée. Comme la valeur par défaut de {{CSSxRef("border-bottom-style")}} est `none`, ne pas définir la partie `border-style` donne pour résultat aucune bordure.
 
 ## Définition formelle
 
@@ -104,26 +109,30 @@ Les trois valeurs de la propriété raccourcie peuvent être définies dans n'im
 
 ## Exemples
 
-### CSS
+### Appliquer une bordure inférieure
+
+#### HTML
+
+```html
+<div>Cette boîte a une bordure sur le côté inférieur.</div>
+```
+
+#### CSS
 
 ```css
-.exemple {
-  border-bottom: 3px dotted orange;
+div {
+  border-bottom: 4px dashed blue;
+  background-color: gold;
+  height: 100px;
+  width: 100px;
+  font-weight: bold;
+  text-align: center;
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<p class="exemple">
-  En passant elle prit sur un rayon un pot de confiture portant cette étiquette,
-  « MARMELADE D’ORANGES. »
-</p>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples","200","150")}}
+{{EmbedLiveSample("Appliquer une bordure inférieure", 200, 150)}}
 
 ## Spécifications
 
@@ -132,3 +141,9 @@ Les trois valeurs de la propriété raccourcie peuvent être définies dans n'im
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La propriété {{CSSxRef("border")}}
+- La propriété {{CSSxRef("border-block")}}
+- La propriété {{CSSxRef("outline")}}

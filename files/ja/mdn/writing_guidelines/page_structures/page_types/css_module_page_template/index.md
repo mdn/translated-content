@@ -1,6 +1,7 @@
 ---
 title: CSS モジュールランディングページのテンプレート
-slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_landing_page_template
+slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_page_template
+original_slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_landing_page_template
 l10n:
   sourceCommit: bfdfe970004b21218ef4ab6a4274d4fb29c4742b
 ---

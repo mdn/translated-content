@@ -1,14 +1,15 @@
 ---
 title: border-image-source
 slug: Web/CSS/Reference/Properties/border-image-source
-original_slug: Web/CSS/border-image-source
+l10n:
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`border-image-source`** définit l'image source utilisée pour créer [l'image de bordure](/fr/docs/Web/CSS/Reference/Properties/border-image) d'un élément.
 
-La propriété **`border-image-source`** définit l'image (type {{cssxref("&lt;image&gt;")}}) qu'on souhaite utiliser pour mettre en forme la bordure. Si la valeur de cette propriété vaut `none`, ce sera la mise en forme définie par la propriété {{cssxref("border-style")}} qui sera utilisée.
+La propriété {{CSSxRef("border-image-slice")}} permet de diviser l'image source en régions, qui sont ensuite appliquées dynamiquement à la bordure imagée finale.
 
-{{InteractiveExample("CSS Demo: border-image-source")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: border-image-source")}}
 
 ```css interactive-example-choice
 border-image-source: url("/shared-assets/images/examples/border-diamonds.png");
@@ -32,7 +33,7 @@ border-image-source: none;
 
 ```html interactive-example
 <section id="default-example">
-  <div id="example-element">This is a box with a border around it.</div>
+  <div id="example-element">Ceci est une boîte entourée d'une bordure.</div>
 </section>
 ```
 
@@ -45,7 +46,7 @@ border-image-source: none;
   justify-content: center;
   padding: 50px;
   background: #fff3d4;
-  color: #000;
+  color: black;
   border: 30px solid;
   border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
     round;
@@ -57,28 +58,26 @@ border-image-source: none;
 
 ```css
 /* Valeur avec un mot-clé */
-/* Ici, pas de border-image, */
-/* on utilise border-style */
 border-image-source: none;
 
 /* Valeur de type <image> */
-border-image-source: url(image.jpg);
+border-image-source: url("image.jpg");
 border-image-source: linear-gradient(to top, red, yellow);
 
 /* Valeurs globales */
 border-image-source: inherit;
 border-image-source: initial;
+border-image-source: revert;
+border-image-source: revert-layer;
 border-image-source: unset;
 ```
-
-La propriété {{cssxref("border-image-slice")}} peut être utilisée afin de diviser une image source en régions qui seront insérées dynamiquement pour constituer la bordure imagée finale.
 
 ### Valeurs
 
 - `none`
-  - : Cette valeur permet d'indiquer qu'aucune image ne doit être utilisée pour la bordure. Ce sera le style défini par la propriété {{cssxref("border-style")}} qui sera utilisé.
-- `<image>`
-  - : Une référence vers l'Image qu'on souhaite utiliser pour dessiner la bordure. Voir {{cssxref("&lt;image&gt;")}}.
+  - : Aucune image de bordure n'est utilisée. L'apparence définie par {{CSSxRef("border-style")}} est affichée à la place.
+- {{CSSxRef("image")}}
+  - : Référence de l'image à utiliser pour la bordure.
 
 ## Définition formelle
 
@@ -90,7 +89,13 @@ La propriété {{cssxref("border-image-slice")}} peut être utilisée afin de di
 
 ## Exemples
 
-Voir la page de la propriété raccourcie {{cssxref("border-image")}} et les différents exemples.
+### Exemple simple
+
+```css
+.box {
+  border-image-source: url("image.png");
+}
+```
 
 ## Spécifications
 
@@ -102,8 +107,9 @@ Voir la page de la propriété raccourcie {{cssxref("border-image")}} et les dif
 
 ## Voir aussi
 
-- {{cssxref("border")}}
-- {{cssxref("outline")}}
-- {{cssxref("box-shadow")}}
-- {{cssxref("background-image")}}
-- {{cssxref("url()", "url()")}}
+- La propriété {{CSSxRef("border")}}
+- La propriété {{CSSxRef("outline")}}
+- La propriété {{CSSxRef("box-shadow")}}
+- La propriété {{CSSxRef("background-image")}}
+- Le type de donnée {{CSSxRef("url_value", "&lt;url&gt;")}}
+- [Images de bordure dans CSS&nbsp;: un domaine clé pour l'Interop 2023](/fr/blog/border-images-interop-2023/) sur le blog MDN (2023)

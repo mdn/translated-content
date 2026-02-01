@@ -1,14 +1,13 @@
 ---
 title: border
 slug: Web/CSS/Reference/Properties/border
-original_slug: Web/CSS/border
+l10n:
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-{{CSSRef}}
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border`** permet de définir la bordure d'un élément. Elle définit les valeurs de {{CSSxRef("border-width")}}, {{CSSxRef("border-style")}}, et {{CSSxRef("border-color")}}.
 
-La propriété CSS **`border`** est [une propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) qui permet de définir les propriétés liées à la bordure. `border` peut être utilisée pour définir les valeurs de {{cssxref("border-width")}}, {{cssxref("border-style")}} et {{cssxref("border-color")}}.
-
-{{InteractiveExample("CSS Demo: border")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: border")}}
 
 ```css interactive-example-choice
 border: solid;
@@ -27,38 +26,34 @@ border: thick double #32a1ce;
 ```
 
 ```css interactive-example-choice
-border: 4mm ridge rgba(211, 220, 50, 0.6);
+border: 4mm ridge rgb(211 220 50 / 0.6);
 ```
 
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    Ceci est une boîte avec une bordure autour.
   </div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #8b008b;
+  background-color: #eeeeee;
+  color: darkmagenta;
   padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 ```
 
-Comme pour toutes les propriétés raccourcie, si une valeur est absente pour la propriété détaillée correspondante, cette dernière sera réinitialisée avec sa valeur initiale. On notera également que {{cssxref("border-image")}} ne peut pas être définie via cette propriété raccourcie mais elle sera quand même réinitialisée (sa valeur initiale est `none`). Ainsi, `border` peut être utilisée pour réinitialiser n'importe quelle propriété liée à la bordure définie plus haut dans la cascade.
+## Propriétés constitutives
 
-> [!NOTE]
-> Bien que les propriétés raccourcies {{cssxref("border-width")}}, {{cssxref("border-style")}} et {{cssxref("border-color")}} acceptent jusqu'à quatre valeurs pour les différents côtés, cette propriété (`border`) n'accepte qu'une seule valeur pour chaque propriété détaillée. Le résultat obtenu sera donc homogène sur les quatre côtés.
+Cette propriété est une propriété raccourcie pour les propriétés CSS suivantes&nbsp;:
 
-### Différences entre les bordures et les contours (_outlines_)
-
-Les bordures et [contours](/fr/docs/Web/CSS/Reference/Properties/outline) sont similaires mais quelques différences les distinguent :
-
-- Les contours n'occupent pas d'espace sur l'élément : ils sont dessinés en dehors du contenu de l'élément
-- Selon la spécification, les contours ne sont pas nécessairement rectangulaires.
+- {{CSSxRef("border-width")}}
+- {{CSSxRef("border-style")}}
+- {{CSSxRef("border-color")}}
 
 ## Syntaxe
 
@@ -70,7 +65,7 @@ border: solid;
 border: 2px dotted;
 
 /* style | couleur */
-border: outset #f33;
+border: outset #ff3333;
 
 /* largeur | style | couleur */
 border: medium dashed green;
@@ -78,10 +73,12 @@ border: medium dashed green;
 /* Valeurs globales */
 border: inherit;
 border: initial;
+border: revert;
+border: revert-layer;
 border: unset;
 ```
 
-La propriété `border` peut être définie grâce à une ou plusieurs valeurs [`<line-width>`](#br-width), [`<line-style>`](#br-style) ou [`<color>`](#color).
+La propriété `border` peut être définie en utilisant une, deux ou trois des valeurs listées ci-dessous. L'ordre des valeurs n'a pas d'importance.
 
 > [!NOTE]
 > La bordure pourra être invisible si son style n'est pas défini. En effet, sa valeur par défaut est `none`.
@@ -89,11 +86,24 @@ La propriété `border` peut être définie grâce à une ou plusieurs valeurs [
 ### Valeurs
 
 - `<line-width>`
-  - : Voir {{cssxref("border-width")}} (la valeur par défaut est `medium`).
+  - : Voir {{CSSxRef("border-width")}} (la valeur par défaut est `medium`).
 - `<line-style>`
-  - : Voir {{cssxref("border-style")}} (la valeur par défaut est `none`).
+  - : Voir {{CSSxRef("border-style")}} (la valeur par défaut est `none`).
 - `<color>`
-  - : Voir {{cssxref("border-color")}}. Une valeur de type {{cssxref("&lt;color&gt;")}} qui indique la couleur de la bordure. La valeur par défaut qui sera utilisée sera la valeur de la propriété {{cssxref("color")}} de l'élément (qui est la couleur du texte de l'élément, pas de son arrière-plan).
+  - : Voir {{CSSxRef("border-color")}}. Une valeur de type {{CSSxRef("&lt;color&gt;")}} qui indique la couleur de la bordure. La valeur par défaut qui sera utilisée sera la valeur de la propriété {{CSSxRef("color")}} de l'élément (qui est la couleur du texte de l'élément, pas de son arrière-plan).
+
+## Description
+
+Comme pour toutes les propriétés raccourcies, toute sous-valeur omise sera définie sur sa [valeur initiale](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale). Il est important de noter que `border` ne permet pas de définir une valeur personnalisée pour {{CSSxRef("border-image")}}, mais la ramène à sa valeur initiale, c'est-à-dire `none`.
+
+La propriété raccourcie `border` est particulièrement utile lorsque vous souhaitez que les quatre bordures soient identiques. Pour les différencier, vous pouvez utiliser les propriétés longues {{CSSxRef("border-width")}}, {{CSSxRef("border-style")}} et {{CSSxRef("border-color")}}, qui acceptent des valeurs différentes pour chaque côté. Vous pouvez aussi cibler une bordure à la fois avec les propriétés physiques (par exemple {{CSSxRef("border-top")}}) et logiques (par exemple {{CSSxRef("border-block-start")}}).
+
+### Différences entre bordures et contours
+
+Les bordures et les [contours](/fr/docs/Web/CSS/Reference/Properties/outline) sont très similaires. Cependant, les contours diffèrent des bordures de la façon suivante&nbsp;:
+
+- Les contours n'occupent jamais d'espace, car ils sont dessinés à l'extérieur du contenu d'un élément.
+- Selon la spécification, les contours n'ont pas à être rectangulaires, même s'ils le sont généralement.
 
 ## Définition formelle
 
@@ -105,33 +115,35 @@ La propriété `border` peut être définie grâce à une ou plusieurs valeurs [
 
 ## Exemples
 
-### CSS
+### Définir une bordure rose en relief
 
-```css
-.brd {
-  border: 1px solid black;
-}
-style {
-  border: 1px dashed black;
-  display: block;
-}
-```
-
-### HTML
+#### HTML
 
 ```html
-<div class="brd">Oh des bordures</div>
-<p>N'hésitez pas à éditer le CSS qui suit pour voir l'effet des valeurs.</p>
-<style contenteditable>
-  .brd {
-    border: 1px solid black;
-  }
-</style>
+<div>
+  J'ai une bordure, un contour et une ombre portée&nbsp;! Incroyable, n'est-ce
+  pas&nbsp;?
+</div>
+```
+
+#### CSS
+
+```css
+div {
+  border: 0.5rem outset pink;
+  outline: 0.5rem solid khaki;
+  box-shadow: 0 0 0 2rem skyblue;
+  border-radius: 12px;
+  font: bold 1rem sans-serif;
+  margin: 2rem;
+  padding: 1rem;
+  outline-offset: 0.5rem;
+}
 ```
 
 ### Résultat
 
-{{EmbedLiveSample('Exemples')}}
+{{EmbedLiveSample("Définir une bordure rose en relief")}}
 
 ## Spécifications
 
@@ -143,7 +155,9 @@ style {
 
 ## Voir aussi
 
-- {{cssxref("border-top-left-radius")}},
-- {{cssxref("border-top-right-radius")}},
-- {{cssxref("border-bottom-right-radius")}},
-- {{cssxref("border-bottom-left-radius")}}
+- La propriété {{CSSxRef("border-width")}}
+- La propriété {{CSSxRef("border-style")}}
+- La propriété {{CSSxRef("border-color")}}
+- La propriété {{CSSxRef("outline")}}
+- [Arrière-plans et bordures](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders)
+- [Apprendre CSS&nbsp;: arrière-plans et bordures](/fr/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)

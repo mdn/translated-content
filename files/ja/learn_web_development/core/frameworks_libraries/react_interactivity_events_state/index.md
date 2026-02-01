@@ -2,10 +2,8 @@
 title: "React での操作の実装: イベントと状態"
 slug: Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 6ba4f3b350be482ba22726f31bbcf8ad3c92a9c6
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_components","Learn_web_development/Core/Frameworks_libraries/React_interactivity_filtering_conditional_rendering", "Learn_web_development/Core/Frameworks_libraries")}}
 
@@ -76,10 +74,10 @@ function handleSubmit(event) {
 }
 ```
 
-この関数を使用するには、 [`<form>`](/ja/docs/Web/HTML/Reference/Elements/form) 要素に `onSubmit` 属性を追加し、その値を `handleSubmit` 関数に設定してください。
+この関数を使用するには、[`<form>`](/ja/docs/Web/HTML/Reference/Elements/form) 要素に `onSubmit` 属性を追加し、その値を `handleSubmit` 関数に設定してください。
 
 ```jsx
-<form onSubmit={handleSubmit}>
+<form onSubmit={handleSubmit}>{/* … */}</form>
 ```
 
 これでブラウザーに戻って "Add" ボタンをクリックすると、ブラウザーに "Hello, world!" という文字（または表示するように指定した任意の文字列）を含むアラートダイアログが表示されます。
@@ -110,7 +108,7 @@ function addTask(name) {
 
 ```jsx
 function Form(props) {
-  // ...
+  // …
 }
 ```
 
@@ -216,7 +214,7 @@ function handleChange() {
   console.log("Typing!");
 }
 
-...
+// …
 
 // return 文の中に移動
 <input
@@ -597,6 +595,8 @@ import Form from "./components/Form";
 import FilterButton from "./components/FilterButton";
 
 function App(props) {
+  const [tasks, setTasks] = useState(props.tasks);
+
   function addTask(name) {
     const newTask = { id: `todo-${nanoid()}`, name, completed: false };
     setTasks([...tasks, newTask]);
@@ -619,8 +619,6 @@ function App(props) {
     const remainingTasks = tasks.filter((task) => id !== task.id);
     setTasks(remainingTasks);
   }
-
-  const [tasks, setTasks] = useState(props.tasks);
   const taskList = tasks?.map((task) => (
     <Todo
       id={task.id}

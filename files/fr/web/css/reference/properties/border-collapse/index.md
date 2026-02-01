@@ -1,14 +1,17 @@
 ---
 title: border-collapse
 slug: Web/CSS/Reference/Properties/border-collapse
-original_slug: Web/CSS/border-collapse
+l10n:
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`border-collapse`** définit si les cellules à l'intérieur d'un élément HTML {{HTMLElement("table")}} ont des bordures partagées ou séparées.
 
-La propriété **`border-collapse`** détermine si les bordures d'un tableau sont séparées ou fusionnées. Quand elles sont séparées, chaque cellule du tableau a ses propres bordures, distinctes. Quand elles sont fusionnées, les bordures des cellules sont partagées.
+Lorsque les cellules sont fusionnées, la valeur `inset` de {{CSSxRef("border-style")}} se comporte comme `ridge`, et `outset` se comporte comme `groove`.
 
-{{InteractiveExample("CSS Demo: border-collapse")}}
+Lorsque les cellules sont séparées, la distance entre les cellules est définie par la propriété {{CSSxRef("border-spacing")}}.
+
+{{InteractiveExample("Démonstration CSS&nbsp;: border-collapse")}}
 
 ```css interactive-example-choice
 border-collapse: collapse;
@@ -22,16 +25,16 @@ border-collapse: separate;
 <section class="default-example" id="default-example">
   <table class="transition-all" id="example-element">
     <tr>
-      <td>Cell 1.1</td>
-      <td>Cell 1.2</td>
+      <td>Cellule 1.1</td>
+      <td>Cellule 1.2</td>
     </tr>
     <tr>
-      <td>Cell 2.1</td>
-      <td>Cell 2.2</td>
+      <td>Cellule 2.1</td>
+      <td>Cellule 2.2</td>
     </tr>
     <tr>
-      <td>Cell 3.1</td>
-      <td>Cell 3.2</td>
+      <td>Cellule 3.1</td>
+      <td>Cellule 3.2</td>
     </tr>
   </table>
 </section>
@@ -50,10 +53,6 @@ td {
 }
 ```
 
-Le modèle des _bordures séparées_ est celui qui est traditionnellement utilisé par HTML. Les cellules adjacente ont des bordures distinctes et la distance entre ces bordures est définie par la propriété {{cssxref("border-spacing")}}.
-
-Le modèle des _bordures fusionnées_ permet que les cellules adjacentes partagent leurs bordures. Lorsqu'on utilise ce modèle, les valeurs `inset` et `outset` de {{cssxref("border-style")}} se comportent respectivement comme `groove` et `ridge`.
-
 ## Syntaxe
 
 ```css
@@ -64,6 +63,8 @@ border-collapse: separate;
 /* Valeurs globales */
 border-collapse: inherit;
 border-collapse: initial;
+border-collapse: revert;
+border-collapse: revert-layer;
 border-collapse: unset;
 ```
 
@@ -86,55 +87,9 @@ La propriété `border-collapse` est définie avec un seul mot-clé parmi ceux d
 
 ## Exemples
 
-### CSS
+### Un tableau coloré des moteurs de navigateur
 
-```css
-.collapse {
-  border-collapse: collapse;
-}
-.separate {
-  border-collapse: separate;
-}
-table {
-  display: inline-table;
-  margin: 1em;
-  border: dashed 6px;
-  border-width: 6px;
-}
-table th,
-table td {
-  border: solid 3px;
-}
-.fx {
-  border-color: orange blue;
-}
-.gk {
-  border-color: black red;
-}
-.ie {
-  border-color: blue gold;
-}
-.tr {
-  border-color: aqua;
-}
-.sa {
-  border-color: silver blue;
-}
-.wk {
-  border-color: gold blue;
-}
-.ch {
-  border-color: red yellow green blue;
-}
-.bk {
-  border-color: navy blue teal aqua;
-}
-.op {
-  border-color: red;
-}
-```
-
-### HTML
+#### HTML
 
 ```html
 <table class="separate">
@@ -201,9 +156,60 @@ table td {
 </table>
 ```
 
-### Résultat
+#### CSS
 
-{{EmbedLiveSample('Exemples', 400, 300)}}
+```css
+.collapse {
+  border-collapse: collapse;
+}
+
+.separate {
+  border-collapse: separate;
+}
+
+table {
+  display: inline-table;
+  margin: 1em;
+  border: dashed 5px;
+}
+
+table th,
+table td {
+  border: solid 3px;
+}
+
+.fx {
+  border-color: orange blue;
+}
+.gk {
+  border-color: black red;
+}
+.ed {
+  border-color: blue gold;
+}
+.tr {
+  border-color: aqua;
+}
+.sa {
+  border-color: silver blue;
+}
+.wk {
+  border-color: gold blue;
+}
+.ch {
+  border-color: red yellow green blue;
+}
+.bk {
+  border-color: navy blue teal aqua;
+}
+.op {
+  border-color: red;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Un tableau coloré des moteurs de navigateur", 400, 300)}}
 
 ## Spécifications
 
@@ -215,6 +221,6 @@ table td {
 
 ## Voir aussi
 
-- {{cssxref("border-spacing")}}
-- {{cssxref("border-style")}}
-- L'élément HTML {{HTMLElement("table")}} impacté `border-collapse`.
+- {{CSSxRef("border-spacing")}}, {{CSSxRef("border-style")}}
+- La propriété `border-collapse` modifie l'apparence de l'élément HTML {{HTMLElement("table")}}.
+- Le module [de tableau CSS](/fr/docs/Web/CSS/Guides/Table)

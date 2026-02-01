@@ -1,14 +1,13 @@
 ---
 title: border-right-width
 slug: Web/CSS/Reference/Properties/border-right-width
-original_slug: Web/CSS/border-right-width
+l10n:
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`border-right-width`** permet de définir l'épaisseur de la bordure à droite d'un élément.
 
-La propriété **`border-right-width`** définit l'épaisseur de la bordure pour le côté droit d'une boîte.
-
-{{InteractiveExample("CSS Demo: border-right-width")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: border-right-width")}}
 
 ```css interactive-example-choice
 border-right-width: thick;
@@ -33,7 +32,7 @@ border-right-width: 0;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    Ceci est une boîte avec une bordure autour.
   </div>
 </section>
 ```
@@ -41,7 +40,7 @@ border-right-width: 0;
 ```css interactive-example
 #example-element {
   background-color: palegreen;
-  color: #000;
+  color: black;
   border: 0 solid crimson;
   padding: 0.75em;
   width: 80%;
@@ -66,18 +65,21 @@ border-right-width: 6px;
 /* Valeurs globales */
 border-right-width: inherit;
 border-right-width: initial;
+border-right-width: revert;
+border-right-width: revert-layer;
 border-right-width: unset;
 ```
 
 ### Valeurs
 
-- `<br-width>`
-  - : Une valeur de longueur ({{cssxref("&lt;length&gt;")}}) positive ou un mot-clé qui indique l'épaisseur de la bordure pour le côté droit de la boîte. Si la valeur est un mot-clé, ce doit être l'une des valeurs suivantes :
+- `<line-width>`
+  - : Une valeur de longueur ({{CSSxRef("&lt;length&gt;")}}) positive ou un mot-clé qui indique l'épaisseur de la bordure pour le côté droit de la boîte. Si la valeur est un mot-clé, ce doit être l'une des valeurs suivantes&nbsp;:
     - `thin` (fin)
     - `medium` (intermédiaire)
     - `thick` (épais)
 
-    La spécification ne précise pas de façon exacte l'épaisseur correspondant à chacun de ces mots-clés (c'est donc à chaque implémentation de choisir). La spécification requiert toutefois que l'inégalité suivante soit respectée `thin ≤ medium ≤ thick` et que ces valeurs soient constantes pour un même document.
+> [!NOTE]
+> La spécification ne précise pas de façon exacte l'épaisseur correspondant à chacun de ces mots-clés (c'est donc à chaque implémentation de choisir). La spécification requiert toutefois que l'inégalité suivante soit respectée `thin ≤ medium ≤ thick` et que ces valeurs soient constantes pour un même document.
 
 ## Définition formelle
 
@@ -89,33 +91,34 @@ border-right-width: unset;
 
 ## Exemples
 
-### CSS
+### Comparer les largeurs de bordure
 
-```css
-.element1 {
-  border-right: thick solid red;
-}
-.element2 {
-  border-right: medium solid orange;
-}
-.element3 {
-  border-right: thin solid green;
-}
-```
-
-### HTML
+#### HTML
 
 ```html
-<p class="element1">Une bordure épaisse rouge.</p>
-
-<p class="element2">Une bordure moyenne orange.</p>
-
-<p class="element3">Et une bordure fine verte.</p>
+<div>Élément 1</div>
+<div>Élément 2</div>
 ```
 
-### Résultat
+#### CSS
 
-{{EmbedLiveSample("Exemples","200","300")}}
+```css
+div {
+  border: 1px solid red;
+  margin: 1em 0;
+}
+
+div:nth-child(1) {
+  border-right-width: thick;
+}
+div:nth-child(2) {
+  border-right-width: 2em;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Comparer les largeurs de bordure", "100%")}}
 
 ## Spécifications
 
@@ -127,14 +130,5 @@ border-right-width: unset;
 
 ## Voir aussi
 
-- Les autres propriétés liées à la largeur de la bordure :
-  - {{cssxref("border-left-width")}},
-  - {{cssxref("border-top-width")}},
-  - {{cssxref("border-bottom-width")}},
-  - {{cssxref("border-width")}}
-
-- Les autres propriétés CSS liées à la bordure du côté droit :
-  - {{cssxref("border")}},
-  - {{cssxref("border-right")}},
-  - {{cssxref("border-right-style")}},
-  - {{cssxref("border-right-color")}}.
+- Les autres propriétés liées à la largeur de la bordure&nbsp;: {{CSSxRef("border-bottom-width")}}, {{CSSxRef("border-left-width")}}, {{CSSxRef("border-top-width")}} et {{CSSxRef("border-width")}}.
+- Les autres propriétés CSS liées à la bordure du côté droit&nbsp;: {{CSSxRef("border")}}, {{CSSxRef("border-right")}}, {{CSSxRef("border-right-style")}} et {{CSSxRef("border-right-color")}}.

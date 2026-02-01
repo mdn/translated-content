@@ -1,14 +1,16 @@
 ---
 title: border-left-style
 slug: Web/CSS/Reference/Properties/border-left-style
-original_slug: Web/CSS/border-left-style
+l10n:
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`border-left-style`** permet de définir le style de ligne de la {{CSSxRef("border")}} à gauche d'un élément.
 
-La propriété **`border-left-style`** définit le style de ligne utilisé pour mettre en forme la bordure sur le côté gauche d'une boîte.
+> [!NOTE]
+> La spécification ne définit pas la façon dont les bordures de styles différents se rejoignent dans les coins.
 
-{{InteractiveExample("CSS Demo: border-left-style")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: border-left-style")}}
 
 ```css interactive-example-choice
 border-left-style: none;
@@ -37,15 +39,15 @@ border-left-style: inset;
 ```html interactive-example
 <section id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    Ceci est une boîte avec une bordure autour.
   </div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #000;
+  background-color: #eeeeee;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;
@@ -53,12 +55,9 @@ border-left-style: inset;
 }
 
 body {
-  background-color: #fff;
+  background-color: white;
 }
 ```
-
-> [!NOTE]
-> La spécification ne définit pas la façon dont les bordures de différents styles se rejoignent dans les coins.
 
 ## Syntaxe
 
@@ -79,10 +78,11 @@ border-left-style: outset;
 border-left-style: inherit;
 border-left-style: initial;
 border-left-style: revert;
+border-left-style: revert-layer;
 border-left-style: unset;
 ```
 
-La propriété `border-left-style` se définit avec l'un des mots-clés utilisés par la propriété [`border-style`](/fr/docs/Web/CSS/Reference/Properties/border-style).
+La propriété `border-left-style` se définit avec un seul mot-clé {{CSSxRef("line-style")}}.
 
 ## Définition formelle
 
@@ -90,11 +90,13 @@ La propriété `border-left-style` se définit avec l'un des mots-clés utilisé
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
-### HTML
+### Définir `border-left-style`
+
+#### HTML
 
 ```html
 <table>
@@ -117,7 +119,7 @@ La propriété `border-left-style` se définit avec l'un des mots-clés utilisé
 </table>
 ```
 
-### CSS
+#### CSS
 
 ```css
 /* On applique un style sur le tableau */
@@ -163,9 +165,9 @@ td {
 }
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample('', 300, 200)}}
+{{EmbedLiveSample("Définir `border-left-style`", 300, 200)}}
 
 ## Spécifications
 
@@ -177,6 +179,5 @@ td {
 
 ## Voir aussi
 
-- Les autres propriétés liées au style des bordures&nbsp;: [`border-right-style`](/fr/docs/Web/CSS/Reference/Properties/border-right-style), [`border-top-style`](/fr/docs/Web/CSS/Reference/Properties/border-top-style), [`border-bottom-style`](/fr/docs/Web/CSS/Reference/Properties/border-bottom-style), [`border-style`](/fr/docs/Web/CSS/Reference/Properties/border-style).
-
-- Les autres propriétés liées à la bordure gauche&nbsp;: [`border-left`](/fr/docs/Web/CSS/Reference/Properties/border-left), [`border-left-color`](/fr/docs/Web/CSS/Reference/Properties/border-left-color), [`border-left-width`](/fr/docs/Web/CSS/Reference/Properties/border-left-width).
+- Les autres propriétés liées au style des bordures&nbsp;: {{CSSxRef("border-bottom-style")}}, {{CSSxRef("border-right-style")}}, {{CSSxRef("border-top-style")}} et {{CSSxRef("border-style")}}.
+- Les autres propriétés liées à la bordure gauche&nbsp;: {{CSSxRef("border-left")}}, {{CSSxRef("border-left-color")}} et {{CSSxRef("border-left-width")}}.
