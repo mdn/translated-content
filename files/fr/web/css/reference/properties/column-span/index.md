@@ -1,14 +1,13 @@
 ---
 title: column-span
 slug: Web/CSS/Reference/Properties/column-span
-original_slug: Web/CSS/column-span
+l10n:
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`column-span`** permet à un élément de s'étendre sur l'ensemble des colonnes lorsque sa valeur est `all`.
 
-La propriété **`column-span`** permet à un élément de s'étendre sur toutes les colonnes lorsque la valeur de cette propriété est `all`. Un élément qui s'étend sur plus d'une colonne est appelé un élément étendu (_spanning element_).
-
-{{InteractiveExample("CSS Demo: column-span")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: column-span")}}
 
 ```css interactive-example-choice
 column-span: none;
@@ -22,15 +21,16 @@ column-span: all;
 <section id="default-example">
   <div class="multicol-element">
     <p>
-      London. Michaelmas term lately over, and the Lord Chancellor sitting in
-      Lincoln's Inn Hall.
+      Londres. Le trimestre de Michaelmas venait de se terminer, et le lord
+      chancelier siégeait dans la salle de Lincoln's Inn.
     </p>
-    <div id="example-element">Spanner?</div>
+    <div id="example-element">Étendue&nbsp;?</div>
     <p>
-      Implacable November weather. As much mud in the streets as if the waters
-      had but newly retired from the face of the earth, and it would not be
-      wonderful to meet a Megalosaurus, forty feet long or so, waddling like an
-      elephantine lizard up Holborn Hill.
+      Un novembre implacable. Tant de boue dans les rues comme si les eaux
+      venaient tout juste de se retirer de la surface de la terre, et il ne
+      serait pas étonnant de rencontrer un Megalosaurus, quarante pieds de long
+      environ, se dandinant comme un lézard éléphantesque en montant Holborn
+      Hill.
     </p>
   </div>
 </section>
@@ -50,9 +50,11 @@ column-span: all;
 #example-element {
   background-color: rebeccapurple;
   padding: 10px;
-  color: #fff;
+  color: white;
 }
 ```
+
+## Syntaxe
 
 ```css
 /* Valeurs avec un mot-clé */
@@ -62,10 +64,12 @@ column-span: all;
 /* Valeurs globales */
 column-span: inherit;
 column-span: initial;
+column-span: revert;
+column-span: revert-layer;
 column-span: unset;
 ```
 
-## Syntaxe
+La propriété `column-span` est définie par l'une des valeurs listées ci‑dessous.
 
 ### Valeurs
 
@@ -84,11 +88,42 @@ column-span: unset;
 
 ## Exemples
 
-### CSS
+### Faire en sorte qu'un titre s'étende sur toutes les colonnes
+
+Dans cet exemple, le titre s'étend sur l'ensemble des colonnes de l'article.
+
+#### HTML
+
+```html
+<article>
+  <h2>Titre s'étendant sur toutes les colonnes</h2>
+  <p>
+    Le h2 doit s'étendre sur toutes les colonnes. Le reste du texte doit être
+    réparti entre les colonnes.
+  </p>
+  <p>
+    Ceci est un bloc de texte réparti en trois colonnes grâce à la propriété CSS
+    `columns`. Le texte est réparti de façon égale entre les colonnes.
+  </p>
+  <p>
+    Ceci est un bloc de texte réparti en trois colonnes grâce à la propriété CSS
+    `columns`. Le texte est réparti de façon égale entre les colonnes.
+  </p>
+  <p>
+    Ceci est un bloc de texte réparti en trois colonnes grâce à la propriété CSS
+    `columns`. Le texte est réparti de façon égale entre les colonnes.
+  </p>
+  <p>
+    Ceci est un bloc de texte réparti en trois colonnes grâce à la propriété CSS
+    `columns`. Le texte est réparti de façon égale entre les colonnes.
+  </p>
+</article>
+```
+
+#### CSS
 
 ```css
-.exemple {
-  border: 10px solid #000000;
+article {
   columns: 3;
 }
 
@@ -97,24 +132,9 @@ h2 {
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<div class="exemple">
-  « Mais alors, » pensa Alice, « ne serai-je donc jamais plus vieille que je ne
-  le suis maintenant ? D’un côté cela aura ses avantages, ne jamais être une
-  vieille femme. Mais alors avoir toujours des leçons à apprendre ! Oh, je
-  n’aimerais pas cela du tout. »
-  <h2>La suite</h2>
-  « Oh ! Alice, petite folle, » se répondit-elle. « Comment pourriez-vous
-  apprendre des leçons ici ? Il y a à peine de la place pour vous, et il n’y en
-  a pas du tout pour vos livres de leçons. »
-</div>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples","auto",120)}}
+{{EmbedLiveSample("Faire en sorte qu'un titre s'étende sur toutes les colonnes", "auto", 260)}}
 
 ## Spécifications
 
@@ -123,3 +143,9 @@ h2 {
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- [Étendre et équilibrer les colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout/Spanning_balancing_columns)
+- [Éléments en ligne](/fr/docs/Glossary/Inline-level_content)
+- L'interface API {{DOMxRef("HTMLSpanElement")}}
