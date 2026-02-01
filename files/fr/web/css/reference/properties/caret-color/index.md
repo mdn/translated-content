@@ -158,4 +158,4 @@ p.custom {
 - La propriété {{CSSxRef("text-emphasis")}}
 - Le type de donnée {{CSSxRef("&lt;color&gt;")}}
 - L'élément HTML {{HTMLElement("input")}}
-- L'attribut HTML [`contenteditable`](/fr/docs/Web/HTML/Global_attributes/contenteditable)
+- L'attribut HTML [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable)
