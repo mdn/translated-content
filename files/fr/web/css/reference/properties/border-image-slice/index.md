@@ -1,14 +1,13 @@
 ---
 title: border-image-slice
 slug: Web/CSS/Reference/Properties/border-image-slice
-original_slug: Web/CSS/border-image-slice
+l10n:
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`border-image-slice`** divise l'image définie par {{CSSxRef("border-image-source")}} en régions. Ces régions forment les composants de [l'image de bordure](/fr/docs/Web/CSS/Reference/Properties/border-image) d'un élément.
 
-La propriété **`border-image-slice`** permet de découper l'image fournie via la propriété [`border-image-source`](/fr/docs/Web/CSS/Reference/Properties/border-image-source) en régions. Ces régions sont alors utilisées pour composer [l'image de bordure](/fr/docs/Web/CSS/Reference/Properties/border-image) d'un élément.
-
-{{InteractiveExample("CSS Demo: border-image-slice")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: border-image-slice")}}
 
 ```css interactive-example-choice
 border-image-slice: 30;
@@ -30,7 +29,7 @@ border-image-width: 30px 48px;
 
 ```html interactive-example
 <section id="default-example">
-  <div id="example-element">This is a box with a border around it.</div>
+  <div id="example-element">Ceci est une boîte entourée d'une bordure.</div>
 </section>
 ```
 
@@ -43,7 +42,7 @@ border-image-width: 30px 48px;
   justify-content: center;
   padding: 50px;
   background: #fff3d4;
-  color: #000;
+  color: black;
   border: 30px solid;
   border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
     round;
@@ -51,22 +50,10 @@ border-image-width: 30px 48px;
 }
 ```
 
-Ce découpage crée neuf régions&nbsp;: quatre pour les coins, quatre pour les côtés et une pour le milieu. Ces régions sont définies à l'aide de quatre valeurs mesurées depuis les bords vers l'intérieur de l'image.
-
-![Les 9 zones définies par border-image-slice](border-image-slice.png)
-
-Le diagramme ci-avant illustre l'emplacement de chaque région.
-
-- Les zones 1 à 4 sont les coins. Chacun est utilisé une fois pour former les coins de l'image de bordure finale.
-- Les zones 5 à 8 sont les bords. Ils sont [répétés, redimensionnés ou modifiés autrement](/fr/docs/Web/CSS/Reference/Properties/border-image-repeat) dans la bordure finale afin que celle-ci corresponde aux dimensions de l'élément.
-- La zone 9 est la zone centrale et n'est pas utilisée par défaut. Elle est utilisée comme image d'arrière-plan si le mot-clé `fill` est utilisé.
-
-Les propriétés [`border-image-repeat`](/fr/docs/Web/CSS/Reference/Properties/border-image-repeat), [`border-image-width`](/fr/docs/Web/CSS/Reference/Properties/border-image-width), [`border-image-outset`](/fr/docs/Web/CSS/Reference/Properties/border-image-outset) définissent la façon dont ces images seront utilisées.
-
 ## Syntaxe
 
 ```css
-/* Une valeur qui s'applique aux quatre côtés */
+/* Tous les côtés */
 border-image-slice: 30%;
 
 /* côtés verticaux | horizontaux */
@@ -85,6 +72,7 @@ border-image-slice: 10% fill 7 12;
 border-image-slice: inherit;
 border-image-slice: initial;
 border-image-slice: revert;
+border-image-slice: revert-layer;
 border-image-slice: unset;
 ```
 
@@ -99,12 +87,26 @@ La valeur optionnelle `fill` peut être utilisée et placée à n'importe quel e
 
 ### Valeurs
 
-- [`<number>`](/fr/docs/Web/CSS/Reference/Values/number)
+- {{CSSxRef("&lt;number&gt;")}}
   - : Représente un décalage par rapport au bord, exprimé en _pixels_ pour les images matricielles et en _coordonnées_ pour les images vectorielles. Pour les images vectorielles, le nombre est relatif à la taille de l'élément plutôt qu'à la taille de l'image source. Aussi, dans ce cas de figure, on utilisera plutôt les pourcentages.
-- [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)
+- {{CSSxRef("&lt;percentage&gt;")}}
   - : Représente un décalage par rapport au bord comme pourcentage par rapport à la taille de l'image source&nbsp;: c'est la largeur de l'image qui sert de référence pour les décalages horizontaux et la hauteur de l'image qui sert de référence pour les décalages verticaux.
 - `fill`
-  - : La région au centre de l'image est conservée et celle-ci est affichée comme image d'arrière-plan mais empilée _sous_ l'arrière-plan fourni par [`background`](/fr/docs/Web/CSS/Reference/Properties/background). La largeur et la hauteur sont dimensionnées afin de correspondre aux tailles des régions haute et gauche.
+  - : La région au centre de l'image est conservée et celle-ci est affichée comme image d'arrière-plan mais empilée _sous_ l'arrière-plan fourni par {{CSSxRef("background")}}. La largeur et la hauteur sont dimensionnées afin de correspondre aux tailles des régions haute et gauche.
+
+## Description
+
+Ce découpage crée neuf régions&nbsp;: quatre pour les coins, quatre pour les côtés et une pour le milieu. Quatre lignes de découpe, placées à une certaine distance de leurs côtés respectifs, contrôlent la taille des régions.
+
+![Les 9 zones définies par les propriétés border-image ou border-image-slice](border-image-slice.png)
+
+Le diagramme ci-dessus illustre l'emplacement de chaque région.
+
+- Les zones 1 à 4 sont les coins. Chacune est utilisée une seule fois pour former les coins de l'image de bordure finale.
+- Les zones 5 à 8 sont les bords. Elles sont [répétées, redimensionnées ou modifiées autrement](/fr/docs/Web/CSS/Reference/Properties/border-image-repeat) dans l'image de bordure finale afin qu'elle corresponde aux dimensions de l'élément.
+- La zone 9 est la zone centrale. Elle est ignorée par défaut, mais est utilisée comme image d'arrière-plan si le mot-clé `fill` est défini.
+
+Les propriétés {{CSSxRef("border-image-repeat")}}, {{CSSxRef("border-image-width")}} et {{CSSxRef("border-image-outset")}} déterminent comment ces régions sont utilisées pour former l'image de bordure finale.
 
 ## Définition formelle
 
@@ -112,7 +114,7 @@ La valeur optionnelle `fill` peut être utilisée et placée à n'importe quel e
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -122,7 +124,7 @@ Dans l'exemple suivant, on utilise un simple élément `<div>` avec une image de
 
 ![Des losanges de plusieurs couleurs](border-diamonds.png)
 
-Les losanges mesurent 30px de large. Aussi, en utilisant 30 pixels comme valeur pour [`border-width`](/fr/docs/Web/CSS/Reference/Properties/border-width) et `border-image-slice`, on aura des losanges complets et nets&nbsp;:
+Les losanges mesurent 30px de large. Aussi, en utilisant 30 pixels comme valeur pour {{CSSxRef("border-width")}} et `border-image-slice`, on aura des losanges complets et nets&nbsp;:
 
 ```css
 border-width: 30px;
@@ -171,7 +173,7 @@ div > div {
   height: 200px;
   border-width: 30px;
   border-style: solid;
-  border-image: url(/shared-assets/images/examples/border-diamonds.png);
+  border-image: url("/shared-assets/images/examples/border-diamonds.png");
   border-image-slice: 30;
   border-image-repeat: round;
 }
@@ -192,7 +194,7 @@ const sliceOutput = document.getElementById("slice-output");
 const divElem = document.querySelector("div > div");
 
 widthSlider.addEventListener("input", () => {
-  const newValue = widthSlider.value + "px";
+  const newValue = `${widthSlider.value}px`;
   divElem.style.borderWidth = newValue;
   widthOutput.textContent = newValue;
 });
@@ -206,7 +208,7 @@ sliceSlider.addEventListener("input", () => {
 
 #### Résultat
 
-{{EmbedLiveSample('', '100%', 400)}}
+{{EmbedLiveSample("Bordure avec largeur et portions ajustables", "100%", 400)}}
 
 ## Spécifications
 
@@ -219,3 +221,4 @@ sliceSlider.addEventListener("input", () => {
 ## Voir aussi
 
 - [Description illustrée de la syntaxe multi-valuée](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties#quelques_cas_aux_limites_épineux)
+- [Images de bordure dans CSS&nbsp;: un domaine clé pour l'Interop 2023](/fr/blog/border-images-interop-2023/) sur le blog MDN (2023)

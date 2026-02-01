@@ -166,7 +166,7 @@ MDN ページの種類を明確に識別するために、フロントマター�
 
 #### テンプレート
 
-- [CSS モジュールランディングページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_landing_page_template)
+- [CSS モジュールランディングページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_page_template)
 
 ### CSS 機能リファレンスページ
 

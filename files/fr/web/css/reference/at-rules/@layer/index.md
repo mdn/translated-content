@@ -2,7 +2,7 @@
 title: "@layer"
 slug: Web/CSS/Reference/At-rules/@layer
 l10n:
-  sourceCommit: 1dcf976e9b654679c762568812562b1a2361c755
+  sourceCommit: 5005d73d35175d72a470c2285f1c3953a54e3688
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@layer`** est utilisée pour déclarer une couche de cascade et peut également être utilisée afin de définir l'ordre de précédence lorsqu'il y a plusieurs couches de cascade.
@@ -38,19 +38,19 @@ La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) *
 
 ```css
 /* déclaration de règle @ */
-@layer nom-couche;
-@layer nom-couche, nom-couche, nom-couche;
+@layer layer-name;
+@layer layer-name, layer-name, layer-name;
 
 /* règle @ en bloc */
-@layer {regles}
-@layer nom-couche {regles}
+@layer {rules}
+@layer layer-name {rules}
 ```
 
 où&nbsp;:
 
-- `nom-couche`
+- `layer-name`
   - : Est le nom de la couche de cascade.
-- `regles`
+- `rules`
   - : Est l'ensemble de règle CSS de la couche de cascade.
 
 ## Description
@@ -113,7 +113,7 @@ La troisième façon consiste à créer une couche de cascade sans nom, par exem
 
 Cela crée une _couche de cascade anonyme_. Cette couche fonctionne de façon analogue aux couches nommées. Toutefois, il n'est pas possible d'y affecter des règles après la déclaration. L'ordre de précédence des couches anonymes est l'ordre dans lequel les couches sont déclarées, qu'elles soient nommées ou non. La précédence d'une couche anonyme a une précédence inférieure aux styles déclarés en dehors d'une couche.
 
-Une autre façon pour créer une couche de cascade consiste à utiliser [`@import`](/fr/docs/Web/CSS/Reference/At-rules/@import). Dans ce cas, les règles associées proviendraient de la feuille de style importée.
+Une autre façon de créer une couche de cascade consiste à utiliser {{CSSxRef("@import")}}. Dans ce cas, les règles se trouvent dans la feuille de style importée. N'oubliez pas que la règle `@import` doit précéder tous les autres types de règles, à l'exception des instructions `@charset` et `@layer` (mais pas les blocs `@layer`).
 
 ```css
 @import "theme.css" layer(utilities);
@@ -148,7 +148,7 @@ Pour ajouter des règles à la couche `layout` située à l'intérieur de `frame
 
 ### Exemple simple
 
-Dans l'exemple suivant, deux règles CSS sont créées. Une pour les éléments [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p) en dehors de toute couche et une pour ceux qui sont situés dans une couche intitulée `type` pour `.box p`.
+Dans l'exemple suivant, deux règles CSS sont créées. Une pour les éléments HTML {{HTMLElement("p")}} en dehors de toute couche et une pour ceux qui sont situés dans une couche intitulée `type` pour `.box p`.
 
 Sans couche, le sélecteur `.box p` aurait la plus haute spécificité et le texte `Coucou le monde !` serait alors affiché en vert. La couche `type` arrivant avant la couche anonyme pour gérer le contenu qui n'est pas affecté à une couche, le texte sera en violet.
 
@@ -180,7 +180,7 @@ p {
 
 #### Résultat
 
-{{EmbedLiveSample("exemple_simple")}}
+{{EmbedLiveSample("Exemple simple")}}
 
 ### Affecter des règles à des couches existantes
 
@@ -220,7 +220,7 @@ Dans l'exemple qui suit, on crée deux couches sans leur affecter de règle puis
 
 #### Résultat
 
-{{EmbedLiveSample("affecter_des_règles_à_des_couches_existantes")}}
+{{EmbedLiveSample("Affecter des règles à des couches existantes")}}
 
 ## Spécifications
 
