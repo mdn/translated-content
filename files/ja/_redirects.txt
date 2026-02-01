@@ -4599,7 +4599,7 @@
 /ja/docs/Web/CSS/Specificity	/ja/docs/Web/CSS/Guides/Cascade/Specificity
 /ja/docs/Web/CSS/Subsequent-sibling_combinator	/ja/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator
 /ja/docs/Web/CSS/Syntax	/ja/docs/Web/CSS/Guides/Syntax/Introduction
-/ja/docs/Web/CSS/Tools	/ja/docs/conflicting/Web/CSS
+/ja/docs/Web/CSS/Tools	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/Type_selectors	/ja/docs/Web/CSS/Reference/Selectors/Type_selectors
 /ja/docs/Web/CSS/Understanding_z_index	/ja/docs/Web/CSS/Guides/Positioned_layout/Understanding_z-index
 /ja/docs/Web/CSS/Understanding_z_index/Adding_z-index	/ja/docs/Web/CSS/Guides/Positioned_layout/Using_z-index
