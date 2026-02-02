@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 49f3eb321cf6a491c3bcef1c3590f9bf6f90c9b8
 ---
 
-本文介绍了如何使用 Markdown 来编写 MDN Web 文档项目中的文档。我们以 GitHub 风格的 Markdown（GFM）为基础，并添加了一些扩展来支持一些我们在 MDN 上需要而 GFM 仍不支持的东西。
+本文介绍了如何使用 Markdown 来编写 MDN Web 文档项目中的文档。我们以 GitHub 风格的 Markdown（GFM）为基础，并添加了扩展功能以支持 MDN 所需的特性。
 
 ## 基础：Github 风格的 Markdown
 
@@ -19,20 +19,10 @@ GFM 规范定义了两种基础的链接类型：
 - [内联链接](https://github.github.com/gfm/#inline-link)：在链接显示的文字后面紧跟链接的地址。
 - [引用链接](https://github.github.com/gfm/#reference-link)：链接的目标在当前文档的其他地方定义。
 
-在 MDN 上，我们仅允许使用内联链接。
+在 MDN 上，我们更倾向于使用内联链接，因为它们更易于阅读和维护，且不会丢失上下文。这是在 MDN 上编写链接的首选方式：
 
-以下是 MDN 上正确的编写 GFM 链接的方式：
-
-```md example-good
+```md
 [马卡龙](https://zh.wikipedia.org/wiki/馬卡龍)虽然美味，但制作难度大。
-```
-
-以下是 MDN 上错误的编写链接的方式：
-
-```md example-bad
-[马卡龙][马卡龙]虽然美味，但制作难度大。
-
-[马卡龙]: https://zh.wikipedia.org/wiki/馬卡龍
 ```
 
 然而在某些情况下，参考链接因其紧凑性更为合适。例如，缩小宽表可使其更易于审阅和编辑。
@@ -70,7 +60,7 @@ GFM 规范定义了两种基础的链接类型：
     - `rust`——Rust
     - `glsl`——GLSL（OpenGL 着色器）
     - `sql`——SeQueL 命令
-    - `wasm`——WebAssembly
+    - `wat`——WebAssembly
     - `webidl`——Web 接口定义语言
 - 样式
   - `css`——CSS
@@ -84,9 +74,9 @@ GFM 规范定义了两种基础的链接类型：
   - `md`——Markdown
   - `latex`——LaTeX
 - 命令提示符
-  - `sh`——Bash/Shell
+  - `bash`——Bash/Shell
   - `batch`——Batch（Windows Shell）
-  - `ps`——PowerShell
+  - `powershell`——PowerShell
 - 配置或数据文件
   - `json`——JSON
   - `ini`——INI
@@ -99,7 +89,7 @@ GFM 规范定义了两种基础的链接类型：
 - 模板
   - `django`——Django 模板
   - `svelte`——Svelte 模板
-  - `handlebars`——Handlebars 模板
+  - `hbs`——Handlebars 模板
   - `pug`——[Pug 模板](https://pugjs.org/zh-cn/api/getting-started.html)（可以被 [Express](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Template_primer) 使用）
 - 其他
   - `plain`——纯文本
@@ -119,7 +109,7 @@ const greeting = "我会得到 JavaScript 语法高亮";
 如果你希望高亮显示的语言未在上方列出，请使用 `plain` 标记代码块。也可以按照 [GitHub 讨论](https://github.com/orgs/mdn/discussions/170#discussioncomment-3404366)提出的流程请求其他语言的高亮支持。
 
 > [!NOTE]
-> 请严格按照上述列表使用语言标识符。例如，`javascript` 是不被允许的，必须使用 `js`。
+> 请严格按照上述列表使用语言标识符。例如，必须使用 `js` 而不是 `javascript`。
 
 ### 阻止 lint
 
