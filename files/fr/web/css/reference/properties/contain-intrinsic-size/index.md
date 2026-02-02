@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`contain-intrinsic-size`** définit la taille d'un élément que le navigateur utilisera pour la mise en page lorsque l'élément est soumis à la [compartimentation de la taille](/fr/docs/Web/CSS/Guides/Containment/Using#size_containment).
+La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`contain-intrinsic-size`** définit la taille d'un élément que le navigateur utilisera pour la mise en page lorsque l'élément est soumis à la [compartimentation de la taille](/fr/docs/Web/CSS/Guides/Containment/Using#compartimentation_de_la_taille).
 
 ## Propriétés constituantes
 
@@ -360,5 +360,5 @@ En revanche, si le contenu est masqué, définir `contain-intrinsic-size` sur `n
 - La propriété {{CSSxRef("contain-intrinsic-block-size")}}
 - La propriété {{CSSxRef("contain-intrinsic-inline-size")}}
 - [Utiliser la compartimentation CSS](/fr/docs/Web/CSS/Guides/Containment/Using)
-- Le module [de CSS containment](/fr/docs/Web/CSS/Guides/Containment)
+- Le module [de compartimentation CSS](/fr/docs/Web/CSS/Guides/Containment)
 - [content-visibility&nbsp;: la nouvelle propriété CSS qui améliore vos performances de rendu](https://web.dev/articles/content-visibility?hl=fr) (web.dev)
