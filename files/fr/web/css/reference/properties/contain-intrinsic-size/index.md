@@ -360,5 +360,5 @@ En revanche, si le contenu est masqué, définir `contain-intrinsic-size` sur `n
 - La propriété {{CSSxRef("contain-intrinsic-block-size")}}
 - La propriété {{CSSxRef("contain-intrinsic-inline-size")}}
 - [Utiliser la compartimentation CSS](/fr/docs/Web/CSS/Guides/Containment/Using)
-- Le module [de CSS containment](/fr/docs/Web/CSS/Guides/Containment)
+- Le module [de compartimentation CSS](/fr/docs/Web/CSS/Guides/Containment)
 - [content-visibility&nbsp;: la nouvelle propriété CSS qui améliore vos performances de rendu](https://web.dev/articles/content-visibility?hl=fr) (web.dev)
