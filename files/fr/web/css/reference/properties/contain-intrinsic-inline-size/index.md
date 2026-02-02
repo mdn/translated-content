@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-La [propriété logique](/fr/docs/Web/CSS/Guides/Logical_properties_and_values) [CSS](/fr/docs/Web/CSS) **`contain-intrinsic-inline-size`** définit la taille en ligne d'un élément que le navigateur peut utiliser pour la mise en page lorsque l'élément est soumis à la [compartimentation de la taille](/fr/docs/Web/CSS/Guides/Containment/Using#size_containment).
+La [propriété logique](/fr/docs/Web/CSS/Guides/Logical_properties_and_values) [CSS](/fr/docs/Web/CSS) **`contain-intrinsic-inline-size`** définit la taille en ligne d'un élément que le navigateur peut utiliser pour la mise en page lorsque l'élément est soumis à la [compartimentation de la taille](/fr/docs/Web/CSS/Guides/Containment/Using#compartimentation_de_la_taille).
 
 La taille en ligne est la taille de l'élément dans la dimension parallèle au flux de texte au sein d'une ligne.
 Dans un [mode d'écriture](/fr/docs/Web/CSS/Reference/Properties/writing-mode) horizontal comme le français standard, la taille en ligne correspond à la dimension horizontale (largeur)&nbsp;; dans un mode d'écriture vertical, elle correspond à la dimension verticale.
