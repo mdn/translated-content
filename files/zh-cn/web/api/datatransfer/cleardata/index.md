@@ -85,12 +85,17 @@ droppable.addEventListener("drop", dropHandler);
 
 function dragStartHandler(event) {
   status.textContent = "拖拽中";
+
   // 修改目标元素的边框以表示已开始拖拽
   event.currentTarget.style.border = "1px dashed blue";
+
   // 首先清除现有的剪贴板内容；这将影响所有类型，因为我们没有指定特定类型。
+
   event.dataTransfer.clearData();
+
   // 设置拖拽的格式和数据（使用事件目标的 id 作为数据）
   event.dataTransfer.setData("text/plain", event.target.id);
+
   data.textContent = event.dataTransfer.getData("text/plain");
 }
 
