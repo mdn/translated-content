@@ -16,7 +16,7 @@ using name1 = value1, name2 = value2, /* …, */ nameN = valueN;
 ```
 
 - `nameN`
-  - 要声明的变量名。每个变量名必须是合法的 JavaScript [标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#标识符)，且*不能是*[解构赋值模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)。
+  - 要声明的变量名。每个变量名必须是合法的 JavaScript [标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#标识符)，且*不能用*[解构赋值模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)。
 - `valueN`
   - 变量的初始值，可以是任意合法的表达式，但值必须是 `null`、`undefined` 或是一个实现了 `[Symbol.dispose]()` 方法的对象。
 
@@ -89,7 +89,7 @@ function example() {
 }
 ```
 
-这里，`resource[Symbol.dispose]()` 会在 `getValue()` 后， `return` 语句执行前被调用。
+这里，`resource[Symbol.dispose]()` 会在 `getValue()` 之后， `return` 语句执行前被调用。
 
 在资源被[闭包](/zh-CN/docs/Web/JavaScript/Guide/Closures)捕获的情况下，资源的生命周期可能会超出其声明时的作用域：
 
@@ -100,7 +100,7 @@ function example() {
 }
 ```
 
-在本示例中，如果你调用 `example()()`，你总是会在一个已经被释放的资源上执行 `getValue`，这是因为资源在 `example` 返回时就已经被释放。如果你希望回调被调用一次后就立即释放资源，可以考虑这个模式：
+在本示例中，如果你调用 `example()()`，将总是会在一个已经被释放的资源上执行 `getValue`，这是因为资源在 `example` 返回时就已经被释放。如果你希望回调被调用一次后就立即释放资源，可以考虑这个模式：
 
 ```js
 function example() {
