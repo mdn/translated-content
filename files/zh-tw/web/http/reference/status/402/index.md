@@ -2,7 +2,7 @@
 title: 402 Payment Required
 slug: Web/HTTP/Reference/Status/402
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 {{SeeCompatTable}}
@@ -36,13 +36,13 @@ Content-Length: 402
     "currency": "EUR",
     "sender_account_uri": "pan:5299920000000149;exp=2020-08;cvc=123",
     "sender": {
-      "first_name": "Brian",
-      "middle_name": "Smith",
+      "first_name": "Amelia",
+      "middle_name": "Rosenburg",
       "email": "test123@sender.example.com"
     },
     "recipient": {
-      "first_name": "John",
-      "middle_name": "Tyler",
+      "first_name": "Tyrone",
+      "middle_name": "Johnston",
       "email": "test123@example.com",
       "merchant_id": "123"
     },
