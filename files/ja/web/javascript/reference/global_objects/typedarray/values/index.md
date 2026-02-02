@@ -1,25 +1,24 @@
 ---
 title: TypedArray.prototype.values()
+short-title: values()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/values
 l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`values()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、配列内の各インデックスに対する値を持つ新しい[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.values()")}} と同じです。
 
-{{InteractiveExample("JavaScript デモ: TypedArray.values()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.values()")}}
 
 ```js interactive-example
-const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
-const array1 = uint8.values();
+const bytes = new Uint8Array([10, 20, 30, 40, 50]);
+const iterator = bytes.values();
 
-array1.next();
-array1.next();
+iterator.next();
+iterator.next();
 
-console.log(array1.next().value);
-// Expected output: 30
+console.log(iterator.next().value);
+// 予想される結果: 30
 ```
 
 ## 構文

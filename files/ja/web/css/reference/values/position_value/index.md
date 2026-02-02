@@ -1,9 +1,8 @@
 ---
 title: <position>
 slug: Web/CSS/Reference/Values/position_value
-original_slug: Web/CSS/position_value
 l10n:
-  sourceCommit: 243dd73fe136031badaef52c3e6133b21bcf7a07
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
 **`<position>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、 2 次元の座標を表し、要素ボックスからの相対的な位置を示すために用いられます。 {{cssxref("background-position")}}, {{cssxref("object-position")}}, {{cssxref("mask-position")}}, {{cssxref("offset-position")}}, {{cssxref("offset-anchor")}}, {{cssxref("transform-origin")}} で使用されています。
@@ -83,8 +82,8 @@ bottom top
 
 ## 関連情報
 
-- [CSS 値と単位](/ja/docs/Web/CSS/Guides/Values_and_units)
-- [CSS 値と単位の紹介](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
+- [CSS 値と単位](/ja/docs/Web/CSS/Guides/Values_and_units)モジュール
+- [学習: CSS 値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - {{cssxref("background-position")}}
 - {{cssxref("gradient/radial-gradient", "radial-gradient()")}}
 - {{cssxref("gradient/conic-gradient", "conic-gradient()")}}

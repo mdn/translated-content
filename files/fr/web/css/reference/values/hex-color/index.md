@@ -3,12 +3,12 @@ title: <hex-color>
 slug: Web/CSS/Reference/Values/hex-color
 original_slug: Web/CSS/hex-color
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<hex-color>`** est une notation permettant de décrire la _syntaxe de couleur hexadécimale_ d'une couleur [sRGB](/fr/docs/Glossary/RGB) en utilisant ses composantes principales (rouge, vert, bleu) écrites sous forme de nombres hexadécimaux, ainsi que sa transparence.
 
-Une valeur `<hex-color>` peut être utilisée partout où une valeur {{cssxref("&lt;color&gt;")}} peut l'être.
+Une valeur `<hex-color>` peut être utilisée partout où une valeur {{CSSxRef("&lt;color&gt;")}} peut l'être.
 
 ## Syntaxe
 
@@ -27,7 +27,7 @@ Une valeur `<hex-color>` peut être utilisée partout où une valeur {{cssxref("
   - : La composante _verte_ de la couleur, sous forme de nombre hexadécimal insensible à la casse entre `0` et `ff` (255). S'il n'y a qu'un seul chiffre, il est dupliqué&nbsp;: `c` signifie `cc`.
 - `B` ou `BB`
   - : La composante _bleue_ de la couleur, sous forme de nombre hexadécimal insensible à la casse entre `0` et `ff` (255). S'il n'y a qu'un seul chiffre, il est dupliqué&nbsp;: `9` signifie `99`.
-- `A` ou `AA` {{optional_inline}}
+- `A` ou `AA` {{Optional_Inline}}
   - : La composante _alpha_ de la couleur, indiquant sa transparence, sous forme de nombre hexadécimal insensible à la casse entre `0` et `ff` (255). S'il n'y a qu'un seul chiffre, il est dupliqué&nbsp;: `e` signifie `ee`. `0` ou `00` représente une couleur totalement transparente, et `f` ou `ff` une couleur totalement opaque.
 
 > [!NOTE]
@@ -111,7 +111,7 @@ div {
 
 ## Voir aussi
 
-- Le type de donnée {{cssxref("&lt;color&gt;")}}
-- Le type de donnée {{cssxref("named-color")}}
-- La fonction couleur {{cssxref("color_value/rgb","rgb()")}}
+- Le type de donnée {{CSSxRef("&lt;color&gt;")}}
+- Le type de donnée {{CSSxRef("named-color")}}
+- La fonction couleur {{CSSxRef("color_value/rgb","rgb()")}}
 - Le module [Couleur CSS](/fr/docs/Web/CSS/Guides/Colors)

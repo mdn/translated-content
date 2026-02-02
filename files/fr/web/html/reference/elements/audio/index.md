@@ -57,7 +57,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     - `use-credentials`
       - : Envoie une requête cross-origin avec information d'identification. Autrement dit, il envoie l'en-tête HTTP `Origin:` avec un cookie, un certificat ou une authentification HTTP Basic. Si le serveur ne fournit pas d'identifiants au site d'origine (via l'en-tête HTTP `Access-Control-Allow-Credentials:`), la ressource sera _contaminées_ et son utilisation sera restreinte.
 
-    Si l'attribut n'est pas présent, la ressource est récupérée sans requête CORS (c'est-à-dire sans envoyer l'en-tête HTTP `Origin:`), ce qui empêche son utilisation non contaminée dans les éléments {{HTMLElement('canvas')}}. Si la valeur est invalide, elle est traitée comme si le mot-clé énuméré **anonymous** était utilisé. Voir [attributs de configuration CORS](/fr/docs/Web/HTML/Reference/Attributes/crossorigin) pour plus d'informations.
+    Si l'attribut n'est pas présent, la ressource est récupérée sans requête CORS (c'est-à-dire sans envoyer l'en-tête HTTP `Origin:`), ce qui empêche son utilisation non contaminée dans les éléments {{HTMLElement("canvas")}}. Si la valeur est invalide, elle est traitée comme si le mot-clé énuméré **anonymous** était utilisé. Voir [attributs de configuration CORS](/fr/docs/Web/HTML/Reference/Attributes/crossorigin) pour plus d'informations.
 
 - `disableremoteplayback`
   - : Un attribut booléen utilisé pour désactiver la capacité de lecture à distance sur les appareils connectés via des technologies filaires (HDMI, DVI, etc.) ou sans fil (Miracast, Chromecast, DLNA, AirPlay, etc.). Voir la [spécification de l'API Remote Playback <sup>(angl.)</sup>](https://w3c.github.io/remote-playback/#the-disableremoteplayback-attribute) pour plus d'informations.
@@ -223,7 +223,7 @@ Vous pouvez aussi utiliser {{DOMxRef("EventTarget.addEventListener", "addEventLi
 
 ## Accessibilité
 
-Les éléments audio contenant des dialogues parlés doivent fournir des sous-titres et des transcriptions qui décrivent précisément le contenu. Les sous-titres, qui sont spécifiés à l'aide de [WebVTT](/fr/docs/Web/API/WebVTT_API), ils permettent aux personnes souffrant de troubles auditifs ou ne pouvant pas utiliser le son de l'appareil de lire le fichier. Les transcriptions permettent aux personnes ayant besoin de plus de temps pour lire le contenu d'utiliser un format plus adéquat.
+Les éléments audio contenant des dialogues parlés doivent fournir des sous-titres et des transcriptions qui décrivent précisément le contenu. Les sous-titres, qui sont définis à l'aide de [WebVTT](/fr/docs/Web/API/WebVTT_API), ils permettent aux personnes souffrant de troubles auditifs ou ne pouvant pas utiliser le son de l'appareil de lire le fichier. Les transcriptions permettent aux personnes ayant besoin de plus de temps pour lire le contenu d'utiliser un format plus adéquat.
 
 Si un service de sous-titre automatique est utilisé, il est nécessaire de vérifier le contenu généré afin de s'assurer qu'il correspond correctement à la source audio.
 

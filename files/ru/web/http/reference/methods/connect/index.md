@@ -17,20 +17,24 @@ slug: Web/HTTP/Reference/Methods/CONNECT
     </tr>
     <tr>
       <th scope="row">Успешный ответ имеет тело</th>
-      <td>Да</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Безопасный")}}</th>
       <td>Нет</td>
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Идемпотентный")}}
+        {{Glossary("Safe/HTTP", "Безопасный")}}
       </th>
       <td>Нет</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Кешируемый")}}</th>
+      <th scope="row">
+        {{Glossary("Idempotent", "Идемпотентный")}}
+      </th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Cacheable", "Кешируемый")}}
+      </th>
       <td>Нет</td>
     </tr>
     <tr>

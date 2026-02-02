@@ -845,7 +845,7 @@
 /ja/docs/DOM/form.submit	/ja/docs/Web/API/HTMLFormElement/submit
 /ja/docs/DOM/form.target	/ja/docs/Web/API/HTMLFormElement/target
 /ja/docs/DOM/range	/ja/docs/Web/API/Range
-/ja/docs/DOM/range.collapsed	/ja/docs/Web/API/Range/collapsed
+/ja/docs/DOM/range.collapsed	/ja/docs/Web/API/AbstractRange/collapsed
 /ja/docs/DOM/range.intersectsNode	/ja/docs/Web/API/Range/intersectsNode
 /ja/docs/DOM/selection	/ja/docs/Web/API/Selection
 /ja/docs/DOM/stylesheet	/ja/docs/Web/API/StyleSheet
@@ -1095,7 +1095,7 @@
 /ja/docs/DOM:form.method	/ja/docs/Web/API/HTMLFormElement/method
 /ja/docs/DOM:form.submit	/ja/docs/Web/API/HTMLFormElement/submit
 /ja/docs/DOM:range	/ja/docs/Web/API/Range
-/ja/docs/DOM:range.collapsed	/ja/docs/Web/API/Range/collapsed
+/ja/docs/DOM:range.collapsed	/ja/docs/Web/API/AbstractRange/collapsed
 /ja/docs/DOM:selection	/ja/docs/Web/API/Selection
 /ja/docs/DOM:window	/ja/docs/Web/API/Window
 /ja/docs/DOM:window.alert	/ja/docs/Web/API/Window/alert
@@ -2512,6 +2512,7 @@
 /ja/docs/MDN/Tools/KumaScript/Troubleshooting	https://github.com/mdn/yari/blob/main/docs/kumascript/troubleshooting-errors.md
 /ja/docs/MDN/User_guide	https://github.com/mdn/yari/tree/main/docs
 /ja/docs/MDN/Writing_guidelines/Howto/Tag	/ja/docs/MDN/Writing_guidelines/Howto
+/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_landing_page_template	/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_page_template
 /ja/docs/MDN/Writing_guidelines/Page_structures/Quicklinks	/ja/docs/MDN/Writing_guidelines/Page_structures/Sidebars
 /ja/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion	/ja/docs/MDN/Writing_guidelines/Criteria_for_inclusion
 /ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide	/ja/docs/MDN/Writing_guidelines/Code_style_guide
@@ -3320,16 +3321,11 @@
 /ja/docs/Web/API/RTCConfiguration	/ja/docs/Web/API/RTCPeerConnection/RTCPeerConnection
 /ja/docs/Web/API/RandomSource	/ja/docs/Web/API/Crypto/getRandomValues
 /ja/docs/Web/API/RandomSource/getRandomValues	/ja/docs/Web/API/Crypto/getRandomValues
-/ja/docs/Web/API/Range1	/ja/docs/Web/API/Range
-/ja/docs/Web/API/Range1/cloneContents	/ja/docs/Web/API/Range/cloneContents
-/ja/docs/Web/API/Range1/collapsed	/ja/docs/Web/API/Range/collapsed
-/ja/docs/Web/API/Range1/commonAncestorContainer	/ja/docs/Web/API/Range/commonAncestorContainer
-/ja/docs/Web/API/Range1/endContainer	/ja/docs/Web/API/Range/endContainer
-/ja/docs/Web/API/Range1/endOffset	/ja/docs/Web/API/Range/endOffset
-/ja/docs/Web/API/Range1/intersectsNode	/ja/docs/Web/API/Range/intersectsNode
-/ja/docs/Web/API/Range1/setStart	/ja/docs/Web/API/Range/setStart
-/ja/docs/Web/API/Range1/startContainer	/ja/docs/Web/API/Range/startContainer
-/ja/docs/Web/API/Range1/startOffset	/ja/docs/Web/API/Range/startOffset
+/ja/docs/Web/API/Range/collapsed	/ja/docs/Web/API/AbstractRange/collapsed
+/ja/docs/Web/API/Range/endContainer	/ja/docs/Web/API/AbstractRange/endContainer
+/ja/docs/Web/API/Range/endOffset	/ja/docs/Web/API/AbstractRange/endOffset
+/ja/docs/Web/API/Range/startContainer	/ja/docs/Web/API/AbstractRange/startContainer
+/ja/docs/Web/API/Range/startOffset	/ja/docs/Web/API/AbstractRange/startOffset
 /ja/docs/Web/API/Request/priority	/ja/docs/orphaned/Web/API/Request/priority
 /ja/docs/Web/API/Resource_Timing_API	/ja/docs/Web/API/Performance_API/Resource_timing
 /ja/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API	/ja/docs/Web/API/Performance_API/Resource_timing
@@ -3380,6 +3376,11 @@
 /ja/docs/Web/API/SpeechRecognitionError	/ja/docs/Web/API/SpeechRecognitionErrorEvent
 /ja/docs/Web/API/SpeechRecognitionEvent/emma	/ja/docs/Web/API/SpeechRecognitionEvent
 /ja/docs/Web/API/SpeechRecognitionEvent/interpretation	/ja/docs/Web/API/SpeechRecognitionEvent
+/ja/docs/Web/API/StaticRange/collapsed	/ja/docs/Web/API/AbstractRange/collapsed
+/ja/docs/Web/API/StaticRange/endContainer	/ja/docs/Web/API/AbstractRange/endContainer
+/ja/docs/Web/API/StaticRange/endOffset	/ja/docs/Web/API/AbstractRange/endOffset
+/ja/docs/Web/API/StaticRange/startContainer	/ja/docs/Web/API/AbstractRange/startContainer
+/ja/docs/Web/API/StaticRange/startOffset	/ja/docs/Web/API/AbstractRange/startOffset
 /ja/docs/Web/API/StorageEstimate	/ja/docs/Web/API/StorageManager/estimate
 /ja/docs/Web/API/SyncEvent/registration	/ja/docs/Web/API/SyncEvent
 /ja/docs/Web/API/Text/replaceWholeText	/ja/docs/Web/API/Text
@@ -4529,7 +4530,7 @@
 /ja/docs/Web/CSS/Common_CSS_Questions	/ja/docs/Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
 /ja/docs/Web/CSS/Compositing_and_Blending	/ja/docs/Web/CSS/Guides/Compositing_and_blending
 /ja/docs/Web/CSS/Containing_block	/ja/docs/Web/CSS/Guides/Display/Containing_block
-/ja/docs/Web/CSS/Currentcolor	/ja/docs/Web/CSS/Reference/Values/color_value#currentColor_keyword
+/ja/docs/Web/CSS/Currentcolor	/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード
 /ja/docs/Web/CSS/Descendant_combinator	/ja/docs/Web/CSS/Reference/Selectors/Descendant_combinator
 /ja/docs/Web/CSS/Descendant_selectors	/ja/docs/Web/CSS/Reference/Selectors/Descendant_combinator
 /ja/docs/Web/CSS/Filter_Effects	/ja/docs/Web/CSS/Guides/Filter_effects
@@ -5179,6 +5180,7 @@
 /ja/docs/Web/CSS/ruby-align	/ja/docs/Web/CSS/Reference/Properties/ruby-align
 /ja/docs/Web/CSS/ruby-position	/ja/docs/Web/CSS/Reference/Properties/ruby-position
 /ja/docs/Web/CSS/scale	/ja/docs/Web/CSS/Reference/Properties/scale
+/ja/docs/Web/CSS/scroll	/ja/docs/Web/CSS/Reference/Properties/animation-timeline/scroll
 /ja/docs/Web/CSS/scroll-behavior	/ja/docs/Web/CSS/Reference/Properties/scroll-behavior
 /ja/docs/Web/CSS/scroll-margin	/ja/docs/Web/CSS/Reference/Properties/scroll-margin
 /ja/docs/Web/CSS/scroll-margin-block	/ja/docs/Web/CSS/Reference/Properties/scroll-margin-block
@@ -5346,6 +5348,7 @@
 /ja/docs/Web/CSS/var	/ja/docs/Web/CSS/Reference/Values/var
 /ja/docs/Web/CSS/var()	/ja/docs/Web/CSS/Reference/Values/var
 /ja/docs/Web/CSS/vertical-align	/ja/docs/Web/CSS/Reference/Properties/vertical-align
+/ja/docs/Web/CSS/view	/ja/docs/Web/CSS/Reference/Properties/animation-timeline/view
 /ja/docs/Web/CSS/view-timeline	/ja/docs/Web/CSS/Reference/Properties/view-timeline
 /ja/docs/Web/CSS/view-timeline-axis	/ja/docs/Web/CSS/Reference/Properties/view-timeline-axis
 /ja/docs/Web/CSS/view-timeline-inset	/ja/docs/Web/CSS/Reference/Properties/view-timeline-inset

@@ -2,7 +2,7 @@
 title: "<area> : l'élément de zone"
 slug: Web/HTML/Reference/Elements/area
 l10n:
-  sourceCommit: e00212a2a707a57b49b58b37a6a6c978aaef2bbd
+  sourceCommit: 995f8bcede5aa8ca40921b030deef7524ce9e1a3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<area>`** définit une zone à l'intérieur d'une image qui possède des zones cliquables prédéfinies. Une _image_ permet d'associer des zones géométriques d'une image à des {{Glossary("Hyperlink", "liens hypertextes")}}.
@@ -82,7 +82,7 @@ Les attributs de cet élément incluent les [attributs universels](/fr/docs/Web/
   - : La cible du lien hypertexte pour la zone.
     Sa valeur est une URL valide.
     Cet attribut peut être omis&nbsp;; dans ce cas, l'élément `<area>` ne représente pas un lien hypertexte.
-- `interestfor` {{Experimental_Inline}}
+- `interestfor` {{Experimental_Inline}} {{Non-standard_Inline}}
   - : Définit l'élément `<area>` comme un **invocateur d'intérêt** (<i lang="en">interest invoker</i>). Sa valeur est l'`id` de l'élément cible, qui sera affecté d'une manière ou d'une autre (généralement affiché ou masqué) lorsque l'intérêt est montré ou perdu sur l'élément invocateur (par exemple au survol/fin de survol ou à la sélection/perte de sélection). Voir [Utilisation des invocateurs d'intérêt](/fr/docs/Web/API/Popover_API/Using_interest_invokers) pour plus de détails et d'exemples.
 - `ping`
   - : Contient une liste d'URL séparées par des espaces vers lesquelles, lors du suivi du lien, des requêtes {{HTTPMethod("POST")}} avec le corps `PING` seront envoyées par le navigateur (en arrière-plan).
@@ -96,18 +96,18 @@ Les attributs de cet élément incluent les [attributs universels](/fr/docs/Web/
     - `same-origin`&nbsp;: Un référent sera envoyé pour la {{Glossary("Same-origin policy", "même origine")}}, mais les requêtes inter-origines ne contiendront aucune information de référent.
     - `strict-origin`&nbsp;: N'envoie l'origine du document comme référent que lorsque le niveau de sécurité du protocole reste le même (HTTPS→HTTPS), mais ne l'envoie pas vers une destination moins sécurisée (HTTPS→HTTP).
     - `strict-origin-when-cross-origin` (par défaut)&nbsp;: Envoie une URL complète lors d'une requête même origine, n'envoie que l'origine lorsque le niveau de sécurité du protocole reste le même (HTTPS→HTTPS), et n'envoie aucun en-tête vers une destination moins sécurisée (HTTPS→HTTP).
-    - `unsafe-url`&nbsp;: Le référent envoyé inclura l'origine et le chemin (mais pas le [fragment](/fr/docs/Web/API/HTMLAnchorElement/hash), le [mot de passe](/fr/docs/Web/API/HTMLAnchorElement/password) ou le [nom d'utilisateur](/fr/docs/Web/API/HTMLAnchorElement/username)).
+    - `unsafe-url`&nbsp;: Le référent envoyé inclura l'origine et le chemin (mais pas le [fragment](/fr/docs/Web/API/HTMLAnchorElement/hash), le [mot de passe](/fr/docs/Web/API/HTMLAnchorElement/password) ou le [nom d'utilisateur·ice](/fr/docs/Web/API/HTMLAnchorElement/username)).
       **Cette valeur n'est pas sûre**, car elle divulgue des origines et des chemins de ressources protégées par TLS vers des origines non sécurisées.
 
 - [`rel`](/fr/docs/Web/HTML/Reference/Attributes/rel)
   - : Pour les ancres contenant l'attribut [`href`](#href), cet attribut définit la relation de l'objet cible à l'objet du lien.
     La valeur est une liste de types de liens séparés par des espaces.
-    Les valeurs et leur signification seront enregistrées par une autorité qui pourrait avoir une signification pour l'auteur ou l'autrice du document.
+    Les valeurs et leur signification seront enregistrées par une autorité qui pourrait avoir une signification pour l'auteur·ice du document.
     La relation par défaut, si aucune autre n'est donnée, est vide. Utilisez cet attribut uniquement si l'attribut [`href`](#href) est présent.
 - `shape`
   - : La forme de la zone associée. Les spécifications HTML définissent les valeurs `rect`, qui définit une région rectangulaire&nbsp;; `circle`, qui définit une région circulaire&nbsp;; `poly`, qui définit un polygone&nbsp;; et `default`, qui indique toute la région au-delà des formes définies.
 - `target`
-  - : Un mot-clé ou un nom défini par l'auteur ou l'autrice du {{Glossary("browsing context", "contexte de navigation")}} pour afficher la ressource liée.
+  - : Un mot-clé ou un nom défini par l'auteur·ice du {{Glossary("browsing context", "contexte de navigation")}} pour afficher la ressource liée.
     Les mots-clés suivants ont des significations particulières&nbsp;:
     - `_self` (valeur par défaut)&nbsp;: Affiche la ressource dans le contexte de navigation actuel.
     - `_blank`&nbsp;: Affiche la ressource dans un nouveau contexte de navigation sans nom.

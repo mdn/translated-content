@@ -55,7 +55,7 @@ Dans les langues qui possèdent la notion de [nombre grammatical](<https://fr.wi
 
 Le but de cet élément est purement d'apporter une commodité à l'auteur·ice et tous les navigateurs l'affichent en ligne ({{CSSxRef("display", "display: inline")}}) par défaut, même si la mise en forme par défaut varie d'un navigateur à l'autre&nbsp;:
 
-Certains navigateurs ajoutent un soulignement en pointillés au contenu de l'élément. D'autres ajoutent ce soulignement tout en convertissant le contenu en petites majuscules. D'autres encore n'appliquent pas de style particulier, l'affichant comme un élément {{HTMLElement("span")}}. Pour contrôler cette mise en forme, utilisez les propriétés CSS {{CSSxRef('text-decoration')}} et {{CSSxRef('font-variant')}}.
+Certains navigateurs ajoutent un soulignement en pointillés au contenu de l'élément. D'autres ajoutent ce soulignement tout en convertissant le contenu en petites majuscules. D'autres encore n'appliquent pas de style particulier, l'affichant comme un élément {{HTMLElement("span")}}. Pour contrôler cette mise en forme, utilisez les propriétés CSS {{CSSxRef("text-decoration")}} et {{CSSxRef("font-variant")}}.
 
 ## Accessibilité
 

@@ -203,6 +203,7 @@
 /ko/docs/Glossary/Symbol	/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /ko/docs/Glossary/Transmission_Control_Protocol_(TCP)	/ko/docs/Glossary/TCP
 /ko/docs/Glossary/XHR_(XMLHttpRequest)	/ko/docs/Glossary/XMLHttpRequest
+/ko/docs/Glossary/eTLD	/ko/docs/Glossary/Registrable_domain
 /ko/docs/Glossary/배열	/ko/docs/Glossary/Array
 /ko/docs/Glossary/불린	/ko/docs/Glossary/Boolean
 /ko/docs/Glossary/브라우저-컨텍스트	/ko/docs/Glossary/Browsing_context

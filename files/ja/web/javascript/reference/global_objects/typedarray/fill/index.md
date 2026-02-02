@@ -1,23 +1,22 @@
 ---
 title: TypedArray.prototype.fill()
+short-title: fill()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/fill
 l10n:
-  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`fill()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列のある範囲のインデックスにあるすべての要素を固定値で埋めます。これは変更された型付き配列を返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.fill()")}} と同じです。
 
-{{InteractiveExample("JavaScript デモ: TypedArray.fill()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.fill()", "shorter")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([0, 0, 0, 0]);
-// Value, start position, end position
+// 値、開始位置、終了位置
 uint8.fill(4, 1, 3);
 
 console.log(uint8);
-// Expected output: Uint8Array [0, 4, 4, 0]
+// 予想される結果: Uint8Array [0, 4, 4, 0]
 ```
 
 ## 構文
