@@ -29,9 +29,9 @@ Host: example.com
 ```http
 HTTP/1.1 410 Gone
 Content-Type: text/html
-Content-Length: 212
+Content-Length: 210
 
-lang="zh-Hant-TW"
+<html lang="zh-Hant-TW">
 <head>
   <title>促銷已結束</title>
 </head>
