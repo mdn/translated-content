@@ -15,7 +15,7 @@ l10n:
 此方法*不会*从拖拽操作中删除文件，因此如果在拖拽文件，则可能会在 {{domxref("DataTransfer.types")}} 列表中存在类型为 `"Files"` 的条目。
 
 > [!NOTE]
-> 因为拖拽操作的数据存储只在 {{domxref("HTMLElement/dragstart_event", "dragstart")}} 的处理器中可写，因此你只能在此事件的处理器中调用此方法。
+> 因为拖拽操作的数据存储只在 {{domxref("HTMLElement/dragstart_event", "dragstart")}} 的处理器中可写，你只能在此事件的处理器中调用此方法。
 
 ## 语法
 
