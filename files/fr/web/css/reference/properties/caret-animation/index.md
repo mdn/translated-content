@@ -51,7 +51,7 @@ Cet exemple montre la différence entre le fait d'avoir `caret-animation` défin
 
 #### HTML
 
-Le balisage comporte deux éléments HTML {{HTMLElement("p")}} avec l'attribut [`contenteditable`](/fr/docs/Web/HTML/Global_attributes/contenteditable) pour les rendre éditables.
+Le balisage comporte deux éléments HTML {{HTMLElement("p")}} avec l'attribut [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable) pour les rendre éditables.
 
 ```html live-sample___caret-animation-basic
 <p contenteditable="true">
@@ -96,7 +96,7 @@ Dans cet exemple, une animation de curseur personnalisée est appliquée à un p
 
 #### HTML
 
-Le balisage comporte un élément HTML {{HTMLElement("p")}} et deux éléments HTML {{HTMLElement("input")}} texte. L'élément `<p>` possède l'attribut [`contenteditable`](/fr/docs/Web/HTML/Global_attributes/contenteditable) pour le rendre éditable. Le paragraphe et le premier champ de saisie texte ont une classe `custom-caret`.
+Le balisage comporte un élément HTML {{HTMLElement("p")}} et deux éléments HTML {{HTMLElement("input")}} texte. L'élément `<p>` possède l'attribut [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable) pour le rendre éditable. Le paragraphe et le premier champ de saisie texte ont une classe `custom-caret`.
 
 ```html live-sample___caret-animation-custom
 <p contenteditable="true" class="custom-caret">
