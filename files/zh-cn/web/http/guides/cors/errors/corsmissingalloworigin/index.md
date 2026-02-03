@@ -1,6 +1,8 @@
 ---
 title: 原因：CORS header 'Access-Control-Allow-Origin' missing
 slug: Web/HTTP/Guides/CORS/Errors/CORSMissingAllowOrigin
+l10n:
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 ## 原因
@@ -32,13 +34,17 @@ Access-Control-Allow-Origin: *
 
 如果要在*不使用* `*` 通配符的情况下让任意站点发出 CORS 请求（例如，为了启用凭证），你的服务器必须读取请求的 `Origin` 标头，将那个值设置为 `Access-Control-Allow-Origin` 的值，且必须一并设置 `Vary: Origin` 标头，表明一部分标头由源动态决定。
 
-设置标头的命令取决于你的 Web 服务器。例如，在 Apache 服务器中，将下面一行添加到服务器的配置中（在相应的 `<Directory>`、`<Location>`、`<Files>` 或 `<VirtualHost>` 部分中）。配置通常位于 `.conf` 文件中（`httpd.conf` 和 `apache.conf` 是这些文件的通用名称）或者位于 `.htaccess` 文件中。
+## 常见 web 服务器的示例
+
+设置标头的指令取决于你的 Web 服务器。
+
+例如，在 **Apache**（[文档](https://httpd.apache.org/docs/2.4/mod/mod_headers.html#header)），将下面一行添加到服务器的配置中（在相应的 `<Directory>`、`<Location>`、`<Files>` 或 `<VirtualHost>` 部分中）。配置通常位于 `.conf`（`httpd.conf` 和 `apache.conf` 是这些文件的通用名称）或 `.htaccess` 文件中。
 
 ```apacheconf
 Header set Access-Control-Allow-Origin 'https://example.com'
 ```
 
-对于 Nginx，设置此标头的命令是：
+对于 **Nginx**（[文档](https://nginx.org/en/docs/http/ngx_http_headers_module.html#add_header)），设置此标头的命令是：
 
 ```nginx
 add_header 'Access-Control-Allow-Origin' 'https://example.com' always;

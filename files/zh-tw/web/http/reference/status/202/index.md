@@ -2,7 +2,7 @@
 title: 202 Accepted
 slug: Web/HTTP/Reference/Status/202
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 HTTP **`202 Accepted`** [成功回應](/zh-TW/docs/Web/HTTP/Reference/Status#成功回應)狀態碼表示伺服器已接受請求以進行處理，但處理尚未完成，也可能尚未開始。實際上，請求的處理並不保證會完成；任務可能會失敗，或伺服器在嘗試處理時會拒絕請求。

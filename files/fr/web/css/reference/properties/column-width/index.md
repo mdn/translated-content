@@ -1,14 +1,15 @@
 ---
 title: column-width
 slug: Web/CSS/Reference/Properties/column-width
-original_slug: Web/CSS/column-width
+l10n:
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`column-width`** définit la largeur optimale d'une colonne dans une mise en page multi-colonnes. Le conteneur comporte autant de colonnes que l'espace le permet, sans qu'aucune d'elles n'ait une largeur inférieure à la valeur `column-width`. Si la largeur du conteneur est inférieure à la valeur définie, la largeur de la colonne unique sera plus petite que la largeur déclarée.
 
-La propriété **`column-width`** définit une largeur de colonne idéale lorsqu'on utilise une disposition en colonnes. Aussi, on aura le plus de colonnes possible et pour lesquelles aucune n'est moins large que `column-width`. La colonne réelle peut être plus petite que cette taille si son conteneur est moins large que cette valeur.
+Cette propriété vous aide à créer des mises en page réactives adaptées à différentes tailles d'écran. En particulier, en présence de la propriété {{CSSxRef("column-count")}} (qui a la priorité), vous devez définir toutes les longueurs associées pour obtenir une largeur de colonne exacte. Dans le texte horizontal, il s'agit de {{CSSxRef('width')}}, `column-width`, {{CSSxRef('column-gap')}} et {{CSSxRef('column-rule-width')}}.
 
-{{InteractiveExample("CSS Demo: column-width")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: column-width")}}
 
 ```css interactive-example-choice
 column-width: auto;
@@ -29,11 +30,12 @@ column-width: 18ch;
 ```html interactive-example
 <section id="default-example">
   <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+    Londres. Le trimestre de Michaelmas venait de se terminer, et le lord
+    chancelier siégeait dans la salle de Lincoln's Inn. Un novembre implacable.
+    Tant de boue dans les rues comme si les eaux venaient tout juste de se
+    retirer de la surface de la terre, et il ne serait pas étonnant de
+    rencontrer un Megalosaurus, quarante pieds de long environ, se dandinant
+    comme un lézard éléphantesque en montant Holborn Hill.
   </p>
 </section>
 ```
@@ -46,16 +48,13 @@ column-width: 18ch;
 }
 ```
 
-Ainsi, si on a une colonne large de 300px avec un écart de 0px, on pourrait placer une seule colonne sur 599px mais avoir deux colonnes avec 600px. Ce réglage permet donc d'obtenir des effets qui s'adaptent aux différentes tailles d'écrans. Manipulée avec la propriété {{cssxref("column-count")}} qui a la précédence, il est nécessaire de définir toutes les valeurs de longueur pour avoir une largeur de colonne CSS exacte. Pour du texte horizontal, ces propriétés sont {{cssxref('width')}}, {{cssxref('column-width')}}, {{cssxref('column-gap')}} et {{cssxref('column-rule-width')}}.
-
 ## Syntaxe
 
 ```css
 /* Valeur avec un mot-clé */
 column-width: auto;
 
-/* Valeurs de longueur */
-/* Type <length>       */
+/* Valeurs de type <length> */
 column-width: 60px;
 column-width: 15.5em;
 column-width: 3.3vw;
@@ -63,15 +62,19 @@ column-width: 3.3vw;
 /* Valeurs globales */
 column-width: inherit;
 column-width: initial;
+column-width: revert;
+column-width: revert-layer;
 column-width: unset;
 ```
 
+La propriété `column-width` est définie par l'une des valeurs listées ci‑dessous.
+
 ### Valeurs
 
-- `<length>`
-  - : Une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) qui fournit une indication sur la largeur optimale d'une colonne. La colonne réelle peut être plus large que cette longueur (pour remplir l'espace disponible) ou plus étroite (uniquement si l'espace disponible est inférieur à la largeur indiquée). La longueur exprimée doit être strictement positive sinon la déclaration est considérée invalide. Les valeurs exprimées en pourcentages sont invalides.
+- {{CSSxRef("&lt;length&gt;")}}
+  - : Indique la largeur optimale d'une colonne. La largeur réelle de la colonne peut différer de la valeur définie&nbsp;: elle peut être plus large si nécessaire pour remplir l'espace disponible, et plus étroite lorsque l'espace disponible est trop petit. La valeur doit être strictement positive sinon la déclaration est invalide. Les valeurs exprimées en pourcentage sont également invalides.
 - `auto`
-  - : Un mot-clé indiquant que la largeur de la colonne doit être déterminée grâce aux autres propriétés CSS comme {{cssxref("column-count")}}.
+  - : Un mot-clé indiquant que la largeur de la colonne doit être déterminée grâce aux autres propriétés CSS, comme {{CSSxRef("column-count")}}.
 
 ## Définition formelle
 
@@ -83,19 +86,9 @@ column-width: unset;
 
 ## Exemples
 
-### CSS
+### Définir la largeur de colonne en pixels
 
-```css
-.content-box {
-  border: 10px solid #0ff;
-
-  -webkit-column-width: 100px;
-  -moz-column-width: 100px;
-  column-width: 100px;
-}
-```
-
-### HTML
+#### HTML
 
 ```html
 <div class="content-box">
@@ -106,9 +99,17 @@ column-width: unset;
 </div>
 ```
 
-### Résultat
+#### CSS
 
-{{EmbedLiveSample('Exemples', '300px', '200px')}}
+```css
+.content-box {
+  column-width: 100px;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Définir la largeur de colonne en pixels", "auto", 160)}}
 
 ## Spécifications
 
@@ -120,5 +121,5 @@ column-width: unset;
 
 ## Voir aussi
 
-- [Apprendre - La disposition multi-colonnes](/fr/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
+- [Apprendre&nbsp;: La disposition multi-colonnes](/fr/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
 - [Les concepts de base pour la disposition multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout/Basic_concepts)

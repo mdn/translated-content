@@ -1,14 +1,13 @@
 ---
 title: border-inline-end-style
 slug: Web/CSS/Reference/Properties/border-inline-end-style
-original_slug: Web/CSS/border-inline-end-style
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+La propriété [CSS](/fr/docs/Web/CSS) **`border-inline-end-style`** définit le style de la bordure logique en ligne de fin d'un élément, qui correspond à une bordure physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle correspond à la propriété {{CSSxRef("border-top-style")}}, {{CSSxRef("border-right-style")}}, {{CSSxRef("border-bottom-style")}}, ou {{CSSxRef("border-left-style")}}, selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
 
-La propriété **`border-inline-end-style`** définit le style de la bordure utilisé pour le côté de la fin de l'élément dans l'axe de lecture. Cette propriété logique correspondra à une propriété physique selon le mode d'écriture, la directionnalité et l'orientation du texte. Autrement dit, elle correspond à {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}} ou à {{cssxref("border-left-style")}} selon les valeurs de {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
-
-{{InteractiveExample("CSS Demo: border-inline-end-style")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: border-inline-end-style")}}
 
 ```css interactive-example-choice
 border-inline-end-style: dotted;
@@ -29,15 +28,15 @@ direction: rtl;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    Ceci est une boîte avec une bordure autour.
   </div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #000;
+  background-color: #eeeeee;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;
@@ -46,24 +45,26 @@ direction: rtl;
 }
 ```
 
-Les autres propriétés logiques permettant de définir le style de la bordure sont les suivantes :
-
-- {{cssxref("border-block-start-style")}}
-- {{cssxref("border-block-end-style")}}
-- {{cssxref("border-inline-start-style")}}.
-
 ## Syntaxe
 
 ```css
+/* Valeurs de type <'border-style'> */
 border-inline-end-style: dashed;
 border-inline-end-style: dotted;
 border-inline-end-style: groove;
+
+/* Valeurs globales */
+border-inline-end-style: inherit;
+border-inline-end-style: initial;
+border-inline-end-style: revert;
+border-inline-end-style: revert-layer;
+border-inline-end-style: unset;
 ```
 
 ### Valeurs
 
 - `<'border-style'>`
-  - : Le style utilisé pour la ligne de la bordure sur ce côté, voir {{cssxref("border-style")}}
+  - : Le style utilisé pour la ligne de la bordure sur ce côté, voir {{CSSxRef("border-style")}}
 
 ## Définition formelle
 
@@ -75,7 +76,17 @@ border-inline-end-style: groove;
 
 ## Exemples
 
-### CSS
+### Définir `inline-end-style`
+
+#### HTML
+
+```html
+<div>
+  <p class="exempleTexte">Texte d'exemple</p>
+</div>
+```
+
+#### CSS
 
 ```css
 div {
@@ -84,24 +95,16 @@ div {
   height: 120px;
 }
 
-.exemple {
+.exempleTexte {
   writing-mode: vertical-lr;
   border: 5px solid blue;
   border-inline-end-style: dashed;
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<div>
-  <p class="exemple">Texte d'exemple</p>
-</div>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples", 140, 140)}}
+{{EmbedLiveSample("Définir `inline-end-style`", 140, 140)}}
 
 ## Spécifications
 
@@ -113,10 +116,6 @@ div {
 
 ## Voir aussi
 
-- Les propriétés physiques correspondantes :
-  - {{cssxref("border-top-style")}},
-  - {{cssxref("border-right-style")}},
-  - {{cssxref("border-bottom-style")}},
-  - {{cssxref("border-left-style")}}
-
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- [Propriétés et valeurs logiques CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values)
+- Cette propriété correspond à l'une des propriétés physiques de bordure&nbsp;: {{CSSxRef("border-top-color")}}, {{CSSxRef("border-right-color")}}, {{CSSxRef("border-bottom-color")}} et {{CSSxRef("border-left-color")}}
+- Les propriétés {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}

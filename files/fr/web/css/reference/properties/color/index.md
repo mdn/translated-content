@@ -1,14 +1,15 @@
 ---
 title: color
 slug: Web/CSS/Reference/Properties/color
-original_slug: Web/CSS/color
+l10n:
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`color`** permet de définir la valeur de couleur du texte d'un élément et de ses décorations de texte, et définit la valeur [`currentColor`](/fr/docs/Web/CSS/Reference/Values/color_value#mot-clé_currentcolor). `currentColor` peut être utilisée comme valeur indirecte pour d'autres propriétés et constitue la valeur par défaut pour d'autres propriétés de couleur, telles que {{CSSxRef("border-color")}}.
 
-La propriété **`color`** définit la couleur de premier plan d'un élément texte et de ses éventuelles [décorations](/fr/docs/Web/CSS/Reference/Properties/text-decoration). Elle définit également la valeur de {{cssxref("currentColor")}} qui peut être utilisée pour d'autres propriétés (par exemple comme valeur par défaut pour {{cssxref("border-color")}}).
+Pour avoir un aperçu de l'utilisation de la couleur dans HTML, veuillez consulter [Appliquer des couleurs aux éléments HTML grâce à CSS](/fr/docs/Web/CSS/Guides/Colors/Applying_color).
 
-{{InteractiveExample("CSS Demo: color")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: color")}}
 
 ```css interactive-example-choice
 color: rebeccapurple;
@@ -19,7 +20,7 @@ color: #00a400;
 ```
 
 ```css interactive-example-choice
-color: rgb(214, 122, 127);
+color: rgb(214 122 127);
 ```
 
 ```css interactive-example-choice
@@ -27,7 +28,7 @@ color: hsl(30deg 82% 43%);
 ```
 
 ```css interactive-example-choice
-color: hsla(237deg 74% 33% / 61%);
+color: hsl(237deg 74% 33% / 61%);
 ```
 
 ```css interactive-example-choice
@@ -38,8 +39,9 @@ color: hwb(152deg 0% 58% / 70%);
 <section id="default-example">
   <div class="example-container">
     <p id="example-element">
-      London. Michaelmas term lately over, and the Lord Chancellor sitting in
-      Lincoln's Inn Hall. Implacable November weather.
+      Londres. Le trimestre de la Saint-Michel vient de se terminer, et le Lord
+      Chancelier siège dans la salle de Lincoln's Inn. Un temps de novembre
+      implacable.
     </p>
   </div>
 </section>
@@ -56,54 +58,75 @@ color: hwb(152deg 0% 58% / 70%);
 }
 ```
 
-La valeur de cette propriété doit être une couleur uniforme. Celle-ci peut contenir des informations de transparences à partir de CSS3 mais ce ne doit pas être un dégradé ({{cssxref("&lt;gradient&gt;")}}) car en CSS un dégradé est considéré comme une image (type {{cssxref("&lt;image&gt;")}}) et pas comme une couleur.
-
 ## Syntaxe
 
 ```css
 /* Valeurs avec un mot-clé */
 color: currentcolor;
 
-/* Valeurs avec un mot-clé pour une couleur nommée */
+/* Valeurs de type <named-color> */
 color: red;
 color: orange;
 color: tan;
 color: rebeccapurple;
 
-/* Valeurs hexadécimales <hex-color> */
+/* Valeurs de type <hex-color> */
 color: #090;
 color: #009900;
 color: #090a;
 color: #009900aa;
 
-/* Valeurs utilisant la fonction <rgb()> */
+/* Valeurs de fonction <rgb()> et anciennes valeurs <rgba()> */
+color: rgb(34, 12, 64);
 color: rgb(34, 12, 64, 0.6);
 color: rgba(34, 12, 64, 0.6);
 color: rgb(34 12 64 / 0.6);
-color: rgba(34 12 64 / 0.3);
-color: rgb(34 12 64 / 60%);
-color: rgba(34.6 12 64 / 30%);
+color: rgba(34 12 64 / 0.6);
+color: rgb(34.6 12 64 / 60%);
+color: rgba(34.6 12 64 / 60%);
 
-/* Valeurs <hsl()> */
+/* Valeurs de fonction <hsl()> et anciennes valeurs <hsla()> */
+color: hsl(30, 100%, 50%);
 color: hsl(30, 100%, 50%, 0.6);
 color: hsla(30, 100%, 50%, 0.6);
 color: hsl(30 100% 50% / 0.6);
 color: hsla(30 100% 50% / 0.6);
-color: hsl(30 100% 50% / 60%);
+color: hsl(30.2 100% 50% / 60%);
 color: hsla(30.2 100% 50% / 60%);
+
+/*  Valeurs de fonction <hwb()> */
+color: hwb(90 10% 10%);
+color: hwb(90 10% 10% / 0.5);
+color: hwb(90deg 10% 10%);
+color: hwb(1.5708rad 60% 0%);
+color: hwb(0.25turn 0% 40% / 50%);
 
 /* Valeurs globales */
 color: inherit;
 color: initial;
+color: revert;
+color: revert-layer;
 color: unset;
 ```
 
-La propriété `color` est définie grâce à une valeur de type {{cssxref("&lt;color&gt;")}}.
+La propriété `color` est définie grâce à une valeur de type {{CSSxRef("&lt;color&gt;")}}.
 
 ### Valeurs
 
-- `<color>`
-  - : Une valeur de type {{cssxref("&lt;color&gt;")}} qui fournit la couleur pour les éléments textuels de l'élément.
+- {{CSSxRef("&lt;color&gt;")}}
+  - : Définit la couleur des parties textuelles et décoratives de l'élément.
+- [`currentColor`](/fr/docs/Web/CSS/Reference/Values/color_value#mot-clé_currentcolor)
+  - : Définit la couleur à la valeur de la propriété `color` de l'élément. Cependant, si elle est définie comme valeur de `color`, `currentColor` est traité comme `inherit`.
+
+## Accessibilité
+
+Il est important de vérifier le contraste entre la couleur utilisée pour le texte et celle utilisée pour l'arrière-plan afin que les personnes ayant une vision faible ou lisant le document dans de mauvaises conditions puissent correctement lire le document.
+
+Le ratio de contraste est déterminé en comparant la luminosité de la couleur du texte et celle de la couleur d'arrière-plan. Afin de respecter [les règles d'accessibilité (WCAG) <sup>(angl.)</sup>](https://www.w3.org/WAI/standards-guidelines/wcag/), on doit avoir un ratio de 4.5:1 pour les textes «&nbsp;normaux&nbsp;» et un ratio de 3:1 pour les textes plus grands comme les titres (un texte est considéré comme «&nbsp;grand&nbsp;» s'il est en [gras](/fr/docs/Web/CSS/Reference/Properties/font-weight) et qu'une lettre mesure plus de 18.66px ou bien si une lettre mesure plus de 24 pixels).
+
+- [Contrôleur de contraste WebAIM <sup>(angl.)</sup>](https://webaim.org/resources/contrastchecker/)
+- [Explications de la directive 1.4 de WCAG sur MDN](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.4_—_faciliter_la_perception_visuelle_et_auditive_du_contenu_notamment_en_séparant_le_premier_plan_de_larrière-plan)
+- [Comprendre le critère de succès 1.4.3 | W3C Understanding WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ## Définition formelle
 
@@ -115,50 +138,41 @@ La propriété `color` est définie grâce à une valeur de type {{cssxref("&lt;
 
 ## Exemples
 
-### CSS
+### Mettre le texte en rouge
+
+Voici toutes les façons de mettre le texte d'un paragraphe en rouge&nbsp;:
 
 ```css
-.exemple {
-  color: rgb(0, 0, 255);
-  /* équivalent à
-  color: blue;
-  color: #0000ff;
-  color: #00f;
-  color: hsl(0, 100%, 50%); */
+p {
+  color: red;
+}
+p {
+  color: #f00;
+}
+p {
+  color: #ff0000;
+}
+p {
+  color: rgb(255 0 0);
+}
+p {
+  color: rgb(100% 0% 0%);
+}
+p {
+  color: hsl(0 100% 50%);
 }
 
-.confiture {
-  color: orange;
-  /* on pourrait aussi utiliser
-  color: rgb(255, 128, 0); */
+/* 50% transparent */
+p {
+  color: #ff000080;
+}
+p {
+  color: rgb(255 0 0 / 50%);
+}
+p {
+  color: hsl(0 100% 50% / 50%);
 }
 ```
-
-### HTML
-
-```html
-<p class="exemple">
-  En passant elle prit sur un rayon un pot de confiture portant cette étiquette,
-  <span class="confiture"> «&nbsp;MARMELADE D’ORANGES.&nbsp;» </span>
-  Mais, à son grand regret, le pot était vide&nbsp;: elle n’osait le laisser
-  tomber dans la crainte de tuer quelqu’un&nbsp;; aussi s’arrangea-t-elle de
-  manière à le déposer en passant dans une des armoires.
-</p>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples")}}
-
-## Accessibilité
-
-Il est important de vérifier le contraste entre la couleur utilisée pour le texte et celle utilisée pour l'arrière-plan afin que les personnes ayant une vision faible ou lisant le document dans de mauvaises conditions puissent correctement lire le document.
-
-Le ratio de contraste est déterminé en comparant la luminosité de la couleur du texte et celle de la couleur d'arrière-plan. Afin de respecter [les règles d'accessibilité (WCAG)](https://www.w3.org/WAI/intro/wcag), on doit avoir un ratio de 4.5:1 pour les textes « normaux » et un ratio de 3:1 pour les textes plus grands comme les titres (un texte est considéré comme « grand » s'il est en gras et qu'une lettre mesure plus de 18.66 px ou bien si une lettre mesure plus de 24 pixels).
-
-- [Contrôleur de contraste WebAIM](https://webaim.org/resources/contrastchecker/)
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- _[Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)_
 
 ## Spécifications
 
@@ -170,6 +184,9 @@ Le ratio de contraste est déterminé en comparant la luminosité de la couleur 
 
 ## Voir aussi
 
-- Le type de donnée {{cssxref("&lt;color&gt;")}}
-- Les autres propriétés relatives aux couleurs : {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}} et {{cssxref("color-adjust")}}
+- Le type de donnée {{CSSxRef("&lt;color&gt;")}}
+- Les autres propriétés relatives aux couleurs&nbsp;: {{CSSxRef("background-color")}}, {{CSSxRef("border-color")}}, {{CSSxRef("outline-color")}}, {{CSSxRef("text-decoration-color")}}, {{CSSxRef("text-emphasis-color")}}, {{CSSxRef("text-shadow")}}, {{CSSxRef("caret-color")}}, {{CSSxRef("column-rule-color")}} et {{CSSxRef("color-adjust")}}
+- L'attribut SVG {{SVGAttr("color")}}
+- La fonction {{CSSxRef("color_value/color", "color()")}}
 - [Appliquer des couleurs aux éléments HTML grâce à CSS](/fr/docs/Web/CSS/Guides/Colors/Applying_color)
+- [WCAG&nbsp;: contraste des couleurs](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)

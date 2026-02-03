@@ -1,14 +1,13 @@
 ---
 title: border-inline-end-width
 slug: Web/CSS/Reference/Properties/border-inline-end-width
-original_slug: Web/CSS/border-inline-end-width
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+La propriété [CSS](/fr/docs/Web/CSS) **`border-inline-end-width`** définit la largeur de la bordure logique en ligne de fin d'un élément, qui correspond à une bordure physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle correspond à la propriété {{CSSxRef("border-top-width")}}, {{CSSxRef("border-right-width")}}, {{CSSxRef("border-bottom-width")}}, ou {{CSSxRef("border-left-width")}}, selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
 
-La propriété **`border-inline-end-width`** définit la largeur de la bordure pour le côté de la fin « logique » de l'élément. Cette propriété logique correspond à l'une des propriétés physiques équivalentes en fonction du mode d'écriture, de la directionnalité et de l'orientation du texte. Autrement dit, elle correspondra à {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}} ou a {{cssxref("border-left-width")}} selon les valeurs des propriétés pour {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
-
-{{InteractiveExample("CSS Demo: border-inline-end-width")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: border-inline-end-width")}}
 
 ```css interactive-example-choice
 border-inline-end-width: thick;
@@ -29,7 +28,7 @@ direction: rtl;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    Ceci est une boîte avec une bordure autour.
   </div>
 </section>
 ```
@@ -37,7 +36,7 @@ direction: rtl;
 ```css interactive-example
 #example-element {
   background-color: palegreen;
-  color: #000;
+  color: black;
   border: 0 solid crimson;
   padding: 0.75em;
   width: 80%;
@@ -46,21 +45,25 @@ direction: rtl;
 }
 ```
 
-Cette propriété logique est à rapprocher des autres propriétés logiques {{cssxref("border-block-start-width")}}, {{cssxref("border-block-end-width")}} et {{cssxref("border-inline-start-width")}} qui permettent de définir la largeur de la bordure pour les différents côtés de l'élément.
-
 ## Syntaxe
 
 ```css
-/* Valeur de longueur */
-/* Type <length> */
-border-inline-end-width: 5px;
+/* Valeurs de type <'border-width'> */
+border-inline-end-width: 2px;
 border-inline-end-width: thick;
+
+/* Valeurs globales */
+border-inline-end-width: inherit;
+border-inline-end-width: initial;
+border-inline-end-width: revert;
+border-inline-end-width: revert-layer;
+border-inline-end-width: unset;
 ```
 
 ### Valeurs
 
 - `<'border-width'>`
-  - : La largeur de la bordure, voir {{cssxref("border-width")}}.
+  - : La largeur de la bordure, voir {{CSSxRef("border-width")}}.
 
 ## Définition formelle
 
@@ -72,7 +75,17 @@ border-inline-end-width: thick;
 
 ## Exemples
 
-### CSS
+### Appliquer une bordure avec texte vertical
+
+#### HTML
+
+```html
+<div>
+  <p class="exempleTexte">Texte d'exemple</p>
+</div>
+```
+
+#### CSS
 
 ```css
 div {
@@ -81,24 +94,16 @@ div {
   height: 120px;
 }
 
-.exemple {
+.exempleTexte {
   writing-mode: vertical-lr;
   border: 1px solid blue;
   border-inline-end-width: 5px;
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<div>
-  <p class="exemple">Texte d'exemple</p>
-</div>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples", 140, 140)}}
+{{EmbedLiveSample("Appliquer une bordure avec texte vertical", 140, 140)}}
 
 ## Spécifications
 
@@ -110,10 +115,6 @@ div {
 
 ## Voir aussi
 
-- Les propriétés physiques correspondantes :
-  - {{cssxref("border-top-width")}}
-  - {{cssxref("border-right-width")}}
-  - {{cssxref("border-bottom-width")}}
-  - {{cssxref("border-left-width")}}
-
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- [Propriétés et valeurs logiques CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values)
+- Cette propriété correspond à l'une des propriétés physiques de bordure&nbsp;: {{CSSxRef("border-top-color")}}, {{CSSxRef("border-right-color")}}, {{CSSxRef("border-bottom-color")}} et {{CSSxRef("border-left-color")}}
+- Les propriétés {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}

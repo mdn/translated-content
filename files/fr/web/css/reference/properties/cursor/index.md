@@ -1,17 +1,20 @@
 ---
 title: cursor
 slug: Web/CSS/Reference/Properties/cursor
-original_slug: Web/CSS/cursor
 l10n:
-  sourceCommit: 9944f7b12ef1a6aecd54d4b2f0c188a82fdeaaf0
+  sourceCommit: 466df2f8d3da592e8d83b46ca1c31cc63e9a4563
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`cursor`** définit la forme du curseur (s'il y en a un) lorsque le pointeur est au-dessus de l'élément.
 
-Le paramètre du curseur doit informer les utilisateurs des opérations pouvant être effectuées avec la souris à l'emplacement actuel, notamment&nbsp;: sélection de texte, activation des menus d'aide ou contextuels, copie de contenu, redimensionnement des tableaux, etc.
-Vous pouvez spécifier le type de curseur à l'aide d'un mot-clé ou charger une icône spécifique à utiliser (avec des images de replis facultatives et un mot-clé obligatoire comme solution de repli finale).
+Le paramètre du curseur doit informer les utilisateur·ice·s des opérations pouvant être effectuées avec la souris à l'emplacement actuel, notamment&nbsp;: sélection de texte, activation des menus d'aide ou contextuels, copie de contenu, redimensionnement des tableaux, etc.
+Vous pouvez définir le _type_ de curseur à l'aide d'un mot-clé ou charger une icône spécifique à utiliser (avec des images de replis facultatives et un mot-clé obligatoire comme solution de repli finale).
 
 {{InteractiveExample("Démonstration CSS&nbsp;: cursor")}}
+
+```css interactive-example-choice
+cursor: pointer;
+```
 
 ```css interactive-example-choice
 cursor: help;
@@ -31,10 +34,6 @@ cursor: not-allowed;
 
 ```css interactive-example-choice
 cursor: zoom-in;
-```
-
-```css interactive-example-choice
-cursor: grab;
 ```
 
 ```html interactive-example
@@ -80,7 +79,7 @@ cursor:
   pointer;
 
 /* Liens et liens de repli (certaines avec des coordonnées), avec un mot-clé
-obligatoire de repli */
+  obligatoire de repli */
 cursor:
   url("cursor_1.svg") 4 5,
   url("cursor_2.svg"),
@@ -97,18 +96,18 @@ cursor: unset;
 
 La propriété `cursor` peut être définie grâce à zéro ou plusieurs valeurs [`<url>`](#url) séparées par des virgules et suivi par un unique [mot-clé obligatoire](#mot-clé). Chaque `<url>` doit pointer vers un fichier image. Le navigateur essaiera de télécharger la première image indiquée et passera à la suivante s'il ne peut pas. Si aucune image ne fonctionne, il utilisera le mot-clé final.
 Chaque `<url>` doit pointer vers un fichier image.
-Le navigateur essaiera de charger la première image spécifiée, en passant à la suivante si elle ne peut pas être chargée, et en revenant à la valeur du mot-clé si aucune image n'a pu être chargée (ou si aucune n'a été spécifiée).
+Le navigateur essaiera de charger la première image définie, en passant à la suivante si elle ne peut pas être chargée, et en revenant à la valeur du mot-clé si aucune image n'a pu être chargée (ou si aucune n'a été définie).
 
 Chaque `<url>` peut éventuellement être suivi par un couple de nombres séparés par un espace qui représente les coordonnées `<x>` et `<y>` (abscisse puis ordonnée) du point d'action (_hotspot_) du curseur par rapport au coin en haut à gauche de l'image.
 
 ### Valeurs
 
-- `<url>` {{optional_inline}}
-  - : Une `url(…)` ou une liste d'URL séparées par des virgules `url(…), url(…), …` pointant vers un fichier image. On peut utiliser plusieurs {{cssxref("url_value", "&lt;url&gt;")}}, au cas où certains types d'images ne sont pas pris en charge. Il est _obligatoire_ qu'une valeur non-URL soit présente à la fin de cette liste.
-- `<x>`, `<y>` {{optional_inline}}
+- `<url>` {{Optional_Inline}}
+  - : Une `url(…)` ou une liste d'URL séparées par des virgules `url(…), url(…), …` pointant vers un fichier image. On peut utiliser plusieurs {{CSSxRef("url_value", "&lt;url&gt;")}}, au cas où certains types d'images ne sont pas pris en charge. Il est _obligatoire_ qu'une valeur non-URL soit présente à la fin de cette liste.
+- `<x>`, `<y>` {{Optional_Inline}}
   - : Des coordonnées en abscisses et en ordonnées sans unité, inférieures à 32.
 - Valeurs utilisant un mot-clé (`keyword`)
-  - : Une valeur de mot-clé _doit_ être spécifiée, indiquant soit le type de curseur à utiliser, soit le curseur de secours à utiliser si toutes les icônes spécifiées ne parviennent pas à se charger.
+  - : Une valeur de mot-clé _doit_ être définie, indiquant soit le type de curseur à utiliser, soit le curseur de secours à utiliser si toutes les icônes définies ne parviennent pas à se charger.
 
     Les mots-clés disponibles sont répertoriés dans le tableau ci-dessous. À l'exception de `none`, qui signifie «&nbsp;aucun curseur&nbsp;», une image montre comment les curseurs étaient auparavant rendus. Vous pouvez passer votre souris sur les lignes du tableau pour voir l'effet des différentes valeurs de mots-clés de curseur sur votre navigateur actuel.
 
@@ -168,7 +167,7 @@ Chaque `<url>` peut éventuellement être suivi par un couple de nombres sépar�
           <td><code>progress</code></td>
           <td><img src="progress.gif" alt="large flèche et sablier" /></td>
           <td>
-            Le programme est occupé en arrière-plan mais l'utilisateur peut toujours
+            Le programme est occupé en arrière-plan mais l'utilisateur·ice peut toujours
             interagir avec l'interface (à la différence de <code>wait</code>).
           </td>
         </tr>
@@ -231,7 +230,7 @@ Chaque `<url>` peut éventuellement être suivi par un couple de nombres sépar�
           <td>
             Le curseur indique qu'on ne peut pas déposer d'élément à cet endroit.
             <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=B75173"
-              >bug 275173</a
+              >Boggue 275173 <sup>(angl.)</sup></a
             >
             pour Windows et Mac OS X, « <code>no-drop</code> a le même effet que
             <code>not-allowed</code> ».
@@ -266,7 +265,7 @@ Chaque `<url>` peut éventuellement être suivi par un couple de nombres sépar�
             Le curseur indique qu'on peut faire défiler le contenu dans n'importe
             quelle direction.
             <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=275174"
-              >Bug 275174</a
+              >Boggue 275174 <sup>(angl.)</sup></a
             >
             pour Windows, « <code>all-scroll</code> a le même effet que
             <code>move</code>".
@@ -461,6 +460,6 @@ Les changements de curseur qui intersectent les zones de la barre d'outils sont 
 
 ## Voir aussi
 
-- {{cssxref("pointer-events")}}
-- Le type de donnée {{cssxref("url_value", "&lt;url&gt;")}}
+- La propriété {{CSSxRef("pointer-events")}}
+- Le type de donnée {{CSSxRef("url_value", "&lt;url&gt;")}}
 - L'attribut SVG {{SVGAttr("cursor")}}

@@ -2,7 +2,7 @@
 title: Blob：Blob() 建構子
 slug: Web/API/Blob/Blob
 l10n:
-  sourceCommit: 94df34126960a2f1bd3032c6e2cf203d67b912d8
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{APIRef("File API")}}{{AvailableInWorkers}}

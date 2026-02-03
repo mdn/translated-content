@@ -44,7 +44,8 @@ list-style-type: "\1F44D";
         href="//developer.mozilla.org/docs/Web/CSS/Reference/At-rules/@counter-style"
         target="_parent"
         ><code>@counter-style</code></a
-      > で定義されています
+      >
+      で定義されています
     </p>
   </div>
 </section>

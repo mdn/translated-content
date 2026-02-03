@@ -2,7 +2,7 @@
 title: 500 Internal Server Error
 slug: Web/HTTP/Reference/Status/500
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 HTTP **`500 Internal Server Error`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#伺服器錯誤回應)狀態碼表示伺服器遇到了一個意外情況，導致無法完成請求。該錯誤是一種通用的「全方位」回應，表示伺服器找不到更適當的 [5XX 錯誤](/zh-TW/docs/Web/HTTP/Reference/Status#伺服器錯誤回應)來回應請求。

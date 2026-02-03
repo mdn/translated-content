@@ -1,14 +1,13 @@
 ---
 title: border-inline-end
 slug: Web/CSS/Reference/Properties/border-inline-end
-original_slug: Web/CSS/border-inline-end
+l10n:
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-inline-end`** permet de définir les valeurs individuelles des propriétés logiques de bordure en ligne de fin à un seul endroit dans la feuille de style.
 
-La propriété **`border-inline-end`** est une propriété raccourcie qui permet de définir la bordure d'un élément pour le côté correspondant à la fin de l'élément dans le sens de lecture. Elle peut être utilisée pour définir les valeurs de {{cssxref("border-inline-end-width")}}, {{cssxref("border-inline-end-style")}} et {{cssxref("border-inline-end-color")}}.
-
-{{InteractiveExample("CSS Demo: border-inline-end")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: border-inline-end")}}
 
 ```css interactive-example-choice
 border-inline-end: solid;
@@ -29,15 +28,15 @@ direction: rtl;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    Ceci est une boîte avec une bordure autour.
   </div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #8b008b;
+  background-color: #eeeeee;
+  color: darkmagenta;
   padding: 0.75em;
   width: 80%;
   height: 100px;
@@ -45,32 +44,43 @@ direction: rtl;
 }
 ```
 
-Cette propriété logique correspond à l'une des propriété physique équivalente selon le mode d'écriture, la directionnalité et l'orientation du texte. Autrement dit, elle correspond à l'une des propriétés {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}} ou {{cssxref("border-left")}} selon les valeurs utilisées pour {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+## Propriétés constitutives
 
-On peut rapprocher cette propriété des autres propriétés logiques raccourcies définissant les bordures des autres côtés :
+Cette propriété est une abréviation pour les propriétés CSS suivantes&nbsp;:
 
-- {{cssxref("border-block-start")}},
-- {{cssxref("border-block-end")}},
-- {{cssxref("border-inline-start")}}.
+- {{CSSxRef("border-inline-end-color")}}
+- {{CSSxRef("border-inline-end-style")}}
+- {{CSSxRef("border-inline-end-width")}}
 
 ## Syntaxe
 
 ```css
 border-inline-end: 1px;
-border-inline-end: 2px dotted;
-border-inline-end: medium dashed green;
+border-inline-end: 2px dashed;
+border-inline-end: medium dashed blue;
+
+/* Valeurs globales */
+border-inline-end: inherit;
+border-inline-end: initial;
+border-inline-end: revert;
+border-inline-end: revert-layer;
+border-inline-end: unset;
 ```
+
+La bordure physique à laquelle `border-inline-end` correspond dépend du mode d'écriture, de la direction et de l'orientation du texte de l'élément. Elle correspond à la propriété {{CSSxRef("border-top")}}, {{CSSxRef("border-right")}}, {{CSSxRef("border-bottom")}} ou {{CSSxRef("border-left")}}, selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
+
+Les propriétés associées sont {{CSSxRef("border-block-start")}}, {{CSSxRef("border-block-end")}} et {{CSSxRef("border-inline-start")}}, qui définissent les autres bordures de l'élément.
 
 ### Valeurs
 
-Une ou plusieurs valeurs parmi les suivantes, dans n'importe quel ordre :
+Une ou plusieurs valeurs parmi les suivantes, dans n'importe quel ordre&nbsp;:
 
 - `<'border-width'>`
-  - : La largeur de la bordure pour ce côté, voir {{cssxref("border-width")}}.
+  - : La largeur de la bordure pour ce côté. Voir {{CSSxRef("border-width")}}.
 - `<'border-style'>`
-  - : Le style de la ligne utilisé pour la bordure de ce côté, voir {{cssxref("border-style")}}.
-- `<'color'>`
-  - : La couleur de la bordure sur ce côté, voir {{cssxref("color")}}.
+  - : Le style de la ligne utilisé pour la bordure de ce côté. Voir {{CSSxRef("border-style")}}.
+- {{CSSxRef("&lt;color&gt;")}}
+  - : La couleur de la bordure.
 
 ## Définition formelle
 
@@ -82,6 +92,14 @@ Une ou plusieurs valeurs parmi les suivantes, dans n'importe quel ordre :
 
 ## Exemples
 
+### HTML
+
+```html
+<div>
+  <p class="exempleTexte">Texte d'exemple</p>
+</div>
+```
+
 ### CSS
 
 ```css
@@ -91,18 +109,10 @@ div {
   height: 120px;
 }
 
-.exemple {
+.exempleTexte {
   writing-mode: vertical-rl;
   border-inline-end: 5px dashed blue;
 }
-```
-
-### HTML
-
-```html
-<div>
-  <p class="exemple">Texte d'exemple</p>
-</div>
 ```
 
 ### Résultat
@@ -119,10 +129,6 @@ div {
 
 ## Voir aussi
 
-- Les propriétés physiques correspondantes :
-  - {{cssxref("border-top")}},
-  - {{cssxref("border-right")}},
-  - {{cssxref("border-bottom")}},
-  - {{cssxref("border-left")}}
-
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- [Propriétés et valeurs logiques CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values)
+- Cette propriété correspond à l'une des propriétés physiques de bordure&nbsp;: {{CSSxRef("border-top")}}, {{CSSxRef("border-right")}}, {{CSSxRef("border-bottom")}} ou {{CSSxRef("border-left")}}.
+- Les propriétés {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}

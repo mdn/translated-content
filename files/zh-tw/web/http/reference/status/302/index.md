@@ -2,7 +2,7 @@
 title: 302 Found
 slug: Web/HTTP/Reference/Status/302
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 HTTP **`302 Found`** [重新導向回應](/zh-TW/docs/Web/HTTP/Reference/Status#重新導向訊息)狀態碼表示所請求的資源已暫時移動到 {{HTTPHeader("Location")}} 標頭中的 URL。

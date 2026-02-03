@@ -1,14 +1,13 @@
 ---
 title: column-fill
 slug: Web/CSS/Reference/Properties/column-fill
-original_slug: Web/CSS/column-fill
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`column-fill`** contrôle la manière dont le contenu d'un élément est équilibré lorsqu'il est réparti en colonnes.
 
-La propriété **`column-fill`** permet de contrôler la façon dont le contenu est réparti entre les colonnes. Le contenu peut être équilibré (afin de prendre la même hauteur sur toutes les colonnes) ou être réparti de façon automatique (avec `auto`) et remplir l'espace nécessaire.
-
-{{InteractiveExample("CSS Demo: column-fill")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: column-fill")}}
 
 ```css interactive-example-choice
 column-fill: auto;
@@ -21,8 +20,8 @@ column-fill: balance;
 ```html interactive-example
 <section id="default-example">
   <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather.
+    Londres. Le trimestre de Michaelmas venait de se terminer, et le lord
+    chancelier siégeait dans la salle de Lincoln's Inn. Un novembre implacable.
   </p>
 </section>
 ```
@@ -42,15 +41,16 @@ column-fill: balance;
 /* Valeurs avec un mot-clé */
 column-fill: auto;
 column-fill: balance;
-column-fill: balance-all;
 
 /* Valeurs globales */
 column-fill: inherit;
 column-fill: initial;
+column-fill: revert;
+column-fill: revert-layer;
 column-fill: unset;
 ```
 
-Cette propriété est définie grâce à l'un des mots-clés définis ci-après.
+La propriété `column-fill` est définie par l'un des mots-clés listés ci-dessous. La valeur initiale est `balance`, de sorte que le contenu est équilibré entre les colonnes.
 
 ### Valeurs
 
@@ -58,8 +58,8 @@ Cette propriété est définie grâce à l'un des mots-clés définis ci-après.
   - : Un mot-clé indiquant que les colonnes sont remplies dans l'ordre.
 - `balance`
   - : Un mot-clé indiquant que le contenu doit être équitablement réparti entre les colonnes. Pour les médias paginés, seule la dernière page est équilibrée.
-- `balance-all`
-  - : Un mot-clé indiquant que le contenu doit être équitablement réparti entre les colonnes. Pour les média paginés, toutes les pages sont équilibrées.
+
+La spécification définit la valeur `balance-all`, dans laquelle le contenu est réparti également entre les colonnes dans des contextes fragmentés, tels que [les médias paginés](/fr/docs/Web/CSS/Guides/Paged_media). Cette valeur n'est pas encore prise en charge par les navigateurs.
 
 ## Définition formelle
 
@@ -71,32 +71,43 @@ Cette propriété est définie grâce à l'un des mots-clés définis ci-après.
 
 ## Exemples
 
-### CSS
+### Équilibrer le contenu des colonnes
+
+#### HTML
+
+```html
+<p class="fill-auto">
+  Ce paragraphe remplit les colonnes une par une. Comme tout le texte tient dans
+  la première colonne, les autres restent vides.
+</p>
+
+<p class="fill-balance">
+  Ce paragraphe tente d'équilibrer la quantité de contenu dans chaque colonne.
+</p>
+```
+
+#### CSS
 
 ```css
-.exemple {
-  border: 10px solid #000000;
-  column-count: 3;
+p {
+  height: 7em;
+  background: #ffff99;
+  columns: 3;
+  column-rule: 1px solid;
+}
+
+p.fill-auto {
+  column-fill: auto;
+}
+
+p.fill-balance {
   column-fill: balance;
 }
 ```
 
-### HTML
-
-```html
-<p class="exemple">
-  « Mais alors, » pensa Alice, « ne serai-je donc jamais plus vieille que je ne
-  le suis maintenant ? D’un côté cela aura ses avantages, ne jamais être une
-  vieille femme. Mais alors avoir toujours des leçons à apprendre ! Oh, je
-  n’aimerais pas cela du tout. » « Oh ! Alice, petite folle, » se répondit-elle.
-  « Comment pourriez-vous apprendre des leçons ici ? Il y a à peine de la place
-  pour vous, et il n’y en a pas du tout pour vos livres de leçons. »
-</p>
-```
-
 ### Résultat
 
-{{EmbedLiveSample("Exemples","800","300")}}
+{{EmbedLiveSample("Équilibrer le contenu des colonnes", "auto", 320)}}
 
 ## Spécifications
 
@@ -105,3 +116,14 @@ Cette propriété est définie grâce à l'un des mots-clés définis ci-après.
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+> [!WARNING]
+> Il existe des problèmes d'interopérabilité et des bogues concernant `column-fill` entre les navigateurs, en raison de problèmes non résolus dans la spécification.
+>
+> En particulier, lorsqu'on utilise `column-fill: auto` pour remplir les colonnes séquentiellement, Chrome ne prend en compte cette propriété que si le conteneur multi-colonne possède une taille dans la dimension de bloc (par exemple, la hauteur en mode d'écriture horizontal). Firefox prend toujours en compte cette propriété, il remplit donc la première colonne avec l'intégralité du contenu lorsque aucune taille n'est définie.
+
+## Voir aussi
+
+- [Apprendre&nbsp;: Mise en page à colonnes multiples](/fr/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
+- La propriété {{CSSxRef("column-count")}}
+- La propriété {{CSSxRef("column-width")}}
