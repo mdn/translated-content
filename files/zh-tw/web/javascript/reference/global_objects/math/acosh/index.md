@@ -2,7 +2,7 @@
 title: Math.acosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acosh
 l10n:
-  sourceCommit: b6cab42cf7baf925f2ef6a2c98db0778d9c2ec46
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
 **`Math.acosh()`** 靜態方法回傳數字的反雙曲餘弦值。也就是說，

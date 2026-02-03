@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**CSS 画像** (CSS images) モジュールは、画像に利用できる型（{{CSSxRef("&lt;image&gt;")}} 型、その中の URL、グラデーション、その他の種類の画像）、どのように大きさを変更するか、様々なレイアウトモデルで画像やその他の置換コンテンツが応答するかを定義します。
+**CSS 画像** (CSS images) モジュールは、画像に利用できる型（{{cssxref("image")}} 型、その中の URL、グラデーション、その他の種類の画像）、どのように大きさを変更するか、様々なレイアウトモデルで画像やその他の置換コンテンツが応答するかを定義します。
 
 ## リファレンス
 
@@ -36,8 +36,8 @@ CSS 画像モジュールは {{CSSxRef("image/image", "image()")}} 関数も定�
 
 ### データ型
 
-- {{CSSxRef("&lt;gradient&gt;")}}
-- {{CSSxRef("&lt;image&gt;")}}
+- {{CSSxRef("gradient")}}
+- {{cssxref("image")}}
 
 ## ガイド
 
