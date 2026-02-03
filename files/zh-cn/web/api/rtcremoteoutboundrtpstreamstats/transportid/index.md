@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-{{domxref("RTCRemoteOutboundRtpStreamStats")}} 字典的 **`transportId`** 属性是一个字符串，用于唯一标识与此 RTP 流底层传输相关联的 {{domxref("RTCTransportStats")}} 统计对象。
+{{domxref("RTCRemoteOutboundRtpStreamStats")}} 字典的 **`transportId`** 属性是一个用于唯一标识与此 RTP 流底层传输相关联的 {{domxref("RTCTransportStats")}} 统计对象的字符串。
 
 通过遍历 {{domxref("RTCStatsReport")}} 中满足 `RTCRemoteOutboundRtpStreamStats.codecId` 等于 {{domxref("RTCTransportStats.id")}} 的元素来查找统计对象，进而可以将 `RTCRemoteOutboundRtpStreamStats` 和 `RTCTransportStats` 对象关联起来。
 
