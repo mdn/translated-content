@@ -5,9 +5,9 @@ l10n:
   sourceCommit: 3652cfa9c036cf3ceebb1384bdc7edfd549251f3
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
-**`DOMStringList`** 接口在部分 API 中的旧式类型返回值，表示一个不可修改的字符串列表（`DOMString`）。
+**`DOMStringList`** 接口是一种由某些 API 返回的遗留类型，表示一个不可修改的字符串列表（`DOMString`）。
 
 该接口曾用于[尝试创建不可修改列表](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156)而为了不破坏已经使用它的代码而继续被支持。现代 API 使用基于 JavaScript [数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)的类型来表示列表结构，因而也支持了许多数组方法，同时也基于使用场景为其赋予了额外的语义（例如使其项目只读）。
 
