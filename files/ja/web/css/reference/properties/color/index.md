@@ -111,7 +111,7 @@ color: unset;
 
 `color` プロパティは単一の {{cssxref("&lt;color&gt;")}} 値で指定します。
 
-なお、値は単一の色でなければなりません。 {{cssxref("&lt;gradient&gt;")}} は実際の型が {{cssxref("&lt;image&gt;")}} であるため使用できません。
+なお、値は単一の色でなければなりません。 {{cssxref("gradient")}} は実際の型が {{cssxref("image")}} であるため使用できません。
 
 ### 値
 

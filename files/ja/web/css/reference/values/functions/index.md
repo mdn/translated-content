@@ -261,7 +261,7 @@ CSS カウンター関数は一般に {{CSSxRef("content")}} プロパティと�
 
 ### 基本図形
 
-{{CSSxRef("&lt;basic-shape&gt;")}} は CSS の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、グラフィックの図形を表します。これは {{CSSxRef("clip-path")}}, {{CSSxRef("offset-path")}}, {{CSSxRef("shape-outside")}} の各プロパティで使用されます。
+{{cssxref("basic-shape")}} は CSS の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、グラフィックの図形を表します。これは {{CSSxRef("clip-path")}}, {{CSSxRef("offset-path")}}, {{CSSxRef("shape-outside")}} の各プロパティで使用されます。
 
 - {{CSSxRef("basic-shape/circle","circle()")}}
   - : 円を定義します。

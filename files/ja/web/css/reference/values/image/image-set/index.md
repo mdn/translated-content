@@ -128,5 +128,5 @@ image-set(
 - {{cssxref("image/image", "image()")}}
 - {{cssxref("element", "element()")}}
 - {{cssxref("url_value", "&lt;url&gt;")}}
-- {{cssxref("&lt;gradient&gt;")}}
+- {{cssxref("gradient")}}
 - {{cssxref("cross-fade", "cross-fade()")}}
