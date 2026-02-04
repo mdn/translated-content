@@ -1,5 +1,5 @@
 ---
-title: HTMLDetailsElement 接口的 name 属性
+title: HTMLDetailsElement：name 属性
 short-title: name
 slug: Web/API/HTMLDetailsElement/name
 l10n:
