@@ -1,11 +1,12 @@
 ---
-title: BackgroundFetchManager.getIds()
+title: "BackgroundFetchManager: getIds() メソッド"
+short-title: getIds()
 slug: Web/API/BackgroundFetchManager/getIds
 l10n:
-  sourceCommit: 77f412d3a1b00049b4dad4977886529f8e1aa26d
+  sourceCommit: c77a11ee1509542c16b0348afc4fcb3ffe588e1c
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 {{domxref("BackgroundFetchManager")}} インターフェイスの **`getIds()`** メソッドは、登録済みのすべてのバックグラウンドフェッチの ID を返します。
 
