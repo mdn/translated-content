@@ -16,9 +16,9 @@ using name1 = value1, name2 = value2, /* …, */ nameN = valueN;
 ```
 
 - `nameN`
-  - 要声明的变量名。每个变量名必须是合法的 JavaScript [标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#标识符)，且*不能用*[解构赋值模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)。
+  - : 要声明的变量名。每个变量名必须是合法的 JavaScript [标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#标识符)，且*不能用*[解构赋值模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)。
 - `valueN`
-  - 变量的初始值，可以是任意合法的表达式，但值必须是 `null`、`undefined` 或是一个实现了 `[Symbol.dispose]()` 方法的对象。
+  - : 变量的初始值，可以是任意合法的表达式，但值必须是 `null`、`undefined` 或是一个实现了 `[Symbol.dispose]()` 方法的对象。
 
 ## 描述
 
@@ -306,7 +306,7 @@ SuppressedError: An error was suppressed during disposal
 
 ## 参见
 
-- [JavaScript resource management](/zh-CN/docs/Web/JavaScript/Guide/Resource_management)
+- [JavaScript 资源管理](/zh-CN/docs/Web/JavaScript/Guide/Resource_management)
 - {{jsxref("Statements/const", "const")}}
 - {{jsxref("Statements/let", "let")}}
 - {{jsxref("Statements/await_using", "await using")}}
