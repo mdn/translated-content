@@ -40,7 +40,7 @@ Este código escuta as mensagens recebidas (ou seja, avisos do servidor que não
 Você também pode escutar eventos com `addEventListener()`:
 
 ```js
-evtSource.addEventListener("ping", (evento) => {
+evtSource.addEventListener("ping", (event) => {
   const novoElemento = document.createElement("li");
   const eventList = document.getElementById("list");
   const time = JSON.parse(event.data).time;
