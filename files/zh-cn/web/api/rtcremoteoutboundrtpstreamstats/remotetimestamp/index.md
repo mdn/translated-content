@@ -8,9 +8,7 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-{{domxref("RTCRemoteOutboundRtpStreamStats")}} 接口的 **`remoteTimestamp`** 属性返回表示远程对等端发送这些统计信息的时间的时间戳。
-
-这与 `timestamp` 不同，后者表示本地生成或接收统计信息的时间。
+{{domxref("RTCRemoteOutboundRtpStreamStats")}} 接口的 **`remoteTimestamp`** 属性返回表示远程对等端发送这些统计信息的时间的时间戳。这与 `timestamp` 不同，后者表示本地生成或接收统计信息的时间。
 
 ## 值
 
