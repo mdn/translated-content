@@ -1,15 +1,14 @@
 ---
-title: BroadcastChannel()
+title: "BroadcastChannel: BroadcastChannel() コンストラクター"
+short-title: BroadcastChannel()
 slug: Web/API/BroadcastChannel/BroadcastChannel
 l10n:
-  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
+  sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
 ---
 
-{{APIRef("BroadCastChannel API")}}
+{{APIRef("BroadCastChannel API")}} {{AvailableInWorkers}}
 
 **`BroadcastChannel()`** コンストラクターは、新しい {{domxref("BroadcastChannel")}} を作成し、それを基礎となるチャンネルに接続します。
-
-{{AvailableInWorkers}}
 
 ## 構文
 
