@@ -24,6 +24,6 @@ IMSC 允许对显示在视频内容之上的文本进行非常精确的位置控
 - `tts:origin`——区域框的左上角坐标（X Y 值），应以百分比形式表示。
 - `tts:extent`——描述区域框向右延伸至视频画面的范围，以及向下延伸的范围。
 - `tts:backgroundColor`——描述区域框的背景颜色。通常设为透明，但若要符合你的设计需求，你也可以选择填充为指定颜色。
-- `tts:showBackground`——应设为 `whenActive`。另一可选值为 `always`，它指示 IMSC 解码器同时显示所有设为 `always` 的区域框。这种情况极不可能是你希望实现的效果。
+- `tts:showBackground`——应设为 `whenActive`。另一个允许的值为 `always`，它指示 IMSC 解码器同时显示所有设为 `always` 的区域框。这种情况极不可能是你希望实现的效果。
 - `tts:textAlign`——文本的水平对齐方式。与文字处理软件类似，可设为 `left`、`center` 或 `right`。对于字幕而言，`center` 是最常用的文本对齐方式。
 - `tts:displayAlign`——文本的垂直对齐方式。可设为 `before`、`center` 或 `after`。`before` 表示文本从区域框最顶端开始并向下排版；`center` 表示文本在区域框内垂直居中；`after` 表示文本从区域框最底端开始并向上排版。
