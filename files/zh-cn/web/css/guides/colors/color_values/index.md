@@ -437,7 +437,7 @@ for (let l = 0; l <= 100; l += 10) {
 
 [`lab()`](/zh-CN/docs/Web/CSS/Reference/Values/color_value/lab) 函数表示法用于在 CIE L\*a\*b\* 色彩空间中表达给定颜色。`oklab()` 函数则定义 OKLab 色彩空间中的颜色。这些函数通过指定颜色的明度（`L`）、红绿轴值（`a`）、蓝黄轴值（`b`）以及可选的 alpha 透明度值，完整呈现人类可见的色彩范围。
 
-与`lch()`和`oklch()`类似，`lightness`可以是：
+与 `lch()` 和 `oklch()` 类似，`lightness` 可以是：
 
 - 一个{{cssxref("percentage")}}值，其中 `0%` 表示纯黑色，`100%` 表示纯白色。
 - `lab()` 取值范围为 `0` 至 `100`，`oklab()` 取值范围为 `0` 至 `1`，其中 `0` 表示纯黑，`1`/`100` 表示纯白。
