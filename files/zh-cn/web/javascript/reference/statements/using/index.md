@@ -25,7 +25,7 @@ using name1 = value1, name2 = value2, /* …, */ nameN = valueN;
 此声明可用于以下场景：
 
 - 可用于[块语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)内。
-- 可用于任意[函数体](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)或[静态初始化块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)内。
+- 可用于任意[函数体](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)或[类的静态初始化块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)内。
 - 可用于[模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)的顶层作用域中。
 - 可用于 [`for`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for)、[`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of)、[`for await...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for-await...of) 循环的初始化表达式中。
 
@@ -33,11 +33,11 @@ using name1 = value1, name2 = value2, /* …, */ nameN = valueN;
 
 - 不可用于脚本的顶层作用域中，因为脚本的作用域恒久存在。
 - 不可用于 [`switch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/switch) 语句的顶层作用域内
-- 不可用于 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环的初始化表达式中。因为循环变量只能是字符串或 symbol 类型的值，否则没有意义。
+- 不可用于 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环的初始化表达式中。因为循环变量只能是字符串或 symbol 类型的值，这样做没有意义。
 
 `using` 声明一个可释放的资源，该资源的生命周期与变量所在的作用域（如块语句、函数、模块等）绑定。当退出作用域时，该资源会被同步释放。变量允许取值为 `null` 或 `undefined`，因此对应资源是可选存在的。
 
-当变量首次被声明且取值非空（不为 null 或 undefined）时，会从对象中获取一个*释放器（disposer）*。如果 `[Symbol.dispose]` 属性未包含函数，则会抛出一个 `TypeError`。该释放器会被保存到当前作用域中。
+当变量首次被声明且取值非空（不为 null 或 undefined）时，会从对象中获取一个*释放器*（disposer）。如果 `[Symbol.dispose]` 属性未包含函数，则会抛出一个 `TypeError`。该释放器会被保存到当前作用域中。
 
 当变量退出其作用域时，会调用释放器。如果同一作用域包含了多个 `using` 或 {{jsxref("Statements/await_using", "await using")}} 声明，则所有释放器会以声明顺序的逆序执行，且不考虑声明类型。保证所有释放器（类似 {{jsxref("Statements/try...catch", "try...catch...finally")}} 语句的 `finally` 块）都会执行。在释放过程中抛出的所有错误，包括导致退出作用域的初始化错误（如果有），都会被聚合到 {{jsxref("SuppressedError")}} 中，其中较早抛出的异常将作为 `suppressed` 属性，较晚抛出的异常将作为 `error` 属性。该 `SuppressedError` 会在释放完成后抛出。
 
@@ -54,14 +54,14 @@ class Resource {
 
   getValue() {
     if (this.#isDisposed) {
-      throw new Error("Resource is disposed");
+      throw new Error("资源被释放");
     }
     return this.value;
   }
 
   [Symbol.dispose]() {
     this.#isDisposed = true;
-    console.log("Resource disposed");
+    console.log("资源已被释放");
   }
 }
 ```
@@ -74,7 +74,7 @@ class Resource {
 {
   using resource = new Resource();
   console.log(resource.getValue());
-  // resource disposed here
+  // 资源在这里被释放
 }
 ```
 
@@ -121,7 +121,7 @@ function example() {
 ```js
 using resource = new Resource();
 export const value = resource.getValue();
-// resource disposed here
+// 资源在这里被释放
 ```
 
 `export using` 是无效语法，但你可以导出（`export`）在其他位置使用 `using` 声明的变量：
@@ -133,7 +133,7 @@ export { resource };
 
 仍然不推荐这种做法，因为导入方总是会接收一个已经被释放的资源。这与闭包问题相似，会造成资源的值比变量存活得更久。
 
-### `using` 与 `for...of` 一起用
+### 将 `using` 与 `for...of` 一起用
 
 你可以在 `for...of` 循环的初始化表达式中使用 `using`。在本示例中，资源将在每次循环迭代后被释放。
 
@@ -141,7 +141,7 @@ export { resource };
 const resources = [new Resource(), new Resource(), new Resource()];
 for (using resource of resources) {
   console.log(resource.getValue());
-  // resource disposed here
+  // 资源在这里被释放
 }
 ```
 
@@ -153,7 +153,7 @@ for (using resource of resources) {
 using resource1 = new Resource(),
   resource2 = new Resource();
 
-// OR
+// 或
 
 using resource1 = new Resource();
 using resource2 = new Resource();
@@ -167,8 +167,8 @@ using resource2 = new Resource();
 
 ```js
 function acquireResource() {
-  // Imagine some real-world relevant condition here,
-  // such as whether there's space to allocate for this resource
+  // 可以设想一些现实世界的相关情况，
+  // 例如是否有足够的空间来容纳这种资源。
   if (Math.random() < 0.5) {
     return null;
   }
@@ -203,8 +203,8 @@ console.log(resource?.getValue());
 ```js
 {
   using _ = new Lock();
-  // Perform concurrent operations here
-  // Lock disposed (released) here
+  // 在此处执行并发操作
+  // 在此处释放锁
 }
 ```
 
@@ -212,7 +212,7 @@ console.log(resource?.getValue());
 
 ### 初始化与暂时性死区
 
-`using` 声明的变量和 `let`、`const` 声明的变量一样，受相同的[暂时性死区](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#暂时性死区)限制。这意味着你不能在初始化前访问该变量——资源的有效生命周期严格限制为初始化开始到作用域结束为止。这使得我们可以实现类似 [RAII](https://en.wikipedia.org/wiki/Resource_acquisition_is_initialization) 风格的资源管理。
+`using` 声明的变量和 `let`、`const` 声明的变量一样，受相同的[暂时性死区](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#暂时性死区)限制。这意味着你不能在初始化前访问该变量——资源的有效生命周期严格限制为初始化开始到作用域结束为止。这使得我们可以实现类似 [RAII](https://zh.wikipedia.org/wiki/RAII) 风格的资源管理。
 
 ```js
 let useResource;
@@ -220,7 +220,7 @@ let useResource;
   useResource = () => resource.getValue();
   useResource(); // Error: Cannot access 'resource' before initialization
   using resource = new Resource();
-  useResource(); // Valid
+  useResource(); // 有效
 }
 useResource(); // Error: Resource is disposed
 ```
@@ -232,7 +232,7 @@ useResource(); // Error: Resource is disposed
 ```js
 function handleResource(resource) {
   if (resource.getValue() > 0.5) {
-    throw new Error("Resource value too high");
+    throw new Error("资源值过大");
   }
 }
 
