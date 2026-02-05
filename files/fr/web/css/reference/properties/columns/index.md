@@ -1,14 +1,13 @@
 ---
 title: columns
 slug: Web/CSS/Reference/Properties/columns
-original_slug: Web/CSS/columns
+l10n:
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-{{CSSRef}}
+La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`columns`** permet de définir le nombre de colonnes à utiliser pour afficher le contenu d'un élément, ainsi que la largeur de ces colonnes.
 
-La propriété **`columns`** est une propriété raccourcie permettant de définir les deux propriétés {{cssxref('column-width')}} (qui définit la largeur des colonnes) et {{cssxref("column-count")}} (qui définit le nombre de colonnes) en même temps.
-
-{{InteractiveExample("CSS Demo: columns")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: columns")}}
 
 ```css interactive-example-choice
 columns: 2;
@@ -29,11 +28,12 @@ columns: 3;
 ```html interactive-example
 <section id="default-example">
   <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+    Londres. Le trimestre de Michaelmas venait de se terminer, et le lord
+    chancelier siégeait dans la salle de Lincoln's Inn. Un novembre implacable.
+    Tant de boue dans les rues comme si les eaux venaient tout juste de se
+    retirer de la surface de la terre, et il ne serait pas étonnant de
+    rencontrer un Megalosaurus, quarante pieds de long environ, se dandinant
+    comme un lézard éléphantesque en montant Holborn Hill.
   </p>
 </section>
 ```
@@ -45,17 +45,22 @@ columns: 3;
 }
 ```
 
-Comme pour toute propriété raccourcie, toute propriété détaillée qui n'est pas définie se voit réinitialisée à sa valeur par défaut (surchargeant ainsi les éventuelles règles déclarées avant).
+## Propriétés constituantes
+
+Cette propriété est un raccourci pour les propriétés CSS suivantes&nbsp;:
+
+- {{CSSxRef("column-count")}}
+- {{CSSxRef("column-width")}}
 
 ## Syntaxe
 
 ```css
-/* Largeur */
+/* Colonnes avec largeur */
 columns: 18em;
 
-/* Nombre de colonnes */
-columns: 1;
+/* Colonnes avec un nombre */
 columns: auto;
+columns: 2;
 
 /* Combinaison d'une largeur et d'un nombre */
 columns: 1 auto;
@@ -65,17 +70,19 @@ columns: auto auto;
 /* Valeurs globales */
 columns: inherit;
 columns: initial;
+columns: revert;
+columns: revert-layer;
 columns: unset;
 ```
 
-La propriété `columns` se définit avec un ou deux valeurs parmi celles décrites ci-après. L'ordre de ces valeurs n'a pas d'importance.
+La propriété `columns` se définit avec un ou deux valeurs parmi celles décrites ci-après, dans n'importe quel ordre.
 
 ### Valeurs
 
 - `<'column-width'>`
-  - : Une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) fournissant une indication quant à la largeur optimale de la colonne ou le mot-clé auto. La colonne réelle peut être plus large (pour remplir l'espace disponible) ou plus étroite (s'il n'y a pas suffisamment d'espace disponible). La longueur exprimée doit être strictement positive, dans le cas contraire, la déclaration sera invalide.
+  - : La largeur optimale de la colonne, définie comme un {{CSSxRef("&lt;length&gt;")}} ou le mot-clé `auto`. La largeur réelle peut être plus large ou plus étroite pour s'adapter à l'espace disponible. Voir {{CSSxRef("column-width")}}.
 - `<'column-count'>`
-  - : Une quantité (type {{cssxref("&lt;integer&gt;")}}) strictement positive qui décrit le nombre idéal de colonnes parmi lesquelles disposer le contenu de l'élément. Si la valeur de {{cssxref("column-width")}} n'est pas une valeur automatique, cette valeur indique simplement le nombre maximal de colonnes.
+  - : Le nombre idéal de colonnes dans lequel le contenu de l'élément doit être disposé, défini comme un {{CSSxRef("&lt;integer&gt;")}} ou le mot-clé `auto`. Si ni cette valeur ni la largeur des colonnes ne sont `auto`, elle indique simplement le nombre maximal de colonnes autorisé. Voir {{CSSxRef("column-count")}}.
 
 ## Définition formelle
 
@@ -87,33 +94,29 @@ La propriété `columns` se définit avec un ou deux valeurs parmi celles décri
 
 ## Exemples
 
-### CSS
+### Définir trois colonnes égales
 
-```css
-.exemple {
-  margin: 0;
-  height: 90px;
-  border: 3px solid black;
-  columns: 3;
-}
-```
-
-### HTML
+#### HTML
 
 ```html
-<p class="exemple">
-  « Mais alors, » pensa Alice, « ne serai-je donc jamais plus vieille que je ne
-  le suis maintenant ? D’un côté cela aura ses avantages, ne jamais être une
-  vieille femme. Mais alors avoir toujours des leçons à apprendre ! Oh, je
-  n’aimerais pas cela du tout. » « Oh ! Alice, petite folle, » se répondit-elle.
-  « Comment pourriez-vous apprendre des leçons ici ? Il y a à peine de la place
-  pour vous, et il n’y en a pas du tout pour vos livres de leçons. »
+<p class="content-box">
+  Il s'agit d'un bloc de texte réparti en trois colonnes à l'aide de la
+  propriété CSS `columns`. Le texte est réparti équitablement entre les
+  colonnes.
 </p>
 ```
 
-### Résultat
+#### CSS
 
-{{EmbedLiveSample("Exemples",300,120)}}
+```css
+.content-box {
+  columns: 3 auto;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Définir trois colonnes égales", "auto", 120)}}
 
 ## Spécifications
 
@@ -122,3 +125,8 @@ La propriété `columns` se définit avec un ou deux valeurs parmi celles décri
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+- La propriété {{CSSxRef("widows")}}
+- La propriété {{CSSxRef("orphans")}}
+- [Médias paginés](/fr/docs/Web/CSS/Guides/Paged_media)
+- [Apprendre&nbsp;: Mise en page multi-colonnes](/fr/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)

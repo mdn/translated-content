@@ -28,12 +28,12 @@ jobs:
           - zh-tw
     steps:
       - name: Checkout
-        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           persist-credentials: false
 
       - name: Checkout (content)
-        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           repository: mdn/content
           path: mdn/content
@@ -79,7 +79,7 @@ jobs:
 
       - name: Create PR with only fixable issues
         if: success()
-        uses: peter-evans/create-pull-request@98357b18bf14b5342f975ff684046ec3b2a07725 # v8.0.0
+        uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0 # v8.1.0
         with:
           commit-message: "${{ matrix.lang }}: auto-fix content issues"
           branch: content-autofix-${{ matrix.lang }}
@@ -96,7 +96,7 @@ jobs:
 
       - name: Create PR with notice on unfixed issues
         if: failure()
-        uses: peter-evans/create-pull-request@98357b18bf14b5342f975ff684046ec3b2a07725 # v8.0.0
+        uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0 # v8.1.0
         with:
           commit-message: "${{ matrix.lang }}: auto-fix content issues"
           branch: content-autofix-${{ matrix.lang }}
