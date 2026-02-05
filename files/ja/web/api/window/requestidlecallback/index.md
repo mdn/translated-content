@@ -3,7 +3,7 @@ title: "Window: requestIdleCallback() メソッド"
 short-title: requestIdleCallback()
 slug: Web/API/Window/requestIdleCallback
 l10n:
-  sourceCommit: eb289996538d1242cd7eaa54cbd9e20da0cb908c
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{APIRef("HTML DOM")}}
