@@ -3,12 +3,12 @@ title: "Window: isSecureContext プロパティ"
 short-title: isSecureContext
 slug: Web/API/Window/isSecureContext
 l10n:
-  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
 {{APIRef("DOM")}}
 
-グローバルの **`isSecureContext`** プロパティは読み取り専用で、現在の[コンテキストが安全](/ja/docs/Web/Security/Defenses/Secure_Contexts)である (`true`) かそうではない (`false`) を示す論理値を返します。
+グローバルの **`isSecureContext`** プロパティは読み取り専用で、現在の[コンテキストが保護されている](/ja/docs/Web/Security/Defenses/Secure_Contexts) (`true`) かそうではない (`false`) を示す論理値を返します。
 
 ## 値
 
