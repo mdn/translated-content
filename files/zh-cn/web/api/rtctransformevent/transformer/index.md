@@ -10,7 +10,7 @@ l10n:
 
 {{ domxref("RTCTransformEvent") }} 接口的 **`transformer`** 只读属性返回与该事件相关联的 {{ domxref("RTCRtpScriptTransformer") }}。
 
-该属性将 WebRTC 发送方或接收方的处理管道暴露为一个可读写的编码媒体帧流，你可以向其中插入 [WebRTC 编码转换器](/zh-CN/docs/Web/API/WebRTC_API/Using_Encoded_Transforms) 从而修改帧。
+该属性将 WebRTC 发送方或接收方的处理管道暴露为一个可读写的编码媒体帧流，你可以向其中插入 [WebRTC 编码转换](/zh-CN/docs/Web/API/WebRTC_API/Using_Encoded_Transforms)从而修改帧。
 
 ## 值
 
@@ -26,4 +26,4 @@ l10n:
 
 ## 参见
 
-- [使用 WebRTC 编码转换器](/zh-CN/docs/Web/API/WebRTC_API/Using_Encoded_Transforms)
+- [使用 WebRTC 编码转换](/zh-CN/docs/Web/API/WebRTC_API/Using_Encoded_Transforms)
