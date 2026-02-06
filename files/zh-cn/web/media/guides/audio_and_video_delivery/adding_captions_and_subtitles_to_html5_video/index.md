@@ -449,7 +449,7 @@ if (video.textTracks) {
   const df = document.createDocumentFragment();
   subtitlesMenu = df.appendChild(document.createElement("ul"));
   subtitlesMenu.className = "subtitles-menu";
-  subtitlesMenu.appendChild(createMenuItem("subtitles-off", "", "Off"));
+  subtitlesMenu.appendChild(createMenuItem("subtitles-off", "", "关闭"));
   for (const track of video.textTracks) {
     subtitlesMenu.appendChild(
       createMenuItem(
