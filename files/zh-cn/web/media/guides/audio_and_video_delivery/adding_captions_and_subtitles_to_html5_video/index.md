@@ -78,7 +78,7 @@ HTML 允许我们使用 {{ htmlelement("track") }} 元素来为视频指定字�
 
 ```html live-sample___video-player-with-captions
 <div id="video-controls" class="controls" data-state="hidden">
-  <button id="playpause" type="button" data-state="play">播放/暂停</button>
+  <button id="play-pause" type="button" data-state="play">播放/暂停</button>
   <button id="stop" type="button" data-state="stop">停止</button>
   <div class="progress">
     <progress id="progress" value="0" min="0">
@@ -86,8 +86,8 @@ HTML 允许我们使用 {{ htmlelement("track") }} 元素来为视频指定字�
     </progress>
   </div>
   <button id="mute" type="button" data-state="mute">静音/解除静音</button>
-  <button id="volinc" type="button" data-state="volup">音量+</button>
-  <button id="voldec" type="button" data-state="voldown">音量-</button>
+  <button id="vol-inc" type="button" data-state="vol-up">音量+</button>
+  <button id="vol-dec" type="button" data-state="vol-down">音量-</button>
   <button id="fs" type="button" data-state="go-fullscreen">全屏</button>
   <button id="subtitles" type="button" data-state="subtitles">
     <span>CC</span>
