@@ -1,14 +1,13 @@
 ---
 title: grid-row-end
 slug: Web/CSS/Reference/Properties/grid-row-end
-original_slug: Web/CSS/grid-row-end
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`grid-row-end`** définit la position de fin d'un élément de la grille sur la ligne de la grille en ajoutant une ligne, un fragment (<i lang="en">span</i> en anglais) ou rien (automatique) à son placement sur la grille, définissant ainsi le bord de fin en ligne de sa {{Glossary("grid areas", "zone de grille")}}.
 
-La propriété **`grid-row-end`** définit la position de la fin d'un élément de la grille dans une zone donnée ou sur un fragment de ligne donné.
-
-{{InteractiveExample("CSS Demo: grid-row-end")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: grid-row-end")}}
 
 ```css interactive-example-choice
 grid-row-end: auto;
@@ -29,9 +28,9 @@ grid-row-end: span 3;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="example-container">
-    <div class="transition-all" id="example-element">One</div>
-    <div>Two</div>
-    <div>Three</div>
+    <div class="transition-all" id="example-element">Un</div>
+    <div>Deux</div>
+    <div>Trois</div>
   </div>
 </section>
 ```
@@ -47,12 +46,12 @@ grid-row-end: span 3;
 }
 
 .example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 
 #example-element {
-  background-color: rgba(255, 0, 200, 0.2);
+  background-color: rgb(255 0 200 / 0.2);
   border: 3px solid rebeccapurple;
 }
 ```
@@ -63,21 +62,23 @@ grid-row-end: span 3;
 /* Valeurs avec un mot-clé */
 grid-row-end: auto;
 
-/* Valeurs <custom-ident> */
-grid-row-end: somegridarea;
+/* Valeurs de type <custom-ident> */
+grid-row-end: une-zone-de-grille;
 
-/* Valeurs <integer> + <custom-ident> */
+/* Valeurs de type <integer> + <custom-ident> */
 grid-row-end: 2;
-grid-row-end: somegridarea 4;
+grid-row-end: une-zone-de-grille 4;
 
 /* Valeurs span + <integer> + <custom-ident> */
 grid-row-end: span 3;
-grid-row-end: span somegridarea;
-grid-row-end: 5 somegridarea span;
+grid-row-end: span une-zone-de-grille;
+grid-row-end: 5 une-zone-de-grille span;
 
 /* Valeurs globales */
 grid-row-end: inherit;
 grid-row-end: initial;
+grid-row-end: revert;
+grid-row-end: revert-layer;
 grid-row-end: unset;
 ```
 
@@ -86,26 +87,28 @@ grid-row-end: unset;
 - `auto`
   - : Un mot-clé qui indique que la propriété ne contribue pas au placement de l'objet sur la grille. Par défaut, la taille du fragment allouée vaut `1` s'il n'y a pas d'autres contraintes.
 - `<custom-ident>`
-  - : S'il existe une ligne nommée '\<custom-ident>-end', cela placera l'élément sur la première ligne correspondante..
+  - : S'il existe une ligne nommée `<custom-ident>-end`, cela placera l'élément sur la première ligne correspondante..
 
     > [!NOTE]
-    > Les noms de zones génèrent automatiquement les noms de lignes sous cette forme. Ainsi, `grid-row-end: foo;` permettra de désigner l'extrêmité (à la fin) de la zone nommée (sauf si une autre ligne a explicitement été nommée avec `foo-end`).
+    > Les noms de zones génèrent automatiquement les noms de lignes sous cette forme. Ainsi, `grid-row-end: toto;` permettra de désigner l'extrêmité (à la fin) de la zone nommée (sauf si une autre ligne a explicitement été nommée avec `toto-end`).
 
     Si aucune zone ne correspond, la valeur est traitée comme la combinaison de l'entier 1 et de `<custom-ident>` (cf. définition suivante).
 
-    `<custom-ident>` ne peut pas prendre la valeur `span`.
+    `<custom-ident>` ne peut pas prendre les valeurs `span` et `auto`.
 
 - `<integer> && <custom-ident>?`
-  - : Contribue au placement de l'élément sur la n-ième ligne. Si une valeur négative est fournie, les lignes correspondantes sont comptées depuis la dernière. Si un nom est fourni pour \<custom-ident>, seules les lignes avec ce nom sont comptées. S'il n'y a pas suffisamment de lignes avec ce nom, on considère que toutes les lignes sont intitulées avec ce nom afin de trouver une position.
+  - : Contribue au placement de l'élément sur la n-ième ligne. Si une valeur négative est fournie, les lignes correspondantes sont comptées depuis la dernière.
 
-    Un entier nul ne peut pas être utilisé (la règle est invalide).
+    Si un nom est fourni pour `<custom-ident>`, seules les lignes avec ce nom sont comptées. S'il n'y a pas suffisamment de lignes avec ce nom, on considère que toutes les lignes sont intitulées avec ce nom afin de trouver une position.
+
+    Un entier ({{CSSxRef("&lt;integer&gt;")}}) de valeur `0` ne peut pas être utilisé (la règle est invalide).
 
 - `span && [ <integer> || <custom-ident> ]`
   - : Un fragment de grille est utilisé pour le placement de l'élément sur la grille afin que le début de la ligne pour l'élément de la grille soit placé à n lignes du bord situé au début.
 
-    Si un nom fourni pour \<custom-ident>, seules les lignes ayant ce nom seront comptées. S'il n'y a pas suffisamment de lignes existantes avec ce nom, tout les lignes implicites du côté de la grille explicite et qui correspondent à la direction de la recherche seront comptées afin de placer ce fragment.
+    Si un nom fourni pour `<custom-ident>`, seules les lignes ayant ce nom seront comptées. S'il n'y a pas suffisamment de lignes existantes avec ce nom, tout les lignes implicites du côté de la grille explicite et qui correspondent à la direction de la recherche seront comptées afin de placer ce fragment.
 
-    Si \<integer> est absent, la valeur par défaut sera 1. Les entiers négatifs ou nuls ne sont pas autorisés.
+    Si l'entier ({{CSSxRef("&lt;integer&gt;")}}) est absent, la valeur par défaut sera `1`. Les entiers négatifs ou `0` ne sont pas autorisés.
 
 ## Définition formelle
 
@@ -117,15 +120,21 @@ grid-row-end: unset;
 
 ## Exemples
 
+### Définir la fin de ligne pour un élément de la grille
+
+#### HTML
+
 ```html
 <div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
-  <div class="box4">Four</div>
-  <div class="box5">Five</div>
+  <div class="box1">Un</div>
+  <div class="box2">Deux</div>
+  <div class="box3">Trois</div>
+  <div class="box4">Quatre</div>
+  <div class="box5">Cinq</div>
 </div>
 ```
+
+#### CSS
 
 ```css
 .wrapper {
@@ -175,7 +184,9 @@ grid-row-end: unset;
 }
 ```
 
-{{EmbedLiveSample('Exemples', '230', '420')}}
+## Résultat
+
+{{EmbedLiveSample("Définir la fin de ligne pour un élément de la grille", 230, 420)}}
 
 ## Spécifications
 
@@ -187,10 +198,10 @@ grid-row-end: unset;
 
 ## Voir aussi
 
-- {{cssxref("grid-row-start")}}
-- {{cssxref("grid-row")}}
-- {{cssxref("grid-column-start")}}
-- {{cssxref("grid-column-end")}}
-- {{cssxref("grid-column")}}
-- [Guide : Placer les éléments d'une grille sur les lignes](/fr/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
-- Tutoriel vidéo : [le placement des éléments d'une grille sur les lignes (en anglais)](https://gridbyexample.com/video/series-line-based-placement/)
+- La propriété {{CSSxRef("grid-row-start")}}
+- La propriété raccourcie {{CSSxRef("grid-row")}}
+- La propriété {{CSSxRef("grid-column-start")}}
+- La propriété {{CSSxRef("grid-column-end")}}
+- La propriété raccourcie {{CSSxRef("grid-column")}}
+- [Placer les éléments d'une grille sur les lignes](/fr/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+- Vidéo&nbsp;: [le placement des éléments d'une grille sur les lignes <sup>(angl.)</sup>](https://gridbyexample.com/video/series-line-based-placement/)
