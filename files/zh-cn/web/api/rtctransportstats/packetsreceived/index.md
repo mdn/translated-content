@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-{{domxref("RTCTransportStats")}} 字典的 **`packetsReceived`** 属性表示在此传输上接收到的数据包总数。
+{{domxref("RTCTransportStats")}} 字典的 **`packetsReceived`** 属性表示在当前传输上接收到的数据包总数。
 
 ## 值
 
