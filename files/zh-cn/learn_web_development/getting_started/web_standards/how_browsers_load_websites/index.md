@@ -72,7 +72,7 @@ P
 
 此时如果直接渲染，效果如下：
 
-{{EmbedLiveSample('Handling the HTML', '100%', 55)}}
+{{EmbedLiveSample('解析 HTML', '100%', 55)}}
 
 ```css hidden
 p {
@@ -90,9 +90,9 @@ p {
 
 获取 CSS 后，浏览器会按以下步骤处理：
 
-1.  **解析与关联**：分析所有 CSS 规则，并根据选择器将它们映射到 DOM 树中对应的节点上，这一步形成**渲染树**。
-2.  **布局**：根据 CSS 规则计算每个节点在屏幕上的位置与尺寸，也称为“重排”。
-3.  **绘制**：将布局后的节点实际绘制到屏幕上，包括颜色、边框、背景等视觉细节。
+1. **解析与关联**：分析所有 CSS 规则，并根据选择器将它们映射到 DOM 树中对应的节点上，这一步形成**渲染树**。
+2. **布局**：根据 CSS 规则计算每个节点在屏幕上的位置与尺寸，也称为“重排”。
+3. **绘制**：将布局后的节点实际绘制到屏幕上，包括颜色、边框、背景等视觉细节。
 
 整个过程可参考以下示意图：
 
@@ -108,7 +108,9 @@ p {
   <span>JavaScript</span>
 </p>
 ```
+
 如果加入这样一条 CSS 规则：
+
 ```css
 span {
   border: 1px solid black;
@@ -118,7 +120,7 @@ span {
 
 浏览器会将这个样式应用到每一个 `<span>` 节点，绘制出带边框和绿色背景的效果：
 
-{{EmbedLiveSample('Parsing the CSS, and rendering the page', '100%', 90)}}
+{{EmbedLiveSample('解析 CSS 并绘制页面', '100%', 90)}}
 
 ## 执行 JavaScript
 
@@ -152,7 +154,7 @@ spans.forEach((span) => {
 
 这段代码会将每个 `<span>` 内的文字倒序显示。执行后效果如下：
 
-{{EmbedLiveSample('Handling the JavaScript', '100%', 90)}}
+{{EmbedLiveSample('执行 JavaScript', '100%', 90)}}
 
 ## 其他渲染相关步骤
 
