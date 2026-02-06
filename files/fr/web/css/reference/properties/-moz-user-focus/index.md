@@ -1,18 +1,15 @@
 ---
 title: -moz-user-focus
 slug: Web/CSS/Reference/Properties/-moz-user-focus
-original_slug: Web/CSS/-moz-user-focus
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{deprecated_header}}{{non-standard_header}}
+{{Non-standard_Header}}{{Deprecated_Header}}
 
-La propriété **`-moz-user-focus`** est utilisée pour indiquer si l'élément peut recevoir le focus.
+La propriété [CSS](/fr/docs/Web/CSS) **`-moz-user-focus`** est utilisée pour indiquer si l'élément peut recevoir le focus.
 
 En utilisant la valeur `ignore`, on peut désactiver la prise de focus sur l'élément (l'utilisateur·ice ne pourra pas activer l'élément) et l'élément sera sauté lors de la navigation à la tabulation.
-
-{{CSSInfo}}
 
 ## Syntaxe
 
@@ -71,6 +68,6 @@ Cette propriété ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- {{cssxref("-moz-user-input")}}
-- {{cssxref("user-modify")}}
-- {{cssxref("user-select", "-moz-user-select")}}
+- La propriété {{CSSxRef("-moz-user-input")}}
+- La propriété {{CSSxRef("user-modify")}}
+- La propriété {{CSSxRef("user-select", "-moz-user-select")}}
