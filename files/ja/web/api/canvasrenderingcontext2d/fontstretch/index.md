@@ -3,14 +3,14 @@ title: "CanvasRenderingContext2D: fontStretch プロパティ"
 short-title: fontStretch
 slug: Web/API/CanvasRenderingContext2D/fontStretch
 l10n:
-  sourceCommit: 44cf523714745d626317192bfbe849b47144f3ab
+  sourceCommit: 0c13af55e869cbc54830fd1a601fd05f60717375
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 **`CanvasRenderingContext2D.fontStretch`** は[キャンバス API](/ja/docs/Web/API/Canvas_API) のプロパティで、テキストを描画するときにフォントをどのように拡張・縮小できるかを指定します。
 
-このプロパティは、キーワードと共に使用する場合、 CSS の [`font-stretch`](/ja/docs/Web/CSS/Reference/Properties/font-stretch) プロパティに相当します（パーセント値には対応していません）。
+このプロパティは、キーワードと共に使用する場合、 CSS の {{cssxref("font-stretch")}} プロパティに相当します（パーセント値には対応していません）。
 
 ## 値
 
@@ -48,7 +48,7 @@ const ctx = canvas.getContext("2d");
 ```js
 const fontFile = new FontFace(
   "Inconsolata",
-  'url(https://fonts.gstatic.com/s/inconsolata/v31/QlddNThLqRwH-OJ1UHjlKENVzlm-WkL3GZQmAwPyya15.woff2) format("woff2")',
+  'url("https://fonts.gstatic.com/s/inconsolata/v31/QlddNThLqRwH-OJ1UHjlKENVzlm-WkL3GZQmAwPyya15.woff2") format("woff2")',
   { stretch: "50% 200%" },
 );
 
