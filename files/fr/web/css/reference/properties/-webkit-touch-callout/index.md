@@ -1,12 +1,13 @@
 ---
 title: -webkit-touch-callout
 slug: Web/CSS/Reference/Properties/-webkit-touch-callout
-original_slug: Web/CSS/-webkit-touch-callout
+l10n:
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{Non-standard_header}}
+{{Non-standard_Header}}
 
-La propriété **`-webkit-touch-callout`** permet de contrôler l'affichage de la légende (_callout_) affichée par défaut lorsque le toucher est maintenu sur un élément.
+La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-touch-callout`** permet de contrôler l'affichage de la légende (_callout_) affichée par défaut lorsque le toucher est maintenu sur un élément.
 
 Lorsqu'un élément est touché et que la pression est maintenue sur iOS, Safari affiche une bulle d'informations à propos du lien. Cette propriété permet de désactiver ce fonctionnement.
 
@@ -42,6 +43,8 @@ Lorsqu'un élément est touché et que la pression est maintenue sur iOS, Safari
 
 ## Exemples
 
+### Désactiver la légende tactile
+
 ```css
 .exemple {
   -webkit-touch-callout: none;
@@ -50,7 +53,7 @@ Lorsqu'un élément est touché et que la pression est maintenue sur iOS, Safari
 
 ## Spécifications
 
-Cette propriété ne fait partie d'aucun standard. Elle est décrite dans [la référence CSS de Safari](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout).
+Cette propriété ne fait partie d'aucun standard. Elle est décrite dans [la référence CSS de Safari <sup>(angl.)</sup>](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout).
 
 ## Compatibilité des navigateurs
 

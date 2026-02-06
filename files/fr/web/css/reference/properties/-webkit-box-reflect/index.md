@@ -1,12 +1,13 @@
 ---
 title: -webkit-box-reflect
 slug: Web/CSS/Reference/Properties/-webkit-box-reflect
-original_slug: Web/CSS/-webkit-box-reflect
+l10n:
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 {{Non-standard_Header}}
 
-La propriété **`-webkit-box-reflect`** peut être utilisée afin de créer un effet de réflexion d'un élément dans une direction donnée.
+La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-box-reflect`** peut être utilisée afin de créer un effet de réflexion d'un élément dans une direction donnée.
 
 ## Syntaxe
 
@@ -33,12 +34,12 @@ La propriété **`-webkit-box-reflect`** peut être utilisée afin de créer un 
 
 ### Valeurs
 
-- `above`_,_ `below`_,_ `right`_,_ `left`
-  - : Des mots-clés qui indiquent la direction dans laquelle créer la réflexion (respectivement : au-dessus, en-dessous, à droite, à gauche).
-- `<length>`
-  - : La taille du reflet créé, cf. {{cssxref("&lt;length&gt;")}} sur les valeurs possibles.
-- `<image>`
-  - : Le masque à appliquer au reflet, cf. {{cssxref("&lt;image&gt;")}} sur les valeurs possibles.
+- `above`, `below`, `right`, `left`
+  - : Des mots-clés qui indiquent la direction dans laquelle créer la réflexion (respectivement&nbsp;: au-dessus, en-dessous, à droite, à gauche).
+- {{CSSxRef("&lt;length&gt;")}}
+  - : Indique la taille du reflet créé.
+- {{CSSxRef("&lt;image&gt;")}}
+  - : Décrit le masque à appliquer au reflet.
 
 ## Définition formelle
 
@@ -50,7 +51,7 @@ La propriété **`-webkit-box-reflect`** peut être utilisée afin de créer un 
 
 ## Spécifications
 
-Cette propriété ne fait partie d'aucun standard, mais on pourra utiliser la fonction CSS standardisée {{cssxref("element()", "element()")}}.
+Cette propriété ne fait partie d'aucun standard, mais on pourra utiliser la fonction CSS standardisée {{CSSxRef("element()")}}.
 
 ## Compatibilité des navigateurs
 
@@ -58,6 +59,5 @@ Cette propriété ne fait partie d'aucun standard, mais on pourra utiliser la fo
 
 ## Voir aussi
 
-- [La documentation Apple](https://developer.apple.com/library/safari/documentation/appleapplications/reference/safaricssref/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW16)
-- [La spécification WebKit](https://www.webkit.org/blog/182/css-reflections/)
-- L'article de Lea Verou sur les réflexions CSS [en utilisant les fonctionnalités en voie de standardisation](https://lea.verou.me/2011/06/css-reflections-for-firefox-with-moz-element-and-svg-masks/)
+- La [documentation <sup>(angl.)</sup>](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html) de Apple.
+- La [spécification <sup>(angl.)</sup>](https://webkit.org/blog/182/css-reflections/) de WebKit.
