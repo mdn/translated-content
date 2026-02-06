@@ -1,22 +1,21 @@
 ---
 title: -webkit-border-before
 slug: Web/CSS/Reference/Properties/-webkit-border-before
-original_slug: Web/CSS/-webkit-border-before
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{Non-standard_header}}
+{{Non-standard_Header}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-border-before`** est une propriété raccourcie qui permet de définir les propriétés de la bordure pour le début d'un élément dans l'axe de bloc (l'axe logique orthogonal à l'axe de lecture).
+La propriété raccourcie [CSS](/fr/docs/Web/CSS) **`-webkit-border-before`** permet de définir les propriétés de la bordure pour le début d'un élément dans l'axe de bloc (l'axe logique orthogonal à l'axe de lecture).
 
-## Constituent properties
+## Propriétés constitutives
 
 Cette propriété est une propriété raccourcie pour les propriétés CSS suivantes&nbsp;:
 
-- {{cssxref("-webkit-border-before-color")}}
-- {{cssxref("-webkit-border-before-style")}}
-- {{cssxref("-webkit-border-before-width")}}
+- `-webkit-border-before-color`
+- `-webkit-border-before-style`
+- `-webkit-border-before-width`
 
 ## Syntaxe
 
@@ -39,11 +38,11 @@ Cette propriété est une propriété raccourcie pour les propriétés CSS suiva
 Une ou plusieurs valeurs parmi les suivantes, dans n'importe quel ordre&nbsp;:
 
 - `<border-width>`
-  - : Voir {{cssxref("border-width")}}.
+  - : Voir {{CSSxRef("border-width")}}.
 - `<border-style>`
-  - : Voir {{cssxref("border-style")}}.
+  - : Voir {{CSSxRef("border-style")}}.
 - `<color>`
-  - : Voir {{cssxref("color")}}.
+  - : Voir {{CSSxRef("color")}}.
 
 ## Définition formelle
 
@@ -55,7 +54,17 @@ Une ou plusieurs valeurs parmi les suivantes, dans n'importe quel ordre&nbsp;:
 
 ## Exemples
 
-### CSS
+### Appliquer une bordure avec du texte vertical
+
+#### HTML
+
+```html
+<div>
+  <p class="texteExemple">Texte pour l'exemple</p>
+</div>
+```
+
+#### CSS
 
 ```css
 div {
@@ -70,21 +79,13 @@ div {
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<div>
-  <p class="texteExemple">Texte pour l'exemple</p>
-</div>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples", 140, 140)}}
+{{EmbedLiveSample("Appliquer une bordure avec du texte vertical", 140, 140)}}
 
 ## Spécifications
 
-Cette propriété ne fait partie d'aucun standard, mais est lié à la propriété {{cssxref('border-block-start')}} en cours de standardisation.
+Cette propriété ne fait partie d'aucun standard, mais est lié à la propriété {{CSSxRef('border-block-start')}} en cours de standardisation.
 
 ## Compatibilité des navigateurs
 
@@ -92,14 +93,6 @@ Cette propriété ne fait partie d'aucun standard, mais est lié à la propriét
 
 ## Voir aussi
 
-- {{cssxref("border-block-start")}}
-- Les propriétés physiques correspondantes :
-  - {{cssxref("border-top")}}
-  - {{cssxref("border-right")}}
-  - {{cssxref("border-bottom")}}
-  - {{cssxref("border-left")}}
-
-- Les propriétés qui déterminent les propriétés logiques par rapport aux propriétés physiques
-  - {{cssxref("writing-mode")}}
-  - {{cssxref("direction")}}
-  - {{cssxref("text-orientation")}}
+- La propriété {{CSSxRef("border-block-start")}}
+- Les propriétés physiques correspondantes&nbsp;: {{CSSxRef("border-top")}}, {{CSSxRef("border-right")}}, {{CSSxRef("border-bottom")}} et {{CSSxRef("border-left")}}
+- Les propriétés {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}

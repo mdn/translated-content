@@ -1,14 +1,13 @@
 ---
 title: -webkit-mask-position-x
 slug: Web/CSS/Reference/Properties/-webkit-mask-position-x
-original_slug: Web/CSS/-webkit-mask-position-x
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{Non-standard_header}}
+{{Non-standard_Header}}
 
-La propriété **`-webkit-mask-position-x`** permet de définir la position horizontale initiale d'une image de masque.
+La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-mask-position-x`** permet de définir la position horizontale initiale d'une image de masque.
 
 ## Syntaxe
 
@@ -63,6 +62,8 @@ La propriété **`-webkit-mask-position-x`** permet de définir la position hori
 
 ## Exemples
 
+### Positionner horizontalement une image de masque
+
 ```css
 .exempleUn {
   -webkit-mask-image: url(mask.png);
@@ -85,6 +86,6 @@ Cette propriété ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- {{cssxref("mask-position", "-webkit-mask-position")}}
-- {{cssxref("-webkit-mask-position-y")}}
-- {{cssxref("mask-origin", "-webkit-mask-origin")}}
+- La propriété {{CSSxRef("mask-position", "-webkit-mask-position")}}
+- La propriété {{CSSxRef("-webkit-mask-position-y")}}
+- La propriété {{CSSxRef("mask-origin", "-webkit-mask-origin")}}
