@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
-{{domxref("ServiceWorkerGlobalScope")}} 接口的 **`registration`** 只读属性返回对 {{domxref("ServiceWorkerRegistration")}} 对象（表示此服务工作线程的注册信息）的引用。
+{{domxref("ServiceWorkerGlobalScope")}} 接口的 **`registration`** 只读属性返回对 {{domxref("ServiceWorkerRegistration")}} 对象（表示该 Service Worker 的注册信息）的引用。
 
 ## 值
 
@@ -24,6 +24,6 @@ l10n:
 
 ## 参见
 
-- [使用服务工作线程](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [服务工作线程基础代码示例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [使用 Web 工作线程](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service Worker 基础代码示例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
+- [使用 Web Worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)
