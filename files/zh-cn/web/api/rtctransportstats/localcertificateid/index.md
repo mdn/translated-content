@@ -8,13 +8,13 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-{{domxref("RTCTransportStats")}} 字典的 **`localCertificateId`** 属性是表示此 {{domxref("RTCIceTransport")}} 所使用的本地证书的 ID 的字符串。
+{{domxref("RTCTransportStats")}} 字典的 **`localCertificateId`** 属性是表示当前 {{domxref("RTCIceTransport")}} 所使用的本地证书的 ID 的字符串。
 
 该属性仅存在于 DTLS 传输中，并且在 DTLS 协商完成后才存在。
 
 ## 值
 
-包含此传输所使用的本地证书的 ID 的字符串。
+包含该传输所使用的本地证书的 ID 的字符串。
 
 ## 规范
 
