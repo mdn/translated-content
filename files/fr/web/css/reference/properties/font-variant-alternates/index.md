@@ -1,12 +1,17 @@
 ---
 title: font-variant-alternates
 slug: Web/CSS/Reference/Properties/font-variant-alternates
-original_slug: Web/CSS/font-variant-alternates
+l10n:
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`font-variant-alternates`** contrôle l'utilisation des glyphes alternatifs. Ces glyphes alternatifs peuvent être référencés par des noms alternatifs définis dans {{CSSxRef("@font-feature-values")}}.
 
-La propriété CSS **`font-variant-alternates`** contrôle l'utilisation de glyphes alternatifs. Ces glyphes peuvent être référencés par les noms définis avec la règle @ [`@font-feature-values`](/fr/docs/Web/CSS/Reference/At-rules/@font-feature-values).
+La règle {{CSSxRef("@font-feature-values")}} permet d'associer, pour une police donnée, un nom lisible par l'humain à un indice numérique qui contrôle une fonctionnalité OpenType particulière. Pour les fonctionnalités qui sélectionnent des glyphes alternatifs (`stylistic`, `styleset`, `character-variant`, `swash`, `ornament` ou `annotation`), la propriété `font-variant-alternates` peut alors référencer le nom lisible afin d'appliquer la fonctionnalité associée.
+
+Cela permet aux règles CSS d'activer des glyphes alternatifs sans avoir à connaître les valeurs d'index spécifiques qu'une police utilise pour les contrôler.
+
+## Syntaxe
 
 ```css
 /* Valeurs avec un mot-clé */
@@ -29,10 +34,6 @@ font-variant-alternates: revert;
 font-variant-alternates: revert-layer;
 font-variant-alternates: unset;
 ```
-
-La règle @ [`@font-feature-values`](/fr/docs/Web/CSS/Reference/At-rules/@font-feature-values) définit les noms associés aux valeurs OpenType pour les différentes fonctions de glyphes alternatifs (`stylistic`, `styleset`, `character-variant`, `swash`, `ornament` ou `annotation`). Ces propriétés permettent d'utiliser des noms adaptés (définis avec [`@font-feature-values`](/fr/docs/Web/CSS/Reference/At-rules/@font-feature-values)) dans la feuille de styles.
-
-## Syntaxe
 
 Cette propriété peut être définie selon deux formes&nbsp;:
 
@@ -68,48 +69,55 @@ Cette propriété peut être définie selon deux formes&nbsp;:
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
-### Activer l'affichage de glyphes pour les lettres ornées
+### Activer les glyphes swash
+
+Dans cet exemple, nous utilisons la règle `@font-feature-values` pour définir un nom pour la fonctionnalité `swash` de la police [MonteCarlo <sup>(angl.)</sup>](https://github.com/googlefonts/monte-carlo). La règle associe le nom `"fancy"` à la valeur d'index `1`.
+
+Nous pouvons ensuite utiliser ce nom dans `font-variant-alternates` pour activer les swashs pour cette police. Cela équivaut à une ligne comme `font-feature-settings: "swsh" 1`, sauf que le CSS appliquant la fonctionnalité n'a pas besoin d'inclure, ni même de connaître, la valeur d'index nécessaire pour cette police particulière.
 
 #### HTML
 
 ```html
-<p>MDN c'est là !</p>
-<p class="variant">MDN c'est là !</p>
+<p>Une lettre ornée élégante</p>
+<p class="variant">Une lettre ornée élégante</p>
 ```
 
 #### CSS
 
 ```css
-@font-feature-values "Leitura Display Swashes" {
+@font-face {
+  font-family: "MonteCarlo";
+  src: url("/shared-assets/fonts/monte-carlo/monte-carlo-regular.woff2");
+}
+
+@font-feature-values "MonteCarlo" {
   @swash {
     fancy: 1;
   }
 }
 
 p {
-  font-size: 1.5rem;
+  font-family: "MonteCarlo", cursive;
+  font-size: 3rem;
+  margin: 0.7rem 3rem;
 }
 
 .variant {
-  font-family: Leitura Display Swashes;
   font-variant-alternates: swash(fancy);
 }
 ```
 
 #### Résultat
 
-> [!NOTE]
-> Pour que cet exemple fonctionne, il faut avoir installé la fonte Open Type Leitura Display Swashes. Une version de test est disponible sur [fontsgeek.com](https://fontsgeek.com).
-
-{{EmbedLiveSample('')}}
+{{EmbedLiveSample("Activer les glyphes swash", 0, 230)}}
 
 ## Spécifications
 
-Ne fait partie d'aucun standard.
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
@@ -117,9 +125,12 @@ Ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- [`font-variant`](/fr/docs/Web/CSS/Reference/Properties/font-variant)
-- [`font-variant-caps`](/fr/docs/Web/CSS/Reference/Properties/font-variant-caps)
-- [`font-variant-east-asian`](/fr/docs/Web/CSS/Reference/Properties/font-variant-east-asian)
-- [`font-variant-ligatures`](/fr/docs/Web/CSS/Reference/Properties/font-variant-ligatures)
-- [`font-variant-numeric`](/fr/docs/Web/CSS/Reference/Properties/font-variant-numeric)
-- [`@font-feature-values`](/fr/docs/Web/CSS/Reference/At-rules/@font-feature-values)
+- La propriété raccourcie {{CSSxRef("font-variant")}}
+- La propriété {{CSSxRef("font-variant-caps")}}
+- La propriété {{CSSxRef("font-variant-east-asian")}}
+- La propriété {{CSSxRef("font-variant-emoji")}}
+- La propriété {{CSSxRef("font-variant-ligatures")}}
+- La propriété {{CSSxRef("font-variant-numeric")}}
+- La propriété {{CSSxRef("font-variant-position")}}
+- La règle {{CSSxRef("@font-feature-values")}}
+- La propriété {{CSSxRef("font-feature-settings")}}
