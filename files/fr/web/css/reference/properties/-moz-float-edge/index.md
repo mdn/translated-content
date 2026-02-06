@@ -1,12 +1,13 @@
 ---
 title: -moz-float-edge
 slug: Web/CSS/Reference/Properties/-moz-float-edge
-original_slug: Web/CSS/-moz-float-edge
+l10n:
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{Non-standard_header}}{{Deprecated_Header}}
+{{Non-standard_Header}}{{Deprecated_Header}}
 
-La propriété **`-moz-float-edge`** définit si les propriétés de hauteur et de larguer d'un élément incluent la marge, la bordure et/ou le remplissage (_padding_).
+La propriété [CSS](/fr/docs/Web/CSS) non standard **`-moz-float-edge`** définit si les propriétés de hauteur et de larguer d'un élément incluent la marge, la bordure et/ou le remplissage (_padding_).
 
 ## Syntaxe
 
@@ -38,6 +39,14 @@ La propriété **`-moz-float-edge`** définit si les propriétés de hauteur et 
 
 ## Exemples
 
+### HTML
+
+```html
+<div class="box">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+```
+
 ### CSS
 
 ```css
@@ -51,17 +60,9 @@ La propriété **`-moz-float-edge`** définit si les propriétés de hauteur et 
 }
 ```
 
-### HTML
-
-```html
-<div class="box">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
-```
-
 ### Résultat
 
-{{EmbedLiveSample('Exemples')}}
+{{EmbedLiveSample("Exemples")}}
 
 ## Spécifications
 
@@ -73,4 +74,4 @@ Cette propriété ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- [bug Firefox 432891](https://bugzil.la/432891)
+- [Boggue Firefox 432891 <sup>(angl.)</sup>](https://bugzil.la/432891)

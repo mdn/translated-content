@@ -1,12 +1,13 @@
 ---
 title: -moz-force-broken-image-icon
 slug: Web/CSS/Reference/Properties/-moz-force-broken-image-icon
-original_slug: Web/CSS/-moz-force-broken-image-icon
+l10n:
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{Non-standard_header}}{{Deprecated_Header}}
+{{Non-standard_Header}}{{Deprecated_Header}}
 
-La propriété **`-moz-force-broken-image-icon`** est une propriété CSS non-standard. Lorsqu'elle vaut `1`, elle permet de forcer l'affichage d'une icône d'image brisée même si l'image possède un attribut {{HTMLElement("img","<code>alt</code>","#attr-alt")}}. Lorsqu'elle vaut `0`, l'image est utilisée de façon normale et n'affichera que l'attribut `alt`.
+La propriété [CSS](/fr/docs/Web/CSS) étendue **`-moz-force-broken-image-icon`** permet d'afficher l'icône d'image brisée même lorsqu'une image brisée possède un attribut `alt`.
 
 ## Syntaxe
 
@@ -24,11 +25,11 @@ La propriété **`-moz-force-broken-image-icon`** est une propriété CSS non-st
 
 ### Valeurs
 
-- {{cssxref("&lt;integer&gt;")}}
-  - : Une valeur de 1 indique qu'une icône d'image brisée est affichée même si l'image possède un attribut {{HTMLElement("img", "<code>alt</code>", "#attr-alt")}}. `0` indique que seul l'attribut `alt` doit être affiché.
+- {{CSSxRef("&lt;integer&gt;")}}
+  - : Une valeur de 1 indique qu'une icône d'image brisée est affichée même si l'image possède un attribut {{HTMLElement("img", "<code>alt</code>", "#alt")}}. `0` indique que seul l'attribut `alt` doit être affiché.
 
-    > [!NOTE]
-    > Même si la valeur est `1`, l'attribut `alt` sera affiché. Voir ci-après.
+> [!NOTE]
+> Même si la valeur est `1`, l'attribut `alt` sera affiché. Voir ci-après.
 
 ## Définition formelle
 
@@ -40,6 +41,12 @@ La propriété **`-moz-force-broken-image-icon`** est une propriété CSS non-st
 
 ## Exemples
 
+### HTML
+
+```html
+<img src="/lien/vers/image/cassée.png" alt="Un lien vers une image cassée" />
+```
+
 ### CSS
 
 ```css
@@ -50,23 +57,17 @@ img {
 }
 ```
 
-### HTML
-
-```html
-<img src="/lien/vers/image/cassée.png" alt="Un lien vers une image cassée" />
-```
-
 ### Résultat
 
-{{EmbedLiveSample('Exemples','125','125','/files/4619/broken%20image%20link.png')}}
+{{EmbedLiveSample("Exemples", 125, 125)}}
 
 > [!NOTE]
-> Si `-moz-force-broken-image-icon` a la valeur `1` et que ni la hauteur ni largeur de l'image ne sont spécifiées alors l'image ne sera pas affichée et l'attribut `alt` sera masqué.
+> Le texte alternatif peut ne pas être visible si `-moz-force-broken-image-icon` a la valeur `1` et que l'image n'a pas (ou a une valeur trop faible pour) `height` ou `width`.
 
 ## Notes
 
 - Cette propriété ne fonctionne que sur les navigateurs basés sur Gecko.
-- L'usage de cette propriété n'est pas recommandée. Une propriété _alt_ adéquate devrait être utilisé.
+- L'usage de cette propriété n'est pas recommandée. Une propriété `alt` adéquate devrait être utilisée.
 
 ## Spécifications
 
@@ -78,4 +79,4 @@ Cette propriété ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- [bug Firefox 58646](https://bugzil.la/58646)
+- [Boggue Firefox 58646 <sup>(angl.)</sup>](https://bugzil.la/58646)

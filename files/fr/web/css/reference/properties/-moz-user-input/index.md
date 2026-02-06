@@ -1,16 +1,17 @@
 ---
 title: -moz-user-input
 slug: Web/CSS/Reference/Properties/-moz-user-input
-original_slug: Web/CSS/-moz-user-input
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 {{Non-standard_Header}}{{Deprecated_Header}}
 
-Pour les applications Mozilla, la propriété **`-moz-user-input`** détermine si l'utilisateur·ice peut effectuer une saisie sur l'élément.
+Dans les applications Mozilla, **`-moz-user-input`** détermine si un élément acceptera une saisie utilisateur.
 
-Pour les éléments qui acceptent la saisie par défaut (ex. les élémetns {{HTMLElement("textarea")}}), la valeur initiale de `-moz-user-input` sera `enabled`.
+Depuis Firefox 60, cette propriété ne peut plus permettre à un élément d'accepter une saisie utilisateur s'il ne le fait pas normalement. Elle ne peut être utilisée que pour désactiver la saisie utilisateur.
+
+La propriété `user-input` n'est actuellement pas en cours de normalisation.
 
 ## Syntaxe
 
@@ -27,12 +28,10 @@ Pour les éléments qui acceptent la saisie par défaut (ex. les élémetns {{HT
 
 ### Valeurs
 
+- `auto`
+  - : L'élément réagit à la saisie utilisateur s'il accepte normalement une saisie, comme un {{HTMLElement("textarea")}}.
 - `none`
-  - : L'élément ne réagit pas aux saisies de l'utilisateur·ice et il ne prend jamais l'état {{cssxref(":active")}}.
-- `enabled`
-  - : L'utilisateur·ice peut effectuer une saisie sur cet élément. Pour les boîtes de texte, c'est le comportement par défaut. **Cette valeur n'est plus prise en charge à partir de Firefox 60 (cf. [bug Firefox 1405087 <sup>(angl.)</sup>](https://bugzil.la/1405087)).**
-- `disabled`
-  - : L'utilisateur·ice ne peut pas effectuer de saisie sur cet élément (cela n'est pas équivalent à utiliser l'attribut `disabled` avec la valeur `true` car l'élément est dessiné normalement). **Cette valeur n'est plus prise en charge à partir de Firefox 60 (cf. [bug Firefox 1405087 <sup>(angl.)</sup>](https://bugzil.la/1405087)).**
+  - : L'élément ne réagit pas à la saisie utilisateur et il ne prend jamais l'état {{CSSxRef(":active")}}.
 
 ## Définition formelle
 
@@ -44,11 +43,13 @@ Pour les éléments qui acceptent la saisie par défaut (ex. les élémetns {{HT
 
 ## Exemples
 
+### Désactiver la saisie utilisateur pour un élément
+
 ```css
 input.exemple {
   /* L'utilisateur·ice pourra sélectionner le texte
      mais ne pourra pas le modifier. */
-  -moz-user-input: disabled;
+  -moz-user-input: none;
 }
 ```
 
@@ -62,6 +63,6 @@ Cette propriété ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- {{CSSxRef("-moz-user-focus")}}
-- {{CSSxRef("user-modify", "-moz-user-modify")}}
-- {{CSSxRef("user-select", "-moz-user-select")}}
+- La propriété {{CSSxRef("-moz-user-focus")}}
+- La propriété {{CSSxRef("user-modify", "-moz-user-modify")}}
+- La propriété {{CSSxRef("user-select", "-moz-user-select")}}
