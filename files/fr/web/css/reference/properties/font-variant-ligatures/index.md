@@ -1,14 +1,13 @@
 ---
 title: font-variant-ligatures
 slug: Web/CSS/Reference/Properties/font-variant-ligatures
-original_slug: Web/CSS/font-variant-ligatures
+l10n:
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`font-variant-ligatures`** contrôle quelles {{Glossary("ligature", "ligatures")}} et formes contextuelles sont utilisées dans les éléments textuels auxquels elle s'applique. Ceci vise à harmoniser l'affichage du texte.
 
-La propriété CSS **`font-variant-ligatures`** contrôle quelles [ligatures](/fr/docs/Glossary/Ligature) et formes contextuelles sont utilisées dans les éléments textuels auxquels elle s'applique. Ceci vise à harmoniser l'affichage du texte.
-
-{{InteractiveExample("CSS Demo: font-variant-ligatures")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: font-variant-ligatures")}}
 
 ```css interactive-example-choice
 font-variant-ligatures: normal;
@@ -25,7 +24,7 @@ font-variant-ligatures: common-ligatures;
 ```html interactive-example
 <section id="default-example">
   <div id="example-element">
-    <p>Difficult waffles</p>
+    <p>La difficulté des gauffres</p>
   </div>
 </section>
 ```
@@ -61,7 +60,13 @@ font-variant-ligatures: historical-ligatures; /* <historical-lig-values> */
 font-variant-ligatures: no-historical-ligatures; /* <historical-lig-values> */
 font-variant-ligatures: contextual; /* <contextual-alt-values> */
 font-variant-ligatures: no-contextual; /* <contextual-alt-values> */
-font-variant-ligatures: contextual; /* <no-historical-ligatures> <common-ligatures> */
+
+/* Valeurs avec deux mots-clés */
+font-variant-ligatures: no-contextual common-ligatures;
+
+/* Valeurs avec quatre mots-clés */
+font-variant-ligatures: common-ligatures no-discretionary-ligatures
+  historical-ligatures contextual;
 
 /* Valeurs globales */
 font-variant-ligatures: inherit;
@@ -71,7 +76,7 @@ font-variant-ligatures: revert-layer;
 font-variant-ligatures: unset;
 ```
 
-La valeur de cette propriété peut être l'un des mots-clés définis ci-après.
+La propriété `font-variant-ligatures` se définit avec le mot-clé `normal`, `none` ou un ou plusieurs autres types de valeurs listés ci-dessous. Les espaces séparent les valeurs multiples.
 
 ### Valeurs
 
@@ -81,33 +86,33 @@ La valeur de cette propriété peut être l'un des mots-clés définis ci-après
 - `none`
   - : Cette valeur désactive toutes les ligatures et formes contextuelles, y compris celles couramment utilisées.
 
-- `<common-lig-values>`
+- _`<common-lig-values>`_
   - : Ces valeurs contrôlent les ligatures les plus courantes, comme `fi`, `ffi`, `th` et autres. Elles correspondent aux valeurs OpenType `liga` et `clig`. Deux valeurs sont possibles&nbsp;:
     - `common-ligatures`&nbsp;: active ces ligatures. Notez que la valeur `normal` active ces ligatures.
     - `no-common-ligatures`&nbsp;: désactive ces ligatures.
 
-- `<discretionary-lig-values>`
+- _`<discretionary-lig-values>`_
   - : Ces valeurs contrôlent les ligatures spécifiques, spécifiques à la police et définies par le fondeur. Elles correspondent à la valeur OpenType `dlig`. Deux valeurs sont possibles&nbsp;:
     - `discretionary-ligatures`&nbsp;: active ces ligatures.
     - `no-discretionary-ligatures`&nbsp;: désactive ces ligatures. Notez que la valeur `normal` désactive ces ligatures.
 
-- `<historical-lig-values>`
+- _`<historical-lig-values>`_
   - : Ces valeurs contrôlent les ligatures historiques, utilisées dans les livres anciens, comme l'allemand tz qui devient ꜩ. Elles correspondent à la valeur OpenType `hlig`. Deux valeurs sont possibles&nbsp;:
     - `historical-ligatures`&nbsp;: active ces ligatures.
     - `no-historical-ligatures`&nbsp;: désactive ces ligatures. Notez que la valeur `normal` désactive ces ligatures.
 
-- `<contextual-alt-values>`
+- _`<contextual-alt-values>`_
   - : Ces valeurs contrôlent la manière dont les lettres s'adaptent à leur contexte, c'est-à-dire aux lettres qui les entourent. Elles correspondent à la valeur OpenType `calt`. Deux valeurs sont possibles&nbsp;:
     - `contextual`&nbsp;: précise que des alternatives contextuelles peuvent être utilisées. Notez que la valeur `normal` active ces ligatures.
     - `no-contextual`&nbsp;: interdit leur utilisation.
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -157,17 +162,13 @@ La valeur de cette propriété peut être l'un des mots-clés définis ci-après
   no-contextual<br />
   if fi ff tf ft jf fj
 </p>
-<p class="contextual">
-  contextual<br />
-  if fi ff tf ft jf fj
-</p>
 ```
 
 #### CSS
 
 ```css
 p {
-  font-family: Lora, serif;
+  font-family: "Lora", serif;
 }
 .normal {
   font-variant-ligatures: normal;
@@ -208,15 +209,11 @@ p {
 .no-contextual {
   font-variant-ligatures: no-contextual;
 }
-
-.contextual {
-  font-variant-ligatures: contextual;
-}
 ```
 
 #### Résultat
 
-{{EmbedLiveSample('', '', '700')}}
+{{EmbedLiveSample("Paramétrer les ligatures et formes contextuelles", "", 560)}}
 
 ## Spécifications
 
@@ -228,8 +225,10 @@ p {
 
 ## Voir aussi
 
-- [`font-variant-alternates`](/fr/docs/Web/CSS/Reference/Properties/font-variant-alternates)
-- [`font-variant-caps`](/fr/docs/Web/CSS/Reference/Properties/font-variant-caps)
-- [`font-variant-east-asian`](/fr/docs/Web/CSS/Reference/Properties/font-variant-east-asian)
-- [`font-variant`](/fr/docs/Web/CSS/Reference/Properties/font-variant)
-- [`font-variant-numeric`](/fr/docs/Web/CSS/Reference/Properties/font-variant-numeric)
+- La propriété raccourcie {{CSSxRef("font-variant")}}
+- La propriété {{CSSxRef("font-variant-caps")}}
+- La propriété {{CSSxRef("font-variant-emoji")}}
+- La propriété {{CSSxRef("font-variant-east-asian")}}
+- La propriété {{CSSxRef("font-variant-numeric")}}
+- La propriété {{CSSxRef("font-variant-position")}}
+- Le module [des polices CSS](/fr/docs/Web/CSS/Guides/Fonts)
