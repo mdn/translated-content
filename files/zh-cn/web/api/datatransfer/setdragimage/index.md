@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML Drag and Drop API")}}
 
-当发生拖拽时，会从拖拽目标（触发 {{domxref("HTMLElement/dragstart_event", "dragstart")}} 事件的元素）处生成一张半透明图像，并在拖拽过程中保持该图像一直跟随鼠标指针。这个图片是自动创建的而无需额外创建，但如果你希望设置一张自定义图像，则你可以使用 **`DataTransfer.setDragImage()`** 方法。图像通常是一个 {{HTMLElement("image")}} 元素，但也可以是{{HTMLElement("canvas")}} 或任何其他图像元素。
+当发生拖拽时，会从拖拽目标（触发 {{domxref("HTMLElement/dragstart_event", "dragstart")}} 事件的元素）处生成一张半透明图像，并在拖拽过程中保持该图像一直跟随鼠标指针。这个图片是自动创建的而无需自行创建。但如果期望用自定义图像，则你可以使用 **`DataTransfer.setDragImage()`** 方法来设置要使用的自定义图像。图像通常是一个 {{HTMLElement("img")}} 元素，但也可以是 {{HTMLElement("canvas")}} 或任何其他可视元素。
 
 该方法的 `x` 和 `y` 坐标是图像应该相对于鼠标指针出现的偏移量。坐标指定鼠标指针相对于图片的偏移量。例如，要使图像居中，请使用图像宽度和高度的一半。
 
@@ -23,7 +23,7 @@ setDragImage(imgElement, xOffset, yOffset)
 ### 参数
 
 - `imgElement`
-  - : 作为拖拽反馈图像的 {{domxref("Element")}} 元素。
+  - : 作为拖拽反馈图像的图像{{domxref("Element", "元素", , 1)}}。
 
     如果 {{domxref("Element")}} 是图像元素，则设置拖拽数据存储位图为该元素的图像（以其固有大小）；否则，将拖拽数据存储位图设置为从给定元素生成的图像（目前尚未规范确切的机制）。
 
@@ -38,9 +38,9 @@ setDragImage(imgElement, xOffset, yOffset)
 
 无（{{jsxref("undefined")}}）。
 
-## Examples
+## 示例
 
-### Using setDragImage()
+### 使用 setDragImage()
 
 ```html
 <div>
