@@ -5,15 +5,15 @@ l10n:
   sourceCommit: 9cfc2285428932f448a1747e347b1e35a3e0172b
 ---
 
-在其他文章中我们学会了如何使用 {{ domxref("HTMLMediaElement") }} 和 {{ domxref("Window.fullScreen") }} API [搭建一个跨浏览器的视频播放器](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)以及如何给视频播放器[添加样式](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics)。本文将介绍如何用 {{ domxref("WebVTT_API","WebVTT 格式") }}和 {{ htmlelement("track") }} 元素为视频添加字幕。在本篇文章中，我们将会使用相同的播放器，并展示如何使用 [WebVTT 格式](/zh-CN/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format)和 {{ htmlelement("track") }} 元素添加原文字幕和翻译字幕。
+在其他文章中我们学会了如何使用 {{ domxref("HTMLMediaElement") }} 和 {{ domxref("Window.fullScreen") }} API [搭建一个跨浏览器的视频播放器](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)以及如何给视频播放器[添加样式](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics)。在本篇文章中，我们将会使用相同的播放器，并展示如何使用 [WebVTT 格式](/zh-CN/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format)和 {{ htmlelement("track") }} 元素添加原文字幕（caption）和翻译字幕（subtitle）。
 
-本篇文章的示例使用了来自 [Blender 基金会](https://www.blender.org/about/foundation/)的 [Sintel open movie](https://durian.blender.org/)。
+本篇文章的示例使用了来自 [Blender 基金会](https://www.blender.org/about/foundation/)的[辛特尔开放电影](https://durian.blender.org/)。
 
 ## HTML 和视频字幕
 
 在深入研究如何在视频播放器中添加字幕之前，我们首先要提到一些事情，在开始之前你应该注意到这些。
 
-### 原文字幕（caption）和翻译字幕（subtitle）
+### 原文字幕和翻译字幕
 
 [原文字幕和翻译字幕不是一回事](https://screenfont.ca/learn/)：它们的受众明显不同，传达的信息也不同，如果你不确定它们有什么区别，建议你阅读一下。然而，它们在技术上的实现方式是相同的，所以本文的材料将适用于这两种情况。
 
@@ -33,7 +33,7 @@ HTML 允许我们使用 {{ htmlelement("track") }} 元素来为视频指定字�
 
 本节总结了对上一篇文章的代码所做的修改，以方便在视频中添加字幕。如果你对此不感兴趣，只想直接进入 JavaScript 和更相关的 CSS 环节，请跳到[字幕实现](#字幕实现)部分。
 
-在这个例子中，我们使用了一个不同的视频（[Sintel](https://durian.blender.org/)），它实际上有一些语音，因此更适合于说明字幕的工作原理！
+在这个例子中，我们使用了一个不同的视频（[辛特尔](https://durian.blender.org/)），它实际上有一些语音，因此更适合于说明字幕的工作原理！
 
 ### HTML 标签
 
@@ -551,7 +551,7 @@ subtitles.addEventListener("click", (e) => {
 
 ## 为显示的字幕添加样式
 
-WebVTT 的一个不太为人所知和支持的功能是[通过 CSS](/zh-CN/docs/Web/API/WebVTT_API#在_html_或_样式表中对_webvtt_添加样式)对单个字幕（有时被称为文本提示）进行样式化。
+WebVTT 的一个不太为人所知和支持的功能是[通过 CSS](/zh-CN/docs/Web/API/WebVTT_API#在_html_或_样式表中对_webvtt_添加样式) 对单个字幕（有时被称为文本提示）进行样式化。
 
 伪元素 `::cue` 是针对单个文本轨进行样式设计的关键，因为它可以匹配任何定义的提示。只有少数几个 CSS 属性可以应用于文本提示符：
 
