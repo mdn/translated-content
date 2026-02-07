@@ -30,7 +30,7 @@ Server-Timing: cache;desc="Cache Read";dur=23.2
 // 两个含值的指标
 Server-Timing: db;dur=53, app;dur=47.2
 
-// Server-Timing 作为 trailer
+// Server-Timing 作为挂载标头
 Trailer: Server-Timing
 --- 响应体 ---
 Server-Timing: total;dur=123.4
@@ -61,9 +61,9 @@ const observer = new PerformanceObserver((list) => {
       console.log(
         `${serverEntry.name} (${serverEntry.description}) 用时：${serverEntry.duration}`,
       );
-      // 记录 "cache (Cache Read) 用时：23.2"
-      // 记录 "db () 用时：53"
-      // 记录 "app () 用时：47.2"
+      // 记录“cache (Cache Read) 用时：23.2”
+      // 记录“db () 用时：53”
+      // 记录“app () 用时：47.2”
     });
   });
 });
