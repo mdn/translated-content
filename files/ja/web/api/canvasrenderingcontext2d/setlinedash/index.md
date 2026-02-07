@@ -1,29 +1,32 @@
 ---
-title: CanvasRenderingContext2D.setLineDash()
+title: "CanvasRenderingContext2D: setLineDash() メソッド"
+short-title: setLineDash()
 slug: Web/API/CanvasRenderingContext2D/setLineDash
+l10n:
+  sourceCommit: 6ba4f3b350be482ba22726f31bbcf8ad3c92a9c6
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
-**`setLineDash()`** はキャンバス 2D API の {{domxref("CanvasRenderingContext2D")}} インターフェイスのメソッドで、線を描画するときに使用される線の模様を設定します。 これは描画する線とその隙間の長さの値を交互に指定する配列を使用します。
+**`setLineDash()`** はキャンバス 2D API の {{domxref("CanvasRenderingContext2D")}} インターフェイスのメソッドで、線を描画するときに使用される破線のパターンを設定します。 これは描画する線とその隙間の長さの値を交互に指定する配列を使用します。
 
 > [!NOTE]
-> 線の模様を実線に戻す場合には、指定する配列の中身を空にします。
+> 破線を実線に戻す場合には、指定する配列の中身を空にします。
 
 ## 構文
 
-```js
-ctx.setLineDash(segments);
+```js-nolint
+setLineDash(segments)
 ```
 
 ### 引数
 
 - `segments`
-  - : ({{jsxref("Array")}}) で、描画する線の長さとその隙間の数値を交互に指定する配列 (座標空間単位)。配列内の要素数が奇数の場合、配列の要素がコピーされて連結されます。 例えば、`[5, 15, 25]`は`[5, 15, 25, 5, 15, 25]`になります。配列が空の場合、ラインダッシュリストはリセットされ、描画される線は実線に戻ります。
+  - : ({{jsxref("Array")}}) で、描画する線の長さとその隙間の数値を交互に指定する配列 (座標空間単位)。配列内の要素数が奇数の場合、配列の要素がコピーされて連結されます。 例えば、`[5, 15, 25]`は`[5, 15, 25, 5, 15, 25]`になります。配列が空の場合、破線リストはリセットされ、描画される線は実線に戻ります。
 
 ### 返値
 
-{{jsxref("undefined")}} です。
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
@@ -77,6 +80,10 @@ ctx.stroke();
 下記の `drawDashedLine()` 関数を使用すると、複数の破線を簡単に描画できます。引数としてパターン配列を受け取ります。
 
 ```js
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+let y = 15;
+
 function drawDashedLine(pattern) {
   ctx.beginPath();
   ctx.setLineDash(pattern);
@@ -85,10 +92,6 @@ function drawDashedLine(pattern) {
   ctx.stroke();
   y += 20;
 }
-
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-let y = 15;
 
 drawDashedLine([]);
 drawDashedLine([1, 1]);

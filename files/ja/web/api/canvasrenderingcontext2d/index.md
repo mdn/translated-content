@@ -63,7 +63,7 @@ ctx.stroke();
 - {{domxref("CanvasRenderingContext2D.getContextAttributes()")}}
   - : ブラウザーが使用するコンテキスト属性を格納したオブジェクトを返します。コンテキスト属性は、{{domxref("HTMLCanvasElement.getContext()")}} を使用して 2D コンテキストを生成する際にリクエストできます。
 - {{domxref("CanvasRenderingContext2D.isContextLost()")}}
-  - : レンダリングコンテキストが失われた場合に `true` を返します。
+  - : 描画コンテキストが失われた場合に `true` を返します。
 
 ### 矩形の描画
 
@@ -76,7 +76,7 @@ ctx.stroke();
 - {{domxref("CanvasRenderingContext2D.strokeRect()")}}
   - : 座標 _(x, y)_ を始点とし大きさ _(width, height)_ の矩形の枠線を、現在のストロークスタイルを用いて描画します。
 
-### 文字列の描画
+### テキストの描画
 
 以下のメソッドは、文字列の描画を提供します。文字列のプロパティについては {{domxref("TextMetrics")}} も参照してください。
 
@@ -106,7 +106,7 @@ ctx.stroke();
 - {{domxref("CanvasRenderingContext2D.lineDashOffset")}}
   - : 線のどこから破線にするかを指定します。
 
-### 文字列のスタイル
+### テキストのスタイル
 
 以下のプロパティは、テキストがどのように配置されるかを制御します。
 
@@ -153,7 +153,7 @@ ctx.stroke();
 - {{domxref("CanvasRenderingContext2D.createPattern()")}}
   - : 指定された画像を利用してパターンを作成します。そのパターンから引数の方向に繰り返します。このメソッドは {{domxref("CanvasPattern")}} で出力します。
 
-### 影のスタイル
+### 影
 
 - {{domxref("CanvasRenderingContext2D.shadowBlur")}}
   - : 影のぼかしを設定します。既定値は `0` です。
@@ -164,7 +164,7 @@ ctx.stroke();
 - {{domxref("CanvasRenderingContext2D.shadowOffsetY")}}
   - : 縦方向の影の長さを設定します。既定値は `0` です。
 
-### パスの作成
+### パス
 
 以下のメソッドはオブジェクトのパスの操作で使用できます。
 
@@ -206,24 +206,24 @@ ctx.stroke();
 - {{domxref("CanvasRenderingContext2D.isPointInStroke()")}}
   - : 引数で指定した位置がパスでストロークした領域の中に含まれているか調べます。
 
-### 図形の座標変換
+### 座標変換
 
-`CanvasRenderingContext2D` の描画コンテキストのオブジェクトには、現在の変換行列の状態とその変換行列を操作するメソッドがあります。現在の既定のパスを作成したり、テキスト、図形、{{domxref("Path2D")}} を描くと変換行列が適用されます。以下のメソッドは、歴史的および互換性の理由から残されています。現在では API の大部分で {{domxref("DOMMatrix")}} オブジェクトが使用されており、今後も代わりに使用される予定です。
+`CanvasRenderingContext2D` の描画コンテキストのオブジェクトには、現在の座標変換行列の状態とその座標変換行列を操作するメソッドがあります。現在の既定のパスを作成したり、テキスト、図形、{{domxref("Path2D")}} を描くと座標変換行列が適用されます。以下のメソッドは、歴史的および互換性の理由から残されています。現在では API の大部分で {{domxref("DOMMatrix")}} オブジェクトが使用されており、今後も代わりに使用される予定です。
 
 - {{domxref("CanvasRenderingContext2D.getTransform()")}}
-  - : コンテキストに適用されている現在の変換行列を取得します。
+  - : コンテキストに適用されている現在の座標変換行列を取得します。
 - {{domxref("CanvasRenderingContext2D.rotate()")}}
-  - : 変換行列に回転を追加します。引数の角度は時計回りをラジアン値で指定します。
+  - : 座標変換行列に回転を追加します。引数の角度は時計回りをラジアン値で指定します。
 - {{domxref("CanvasRenderingContext2D.scale()")}}
   - : キャンバスに対して X で横方向に、Y で縦方向に拡大縮小変換を追加します。
 - {{domxref("CanvasRenderingContext2D.translate()")}}
   - : キャンバスと指定した原点に対して X で横方向に、Y で縦方向にグリッド状で移動して、平行移動の変形を追加します。
 - {{domxref("CanvasRenderingContext2D.transform()")}}
-  - : 現在の変換行列と引数で指定した行列を乗算します。
+  - : 現在の座標変換行列と引数で指定した行列を乗算します。
 - {{domxref("CanvasRenderingContext2D.setTransform()")}}
-  - : 現在の変換行列を単位行列にリセットしてから、引数で指定した行列から `transform()` メソッドを実行します。
+  - : 現在の座標変換行列を恒等行列にリセットしてから、引数で指定した行列から `transform()` メソッドを実行します。
 - {{domxref("CanvasRenderingContext2D.resetTransform()")}}
-  - : 現在の変換行列を単位行列にリセットします。
+  - : 現在の変換行列を恒等行列にリセットします。
 
 ### 合成
 
