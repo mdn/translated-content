@@ -1,14 +1,13 @@
 ---
 title: inline-size
 slug: Web/CSS/Reference/Properties/inline-size
-original_slug: Web/CSS/inline-size
+l10n:
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+La propriété [CSS](/fr/docs/Web/CSS) **`inline-size`** définit la taille du bloc d'un élément selon l'axe en ligne. Si {{CSSxRef("writing-mode")}} est horizontal, cela correspond à {{CSSxRef("width")}}&nbsp;; si le mode d'écriture est vertical, cela correspond à {{CSSxRef("height")}}. Une propriété associée est {{CSSxRef("block-size")}}, qui définit l'autre dimension de l'élément.
 
-La propriété **`inline-size`** définit la taille verticale ou horizontale d'un élément de bloc selon son mode d'écriture. Selon la valeur de {{cssxref("writing-mode")}}, cette propriété correspond à {{cssxref("width")}} quand le mode d'écriture n'est pas vertical ou à {{cssxref("height")}} sinon.
-
-{{InteractiveExample("CSS Demo: inline-size")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: inline-size")}}
 
 ```css interactive-example-choice
 inline-size: 150px;
@@ -33,7 +32,7 @@ writing-mode: vertical-lr;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box where you can change the inline-size.
+    Ceci est une boîte où vous pouvez changer la inline-size.
   </div>
 </section>
 ```
@@ -45,42 +44,40 @@ writing-mode: vertical-lr;
   background-color: #5b6dcd;
   height: 80%;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
-
-Cette propriété est à rapprocher de {{cssxref("block-size")}} qui définit l'autre dimension de l'élément.
 
 ## Syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
+/* Valeurs de type <length> */
 inline-size: 300px;
 inline-size: 25em;
+inline-size: anchor-size(width);
+inline-size: anchor-size(--my-anchor inline);
 
-/* Valeurs proportionnelles relatives */
-/* Type <percentage>                  */
+/* Valeurs de type <percentage> */
 inline-size: 75%;
 
 /* Valeurs avec un mot-clé */
-inline-size: 25em border-box;
-inline-size: 75% content-box;
 inline-size: max-content;
 inline-size: min-content;
-inline-size: available;
 inline-size: fit-content;
+inline-size: fit-content(20em);
 inline-size: auto;
 
 /* Valeurs globales */
 inline-size: inherit;
 inline-size: initial;
+inline-size: revert;
+inline-size: revert-layer;
 inline-size: unset;
 ```
 
 ### Valeurs
 
-La propriété `inline-size` peut prendre les mêmes valeurs que les propriétés {{cssxref("width")}} et {{cssxref("height")}}.
+La propriété `inline-size` peut prendre les mêmes valeurs que les propriétés {{CSSxRef("width")}} et {{CSSxRef("height")}}.
 
 ## Définition formelle
 
@@ -92,25 +89,27 @@ La propriété `inline-size` peut prendre les mêmes valeurs que les propriété
 
 ## Exemples
 
-### CSS
+### Définir la taille en pixels sur l'axe en ligne
+
+#### HTML
+
+```html
+<p class="exempleTexte">Texte d'exemple</p>
+```
+
+#### CSS
 
 ```css
-.exemple {
+.exempleTexte {
   writing-mode: vertical-rl;
   background-color: yellow;
   inline-size: 110px;
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<p class="exemple">Texte d'exemple</p>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples")}}
+{{EmbedLiveSample("Définir la taille en pixels sur l'axe en ligne")}}
 
 ## Spécifications
 
@@ -122,8 +121,5 @@ La propriété `inline-size` peut prendre les mêmes valeurs que les propriété
 
 ## Voir aussi
 
-- Les propriétés physiques correspondantes :
-  - {{cssxref("width")}}
-  - {{cssxref("height")}}
-
-- {{cssxref("writing-mode")}}
+- Les propriétés physiques correspondantes&nbsp;: {{CSSxRef("width")}} et {{CSSxRef("height")}}
+- La propriété {{CSSxRef("writing-mode")}}

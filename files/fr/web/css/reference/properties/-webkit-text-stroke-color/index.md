@@ -1,19 +1,19 @@
 ---
 title: -webkit-text-stroke-color
 slug: Web/CSS/Reference/Properties/-webkit-text-stroke-color
-original_slug: Web/CSS/-webkit-text-stroke-color
+l10n:
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
-La propriété **`-webkit-text-stroke-color`** permet de définir la couleur de la ligne utilisée pour le contour du text. Si cette propriété n'est pas définie, c'est la valeur de {{cssxref("color")}} qui sera utilisée.
+La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-text-stroke-color`** définit la [couleur](/fr/docs/Web/CSS/Reference/Values/color_value) du contour des caractères du texte. Si cette propriété n'est pas définie, la valeur de la propriété {{CSSxRef("color")}} est utilisée.
 
 ## Syntaxe
 
 ```css
-/* Valeurs de couleur */
-/* Type <color>       */
+/* Valeurs de largeur et de couleur */
 -webkit-text-stroke-color: red;
 -webkit-text-stroke-color: #e08ab4;
--webkit-text-stroke-color: rgb(200, 100, 0);
+-webkit-text-stroke-color: rgb(200 100 0);
 
 /* Valeurs globales */
 -webkit-text-stroke-color: inherit;
@@ -25,8 +25,8 @@ La propriété **`-webkit-text-stroke-color`** permet de définir la couleur de 
 
 ### Valeurs
 
-- `<color>`
-  - : La couleur du contour pour les lettres.
+- {{CSSxRef("&lt;color&gt;")}}
+  - : La couleur du contour.
 
 ## Définition formelle
 
@@ -34,16 +34,16 @@ La propriété **`-webkit-text-stroke-color`** permet de définir la couleur de 
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
-### Varier la couleur du trait
+### Ajouter un contour rouge au texte
 
 #### HTML
 
 ```html
-<p>Texte avec un contour</p>
+<p>Un texte avec un bordure</p>
 <input type="color" value="#ff0000" />
 ```
 
@@ -54,8 +54,7 @@ p {
   margin: 0;
   font-size: 4em;
   -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: #ff0000;
-  /* Cette valeur peut être modifiée */
+  -webkit-text-stroke: 2px red; /* Can be changed in the live sample */
 }
 ```
 
@@ -68,7 +67,7 @@ colorPicker.addEventListener("change", (evt) => {
 
 #### Résultat
 
-{{EmbedLiveSample("varier_la_couleur_du_trait", "500px", "100px")}}
+{{EmbedLiveSample("Ajouter un contour rouge au texte", 500, 120)}}
 
 ## Spécifications
 
@@ -81,7 +80,7 @@ colorPicker.addEventListener("change", (evt) => {
 ## Voir aussi
 
 - [Le billet de _Surfin' Safari_ qui annonce cette fonctionnalité <sup>(angl.)</sup>](https://www.webkit.org/blog/85/introducing-text-stroke/)
-- [L'article de CSS-Tricks à propos de cette fonctionnalité <sup>(angl.)</sup>](https://css-tricks.com/adding-stroke-to-web-text/)
-- {{cssxref("-webkit-text-fill-color")}}
-- {{cssxref("-webkit-text-stroke-width")}}
-- {{cssxref("-webkit-text-stroke")}}
+- [L'article de CSS-Tricks décrivant cette fonctionnalité <sup>(angl.)</sup>](https://css-tricks.com/adding-stroke-to-web-text/)
+- La propriété {{CSSxRef("-webkit-text-fill-color")}}
+- La propriété {{CSSxRef("-webkit-text-stroke-width")}}
+- La propriété {{CSSxRef("-webkit-text-stroke")}}

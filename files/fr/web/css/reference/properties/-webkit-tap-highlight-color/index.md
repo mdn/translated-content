@@ -1,12 +1,13 @@
 ---
 title: -webkit-tap-highlight-color
 slug: Web/CSS/Reference/Properties/-webkit-tap-highlight-color
-original_slug: Web/CSS/-webkit-tap-highlight-color
+l10n:
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-{{Non-standard_header}}
+{{Non-standard_Header}}
 
-La propriété **`-webkit-tap-highlight-color`** est une propriété non-standard qui permet de définir la couleur utilisée pour surligner le lien et indiquer qu'il a bien été activé/touché par l'utilisateur.
+La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-tap-highlight-color`** est une propriété non standard qui permet de définir la couleur utilisée pour surligner le lien et indiquer qu'il a bien été activé/touché par l'utilisateur·ice.
 
 ## Syntaxe
 
@@ -24,7 +25,7 @@ La propriété **`-webkit-tap-highlight-color`** est une propriété non-standar
 
 ### Valeurs
 
-- {{Cssxref("&lt;color&gt;")}}
+- {{CSSxRef("&lt;color&gt;")}}
   - : La couleur utilisée pour surligner le lien lorsqu'il est touché.
 
 ## Définition formelle
@@ -47,6 +48,6 @@ Cette propriété ne fait partie d'aucun standard.
 
 - [Extensions WebKit CSS](/fr/docs/Web/CSS/Reference/Webkit_extensions)
 - Pseudo-classes CSS associées&nbsp;:
-  - [`:hover`](/fr/docs/Web/CSS/Reference/Selectors/:hover)
-  - [`:active`](/fr/docs/Web/CSS/Reference/Selectors/:active)
-  - [`:visited`](/fr/docs/Web/CSS/Reference/Selectors/:visited)
+  - {{CSSxRef(":hover")}}
+  - {{CSSxRef(":active")}}
+  - {{CSSxRef(":visited")}}

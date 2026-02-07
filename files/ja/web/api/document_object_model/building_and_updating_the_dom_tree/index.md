@@ -1,9 +1,8 @@
 ---
-title: JavaScript と DOM インターフェイスによる HTML の表の操作
+title: DOM ツリーの構築と更新
 slug: Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree
-original_slug: Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 l10n:
-  sourceCommit: 5f2a755c4fa7d126f85b56fbca90b15c5f039eff
+  sourceCommit: 277a8954951c900ef60a5175503976284c1d328d
 ---
 
 {{DefaultAPISidebar("DOM")}}

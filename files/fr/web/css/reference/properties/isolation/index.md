@@ -1,14 +1,13 @@
 ---
 title: isolation
 slug: Web/CSS/Reference/Properties/isolation
-original_slug: Web/CSS/isolation
+l10n:
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`isolation`** indique que l'élément crée un nouveau {{Glossary("stacking context", "contexte d'empilement")}}.
 
-La propriété **`isolation`** indique que l'élément crée un nouveau contexte d'empilement (_stacking context_).
-
-{{InteractiveExample("CSS Demo: isolation")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: isolation")}}
 
 ```css interactive-example-choice
 isolation: auto;
@@ -46,7 +45,7 @@ isolation: isolate;
 }
 ```
 
-Cette propriété s'avère particulièrement utile avec {{cssxref("mix-blend-mode")}} afin de ne mélanger que l'arrière plan d'un contexte d'empilement particulier.
+Cette propriété est particulièrement utile lorsqu'elle est utilisée en combinaison avec {{CSSxRef("mix-blend-mode")}} et {{CSSxRef("z-index")}}.
 
 ## Syntaxe
 
@@ -58,6 +57,8 @@ isolation: isolate;
 /* Valeurs globales */
 isolation: inherit;
 isolation: initial;
+isolation: revert;
+isolation: revert-layer;
 isolation: unset;
 ```
 
@@ -80,47 +81,51 @@ La propriété `isolation` est définie avec l'un des mots-clés suivants.
 
 ## Exemples
 
-### CSS
+### Forcer un nouveau contexte d'empilement pour un élément
+
+#### HTML
+
+```html
+<div class="grand-carre">
+  <div class="isolation-auto">
+    <div class="petit-carre">auto</div>
+  </div>
+  <div class="isolation-isolate">
+    <div class="petit-carre">isolate</div>
+  </div>
+</div>
+```
+
+#### CSS
 
 ```css
-.a {
-  background-color: rgb(0, 255, 0);
+.isolation-auto {
+  isolation: auto;
 }
-#b {
+
+.isolation-isolate {
+  isolation: isolate;
+}
+
+.grand-carre {
+  background-color: lime;
   width: 200px;
   height: 210px;
 }
-.c {
+
+.petit-carre {
+  background-color: lime;
   width: 100px;
   height: 100px;
   border: 1px solid black;
   padding: 2px;
   mix-blend-mode: difference;
 }
-#d {
-  isolation: auto;
-}
-#e {
-  isolation: isolate;
-}
 ```
 
-### HTML
+#### Résultat
 
-```html
-<div id="b" class="a">
-  <div id="d">
-    <div class="a c">auto</div>
-  </div>
-  <div id="e">
-    <div class="a c">isolate</div>
-  </div>
-</div>
-```
-
-### Résultat
-
-{{EmbedLiveSample('Exemples', 230, 230)}}
+{{EmbedLiveSample("Forcer un nouveau contexte d'empilement pour un élément", 230, 230)}}
 
 ## Spécifications
 
@@ -132,6 +137,5 @@ La propriété `isolation` est définie avec l'un des mots-clés suivants.
 
 ## Voir aussi
 
-- {{cssxref("&lt;blend-mode&gt;")}}
-- {{cssxref("mix-blend-mode")}}
-- {{cssxref("background-blend-mode")}}
+- Le type de donnée {{CSSxRef("&lt;blend-mode&gt;")}}
+- Les propriétés {{CSSxRef("mix-blend-mode")}}, {{CSSxRef("background-blend-mode")}}

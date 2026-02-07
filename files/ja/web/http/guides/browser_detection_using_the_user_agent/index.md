@@ -133,7 +133,7 @@ if (navigator.maxTouchPoints > 1) {
 [メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)を使用すると、ほとんどのレイアウトの変更を処理でき、JavaScript による調整の必要性を縮小できます。
 
 ユーザーが端末を回転させたり、画面モードを切り替えたときにトランジションをスムーズにしたい場合は、[端末の方向の検出](/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation)を参照してください。
-折りたたみ式端末については、[端末姿勢 API](/ja/docs/Web/API/Device_Posture_API) などの新しい API がありますが、対応状況は端末によって大きく異なるため、互換性に関するデータを必ず確認してください。
+折り曲げ式端末については、[端末形態 API](/ja/docs/Web/API/Device_Posture_API) などの新しい API がありますが、対応状況は端末によって大きく異なるため、互換性に関するデータを必ず確認してください。
 
 ### クライアントヒント
 

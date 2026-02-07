@@ -64,10 +64,10 @@ const me = new Person("Tyrone", "Jones");
 console.table(me);
 ```
 
-| (添字)    | 値        |
-| --------- | --------- |
-| firstName | 'Tyrone'  |
-| lastName  | 'Jones'   |
+| (添字)    | 値       |
+| --------- | -------- |
+| firstName | 'Tyrone' |
+| lastName  | 'Jones'  |
 
 ### 複合的な型の集合
 

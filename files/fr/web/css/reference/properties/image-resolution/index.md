@@ -1,12 +1,13 @@
 ---
 title: image-resolution
 slug: Web/CSS/Reference/Properties/image-resolution
-original_slug: Web/CSS/image-resolution
+l10n:
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`image-resolution`** spécifie la résolution intrinsèque de toutes les images matricielles utilisée dans l'élément. Cela affecte les images de contenu comme les éléments remplacés et le contenu généré, ainsi que les images décoratives générées à l'aide de la propriété `background-image`.
+La propriété [CSS](/fr/docs/Web/CSS) **`image-resolution`** définit la résolution intrinsèque de toutes les images matricielles utilisée dans l'élément. Cela affecte les images de contenu comme les éléments remplacés et le contenu généré, ainsi que les images décoratives générées à l'aide de la propriété `background-image`.
 
 La résolution de l'image est définie par le nombre de pixels par unité de longueur de l'image, par exemple exprimé en pixels par pouce. Par défaut, CSS part du principe que la résolution d'une image est d'un pixel image par unité de pixel CSS. Cependant, la propriété `image-resolution` permet de définir une résolution différente.
 
@@ -22,34 +23,35 @@ image-resolution: 300dpi snap;
 image-resolution: inherit;
 image-resolution: initial;
 image-resolution: revert;
+image-resolution: revert-layer;
 image-resolution: unset;
 ```
 
 ### Valeurs
 
-- `{{cssxref("&lt;resolution&gt;")}}`
-  - : Spécifie explicitement la résolution intrinsèque.
+- {{CSSxRef("&lt;resolution&gt;")}}
+  - : Définit explicitement la résolution intrinsèque.
 - `from-image`
   - : Utilise la résolution intrinsèque comme spécifié par le format de l'image. Si l'image ne spécifie pas elle-même sa propre résolution, alors la résolution explicitement spécifiée sera utilisée, si elle a été fournie. Sinon, la résolution par défaut sera de `1dppx` (1 pixel image par unité de pixel CSS).
 - `snap`
-  - : Si le mot-clé `snap` est fourni, la résolution calculée sera la résolution spécifiée arrondie à la valeur la plus proche correspondant à un pixel image défini sous la forme d'un nombre entier de pixels de l'appareil. Si la résolution est récupérée à partir de l'image, alors la résolution intrinsèque utilisée est la résolution native de l'image, arrondie de la même façon.
+  - : Si le mot-clé `snap` est fourni, la résolution calculée sera la résolution spécifiée arrondie à la valeur la plus proche correspondant à un {{Glossary("device pixel", "pixel image")}} défini sous la forme d'un nombre entier de pixels de l'appareil. Si la résolution est récupérée à partir de l'image, alors la résolution intrinsèque utilisée est la résolution native de l'image, arrondie de la même façon.
 
 > [!NOTE]
 > Les formats vectoriels tels que SVG n'ont pas de résolution intrinsèque, cette propriété n'a aucun effet sur les images vectorielles.
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
-### Mettre en place la haute résolution pour l'impression
+### Définir une haute résolution pour l'impression
 
-Lorsque l'on imprime un document, il est possible de demander une meilleure résolution pour les images&nbsp;:
+Lors de l'impression du document, utiliser une résolution plus élevée.
 
 ```css
 @media print {
@@ -79,5 +81,5 @@ L'exemple ci-dessous utilise la résolution définie par l'image. Si l'image ne 
 
 ## Voir aussi
 
-- Autres propriétés CSS liées aux images&nbsp;: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}.
-- [Bug sur Chromium&nbsp;: 1086473](https://bugs.chromium.org/p/chromium/issues/detail?id=1086473).
+- Autres propriétés CSS liées aux images&nbsp;: {{CSSxRef("object-fit")}}, {{CSSxRef("object-position")}}, {{CSSxRef("image-orientation")}}, {{CSSxRef("image-rendering")}}.
+- [Boggue sur Chromium&nbsp;: 1086473 <sup>(angl.)</sup>](https://bugs.chromium.org/p/chromium/issues/detail?id=1086473)

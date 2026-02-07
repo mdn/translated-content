@@ -1,13 +1,14 @@
 ---
 title: "BroadcastChannel: message イベント"
+short-title: message
 slug: Web/API/BroadcastChannel/message_event
 l10n:
-  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
+  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
 ---
 
-{{APIRef}}
+{{APIRef("BroadCastChannel API")}}{{AvailableInWorkers}}
 
-`message` イベントは、メッセージがそのチャンネルに到着したときに {{domxref('BroadcastChannel')}} オブジェクト上で発生します。
+**`message`** は {{domxref("BroadcastChannel")}} インターフェイスのイベントで、メッセージがそのチャンネルに到着したときに発生します。
 
 ## 構文
 
@@ -15,6 +16,7 @@ l10n:
 
 ```js-nolint
 addEventListener("message", (event) => { })
+
 onmessage = (event) => { }
 ```
 
@@ -41,7 +43,7 @@ _このインターフェイスは親である {{domxref("Event")}} からプロ
 
 ## 例
 
-この例では "Sender" の [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) があり、ユーザーがボタンをクリックしたときに [`<textarea>`](/ja/docs/Web/HTML/Reference/Elements/textarea) の内容を配信します。 "Receiver" の iframe は 2 つあり、ブロードキャストメッセージを受信し、その結果を [`<div>`](/ja/docs/Web/HTML/Reference/Elements/div) 要素に書き込みます。
+この例では "Sender" の {{HTMLElement("iframe")}} があり、ユーザーがボタンをクリックしたときに {{ HTMLElement("textarea") }} の内容を配信します。 "Receiver" の iframe は 2 つあり、ブロードキャストメッセージを受信し、その結果を {{HTMLElement("div")}} 要素に書き込みます。
 
 ### Sender
 
@@ -170,4 +172,4 @@ channel.addEventListener("message", (event) => {
 
 ## 関連情報
 
-- 関連イベント: [`messageerror`](/ja/docs/Web/API/BroadcastChannel/messageerror_event)
+- 関連イベント: {{domxref("BroadcastChannel/messageerror_event", "messageerror")}}

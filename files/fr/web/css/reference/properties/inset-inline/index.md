@@ -1,23 +1,84 @@
 ---
 title: inset-inline
 slug: Web/CSS/Reference/Properties/inset-inline
-original_slug: Web/CSS/inset-inline
+l10n:
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+La propriété [CSS](/fr/docs/Web/CSS) **`inset-inline`** définit les décalages logiques de début et de fin d'un élément dans la direction en ligne, qui correspondent à des décalages physiques selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle correspond aux propriétés {{CSSxRef("top")}} et {{CSSxRef("bottom")}}, ou {{CSSxRef("right")}} et {{CSSxRef("left")}} selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
 
-La propriété **`inset-inline`** définit le décalage d'un élément par rapport au début et à la fin de l'axe en ligne de l'élément. Cette propriété logique correspond à une propriété physique donnée selon le mode d'écriture de l'élément, sa direction et l'orientation de son texte. Autrement dit, cette propriété peut correspondre à {{cssxref("top")}} et {{cssxref("bottom")}} ou à {{cssxref("right")}} et {{cssxref("left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+Cette {{Glossary("inset properties", "propriété d'encart")}} n'a aucun effet sur les éléments non positionnés.
+
+{{InteractiveExample("Démonstration CSS&nbsp;: inset-inline")}}
+
+```css interactive-example-choice
+inset-inline: 5% 10%;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+inset-inline: 10px 40px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+inset-inline: 5% 10%;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <div id="example-element">Je suis positionné absolument.</div>
+    <p>
+      Il y a autant de boue dans les rues que si les eaux venaient à peine de se
+      retirer de la surface de la terre, et il ne serait pas étonnant de croiser
+      un Mégalosaure, long d'une douzaine de mètres, se dandinant comme un
+      lézard éléphantesque dans Holborn Hill.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 0.75em solid #ad1457;
+  padding: 0.75em;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+}
+
+#example-element {
+  background-color: #07136c;
+  border: 6px solid #ffa000;
+  color: white;
+  position: absolute;
+  inset: 0;
+}
+```
+
+## Propriétés constitutives
+
+Cette propriété est une abréviation pour les propriétés CSS suivantes&nbsp;:
+
+- {{CSSxRef("inset-inline-end")}}
+- {{CSSxRef("inset-inline-start")}}
+
+## Syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length> */
+/* Valeurs de type <length> */
 inset-inline: 3px 10px;
 inset-inline: 2.4em 3em;
 inset-inline: 10px; /* La valeur est appliquée des deux côtés */
+inset-inline: auto calc(anchor(self-start) + 20px);
+inset-inline: 400px anchor-size(--my-anchor height, 100px);
 
-/* Les valeurs en pourcentage sont relatives à la */
-/* largeur ou à la hauteur du bloc englobant */
-/* Type <percentage> */
+/* Les valeurs en pourcentage sont relatives à la largeur ou à la hauteur du bloc englobant */
+/* Valeurs de type <percentage> */
 inset-inline: 10% 5%;
 
 /* Valeur avec un mot-clé */
@@ -26,16 +87,14 @@ inset-inline: auto;
 /* Valeurs globales */
 inset-inline: inherit;
 inset-inline: initial;
+inset-inline: revert;
+inset-inline: revert-layer;
 inset-inline: unset;
 ```
 
-Pour gérer les décalages sur la dimension orthogonale, on pourra utiliser la propriété logique {{cssxref("inset-block")}} qui est une propriété raccourcie pour {{cssxref("inset-block-start")}}, and {{cssxref("inset-block-end")}}.
-
-## Syntaxe
-
 ### Valeurs
 
-La propriété `inset-inline` peut prendre les mêmes valeurs que la propriété {{cssxref("left")}}.
+La propriété `inset-inline` peut prendre les mêmes valeurs que la propriété {{CSSxRef("left")}}.
 
 ## Définition formelle
 
@@ -47,7 +106,17 @@ La propriété `inset-inline` peut prendre les mêmes valeurs que la propriété
 
 ## Exemples
 
-### CSS
+### Définir les décalages de début et de fin en ligne
+
+#### HTML
+
+```html
+<div>
+  <p class="exempleTexte">Texte d'exemple</p>
+</div>
+```
+
+#### CSS
 
 ```css
 div {
@@ -56,7 +125,7 @@ div {
   height: 120px;
 }
 
-.texteExemple {
+.exempleTexte {
   writing-mode: vertical-lr;
   position: relative;
   inset-inline: 20px 50px;
@@ -64,17 +133,9 @@ div {
 }
 ```
 
-### HTML
+#### Exemples
 
-```html
-<div>
-  <p class="texteExemple">Texte d'exemple</p>
-</div>
-```
-
-### Exemples
-
-{{EmbedLiveSample("Exemples", 140, 140)}}
+{{EmbedLiveSample("Définir les décalages de début et de fin en ligne", 140, 140)}}
 
 ## Spécifications
 
@@ -86,5 +147,7 @@ div {
 
 ## Voir aussi
 
-- Les propriétés physiques correspondantes : {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}}
-- Les propriétés influençant les propriétés logiques {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- Les propriétés physiques correspondantes&nbsp;: {{CSSxRef("top")}}, {{CSSxRef("right")}}, {{CSSxRef("bottom")}} et {{CSSxRef("left")}}
+- La propriété raccourcie physique&nbsp;: {{CSSxRef("inset")}}
+- La propriété raccourcie de bloc&nbsp;: {{CSSxRef("inset-block")}}
+- Les propriétés {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}
