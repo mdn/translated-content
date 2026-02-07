@@ -15,9 +15,9 @@ l10n:
 表示拖拽数据项的类型的字符串。它必须是以下值之一：
 
 - `'file'`
-  - ：如果拖拽数据项是文件。
+  - : 如果拖拽数据项是文件。
 - `'string'`
-  - ：如果拖拽数据项的类型是*纯 Unicode 字符串*。
+  - : 如果拖拽数据项的类型是*纯 Unicode 字符串*。
 
 ## 示例
 
@@ -25,7 +25,7 @@ l10n:
 
 ```js
 function dropHandler(ev) {
-  console.log("Drop");
+  console.log("放置");
   ev.preventDefault();
   for (const item of ev.dataTransfer.items) {
     if (item.kind === "string" && item.type.match("^text/plain")) {
@@ -35,11 +35,11 @@ function dropHandler(ev) {
       });
     } else if (item.kind === "string" && item.type.match("^text/html")) {
       // 拖拽数据项是 HTML
-      console.log("… Drop: HTML");
+      console.log("……放置：HTML");
     } else if (item.kind === "file" && item.type.match("^image/")) {
       // 拖拽数据项是图片文件
       const f = item.getAsFile();
-      console.log("… Drop: File");
+      console.log("……放置：文件");
     }
   }
 }
