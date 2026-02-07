@@ -1,11 +1,12 @@
 ---
-title: 如何使用 Markdown 来撰写文档
+title: 如何使用 Markdown 撰写文档
+short-title: 使用 Markdown 撰写文档
 slug: MDN/Writing_guidelines/Howto/Markdown_in_MDN
 l10n:
-  sourceCommit: a5682b8bcf2b9761fa576004deea720f76735aaf
+  sourceCommit: 49f3eb321cf6a491c3bcef1c3590f9bf6f90c9b8
 ---
 
-本文介绍了如何使用 Markdown 来编写 MDN Web 文档项目中的文档。我们以 GitHub 风格的 Markdown（GFM）为基础，并添加了一些扩展来支持一些我们在 MDN 上需要而 GFM 仍不支持的东西。
+本文介绍了如何使用 Markdown 来编写 MDN Web 文档项目中的文档。我们以 GitHub 风格的 Markdown（GFM）为基础，并添加了扩展功能以支持 MDN 所需的特性。
 
 ## 基础：Github 风格的 Markdown
 
@@ -18,37 +19,29 @@ GFM 规范定义了两种基础的链接类型：
 - [内联链接](https://github.github.com/gfm/#inline-link)：在链接显示的文字后面紧跟链接的地址。
 - [引用链接](https://github.github.com/gfm/#reference-link)：链接的目标在当前文档的其他地方定义。
 
-在 MDN 上，我们仅允许使用内联链接。
+在 MDN 上，我们更倾向于使用内联链接，因为它们更易于阅读和维护，且不会丢失上下文。这是在 MDN 上编写链接的首选方式：
 
-以下是 MDN 上正确的编写 GFM 链接的方式：
-
-```md example-good
+```md
 [马卡龙](https://zh.wikipedia.org/wiki/馬卡龍)虽然美味，但制作难度大。
 ```
 
-以下是 MDN 上错误的编写链接的方式：
+然而在某些情况下，参考链接因其紧凑性更为合适。例如，缩小宽表可使其更易于审阅和编辑。
 
-```md example-bad
-[马卡龙][马卡龙]虽然美味，但制作难度大。
+```md
+| 名称                 | 特征                                                                 |
+| -------------------- | -------------------------------------------------------------------- |
+| [马卡龙][马卡龙]     | 虽然美味，但制作难度大。为茶会增添的优雅气质，几乎胜过任何其他甜点。 |
+| [意式脆饼][意式脆饼] | 酥脆且更易制作。                                                     |
 
 [马卡龙]: https://zh.wikipedia.org/wiki/馬卡龍
+[意式脆饼]: https://zh.wikipedia.org/wiki/義式脆餅
 ```
+
+在极少数需要使用参考链接的情况下，请确保它们紧接在使用它们的上下文之后。
 
 ## 示例代码块
 
-在 GFM 和 CommonMark 中，你可以使用“围栏代码块”来标示 `<pre>` 块。围栏代码块的起始位置后可以添加“信息字符串”。规范中写道：
-
-> 信息字符串的第一个单词常用于指定示例代码的语言，并呈现在代码标签的 class 属性中。
-
-信息字符串可包含多个单词，例如：
-
-````md
-```fee fi fo fum
-// 一些示例代码
-```
-````
-
-在 MDN，你可以使用围栏代码块展现示例代码块。且必须使用信息字符串的第一个单词指定示例代码的语言，这将用于提供代码块的语法高亮。MDN 支持以下的语言词：
+在 GFM 和 CommonMark 中，你可以使用“围栏代码块”来标示 `<pre>` 块。围栏代码块的起始位置后可以添加“信息字符串”。代码示例的语言必须通过信息字符串的首个单词指定，该语言将用于为代码块提供语法高亮功能。支持以下单词：
 
 - 编程语言
   - JavaScript
@@ -66,7 +59,8 @@ GFM 规范定义了两种基础的链接类型：
     - `php`——PHP
     - `rust`——Rust
     - `glsl`——GLSL（OpenGL 着色器）
-    - `wasm`——WebAssembly
+    - `sql`——SeQueL 命令
+    - `wat`——WebAssembly
     - `webidl`——Web 接口定义语言
 - 样式
   - `css`——CSS
@@ -80,9 +74,9 @@ GFM 规范定义了两种基础的链接类型：
   - `md`——Markdown
   - `latex`——LaTeX
 - 命令提示符
-  - `sh`——Bash/Shell
+  - `bash`——Bash/Shell
   - `batch`——Batch（Windows Shell）
-  - `ps`——PowerShell
+  - `powershell`——PowerShell
 - 配置或数据文件
   - `json`——JSON
   - `ini`——INI
@@ -90,12 +84,12 @@ GFM 规范定义了两种基础的链接类型：
   - `toml`——TOML
   - `sql`——SQL 数据库
   - `ignore`——Gitignore 文件
-  - `apacheconf` - Apache 配置
+  - `apacheconf`——Apache 配置
   - `nginx`——NGINX 配置
 - 模板
   - `django`——Django 模板
   - `svelte`——Svelte 模板
-  - `handlebars`——Handlebars 模板
+  - `hbs`——Handlebars 模板
   - `pug`——[Pug 模板](https://pugjs.org/zh-cn/api/getting-started.html)（可以被 [Express](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Template_primer) 使用）
 - 其他
   - `plain`——纯文本
@@ -113,6 +107,9 @@ const greeting = "我会得到 JavaScript 语法高亮";
 ````
 
 如果你希望高亮显示的语言未在上方列出，请使用 `plain` 标记代码块。也可以按照 [GitHub 讨论](https://github.com/orgs/mdn/discussions/170#discussioncomment-3404366)提出的流程请求其他语言的高亮支持。
+
+> [!NOTE]
+> 请严格按照上述列表使用语言标识符。例如，必须使用 `js` 而不是 `javascript`。
 
 ### 阻止 lint
 
@@ -134,7 +131,7 @@ GFM 支持[信息字符串](https://github.github.com/gfm/#info-string)，它允
 
 作者可以使用以下提供的任意一个信息字符串：
 
-- `example-good`：将其标注为良好示例（可被参考）
+- `example-good`：将其标注为良好示例（可供参考）
 - `example-bad`：将其标注为错误示例（应避免使用）
 - `hidden`：不在网页中展示此代码块。代码仅用于运行实例。
 
@@ -173,10 +170,10 @@ const greeting = "这是一个错误示例";
 
 ## 备注、警告和标注
 
-有时作者需要特别强调某些内容。要做到这一点，可以使用 [GFM 备注块语法](https://github.com/orgs/community/discussions/16925)，这是一种带有特殊起始行的 GFM 块引用。一共有三种类型：备注、警告和标注。
+作者可使用 [GFM 提示语法](https://docs.github.com/zh/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts)对内容进行特别标注。一共有三种类型：备注、警告和标注。
 
 > [!NOTE]
-> MDN Web 文档在 GFM 添加 noteblock 语法之前就已经支持了自己的备注块语法。因此，MDN 仅支持 GFM 支持的五种备注块类型中的两种，并且支持另一种 GFM 不支持的类型。
+> 在支持 GFM 提示之前，MDN Web 文档曾采用专有语法支持提示功能，并将其称为“noteblocks”。MDN 不支持以下 GFM 提示：`[!TIP]`、`[!CAUTION]`、`[!IMPORTANT]`。GFM 不支持 `[!CALLOUT]`。
 
 - 要添加备注，请创建一个 GFM 块引用，起始行为 `[!NOTE]`。
 - 要添加警告，请创建一个 GFM 块引用，起始行为 `[!WARNING]`。
@@ -428,19 +425,19 @@ GFM 提供了创建[表格](https://github.github.com/gfm/#tables-extension-)的
 也就是说，MDN 作者必须使用以下风格：
 
 ```md example-good
-| Heading 1 | Heading 2 | Heading 3 |
-| --------- | --------- | --------- |
-| cell 1    | cell 2    | cell 3    |
-| cell 4    | cell 5    | cell 6    |
+| 表头 1   | 表头 2   | 表头 3   |
+| -------- | -------- | -------- |
+| 单元格 1 | 单元格 2 | 单元格 3 |
+| 单元格 4 | 单元格 5 | 单元格 6 |
 ```
 
 而不是这种风格：
 
 ```md-nolint example-bad
-| Heading 1 | Heading 2 | Heading 3 |
+| 表头 1 | 表头 2 | 表头 3 |
 | --------- | --- |----------------------|
-| cell 1 | cell 2 | cell 3 |
-cell 4 | cell 5 | cell 6
+| 单元格 1 | 单元格 2 | 单元格 3 |
+单元格 4 | 单元格 5 | 单元格 6
 ```
 
 幸运的是，表格格式可以由 Prettier 自动修复，因此作者可以依靠 Prettier 来正确地格式化他们的表格。
@@ -460,6 +457,7 @@ GFM 表格语法的主要限制是：
 - GFM 表格必须有一个标题行。
 - GFM 表格可能没有标题列。
 - GFM 不会解析单元格中的 GFM 块元素。例如，你不能在单元格中使用列表。
+- GFM 表格不能分配类名。
 - GFM 不支持除 `<table>`、`<tr>`、`<th>`、`<td>` 以外的任何表格元素。
 - GFM 不支持诸如 `colspan`、`rowspan`、`scope` 等表格元素属性。
 
@@ -469,7 +467,7 @@ GFM 表格语法的主要限制是：
 
 #### GFM 表格最大宽度
 
-有时，即使可以使用 GFM 编写表格，也应该使用 HTML。因为 GFM 使用“{{Glossary("ASCII")}} art”来实现表格，当表格的一行变得过长时，将变得难以阅读。例如，考虑以下表格：
+有时，即使可以使用 GFM 编写表格，也应该使用 HTML。因为 GFM 使用“{{Glossary("ASCII")}} 艺术”来实现表格，当表格的一行变得过长时，将变得难以阅读。例如，考虑以下表格：
 
 ```html
 <table>
@@ -511,9 +509,7 @@ GFM 表格语法的主要限制是：
 
 #### 属性表
 
-属性表是一类特殊的表格，用于在一组特定类型的页面中显示结构化的属性值。例如，所有的 Event 页面都有一个属性表，列出了关于事件的常见信息：是否冒泡、是否可取消等等。
-
-这类表格有两列：第一列是标题列，其列出了属性名；第二列则列出了这些特定属性的值。例如，以下是一个 {{domxref("PannerNode")}} 接口的属性表：
+属性表是一种特殊类型的表格，用于在特定类型的页面集中展示结构化的属性-值内容。这类表格包含两列：第一列为标题列，列出各项属性；第二列则显示该特定项对应的属性值。例如，以下是一个 {{domxref("PannerNode")}} 接口的属性表：
 
 <table class="properties">
   <tbody>
@@ -554,9 +550,9 @@ GFM 表格语法的主要限制是：
 
 如果有必要，你可以使用 HTML {{HTMLElement("sup")}} 和 {{HTMLElement("sub")}} 元素，但应尽可能使用替代品。特别是：
 
-- 对于求幂，请使用脱字符：`2^53`。
-- 对于像 1<sup>st</sup> 这样的表达式，推荐使用单词，如：“第一”。
-- 对于脚注，请不要在脚注的参考文献上使用类似 `<sup>[1]</sup>` 的标注，这是没有必要的。
+- 对于幂指数，请使用脱字符：`2^53`。
+- 对于像 1<sup>st</sup> 这样的序数表达式，推荐使用“第一”等词语。
+- 对于脚注，请勿标记脚注引用，如 `<sup>[1]</sup>`。
 
 ### 讨论参考
 
@@ -572,18 +568,15 @@ GFM 表格语法的主要限制是：
 
 此议题已被解决：<https://github.com/mdn/content/issues/3923>。
 
-## KumaScript
+## 宏
 
-文本内容可以包括对 KumaScript 宏的调用：
+作者在文章中使用宏来模板化常见的链接模式，或包含特定的代码块或文本：
 
 ```md
 [CSS](/zh-CN/docs/Web/CSS) **`margin`** 属性设置元素的四个边上的外边距区域。它是
 \{{cssxref("margin-top")}}、\{{cssxref("margin-right")}}、\{{cssxref("margin-bottom")}}
 和 \{{cssxref("margin-left")}} 属性的简写形式。
-
-\{{EmbedInteractiveExample("pages/css/margin.html")}}
-
-顶部和底部外边距对放置的行级元素（例如，\{{HTMLElement("span")}} 或 \{{HTMLElement("code")}}）没有影响。
+…
 ```
 
 参见[使用宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros)以获取更多关于宏的信息。
