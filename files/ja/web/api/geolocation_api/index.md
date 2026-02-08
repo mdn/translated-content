@@ -2,7 +2,7 @@
 title: 位置情報 API
 slug: Web/API/Geolocation_API
 l10n:
-  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
+  sourceCommit: fce59e0706ab0114d9968c23722dccfacaebf998
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
@@ -10,6 +10,9 @@ l10n:
 **位置情報 API** (Geolocation API) を使用すると、ユーザーが望む場合に、自分の位置情報をウェブアプリケーションに提供することができます。プライバシー上の理由から、ユーザーは位置情報を報告する許可を求められます。
 
 WebExtension で `Geolocation` オブジェクトを使用するには、マニフェストに `"geolocation"` パーミッションを追加しなければなりません。ユーザーのオペレーティングシステムは、最初に要求されたときに位置情報へのアクセスを許可するようにユーザーに促します。
+
+> [!NOTE]
+> {{htmlelement("geolocation")}} 要素は、地理的な位置情報データへのアクセスと処理のためのもう一つの仕組みを提供し、位置情報 APIのいくつかの欠点を解決します。一貫した UI と、より直感的な権限管理プロセスを提供します。
 
 ## 概念と使用方法
 
@@ -87,5 +90,6 @@ Wi-Fi ベースの測位は Google が提供することが多いため、中国
 
 ## 関連情報
 
+- {{htmlelement("geolocation")}} 要素
 - [位置情報 API の使用](/ja/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
 - [Who moved my geolocation?](https://hacks.mozilla.org/2013/10/who-moved-my-geolocation/) (Hacks blog)
