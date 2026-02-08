@@ -2,7 +2,7 @@
 title: 一次性随机数（Nonce）
 slug: Glossary/Nonce
 l10n:
-  sourceCommit: aefcc1599f9a67bfb4e0e5f48b2175eac61739fe
+  sourceCommit: 8fa28413710c2b4a5b6e98b615c84d5fc6c038c4
 ---
 
 在密码学与计算机安全领域中，**`nonce`**（一次性随机数）是指在密码通信中**仅使用一次**的任意数字。该术语源自“number used once”（仅使用一次的数字），通常用于防止重放攻击、确保消息的新鲜性，并为密码协议引入随机性。
