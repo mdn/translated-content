@@ -1,42 +1,42 @@
 ---
-title: -webkit-line-clamp
+title: line-clamp
 slug: Web/CSS/Reference/Properties/line-clamp
-original_slug: Web/CSS/line-clamp
+l10n:
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{CSSRef}}
-
-La propriété CSS **`-webkit-line-clamp`** permet de limiter l'affichage du contenu d'un bloc à un nombre donné de lignes.
-
-Cette propriété fonctionne uniquement si {{cssxref("display")}} vaut `-webkit-box` ou `-webkit-inline-box` et si {{cssxref("-webkit-box-orient")}} vaut `vertical`.
-
-Dans la plupart des cas, on utilisera également {{cssxref("overflow")}} avec la valeur `hidden`, afin de masquer le contenu qui dépasse (plutôt que d'afficher une ellipse en dehors de la boîte).
-
-Lorsqu'on applique ce style à une ancre, la troncature pourra intervenir au milieu du texte (et pas nécessairement à la fin).
+La propriété [CSS](/fr/docs/Web/CSS) **`line-clamp`** permet de limiter le contenu d'un {{Glossary("block", "bloc")}} au nombre de lignes indiqué.
 
 > [!NOTE]
-> Au départ, cette propriété était implémentée dans WebKit avec quelques problèmes. Elle a été standardisée à des fins de support pour les sites historiques. Le module de spécification [CSS Overflow Module Level 3](https://www.w3.org/TR/css-overflow-3/#propdef--webkit-line-clamp) définit également une propriété {{cssxref("line-clamp")}} qui doit remplacer `-webkit-line-clamp`.
+> Pour la compatibilité avec les anciennes versions, la propriété préfixée par le fournisseur `-webkit-line-clamp` ne fonctionne qu'en combinaison avec la propriété {{CSSxRef("display")}} définie à `-webkit-box` ou `-webkit-inline-box` et la propriété {{CSSxRef("box-orient", "-webkit-box-orient")}} définie à `vertical`. Bien que ces propriétés préfixées soient obsolètes, la co-dépendance de ces trois propriétés est un comportement entièrement défini et continuera d'être pris en charge.
+
+Dans la plupart des cas, vous voudrez également définir {{CSSxRef("overflow")}} à `hidden`, sinon le contenu ne sera pas rogné mais une ellipse sera tout de même affichée après le nombre de lignes indiqué.
+
+Lorsqu'elle est appliquée à des éléments d'ancrage, la troncature peut se produire au milieu du texte, pas nécessairement à la fin.
 
 ## Syntaxe
 
 ```css
 /* Valeurs avec un mot-clé */
--webkit-line-clamp: none;
+line-clamp: none;
 
-/* Valeurs entières */
-/* Type <integer> */
--webkit-line-clamp: 3;
--webkit-line-clamp: 10;
+/* Valeurs de type <integer> */
+line-clamp: 3;
+line-clamp: 10;
 
 /* Valeurs globales */
--webkit-line-clamp: inherit;
--webkit-line-clamp: initial;
--webkit-line-clamp: unset;
+line-clamp: inherit;
+line-clamp: initial;
+line-clamp: revert;
+line-clamp: revert-layer;
+line-clamp: unset;
 ```
+
+### Valeurs
 
 - `none`
   - : Cette valeur indique que le contenu ne sera pas rogné.
-- {{cssxref("integer")}}
+- {{CSSxRef("&lt;integer&gt;")}}
   - : Cette valeur indique le nombre de lignes après lequel tronquer le contenu. Cette valeur doit être supérieure à 0.
 
 ## Définition formelle
@@ -49,17 +49,19 @@ Lorsqu'on applique ce style à une ancre, la troncature pourra intervenir au mil
 
 ## Exemples
 
+### Tronquer un paragraphe
+
 ### HTML
 
 ```html
 <p>
   Dans cet exemple <code>-webkit-line-clamp</code> vaut <code>3</code>, ce qui
   signifie que le texte sera rogné après trois lignes. Une ellipse sera affichée
-  au n ellipsis will be shown at the point where the text is clamped.
+  à n lignes de l'endroit où le texte est tronqué.
 </p>
 ```
 
-### CSS
+#### CSS
 
 ```css
 p {
@@ -71,9 +73,9 @@ p {
 }
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample("Exemples", "100%", "100")}}
+{{EmbedLiveSample("Tronquer un paragraphe", "100%", 130)}}
 
 ## Spécifications
 
@@ -85,5 +87,4 @@ p {
 
 ## Voir aussi
 
-- [Line Clampin' (Truncating Multiple Line Text)](https://css-tricks.com/line-clampin/)
-- {{cssxref("line-clamp")}}
+- [Limiter le texte sur plusieurs lignes <sup>(angl.)</sup>](https://css-tricks.com/line-clampin/) sur CSS-Tricks
