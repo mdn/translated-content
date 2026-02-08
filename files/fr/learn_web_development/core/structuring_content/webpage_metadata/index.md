@@ -1,5 +1,5 @@
 ---
-title: Qu'avez-vous dans la tête ? Métadonnées de la page web
+title: Qu'y a‑t‑il dans l'en‑tête ? Métadonnées d'une page Web
 short-title: Métadonnées de la page web
 slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: Fonctionnalités avancées du texte
+title: Fonctions avancées du texte
 slug: Learn_web_development/Core/Structuring_content/Advanced_text_features
 l10n:
   sourceCommit: 65c873fda639b035b94db77dd0f9373f38549aa0
