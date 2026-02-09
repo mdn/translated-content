@@ -1,11 +1,10 @@
 ---
 title: Iterator.prototype.find()
+short-title: find()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/find
 l10n:
-  sourceCommit: a71768c124d1bb2dceef873c0bda266e9f714e4c
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`find()`** は {{jsxref("Iterator")}} インスタンスのメソッドで、 {{jsxref("Array.prototype.find()")}} に似ています。イテレーターが生成する要素のうち、指定された試験関数を満たす最初のものを返します。試験関数を満たす値がない場合は、 {{jsxref("undefined")}} を返します。
 
@@ -75,6 +74,7 @@ console.log(seq.next()); // { value: undefined, done: true }
 ## 関連情報
 
 - [`Iterator.prototype.find` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims による `Iterator.prototype.find` のポリフィル](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.every()")}}
 - {{jsxref("Iterator.prototype.some()")}}
