@@ -1,11 +1,10 @@
 ---
 title: Iterator.prototype.reduce()
+short-title: reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/reduce
 l10n:
-  sourceCommit: 06b418a190b8e4a46682ab706d14984e7db34862
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`reduce()`** は {{jsxref("Iterator")}} インスタンスのメソッドで、 {{jsxref("Array.prototype.reduce")}} と似ています。イテレーターによって生成されたそれぞれの要素に対して、ユーザーが指定した「縮約」コールバック関数を実行し、前の要素の計算結果を返値として渡します。すべての要素に対して縮約を実行した最終結果は、単一の値となります。
 
@@ -76,6 +75,7 @@ console.log(
 ## 関連情報
 
 - [`Iterator.prototype.reduce` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims による `Iterator.prototype.reduce` のポリフィル](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.map()")}}
 - {{jsxref("Iterator.prototype.flatMap()")}}
