@@ -1,5 +1,5 @@
 ---
-title: Accent et importance
+title: Emphase et importance
 slug: Learn_web_development/Core/Structuring_content/Emphasis_and_importance
 l10n:
   sourceCommit: cc7ed25d67ec3df5df8cfa255e1066cb5845e293
