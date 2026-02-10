@@ -3,14 +3,14 @@ title: Iterator.zipKeyed()
 short-title: zipKeyed()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/zipKeyed
 l10n:
-  sourceCommit: dc02b8a490ea0ff4ac1236546f32270ca0cc0aa5
+  sourceCommit: c534ba0cb925657de5e99ab8c540eae31afd9382
 ---
 
 {{JSRef}}{{SeeCompatTable}}
 
 **`Iterator.zipKeyed()`** は静的メソッドで、複数の反復可能オブジェクトから要素を集約した新しい {{jsxref("Iterator")}} オブジェクトを生成します。これは本質的に入力反復可能オブジェクトを「まとめ」、それらを同時に反復処理できるようにします。
 
-{{jsxref("Iterator.zipKeyed()")}} メソッドも同様ですが、オブジェクトではなく配列を生成します。
+{{jsxref("Iterator.zip()")}} メソッドも同様ですが、オブジェクトではなく配列を生成します。
 
 ## 構文
 

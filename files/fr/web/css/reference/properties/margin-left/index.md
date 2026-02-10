@@ -1,16 +1,13 @@
 ---
 title: margin-left
 slug: Web/CSS/Reference/Properties/margin-left
-original_slug: Web/CSS/margin-left
 l10n:
-  sourceCommit: c5dd9c3b9d503a56dc04b6b8f88e89194dc82d7f
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
-
-{{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`margin-left`** d'un élément définit l'espace horizontal à gauche qui formera [la zone de marge](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_marge) à gauche de l'élément. On peut avoir une marge gauche négative qui rapproche l'élément de ses voisins ou une marge positive qui l'en écarte.
 
-{{InteractiveExample("CSS Demo: margin-left")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: margin-left")}}
 
 ```css interactive-example-choice
 margin-left: 1em;
@@ -50,13 +47,13 @@ margin-left: 0;
 .col {
   width: 33.33%;
   border: solid #5b6dcd 10px;
-  background-color: rgba(229, 232, 252, 0.6);
+  background-color: rgb(229 232 252 / 0.6);
   flex-shrink: 0;
 }
 
 #example-element {
   border: solid 10px #ffc129;
-  background-color: rgba(255, 244, 219, 0.6);
+  background-color: rgb(255 244 219 / 0.6);
 }
 ```
 
@@ -67,12 +64,12 @@ Dans certains cas où la largeur est sur-contrainte (autrement dit quand `width`
 ## Syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
+/* Valeurs de type <length> */
 margin-left: 10px; /* Une longueur absolue */
 margin-left: 1em; /* Une longueur absolue relative à la taille du texte */
-margin-left: 5%; /* Une marge dont la taille est relative à la largeur
-                       du bloc englobant */
+margin-left: 5%; /* Une marge dont la taille est relative à la largeur du bloc englobant */
+margin-left: anchor-size(self-inline);
+margin-left: calc(anchor-size(--my-anchor width, 20px) / 4);
 
 /* Valeur avec un mot-clé */
 margin-left: auto;
@@ -85,23 +82,25 @@ margin-left: revert-layer;
 margin-left: unset;
 ```
 
-La valeur de cette propriété peut être le mot-clé `auto`, une longueur (`<length>`) ou un pourcentage (`<percentage>`). La valeur peut être positive, nulle ou négative.
+La valeur de la propriété `margin-left` peut être le mot-clé `auto`, une longueur (`<length>`) ou un pourcentage (`<percentage>`). La valeur peut être positive, nulle ou négative.
 
 ### Valeurs
 
-- [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)
-  - : La taille de la marge, exprimée comme une valeur fixe.
-- [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)
-  - : La taille de la marge exprimée avec un pourcentage relatif à la dimension du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block) sur l'axe en ligne (qui correspond à la largeur pour une langue écrite horizontalement, voir [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode)).
+- {{CSSxRef("&lt;length&gt;")}}
+  - : La taille de la marge en valeur fixe.
+    - Pour les éléments positionnés par ancre, la fonction {{CSSxRef("anchor-size()")}} donne une valeur {{CSSxRef("&lt;length&gt;")}} relative à la largeur ou la hauteur de l'élément ancre associé (voir [Définir la marge d'un élément selon la taille de l'ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#définir_la_marge_dun_élément_selon_la_taille_de_lancre)).
+
+- {{CSSxRef("&lt;percentage&gt;")}}
+  - : La taille de la marge en pourcentage, relative à la taille en ligne (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block).
 - `auto`
-  - : Un mot-clé qui indique que la marge gauche s'adapte à l'espace restant. Cet espace est principalement défini par le mode de disposition utilisé. Si `margin-left` et `margin-right` valent toutes les deux `auto`, m'espace calculé sera réparti de façon équitable. Le tableau suivant précise les différents cas&nbsp;:
+  - : La marge gauche reçoit une part de l'espace horizontal inutilisé, déterminée principalement par le mode de disposition utilisé. Si les valeurs de `margin-left` et `margin-right` sont toutes deux `auto`, l'espace calculé est réparti équitablement. Ce tableau résume les différents cas&nbsp;:
 
     <table class="standard-table">
       <thead>
         <tr>
-          <th scope="col">Valeur de <a href="/fr/docs/Web/CSS/display"><code>display</code></a></th>
-          <th scope="col">Valeur de <a href="/fr/docs/Web/CSS/float"><code>float</code></a></th>
-          <th scope="col">Valeur de <a href="/fr/docs/Web/CSS/position"><code>position</code></a></th>
+          <th scope="col">Valeur de {{CSSxRef("display")}}</th>
+          <th scope="col">Valeur de {{CSSxRef("float")}}</th>
+          <th scope="col">Valeur de {{CSSxRef("position")}}</th>
           <th scope="col">Valeur calculée pour <code>auto</code></th>
           <th scope="col">Commentaires</th>
         </tr>
@@ -144,7 +143,7 @@ La valeur de cette propriété peut être le mot-clé `auto`, une longueur (`<le
           <th>N'importe laquelle</th>
           <td><code>0</code></td>
           <td>
-            Les éléments <code>table-*</code> n'ont pas de marge, il faut utiliser <a href="/fr/docs/Web/CSS/border-spacing"><code>border-spacing</code></a> à la place.
+            Les éléments <code>table-*</code> n'ont pas de marge, il faut utiliser {{CSSxRef("border-spacing")}} à la place.
           </td>
         </tr>
         <tr>
@@ -182,17 +181,11 @@ La valeur de cette propriété peut être le mot-clé `auto`, une longueur (`<le
 
 ## Exemples
 
+### Définir la marge de gauche en pourcentage
+
 Les valeurs en pourcentage pour `margin-left` sont relatives à la taille en ligne du conteneur.
 
-### CSS
-
-```css
-.exemple {
-  margin-left: 50%;
-}
-```
-
-### HTML
+#### HTML
 
 ```html
 <p>
@@ -211,9 +204,17 @@ Les valeurs en pourcentage pour `margin-left` sont relatives à la taille en lig
 </p>
 ```
 
-### Résultat
+#### CSS
 
-{{EmbedLiveSample("","","250")}}
+```css
+.exemple {
+  margin-left: 50%;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Définir la marge de gauche en pourcentage", "", 250)}}
 
 ## Spécifications
 
@@ -225,16 +226,8 @@ Les valeurs en pourcentage pour `margin-left` sont relatives à la taille en lig
 
 ## Voir aussi
 
-- Les autres propriétés physiques pour les marges&nbsp;:
-  - [`margin-top`](/fr/docs/Web/CSS/Reference/Properties/margin-top)
-  - [`margin-right`](/fr/docs/Web/CSS/Reference/Properties/margin-right)
-  - [`margin-bottom`](/fr/docs/Web/CSS/Reference/Properties/margin-bottom)
-  - La propriété raccourcie [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin) qui synthétise les 4
-- Les propriétés logiques pour les marges&nbsp;:
-  - [`margin-block-start`](/fr/docs/Web/CSS/Reference/Properties/margin-block-start)
-  - [`margin-block-end`](/fr/docs/Web/CSS/Reference/Properties/margin-block-end)
-  - [`margin-inline-start`](/fr/docs/Web/CSS/Reference/Properties/margin-inline-start)
-  - [`margin-inline-end`](/fr/docs/Web/CSS/Reference/Properties/margin-inline-end)
-  - Les propriétés raccourcies pour les deux axes&nbsp;:
-    - [`margin-block`](/fr/docs/Web/CSS/Reference/Properties/margin-block)
-    - [`margin-inline`](/fr/docs/Web/CSS/Reference/Properties/margin-inline)
+- Les propriétés {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}} et {{CSSxRef("margin-bottom")}}
+- La propriété raccourcie {{CSSxRef("margin")}}
+- Les propriétés {{CSSxRef("margin-block-start")}}, {{CSSxRef("margin-block-end")}}, {{CSSxRef("margin-inline-start")}} et {{CSSxRef("margin-inline-end")}}
+- Les propriétés raccourcies {{CSSxRef("margin-block")}} et {{CSSxRef("margin-inline")}}
+- Le module [du modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model)

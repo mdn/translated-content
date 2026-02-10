@@ -1,14 +1,13 @@
 ---
 title: list-style
 slug: Web/CSS/Reference/Properties/list-style
-original_slug: Web/CSS/list-style
+l10n:
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-{{CSSRef}}
+La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`list-style`** permet de définir toutes les propriétés de style de liste en une seule fois.
 
-La propriété **`list-style`** est une [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) qui permet de définir [`list-style-type`](/fr/docs/Web/CSS/Reference/Properties/list-style-type), [`list-style-image`](/fr/docs/Web/CSS/Reference/Properties/list-style-image) et [`list-style-position`](/fr/docs/Web/CSS/Reference/Properties/list-style-position).
-
-{{InteractiveExample("CSS Demo: list-style")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: list-style")}}
 
 ```css interactive-example-choice
 list-style: square;
@@ -85,16 +84,15 @@ hr {
 }
 ```
 
-> [!NOTE]
-> Cette propriété s'applique aux éléments d'une liste (c'est-à-dire aux éléments pour lesquels [`display`](/fr/docs/Web/CSS/Reference/Properties/display) vaut `list-item`). [Par défaut](https://www.w3.org/TR/html5/rendering.html#lists), cela inclut les éléments [`<li>`](/fr/docs/Web/HTML/Reference/Elements/li). Cette propriété peut être héritée par les éléments et si on veut donc gérer une liste de façon uniforme, on pourra appliquer la propriété à l'élément parent (qui correspond en général à [`<ol>`](/fr/docs/Web/HTML/Reference/Elements/ol) ou à [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul)).
+Les valeurs de cette propriété sont appliquées aux éléments de liste, y compris les éléments HTML {{HTMLElement("li")}} et les éléments avec {{CSSxRef("display", "display: list-item;")}}. Parce que cette propriété est héritée, elle peut être définie sur un élément parent (normalement {{HTMLElement("ol")}} ou {{HTMLElement("ul")}}) pour que la même mise en forme de liste s'applique à tous les éléments imbriqués.
 
-## Propriétés détaillées correspondantes
+## Propriétés constitutives
 
 Cette propriété est une propriété raccourcie pour les propriétés CSS&nbsp;:
 
-- [`list-style-image`](/fr/docs/Web/CSS/Reference/Properties/list-style-image)
-- [`list-style-position`](/fr/docs/Web/CSS/Reference/Properties/list-style-position)
-- [`list-style-type`](/fr/docs/Web/CSS/Reference/Properties/list-style-type)
+- {{CSSxRef("list-style-image")}}
+- {{CSSxRef("list-style-position")}}
+- {{CSSxRef("list-style-type")}}
 
 ## Syntaxe
 
@@ -108,10 +106,10 @@ list-style: url("../img/etoile.png");
 /* Position */
 list-style: inside;
 
-/* type | position */
+/* Deux valeurs */
 list-style: georgian inside;
 
-/* type | image | position */
+/* Trois valeurs */
 list-style: lower-roman url("../img/etoile.png") outside;
 
 /* Valeur avec un mot-clé */
@@ -121,62 +119,22 @@ list-style: none;
 list-style: inherit;
 list-style: initial;
 list-style: revert;
+list-style: revert-layer;
 list-style: unset;
 ```
 
-Cette propriété raccourcie peut prendre un, deux ou trois mots-clés, dans n'importe quel ordre. Si [`list-style-type`](/fr/docs/Web/CSS/Reference/Properties/list-style-type) et [`list-style-image`](/fr/docs/Web/CSS/Reference/Properties/list-style-image) sont tous les deux définis, `list-style-type` sera utilisé si l'image est indisponible.
+La propriété `list-style` est définie avec une, deux ou trois valeurs dans n'importe quel ordre. Si {{CSSxRef("list-style-type")}} et {{CSSxRef("list-style-image")}} sont toutes les deux définies, la propriété `list-style-type` est utilisée comme solution de repli si l'image n'est pas disponible.
 
 ### Valeurs
 
-- [`list-style-type`](/fr/docs/Web/CSS/Reference/Properties/list-style-type)
-  - : Voir [`list-style-type`](/fr/docs/Web/CSS/Reference/Properties/list-style-type).
-- [`list-style-image`](/fr/docs/Web/CSS/Reference/Properties/list-style-image)
-  - : Voir [`list-style-image`](/fr/docs/Web/CSS/Reference/Properties/list-style-image).
-- [`list-style-position`](/fr/docs/Web/CSS/Reference/Properties/list-style-position)
-  - : Voir [`list-style-position`](/fr/docs/Web/CSS/Reference/Properties/list-style-position).
+- {{CSSxRef("list-style-type")}}
+  - : Un style de compteur (`<counter-style>`), une chaîne de caractères ({{CSSxRef("string")}}), ou `none`. Si omise dans la propriété raccourcie, la valeur par défaut `disc` est utilisée. Voir {{CSSxRef("list-style-type")}}.
+- {{CSSxRef("list-style-image")}}
+  - : Une {{CSSxRef("image")}} ou `none`. Si omise, la valeur par défaut `none` est utilisée. Voir {{CSSxRef("list-style-image")}}.
+- {{CSSxRef("list-style-position")}}
+  - : `inside` ou `outside`. Si omise, la valeur par défaut `outside` est utilisée. Voir {{CSSxRef("list-style-position")}}.
 - `none`
   - : Aucun style n'est utilisé.
-
-## Accessibilité
-
-Safari ne reconnait pas les listes non ordonnées lorsque `list-style: none` leur est appliqué et ne les ajoute pas dans l'arbre d'accessibilité (utilisé par les lecteurs d'écrans).
-
-La solution la plus directe est d'affecter `role="list"` à l'élément `<ul>` dans votre code HTML. Cela rajoute les valeurs sémantiques de la liste sans impacter le design.
-
-Pour pallier ce problème en utilisant uniquement les styles CSS, on peut ajouter un [espace sans chasse](https://fr.wikipedia.org/wiki/Espace_sans_chasse) comme [pseudo-contenu](/fr/docs/Web/CSS/Reference/Properties/content) avant chaque élément de liste afin que la liste soit correctement annoncée.
-
-```css
-ul {
-  list-style: none;
-}
-
-ul li::before {
-  content: "\200B";
-}
-```
-
-Une autre approche consiste à affecter une valeur `url` à la propriété `list-style`&nbsp;:
-
-```css
-nav ol,
-nav ul {
-  list-style: none;
-}
-
-/* cela devient : */
-
-nav ol,
-nav ul {
-  list-style: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E");
-}
-```
-
-N'utilisez les palliatifs CSS que dans le cas où la solution en HTML n'est pas disponible et les conséquences inattendues nuisant à l'expérience utilisateur sont écartées durant des essais.
-
-- [_'Fixing' Lists_ (en anglais)](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html)
-- [_VoiceOver and_ `list-style-type: none` – _Unfettered Thoughts_ (en anglais)](https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/)
-- [MDN Comprendre les règles WCAG 1.3](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
-- [_Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
 ## Définition formelle
 
@@ -184,11 +142,45 @@ N'utilisez les palliatifs CSS que dans le cas où la solution en HTML n'est pas 
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
+
+## Accessibilité
+
+Safari ne reconnait pas les listes ordonnées ou non ordonnées comme des listes dans l'arbre d'accessibilité si elles ont une valeur `list-style` de `none`, sauf si la liste est imbriquée dans l'élément de navigation {{HTMLElement("nav")}}. Ce [comportement est intentionnel <sup>(angl.)</sup>](https://webkit.org/b/170179#c1) et n'est pas considéré comme un bug.
+
+Pour que les listes soient annoncées comme des listes, ajoutez [`role="list"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/list_role) aux éléments {{HTMLElement("ol")}} et {{HTMLElement("ul")}}, surtout si la liste n'est pas imbriquée dans un `<nav>`. Cela restaure la sémantique de liste sans affecter le design&nbsp;:
+
+```html
+<ul role="list">
+  <li>Un élément</li>
+  <li>Un autre élément</li>
+</ul>
+```
+
+Si l'attribut ARIA `role` n'est pas une option pour votre code, il est possible d'utiliser le CSS. Ajouter un [pseudo-contenu](/fr/docs/Web/CSS/Reference/Properties/content) qui n'est pas vide, comme du texte ou des images avant chaque élément de liste, peut restaurer la sémantique de liste, mais cela impacte l'apparence visuelle. Safari détermine si le pseudo-contenu ajouté est suffisant comme contenu accessible, et restaure la sémantique de liste si c'est le cas. En général, Safari considère le texte et les images comme suffisants, c'est pourquoi le `content: "+ ";` montré ci-dessous fonctionne (mais nécessite un style supplémentaire pour ne pas affecter le design).
+
+```css
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "+ ";
+}
+```
+
+Une déclaration de `content: "";` (une chaîne vide) est ignorée, tout comme les valeurs de `content` qui ne contiennent que des espaces, telles que `content: " ";`.
+
+Ces solutions CSS ne doivent être utilisées que lorsque la solution HTML n'est pas disponible, et uniquement après avoir vérifié qu'elles ne produisent pas de comportements inattendus pouvant nuire à l'expérience utilisateur.
+
+- [Corriger les listes](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html) (2023)
+- [VoiceOver et `list-style-type: none`](https://gerardkcohen.me/writing/2017/voiceover-list-style-type.html) (2017)
+- [Comprendre les règles WCAG&nbsp;: Créer du contenu pouvant être présenté de différentes manières](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.3_—_créer_du_contenu_pouvant_être_présenté_de_différentes_façons)
+- [Comprendre le critère de succès 1.3.1&nbsp;: Informations et relations | WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 
 ## Exemples
 
-### Définition de list-style-type et position
+### Définir le type et la position du style de liste
 
 #### HTML
 
@@ -221,7 +213,7 @@ Liste 2
 
 #### Résultat
 
-{{EmbedLiveSample('', 'auto', 220)}}
+{{EmbedLiveSample("Définir le type et la position du style de liste", "auto", 220)}}
 
 ## Spécifications
 
@@ -233,6 +225,7 @@ Liste 2
 
 ## Voir aussi
 
-- [`list-style-type`](/fr/docs/Web/CSS/Reference/Properties/list-style-type)
-- [`list-style-image`](/fr/docs/Web/CSS/Reference/Properties/list-style-image)
-- [`list-style-position`](/fr/docs/Web/CSS/Reference/Properties/list-style-position)
+- Les propriétés de composant&nbsp;: {{CSSxRef("list-style-type")}}, {{CSSxRef("list-style-image")}} et {{CSSxRef("list-style-position")}}
+- Le pseudo-élément {{CSSxRef("::marker")}}
+- Le module [des listes et compteurs CSS](/fr/docs/Web/CSS/Guides/Lists)
+- Le module [des styles de compteur CSS](/fr/docs/Web/CSS/Guides/Counter_styles)

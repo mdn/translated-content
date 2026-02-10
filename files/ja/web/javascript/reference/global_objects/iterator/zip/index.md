@@ -3,7 +3,7 @@ title: Iterator.zip()
 short-title: zip()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/zip
 l10n:
-  sourceCommit: dc02b8a490ea0ff4ac1236546f32270ca0cc0aa5
+  sourceCommit: c534ba0cb925657de5e99ab8c540eae31afd9382
 ---
 
 {{JSRef}}{{SeeCompatTable}}
