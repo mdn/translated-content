@@ -215,7 +215,7 @@ This is my text.
 
 参考に、比較対照できるように無効化されていない `<input>` 要素も提供します（下記レンダリングでは `disabled` 属性が設定された入力欄がややグレー表示されている点に注意してください）。
 
-```html live-sample___boolean-example
+```html-nolint live-sample___boolean-example
 <label for="third-input">この入力欄は無効ではありません。中に入力できます。</label>
 <input id="third-input" type="text" />
 ```
