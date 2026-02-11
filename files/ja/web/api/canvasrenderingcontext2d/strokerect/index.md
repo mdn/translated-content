@@ -1,9 +1,12 @@
 ---
-title: CanvasRenderingContext2D.strokeRect()
+title: "CanvasRenderingContext2D: strokeRect() メソッド"
+short-title: strokeRect()
 slug: Web/API/CanvasRenderingContext2D/strokeRect
+l10n:
+  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 **`CanvasRenderingContext2D.strokeRect()`** はキャンバス 2D API のメソッドで、矩形の輪郭を現在の {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} とその他のコンテキスト設定によって描画します。
 
@@ -11,8 +14,8 @@ slug: Web/API/CanvasRenderingContext2D/strokeRect
 
 ## 構文
 
-```js
-void ctx.strokeRect(x, y, width, height);
+```js-nolint
+strokeRect(x, y, width, height)
 ```
 
 `strokeRect()` は、座標 `(x, y)` を始点とし、大きさが `(width, height)` の矩形の輪郭を描画します。
@@ -27,6 +30,10 @@ void ctx.strokeRect(x, y, width, height);
   - : 矩形の幅。正の値で右方向、負の値で左方向に描画します。
 - `height`
   - : 矩形の高さ。正の値で下方向、負の値で上方向に描画します。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
@@ -70,11 +77,11 @@ ctx.strokeRect(20, 10, 160, 100);
 ```js
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-ctx.shadowColor = "#d53";
+ctx.shadowColor = "#dd5533";
 ctx.shadowBlur = 20;
 ctx.lineJoin = "bevel";
 ctx.lineWidth = 15;
-ctx.strokeStyle = "#38f";
+ctx.strokeStyle = "#3388ff";
 ctx.strokeRect(30, 30, 160, 90);
 ```
 
