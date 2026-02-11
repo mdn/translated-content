@@ -8,7 +8,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-{{domxref("GeolocationCoordinates")}} 接口的 **`altitudeAccuracy`** 只读属性是一个严格为正的 `double` 值，表示以米为单位的 `altitude`（海拔高度）的精度（置信度为 95%）。如果实现不支持测量海拔高度，则返回 `null`。
+{{domxref("GeolocationCoordinates")}} 接口的 **`altitudeAccuracy`** 只读属性是一个严格为正的 `double` 值，表示以米为单位的 `altitude`（海拔高度）的精度（置信度为 95%）。如果接口实现不支持测量海拔高度，则返回 `null`。
 
 ## 值
 
