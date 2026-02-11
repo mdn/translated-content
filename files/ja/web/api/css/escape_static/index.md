@@ -1,8 +1,9 @@
 ---
 title: "CSS: escape() 静的メソッド"
+short-title: escape()
 slug: Web/API/CSS/escape_static
 l10n:
-  sourceCommit: f29d8a648ef7ada05a00c358bfb9e9f67f3bc90d
+  sourceCommit: 50d5e7cdb972c64a8f02a34a229bbc5ed7305c24
 ---
 
 {{APIRef("CSSOM")}}
@@ -28,11 +29,13 @@ CSS.escape(str)
 
 ### 基本的な結果
 
+<!-- Note: the {} need to be triple-escaped, once for Yari -->
+
 ```js-nolint
-CSS.escape(".foo#bar"); // "\.foo\#bar"
-CSS.escape("()[]{}"); // "\(\)\[\]\\{\\}"
+CSS.escape(".foo#bar"); // "\\.foo\\#bar"
+CSS.escape("()[]{}"); // "\\(\\)\\[\\]\\\{\\\}"
 CSS.escape('--a'); // "--a"
-CSS.escape(0); // "\30 " （'0' の Unicode コードポイントは 30）
+CSS.escape(0); // "\\30 " （'0' の Unicode コードポイントは 30）
 CSS.escape('\0'); // "\ufffd" （Unicode REPLACEMENT CHARACTER）
 ```
 
