@@ -1,14 +1,13 @@
 ---
 title: margin-inline-end
 slug: Web/CSS/Reference/Properties/margin-inline-end
-original_slug: Web/CSS/margin-inline-end
+l10n:
+  sourceCommit: 12b2bba6348add286377d12f0806d43ddc72bdb7
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+La propriété [CSS](/fr/docs/Web/CSS) **`margin-inline-end`** définit la marge logique de fin en ligne d'un élément, qui correspond à une marge physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Autrement dit, elle correspond à la propriété {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}}, {{CSSxRef("margin-bottom")}} ou {{CSSxRef("margin-left")}} selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
 
-La propriété **`margin-inline-end`** définit la marge logique appliquée à la fin des éléments en ligne, selon le mode d'écriture, la directionalité et l'orientation du texte. Selon les valeurs utilisées pour {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}, elle peut correspondre à {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} ou {{cssxref("margin-left")}}.
-
-{{InteractiveExample("CSS Demo: margin-inline-end")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: margin-inline-end")}}
 
 ```css interactive-example-choice
 margin-inline-end: 20px;
@@ -60,28 +59,32 @@ direction: rtl;
 }
 ```
 
-Cette propriété est à rapprocher de {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}} et de {{cssxref("margin-inline-start")}} qui définissent les autres marges appliquées à l'élément.
-
 ## Syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
+/* Valeurs de type <length> */
 margin-inline-end: 10px; /* Une longueur absolue */
 margin-inline-end: 1em; /* Une longueur relative à la taille du texte */
-margin-inline-end: 5%; /* Une largeur relative à la
-                                   largeur du bloc englobant */
+margin-inline-end: 5%; /* Une largeur relative à la largeur du bloc englobant */
+margin-inline-end: anchor-size(height);
+margin-inline-end: calc(anchor-size(--my-anchor self-inline, 25px) / 5);
 
 /* Valeurs avec un mot-clé */
 margin-inline-end: auto;
 
 /* Valeurs globales */
 margin-inline-end: inherit;
+margin-inline-end: initial;
+margin-inline-end: revert;
+margin-inline-end: revert-layer;
+margin-inline-end: unset;
 ```
+
+Elle est liée à {{CSSxRef("margin-block-start")}}, {{CSSxRef("margin-block-end")}} et {{CSSxRef("margin-inline-start")}}, qui définissent les autres marges de l'élément.
 
 ### Valeurs
 
-La propriété `margin-inline-end` peut prendre les mêmes valeurs que la propriété {{cssxref("margin-left")}}.
+La propriété `margin-inline-end` peut prendre les mêmes valeurs que la propriété {{CSSxRef("margin-top")}}.
 
 ## Définition formelle
 
@@ -93,7 +96,17 @@ La propriété `margin-inline-end` peut prendre les mêmes valeurs que la propri
 
 ## Exemples
 
-### CSS
+### Définir la marge de fin en ligne
+
+#### HTML
+
+```html
+<div>
+  <p class="exempleTexte">Texte d'exemple</p>
+</div>
+```
+
+#### CSS
 
 ```css
 div {
@@ -102,24 +115,16 @@ div {
   height: 120px;
 }
 
-.exemple {
+.exempleTexte {
   writing-mode: vertical-lr;
   margin-inline-end: 20px;
   background-color: #c8c800;
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<div>
-  <p class="exemple">Texte d'exemple</p>
-</div>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples", 140, 140)}}
+{{EmbedLiveSample("Définir la marge de fin en ligne", 140, 140)}}
 
 ## Spécifications
 
@@ -131,13 +136,7 @@ div {
 
 ## Voir aussi
 
-- Les propriétés physiques correspondantes :
-  - {{cssxref("margin-top")}},
-  - {{cssxref("margin-right")}},
-  - {{cssxref("margin-bottom")}}
-  - {{cssxref("margin-left")}}
-
-- {{cssxref("margin-inline-start")}}
-- {{cssxref("writing-mode")}}
-- {{cssxref("direction")}}
-- {{cssxref("text-orientation")}}
+- [Propriétés et valeurs logiques CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values)
+- La propriété {{CSSxRef("margin-inline-start")}}
+- Les propriétés physiques associées&nbsp;: {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}}, {{CSSxRef("margin-bottom")}} et {{CSSxRef("margin-left")}}
+- Les propriétés {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}

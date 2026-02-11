@@ -1,27 +1,34 @@
 ---
-title: CanvasRenderingContext2D.stroke()
+title: "CanvasRenderingContext2D: stroke() メソッド"
+short-title: stroke()
 slug: Web/API/CanvasRenderingContext2D/stroke
+l10n:
+  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 **`CanvasRenderingContext2D.stroke()`** はキャンバス 2D API のメソッドで、現在のあるいは渡されたパスを、現在の線のスタイルで描画します。
 
 線はパスの中央に配置されます。言い換えれば、線の半分は内側に、半分は外側に描かれます。
 
-線は[ノンゼロワインディング規則](https://en.wikipedia.org/wiki/Nonzero-rule)を使用して描かれます。すなわち交差したパスは塗りつぶされます。
+線は[非ゼロワインディングルール](https://en.wikipedia.org/wiki/Nonzero-rule)を使用して描かれます。すなわち交差したパスは塗りつぶされます。
 
 ## 構文
 
-```js
-void ctx.stroke();
-void ctx.stroke(path);
+```js-nolint
+stroke()
+stroke(path)
 ```
 
 ### 引数
 
 - `path`
   - : 描画する {{domxref("Path2D")}} パス。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
@@ -66,21 +73,21 @@ ctx.stroke();
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
-// First sub-path
+// 1 つ目のサブパス
 ctx.lineWidth = 26;
 ctx.strokeStyle = "orange";
 ctx.moveTo(20, 20);
 ctx.lineTo(160, 20);
 ctx.stroke();
 
-// Second sub-path
+// 2 つ目のサブパス
 ctx.lineWidth = 14;
 ctx.strokeStyle = "green";
 ctx.moveTo(20, 80);
 ctx.lineTo(220, 80);
 ctx.stroke();
 
-// Third sub-path
+// 3 つ目のサブパス
 ctx.lineWidth = 4;
 ctx.strokeStyle = "pink";
 ctx.moveTo(20, 140);
@@ -111,13 +118,13 @@ const ctx = canvas.getContext("2d");
 ctx.lineWidth = 16;
 ctx.strokeStyle = "red";
 
-// Stroke on top of fill
+// 塗りつぶしの上にストローク
 ctx.beginPath();
 ctx.rect(25, 25, 100, 100);
 ctx.fill();
 ctx.stroke();
 
-// Fill on top of stroke
+// ストロークの上に塗りつぶし
 ctx.beginPath();
 ctx.rect(175, 25, 100, 100);
 ctx.stroke();
