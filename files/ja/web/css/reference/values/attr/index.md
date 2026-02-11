@@ -309,7 +309,7 @@ p::after {
 ```html
 <div data-rotation="-3">これは -3 度回転しています</div>
 <div data-rotation="2">これ 2 度回転しています</div>
-<div>これあｈ、代替値である 1.5deg の値を使用しています</div>
+<div>これは、代替値である 1.5deg の値を使用しています</div>
 ```
 
 #### CSS
