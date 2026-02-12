@@ -2,7 +2,6 @@
 title: WebDriver のエラー
 short-title: Errors
 slug: Web/WebDriver/Reference/Classic/Errors
-page-type: landing-page
 original_slug: Web/WebDriver/Reference/Errors
 l10n:
   sourceCommit: 81715a83bdb5d71cdceaf32d1e40a3edfc986a12
