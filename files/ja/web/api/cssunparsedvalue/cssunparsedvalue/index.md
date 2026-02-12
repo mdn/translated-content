@@ -1,5 +1,6 @@
 ---
 title: "CSSUnparsedValue: CSSUnparsedValue() コンストラクター"
+short-title: CSSUnparsedValue()
 slug: Web/API/CSSUnparsedValue/CSSUnparsedValue
 l10n:
   sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
