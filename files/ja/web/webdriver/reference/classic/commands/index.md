@@ -1,7 +1,11 @@
 ---
 title: WebDriver のコマンド
 short-title: コマンド
-slug: Web/WebDriver/Reference/Commands
+slug: Web/WebDriver/Reference/Classic/Commands
+page-type: landing-page
+browser-compat: webdriver.classic
+original_slug: Web/WebDriver/Reference/Commands
+sidebar: webdriver
 l10n:
   sourceCommit: 394a1aff10d20ba51dbd00252ce481769298001c
 ---
