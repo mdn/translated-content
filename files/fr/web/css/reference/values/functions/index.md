@@ -291,7 +291,7 @@ Les fonctions suivantes sont utilisées comme valeur des propriétés pour réf�
 - {{CSSxRef("env", "env()")}}
   - : Utilise la variable d'environnement définie par l'agent utilisateur.
 - {{CSSxRef("if", "if()")}}
-  - : Définit conditionnellement une valeur de propriété en fonction du résultat d'une [requête de style](/fr/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_style_queries), d'une [requête média](/fr/docs/Web/CSS/Guides/Media_queries/Using) ou d'une [requête de fonctionnalité](/fr/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries).
+  - : Définit conditionnellement une valeur de propriété en fonction du résultat d'une [requête de style](/fr/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries), d'une [requête média](/fr/docs/Web/CSS/Guides/Media_queries/Using) ou d'une [requête de fonctionnalité](/fr/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries).
 - {{cssxref("url_function", "url()")}}
   - : Utilise un fichier à partir de l'URL spécifiée.
 - {{CSSxRef("var", "var()")}}

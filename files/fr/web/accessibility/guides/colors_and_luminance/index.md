@@ -130,7 +130,7 @@ En matière d'accessibilité, les normes et recommandations sont cependant rédi
 
 ### Interroger les valeurs de couleur
 
-La méthode {{domxref('Window.getComputedStyle()')}} retourne des valeurs en utilisant l'échelle décimale RVB ou via `color(srgb...)`. Par exemple, appeler `Window.getComputedStyle()` sur un élément HTML `<div>` avec `background-color: red` retourne `rgb(255, 0, 0)`. Cependant, lors de l'utilisation de [couleurs relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors) (par exemple `background-color: rgb(from blue 255 0 0)`), `Window.getComputedStyle()` peut retourner `color(srgb 1 0 0)`. Étant lié au matériel, `Window.getComputedStyle()` mesure la couleur en termes de RVB, pas selon la perception humaine.
+La méthode {{domxref('Window.getComputedStyle()')}} retourne des valeurs en utilisant l'échelle décimale RVB ou via `color(srgb...)`. Par exemple, appeler `Window.getComputedStyle()` sur un élément HTML `<div>` avec `background-color: red` retourne `rgb(255, 0, 0)`. Cependant, lors de l'utilisation de [couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Relative_colors) (par exemple `background-color: rgb(from blue 255 0 0)`), `Window.getComputedStyle()` peut retourner `color(srgb 1 0 0)`. Étant lié au matériel, `Window.getComputedStyle()` mesure la couleur en termes de RVB, pas selon la perception humaine.
 
 ### Daltonisme rouge/vert
 

@@ -29,9 +29,9 @@ Les règles @ de déclaration se terminent par un point-virgule. Il existe plusi
 - {{cssxref("@charset")}}
   - : Un algorithme (ayant la forme syntaxique d'une règle @, mais n'étant pas une définition) qui détermine l'encodage de secours utilisé par la feuille de style ([Syntaxe CSS](/fr/docs/Web/CSS/Guides/Syntax)).
 - {{cssxref("@import")}}
-  - : Indique au moteur CSS d'inclure une feuille de style externe ([Cascade et héritage CSS](/fr/docs/Web/CSS/CSS_cascade)).
+  - : Indique au moteur CSS d'inclure une feuille de style externe ([Cascade et héritage CSS](/fr/docs/Web/CSS/Guides/Cascad)).
 - {{cssxref("@layer")}}
-  - : Définit l'ordre de priorité en cas de couches de cascade multiples ([Cascade et héritage CSS](/fr/docs/Web/CSS/CSS_cascade)). Utilisée aussi comme [règle @ de bloc](#layer_2) pour définir les styles d'une couche.
+  - : Définit l'ordre de priorité en cas de couches de cascade multiples ([Cascade et héritage CSS](/fr/docs/Web/CSS/Guides/Cascad)). Utilisée aussi comme [règle @ de bloc](#layer_2) pour définir les styles d'une couche.
 - {{cssxref("@namespace")}}
   - : Définit un namespace par défaut pour une feuille de style ou un préfixe de namespace qu'un sélecteur ne correspond que si le namespace et les autres composants du sélecteur correspondent ([Namespaces CSS](/fr/docs/Web/CSS/Guides/Namespaces)).
 
@@ -55,7 +55,7 @@ Les règles @ de bloc se terminent par un bloc `{}` qui contient des règles imb
 - {{cssxref("@keyframes")}} (et l'alias `@-webkit-keyframes`)
   - : Définit une animation nommée en décrivant les styles CSS pour les étapes intermédiaires (ou keyframes) de la séquence d'animation ([Animations CSS](/fr/docs/Web/CSS/Guides/Animations)).
 - {{cssxref("@layer")}}
-  - : Crée une couche de cascade nommée avec les règles CSS pour cette couche ([Cascade et héritage CSS](/fr/docs/Web/CSS/CSS_cascade)). Utilisée aussi comme [règle @ de déclaration](#layer) pour définir l'ordre de priorité en cas de couches multiples.
+  - : Crée une couche de cascade nommée avec les règles CSS pour cette couche ([Cascade et héritage CSS](/fr/docs/Web/CSS/Guides/Cascad)). Utilisée aussi comme [règle @ de déclaration](#layer) pour définir l'ordre de priorité en cas de couches multiples.
 - {{cssxref("@media")}}
   - : Règle conditionnelle de groupe qui applique son contenu si le périphérique satisfait la condition définie par une _requête média_ ([Règles conditionnelles CSS](/fr/docs/Web/CSS/Guides/Conditional_rules)).
 - {{cssxref("@page")}}
@@ -65,7 +65,7 @@ Les règles @ de bloc se terminent par un bloc `{}` qui contient des règles imb
 - {{cssxref("@property")}}
   - : Définit une [propriété personnalisée CSS](/fr/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties), permettant la vérification de type, la contrainte, la définition de valeurs par défaut et le contrôle de l'héritage ([Propriétés personnalisées pour les variables CSS](/fr/docs/Web/CSS/Guides/Cascading_variables)).
 - {{cssxref("@scope")}}
-  - : Définit une portée dans laquelle appliquer des styles à des éléments sélectionnés ([Cascade et héritage CSS](/fr/docs/Web/CSS/CSS_cascade)).
+  - : Définit une portée dans laquelle appliquer des styles à des éléments sélectionnés ([Cascade et héritage CSS](/fr/docs/Web/CSS/Guides/Cascad)).
 - {{cssxref("@starting-style")}}
   - : Définit les valeurs de propriété initiales pour un élément lors de sa première mise à jour de style, par exemple lors d'une transition depuis `display: none` ([Transitions CSS](/fr/docs/Web/CSS/Guides/Transitions)).
 - {{cssxref("@supports")}}
@@ -101,7 +101,7 @@ Les règles @ de bloc se terminent par un bloc `{}` qui contient des règles imb
 
 ## Voir aussi
 
-- [Fonctions de règles @ CSS](/fr/docs/Web/CSS/CSS_syntax/At-rule_functions)
+- [Fonctions de règles @ CSS](/fr/docs/Web/CSS/Guides/Syntax/At-rule_functions)
 - [Imbrication des règles @ CSS](/fr/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
 - [Instructions CSS](/fr/docs/Web/CSS/Guides/Syntax/Introduction#instructions_css)
 - L'[interface CSSRule](/fr/docs/Web/API/CSSRule)

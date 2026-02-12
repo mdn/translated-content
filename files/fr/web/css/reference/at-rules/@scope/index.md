@@ -203,7 +203,7 @@ Dans le bloc de code suivant, `:scope img` a une spécificité de 0-1-1&nbsp;:
 
 ### Résolution des conflits `@scope`
 
-`@scope` ajoute un nouveau critère à la [cascade CSS](/fr/docs/Web/CSS/CSS_cascade)&nbsp;: la **proximité de portée**. Cela signifie que lorsque deux portées ont des styles en conflit, le style ayant le plus petit nombre de sauts dans la hiérarchie de l'arbre DOM jusqu'à la racine de la portée est appliqué. Voyons un exemple pour illustrer ce principe.
+`@scope` ajoute un nouveau critère à la [cascade CSS](/fr/docs/Web/CSS/Guides/Cascad)&nbsp;: la **proximité de portée**. Cela signifie que lorsque deux portées ont des styles en conflit, le style ayant le plus petit nombre de sauts dans la hiérarchie de l'arbre DOM jusqu'à la racine de la portée est appliqué. Voyons un exemple pour illustrer ce principe.
 
 Prenons l'extrait HTML suivant, où des cartes de thèmes différents sont imbriquées les unes dans les autres&nbsp;:
 
