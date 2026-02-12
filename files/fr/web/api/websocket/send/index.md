@@ -1,55 +1,44 @@
 ---
-title: WebSocket.send()
+title: "WebSocket : méthode send()"
+short-title: send()
 slug: Web/API/WebSocket/send
+l10n:
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{APIRef("Web Sockets API")}}
+{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
 
-La méthode **`WebSocket.send()`** rajoute les données indiquées à la queue pour transmission au serveur via la connexion WebSocket, augmentant ainsi la valeur de `bufferedAmount` du nombre d'octets nécessaires pour les données. Si les données ne peuvent être envoyées (par exemple parce qu'elles doivent être mises en tampon mais que la mémoire tampon est pleine), la socket est fermée automatiquement.
+La méthode **`send()`** de l'interface {{DOMxRef("WebSocket")}} place dans la file d'attente les données spécifiées pour qu'elles soient transmises au serveur via la connexion WebSocket, augmentant la valeur de `bufferedAmount` du nombre d'octets nécessaires pour contenir ces données. Si les données ne peuvent pas être envoyées (par exemple, parce qu'elles doivent être mises en tampon mais que le tampon est plein), le socket est automatiquement fermé.
+Le navigateur lèvera une exception si vous appelez `send()` lorsque la connexion est dans l'état `CONNECTING`. Si vous appelez `send()` lorsque la connexion est dans les états `CLOSING` ou `CLOSED`, le navigateur ignorera silencieusement les données.
 
 ## Syntaxe
 
-```js
-WebSocket.send("Coucou serveur !");
+```js-nolint
+send(data)
 ```
 
 ### Paramètres
 
 - `data`
-  - : Les données à envoyer au serveur. La valeur peut avoir un des types suivants :
-    - [`USVString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)
+  - : Les données à envoyer au serveur. La valeur peut avoir un des types suivants&nbsp;:
+    - `string`
       - : Une chaîne de caractères. Cette chaîne est ajoutée au tampon au format UTF-8 et la valeur de `bufferedAmount` est augmentée du nombre d'octets nécessaires pour représenter cette chaîne de caractères UTF-8.
-    - [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+    - {{JSxRef("ArrayBuffer")}}
       - : Les données binaires peuvent aussi être envoyées avec un tableau typé. Son contenu binaire est mis en tampon et la valeur de `bufferedAmount` est augmentée du nombre d'octets nécessaires.
-    - [`Blob`](/fr/docs/Web/API/Blob)
-      - : Lorsqu'une valeur `Blob` est fournie, les données brutes du blob sont rajoutées à la queue pour être transmises dans une
+    - {{DOMxRef("Blob")}}
+      - : Définir un `Blob` place les données brutes du blob dans la file d'attente pour être transmises dans une trame (<i lang="en">frame</i> en anglais) binaire (le {{DOMxRef("Blob.type")}} est ignoré).
+        La valeur de `bufferedAmount` est augmentée du nombre d'octets de ces données brutes.
+    - {{JSxRef("TypedArray")}} ou un objet {{JSxRef("DataView")}}
+      - : Il est possible d'envoyer n'importe quel objet étant [un tableau typé JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays) sous la forme d'une trame (<i lang="en">frame</i> en anglais) binaire. Le contenu des données binaires est rajouté à la queue dans le tampon et la valeur de `bufferedAmount` est augmentée du nombre d'octets correspondant.
 
-        <i lang="en">frame</i>
+### Valeur de retour
 
-        binaire. La valeur de `bufferedAmount` est augmentée du nombre d'octets utilisés pour représenter ces données brutes.
+Aucune ({{JSxRef("undefined")}}).
 
-    - [`ArrayBufferView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)
-      - : Il est possible d'envoyer n'importe quel objet étant [un tableau typé JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays) sous la forme d'une
+### Exceptions
 
-        <i lang="en">frame</i>
-
-        binaire. Le contenu des données binaires est rajouté à la queue dans le tampon et la valeur de `bufferedAmount` est augmentée du nombre d'octets correspondant.
-
-### Exceptions levées
-
-- `INVALID_STATE_ERR`
-  - : La connexion n'est pas ouverte actuellement.
-- `SYNTAX_ERR`
-  - : Les données sont une chaîne de caractères pour laquelle il existe des
-
-    <i lang="en">surrogates</i>
-
-    non appairés.
-
-> [!NOTE]
-> Pour Gecko 6.0, l'implémentation de `send()` varie de la spécification : le moteur renvoie un booléen indiquant si la connexion est toujours ouverte (par extension, cela indique si les données ont été correctement rajoutées à la queue ou transmises). Ce comportement a été corrigé avec Gecko 8.0.
->
-> Avec Gecko 11.0, la prise en charge des [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) est implémentée mais pas celle pour les objets [`Blob`](/fr/docs/Web/API/Blob).
+- `InvalidStateError` {{DOMxRef("DOMException")}}
+  - : Levée si {{DOMxRef("WebSocket/readyState", "WebSocket.readyState")}} est à `CONNECTING`.
 
 ## Spécifications
 

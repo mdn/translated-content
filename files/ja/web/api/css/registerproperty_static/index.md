@@ -1,32 +1,36 @@
 ---
-title: CSS.registerProperty()
+title: "CSS: registerProperty() 静的メソッド"
+short-title: registerProperty()
 slug: Web/API/CSS/registerProperty_static
+l10n:
+  sourceCommit: 15573306c0527f203ba3ddbfcad2ae7be0e9d73a
 ---
 
 {{APIRef("CSSOM")}}
 
-**`CSS.registerProperty()`** メソッドは{{cssxref('--*', 'カスタムプロパティ')}}を登録し、プロパティ型のチェック、既定値、値の継承の有無の指定を行うことができます。
+**`CSS.registerProperty()`** メソッドは[カスタムプロパティ](/ja/docs/Web/CSS/Reference/Properties/--*)を登録し、プロパティ型のチェック、デフォルト値、値の継承の有無の指定を行うことができます。
 
-カスタムプロパティを登録すると、許される型は何か、その値を継承するかどうか、既定値は何かといったカスタムプロパティの動作ををブラウザーに指示することができます。
+カスタムプロパティを登録すると、許される型は何か、その値を継承するかどうか、デフォルト値は何かといったカスタムプロパティの動作ををブラウザーに指示することができます。
 
 ## 構文
 
 ```js-nolint
-CSS.registerProperty(PropertyDefinition)
+CSS.registerProperty(propertyDefinition)
 ```
 
 ### 引数
 
-次のメンバーを設定することができる `PropertyDefinition` 辞書オブジェクトです。
-
-- `name`
-  - : 定義するプロパティの名前を示す文字列です。
-- `syntax` {{optional_inline}}
-  - : 定義されたプロパティの期待される構文を表す文字列です。 既定値は `"*"` です。
-- `inherits`
-  - : 定義されたプロパティを継承するか (`true`)、否か (`false`) を定義する論理値。 既定値は `false` です。
-- `initialValue` {{optional_inline}}
-  - : 定義されたプロパティの初期値を表す文字列です。
+- `propertyDefinition`
+  - : 以下のプロパティを含むオブジェクトです。
+    - `name`
+      - : 定義するプロパティの名前を {{cssxref("dashed-ident")}} 型で示す文字列です。
+    - `syntax` {{optional_inline}}
+      - : 定義されたプロパティの期待される構文を表す文字列です。 デフォルト値は `"*"` です。
+        {{cssxref("@property/syntax", "syntax")}} を参照してください。
+    - `inherits`
+      - : 定義されたプロパティを継承するか (`true`)、否か (`false`) を定義する論理値。 デフォルト値は `false` です。
+    - `initialValue` {{optional_inline}}
+      - : 定義されたプロパティの初期値を表す文字列です。
 
 ### 返値
 
@@ -43,7 +47,7 @@ CSS.registerProperty(PropertyDefinition)
 
 ## 例
 
-次の例では、{{cssxref('--*', 'カスタムプロパティ')}}の `--my-color` を、 `registerProperty()` を使用して色として登録し、既定値を指定して、その値を継承しないようにします。
+次の例では、[カスタムプロパティ](/ja/docs/Web/CSS/Reference/Properties/--*)の `--my-color` を、`registerProperty()` を使用して色として登録し、デフォルト値を指定して、その値を継承しないようにします。
 
 ```js
 window.CSS.registerProperty({
@@ -59,7 +63,7 @@ window.CSS.registerProperty({
 ```css
 .registered {
   --my-color: #c0ffee;
-  background-image: linear-gradient(to right, #fff, var(--my-color));
+  background-image: linear-gradient(to right, white, var(--my-color));
   transition: --my-color 1s ease-in-out;
 }
 
@@ -70,7 +74,7 @@ window.CSS.registerProperty({
 
 .unregistered {
   --unregistered: #c0ffee;
-  background-image: linear-gradient(to right, #fff, var(--unregistered));
+  background-image: linear-gradient(to right, white, var(--unregistered));
   transition: --unregistered 1s ease-in-out;
 }
 
@@ -86,8 +90,8 @@ button {
 これらのスタイルをいくつかのボタンに追加できます。
 
 ```html
-<button class="registered">Background Registered</button>
-<button class="unregistered">Background Not Registered</button>
+<button class="registered">登録されている背景</button>
+<button class="unregistered">登録されていない背景</button>
 ```
 
 {{EmbedLiveSample("Examples", 320, 320)}}
@@ -104,6 +108,7 @@ button {
 
 - [CSS プロパティと値 API の使用](/ja/docs/Web/API/CSS_Properties_and_Values_API/guide)
 - {{DOMxRef("CSS")}}
-- {{DOMxRef("CSS.supports_static")}}
-- {{DOMxRef("CSS.escape_static")}}
-- {{DOMxRef("CSS/factory_functions_static", 'CSS ファクトリー関数', '', 1)}}
+- {{DOMxRef("CSS/supports_static", "CSS.supports()")}}
+- {{DOMxRef("CSS/escape_static", "CSS.escape()")}}
+- [CSS ファクトリー関数](/ja/docs/Web/API/CSS/factory_functions_static)
+- CSS {{cssxref("@property")}}

@@ -96,4 +96,4 @@ Le paramètre de `url()` peut être entre guillemets ou non. S'il ne l'est pas, 
 - [Types de données CSS](/fr/docs/Web/CSS/Reference/Values/Data_types)
 - Le module [Valeurs et unités CSS](/fr/docs/Web/CSS/Guides/Values_and_units)
 - [Apprendre&nbsp;: Les valeurs et unités](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-- Le module [Cascade et héritage CSS](/fr/docs/Web/CSS/CSS_cascade)
+- Le module [Cascade et héritage CSS](/fr/docs/Web/CSS/Guides/Cascad)

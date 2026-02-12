@@ -100,7 +100,7 @@ Les parties des éléments 3D qui se situent derrière l'utilisateur (c'est-à-d
 
 Par défaut, le point de fuite est placé au centre de l'élément mais il peut être déplacé grâce à la propriété {{cssxref("perspective-origin")}}.
 
-Si on utilise cette propriété avec une valeur différente de `0` ou `none`, cela créera un nouveau [contexte d'empilement](/fr/docs/Web/CSS/Comprendre_z-index/L'empilement_de_couches). Et l'objet joue alors le rôle de bloc englobant pour les éléments qu'il contient et qui ont `position: fixed` ou `position: absolute`
+Si on utilise cette propriété avec une valeur différente de `0` ou `none`, cela créera un nouveau [contexte d'empilement](/fr/docs/Web/CSS/Guides/Positioned_layout/Understanding_z-index/L'empilement_de_couches). Et l'objet joue alors le rôle de bloc englobant pour les éléments qu'il contient et qui ont `position: fixed` ou `position: absolute`
 
 ## Syntaxe
 

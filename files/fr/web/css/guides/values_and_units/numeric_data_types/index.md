@@ -35,7 +35,7 @@ Elles sont toutes couvertes dans les sous-sections suivantes.
 
 Lorsqu'une unité de distance, également connue sous le nom de longueur, est autorisée comme valeur pour une propriété, cela est décrit comme le type {{cssxref("&lt;length&gt;")}}. Il existe deux types de longueurs en CSS&nbsp;: relative et absolue. Les unités de longueur relatives spécifient une longueur par rapport à quelque chose d'autre.
 
-Il existe deux types de longueurs relatives&nbsp;: les longueurs relatives à la police et les longueurs relatives au pourcentage de la fenêtre d'affichage. Ces deux types se déclinent en deux catégories. Les unités de longueur relatives à la police sont soit locales, soit racines. Les longueurs relatives au pourcentage de la fenêtre d'affichage sont soit relatives à la hauteur ou à la largeur de la fenêtre d'affichage, soit, comme défini dans le [module de confinement CSS](/fr/docs/Web/CSS/Guides/Containment), relatives à un [conteneur](/fr/docs/Web/CSS/CSS_containment/Container_queries#unités_de_distance_pour_les_requêtes_de_conteneurs).
+Il existe deux types de longueurs relatives&nbsp;: les longueurs relatives à la police et les longueurs relatives au pourcentage de la fenêtre d'affichage. Ces deux types se déclinent en deux catégories. Les unités de longueur relatives à la police sont soit locales, soit racines. Les longueurs relatives au pourcentage de la fenêtre d'affichage sont soit relatives à la hauteur ou à la largeur de la fenêtre d'affichage, soit, comme défini dans le [module de confinement CSS](/fr/docs/Web/CSS/Guides/Containment), relatives à un [conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_queries#unités_de_distance_pour_les_requêtes_de_conteneurs).
 
 #### Longueurs relatives à la police locales
 
@@ -87,7 +87,7 @@ Par exemple, `vw` est relative à la largeur de la vue et `vh` est relative à l
 
 #### Unités de conteneur
 
-Les unités de longueur de requête de conteneur spécifient une longueur par rapport aux dimensions d'un [conteneur de requête](/fr/docs/Web/CSS/CSS_containment/Container_queries).
+Les unités de longueur de requête de conteneur spécifient une longueur par rapport aux dimensions d'un [conteneur de requête](/fr/docs/Web/CSS/Guides/Containment/Container_queries).
 Par exemple, `cqw` est relative à la largeur du conteneur de requête et `cqh` est relative à la hauteur du conteneur de requête.
 
 | Unité   | Relative à                                         |

@@ -121,4 +121,4 @@ Voir [Utiliser les types avec les transitions d'affichage inter-documents via `@
 - L'[API View Transition](/fr/docs/Web/API/View_Transition_API)
 - [Utiliser les types de transition de vue](/fr/docs/Web/API/View_Transition_API/Using_types)
 - [Les règles @ CSS](/fr/docs/Web/CSS/Guides/Syntax/At-rules)
-- [Fonctions des règles @ CSS](/fr/docs/Web/CSS/CSS_syntax/At-rule_functions)
+- [Fonctions des règles @ CSS](/fr/docs/Web/CSS/Guides/Syntax/At-rule_functions)

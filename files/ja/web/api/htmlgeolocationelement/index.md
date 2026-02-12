@@ -161,13 +161,13 @@ geo.addEventListener("promptaction", notifyUserGrantPermission);
 ```js
 function notifyUserRetrySelection() {
   statusElem.textContent =
-    '再度「位置情報を使用」ボタンを押し、このサイトへの位置情報へのアクセス許可してください。';
+    "再度「位置情報を使用」ボタンを押し、このサイトへの位置情報へのアクセス許可してください。";
 }
 
 function notifyUserGrantPermission() {
   if (geo.permissionStatus === "denied" || geo.permissionStatus === "prompt") {
     statusElem.textContent =
-      '再度「位置情報を使用」ボタンを押し、このサイトへの位置情報へのアクセス許可してください。';
+      "再度「位置情報を使用」ボタンを押し、このサイトへの位置情報へのアクセス許可してください。";
   }
 }
 ```

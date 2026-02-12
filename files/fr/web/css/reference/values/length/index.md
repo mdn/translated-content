@@ -142,7 +142,7 @@ Les composants qui utilisent des unités de longueur relatives à leur conteneur
 
 Si aucun conteneur éligible n'est disponible pour la requête, l'unité de longueur relative au conteneur prend par défaut la [petite unité de zone d'affichage](#unités_pour_petite_zone_daffichage) pour cet axe (`sv*`).
 
-Pour plus d'informations, voir [Requêtes de conteneur](/fr/docs/Web/CSS/CSS_containment/Container_queries).
+Pour plus d'informations, voir [Requêtes de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_queries).
 
 - `cqw`
   - : Représente un pourcentage de la largeur du conteneur de requête. `1cqw` correspond à 1% de la largeur du conteneur de requête. Par exemple, si la largeur du conteneur de requête est de `800px`, une valeur de `50cqw` pour une propriété donnera `400px`.
