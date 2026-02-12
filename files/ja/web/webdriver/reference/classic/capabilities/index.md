@@ -4,7 +4,6 @@ short-title: 能力
 slug: Web/WebDriver/Reference/Classic/Capabilities
 page-type: landing-page
 original_slug: Web/WebDriver/Reference/Capabilities
-sidebar: webdriver
 l10n:
   sourceCommit: 394a1aff10d20ba51dbd00252ce481769298001c
 ---
