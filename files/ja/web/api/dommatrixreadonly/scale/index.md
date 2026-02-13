@@ -3,24 +3,22 @@ title: "DOMMatrixReadOnly: scale() メソッド"
 short-title: scale()
 slug: Web/API/DOMMatrixReadOnly/scale
 l10n:
-  sourceCommit: 37163d27e0625a83a3f8633fe58b9041867adeaa
+  sourceCommit: d0e6d8d712a33b9d3c7a9fb9a8ba85d4dd1b7002
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 **`scale()`** は {{domxref("DOMMatrixReadOnly")}} インターフェイスのメソッドで、 元の行列に拡大縮小変換を施した新しい行列を作成します。
 
 ## 構文
 
-`scale()` メソッドには 1 つから 6 つの値を指定します。
-
-```js
-DOMMatrixReadOnly.scale(scaleX);
-DOMMatrixReadOnly.scale(scaleX, scaleY);
-DOMMatrixReadOnly.scale(scaleX, scaleY, scaleZ);
-DOMMatrixReadOnly.scale(scaleX, scaleY, scaleZ, originX);
-DOMMatrixReadOnly.scale(scaleX, scaleY, scaleZ, originX, originY);
-DOMMatrixReadOnly.scale(scaleX, scaleY, scaleZ, originX, originY, originZ);
+```js-nolint
+scale(scaleX)
+scale(scaleX, scaleY)
+scale(scaleX, scaleY, scaleZ)
+scale(scaleX, scaleY, scaleZ, originX)
+scale(scaleX, scaleY, scaleZ, originX, originY)
+scale(scaleX, scaleY, scaleZ, originX, originY, originZ)
 ```
 
 ### 引数
@@ -56,7 +54,7 @@ z 軸を中心に拡大縮小すると、 4✕4 の 3D 行列になります。
 </svg>
 ```
 
-この JavaScript では最初に単位行列を作成し、次に `scale()` メソッドを使用して単一の引数を持つ新しい行列を作成します。
+この JavaScript では最初に恒等行列を作成し、次に `scale()` メソッドを使用して単一の引数を持つ新しい行列を作成します。
 
 3 つの引数を使用して新しい行列を作成し、その `is2D` プロパティを監視することで、そのブラウザーが 6 つの引数の `scale()` メソッドに対応しているかどうかをテストします。これが `false` ならば、 3 つ目の引数は `scaleZ` 引数としてブラウザーに受け入れられ、これは 3D 行列となります。
 

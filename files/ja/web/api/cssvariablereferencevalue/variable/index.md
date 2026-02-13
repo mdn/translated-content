@@ -1,26 +1,23 @@
 ---
-title: CSSVariableReferenceValue.variable
+title: "CSSVariableReferenceValue: variable プロパティ"
+short-title: variable
 slug: Web/API/CSSVariableReferenceValue/variable
+l10n:
+  sourceCommit: 55326f330a6ae829494c7606b1bd47b2c0f9d888
 ---
 
-{{APIRef("CSSOM")}}{{SeeCompatTable}}
+{{APIRef("CSSOM")}}
 
-**`variable`** は {{domxref("CSSVariableReferenceValue")}} インターフェイスのプロパティで、カスタム名で返される組み込み CSS 値です。
+**`variable`** は {{domxref("CSSVariableReferenceValue")}} インターフェイスのプロパティで、この {{domxref("CSSVariableReferenceValue")}} の[カスタムプロパティ名](/ja/docs/Web/CSS/Reference/Properties/--*)を返します。
 
-## 構文
+## 値
 
-```
-var fallback = CSSVariableReferenceValue.fallback;
-```
-
-### 値
-
-{{domxref('CSSUnparsedValue')}} です。
+`--` で始まる文字列（つまり、[カスタムプロパティ名](/ja/docs/Web/CSS/Reference/Properties/--*)）です。
 
 ## 仕様書
 
 {{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat}}
