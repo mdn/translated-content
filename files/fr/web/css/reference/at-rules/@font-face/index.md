@@ -149,7 +149,7 @@ Dans cet exemple, c'est l'exemplaire local de la police Helvetica Neue Bold qui 
 
 ## Voir aussi
 
-- [À propos de WOFF](/fr/docs/Web/CSS/CSS_fonts/WOFF)
+- [À propos de WOFF](/fr/docs/Web/CSS/Guides/Fonts/WOFF)
 - [Générateur `@font-face` de FontSquirrel <sup>(angl.)</sup>](https://www.fontsquirrel.com/tools/webfont-generator)
 - Le billet de blog [De belles polices avec @font-face <sup>(angl.)</sup>](https://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/) de Mozilla (2009)
 - [<i lang="en">Font Library</i> <sup>(angl.)</sup>](https://fontlibrary.org/), un site cataloguant des polices

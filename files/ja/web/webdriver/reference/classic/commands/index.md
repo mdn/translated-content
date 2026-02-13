@@ -1,7 +1,8 @@
 ---
 title: WebDriver のコマンド
 short-title: コマンド
-slug: Web/WebDriver/Reference/Commands
+slug: Web/WebDriver/Reference/Classic/Commands
+original_slug: Web/WebDriver/Reference/Commands
 l10n:
   sourceCommit: 394a1aff10d20ba51dbd00252ce481769298001c
 ---

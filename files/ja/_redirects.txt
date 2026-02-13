@@ -6917,6 +6917,9 @@
 /ja/docs/Web/URI/Schemes/data	/ja/docs/Web/URI/Reference/Schemes/data
 /ja/docs/Web/URI/Schemes/javascript	/ja/docs/Web/URI/Reference/Schemes/javascript
 /ja/docs/Web/URI/Schemes/resource	/ja/docs/Web/URI/Reference/Schemes/resource
+/ja/docs/Web/WebDriver/Reference/Capabilities	/ja/docs/Web/WebDriver/Reference/Classic/Capabilities
+/ja/docs/Web/WebDriver/Reference/Commands	/ja/docs/Web/WebDriver/Reference/Classic/Commands
+/ja/docs/Web/WebDriver/Reference/Errors	/ja/docs/Web/WebDriver/Reference/Classic/Errors
 /ja/docs/Web/WebGL	/ja/docs/Web/API/WebGL_API
 /ja/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context	/ja/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /ja/docs/Web/WebGL/Animating_objects_with_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
