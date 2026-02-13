@@ -3,7 +3,7 @@
 ## yari-content-ko 구성원 변경에 대한 일반 안내서
 
 1. 구성원 변경 요청.
-2. [PEERS_GUIDELINES.md](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md) 페이지의 `Korea (ko) content — the @yari-content-ko team, which consists of:` 수정.
+2. [PEERS_GUIDELINES.md](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md) 페이지의 `Korea (ko) content — the @ko-content team, which consists of:` 수정.
 3. [Localizing MDN][] 페이지의 `Active locales/Korea (ko)/Current contributors` 수정.
 
 ## 리뷰어 안내서
