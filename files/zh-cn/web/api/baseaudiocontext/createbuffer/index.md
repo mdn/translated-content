@@ -1,13 +1,13 @@
 ---
-title: BaseAudioContext.createBuffer()
+title: BaseAudioContext：createBuffer() 方法
 slug: Web/API/BaseAudioContext/createBuffer
 l10n:
-  sourceCommit: ca3afa7533ac5bc2d552b0c7926d672fe79d71de
+  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
 ---
 
 {{ APIRef("Web Audio API") }}
 
-{{ domxref("BaseAudioContext") }} 接口的 `createBuffer()` 方法用于新建一个空的 {{ domxref("AudioBuffer") }} 对象，随后可以填充音频数据，并通过 {{ domxref("AudioBufferSourceNode") }} 播放。
+{{ domxref("BaseAudioContext") }} 接口的 `createBuffer()` 方法用于新建一个空的 {{ domxref("AudioBuffer") }} 对象，随后可以填充数据，并通过 {{ domxref("AudioBufferSourceNode") }} 播放。
 
 更多关于音频片段的细节，请查阅 {{domxref("AudioBuffer")}} 参考页面。
 
@@ -51,19 +51,19 @@ const audioCtx = new AudioContext();
 const buffer = audioCtx.createBuffer(2, 22050, 44100);
 ```
 
-如果你这样调用，你将会得到一个立体声（双声道）的音频片段，当它在一个 44100 Hz（非常常见，大多数普通声卡都运行在该频率下）的音频环境（{{ domxref("AudioContext") }}）中播放的时候，会持续 0.5 秒：22050 帧 / 44100 Hz = 0.5 秒。
+如果你这样调用，你将会得到一个立体声（双声道）的音频片段，当它在一个 44100 Hz（非常常见，大多数普通声卡都运行在该频率下）的音频上下文（AudioContext）中播放的时候，会持续 0.5 秒：22050 帧 / 44100 Hz = 0.5 秒。
 
 ```js
 const audioCtx = new AudioContext();
 const buffer = audioCtx.createBuffer(1, 22050, 22050);
 ```
 
-如果你这样调用，你将会得到一个单声道的音频片段，当它在一个 44100 Hz 的音频环境（{{ domxref("AudioContext") }}）中播放的时候，会被自动*重采样*到 44100 Hz（因此也会产生 44100 个采样帧），并持续 1 秒：44100 帧 / 44100 Hz = 1 秒。
+如果你这样调用，你将会得到一个单声道的音频片段，当它在一个 44100 Hz 的音频上下文（`AudioContext`）中播放的时候，会被自动*重采样*到 44100 Hz（因此也会产生 44100 个采样帧），并持续 1 秒：44100 帧 / 44100 Hz = 1 秒。
 
 > [!NOTE]
 > 音频重采样与图片的缩放非常类似：假设你有一张 16 x 16 的图片，但希望它填充一个 32 x 32 的区域，你就需要对它进行缩放（重采样）。缩放后的结果质量会有所下降（可能会变得模糊或出现锯齿，取决于缩放算法），但它仍然可用，而且缩放后的图片占用的空间更小。重采样的音频原理相同——你能节省一些空间，但是也会无法准确再现高频内容（高音区）。
 
-现在来看一个更加复杂的示例，我们将创建一个 3 秒的音频片段，用白噪声填充它，之后通过一个音频片段源节点（{{ domxref("AudioBufferSourceNode") }}）播放。代码中的注释应该能充分解释发生了什么。你可以[实时运行代码](https://mdn.github.io/webaudio-examples/audio-buffer/)，或者[查看源代码](https://github.com/mdn/webaudio-examples/blob/main/audio-buffer/index.html)。
+现在来看一个更加复杂的 `createBuffer()` 示例，我们将创建一个 3 秒的音频片段，用白噪声填充它，之后通过一个音频片段源节点（{{ domxref("AudioBufferSourceNode") }}）播放。代码中的注释应该能充分解释发生了什么。你可以[实时运行代码](https://mdn.github.io/webaudio-examples/audio-buffer/)，或者[查看源代码](https://github.com/mdn/webaudio-examples/blob/main/audio-buffer/index.html)。
 
 ```js
 const audioCtx = new AudioContext();
@@ -108,4 +108,4 @@ source.start();
 
 ## 参见
 
-- [Web Audio API 的运用](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Web 音频 API 的运用](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
