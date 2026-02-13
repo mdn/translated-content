@@ -2,11 +2,13 @@
 title: DragEvent：dataTransfer 属性
 short-title: dataTransfer
 slug: Web/API/DragEvent/dataTransfer
+l10n:
+  sourceCommit: 976891fb78ba24cb4ac6e58ae8a903b20eae4337
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
 
-**`DragEvent.dataTransfer`** 属性保存着作为一个 {{domxref("DataTransfer")}} 对象的拖拽操作中的数据。
+**`DragEvent.dataTransfer`** 只读属性保存着拖拽操作中的数据（以 {{domxref("DataTransfer")}} 对象的形式）。
 
 ## 值
 
