@@ -36,15 +36,15 @@ WebGLRenderingContext.uniformMatrix4fv(location, transpose, value);
 gl.uniformMatrix2fv(loc, false, [2, 1, 2, 2]);
 ```
 
-## 仕様策定状況
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
 - {{domxref("WebGLRenderingContext.uniform()")}}
 - {{domxref("WebGL2RenderingContext.uniformMatrix()")}} – これらのメソッドの WebGL 2 版。

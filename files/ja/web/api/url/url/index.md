@@ -111,7 +111,7 @@ new URL("//foo.com", "https://example.com");
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
 - {{domxref("URL.parse_static", "URL.parse()")}}: 例外を発生しないこのコンストラクターの代用
 - [`URL` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#url-and-urlsearchparams)
