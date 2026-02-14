@@ -3,18 +3,18 @@ title: "DOMMatrixReadOnly: translate() メソッド"
 short-title: translate()
 slug: Web/API/DOMMatrixReadOnly/translate
 l10n:
-  sourceCommit: 37163d27e0625a83a3f8633fe58b9041867adeaa
+  sourceCommit: d0e6d8d712a33b9d3c7a9fb9a8ba85d4dd1b7002
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 `translate()` は {{domxref("DOMMatrixReadOnly")}} インターフェイスのメソッドで、元の行列を平行移動させた結果の新しい行列を作成します。
 
 ## 構文
 
 ```js-nolint
-DOMMatrix.translate(translateX, translateY)
-DOMMatrix.translate(translateX, translateY, translateZ)
+translate(translateX, translateY)
+translate(translateX, translateY, translateZ)
 ```
 
 ### 引数
@@ -43,7 +43,7 @@ DOMMatrix.translate(translateX, translateY, translateZ)
 </svg>
 ```
 
-以下の JavaScript では、まず単位行列を作成し、次に `translate()` メソッドを使用して新しい変換行列を作成し、それを `transform` として青い正方形に適用しています。赤い正方形はそのままの位置に配置されます。
+以下の JavaScript では、まず恒等行列を作成し、次に `translate()` メソッドを使用して新しい変換行列を作成し、それを `transform` として青い正方形に適用しています。赤い正方形はそのままの位置に配置されます。
 
 ```js
 const matrix = new DOMMatrixReadOnly().translate(25, 25);
