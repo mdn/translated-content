@@ -65,7 +65,7 @@ for (var i = 2; i < arr.length; i++) {
 // "c"
 ```
 
-## 関連項目
+## 関連情報
 
 - [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in)
 - [`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of) – こちらも strict モードであろうとなかろうと初期化子が使用できない。

@@ -35,15 +35,15 @@ gl.linkProgram(program);
 gl.useProgram(program);
 ```
 
-## 仕様策定状況
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
 - {{domxref("WebGLRenderingContext.createProgram()")}}
 - {{domxref("WebGLRenderingContext.deleteProgram()")}}

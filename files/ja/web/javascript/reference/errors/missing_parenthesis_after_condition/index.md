@@ -70,7 +70,7 @@ if (done === true) {
 }
 ```
 
-## 関連項目
+## 関連情報
 
 - [`if...else`](/ja/docs/Web/JavaScript/Reference/Statements/if...else)
 - [比較演算子](/ja/docs/Web/JavaScript/Reference/Operators)
