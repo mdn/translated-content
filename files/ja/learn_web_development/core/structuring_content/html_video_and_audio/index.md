@@ -304,7 +304,9 @@ WEBVTT
   <source src="rabbit320.mp4" type="video/mp4" />
   <source src="rabbit320.webm" type="video/webm" />
   <p>
-    このブラウザーは HTML 動画に対応していません。<a href="rabbit320.mp4">動画へのリンク</a>はこちらです。
+    このブラウザーは HTML 動画に対応していません。<a href="rabbit320.mp4"
+      >動画へのリンク</a
+    >はこちらです。
   </p>
 </video>
 
