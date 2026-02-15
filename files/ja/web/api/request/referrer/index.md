@@ -34,7 +34,7 @@ const myReferrer = myRequest.referrer; // 既定では "about:client" を返す
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
 - [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)

@@ -388,6 +388,7 @@ f("a", "b"); // 'a+b'
 
 ```js
 // 배열 리터럴 표기법을 사용하여 'fruits' 배열을 만듭니다.
+const fruits = ["Apple", "Banana"];
 console.log(fruits.length);
 // 2
 

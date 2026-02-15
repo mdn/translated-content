@@ -38,7 +38,7 @@ for (const [key, value] of mySearchParams.entries()) {
 - {{domxref("URLSearchParams.getAll()")}}
   - : 주어진 검색 매개변수에 연결된 모든 값을 반환합니다.
 - {{domxref("URLSearchParams.has()")}}
-  - : 주어진 검색 매개변수의 존재 여부를 나타내는 불리언 값을을 반환합니다.
+  - : 주어진 검색 매개변수의 존재 여부를 나타내는 불리언 값을 반환합니다.
 - {{domxref("URLSearchParams.keys()")}}
   - : 객체의 모든 키/값 쌍에서 키만 순회할 수 있는 [순회기](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)를 반환합니다.
 - {{domxref("URLSearchParams.set()")}}

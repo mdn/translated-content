@@ -30,7 +30,7 @@ l10n:
 
 この出発点の基盤となるコードは次の通りです。
 
-```html live-sample___advanced-text
+```html-nolint live-sample___advanced-text
 <h1>高度なテキストの意味付け</h1>
 
 <p>引用から始めましょう。</p>
@@ -86,7 +86,7 @@ time {
 
 完了した HTML は、次のようになるはずです。
 
-```html live-sample___advanced-text-solution
+```html-nolint live-sample___advanced-text-solution
 <h1>高度なテキストの意味付け</h1>
 
 <p>引用から始めましょう。</p>

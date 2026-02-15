@@ -1,6 +1,9 @@
 ---
 title: Firefox 보안 지침
-slug: Web/Security/Firefox_Security_Guidelines
+slug: conflicting/Web/Security_ec40d3a9a80c25bf447a9a1e8206152e326694c07b1d8137895303b20e9f5a86
+page-type: landing-page
+original_slug: Web/Security/Firefox_Security_Guidelines
+sidebar: security
 l10n:
   sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---

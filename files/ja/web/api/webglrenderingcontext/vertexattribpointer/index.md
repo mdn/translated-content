@@ -199,7 +199,7 @@ gl.enableVertexAttribArray(locTexUV);
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
 - OpenGL wiki の [Vertex Specification](https://www.khronos.org/opengl/wiki/Vertex_Specification)
 - {{domxref("WebGL2RenderingContext.vertexAttribIPointer()")}}

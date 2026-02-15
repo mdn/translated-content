@@ -2,10 +2,8 @@
 title: Attribution et licences de droits d'auteur
 slug: MDN/Writing_guidelines/Attrib_copyright_license
 l10n:
-  sourceCommit: 6aa3327d5e4251de82ba7d3bc5355aabf00d1e72
+  sourceCommit: 24b4a3d9e5488d5c5600cf8eb278484d47bca07e
 ---
-
-{{MDNSidebar}}
 
 Le contenu de MDN Web Doc est disponible gratuitement et sous diverses licences libres.
 
@@ -16,19 +14,23 @@ Cette section présente les types de contenu que nous fournissons et les droits 
 ### Documentation
 
 > [!NOTE]
-> Le contenu de MDN Web Docs a été préparé avec la contribution d'auteurs internes et externes à Mozilla. Sauf indication contraire, le contenu est disponible selon les termes de la [licence Creative Commons Attribution-ShareAlike (en anglais)](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA), v2.5 ou toute version ultérieure.
+> Le contenu de MDN Web Docs a été préparé avec la contribution d'auteurs internes et externes à Mozilla. Sauf indication contraire, le contenu est disponible selon les termes de la [licence Creative Commons Attribution-ShareAlike <sup>(angl.)</sup>](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA), v2.5 ou toute version ultérieure.
 
-Votre réutilisation du contenu ici est publiée sous la même licence que le contenu original — CC-BY-SA v2.5 ou toute version ultérieure. Lorsque vous réutilisez le contenu de MDN Web Docs, vous devez vous assurer que le contenu original ainsi que les «&nbsp;Contributrices et contributeurs de Mozilla&nbsp;» sont cités. Incluez un lien hypertexte (en ligne) ou une URL (sur papier) vers la page spécifique du contenu cité. Par exemple, pour attribuer la paternité de _cet_ article, vous pouvez écrire&nbsp;:
+La réutilisation du contenu ici est publiée sous la même licence que le contenu original — CC-BY-SA v2.5 ou toute version ultérieure.
+Lorsque vous réutilisez le contenu de MDN Web Docs, vous devez vous assurer que [l'attribution est donnée <sup>(angl.)</sup>](https://creativecommons.org/licenses/by/2.5/deed.en#ref-appropriate-credit) au matériel ainsi qu'aux «&nbsp;Contributrices et contributeurs de Mozilla&nbsp;».
+Une bonne attribution correspond au **titre** du document, avec un lien hypertexte (en ligne) ou une URL (imprimée) vers la page spécifique du contenu utilisé, et toute modification que vous avez apportée brièvement décrite.
+Par exemple, pour fournir une attribution pour cette page, vous pouvez écrire&nbsp;:
 
 > [Attributions et licence de copyright](/fr/docs/MDN/Writing_guidelines/Attrib_copyright_license) par les [Contributrices et contributeurs de Mozilla](/fr/docs/MDN/Community/Roles_teams#contributeur) est sous licence [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/).
 
-Dans l'exemple ci-dessus, le lien concernant les «&nbsp;Contributrices et contributeurs de Mozilla&nbsp;» renvoie à l'historique de la page citée. Voir [Pratiques recommandées en matière d'attribution (en anglais)](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution) pour de plus amples explications.
+Vous pouvez également faire pointer «&nbsp;les contributrices et contributeurs de Mozilla&nbsp;» vers un fichier `contributors.txt` lié dans le pied de page de la page de référence pour obtenir la liste des auteur·ice·s, si cela est pertinent.
+Voir [Pratiques recommandées en matière d'attribution <sup>(angl.)</sup>](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution) pour de plus amples explications.
 
 ### Échantillons de code
 
-Les échantillons de code ajoutés depuis le 20 août 2010 sont dans le [domaine public CC-0 (en anglais)](https://creativecommons.org/publicdomain/zero/1.0/). Aucun avis de licence n'est nécessaire, mais si vous en avez besoin, vous pouvez utiliser&nbsp;: `Tout copyright est dédié au domaine public : https://creativecommons.org/publicdomain/zero/1.0/`
+Les échantillons de code ajoutés depuis le 20 août 2010 sont dans le [domaine public CC-0 <sup>(angl.)</sup>](https://creativecommons.org/publicdomain/zero/1.0/). Aucun avis de licence n'est nécessaire, mais si vous en avez besoin, vous pouvez utiliser&nbsp;: `Tout copyright est dédié au domaine public : https://creativecommons.org/publicdomain/zero/1.0/`
 
-Les échantillons de code ajoutés avant le 20 août 2010 sont disponibles sous la [licence MIT (en anglais)](https://opensource.org/license/mit/)&nbsp;; vous devez insérer les informations d'attribution suivantes dans le modèle MIT&nbsp;: `© <date de la dernière révision de la page wiki> <nom de la personne qui l'a mis dans le wiki>`.
+Les échantillons de code ajoutés avant le 20 août 2010 sont disponibles sous la [licence MIT <sup>(angl.)</sup>](https://opensource.org/license/mit/)&nbsp;; vous devez insérer les informations d'attribution suivantes dans le modèle MIT&nbsp;: `© <date de la dernière révision de la page wiki> <nom de la personne qui l'a mis dans le wiki>`.
 
 Depuis le lancement de la nouvelle plateforme MDN Yari le 14 décembre 2020, il n'y a actuellement aucun moyen de déterminer celle dont vous avez besoin. Nous y travaillons et mettrons ce contenu à jour prochainement.
 
@@ -41,7 +43,7 @@ Si vous souhaitez contribuer à MDN Web Docs, vous acceptez que votre documentat
 
 **Les droits d'auteur des contributions restent la propriété de l'auteur, à moins qu'il ne les cède à quelqu'un d'autre.**
 
-Si vous avez des questions ou des inquiétudes à propos de tout ce qui est discuté ici, veuillez contacter l'équipe de [MDN Web Docs](/fr/docs/MDN/Community/Communication_channels).
+Si vous avez des questions ou des inquiétudes à propos de tout ce qui est discuté ici, veuillez contacter [l'équipe de MDN Web Docs](/fr/docs/MDN/Community/Communication_channels).
 
 ### Logos, marques commerciales, marques de service et marques verbales
 
@@ -62,7 +64,7 @@ Si nous recevons une demande de modification et découvrons qu'elle contient du 
 Si quelqu'un souhaite faire don à MDN d'un article qu'il a précédemment publié sur son blog ou s'il est logique de copier une fiche de référence complexe sur le MDN, il peut être justifié de la republier. Dans ces cas, discutez de votre projet avec l'équipe MDN au préalable&nbsp;:
 
 - [Créer un ticket sur GitHub](https://github.com/mdn/mdn/issues/new/choose) pour expliquer vos intentions.
-  - Décrire (en anglais) ce que vous souhaitez copier ou republier.
+  - Décrire en anglais ce que vous souhaitez copier ou republier.
   - Fournir l'URL de la ressource.
   - Expliquer pourquoi vous pensez que c'est approprié.
 
@@ -73,7 +75,7 @@ Si quelqu'un souhaite faire don à MDN d'un article qu'il a précédemment publi
 
 **Si le contenu est publié sous une licence ouverte&nbsp;:**
 
-- Précisez de quelle licence il s'agit et indiquez un lien vers cette licence afin que nous puissions vérifier si elle est compatible avec la [licence de MDN Web Docs (en anglais)](https://github.com/mdn/content/blob/main/LICENSE.md).
+- Précisez de quelle licence il s'agit et indiquez un lien vers cette licence afin que nous puissions vérifier si elle est compatible avec la [licence de MDN Web Docs <sup>(angl.)</sup>](https://github.com/mdn/content/blob/main/LICENSE.md).
 
 ## Lien vers les articles de MDN Web Docs
 

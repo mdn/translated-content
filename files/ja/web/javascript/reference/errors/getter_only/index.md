@@ -81,7 +81,7 @@ arc.temperature = 13;
 arc.getArchive(); // [{ val: 11 }, { val: 13 }]
 ```
 
-## 関連項目
+## 関連情報
 
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.defineProperties()")}}

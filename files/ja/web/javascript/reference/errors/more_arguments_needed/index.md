@@ -46,6 +46,6 @@ var obj = Object.create(null);
 var obj = Object.setPrototypeOf({}, null);
 ```
 
-## 関連項目
+## 関連情報
 
 - [関数](/ja/docs/Web/JavaScript/Guide/Functions)

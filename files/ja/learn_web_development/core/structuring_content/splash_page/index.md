@@ -3,7 +3,7 @@ title: "課題: 虫たちのスプラッシュページ"
 short-title: "課題: スプラッシュページ"
 slug: Learn_web_development/Core/Structuring_content/Splash_page
 l10n:
-  sourceCommit: 25a3f6c781777a135143b0edd4b5e1f85857b802
+  sourceCommit: 0ab262675372b83fc870accf3dc46d6a367c451c
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video", "Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content")}}
@@ -18,7 +18,7 @@ l10n:
 2. 次の HTML のリストを、フォルダー内の `index.html` というファイルに保存してください（またはオンラインエディターの HTML ペインに貼り付けてください）。
 
    ```html
-   <!DOCTYPE html>
+   <!doctype html>
    <html lang="en">
      <head>
        <meta charset="utf-8" />
@@ -41,8 +41,8 @@ l10n:
            <h1>Creepy-crawlies splash page!</h1>
 
            <p>
-             In casual language, people use “bugs” to mean all sorts of small
-             creepy-crawlies: insects, spiders, etc. However, “Bugs” (true bugs)
+             In casual language, people use "bugs" to mean all sorts of small
+             creepy-crawlies: insects, spiders, etc. However, "Bugs" (true bugs)
              are actually just one order of insects (Hemiptera). This page
              provides a summary of the main classes or groups of
              creepy-crawlies.
@@ -89,7 +89,7 @@ l10n:
              possess distinctive piercing-sucking mouthparts. These mouthparts
              are adapted for feeding on plant sap, blood, or other insects. Many
              true bugs have scent glands that produce strong odors as a defense
-             mechanism, which is why some are called “stink bugs.”
+             mechanism, which is why some are called "stink bugs."
            </p>
 
            <p>
@@ -107,7 +107,7 @@ l10n:
              image number 29046158 at Waarneming.nl, a source of nature
              observations in the Netherlands.This tag does not indicate the
              copyright status of the attached work. A normal copyright tag is
-             still required. See Commons:Licensing for more information., This
+             still required. See Commons:Licensing for more information. This
              site now requires authentication, however, the same image and
              copyright information is also available via
              <a href="https://world.observation.org/foto/view/29046158"
@@ -153,8 +153,8 @@ l10n:
            <h2>Flies & Mosquitoes (Diptera)</h2>
 
            <p>
-             Flies and mosquitoes belong to the order Diptera, meaning “two
-             wings.” Unlike most other insects, they have only one functional
+             Flies and mosquitoes belong to the order Diptera, meaning "two
+             wings." Unlike most other insects, they have only one functional
              pair of wings; the hind pair has evolved into tiny balancing organs
              called halteres. This adaptation gives them incredible agility in
              flight. Their mouthparts vary widely: some species have sponging
@@ -178,7 +178,7 @@ l10n:
              image number 5105758 at Waarneming.nl, a source of nature
              observations in the Netherlands.This tag does not indicate the
              copyright status of the attached work. A normal copyright tag is
-             still required. See Commons:Licensing for more information., CC BY
+             still required. See Commons:Licensing for more information. CC BY
              3.0,
              <a href="https://commons.wikimedia.org/w/index.php?curid=27659589"
                >https://commons.wikimedia.org/w/index.php?curid=27659589</a
@@ -233,7 +233,7 @@ l10n:
              a danger to humans. In fact, spiders are highly beneficial because
              they help control insect populations, including pests. They play a
              crucial role in balancing ecosystems, making them one of the most
-             important non-insect “bugs” people commonly encounter.
+             important non-insect "bugs" people commonly encounter.
            </p>
 
            <p class="copyright">
@@ -362,7 +362,6 @@ l10n:
 
 `<h1>` のすぐ下に、ヘッダー動画をページに埋め込む `<video>` 要素を追加しましょう。 次のようにしたいと思います。
 
-- 動画の[メディア種別](/ja/docs/Web/HTTP/Guides/MIME_types)を指定します。
 - 読み込む際に動画を自動再生するようにします（最低でも一部のブラウザで動作するようには、動画の音声を消音にするよう指定する必要があります）。
 - 一度だけ再生するのではなく、無限にループようにします。
 - 動画コンテンツを事前読み込みします。
@@ -395,7 +394,7 @@ l10n:
 完成した HTML は、次のようになるでしょう。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -419,15 +418,14 @@ l10n:
 
         <video
           src="https://mdn.github.io/shared-assets/videos/learn/bug_video_640.mp4"
-          type="video/mp4"
           autoplay
           loop
           muted
           preload="auto"></video>
 
         <p>
-          In casual language, people use “bugs” to mean all sorts of small
-          creepy-crawlies: insects, spiders, etc. However, “Bugs” (true bugs)
+          In casual language, people use "bugs" to mean all sorts of small
+          creepy-crawlies: insects, spiders, etc. However, "Bugs" (true bugs)
           are actually just one order of insects (Hemiptera). This page provides
           a summary of the main classes or groups of creepy-crawlies.
         </p>
@@ -490,7 +488,7 @@ l10n:
           piercing-sucking mouthparts. These mouthparts are adapted for feeding
           on plant sap, blood, or other insects. Many true bugs have scent
           glands that produce strong odors as a defense mechanism, which is why
-          some are called “stink bugs.”
+          some are called "stink bugs."
         </p>
 
         <p>
@@ -508,7 +506,7 @@ l10n:
           image number 29046158 at Waarneming.nl, a source of nature
           observations in the Netherlands.This tag does not indicate the
           copyright status of the attached work. A normal copyright tag is still
-          required. See Commons:Licensing for more information., This site now
+          required. See Commons:Licensing for more information. This site now
           requires authentication, however, the same image and copyright
           information is also available via
           <a href="https://world.observation.org/foto/view/29046158"
@@ -571,7 +569,7 @@ l10n:
         </figure>
 
         <p>
-          Flies and mosquitoes belong to the order Diptera, meaning “two wings.”
+          Flies and mosquitoes belong to the order Diptera, meaning "two wings."
           Unlike most other insects, they have only one functional pair of
           wings; the hind pair has evolved into tiny balancing organs called
           halteres. This adaptation gives them incredible agility in flight.
@@ -591,11 +589,11 @@ l10n:
 
         <p class="copyright">
           Image created by user Dick Belgers at Waarneming.nl, a source of
-          nature observations in the Netherlands. - This image is uploaded as
+          nature observations in the Netherlands. This image is uploaded as
           image number 5105758 at Waarneming.nl, a source of nature observations
-          in the Netherlands.This tag does not indicate the copyright status of
+          in the Netherlands. This tag does not indicate the copyright status of
           the attached work. A normal copyright tag is still required. See
-          Commons:Licensing for more information., CC BY 3.0,
+          Commons:Licensing for more information. CC BY 3.0,
           <a href="https://commons.wikimedia.org/w/index.php?curid=27659589"
             >https://commons.wikimedia.org/w/index.php?curid=27659589</a
           >.
@@ -665,7 +663,7 @@ l10n:
           danger to humans. In fact, spiders are highly beneficial because they
           help control insect populations, including pests. They play a crucial
           role in balancing ecosystems, making them one of the most important
-          non-insect “bugs” people commonly encounter.
+          non-insect "bugs" people commonly encounter.
         </p>
 
         <p class="copyright">

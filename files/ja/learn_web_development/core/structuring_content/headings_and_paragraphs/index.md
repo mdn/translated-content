@@ -117,7 +117,7 @@ HTML では、各段落は {{htmlelement("p")}} 要素で囲む必要があり�
 
 間違えた場合は、MDN Playground の _Reset_ ボタンで作業内容をクリアできます。どうしても行き詰まった場合は、コードブロックの下にある解答を参照してください。
 
-```html live-sample___headings_paragraphs
+```html-nolint live-sample___headings_paragraphs
 好きな体の部位 脳 形も色も素敵。考えることもできます。
 足 ゴツゴツして醜いけれど、移動には有益です。
 ```
@@ -129,7 +129,7 @@ HTML では、各段落は {{htmlelement("p")}} 要素で囲む必要があり�
 
 完成した HTML 要素は次のようになります。
 
-```html
+```html-nolint
 <h1>好きな体の部位</h1>
 
 <h2>脳</h2>

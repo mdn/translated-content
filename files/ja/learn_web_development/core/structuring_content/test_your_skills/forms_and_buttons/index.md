@@ -1,10 +1,12 @@
 ---
 title: "スキルテスト: フォームとボタン"
-short-title: フォームとボタン
+short-title: "試験: フォームとボタン"
 slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons
 l10n:
-  sourceCommit: 2f16610802bfbdf6394ca919557a4369b1236e10
+  sourceCommit: 1cf3cb0fb22bf89c780fefe74c3db7f1b9e8ca09
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_forms", "Learn_web_development/Core/Structuring_content/Forms_challenge", "Learn_web_development/Core/Structuring_content")}}
 
 このスキルテストの目的は、 [HTML のフォームとボタン](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_forms)を扱う方法を理解しているかどうかを評価することです。
 
@@ -21,16 +23,16 @@ l10n:
 2. また、それらをテキストラベルと意味的に関連付ける必要があります。
 3. 残りのリストアイテム内に、「ログイン」というボタンテキストを持つ送信ボタンを作成します。
 
-<!-- Code shared across examples -->
+<!-- 例の間で共有されるコード -->
 
-```css hidden live-sample___forms-buttons-1 live-sample___forms-buttons-2 live-sample___forms-buttons-3 live-sample___forms-buttons-4 live-sample___forms-buttons-5 live-sample___forms-buttons-6
+```css hidden live-sample___forms-buttons-1 live-sample___forms-buttons-2 live-sample___forms-buttons-3 live-sample___forms-buttons-4 live-sample___forms-buttons-5 live-sample___forms-buttons-6 live-sample___forms-buttons-1-finished live-sample___forms-buttons-2-finished live-sample___forms-buttons-3-finished live-sample___forms-buttons-4-finished live-sample___forms-buttons-5-finished live-sample___forms-buttons-6-finished
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: white;
+  color: #333333;
   font:
-    1em / 1.4 Helvetica Neue,
-    Helvetica,
-    Arial,
+    1em / 1.4 "Helvetica Neue",
+    "Helvetica",
+    "Arial",
     sans-serif;
   padding: 1em;
   margin: 0;
@@ -43,7 +45,13 @@ body {
 
 <!-- Example-specific code -->
 
-```html live-sample___forms-buttons-1
+この課題の出発点は次のようなものです。
+
+{{ EmbedLiveSample("forms-buttons-1", "100%", 150) }}
+
+この出発点となる基本的なコードは以下の通りです。
+
+```html-nolint live-sample___forms-buttons-1
 <form>
   <ul>
     <li>ユーザー ID</li>
@@ -53,14 +61,16 @@ body {
 </form>
 ```
 
-{{ EmbedLiveSample("forms-buttons-1", "100%", 150) }}
+更新されたコンテンツは次のようになります。
+
+{{ EmbedLiveSample("forms-buttons-1-finished", "100%", 150) }}
 
 <details>
 <summary>ここをクリックすると、模範解答を表示します。</summary>
 
 完了した HTML は、次のようになるはずです。
 
-```html
+```html-nolint live-sample___forms-buttons-1-finished
 <form>
   <ul>
     <li>
@@ -91,7 +101,13 @@ body {
 3. 2 つ目の `<fieldset>` のコンテンツをチェックボックスセットに変更します。
 4. 自分自身でホットドッグの選択肢をいくつか追加します。
 
-```html live-sample___forms-buttons-2
+この課題の出発点は次のようなものです。
+
+{{ EmbedLiveSample("forms-buttons-2", "100%", 350) }}
+
+この出発点となる基本的なコードは以下の通りです。
+
+```html-nolint live-sample___forms-buttons-2
 <form>
   <fieldset>
     <legend>好きなポニーはどれ？</legend>
@@ -122,14 +138,16 @@ body {
 </form>
 ```
 
-{{ EmbedLiveSample("forms-buttons-2", "100%", 350) }}
+更新されたコンテンツは次のようになります。
+
+{{ EmbedLiveSample("forms-buttons-2-finished", "100%", 360) }}
 
 <details>
 <summary>ここをクリックすると、模範解答を表示します。</summary>
 
 完了した HTML は、次のようになるはずです。
 
-```html
+```html-nolint live-sample___forms-buttons-2-finished
 <form>
   <fieldset>
     <legend>好きなポニーはどれ？</legend>
@@ -185,7 +203,13 @@ body {
 3. 電話番号
 4. 好きな色
 
-```html live-sample___forms-buttons-3
+この課題の出発点は次のようなものです。
+
+{{ EmbedLiveSample("forms-buttons-3", "100%", 250) }}
+
+この出発点となる基本的なコードは以下の通りです。
+
+```html-nolint live-sample___forms-buttons-3
 <form>
   <h2>設定を編集</h2>
   <ul>
@@ -208,14 +232,16 @@ body {
 </form>
 ```
 
-{{ EmbedLiveSample("forms-buttons-3", "100%", 250) }}
+更新されたコンテンツは次のようになります。
+
+{{ EmbedLiveSample("forms-buttons-3-finished", "100%", 250) }}
 
 <details>
 <summary>ここをクリックすると、模範解答を表示します。</summary>
 
 完了した HTML は、次のようになるはずです。
 
-```html
+```html-nolint live-sample___forms-buttons-3-finished
 <form>
   <h2>設定を編集</h2>
   <ul>
@@ -254,6 +280,12 @@ body {
 2. 指定された "food" ラベルと意味的に関連付けます。
 3. リスト内で、選択肢を "mains" と "snacks" の 2 つのサブグループに分割します。
 
+この課題の出発点は次のようなものです。
+
+{{ EmbedLiveSample("forms-buttons-4", "100%", 120) }}
+
+この出発点となる基本的なコードは以下の通りです。
+
 ```html-nolint live-sample___forms-buttons-4
 <form>
   <ul>
@@ -269,14 +301,16 @@ body {
 </form>
 ```
 
-{{ EmbedLiveSample("forms-buttons-4", "100%", 250) }}
+更新されたコンテンツは次のようになります。
+
+{{ EmbedLiveSample("forms-buttons-4-finished", "100%", 120) }}
 
 <details>
 <summary>ここをクリックすると、模範解答を表示します。</summary>
 
 完了した HTML は、次のようになるはずです。
 
-```html
+```html-nolint live-sample___forms-buttons-4-finished
 <form>
   <ul>
     <li>
@@ -315,7 +349,13 @@ body {
 2. それぞれのテキストラベルに、そのフォームフィールドと意味的に関連付けられる適切な要素をマークアップします。
 3. ラベルとフィールドのペアを区切るために、適切な構造要素のセットを追加します。
 
-```html live-sample___forms-buttons-5
+この課題の出発点は次のようなものです。
+
+{{ EmbedLiveSample("forms-buttons-5", "100%", 120) }}
+
+この出発点となる基本的なコードは以下の通りです。
+
+```html-nolint live-sample___forms-buttons-5
 <form>
   氏名:
   <input type="text" id="name" name="name" />
@@ -331,14 +371,16 @@ body {
 </form>
 ```
 
-{{ EmbedLiveSample("forms-buttons-5", "100%", 250) }}
+更新されたコンテンツは次のようになります。
+
+{{ EmbedLiveSample("forms-buttons-5-finished", "100%", 300) }}
 
 <details>
 <summary>ここをクリックすると、模範解答を表示します。</summary>
 
 完了した HTML は、次のようになるはずです。
 
-```html
+```html-nolint live-sample___forms-buttons-5-finished
 <form>
   <fieldset>
     <legend>個人情報</legend>
@@ -383,7 +425,13 @@ body {
 
 フォームを送信してみてください。上記の制約が満たされるまで送信は拒否され、適切なエラーメッセージが表示されます。
 
-```html live-sample___forms-buttons-6
+この課題の出発点は次のようなものです。
+
+{{ EmbedLiveSample("forms-buttons-6", "100%", 300) }}
+
+この出発点となる基本的なコードは以下の通りです。
+
+```html-nolint live-sample___forms-buttons-6
 <form>
   <h2>サポート依頼を入力してください</h2>
   <ul>
@@ -410,14 +458,14 @@ body {
 </form>
 ```
 
-{{ EmbedLiveSample("forms-buttons-6", "100%", 300) }}
+この課題については、出発点と同一に見えるため、完了したコンテンツを提供していません。
 
 <details>
 <summary>クリックすると解答を表示</summary>
 
 完了した HTML は、次のようになるはずです。
 
-```html
+```html-nolint live-sample___forms-buttons-6-finished
 <form>
   <h2>Enter your support query</h2>
   <ul>
@@ -451,3 +499,5 @@ body {
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_forms", "Learn_web_development/Core/Structuring_content/Forms_challenge", "Learn_web_development/Core/Structuring_content")}}

@@ -237,7 +237,7 @@ dt {
 
 完了した HTML は、次のようになるはずです。
 
-```html live-sample___text-basics-3-finished
+```html-nolint live-sample___text-basics-3-finished
 <h1>高度な HTML の動物</h1>
 
 <dl>

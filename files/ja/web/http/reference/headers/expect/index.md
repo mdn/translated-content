@@ -67,7 +67,7 @@ Expect: 100-continue
 | ---------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "Expect", "5.1.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat}}
 

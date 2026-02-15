@@ -65,7 +65,7 @@ If-Unmodified-Since: Wed, 21 Oct 2015 07:28:00 GMT
 | --------------------------------------------- | ------------------------------------------------------------ |
 | {{RFC("7232", "If-Unmodified-Since", "3.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat}}
 

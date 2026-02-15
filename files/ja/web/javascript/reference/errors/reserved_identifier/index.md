@@ -71,6 +71,6 @@ class DocArchiver {}
 // (たとえば、Firefox 44 以前の古いブラウザーはエラーをスローします)
 ```
 
-## 関連項目
+## 関連情報
 
 - [Good variable names](https://wiki.c2.com/?GoodVariableNames)

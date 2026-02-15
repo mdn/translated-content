@@ -112,7 +112,7 @@ console.log(navigator);
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
 - その他のグローバルオブジェクトインターフェイス: {{domxref("Window")}}、 {{domxref("DedicatedWorkerGlobalScope")}}、 {{domxref("SharedWorkerGlobalScope")}}、 {{domxref("ServiceWorkerGlobalScope")}}
 - その他のワーカー関連インターフェイス: {{domxref("Worker")}}、{{domxref("WorkerLocation")}}、 {{domxref("WorkerNavigator")}}、 {{domxref("ServiceWorkerGlobalScope")}}

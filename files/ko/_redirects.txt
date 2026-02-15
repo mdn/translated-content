@@ -1786,6 +1786,7 @@
 /ko/docs/Web/SVG/Tutorial/시작하기	/ko/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started
 /ko/docs/Web/SVG/Tutorial/위치	/ko/docs/Web/SVG/Tutorials/SVG_from_scratch/Positions
 /ko/docs/Web/Security/Certificate_Transparency	/ko/docs/Web/Security/Defenses/Certificate_Transparency
+/ko/docs/Web/Security/Firefox_Security_Guidelines	/ko/docs/conflicting/Web/Security_ec40d3a9a80c25bf447a9a1e8206152e326694c07b1d8137895303b20e9f5a86
 /ko/docs/Web/Security/IFrame_credentialless	/ko/docs/Web/HTTP/Guides/IFrame_credentialless
 /ko/docs/Web/Security/Insecure_passwords	/ko/docs/Web/Security/Authentication/Passwords
 /ko/docs/Web/Security/Mixed_content	/ko/docs/Web/Security/Defenses/Mixed_content
