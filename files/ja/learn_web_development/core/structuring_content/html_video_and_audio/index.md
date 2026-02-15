@@ -125,7 +125,10 @@ l10n:
   <source src="rabbit320.mp4" type="video/mp4" />
   <source src="rabbit320.webm" type="video/webm" />
   <p>
-    お使いのブラウザーはこの動画に対応していません。代わりの<a href="rabbit320.mp4">動画へのリンク</a>があります。
+    お使いのブラウザーはこの動画に対応していません。代わりの<a
+      href="rabbit320.mp4"
+      >動画へのリンク</a
+    >があります。
   </p>
 </video>
 ```
