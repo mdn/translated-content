@@ -114,16 +114,16 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categoriesegories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#flow_content">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#palpable_content">知覚可能コンテンツ</a>.
+        <a href="/ja/docs/Web/HTML/Guides/Content_categoriesegories#flow_content">フローコンテンツ</a>, <a href="/ja/doHTML/Guides/Content_categoriesent_categories#palpable_content">知覚可能コンテンツ</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">許可されているコンテンツ</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#flow_content">フローコンテンツ</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categoriesegories#flow_content">フローコンテンツ</a>
       </td>
     </tr>
     <tr>
