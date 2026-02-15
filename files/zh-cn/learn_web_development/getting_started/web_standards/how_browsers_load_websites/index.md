@@ -1,22 +1,24 @@
 ---
 title: 浏览器如何加载网站
 slug: Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites
+l10n:
+  sourceCommit: bdb19290fc91b32b03d5e117e7e12df71c2a85ad
 ---
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Soft_skills", "Learn_web_development/Getting_started/Web_standards")}}
 
-在上一篇文章中，我们介绍了构建网站所用的[各类技术](/zh-CN/docs/Learn_web_development/Getting_started/Web_standards/)。本文将深入讲解这些技术是如何被浏览器渲染出来的——当浏览器收到构成网页的代码文件和其他资源后，它们如何被组合成用户最终看到并与之交互的完整页面？
+在上一篇文章中，我们介绍了构建网站所用的[各类技术](/zh-CN/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model#现代_web_技术概述)。本文将深入讲解这些技术（在[万维网是如何工作的](/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works)这一篇中提及）是如何被浏览器渲染出来的——当浏览器收到构成网页的代码文件和其他资源后，它们如何被组合成用户最终看到并与之交互的完整页面？
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         对你使用的操作系统、网页浏览器及基本网络技术有初步了解。
       </td>
     </tr>
     <tr>
-      <th scope="row">学习目标：</th>
+      <th scope="row">学习成果：</th>
       <td>
         <ul>
           <li>了解 HTTP 响应中可能包含哪些类型的文件。</li>
@@ -40,13 +42,13 @@ slug: Learn_web_development/Getting_started/Web_standards/How_browsers_load_webs
 
 ## 网页渲染过程
 
-当用户访问一个新网页（比如点击链接或输入网址）时，浏览器会发出多个 HTTP 请求，并接收对应的响应文件。浏览器会处理这些文件，将它们组合成一个可交互的网页。这个过程称为**渲染**。
+当用户访问一个新网页（比如点击链接或输入网址）时，浏览器会发出多个 HTTP 请求，并接收到 HTTP 响应中的多个文件。浏览器会处理这些文件，将它们组合成一个可交互的网页。这个过程称为**渲染**。
 
 下面我们从高层次来理解浏览器渲染网页的基本步骤。注意，不同浏览器的实现细节可能有所不同，但核心流程大致相似。
 
-## 解析 HTML
+## 处理 HTML
 
-浏览器首先收到 HTML 文件，并将其解析成一棵**DOM 树**（文档对象模型）。DOM 以树状结构在内存中表示整个 HTML 文档的层次关系。例如下面这段简单的 HTML：
+浏览器首先收到 HTML 文件，并将其解析成一棵**DOM 树**（**文档对象模型**）。DOM 以树状结构在内存中表示整个 HTML 文档的层次关系。例如下面这段简单的 HTML：
 
 ```html
 <p>
@@ -57,7 +59,7 @@ slug: Learn_web_development/Getting_started/Web_standards/How_browsers_load_webs
 </p>
 ```
 
-每个标签、属性和文本都会成为 DOM 树中的一个**节点**。节点之间通过父子、兄弟关系相互关联。以上面的 HTML 为例，浏览器解析后会生成如下结构的 DOM 树：
+每个标签、属性和文本都会成为树结构中的一个 **DOM 节点**。节点之间通过父子、兄弟关系相互关联。节点通过其与其他 DOM 节点的关系来定义。某些元素是子节点的父节点，而子节点之间存在兄弟节点关系。以上面的 HTML 为例，浏览器将解析此 HTML 并据此创建以下 DOM 树：
 
 ```plain
 P
@@ -70,9 +72,9 @@ P
     └─ "JavaScript"
 ```
 
-此时如果直接渲染，效果如下：
+在这棵 DOM 树中，`<p>` 元素对应的节点为父节点。其子节点包含一个文本节点和三个 `<span>` 元素对应的节点。而这些 SPAN 节点同样也是一些文本节点的父节点。浏览器渲染的 DOM 树大概长这样：
 
-{{EmbedLiveSample('解析 HTML', '100%', 55)}}
+{{EmbedLiveSample('处理 HTML', '100%', 55)}}
 
 ```css hidden
 p {
@@ -84,15 +86,15 @@ p {
 
 - {{htmlelement("link")}} 引用的外部 [CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics) 样式表。
 - {{htmlelement("script")}} 引用的外部 [JavaScript](/zh-CN/docs/Learn_web_development/Core/Scripting) 文件。
-- {{htmlelement("img")}}、{{htmlelement("video")}}、{{htmlelement("audio")}} 等引用的媒体文件。
+- {{htmlelement("img")}}、{{htmlelement("video")}}、{{htmlelement("audio")}} 等用于引用希望嵌入网页的媒体文件的元素。
 
-## 解析 CSS 并绘制页面
+## 解析 CSS 并渲染页面
 
-获取 CSS 后，浏览器会按以下步骤处理：
+接下来，浏览器按照以下步骤处理 CSS：
 
-1. **解析与关联**：分析所有 CSS 规则，并根据选择器将它们映射到 DOM 树中对应的节点上，这一步形成**渲染树**。
-2. **布局**：根据 CSS 规则计算每个节点在屏幕上的位置与尺寸，也称为“重排”。
-3. **绘制**：将布局后的节点实际绘制到屏幕上，包括颜色、边框、背景等视觉细节。
+1. 解析所有 CSS（包括 HTML 自带以及外部引用的样式表），并根据应用的 HTML 元素将 CSS 的样式规则放入不同的“桶”（映射到 DOM 树中叫做**结点**），并按需将样式附加到对应的不同的元素中（这一中间步骤形成**渲染树**）。
+2. 在应用规则后呈现渲染树应当展现的结构。包括任何图像等将要嵌入网页的媒体文件。
+3. 将布局后的节点实际显示到屏幕上（这一步叫做**绘制**）。
 
 整个过程可参考以下示意图：
 
@@ -109,7 +111,7 @@ p {
 </p>
 ```
 
-如果加入这样一条 CSS 规则：
+回到我们的示例，假设在 HTML 文件中发现了以下 CSS 代码：
 
 ```css
 span {
@@ -118,15 +120,17 @@ span {
 }
 ```
 
-浏览器会将这个样式应用到每一个 `<span>` 节点，绘制出带边框和绿色背景的效果：
+CSS 中唯一一个规则是 `<span>` 的选择器，所以浏览器可以很快的处理！浏览器会将这个样式应用到每一个 `<span>` 节点，绘制出带边框和绿色背景的效果
 
-{{EmbedLiveSample('解析 CSS 并绘制页面', '100%', 90)}}
+更新后的效果大概长这样：
 
-## 执行 JavaScript
+{{EmbedLiveSample('解析 CSS 并渲染页面', '100%', 90)}}
+
+## 处理 JavaScript
 
 CSS 处理完成后，浏览器开始执行 JavaScript。JavaScript 可能在 HTML 中内联，也可能来自外部文件。它能够动态修改 DOM 或样式，因此执行时机往往会影响最终渲染结果。
 
-继续之前的例子，假设我们加入以下脚本：
+继续之前的例子，假设我们在 HTML 文件中找到了以下 JavaScript 代码：
 
 ```html hidden
 <p>
@@ -152,17 +156,19 @@ spans.forEach((span) => {
 });
 ```
 
-这段代码会将每个 `<span>` 内的文字倒序显示。执行后效果如下：
+你无需精确理解这段 JavaScript 的工作原理，但从高层次来看，它会遍历 DOM 中的所有 SPAN 节点，并将它们子文本节点中的字符顺序进行反转。
 
-{{EmbedLiveSample('执行 JavaScript', '100%', 90)}}
+最终输出如下：
+
+{{EmbedLiveSample('处理 JavaScript', '100%', 90)}}
 
 ## 其他渲染相关步骤
 
-除了上述核心流程，渲染过程中还会发生一些其他重要步骤，例如：
+除了上述核心流程，渲染过程中还会发生一些其他步骤，不过我们不会在此处全部提及。一个重要的步骤是**构建无障碍树**：浏览器会基于 DOM 生成一份辅助技术（如屏幕阅读器）专用的树状结构，帮助视障用户理解页面内容。
 
-- **构建无障碍树**：浏览器会基于 DOM 生成一份辅助技术（如屏幕阅读器）专用的树状结构，帮助视障用户理解页面内容。我们将在后续的[无障碍](/zh-CN/docs/Learn_web_development/Core/Accessibility)模块中详细介绍这一点。
+我们将在后续的[无障碍考虑](/zh-CN/docs/Learn_web_development/Core/Accessibility)模块中详细介绍这一点。
 
-## 浏览器作为开发环境：挑战与魅力并存
+## 浏览器作为开发环境：棘手_但_并存魅力
 
 前端开发有时会让人感到棘手，因为浏览器环境具有很大的不确定性。你无法完全控制用户使用的设备、浏览器版本、网络状况、屏幕尺寸等因素，因此很难保证所有用户都能获得完全一致的体验。
 
@@ -175,9 +181,9 @@ spans.forEach((span) => {
 - **即时更新**：开发者更新代码后，用户刷新页面即可获得最新版本。
 - **活跃的社区**：Web 技术生态丰富，学习资源众多，社区氛围友好，容易获得帮助。
 
-## 延伸阅读
+## 参见
 
-- [何时以及如何向浏览器报告 Bug](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs)
-  - 如果你在浏览器中遇到了疑似 Bug 的行为，这篇文章会教你如何确认并提交有效的 Bug 报告。
+- [何时以及如何向浏览器报告缺陷报告](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs)
+  - 如果浏览器中某些功能未按预期运行，可能是浏览器存在缺陷。本文将说明如何判断是否存在缺陷，以及如何提交缺陷报告。
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Soft_skills", "Learn_web_development/Getting_started/Web_standards")}}
