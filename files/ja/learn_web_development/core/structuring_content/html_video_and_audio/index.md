@@ -197,7 +197,10 @@ HTML 動画に含めることができる他の多くの機能があります。
   <source src="viper.mp3" type="audio/mp3" />
   <source src="viper.ogg" type="audio/ogg" />
   <p>
-    お使いのブラウザーはこの音声ファイルに対応していません。代わりに<a href="viper.mp3">音声へのリンク</a>をお使いください。
+    お使いのブラウザーはこの音声ファイルに対応していません。代わりに<a
+      href="viper.mp3"
+      >音声へのリンク</a
+    >をお使いください。
   </p>
 </audio>
 ```
