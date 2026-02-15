@@ -314,7 +314,10 @@ WEBVTT
   <source src="viper.mp3" type="audio/mp3" />
   <source src="viper.ogg" type="audio/ogg" />
   <p>
-    このブラウザーは HTML 音声に非対応です。代わりに音声ファイルへの<a href="viper.mp3">リンク</a>をこちらに用意しました。
+    このブラウザーは HTML 音声に非対応です。代わりに音声ファイルへの<a
+      href="viper.mp3"
+      >リンク</a
+    >をこちらに用意しました。
   </p>
 </audio>
 ```
