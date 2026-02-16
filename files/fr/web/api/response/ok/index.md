@@ -1,39 +1,37 @@
 ---
-title: Response.ok
+title: "Response : propriété ok"
+short-title: ok
 slug: Web/API/Response/ok
+l10n:
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-La propriété en lecture seule **`ok`** de l'interface {{domxref("Response")}} contient un booléen correspondant au succès (codes de statut compris entre 200 et 299) ou à l'échec de la réponse.
+La propriété en lecture seule **`ok`** de l'interface {{DOMxRef("Response")}} contient un booléen indiquant si la réponse a réussi (statut dans la plage 200 à 299) ou non.
 
-## Syntaxe
+## Valeur
 
-```js
-var myOK = response.ok;
-```
+Une valeur booléenne.
 
-### Valeur
+## Exemples
 
-Un {{domxref("Boolean")}}.
-
-## Exemple
-
-Dans [notre exemple](https://github.com/mdn/fetch-examples/tree/master/fetch-response) (voir [la démonstration en ligne](https://mdn.github.io/fetch-examples/fetch-response/)) nous créons un nouvel objet {{domxref("Request")}} en utilisant le constructeur {{domxref("Request.Request","Request()")}} avec le chemin vers un JPG en argument. On récupère (_fetch_ en anglais) ensuite la requête en utilisant {{domxref("GlobalFetch.fetch()")}}, on extrait un _blob_ de la réponse en utilisant {{domxref("Body.blob")}} pour créer un objet URL grâce à {{domxref("URL.createObjectURL")}} et l'afficher dans une balise {{htmlelement("img")}}.
+Dans notre [exemple de réponse Fetch <sup>(angl.)</sup>](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-response) (voir [la réponse Fetch en direct <sup>(angl.)</sup>](https://mdn.github.io/dom-examples/fetch/fetch-response/)), nous créons un nouvel objet {{DOMxRef("Request")}} à l'aide du constructeur {{DOMxRef("Request.Request","Request()")}}, auquel nous passons le chemin d'un fichier JPG.
+Nous récupérons ensuite cette requête avec {{DOMxRef("Window/fetch", "fetch()")}}, extrayons un blob de la réponse avec {{DOMxRef("Response.blob")}}, créons une URL d'objet à partir de ce blob avec {{DOMxRef("URL.createObjectURL_static", "URL.createObjectURL()")}}, et affichons cette image dans un élément HTML {{HTMLElement("img")}}.
 
 > [!NOTE]
-> Nous affichons la valeur de la propriété `ok` de la réponse dans la console en haut du bloc `fetch()`.
+> Au début du bloc `fetch()`, nous affichons la valeur de `ok` de la réponse dans la console.
 
 ```js
-var myImage = document.querySelector("img");
+const monImage = document.querySelector("img");
 
-var myRequest = new Request("flowers.jpg");
+const maRequete = new Request("fleurs.jpg");
 
-fetch(myRequest).then(function (response) {
-  console.log(response.ok); // retourne true si la réponse est retournée avec succès
-  response.blob().then(function (myBlob) {
-    var objectURL = URL.createObjectURL(myBlob);
-    myImage.src = objectURL;
+fetch(maRequete).then((reponse) => {
+  console.log(reponse.ok); // retourne true si la réponse a été renvoyée avec succès
+  reponse.blob().then((monBlob) => {
+    const urlObjet = URL.createObjectURL(monBlob);
+    monImage.src = urlObjet;
   });
 });
 ```
@@ -48,6 +46,6 @@ fetch(myRequest).then(function (response) {
 
 ## Voir aussi
 
-- [API ServiceWorker](/fr/docs/Web/API/Service_Worker_API)
+- [L'API ServiceWorker](/fr/docs/Web/API/Service_Worker_API)
 - [Contrôle d'accès HTTP (CORS)](/fr/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/fr/docs/Web/HTTP)
+- La référence [HTTP](/fr/docs/Web/HTTP)
