@@ -22,7 +22,7 @@ multiply(otherMatrix)
 ### 引数
 
 - `otherMatrix` {{optional_inline}}
-  - : 乗算する　[`DOMMatrix`](/ja/docs/Web/API/DOMMatrix) です。
+  - : 乗算する [`DOMMatrix`](/ja/docs/Web/API/DOMMatrix) です。
 
 ### 返値
 
