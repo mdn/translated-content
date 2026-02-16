@@ -1,41 +1,42 @@
 ---
-title: Event.target
+title: Event：target 屬性
+short-title: target
 slug: Web/API/Event/target
+l10n:
+  sourceCommit: 976891fb78ba24cb4ac6e58ae8a903b20eae4337
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
-指向最初觸發事件的 DOM 物件。與 {{domxref("event.currentTarget")}} 屬性不同的是，`event.currentTarget` 屬性總會指向目前於冒泡或捕捉階段正在處理該事件之事件處理器所註冊的 DOM 物件，而 `event.target` 屬性則是永遠指向觸發事件的 DOM 物件。
+{{domxref("Event")}} 介面的 **`target`** 唯讀屬性是對事件被派發到的物件之參照。當事件處理器在事件的冒泡或捕獲階段被呼叫時，它與 {{domxref("Event.currentTarget")}} 不同。
 
-## 語法
+## 值
 
-```plain
-theTarget = event.target
-```
+相關聯的 {{domxref("EventTarget")}}。
 
 ## 範例
 
-The `event.target` property can be used in order to implement **event delegation**.
+`event.target` 屬性可用於實作**事件委派**。
 
 ```js
-// Make a list
-var ul = document.createElement("ul");
+// 建立一個列表
+const ul = document.createElement("ul");
 document.body.appendChild(ul);
 
-var li1 = document.createElement("li");
-var li2 = document.createElement("li");
+const li1 = document.createElement("li");
+const li2 = document.createElement("li");
 ul.appendChild(li1);
 ul.appendChild(li2);
 
-function hide(e) {
-  // e.target refers to the clicked <li> element
-  // This is different than e.currentTarget which would refer to the parent <ul> in this context
-  e.target.style.visibility = "hidden";
+function hide(evt) {
+  // evt.target 指的是被點擊的 <li> 元素
+  // 這與 evt.currentTarget 不同，在此上下文中的 currentTarget 指的是父層 <ul>
+  evt.target.style.visibility = "hidden";
 }
 
-// Attach the listener to the list
-// It will fire when each <li> is clicked
-ul.addEventListener("click", hide, false);
+// 將監聽器附加到列表
+// 當每個 <li> 被點擊時，它都會觸發
+ul.addEventListener("click", hide);
 ```
 
 ## 規範
@@ -46,18 +47,6 @@ ul.addEventListener("click", hide, false);
 
 {{Compat}}
 
-## Compatibility notes
-
-On IE 6-8 the event model is different. Event listeners are attached with the non-standard {{domxref('EventTarget.attachEvent')}} method. In this model, the event object has a {{domxref('Event.srcElement')}} property, instead of the `target` property, and it has the same semantics as `event.target`.
-
-```js
-function hide(e) {
-  // Support IE6-8
-  var target = e.target || e.srcElement;
-  target.style.visibility = "hidden";
-}
-```
-
 ## 參見
 
-- [Comparison of Event Targets](/zh-TW/docs/Learn_web_development/Core/Scripting/Event_bubbling)
+- [學習：事件冒泡](/zh-TW/docs/Learn_web_development/Core/Scripting/Event_bubbling)
