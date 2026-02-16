@@ -412,7 +412,7 @@ closeBtns.forEach((btn) => {
 
 CSS トランジションで `<dialog>` をアニメーションさせる場合、以下の機能が要求されます。
 
-- [`@starting-style`](/ja/docs/Web/CSS/Reference/At-rules/@starting-style) アットルール
+- {{cssxref("@starting-style")}} アットルール
   - : `<dialog>` に設定されたプロパティの、開かれるたびにトランジションする開始値のセットを提供します。これは予期せぬ動作を避けるために必要です。既定では、CSS トランジションは、可視要素のプロパティが 1 つの値から別の値に変更された場合のみ発生します。要素の最初のスタイル更新時や、`display` の型が `none` から別の型に変更された場合には発生しません。
 - [`display`](/ja/docs/Web/CSS/Reference/Properties/display) プロパティ
   - : トランジションのリストに `display` を追加すると、トランジションの再生時間中、`<dialog>` が `display: block`（またはダイアログが開いている状態として設定されている他の可視 `display` 値）のままになり、他にもトランジションが確実に表示されます。
@@ -440,7 +440,7 @@ CSS トランジションで `<dialog>` をアニメーションさせる場合�
 
 この CSS では、`@starting-style` ブロックを記述して、`opacity` および `transform` プロパティのトランジション開始時のスタイル、`dialog:open` 状態のトランジション終了時のスタイル、`<dialog>` が表示された後に元の状態に戻る際の既定の `dialog` 状態のスタイルを定義します。注意してほしいのは、 `<dialog>` の `transition` リストには、これらのプロパティだけでなく、`display` と `overlay` プロパティも含まれ、それぞれに `allow-discrete` が設定されていることです。
 
-また、開いたときに現れる `<dialog>` の背後に現れる [`::backdrop`](/ja/docs/Web/CSS/Reference/Selectors/::backdrop) の {{cssxref("background-color")}} プロパティに開始時のスタイル値を設定し、素敵な暗転アニメーションを指定しました。 `dialog:open::backdrop` セレクターは、ダイアログが開いているときに、`<dialog>` 要素の背景のみを選択します。
+また、開いたときに現れる `<dialog>` の背後に現れる {{cssxref("::backdrop")}} の {{cssxref("background-color")}} プロパティに開始時のスタイル値を設定し、素敵な暗転アニメーションを指定しました。 `dialog:open::backdrop` セレクターは、ダイアログが開いているときに、`<dialog>` 要素の背景のみを選択します。
 
 ```css
 /* 開いた状態のダイアログ */
