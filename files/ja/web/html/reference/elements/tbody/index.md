@@ -83,7 +83,7 @@ td {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categoriesegories">コンテンツカテゴリー</a>
       </th>
       <td>なし</td>
     </tr>

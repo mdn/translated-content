@@ -32,7 +32,7 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
@@ -52,7 +52,7 @@ l10n:
       <th scope="row">許可されている親要素</th>
       <td>
         {{HTMLElement("object")}} の子として、他の<a
-          href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >より前に配置可能。
       </td>

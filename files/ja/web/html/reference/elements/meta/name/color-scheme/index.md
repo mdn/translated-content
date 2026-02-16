@@ -63,4 +63,4 @@ CSS の {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} メ�
 ## 関連情報
 
 - CSS の {{cssxref("color-scheme")}} プロパティ
-- [`prefers-color-scheme`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) メディアクエリー
+- {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} メディアクエリー

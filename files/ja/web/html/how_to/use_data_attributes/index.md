@@ -75,7 +75,7 @@ threeColumnArticles.forEach((article) => {
 
 ## CSS からのアクセス
 
-データ属性はプレーンな HTML 属性であるため、[CSS](/ja/docs/Web/CSS) からもアクセスできることに注意してください。 例えば、記事の親データを表示するには、次のように CSS で[生成コンテンツ](/ja/docs/Web/CSS/Reference/Properties/content)において [`attr()`](/ja/docs/Web/CSS/Reference/Values/attr) 関数を使用して実現できます。
+データ属性はプレーンな HTML 属性であるため、[CSS](/ja/docs/Web/CSS) からもアクセスできることに注意してください。 例えば、記事の親データを表示するには、次のように CSS で[生成コンテンツ](/ja/docs/Web/CSS/Reference/Properties/content)において {{cssxref("attr()")}} 関数を使用して実現できます。
 
 ```css
 article::before {

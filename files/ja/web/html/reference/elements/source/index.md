@@ -157,7 +157,7 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categoriesegories"
           >コンテンツカテゴリー</a
         >
       </th>
@@ -177,7 +177,7 @@ l10n:
         <div>
           メディア要素（{{HTMLElement("audio")}} または
           {{HTMLElement("video")}}）の場合、どの
-          <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          <a href="/ja/docs/Web/HTML/Guides/Content_categoriesegories#フローコンテンツ"
             >フローコンテンツ</a
           >または {{HTMLElement("track")}} 要素よりも前に配置する。
         </div>

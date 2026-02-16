@@ -3,12 +3,12 @@ title: "DOMMatrixReadOnly: is2D プロパティ"
 short-title: is2D
 slug: Web/API/DOMMatrixReadOnly/is2D
 l10n:
-  sourceCommit: 359abb1dcdc87d46d7271fc28c53a998a5523bf1
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-**`is2D`** は {{domxref("DOMMatrixReadOnly")}} インターフェイスのプロパティで、この行列が 2D であれば `true` を返す論理値のフラグです。この行列が 2D 行列として初期化され、2D の座標変換操作のみが適用された場合に、この値が `true` となります。そうでない場合は、行列は 3D となるため、`is2D` は `false` になります。
+**`is2D`** は {{domxref("DOMMatrixReadOnly")}} インターフェイスの読み取り専用プロパティで、行列が二次元である場合に `true` となる論理値のフラグです。行列が二次元行列として初期化され、二次元変換操作のみが適用された場合、この値は `true` となります。それ以外の場合は、行列は三次元で定義され、`is2D` は `false` となります。
 
 ## 値
 
@@ -17,14 +17,14 @@ l10n:
 ## 例
 
 ```js
-// 2D 行列を初期化
+// 二次元の行列を初期化
 const matrix = new DOMMatrix(); // 行列を作成
 console.log(matrix.is2D); // 出力: true
 
-// 2D 空間で座標変換
+// 二次元空間で座標変換
 console.log(matrix.rotate(30).is2D); // 出力: true
 
-// 3D 座標変換を適用
+// 三次元座標変換を適用
 console.log(matrix.rotate(10, 20, 1).is2D); // 出力: false
 ```
 

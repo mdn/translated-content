@@ -40,14 +40,14 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#メタデータコンテンツ"
           >メタデータコンテンツ</a
-        >、<a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        >、<a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
-        >、<a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        >、<a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
@@ -61,7 +61,7 @@ l10n:
         要素、0 個以上の{{HTMLElement("style")}} 要素、0 個以上の
         {{HTMLElement("meta")}} 要素。<br />スクリプトの実行が無効かつ
         {{HTMLElement("head")}} 要素の子孫ではない場合: 任意の<a
-          href="/ja/docs/Web/HTML/Content_categories#透過的コンテンツ"
+          href="/ja/docs/Web/HTML/Guides/Content_categories#透過的コンテンツ"
           >透過的コンテンツ</a
         >、ただし
         <code>&#x3C;noscript></code>
@@ -77,7 +77,7 @@ l10n:
       <th scope="row">許可されている親要素</th>
       <td>
         祖先要素に <code>&#x3C;noscript></code> が存在しない場合に、<a
-          href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >
         を受け入れるすべての要素。または、祖先要素に

@@ -74,17 +74,17 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categoriesegories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categoriesegories#フローコンテンツ">フローコンテンツ</a>,
+        <a href="/ja/docs/Web/HTML/Guides/Content_categoriesegories#記述コンテンツ">記述コンテンツ</a>
       </td>
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#透過的コンテンツ">透過的コンテンツ</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categoriesegories#透過的コンテンツ">透過的コンテンツ</a>
       </td>
     </tr>
     <tr>
@@ -98,7 +98,7 @@ l10n:
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け付ける任意の要素
+        <a href="/ja/docs/Web/HTML/Guides/Content_categoriesegories#記述コンテンツ">記述コンテンツ</a>を受け付ける任意の要素
       </td>
     </tr>
     <tr>

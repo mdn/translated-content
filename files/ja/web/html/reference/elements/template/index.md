@@ -2,7 +2,7 @@
 title: "<template>: コンテンツテンプレート要素"
 slug: Web/HTML/Reference/Elements/template
 l10n:
-  sourceCommit: 730741c750cc299b85798f1adbaf7adbd6e2016d
+  sourceCommit: a9747e75d39c8a1f8fe756278563e0d909dad379
 ---
 
 **`<template>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{Glossary("HTML")}} のフラグメントを保持し、後で JavaScript を使用して使用したり、シャドウ DOM の中に直接生成したりするためのメカニズムとして機能します。
@@ -37,6 +37,9 @@ l10n:
     これが設定されていて、シャドウツリー内のフォーカス可能でない要素が選択されている場合、フォーカスはツリー内の最初のフォーカス可能な要素に譲られます。
     この値は `false` が既定値です。
 
+- `shadowrootreferencetarget` {{Experimental_Inline}} {{non-standard_inline}}
+  - : この要素を使用して生成された [`ShadowRoot`](/ja/docs/Web/API/ShadowRoot) の `referenceTarget` プロパティの値を設定します。値はシャドウ DOM 内の要素の ID である必要があります。設定すると、シャドウ DOM 外からホスト要素への参照が行われた場合、参照された対象要素がホスト要素への参照の有効なターゲットとなります。
+
 - `shadowrootserializable`
   - : この要素を使用して作成した [`ShadowRoot`](/ja/docs/Web/API/ShadowRoot) の [`serializable`](/ja/docs/Web/API/ShadowRoot/serializable) プロパティの値を `true` に設定します。
     設定されている場合、シャドウルートは {{DOMxRef('Element.getHTML()')}} または {{DOMxRef('ShadowRoot.getHTML()')}} メソッドを、`options.serializableShadowRoots` 引数を `true` に設定して呼び出すことでシリアライズされます。
@@ -54,10 +57,10 @@ l10n:
 
 既定では、要素のコンテンツはレンダリングされません。
 対応する {{domxref("HTMLTemplateElement")}} インターフェイスは、標準で {{domxref("HTMLTemplateElement.content", "content")}} プロパティを含みます（同等の content/markup 属性はありません）。この `content` プロパティは読み取り専用で、テンプレートが表す DOM サブツリーを格納する {{domxref("DocumentFragment")}} を保持します。
-このフラグメントは {{domxref("Node.cloneNode", "cloneNode")}} メソッドで複製し、DOM に挿入することができます。
 
-`content` プロパティを使用するときは、返値の `DocumentFragment` が予期せぬ挙動を示すことがあることに注意が必要です。
-詳細は下記の [DocumentFragment の落とし穴を避ける](#documentfragment_の落とし穴を避ける)節を参照してください。
+{{domxref("Node.cloneNode()")}} メソッドと {{domxref("Document.importNode()")}} メソッドはどちらもノードのコピーを生成します。違いは、`importNode()` が呼び出し元の文書のコンテキストでノードを複製するのに対し、`cloneNode()` は複製対象のノードが属する文書を使用する点です。文書コンテキストは、カスタム要素を構築するための {{domxref("CustomElementRegistry")}} を決定します。このため、`content` フラグメントを複製する際は `document.importNode()` を使用し、カスタム要素の子孫がテンプレートコンテンツを所有する別文書ではなく、現在の文書内の定義を使用して構築されるようにします。詳細は {{domxref("Node.cloneNode()")}} ページの例を参照してください。
+
+`DocumentFragment` コンテナーそのものにはデータを添付しないように注意してください。詳細は [DocumentFragment のデータはクローンされない](#documentfragment_のデータはクローンされない)の例を参照してください。
 
 ### 宣言的シャドウ DOM
 
@@ -190,7 +193,7 @@ document
 
 このコードでは、最初に `<template>` 要素に `shadowrootmode` 属性を用いて、`<div>` 要素の中にシャドウルートを宣言します。
 これにより、テキストを格納したフォーカスできない `<div>` と、フォーカスできる `<input>` 要素の両方が表示されます。
-また、[`:focus`](/ja/docs/Web/CSS/Reference/Selectors/:focus) を持つ要素を青にスタイル設定し、ホスト要素の通常のスタイル設定を設定するには CSS を使用します。
+また、{{cssxref(":focus")}} を持つ要素を青にスタイル設定し、ホスト要素の通常のスタイル設定を設定するには CSS を使用します。
 
 ```html
 <div>
@@ -253,7 +256,7 @@ HTML は最初にレンダリングされるとき、最初の画像に示すよ
 
 ![要素にフォーカスがあるコードの画面ショット](template_with_focus.png)
 
-## DocumentFragment の落とし穴の回避
+## DocumentFragment のデータはクローンされない
 
 {{domxref("DocumentFragment")}} の値が渡されると、{{domxref("Node.appendChild")}} や同様のメソッドはその値の子ノードだけを対象とするノードに移動させます。したがって、イベントハンドラーは `DocumentFragment` 自体ではなく、`DocumentFragment` の子ノードに設定することが推奨されます。
 
@@ -279,11 +282,11 @@ function clickHandler(event) {
   event.target.append(" — この div がクリックされました");
 }
 
-const firstClone = template.content.cloneNode(true);
+const firstClone = document.importNode(template.content, true);
 firstClone.addEventListener("click", clickHandler);
 container.appendChild(firstClone);
 
-const secondClone = template.content.cloneNode(true);
+const secondClone = document.importNode(template.content, true);
 secondClone.children[0].addEventListener("click", clickHandler);
 container.appendChild(secondClone);
 ```
@@ -292,7 +295,7 @@ container.appendChild(secondClone);
 
 `firstClone` は `DocumentFragment` なので、`appendChild` が呼び出されたときに `container` に追加されるのはその子ノードだけで、`firstClone` のイベントハンドラーはコピーされません。一方、`secondClone` は最初の子ノードにイベントハンドラーが追加されているため、`appendChild` が呼び出されるとイベントハンドラーがコピーされ、クリックすると期待通りに動作します。
 
-{{EmbedLiveSample('Avoiding_DocumentFragment_pitfall')}}
+{{EmbedLiveSample(' Data on the DocumentFragment is not cloned')}}
 
 ## 技術的概要
 
@@ -371,7 +374,7 @@ container.appendChild(secondClone);
 
 - [`part`](/ja/docs/Web/HTML/Reference/Global_attributes/part) および [`exportparts`](/ja/docs/Web/HTML/Reference/Global_attributes/exportparts) 属性
 - {{HTMLElement("slot")}} 要素
-- {{CSSXref(":host")}}、{{CSSXref(":host_function", ":host()")}}、{{CSSXref(":host-context", ":host-context()")}} 擬似クラス
+- {{CSSXref(":host")}}、{{cssxref(":host()")}}、{{cssxref(":host-context()")}} 擬似クラス
 - {{CSSXref("::part")}}、{{CSSXref("::slotted")}} 擬似要素
 - [`ShadowRoot`](/ja/docs/Web/API/ShadowRoot) インターフェイス
 - [テンプレートとスロットの使用](/ja/docs/Web/API/Web_components/Using_templates_and_slots)
