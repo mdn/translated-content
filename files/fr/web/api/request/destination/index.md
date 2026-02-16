@@ -25,8 +25,8 @@ Les valeurs possibles sont&nbsp;:
 
 - `""`
   - : La chaîne vide est la valeur par défaut, et est utilisée pour les destinations qui n'ont pas leur propre valeur. C'est la valeur lorsque les requêtes sont effectuées avec les API suivantes (entre autres)&nbsp;:
-    - [`<a ping>`](/fr/docs/Web/HTML/Element/a#ping)
-    - [`<area ping>`](/fr/docs/Web/HTML/Element/area#ping)
+    - [`<a ping>`](/fr/docs/Web/HTML/Reference/Element/a#ping)
+    - [`<area ping>`](/fr/docs/Web/HTML/Reference/Element/area#ping)
     - {{DOMxRef("Cache")}}
     - {{DOMxRef("EventSource")}}
     - {{DOMxRef("Window/fetch", "fetch()")}}
