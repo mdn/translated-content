@@ -19,7 +19,7 @@ Le serveur indique si une préférence est appliquée à une réponse, dans le c
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "Nom d'en-tête interdit")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "En-tête de requête interdit")}}</th>
       <td>Non</td>
     </tr>
     <tr>
