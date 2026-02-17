@@ -100,7 +100,6 @@ console.log(korean.hourCycle, japanese.hourCycle);
 - {{jsxref("Intl/Locale/getTimeZones", "Intl.Locale.prototype.getTimeZones()")}}
   - : この `Locale` に関連付けられたタイムゾーン識別子の配列 ({{jsxref("Array")}}) を返します。
 - {{jsxref("Intl/Locale/getWeekInfo", "Intl.Locale.prototype.getWeekInfo()")}}
-
   - : ロケールのルールに従い、 [UTS 35 の週要素](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Patterns_Week_Elements)を返します。
 
 - {{jsxref("Intl/Locale/maximize", "Intl.Locale.prototype.maximize()")}}
