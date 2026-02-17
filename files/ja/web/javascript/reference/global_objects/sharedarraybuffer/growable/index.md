@@ -1,11 +1,10 @@
 ---
 title: SharedArrayBuffer.prototype.growable
+short-title: growable
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/growable
 l10n:
-  sourceCommit: 509fde687ed349da8017a546f9cf094163f24844
+  sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
 ---
-
-{{JSRef}}
 
 **`growable`** は {{jsxref("SharedArrayBuffer")}} インスタンスのアクセサープロパティで、この `SharedArrayBuffer` が伸長可能かどうかを返します。
 
@@ -14,6 +13,8 @@ l10n:
 `growable` プロパティはアクセサープロパティであり、その set アクセサー関数は `undefined` です。つまり、このプロパティは読み取り専用ということです。値は配列が構築されたときに設定されます。コンストラクターで `maxByteLength` オプションが設定されている場合、`growable` は `true` を返します。設定されていない場合は、`false` を返します。
 
 ## 例
+
+これらの例は、コンソールや任意のウェブページから直接実行することはできません。`SharedArrayBuffer` は、その[セキュリティ要件](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer##セキュリティ要件)が満たされない限り定義されないからです。
 
 ### growable の使用
 
