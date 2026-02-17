@@ -1,12 +1,15 @@
 ---
 title: Intl.Locale.prototype.getHourCycles()
+short-title: getHourCycles()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getHourCycles
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{jsxref("Intl.Locale")}} インスタンスの **`getHourCycles()`** メソッドは、`Locale` の 1 つ以上の固有の時制識別子の配列を返します。
+**`getHourCycles()`** は {{jsxref("Intl.Locale")}} インスタンスのメソッドで、個のロケールの 1 つ以上の固有の時制識別子の配列を返します。
 
 > [!NOTE]
-> 一部のブラウザーのあるバージョンでは、このメソッドが `hourCycles` と呼ばれるアクセサープロパティとして実装されていました。しかしこの実装ではアクセスするたびに新しい配列を返すため、`locale.hourCycles === locale.hourCycles` が常に `false` を返してしまい、この状況を防ぐために、現在はメソッドとして実装されています。詳細については、[ブラウザーの互換性](#ブラウザーの互換性)の表を確認してください。
+> 一部のブラウザーの一部のバージョンでは、このメソッドが `hourCycles` と呼ばれるアクセサープロパティとして実装されていました。しかしこの実装ではアクセスするたびに新しい配列を返すため、`locale.hourCycles === locale.hourCycles` が常に `false` を返してしまい、この状況を防ぐために、現在はメソッドとして実装されています。詳細については、[ブラウザーの互換性](#ブラウザーの互換性)の表を確認してください。
 
 ## 構文
 
@@ -63,4 +66,4 @@ console.log(jaJP.getHourCycles()); // ["h23"]
 
 - {{jsxref("Intl.Locale")}}
 - [`Intl.Locale.prototype.hourCycle`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle)
-- [Unicode 時制識別子](https://www.unicode.org/reports/tr35/#UnicodeHourCycleIdentifier)
+- [Unicode 時制識別子](https://www.unicode.org/reports/tr35/#UnicodeHourCycleIdentifier)（Unicode ロケールデータマークアップ言語仕様書）

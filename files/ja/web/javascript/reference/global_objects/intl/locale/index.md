@@ -2,10 +2,8 @@
 title: Intl.Locale
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale
 l10n:
-  sourceCommit: 2982fcbb31c65f324a80fd9cec516a81d4793cd4
+  sourceCommit: e509776556a47f12843b91ab5c6e9be6585698c6
 ---
-
-{{JSRef}}
 
 **`Intl.Locale`** オブジェクトは、 Unicode ロケール識別子を表す Intl オブジェクトの標準組み込みプロパティです。
 
@@ -30,21 +28,22 @@ console.log(korean.hourCycle, japanese.hourCycle);
 
 ## 解説
 
-**`Intl.Locale`** オブジェクトは、 Unicode ロケールをより簡単に操作できるようにするために作成されました。 Unicode は、ロケールを「ロケール識別子」と呼ばれる文字列で表します。ロケール識別子は、「言語識別子」と「拡張タグ」から構成されます。言語識別子はロケールの中核となるもので、「言語」、「文字体系」、「地域サブタグ」から構成されます。ロケールに関する追加情報は、オプションの拡張タグに格納されます。「拡張タグ」には、暦の種類や時計の種類、記数法の種類などのロケールに関する情報が格納されています。
+**`Intl.Locale`** オブジェクトは、 Unicode ロケールをより簡単に操作できるようにするために作成されました。 Unicode は、ロケールを「ロケール識別子」と呼ばれる文字列で表します。ロケール識別子は、「言語識別子」と「拡張タグ」から構成されます。言語識別子はロケールの中核となるもので、言語、文字体系、地域、バリアントのサブタグから構成されます。ロケールに関する追加情報は、オプションの拡張タグに格納されます。「拡張タグ」には、暦の種類や時制の種類、記数法の種類などのロケールに関する情報が格納されています。
 
 従来、 Intl API は Unicode と同様に文字列を使用してロケールを表していました。これはシンプルで軽量な解決策であり、うまく機能します。しかし、 Locale クラスを追加することで、言語、文字体系、地域、拡張タグの解析や操作が容易になります。以下の `Intl.Locale` のプロパティは、 Unicode ロケール識別子のサブタグに対応しています。
 
-| プロパティ                                                   | 対応するサブタグ                   |
-| ------------------------------------------------------------ | ---------------------------------- |
-| {{jsxref("Intl/Locale/language", "language")}}               | `language` （最初の部分）          |
-| {{jsxref("Intl/Locale/script", "script")}}                   | `script` （2 つ目の部分）          |
-| {{jsxref("Intl/Locale/region", "region")}}                   | `region` （2 つ目と 3 つ目の部分） |
-| {{jsxref("Intl/Locale/calendar", "calendar")}}               | `ca` （拡張）                      |
-| {{jsxref("Intl/Locale/caseFirst", "caseFirst")}}             | `kf` （拡張）                      |
-| {{jsxref("Intl/Locale/collation", "collation")}}             | `co` （拡張）                      |
-| {{jsxref("Intl/Locale/hourCycle", "hourCycle")}}             | `hc` （拡張）                      |
-| {{jsxref("Intl/Locale/numberingSystem", "numberingSystem")}} | `nu` （拡張）                      |
-| {{jsxref("Intl/Locale/numeric", "numeric")}}                 | `kn` （拡張）                      |
+| プロパティ                                                   | 対応するサブタグ                 |
+| ------------------------------------------------------------ | -------------------------------- |
+| {{jsxref("Intl/Locale/language", "language")}}               | 言語 ID の最初の部分             |
+| {{jsxref("Intl/Locale/script", "script")}}                   | 言語 ID の `language` の後の部分 |
+| {{jsxref("Intl/Locale/region", "region")}}                   | 言語 ID の `script` の後の部分   |
+| {{jsxref("Intl/Locale/variants", "variants")}}               | 言語 ID の `region` の後の部分   |
+| {{jsxref("Intl/Locale/calendar", "calendar")}}               | `ca` （拡張）                    |
+| {{jsxref("Intl/Locale/caseFirst", "caseFirst")}}             | `kf` （拡張）                    |
+| {{jsxref("Intl/Locale/collation", "collation")}}             | `co` （拡張）                    |
+| {{jsxref("Intl/Locale/hourCycle", "hourCycle")}}             | `hc` （拡張）                    |
+| {{jsxref("Intl/Locale/numberingSystem", "numberingSystem")}} | `nu` （拡張）                    |
+| {{jsxref("Intl/Locale/numeric", "numeric")}}                 | `kn` （拡張）                    |
 
 上記の情報は、外部データベースを参照することなく、`Locale` オブジェクトが構築されたときにそのまま提供されます。`Intl.Locale` オブジェクトは、利用可能な暦、照合順序、記数法など、ロケールの実際の情報に関する情報を返すメソッドも追加で提供しています。
 
@@ -79,6 +78,8 @@ console.log(korean.hourCycle, japanese.hourCycle);
   - : このロケールに関連付けられた世界の地域（通常は国）を返します。
 - {{jsxref("Intl/Locale/script", "Intl.Locale.prototype.script")}}
   - : このロケールで使われている特定の言語を書く際に使用する文字体系を返します。
+- {{jsxref("Intl/Locale/variants", "Intl.Locale.prototype.variants")}}
+  - : ロケールに関連付けられたバリアントサブタグ（異なる表記法など）を返します。
 - `Intl.Locale.prototype[Symbol.toStringTag]`
   - : [`[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は、文字列 `"Intl.Locale"` です。このプロパティは、 {{jsxref("Object.prototype.toString()")}} で使用されます。
 
@@ -97,6 +98,7 @@ console.log(korean.hourCycle, japanese.hourCycle);
 - {{jsxref("Intl/Locale/getTimeZones", "Intl.Locale.prototype.getTimeZones()")}}
   - : この `Locale` に関連付けられたタイムゾーン識別子の配列 ({{jsxref("Array")}}) を返します。
 - {{jsxref("Intl/Locale/getWeekInfo", "Intl.Locale.prototype.getWeekInfo()")}}
+
   - : ロケールのルールに従い、 [UTS 35 の週要素](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Patterns_Week_Elements)を返します。
 
 - {{jsxref("Intl/Locale/maximize", "Intl.Locale.prototype.maximize()")}}

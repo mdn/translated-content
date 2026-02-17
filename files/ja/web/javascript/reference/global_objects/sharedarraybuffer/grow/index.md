@@ -1,11 +1,10 @@
 ---
 title: SharedArrayBuffer.prototype.grow()
+short-title: grow()
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/grow
 l10n:
-  sourceCommit: 509fde687ed349da8017a546f9cf094163f24844
+  sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
 ---
-
-{{JSRef}}
 
 **`grow()`** は {{jsxref("SharedArrayBuffer")}} インスタンスのメソッドで、 `SharedArrayBuffer` を指定されたサイズ（バイト単位）へ伸長します。
 
@@ -36,6 +35,8 @@ grow(newLength)
 `grow()` メソッドは、 `SharedArrayBuffer` が伸長可能 ([growable](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/growable)) であり、新しいサイズが `SharedArrayBuffer` の {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}} 以下で指定された新しい長さの引数で指定されたサイズに `SharedArrayBuffer` を伸長します。新しいバイトは 0 に初期化されます。
 
 ## 例
+
+これらの例は、コンソールや任意のウェブページから直接実行することはできません。`SharedArrayBuffer` は、その[セキュリティ要件](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer##セキュリティ要件)が満たされない限り定義されないからです。
 
 ### grow() の使用
 

@@ -1,11 +1,10 @@
 ---
 title: SharedArrayBuffer.prototype.maxByteLength
+short-title: maxByteLength
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/maxByteLength
 l10n:
-  sourceCommit: 16bacf2194dc9e9ff6ee5bcc65316547cf88a8d9
+  sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
 ---
-
-{{JSRef}}
 
 **`maxByteLength`** は {{jsxref("SharedArrayBuffer")}} インスタンスのアクセサープロパティで、この `SharedArrayBuffer` が伸長できる最大長（バイト単位）を返します。
 
@@ -16,6 +15,8 @@ l10n:
 この `SharedArrayBuffer` が `maxByteLength` 値を指定せずに構築された場合、このプロパティは、この `SharedArrayBuffer` の {{jsxref("SharedArrayBuffer/byteLength", "byteLength")}} 値に等しい値を返します。
 
 ## 例
+
+これらの例は、コンソールや任意のウェブページから直接実行することはできません。`SharedArrayBuffer` は、その[セキュリティ要件](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer##セキュリティ要件)が満たされない限り定義されないからです。
 
 ### maxByteLength の使用
 
