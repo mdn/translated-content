@@ -1,12 +1,14 @@
 ---
 title: 擬似要素
 slug: Web/CSS/Reference/Selectors/Pseudo-elements
-original_slug: Web/CSS/Pseudo-elements
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 21d2342d16ed78d6c72c66a71599125eb2405a31
 ---
 
 CSS の **擬似要素** (Pseudo-elements) は、セレクターに付加するキーワードで、選択された要素の特定の部分にスタイル付けできるようにするものです。
+
+> [!NOTE]
+> このページは CSS のすべての擬似要素の索引です。これらの擬似要素の一部（すべてではありません）を定義するモジュールについては、[CSS 擬似要素](/ja/docs/Web/CSS/Guides/Pseudo-elements)のページで説明しています。
 
 ## 構文
 
@@ -44,22 +46,24 @@ p::first-line {
 - {{CSSxRef("::cue")}}
   - : 選択した要素内の [WebVTT](/ja/docs/Web/API/WebVTT_API) キュー。
     これは、VTT 予定があるメディアで[キャプションや他のキューのスタイル設定](/ja/docs/Web/API/WebVTT_API#html_またはスタイルシートの中の_webvtt_のスタイル設定)を行うために使用することができます。
-    [CSS 擬似要素](/ja/docs/Web/CSS/Guides/Pseudo-elements)モジュールでは、`::postfix` および `::prefix` サブ擬似要素も定義されています。これらは、どのブラウザーでもまだ対応していません。
+    [CSS 擬似要素](/ja/docs/Web/CSS/Guides/Pseudo-elements)モジュールでは、`::postfix` および `::prefix` サブ擬似要素も定義しています。これらは、どのブラウザーでもまだ対応していません。
 
-## 強調擬似要素
+## ハイライト擬似要素
 
 コンテンツおよび文書の状態に基づいて文書の一部を選択し、その領域に異なるスタイルを設定して、その状態をユーザーに示すことができます。
 
-- {{CSSxRef("::selection")}}
-  - : 文書内の選択された部分。
-- {{CSSxRef("::target-text")}}
-  - : 文書の対象要素。対象要素は、URL のフラグメント識別子を使用して識別されます。
-- {{CSSxRef("::spelling-error")}}
-  - : ブラウザーがスペルミスであると判断した部分のテキストです。
 - {{CSSxRef("::grammar-error")}}
   - : ブラウザーが文法的に間違っていると判断した部分のテキストです。
 - {{CSSxRef("::highlight()")}}
-  - : [強調表示レジストリー](/ja/docs/Web/API/CSS/highlights_static)内の要素。独自の強調表示を作成するために使用されます。
+  - : [ハイライト表示レジストリー](/ja/docs/Web/API/CSS/highlights_static)内の要素。独自のハイライト表示を作成するために使用されます。
+- {{CSSxRef("::search-text")}}
+  - : ユーザーエージェントの「検索」または「ページ内検索」テキスト検索機能によって特定された検索結果です。
+- {{CSSxRef("::selection")}}
+  - : 文書内の選択された部分です。
+- {{CSSxRef("::spelling-error")}}
+  - : ブラウザーがスペルミスであると判断した部分のテキストです。
+- {{CSSxRef("::target-text")}}
+  - : 文書の対象要素。対象要素は、[URL のフラグメント](/ja/docs/Web/URI/Reference/Fragment)識別子を使用して識別されます。
 
 ## ツリー構造準拠擬似要素
 
@@ -88,9 +92,9 @@ p::first-line {
 
 - {{CSSxRef("::details-content")}}
   - : {{HTMLElement("details")}} 要素の展開/折りたたみ可能なコンテンツです。
-- {{CSSxRef("::part", "::part()")}}
+- {{cssxref("::part()")}}
   - : [シャドウツリー](/ja/docs/Web/API/Web_components/Using_shadow_DOM)内に、一致する [`part`](/ja/docs/Web/HTML/Reference/Global_attributes/part) 属性を持つ要素です。
-- {{CSSxRef("::slotted", "::slotted()")}}
+- {{cssxref("::slotted()")}}
   - : HTML テンプレート内のスロットに配置された要素です。
 
 ## フォーム関連擬似要素
@@ -125,7 +129,7 @@ C
 
 - {{CSSxRef("::column")}}
 - {{CSSxRef("::checkmark")}}
-- {{CSSxRef("::cue")}} （および {{CSSxRef("::cue", "::cue()")}}）
+- {{CSSxRef("::cue")}} （および {{cssxref("::cue()")}}）
 
 D
 
@@ -151,7 +155,7 @@ M
 
 P
 
-- {{CSSxRef("::part", "::part()")}}
+- {{cssxref("::part()")}}
 - {{CSSxRef("::picker()")}}
 - {{CSSxRef("::picker-icon")}}
 - {{CSSxRef("::placeholder")}}
@@ -162,7 +166,7 @@ S
 - {{CSSxRef("::scroll-marker")}}
 - {{CSSxRef("::scroll-marker-group")}}
 - {{CSSxRef("::selection")}}
-- {{CSSxRef("::slotted", "::slotted()")}}
+- {{cssxref("::slotted()")}}
 - {{CSSxRef("::spelling-error")}}
 
 T
@@ -177,6 +181,39 @@ V
 - {{cssxref("::view-transition-new()")}}
 - {{cssxref("::view-transition-old()")}}
 
+### 標準外の擬似要素
+
+標準外のベンダー接頭辞付き擬似要素には次のものがあります。
+
+#### `-moz-` 接頭辞
+
+- {{CSSxRef("::-moz-color-swatch")}}
+- {{CSSxRef("::-moz-focus-inner")}}
+- {{CSSxRef("::-moz-list-bullet")}}
+- {{CSSxRef("::-moz-list-number")}}
+- {{CSSxRef("::-moz-meter-bar")}}
+- {{CSSxRef("::-moz-progress-bar")}}
+- {{CSSxRef("::-moz-range-progress")}}
+- {{CSSxRef("::-moz-range-thumb")}}
+- {{CSSxRef("::-moz-range-track")}}
+
+#### `-webkit-` 接頭辞
+
+- {{CSSxRef("::-webkit-inner-spin-button")}}
+- {{CSSxRef("::-webkit-meter-bar")}}
+- {{CSSxRef("::-webkit-meter-even-less-good-value")}}
+- {{CSSxRef("::-webkit-meter-inner-element")}}
+- {{CSSxRef("::-webkit-meter-optimum-value")}}
+- {{CSSxRef("::-webkit-meter-suboptimum-value")}}
+- {{CSSxRef("::-webkit-progress-bar")}}
+- {{CSSxRef("::-webkit-progress-inner-element")}}
+- {{CSSxRef("::-webkit-progress-value")}}
+- {{CSSxRef("::-webkit-scrollbar")}}
+- {{CSSxRef("::-webkit-search-cancel-button")}}
+- {{CSSxRef("::-webkit-search-results-button")}}
+- {{CSSxRef("::-webkit-slider-runnable-track")}}
+- {{CSSxRef("::-webkit-slider-thumb")}}
+
 ## 入れ子の擬似要素
 
 いくつかの擬似要素セレクターを連結して、他の擬似要素の中に入れ子になった擬似要素のスタイルを設定することができます。次の入れ子になった擬似要素の組み合わせに対応しています。
@@ -188,6 +225,96 @@ V
 
 例やブラウザーの互換性情報については、個々の擬似要素のリファレンスページをご覧ください。
 
+## ハイライト擬似要素の継承
+
+[ハイライト擬似要素](#ハイライト擬似要素)、例えば {{CSSxref("::selection")}}、{{CSSxref("::target-text")}}、{{CSSxref("::highlight()")}}、{{CSSxref("::spelling-error")}}、{{CSSxref("::grammar-error")}} などは、[通常の要素継承](/ja/docs/Web/CSS/Guides/Cascade/Inheritance)とは異なる一貫した継承モデルに従います。
+
+擬似要素をハイライト表示するスタイルを適用すると、それらは両方から継承されます。
+
+1. 親要素（通常の継承に従う）
+2. 親要素のハイライト擬似要素（ハイライトの継承に従う）
+
+これは、親要素のハイライト擬似要素と子要素のハイライト擬似要素の両方にスタイルを設定した場合、子要素のハイライト表示されたテキストが両方のソースのプロパティを組み合わせるということです。
+
+具体的な例を挙げます。
+
+まず、2 つのネストされた {{htmlelement("div")}} 要素を含む HTML があります。含まれるテキストコンテンツの一部は親 `<div>` 内に直接含まれ、一部は子 `<div>` 内にネストされています。
+
+```html live-sample___highlight_inheritance
+<div class="parent">
+  親のテキスト
+  <div class="child">子のテキスト</div>
+</div>
+```
+
+次にCSSを組み込みます。親と子の`<div>`要素を別個に選択し、それぞれに異なる {{cssxref("color")}} 値を適用します。さらに親と子の選択テキスト ({{cssxref("::selection")}}) も選択します。これにより、それぞれの `<div>` に異なる {{cssxref("background-color")}} が適用され、親要素の選択範囲には異なるテキスト `color` が設定されます。
+
+```css live-sample___highlight_inheritance
+/* 親要素のスタイル設定 */
+.parent {
+  color: blue;
+}
+
+/* 親要素の選択テキストのスタイル設定 */
+.parent::selection {
+  background-color: yellow;
+  color: red;
+}
+
+/* 子要素のスタイル設定 */
+.child {
+  color: green;
+}
+
+/* 子が選択したテキストのスタイル設定 */
+.child::selection {
+  background-color: orange;
+}
+```
+
+この例は次のように表示されます。
+
+{{EmbedLiveSample("highlight_inheritance", , "150")}}
+
+親要素と子要素の両方でテキストを選択してみてください。次の点に注意してください。
+
+1. 親テキストを選択すると、`.parent::selection` で定義された黄色の背景と赤色のテキスト色が使用されます。
+2. 子テキストを選択すると、次のものを使用します。
+   - `.child::selction` のオレンジ色の背景。
+   - 親要素の `::selection` 擬似要素から継承された赤いテキスト色。
+
+これは、子要素のハイライト擬似要素が、親要素とその親のハイライト擬似要素の両方から継承されることを示しています。
+
+ハイライト擬似要素における [CSS カスタムプロパティ（変数）](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)は、ハイライトの継承チェーンを通じてではなく、元の要素（適用されている要素）から継承されます。例を示します。
+
+```css
+:root {
+  --selection-color: lightgreen;
+}
+
+::selection {
+  color: var(--selection-color);
+}
+
+.blue {
+  --selection-color: blue;
+}
+```
+
+全称セレクターをハイライト擬似要素と併用すると、ハイライトの継承が防止されます。例を示します。
+
+```css
+/* この操作によりハイライトの継承が防止される */
+*::selection {
+  color: lightgreen;
+}
+
+/* 継承をすることができるようにこれを優先する */
+:root::selection {
+  color: lightgreen;
+}
+```
+
 ## 仕様書
 
 {{Specifications}}
@@ -197,4 +324,5 @@ V
 - [CSS 擬似要素](/ja/docs/Web/CSS/Guides/Pseudo-elements)モジュール
 - [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 - [CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors)モジュール
-- [CSS 構成要素: 擬似クラスと擬似要素](/ja/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
+- [学習: 擬似クラスと擬似要素](/ja/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
+- [Inheritance changes for CSS selection styling](https://developer.chrome.com/blog/selection-styling) - Chrome 134におけるハイライト擬似要素の継承モデル変更の詳細な説明
