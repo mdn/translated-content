@@ -3,7 +3,7 @@ title: "Atomics : méthode statique pause()"
 short-title: pause()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/pause
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
 ---
 
 La méthode statique **`pause()`** de l'objet {{JSxRef("Atomics")}} fournit une primitive de micro‑attente qui indique au processeur que l'appelant effectue une boucle d'attente active en attendant l'accès à une ressource partagée. Cela permet au système de réduire les ressources allouées au cœur (par exemple la consommation d'énergie) ou au processus, sans céder l'exécution du processus courant.
@@ -33,7 +33,9 @@ Aucune ({{JSxRef("undefined")}}).
 
 ## Exemples
 
-### Utilisation de `pause()`
+Notez que ces exemples ne peuvent pas être exécutés directement depuis la console ou une page web arbitraire, car `SharedArrayBuffer` n'est pas défini à moins que [ses exigences de sécurité](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#contraintes_de_sécurité) ne soient respectées.
+
+### Utiliser `Atomics.pause()`
 
 Appeler {{JSxRef("Atomics.wait()")}} ou {{JSxRef("Atomics.waitAsync()")}} pour attendre l'accès à une mémoire partagée entraîne la mise hors du cœur du fil d'exécution, puis son retour après l'attente. Cela est efficace en période de forte contention, où l'accès à la mémoire partagée peut prendre un certain temps. Lorsque la contention est faible, il est souvent plus efficace de sonder le verrou sans céder le fil d'exécution&nbsp;: cette approche est connue sous le nom d'[attente active](https://fr.wikipedia.org/wiki/Attente_active) ou de [verrou tournant](https://fr.wikipedia.org/wiki/Spinlock). La méthode `pause()` permet d'effectuer l'attente active de manière plus efficace en fournissant au processeur un indice sur ce que fait le fil d'exécution, et donc sur son faible besoin en ressources.
 
