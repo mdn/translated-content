@@ -3,7 +3,7 @@ title: "Atomics : méthode statique notify()"
 short-title: notify()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/notify
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
 ---
 
 La méthode statique **`notify()`** de l'objet {{JSxRef("Atomics")}} permet de réveiller des agents dormants qui sont dans la file d'attente.
@@ -40,7 +40,9 @@ Retourne le nombre d'agents réveillés, ou `0` si `typedArray` est une vue sur 
 
 ## Exemples
 
-### Utilisation de `notify()`
+Notez que ces exemples ne peuvent pas être exécutés directement depuis la console ou une page web arbitraire, car `SharedArrayBuffer` n'est pas défini à moins que [ses exigences de sécurité](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#contraintes_de_sécurité) ne soient respectées.
+
+### Utiliser `Atomics.notify()`
 
 Étant donné un `Int32Array` partagé&nbsp;:
 
