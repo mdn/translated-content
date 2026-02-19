@@ -129,7 +129,7 @@ promise.then(
 );
 ```
 
-## 関連項目
+## 関連情報
 
 - [関数](/ja/docs/Web/JavaScript/Guide/Functions)ガイド
 - [`function`](/ja/docs/Web/JavaScript/Reference/Statements/function)

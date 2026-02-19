@@ -167,10 +167,10 @@ p {
   <tbody>
     <tr>
       <th>
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#メタデータコンテンツ"
           >メタデータコンテンツ</a
         >
       </td>
@@ -189,7 +189,7 @@ p {
     <tr>
       <th>許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#メタデータコンテンツ"
           >メタデータコンテンツ</a
         >を受け入れるすべての要素
       </td>

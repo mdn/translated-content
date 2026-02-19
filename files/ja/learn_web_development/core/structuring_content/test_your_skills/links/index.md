@@ -1,10 +1,12 @@
 ---
 title: "スキルテスト: リンク"
-short-title: リンク
+short-title: "試験: リンク"
 slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Links
 l10n:
-  sourceCommit: 2f16610802bfbdf6394ca919557a4369b1236e10
+  sourceCommit: 1cf3cb0fb22bf89c780fefe74c3db7f1b9e8ca09
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content")}}
 
 このスキルテストの目的は、あなたが [HTML でのハイパーリンクの実装](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links)を行う方法を理解しているかどうかを評価することです。
 
@@ -14,7 +16,7 @@ l10n:
 > [!NOTE]
 > これらの課題の開始コードにあるリンクの一部には、`target="_blank"` 属性が設定されています。これにより、リンクをクリックすると、同じタブではなく新しいタブでリンク先のページが開きます。これは厳密には最善の手法ではありませんが、MDN Playground の出力 `<iframe>` でページが開いて、サンプルコードが消えてしまうことを避けるために、ここではこの手法を採用しています。
 
-## 課題 1
+## リンク 1
 
 この課題では、クジラの情報ページのリンクを埋めるのを手伝っていただきます。
 
@@ -25,28 +27,32 @@ l10n:
 3. 2 つ目のリンクは、ユーザーの既定のメールアプリケーションで、受信者を "whales\@example.com" に設定してメールを開くためのリンクに変更しましょう。
 4. メールの件名が「クジラについての質問」と自動的に記入されるように設定すると、ボーナスポイントも得られます。
 
-```html live-sample___links-1
-<h1>Information on Whales</h1>
+この課題の出発点は次のようなものです。
+
+{{ EmbedLiveSample('links-1', "100%", 170) }}
+
+この出発点となる基本的なコードは以下の通りです。
+
+```html-nolint live-sample___links-1
+<h1>クジラに関する情報</h1>
 
 <p>
-  For more information on our conservation activities and which Whales we study,
-  see our <a target="_blank">Whales page</a>.
+  当団体の保護活動および調査対象のクジラ種に関する情報は、<a target="_blank">クジラ情報ページ</a>をご覧ください。
 </p>
 
 <p>
-  If you want to ask our team more questions, feel free to
-  <a target="_blank">email us</a>.
+  当団体に質問をしたい場合は、お気軽に<a target="_blank">メールでご連絡ください</a>。
 </p>
 ```
 
-```css hidden live-sample___links-1
+```css hidden live-sample___links-1 live-sample___links-1-finished
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: white;
+  color: #333333;
   font:
-    1em / 1.4 Helvetica Neue,
-    Helvetica,
-    Arial,
+    1em / 1.4 "Helvetica Neue",
+    "Helvetica",
+    "Arial",
     sans-serif;
   padding: 1em;
   margin: 0;
@@ -68,32 +74,30 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('links-1', "100%", 170) }}
+更新されたコンテンツは次のようになります。
+
+{{ EmbedLiveSample('links-1-finished', "100%", 170) }}
 
 <details>
 <summary>ここをクリックすると、模範解答を表示します。</summary>
 
 完了した HTML は、次のようになるはずです。
 
-```html-nolint
-<h1>Information on Whales</h1>
+```html-nolint live-sample___links-1-finished
+<h1>クジラに関する情報</h1>
 
 <p>
-  For more information on our conservation activities and which Whales we study,
-  see our <a target="_blank" href="whales.html" title="Includes information on Blue Whales and Sperm Whales">
-  Whales page</a>.
+  当団体の保護活動および調査対象のクジラ種に関する情報は、<a target="_blank" href="whales.html" title="シロナガスクジラとマッコウクジラに関する情報">クジラ情報ページ</a>をご覧ください。
 </p>
 
 <p>
-  If you want to ask our team more questions, feel free to
-  <a target="_blank" href="mailto:whales@example.com?subject=Question%20about%20Whales">
-  email us</a>.
+  当団体に質問をしたい場合は、お気軽に<a target="_blank" href="mailto:whales@example.com?subject=Question%20about%20Whales">メールでご連絡ください</a>。
 </p>
 ```
 
 </details>
 
-## 課題 2
+## リンク 2
 
 この課題では、4 つのリンクが適切な場所にリンクするように記入していただきます。
 
@@ -104,29 +108,35 @@ p {
 3. 3 つ目のリンクは、UK の Google 画像検索にリンクしてください。ベース URL は `https://www.google.co.uk` で、画像検索は `imghp` というサブディレクトリーに配置されています。
 4. 4 つ目のリンクは、現在のページの一番下にある段落にリンクしましょう。これは `bottom` という ID が付いています。
 
+この課題の出発点は次のようなものです。
+
+{{ EmbedLiveSample('links-2', "100%", 200) }}
+
+この出発点となる基本的なコードは以下の通りです。
+
 ```html live-sample___links-2
-<h1>List path tests</h1>
+<h1>リストのパスの試験</h1>
 
 <ul>
-  <li><a target="_blank">Link me to the blue whale image</a></li>
-  <li><a target="_blank">Link me to the narwhal image</a></li>
-  <li><a target="_blank">Link me to Google image search</a></li>
-  <li><a>Link me to the paragraph at the bottom of the page</a></li>
+  <li><a target="_blank">シロナガスクジラの画像をリンクしてください</a></li>
+  <li><a target="_blank">マッコウクジラの画像をリンクしてください</a></li>
+  <li><a target="_blank">Google 画像検索にリンクしてください</a></li>
+  <li><a>このページの末尾の段落へリンクしてください。</a></li>
 </ul>
 
 <div></div>
 
-<p id="bottom">The bottom of the page!</p>
+<p id="bottom">ページの末尾です。</p>
 ```
 
-```css hidden live-sample___links-2
+```css hidden live-sample___links-2 live-sample___links-2-finished
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: white;
+  color: #333333;
   font:
-    1em / 1.4 Helvetica Neue,
-    Helvetica,
-    Arial,
+    1em / 1.4 "Helvetica Neue",
+    "Helvetica",
+    "Arial",
     sans-serif;
   padding: 1em;
   margin: 0;
@@ -148,72 +158,77 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('links-2', "100%", 200) }}
+更新されたコンテンツは次のようになります。
+
+{{ EmbedLiveSample('links-2-finished', "100%", 200) }}
 
 <details>
 <summary>ここをクリックすると、模範解答を表示します。</summary>
 
 完了した HTML は、次のようになるはずです。
 
-```html-nolint
-<h1>List path tests</h1>
+```html-nolint live-sample___links-2-finished
+<h1>リストのパスの試験</h1>
 
 <ul>
   <li><a target="_blank" href="blue/blue-whale.jpg">
-    Link me to the blue whale image
+    シロナガスクジラの画像をリンクしてください
   </a></li>
   <li><a target="_blank" href="../narwhal/narwhal.jpg">
-    Link me to the narwhal image
+    マッコウクジラの画像をリンクしてください
   </a></li>
   <li><a target="_blank" href="https://www.google.co.uk/imghp">
-    Link me to Google image search
+    Google 画像検索にリンクしてください
   </a></li>
   <li><a href="#bottom">
-    Link me to the paragraph at the bottom of the page
+    このページの末尾の段落へリンクしてください。
   </a></li>
 </ul>
 
 <div></div>
 
-<p id="bottom">The bottom of the page!</p>
+<p id="bottom">ページの末尾です。</p>
 ```
 
 </details>
 
-## 課題 3
+## リンク 3
 
-以下のリンクは、一角獣に関する情報ページ、対応するメールアドレス、および 4MB の PDF ファクトファイルへのリンクです。この課題では、次のことを行ってください。
+以下のリンクは、イッカクに関する情報ページ、対応するメールアドレス、および 4MB の PDF ファクトファイルへのリンクです。この課題では、次のことを行ってください。
 
 この課題を完成させるには、次のようにしてください。
 
 1. リンクテキストの書き方が悪い既存の段落を選び、良いリンクテキストがあるように書き直しましょう。
 2. 警告を追加する必要があるリンクには、警告を追加しましょう。
 
-```html live-sample___links-3
+この課題の出発点は次のようなものです。
+
+{{ EmbedLiveSample('links-3', "100%", 200) }}
+
+この出発点となる基本的なコードは以下の通りです。
+
+```html-nolint live-sample___links-3
 <p>
-  We do lots of work with Narwhals. To find out more about this work,
-  <a href="narwhals.html" target="_blank">click here</a>.
+  私たちはイッカクに関する多くの研究を行っています。この研究について詳しく知りたい方は、<a href="narwhals.html" target="_blank">こちらをクリック</a>してください。
 </p>
 
 <p>
-  You can email our support team if you have any more questions —
-  <a href="mailto:whales@example.com">click here</a> to do so.
+  何か質問がある方は、支援チームにメールを送ってください。<a href="mailto:whales@example.com">ここをクリック</a>すると送ることができます。
 </p>
 
 <p>
-  You can also <a href="factfile.pdf" target="_blank">click here</a> to download
-  our factfile, which contains lots more information, including an FAQ.
+  また、<a href="factfile.pdf" target="_blank">こちらをクリック</a>すると、FAQ を含むさらに詳しい情報が掲載された資料をダウンロードできます。
 </p>
 ```
 
 ```css hidden live-sample___links-3
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: white;
+  color: #333333;
   font:
-    1em / 1.4 Helvetica Neue,
-    Helvetica,
-    Arial,
+    1em / 1.4 "Helvetica Neue",
+    "Helvetica",
+    "Arial",
     sans-serif;
   padding: 1em;
   margin: 0;
@@ -229,7 +244,7 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('links-3', "100%", 200) }}
+この課題の完成したコンテンツは提供しておりません。解決策を明かすことになるためです。
 
 <details>
 <summary>ここをクリックすると、模範解答を表示します。</summary>
@@ -238,17 +253,18 @@ p {
 
 ```html-nolint
 <p>
-  We do lots of work with Narwhals. <a href="narwhals.html" target="_blank">Find out more about this work</a>.
+  私たちはイッカクに関する多くの研究を行っています。<a href="narwhals.html" target="_blank">この研究について詳しく知りましょう</a>。
 </p>
 
 <p>
-  You can <a href="mailto:whales@example.com">email our support team</a> if you have any more questions.
+  何か質問がある方は、<a href="mailto:whales@example.com">支援チームにメールを送ってください</a>。
 </p>
 
 <p>
-  You can also <a href="factfile.pdf" target="_blank">download
-  our factfile</a> (PDF, 4MB), which contains lots more information, including an FAQ.
+  また、FAQ を含むさらに詳しい情報が掲載された<a href="factfile.pdf" target="_blank">資料をダウンロード</a> (PDF, 4MB) できます。
 </p>
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content")}}

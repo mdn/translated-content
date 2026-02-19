@@ -132,18 +132,18 @@ h2 {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >,
-        <a href="/ja/docs/Web/HTML/Content_categories#区分コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#区分コンテンツ"
           >区分コンテンツ</a
         >,
-        <a href="/ja/docs/Web/HTML/Content_categories#知覚可能コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#知覚可能コンテンツ"
           >知覚可能コンテンツ</a
         >
       </td>
@@ -151,7 +151,7 @@ h2 {
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >
       </td>
@@ -163,7 +163,7 @@ h2 {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >を受け入れるすべての要素。ただし、<code>&#x3C;section></code> 要素は
         {{HTMLElement("address")}}

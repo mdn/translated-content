@@ -251,7 +251,7 @@ function displayPoseStats(pose) {
 
 この記事は、WebVR アプリの中で VR ゲームパッドを使うためには、どのように Gamepad Extensions を用いればよいのかというとても基本的な概念を解説したものです。実際の WebVR アプリの中では、VR ゲームパッドのボタンに紐付けられたゲームパッドにより、おそらくより複雑なコントロールシステムをもたせることになるでしょう。 そして、ディスプレイとゲームパッドの両方の情報（位置や方向）を同期的にディスプレイへフィードバックするという複雑な処理を行うことになります。しかし、この記事でやりたかったのは、Gamepad Extensions の中の純粋な Gamepad Extensions 部分を切り分けるということです。
 
-## 関連項目
+## 関連情報
 
 - [WebVR API](/ja/docs/Web/API/WebVR_API)
 - [ゲームパッド API](/ja/docs/Web/API/Gamepad_API)

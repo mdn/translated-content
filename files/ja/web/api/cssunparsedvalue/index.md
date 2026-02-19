@@ -2,14 +2,14 @@
 title: CSSUnparsedValue
 slug: Web/API/CSSUnparsedValue
 l10n:
-  sourceCommit: 930683b0618a36a5bb497cfaedced2f4de767889
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{APIRef("CSS Typed OM")}}
 
-**`CSSUnparsedValue`** は {{domxref('CSS_Object_Model#css_型付きオブジェクトモデル_experimental','CSS 型付きオブジェクトモデル','',' ')}}のインターフェイスで、[カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables)を参照するプロパティ値を表します。これは、文字列の断片と変数の参照のリストから成ります。
+**`CSSUnparsedValue`** は [CSS 型付きオブジェクトモデル](/ja/docs/Web/API/CSS_Object_Model)のインターフェイスで、[カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables)を参照するプロパティ値を表します。これは、文字列の断片と変数の参照のリストから成ります。
 
-カスタムプロパティは `CSSUnparsedValue` と {{cssxref("var", "var()")}} の参照（これは {{domxref('CSSVariableReferenceValue')}} で参照される）で表現されます。
+カスタムプロパティは `CSSUnparsedValue` と {{cssxref("var()")}} の参照（これは {{domxref('CSSVariableReferenceValue')}} で参照される）で表現されます。
 
 {{InheritanceDiagram}}
 

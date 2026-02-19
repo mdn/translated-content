@@ -68,7 +68,7 @@ greet("Howdy"); // "Howdy"
 log({ obj: "value" }); // Object { obj: "value" }
 ```
 
-## 関連項目
+## 関連情報
 
 - 形式的な引数に関係するその他のエラー:
   - [SyntaxError: Malformed formal parameter](/ja/docs/Web/JavaScript/Reference/Errors/Missing_formal_parameter)

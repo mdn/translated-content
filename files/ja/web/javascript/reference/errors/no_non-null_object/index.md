@@ -61,7 +61,7 @@ ws.add({ foo: "bar" });
 ws.add(window);
 ```
 
-## 関連項目
+## 関連情報
 
 - {{jsxref("Object.create()")}}
 - {{jsxref("Object.defineProperty()")}}, {{jsxref("Object.defineProperties()")}}

@@ -1,45 +1,46 @@
 ---
-title: DataView.prototype.byteOffset
+title: "DataView : propriété byteOffset"
+short-title: byteOffset
 slug: Web/JavaScript/Reference/Global_Objects/DataView/byteOffset
+l10n:
+  sourceCommit: 377c7d317e7ffd477bc8b1273f0e215978b76dd1
 ---
 
-{{JSRef}}
+La propriété accesseur **`byteOffset`** des instances de {{JSxRef("DataView")}} retourne le décalage (en octets) de la vue du début de l'objet {{JSxRef("ArrayBuffer")}} ou {{JSxRef("SharedArrayBuffer")}} correspondant.
 
-La propriété **`byteOffset`** est un accesseur représentant le décalage, exprimé en octets, entre la vue et le début de l'objet {{jsxref("ArrayBuffer")}} ou {{jsxref("SharedArrayBuffer")}} correspondant.
-
-{{InteractiveExample("JavaScript Demo: DataView.byteOffset")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: DataView.prototype.byteOffset")}}
 
 ```js interactive-example
-// Create an ArrayBuffer with a size in bytes
+// Créer un ArrayBuffer avec une taille en octets
 const buffer = new ArrayBuffer(16);
 
-const view = new DataView(buffer, 12, 4); // From byte 12 for the next 4 bytes
+const view = new DataView(buffer, 12, 4); // À partir de l'octet 12 pour les 4 octets suivants
 
 console.log(view.byteOffset);
-// Expected output: 12
-```
-
-## Syntaxe
-
-```js
-dataview.byteOffset;
+// Résultat attendu : 12
 ```
 
 ## Description
 
-La propriété `byteOffset` est un accesseur/mutateur dont la fonction du mutateur vaut `undefined`. Cela signifie que la propriété n'est accesssible qu'en lecture seule. La valeur de la propriété est définie lors de la construction de l'objet `DataView` et ne peut pas être modifiée.
+La propriété `byteOffset` est une propriété accesseur dont la fonction d'accesseur d'écriture est `undefined`, ce qui signifie que vous pouvez uniquement lire cette propriété. La valeur est définie lors de la construction du `DataView` et ne peut pas être modifiée. Cependant, la valeur de `byteOffset` devient 0 si le tampon sous-jacent est redimensionné de sorte que la plage visualisée n'est plus valide.
 
 ## Exemples
 
-### Utilisation de la propriété `byteOffset`
+### Utiliser la propriété `byteOffset`
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
+const buffer = new ArrayBuffer(8);
+const dataview = new DataView(buffer);
 dataview.byteOffset; // 0 (aucun décalage)
 
-var dataview2 = new DataView(buffer, 3);
+const dataview2 = new DataView(buffer, 3);
 dataview2.byteOffset; // 3 (décalage défini lors de la construction de la vue)
+
+const buffer2 = new ArrayBuffer(16, { maxByteLength: 32 });
+const dataviewLengthTracking = new DataView(buffer2, 4);
+dataviewLengthTracking.byteOffset; // 4
+buffer2.resize(3);
+dataviewLengthTracking.byteOffset; // 0 (la plage visualisée n'est plus valide)
 ```
 
 ## Spécifications
@@ -52,6 +53,7 @@ dataview2.byteOffset; // 3 (décalage défini lors de la construction de la vue)
 
 ## Voir aussi
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("SharedArrayBuffer")}}
+- Le guide [des tableaux typés JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
+- L'objet {{JSxRef("DataView")}}
+- L'objet {{JSxRef("ArrayBuffer")}}
+- L'objet {{JSxRef("SharedArrayBuffer")}}

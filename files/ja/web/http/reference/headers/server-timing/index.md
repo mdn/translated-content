@@ -60,7 +60,7 @@ Server-Timing: total;dur=123.4
 
 {{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat}}
 
