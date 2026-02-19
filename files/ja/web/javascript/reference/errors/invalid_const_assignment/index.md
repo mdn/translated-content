@@ -91,7 +91,7 @@ obj.foo = "baz";
 obj; // Object { foo: "baz" }
 ```
 
-## 関連項目
+## 関連情報
 
 - [`const`](/ja/docs/Web/JavaScript/Reference/Statements/const)
 - [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let)

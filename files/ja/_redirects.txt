@@ -4796,7 +4796,7 @@
 /ja/docs/Web/CSS/color_value/color-contrast	/ja/docs/Web/CSS/Reference/Values/color_value
 /ja/docs/Web/CSS/color_value/color-mix	/ja/docs/Web/CSS/Reference/Values/color_value/color-mix
 /ja/docs/Web/CSS/color_value/device-cmyk	/ja/docs/Web/CSS/Reference/Values/color_value/device-cmyk
-/ja/docs/Web/CSS/color_value/hexadecimal_rgb	/ja/docs/orphaned/Web/CSS/color_value/hexadecimal_rgb
+/ja/docs/Web/CSS/color_value/hexadecimal_rgb	/ja/docs/Web/CSS/Reference/Values/hex-color
 /ja/docs/Web/CSS/color_value/hsl	/ja/docs/Web/CSS/Reference/Values/color_value/hsl
 /ja/docs/Web/CSS/color_value/hsla	/ja/docs/Web/CSS/Reference/Values/color_value/hsl
 /ja/docs/Web/CSS/color_value/hwb	/ja/docs/Web/CSS/Reference/Values/color_value/hwb

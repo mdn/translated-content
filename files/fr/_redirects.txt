@@ -3315,6 +3315,12 @@
 /fr/docs/Web/CSS/@viewport/viewport-fit	/fr/docs/Web/CSS
 /fr/docs/Web/CSS/@viewport/width	/fr/docs/Web/CSS
 /fr/docs/Web/CSS/@viewport/zoom	/fr/docs/Web/CSS
+/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator	/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator
+/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator	/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator
+/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator	/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator
+/fr/docs/Web/CSS/CSS_colors/Color_format_converter	/fr/docs/Web/CSS/Guides/Colors/Color_format_converter
+/fr/docs/Web/CSS/CSS_colors/Color_mixer	/fr/docs/Web/CSS/Guides/Colors/Color_mixer
+/fr/docs/Web/CSS/CSS_shapes/Shape_generator	/fr/docs/Web/CSS/Guides/Shapes/Shape_generator
 /fr/docs/Web/CSS/Reference/background-blend-mode	/fr/docs/Web/CSS/Reference/Properties/background-blend-mode
 /fr/docs/Web/CSS/Reference/line-break	/fr/docs/Web/CSS/Reference/Properties/line-break
 /fr/docs/Web/CSS/Reference/mix-blend-mode	/fr/docs/Web/CSS/Reference/Properties/mix-blend-mode

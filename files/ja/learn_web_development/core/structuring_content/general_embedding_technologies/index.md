@@ -1,11 +1,10 @@
 ---
 title: object から iframe まで — 一般的な埋め込み技術
+short-title: 埋め込み技術
 slug: Learn_web_development/Core/Structuring_content/General_embedding_technologies
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
 ---
-
-{{LearnSidebar}}
 
 そろそろ、画像、動画、音声を含め、ウェブページに何かを埋め込むコツを実際に使用されていることでしょう。この点では、少し横道にそれて、様々な種類のコンテンツをウェブページに埋め込むことができる要素、{{htmlelement("iframe")}}、{{htmlelement("embed")}}、{{htmlelement("object")}} を見てみたいと思います。 `<iframe>` は他のウェブページを埋め込むためのもので、他の 2 つの要素は PDF ファイルのような外部リソースを埋め込むことができます。
 
@@ -45,154 +44,24 @@ l10n:
 
 歴史の勉強はここまでにして、次にこれらのいくつかを使用する方法を見ていきましょう。
 
-## アクティブラーニング: 従来の埋め込みを使う
+## 古典的埋め込みの用途で遊ぶ
 
-この記事では、埋め込み技術がどのような用途に使用されるかを実感していただくために、アクティブラーニングの節に直接飛び込んでいきます。ネットの世界では [YouTube](https://www.youtube.com/) がとても有名ですが、その共有機能が利用できることを知らない人がたくさんいます。 YouTube では、 {{htmlelement("iframe")}} を使用して、どのようなページにでも動画を埋め込むことができるのかを見てみましょう。
+この記事では、埋め込み技術がどのような用途に有益であるかをすぐに理解していただけるよう、さっそく演習に取り掛かります。ネットの世界では [YouTube](https://www.youtube.com/) がとても有名ですが、その共有機能が利用できることを知らない人がたくさんいます。
 
-1. まず、YouTubeにアクセスして、気に入った動画を探します。
-2. 動画の下に \[共有] ボタンがあるので、これを選択すると共有オプションが表示されます。
-3. \[埋め込む] ボタンを選択すると、いくつかの `<iframe>` コードが指定されます - これをコピーしてください。
-4. これを下の入力ボックスに挿入し、 _ライブ出力_ に結果が表示されるのを確認してください。
+1. まず最初に、[MDN Playground](/ja/play) を開いてください。
+2. それでは、YouTube が {{htmlelement("iframe")}} を使用して任意のページに動画を埋め込むことができる方法を説明します。
+   1. まず、YouTubeにアクセスして、気に入った動画を探します。
+   2. 動画の下に \[共有] ボタンがあるので、これを選択すると共有オプションが表示されます。
+   3. \[埋め込む] ボタンを選択すると、いくつかの `<iframe>` コードが指定されます - これをコピーしてください。
+   4. Playground の HTML ペインに貼り付け、出力に結果が表示されるのを確認してください。
+3. ボーナスポイントとして、Playground の中に [Google マップ](https://www.google.com/maps/)を埋め込むこともできます。
+   1. Google マップへ行き、好きな地図を見つけます。
+   2. UI の左上にある「ハンバーガーメニュー」（3 本の水平線）をクリックします。
+   3. \[地図を共有または埋め込む] オプションを選択します。
+   4. \[地図を埋め込む] オプションを選択します。これは、`<iframe>` コードをいくつか提供します。これをコピーします。
+   5. Playground の HTML ペインに貼り付け、出力に結果が表示されるのを確認してください。
 
-ボーナスポイントとして、例の中に [Google マップ](https://www.google.com/maps/)を埋め込むこともできます。
-
-1. Google マップへ行き、好きな地図を見つけます。
-2. UI の左上にあるハンバーガーメニュー（3 本の水平線）をクリックします。
-3. \[地図を共有または埋め込む] オプションを選択します。
-4. \[地図を埋め込む] オプションを選択します。これは、`<iframe>` コードをいくつか提供します。これをコピーします。
-5. 下の入力ボックスにそれを挿入し、結果が出力にあるかどうかを確認します。
-
-間違えた場合は、\[リセット] ボタンを使用してリセットすることができます。あなたが本当に立ち往生したら、\[答えを表示] ボタンを押して回答を見てください。
-
-```html hidden
-<h2>ライブ出力</h2>
-
-<div class="output" style="min-height: 250px;"></div>
-
-<h2>編集可能なコード</h2>
-<p class="a11y-label">
-  Esc を押すとコード領域からフォーカスを移動させることができます（Tab
-  はタブ文字を挿入します）。
-</p>
-
-<textarea
-  id="code"
-  class="input"
-  style="width: 95%;min-height: 100px;"></textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="リセット" />
-  <input id="solution" type="button" value="答えを表示" />
-</div>
-```
-
-```css hidden
-html {
-  font-family: sans-serif;
-}
-
-h2 {
-  font-size: 16px;
-}
-
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
-}
-
-body {
-  margin: 10px;
-  background: #f5f9fa;
-}
-```
-
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-let code = textarea.value;
-let userEntry = textarea.value;
-
-function updateCode() {
-  output.innerHTML = textarea.value;
-}
-
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "答えを表示";
-  updateCode();
-});
-
-solution.addEventListener("click", function () {
-  if (solution.value === "答えを表示") {
-    textarea.value = solutionEntry;
-    solution.value = "答えを隠す";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "答えを表示";
-  }
-  updateCode();
-});
-
-const htmlSolution =
-  '<iframe width="420" height="315" src="https://www.youtube.com/embed/QH2-TGUlwu4" frameborder="0" allowfullscreen>\n</iframe>\n\n<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37995.65748333395!2d-2.273568166412784!3d53.473310471916975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae6c05743d3d%3A0xf82fddd1e49fc0a1!2sThe+Lowry!5e0!3m2!1sen!2suk!4v1518171785211" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>\n</iframe>';
-let solutionEntry = htmlSolution;
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-
-textarea.onkeydown = function (e) {
-  if (e.code === "Tab") {
-    e.preventDefault();
-    insertAtCaret("\t");
-  }
-
-  if (e.code === "Escape") {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
-
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
-}
-
-// Update the saved userCode every time the user updates the text area code
-
-textarea.onkeyup = function () {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "答えを表示") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-
-  updateCode();
-};
-```
-
-{{ EmbedLiveSample('Active_learning_classic_embedding_uses', 700, 600) }}
+間違えた場合は、Playground の _Reset_ ボタンを使用していつでもリセットできます。
 
 ## iframe の詳細
 
@@ -203,27 +72,19 @@ textarea.onkeyup = function () {
 下記のコードをページに追加した場合、用語集ページではなく、エラーメッセージが表示されることに驚くかもしれません。
 
 ```html
-<head>
-  <style>
-    iframe {
-      border: none;
-    }
-  </style>
-</head>
-<body>
-  <iframe
-    src="https://developer.mozilla.org/ja/docs/Glossary"
-    width="100%"
-    height="500"
-    allowfullscreen
-    sandbox>
-    <p>
-      <a href="/ja/docs/Glossary">
-        iframe に対応していないブラウザーのための代替リンク
-      </a>
-    </p>
-  </iframe>
-</body>
+<iframe
+  src="https://developer.mozilla.org/en-US/docs/Glossary"
+  width="100%"
+  height="500"
+  allowfullscreen
+  sandbox>
+</iframe>
+```
+
+```css
+iframe {
+  border: none;
+}
 ```
 
 ブラウザーでコンソールを見ると、次のようなエラーメッセージが表示されているはずです。
@@ -250,7 +111,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 > [!NOTE]
 > 速度を向上させるためには、メインコンテンツの読み込みが完了した後に iframe の `src` 属性を JavaScript で設定することをお勧めします。これにより、ページがより早く使用できるようになり、公式ページの読み込み時間が短縮されます（重要な {{glossary("SEO")}} の測定基準）。
 
-### セキュリティ上の懸念
+### セキュリティの考慮事項
 
 上記で、セキュリティに関する懸念について触れましたが、ここでもう少し詳しく説明します。私たちは、この内容を最初から完璧に理解してもらうことを期待しているわけではありません。ただ、この懸念に気づいてもらい、経験を積んで `<iframe>` を実験や業務で使用することを考え始めたときに、参考になるような情報を提供したいだけなのです。また、怖がって `<iframe>` を使用しないようにする必要はなく、ただ注意する必要があるだけです。続きを読んでください...
 
@@ -321,25 +182,25 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
   <tbody>
     <tr>
       <td>埋め込みコンテンツの {{glossary("URL")}}</td>
-      <td><a href="/ja/docs/Web/HTML/Element/embed#src"><code>src</code></a></td>
-      <td><a href="/ja/docs/Web/HTML/Element/object#data"><code>data</code></a></td>
+      <td><a href="/ja/docs/Web/HTML/Reference/Elements/embed#src"><code>src</code></a></td>
+      <td><a href="/ja/docs/Web/HTML/Reference/Elements/object#data"><code>data</code></a></td>
     </tr>
     <tr>
       <td>
         埋め込みコンテンツの<em>正確な</em>{{glossary("MIME type", 'メディア種別')}}
       </td>
-      <td><a href="/ja/docs/Web/HTML/Element/embed#type"><code>type</code></a></td>
-      <td><a href="/ja/docs/Web/HTML/Element/object#type"><code>type</code></a></td>
+      <td><a href="/ja/docs/Web/HTML/Reference/Elements/embed#type"><code>type</code></a></td>
+      <td><a href="/ja/docs/Web/HTML/Reference/Elements/object#type"><code>type</code></a></td>
     </tr>
     <tr>
       <td>
         プラグインで制御されるボックスの幅と高さ（CSS ピクセル単位）
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/embed#height"><code>height</code></a><br /><a href="/ja/docs/Web/HTML/Element/embed#width"><code>width</code></a>
+        <a href="/ja/docs/Web/HTML/Reference/Elements/embed#height"><code>height</code></a><br /><a href="/ja/docs/Web/HTML/Reference/Elements/embed#width"><code>width</code></a>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/object#height"><code>height</code></a><br /><a href="/ja/docs/Web/HTML/Element/object#width"><code>width</code></a>
+        <a href="/ja/docs/Web/HTML/Reference/Elements/object#height"><code>height</code></a><br /><a href="/ja/docs/Web/HTML/Reference/Elements/object#width"><code>width</code></a>
       </td>
     </tr>
     <tr>
@@ -369,4 +230,4 @@ PDF は紙とデジタルの間の必要な足がかりでしたが、多くの[
 
 ウェブ文書に他のコンテンツを埋め込むという話題は、すぐに複雑になりがちです。そこでこの記事では、関連する技術のより高度な機能のいくつかを示唆しつつ、すぐに関連性が感じられるような、シンプルで身近な方法でそれを紹介しようと試みました。はじめのうちは、地図や動画のようなサードパーティーのコンテンツをページに記載する以上の目的で、埋め込みを使用することはあまりないと思われます。しかし、経験を積むにつれて、より多くの使用方法を見つけることができるようになるはずです。
 
-ここで説明したもの以外にも、外部コンテンツの埋め込みを含む他の多くの技術があります。以前の記事では {{htmlelement("video")}}、{{htmlelement("audio")}}、{{htmlelement("img")}} などいくつかを見ましたが、JavaScript で生成された 2D および 3D グラフィックの場合は {{htmlelement("canvas")}}、ベクターグラフィックス埋め込む場合は {{SVGElement("svg")}} など、他にも見い出されるものがあります。モジュールの次の記事では [SVG](/ja/docs/Web/SVG) を見ていきます。
+ここで説明したもの以外にも、外部コンテンツの埋め込みを含む他の多くの技術があります。以前の記事では {{htmlelement("video")}}、{{htmlelement("audio")}}、{{htmlelement("img")}} などいくつかを見ましたが、JavaScript で生成された 2D および 3D グラフィックの場合は {{htmlelement("canvas")}}、ベクターグラフィックス埋め込む場合は {{SVGElement("svg")}} など、他にも見い出されるものがあります。

@@ -94,16 +94,16 @@ Safari 13 のリリース以前は、 `contentinfo` の[ランドマークロー
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, 知覚可能コンテンツ
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>, 知覚可能コンテンツ
       </td>
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>。ただし、子孫に他の <code>&#x3C;footer></code> や
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>。ただし、子孫に他の <code>&#x3C;footer></code> や
         {{HTMLElement("header")}} がないもの。
       </td>
     </tr>
@@ -114,7 +114,7 @@ Safari 13 のリリース以前は、 `contentinfo` の[ランドマークロー
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素。ただし、
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素。ただし、
         {{HTMLElement("address")}}, {{HTMLElement("header")}},
         他の <code>&#x3C;footer></code> の子孫要素として配置してはならない。
       </td>
