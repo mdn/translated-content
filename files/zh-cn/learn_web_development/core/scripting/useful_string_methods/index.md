@@ -345,7 +345,6 @@ MAN: Manchester Piccadilly
 4. 将两个新变量和一个字符串字面量拼接起来，制成最终字符串。
 5. 将 `result` 变量的值改为最终的字符串，而不是 `station`。
 
-
 ```html hidden live-sample___string-methods-3
 <ul></ul>
 ```
