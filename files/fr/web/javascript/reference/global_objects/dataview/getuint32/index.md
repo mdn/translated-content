@@ -1,59 +1,57 @@
 ---
-title: DataView.prototype.getUint32()
+title: "DataView : méthode getUint32()"
+short-title: getUint32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint32
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`getUint32()`** des instances de {{JSxRef("DataView")}} lit 4 octets à partir du décalage d'octet défini de cette `DataView` et les interprète comme un entier non-signé sur 32 bits. Il n'y a pas de contrainte d'alignement&nbsp;; les valeurs sur plusieurs octets peuvent être obtenues depuis n'importe quel décalage valide.
 
-La méthode **`getUint32()`** permet de lire un entier non-signé sur 32 bits (type _unsigned long_ par analogie avec C) à l'octet donné par rapport au début de {{jsxref("DataView")}}.
-
-{{InteractiveExample("JavaScript Demo: DataView.getUint32()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: DataView.prototype.getUint32()")}}
 
 ```js interactive-example
-// Create an ArrayBuffer with a size in bytes
+// Créer un ArrayBuffer avec une taille en octets
 const buffer = new ArrayBuffer(16);
 
 const view = new DataView(buffer);
-view.setUint32(1, 4294967295); // Max unsigned 32-bit integer
+view.setUint32(1, 4294967295); // Entier non-signé sur 32 bits maximum
 
 console.log(view.getUint32(1));
-// Expected output: 4294967295
+// Résultat attendu : 4294967295
 ```
 
 ## Syntaxe
 
-```js
-dataview.getUint32(positionOctet [, littleEndian])
+```js-nolint
+getUint32(byteOffset)
+getUint32(byteOffset, littleEndian)
 ```
 
 ### Paramètres
 
-- `positionOctet`
+- `byteOffset`
   - : La position, exprimée en nombre d'octets depuis le début de la vue, à laquelle lire les données.
-- `littleEndian`
-  - : {{optional_inline}} indique si la valeur sur 32 bits est enregistrée dans l'ordre des octets {{Glossary("Endianness", "de poids faible")}}. Si le paramètre vaut `false` ou `undefined`, la valeur sera lue dans l'ordre des octets de poids forts.
+- `littleEndian` {{Optional_Inline}}
+  - : Indique si les données sont stockées au format {{Glossary("Endianness", "gros-boutiste ou petit-boutiste")}}. Si la valeur est `false` ou `undefined`, une valeur gros-boutiste est lue.
 
 ### Valeur de retour
 
-Un entier sur 32 bits, non-signé.
+Un entier compris entre 0 et 4294967295 inclus.
 
-### Erreurs renvoyées
+### Exceptions
 
-- {{jsxref("RangeError")}}
-  - : Renvoyée si `positionOctet` est tel qu'il est en dehors de la vue.
-
-## Description
-
-Il n'y a pas de contrainte d'alignement, les valeurs codées sur plusieurs octets peuvent être obtenues depuis n'importe quelle position.
+- {{JSxRef("RangeError")}}
+  - : Levée si le paramètre `byteOffset` est défini de façon à lire au-delà de la fin de la vue.
 
 ## Exemples
 
-### Utilisation de la méthode `getUint32()`
+### Utiliser la méthode `getUint32()`
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.getUint32(1); // 0
+const { buffer } = new Uint8Array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+const dataview = new DataView(buffer);
+console.log(dataview.getUint32(1)); // 16909060
 ```
 
 ## Spécifications
@@ -66,5 +64,7 @@ dataview.getUint32(1); // 0
 
 ## Voir aussi
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- Le guide [des tableaux typés JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
+- L'objet {{JSxRef("DataView")}}
+- L'objet {{JSxRef("ArrayBuffer")}}
+- L'objet {{JSxRef("Uint32Array")}}
