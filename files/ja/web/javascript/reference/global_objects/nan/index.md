@@ -87,7 +87,7 @@ isNaN(1n); // TypeError: Conversion from 'BigInt' to 'number' is not allowed.
 Number.isNaN(1n); // false
 ```
 
-さらに、配列メソッドの中には `NaN` を探せないものもあれば、探せるものもあります。具体的には、インデックス検索メソッド（{{jsxref("Array/indexOf", "indexOf()")}}、{{jsxref("Array/lastIndexOf", "lastIndexOf()")}}）は `NaN` を探すことはできませんが、値検索メソッド（{{jsxref("Array/includes", "includes()")}}）は探すことができます：
+さらに、配列メソッドの中には `NaN` を探せないものもあれば、探せるものもあります。具体的には、インデックス検索メソッド（{{jsxref("Array/indexOf", "indexOf()")}}、{{jsxref("Array/lastIndexOf", "lastIndexOf()")}}）は `NaN` を探すことはできませんが、値検索メソッド（{{jsxref("Array/includes", "includes()")}}）は探すことができます。
 
 ```js
 const arr = [2, 4, NaN, 12];

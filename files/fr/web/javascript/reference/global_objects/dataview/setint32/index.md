@@ -1,58 +1,60 @@
 ---
-title: DataView.prototype.setInt32()
+title: "DataView : méthode setInt32()"
+short-title: setInt32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setInt32
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`setInt32()`** des instances de {{JSxRef("DataView")}} prend un nombre et l'enregistre comme un entier signé sur 32 bits dans les 4 octets à partir du décalage d'octet défini de cette `DataView`. Il n'y a pas de contrainte d'alignement&nbsp;; les valeurs sur plusieurs octets peuvent être enregistrées à n'importe quel décalage valide.
 
-La méthode **`setInt32()`** permet d'enregister un entier signé sur 32 bits (type _long_ par analogie avec C) à l'octet indiqué par rapport au début de la {{jsxref("DataView")}}.
-
-{{InteractiveExample("JavaScript Demo: DataView.setInt32()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: DataView.prototype.setInt32()")}}
 
 ```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+// Créer un ArrayBuffer avec une taille en octets
+const buffer = new ArrayBuffer(32);
 
 const view = new DataView(buffer);
-view.setInt32(1, 2147483647); // Max signed 32-bit integer
+view.setInt32(1, 2147483647); // Valeur maximale pour un entier signé sur 32 bits
 
 console.log(view.getInt32(1));
-// Expected output: 2147483647
+// Résultat attendu : 2147483647
 ```
 
 ## Syntaxe
 
-```js
-dataview.setInt32(positionOctet, value [, littleEndian])
+```js-nolint
+setInt32(byteOffset, value)
+setInt32(byteOffset, value, littleEndian)
 ```
 
 ### Paramètres
 
-- `positionOctet`
-  - : La position, exprimée en numéro d'octet, à partir du début de la vue à laquelle enregistrer la donnée.
-- `valeur`
-  - : La valeur à enregistrer
-- `littleEndian`
-  - : {{optional_inline}} Indique si la donnée sur 32 bits est enregistrée {{Glossary("Endianness", "dans l'ordre des octets de poids faibles")}}. Si ce paramètre vaut `false` ou `undefined`, l'ordre sera celui des octets de poids forts.
+- `byteOffset`
+  - : Le décalage, en octets, depuis le début de la vue où enregistrer la donnée.
+- `value`
+  - : La valeur à enregistrer comme {{JSxRef("BigInt")}}. Pour savoir comment la valeur est encodée en octets, voir [Encodage et normalisation des valeurs](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#encodage_et_normalisation_des_valeurs).
+- `littleEndian` {{Optional_Inline}}
+  - : Indique si les données sont stockées au format {{Glossary("Endianness", "gros-boutiste ou petit-boutiste")}}. Si la valeur est `false` ou `undefined`, une valeur gros-boutiste est écrite.
 
 ### Valeur de retour
 
-{{jsxref("undefined")}}.
+Aucune ({{JSxRef("undefined")}}).
 
-### Erreurs renvoyées
+### Exceptions
 
-- {{jsxref("RangeError")}}
-  - : Renvoyée si `positionOctet` est tel que l'enregistrement sera fait en dehors de la vue.
+- {{JSxRef("RangeError")}}
+  - : Levée si le paramètre `byteOffset` est défini de façon à enregistrer au-delà de la fin de la vue.
 
 ## Exemples
 
-### Utilisation de la méthode `setInt32`
+### Utiliser la méthode `setInt32()`
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.setInt32(1, 3);
-dataview.getInt32(1); // 3
+const buffer = new ArrayBuffer(10);
+const dataview = new DataView(buffer);
+dataview.setInt32(0, 3);
+dataview.getInt32(1); // 50331648
 ```
 
 ## Spécifications
@@ -65,5 +67,7 @@ dataview.getInt32(1); // 3
 
 ## Voir aussi
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- Le guide [des tableaux typés JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
+- L'objet {{JSxRef("DataView")}}
+- L'objet {{JSxRef("ArrayBuffer")}}
+- L'objet {{JSxRef("Int32Array")}}

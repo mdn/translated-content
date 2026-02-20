@@ -63,7 +63,7 @@ HTML 自体では、構文エラーの問題は生じません。ブラウザー
 
 例えば、次の HTML スニペットには誤って入れ子になった要素が含まれています。
 
-```html example-bad
+```html-nolint example-bad
 <p><em>隣の家の<strong>猫</em></strong>をここで見つけるとは思わなかった！</p>
 ```
 
@@ -71,7 +71,7 @@ HTML 自体では、構文エラーの問題は生じません。ブラウザー
 
 この HTML をブラウザーに読み込んだ後、[レンダリングされた DOM](/ja/docs/Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites#handling_html)を見てみると、ブラウザーによって入れ子構造が修正されていることがわかります：
 
-```html example-good
+```html-nolint example-good
 <p>
   <em>隣の家の<strong>猫</strong></em>をここで見つけるとは思わなかった！
 </p>

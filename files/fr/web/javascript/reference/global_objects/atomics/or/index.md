@@ -3,26 +3,10 @@ title: "Atomics : méthode statique or()"
 short-title: or()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/or
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
 ---
 
 La méthode statique **`or()`** de l'objet {{JSxRef("Atomics")}} calcule un OU binaire entre une valeur donnée et la valeur présente à une position donnée du tableau, et retourne l'ancienne valeur à cette position. Cette opération atomique garantit qu'aucune autre écriture n'intervient tant que la valeur modifiée n'a pas été réinscrite.
-
-{{InteractiveExample("Démonstration JavaScript&nbsp;: Atomics.or()")}}
-
-```js interactive-example
-// Crée un SharedArrayBuffer avec une taille en octets
-const buffer = new SharedArrayBuffer(16);
-const uint8 = new Uint8Array(buffer);
-uint8[0] = 5;
-
-// 5 (0101) OR 2 (0010) = 7 (0111)
-console.log(Atomics.or(uint8, 0, 2));
-// Résultat attendu : 5
-
-console.log(Atomics.load(uint8, 0));
-// Résultat attendu : 7
-```
 
 ## Syntaxe
 
@@ -72,15 +56,20 @@ Par exemple, un OU binaire de `5 | 1` retourne `0101`, ce qui correspond à 5 en
 
 ## Exemples
 
-### Utilisation de `or()`
+Notez que ces exemples ne peuvent pas être exécutés directement depuis la console ou une page web arbitraire, car `SharedArrayBuffer` n'est pas défini à moins que [ses exigences de sécurité](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#contraintes_de_sécurité) ne soient respectées.
+
+### Utiliser `Atomics.or()`
 
 ```js
+// Crée un SharedArrayBuffer avec une taille en octets
 const sab = new SharedArrayBuffer(1024);
+// Crée une vue et définit la valeur de l'index 0
 const ta = new Uint8Array(sab);
-ta[0] = 2;
+ta[0] = 7;
 
-Atomics.or(ta, 0, 1); // retourne 2, l'ancienne valeur
-Atomics.load(ta, 0); // 3
+// 7 (0111) OR 10 (1010) = 15 (1111)
+console.log(Atomics.or(ta, 0, 10)); // 7, l'ancienne valeur
+console.log(Atomics.load(ta, 0)); // 15, la nouvelle/valeur actuelle
 ```
 
 ## Spécifications

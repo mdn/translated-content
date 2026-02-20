@@ -2,7 +2,7 @@
 title: Atomics
 slug: Web/JavaScript/Reference/Global_Objects/Atomics
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
 ---
 
 L'objet de l'espace de noms **`Atomics`** contient des méthodes statiques permettant d'effectuer des opérations atomiques. Elles sont utilisées avec les objets {{JSxRef("SharedArrayBuffer")}} et {{JSxRef("ArrayBuffer")}}.
@@ -57,7 +57,9 @@ Les méthodes `wait()` et `notify()` sont modélisées sur les futex Linux «&nb
 
 ## Exemples
 
-### Utilisation de `Atomics`
+Notez que ces exemples ne peuvent pas être exécutés directement depuis la console ou une page web arbitraire, car `SharedArrayBuffer` n'est pas défini à moins que [ses exigences de sécurité](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#contraintes_de_sécurité) ne soient respectées.
+
+### Utiliser `Atomics`
 
 ```js
 const sab = new SharedArrayBuffer(1024);

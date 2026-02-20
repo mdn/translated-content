@@ -125,7 +125,10 @@ l10n:
   <source src="rabbit320.mp4" type="video/mp4" />
   <source src="rabbit320.webm" type="video/webm" />
   <p>
-    お使いのブラウザーはこの動画に対応していません。代わりの<a href="rabbit320.mp4">動画へのリンク</a>があります。
+    お使いのブラウザーはこの動画に対応していません。代わりの<a
+      href="rabbit320.mp4"
+      >動画へのリンク</a
+    >があります。
   </p>
 </video>
 ```
@@ -194,7 +197,10 @@ HTML 動画に含めることができる他の多くの機能があります。
   <source src="viper.mp3" type="audio/mp3" />
   <source src="viper.ogg" type="audio/ogg" />
   <p>
-    お使いのブラウザーはこの音声ファイルに対応していません。代わりに<a href="viper.mp3">音声へのリンク</a>をお使いください。
+    お使いのブラウザーはこの音声ファイルに対応していません。代わりに<a
+      href="viper.mp3"
+      >音声へのリンク</a
+    >をお使いください。
   </p>
 </audio>
 ```
@@ -298,7 +304,9 @@ WEBVTT
   <source src="rabbit320.mp4" type="video/mp4" />
   <source src="rabbit320.webm" type="video/webm" />
   <p>
-    このブラウザーは HTML 動画に対応していません。<a href="rabbit320.mp4">動画へのリンク</a>はこちらです。
+    このブラウザーは HTML 動画に対応していません。<a href="rabbit320.mp4"
+      >動画へのリンク</a
+    >はこちらです。
   </p>
 </video>
 
@@ -306,7 +314,10 @@ WEBVTT
   <source src="viper.mp3" type="audio/mp3" />
   <source src="viper.ogg" type="audio/ogg" />
   <p>
-    このブラウザーは HTML 音声に非対応です。代わりに音声ファイルへの<a href="viper.mp3">リンク</a>をこちらに用意しました。
+    このブラウザーは HTML 音声に非対応です。代わりに音声ファイルへの<a
+      href="viper.mp3"
+      >リンク</a
+    >をこちらに用意しました。
   </p>
 </audio>
 ```

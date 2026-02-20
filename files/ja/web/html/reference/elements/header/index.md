@@ -86,7 +86,7 @@ header > time {
 
 ### 記事のヘッダー
 
-```html
+```html-nolint
 <article>
   <header>
     <h2>プランテットアース</h2>

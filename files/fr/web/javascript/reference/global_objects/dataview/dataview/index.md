@@ -1,56 +1,56 @@
 ---
 title: Constructeur DataView()
+short-title: DataView()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/DataView
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+Le constructeur **`DataView()`** permet de construire des objets {{JSxRef("DataView")}}.
 
-Le constructeur **`DataView()`** permet de construire des objets [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView).
-
-{{InteractiveExample("JavaScript Demo: DataView Constructor")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: constructeur DataView")}}
 
 ```js interactive-example
-// Create an ArrayBuffer with a size in bytes
+// Créer un ArrayBuffer avec une taille en octets
 const buffer = new ArrayBuffer(16);
 
-// Create a couple of views
+// Créer deux vues
 const view1 = new DataView(buffer);
-const view2 = new DataView(buffer, 12, 4); // From byte 12 for the next 4 bytes
-view1.setInt8(12, 42); // Put 42 in slot 12
+const view2 = new DataView(buffer, 12, 4); // À partir de l'octet 12 pour les 4 octets suivants
+view1.setInt8(12, 42); // Mettre 42 dans l'emplacement 12
 
 console.log(view2.getInt8(0));
-// Expected output: 42
+// Résultat attendu : 42
 ```
 
 ## Syntaxe
 
-```js
-new DataView(buffer);
-new DataView(buffer, decalageOctets);
-new DataView(buffer, decalageOctets, longueurOctets);
+```js-nolint
+new DataView(buffer)
+new DataView(buffer, byteOffset)
+new DataView(buffer, byteOffset, byteLength)
 ```
+
+> [!NOTE]
+> `DataView()` ne peut être construit qu'avec [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new). Tenter de l'appeler sans `new` déclenche une erreur {{JSxRef("TypeError")}}.
 
 ### Paramètres
 
 - `buffer`
-  - : Un objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) ou [`SharedArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) existant à utiliser comme tampon de mémoire sur lequel portera la vue formée par le nouvel objet `DataView`.
-- `decalageOctets` {{optional_inline}}
+  - : Un objet {{JSxRef("ArrayBuffer")}} ou {{JSxRef("SharedArrayBuffer")}} existant à utiliser comme tampon de mémoire sur lequel portera la vue formée par le nouvel objet `DataView`.
+- `byteOffset` {{Optional_Inline}}
   - : Le décalage, exprimé en octets, du premier octet référencé par la vue par rapport au tampon de mémoire. Par défaut, la vue commence au premier octet du tampon de mémoire.
-- `longueurOctets` {{optional_inline}}
+- `byteLength` {{Optional_Inline}}
   - : Le nombre d'éléments dans le tableau des octets de la vue. Par défaut, la longueur de la vue correspondra à celle du tampon.
 
 ### Valeur de retour
 
-Un nouvel objet `DataView` qui fournit une vue sur le tampon de mémoire passé en argument.
-
-Cet objet peut être vu comme un interpréteur du tableau d'octets fourni par le tampon de mémoire. Il permet de convertir les nombres afin qu'ils soient correctement écrits ou lus dans le tampon (ce qui inclut la gestion des entiers, la conversion des flottants, le boutisme, ainsi que les autres détails quant à la représentation binaire des nombres).
+Un nouvel objet {{JSxRef("DataView")}} représentant le tampon de données défini.
 
 ### Exceptions
 
-- [`RangeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RangeError)
-  - : Levée si les valeurs des paramètres `decalageOctets` ou `longueurOctets` entraînent un dépassement de la vue après la fin du tampon.
-
-    Ainsi, si le tampon de mémoire mesure 16 octets, que la valeur fournie pour `decalageOctets` est 8, et que celle fournie pour `longueurOctets` est 10, cette exception sera déclenchée, car la vue résultante dépassera de deux octets la taille du tampon.
+- {{JSxRef("RangeError")}}
+  - : Levée si les valeurs des paramètres `byteOffset` ou `byteLength` font que la vue dépasse la fin du tampon. En d'autres termes, `byteOffset + byteLength > buffer.byteLength`.
 
 ## Exemples
 
@@ -74,5 +74,5 @@ view.getInt16(1); // 42
 
 ## Voir aussi
 
-- [Une prothèse d'émulation pour `DataView` avec la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView)
+- [Une prothèse d'émulation pour `DataView` avec la bibliothèque `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- L'objet {{JSxRef("DataView")}}

@@ -1,9 +1,8 @@
 ---
 title: text-box-edge
 slug: Web/CSS/Reference/Properties/text-box-edge
-original_slug: Web/CSS/text-box-edge
 l10n:
-  sourceCommit: 9cc1f40340f37fa05d6573cc519c9844fa4940be
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`text-box-edge`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキスト要素のブロックコンテナーから切り取る空間の大きさを指定します。
@@ -124,7 +123,7 @@ p {
 
 ### 対話的な `text-box-edge` 値の比較
 
-完全な対話型の `text-box-edge` の例については、[text-box-trim ページ](/ja/docs/Web/CSS/Reference/Properties/text-box-trim#interactive_text-box-trim_and_text-box-edge_value_comparison)をご覧ください。
+完全な対話型の `text-box-edge` の例については、[`text-box-trim` のページ](/ja/docs/Web/CSS/Reference/Properties/text-box-trim#対話的な_text-box-trim_および_text-box-edge_の値の比較)をご覧ください。
 
 ## 仕様書
 

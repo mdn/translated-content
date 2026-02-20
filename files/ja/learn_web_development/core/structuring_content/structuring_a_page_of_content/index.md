@@ -255,7 +255,7 @@ CSS を使用してレイアウトできるようにコンテンツのページ�
 
 完了した HTML は、次のようになるはずです。
 
-```html
+```html-nolint
 <!doctype html>
 <html lang="ja">
   <head>

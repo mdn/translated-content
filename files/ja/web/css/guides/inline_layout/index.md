@@ -1,9 +1,9 @@
 ---
 title: CSS インラインレイアウト
+short-title: インラインレイアウト
 slug: Web/CSS/Guides/Inline_layout
-original_slug: Web/CSS/CSS_inline_layout
 l10n:
-  sourceCommit: 113279ab09692d869866519106e25cba8a20abb8
+  sourceCommit: caab35a9191642d8d0362bba385f260b40683ccf
 ---
 
 **CSS インラインレイアウト**モジュールは、インラインレベルのコンテンツのブロック軸配置とサイズを定義し、ドロップキャップ用の特別なレイアウトモードを追加します。 コンテナー内の要素とテキストの流れを複数行にわたって折り返すための CSS 整形モデルを記述しています。
@@ -13,6 +13,8 @@ l10n:
 ### プロパティ
 
 - {{cssxref("alignment-baseline")}}
+- {{cssxref("baseline-shift")}}
+- {{cssxref("baseline-source")}}
 - {{cssxref("dominant-baseline")}}
 - {{cssxref("initial-letter")}}
 - {{cssxref("line-height")}}
@@ -21,13 +23,13 @@ l10n:
 - {{cssxref("text-box")}} 一括指定
 - {{cssxref("vertical-align")}}
 
-この仕様では、`baseline-shift`、`baseline-source`、`initial-letter-align`、`initial-letter-wrap`、`inline-sizing`、`line-fit-edge` の各プロパティも定義していますが、これらは現時点ではどのブラウザーも対応していません。
+この仕様書は、`initial-letter-align`、`initial-letter-wrap`、`inline-sizing`、`line-fit-edge` の各プロパティも定義していますが、これらは現時点ではどのブラウザーも対応していません。
 
 ### データ型
 
 - {{cssxref("&lt;text-edge&gt;")}}
 
-### 用語集の用語
+### 用語解説
 
 - {{glossary("baseline/typography", "ベースライン")}}
 - {{glossary("leading", "行送り")}}

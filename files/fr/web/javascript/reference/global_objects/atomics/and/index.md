@@ -3,26 +3,10 @@ title: "Atomics : méthode statique and()"
 short-title: and()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/and
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
 ---
 
 La méthode statique **`and()`** de l'objet {{JSxRef("Atomics")}} calcule un ET binaire avec une valeur donnée, à un emplacement donné du tableau. Elle renvoie l'ancienne valeur qui était contenue à cet emplacement. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
-
-{{InteractiveExample("Démonstration JavaScript&nbsp;: Atomics.and()")}}
-
-```js interactive-example
-// Crée un SharedArrayBuffer avec une taille en octets
-const buffer = new SharedArrayBuffer(16);
-const uint8 = new Uint8Array(buffer);
-uint8[0] = 7;
-
-// 7 (0111) AND 2 (0010) = 2 (0010)
-console.log(Atomics.and(uint8, 0, 2));
-// Résultat attendu : 7
-
-console.log(Atomics.load(uint8, 0));
-// Résultat attendu : 2
-```
 
 ## Syntaxe
 
@@ -72,15 +56,20 @@ Ainsi, si on calcule le ET binaire de 5 et 1 avec l'instruction `5 & 1`, cela fo
 
 ## Exemples
 
-### Utilisation de `and()`
+Notez que ces exemples ne peuvent pas être exécutés directement depuis la console ou une page web arbitraire, car `SharedArrayBuffer` n'est pas défini à moins que [ses exigences de sécurité](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#contraintes_de_sécurité) ne soient respectées.
+
+### Utiliser `Atomics.and()`
 
 ```js
+// Crée un SharedArrayBuffer avec une taille en octets
 const sab = new SharedArrayBuffer(1024);
+// Crée une vue et définit la valeur de l'index 0
 const ta = new Uint8Array(sab);
-ta[0] = 5;
+ta[0] = 7;
 
-Atomics.and(ta, 0, 1); // retourne 5, l'ancienne valeur
-Atomics.load(ta, 0); // 1
+// 7 (0111) AND 10 (1010) = 2 (0010)
+console.log(Atomics.and(ta, 0, 10)); // retourne 7, l'ancienne valeur
+console.log(Atomics.load(ta, 0)); // 2, la nouvelle/valeur actuelle
 ```
 
 ## Spécifications

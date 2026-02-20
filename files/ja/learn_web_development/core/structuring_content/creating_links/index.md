@@ -250,7 +250,7 @@ img {
 
 最上位の `index.html` 内に `projects/index.html` を指すハイパーリンクを設置する場合は、リンクしたいファイルを指定する前に `projects` ディレクトリーに移動する必要があります。これはディレクトリーの名前、スラッシュ、そしてファイルの名前を指定することでできます。そのため使用する URL は `projects/index.html` です。
 
-```html
+```html-nolint
 <p><a href="projects/index.html">プロジェクトホームページ</a>をご覧ください。</p>
 ```
 

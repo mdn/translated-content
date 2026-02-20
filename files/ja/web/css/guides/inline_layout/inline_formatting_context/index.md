@@ -1,9 +1,8 @@
 ---
 title: インライン整形コンテキスト
 slug: Web/CSS/Guides/Inline_layout/Inline_formatting_context
-original_slug: Web/CSS/CSS_inline_layout/Inline_formatting_context
 l10n:
-  sourceCommit: 113279ab09692d869866519106e25cba8a20abb8
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 このガイドでは、インライン整形コンテキストについて説明します。
@@ -108,7 +107,7 @@ span {
 {{EmbedLiveSample("mbp", "", "340px")}}
 
 > [!NOTE]
-> 私は、テキストが水平でも垂直でもインライン次元で動作するように、論理的なフロー相対プロパティ（{{cssxref("padding-left")}} ではなく {{cssxref("padding-inline-start")}}）を使用しています。これらのプロパティの詳細については、「[論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)」をご覧ください。
+> 私は、テキストが水平でも垂直でもインライン次元で動作するように、論理的なフロー相対プロパティ（{{cssxref("padding-left")}} ではなく {{cssxref("padding-inline-start")}}）を使用しています。これらのプロパティの詳細については、[論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)をご覧ください。
 
 ## ブロック方向の配置
 

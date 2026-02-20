@@ -1,9 +1,8 @@
 ---
 title: vertical-align
 slug: Web/CSS/Reference/Properties/vertical-align
-original_slug: Web/CSS/vertical-align
 l10n:
-  sourceCommit: c8ff2398fa61950fe46f2d9155a105c125bfea83
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`vertical-align`** は [CSS](/ja/docs/Web/CSS) のプロパティで、インラインボックス、インラインブロック、表セルボックスの垂直方向の配置を設定します。
@@ -243,17 +242,19 @@ p {
 
 ```html live-sample___vertical_alignment_in_a_table_cell
 <table>
-  <tr class="bottom">
-    <td class="baseline">baseline</td>
-    <td class="top">top</td>
-    <td class="middle">middle</td>
-    <td>bottom</td>
-    <td>Row's style</td>
-    <td>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-      pretium felis eu sem mattis vulputate.
-    </td>
-  </tr>
+  <tbody>
+    <tr class="bottom">
+      <td class="baseline">baseline</td>
+      <td class="top">top</td>
+      <td class="middle">middle</td>
+      <td>bottom</td>
+      <td>Row's style</td>
+      <td>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        pretium felis eu sem mattis vulputate.
+      </td>
+    </tr>
+  </tbody>
 </table>
 ```
 

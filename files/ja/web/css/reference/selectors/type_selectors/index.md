@@ -1,7 +1,8 @@
 ---
 title: 要素型セレクター
 slug: Web/CSS/Reference/Selectors/Type_selectors
-original_slug: Web/CSS/Type_selectors
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 CSS の**要素型セレクター** (type selector) は、ノード名で要素を一致させます。つまり、文書内にある指定された型の要素をすべて選択します。
@@ -13,7 +14,7 @@ a {
 }
 ```
 
-要素型セレクターは {{CSSXref("@namespace")}} を使用して名前空間を付けることができます。これは、複数の名前空間を含む文書、例えば HTML5 とインライン SVG または MathML、または複数の語彙が混在した XML などを扱うのに有用です。
+要素型セレクターは {{CSSXref("@namespace")}} を使用して名前空間を付けることができます。これは、複数の名前空間を含む文書、例えば HTML とインライン SVG または MathML、または複数の語彙が混在した XML などを扱うのに有用です。
 
 - `ns|h1` - 名前空間 _ns_ の中で `<h1>` 要素に一致します
 - `*|h1` - `<h1>` 要素に一致します
@@ -52,7 +53,7 @@ span {
 この例では、セレクターは example 名前空間内の `<h1>` 要素にのみ一致します。
 
 ```css
-@namespace example url(http://www.example.com);
+@namespace example url("http://www.example.com/");
 example|h1 {
   color: blue;
 }

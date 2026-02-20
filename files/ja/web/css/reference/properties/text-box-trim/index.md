@@ -1,9 +1,8 @@
 ---
 title: text-box-trim
 slug: Web/CSS/Reference/Properties/text-box-trim
-original_slug: Web/CSS/text-box-trim
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`text-box-trim`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキスト要素のブロックコンテナーからテキストコンテンツの上端と下端のどちらを切り取るかを指定します。
@@ -133,50 +132,41 @@ HTML には、3 つの主要なアイテムが含まれます。
 簡潔にするため、正確な HTML コードは省略しています。
 
 ```html-nolint hidden
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>text-box デモ</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet" />
-  </head>
-  <body>
-    <section>
-      <div>
-        <label for="box-trim">切り取る辺を選択してください:</label>
-        <select id="box-trim">
-          <option>none</option>
-          <option>trim-start</option>
-          <option>trim-end</option>
-          <option selected>trim-both</option>
-        </select>
-      </div>
-      <div>
-        <label for="trim-over">上部（先頭）の切り取り値を選択してください:</label>
-        <select id="trim-over">
-          <option>text</option>
-          <option selected>cap</option>
-          <option>ex</option>
-        </select>
-      </div>
-    </section>
-    <p class="display" contenteditable="">Holly Golightly</p>
-    <section>
-      <div>
-        <label for="trim-under">下部（末尾）の切り取り値を選択してください:</label>
-        <select id="trim-under">
-          <option>text</option>
-          <option selected>alphabetic</option>
-        </select>
-      </div>
-    </section>
-    <output></output>
-  </body>
-</html>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+  rel="stylesheet" />
+<section>
+  <div>
+    <label for="box-trim">切り取る辺を選択してください:</label>
+    <select id="box-trim">
+      <option>none</option>
+      <option>trim-start</option>
+      <option>trim-end</option>
+      <option selected>trim-both</option>
+    </select>
+  </div>
+  <div>
+    <label for="trim-over">上部（先頭）の切り取り値を選択してください:</label>
+    <select id="trim-over">
+      <option>text</option>
+      <option selected>cap</option>
+      <option>ex</option>
+    </select>
+  </div>
+</section>
+<p class="display" contenteditable>Holly Golightly</p>
+<section>
+  <div>
+    <label for="trim-under">下部（末尾）の切り取り値を選択してください:</label>
+    <select id="trim-under">
+      <option>text</option>
+      <option selected>alphabetic</option>
+    </select>
+  </div>
+</section>
+<output></output>
 ```
 
 #### CSS
@@ -296,5 +286,5 @@ trimUnderSelect.addEventListener("change", setEdgeTrim);
 ## 関連情報
 
 - {{cssxref("text-box")}}, {{cssxref("text-box-edge")}}
-- [CSS インラインレイアウト](/ja/docs/Web/CSS/Guides/Inline_layout) module
+- [CSS インラインレイアウト](/ja/docs/Web/CSS/Guides/Inline_layout)モジュール
 - [CSS text-box-trim](https://developer.chrome.com/blog/css-text-box-trim) (developer.chrome.com, 2025)

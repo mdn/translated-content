@@ -3,26 +3,10 @@ title: "Atomics : méthode statique xor()"
 short-title: xor()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/xor
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
 ---
 
 La méthode statique **`Atomics.xor()`** calcule un OU Exclusif binaire (ou «&nbsp;XOR&nbsp;») avec une valeur donnée à une position donnée dans le tableau, et retourne l'ancienne valeur à cette position. Cette opération atomique garantit qu'aucune autre écriture n'a lieu avant que la valeur modifiée ne soit réécrite.
-
-{{InteractiveExample("Démonstration JavaScript&nbsp;: Atomics.xor()")}}
-
-```js interactive-example
-// Crée un SharedArrayBuffer avec une taille en octets
-const buffer = new SharedArrayBuffer(16);
-const uint8 = new Uint8Array(buffer);
-uint8[0] = 7;
-
-// 7 (0111) XOR 2 (0010) = 5 (0101)
-console.log(Atomics.xor(uint8, 0, 2));
-// Résultat attendu : 7
-
-console.log(Atomics.load(uint8, 0));
-// Résultat attendu : 5
-```
 
 ## Syntaxe
 
@@ -72,15 +56,20 @@ Par exemple, le calcul d'un OU exclusif binaire `5 ^ 1` retourne `0100`, qui cor
 
 ## Exemples
 
-### Utilisation de `xor(s)`
+Notez que ces exemples ne peuvent pas être exécutés directement depuis la console ou une page web arbitraire, car `SharedArrayBuffer` n'est pas défini à moins que [ses exigences de sécurité](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#contraintes_de_sécurité) ne soient respectées.
+
+### Utiliser `Atomics.xor()`
 
 ```js
+// Crée un SharedArrayBuffer avec une taille en octets
 const sab = new SharedArrayBuffer(1024);
+// Crée une vue et définit la valeur de l'index 0
 const ta = new Uint8Array(sab);
-ta[0] = 5;
+ta[0] = 7;
 
-Atomics.xor(ta, 0, 1); // retourne 5, l'ancienne valeur
-Atomics.load(ta, 0); // 4
+// 7 (0111) XOR 2 (0010) = 5 (0101)
+console.log(Atomics.xor(ta, 0, 2)); // retourne , l'ancienne valeur
+console.log(Atomics.load(ta, 0)); // 5, la nouvelle/valeur actuelle
 ```
 
 ## Spécifications
