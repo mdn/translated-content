@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 1238ffad886924b20549d0cf3adca735cb0d074f
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 Доступное только для чтения свойство `platform` интерфейса {{domxref("Navigator")}} возвращает строку с определением платформы, на которой запущен браузер.
 
