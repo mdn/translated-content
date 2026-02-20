@@ -1,42 +1,47 @@
 ---
-title: Date.prototype.getHours()
+title: "Date : méthode getHours()"
+short-title: getHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getHours
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`getHours()`** des instances de {{JSxRef("Date")}} retourne l'heure pour la date renseignée, d'après l'heure locale.
 
-La méthode **`getHours()`** renvoie l'heure pour la date renseignée, d'après l'heure locale.
-
-{{InteractiveExample("JavaScript Demo: Date.getHours()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Date.prototype.getHours()", "shorter")}}
 
 ```js interactive-example
 const birthday = new Date("March 13, 08 04:20");
 
 console.log(birthday.getHours());
-// Expected output: 4
+// Résultat attendu : 4
 ```
 
 ## Syntaxe
 
-```js
-dateObj.getHours();
+```js-nolint
+getHours()
 ```
+
+### Paramètres
+
+Aucun.
 
 ### Valeur de retour
 
-Un entier, compris entre 0 et 23 qui indique l'heure de la date indiquée selon l'heure locale.
+Un entier, compris entre 0 et 23 qui indique l'heure de la date indiquée selon l'heure locale. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide).
 
 ## Exemples
 
-### Utiliser `getHours()`
+### Utiliser la méthode `getHours()`
 
-La seconde instruction ci-dessous assigne la valeur 23 à la variable `heure`, selon la valeur de l'objet {{jsxref("Date")}} `noel95`.
+La variable `heure` a la valeur `23`, d'après la valeur de l'objet {{JSxRef("Date")}} `noel95`.
 
 ```js
-var noel95 = new Date("December 25, 1995 23:15:00");
-var heure = noel95.getHours();
+const noel95 = new Date("1995-12-25T23:15:30");
+const heure = noel95.getHours();
 
-console.log(heure); //23
+console.log(heure); // 23
 ```
 
 ## Spécifications
@@ -49,5 +54,5 @@ console.log(heure); //23
 
 ## Voir aussi
 
-- {{jsxref("Date.prototype.getUTCHours()")}}
-- {{jsxref("Date.prototype.setHours()")}}
+- La méthode {{JSxRef("Date.prototype.getUTCHours()")}}
+- La méthode {{JSxRef("Date.prototype.setHours()")}}
