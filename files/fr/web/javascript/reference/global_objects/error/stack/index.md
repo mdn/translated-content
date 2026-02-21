@@ -1,5 +1,5 @@
 ---
-title: Error.prototype.stack
+title: "Error : propriété stack"
 short-title: stack
 slug: Web/JavaScript/Reference/Global_Objects/Error/stack
 l10n:
