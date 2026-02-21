@@ -1,5 +1,5 @@
 ---
-title: Error.prototype.message
+title: "Error : propriété message"
 short-title: message
 slug: Web/JavaScript/Reference/Global_Objects/Error/message
 l10n:
