@@ -11,7 +11,7 @@ UDP は、最小限のプロトコルメカニズムを備えたシンプルな[
 
 UDP は、エラーチェックと訂正が不要、またはアプリケーション内で実行される用途に適しています。 UDP は、[プロトコルスタック](https://ja.wikipedia.org/wiki/%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%83%E3%82%AF)におけるそのような処理のオーバーヘッドを回避します。時間的制約のあるアプリケーションでは、パケットを破棄する方が[再送](https://ja.wikipedia.org/wiki/%E5%86%8D%E9%80%81)によって遅延されたパケットを待つよりも望ましいため、 UDP がよく使用されます。[リアルタイムシステム](https://ja.wikipedia.org/wiki/%E3%83%AA%E3%82%A2%E3%83%AB%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0)では、再送は選択肢にならない場合があります。
 
-## See also
+## 関連情報
 
-- [User Datagram Protocol](https://en.wikipedia.org/wiki/User_Datagram_Protocol) on Wikipedia
-- [Specification](https://datatracker.ietf.org/doc/html/rfc768)
+- Wikipedia の [User Datagram Protocol、ユーザーデータグラムプロトコル](https://ja.wikipedia.org/wiki/User_Datagram_Protocol)
+- [仕様](https://datatracker.ietf.org/doc/html/rfc768)
