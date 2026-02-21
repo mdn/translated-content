@@ -1,24 +1,31 @@
 ---
 title: Error.prototype.message
+short-title: message
 slug: Web/JavaScript/Reference/Global_Objects/Error/message
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La propriété **`message`** d'une instance de {{JSxRef("Error")}} est une description de l'erreur, écrite pour être lue par un·e humain·e.
 
-La propriété **`message`** est une description de l'erreur, écrite pour être lue par un humain.
+## Valeur
+
+Une chaîne de caractères correspondant à la valeur transmise au constructeur [`Error()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/Error) comme premier argument.
+
+{{js_property_attributes(1, 0, 1)}}
 
 ## Description
 
-La propriété contient une brève description de l'erreur si elle est accessible, ou si elle a été définie. [SpiderMonkey](/fr/docs/SpiderMonkey) utilise intensivement la propriété `message` pour les erreurs d'exécution. La propriété `message`, combinée à la propriété {{jsxref("Error.name", "name")}}, est utilisée par la méthode {{jsxref("Error.prototype.toString()")}} pour créer une représentation de l'erreur sous la forme d'une chaine de caractères.
+Cette propriété contient une brève description de l'erreur si elle est accessible, ou si elle a été définie. La propriété `message`, combinée à la propriété {{JSxRef("Error/name", "name")}}, est utilisée par la méthode {{JSxRef("Error.prototype.toString()")}} pour créer une représentation de l'erreur sous la forme d'une chaîne de caractères.
 
-Par défaut, la propriété `message` est une chaine de caractères vide, mais ce comportement peut être remplacé pour une instance, en renseignant un message comme premier argument du constructeur {{jsxref("Error")}}.
+Par défaut, la propriété `message` est une chaîne de caractères vide, mais ce comportement peut être remplacé pour une instance, en renseignant un message comme premier argument du constructeur {{JSxRef("Error/Error", "Error")}}.
 
 ## Exemples
 
 ### Déclencher une erreur personnalisée
 
 ```js
-var e = new Error("Impossible de lire la donnée");
+const e = new Error("Impossible de lire la donnée");
 // e.message est "Impossible de lire la donnée"
 throw e;
 ```
@@ -33,5 +40,5 @@ throw e;
 
 ## Voir aussi
 
-- {{jsxref("Error.prototype.name")}}
-- {{jsxref("Error.prototype.toString()")}}
+- La propriété {{JSxRef("Error.prototype.name")}}
+- La méthode {{JSxRef("Error.prototype.toString()")}}
