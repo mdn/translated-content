@@ -1,36 +1,27 @@
 ---
-title: CSS 入門
+title: CSS を始める
+short-title: CSS 入門
 slug: Learn_web_development/Core/Styling_basics/Getting_started
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/What_is_CSS", "Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "Learn_web_development/Core/Styling_basics")}}
 
-この記事では、かんたんな HTML コードに CSS を適用させ、その過程でこの言語についての実用的なことを学びます。
+この記事では、シンプルな HTML 文書に CSS を適用する方法を学びながら、言語の実践的な詳細を習得します。また、これまで触れてこなかった追加の CSS 構文機能のいくつかについても復習します。
 
 <table>
   <tbody>
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        <a
-          href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
-          >ソフトウェアのインストール</a
-        >、
-        <a
-          href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
-          >ファイルの扱い</a
-        >についての基本的な知識、 HTML の基本（
-        <a href="/ja/docs/Learn_web_development/Core/Structuring_content"
-          >HTML 入門</a
-        >を学んでいること）。
+        <a href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software">基本的なソフトウェアのインストール</a>、
+        <a href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files">ファイルの扱い</a>についての基本的な知識、 HTML の基本（
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML 入門</a>を学んでいること）。
       </td>
     </tr>
     <tr>
-      <th scope="row">学習成果:</th>
+      <th scope="row">学習目標:</th>
       <td>
         <ul>
           <li>CSS を HTML 文書に適用すること。</li>
@@ -89,6 +80,8 @@ HTML 文書から始めましょう。下記からコードをコピーして、
 
 一番最初にしなければならないことは、 HTML 文書に使用したい CSS ルールがあることを指示することです。 HTML 文書に CSS を適用するためによく使われる方法は、外部スタイルシート、内部スタイルシート、インラインスタイルの 3 つがあります。これらを見てみましょう。
 
+MDN Playground を使用してこの記事を学習している場合、この項で説明されている手順を、ローカルコンピューターでコードを記述している方と同じ方法で実行することはできません。これは、MDN Playground が HTML への CSS の追加をバックグラウンドで暗黙的に処理するためです。ただし、コンテンツを確認するためにも、この節は読み進めることをお勧めします。
+
 ### 外部スタイルシート
 
 外部スタイルシートは、拡張子が `.css` の独立したファイルに CSS を格納します。これは、 CSS を文書に適用する最も一般的で便利な方法です。単一の CSS ファイルを複数のウェブページにリンクすると、すべて同じ CSS スタイルシートでスタイルを適用することができます。
@@ -101,7 +94,7 @@ HTML 文書と同じフォルダーにファイルをつくり、 `styles.css` �
 <link rel="stylesheet" href="styles.css" />
 ```
 
-{{htmlelement("link")}} 要素はブラウザーに、スタイルシートがあることを `rel` 属性で伝え、 `href` 属性の値でスタイルシートのある場所を伝えます。 `styles.css` に以下のルールを記述すれば、CSS が動作するかテストできます。使っているコードエディターで次ののコードを CSS ファイルに追記してください。
+{{htmlelement("link")}} 要素はブラウザーに、スタイルシートがあることを `rel` 属性で伝え、 `href` 属性の値でスタイルシートのある場所を伝えます。 `styles.css` に以下のルールを記述すれば、CSS が動作するかテストできます。使っているコードエディターで次ののコードを CSS ファイル（または MDN Playground の "CSS" ボックス）に追記してください。
 
 ```css
 h1 {
@@ -219,6 +212,12 @@ li {
 
 {{EmbedLiveSample("started-types", "", "240px")}}
 
+<!--
+The following interactive lesson teaches basic CSS concepts and provides some practice.
+
+<mdn-scrim-inline url="https://scrimba.com/frontend-path-c0j/~015" scrimtitle="Write your first lines of CSS!"></scrim-inline>
+-->
+
 ### クラスの追加
 
 ここまで、HTML 要素名をもとにしたスタイル設定をしてきました。これは、文書内にあるその要素すべてをおなじ見ばえにしたいときには有効です。しかしそんな場合はほとんどないので、ほかを変えずに一部の要素だけを選ぶ方法を知っておく必要があります。もっとも一般的なのが、HTML 要素にクラスを追加し、それに焦点をあてる方法です。
@@ -242,9 +241,9 @@ li {
    }
    ```
 
-保存してからブラウザーを再読み込みし結果を見てみましょう。
+3. 保存してからブラウザーを再読み込みし、結果を見てみましょう。
 
-ページ上でおなじ見た目にしたいリストアイテムに対して `special` クラスを適用できます。たとえば、段落内にある`<span>` 要素にも同じく、オレンジの太字にしたいかもしれません。これにも `class` 属性の値として `special` を加えてみてください。
+ページ上で同じ見た目にしたいリストアイテムに対して `special` クラスを適用できます。たとえば、段落内にある `<span>` 要素にも同じく、オレンジの太字にしたいかもしれません。これにも `class` 属性の値として `special` を加えてみてください。
 
 ### 文書内の場所に基づくスタイル設定
 
@@ -305,7 +304,7 @@ h1 + p {
 
 ### 状態に基づくスタイル設定
 
-最後にこのチュートリアルで取り上げるのは、状態に基づいてスタイルを設定する方法です。かんたんな例はリンクのスタイル設定です。リンクをスタイル設定するとき、 [`<a>`](/ja/docs/Web/HTML/Reference/Elements/a) (anchor) 要素に焦点をあてる必要があります。リンクされたページを開いていなかったり、開いた後だったり、マウスの矢印をかざしたり（ホバー）、キーボードで選択したり、クリックしたりといったように状態が変わります。こうしたさまざまな状態を CSS で選ぶことができます。以下だと、リンクされたページを開く前はピンクに、開いた後は緑になります。
+このチュートリアルで最後に取り上げるスタイル設定の種類は、要素の状態に基づいてスタイルを適用する機能です。その典型的な例がリンクのスタイル設定です。リンクをスタイル設定する際には、[`<a>`](/ja/docs/Web/HTML/Reference/Elements/a)（アンカー）要素を対象とする必要があります。リンクには、未訪問、訪問済み、ホバー中、キーボードフォーカス中、クリック中（アクティブ）といった様々な状態があります。CSS ではこれらの状態を個別に対象とすることができます。下記 CSS では、未訪問リンクをピンク、訪問済みリンクを緑でスタイル設定しています。
 
 ```css
 a:link {
@@ -427,17 +426,17 @@ h1 + p .special {
 
 {{EmbedLiveSample('The_calc_function', '100%', 200)}}
 
-関数は関数名と、関数の値を囲む括弧で構成されます。 上記の `calc()` の例の場合、値は包含ブロック幅の90%から30ピクセルを引いた値をボックスの幅として定義します。
+関数は関数名と、関数の値を囲む括弧で構成されます。 上記の `calc()` の例の場合、値は包含ブロック幅の 90% から 30 ピクセルを引いた値をボックスの幅として定義します。
 
 #### 座標変換関数
 
 さまざまな値のもう一つの例は、 {{cssxref("transform")}} プロパティのもので、 `rotate()` などです。
 
-```html live-sample___transform_functions
+```html
 <div class="box"></div>
 ```
 
-```css live-sample___transform_functions
+```css
 .box {
   margin: 30px;
   width: 100px;
@@ -449,7 +448,7 @@ h1 + p .special {
 
 上記のコードの出力結果は次のようになります。
 
-{{EmbedLiveSample('Transform_functions', '100%', 200)}}
+{{EmbedLiveSample('座標変換関数', '100%', 200)}}
 
 以下の一覧にあるプロパティのさまざまな値を調べてください。 次の関数を使用して、さまざまな HTML 要素にスタイルを適用する CSS ルールを書いてみてください。
 
@@ -459,23 +458,21 @@ h1 + p .special {
 
 ### アットルール
 
-CSS のアットルール (@rule) は、 CSS の動作方法を指定して提供します。よく見かける一般的なアットルールの 1 つに `@media` があります。これは、[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)を作成する際に使用します。メディアクエリーは、 CSS スタイル設定を適用するための条件を示す論理式を使用します。
+CSS の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules) (@rule) は、 CSS の動作方法を指定して提供します。よく見かける一般的なアットルールの 1 つに `@media` があります。これは、[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)を作成する際に使用します。メディアクエリーは、 CSS スタイル設定を適用するための条件を示す論理式を使用します。
 
-次の例では、スタイルシートで `<body>` 要素に既定ではピンク色の背景を定義しています。しかし、その次のメディアクエリーでは、ブラウザーのビューポートが 30em より大きい場合、 `<body>` 要素に青色の背景を設定しています。
+次の例では、スタイルシートで `<body>` 要素に既定ではピンク色の背景を定義しています。しかし、その次のメディアクエリーでは、ブラウザーのビューポートが `30em` より大きい場合、 `<body>` 要素に青色の背景を設定しています。
 
 ```css
 body {
   background-color: pink;
 }
 
-@media (min-width: 30em) {
+@media (width >= 30em) {
   body {
     background-color: blue;
   }
 }
 ```
-
-このコースの学習を進めていく中で、他のアットルールにも遭遇することでしょう。
 
 ### 一括指定プロパティ
 
@@ -503,14 +500,14 @@ padding-left: 5px;
 この 1 行は、
 
 ```css
-background: red url(bg-graphic.png) 10px 10px repeat-x fixed;
+background: red url("bg-graphic.png") 10px 10px repeat-x fixed;
 ```
 
 次の 5 行と同等です。
 
 ```css
 background-color: red;
-background-image: url(bg-graphic.png);
+background-image: url("bg-graphic.png");
 background-position: 10px 10px;
 background-repeat: repeat-x;
 background-attachment: fixed;
@@ -529,15 +526,15 @@ CSS コメントは `/*` で始まり、`*/` で終わります。例えば下�
 /* ---------------------------- */
 body {
   font:
-    1em/150% Helvetica,
-    Arial,
+    1em/150% "Helvetica",
+    "Arial",
     sans-serif;
   padding: 1em;
   margin: 0 auto;
   max-width: 33em;
 }
 
-@media (min-width: 70em) {
+@media (width >= 70em) {
   /* 読みやすくなるように、大きな画面やウィンドウでは
      グローバルフォントサイズを大きくする。 */
   body {
@@ -551,7 +548,7 @@ h1 {
 
 /* DOM に含まれる特定の要素を扱う */
 div p,
-#id:first-line {
+#id::first-line {
   background-color: red;
   border-radius: 3px;
 }
@@ -569,9 +566,9 @@ div p + p {
 コードを「コメントアウト」することは、検査のためにコードの一部分を一時的に無効にするのに便利です。例えば、下記では `.special` のルールがコードの「コメントアウト」により無効になっています。
 
 ```css
-/*.special {
+/* .special {
   color: red;
-}*/
+} */
 
 p {
   color: blue;
@@ -589,15 +586,15 @@ p {
 ```css
 body {
   font:
-    1em/150% Helvetica,
-    Arial,
+    1em/150% "Helvetica",
+    "Arial",
     sans-serif;
   padding: 1em;
   margin: 0 auto;
   max-width: 33em;
 }
 
-@media (min-width: 70em) {
+@media (width >= 70em) {
   body {
     font-size: 130%;
   }
@@ -611,26 +608,26 @@ h1 {
 次の例では、同じ CSS をより圧縮された形式で示しており、余分なホワイトスペースをすべて除去したものです。 2 つの例は同じように作業しますが、下記の方が読みにくくなっています。
 
 ```css-nolint
-body{font:1em/150% Helvetica,Arial,sans-serif;padding:1em;margin:0 auto;max-width:33em;}
-@media(min-width:70em){body{font-size:130%;}}
+body{font:1em/150% "Helvetica","Arial",sans-serif;padding:1em;margin:0 auto;max-width:33em;}
+@media(width>=70em){body{font-size:130%;}}
 h1{font-size:1.5em;}
 ```
 
-ホワイトスペースを削除するとエラーが発生する場合があることに留意してください。プロパティ名にはホワイトスペースは含まれませんが、値と値の間にホワイトスペースを想定しているプロパティ値では、その空白が削除されると値が不正なものとなります。例えば、以下の宣言は有効な CSS です。
+ホワイトスペースを変更するとエラーが発生する場合があることに留意してください。プロパティ名にはホワイトスペースは含まれませんが、値と値の間にホワイトスペースを想定しているプロパティ値では、その空白が削除されると値が無効なものとなります。例えば、以下の宣言は有効な CSS です。
 
 ```css
 margin: 0 auto;
 padding-left: 10px;
 ```
 
-しかし、以下の宣言は不正です。
+しかし、以下の宣言は無効です。
 
 ```css example-bad
 margin: 0auto;
 padding- left: 10px;
 ```
 
-空白の使い方の間違いがわかりますか？ 最初の `0auto` は `margin` プロパティの有効な値として認識されません。 項目 `0auto` は、`0` と `auto` という 2 つの別々の値という意味です。 2 つ目として、ブラウザーは `padding-` を有効なプロパティとして認識しません。 正しいプロパティ名 (`padding-left`) には空白が挿入されています。
+空白の使い方の間違いがわかりますか？ 最初の `0auto` は `margin` プロパティの有効な値として認識されません。 項目 `0auto` は、`0` と `auto` という 2 つの別々の値という意味です。 2 つ目として、ブラウザーは `padding-` を有効なプロパティとして認識しません。 正しいプロパティ名 (`padding-left`) には空白が含まれていません。
 
 複数の値が別個の値であることが分かるように、少なくとも 1 つの空白で区切るようにしてください。プロパティ名とプロパティ値は、単一の連続した文字列として一緒にしておきます。
 
