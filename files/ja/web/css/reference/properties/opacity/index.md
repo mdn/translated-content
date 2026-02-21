@@ -85,7 +85,7 @@ background: rgb(0 0 0 / 40%);
 ### 不透過度のトランジション
 
 不透過度を[トランジション](/ja/docs/Web/CSS/Guides/Transitions)させながら要素をページに追加する場合、その要素が事前に [`visibility: hidden`](/ja/docs/Web/CSS/Reference/Properties/visibility#hidden)、
- [`display: none`](/ja/docs/Web/CSS/Reference/Properties/display#none)、[`content-visibility: hidden`](/ja/docs/Web/CSS/Reference/Properties/content-visibility#hidden) で非表示にされていた場合は、{{cssxref("@starting-style")}} と [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior#allow-discrete) の両方を記載する必要があります。
+[`display: none`](/ja/docs/Web/CSS/Reference/Properties/display#none)、[`content-visibility: hidden`](/ja/docs/Web/CSS/Reference/Properties/content-visibility#hidden) で非表示にされていた場合は、{{cssxref("@starting-style")}} と [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior#allow-discrete) の両方を記載する必要があります。
 
 ```css
 .card {
