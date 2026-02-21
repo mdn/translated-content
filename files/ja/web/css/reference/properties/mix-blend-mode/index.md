@@ -1,9 +1,8 @@
 ---
 title: mix-blend-mode
 slug: Web/CSS/Reference/Properties/mix-blend-mode
-original_slug: Web/CSS/mix-blend-mode
 l10n:
-  sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`mix-blend-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の内容物と親要素の内容物や要素の背景をどのように混合するかを設定します。

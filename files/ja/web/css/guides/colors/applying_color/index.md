@@ -3,11 +3,10 @@ title: CSS を使った HTML の要素への色の適用
 short-title: 色の適用
 slug: Web/CSS/Guides/Colors/Applying_color
 l10n:
-  sourceCommit: 81f8fcd666952c1782653a3675347c392cc997ca
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-[CSS](/ja/docs/Web/CSS) では、[HTML](/ja/docs/Web/HTML) [要素](/ja/docs/Web/HTML/Reference/Elements)に色を追加し好みの見た目にする方法が多岐に渡ります。
-このガイドは、CSS を使用して HTML 要素に色を適用する方法を紹介する入門書です。このガイドには、[色を設定する CSS プロパティの一覧とその値](#色を設定できるプロパティ)、および[スタイルシート](#スタイルシートで色を値として指定)と[それ以外の方法](#色をつける他の方法)の両方で色を使用する方法を記載しています。
+[CSS](/ja/docs/Web/CSS) では、[HTML](/ja/docs/Web/HTML) [要素](/ja/docs/Web/HTML/Reference/Elements)に色を追加し好みの見た目にする方法が多岐に渡ります。このガイドは、CSS を使用して HTML 要素に色を適用する方法を紹介する入門書です。このガイドには、[色を設定する CSS プロパティの一覧とその値](#色を設定できるプロパティ)、および[スタイルシート](#スタイルシートで色を値として指定)と[それ以外の方法](#色をつける他の方法)の両方で色を使用する方法を記載しています。
 
 > [!NOTE]
 > [色を賢く使用する](/ja/docs/Web/CSS/Guides/Colors/Using_color_wisely)ことが重要です。常に適切な色を選択し、テキストと背景のコントラストを十分に確保して読みやすさを保証し、視覚能力が異なる人々のニーズを常に念頭に置いてください。
@@ -191,7 +190,7 @@ CSS が唯一の色を付けるためのウェブ技術ではありません。�
 
 ## 関連情報
 
-- [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) データ型
+- {{cssxref("&lt;color&gt;")}} データ型
 - [CSS 色値](/ja/docs/Web/CSS/Guides/Colors/Color_values)ガイド
 - [賢い色の使用](/ja/docs/Web/CSS/Guides/Colors/Using_color_wisely)
 - [CSS 色モジュール](/ja/docs/Web/CSS/Guides/Colors)
