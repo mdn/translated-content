@@ -255,7 +255,7 @@ form > #date
 
 ### レスポンシブデザインの問題
 
-レスポンシブデザインとは、例えば画面の幅や向き（縦長か横長か）、解像度が異なるなど、異なる端末の形態に応じて変化するウェブレイアウトを作成することです。例えばデスクトップ用のレイアウトはモバイル端末で見るとひどいことになるので、[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)を使って適切なモバイル用レイアウトを提供し、[ビューポート](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport)を使ってそれが正しく適用されるようにする必要があります。[レスポンシブデザインのガイド](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)にそのような実践の詳細な説明があります。
+レスポンシブデザインとは、例えば画面の幅や向き（縦長か横長か）、解像度が異なるなど、異なる端末の形態に応じて変化するウェブレイアウトを作成することです。例えばデスクトップ用のレイアウトはモバイル端末で見るとひどいことになるので、[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)を使って適切なモバイル用レイアウトを提供し、[ビューポート](/ja/docs/Web/HTML/Reference/Elements/meta/name/viewport)を使ってそれが正しく適用されるようにする必要があります。[レスポンシブデザインのガイド](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)にそのような実践の詳細な説明があります。
 
 解像度も大きな課題です。例えば、モバイル端末は大きな重い画像を必要とする可能性がデスクトップコンピューターよりも低く、インターネット接続が遅く、場合によっては帯域幅の無駄が問題になるような高価なデータプランを利用している可能性もあります。さらに、端末によって解像度の範囲があるため、小さな画像がピクセル化して現れる意味もあります。このような問題を作業するためのテクニックは、[メディアクエリー](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design#メディアクエリー)からより複雑な[レスポンシブ画像テクニック](/ja/docs/Web/HTML/Guides/Responsive_images#解像度の切り替え_様々な寸法)、 {{HTMLElement('picture')}} および {{HTMLElement('img')}} 要素の [`srcset`](/ja/docs/Web/HTML/Reference/Elements/img#srcset) や [`sizes`](/ja/docs/Web/HTML/Reference/Elements/img#sizes) 属性を含め、たくさんあります。
 

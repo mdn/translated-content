@@ -11,7 +11,7 @@ l10n:
 
 ### HTML
 
-- [`<meta>` の `viewport` タグ](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport) で [`interactive-widgets`](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport#the_effect_of_interactive_ui_widgets) 属性をサポートしました。これはソフトウェアキーボードのような共通 UI ウィジェットがスクリーンに表示されるときの、ビューポートのサイズに影響を与えます ([Firefox bug 1831649](https://bugzil.la/1831649)、[Firefox bug 1920755](https://bugzil.la/1920755))。
+- [`<meta>` の `viewport` タグ](/ja/docs/Web/HTML/Reference/Elements/meta/name/viewport) で [`interactive-widgets`](/ja/docs/Web/HTML/Reference/Elements/meta/name/viewport#the_effect_of_interactive_ui_widgets) 属性をサポートしました。これはソフトウェアキーボードのような共通 UI ウィジェットがスクリーンに表示されるときの、ビューポートのサイズに影響を与えます ([Firefox bug 1831649](https://bugzil.la/1831649)、[Firefox bug 1920755](https://bugzil.la/1920755))。
 
 ### CSS
 
