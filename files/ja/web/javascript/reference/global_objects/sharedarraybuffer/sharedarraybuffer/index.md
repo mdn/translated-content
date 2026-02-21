@@ -1,26 +1,15 @@
 ---
 title: SharedArrayBuffer() コンストラクター
+short-title: SharedArrayBuffer()
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
 ---
-
-{{JSRef}}
 
 > [!NOTE]
 > `SharedArrayBuffer` コンストラクターは、特定の[セキュリティの要件](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#セキュリティの要件)に適合しない限り、グローバルに利用できるとは限りません。
 
-**`SharedArrayBuffer()` コンストラクター**は {{jsxref("SharedArrayBuffer")}} オブジェクトを生成し、これは {{jsxref("ArrayBuffer")}} オブジェクトと似た、汎用的な、固定長の生のバイナリーデータバッファーを表します。
-
-{{InteractiveExample("JavaScript デモ: SharedArrayBuffer() constructor", "shorter")}}
-
-```js interactive-example
-// SharedArrayBuffer をバイト単位のサイズで作成
-const buffer = new SharedArrayBuffer(8);
-
-console.log(buffer.byteLength);
-// 期待される出力: 8
-```
+**`SharedArrayBuffer()`** コンストラクターは {{jsxref("SharedArrayBuffer")}} オブジェクトを生成します。
 
 ## 構文
 
@@ -43,9 +32,22 @@ new SharedArrayBuffer(length, options)
 
 ### 返値
 
-指定したサイズの新しい `SharedArrayBuffer` オブジェクトで、指定した場合は、その {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}} プロパティを指定した `maxByteLength` に設定します。コンテンツは 0 に初期化されます。
+指定したサイズの新しい `SharedArrayBuffer` オブジェクトで、指定した場合は、その {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}} プロパティを指定した `maxByteLength` に設定します。中身は 0 に初期化されます。
 
 ## 例
+
+これらの例は、コンソールや任意のウェブページから直接実行することはできません。`SharedArrayBuffer` は、その[セキュリティ要件](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#セキュリティ要件)が満たされない限り定義されないからです。
+
+### 基本的な使い方
+
+バッファーを作成し、そのサイズをバイト単位で指定します。
+
+```js
+// SharedArrayBuffer をバイト数でサイズを指定して作成
+const buffer = new SharedArrayBuffer(8);
+
+console.log(buffer.byteLength); // 8
+```
 
 ### SharedArrayBuffer を生成するには常に new 演算子を使用する
 
@@ -86,4 +88,4 @@ buffer.grow(12);
 
 - {{jsxref("Atomics")}}
 - {{jsxref("ArrayBuffer")}}
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
