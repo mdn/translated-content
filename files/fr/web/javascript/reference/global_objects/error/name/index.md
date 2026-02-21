@@ -1,5 +1,5 @@
 ---
-title: Error.prototype.name
+title: "Error : propriété name"
 short-title: name
 slug: Web/JavaScript/Reference/Global_Objects/Error/name
 l10n:
