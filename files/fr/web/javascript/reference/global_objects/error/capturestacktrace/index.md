@@ -32,7 +32,7 @@ Un `object` est modifié sur place et se voit ajouter une propriété propre nom
 
 ### Utiliser la méthode `captureStackTrace()`
 
-La fonction utilitaire `obtenirPile()` retourne la trace de pile courante au point où elle est appelée, en s'excluant elle‑même de la pile. Cela sert le même objectif de débogage que {{DOMxRef("console.trace()")}}, mais permet d'afficher une chaîne de caractères ailleurs. Notez qu'elle ne construit pas d'instance `Error` à cette fin, mais installe `stack` sur un objet simple, ce qui serait plus efficace pour nos besoins. Normalement, vous appelez `Error.captureStackTrace` sur des objets destinés à être lancés comme erreurs, comme montré dans l'exemple suivant.
+La fonction utilitaire `obtenirPile()` retourne la trace de pile courante au point où elle est appelée, en s'excluant elle‑même de la pile. Cela sert le même objectif de débogage que {{DOMxRef("console/trace_static", "console.trace()")}}, mais permet d'afficher une chaîne de caractères ailleurs. Notez qu'elle ne construit pas d'instance `Error` à cette fin, mais installe `stack` sur un objet simple, ce qui serait plus efficace pour nos besoins. Normalement, vous appelez `Error.captureStackTrace` sur des objets destinés à être lancés comme erreurs, comme montré dans l'exemple suivant.
 
 ```js
 function obtenirPile() {
