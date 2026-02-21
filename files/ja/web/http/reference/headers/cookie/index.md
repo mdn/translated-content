@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-HTTP の **`Cookie`** {{Glossary("request header", "リクエストヘッダー")}}は、保存されている [HTTP クッキー](/en-US/docs/Web/HTTP/Guides/Cookies)を送信します。これらはサーバーに関連付けられているものです（つまり、以前サーバーが {{HTTPHeader("Set-Cookie")}} ヘッダーで送信したもの、または JavaScript で {{domxref("Document.cookie")}} を使用して設定されたものです）。
+HTTP の **`Cookie`** {{Glossary("request header", "リクエストヘッダー")}}は、保存されている [HTTP クッキー](/ja/docs/Web/HTTP/Guides/Cookies)を送信します。これらはサーバーに関連付けられているものです（つまり、以前サーバーが {{HTTPHeader("Set-Cookie")}} ヘッダーで送信したもの、または JavaScript で {{domxref("Document.cookie")}} を使用して設定されたものです）。
 
 `Cookie` ヘッダーは任意であり、例えば、ブラウザーのプライバシー設定でクッキーをブロックしている場合などは省略できます。
 
