@@ -1,5 +1,5 @@
 ---
-title: UDP (User Datagram Protocol)
+title: UDP (User Datagram Protocol、ユーザーデータグラムプロトコル)
 slug: Glossary/UDP
 l10n:
   sourceCommit: 06e6e54baef7032c4e81ca93291fde0a0585de8b
