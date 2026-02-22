@@ -1,5 +1,5 @@
 ---
-title: "スキルテスト: CSS と JavaScript のアクセシビリティ"
+title: "確認テスト: CSS と JavaScript のアクセシビリティ"
 slug: Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript
 original_slug: Learn_web_development/Core/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility
 l10n:
@@ -8,7 +8,7 @@ l10n:
 
 {{learnsidebar}}
 
-このスキルテストの目的は、あなたが [CSS と JavaScript のアクセシビリティのベストプラクティス](/ja/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript)の記事を理解したかどうかを評価することです。
+この確認テストの目的は、あなたが [CSS と JavaScript のアクセシビリティのベストプラクティス](/ja/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript)の記事を理解したかどうかを評価することです。
 
 > [!NOTE]
 > このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。

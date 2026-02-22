@@ -416,9 +416,9 @@ button.addEventListener("click", handleClick);
 
 `target` プロパティは、上記の[イベント移譲](#イベント移譲)の例のように、イベント移譲でよく使用します。
 
-## スキルテスト
+## 確認テスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: イベント](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Events)を参照してください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[確認テスト: イベント](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Events)を参照してください。
 
 ## まとめ
 

@@ -1,5 +1,5 @@
 ---
-title: "スキルテスト: CSS レイアウト"
+title: "確認テスト: CSS レイアウト"
 short-title: "テスト: レイアウトテストの索引"
 slug: Learn_web_development/Core/CSS_layout/Test_your_skills
 l10n:
@@ -8,7 +8,7 @@ l10n:
 
 このページでは、このモジュールのコンテンツを理解したかどうかを確認するための CSS のレイアウトのテストの一覧を示しています。
 
-## トピック別の CSS のレイアウトのスキルテスト
+## トピック別の CSS のレイアウトの確認テスト
 
 {{SubpagesWithSummaries}}
 

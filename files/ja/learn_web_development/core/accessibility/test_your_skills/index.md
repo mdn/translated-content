@@ -1,6 +1,6 @@
 ---
-title: "スキルテスト: Accessibility"
-short-title: スキルテスト
+title: "確認テスト: Accessibility"
+short-title: 確認テスト
 slug: Learn_web_development/Core/Accessibility/Test_your_skills
 l10n:
   sourceCommit: c44c4d14527eddf441079e3623abccd711adfc23
@@ -8,7 +8,7 @@ l10n:
 
 このページでは、このモジュールのコンテンツを理解したかどうかを確認するためのアクセシビリティのテストの一覧を示しています。
 
-## トピック別のアクセシビリティのスキルテスト
+## トピック別のアクセシビリティの確認テスト
 
 {{SubpagesWithSummaries}}
 

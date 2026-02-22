@@ -545,9 +545,9 @@ HTML には、{{htmlelement("figure")}} と {{htmlelement("figcaption")}} とい
 
 - [Hand tremors and the giant-button-problem - Axess Lab](https://axesslab.com/hand-tremors/)
 
-## スキルをテストしましょう
+## 確認テスト
 
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？先に進む前に、[スキルテスト: HTML アクセシビリティ](/ja/docs/Learn_web_development/Core/Accessibility/Test_your_skills/HTML) を参照して、この情報を覚えているかどうかを確認しましょう。
+この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？先に進む前に、[確認テスト: HTML アクセシビリティ](/ja/docs/Learn_web_development/Core/Accessibility/Test_your_skills/HTML) を参照して、この情報を覚えているかどうかを確認しましょう。
 
 ## 要約
 
