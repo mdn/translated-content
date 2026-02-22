@@ -51,7 +51,7 @@ body {
 
 ## プロジェクト概要
 
-下記の手順に従って経歴をスタイル設定すること。必要な CSS 機能については [MDN CSS リファレンス](/en-US/docs/Web/CSS/Reference)を参照すること。
+下記の手順に従って経歴をスタイル設定すること。必要な CSS 機能については [MDN CSS リファレンス](/ja/docs/Web/CSS/Reference)を参照すること。
 
 ### ボックスのスタイル
 
