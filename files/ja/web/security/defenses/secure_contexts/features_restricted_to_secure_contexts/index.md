@@ -1,14 +1,12 @@
 ---
 title: 保護されたコンテキストに制限されている機能
+short-title: 制限されている機能
 slug: Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts
-original_slug: Web/Security/Secure_Contexts/features_restricted_to_secure_contexts
 l10n:
-  sourceCommit: dea173f1ffb3e6bef851f2e328cf7562f1ef78ce
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Web/Security")}}
-
-このリファレンスは、保護されたコンテキストでのみ使用できるウェブプラットフォーム機能の一覧です — 定義や詳細については、[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)を参照してください。
+このリファレンスは、保護されたコンテキストでのみ使用できるウェブプラットフォーム機能の一覧です。定義や詳細については、[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)を参照してください。
 
 ## 保護されたコンテキストでのみ使用できる現在の機能
 
@@ -50,6 +48,7 @@ l10n:
 - {{domxref("Shared Storage API", "共有ストレージ API", "", "nocode")}}
 - [ストレージ API](/ja/docs/Web/API/Storage_API)
 - {{domxref("VirtualKeyboard API", "仮想キーボード API", "", "nocode")}}
+- [翻訳および言語検出 API](/ja/docs/Web/API/Translator_and_Language_Detector_APIs)
 - [ウェブ認証 API](/ja/docs/Web/API/Web_Authentication_API)
 - [ウェブブルートゥース](/ja/docs/Web/API/Web_Bluetooth_API)
 - {{domxref("Web Locks API", "ウェブロック API", "", "nocode")}}
@@ -74,4 +73,4 @@ l10n:
 ## 関連情報
 
 - [保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)
-- ["secure context" query on Chrome Platform Status](https://www.chromestatus.com/features#secure%20context)
+- ["secure context" query on Chrome Platform Status](https://chromestatus.com/features#secure%20context)
