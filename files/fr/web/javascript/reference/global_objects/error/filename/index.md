@@ -1,29 +1,38 @@
 ---
-title: Error.prototype.fileName
+title: "Error : propriété fileName"
+short-title: fileName
 slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{Non-standard_Header}}
 
-La propriété **`fileName`** contient le chemin vers le fichier qui a déclenché l'erreur.
+La propriété **`fileName`** d'une instance de {{JSxRef("Error")}} contient le chemin vers le fichier qui a déclenché l'erreur.
+
+## Valeur
+
+Une chaîne de caractères.
+
+{{js_property_attributes(1, 0, 1)}}
 
 ## Description
 
-Cette propriété non-standard contient le chemin vers le fichier qui a déclenché cette erreur. Si elle est appelée depuis un débugger (les outils de développement de Firefox par exemple), "debugger eval code" sera renvoyé.
+Cette propriété non standard contient le chemin vers le fichier qui a déclenché cette erreur. Si elle est consultée depuis un contexte de débogage, par exemple les outils de développement de Firefox, la valeur «&nbsp;debugger eval code&nbsp;» est retournée.
 
 ## Exemples
 
-### Utiliser `fileName`
+### Utiliser la propriété `fileName`
 
 ```js
-var e = new Error("Ne peut pas lire la donnée");
+const e = new Error("Ne peut pas lire la donnée");
 throw e;
 // e.fileName peut ressembler à "file:///C:/exemple.html"
 ```
 
 ## Spécifications
 
-Ne fait partie d'aucune spécification. Non standard.
+Ne fait partie d'aucune spécification.
 
 ## Compatibilité des navigateurs
 
@@ -31,6 +40,6 @@ Ne fait partie d'aucune spécification. Non standard.
 
 ## Voir aussi
 
-- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}
+- La propriété {{JSxRef("Error.prototype.stack")}} {{Non-standard_Inline}}
+- La propriété {{JSxRef("Error.prototype.columnNumber")}} {{Non-standard_Inline}}
+- La propriété {{JSxRef("Error.prototype.lineNumber")}} {{Non-standard_Inline}}

@@ -1,15 +1,15 @@
 ---
-title: "スキルテスト: 配列"
+title: "確認テスト: 配列"
 short-title: 配列
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Arrays
 l10n:
   sourceCommit: 2f16610802bfbdf6394ca919557a4369b1236e10
 ---
 
-このスキルテストの目的は、[配列](/ja/docs/Learn_web_development/Core/Scripting/Arrays)の記事を理解しているかどうかを評価することです。
+この確認テストの目的は、[配列](/ja/docs/Learn_web_development/Core/Scripting/Arrays)の記事を理解しているかどうかを評価することです。
 
 > [!NOTE]
-> 手助けが必要な場合は、[スキルテスト](/ja/docs/Learn_web_development#スキルテスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
+> 手助けが必要な場合は、[確認テスト](/ja/docs/Learn_web_development#確認テスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
 
 <!--
 ## 対話型チャレンジ

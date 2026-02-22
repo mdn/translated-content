@@ -293,9 +293,9 @@ btn.addEventListener("click", displayMessage());
 > [!NOTE]
 > サンプルをうまく動作させることができない場合は、コードを [GitHub の完成バージョン](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-stage-4.html)と比較して（[ライブで確認](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html)してください）チェックしてください。もしくは私たちにヘルプを依頼してください。
 
-## スキルテスト
+## 確認テスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 関数](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Functions)を見てください。このテストは次の記事でカバーしているスキルを求めていますので、テストの前にそちらを読むほうが良いかもしれません。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[確認テスト: 関数](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Functions)を見てください。このテストは次の記事でカバーしているスキルを求めていますので、テストの前にそちらを読むほうが良いかもしれません。
 
 ## まとめ
 

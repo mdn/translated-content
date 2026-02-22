@@ -121,7 +121,7 @@ CSS メディアクエリーレベル 5 では、`environment-blending`, `nav-co
 - HTML
   - `sizes` 属性（[`<img>`](/ja/docs/Web/HTML/Reference/Elements/img#sizes)、[`<link>`](/ja/docs/Web/HTML/Reference/Elements/link#sizes)、{{HTMLElement("picture")}} の [`<source>`](/ja/docs/Web/HTML/Reference/Elements/source#sizes)）
   - `media` 属性（[`<link>`](/ja/docs/Web/HTML/Reference/Elements/link#media)、[`<source>`](/ja/docs/Web/HTML/Reference/Elements/source#media)、[HTML](/ja/docs/Web/HTML) の [`<style>`](/ja/docs/Web/HTML/Reference/Elements/style#media)）
-  - [`<meta name="viewport">`](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport)
+  - [`<meta name="viewport">`](/ja/docs/Web/HTML/Reference/Elements/meta/name/viewport)
 - SVG の [`media`](/ja/docs/Web/SVG/Reference/Attribute/media) 属性
 
 ## 仕様書

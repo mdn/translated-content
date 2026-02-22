@@ -59,7 +59,7 @@ HTML5 の {{Glossary("Doctype", "doctype")}} を使ってください。
 <meta name="viewport" content="width=device-width" />
 ```
 
-詳しくは [viewport メタタグを使用してモバイルブラウザーでのレイアウトを制御する](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport)をご覧ください。
+詳しくは [viewport メタタグを使用してモバイルブラウザーでのレイアウトを制御する](/ja/docs/Web/HTML/Reference/Elements/meta/name/viewport)をご覧ください。
 
 ## 属性
 

@@ -60,9 +60,9 @@ HTML は、あらゆるウェブサイトのコンテンツと構造を定義す
 - [HTML のデバッグ](/ja/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML)
   - : HTML を書くのはいいのですが、何かがうまくいかず、コードのどこに誤りがあるのかがわからなくなったらどうしますか。この記事では、 HTML のエラーを探し、修正するのに役立つツールをいくつか紹介します。
 
-## スキルテスト
+## 確認テスト
 
-チュートリアル記事の間に「スキルテスト」記事が配置されています。これらは、次に移動する前に最も重要な情報を理解できているかを確認するためのものです。これらを一斉に確認したい場合は、[スキルテスト: HTML](/ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills) に一覧が掲載されています。
+チュートリアル記事の間に「確認テスト」記事が配置されています。これらは、次に移動する前に最も重要な情報を理解できているかを確認するためのものです。これらを一斉に確認したい場合は、[確認テスト: HTML](/ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills) に一覧が掲載されています。
 
 ## その他のチュートリアル
 

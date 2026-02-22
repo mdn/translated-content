@@ -1,9 +1,9 @@
 ---
-title: Firefox 147 pour les développeurs
+title: Firefox 147 note de version pour les développeurs
 short-title: Firefox 147
 slug: Mozilla/Firefox/Releases/147
 l10n:
-  sourceCommit: fa422ef89f5da5c7bc10a03f8e84b01b8132061c
+  sourceCommit: bdb21cdfa9a7dc7c65222d2219aa2d96543d8a2e
 ---
 
 Cet article présente les informations concernant les changements de Firefox 147 qui concernent les développeur·euse·s.
@@ -90,6 +90,7 @@ Aucun changement notable.
 
 ## Changements pour les développeur·euse·s d'extensions
 
+- Lors de l'utilisation de [navigator.clipboard.readText()](/fr/docs/Web/API/Clipboard/readText) ou [navigator.clipboard.read()](/fr/docs/Web/API/Clipboard/read) sans l'autorisation `clipboardRead`, un bouton de collage du presse-papiers est affiché pour obtenir la confirmation de l'utilisateur·ice. Si l'extension dispose de l'autorisation `clipboardRead`, elle continue à lire les données du presse-papiers sans confirmation de l'utilisateur·ice, comme auparavant. Pour plus d'informations sur l'utilisation du presse-papiers dans les extensions, voir [Interagir avec le presse-papiers](/fr/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard). ([bogue Firefox 1773681 <sup>(angl.)</sup>](https://bugzil.la/1773681))
 - Les extensions Manifest Version 3 chargées temporairement peuvent désormais charger des scripts depuis l'hôte local, comme expliqué dans [Scripts depuis localhost](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#scripts_depuis_localhost) de l'article sur la politique de sécurité du contenu. ([bogue Firefox 1864284 <sup>(angl.)</sup>](https://bugzil.la/1864284))
 
 ## Fonctionnalités web expérimentales

@@ -1,5 +1,5 @@
 ---
-title: "スキルテスト: フォームとボタン"
+title: "確認テスト: フォームとボタン"
 short-title: "試験: フォームとボタン"
 slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons
 l10n:
@@ -8,10 +8,10 @@ l10n:
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_forms", "Learn_web_development/Core/Structuring_content/Forms_challenge", "Learn_web_development/Core/Structuring_content")}}
 
-このスキルテストの目的は、 [HTML のフォームとボタン](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_forms)を扱う方法を理解しているかどうかを評価することです。
+この確認テストの目的は、 [HTML のフォームとボタン](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_forms)を扱う方法を理解しているかどうかを評価することです。
 
 > [!NOTE]
-> 手助けが必要な場合は、[スキルテスト](/ja/docs/Learn_web_development#スキルテスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
+> 手助けが必要な場合は、[確認テスト](/ja/docs/Learn_web_development#確認テスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
 
 ## フォームとボタン 1
 

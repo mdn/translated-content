@@ -5851,7 +5851,7 @@
 /ja/docs/Web/HTML/Global_attributes/translate	/ja/docs/Web/HTML/Reference/Global_attributes/translate
 /ja/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy	/ja/docs/Web/HTML/Reference/Global_attributes/virtualkeyboardpolicy
 /ja/docs/Web/HTML/Global_attributes/writingsuggestions	/ja/docs/Web/HTML/Reference/Global_attributes/writingsuggestions
-/ja/docs/Web/HTML/Guides/Viewport_meta_element	/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport
+/ja/docs/Web/HTML/Guides/Viewport_meta_element	/ja/docs/Web/HTML/Reference/Elements/meta/name/viewport
 /ja/docs/Web/HTML/HTML5/Constraint_validation	/ja/docs/Web/HTML/Guides/Constraint_validation
 /ja/docs/Web/HTML/HTML5/Forms_in_HTML5	/ja/docs/Learn_web_development/Extensions/Forms/HTML5_input_types
 /ja/docs/Web/HTML/HTML5/HTML5_element_list	/ja/docs/Web/HTML/Reference/Elements
@@ -5916,7 +5916,7 @@
 /ja/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document	/ja/docs/Web/HTML/Reference/Elements/Heading_Elements
 /ja/docs/Web/HTML/Supported_media_formats	/ja/docs/Web/Media/Guides/Formats
 /ja/docs/Web/HTML/Using_HTML5_audio_and_video	/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio
-/ja/docs/Web/HTML/Viewport_meta_tag	/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport
+/ja/docs/Web/HTML/Viewport_meta_tag	/ja/docs/Web/HTML/Reference/Elements/meta/name/viewport
 /ja/docs/Web/HTML/microformats	/ja/docs/Web/HTML/Guides/Microformats
 /ja/docs/Web/HTML/属性	/ja/docs/Web/HTML/Reference/Attributes
 /ja/docs/Web/HTTP/Authentication	/ja/docs/Web/HTTP/Guides/Authentication
@@ -6891,7 +6891,7 @@
 /ja/docs/Web/Security/Certificate_Transparency	/ja/docs/Web/Security/Defenses/Certificate_Transparency
 /ja/docs/Web/Security/HTTP_Strict_Transport_Security	/ja/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security
 /ja/docs/Web/Security/IFrame_credentialless	/ja/docs/Web/HTTP/Guides/IFrame_credentialless
-/ja/docs/Web/Security/Information_Security_Basics	/ja/docs/orphaned/Web/Security/Information_Security_Basics
+/ja/docs/Web/Security/Information_Security_Basics	/ja/docs/Web/Security
 /ja/docs/Web/Security/Insecure_passwords	/ja/docs/Web/Security/Authentication/Passwords
 /ja/docs/Web/Security/Mixed_content	/ja/docs/Web/Security/Defenses/Mixed_content
 /ja/docs/Web/Security/Public_Key_Pinning	/ja/docs/conflicting/Web/Security/Certificate_Transparency

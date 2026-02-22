@@ -83,7 +83,7 @@ HTML ファイルを作成し、見出しにメタデータを含め、ユーザ
 
 {{HTMLelement("head")}} コンテナー内には、ウェブアプリケーションに関する読み取り可能な情報が含まれていますが、ブラウザーのタブの見出しとして表示される `<title>` を除いて、読者には表示されません。
 
-`<head>` には、すべての[メタデータ](/ja/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)が記載されています。 `<head>` の最初の 2 つの情報として、[文字エンコード方式](/ja/docs/Glossary/Character_encoding)を定義する文字セット定義と、ビューポートの幅でページがレンダリングされるように確保し、とても小さな画面へ読み込まれた際に縮小されないようにする [viewport](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport) {{HTMLelement("meta")}} タグを、常に記載する必要があります。
+`<head>` には、すべての[メタデータ](/ja/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)が記載されています。 `<head>` の最初の 2 つの情報として、[文字エンコード方式](/ja/docs/Glossary/Character_encoding)を定義する文字セット定義と、ビューポートの幅でページがレンダリングされるように確保し、とても小さな画面へ読み込まれた際に縮小されないようにする [viewport](/ja/docs/Web/HTML/Reference/Elements/meta/name/viewport) {{HTMLelement("meta")}} タグを、常に記載する必要があります。
 
 ```html
 <head>

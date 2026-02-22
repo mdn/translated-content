@@ -1,5 +1,5 @@
 ---
-title: "スキルテスト: 位置指定"
+title: "確認テスト: 位置指定"
 short-title: "テスト: 位置指定"
 slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Position
 l10n:
@@ -8,10 +8,10 @@ l10n:
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout")}}
 
-このスキルテストの目的は、CSS の {{CSSxRef("position")}} プロパティと値を使用した [CSS の位置指定](/ja/docs/Learn_web_development/Core/CSS_layout/Positioning)を理解しているかどうかを評価することです。今までに学んだ素材の様々な要素を使用する、2 つの小さな課題を行っていただきます。
+この確認テストの目的は、CSS の {{CSSxRef("position")}} プロパティと値を使用した [CSS の位置指定](/ja/docs/Learn_web_development/Core/CSS_layout/Positioning)を理解しているかどうかを評価することです。今までに学んだ素材の様々な要素を使用する、2 つの小さな課題を行っていただきます。
 
 > [!NOTE]
-> 手助けが必要な場合は、[スキルテスト](/ja/docs/Learn_web_development#スキルテスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
+> 手助けが必要な場合は、[確認テスト](/ja/docs/Learn_web_development#確認テスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
 
 ## 課題 1
 

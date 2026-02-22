@@ -1,58 +1,98 @@
 ---
 title: encodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURI
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Objects")}}
+La fonction **`encodeURI()`** encode un {{Glossary("URI")}} en remplaçant chaque occurrence de certains caractères par une, deux, trois ou quatre séquences d'échappement représentant l'encodage {{Glossary("UTF-8")}} du caractère (il n'y aura quatre séquences d'échappement que pour les caractères composés de deux codets suppléants). Par rapport à {{JSxRef("encodeURIComponent()")}}, cette fonction encode moins de caractères, préservant ceux qui font partie de la syntaxe de l'URI.
 
-La fonction **`encodeURI()`** encode un Uniform Resource Identifier (URI) en remplaçant chaque exemplaire de certains caractères par une, deux, trois ou quatre séquences d'échappement représentant le caractère encodé en UTF-8 (les quatre séquences d'échappement ne seront utilisées que si le caractère est composé de deux caractères « _surrogate_ »).
-
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - encodeURI()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: encodeURI()")}}
 
 ```js interactive-example
 const uri = "https://mozilla.org/?x=шеллы";
 const encoded = encodeURI(uri);
 console.log(encoded);
-// Expected output: "https://mozilla.org/?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+// Résultat attendu : "https://mozilla.org/?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
 
 try {
   console.log(decodeURI(encoded));
-  // Expected output: "https://mozilla.org/?x=шеллы"
+  // Résultat attendu : "https://mozilla.org/?x=шеллы"
 } catch (e) {
-  // Catches a malformed URI
+  // Capture une URI mal formée
   console.error(e);
 }
 ```
 
 ## Syntaxe
 
-```js
-encodeURI(URI);
+```js-nolint
+encodeURI(uri)
 ```
 
 ### Paramètres
 
-- `URI`
-  - : Un Uniform Resource Identifier complet.
+- `uri`
+  - : Une chaîne de caractères à encoder en tant qu'URI.
 
 ### Valeur de retour
 
-Une nouvelle chaîne de caractères représentant un URI, encodé, à partir de la chaîne de caractères passée en argument.
+Une nouvelle chaîne de caractères représentant la chaîne fournie encodée en tant qu'URI.
+
+### Exceptions
+
+- {{JSxRef("URIError")}}
+  - : Levée si `uri` contient un [codet suppléant isolé](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#caractères_utf-16_points_de_code_unicode_et_clusters_de_graphèmes).
 
 ## Description
 
-`encodeURI()` échappe tous les caractères sauf ceux-ci :
+`encodeURI()` est une propriété fonction de l'objet global.
 
-```
-A-Z a-z 0-9 ; , / ? : @ & = + $ - _ . ! ~ * ' ( ) #
+La fonction `encodeURI()` échappe les caractères par unités de code UTF-8, chaque octet étant encodé au format `%XX`, complété à gauche par 0 si nécessaire. Comme les codets suppléants isolés en UTF-16 ne codent aucun caractère Unicode valide, ils provoquent une levée de {{JSxRef("URIError")}} par `encodeURI()`.
+
+`encodeURI()` échappe tous les caractères **sauf**&nbsp;:
+
+```plain
+A—Z a—z 0—9 - _ . ! ~ * ' ( )
+
+; / ? : @ & = + $ , #
 ```
 
-`encodeURI()` est différente de {{jsxref("encodeURIComponent")}}. Par exemple :
+Les caractères de la seconde ligne sont ceux qui peuvent faire partie de la syntaxe d'un URI, et ne sont échappés que par `encodeURIComponent()`. `encodeURI()` et `encodeURIComponent()` n'encodent pas les caractères `-.!~*'()`, appelés «&nbsp;marques non réservées&nbsp;», qui n'ont pas de rôle réservé mais sont autorisés dans un URI «&nbsp;tels quels&nbsp;». (Voir {{RFC("2396")}})
+
+La fonction `encodeURI()` n'encode pas les caractères qui ont une signification spéciale (caractères réservés) pour un URI. L'exemple suivant montre toutes les parties qu'un URI peut contenir. Notez comment certains caractères servent à signifier une signification particulière&nbsp;:
+
+```url
+http://preudo:motdepasse@www.exemple.com:80/chemin/du/fichier.php?toto=316&tata=ceci+est+un+espace#ancre
+```
+
+`encodeURI`, comme son nom l'indique, sert à encoder une URL dans son ensemble, en supposant qu'elle est déjà bien formée. Si vous souhaitez assembler dynamiquement des valeurs de chaîne dans une URL, il est préférable d'utiliser {{JSxRef("encodeURIComponent()")}} sur chaque segment dynamique, afin d'éviter la présence de caractères de syntaxe d'URL à des endroits non souhaités.
 
 ```js
-var set1 = ";,/?:@&=+$#"; // Caractères réservés
-var set2 = "-_.!~*'()"; // Caractères non-réservés
-var set3 = "ABC abc 123"; // Caractères alphanumériques et espace
+const name = "Thomas & Jerry";
+
+// This is bad:
+const link = encodeURI(`https://exemple.com/?choice=${name}`); // "https://exemple.com/?choice=Thomas%20&%20Jerry"
+console.log([...new URL(link).searchParams]); // [['choice', 'Thomas '], [" Jerry", '']
+
+// Instead:
+const link = encodeURI(
+  `https://exemple.com/?choice=${encodeURIComponent(name)}`,
+);
+// "https://exemple.com/?choice=Thomas%2520&%2520Jerry"
+console.log([...new URL(link).searchParams]); // [['choice', "Thomas%20&%20Jerry"]]
+```
+
+## Exemples
+
+### `encodeURI()` contre `encodeURIComponent()`
+
+`encodeURI()` diffère de {{JSxRef("encodeURIComponent()")}} comme suit&nbsp;:
+
+```js
+const set1 = ";,/?:@&=+$#"; // Caractères réservés
+const set2 = "-_.!~*'()"; // Caractères non-réservés
+const set3 = "ABC abc 123"; // Caractères alphanumériques et espace
 
 console.log(encodeURI(set1)); // ;,/?:@&=+$#
 console.log(encodeURI(set2)); // -_.!~*'()
@@ -63,7 +103,9 @@ console.log(encodeURIComponent(set2)); // -_.!~*'()
 console.log(encodeURIComponent(set3)); // ABC%20abc%20123 (l'espace est encodé en %20)
 ```
 
-Une exception {{jsxref("URIError")}} sera levée si on tente d'encoder un caractère _surrogate_ (demi-codet) qui ne fait pas partie d'une paire :
+### Encodage d'un codet suppléant isolé
+
+Une exception {{JSxRef("URIError")}} sera levée si on tente d'encoder un codet suppléant qui ne fait pas partie d'une paire haut-bas. Par exemple&nbsp;:
 
 ```js
 // On a une paire de codets surrogate
@@ -78,13 +120,21 @@ console.log(encodeURI("\uD800"));
 console.log(encodeURI("\uDFFF"));
 ```
 
-`encodeURI()` ne permet pas de former des requêtes HTTP GET ou POST (par exemple avec {{domxref("XMLHTTPRequest")}}) car "&", "+" et "=" ne sont pas encodés et sont traités comme des caractères spéciaux (toutefois, la méthode. {{jsxref("encodeURIComponent")}} pourra être utilisée pour encoder ces caractères).
+Vous pouvez utiliser {{JSxRef("String.prototype.toWellFormed()")}}, qui remplace les codets suppléants isolés par le caractère de remplacement Unicode (U+FFFD), pour éviter cette erreur. Vous pouvez aussi utiliser {{JSxRef("String.prototype.isWellFormed()")}} pour vérifier si une chaîne de caractères contient des codets suppléants isolés avant de la passer à `encodeURI()`.
 
-Si on souhaite suivre la [RFC3986](https://tools.ietf.org/html/rfc3986) qui concerne les URL et qui rend les crochets réservés (pour IPv6) (il ne faut donc plus encoder ces caractères lorsqu'ils font partie d'une URL (notamment pour la partie représentant l'hôte), on pourra utiliser le fragment de code suivant :
+### Encodage pour RFC3986
+
+La {{RFC("3986")}} plus récente rend les crochets réservés (pour {{Glossary("IPv6")}}) et donc non encodés lors de la formation de quelque chose qui pourrait faire partie d'une URL (comme un hôte). Elle réserve aussi !, ', (, ), et \*, même si ces caractères n'ont pas d'usage de délimitation d'URI formalisé. La fonction suivante encode une chaîne de caractères au format d'URL conforme à la RFC3986.
 
 ```js
-function fixedEncodeURI(str) {
-  return encodeURI(str).replace(/%5B/g, "[").replace(/%5D/g, "]");
+function encodeRFC3986URI(str) {
+  return encodeURI(str)
+    .replace(/%5B/g, "[")
+    .replace(/%5D/g, "]")
+    .replace(
+      /[!'()*]/g,
+      (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`,
+    );
 }
 ```
 
@@ -98,6 +148,6 @@ function fixedEncodeURI(str) {
 
 ## Voir aussi
 
-- {{jsxref("decodeURI", "decodeURI()")}}
-- {{jsxref("encodeURIComponent", "encodeURIComponent()")}}
-- {{jsxref("decodeURIComponent", "decodeURIComponent()")}}
+- La fonction {{JSxRef("decodeURI()")}}
+- La fonction {{JSxRef("encodeURIComponent()")}}
+- La fonction {{JSxRef("decodeURIComponent()")}}

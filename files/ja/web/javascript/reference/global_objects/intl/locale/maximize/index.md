@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
 
-*`maximize()`** は {{jsxref("Intl.Locale")}} インスタンスのメソッドで、既存の値に基づいてロケールの言語、文字体系、地域の最も近い値を取得します。
+**`maximize()`** は {{jsxref("Intl.Locale")}} インスタンスのメソッドで、既存の値に基づいてロケールの言語、文字体系、地域の最も近い値を取得します。
 
 {{InteractiveExample("JavaScript デモ: Intl.Locale.prototype.maximize()")}}
 

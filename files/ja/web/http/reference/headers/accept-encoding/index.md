@@ -3,7 +3,7 @@ title: Accept-Encoding ヘッダー
 short-title: Accept-Encoding
 slug: Web/HTTP/Reference/Headers/Accept-Encoding
 l10n:
-  sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 HTTP の **`Accept-Encoding`** は{{glossary("request header", "リクエストヘッダー")}}および{{glossary("Response header", "レスポンスヘッダー")}}で、送信者が理解できるコンテンツエンコード方式（通常は圧縮アルゴリズム）を示します。

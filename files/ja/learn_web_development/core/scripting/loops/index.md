@@ -989,9 +989,9 @@ do {
 > [!NOTE]
 > 高度な/特殊な状況やこの記事の範囲を超えて有用な、他のループタイプ/機能もあります。ループ学習をさらに進めたい場合は、高度な[ループと反復処理ガイド](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration)をお読みください。
 
-## スキルテスト
+## 確認テスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: ループ](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Loops)を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[確認テスト: ループ](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Loops)を見てください。
 
 ## まとめ
 

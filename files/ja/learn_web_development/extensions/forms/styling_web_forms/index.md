@@ -372,9 +372,9 @@ button:focus {
 > [!NOTE]
 > 例が期待どおり動かず、私たちのバージョンを確認したい場合は、 GitHub を参照してください。[ライブ版](https://mdn.github.io/learning-area/html/forms/postcard-example/)を見てください（[ソースコード](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)も見てください）。
 
-## スキルテスト
+## 確認テスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: スタイル設定の基本](/ja/docs/Learn_web_development/Extensions/Forms)をご覧ください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[確認テスト: スタイル設定の基本](/ja/docs/Learn_web_development/Extensions/Forms)をご覧ください。
 
 ## まとめ
 

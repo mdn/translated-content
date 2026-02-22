@@ -50,7 +50,7 @@ window.outerHeight; /* 900 */
 
 ビューポートの大きさや、同様の大きさを求めるのに役立つ DOM プロパティがあります。
 
-- 文書の要素の {{DOMxRef("Element.clientWidth")}} は、文書の内部的な幅を [CSS ピクセル](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport#画面の密度)単位で、パディングを含みます (ただし、境界、マージン、ある場合は垂直スクロールバーは含みません)。**これがビューポートの幅です**。
+- 文書の要素の {{DOMxRef("Element.clientWidth")}} は、文書の内部的な幅を [CSS ピクセル](/ja/docs/Web/HTML/Reference/Elements/meta/name/viewport#画面の密度)単位で、パディングを含みます (ただし、境界、マージン、ある場合は垂直スクロールバーは含みません)。**これがビューポートの幅です**。
 - {{DOMxRef("Window.innerWidth")}} は、ブラウザーウィンドウのビューポートの CSS ピクセル単位の幅で、もしあれば垂直スクロールバーの幅を含みます。
 - {{DOMxRef("Window.outerWidth")}} は、ブラウザーウィンドウの外寸の幅で、すべてのウィンドウ{{glossary("Chrome", "クローム")}}を含みます。
 
@@ -170,7 +170,7 @@ HTML に SVG ファイルを記載すると、 SVG のビューポートは初�
 ## 関連情報
 
 - {{HTMLElement("meta")}}、特に `<meta name="viewport">`
-- [ビューポートメタタグを使用してモバイルブラウザーのレイアウトを制御](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport)
+- [ビューポートメタタグを使用してモバイルブラウザーのレイアウトを制御](/ja/docs/Web/HTML/Reference/Elements/meta/name/viewport)
 - [視覚的ビューポート API](/ja/docs/Web/API/Visual_Viewport_API)
 - [CSS ビューポート](/ja/docs/Web/CSS/CSS_viewport)モジュール
 - [CSSOM ビュー](/ja/docs/Web/CSS/Guides/CSSOM_view)モジュール

@@ -1,5 +1,5 @@
 ---
-title: "スキルテスト: 音声と動画"
+title: "確認テスト: 音声と動画"
 short-title: "試験: 音声と動画"
 slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video
 l10n:
@@ -8,10 +8,10 @@ l10n:
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content/Splash_page", "Learn_web_development/Core/Structuring_content")}}
 
-このスキルテストの目的は、あなたが [HTML での動画と音声コンテンツの埋め込み](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)を行う方法を理解しているかどうかを評価することです。
+この確認テストの目的は、あなたが [HTML での動画と音声コンテンツの埋め込み](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)を行う方法を理解しているかどうかを評価することです。
 
 > [!NOTE]
-> 手助けが必要な場合は、[スキルテスト](/ja/docs/Learn_web_development#スキルテスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
+> 手助けが必要な場合は、[確認テスト](/ja/docs/Learn_web_development#確認テスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
 
 ## 音声と動画 1
 

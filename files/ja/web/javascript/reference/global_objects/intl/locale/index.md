@@ -101,6 +101,21 @@ console.log(korean.hourCycle, japanese.hourCycle);
 
   - : ロケールのルールに従い、 [UTS 35 の週要素](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Patterns_Week_Elements)を返します。
 
+- {{jsxref("Intl/Locale/getCalendars", "Intl.Locale.prototype.getCalendars()")}}
+  - : このロケールのルールにより、利用可能な暦の配列 ({{jsxref("Array")}}) を返します。
+- {{jsxref("Intl/Locale/getCollations", "Intl.Locale.prototype.getCollations()")}}
+  - : この `Locale` の照合型の配列 ({{jsxref("Array")}}) を返します。
+- {{jsxref("Intl/Locale/getHourCycles", "Intl.Locale.prototype.getHourCycles()")}}
+  - : 時間周期の配列 ({{jsxref("Array")}}) を返します。 12 時制 ("h12")、日本の 12 時制 ("h11")、24 時制 ("h23")、未使用の書式 "h24" のいずれかです。
+- {{jsxref("Intl/Locale/getNumberingSystems", "Intl.Locale.prototype.getNumberingSystems()")}}
+  - : このロケールのルールに基づいて利用可能な記数法識別子の配列 ({{jsxref("Array")}}) を返します。
+- {{jsxref("Intl/Locale/getTextInfo", "Intl.Locale.prototype.getTextInfo()")}}
+  - : `ltr` （左書き）または `rtl` （右書き）で、文字の並び順を示す部分を返します。
+- {{jsxref("Intl/Locale/getTimeZones", "Intl.Locale.prototype.getTimeZones()")}}
+  - : この `Locale` に関連付けられたタイムゾーン識別子の配列 ({{jsxref("Array")}}) を返します。
+- {{jsxref("Intl/Locale/getWeekInfo", "Intl.Locale.prototype.getWeekInfo()")}}
+  - : ロケールのルールに従い、 [UTS 35 の週要素](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Patterns_Week_Elements)を返します。
+
 - {{jsxref("Intl/Locale/maximize", "Intl.Locale.prototype.maximize()")}}
   - : 既存の値に基づいて、ロケールの言語、文字体系、地域の最も可能性の高い値を取得します。
 - {{jsxref("Intl/Locale/minimize", "Intl.Locale.prototype.minimize()")}}

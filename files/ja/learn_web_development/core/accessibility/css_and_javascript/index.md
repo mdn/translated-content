@@ -356,9 +356,9 @@ imgThumb.onblur = hideImg;
 
 [click](/ja/docs/Web/API/Element/click_event) クリックイベントは興味深いものです。マウス依存のように聞こえる名前ですが、ほとんどのブラウザーは、フォーカスの当たっているリンクまたはフォーム要素上でエンター/リターンが押された後に、あるいは、そうした要素がタッチ画面装置上でタップされたときに、 [onclick](/ja/docs/Web/API/Element/click_event) イベントハンドラーを起動します。しかしこれは、 tabindex を用いて、既定ではフォーカス可能ではないイベントがフォーカスを持つようにしていると、既定のままではうまく機能しません。そうした場合では、まさにそのキーが具体的にはいつ押されたのかを検出する必要があります ([キーボードアクセシビリティを呼び戻すように盛り込む](/ja/docs/Learn_web_development/Core/Accessibility/HTML#キーボードアクセシビリティを呼び戻すように盛り込む) を参照)。
 
-## スキルをテストしましょう
+## 確認テスト
 
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？先に進む前に、[スキルテスト: CSS と JavaScript のアクセシビリティ](/ja/docs/Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript) を参照して、この情報を覚えているかどうかを確認しましょう。
+この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？先に進む前に、[確認テスト: CSS と JavaScript のアクセシビリティ](/ja/docs/Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript) を参照して、この情報を覚えているかどうかを確認しましょう。
 
 ## まとめ
 
