@@ -1,9 +1,9 @@
 ---
-title: "スキルテスト: ボックスモデル"
-short-title: "テスト: ボックスモデル"
+title: "確認テスト: ボックスモデル"
+short-title: "試験: ボックスモデル"
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model
 l10n:
-  sourceCommit: d0be159e6119ff73453bea6d224f0a2056307aa4
+  sourceCommit: a623d4459e2aa00d17dc0fd6b6bc44f56c589950
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics")}}
@@ -23,13 +23,15 @@ l10n:
 <mdn-scrim-inline url="https://scrimba.com/learn-html-and-css-c0p/~01s" scrimtitle="Margin shorthand" survey="true"></scrim-inline>
 -->
 
-## 課題 1
+## ボックスモデル 1
 
 この課題では、下記の 2 種類のボックスがあり、 1 つは標準ボックスモデル、もう 1 つは代替ボックスモデルを使用しています。 `.alternate` クラスに宣言を追加して 2 つ目のボックスの幅を変更し、最初のボックスの視覚的な幅と一致するようにしましょう。
 
-最終的には下記のようになるはずです。
+この課題の出発点は次のようなものです。
 
-{{EmbedLiveSample("box-model1-finish", "", "540px")}}
+{{EmbedLiveSample("box-model1-start", "", "540px")}}
+
+基盤となる出発点のコードは次の通りです。
 
 ```html live-sample___box-model1-start live-sample___box-model1-finish
 <div class="box">標準ボックスモデルを使用しています。</div>
@@ -54,9 +56,9 @@ body {
 }
 ```
 
-この課題の最初の状態はこちらです。
+スタイル設定を更新すると、このようになります。
 
-{{EmbedLiveSample("box-model1-start", "", "540px")}}
+{{EmbedLiveSample("box-model1-finish", "", "540px")}}
 
 <details>
 <summary>ここをクリックすると、模範解答を表示します。</summary>
@@ -72,7 +74,7 @@ body {
 
 </details>
 
-## 課題 2
+## ボックスモデル 2
 
 この課題では、ボックスに次のものを追加してください。
 
@@ -83,9 +85,11 @@ body {
 - 2em の左マージン
 - すべての辺に 1em のパディング
 
-最終的には下記のようになるはずです。
+この課題の出発点は次のようなものです。
 
-{{EmbedLiveSample("box-model2-finish", "100%", "140px")}}
+{{EmbedLiveSample("box-model2-start", "100%", "100px")}}
+
+基盤となる出発点のコードは次の通りです。
 
 ```html live-sample___box-model2-start live-sample___box-model2-finish
 <div class="box">標準ボックスモデルを使用しています。</div>
@@ -100,9 +104,9 @@ body {
 }
 ```
 
-この課題の最初の状態はこちらです。
+スタイル設定を更新すると、このようになります。
 
-{{EmbedLiveSample("box-model2-start", "100%", "100px")}}
+{{EmbedLiveSample("box-model2-finish", "100%", "140px")}}
 
 <details>
 <summary>ここをクリックすると、模範解答を表示します。</summary>
@@ -120,15 +124,17 @@ body {
 
 </details>
 
-## 課題 3
+## ボックスモデル 3
 
 この課題では、インライン要素にマージン、パディング、境界線があります。しかし、上下の行が重なっています。
 
 この課題を完了するには、要素をインラインのまま維持しながら、マージン、パディング、および境界線のサイズが他の行でも尊重されるように CSS を更新してください。
 
-最終的には下記のようになるはずです。
+この課題の出発点は次のようなものです。
 
-{{EmbedLiveSample("box-model3-finish", "100%", "260px")}}
+{{EmbedLiveSample("box-model3-start", "100%", "220px")}}
+
+基盤となる出発点のコードは次の通りです。
 
 ```html live-sample___box-model3-start live-sample___box-model3-finish
 <div class="box">
@@ -158,9 +164,9 @@ body {
 }
 ```
 
-この課題の最初の状態はこちらです。
+スタイル設定を更新すると、このようになります。
 
-{{EmbedLiveSample("box-model3-start", "100%", "220px")}}
+{{EmbedLiveSample("box-model3-finish", "100%", "260px")}}
 
 <details>
 <summary>ここをクリックすると、模範解答を表示します。</summary>
