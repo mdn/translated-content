@@ -1,9 +1,8 @@
 ---
 title: :first-child
 slug: Web/CSS/Reference/Selectors/:first-child
-original_slug: Web/CSS/:first-child
 l10n:
-  sourceCommit: 8d4fb1e2934111a13989d2796152dc601468e7b5
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`:first-child`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、兄弟要素のグループの中で最初の要素を表します。
@@ -58,21 +57,21 @@ li:first-child {
 
 #### HTML
 
-```html live-sample___basic_example
+```html
 <div>
   <p>このテキストは選択されます。</p>
   <p>このテキストは選択されません。</p>
 </div>
 
 <div>
-  <h2>このテキストは選択されません。: `p` ではありません。</h2>
+  <h2>このテキストは選択されません。 `p` ではありません。</h2>
   <p>このテキストは選択されません。</p>
 </div>
 ```
 
 #### CSS
 
-```css live-sample___basic_example
+```css
 p:first-child {
   color: lime;
   background-color: black;
@@ -82,13 +81,13 @@ p:first-child {
 
 #### 結果
 
-{{EmbedLiveSample('Basic_example', 500, 200)}}
+{{EmbedLiveSample('基本的な例', 500, 200)}}
 
 ### リストのスタイル設定
 
 #### HTML
 
-```html live-sample___styling_a_list
+```html
 <ul>
   <li>アイテム 1</li>
   <li>アイテム 2</li>
@@ -105,7 +104,7 @@ p:first-child {
 
 #### CSS
 
-```css live-sample___styling_a_list
+```css
 ul li {
   color: blue;
 }
@@ -118,7 +117,7 @@ ul li:first-child {
 
 #### 結果
 
-{{EmbedLiveSample('Styling_a_list')}}
+{{EmbedLiveSample('リストのスタイル設定')}}
 
 ## 仕様書
 
@@ -133,4 +132,4 @@ ul li:first-child {
 - {{CSSxRef(":-moz-first-node")}}
 - {{CSSxRef(":first-of-type")}}
 - {{CSSxRef(":last-child")}}
-- {{CSSxRef(":nth-child", ":nth-child()")}}
+- {{cssxref(":nth-child()")}}

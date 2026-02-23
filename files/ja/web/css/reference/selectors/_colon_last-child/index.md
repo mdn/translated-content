@@ -1,18 +1,11 @@
 ---
 title: :last-child
 slug: Web/CSS/Reference/Selectors/:last-child
-original_slug: Web/CSS/:last-child
+l10n:
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
 **`:last-child`** は[CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、兄弟要素のグループの中で最後の要素を表します。
-
-```
-/* 兄弟要素の中で最後の <p> を
-   すべてを選択 */
-p:last-child {
-  color: lime;
-}
-```
 
 {{InteractiveExample("CSS デモ: :last-child", "tabbed-shorter")}}
 
@@ -50,13 +43,12 @@ li:last-child {
 </ul>
 ```
 
-> [!NOTE]
-> 当初の定義では、親のある要素のみが選択されていました。 Selectors Level 4 の初期に、これは必要なくなりました。
-
 ## 構文
 
-```
-:last-child
+```css
+:last-child {
+  /* ... */
+}
 ```
 
 ## 例
@@ -137,7 +129,7 @@ ul li:last-child {
 
 ## 関連情報
 
-- {{CSSxRef(":-moz-last-node")}} {{Non-standard_Inline}}
+- {{CSSxRef(":-moz-last-node")}}
 - {{CSSxRef(":last-of-type")}}
 - {{CSSxRef(":first-child")}}
 - {{CSSxRef(":nth-child")}}

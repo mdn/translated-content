@@ -2,7 +2,7 @@
 title: SVGAElement
 slug: Web/API/SVGAElement
 l10n:
-  sourceCommit: 34c204f8f6c3f7ac60ebb23fca9798680aee9956
+  sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
 ---
 
 {{APIRef("SVG")}}
