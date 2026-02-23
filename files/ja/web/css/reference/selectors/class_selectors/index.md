@@ -49,7 +49,7 @@ li.spacious.elegant {
 
 #### HTML
 
-```html
+```html-nolint
 <p class="red">この段落は赤い文字です。</p>
 <p class="red yellow-bg">
   この段落は赤い文字で、黄色の背景です。
