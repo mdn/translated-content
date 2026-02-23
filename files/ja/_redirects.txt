@@ -1278,8 +1278,8 @@
 /ja/docs/Full_page_zoom	/ja/docs/Mozilla/Firefox/Releases/3/Full_page_zoom
 /ja/docs/Games/Examples	/ja/docs/orphaned/Games/Examples
 /ja/docs/Games/Index	/ja/docs/Games
-/ja/docs/Games/Introduction_to_HTML5_Game_Development	/ja/docs/conflicting/Games/Tools
-/ja/docs/Games/Introduction_to_HTML5_Game_Gevelopment_(summary)	/ja/docs/conflicting/Games/Tools
+/ja/docs/Games/Introduction_to_HTML5_Game_Development	/ja/docs/Games/Introduction
+/ja/docs/Games/Introduction_to_HTML5_Game_Gevelopment_(summary)	/ja/docs/Games/Introduction
 /ja/docs/Games/Techniques/3D_on_the_web/WebVR	/ja/docs/Games/Techniques/3D_on_the_web/WebXR
 /ja/docs/Games/Workflows	/ja/docs/Games/Tutorials
 /ja/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript	/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
@@ -2949,7 +2949,7 @@
 /ja/docs/Web/API/Document/inputEncoding	/ja/docs/Web/API/Document/characterSet
 /ja/docs/Web/API/Document/keydown_event	/ja/docs/Web/API/Element/keydown_event
 /ja/docs/Web/API/Document/keyup_event	/ja/docs/Web/API/Element/keyup_event
-/ja/docs/Web/API/Document/lostpointercapture_event	/ja/docs/conflicting/Web/API/Element/lostpointercapture_event
+/ja/docs/Web/API/Document/lostpointercapture_event	/ja/docs/Web/API/Element/lostpointercapture_event
 /ja/docs/Web/API/Document/onafterscriptexecute	/ja/docs/Web/API/Document/afterscriptexecute_event
 /ja/docs/Web/API/Document/onbeforescriptexecute	/ja/docs/Web/API/Document/beforescriptexecute_event
 /ja/docs/Web/API/Document/onfullscreenchange	/ja/docs/Web/API/Document/fullscreenchange_event
@@ -3042,7 +3042,7 @@
 /ja/docs/Web/API/File_and_Directory_Entries_API/Firefox_support	/ja/docs/Web/API/File_and_Directory_Entries_API
 /ja/docs/Web/API/File_and_Directory_Entries_API/Introduction	/ja/docs/Web/API/File_System_API
 /ja/docs/Web/API/FormData/Using_FormData_Objects	/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects
-/ja/docs/Web/API/FormDataEntryValue	/ja/docs/conflicting/Web/API/FormData
+/ja/docs/Web/API/FormDataEntryValue	/ja/docs/Web/API/FormData
 /ja/docs/Web/API/Geolocation.clearWatch	/ja/docs/Web/API/Geolocation/clearWatch
 /ja/docs/Web/API/Geolocation.getCurrentPosition	/ja/docs/Web/API/Geolocation/getCurrentPosition
 /ja/docs/Web/API/Geolocation.watchPosition	/ja/docs/Web/API/Geolocation/watchPosition
@@ -3156,7 +3156,7 @@
 /ja/docs/Web/API/HTMLHyperlinkElementUtils/toString	/ja/docs/Web/API/HTMLAnchorElement/toString
 /ja/docs/Web/API/HTMLHyperlinkElementUtils/username	/ja/docs/Web/API/HTMLAnchorElement/username
 /ja/docs/Web/API/HTMLInputElement/mozGetFileNameArray	/ja/docs/Web/API/HTMLInputElement
-/ja/docs/Web/API/HTMLMediaElement/onerror	/ja/docs/conflicting/Web/API/HTMLMediaElement/error_event
+/ja/docs/Web/API/HTMLMediaElement/onerror	/ja/docs/Web/API/HTMLMediaElement/error_event
 /ja/docs/Web/API/HTMLOrForeignElement	/ja/docs/Web/API/HTMLElement
 /ja/docs/Web/API/HTMLScriptElement/supports	/ja/docs/Web/API/HTMLScriptElement/supports_static
 /ja/docs/Web/API/HTMLSelectElement/autofocus	/ja/docs/Web/API/HTMLElement/autofocus
@@ -3342,9 +3342,9 @@
 /ja/docs/Web/API/Screen/onorientationchange	/ja/docs/Web/API/Screen/orientationchange_event
 /ja/docs/Web/API/Screen/top	/ja/docs/Web/API/ScreenDetailed/top
 /ja/docs/Web/API/ScrollToOptions	/ja/docs/Web/API/Window/scroll
-/ja/docs/Web/API/ServiceWorkerContainer/error_event	/ja/docs/conflicting/Web/API/ServiceWorker/error_event
+/ja/docs/Web/API/ServiceWorkerContainer/error_event	/ja/docs/Web/API/ServiceWorker/error_event
 /ja/docs/Web/API/ServiceWorkerContainer/oncontrollerchange	/ja/docs/Web/API/ServiceWorkerContainer/controllerchange_event
-/ja/docs/Web/API/ServiceWorkerContainer/onerror	/ja/docs/conflicting/Web/API/ServiceWorker/error_event
+/ja/docs/Web/API/ServiceWorkerContainer/onerror	/ja/docs/Web/API/ServiceWorker/error_event
 /ja/docs/Web/API/ServiceWorkerContainer/onmessage	/ja/docs/Web/API/ServiceWorkerContainer/message_event
 /ja/docs/Web/API/ServiceWorkerGlobalScope/caches	/ja/docs/Web/API/Window/caches
 /ja/docs/Web/API/ServiceWorkerGlobalScope/onactivate	/ja/docs/Web/API/ServiceWorkerGlobalScope/activate_event
@@ -6166,7 +6166,7 @@
 /ja/docs/Web/HTTP/Proxy_servers_and_tunneling	/ja/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling
 /ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file	/ja/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 /ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file	/ja/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
-/ja/docs/Web/HTTP/Public_Key_Pinning	/ja/docs/conflicting/Web/Security/Certificate_Transparency
+/ja/docs/Web/HTTP/Public_Key_Pinning	/ja/docs/Web/Security/Defenses/Certificate_Transparency
 /ja/docs/Web/HTTP/Range_requests	/ja/docs/Web/HTTP/Guides/Range_requests
 /ja/docs/Web/HTTP/Redirections	/ja/docs/Web/HTTP/Guides/Redirections
 /ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/document-domain	/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy
@@ -6894,7 +6894,7 @@
 /ja/docs/Web/Security/Information_Security_Basics	/ja/docs/orphaned/Web/Security/Information_Security_Basics
 /ja/docs/Web/Security/Insecure_passwords	/ja/docs/Web/Security/Authentication/Passwords
 /ja/docs/Web/Security/Mixed_content	/ja/docs/Web/Security/Defenses/Mixed_content
-/ja/docs/Web/Security/Public_Key_Pinning	/ja/docs/conflicting/Web/Security/Certificate_Transparency
+/ja/docs/Web/Security/Public_Key_Pinning	/ja/docs/Web/Security/Defenses/Certificate_Transparency
 /ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns	/ja/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns
 /ja/docs/Web/Security/Same-origin_policy	/ja/docs/Web/Security/Defenses/Same-origin_policy
 /ja/docs/Web/Security/Secure_Contexts	/ja/docs/Web/Security/Defenses/Secure_Contexts
