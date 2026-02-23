@@ -1,12 +1,11 @@
 ---
 title: :first-of-type
 slug: Web/CSS/Reference/Selectors/:first-of-type
-original_slug: Web/CSS/:first-of-type
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
-**`:first-of-type`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、兄弟要素のグループの中でその種類の最初の要素を表します。
+**`:first-of-type`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、兄弟要素のグループの中でその型（タグ名）の最初の要素を表します。
 
 {{InteractiveExample("CSS デモ: :first-of-type", "tabbed-shorter")}}
 
