@@ -6819,7 +6819,7 @@
 /ja/docs/Web/SVG/Element/filter	/ja/docs/Web/SVG/Reference/Element/filter
 /ja/docs/Web/SVG/Element/foreignObject	/ja/docs/Web/SVG/Reference/Element/foreignObject
 /ja/docs/Web/SVG/Element/g	/ja/docs/Web/SVG/Reference/Element/g
-/ja/docs/Web/SVG/Element/hatchpath	/ja/docs/Web/SVG/Element
+/ja/docs/Web/SVG/Element/hatchpath	/ja/docs/Web/SVG/Reference/Element
 /ja/docs/Web/SVG/Element/image	/ja/docs/Web/SVG/Reference/Element/image
 /ja/docs/Web/SVG/Element/line	/ja/docs/Web/SVG/Reference/Element/line
 /ja/docs/Web/SVG/Element/linearGradient	/ja/docs/Web/SVG/Reference/Element/linearGradient
