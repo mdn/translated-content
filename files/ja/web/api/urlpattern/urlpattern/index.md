@@ -97,7 +97,7 @@ new URLPattern(url, baseURL);
 直感的には、入力で `pathname` の部分が指定されている場合、URL 内のその左側の部分（`protocol`、`hostname`、`port`）はベース URL から継承されることがありますが、右側の部分（`search` と `hash`）は継承されないということです。
 `username` と `password` は、ベース URL から継承されることはありません。
 
-詳細は、API 概要の[ベース　URL からの継承](/ja/docs/Web/API/URL_Pattern_API#ベース_url_からの継承)を参照してください。
+詳細は、API 概要の[ベース URL からの継承](/ja/docs/Web/API/URL_Pattern_API#ベース_url_からの継承)を参照してください。
 
 ### `url` または `baseURL` のホスト名はデフォルトポート番号へ影響する
 
