@@ -37,7 +37,7 @@
     "markdown-it": "^14.1.1",
     "markdownlint-cli2": "^0.21.0",
     "markdownlint-rule-search-replace": "^1.2.0",
-    "mdast-util-from-markdown": "^2.0.2",
+    "mdast-util-from-markdown": "^2.0.3",
     "ora": "^9.3.0",
     "prettier": "^3.8.1",
     "unist-util-visit": "^5.1.0",
