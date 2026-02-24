@@ -2,10 +2,6 @@
 title: "PerformanceNavigationTiming: activationStart プロパティ"
 short-title: activationStart
 slug: Web/API/PerformanceNavigationTiming/activationStart
-page-type: web-api-instance-property
-status:
-  - experimental
-browser-compat: api.PerformanceNavigationTiming.activationStart
 l10n:
   sourceCommit: 11e09e7c584658fbfbecd2f00ae66e546cd54cc0
 ---
