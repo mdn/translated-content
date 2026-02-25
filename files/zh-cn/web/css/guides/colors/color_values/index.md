@@ -141,11 +141,11 @@ RGB（红/绿/蓝）函数表示法与十六进制字符串表示法一样，都
 
 `hsl()` CSS 颜色函数是浏览器支持的首个基于色相的颜色函数。相较于 `rgb()`，`hsl()` 更具直观性——通过调整色相（`h`）、饱和度（`s`）和明度（`l`）值来确定颜色效果，通常比通过红、绿、蓝通道值声明具体颜色更为便捷。此外，HSL 与 Photoshop 中的 HSB（色相、饱和度、亮度）调色板相似，这使得许多人在首次接触时便能立即熟悉其用法。
 
-`hsl()` 和 `hwb()` 这两种 sRGB 颜色函数均采用圆柱模型。色相通过 {{cssxref("angle")}}在圆形{{glossary("color wheel", "色轮")}}上定义颜色。下图展示了 HSL 颜色柱。饱和度以百分比形式定义颜色在完全灰度与最大色相值之间的分布程度。随着明度值增加，颜色将从最暗过渡至最亮（从黑色到白色）。
+`hsl()` 和 `hwb()` 这两种 sRGB 颜色函数均采用圆柱模型。色相通过 {{cssxref("angle")}} 在圆形{{glossary("color wheel", "色轮")}}上定义颜色。下图展示了 HSL 颜色柱。饱和度以百分比形式定义颜色在完全灰度与最大色相值之间的分布程度。随着明度值增加，颜色将从最暗过渡至最亮（从黑色到白色）。
 
 ![HSL 颜色柱](640px-hsl_color_solid_cylinder.png)
 
-图片由用户 [SharkD](https://commons.wikimedia.org/wiki/User:SharkD) 在 [Wikipedia](https://en.wikipedia.org/) 上提供，采用 [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) 许可发布。
+图片由用户 [SharkD](https://commons.wikimedia.org/wiki/User:SharkD) 在 [Wikipedia](https://zh.wikipedia.org/) 上提供，采用 [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) 许可发布。
 
 HSL 颜色的色相（`H`）分量值是从红色开始，依次经过黄色、绿色、青色、蓝色和洋红色（360° 时又回到红色）的一个角度，用于确定基色。该值可以用 CSS 支持的任何 {{cssxref("&lt;angle&gt;")}} 单位指定，包括度（`deg`）、弧度（`rad`）、梯度（`grad`）或转数（`turn`）。色调值用于确定颜色的基调，不能控制颜色的鲜艳或暗淡、明亮或昏暗程度。
 
@@ -302,7 +302,7 @@ for (const color of colors) {
 }
 ```
 
-{{EmbedLiveSample("HWB_函数表示法", 300, 200)}}
+{{EmbedLiveSample("hwb_functional_notation", 300, 200)}}
 
 ### LCH 和 OkLCh：CIELAB 和 Oklab 色彩空间
 
