@@ -5,23 +5,23 @@ page-type: guide
 sidebar: mediasidebar
 ---
 
-This article describes a basic HTML video player that uses the Media and Fullscreen APIs. As well as working fullscreen, the player features custom controls rather than just using the browser defaults. The player controls themselves won't be styled beyond the basics required to get them working; full styling of the player will be taken care of in a future article.
+В этой статье описан базовый HTML-видеоплеер, использующий API Media и Fullscreen. Помимо возможности работы в полноэкранном режиме, в плеере реализованы собственные элементы управления (а не используемые по умолчанию браузерные). Элементы управления плеера будут стилизованы минимально, только для обеспечения их работоспособности; полная стилизация плеера будет рассмотрена в другой статье.
 
-Our example video player displays a clip from an open source movie called [Tears of Steel](https://mango.blender.org/about/), and includes typical video controls.
+Предлагаемый видеоплеер показывает клип из опенсорсного видео [Tears of Steel](https://mango.blender.org/about/) и содержит в себе типовые элементы управления видео.
 
-## HTML markup
+## HTML-разметка
 
-To start off with, let's take a look at the HTML that makes up the player.
+Для начала давайте посмотрим на HTML-код плеера.
 
-### The video
+### Видео
 
-Our whole player is contained within a {{ htmlelement("figure") }} element.
+Весь плеер заключен в элемент {{ htmlelement("figure") }}.
 
 ```html-nolint live-sample___video-player
 <figure id="videoContainer">
 ```
 
-Inside, we first define the {{ htmlelement("video") }} element.
+Внутри мы первым делом определяем элемент {{ htmlelement("video") }}.
 
 ```html live-sample___video-player
 <video
@@ -40,45 +40,45 @@ Inside, we first define the {{ htmlelement("video") }} element.
     type="video/ogg" />
   <!-- Offer download -->
   <a href="/shared-assets/videos/tears-of-steel-battle-clip-medium.mp4"
-    >Download MP4</a
+    >Скачать MP4</a
   >
 </video>
 ```
 
-Even though this player will define its own custom control set, the `controls` attribute is still added to the {{ htmlelement("video") }} element, and the player's default control set is switched off later with JavaScript. Doing things this way still allows users who have JavaScript turned off (for whatever reason) to still have access to the browser's native controls.
+Несмотря на то, что в плеере будет реализован собственный набор элементов управления, атрибут `controls` всё равно добавлен в элемент {{ htmlelement("video") }} и набор элементов управления, существующий в плеере по умолчанию, будет отключен позже с помощью JavaScript. Такой подход позволяет пользователям, у которых отключён JavaScript (по любой причине), по-прежнему иметь доступ к встроенным элементам управления браузера.
 
-A poster image is defined for the video, and the `preload` attribute is set to `metadata`, which informs the browser that it should initially only attempt to load the metadata from the video file rather than the entire video file. This provides the player with data such as video duration and format.
+Для видео задано изображение-заставка (poster), а атрибут `preload` установлен в значение `metadata`. Это указывает браузеру, что изначально следует загружать только метаданные из видеофайла, а не весь файл целиком. Это позволяет получить плееру такие данные, как длительность видео и его формат.
 
-Three different video sources are provided for the player: MP4, WebM, and Ogg. Using these different source formats gives the best chance of being supported across all browsers that support HTML video. For further information on video formats and browser compatibility, see [choosing a video codec](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#choosing_a_video_codec).
+Для плеера предоставлены три различных источника видео: MP4, WebM и Ogg. Использование этих разных форматов обеспечивает максимальную вероятность поддержки во всех браузерах, поддерживающих воспроизведение HTML-видео. Дополнительную информацию о форматах видео и совместимости с браузерами см. [выбор видеокодека](/ru/docs/Web/Media/Guides/Formats/Video_codecs#choosing_a_video_codec).
 
-The code above would allow playback of the video in most browsers, using the browser's default control set. The next step is to define a custom control set, also in HTML, which will be used to control the video.
+Приведённый выше код позволит воспроизводить видео в большинстве браузеров с помощью стандартного набора элементов управления браузера. Следующий шаг – определение собственного набора элементов управления, который будет использоваться для управления видео, также на HTML.
 
-### The control set
+### Набор элементов управления
 
-Most browser's default video controls have the following functionality:
+Стандартные элементы управления видео в большинстве браузеров обладают следующим функционалом:
 
-- Play/pause
-- Mute
-- Volume control
-- Progress bar
-- Skip ahead
-- Go fullscreen
+- Воспроизведение/пауза
+- Отключение звука (Mute)
+- Регулировка громкости
+- Индикатор прогресса (прогресс-бар)
+- Перемотка вперед
+- Полноэкранный режим
 
-The custom control set will also support this functionality, with the addition of a stop button.
+Созданный набор элементов управления также будет поддерживать все эти функции, с добавлением кнопки остановки.
 
-Once again the HTML is quite straightforward, using an unordered list with `list-style-type:none` set to enclose the controls, each of which is a list item with `float:left`. For the progress bar, the `progress` element is taken advantage of. This list is inserted after the {{ htmlelement("video") }} element, but inside the {{ htmlelement("figure") }} element (this is important for the fullscreen functionality, which is explained later on).
+HTML-разметка здесь довольно проста: для размещения элементов управления используется неупорядоченный список со свойством `list-style-type:none`. Каждый элемент управления представлен элементом списка с примененным стилем `float:left`. Для индикатора прогресса (прогресс-бар) используется элемент `progress`. Этот список размещается сразу после элемента {{ htmlelement("video") }}, но внутри элемента {{ htmlelement("figure") }} (это важно для работы полноэкранного режима, о чем будет рассказано далее).
 
 ```html live-sample___video-player
 <ul id="video-controls" class="controls" data-state="hidden">
-  <li><button id="play-pause" type="button">Play/Pause</button></li>
-  <li><button id="stop" type="button">Stop</button></li>
+  <li><button id="play-pause" type="button">Воспр./пауза</button></li>
+  <li><button id="stop" type="button">Стоп</button></li>
   <li class="progress">
     <progress id="progress" value="0"></progress>
   </li>
-  <li><button id="mute" type="button">Mute/Unmute</button></li>
-  <li><button id="vol-inc" type="button">Vol+</button></li>
-  <li><button id="vol-dec" type="button">Vol-</button></li>
-  <li><button id="fs" type="button">Fullscreen</button></li>
+  <li><button id="mute" type="button">Звук выкл./вкл.</button></li>
+  <li><button id="vol-inc" type="button">Громк.+</button></li>
+  <li><button id="vol-dec" type="button">Громк.-</button></li>
+  <li><button id="fs" type="button">Полный экран</button></li>
 </ul>
 ```
 
@@ -100,7 +100,7 @@ Finally we close off the `<figure>` element with a {{htmlelement("figcaption")}}
 
 ## Using the Media API
 
-HTML comes with a JavaScript [Media API](/en-US/docs/Web/API/HTMLMediaElement) that allows developers access to and control of HTML media. This API will be used to make the custom control set defined above actually do something. In addition, the fullscreen button will use the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API), another W3C API that controls the ability of web browsers to show apps using your computer's full screen.
+HTML comes with a JavaScript [Media API](/ru/docs/Web/API/HTMLMediaElement) that allows developers access to and control of HTML media. This API will be used to make the custom control set defined above actually do something. In addition, the fullscreen button will use the [Fullscreen API](/ru/docs/Web/API/Fullscreen_API), another W3C API that controls the ability of web browsers to show apps using your computer's full screen.
 
 ### Setup
 
@@ -227,7 +227,7 @@ video.addEventListener("timeupdate", () => {
 ```
 
 > [!NOTE]
-> For more information and ideas on progress bars and buffering feedback, read [Media buffering, seeking, and time ranges](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/buffering_seeking_time_ranges).
+> For more information and ideas on progress bars and buffering feedback, read [Media buffering, seeking, and time ranges](/ru/docs/Web/Media/Guides/Audio_and_video_delivery/buffering_seeking_time_ranges).
 
 ### Skip ahead
 
@@ -274,7 +274,7 @@ If the browser is currently in fullscreen mode, then it must be exited and vice 
 
 ## Result
 
-The CSS part is hidden for this tutorial, but you can click "Play" to see the full source code. In the next part, [Video player styling basics](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics), we will explore some interesting CSS techniques used here, and also add new CSS to make the player look nicer.
+The CSS part is hidden for this tutorial, but you can click "Play" to see the full source code. In the next part, [Video player styling basics](/ru/docs/Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics), we will explore some interesting CSS techniques used here, and also add new CSS to make the player look nicer.
 
 ```css hidden live-sample___video-player
 :root {
@@ -369,5 +369,5 @@ figure:fullscreen figcaption {
 ## See also
 
 - {{ htmlelement("video") }} for reference material
-- [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) for more techniques
-- [Media formats supported by the HTML audio and video elements](/en-US/docs/Web/Media/Guides/Formats)
+- [HTML video and audio](/ru/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) for more techniques
+- [Media formats supported by the HTML audio and video elements](/ru/docs/Web/Media/Guides/Formats)
