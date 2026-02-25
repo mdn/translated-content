@@ -622,13 +622,6 @@ li {
 
 {{EmbedLiveSample("inline-block-nav")}}
 
-<<<<<<< 260222-Learn_web_development/Core/Styling_basics/Box_model
-=======
-## 確認テスト
-
-この記事の最後まで到達しましたが、最も重要な情報を覚えていますか？移動される前に、この情報が記憶されているかどうかを確認するためのテストを探すことができます。[確認テスト: ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model)を参照してください。
-
->>>>>>> main
 ## まとめ
 
 以上が、ボックスモデルについて理解する必要があるほとんどのことです。レイアウト内の大きなボックスの大きさについて混乱している場合は、このレッスンに戻ってください。
