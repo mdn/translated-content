@@ -7,10 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("IndexedDB")}} {{AvailableInWorkers}}
 
-IndexedDB 是一种底层 API，用于在客户端存储大量的结构化数据（也包括文件/二进制大型对象（blob））。该 API 使用索引实现对数据的高性能搜索。虽然 [Web Storage](/zh-CN/docs/Web/API/Web_Storage_API) 在存储较少量的数据很有用，但对于存储更大量的结构化数据来说力不从心。而 IndexedDB 提供了这种场景的解决方案。本页面 MDN IndexedDB 的主要引导页——这里，我们提供了完整的 API 参考和使用指南、浏览器支持细节，以及关键概念的一些解释的链接。
-
-> [!NOTE]
-> IndexedDB API 是强大的，但对于简单的情况可能看起来太复杂。如果你更喜欢一个简单的 API，请尝试 [localForage](https://localforage.github.io/localForage/)、[dexie.js](https://www.dexie.org/)、[PouchDB](https://pouchdb.com/)、[idb](https://www.npmjs.com/package/idb)、[idb-keyval](https://www.npmjs.com/package/idb-keyval)、[JsStore](https://jsstore.net/) 或者 [lovefield](https://github.com/google/lovefield) 之类的库，这些库使 IndexedDB 对开发者来说更加友好。
+IndexedDB 是一种底层 API，用于在客户端存储大量的结构化数据（也包括文件/二进制大型对象（blob））。该 API 使用索引实现对数据的高性能搜索。虽然 [Web 存储](/zh-CN/docs/Web/API/Web_Storage_API)在存储较少量的数据很有用，但对于存储更大量的结构化数据来说力不从心。而 IndexedDB 提供了这种场景的解决方案。本页面 MDN IndexedDB 的主要引导页——这里，我们提供了完整的 API 参考和使用指南、浏览器支持细节，以及关键概念的一些解释的链接。
 
 ## 关键概念和用法
 
@@ -66,26 +63,11 @@ IndexedDB 是一个事务型数据库系统，类似于基于 SQL 的关系型�
 此规范使用以下自定义接口触发事件：
 
 - {{domxref("IDBVersionChangeEvent")}}
-  - : 作为 {{domxref("IDBOpenDBRequest.onupgradeneeded")}} 事件的处理程序的结果，`IDBVersionChangeEvent` 接口表示数据库的版本已经发生了改变。
-
-### 过时的接口
-
-规范的早期版本还定义了这些现在已删除的接口。这些文档便于你需要更新以前编写的代码：
-
-- {{domxref("IDBEnvironment")}}
-  - : 提供 IndexedDB 功能。它由 {{domxref("window")}} 和 {{domxref("worker")}} 实现，这个接口不再是 2.0 规范的一部分。
-- {{domxref("IDBLocaleAwareKeyRange")}} {{Non-standard_inline}}
-  - : 定义一个键范围，可用于从特定范围内的数据库中检索数据，并根据为特定索引指定的语言环境的规则进行排序（详见 [createIndex()](/zh-CN/docs/Web/API/IDBObjectStore/createIndex#Parameters) 的参数）。这个接口不再是 2.0 规范的一部分。
-- {{domxref("IDBVersionChangeRequest")}} {{Deprecated_Inline}}
-  - : 表示更改数据库版本的请求。改变数据库版本的方法已经改变了（通过调用{{domxref("IDBFactory.open")}} 而非{{domxref("IDBDatabase.setVersion")}}），接口{{domxref("IDBOpenDBRequest")}} 现在拥有{{domxref("IDBVersionChangeRequest")}}。
-- {{domxref("IDBDatabaseException")}} {{Deprecated_Inline}}
-  - : 表示执行数据库操作时可能遇到的异常情况。
+  - : 作为 {{domxref("IDBOpenDBRequest.onupgradeneeded")}} 事件的处理器函数的结果，`IDBVersionChangeEvent` 接口表示数据库的版本已经发生了改变。
 
 ## 示例
 
-- [To-do Notifications](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)): 参考文档中示例的应用程序。
-- [eLibri:](https://marco-c.github.io/eLibri/) 由 IndexedDB Mozilla DevDerby 的获奖者 Marco Castelluccio 编写的一个功能强大的图书馆和电子书阅读器应用。
-- [Storing images and files in IndexedDB](https://hacks.mozilla.org/2012/02/storing-images-and-files-in-indexeddb/)
+- [待办通知](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)（[查看实时示例](https://mdn.github.io/dom-examples/to-do-notifications/)）：参考文档中示例的参考应用程序。
 
 ## 规范
 
@@ -93,17 +75,7 @@ IndexedDB 是一个事务型数据库系统，类似于基于 SQL 的关系型�
 
 ## 参见
 
-- [Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API)
+- [Web 存储 API](/zh-CN/docs/Web/API/Web_Storage_API)
 - [Window：localStorage 属性](/zh-CN/docs/Web/API/Window/localStorage)
 - [Window：sessionStorage 属性](/zh-CN/docs/Web/API/Window/sessionStorage)
 - [StorageEvent](/zh-CN/docs/Web/API/StorageEvent)
-- [localForage](https://localforage.github.io/localForage/)：一个简单的 Polyfill，提供了简单的客户端数据存储的值语法。它在后台使用 IndexedDB，并在不支持 IndexedDB 的浏览器中回退到 WebSQL 或 localStorage。
-- [Dexie.js](https://www.dexie.org/)：IndexedDB 的包装，通过简单的语法，可以更快地进行代码开发。
-- [ZangoDB](https://github.com/erikolson186/zangodb)：类似 MongoDB 的 IndexedDB 接口，支持 MongoDB 的大多数熟悉的过滤、投影、排序、更新和聚合功能。
-- [JsStore](https://jsstore.net/)：一个带有 SQL 语法的 IndexedDB 包装器。
-- [MiniMongo](https://github.com/mWater/minimongo)：由 localstorage 支持的客户端内存中的 mongodb，通过 http 进行服务器同步。MeteorJS 使用 MiniMongo。
-- [PouchDB](https://pouchdb.com/)：使用 IndexedDB 在浏览器中实现 CouchDB 的客户端。
-- [idb](https://www.npmjs.com/package/idb)：一个微小的（〜1.15k）库，大多 API 与 IndexedDB 类似，但做了一些小的改进，让数据库的可用性得到了大大的提升。
-- [idb-keyval](https://www.npmjs.com/package/idb-keyval)：使用 IndexedDB 实现的超级简单且小巧的（\~600B）基于 Promise 的键值对存储。
-- [sifrr-storage](https://www.npmjs.com/package/@sifrr/storage)：一个非常小的（\~2kB）基于 Promise 的客户端键值数据库。基于 IndexedDB、localStorage、WebSQL 和 Cookies 实现。它可以自动选择上述支持的数据库，并按照优先顺序使用。
-- [lovefield](https://github.com/google/lovefield)：Lovefield 是一个用于 Web App 的关系型数据库，使用 JavaScript 编写，可以在不同的浏览器环境中运行，提供了类似 SQL 的 API，速度快、安全且易用。
