@@ -101,7 +101,7 @@ Le titre aurait pu être «&nbsp;Application de suivi des cycles menstruels&nbsp
 <title>Cycle Tracker</title>
 ```
 
-Bien qu'ils soient officiellement facultatifs, ces dex balises `<meta>` et l'élément `<title>` sont trois composants de l'élément `<head>` qui devraient être présents dans tout document HTML.
+Bien qu'ils soient officiellement facultatifs, ces deux balises `<meta>` et l'élément `<title>` sont trois composants de l'élément `<head>` qui devraient être présents dans tout document HTML.
 
 Le dernier composant inclus dans l'élément `<head>` est un élément [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link) reliant à notre feuille de style externe `styles.css` (qui n'est pas encore écrite) à notre document HTML.
 
