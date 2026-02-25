@@ -8,9 +8,9 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-{{domxref("RTCRemoteInboundRtpStreamStats")}} 字典的 **`codecId`** 属性是一个字符串，可用于唯一标识需要获取统计数据的 {{Glossary("RTP")}} 流所对应的 {{domxref("RTCCodecStats")}} 对象。
+{{domxref("RTCRemoteInboundRtpStreamStats")}} 字典的 **`codecId`** 属性是一个用于唯一标识需要获取统计数据的 {{Glossary("RTP")}} 流所对应的 {{domxref("RTCCodecStats")}} 对象的字符串。
 
-通过遍历 {{domxref("RTCStatsReport")}} 中满足 `RTCRemoteInboundRtpStreamStats.codecId` 与 {{domxref("RTCCodecStats.id")}} 相等的元素，你可以获取到若干统计对象，进而能将 `RTCRemoteInboundRtpStreamStats` 和 `RTCCodecStats` 对象关联起来。
+通过遍历 {{domxref("RTCStatsReport")}} 中满足 `RTCRemoteInboundRtpStreamStats.codecId` 与 {{domxref("RTCCodecStats.id")}} 相等的元素，进而将 `RTCRemoteInboundRtpStreamStats` 和 `RTCCodecStats` 对象关联起来。
 
 ## 值
 
