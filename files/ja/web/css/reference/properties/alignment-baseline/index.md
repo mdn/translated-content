@@ -1,9 +1,8 @@
 ---
 title: alignment-baseline
 slug: Web/CSS/Reference/Properties/alignment-baseline
-original_slug: Web/CSS/alignment-baseline
 l10n:
-  sourceCommit: 64d85b74ce1cce6a24ae8979da4f3f4a01a47229
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`alignment-baseline`** は [CSS](/ja/docs/Web/CSS) のプロパティは、ボックスのテキストおよびインラインレベルのコンテンツの配置に使用する特定の[ベースライン](/ja/docs/Glossary/Baseline/Typography)を指定します。**ベースライン配置**とは、配置コンテキスト内の複数の配置対象物のベースライン間の関係です。ベースライン配置を実行する場合、 `alignment-baseline` プロパティの値は、ボックスのどのベースラインが、その配置コンテキストの対応するベースラインに配置されるかを指定します。

@@ -825,9 +825,9 @@ CSS は[数学関数](/ja/docs/Web/CSS/Reference/Values/Functions#数学関数)�
 
 CSS関数について知っておくことは有益なことです。普通の CSS で取得できる結果を得るために、カスタムコードを書いたり、繰り返しコードを書いたりせずに済むようになります。
 
-## スキルテスト
+## 確認テスト
 
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: 値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Values)を見てください。
+この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[確認テスト: 値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Values)を見てください。
 
 ## まとめ
 
