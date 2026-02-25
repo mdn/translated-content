@@ -1,19 +1,14 @@
 ---
-title: Function.prototype.apply()
+title: "Function : méthode apply()"
+short-title: apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`apply()`** des instances de {{JSxRef("Function")}} appelle cette fonction avec une valeur `this` donnée, et des `arguments` fournis sous forme de tableau (ou [d'objet semblable à un tableau](/fr/docs/Web/JavaScript/Guide/Indexed_collections#travailler_avec_des_objets_sembables_à_un_tableau)).
 
-La méthode **`apply()`** appelle une fonction en lui passant une valeur `this` et des `arguments` sous forme d'un tableau (ou d'un objet [semblable à un tableau](/fr/docs/Web/JavaScript/Guide#manipuler_des_objets_semblables_aux_tableaux)).
-
-> [!NOTE]
-> Bien que la syntaxe de cette fonction ressemble à celle de {{jsxref("Function.call", "call()")}}, elle est différente car `call()` accepte **une liste d'arguments**, tandis que `apply()` accepte un **tableau d'arguments**.
-
-> [!NOTE]
-> Quand on utilise {{jsxref("undefined")}} ou {{jsxref("null")}} comme premier argument pour cette fonction, on peut obtenir un résultat similaire avec la [syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
-
-{{InteractiveExample("JavaScript Demo: Function.apply()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Function.prototype.apply()")}}
 
 ```js interactive-example
 const numbers = [5, 6, 2, 3, 7];
@@ -21,26 +16,27 @@ const numbers = [5, 6, 2, 3, 7];
 const max = Math.max.apply(null, numbers);
 
 console.log(max);
-// Expected output: 7
+// Résultat attendu : 7
 
 const min = Math.min.apply(null, numbers);
 
 console.log(min);
-// Expected output: 2
+// Résultat attendu : 2
 ```
 
 ## Syntaxe
 
-```js
-fun.apply(thisArg, [argsArray]);
+```js-nolint
+apply(thisArg)
+apply(thisArg, argsArray)
 ```
 
 ### Paramètres
 
 - `thisArg`
-  - : La valeur de `this` fournie pour l'appel à la fonction _`fun`_. On notera que, sous certaines conditions, `this` peut ne pas être la valeur exacte vue par la méthode : si la méthode est une fonction utilisée en mode {{jsxref("Strict_mode", "mode non-strict", "", 1)}}, {{jsxref("null")}} et {{jsxref("undefined")}} seront remplacées par l'objet global, et les valeurs primitives seront encapsulées. Cet argument n'est pas optionnel.
-- `argsArray`
-  - : Un objet semblable à un tableau qui définit les arguments avec lesquel _`fun`_ devrait être appelée, ou {{jsxref("null")}} ou {{jsxref("undefined")}} si aucun argument n'est passé à la fonction. Avec ECMAScript 5, ces arguments peuvent être représentés par un objet semblable un tableau. Voir ci-après pour plus d'informations sur [la compatibilité des navigateurs](#compat).
+  - : La valeur de `this` fournie pour l'appel à `func`. Si la fonction n'est pas en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), {{JSxRef("Operators/null", "null")}} et {{JSxRef("Global_Objects/undefined", "undefined")}} seront remplacées par l'objet global, et les valeurs primitives seront converties en objets.
+- `argsArray` {{Optional_Inline}}
+  - : Un objet semblable à un tableau, définissant les arguments avec lesquels `func` doit être appelée, ou {{JSxRef("Operators/null", "null")}} ou {{JSxRef("Global_Objects/undefined", "undefined")}} si aucun argument ne doit être fourni à la fonction.
 
 ### Valeur de retour
 
@@ -48,124 +44,102 @@ Le résultat obtenu en appelant la fonction avec la valeur `this` indiquée et l
 
 ## Description
 
-Il est possible d'utiliser un objet `this` différent lors de l'appel à une fonction existante. `this` fait référence à l'objet courant, l'objet appelant. Avec `apply`, on peut écrire une méthode une seule fois et en hériter dans un autre objet, sans avoir à la réécrire dans le nouvel objet.
-
-`apply` est similaire à {{jsxref("Function.call", "call()")}}, hormis pour le type d'arguments supporté. Il est possible d'utiliser un tableau à la place d'un ensemble de paramètres. Avec `apply`, il est également possible d'utiliser un littéral de tableau, par exemple, `fun.apply(this, ['manger', 'bananes'])`, ou un objet {{jsxref("Array")}}, par exemple, `fun.apply(this, new Array('manger', 'bananes'))`.
-
-On peut aussi passer {{jsxref("Fonctions/arguments", "arguments ")}} en tant que paramètre `argsArray`. `arguments` étant une variable locale à la fonction. Celle-ci peut également être utilisée pour tous les arguments non spécifiés de l'objet appelé. Ainsi, il n'est pas nécessaire de connaître les arguments de l'objet appelé lors d'un appel à la méthode `apply`. `arguments` peut être utilisé pour passer tous les arguments à l'objet appelé. L'objet appelé gèrera alors la manipulation des arguments.
-
-Depuis la cinquième édition d'ECMAScript, il est possible d'utiliser des objet semblables à des tableaux à la place. En pratique tout objet possédant une propriété `length` et une propriété entière comprise entre `[0..length[` est un objet semblable à un tableau. On peut ainsi, par exemple, utiliser un objet {{domxref("NodeList")}} ou un objet quelconque comme `{'length': 2, '0': 'manger', '1': 'bananes'}`.
-
 > [!NOTE]
-> Beaucoup de navigateurs, y compris Chrome 14 et Internet Explorer 9 n'acceptent pas encore un objet semblable à un tableau, ils déclencheront un exception.
+> Cette fonction est presque identique à {{JSxRef("Function/call", "call()")}}, sauf que les arguments de la fonction sont passés à `call()` individuellement sous forme de liste, tandis qu'avec `apply()` ils sont combinés dans un seul objet, généralement un tableau — par exemple, `func.call(this, "eat", "bananas")` contre `func.apply(this, ["eat", "bananas"])`.
+
+Normalement, lors de l'appel d'une fonction, la valeur de {{JSxRef("Operators/this", "this")}} à l'intérieur de la fonction est l'objet sur lequel la fonction a été appelée. Avec `apply()`, vous pouvez attribuer une valeur arbitraire à `this` lors de l'appel d'une fonction existante, sans avoir à rattacher d'abord la fonction à l'objet en tant que propriété. Cela permet d'utiliser les méthodes d'un objet comme fonctions utilitaires génériques.
+
+Vous pouvez également utiliser tout type d'objet semblable à un tableau comme second paramètre. En pratique, cela signifie qu'il doit posséder une propriété `length` et des propriétés entières («&nbsp;index&nbsp;») dans l'intervalle `(0..length - 1)`. Par exemple, vous pouvez utiliser un {{DOMxRef("NodeList")}}, ou un objet personnalisé comme `{ 'length': 2, '0': 'eat', '1': 'bananas' }`. Vous pouvez aussi utiliser {{JSxRef("Functions/arguments", "arguments")}}, par exemple&nbsp;:
+
+```js
+function enveloppe() {
+  return autreFonction.apply(null, arguments);
+}
+```
+
+Avec les [paramètres du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters) et la [syntaxe de décomposition des paramètres](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax), cela peut être réécrit ainsi&nbsp;:
+
+```js
+function enveloppe(...args) {
+  return autreFonction(...args);
+}
+```
+
+En général, `fn.apply(null, args)` est équivalent à `fn(...args)` avec la syntaxe de décomposition des paramètres, sauf que `args` doit être un objet semblable à un tableau dans le premier cas avec `apply()`, et un objet [itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_») dans le second cas avec la syntaxe de décomposition.
+
+> [!WARNING]
+> Ne pas utiliser `apply()` pour chaîner des constructeurs (par exemple, pour implémenter l'héritage). Cela invoque la fonction constructeur comme une fonction ordinaire, ce qui signifie que {{JSxRef("Operators/new.target", "new.target")}} vaut `undefined`, et les classes lèvent une erreur car elles ne peuvent pas être appelées sans {{JSxRef("Operators/new", "new")}}. Utilisez plutôt {{JSxRef("Reflect.construct()")}} ou {{JSxRef("Classes/extends", "extends")}}.
 
 ## Exemples
 
-### Utiliser `apply` pour chaîner des constructeurs
+### Utiliser `apply()` pour ajouter un tableau à un autre
 
-Il est possible d'utiliser `apply` afin de chaîner les {{jsxref("Opérateurs/L_opérateur_new", "constructeurs","",1)}} d'un objet, de façon sembable au chaînage utilisé en java. Dans l'exemple suivant, on crée une {{jsxref("Function")}} globale appelée `construct`, qui permet d'utiliser un objet de type `Array` associé à un constructeur au lieu d'une liste d'arguments.
+Vous pouvez utiliser {{JSxRef("Array.prototype.push()")}} pour ajouter un élément à un tableau. Comme `push()` accepte un nombre variable d'arguments, vous pouvez aussi ajouter plusieurs éléments en une seule fois. Mais si vous passez un tableau à `push()`, il ajoutera en réalité ce tableau comme un seul élément, au lieu d'ajouter les éléments individuellement, ce qui aboutit à un tableau dans un tableau. À l'inverse, {{JSxRef("Array.prototype.concat()")}} a le comportement souhaité dans ce cas, mais il ne modifie pas le tableau _existant_ — il crée et retourne un nouveau tableau.
 
-```js
-Function.prototype.construct = function (aArgs) {
-  var nouvelObjet = Object.create(this.prototype);
-  this.apply(nouvelObjet, aArgs);
-  return nouvelObjet;
-};
-```
-
-> [!NOTE]
-> La méthode {{jsxref("Object.create()")}} utilisée ci-avant est relativement nouvelle. Pour une autre méthode qui utilise les `closure`, on pourra utiliser :
->
-> ```js
-> Function.prototype.construct = function (aArgs) {
->   var fConstructeur = this,
->     fNouveauConstructeur = function () {
->       fConstructeur.apply(this, aArgs);
->     };
->   fNouveauConstructeur.prototype = fConstructeur.prototype;
->   return new fNouveauConstructeur();
-> };
-> ```
-
-Exemple d'utilisation :
+Dans ce cas, vous pouvez utiliser `apply` pour «&nbsp;étaler&nbsp;» implicitement un tableau en une série d'arguments.
 
 ```js
-function MonConstructeur() {
-  for (var nProp = 0; nProp < arguments.length; nProp++) {
-    this["propriété" + nProp] = arguments[nProp];
-  }
-}
-
-var monTableau = [4, "Coucou monde !", false];
-var monInstance = MonConstructeur.construct(monTableau);
-
-console.log(monInstance.propriété1); // "Coucou monde !"
-console.log(monInstance instanceof MonConstructeur); // "true"
-console.log(monInstance.constructor); // "MonConstructeur"
+const tableau = ["a", "b"];
+const elements = [0, 1, 2];
+tableau.push.apply(tableau, elements);
+console.info(tableau); // ["a", "b", 0, 1, 2]
 ```
 
-> [!NOTE]
-> On pourrait également utiliser [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
->
-> ```js
-> Function.prototype.construct = function (aArgs) {
->   var oNew = {};
->   oNew.__proto__ = this.prototype;
->   this.apply(oNew, aArgs);
->   return oNew;
-> };
-> ```
->
-> ou encore le constructeur {{jsxref("Function")}} :
->
-> ```js
-> Function.prototype.construct = function (aArgs) {
->   var fNewConstr = new Function("");
->   fNewConstr.prototype = this.prototype;
->   var oNew = new fNewConstr();
->   this.apply(oNew, aArgs);
->   return oNew;
-> };
-> ```
+Le même effet peut être obtenu avec la syntaxe de décomposition.
 
-> [!NOTE]
-> Attention, cette méthode non-native `Function.construct` ne fonctionnera pas avec certains contructeurs natifs (tels que {{jsxref("Date", "Date")}}). Dans ce cas précis, on peut utiliser la méthode {{jsxref("Function.bind")}} (pour exemple, si on prend le tableau suivant `[2012, 11, 4]` utilisé sur le constructeur de l'objet `Date` : on peut écrire ceci : `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` – cependant cela reste une pratique à éviter si possible et à ne pas utiliser en dans un environnement de production).
+```js
+const tableau = ["a", "b"];
+const elements = [0, 1, 2];
+tableau.push(...elements);
+console.info(tableau); // ["a", "b", 0, 1, 2]
+```
 
-### Utiliser `apply` et des fonctions natives
+### Utiliser `apply()` et des fonctions natives
 
-Un usage singulier de `apply` permet d'appeler des fonctions natives pour réaliser par exemple des tâches qui autrement auraient nécessité une boucle sur toutes les valeurs d'un tableau. Pour illustrer ce concept, on prend l'exemple de `Math.max`/`Math.min` qui permettent d'extraire la valeur maximum/minimale de notre tableau.
+Un usage astucieux de `apply()` permet d'utiliser des fonctions natives pour certaines tâches qui nécessiteraient autrement de parcourir manuellement une collection (ou d'utiliser la syntaxe de décomposition).
+
+Par exemple, on peut utiliser {{JSxRef("Math.max()")}} et {{JSxRef("Math.min()")}} pour obtenir la valeur maximale et minimale d'un tableau.
 
 ```js
 /* min/max tableau de nombres */
-var nombres = [5, 6, 2, 3, 7];
+const nombres = [5, 6, 2, 3, 7];
 
 /* usage de Math.min/Math.max et de la méthode apply */
-var max = Math.max.apply(null, nombres);
+let max = Math.max.apply(null, nombres);
 /* Equivalent à Math.max(nombres[0], ...)
   ou Math.max(5, 6, ..) */
 
-var min = Math.min.apply(null, nombres);
+let min = Math.min.apply(null, nombres);
 
 /* vs. algorithme trivial avec une boucle */
-((max = -Infinity), (min = +Infinity));
+max = -Infinity;
+min = Infinity;
 
-for (var i = 0; i < nombres.length; i++) {
-  if (nombres[i] > max) max = nombres[i];
-  if (nombres[i] < min) min = nombres[i];
+for (const n of nombres) {
+  if (n > max) {
+    max = n;
+  }
+  if (n < min) {
+    min = n;
+  }
 }
 ```
 
-Note : l'utilisation de `apply` peut provoquer l'atteinte du seuil limite du nombres d'arguments supporté par le moteur Javascript. Les conséquences de cette utilisation abusive (on évoque plus de 10000 arguments) peuvent varier selon les moteurs Javascript (JavaScript contient une limite en dur de [65536](https://bugs.webkit.org/show_bug.cgi?id=80797)), car une liberté subsiste quant à l'implémentation du moteur. Des moteurs lèveront une exception si le seuil est atteint. Il est donc préférable d'apporter une attention toute particulière au nombre d'arguments passés. (Illustrerons ce cas dans l'exemple suivant avec un moteur factice capable de ne gérer que 4 arguments au maximum (les limites natives sont, bien sûr, plus élevées), et reprenons les arguments de l'exemple précédent `5, 6, 2, 3` passés à la méthode `apply` plutôt que notre tableau entier.) Imaginons que notre tableau soit progressivement peuplé de milliers d'éléments, une stratégie spécifique devra être appliquée, par exemple en appliquant la méthode apply sur des portions du tableau:
+Attention&nbsp;: en utilisant `apply()` (ou la syntaxe de décomposition) avec une liste d'arguments arbitrairement longue, vous risquez de dépasser la limite du nombre d'arguments du moteur JavaScript.
+
+Les conséquences d'un appel de fonction avec trop d'arguments (c'est-à-dire plus de plusieurs dizaines de milliers d'arguments) ne sont pas spécifiées et varient selon les moteurs. (Le moteur JavaScriptCore a une [limite d'arguments de 65536 <sup>(angl.)</sup>](https://webkit.org/b/80797)). La plupart des moteurs lèvent une exception&nbsp;; mais il n'existe aucune spécification normative empêchant d'autres comportements, comme la limitation arbitraire du nombre d'arguments effectivement transmis à la fonction appelée. Pour illustrer ce dernier cas&nbsp;: si un tel moteur avait une limite de quatre arguments (les limites réelles sont bien sûr bien plus élevées), cela reviendrait à ce que les arguments `5, 6, 2, 3` soient passés à `apply` dans les exemples ci-dessus, plutôt que le tableau complet.
+
+Si votre tableau de valeurs risque d'atteindre plusieurs dizaines de milliers d'éléments, utilisez une stratégie hybride&nbsp;: appliquez votre fonction à des portions du tableau à la fois&nbsp;:
 
 ```js
-function minimumDuTableau(tab) {
-  var min = Infinity;
-  var QUANTUM = 32768;
+function minimumDuTableau(tableau) {
+  let min = Infinity;
+  const QUANTUM = 32768;
 
-  for (var i = 0, longueur = tab.length; i < len; i += QUANTUM) {
-    var submin = Math.min.apply(
+  for (let i = 0; i < tableau.length; i += QUANTUM) {
+    const submin = Math.min.apply(
       null,
-      tab.slice(i, Math.min(i + QUANTUM, longueur)),
+      tableau.slice(i, Math.min(i + QUANTUM, tableau.length)),
     );
     min = Math.min(submin, min);
   }
@@ -173,7 +147,7 @@ function minimumDuTableau(tab) {
   return min;
 }
 
-var min = minimumDuTableau([5, 6, 2, 3, 7]);
+const min = minimumDuTableau([5, 6, 2, 3, 7]);
 ```
 
 ## Spécifications
@@ -186,9 +160,9 @@ var min = minimumDuTableau([5, 6, 2, 3, 7]);
 
 ## Voir aussi
 
-- L'objet {{jsxref("Fonctions/arguments", "arguments")}}
-- {{jsxref("Function.prototype.bind()")}}
-- {{jsxref("Function.prototype.call()")}}
-- {{jsxref("Fonctions", "Les fonctions et portées de fonctions", "", 1)}}
-- {{jsxref("Reflect.apply()")}}
-- [La syntaxe de décomposition permettant d'exploser un tableau](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+- L'objet {{JSxRef("Functions/arguments", "arguments")}}
+- La méthode {{JSxRef("Function.prototype.bind()")}}
+- La méthode {{JSxRef("Function.prototype.call()")}}
+- La méthode {{JSxRef("Reflect.apply()")}}
+- [Les fonctions](/fr/docs/Web/JavaScript/Reference/Functions)
+- [La syntaxe de décomposition (`...`)](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax)

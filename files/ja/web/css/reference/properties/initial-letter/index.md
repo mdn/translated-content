@@ -1,12 +1,11 @@
 ---
 title: initial-letter
 slug: Web/CSS/Reference/Properties/initial-letter
-original_slug: Web/CSS/initial-letter
 l10n:
-  sourceCommit: 33cd63a518c57caded1b43ff9fff071230a2397a
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-`initial-letter` は CSS のプロパティで、ドロップ、レイズ、サンクンされた最初の文字のサイズとシンクを設定します。このプロパティは、 {{cssxref("::first-letter")}} 擬似要素およびブロックコンテナーのインラインレベル最初の子供要素に適用されます。
+**`initial-letter`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ドロップ、レイズ、サンクンされた最初の文字のサイズとシンクを設定します。このプロパティは、 {{cssxref("::first-letter")}} 擬似要素およびブロックコンテナーのインラインレベル最初の子供要素に適用されます。
 
 ## 構文
 
