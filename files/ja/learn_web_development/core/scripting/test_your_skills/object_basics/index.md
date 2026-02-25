@@ -1,15 +1,15 @@
 ---
-title: "スキルテスト: オブジェクトの基本"
+title: "確認テスト: オブジェクトの基本"
 short-title: オブジェクト
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Object_basics
 l10n:
   sourceCommit: 2f16610802bfbdf6394ca919557a4369b1236e10
 ---
 
-このスキルテストの目的は、[JavaScript オブジェクトの基本](/ja/docs/Learn_web_development/Core/Scripting/Object_basics)の理解度をテストすることです。
+この確認テストの目的は、[JavaScript オブジェクトの基本](/ja/docs/Learn_web_development/Core/Scripting/Object_basics)の理解度をテストすることです。
 
 > [!NOTE]
-> 手助けが必要な場合は、[スキルテスト](/ja/docs/Learn_web_development#スキルテスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
+> 手助けが必要な場合は、[確認テスト](/ja/docs/Learn_web_development#確認テスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
 
 ## オブジェクトの基本 1
 

@@ -1,49 +1,48 @@
 ---
 title: EvalError
 slug: Web/JavaScript/Reference/Global_Objects/EvalError
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+L'objet **`EvalError`** indique une erreur concernant la fonction globale {{JSxRef("Global_Objects/eval", "eval()")}}. Cette exception n'est plus levée par JavaScript, toutefois l'objet `EvalError` reste disponible pour des raisons de compatibilité.
 
-L'objet **`EvalError`** indique une erreur relative à la fonction [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Cette exception n'est plus déclenchée par JavaScript, toutefois, l'objet `EvalError` est toujours présent à des fins de compatibilité.
+`EvalError` est un {{Glossary("serializable object", "objet sérialisable")}}, donc il peut être cloné avec {{DOMxRef("Window.structuredClone", "structuredClone()")}} ou copié entre des [Workers](/fr/docs/Web/API/Worker) en utilisant {{DOMxRef("Worker/postMessage()", "postMessage()")}}.
+
+`EvalError` est une sous-classe de {{JSxRef("Error")}}.
 
 ## Constructeur
 
-- [`EvalError()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/EvalError/EvalError)
+- {{JSxRef("EvalError/EvalError", "EvalError()")}}
   - : Crée un nouvel objet `EvalError`.
 
-## Propriétés des instances
+## Propriétés d'instance
 
-- [`EvalError.prototype.message`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/message)
-  - : Le message d'erreur.
-- [`EvalError.prototype.name`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/name)
-  - : Le nom de l'erreur, hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`EvalError.prototype.fileName`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/fileName)
-  - : Le chemin vers le fichier qui a déclenché l'erreur, hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`EvalError.prototype.lineNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber)
-  - : Le numéro de la ligne dans le fichier qui a déclenché l'erreur, hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`EvalError.prototype.columnNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber)
-  - : Le numéro de la colonne de la ligne du fichier qui a déclenché l'erreur, hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`EvalError.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/stack)
-  - : La pile d'appels, héritée depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+_Hérite également des propriétés d'instance de son parent {{JSxRef("Error")}}_.
+
+Ces propriétés sont définies sur `EvalError.prototype` et partagées par toutes les instances de `EvalError`.
+
+- {{JSxRef("Object/constructor", "EvalError.prototype.constructor")}}
+  - : La fonction constructeur qui a créé l'objet instance. Pour les instances de `EvalError`, la valeur initiale est le constructeur {{JSxRef("EvalError/EvalError", "EvalError")}}.
+- {{JSxRef("Error/name", "EvalError.prototype.name")}}
+  - : Représente le nom du type d'erreur. Pour `EvalError.prototype.name`, la valeur initiale est `"EvalError"`.
+
+## Méthodes d'instance
+
+_Hérite des méthodes d'instance de son parent {{JSxRef("Error")}}_.
 
 ## Exemples
-
-`EvalError` n'est pas utilisée par la spécification ECMAScript actuelle et ne sera donc pas déclenchée par un moteur récent. Toutefois, cet objet reste disponible pour la rétrocompatibilité avec les anciennes versions de la spécification.
 
 ### Créer un objet `EvalError`
 
 ```js
 try {
-  throw new EvalError("Coucou", "unFichier.js", 10);
+  throw new EvalError("Bonjour");
 } catch (e) {
   console.log(e instanceof EvalError); // true
-  console.log(e.message); // "Coucou"
+  console.log(e.message); // "Bonjour"
   console.log(e.name); // "EvalError"
-  console.log(e.fileName); // "unFichier.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:2:9\n"
+  console.log(e.stack); // Pile de l'erreur
 }
 ```
 
@@ -57,5 +56,5 @@ try {
 
 ## Voir aussi
 
-- [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error)
-- [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval)
+- L'objet {{JSxRef("Error")}}
+- La fonction {{JSxRef("Global_Objects/eval", "eval()")}}

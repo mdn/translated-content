@@ -1,15 +1,15 @@
 ---
-title: "スキルテスト: 変数"
+title: "確認テスト: 変数"
 short-title: Variables
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Variables
 l10n:
   sourceCommit: 2f16610802bfbdf6394ca919557a4369b1236e10
 ---
 
-このスキルテストの目的は、あなたが[必要な情報を保管する — 変数](/ja/docs/Learn_web_development/Core/Scripting/Variables)の記事を理解したかどうかを評価することです。
+この確認テストの目的は、あなたが[必要な情報を保管する — 変数](/ja/docs/Learn_web_development/Core/Scripting/Variables)の記事を理解したかどうかを評価することです。
 
 > [!NOTE]
-> 手助けが必要な場合は、[スキルテスト](/ja/docs/Learn_web_development#スキルテスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
+> 手助けが必要な場合は、[確認テスト](/ja/docs/Learn_web_development#確認テスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
 
 <!-- この部分を含めるとリンターでエラーになるため、当面コメントアウトします。
 ## Interactive challenge
