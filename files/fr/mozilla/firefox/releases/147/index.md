@@ -3,7 +3,7 @@ title: Firefox 147 note de version pour les développeurs
 short-title: Firefox 147
 slug: Mozilla/Firefox/Releases/147
 l10n:
-  sourceCommit: bdb21cdfa9a7dc7c65222d2219aa2d96543d8a2e
+  sourceCommit: 21638327a5baa7ecf918835c4a233a74f25b02ed
 ---
 
 Cet article présente les informations concernant les changements de Firefox 147 qui concernent les développeur·euse·s.

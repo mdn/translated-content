@@ -391,9 +391,9 @@ l10n:
 
 {{EmbedLiveSample("active_learning_building_a_form_structure","100%",620)}}
 
-## スキルテスト
+## 確認テスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: フォームの構築](/ja/docs/Learn_web_development/Extensions/Forms)を参照してください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[確認テスト: フォームの構築](/ja/docs/Learn_web_development/Extensions/Forms)を参照してください。
 
 ## まとめ
 
