@@ -1,80 +1,77 @@
 ---
 title: Generator
 slug: Web/JavaScript/Reference/Global_Objects/Generator
+l10n:
+  sourceCommit: 8ee475f0fd4e606f1cb94b44eb5380d769c2452c
 ---
 
-{{JSRef}}
+L'objet **`Generator`** est retourné par une {{JSxRef("Statements/function*", "fonction génératrice", "", 1)}} et il respecte à la fois le [protocole itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_») et le [protocole itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérateur_»).
 
-L'objet **`Generator`** est renvoyé par une {{jsxref("Instructions/function*","fonction génératrice","",1)}}, c'est à la fois [un itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérateur_») et [un itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_»).
+`Generator` est une sous-classe de {{JSxRef("Iterator")}}.
 
-## Syntaxe
+## Constructeur
+
+Il n'existe aucune entité JavaScript qui corresponde au constructeur `Generator`. Les instances de `Generator` doivent être retournées par des [fonctions génératrices](/fr/docs/Web/JavaScript/Reference/Statements/function*)&nbsp;:
 
 ```js
-function* gen() {
+function* generator() {
   yield 1;
   yield 2;
   yield 3;
 }
 
-var g = gen(); // "Generator { }"
+const gen = generator(); // "Generator { }"
+
+console.log(gen.next().value); // 1
+console.log(gen.next().value); // 2
+console.log(gen.next().value); // 3
 ```
 
-## Méthodes
+Il existe seulement un objet caché qui est l'objet prototype partagé par tous les objets créés par les fonctions génératrices. Cet objet est souvent présenté comme `Generator.prototype` pour lui donner l'apparence d'une classe, mais il devrait plus justement être appelé {{JSxRef("GeneratorFunction.prototype.prototype")}}, car `GeneratorFunction` est une entité JavaScript réelle. Pour comprendre la chaîne de prototypes des instances de `Generator`, voir {{JSxRef("GeneratorFunction.prototype.prototype")}}.
 
-- {{jsxref("Generator.prototype.next()")}}
-  - : Renvoie une valeur générée par l'expression {{jsxref("Opérateurs/yield", "yield")}}.
-- {{jsxref("Generator.prototype.return()")}}
-  - : Renvoie la valeur donnée et termine le générateur.
-- {{jsxref("Generator.prototype.throw()")}}
-  - : Lève une exception dans un générateur. Cette opération termine le générateur, sauf si l'exception est interceptée dans le générateur.
+## Propriétés d'instance
+
+Ces propriétés sont définies sur `Generator.prototype` et partagées par toutes les instances de `Generator`.
+
+- {{JSxRef("Object/constructor", "Generator.prototype.constructor")}}
+  - : La fonction constructeur qui a créé l'objet instance. Pour les instances de `Generator`, la valeur initiale est [`GeneratorFunction.prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction).
+
+    > [!NOTE]
+    > Les objets `Generator` ne conservent pas de référence à la fonction génératrice qui les a créés.
+
+- `Generator.prototype[Symbol.toStringTag]`
+  - : La valeur initiale de la propriété [`[Symbol.toStringTag]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) est la chaîne de caractères `"Generator"`. Cette propriété est utilisée dans {{JSxRef("Object.prototype.toString()")}}.
+
+## Méthodes d'instance
+
+_Hérite également des méthodes d'instance de son parent {{JSxRef("Iterator")}}._
+
+- {{JSxRef("Generator.prototype.next()")}}
+  - : Retourne une valeur produite par l'expression {{JSxRef("Operators/yield", "yield")}}.
+- {{JSxRef("Generator.prototype.return()")}}
+  - : Agit comme si une instruction `return` était insérée dans le corps du générateur à la position actuelle de suspension, ce qui termine le générateur et lui permet d'effectuer toute tâche de libération lorsqu'elle est combinée avec un bloc [`try...finally`](/fr/docs/Web/JavaScript/Reference/Statements/try...catch#la_clause_finally).
+- {{JSxRef("Generator.prototype.throw()")}}
+  - : Agit comme si une instruction `throw` était insérée dans le corps du générateur à la position actuelle de suspension, ce qui informe le générateur d'une condition d'erreur et lui permet de gérer l'erreur, ou d'effectuer une libération et de se clôturer.
 
 ## Exemple
 
 ### Un itérateur infini
 
 ```js
-function* idMaker() {
-  var index = 0;
-  while (true) yield index++;
+function* infinite() {
+  let index = 0;
+
+  while (true) {
+    yield index++;
+  }
 }
 
-var gen = idMaker(); // "Generator { }"
+const generator = infinite(); // "Generator { }"
 
-console.log(gen.next().value); // 0
-console.log(gen.next().value); // 1
-console.log(gen.next().value); // 2
-// ...
-```
-
-## Générateurs historiques
-
-Firefox (SpiderMonkey) implémente également une version antérieure pour les générateurs avec [JavaScript 1.7](/fr/docs/Web/JavaScript/New_in_JavaScript/1.7). Pour cette syntaxe, il n'y a pas besoin d'utiliser l'astérisque dans la déclaration de la fonction, il suffit d'utiliser le mot-clé `yield` dans le corps de la fonction. Les générateurs historiques sont une fonctionnalité dépréciée et seront supprimés à l'avenir ([bug Firefox 1083482](https://bugzil.la/1083482)), il est fortement déconseillé de les utiliser.
-
-### Méthodes pour les générateurs historiques
-
-- `Generator.prototype.next()` {{non-standard_inline}}
-  - : Renvoie une valeur générée par l'expression {{jsxref("Opérateurs/yield", "yield")}}. Cette méthode correspond à `next()` pour les générateurs ES2015.
-- `Generator.prototype.close()` {{non-standard_inline}}
-  - : Clôture le générateur, tout appel ultérieur à `next()` renverra une exception {{jsxref("StopIteration")}}. Cela correspond à la méthode `return()` pour les générateurs ES2015.
-- `Generator.prototype.send()` {{non-standard_inline}}
-  - : Utilisée pour envoyer une valeur à un générateur. La valeur est renvoyée avec une expression {{jsxref("Opérateurs/yield", "yield")}} et renvoie une valeur générée par la prochaine expression {{jsxref("Opérateurs/yield", "yield")}}. `send(x)` correspond à `next(x)` pour les générateurs ES2015.
-- **`Generator.`**`prototype.`**`throw()`** {{non-standard_inline}}
-  - : Lève une exception au sein d'un générateur. Cela correspond à la méthode `throw()` pour les générateurs ES2015.
-
-### Exemple utilisant un générateur historique
-
-```js
-function* fibonacci() {
-  var a = yield 1;
-  yield a * 2;
-}
-
-var it = fibonacci();
-console.log(it); // "Generator {  }"
-console.log(it.next()); // 1
-console.log(it.send(10)); // 20
-console.log(it.close()); // undefined
-console.log(it.next()); // throws StopIteration (le générateur est clôturé)
+console.log(generator.next().value); // 0
+console.log(generator.next().value); // 1
+console.log(generator.next().value); // 2
+// …
 ```
 
 ## Spécifications
@@ -87,20 +84,7 @@ console.log(it.next()); // throws StopIteration (le générateur est clôturé)
 
 ## Voir aussi
 
-### Générateurs historiques
-
-- {{jsxref("Instructions/Fonction_génératrice_historique", "Fonction génératrice historique", "", 1)}}
-- {{jsxref("Opérateurs/function*", "L'expression d'un générateur historique", "", 1)}}
-- {{jsxref("StopIteration")}}
-- [Le protocole itérateur historique](/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
-
-### Générateurs ES2015
-
-- {{jsxref("Fonctions", "Fonctions", "", 1)}}
-- {{jsxref("Instructions/function", "function")}}
-- L'expression {{jsxref("L_opérateur_function", "function")}}
-- {{jsxref("Function")}}
-- {{jsxref("Instructions/function*", "function*")}}
-- L'expression {{jsxref("Opérateurs/function*", "function*")}}
-- {{jsxref("GeneratorFunction")}}
-- [Le protocole Iterator](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)
+- La déclaration {{JSxRef("Statements/function*", "function*")}}
+- [L'expression `function*`](/fr/docs/Web/JavaScript/Reference/Operators/function*)
+- L'objet {{JSxRef("GeneratorFunction")}}
+- [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)
