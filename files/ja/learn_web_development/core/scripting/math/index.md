@@ -437,9 +437,9 @@ function updateBtn() {
 > [!NOTE]
 > 2 つの状態を行き来するこのような操作を一般的に**トグル**といいます。スイッチの ON/OFF のように、ある状態がもう一つの状態にトグル (切り替え) するといいます。
 
-## スキルテスト
+## 確認テスト
 
-この記事の終わりまで到達しましたが、最も大事な情報を覚えていますか？移動する前に、この情報を取得したかのテストを見ることができます — [スキルテスト: 演算](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Math) を見てください。
+この記事の終わりまで到達しましたが、最も大事な情報を覚えていますか？移動する前に、この情報を取得したかのテストを見ることができます — [確認テスト: 演算](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Math) を見てください。
 
 ## まとめ
 

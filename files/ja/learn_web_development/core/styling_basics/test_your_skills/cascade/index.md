@@ -1,15 +1,15 @@
 ---
-title: "スキルテスト: カスケード"
+title: "確認テスト: カスケード"
 short-title: カスケード
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade
 l10n:
   sourceCommit: 2f16610802bfbdf6394ca919557a4369b1236e10
 ---
 
-このスキルテストの目的は、 [CSS における継承の制御](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)の全般的なプロパティ値を理解しているかどうかを評価することです。
+この確認テストの目的は、 [CSS における継承の制御](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)の全般的なプロパティ値を理解しているかどうかを評価することです。
 
 > [!NOTE]
-> 手助けが必要な場合は、[スキルテスト](/ja/docs/Learn_web_development#スキルテスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
+> 手助けが必要な場合は、[確認テスト](/ja/docs/Learn_web_development#確認テスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
 
 ## 課題 1
 
