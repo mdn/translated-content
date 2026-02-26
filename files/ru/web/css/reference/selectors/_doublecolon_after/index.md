@@ -16,7 +16,7 @@ a::after {
 ```
 
 > [!NOTE]
-> Псведоэлементы, созданные с помощью `::before` и `::after` [содержатся в блоке форматирования элемента](https://www.w3.org/TR/CSS2/generate.html#before-after-content), и поэтому не применяются к _[замещаемым элементам](/ru/docs/Web/CSS/CSS_images/Replaced_element_properties)_, таким как {{htmlelement("img")}} или {{htmlelement("br")}}.
+> Псведоэлементы, созданные с помощью `::before` и `::after` [содержатся в блоке форматирования элемента](https://www.w3.org/TR/CSS2/generate.html#before-after-content), и поэтому не применяются к _[замещаемым элементам](/ru/docs/Web/CSS/Guides/Images/Replaced_element_properties)_, таким как {{htmlelement("img")}} или {{htmlelement("br")}}.
 
 ## Синтаксис
 

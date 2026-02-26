@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_components","Learn_web_development/Core/Frameworks_libraries/React_interactivity_filtering_conditional_rendering", "Learn_web_development/Core/Frameworks_libraries")}}
 
 컴포넌트 계획이 완료되었으므로, 이제 애플리케이션을 완전히 정적인 UI에서 실제로 상호 작용하고 변경할 수 있는 애플리케이션으로 업데이트할 때입니다. 이 글에서는 이벤트와 상태를 파헤쳐 작업을 성공적으로 추가 및 삭제하고, 완료된 작업을 토글할 수 있는 애플리케이션으로 끝낼 것입니다.
 
@@ -520,4 +520,4 @@ function deleteTask(id) {
 
 너무 길어질 수 있으니 이번 글은 여기서 마치겠습니다. 이 글을 통해 React가 이벤트를 처리하고 상태를 처리하는 방법, 작업을 추가하고 삭제하고 완료된 작업을 토글하는 기능을 구현하는 방법을 알려드렸습니다. 거의 다 왔습니다. 다음 문서에서는 기존 작업을 편집하고 모든 작업, 완료된 작업 및 완료되는 않은 작업 간에 작업 목록을 필터링하는 기능을 구현합니다. 그 과정에서 조건부 UI렌더링을 살펴보겠습니다.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_components","Learn_web_development/Core/Frameworks_libraries/React_interactivity_filtering_conditional_rendering", "Learn_web_development/Core/Frameworks_libraries")}}

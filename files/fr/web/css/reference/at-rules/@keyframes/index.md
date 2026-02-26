@@ -1,9 +1,8 @@
 ---
 title: "@keyframes"
 slug: Web/CSS/Reference/At-rules/@keyframes
-original_slug: Web/CSS/@keyframes
 l10n:
-  sourceCommit: 3d06d82cbddf640291fd66cf85cd9014c4e867c5
+  sourceCommit: a397ab763a6686a4056af755e4da32ac735b9fa5
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@keyframes`** permet aux auteurs de définir les étapes qui composent la séquence d'une animation CSS. Cela permet de contrôler une animation plus finement que ce qu'on pourrait obtenir avec [les transitions](/fr/docs/Web/CSS/Guides/Transitions).
@@ -25,25 +24,25 @@ La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) *
 ### Valeurs
 
 - `<identifier>`
-  - : Un nom ({{cssxref("custom-ident")}}) qui permet d'identifier la liste d'étapes. Cela doit être [un identifiant valide selon la syntaxe CSS](/fr/docs/Web/CSS/Reference/Values/custom-ident).
+  - : Un nom ({{CSSxRef("custom-ident")}}) qui permet d'identifier la liste d'étapes. Cela doit être [un identifiant valide selon la syntaxe CSS](/fr/docs/Web/CSS/Reference/Values/custom-ident).
 - `from`
   - : Indique le point de départ de l'animation (correspond à un avancement de `0%`).
 - `to`
   - : Indique la fin de l'animation (correspond à un avancement de `100%`).
-- {{cssxref("&lt;percentage&gt;")}}
+- {{CSSxRef("&lt;percentage&gt;")}}
   - : Le pourcentage d'avancement de l'animation auquel l'étape décrite s'applique.
 
-Il est possible de manipuler la règle `@keyframes` via JavaScript et le CSSOM, notamment avec l'interface {{domxref("CSSKeyframesRule")}}.
+Il est possible de manipuler la règle `@keyframes` via JavaScript et le CSSOM, notamment avec l'interface {{DOMxRef("CSSKeyframesRule")}}.
 
 ## Description
 
-Afin d'utiliser ces règles, on créera une règle `@keyframes` avec un nom pour chaque étape et on utilisera ce nom avec la propriété {{cssxref("animation-name")}} afin qu'une animation corresponde à la liste des étapes qui la composent. Chaque règle `@keyframes` contient une liste de sélecteurs d'étapes dont chacun contient le pourcentage d'avancement de l'animation auquel il correspond ainsi que les informations de styles qui correspondent à cette étape..
+Afin d'utiliser ces règles, on créera une règle `@keyframes` avec un nom pour chaque étape et on utilisera ce nom avec la propriété {{CSSxRef("animation-name")}} afin qu'une animation corresponde à la liste des étapes qui la composent. Chaque règle `@keyframes` contient une liste de sélecteurs d'étapes dont chacun contient le pourcentage d'avancement de l'animation auquel il correspond ainsi que les informations de styles qui correspondent à cette étape.
 
 Les étapes peuvent être listées dans n'importe quel ordre. Elles seront enchaînées dans l'ordre indiqué par le pourcentage d'avancement.
 
 ### Validité de la liste des étapes
 
-Si une liste d'étapes ne spécifie pas le début (`0%`/`from`) ou la fin (`100%`/`to`) d'une animation, le navigateur va utiliser les styles de l'élement définis par ailleurs. C'est assez pratique pour animer un élément depuis et vers son état initial.
+Si une liste d'étapes ne définit pas le début (`0%`/`from`) ou la fin (`100%`/`to`) d'une animation, le navigateur va utiliser les styles de l'élement définis par ailleurs. C'est assez pratique pour animer un élément depuis et vers son état initial.
 
 Si les étapes décrivent des propriétés qui ne peuvent pas être animées, elles seront ignorées mais les autres propriétés seront bien animées.
 
@@ -55,7 +54,7 @@ Si, au sein d'une même règle, deux étapes décrivent le même pourcentage d'a
 
 ### Gestion des propriétés absentes
 
-Si des propriétés ne sont pas définies à chaque étape, elles sont interpolées si possible. Si ces propriétés ne peuvent pas être interpolées, elles sont retirées de l'animation :
+Si des propriétés ne sont pas définies à chaque étape, elles sont interpolées si possible. Si ces propriétés ne peuvent pas être interpolées, elles sont retirées de l'animation&nbsp;:
 
 ```css
 @keyframes identifier {
@@ -77,11 +76,11 @@ Si des propriétés ne sont pas définies à chaque étape, elles sont interpol�
 }
 ```
 
-Ici, la propriété {{cssxref("top")}} est animée en passant par les étapes `0%`, `30%` et `100%`. Quant à {{cssxref("left")}}, elle est animée aux étapes `0%`, `68%` , `72%` et `100%`.
+Ici, la propriété {{CSSxRef("top")}} est animée en passant par les étapes `0%`, `30%` et `100%`. Quant à {{CSSxRef("left")}}, elle est animée aux étapes `0%`, `68%` , `72%` et `100%`.
 
 ### Quand une étape clé est définie plusieurs fois
 
-Si une étape clé est définie plusieurs fois mais que toutes les propriétés concernées ne figurent pas dans chaque étape clé, toutes les valeurs spécifiées dans ces étapes clés sont prises en compte. Par exemple :
+Si une étape clé est définie plusieurs fois mais que toutes les propriétés concernées ne figurent pas dans chaque étape clé, toutes les valeurs définies dans ces étapes clés sont prises en compte. Par exemple&nbsp;:
 
 ```css
 @keyframes identifier {
@@ -107,7 +106,7 @@ Les étapes clés en cascade sont prises en charge à partir de Firefox 14.
 
 ### `!important` dans une étape
 
-Les déclarations qui utilisent `!important` dans une description d'étape sont ignorées
+Les déclarations qui utilisent `!important` dans une description d'étape sont ignorées.
 
 ```css
 @keyframes important1 {
@@ -136,7 +135,7 @@ Les déclarations qui utilisent `!important` dans une description d'étape sont 
 
 ### Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -154,9 +153,9 @@ Regardez [Utiliser les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)
 
 ## Voir aussi
 
-- {{cssxref("animation-range")}}
+- La propriété {{CSSxRef("animation-range")}}
 - [Animation déclenchée par le défilement en CSS](/fr/docs/Web/CSS/CSS_scroll-driven_animations)
 - [Utiliser les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)
 - Le module d'[animations CSS](/fr/docs/Web/CSS/Guides/Animations)
 - [Animer les éléments lors du défilement avec les animations déclenchées par le défilement <sup>(angl.)</sup>](https://developer.chrome.com/docs/css-ui/scroll-driven-animations)
-- {{domxref("AnimationEvent")}}
+- L'interface API {{DOMxRef("AnimationEvent")}}

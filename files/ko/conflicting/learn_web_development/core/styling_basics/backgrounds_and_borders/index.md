@@ -64,10 +64,10 @@ CSS {{cssxref("background")}} 속성은 이 수업에서 만나게 될 많은 ba
 
 ### 배경 색상
 
-{{cssxref("background-color")}} 속성은 CSS 의 모든 요소에 대한 배경색을 정의합니다. 이 속성은 유효한 [`<color>`](/ko/docs/Web/CSS/color_value) 를 허용합니다. `background-color` 는 요소의 내용 및 패딩 박스 아래로 확장됩니다.
+{{cssxref("background-color")}} 속성은 CSS 의 모든 요소에 대한 배경색을 정의합니다. 이 속성은 유효한 [`<color>`](/ko/docs/Web/CSS/Reference/Values/color_value) 를 허용합니다. `background-color` 는 요소의 내용 및 패딩 박스 아래로 확장됩니다.
 
 아래 예에서는 다양한 색상 값을 사용하여 박스, 제목 및 {{htmlelement("span")}} 요소에 배경색을 추가했습니다.
-사용 가능한 [\<color>](/ko/docs/Web/CSS/color_value) 값을 사용하여, 이것들을 가지고 놀아보십시오.
+사용 가능한 [\<color>](/ko/docs/Web/CSS/Reference/Values/color_value) 값을 사용하여, 이것들을 가지고 놀아보십시오.
 
 ```html live-sample___color
 <div class="box">
@@ -171,7 +171,7 @@ span {
 
 #### 배경 이미지 크기 조정
 
-위의 예에서 배경의 요소보다 커서, 이미지가 크게 잘립니다. 이 경우 [길이](/ko/docs/Web/CSS/length) 나 [백분율](/ko/docs/Web/CSS/percentage) 값을 취할 수 있는 {{cssxref("background-size")}} 속성을 사용하여 이미지 크기를 배경 안에 맞출 수 있습니다.
+위의 예에서 배경의 요소보다 커서, 이미지가 크게 잘립니다. 이 경우 [길이](/ko/docs/Web/CSS/Reference/Values/length) 나 [백분율](/ko/docs/Web/CSS/Reference/Values/percentage) 값을 취할 수 있는 {{cssxref("background-size")}} 속성을 사용하여 이미지 크기를 배경 안에 맞출 수 있습니다.
 
 키워드를 사용할 수도 있습니다.
 
@@ -228,7 +228,7 @@ span {
 }
 ```
 
-그리고 [길이](/ko/docs/Web/CSS/length) 및 [백분율](/ko/docs/Web/CSS/percentage):
+그리고 [길이](/ko/docs/Web/CSS/Reference/Values/length) 및 [백분율](/ko/docs/Web/CSS/Reference/Values/percentage):
 
 ```css
 .box {
@@ -290,7 +290,7 @@ span {
 
 배경에 사용될 때 — Gradient — 는 이미지 처럼 작동하며 {{cssxref("background-image")}} 속성을 사용하여 설정 됩니다.
 
-[`<gradient>`](/ko/docs/Web/CSS/gradient) 데이터 유형에 대한 MDN 페이지에서 다양한 유형의 그라디언트 및 그라디언트로 수행 할 수 있는 작업에 대한 자세한 내용을 읽을 수 있습니다. 그라디언트를 재생하는 재미있는 방법은 웹에서 사용할 수 있는 많은 CSS 그라디언트 생성기 중 [하나](https://cssgradient.io/) 를 사용하는 것입니다. 그라디언트를 생성한 다음 이를 생성하는 소스 코드를 복사하여 붙여 넣을 수 있습니다.
+[`<gradient>`](/ko/docs/Web/CSS/Reference/Values/gradient) 데이터 유형에 대한 MDN 페이지에서 다양한 유형의 그라디언트 및 그라디언트로 수행 할 수 있는 작업에 대한 자세한 내용을 읽을 수 있습니다. 그라디언트를 재생하는 재미있는 방법은 웹에서 사용할 수 있는 많은 CSS 그라디언트 생성기 중 [하나](https://cssgradient.io/) 를 사용하는 것입니다. 그라디언트를 생성한 다음 이를 생성하는 소스 코드를 복사하여 붙여 넣을 수 있습니다.
 
 아래 예제에서 다른 그라디언트를 사용해 보십시오. 두 개의 박스에는 각각 전체 박스에 걸쳐 펼쳐지는 선형 그라디언트와 설정된 크기의 방사형 그라디언트가 있습니다. 따라서 반복됩니다.
 
@@ -531,9 +531,9 @@ h2 {
 ```
 
 > [!NOTE]
-> 위의 border 속성과 마찬가지로, 이 border-radius 속성에도 [논리적 border-radius 속성](/ko/docs/Web/CSS/CSS_logical_properties_and_values#properties)이 매핑되어 있습니다.
+> 위의 border 속성과 마찬가지로, 이 border-radius 속성에도 [논리적 border-radius 속성](/ko/docs/Web/CSS/Guides/Logical_properties_and_values#properties)이 매핑되어 있습니다.
 
-아래 예에서 네 모서리를 모두 설정한 다음, 오른쪽 위 모서리의 값을 변경하여 다르게 만들었습니다. 값을 사용하여 모서리를 변경할 수 있습니다. 사용 가능한 구문 옵션을 보려면 {{cssxref("border-radius")}} 의 속성 페이지를 살펴보십시오. [border-radius 생성기](/ko/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator)를 사용하여 둥근 모서리 값을 출력할 수 있습니다.
+아래 예에서 네 모서리를 모두 설정한 다음, 오른쪽 위 모서리의 값을 변경하여 다르게 만들었습니다. 값을 사용하여 모서리를 변경할 수 있습니다. 사용 가능한 구문 옵션을 보려면 {{cssxref("border-radius")}} 의 속성 페이지를 살펴보십시오. [border-radius 생성기](/ko/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator)를 사용하여 둥근 모서리 값을 출력할 수 있습니다.
 
 ```html live-sample___corners
 <div class="box">
@@ -565,4 +565,4 @@ h2 {
 
 다음 수업에서는 문서의 쓰기 모드가 CSS 와 어떻게 상호 작용하는지 알아봅니다. 텍스트가 왼쪽에서 오른쪽으로 표시되지 않으면 어떻게 됩니까?
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics/Handling_different_text_directions", "Learn_web_development/Core/Styling_basics")}}

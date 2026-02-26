@@ -1,14 +1,13 @@
 ---
 title: font-family
 slug: Web/CSS/Reference/At-rules/@font-face/font-family
-original_slug: Web/CSS/@font-face/font-family
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-**`font-family`** は CSS の記述子で、 {{cssxref("@font-face")}} アットルールで指定されたフォントのフォントファミリーを指定することができます。
+**`font-family`** は [CSS](/ja/docs/Web/CSS) の記述子で、 {{cssxref("@font-face")}} アットルールで指定されたフォントのフォントファミリーを指定することができます。
 
-この値は、 [`font-family`](/ja/docs/Web/CSS/Reference/Properties/font-family) プロパティを用いて要素をスタイル設定する際に、特定の `@font-face` に対して名前を照合するために用いられます。
+この値は、{{cssxref("font-family")}} プロパティを用いて要素をスタイル設定する際に、特定の `@font-face` に対して名前を照合するために用いられます。
 任意の名前を使用することができ、これは基盤のフォントデータで指定された名前を上書きします。
 
 ## 構文

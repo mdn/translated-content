@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
 original_slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Creating_links", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 Una de las principales funciones de HTML es dar al texto estructura y significado (también conocido como {{Glossary("semantics", "semántica")}}), de forma que un navegador pueda mostrarlo correctamente. Este articulo explica la forma en que se puede usar {{Glossary("HTML")}} para estructurar una página de texto añadiendo encabezados y párrafos, enfatizando palabras, creando listas y más.
 
@@ -1029,4 +1029,4 @@ Has llegado al final de este artículo, pero ¿puedes recordar la información m
 
 ¡Eso es todo por ahora! Este artículo debería haberte dado una buena idea de cómo comenzar a marcar texto en HTML y te ha presentado algunos de los elementos más importantes en este ámbito. Hay muchos más elementos semánticos para desarrollar en esta área, y veremos muchos más en nuestro artículo [Formateo de texto avanzado](/es/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features), más adelante en el curso. En el siguiente artículo, veremos en detalle cómo [crear hipervínculos](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links), posiblemente el más importante elemento en la web.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Creating_links", "conflicting/Learn_web_development/Core/Structuring_content")}}

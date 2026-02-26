@@ -1,51 +1,60 @@
 ---
 title: decodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/decodeURI
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Objects")}}
+La fonction **`decodeURI()`** décode un identifiant de ressource uniforme (URI) précédemment créé par {{JSxRef("encodeURI()")}} ou une routine similaire.
 
-La méthode **`decodeURI()`** permet de décoder un Uniform Resource Identifier (URI) créé par la méthode {{jsxref("encodeURI","encodeURI()")}} ou une méthode similaire.
-
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - decodeURI()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: decodeURI()")}}
 
 ```js interactive-example
 const uri = "https://mozilla.org/?x=шеллы";
 const encoded = encodeURI(uri);
 console.log(encoded);
-// Expected output: "https://mozilla.org/?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+// Résultat attendu : "https://mozilla.org/?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
 
 try {
   console.log(decodeURI(encoded));
-  // Expected output: "https://mozilla.org/?x=шеллы"
+  // Résultat attendu : "https://mozilla.org/?x=шеллы"
 } catch (e) {
-  // Catches a malformed URI
+  // Capture une URI mal formée
   console.error(e);
 }
 ```
 
 ## Syntaxe
 
-```js
-decodeURI(encodedURI);
+```js-nolint
+decodeURI(encodedURI)
 ```
 
 ### Paramètres
 
 - `encodedURI`
-  - : Un URI complet, encodé.
+  - : Un identifiant de ressource uniforme complet et encodé.
 
 ### Valeur de retour
 
-Une nouvelle chaîne de caractères dont certains caractères ont été décodés à partir de l'URI encodée passée en argument.
+Une nouvelle chaîne de caractères représentant la version non encodée de l'identifiant de ressource uniforme (URI) fourni.
 
 ### Exceptions
 
-Cette méthode lève une exception {{jsxref("URIError")}} ("_malformed URI sequence"_) lorsque la chaîne passée en argument contient des séquences de caractères invalides.
+- {{JSxRef("URIError")}}
+  - : Levée si `encodedURI` contient un `%` qui n'est pas suivi de deux chiffres hexadécimaux, ou si la séquence d'échappement n'encode pas un caractère UTF-8 valide.
 
 ## Description
 
-Cette méthode remplace chaque séquence d'échappement présente dans l'URI encodée avec le caractère correspondant. Les séquences d'échappement qui n'auraient pas pu être introduites par {{jsxref("encodeURI", "encodeURI()")}} ne seront pas décodées. Le caractère « `#` » n'est pas décodé au sein des séquences d'échappement.
+`decodeURI()` est une propriété fonction de l'objet global.
+
+La fonction `decodeURI()` décode l'URI en traitant chaque séquence d'échappement de la forme `%XX` comme une unité de code UTF-8 (un octet). En UTF-8, le nombre de bits à 1 en tête du premier octet, qui peut être 0 (pour les caractères {{Glossary("ASCII")}} sur 1 octet), 2, 3 ou 4, indique le nombre d'octets du caractère. Ainsi, en lisant la première séquence d'échappement, `decodeURI()` peut déterminer combien d'autres séquences d'échappement consommer. Si `decodeURI()` ne trouve pas le nombre attendu de séquences, ou si les séquences d'échappement n'encodent pas un caractère UTF-8 valide, une exception {{JSxRef("URIError")}} est levée.
+
+`decodeURI()` décode toutes les séquences d'échappement, mais si la séquence encode l'un des caractères suivants, la séquence d'échappement est conservée dans la chaîne de sortie (car ils font partie de la syntaxe URI)&nbsp;:
+
+```plain
+; / ? : @ & = + $ , #
+```
 
 ## Exemples
 
@@ -58,16 +67,32 @@ decodeURI(
 // "https://developer.mozilla.org/ru/docs/JavaScript_шеллы"
 ```
 
+### `decodeURI()` contre `decodeURIComponent()`
+
+`decodeURI()` suppose que l'entrée est une URI complète, donc il ne décode pas les caractères qui font partie de la syntaxe de l'URI.
+
+```js
+decodeURI(
+  "https://developer.mozilla.org/docs/JavaScript%3A%20a_scripting_language",
+);
+// "https://developer.mozilla.org/docs/JavaScript%3A a_scripting_language"
+
+decodeURIComponent(
+  "https://developer.mozilla.org/docs/JavaScript%3A%20a_scripting_language",
+);
+// "https://developer.mozilla.org/docs/JavaScript: a_scripting_language"
+```
+
 ### Gérer les exceptions
 
 ```js
 try {
-  var a = decodeURI("%E0%A4%A");
+  const a = decodeURI("%E0%A4%A");
 } catch (e) {
   console.error(e);
 }
 
-// Cela produira "URIError: malformed URI sequence"
+// Lève une erreur "URIError: malformed URI sequence"
 ```
 
 ## Spécifications
@@ -80,6 +105,6 @@ try {
 
 ## Voir aussi
 
-- {{jsxref("decodeURIComponent","decodeURIComponent()")}}
-- {{jsxref("encodeURI","encodeURI()")}}
-- {{jsxref("encodeURIComponent","encodeURIComponent()")}}
+- La fonction {{JSxRef("decodeURIComponent()")}}
+- La fonction {{JSxRef("encodeURI()")}}
+- La fonction {{JSxRef("encodeURIComponent()")}}

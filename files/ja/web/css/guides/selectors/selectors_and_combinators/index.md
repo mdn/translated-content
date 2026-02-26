@@ -2,9 +2,8 @@
 title: CSS セレクターと結合子
 short-title: セレクターと結合子
 slug: Web/CSS/Guides/Selectors/Selectors_and_combinators
-original_slug: Web/CSS/CSS_selectors/Selectors_and_combinators
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 CSS セレクターは、選択した要素に一連の CSS ルールを適用するために、選択する要素のパターンを定義するために使用します。結合子は、セレクター間の関係を定義します。様々なセレクターと結合子を使用することで、入力する要素の型、属性、状態、他の要素との関係に基づいて、必要な要素を正確に選択し、スタイル設定することができます。
@@ -129,7 +128,7 @@ h2 + p + p {
 
 ### CSS 入れ子による複雑セレクターの作成
 
-上記の複雑セレクターは、単純セレクター、結合子、[CSS 入れ子](/ja/docs/Web/CSS/Guides/Nesting) を使用して定義することもできます。 [`&` 入れ子セレクター](/ja/docs/Web/CSS/Reference/Selectors/Nesting_selector) はあってもなくても構いません。
+上記の複雑セレクターは、単純セレクター、結合子、[CSS 入れ子](/ja/docs/Web/CSS/Guides/Nesting) を使用して定義することもできます。 [`&` 入れ子セレクター](/ja/docs/Web/CSS/Reference/Selectors/Nesting_selector)はあってもなくても構いません。
 
 #### CSS
 
@@ -205,7 +204,7 @@ h2 {
 
 すべての CSS セレクターが [CSS セレクターモジュール](/ja/docs/Web/CSS)で定義されているわけではありません。 CSS 擬似要素のセレクターは [CSS 擬似要素](/ja/docs/Web/CSS/Guides/Pseudo-elements)モジュールで定義されています。
 
-CSS [擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)は接頭辞としてコロン (`::`) を 2 つ付けたもので、 HTML に含まれない要素を表します。例えば、単純セレクターである {{cssxref("::marker")}} はリスト項目の箇条書き記号を選択し、複合セレクター [`p::first-line`](/ja/docs/Web/CSS/Reference/Selectors/::first-line) はすべての {{HTMLElement("p")}} 要素の最初の行に一致します。
+CSS の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)は接頭辞としてコロン (`::`) を 2 つ付けたもので、 HTML に含まれない要素を表します。例えば、単純セレクターである {{cssxref("::marker")}} はリスト項目の箇条書き記号を選択し、複合セレクター [`p::first-line`](/ja/docs/Web/CSS/Reference/Selectors/::first-line) はすべての {{HTMLElement("p")}} 要素の最初の行に一致します。
 
 ## 仕様書
 

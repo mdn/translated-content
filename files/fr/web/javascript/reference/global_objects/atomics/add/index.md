@@ -1,61 +1,55 @@
 ---
-title: Atomics.add()
+title: "Atomics : méthode statique add()"
+short-title: add()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/add
+l10n:
+  sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
 ---
 
-{{JSRef}}
-
-La méthode statique **`Atomics.add()`** ajoute une valeur donnée à un élément du tableau à une position donnée. Elle renvoie l'ancienne valeur qui était contenue à cet emplacement. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
-
-{{InteractiveExample("JavaScript Demo: Atomics.add()")}}
-
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(16);
-const uint8 = new Uint8Array(buffer);
-uint8[0] = 7;
-
-// 7 + 2 = 9
-console.log(Atomics.add(uint8, 0, 2));
-// Expected output: 7
-
-console.log(Atomics.load(uint8, 0));
-// Expected output: 9
-```
+La méthode statique **`add()`** de l'objet {{JSxRef("Atomics")}} ajoute une valeur donnée à un élément du tableau à une position donnée et retourne l'ancienne valeur qui était contenue à cet emplacement. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
 
 ## Syntaxe
 
-```js
-Atomics.add(typedArray, index, valeur);
+```js-nolint
+Atomics.add(typedArray, index, value)
 ```
 
 ### Paramètres
 
 - `typedArray`
-  - : Un tableau typé entier partagé parmi {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}} ou {{jsxref("Uint32Array")}}.
+  - : Un tableau typé entier partagé parmi {{JSxRef("Int8Array")}}, {{JSxRef("Uint8Array")}}, {{JSxRef("Int16Array")}}, {{JSxRef("Uint16Array")}}, {{JSxRef("Int32Array")}} ou {{JSxRef("Uint32Array")}}.
 - `index`
-  - : La position du tableau `typedArray` auquel on souhaite ajouter une `valeur`.
-- `valeur`
+  - : La position du tableau `typedArray` auquel on souhaite ajouter une valeur.
+- `value`
   - : La valeur à ajouter.
 
 ### Valeur de retour
 
-L'ancienne valeur qui était contenue à (`typedArray[index]`).
+L'ancienne valeur à la position donnée (`typedArray[index]`).
 
-### Exceptions levées
+### Exceptions
 
-- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
-- Cette méthode lève {{jsxref("TypeError")}} si `typedArray` n'est pas tableau typé partagé.
-- Cette méthode lève {{jsxref("RangeError")}} si `index` est en dehors des limites de `typedArray`.
+- {{JSxRef("TypeError")}}
+  - : Levée si `typedArray` n'est pas un des types d'entiers autorisés.
+- {{JSxRef("RangeError")}}
+  - : Levée si `index` est en dehors des limites de `typedArray`.
 
 ## Exemples
 
-```js
-var sab = new SharedArrayBuffer(1024);
-var ta = new Uint8Array(sab);
+Notez que ces exemples ne peuvent pas être exécutés directement depuis la console ou une page web arbitraire, car `SharedArrayBuffer` n'est pas défini à moins que [ses exigences de sécurité](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#contraintes_de_sécurité) ne soient respectées.
 
-Atomics.add(ta, 0, 12); // renvoie 0, l'ancienne valeur
-Atomics.load(ta, 0); // 12
+### Utiliser `Atomics.add()`
+
+```js
+// Crée un SharedArrayBuffer avec une taille en octets
+const sab = new SharedArrayBuffer(1024);
+// Crée une vue et définit la valeur de l'index 0
+const ta = new Uint8Array(sab);
+ta[0] = 7;
+
+// 7 + 12 = 19
+console.log(Atomics.add(ta, 0, 12)); // retourne 7, l'ancienne valeur
+console.log(Atomics.load(ta, 0)); // 19, la nouvelle/valeur actuelle
 ```
 
 ## Spécifications
@@ -68,5 +62,5 @@ Atomics.load(ta, 0); // 12
 
 ## Voir aussi
 
-- {{jsxref("Atomics")}}
-- {{jsxref("Atomics.sub()")}}
+- L'objet {{JSxRef("Atomics")}}
+- La méthode {{JSxRef("Atomics.sub()")}}

@@ -101,7 +101,7 @@ DBOpenRequest.onupgradeneeded = (event) => {
 ## 関連情報
 
 - [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションの開始s: {{domxref("IDBDatabase")}}
+- トランザクションの開始: {{domxref("IDBDatabase")}}
 - トランザクションの使用: {{domxref("IDBTransaction")}}
 - キーの範囲の設定: {{domxref("IDBKeyRange")}}
 - データの取得と変更: {{domxref("IDBObjectStore")}}

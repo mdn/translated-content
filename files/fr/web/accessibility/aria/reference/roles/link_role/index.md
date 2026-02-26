@@ -89,7 +89,7 @@ Les différents rôles sont utilisés pour définir des modèles interactifs com
 Utilisez de préférence l'élément {{HTMLElement("a")}}.
 
 > [!NOTE]
-> Il n'est pas nécessaire d'inclure `role="lien"` sur un lien HTML, car l'élément `<a>`, a ce rôle par défaut.
+> Il n'est pas nécessaire d'inclure `role="link"` sur un lien HTML, car l'élément `<a>`, a ce rôle par défaut.
 
 ## Spécifications
 

@@ -2,10 +2,10 @@
 title: Fragmenteur
 slug: Glossary/Fragmentainer
 l10n:
-  sourceCommit: ab0cab3b1b674b6c873af6a7d3d2c53adf9599e3
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-Un **fragmenteur** (ou <i lang="en">fragmentainer</i> en anglais) est défini dans la [spécification de fragmentation CSS](https://drafts.csswg.org/css-break/) (en anglais) comme suit&nbsp;:
+Un **fragmenteur** (ou <i lang="en">fragmentainer</i> en anglais) est défini dans la [spécification de fragmentation CSS <sup>(angl.)</sup>](https://drafts.csswg.org/css-break/) (en anglais) comme suit&nbsp;:
 
 > Une boîte, telle qu'une boîte de page, de colonne ou une région, qui contient une partie (ou la totalité) d'un flux fragmenté. Les fragmenteurs peuvent être prédéfinis ou générés selon les besoins. Lorsqu'un contenu fragmentable déborde d'un fragmenteur dans la dimension de bloc, il se brise dans le conteneur suivant de son contexte de fragmentation à la place.
 

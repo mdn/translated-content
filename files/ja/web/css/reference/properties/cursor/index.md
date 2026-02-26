@@ -1,9 +1,8 @@
 ---
 title: cursor
 slug: Web/CSS/Reference/Properties/cursor
-original_slug: Web/CSS/cursor
 l10n:
-  sourceCommit: 64d85b74ce1cce6a24ae8979da4f3f4a01a47229
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`cursor`** は [CSS](/ja/docs/Web/CSS) のプロパティで、マウスポインターが要素の上にいるときに表示されるマウスカーソルを設定します。
@@ -37,10 +36,10 @@ cursor: zoom-in;
 cursor: grab;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section class="default-example container" id="default-example">
   <div id="example-element">
-    Move over this element to see the cursor style.
+    この要素の上にカーソルを移動してスタイルを確認してください。
   </div>
 </section>
 ```
@@ -69,21 +68,21 @@ cursor: pointer;
 cursor: zoom-out;
 
 /* URL とキーワードによる代替 */
-cursor: url(hand.cur), pointer;
+cursor: url("hand.cur"), pointer;
 
 /* URL と座標とキーワードによる代替 */
 cursor:
-  url(cursor_1.png) 4 12,
+  url("cursor_1.png") 4 12,
   auto;
 cursor:
-  url(cursor_2.png) 2 2,
+  url("cursor_2.png") 2 2,
   pointer;
 
 /* URL と代替 URL （一部は座標つき）、そして必須のキーワードによる代替 */
 cursor:
-  url(cursor_1.svg) 4 5,
-  url(cursor_2.svg),
-  /* …, */ url(cursor_n.cur) 5 5,
+  url("cursor_1.svg") 4 5,
+  url("cursor_2.svg"),
+  /* …, */ url("cursor_n.cur") 5 5,
   progress;
 
 /* グローバル値 */

@@ -6,7 +6,7 @@ original_slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content")}}
 
 Os hiperlinks são realmente importantes — são o que torna a Web uma _web_. Este artigo mostra a sintaxe necessária para criar um link e discute as suas melhores práticas.
 
@@ -339,4 +339,4 @@ Aqui estão alguns outros exemplos de URLs de `mailto:`
 
 Por enquanto isto é tudo sobre links! Você retornará aos links mais tarde no curso quando começar a analisar o estilo deles. Em seguida, em HTML, retornaremos à semântica de texto e veremos alguns recursos mais avançados/incomuns que você achará úteis — No próximo artigo você verá a formatação avançada de texto.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content")}}

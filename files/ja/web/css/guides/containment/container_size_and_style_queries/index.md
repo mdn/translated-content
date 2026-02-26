@@ -1,14 +1,13 @@
 ---
 title: コンテナーのサイズおよびスタイルクエリーの使用
 slug: Web/CSS/Guides/Containment/Container_size_and_style_queries
-original_slug: Web/CSS/CSS_containment/Container_size_and_style_queries
 l10n:
-  sourceCommit: 44f398527f2b0195a7c3b35db0a53c80aebe8e48
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 [コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)を使うと、特定のコンテナー内に含まれている要素に、そのコンテナーの特性に基づいてスタイルを適用することができます。クエリーは、クエリー条件がコンテナーに対して真であるかどうかによって、真または偽を返します。
 
-コンテナークエリーは[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)と似ています。 {{cssxref("@media")}} アットルールは、ビューポートのサイズや端末のその他の特性に基づいて要素にスタイル設定を適用します。同様に、 {{cssxref("@container")}} アットルールは、ビューポートではなく、コンテナー要素のサイズやその他のスタイル特性に基づいて要素にスタイルを適用します。コンテナークエリーは、メディアクエリーと同じ構文ルールと論理演算子があります。
+コンテナークエリーは[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)と似ています。{{cssxref("@media")}} アットルールは、ビューポートのサイズや端末のその他の特性に基づいて要素にスタイル設定を適用します。同様に、{{cssxref("@container")}} アットルールは、ビューポートではなく、コンテナー要素のサイズやその他のスタイル特性に基づいて要素にスタイルを適用します。コンテナークエリーは、メディアクエリーと同じ構文ルールと論理演算子があります。
 
 ```css
 @container <container-condition># {
@@ -16,13 +15,13 @@ l10n:
 }
 ```
 
-コンテナークエリーには、コンテナーサイズクエリーとコンテナースタイルクエリーの 2 種類があります。
+3 種類のコンテナークエリーがあります。
 
 - **コンテナーサイズクエリー**
   - : サイズクエリーによって、コンテナー要素の現在の[サイズ](/ja/docs/Web/CSS/Reference/At-rules/@container#記述子)に基づいて要素にスタイルを適用することができます。このコンテナー要素は、明示的に _サイズクエリーコンテナー_ として宣言しておく必要があります。
 
 - **コンテナースタイルクエリー**
-  - : スタイル クエリーを使用すると、コンテナー要素のスタイル機能に基づいて要素にスタイルを適用できます。空でない要素がスタイルクエリーコンテナーになることができます。現在、スタイルクエリーが対応しているスタイル特性は、 CSS の[カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)だけです。この場合、クエリーは、格納する要素のカスタムプロパティの計算値において真か偽を返します。コンテナースタイルクエリーが完全に対応していると、例えば、コンテナーが `display: inline flex` であったり、背景色が非透明である場合など、任意のプロパティ、宣言、計算値に基づいて、要素の子孫にスタイルを適用できるようになります。
+  - : スタイルクエリーを使用すると、コンテナー要素のスタイル機能に基づいて要素にスタイルを適用できます。空でない要素がスタイルクエリーコンテナーになることができます。現在、スタイルクエリーが対応しているスタイル特性は、CSS の[カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)だけです。この場合、クエリーは、格納する要素のカスタムプロパティの計算値において真か偽を返します。コンテナースタイルクエリーが完全に対応していると、例えば、コンテナーが `display: inline flex` であったり、背景色が非透明である場合など、任意のプロパティ、宣言、計算値に基づいて、要素の子孫にスタイルを適用できるようになります。
 
 - **[コンテナースクロール状態クエリー](/ja/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)**
   - : スクロール状態クエリーを使用すると、スクロール状態の条件に基づいて、コンテナーの子孫に CSS ルールを選択的に適用することができます。例えば、クエリー対象の要素が部分的にスクロールされているか、コンテナーがスクロールスナップコンテナーに固定されているか、といった条件です。包含要素は、明示的に「スクロール状態クエリーコンテナー」として宣言する必要があります。
@@ -51,9 +50,9 @@ l10n:
 }
 ```
 
-サイズクエリーコンテナーを宣言すると、[抑制](/ja/docs/Web/CSS/Guides/Containment/Using)が追加されます。これはパフォーマンス上必要なことです。DOM 内のすべての要素のサイズを常に問い合わせることは、パフォーマンスと使い勝手に悪影響を及ぼします。さらに、子孫のスタイルがコンテナー要素のサイズを変更した場合、無限ループが発生する可能性があります。
+サイズクエリーコンテナーを宣言すると、[抑制](/ja/docs/Web/CSS/Guides/Containment/Using)が追加されます。これはパフォーマンス上必要なことです。DOM 内のすべての要素のサイズを常に問い合わせると、パフォーマンスと使い勝手に悪影響を及ぼします。さらに、子孫のスタイルがコンテナー要素のサイズを変更した場合、無限ループが発生する可能性があります。
 
-コンテナーサイズクエリーでは、 `<container-condition>` に 1 つ以上の `<size-query>` を記述します。各サイズクエリーはサイズ特性の名前、比較演算子、値を記載します。問い合わせ可能なサイズ特性は `width`、`height`、`inline-size`、`block-size`、`aspect-ratio`、`orientation` に制限されています。 1 つ以上の `<size-query>` を組み合わせた論理値と構文は、 [`@media`](/ja/docs/Web/CSS/Reference/At-rules/@media) のサイズ特性クエリーと同じです。
+コンテナーサイズクエリーでは、 `<container-condition>` に 1 つ以上の `<size-query>` を記述します。各サイズクエリーはサイズ特性の名前、比較演算子、値を記載します。問い合わせ可能なサイズ特性は `width`、`height`、`inline-size`、`block-size`、`aspect-ratio`、`orientation` に制限されています。 1 つ以上の `<size-query>` を組み合わせた論理値と構文は、{{cssxref("@media")}} のサイズ特性クエリーと同じです。
 
 ```css
 form {
@@ -95,11 +94,11 @@ form {
 この例では、コンテナークエリースタイルブロック内のスタイル設定は、クラスが `cards` で、幅が高さより大きい要素の中に入れ子になっているすべての {{htmlelement("li")}} 要素の子孫に適用されます。他にも `container-name: card` が適用されている要素でサイズクエリーに一致するものがあれば、それらの要素の子孫にもスタイルが適用されることに注意してください。
 
 ```css
-@container wide (min-width: 20em) {
+@container wide (width >= 20em) {
   /* サイズ特性が一致する場合に .sizeContainer の子孫に適用されるスタイル設定 */
 }
 
-@container narrow (max-width: 20em) {
+@container narrow (width < 20em) {
   /* サイズ特性が一致する場合に .sizeContainer の子孫に適用されるスタイル設定 */
 }
 
@@ -109,7 +108,7 @@ form {
 }
 ```
 
-この例では、要素は `wide` と `narrow` の 2 つのコンテナー名を持っています。 `class="sizeContainer"` を持つ要素の子孫は、 `wide` または `narrow` クエリー（または要素がちょうど 20em の正方形であった場合は両方）のスタイル設定が適用されます。
+上野例では、要素は `wide` と `narrow` の 2 つのコンテナー名を持っています。 `class="sizeContainer"` を持つ要素の子孫は、 `wide` または `narrow` クエリーのスタイル設定が適用されます。
 
 既定値の `container-type: normal` は、コンテナーがサイズコンテナーとなることを防ぎますが、[スタイルコンテナー](#コンテナースタイルクエリー)となることは可能です。 既定値の `container-name: none` は、コンテナーが名前を保有していないことを意味しますが、要素が名前のないクエリーに一致することを妨げるものではありません。
 
@@ -128,7 +127,7 @@ form {
 }
 ```
 
-それぞれの `style()` 関数の引数は単一の **`<style-feature>`** です。 CSS コンテナー仕様書によれば、 `<style-feature>` は有効な CSS [宣言](/ja/docs/Web/CSS/Guides/Syntax/Introduction#css_の宣言)、 CSS プロパティ、[`<custom-property-name>`](/ja/docs/Web/CSS/Reference/Values/var#値) のいずれかになります。現在対応しているスタイル特性はカスタムプロパティのみで、値の有無は問いません。[ブラウザー互換性表](#ブラウザーの互換性)を参照してください。
+それぞれの `style()` 関数の引数は単一の **`<style-feature>`** です。 CSS コンテナー仕様書によれば、 `<style-feature>` は有効な CSS [宣言](/ja/docs/Web/CSS/Guides/Syntax/Introduction#css_の宣言)、 CSS プロパティ、[`<custom-property-name>`](/ja/docs/Web/CSS/Reference/Values/var#値) のいずれかになります。現在対応しているスタイル特性はカスタムプロパティのみで、値の有無は問いません。[`@container` のブラウザー互換性表](/ja/docs/Web/CSS/Reference/At-rules/@container#ブラウザーの互換性)を参照してください。
 
 `<style-feature>` に値が記載されている場合、 `style()` 引数として渡されたカスタムプロパティ（将来的には CSS 宣言）の計算値が、クエリー対象のコンテナーに対して真であれば、スタイルクエリーは真と評価されます。そうでない場合は、偽に解決されます。
 値のないスタイル設定は、計算値が指定されたプロパティの[初期値](#登録済みプロパティ)と異なる場合に真と評価されます。
@@ -140,12 +139,13 @@ form {
     not style(background-color: red),
     style(--themeBackground),
     style(--themeColor: blue) or style(--themeColor: purple),
-    (max-width: 100vw) and style(max-width: 600px) {
+    (width <= 100vw) and style(max-width: 600px) {
   /* <スタイルシート> */
 }
 ```
 
-`style()` 関数記法はスタイルクエリーとサイズクエリーを区別するために使用しています。まだ対応していませんが、いずれは `max-width: 100vw` のような通常の CSS 宣言もクエリーできるようになるでしょう。 `@container (max-width: 100vw)` はサイズクエリーです。 {{cssxref("container-type")}} または {{cssxref("container")}} 一括指定による抑制が必要です。このクエリーはコンテナーが 100vw 以下の場合に真を返します。これはスタイルクエリーである `@container style(max-width: 100vw)` のクエリーとは異なります。対応している場合、このクエリーは {{cssxref("max-width")}} の値が `100vw` のコンテナーがあれば真を返します。
+th")}} value of `100vw`.
+`style()` 関数記法はスタイルクエリーとサイズクエリーを区別するために使用しています。まだ対応していませんが、いずれは `max-width: 600px` のような通常の CSS 宣言もクエリーできるようになるでしょう。 `@container (max-width: 600px)` はサイズクエリーです。 {{cssxref("container-type")}} または {{cssxref("container")}} 一括指定による抑制が必要です。このクエリーはコンテナーが 600px 以下の場合に真を返します。これはスタイルクエリーである `@container style(max-width: 600px)` のクエリーとは異なります。対応している場合、このクエリーはコンテナーの {{cssxref("max-width")}} の値が `600px` であれば真を返します。
 
 通常の CSS 宣言やプロパティに対するスタイルクエリーに対応するまでは、値の有無にかかわらず、 `style()` の引数としてカスタムプロパティを記載する方法のみを制限されます。
 
@@ -196,7 +196,7 @@ CSS 変数が CSS カスタムプロパティ値の割り当てによって導�
 ```css
 @property --theme-color {
   initial-value: rebeccapurple;
-  inherited: true;
+  inherits: true;
 }
 
 :root {
@@ -232,7 +232,7 @@ main {
 @property --accent-color {
   syntax: "<color>";
   inherits: true;
-  initial-value: #00f;
+  initial-value: #0000ff;
 }
 ```
 
@@ -243,30 +243,36 @@ main {
 この例では、 4 つのラジオボタンを持つ {{htmlelement("fieldset")}} があります。 4 つ目のオプションには、独自の色を入力するためのテキスト {{htmlelement("input")}} が含まれています。
 
 ```html
-<fieldset>
-  <legend><code>--theme</code> の値を変更</legend>
-  <ol>
-    <li>
-      <input type="radio" name="selection" value="red" id="red" />
-      <label for="red">--theme: red;</label>
-    </li>
-    <li>
-      <input type="radio" name="selection" value="green" id="green" />
-      <label for="green">--theme: green</label>
-    </li>
-    <li>
-      <input type="radio" name="selection" value="blue" id="blue" />
-      <label for="blue">--theme: blue</label>
-    </li>
-    <li>
-      <input type="radio" name="selection" value="currentcolor" id="other" />
-      <label for="other">その他</label>
-      <label for="color">色:</label>
-      <input text="checkbox" name="selection" value="currentcolor" id="color" />
-    </li>
-  </ol>
-</fieldset>
-<output>色を変更します</output>
+<form>
+  <fieldset>
+    <legend><code>--theme</code> の値を変更</legend>
+    <ol>
+      <li>
+        <input type="radio" name="selection" value="red" id="red" />
+        <label for="red">--theme: red;</label>
+      </li>
+      <li>
+        <input type="radio" name="selection" value="green" id="green" />
+        <label for="green">--theme: green</label>
+      </li>
+      <li>
+        <input type="radio" name="selection" value="blue" id="blue" />
+        <label for="blue">--theme: blue</label>
+      </li>
+      <li>
+        <input type="radio" name="selection" value="currentColor" id="other" />
+        <label for="other">その他</label>
+        <label for="color">色:</label>
+        <input
+          text="checkbox"
+          name="selection-value"
+          value="currentColor"
+          id="color" />
+      </li>
+    </ol>
+  </fieldset>
+  <output>色を変更します</output>
+</form>
 ```
 
 JavaScript はラジオボタンが選択されるたびに、 {{htmlelement("fieldset")}} 要素と {{htmlelement("output")}} 要素の祖先である {{htmlelement("body")}} 要素上にある、 CSS 変数 `--theme` の値を更新します。テキストの `<input>` が更新されると、 `other` ラジオボタンの {{domxref("HTMLInputElement.value", "value")}} は、`other` ラジオボタンがチェックされている場合のみ、 `--theme` を更新します。
@@ -277,8 +283,8 @@ const body = document.querySelector("body");
 const other = document.getElementById("other");
 const color = document.getElementById("color");
 
-for (let i = 0; i < radios.length; i++) {
-  radios[i].addEventListener("change", (e) => {
+for (const radio of radios) {
+  radio.addEventListener("change", (e) => {
     body.style.setProperty("--theme", e.target.value);
   });
 }
@@ -290,13 +296,13 @@ color.addEventListener("input", (e) => {
 });
 ```
 
-`@property` アットルールを使用して、 CSS 変数 `--theme` が {{cssxref("color_value","&lt;color&gt;")}} 値となるように定義し、 `initial-value` を `#00F` に設定することで、どのような構文が使用されているかに関わらず、等価な色が確実に一致します（例えば、 `#F00` は `rgb(255 0 0)`、`#ff0000`、`red` と等しくなります）。
+`@property` アットルールを使用して、 CSS 変数 `--theme` が {{cssxref("color_value","&lt;color&gt;")}} 値となるように定義し、`initial-value` を `red` に設定することで、どのような構文が使用されているかに関わらず、等価な色が確実に一致します（例えば、 `red` は `rgb(255 0 0)`、`#ff0000`、`#f00` と同じです）。
 
 ```css
 @property --theme {
   syntax: "<color>";
   inherits: true;
-  initial-value: #f00;
+  initial-value: red;
 }
 ```
 
@@ -307,13 +313,13 @@ output {
 }
 ```
 
-最初のスタイル特性クエリーは、値のないカスタムプロパティです。この形式のクエリーは、カスタムプロパティ値の計算値がそのプロパティの `initial-value` と異なる場合に真を返します。この場合、`--theme` の値が、`#f00`（`red` など）と等価な任意の構文以外の値であるとき、真になります。真の場合、 {{htmlelement("output")}} は 5px の点線の輪郭線が付きます。輪郭線の色は現在の `--theme` の値です。既定では {{cssxref("color")}} は灰色です。
+最初のスタイル特性クエリーは、値のないカスタムプロパティです。この形式のクエリーは、カスタムプロパティ値の計算値がそのプロパティの `initial-value` と異なる場合に真を返します。この場合、`--theme` の値が、`red`（`#ff0000` など）と等価な任意の構文以外の値であるとき、真になります。真の場合、 {{htmlelement("output")}} は 5px の点線の輪郭線が付きます。輪郭線の色は現在の `--theme` の値です。既定では {{cssxref("color")}} は灰色です。
 
 ```css
 @container style(--theme) {
   output {
     outline: 5px dotted var(--theme);
-    color: #777;
+    color: #777777;
   }
 }
 ```
@@ -338,7 +344,7 @@ output {
 
 {{EmbedLiveSample('example','100%','200')}}
 
-テキストボックスに様々な色の値を入力してみてください。 sRGB の `red` に相当する値にすると、`<output>` は `style(--theme: red)` に一致して赤になりますが、 `style(--theme)` はアットルール `@property` で定義された `--theme` の初期値と同じ値を返すので、輪郭線は除去されます。 `currentcolor` や `hsl(180 100% 50%)` など、赤以外の sRGB の有効な色の値を記載すると、最初のスタイルクエリーが真を返します。これらは `initial-value` とは異なる値です。
+テキストボックスに様々な色の値を入力してみてください。 sRGB の `red` に相当する値にすると、`<output>` は `style(--theme: red)` に一致して赤になりますが、 `style(--theme)` はアットルール `@property` で定義された `--theme` の初期値と同じ値を返すので、輪郭線は除去されます。 `currentColor` や `hsl(180 100% 50%)` など、赤以外の sRGB の有効な色の値を記載すると、最初のスタイルクエリーが真を返します。これらは `initial-value` とは異なる値です。
 
 `syntax: "<color>";` を設定しているため、この CSS 変数には有効な `<color>` 値しか代入できません。 {{cssxref("color")}} プロパティの有効な値のうち `<color>` 値ではないもの、例えば `unset` や `inherit` など、このカスタムプロパティでは[不正な値](/ja/docs/Web/CSS/Guides/Syntax/Error_handling)であり、無視されます。
 
@@ -400,17 +406,9 @@ output {
 
 これらの機能はまだどのブラウザーも対応していません。
 
-## 仕様書
-
-{{Specifications}}
-
-## ブラウザーの互換性
-
-{{Compat}}
-
 ## 関連情報
 
-- [Media queries](/ja/docs/Web/CSS/Guides/Media_queries)
+- [メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)
 - CSS {{Cssxref("@container")}} アットルール
 - CSS {{Cssxref("contain")}} プロパティ
 - CSS {{Cssxref("container")}} 一括指定プロパティ

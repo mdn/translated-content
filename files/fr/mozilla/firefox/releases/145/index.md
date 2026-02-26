@@ -1,9 +1,9 @@
 ---
-title: Firefox 145 pour les développeurs
+title: Firefox 145 note de version pour les développeurs
 short-title: Firefox 145
 slug: Mozilla/Firefox/Releases/145
 l10n:
-  sourceCommit: 08f01e6cd0103ac0a472f9e3cf2482bb9fc2f25a
+  sourceCommit: 30487c754854c3f21157827914eefb94d0e5bd4d
 ---
 
 Cet article présente les informations concernant les changements de Firefox 145 qui concernent les développeur·euse·s.
@@ -31,8 +31,14 @@ Aucun changement notable.
 
 ### HTTP
 
-- Les en-têtes HTTP {{HTTPHeader("Integrity-Policy")}} et {{HTTPHeader("Integrity-Policy-Report-Only")}} sont désormais pris en charge pour les ressources de type script. Ils permettent aux sites web d'appliquer des [garanties d'intégrité de sous-ressources](/fr/docs/Web/Security/Subresource_Integrity) pour les _scripts_.
+- Les en-têtes HTTP {{HTTPHeader("Integrity-Policy")}} et {{HTTPHeader("Integrity-Policy-Report-Only")}} sont désormais pris en charge pour les ressources de type script. Ils permettent aux sites web d'appliquer des [garanties d'intégrité de sous-ressources](/fr/docs/Web/Security/Defenses/Subresource_Integrity) pour les _scripts_.
   Notez que la clé [`endpoints`](/fr/docs/Web/HTTP/Reference/Headers/Integrity-Policy#endpoints) n'est pas encore prise en charge (les violations sont consignées dans la console) ([bogue Firefox 1984973 <sup>(angl.)</sup>](https://bugzil.la/1984973)).
+
+### Sécurité
+
+- Lorsque la protection contre le suivi par rebond (BTP) est activée, elle fonctionne désormais en mode «&nbsp;sans état&nbsp;» par défaut.
+  En mode «&nbsp;sans état&nbsp;», le navigateur ne signale plus uniquement les sites faisant partie d'un «&nbsp;rebond&nbsp;» qui définissent des informations d'état (comme un cookie)&nbsp;; il signale _tous_ les sites faisant partie d'un «&nbsp;rebond&nbsp;». Voir [Atténuations du suivi par rebond](/fr/docs/Web/Privacy/Guides/Bounce_tracking_mitigations) pour plus d'informations sur le fonctionnement de BTP.
+  ([bogue Firefox 1990831 <sup>(angl.)</sup>](https://bugzil.la/1990831)).
 
 ### APIs
 

@@ -3,7 +3,7 @@ title: 画像、メディア、資産の追加方法
 short-title: メディアの追加
 slug: MDN/Writing_guidelines/Howto/Images_media
 l10n:
-  sourceCommit: 269fa421f0a79b18f6000a26baebe30c74571b1f
+  sourceCommit: 0ff7ba5177bf2e66214bd90b58590c6bf3acb758
 ---
 
 このページでは、 MDN で文書内のページに画像やメディアを追加する方法について記述しています。
@@ -41,7 +41,8 @@ shared-assets リポジトリーが用途に適していない場合は、画像
    cd ~/path/to/mdn/content
    git checkout main
    git pull mdn main
-   # "yarn" を実行して、 yarn が最新の状態であることを確認する
+   # "npm install" を実行して、最新の状態であることを確認する
+   npm install
    git checkout -b my-images
    ```
 
@@ -56,7 +57,7 @@ shared-assets リポジトリーが用途に適していない場合は、画像
    詳しくは、[画像の圧縮](#画像の圧縮)の節を参照してください。
 
    ```bash
-   yarn filecheck files/en-us/web/css/my-cool-image.png
+   npm run filecheck files/en-us/web/css/my-cool-image.png
    ```
 
 4. 文書内で画像用の Markdown 構文を使って画像を参照し、画像を記述する括弧の間に [`alt` 属性用の説明テキスト](/ja/docs/Learn_web_development/Core/Accessibility/HTML#代替テキスト)を記述するか、 `alt` 属性を持つ {{htmlelement("img")}} 要素を `files/en-us/web/css/index.md` 内に記述してください。
@@ -122,7 +123,7 @@ MDN Web Docs のページに画像を追加する場合、読者のためにダ�
 例えば、次のようにします。
 
 ```bash
-yarn filecheck files/en-us/web/css/my-cool-image.png --save-compression
+npm run filecheck files/en-us/web/css/my-cool-image.png --save-compression
 ```
 
 ## 動画を MDN ページへ追加

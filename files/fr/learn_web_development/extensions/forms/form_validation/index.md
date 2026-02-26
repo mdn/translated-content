@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/Form_validation
 original_slug: Learn/Forms/Form_validation
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
 
 Ce n'est pas tout d'envoyer des données — il faut aussi s'assurer que les données mises dans un formulaire par un utilisateur sont dans un format correct pour pouvoir être traitées correctement et qu'elles ne vont pas casser nos applications. Nous voulons également aider les utilisateurs à compléter les formulaires correctement et à ne pas ressentir de frustration en essayant d'utiliser les applications. La validation des données de formulaire vous aide à remplir ces objectifs — cet article indique ce qu'il est nécessaire de savoir.
 
@@ -370,7 +370,7 @@ HMTL5 fournit une [API de contraintes de validation](https://www.w3.org/TR/html5
 </form>
 ```
 
-En JavaScript, il faut appeler la méthode [`setCustomValidity()`](</fr/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()>):
+En JavaScript, il faut appeler la méthode [`setCustomValidity()`](</fr/docs/HTML/HTML5/Constraint_validation#Constraint_APIs_element.setCustomValidity()>):
 
 ```js
 var email = document.getElementById("mail");
@@ -775,4 +775,4 @@ La validation d'un formulaire ne requiert pas de code JavaScript complexe, mais 
 - Être tolérant sur le format des données à envoyer.
 - Indiquer exactement où est l'erreur (en particulier pour les formulaires longs).
 
-{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}

@@ -1,9 +1,8 @@
 ---
 title: :picture-in-picture
 slug: Web/CSS/Reference/Selectors/:picture-in-picture
-original_slug: Web/CSS/:picture-in-picture
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:picture-in-picture`** cible les éléments qui sont présentement affichés en incrustation vidéo (<i lang="en">picture-in-picture</i>).
@@ -62,9 +61,9 @@ La magie opère dans le CSS.
 ## Voir aussi
 
 - L'[API <i lang="en">Picture-in-picture</i>](/fr/docs/Web/API/Picture-in-Picture_API)
-- [`HTMLVideoElement.requestPictureInPicture()`](/fr/docs/Web/API/HTMLVideoElement/requestPictureInPicture)
-- [`HTMLVideoElement.autoPictureInPicture`](/fr/docs/Web/API/HTMLVideoElement)
-- [`HTMLVideoElement.disablePictureInPicture`](/fr/docs/Web/API/HTMLVideoElement/disablePictureInPicture)
-- [`Document.pictureInPictureEnabled`](/fr/docs/Web/API/Document/pictureInPictureEnabled)
-- [`Document.exitPictureInPicture()`](/fr/docs/Web/API/Document/exitPictureInPicture)
-- [`Document.pictureInPictureElement`](/fr/docs/Web/API/Document/pictureInPictureElement)
+- La méthode API {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
+- La propriété API {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
+- La propriété API {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
+- La propriété API {{DOMxRef("Document.pictureInPictureEnabled")}}
+- La méthode API {{DOMxRef("Document.exitPictureInPicture()")}}
+- La propriété API {{DOMxRef("Document.pictureInPictureElement")}}

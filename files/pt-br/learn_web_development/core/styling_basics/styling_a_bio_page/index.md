@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Styling_a_bio_page
 original_slug: Learn/CSS/First_steps/Styling_a_biography_page
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Styling_basics/What_is_CSS", "Learn_web_development/Core/Styling_basics")}}
 
 Com o que você aprendeu nas últimas lições, você deve perceber que pode formatar simples documentos de texto utilizando CSS, implementado seu próprio estilo neles. Esta avaliação lhe dá a oportunidade de fazer exatamente isto.
 
@@ -81,4 +81,4 @@ Se gostaria de ter seu trabalho avaliado, ou se ficou emperrado e gostaria de aj
 
 Parabéns por terminar seu primeiro módulo. Agora você deve ter uma boa compreensão geral de CSS, e ser capaz de entender boa parte do que acontece numa folha de estilos. No próximo módulo, [CSS building blocks](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics_fa344166552fbe2c038b1254d9d96dc0de5d79eb64d0ca3e5784a17f79fd0333), iremos dar uma olhada com mais profundidade em várias áreas chave.
 
-{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{PreviousMenu("Learn_web_development/Core/Styling_basics/What_is_CSS", "Learn_web_development/Core/Styling_basics")}}

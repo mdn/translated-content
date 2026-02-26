@@ -6,7 +6,7 @@ l10n:
   sourceCommit: fc11c086fd41f090489fa35778998b606c257af2
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_getting_started","Learn_web_development/Core/Frameworks_libraries/React_components", "Learn_web_development/Core/Frameworks_libraries")}}
 
 Disons que nous avons pour mission de créer une preuve de concept en React&nbsp;: une application qui permette d'ajouter, de modifier et de supprimer des tâches sur lesquelles on veut travailler, et de les marquer comme terminées sans les supprimer. Dans cet article, nous verrons comment mettre en place la structure de base et la mise en forme du composant `App` initial et qui servira de socle pour définir d'autres composants et implémenter l'interactivité par la suite.
 
@@ -557,4 +557,4 @@ Sauvegardez puis rechargez la page dans votre navigateur, vous pourrez voir que 
 
 Notre application de liste de tâches (<i lang="en">todo list</i>) ressemble un peu plus à une véritable application&nbsp;! Mais voilà le problème&nbsp;: concrètement, elle ne permet de rien faire. Nous commencerons à corriger ceci dans le prochain chapitre&nbsp;!
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_getting_started","Learn_web_development/Core/Frameworks_libraries/React_components", "Learn_web_development/Core/Frameworks_libraries")}}

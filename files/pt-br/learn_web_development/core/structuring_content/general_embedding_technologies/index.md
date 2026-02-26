@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/General_embedding_technolog
 original_slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 Até agora você já deve ter aprendido a incorporar coisas em suas páginas da web, incluindo imagens, vídeo e áudio. Neste ponto, gostariamos de dar um passo para o lado, olhando para alguns elementos que permitem incorporar uma ampla variedade de tipos de conteúdo em suas páginas: os elementos [`<iframe>`](/pt-BR/docs/Web/HTML/Element/iframe), [`<embed>`](/pt-BR/docs/Web/HTML/Element/embed) e [`<object>`](/pt-BR/docs/Web/HTML/Element/object). `<iframe>`s são para incorporar outras páginas da Web, e as outras duas permitem incorporar recursos externos como arquivos PDF.
 
@@ -398,4 +398,4 @@ The topic of embedding other content in web documents can quickly become very co
 
 There are many other technologies that involve embedding external content besides the ones we discussed here. We saw some in earlier articles, such as {{htmlelement("video")}}, {{htmlelement("audio")}}, and {{htmlelement("img")}}, but there are others to discover, such as {{htmlelement("canvas")}} for JavaScript-generated 2D and 3D graphics, and {{SVGElement("svg")}} for embedding vector graphics. We'll look at [SVG](/pt-BR/docs/Web/SVG) in the next article of the module.
 
-{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML", "conflicting/Learn_web_development/Core/Structuring_content")}}

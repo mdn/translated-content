@@ -1,35 +1,33 @@
 ---
 title: Application d'effets SVG à du contenu HTML
+short-title: Effets SVG pour HTML
 slug: Web/SVG/Guides/Applying_SVG_effects_to_HTML_content
-original_slug: Web/SVG/Applying_SVG_effects_to_HTML_content
+l10n:
+  sourceCommit: 3ee333bf5e414ac81c452ec10fed7af645c96740
 ---
-
-{{SVGRef}}
 
 Les navigateurs modernes supportent le format [SVG](/fr/docs/Web/SVG) utilisant du [CSS](/fr/docs/Web/CSS) pour appliquer des effets graphiques au contenu HTML.
 
-Vous pouvez éditer un SVG avec du CSS, soit directement dans le document, soit dans une feuille de style externe. Il y a 3 propriétés que vous pouvez utiliser : [`mask`](/fr/docs/Web/CSS/Reference/Properties/mask), [`clip-path`](/fr/docs/Web/CSS/Reference/Properties/clip-path) et [`filter`](/fr/docs/Web/CSS/Reference/Properties/filter).
+Vous pouvez éditer un SVG avec du CSS, soit directement dans le document, soit dans une feuille de style externe. Il y a 3 propriétés que vous pouvez utiliser&nbsp;: {{CSSxRef("mask")}}, {{CSSxRef("clip-path")}} et {{CSSxRef("filter")}}.
 
 > [!NOTE]
-> Dans des fichiers externes, les références à un SVG doivent être à la [même origine](/fr/docs/Web/Security/Same-origin_policy) que le document de référence.
+> Dans des fichiers externes, les références à un SVG doivent être à la [même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy) que le document de référence.
 
 ## Utilisation de SVG intégré
 
-Pour appliquer un effet CSS à un SVG, vous devez dans un premier temps créer la feuille CSS qui fait référence au SVG à éditer.
+Pour appliquer un effet SVG à l'aide de styles CSS, vous devez d'abord créer la règle CSS qui référence le SVG à appliquer.
 
-```html
-<style>
-  p {
-    mask: url(#my-mask);
-  }
-</style>
+```css
+p {
+  mask: url("#my-mask");
+}
 ```
 
 Dans l'exemple ci-dessus, tous les paragraphes utilisent un [SVG `<mask>`](/fr/docs/Web/SVG/Reference/Element/mask) avec l'[ID](/fr/docs/Web/HTML/Reference/Global_attributes/id) de `my-mask`.
 
-### Appliquer un masque
+### Exemple : Appliquer un masque
 
-Par exemple, vous pouvez appliquer un dégradé à du contenu HTML à l'intérieur de votre document en utilisant SVG et du code CSS similaire à celui-ci :
+Par exemple, vous pouvez appliquer un dégradé à du contenu HTML à l'intérieur de votre document en utilisant SVG et du code CSS similaire à celui-ci&nbsp;:
 
 ```html
 <svg height="0">
@@ -46,28 +44,32 @@ Par exemple, vous pouvez appliquer un dégradé à du contenu HTML à l'intérie
 
 ```css
 .target {
-  mask: url(#mask-1);
+  mask: url("#mask-1");
 }
 p {
   width: 300px;
-  border: 1px solid #000;
+  border: 1px solid black;
   display: inline-block;
+}
+p.target {
+  background: lime;
 }
 ```
 
 Notez que dans ce code CSS, le masque est spécifié à l'aide d'une URL à l'ID `#mask-1`, qui est l'ID du masque SVG spécifié précédemment. Tout le reste concerne le dégradé.
 
-L'application d'effet SVG à du (X)HTML est réalisé en affectant la classe cible définie ci-dessus à un élément, comme ceci :
+L'application d'effet SVG à du (X)HTML est réalisé en affectant la classe `target` définie ci-dessus à un élément, comme ceci&nbsp;:
 
 ```html
-<p class="target" style="background:lime;">
+<p class="target">
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 </p>
 <p>
   Lorem ipsum dolor sit amet, consectetur adipisicing
-  <b class="target"
-    >elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</b
+  <em class="target"
+    >elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua.</em
   >
   Ut enim ad minim veniam.
 </p>
@@ -75,26 +77,27 @@ L'application d'effet SVG à du (X)HTML est réalisé en affectant la classe cib
 
 L'exemple ci-dessus serait rendu avec le masque appliqué.
 
-{{EmbedLiveSample('Appliquer_un_masque', 650, 200)}}
+{{EmbedLiveSample('Exemple : Appliquer un masque', 650, 200)}}
 
 ### Exemple : Rogner
 
 Cet exemple montre comment utiliser un SVG pour rogner du contenu HTML. Remarquez que même les zones cliquables (les liens) sont rognées.
 
 ```html
-<p class="target" style="background:lime;">
+<p class="target">
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 </p>
 <p>
   Lorem ipsum dolor sit amet, consectetur adipisicing
-  <b class="target"
-    >elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</b
+  <em class="target"
+    >elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua.</em
   >
   Ut enim ad minim veniam.
 </p>
 
-<button onclick="toggleRadius()">Toggle radius</button>
+<button>Changer le rayon</button>
 
 <svg height="0">
   <clipPath id="clipping-path-1" clipPathUnits="objectBoundingBox">
@@ -106,48 +109,61 @@ Cet exemple montre comment utiliser un SVG pour rogner du contenu HTML. Remarque
 
 ```css
 .target {
-  clip-path: url(#clipping-path-1);
+  clip-path: url("#clipping-path-1");
 }
 p {
   width: 300px;
-  border: 1px solid #000;
+  border: 1px solid black;
   display: inline-block;
 }
-```
-
-Ce code crée une zone cliquable en forme de cercle et de rectangle associé à l'ID `#clipping-path-1` qui est référencé dans le CSS. `clip-path` peut être associé à n'importe quel élément avec la classe `target`.
-
-Vous pouvez faire des changements en temps réel et vous rendre compte qu'ils affectent immédiatement le rendu HTML. Par exemple, vous pouvez redimensionner le cercle à l'aide du `clip-path` établi ci-dessus :
-
-```js
-function toggleRadius() {
-  var circle = document.getElementById("circle");
-  circle.r.baseVal.value = 0.4 - circle.r.baseVal.value;
+p.target {
+  background: lime;
 }
 ```
 
-{{EmbedLiveSample('Exemple_Rogner', 650, 200)}}
+Cela crée une zone de découpe composée d'un cercle et d'un rectangle, lui attribue l'ID `#clipping-path-1`, puis la référence dans le CSS. Le chemin de découpe peut être appliqué à n'importe quel élément ayant la classe `target`.
+
+Vous pouvez modifier le SVG en temps réel et voir immédiatement l'effet sur le rendu HTML. Par exemple, vous pouvez redimensionner le cercle dans le chemin de découpe établi ci-dessus&nbsp;:
+
+```js
+const circle = document.getElementById("circle");
+
+function toggleRadius() {
+  circle.r.baseVal.value = 0.4 - circle.r.baseVal.value;
+}
+
+document.querySelector("button").addEventListener("click", toggleRadius);
+```
+
+{{EmbedLiveSample('Exemple : Rogner', 650, 200)}}
 
 ### Exemple : Filtres
 
-Cet exemple montre comment utiliser des filtres avec un SVG. À l'aide du CSS, nous appliquons plusieurs filtres à trois éléments à la fois dans leur état normal, que quand ils sont survolés par la souris ([hover](/fr/docs/Web/CSS/Reference/Selectors/:hover)).
+Cet exemple montre comment utiliser des filtres avec un SVG. À l'aide du CSS, nous appliquons plusieurs filtres à trois éléments à la fois dans leur état normal, que quand ils sont [survolés](/fr/docs/Web/CSS/Reference/Selectors/:hover) par la souris.
 
 ```html
-<p class="target" style="background: lime;">
+<p class="target">
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 </p>
 <pre class="target">lorem</pre>
 <p>
   Lorem ipsum dolor sit amet, consectetur adipisicing
-  <b class="target"
-    >elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</b
+  <em class="target"
+    >elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua.</em
   >
   Ut enim ad minim veniam.
 </p>
 ```
 
-N'importe quel filtre SVG peut être appliqué de cette façon. Par exemple, pour appliquer un effet de flou, vous pouvez utiliser :
+```css hidden
+p.target {
+  background: lime;
+}
+```
+
+N'importe quel filtre SVG peut être appliqué de cette façon. Par exemple, pour appliquer un effet de flou, vous pouvez utiliser&nbsp;:
 
 ```html
 <svg height="0">
@@ -157,7 +173,7 @@ N'importe quel filtre SVG peut être appliqué de cette façon. Par exemple, pou
 </svg>
 ```
 
-Vous pouvez aussi appliquer une matrice de transformation des couleurs :
+Vous pouvez aussi appliquer une matrice de transformation des couleurs&nbsp;:
 
 ```html
 <svg height="0">
@@ -171,16 +187,18 @@ Vous pouvez aussi appliquer une matrice de transformation des couleurs :
 </svg>
 ```
 
-Et encore d'autres filtres :
+Et encore d'autres filtres&nbsp;:
 
 ```html
 <svg height="0">
   <filter id="f3">
     <feConvolveMatrix
       filterRes="100 100"
-      style="color-interpolation-filters:sRGB"
+      color-interpolation-filters="sRGB"
       order="3"
-      kernelMatrix="0 -1 0 -1 4 -1 0 -1 0"
+      kernelMatrix="0 -1 0
+                   -1 4 -1
+                    0 -1 0"
       preserveAlpha="true" />
   </filter>
   <filter id="f4">
@@ -198,7 +216,7 @@ Et encore d'autres filtres :
               0 1 0 0 0
               0 0 1 0 0
               0 1 0 0 0"
-      style="color-interpolation-filters:sRGB" />
+      color-interpolation-filters="sRGB" />
   </filter>
 </svg>
 ```
@@ -207,33 +225,33 @@ Les cinq filtres sont appliqués en utilisant le CSS suivant :
 
 ```css
 p.target {
-  filter: url(#f3);
+  filter: url("#f3");
 }
 p.target:hover {
-  filter: url(#f5);
+  filter: url("#f5");
 }
-b.target {
-  filter: url(#f1);
+em.target {
+  filter: url("#f1");
 }
-b.target:hover {
-  filter: url(#f4);
+em.target:hover {
+  filter: url("#f4");
 }
 pre.target {
-  filter: url(#f2);
+  filter: url("#f2");
 }
 pre.target:hover {
-  filter: url(#f3);
+  filter: url("#f3");
 }
 ```
 
-{{EmbedLiveSample('Exemple_Filtres', 650, 200)}}
+{{EmbedLiveSample('Exemple : Filtres', 650, 200)}}
 
 ### Exemple : Texte flouté
 
-Pour flouter le texte, Webkit a un filtre CSS (préfixé) appelé blur (voir aussi [CSS filter](/fr/docs/Web/CSS/Reference/Properties/filter#blur)). Vous pouvez obtenir le même effet en utilisant des filtres SVG.
+Pour flouter du texte, il existe une fonction de filtre CSS appelée {{CSSxRef("filter-function/blur")}}. Vous pouvez obtenir le même effet en utilisant des filtres SVG.
 
 ```html
-<p class="blur">Time to clean my glasses</p>
+<p class="blur">Il est temps de nettoyer mes lunettes</p>
 <svg height="0">
   <defs>
     <filter id="wherearemyglasses" x="0" y="0">
@@ -243,27 +261,41 @@ Pour flouter le texte, Webkit a un filtre CSS (préfixé) appelé blur (voir aus
 </svg>
 ```
 
-Vous pouvez appliquer le filtre SVG et le filtre CSS à la même classe :
+Vous pouvez appliquer le filtre SVG et le filtre CSS à la même classe&nbsp;:
 
 ```css
 .blur {
-  filter: url(#wherearemyglasses);
+  filter: url("#wherearemyglasses");
 }
 ```
 
-{{ EmbedLiveSample('Exemple_Texte_flouté', 300, 100) }}
+{{EmbedLiveSample('Exemple : Texte flouté', 300, 100)}}
 
 Le floutage est un calcul assez lourd alors utilisez le avec précaution et faites particulièrement attention aux éléments scrollables ou animés.
+
+### Exemple : Effets de texte
+
+Les effets SVG peuvent aussi être utilisés pour ajouter une approche plus dynamique et flexible à l'ajout de texte, comparé au texte HTML classique.
+
+En créant le texte à l'aide d'éléments SVG combinés à du HTML, vous pouvez réaliser une grande variété d'effets de texte différents. Vous pouvez par exemple faire pivoter le texte&nbsp;:
+
+```html
+<svg height="60" width="200">
+  <text x="0" y="15" fill="blue" transform="rotate(30 20,50)">
+    Texte d'exemple
+  </text>
+</svg>
+```
 
 ## Utilisation de références externes
 
 Vous pouvez utiliser des fichiers externes pour rogner ou pour appliquer des masques et des filtres SVG, tant que cette source vient de la même origine que le document HTML auquel il est appliqué.
 
-Par exemple, si votre CSS est un fichier nommé `default.css`, il pourrait contenir le code ci-dessous :
+Par exemple, si votre CSS est un fichier nommé `default.css`, il pourrait contenir le code ci-dessous&nbsp;:
 
 ```css
 .target {
-  clip-path: url(resources.svg#c1);
+  clip-path: url("resources.svg#c1");
 }
 ```
 
@@ -272,5 +304,6 @@ Le SVG est alors importé depuis un fichier nommé `resources.svg`, utilisant `c
 ## Voir aussi
 
 - [SVG](/fr/docs/Web/SVG)
-- [SVG Effects for HTML Content](https://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content_04.html) (blog post)
-- [\[archive.org\] Web Tech Blog » Blog Archive » SVG External Document References](http://web.archive.org/web/20120512132948/https://developer.mozilla.org/web-tech/2008/10/10/svg-external-document-references/)
+- La propriété CSS {{CSSxRef('clip-path')}}
+- La propriété CSS {{CSSxRef('mask')}}
+- [Formes pour le rognage et le masquage — et comment les utiliser <sup>(angl.)</sup>](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)

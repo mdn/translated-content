@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics")}}
 
 HTML에 대한 연구에서 알 수 있듯이, 요소에는 마크업되는 요소에 대한 자세한 정보를 제공하는 속성이 있을 수 있습니다. CSS에서는 속성 선택자를 사용하여 특정 속성이 있는 요소를 대상으로 지정할 수 있습니다. 이 과정에서는 이러한 매우 유용한 선택자를 사용하는 방법을 보여줍니다.
 
@@ -125,4 +125,4 @@ HTML에 대한 연구에서 알 수 있듯이, 요소에는 마크업되는 요�
 
 이제 속성 선택자가 완료되었으므로, 다음 문서로 이동하여 [의사 클래스와 의사 요소 선택자](/ko/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)에 대해 읽어볼 수 있습니다.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics")}}

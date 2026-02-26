@@ -1,12 +1,11 @@
 ---
 title: "@document"
 slug: Web/CSS/Reference/At-rules/@document
-original_slug: Web/CSS/@document
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{Deprecated_header}}{{Non-standard_header}}
+{{Deprecated_Header}}{{Non-standard_Header}}
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@document`** restreint les règles qu'elle contient en fonction de l'URL du document. Elle est principalement conçue pour les feuilles de style utilisateur, bien qu'elle puisse être également utilisée pour les feuilles de style d'auteur.
 
@@ -21,20 +20,22 @@ La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) *
 }
 ```
 
-Une règle `@document` peut définir une ou plusieurs fonctions de correspondance. Si l'une quelconque des règles s'applique à l'URL donnée, la règle prendra effet sur cette URL. Les fonctions disponibles sont :
+Une règle `@document` peut définir une ou plusieurs fonctions de correspondance. Si l'une quelconque des règles s'applique à l'URL donnée, la règle prendra effet sur cette URL. Les fonctions disponibles sont&nbsp;:
 
-- `url()`, qui établit une correspondance avec une URL exacte ;
-- `url-prefix()`, qui établit une correspondance si l'URL du document commence par la valeur fournie ;
-- `domain()`, qui établit une correspondance si l'URL du document se trouve sur le domaine indiqué (ou l'un de ses sous-domaines) ;
-- `media-document()` qui caractérise le type de document : vidéo, image, plugin, tout ;
+- `url()`, qui établit une correspondance avec une URL exacte.
+- `url-prefix()`, qui établit une correspondance si l'URL du document commence par la valeur fournie.
+- `domain()`, qui établit une correspondance si l'URL du document se trouve sur le domaine indiqué (ou l'un de ses sous-domaines).
+- `media-document()` qui caractérise le type de document à `video`, `image`, `plugin` ou `all`.
 - `regexp()`, qui établit une correspondance avec si l'URL du document vérifie une [expression rationnelle](/fr/docs/Web/JavaScript/Guide/Regular_expressions). L'expression doit correspondre à l'URL entière.
 
 Les valeurs fournies aux fonctions `url()`, `url-prefix()`, `media-document()` et `domain()` peuvent être éventuellement délimitées par des apostrophes, simples ou doubles. Les valeurs fournies à la fonction `regexp()` _doivent_ être délimitées par des apostrophes.
 
 Les valeurs échappées fournies à la fonction `regexp()` doivent être en outre échappées pour le CSS. Par exemple, un `.` (point) correspond à n'importe quel caractère dans les expressions régulières. Pour établir une correspondance avec un point littéral, vous aurez d'abord besoin de l'échapper en utilisant les règles des expressions rationnelles (en `\.`), puis d'échapper cette chaîne en utilisant les règles CSS (en `\\.`).
 
+`@document` n'est actuellement pris en charge que dans Firefox&nbsp;; si vous souhaitez reproduire cette fonctionnalité dans un navigateur autre que Firefox, vous pouvez essayer d'utiliser [cette prothèse d'émulation <sup>(angl.)</sup>](https://github.com/An-Error94/Handy-Scripts/tree/master/%40document-polyfill) créée par @An-Error94, qui combine un script utilisateur·ice, des [attributs data-\*](/fr/docs/Web/HTML/Reference/Global_attributes/data-*), et des [sélecteurs d'attributs](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors).
+
 > [!NOTE]
-> Il existe une version préfixée de cette propriété pour Mozilla : `@-moz-document`. Cette propriété a été restreinte aux feuilles de style utilisateur ou à celles de l'agent utilisateur à partir de Firefox 59 afin d'expérimenter une méthode de réduction des risques d'injections CSS (cf. [bug Firefox 1035091](https://bugzil.la/1035091)).
+> Il existe une version préfixée de cette propriété pour Mozilla — `@-moz-document`. Cette propriété a été restreinte aux feuilles de style utilisateur ou à celles de l'agent utilisateur à partir de Firefox 59 dans Nightly et Bêta — afin d'expérimenter une méthode de réduction des risques d'injections CSS (cf. [bogue Firefox 1035091 <sup>(angl.)</sup>](https://bugzil.la/1035091)).
 
 ### Syntaxe formelle
 
@@ -75,7 +76,7 @@ Les valeurs échappées fournies à la fonction `regexp()` doivent être en outr
 
 ## Spécifications
 
-[Initialement](https://www.w3.org/TR/2012/WD-css3-conditional-20120911/#at-document) dans le niveau 3, `@document` a été [reporté](https://www.w3.org/TR/2012/WD-css3-conditional-20121213/#changes) au niveau 4, mais a ensuite été supprimé.
+[Initialement <sup>(angl.)</sup>](https://www.w3.org/TR/2012/WD-css3-conditional-20120911/#at-document) dans le niveau 3, `@document` a été [reporté <sup>(angl.)</sup>](https://www.w3.org/TR/2012/WD-css3-conditional-20121213/#changes) au niveau 4, mais a ensuite été supprimé.
 
 ## Compatibilité des navigateurs
 

@@ -1,9 +1,8 @@
 ---
 title: translate()
 slug: Web/CSS/Reference/Values/transform-function/translate
-original_slug: Web/CSS/transform-function/translate
 l10n:
-  sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
 **`translate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、要素を水平方向や垂直方向で再配置します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
@@ -71,14 +70,14 @@ transform: translate(30%, 50%);
 ### 値
 
 - 単一の `<length-percentage>` values
-  - : この値は {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で、変換ベクトルの横軸 (水平方向、X 座標) を表します。変換ベクトルの縦軸 (垂直方向、Y 座標) は `0` に設定されます。例えば、 `translate(2px)` は `translate(2px, 0)` と等価です。パーセント値の場合は、 {{cssxref("transform-box")}} で定義される参照ボックスの幅からの相対値です。
+  - : この値は {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で、変換ベクトルの横軸 (水平方向、X 成分) を表します。変換ベクトルの縦軸 (垂直方向、Y 成分) は `0` に設定されます。例えば、 `translate(2px)` は `translate(2px, 0)` と等価です。パーセント値の場合は、 {{cssxref("transform-box")}} で定義される参照ボックスの幅からの相対値です。
 - 二つの `<length-percentage>` 値
   - : この値は 2 つの {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} 値で、変換ベクトルの横軸 (水平方向、X 座標) と縦軸 (垂直方向、Y 座標) を表します。1 つ目にパーセント値が使用された場合は、 {{cssxref("transform-box")}} で定義された参照ボックスの幅からの相対値で、2 つ目にパーセント値が使用された場合は、高さからの相対値です。
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col"><a href="/ja/docs/Web/CSS/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
+      <th scope="col"><a href="/ja/docs/Web/CSS/Reference/Values/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
       <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">同次座標系</a> (<a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a>)</th>
       <th scope="col">直交座標系 (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^3</a>)</th>
       <th scope="col">同次座標系 (<a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a>)</th>
@@ -92,61 +91,19 @@ transform: translate(30%, 50%);
         </p>
       </td>
       <td>
-        <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mi>tx</mi> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
-                ><mtd><mi>ty</mi> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi>tx</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mi>ty</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{ccc} 1 & 0 & tx \\ 0 & 1 & ty \\ 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
       <td rowspan="2">
-        <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mi>tx</mi> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
-                ><mtd><mi>ty</mi> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi>tx</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mi>ty</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{ccc} 1 & 0 & tx \\ 0 & 1 & ty \\ 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
       <td rowspan="2">
-        <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mi>tx</mi> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mi>ty</mi> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi>tx</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi>ty</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cccc} 1 & 0 & 0 & tx \\ 0 & 1 & 0 & ty \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
     </tr>
     <tr>
@@ -155,11 +112,9 @@ transform: translate(30%, 50%);
   </tbody>
 </table>
 
-### 形式文法
+## 形式文法
 
-```css
-translate({{cssxref("&lt;length-percentage&gt;")}}, {{cssxref("&lt;length-percentage&gt;")}}?)
-```
+{{CSSSyntax}}
 
 ## 例
 
@@ -168,9 +123,9 @@ translate({{cssxref("&lt;length-percentage&gt;")}}, {{cssxref("&lt;length-percen
 #### HTML
 
 ```html
-<div>Static</div>
-<div class="moved">Moved</div>
-<div>Static</div>
+<div>静的</div>
+<div class="moved">移動</div>
+<div>静的</div>
 ```
 
 #### CSS
@@ -198,9 +153,9 @@ div {
 #### HTML
 
 ```html
-<div>Static</div>
-<div class="moved">Moved</div>
-<div>Static</div>
+<div>静的</div>
+<div class="moved">移動</div>
+<div>静的</div>
 ```
 
 #### CSS

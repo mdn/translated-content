@@ -1,14 +1,13 @@
 ---
 title: flex-wrap
 slug: Web/CSS/Reference/Properties/flex-wrap
-original_slug: Web/CSS/flex-wrap
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`flex-wrap`** définit si les éléments flexibles sont forcés sur une seule ligne ou peuvent passer à la ligne sur plusieurs lignes. Si le retour à la ligne est autorisé, elle définit la direction dans laquelle les lignes sont empilées.
 
-La propriété **`flex-wrap`** indique si les éléments flexibles sont contraints à être disposés sur une seule ligne ou s'ils peuvent être affichés sur plusieurs lignes avec un retour automatique. Si le retour à la ligne est autorisé, la propriété permet également de contrôler la direction dans laquelle les lignes sont empilées.
-
-{{InteractiveExample("CSS Demo: flex-wrap")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: flex-wrap")}}
 
 ```css interactive-example-choice
 flex-wrap: nowrap;
@@ -25,12 +24,12 @@ flex-wrap: wrap-reverse;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    <div>Item One</div>
-    <div>Item Two</div>
-    <div>Item Three</div>
-    <div>Item Four</div>
-    <div>Item Five</div>
-    <div>Item Six</div>
+    <div>Élément Un</div>
+    <div>Élément Deux</div>
+    <div>Élément Trois</div>
+    <div>Élément Quatre</div>
+    <div>Élément Cinq</div>
+    <div>Élément Six</div>
   </div>
 </section>
 ```
@@ -43,14 +42,14 @@ flex-wrap: wrap-reverse;
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   width: 60px;
   margin: 10px;
 }
 ```
 
-Pour plus d'informations, voir la page [Utiliser les boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts).
+La propriété raccourcie {{CSSxRef("flex-flow")}} permet de définir à la fois les propriétés {{CSSxRef("flex-direction")}} et `flex-wrap`, qui définissent respectivement les axes principal et transversal du conteneur flexible.
 
 ## Syntaxe
 
@@ -63,17 +62,19 @@ flex-wrap: wrap-reverse;
 /* Valeurs globales */
 flex-wrap: inherit;
 flex-wrap: initial;
+flex-wrap: revert;
+flex-wrap: revert-layer;
 flex-wrap: unset;
 ```
 
-La propriété `flex-wrap` peut être défini grâce à l'un des mots-clés suivants.
-
 ### Valeurs
 
+La propriété `flex-wrap` peut être défini grâce à l'un des mots-clés suivants&nbsp;:
+
 - `nowrap`
-  - : Les éléments flexibles sont disposés sur une seule ligne. Cela peut entraîner un dépassement du conteneur. La ligne **cross-start** est équivalente à **start** ou à **before** selon la valeur de {{cssxref("flex-direction")}}. Cette valeur est la valeur par défaut.
+  - : Les éléments flexibles sont disposés sur une seule ligne. Cela peut entraîner un dépassement du conteneur. La ligne **cross-start** est équivalente à {{Glossary("Flow_relative_values", "inline-start ou block-start")}}, en fonction du [mode d'écriture](/fr/docs/Web/CSS/Guides/Writing_modes) actuel, et de la valeur de {{CSSxRef("flex-direction")}}. Cette valeur est la valeur par défaut.
 - `wrap`
-  - : Les éléments flexibles sont disposé sur plusieurs lignes. La ligne **cross-start** est équivalente à **start** ou **before** en fonction de la valeur de `flex-direction` et la ligne **cross-end** est à l'opposée **cross-start**.
+  - : Les éléments flexibles sont disposés sur plusieurs lignes. La ligne **cross-start** est équivalente à {{Glossary("Flow_relative_values", "inline-start ou block-start")}}, en fonction du [mode d'écriture](/fr/docs/Web/CSS/Guides/Writing_modes) actuel, et de la valeur de {{CSSxRef("flex-direction")}}.
 - `wrap-reverse`
   - : Se comporte comme `wrap` mais **cross-start** et **cross-end** sont permutées.
 
@@ -87,24 +88,26 @@ La propriété `flex-wrap` peut être défini grâce à l'un des mots-clés suiv
 
 ## Exemples
 
-### HTML
+### Définir les valeurs de retour à la ligne du conteneur flexible
+
+#### HTML
 
 ```html
-<h4>Un exemple de flex-wrap:wrap</h4>
+<h4>Un exemple de <code>flex-wrap:wrap</code></h4>
 <div class="contenu">
   <div class="rouge">1</div>
   <div class="vert">2</div>
   <div class="bleu">3</div>
 </div>
 
-<h4>Un exemple de flex-wrap:nowrap</h4>
+<h4>Un exemple de <code>flex-wrap:nowrap</code></h4>
 <div class="contenu1">
   <div class="rouge">1</div>
   <div class="vert">2</div>
   <div class="bleu">3</div>
 </div>
 
-<h4>Un exemple de flex-wrap:wrap-reverse</h4>
+<h4>Un exemple de <code>flex-wrap:wrap-reverse</code></h4>
 <div class="contenu2">
   <div class="rouge">1</div>
   <div class="vert">2</div>
@@ -112,13 +115,14 @@ La propriété `flex-wrap` peut être défini grâce à l'un des mots-clés suiv
 </div>
 ```
 
-### CSS
+#### CSS
 
 ```css
+/* Styles communs */
 .contenu,
 .contenu1,
 .contenu2 {
-  color: #fff;
+  color: white;
   font: 100 24px/100px sans-serif;
   height: 150px;
   width: 897px;
@@ -156,9 +160,9 @@ La propriété `flex-wrap` peut être défini grâce à l'un des mots-clés suiv
 }
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample('Exemples', '700px', '700px')}}
+{{EmbedLiveSample("Définir les valeurs de retour à la ligne du conteneur flexible", "", 700)}}
 
 ## Spécifications
 
@@ -170,5 +174,8 @@ La propriété `flex-wrap` peut être défini grâce à l'un des mots-clés suiv
 
 ## Voir aussi
 
-- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)_
-- Guide sur les boîtes flexibles : _[Maîtriser le retour à la ligne des éléments flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items)_
+- La propriété {{CSSxRef("flex-direction")}}
+- La propriété raccourcie {{CSSxRef("flex-flow")}}
+- [Concepts de base des boîtes flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [Maîtriser le retour à la ligne des éléments flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items)
+- Le module [du modèle de boîte flexible CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout)

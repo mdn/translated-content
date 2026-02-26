@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks
 original_slug: Learn/Server-side/First_steps/Web_frameworks
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps/Website_security", "Learn_web_development/Extensions/Server-side/First_steps")}}
 
 L'article précédent nous a montré à quoi ressemble la communication entre les clients et les serveurs web, la nature des demandes et des réponses HTTP et ce qu'une application web côté serveur doit faire pour répondre aux demandes d'un navigateur web. Avec ces connaissances en main, il est temps d'explorer comment les frameworks peuvent nous simplifier la tâche. En chemin, vous comprendrez comment choisir le framework le mieux adapté pour votre première application web côté serveur.
 
@@ -275,4 +275,4 @@ This article has shown that web frameworks can make it easier to develop and mai
 
 For the next article in this module we'll change direction slightly and consider web security.
 
-{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps/Website_security", "Learn_web_development/Extensions/Server-side/First_steps")}}

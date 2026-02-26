@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Sessions
 original_slug: Learn/Server-side/Django/Sessions
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication_and_sessions", "Learn_web_development/Extensions/Server-side/Django")}}
 
 이 튜토리얼에서는 [LocalLibrary](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) website을 확장시킬 것입니다. 방문 수를 셀 수 있는 session-based 기능을 더한 홈페이지입니다. 이것은 상대적으로 간단한 예제인데, 이는 당신의 홈페이지에서 익명의 유저들에게 지속적으로 서비스를 제공하는 session framework의 사용법입니다.
 
@@ -14,7 +14,7 @@ original_slug: Learn/Server-side/Django/Sessions
       <th scope="row">Prerequisites:</th>
       <td>
         Complete all previous tutorial topics, including
-        <a href="/ko/docs/Learn/Server-side/Django/Generic_views"
+        <a href="/ko/docs/Learn_web_development/Extensions/Server-side/Django/Generic_views"
           >Django Tutorial Part 6: Generic list and detail views</a
         >
       </td>
@@ -172,4 +172,4 @@ def index(request):
 
 - [How to use sessions](https://docs.djangoproject.com/en/2.0/topics/http/sessions/) (Django docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/Authentication", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn/Server-side/Django/Authentication", "Learn_web_development/Extensions/Server-side/Django")}}

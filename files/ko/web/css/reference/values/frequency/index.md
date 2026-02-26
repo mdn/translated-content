@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Values/frequency
 original_slug: Web/CSS/frequency
 ---
 
-[CSS](/ko/docs/Web/CSS) **`<frequency>`** [자료형](/ko/docs/Web/CSS/CSS_values_and_units/CSS_data_types)은 목소리의 높낮이 등 주파수를 나타냅니다. 현재 어떤 CSS 속성도 `<frequency>`를 사용하지 않습니다.
+[CSS](/ko/docs/Web/CSS) **`<frequency>`** [자료형](/ko/docs/Web/CSS/Reference/Values/Data_types)은 목소리의 높낮이 등 주파수를 나타냅니다. 현재 어떤 CSS 속성도 `<frequency>`를 사용하지 않습니다.
 
 ## 구문
 
@@ -45,7 +45,7 @@ original_slug: Web/CSS/frequency
 {{Specifications}}
 
 > [!NOTE]
-> `<frequency>`는 [CSS Level 2](https://www.w3.org/TR/CSS2/aural.html#q19.0)의, 지금은 사용하지 않는 청각적 [미디어 특성](/ko/docs/Web/CSS/@media#미디어_특성)에서 음성의 높낮이를 설정할 때 사용했습니다. 이후 CSS3에서 다시 추가됐지만, 지금으로써는 어떤 CSS 속성에서도 사용하지 않습니다.
+> `<frequency>`는 [CSS Level 2](https://www.w3.org/TR/CSS2/aural.html#q19.0)의, 지금은 사용하지 않는 청각적 [미디어 특성](/ko/docs/Web/CSS/Reference/At-rules/@media#미디어_특성)에서 음성의 높낮이를 설정할 때 사용했습니다. 이후 CSS3에서 다시 추가됐지만, 지금으로써는 어떤 CSS 속성에서도 사용하지 않습니다.
 
 ## 브라우저 호환성
 

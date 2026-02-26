@@ -39,9 +39,9 @@ Un booléen indiquant si les arguments ont la même valeur.
   - sont toutes les deux égales à {{jsxref("NaN")}}
   - sont non-nulles, ne sont pas `NaN` et ont toutes les deux la même valeur
 
-Attention, ce n'est pas la même égalité qu'avec l'opérateur {{jsxref("Opérateurs/Opérateurs_de_comparaison", "==", "#.C3.89galit.C3.A9_simple_(.3D.3D)")}}. L'opérateur == applique différentes conversions à chaque opérande (si ils ne sont pas du même type) avant de tester l'égalité (d'où le comportement `"" == false` qui donne `true`), `Object.is` ne convertit aucune des deux valeurs.
+Attention, ce n'est pas la même égalité qu'avec l'opérateur {{jsxref("Opérateurs/Opérateurs_de_comparaison", "==", "#égalité_simple_(==)")}}. L'opérateur == applique différentes conversions à chaque opérande (si ils ne sont pas du même type) avant de tester l'égalité (d'où le comportement `"" == false` qui donne `true`), `Object.is` ne convertit aucune des deux valeurs.
 
-Cette égalité est également différente de l'égalité stricte qu'on peut avoir avec l'opérateur {{jsxref("Opérateurs/Opérateurs_de_comparaison", "===", "#.C3.89galit.C3.A9_stricte_(.3D.3D.3D)")}}. L'opérateur === (et également l'opérateur ==) considère que `-0` et `+0` sont égales et que {{jsxref("Number.NaN")}} n'est pas égal à {{jsxref("NaN")}}.
+Cette égalité est également différente de l'égalité stricte qu'on peut avoir avec l'opérateur {{jsxref("Opérateurs/Opérateurs_de_comparaison", "===", "#égalité_stricte_(===)")}}. L'opérateur === (et également l'opérateur ==) considère que `-0` et `+0` sont égales et que {{jsxref("Number.NaN")}} n'est pas égal à {{jsxref("NaN")}}.
 
 ## Exemples
 

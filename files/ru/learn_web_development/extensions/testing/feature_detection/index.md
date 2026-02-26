@@ -80,7 +80,7 @@ if ("geolocation" in navigator) {
 
 #### @supports
 
-Недавно, в CSS появился собственный механизм обнаружения собственных функций — @-правило {{cssxref("@supports")}}. Это работает аналогично [медиавыражениям](/ru/docs/Web/CSS/CSS_media_queries) (см. Также [Адаптивные проблемы дизайна](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Responsive_design_problems)) — за исключением того, что вместо выборочного применения CSS в зависимости от медиа-функции, такой как разрешение, ширина экрана или соотношение сторон, выборочно применяется CSS в зависимости от того, поддерживается ли функция CSS.
+Недавно, в CSS появился собственный механизм обнаружения собственных функций — @-правило {{cssxref("@supports")}}. Это работает аналогично [медиавыражениям](/ru/docs/Web/CSS/Guides/Media_queries) (см. Также [Адаптивные проблемы дизайна](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Responsive_design_problems)) — за исключением того, что вместо выборочного применения CSS в зависимости от медиа-функции, такой как разрешение, ширина экрана или соотношение сторон, выборочно применяется CSS в зависимости от того, поддерживается ли функция CSS.
 
 Например, мы могли бы переписать наш предыдущий пример для использования `@supports` — см. [`supports-feature-detect.html`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-feature-detect.html) и [`supports-styling.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-styling.css). Если вы посмотрите на последнее, вы увидите пару блоков `@supports` например:
 

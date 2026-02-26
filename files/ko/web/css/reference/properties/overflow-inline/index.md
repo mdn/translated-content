@@ -135,6 +135,6 @@ div {
 
 - {{cssxref("clip")}}, {{cssxref("display")}}, {{cssxref("overflow")}}, {{cssxref("overflow-block")}}, {{cssxref("overflow-clip-margin")}}, {{cssxref("overflow-x")}}, {{cssxref("overflow-y")}}, {{cssxref("text-overflow")}}, {{cssxref("white-space")}}
 - [CSS overflow](/ko/docs/Web/CSS/CSS_overflow) module
-- [CSS logical properties](/ko/docs/Web/CSS/CSS_logical_properties_and_values)
-- [CSS writing modes](/ko/docs/Web/CSS/CSS_writing_modes)
+- [CSS logical properties](/ko/docs/Web/CSS/Guides/Logical_properties_and_values)
+- [CSS writing modes](/ko/docs/Web/CSS/Guides/Writing_modes)
 - [CSS building blocks: Overflowing content](/ko/docs/Learn_web_development/Core/Styling_basics/Overflow)

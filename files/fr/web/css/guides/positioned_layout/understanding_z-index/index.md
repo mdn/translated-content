@@ -4,7 +4,7 @@ slug: Web/CSS/Guides/Positioned_layout/Understanding_z-index
 original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index
 ---
 
-{{CSSRef}}{{PreviousMenuNext("","Web/CSS/Comprendre_z-index/Empilement_sans_z-index", "Web/CSS/Comprendre_z-index")}}
+{{CSSRef}}{{PreviousMenuNext("","Web/CSS/Guides/Positioned_layout/Stacking_without_z-index", "Web/CSS/Guides/Positioned_layout/Understanding_z-index")}}
 
 Généralement, les pages HTML sont vues comme des objets en deux dimensions et le texte, les images et les autres éléments sont disposés sans se chevaucher. Il y a un seul flux de rendu, et tous les éléments connaissent la place occupée par les autres.
 
@@ -26,4 +26,4 @@ Ces articles ont pour but d'expliquer ces règles, de proposer quelques simplifi
 6. [Exemple d'empilement n°2](/fr/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_2)&nbsp;: Hiérarchie HTML à 2 niveaux, `z-index` sur tous les éléments
 7. [Exemple d'empilement n°3](/fr/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_3)&nbsp;: Hiérarchie HTML à 3 niveaux, `z-index` sur le deuxième niveau
 
-{{PreviousMenuNext("","Web/CSS/Comprendre_z-index/Empilement_sans_z-index", "Web/CSS/Comprendre_z-index")}}
+{{PreviousMenuNext("","Web/CSS/Guides/Positioned_layout/Stacking_without_z-index", "Web/CSS/Guides/Positioned_layout/Understanding_z-index")}}

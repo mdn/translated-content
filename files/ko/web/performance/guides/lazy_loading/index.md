@@ -53,7 +53,7 @@ JavaScript, CSS, HTML을 더 작은 덩어리로 분할할 수 있습니다. 이
 
 기본적으로 폰트 요청은 렌더 트리가 구성될 때까지 지연되므로 텍스트 렌더링이 지연될 수 있습니다.
 
-기본 동작을 재정의하고 `<link rel="preload">`, [CSS 폰트 표시 속성](/ko/docs/Web/CSS/@font-face/font-display) 및 [폰트 로딩 API](/ko/docs/Web/API/CSS_Font_Loading_API)를 사용하여 웹 폰트 리소스를 미리 로드할 수 있습니다.
+기본 동작을 재정의하고 `<link rel="preload">`, [CSS 폰트 표시 속성](/ko/docs/Web/CSS/Reference/At-rules/@font-face/font-display) 및 [폰트 로딩 API](/ko/docs/Web/API/CSS_Font_Loading_API)를 사용하여 웹 폰트 리소스를 미리 로드할 수 있습니다.
 
 같이 보기: [Element Link](/ko/docs/Web/HTML/Reference/Elements/link)
 

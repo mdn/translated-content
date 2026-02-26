@@ -2,7 +2,7 @@
 title: GeolocationPositionError
 slug: Web/API/GeolocationPositionError
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}

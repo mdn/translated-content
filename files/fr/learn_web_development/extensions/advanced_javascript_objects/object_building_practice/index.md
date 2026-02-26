@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_buildi
 original_slug: Learn/JavaScript/Objects/Object_building_practice
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 Dans l'article précédent, nous avons passé en revue l'essentiel de la théorie de l'objet Javascript et sa syntaxe détaillée, vous donnant ainsi des bases solides sur lesquelles commencer. Dans le présent article nous plongeons dans un exercice pratique afin d'accroître votre savoir-faire dans la construction d'objets entièrement personnalisés donnant un résultat plutôt amusant et très coloré.
 
@@ -316,4 +316,4 @@ C'est tout pour les articles sur les objets — il ne vous reste plus qu'à test
 - [Jeu d'évasion 2D utilisant du JavaScript pu](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) —un excellent tutoriel pour débutant montrant comment construire un jeu en 2D.
 - [Jeu d'évasion 2D utilisant phaser](/fr/docs/Games/Tutorials/2D_breakout_game_Phaser) — explique les bases de la construction d'un jeu 2D en utilisant une bibliothèque de jeux JavaScript.
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

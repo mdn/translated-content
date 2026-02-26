@@ -4,8 +4,6 @@ slug: Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks
 original_slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
-
 Dans cet article, nous verrons ce que sont les liens et en quoi ils sont importants pour la structure du Web.
 
 <table class="standard-table">
@@ -13,19 +11,19 @@ Dans cet article, nous verrons ce que sont les liens et en quoi ils sont importa
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Vous devriez, au préalable, comprendre
-        <a href="/fr/Learn/How_the_Internet_works"
-          >comment Internet fonctionne</a
+        Vous devriez savoir
+        <a href="/fr/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work"
+          >comment fonctionne Internet</a
         >
-        et distinguer<a
-          href="/fr/Apprendre/page_vs_site_vs_serveur_vs_moteur_recherche"
+        et connaître la différence entre <a
+          href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web"
         >
           une page web, un site web, un serveur web et un moteur de recherche</a
         >.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectifs :</th>
+      <th scope="row">Objectifs d'apprentissage&nbsp;:</th>
       <td>
         Apprendre ce que sont les liens hypertexte et comprendre leur
         importance.
@@ -34,15 +32,15 @@ Dans cet article, nous verrons ce que sont les liens et en quoi ils sont importa
   </tbody>
 </table>
 
-Les hyperliens (fréquemment appelés « liens ») sont un concept fondamental du Web. Pour mieux expliquer ce que sont les liens, il nous faut remonter aux fondations de l'architecture du Web, en 1989, lorsque Tim Berners-Lee présenta les trois piliers du Web (qu'il a inventé en grande partie) :
+Les hyperliens (fréquemment appelés « liens ») sont un concept fondamental du Web. Pour mieux expliquer ce que sont les liens, il nous faut remonter aux fondations de l'architecture du Web, en 1989, lorsque Tim Berners-Lee présenta les trois piliers du Web (qu'il a inventé en grande partie)&nbsp;:
 
-1. Les {{Glossary("URL")}} : un système d'adresses pour repérer les documents web
-2. {{Glossary("HTTP")}} : un protocole de transport permettant de trouver les documents en fonction de leur URL
-3. {{Glossary("HTML")}} : un format de document qui permet d'intégrer des _hyperliens_ (_hyperlink_ est le terme anglais)
+1. {{Glossary("URL")}}&nbsp;: un système d'adresses pour repérer les documents web
+2. {{Glossary("HTTP")}}&nbsp;: un protocole de transport permettant de trouver les documents en fonction de leur URL
+3. {{Glossary("HTML")}}&nbsp;: un format de document qui permet d'intégrer des _hyperliens_ (_hyperlink_ est le terme anglais)
 
 Comme on peut le voir avec ces trois piliers, tout ce qui tourne autour du Web consiste en des documents et à la façon d'y accéder. Le but originel du Web était de fournir un moyen simple et efficace pour lire et naviguer entre différents documents textuels. Depuis, le Web a évolué et permet désormais d'accéder à des images, des vidéos, des données binaires. Toutefois, ces améliorations n'ont pas bouleversé ces trois piliers qui restent toujours d'actualité.
 
-Avant l'existence du Web, il était assez difficile d'accéder à des documents et de naviguer entre eux. Le fait que les URL soient lisibles et compréhensibles aida à simplifier cette navigation. Malgré tout, saisir une URL longue relève parfois du défi si on doit le faire à chaque fois qu'on souhaite accéder à un document. C'est là que les hyperliens interviennent et révolutionnent l'accès et la navigation. Les liens permettent de faire correspondre n'importe quelle chaîne de caractère avec une URL donnée : l'utilisateur n'a plus qu'à cliquer sur le texte qui contient le lien pour activer ce dernier et se rendre sur le document ciblé.
+Avant l'existence du Web, il était assez difficile d'accéder à des documents et de naviguer entre eux. Le fait que les URL soient lisibles et compréhensibles aida à simplifier cette navigation. Malgré tout, saisir une URL longue relève parfois du défi si on doit le faire à chaque fois qu'on souhaite accéder à un document. C'est là que les hyperliens interviennent et révolutionnent l'accès et la navigation. Les liens permettent de faire correspondre n'importe quelle chaîne de caractère avec une URL donnée&nbsp;: l'utilisateur n'a plus qu'à cliquer sur le texte qui contient le lien pour activer ce dernier et se rendre sur le document ciblé.
 
 Par défaut, les liens apparaissent en bleu et en souligné. Cela permet de faire ressortir le lien du texte environnant. Pour activer le lien, il suffit de cliquer dessus ou de le toucher. Si vous utilisez un clavier, utilisez la touche tabulation jusqu'à ce que le lien soit sélectionné puis appuyez sur la touche Entrée.
 
@@ -56,7 +54,7 @@ _Cette section a besoin d'être enrichie, [n'hésitez pas à contribuer !](/fr/d
 
 ## Aller plus loin
 
-Comme nous l'avons déjà mentionné, un lien est une chaîne de texte liée à une URL et nous utilisons les liens pour passer d'un document à un autre. Cela dit, il existe quelques nuances qu'il faut préciser :
+Comme nous l'avons déjà mentionné, un lien est une chaîne de texte liée à une URL et nous utilisons les liens pour passer d'un document à un autre. Cela dit, il existe quelques nuances qu'il faut préciser&nbsp;:
 
 ### Les types de lien
 
@@ -93,5 +91,5 @@ Les liens ont donc une influence sur la façon dont les moteurs de recherche von
 
 Bien entendu, après avoir lu cet article, vous voudrez ajouter des liens à votre page web !
 
-- Pour connaître le fonctionnement théorique, vous pouvez lire [les URL et leur structure](/fr/docs/Apprendre/Understanding_URLs) car, pour être précis, chaque hyperlien pointe vers une URL donnée.
-- Pour plonger dans la pratique, vous pouvez développer un peu de HTML. Apprenez comment [écrire des documents HTML et les lier les uns aux autres.](/fr/docs/Apprendre/HTML/Write_a_simple_page_in_HTML)
+- Pour approfondir la théorie, découvrez [les URL et leur structure](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), car chaque lien pointe vers une URL.
+- Vous voulez quelque chose de plus pratique&nbsp;? Notre tutoriel [Créer des liens](/fr/docs/Learn_web_development/Core/Structuring_content/Creating_links) explique en détail comment implémenter des liens.

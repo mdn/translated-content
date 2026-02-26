@@ -43,7 +43,7 @@ animation-play-state: unset;
 
 ## Примеры
 
-См. [CSS animations](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations).
+См. [CSS animations](/ru/docs/Web/CSS/Guides/Animations/Using).
 
 ## Спецификации
 
@@ -55,5 +55,5 @@ animation-play-state: unset;
 
 ## Смотрите также
 
-- [Использование CSS-анимаций](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Использование CSS-анимаций](/ru/docs/Web/CSS/Guides/Animations/Using)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

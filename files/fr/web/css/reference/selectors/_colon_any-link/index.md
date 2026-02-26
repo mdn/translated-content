@@ -1,12 +1,11 @@
 ---
 title: :any-link
 slug: Web/CSS/Reference/Selectors/:any-link
-original_slug: Web/CSS/:any-link
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 4cb9d89a204a9532370693b982e8a3b274a874b1
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:any-link`** permet de représenter un élément qui agit comme la source de l'ancre d'un hyperlien (qu'il ait été visité ou non). Elle permet donc de cibler les éléments {{HTMLElement("a")}}, {{HTMLElement("area")}} ou {{HTMLElement("link")}} avec un attribut `href`. Autrement dit, elle cible les éléments qui correspondent à {{cssxref(":link")}} ou à {{cssxref(":visited")}}.
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:any-link`** permet de représenter un élément qui agit comme la source de l'ancre d'un hyperlien (qu'il ait été visité ou non). Elle permet donc de cibler les éléments {{HTMLElement("a")}}, {{HTMLElement("area")}} ou {{HTMLElement("link")}} avec un attribut `href`. Autrement dit, elle cible les éléments qui correspondent à {{CSSxRef(":link")}} ou à {{CSSxRef(":visited")}}.
 
 {{InteractiveExample("Démontrastion CSS&nbsp;: :any-link", "tabbed-shorter")}}
 
@@ -92,5 +91,5 @@ a:-webkit-any-link {
 - [Création d'hyperliens](/fr/docs/Learn_web_development/Core/Structuring_content/Creating_links)
 - Associé aux éléments HTML&nbsp;: {{HTMLElement("a")}} et {{HTMLElement("area")}} avec un attribut [`href`](/fr/docs/Web/HTML/Reference/Elements/a#href)
 - Sélecteurs CSS associés&nbsp;:
-  - {{cssxref(":visited")}}
-  - {{cssxref(":link")}}
+  - {{CSSxRef(":visited")}}
+  - {{CSSxRef(":link")}}

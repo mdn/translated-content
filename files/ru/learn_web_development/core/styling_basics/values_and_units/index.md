@@ -3,7 +3,7 @@ title: Значения свойств CSS
 slug: Learn_web_development/Core/Styling_basics/Values_and_units
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}
 
 Каждое свойство используемое в CSS имеет значение или набор значений которые допустимы для этого свойства, и изучение страниц MDN со свойствами поможет вам понять какие значения валидны для того или иного свойства. В этом уроке мы рассмотрим некоторые наиболее общие значения и единицы в использовании.
 
@@ -252,7 +252,7 @@ The key thing to remember is that each property has a defined list of allowed va
 
 For example, understanding that [`<image>`](/ru/docs/Web/CSS/image) also allows you to create a color gradient is useful but perhaps non-obvious knowledge to have!
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}
 
 ## In this module
 

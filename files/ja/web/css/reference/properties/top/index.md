@@ -1,12 +1,11 @@
 ---
 title: top
 slug: Web/CSS/Reference/Properties/top
-original_slug: Web/CSS/top
 l10n:
-  sourceCommit: b5d025c25b6dd3f7ed0b82c4abed0b25f6462a5e
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`top`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[位置指定要素](/ja/docs/Web/CSS/Reference/Properties/position)の垂直位置の決定に関与します。位置指定されていない要素には効果はありません。
+**`top`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[位置指定要素](/ja/docs/Web/CSS/Reference/Properties/position)の垂直位置を設定します。この{{glossary("inset properties", "インセットプロパティ")}}は、位置指定されていない要素には効果がありません。
 
 {{InteractiveExample("CSS デモ: top")}}
 
@@ -26,15 +25,12 @@ top: 10%;
 top: 20px;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section id="default-example">
   <div class="example-container">
-    <div id="example-element">I am absolutely positioned.</div>
+    <div id="example-element">これは絶対位置指定されています。</div>
     <p>
-      As much mud in the streets as if the waters had but newly retired from the
-      face of the earth, and it would not be wonderful to meet a Megalosaurus,
-      forty feet long or so, waddling like an elephantine lizard up Holborn
-      Hill.
+      まるで地球の表面から水が引き始めたかのように、通りは泥だらけで、ホルボーン通りを象のようなトカゲのようによちよち歩く、体長 12 メートルほどのメガロサウルスに出会っても不思議ではないでしょう。
     </p>
   </div>
 </section>
@@ -62,7 +58,7 @@ top: 20px;
 
 `top` の効果は、要素がどの様に配置されているか（つまり、 {{cssxref("position")}} プロパティの値）によって変わります。
 
-- `position` が `absolute` または `fixed` に設定されている場合、 `top` プロパティは要素の上辺と包含ブロックの上辺との間の距離を指定します。
+- `position` が `absolute` または `fixed` に設定されている場合、`top` プロパティは、要素の上端の外側のマージンと、その包含ブロックの上端の内側の境界線との間の距離を指定します。または、値内で `anchor()` 関数が使用されている場合、[位置指定要素](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using)の場合、値内で {{cssxref("anchor()")}} 関数が使用されているときは、指定された [`<anchor-side>`](/ja/docs/Web/CSS/Reference/Values/anchor#anchor-side) の辺を基準とします。`top` プロパティは、`top`、`bottom`、`start`、`end`、`self-start`、`self-end`、`center`、および `<percentage>` 値と[互換性があります](/ja/docs/Web/CSS/Reference/Values/anchor#compatibility_of_inset_properties_and_anchor-side_values)。
 - `position` が `relative` に設定されている場合、 `top` プロパティは要素の上辺が通常位置から下方へ移動する量を指定します。
 - `position` が `sticky` に設定されている場合、 `top` プロパティは粘着制約矩形の計算に使用されます。
 - `position` が `static` に設定されている場合、 `top` プロパティは*効果がありません*。
@@ -79,6 +75,8 @@ top: 20px;
 /* <length> 値 */
 top: 3px;
 top: 2.4em;
+top: anchor(bottom);
+top: anchor-size(--my-anchor self-block, 10%);
 
 /* 包含ブロックの高さに対する <percentage> */
 top: 10%;
@@ -98,8 +96,9 @@ top: unset;
 
 - {{cssxref("&lt;length&gt;")}}
   - : 負、null、または正の {{cssxref("&lt;length&gt;")}} で、以下のものを表します。
-    - *絶対位置指定要素*の場合は、包含ブロックの上辺までの距離。
-    - *相対位置指定要素*の場合は、通常の位置からの下方向への移動量。
+    - 絶対位置指定要素の場合は、包含ブロックの上辺までのを表します。
+    - アンカー位置指定要素の場合は、{{cssxref("anchor()")}} 関数は、関連付けられたアンカー要素の上端または下端の位置を基準とした相対的な {{cssxref("&lt;length&gt;")}} 値に解決されます（詳細は[インセットプロパティで `anchor()` 関数値を使用](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#インセットプロパティで_anchor_関数値を使用)を参照）。また、{{cssxref("anchor-size()")}} 関数は、関連するアンカー要素の幅または高さに相対的な {{cssxref("&lt;length&gt;")}} 値に解決します（[アンカーサイズに基づく要素の位置の設定](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#アンカーサイズに基づく要素の位置の設定) を参照）。
+    - 相対位置指定要素の場合は、通常の位置からの下方向への移動量を表します。
 
 - {{cssxref("&lt;percentage&gt;")}}
   - : 包含ブロックの高さに対する {{cssxref("&lt;percentage&gt;")}} です。
@@ -107,9 +106,6 @@ top: unset;
   - : 以下のように指定します。
     - *絶対位置指定要素*では、要素の位置は {{Cssxref("bottom")}} プロパティに基づいて決まり、 `height: auto` は内容物の高さに基づいて決まります。また、 `bottom` も `auto` であった場合は、要素は垂直方向には静的要素が配置される場合と同様に配置されます。
     - *相対位置指定要素*では、通常の位置から要素までの距離は {{Cssxref("bottom")}} に基づきます。また、 `bottom` も `auto` であった場合は、垂直方向には移動しません。
-
-- `inherit`
-  - : 値が親要素（包含ブロックとは限りません）の計算値と同じであることを示すキーワードです。そして、この計算値は {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, または `auto` キーワードと同様に扱われます。
 
 ## 公式定義
 
@@ -155,6 +151,9 @@ div {
 
 ## 関連情報
 
-- {{cssxref("inset")}}: 関連するすべてのプロパティである {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, {{cssxref("right")}} の一括指定
-- 対応する論理的プロパティ: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, {{cssxref("inset-inline-end")}} および一括指定の {{cssxref("inset-block")}} と {{cssxref("inset-inline")}}
+- {{cssxref("bottom")}}, {{cssxref("left")}}, {{cssxref("right")}}
+- {{cssxref("inset")}} 一括指定
+- {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, {{cssxref("inset-inline-end")}}
+- {{cssxref("inset-block")}} および {{cssxref("inset-inline")}} 一括指定
 - {{cssxref("position")}}
+- [CSS 位置指定レイアウト](/ja/docs/Web/CSS/Guides/Positioned_layout)モジュール

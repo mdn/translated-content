@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Advanced_text_features
 original_slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content/Structuring_documents", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 Hay muchos otros elementos en HTML para dar formato al texto, que no expusimos en el artículo [Fundamentos de texto HTML](/es/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs). Los elementos descritos en este artículo son menos conocidos, pero aún así es muy útil conocerlos (no obstante, no es una lista completa de ninguna manera). Aquí aprenderás cómo marcar citas, listas de descripción, código de computadora y otro texto relacionado, subíndices y superíndices, información de contacto y mucho más.
 
@@ -776,4 +776,4 @@ Has llegado al final de este artículo, pero ¿puedes recordar la información m
 
 Esto marca el final de nuestro estudio de la semántica del texto HTML. Ten en cuenta que lo que has visto durante este curso no es una lista exhaustiva de elementos de texto HTML — quisimos tratar de cubrir los aspectos esenciales y algunos de los más comunes que verás en la naturaleza, o al menos podrían resultarte interesantes. Para encontrar muchos más elementos HTML, puedes echarle un vistazo a nuestra [referencia de elementos HTML](/es/docs/Web/HTML/Reference/Elements) (la [La sección Semántica de texto en línea](/es/docs/Web/HTML/Reference/Elements#inline_text_semantics) sería un gran lugar para comenzar). En el próximo artículo veremos los elementos HTML que usarás para estructurar las diferentes partes de un documento HTML.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content/Structuring_documents", "conflicting/Learn_web_development/Core/Structuring_content")}}

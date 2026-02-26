@@ -1,12 +1,11 @@
 ---
 title: contrast()
 slug: Web/CSS/Reference/Values/filter-function/contrast
-original_slug: Web/CSS/filter-function/contrast
 l10n:
-  sourceCommit: 92447fec056cc89b7f28445851bea0c981fcbc12
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**`contrast()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、入力画像のコントラストを調整します。結果は {{cssxref("&lt;filter-function&gt;")}} です。
+**`contrast()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、入力画像のコントラストを調整します。結果は {{cssxref("filter-function")}} です。
 
 {{InteractiveExample("CSS デモ: contrast()")}}
 
@@ -44,28 +43,29 @@ contrast(amount)
 
 ### 引数
 
-- `amount`
-  - : 結果のコントラストで、 {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で指定します。 `100%` 未満の値ではコントラストが下がり、 `100%` を超える値ではコントラストが上がります。 `0` または `0%` の値では画像が完全に灰色になり、 `1` または `100%` の値では入力が変更されないままになります。{{Glossary("interpolation","補間")}}の初期値は `1` です。
+- `amount` {{Optional_Inline}}
+  - : 結果のコントラストで、 {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で指定します。 `100%` 未満の値ではコントラストが下がり、 `100%` を超える値ではコントラストが上がります。 `0` または `0%` の値では画像が完全に灰色になり、 `1` または `100%` の値では入力が変更されないままになります。{{Glossary("interpolation","補間")}}の初期値は `1` です。デフォルト値は `1` です。
 
 以下は、等価な値のペアです。
 
 ```css
-contrast(0) /* 完全な灰色 */
+contrast(0)    /* 完全な灰色 */
 contrast(0%)
 
 contrast(0.65) /* 65% のコントラスト */
 contrast(65%)
 
-contrast(1)     /* 効果なし */
+contrast()     /* 効果なし */
+contrast(1)
 contrast(100%)
 
-contrast(2)  /* 2 倍のコントラスト */
+contrast(2)    /* 2 倍のコントラスト */
 contrast(200%)
 ```
 
-### 形式文法
+## 形式文法
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## 例
 
@@ -75,7 +75,7 @@ contrast(200%)
 
 ```css
 .container {
-  background: url(image.jpg) no-repeat center / contain #339;
+  background: url("unity_for_the_people.jpg") no-repeat center / contain #333399;
 }
 p {
   backdrop-filter: contrast(0.5);
@@ -92,13 +92,13 @@ code {
 }
 p {
   padding: 0.5rem;
-  color: #ffffff;
+  color: white;
   font-family: sans-serif;
 }
 ```
 
 ```html-nolint hidden
-<div class="container" style="background-image: url(unity_for_the_people.jpg);">
+<div class="container">
   <p>
     テキストと背景色のコントラストが十分にあることを常に確認してください。テキストが背景画像の上に表示される可能性がある場合は、 <code>backdrop-filter</code> を指定してください。 <code>contrast()</code> フィルターで背景色のコントラストを低減すると、可読性は向上しますが、アクセシビリティを保証するものではありません。
   </p>
@@ -148,34 +148,37 @@ p {
 
 SVG の {{SVGElement("filter")}} 要素を使用して、カスタムフィルター効果を定義し、それを [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) で参照することができます。 `<filter>` の {{SVGElement("feComponentTransfer")}} プリミティブは、ピクセルレベルでの色変換を可能にします。 次のものが指定されたとします。
 
-```svg
+```html live-sample___svg_filter
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  id="svg"
+  viewBox="0 0 240 151"
+  height="0"
+  width="0"
+  overflow="visible"
+  color-interpolation-filters="sRGB">
   <filter id="contrast">
     <feComponentTransfer>
-      <feFuncR type="linear" slope="2" intercept="-0.5"/>
-      <feFuncG type="linear" slope="2" intercept="-0.5"/>
-      <feFuncB type="linear" slope="2" intercept="-0.5"/>
+      <feFuncR type="linear" slope="2" intercept="-0.5" />
+      <feFuncG type="linear" slope="2" intercept="-0.5" />
+      <feFuncB type="linear" slope="2" intercept="-0.5" />
     </feComponentTransfer>
   </filter>
-```
-
-```css hidden
-.svgFilterLive {
-  filter: url(#contrast2);
-}
+</svg>
 ```
 
 これらの値は同じ結果を生み出します。
 
 ```css
 filter: contrast(200%);
-filter: url(#contrast); /* 埋め込み SVG による */
-filter: url(folder/fileName.svg#contrast); /* 外部 SVG フィルター定義 */
+filter: url("#contrast"); /* 埋め込み SVG による */
+filter: url("folder/fileName.svg#contrast"); /* 外部 SVG フィルター定義 */
 ```
 
 この例では、 3 つの画像を表示させています。 1 つ目は、 `contrast()` フィルター関数を適用した画像、 2 つ目は、等価な `url()` フィルターを適用した画像、そして比較用に元の画像です。
 
-```html hidden
-<table cellpadding="5">
+```html hidden live-sample___svg_filter
+<table>
   <thead>
     <tr>
       <th><code>contrast()</code></th>
@@ -187,31 +190,15 @@ filter: url(folder/fileName.svg#contrast); /* 外部 SVG フィルター定義 *
     <tr>
       <td>
         <img
-          style="filter: contrast(200%)"
+          class="css-filter"
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
           alt="Pride flag" />
       </td>
       <td>
         <img
-          class="svgFilterLive"
+          class="svg-filter"
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
           alt="Pride flag" />
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          id="svg"
-          viewBox="0 0 240 151"
-          height="0"
-          width="0"
-          style="overflow: visible"
-          color-interpolation-filters="sRGB">
-          <filter id="contrast2">
-            <feComponentTransfer>
-              <feFuncR type="linear" slope="2" intercept="-0.5" />
-              <feFuncG type="linear" slope="2" intercept="-0.5" />
-              <feFuncB type="linear" slope="2" intercept="-0.5" />
-            </feComponentTransfer>
-          </filter>
-        </svg>
       </td>
       <td>
         <img
@@ -223,7 +210,24 @@ filter: url(folder/fileName.svg#contrast); /* 外部 SVG フィルター定義 *
 </table>
 ```
 
-{{EmbedLiveSample('With_url()_and_the_SVG_contrast_filter','100%','280')}}
+```css hidden live-sample___svg_filter
+.css-filter {
+  filter: contrast(200%);
+}
+.svg-filter {
+  filter: url("#contrast");
+}
+
+th,
+td {
+  padding: 5px;
+}
+svg:not(:root) {
+  display: none;
+}
+```
+
+{{EmbedLiveSample('svg_filter','100%','280')}}
 
 ## 仕様書
 
@@ -236,7 +240,7 @@ filter: url(folder/fileName.svg#contrast); /* 外部 SVG フィルター定義 *
 ## 関連情報
 
 - [CSS フィルター効果](/ja/docs/Web/CSS/Guides/Filter_effects)モジュール
-- その他の {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティの値で使用できる {{cssxref("&lt;filter-function&gt;")}} 関数には、次のものがあります。
+- その他の {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティの値で使用できる {{cssxref("filter-function")}} 関数には、次のものがあります。
   - {{cssxref("filter-function/blur", "blur()")}}
   - {{cssxref("filter-function/brightness", "brightness()")}}
   - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}

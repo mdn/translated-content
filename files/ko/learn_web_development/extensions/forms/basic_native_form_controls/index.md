@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms/HTML5_input_types", "Learn_web_development/Extensions/Forms")}}
 
 [이전 글](/ko/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)에서는 기능적인 웹 폼 예시를 마크업하며, 일부 폼 컨트롤과 공통 구조 요소를 소개하고 접근성 모범 사례에 중점을 두었습니다. 다음에는 폼 컨트롤 또는 위젯의 기능을 자세히 살펴보고, 다양한 유형의 데이터를 수집하기 위한 모든 다른 옵션을 연구할 것입니다. 이 글에서는 웹 초기부터 모든 브라우저에서 사용 가능한 원래의 폼 컨트롤 세트를 살펴볼 것입니다.
 
@@ -86,7 +86,7 @@ l10n:
 
 이것은 단순히 사용자 인터페이스 기능일 뿐입니다. 양식을 안전하게 제출하지 않으면 데이터는 일반 텍스트로 전송되므로 보안에 좋지 않습니다. 악의적인 당사자가 데이터를 가로채어 비밀번호, 신용카드 정보 또는 제출한 기타 내용을 훔칠 수 있습니다. 이로부터 사용자를 보호하는 가장 좋은 방법은 보안 연결(즉, `https://` 주소에 위치한)을 통해 양식과 관련된 모든 페이지를 호스팅하는 것입니다. 그러면 데이터가 전송되기 전에 암호화됩니다.
 
-브라우저는 안전하지 않은 연결을 통해 양식 데이터를 전송하는 것의 보안 문제를 인식하며, 사용자가 안전하지 않은 양식을 사용하지 않도록 경고합니다. Firefox에서 구현하는 내용에 대한 자세한 내용은 [Insecure passwords](/ko/docs/Web/Security/Insecure_passwords)를 참조하세요.
+브라우저는 안전하지 않은 연결을 통해 양식 데이터를 전송하는 것의 보안 문제를 인식하며, 사용자가 안전하지 않은 양식을 사용하지 않도록 경고합니다. Firefox에서 구현하는 내용에 대한 자세한 내용은 [Insecure passwords](/ko/docs/Web/Security/Authentication/Passwords)를 참조하세요.
 
 ### 숨겨진 컨텐츠
 
@@ -200,7 +200,7 @@ http://foo.com?pos.x=123&pos.y=456
 
 이 글은 모든 브라우저에서 잘 지원되는 HTML 초기 시절에 도입된 원래의 입력 유형들을 다루었습니다. 다음 섹션에서는 `type` 속성의 더 현대적인 값들을 살펴볼 것입니다.
 
-{{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms/HTML5_input_types", "Learn_web_development/Extensions/Forms")}}
 
 ### 고급 주제
 

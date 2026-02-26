@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/Multimedia", "Learn/Performance/javascript_performance", "Learn/Performance")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Multimedia", "Learn/Performance/javascript_performance", "Learn_web_development/Extensions/Performance")}}
 
 이전 섹션에서 살펴본 것처럼 미디어, 즉 이미지 및 비디오는 평균 웹사이트 다운로드 바이트의 70%를 차지합니다. 이미지를 최적화하는 방법은 이미 살펴봤습니다. 이 기사는 웹 성능 향상을 위한 동영상 최적화에 대해 살펴보겠습니다.
 
@@ -128,4 +128,4 @@ preload 속성에는 `auto`|`metadata`|`none`라는 3개의 가능한 옵션이 
 
 비디오를 최적화하는 것은 웹 성능을 상당히 개선할 수 있는 잠재력을 가지고 있습니다. 비디오 파일들은 상대적으로 다른 웹사이트 파일에 비해 용량이 커서 항상 주의가 필요합니다. 이 기사는 파일 크기를 줄이고, (HTML) 다운로드 설정 및 스트리밍을 통해서 어떻게 웹사이트 비디오를 최적화할 수 있는지 설명합니다.
 
-{{PreviousMenuNext("Learn/Performance/Multimedia", "Learn/Performance/javascript_performance", "Learn/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Multimedia", "Learn/Performance/javascript_performance", "Learn_web_development/Extensions/Performance")}}

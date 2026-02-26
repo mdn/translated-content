@@ -2,7 +2,7 @@
 title: Alignment container
 slug: Glossary/Alignment_Container
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Le **bloc d'alignement** est le rectangle avec lequel le {{Glossary("alignment subject", "sujet d'alignement")}} est aligné avec. Cela est défini par le mode de disposition&nbsp;; généralement, le bloc d'alignement contient le sujet d'alignement et il adopte le mode d'ecriture de la boîte qui établit le bloc conteneur.

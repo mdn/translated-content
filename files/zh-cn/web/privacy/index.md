@@ -77,13 +77,13 @@ l10n:
 
 ### 默认使用 HTTPS
 
-[传输层安全性（TLS）](/zh-CN/docs/Web/Security/Transport_Layer_Security)通过在网络传输过程中加密数据提供安全性和隐私保护，它是 [HTTPS](/zh-CN/docs/Glossary/HTTPS) 协议背后的技术。TLS 对隐私有益，因为它可以阻止第三方截取传输的数据并恶意使用，例如进行追踪。
+[传输层安全性（TLS）](/zh-CN/docs/Web/Security/Defenses/Transport_Layer_Security)通过在网络传输过程中加密数据提供安全性和隐私保护，它是 [HTTPS](/zh-CN/docs/Glossary/HTTPS) 协议背后的技术。TLS 对隐私有益，因为它可以阻止第三方截取传输的数据并恶意使用，例如进行追踪。
 
 所有浏览器都在朝着默认要求使用 HTTPS 的方向发展；这已经几乎成为现实，因为在没有该协议的情况下，无法做很多事情。
 
 相关主题如下：
 
-- [证书透明度](/zh-CN/docs/Web/Security/Certificate_Transparency)
+- [证书透明度](/zh-CN/docs/Web/Security/Defenses/Certificate_Transparency)
   - : 一种开放标准，用于监控和审核证书，创建一个公共日志数据库，用于帮助识别不正确或恶意的证书。
 - [HTTP 严格传输安全（HSTS）](/zh-CN/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)
   - : HSTS 由服务器使用，允许网站告知客户端它们只能使用 HTTPS 与服务器通信，由此帮助它们防止协议降级和 cookie 劫持攻击。
@@ -92,7 +92,7 @@ l10n:
 
 ### “强大特性”的选用
 
-所谓的“强大”Web API 特性，允许使用仅限[安全环境](/zh-CN/docs/Web/Security/Secure_Contexts)的潜在敏感数据和操作，基本上意味着仅限 HTTPS。此外，这些网页功能被用户权限系统所限制。用户必须明确选择加入，才能使用诸如允许通知、访问地理位置数据、将浏览器切换到全屏模式、访问来自摄像头的媒体流、使用 Web 支付等功能。
+所谓的“强大”Web API 特性，允许使用仅限[安全环境](/zh-CN/docs/Web/Security/Defenses/Secure_Contexts)的潜在敏感数据和操作，基本上意味着仅限 HTTPS。此外，这些网页功能被用户权限系统所限制。用户必须明确选择加入，才能使用诸如允许通知、访问地理位置数据、将浏览器切换到全屏模式、访问来自摄像头的媒体流、使用 Web 支付等功能。
 
 ### 防追踪技术
 
@@ -171,7 +171,7 @@ Web 开发者可以采取多种措施来提高用户的隐私保护。以下部�
 
 第三方资源是现代网页开发中不可或缺的一部分，它们提供了很多强大的功能。然而，任何你允许出现在网站上的第三方资源，可能拥有与自己资源相同的权限；这取决于它是如何被包含在你的网站中的：
 
-- 通过 `<iframe>` 嵌入在你网站中的第三方内容内运行的 JavaScript 被[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)隔离，这意味着它无法访问顶层浏览上下文中的其他脚本和数据。
+- 通过 `<iframe>` 嵌入在你网站中的第三方内容内运行的 JavaScript 被[同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)隔离，这意味着它无法访问顶层浏览上下文中的其他脚本和数据。
 - 然而，通过 {{htmlelement("script")}} 元素直接包含在页面中的第三方脚本*会*访问你网站上的其他脚本和数据，无论它是托管在你的网站上还是其他网站。这将实际上变成第一方代码。通过这种方式包含的恶意脚本可能会偷偷窃取用户的数据，例如将数据发送到第三方服务器。
 
 审查你网站上使用的所有第三方资源非常重要。确保你了解它们收集了哪些数据，发出了哪些请求，以及这些请求的目标是谁，它们的隐私政策是什么。如果你使用的第三方脚本违反了你的隐私政策，那么你精心设计的隐私政策将变得毫无意义。

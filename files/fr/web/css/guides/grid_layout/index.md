@@ -84,46 +84,46 @@ Dans l'exemple qui suit, on montre comment utiliser une grille avec trois pistes
 
 ### Propriétés CSS
 
-- {{cssxref("grid-template-columns")}}
-- {{cssxref("grid-template-rows")}}
-- {{cssxref("grid-template-areas")}}
-- {{cssxref("grid-template")}}
-- {{cssxref("grid-auto-columns")}}
-- {{cssxref("grid-auto-rows")}}
-- {{cssxref("grid-auto-flow")}}
-- {{cssxref("grid")}}
-- {{cssxref("grid-row-start")}}
-- {{cssxref("grid-column-start")}}
-- {{cssxref("grid-row-end")}}
-- {{cssxref("grid-column-end")}}
-- {{cssxref("grid-row")}}
-- {{cssxref("grid-column")}}
-- {{cssxref("grid-area")}}
-- {{cssxref("row-gap")}}
-- {{cssxref("column-gap")}}
-- {{cssxref("gap")}}
+- {{CSSxRef("grid-template-columns")}}
+- {{CSSxRef("grid-template-rows")}}
+- {{CSSxRef("grid-template-areas")}}
+- {{CSSxRef("grid-template")}}
+- {{CSSxRef("grid-auto-columns")}}
+- {{CSSxRef("grid-auto-rows")}}
+- {{CSSxRef("grid-auto-flow")}}
+- {{CSSxRef("grid")}}
+- {{CSSxRef("grid-row-start")}}
+- {{CSSxRef("grid-column-start")}}
+- {{CSSxRef("grid-row-end")}}
+- {{CSSxRef("grid-column-end")}}
+- {{CSSxRef("grid-row")}}
+- {{CSSxRef("grid-column")}}
+- {{CSSxRef("grid-area")}}
+- {{CSSxRef("row-gap")}}
+- {{CSSxRef("column-gap")}}
+- {{CSSxRef("gap")}}
 
 ### Fonctions CSS
 
-- {{cssxref("repeat", "repeat()")}}
-- {{cssxref("minmax", "minmax()")}}
-- {{cssxref("fit-content", "fit-content()")}}
+- {{CSSxRef("repeat", "repeat()")}}
+- {{CSSxRef("minmax", "minmax()")}}
+- {{CSSxRef("fit-content", "fit-content()")}}
 
 ### Types de donnée CSS
 
-{{cssxref("&lt;flex&gt;")}}
+{{CSSxRef("&lt;flex&gt;")}}
 
 ### Termes définis dans le glossaire
 
-- [Grille](/fr/docs/Glossary/Grid)
-- [Lignes](/fr/docs/Glossaire/Grid_Lines)
-- [Pistes](/fr/docs/Glossaire/Grid_Tracks)
-- [Cellules](/fr/docs/Glossaire/Grid_Cell)
-- [Zones](/fr/docs/Glossaire/Grid_Areas)
-- [Gouttières](/fr/docs/Glossary/Gutters)
-- [Axe](/fr/docs/Glossaire/Grid_Axis)
-- [Ligne horizontale](/fr/docs/Glossaire/Grid_Rows)
-- [Colonnes](/fr/docs/Glossaire/Grid_Column)
+- {{Glossary("Grid", "Grille")}}
+- {{Glossary("Grid_Lines", "Lignes")}}
+- {{Glossary("Grid_Tracks", "Pistes")}}
+- {{Glossary("Grid_Cell", "Cellules")}}
+- {{Glossary("Grid_Areas", "Zones")}}
+- {{Glossary("Gutters", "Gouttières")}}
+- {{Glossary("Grid_Axis", "Axe")}}
+- {{Glossary("Grid_Row", "Ligne horizontale")}}
+- {{Glossary("Grid_Column", "Colonnes")}}
 
 ## Guides
 

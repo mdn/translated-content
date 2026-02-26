@@ -1,20 +1,19 @@
 ---
-title: <meter>
+title: "<meter> : l'élément de mesure"
 slug: Web/HTML/Reference/Elements/meter
-original_slug: Web/HTML/Element/meter
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<meter>`** représente une valeur scalaire dans un intervalle donné ou une valeur fractionnaire.
 
-L'élément HTML **`<meter>`** représente une valeur scalaire dans un intervalle donné ou une valeur fractionnaire.
-
-{{InteractiveExample("HTML Demo: &lt;meter&gt;", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;meter&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
-<label for="fuel">Fuel level:</label>
+<label for="fuel">Niveau de carburant&nbsp;:</label>
 
 <meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="50">
-  at 50/100
+  à 50/100
 </meter>
 ```
 
@@ -27,32 +26,24 @@ label {
 
 ## Attributs
 
-Comme pour les autres éléments HTML, cet élément inclut également [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
-- `form`
-  - : Cet attribut contient l'attribut **`id`** de l'élément {{HTMLElement("form")}} auquel celui-ci est rattaché. Par défaut, il est à l'élément {{HTMLElement("form")}} qui est son plus proche ancêtre.
-- `high`
-  - : Cet attribut représente la valeur minimale à partir de laquelle la mesure est considérée comme haute. Si cet attribut est défini, il doit s'agir d'un nombre à virgule compris entre les valeurs des attributs **`min`** et **`max`**. Si l'attribut **`low`** est aussi défini, il doit être plus grand que celui-ci.
-- `low`
-  - : Cet attribut représente la valeur maximale à partir de laquelle la mesure est considérée comme basse. Si cet attribut est défini, il doit s'agir d'un nombre à virgule compris entre les valeurs des attributs **`min`** et **`max`**. Si l'attribut **`high`** est aussi défini, il doit être plus petit que celui-ci.
-- `max`
-  - : Cet attribut représente la valeur maximale que peut prendre la mesure. Il doit s'agir d'un nombre à virgule; s'il est invalide ou si l'attribut n'est pas défini, sa valeur par défaut est 1.0. Il doit être strictement plus grand que la valeur de l'attribut **`min`**.
-- `min`
-  - : Cet attribut représente la valeur minimale que peut prendre la mesure. Il doit s'agir d'un nombre à virgule; s'il est invalide ou si l'attribut n'est pas défini, sa valeur par défaut est 0.0. Il doit être strictement plus petit que la valeur de l'attribut **`max`**.
-- `optimum`
-  - : Cet attribut représente la valeur idéale pour la mesure. Si cet attribut est défini, il doit s'agir d'un nombre à virgule compris entre les valeurs des attributs **`min`** et **`max`**. Si la valeur de **`optimum`** est inférieure à **`low`**, s'il est défini, cela signifie que les valeurs les plus petites sont meilleures; si sa valeur est supérieure à **`high`**, s'il est défini, cela signifie que les valeurs les plus grandes sont meilleures; enfin, s'il est compris entre **`low`** et **`high`**, cela signifie que les extrêmes ne sont pas les meilleures grandeurs.
 - `value`
-  - : Cette attribut représente la valeur courante de la mesure. Cet attribut est obligatoire.
+  - : La valeur numérique courante. Elle doit être comprise entre les valeurs minimale et maximale (attributs `min` et `max`) si elles sont définies. Si elle n'est pas définie ou mal formée, la valeur est `0`. Si elle est définie mais n'est pas dans l'intervalle défini par les attributs `min` et `max`, la valeur est égale à l'extrémité la plus proche de l'intervalle.
 
     > [!NOTE]
-    > Il est recommandé aux auteurs de dupliquer les valeurs des attributs **`min`,** **`max`** et **`value`** dans le contenu de cet élément de façon à permettre aux navigateurs ne supportant pas l'élément {{ HTMLElement("meter") }} de transmettre ces informations aux utilisateurs. Par exemple :
-    >
-    > ```html
-    > Utilisation de l'espace de stockage:
-    > <meter value="6" max="8">6 blocs utilisés (sur un total de 8)</meter>
-    > ```
-    >
-    > Il n'y a pas de moyen sémantique de décrire l'unité de l'attribut **`value`**, néanmoins l'attribut global **`title`** peut être utilisé pour cela.
+    > À moins que l'attribut `value` soit compris entre `0` et `1` (inclus), les attributs `min` et `max` doivent définir l'intervalle de sorte que la valeur de l'attribut `value` soit incluse dedans.
+
+- [`min`](/fr/docs/Web/HTML/Reference/Attributes/min)
+  - : La borne numérique inférieure de l'intervalle mesuré. Elle doit être inférieure à la valeur maximale (attribut `max`), si elle est définie. Si elle n'est pas définie, la valeur minimale est `0`.
+- [`max`](/fr/docs/Web/HTML/Reference/Attributes/max)
+  - : La borne numérique supérieure de l'intervalle mesuré. Elle doit être supérieure à la valeur minimale (attribut `min`), si elle est définie. Si elle n'est pas définie, la valeur maximale est `1`.
+- `low`
+  - : La borne numérique supérieure de la partie basse de l'intervalle mesuré. Elle doit être supérieure à la valeur minimale (attribut `min`), et aussi inférieure à la valeur haute et à la valeur maximale (attributs `high` et `max` respectivement), si elles sont définies. Si elle n'est pas définie ou si elle est inférieure à la valeur minimale, la valeur de `low` est égale à la valeur minimale.
+- `high`
+  - : La borne numérique inférieure de la partie haute de l'intervalle mesuré. Elle doit être inférieure à la valeur maximale (attribut `max`), et aussi supérieure à la valeur basse et à la valeur minimale (attributs `low` et `min` respectivement), si elles sont définies. Si elle n'est pas définie ou si elle est supérieure à la valeur maximale, la valeur de `high` est égale à la valeur maximale.
+- `optimum`
+  - : Cet attribut indique la valeur numérique optimale. Elle doit être comprise dans l'intervalle (défini par les attributs `min` et `max`). Lorsqu'il est utilisé avec les attributs `low` et `high`, il indique quelle partie de l'intervalle est considérée comme préférable. Par exemple, s'il est compris entre les attributs `min` et `low`, alors la partie basse de l'intervalle est considérée comme préférable. Le navigateur peut colorer la barre du composant différemment selon que la valeur est inférieure ou égale à la valeur optimale.
 
 ## Exemples
 
@@ -61,32 +52,29 @@ Comme pour les autres éléments HTML, cet élément inclut également [les attr
 #### HTML
 
 ```html
-<p>
-  Chauffez le four à <meter min="100" max="250" value="180">180 degrés</meter>.
-</p>
+<p>Niveau de batterie&nbsp;: <meter min="0" max="100" value="75">75%</meter></p>
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Exemple_simple", 300, 60)}}
+{{EmbedLiveSample("Exemple simple", 300, 60)}}
 
-### Utilisation de `high` et `low`
+### Exemple de plage haute et basse
 
-On remarquera ici que l'attribut `min` est absent (ce qui est autorisé), la valeur minimale sera alors 0.
+On remarquera ici que l'attribut [`min`](#min) est absent (ce qui est autorisé), la valeur minimale sera alors `0`.
 
 #### HTML
 
 ```html
 <p>
-  Il a eu
-  <meter low="69" high="80" max="100" value="84">B</meter>
-  à son examen.
+  L'étudiante a eu un score de&nbsp;:
+  <meter low="69" high="80" max="100" value="84">84%</meter>
 </p>
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Utilisation_de_high_et_low", 300, 60)}}
+{{EmbedLiveSample("Exemple de plage haute et basse", 300, 60)}}
 
 ## Résumé technique
 
@@ -94,30 +82,25 @@ On remarquera ici que l'attribut `min` est absent (ce qui est autorisé), la val
   <tbody>
     <tr>
       <th scope="row">
-        <dfn
-          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-            >Catégories de contenu</a
-          ></dfn
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
+          >Catégories de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
-          >contenu tangible</a
-        >, contenu étiquetable
+        >, contenu étiquetable, contenu tangible.
       </td>
     </tr>
     <tr>
-      <th scope="row"><dfn>Contenu autorisé</dfn></th>
+      <th scope="row">Contenu autorisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >Contenu phrasé</a
         >
         ne possédant pas d'élément <code>&#x3C;meter></code> parmi ses
@@ -125,26 +108,35 @@ On remarquera ici que l'attribut `min` est absent (ce qui est autorisé), la val
       </td>
     </tr>
     <tr>
-      <th scope="row"><dfn>Omission de balises</dfn></th>
+      <th scope="row">Omission de balises</th>
       <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
-      <th scope="row"><dfn>Parents autorisés</dfn></th>
+      <th scope="row">Parents autorisés</th>
       <td>
         Tout élément acceptant du
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
         >.
       </td>
     </tr>
     <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <code
+          ><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#rôles_structurels_avec_équivalents_html">meter</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
+      <td>Aucun <code>role</code> autorisé</td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLMeterElement")}}</td>
+      <td>{{DOMxRef("HTMLMeterElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -159,4 +151,6 @@ On remarquera ici que l'attribut `min` est absent (ce qui est autorisé), la val
 
 ## Voir aussi
 
-- {{HTMLElement("progress")}}
+- [Créer des contrôles de formulaire verticaux](/fr/docs/Web/CSS/Guides/Writing_modes/Vertical_controls)
+- L'élément HTML {{HTMLElement("progress")}}
+- Les pseudo-éléments non-standards {{CSSxRef("::-webkit-meter-bar")}}, {{CSSxRef("::-webkit-meter-inner-element")}}, {{CSSxRef("::-webkit-meter-even-less-good-value")}}, {{CSSxRef("::-webkit-meter-optimum-value")}}, {{CSSxRef("::-webkit-meter-suboptimum-value")}}

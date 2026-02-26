@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:link
 original_slug: Web/CSS/:link
 ---
 
-**`:link`** [CSS](/ko/docs/Web/CSS) [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 아직 방문하지 않은 요소를 나타냅니다. `href` 속성을 가진 {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}} 중 방문하지 않은 모든 요소를 선택합니다.
+**`:link`** [CSS](/ko/docs/Web/CSS) [의사 클래스](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes)는 아직 방문하지 않은 요소를 나타냅니다. `href` 속성을 가진 {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}} 중 방문하지 않은 모든 요소를 선택합니다.
 
 ```css
 /* 아직 방문하지 않은 <a> 요소를 선택 */

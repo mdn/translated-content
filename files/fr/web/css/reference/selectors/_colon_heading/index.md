@@ -1,9 +1,8 @@
 ---
 title: :heading
 slug: Web/CSS/Reference/Selectors/:heading
-original_slug: Web/CSS/:heading
 l10n:
-  sourceCommit: 1a1fe4efc4bfa6147f084aad12cf9908130f76ab
+  sourceCommit: 56d7fc5f9d1b010fc55d0384facd2b1477baee0c
 ---
 
 {{SeeCompatTable}}
@@ -57,4 +56,4 @@ La pseudo-classe `:heading` applique la `color` à tous les titres du document.
 
 ## Voir aussi
 
-- La fonction {{CSSXRef(":heading_function", ":heading()")}}
+- La fonction {{CSSxRef(":heading_function", ":heading()")}}

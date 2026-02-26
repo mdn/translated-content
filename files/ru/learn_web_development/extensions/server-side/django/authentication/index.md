@@ -3,7 +3,7 @@ title: "Руководство Django Часть 8: Аутентификация
 slug: Learn_web_development/Extensions/Server-side/Django/Authentication
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django")}}
 
 В данном руководстве мы продемонстрируем вам систему входа пользователя на ваш сайт используя его собственный аккаунт. Кроме того, мы покажем как реализовать контроль того, что может видеть и делать пользователь, в зависимости от того, залогинен он, или нет, а также имеет ли он соответствующий уровень прав доступа _(permissions)_. Для того чтобы продемонстрировать все это, мы расширим [LocalLibrary](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), добавив страницы для входа/выхода, а также страницы просмотра/редактирования книг, специфические для пользователя и персонала.
 
@@ -690,4 +690,4 @@ class MyView(PermissionRequiredMixin, View):
 - [Using the (default) Django authentication system](https://docs.djangoproject.com/en/1.10/topics/auth/default//) (Django docs)
 - [Introduction to class-based views > Decorating class-based views](https://docs.djangoproject.com/en/1.10/topics/class-based-views/intro/#decorating-class-based-views) (Django docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django")}}

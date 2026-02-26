@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Return_values
 original_slug: Learn/JavaScript/Building_blocks/Return_values
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}
 
 함수에 대해 우리가 이야기해야 할 마지막 한 가지 필수적인 개념이 있습니다 — 반환 값(return value)입니다. 몇몇 함수들은 중요한 값을 반환(return)하지 않지만, 다른 함수들은 반환합니다. 그 값들이 무엇인지, 그것들을 어떻게 사용하는지, 그리고 어떻게 함수가 유용한 값을 반환하게 만드는지를 이해하는 것은 중요합니다. 우리는 이 모든 것을 아래에서 다룰 것입니다.
 
@@ -197,4 +197,4 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 - [함수 고급](/ko/docs/Web/JavaScript/Reference/Functions) — 더욱 고급의 함수에 관련된 정보를 다루는 자세한 가이드
 - [JavaScript에서의 콜백(callback) 함수](https://www.impressivewebs.com/callback-functions-javascript/) — 일반적인 JavaScript 패턴은 함수를 다른 함수 내부에 _인자(argument)로서_ 전달하는 것입니다. 이것은 그리고서 첫번째 함수 내부에서 호출됩니다. 이것은 이 코스의 범위를 조금 넘어서지만, 머지않아 공부할 가치는 있습니다.
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}

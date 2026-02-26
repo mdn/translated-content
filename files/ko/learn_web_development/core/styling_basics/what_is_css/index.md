@@ -7,7 +7,7 @@ l10n:
 ---
 
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("conflicting/Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "conflicting/Learn_web_development/Core/Styling_basics")}}
 
 CSS 기본 사항, CSS 의 목적 및 간단한 스타일 시트 작성 방법을 배웠습니다. 이 강의에서는 브라우저가 CSS 와 HTML 을 가져와서 웹 페이지로 만드는 방법을 살펴 봅니다.
 
@@ -173,4 +173,4 @@ p {
 
 이 과정을 거의 끝냈습니다. 할 일이 하나 더 있습니다. [전기 페이지 스타일링 하기](/ko/docs/Learn_web_development/Core/Styling_basics/Styling_a_bio_page) 에서는 예제의 스타일을 변경하여 작업의 일부 CSS를 테스트 합니다.
 
-{{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("conflicting/Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "conflicting/Learn_web_development/Core/Styling_basics")}}

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 47ed48a36b456f8ea9ab6aaa5969c55d2912edcb
 ---
 
-**`::highlight()`** CSS [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 스타일에 사용자 정의 하이라이트를 적용합니다.
+**`::highlight()`** CSS [의사 요소](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-elements)는 스타일에 사용자 정의 하이라이트를 적용합니다.
 
 사용자 정의 하이라이트는 {{domxref("Range")}} 객체의 집합이며 웹 페이지에 {{domxref("HighlightRegistry")}}를 사용하여 웹 페이지에 등록됩니다.
 

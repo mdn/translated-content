@@ -1,9 +1,8 @@
 ---
 title: translateZ()
 slug: Web/CSS/Reference/Values/transform-function/translateZ
-original_slug: Web/CSS/transform-function/translateZ
 l10n:
-  sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
 **`translateZ()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、三次元空間の z 軸に沿って、すなわち閲覧者に近づいたり遠ざかったりするように要素を移動させます。その結果は {{cssxref("&lt;transform-function&gt;")}} データ型となります。
@@ -66,32 +65,32 @@ transform: translateZ(-3ch);
 }
 
 .front {
-  background: rgba(90, 90, 90, 0.7);
+  background: rgb(90 90 90 / 0.7);
   transform: translateZ(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
+  background: rgb(0 210 0 / 0.7);
   transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210, 0, 0, 0.7);
+  background: rgb(210 0 0 / 0.7);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0, 0, 210, 0.7);
+  background: rgb(0 0 210 / 0.7);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
+  background: rgb(210 210 0 / 0.7);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
+  background: rgb(210 0 210 / 0.7);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
@@ -117,7 +116,7 @@ translateZ(tz)
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col"><a href="/ja/docs/Web/CSS/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
+      <th scope="col"><a href="/ja/docs/Web/CSS/Reference/Values/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
       <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">同次座標系</a> (<a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a>)</th>
       <th scope="col">直交座標系 (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^3</a>)</th>
       <th scope="col">同次座標系 (<a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a>)</th>
@@ -132,29 +131,17 @@ translateZ(tz)
         この変換は ℝ^3 の線形変換ではなく、直交座標系の行列では表現できません。
       </td>
       <td>
-        <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn> </mtd><mtd><mi>t</mi> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mi>t</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cccc} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & t \\ 0 & 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
     </tr>
   </tbody>
 </table>
+
+## 形式文法
+
+{{CSSSyntax}}
 
 ## 例
 
@@ -163,8 +150,8 @@ translateZ(tz)
 ### HTML
 
 ```html
-<div>Static</div>
-<div class="moved">Moved</div>
+<div>静的</div>
+<div class="moved">移動</div>
 ```
 
 ### CSS
@@ -192,7 +179,7 @@ div {
 なお、 `perspective()` の値が `translateZ()` の値よりも小さい場合、例えば `transform: perspective(200px) translateZ(300px);` の場合、変換された要素はユーザーのビューポートよりも手前にあるため、表示されません。 perspective と translateZ の値の差が小さければ小さいほど、ユーザーは要素に近づき、変換された要素は大きく見えます。
 
 > [!NOTE]
-> 変換の合成は交換可能ではないので、異なる関数を書く順番は重要です。具体的な例として、一般的には `perspective()` を `translateZ()` の前に配置します。
+> 座標変換の合成は交換可能ではないので、異なる関数を書く順番は重要です。具体的な例として、一般的には `perspective()` を `translateZ()` の前に配置します。
 
 ### 結果
 

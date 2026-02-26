@@ -3,7 +3,7 @@ title: CSS スクロール駆動アニメーション
 short-title: スクロール駆動アニメーション
 slug: Web/CSS/Guides/Scroll-driven_animations
 l10n:
-  sourceCommit: e9d014225ac5c28294a68d3743a3ef80794912b9
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **CSS スクロール駆動アニメーション**モジュールは、[CSS アニメーションモジュール](/ja/docs/Web/CSS/Guides/Animations)と[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) の上に構築する機能を提供します。これは、デフォルトの時間ベースの文書タイムラインではなく、スクロールベースのタイムラインに沿ってプロパティ値をアニメーションできるようにします。つまり、時間の経過だけでなく、要素自体、そのスクロールコンテナー、またはそのルート要素をスクロールすることで要素をアニメーションできるということです。
@@ -95,11 +95,7 @@ div::after {
       content: "このブラウザーはスクロール駆動アニメーションに対応していません。";
       background-color: wheat;
       display: block;
-      width: 100%;
       text-align: center;
-    }
-    body > * {
-      display: none;
     }
   }
 }
@@ -127,13 +123,13 @@ div::after {
 
 ### データ型と値
 
-- [`<axis>`](/ja/docs/Web/CSS/Reference/Values/axis)
-- [`<timeline-range-name>`](/ja/docs/Web/CSS/Reference/Properties/animation-range#timeline-range-name)
+- {{cssxref("axis")}}
+- {{cssxref("timeline-range-name")}}
 
 ### 関数
 
-- [`scroll()`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline/scroll)
-- [`view()`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline/view)
+- {{cssxref("animation-timeline/scroll", "scroll()")}}
+- {{cssxref("animation-timeline/view", "view()")}}
 
 ### インターフェイス
 
@@ -147,10 +143,10 @@ div::after {
 
 ## 関連概念
 
-- [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations) module
+- [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)モジュール
   - {{cssxref("animation-timeline")}}
   - {{cssxref("@keyframes")}}
-- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow) module
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
   - {{glossary("Scroll container")}}
   - [スクロールポート](/ja/docs/Glossary/Scroll_container#scrollport)
 - [ウェブアニメーション](/ja/docs/Web/API/Web_Animations_API) API

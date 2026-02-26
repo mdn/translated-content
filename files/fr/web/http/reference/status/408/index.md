@@ -1,23 +1,23 @@
 ---
 title: 408 Request Timeout
 slug: Web/HTTP/Reference/Status/408
-original_slug: Web/HTTP/Status/408
 l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-Le code de statut de réponse HTTP **`408 Request Timeout`** est [une erreur côté client](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client) qui indique que le serveur souhaiterait clôturer cette connexion inutilisée. Un `408` est envoyé sur une connexion inactive par certains serveurs, _même sans aucune demande précédente par le client_.
+Le code de statut de [réponse d'erreur client](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client) HTTP **`408 Request Timeout`** indique que le serveur souhaite fermer cette connexion inutilisée.
+Un code `408` est envoyé sur une connexion inactive par certains serveurs, _même sans requête préalable du client_.
 
-Un serveur doit envoyer l'en-tête [`Connection: close`](/fr/docs/Web/HTTP/Reference/Headers/Connection) en réponse, puisque `408` implique que le serveur a décidé de fermer la connexion plutôt que de continuer à attendre.
+Un serveur doit envoyer l'en-tête {{HTTPHeader("Connection", "Connection: close")}} en réponse, puisque `408` implique que le serveur a décidé de fermer la connexion plutôt que de continuer à attendre.
 
-Cette réponse est de plus en plus utilisée depuis que certains navigateurs, comme Chrome, Firefox 27+ ou IE9, utilisent le mécanisme HTTP de pré-connexion qui permet d'accélérer la navigation.
+Cette réponse est de plus en plus utilisée depuis que certains navigateurs, comme Chrome et Firefox, utilisent le mécanisme HTTP de pré-connexion pour accélérer la navigation.
 
 > [!NOTE]
 > Certains serveurs ferment purement et simplement la connexion, sans renvoyer ce message.
 
 ## Statut
 
-```
+```http
 408 Request Timeout
 ```
 
@@ -25,11 +25,11 @@ Cette réponse est de plus en plus utilisée depuis que certains navigateurs, co
 
 ### Délai d'expiration dans la soumission d'un formulaire
 
-L'exemple suivant montre ce qu'un client peut envoyer lorsqu'un élément `<input type="file">` utilise une image sur la soumission de formulaire avec `method="post"`&nbsp;:
+L'exemple suivant montre ce qu'un client peut envoyer lorsqu'un élément [`<input type="file">`](/fr/docs/Web/HTML/Reference/Elements/input/file) utilise une image sur la soumission de formulaire avec `method="post"`&nbsp;:
 
 ```http
 POST /upload HTTP/1.1
-Host: example.com
+Host: exemple.com
 Content-Type: multipart/form-data; boundary=----Boundary1234
 Content-Length: 4012345
 
@@ -54,7 +54,7 @@ Content-Type: text/html
 </head>
 <body>
     <h1>408 Request Timeout</h1>
-    <p>Failed to process request in time. Please try again.</p>
+    <p>Impossible de traiter la requête dans le délai imparti. Veuillez réessayer.</p>
 </body>
 </html>
 ```
@@ -63,12 +63,8 @@ Content-Type: text/html
 
 {{Specifications}}
 
-## Compatibilité des navigateurs
-
-{{Compat}}
-
 ## Voir aussi
 
-- Les [codes de réponse HTTP](/fr/docs/Web/HTTP/Reference/Status)
-- [`Connection`](/fr/docs/Web/HTTP/Reference/Headers/Connection)
-- [`X-DNS-Prefetch-Control`](/fr/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control)
+- [Les codes de statut de réponse HTTP](/fr/docs/Web/HTTP/Reference/Status)
+- L'en-tête HTTP {{HTTPHeader("Connection")}}
+- L'en-tête HTTP {{HTTPHeader("X-DNS-Prefetch-Control")}}

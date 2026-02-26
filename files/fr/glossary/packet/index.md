@@ -1,9 +1,9 @@
 ---
 title: Paquet
 slug: Glossary/Packet
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-
-{{GlossarySidebar}}
 
 Un paquet, ou paquet réseau, est un bloc de données formaté envoyé sur un réseau. Les principaux composants d'un paquet réseau sont les données utilisateur et les informations de contrôle. Les données utilisateur sont appelées _payload ou charge utile_. Les informations de contrôle sont les informations de livraison du payload. Il se compose d'adresses réseau pour la source et la destination, des informations de séquencement et des codes de détection d'erreur et se trouve généralement dans les en-têtes et le pied de page des paquets.
 
@@ -35,6 +35,6 @@ Le payload correspond aux données transportées pour le compte d'une applicatio
 
 ## Références utilisées
 
-- <https://en.wikipedia.org/wiki/Network_packet>
-- [https://en.m.wikipedia.org/wiki/Hop\_(networking)](<https://en.wikipedia.org/wiki/Hop_(networking)>)
-- <https://www.techradar.com/news/computing/how-error-detection-and-correction-works-1080736>
+- [Paquet réseau](<https://fr.wikipedia.org/wiki/Paquet_(r%C3%A9seau)>)
+- [Saut (réseau) <sup>(angl.)</sup>](<https://en.wikipedia.org/wiki/Hop_(networking)>)
+- [Fonctionnement de la détection et de la correction d'erreurs <sup>(angl.)</sup>](https://www.techradar.com/news/computing/how-error-detection-and-correction-works-1080736)

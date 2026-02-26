@@ -60,7 +60,7 @@ justify-content: space-evenly;
 }
 ```
 
-자동 바깥 여백과 길이가 적용된 이후에 정렬이 적용됩니다. 즉, [Flexbox layout](/ko/docs/Web/CSS/CSS_flexible_box_layout) 안에서 최소 하나의 플렉스 요소가 `0`이 아닌 {{cssxref("flex-grow")}} 값을 갖는다면, 더 이상 사용할 수 있는 공간이 없기 때문에 아무 효과가 없습니다.
+자동 바깥 여백과 길이가 적용된 이후에 정렬이 적용됩니다. 즉, [Flexbox layout](/ko/docs/Web/CSS/Guides/Flexible_box_layout) 안에서 최소 하나의 플렉스 요소가 `0`이 아닌 {{cssxref("flex-grow")}} 값을 갖는다면, 더 이상 사용할 수 있는 공간이 없기 때문에 아무 효과가 없습니다.
 
 ## 구문
 
@@ -214,7 +214,7 @@ justifyContent.addEventListener("change", (evt) => {
 
 ## 같이 보기
 
-- CSS Flexbox Guide: _[플렉스박스의 기본 개념](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS Flexbox Guide: _[플렉스박스의 기본 개념](/ko/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)_
 - CSS Flexbox Guide: _[플렉스 컨테이너에서 항목 정렬하기](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
 - CSS Grid Guide: _[CSS 그리드 레이아웃에서의 박스 정렬](/ko/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 - [CSS 박스 정렬](/ko/docs/Web/CSS/CSS_Box_Alignment)

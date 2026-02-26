@@ -3,7 +3,7 @@ title: Практика построения объектов
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 В предыдущих статьях мы рассмотрели всю существенную теорию объектов JavaScript и детали синтаксиса, давая вам прочную основу для начала. В этой статье мы погружаемся в практическое упражнение, давая вам больше практики в создании пользовательских объектов JavaScript, с весёлым и красочным результатом.
 
@@ -287,4 +287,4 @@ Ball.prototype.update = function () {
 - [2D breakout game using pure JavaScript](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) — a great beginner's tutorial showing how to build a 2D game.
 - [2D breakout game using Phaser](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser) — explains the basics of building a 2D game using a JavaScript game library.
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Performance/CSS
 original_slug: Learn/Performance/CSS
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/fonts", "Learn/Performance")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/HTML", "Learn/Performance/fonts", "Learn_web_development/Extensions/Performance")}}
 
 Peindre une page non stylisée, puis la repeindre une fois les styles analysés constituerait une mauvaise expérience pour l'utilisateur. C'est pourquoi les feuilles de style CSS bloquent le rendu, sauf si le navigateur sait que les feuilles de style CSS ne sont pas nécessaires. Le navigateur peut peindre la page une fois qu'il a téléchargé le CSS et construit le modèle objet CSS. Les navigateurs suivent un chemin de rendu spécifique : la peinture n'intervient qu'après la mise en page, qui intervient après la création de l'arbre de rendu, qui nécessite à son tour les arbres DOM et CSSOM. Pour optimiser la construction du CSSOM, il faut supprimer les styles inutiles, les minifier, les compresser et les mettre en cache, et répartir les CSS qui ne sont pas nécessaires au chargement de la page dans des fichiers supplémentaires afin de réduire le blocage du rendu CSS.
 
@@ -67,7 +67,7 @@ Optimiser les performances en CSS revient ainsi à améliorer deux étapes cruci
 
 Enfin, les outils de développement du navigateur sont à votre disposition pour vous aider à cibler les étapes chronophages qui ralentissent le rendu de vos pages et gagner encore en efficacité, au prix parfois de quelques compromis.
 
-{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/fonts", "Learn/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/HTML", "Learn/Performance/fonts", "Learn_web_development/Extensions/Performance")}}
 
 ## Voir aussi
 

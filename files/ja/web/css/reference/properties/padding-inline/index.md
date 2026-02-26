@@ -1,12 +1,11 @@
 ---
 title: padding-inline
 slug: Web/CSS/Reference/Properties/padding-inline
-original_slug: Web/CSS/padding-inline
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: f28f4c26a3d95e41d01a505af3388881abd6e49c
 ---
 
-**`padding-inline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、論理的なインライン方向の先頭と末尾のパディングを設定します。これは要素の書字方向やテキストの向きに応じて物理的なパディングに変換されます。
+**`padding-inline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、論理的なインライン方向の先頭と末尾のパディングを設定します。これは要素の書字方向やテキストの向きに応じて物理的なパディングに対応づけられます。
 
 {{InteractiveExample("CSS デモ: padding-inline")}}
 

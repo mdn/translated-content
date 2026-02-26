@@ -1,34 +1,49 @@
 ---
-title: HTMLFormElement.submit()
+title: "HTMLFormElement : méthode submit()"
+short-title: submit()
 slug: Web/API/HTMLFormElement/submit
+l10n:
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{APIRef("HTML DOM")}}
 
-La méthode **`HTMLFormElement.submit()`** soumet un {{HtmlElement("form")}} donné
+La méthode **`submit()`** de l'interface {{DOMxRef("HTMLFormElement")}} soumet l'élément HTML {{HTMLElement("form")}} fourni.
 
-Cette méthode est similaire, mais pas identique, à l'activation du script submit {{HtmlElement ("button")}}. Lors de l'appel direct de cette méthode, cependant:
+Cette méthode est similaire, mais pas identique, à l'activation du {{HTMLElement("button")}} de soumission d'un formulaire. Lorsqu'on appelle directement cette méthode, toutefois&nbsp;:
 
-- Aucun événement [`submit`](/fr/docs/Web/API/HTMLFormElement/submit_event) n'est déclenché. En particulier, le gestionnaire d'événement {{domxref("GlobalEventHandlers.onsubmit", "onsubmit")}} du formulaire n'est pas exécuté.
-- [Constraint validation](/fr/docs/Web/HTML/Guides/Constraint_validation) n'est pas déclenché .
+- Aucun évènement {{DOMxRef("HTMLFormElement/submit_event", "submit")}} n'est déclenché. En particulier, le gestionnaire d'évènements `onsubmit` du formulaire n'est pas exécuté.
+- La [validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation) n'est pas déclenchée.
 
-Si un contrôle de formulaire (tel qu'un submit bouton ) a un `name` ou un `id` de `submit`, cette méthode masquera la méthode d'envoi du formulaire.
+La méthode {{DOMxRef("HTMLFormElement.requestSubmit()")}} est équivalente à l'activation du {{HTMLElement("button")}} de soumission du formulaire et ne présente pas ces différences.
+
+Un contrôle de formulaire (par exemple un bouton de soumission) dont le `name` ou `id` est `submit` masquera la méthode `submit` du formulaire. Tenter d'appeler `myForm.submit();` provoque une erreur «&nbsp;submit is not a function&nbsp;» parce que, dans ce cas, `submit` désigne le contrôle de formulaire qui a pour `name` ou `id` la valeur `submit`.
+
+Un {{HTMLElement("input")}} avec l'attribut `type="submit"` ne sera pas soumis avec le formulaire lorsque l'on utilise **`HTMLFormElement.submit()`**, alors qu'il le serait lors d'une soumission via le formulaire HTML classique.
 
 ## Syntaxe
 
-```js
-HTMLFormElement.submit();
+```js-nolint
+submit()
 ```
 
-## Exemple
+### Paramètres
+
+Aucun.
+
+### Valeur de retour
+
+Aucun ({{JSxRef("undefined")}}).
+
+## Exemples
 
 ```js
-document.forms["myform"].submit();
+document.forms["my-form"].submit();
 ```
 
-## Specification
+## Spécifications
 
-[HTML Living standard: The form element](https://html.spec.whatwg.org/multipage/forms.html#the-form-element)
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

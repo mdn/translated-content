@@ -586,7 +586,7 @@ explainer で、WebGPU のエラー処理についての詳細情報を得るこ
 
 ## セキュリティの要件
 
-この API 全体は[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ利用可能です。
+この API 全体は[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)でのみ利用可能です。
 
 ## 例
 

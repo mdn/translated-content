@@ -37,7 +37,7 @@ animation-iteration-count: 2, 0, infinite;
 
 ## Примеры
 
-Смотрите примеры [CSS-анимации](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations).
+Смотрите примеры [CSS-анимации](/ru/docs/Web/CSS/Guides/Animations/Using).
 
 ## Спецификации
 
@@ -49,5 +49,5 @@ animation-iteration-count: 2, 0, infinite;
 
 ## Смотрите также
 
-- [Использование CSS-анимацией](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Использование CSS-анимацией](/ru/docs/Web/CSS/Guides/Animations/Using)
 - {{ domxref("AnimationEvent", "AnimationEvent") }}

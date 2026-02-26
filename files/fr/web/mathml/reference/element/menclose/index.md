@@ -15,9 +15,9 @@ L'élément MathML `<menclose>` permet d'afficher son contenu groupé au sein d'
 - href
   - : Un hyperlien pointant vers un URI donné.
 - mathbackground
-  - : La couleur de fond. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/Reference/Values/color_value#mots-cl.c3.a9s).
+  - : La couleur de fond. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/Reference/Values/color_value#mots-clés).
 - mathcolor
-  - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/Reference/Values/color_value#mots-cl.c3.a9s).
+  - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/Reference/Values/color_value#mots-clés).
 - notation
   - : Une liste de notations à appliquer aux éléments fils, séparées par des blancs. Les symboles sont dessinés indépendamment et peuvent donc parfois se superposer. Les valeurs possibles sont :
 

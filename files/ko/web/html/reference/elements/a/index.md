@@ -41,7 +41,7 @@ li {
 
     > [!NOTE]
     >
-    > - `download`는 [동일 출처 URL](/ko/docs/Web/Security/Same-origin_policy)과 `blob:`, `data:` 스킴에서만 작동합니다.
+    > - `download`는 [동일 출처 URL](/ko/docs/Web/Security/Defenses/Same-origin_policy)과 `blob:`, `data:` 스킴에서만 작동합니다.
     > - `Content-Disposition`의 `filename`이 `download`와 다를 땐 헤더가 우선권을 가집니다. (`Content-Disposition: inline`일 때, Firefox는 헤더를 우선하고 Chrome은 `download`를 우선합니다.)
 
 - `href`
@@ -315,7 +315,7 @@ document
 
 ## 보안과 개인정보
 
-`<a>` 요소는 사용자의 보안과 개인정보에 중요한 영향을 줄 수 있습니다. [`Referer` 헤더: 개인정보와 보안 고려사항](/ko/docs/Web/Security/Referer_header:_privacy_and_security_concerns) 문서에서 자세한 내용을 알아보세요.
+`<a>` 요소는 사용자의 보안과 개인정보에 중요한 영향을 줄 수 있습니다. [`Referer` 헤더: 개인정보와 보안 고려사항](/ko/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns) 문서에서 자세한 내용을 알아보세요.
 
 `target="_blank"`를 `rel="noreferrer"`와 `rel="noopener"` 없이 사용하면 웹사이트가 {{domxref("Window.opener", "window.opener")}} API 악용 공격에 취약해집니다. ([취약점 설명](https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/)) 다만, 최근 브라우저(Firefox 79+ 등)는 `target="_blank"`를 지정하면 임의로 `rel="noopener"` 설정과 동일한 보호 수준을 적용합니다.
 

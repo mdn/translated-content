@@ -90,7 +90,7 @@ HTML `<dialog>` 요소는 모달 및 비모달 대화 상자를 만드는 데 �
 
 ### 모달 대화 상자 만들기
 
-이 예제는 [gradient](/ko/docs/Web/CSS/gradient) 배경이 있는 모달 대화 상자를 보여줍니다. `.showModal()` 메서드는 "대화 상자 표시" 버튼이 클릭될 때 모달 대화 상자를 엽니다. 대화 상자는 <kbd>Esc</kbd> 키를 누르거나 대화 상자 내의 "닫기" 버튼이 클릭될 때 `close()` 메서드를 통해 닫을 수 있습니다.
+이 예제는 [gradient](/ko/docs/Web/CSS/Reference/Values/gradient) 배경이 있는 모달 대화 상자를 보여줍니다. `.showModal()` 메서드는 "대화 상자 표시" 버튼이 클릭될 때 모달 대화 상자를 엽니다. 대화 상자는 <kbd>Esc</kbd> 키를 누르거나 대화 상자 내의 "닫기" 버튼이 클릭될 때 `close()` 메서드를 통해 닫을 수 있습니다.
 
 대화 상자가 열리면 브라우저는 대화 상자 내에서 포커스를 받을 수 있는 첫 번째 요소에 기본적으로 포커스를 줍니다. 이 예제에서는 [`autofocus`](/ko/docs/Web/HTML/Reference/Global_attributes/autofocus) 특성이 "닫기" 버튼에 적용되어 대화 상자가 열릴 때 포커스를 받습니다. 이는 대화 상자가 열린 직후에 사용자가 상호 작용할 것으로 예상되는 요소이기 때문입니다.
 
@@ -409,7 +409,7 @@ closeBtns.forEach((btn) => {
 - `display`를 `block`(또는 다른 보이는 `display` 값)에서 `none`으로 애니메이션을 적용할 때, 애니메이션 종료 시점인 `100%`에서 값이 `none`으로 전환되어 애니메이션 전체 기간 동안 요소가 보이게 됩니다.
 
 > [!NOTE]
-> 이 [CSS 전환](/ko/docs/Web/CSS/CSS_transitions)을 사용하여 애니메이션을 적용할 때는 위의 동작을 활성화하기 위해 [`transition-behavior: allow-discrete`](/ko/docs/Web/CSS/transition-behavior) 를 설정해야 합니다. 이 동작은 [CSS 애니메이션](/ko/docs/Web/CSS/CSS_animations)으로 애니메이션을 적용할 때 기본적으로 사용할 수 있으므로 별도의 추가 작업이 필요하지 않습니다.
+> 이 [CSS 전환](/ko/docs/Web/CSS/Guides/Transitions)을 사용하여 애니메이션을 적용할 때는 위의 동작을 활성화하기 위해 [`transition-behavior: allow-discrete`](/ko/docs/Web/CSS/transition-behavior) 를 설정해야 합니다. 이 동작은 [CSS 애니메이션](/ko/docs/Web/CSS/CSS_animations)으로 애니메이션을 적용할 때 기본적으로 사용할 수 있으므로 별도의 추가 작업이 필요하지 않습니다.
 
 #### 대화 상자 요소 전환하기
 

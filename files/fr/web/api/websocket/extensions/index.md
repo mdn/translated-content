@@ -1,21 +1,18 @@
 ---
-title: WebSocket.extensions
+title: "WebSocket : propriété extensions"
+short-title: extensions
 slug: Web/API/WebSocket/extensions
+l10n:
+  sourceCommit: fb311d7305937497570966f015d8cc0eb1a0c29c
 ---
 
-{{APIRef("Web Sockets API")}}
+{{APIRef("Web Sockets API")}}{{AvailableInWorkers}}
 
-La propriété en lecture seule **`WebSocket.extensions`** renvoie les extensions sélectionnées par le serveur. Actuellement, cette propriété vaut une chaîne de caractères vide ou la liste des extensions négociées par la connexion.
-
-## Syntaxe
-
-```js
-var extensions = aWebSocket.extensions;
-```
+La propriété en lecture seule **`extensions`** de l'interface {{DOMxRef("WebSocket")}} retourne les extensions sélectionnées par le serveur. Actuellement, cette propriété vaut une chaîne de caractères vide ou la liste des extensions négociées par la connexion.
 
 ## Valeur
 
-Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String).
+Une chaîne de caractères.
 
 ## Spécifications
 

@@ -6,9 +6,9 @@ l10n:
   sourceCommit: 38029c123179b3dbccc12fb01dc558b3dcb01292
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}
 
-이 강의에서는 [CSS 종속](/ko/docs/Web/CSS/Cascade)과 [CSS 특정성](/ko/docs/Web/CSS/CSS_cascade/Specificity)의 기본 개념을 기반으로 하는 고급 기능인 [종속 계층](/ko/docs/Web/CSS/@layer)을 소개합니다.
+이 강의에서는 [CSS 종속](/ko/docs/Web/CSS/Cascade)과 [CSS 특정성](/ko/docs/Web/CSS/Guides/Cascade/Specificity)의 기본 개념을 기반으로 하는 고급 기능인 [종속 계층](/ko/docs/Web/CSS/Reference/At-rules/@layer)을 소개합니다.
 
 CSS를 처음 사용하는 경우, 이 강의를 진행하는 것이 당장은 관련성이 적고 과정의 다른 부분보다 조금 더 학문적으로 보일 수 있습니다. 그러나 종속 계층이 무엇인지 기본 사항을 알고 있으면 프로젝트에서 종속 계층을 접하는 데 도움이 됩니다. CSS로 더 많이 작업할 수록 종속 계층을 이해하고 그 기능을 활용하는 방법을 알면 다양한 당사자, 플러그인 및 개발 팀의 CSS로 코드 기반을 관리하는 데 많은 어려움을 덜어낼 수 있습니다.
 
@@ -19,7 +19,7 @@ CSS를 처음 사용하는 경우, 이 강의를 진행하는 것이 당장은 �
     <tr>
       <th scope="row">전제조건:</th>
       <td>종속 및 특정성을 포함하여 CSS 작동 방식에 대한 아이디어 (
-        <a href="/ko/docs/Learn/CSS/First_steps">CSS 첫 단계</a> 와 <a href="/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">종속, 특정성, 상속</a>을 공부하세요).
+        <a href="/ko/docs/Learn/CSS/First_steps">CSS 첫 단계</a> 와 <a href="/ko/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts">종속, 특정성, 상속</a>을 공부하세요).
       </td>
     </tr>
     <tr>
@@ -47,7 +47,7 @@ CSS의 C는 "Cascading"을 의미합니다. 스타일이 함께 계단식으로 
 2. **중요도:** 일반 스타일인지 중요 스타일인지에 따라 규칙을 정렬합니다. 중요 스타일은 [`!important`](/ko/docs/Web/CSS/important) 플래그가 설정된 스타일입니다.
 3. **출처:** 두 개의 중요도 버킷 각각 내에서 작성자, 사용자 또는 사용자 에이전트 출처별로 규칙을 정렬합니다.
 4. **계층:** 6개의 출처 중요도 버킷 각각 내에서, 종속 계층별로 정렬합니다. 일반 선언의 계층 순서는 생성된 첫 번째 계층부터 마지막 계층까지이며, 그 다음에는 레이어가 없는 일반 스타일이 있습니다. 이 순서는 중요한 스타일에 대해 반전되며 레이어가 없는 중요한 스타일의 우선 순위가 가장 낮습니다.
-5. **특정성:** 우선 순위가 있는 출처 계층의 경쟁 스타일에 대해 [특정성](/ko/docs/Web/CSS/CSS_cascade/Specificity)별로 선언을 정렬합니다.
+5. **특정성:** 우선 순위가 있는 출처 계층의 경쟁 스타일에 대해 [특정성](/ko/docs/Web/CSS/Guides/Cascade/Specificity)별로 선언을 정렬합니다.
 6. **나타나는 순서:** 우선 순위가 있는 출처 계층의 두 선택자가 동일한 특정성을 갖는 경우 가장 높은 특정성을 가진 마지막으로 선언된 선택자의 속성 값이 우선합니다.
 
 각 단계에서, "아직 실행 중" 선언만 다음 단계에서 "경쟁"으로 이동합니다. 하나의 선언만 실행 중인 경우 "승리"하고, 후속 단계는 문제가 됩니다.
@@ -70,13 +70,13 @@ CSS의 C는 "Cascading"을 의미합니다. 스타일이 함께 계단식으로 
 ### 출처 및 특정성
 
 각 속성에 대해 "승리" 선언은 가중치(보통 또는 중요)를 기반으로 우선 순위가 있는 출처의 선언입니다. 잠시 동안 레이어를 무시하면 우선 순위가 가장 높은 출처의 값이 적용됩니다.
-우승 출처에 요소에 대한 속성 선언이 두 개 이상 있는 경우 이러한 경쟁 속성 값에 대한 선택자의 [특정성](/ko/docs/Web/CSS/CSS_cascade/Specificity)이 비교됩니다. 특정성은 다른 출처의 선택자 간에 비교되지 않습니다.
+우승 출처에 요소에 대한 속성 선언이 두 개 이상 있는 경우 이러한 경쟁 속성 값에 대한 선택자의 [특정성](/ko/docs/Web/CSS/Guides/Cascade/Specificity)이 비교됩니다. 특정성은 다른 출처의 선택자 간에 비교되지 않습니다.
 
-아래 예에는, 두 개의 링크가 있습니다. 첫 번째는 작성자 스타일이 적용되지 않았으므로 사용자 에이전트 스타일만 적용됩니다(및 개인 사용자 스타일이 있는 경우). 두 번째는 작성자 스타일로 설정된 [`text-decoration`](/ko/docs/Web/CSS/Reference/Properties/text-decoration) and [`color`](/ko/docs/Web/CSS/Reference/Properties/color)입니다. 작성자 스타일 시트의 선택자의 특정성이 [`0-0-0`](/ko/docs/Web/CSS/CSS_cascade/Specificity#selector_weight_categories)인 경우에도 마찬가지입니다. 작성자 스타일이 "승리"하는 이유는 다른 출처에서 충돌하는 스타일이 있을 때, 우선 순위가 없는 출처의 특정성과 관계없이 우선순위가 있는 출처의 규칙이 적용되기 때문입니다.
+아래 예에는, 두 개의 링크가 있습니다. 첫 번째는 작성자 스타일이 적용되지 않았으므로 사용자 에이전트 스타일만 적용됩니다(및 개인 사용자 스타일이 있는 경우). 두 번째는 작성자 스타일로 설정된 [`text-decoration`](/ko/docs/Web/CSS/Reference/Properties/text-decoration) and [`color`](/ko/docs/Web/CSS/Reference/Properties/color)입니다. 작성자 스타일 시트의 선택자의 특정성이 [`0-0-0`](/ko/docs/Web/CSS/Guides/Cascade/Specificity#selector_weight_categories)인 경우에도 마찬가지입니다. 작성자 스타일이 "승리"하는 이유는 다른 출처에서 충돌하는 스타일이 있을 때, 우선 순위가 없는 출처의 특정성과 관계없이 우선순위가 있는 출처의 규칙이 적용되기 때문입니다.
 
 {{EmbedGHLiveSample("css-examples/learn/layers/basic-cascade.html", '100%', 500)}}
 
-이 글을 쓰는 시점에서 사용자 에이전트 스타일시트의 "경쟁" 선택자는 `0-1-1`의 특정성 가중치를 갖는 `a:any-link`입니다. 작성자 스타일시트의 `0-0-0` 선택자보다 크지만 현재 사용자 에이전트의 선택자가 다르더라도 상관없습니다. 작성자 및 사용자 에이전트 출처의 특정성 가중치는 절대 비교되지 않습니다. [특정성 가중치 계산 방법](/ko/docs/Web/CSS/CSS_cascade/Specificity#how_is_specificity_calculated)에 대해 자세히 알아보세요.
+이 글을 쓰는 시점에서 사용자 에이전트 스타일시트의 "경쟁" 선택자는 `0-1-1`의 특정성 가중치를 갖는 `a:any-link`입니다. 작성자 스타일시트의 `0-0-0` 선택자보다 크지만 현재 사용자 에이전트의 선택자가 다르더라도 상관없습니다. 작성자 및 사용자 에이전트 출처의 특정성 가중치는 절대 비교되지 않습니다. [특정성 가중치 계산 방법](/ko/docs/Web/CSS/Guides/Cascade/Specificity#how_is_specificity_calculated)에 대해 자세히 알아보세요.
 
 출처 우선 순위는 항상 선택자 특정성보다 우선합니다. 요소 속성이 여러 출처에서 일반 스타일 선언으로 스타일이 지정된 경우, 작성자 스타일 시트는 항상 사용자 또는 사용자 에이전트 스타일 시트에서 선언된 중복 일반 속성을 재정의합니다. 스타일이 중요한 경우 사용자 에이전트 스타일시트는 항상 작성자 및 사용자 스타일보다 우선합니다. 종속 출처 우선 순위는 출처 간의 특정성 충돌이 발생하지 않도록 합니다.
 
@@ -90,7 +90,7 @@ CSS의 C는 "Cascading"을 의미합니다. 스타일이 함께 계단식으로 
 
 출처과 중요도에 따라 6단계 우선 순위가 있는 것과 유사하게 종속 계층을 사용하면 해당 출처 내에서 하위 출처 우선 순위 수준을 만들 수 있습니다.
 
-6개의 출처 버킷 각각 내에는 여러 종속 계층이 있을 수 있습니다. [계층 생성 순서](/ko/docs/Web/CSS/@layer)는 매우 중요합니다. 출처 내 계층 간의 우선 순위를 설정하는 것은 생성 순서입니다.
+6개의 출처 버킷 각각 내에는 여러 종속 계층이 있을 수 있습니다. [계층 생성 순서](/ko/docs/Web/CSS/Reference/At-rules/@layer)는 매우 중요합니다. 출처 내 계층 간의 우선 순위를 설정하는 것은 생성 순서입니다.
 
 일반 출처 버킷에서는, 계층이 생성된 순서대로 계층이 정렬됩니다. 우선 순위는 생성된 첫 번째 계층부터 마지막 계층까지이며 계층이 없는 일반 스타일이 그 뒤를 따릅니다.
 
@@ -132,7 +132,7 @@ CSS의 C는 "Cascading"을 의미합니다. 스타일이 함께 계단식으로 
 
 - 규칙에 따라 `@layer`문, `@layer` 뒤에 하나 이상의 계층 이름을 사용하여 계층을 선언합니다. 이렇게 하면 스타일을 지정하지 않고 명명된 계층이 생성됩니다.
 - 블록 내의 모든 스타일이 이름 또는 이름이 지정되지 않은 레이어에 추가되는 `@layer` 블록 at-규칙.
-- [`@import`](/ko/docs/Web/CSS/@import) 규칙과 `layer` 키워드 또는 `layer()` 함수는 가져온 파일의 콘텐츠를 해당 계층에 할당합니다.
+- [`@import`](/ko/docs/Web/CSS/Reference/At-rules/@import) 규칙과 `layer` 키워드 또는 `layer()` 함수는 가져온 파일의 콘텐츠를 해당 계층에 할당합니다.
 
 세 가지 방법 모두 해당 이름의 계층이 아직 초기화되지 않은 경우 계층을 생성합니다. `@layer` at-규칙 또는 `layer()`가 있는 `@import`에 계층 이름이 제공되지 않으면 새 익명(이름 없는) 계층이 생성됩니다.
 
@@ -145,7 +145,7 @@ CSS의 C는 "Cascading"을 의미합니다. 스타일이 함께 계단식으로 
 
 계층 순서는 계층이 CSS에 나타나는 순서에 따라 설정됩니다. 스타일을 지정하지 않고 `@layer` 다음에 하나 이상의 계층 이름을 사용하여 계층을 선언하는 것은 [계층 순서](#ordering-layers)를 정의하는 한 가지 방법입니다.
 
-[`@layer`](/ko/docs/Web/CSS/@layer) CSS at-규칙은 계단식 계층을 선언하고 여러 계단식 계층이 있을 때 우선 순위를 정의하는 데 사용됩니다. 다음 at-규칙은 나열된 순서대로 세 개의 계층을 선언합니다.
+[`@layer`](/ko/docs/Web/CSS/Reference/At-rules/@layer) CSS at-규칙은 계단식 계층을 선언하고 여러 계단식 계층이 있을 때 우선 순위를 정의하는 데 사용됩니다. 다음 at-규칙은 나열된 순서대로 세 개의 계층을 선언합니다.
 
 ```css
 @layer theme, layout, utilities;
@@ -230,7 +230,7 @@ body {
 
 #### 계층 생성 및 미디어 쿼리
 
-[media](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries) 또는 [feature](/ko/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries) 쿼리를 사용하여 계층을 정의하고 미디어가 일치하지 않거나 기능이 지원되지 않으면 계층이 생성되지 않습니다. 아래 예는 장치 또는 브라우저의 크기를 변경하면 계층 순서가 어떻게 변경될 수 있는지 보여줍니다. 이 예에서는 더 넓은 브라우저에서만 `site` 레이어를 생성합니다. 그런 다음 `page` 및 `site` 계층에 순서대로 스타일을 지정합니다.
+[media](/ko/docs/Web/CSS/Guides/Media_queries/Using) 또는 [feature](/ko/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries) 쿼리를 사용하여 계층을 정의하고 미디어가 일치하지 않거나 기능이 지원되지 않으면 계층이 생성되지 않습니다. 아래 예는 장치 또는 브라우저의 크기를 변경하면 계층 순서가 어떻게 변경될 수 있는지 보여줍니다. 이 예에서는 더 넓은 브라우저에서만 `site` 레이어를 생성합니다. 그런 다음 `page` 및 `site` 계층에 순서대로 스타일을 지정합니다.
 
 {{EmbedGHLiveSample("css-examples/learn/layers/media-order.html", '100%', 500)}}
 
@@ -238,9 +238,9 @@ body {
 
 ### @import를 사용하여 이름이 지정된 계층과 익명 계층으로 스타일시트 가져오기
 
-[`@import`](/ko/docs/Web/CSS/@import) 규칙을 사용하면 사용자가 다른 스타일 시트의 스타일 규칙을 CSS 파일이나 {{htmlelement('style')}} 요소 안으로 직접 가져올 수 있습니다.
+[`@import`](/ko/docs/Web/CSS/Reference/At-rules/@import) 규칙을 사용하면 사용자가 다른 스타일 시트의 스타일 규칙을 CSS 파일이나 {{htmlelement('style')}} 요소 안으로 직접 가져올 수 있습니다.
 
-스타일시트를 가져올 때, 스타일시트 또는 `<style>` 블록 내의 모든 CSS 스타일 앞에 `@import` 문을 정의해야 합니다. `@import` 문은 스타일보다 먼저 와야 하지만, 계층에 스타일을 할당하지 않고 하나 이상의 계층을 생성하는 `@layer` at-규칙이 선행될 수 있습니다(`@import` 앞에 [`@charset`](/ko/docs/Web/CSS/@charset) 규칙이 올 수도 있습니다).
+스타일시트를 가져올 때, 스타일시트 또는 `<style>` 블록 내의 모든 CSS 스타일 앞에 `@import` 문을 정의해야 합니다. `@import` 문은 스타일보다 먼저 와야 하지만, 계층에 스타일을 할당하지 않고 하나 이상의 계층을 생성하는 `@layer` at-규칙이 선행될 수 있습니다(`@import` 앞에 [`@charset`](/ko/docs/Web/CSS/Reference/At-rules/@charset) 규칙이 올 수도 있습니다).
 
 스타일시트를 명명된 계층, 중첩된 명명 계층 또는 익명 계층으로 가져올 수 있습니다. 다음 계층은 스타일시트를 각각 `components` 계층, `components` 계층 내의 중첩된 `dialog` 계층 및 이름이 지정되지 않은 계층으로 가져옵니다.
 
@@ -257,7 +257,7 @@ body {
 @import url(sm-icons.css) layer(social);
 ```
 
-[미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries) 및 [기능 쿼리](/ko/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)를 사용하여 특정 조건에 따라 스타일을 가져오고 계층을 만들 수 있습니다. 다음은 브라우저가 `display: ruby`를 지원하고 가져오는 파일이 화면 너비에 따라 달라지는 경우에만 스타일 시트를 `international` 계층으로 가져옵니다.
+[미디어 쿼리](/ko/docs/Web/CSS/Guides/Media_queries/Using) 및 [기능 쿼리](/ko/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)를 사용하여 특정 조건에 따라 스타일을 가져오고 계층을 만들 수 있습니다. 다음은 브라우저가 `display: ruby`를 지원하고 가져오는 파일이 화면 너비에 따라 달라지는 경우에만 스타일 시트를 `international` 계층으로 가져옵니다.
 
 ```css
 @import url("ruby-narrow.css") layer(international) supports(display: ruby) and
@@ -429,4 +429,4 @@ body {
 
 이 기사의 대부분을 이해했다면, 잘 한 것입니다. 이제 CSS 종속 계층의 기본 메커니즘에 익숙해졌습니다. 다음으로 [박스 모델](/ko/docs/Learn_web_development/Core/Styling_basics/Box_model)을 자세히 살펴보겠습니다.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}

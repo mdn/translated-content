@@ -1,9 +1,8 @@
 ---
 title: :fullscreen
 slug: Web/CSS/Reference/Selectors/:fullscreen
-original_slug: Web/CSS/:fullscreen
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:fullscreen`** permet de cibler tout élément qui est en mode plein écran. Si plusieurs éléments ont été mis en plein écran, tous ces éléments seront ciblés.
@@ -24,7 +23,7 @@ La pseudo-classe `:fullscreen` permet de configurer la taille, le style ou la di
 
 ### Mise en forme d'un élément en plein écran
 
-Cet exemple applique une couleur d'arrière-plan différente à un élément {{htmlelement('div')}}, selon qu'il est ou non en mode plein écran. Il comprend un élément {{htmlelement('button')}} permettant d'activer ou de désactiver le mode plein écran.
+Cet exemple applique une couleur d'arrière-plan différente à un élément {{HTMLElement('div')}}, selon qu'il est ou non en mode plein écran. Il comprend un élément {{HTMLElement('button')}} permettant d'activer ou de désactiver le mode plein écran.
 
 ```html
 <div class="element">
@@ -91,10 +90,10 @@ document.querySelector(".toggle").addEventListener("click", (event) => {
 
 - [L'API Fullscreen](/fr/docs/Web/API/Fullscreen_API)
 - [Le guide de l'API Fullscreen](/fr/docs/Web/API/Fullscreen_API/Guide)
-- {{cssxref("::backdrop")}}
+- La pseudo-classe {{CSSxRef("::backdrop")}}
 - Les API DOM :
-  - {{domxref("Element.requestFullscreen()")}},
-  - {{domxref("Document.exitFullscreen()")}},
-  - {{domxref("Document.fullscreenElement")}}
+  - {{DOMxRef("Element.requestFullscreen()")}},
+  - {{DOMxRef("Document.exitFullscreen()")}},
+  - {{DOMxRef("Document.fullscreenElement")}}
 
 - L'attribut [`allowfullscreen`](/fr/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)

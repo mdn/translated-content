@@ -71,4 +71,4 @@ body {
 ## 같이 보기
 
 - {{cssxref("env","env(…)")}} – 사용자 에이전트가 통제하는 읽기 전용 환경 변수.
-- [CSS 변수 사용하기](/ko/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
+- [CSS 변수 사용하기](/ko/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)

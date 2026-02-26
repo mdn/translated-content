@@ -1,14 +1,15 @@
 ---
 title: animation-play-state
 slug: Web/CSS/Reference/Properties/animation-play-state
-original_slug: Web/CSS/animation-play-state
+l10n:
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`animation-play-state`** définit si une animation est en cours ou en pause.
 
-La propriété **`animation-play-state`** définit si une animation est en cours d'exécution ou si elle est en pause.
+Reprendre une animation en pause fera démarrer l'animation là où elle s'est arrêtée au moment de la pause, plutôt que de recommencer depuis le début de la séquence d'animation.
 
-{{InteractiveExample("CSS Demo: animation-play-state")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: animation-play-state")}}
 
 ```css interactive-example-choice
 animation-play-state: paused;
@@ -30,7 +31,7 @@ animation-play-state: running;
   color: white;
   margin: auto;
   margin-left: 0;
-  border: 5px solid #333;
+  border: 5px solid #333333;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -58,34 +59,33 @@ animation-play-state: running;
 }
 ```
 
-Lorsqu'on reprend une animation en pause, celle-ci reprendra où elle avait été interrompue (elle ne recommencera pas depuis le début de la séquence).
-
 ## Syntaxe
 
 ```css
-/* On a une seule animation */
+/* Animation unique */
 animation-play-state: running;
 animation-play-state: paused;
 
-/* On gère plusieurs animations */
-/* avec des valeurs respectives */
+/* Animations multiples */
 animation-play-state: paused, running, running;
 
 /* Valeurs globales */
 animation-play-state: inherit;
 animation-play-state: initial;
+animation-play-state: revert;
+animation-play-state: revert-layer;
 animation-play-state: unset;
 ```
 
 ### Valeurs
 
 - `running`
-  - : L'animation est en cours.
+  - : L'**animation** est actuellement **en cours**.
 - `paused`
-  - : L'animation est en pause.
+  - : L'**animation** est actuellement **en pause**.
 
 > [!NOTE]
-> Lorsqu'on utilise plusieurs valeurs, séparées par des virgules, pour une propriété `animation-*`, elles seront respectivement affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : [paramétrer les valeurs des propriétés pour plusieurs animations](/fr/docs/Web/CSS/Guides/Animations/Using).
+> Lorsque vous indiquez plusieurs valeurs séparées par des virgules sur une propriété `animation-*`, elles sont appliquées aux animations dans l'ordre d'apparition des {{CSSxRef("animation-name")}}. Si le nombre d'animations et de valeurs de propriété `animation-*` ne correspond pas, voir [Définir plusieurs valeurs de propriétés d'animation](/fr/docs/Web/CSS/Guides/Animations/Using#définir_plusieurs_valeurs_de_propriétés_danimation).
 
 ## Définition formelle
 
@@ -97,54 +97,51 @@ animation-play-state: unset;
 
 ## Exemples
 
-### CSS
+### Mettre une animation en pause
+
+Cette animation est en pause, mais s'exécute lorsque vous la survolez.
+
+#### HTML
+
+```html
+<div class="box"></div>
+```
+
+#### CSS
 
 ```css
-p {
-  animation-duration: 3s;
-  animation-name: glissement;
+.box {
+  background-color: rebeccapurple;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  animation-name: rotate;
+  animation-duration: 0.7s;
   animation-iteration-count: infinite;
-}
-
-.arret {
   animation-play-state: paused;
 }
 
-.encours {
+.box:hover {
   animation-play-state: running;
 }
 
-@keyframes glissement {
-  from {
-    margin-left: 100%;
-    width: 200%;
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
   }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
+  100% {
+    transform: rotate(360deg);
   }
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<p class="arret">
-  La Chenille et Alice se considérèrent un instant en silence. Enfin la Chenille
-  sortit le houka de sa bouche, et lui adressa la parole d’une voix endormie et
-  traînante.
-</p>
+Passez la souris sur le rectangle pour lancer l'animation.
 
-<p class="encours">
-  Alice, un peu irritée du parler bref de la Chenille, se redressa de toute sa
-  hauteur.
-</p>
-```
+{{EmbedLiveSample("Mettre une animation en pause", "100%", 150)}}
 
-### Résultat
-
-{{EmbedLiveSample("Exemples","300","200")}}
+Voir [Animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using) pour des exemples.
 
 ## Spécifications
 
@@ -157,4 +154,5 @@ p {
 ## Voir aussi
 
 - [Manipuler les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)
-- {{domxref("AnimationEvent", "AnimationEvent")}}
+- L'interface API {{DOMxRef("AnimationEvent")}}
+- Les autres propriétés d'animation associées&nbsp;: {{CSSxRef("animation")}}, {{CSSxRef("animation-composition")}}, {{CSSxRef("animation-delay")}}, {{CSSxRef("animation-direction")}}, {{CSSxRef("animation-duration")}}, {{CSSxRef("animation-fill-mode")}}, {{CSSxRef("animation-iteration-count")}}, {{CSSxRef("animation-name")}}, {{CSSxRef("animation-timeline")}}, {{CSSxRef("animation-timing-function")}}

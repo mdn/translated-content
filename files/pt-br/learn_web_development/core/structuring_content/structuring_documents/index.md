@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Structuring_documents
 original_slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}Além de definir as partes individuais de sua página (como "um parágrafo" ou "uma imagem"),
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Debugging_HTML", "Learn_web_development/Core/Structuring_content")}}Além de definir as partes individuais de sua página (como "um parágrafo" ou "uma imagem"),
 
 o {{glossary("HTML")}} também conta com vários elementos de nível de bloco usados para definir as áreas de seu site (como "o cabeçalho", "o menu de navegação", "a coluna de conteúdo príncipal"). Este artigo explora como planejar uma estrutura básica de website, e escrever o HTML para representar essa estrutura.
 
@@ -309,4 +309,4 @@ Nesse ponto, você deve ter uma idéia melhor sobre como estruturar uma página 
 
 - [Seções e estruturas de um documento HTML5](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document): Guia avançado para elementos semânticos do HTML5 e o algoritmo de estrutura de tópicos do HTML5.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Debugging_HTML", "Learn_web_development/Core/Structuring_content")}}

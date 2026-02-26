@@ -3,7 +3,7 @@ title: Коллекции
 slug: Web/JavaScript/Guide/Keyed_collections
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_collections", "Web/JavaScript/Guide/Working_with_objects")}}
 
 Этот раздел содержит обзор коллекций {{jsxref("Set")}} и словарей {{jsxref("Map")}} - встроенных {{Glossary("Data_structure","структур данных")}} с доступом по ключу.
 
@@ -156,4 +156,4 @@ mySet2 = new Set([1, 2, 3, 4]);
 - `-0` и `+0` считаются равными.
 - {{jsxref("NaN")}} считается равным самому себе (в отличие от `===`).
 
-{{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
+{{PreviousNext("Web/JavaScript/Guide/Indexed_collections", "Web/JavaScript/Guide/Working_with_objects")}}

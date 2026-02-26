@@ -1,12 +1,11 @@
 ---
 title: override-colors
 slug: Web/CSS/Reference/At-rules/@font-palette-values/override-colors
-original_slug: Web/CSS/@font-palette-values/override-colors
 l10n:
-  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
+  sourceCommit: 0b926fc3e79782401461d389fc9f17d522b39ed3
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`override-colors`** de la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{cssxref("@font-palette-values")}} est utilisé pour remplacer les couleurs de la [palette de base](/fr/docs/Web/CSS/Reference/At-rules/@font-palette-values/base-palette) choisie pour une police couleur.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`override-colors`** de la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@font-palette-values")}} est utilisé pour remplacer les couleurs de la [palette de base](/fr/docs/Web/CSS/Reference/At-rules/@font-palette-values/base-palette) choisie pour une police couleur.
 
 ## Syntaxe
 
@@ -43,11 +42,11 @@ Pour chaque paire indice-couleur, la couleur à l'indice spécifié dans la [pal
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -165,8 +164,8 @@ Cet exemple montre que dans la `base-palette` `3`, la couleur à l'indice 0 est 
 
 ## Voir aussi
 
-- {{cssxref("@font-palette-values", "@font-palette-values")}}
-- {{cssxref("@font-palette-values/base-palette", "base-palette")}}
-- {{cssxref("@font-palette-values/font-family", "font-family")}}
-- {{cssxref("font-palette", "font-palette")}}
-- {{domxref("CSSFontPaletteValuesRule.overrideColors")}}
+- La règle {{CSSxRef("@font-palette-values")}}
+- Le descripteur {{CSSxRef("@font-palette-values/base-palette", "base-palette")}}
+- Le descripteur {{CSSxRef("@font-palette-values/font-family", "font-family")}}
+- La propriété {{CSSxRef("font-palette")}}
+- La propriété API {{DOMxRef("CSSFontPaletteValuesRule.overrideColors")}}

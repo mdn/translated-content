@@ -1,14 +1,13 @@
 ---
 title: font-style
 slug: Web/CSS/Reference/Properties/font-style
-original_slug: Web/CSS/font-style
+l10n:
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`font-style`** permet de sélectionner une fonte italique ou oblique parmi celles listées par {{CSSxRef("font-family")}}.
 
-La propriété **`font-style`** permet de sélectionner une fonte italique (`italic`) ou oblique (`oblique`) parmi celles listées par [`font-family`](/fr/docs/Web/CSS/Reference/Properties/font-family).
-
-{{InteractiveExample("CSS Demo: font-style")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: font-style")}}
 
 ```css interactive-example-choice
 font-style: normal;
@@ -29,11 +28,12 @@ font-style: oblique 40deg;
 ```html interactive-example
 <section id="default-example">
   <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+    Londres. Le trimestre de la Saint-Michel vient de se terminer, et le Lord
+    Chancelier siège dans le Lincoln's Inn Hall. Un temps de novembre
+    implacable. Autant de boue dans les rues que si les eaux venaient tout juste
+    de se retirer de la surface de la terre, et il ne serait pas étonnant de
+    croiser un Mégalosaure, long d'une quarantaine de pieds, se dandinant comme
+    un lézard éléphantesque sur Holborn Hill.
   </p>
 </section>
 ```
@@ -41,17 +41,17 @@ font-style: oblique 40deg;
 ```css interactive-example
 @font-face {
   src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
-  font-family: Amstelvar;
+  font-family: "Amstelvar";
   font-style: normal;
 }
 
 section {
   font-size: 1.2em;
-  font-family: Amstelvar;
+  font-family: "Amstelvar", serif;
 }
 ```
 
-La forme **italique** est généralement une forme cursive qui utilise moins d'espace horizontal que les autres formes classiques. La forme **oblique** quant à elle est simplement une version penchée de la forme normale. Les formes italique et oblique peuvent être synthétisées par le navigateur si elles sont absentes (le moteur penche alors les glyphes de la forme normale) — pour plus d'informations sur l'activation de cette synthèse, voir la propriété [`font-synthesis`](/fr/docs/Web/CSS/Reference/Properties/font-synthesis).
+Les fontes **italiques** sont généralement cursives, utilisant en général moins d'espace horizontal que leurs équivalents non stylisés, tandis que les fontes **obliques** sont habituellement des versions inclinées de la fonte régulière. Lorsque le style demandé n'est pas disponible, les fontes italique et oblique sont simulées en inclinant artificiellement les glyphes de la fonte régulière (utilisez {{CSSxRef("font-synthesis")}} pour contrôler ce comportement).
 
 ## Syntaxe
 
@@ -67,6 +67,7 @@ font-style: oblique 10deg;
 font-style: inherit;
 font-style: initial;
 font-style: revert;
+font-style: revert-layer;
 font-style: unset;
 ```
 
@@ -75,47 +76,73 @@ La propriété `font-style` s'utilise avec un mot-clé parmi ceux qui suivent. S
 ### Valeurs
 
 - `normal`
-  - : Sélectionne une police qualifiée de `normal` parmi celles de [`font-family`](/fr/docs/Web/CSS/Reference/Properties/font-family).
+  - : Sélectionne une police qualifiée de `normal` parmi celles de {{CSSxRef("font-family")}}.
 - `italic`
   - : Sélectionne une police qualifiée d'`italic`. S'il n'y a pas de version italique, une version `oblique` sera sélectionnée à la place. Si aucune version n'est disponible, le style de police est synthétisé.
 - `oblique`
   - : Sélectionne une police qualifiée d'`oblique`. S'il n'y a pas de version oblique, une version `italic` sera sélectionnée à la place. Si aucune version n'est disponible, le style de police est synthétisé.
-- `oblique` [`<angle>`](/fr/docs/Web/CSS/Reference/Values/angle)
-  - : Sélectionne une police qualifiée d'`oblique` et indique l'angle à utiliser pour la pente du texte. Si plusieurs fontes sont disponibles pour la police, c'est la fonte avec la pente la plus proche qui est utilisée. Si aucune police oblique n'est disponible, le navigateur _synthétisera_ une police penchée en tournant les caractères d'une fonte normale.
-    L'angle indiqué (cf. [`<angle>`](/fr/docs/Web/CSS/Reference/Values/angle)) doit être compris entre `-90deg` et `90deg`. Si aucun angle n'est indiqué, la valeur par défaut utilisée sera `14deg`. Les valeurs positives correspondent à une pente où le haut des caractères penche vers la fin de la ligne et les valeurs négatives permettent d'obtenir une pente orientée vers le début de la ligne.
+- `oblique` {{CSSxRef("angle")}}
+  - : Sélectionne une police qualifiée d'`oblique` et indique l'angle à utiliser pour la pente du texte. Si plusieurs fontes sont disponibles pour la police, c'est la fonte avec la pente la plus proche qui est utilisée. Si aucune police oblique n'est disponible, le navigateur _synthétisera_ une police penchée en tournant les caractères d'une fonte normale. L'angle indiqué doit être compris entre `-90deg` et `90deg`. Si aucun angle n'est indiqué, la valeur par défaut utilisée sera `14deg`. Les valeurs positives correspondent à une pente où le haut des caractères penche vers la fin de la ligne et les valeurs négatives permettent d'obtenir une pente orientée vers le début de la ligne.
 
-    En général, si on utilise un angle de 14 degrés ou plus, des angles plus grands sont préférables&nbsp;; sinon, des angles plus petits sont préférables (voir [la section _Font Matching Algorithm_](https://drafts.csswg.org/css-fonts-4/#font-matching-algorithm) dans la spécification pour l'algorithme exact).
+    En général, si on utilise un angle de 14 degrés ou plus, des angles plus grands sont préférables&nbsp;; sinon, des angles plus petits sont préférables (voir [la section Font Matching Algorithm <sup>(angl.)</sup>](https://drafts.csswg.org/css-fonts-4/#font-matching-algorithm) dans la spécification pour l'algorithme exact).
 
 ### Polices variables
 
 Les polices variables permettent d'obtenir un contrôle fin sur la pente appliquée à la fonte. Pour cela, on pourra utiliser une police variable et `font-style` avec le mot-clé `oblique` suivi d'une valeur d'angle.
 
-Pour les polices variables TrueType ou OpenType, c'est l'axe de variation `"slnt"` qui est utilisé afin d'implémenter les variations de pente. C'est l'axe `"ital"` qui est utilisé avec une valeur de 1 pour implémenter les fontes italiques. Voir [`font-variation-settings`](/fr/docs/Web/CSS/Reference/Properties/font-variation-settings).
+Pour les polices variables TrueType ou OpenType, c'est l'axe de variation `"slnt"` qui est utilisé afin d'implémenter les variations de pente. C'est l'axe `"ital"` qui est utilisé avec une valeur de 1 pour implémenter les fontes italiques. Voir {{CSSxRef("font-variation-settings")}}.
 
-> [!NOTE]
-> Afin que l'exemple suivant fonctionne, votre navigateur doit prendre en charge la syntaxe _CSS Fonts Level 4_ qui permet d'utiliser `font-style: oblique` suivi d'un angle. Le code de démarrage utilise `font-style: oblique 23deg;` — modifiez la valeur `<angle>` pour changer la pente du texte.
+Cliquez sur «&nbsp;Exécuter&nbsp;» dans les blocs de code ci-dessous pour éditer l'exemple dans le MDN Playground. Modifiez la valeur de l'angle pour voir la pente du texte changer.
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/oblique.html", '100%', 860)}}
+```html live-sample___oblique-example
+<p class="exemple">
+  ...il ne serait pas étonnant de croiser un Mégalosaure, long d'une quarantaine
+  de pieds, se dandinant comme un lézard éléphantesque sur Holborn Hill.
+</p>
+```
 
-### Définition formelle
+```css live-sample___oblique-example
+@font-face {
+  src: url("https://mdn.github.io/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  font-family: "AmstelvarAlpha";
+  font-style: normal;
+}
 
-{{cssinfo}}
+.exemple {
+  font:
+    2rem "AmstelvarAlpha",
+    sans-serif;
+  /* font-variation-settings: "slnt" 12; */
+  font-style: oblique 23deg;
+}
+```
 
-### Syntaxe formelle
+{{EmbedLiveSample("oblique-example", "", 200)}}
 
-{{csssyntax}}
+## Accessibilité
+
+L'utilisation de grandes portions de textes avec `font-style: italic` peut rendre la lecture difficile pour les personnes dyslexiques ou ayant des troubles cognitifs.
+
+- [Comprendre le WCAG sur MDN, explications de la Règle 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.4_—_faciliter_la_perception_visuelle_et_auditive_du_contenu_notamment_en_séparant_le_premier_plan_de_larrière-plan)
+- [Comprendre le WCAG 2.2 de W3C <sup>(angl.)</sup>](https://w3c.github.io/wcag/guidelines/22/#visual-presentation)
+
+## Définition formelle
+
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
-### HTML
+### Styles de police
 
 ```html
 <p class="normal">Un paragraphe normal.</p>
 <p class="italic">Un paragraphe italique.</p>
 <p class="oblique">Un paragraphe oblique.</p>
 ```
-
-### CSS
 
 ```css
 .normal {
@@ -131,16 +158,7 @@ Pour les polices variables TrueType ou OpenType, c'est l'axe de variation `"slnt
 }
 ```
 
-### Résultat
-
-{{EmbedLiveSample('')}}
-
-## Accessibilité
-
-L'utilisation de grandes portions de textes avec `font-style: italic` peut rendre la lecture difficile pour les personnes dyslexiques ou ayant des troubles cognitifs.
-
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [_Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/WCAG21/#visual-presentation)
+{{EmbedLiveSample("Styles de police")}}
 
 ## Spécifications
 
@@ -152,5 +170,7 @@ L'utilisation de grandes portions de textes avec `font-style: italic` peut rendr
 
 ## Voir aussi
 
-- [`font-weight`](/fr/docs/Web/CSS/Reference/Properties/font-weight)
-- [Initiation à la mise en forme du texte](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals)
+- La propriété {{CSSxRef("font-family")}}
+- La propriété {{CSSxRef("font-weight")}}
+- L'attribut SVG {{SVGAttr("font-style")}}
+- [Apprendre&nbsp;: Mise en forme fondamentale du texte et des polices](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals)

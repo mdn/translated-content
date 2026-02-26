@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 06754bc607017d19a7f088df7d6b0b7b635cbe58
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state", "Learn_web_development/Core/Frameworks_libraries")}}
 
 Jusqu'à présent, notre application est monolithique. Avant de pouvoir en faire quelque chose, nous devons la scinder en composants gérables et descriptifs. React n'a pas de règles strictes sur ce qui est et n'est pas un composant&nbsp;: c'est à vous de décider&nbsp;! Dans cet article, nous allons vous montrer une façon judicieuse de diviser notre application en composants.
 
@@ -443,4 +443,4 @@ Avec cela, nous sommes _presque_ prêts à aborder l'interactivité dans notre a
 
 Nous voilà à la fin de cet article où nous avons approfondi la façon de décomposer notre application en composants et de traiter leur rendu efficacement. Nous allons maintenant examiner comment gérer les évènements dans React et commencer à ajouter de l'interactivité.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state", "Learn_web_development/Core/Frameworks_libraries")}}

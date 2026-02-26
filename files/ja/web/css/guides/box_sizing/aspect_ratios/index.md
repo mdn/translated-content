@@ -1,14 +1,14 @@
 ---
 title: アスペクト比の理解と設定
+short-title: アスペクト比
 slug: Web/CSS/Guides/Box_sizing/Aspect_ratios
-original_slug: Web/CSS/CSS_box_sizing/Understanding_aspect-ratio
 l10n:
-  sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-ページにレンダリングされるすべての要素は、高さと幅を持ち、したがって、幅と高さの比である{{glossary("aspect ratio", "アスペクト比")}}を持ちます。メディアオブジェクトの自然な寸法は、サイズ指定、拡大縮小、ズーム、境界を適用しないサイズであり、自然なサイズまたは{{glossary("intrinsic size", "内在サイズ")}}と呼ばれています。要素の内在サイズは、[ボックスサイズ指定](/ja/docs/Web/CSS/Guides/Box_sizing)のような整形ルールを適用したり、境界線、マージン、パディングの幅を設定したりするのではなく、要素自体によって決定されます。
+ページにレンダリングされるすべての要素は、高さと幅を持ち、したがって、幅と高さの比である{{glossary("aspect ratio", "アスペクト比")}}を持ちます。メディアオブジェクトの自然な寸法は、サイズ指定、拡大縮小、ズーム、境界を適用しないサイズであり、自然サイズまたは{{glossary("intrinsic size", "内在サイズ")}}と呼ばれています。要素の内在サイズは、[ボックスサイズ指定](/ja/docs/Web/CSS/Guides/Box_sizing)のような整形ルールを適用したり、境界線、マージン、パディングの幅を設定したりするのではなく、要素自体によって決定されます。
 
-サイトを開発するとき、要素の幅をビューポートまたは親コンテナーのサイズに対するパーセント値に設定し、それに比例して高さを変更することで、ビューポートのサイズに応じて特定のアスペクト比を維持できるようにしたいと思うことがよくあります。画像や動画のような置換要素の場合、特定のアスペクト比を維持することは{{glossary("responsive web design", "レスポンシブウェブデザイン")}}を作成するために必要なだけでなく、良いユーザー体験を提供するための重要な要素でもあります。資産のアスペクト比を設定することで、読み込み時の[ジャンク](/ja/docs/Learn_web_development/Extensions/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images)、すなわちページが描画された後にメディアが読み込まれたときに発生するレイアウトのずれであり、資産用の空間がが確保されていないため、再フローが発生することを防ぐことができます。
+サイトを開発するとき、要素の幅をビューポートまたは親コンテナーのサイズに対するパーセント値に設定し、それに比例して高さを変更することで、ビューポートのサイズに応じて特定のアスペクト比を維持できるようにしたいと思うことがよくあります。画像や動画のような置換要素の場合、特定のアスペクト比を維持することは{{glossary("responsive web design", "レスポンシブウェブデザイン")}}を作成するために必要なだけでなく、良いユーザー体験を提供するための重要な要素でもあります。資産のアスペクト比を設定することで、読み込み時の[ジャンク](/ja/docs/Learn_web_development/Extensions/Performance/Multimedia#レンダリング戦略_画像を読み込むときのジャンクの防止)、すなわちページが描画された後にメディアが読み込まれたときに発生するレイアウトのずれであり、資産用の空間がが確保されていないため、再フローが発生することを防ぐことができます。
 
 CSS を使用すると、置換された要素と置換されていない要素のサイズを縦横比に基づいて調整することができます。このガイドでは、`aspect-ratio` プロパティについて学び、置換された要素と置換されていない要素のアスペクト比について説明します。
 
@@ -74,9 +74,9 @@ div + div {
 
 高さと幅、またはインラインサイズとブロックサイズの両方が明示的に設定されている場合、`aspect-ratio` プロパティの値は無視されます。この場合、どの寸法も自動的にサイズ設定されることは許されません。優先サイズは明示的に設定されますので、`aspect-ratio` プロパティは何の効果もありません。インラインサイズとブロックサイズの両方を宣言した場合は、そちらが優先されます。
 
-置換要素では、どちらかの寸法に（`auto` 以外の）値を明示的に設定しない場合、どちらも既定で内在するサイズになります（`aspect-ratio` の値は適用されません）。`aspect-ratio` は、明示的に寸法が設定されていない非置換要素に適用されます。非置換要素は[内在的](/ja/docs/Glossary/Intrinsic_Size)または[外在的](/ja/docs/Glossary/Intrinsic_Size#外在的)のどちらかのサイズになり、コンテンツ、コンテナー、[ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)のプロパティなどからサイズを取得します。
+置換要素では、どちらかの寸法に（`auto` 以外の）値を明示的に設定しない場合、どちらも既定で内在サイズになります（`aspect-ratio` の値は適用されません）。`aspect-ratio` は、明示的に寸法が設定されていない非置換要素に適用されます。非置換要素は[内在](/ja/docs/Glossary/Intrinsic_Size)または[外因](/ja/docs/Glossary/Extrinsic_size)のどちらかのサイズになり、コンテンツ、コンテナー、[ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)のプロパティなどからサイズを取得します。
 
-要素がページにレンダリングされるとき、CSS が適用されず、HTML のサイズ属性も含まれていなければ、ユーザーエージェントはオブジェクトを自然なサイズでレンダリングします。
+要素がページにレンダリングされるとき、CSS が適用されず、HTML のサイズ属性も含まれていなければ、ユーザーエージェントはオブジェクトを自然サイズでレンダリングします。
 
 ## 置換要素のアスペクト比を調整する
 
@@ -96,7 +96,7 @@ div + div {
 
 置換コンテンツが auto でサイズ指定されている場合、または `width` に値を設定するなどして 1 つの寸法だけにサイズを指定した場合、ブラウザーはメディアの元の縦横比を維持したまま、もう 1 つの寸法（この場合は高さ）のサイズを自動的に変更します。
 
-この例では、{{cssxref("width")}} だけが画像に設定されているので、ユーザーエージェントはその縦横比を保持します。`55px`、`110px`、そして [`width: auto`](/ja/docs/Web/CSS/Reference/Properties/width) 値による自然なサイズである `220px` で表示されます。
+この例では、{{cssxref("width")}} だけが画像に設定されているので、ユーザーエージェントはその縦横比を保持します。`55px`、`110px`、そして [`width: auto`](/ja/docs/Web/CSS/Reference/Properties/width) 値による自然サイズである `220px` で表示されます。
 
 ```html hidden live-sample___image
 <img
@@ -172,20 +172,20 @@ CSS の {{cssxref("aspect-ratio")}} プロパティを使用して、1 つの寸
 
 ```css live-sample___stretch
 img {
-  height: 100vh;
+  height: 90vh;
   aspect-ratio: 3;
 }
 ```
 
-{{EmbedLiveSample("stretch", "100", "230")}}
+{{EmbedLiveSample("stretch", "100", "270")}}
 
 ここでは 1 つの次元のみを宣言しています。`100vh` は例の {{htmlelement("iframe")}} ビューポートの全高です。`aspect-ratio` が置換された要素に適用されるためには、1 つの次元のみを設定する必要があります。両方を設定しても、どちらも設定しても動作しません。
 
-### 置換要素をコンテナーに収める
+### 置換要素をコンテナーに合わせる
 
-本来の縦横比を維持したまま、置換要素をコンテナーの寸法に合わせるには、{{cssxref("object-fit")}} プロパティの値を `cover` または `contain` に設定します。これにより、置換要素はリサイズされ、コンテナーを「覆う」ようにクリップされるか、コンテナー内に完全に「収まる」ように小さなサイズで表示されます。
+本来の縦横比を維持したまま、置換要素をコンテナーの寸法に合わせるには、{{cssxref("object-fit")}} プロパティの値を `cover` または `contain` に設定します。これにより、置換要素はサイズが調整され、コンテナーを「覆う」ように切り取られるかされるか、コンテナー内に完全に「収まる」ように小さなサイズで表示されます。
 
-この例では、正方形の画像は 3 つのアイテムのグリッドに配置され、それぞれのアスペクト比は `5 / 2` である。
+この例では、正方形の画像が 3 つのアイテムのグリッドに配置されており、それぞれのアスペクト比は `5 / 2` です。
 
 まず始めに、3 つのアイテムを持つコンテナーを作成し、それぞれに画像を 1 つずつ入れます。
 
@@ -223,7 +223,7 @@ img {
 
 div div {
   aspect-ratio: 5 / 2;
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 ```
 
@@ -273,7 +273,7 @@ img {
   >
   - Shannon L. Alder
 </blockquote>
-<p>overflow 付きのアスペクト比:</p>
+<p>overflow 付きのアスペクト比指定:</p>
 <blockquote>
   <q
     >When you stop living your life based on what others think of you real life
@@ -295,7 +295,7 @@ img {
 
 ```css hidden live-sample___alder
 blockquote {
-  border: 3px dotted #ccc;
+  border: 3px dotted #cccccc;
   padding: 0 3px;
   margin: 20px 0;
   font-size: 1.25rem;
@@ -332,7 +332,7 @@ blockquote:nth-of-type(3) {
 
 {{EmbedLiveSample("alder", "100", "800")}}
 
-寸法を設定して、はみ出したコンテンツを非表示にすることで、非置換要素に縦横比を定義することは可能ですが、CSS {{cssxref("aspect-ratio")}} プロパティによって、明示的な縦横比を指定できます。これは、コンテンツや画面サイズがわからない場合でも、特定のアスペクト比を設定できることを意味します。
+寸法を設定して、はみ出したコンテンツを非表示にすることで、非置換要素に縦横比を定義することは可能ですが、CSS の {{cssxref("aspect-ratio")}} プロパティによって、明示的な縦横比を指定できます。これは、コンテンツや画面サイズがわからない場合でも、特定のアスペクト比を設定できることを意味します。
 
 次の例では、非置換要素である `aspect ratio: 1` を {{htmlelement("blockquote")}} に設定することで、テキストの幅に関係なく正方形のボックスを表示します。
 
@@ -352,7 +352,7 @@ blockquote {
 
 ```css hidden live-sample___words
 blockquote {
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   padding: 1px;
   margin: 20px 0;
   background-color: #ededed;
@@ -371,7 +371,7 @@ blockquote {
 
 この例では、コンテナーの {{htmlelement("div")}} の幅が `200px` で、各辺に `5px` のパディングが含まれています。したがって、コンテンツボックスのインラインサイズは `190px` となります。ネストされた {{htmlelement("p")}} 要素に高さや幅を設定しなくても、その行内サイズは `190px` であることがわかります。`aspect-ratio: 1` を設定すると、段落の高さは `190px` になります。目に見えるコンテンツがはみ出すと高さが大きくなるはずです（ここではそうなりません）。
 
-`<div>` 要素の高さは明示的に設定されていませんが、高さ `190px` の段落、`5px` の上下のパディング、`<p>` の既定の上下のマージンを合わせた高さを含んでいます。その結果、幅よりも高さが大きくなっています。どちらの要素も {{cssxref("border-radius")}} の値が `50%` であるため、コンテナーは楕円となります。子要素は `aspect-ratio` が `1` であるが、インラインまたはブロック方向の大きさが明示的に定義されていないため、円になります。
+`<div>` 要素の高さは明示的に設定されていませんが、高さ `190px` の段落、`5px` の上下のパディング、`<p>` の既定の上下のマージンを合わせた高さを含んでいます。その結果、幅よりも高さが大きくなっています。どちらの要素も {{cssxref("border-radius")}} の値が `50%` であるため、コンテナーは楕円となります。子要素は `aspect-ratio` が `1` ですが、インライン方向やブロック方向の大きさが明示的に定義されていないため、円になります。
 
 ```html live-sample___circle
 <div><p>Hello world</p></div>
@@ -386,13 +386,14 @@ p {
 div {
   width: 200px;
   padding: 5px;
+  border: 1px solid black;
   background-color: #66ccff;
 }
 
 p {
   aspect-ratio: 1;
   text-align: center;
-  border: 10px solid #ffffff;
+  border: 10px solid white;
   background-color: #f4aab9;
 }
 ```
@@ -402,28 +403,22 @@ p {
 `<div>` を円にするには、`height` と `width` を同じ値に設定するか、`aspect-ratio: 1` を設定し、`overflow` を `auto` または `hidden` に設定します。また、[`margin-block: 0`](/ja/docs/Web/CSS/Reference/Properties/margin-block) を使って段落のマージンを削除することもできます。これらのオプションを以下に示します。
 
 ```html live-sample___circle2
-<section>
-  <div><p>Hello world</p></div>
-  <div><p>Hello world</p></div>
-  <section></section>
-</section>
+<div><p>Hello world</p></div>
+<div><p>Hello world</p></div>
 ```
 
 ```css hidden live-sample___circle2
-section {
-  display: flex;
-  gap: 20px;
-}
-
 div {
   width: 200px;
   padding: 5px;
+  margin: 1rem;
+  border: 1px solid black;
   background-color: #66ccff;
 }
 
 p {
   text-align: center;
-  border: 10px solid #ffffff;
+  border: 10px solid white;
   background-color: #f4aab9;
 }
 ```
@@ -444,7 +439,7 @@ div:last-of-type p {
 }
 ```
 
-{{EmbedLiveSample("circle2", "100", "250")}}
+{{EmbedLiveSample("circle2", "100", "520")}}
 
 ## 主な `aspect-ratio` の用途
 
@@ -456,7 +451,7 @@ TikTok、YouTube、Instagram の動画など、サードパーティが埋め込
 
 {{htmlelement("video")}} 要素は通常メディアファイルのアスペクト比を採用しますが、`iframe` 要素にはこの機能がありません。このため、`<iframe>` 要素が含まれる動画のアスペクト比を常に維持しながら、レスポンシブであることを保証するという課題が生じます。使用できるテクニックの 1 つは、iframe の幅をそのコンテナーの `100%` または `100vw` に設定し、ビューポートのサイズに関係なくビューポートの幅に一致させることです。しかし、高さを固定にすると、動画が引き伸ばされたり、つぶされたりする可能性があります。代わりに、動画のコンテナーに `aspect-ratio` を設定し、動画と同じアスペクト比になるように配置します。問題は解決しました！
 
-ちなみに、デスクトップパソコンやノートパソコンで見る場合、YouTube 動画の標準的なアスペクト比は 16:9 だが、TikTok や Instagram の動画のアスペクト比は 9:16 である。
+ちなみに、デスクトップパソコンやノートパソコンで見る場合、YouTube 動画の標準的なアスペクト比は 16:9 ですが、TikTok や Instagram の動画のアスペクト比は 9:16 です。
 
 ```css
 .youtube {
@@ -507,11 +502,11 @@ iframe.tiktok {
 
 ### 正方形のグリッドセルを作成
 
-正方形のセルのグリッドは、[列トラックサイズ](/ja/docs/Web/CSS/Reference/Properties/grid-template-columns)を固定で定義し、各行が列トラックのサイズと確実に一致するようにすることで作成することができます。しかし、コンテナー内に可能な限り多くの列トラックを収めるために `auto-fill` を使用してレスポンシブグリッドを作成する場合、各項目の幅が不確かになります。そのため、正方形のアイテムを作成するための適切な高さを決定することが難しくなります。
+正方形のセルのグリッドは、[列トラックサイズ](/ja/docs/Web/CSS/Reference/Properties/grid-template-columns)を固定で定義し、各行が列トラックのサイズと確実に一致するようにすることで作成することができます。しかし、コンテナー内に可能な限り多くの列トラックを収めるために `auto-fill` を使用してレスポンシブグリッドを作成する場合、各アイテムの幅が不定になります。そのため、正方形のアイテムを作成するための適切な高さを決定することが難しくなります。
 
-アイテムにアスペクト比を設定することで、グリッドアイテムがレイアウトされたときに、各グリッドアイテムが幅と同じ高さになるように保証し、コンテナーの寸法に関係なく正方形のグリッドアイテムを作成します。
+アイテムにアスペクト比を設定することで、グリッドアイテムがレイアウトされたときに、各グリッドアイテムが幅と同じ高さになるように保証し、コンテナーの寸法に関係なく正方形のグリッドアイテムを作成することができます。
 
-正方形のグリッドアイテムのこの例では、グリッドのトラックは自動サイズになり、アイテムのサイズを取ります。各アイテムの幅は少なくとも `95px` ですが、もっと広くすることもできます。幅に関係なく、各アイテムは正方形になり、高さは幅と一致するように `aspect-ratio` によって決定されます。
+正方形のグリッドアイテムのこの例では、グリッドのトラックのサイズは自動になり、アイテムのサイズを取ります。各アイテムの幅は `95px` 以上ですが、もっと広くすることもできます。幅に関係なく、各アイテムは正方形になり、高さは幅と一致するように `aspect-ratio` によって決定されます。
 
 ```css
 .grid {
@@ -527,7 +522,7 @@ iframe.tiktok {
 ```css hidden
 div {
   gap: 20px;
-  font-size: 1.1;
+  font-size: 1.1rem;
 }
 
 div div {
@@ -547,13 +542,12 @@ div div::after {
 }
 ```
 
-```html hidden
+```html-nolint hidden
 <div class="grid">
   <div></div>
   <div></div>
   <div class="item">
-    This text would overflow the parent, but we've set properties to prevent it
-    from doing so.
+    このテキストは親要素からはみ出しますが、はみ出しを防ぐプロパティを設定しています。
   </div>
   <div></div>
   <div></div>
@@ -588,6 +582,10 @@ div div::after {
 ```
 
 {{EmbedLiveSample("making_grid_cells_square", "100", "380")}}
+
+## 仕様書
+
+{{Specifications}}
 
 ## 関連情報
 

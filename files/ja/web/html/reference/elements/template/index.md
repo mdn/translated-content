@@ -1,14 +1,11 @@
 ---
 title: "<template>: コンテンツテンプレート要素"
 slug: Web/HTML/Reference/Elements/template
-original_slug: Web/HTML/Element/template
 l10n:
-  sourceCommit: 5618052b7314a29552ff9e4331dd3da13dc19f5e
+  sourceCommit: a9747e75d39c8a1f8fe756278563e0d909dad379
 ---
 
-{{HTMLSidebar}}
-
-**`<template>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{Glossary("HTML")}} フラグメントを保持し、後で JavaScript を使用して使用したり、シャドウ DOM の中に即座に生成したりするためのメカニズムとして機能します。
+**`<template>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{Glossary("HTML")}} のフラグメントを保持し、後で JavaScript を使用して使用したり、シャドウ DOM の中に直接生成したりするためのメカニズムとして機能します。
 
 ## 属性
 
@@ -16,7 +13,7 @@ l10n:
 
 - `shadowrootmode`
   - : 親要素の[シャドウルート](/ja/docs/Glossary/Shadow_tree)を生成します。
-    これは {{domxref("Element.attachShadow()")}} メソッドの宣言版で、同じ {{glossary("enumerated")}} 値を受け入れます。
+    これは {{domxref("Element.attachShadow()")}} メソッドの宣言版で、同じ{{glossary("enumerated", "列挙")}}値を受け入れます。
     - `open`
       - : 内部シャドウルート DOM を JavaScript に公開します（ほとんどの用途で推奨）。
 
@@ -40,30 +37,37 @@ l10n:
     これが設定されていて、シャドウツリー内のフォーカス可能でない要素が選択されている場合、フォーカスはツリー内の最初のフォーカス可能な要素に譲られます。
     この値は `false` が既定値です。
 
-- `shadowrootserializable` {{experimental_inline}}
+- `shadowrootreferencetarget` {{Experimental_Inline}} {{non-standard_inline}}
+  - : この要素を使用して生成された [`ShadowRoot`](/ja/docs/Web/API/ShadowRoot) の `referenceTarget` プロパティの値を設定します。値はシャドウ DOM 内の要素の ID である必要があります。設定すると、シャドウ DOM 外からホスト要素への参照が行われた場合、参照された対象要素がホスト要素への参照の有効なターゲットとなります。
+
+- `shadowrootserializable`
   - : この要素を使用して作成した [`ShadowRoot`](/ja/docs/Web/API/ShadowRoot) の [`serializable`](/ja/docs/Web/API/ShadowRoot/serializable) プロパティの値を `true` に設定します。
     設定されている場合、シャドウルートは {{DOMxRef('Element.getHTML()')}} または {{DOMxRef('ShadowRoot.getHTML()')}} メソッドを、`options.serializableShadowRoots` 引数を `true` に設定して呼び出すことでシリアライズされます。
     この値は `false` が既定値です。
 
 ## 使用上のメモ
 
-`<template>` 要素の主な用途は 2 つあります。
+この要素には、許可されているコンテンツはありません。中に含まれる HTML ソースは、実際には `<template>` 要素の子になるわけではないからです。 `<template>` 要素の {{domxref("Node.childNodes")}} プロパティは常に空であり、内側のコンテンツのように見えるものにアクセスするには、特殊な {{domxref("HTMLTemplateElement.content", "content")}} プロパティを使用します。{{domxref("Node.appendChild()")}} または同様のメソッドを `<template>` 要素に対して呼び出すと、その `<template>` 要素自身の子を挿入することになり、コンテンツモデル違反となる上、実際には `content` プロパティから返される {{domxref("DocumentFragment")}} が更新されません。
+
+`<template>` 要素の構文解析の仕組み上、テンプレート内の `<html>`、`<head>`、`<body>` の開始タグおよび終了タグは、すべてパーサーから構文エラーとして無視されます。したがって、`<template><head><title>Test</title></head></template>` は `<template><title>Test</title></template>` と同等です。
+
+`<template>` 要素の用途は主に 2 つあります。
 
 ### テンプレート文書フラグメント
 
 既定では、要素のコンテンツはレンダリングされません。
-対応する {{domxref("HTMLTemplateElement")}} インターフェイスは標準で {{domxref("HTMLTemplateElement.content", "content")}} プロパティを含みます（同等の content/markup 属性はありません）。この `content` プロパティは読み取り専用で、テンプレートが表す DOM サブツリーを格納する {{domxref("DocumentFragment")}} を保持します。
-このフラグメントは {{domxref("Node.cloneNode", "cloneNode")}} メソッドで複製し、DOM に挿入することができます。
+対応する {{domxref("HTMLTemplateElement")}} インターフェイスは、標準で {{domxref("HTMLTemplateElement.content", "content")}} プロパティを含みます（同等の content/markup 属性はありません）。この `content` プロパティは読み取り専用で、テンプレートが表す DOM サブツリーを格納する {{domxref("DocumentFragment")}} を保持します。
 
-`content` プロパティを使用するときは、返値の `DocumentFragment` が予期せぬ挙動を示すことがあることに注意が必要です。
-詳細は下記の [DocumentFragment の落とし穴を避ける](#documentfragment_の落とし穴を避ける)節を参照してください。
+{{domxref("Node.cloneNode()")}} メソッドと {{domxref("Document.importNode()")}} メソッドはどちらもノードのコピーを生成します。違いは、`importNode()` が呼び出し元の文書のコンテキストでノードを複製するのに対し、`cloneNode()` は複製対象のノードが属する文書を使用する点です。文書コンテキストは、カスタム要素を構築するための {{domxref("CustomElementRegistry")}} を決定します。このため、`content` フラグメントを複製する際は `document.importNode()` を使用し、カスタム要素の子孫がテンプレートコンテンツを所有する別文書ではなく、現在の文書内の定義を使用して構築されるようにします。詳細は {{domxref("Node.cloneNode()")}} ページの例を参照してください。
+
+`DocumentFragment` コンテナーそのものにはデータを添付しないように注意してください。詳細は [DocumentFragment のデータはクローンされない](#documentfragment_のデータはクローンされない)の例を参照してください。
 
 ### 宣言的シャドウ DOM
 
 もし `<template>` 要素が [`shadowrootmode`](#shadowrootmode) 属性の値 `open` または `closed` を格納すると、HTML パーサーは直ちにシャドウ DOM を生成します。その要素は {{domxref("ShadowRoot")}} でラップされたコンテンツによって DOM 内で置き換えられ、親要素に装着されます。
 これは {{domxref("Element.attachShadow()")}} を呼び出して要素にシャドウルートを付けるのと宣言的に等価です。
 
-要素が `shadowrootmode` に他の値を示す場合、または `shadowrootmode` 属性を持たない場合、パーサは {{domxref("HTMLTemplateElement")}} を生成します。
+要素が `shadowrootmode` に他の値を示す場合、または `shadowrootmode` 属性を持たない場合、パーサーは {{domxref("HTMLTemplateElement")}} を生成します。
 同様に、宣言的シャドウルートが複数ある場合、最初のシャドウルートのみが {{domxref("ShadowRoot")}} で置き換えられ、それ以降は {{domxref("HTMLTemplateElement")}} オブジェクトとして解釈できます。
 
 ## 例
@@ -81,7 +85,7 @@ l10n:
     </tr>
   </thead>
   <tbody>
-    <!-- existing data could optionally be included here -->
+    <!-- 既存のデータは、必要に応じてここに含めることができます -->
   </tbody>
 </table>
 
@@ -98,7 +102,7 @@ l10n:
 表が生成され、テンプレートが定義されました。 JavaScript を使って、テンプレートを基に構築される各行を表に挿入します。
 
 ```js
-// templete 要素の content 属性の有無を確認することで、
+// template 要素の content 属性の有無を確認することで、
 // ブラウザーが HTML の template 要素に対応しているかテストします。
 if ("content" in document.createElement("template")) {
   // 既存の HTML tbody と template の行を使って
@@ -131,10 +135,10 @@ if ("content" in document.createElement("template")) {
 
 ```css hidden
 table {
-  background: #000;
+  background: black;
 }
 table td {
-  background: #fff;
+  background: white;
 }
 ```
 
@@ -146,7 +150,7 @@ table td {
 
 ```html
 <p hidden>
-  ⛔ Your browser doesn't support <code>shadowrootmode</code> attribute yet.
+  ⛔ このブラウザーはまだ <code>shadowrootmode</code> 属性に対応していません。
 </p>
 <article>
   <style>
@@ -171,8 +175,10 @@ table td {
 ```
 
 ```js
-const isShadowRootModeSupported =
-  HTMLTemplateElement.prototype.hasOwnProperty("shadowRootMode");
+const isShadowRootModeSupported = Object.hasOwn(
+  HTMLTemplateElement.prototype,
+  "shadowRootMode",
+);
 
 document
   .querySelector("p[hidden]")
@@ -187,7 +193,7 @@ document
 
 このコードでは、最初に `<template>` 要素に `shadowrootmode` 属性を用いて、`<div>` 要素の中にシャドウルートを宣言します。
 これにより、テキストを格納したフォーカスできない `<div>` と、フォーカスできる `<input>` 要素の両方が表示されます。
-また、[`:focus`](/ja/docs/Web/CSS/Reference/Selectors/:focus) を持つ要素を青にスタイル設定し、ホスト要素の通常のスタイル設定を設定するには CSS を使用します。
+また、{{cssxref(":focus")}} を持つ要素を青にスタイル設定し、ホスト要素の通常のスタイル設定を設定するには CSS を使用します。
 
 ```html
 <div>
@@ -203,13 +209,13 @@ document
         outline: 2px solid blue;
       }
     </style>
-    <div>Clickable Shadow DOM text</div>
-    <input type="text" placeholder="Input inside Shadow DOM" />
+    <div>クリック可能なシャドウ DOM テキスト</div>
+    <input type="text" placeholder="シャドウ DOM 内の入力" />
   </template>
 </div>
 ```
 
-2 つ目のコードブロックは、`shadowrootdelegatesfocus` 属性を設定している以外は同じです。この属性は、ツリー内のフォーカス可能でない要素が選択された場合に、ツリー内の最初のフォーカス可能な要素にフォーカスを譲ったものです。
+2 つ目のコードブロックは、`shadowrootdelegatesfocus` 属性を設定している以外は同じです。この属性は、ツリー内のフォーカス可能でない要素が選択された場合に、ツリー内の最初のフォーカス可能な要素にフォーカスを譲るものです。
 
 ```html
 <div>
@@ -225,13 +231,13 @@ document
         outline: 2px solid blue;
       }
     </style>
-    <div>Clickable Shadow DOM text</div>
-    <input type="text" placeholder="Input inside Shadow DOM" />
+    <div>クリック可能なシャドウ DOM テキスト</div>
+    <input type="text" placeholder="シャドウ DOM 内の入力" />
   </template>
 </div>
 ```
 
-最後に、以下の CSS を使用して、親要素である `<div>` にフォーカスがあるときに緑黄色の枠線を適用します。
+最後に、以下の CSS を使用して、親要素である `<div>` にフォーカスがあるときに赤の枠線を適用します。
 
 ```css
 div:focus {
@@ -250,7 +256,7 @@ HTML は最初にレンダリングされるとき、最初の画像に示すよ
 
 ![要素にフォーカスがあるコードの画面ショット](template_with_focus.png)
 
-## DocumentFragment の落とし穴の回避
+## DocumentFragment のデータはクローンされない
 
 {{domxref("DocumentFragment")}} の値が渡されると、{{domxref("Node.appendChild")}} や同様のメソッドはその値の子ノードだけを対象とするノードに移動させます。したがって、イベントハンドラーは `DocumentFragment` 自体ではなく、`DocumentFragment` の子ノードに設定することが推奨されます。
 
@@ -276,11 +282,11 @@ function clickHandler(event) {
   event.target.append(" — この div がクリックされました");
 }
 
-const firstClone = template.content.cloneNode(true);
+const firstClone = document.importNode(template.content, true);
 firstClone.addEventListener("click", clickHandler);
 container.appendChild(firstClone);
 
-const secondClone = template.content.cloneNode(true);
+const secondClone = document.importNode(template.content, true);
 secondClone.children[0].addEventListener("click", clickHandler);
 container.appendChild(secondClone);
 ```
@@ -289,7 +295,7 @@ container.appendChild(secondClone);
 
 `firstClone` は `DocumentFragment` なので、`appendChild` が呼び出されたときに `container` に追加されるのはその子ノードだけで、`firstClone` のイベントハンドラーはコピーされません。一方、`secondClone` は最初の子ノードにイベントハンドラーが追加されているため、`appendChild` が呼び出されるとイベントハンドラーがコピーされ、クリックすると期待通りに動作します。
 
-{{EmbedLiveSample('Avoiding_DocumentFragment_pitfall')}}
+{{EmbedLiveSample(' Data on the DocumentFragment is not cloned')}}
 
 ## 技術的概要
 
@@ -297,18 +303,28 @@ container.appendChild(secondClone);
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ">メタデータコンテンツ</a>,
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>,
-        <a href="/ja/docs/Web/HTML/Content_categories#スクリプト対応要素">スクリプト対応要素</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#メタデータコンテンツ"
+          >メタデータコンテンツ</a
+        >,
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >,
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >,
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#スクリプト対応要素"
+          >スクリプト対応要素</a
+        >
       </td>
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
-      <td>制限なし</td>
+      <td>なし（<a href="#使用上のメモ">使用上のメモ</a>を参照）</td>
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
@@ -317,16 +333,22 @@ container.appendChild(secondClone);
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ">メタデータコンテンツ</a>,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>,
-        <a href="/ja/docs/Web/HTML/Content_categories#スクリプト対応要素">スクリプト対応要素</a>
-        を受け付けるすべての要素。また、 <a href="/ja/docs/Web/HTML/Element/colgroup#span"><code>span</code></a> 属性を持たない {{HTMLElement("colgroup")}} 要素の子になることもできます。
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#メタデータコンテンツ"
+          >メタデータコンテンツ</a
+        >,
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >,
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#スクリプト対応要素"
+          >スクリプト対応要素</a
+        > を受け付けるすべての要素。
+        また、<a href="/ja/docs/Web/HTML/Reference/Elements/colgroup#span"><code>span</code></a> 属性を持たない {{HTMLElement("colgroup")}} 要素の子になることもできます。
       </td>
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">対応するロールなし</a>
       </td>
     </tr>
     <tr>
@@ -352,10 +374,10 @@ container.appendChild(secondClone);
 
 - [`part`](/ja/docs/Web/HTML/Reference/Global_attributes/part) および [`exportparts`](/ja/docs/Web/HTML/Reference/Global_attributes/exportparts) 属性
 - {{HTMLElement("slot")}} 要素
-- {{CSSXref(":host")}}、{{CSSXref(":host_function", ":host()")}}、{{CSSXref(":host-context", ":host-context()")}} 擬似クラス
+- {{CSSXref(":host")}}、{{cssxref(":host()")}}、{{cssxref(":host-context()")}} 擬似クラス
 - {{CSSXref("::part")}}、{{CSSXref("::slotted")}} 擬似要素
 - [`ShadowRoot`](/ja/docs/Web/API/ShadowRoot) インターフェイス
 - [テンプレートとスロットの使用](/ja/docs/Web/API/Web_components/Using_templates_and_slots)
-- [CSS スコープ化](/ja/docs/Web/CSS/Guides/Scoping) モジュール
+- [CSS スコープ化](/ja/docs/Web/CSS/Guides/Scoping)モジュール
 - [宣言的シャドウ DOM （HTML による）](/ja/docs/Web/API/Web_components/Using_shadow_DOM#declaratively_with_html) （シャドウ DOM の使用）
-- [Declarative shadow DOM](https://web.dev/articles/declarative-shadow-dom) (developer.chrome.com, 2023)
+- [Declarative shadow DOM](https://web.dev/articles/declarative-shadow-dom) (web.dev, 2023)

@@ -134,7 +134,7 @@ Utilisez uniquement {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLEl
 </table>
 ```
 
-Ci‑dessus, la manière sémantique d'écrire un tableau. Les rôles ARIA ne sont nécessaires que si la sémantique native du tableau (et donc des en‑têtes de lignes) est supprimée, par exemple en appliquant la [propriété `display` à `flex` ou `grid`](/fr/docs/Web/CSS/Reference/Properties/display#accessibilit%C3%A9).
+Ci‑dessus, la manière sémantique d'écrire un tableau. Les rôles ARIA ne sont nécessaires que si la sémantique native du tableau (et donc des en‑têtes de lignes) est supprimée, par exemple en appliquant la [propriété `display` à `flex` ou `grid`](/fr/docs/Web/CSS/Reference/Properties/display#accessibilité).
 
 ### Bénéfices supplémentaires
 

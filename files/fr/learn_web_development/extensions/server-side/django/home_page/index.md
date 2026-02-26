@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Home_page
 original_slug: Learn/Server-side/Django/Home_page
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Le travail préparatoire pour nous permettre de créer une page d'accueil pour le site web de [la bibliothèque locale](/fr/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) est réalisé. La page d'accueil montera le nombre d'enregistrements pour chacun des objets décrits dans la base et les liens à l'aide d'une barre latérale de navigation. Dans la progression de l'article, nous apprendrons à gérer les vues et à présenter les données à l'aide de gabarits.
 
@@ -17,7 +17,7 @@ Le travail préparatoire pour nous permettre de créer une page d'accueil pour l
           >introduction</a
         >
         à cette série didactique et les sections précédentes y compris celle sur
-        <a href="/fr/docs/Learn/Server-side/Django/Admin_site"
+        <a href="/fr/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site"
           >le site d'administration</a
         >
         du site web.
@@ -423,4 +423,4 @@ Nous allons nous appuyer sur ces éléments pour concevoir dans le prochain chap
 - [Gestion des fichiers statiques](https://docs.djangoproject.com/fr/2.2/howto/static-files/) (Django docs)
 - [Fonctions raccourcis de Django](https://docs.djangoproject.com/fr/2.2/topics/http/shortcuts/#django.shortcuts.render) (Django docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn_web_development/Extensions/Server-side/Django")}}

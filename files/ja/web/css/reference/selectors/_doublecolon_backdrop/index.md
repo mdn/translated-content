@@ -1,10 +1,11 @@
 ---
 title: ::backdrop
 slug: Web/CSS/Reference/Selectors/::backdrop
-original_slug: Web/CSS/::backdrop
+l10n:
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
-[CSS](/ja/docs/Web/CSS) の **`::backdrop`** [擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)は、何らかの要素が全画面モード ({{glossary("top layer")}}) で表示される直下に直接表示される {{Glossary("viewport")}} の寸法のボックスです。
+**`::backdrop`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、何らかの要素が全画面モード（{{glossary("top layer", "最上位レイヤー")}}）で表示される直下に直接表示される{{Glossary("viewport", "ビューポート")}}の寸法のボックスです。
 
 {{InteractiveExample("CSS デモ: ::backdrop", "tabbed-shorter")}}
 
@@ -19,13 +20,13 @@ dialog::backdrop {
 }
 ```
 
-```html interactive-example
-<button id="showDialogBtn">Show a dialog</button>
+```html-nolint interactive-example
+<button id="showDialogBtn">ダイアログを表示</button>
 
 <dialog id="favDialog">
   <form method="dialog">
-    <p>The background shown outside of this dialog is a backdrop.</p>
-    <button id="confirmBtn">Close the dialog</button>
+    <p>このダイアログの外側に表示される背景がバックドロップです。</p>
+    <button id="confirmBtn">ダイアログを閉じる</button>
   </form>
 </dialog>
 ```
@@ -45,32 +46,32 @@ showDialogBtn.addEventListener("click", () => favDialog.showModal());
 }
 ```
 
-## 説明
+## 解説
 
-Backdrop は以下の状況で現れます。
+バックドロップは以下の状況で現れます。
 
-- [Fullscreen API](/ja/docs/Web/API/Fullscreen_API) の {{domxref("Element.requestFullscreen()")}} メソッドを使用した全画面モードに配置される要素
+- [全画面 API](/ja/docs/Web/API/Fullscreen_API) の {{domxref("Element.requestFullscreen()")}} メソッドを使用した全画面モードに配置される要素
 - {{domxref("HTMLDialogElement.showModal()")}} の呼び出しにより最上位レイヤーで表示される {{HTMLElement("dialog")}} 要素
-- {{domxref("HTMLElement.showPopover()")}} の呼び出しにより最上位レイヤーで表示される {{domxref("Popover API", "Popover", "", "nocode")}} の要素
+- {{domxref("HTMLElement.showPopover()")}} の呼び出しにより最上位レイヤーで表示される{{domxref("Popover API", "ポップオーバー", "", "nocode")}}要素
 
-全画面モードで複数の要素が配置されたときは、それぞれに自身の `::backdrop` 疑似要素があります。
+全画面モードで複数の要素が配置されたときは、それぞれに自身の `::backdrop` 擬似要素があります。
 
 ```css
-/* backdrop はダイアログが dialog.showModal() で開いている時のみ表示されます */
+/* バックドロップはダイアログが dialog.showModal() で開いている時のみ表示されます */
 dialog::backdrop {
   background: rgb(255 0 0 / 25%);
 }
 ```
 
-すべての全画面要素は、最上位レイヤー、すなわちビューポートで常にコンテンツが画面に描画される前に最後に (すなわち最上位に) 描画される特殊なレイヤーの中で、後入れ先出し (LIFO) で配置されます。`::backdrop` 擬似要素は、最上位レイヤーの一番上に来たときに、その下に位置するものをぼかしたり、スタイル付けしたり、完全に隠したりすることができます。
+要素は最上位レイヤーに後入れ先出し (LIFO) スタックとして最上位レイヤーに配置されます。`::backdrop` 擬似要素により、最上位レイヤー要素の下記にあるすべての要素を覆い隠したり、スタイルを適用したり、完全に非表示にしたりすることが可能となります。
 
 `::backdrop` 擬似要素はどの要素にも継承せず、どの要素からも継承しません。この擬似要素に適用するプロパティの制限はありません。
 
 ## 例
 
-### モーダルダイアログの backdrop のスタイル付け
+### モーダルダイアログのバックドロップのスタイル設定
 
-この例では、`::backdrop` 擬似要素を使用して、モーダルで {{htmlelement("dialog")}} が開いているときの backdrop をスタイル付けします。
+この例では、`::backdrop` 擬似要素を使用して、モーダルで {{htmlelement("dialog")}} が開いているときのバックドロップをスタイル設定します。
 
 #### HTML
 
@@ -79,24 +80,24 @@ dialog::backdrop {
 ```html
 <dialog>
   <button autofocus>閉じる</button>
-  <p>このモーダルダイアログには美しい backdrop があります！</p>
+  <p>このモーダルダイアログには美しいバックドロップがあります！</p>
 </dialog>
-<button>ダイアログを表示する</button>
+<button>ダイアログを表示</button>
 ```
 
 #### CSS
 
-[CSS グラデーション](/ja/docs/Web/CSS/Reference/Values/gradient)を使用してカラフルなドーナツを作成し、backdrop に背景を追加します。
+[CSS グラデーション](/ja/docs/Web/CSS/Reference/Values/gradient)を使用してカラフルなドーナツを作成し、バックドロップに背景を追加します。
 
 ```css
 ::backdrop {
   background-image:
     radial-gradient(
       circle,
-      #fff 0 5vw,
+      white 0 5vw,
       transparent 5vw 20vw,
-      #fff 20vw 22.5vw,
-      #eee 22.5vw
+      white 20vw 22.5vw,
+      #eeeeee 22.5vw
     ),
     conic-gradient(
       #272b66 0 50grad,
@@ -147,7 +148,7 @@ closeButton.addEventListener("click", () => {
 
 ## 関連情報
 
-- {{cssxref(":fullscreen")}} 疑似クラス
+- {{cssxref(":fullscreen")}} 擬似クラス
 - {{HTMLElement("dialog")}} HTML 要素
 - [全画面 API](/ja/docs/Web/API/Fullscreen_API)
 - [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) HTML グローバル属性

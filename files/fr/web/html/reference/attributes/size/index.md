@@ -7,9 +7,9 @@ l10n:
   sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-L'attribut **`size`** définit la largeur de l'élément HTML {{HTMLElement('input')}} et la hauteur de l'élément {{HTMLElement('select')}}. Pour un élément `input`, il définit le nombre de caractères que l'agent utilisateur permet à l'utilisateur·ice de voir lors de la modification de la valeur. Pour un élément `select`, il définit le nombre d'options qui doivent être affichées à l'utilisateur·ice. Il doit s'agir d'un entier non négatif valide supérieur à zéro.
+L'attribut **`size`** définit la largeur de l'élément HTML {{HTMLElement("input")}} et la hauteur de l'élément {{HTMLElement("select")}}. Pour un élément `input`, il définit le nombre de caractères que l'agent utilisateur permet à l'utilisateur·ice de voir lors de la modification de la valeur. Pour un élément `select`, il définit le nombre d'options qui doivent être affichées à l'utilisateur·ice. Il doit s'agir d'un entier non négatif valide supérieur à zéro.
 
-Si aucun `size` n'est défini, ou si une valeur invalide est spécifiée, l'entrée n'a pas de taille déclarée et le contrôle de formulaire aura la largeur par défaut selon l'agent utilisateur. Si du CSS cible l'élément avec des propriétés impactant la largeur, le CSS prévaut.
+Si aucun `size` n'est défini, ou si une valeur invalide est définie, l'entrée n'a pas de taille déclarée et le contrôle de formulaire aura la largeur par défaut selon l'agent utilisateur. Si du CSS cible l'élément avec des propriétés impactant la largeur, le CSS prévaut.
 
 L'attribut `size` n'a aucun impact sur la validation des contraintes.
 
@@ -64,7 +64,7 @@ En ajoutant `size` sur certains types d'entrée, la largeur de l'entrée peut ê
 </select>
 ```
 
-{{EmbedLiveSample('Exemples', '100%', 200)}}
+{{EmbedLiveSample("Exemples", "100%", 200)}}
 
 ## Spécifications
 

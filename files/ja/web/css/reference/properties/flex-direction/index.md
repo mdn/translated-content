@@ -1,9 +1,8 @@
 ---
 title: flex-direction
 slug: Web/CSS/Reference/Properties/flex-direction
-original_slug: Web/CSS/flex-direction
 l10n:
-  sourceCommit: 92447fec056cc89b7f28445851bea0c981fcbc12
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`flex-direction`** は [CSS](/ja/docs/Web/CSS) のプロパティで、主軸の方向や向き（通常または逆方向）を定義することにより、フレックスコンテナー内でフレックスアイテムを配置する方法を設定します。
@@ -178,5 +177,5 @@ flex-direction: unset;
 ## 関連情報
 
 - {{CSSXRef("flex-flow")}} は `flex-direction` および {{CSSXRef("flex-wrap")}} プロパティの一括指定プロパティです。
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)_
-- CSS フレックスボックスガイド: _[フレックスアイテムの順序](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)_
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [フレックスアイテムの順序](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)

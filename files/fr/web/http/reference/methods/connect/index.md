@@ -2,7 +2,6 @@
 title: Méthode de requête CONNECT
 short-title: CONNECT
 slug: Web/HTTP/Reference/Methods/CONNECT
-original_slug: Web/HTTP/Methods/CONNECT
 l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---

@@ -1,12 +1,11 @@
 ---
 title: blur()
 slug: Web/CSS/Reference/Values/filter-function/blur
-original_slug: Web/CSS/filter-function/blur
 l10n:
-  sourceCommit: c0f1aecaed48d75652c6dd97f30c7febd07e5cde
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**`blur()`** は [CSS](/ja/docs/Web/CSS) の関数で、入力画像に[ガウシアンぼかし](https://ja.wikipedia.org/wiki/%E3%82%AC%E3%82%A6%E3%82%B7%E3%82%A2%E3%83%B3%E3%81%BC%E3%81%8B%E3%81%97)を適用します。返値は {{cssxref("&lt;filter-function&gt;")}} です。
+**`blur()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、入力画像に[ガウスぼかし](https://ja.wikipedia.org/wiki/%E3%82%AC%E3%82%A6%E3%82%B7%E3%82%A2%E3%83%B3%E3%81%BC%E3%81%8B%E3%81%97)を適用します。返値は {{cssxref("filter-function")}} です。
 
 {{InteractiveExample("CSS デモ: blur()")}}
 
@@ -34,24 +33,18 @@ filter: blur(1.5rem);
 
 ## 構文
 
-`blur()` 関数は、適用された要素にガウスぼかしを適用します。
-
 ```css
-blur(radius)
+blur()         /* 効果なし */
+blur(0)        /* 効果なし */
+
+blur(8px)      /* 半径 8px のぼかし */
+blur(1.17rem)  /* 半径 1.17rem のぼかし */
 ```
 
 ### 引数
 
-- `radius`
-  - : ぼかしの半径で、 {{cssxref("&lt;length&gt;")}} で指定します。ガウス関数の標準偏差の値を定義します。つまり、画面上のピクセルをいくつ互いに混合するかということです。すなわち、大きい値になるほどよりぼかしが入ります。 `0` の値は入力を変更しません。{{Glossary("interpolation","補間")}}時の欠損値は `0` です。
-
-### ピクセル数と rem を用いた blur の設定
-
-```css
-blur(0)        /* 効果なし */
-blur(8px)      /* 半径 8px でぼかす */
-blur(1.17rem)  /* 半径 1.17rem でぼかす */
-```
+- {{cssxref("length")}} {{Optional_Inline}}
+  - : ぼかしの半径を指定します。ガウス関数の標準偏差の値を定義します。つまり、画面上のピクセルをいくつ互いに混合するかということです。すなわち、大きい値になるほどよりぼけます。`0` の値は入力を変更しません。{{Glossary("interpolation","補間")}}時の欠損値は `0` です。パーセント値は無効です。デフォルト値は `0` です。
 
 ## SVG フィルター
 
@@ -69,9 +62,13 @@ SVG の {{SVGElement("feGaussianBlur")}} フィルター要素もコンテンツ
 
 ```css
 filter: blur(1.1px);
-filter: url(#blur11); /* 埋め込み SVG による */
-filter: url(folder/fileName.svg#blur11); /* 外部の SVG フィルター定義 */
+filter: url("#blur11"); /* 埋め込み SVG による */
+filter: url("folder/fileName.svg#blur11"); /* 外部の SVG フィルター定義 */
 ```
+
+## 形式文法
+
+{{CSSSyntax}}
 
 ## 例
 
@@ -91,7 +88,7 @@ filter: url(folder/fileName.svg#blur11); /* 外部の SVG フィルター定義 
   <image
     href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
     xlink:href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-    filter="url(#blur)" />
+    filter="url('#blur')" />
 </svg>
 ```
 
@@ -99,10 +96,15 @@ filter: url(folder/fileName.svg#blur11); /* 外部の SVG フィルター定義 
 svg:not([height]) {
   display: none;
 }
+
+th,
+td {
+  padding: 5px;
+}
 ```
 
 ```html hidden
-<table cellpadding="5">
+<table>
   <thead>
     <tr>
       <th>ライブサンプル</th>
@@ -119,14 +121,14 @@ svg:not([height]) {
           alt="Pride flag" />
       </td>
       <td>
-        <svg id="svg" height="220" width="220" style="overflow: visible">
+        <svg id="svg" height="220" width="220" overflow="visible">
           <filter id="svgBlur">
             <feGaussianBlur stdDeviation="3.5" />
           </filter>
           <image
             href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
             xlink:href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-            filter="url(#svgBlur)" />
+            filter="url('#svgBlur')" />
         </svg>
       </td>
       <td>
@@ -152,7 +154,7 @@ svg:not([height]) {
 ## 関連情報
 
 - [CSS フィルター効果](/ja/docs/Web/CSS/Guides/Filter_effects)モジュール
-- その他の {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティの値で使用できる {{cssxref("&lt;filter-function&gt;")}} 関数には、次のものがあります。
+- その他の {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティの値で使用できる {{cssxref("filter-function")}} 関数には、次のものがあります。
   - {{cssxref("filter-function/brightness", "brightness()")}}
   - {{cssxref("filter-function/contrast", "contrast()")}}
   - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}

@@ -10,7 +10,7 @@ l10n:
 
 **`<marquee>`** は [HTML](/ja/docs/Web/HTML) の要素で、テキストがスクロールする領域を挿入します。要素の属性を使用して、テキストがコンテンツ領域の端に達したときにどうするかを制御できます。
 
-HTML の `<marquee>` 要素は非推奨であり、使用は極力避けるべきです。 テキストや連続する要素をスクロールさせる必要がある場合は、 [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)を [CSS 座標変換](/ja/docs/Web/CSS/Guides/Transforms/Using)と組み合わせて `<marquee>` 要素の代わりに使用すると、コンテンツをスムーズにアニメーションできますので、こちらを検討してください。さらに、 CSS の {{cssxref("@media")}} で [`prefers-reduced-motion`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) クエリーを含めることで、ユーザーの好みに応じてアニメーションを停止できるようにすると、使いやすさとアクセシビリティの改善につながります。
+HTML の `<marquee>` 要素は非推奨であり、使用は極力避けるべきです。 テキストや連続する要素をスクロールさせる必要がある場合は、 [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)を [CSS 座標変換](/ja/docs/Web/CSS/Guides/Transforms/Using)と組み合わせて `<marquee>` 要素の代わりに使用すると、コンテンツをスムーズにアニメーションできますので、こちらを検討してください。さらに、 CSS の {{cssxref("@media")}} で {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} クエリーを含めることで、ユーザーの好みに応じてアニメーションを停止できるようにすると、使いやすさとアクセシビリティの改善につながります。
 
 ## 属性
 

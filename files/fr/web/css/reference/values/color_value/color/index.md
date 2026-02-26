@@ -24,7 +24,7 @@ color(from #123456 xyz calc(x + 0.75) y calc(z - 0.35))
 
 ### Valeurs
 
-Vous trouverez ci-dessous la description des valeurs autorisées pour les couleurs absolues et [relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors).
+Vous trouverez ci-dessous la description des valeurs autorisées pour les couleurs absolues et [relatives](/fr/docs/Web/CSS/Guides/Colors/Relative_colors).
 
 #### Syntaxe de valeur absolue
 
@@ -377,7 +377,7 @@ Le résultat est le suivant&nbsp;:
 
 - La propriété {{CSSXref("color")}}
 - [Le type de donnée `<color>`](/fr/docs/Web/CSS/Reference/Values/color_value) pour la liste de toutes les notations de couleur
-- [Utiliser les couleurs relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors)
+- [Utiliser les couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Relative_colors)
 - [Outil de conversion de format de couleur](/fr/docs/Web/CSS/Guides/Colors/Color_format_converter)
 - [Module des couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)
 - Fonctionnalité média [`color-gamut`](/fr/docs/Web/CSS/Reference/At-rules/@media/color-gamut)

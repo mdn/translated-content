@@ -45,7 +45,7 @@ slug: Mozilla/Firefox/Releases/23
 
 - L'effet blink pour `text-decoration: blink;` n'a plus d'effet, mais c'est encore une valeur valide ([bug Firefox 857820](https://bugzil.la/857820)).
 - Les pseudo-éléments {{cssxref("::after")}} et {{cssxref("::before")}} sont désormais des objets flexibles ([bug Firefox 867454](https://bugzil.la/867454)).
-- La façon de calculer les [unités viewport](/fr/docs/Web/CSS/Reference/Values/length#longueurs_li.c3.a9es_au_viewport) a été changée. en liaison avec `overflow:auto`, l'espace occupé par d'éventuelles barres de défilement n'est pas soustrait de la fenêtre, alors que dans le cas de `overflow:scroll`, ça l'est ([bug Firefox 811403](https://bugzil.la/811403)).
+- La façon de calculer les [unités viewport](/fr/docs/Web/CSS/Reference/Values/length#longueurs_liées_au_viewport) a été changée. en liaison avec `overflow:auto`, l'espace occupé par d'éventuelles barres de défilement n'est pas soustrait de la fenêtre, alors que dans le cas de `overflow:scroll`, ça l'est ([bug Firefox 811403](https://bugzil.la/811403)).
 
 ### MathML
 

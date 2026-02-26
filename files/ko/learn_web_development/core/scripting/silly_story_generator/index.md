@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Scripting/Arrays", "conflicting/Learn_web_development/Core/Scripting")}}
 
 이 모듈에서 배운 지식들을 바탕으로 랜덤하게 꾸며진 이야기(silly stories)가 만들어지는 재미있는 앱을 만들어 볼거에요. 즐겨봅시다!
 
@@ -117,4 +117,4 @@ l10n:
    - 평가 받거나 도움이 필요한 예제에 대한 온라인 공유 가능 편집기 링크(위 1단계에서 설명한 대로)가 필요합니다. 코드를 볼 수 없다면 코딩 문제가 있는 사람을 도와주기가 매우 어렵기 때문에 이 방법을 사용하는 것이 좋습니다.
    - 실제 과제 또는 평가 페이지로 연결되는 링크로, 도움을 받고자 하는 문제를 찾을 수 있습니다.
 
-{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+{{PreviousMenu("Learn_web_development/Core/Scripting/Arrays", "conflicting/Learn_web_development/Core/Scripting")}}

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 458eb9af74287fd15ef8ba9f4ba9aa3423c4cac3
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn/CSS/Building_blocks/Organizing", "Learn_web_development/Core/Styling_basics")}}
 
 Lorsqu'on écrit du CSS, on peut rencontrer certaines situations où le CSS ne fait pas vraiment ce qu'on attend de lui. Que faire quand rien ne se passe alors qu'un sélecteur devrait cibler un élément&nbsp;? Pourquoi une boîte est-elle d'une taille différente que celle souhaitée&nbsp;? Dans cet article, nous vous guiderons pour le débogage des problèmes CSS et l'utilisation des outils de développement des navigateurs pour le diagnostic.
 
@@ -180,4 +180,4 @@ Et voilà, nous avons vu une introduction au débogage de CSS qui devrait vous d
 
 Dans le dernier article de ce module, nous verrons comment [organiser votre code CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing).
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn/CSS/Building_blocks/Organizing", "Learn_web_development/Core/Styling_basics")}}

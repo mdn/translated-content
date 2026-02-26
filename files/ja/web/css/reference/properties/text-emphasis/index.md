@@ -1,9 +1,8 @@
 ---
 title: text-emphasis
 slug: Web/CSS/Reference/Properties/text-emphasis
-original_slug: Web/CSS/text-emphasis
 l10n:
-  sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`text-emphasis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 (空白や制御文字を除く) テキストに圏点を適用します。これは {{cssxref("text-emphasis-style")}} と {{cssxref("text-emphasis-color")}} の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)です。
@@ -26,12 +25,10 @@ text-emphasis: "x";
 text-emphasis: filled double-circle #ffb703;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section id="default-example">
   <p>
-    I'd far rather be
-    <span class="transition-all" id="example-element">happy than right</span>
-    any day.
+    いつでも、<span class="transition-all" id="example-element">正しいことより幸せ</span>である方がはるかに良い。
   </p>
 </section>
 ```
@@ -53,8 +50,8 @@ p {
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`text-emphasis-color`](/ja/docs/Web/CSS/Reference/Properties/text-emphasis-color)
-- [`text-emphasis-style`](/ja/docs/Web/CSS/Reference/Properties/text-emphasis-style)
+- {{cssxref("text-emphasis-color")}}
+- {{cssxref("text-emphasis-style")}}
 
 ## 構文
 
@@ -66,7 +63,7 @@ text-emphasis: none; /* 圏点なし */
 text-emphasis: "x";
 text-emphasis: "点";
 text-emphasis: "\25B2";
-text-emphasis: "*" #555;
+text-emphasis: "*" #555555;
 text-emphasis: "foo"; /* 使用するべきではない。 'f' のみとして計算や表示が行われる */
 
 /* キーワード値 */
@@ -76,7 +73,7 @@ text-emphasis: filled sesame;
 text-emphasis: open sesame;
 
 /* 色と組み合わせたキーワード値 */
-text-emphasis: filled sesame #555;
+text-emphasis: filled sesame #555555;
 
 /* グローバル値 */
 text-emphasis: inherit;
@@ -105,9 +102,9 @@ text-emphasis: unset;
 - `sesame`
   - : 記号としてゴマを表示します。filled sesame は `'﹅'` (`U+FE45`)、open sesame は`'﹆'` (`U+FE46`) です。これは、他の図形が与えられていない場合、縦書きモードで既定の形状です。
 - `<string>`
-  - : 記号として文字列を表示します。 `<string>` には 1 <em>文字</em>を超える文字列を指定しないでください。ユーザーエージェントは、 1 つより多い書記素クラスターから構成される文字列を短縮したり無視したりする可能性があります。
+  - : 記号として文字列を表示します。 `<string>` には 1 <em>文字</em>を超える文字列を指定しないでください。ユーザーエージェントは、複数の書記素クラスターから構成される文字列を短縮したり無視したりする可能性があります。
 - `<color>`
-  - : 記号の色を定義します。 color を指定しない場合、既定では `currentcolor` です。
+  - : 記号の色を定義します。色を指定しない場合、既定では `currentColor` です。
 
 ## 公式定義
 
@@ -127,7 +124,7 @@ text-emphasis: unset;
 
 ```css
 h2 {
-  text-emphasis: triangle #d55;
+  text-emphasis: triangle #dd5555;
 }
 ```
 

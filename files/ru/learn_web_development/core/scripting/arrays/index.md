@@ -3,7 +3,7 @@ title: Массивы
 slug: Learn_web_development/Core/Scripting/Arrays
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/Useful_string_methods", "Learn/JavaScript/Первые_шаги/Создатель_глупых_историй", "Learn/JavaScript/Первые_шаги")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn/JavaScript/Первые_шаги/Создатель_глупых_историй", "conflicting/Learn_web_development/Core/Scripting")}}
 
 В финальной статье этого раздела, мы познакомимся с массивами — лаконичным способом хранения списка элементов под одним именем. Мы поймём, чем они полезны, затем узнаем, как создать массив, получить, добавить и удалить элементы, хранящиеся в массиве.
 
@@ -570,7 +570,7 @@ textarea.onkeyup = function () {
 - [Indexed collections](/ru/docs/Web/JavaScript/Guide/Indexed_collections) — an advanced level guide to arrays and their cousins, typed arrays.
 - {{jsxref("Array")}} — the `Array` object reference page — for a detailed reference guide to the features discussed in this page, and many more.
 
-{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/Useful_string_methods", "Learn/JavaScript/Первые_шаги/Создатель_глуых_историй", "Learn/JavaScript/Первые_шаги")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Silly_story_generator", "conflicting/Learn_web_development/Core/Scripting")}}
 
 ## В этом разделе
 

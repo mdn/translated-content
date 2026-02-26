@@ -1,9 +1,8 @@
 ---
 title: mask-clip
 slug: Web/CSS/Reference/Properties/mask-clip
-original_slug: Web/CSS/mask-clip
 l10n:
-  sourceCommit: 15a768b7d90550b0d90811a52d031674a3b84011
+  sourceCommit: 7b291dab974ec1ceb97c83f45ce76c3afada2e63
 ---
 
 **`mask-clip`** は [CSS](/ja/docs/Web/CSS) のプロパティで、マスクが影響する領域を指定します。要素の描画されるコンテンツはこの領域に制限されます。
@@ -107,7 +106,7 @@ div {
   margin: 10px;
   border: 20px solid #8ca0ff;
   padding: 20px;
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mdn.svg);
+  mask-image: url("https://mdn.github.io/shared-assets/images/examples/mdn.svg");
   mask-size: 100% 100%;
 }
 .content-box {
@@ -155,4 +154,9 @@ body {
 - {{cssxref("mask-size")}}
 - {{cssxref("mask-border")}}
 - {{cssxref("clip-path")}}
+- {{cssxref("background-clip")}}
+- [CSS クリップ入門](/ja/docs/Web/CSS/Guides/Masking/Clipping)
+- [CSS マスク入門](/ja/docs/Web/CSS/Guides/Masking/Introduction)
+- [CSS のマスクプロパティ](/ja/docs/Web/CSS/Guides/Masking/Mask_properties)
+- [複数のマスクの宣言](/ja/docs/Web/CSS/Guides/Masking/Multiple_masks)
 - [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール

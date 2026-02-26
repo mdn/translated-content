@@ -1,12 +1,12 @@
 ---
 title: CSS シャドウパーツ
+short-title: シャドウパーツ
 slug: Web/CSS/Guides/Shadow_parts
-original_slug: Web/CSS/CSS_shadow_parts
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**CSS シャドウパーツ** (CSS shadow parts) モジュールは、[シャドウホスト](/ja/docs/Glossary/Shadow_tree)に設定できる {{CSSXref("::part", "::part()")}} 擬似要素を定義します。この擬似要素を使用すると、シャドウホストが、スタイル設定のために、シャドウツリーで選択された要素を外部ページに公開できるようにすることができます。
+**CSS シャドウパーツ** (CSS shadow parts) モジュールは、[シャドウホスト](/ja/docs/Glossary/Shadow_tree)に設定できる {{cssxref("::part()")}} 擬似要素を定義します。この擬似要素を使用すると、シャドウホストが、スタイル設定のために、シャドウツリーで選択された要素を外部ページに公開できるようにすることができます。
 
 既定では、シャドウツリー内の要素は、それぞれのシャドウルート内でのみスタイルを設定できます。CSS シャドウパーツモジュールを使用すると、カスタム要素を構成する {{HTMLElement("template")}} の子孫に [`part`](/ja/docs/Web/HTML/Reference/Global_attributes/part) 属性を記載し、 `::part()` 擬似要素を介してシャドウツリーノードを外部スタイルに公開することができます。
 
@@ -14,7 +14,7 @@ l10n:
 
 ### セレクター
 
-- {{CSSXref("::part", "::part()")}}
+- {{cssxref("::part()")}}
 
 ### HTML 属性
 
@@ -43,8 +43,8 @@ l10n:
 - {{domxref("ShadowRoot")}} インターフェイス
 - [CSS スコープ](/ja/docs/Web/CSS/Guides/Scoping)モジュール
   - {{CSSXref(":host")}}
-  - {{CSSXref(":host_function", ":host()")}}
-  - {{CSSXref(":host-context", ":host-context()")}}
+  - {{cssxref(":host()")}}
+  - {{cssxref(":host-context()")}}
   - {{CSSXref("::slotted")}}
 
 ## 仕様書

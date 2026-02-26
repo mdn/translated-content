@@ -3,7 +3,7 @@ title: Изменение размеров в CSS
 slug: Learn_web_development/Core/Styling_basics/Sizing
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics")}}
 
 В предыдущих уроках вы познакомились с некоторыми способами изменения размеров элементов на веб-странице с помощью CSS. Понимание того, насколько велики будут различные элементы в вашем дизайне — важно, и в этом уроке мы подведем итог по различным способам задания размеров элементов с помощью CSS и расскажем о некоторых терминах, связанных с размерами, которые помогут вам в будущем.
 
@@ -96,4 +96,4 @@ slug: Learn_web_development/Core/Styling_basics/Sizing
 
 Этот урок дал вам краткое изложение некоторых ключевых проблем, с которыми вы можете столкнуться при определении размеров объектов в Интернете. Когда вы перейдете к [CSS раскладке](/ru/docs/Learn_web_development/Core/CSS_layout), изменение размеров станет очень важным для освоения различных методов раскладки, поэтому перед тем, как двигаться дальше, стоит разобраться в концепциях.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics")}}

@@ -1,9 +1,8 @@
 ---
 title: scale()
 slug: Web/CSS/Reference/Values/transform-function/scale
-original_slug: Web/CSS/transform-function/scale
 l10n:
-  sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`scale()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、二次元平面上における拡縮する座標変換を定義します。変倍の量がベクトルで定義されるため、水平方向と垂直方向に対して異なる変倍で大きさを変えることができます。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
@@ -45,8 +44,6 @@ transform: scale(-0.5, 1);
 
 ## 構文
 
-`scale()` 関数は、1 つまたは 2 つの値で指定され、それにより各方向に適用される変倍が表現されます。
-
 ```css
 scale(sx)
 
@@ -56,14 +53,15 @@ scale(sx, sy)
 ### 値
 
 - `sx`
-  - : 変倍ベクトルの横座標を表す {{cssxref("&lt;number&gt;")}}。
-- `sy`
-  - : 変倍ベクトルの縦座標を表す {{cssxref("&lt;number&gt;")}}。定義されない場合、これの既定値は `sx` であり、要素の形を保つ一様な変倍となります。
+  - : 変倍ベクトルの横軸（水平、X 成分）を表す {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。
+- `sy` {{optional_inline}}
+  - : 変倍ベクトルの縦軸（垂直、Y 成分）を表す {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。
+    定義されていない場合、デフォルト値は `sx` であり、要素の{{glossary("aspect ratio", "アスペクト比")}}を保つ一様な変倍となります。
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col"><a href="/ja/docs/Web/CSS/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
+      <th scope="col"><a href="/ja/docs/Web/CSS/Reference/Values/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
       <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">同次座標系</a> (<a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a>)</th>
       <th scope="col">直交座標系 (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^3</a>)</th>
       <th scope="col">同次座標系 (<a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a>)</th>
@@ -72,74 +70,24 @@ scale(sx, sy)
   <tbody>
     <tr>
       <td rowspan="2">
-        <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
-                ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mi>sx</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mi>sy</mi></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cc} sx & 0 \\ 0 & sy \end{array} \right)</annotation></semantics>
+        </math>
       </td>
       <td>
-        <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
-                ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mi>sx</mi></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mi>sy</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{ccc} sx & 0 & 0 \\ 0 & sy & 0 \\ 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
       <td rowspan="2">
-        <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
-                ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mi>sx</mi></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mi>sy</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{ccc} sx & 0 & 0 \\ 0 & sy & 0 \\ 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
       <td rowspan="2">
-        <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
-                ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mi>sx</mi></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mi>sy</mi></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cccc} sx & 0 & 0 & 0 \\ 0 & sy & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
     </tr>
     <tr>
@@ -148,7 +96,11 @@ scale(sx, sy)
   </tbody>
 </table>
 
-## アクセシビリティの考慮
+## 形式文法
+
+{{CSSSyntax}}
+
+## アクセシビリティ
 
 拡大や縮小のアニメーションは、特定の種類の偏頭痛を引き起こす原因になりやすいので、アクセシビリティの問題になることがあります。ウェブサイトにこのようなアニメーションを含める必要がある場合は、できればサイト全体で、ユーザーがアニメーションを止める制御ができるようしてください。
 
@@ -156,7 +108,7 @@ scale(sx, sy)
 
 詳しくは以下の文書を参照してください。
 
-- [MDN WCAG の理解、ガイドライン 2.3 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.3_%e2%80%94_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
+- [MDN WCAG の理解、ガイドライン 2.3 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#ガイドライン_2.3_—_発作と身体的反応_発作や身体的反応を引き起こすことが知られている方法でコンテンツをデザインしないでください)
 - [Understanding Success Criterion 2.3.3 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
 
 ## 例
@@ -166,8 +118,8 @@ scale(sx, sy)
 #### HTML
 
 ```html
-<div>Normal</div>
-<div class="scaled">Scaled</div>
+<div>通常</div>
+<div class="scaled">変倍</div>
 ```
 
 #### CSS
@@ -180,7 +132,7 @@ div {
 }
 
 .scaled {
-  transform: scale(0.7); /* Equal to scaleX(0.7) scaleY(0.7) */
+  transform: scale(0.7); /* scaleX(0.7) scaleY(0.7) と等価 */
   background-color: pink;
 }
 ```
@@ -194,8 +146,8 @@ div {
 #### HTML
 
 ```html
-<div>Normal</div>
-<div class="scaled">Scaled</div>
+<div>通常</div>
+<div class="scaled">変倍</div>
 ```
 
 #### CSS
@@ -208,7 +160,7 @@ div {
 }
 
 .scaled {
-  transform: scale(2, 0.5); /* Equal to scaleX(2) scaleY(0.5) */
+  transform: scale(2, 0.5); /* scaleX(2) scaleY(0.5) と等価 */
   transform-origin: left;
   background-color: pink;
 }
@@ -230,6 +182,7 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("scale")}}
+- {{cssxref("zoom")}}
 - {{cssxref("&lt;transform-function&gt;")}}
 - {{cssxref("transform-function/scale3d", "scale3d()")}}
 - 他の独立座標変換関数、 {{cssxref("translate")}} および {{cssxref("rotate")}}

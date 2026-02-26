@@ -1,12 +1,11 @@
 ---
 title: font-synthesis
 slug: Web/CSS/Reference/Properties/font-synthesis
-original_slug: Web/CSS/font-synthesis
 l10n:
-  sourceCommit: ec64bbd66dab1ce079768708b5da8c50abc4a957
+  sourceCommit: bdcf465db305b8296fa663a877ac0d56c5757777
 ---
 
-**`font-synthesis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、指定したフォントファミリに太字、斜体、小文字、添字、上付き文字がない場合に、ブラウザーが合成するかどうかを指定します。
+**`font-synthesis`** [一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) プロパティで、指定されたフォントファミリに太字、斜体、スモールキャップ、下付き文字、上付き文字がない場合に、ブラウザーが合成するかどうかを指定します。
 
 {{InteractiveExample("CSS デモ: font-synthesis")}}
 
@@ -45,77 +44,29 @@ font-synthesis: position;
       <span class="sup">superscript</span> variants.
     </p>
     <p class="chinese">
-      中文排版通常不运用<span class="bold">粗体</span>或<span class="italic"
+      中文排版通常不用<span class="bold">粗体</span>或<span class="italic"
         >斜体</span
-      ><span class="sub">常不</span><span class="sup">运用</span>。
+      >，也不会使用<span class="small-caps">小型大写字母</span>和<span
+        class="sub"
+        >下标</span
+      ><span class="sup">上标</span>变体。
     </p>
   </div>
 </section>
 ```
 
 ```css interactive-example
-@font-face {
-  font-family: Oxygen;
-  font-style: normal;
-  font-weight: 400;
-  src: url("https://fonts.gstatic.com/s/oxygen/v14/2sDfZG1Wl4LcnbuKjk0m.woff2")
-    format("woff2");
-}
-
-/* [108] */
-@font-face {
-  font-family: "Ma Shan Zheng";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("https://fonts.gstatic.com/s/mashanzheng/v10/NaPecZTRCLxvwo41b4gvzkXaRMGEFoZJFdX0wQ5Xo5Hr21L9zCcRFhbSe5Nk0pIMuUkHEA.108.woff2")
-    format("woff2");
-}
-/* [110] */
-@font-face {
-  font-family: "Ma Shan Zheng";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("https://fonts.gstatic.com/s/mashanzheng/v10/NaPecZTRCLxvwo41b4gvzkXaRMGEFoZJFdX0wQ5Xo5Hr21L9zCcRFhbSe5Nk0pIMuUkHEA.110.woff2")
-    format("woff2");
-}
-/* [117] */
-@font-face {
-  font-family: "Ma Shan Zheng";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("https://fonts.gstatic.com/s/mashanzheng/v10/NaPecZTRCLxvwo41b4gvzkXaRMGEFoZJFdX0wQ5Xo5Hr21L9zCcRFhbSe5Nk0pIMuUkHEA.117.woff2")
-    format("woff2");
-}
-/* [118] */
-@font-face {
-  font-family: "Ma Shan Zheng";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("https://fonts.gstatic.com/s/mashanzheng/v10/NaPecZTRCLxvwo41b4gvzkXaRMGEFoZJFdX0wQ5Xo5Hr21L9zCcRFhbSe5Nk0pIMuUkHEA.118.woff2")
-    format("woff2");
-}
-/* [119] */
-@font-face {
-  font-family: "Ma Shan Zheng";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("https://fonts.gstatic.com/s/mashanzheng/v10/NaPecZTRCLxvwo41b4gvzkXaRMGEFoZJFdX0wQ5Xo5Hr21L9zCcRFhbSe5Nk0pIMuUkHEA.119.woff2")
-    format("woff2");
-}
+@import "https://fonts.googleapis.com/css2?family=Oxygen&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap";
 
 .english {
   font-size: 1.2em;
-  font-family: Oxygen;
+  font-family: "Oxygen", sans-serif;
 }
 
 .chinese {
   font-size: 1.2em;
-  font-family: "Ma Shan Zheng";
+  font-family: "Ma Shan Zheng", cursive;
 }
 
 .bold {
@@ -253,14 +204,14 @@ font-synthesis: unset;
 #### CSS
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Montserrat&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap";
 
 .english {
   font-family: "Montserrat", sans-serif;
 }
 .chinese {
-  font-family: "Ma Shan Zheng";
+  font-family: "Ma Shan Zheng", cursive;
 }
 .no-syn {
   font-synthesis: none;

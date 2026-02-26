@@ -108,7 +108,7 @@ MaClasse.prototype.maMéthode = function () {
 };
 ```
 
-Ici, la méthode {{jsxref("Object.assign()")}} copie les propriétés du prototype de la classe parente (`ClassParente2`) sur le prototype de la classe fille (`MaClasse`), les rendant disponibles pour toutes les instances de `MaClasse`. `Object.assign()` a été introduit avec ES2015 et [une prothèse d'émulation (polyfill)](</fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/assign#Prothèse_d'émulation_(polyfill)>) est disponible. Si le support des navigateurs plus anciens est nécessaire, les méthodes [`jQuery.extend()`](https://api.jquery.com/jQuery.extend/) ou [`_.assign()`](https://lodash.com/docs/#assign) (Lodash) peuvent être utilisées.
+Ici, la méthode {{jsxref("Object.assign()")}} copie les propriétés du prototype de la classe parente (`ClassParente2`) sur le prototype de la classe fille (`MaClasse`), les rendant disponibles pour toutes les instances de `MaClasse`. `Object.assign()` a été introduit avec ES2015 et [une prothèse d'émulation (polyfill)](</fr/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Prothèse_démulation_(polyfill)>) est disponible. Si le support des navigateurs plus anciens est nécessaire, les méthodes [`jQuery.extend()`](https://api.jquery.com/jQuery.extend/) ou [`_.assign()`](https://lodash.com/docs/#assign) (Lodash) peuvent être utilisées.
 
 ### Utiliser l'argument `objetPropriétés` avec `Object.create()`
 

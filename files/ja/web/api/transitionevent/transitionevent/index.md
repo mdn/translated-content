@@ -3,7 +3,7 @@ title: "TransitionEvent: TransitionEvent() コンストラクター"
 short-title: TransitionEvent()
 slug: Web/API/TransitionEvent/TransitionEvent
 l10n:
-  sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
+  sourceCommit: 0c13af55e869cbc54830fd1a601fd05f60717375
 ---
 
 {{APIRef("CSSOM")}}
@@ -29,7 +29,7 @@ new TransitionEvent(type, options)
         既定値は `""` です。
     - `elapsedTime` {{optional_inline}}
       - : アニメーションが一時停止していた時間を除き、このイベントが発行されたときにアニメーションが実行されている時間を秒単位で表す数値です。
-        `"animationstart"` イベントでは、 `elapsedTime` はふつう `0.0` ですが、 [`animation-delay`](/ja/docs/Web/CSS/Reference/Properties/animation-delay) が負の値である場合は、 `elapsedTime` が `(-1 * delay)` であるイベントが発行されます。
+        `"animationstart"` イベントでは、 `elapsedTime` はふつう `0.0` ですが、 {{cssxref("animation-delay")}} が負の値である場合は、 `elapsedTime` が `(-1 * delay)` であるイベントが発行されます。
         既定値は `0.0` です。
     - `pseudoElement` {{optional_inline}}
       - : 文字列で、既定値は `"::"` です。アニメーションが実行される[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)の名前が入ります。

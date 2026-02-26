@@ -28,7 +28,7 @@ De nombreux sites web ont des pages qui permettent de créer un compte ou de s'a
   - : Lorsqu'elle est utilisée avec l'option `publicKey`, elle utilise des informations d'authentification existantes afin de s'authentifier sur un service, pour connecter la personne ou comme deuxième facteur d'authentification.
 
 > [!NOTE]
-> Ces deux méthodes, `create()` et `get()`, doivent être utilisées depuis [un contexte securisé](/fr/docs/Web/Security/Secure_Contexts) (c'est-à-dire que la connexion au serveur soit en HTTPS ou que le site soit servi depuis localhost). Elles ne seront pas disponibles si le navigateur n'est pas dans un tel contexte.
+> Ces deux méthodes, `create()` et `get()`, doivent être utilisées depuis [un contexte securisé](/fr/docs/Web/Security/Defenses/Secure_Contexts) (c'est-à-dire que la connexion au serveur soit en HTTPS ou que le site soit servi depuis localhost). Elles ne seront pas disponibles si le navigateur n'est pas dans un tel contexte.
 
 Dans leurs formes les plus simples, `create()` et `get()` reçoivent un grand nombre aléatoire appelé «&nbsp;challenge&nbsp;» de la part du serveur et renvoient au serveur le challenge signé avec la clé privée. Cela prouve au serveur que la personne est en possession de la clé privée requise pour l'authentification, sans révéler de secrets sur le réseau.
 

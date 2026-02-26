@@ -283,7 +283,7 @@ function draw(img) {
 
 ## 画像の保存
 
-{{domxref("HTMLCanvasElement")}} は、画像を保存する際に役に立つ `toDataURL()` メソッドを提供します。これは、[データ URL](/ja/docs/Web/URI/Reference/Schemes/data) として引数 `type` で指定した形式（既定値は [PNG](https://ja.wikipedia.org/wiki/Portable_Network_Graphics)）で表した画像を返します。返される画像の解像度は 96 dpi です。
+{{domxref("HTMLCanvasElement")}} は、画像を保存する際に役に立つ `toDataURL()` メソッドを提供します。これは、[data URL](/ja/docs/Web/URI/Reference/Schemes/data) として引数 `type` で指定した形式（既定値は [PNG](https://ja.wikipedia.org/wiki/Portable_Network_Graphics)）で表した画像を返します。返される画像の解像度は 96 dpi です。
 
 > [!NOTE]
 > CORS を使用せずに他の {{Glossary("origin")}} から取得したピクセルがキャンバスに含まれている場合、キャンバスは**汚染**され、その内容を読み取ったり保存したりできなくなることに注意してください。
@@ -294,7 +294,7 @@ function draw(img) {
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/jpeg', quality)")}}
   - : JPG 画像を作成します。オプションで、品質を 0 から 1 の範囲で指定できます。1 は最高品質、0 はほとんど見分けがつかなくなりますがファイルサイズを小さくできます。
 
-キャンバスから生成したデータ URL は、例えば任意の {{HTMLElement("img")}} のソースとして使用したり、ディスクに保存するために [download 属性](/ja/docs/Web/HTML/Reference/Elements/a#download)を持つハイパーリンクに投入したりすることができます。
+キャンバスから生成した data URL は、例えば任意の {{HTMLElement("img")}} のソースとして使用したり、ディスクに保存するために [download 属性](/ja/docs/Web/HTML/Reference/Elements/a#download)を持つハイパーリンクに投入したりすることができます。
 
 また、キャンバスから {{domxref("Blob")}} を生成することもできます。
 

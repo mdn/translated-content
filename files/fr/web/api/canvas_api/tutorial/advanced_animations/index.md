@@ -3,7 +3,7 @@ title: Animations avancées
 slug: Web/API/Canvas_API/Tutorial/Advanced_animations
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Animations_basiques", "Tutoriel_canvas/Pixel_manipulation_with_canvas")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
 
 Dans le dernier chapitre, nous avons réalisé des [animations basiques](/fr/docs/Web/API/Canvas_API/Tutorial/Basic_animations) et avons appris comment faire en sorte que les éléments se déplacent. Dans cette partie, nous allons regarder de prêt le mouvement lui-même et ajouter un peu de physique afin de réaliser nos animations avancées.
 
@@ -380,4 +380,4 @@ Ce petit chapitre explique seulement quelques techniques pour créer des animati
 - {{domxref("window.requestAnimationFrame()")}}
 - [Animation efficace pour les jeux vidéo](/fr/docs/Games/Techniques)
 
-{{PreviousNext("Tutoriel_canvas/Animations_basiques", "Tutoriel_canvas/Pixel_manipulation_with_canvas")}}
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}

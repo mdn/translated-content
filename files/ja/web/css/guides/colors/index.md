@@ -1,18 +1,18 @@
 ---
 title: CSS 色
+short-title: 色
 slug: Web/CSS/Guides/Colors
-original_slug: Web/CSS/CSS_colors
 l10n:
-  sourceCommit: 729754108952e0bac9fb6268fcdf24a63b3cbbf3
+  sourceCommit: ca5d9f9e63b460fc0c9e15ac57d9739e10e4ea0d
 ---
 
-**CSS 色** (colors) モジュールは、色、色の種類、色の混合、透過性、そしてどのようにこれらの色や効果を HTML コンテンツに適用するかを扱います。
+**CSS 色** (CSS colors) モジュールは、色、色の種類、色の混合、透過性、そしてどのようにこれらの色や効果を HTML コンテンツに適用するかを扱います。
 
 このモジュールが持つ CSS プロパティは {{cssxref("color")}} と {{cssxref("opacity")}} の 2 つだけですが、20 以上の CSS と SVG プロパティ、CSS 画像、アットルール、@media ルールはこの 2 つのプロパティに依存しています。
 
-### 色の実際
+## 色の実演
 
-下記の色構文コンバーターは、現在選択されている色の値を [赤緑青](/ja/docs/Web/CSS/Reference/Values/color_value/rgb) (RGB), [16 進数](/ja/docs/Web/CSS/Reference/Values/hex-color) (HEX), [色相・彩度・明度](/ja/docs/Web/CSS/Reference/Values/color_value/hsl) (HSL), and [色相・白色度・黒色度](/ja/docs/Web/CSS/Reference/Values/color_value/hwb) (HWB) の CSS 色形式で表示します。ここでの RGB、HEX、HSL、HWB の色値はすべて、書き方は異なりますが、同じ色値を表します。
+下記の色構文コンバーターは、現在選択されている色の値を[赤緑青](/ja/docs/Web/CSS/Reference/Values/color_value/rgb) (RGB)、[16 進数](/ja/docs/Web/CSS/Reference/Values/hex-color) (HEX)、[色相・彩度・明度](/ja/docs/Web/CSS/Reference/Values/color_value/hsl) (HSL)、[色相・白色度・黒色度](/ja/docs/Web/CSS/Reference/Values/color_value/hwb) (HWB) の CSS 色形式で表示します。ここでの RGB、HEX、HSL、HWB の色値はすべて、書き方は異なりますが、同じ色値を表します。
 
 {{EmbedGHLiveSample("css-examples/modules/colors.html", '100%', 450)}}
 
@@ -29,10 +29,7 @@ l10n:
 
 ### アットルールと記述子
 
-- {{cssxref("@color-profile")}}
-  - [`components`](/ja/docs/Web/CSS/Reference/At-rules/@color-profile#記述子) 記述子
-  - [`rendering-intent`](/ja/docs/Web/CSS/Reference/At-rules/@color-profile#記述子) 記述子
-  - [`src`](/ja/docs/Web/CSS/Reference/At-rules/@color-profile#記述子) 記述子
+CSS 色モジュールでは、{{cssxref("@color-profile")}} アットルールと、その `components`、`rendering-intent`、`src` 記述子も導入されています。現在、これらの機能に対応しているブラウザーはありません。
 
 ### 関数
 
@@ -45,10 +42,11 @@ l10n:
   - [`oklab()`](/ja/docs/Web/CSS/Reference/Values/color_value/oklab)
   - [`oklch()`](/ja/docs/Web/CSS/Reference/Values/color_value/oklch)
   - [`color()`](/ja/docs/Web/CSS/Reference/Values/color_value/color)
-- [`color-contrast()`](/ja/docs/Web/CSS/Reference/Values/color_value) {{experimental_inline}}
 - [`color-mix()`](/ja/docs/Web/CSS/Reference/Values/color_value/color-mix)
-- [`device-cmyk()`](/ja/docs/Web/CSS/Reference/Values/color_value/device-cmyk)
+- [`contrast-color()`](/ja/docs/Web/CSS/Reference/Values/color_value/contrast-color)
 - {{CSSXref("color_value/light-dark", "light-dark()")}}
+
+CSS 色モジュールでは、{{CSSXref("color_value/device-cmyk", "device-cmyk()")}} 関数も導入しています。今のところ、この機能に対応しているブラウザーはありません。
 
 ### データ型
 
@@ -63,23 +61,23 @@ l10n:
 
 ### 用語集の用語とキーワード
 
-- {{glossary("color space", "色空間")}}
-- [`currentcolor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード)
-- {{glossary("interpolation")}}
+- {{glossary("Color space", "色空間")}}
+- [`currentColor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード)
+- {{glossary("Interpolation", "補間")}}
 - {{glossary("RGB")}}
 - [`transparent`](/ja/docs/Web/CSS/Reference/Values/named-color#transparent)
 
 ### インターフェイス
 
-- `CSSColorProfileRule`
+CSS 色モジュールは、 `CSSColorProfileRule` インターフェイスも導入しています。今のところ、この機能に対応しているブラウザーはありません。
 
 ## ガイド
 
 - [CSS を使った HTML 要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color)
-  - : 様々な種類のコンテンツに CSS を使って色を適用するためのガイドです。色に関するすべての CSS プロパティが関係します。
-- [CSS 色値](/ja/docs/Web/CSS/CSS_colors/Color_values)
+  - : 様々な種類のコンテンツに CSS を使って色を適用するためのガイドです。 `<color>` を値として受け付けるすべての CSS プロパティが関係します。
+- [CSS 色値](/ja/docs/Web/CSS/Guides/Colors/Color_values)
   - : 色空間と CSS で利用できるさまざまな `<color>` 関数記法の概要です。
-- [賢い色の使用](/ja/docs/Web/CSS/CSS_colors/Using_color_wisely)
+- [賢い色の使用](/ja/docs/Web/CSS/Guides/Colors/Using_color_wisely)
   - : 色彩理論とリソース、例えばアクセシブルなカラーパレットを作成するために正しい色を探すこと、コントラスト、カラーで出力される印刷などです。
 - [相対色の使用](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)
   - : この記事では、 CSS の相対色の構文について説明し、さまざまなオプションが何であるかを示し、いくつかの例を見ていきます。
@@ -87,6 +85,8 @@ l10n:
   - : 色覚障碍（色盲）ユーザー、弱視ユーザー、前庭障碍やその他の神経障碍を持つユーザーを念頭に置いた色知覚と使用することです。
 - [WCAG 1.4.1: 色コントラスト](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)
   - : 読みやすさを保証するために要求されるコンテンツの背景と前景のコントラストの説明です。
+- [CSS 値のシリアライズ](/ja/docs/Web/API/CSS_Object_Model/CSS_value_serialization)
+  - : [CSSOM API](/ja/docs/Web/API/CSS_Object_Model) がどのように色やその他の値を標準化された文字列表現にシリアライズするか。
 
 ## 関連概念
 
@@ -100,19 +100,15 @@ l10n:
   - {{cssxref("color")}}
   - {{cssxref("color-scheme")}}
   - {{cssxref("column-rule-color")}}
+  - {{cssxref("dynamic-range-limit")}}
   - {{cssxref("outline-color")}}
   - {{cssxref("scrollbar-color")}}
   - {{cssxref("text-decoration-color")}}
   - {{cssxref("text-emphasis-color")}}
   - {{cssxref("text-shadow")}}
   - {{cssxref("-webkit-tap-highlight-color")}}
+- {{cssxref("dynamic-range-limit-mix()")}} 関数
 - 他の仕様の一部である SVG 色プロパティ:
-  - [`fill`](/ja/docs/Web/SVG/Reference/Attribute/fill)
-  - [`flood-color`](/ja/docs/Web/SVG/Attribute/flood-color)
-  - [`lighting-color`](/ja/docs/Web/SVG/Attribute/lighting-color)
-  - [`stop-color`](/ja/docs/Web/SVG/Reference/Attribute/stop-color)
-  - [`stroke`](/ja/docs/Web/SVG/Reference/Attribute/stroke)
-- SVG [`color`](/ja/docs/Web/SVG/Reference/Attribute/color) 属性
   - [`fill`](/ja/docs/Web/SVG/Reference/Attribute/fill)
   - [`flood-color`](/ja/docs/Web/SVG/Reference/Attribute/flood-color)
   - [`lighting-color`](/ja/docs/Web/SVG/Reference/Attribute/lighting-color)
@@ -137,3 +133,6 @@ l10n:
 - [`VideoColorSpace`](/ja/docs/Web/API/VideoColorSpace) インターフェイス
 - SVG の [`<feColorMatrix>`](/ja/docs/Web/SVG/Reference/Element/feColorMatrix) 要素
 - [キャンバス API: スタイルと色の適用](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#色)
+- ツール:
+  - [色形式コンバーター](/ja/docs/Web/CSS/Guides/Colors/Color_format_converter)
+  - [カラーミキサー](/ja/docs/Web/CSS/Guides/Colors/Color_mixer)

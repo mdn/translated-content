@@ -1,9 +1,8 @@
 ---
 title: :not
 slug: Web/CSS/Reference/Selectors/:not
-original_slug: Web/CSS/:not
 l10n:
-  sourceCommit: 635820782735cd00f71ce3929ff9377b091f8995
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:not()`** représente les éléments qui ne correspondent pas à une liste de sélecteurs. Comme elle empêche la sélection d'éléments spécifiques, elle est connue sous le nom de _pseudo-classe de négation_.
@@ -52,7 +51,7 @@ La pseudo-classe `:not()` présente un certain nombre de [particularités, astuc
 
 ### Paramètres
 
-La pseudo-classe `:not()` nécessite une [liste de sélecteurs](/fr/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list), une liste séparée par des virgules d'un ou plusieurs sélecteurs, comme argument. La liste ne doit pas contenir de [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements), mais tout autre sélecteur simple, composé ou complexe est autorisé.
+La pseudo-classe `:not()` nécessite une [liste de sélecteurs](/fr/docs/Web/CSS/Guides/Selectors/Selector_structure#selector_list), une liste séparée par des virgules d'un ou plusieurs sélecteurs, comme argument. La liste ne doit pas contenir de [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements), mais tout autre sélecteur simple, composé ou complexe est autorisé.
 
 ## Description
 
@@ -183,8 +182,8 @@ Si `:invalid-pseudo-class` était un sélecteur valide, les deux premières règ
 - Les [Pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 - [Apprendre&nbsp;: Pseudo-classes et pseudo-éléments](/fr/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
 - Autres pseudo-classes CSS fonctionnelles&nbsp;:
-  - {{cssxref(":has", ":has()")}}
-  - {{cssxref(":is", ":is()")}}
-  - {{cssxref(":where", ":where()")}}
+  - {{CSSxRef(":has()")}}
+  - {{CSSxRef(":is()")}}
+  - {{CSSxRef(":where()")}}
 
-- [Comment :not() enchaîne plusieurs sélecteurs](/fr/blog/css-not-pseudo-multiple-selectors/) sur le blog MDN (2023)
+- [Comment `:not()` enchaîne plusieurs sélecteurs](/fr/blog/css-not-pseudo-multiple-selectors/) sur le blog MDN (2023)

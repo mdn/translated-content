@@ -3,7 +3,7 @@ title: Détection de collisions
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
 ---
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}
 
 Il s'agit de la **7ème étape** sur 10 du [Gamedev Canvas tutorial](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Vous pouvez trouver le code source tel qu'il devrait être après avoir complété cette leçon à : [Gamedev-Canvas-workshop/lesson7.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html).
 
@@ -131,4 +131,4 @@ Exercice: changez la couleur de la balle lorsqu'elle frappe une brique.
 
 Nous ne sommes plus très loin de la fin&nbsp;; poursuivons&nbsp;! Dans le huitième chapitre, nous verrons comment [Track the score and win](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win).
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}

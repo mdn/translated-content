@@ -17,7 +17,7 @@ slug: Web/API/Intersection_Observer_API/Timing_element_visibility
 
 ### Структура приложения: HTML
 
-Структура Web-приложений не очень сложна. Мы будем использовать [CSS Grid](/ru/docs/Web/CSS/CSS_grid_layout) для стилизации и макетирования, так что всё достаточно очевидно:
+Структура Web-приложений не очень сложна. Мы будем использовать [CSS Grid](/ru/docs/Web/CSS/Guides/Grid_layout) для стилизации и макетирования, так что всё достаточно очевидно:
 
 ```html
 <div class="wrapper">

@@ -1,51 +1,56 @@
 ---
-title: Date.prototype.setMilliseconds()
+title: "Date : méthode setMilliseconds()"
+short-title: setMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMilliseconds
+l10n:
+  sourceCommit: b3840f6234d24ade72a43171fd6489dd533aaf15
 ---
 
-{{JSRef}}
+La méthode **`setMilliseconds()`** des instances de {{JSxRef("Date")}} modifie les millisecondes pour cette date selon l'heure locale.
 
-La méthode **`setMilliseconds()`** définit les millièmes de secondes pour la date, selon l'heure locale.
-
-{{InteractiveExample("JavaScript Demo: Date.setMilliseconds()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Date.prototype.setMilliseconds()")}}
 
 ```js interactive-example
 const event = new Date("August 19, 1975 23:15:30");
 
 console.log(event.getMilliseconds());
-// Expected output: 0
+// Résultat attendu : 0
 
 event.setMilliseconds(456);
 
 console.log(event.getMilliseconds());
-// Expected output: 456
+// Résultat attendu : 456
 ```
 
 ## Syntaxe
 
-```js
-dateObj.setMilliseconds(valeurMs);
+```js-nolint
+setMilliseconds(millisecondsValue)
 ```
 
 ### Paramètres
 
-- `valeurMs`
+- `millisecondsValue`
   - : Un entier entre 0 et 999, représentant les millièmes de secondes.
 
 ### Valeur de retour
 
-Le nombre de millisecondes écoulées entre le premier janvier 1970 minuit, UTC et la date mise à jour.
+Modifie l'objet {{JSxRef("Date")}} en place et retourne son nouveau [timestamp](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide). Si `millisecondsValue` vaut `NaN` (ou d'autres valeurs qui sont [contraintes](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#contrainte_de_nombre) en `NaN`, comme `undefined`), la date est définie sur [Date invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide) et `NaN` est retourné.
 
 ## Description
 
-Si vous indiquez un nombre en dehors des limites attendues, la date sera mise à jour en conséquence. Par exemple, si vous indiquez 1005, le nombre des secondes sera incrémenté de 1, et 5 sera utilisé pour les millièmes de secondes.
+Si vous définissez un nombre en dehors de la plage attendue, les informations de date dans l'objet {{JSxRef("Date")}} sont mises à jour en conséquence. Par exemple, si vous définissez 1005, le nombre de secondes est incrémenté de 1, et 5 est utilisé pour les millisecondes.
+
+Comme `setMilliseconds()` fonctionne selon l'heure locale, franchir une transition d'heure d'été (DST) peut entraîner un temps écoulé différent de celui attendu. Par exemple, si le changement de millisecondes franchit une transition d'avance du printemps (perte d'une heure), la différence de timestamps entre la nouvelle et l'ancienne date est inférieure d'une heure à la différence nominale de temps. À l'inverse, franchir une transition de recul de l'automne (gain d'une heure) ajoute une heure supplémentaire. Si vous devez ajuster la date d'une durée fixe, envisagez d'utiliser {{JSxRef("Date/setUTCMilliseconds", "setUTCMilliseconds()")}} ou {{JSxRef("Date/setTime", "setTime()")}}.
+
+Si la nouvelle heure locale tombe dans une transition de décalage, l'heure exacte est déterminée en utilisant le même comportement que l'option [`disambiguation: "compatible"`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#ambiguïté_et_écarts_entre_lheure_locale_et_lheure_utc) de `Temporal`. C'est-à-dire, si l'heure locale correspond à deux instants, le plus tôt est choisi&nbsp;; si l'heure locale n'existe pas (il y a un écart), on avance de la durée de l'écart.
 
 ## Exemples
 
-### Utiliser `setMilliseconds()`
+### Utiliser la méthode `setMilliseconds()`
 
 ```js
-var leGrandJour = new Date();
+const leGrandJour = new Date();
 leGrandJour.setMilliseconds(100);
 ```
 
@@ -59,5 +64,5 @@ leGrandJour.setMilliseconds(100);
 
 ## Voir aussi
 
-- {{jsxref("Date.prototype.getMilliseconds()")}}
-- {{jsxref("Date.prototype.setUTCMilliseconds()")}}
+- La méthode {{JSxRef("Date.prototype.getMilliseconds()")}}
+- La méthode {{JSxRef("Date.prototype.setUTCMilliseconds()")}}

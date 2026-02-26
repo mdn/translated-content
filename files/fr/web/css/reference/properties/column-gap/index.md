@@ -1,14 +1,17 @@
 ---
-title: column-gap (grid-column-gap)
+title: column-gap
 slug: Web/CSS/Reference/Properties/column-gap
-original_slug: Web/CSS/column-gap
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`column-gap`** définit la taille de l'espace ({{Glossary("Gutters", "Gouttières")}}) entre les colonnes d'un élément.
 
-La propriété **`column-gap`** permet de définir la taille des espaces ([gouttières](/fr/docs/Glossary/Gutters)) entre les colonnes d'un élément.
+Initialement définie dans [la disposition multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout), la définition de `column-gap` a été élargie pour couvrir plusieurs méthodes de mise en page. Elle est désormais définie dans [l'alignement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_alignment) et peut être utilisée pour les dispositions multi-colonnes, les dispositions flexibles et les dispositions en grille.
 
-{{InteractiveExample("CSS Demo: column-gap")}}
+Les premières versions de la spécification nommaient cette propriété `grid-column-gap`, et pour maintenir la compatibilité avec les anciens sites, les navigateurs acceptent toujours `grid-column-gap` comme alias de `column-gap`.
+
+{{InteractiveExample("Démonstration CSS&nbsp;: column-gap")}}
 
 ```css interactive-example-choice
 column-gap: 0;
@@ -30,11 +33,11 @@ column-gap: 20px;
 <section class="default-example" id="default-example">
   <div class="example-container">
     <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
-      <div>Four</div>
-      <div>Five</div>
+      <div>Un</div>
+      <div>Deux</div>
+      <div>Trois</div>
+      <div>Quatre</div>
+      <div>Cinq</div>
     </div>
   </div>
 </section>
@@ -49,12 +52,10 @@ column-gap: 20px;
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 ```
-
-La propriété `column-gap` était initialement définie dans le module de spécification [Colonnes CSS](/fr/docs/Web/CSS/Guides/Multicol_layout). Cette définition a depuis été élargie afin de pouvoir être utilisée dans les différents modes de disposition et fait désormais partie du module de spécification [_Box Alignment_ (alignement des boîtes en CSS)](/fr/docs/Web/CSS/Guides/Box_alignment). Cette propriété peut être utilisée pour les dispositions multi-colonnes, les dispositions flexibles et les dispositions en grille.
 
 ## Syntaxe
 
@@ -62,47 +63,53 @@ La propriété `column-gap` était initialement définie dans le module de spéc
 /* Valeur avec un mot-clé */
 column-gap: normal;
 
-/* Valeurs de longueur */
-/* Type <length>       */
+/* Valeurs de type <length> */
 column-gap: 3px;
 column-gap: 2.5em;
 
-/* Valeurs de pourcentage */
-/* Type <percentage> */
+/* Valeurs de type <percentage> */
 column-gap: 3%;
 
 /* Valeurs globales */
 column-gap: inherit;
 column-gap: initial;
 column-gap: revert;
+column-gap: revert-layer;
 column-gap: unset;
 ```
+
+La propriété `column-gap` est définie par l'une des valeurs listées ci‑dessous.
 
 ### Valeurs
 
 - `normal`
   - : Un mot-clé qui indique qu'on souhaite utiliser l'espacement par défaut créé par le navigateur. Pour les dispositions en colonnes, cette valeur correspond à `1em`, sinon elle correspond à `0`.
-- [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)
-  - : Une valeur de longueur (type [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)) qui définit la taille de l'espace entre les colonnes. Cette valeur peut être nulle mais ne doit pas être négative.
-- [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)
-  - : Une valeur de pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)) qui définit la taille de l'espace entre les colonnes. Cette valeur peut être nulle mais ne doit pas être négative.
+- {{CSSxRef("&lt;length&gt;")}}
+  - : Une valeur de longueur ({{CSSxRef("&lt;length&gt;")}}) qui définit la taille de l'espace entre les colonnes. Cette valeur ({{CSSxRef("&lt;length&gt;")}}) peut être nulle mais ne doit pas être négative.
+- {{CSSxRef("&lt;percentage&gt;")}}
+  - : Une valeur de pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) qui définit la taille de l'espace entre les colonnes. Cette valeur ({{CSSxRef("&lt;percentage&gt;")}}) peut être nulle mais ne doit pas être négative.
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
 ### Disposition flexible
 
+Dans cet exemple, un conteneur flexible contient six éléments flexibles de deux largeurs différentes (`200px` et `300px`), de sorte que les éléments flexibles ne sont pas disposés en grille. La propriété `column-gap` sert à ajouter un espace horizontal entre les éléments flexibles adjacents.
+
 #### HTML
 
 ```html
-<div id="flexbox">
+<div class="flexbox">
+  <div></div>
+  <div></div>
+  <div></div>
   <div></div>
   <div></div>
   <div></div>
@@ -111,23 +118,36 @@ column-gap: unset;
 
 #### CSS
 
+Pour créer un conteneur flexible, on définit sa propriété {{CSSxRef("display")}} sur `flex`. On utilise ensuite la propriété raccourcie {{CSSxRef("flex-flow")}} pour définir {{CSSxRef("flex-direction")}} sur `row` (la valeur par défaut) et {{CSSxRef("flex-wrap")}} sur `wrap`, ce qui permet aux éléments flexibles de passer sur de nouvelles lignes si nécessaire. Par défaut, les éléments flexibles s'étirent pour atteindre la hauteur de leur conteneur. En définissant une {{CSSxRef("height")}}, même les éléments flexibles vides ont une hauteur de `100px`.
+
+Pour mieux démontrer la propriété `column-gap`, les éléments flexibles de cet exemple ont deux largeurs différentes. La largeur des éléments flexibles est définie dans les balises `<div>`. Nous utilisons le composant {{CSSxRef("flex-basis")}} de la propriété raccourcie {{CSSxRef("flex")}} pour donner à tous les éléments flexibles une largeur de `200px`. Nous ciblons ensuite chaque troisième élément flexible avec le sélecteur {{CSSxRef(":nth-of-type", ":nth-of-type(3n)")}} pour les élargir à `300px`.
+
+La valeur de `column-gap` est définie à `20px` sur le conteneur flexible afin de créer un espace de `20px` entre les éléments flexibles adjacents sur chaque ligne.
+
 ```css
-#flexbox {
+.flexbox {
   display: flex;
+  flex-flow: row wrap;
   height: 100px;
   column-gap: 20px;
 }
 
-#flexbox > div {
+.flexbox > div {
   border: 1px solid green;
   background-color: lime;
-  flex: auto;
+  flex: 200px;
+}
+div:nth-of-type(3n) {
+  flex: 300px;
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("disposition_flexible","auto","130px")}}
+{{EmbedLiveSample("Disposition flexible", "auto", 120)}}
+
+> [!NOTE]
+> Bien qu'il y ait un espace horizontal entre les éléments flex adjacents sur chaque ligne, il n'existe pas d'espace entre les lignes. Pour définir un espace vertical entre les lignes flex, vous pouvez spécifier une valeur non nulle pour la propriété {{CSSxRef("row-gap")}}. La propriété raccourcie {{CSSxRef("gap")}} permet également de définir à la fois `row-gap` et `column-gap` dans une seule déclaration, dans cet ordre.
 
 ### Disposition en grille
 
@@ -135,6 +155,9 @@ column-gap: unset;
 
 ```html
 <div id="grid">
+  <div></div>
+  <div></div>
+  <div></div>
   <div></div>
   <div></div>
   <div></div>
@@ -160,7 +183,7 @@ column-gap: unset;
 
 #### Résultat
 
-{{EmbedLiveSample("disposition_en_grille","auto", "130px")}}
+{{EmbedLiveSample("Disposition en grille", "auto", 220)}}
 
 ### Disposition multi-colonnes
 
@@ -184,7 +207,7 @@ column-gap: unset;
 
 #### Résultat
 
-{{EmbedLiveSample("disposition_multi-colonnes", "auto", "130px")}}
+{{EmbedLiveSample("Disposition multi-colonnes", "auto", 120)}}
 
 ## Spécifications
 
@@ -196,6 +219,7 @@ column-gap: unset;
 
 ## Voir aussi
 
-- Les autres propriétés relatives aux gouttières&nbsp;: [`row-gap`](/fr/docs/Web/CSS/Reference/Properties/row-gap), [`gap`](/fr/docs/Web/CSS/Reference/Properties/gap)
-- Guide sur les grilles&nbsp;: _[Les concepts de base des grilles CSS&nbsp;: les gouttières](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#les_gouttières)_
-- Guide sur la disposition multi-colonnes&nbsp;: _[Mettre en forme les colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout/Styling_columns)_
+- La propriété {{CSSxRef("row-gap")}}
+- La propriété {{CSSxRef("gap")}}
+- [Les concepts de base des grilles CSS&nbsp;: les gouttières](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#les_gouttières)
+- [Mettre en forme les colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout/Styling_columns)

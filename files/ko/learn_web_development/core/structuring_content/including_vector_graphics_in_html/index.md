@@ -6,7 +6,7 @@ l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/General_embedding_technologies", "Web/HTML/Guides/Responsive_images", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}
 
 벡터 그래픽은 파일 크기가 작고 확장성이 뛰어나 확대하거나 큰 크기로 확대해도 픽셀이 깨지지 않기 때문에 여러 상황에서 매우 유용합니다. 이 글에서는 웹페이지에 벡터 그래픽을 삽입하는 방법을 보여드리겠습니다.
 
@@ -336,4 +336,4 @@ textarea.onkeyup = function () {
 - [SVG 속성 및 CSS](https://css-tricks.com/svg-properties-and-css/)
 - [SVG 크기를 조정하는 방법](https://css-tricks.com/scale-svg/) (래스터 그래픽만큼 간단하지 않습니다!)
 
-{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/General_embedding_technologies", "Web/HTML/Guides/Responsive_images", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}

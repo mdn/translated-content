@@ -1,16 +1,16 @@
 ---
 title: CSS 基本ユーザーインターフェイス
+short-title: 基本ユーザーインターフェイス
 slug: Web/CSS/Guides/Basic_user_interface
-original_slug: Web/CSS/CSS_basic_user_interface
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-**CSS 基本ユーザーインターフェイス** (CSS basic user interface) モジュールでは、輪郭線プロパティ、ポインティングデバイスやキーボードへの視覚的フィードバック、 UI ウィジェットの既定の外見の変更など、ユーザーインターフェイス関連の機能のレンダリングや機能を定義することができます。
+**CSS 基本ユーザーインターフェイス** (CSS basic user interface) モジュールでは、輪郭線プロパティ、ポインティングデバイスやキーボードの視覚的フィードバック、 UI ウィジェットの既定の外見の変更など、ユーザーインターフェイス関連の機能のレンダリングや機能を定義することができます。
 
-基本ユーザーインターフェイスプロパティは、操作している要素に視覚的な手がかりを提供することで、使い勝手やアクセシビリティを向上させるために使用することができます。これには、マウスカーソルやキーボード方向のフォーカスナビゲーションのスタイル設定、編集可能な要素にフォーカスがあるときのキャレットカーソルのスタイル設定などがあります。このモジュールは、要素の[ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model#css_ボックスモデルとは)の寸法とスタイル設定に影響を与えることなく、フォーカスされた（またはフォーカスされていない）要素に輪郭線を提供するために指定されました。この UI モジュールは、ユーザーインターフェイスコントロールのスタイル設定も可能にします。
+基本ユーザーインターフェイスプロパティは、操作している要素に視覚的な手がかりを提供することで、使い勝手やアクセシビリティを向上させるために使用することができます。これには、マウスカーソルやキーボード方向のフォーカスナビゲーションのスタイル設定、編集可能な要素にフォーカスがあるときのキャレットカーソルのスタイル設定などがあります。このモジュールは、要素の[ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model#what_is_the_css_box_model)のサイズやスタイル設定に影響を与えずに、フォーカス状態（または非フォーカス状態）の要素に概要を指定されたまま提供します。この UI モジュールは、ユーザーインターフェイスコントロールのスタイル設定も可能にします。
 
-### 基本ユーザーインターフェイスの操作
+## 基本ユーザーインターフェイスの実例
 
 基本ユーザーインターフェイスプロパティが UI 機能の外観をどのように変化させるかを見るには、この例の要素を操作してください。なお、このサンプルの機能の中には、使い勝手を向上させるものもあれば、ユーザー体験を損なうものもあります。
 
@@ -46,7 +46,7 @@ body {
 [contenteditable] {
   cursor: copy;
   caret-color: magenta;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
 }
 :focus {
   outline: dashed magenta 3px;
@@ -84,15 +84,13 @@ CSS の {{CSSxRef("outline")}} と {{CSSxRef("outline-offset")}} プロパティ
 
 - {{CSSxRef("accent-color")}}
 - {{CSSxRef("appearance")}}
-
-- {{CSSxRef("caret")}}、以下の一括指定
-  - {{CSSxRef("caret-color")}}
-  - {{CSSxRef("caret-shape")}}
+- {{CSSxRef("caret-animation")}}
+- {{CSSxRef("caret-color")}}
+- {{CSSxRef("caret-shape")}}
 - {{CSSxRef("cursor")}}
-- {{CSSxRef("nav-down")}}
-- {{CSSxRef("nav-left")}}
-- {{CSSxRef("nav-right")}}
-- {{CSSxRef("nav-up")}}
+- {{CSSxRef("interest-delay")}}、以下の一括指定
+  - {{CSSxRef("interest-delay-start")}}
+  - {{CSSxRef("interest-delay-end")}}
 - {{CSSxRef("outline")}}、以下の一括指定
   - {{CSSxRef("outline-color")}}
   - {{CSSxRef("outline-style")}}
@@ -102,6 +100,8 @@ CSS の {{CSSxRef("outline")}} と {{CSSxRef("outline-offset")}} プロパティ
 - {{CSSxRef("resize")}}
 - {{CSSxRef("user-select")}}
 
+CSS 基本ユーザーインターフェイスモジュールは、{{CSSxRef("caret")}}、`nav-down`、`nav-left`、`nav-right`、`nav-up` の各プロパティも定義しています。今のところ、これらの機能に対応しているブラウザーはありません。
+
 ## ガイド
 
 - [フォームの学習: フォームへの高度なスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
@@ -109,7 +109,7 @@ CSS の {{CSSxRef("outline")}} と {{CSSxRef("outline-offset")}} プロパティ
 
 ## 関連概念
 
-- CSS の [`cursor`](/ja/docs/Web/CSS/Reference/Properties/cursor) プロパティ
+- CSS の {{cssxref("cursor")}} プロパティ
 - SVG の [`cursor`](/ja/docs/Web/SVG/Reference/Attribute/cursor) 属性
 - CSS の {{CSSxRef(":focus")}}, {{CSSxRef(":focus-within")}}, {{CSSxRef(":focus-visible")}} 擬似クラス
 - {{DOMXref("CaretPosition")}} インターフェイス

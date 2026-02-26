@@ -1,68 +1,71 @@
 ---
-title: <i>
+title: "<i> : l'élément de texte idiomatic"
 slug: Web/HTML/Reference/Elements/i
-original_slug: Web/HTML/Element/i
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<i>`** représente une portion de texte mise à part du texte normal pour une raison donnée, comme du texte idiomatique, des termes techniques ou des désignations taxonomiques, entre autres. Historiquement, ces contenus étaient présentés en italique, ce qui explique la désignation `<i>` de cet élément.
 
-L'élément HTML **`<i>`** représente un morceau de texte qui se différencie du texte principal. Cela peut par exemple être le cas pour des termes techniques, des phrases dans une langue étrangère ou encore l'expression des pensées d'un personnage. Le contenu de cet élément est généralement affiché en italique.
-
-{{InteractiveExample("HTML Demo: &lt;i&gt;", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;i&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
-<p>I looked at it and thought <i>This can't be real!</i></p>
+<p>Je l'ai regardé et j'ai pensé <i>Cela ne peut pas être réel&nbsp;!</i></p>
 
 <p>
-  <i>Musa</i> is one of two or three genera in the family <i>Musaceae</i>; it
-  includes bananas and plantains.
+  <i>Musa</i> est l'un des deux ou trois genres de la famille
+  <i>Musaceae</i>&nbsp;; il comprend les bananes et les plantains.
 </p>
 
 <p>
-  The term <i>bandwidth</i> describes the measure of how much information can
-  pass through a data connection in a given amount of time.
+  Le terme <i>bandwidth</i> décrit la mesure de la quantité d'informations
+  pouvant transiter par une connexion de données pendant une durée donnée.
 </p>
 ```
 
 ```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
 i {
+  /* Ajoutez vos styles ici */
 }
 ```
 
 ## Attributs
 
-Cet élément possède uniquement [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+
+## Notes d'utilisation
+
+- Utilisez l'élément `<i>` pour du texte mis à part de la prose normale pour des raisons de lisibilité. Il s'agit d'une portion de texte ayant une signification sémantique différente du texte environnant. Parmi les cas d'utilisation de l'élément `<i>` figurent des passages de texte représentant une qualité ou un mode de texte différent, tels que&nbsp;:
+  - Voix ou ton alternatifs
+  - Désignations taxonomiques (par exemple le genre et l'espèce «&nbsp;_Homo sapiens_&nbsp;»)
+  - Expressions idiomatiques d'une autre langue (par exemple «&nbsp;_et cetera_&nbsp;»)&nbsp;; celles‑ci doivent inclure l'attribut [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang) pour identifier la langue
+  - Termes techniques
+  - Translittérations
+  - Pensées (par exemple «&nbsp;Elle se demandait, _De quoi parle cet auteur, au juste&nbsp;?_&nbsp;»)
+  - Noms de navires ou d'embarcations dans les systèmes d'écriture occidentaux (par exemple «&nbsp;Ils ont fouillé les quais pour trouver l'_Empress of the Galaxy_&nbsp;», le navire auquel ils étaient affectés.)
+
+- Dans les versions antérieures de la spécification HTML, l'élément `<i>` n'était qu'un élément de présentation utilisé pour afficher le texte en italique, de la même façon que l'élément `<b>` était utilisé pour afficher le texte en gras. Ce n'est plus le cas, ces balises définissent désormais la sémantique plutôt que l'apparence typographique. Un navigateur affichera généralement toujours le contenu de l'élément `<i>` en italique, mais n'y est, par définition, plus obligé. Pour afficher du texte en italique, les auteur·ice·s doivent utiliser la propriété CSS {{CSSxRef("font-style")}}.
+- Assurez‑vous que le texte en question n'est pas en réalité plus approprié à être balisé avec un autre élément.
+  - Utilisez {{HTMLElement("em")}} pour indiquer l'emphase.
+  - Utilisez {{HTMLElement("strong")}} pour indiquer l'importance, la gravité ou l'urgence.
+  - Utilisez {{HTMLElement("mark")}} pour indiquer la pertinence.
+  - Utilisez {{HTMLElement("cite")}} pour marquer le nom d'une œuvre, comme un livre, une pièce ou une chanson.
+  - Utilisez {{HTMLElement("dfn")}} pour marquer l'occurrence définitoire d'un terme.
 
 ## Exemples
 
-### HTML
+Cet exemple montre l'utilisation de l'élément `<i>` pour marquer du texte dans une autre langue.
 
 ```html
 <p>
-  La phrase latine
-  <i class="latin"> Veni, vidi, vici </i>
-  est souvent employée en littérature.
+  La phrase latine <i class="latin">Veni, vidi, vici</i> est souvent employée en
+  littérature.
 </p>
 ```
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples","100%","200")}}
-
-## Notes
-
-Dans certaines versions antérieures de HTML, la balise `<i>` ne jouait qu'un rôle de mise en forme, utilisé pour afficher le texte en italique (de la même façon que la balise \<b> était utilisée pour afficher le texte en gras). Désormais, ces balises ont un rôle strictement sémantique et l'élément \<i> représente une portion de texte dont la sémantique est différente, la représentation choisie pour cela par le navigateur étant la plupart du temps une mise en italique. Cela signifie que le navigateur affiche généralement le contenu en italique comme c'était le cas auparavant mais que ce traitement de mise en forme n'est plus du tout obligatoire.
-
-Cet élément ne doit être utilisé seulement si aucun autre ne permet d'exprimer la sémantique du contenu de façon plus appropriée. Ainsi :
-
-- {{HTMLElement("em")}} doit être utilisé pour insister, mettre l'accent sur le contenu
-- {{HTMLElement("strong")}} doit être utilisé pour exprimer l'importance du contenu
-- {{HTMLElement("mark")}} doit être utilisé pour exprimer la pertinence du contenu
-- {{HTMLElement("cite")}} doit être utilisé pour marquer le nom d'une œuvre telle qu'un livre, une pièce ou une chanson.
-- {{HTMLElement("dfn")}} doit être utilisé pour souligner l'occurence d'un mot utilisée pour sa définition
-
-C'est une bonne pratique que d'utiliser l'attribut **`class`** pour identifier les raisons qui poussent à utiliser cet élément. Cela permet par exemple de maintenir la mise en forme du document plus efficacement grâce aux feuilles de style CSS.
+{{EmbedLiveSample("Exemples")}}
 
 ## Résumé technique
 
@@ -71,27 +74,24 @@ C'est une bonne pratique que d'utiliser l'attribut **`class`** pour identifier l
     <tr>
       <th scope="row">
         <dfn
-          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
+          ><a href="/fr/docs/Web/HTML/Guides/Content_categories"
             >Catégories de contenu</a
           ></dfn
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
         >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
-          >contenu tangible</a
-        >.
+        >, contenu tangible.
       </td>
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >Contenu phrasé</a
         >.
       </td>
@@ -104,9 +104,19 @@ C'est une bonne pratique que d'utiliser l'attribut **`class`** pour identifier l
       <th scope="row">Parents autorisés</th>
       <td>
         Tout élément acceptant du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
         >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <code
+          ><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
+            >generic</a
+          ></code
+        >
       </td>
     </tr>
     <tr>
@@ -115,7 +125,7 @@ C'est une bonne pratique que d'utiliser l'attribut **`class`** pour identifier l
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td><dfn>Interface DOM </dfn>{{domxref("HTMLElement")}}.</td>
+      <td>{{DOMxRef("HTMLElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -130,4 +140,5 @@ C'est une bonne pratique que d'utiliser l'attribut **`class`** pour identifier l
 
 ## Voir aussi
 
-- {{HTMLElement("em")}} qui permet d'indiquer une emphase et qui ne doit pas être confondu avec l'élément `<i>`
+- L'élément HTML {{HTMLElement("em")}}
+- Autres éléments en italique&nbsp;: {{HTMLElement("var")}}, {{HTMLElement("dfn")}}, {{HTMLElement("cite")}}, {{HTMLElement("address")}}

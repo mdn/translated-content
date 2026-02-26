@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:enabled
 original_slug: Web/CSS/:enabled
 ---
 
-[CSS](/ko/docs/Web/CSS) **`:enabled`** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 모든 활성 요소를 나타냅니다. 활성 요소란 활성(선택, 클릭, 입력 등등)하거나 포커스를 받을 수 있는 요소를 말합니다. 반대 상태인 비활성 요소도 존재합니다.
+[CSS](/ko/docs/Web/CSS) **`:enabled`** [의사 클래스](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes)는 모든 활성 요소를 나타냅니다. 활성 요소란 활성(선택, 클릭, 입력 등등)하거나 포커스를 받을 수 있는 요소를 말합니다. 반대 상태인 비활성 요소도 존재합니다.
 
 ```css
 /* 모든 활성 <input> 선택 */

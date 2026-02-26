@@ -1,9 +1,8 @@
 ---
 title: prefers-color-scheme
 slug: Web/CSS/Reference/At-rules/@media/prefers-color-scheme
-original_slug: Web/CSS/@media/prefers-color-scheme
 l10n:
-  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`prefers-color-scheme`** permet de détecter si un·e utilisateur·ice a demandé un thème clair ou sombre.
@@ -15,7 +14,7 @@ Pour les SVG et les iframes, `prefers-color-scheme` permet de définir un style 
 Les SVG doivent être utilisés en tant qu'éléments embarqués (c'est-à-dire `<img src="circle.svg" alt="circle" />`) et non [intégrés en HTML](/fr/docs/Web/SVG/Guides/SVG_in_HTML#basic_example).
 Un exemple d'utilisation de `prefers-color-scheme` dans des SVG se trouve dans la section [Héritage du schéma de couleurs dans les éléments embarqués](#héritage_du_schéma_de_couleurs_dans_les_éléments_embarqués).
 
-L'utilisation de `prefers-color-scheme` est autorisée dans les éléments `<svg>` et `<iframe>` avec [cross-origin](/fr/docs/Web/Security/Same-origin_policy#cross-origin_network_access). Les éléments cross-origin sont des éléments récupérés depuis un autre hôte que la page qui les référence.
+L'utilisation de `prefers-color-scheme` est autorisée dans les éléments `<svg>` et `<iframe>` avec [cross-origin](/fr/docs/Web/Security/Defenses/Same-origin_policy#cross-origin_network_access). Les éléments cross-origin sont des éléments récupérés depuis un autre hôte que la page qui les référence.
 Pour en savoir plus sur les SVG, consultez la [documentation SVG](/fr/docs/Web/SVG) et pour plus d'informations sur les iframes, consultez la [documentation iframe](/fr/docs/Web/HTML/Reference/Elements/iframe).
 
 ## Syntaxe
@@ -163,7 +162,7 @@ for (let img of document.querySelectorAll("img")) {
 
 ## Voir aussi
 
-- La propriété {{cssxref("color-scheme")}}
+- La propriété {{CSSxRef("color-scheme")}}
 - [L'élément `<meta name="color-scheme">`](/fr/docs/Web/HTML/Reference/Elements/meta/name/color-scheme)
 - L'en-tête HTTP {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} [Indication client de l'agent utilisateur](/fr/docs/Web/HTTP/Guides/Client_hints#indication_client_de_lagent_utilisateur)
 - [Simuler prefers-color-scheme dans Firefox <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#view-media-rules-for-prefers-color-scheme)

@@ -105,7 +105,7 @@ h2.secondHeading {
 }
 ```
 
-However, this method only works if there are no other elements within the same [block formatting context](/ru/docs/Web/CSS/CSS_display/Block_formatting_context) that we _do_ want the heading to continue to appear next to horizontally. If our `H2` has siblings which are a sidebars floated to the left and right, using `clear` will force it to appear below both sidebars, which is probably not what we want.
+However, this method only works if there are no other elements within the same [block formatting context](/ru/docs/Web/CSS/Guides/Display/Block_formatting_context) that we _do_ want the heading to continue to appear next to horizontally. If our `H2` has siblings which are a sidebars floated to the left and right, using `clear` will force it to appear below both sidebars, which is probably not what we want.
 
 If clearing floats on an element below them is not an option, another approach is to limit the block formatting context of the floats' container. Referring to the example above again, it appears that all three red boxes are within a `P` element. We can set the {{Cssxref("overflow")}} property on that P to `hidden` or `auto` to cause it to expand to contain them, but not allow them to drop out the bottom of it:
 
@@ -129,4 +129,4 @@ p.withRedBoxes {
 
 ## Смотрите также
 
-- [Block formatting context](/ru/docs/Web/CSS/CSS_display/Block_formatting_context)
+- [Block formatting context](/ru/docs/Web/CSS/Guides/Display/Block_formatting_context)

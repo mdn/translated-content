@@ -1,39 +1,39 @@
 ---
 title: column-rule-color
 slug: Web/CSS/Reference/Properties/column-rule-color
-original_slug: Web/CSS/column-rule-color
+l10n:
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`column-rule-color`** définit la couleur de la ligne tracée entre les colonnes dans une mise en page multi-colonnes.
 
-La propriété **`column-rule-color`** permet de définir la couleur de la ligne tracée entre les colonnes lorsqu'on utilise une disposition en colonnes.
-
-{{InteractiveExample("CSS Demo: column-rule-color")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: column-rule-color")}}
 
 ```css interactive-example-choice
 column-rule-color: red;
 ```
 
 ```css interactive-example-choice
-column-rule-color: rgb(48, 125, 222);
+column-rule-color: rgb(48 125 222);
 ```
 
 ```css interactive-example-choice
-column-rule-color: hsla(120, 80%, 40%, 0.6);
+column-rule-color: hsl(120 80% 40% / 0.6);
 ```
 
 ```css interactive-example-choice
-column-rule-color: currentcolor;
+column-rule-color: currentColor;
 ```
 
 ```html interactive-example
 <section id="default-example">
   <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+    Londres. Le trimestre de Michaelmas venait de se terminer, et le lord
+    chancelier siégeait dans la salle de Lincoln's Inn. Un novembre implacable.
+    Tant de boue dans les rues comme si les eaux venaient tout juste de se
+    retirer de la surface de la terre, et il ne serait pas étonnant de
+    rencontrer un Megalosaurus, quarante pieds de long environ, se dandinant
+    comme un lézard éléphantesque en montant Holborn Hill.
   </p>
 </section>
 ```
@@ -49,17 +49,17 @@ column-rule-color: currentcolor;
 ## Syntaxe
 
 ```css
-/* Valeurs de couleur */
-/* Type <color> */
+/* Valeurs de type <color> */
 column-rule-color: red;
-column-rule-color: rgb(192, 56, 78);
+column-rule-color: rgb(192 56 78);
 column-rule-color: transparent;
-column-rule-color: hsla(0, 100%, 50%, 0.6);
+column-rule-color: hsl(0 100% 50% / 60%);
 
 /* Valeurs globales */
 column-rule-color: inherit;
 column-rule-color: initial;
 column-rule-color: revert;
+column-rule-color: revert-layer;
 column-rule-color: unset;
 ```
 
@@ -67,33 +67,32 @@ La propriété `column-rule-color` se définit grâce à une valeur de type `<co
 
 ### Valeurs
 
-- [`<color>`](/fr/docs/Web/CSS/Reference/Values/color_value)
+- {{CSSxRef("&lt;color&gt;")}}
   - : Une valeur de couleur qui indique la couleur du trait entre les colonnes.
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
-### HTML
+### Définir une règle de colonne bleue
+
+#### HTML
 
 ```html
 <p>
-  « Mais alors, » pensa Alice, « ne serai-je donc jamais plus vieille que je ne
-  le suis maintenant ? D'un côté cela aura ses avantages, ne jamais être une
-  vieille femme. Mais alors avoir toujours des leçons à apprendre ! Oh, je
-  n'aimerais pas cela du tout. » « Oh ! Alice, petite folle, » se répondit-elle.
-  « Comment pourriez-vous apprendre des leçons ici ? Il y a à peine de la place
-  pour vous, et il n'y en a pas du tout pour vos livres de leçons. »
+  Ce texte est réparti en trois colonnes. La propriété `column-rule-color` est
+  utilisée pour changer la couleur de la ligne tracée entre les colonnes. Ne
+  trouvez-vous pas cela merveilleux&nbsp;?
 </p>
 ```
 
-### CSS
+#### CSS
 
 ```css
 p {
@@ -103,9 +102,9 @@ p {
 }
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample("","100%","200")}}
+{{EmbedLiveSample("Définir une règle de colonne bleue")}}
 
 ## Spécifications
 
@@ -117,6 +116,5 @@ p {
 
 ## Voir aussi
 
-- Le type de donnée [`<color>`](/fr/docs/Web/CSS/Reference/Values/color_value)
-- Les autres propriétés relatives aux couleurs&nbsp;: [`color`](/fr/docs/Web/CSS/Reference/Properties/color), [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color), [`border-color`](/fr/docs/Web/CSS/Reference/Properties/border-color), [`outline-color`](/fr/docs/Web/CSS/Reference/Properties/outline-color), [`text-decoration-color`](/fr/docs/Web/CSS/Reference/Properties/text-decoration-color), [`text-emphasis-color`](/fr/docs/Web/CSS/Reference/Properties/text-emphasis-color), [`text-shadow`](/fr/docs/Web/CSS/Reference/Properties/color) et [`caret-color`](/fr/docs/Web/CSS/Reference/Properties/caret-color)
-- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/Guides/Colors/Applying_color)
+- Le type de donnée {{CSSxRef("&lt;color&gt;")}}
+- Les autres propriétés relatives aux couleurs&nbsp;: {{CSSxRef("color")}}, {{CSSxRef("background-color")}}, {{CSSxRef("border-color")}}, {{CSSxRef("outline-color")}}, {{CSSxRef("text-decoration-color")}}, {{CSSxRef("text-emphasis-color")}}, {{CSSxRef("text-shadow")}} et {{CSSxRef("caret-color")}}

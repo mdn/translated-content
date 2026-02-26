@@ -1,16 +1,15 @@
 ---
 title: aspect-ratio
 slug: Web/CSS/Reference/At-rules/@media/aspect-ratio
-original_slug: Web/CSS/@media/aspect-ratio
 l10n:
-  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`aspect-ratio`** peut être utilisée pour tester le {{glossary("aspect ratio", "rapport d'aspect")}} de la {{glossary("viewport", "zone d'affichage")}}.
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`aspect-ratio`** peut être utilisée pour tester le {{Glossary("aspect ratio", "rapport d'aspect")}} de la {{Glossary("viewport", "zone d'affichage")}}.
 
 ## Syntaxe
 
-La caractéristique `aspect-ratio` est définie avec un ratio (type CSS {{cssxref("&lt;ratio&gt;")}}) qui représente le ratio entre la largeur et la hauteur de la zone d'affichage . C'est une caractéristique d'intervalle ce qui signifie qu'on peut utiliser les variantes préfixées **`min-aspect-ratio`** et **`max-aspect-ratio`** afin de cibler des règles CSS en fonction d'une valeur minimale ou maximale.
+La caractéristique `aspect-ratio` est définie avec un ratio (type CSS {{CSSxRef("&lt;ratio&gt;")}}) qui représente le ratio entre la largeur et la hauteur de la zone d'affichage . C'est une caractéristique d'intervalle ce qui signifie qu'on peut utiliser les variantes préfixées **`min-aspect-ratio`** et **`max-aspect-ratio`** afin de cibler des règles CSS en fonction d'une valeur minimale ou maximale.
 
 ## Exemples
 
@@ -115,4 +114,4 @@ Depuis l'état initial, lorsque vous réduisez la hauteur, le rapport d'aspect c
 
 - [Comprendre `aspect-ratio`](/fr/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
 - [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
-- {{cssxref("@media")}}
+- La règle {{CSSxRef("@media")}}

@@ -1,12 +1,9 @@
 ---
 title: sibling-index()
 slug: Web/CSS/Reference/Values/sibling-index
-original_slug: Web/CSS/sibling-index
 l10n:
-  sourceCommit: a4059d2f0a26110e764e16545b6f83b076e5ac24
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
-
-{{SeeCompatTable}}
 
 **`sibling-index()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 DOM ツリー内におけるすべての兄弟要素に対する、現在の要素の相対的な位置を表す整数を返します。返される値は、親要素内のすべての兄弟要素の中で、コンテキストの子要素の位置のインデックス番号です。最初の子は `1`、最後の子は {{domxref("Element.children")}} の `length` を返します。
 
@@ -177,5 +174,5 @@ li {
 
 ## 関連情報
 
-- {{CSSxRef("sibling-count", "sibling-count()")}}
-- {{CSSxRef("counter", "counter()")}}
+- {{cssxref("sibling-count()")}}
+- {{cssxref("counter()")}}

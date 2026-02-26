@@ -138,7 +138,7 @@ Pour désactiver un bouton de réinitialisation, il suffit d'appliquer l'attribu
 On peut activer/désactiver le bouton lors de la navigation sur la page avec JavaScript en modifiant la valeur de l'attribut `disabled` pour la passer de `true` à `false` et _vice versa_ (par exemple avec une instruction telle que `btn.disabled = true`).
 
 > [!NOTE]
-> Pour plus d'exemples concernant l'activation/la désactivation de bouton, vous pouvez consulter la page [`<input type="button">`](/fr/docs/Web/HTML/Reference/Elements/input/button#d%c3%a9sactiver_et_activer_un_bouton).
+> Pour plus d'exemples concernant l'activation/la désactivation de bouton, vous pouvez consulter la page [`<input type="button">`](/fr/docs/Web/HTML/Reference/Elements/input/button#désactiver_et_activer_un_bouton).
 
 > [!NOTE]
 > À la différence des autres navigateurs, [Firefox conservera un état désactivé obtenu de façon dynamique lorsque la page est rechargée](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing). L'attribut [`autocomplete`](/fr/docs/Web/HTML/Reference/Elements/button#autocomplete) peut être utilisé afin de contrôler cette fonctionnalité.
@@ -192,4 +192,4 @@ Aucune fonctionnalité de vérification native côté client n'est implémentée
 - L'élément {{HTMLElement("button")}}
 - [Apprendre les formulaires et les boutons](/fr/docs/Learn/HTML/Forms_and_buttons)
 - [L'accessibilité et les formulaires](/fr/docs/Web/Accessibility/ARIA)
-- [Les formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\)
+- [Les formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms)

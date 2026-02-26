@@ -40,7 +40,7 @@ enumerateDevices()
 
 API へのアクセスは、以下の制約を受けます。
 
-- このメソッドは、[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)で呼び出す必要があります。
+- このメソッドは、[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)で呼び出す必要があります。
 - 文書は完全にアクティブで、その可視性が「可視」である必要があります。
 
 ## 例

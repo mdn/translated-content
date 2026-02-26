@@ -5,7 +5,7 @@ slug: Web/API/SharedWorker/SharedWorker
 
 {{APIRef("Web Workers API")}}
 
-**`SharedWorker()`** 构造函数实例化的 {{domxref("SharedWorker")}} 对象可以执行指定的 URL 的脚本。所执行的脚本必须遵守 [同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)。
+**`SharedWorker()`** 构造函数实例化的 {{domxref("SharedWorker")}} 对象可以执行指定的 URL 的脚本。所执行的脚本必须遵守[同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)。
 
 如果 URL 的语法无效或者违反了同源策略会抛出 `SECURITY_ERR` 类型的 {{domxref("DOMException")}} 异常。
 

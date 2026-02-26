@@ -1,9 +1,8 @@
 ---
 title: :modal
 slug: Web/CSS/Reference/Selectors/:modal
-original_slug: Web/CSS/:modal
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 4cb9d89a204a9532370693b982e8a3b274a874b1
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:modal`** cible un élément qui est dans un état interdisant toute interaction avec les autres éléments situés en dehors jusqu'à ce que l'interaction soit terminée. Plusieurs éléments peuvent être ciblés par la pseudo-classe `:modal` à un même instant donné, mais un seul de ces éléments sera actif et permettra de recevoir une saisie.
@@ -30,7 +29,7 @@ p {
 ```
 
 ```html interactive-example
-<p>Souhaitez-vous voir un nouveau nombre aléatoire ?</p>
+<p>Souhaitez-vous voir un nouveau nombre aléatoire&nbsp;?</p>
 <button id="showNumber">Montre-moi</button>
 
 <dialog id="favDialog">
@@ -79,7 +78,7 @@ Dans cet exemple, on met en forme une boîte de dialogue modale qui s'ouvre lors
   <form method="dialog">
     <p>
       <label
-        >Animal préféré :
+        >Animal préféré&nbsp;:
         <select>
           <option></option>
           <option>Crevette en saumure</option>

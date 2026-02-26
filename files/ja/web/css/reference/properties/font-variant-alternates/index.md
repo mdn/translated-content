@@ -1,9 +1,8 @@
 ---
 title: font-variant-alternates
 slug: Web/CSS/Reference/Properties/font-variant-alternates
-original_slug: Web/CSS/font-variant-alternates
 l10n:
-  sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`font-variant-alternates`** は [CSS](/ja/docs/Web/CSS) のプロパティで、代替書体の使用を制御します。代替書体は {{cssxref("@font-feature-values")}} で定義された代替名で参照される可能性があります。
@@ -91,8 +90,8 @@ font-variant-alternates: unset;
 
 ```css
 @font-face {
-  font-family: MonteCarlo;
-  src: url("montecarlo-regular.woff2");
+  font-family: "MonteCarlo";
+  src: url("/shared-assets/fonts/monte-carlo/monte-carlo-regular.woff2");
 }
 
 @font-feature-values "MonteCarlo" {
@@ -102,7 +101,7 @@ font-variant-alternates: unset;
 }
 
 p {
-  font-family: "MonteCarlo";
+  font-family: "MonteCarlo", cursive;
   font-size: 3rem;
   margin: 0.7rem 3rem;
 }
@@ -126,12 +125,12 @@ p {
 
 ## 関連情報
 
-- [`font-variant`](/ja/docs/Web/CSS/Reference/Properties/font-variant)
-- [`font-variant-caps`](/ja/docs/Web/CSS/Reference/Properties/font-variant-caps)
-- [`font-variant-east-asian`](/ja/docs/Web/CSS/Reference/Properties/font-variant-east-asian)
-- [`font-variant-emoji`](/ja/docs/Web/CSS/Reference/Properties/font-variant-emoji)
-- [`font-variant-ligatures`](/ja/docs/Web/CSS/Reference/Properties/font-variant-ligatures)
-- [`font-variant-numeric`](/ja/docs/Web/CSS/Reference/Properties/font-variant-numeric)
-- [`font-variant-position`](/ja/docs/Web/CSS/Reference/Properties/font-variant-position)
-- [`@font-feature-values`](/ja/docs/Web/CSS/Reference/At-rules/@font-feature-values)
-- [`font-feature-settings`](/ja/docs/Web/CSS/Reference/Properties/font-feature-settings)
+- {{cssxref("font-variant")}}
+- {{cssxref("font-variant-caps")}}
+- {{cssxref("font-variant-east-asian")}}
+- {{cssxref("font-variant-emoji")}}
+- {{cssxref("font-variant-ligatures")}}
+- {{cssxref("font-variant-numeric")}}
+- {{cssxref("font-variant-position")}}
+- {{cssxref("@font-feature-values")}}
+- {{cssxref("font-feature-settings")}}

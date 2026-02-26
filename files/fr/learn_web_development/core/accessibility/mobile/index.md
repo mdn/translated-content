@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Accessibility/Mobile
 original_slug: Learn/Accessibility/Mobile
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Multimedia","Learn_web_development/Core/Accessibility/Accessibility_troubleshooting", "Learn_web_development/Core/Accessibility")}}
 
 L'accès Web sur les appareils mobiles étant si populaire et les plates-formes populaires telles qu'IOS et Android disposant d'outils d'aide à l'accessibilité complets, il est important de prendre en compte l'accessibilité de votre contenu Web sur ces plates-formes. Cet article examine les considérations relatives à l'accessibilité spécifiques aux mobiles.
 
@@ -15,7 +15,7 @@ L'accès Web sur les appareils mobiles étant si populaire et les plates-formes 
       <td>
         Connaissances de base en informatique, compréhension de base de HTML,
         CSS et JavaScript et compréhension de la <a
-          href="/fr/docs/Learn/Accessibility"
+          href="/fr/docs/Learn_web_development/Core/Accessibility"
           >previous articles in the course</a
         >.
       </td>
@@ -266,4 +266,4 @@ Dans cet article, nous vous avons fourni des détails sur les problèmes courant
 - [Guidelines For Mobile Web Development](https://www.smashingmagazine.com/guidelines-for-mobile-web-development/) — Une liste d'articles dans Smashing Magazine couvrant différentes techniques de conception de sites Web mobiles.
 - [Make your site work on touch devices](http://www.creativebloq.com/javascript/make-your-site-work-touch-devices-51411644) — Article utile sur l'utilisation d'événements tactiles pour que les interactions fonctionnent sur les appareils mobiles.
 
-{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Multimedia","Learn_web_development/Core/Accessibility/Accessibility_troubleshooting", "Learn_web_development/Core/Accessibility")}}

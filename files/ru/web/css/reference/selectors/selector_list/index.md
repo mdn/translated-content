@@ -153,4 +153,4 @@ h2:has(+ p, + ul.red) {
 - Псевдоклассы [`:is()`](/ru/docs/Web/CSS/Reference/Selectors/:is) и [`:where()`](/ru/docs/Web/CSS/Reference/Selectors/:where) принимающие прощающий список селекторов.
 - Псевдокласс [`:not()`](/ru/docs/Web/CSS/Reference/Selectors/:not) принимающий список обычных селекторов.
 - Псевдокласс [`:has()`](/ru/docs/Web/CSS/Reference/Selectors/:has) принимающий список относительных селекторов.
-- [CSS-селекторы](/ru/docs/Web/CSS/CSS_selectors)
+- [CSS-селекторы](/ru/docs/Web/CSS/Guides/Selectors)

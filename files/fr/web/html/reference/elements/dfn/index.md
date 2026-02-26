@@ -1,109 +1,47 @@
 ---
 title: "<dfn> : l'élément de définition"
 slug: Web/HTML/Reference/Elements/dfn
-original_slug: Web/HTML/Element/dfn
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<dfn>`** indique un terme à définir. L'élément `<dfn>` doit être utilisé dans une phrase de définition complète, où la définition du terme peut être l'une des suivantes&nbsp;:
 
-L'élément HTML **`<dfn>`** (aussi nommé « définition ») est utilisé pour indiquer le terme défini dans le contexte d'une expression ou d'une phrase de définition. L'élément [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p), le couple [`<dt>`](/fr/docs/Web/HTML/Reference/Elements/dt)/[`<dd>`](/fr/docs/Web/HTML/Reference/Elements/dd) ou l'élément [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section) qui est le plus proche ancêtre de `<dfn>` est considéré comme la définition du terme.
+- Le paragraphe ancêtre (un bloc de texte, parfois marqué par un élément {{HTMLElement("p")}}).
+- L'association {{HTMLElement("dt")}}/{{HTMLElement("dd")}}.
+- L'ancêtre de type [section](/fr/docs/Web/HTML/Guides/Content_categories#contenu_sectionnant) le plus proche de l'élément `<dfn>`.
 
-{{InteractiveExample("HTML Demo: &lt;dfn&gt;", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;dfn&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>
-  A <dfn id="def-validator">validator</dfn> is a program that checks for syntax
-  errors in code or documents.
+  Un <dfn id="def-validator">validateur</dfn> est un programme qui vérifie les
+  erreurs de syntaxe dans du code ou des documents.
 </p>
 ```
 
 ```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
 dfn {
+  /* Ajoutez vos styles ici */
 }
 ```
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
-        >
-      </th>
-      <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"
-          >contenu tangible</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
-      <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >Contenu phrasé</a
-        >
-        mais sans élément <code>&#x3C;dfn></code> qui soit un descendant.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont
-        obligatoires.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
-      <td>
-        Tout élément acceptant du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >contenu phrasé</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
-      <td>
-        <a href="https://w3c.github.io/aria/#term"><code>term</code></a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>
-        <a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a
-        >.
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## Attributs
 
-Comme pour tous les éléments, on peut appliquer [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes) sur `<dfn>`.
+Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
-Pour cet élément, l'attribut **`title`** possède un sens particulier noté ci-après.
+L'attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title) possède un sens particulier, comme noté ci-après.
 
 ## Notes d'utilisation
 
 L'utilisation de l'élément `<dfn>` présente certains aspects peu évidents. Nous les examinons ici.
 
-### Spécifier le terme à définir
+### Indiquer le terme à définir
 
-Le terme à définir est identifié selon ces règles :
+Le terme à définir est identifié selon ces règles&nbsp;:
 
-1. Si l'élément `<dfn>` possède un attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-title), la valeur de l'attribut `title` est considérée comme étant le terme défini. L'élément doit toujours contenir du texte, mais ce texte peut être une abréviation (peut-être en utilisant [`<abbr>`](/fr/docs/Web/HTML/Reference/Elements/abbr)) ou une autre forme du terme.
-2. Si le `<dfn>` contient un seul élément enfant et n'a pas de contenu textuel propre, et que l'élément enfant est un élément [`<abbr>`](/fr/docs/Web/HTML/Reference/Elements/abbr) avec un attribut `title` lui-même, alors la valeur exacte du `<abbr>` de l'élément `title` est le terme défini.
+1. Si l'élément `<dfn>` possède un attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title), la valeur de l'attribut `title` est considérée comme étant le terme défini. L'élément doit toujours contenir du texte, mais ce texte peut être une abréviation (peut-être en utilisant {{HTMLElement("abbr")}}) ou une autre forme du terme.
+2. Si le `<dfn>` contient un seul élément enfant et n'a pas de contenu textuel propre, et que l'élément enfant est un élément {{HTMLElement("abbr")}} avec un attribut `title` lui-même, alors la valeur exacte du `<abbr>` de l'élément `title` est le terme défini.
 3. Sinon, le contenu textuel de l'élément `<dfn>` est le terme défini. Ceci est illustré [dans le premier exemple ci-dessous](#basic_identification_of_a_term).
 
 > [!NOTE]
@@ -111,9 +49,9 @@ Le terme à définir est identifié selon ces règles :
 
 ### Liens vers des éléments de type `<dfn>`
 
-Si vous incluez un attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-id) sur l'élément `<dfn>`, vous pouvez ensuite créer un lien vers celui-ci en utilisant des éléments [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a). Ces liens doivent être des utilisations du terme, l'objectif étant que le lecteur puisse accéder rapidement à la définition du terme s'il ne la connaît pas déjà, en cliquant sur le lien du terme.
+Si vous incluez un attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) sur l'élément `<dfn>`, vous pouvez ensuite créer un lien vers celui-ci en utilisant des éléments {{HTMLElement("a")}}. Ces liens doivent être des utilisations du terme, l'objectif étant que le lecteur puisse accéder rapidement à la définition du terme s'il ne la connaît pas déjà, en cliquant sur le lien du terme.
 
-C'est ce que montre l'exemple sous [Liens vers les définitions](#links_to_definitions) ci-dessous.
+C'est ce que montre l'exemple sous [Liens vers les définitions](#liens_vers_des_définitions) ci-dessous.
 
 ## Exemples
 
@@ -136,11 +74,11 @@ L'élément `<dfn>` n'ayant ici pas d'attribut `title`, c'est le contenu textuel
 
 #### Résultat
 
-{{EmbedLiveSample("Identification_simple_d'un_terme", "", 120)}}
+{{EmbedLiveSample("Identification simple d'un terme'un_terme", 650, 120)}}
 
 ### Liens vers des définitions
 
-Il est possible d'utiliser l'attribut `id` afin de créer des liens avec des éléments [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) qui pointent vers la définition.
+Pour ajouter des liens vers les définitions, créez le lien comme d'habitude, avec l'élément {{HTMLElement("a")}}.
 
 #### HTML
 
@@ -159,31 +97,20 @@ Il est possible d'utiliser l'attribut `id` afin de créer des liens avec des él
 </p>
 
 <p>
-  Negare non possum. Dat enim intervalla et relaxat. Quonam modo? Equidem e Cn.
-  Quid de Pythagora? In schola desinis.
-</p>
-
-<p>
-  Ubi ut eam caperet aut quando? Cur iustitia laudatur? Aperiendum est igitur,
-  quid sit voluptas; Quid enim? Non est igitur voluptas bonum. Urgent tamen et
-  nihil remittunt. Quid enim possumus hoc agere divinius?
-</p>
-
-<p>
   C'est pourquoi nous avons décidé d'utiliser l'élément
   <code><a href="#definition-dfn">&lt;dfn&gt;</a></code> pour ce projet.
 </p>
 ```
 
-On voit ici que l'élément possède désormais un attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-id) avec la valeur `"definition-dfn"`. Cet attribut permet d'utiliser l'élément comme cible d'un lien. Plus bas, on crée un tel lien avec un élément [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) dont l'attribut [`href`](/fr/docs/Web/HTML/Reference/Elements/a#attr-href) vaut `"#definition-dfn"`, ce qui permet de remonter à la définition.
+On voit ici que l'élément possède désormais un attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) avec la valeur `"definition-dfn"`. Cet attribut permet d'utiliser l'élément comme cible d'un lien. Plus bas, on crée un tel lien avec un élément `<a>` dont l'attribut [`href`](/fr/docs/Web/HTML/Reference/Elements/a#href) vaut `"#definition-dfn"`, ce qui permet de remonter à la définition.
 
 #### Résultat
 
-{{EmbedLiveSample("Liens_vers_des_définitions", "", 350)}}
+{{EmbedLiveSample("Liens vers des définitions", 650, 300)}}
 
 ### Utiliser les abréviations et les définitions
 
-Dans certains cas, on souhaite utiliser l'abréviation d'un terme lorsqu'on le définit. Pour cela, on peut utiliser `<dfn>` et [`<abbr>`](/fr/docs/Web/HTML/Reference/Elements/abbr) de la façon suivante :
+Dans certains cas, on souhaite utiliser l'abréviation d'un terme lorsqu'on le définit. Pour cela, on peut utiliser `<dfn>` et {{HTMLElement("abbr")}} de la façon suivante&nbsp;:
 
 #### HTML
 
@@ -202,11 +129,73 @@ Dans certains cas, on souhaite utiliser l'abréviation d'un terme lorsqu'on le d
 </p>
 ```
 
-On notera que l'élément `<abbr>` est imbriqué dans l'élément `<dfn>`. L'élément `<abbr>` indique que le terme est une abréviation ("HST") et indique le détail de cette abrévation ("Hubble Space Telescope") grâce à son attribut `title`. L'élément `<dfn>` indique quant à lui que c'est bien ce terme abrégé qu'on est en train de définir.
+On notera que l'élément `<abbr>` est imbriqué dans l'élément `<dfn>`. L'élément `<abbr>` indique que le terme est une abréviation («&nbsp;HST&nbsp;») et indique le détail de cette abrévation («&nbsp;Hubble Space Telescope&nbsp;») grâce à son attribut `title`. L'élément `<dfn>` indique quant à lui que c'est bien ce terme abrégé qu'on est en train de définir.
 
 #### Résultat
 
-{{EmbedLiveSample("Utiliser_les_abréviations_et_les_définitions", "", 200)}}
+{{EmbedLiveSample("Utiliser les abréviations et les définitions", 650, 200)}}
+
+## Résumé technique
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
+          >Catégories de contenu</a
+        >
+      </th>
+      <td>
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
+          >Contenu de flux</a
+        >,
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
+          >contenu phrasé</a
+        >,
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_tangible"
+          >contenu tangible</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Contenu autorisé</th>
+      <td>
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
+          >Contenu phrasé</a
+        >
+        mais sans élément <code>&#x3C;dfn></code> qui soit un descendant.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omission de balises</th>
+      <td>
+        Aucune, la balise d'ouverture et la balise de fermeture sont
+        obligatoires.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Parents autorisés</th>
+      <td>
+        Tout élément acceptant du
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
+          >contenu phrasé</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/term_role"><code>term</code></a></td>
+    </tr>
+    <tr>
+      <th scope="row">Rôles ARIA autorisés</th>
+      <td>Tous les rôles sont autorisés.</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface DOM</th>
+      <td>{{DOMxRef("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Spécifications
 
@@ -218,5 +207,5 @@ On notera que l'élément `<abbr>` est imbriqué dans l'élément `<dfn>`. L'él
 
 ## Voir aussi
 
-- Éléments liés aux listes de définitions : [`<dl>`](/fr/docs/Web/HTML/Reference/Elements/dl), [`<dt>`](/fr/docs/Web/HTML/Reference/Elements/dt), [`<dd>`](/fr/docs/Web/HTML/Reference/Elements/dd)
-- L'élément [`<abbr>`](/fr/docs/Web/HTML/Reference/Elements/abbr)
+- Les éléments liés aux listes de définitions&nbsp;: {{HTMLElement("dl")}}, {{HTMLElement("dt")}}, {{HTMLElement("dd")}}
+- L'élément {{HTMLElement("abbr")}}

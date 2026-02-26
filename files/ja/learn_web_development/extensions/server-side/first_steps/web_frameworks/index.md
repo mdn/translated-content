@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps/Website_security", "Learn_web_development/Extensions/Server-side/First_steps")}}
 
 前の記事では、ウェブクライアントとサーバー間の通信、HTTP リクエストとレスポンスの性質、およびウェブブラウザーからのリクエストにレスポンスするためにサーバーサイドウェブアプリケーションが実行する必要があることについて説明しました。この知識をもとに、ウェブフレームワークがどのようにこれらのタスクを単純化できるかを探り、最初のサーバーサイドウェブアプリケーションのためのフレームワークをどのように選択するかを考えてみましょう。
 
@@ -16,7 +16,7 @@ l10n:
       <th scope="row">前提条件:</th>
       <td>
         HTTP リクエストを処理して応答するサーバー側コードがどのようなものかに関する基本的な理解（<a
-          href="/ja/docs/Learn/Server-side/First_steps/Client-Server_overview"
+          href="/ja/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview"
           >クライアント・サーバーの概要</a
         >を参照）
       </td>
@@ -320,4 +320,4 @@ Mojolicious が提供する機能のいくつかは以下の通りです。
 
 このモジュールの次の記事では、方向を少し変えてウェブセキュリティについて考えます。
 
-{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps/Website_security", "Learn_web_development/Extensions/Server-side/First_steps")}}

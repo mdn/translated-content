@@ -15,7 +15,7 @@ p::first-line {
 ```
 
 > [!NOTE]
-> [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 의사 요소와 달리 요소의 **특정 상태**에 스타일을 적용할 때 사용합니다.
+> [의사 클래스](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes)는 의사 요소와 달리 요소의 **특정 상태**에 스타일을 적용할 때 사용합니다.
 
 ## 구문
 
@@ -88,4 +88,4 @@ selector::pseudo-element {
 
 ## 같이 보기
 
-- [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)
+- [의사 클래스](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes)

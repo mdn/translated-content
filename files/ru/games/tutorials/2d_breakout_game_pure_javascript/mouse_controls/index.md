@@ -3,7 +3,7 @@ title: Управление мышью
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Заключение")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up")}}
 
 Это 9-й шаг из 10 в [Gamedev Canvas tutorial](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Вы можете найти исходный код к этому уроку в [Gamedev-Canvas-workshop/lesson9.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html).
 

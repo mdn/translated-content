@@ -4,7 +4,7 @@ slug: Learn_web_development/Getting_started/Your_first_website/What_will_your_we
 original_slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Your_first_website")}}
 
 _¿Cómo se verá tu sitio web?_, analiza el trabajo de planificación y diseño que debes realizar para tu sitio web antes de escribir el código, incluyendo: "¿qué información ofrece mi sitio web?", "¿qué tipos de letra y colores quiero?" y "¿qué hace mi sitio?".
 
@@ -67,4 +67,4 @@ Para elegir un tipo de letra:
 2. Copia las líneas de código que Google le proporciona en tu editor de texto para guardarlas más tarde.
 3. Para obtener más detalles sobre el uso de Google Fonts, consulta [esta página](https://developers.google.com/fonts/docs/getting_started)
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Your_first_website")}}

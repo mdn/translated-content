@@ -52,5 +52,5 @@ l10n:
 ## 関連情報
 
 - HTML [`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title)
-- CSS [`:placeholder-shown`](/ja/docs/Web/CSS/Reference/Selectors/:placeholder-shown) 擬似クラスセレクター
-- CSS [`::placeholder`](/ja/docs/Web/CSS/Reference/Selectors/::placeholder) 擬似要素セレクター
+- CSS {{cssxref(":placeholder-shown")}} 擬似クラスセレクター
+- CSS {{cssxref("::placeholder")}} 擬似要素セレクター

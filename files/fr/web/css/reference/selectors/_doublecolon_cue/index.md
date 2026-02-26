@@ -1,9 +1,8 @@
 ---
 title: ::cue
 slug: Web/CSS/Reference/Selectors/::cue
-original_slug: Web/CSS/::cue
 l10n:
-  sourceCommit: 7f460077d6f16c939718e9482a8270166f6d9abd
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::cue`** permet de cibler les indications textuelles [WebVTT](/fr/docs/Web/API/WebVTT_API) d'un élément. Ce pseudo-élément peut être utilisé afin de mettre en forme [les légendes et autres indications textuelles](/fr/docs/Web/API/WebVTT_API#styling_webtt_cues) pour les médias avec des pistes VTT.
@@ -38,7 +37,7 @@ video::cue {
 
 Les propriétés sont appliquées à l'ensemble des indications (comme si celles-ci formaient un seul ensemble). Seule `background` (ou les propriétés raccourcies associées) s'appliquent à chaque indication séparément (afin d'éviter de créer des boîtes qui masqueraient de grandes zones sur le média).
 
-Dans l'exemple ci-dessus, le sélecteur `::cue(u)` sélectionne tous les éléments [`<u>`](/fr/docs/Web/HTML/Reference/Elements/u) à l'intérieur [du texte de l'indication](https://raw.githubusercontent.com/mdn/interactive-examples/main/live-examples/media/examples/friday.vtt).
+Dans l'exemple ci-dessus, le sélecteur `::cue(u)` sélectionne tous les éléments {{HTMLElement("u")}} à l'intérieur [du texte de l'indication <sup>(angl.)</sup>](https://raw.githubusercontent.com/mdn/interactive-examples/main/live-examples/media/examples/friday.vtt).
 
 ## Syntaxe
 

@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Async_JS/Sequencing_animations
 original_slug: Learn/JavaScript/Asynchronous/Sequencing_animations
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Async_JS/Introducing_workers", "Learn_web_development/Extensions/Async_JS")}}
 
 이 평가에서는 일련의 애니메이션을 순서대로 재생하도록 페이지를 업데이트할 것입니다. 이를 진행하기 위해 [프로미스 사용 방법](/ko/docs/Learn_web_development/Extensions/Async_JS/Promises)에서 배운 몇 가지 기술을 사용할 예정입니다.
 
@@ -104,4 +104,4 @@ alice1.animate(aliceTumbling, aliceTiming);
    - 온라인 편집기에서 도움이나 평가가 필요한 코드 링크(1단계에서 언급됨). 이는 답변에 매우 도움이 됩니다. 만약 코드를 볼 수 없다면 도움을 주기 상당히 어렵습니다.
    - 도움이 필요한 질문을 찾을 수 있도록 실제 작업 또는 평가 페이지에 대한 링크
 
-{{PreviousMenu("Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
+{{PreviousMenu("Learn_web_development/Extensions/Async_JS/Introducing_workers", "Learn_web_development/Extensions/Async_JS")}}

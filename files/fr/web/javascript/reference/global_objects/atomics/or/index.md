@@ -1,56 +1,42 @@
 ---
-title: Atomics.or()
+title: "Atomics : méthode statique or()"
+short-title: or()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/or
+l10n:
+  sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
 ---
 
-{{JSRef}}
-
-La méthode statique **`Atomics.or()`** calcule le résultat d'un OU binaire entre une valeur donnée et une valeur du tableau typé et y place le résultat obtenu. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
-
-{{InteractiveExample("JavaScript Demo: Atomics.or()")}}
-
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(16);
-const uint8 = new Uint8Array(buffer);
-uint8[0] = 5;
-
-// 5 (0101) OR 2 (0010) = 7 (0111)
-console.log(Atomics.or(uint8, 0, 2));
-// Expected output: 5
-
-console.log(Atomics.load(uint8, 0));
-// Expected output: 7
-```
+La méthode statique **`or()`** de l'objet {{JSxRef("Atomics")}} calcule un OU binaire entre une valeur donnée et la valeur présente à une position donnée du tableau, et retourne l'ancienne valeur à cette position. Cette opération atomique garantit qu'aucune autre écriture n'intervient tant que la valeur modifiée n'a pas été réinscrite.
 
 ## Syntaxe
 
-```js
-Atomics.or(typedArray, index, value);
+```js-nolint
+Atomics.or(typedArray, index, value)
 ```
 
 ### Paramètres
 
 - `typedArray`
-  - : Un tableau typé entier partagé parmi {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}} ou {{jsxref("Uint32Array")}}.
+  - : Un tableau typé entier partagé parmi {{JSxRef("Int8Array")}}, {{JSxRef("Uint8Array")}}, {{JSxRef("Int16Array")}}, {{JSxRef("Uint16Array")}}, {{JSxRef("Int32Array")}}, {{JSxRef("Uint32Array")}}, {{JSxRef("BigInt64Array")}} ou {{JSxRef("BigUint64Array")}}.
 - `index`
   - : La position du tableau `typedArray` sur laquelle calculer le OU binaire.
-- `valeur`
+- `value`
   - : Le nombre avec lequel calculer le OU binaire.
 
 ### Valeur de retour
 
 L'ancienne valeur contenue à l'emplacement du tableau (`typedArray[index]`).
 
-### Exceptions levées
+### Exceptions
 
-- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
-- Cette méthode lève {{jsxref("TypeError")}} si `typedArray` n'est pas tableau typé partagé.
-- Cette méthode lève {{jsxref("RangeError")}} si `index` est en dehors des limites de `typedArray`.
+- {{JSxRef("TypeError")}}
+  - : Lèvee si `typedArray` n'est pas l'un des types d'entiers autorisés.
+- {{JSxRef("RangeError")}}
+  - : Levée si `index` est en dehors des limites de `typedArray`.
 
 ## Description
 
-L'opération binaire OU renvoie 1 si `a` ou `b` valent 1. La table de vérité de cette opération est :
+L'opération binaire OU retourne 1 si `a` ou `b` valent 1. La table de vérité de cette opération est&nbsp;:
 
 | `a` | `b` | `a \| b` |
 | --- | --- | -------- |
@@ -59,25 +45,31 @@ L'opération binaire OU renvoie 1 si `a` ou `b` valent 1. La table de vérité d
 | 1   | 0   | 1        |
 | 1   | 1   | 1        |
 
-Par exemple, un OU binaire appliqué entre 5 et 1 (`5 | 1`) renvoie `0101`, ce qui correspond à 5 en notation décimale.
+Par exemple, un OU binaire de `5 | 1` retourne `0101`, ce qui correspond à 5 en notation décimale.
 
-```
+```plain
 5  0101
 1  0001
    ----
-
 5  0101
 ```
 
 ## Exemples
 
-```js
-var sab = new SharedArrayBuffer(1024);
-var ta = new Uint8Array(sab);
-ta[0] = 2;
+Notez que ces exemples ne peuvent pas être exécutés directement depuis la console ou une page web arbitraire, car `SharedArrayBuffer` n'est pas défini à moins que [ses exigences de sécurité](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#contraintes_de_sécurité) ne soient respectées.
 
-Atomics.or(ta, 0, 1); // renvoie 2, l'ancienne valeur
-Atomics.load(ta, 0); // 3
+### Utiliser `Atomics.or()`
+
+```js
+// Crée un SharedArrayBuffer avec une taille en octets
+const sab = new SharedArrayBuffer(1024);
+// Crée une vue et définit la valeur de l'index 0
+const ta = new Uint8Array(sab);
+ta[0] = 7;
+
+// 7 (0111) OR 10 (1010) = 15 (1111)
+console.log(Atomics.or(ta, 0, 10)); // 7, l'ancienne valeur
+console.log(Atomics.load(ta, 0)); // 15, la nouvelle/valeur actuelle
 ```
 
 ## Spécifications
@@ -90,6 +82,6 @@ Atomics.load(ta, 0); // 3
 
 ## Voir aussi
 
-- {{jsxref("Atomics")}}
-- {{jsxref("Atomics.and()")}}
-- {{jsxref("Atomics.xor()")}}
+- L'objet {{JSxRef("Atomics")}}
+- La méthode {{JSxRef("Atomics.and()")}}
+- La méthode {{JSxRef("Atomics.xor()")}}

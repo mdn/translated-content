@@ -1,9 +1,8 @@
 ---
 title: :lang()
 slug: Web/CSS/Reference/Selectors/:lang
-original_slug: Web/CSS/:lang
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:lang()`** permet de définir la mise en forme d'un élément selon la langue dans laquelle il est écrit.
@@ -43,7 +42,7 @@ La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-class
 ### Paramètre
 
 - `<language-code>`
-  - : La chaîne de caractères ({{cssxref("&lt;string&gt;")}}) qui définit la langue des éléments qu'on veut sélectionner.
+  - : La chaîne de caractères ({{CSSxRef("&lt;string&gt;")}}) qui définit la langue des éléments qu'on veut sélectionner.
 
 ## Description
 
@@ -54,7 +53,7 @@ L'utilisation explicite de wildcards doit inclure une correspondance complète d
 
 ### Correspondance des enfants d'une langue donnée
 
-Dans cet exemple, la pseudo-classe `:lang` est utilisée pour faire correspondre le parent d'une citation en utilisant {{cssxref(":first-child")}}. Il ne s'agit pas de la seule solution pour ce type de problème, ni même de la meilleure (qui dépendra du type de document). Les valeurs Unicode sont utilisées pour certains caractères spéciaux de citation.
+Dans cet exemple, la pseudo-classe `:lang` est utilisée pour faire correspondre le parent d'une citation en utilisant {{CSSxRef(":first-child")}}. Il ne s'agit pas de la seule solution pour ce type de problème, ni même de la meilleure (qui dépendra du type de document). Les valeurs Unicode sont utilisées pour certains caractères spéciaux de citation.
 
 #### HTML
 
@@ -157,7 +156,7 @@ p {
 
 ## Voir aussi
 
-- La pseudo-classe {{cssxref(":dir")}} correspondant à la direction du texte
+- La pseudo-classe {{CSSxRef(":dir")}} correspondant à la direction du texte
 - L'attribut HTML [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang)
 - L'attribut HTML [`translate`](/fr/docs/Web/HTML/Reference/Global_attributes/translate)
 - Le référenciel {{RFC(5646, "Balises pour l'identification des langues (également connues sous le nom de BCP 47)")}}

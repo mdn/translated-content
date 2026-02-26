@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Values/gradient
 original_slug: Web/CSS/gradient
 ---
 
-**`<gradient>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/CSS_values_and_units/CSS_data_types)은 {{cssxref("&lt;image&gt;")}}의 특별한 종류로 여러 색의 점진적인 변화를 나타냅니다.
+**`<gradient>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/Reference/Values/Data_types)은 {{cssxref("&lt;image&gt;")}}의 특별한 종류로 여러 색의 점진적인 변화를 나타냅니다.
 
 {{InteractiveExample("CSS Demo: &lt;gradient&gt;")}}
 
@@ -40,7 +40,7 @@ background: conic-gradient(#f69d3c, #3f87a6);
 }
 ```
 
-CSS 그레이디언트는 [원본 크기가 없습니다](/ko/docs/Web/CSS/image#no_intrinsic). 즉 실제 크기나 선호 크기가 없습니다. 그레이디언트의 크기는 적용하는 요소의 크기와 동일해집니다.
+CSS 그레이디언트는 [원본 크기가 없습니다](/ko/docs/Web/CSS/Reference/Values/image#no_intrinsic). 즉 실제 크기나 선호 크기가 없습니다. 그레이디언트의 크기는 적용하는 요소의 크기와 동일해집니다.
 
 ## 구문
 
@@ -180,5 +180,5 @@ div {
 
 ## 같이 보기
 
-- [CSS 그레이디언트 사용하기](/ko/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [CSS 그레이디언트 사용하기](/ko/docs/Web/CSS/Guides/Images/Using_gradients)
 - 그레이디언트 함수: {{cssxref("linear-gradient", "linear-gradient()")}}, {{cssxref("radial-gradient", "radial-gradient()")}}, {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}}

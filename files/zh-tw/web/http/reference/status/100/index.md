@@ -2,7 +2,7 @@
 title: 100 Continue
 slug: Web/HTTP/Reference/Status/100
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 HTTP **`100 Continue`** [資訊回應](/zh-TW/docs/Web/HTTP/Reference/Status#資訊回應)狀態碼表示伺服器已收到請求的初始部分，且尚未拒絕。用戶應繼續發送請求，或者如果請求已經完成，則可以忽略 100 回應。

@@ -6,7 +6,7 @@ original_slug: Web/CSS/grid-template
 
 {{CSSRef}}
 
-[Сокращённое CSS-свойство](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`grid-template`** определяет {{glossary("grid column", "колонки")}}, {{glossary("grid rows", "ряды")}} и {{glossary("grid areas", "области")}} грид-раскладки.
+[Сокращённое CSS-свойство](/ru/docs/Web/CSS/Guides/Cascade/Shorthand_properties) **`grid-template`** определяет {{glossary("grid column", "колонки")}}, {{glossary("grid rows", "ряды")}} и {{glossary("grid areas", "области")}} грид-раскладки.
 
 {{InteractiveExample("CSS Demo: grid-template")}}
 
@@ -196,6 +196,6 @@ footer {
 ## Смотрите также
 
 - Связанные CSS-свойства: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}
-- Руководство по грид-раскладке: _[Расположение элементов по грид-линиям с помощью CSS Grid](/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
-- Руководство по грид-раскладке: _[Шаблоны грид-областей - сокращённое определение грида](/ru/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#grid_definition_shorthands)_
+- Руководство по грид-раскладке: _[Расположение элементов по грид-линиям с помощью CSS Grid](/ru/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)_
+- Руководство по грид-раскладке: _[Шаблоны грид-областей - сокращённое определение грида](/ru/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas#grid_definition_shorthands)_
 - Обучающее видео: _[Grid Template shorthand](https://gridbyexample.com/video/grid-template-shorthand/)_

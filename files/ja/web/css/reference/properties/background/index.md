@@ -1,9 +1,8 @@
 ---
 title: background
 slug: Web/CSS/Reference/Properties/background
-original_slug: Web/CSS/background
 l10n:
-  sourceCommit: 7fa9b134e7a886b47bd8c6e3135ba329ee0ddf09
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`background`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、色、画像、原点と寸法、反復方法など、背景に関するすべてのスタイルプロパティを一括で設定します。 `background` 一括指定プロパティの値宣言で設定されていない成分のプロパティは、既定値に設定されます。
@@ -31,7 +30,7 @@ background: left 5% / 15% 60% repeat-x
 background:
   center / contain no-repeat
     url("/shared-assets/images/examples/firefox-logo.svg"),
-  #eee 35% url("/shared-assets/images/examples/lizard.png");
+  #eeeeee 35% url("/shared-assets/images/examples/lizard.png");
 ```
 
 ```html interactive-example
@@ -70,7 +69,7 @@ background: green;
 /* <bg-image> と <repeat-style> を使用 */
 background: url("test.jpg") repeat-y;
 
-/* <box> と <background-color> を使用 */
+/* <visual-box> と <'background-color'> を使用 */
 background: border-box red;
 
 /* 単一の画像、中央寄せかつ縮小 */
@@ -91,25 +90,25 @@ background: unset;
 - それぞれのレイヤーは、以下の値をそれぞれ 0 ～ 1 回含めることができます。
   - `<attachment>`
   - `<bg-image>`
-  - `<position>`
+  - `<bg-position>`
   - `<bg-size>`
   - `<repeat-style>`
 
-- `<bg-size>` の値は `<position>` の直後に '/' の文字で区切って含めなければなりません。例: `center/80%`
-- `<box>` の値は 0 ～ 2 回含めることができます。1 回の場合は {{cssxref("background-origin")}} と {{cssxref("background-clip")}} の両方に設定されます。2 回の場合は、1 つ目は {{cssxref("background-origin")}} に、2 つ目は {{cssxref("background-clip")}} に設定されます。
-- `<background-color>` の値は最後のレイヤーの指定でのみ含めることができます。
+- `<bg-size>` の値は `<bg-position>` の直後に '/' の文字で区切って含めなければなりません。例: `center/80%`
+- `<visual-box>` の値は 0 ～ 2 回含めることができます。1 回の場合は {{cssxref("background-origin")}} と {{cssxref("background-clip")}} の両方に設定されます。2 回の場合は、1 つ目は {{cssxref("background-origin")}} に、2 つ目は {{cssxref("background-clip")}} に設定されます。
+- `<'background-color'>` の値は最後のレイヤーの指定でのみ含めることができます。
 
 ### 値
 
 - `<attachment>`
   - : {{cssxref("background-attachment")}} を参照。既定値は `scroll` です。
-- `<box>`
+- `<visual-box>`
   - : {{cssxref("background-clip")}} および {{cssxref("background-origin")}} を参照。既定値はそれぞれ `border-box` および `padding-box` です。
-- `<background-color>`
+- `<'background-color'>`
   - : {{cssxref("background-color")}} を参照。既定値は `transparent` です。
 - `<bg-image>`
   - : {{Cssxref("background-image")}} を参照。既定値は `none` です。
-- `<position>`
+- `<bg-position>`
   - : {{cssxref("background-position")}} を参照。既定値は 0% 0% です。
 - `<repeat-style>`
   - : {{cssxref("background-repeat")}} を参照。既定値は `repeat` です。
@@ -137,7 +136,7 @@ background: repeat scroll 0% 0% / auto padding-box border-box none transparent;
 ブラウザーは、背景画像に関する特別な情報を支援技術に提供しません。これは主にスクリーンリーダーにとって重要であり、スクリーンリーダーはその存在を告知しないため、ユーザーには何も伝えません。ページの全体的な目的を理解する上で重要な情報が画像に含まれている場合は、文書の中でその意味を記述した方が良いでしょう。
 
 - [MDN "WCAG を理解する ― ガイドライン 1.1 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
-- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 ## 例
 

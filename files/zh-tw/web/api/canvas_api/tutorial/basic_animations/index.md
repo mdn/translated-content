@@ -343,4 +343,4 @@ function draw() {
 - [iGrapher](http://igrapher.com/)
   - : 股票市場圖
 
-{{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Compositing", "Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas")}}
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas")}}

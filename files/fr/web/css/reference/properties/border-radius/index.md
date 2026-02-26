@@ -1,14 +1,13 @@
 ---
 title: border-radius
 slug: Web/CSS/Reference/Properties/border-radius
-original_slug: Web/CSS/border-radius
+l10n:
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`border-radius`** permet d'arrondir les coins du bord extérieur d'un élément. Vous pouvez définir un seul rayon pour obtenir des coins circulaires, ou deux rayons pour obtenir des coins elliptiques.
 
-La propriété [CSS](/fr/docs/Web/CSS) **`border-radius`** permet de définir des coins arrondis pour la bordure d'un élément. La courbure de chaque coin est définie avec un ou deux rayons de courbures qui permettent de définir un arc de cercle ou un arc d'ellipse.
-
-{{InteractiveExample("CSS Demo: border-radius")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: border-radius")}}
 
 ```css interactive-example-choice
 border-radius: 30px;
@@ -37,7 +36,7 @@ border-radius: 50% 20% / 10% 40%;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with rounded corners.
+    Ceci est une boîte avec des coins arrondis.
   </div>
 </section>
 ```
@@ -55,142 +54,116 @@ border-radius: 50% 20% / 10% 40%;
 }
 ```
 
-La courbure de la bordure s'applique à l'arrière-plan (défini avec la propriété [`background`](/fr/docs/Web/CSS/Reference/Properties/background)) même si l'élément n'a aucune bordure. Le rognage de l'arrière-plan s'applique sur la boîte définie par [`background-clip`](/fr/docs/Web/CSS/Reference/Properties/background-clip).
+## Propriétés constitutives
 
-La propriété `border-radius` ne s'applique pas aux éléments de tableaux lorsque [`border-collapse`](/fr/docs/Web/CSS/Reference/Properties/border-collapse) vaut `collapse`.
+Cette propriété est une propriété raccourcie pour les propriétés CSS suivantes&nbsp;:
 
-> [!NOTE]
-> Comme pour les autres propriétés raccourcies, il n'est pas possible d'hériter de valeurs individuelles (par exemple `border-radius: 0 0 inherit inherit` pour surcharger les définitions existantes). Si on souhaite avoir un comportement de ce type, on devra utiliser les propriétés détaillées.
-
-## Propriétés détaillées correspondantes
-
-Cette propriété est une [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) qui permet de définir&nbsp;:
-
-- [`border-top-left-radius`](/fr/docs/Web/CSS/Reference/Properties/border-top-left-radius),
-- [`border-top-right-radius`](/fr/docs/Web/CSS/Reference/Properties/border-top-right-radius),
-- [`border-bottom-right-radius`](/fr/docs/Web/CSS/Reference/Properties/border-bottom-right-radius),
-- [`border-bottom-left-radius`](/fr/docs/Web/CSS/Reference/Properties/border-bottom-left-radius).
+- {{CSSxRef("border-top-left-radius")}}
+- {{CSSxRef("border-top-right-radius")}}
+- {{CSSxRef("border-bottom-right-radius")}}
+- {{CSSxRef("border-bottom-left-radius")}}
 
 ## Syntaxe
 
 ```css
-/* Quand on utilise un seul rayon, on peut avoir jusqu'à quatre valeurs */
-/* Avec une valeur, on utilise le même rayon pour les quatre angles */
+/* La syntaxe du premier rayon accepte de une à quatre valeurs */
+/* Le rayon est appliqué aux 4 côtés */
 border-radius: 10px;
 
-/* 1. coin en haut à gauche et en bas à droite      */
-/* 2. puis coin en haut à droite et en bas à gauche */
+/* haut gauche et bas droite | haut droite et bas gauche */
 border-radius: 10px 5%;
 
-/* 1. coin en haut à gauche                    */
-/* 2. coin en haut à droite et en bas à gauche */
-/* 3. coin en bas à droite                     */
+/* haut gauche | haut droite et bas gauche | bas droite */
 border-radius: 2px 4px 2px;
 
-/* 1. coin en haut à gauche */
-/* 2. coin en haut à droite */
-/* 3. coin en bas à droite  */
-/* 4. coin en bas à gauche  */
+/* haut gauche | haut droite | bas droite | bas gauche */
 border-radius: 1px 0 3px 4px;
 
-/* En utilisant deux rayons, on peut avoir jusqu'à quatre valeurs          */
-/* On sépare les rayons horizontaux des verticaux par une barre oblique    */
+/* La syntaxe du second rayon accepte de une à quatre valeurs */
 /* rayons horizontaux (cf. ci-avant) / rayon vertical pour tous les angles */
 border-radius: 10px / 20px;
 
-/* rayons horizontaux puis / puis rayons verticaux */
-/* 1. coin en haut à gauche et en bas à droite      */
-/* 2. puis coin en haut à droite et en bas à gauche */
+/* rayons horizontaux puis / haut gauche et bas droite | haut droite et bas gauche */
 border-radius: 10px 5% / 20px 30px;
 
-/* rayons horizontaux puis / puis rayons verticaux */
-/* 1. coin en haut à gauche                        */
-/* 2. coin en haut à droite et en bas à gauche     */
-/* 3. coin en bas à droite                         */
+/* rayons horizontaux puis / haut gauche | haut droite et bas gauche | bas droite */
 border-radius: 10px 5px 2em / 20px 25px 30%;
 
-/* rayons horizontaux puis / puis rayons verticaux */
-/* 1. coin en haut à gauche                        */
-/* 2. coin en haut à droite                        */
-/* 3. coin en bas à droite                         */
-/* 4. coin en bas à gauche                         */
+/* rayons horizontaux puis / haut gauche | haut droite | bas droite | bas gauche */
 border-radius: 10px 5% / 20px 25em 30px 35em;
 
 /* Valeurs globales */
 border-radius: inherit;
 border-radius: initial;
 border-radius: revert;
+border-radius: revert-layer;
 border-radius: unset;
 ```
 
 La propriété `border-radius` peut être définie avec&nbsp;:
 
-- Une, deux, trois voire quatre valeurs de longueur ([`<length>`](/fr/docs/Web/CSS/Reference/Values/length)) ou de pourcentages ([`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)). Ces valeurs sont utilisées pour désigner un rayon de courbure pour chaque angle&nbsp;;
-- Puis éventuellement une barre oblique (`/`) suivie d'une, deux, trois ou quatre valeurs de longueur ou de pourcentage qui permettent de définir un rayon de courbure supplémentaire pour créer des coins elliptiques.
+- une, deux, trois voire quatre valeurs de longueur ({{CSSxRef("&lt;length&gt;")}}) ou de pourcentages ({{CSSxRef("&lt;percentage&gt;")}}). Ces valeurs sont utilisées pour désigner un rayon de courbure pour chaque angle.
+- puis éventuellement d'une barre oblique «&nbsp;/&nbsp;» suivie d'une, deux, trois ou quatre valeurs `<length>` ou `<percentage>`. Cela permet de définir un rayon supplémentaire pour obtenir des coins elliptiques.
 
 ### Valeurs
 
 <table>
   <tbody>
     <tr>
-      <td>Une seule valeur</td>
-      <td><img src="all-corner.png"/></td>
+      <td><em>Tous les côtés</em></td>
+      <td><img alt="Un rectangle bleu clair avec une bordure grise claire. Les 4 coins sont arrondis." src="all-corner.png" /></td>
       <td>
-        Une valeur de longueur (type <a href="/fr/docs/Web/CSS/length"><code>length</code></a>) ou un pourcentage (type <a href="/fr/docs/Web/CSS/percentage"><code>percentage</code></a>) qui indique le rayon de courbure à utiliser pour chaque coin. Cette forme est uniquement utilisée lorsque la déclaration contient une seule valeur.
+        Une valeur de longueur ({{CSSxRef("&lt;length&gt;")}}) ou de pourcentages ({{CSSxRef("&lt;percentage&gt;")}}) qui indique le rayon de courbure à utiliser pour chaque coin de la bordure. Cette forme est uniquement utilisée lorsque la déclaration contient une seule valeur.
       </td>
     </tr>
     <tr>
+      <td><em>Haut gauche et Bas droite</em></td>
+      <td><img alt="Un rectangle bleu clair avec une bordure grise claire. Les coins en haut à gauche et en bas à droite sont arrondis." src="top-left-bottom-right.png" /></td>
       <td>
-        Deux valeurs (coin en haut à gauche et en bas à droite)
-      </td>
-      <td><img src="top-left-bottom-right.png"/></td>
-      <td>
-        Une valeur de longueur (type <a href="/fr/docs/Web/CSS/length"><code>length</code></a>) ou un pourcentage (type <a href="/fr/docs/Web/CSS/percentage"><code>percentage</code></a>) qui indique le rayon de courbure à utiliser pour le coin en haut à gauche et le coin en bas à droite de la boîte de bordure lorsqu'on utilise deux valeurs dans la déclaration.
+        Une valeur de longueur ({{CSSxRef("&lt;length&gt;")}}) ou de pourcentages ({{CSSxRef("&lt;percentage&gt;")}}) qui indique le rayon de courbure à utiliser pour le coin en haut à gauche et le coin en bas à droite de la boîte de bordure. Cette forme est uniquement utilisée avec la syntaxe à deux valeurs.
       </td>
     </tr>
     <tr>
+      <td><em>Haut droite et Bas gauche</em></td>
+      <td><img alt="Un rectangle bleu clair avec une bordure grise claire. Les coins en haut à droite et en bas à gauche sont arrondis." src="top-right-bottom-left.png" /></td>
       <td>
-        Coin en haut à droite et en bas à gauche (syntaxe à deux et trois valeurs)
-      </td>
-      <td><img src="top-right-bottom-left.png"/></td>
-      <td>
-        Une valeur de longueur (type <a href="/fr/docs/Web/CSS/length"><code>length</code></a>) ou un pourcentage (type <a href="/fr/docs/Web/CSS/percentage"><code>percentage</code></a>) qui indique le rayon de courbure à utiliser pour le coin en haut à droite et le coin en bas à gauche de la boîte de bordure lorsqu'on utilise deux ou trois valeurs dans la déclaration.
+        Une valeur de longueur ({{CSSxRef("&lt;length&gt;")}}) ou de pourcentages ({{CSSxRef("&lt;percentage&gt;")}}) qui indique le rayon de courbure à utiliser pour le coin en haut à droite et le coin en bas à gauche de la boîte de bordure. Cette forme est utilisée avec les syntaxes à deux ou trois valeurs.
       </td>
     </tr>
     <tr>
-      <td>Coin en haut à gauche</td>
-      <td><img src="top-left.png"/></td>
+      <td><em>Haut gauche</em></td>
+      <td><img alt="Un rectangle bleu clair avec une bordure grise claire. Le coin en haut à gauche est arrondi." src="top-left.png" /></td>
       <td>
-        Une valeur de longueur (type <a href="/fr/docs/Web/CSS/length"><code>length</code></a>) ou un pourcentage (type <a href="/fr/docs/Web/CSS/percentage"><code>percentage</code></a>) qui indique le rayon de courbure à utiliser pour le coin en haut à gauche de l'élément. Cette valeur est utilisée pour la syntaxe avec trois ou quatre valeurs.
+        Une valeur de longueur ({{CSSxRef("&lt;length&gt;")}}) ou de pourcentages ({{CSSxRef("&lt;percentage&gt;")}}) qui indique le rayon de courbure à utiliser pour le coin en haut à gauche de l'élément. Cette forme est utilisée avec les syntaxes à trois ou quatre valeurs.
       </td>
     </tr>
     <tr>
-      <td>Coin en haut à droite</td>
-      <td><img src="top-right.png" /></td>
+      <td><em>Haut droite</em></td>
+      <td><img alt="Un rectangle bleu clair avec une bordure grise claire. Le coin en haut à droite est arrondi." src="top-right.png" /></td>
       <td>
-        Une valeur de longueur (type <a href="/fr/docs/Web/CSS/length"><code>length</code></a>) ou un pourcentage (type <a href="/fr/docs/Web/CSS/percentage"><code>percentage</code></a>) qui indique le rayon de courbure à utiliser pour le coin en haut à droite de l'élément. Cette valeur est utilisée pour la syntaxe avec quatre valeurs.
+        Une valeur de longueur ({{CSSxRef("&lt;length&gt;")}}) ou de pourcentages ({{CSSxRef("&lt;percentage&gt;")}}) qui indique le rayon de courbure à utiliser pour le coin en haut à droite de l'élément. Cette forme est utilisée avec la syntaxe à quatre valeurs.
       </td>
     </tr>
     <tr>
-      <td>Coin en bas à droite</td>
-      <td><img src="bottom-right.png"/></td>
+      <td><em>Bas droite</em></td>
+      <td><img alt="Un rectangle bleu clair avec une bordure grise claire. Le coin en bas à droite est arrondi." src="bottom-right.png" /></td>
       <td>
-        Une valeur de longueur (type <a href="/fr/docs/Web/CSS/length"><code>length</code></a>) ou un pourcentage (type <a href="/fr/docs/Web/CSS/percentage"><code>percentage</code></a>) qui indique le rayon de courbure à utiliser pour le coin en bas à droite de l'élément. Cette valeur est utilisée pour la syntaxe avec trois ou quatre valeurs.
+        Une valeur de longueur ({{CSSxRef("&lt;length&gt;")}}) ou de pourcentages ({{CSSxRef("&lt;percentage&gt;")}}) qui indique le rayon de courbure à utiliser pour le coin en bas à droite de l'élément. Cette forme est utilisée avec les syntaxes à trois ou quatre valeurs.
       </td>
     </tr>
     <tr>
-      <td>Coin en bas à gauche</td>
-      <td><img src="bottom-left.png"/></td>
+      <td><em>Bas gauche</em></td>
+      <td><img alt="Un rectangle bleu clair avec une bordure grise claire. Le coin en bas à gauche est arrondi." src="bottom-left.png" /></td>
       <td>
-        Une valeur de longueur (type <a href="/fr/docs/Web/CSS/length"><code>length</code></a>) ou un pourcentage (type <a href="/fr/docs/Web/CSS/percentage"><code>percentage</code></a>) qui indique le rayon de courbure à utiliser pour le coin en bas à gauche de l'élément. Cette valeur est utilisée pour la syntaxe avec quatre valeurs.
+        Une valeur de longueur ({{CSSxRef("&lt;length&gt;")}}) ou de pourcentages ({{CSSxRef("&lt;percentage&gt;")}}) qui indique le rayon de courbure à utiliser pour le coin en bas à gauche de l'élément. Cette forme est utilisée avec la syntaxe à quatre valeurs.
       </td>
     </tr>
   </tbody>
 </table>
 
-- [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)
+- {{CSSxRef("&lt;length&gt;")}}
   - : Cette valeur indique la mesure du rayon de courbure du cercle ou la mesure du demi grand axe ou du demi petit axe de l'ellipse traduisant la courbure. Les valeurs négatives sont considérées comme invalides.
-- [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)
+- {{CSSxRef("&lt;percentage&gt;")}}
   - : Cette valeur traduit la mesure du rayon de courbure (elliptique ou circulaire) exprimée en pourcentages par rapport à la taille de la boîte. Les rayons verticaux sont donc proportionnels à la hauteur de la boîte et les rayons horizontaux proportionnels à la largeur de la boîte. Les valeurs négatives sont considérées comme invalides.
 
 Ainsi&nbsp;:
@@ -217,15 +190,29 @@ border-bottom-right-radius: 6px 2px;
 border-bottom-left-radius: 3px 4px;
 ```
 
+## Description
+
+La courbure de la bordure s'applique à l'arrière-plan (défini avec la propriété {{CSSxRef("background")}}) même si l'élément n'a aucune bordure. Le rognage de l'arrière-plan s'applique sur la boîte définie par {{CSSxRef("background-clip")}}.
+
+La propriété `border-radius` ne s'applique pas aux éléments de tableaux lorsque {{CSSxRef("border-collapse")}} vaut `collapse`.
+
+> [!NOTE]
+> Comme pour les autres propriétés raccourcies, il n'est pas possible d'hériter de valeurs individuelles (par exemple `border-radius: 0 0 inherit inherit` pour surcharger les définitions existantes). Si on souhaite avoir un comportement de ce type, on devra utiliser les propriétés détaillées.
+
 ## Définition formelle
 
 {{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
+
+### Comparer les styles de bordure
+
+L'exemple suivant contient sept éléments HTML {{HTMLElement("pre")}}, chacun illustrant des combinaisons de styles `border` et `border-radius`.
+Les styles appliqués à chaque élément `<pre>` sont inclus dans le contenu de l'élément, afin que vous puissiez voir les déclarations CSS nécessaires pour créer le style de bordure associé&nbsp;:
 
 ```html hidden
 <pre id="example-1">
@@ -312,15 +299,61 @@ pre#example-7 {
 }
 ```
 
-{{EmbedLiveSample("", "200", "1150")}}
+{{EmbedLiveSample("Comparer les styles de bordure", "", 900)}}
 
-### Détail des fragments
+### Utiliser `corner-shape` avec `border-radius`
 
-- [Fragment n°1 sur JSFiddle](https://jsfiddle.net/Tripad/qnGKj/2/)
-- [Fragment n°2 sur JSFiddle](https://jsfiddle.net/Tripad/qnGKj/3/)
-- [Fragment n°3 sur JSFiddle](https://jsfiddle.net/Tripad/qnGKj/4/)
-- [Fragment n°4 sur JSFiddle](https://jsfiddle.net/Tripad/qnGKj/5/)
-- [Fragment n°5 sur JSFiddle](https://jsfiddle.net/Tripad/qnGKj/6/)
+Lorsqu'une valeur de `border-radius` différente de `0` est appliquée à un coin d'une boîte, vous pouvez utiliser la propriété {{CSSxRef("corner-shape")}} (ou l'une de ses [formes longues et raccourcies](/fr/docs/Web/CSS/Reference/Properties/corner-shape#propriétés_raccourcies_et_longues_de_corner--shape)) pour appliquer des formes personnalisées à ce coin, comme un biseau, une encoche ou une superellipse. Cet exemple montre l'utilisation de `corner-shape`.
+
+#### HTML
+
+The markup for this example contains a single {{HTMLElement("div")}} element.
+
+```html live-sample___basic-usage
+<div></div>
+```
+
+#### CSS
+
+Nous appliquons à la boîte quelques styles de base, qui sont masqués ici pour plus de clarté. Nous appliquons aussi un {{CSSxRef("box-shadow")}}, un `border-radius` de `0 20% 50px 30%` et un `corner-shape` de `superellipse(0.5) bevel notch squircle`.
+
+```css hidden live-sample___basic-usage
+body {
+  font-family: "Helvetica", "Arial", sans-serif;
+  width: 240px;
+  margin: 20px auto;
+}
+
+div {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(255 255 255 / 0),
+    rgb(255 255 255 / 0.5)
+  );
+}
+```
+
+```css live-sample___basic-usage
+div {
+  box-shadow: 1px 1px 3px gray;
+  border-radius: 0 20% 50px 30%;
+  corner-shape: superellipse(0.5) bevel notch squircle;
+}
+```
+
+#### Résultat
+
+Le résultat affiché ressemble à ceci&nbsp;:
+
+{{EmbedLiveSample("basic-usage", "100%", 240)}}
+
+Remarquez qu'aucune forme de coin n'est appliquée au coin supérieur gauche, car il a une valeur de `border-radius` à `0`.
 
 ## Spécifications
 
@@ -332,14 +365,4 @@ pre#example-7 {
 
 ## Voir aussi
 
-- Les propriétés CSS relatives à `border-radius`&nbsp;:
-  - Les propriétés physiques&nbsp;:
-    - [`border-top-left-radius`](/fr/docs/Web/CSS/Reference/Properties/border-top-left-radius),
-    - [`border-top-right-radius`](/fr/docs/Web/CSS/Reference/Properties/border-top-right-radius),
-    - [`border-bottom-right-radius`](/fr/docs/Web/CSS/Reference/Properties/border-bottom-right-radius),
-    - [`border-bottom-left-radius`](/fr/docs/Web/CSS/Reference/Properties/border-bottom-left-radius)
-  - Les propriétés logiques&nbsp;:
-    - [`border-start-start-radius`](/fr/docs/Web/CSS/Reference/Properties/border-start-start-radius),
-    - [`border-start-end-radius`](/fr/docs/Web/CSS/Reference/Properties/border-start-end-radius),
-    - [`border-end-start-radius`](/fr/docs/Web/CSS/Reference/Properties/border-end-start-radius),
-    - [`border-end-end-radius`](/fr/docs/Web/CSS/Reference/Properties/border-end-end-radius)
+- Les propriétés CSS relatives à `border-radius`&nbsp;: {{CSSxRef("border-top-left-radius")}}, {{CSSxRef("border-top-right-radius")}}, {{CSSxRef("border-bottom-right-radius")}}, {{CSSxRef("border-bottom-left-radius")}}, {{CSSxRef("border-start-start-radius")}}, {{CSSxRef("border-start-end-radius")}}, {{CSSxRef("border-end-start-radius")}}, {{CSSxRef("border-end-end-radius")}}

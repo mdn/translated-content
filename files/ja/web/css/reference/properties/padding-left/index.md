@@ -1,9 +1,8 @@
 ---
 title: padding-left
 slug: Web/CSS/Reference/Properties/padding-left
-original_slug: Web/CSS/padding-left
 l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`padding-left`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[パディング領域](/ja/docs/Web/CSS/Guides/Box_model/Introduction#パディング領域)における左側の幅を設定します。
@@ -102,7 +101,7 @@ padding-left: unset;
 .content {
   padding-left: 5%;
 }
-.sidebox {
+.side-box {
   padding-left: 10px;
 }
 ```
@@ -117,6 +116,9 @@ padding-left: unset;
 
 ## 関連情報
 
-- [CSS 基本ボックスモデル入門](/ja/docs/Web/CSS/Guides/Box_model/Introduction)
-- {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}} および {{cssxref("padding")}} 一括指定
-- 対応付けられる論理的プロパティ: {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, {{cssxref("padding-inline-end")}} および一括指定の {{cssxref("padding-block")}} と {{cssxref("padding-inline")}}
+- {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}
+- {{cssxref("padding")}} 一括指定
+- 対応付けられる論理的プロパティ: {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, {{cssxref("padding-inline-end")}}
+- 一括指定の {{cssxref("padding-block")}} および {{cssxref("padding-inline")}}
+- [CSS 基本ボックスモデル入門](/ja/docs/Web/CSS/Guides/Box_model/Introduction)ガイド
+- [CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model)モジュール

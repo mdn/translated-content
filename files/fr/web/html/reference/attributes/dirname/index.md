@@ -12,7 +12,7 @@ Lorsque cet attribut est utilisé, la direction du texte de l'élément est incl
 
 ## Notes d'utilisation
 
-L'attribut `dirname` peut être utilisé sur tout élément HTML {{HTMLElement("textarea")}}, ou sur tout élément HTML {{HTMLElement("input")}} de type {{HTMLElement("input/hidden", "hidden")}}, {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/search", "search")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/password", "password")}}, {{HTMLElement("input/submit", "submit")}}, {{HTMLElement("input/reset", "reset")}} ou {{HTMLElement("input/button", "button")}}.
+L'attribut `dirname` peut être utilisé sur tout élément HTML {{HTMLElement("textarea")}}, ou sur tout élément HTML {{HTMLElement("input")}} de type `{{HTMLElement("input/hidden", "hidden")}}`, `{{HTMLElement("input/text", "text")}}`, `{{HTMLElement("input/search", "search")}}`, `{{HTMLElement("input/tel", "tel")}}`, `{{HTMLElement("input/url", "url")}}`, `{{HTMLElement("input/email", "email")}}`, `{{HTMLElement("input/password", "password")}}`, `{{HTMLElement("input/submit", "submit")}}`, `{{HTMLElement("input/reset", "reset")}}` ou `{{HTMLElement("input/button", "button")}}`.
 
 Le format des données soumises est `{valeur_dirname}={direction}` où `{valeur_dirname}` est la valeur de l'attribut `dirname` et `{direction}` est la direction du texte.
 Par exemple, si l'utilisateur·rice saisit «&nbsp;Hello&nbsp;» dans un élément avec les attributs `name="comment"` et `dirname="comment-direction"`, les données soumises encodées dans l'URL pour une requête `GET` seront `comment=Hello&comment-direction=ltr`.
@@ -23,7 +23,7 @@ La direction du texte peut être&nbsp;:
 - `ltr`
   - : Le texte saisi par l'utilisateur·rice est en écriture de gauche à droite.
 
-Si aucune direction n'est spécifiée, l'agent utilisateur utilisera la direction du parent contenant le formulaire, et si elle n'est pas définie, la direction par défaut de l'agent utilisateur.
+Si aucune direction n'est définie, l'agent utilisateur utilisera la direction du parent contenant le formulaire, et si elle n'est pas définie, la direction par défaut de l'agent utilisateur.
 
 ## Exemples
 
@@ -101,6 +101,6 @@ https://www.exemple.fr/submit?user=LTR+Username&user-direction=rtl&comment=LTR+C
 
 ## Voir aussi
 
-- L'attribut global HTML [`dir`](/fr/docs/Web/HTML/Reference/Global_attributes/dir)
-- L'élément HTML {{HTMLElement("input")}}
-- L'élément HTML {{HTMLElement("textarea")}}
+- L'attribut universel [`dir`](/fr/docs/Web/HTML/Reference/Global_attributes/dir)
+- L'élément {{HTMLElement("input")}}
+- L'élément {{HTMLElement("textarea")}}

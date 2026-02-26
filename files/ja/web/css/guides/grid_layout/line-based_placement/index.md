@@ -1,6 +1,6 @@
 ---
-title: 線ベースの配置を使用したグリッドレイアウト
-short-title: 線ベースの配置の使い方
+title: 線に基づく配置を使用したグリッドレイアウト
+short-title: 線に基づく配置の使い方
 slug: Web/CSS/Guides/Grid_layout/Line-based_placement
 l10n:
   sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d

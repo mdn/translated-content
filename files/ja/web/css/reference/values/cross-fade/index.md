@@ -1,13 +1,12 @@
 ---
 title: cross-fade()
 slug: Web/CSS/Reference/Values/cross-fade
-original_slug: Web/CSS/cross-fade
 l10n:
-  sourceCommit: def614b0d1e298c5942205468c78b9d0ff798f46
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
 **`cross-fade()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、2 枚以上の画像を所定の透過度で合成するために使用することができます。
-これは単色で色を薄めたり、放射状グラデーションとの組み合わせでページの特定の領域を強調させたりするような、数多くの単純な画像加工に使用することができます。
+これは単色で色を薄めたり、放射グラデーションとの組み合わせでページの特定の領域を強調させたりするような、数多くの基本的な画像加工に使用することができます。
 
 ## 構文
 
@@ -26,12 +25,12 @@ l10n:
 子のパーセント値は、それぞれの画像の混合率の値と考えてください。つまり、0% の値は画像が完全に透明であり、100% の値は完全に不透明になります。
 
 ```css
-cross-fade( url(white.png) 0%, url(black.png) 100%); /* 完全に黒 */
-cross-fade( url(white.png) 25%, url(black.png) 75%); /* 黒 25%、白 75% */
-cross-fade( url(white.png) 50%, url(black.png) 50%); /* 黒 50%、白 50% */
-cross-fade( url(white.png) 75%, url(black.png) 25%); /* 白 75%、黒 25% */
-cross-fade( url(white.png) 100%, url(black.png) 0%); /* 完全に白 */
-cross-fade( url(green.png) 75%, url(red.png) 75%); /* 緑と赤がともに 75% */
+cross-fade(url("white.png") 0%, url("black.png") 100%); /* 完全に黒 */
+cross-fade(url("white.png") 25%, url("black.png") 75%); /* 黒 25%、白 75% */
+cross-fade(url("white.png") 50%, url("black.png") 50%); /* 黒 50%、白 50% */
+cross-fade(url("white.png") 75%, url("black.png") 25%); /* 白 75%、黒 25% */
+cross-fade(url("white.png") 100%, url("black.png") 0%); /* 完全に白 */
+cross-fade(url("green.png") 75%, url("red.png") 75%); /* 緑と赤がともに 75% */
 ```
 
 パーセント値が省略された場合は、指定されたすべてのパーセント値が合計され、`100%` から減算されます。
@@ -44,12 +43,12 @@ cross-fade( url(green.png) 75%, url(red.png) 75%); /* 緑と赤がともに 75% 
 以下のように書くこともできます。
 
 ```css
-cross-fade( url(white.png) 0%,   url(black.png)); /* 完全に黒 */
-cross-fade( url(white.png) 25%, url(black.png)); /* 黒 25%、白 75% */
-cross-fade( url(white.png),      url(black.png)); /* 白 50%、白 50% */
-cross-fade( url(white.png) 75%, url(black.png)); /* 白 75%、黒 25% */
-cross-fade( url(white.png) 100%, url(black.png)); /* 完全に白 */
-cross-fade( url(green.png) 75%, url(red.png) 75%); /* 緑と赤がともに 75% */
+cross-fade(url("white.png") 0%,   url("black.png")); /* 完全に黒 */
+cross-fade(url("white.png") 25%, url("black.png")); /* 黒 25%、白 75% */
+cross-fade(url("white.png"),      url("black.png")); /* 白 50%、白 50% */
+cross-fade(url("white.png") 75%, url("black.png")); /* 白 75%、黒 25% */
+cross-fade(url("white.png") 100%, url("black.png")); /* 完全に白 */
+cross-fade(url("green.png") 75%, url("red.png") 75%); /* 緑と赤がともに 75% */
 ```
 
 パーセント値が宣言されていない場合は、両方の画像が 50% の混合率となり、cross-fade では両方の画像が均等に合成されたように描画されます。
@@ -61,8 +60,8 @@ cross-fade( url(green.png) 75%, url(red.png) 75%); /* 緑と赤がともに 75% 
 パーセント値が宣言されておらず、3 つの画像が含まれている場合、それぞれの画像は 33.33% の混合率になります。以下の 2 つは (ほぼ) 同じ線です。
 
 ```css
-cross-fade(url(red.png), url(yellow.png), url(blue.png)); /* 3 つとも 33.3333% の混合率となる */
-cross-fade(url(red.png) 33.33%, url(yellow.png) 33.33%, url(blue.png) 33.33%);
+cross-fade(url("red.png"), url("yellow.png"), url("blue.png")); /* 3 つとも 33.3333% の混合率となる */
+cross-fade(url("red.png") 33.33%, url("yellow.png") 33.33%, url("blue.png") 33.33%);
 ```
 
 ### 古い、実装されている構文
@@ -77,11 +76,11 @@ cross-fade( <image>, <image>, <percentage> )
 オリジナルの構文は Safari が対応しており、`-webkit-` の接頭辞付きのものは Chrome、Opera、その他の blink ベースのブラウザーで対応しています。
 
 ```css
-cross-fade(url(white.png), url(black.png), 0%);   /* 完全に黒 */
-cross-fade(url(white.png), url(black.png), 25%); /* 黒 25%、白 75% */
-cross-fade(url(white.png), url(black.png), 50%); /* 白 50%、白 50% */
-cross-fade(url(white.png), url(black.png), 75%); /* 白 75%、黒 25% */
-cross-fade(url(white.png), url(black.png), 100%); /* 完全に白 */
+cross-fade(url("white.png"), url("black.png"), 0%);   /* 完全に黒 */
+cross-fade(url("white.png"), url("black.png"), 25%);  /* 黒 25%、白 75% */
+cross-fade(url("white.png"), url("black.png"), 50%);  /* 白 50%、白 50% */
+cross-fade(url("white.png"), url("black.png"), 75%);  /* 白 75%、黒 25% */
+cross-fade(url("white.png"), url("black.png"), 100%); /* 完全に白 */
 ```
 
 実装されている構文では、カンマで区切られた 2 つの画像を最初に宣言し、その後にカンマと必要なパーセント値を宣言します。カンマやパーセント値を省略すると、その値は無効になります。
@@ -89,14 +88,14 @@ cross-fade(url(white.png), url(black.png), 100%); /* 完全に白 */
 
 仕様書の構文の項にある緑/赤の例（パーセント値の合計が 150%）と黄/赤/青の例（3 つの画像を使用）は、この実装では不可能です。
 
-## アクセシビリティの考慮
+## アクセシビリティ
 
 ブラウザーは、背景画像に関する特別な情報を支援技術に提供しません。これは主に読み上げアプリにとって重要であり、読み上げアプリはその存在を告知しないため、ユーザーには何も伝えません。
 ページの全体的な目的を理解する上で重要な情報が画像に含まれている場合は、文書の中でその意味を記述した方が良いでしょう。
 背景画像を使用する場合は、色のコントラストを大きくして、画像がない場合と同様に、画像の上にどのような文字も読み取れるようにしてください。
 
 - [MDN "WCAG を理解する ― ガイドライン 1.1 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
-- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 ## 形式文法
 
@@ -109,13 +108,13 @@ cross-fade(url(white.png), url(black.png), 100%); /* 完全に白 */
 #### HTML
 
 ```html
-<div class="crossfade"></div>
+<div class="cross-fade"></div>
 ```
 
 #### CSS
 
 ```css
-.crossfade {
+.cross-fade {
   width: 300px;
   height: 300px;
   background-image: -webkit-cross-fade(url("br.png"), url("tr.png"), 75%);
@@ -138,7 +137,7 @@ cross-fade(url(white.png), url(black.png), 100%); /* 完全に白 */
 ## 関連情報
 
 - {{cssxref("image")}}
-- {{cssxref("url")}}
+- {{cssxref("url_value", "&lt;url&gt;")}}
 - {{cssxref("image/image", "image()")}}
 - {{cssxref("image/image-set", "image-set()")}}
 - {{cssxref("element")}}

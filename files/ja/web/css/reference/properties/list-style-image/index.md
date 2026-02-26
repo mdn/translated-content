@@ -1,9 +1,8 @@
 ---
 title: list-style-image
 slug: Web/CSS/Reference/Properties/list-style-image
-original_slug: Web/CSS/list-style-image
 l10n:
-  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`list-style-image`** は [CSS](/ja/docs/Web/CSS) のプロパティで、リストアイテムのマーカーとして使われる画像を設定します。
@@ -23,7 +22,7 @@ list-style-image: none;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div>
-    <p>NASA Notable Missions</p>
+    <p>NASA の有名なミッション</p>
     <ul class="transition-all unhighlighted" id="example-element">
       <li>Apollo</li>
       <li>Hubble</li>
@@ -72,7 +71,7 @@ hr {
 ```
 
 > [!NOTE]
-> このプロパティはリストアイテム、つまり、`{{cssxref("display")}}: list-item;` が指定された要素に対して適用されます。[既定では](https://html.spec.whatwg.org/multipage/rendering.html#lists)、 {{HTMLElement("li")}} 要素を含みます。このプロパティは継承されるので、親要素 (通常は {{HTMLElement("ol")}} や {{HTMLElement("ul")}}) に設定することで、すべてのリストアイテムに適用することができます。
+> このプロパティはリストアイテム、つまり、`{{cssxref("display")}}: list-item;` が指定された要素に対して適用されます。[デフォルトでは](https://html.spec.whatwg.org/multipage/rendering.html#lists)、 {{HTMLElement("li")}} 要素があります。このプロパティは継承されるので、親要素（通常は {{HTMLElement("ol")}} や {{HTMLElement("ul")}}）に設定することで、すべてのリストアイテムに適用することができます。
 
 ## 構文
 
@@ -96,7 +95,7 @@ list-style-image: unset;
 
 ### 値
 
-- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("image")}}
   - : マーカーとして使う画像の場所です。
 - `none`
   - : 画像をマーカーとして使用しないことを指定します。この値が設定された場合、代わりに {{ Cssxref("list-style-type") }} で定義されたマーカーが使われます。これは、 {{cssxref("list-style")}} の既定値です。

@@ -1,9 +1,8 @@
 ---
 title: repeat()
 slug: Web/CSS/Reference/Values/repeat
-original_slug: Web/CSS/repeat
 l10n:
-  sourceCommit: fb409b8972e7c03d7eb284466433a28efb850ef5
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`repeat()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、[トラックリスト](/ja/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)内での部分的な繰り返しを表し、繰り返しパターンを示す多数の列や行を、よりコンパクトな形式で記述することができます。
@@ -50,7 +49,7 @@ grid-template-columns: repeat(auto-fill, 40px);
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 ```
@@ -93,7 +92,7 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 `repeat()` 関数は 2 つの引数を取ります。
 
 - **反復回数**: 最初の引数は、トラックリストが繰り返される回数を指定します。これは 1 以上の整数値で指定するか、キーワード値 [`auto-fill`](#auto-fill) または [`auto-fit`](#auto-fit) で指定します。これらのキーワード値は、グリッドコンテナーを埋めるのに必要な回数だけトラックの組み合わせを繰り返します。
-- **トラック**: 2 番目の引数は、繰り返されるトラックの組み合わせを指定します。基本的にこれは 1 つ以上の値で構成され、それぞれの値はそのトラックのサイズを表します。それぞれのサイズは [`<track-size>`](#track-size) または [`<fixed-size>`](#fixed-size) で指定します。また、トラックサイズの前後に [`<line-names>`](#line-names) 値を提供することで、各トラックの前後に 1 つ以上の[行名](/ja/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)を指定することもできます。
+- **トラック**: 2 番目の引数は、繰り返されるトラックの組み合わせを指定します。基本的にこれは 1 つ以上の値で構成され、それぞれの値はそのトラックのサイズを表します。それぞれのサイズは [`<track-size>`](#track-size) または [`<fixed-size>`](#fixed-size) で指定します。また、トラックサイズの前後に [`<line-names>`](#line-names) 値を提供することで、各トラックの前後に 1 つ以上の[線名](/ja/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)を指定することもできます。
 
 [`auto-fill`](#auto-fill) や [`auto-fit`](#auto-fit) を使用して反復回数を設定する場合、[`<fixed-size>`](#fixed-size) 型を使用してのみトラックサイズを指定することができ、 [`<track-size>`](#track-size) 型を使用することはできません。これで `repeat()` の構文が 3 種類になりました。
 
@@ -117,17 +116,17 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 }
 ```
 
-サブグリッドに行名を追加するために使用する `<name-repeat>` という第 4 の形式があります。これは [`subgrid`](/ja/docs/Web/CSS/Guides/Grid_layout/Subgrid) キーワードでのみ使用し、行名のみを指定し、トラックサイズは指定しません。
+サブグリッドに線名を追加するために使用する `<name-repeat>` という第 4 の形式があります。これは [`subgrid`](/ja/docs/Web/CSS/Guides/Grid_layout/Subgrid) キーワードでのみ使用し、線名のみを指定し、トラックサイズは指定しません。
 
 ### 値
 
 - `<fixed-size>`
   - : 以下の形式のいずれかです。
     - {{cssxref("&lt;length-percentage&gt;")}} 値
-    - {{cssxref("minmax", "minmax()")}} 関数
+    - {{cssxref("minmax()")}} 関数
       - `min` は {{cssxref("&lt;length-percentage&gt;")}} 値で指定
       - `max` は {{cssxref("&lt;length-percentage&gt;")}} 値、 {{cssxref("&lt;flex&gt;")}} 値、または [`min-content`](#min-content), [`max-content`](#max-content), [`auto`](#auto) のキーワード値のいずれかで指定
-    - {{cssxref("minmax", "minmax()")}} 関数
+    - {{cssxref("minmax()")}} 関数
       - `min` は {{cssxref("&lt;length-percentage&gt;")}} 値または [`min-content`](#min-content), [`max-content`](#max-content), [`auto`](#auto) のキーワード値のいずれかで指定
       - `max` は {{cssxref("&lt;length-percentage&gt;")}} 値で指定
 - {{cssxref("&lt;flex&gt;")}}
@@ -141,7 +140,7 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 - `<track-size>`
   - : 以下の形式のいずれかです。
     - {{cssxref("&lt;length-percentage&gt;")}} 値、 {{cssxref("&lt;flex&gt;")}} 値、または [`min-content`](#min-content), [`max-content`](#max-content), [`auto`](#auto) のキーワード値のいずれかで指定
-    - {{cssxref("minmax", "minmax()")}} 関数
+    - {{cssxref("minmax()")}} 関数
       - `min` は {{cssxref("&lt;length-percentage&gt;")}} 値、または [`min-content`](#min-content), [`max-content`](#max-content), [`auto`](#auto) のキーワード値のいずれかで指定
       - `max` は {{cssxref("&lt;length-percentage&gt;")}} 値、 {{cssxref("&lt;flex&gt;")}} 値、または [`min-content`](#min-content), [`max-content`](#max-content), [`auto`](#auto) のキーワード値のいずれかで指定
     - {{cssxref("fit-content_function", "fit-content()")}} 関数に {{cssxref("&lt;length-percentage&gt;")}} 値を渡したもの
@@ -156,10 +155,14 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
     自動反復トラックの数を探すため、ユーザーエージェントはトラックサイズをユーザーエージェントが指定する値（例えば、`1px`）で割り、ゼロによる除算を避けます。
 
-- `max-content`
+- {{cssxref("max-content")}}
   - : グリッドトラックを占めるグリッドアイテムの最も大きな最大コンテンツ寄与を表します。
-- `min-content`
+- {{cssxref("min-content")}}
   - : グリッドトラックを占めるグリッドアイテムの最も大きな最小コンテンツ寄与を表します。
+
+## 形式文法
+
+{{CSSSyntaxRaw(`<track-repeat> <auto-repeat> <fixed-repeat> <name-repeat>`)}}
 
 ## 例
 

@@ -80,7 +80,7 @@ Firefox のこれまでのバージョンでは、ユーザーがファイルを
 
 ### file: URI の同一オリジンポリシーの変更
 
-file: URI の同一オリジンポリシーが Firefox 3 で変更されました。これはコンテンツに影響する可能性があります。詳しくは [file: URI の同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy#file_origins)を参照してください。
+file: URI の同一オリジンポリシーが Firefox 3 で変更されました。これはコンテンツに影響する可能性があります。詳しくは [file: URI の同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy#file_origins)を参照してください。
 
 ## JavaScript の変更
 

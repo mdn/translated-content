@@ -4,7 +4,7 @@ slug: conflicting/Learn_web_development/Core/Styling_basics/Getting_started
 original_slug: Learn/CSS/First_steps/How_CSS_is_structured
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "conflicting/Learn_web_development/Core/Styling_basics")}}
 
 Ahora que ya sabes qué es el CSS y conoces sus conceptos básicos, es hora de profundizar un poco más en la estructura del lenguaje en sí. Ya hemos visto muchos de los conceptos que aparecen en este artículo; puedes volver para recapitular si más adelante encuentras conceptos confusos.
 
@@ -24,7 +24,7 @@ Ahora que ya sabes qué es el CSS y conoces sus conceptos básicos, es hora de p
         <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
           >Introducción al HTML</a
         >) y una idea de
-        <a href="/es/docs/Learn/CSS/First_steps/How_CSS_works"
+        <a href="/es/docs/Learn_web_development/Core/Styling_basics/What_is_CSS"
           >cómo funciona el CSS</a
         >.
       </td>
@@ -587,4 +587,4 @@ Debes asegurarte siempre de separar los valores distintos entre sí por al menos
 
 Resulta útil entender un poco cómo el navegador toma tu HTML y tu CSS y los convierte en una página web, razón por la cual en el próximo artículo ([Cómo funciona el CSS](/es/docs/Learn_web_development/Core/Styling_basics/What_is_CSS)) veremos ese proceso.
 
-{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/What_is_CSS", "conflicting/Learn_web_development/Core/Styling_basics")}}

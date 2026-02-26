@@ -1,9 +1,8 @@
 ---
 title: inset-inline-start
 slug: Web/CSS/Reference/Properties/inset-inline-start
-original_slug: Web/CSS/inset-inline-start
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`inset-inline-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素における論理的なインライン方向の先頭からの内部位置を定義し、要素の書字方向やテキストの向きに従って物理的なオフセットに対応付けられます。 {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
@@ -69,7 +68,7 @@ writing-mode: vertical-lr;
 /* <length> 値 */
 inset-inline-start: 3px;
 inset-inline-start: 2.4em;
-inset-inline-start: calc(anchor(--myAnchor 50%) + 10px);
+inset-inline-start: calc(anchor(--my-anchor 50%) + 10px);
 inset-inline-start: anchor-size(width);
 
 /* 包含ブロックの幅または高さに対する <percentage> 値 */

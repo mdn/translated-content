@@ -1,9 +1,8 @@
 ---
 title: -webkit-animation
 slug: Web/CSS/Reference/At-rules/@media/-webkit-animation
-original_slug: Web/CSS/@media/-webkit-animation
 l10n:
-  sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{Non-standard_header}}{{Deprecated_Header}}
@@ -11,12 +10,12 @@ l10n:
 > [!NOTE]
 > すべてのブラウザーが、ベンダー接頭辞なしの [`animation`](/ja/docs/Web/CSS/Reference/Properties/animation#ブラウザーの互換性) プロパティに対応しています。Chromium ベースのブラウザーではなく、 WebKit (Safari) だけが `-webkit-animation` メディア特性に対応しています。メディアクエリーとして接頭辞なしの `animation` に対応しているブラウザーはありません。代わりに、 [`@supports (animation)`](/ja/docs/Web/CSS/Reference/At-rules/@supports) 機能クエリーを使用してください。
 
-**`-webkit-animation`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、 [Chrome 拡張](/ja/docs/Web/CSS/Reference/Webkit_extensions)であり、ベンダー接頭辞つきの CSS {{cssxref("animation")}} に対応していれば値が `true` になります。
+**`-webkit-animation`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、[WebKit 拡張](/ja/docs/Web/CSS/Reference/Webkit_extensions)であり、ベンダー接頭辞つきの CSS {{cssxref("animation")}} に対応していれば値が `true` になります。
 
-Apple には [Safari CSS リファレンス](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3)に説明があります。
+Apple には [Safari CSS リファレンス](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3)に説明があります。
 
 > [!NOTE]
-> このメディア特性は WebKit のみが対応しています。可能であれば、代わりに {{cssxref("@supports")}} 機能クエリーを使用してください。
+> このメディア特性は WebKit のみが対応しています。できる限り、代わりに {{cssxref("@supports")}} 機能クエリーを使用してください。
 
 ## 構文
 

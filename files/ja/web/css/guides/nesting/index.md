@@ -1,9 +1,9 @@
 ---
 title: CSS 入れ子
+short-title: 入れ子
 slug: Web/CSS/Guides/Nesting
-original_slug: Web/CSS/CSS_nesting
 l10n:
-  sourceCommit: 13746bf1d5d8e5c7c7bce5e1281e6eeee77b3d44
+  sourceCommit: 81f8fcd666952c1782653a3675347c392cc997ca
 ---
 
 **CSS 入れ子** (CSS nesting) モジュールは、セレクターを入れ子にする構文を定義し、親ルールのセレクターに対して子ルールのセレクターを相対的に指定することで、あるスタイルルールを別のスタイルルールの中に入れ子にする機能を提供します。

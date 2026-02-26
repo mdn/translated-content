@@ -3,7 +3,7 @@ title: Dessin de texte avec canvas
 slug: Web/API/Canvas_API/Tutorial/Drawing_text
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Ajout_de_styles_et_de_couleurs", "Tutoriel_canvas/Utilisation_d'images")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
 
 Après avoir vu comment [appliquer les styles et les couleurs](/fr/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) dans le chapitre précédent, nous allons maintenant voir comment dessiner du texte sur canvas.
 
@@ -162,4 +162,4 @@ function draw() {
 
 Dans Gecko (le moteur de rendu de Firefox, Firefox OS et d'autres applications basées sur Mozilla), certaines API préfixées ont été implémentées dans des versions antérieures pour dessiner du texte sur un canevas. Ceux-ci sont maintenant déconseillés et supprimés, et leur fonctionnement n'est pas garanti.
 
-{{PreviousNext("Tutoriel_canvas/Ajout_de_styles_et_de_couleurs", "Tutoriel_canvas/Utilisation_d'images")}}
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}

@@ -2,7 +2,7 @@
 title: Ligne de grille (grid row)
 slug: Glossary/Grid_Row
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Une **ligne de grille** (row) est une piste horizontale dans une [grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout), qui se situe dans l'espace entre deux lignes (lines) horizontales de lignes (rows). Elle est définie par la propriété {{CSSxRef("grid-template-rows")}} ou les propriétés raccourcies {{CSSxRef("grid")}} ou {{CSSxRef("grid-template")}}.

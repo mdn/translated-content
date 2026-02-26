@@ -1,9 +1,8 @@
 ---
 title: font-variant-ligatures
 slug: Web/CSS/Reference/Properties/font-variant-ligatures
-original_slug: Web/CSS/font-variant-ligatures
 l10n:
-  sourceCommit: 8d8f3f44b498aef7b8cf2729d5656f96d2ff6ae5
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`font-variant-ligatures`** は [CSS](/ja/docs/Web/CSS) のプロパティで、適用される用途の文字コンテンツで使われる{{Glossary("ligature", "合字")}}および{{Glossary("contextual forms", "文脈に合わせた字形")}}を制御します。これにより、結果のテキストでより調和した形を利用することができます。
@@ -167,7 +166,7 @@ font-variant-ligatures: unset;
 
 ```css
 p {
-  font-family: Lora, serif;
+  font-family: "Lora", serif;
 }
 .normal {
   font-variant-ligatures: normal;
@@ -224,10 +223,10 @@ p {
 
 ## 関連情報
 
-- [`font-variant`](/ja/docs/Web/CSS/Reference/Properties/font-variant)
-- [`font-variant-caps`](/ja/docs/Web/CSS/Reference/Properties/font-variant-caps)
-- [`font-variant-emoji`](/ja/docs/Web/CSS/Reference/Properties/font-variant-emoji)
-- [`font-variant-east-asian`](/ja/docs/Web/CSS/Reference/Properties/font-variant-east-asian)
-- [`font-variant-numeric`](/ja/docs/Web/CSS/Reference/Properties/font-variant-numeric)
-- [`font-variant-position`](/ja/docs/Web/CSS/Reference/Properties/font-variant-position)
+- {{cssxref("font-variant")}}
+- {{cssxref("font-variant-caps")}}
+- {{cssxref("font-variant-emoji")}}
+- {{cssxref("font-variant-east-asian")}}
+- {{cssxref("font-variant-numeric")}}
+- {{cssxref("font-variant-position")}}
 - [CSS フォントモジュール](/ja/docs/Web/CSS/Guides/Fonts)

@@ -358,7 +358,7 @@ const intersectionCallback = (entries) => {
 
 ### CSS
 
-CSS는 이 예제에서 그다지 중요하지 않습니다. 요소를 배치하고 {{cssxref("background-color")}}와 {{cssxref("border")}} 속성이 [CSS transitions](/ko/docs/Web/CSS/CSS_transitions)에 참여할 수 있도록 설정하여, 요소가 더 많이 혹은 더 적게 보이지 않을 때 요소의 변화에 영향을 주기 위해 사용됩니다.
+CSS는 이 예제에서 그다지 중요하지 않습니다. 요소를 배치하고 {{cssxref("background-color")}}와 {{cssxref("border")}} 속성이 [CSS transitions](/ko/docs/Web/CSS/Guides/Transitions)에 참여할 수 있도록 설정하여, 요소가 더 많이 혹은 더 적게 보이지 않을 때 요소의 변화에 영향을 주기 위해 사용됩니다.
 
 ```css
 #box {

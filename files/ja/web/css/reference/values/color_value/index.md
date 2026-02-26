@@ -1,13 +1,12 @@
 ---
 title: <color>
 slug: Web/CSS/Reference/Values/color_value
-original_slug: Web/CSS/color_value
 l10n:
-  sourceCommit: 2e65771838405cdbee68bd38fb27a2ce0b1832d9
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**`<color>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、一つの色を表します。
-`<color>` は[アルファチャネル](https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%AB%E3%83%95%E3%82%A1%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB)の*透過値*を含むことがあり、この色を背景とどれだけ[混合](https://www.w3.org/TR/compositing-1/#simplealphacompositing)するかを示すこともできます。
+**`<color>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、1 つの色を表します。
+`<color>` は[アルファチャネル](https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%AB%E3%83%95%E3%82%A1%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB)の*透過値*を含むことがあり、この色を背景とどれだけ[混合](https://drafts.fxtf.org/compositing-1/#simplealphacompositing)するかを示すこともできます。
 
 > [!NOTE]
 > `<color>` の色は詳細に定義されていますが、出力機器によって（時には著しく）違って見えるかもしれません。出力機器の大半は色補正がされておらず、ブラウザーによっては出力機器の[色プロファイル](https://ja.wikipedia.org/wiki/ICC%E3%83%97%E3%83%AD%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB)に対応していないからです。
@@ -35,7 +34,7 @@ hsl(150 30% 60% / 80%)
 hwb(12 50% 0%)
 hwb(194 0% 0% / 0.5)
 
-/* LAB (Lightness, A-axis, B-axis) */
+/* Lab (Lightness, A-axis, B-axis) */
 lab(50% 40 59.5)
 lab(50% 40 59.5 / 0.5)
 
@@ -47,7 +46,7 @@ lch(52.2% 72.2 50 / 0.5)
 oklab(59% 0.1 0.1)
 oklab(59% 0.1 0.1 / 0.5)
 
-/* Oklch (Lightness, Chroma, Hue) */
+/* OkLCh (Lightness, Chroma, Hue) */
 oklch(60% 0.15 50)
 oklch(60% 0.15 50 / 0.5)
 
@@ -64,31 +63,43 @@ light-dark(white, black)
 light-dark(rgb(255 255 255), rgb(0 0 0))
 ```
 
-`<color>` は以下の何れかの方法で定義することができます。
+`<color>` は以下のいずれかの方法で定義することができます。
 
-- キーワード: {{CSSXref("&lt;named-color&gt;")}} （`blue` や `pink` など）、{{CSSXref("&lt;system-color&gt;")}}、[`currentcolor`](#currentcolor_キーワード)
+- キーワード: {{cssxref("named-color")}} （`blue` や `pink` など）、{{CSSXref("&lt;system-color&gt;")}}、[`currentColor`](#currentcolor_キーワード)
 - 16 進記法: {{CSSXref("&lt;hex-color&gt;")}} （`#ff0000` など）
 - `<color-function>` として、{{glossary("color space", "色空間")}}の引数を関数記法を使用して:
-  - [sRGB](https://en.wikipedia.org/wiki/SRGB) 色空間: {{CSSXref("color_value/hsl", "hsl()")}}, {{CSSXref("color_value/hwb", "hwb()")}}, {{CSSXref("color_value/rgb", "rgb()")}}
-  - [CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space) 色空間: {{CSSXref("color_value/lab", "lab()")}}, {{CSSXref("color_value/lch", "lch()")}}
+  - [sRGB](https://ja.wikipedia.org/wiki/SRGB) 色空間: {{CSSXref("color_value/hsl", "hsl()")}}, {{CSSXref("color_value/hwb", "hwb()")}}, {{CSSXref("color_value/rgb", "rgb()")}}
+  - [CIELAB](https://ja.wikipedia.org/wiki/Lab色空間) 色空間: {{CSSXref("color_value/lab", "lab()")}}, {{CSSXref("color_value/lch", "lch()")}}
   - [Oklab](https://bottosson.github.io/posts/oklab/) 色空間: {{CSSXref("color_value/oklab", "oklab()")}}, {{CSSXref("color_value/oklch", "oklch()")}}
-  - その他の色空間: {{CSSXref("color_value/color", "color()")}}
+  - その他の色空間: {{CSSXref("color_value/color", "color()")}}, {{CSSXref("color_value/device-cmyk", "device-cmyk()")}}
 - [相対色](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)の構文を用いると、既存の色に基づく新しい色を出力することができます。上記の色関数はいずれも、**原色**の前に `from` キーワードが先行し、その後に新しい**出力色**のためのチャンネル値の定義を続けることができます。
 - 2 色の混合: {{CSSXref("color_value/color-mix", "color-mix()")}}
+- 色を指定することで、返される対照色を得たい場合: {{CSSXref("color_value/contrast-color", "contrast-color()")}}.
 - 2 つの色の指定。 1 つ目の色は明るいカラースキームに、 2 つ目は暗いカラースキームに使用: {{CSSXref("color_value/light-dark", "light-dark()")}}
 
-### currentcolor キーワード
+### `currentColor` キーワード
 
-`currentcolor` キーワードは、要素の {{Cssxref("color")}} プロパティの値を表します。これで `color` の値をプロパティが既定で受け取らなくても利用することができます。
+`currentColor` キーワードは、要素の {{Cssxref("color")}} プロパティの値を表します。これで `color` の値をプロパティが既定で受け取らなくても利用することができます。
 
-`currentcolor` が `color` プロパティの値として使用された場合、 `color` プロパティが継承した値が使用されます。
+`currentColor` が `color` プロパティの値として使用された場合、 `color` プロパティが継承した値が使用されます。
 
 ```html
-<div style="color: blue; border: 1px dashed currentcolor;">
+<div class="container">
   この文字列の色は青です。
-  <div style="background: currentcolor; height:9px;"></div>
+  <div class="child"></div>
   このブロックは青い境界線で囲まれています。
 </div>
+```
+
+```css
+.container {
+  color: blue;
+  border: 1px dashed currentColor;
+}
+.child {
+  background: currentColor;
+  height: 9px;
+}
 ```
 
 {{EmbedLiveSample("currentcolor_keyword", "100%", 80)}}
@@ -151,7 +162,7 @@ color-mix(in oklch, oklch(60% 0.2 10), oklch(60% 0.2 30))
 - `color(xyz 0.2 0.1 0.6)` における `X` (`0.2`) は `rgb(50% 70% 30%)` における `R` (`50%`) の類似です。
 - `hsl(0deg 100% 80%)` における `H` (`0deg`) は `oklch(80% 0.1 140)` における `H` (`140`) の類似です。
 
-補間色空間として Oklch を使用し、下記の 2 色を例とします。
+補間色空間として OkLCh を使用し、下記の 2 色を例とします。
 
 ```css
 lch(80% 30 none)
@@ -188,9 +199,9 @@ color(display-p3 0.7 0.5 none)
    oklch(63.612% 0.1522 78.748)
    ```
 
-## アクセシビリティの考慮
+## アクセシビリティ
 
-色を見分けることが難しい人がいます。 [WCAG 2.2](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color) 勧告では、色を特定のメッセージ、動作、結果を伝える唯一の手段として使用することを避けるよう強く勧告しています。詳しくは[色と色のコントラスト](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)をご覧ください。
+色を見分けることが難しい人がいます。 [WCAG 2.2](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Use_of_color) 勧告では、色を特定のメッセージ、動作、結果を伝える唯一の手段として使用することを避けるよう強く勧告しています。詳しくは[色と色のコントラスト](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)をご覧ください。
 
 ## 形式文法
 
@@ -445,8 +456,10 @@ div:nth-child(6) {
 
 ## 関連情報
 
-- {{CSSXref("opacity")}} プロパティは要素レベルで色の透明度を定義できます。
-- {{CSSXref("&lt;hue&gt;")}} データ型は色を色相関で表します。
-- このデータ型を使用するよく使われるプロパティ: {{CSSXref("color")}}, {{CSSXref("background-color")}}, {{CSSXref("border-color")}}, {{CSSXref("box-shadow")}}, {{CSSXref("outline-color")}}, {{CSSXref("text-shadow")}}
+- {{CSSXref("opacity")}}: 要素レベルで透明度を定義するプロパティ
+- {{cssxref("hue")}}: 色を色相の角度で表すデータ型
+- {{CSSXref("color")}}, {{CSSXref("background-color")}}, {{CSSXref("border-color")}}, {{CSSXref("box-shadow")}}, {{CSSXref("outline-color")}}, {{CSSXref("text-shadow")}}: `<color>` を使用する共通のプロパティ
+- {{CSSXref("color_value/color")}} 関数
 - [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color)
+- [相対色の使用](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)
 - [New functions, gradients, and hues in CSS colors (Level 4)](/en-US/blog/css-color-module-level-4/) (MDN blog, 2023)

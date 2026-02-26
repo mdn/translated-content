@@ -36376,6 +36376,16 @@
       "Voulto"
     ]
   },
+  "Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns": {
+    "modified": "2020-11-02T18:51:04.362Z",
+    "contributors": [
+      "JNa0",
+      "applicodeur",
+      "arnaud.wixiweb",
+      "duduindo",
+      "Elaxis_"
+    ]
+  },
   "Web/Progressive_web_apps": {
     "modified": "2020-04-26T14:49:45.824Z",
     "contributors": [
@@ -37375,7 +37385,7 @@
       "marumari"
     ]
   },
-  "Web/Security/Certificate_Transparency": {
+  "Web/Security/Defenses/Certificate_Transparency": {
     "modified": "2019-03-18T21:11:18.056Z",
     "contributors": [
       "totopsy",
@@ -37383,17 +37393,7 @@
       "Hell_Carlito"
     ]
   },
-  "Web/Security/Referer_header:_privacy_and_security_concerns": {
-    "modified": "2020-11-02T18:51:04.362Z",
-    "contributors": [
-      "JNa0",
-      "applicodeur",
-      "arnaud.wixiweb",
-      "duduindo",
-      "Elaxis_"
-    ]
-  },
-  "Web/Security/Same-origin_policy": {
+  "Web/Security/Defenses/Same-origin_policy": {
     "modified": "2019-10-12T13:42:13.230Z",
     "contributors": [
       "GregMorel",
@@ -37406,13 +37406,13 @@
       "dwogsi"
     ]
   },
-  "Web/Security/Secure_Contexts": {
+  "Web/Security/Defenses/Secure_Contexts": {
     "modified": "2019-03-23T22:17:00.806Z",
     "contributors": [
       "nobe4"
     ]
   },
-  "Web/Security/Subresource_Integrity": {
+  "Web/Security/Defenses/Subresource_Integrity": {
     "modified": "2019-03-23T22:27:34.272Z",
     "contributors": [
       "SphinxKnight",

@@ -1,28 +1,12 @@
 ---
 title: SharedArrayBuffer.prototype.slice()
+short-title: slice()
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
 ---
 
-{{JSRef}}
-
 **`slice()`** は {{jsxref("SharedArrayBuffer")}} インスタンスのメソッドで、この `SharedArrayBuffer` の先頭位置 (含む) から末尾位置 (含まない) までのバイトのコピーである新しい `SharedArrayBuffer` を返します。開始位置または終わりが負の場合、それは配列の末尾からのインデックスを参照します。
-
-{{InteractiveExample("JavaScript デモ: SharedArrayBuffer.prototype.slice()")}}
-
-```js interactive-example
-// バイト数でサイズを指定して SharedArrayBuffer を作成
-const buffer = new SharedArrayBuffer(16);
-const int32View = new Int32Array(buffer); // ビューを作成
-// Produces Int32Array [0, 0, 0, 0]
-
-int32View[1] = 42;
-const sliced = new Int32Array(buffer.slice(4, 12));
-
-console.log(sliced);
-// 期待される出力結果: Int32Array [42, 0]
-```
 
 ## 構文
 
@@ -43,7 +27,7 @@ slice(start, end)
   - : 取り出す範囲の末尾の 0 から始まるインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)。 `slice()` はここまでを取り出しますが、 `end` の位置は含めません。
     - 負のインデックスを指定すると、バッファーの末尾から前にカウントします。 `-buffer.length <= end < 0` の場合、 `end + buffer.length` が使用されます。
     - `end < -buffer.length` の場合、 `0` が使用されます。
-    - `end >= buffer.length` または `end` が省略された場合、 `buffer.length` が使用され、末尾までのすべての要素が抽出されます。
+    - `end >= buffer.length` または `end` が省略されたか `undefined` の場合、 `buffer.length` が使用され、末尾までのすべての要素が抽出されます。
     - `end` が `start` が示す位置の前またはその位置を意味する場合、空のバッファーが返されます。
 
 ### 返値
@@ -52,7 +36,22 @@ slice(start, end)
 
 ## 例
 
+これらの例は、コンソールや任意のウェブページから直接実行することはできません。`SharedArrayBuffer` は、その[セキュリティ要件](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#セキュリティ要件)が満たされない限り定義されないからです。
+
 ### slice() の使用
+
+```js
+// SharedArrayBuffer をバイト数でサイズを指定して作成
+const buffer = new SharedArrayBuffer(16);
+const int32View = new Int32Array(buffer);
+int32View[1] = 42;
+// Int32Array [0, 42, 0, 0] を産出
+
+const sliced = new Int32Array(buffer.slice(4, 12));
+console.log(sliced); // Int32Array [42, 0]
+```
+
+### 様々な開始値と終了値の使用
 
 ```js
 const sab = new SharedArrayBuffer(1024);

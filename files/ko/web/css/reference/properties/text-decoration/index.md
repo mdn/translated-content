@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Properties/text-decoration
 original_slug: Web/CSS/text-decoration
 ---
 
-[CSS](/ko/docs/Web/CSS) **`text-decoration`** [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)은 텍스트에 장식용 선을 추가합니다. 이 속성은 {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-style")}}, {{cssxref("text-decoration-thickness")}}의 단축 속성입니다.
+[CSS](/ko/docs/Web/CSS) **`text-decoration`** [단축 속성](/ko/docs/Web/CSS/Guides/Cascade/Shorthand_properties)은 텍스트에 장식용 선을 추가합니다. 이 속성은 {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-style")}}, {{cssxref("text-decoration-thickness")}}의 단축 속성입니다.
 
 {{InteractiveExample("CSS Demo: text-decoration")}}
 

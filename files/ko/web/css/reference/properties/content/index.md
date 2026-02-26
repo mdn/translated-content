@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Properties/content
 original_slug: Web/CSS/content
 ---
 
-[CSS](/ko/docs/Web/CSS) **`content`** 속성은 생성한 값으로 요소를 대체합니다. `content` 속성으로 추가한 요소는 "익명 [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)"입니다.
+[CSS](/ko/docs/Web/CSS) **`content`** 속성은 생성한 값으로 요소를 대체합니다. `content` 속성으로 추가한 요소는 "익명 [대체 요소](/ko/docs/Web/CSS/Guides/Images/Replaced_element_properties)"입니다.
 
 ```css
 /* 다른 값과 조합할 수 없는 키워드 */

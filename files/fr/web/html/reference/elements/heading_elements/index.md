@@ -1,9 +1,8 @@
 ---
 title: "<h1>-<h6> : les éléments de titre de section"
 slug: Web/HTML/Reference/Elements/Heading_Elements
-original_slug: Web/HTML/Element/Heading_Elements
 l10n:
-  sourceCommit: d9026c37acaf22da682206c381686fe8a4666f16
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
 Les éléments [HTML](/fr/docs/Web/HTML) **`<h1>`** à **`<h6>`** représentent les six niveaux de titre de section. `<h1>` correspond au niveau de section le plus haut et `<h6>` correspond au niveau le plus faible. Par défaut, tous les éléments de titre créent une boîte de [niveau bloc](/fr/docs/Glossary/Block-level_content) dans la mise en page, commençant sur une nouvelle ligne et prenant toute la largeur disponible dans leur bloc conteneur.
@@ -61,16 +60,16 @@ Ces éléments incluent uniquement les [attributs universels](/fr/docs/Web/HTML/
 
 ### Éviter d'avoir plusieurs éléments `<h1>` sur une page
 
-Bien qu'il soit permis par le standard HTML d'utiliser plusieurs éléments `<h1>` sur une même page tant que ceux-ci ne sont pas [imbriqués](#imbrication), cela est considéré comme une mauvaise pratique. Une page devrait généralement avoir un seul élément `<h1>` qui décrit le contenu de la page (semblable à l'élément [`<title>`](/fr/docs/Web/HTML/Reference/Elements/title)).
+Bien qu'il soit permis par le standard HTML d'utiliser plusieurs éléments `<h1>` sur une même page tant que ceux-ci ne sont pas [imbriqués](#imbrication), cela est considéré comme une mauvaise pratique. Une page devrait généralement avoir un seul élément `<h1>` qui décrit le contenu de la page (semblable à l'élément {{HTMLElement("title")}}).
 
 > [!NOTE]
-> L'imbrication de plusieurs éléments `<h1>` au sein [d'éléments sectionnants](/fr/docs/Web/HTML/Reference/Elements#sectionnement_du_contenu) imbriqués était autorisée dans d'anciennes versions du standard HTML. Toutefois, cela a toujours été considéré comme une mauvaise pratique et ce n'est plus conforme. Pour en savoir plus, vous pouvez lire le billet [<i lang="en">There Is No Document Outline Algorithm</i> d'Adrian Roselli (en anglais)](https://adrianroselli.com/2016/08/there-is-no-document-outline-algorithm.html).
+> L'imbrication de plusieurs éléments `<h1>` au sein [d'éléments sectionnants](/fr/docs/Web/HTML/Reference/Elements#sectionnement_du_contenu) imbriqués était autorisée dans d'anciennes versions du standard HTML. Toutefois, cela a toujours été considéré comme une mauvaise pratique et ce n'est plus conforme. Pour en savoir plus, vous pouvez lire le billet [<i lang="en">There Is No Document Outline Algorithm</i> d'Adrian Roselli <sup>(angl.)</sup>](https://adrianroselli.com/2016/08/there-is-no-document-outline-algorithm.html).
 
 Mieux vaudra donc utiliser un seul élément `<h1>` par page et [l'imbrication de titres d'autres niveaux](#imbrication) sans sauter de niveaux.
 
 ### Définir une taille de police uniforme pour `<h1>`
 
-Avant mai&nbsp;2025, le [standard HTML <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/rendering.html#sections-and-headings) spécifiait que les éléments `<h1>` contenus dans un élément `<section>`, `<article>`, `<aside>` ou `<nav>` devaient s'afficher comme un `<h2>` (taille de police plus petite et {{cssxref("margin-block")}} ajustée), ou comme un `<h3>` s'ils étaient imbriqués d'un niveau supplémentaire, et ainsi de suite. Ce style par défaut dépendant du contexte a désormais été [supprimé <sup>(angl.)</sup>](https://github.com/whatwg/html/issues/7867).
+Avant mai&nbsp;2025, le [standard HTML <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/rendering.html#sections-and-headings) définissait que les éléments `<h1>` contenus dans un élément `<section>`, `<article>`, `<aside>` ou `<nav>` devaient s'afficher comme un `<h2>` (taille de police plus petite et {{CSSxRef("margin-block")}} ajustée), ou comme un `<h3>` s'ils étaient imbriqués d'un niveau supplémentaire, et ainsi de suite. Ce style par défaut dépendant du contexte a désormais été [supprimé <sup>(angl.)</sup>](https://github.com/whatwg/html/issues/7867).
 
 Pour garantir un rendu cohérent des `<h1>` dans les navigateurs qui implémentent l'ancien style par défaut dépendant du contexte, utilisez la règle de style suivante&nbsp;:
 
@@ -81,7 +80,7 @@ h1 {
 }
 ```
 
-Alternativement, pour éviter d'écraser d'autres règles de style ciblant `<h1>`, vous pouvez utiliser {{cssxref(":where()")}}, qui a une spécificité nulle&nbsp;:
+Alternativement, pour éviter d'écraser d'autres règles de style ciblant `<h1>`, vous pouvez utiliser {{CSSxRef(":where()")}}, qui a une spécificité nulle&nbsp;:
 
 ```css
 :where(h1) {
@@ -168,9 +167,9 @@ Les lecteurs d'écran généreraient une liste comme celle-ci&nbsp;:
 Lorsque les titres sont imbriqués, il est possible de sauter des niveaux lors de la fermeture d'une sous-section.
 
 - [Tutoriel sur la structure d'une page et les titres, par la WAI <sup>(angl.)</sup>](https://www.w3.org/WAI/tutorials/page-structure/headings/)
-- [Comprendre les règles pour l'accessibilité des contenus web (WCAG), explications sur la règle 1.3](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
+- [Comprendre les règles pour l'accessibilité des contenus web (WCAG), explications sur la règle 1.3](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.3_—_créer_du_contenu_pouvant_être_présenté_de_différentes_façons)
 - [Comprendre le critère de succès 1.3.1, WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
-- [Comprendre les règles pour l'accessibilité des contenus web (WCAG), explications sur la règle 2.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [Comprendre les règles pour l'accessibilité des contenus web (WCAG), explications sur la règle 2.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#règle_2.4_—_navigation_fournir_des_moyens_daider_les_utilisateurs_et_utilisatrices_à_naviguer_trouver_du_contenu_et_savoir_leur_position)
 - [Comprendre le critère de succès 2.4.1, WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
 - [Comprendre le critère de succès 2.4.6, WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html)
 - [Comprendre le critère de succès 2.4.10, WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-headings.html)
@@ -179,7 +178,7 @@ Lorsque les titres sont imbriqués, il est possible de sauter des niveaux lors d
 
 Une autre technique de navigation employée par les utilisateur·ice·s de lecteurs d'écran consiste à générer une liste du [contenu sectionnant](/fr/docs/Web/HTML/Reference/Elements#sectionnement_du_contenu) et à l'utiliser afin de déterminer le plan de la page.
 
-Le contenu sectionnant peut être libellé en utilisant une combinaison des attributs [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) et [`id`](/fr/docs/Web/HTML/Reference/Global_attributes#id), où le libellé décrit de façon concise l'objet de la section. Cette technique s'avère utile lorsqu'il y a plus d'un élément sectionnant sur la même page.
+Le contenu sectionnant peut être libellé en utilisant une combinaison des attributs [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) et [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id), où le libellé décrit de façon concise l'objet de la section. Cette technique s'avère utile lorsqu'il y a plus d'un élément sectionnant sur la même page.
 
 #### Exemples de contenu sectionné
 
@@ -201,12 +200,12 @@ Le contenu sectionnant peut être libellé en utilisant une combinaison des attr
 </footer>
 ```
 
-{{EmbedLiveSample('exemples_de_contenu_sectionné','100%','190')}}
+{{EmbedLiveSample("Exemples de contenu sectionné", "100%", 190)}}
 
 Avec cet exemple, un lecteur d'écran annoncera la présence de deux sections [`<nav>`](/fr/docs/Web/HTML/Reference/Elements/nav), la première appelée «&nbsp;Navigation primaire&nbsp;» et l'autre appelée «&nbsp;Navigation du pied de page&nbsp;». Si les libellés n'avaient pas été fournis, la personne aurait dû consulter le contenu de chaque élément `<nav>` afin de déterminer leur utilité.
 
-- [Utiliser l'attribut `aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
-- [Tutoriels sur les libellés pour les régions et la structure des pages, par la WAI](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby)
+- [Utiliser l'attribut `aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
+- [Tutoriels sur les libellés pour les régions et la structure des pages, par la WAI <sup>(angl.)</sup>](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby)
 
 ## Exemples
 
@@ -227,7 +226,7 @@ On utilise ici tous les niveaux de titre.
 
 #### Résultat
 
-{{EmbedLiveSample('tous_les_niveaux', '280', '370')}}
+{{EmbedLiveSample("Tous les niveaux", 280, 370)}}
 
 ### Une page d'exemple
 
@@ -253,7 +252,7 @@ Ici, on utilise des titres avec du contenu intercalaire.
 
 #### Résultat
 
-{{EmbedLiveSample('une_page_dexemple', '280', '630')}}
+{{EmbedLiveSample("Une page d'exemple", 280, 630)}}
 
 ## Résumé technique
 
@@ -313,7 +312,7 @@ Ici, on utilise des titres avec du contenu intercalaire.
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLHeadingElement")}}</td>
+      <td>{{DOMxRef("HTMLHeadingElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -328,6 +327,6 @@ Ici, on utilise des titres avec du contenu intercalaire.
 
 ## Voir aussi
 
-- {{HTMLElement("p")}}
-- {{HTMLElement("div")}}
-- {{HTMLElement("section")}}
+- L'élément {{HTMLElement("p")}}
+- L'élément {{HTMLElement("div")}}
+- L'élément {{HTMLElement("section")}}

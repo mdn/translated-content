@@ -6,7 +6,7 @@ original_slug: Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility
 
 {{CSSRef}}
 
-{{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_écriture", "Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_et_l_amélioration_progressive","Web/CSS/CSS_Grid_Layout")}}
+{{PreviousMenuNext("Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes", "Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_et_l_amélioration_progressive","Web/CSS/Guides/Grid_layout")}}
 
 Pour celles et ceux qui étaient présents aux premières lueurs du Web, les grilles CSS peuvent rappeler l'âge sombre où les tableaux HTML étaient utilisés pour la mise en forme des pages et où les cellules étaient utilisées pour diviser le contenu. Cette approche avait quelques avantages par rapport au positionnement CSS apparu après : on pouvait tirer parti de l'alignement et des colonnes créées dans un tableau. Il y a toutefois un inconvénient majeur : la mise en forme est fortement couplée à la structure du document, entraînant certains problèmes d'accessibilité. On pouvait par exemple découper le contenu dans le tableau afin d'obtenir la mise en forme souhaitée mais la structure de la page n'avait plus aucun sens lorsqu'elle était lue par un lecteur d'écran.
 
@@ -110,4 +110,4 @@ Le concept selon lequel l'ordre d'affichage des éléments doit suivre l'ordre d
 
 Pour construire votre réflexion sur ce sujet, je vous invite à lire _[Flexbox & the Keyboard Navigation Disconnect](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)_ écrit par Léonie Watson. [La vidéo de la présentation de Léonie à ffconf](https://www.youtube.com/watch?v=spxT2CmHoPk) est aussi utile pour mieux comprendre comment les lecteurs d'écran utilisent la représentation visuelle des objets en CSS. Adrian Roselli a également publié [un article sur l'ordre de la navigation au clavier dans les différents navigateurs](https://adrianroselli.com/2015/10/html-source-order-vs-css-display-order.html) bien que cet article ait été rédigé avant l'implémentation des grilles CSS dans Firefox.
 
-{{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_écriture", "Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_et_l_amélioration_progressive","Web/CSS/CSS_Grid_Layout")}}
+{{PreviousMenuNext("Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes", "Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_et_l_amélioration_progressive","Web/CSS/Guides/Grid_layout")}}

@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**그리드 영역(grid area)**은 그리드의 직사각형 영역을 구성하는 하나 이상의 {{glossary("grid cell", "그리드 셀")}}입니다. [줄 기반 배치](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)를 사용하여 항목을 배치하거나 [이름이 있는 그리드 영역](/ko/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)을 사용하여 영역을 정의할 때 그리드 영역이 생성됩니다.
+**그리드 영역(grid area)**은 그리드의 직사각형 영역을 구성하는 하나 이상의 {{glossary("grid cell", "그리드 셀")}}입니다. [줄 기반 배치](/ko/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)를 사용하여 항목을 배치하거나 [이름이 있는 그리드 영역](/ko/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)을 사용하여 영역을 정의할 때 그리드 영역이 생성됩니다.
 
 ![강조 표시된 그리드 영역을 보여주는 이미지](1_grid_area.png)
 
@@ -77,6 +77,6 @@ l10n:
 ### 추가 읽어보기
 
 - CSS 그리드 레이아웃 안내서:
-  - [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-  - [그리드 템플릿 영역](/ko/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+  - [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+  - [그리드 템플릿 영역](/ko/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)
 - [CSS 그리드 레이아웃 명세서의 그리드 영역의 정의](https://drafts.csswg.org/css-grid/#grid-area-concept)

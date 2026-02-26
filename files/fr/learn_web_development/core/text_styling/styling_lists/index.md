@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Text_styling/Styling_lists
 original_slug: Learn/CSS/Styling_text/Styling_lists
 ---
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}
 
 Les [listes](/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#listes) se comportent comme la plupart des autres textes, mais il existe des propriétés CSS propres aux listes que vous devez connaître, et quelques bonnes pratiques à prendre en compte. Cet article explique tout.
 
@@ -21,7 +21,7 @@ Les [listes](/fr/docs/Learn_web_development/Core/Structuring_content/Headings_an
           >Introduction aux CSS</a
         >),
         <a
-          href="/fr/docs/Learn/CSS/Styling_text/Fundamentals"
+          href="/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals"
           >la mise en forme du texte</a
         >.
       </td>
@@ -469,4 +469,4 @@ Vous avez atteint la fin de cet article, mais pourriez-vous retenir les informat
 
 Les listes sont relativement faciles à saisir lorsque vous connaissez les quelques principes de base associés et les propriétés spécifiques. Dans le prochain article, nous allons évoquer des techniques de style des liens.
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}

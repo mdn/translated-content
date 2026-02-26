@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Async_JS/Promises
 original_slug: Learn/JavaScript/Asynchronous/Promises
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous/Async_await", "Learn/JavaScript/Asynchronous")}}
+{{LearnSidebar}}{{PreviousMenuNext("conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df", "conflicting/Learn/JavaScript/Asynchronous/Promises", "Learn_web_development/Extensions/Async_JS")}}
 
 **Promises** são a base da programação assíncrona moderna em JavaScript. Uma promise é um objeto retornado por uma função assíncrona, que representa o estado atual da operação. No momento em que a promise é retornada para quem à chamou, a operação muitas vezes ainda não foi finalizada, mas o objeto da promise oferece métodos para tratar o possível sucesso ou falha da operação.
 
@@ -414,4 +414,4 @@ Muitas APIs da Web modernas são baseadas em promises, incluindo [WebRTC](/pt-BR
 - [We have a problem with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html) by Nolan Lawson
 - [Let's talk about how to talk about promises](https://thenewtoys.dev/blog/2021/02/08/lets-talk-about-how-to-talk-about-promises/)
 
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn_web_development/Extensions/Async_JS")}}

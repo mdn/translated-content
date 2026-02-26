@@ -17,7 +17,7 @@ l10n:
 - 维基百科上的[传输层安全性协议](https://zh.wikipedia.org/wiki/傳輸層安全性協定)
 - [RFC 8446](https://tools.ietf.org/html/rfc8446)（传输层安全性协议，版本 1.3）
 - [RFC 8446](https://tools.ietf.org/html/rfc5246)（传输层安全性协议，版本 1.2）
-- [传输层安全性](/zh-CN/docs/Web/Security/Transport_Layer_Security)
+- [传输层安全性](/zh-CN/docs/Web/Security/Defenses/Transport_Layer_Security)
 - [传输层安全性备忘单](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)（OWASP）
 - 相关术语：
   - {{Glossary("HTTPS")}}

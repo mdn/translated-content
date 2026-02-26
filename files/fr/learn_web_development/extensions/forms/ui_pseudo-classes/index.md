@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/UI_pseudo-classes
 original_slug: Learn/Forms/UI_pseudo-classes
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}
 
 Dans les articles précédents, nous avons vu la mise en forme des différents contrôles de formulaire de façon générale. Cela inclut l'utilisation de certaines pseudo-classes, telles que `:checked` qui permet de cibler une case à cocher seulement lorsqu'elle est sélectionnée. Dans cet article, nous verrons en détails les différentes pseudo-classes disponibles et qui ont trait à l'interface utilisateur et qui permettent de mettre en forme les formulaires dans différents états.
 
@@ -612,7 +612,7 @@ Voici le résultat correspondant&nbsp;:
 > L'exemple est également disponible sur GitHub [sur une page séparée `radios-checked-indeterminate.html`](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html) ([voir le code source correspondant](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-indeterminate.html)).
 
 > [!NOTE]
-> Vous pouvez trouver [d'autres exemples avec l'état `indeterminate`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox#g%c3%a9rer_un_%c3%a9tat_ind%c3%a9termin%c3%a9) sur la page de référence pour [`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox).
+> Vous pouvez trouver [d'autres exemples avec l'état `indeterminate`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox#gérer_un_état_indéterminé) sur la page de référence pour [`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox).
 
 ## D'autres pseudo-classes
 
@@ -637,4 +637,4 @@ Vous avez atteint la fin de cet article, mais avez-vous retenu les informations 
 
 Et voilà la fin de ce tour des pseudo-classes relatives à l'interface utilisateur. N'hésitez pas à les utiliser et à créer des mises en forme amusantes avec&nbsp;! Nous allons voir ensuite un sujet différent&nbsp;: [la validation des formulaires côté client](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation).
 
-{{PreviousMenuNext("Learn/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}

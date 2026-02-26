@@ -37,7 +37,7 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Ref
 
 L'élément `<sup>` doit être utilisé uniquement pour des raisons typographiques&nbsp;: il sert à modifier la position du texte afin de respecter les conventions ou normes typographiques, et non simplement pour des raisons de présentation ou d'apparence.
 
-Par exemple, la mise en forme d'une [marque verbale <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Wordmark) d'entreprise ou de produit qui utilise une ligne de base surélevée doit être réalisée avec du CSS (généralement {{cssxref("vertical-align")}}) plutôt qu'avec `<sup>`. On utilisera par exemple `vertical-align: super` ou, pour décaler la ligne de base de 50&nbsp;%, `vertical-align: 50%`.
+Par exemple, la mise en forme d'une [marque verbale <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Wordmark) d'entreprise ou de produit qui utilise une ligne de base surélevée doit être réalisée avec du CSS (généralement {{CSSxRef("vertical-align")}}) plutôt qu'avec `<sup>`. On utilisera par exemple `vertical-align: super` ou, pour décaler la ligne de base de 50&nbsp;%, `vertical-align: 50%`.
 
 Les cas d'utilisation appropriés de `<sup>` incluent (sans s'y limiter)&nbsp;:
 
@@ -89,8 +89,8 @@ Les nombres ordinaux, comme «&nbsp;quatrième&nbsp;» en français, «&nbsp;<i 
   Voici comment le nombre ordinal cinquième est écrit dans différentes langues
 </p>
 <ul>
-  <li>en français : 5<sup>e</sup></li>
-  <li>en anglais : 5<sup>th</sup></li>
+  <li>en français&nbsp;: 5<sup>e</sup></li>
+  <li>en anglais&nbsp;: 5<sup>th</sup></li>
 </ul>
 ```
 
@@ -109,11 +109,11 @@ Les nombres ordinaux, comme «&nbsp;quatrième&nbsp;» en français, «&nbsp;<i 
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Guides/Content_categories#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Guides/Content_categories#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
         >, contenu tangible.
       </td>
@@ -122,7 +122,7 @@ Les nombres ordinaux, comme «&nbsp;quatrième&nbsp;» en français, «&nbsp;<i 
       <th scope="row">Contenu autorisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Guides/Content_categories#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >Contenu phrasé</a
         >.
       </td>
@@ -136,7 +136,7 @@ Les nombres ordinaux, comme «&nbsp;quatrième&nbsp;» en français, «&nbsp;<i 
       <td>
         Tout élément acceptant du
         <a
-          href="/fr/docs/Web/HTML/Guides/Content_categories#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
         >.
       </td>
@@ -156,7 +156,7 @@ Les nombres ordinaux, comme «&nbsp;quatrième&nbsp;» en français, «&nbsp;<i 
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
+      <td>{{DOMxRef("HTMLElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -171,6 +171,6 @@ Les nombres ordinaux, comme «&nbsp;quatrième&nbsp;» en français, «&nbsp;<i 
 
 ## Voir aussi
 
-- L'élément HTML {{HTMLElement("sub")}} permet un effet de mise en indice. Il est à noter que l'élément `<sub>` et l'élément `<sup>` ne peuvent pas être utilisés simultanément. Pour afficher le symbole chimique d'un élément, il faudra utiliser [MathML](/fr/docs/Web/MathML) pour représenter à la fois le numéro atomique et le nombre de masse.
+- L'élément {{HTMLElement("sub")}} permet un effet de mise en indice. Il est à noter que l'élément `<sub>` et l'élément `<sup>` ne peuvent pas être utilisés simultanément. Pour afficher le symbole chimique d'un élément, il faudra utiliser [MathML](/fr/docs/Web/MathML) pour représenter à la fois le numéro atomique et le nombre de masse.
 - Les éléments MathML {{MathMLElement("msub")}}, {{MathMLElement("msup")}} et {{MathMLElement("msubsup")}}.
-- La propriété CSS {{cssxref("vertical-align")}}.
+- La propriété CSS {{CSSxRef("vertical-align")}}.

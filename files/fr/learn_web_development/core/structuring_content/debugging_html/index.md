@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Debugging_HTML
 original_slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure", "Apprendre/HTML/Introduction_à_HTML/Marking_up_a_letter", "Apprendre/HTML/Introduction_à_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Forms_challenge", "Learn_web_development/Core/Styling_basics", "Learn_web_development/Core/Structuring_content")}}
 
 Écrire du code HTML, c'est bien, mais si quelque chose se passe mal, que faire pour trouver où est l'erreur dans le code ? Cet article vous indique divers outils pour vous aider à trouver et corriger les erreurs en HTML.
 
@@ -13,23 +13,19 @@ original_slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Être familiarisé avec les bases du HTML, traitées aux pages
-        <a
-          href="/fr/docs/Apprendre/HTML/Introduction_à_HTML/Getting_started"
-          >Commencer avec le HTML,</a
-        >
-        <a
-          href="/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
-          >Fondamentaux du texte HTML </a
-        >et
-        <a
-          href="/fr/docs/Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks"
-          >Création d'hyperliens</a
-        >.
+        Connaissances de base en HTML, comme présenté dans
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >Syntaxe HTML de base</a
+        >. Sémantique au niveau du texte comme les <a href="/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
+          >titres et paragraphes</a
+        > et les <a href="/fr/docs/Learn_web_development/Core/Structuring_content/Lists"
+          >listes</a
+        >. <a href="/fr/docs/Learn_web_development/Core/Structuring_content/Structuring_documents"
+          >HTML structurel</a>.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif&nbsp;:</th>
+      <th scope="row">Objectifs d'apprentissage&nbsp;:</th>
       <td>
         Apprendre les bases de l'utilisation des outils de débogage pour
         détecter des problèmes en HTML.
@@ -42,7 +38,9 @@ original_slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 
 Quand on écrit du code , tout va généralement bien, jusqu'au moment redouté où une erreur se produit — vous avez fait quelque chose d'incorrect, donc votre code ne fonctionne pas — soit pas du tout, soit pas tout à fait comme vous l'aviez souhaité. Par exemple, ce qui suit montre une erreur signalée lors d'une tentative de {{glossary("compile","compilation")}} d'un programme simple écrit en Rust.
 
-![Console montrant le résultat de la compilation d'un programme Rust avec guillemet manquant dans une chaîne textuelle dans une instruction d'affichage. Le message signalé est « erreur : guillemet double manquant dans la chaîne ».](fr-erreur.png)Ici, le message d'erreur est relativement facile à comprendre — «&nbsp;unterminated double quote string&nbsp;» : il manque un guillemet double ouvrant ou fermant pour envelopper la chaîne. Si vous regardez le listage, vous verrez `println!(Salut, Ô Monde!");` il manque un guillemet double. Cependant, des messages d'erreur peuvent devenir plus complexes et plus abscons au fur et à mesure que le programme grossit et, même dans des cas simples devenir intimidants à quelqu'un qui ne connaît rien du Rust.
+![Console montrant le résultat de la compilation d'un programme Rust avec guillemet manquant dans une chaîne textuelle dans une instruction d'affichage. Le message signalé est « erreur : guillemet double manquant dans la chaîne ».](error-message.png)
+
+Ici, le message d'erreur est relativement facile à comprendre — «&nbsp;unterminated double quote string&nbsp;» : il manque un guillemet double ouvrant ou fermant pour envelopper la chaîne. Si vous regardez le listage, vous verrez `println!(Salut, Ô Monde!");` il manque un guillemet double. Cependant, des messages d'erreur peuvent devenir plus complexes et plus abscons au fur et à mesure que le programme grossit et, même dans des cas simples devenir intimidants à quelqu'un qui ne connaît rien du Rust.
 
 Déboguer ne doit toutefois pas devenir un problème — la clé pour être à l'aise lors de l'écriture et du débogage d'un programme réside dans une bonne connaissance à la fois du langage et des outils.
 
@@ -67,7 +65,10 @@ HTML ne craint pas les erreurs de syntaxe, car les navigateurs l'analysent de ma
 Voici le moment venu d'étudier le caractère permissif du code HTML.
 
 1. Primo, télécharchez notre démo [debug-example](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html) et enregistrez‑le localement. Cette démo est délibérement écrite avec des erreurs pour que nous puissions les examiner (le balisage HTML est dit **malformé**, par opposition à **bien-formé**).
-2. Ensuite, ouvrez‑le dans un navigateur. Vous verrez quelque chose comme ceci&nbsp;:![Un simple document HTML intitulé « Exemples de HTML à déboguer » et quelques informations sur les erreurs HTML courantes, telles que les éléments non fermés ou mal imbriqués et des attributs non fermés. ](fr-html-errone.png)
+2. Ensuite, ouvrez‑le dans un navigateur. Vous verrez quelque chose comme ceci&nbsp;:
+
+   ![Un simple document HTML intitulé « Exemples de HTML à déboguer » et quelques informations sur les erreurs HTML courantes, telles que les éléments non fermés ou mal imbriqués et des attributs non fermés. ](badly-formed-html.png)
+
 3. Constatons que ce n'est pas terrible&nbsp;; examinons le code source pour voir ce que nous pouvons en faire (seul le contenu de l'élément `body` est affiché)&nbsp;:
 
    ```html
@@ -98,9 +99,9 @@ Voici le moment venu d'étudier le caractère permissif du code HTML.
    - Cette partie est mal imbriquée&nbsp;: `<strong>caractères gras <em>ou gras et italiques ?</strong> qu'est ce ?</em>`. Pas facile de dire comment il faut interpréter cela en raison du problème précédent.
    - La valeur de l'attribut [`href`](/fr/docs/Web/HTML/Reference/Elements/a#href) n'a pas de guillemet double fermant. C'est ce qui semble avoir posé le plus gros problème — le lien n'a pas été mentionné du tout.
 
-5. Revoyons maintenant comment le navigateur a vu le balisage, par comparaison au balisage du code source. Pour ce faire, utilisons les outils de développement du navigateur. Si vous n'êtes pas un familier de l'utilisation des outils de développement du navigateur, prenez quelques minutes pour revoir [Découverte des outils de développement du navigateur](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools).
-6. Dans l'«&nbsp;Inspecteur&nbsp;», vous pouvez voir ce à quoi le balisage du rendu ressemble&nbsp;: ![L'inspecteur HTML dans Firefox, avec le paragraphe de l'exemple en surbrillance, montrant le texte "Quelles sont les causes d'erreurs en HTML ? Ici, vous pouvez voir que l'élément de paragraphe a été fermé par le navigateur.](fr-inspecteur.png)
-7. Avec l'«&nbsp;Inspecteur&nbsp;», explorons le code en détail pour voir comment le navigateur a essayé de corriger nos erreurs HTML (nous avons fait la revue dans Firefox&nbsp;; d'autres navigateurs modernes _devraient_ donner le même résultat)&nbsp;:
+5. Revoyons maintenant comment le navigateur a vu le balisage, par comparaison au balisage du code source. Pour ce faire, utilisons les outils de développement du navigateur. Dans l'«&nbsp;Inspecteur&nbsp;», vous pouvez voir ce à quoi le balisage du rendu ressemble&nbsp;:
+   ![L'inspecteur HTML dans Firefox, avec le paragraphe de l'exemple en surbrillance, montrant le texte "Quelles sont les causes d'erreurs en HTML ? Ici, vous pouvez voir que l'élément de paragraphe a été fermé par le navigateur.](html-inspector.png)
+6. Avec l'«&nbsp;Inspecteur&nbsp;», explorons le code en détail pour voir comment le navigateur a essayé de corriger nos erreurs HTML (nous avons fait la revue dans Firefox&nbsp;; d'autres navigateurs modernes _devraient_ donner le même résultat)&nbsp;:
    - Les éléments `p` et `li` ont été pourvus de balises fermantes.
    - L'endroit où le premier élément `<strong>` doit être fermé n'est pas clair, donc le navigateur a enveloppé séparément chaque bloc de texte avec ses propres balises `strong`, jusqu'à la fin du document&nbsp;!
    - L'imbrication incorrecte a été corrigée ainsi&nbsp;:
@@ -128,9 +129,9 @@ Voici le moment venu d'étudier le caractère permissif du code HTML.
 
 Comme vous pouvez le voir dans l'exemple ci-dessus, il faut s'assurer que votre HTML est bien formé ! Mais comment ? Dans un petit fichier comme celui qui précède, il est facile de chercher dans les lignes et de trouver les erreurs, mais qu'en est-il d'un document HTML énorme et complexe ?
 
-La meilleure stratégie consiste à faire passer votre page HTML par le [Markup Validation Service (](https://validator.w3.org/)Service de validation de balisage) — créé et maintenu par le W3C, l'organisation s'occupant des normes définissant le HTML, les CSS et autres technologies web. Cet outil Web accepte un document HTML en entrée, le parcourt et fait le rapport de ce qui ne va pas dans le HTML soumis.
+La meilleure stratégie consiste à faire passer votre page HTML par le [Markup Validation Service (Service de validation de balisage)](https://validator.w3.org/) — créé et maintenu par le W3C, l'organisation s'occupant des normes définissant le HTML, les CSS et autres technologies web. Cet outil Web accepte un document HTML en entrée, le parcourt et fait le rapport de ce qui ne va pas dans le HTML soumis.
 
-![La page d'accueil du validateur HTML](fr-w3c.png)
+![La page d'accueil du validateur HTML](validator.png)
 
 Pour définir le HTML à valider, vous pouvez donner une adresse web (_Validate by URI_) , téléverser un fichier HTML (_Validate by File Upload_) ou entrer directement du code HTML (_Validate by Direct Input_).
 
@@ -145,7 +146,7 @@ Essayons cet outil avec notre [document exemple](https://github.com/mdn/learning
 
 Cela vous donnera une liste d'erreurs et autres informations.
 
-![La liste des résultats de la validation de HTML par le service de validation du W3C.](fr-liste-erreur.png)
+![La liste des résultats de la validation de HTML par le service de validation du W3C.](validation-results.png)
 
 #### Interprétation des messages d'erreur
 
@@ -168,12 +169,10 @@ Les messages d'erreur sont généralement utiles, mais parfois non ; avec un peu
 
 Si vous ne comprenez pas ce que signifie chaque message d'erreur, ne vous inquiétez pas — une bonne idée consiste à corriger quelques erreurs à la fois. Puis essayez de revalider le HTML pour voir les erreurs restantes. Parfois, la correction d'une erreur en amont permet aussi d'éliminer d'autres messages d'erreur — plusieurs erreurs sont souvent causées par un même problème, avec une sorte d'effet domino.
 
-Vous saurez que toutes vos erreurs sont corrigées quand vous verrez la bannière suivante dans la sortie :
-
-![Banner that reads "The document validates according to the specified schema(s) and to additional constraints checked by the validator."](valid-html-banner.png)
+Vous saurez que toutes vos erreurs sont corrigées lorsque vous verrez une petite bannière verte indiquant qu'il n'y a aucune erreur à signaler. Au moment de la rédaction, elle affichait «&nbsp;Vérification du document terminée. Aucune erreur ou avertissement à afficher.&nbsp;»
 
 ## Résumé
 
 Voilà donc une introduction au débogage HTML, qui devrait vous donner des compétences utiles sur lesquelles compter lorsque vous commencerez à déboguer des CSS, du JavaScript ou d'autres types de code plus tard dans votre carrière. Ceci marque également la fin des articles d'apprentissage du module Introduction au HTML — maintenant vous pouvez faire un auto‑test avec nos évaluations : le lien ci‑dessous vous dirige sur la première.
 
-{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure", "Apprendre/HTML/Introduction_à_HTML/Marking_up_a_letter", "Apprendre/HTML/Introduction_à_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Forms_challenge", "Learn_web_development/Core/Styling_basics", "Learn_web_development/Core/Structuring_content")}}

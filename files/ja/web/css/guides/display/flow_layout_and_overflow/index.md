@@ -1,9 +1,8 @@
 ---
 title: フローレイアウトとオーバーフロー
 slug: Web/CSS/Guides/Display/Flow_layout_and_overflow
-original_slug: Web/CSS/CSS_display/Flow_layout_and_overflow
 l10n:
-  sourceCommit: b8f45350a203be9e6e83c6fcb83c93576d8d5d9c
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 コンテナーに収まりきらないコンテンツがある場合、オーバーフローが発生します。 CSSでサイズが制約される要素を扱う際には、オーバーフローの動作を理解することが重要です。 このガイドでは、通常のフローで作業する場合のオーバーフローの動作について説明します。
@@ -48,7 +47,7 @@ body {
 
 {{EmbedLiveSample("overflow", "", "370px")}}
 
-コンテンツがボックスに入ります。ボックスがいっぱいになると、ボックスからあふれ出し、ボックスの外にコンテンツが表示され、場合によっては、その下のコンテンツの下にも表示されます。オーバーフローの動作を制御するのは [`overflow`](/ja/docs/Web/CSS/Reference/Properties/overflow) プロパティであり、初期値は `visible` です。これが、あふれたコンテンツが見える理由です。
+コンテンツがボックスに入ります。ボックスがいっぱいになると、ボックスからあふれ出し、ボックスの外にコンテンツが表示され、場合によっては、その下のコンテンツの下にも表示されます。オーバーフローの動作を制御するのは {{cssxref("overflow")}} プロパティであり、初期値は `visible` です。これが、あふれたコンテンツが見える理由です。
 
 ## オーバーフローの制御
 
@@ -165,10 +164,9 @@ body {
 
 すでに学んだように、 `visible` という既定値以外のいずれかの値を使用すると、新しい[ブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context)が作成されます。
 
-> [!NOTE]
-> [オーバーフローレベル 3](https://www.w3.org/TR/css-overflow-3/) の草案では、 `overflow: clip` という追加の値があります。これは `overflow: hidden` のような動作をしますが、プログラムによるスクロールは許可されず、ボックスはスクロール不可能になります。さらに、ブロック整形コンテキストも作成されません。
+`overflow: clip` は `overflow: hidden` のような動作をしますが、プログラムによるスクロールは許可されず、ボックスはスクロール不可能になります。さらに、ブロック整形コンテキストも作成されません。
 
-`overflow` プロパティは、実際には [`overflow-x`](/ja/docs/Web/CSS/Reference/Properties/overflow-x) および [`overflow-y`](/ja/docs/Web/CSS/Reference/Properties/overflow-y) プロパティの一括指定です。 overflow に 1 つの値のみを指定した場合、この値は両方の軸に使用されます。しかし、どちらの値も指定することができます。その場合、最初の値は `overflow-x` （つまり水平方向）に使用され、 2 番目の値は `overflow-y` （つまり垂直方向）に使用されます。例えば、下記では `overflow-y: scroll` のみを指定しています。そのため、不要な水平スクロールバーは表示されません。
+`overflow` プロパティは、実際には {{cssxref("overflow-x")}} および {{cssxref("overflow-y")}} プロパティの一括指定です。 overflow に 1 つの値のみを指定した場合、この値は両方の軸に使用されます。しかし、どちらの値も指定することができます。その場合、最初の値は `overflow-x` （つまり水平方向）に使用され、 2 番目の値は `overflow-y` （つまり垂直方向）に使用されます。例えば、下記では `overflow-y: scroll` のみを指定しています。そのため、不要な水平スクロールバーは表示されません。
 
 ```html hidden live-sample___overflow-y
 <div class="box">
@@ -205,9 +203,9 @@ body {
 
 {{EmbedLiveSample("overflow-y", "", "370px")}}
 
-## フローに相対的なプロパティ
+## フロー相対プロパティ
 
-[書字方向とフローレイアウト](/ja/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes)のガイドでは、 `block-size` と `inline-size` のプロパティについて説明しました。これらは、画面の物理的な寸法にレイアウトを合わせるよりも、さまざまな書字方向で作業する際に意味をなすものです。 [CSS オーバーフローモジュール](/ja/docs/Web/CSS/Guides/Overflow)には、 overflow 用のフロー相対プロパティとして、 [`overflow-block`](/ja/docs/Web/CSS/Reference/At-rules/@media/overflow-block) と [`overflow-inline`](/ja/docs/Web/CSS/Reference/At-rules/@media/overflow-inline) も含んでいます。これらは、 `overflow-x` と `overflow-y` に対応しますが、対応付けは文書内の書字方向によって異なります。
+[書字方向とフローレイアウト](/ja/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes)のガイドでは、 `block-size` と `inline-size` のプロパティについて説明しました。これらは、画面の物理的な寸法にレイアウトを合わせるよりも、さまざまな書字方向で作業する際に意味をなすものです。 [CSS オーバーフローモジュール](/ja/docs/Web/CSS/Guides/Overflow)には、 overflow 用のフロー相対プロパティとして、 [`overflow-block`](/ja/docs/Web/CSS/Reference/At-rules/@media/overflow-block) と [`overflow-inline`](/ja/docs/Web/CSS/Reference/At-rules/@media/overflow-inline) もあります。これらは、 `overflow-x` と `overflow-y` に対応しますが、対応付けは文書内の書字方向によって異なります。
 
 ## オーバーフローの指示
 
@@ -215,7 +213,7 @@ CSS オーバーフローモジュールには、あふれたコンテンツの�
 
 ### インライン軸のオーバーフロー
 
-[`text-overflow`](/ja/docs/Web/CSS/Reference/Properties/text-overflow) プロパティは、インライン方向におけるテキストのオーバーフローを扱います。これは 2 つの値のうちの 1 つに `clip` があると、コンテンツがあふれたときにコンテンツが切り取られます。これが既定値であり、既定の動作です。また、 `ellipsis` という値もあり、これは省略記号を表示します。省略記号は、使用する言語や書字方向に適した別の文字に置き換えることができます。
+{{cssxref("text-overflow")}} プロパティは、インライン方向におけるテキストのオーバーフローを扱います。これは 2 つの値のうちの 1 つに `clip` があると、コンテンツがあふれたときにコンテンツが切り取られます。これが既定値であり、既定の動作です。また、 `ellipsis` という値もあり、これは省略記号を表示します。省略記号は、使用する言語や書字方向に適した別の文字に置き換えることができます。
 
 ```html hidden live-sample___text-overflow
 <div class="box">
@@ -259,7 +257,7 @@ body {
 
 ### ブロック軸のオーバーフロー
 
-[オーバーフローレベル 3](https://www.w3.org/TR/css-overflow-3/) の仕様書では、 `block-ellipsis` プロパティが追加されました（[以前は `block-overflow` と呼ばれていました](https://github.com/w3c/csswg-drafts/commit/20b15b4d66b0fdfa8406f1ce28604128f02ee7bb)）。このプロパティにより、ブロック方向にテキストがオーバーフローした場合に、省略記号（またはカスタム文字列）を追加することができますが、執筆時点ではこのプロパティに対応しているブラウザーはありません。
+[オーバーフローレベル 4](https://drafts.csswg.org/css-overflow-4/#propdef-block-ellipsis) の仕様書では、 `block-ellipsis` プロパティが追加されました（[以前は `block-overflow` と呼ばれていました](https://github.com/w3c/csswg-drafts/commit/20b15b4d66b0fdfa8406f1ce28604128f02ee7bb)）。このプロパティにより、ブロック方向にテキストがオーバーフローした場合に、省略記号（またはカスタム文字列）を追加することができますが、執筆時点ではこのプロパティに対応しているブラウザーはありません。
 
 例えば、記事の一覧があり、その一覧をテキストの量が制限された固定の高さのボックスに表示する場合に役立ちます。ボックスやタイトルをクリックすると、さらにコンテンツがあることが、読者にはわかりにくい場合が考えられます。省略記号は、さらにコンテンツがあることを明確に示します。この仕様では、コンテンツの文字列または通常の省略記号を挿入することができます。
 

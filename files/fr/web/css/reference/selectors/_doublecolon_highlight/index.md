@@ -1,14 +1,13 @@
 ---
 title: ::highlight()
 slug: Web/CSS/Reference/Selectors/::highlight
-original_slug: Web/CSS/::highlight
 l10n:
-  sourceCommit: 37482c6bb0894d047a225c24f102352f89788523
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::highlight()`** applique des styles à une mise en évidence personnalisée.
 
-Une mise en évidence personnalisée est une collection d'objets {{domxref("Range")}} et est enregistrée sur une page Web à l'aide de {{domxref("HighlightRegistry")}}.
+Une mise en évidence personnalisée est une collection d'objets {{DOMxRef("Range")}} et est enregistrée sur une page Web à l'aide de {{DOMxRef("HighlightRegistry")}}.
 
 Le pseudo-élément `::highlight()` suit un modèle d'héritage spécial commun à tous les pseudo-éléments de mise en évidence. Pour plus de détails sur le fonctionnement de cet héritage, consultez la section [Héritage des pseudo-éléments mise en évidence](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements#héritage_des_pseudo-éléments_de_mise_en_évidence).
 

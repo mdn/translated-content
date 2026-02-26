@@ -6012,7 +6012,7 @@
       "jwhitlock"
     ]
   },
-  "Web/Security/Mixed_content": {
+  "Web/Security/Defenses/Mixed_content": {
     "modified": "2019-03-23T23:04:08.690Z",
     "contributors": [
       "jackblackevo",
@@ -6022,7 +6022,7 @@
       "Asheesh"
     ]
   },
-  "Web/Security/Same-origin_policy": {
+  "Web/Security/Defenses/Same-origin_policy": {
     "modified": "2020-09-01T23:06:58.364Z",
     "contributors": [
       "JustBelieveMe",

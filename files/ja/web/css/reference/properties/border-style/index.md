@@ -1,9 +1,8 @@
 ---
 title: border-style
 slug: Web/CSS/Reference/Properties/border-style
-original_slug: Web/CSS/border-style
 l10n:
-  sourceCommit: 59593341146f085e57cec84f0928c7b7e18f3e97
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`border-style`** は[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) プロパティで、要素の境界線の 4 辺すべての線のスタイルを設定します。
@@ -37,15 +36,15 @@ border-style: dashed groove none dotted;
 ```html interactive-example
 <section id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これは周囲に境界があるボックスです。
   </div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #000;
+  background-color: #eeeeee;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;
@@ -53,7 +52,7 @@ border-style: dashed groove none dotted;
 }
 
 body {
-  background-color: #fff;
+  background-color: white;
 }
 ```
 
@@ -61,10 +60,10 @@ body {
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`border-bottom-style`](/ja/docs/Web/CSS/Reference/Properties/border-bottom-style)
-- [`border-left-style`](/ja/docs/Web/CSS/Reference/Properties/border-left-style)
-- [`border-right-style`](/ja/docs/Web/CSS/Reference/Properties/border-right-style)
-- [`border-top-style`](/ja/docs/Web/CSS/Reference/Properties/border-top-style)
+- {{cssxref("border-bottom-style")}}
+- {{cssxref("border-left-style")}}
+- {{cssxref("border-right-style")}}
+- {{cssxref("border-top-style")}}
 
 ## 構文
 

@@ -16,32 +16,31 @@
   "type": "module",
   "scripts": {
     "fix:json": "prettier -w \"**/*.json(c)?\"",
-    "fix:md": "markdownlint-cli2 --fix \"**/*.md\" && node ./scripts/check-url-locale.js --fix files && yarn autocorrect --fix . && prettier -w \"**/*.md\"",
+    "fix:md": "markdownlint-cli2 --fix \"**/*.md\" && node ./scripts/check-url-locale.js --fix files && npx autocorrect --fix . && prettier -w \"**/*.md\"",
     "fix:yml": "prettier -w \"**/*.yml\"",
     "lint:json": "prettier -c \"**/*.json(c)?\"",
-    "lint:md": "markdownlint-cli2 \"**/*.md\" && node ./scripts/check-url-locale.js files && yarn autocorrect --lint . && prettier -c \"**/*.md\"",
-    "lint:yml": "prettier -c \"**/*.yml\""
+    "lint:md": "markdownlint-cli2 \"**/*.md\" && node ./scripts/check-url-locale.js files && npx autocorrect --lint . && prettier -c \"**/*.md\"",
+    "lint:yml": "prettier -c \"**/*.yml\"",
+    "prepare": "node scripts/npm-check.js"
   },
+  "packageManager": "npm@11.6.2",
   "engines": {
-    "node": ">=22"
+    "node": ">=24"
   },
-  "dependencies": {
+  "devDependencies": {
     "autocorrect-node": "2.14.0",
     "fdir": "^6.5.0",
     "franc-min": "^6.2.0",
     "front-matter": "^4.0.2",
     "html-to-text": "^9.0.5",
-    "markdown-it": "^14.1.0",
-    "markdownlint-cli2": "0.19.1",
-    "markdownlint-rule-search-replace": "1.2.0",
-    "mdast-util-from-markdown": "^2.0.2",
-    "ora": "^9.0.0",
-    "prettier": "3.7.1",
-    "unist-util-visit": "^5.0.0",
+    "lefthook": "^2.1.1",
+    "markdown-it": "^14.1.1",
+    "markdownlint-cli2": "^0.21.0",
+    "markdownlint-rule-search-replace": "^1.2.0",
+    "mdast-util-from-markdown": "^2.0.3",
+    "ora": "^9.3.0",
+    "prettier": "^3.8.1",
+    "unist-util-visit": "^5.1.0",
     "yargs": "^18.0.0"
-  },
-  "devDependencies": {
-    "lefthook": "^2.0.4"
-  },
-  "packageManager": "yarn@1.22.22"
+  }
 }

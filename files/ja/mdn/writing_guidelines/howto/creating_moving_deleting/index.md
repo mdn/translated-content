@@ -1,13 +1,13 @@
 ---
-title: ページの作成、移動、削除、編集方法
+title: ページの作成、編集、移動、削除方法
+short-title: ページの作成、編集、移動、削除
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 0ff7ba5177bf2e66214bd90b58590c6bf3acb758
 ---
 
-{{MDNSidebar}}
-
-この記事はページを作成、移動、削除、編集する方法を記述しています。すべてにおいて、[私たちが書くものは何か](/ja/docs/MDN/Writing_guidelines/What_we_write)のガイドラインを調べて、これらのアクションを取るべきかどうかを確認し、 [MDN Web Docs チャットルーム](/ja/docs/MDN/Community/Communication_channels#チャットルーム)で MDN Web Docs チームと議論してから進めるとよい考えです。
+この記事はページを作成、移動、削除、編集する方法を記述しています。
+これらの場合、[執筆ガイドライン](/ja/docs/MDN/Writing_guidelines/What_we_write)を調べ、必要な措置があるかどうかを判断した上で、MDN Web Docs の[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを通じてチームと相談して進めることをよい考えとしてお勧めします。
 
 ## ページの作成
 
@@ -32,9 +32,8 @@ MDN Web Docs のすべてのページは Markdown 形式で書かれています
    cd ~/repos/mdn/content
    git checkout main
    git pull mdn main
-   # "yarn" を再び実行することで、
-   # 最新の Yari の依存関係をインストールします。
-   yarn
+   # "npm install" を実行することで、依存関係が最新であることを確認します。
+   npm install
    git checkout -b my-add
    ```
 
@@ -55,14 +54,14 @@ MDN Web Docs のすべてのページは Markdown 形式で書かれています
 1つまたは複数の文書、または文書のツリー全体を移動するのは簡単です。詳細を処理する特別なコマンドを作成してあるからです。
 
 ```bash
-yarn content move <from-slug> <to-slug> [locale]
+npm run content move <from-slug> <to-slug> [locale]
 ```
 
-移動したい既存の文書のスラッグ（例: `Learn_web_development/Core/Accessibility`）と新しい場所のスラッグ（例: `Learn_web_development/A11y`）を指定し、それに続いてオプションで既存の文書のロケール（既定では `en-US`）を指定するだけです。
+移動したい既存の文書のスラッグ（例: `Web/HTTP/Guides/Authentication`）と新しい場所のスラッグ（例: `Web/HTTP/Guides/Auth`）を指定し、それに続いてオプションで既存の文書のロケール（デフォルトでは `en-US`）を指定します。
 
-移動させたい既存の文書に子文書がある場合（つまり文書ツリーを表している場合）、 `yarn content move` コマンドはツリー全体を移動します。
+移動させたい既存の文書に子文書がある場合（つまり文書ツリーを表している場合）、`npm run content move` コマンドはツリー全体を移動します。
 
-例えば、 `/en-US/Learn_web_development/Core/Accessibility` のツリー全体を `/en-US/Learn_web_development/A11y` に移動させたい場合、次のような手順を実行します
+例えば、`/en-US/Web/HTTP/Guides/Authentication` のツリー全体を`/en-US/Web/HTTP/Guides/Auth` に移動させたい場合、次のような手順を実行します。
 
 1. 作業用に新しいブランチで始めます。
 
@@ -70,16 +69,15 @@ yarn content move <from-slug> <to-slug> [locale]
    cd ~/repos/mdn/content
    git checkout main
    git pull mdn main
-   # "yarn" を再び実行することで、
-   # 最新の Yari の依存関係をインストールします。
-   yarn
+   # "npm install" を実行することで、依存関係が最新であることを確認します。
+   npm install
    git checkout -b my-move
    ```
 
 2. 移動を実行します（新しいファイルを作成するだけでなく、既存のファイルを削除、変更します）。
 
    ```bash
-   yarn content move Learn_web_development/Core/Accessibility Learn_web_development/A11y
+   npm run content move Web/HTTP/Guides/Authentication Web/HTTP/Guides/Auth
    ```
 
 3. ファイルを移動したら、他のコンテンツファイル内のそれらのファイルへの参照も更新する必要があります。以下のコマンドを使用すると、すべての参照を自動的に一括更新します。
@@ -92,14 +90,14 @@ yarn content move <from-slug> <to-slug> [locale]
 
    ```bash
    git add .
-   git commit -m "Move Learn_web_development/Core/Accessibility to Learn_web_development/A11y"
+   git commit -m "Web/HTTP/Guides/Authentication から Web/HTTP/Guides/Auth へ移動"
    git push -u origin my-move
    ```
 
 5. プルリクエストを作成します。
 
 > [!NOTE]
-> `yarn content move` は自動的に `_redirects.txt` ファイルに必要なリダイレクト情報を追加し、古い場所から新しい場所にリダイレクトされるようにします。手動で `_redirects.txt` ファイルを編集しないでください！手動で編集するとミスが入り込みやすくなります。ファイルを移さずにリダイレクトを追加したい場合は、 [MDN Web Docs チャットルーム](/ja/docs/MDN/Community/Communication_channels#チャットルーム) で MDN Web Docs チームに相談してください。
+> `npm run content move` は自動的に `_redirects.txt` ファイルに必要なリダイレクト情報を追加し、古い場所から新しい場所にリダイレクトされるようにします。手動で `_redirects.txt` ファイルを編集しないでください！手動で編集するとミスが入り込みやすくなります。ファイルを移さずにリダイレクトを追加したい場合は、 [MDN Web Docs チャットルーム](/ja/docs/MDN/Community/Communication_channels#チャットルーム) で MDN Web Docs チームに相談してください。
 
 ## ページの削除
 
@@ -108,17 +106,19 @@ MDN Web Docs から文書を除去されるべきなのは、特別な事情が�
 ページの移動と同じように、 1 つまたは複数の文書、あるいは文書のツリー全体を削除するのも簡単です。
 
 ```bash
-yarn content delete <document-slug> [locale]
+npm run content delete <document-slug> [locale] -- --redirect <redirect-slug-or-url>
 ```
 
-> [!NOTE]
-> MDN Web Docs からページを削除するには `yarn content delete` コマンドを使用する必要があります。リポジトリーからディレクトリーを削除するだけではいけません。 `yarn content delete` コマンドは `_wikihistory.json` ファイルの更新など、他にも必要な変更を処理します。
+リダイレクト先は、外部 URL または MDN Web Docs 内の別のページに設定できます。
 
-削除したい既存の文書のスラッグ（例: `Learn_web_development/Core/Accessibility`）を指定し、オプションで既存の文書のロケール（既定では `en-US`）を続けてください。
+> [!NOTE]
+> MDN Web Docs からページを削除するには `npm run content delete` コマンドを使用する必要があります。リポジトリーからディレクトリーを削除するだけではいけません。 `npm run content delete` コマンドは `_wikihistory.json` ファイルの更新など、他にも必要な変更を処理します。
+
+削除したい既存の文書のスラッグ（例: `Web/HTTP/Guides/Authentication`）を指定し、オプションで既存の文書のロケール（デフォルトでは `en-US`）を続けてください。
 
 削除したい既存の文書に子文書がある（つまり文書ツリーを表している）場合は、 `-r, --recursive` オプションも指定しなければなりません。
 
-例えば、 `/en-US/Learn_web_development/Core/Accessibility` のツリー全体を削除したい場合は、以下の段階を踏むことになります：
+例えば、 `/en-US/Web/HTTP/Guides/Authentication` のツリー全体を削除したい場合は、以下の段階を踏むことになります：
 
 1. 作業用に新しいブランチで始めます。
 
@@ -126,38 +126,31 @@ yarn content delete <document-slug> [locale]
    cd ~/repos/mdn/content
    git checkout main
    git pull mdn main
-   # "yarn" を再び実行することで、
-   # 最新の Yari の依存関係をインストールします。
-   yarn
+   # "npm install" を実行することで、依存関係が最新であることを確認します。
+   npm install
    git checkout -b my-delete
    ```
 
-2. 削除を実行します。
+2. 削除をリダイレクト付きで実行します。
 
    ```bash
-   yarn content delete Learn_web_development/Core/Accessibility --recursive
+   npm run content delete Web/HTTP/Guides/Authentication --recursive -- --redirect /en-US/path/of/target/page
    ```
 
-3. リダイレクトを追加します。対象とするページは外部 URL でも MDN Web Docs の別のページでもかまいません。
-
-   ```bash
-   yarn content add-redirect /en-US/path/of/deleted/page /en-US/path/of/target/page
-   ```
-
-4. 削除したファイルをすべて追加してコミットし、ブランチをフォークにプッシュします。
+3. 削除したファイルをすべて追加してコミットし、ブランチをフォークにプッシュします。
 
    ```bash
    git commit -a
    git push -u origin my-delete
    ```
 
-5. プルリクエストを作成します。
+4. プルリクエストを作成します。
 
 > [!NOTE]
-> 削除したいページのスラッグに特殊文字が格納されている場合は、次のように引用符で囲んで記述してください。
+> 削除したいページのスラッグに特殊文字が含まれている場合は、次のように引用符で囲んで記述してください。
 >
 > ```bash
-> yarn content delete "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)"
+> npm run content delete "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)" -- --redirect <redirect-slug-or-url>
 > ```
 
 MDN Web Docs からコンテンツを除去されると、必然的に既存のコンテンツも更新されることになります。多くの記事は他にもリンクしているので、除去されたコンテンツは他の場所で参照される可能性が高いです。リダイレクトを追加することで、コンテンツの削除による影響を軽減することができます。しかし、変更を反映するためにコンテンツを編集し、削除のプルリクエストと一緒にコンテンツの編集を記載することがベストプラクティスです。
@@ -168,7 +161,7 @@ MDN Web Docs からコンテンツを除去されると、必然的に既存の�
 
 ## 変更のプレビュー
 
-ローカルでページを編集している場合、変更した内容がどのように見えるかを確認するには、コンテンツリポジトリーのフォルダーに移動し、 CLI のコマンド `yarn start` を実行し、ブラウザーで `localhost:5042` に移動し、ページに移動して表示させることができます。検索ボックスにタイトルを入力すると、簡単に見つけることができます。ソースを編集すると、プレビューされたページがブラウザー上でライブで更新されます。
+ローカルでページを編集している場合、変更した内容がどのように見えるかを確認するには、コンテンツリポジトリーのフォルダーに移動し、 CLI のコマンド `npm start` を実行し、ブラウザーで `localhost:5042` に移動し、ページに移動して表示させることができます。検索ボックスにタイトルを入力すると、簡単に見つけることができます。ソースを編集すると、プレビューされたページがブラウザー上でライブで更新されます。
 
 ### ファイルの添付
 

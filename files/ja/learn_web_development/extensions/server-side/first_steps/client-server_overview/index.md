@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7d30e6cdf5832d96737d4941b118b168876bedc8
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Introduction", "Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}
 
 サーバーサイドプログラミングの目的と潜在的な利点が分かったところで、サーバーがブラウザーから「動的リクエスト」を受け取ったときに起こることを詳細に検討します。ほとんどのウェブサイトのサーバーサイドコードは同様の方法でリクエストとレスポンスを処理するので、これは自身のコードの大部分を書くときに何が必要かを理解するのに役立ちます。
 
@@ -302,4 +302,4 @@ def junior(request):
 
 次のモジュールでは、最初のサイトに最適なウェブフレームワークを選択する手助けをします。
 
-{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Introduction", "Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}

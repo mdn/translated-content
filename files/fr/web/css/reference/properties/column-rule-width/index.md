@@ -1,14 +1,13 @@
 ---
 title: column-rule-width
 slug: Web/CSS/Reference/Properties/column-rule-width
-original_slug: Web/CSS/column-rule-width
+l10n:
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`column-rule-width`** définit la largeur de la ligne tracée entre les colonnes dans une mise en page multi-colonnes.
 
-La propriété **`column-rule-width`** permet de définir la largeur du trait tracé entre les colonnes lorsqu'on utilise une disposition en colonnes.
-
-{{InteractiveExample("CSS Demo: column-rule-width")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: column-rule-width")}}
 
 ```css interactive-example-choice
 column-rule-width: thin;
@@ -29,11 +28,12 @@ column-rule-width: 12px;
 ```html interactive-example
 <section id="default-example">
   <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+    Londres. Le trimestre de Michaelmas venait de se terminer, et le lord
+    chancelier siégeait dans la salle de Lincoln's Inn. Un novembre implacable.
+    Tant de boue dans les rues comme si les eaux venaient tout juste de se
+    retirer de la surface de la terre, et il ne serait pas étonnant de
+    rencontrer un Megalosaurus, quarante pieds de long environ, se dandinant
+    comme un lézard éléphantesque en montant Holborn Hill.
   </p>
 </section>
 ```
@@ -54,23 +54,24 @@ column-rule-width: thin;
 column-rule-width: medium;
 column-rule-width: thick;
 
-/* Valeurs de longueurs */
-/* Type <length>        */
+/* Valeurs detype <length> */
 column-rule-width: 1px;
 column-rule-width: 2.5em;
 
 /* Valeurs globales */
 column-rule-width: inherit;
 column-rule-width: initial;
+column-rule-width: revert;
+column-rule-width: revert-layer;
 column-rule-width: unset;
 ```
 
-La propriété `column-rule-width` est définie grâce à une valeur de type `<br-width>`.
+La propriété `column-rule-width` est définie grâce à une valeur de type `<'border-width'>`.
 
 ### Valeurs
 
-- `<br-width>`
-  - : Une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) ou un mot-clé parmi `thin`, `medium` ou `thick` qui décrit l'épaisseur du trait séparant deux colonnes. C'est le type de valeur qui sera également utilisé pour la propriété {{cssxref("border-width")}}.
+- `<'border-width'>`
+  - : Une valeur de longueur ({{CSSxRef("&lt;length&gt;")}}) ou un mot-clé parmi `thin`, `medium` ou `thick` qui décrit l'épaisseur du trait séparant deux colonnes. C'est le type de valeur qui sera également utilisé pour la propriété {{CSSxRef("border-width")}}.
 
 ## Définition formelle
 
@@ -82,34 +83,31 @@ La propriété `column-rule-width` est définie grâce à une valeur de type `<b
 
 ## Exemples
 
-### CSS
+### Définir une règle de colonne épaisse
 
-```css
-.exemple {
-  border: 10px solid #000000;
-  columns: 3;
-  column-rule-width: thick;
-  column-rule-color: blue;
-  column-rule-style: dashed;
-}
-```
-
-### HTML
+#### HTML
 
 ```html
-<p class="exemple">
-  « Mais alors, » pensa Alice, « ne serai-je donc jamais plus vieille que je ne
-  le suis maintenant ? D’un côté cela aura ses avantages, ne jamais être une
-  vieille femme. Mais alors avoir toujours des leçons à apprendre ! Oh, je
-  n’aimerais pas cela du tout. » « Oh ! Alice, petite folle, » se répondit-elle.
-  « Comment pourriez-vous apprendre des leçons ici ? Il y a à peine de la place
-  pour vous, et il n’y en a pas du tout pour vos livres de leçons. »
+<p>
+  Ce texte est réparti en trois colonnes. La propriété `column-rule-width` est
+  utilisée pour changer la largeur de la ligne tracée entre les colonnes. Ne
+  trouvez-vous pas cela merveilleux&nbsp;?
 </p>
+```
+
+#### CSS
+
+```css
+p {
+  column-count: 3;
+  column-rule-style: solid;
+  column-rule-width: thick;
+}
 ```
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples")}}
+{{EmbedLiveSample("Définir une règle de colonne épaisse")}}
 
 ## Spécifications
 
@@ -118,3 +116,8 @@ La propriété `column-rule-width` est définie grâce à une valeur de type `<b
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+- [Apprendre&nbsp;: Mise en page multi-colonnes](/fr/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
+- La propriété {{CSSxRef("column-rule")}}
+- La propriété {{CSSxRef("column-rule-color")}}
+- La propriété {{CSSxRef("column-rule-style")}}

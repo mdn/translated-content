@@ -1,9 +1,8 @@
 ---
 title: ::target-text
 slug: Web/CSS/Reference/Selectors/::target-text
-original_slug: Web/CSS/::target-text
 l10n:
-  sourceCommit: b460458fa125f4ee252d01466c1390d16ba19215
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::target-text`** représente le texte vers lequel l'écran vient de défiler, dans le cas où le navigateur prend en charge les [fragments de texte](/fr/docs/Web/URI/Reference/Fragment/Text_fragments). Il permet aux auteur·ice·s de mettre en évidence cette section de texte.
@@ -29,7 +28,7 @@ Le pseudo-élément `::target-text` suit un modèle d'héritage spécial commun 
 }
 ```
 
-Pour voir ce code CSS en action, suivez ce lien vers la [démonstration de scroll-to-text](https://mdn.github.io/css-examples/target-text/index.html#:~:text=From%20the%20foregoing%20remarks%20we%20may%20gather%20an%20idea%20of%20the%20importance).
+Pour voir ce code CSS en action, suivez ce lien vers la [démonstration de scroll-to-text <sup>(angl.)</sup>](https://mdn.github.io/css-examples/target-text/index.html#:~:text=From%20the%20foregoing%20remarks%20we%20may%20gather%20an%20idea%20of%20the%20importance).
 
 ## Spécifications
 
@@ -41,5 +40,5 @@ Pour voir ce code CSS en action, suivez ce lien vers la [démonstration de scrol
 
 ## Voir aussi
 
+- {{CSSxRef(":target")}} (pour mettre en évidence les éléments cibles)
 - [Text fragments <sup>(angl.)</sup>](https://web.dev/text-fragments/)
-- {{cssxref(":target")}} (pour mettre en évidence les éléments cibles)

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Creating_links
 original_slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 Los hipervínculos (o enlaces) son elementos verdaderamente importantes — son los que hacen que la web sea _**web**_. Este artículo expone la sintaxis necesaria para crear un enlace, además contiene un catálogo de buenas prácticas para crearlos.
 
@@ -17,7 +17,7 @@ Los hipervínculos (o enlaces) son elementos verdaderamente importantes — son 
         [Empezar con HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started).
         Aplicación de formato a texto en documentos HTML, según lo expuesto en
         la sección
-        [fundamentos de texto HTML](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals).
+        [fundamentos de texto HTML](/es/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs).
       </td>
     </tr>
     <tr>
@@ -341,4 +341,4 @@ Has llegado al final de este artículo, pero ¿puedes recordar la información m
 
 Eso es todo en cuanto a enlaces, ¡por ahora! Volveremos a ellos más tarde en este curso cuando comencemos a usar estilos. Lo siguiente en HTML, será aprender la semántica de texto para usar algunas características avanzadas/inusuales que nos serán utilidad — Formato de texto avanzado será la próxima parada.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "conflicting/Learn_web_development/Core/Structuring_content")}}

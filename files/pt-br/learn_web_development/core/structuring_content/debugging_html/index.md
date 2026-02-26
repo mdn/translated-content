@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Debugging_HTML
 original_slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}
 
 Escrever HTML é legal, mas e se algo der errado, e você não conseguir descobrir onde está o erro no código? Este artigo apresentará algumas ferramentas que podem ajudá-lo a encontrar e corrigir erros no HTML.
 
@@ -171,4 +171,4 @@ Você vai saber quando todos os seus erros forem resolvidos quando ver a seguint
 
 Então é isso, uma introdução a debugação de HTML, na qual deve te dar dicas úteis quando você começar a debugar CSS, JavaScript, e outros tipos de códigos mais tarde na sua carreira. Isso também significa o fim dos artigos de aprendizado do Módulo de Introdução ao HTML — agora você pode testar a si mesmo com nossa avaliação: a primeira está no link abaixo.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}

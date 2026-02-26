@@ -1,9 +1,8 @@
 ---
 title: font-kerning
 slug: Web/CSS/Reference/Properties/font-kerning
-original_slug: Web/CSS/font-kerning
 l10n:
-  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`font-kerning`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントに存在するカーニング情報の使用を制御します。
@@ -36,7 +35,7 @@ section {
 }
 ```
 
-*カーニング*は、文字の間隔をどれだけ取るかを定義します。_well-kerned_ フォントでは、この機能は文字間を他と比較してより整った読みやすい間隔にします。
+「カーニング」は、文字同士の間隔に作用します。適切にカーニングされたフォントでは、この機能により特定の文字組み合わせ間の空白が縮小され、文字間隔がより均一で読みやすいものになります。
 
 例えば、下の画像では、左の例ではカーニングが使われていませんが、右の例ではカーニングが使われています。
 

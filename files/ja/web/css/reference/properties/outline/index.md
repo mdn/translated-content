@@ -1,9 +1,8 @@
 ---
 title: outline
 slug: Web/CSS/Reference/Properties/outline
-original_slug: Web/CSS/outline
 l10n:
-  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`outline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、輪郭線 (outline) に関する大部分のプロパティを単一の宣言で設定します。
@@ -27,14 +26,14 @@ outline: thick double #32a1ce;
 ```
 
 ```css interactive-example-choice
-outline: 8px ridge rgba(170, 50, 220, 0.6);
+outline: 8px ridge rgb(170 50 220 / 0.6);
 border-radius: 2rem;
 ```
 
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with an outline around it.
+    これは周囲に輪郭線があるボックスです。
   </div>
 </section>
 ```
@@ -62,7 +61,7 @@ border-radius: 2rem;
 outline: solid;
 
 /* 種類 | 色 */
-outline: dashed #f66;
+outline: dashed #ff6666;
 
 /* 幅 | 種類 */
 outline: thick inset;
@@ -78,7 +77,7 @@ outline: revert-layer;
 outline: unset;
 ```
 
-`outline` プロパティは以下に挙げた 1 ～ 3 つの値を用いて指定することができます。値は順不同です。すべての一括指定プロパティと同様に、除外したサブ値はその[初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値)に設定されます。
+`outline` プロパティは以下に挙げた 1 ～ 3 つの値を用いて指定することができます。値は順不同です。すべての一括指定プロパティと同様に、除外した部分値はその[初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値)に設定されます。
 
 > [!NOTE]
 > 多くの要素では、スタイルが定義されていないと輪郭線は表示されません。これは style の既定値が `none` だからです。特筆すべき例外は `input` 要素で、ブラウザーが既定のスタイルを与えます。
@@ -90,7 +89,7 @@ outline: unset;
 - `<'outline-style'>`
   - : 輪郭線の種類を設定します。未指定の場合の既定値は `none` です。 {{cssxref("outline-style")}} を参照してください。
 - `<'outline-color'>`
-  - : 輪郭線の色を設定します。既定値は、対応しているブラウザーでは `invert` で、それ以外では `currentcolor` です。 {{cssxref("outline-color")}} を参照してください。
+  - : 輪郭線の色を設定します。既定値は、対応しているブラウザーでは `invert` で、それ以外では `currentColor` です。 {{cssxref("outline-color")}} を参照してください。
 
 ## 解説
 
@@ -137,9 +136,9 @@ a {
 }
 
 a:focus {
-  outline: 4px dotted #e73;
+  outline: 4px dotted #ee7733;
   outline-offset: 4px;
-  background: #ffa;
+  background: #ffffaa;
 }
 ```
 

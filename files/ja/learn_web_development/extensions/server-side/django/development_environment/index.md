@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 4d9375ca739df44ef52cd026de9a20aaff60d9aa
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Django がどういうものかわかったところで、Windows、Linux (Ubuntu)、および macOS で Django 開発環境をセットアップしてテストする方法を説明します。一般的なオペレーティングシステムを使っていれば、Django アプリケーションの開発が始められます。
 
@@ -609,4 +609,4 @@ Django 開発環境をあなたのコンピューター上で稼働できるよ�
 - [How to install Django — Complete guide](https://docs.djangoproject.com/en/5.0/topics/install/) （Django ドキュメント） - Django を削除する方法ついての情報が含まれています
 - [How to install Django on Windows](https://docs.djangoproject.com/en/5.0/howto/windows/) （Django ドキュメント）
 
-{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django")}}

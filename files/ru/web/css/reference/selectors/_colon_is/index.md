@@ -306,6 +306,6 @@ h1 {
 
 ## Смотрите также
 
-- {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} - Like `:is()`, but with 0 [specificity](/ru/docs/Web/CSS/CSS_cascade/Specificity).
+- {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} - Like `:is()`, but with 0 [specificity](/ru/docs/Web/CSS/Guides/Cascade/Specificity).
 - [Список селекторов](/ru/docs/Web/CSS/Reference/Selectors/Selector_list)
 - [Веб компоненты](/ru/docs/Web/API/Web_components)

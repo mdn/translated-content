@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_buildi
 original_slug: Learn/JavaScript/Objects/Object_building_practice
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 En los artículos anteriores se explicó lo fundamental de la teoría de los objetos en JavaScript asi como su sintaxis, para que Usted tenga un punto de partida sólido. En éste artículo, desarrollaremos un ejercicio práctico para ganar experiencia en la programación de objetos en JavaScript, con un resultado divertido y colorido.
 
@@ -281,4 +281,4 @@ Esperamos que se haya divertido escribiendo su propio mundo de pelotas que choca
 - [2D juego de ruptura usando sólo JavaScript](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) — un gran tutorial para principiantes sobre como construir un juego 2D.
 - [2D juego de ruptura usando Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser) — explica los conceptos fundamentales para construir un juego 2D usando una librería de juegos de JavaScript.
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

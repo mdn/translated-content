@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 835d6632d59993861a0458510402787f8a2c3cb3
 ---
 
-**`scroll-padding`** [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)은 {{cssxref("padding")}} 속성이 요소의 안쪽 여백을 설정하는 것처럼, 요소의 모든 측면에서의 스크롤 안쪽 여백을 한번에 정의합니다.
+**`scroll-padding`** [단축 속성](/ko/docs/Web/CSS/Guides/Cascade/Shorthand_properties)은 {{cssxref("padding")}} 속성이 요소의 안쪽 여백을 설정하는 것처럼, 요소의 모든 측면에서의 스크롤 안쪽 여백을 한번에 정의합니다.
 
 {{InteractiveExample("CSS Demo: scroll-padding")}}
 
@@ -125,5 +125,5 @@ scroll-padding: unset;
 
 ## 같이 보기
 
-- [CSS 스크롤 스냅](/ko/docs/Web/CSS/CSS_scroll_snap)
+- [CSS 스크롤 스냅](/ko/docs/Web/CSS/Guides/Scroll_snap)
 - [CSS 스크롤 스냅으로 능숙하게 스크롤 제어하기](https://web.dev/articles/css-scroll-snap)

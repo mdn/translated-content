@@ -2,7 +2,7 @@
 title: PerformanceNavigationTiming
 slug: Web/API/PerformanceNavigationTiming
 l10n:
-  sourceCommit: 922c2b0f37e2f13887c50efe47e62bc23d94c3aa
+  sourceCommit: 11e09e7c584658fbfbecd2f00ae66e546cd54cc0
 ---
 
 {{APIRef("Performance API")}}
@@ -25,8 +25,9 @@ l10n:
   - : `"navigation"` を返します。
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
   - : [文書の URL](/ja/docs/Web/API/Document/URL) を返します。
+    [テキストフラグメント](/ja/docs/Web/URI/Reference/Fragment/Text_fragments) およびその他のフラグメントディレクティブは URL から削除されることに注意してください。
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
-  - : 値 "`0`" を持つ {{domxref("DOMHighResTimeStamp")}} を返します。
+  - : 値 `0` を持つ {{domxref("DOMHighResTimeStamp")}} を返します。
 - {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
   - : {{domxref("PerformanceNavigationTiming.loadEventEnd")}} と {{domxref("PerformanceEntry.startTime")}} の各プロパティの差である {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。
 
@@ -39,8 +40,10 @@ l10n:
 
 - {{domxref('PerformanceNavigationTiming.activationStart')}} {{ReadOnlyInline}} {{experimental_inline}}
   - : {{domxref("DOMHighResTimeStamp")}} で、文書が事前レンダリングを始めてから有効になるまでの時間を表します。
+- {{domxref('PerformanceNavigationTiming.criticalCHRestart')}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : {{domxref("DOMHighResTimeStamp")}} で、{{HTTPHeader("Critical-CH")}} HTTP レスポンスヘッダーの不一致により接続の再開が発生した時刻を表します。
 - {{domxref('PerformanceNavigationTiming.domComplete')}} {{ReadOnlyInline}}
-  - : {{domxref("DOMHighResTimeStamp")}} で、ブラウザーが現在の文書の現在の文書レディネスを*[完了](https://html.spec.whatwg.org/multipage/syntax.html#the-end)*に設定する直前の時間と等しい時間値を表します。
+  - : {{domxref("DOMHighResTimeStamp")}} で、ユーザーエージェントがこの文書の [`readyState`](/ja/docs/Web/API/Document/readyState) を `"complete"` に設定する直前の時刻を表します。
 - {{domxref('PerformanceNavigationTiming.domContentLoadedEventEnd')}} {{ReadOnlyInline}}
   - : {{domxref("DOMHighResTimeStamp")}} で、現在の文書の [`DOMContentLoaded`](/ja/docs/Web/API/Document/DOMContentLoaded_event) イベントが完了した直後の時間と等しい時間値を表します。
 - {{domxref('PerformanceNavigationTiming.domContentLoadedEventStart')}} {{ReadOnlyInline}}
@@ -51,10 +54,12 @@ l10n:
   - : {{domxref("DOMHighResTimeStamp")}} で、現在の文書の [`load`](/ja/docs/Web/API/Window/load_event) イベントが完了した時刻を表します。
 - {{domxref('PerformanceNavigationTiming.loadEventStart')}} {{ReadOnlyInline}}
   - : {{domxref("DOMHighResTimeStamp")}} で、現在の文書の [`load`](/ja/docs/Web/API/Window/load_event) イベントが発生する直前の時間と等しい時間値を表します。
+- {{domxref('PerformanceNavigationTiming.notRestoredReasons')}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : {{domxref('NotRestoredReasons')}} オブジェクトで、現在の文書がバック/フォワードキャッシュ ({{Glossary("bfcache")}}) から復元されなかった理由に関する情報を表します。
 - {{domxref('PerformanceNavigationTiming.redirectCount')}} {{ReadOnlyInline}}
   - : 現在の閲覧コンテキストでの最後のリダイレクト以外のナビゲーション以降のリダイレクト数を表す数値。
 - {{domxref('PerformanceNavigationTiming.type')}} {{ReadOnlyInline}}
-  - : 文字列で、ナビゲーションの種類を表します。 `"navigate"`、`"reload"`、`"back_forward"`、`"prerender"` のいずれかです。
+  - : 文字列で、ナビゲーションの種類を表します。 `"navigate"`、`"reload"`、`"back_forward"` のいずれかです。
 - {{domxref('PerformanceNavigationTiming.unloadEventEnd')}} {{ReadOnlyInline}}
   - : {{domxref("DOMHighResTimeStamp")}} で、ユーザーエージェントが前の文書の [`unload`](/ja/docs/Web/API/Window/unload_event) イベントを完了した直後の時間と等しい時間値を表します。
 - {{domxref('PerformanceNavigationTiming.unloadEventStart')}} {{ReadOnlyInline}}

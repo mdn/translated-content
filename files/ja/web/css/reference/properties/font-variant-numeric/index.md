@@ -1,17 +1,20 @@
 ---
 title: font-variant-numeric
 slug: Web/CSS/Reference/Properties/font-variant-numeric
-original_slug: Web/CSS/font-variant-numeric
 l10n:
-  sourceCommit: ad6eb6b52b4b3082397e8e011bd59a6d88a8f5f3
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`font-variant-numeric`** は [CSS](/ja/docs/Web/CSS) のプロパティで、数字、分数、序数記号の表記を制御するために使用します。
 
-{{InteractiveExample("CSS デモ: font-variant-numeric")}}
+{{InteractiveExample("CSS デモ: font-variant-numeric", "taller")}}
 
 ```css interactive-example-choice
 font-variant-numeric: normal;
+```
+
+```css interactive-example-choice
+font-variant-numeric: ordinal;
 ```
 
 ```css interactive-example-choice
@@ -26,19 +29,41 @@ font-variant-numeric: tabular-nums;
 font-variant-numeric: oldstyle-nums;
 ```
 
+```css interactive-example-choice
+font-variant-numeric: lining-nums;
+```
+
+```css interactive-example-choice
+font-variant-numeric: proportional-nums;
+```
+
+```css interactive-example-choice
+font-variant-numeric: diagonal-fractions;
+```
+
+<!-- Source Sans Pro は重ねた分数に対応していません -->
+
 ```html interactive-example
 <section id="default-example">
   <div id="example-element">
     <table>
-      <tr>
-        <td><span class="tabular">0</span></td>
-      </tr>
-      <tr>
-        <td><span class="tabular">3.14</span></td>
-      </tr>
-      <tr>
-        <td><span class="tabular">2.71</span></td>
-      </tr>
+      <tbody>
+        <tr>
+          <td><span class="tabular">0</span></td>
+        </tr>
+        <tr>
+          <td><span class="tabular">3.54</span></td>
+        </tr>
+        <tr>
+          <td><span class="tabular">1.71</span></td>
+        </tr>
+        <tr>
+          <td><span class="tabular">1st</span></td>
+        </tr>
+        <tr>
+          <td><span class="tabular">3/4</span></td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </section>
@@ -46,16 +71,16 @@ font-variant-numeric: oldstyle-nums;
 
 ```css interactive-example
 @font-face {
-  font-family: "Fira Sans";
+  font-family: "Source Sans Pro";
   src:
-    local("FiraSans-Regular"),
-    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
+    local("SourceSansPro-Regular"),
+    url("/shared-assets/fonts/SourceSansPro-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 section {
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   margin-top: 10px;
   font-size: 1.5em;
 }
@@ -146,12 +171,12 @@ font-variant-numeric: unset;
   font-family: "Source Sans Pro";
   src: url("https://mdn.github.io/shared-assets/fonts/SourceSansPro-Regular.otf")
     format("opentype");
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
 }
 
 .ordinal {
-  font-family: "Source Sans Pro";
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 2rem;
   font-variant-numeric: ordinal;
 }
@@ -169,10 +194,10 @@ font-variant-numeric: unset;
 
 ## 関連情報
 
-- [`font-variant`](/ja/docs/Web/CSS/Reference/Properties/font-variant)
-- [`font-variant-alternates`](/ja/docs/Web/CSS/Reference/Properties/font-variant-alternates)
-- [`font-variant-caps`](/ja/docs/Web/CSS/Reference/Properties/font-variant-caps)
-- [`font-variant-east-asian`](/ja/docs/Web/CSS/Reference/Properties/font-variant-east-asian)
-- [`font-variant-emoji`](/ja/docs/Web/CSS/Reference/Properties/font-variant-emoji)
-- [`font-variant-ligatures`](/ja/docs/Web/CSS/Reference/Properties/font-variant-ligatures)
-- [`font-variant-position`](/ja/docs/Web/CSS/Reference/Properties/font-variant-position)
+- {{cssxref("font-variant")}}
+- {{cssxref("font-variant-alternates")}}
+- {{cssxref("font-variant-caps")}}
+- {{cssxref("font-variant-east-asian")}}
+- {{cssxref("font-variant-emoji")}}
+- {{cssxref("font-variant-ligatures")}}
+- {{cssxref("font-variant-position")}}

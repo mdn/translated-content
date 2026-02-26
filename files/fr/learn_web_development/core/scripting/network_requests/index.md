@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 9f24be2de6158053df593b9b466f5da96e31f928
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/DOM_scripting", "Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 Les sites et applications web modernes récupèrent fréquemment des données du serveur afin de mettre à jour des sections d'une page sans qu'il soit nécessaire de charger une toute nouvelle page. Ce qui peut paraître comme un léger détail a en réalité un impact important sur les performances et le comportement des sites web. Dans cet article, nous verrons les concepts et technologies qui permettent cela, notamment [l'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API) (note de traduction&nbsp;: le verbe anglais <i lang="en">fetch</i> signifie récupérer).
 
@@ -270,4 +270,4 @@ De nombreux sujets sont abordés dans cet article et nous n'en avons qu'effleur�
 - [Un aperçu de HTTP](/fr/docs/Web/HTTP/Guides/Overview)
 - [La programmation web côté serveur](/fr/docs/Learn_web_development/Extensions/Server-side)
 
-{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/DOM_scripting", "Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}

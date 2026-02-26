@@ -1,41 +1,37 @@
 ---
 title: SVG en tant qu'image
 slug: Web/SVG/Guides/SVG_as_an_image
-original_slug: Web/SVG/SVG_as_an_Image
+l10n:
+  sourceCommit: be9ba40fbef7f96beae73e5dd6d48a3ca875826f
 ---
 
-{{SVGRef}}
+Vous pouvez utiliser SVG comme format d'image dans HTML, CSS, certains éléments SVG et via l'API Canvas.
+Cette page liste les fonctionnalités où vous pouvez fournir du SVG comme source d'image.
 
-Le format SVG peut être utilisé en tant qu'image dans de nombreux contextes. Beaucoup de navigateurs prennent en charge les images au format SVG avec :
+## Fonctionnalités prenant en charge SVG
 
-- les balises HTML {{HTMLElement("img")}} ou {{HTMLElement("svg")}}
-- l'attribut CSS {{cssxref("background-image")}}
+Les navigateurs prennent en charge les images SVG dans&nbsp;:
 
-## Contexte spécifique à Gecko
-
-De plus, Gecko 2.0 prend en charge l'usage du format [SVG](/fr/docs/Web/SVG) dans ces contextes:
-
-- la propriété CSS {{cssxref("list-style-image")}}
-- la propriété CSS {{cssxref("content")}}
+- les éléments HTML {{HTMLElement("img")}} ou {{SVGElement("svg")}}
+- la propriété CSS {{CSSxRef("background-image")}}
+- la propriété CSS {{CSSxRef("list-style-image")}}
+- la propriété CSS {{CSSxRef("content")}}
 - l'élément SVG {{SVGElement("image")}}
 - l'élément SVG {{SVGElement("feImage")}}
-- la fonction Canvas [`drawImage`](/fr/docs/HTML/Canvas/Tutorial/Using_images#drawImage)
+- Canvas [`drawImage`](/fr/docs/Web/API/Canvas_API/Tutorial/Using_images#dessin_dimages)
 
-### Restrictions
+## Restrictions
 
-Pour plusieurs raisons, Gecko fixe quelques restrictions sur le format SVG lorsqu'il est utilisé en tant qu'image :
+Pour des raisons de sécurité, certains navigateurs appliquent des restrictions au contenu SVG lorsqu'il est utilisé en tant qu'image.
+Plus précisément, les limitations suivantes peuvent s'appliquer&nbsp;:
 
 - [JavaScript](/fr/docs/Web/JavaScript) est désactivé.
-- Les ressources externes (p. ex. images, stylesheets) ne peuvent pas être chargées, cependant elles peuvent être utilisées en étant déclaré à travers des URLs de données.
-- Les liens stylistiques {{cssxref(":visited")}} ne sont pas interprété.
-- Les widgets stylistiques natifs aux plateformes (basés sur le thème de l'OS) sont désactivés.
+- Les ressources externes (par exemple images, feuilles de style) ne peuvent pas être chargées, mais elles peuvent être utilisées si elles sont intégrées via des [URL `data:`](/fr/docs/Web/URI/Reference/Schemes/data).
+- Les styles de liens {{CSSxRef(":visited")}} ne sont pas rendus.
+- La mise en forme des widgets natifs à la plateforme (basée sur le thème du système d'exploitation) est désactivée.
 
-A noter que les restrictions précédentes sont spécifiques à l'usage de SVG en tant qu'image; elles ne s'appliquent pas lorsque le contenu SVG est vu directement, ou lorsque il est embarqué en tant que document via les éléments {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, ou {{HTMLElement("embed")}}
+Notez que les restrictions ci-dessus sont spécifiques au contexte d'image&nbsp;; elles ne s'appliquent pas lorsque le contenu SVG est affiché directement, ou lorsqu'il est embarqué en tant que document via les éléments {{HTMLElement("iframe")}}, {{HTMLElement("object")}} ou {{HTMLElement("embed")}}.
 
 ## Spécifications
 
 {{Specifications}}
-
-## Voir aussi
-
-- [Introduction à SVG dans HTML](/fr/docs/Web/SVG/Guides/SVG_in_HTML)

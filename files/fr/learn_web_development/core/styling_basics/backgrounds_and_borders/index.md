@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 original_slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics/Handling_different_text_directions", "Learn_web_development/Core/Styling_basics")}}
 
 Dans cette leçon, nous verrons quelques-unes des mises en forme créatives autorisées par les bordures et les arrière-plans CSS. On peut ajouter des dégradés, des images de fond, et des coins arrondis, les arrière-plans et les bordures répondent à de nombreux besoins de mise en forme CSS.
 
@@ -324,4 +324,4 @@ Nous avons vu beaucoup de choses dans cette leçon, ajouter un arrière-plan à 
 
 Dans la leçon suivante nous découvrirons comment le mode d'écriture de votre document interagit avec CSS. Que se passe-t-il quand le texte ne se déroule pas de la gauche vers la droite ?
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics/Handling_different_text_directions", "Learn_web_development/Core/Styling_basics")}}

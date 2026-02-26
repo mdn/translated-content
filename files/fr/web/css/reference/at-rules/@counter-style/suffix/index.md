@@ -1,9 +1,8 @@
 ---
 title: suffix
 slug: Web/CSS/Reference/At-rules/@counter-style/suffix
-original_slug: Web/CSS/@counter-style/suffix
 l10n:
-  sourceCommit: 9944f7b12ef1a6aecd54d4b2f0c188a82fdeaaf0
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`suffix`** de la règle {{cssxref("@counter-style")}} permet de spécifier le contenu qui sera ajouté à la fin de la représentation du marqueur.

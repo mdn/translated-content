@@ -3,11 +3,11 @@ title: <hue>
 slug: Web/CSS/Reference/Values/hue
 original_slug: Web/CSS/hue
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<hue>`** représente l'angle de teinte d'une couleur.
-Il est utilisé dans les fonctions couleur qui acceptent la teinte exprimée comme une seule valeur, en particulier les notations fonctionnelles {{CSSXref("color_value/hsl", "hsl()")}}, {{CSSXref("color_value/hwb", "hwb()")}}, {{CSSXref("color_value/lch", "lch()")}} et {{CSSXref("color_value/oklch", "oklch()")}}.
+Il est utilisé dans les fonctions couleur qui acceptent la teinte exprimée comme une seule valeur, en particulier les notations fonctionnelles {{CSSxRef("color_value/hsl", "hsl()")}}, {{CSSxRef("color_value/hwb", "hwb()")}}, {{CSSxRef("color_value/lch", "lch()")}} et {{CSSxRef("color_value/oklch", "oklch()")}}.
 
 ## Syntaxe
 
@@ -15,7 +15,7 @@ Une valeur `<hue>` peut être soit un `<angle>`, soit un nombre (`<number>`).
 
 ### Valeurs
 
-- {{CSSXref("&lt;angle&gt;")}}
+- {{CSSxRef("&lt;angle&gt;")}}
   - : Un angle exprimé en degrés, grades, radians ou tours à l'aide de `deg`, `grad`, `rad` ou `turn` respectivement.
 - `<number>`
   - : Un nombre réel, représentant des degrés de l'angle de teinte.
@@ -30,7 +30,7 @@ La roue chromatique ci-dessus montre les teintes à tous les angles dans l'espac
 
 Les angles correspondant à des teintes particulières diffèrent selon l'espace colorimétrique. Par exemple, l'angle de teinte du vert sRGB est `120deg` dans l'espace sRGB, mais `134,39deg` dans l'espace CIELAB.
 
-Le tableau suivant liste les couleurs typiques à différents angles dans les espaces colorimétriques sRGB (utilisé par {{CSSXref("color_value/hsl", "hsl()")}} et {{CSSXref("color_value/hwb", "hwb()")}}), CIELAB (utilisé par {{CSSXref("color_value/lch", "lch()")}}) et Oklab (utilisé par {{CSSXref("color_value/oklch", "oklch()")}})&nbsp;:
+Le tableau suivant liste les couleurs typiques à différents angles dans les espaces colorimétriques sRGB (utilisé par {{CSSxRef("color_value/hsl", "hsl()")}} et {{CSSxRef("color_value/hwb", "hwb()")}}), CIELAB (utilisé par {{CSSxRef("color_value/lch", "lch()")}}) et Oklab (utilisé par {{CSSxRef("color_value/oklch", "oklch()")}})&nbsp;:
 
 <table>
   <colgroup>
@@ -117,17 +117,17 @@ Le tableau suivant liste les couleurs typiques à différents angles dans les es
 
 ## Interpolation des valeurs `<hue>`
 
-Les valeurs `<hue>` sont interpolées comme des valeurs {{CSSXref("&lt;angle&gt;")}}, et l'algorithme d'interpolation par défaut est [plus courte](/fr/docs/Web/CSS/Reference/Values/hue-interpolation-method#plus_courte). Dans certaines fonctions CSS liées à la couleur, cela peut être remplacé par le composant {{CSSXref("&lt;hue-interpolation-method&gt;")}}.
+Les valeurs `<hue>` sont interpolées comme des valeurs {{CSSxRef("&lt;angle&gt;")}}, et l'algorithme d'interpolation par défaut est [plus courte](/fr/docs/Web/CSS/Reference/Values/hue-interpolation-method#plus_courte). Dans certaines fonctions CSS liées à la couleur, cela peut être remplacé par le composant {{CSSxRef("&lt;hue-interpolation-method&gt;")}}.
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
 ### Modifier la teinte d'une couleur à l'aide d'un curseur
 
-L'exemple suivant montre l'effet du changement de la valeur `hue` de la notation fonctionnelle {{CSSXref("color_value/hsl", "hsl()")}} sur une couleur.
+L'exemple suivant montre l'effet du changement de la valeur `hue` de la notation fonctionnelle {{CSSxRef("color_value/hsl", "hsl()")}} sur une couleur.
 
 #### HTML
 
@@ -240,5 +240,5 @@ div {
 
 ## Voir aussi
 
-- Le type de donnée {{CSSXref("&lt;color&gt;")}}
-- Le type de donnée {{CSSXref("&lt;hue-interpolation-method&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;color&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;hue-interpolation-method&gt;")}}

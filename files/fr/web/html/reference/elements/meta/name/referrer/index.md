@@ -7,9 +7,9 @@ l10n:
 ---
 
 La valeur **`referrer`** pour l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta/name) de l'élément HTML {{HTMLElement("meta")}} contrôle l'en-tête HTTP {{HTTPHeader("Referer")}} des requêtes envoyées depuis le document.
-Si elle est spécifiée, vous définissez le référent à l'aide d'un attribut [`content`](/fr/docs/Web/HTML/Reference/Elements/meta#content) dans l'élément `<meta>` avec une valeur clé.
+Si elle est définie, vous définissez le référent à l'aide d'un attribut [`content`](/fr/docs/Web/HTML/Reference/Elements/meta#content) dans l'élément `<meta>` avec une valeur clé.
 
-Par exemple, l'élément `<meta>` suivant envoie l'{{Glossary("origin", "origine")}} du document comme référent&nbsp;:
+Par exemple, l'élément `<meta>` suivant envoie {{Glossary("origin", "l'origine")}} du document comme référent&nbsp;:
 
 ```html
 <meta name="referrer" content="origin" />

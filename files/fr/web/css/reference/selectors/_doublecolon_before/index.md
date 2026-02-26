@@ -1,12 +1,11 @@
 ---
 title: ::before
 slug: Web/CSS/Reference/Selectors/::before
-original_slug: Web/CSS/::before
 l10n:
-  sourceCommit: e006f2c1533c7942e5a5569f6c0e9a419ea98f46
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::before`** crée un pseudo-élément qui sera le premier enfant de l'élément ciblé. Généralement utilisé pour ajouter du contenu esthétique à un élément via la propriété CSS {{cssxref("content")}}. Par défaut, l'élément créé est de type en-ligne (<i lang="en">inline</i> en anglais).
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::before`** crée un pseudo-élément qui sera le premier enfant de l'élément ciblé. Généralement utilisé pour ajouter du contenu esthétique à un élément via la propriété CSS {{CSSxRef("content")}}. Par défaut, l'élément créé est de type en-ligne (<i lang="en">inline</i> en anglais).
 
 {{InteractiveExample("Démonstration CSS&nbsp;: ::before", "tabbed-standard")}}
 
@@ -52,16 +51,16 @@ a::before {
 
 Le pseudo-élément `::before` est un bloc en ligne (<i lang="en">inline box</i> en anglais) générée en tant qu'enfant immédiat de l'élément auquel il est associé, ou l'«&nbsp;élément d'origine&nbsp;». Il est souvent utilisé pour ajouter du contenu esthétique à un élément via la propriété {{CSSxRef("content")}}, comme des icônes, des guillemets ou d'autres décorations.
 
-Les pseudo-éléments `::before` ne peuvent pas être appliqués aux _{{ glossary("replaced elements", "éléments remplacés")}}_ tels que {{htmlelement("img")}}, dont le contenu est déterminé par des ressources externes et n'est pas affecté par les styles du document actuel.
+Les pseudo-éléments `::before` ne peuvent pas être appliqués aux _{{ Glossary("replaced elements", "éléments remplacés")}}_ tels que {{HTMLElement("img")}}, dont le contenu est déterminé par des ressources externes et n'est pas affecté par les styles du document actuel.
 
-Un pseudo-élément `::before` avec une valeur {{cssxref("display")}} de `list-item` se comporte comme un élément de liste et peut donc générer un pseudo-élément {{cssxref("::marker")}}, tout comme un élément {{htmlelement("li")}} le fait.
+Un pseudo-élément `::before` avec une valeur {{CSSxRef("display")}} de `list-item` se comporte comme un élément de liste et peut donc générer un pseudo-élément {{CSSxRef("::marker")}}, tout comme un élément {{HTMLElement("li")}} le fait.
 
 Si la propriété [`content`](/fr/docs/Web/CSS/Reference/Properties/content) n'est pas spécifiée, a une valeur invalide, ou a `normal` ou `none` comme valeur, alors le pseudo-élément `::before` n'est pas rendu. Il se comporte comme si `display: none` était défini.
 
 > [!NOTE]
-> La spécification [Selectors Level 3](https://drafts.csswg.org/selectors-3/#gen-content) a introduit la notation à double deux-points `::before` pour distinguer les [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) des [pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements). Les navigateurs acceptent également la notation à un seul deux-points `:before`, introduite dans CSS2.
+> La spécification [Selectors Level 3 <sup>(angl.)</sup>](https://drafts.csswg.org/selectors-3/#gen-content) a introduit la notation à double deux-points `::before` pour distinguer les [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) des [pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements). Les navigateurs acceptent également la notation à un seul deux-points `:before`, introduite dans CSS2.
 
-Par défaut, les pseudo-éléments `::before` et `::after` partagent le même contexte d'empilement que leur parent. Si aucun {{cssxref("z-index")}} n'est explicitement défini, le contenu généré par le pseudo-élément `::after` apparaîtra au-dessus du contenu généré par le pseudo-élément `::before` parce que `::after` est rendu plus tard dans le flux DOM.
+Par défaut, les pseudo-éléments `::before` et `::after` partagent le même contexte d'empilement que leur parent. Si aucun {{CSSxRef("z-index")}} n'est explicitement défini, le contenu généré par le pseudo-élément `::after` apparaîtra au-dessus du contenu généré par le pseudo-élément `::before` parce que `::after` est rendu plus tard dans le flux DOM.
 
 ## Accessibilité
 
@@ -71,7 +70,7 @@ Il est déconseillé d'utiliser un pseudo-élément `::before` pour ajouter du c
 
 ### Ajouter des guillemets
 
-Un exemple d'utilisation des pseudo-éléments `::before` est de fournir des guillemets. Ici, nous utilisons à la fois `::before` et {{Cssxref("::after")}} pour insérer des caractères de citation.
+Un exemple d'utilisation des pseudo-éléments `::before` est de fournir des guillemets. Ici, nous utilisons à la fois `::before` et {{CSSxRef("::after")}} pour insérer des caractères de citation.
 
 #### HTML
 
@@ -298,5 +297,5 @@ Bien que les puces de liste des trois éléments de navigation soient générée
 
 ## Voir aussi
 
-- {{cssxref("::after")}}
-- {{cssxref("content")}}
+- Le pseudo-élément {{CSSxRef("::after")}}
+- La propriété {{CSSxRef("content")}}

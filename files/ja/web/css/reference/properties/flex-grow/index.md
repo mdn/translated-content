@@ -1,14 +1,16 @@
 ---
 title: flex-grow
 slug: Web/CSS/Reference/Properties/flex-grow
-original_slug: Web/CSS/flex-grow
 l10n:
-  sourceCommit: a9280d06d6e78ec8fc35d3a7a0f7f98d921370e0
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`flex-grow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスコンテナー内の[**正の余白**](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)のうち、フレックスアイテムの[主軸長](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox#フレックスモデル)に割り当てる量を指定するフレックス成長率を設定します。
+**`flex-grow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスコンテナー内の[**正の余白**](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)のうち、フレックスアイテムの[主軸長](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox#フレックスモデル)に割り当てる量を指定するフレックス伸長係数を設定します。
 
 フレックスコンテナーの主軸長が、そのフレックスアイテムの主軸長を結合した長さよりも長い場合、この正の余白はフレックスアイテム間で分配され、各フレックスアイテムが伸長する大きさは、コンテナーのすべてのアイテムのフレックス伸長係数の合計の割合で按分した値になります。
+
+> [!NOTE]
+> `flex-grow` を単独で設定するのではなく、{{cssxref("flex")}} の一括指定を `auto` や `initial` などのキーワードを付けて使用することを推奨します。[キーワード値](/ja/docs/Web/CSS/Reference/Properties/flex#値) は、`flex-grow`、{{cssxref("flex-shrink")}}、{{cssxref("flex-basis")}} の信頼性の高い組み合わせに展開され、一般的に望まれる柔軟な動作を実現するのに役立ちます。
 
 {{InteractiveExample("CSS デモ: flex-grow")}}
 
@@ -26,7 +28,7 @@ flex-grow: 3;
 
 ```html interactive-example
 <section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">I grow</div>
+  <div class="transition-all" id="example-element">伸長します</div>
   <div>Item Two</div>
   <div>Item Three</div>
 </section>
@@ -41,7 +43,7 @@ flex-grow: 3;
 }
 
 .default-example > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   margin: 10px;
   flex-grow: 1;
@@ -82,7 +84,7 @@ flex-grow: unset;
 
 `flex-grow` の値が異なる場合は、正の余白は、それぞれのフレックス伸長係数で定義された比率に従って分配されます。 兄弟フレックスアイテムの `flex-grow` 値はすべて合計されます。フレックスコンテナー内の正の余白がある場合は、その合計で除算されます。 `flex-grow` の値が `0` より大きい各フレックスアイテムの主軸長は、この商に自身の伸長係数を掛けた値だけ伸長します。
 
-例えば、 4 つの `100px` のフレックスアイテムが `700px` のコンテナー内にあり、それぞれのフレックスアイテムの伸長係数に `0`、`1`、`2`、`3` が設定されている場合、 4 つのアイテムの主軸長の合計は `400px` となり、 `300px` の正の余白が分配されることになります。 4 つの伸長係数の合計 (0 + 1 + 2 + 3 = 6) は 6 に等しくなります。したがって、伸長係数の単位は `50px` `(300px / 6 )` に等しくなります。それぞれのフレックスアイテムには、世悪文の 50px に伸長係数 (`flex-grow`) を掛けたものが与えられます。つまり、それぞれ `0`、`50px`、`100px`、`150px` となります。フレックスアイテムのサイズ全体は、それぞれ `100px`、`150px`、`200px`、`250px` となります。
+例えば、 4 つの `100px` のフレックスアイテムが `700px` のコンテナー内にあり、それぞれのフレックスアイテムの伸長係数に `0`、`1`、`2`、`3` が設定されている場合、 4 つのアイテムの主軸長の合計は `400px` となり、 `300px` の正の余白が分配されることになります。 4 つの伸長係数の合計 (0 + 1 + 2 + 3 = 6) は 6 に等しくなります。したがって、伸長係数の単位は `50px` `(300px / 6 )` に等しくなります。それぞれのフレックスアイテムには、余白分の 50px に伸長係数 (`flex-grow`) を掛けたものが与えられます。つまり、それぞれ `0`、`50px`、`100px`、`150px` となります。フレックスアイテムのサイズ全体は、それぞれ `100px`、`150px`、`200px`、`250px` となります。
 
 `flex-grow` は普通、他のフレックスプロパティである {{cssxref("flex-shrink")}} や {{cssxref("flex-basis")}} とともに、 {{cssxref("flex")}} 一括指定プロパティで使用されます。 `flex` 一括指定プロパティは、すべての値が設定されることが保証されるのでお勧めです。
 
@@ -109,12 +111,12 @@ flex-grow: unset;
   <code>flex-grow: 2</code> が設定されています。
 </p>
 <div id="content">
-  <div class="small" style="background-color:red;">A</div>
-  <div class="small" style="background-color:lightblue;">B</div>
-  <div class="small" style="background-color:yellow;">C</div>
-  <div class="double" style="background-color:brown;">D</div>
-  <div class="double" style="background-color:lightgreen;">E</div>
-  <div class="small" style="background-color:brown;">F</div>
+  <div class="box1">A</div>
+  <div class="box2">B</div>
+  <div class="box3">C</div>
+  <div class="box4">D</div>
+  <div class="box5">E</div>
+  <div class="box6">F</div>
 </div>
 ```
 
@@ -129,19 +131,42 @@ div > div {
   border: 3px solid rgb(0 0 0 / 20%);
 }
 
-.small {
+.box1,
+.box2,
+.box3,
+.box6 {
   flex-grow: 1;
 }
 
-.double {
+.box4,
+.box5 {
   flex-grow: 2;
   border: 3px solid rgb(0 0 0 / 20%);
+}
+
+.box1 {
+  background-color: red;
+}
+.box2 {
+  background-color: lightblue;
+}
+.box3 {
+  background-color: yellow;
+}
+.box4 {
+  background-color: brown;
+}
+.box5 {
+  background-color: lightgreen;
+}
+.box6 {
+  background-color: brown;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Setting flex item grow factor')}}
+{{EmbedLiveSample('フレックスアイテムの伸長係数の設定')}}
 
 6 つのフレックスアイテムがコンテナーの主軸方向に配置されている場合、それらのフレックスアイテムの内容の主要部分の合計がコンテナーの主軸のサイズよりも小さいと、余分なスペースはサイズのフレックスアイテムに分配され、`A`、`B`、`C`、`F` はそれぞれ残りの空間の `12.5%`、 `D` と `E` はそれぞれ残りの空間の `25%` となります。
 

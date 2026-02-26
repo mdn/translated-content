@@ -124,7 +124,7 @@ L'attribut `placeholder` est une chaîne de caractères qui fournit une indicati
 Si le contenu du contrôle utilise une direction (écriture de gauche à droite ou de droite à gauche), mais que le texte indicatif doit être présenté dans la direction inverse, vous pouvez utiliser des caractères de formatage pour l'algorithme bidirectionnel Unicode dans la valeur. Voir [comment utiliser des contrôles Unicode pour le texte bidirectionnel](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus d'informations.
 
 > [!NOTE]
-> On évitera d'utiliser l'attribut `placeholder` si possible. Il n'est pas aussi utile que d'autres sur le plan sémantique pour expliquer le formulaire et il peut causer des problèmes techniques avec le contenu. Voir [Utilisation de libellés et de textes indicatifs](/fr/docs/Web/HTML/Reference/Elements/input#utilisation_de_libell%c3%a9s) pour plus d'informations.
+> On évitera d'utiliser l'attribut `placeholder` si possible. Il n'est pas aussi utile que d'autres sur le plan sémantique pour expliquer le formulaire et il peut causer des problèmes techniques avec le contenu. Voir [Utilisation de libellés et de textes indicatifs](/fr/docs/Web/HTML/Reference/Elements/input#utilisation_de_libellés) pour plus d'informations.
 
 ### `readonly`
 
@@ -543,7 +543,7 @@ input:valid + span:after {
 
 ## Voir aussi
 
-- [Le guide sur les formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\)
+- [Le guide sur les formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms)
 - [Les formulaires et l'accessibilité](/fr/docs/Web/Accessibility/ARIA)
 - [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input)
   - [`<input type="text">`](/fr/docs/Web/HTML/Reference/Elements/input/text)

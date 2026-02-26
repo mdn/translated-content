@@ -1,31 +1,36 @@
 ---
-title: Qu'avez-vous dans la tête ? Métadonnées en HTML
+title: Qu'y a‑t‑il dans l'en‑tête ? Métadonnées d'une page Web
+short-title: Métadonnées de la page web
 slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
-original_slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
+l10n:
+  sourceCommit: 0d59135676db5a372b4dd692f0686e6bdfc13b51
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Apprendre/HTML/Introduction_à_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content")}}
 
-L'en-tête {{glossary("Head", "head")}} dans un document HTML est une partie du document qui n'est pas affichée par le navigateur au chargement de la page. Elle contient des informations comme le titre ({{htmlelement("title")}}) de la page, des liens aux {{glossary("CSS")}} (si vous souhaitez composer le contenu HTML avec des CSS), des liens aux favicons personnalisés et d'autres méta-données (auteur du document, mots-clés décrivant le document, etc.). Cet article porte sur tout ceci et plus, pour vous donner de bonnes bases pour gérer les balises et le code qui devraient figurer dans l'en-tête.
+{{Glossary("Head", "L'en-tête")}} d'un document HTML est la partie qui n'est pas affichée par le navigateur Web lorsque la page est chargée. Elle contient des informations de métadonnées telles que le {{HTMLElement("title")}} de la page, des liens vers le {{Glossary("CSS")}} (si vous choisissez de mettre en forme votre contenu HTML avec du CSS), des liens vers des favicons personnalisés, et d'autres métadonnées (des informations sur le HTML, comme l'auteur·ice, et des mots‑clés importants décrivant le document).
+
+Les navigateurs Web utilisent les informations contenues dans {{Glossary("Head", "l'en-tête")}} pour rendre correctement le document HTML. Dans cet article, nous aborderons tout ce qui précède et bien d'autres points, afin de vous fournir une bonne base pour travailler avec le balisage.
 
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis:</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Connaître les bases du HTML, telles qu'elles sont exposées dans
-        l'article
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
-          >Commencer avec le HTML</a
-        >
+        Connaître les bases du HTML, telles qu'elles sont exposées dans l'article précédent.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectifs:</th>
+      <th scope="row">Objectifs d'apprentissage&nbsp;:</th>
       <td>
-        En savoir plus sur la balise &#x3C;head> du HTML, son objet, les
-        éléments les plus importants qu'elle peut contenir et l'effet qu'elle
-        peut avoir sur le document HTML.
+        <ul>
+          <li>L'en-tête du HTML et son rôle comme conteneur de métadonnées pour le document.</li>
+          <li>Définir l'encodage des caractères du document et son titre.</li>
+          <li>Fournir des métadonnées pour les moteurs de recherche.</li>
+          <li>Lier des icônes à utiliser dans les navigateurs et sur les plateformes mobiles.</li>
+          <li>Lier des feuilles de style et des fichiers de script.</li>
+          <li>La nécessité de définir la langue d'un document en utilisant l'attribut <code>lang</code> dans la balise ouvrante <code>&lt;html&gt;</code>.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -33,22 +38,22 @@ L'en-tête {{glossary("Head", "head")}} dans un document HTML est une partie du 
 
 ## Qu'est-ce que l'en-tête de HTML ?
 
-Revoyons le document HTML de base de l' [article précédent](/fr/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#anatomy_of_an_html_document):
+Revenons sur le [document HTML simple que nous avons étudié dans l'article précédent](/fr/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#anatomy_of_an_html_document)&nbsp;:
 
 ```html
 <!doctype html>
-<html>
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
     <title>Ma page test</title>
   </head>
   <body>
-    <p>Voici ma page</p>
+    <p>Voici ma page web</p>
   </body>
 </html>
 ```
 
-Le contenu de l'en-tête HTML {{htmlelement("head")}} — à la différence du contenu de l'élément {{htmlelement("body")}} (affiché quand la page est chargée par le navigateur) — n'est pas affiché dans la page du navigateur. Le travail de la balise \<head> est de contenir les {{glossary("Metadata", "métadonnées")}} à propos du document. Dans l'exemple ci-dessus, l'en-tête est plutôt petit :
+Le contenu de l'en-tête HTML est le contenu de {{HTMLElement("head")}}. Contrairement au contenu de {{HTMLElement("body")}} (qui est affiché sur la page lorsqu'elle est chargée dans un navigateur), le contenu de l'en-tête n'est pas affiché sur la page. Le rôle de l'en-tête est de contenir des {{Glossary("Metadata", "métadonnées")}} à propos du document. Dans l'exemple ci-dessus, l'en-tête est plutôt petit&nbsp;:
 
 ```html
 <head>
@@ -57,70 +62,74 @@ Le contenu de l'en-tête HTML {{htmlelement("head")}} — à la différence du c
 </head>
 ```
 
-Toutefois dans les pages plus importantes, l'en-tête peut contenir un grand nombre d'éléments — essayez d'aller sur certains de vos sites web préférés et utilisez les [outils de développement](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) pour vérifier le contenu de l'en-tête. Notre objectif ici n'est pas de vous montrer comment utiliser tout ce qui peut être mis dans l'élément \<head>, mais plutôt de vous apprendre à utiliser les outils les plus évidents, que vous souhaiterez inclure dans l'en-tête, et vous les rendre plus familiers. Commençons.
+Toutefois, dans les pages plus importantes, l'en-tête peut devenir assez volumineux. Essayez d'aller sur certains de vos sites web préférés et d'utiliser les [outils de développement](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) pour vérifier le contenu de leur en-tête. Notre objectif ici n'est pas de vous montrer comment utiliser absolument tout ce qui peut être placé dans l'en-tête, mais plutôt de vous apprendre à utiliser les principaux éléments que vous souhaiterez inclure dans l'en-tête et de vous en familiariser. Commençons.
 
 ## Ajouter un titre
 
-Nous avons déjà vu l'élément {{htmlelement ("title")}} — qui peut être utilisé pour ajouter un intitulé au document. Il peut toutefois être confondu avec l'élément {{htmlelement ("h1")}}, pour ajouter un en‑tête de haut niveau au contenu de votre page dans l'élément {{htmlelement("body")}} — quelquefois désigné comme étant le « titre de la page ». Mais ce sont des choses différentes !
+Nous avons déjà vu l'élément HTML {{HTMLElement("title")}} en action — il peut être utilisé pour ajouter un intitulé au document. Il peut toutefois être confondu avec l'élément `{{HTMLElement("Heading_Elements", "&lt;h1&gt;")}}`, qui est utilisé pour ajouter un en‑tête de niveau supérieur au contenu du corps de la page — cet élément est parfois aussi désigné comme le titre de la page. Mais ce sont des choses différentes&nbsp;!
 
-- L'élément {{htmlelement("h1")}} apparaît dans la page quand elle est chargée dans le navigateur — généralement, il devrait être utilisé une fois par page, pour marquer le titre du contenu de votre page (le titre d'une histoire, ou d'une actualité, ou tout ce qui vous paraît approprié).
-- L'élément {{htmlelement("title")}} est une métadonnée qui représente l'intitulé du document HTML global (non le contenu du document).
+- L'élément HTML `{{HTMLElement("Heading_Elements", "&lt;h1&gt;")}}`apparaît dans la page lorsqu'elle est chargée dans le navigateur — en général, il devrait être utilisé une fois par page, pour marquer le titre du contenu de votre page (le titre d'une histoire, ou un titre d'actualité, ou ce qui convient à votre usage).
+- L'élément HTML {{HTMLElement("title")}} est une métadonnée qui représente le titre du document HTML global (et non le contenu du document).
 
-### Apprentissage actif : inspection d'un exemple simple
+### Inspection d'un exemple
 
-1. Pour commencer cet apprentissage actif, nous vous invitons à télécharger une copie de notre [page-titre-exemple](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html) sur le dépôt Github. Pour ce faire, soit :
-   1. copiez et collez le code hors de la page dans un nouveau fichier texte dans votre éditeur de code, puis sauvegardez-le dans un endroit raisonnable.
-   2. pressez le bouton « Raw » de la page : le texte brut apparaît dans un nouvel onglet du navigateur. Ensuite, choisissez _Fichier> Enregistrer la page sous ..._ dans le menu du navigateur, puis choisissez un endroit pour enregistrer le fichier.
+1. Dans cet exercice, nous vous invitons à commencer par vous rendre sur notre dépôt GitHub et à télécharger une copie de notre [page title-example.html <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/title-example.html). Pour cela&nbsp;:
+   1. Copiez et collez le code de la page dans un nouveau fichier texte dans votre éditeur de code, puis enregistrez-le à un endroit approprié.
+   2. Appuyez sur le bouton «&nbsp;Raw&nbsp;» sur la page GitHub, ce qui fait apparaître le code brut (éventuellement dans un nouvel onglet du navigateur). Ensuite, choisissez le menu _Enregistrer la page sous…_ de votre navigateur et sélectionnez un emplacement approprié pour enregistrer le fichier.
 
-2. Maintenant, ouvrez le fichier dans votre navigateur. Vous devriez voir quelque chose comme ça :
+2. Ouvrez maintenant le fichier dans votre navigateur. Vous devriez voir quelque chose comme ceci&nbsp;:
 
-   ![Une simple page web page dont 'title' a la valeur «Élément 'title'» et 'h1' la valeur Élément 'h1'.](fr-element-title.png)Il devrait désormais être évident de situer où le contenu de \<h1> apparaît et où celui de `<title>` apparaît !
+   ![Une page web avec le texte 'title' dans l'onglet du navigateur et le texte 'h1' comme en-tête de la page dans le corps du document.](title-example.png)
 
-3. Vous devriez aussi essayer d'ouvrir ce code dans votre éditeur, modifier le contenu de ces éléments, puis rafraîchir la page dans votre navigateur. Amusez-vous avec ces fonctions.
+   Il devrait maintenant être tout à fait évident où le contenu de `<h1>` apparaît et où le contenu de `<title>` apparaît&nbsp;!
 
-Le contenu de l'élément `<title>` est aussi utilisé de manières différentes . Par exemple, si vous tentez de marquer cette page dans vos Marques-pages ( _Marques-pages > Marquer cette page_ ou bien l'étoile dans la barre d'outils de Firefox), vous verrez que le contenu de `<title>` est suggéré comme nom pour le marque-page.
+3. Essayez également d'ouvrir le code dans votre éditeur, de modifier le contenu de ces éléments, puis d'actualiser la page dans votre navigateur. Amusez-vous avec cela.
 
-![Une page Web marquée dans Firefox ; le nom du signet a été automatiquement rempli avec le contenu de l'élément 'title'.](fr-bookmarked.png)
+Le contenu de l'élément `<title>` est aussi utilisé d'autres façons. Par exemple, si vous essayez d'ajouter la page aux favoris (_Marque-pages > Marquer l'onglet courant_ ou l'icône en forme d'étoile dans la barre d'adresse de Firefox), vous verrez le contenu de `<title>` utilisé comme nom suggéré pour le marque-page.
 
-Le contenu de `<title>` est aussi utilisé dans les résultats de recherches, comme vous le verrez ci‑dessous.
+![Une page web ajoutée aux marque-pages dans Firefox. Le nom du marque-page a été automatiquement rempli avec le contenu de l'élément 'title'](bookmark-example.png)
 
-## Métadonnées : l'élément \<meta>
+Le contenu de `<title>` est également utilisé dans les résultats de recherche, comme vous le verrez ci-dessous.
 
-Les métadonnées sont des données qui décrivent des données, et le langage HTML a une manière « officielle » d'ajouter des métadonnées à un document — l'élément {{htmlelement("meta")}}. Bien sûr, d'autres choses, dont nous parlons dans cet article, pourraient aussi être considérées comme des métadonnées. Il y a une panoplie d'autres éléments de type `<meta>` qui auraient pu figurer dans l'en-tête de votre page, mais nous n'en parlerons pas pour l'instant, car ce serait trop déroutant. À la place, nous expliquerons quelques éléments que vous pourriez voir, juste pour vous donner une idée.
+## Métadonnées : l'élément `<meta>`
 
-### Définition de l'encodage des caractères du document
+Les métadonnées sont des données qui décrivent des données, et le langage HTML a une manière «&nbsp;officielle&nbsp;» d'ajouter des métadonnées à un document — l'élément HTML {{HTMLElement("meta")}}. Bien sûr, d'autres choses dont nous parlons dans cet article pourraient aussi être considérées comme des métadonnées. Il existe de nombreux types d'éléments `<meta>` que vous pouvez inclure dans l'en-tête de votre page, mais nous n'allons pas tous les expliquer à ce stade, car cela deviendrait trop confus. À la place, nous allons expliquer quelques éléments que vous pourriez rencontrer couramment, juste pour vous donner une idée.
 
-Dans l'exemple que nous avons vu au-dessus, cette ligne était présente :
+### Définir l'encodage des caractères du document
+
+Dans l'exemple que nous avons vu au-dessus, cette ligne était présente&nbsp;:
 
 ```html
 <meta charset="utf-8" />
 ```
 
-Cet élément définit l'encodage des caractères du document - le jeu de caractères qu'il est autorisé à utiliser. `utf-8` est un jeu de caractères universel qui inclut à peu près tous les caractères des langues humaines. Cela signifie que votre page web sera capable de gérer l'affichage de n'importe quelle langue ; c'est donc une bonne idée de le définir dans chaque page web que vous créez ! Par exemple, votre page peut gérer l'anglais et le japonais sans aucun souci :
+Cet élément définit l'encodage des caractères du document — le jeu de caractères que le document est autorisé à utiliser. `utf-8` est un jeu de caractères universel qui inclut pratiquement tous les caractères de toutes les langues humaines. Cela signifie que votre page web pourra afficher n'importe quelle langue&nbsp;; il est donc recommandé de le définir sur chaque page web que vous créez&nbsp;! Par exemple, votre page pourra afficher l'anglais et le japonais sans problème&nbsp;:
 
-![Une page Web contenant des caractères français et japonais, le jeu de caractères étant universel ou utf-8. Les deux langues s'affichent correctement.](fr-meta-utf8.png)Si vous définissez votre encodage de caractères en `ISO-8859-1` , par exemple (le jeu de caractères de l'alphabet latin), le rendu de votre page sera totalement perturbé :
+![Une page web contenant des caractères anglais et japonais, l'encodage des caractères étant universel ou utf-8. Les deux langues s'affichent correctement.](correct-encoding.png)
 
-![Une page Web contenant des caractères français et japonais, l'encodage des caractères étant réglé sur ISO latin. Les caractères japonais ne s'affichent pas correctement.](fr-meta-iso.png)
+Si vous définissez votre encodage de caractères sur `ISO-8859-1`, par exemple (le jeu de caractères de l'alphabet latin), l'affichage de votre page sera totalement perturbé&nbsp;:
+
+![Une page web contenant des caractères anglais et japonais, l'encodage des caractères étant réglé sur latin. Les caractères japonais ne s'affichent pas correctement.](bad-encoding.png)
 
 > [!NOTE]
 > Certains navigateurs (par ex. Chrome) corrigent automatiquement les encodages incorrects, ainsi selon le navigateur utilisé, ce problème pourrait vous passer totalement inaperçu. Vous devriez quand même définir un encodage `utf-8` sur votre page de toute façon pour éviter tout problème potentiel avec d'autres navigateurs.
 
-### Apprentissage actif : expérience avec l'encodage des caractères
+### Expérience avec l'encodage des caractères
 
-Pour cela, reportez-vous au modèle HTML simple que vous avez obtenu dans la section précédente sur `<title>` (la page [title-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html)), faites un essai de modification de la valeur de la métadonnée `charset` en ISO-8859-1 et ajoutez le japonais à votre page. Voici le code que nous avons utilisé :
+Pour essayer cela, reprenez le modèle HTML simple que vous avez obtenu dans la section précédente sur `<title>` (la [page title-example.html <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/title-example.html)), essayez de changer la valeur de l'encodage des caractères en `ISO-8859-1`, et ajoutez le japonais à votre page. Voici le code que nous avons utilisé&nbsp;:
 
 ```html
-<p>Japanese example: ご飯が熱い。</p>
+<p>Japanese exemple&nbsp;: ご飯が熱い。</p>
 ```
 
 ### Ajouter le nom de l'auteur et une description
 
-De nombreux éléments `<meta>` contiennent les attributs `name` et `content` :
+De nombreux éléments `<meta>` contiennent les attributs `name` et `content`&nbsp;:
 
-- `name` définit le type de méta élément ; le type d'informations contenu.
+- `name` définit le type d'élément meta&nbsp;; le type d'information qu'il contient.
 - `content` définit le contenu réel de la métadonnée.
 
-Il est utile d'inclure ces deux méta-éléments dans votre page pour définir son auteur et donner une courte description de son contenu. Voyons un exemple :
+Deux de ces éléments meta, utiles à inclure dans votre page, permettent de définir l'auteur·ice de la page et de fournir une description concise de la page. Voyons un exemple&nbsp;:
 
 ```html
 <meta name="author" content="Chris Mills" />
@@ -131,49 +140,41 @@ du MDN a pour but de donner aux débutants du Web tout ce qu'ils doivent
 savoir pour commencer le développement de pages webs et d'applications." />
 ```
 
-Préciser l'auteur peut être intéressant dans certains cas : il est utile de savoir qui a écrit la page pour le contacter et lui poser des questions à propos du contenu. Certains systèmes de gestion de contenu procèdent à l'extraction automatique des informations sur l'auteur de la page et les rendent disponibles à cette fin.
+Préciser l'auteur·ice peut être intéressant dans de nombreux cas&nbsp;: il est utile de savoir qui a écrit la page pour le contacter et lui poser des questions à propos du contenu. Certains systèmes de gestion de contenu procèdent à l'extraction automatique des informations sur l'auteur·ice de la page et les rendent disponibles à cette fin.
 
-Définir une description qui incorpore des mots-clés relatifs au contenu de la page est utile ; votre page pourra ainsi apparaître plus haut dans la liste de recherches par pertinence créée par un moteur de recherche (ce processus se nomme [Search Engine Optimization](/fr/docs/Glossary/SEO) ou {{glossary("SEO")}} — optimisation du moteur de recherche.)
+Définir une description qui incorpore des mots-clés relatifs au contenu de la page est utile car cela peut permettre à votre page d'apparaître plus haut dans les recherches pertinentes effectuées dans les moteurs de recherche (ce type d'activité est appelé [optimisation pour les moteurs de recherche](/fr/docs/Glossary/SEO), ou {{Glossary("SEO")}}).
 
-### Apprentissage actif : utilisation des descriptions dans les moteurs de recherche
+### Utilisation des descriptions dans les moteurs de recherche
 
-La description est aussi utilisée dans le résultat des moteurs de recherche. Faisons un exercice pour mieux comprendre.
+La description est aussi utilisée dans les pages de résultats des moteurs de recherche. Faisons un exercice pour explorer cela&nbsp;:
 
-1. Allez sur la page d'accueil de [Mozilla Developer Network](/fr/).
-2. Regardez le source de la page (Clic droit/
-
-   <kbd>Ctrl</kbd>
-
-   , choisissez « _Code source de la page_ » dans le menu contextuel.)
-
-3. Trouvez la balise méta `description`. Elle ressemble à ceci :
+1. Allez sur la [page d'accueil du Mozilla Developer Network](/fr/).
+2. Affichez le code source de la page (clic droit sur la page, choisissez _Code source de la page_ dans le menu contextuel.)
+3. Trouvez la balise meta description. Elle ressemblera à ceci (cela peut changer au fil du temps)&nbsp;:
 
    ```html
    <meta
      name="description"
-     content="MDN Web Docs fournit
-     des informations sur les technologies web ouvertes comme HTML,
-     CSS et les API utilisées pour les sites web et les applications
-     web. On y trouve également de la documentation destinées aux
-     développeurs à propos des produits Mozilla tels que les
-     outils de développement de Firefox." />
+     content="The MDN Web Docs site provides information about Open Web
+     technologies including HTML, CSS, and APIs for both Web sites and
+     progressive web apps." />
    ```
 
-4. Maintenant, cherchez « Mozilla Developer Network » sur votre moteur de recherche favori (nous avons utilisé Google). Vous remarquerez que le contenu de la `<meta>` description et de l'élément `<title>` sont utilisés dans les résultats de recherche. Cela vaut vraiment la peine !
+4. Maintenant, cherchez «&nbsp;MDN Web Docs&nbsp;» sur votre moteur de recherche favori (nous avons utilisé Google.) Vous remarquerez que le contenu de la description `<meta>` et de l'élément `<title>` est utilisé dans le résultat de recherche — cela vaut vraiment la peine&nbsp;!
 
-   ![Une page de recherche Google pour "MDN web docs"](fr-google.png)
-
-> [!NOTE]
-> Avec Google, vous verrez quelques sous-pages pertinentes de MDN listées sous le lien de la page d'accueil — ce sont des liens du site ; ils sont configurables dans les outils de [Google's webmaster tools](https://www.google.com/webmasters/tools/) - ces outils sont donc un moyen de rendre les résultats de recherche de votre site meilleurs avec le moteur de recherche de Google.
+   ![Un résultat de recherche Yahoo pour « Mozilla Developer Network »](mdn-search-result.png)
 
 > [!NOTE]
-> Plusieurs fonctions `<meta>` ne sont plus utilisées. Par exemple, l'élément `<meta>` `keyword` (`<meta name= "keywords" content="mettez, vos, mot-clés, ici">`) — qui est censé fournir des mots-clés pour les moteurs de recherche, afin de déterminer la pertinence de la page pour différents termes de recherche — est ignoré par les moteurs de recherche, car les polluposteurs remplissaient simplement la liste avec des centaines de mots-clés, biaisant les résultats.
+> Avec Google, vous verrez quelques sous-pages pertinentes de MDN listées sous le lien de la page d'accueil — ce sont des liens du site, ils sont configurables dans les outils de [Google Search Console](https://search.google.com/search-console/about?hl=fr) — ces outils sont donc un moyen de rendre les résultats de recherche de votre site meilleurs avec le moteur de recherche de Google.
+
+> [!NOTE]
+> Plusieurs fonctions `<meta>` ne sont plus utilisées. Par exemple, l'élément `<meta>` `keyword` (`<meta name="keywords" content="mettez, vos, mot-clés, ici">`) — qui est censé fournir des mots-clés pour les moteurs de recherche, afin de déterminer la pertinence de la page pour différents termes de recherche — est ignoré par les moteurs de recherche, car les polluposteurs remplissaient simplement la liste avec des centaines de mots-clés, biaisant les résultats.
 
 ### Autres types de métadonnées
 
-En parcourant le web, vous trouverez d'autres types de métadonnées. Beaucoup de fonctionnalités que vous verrez sur les sites webs sont des créations propriétaires, conçues pour être utilisées sur certains sites ( comme les réseaux sociaux ) avec des informations spécifiques qu'ils peuvent utiliser ;
+En parcourant le web, vous trouverez d'autres types de métadonnées. Beaucoup de fonctionnalités que vous verrez sur les sites web sont des créations propriétaires, conçues pour être utilisées sur certains sites (comme les réseaux sociaux) avec des informations spécifiques qu'ils peuvent utiliser.
 
-Par exemple, [Open Graph Data](https://ogp.me/) est un protocole de métadonnées que Facebook a inventé pour fournir des métadonnées plus riches pour les sites webs. Dans le code source de MDN vous trouverez ceci :
+Par exemple, [Open Graph Data <sup>(angl.)</sup>](https://ogp.me/) est un protocole de métadonnées que Facebook a inventé pour fournir des métadonnées plus riches pour les sites web. Dans le code source de MDN Web Docs, vous trouverez ceci&nbsp;:
 
 ```html
 <meta
@@ -183,119 +184,132 @@ Par exemple, [Open Graph Data](https://ogp.me/) est un protocole de métadonnée
   property="og:description"
   content="MDN Web Docs fournit des
 informations sur les technologies web ouvertes comme HTML, CSS et les API
-utilisées pour les sites web et les applications web. On y trouve également
-de la documentation destinées aux développeurs à propos des produits
-Mozilla tels que les outils de développement de Firefox." />
+utilisées pour les sites web et les applications web." />
 <meta property="og:title" content="Mozilla Developer Network" />
 ```
 
-En conséquence, lorsque vous faites un lien à MDN sur Facebook, le lien apparaît avec une image et une description : une expérience plus riche pour les utilisateurs.
+L'un des effets de cela est que lorsque vous faites un lien vers MDN Web Docs sur Facebook, le lien apparaît avec une image et une description&nbsp;: une expérience plus riche pour les utilisateur·ice·s.
 
-![Open graph protocol data from the MDN homepage as displayed on facebook, showing an image, title, and description.](facebook-output.png)Twitter a aussi une métadonnée propriétaire, qui a un effet similaire quand l'URL du site est affichée sur twitter.com. Par exemple:
-
-```html
-<meta name="twitter:title" content="Mozilla Developer Network" />
-```
+![Données du protocole Open Graph de la page d'accueil MDN affichées sur Facebook, montrant une image, un titre et une description.](facebook-output.png)
 
 ## Ajouter des icônes personnalisées à un site
 
-Pour enrichir davantage le design de votre site, vous pouvez ajouter des références à des icônes personnalisées dans vos métadonnées et celles-ci seront affichées dans certains contextes.
+Pour enrichir davantage le design de votre site, vous pouvez ajouter des références à des icônes personnalisées dans vos métadonnées et celles-ci seront affichées dans certains contextes. La plus couramment utilisée est la **favicône** (abréviation de «&nbsp;favorites icon&nbsp;», en référence à son utilisation dans les listes de favoris ou de signets des navigateurs).
 
-La petite favicône, qui existe depuis de nombreuses années, a été la première icône de ce type, une icône de 16 x 16 pixels utilisée dans de multiples endroits. Vous verrez des favicônes affichés dans chaque onglet du navigateur pour chaque page ouverte et à côté des pages marquées dans le panneau des signets.
+La petite favicône existe depuis de nombreuses années. Il s'agit de la première icône de ce type&nbsp;: une icône carrée de 16 pixels utilisée à plusieurs endroits. Selon le navigateur, vous pouvez voir les favicônes affichées dans l'onglet du navigateur contenant chaque page ouverte, et à côté des pages marquées dans le panneau des signets.
 
-Une favicône peut être ajoutée à votre page de la façon suivante :
+Vous pouvez ajouter une favicône à votre page en&nbsp;:
 
-1. Enregistrez-la dans le même répertoire que la page d'index du site, sous le format `.ico` (la plupart des navigateurs prendront en charge les favicônes dans des formats plus communs comme `.gif` ou `.png`, mais utiliser le format ICO assurera son fonctionnement depuis Internet Explorer 6.)
-2. Ajoutez la ligne suivante dans votre `<head>` du HTML pour la référencer :
+1. L'enregistrant dans un format pris en charge comme `.ico`, `.gif` ou `.png` quelque part dans la structure de dossiers de votre site web.
+2. Ajoutant un élément {{HTMLElement("link")}} dans le bloc {{HTMLElement("head")}} de votre HTML, qui référence le chemin vers le fichier de la favicône&nbsp;:
 
    ```html
    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
    ```
 
-Voici un exemple de favicône dans un panneau de favoris :
+> [!NOTE]
+> Dans cet exemple, le chemin vers le fichier de la favicône commence par `/`, ce qui signifie «&nbsp;chercher le fichier dans le répertoire racine de votre site&nbsp;». Cela peut se trouver à un endroit différent dans le code source, selon le système que vous utilisez pour créer votre site&nbsp;: les frameworks web réservent généralement un dossier spécial pour les fichiers à la racine du site, comme `static` ou `public`.
+>
+> Ne vous inquiétez pas trop des subtilités des chemins de fichiers pour l'instant&nbsp;; vous en apprendrez plus à ce sujet plus tard (consultez [Introduction rapide aux URL et aux chemins](/fr/docs/Learn_web_development/Core/Structuring_content/Creating_links#une_brève_présentation_des_url_et_des_chemins) si vous êtes curieux·se).
+>
+> La plupart des navigateurs et applications utilisent aujourd'hui automatiquement un fichier `favicon.ico` trouvé à la racine du site comme favicône, donc beaucoup de sites n'incluent même pas l'élément `<link>`. Un élément explicite reste utile si vous souhaitez placer votre fichier de favicône ailleurs.
 
-![Le panneau de signets Firefox, montrant un exemple de signet avec une favicône affichée à côté.](fr-library.png)
+Voici un exemple de favicône dans un panneau de favoris&nbsp;:
 
-Il existe de nombreux autres types d'icônes à considérer aussi actuellement. Par exemple, vous trouverez ceci dans le code source de la page d'accueil MDN :
+![Le panneau de signets Firefox, montrant un exemple de signet avec une favicône affichée à côté.](bookmark-favicon.png)
+
+Vous pouvez également vouloir inclure différentes icônes pour différents contextes. Par exemple&nbsp;:
 
 ```html
-<!-- troisième-génération iPad avec haute-résolution Retina display: -->
+<link rel="icon" href="/favicon-48x48.[some hex hash].png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.[some hex hash].png" />
+```
+
+Cela permet d'afficher une icône lorsque le site est enregistré sur l'écran d'accueil d'un appareil Apple. Vous pouvez même vouloir fournir différentes icônes pour différents appareils, afin de garantir que l'icône s'affiche correctement partout. Par exemple&nbsp;:
+
+```html
+<!-- iPad pro avec haute-résolution Retina display: -->
 <link
-  rel="apple-touch-icon-precomposed"
-  sizes="144x144"
-  href="favicon144.png" />
-<!-- iPhone avec haute-résolution Retina display: -->
+  rel="apple-touch-icon"
+  sizes="167x167"
+  href="/apple-touch-icon-167x167.png" />
+<!-- Résolution x3 iPhone: -->
 <link
-  rel="apple-touch-icon-precomposed"
-  sizes="114x114"
-  href="favicon114.png" />
-<!-- iPad de première et deuxième génération : -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png" />
-<!-- iPhone non-Retina, iPod Touch et appareils Android 2.1+: -->
-<link rel="apple-touch-icon-precomposed" href="favicon57.png" />
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="/apple-touch-icon-180x180.png" />
+<!-- iPad non-Retina, iPad mini, etc.: -->
+<link
+  rel="apple-touch-icon"
+  sizes="152x152"
+  href="/apple-touch-icon-152x152.png" />
+<!-- Résolution 2x iPhone et autres appareils: -->
+<link rel="apple-touch-icon" href="/apple-touch-icon-120x120.png" />
 <!-- favicône de base -->
 <link rel="shortcut icon" href="favicon32.png" />
 ```
 
-Les commentaires expliquent ce à quoi chaque icône est utilisée — ces éléments incluent des fonctionnalités telles que la fourniture d'une icône haute résolution à utiliser lorsque le site Web est enregistré sur l'écran d'accueil d'un iPad.
+Les commentaires expliquent à quoi sert chaque icône — ces éléments couvrent par exemple la fourniture d'une icône haute résolution à utiliser lorsque le site est enregistré sur l'écran d'accueil d'un iPad.
 
-Ne vous préoccupez pas de la mise en œuvre de tous ces types d'icônes maintenant — il s'agit d'une fonctionnalité assez avancée ; vous n'avez pas besoin de la connaître pour avancer dans le cours. Le but principal ici est de vous faire savoir à quoi elles ressemblent si vous les rencontriez en parcourant le code source d'autres sites web.
+Ne vous préoccupez pas de la mise en œuvre de tous ces types d'icônes maintenant — il s'agit d'une fonctionnalité assez avancée, et vous n'aurez pas besoin de la connaître pour progresser dans le cours. Le but principal ici est de vous faire savoir ce que sont ces éléments, au cas où vous les croiseriez en parcourant le code source d'autres sites web. Si vous souhaitez en savoir plus sur toutes ces valeurs et comment les choisir, lisez la page de référence de l'élément HTML {{HTMLElement("link")}}.
 
 ## Application des CSS et JavaScript au HTML
 
-À peu près tous les sites web que vous rencontrerez actuellement utiliseront des {{glossary("CSS")}} pour agrémenter leur aspect, et {{glossary("JavaScript")}} pour assurer les fonctionnalités interactives, telles que lecteurs vidéo, cartes géographiques, jeux et plus encore. Ceux-ci sont le plus souvent appliqués à une page web en utilisant respectivement les éléments {{htmlelement("link")}} et {{htmlelement("script")}}.
+À peu près tous les sites web que vous utiliserez aujourd'hui emploient le {{Glossary("CSS")}} pour leur donner un bel aspect, et le {{Glossary("JavaScript")}} pour assurer des fonctionnalités interactives, comme des lecteurs vidéo, des cartes, des jeux, et plus encore. Ceux-ci sont le plus souvent appliqués à une page web en utilisant respectivement l'élément HTML {{HTMLElement("link")}} et l'élément HTML {{HTMLElement("script")}}.
 
-- L'élément {{htmlelement("link")}} se situe toujours dans l'en-tête du document. Il comporte deux attributs, `rel="stylesheet"` indiquant qu'il s'agit de la feuille de style du document, et `href` indiquant le chemin d'accès au fichier la contenant :
+- L'élément HTML {{HTMLElement("link")}} doit toujours se trouver dans l'en-tête de votre document. Il prend deux attributs, `rel="stylesheet"`, qui indique qu'il s'agit de la feuille de style du document, et `href`, qui contient le chemin vers le fichier de la feuille de style&nbsp;:
 
   ```html
-  <link rel="stylesheet" href="mon_fichier_css.css" />
+  <link rel="stylesheet" href="mon-fichier-css.css" />
   ```
 
-- L'élément {{htmlelement("script")}} ne doit pas aller dans l'en-tête ; en fait, il est souvent préférable de le placer au bas du corps du document (juste avant la balise de clôture `</body>`), pour s'assurer que tout le contenu HTML a été lu par le navigateur avant de lui appliquer le JavaScript (si JavaScript essaie d'accéder à un élément qui n'existe pas encore, le navigateur déclenchera une erreur).
+- L'élément HTML {{HTMLElement("script")}} doit également aller dans l'en-tête et inclure un attribut `src` contenant le chemin vers le JavaScript à charger, ainsi que `defer` (un [attribut booléen](/fr/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#les_attributs_booléens)), qui indique au navigateur de charger le JavaScript après que la page a fini d'analyser le HTML. L'attribut `defer` est utile car il garantit que tout le HTML est chargé avant l'exécution du JavaScript, évitant ainsi les erreurs dues à l'accès à un élément HTML qui n'existe pas encore sur la page. Il existe [plusieurs façons](/fr/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#stratégies_de_chargement_de_script) de gérer le chargement du JavaScript sur votre page, mais celle-ci est la plus fiable pour les navigateurs modernes.
 
   ```html
   <script src="mon-fichier-js.js"></script>
   ```
 
   > [!NOTE]
-  > L'élément `<script>` peut ressembler à un élément vide, mais ce n'est pas le cas : il faut donc une balise de fermeture. Au lieu de pointer vers un fichier de script externe, vous pouvez également choisir de mettre le code du script dans le HTML à l'intérieur d'un élément `<script>`.
+  > L'élément `<script>` peut ressembler à un {{Glossary("void element", "élément vide")}}, mais ce n'est pas le cas, il nécessite donc une balise de fermeture. Au lieu de pointer vers un fichier de script externe, vous pouvez aussi choisir de placer votre script à l'intérieur de l'élément `<script>`.
 
-### Apprentissage actif : appliquer des CSS et du JavaScript à une page
+### À votre tour : Appliquer des CSS et du JavaScript à une page
 
-1. Pour commencer cet apprentissage actif, prenez une copie de nos fichiers [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html), [script.js](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/script.js) et [style.css](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/style.css) , et enregistrez-les sur votre ordinateur dans un même répertoire. Assurez-vous qu'ils sont enregistrés avec les noms et les extensions de fichier corrects.
-2. Ouvrez le fichier HTML à la fois dans votre navigateur et votre éditeur de texte.
-3. En suivant les informations fournies ci-dessus, ajoutez les éléments {{htmlelement("link")}} et {{htmlelement("script")}} à votre HTML, afin que les CSS et le JavaScript soient appliqués au HTML.
+1. Pour commencer cet exercice, récupérez une copie de nos fichiers [meta-example.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/meta-example.html), [script.js](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/script.js) et [style.css](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/style.css), et enregistrez-les sur votre ordinateur dans le même dossier. Assurez-vous qu'ils sont enregistrés avec les bons noms et extensions.
+2. Ouvrez le fichier HTML à la fois dans votre navigateur et dans votre éditeur de texte.
+3. En suivant les informations données ci-dessus, ajoutez les éléments HTML {{HTMLElement("link")}} et {{HTMLElement("script")}} à votre HTML, afin que vos CSS et JavaScript soient appliqués à votre page HTML.
 
-Si ç'a été fait correctement, après avoir enregistré le HTML, puis actualisé la page, vous verrez que les choses ont changé :
+Si cela a été fait correctement, lorsque vous enregistrez votre HTML et actualisez votre navigateur, vous devriez voir que les choses ont changé&nbsp;:
 
-![Exemple montrant une page sur laquelle on a appliqué du CSS et du JavaScript. Le CSS a rendu la page verte, alors que le JavaScript a ajouté une liste dynamique à la page.](js-css-exemple.png)
+![Exemple montrant une page sur laquelle on a appliqué du CSS et du JavaScript. Le CSS a rendu la page verte, alors que le JavaScript a ajouté une liste dynamique à la page.](js-and-css.png)
 
 - Le JavaScript a ajouté une liste vide à la page. Maintenant, lorsque vous cliquez n'importe où sur la liste, une boîte de dialogue s'ouvre pour vous permettre de saisir un texte. Lorsque vous appuyez sur le bouton OK, un nouvel élément de la liste est ajouté contenant le texte saisi. Lorsque vous cliquez sur un élément de liste existant, la boîte de dialogue affiche son contenu pour vous permettre de le modifier.
 - Le CSS a rendu l'arrière-plan vert et le texte plus grand. Il a également décrit le contenu que le JavaScript a ajouté à la page (la barre rouge avec la bordure noire est le style que le CSS a ajouté à la liste générée par JS).
 
 > [!NOTE]
-> Si vous êtes coincé dans cet exercice et que vous ne pouvez pas obtenir le CSS / JS à appliquer, essayez de vérifier notre exemple de page [css-and-js.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/css-and-js.html) .
+> Si vous êtes coincé dans cet exercice et que vous ne pouvez pas obtenir le CSS / JS à appliquer, essayez de vérifier notre exemple de page [css-and-js.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/css-and-js.html) .
 
 ## Définition de la langue principale du document
 
-Enfin, il convient de mentionner que vous pouvez (et devrez vraiment) définir la langue de votre page. Cela peut être fait en ajoutant l'[attribut `lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang) à la balise ouvrante HTML (voir [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html).)
+Enfin, il convient de mentionner que vous pouvez (et devrez vraiment) définir la langue de votre page. Cela peut être fait en ajoutant [l'attribut `lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang) à la balise ouvrante HTML (voir [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html).)
 
 ```html
-<html lang="fr"></html>
+<html lang="fr">
+  …
+</html>
 ```
 
-Ceci est utile de plusieurs façons. Votre document sera indexé plus efficacement par les moteurs de recherche si son langage est défini (ce qui lui permet d'apparaître correctement dans les résultats spécifiques à la langue, par exemple) et il est utile pour les personnes visuellement déficientes utilisant un lecteur d'écran (par exemple, le mot « six » existe en français et en anglais, mais se prononce différemment.)
+Cela est utile de plusieurs façons. Votre document HTML sera indexé plus efficacement par les moteurs de recherche si sa langue est définie (ce qui lui permet d'apparaître correctement dans les résultats spécifiques à la langue, par exemple), et c'est utile pour les personnes malvoyantes utilisant un lecteur d'écran (par exemple, le mot «&nbsp;six&nbsp;» existe en français et en anglais, mais se prononce différemment.)
 
-Vous pouvez également définir des sous-sections de votre document pour qu'elles soient reconnues comme étant en différentes langues. Par exemple, nous pourrions définir la partie en langue japonaise pour qu'elle soit reconnue comme telle, de la manière suivante :
+Vous pouvez également définir des sous-sections de votre document pour qu'elles soient reconnues comme étant dans différentes langues. Par exemple, nous pourrions définir la section en japonais pour qu'elle soit reconnue comme telle, de cette façon&nbsp;:
 
 ```html
-<p>Exemple en japonais : <span lang="jp">ご飯が熱い。</span>.</p>
+<p>Exemple en japonais&nbsp;: <span lang="ja">ご飯が熱い。</span>.</p>
 ```
 
-Ces codes sont définis par la norme [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1). Vous en trouverez plus sur [Etiquettes langues en HTML et XML (en)](https://www.w3.org/International/articles/language-tags/).
+Ces codes sont définis par la norme [ISO 639-1 <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/ISO_639-1). Vous en trouverez plus sur [Étiquettes de langue en HTML et XML <sup>(angl.)</sup>](https://www.w3.org/International/articles/language-tags/).
 
 ## Résumé
 
-Cela marque la fin de notre tour rapide de l'en-tête HTML — il y a beaucoup plus de possibilités ici, mais un panorama exhaustif serait ennuyeux et susceptible de vous embrouiller à ce stade, nous voulions simplement vous donner une idée des éléments les plus courants. Dans l'article suivant, nous allons étudier les fondamentaux du texte HTML.
+Cela marque la fin de notre tour rapide de l'en-tête HTML — il y a beaucoup plus de possibilités ici, mais un panorama exhaustif serait ennuyeux et susceptible de vous embrouiller à ce stade, nous voulions simplement vous donner une idée des éléments les plus courants. Dans l'article suivant, nous allons étudier [les titres et paragraphes en HTML](/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs).
 
-{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Getting_started", "Apprendre/HTML/Introduction_à_HTML/HTML_text_fundamentals", "Apprendre/HTML/Introduction_à_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content")}}

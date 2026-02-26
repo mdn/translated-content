@@ -1,31 +1,25 @@
 ---
-title: draggable
+title: "Attribut HTML universel : draggable"
+short-title: draggable
 slug: Web/HTML/Reference/Global_attributes/draggable
-original_slug: Web/HTML/Global_attributes/draggable
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`draggable`** est un attribut {{Glossary("Enumerated", "énuméré")}} qui indique si l'élément peut être déplacé, soit par le comportement natif du navigateur, soit via [l'API HTML Drag and Drop](/fr/docs/Web/API/HTML_Drag_and_Drop_API).
 
-L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`draggable`** est un attribut à valeur contrainte qui indique si l'élément peut être déplacé avec la souris dans un geste de glisser-déposer lorsqu'on utilise l'API _[Drag & Drop](/fr/docs/Web/API/HTML_Drag_and_Drop_API)_ ou les fonctionnalités natives du navigateur. Les valeurs autorisées pour cet attribut sont les suivantes :
+L'attribut `draggable` peut être appliqué aux éléments relevant strictement de [l'espace de noms HTML](/fr/docs/Glossary/Namespace), ce qui signifie qu'il ne peut pas être appliqué aux [SVG](/fr/docs/Web/SVG).
+Pour plus d'informations sur l'apparence et le rôle des déclarations d'espace de noms, voir [Introduction aux espaces de noms](/fr/docs/Web/SVG/Guides/Namespaces_crash_course).
 
-- `true` : qui indique que l'élément peut être déplacé à la souris
-- `false` : qui indique que l'élément ne peut pas être déplacé à la souris
+`draggable` peut prendre les valeurs suivantes&nbsp;:
 
-Si l'attribut n'est pas défini, la valeur par défaut sera `auto` : le comportement de l'élément sera celui spécifié par défaut par le navigateur.
+- `true`&nbsp;: l'élément peut être déplacé.
+- `false`&nbsp;: l'élément ne peut pas être déplacé.
 
-Cet attribut est un attribut à valeur contrainte, ce n'est pas un attribut booléen. Il faut donc utiliser une valeur explicite `true` ou `false`. La notation raccourcie `<img draggable>` (utilisant uniquement le nom de l'attribut) ne fonctionnera pas :
+> [!WARNING]
+> Cet attribut est _{{Glossary("Enumerated", "énuméré")}}_ et non _booléen_. Une valeur `true` ou `false` est obligatoire, et la forme abrégée comme `<img draggable>` est interdite. L'utilisation correcte est `<img draggable="true">`.
 
-```html example-bad
-<label draggable>Label exemple</label>
-```
-
-En revanche, on pourra correctement utiliser :
-
-```html example-good
-<label draggable="true">Label exemple</label>
-```
-
-Par défaut, seules les sélections de texte, les images et les liens peuvent être déplacés à la souris. Pour les autres éléments, il faudra définir le gestionnaire d'événements pour {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} afin de faire fonctionner le glisser-déposer. Cela est illustré [dans cet exemple](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations).
+Si cet attribut n'est pas défini, sa valeur par défaut est `auto`, ce qui signifie que le comportement de glisser‑déposer est celui par défaut du navigateur&nbsp;: seules les sélections de texte, les images et les liens peuvent être déplacés. Pour les autres éléments, l'évènement {{DOMxRef('HTMLElement.dragstart_event', 'ondragstart')}} doit être défini pour que le glisser‑déposer fonctionne, comme montré dans cet [exemple complet](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations).
 
 ## Spécifications
 
@@ -37,4 +31,4 @@ Par défaut, seules les sélections de texte, les images et les liens peuvent ê
 
 ## Voir aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)
+- [Tous les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)

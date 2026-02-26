@@ -3,7 +3,7 @@ title: Terminando
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
 ---
 
-{{Previous("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Controles_raton")}}
+{{Previous("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
 
 Este es el último de los 10 pasos del [Gamedev Canvas tutorial](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código fuente tal y como quedará al terminar esta lección en [Gamedev-Canvas-workshop/lesson10.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html).
 
@@ -101,4 +101,4 @@ Ahora sería un buen momento para aprender a utilizar entornos de desarrollo (fr
 
 También puedes volve al [índice de este tutorial](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). ¡Diviértete programando!
 
-{{Previous("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Controles_raton")}}
+{{Previous("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}

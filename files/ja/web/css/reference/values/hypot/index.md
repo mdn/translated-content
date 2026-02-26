@@ -1,9 +1,8 @@
 ---
 title: hypot()
 slug: Web/CSS/Reference/Values/hypot
-original_slug: Web/CSS/hypot
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`hypot()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、各引数の 2 乗の合計値の[平方根](https://ja.wikipedia.org/wiki/平方根)を返す指数関数です。

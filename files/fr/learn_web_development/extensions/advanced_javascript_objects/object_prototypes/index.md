@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_protot
 original_slug: Learn/JavaScript/Objects/Object_prototypes
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 Les prototypes sont un mécanisme au sein de JavaScript qui permettent aux objets JavaScript d'hériter des propriétés d'autres objets. Les prototypes implémentent un héritage différent de celui rencontré dans les langages de programmation objets habituels. Dans cet article, nous allons aborder ces différences, nous allons aussi voir comment la chaîne de prototypage fonctionne. Nous verrons aussi comment les propriétés prototypes peuvent être utilisées afin d'ajouter des méthodes à des constructeurs existants.
 
@@ -268,4 +268,4 @@ Cet article a traité des prototypes objet en JavaScript, en incluant la chaine 
 
 Dans le prochain article, nous verrons comment appliquer l'héritage entre deux de nos propres objets.
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

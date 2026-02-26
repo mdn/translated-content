@@ -79,7 +79,7 @@ Deux boîtes de bloc anonymes sont créées : une pour le texte avant l'élémen
 
 Un élément est dit « en ligne » lorsque la valeur de sa propriété CSS {{cssxref("display")}} vaut : `inline`, `inline-block` ou `inline-table`. Visuellement, un tel élément est organisé sur des lignes qui se suivent les unes les autres avec d'autre contenu en ligne. Généralement, il s'agit du contenu d'un paragraphe (éventuellement mis en forme).
 
-Les éléments en ligne génèrent des boîtes en lignes qui contribuent [au contexte de mise en forme en ligne](/fr/docs/CSS/Inline_formatting_context).
+Les éléments en ligne génèrent des boîtes en lignes qui contribuent au contexte de mise en forme en ligne.
 
 Les boîtes en lignes atomiques ne peuvent pas être divisées en plusieurs lignes au sein d'un contexte de mise en forme.
 

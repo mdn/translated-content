@@ -1,12 +1,14 @@
 ---
 title: object-fit
 slug: Web/CSS/Reference/Properties/object-fit
-original_slug: Web/CSS/object-fit
 l10n:
-  sourceCommit: 7a9f9baa25d9a7313bd6c62ef5ef585b28459c58
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-[CSS](/ja/docs/Web/CSS) の **`object-fit`** プロパティは、[置換要素](/ja/docs/Web/CSS/Guides/Images/Replaced_element_properties)、例えば {{HTMLElement("img")}} や {{HTMLElement("video")}} などの中身を、コンテナーにどのようにはめ込むかを設定します。
+**`object-fit`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{ glossary("replaced elements", "置換要素")}}、例えば {{HTMLElement("img")}} や {{HTMLElement("video")}} などのコンテンツを、コンテナーにどのようにはめ込むかを設定します。
+
+> [!NOTE]
+> `object-fit` プロパティは、{{HTMLElement("iframe")}}、{{HTMLElement("embed")}}、{{HTMLElement("fencedframe")}} の各要素では効果がありません。
 
 要素のボックス内における置換要素の中身のオブジェクトの配置を変更するには、 {{cssxref("object-position")}} プロパティを使用することができます。
 
@@ -45,7 +47,7 @@ object-fit: scale-down;
 #example-element {
   height: 100%;
   width: 100%;
-  border: 2px dotted #888;
+  border: 2px dotted #888888;
 }
 ```
 
@@ -71,11 +73,11 @@ object-fit: unset;
 ### 値
 
 - `contain`
-  - : 置換コンテンツはアスペクト比を維持したまま、要素のコンテンツボックスに収まるように拡大縮小されます。オブジェクト全体がボックス内に表示され、アスペクト比が維持されるので、オブジェクトのアスペクト比とボックスのアスペクト比が合わない場合は、[レターボックス](<https://ja.wikipedia.org/wiki/%E3%83%AC%E3%82%BF%E3%83%BC%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9_(%E6%98%A0%E5%83%8F%E6%8A%80%E8%A1%93)>)表示になります。
+  - : 置換コンテンツは{{glossary("aspect ratio", "アスペクト比")}}を維持したまま、要素のコンテンツボックスに収まるように拡大縮小されます。オブジェクト全体がボックス内に表示され、アスペクト比が維持されるので、オブジェクトのアスペクト比とボックスのアスペクト比が合わない場合は、[レターボックス](<https://ja.wikipedia.org/wiki/レターボックス_(映像技術)>)または[ピラーボックス](<https://ja.wikipedia.org/wiki/ピラーボックス_(映像技術)>)表示になります。
 - `cover`
   - : 置換コンテンツはアスペクト比を維持したまま、要素のコンテンツボックス全体を埋めるように拡大縮小されます。オブジェクトのアスペクト比がボックスのアスペクト比と合わない場合は、オブジェクトの方が合うように切り取られます。
 - `fill`
-  - : 置換コンテンツは、要素のコンテンツボックス全体を埋めるサイズになります。オブジェクト全体が完全にボックスの中を埋めます。オブジェクトのアスペクト比がボックスのアスペクト比と合わない場合は、オブジェクトは合うように引き伸ばされます。
+  - : 置換コンテンツは、要素のコンテンツボックス全体を埋めるサイズになります。オブジェクト全体が完全にボックスの中を埋めます。オブジェクトの{{glossary("aspect ratio", "アスペクト比")}}がボックスのアスペクト比と合わない場合は、オブジェクトは合うように引き伸ばされます。
 - `none`
   - : 置換コンテンツは、拡大縮小されません。
 - `scale-down`
@@ -128,9 +130,7 @@ object-fit: unset;
 
 ```css
 h2 {
-  font-family:
-    Courier New,
-    monospace;
+  font-family: "Courier New", monospace;
   font-size: 1em;
   margin: 1em 0 0.3em;
 }
@@ -138,7 +138,7 @@ h2 {
 img {
   width: 150px;
   height: 100px;
-  border: 1px solid #000;
+  border: 1px solid black;
   margin: 10px 0;
 }
 
@@ -184,3 +184,4 @@ img {
 
 - その他の画像関連 CSS プロパティ: {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}
 - {{cssxref("background-size")}}
+- [アスペクト比の理解](/ja/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)

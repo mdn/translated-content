@@ -8,7 +8,7 @@ l10n:
 
 {{MathMLRef}}
 
-{{PreviousMenuNext("Web/MathML/Guides/Getting_started", "Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Getting_started", "Web/MathML/Tutorials/For_beginners/Fractions_and_roots", "Web/MathML/Guides")}}
 
 これで MathML の概要を理解していただけたと思いますので、次は MathML 数式の構成要素として使用するテキストコンテナー（変数、数値、演算子...）に焦点を移します。
 
@@ -450,4 +450,4 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 - [`<mo>` 要素](/ja/docs/Web/MathML/Reference/Element/mo)
 - [`<mtext>` 要素](/ja/docs/Web/MathML/Reference/Element/mtext)
 
-{{PreviousMenuNext("Web/MathML/Guides/Getting_started", "Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Getting_started", "Web/MathML/Tutorials/For_beginners/Fractions_and_roots", "Web/MathML/Guides")}}

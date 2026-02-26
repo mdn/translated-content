@@ -1,30 +1,32 @@
 ---
-title: HTMLCanvasElement.height
+title: "HTMLCanvasElement : propriété height"
+short-title: height
 slug: Web/API/HTMLCanvasElement/height
+l10n:
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{APIRef("Canvas API")}}
 
-La propriété **`HTMLCanvasElement.height`** est un entier positif reflétant l'attribut HTML [`height`](/fr/docs/Web/HTML/Reference/Elements/canvas#height) de l'élément {{HTMLElement("canvas")}} mesuré en pixels CSS. Quand cet attribut n'est pas spécifié, ou si on lui affecte une valeur invalide, telle que négative, la valeur par défaut de `150` is utilisée.
+La propriété **`height`** de l'interface {{DOMxRef("HTMLCanvasElement")}} est un entier positif (`integer`) correspondant à l'attribut HTML [`height`](/fr/docs/Web/HTML/Reference/Elements/canvas#height) de l'élément {{HTMLElement("canvas")}} interprété en pixels CSS. Lorsque l'attribut n'est pas défini, ou s'il est défini sur une valeur invalide (par exemple une valeur négative), la valeur par défaut `150` est utilisée.
 
-C'est l'une des deux propriétés, l'autre étant {{domxref("HTMLCanvasElement.width")}}, qui contrôlent la taille du canevas.
+La modification de la propriété `height` réinitialise l'intégralité du contexte de rendu à son état par défaut. Cela inclut le nettoyage du canevas (tampon d'arrière-plan), la réinitialisation du chemin courant et la remise à zéro de _toutes_ les propriétés telles que `fillStyle` et `globalCompositeOperation`. Cette réinitialisation s'applique à tous les types de contexte et intervient même lorsque l'on assigne à `height` sa valeur actuelle. Pour restaurer le contenu précédent après avoir modifié la hauteur, utilisez {{DOMxRef("CanvasRenderingContext2D.getImageData()")}} et {{DOMxRef("CanvasRenderingContext2D.putImageData()")}}. Les propriétés du contexte doivent être gérées et restaurées séparément.
 
-## Syntaxe
+Il s'agit de l'une des deux propriétés, l'autre étant {{DOMxRef("HTMLCanvasElement.width")}}, qui contrôlent la taille du canevas.
 
-```js
-var pxl = canvas.height;
-canvas.height = pxl;
-```
+## Valeur
+
+Un nombre.
 
 ## Exemples
 
-Étant donné cet élément {{HTMLElement("canvas")}} :
+Étant donné cet élément {{HTMLElement("canvas")}}&nbsp;:
 
 ```html
 <canvas id="canvas" width="300" height="300"></canvas>
 ```
 
-vous pouvez obtenir la hauteur du canevas avec le code suivant :
+vous pouvez obtenir la hauteur du canevas avec le code suivant&nbsp;:
 
 ```js
 var canvas = document.getElementById("canvas");
@@ -41,5 +43,11 @@ console.log(canvas.height); // 300
 
 ## Voir aussi
 
-- L'interface la définissant, {{domxref("HTMLCanvasElement")}}.
-- L'autre propriété contrôlant la taille du canevas, {{domxref("HTMLCanvasElement.width")}}.
+- L'interface {{DOMxRef("HTMLCanvasElement")}}
+- La propriété {{DOMxRef("HTMLCanvasElement.width")}}
+- La propriété {{DOMxRef("HTMLEmbedElement.height")}}
+- La propriété {{DOMxRef("HTMLIFrameElement.height")}}
+- La propriété {{DOMxRef("HTMLImageElement.height")}}
+- La propriété {{DOMxRef("HTMLObjectElement.height")}}
+- La propriété {{DOMxRef("HTMLSourceElement.height")}}
+- La propriété {{DOMxRef("HTMLVideoElement.height")}}

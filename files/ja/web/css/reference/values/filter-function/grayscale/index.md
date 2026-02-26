@@ -1,12 +1,11 @@
 ---
 title: grayscale()
 slug: Web/CSS/Reference/Values/filter-function/grayscale
-original_slug: Web/CSS/filter-function/grayscale
 l10n:
-  sourceCommit: 2d5005825db30faf5826e7681ec7ee526f5458b0
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**`grayscale()`** は [CSS](/ja/docs/Web/CSS) の関数は、入力画像をグレースケールに変換します。結果は {{cssxref("&lt;filter-function&gt;")}} です。
+**`grayscale()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、入力画像をグレースケールに変換します。結果は {{cssxref("filter-function")}} です。
 
 {{InteractiveExample("CSS デモ: grayscale()")}}
 
@@ -44,8 +43,12 @@ grayscale(amount)
 
 ### 引数
 
-- `amount`
-  - : 入力画像がグレースケールに変換される度合いです。 {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で指定します。 `100%` の値では完全にグレースケールになり、 `0%` の値では入力が変更されないままになります。 `0%` と `100%` の間の値は、その効果に対する線形の倍数です。省略時の既定値は `1` です。{{Glossary("interpolation","補間")}}の初期値は `0` です。
+- `amount` {{Optional_Inline}}
+  - : 入力画像がグレースケールに変換される度合いです。 {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で指定します。 `100%` の値では完全にグレースケールになり、 `0%` の値では入力が変更されないままになります。 `0%` と `100%` の間の値は、その効果に対する線形の倍数です。{{Glossary("interpolation","補間")}}の初期値は `0` です。デフォルト値は `1` です。
+
+## 形式文法
+
+{{CSSSyntax}}
 
 ## 例
 
@@ -54,7 +57,10 @@ grayscale(amount)
 ```css
 grayscale(0)     /* 効果なし */
 grayscale(.7)    /* 70% グレースケール */
-grayscale(100%)  /* 完全なグレースケール */
+
+grayscale()      /* 完全なグレースケール */
+grayscale(1)
+grayscale(100%)
 ```
 
 ## 仕様書
@@ -67,7 +73,7 @@ grayscale(100%)  /* 完全なグレースケール */
 
 ## 関連情報
 
-その他の {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティの値で使用できる {{cssxref("&lt;filter-function&gt;")}} 関数には、次のものがあります。
+その他の {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティの値で使用できる {{cssxref("filter-function")}} 関数には、次のものがあります。
 
 - {{cssxref("filter-function/blur", "blur()")}}
 - {{cssxref("filter-function/brightness", "brightness()")}}

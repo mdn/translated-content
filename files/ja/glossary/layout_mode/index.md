@@ -35,4 +35,4 @@ original_slug: Web/CSS/Layout_mode
     - [実効値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#実効値)
   - [値の定義構文](/ja/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
   - [一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
-  - [置換要素](/ja/docs/Web/CSS/Guides/Images/Replaced_element_properties)
+  - {{glossary("Replaced elements", "置換要素")}}

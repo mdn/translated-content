@@ -1,12 +1,11 @@
 ---
 title: :focus-visible
 slug: Web/CSS/Reference/Selectors/:focus-visible
-original_slug: Web/CSS/:focus-visible
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 4cb9d89a204a9532370693b982e8a3b274a874b1
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:focus-visible`** s'applique lorsqu'un élément correspond à la pseudo-classe {{cssxref(":focus")}} et que l'{{glossary("User Agent", "agent utilisateur")}} détermine, via une heuristique, que le focus devrait être mis en évidence sur l'élément (la plupart des navigateurs affichent un contour en surbrillance par défaut).
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:focus-visible`** s'applique lorsqu'un élément correspond à la pseudo-classe {{CSSxRef(":focus")}} et que l'{{Glossary("User Agent", "agent utilisateur")}} détermine, via une heuristique, que le focus devrait être mis en évidence sur l'élément (la plupart des navigateurs affichent un contour en surbrillance par défaut).
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :focus-visible", "tabbed-shorter")}}
 
@@ -126,7 +125,7 @@ Cela montre comment `:focus-visible` permet à un·e concepteur·rice de suivre 
 
 ### Fournir un :focus de repli
 
-Si votre code doit fonctionner dans d'anciennes versions de navigateurs qui ne prennent pas en charge `:focus-visible`, vérifiez la prise en charge de `:focus-visible` avec {{cssxref('@supports')}} et répétez le même style de mise en évidence, mais à l'intérieur d'une règle `:focus`. Notez que même si vous ne spécifiez rien du tout pour `:focus`, les anciens navigateurs afficheront simplement le contour natif, ce qui peut être suffisant.
+Si votre code doit fonctionner dans d'anciennes versions de navigateurs qui ne prennent pas en charge `:focus-visible`, vérifiez la prise en charge de `:focus-visible` avec {{CSSxRef('@supports')}} et répétez le même style de mise en évidence, mais à l'intérieur d'une règle `:focus`. Notez que même si vous ne spécifiez rien du tout pour `:focus`, les anciens navigateurs afficheront simplement le contour natif, ce qui peut être suffisant.
 
 ```html
 <button class="button with-fallback" type="button">
@@ -171,5 +170,5 @@ Si votre code doit fonctionner dans d'anciennes versions de navigateurs qui ne p
 
 ## Voir aussi
 
-- {{cssxref(":focus")}}
-- {{cssxref(":focus-within")}}
+- La pseudo-classe {{CSSxRef(":focus")}}
+- La pseudo-classe {{CSSxRef(":focus-within")}}

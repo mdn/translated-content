@@ -97,7 +97,7 @@ l10n:
     詳しくは[ヘッダーの設定](/ja/docs/Web/API/Fetch_API/Using_Fetch#ヘッダーの設定)を参照してください。
 
 - `integrity` {{optional_inline}}
-  - : このリクエストの[サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)の値を保持します。
+  - : このリクエストの[サブリソース完全性](/ja/docs/Web/Security/Defenses/Subresource_Integrity)の値を保持します。
 
     これは {{htmlelement("script")}} 要素に [`integrity`](/ja/docs/Web/HTML/Reference/Elements/script#integrity) 属性を設定したときと同じように、リソースをフェッチしたときに調べられます。ブラウザーはフェッチされたリソースの {{glossary("Cryptographic_hash_function", "hash")}} を指定されたアルゴリズムで計算し、その結果が指定された値と一致しない場合、ネットワークエラーでフェッチリクエストを拒否します。
 

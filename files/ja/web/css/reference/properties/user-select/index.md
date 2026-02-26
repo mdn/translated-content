@@ -1,9 +1,8 @@
 ---
 title: user-select
 slug: Web/CSS/Reference/Properties/user-select
-original_slug: Web/CSS/user-select
 l10n:
-  sourceCommit: 6732005dce0503eebc227e4fb3cc1c72f21d9d81
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`user-select`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ユーザーがテキストを範囲選択できるかどうかを制御します。これは、テキストボックスを除いて、{{Glossary("Chrome", "クローム")}}として読み込まれたコンテンツには影響を与えません。
@@ -24,7 +23,7 @@ user-select: all;
 
 ```html interactive-example
 <section id="default-example">
-  <p id="example-element">Try to select this text</p>
+  <p id="example-element">このテキストを選択してみてください</p>
 </section>
 ```
 
@@ -52,7 +51,7 @@ user-select: unset;
 ```
 
 > [!NOTE]
-> `user-select` は継承されるプロパティではありませんが、多くの場合、初期値の `auto` は継承されているように見えます。 WebKit/Chromium ベースのブラウザーは、仕様書に書かれている動作に従わず、このプロパティを継承するように実装して*おり*、いくつかの問題を発生させています。現在までに、 Chromium は[この問題を修正し](https://chromium.googlesource.com/chromium/src/+/b01af0b296ecb855aac95c4ed335d188e6eac2de)、最終的な動作が仕様書に合うようにすることを選択しています。
+> `user-select` は継承されるプロパティではありませんが、多くの場合、初期値の `auto` は継承されているように見えます。 WebKit/Chromium ベースのブラウザーは、仕様書に書かれている動作に従わず、このプロパティを継承するように実装しており、いくつかの問題を発生させています。現在までに、 Chromium は[この問題を修正し](https://chromium.googlesource.com/chromium/src/+/b01af0b296ecb855aac95c4ed335d188e6eac2de)、最終的な動作が仕様書に合うようにすることを選択しています。
 
 ### 値
 

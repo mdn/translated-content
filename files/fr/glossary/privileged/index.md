@@ -1,18 +1,12 @@
 ---
 title: Privilégié
 slug: Glossary/Privileged
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+Un·e utilisateur·ice est dit·e **privilégié·e** lorsqu'il·elle se voit attribuer des droits supplémentaires sur un système, ou se voit donner des accès à des données avec un niveau de priorité supérieur à celui des utilisateur·ice·s normaux.
 
-Un utilisateur est dit **privilégié** lorsqu'il se voit attribuer des droits supplémentaires sur un système, ou se voit donner des accès à des données avec un niveau de priorité supérieur à celui des utilisateurs normaux.
-
-## Pour en savoir plus
-
-### Culture générale
+## Voir aussi
 
 - [Privilège](<https://fr.wikipedia.org/wiki/Privilège_(informatique)>) sur Wikipédia
-
-### Apprendre sur ce sujet
-
-- [Tutoriel sur la sécurité informatique](/fr/docs/Apprendre/Tutoriels/Les_bases_de_la_sécurité_informatique)

@@ -9,7 +9,7 @@ l10n:
 
 有时，此状态用作确保 Web API 只能在用户交互触发时才能运行的机制。比如，脚本不能随意启动需要*瞬态激活*的弹出窗口——它必须从 UI 元素的事件处理器中触发。
 
-参见[由用户激活限制的特性](/zh-CN/docs/Web/Security/User_activation)以查看需要*瞬态激活*的 API 示例。
+参见[由用户激活限制的特性](/zh-CN/docs/Web/Security/Defenses/User_activation)以查看需要*瞬态激活*的 API 示例。
 
 参见 {{domxref("UserActivation.isActive")}} 属性，以通过编程方式访问当前窗口的瞬态激活状态。
 

@@ -1,9 +1,8 @@
 ---
 title: column-fill
 slug: Web/CSS/Reference/Properties/column-fill
-original_slug: Web/CSS/column-fill
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`column-fill`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで要素のコンテンツが複数の段に分割されるとき、どのようにバランスを取るのかを制御します。
@@ -21,7 +20,7 @@ column-fill: balance;
 ```html-nolint interactive-example
 <section id="default-example">
   <p id="example-element">
-    ロンドン。ミカエルマス学期が終わり、リンカーンズ・イン・ホールで大法官が座っています。容赦のない11月の天候です。
+    ロンドン。ミカエルマス学期が終わり、リンカーンズ・イン・ホールで大法官が座っています。容赦のない 11 月の天候です。
   </p>
 </section>
 ```
@@ -90,7 +89,7 @@ column-fill: unset;
 ```css live-sample___balancing_column_content
 p {
   height: 7em;
-  background: #ff9;
+  background: #ffff99;
   columns: 3;
   column-rule: 1px solid;
 }

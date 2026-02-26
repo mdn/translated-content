@@ -29,4 +29,4 @@ original_slug: Web/CSS/flex_value
 
 ## Смотрите также
 
-- [CSS Grid Layout](/ru/docs/Web/CSS/CSS_grid_layout)
+- [CSS Grid Layout](/ru/docs/Web/CSS/Guides/Grid_layout)

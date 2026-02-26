@@ -55,7 +55,7 @@ p {
 - `title`
   - : この属性は[代替スタイルシート](/ja/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet)のセットを指定します。
 - `blocking` {{Experimental_Inline}}
-  - : この属性は、クリティカルなサブリソースの取得時に、特定の処理をブロックすべきであることを明示的に示します。[`@import`](/ja/docs/Web/CSS/Reference/At-rules/@import) でインポートされたスタイルシートは、ふつうクリティカルなサブリソースと見なされますが、一方で [`background-image`](/ja/docs/Web/CSS/Reference/Properties/background-image) やフォントはそうとはみなされません。
+  - : この属性は、クリティカルなサブリソースの取得時に、特定の処理をブロックすべきであることを明示的に示します。{{cssxref("@import")}} でインポートされたスタイルシートは、ふつうクリティカルなサブリソースと見なされますが、一方で {{cssxref("background-image")}} やフォントはそうとはみなされません。
     - `render`: 画面へのコンテンツの描画がブロックされます。
 
 ### 非推奨の属性
@@ -167,10 +167,10 @@ p {
   <tbody>
     <tr>
       <th>
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#メタデータコンテンツ"
           >メタデータコンテンツ</a
         >
       </td>
@@ -189,7 +189,7 @@ p {
     <tr>
       <th>許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#メタデータコンテンツ"
           >メタデータコンテンツ</a
         >を受け入れるすべての要素
       </td>

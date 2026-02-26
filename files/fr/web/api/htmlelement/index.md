@@ -1,6 +1,8 @@
 ---
 title: HTMLElement
 slug: Web/API/HTMLElement
+l10n:
+  sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
 ---
 
 {{APIRef("HTML DOM")}}
@@ -9,159 +11,148 @@ L'interface **`HTMLElement`** représente n'importe quel élément [HTML](/fr/do
 
 {{InheritanceDiagram}}
 
-## Propriétés
+## Propriétés d'instance
 
-_Hérite des propriétés de son parent, [`Element`](/fr/docs/Web/API/Element), et implémente celles du mixin [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers)._
+_Hérite également des propriétés de son parent, {{DOMxRef("Element")}}._
 
-- [`HTMLElement.accessKey`](/fr/docs/Web/API/HTMLElement/accessKey)
+- {{DOMxRef("HTMLElement.accessKey")}}
   - : Une chaîne de caractères qui représente la touche d'accès affecté à l'élément.
-- [`HTMLElement.accessKeyLabel`](/fr/docs/Web/API/HTMLElement/accessKeyLabel) {{ReadOnlyInline}}
-  - : Renvoie une chaîne de caractères contenant la touche d'accès affectée à l'élément.
-- [`HTMLElement.attributeStyleMap`](/fr/docs/Web/API/HTMLElement/attributeStyleMap) {{ReadOnlyInline}}
-  - : Un objet [`StylePropertyMap`](/fr/docs/Web/API/StylePropertyMap) qui représente les déclarations contenues dans l'attribut [`style`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-style) de l'élément.
-- [`HTMLElement.contentEditable`](/fr/docs/Web/API/HTMLElement/contentEditable)
+- {{DOMxRef("HTMLElement.accessKeyLabel")}} {{ReadOnlyInline}}
+  - : Retourne une chaîne de caractères contenant la touche d'accès affectée à l'élément.
+- {{DOMxRef("HTMLElement.anchorElement")}} {{ReadOnlyInline}} {{Non-standard_Inline}} {{Experimental_Inline}}
+  - : Retourne une référence à l'élément d'ancrage de l'élément, ou `null` s'il n'en a pas.
+- {{DOMxRef("HTMLElement.attributeStyleMap")}} {{ReadOnlyInline}}
+  - : Un objet {{DOMxRef("StylePropertyMap")}} qui représente les déclarations contenues dans l'attribut [`style`](/fr/docs/Web/HTML/Reference/Global_attributes/style) de l'élément.
+- {{DOMxRef("HTMLElement.autocapitalize")}}
+  - : Une chaîne de caractères qui représente le comportement de capitalisation de l'élément pour la saisie de l'utilisateur·ice. Les valeurs valides sont&nbsp;: `none`, `off`, `on`, `characters`, `words`, `sentences`.
+- {{DOMxRef("HTMLElement.autofocus")}}
+  - : Un booléen reflétant l'attribut HTML universel [`autofocus`](/fr/docs/Web/HTML/Reference/Elements/select#autofocus), qui indique si le contrôle doit être sélectionné lors du chargement de la page, ou lorsque la boîte de dialogue ou la fenêtre contextuelle (<i lang="en">popover</i> en anglais) devient visible si défini dans un élément à l'intérieur d'éléments HTML {{HTMLElement("dialog")}} ou d'éléments dont l'attribut `popover` est défini.
+- {{DOMxRef("HTMLElement.autocorrect")}}
+  - : Un booléen qui représente si le texte saisi par l'utilisateur·ice doit être automatiquement corrigé.
+    Cela reflète l'attribut HTML universel [`autocorrect`](/fr/docs/Web/HTML/Reference/Global_attributes/autocorrect).
+- {{DOMxRef("HTMLElement.contentEditable")}}
   - : Une chaîne de caractères qui, si elle vaut `true` indique que l'élément est éditable et qui, si elle vaut `false` indique que l'élément n'est pas éditable.
-- [`HTMLElement.isContentEditable`](/fr/docs/Web/API/HTMLElement/isContentEditable) {{ReadOnlyInline}}
-  - : Renvoie une valeur booléenne indiquant si le contenu de l'élément peut être édité.
-- [`HTMLElement.contextMenu`](/fr/docs/Web/API/HTMLElement/contextMenu) {{Deprecated_Inline}}
-  - : Un objet [`HTMLMenuElement`](/fr/docs/Web/API/HTMLMenuElement) qui représente le menu contextuel associé à l'élément. Il peut valoir `null`.
-- [`HTMLElement.dataset`](/fr/docs/Web/API/HTMLElement/dataset) {{ReadOnlyInline}}
-  - : Renvoie un objet [`DOMStringMap`](/fr/docs/Web/API/DOMStringMap) avec lequel il est possible de lire et d'écrire [les attributs de données spécifiques](/fr/docs/Web/HTML/How_to/Use_data_attributes) (`data-*`).
-- [`HTMLElement.dir`](/fr/docs/Web/API/HTMLElement/dir)
+- {{DOMxRef("HTMLElement.dataset")}} {{ReadOnlyInline}}
+  - : Retourne un objet {{DOMxRef("DOMStringMap")}} avec lequel il est possible de lire et d'écrire [les attributs de données spécifiques](/fr/docs/Web/HTML/How_to/Use_data_attributes) (`data-*`).
+- {{DOMxRef("HTMLElement.dir")}}
   - : Une chaîne de caractères reflétant l'attribut universel `dir` et qui représente le sens d'écriture de l'élément. Les valeurs possibles sont `"ltr"` (gauche à droite), `"rtl"` (droite à gauche), et `"auto"`.
-- [`HTMLElement.draggable`](/fr/docs/Web/API/HTMLElement/draggable)
-  - : Une valeur booléenne indiquant si l'élément peut être déplacé.
-- [`HTMLElement.enterkeyhint`](/fr/docs/Web/API/HTMLElement/enterkeyhint)
-  - : Une chaîne de caractères qui définit le libellé (ou l'icône) à présenter comme libellé d'action pour la touche <kbd>Entrée</kdb> des claviers virtuels.
-- [`HTMLElement.hidden`](/fr/docs/Web/API/HTMLElement/hidden)
-  - : Une valeur booléenne indiquant si l'élément est caché.
-- [`HTMLElement.inert`](/fr/docs/Web/API/HTMLElement/inert)
-  - : Une valeur booléenne indiquant si l'agent utilisateur doit agir comme si le nœud donné était absent en ce qui concerne les évènements d'interaction, les recherches de texte dans la page, et la sélection de texte.
-- [`HTMLElement.innerText`](/fr/docs/Web/API/HTMLElement/innerText)
-  - : Représente le contenu du texte rendu d'un nœud et de ses descendants. Comme accesseur, il approxime le texte qu'une personne aurait en surlignant le contenu de l'élément avec le curseur et en copiant ceci dans un presse-papier. Comme mutateur, il remplace le contenu à l'intérieur de l'élément sélectionné, convertissant tout saut de ligne en élément [`<br>`](/fr/docs/Web/HTML/Reference/Elements/br).
-- [`HTMLElement.lang`](/fr/docs/Web/API/HTMLElement/lang)
+- {{DOMxRef("HTMLElement.draggable")}}
+  - : Un booléen indiquant si l'élément peut être déplacé.
+- {{DOMxRef("HTMLElement.editContext")}} {{Experimental_Inline}}
+  - : Retourne l'objet {{DOMxRef("EditContext")}} associé à l'élément, ou `null` s'il n'y en a pas.
+- [`HTMLElement.enterkeyhint`](/fr/docs/Web/API/HTMLElement/enterKeyHint)
+  - : Une chaîne de caractères qui définit le libellé (ou l'icône) à présenter comme libellé d'action pour la touche <kbd>Entrée</kbd> des claviers virtuels.
+- {{DOMxRef("HTMLElement.hidden")}}
+  - : Une chaîne de caractères ou un booléen reflétant la valeur de l'attribut [`hidden`](/fr/docs/Web/HTML/Reference/Global_attributes/hidden) de l'élément.
+- {{DOMxRef("HTMLElement.inert")}}
+  - : Un booléen indiquant si l'agent utilisateur doit agir comme si le nœud donné était absent pour les évènements d'interaction, les recherches de texte dans la page («&nbsp;rechercher dans la page&nbsp;») et la sélection de texte.
+- {{DOMxRef("HTMLElement.innerText")}}
+  - : Représente le contenu texte rendu d'un nœud et de ses descendants.
+    Comme accesseur, il approxime le texte qu'une personne obtiendrait en surlignant le contenu de l'élément avec le curseur puis en le copiant dans le presse-papier.
+    Comme mutateur, il remplace le contenu à l'intérieur de l'élément sélectionné, convertissant tout saut de ligne en éléments HTML {{HTMLElement("br")}}.
+- {{DOMxRef("HTMLElement.inputMode")}}
+  - : Une chaîne de caractères reflétant la valeur de l'attribut [`inputmode`](/fr/docs/Web/HTML/Reference/Global_attributes/inputmode) de l'élément.
+- {{DOMxRef("HTMLElement.isContentEditable")}} {{ReadOnlyInline}}
+  - : Retourne un booléen indiquant si le contenu de l'élément peut être édité.
+- {{DOMxRef("HTMLElement.lang")}}
   - : Une chaîne de caractères représentant la langue du contenu, du texte et des attributs d'un élément.
-- [`HTMLElement.noModule`](/fr/docs/Web/API/HTMLElement/noModule)
-  - : Une valeur booléenne indiquant si un script d'import peut être exécuté par les agents utilisateur qui prennent en charge les modules de script.
-- [`HTMLElement.nonce`](/fr/docs/Web/API/HTMLElement/nonce)
-  - : Renvoie le nonce cryptographique utilisé par la politique de sécurité du contenu afin de déterminer si le traitement d'une récupération de ressource est autorisé.
-- [`HTMLElement.offsetHeight`](/fr/docs/Web/API/HTMLElement/offsetHeight) {{ReadOnlyInline}}
-  - : Renvoie une valeur numérique `double` contenant la hauteur de l'élément, relativement à la disposition.
-- [`HTMLElement.offsetLeft`](/fr/docs/Web/API/HTMLElement/offsetLeft) {{ReadOnlyInline}}
-  - : Renvoie une valeur numérique `double` indiquant la distance entre la bordure gauche de cet élément et la bordure gauche de son élément `offsetParent`.
-- [`HTMLElement.offsetParent`](/fr/docs/Web/API/HTMLElement/offsetParent) {{ReadOnlyInline}}
-  - : Un objet [`Element`](/fr/docs/Web/API/Element) représentant l'élément de référence par rapport auquel tous les calculs de décalage sont effectués.
-- [`HTMLElement.offsetTop`](/fr/docs/Web/API/HTMLElement/offsetTop) {{ReadOnlyInline}}
-  - : Renvoie une valeur numérique `double`, indiquant la distance entre la bordure haute de cet élément et la bordure haute de son élément `offsetParent`.
-- [`HTMLElement.offsetWidth`](/fr/docs/Web/API/HTMLElement/offsetWidth) {{ReadOnlyInline}}
-  - : Renvoie une valeur numérique `double` contenant la largeur de l'élément, relativement à la disposition.
-- [`HTMLElement.outerText`](/fr/docs/Web/API/HTMLElement/outerText)
-  - : Représente le texte rendu du contenu d'un nœud et de ses descendants. Comme accesseur, il se comporte comme [`HTMLElement.innerText`](/fr/docs/Web/API/HTMLElement/innerText) (il représente le contenu texte d'un élément et de ses descendants). Comme mutateur, il remplace le nœud sélectionné et son contenu avec la valeur fournie, convertissant au passage tout saut de ligne en éléments [`<br>`](/fr/docs/Web/HTML/Reference/Elements/br).
-- [`HTMLElement.properties`](/fr/docs/Web/API/HTMLElement/properties) {{Experimental_Inline}}{{ReadOnlyInline}}
-  - : Renvoi un objet [`HTMLPropertiesCollection`](/fr/docs/Web/API/HTMLPropertiesCollection).
-- [`HTMLElement.spellcheck`](/fr/docs/Web/API/HTMLElement/spellcheck)
-  - : Une valeur booléenne reflétant l'attribut HTML [`spellcheck`](/fr/docs/Web/HTML/Reference/Global_attributes/spellcheck). Cette propriété est présente sur tous les éléments HTML même si elle n'a pas d'effet pour tous.
-- [`HTMLElement.style`](/fr/docs/Web/API/HTMLElement/style)
-  - : Un objet [`CSSStyleDeclaration`](/fr/docs/Web/API/CSSStyleDeclaration) qui représente les déclarations contenues dans l'attribut [`style`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-style) de l'élément.
-- [`HTMLElement.tabIndex`](/fr/docs/Web/API/HTMLElement/tabIndex)
+- {{DOMxRef("HTMLElement.nonce")}}
+  - : Retourne le nombre cryptographique à usage unique utilisé par la politique de sécurité du contenu pour déterminer si une récupération de ressource donnée est autorisée.
+- {{DOMxRef("HTMLElement.offsetHeight")}} {{ReadOnlyInline}}
+  - : Retourne une valeur numérique `double` contenant la hauteur de l'élément, relativement à la disposition.
+- {{DOMxRef("HTMLElement.offsetLeft")}} {{ReadOnlyInline}}
+  - : Retourne une valeur numérique `double` indiquant la distance entre la bordure gauche de cet élément et la bordure gauche de son élément `offsetParent`.
+- {{DOMxRef("HTMLElement.offsetParent")}} {{ReadOnlyInline}}
+  - : Un objet {{DOMxRef("Element")}} représentant l'élément de référence par rapport auquel tous les calculs de décalage sont effectués.
+- {{DOMxRef("HTMLElement.offsetTop")}} {{ReadOnlyInline}}
+  - : Retourne une valeur numérique `double`, indiquant la distance entre la bordure haute de cet élément et la bordure haute de son élément `offsetParent`.
+- {{DOMxRef("HTMLElement.offsetWidth")}} {{ReadOnlyInline}}
+  - : Retourne une valeur numérique `double` contenant la largeur de l'élément, relativement à la disposition.
+- {{DOMxRef("HTMLElement.outerText")}}
+  - : Représente le contenu texte rendu d'un nœud et de ses descendants.
+    Comme accesseur, il se comporte comme la propriété {{DOMxRef("HTMLElement.innerText")}} (il représente le contenu texte rendu d'un élément et de ses descendants).
+    Comme mutateur, il remplace le nœud sélectionné et son contenu avec la valeur fournie, convertissant tout saut de ligne en éléments HTML {{HTMLElement("br")}}.
+- {{DOMxRef("HTMLElement.popover")}}
+  - : Obtient et définit l'état de la fenêtre contextuelle (<i lang="en">popover</i> en anglais) d'un élément via JavaScript (`"auto"`, `"hint"` ou `"manual"`), et peut être utilisé pour la détection de fonctionnalité. Reflète la valeur de l'attribut HTML universel [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover).
+- {{DOMxRef("HTMLElement.spellcheck")}}
+  - : Un booléen reflétant l'attribut HTML [`spellcheck`](/fr/docs/Web/HTML/Reference/Global_attributes/spellcheck). Cette propriété est présente sur tous les éléments HTML même si elle n'a pas d'effet pour tous.
+- {{DOMxRef("HTMLElement.style")}}
+  - : Un objet {{DOMxRef("CSSStyleDeclaration")}} qui représente les déclarations contenues dans l'attribut [`style`](/fr/docs/Web/HTML/Reference/Global_attributes/style) de l'élément.
+- {{DOMxRef("HTMLElement.tabIndex")}}
   - : Une valeur numérique `long` représentant la position de l'élément dans l'ordre de tabulation.
-- [`HTMLElement.title`](/fr/docs/Web/API/HTMLElement/title)
+- {{DOMxRef("HTMLElement.title")}}
   - : Une chaîne de caractères contenant le texte apparaissant dans la bulle d'information affichée lorsque la souris survole l'élément.
-- [`HTMLElement.translate`](/fr/docs/Web/API/HTMLElement/translate) {{Experimental_Inline}}
-  - : Une valeur booléenne représentant la traduction.
+- {{DOMxRef("HTMLElement.translate")}}
+  - : Un booléen représentant la traduction.
+- {{DOMxRef("HTMLElement.virtualKeyboardPolicy")}} {{Experimental_Inline}}
+  - : Une chaîne de caractères indiquant le comportement du clavier virtuel à l'écran sur les appareils tels que les tablettes, les téléphones mobiles ou d'autres appareils où un clavier matériel peut ne pas être disponible, si le contenu de l'élément est éditable (par exemple, s'il s'agit d'un élément HTML {{HTMLElement("input")}}, {{HTMLElement("textarea")}}, ou d'un élément dont l'attribut [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable) est défini).
+- {{DOMxRef("HTMLElement.writingSuggestions")}}
+  - : Une chaîne de caractères indiquant si les suggestions d'écriture fournies par le navigateur doivent être activées ou non dans le cadre de l'élément.
 
-### Gestionnaires d'évènements
+## Méthodes d'instance
 
-La plupart des propriétés pour la gestion d'évènements, de la forme `onXYZ`, sont définies par l'interface [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers) et implémentées par `HTMLElement`. Voici les gestionnaires d'évènements spécifiques à `HTMLElement`.
+_Hérite également des méthodes de son parent, {{DOMxRef("Element")}}._
 
-- [`TouchEventHandlers.ontouchstart`](/fr/docs/Web/API/TouchEventHandlers/ontouchstart) {{Non-standard_Inline}}
-  - : Renvoie le code de gestion d'évènement pour l'évènement [`touchstart`](/fr/docs/Web/API/Element/touchstart_event).
-- [`TouchEventHandlers.ontouchend`](/fr/docs/Web/API/TouchEventHandlers/ontouchend) {{Non-standard_Inline}}
-  - : Renvoie le code de gestion d'évènement pour l'évènement [`touchend`](/fr/docs/Web/API/Element/touchend_event).
-- [`TouchEventHandlers.ontouchmove`](/fr/docs/Web/API/TouchEventHandlers/ontouchmove) {{Non-standard_Inline}}
-  - : Renvoie le code de gestion d'évènement pour l'évènement [`touchmove`](/fr/docs/Web/API/Element/touchmove_event).
-- [`TouchEventHandlers.ontouchcancel`](/fr/docs/Web/API/TouchEventHandlers/ontouchcancel) {{Non-standard_Inline}}
-  - : Renvoie le code de gestion d'évènement pour l'évènement [`touchcancel`](/fr/docs/Web/API/Element/touchcancel_event).
-
-## Méthodes
-
-_Hérite des méthodes de son parent, [`Element`](/fr/docs/Web/API/Element), et implémente celles du mixin [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers)._
-
-- [`HTMLElement.attachInternals()`](/fr/docs/Web/API/HTMLElement/attachInternals) {{Experimental_Inline}}
-  - : Renvoie un objet [`ElementInternals`](/fr/docs/Web/API/ElementInternals) et active la participation d'un élément personnalisé aux formulaires HTML.
-- [`HTMLElement.blur()`](/fr/docs/Web/API/HTMLElement/blur)
-  - : Retire le focus clavier de l'élément qui a le focus.
-- [`HTMLElement.click()`](/fr/docs/Web/API/HTMLElement/click)
+- {{DOMxRef("HTMLElement.attachInternals()")}}
+  - : Retourne un objet {{DOMxRef("ElementInternals")}} et active la participation d'un élément personnalisé aux formulaires HTML.
+- {{DOMxRef("HTMLElement.blur()")}}
+  - : Retire la sélection clavier de l'élément qui a la sélection.
+- {{DOMxRef("HTMLElement.click()")}}
   - : Envoie un évènement de clic de souris à l'élément.
-- [`HTMLElement.focus()`](/fr/docs/Web/API/HTMLElement/focus)
-  - : Passe le focus clavier à l'élément courant.
+- {{DOMxRef("HTMLElement.focus()")}}
+  - : Passe la sélection clavier à l'élément courant.
+- {{DOMxRef("HTMLElement.hidePopover()")}}
+  - : Masque un élément de fenêtre contextuelle (<i lang="en">popover</i> en anglais) en le retirant de la {{Glossary("top layer", "couche supérieure")}} et en lui appliquant le style `display: none`.
+- {{DOMxRef("HTMLElement.showPopover()")}}
+  - : Affiche un élément de fenêtre contextuelle (<i lang="en">popover</i> en anglais) en l'ajoutant à la {{Glossary("top layer", "couche supérieure")}} et en retirant `display: none;` de ses styles.
+- {{DOMxRef("HTMLElement.togglePopover()")}}
+  - : Bascule un élément de fenêtre contextuelle (<i lang="en">popover</i> en anglais) entre les états masqué et affiché.
 
 ## Évènements
 
-On écoutera ces évènements à l'aide de `addEventListener()` ou en affectant un gestionnaire d'évènement à la propriété `onnomevenement` de cette interface.
+Écoutez ces évènements en utilisant {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} ou en affectant un gestionnaire d'évènement à la propriété `onnomevenement` de cette interface.
 
-- [`copy`](/fr/docs/Web/API/HTMLElement/copy_event)
-  - : Déclenché lorsque l'utilisatrice ou l'utilisateur initie une action de copier via l'interface du navigateur.
-- [`cut`](/fr/docs/Web/API/HTMLElement/cut_event)
-  - : Déclenché lorsque l'utilisatrice ou l'utilisateur initie une action de couper via l'interface du navigateur.
-- [`paste`](/fr/docs/Web/API/HTMLElement/paste_event)
-  - : Déclenché lorsque l'utilisatrice ou l'utilisateur initie une action de coller via l'interface du navigateur.
-- [`invalid`](/fr/docs/Web/API/HTMLInputElement/invalid_event)
-  - : Déclenché lorsqu'un élément ne respecte pas les contraintes pendant la validation de contrainte. Également disponible via la propriété [`onvalid`](/fr/docs/Web/API/HTMLInputElement/invalid_event).
+_Hérite également des évènements de son parent, {{DOMxRef("Element")}}._
 
-### Évènements relatifs aux animations
+- {{DOMxRef("HTMLElement/change_event", "change")}}
+  - : Déclenché lorsque la propriété `value` d'un élément {{HTMLElement("input")}}, {{HTMLElement("select")}} ou {{HTMLElement("textarea")}} a été modifiée et validée par l'utilisateur·ice. Contrairement à l'évènement {{DOMxRef("Element/input_event", "input")}}, l'évènement `change` n'est pas nécessairement déclenché pour chaque modification de la propriété `value` d'un élément.
+- {{DOMxRef("HTMLElement/command_event", "command")}}
+  - : Déclenché sur un élément contrôlé via un {{DOMxRef("HTMLButtonElement", "bouton")}} avec des valeurs valides pour {{DOMxRef("HTMLButtonElement.commandForElement", "commandForElement")}} et {{DOMxRef("HTMLButtonElement.command", "command")}}, chaque fois que le bouton est utilisé (par exemple, lors d'un clic).
+- {{DOMxRef("HTMLElement/error_event", "error")}}
+  - : Déclenché lorsqu'une ressource n'a pas pu être chargée ou ne peut pas être utilisée.
+- {{DOMxRef("HTMLElement/load_event", "load")}}
+  - : Déclenché pour les éléments contenant une ressource lorsque celle-ci a été chargée avec succès.
 
-- [`animationcancel`](/fr/docs/Web/API/Element/animationcancel_event)
-  - : Déclenché lorsqu'une animation se termine de manière inattendue. Également disponible via la propriété [`onanimationcancel`](/fr/docs/Web/API/Element/animationcancel_event).
-- [`animationend`](/fr/docs/Web/API/Element/animationend_event)
-  - : Déclenché lorsqu'une animation se termine normalement. Également disponible via la propriété [`onanimationend`](/fr/docs/Web/API/Element/animationend_event).
-- [`animationiteration`](/fr/docs/Web/API/Element/animationiteration_event)
-  - : Déclenché lorsqu'une itération d'une animation est terminée. Également disponible via la propriété [`onanimationiteration`](/fr/docs/Web/API/Element/animationiteration_event).
-- [`animationstart`](/fr/docs/Web/API/Element/animationstart_event)
-  - : Déclenché lorsqu'une animation démarre. Également disponible via la propriété [`onanimationstart`](/fr/docs/Web/API/Element/animationstart_event).
+### Évènements de glisser-déposer
 
-### Évènements de saisie
+- {{DOMxRef("HTMLElement/drag_event", "drag")}}
+  - : Déclenché lorsqu'un élément ou une sélection de texte est en train d'être déplacé.
+- {{DOMxRef("HTMLElement/dragend_event", "dragend")}}
+  - : Déclenché lorsqu'une opération de déplacement se termine (en relâchant un bouton de la souris ou en appuyant sur la touche <kbd>Échap</kbd>).
+- {{DOMxRef("HTMLElement/dragenter_event", "dragenter")}}
+  - : Déclenché lorsqu'un élément ou une sélection de texte déplacé entre dans une cible de dépôt valide.
+- {{DOMxRef("HTMLElement/dragleave_event", "dragleave")}}
+  - : Déclenché lorsqu'un élément ou une sélection de texte déplacé quitte une cible de dépôt valide.
+- {{DOMxRef("HTMLElement/dragover_event", "dragover")}}
+  - : Déclenché en continu lorsqu'un élément ou une sélection de texte est en train d'être déplacé et que le pointeur de la souris se trouve au‑dessus d'une cible de dépôt valide (toutes les 50 ms lorsque la souris ne bouge pas, sinon beaucoup plus rapidement, environ entre 5 ms (mouvement lent) et 1 ms (mouvement rapide)). Ce schéma de déclenchement est différent de {{DOMxRef("Element/mouseover_event", "mouseover")}}.
+- {{DOMxRef("HTMLElement/dragstart_event", "dragstart")}}
+  - : Déclenché lorsque l'utilisateur·ice commence à déplacer un élément ou une sélection de texte.
+- {{DOMxRef("HTMLElement/drop_event", "drop")}}
+  - : Déclenché lorsqu'un élément ou une sélection de texte est déposé sur une cible de dépôt valide.
 
-- [`beforeinput`](/fr/docs/Web/API/Element/beforeinput_event)
-  - : Déclenché lorsque la valeur d'un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input), [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select), ou [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea) est sur le point d'être modifiée.
-- [`input`](/fr/docs/Web/API/Element/input_event)
-  - : Déclenché lorsque la valeur d'un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input), [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select), ou [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea) a été modifiée. Également disponible via la propriété [`oninput`](/fr/docs/Web/API/Element/input_event).
-- [`change`](/fr/docs/Web/API/HTMLElement/change_event)
-  - : Déclenché lorsque la valeur d'un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input), [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select), ou [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea) a été modifiée et validée par l'utilisatrice ou l'utilisateur. À la différence de l'évènement [`input`](/fr/docs/Web/API/Element/input_event), l'évènement `change` n'est pas nécessairement déclenché pour chaque altération de la valeur de l'élément.
+### Évènements d'initiateur d'intérêt
 
-### Évènements de pointeur
+- {{DOMxRef("HTMLElement.interest_event", "interest")}} {{Experimental_Inline}} {{Non-standard_Inline}}
+  - : Déclenché sur l'élément cible d'un [initiateur d'intérêt](/fr/docs/Web/API/Popover_API/Using_interest_invokers) lorsque l'intérêt est affiché, permettant d'exécuter du code en réponse.
+- {{DOMxRef("HTMLElement.loseinterest_event", "loseinterest")}} {{Experimental_Inline}} {{Non-standard_Inline}}
+  - : Déclenché sur l'élément cible d'un initiateur d'intérêt lorsque l'intérêt est perdu, permettant d'exécuter du code en réponse.
 
-- [`gotpointercapture`](/fr/docs/Web/API/Element/gotpointercapture_event)
-  - : Déclenché lorsqu'un élément capture un pointeur à l'aide de [`setPointerCapture()`](/fr/docs/Web/API/Element/setPointerCapture). Également disponible via la propriété [`ongotpointercapture`](/fr/docs/Web/API/Element/gotpointercapture_event).
-- [`lostpointercapture`](/fr/docs/Web/API/Element/lostpointercapture_event)
-  - : Déclenché lorsqu'un [pointeur capturé](/fr/docs/Web/API/Pointer_events#pointer_capture) est relâché. Également disponible via la propriété [`onlostpointercapture`](/fr/docs/Web/API/Element/lostpointercapture_event).
-- [`pointercancel`](/fr/docs/Web/API/Element/pointercancel_event)
-  - : Déclenché lorsqu'un évènement de pointeur est annulé. Également disponible via la propriété [`onpointercancel`](/fr/docs/Web/API/Element/pointercancel_event).
-- [`pointerdown`](/fr/docs/Web/API/Element/pointerdown_event)
-  - : Déclenché lorsqu'un pointeur devient actif. Également disponible via la propriété [`onpointerdown`](/fr/docs/Web/API/Element/pointerdown_event).
-- [`pointerenter`](/fr/docs/Web/API/Element/pointerenter_event)
-  - : Déclenché lorsqu'un pointeur est déplacé dans la zone de contact d'un élément ou d'un de ses descendants. Également disponible via la propriété [`onpointerenter`](/fr/docs/Web/API/Element/pointerenter_event).
-- [`pointerleave`](/fr/docs/Web/API/Element/pointerleave_event)
-  - : Déclenché lorsqu'un pointeur est déplacé en dehors de la zone de contact d'un élément. Également disponible via la propriété [`onpointerleave`](/fr/docs/Web/API/Element/pointerleave_event).
-- [`pointermove`](/fr/docs/Web/API/Element/pointermove_event)
-  - : Déclenché lorsqu'un pointeur change de coordonnées. Également disponible via la propriété [`onpointermove`](/fr/docs/Web/API/Element/pointermove_event).
-- [`pointerout`](/fr/docs/Web/API/Element/pointerout_event)
-  - : Déclenché lorsqu'un pointeur est déplacé en dehors de la zone de contact d'un élément (entre autres). Également disponible via la propriété [`onpointerout`](/fr/docs/Web/API/Element/pointerout_event).
-- [`pointerover`](/fr/docs/Web/API/Element/pointerover_event)
-  - : Déclenché lorsqu'un pointeur est déplacé à l'intérieur de la zone de contact d'un élément. Également disponible via la propriété [`onpointerover`](/fr/docs/Web/API/Element/pointerover_event).
-- [`pointerup`](/fr/docs/Web/API/Element/pointerup_event)
-  - : Déclenché lorsqu'un pointeur n'est plus actif. Également disponible via la propriété [`onpointerup`](/fr/docs/Web/API/Element/pointerup_event).
+### Évènements de bascule
 
-### Évènements de transition
-
-- [`transitioncancel`](/fr/docs/Web/API/Element/transitioncancel_event)
-  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/Guides/Transitions/Using) est annulée. Également disponible via la propriété [`ontransitioncancel`](/fr/docs/Web/API/Element/transitioncancel_event).
-- [`transitionend`](/fr/docs/Web/API/Element/transitionend_event)
-  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/Guides/Transitions/Using) est terminée. Également disponible via la propriété [`ontransitionend`](/fr/docs/Web/API/Element/transitionend_event).
-- [`transitionrun`](/fr/docs/Web/API/Element/transitionrun_event)
-  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/Guides/Transitions/Using) est initialement créée. Également disponible via la propriété [`ontransitionrun`](/fr/docs/Web/API/GlobalEventHandlers/ontransitionrun).
-- [`transitionstart`](/fr/docs/Web/API/Element/transitionstart_event)
-  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/Guides/Transitions/Using) a effectivement démarré. Également disponible via la propriété [`ontransitionstart`](/fr/docs/Web/API/GlobalEventHandlers/ontransitionstart).
+- {{DOMxRef("HTMLElement/beforetoggle_event", "beforetoggle")}}
+  - : Déclenché lorsque l'élément est une [fenêtre contextuelle](/fr/docs/Web/API/Popover_API) ou {{HTMLElement("dialog")}}, avant qu'il ne soit masqué ou affiché.
+- {{DOMxRef("HTMLElement/toggle_event", "toggle")}}
+  - : Déclenché lorsque l'élément est une [fenêtre contextuelle](/fr/docs/Web/API/Popover_API), {{HTMLElement("dialog")}} ou {{HTMLElement("details")}}, juste après qu'il ait été masqué ou affiché.
 
 ## Spécifications
 
@@ -173,4 +164,4 @@ On écoutera ces évènements à l'aide de `addEventListener()` ou en affectant 
 
 ## Voir aussi
 
-- [`Element`](/fr/docs/Web/API/Element)
+- L'interface {{DOMxRef("Element")}}

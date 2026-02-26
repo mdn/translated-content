@@ -1,14 +1,16 @@
 ---
 title: background-size
 slug: Web/CSS/Reference/Properties/background-size
-original_slug: Web/CSS/background-size
+l10n:
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`background-size`** définit la taille de l'image d'arrière-plan de l'élément.
+L'image peut conserver sa taille naturelle, être étirée ou ajustée pour occuper l'espace disponible.
 
-La propriété [CSS](/fr/docs/Web/CSS) **`background-size`** définit la taille des images d'arrière-plan pour l'élément. La taille de l'image peut être contrainte, complètement ou partiellement afin de conserver ses proportions.
+Les espaces non couverts par une image d'arrière-plan sont remplis avec la propriété {{CSSxRef("background-color")}} et la couleur d'arrière-plan sera visible derrière les images d'arrière-plan qui comportent de la transparence ou de la translucidité.
 
-{{InteractiveExample("CSS Demo: background-size")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: background-size")}}
 
 ```css interactive-example-choice
 background-size: contain;
@@ -45,9 +47,6 @@ background-size: 200px 100px;
 }
 ```
 
-> [!NOTE]
-> L'espace qui n'est pas rempli par l'image d'arrière-plan aura la couleur définie par la propriété [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color). De plus, la couleur d'arrière-plan sera visible si l'image d'arrière-plan est transparente.
-
 ## Syntaxe
 
 ```css
@@ -55,17 +54,15 @@ background-size: 200px 100px;
 background-size: cover;
 background-size: contain;
 
-/* Une seule valeur                         */
-/* La valeur désigne la largeur de l'image. */
-/* La hauteur vaut 'auto'                   */
+/* Une seule valeur */
+/* La largeur de l'image (la hauteur vaut 'auto') */
 background-size: 50%;
 background-size: 3.2em;
 background-size: 12px;
 background-size: auto;
 
-/* Deux valeurs                            */
-/* Première valeur : la largeur de l'image */
-/* Seconde valeur : la hauteur de l'image  */
+/* Deux valeurs */
+/* Première valeur : la largeur / Seconde valeur : la hauteur  */
 background-size: 50% auto;
 background-size: 3em 25%;
 background-size: auto 6px;
@@ -80,51 +77,62 @@ background-size: 6px, auto, contain;
 background-size: inherit;
 background-size: initial;
 background-size: revert;
+background-size: revert-layer;
 background-size: unset;
 ```
 
 La propriété `background-size` peut être définie de différentes façons&nbsp;:
 
-- Avec l'un des mots-clés [`contain`](#contain) ou [`cover`](#cover)
-- Avec une seule valeur qui indique la largeur de l'image (la hauteur vaut alors [`auto`](#auto) par défaut)
-- Avec deux valeurs dont la première représente la largeur et la seconde la hauteur. Chaque valeur peut être une longueur (type [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)) ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)) ou encore [`auto`](#auto).
+- En utilisant les valeurs de mot-clé `contain` ou `cover`.
+- En utilisant uniquement une valeur de largeur, auquel cas la hauteur vaut `auto` par défaut.
+- En utilisant à la fois une valeur de largeur et une valeur de hauteur, auquel cas la première définit la largeur et la seconde définit la hauteur.
+  Chaque valeur peut être une {{CSSxRef("&lt;length&gt;")}}, une {{CSSxRef("&lt;percentage&gt;")}}, ou `auto`.
 
-Lorsqu'on souhaite paramétrer la taille de plusieurs images d'arrière-plan, on peut séparer ces valeurs par des virgules (l'ordre utilisé entre les valeurs suit celui de [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image)).
+Pour définir la taille de plusieurs images d'arrière-plan, séparez la valeur de chacune par une virgule.
 
 ### Valeurs
 
 - `contain`
-  - : Un mot-clé qui redimensionne l'image afin qu'elle soit la plus grande possible et que l'image conserve ses proportions. L'image est contrainte dans le conteneur. Les zones éventuellement vides sont remplies avec la couleur d'arrière-plan (définie grâce à [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color)). Par défaut, l'image est centrée sauf si [`background-position`](/fr/docs/Web/CSS/Reference/Properties/background-position) a été modifiée.
+  - : Redimensionne l'image pour qu'elle soit aussi grande que possible dans son conteneur sans rogner ni déformer l'image.
+    Si le conteneur est plus grand que l'image, cela provoque un pavage de l'image, sauf si la propriété {{CSSxRef("background-repeat")}} vaut `no-repeat`.
 - `cover`
-  - : Un mot-clé dont le comportement est opposé à celui de `contain`. L'image est redimensionnée pour être aussi grande que possible et pour conserver ses proportions. L'image couvre toute la largeur ou la hauteur du conteneur et les parties qui dépassent sont rognées si les proportions du conteneur sont différentes (il n'y a aucun espace libre sur lequel on verrait la couleur d'arrière-plan).
+  - : Redimensionne l'image (en conservant ses proportions) à la plus petite taille possible pour remplir le conteneur (c'est-à-dire&nbsp;: sa hauteur et sa largeur recouvrent entièrement _le conteneur_), sans laisser d'espace vide.
+    Si les proportions de l'arrière-plan diffèrent de celles de l'élément, l'image est rognée verticalement ou horizontalement.
 - `auto`
-  - : Un mot-clé qui redimensionne l'image d'arrière-plan afin que ses proportions soient conservées.
-- `<length>`
-  - : Une valeur de type [`<length>`](/fr/docs/Web/CSS/Reference/Values/length) qui redimensionne l'image afin que celle-ci occupe la longueur indiquée dans la dimension concernée. Les valeurs négatives ne sont pas autorisées.
-- `<percentage>`
-  - : Une valeur de type [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage) qui redimensionne l'image d'arrière-plan proportionnellement à la taille de la zone dédiée à l'arrière-plan, définie via [`background-origin`](/fr/docs/Web/CSS/Reference/Properties/background-origin). Par défaut, cette zone correspond à la boîte de contenu et de remplissage (<i lang="en">padding</i>) mais peut être modifiée pour contenir uniquement la boîte de contenu ou, à l'inverse, les boîtes de contenu, remplissage et marge. Si la propriété [`background-attachment`](/fr/docs/Web/CSS/Reference/Properties/background-attachment) vaut `fixed`, la zone de positionnement de l'arrière-plan sera la fenêtre du navigateur (sans les barres de défilement). Les valeurs négatives ne sont pas autorisées.
+  - : Redimensionne l'image d'arrière-plan dans la direction concernée de façon à conserver ses proportions intrinsèques.
+- {{CSSxRef("&lt;length&gt;")}}
+  - : Étire l'image dans la dimension concernée à la longueur indiquée. Les valeurs négatives ne sont pas autorisées.
+- {{CSSxRef("&lt;percentage&gt;")}}
+  - : Étire l'image dans la dimension concernée au pourcentage indiqué de la _zone de positionnement de l'arrière-plan_.
+    La zone de positionnement de l'arrière-plan est déterminée par la valeur de {{CSSxRef("background-origin")}} (par défaut, la boîte de remplissage).
+    Cependant, si la propriété {{CSSxRef("background-attachment")}} de l'arrière-plan vaut `fixed`, la zone de positionnement est alors l'ensemble de la {{Glossary("viewport", "zone d'affichage")}}.
+    Les valeurs négatives ne sont pas autorisées.
 
 ### Dimensions intrinsèques et proportions
 
 Le calcul des valeurs dépend des dimensions intrinsèques de l'image (sa largeur et sa hauteur) et de ses proportions intrinsèques (le rapport entre la largeur et la hauteur). Voici les différents cas de figures possibles&nbsp;:
 
 - Une image matricielle (telle qu'une image JPG) possède toujours des dimensions intrinsèques et des proportions intrinsèques.
-- Une image vectorielle (telle qu'une image SVG) ne possède pas nécessairement de dimensions intrinsèques. Si elle possède à la fois une dimension verticale et une dimension horizontale intrinsèques, elle possèdera alors des proportions intrinsèques. Si elle ne possède qu'une ou aucune dimension intrinsèque, elle peut avoir ou ne pas avoir de proportions.
-- Un dégradé CSS (cf. [`<gradient>`](/fr/docs/Web/CSS/Reference/Values/gradient)) ne possède ni dimension ni proportion intrinsèque.
-- Les images d'arrière-plan créées avec la fonction [`element()`](/fr/docs/Web/CSS/Reference/Values/element) utiliseront les dimensions et proportions intrinsèques de l'élément générateur.
+- Une image vectorielle (telle qu'une image SVG) ne possède pas nécessairement de dimensions intrinsèques.
+  Si elle possède à la fois une dimension verticale et une dimension horizontale intrinsèques, elle possèdera alors des proportions intrinsèques.
+  Si elle ne possède qu'une ou aucune dimension intrinsèque, elle peut avoir ou ne pas avoir de proportions.
+- Les {{CSSxRef("gradient")}} CSS n'ont pas de dimensions intrinsèques ni de proportions intrinsèques.
+- Les images d'arrière-plan créées avec la fonction {{CSSxRef("element()")}} utilisent les dimensions et proportions intrinsèques de l'élément générateur.
 
 > [!NOTE]
-> Pour Gecko, les images d'arrière-plan créées avec la fonction [`element()`](/fr/docs/Web/CSS/Reference/Values/element) sont actuellement traitées comme des images ayant les dimensions de l'élément ou, si la zone de positionnement est un élément SVG, avec les proportions intrinsèques. Ce comportement n'est pas standard.
+> Pour Gecko, les images d'arrière-plan créées avec la fonction {{CSSxRef("element()")}} sont actuellement traitées comme des images ayant les dimensions de l'élément ou, si la zone de positionnement est un élément SVG, avec les proportions intrinsèques. Ce comportement n'est pas standard.
 
 Selon le caractère intrinsèque ou non des dimensions et des proportions, la taille d'affichage de l'image d'arrière-plan est calculée de la façon suivante&nbsp;:
 
 - **Si les deux composants de `background-size` sont définis et qu'aucun ne vaut `auto`&nbsp;:** L'image utilise la taille définie.
-- **Si `background-size` vaut `contain` ou `cover`&nbsp;:** L'image est affichée et ses proportions sont conservées pour que l'image soit contenue dans la zone ou la recouvre complètement. Si l'image ne possède pas de proportions intrinsèques&nbsp;; elle est affichée avec la taille de la zone de positionnement de l'arrière-plan.
+- **Si `background-size` vaut `contain` ou `cover`&nbsp;:** L'image est affichée et ses proportions sont conservées pour que l'image soit contenue dans la zone ou la recouvre complètement.
+  Si l'image ne possède pas de proportions intrinsèques&nbsp;; elle est affichée avec la taille de la zone de positionnement de l'arrière-plan.
 - **Si `background-size` vaut `auto` ou `auto auto`&nbsp;:**
   - Si l'image possède deux dimensions intrinsèques, c'est cette taille qui est utilisée.
   - Si elle ne possède pas de dimension intrinsèque ni de proportion intrinsèque, elle est affichée avec la taille de la zone dédiée à l'arrière-plan.
   - Si elle n'a aucune dimension mais possède une proportion, elle sera affichée comme si la valeur `contain` avait été utilisée.
   - Si l'image possède une dimension intrinsèque et une proportion, elle est affichée avec cette dimension et cette proportion.
+    L'autre dimension est calculée à partir de la dimension indiquée et des proportions intrinsèques.
   - Si l'image possède une dimension intrinsèque mais aucune proportion, elle sera affichée avec la dimension intrinsèque et l'autre dimension suivra la taille de la zone pour l'arrière-plan.
 
   > [!NOTE]
@@ -135,39 +143,16 @@ Selon le caractère intrinsèque ou non des dimensions et des proportions, la ta
   - Si l'image ne possède aucune proportion intrinsèque, la dimension indiquée sera utilisée pour la dimension concernée et on utilisera la dimension intrinsèque de l'image pour l'autre axe si elle existe. Sinon, on prendra la dimension de la zone de l'arrière-plan pour cet axe.
 
 > [!NOTE]
-> Le dimensionnement des images d'arrière-plan qui sont des images vectorielles sans dimension ou proportion intrinsèque n'est pas implémenté par l'ensemble des navigateurs. Attention à bien vérifier le résultat obtenu dans les différents navigateurs par rapport aux règles émises ci-avant.
-
-### Utiliser les dégradés
-
-Si vous utilisez un dégradé (`<gradient>`) comme arrière-plan et indiquez la propriété `background-size` correspondante, il vaut mieux ne pas utiliser une taille qui utilise un seul composant `auto` ou qui est définie avec une seule valeur de largeur (par exemple, `background-size: 50%`).
-
-L'affichage des dégradés peut différer entre les navigateurs dont certains n'implémentent pas le rendu [conformément à la spécification CSS de `background-size`](https://www.w3.org/TR/css3-background/#the-background-size) et [à la spécification pour les dégradés](https://dev.w3.org/csswg/css3-images/#gradients).
-
-```css
-.exemple-degrade {
-  width: 50px;
-  height: 100px;
-  background-image: linear-gradient(blue, red);
-
-  /* Utilisation risquée */
-  background-size: 25px;
-  background-size: 50%;
-  background-size: auto 50px;
-  background-size: auto 50%;
-
-  /* Peut être utilisé sans problème */
-  background-size: 25px 50px;
-  background-size: 50% 50%;
-}
-```
+> Le dimensionnement des images d'arrière-plan qui sont des images vectorielles sans dimension ou proportion intrinsèque n'est pas implémenté par l'ensemble des navigateurs.
+> Attention à bien vérifier le résultat obtenu dans les différents navigateurs par rapport aux règles émises ci-avant.
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -185,7 +170,7 @@ Prenons une image d'une taille qui ne correspond pas forcément à notre documen
 
 ```css
 .tiledBackground {
-  background-image: url(logo-quantum.png);
+  background-image: url("https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png");
   background-size: 150px;
   width: 300px;
   height: 300px;
@@ -196,7 +181,7 @@ Prenons une image d'une taille qui ne correspond pas forcément à notre documen
 
 #### Résultat
 
-{{EmbedLiveSample("", 340, 340)}}
+{{EmbedLiveSample("Réaliser un pavage", 340, 340)}}
 
 Voir [Redimensionner des images d'arrière-plan](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images) pour plus d'exemples.
 
@@ -212,4 +197,4 @@ Voir [Redimensionner des images d'arrière-plan](/fr/docs/Web/CSS/Guides/Backgro
 
 - [Redimensionner les images d'arrière-plan](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images)
 - [Redimensionner les arrière-plans SVG](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds)
-- [`object-fit`](/fr/docs/Web/CSS/Reference/Properties/object-fit)
+- La propriété {{CSSxRef("object-fit")}}

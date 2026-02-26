@@ -2,12 +2,12 @@
 title: Éléments en ligne
 slug: Glossary/Inline-level_content
 l10n:
-  sourceCommit: 2530db14de9ac226cf06f84540fa0101e804ca9b
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 En CSS, le contenu qui participe à la mise en page en ligne est appelé **contenu de niveau en ligne**. La plupart des séquences de texte, des éléments remplacés et du contenu généré sont, par défaut, de niveau en ligne.
 
-Dans la mise en page en ligne, un flux mixte de texte, d'{{ Glossary("replaced elements", "éléments remplacés") }} et d'autres boîtes en ligne est disposé en les fragmentant dans une pile de boîtes de ligne. À l'intérieur de chaque boîte de ligne, les boîtes de niveau en ligne sont alignées entre elles verticalement ou horizontalement, selon le mode d'écriture. En général, elles sont alignées sur les lignes de base de leur texte. Cela peut être modifié avec le CSS.
+Dans la mise en page en ligne, un flux mixte de texte, d'{{Glossary("replaced elements", "éléments remplacés")}} et d'autres boîtes en ligne est disposé en les fragmentant dans une pile de boîtes de ligne. À l'intérieur de chaque boîte de ligne, les boîtes de niveau en ligne sont alignées entre elles verticalement ou horizontalement, selon le mode d'écriture. En général, elles sont alignées sur les lignes de base de leur texte. Cela peut être modifié avec le CSS.
 
 ![mise en page en ligne](inline_layout.png)
 

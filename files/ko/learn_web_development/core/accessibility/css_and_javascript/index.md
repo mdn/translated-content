@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}
 
 CSS와 JavaScript는 적절하게 사용될 때 접근성 높은 웹 경험을 제공할 수 있지만, 잘못 사용될 경우 접근성에 심각한 영향을 줄 수 있습니다. 이 문서에서는 복잡한 콘텐츠라도 가능한 한 접근성을 보장하기 위해 고려해야 할 몇 가지 CSS와 JavaScript 모범 사례를 설명합니다.
 
@@ -366,4 +366,4 @@ imgThumb.onblur = hideImg;
 
 다음은 WAI-ARIA입니다!
 
-{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}

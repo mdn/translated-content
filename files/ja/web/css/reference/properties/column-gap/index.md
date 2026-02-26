@@ -1,9 +1,8 @@
 ---
 title: column-gap
 slug: Web/CSS/Reference/Properties/column-gap
-original_slug: Web/CSS/column-gap
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`column-gap`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の段または列の間のすき間（{{glossary("gutters", "溝")}}）の寸法を設定します。
@@ -53,7 +52,7 @@ column-gap: 20px;
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 ```
@@ -221,5 +220,5 @@ div:nth-of-type(3n) {
 
 - {{CSSxRef("row-gap")}}
 - {{CSSxRef("gap")}}
-- [グリッドレイアウトの基本概念 - 溝](/ja/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#溝)
+- [グリッドレイアウトの基本概念: 溝](/ja/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#溝)
 - [段組みのスタイル設定](/ja/docs/Web/CSS/Guides/Multicol_layout/Styling_columns)

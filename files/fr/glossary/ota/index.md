@@ -1,13 +1,12 @@
 ---
 title: OTA
 slug: Glossary/OTA
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
-
-_Over The Air_ (**OTA**) se réfère à un système de mise à jour automatique sur des appareils connectés à un serveur central. Tous les propriétaires d'un appareil qui vont recevoir des instructions d'"update" _(mise à jour)_ sont sur le même canal, et chaque appareil a souvent accès à plusieurs canaux (ex : pour les outils production ou ingénieur)
+_Over The Air_ (**<abbr>OTA</abbr>**) désigne la mise à jour automatique des logiciels sur des appareils connectés depuis un serveur central. Tous les appareils recevant un même ensemble de mises à jour se trouvent sur le même «&nbsp;canal&nbsp;», et chaque appareil peut souvent accéder à plusieurs canaux (par exemple pour des versions de production ou de développement).
 
 ## Voir aussi
 
 - [<i lang="en">Over-the-air programming</i>](https://fr.wikipedia.org/wiki/Over-the-air_programming) sur Wikipédia
-- [Créer et appliquer des paquets de mise à jour B2G OS](/fr/docs/Archive/B2G_OS/Building_and_installing_Boot_to_Gecko/B2G_OS_update_packages)

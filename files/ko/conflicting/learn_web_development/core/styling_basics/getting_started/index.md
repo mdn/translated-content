@@ -4,7 +4,7 @@ slug: conflicting/Learn_web_development/Core/Styling_basics/Getting_started
 original_slug: Learn/CSS/First_steps/How_CSS_is_structured
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/What_is_CSS", "conflicting/Learn_web_development/Core/Styling_basics")}}
 
 CSS 가 무엇인지, 그리고 CSS 의 기본 사용법에 대해 여러분은 알고 있습니다. 이제 언어 자체의 구조를 조금 더 깊이 살펴볼 차례입니다. 우리는 이미 여기에서 논의된 많은 개념들을 만났습니다. 나중에 혼란스러워 하는 개념을 발견하면, 이 개념으로 돌아와서 요약할 수 있습니다.
 
@@ -339,13 +339,13 @@ CSS 속성을 특정 값으로 설정하는 것은 CSS 언어의 핵심 기능�
 
 ## @rules
 
-아직, 우리는 [`@rules`](/ko/docs/Web/CSS/CSS_syntax/At-rule) ("at-rules" 로 발음) 가 발생하지 않았습니다. 이것들은 CSS 에 행동 방법에 대한 지침을 제공하는 특수 규칙입니다. 일부 `@rules` 는 규칙 이름과 값으로 단순합니다. 예를 들어, 추가 스타일 시트를 기본 CSS 스타일 시트로 가져오려면 `@import` 를 사용할 수 있습니다:
+아직, 우리는 [`@rules`](/ko/docs/Web/CSS/Guides/Syntax/At-rules) ("at-rules" 로 발음) 가 발생하지 않았습니다. 이것들은 CSS 에 행동 방법에 대한 지침을 제공하는 특수 규칙입니다. 일부 `@rules` 는 규칙 이름과 값으로 단순합니다. 예를 들어, 추가 스타일 시트를 기본 CSS 스타일 시트로 가져오려면 `@import` 를 사용할 수 있습니다:
 
 ```css
 @import "styles2.css";
 ```
 
-접하게 될 가장 일반적인 `@rules` 중 하나는 `@media` 입니다. 이는 특정 조건이 참일 때만 (예: 화면 해상도가 일정 폭 이상이거나 화면이 일정 폭 보다 넓을 때) CSS 를 적용할 수 있는 [미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries) 를 사용할 수 있습니다.
+접하게 될 가장 일반적인 `@rules` 중 하나는 `@media` 입니다. 이는 특정 조건이 참일 때만 (예: 화면 해상도가 일정 폭 이상이거나 화면이 일정 폭 보다 넓을 때) CSS 를 적용할 수 있는 [미디어 쿼리](/ko/docs/Web/CSS/Guides/Media_queries) 를 사용할 수 있습니다.
 
 아래 CSS 에는, `<body>` 요소에 분홍색 배경색을 주는 스타일 시트가 있습니다. 그러나, `@media` 를 사용하여 30em 보다 넓은 viewport 가 있는 브라우저에만 적용되는 스타일 시트 섹션을 만듭니다. 브라우저가 30em 보다 넓은 경우 배경색이 파란색이 됩니다.
 
@@ -575,4 +575,4 @@ padding- left: 10px;
 
 브라우저가 HTML 과 CSS 를 가져와서 웹 페이지로 전환하는 방법에 대해 약간 이해하는 것이 유용합니다. 따라서 다음 기사 — [CSS 작동 방식](/ko/docs/Learn_web_development/Core/Styling_basics/What_is_CSS) — 에서 해당 작업을 살펴 보겠습니다.
 
-{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/What_is_CSS", "conflicting/Learn_web_development/Core/Styling_basics")}}

@@ -30,7 +30,7 @@ _変更なし。_
 
 - [`display-mode`](/ja/docs/Web/CSS/Reference/At-rules/@media/display-mode) メディアクエリーの値 `minimal-ui` および `standalone` をサポートしました ([Firefox バグ 1369815](https://bugzil.la/1369815))。[ウェブアプリマニフェストの `display` フィールド](/ja/docs/Web/Progressive_web_apps/Manifest#display) もご覧ください。
 - `grid-row-gap` および `grid-column-gap` プロパティが、{{CSSxRef("grid")}} ショートハンドプロパティでリセットされないようになりました ([Firefox バグ 1387410](https://bugzil.la/1387410))。
-- 設定項目 `layout.css.clip-path-shapes.enabled` を削除しました ([Firefox バグ 1399767](https://bugzil.la/1399767))。この設定項目で、{{CSSxRef("clip-path")}} の {{cssxref("&lt;basic-shape&gt;")}} のサポートを無効化できました。これは Firefox 54 で導入されたものであり、今後は無効化できません。
+- 設定項目 `layout.css.clip-path-shapes.enabled` を削除しました ([Firefox バグ 1399767](https://bugzil.la/1399767))。この設定項目で、{{CSSxRef("clip-path")}} の {{cssxref("basic-shape")}} のサポートを無効化できました。これは Firefox 54 で導入されたものであり、今後は無効化できません。
 
 #### Quantum CSS に関する補足
 
@@ -99,7 +99,7 @@ _変更なし。_
 ### セキュリティ
 
 - `resource://` URL が情報を漏えいしないようになりました ([Firefox バグ 863246](https://bugzil.la/863246))。
-- Data URI のオリジンが、ナビゲーションの責任がある設定オブジェクトのオリジンを継承するのではなく、一意の opaque origin として扱うようになりました ([Firefox バグ 1324406](https://bugzil.la/1324406))。
+- data URL のオリジンが、ナビゲーションの責任がある設定オブジェクトのオリジンを継承するのではなく、一意の opaque origin として扱うようになりました ([Firefox バグ 1324406](https://bugzil.la/1324406))。
 
 ### プラグイン
 

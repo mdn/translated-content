@@ -1,44 +1,64 @@
 ---
-title: SVG (Scalable Vector Graphics)
+title: "SVG : Scalable Vector Graphics"
+short-title: SVG
 slug: Web/SVG
+l10n:
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
 
-{{SVGRef}}
+Les **Scalable Vector Graphics (SVG)** sont un langage de balisage basé sur [XML](/fr/docs/Web/XML) permettant de décrire des [images vectorielles](https://fr.wikipedia.org/wiki/Image_vectorielle) en deux dimensions.
 
-## Démarrer avec SVG
+Il s'agit donc d'un standard Web ouvert, basé sur du texte, pour décrire des images pouvant être affichées proprement à n'importe quelle taille et conçues pour fonctionner parfaitement avec d'autres standards du Web, notamment [CSS](/fr/docs/Web/CSS), [DOM](/fr/docs/Web/API/Document_Object_Model), [JavaScript](/fr/docs/Web/JavaScript) et [SMIL](/fr/docs/Web/SVG/Guides/SVG_animation_with_SMIL). SVG est, en substance, pour le graphisme ce que [HTML](/fr/docs/Web/HTML) est pour le texte.
 
-**SVG (pour <i lang="en">Scalable Vector Graphics</i> en anglais, soit «&nbsp;graphiques vectoriels adaptables&nbsp;»**) est un langage construit à partir de [XML](/fr/docs/Web/XML) et qui permet de décrire des [graphiques vectoriels](https://fr.wikipedia.org/wiki/Image_vectorielle) en deux dimensions.
+Les images SVG et leurs comportements associés sont définis dans des fichiers texte [XML](/fr/docs/Web/XML), ce qui signifie qu'elles peuvent être recherchées, indexées, scriptées et compressées. De plus, cela signifie qu'elles peuvent être créées et modifiées avec n'importe quel éditeur de texte ou logiciel de dessin.
 
-Il s'agit d'un format texte, standardisé de façon ouverte pour le Web, pour décrire des images qui peuvent être affichées nettement à n'importe quelle taille et qui est conçu pour fonctionner avec les autres technologies web standard comme [CSS](/fr/docs/Web/CSS), [DOM](/fr/docs/Web/API/Document_Object_Model), [JavaScript](/fr/docs/Web/JavaScript), et [SMIL](/fr/docs/Web/SVG/Guides/SVG_animation_with_SMIL). D'une certaine façon, SVG est aux graphiques ce que [HTML](/fr/docs/Web/HTML) est au texte.
+Comparées aux formats d'images matricielles classiques comme {{Glossary("JPEG")}} ou {{Glossary("PNG")}}, les images vectorielles au format SVG peuvent être affichées à n'importe quelle taille sans perte de qualité et peuvent être facilement localisées en modifiant le texte qu'elles contiennent, sans avoir besoin d'un éditeur graphique. Avec les bibliothèques appropriées, les fichiers SVG peuvent même être localisés à la volée.
 
-Les images SVG et leur comportement sont définies dans des fichiers texte [XML](/fr/docs/Web/XML). Cela signifie qu'on peut rechercher dans ces textes, les indexer, réaliser des opérations scriptées, les compresser. De plus, cela signifie aussi qu'on peut en créer ou en éditer avec n'importe quel éditeur de texte ou avec des logiciels de dessin.
+SVG est développé par le [World Wide Web Consortium (W3C) <sup>(angl.)</sup>](https://www.w3.org/) depuis 1999.
 
-Contrairement aux images matricielles classiques aux formats [JPEG](/fr/docs/Glossary/JPEG) ou [PNG](/fr/docs/Glossary/PNG), les images SVG peuvent être affichées à n'importe quelle taille sans perte de qualité. De plus, on peut les localiser en adaptant le texte qu'elles contiennent, sans avoir nécessairement besoin d'un éditeur graphique. Avec des bibliothèques logicielles adaptées, les fichiers SVG peuvent être traduits à la volée.
+## Tutoriels
 
-SVG a été développé par le [W3C (World Wide Web Consortium)](https://www.w3.org/) depuis 1999.
+Les [tutoriels SVG](/fr/docs/Web/SVG/Tutorials) sont conçus pour vous guider à travers différents sujets, en partant du principe que vous n'avez aucune expérience préalable, des bases jusqu'aux techniques avancées.
 
-Voir aussi [le tutoriel SVG](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch).
+- [Découvrir SVG depuis zéro](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch)
+  - : Ce tutoriel vise à expliquer le fonctionnement interne de SVG et regorge de détails techniques. Si vous souhaitez simplement dessiner de belles images, vous trouverez peut-être des ressources plus utiles sur la [page de documentation d'Inkscape <sup>(angl.)</sup>](https://inkscape.org/learn/). Une autre bonne introduction à SVG est proposée par le [SVG Primer du W3C <sup>(angl.)</sup>](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html). Découvrez aussi ce [tutoriel SVG <sup>(angl.)</sup>](https://svg-tutorial.com/) façon calendrier de l'Avent qui vous guide pour coder 25 SVG festifs.
 
-## Documentation
+## Guides
 
-- [Référence des éléments SVG](/fr/docs/Web/SVG/Reference/Element)
-  - : Des informations à propos de chaque élément SVG.
-- [Référence des attributs SVG](/fr/docs/Web/SVG/Reference/Attribute)
-  - : Des informations à propos de chaque attribut SVG.
-- [Référence du DOM SVG](/fr/docs/Web/API/Document_Object_Model#interfaces_svg)
-  - : Des informations quant à l'API DOM exposée par SVG, qui permet des interactions avec JavaScript.
-- [Appliquer des effets SVG à du contenu HTML](/fr/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
-  - : SVG peut fonctionner avec [HTML](/fr/docs/Glossary/HTML), [CSS](/fr/docs/Glossary/CSS), et [JavaScript](/fr/docs/Glossary/JavaScript). On pourra utiliser SVG pour [améliorer de façon progressive une page ou une application web](/fr/docs/Web/SVG/Guides/SVG_in_HTML).
+Les [guides SVG](/fr/docs/Web/SVG/Guides) vous aident à utiliser SVG sur le Web, couvrant des sujets comme l'intégration, les types MIME (médias), la gestion des scripts, les animations, les filtres, et plus encore.
 
-## Outils
-
-- [Suite de tests SVG](https://github.com/w3c/svgwg/wiki/Testing)
-- [Validateur de balisage](https://validator.w3.org/#validate_by_input)
-
-## Exemples
-
-- [Bonnes pratiques pour l'édition de SVG (en anglais)](https://jwatt.org/svg/authoring/)
-- [SVG comme image](/fr/docs/Web/SVG/Guides/SVG_as_an_image)
+- [Appliquer des effets SVG au contenu HTML](/fr/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
+  - : Les navigateurs modernes prennent en charge l'utilisation de SVG dans les styles CSS pour appliquer des effets graphiques au contenu HTML.
+- [Type de données](/fr/docs/Web/SVG/Guides/Content_type)
+  - : Le SVG utilise plusieurs types de données. Cet article les liste avec leur syntaxe et une description de leur usage.
+- [Cours accéléré sur les espaces de noms](/fr/docs/Web/SVG/Guides/Namespaces_crash_course)
+  - : Les espaces de noms sont essentiels pour les agents utilisateurs qui gèrent plusieurs dialectes XML. Les navigateurs doivent être très stricts&nbsp;; prendre le temps de comprendre les espaces de noms vous évitera bien des soucis plus tard.
+- [Scripts](/fr/docs/Web/SVG/Guides/Scripting)
+  - : Il existe plusieurs façons de créer et manipuler du SVG avec JavaScript. Ce document décrit la gestion des évènements, l'interactivité et l'utilisation de SVG embarqué.
 - [Animation SVG avec SMIL](/fr/docs/Web/SVG/Guides/SVG_animation_with_SMIL)
-- [Galerie d'art SVG](https://www1.plurib.us/svg_gallery/)
-- [D3](https://d3js.org) (une bibliothèque JavaScript qui permet de visualiser des données avec HTML, SVG, et CSS)
+  - : SMIL est un langage XML pour écrire des présentations multimédias interactives. Les auteur·ice·s peuvent utiliser la syntaxe SMIL dans SVG pour définir le minutage et la disposition des éléments à animer.
+- [SVG comme image](/fr/docs/Web/SVG/Guides/SVG_as_an_image)
+  - : SVG peut être utilisé comme format d'image dans HTML, CSS, certains éléments SVG et via l'API Canvas. Cette page liste les fonctionnalités où SVG peut être utilisé comme source d'image.
+- [Filtres SVG](/fr/docs/Web/SVG/Guides/SVG_filters)
+  - : SVG prend en charge les filtres pour appliquer des effets comme une ombre ou un flou, ou même fusionner les résultats de différents filtres.
+- [Introduction à SVG dans HTML](/fr/docs/Web/SVG/Guides/SVG_in_HTML)
+  - : Cet article montre comment utiliser SVG en ligne et inclut des exemples illustrés.
+
+## Référence
+
+La [référence SVG](/fr/docs/Web/SVG/Reference) contient des informations complètes sur les éléments, attributs et interfaces DOM, ainsi que la liste des spécifications et documents de standards associés.
+
+- [Éléments SVG](/fr/docs/Web/SVG/Reference/Element)
+  - : Les éléments SVG utilisés pour construire, dessiner et organiser des graphiques vectoriels.
+- [Attributs SVG](/fr/docs/Web/SVG/Reference/Attribute)
+  - : Les attributs SVG disponibles qui permettent de définir la façon dont un élément doit être traité ou affiché.
+- [Interface DOM SVG](/fr/docs/Web/API/Document_Object_Model#svg_dom)
+  - : L'API DOM SVG pour interagir avec SVG en JavaScript.
+
+## Ressources
+
+- [Suite de tests SVG <sup>(angl.)</sup>](https://github.com/w3c/svgwg/wiki/Testing)
+- [Validateur de balisage <sup>(angl.)</sup>](https://validator.w3.org/#validate_by_input)
+- [Guide d'écriture SVG <sup>(angl.)</sup>](https://jwatt.org/svg/authoring/)
+- [Tutoriel SVG <sup>(angl.)</sup>](https://svg-tutorial.com/)
+- [Bibliothèque de visualisation de données D3 <sup>(angl.)</sup>](https://d3js.org/)

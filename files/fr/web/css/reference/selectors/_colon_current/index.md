@@ -1,9 +1,8 @@
 ---
 title: :current
 slug: Web/CSS/Reference/Selectors/:current
-original_slug: Web/CSS/:current
 l10n:
-  sourceCommit: bc761c19c07b875eb889d4aad87b18d8443da339
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{SeeCompatTable}}
@@ -82,6 +81,6 @@ Actuellement, aucun navigateur ne prend en charge cette fonctionnalité.
 ## Voir aussi
 
 - [Format Web Video Text Tracks (WebVTT)](/fr/docs/Web/API/WebVTT_API)
-- {{cssxref(":past")}}
-- {{cssxref(":future")}}
+- La pseudo-classe {{CSSxRef(":past")}}
+- La pseudo-classe {{CSSxRef(":future")}}
 - Le module des [Sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors)

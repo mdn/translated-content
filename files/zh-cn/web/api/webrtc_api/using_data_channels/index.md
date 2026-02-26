@@ -88,6 +88,6 @@ Firefox 对 ndata 的支持正在实现中；查看 [Firefox bug 1381145](https:
 
 ## 安全
 
-所有使用 WebRTC 传输的数据都是加密的。在 `RTCDataChannel` 的情况下，所使用的加密方法是数据报传输层安全（DTLS），它基于[传输层安全](/zh-CN/docs/Web/Security/Transport_Layer_Security)（TLS）。由于 TLS 用于保护每个 HTTPS 连接，因此你在数据通道上发送的任何数据都与用户浏览器发送或接收的其他数据一样安全。
+所有使用 WebRTC 传输的数据都是加密的。在 `RTCDataChannel` 的情况下，所使用的加密方法是数据报传输层安全（DTLS），它基于[传输层安全](/zh-CN/docs/Web/Security/Defenses/Transport_Layer_Security)（TLS）。由于 TLS 用于保护每个 HTTPS 连接，因此你在数据通道上发送的任何数据都与用户浏览器发送或接收的其他数据一样安全。
 
 更根本地是，由于 WebRTC 是两个用户代理之间的点对点连接，因此数据从未经过 Web 或应用服务器。这减少了数据被拦截的机会。

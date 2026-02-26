@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/Basic_native_form_controls
 original_slug: Learn/Forms/Basic_native_form_controls
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
 
 Dans [l'article précédent](/fr/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form), nous avons construit un exemple de formulaire web fonctionnel à l'aide de balises. Nous y avons vu certains des contrôles liés aux formulaires, les éléments communs pour organiser la structure et les bonnes pratiques pour l'accessibilité. Nous allons maintenant aborder les fonctionnalités des différents contrôles de formulaire, dans le détail. Nous étudierons l'ensemble des options disponibles pour recueillir les différents types de données. Dans cet article, nous verrons l'ensemble des contrôles de formulaire qui sont présents dans tous les navigateurs, depuis les débuts du Web.
 
@@ -365,4 +365,4 @@ De nombreux éléments de formulaire disposent d'attributs qui leur sont spécif
 
 Dans cet article, nous avons abordé les contrôles de formulaire présents depuis les débuts de HTML et qui sont pris en charge par l'ensemble des navigateurs. Dans la prochaine section, nous verrons les valeurs plus récentes possibles pour l'attribut `type` qui ont été ajoutées en HTML5.
 
-{{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}

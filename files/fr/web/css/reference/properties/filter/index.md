@@ -1,18 +1,15 @@
 ---
 title: filter
 slug: Web/CSS/Reference/Properties/filter
-original_slug: Web/CSS/filter
 l10n:
-  sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
-
-{{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`filter`** permet d'appliquer des filtres et d'obtenir des effets graphiques de flou, de saturation, etc. Les filtres sont généralement utilisés pour ajuster le rendu d'une image, d'un arrière-plan ou des bordures.
 
 Plusieurs [fonctions](#fonctions) comme `blur()` et `contrast()` sont incluses dans le standard CSS et permettent d'obtenir des effets prédéfinis.
 
-{{InteractiveExample("CSS Demo: filter")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: filter")}}
 
 ```css interactive-example-choice
 filter: url("/shared-assets/images/examples/shadow.svg#element-id");
@@ -51,7 +48,7 @@ filter: drop-shadow(16px 16px 20px red) invert(75%);
 
 ```css interactive-example
 .example-container {
-  background-color: #fff;
+  background-color: white;
   width: 260px;
   height: 260px;
   display: flex;
@@ -68,7 +65,7 @@ filter: drop-shadow(16px 16px 20px red) invert(75%);
 ## Syntaxe
 
 ```css
-/* Fonctions de filtre */
+/* Valeurs de type <filter-function> */
 filter: blur(5px);
 filter: brightness(0.4);
 filter: contrast(200%);
@@ -98,88 +95,84 @@ filter: revert-layer;
 filter: unset;
 ```
 
-Avec une fonction, on utilisera la forme suivante&nbsp;:
+### Référencer un filtre SVG
 
-```css-nolint
-filter: <filter-function> [<filter-function>]* | none;
-```
-
-En utilisant un élément SVG [`<filter>`](/fr/docs/Web/SVG/Reference/Element/filter), on utilisera la forme suivante&nbsp;:
+Vous pouvez utiliser `url()` pour référencer un [élément de filtre SVG](/fr/docs/Web/SVG/Reference/Element/filter). Pour référencer un élément SVG {{SVGElement("filter")}}, utilisez la syntaxe suivante&nbsp;:
 
 ```css
-filter: url(file.svg#filter-element-id);
+filter: url("file.svg#filter-element-id");
 ```
 
-## Fonctions
+### Fonctions
 
 La propriété `filter` s'utilise avec le mot-clé `none` ou avec une à plusieurs fonctions parmi celles listées ensuite. Si le paramètre fourni à l'une de ces fonctions est invalide, la fonction reverra `none`. Sauf mention contraire, les fonctions qui acceptent une valeur exprimée en pourcentage (par exemple `34%`) acceptent également les valeurs exprimées en décimal (par exemple `0.34`).
 
 Lorsque la valeur de la propriété `filter` contient plusieurs fonctions, les filtres sont appliqués dans l'ordre.
 
-- [`blur()`](/fr/docs/Web/CSS/Reference/Values/filter-function/blur)
-  - : Applique un [flou gaussien](https://en.wikipedia.org/wiki/Gaussian_blur) à l'image.
+- {{CSSxRef("filter-function/blur", "blur()")}}
+  - : Applique un flou gaussien à l'image.
 
     ```css
     filter: blur(5px);
     ```
 
-- [`brightness()`](/fr/docs/Web/CSS/Reference/Values/filter-function/brightness)
+- {{CSSxRef("filter-function/brightness", "brightness()")}}
   - : Rend l'image plus claire ou plus sombre en utilisant un coefficient multiplicateur. L'effet est linéaire&nbsp;: `0%` créera une image complètement noire, `100%` ne modifiera pas l'image et les valeurs supérieures à 100% rendront l'image plus claire.
 
     ```css
     filter: brightness(2);
     ```
 
-- [`contrast()`](/fr/docs/Web/CSS/Reference/Values/filter-function/contrast)
+- {{CSSxRef("filter-function/contrast", "contrast()")}}
   - : Ajuste le contraste de l'image. Une valeur de `0%` rendra l'image grise, `100%` n'aura pas d'effet et les valeurs supérieures à `100%` renforceront le contraste.
 
     ```css
     filter: contrast(200%);
     ```
 
-- [`drop-shadow()`](/fr/docs/Web/CSS/Reference/Values/filter-function/drop-shadow)
-  - : Applique une ombre portée suivant les contours de l'image. Son paramètre suit la même syntaxe que celle de la propriété [`box-shadow`](/fr/docs/Web/CSS/Reference/Properties/box-shadow) (définie dans le module [Arrière-plans et bordures CSS](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders)), sauf que le mot-clé `inset` et le paramètre `spread` ne sont pas autorisés. Tous les filtres appliqués après `drop-shadow()` sont appliqués à l'ombre portée également.
+- {{CSSxRef("filter-function/drop-shadow", "drop-shadow()")}}
+  - : Applique une ombre portée suivant les contours de l'image. Son paramètre suit la même syntaxe que celle de la propriété `<box-shadow>` (définie dans le module [Arrière-plans et bordures CSS](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders)), sauf que le mot-clé `inset` et le paramètre `spread` ne sont pas autorisés. Tous les filtres appliqués après `drop-shadow()` sont appliqués à l'ombre portée également.
 
     ```css
     filter: drop-shadow(16px 16px 10px black);
     ```
 
-- [`grayscale()`](/fr/docs/Web/CSS/Reference/Values/filter-function/grayscale)
+- {{CSSxRef("filter-function/grayscale", "grayscale()")}}
   - : Convertit l'image en niveaux de gris. Un argument de `100%` rendra l'image uniquement avec des niveaux de gris. Un argument de `0%` ne modifiera pas l'image d'entrée. Les valeurs entre `0%` et `100%` appliquent un effet proportionnel.
 
     ```css
     filter: grayscale(100%);
     ```
 
-- [`hue-rotate()`](/fr/docs/Web/CSS/Reference/Values/filter-function/hue-rotate)
+- {{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}}
   - : Applique une rotation de teinte. L'argument angulaire définit le nombre de degrés pour la rotation sur le cercle des teintes. Une valeur de `0deg` n'aura pas d'effet sur l'image.
 
     ```css
     filter: hue-rotate(90deg);
     ```
 
-- [`invert()`](/fr/docs/Web/CSS/Reference/Values/filter-function/invert)
+- {{CSSxRef("filter-function/invert", "invert()")}}
   - : Inverse les couleurs de l'image. Si l'argument vaut `100%`, on obtiendra le négatif complet de l'image. Si l'argument vaut `0%`, l'image sera inchangée. Les valeurs entre `0%` et `100%` ont des effets proportionnels.
 
     ```css
     filter: invert(100%);
     ```
 
-- [`opacity()`](/fr/docs/Web/CSS/Reference/Values/filter-function/opacity)
+- {{CSSxRef("filter-function/opacity", "opacity()")}}
   - : Applique un niveau de transparence. Un coefficient de `0%` rendra l'image complètement transparente tandis qu'un coefficient de `100%` laissera l'image inchangée.
 
     ```css
     filter: opacity(50%);
     ```
 
-- [`saturate()`](/fr/docs/Web/CSS/Reference/Values/filter-function/saturate)
+- {{CSSxRef("filter-function/saturate", "saturate()")}}
   - : Sature l'image. Avec un coefficient de `0%`, l'image sera complètement désaturée. `100%` n'aura pas d'effet sur l'image. Les valeurs supérieures à `100%` augmenteront la saturation.
 
     ```css
     filter: saturate(200%);
     ```
 
-- [`sepia()`](/fr/docs/Web/CSS/Reference/Values/filter-function/sepia)
+- {{CSSxRef("filter-function/sepia", "sepia()")}}
   - : Convertit l'image en sépia. Un coefficient de `100%` rendra l'image complètement sépia tandis qu'un coefficient `0%` n'aura pas d'effet sur l'image.
 
     ```css
@@ -196,17 +189,17 @@ filter: contrast(175%) brightness(103%);
 
 ### Interpolation
 
-Pour les animations, si les filtres du début et de la fin ont une liste de fonctions de la même taille, sans {{cssxref("url_value", "&lt;url&gt;")}} et dans le même ordre, chaque filtre est interpolé selon ses règles particulières.
+Pour les animations, si les filtres du début et de la fin ont une liste de fonctions de la même taille, sans {{CSSxRef("url_value", "&lt;url&gt;")}} et dans le même ordre, chaque filtre est {{Glossary("interpolation", "interpolé")}} selon ses règles particulières.
 
 Si les listes de filtres sont de longueurs différentes, la liste la plus courte est complétée à la fin par les filtres supplémentaires de la liste la plus longue. Les fonctions ajoutées utilisent leur valeur initiale (qui ne modifie pas l'image). Tous les filtres alors présents sont interpolés selon leurs règles particulières. Sinon, c'est une interpolation discrète qui est utilisée.
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -230,7 +223,7 @@ img:nth-of-type(2) {
 <img src="pencil.jpg" alt="L'image et la bordure sont floues et atténuées" />
 ```
 
-{{EmbedLiveSample('','100%','229px')}}
+{{EmbedLiveSample("Appliquer des fonctions de filtre", "100%", 229)}}
 
 ### Répéter des filtres
 
@@ -262,7 +255,7 @@ Les fonctions de filtre sont appliquées selon leur ordre d'apparition. On peut 
 </svg>
 ```
 
-{{EmbedLiveSample('','100%','229px')}}
+{{EmbedLiveSample("Répéter des filtres", "100%", 229)}}
 
 Les filtres sont appliqués dans l'ordre, c'est pour cela que les ombres portées ne sont pas de la même couleur. La teinte de la première ombre portée est modifiée par la fonction `hue-rotate()`, mais pas la teinte de la deuxième.
 
@@ -276,8 +269,9 @@ Les filtres sont appliqués dans l'ordre, c'est pour cela que les ombres portée
 
 ## Voir aussi
 
-- La propriété CSS [`backdrop-filter`](/fr/docs/Web/CSS/Reference/Properties/backdrop-filter)
-- [La composition et les modes de fusion en CSS](/fr/docs/Web/CSS/Guides/Compositing_and_blending) avec les propriétés CSS [`background-blend-mode`](/fr/docs/Web/CSS/Reference/Properties/background-blend-mode) et [`mix-blend-mode`](/fr/docs/Web/CSS/Reference/Properties/mix-blend-mode)
-- La propriété CSS [`mask`](/fr/docs/Web/CSS/Reference/Properties/mask)
-- [SVG](/fr/docs/Web/SVG) et notamment l'élément [`<filter>`](/fr/docs/Web/SVG/Reference/Element/filter) et l'attribut [`filter`](/fr/docs/Web/SVG/Attribute/filter)
+- La propriété {{CSSxRef("backdrop-filter")}}
+- La propriété {{CSSxRef("mask")}}
+- L'attribut SVG {{SVGAttr("filter")}}
+- Le module [de composition et de fusion CSS](/fr/docs/Web/CSS/Guides/Compositing_and_blending), incluant les propriétés CSS {{CSSxRef("background-blend-mode")}} et {{CSSxRef("mix-blend-mode")}}.
+- [SVG](/fr/docs/Web/SVG) et notamment l'élément SVG {{SVGElement("filter")}} et l'attribut SVG {{SVGAttr("filter")}}
 - [Appliquer des effets SVG à du contenu HTML](/fr/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

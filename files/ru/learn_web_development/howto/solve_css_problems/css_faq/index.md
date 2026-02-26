@@ -166,7 +166,7 @@ The use of the \* selector should be minimized as it is a slow selector, especia
 
 ### Specificity in CSS
 
-When multiples rules apply to a certain element, the rule chosen depends on its style [specificity](/ru/docs/Web/CSS/CSS_cascade/Specificity). Inline style (in HTML `style` attributes) comes first, followed by ID selectors, then class selectors and eventually element-name selectors.
+When multiples rules apply to a certain element, the rule chosen depends on its style [specificity](/ru/docs/Web/CSS/Guides/Cascade/Specificity). Inline style (in HTML `style` attributes) comes first, followed by ID selectors, then class selectors and eventually element-name selectors.
 
 ```
 div { color: black; }

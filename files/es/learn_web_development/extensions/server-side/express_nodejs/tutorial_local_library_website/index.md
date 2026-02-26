@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local
 original_slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 El primer artículo de nuestra serie de tutoriales prácticos explica lo que aprenderá y proporciona una descripción general del sitio web de ejemplo de la "biblioteca local" en el que trabajaremos y evolucionaremos en artículos posteriores.
 
@@ -22,7 +22,7 @@ El primer artículo de nuestra serie de tutoriales prácticos explica lo que apr
             >Para los siguientes artículos, también deberá haber
           </span></span
         ><a
-          href="/es/docs/Learn/Server-side/Express_Nodejs/development_environment"
+          href="/es/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment"
           >configurado un entorno de desarrollo de Node</a
         >.
       </td>
@@ -80,4 +80,4 @@ Si aun asi sigues atasaco, puedes encontrar la version completamente desarrollad
 
 Ahora que sabes un poco mas del sitio web _LocalLIbrary_ y lo que vas a aprender, es tiempo de comenzar a crear un [skeleton project](/es/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website)o para contener nuestro ejemplo.
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

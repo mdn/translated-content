@@ -3,7 +3,7 @@ title: Estructura de una aplicación web progresiva
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
 ---
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames", "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps")}}
 
 Ahora que conoces la teoría detrás de las PWAs, veamos la estructura recomendada de una aplicación real. Comenzaremos analizando la aplicación [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/), veamos por qué está construida de esa manera y qué beneficios aporta.
 
@@ -313,6 +313,6 @@ Cada entrada tiene su propia imagen en el directorio `data/img`. Este es nuestro
 
 En el próximo artículo veremos con más detalle cómo se almacenan en caché el intérprete de la aplicación y el contenido para su uso sin conexión con la ayuda del servicio _worker_.
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames", "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps")}}
 
 {{QuickLinksWithSubpages("/es/docs/Web/Progressive_web_apps/")}}

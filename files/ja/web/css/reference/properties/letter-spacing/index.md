@@ -1,12 +1,11 @@
 ---
 title: letter-spacing
 slug: Web/CSS/Reference/Properties/letter-spacing
-original_slug: Web/CSS/letter-spacing
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-**`letter-spacing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストの水平方向の字間のスペースに関する挙動を設定します。この値はテキストを描画する際に文字間の自然な空間に追加されます。 `letter-spacing` が正の値であった場合は、文字と文字の間が開き、 `letter-spacing` が負の値であった場合は、文字と文字が互いに近づきます。
+**`letter-spacing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストの水平方向の字間のスペースに関する挙動を設定します。この値はテキストを描画する際に文字間の自然な空間に追加されます。`letter-spacing` が正の値であった場合は、文字と文字の間が開き、`letter-spacing` が負の値であった場合は、文字と文字が互いに近づきます。
 
 {{InteractiveExample("CSS デモ: letter-spacing")}}
 
@@ -26,12 +25,10 @@ letter-spacing: 1px;
 letter-spacing: -1px;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section id="default-example">
   <p id="example-element">
-    As much mud in the streets as if the waters had but newly retired from the
-    face of the earth, and it would not be wonderful to meet a Megalosaurus,
-    forty feet long or so, waddling like an elephantine lizard up Holborn Hill.
+    通りにはまるで水が地球の表面から引き始めたばかりかのような泥が堆積し、ホルボーン・ヒルを象のようなトカゲ同様によたよたと歩く、全長約 40 フィートのメガロサウルスに出会っても不思議ではない。
   </p>
 </section>
 ```
@@ -39,13 +36,13 @@ letter-spacing: -1px;
 ```css interactive-example
 @font-face {
   src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
-  font-family: Amstelvar;
+  font-family: "Amstelvar";
   font-style: normal;
 }
 
 section {
   font-size: 1.2em;
-  font-family: Amstelvar, serif;
+  font-family: "Amstelvar", serif;
 }
 ```
 

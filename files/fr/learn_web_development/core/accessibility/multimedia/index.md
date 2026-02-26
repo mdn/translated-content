@@ -1,30 +1,24 @@
 ---
-title: Accessible multimedia
+title: Multimédia accessible
 slug: Learn_web_development/Core/Accessibility/Multimedia
 original_slug: Learn/Accessibility/Multimedia
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Test_your_skills/WAI-ARIA","Learn_web_development/Core/Accessibility/Mobile", "Learn_web_development/Core/Accessibility")}}
 
 Le multimédia est une autre catégorie de contenu susceptible de créer des problèmes d'accessibilité: les contenus vidéo, audio et images doivent disposer de solutions de remplacement textuelles appropriées pour être compris par les technologies d'assistance et leurs utilisateurs. Cet article montre comment.
 
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Conditions requise:</th>
-      <td>
-        Connaissances informatiques de base, une compréhension de base de HTML,
-        CSS et JavaScript, une compréhension de
-        <a href="/fr/docs/Apprendre/a11y/What_is_accessibility"
-          >Qu'est ce que l'accessibilité?</a
-        >
-      </td>
+      <th scope="row">Prérequis&nbsp;:</th>
+      <td>Connaissance de base de <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/fr/docs/Learn_web_development/Core/Styling_basics">CSS</a> et une <a href="/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility">compréhension des concepts fondamentaux de l'accessibilité</a>.</td>
     </tr>
     <tr>
-      <th scope="row">Objectif:</th>
+      <th scope="row">Objectif d'apprentissage&nbsp;:</th>
       <td>
         Comprendre les problèmes d'accessibilité derrière le multimédia et
-        comment les résoudre .
+        comment les résoudre.
       </td>
     </tr>
   </tbody>
@@ -289,7 +283,7 @@ Ce n'est pas un nouveau concept - les sous-titres codés sont disponibles depuis
 
 Alors que de nombreux pays proposent des films en anglais avec sous-titres écrits dans leur propre langue maternelle, des sous-titres en différentes langues sont souvent disponibles sur DVD, par exemple
 
-![An English film with German subtitles "Emo, warum erkennst du nicht die Schonheit dieses Ortes?"](Subtitles_German.jpg)
+![An English film with German subtitles "Emo, warum erkennst du nicht die Schonheit dieses Ortes?"](subtitles_german.png)
 
 Il existe différents types de pistes de texte avec des objectifs différents. Les principaux que vous rencontrerez sont:
 
@@ -333,14 +327,10 @@ Voici un exemple:
 </video>
 ```
 
-Cela donnera une vidéo avec des sous-titres affichés, un peu comme ceci:
-
-![Video player with standard controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
-
 Pour plus de détails, veuillez lire [Ajouter des légendes et des sous titres à des vidéos HTML 5](/fr/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). Vous trouverez [un exemple](http://iandevlin.github.io/mdn/video-player-with-captions/) qui accompagne cet article sur Github, écrit par Ian Devlin (voir aussi le [code source](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions).) Cet exemple utilise du JavaScript. pour permettre aux utilisateurs de choisir entre différents sous-titres. Notez que pour activer les sous-titres, vous devez appuyer sur le bouton "CC" et sélectionner une option - Anglais, Allemand ou Español.
 
 > [!NOTE]
-> Les pistes de texte et les transcriptions vous aident également avec {{glossary ("SEO")}}, car les moteurs de recherche se développent particulièrement bien avec le texte. Les pistes de texte permettent même aux moteurs de recherche de se lier directement à un endroit en cours de vidéo.
+> Les pistes de texte et les transcriptions vous aident également avec {{glossary("SEO")}}, car les moteurs de recherche se développent particulièrement bien avec le texte. Les pistes de texte permettent même aux moteurs de recherche de se lier directement à un endroit en cours de vidéo.
 
 ## Autre contenu multimédia
 
@@ -363,4 +353,4 @@ Vous pouvez toutefois vous assurer qu'une telle application présente un contras
 
 Ce chapitre présente un résumé des problèmes d'accessibilité des contenus multimédias, ainsi que des solutions pratiques.
 
-{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Test_your_skills/WAI-ARIA","Learn_web_development/Core/Accessibility/Mobile", "Learn_web_development/Core/Accessibility")}}

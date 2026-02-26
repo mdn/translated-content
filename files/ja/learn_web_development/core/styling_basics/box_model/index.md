@@ -1,13 +1,12 @@
 ---
 title: ボックスモデル
+short-title: ボックスモデル
 slug: Learn_web_development/Core/Styling_basics/Box_model
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{LearnSidebar}}
-
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors", "Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model", "Learn_web_development/Core/Styling_basics")}}
 
 CSS にはボックスの概念があり、これを理解することは CSS でレイアウトを作成したりアイテム同士を揃えたりするためのコツとなります。このレッスンでは CSS ボックスモデルを詳しく解説し、その仕組みと関連する用語を理解することでより複雑なレイアウトができるようにします。
 
@@ -41,7 +40,7 @@ CSS にはボックスの概念があり、これを理解することは CSS �
 
 CSS にはいくつかの種類のボックスがあり、一般的に**ブロックボックス**と**インラインボックス**のカテゴリーに分類されます。この種類は、ページの流れやページ上の他のボックスとの関連において、ボックスがどのように振る舞うかを参照します。ボックスには**内側の表示型**と**外側の表示型**があります。
 
-一般的に、様々な値を持つことができる {{cssxref("display")}} プロパティを使用して、表示型に様々な値を設定することができます。
+一般的に、{{cssxref("display")}} プロパティを使用して、表示型に様々な値を設定することができます。
 
 ボックスの表示型が `block` である場合は、次のように動作します。
 
@@ -55,9 +54,9 @@ HTML 要素の中には `<h1>` や `<p>` のように、既定で `block` を外
 ボックスの表示型が `inline` である場合は、次のように動作します。
 
 - ボックスは新しい行に分割されません。
-- {{cssxref("width")}} および {{cssxref("height")}} プロパティは適用されません。
-- 上下のパディング、マージン、境界は適用されますが、他のインラインボックスをこのボックスから引き離すことはありません。
-- 左右のパディング、マージン、境界は適用され、他のインラインボックスをこのボックスから引き離します。
+- {{cssxref("width")}} プロパティと {{cssxref("height")}} プロパティ、上下のマージンは効果がありません。
+- **上下**のパディングと境界は、周囲のコンテンツの位置に影響を与えずにボックスのサイズを変更するため、重なりが発生する可能性があります。
+- **左右**のパディング、マージン、境界は、周囲のインラインコンテンツの位置に影響を与えます。
 
 HTML 要素の中には、 `<a>`、`<span>`、`<em>`、`<strong>` のように、既定で `inline` を外側の表示型として使用するものがあります。
 
@@ -77,11 +76,11 @@ CSS のレイアウトのより詳しい学習をしていくと、 [`flex`](/ja
 
 下記の例では 3 つの異なる HTML 要素があり、すべて外側の表示型は `block` です。
 
-- CSS で境界線を追加した段落。ブラウザーはこれをブロックボックスとして描画します。段落は新しい行から始まり、利用できる幅いっぱいに広がります。
+- CSS で境界線を追加した段落。ブラウザーはこれをブロックボックスとして描画します。段落は新しい行から始まり、利用できる幅全体を水平方向を埋めるように広がります。
 
-- `display: flex` を使用してレイアウトされたリストです。これはフレックスレイアウトを確立し、コンテナーの子をフレックスアイテムとします。リストそのものはブロックボックスで、段落のようにコンテナーの幅いっぱいに展開され、新しい行に分割されます。
+- `display: flex` を使用してレイアウトされたリスト。これにより、コンテナーの子要素に対してフレックスレイアウトが設定されます。これらの子要素はフレックスアイテムであり、デフォルトで横一行に配置されます。リストそのものはブロックボックスで、段落のようにコンテナーの幅いっぱいに展開され、新しい行に分割されます。
 
-- ブロックレベルの段落があり、その中に 2 つの `<span>` 要素があります。通常、これらの要素は `inline` ですが、要素の 1 つに "block" のクラスがあり、`display: block` に設定しました。
+- ブロックレベルの段落があり、その中に 2 つの `<span>` 要素があります。これらの要素は通常 `inline` ですが、そのうち 1 つの要素には `block` クラスが設定されており、`display: block` と指定されています。その結果、その単語は親要素の全幅にまたがる新しい行から始まります。
 
 ```html-nolint live-sample___block
 <p>これは段落です。短いものです。</p>
@@ -210,7 +209,7 @@ CSS でブロックボックスを構成するものとしては、以下のも�
 }
 ```
 
-ボックスが実際に占める空間は、幅 410px (350 + 25 + 25 + 5 + 5)、高さ 210px (150 + 25 + 25 + 5 + 5) です。
+ボックスが実際に占める空間は、幅 `410px` (350 + 25 + 25 + 5 + 5)、高さ `210px` (150 + 25 + 25 + 5 + 5) です。
 
 ![標準ボックスモデルを使用している場合のボックスサイズを示しています。](standard-box-model.png)
 
@@ -219,7 +218,7 @@ CSS でブロックボックスを構成するものとしては、以下のも�
 
 ### CSS 代替ボックスモデル
 
-代替ボックスモデルを使用すると、幅はページ上に表示されるボックスの幅になります。コンテンツ領域の幅は、その幅からパディングと境界の幅を引いたものになります。ボックスの実際のサイズを得るために境界とパディングを加える必要はありません。
+代替ボックスモデルを使用すると、幅はページ上に表示されるボックスの幅になります。コンテンツ領域の幅は、その幅からパディングと境界の幅を引いたものになります。これは、ボックスの実質的なサイズを取得する際に、境界線とパディングを追加する必要がないため便利です。
 
 要素に対して代替モデルを有効にしたい場合は、`box-sizing: border-box` を設定してください。
 
@@ -241,7 +240,7 @@ CSS でブロックボックスを構成するものとしては、以下のも�
 }
 ```
 
-これで、ボックスが実際に占める空間は、インライン方向に 350px、ブロック方向に 150px になります。
+これで、ボックスが実際に占める空間は、インライン方向に `350px`、ブロック方向に `150px` になります。
 
 ![代替ボックスモデルを使用している場合のボックスのサイズを示した図。](alternate-box-model.png)
 
@@ -261,7 +260,7 @@ html {
 
 基盤となっている考えを理解するためには、 [CSS Tricks article on box-sizing](https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/) を読んでください。
 
-## ボックスモデルを試してみる
+## ボックスモデルの実践
 
 以下の例では、2 つのボックスを見ることができます。両方とも `.box` のクラスを持ち、同じ `width`、`height`、`margin`、`border`、`padding` を提供します。唯一の違いは、2 番目のボックスが代替ボックスモデルを使用するように設定されていることです。
 2 番目のボックスのサイズを変更 (`.alternate` クラスに CSS を追加) して、幅と高さを最初のボックスに一致させることはできますか？
@@ -289,7 +288,7 @@ html {
 {{EmbedLiveSample("box-models", "", "400px")}}
 
 > [!NOTE]
-> [ここ](https://github.com/mdn/css-examples/blob/main/learn/solutions.md#the-box-model)でこのタスクの解決策を見つけることができます。
+> [css-examples のリポジトリー](https://github.com/mdn/css-examples/blob/main/learn/solutions.md#the-box-model)でこのタスクの解決策を見つけることができます。
 
 ### ブラウザーの開発者ツールを使用してボックスモデルを見る
 
@@ -314,7 +313,9 @@ html {
 - {{cssxref("margin-bottom")}}
 - {{cssxref("margin-left")}}
 
-下記の例では、マージンの値を変更してみて、マージンによってこの要素と格納する要素との間に空間が作成されたり除去されたり（負のマージンの場合）して、ボックスがどのように押しやられるかを確認してください。
+#### マージンの実践
+
+次の例を編集してみてください。マージンの値を変更してみて、マージンによってこの要素と格納する要素との間に空間が作成されたり除去されたり（負のマージンの場合）して、ボックスがどのように押しやられるかを確認してください。
 
 ```html-nolint live-sample___margin
 <div class="container">
@@ -386,6 +387,9 @@ p {
 
 マージンが相殺される場合と相殺されない場合を規定する多くのルールがあります。 詳細については、[マージンの相殺](/ja/docs/Web/CSS/Guides/Box_model/Margin_collapsing)に関する詳細ページをご覧ください。覚えておくべき主なことは、マージンの相殺は、マージンで空間を作成しているときに、期待した空間が得られなかった場合に起こることだということです。
 
+> [!NOTE]
+> [Learn margins via flags](https://scrimba.com/frontend-path-c0j/~01e?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>（Scrimba 提供）の対話型レッスンでは、マージンに関する有益な実践的な練習を提供しています。
+
 ### 境界
 
 境界 (border) は、ボックスのマージンとパディングの間に描かれます。標準ボックスモデルを使用している場合、境界のサイズがコンテンツボックスの `width` と `height` に追加されます。代替ボックスモデルを使用している場合、境界のサイズが利用可能な `width` と `height` の一部を占めるため、コンテンツボックスが小さくなります。
@@ -422,7 +426,9 @@ p {
 - {{cssxref("border-left-style")}}
 - {{cssxref("border-left-color")}}
 
-下記の例では、様々な一括指定や個別指定を用いて境界線を作成しています。それらがどのように動作するのかを理解するために、様々なプロパティを試してみてください。境界のプロパティの MDN ページには、利用できる様々な境界のスタイル設定についての情報があります。
+#### 境界の実践
+
+次の例では、境界線を生成するために様々な一括指定と個別指定プロパティを使用しています。各プロパティを編集して、それらがどのように動作するかを確認してください。境界のプロパティの MDN ページには、利用できる様々な境界のスタイル設定についての情報があります。
 
 ```html-nolint live-sample___border
 <div class="container">
@@ -465,7 +471,9 @@ body {
 - {{cssxref("padding-bottom")}}
 - {{cssxref("padding-left")}}
 
-以下の例で `.box` クラスのパディングの値を変更すると、ボックスからみたテキストの開始位置が変わることがわかります。 `.container` クラスのパディングを変更することもできます。これにより、コンテナーとボックスの間に空間ができます。要素のパディングを変更することで、要素の境界線と要素の内部にあるものとの間に空間を作成することができます。
+#### パディングの実践
+
+以下の例で `.box` クラスのパディングの値を変更すると、ボックスからみたテキストの開始位置がどのように変わるかがわかります。 `.container` クラスのパディングを変更することもできます。これにより、コンテナーとボックスの間に空間ができます。要素のパディングを変更することで、要素の境界線と要素の内部にあるものとの間に空間を作成することができます。
 
 ```html-nolint live-sample___padding
 <div class="container">
@@ -499,7 +507,7 @@ body {
 
 ブロックボックスには、上記のすべてが適用されます。プロパティのいくつかは `<span>` 要素で作成されるようなインラインボックスにも適用できます。
 
-以下の例では、段落内に `<span>` があり、`width`、`height`、`margin`、`border`、`padding` が適用されています。幅と高さが無視されていることがわかります。上下のマージン、パディング、境界は尊重されますが、他のコンテンツとインラインボックスとの位置関係は変わりません。パディングと境界は、段落内の他の語句に重なります。左右のパディング、マージン、境界は、他のコンテンツをボックスから遠ざけます。
+次の例では、段落内に `<span>` を配置しています。これに `width`、`height`、`margin`、`border`、`padding` を指定しています。幅、高さ、上下マージンは `<span>` に影響を与えません。上下のパディングと境界線はインラインボックスのサイズを変更しますが、周囲のコンテンツの位置には影響しません。代わりに、上下のパディングと境界線は段落内の他の単語と重なります。`<span>` を囲むテキストの位置に影響を与えるのは、左右パディング、左右マージン、境界線のみです。
 
 ```html-nolint live-sample___inline-box-model
 <p>
@@ -516,18 +524,19 @@ p {
   width: 200px;
 }
 span {
-  margin: 20px;
-  padding: 20px;
+  margin: 20px 30px;
+  padding: 10px 20px;
   width: 80px;
   height: 150px;
   background-color: lightblue;
-  border: 2px solid blue;
+  border: solid blue;
+  border-width: 7px 1px;
 }
 ```
 
 {{EmbedLiveSample("inline-box-model")}}
 
-## display: inline-block を使用する
+## display: inline-block の使用
 
 `display: inline-block` は `display` の特別な値で、`inline` と `block` の中間を提供します。アイテムを改行させたくないが、 `width` と `height` を尊重し、上記のような重なりを避けたい場合に使用します。
 
@@ -537,6 +546,8 @@ span {
 - パディング、マージン、境界により、他の要素がボックスから遠ざけられます。
 
 ただし、新しい行に分割されることはなく、コンテンツより大きくなるのは `width` および `height` プロパティを明示的に追加した場合のみです。
+
+### inline-block の実践
 
 次の例では、`<span>` 要素に `display: inline-block` を追加しています。これを `display: block` 変更したり、行を完全に削除したりして、表示モデルの違いを確認してください。
 
@@ -589,7 +600,7 @@ ul {
   font-family: sans-serif;
   display: flex;
   list-style: none;
-  border: 1px solid #000;
+  border: 1px solid black;
 }
 
 li {
@@ -598,27 +609,23 @@ li {
 
 .links-list a {
   background-color: rgb(179 57 81);
-  color: #fff;
+  color: white;
   text-decoration: none;
   padding: 1em 2em;
 }
 
 .links-list a:hover {
   background-color: rgb(66 28 40);
-  color: #fff;
+  color: white;
 }
 ```
 
 {{EmbedLiveSample("inline-block-nav")}}
 
-## スキルテスト
-
-この記事の最後まで到達しましたが、最も重要な情報を覚えていますか？移動される前に、この情報が記憶されているかどうかを確認するためのテストを探すことができます。[スキルテスト: ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model)を参照してください。
-
 ## まとめ
 
 以上が、ボックスモデルについて理解する必要があるほとんどのことです。レイアウト内の大きなボックスの大きさについて混乱している場合は、このレッスンに戻ってください。
 
-次の記事では、 CSS が競合を処理する方法を見ていきます。複数のルールで同じ要素が選択された場合、どのスタイルが適用されるのでしょうか？
+次の記事では、CSS ボックスモデルに関する情報の理解度と記憶度を調べるための確認テストをいくつかご紹介します。
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors", "Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model", "Learn_web_development/Core/Styling_basics")}}

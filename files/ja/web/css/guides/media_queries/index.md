@@ -1,9 +1,9 @@
 ---
 title: CSS メディアクエリー
+short-title: メディアクエリー
 slug: Web/CSS/Guides/Media_queries
-original_slug: Web/CSS/CSS_media_queries
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **CSS メディアクエリー**モジュールにより、ビューポートの値やブラウザーや端末の機能を検査および問い合わせして、現在のユーザー環境に応じて CSS スタイルを条件付きで適用することができます。メディアクエリーは、 CSS の `@media` ルールや、 HTML や JavaScript などの他のコンテキストや言語で使用されます。
@@ -18,48 +18,47 @@ l10n:
 
 ## リファレンス
 
-### アットルール
+### アットルールと記述子
 
 - {{cssxref("@import")}}
+- {{cssxref("@custom-media")}}
 - {{cssxref("@media")}}
+  - {{cssxref("@media/any-hover", "any-hover")}}
+  - {{cssxref("@media/any-pointer", "any-pointer")}}
+  - {{cssxref("@media/aspect-ratio", "aspect-ratio")}}
+  - {{cssxref("@media/color", "color")}}
+  - {{cssxref("@media/color-gamut", "color-gamut")}}
+  - {{cssxref("@media/color-index", "color-index")}}
+  - {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}}
+  - {{cssxref("@media/device-height", "device-height")}}
+  - {{cssxref("@media/device-width", "device-width")}}
+  - {{cssxref("@media/display-mode", "display-mode")}}
+  - {{cssxref("@media/dynamic-range", "dynamic-range")}}
+  - {{cssxref("@media/forced-colors", "forced-colors")}}
+  - {{cssxref("@media/grid", "grid")}}
+  - {{cssxref("@media/height", "height")}}
+  - {{cssxref("@media/horizontal-viewport-segments", "horizontal-viewport-segments")}}
+  - {{cssxref("@media/hover", "hover")}}
+  - {{cssxref("@media/inverted-colors", "inverted-colors")}}
+  - {{cssxref("@media/monochrome", "monochrome")}}
+  - {{cssxref("@media/orientation", "orientation")}}
+  - {{cssxref("@media/overflow-block", "overflow-block")}}
+  - {{cssxref("@media/overflow-inline", "overflow-inline")}}
+  - {{cssxref("@media/pointer", "pointer")}}
+  - {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}
+  - {{cssxref("@media/prefers-contrast", "prefers-contrast")}}
+  - {{cssxref("@media/prefers-reduced-data", "prefers-reduced-data")}}
+  - {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}}
+  - {{cssxref("@media/prefers-reduced-transparency", "prefers-reduced-transparency")}}
+  - {{cssxref("@media/resolution", "resolution")}}
+  - {{cssxref("@media/scan", "scan")}}
+  - {{cssxref("@media/scripting", "scripting")}}
+  - {{cssxref("@media/update", "update")}}
+  - {{cssxref("@media/vertical-viewport-segments", "vertical-viewport-segments")}}
+  - {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}
+  - {{cssxref("@media/width", "width")}}
 
-### 記述子
-
-- {{cssxref("@media/any-hover", "any-hover")}}
-- {{cssxref("@media/any-pointer", "any-pointer")}}
-- {{cssxref("@media/aspect-ratio", "aspect-ratio")}}
-- {{cssxref("@media/color", "color")}}
-- {{cssxref("@media/color-gamut", "color-gamut")}}
-- {{cssxref("@media/color-index", "color-index")}}
-- {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}}
-- {{cssxref("@media/device-height", "device-height")}}
-- {{cssxref("@media/device-width", "device-width")}}
-- {{cssxref("@media/display-mode", "display-mode")}}
-- {{cssxref("@media/dynamic-range", "dynamic-range")}}
-- {{cssxref("@media/forced-colors", "forced-colors")}}
-- {{cssxref("@media/grid", "grid")}}
-- {{cssxref("@media/height", "height")}}
-- {{cssxref("@media/hover", "hover")}}
-- {{cssxref("@media/inverted-colors", "inverted-colors")}}
-- {{cssxref("@media/monochrome", "monochrome")}}
-- {{cssxref("@media/orientation", "orientation")}}
-- {{cssxref("@media/overflow-block", "overflow-block")}}
-- {{cssxref("@media/overflow-inline", "overflow-inline")}}
-- {{cssxref("@media/pointer", "pointer")}}
-- {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}
-- {{cssxref("@media/prefers-contrast", "prefers-contrast")}}
-- {{cssxref("@media/prefers-reduced-data", "prefers-reduced-data")}}
-- {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}}
-- {{cssxref("@media/prefers-reduced-transparency", "prefers-reduced-transparency")}}
-- {{cssxref("@media/resolution", "resolution")}}
-- {{cssxref("@media/scan", "scan")}}
-- {{cssxref("@media/scripting", "scripting")}}
-- {{cssxref("@media/update", "update")}}
-- {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}
-- {{cssxref("@media/width", "width")}}
-
-> [!NOTE]
-> CSS メディアクエリーレベル 5 では、まだ実装されていない 5 つの `@media` 記述子、 {{cssxref("@media/environment-blending", "environment-blending")}}, {{cssxref("@media/horizontal-viewport-segments", "horizontal-viewport-segments")}}, {{cssxref("@media/nav-controls", "nav-controls")}}, {{cssxref("@media/vertical-viewport-segments", "vertical-viewport-segments")}}, {{cssxref("@media/video-color-gamut", "video-color-gamut")}} を導入しています。
+CSS メディアクエリーレベル 5 では、`environment-blending`, `nav-controls`, `video-color-gamut` の `@media` 記述子も導入しています。今のところ、これらの機能に対応しているブラウザーはありません。
 
 > [!NOTE]
 > CSS メディアクエリーレベル 4 では、 3 つの `@media` 記述子、 {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}}, {{cssxref("@media/device-height", "device-height")}}, {{cssxref("@media/device-width", "device-width")}} を非推奨にしています。
@@ -68,7 +67,7 @@ l10n:
 
 - [`<media-types>`](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア種別)
 - [`<media-features>`](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)
-- [`<resolution>`](/ja/docs/Web/CSS/Reference/Values/resolution)
+- {{cssxref("resolution")}}
 - [論理演算子](/ja/docs/Web/CSS/Reference/At-rules/@media#論理演算子)
 
 ### 用語集の用語
@@ -105,6 +104,8 @@ l10n:
 - [CSS 条件付きルール](/ja/docs/Web/CSS/Guides/Conditional_rules)モジュール
   - {{cssxref("@supports")}} アットルール
   - [機能クエリーの使用](/ja/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)
+- [CSS 環境変数](/ja/docs/Web/CSS/Guides/Environment_variables)
+  - {{cssxref("env()")}} 関数
 - [CSS ページメディア](/ja/docs/Web/CSS/Guides/Paged_media)モジュール
   - {{cssxref("@page")}} アットルール
 - [CSS オブジェクトモデル](/ja/docs/Web/API/CSS_Object_Model)モジュール
@@ -115,12 +116,12 @@ l10n:
   - {{DOMxRef("MediaList")}} インターフェイス
     - {{DOMxRef("MediaList.mediaText", "mediaText")}} プロパティ
   - {{DOMxRef("MediaQueryListEvent")}} オブジェクト
-- [Device Posture API](/ja/docs/Web/API/Device_Posture_API)
+- [端末形態 API](/ja/docs/Web/API/Device_Posture_API)
   - {{cssxref("@media/device-posture", "device-posture")}} 記述子
 - HTML
   - `sizes` 属性（[`<img>`](/ja/docs/Web/HTML/Reference/Elements/img#sizes)、[`<link>`](/ja/docs/Web/HTML/Reference/Elements/link#sizes)、{{HTMLElement("picture")}} の [`<source>`](/ja/docs/Web/HTML/Reference/Elements/source#sizes)）
   - `media` 属性（[`<link>`](/ja/docs/Web/HTML/Reference/Elements/link#media)、[`<source>`](/ja/docs/Web/HTML/Reference/Elements/source#media)、[HTML](/ja/docs/Web/HTML) の [`<style>`](/ja/docs/Web/HTML/Reference/Elements/style#media)）
-  - [ビューポートの `<meta>` タグ](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport)
+  - [`<meta name="viewport">`](/ja/docs/Web/HTML/Reference/Elements/meta/name/viewport)
 - SVG の [`media`](/ja/docs/Web/SVG/Reference/Attribute/media) 属性
 
 ## 仕様書

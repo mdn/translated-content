@@ -1,12 +1,13 @@
 ---
 title: background-blend-mode
 slug: Web/CSS/Reference/Properties/background-blend-mode
-original_slug: Web/CSS/background-blend-mode
 l10n:
-  sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
 **`background-blend-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背景画像が相互にどのように混合されるか、また要素の背景色とどのように混合されるかを設定します。
+
+混合モードは {{cssxref("background-image")}} プロパティと同じ順番で定義してください。混合モードのリストと背景画像のリストの長さが異なる場合は、長さが合うまで繰り返しや切り落としが行われます。
 
 {{InteractiveExample("CSS デモ: background-blend-mode")}}
 
@@ -42,8 +43,6 @@ background-blend-mode: difference;
   height: 305px;
 }
 ```
-
-混合モードは {{cssxref("background-image")}} プロパティと同じ順番で定義してください。混合モードのリストと背景画像のリストの長さが異なる場合は、長さが合うまで繰り返しや切り落としが行われます。
 
 ## 構文
 
@@ -88,7 +87,7 @@ background-blend-mode: unset;
 }
 ```
 
-### 様々な混合モードを試してみる
+### 様々な混合モードを試してみよう
 
 ```html hidden
 <div id="div"></div>
@@ -129,7 +128,7 @@ document.getElementById("select").onchange = (event) => {
 console.log(document.getElementById("div"));
 ```
 
-{{ EmbedLiveSample('Examples', "330", "350") }}
+{{ EmbedLiveSample('様々な混合モードを試してみよう', "330", "350") }}
 
 ## 仕様書
 

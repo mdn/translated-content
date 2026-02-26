@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**거터(Gutters)** 또는 앨리(_alleys_)는 콘텐츠 트랙 사이의 간격입니다. 거터는 {{cssxref("column-gap")}}, {{cssxref("row-gap")}}, 또는 {{cssxref("gap")}} 속성을 사용하여 [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout)에서 생성할 수 있습니다.
+**거터(Gutters)** 또는 앨리(_alleys_)는 콘텐츠 트랙 사이의 간격입니다. 거터는 {{cssxref("column-gap")}}, {{cssxref("row-gap")}}, 또는 {{cssxref("gap")}} 속성을 사용하여 [CSS 그리드 레이아웃](/ko/docs/Web/CSS/Guides/Grid_layout)에서 생성할 수 있습니다.
 
 ## 예제
 
@@ -69,5 +69,5 @@ l10n:
 
 ### 더 읽어보기
 
-- CSS 그리드 레이아웃 안내서: [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- CSS 그리드 레이아웃 안내서: [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
 - [CSS 그리드 레이아웃 명세서의 거터 정의](https://drafts.csswg.org/css-grid/#gutters)

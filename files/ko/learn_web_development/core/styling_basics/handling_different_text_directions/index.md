@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Handling_different_text_directio
 original_slug: Learn/CSS/Building_blocks/Handling_different_text_directions
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("conflicting/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics")}}
 
 CSS 학습에서 지금까지 경험한 많은 속성과 값은 화면의 크기와 연결되어 있습니다. 예를 들어, 박스의 위, 오른쪽, 아래쪽 및 왼쪽에 테두리를 만듭니다. 이러한 실제 측정 기준은 가로로 표시되는 콘텐츠에 매우 깔끔하게 매핑되며, 기본적으로 웹은 오른쪽에서 왼쪽으로 쓰는 언어 (예: 아랍어) 보다 왼쪽에서 오른쪽으로 쓰는 언어 (예: 영어 또는 프랑스어) 를 더 잘 지원하는 경향이 있습니다.
 
@@ -114,7 +114,7 @@ CSS 레이아웃, 특히 최신 레이아웃 방법을 살펴보기 시작하면
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/logical-mbp.html", '100%', 1200)}}
 
-모든 개별 테두리를 고려할 때 많은 속성이 있으며, [논리 속성 및 값](/ko/docs/Web/CSS/CSS_logical_properties_and_values) 에 대한 MDN 페이지에서 매핑된 속성을 모두 볼 수 있습니다.
+모든 개별 테두리를 고려할 때 많은 속성이 있으며, [논리 속성 및 값](/ko/docs/Web/CSS/Guides/Logical_properties_and_values) 에 대한 MDN 페이지에서 매핑된 속성을 모두 볼 수 있습니다.
 
 ### 논리적 값
 
@@ -138,4 +138,4 @@ CSS 레이아웃, 특히 최신 레이아웃 방법을 살펴보기 시작하면
 
 다음 학습에서는 CSS 의 overflow 를 자세히 살펴볼 것입니다.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("conflicting/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics")}}

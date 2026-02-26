@@ -1,24 +1,25 @@
 ---
-title: <optgroup>
+title: "<optgroup> : l'élément de groupe d'options"
 slug: Web/HTML/Reference/Elements/optgroup
-original_slug: Web/HTML/Element/optgroup
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<optgroup>`** crée un regroupement d'options à l'intérieur d'un élément HTML {{HTMLElement("select")}}.
 
-L'élément HTML **`<optgroup>`**, utilisé dans un formulaire, permet de créer un groupe d'options parmi lesquelles on peut choisir dans un élément {{HTMLElement("select")}}.
+Dans les [éléments `<select>` personnalisables](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select), l'élément {{HTMLElement("legend")}} est autorisé comme enfant de `<optgroup>`, pour fournir une étiquette facile à cibler et à mettre en forme. Cela remplace tout texte défini dans l'attribut `label` de l'élément `<optgroup>`, et possède la même sémantique.
 
-{{InteractiveExample("HTML Demo: &lt;optgroup&gt;", "tabbed-standard")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;optgroup&gt;", "tabbed-standard")}}
 
 ```html interactive-example
-<label for="dino-select">Choose a dinosaur:</label>
+<label for="dino-select">Choisissez un dinosaure&nbsp;:</label>
 <select id="dino-select">
-  <optgroup label="Theropods">
+  <optgroup label="Théropodes">
     <option>Tyrannosaurus</option>
     <option>Velociraptor</option>
     <option>Deinonychus</option>
   </optgroup>
-  <optgroup label="Sauropods">
+  <optgroup label="Sauropodes">
     <option>Diplodocus</option>
     <option>Saltasaurus</option>
     <option>Apatosaurus</option>
@@ -38,16 +39,14 @@ label {
 
 ## Attributs
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
-- `disabled`
-  - : Si cet attribut booléen est défini et aucun élément du groupe d'options ne peut être sélectionné. Cet élément ne recevra pas les évènements de navigation (tels que les clics ou les changements de focus). Les navigateurs affichent ces éléments en les grisant.
+- [`disabled`](/fr/docs/Web/HTML/Reference/Attributes/disabled)
+  - : Si cet attribut booléen est défini et aucun élément du groupe d'options ne peut être sélectionné. Cet élément ne recevra pas les évènements de navigation (tels que les clics ou les changements de sélection). Les navigateurs affichent ces éléments en les grisant.
 - `label`
-  - : Le nom du groupe d'options qui peut être affiché par le navigateur. Cet attribut est obligatoire.
+  - : Le nom du groupe d'options, que le navigateur peut utiliser pour étiqueter les options dans l'interface utilisateur. Cet attribut est obligatoire si cet élément est utilisé.
 
 ## Exemples
-
-### HTML
 
 ```html
 <select>
@@ -76,7 +75,7 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
           >Catégories de contenu</a
         >
       </th>
@@ -84,13 +83,13 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
-      <td>Zéro ou plusieurs éléments {{HTMLElement("option")}}.</td>
+      <td>Zéro ou plusieurs éléments {{HTMLElement("option")}}. Dans <a href="/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select">les éléments de sélection personnalisables</a>, un élément {{HTMLElement("legend")}} est autorisé comme enfant de <code>&lt;optgroup&gt;</code>.</td>
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
       <td>
         La balise de début est obligatoire, la balise de fin est optionnelle si
-        l'élément est immédiatement suivi par un autre élément &#x3C;optgroup>
+        l'élément est immédiatement suivi par un autre élément <code>&#x3C;optgroup></code>
         ou si l'élément parent n'a pas d'autre contenu.
       </td>
     </tr>
@@ -99,12 +98,16 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
       <td>Un élément {{HTMLElement("select")}}.</td>
     </tr>
     <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a></td>
+    </tr>
+    <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
+      <td>Aucun <code>role</code> autorisé</td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLOptGroupElement")}}</td>
+      <td>{{DOMxRef("HTMLOptGroupElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -119,4 +122,5 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
 ## Voir aussi
 
-- Les autres éléments relatifs aux formulaires : {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}.
+- Les autres éléments relatifs aux formulaires&nbsp;: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}.
+- [Les éléments de sélection personnalisables](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select)

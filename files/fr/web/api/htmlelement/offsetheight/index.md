@@ -1,49 +1,43 @@
 ---
-title: element.offsetHeight
+title: "HTMLElement : propriété offsetHeight"
+short-title: offsetHeight
 slug: Web/API/HTMLElement/offsetHeight
+l10n:
+  sourceCommit: 0916e1754652f3a7c663ef031faa26c98f492023
 ---
 
-{{ ApiRef() }}
+{{APIRef("HTML DOM")}}
 
-### Résumé
+La propriété en lecture seule **`offsetHeight`** de l'interface {{DOMxRef("HTMLElement")}} retourne la hauteur d'un élément, y compris le remplissage vertical (<i lang="en">padding</i>) et les bordures, sous forme d'entier.
 
-Propriété DHTML permettant d'obtenir la hauteur d'un élément par rapport à la mise en page.
+En général, `offsetHeight` est une mesure en pixels de la hauteur CSS de l'élément, incluant les bordures, le remplissage et les barres de défilement horizontales (si elles sont affichées). Elle n'inclut pas la hauteur des pseudo-éléments comme `::before` ou `::after`. Pour l'objet body du document, la mesure inclut la hauteur totale du contenu linéaire au lieu de la hauteur CSS de l'élément. Les éléments flottants qui dépassent sous d'autres contenus linéaires sont ignorés.
 
-### Syntaxe
+Si l'élément est caché (par exemple, en définissant `style.display` sur l'élément ou l'un de ses ancêtres à `"none"`), alors la valeur retournée est `0`.
 
-```js
-var hauteurTotaleElem = document.getElementById(id).offsetHeight;
-```
+## Valeur
 
-_hauteurTotalElem_ est une variable stockant un entier correspondant à la valeur en pixels de la hauteur totale de l'élément identifé par `id`. `offsetHeight` est une propriété en lecture seule.
+Un entier.
 
-### Description
+## Exemples
 
-Typiquement, la propriété **offsetHeight** d'un élément est une mesure qui comprend les bordures de l'élément, ses marges internes verticales (padding), la barre de défilement horizontale si présente et affichée, et la hauteur CSS de l'élément.
+![Un élément exemple avec un grand remplissage, une bordure et une marge. offsetHeight est la hauteur de mise en page de l'élément, incluant son remplissage et sa bordure, mais excluant sa marge.](dimensions-offset.png)
 
-### Exemple
+L'image ci-dessus montre une barre de défilement et un `offsetHeight` qui s'adapte à la fenêtre. Cependant, les éléments non défilants peuvent avoir des valeurs `offsetHeight` importantes, bien supérieures au contenu visible. Ces éléments sont généralement contenus dans des éléments défilants&nbsp;; par conséquent, ils peuvent être totalement ou partiellement invisibles, selon la valeur de `scrollTop` du conteneur défilant.
 
-## Example
+## Spécifications
 
-![](dimensions-offset.png)
+{{Specifications}}
 
-L'exemple d'image ci-avant montre une barre de défilement et un décalage `offsetHeight` qui rentre dans la fenêtre. Toutefois, les éléments non-défilables peuvent avoir des valeurs `offsetHeight` élevées, voire plus élevéesque le contenu visible. Ces éléments sont généralement contenu au sein d'éléments défilables et, de fait, les éléments non-défilables peuvent être partiellement ou complètement invisible, selon la valeur de `scrollTop` pour le conteneur.
+## Compatibilité des navigateurs
 
-### Spécification
-
-`offsetHeight` fait partie du modèle objet DHTML de Microsoft Internet Explorer. Elle ne fait partie d'aucune spécification ou recommandation technique du W3C.
-
-### Notes
-
-`offsetHeight` est une propriété du modèle objet DHTML introduite par Microsoft Internet Explorer. On l'appelle parfois la hauteur physique ou graphique d'un élément, ou sa hauteur «&nbsp;border-box&nbsp;» (bordure et boîte).
-
-### Références
-
-- [_offsetHeight definition_ sur MSDN](http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/offsetheight.asp?frame=true)
-- [_Measuring Element Dimension and Location_ sur MSDN](http://msdn.microsoft.com/workshop/author/om/measuring.asp)
+{{Compat}}
 
 ### Voir aussi
 
-- [`element.clientHeight`](/fr/docs/Web/API/Element/clientHeight)
-- [`element.scrollHeight`](/fr/docs/Web/API/Element/scrollHeight)
-- [`element.offsetWidth`](/fr/docs/Web/API/HTMLElement/offsetWidth)
+- [Déterminer les dimensions des éléments](/fr/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- La propriété {{DOMxRef("Element.clientHeight")}}
+- La propriété {{DOMxRef("Element.scrollHeight")}}
+- La propriété {{DOMxRef("HTMLElement.offsetWidth")}}
+- La propriété {{DOMxRef("HTMLElement.offsetLeft")}}
+- La propriété {{DOMxRef("HTMLElement.offsetTop")}}
+- La méthode {{DOMxRef("Element.getBoundingClientRect()")}}

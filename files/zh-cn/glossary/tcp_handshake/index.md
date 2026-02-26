@@ -23,7 +23,7 @@ TCP 通过三个消息来协商和启动 TCP 会话，这三个消息分别被�
 
 ## 参见
 
-- [传输层安全（TLS）协议](/zh-CN/docs/Web/Security/Transport_Layer_Security)
+- [传输层安全（TLS）协议](/zh-CN/docs/Web/Security/Defenses/Transport_Layer_Security)
 - 相关术语：
   - {{Glossary("HTTPS")}}
 - 维基百科上的[传输层安全](https://zh.wikipedia.org/wiki/傳輸層安全性協定)

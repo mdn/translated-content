@@ -1,12 +1,13 @@
 ---
 title: 属性セレクター
 slug: Web/CSS/Reference/Selectors/Attribute_selectors
-original_slug: Web/CSS/Attribute_selectors
 l10n:
-  sourceCommit: 333c924622d7ff78253a662f3d9d4e60263a93d9
+  sourceCommit: ff4dc3d43e814614df60ecdb7376b59698660ac2
 ---
 
 CSS の**属性セレクター** (attribute selector) は、指定された属性が明示的に設定された要素に基づいて要素を照合します。オプションで、属性値または部分文字列の値が一致するように定義します。
+
+## 構文
 
 ```css
 /* <a> 要素で title 属性を持つもの */
@@ -35,8 +36,6 @@ a[class~="logo"] {
 }
 ```
 
-## 構文
-
 - `[attr]`
   - : _attr_ という名前の属性を持つ要素を表します。
 - `[attr=value]`
@@ -53,7 +52,7 @@ a[class~="logo"] {
   - : _attr_ という名前の属性の値が、文字列中に _value_ を1つ以上含む要素を表します。
 - `[attr operator value i]`
   - : 閉じ角括弧の前に `i` (または `I`) を追加すると、 ({{Glossary("ASCII")}} の範囲内の文字の場合) 値は大文字と小文字を区別せずに比較されます。
-- `[attr operator value s]` {{Experimental_Inline}}
+- `[attr operator value s]`
   - : 閉じ角括弧の前に `s` (または `S`) を追加すると、 ({{Glossary("ASCII")}} の範囲内の文字の場合) 値は大文字と小文字を区別して比較されます。
 
 ### 値
@@ -251,4 +250,4 @@ ol[type="a" i] {
 - {{CSSxRef("attr")}}
 - 単一要素の選択: {{DOMxRef("Document.querySelector()")}}, {{DOMxRef("DocumentFragment.querySelector()")}}, {{DOMxRef("Element.querySelector()")}}
 - 一致するすべての要素の選択: {{DOMxRef("Document.querySelectorAll()")}}, {{DOMxRef("DocumentFragment.querySelectorAll()")}}, {{DOMxRef("Element.querySelectorAll()")}}
-- [Case-insensitive attribute selector values](https://html.spec.whatwg.org/multipage/semantics-other.html#case-sensitivity-of-selectors) on WHATWG
+- [Case-insensitive attribute selector values](https://html.spec.whatwg.org/multipage/semantics-other.html#case-sensitivity-of-selectors) - WHATWG

@@ -1,12 +1,11 @@
 ---
 title: シェイプジェネレーター
 slug: Web/CSS/Guides/Shapes/Shape_generator
-original_slug: Web/CSS/CSS_shapes/Shape_generator
 l10n:
-  sourceCommit: efebdd806165ea668d49fc67fd5b1d7f6229907b
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-この図形生成ツールはを使用すると、 {{cssxref("&lt;basic-shape&gt;")}} を使用する機能の座標と構文を定義することができます。
+この図形生成ツールはを使用すると、 {{cssxref("basic-shape")}} を使用する機能の座標と構文を定義することができます。
 
 - {{HTMLElement("area")}} 要素の [`coords`](/ja/docs/Web/HTML/Reference/Elements/area#coords) 属性
 - CSS の {{cssxref("basic-shape/inset()")}}, {{cssxref("basic-shape/xywh()")}}, {{cssxref("basic-shape/rect()")}}, {{cssxref("basic-shape/circle()")}}, {{cssxref("basic-shape/polygon()")}} の各関数

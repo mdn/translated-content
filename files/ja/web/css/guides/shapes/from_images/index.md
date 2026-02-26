@@ -1,22 +1,68 @@
 ---
 title: 画像からのシェイプの作成
+short-title: 画像に基づくシェイプ
 slug: Web/CSS/Guides/Shapes/From_images
-original_slug: Web/CSS/CSS_shapes/Shapes_from_images
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 このガイドでは、アルファチャンネルを含む画像ファイル、または CSS グラデーションからシェイプを作成する方法を見ていきます。これはシェイプを作成するためのとても柔軟な方法です。 CSS で複雑なポリゴンを持つパスを描画するのではなく、グラフィックプログラムでシェイプを作成し、しきい値よりも透明度の高いピクセルによって作成されたパスを使用することができます。
 
-## 画像をもとにした単純なシェイプ
+## 画像からシェイプを作成
 
-シェイプの画像を使用するには、完全に不透明ではない領域があるアルファチャンネルが必要です。 {{cssxref("shape-image-threshold")}} プロパティは、この透明度のしきい値を設定するために使用されます。この値よりも透明度の低いピクセルは、シェイプの範囲を計算するために使用されます。
+画像を使用してシェイプを作成するためには、画像に完全に不透明ではない領域があるアルファチャンネルが必要です。 {{cssxref("shape-image-threshold")}} プロパティは、この透明度のしきい値を設定するために使用されます。この値よりも透明度の低いピクセルは、シェイプの範囲を計算するために使用されます。
 
-簡単な例として、赤い塗りつぶしの星形の領域と、完全に透明な領域のある画像があるとします。 {{cssxref("shape-outside")}} プロパティの値として、画像ファイルへのパスを使用します。コンテンツは星形の図形で折り返されるようになりました。
+次の例では、赤い塗りつぶしの星形の領域と、完全に透明な領域のある画像があります。 {{cssxref("shape-outside")}} プロパティの値として、画像ファイルへのパスを使用します。コンテンツは星形の図形で折り返されるようになりました。
 
-{{EmbedGHLiveSample("css-examples/shapes/image/simple-example.html", '100%', 800)}}
+```html-nolint live-sample___simple-example
+<div class="box">
+  <img
+    alt="赤い星"
+    src="https://mdn.github.io/shared-assets/images/examples/star-shape.png" />
+  <p>
+    1782 年 11 月のある夜、伝えられるところによれば、フランスの小さな町アノネーで 2 人の兄弟が冬の暖炉のそばに座り、炉から立ち上る灰色の煙の渦が広い煙突をくねくねと登っていくのを見ていた。 2 人の名前はステファンおよびジョセフ・モンゴルフィエ、職業は紙漉き職人で、思慮深く、あらゆる科学的知識や新しい発見に深い関心を持っていた。それが記念すべき夜であったことを証明するように、その夜以前にも、何億人もの人々が、その事実から特別なインスピレーションを得ることなく、焚き火の煙が立ち昇るのを眺めていた。
+  </p>
+</div>
+```
+
+```css live-sample___simple-example
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+img {
+  float: left;
+  shape-outside: url("https://mdn.github.io/shared-assets/images/examples/star-shape.png");
+}
+```
+
+{{EmbedLiveSample("simple-example", "", "340px")}}
 
 シェイプからテキストを離すために {{cssxref("shape-margin")}} を使用することができ、作成されたシェイプの周囲と、テキストとの間のマージンを指定します。
 
-{{EmbedGHLiveSample("css-examples/shapes/image/margin.html", '100%', 800)}}
+```html-nolint hidden live-sample___margin
+<div class="box">
+  <img
+    alt="赤い星"
+    src="https://mdn.github.io/shared-assets/images/examples/star-shape.png" />
+  <p>
+    1782 年 11 月のある夜、伝えられるところによれば、フランスの小さな町アノネーで 2 人の兄弟が冬の暖炉のそばに座り、炉から立ち上る灰色の煙の渦が広い煙突をくねくねと登っていくのを見ていた。 2 人の名前はステファンおよびジョセフ・モンゴルフィエ、職業は紙漉き職人で、思慮深く、あらゆる科学的知識や新しい発見に深い関心を持っていた。それが記念すべき夜であったことを証明するように、その夜以前にも、何億人もの人々が、その事実から特別なインスピレーションを得ることなく、焚き火の煙が立ち昇るのを眺めていた。
+  </p>
+</div>
+```
+
+```css live-sample___margin
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+img {
+  float: left;
+  shape-outside: url("https://mdn.github.io/shared-assets/images/examples/star-shape.png");
+  shape-margin: 20px;
+}
+```
+
+{{EmbedLiveSample("margin", "", "340px")}}
 
 ## CORS 互換
 
@@ -32,15 +78,61 @@ original_slug: Web/CSS/CSS_shapes/Shapes_from_images
 
 次の例では、最初の例と同様の画像を使用していますが、この画像では、星の背景が完全に透明ではなく、グラフィックプログラムで 20% の不透明度に作成されています。 `shape-image-threshold` を `0.3` に設定すると図形が表示され、 `0.2` より小さい値に設定すると、図形がなくなります。
 
-{{EmbedGHLiveSample("css-examples/shapes/image/threshold.html", '100%', 800)}}
+```html-nolint hidden live-sample___threshold
+<div class="box">
+  <img
+    alt="赤い星"
+    src="https://mdn.github.io/shared-assets/images/examples/star-red-20.png" />
+  <p>
+    1782 年 11 月のある夜、伝えられるところによれば、フランスの小さな町アノネーで 2 人の兄弟が冬の暖炉のそばに座り、炉から立ち上る灰色の煙の渦が広い煙突をくねくねと登っていくのを見ていた。 2 人の名前はステファンおよびジョセフ・モンゴルフィエ、職業は紙漉き職人で、思慮深く、あらゆる科学的知識や新しい発見に深い関心を持っていた。それが記念すべき夜であったことを証明するように、その夜以前にも、何億人もの人々が、その事実から特別なインスピレーションを得ることなく、焚き火の煙が立ち昇るのを眺めていた。
+  </p>
+</div>
+```
+
+```css live-sample___threshold
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+img {
+  float: left;
+  shape-outside: url("https://mdn.github.io/shared-assets/images/examples/star-red-20.png");
+  shape-image-threshold: 0.2;
+}
+```
+
+{{EmbedLiveSample("threshold", "", "340px")}}
 
 ## 生成コンテンツの画像を使用
 
-上記の例では、画像を {{cssxref("shape-outside")}} の値として使用し、ページにも追加しました。多くのデモでは、従っているシェイプを見せるためにこれを行っていますが、 `shape-outside` プロパティはページに表示される画像とは関係がないため、画像を使用してシェイプを作成するために、画像を表示する必要はありません。
+上記の例では、画像を {{cssxref("shape-outside")}} の値として使用し、ページにも追加しました。多くのデモでは、沿わせるシェイプを見せるためにこれを行っていますが、 `shape-outside` プロパティはページに表示される画像とは関係がないため、画像を使用してシェイプを作成するために、画像を表示する必要はありません。
 
 何かを浮動状態にする必要がありますが、以下の例のように生成コンテンツを使用することもできます。ここでは生成コンテンツを浮動状態にし、大きな星形の画像を使ってコンテンツを整形していますが、ページ上には何も画像を表示していません。
 
-{{EmbedGHLiveSample("css-examples/shapes/image/generated-content.html", '100%', 800)}}
+```html-nolint live-sample___generated-content
+<div class="box">
+  <p>
+    1782 年 11 月のある夜、伝えられるところによれば、フランスの小さな町アノネーで 2 人の兄弟が冬の暖炉のそばに座り、炉から立ち上る灰色の煙の渦が広い煙突をくねくねと登っていくのを見ていた。 2 人の名前はステファンおよびジョセフ・モンゴルフィエ、職業は紙漉き職人で、思慮深く、あらゆる科学的知識や新しい発見に深い関心を持っていた。それが記念すべき夜であったことを証明するように、その夜以前にも、何億人もの人々が、その事実から特別なインスピレーションを得ることなく、焚き火の煙が立ち昇るのを眺めていた。
+  </p>
+</div>
+```
+
+```css live-sample___generated-content
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.box::before {
+  content: "";
+  float: left;
+  width: 400px;
+  height: 300px;
+  shape-outside: url("https://mdn.github.io/shared-assets/images/examples/star-shape.png");
+  shape-image-threshold: 0.3;
+}
+```
+
+{{EmbedLiveSample("generated-content", "", "420px")}}
 
 ## グラデーションを用いたシェイプの作成
 
@@ -50,10 +142,72 @@ original_slug: Web/CSS/CSS_shapes/Shapes_from_images
 
 背景画像を完全に削除してみることもでき、そうすればグラデーションは純粋にシェイプを作成するために使用され、ページには全く表示されません。
 
-{{EmbedGHLiveSample("css-examples/shapes/image/gradient.html", '100%', 800)}}
+```html-nolint live-sample___gradient
+<div class="box">
+  <p>
+    1782 年 11 月のある夜、伝えられるところによれば、フランスの小さな町アノネーで 2 人の兄弟が冬の暖炉のそばに座り、炉から立ち上る灰色の煙の渦が広い煙突をくねくねと登っていくのを見ていた。 2 人の名前はステファンおよびジョセフ・モンゴルフィエ、職業は紙漉き職人で、思慮深く、あらゆる科学的知識や新しい発見に深い関心を持っていた。それが記念すべき夜であったことを証明するように、その夜以前にも、何億人もの人々が、その事実から特別なインスピレーションを得ることなく、焚き火の煙が立ち昇るのを眺めていた。
+  </p>
+</div>
+```
 
-次の例では、楕円形の放射状のグラデーションを使用し、グラデーションの透過部分を再利用してシェイプを作成しています。
+```css live-sample___gradient
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
 
-{{EmbedGHLiveSample("css-examples/shapes/image/radial-gradient.html", '100%', 800)}}
+.box::before {
+  content: "";
+  float: left;
+  height: 250px;
+  width: 400px;
+  background-image: linear-gradient(
+    to bottom right,
+    rebeccapurple,
+    transparent
+  );
+  shape-outside: linear-gradient(to bottom right, rebeccapurple, transparent);
+  shape-image-threshold: 0.3;
+}
+```
+
+{{EmbedLiveSample("gradient", "", "400px")}}
+
+次の例では、楕円形の放射のグラデーションを使用し、グラデーションの透過部分を再利用してシェイプを作成しています。
+
+```html-nolint hidden live-sample___radial-gradient
+<div class="box">
+  <p>
+    1782 年 11 月のある夜、伝えられるところによれば、フランスの小さな町アノネーで 2 人の兄弟が冬の暖炉のそばに座り、炉から立ち上る灰色の煙の渦が広い煙突をくねくねと登っていくのを見ていた。 2 人の名前はステファンおよびジョセフ・モンゴルフィエ、職業は紙漉き職人で、思慮深く、あらゆる科学的知識や新しい発見に深い関心を持っていた。それが記念すべき夜であったことを証明するように、その夜以前にも、何億人もの人々が、その事実から特別なインスピレーションを得ることなく、焚き火の煙が立ち昇るのを眺めていた。
+  </p>
+</div>
+```
+
+```css live-sample___radial-gradient
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.box::before {
+  content: "";
+  float: left;
+  height: 250px;
+  width: 400px;
+  background-image: radial-gradient(
+    ellipse closest-side,
+    rebeccapurple,
+    blue 50%,
+    transparent
+  );
+  shape-outside: radial-gradient(
+    ellipse closest-side,
+    rebeccapurple,
+    blue 50%,
+    transparent
+  );
+  shape-image-threshold: 0.3;
+}
+```
+
+{{EmbedLiveSample("radial-gradient", "", "400px")}}
 
 これらのライブサンプルで直接実験して、グラデーションを変更するとシェイプのパスがどのように変化するかを確認することができます。

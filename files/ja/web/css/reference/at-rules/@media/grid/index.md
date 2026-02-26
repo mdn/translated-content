@@ -1,9 +1,8 @@
 ---
 title: grid
 slug: Web/CSS/Reference/At-rules/@media/grid
-original_slug: Web/CSS/@media/grid
 l10n:
-  sourceCommit: 8d03307af2cee96a307c22b5d52b93f155f11524
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`grid`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、出力機器がグリッドベースの画面を使用しているかどうかを調べるために使用します。

@@ -1,9 +1,8 @@
 ---
 title: ::first-line
 slug: Web/CSS/Reference/Selectors/::first-line
-original_slug: Web/CSS/::first-line
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::first-line`** applique la décoration à la première ligne d'un élément. La quantité de texte sur la première ligne dépend de nombreux facteurs, comme la largeur des éléments ou du document, mais aussi de la taille du texte. Comme tous les pseudo-éléments, les sélecteurs contenant `::first-line` ne ciblent pas un élément HTML réel.
@@ -34,17 +33,17 @@ Les effets de `::first-line` sont limités par la longueur et le contenu de la p
 > [!NOTE]
 > Le standard [Sélecteurs de Niveau 3 <sup>(angl.)</sup>](https://drafts.csswg.org/selectors-3/#first-line) a introduit la notation à double deux-points (`::`) pour distinguer les [pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) des [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) à deux points simples (`:`). Les navigateurs acceptent à la fois `::first-line` et `:first-line`, qui a été introduit dans CSS2.
 
-Aux fins de {{CSSXref("background")}}, le pseudo-élément `::first-line` est comme un élément de niveau en ligne, ce qui signifie que dans une première ligne justifiée à gauche, l'arrière-plan peut ne pas s'étendre jusqu'à la marge droite.
+Aux fins de {{CSSxRef("background")}}, le pseudo-élément `::first-line` est comme un élément de niveau en ligne, ce qui signifie que dans une première ligne justifiée à gauche, l'arrière-plan peut ne pas s'étendre jusqu'à la marge droite.
 
 ## Propriétés autorisées
 
 Seul un petit sous-ensemble de propriétés CSS peut être utilisé avec le pseudo-élément `::first-line`&nbsp;:
 
-- Toutes les propriétés liées à la police&nbsp;: {{Cssxref("font")}}, {{cssxref("font-kerning")}}, {{Cssxref("font-style")}}, {{Cssxref("font-variant")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-synthesis")}}, {{cssxref("font-feature-settings")}}, {{cssxref("font-language-override")}}, {{Cssxref("font-weight")}}, {{Cssxref("font-size")}}, {{cssxref("font-size-adjust")}}, {{cssxref("font-stretch")}} et {{Cssxref("font-family")}}
-- Toutes les propriétés liées à l'arrière-plan&nbsp;: {{Cssxref("background-color")}}, {{cssxref("background-clip")}}, {{Cssxref("background-image")}}, {{cssxref("background-origin")}}, {{cssxref("background-position")}}, {{cssxref("background-repeat")}}, {{cssxref("background-size")}}, {{Cssxref("background-attachment")}} et {{cssxref("background-blend-mode")}}
-- La propriété {{cssxref("color")}}
-- {{cssxref("word-spacing")}}, {{cssxref("letter-spacing")}}, {{cssxref("text-decoration")}}, {{cssxref("text-transform")}} et {{cssxref("line-height")}}
-- {{cssxref("text-shadow")}}, {{cssxref("text-decoration")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}} et {{cssxref("vertical-align")}}.
+- Toutes les propriétés liées à la police&nbsp;: {{CSSxRef("font")}}, {{CSSxRef("font-kerning")}}, {{CSSxRef("font-style")}}, {{CSSxRef("font-variant")}}, {{CSSxRef("font-variant-numeric")}}, {{CSSxRef("font-variant-position")}}, {{CSSxRef("font-variant-east-asian")}}, {{CSSxRef("font-variant-caps")}}, {{CSSxRef("font-variant-alternates")}}, {{CSSxRef("font-variant-ligatures")}}, {{CSSxRef("font-synthesis")}}, {{CSSxRef("font-feature-settings")}}, {{CSSxRef("font-language-override")}}, {{CSSxRef("font-weight")}}, {{CSSxRef("font-size")}}, {{CSSxRef("font-size-adjust")}}, {{CSSxRef("font-stretch")}} et {{CSSxRef("font-family")}}
+- Toutes les propriétés liées à l'arrière-plan&nbsp;: {{CSSxRef("background-color")}}, {{CSSxRef("background-clip")}}, {{CSSxRef("background-image")}}, {{CSSxRef("background-origin")}}, {{CSSxRef("background-position")}}, {{CSSxRef("background-repeat")}}, {{CSSxRef("background-size")}}, {{CSSxRef("background-attachment")}} et {{CSSxRef("background-blend-mode")}}
+- La propriété {{CSSxRef("color")}}
+- {{CSSxRef("word-spacing")}}, {{CSSxRef("letter-spacing")}}, {{CSSxRef("text-decoration")}}, {{CSSxRef("text-transform")}} et {{CSSxRef("line-height")}}
+- {{CSSxRef("text-shadow")}}, {{CSSxRef("text-decoration")}}, {{CSSxRef("text-decoration-color")}}, {{CSSxRef("text-decoration-line")}}, {{CSSxRef("text-decoration-style")}} et {{CSSxRef("vertical-align")}}.
 
 ## Syntaxe
 
@@ -121,7 +120,7 @@ dans un éditeur de texte.
 
 #### CSS
 
-Dans cet exemple, nous utilisons la propriété CSS {{cssxref("white-space", "", "#lignes_multiples_dans_un_élément_de_texte_svg")}} pour faire en sorte que l'élément SVG `<text>` se divise en plusieurs lignes. Nous sélectionnons ensuite la première ligne à l'aide du pseudo-élément `::first-line`.
+Dans cet exemple, nous utilisons la propriété CSS {{CSSxRef("white-space", "", "#lignes_multiples_dans_un_élément_de_texte_svg")}} pour faire en sorte que l'élément SVG `<text>` se divise en plusieurs lignes. Nous sélectionnons ensuite la première ligne à l'aide du pseudo-élément `::first-line`.
 
 ```css hidden
 text {
@@ -155,5 +154,5 @@ text::first-line {
 
 ## Voir aussi
 
-- {{cssxref("::first-letter")}}
-- {{cssxref("white-space")}}
+- Le pseudo-élément {{CSSxRef("::first-letter")}}
+- la propriété {{CSSxRef("white-space")}}

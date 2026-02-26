@@ -42,5 +42,5 @@ _Также наследуют методы от родителя {{domxref("Eve
 
 ## Смотрите также
 
-- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Использование CSS-анимации](/ru/docs/Web/CSS/Guides/Animations/Using)
 - Анимация связанных CSS-свойств и по правилам: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.

@@ -52,9 +52,9 @@ l10n:
 >
 > 下記のアドバイスに従って、以下のマクロを更新または削除してください。
 >
-> - `\{{SecureContext_Header}}` — これは **保護されたコンテキスト** バナーを生成し、この技術が[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ利用できることを示します。
+> - `\{{SecureContext_Header}}` — これは **保護されたコンテキスト** バナーを生成し、この技術が[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)でのみ利用できることを示します。
 >   そうではない場合は、マクロ呼び出すを削除することができます。
->   そうである場合は、[保護されたコンテキストに制限されている機能](/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)ページ内の項目も記入してください。
+>   そうである場合は、[保護されたコンテキストに制限されている機能](/ja/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts)ページ内の項目も記入してください。
 > - `\{{SVGRef}}` — これは、要素のための左側のリファレンスサイドバーを生成します。
 >   サイドバーのコンテンツはページメタデータのタグに依存します。
 > - このページをコピーする際には、 `\{{MDNSidebar}}` マクロを外すのを忘れないでください。

@@ -39,7 +39,7 @@ l10n:
 
 이탈률을 줄이기 위한 기본적인 기준은 [3G/4G에서 Time to Interactive를 5초 이하로 유지하고, 추가적인 로드는 2초 이하](https://infrequently.org/2017/10/can-you-afford-it-real-world-web-performance-budgets/)로 맞추는 것입니다. 하지만 사이트의 구체적인 목표나 콘텐츠에 따라 다른 성능 지표에 집중할 수도 있습니다.
 
-블로그나 뉴스 사이트처럼 글자 중점 사이트에서, [First Contentful Paint](/ko/docs/Glossary/First_contentful_paint) 지표는 사용자가 얼마나 빠르게 읽기 시작할 수 있는지와 같이 사용자 행동을 더 정확하게 반영할 수 있습니다. 이는 글꼴 용량 같은 구체적인 예산과 [font-display](/ko/docs/Web/CSS/@font-face/font-display)를 활용해 [인지된 성능](/ko/docs/Learn_web_development/Extensions/Performance/Perceived_performance)을 개선하는 최적화 방법을 결정하는 데 도움을 줄 것입니다.
+블로그나 뉴스 사이트처럼 글자 중점 사이트에서, [First Contentful Paint](/ko/docs/Glossary/First_contentful_paint) 지표는 사용자가 얼마나 빠르게 읽기 시작할 수 있는지와 같이 사용자 행동을 더 정확하게 반영할 수 있습니다. 이는 글꼴 용량 같은 구체적인 예산과 [font-display](/ko/docs/Web/CSS/Reference/At-rules/@font-face/font-display)를 활용해 [인지된 성능](/ko/docs/Learn_web_development/Extensions/Performance/Perceived_performance)을 개선하는 최적화 방법을 결정하는 데 도움을 줄 것입니다.
 
 성능 예산의 궁극적인 가치는 성능이 사업이나 제품 목표에 미치는 영향을 파악하는 것입니다. 측정 지표를 정의할 때, [사용자 경험](https://extensionworkshop.com/documentation/develop/user-experience-best-practices/)에 초점을 맞춰야 합니다. 이는 단순히 이탈률이나 전환율 뿐만 아니라 사용자가 사이트를 다시 방문할 가능성에도 영향을 미칩니다.
 

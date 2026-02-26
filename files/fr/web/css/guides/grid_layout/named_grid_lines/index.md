@@ -6,7 +6,7 @@ original_slug: Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
 
 {{CSSRef}}
 
-{{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille", "Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS","Web/CSS/CSS_Grid_Layout")}}
+{{PreviousMenuNext("Web/CSS/Guides/Grid_layout/Grid_template_areas", "Web/CSS/Guides/Grid_layout/Auto-placement","Web/CSS/Guides/Grid_layout")}}
 
 Dans les articles précédents, on a vu comment placer des objets sur les lignes définies par les pistes de la grilles. On a également vu comment placer des objets sur des zones nommées. Dans ce guide, nous allons combiner ces deux concepts et apprendre à placer les objets sur des lignes avec des noms. Le nommage des lignes peut s'avérer très utile mais un aspect encore plus intéressant consiste à combiner les noms et les tailles de pistes. Cela sera plus clair lorsque nous aurons vu les différents exemples.
 
@@ -445,4 +445,4 @@ Là encore, l'outil de mise en évidence de la grille permet de voir comment le 
 
 Et voilà tout ce dont on a besoin. Aucun calcul compliqué, la grille a automatiquement retiré la gouttière de 10 pixels avant d'affecter l'espace aux pistes qui mesurent `1fr`. Lorsque vous construirez vos propres disposition, vous serez plus à l'aise avec la syntaxe et utiliserez les techniques qui sont les plus pertinentes pour vos projets. Essayez de construire cetaines dispositions classiques avec des différentes méthodes, vous deviendrez plus efficaces pour manipuler les grilles CSS. Dans le prochain guide, nous verrons comment la grille peut placer des objets automatiquement, sans même avoir besoin d'utiliser les propriétés de placement !
 
-{{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille", "Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS","Web/CSS/CSS_Grid_Layout")}}
+{{PreviousMenuNext("Web/CSS/Guides/Grid_layout/Grid_template_areas", "Web/CSS/Guides/Grid_layout/Auto-placement","Web/CSS/Guides/Grid_layout")}}

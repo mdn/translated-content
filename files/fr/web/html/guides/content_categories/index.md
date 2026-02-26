@@ -1,106 +1,353 @@
 ---
 title: Catégories de contenu
 slug: Web/HTML/Guides/Content_categories
-original_slug: Web/HTML/Content_categories
+l10n:
+  sourceCommit: e66301dff87e1ac68bd5e6e9dace12ead3eded6f
 ---
 
-{{HTMLSidebar}}
+La plupart des éléments [HTML](/fr/docs/Web/HTML) font partie d'une ou plusieurs **catégories de contenu** — ces catégories regroupent des éléments qui partagent des caractéristiques communes. Il s'agit d'un regroupement souple (cela ne crée pas réellement de relation entre les éléments de ces catégories), mais cela permet de définir et de décrire le comportement partagé des catégories et leurs règles associées. Il est possible que certains éléments (comme {{HTMLElement("track")}}) ne fassent partie d'_aucune_ de ces catégories.
 
-Chaque élément [HTML](/fr/docs/Web/HTML) est membre d'un certain nombre de catégories de contenu qui regroupent des éléments partageant un ensemble de caractéristiques. Ceci est un regroupement lâche, en ce sens qu'il ne crée pas réellement de relation entre les éléments de ces types, mais il aide à définir et à décrire leur comportement et les règles associées qu'ils doivent respecter, en particulier lorsque l'on entre dans leurs détails complexes. Il est également possible que les éléments ne soient membres d'aucune de ces catégories.
+Les catégories de contenu servent à définir le _modèle de contenu_ des éléments, c'est-à-dire ce que chaque élément peut avoir comme descendants. Par exemple, un élément `<p>` ne peut contenir que du _contenu phrasé_, tandis qu'un élément `<div>` peut contenir du _contenu de flux_.
 
-Il y a trois types différents de catégories de contenu :
+Il existe sept principales catégories de contenu, qui peuvent être résumées par le diagramme de Venn ci-dessous&nbsp;:
 
-- Les catégories de contenu principales qui décrivent un ensemble de règles de contenu partagées par une grande variété d'éléments ;
-- Les catégories de contenu relatives aux formulaires qui décrivent les règles de contenu partagées par les éléments en lien avec les formulaires ;
-- Les catégories de contenu spécifiques qui décrivent des catégories plus rares et qui s'appliquent à peu d'éléments, parfois dans un contexte particulier
+![Un diagramme de Venn montrant comment les différentes catégories de contenu s'entrecroisent. Les sections suivantes expliquent ces relations en détail.](content_categories_venn.png)
 
 > [!NOTE]
-> Un discours plus détaillé sur ces catégories de contenu et de leurs fonctionnalités comparatives dépasse le cadre de cet article ; pour en savoir plus, vous pouvez lire les [parties correspondantes de la spécification HTML](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content) (en).
+> Une discussion plus détaillée sur ces catégories de contenu et leurs fonctionnalités comparées dépasse le cadre de cet article&nbsp;; pour cela, vous pouvez lire les [sections pertinentes de la spécification HTML <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content).
 
-![](content_categories_venn.png)
+## Contenu de méta-données
 
-## Principales catégories de contenu
+Les éléments appartenant à la catégorie de _contenu de méta-données_ modifient la présentation ou le comportement du reste du document, créent des liens vers d'autres documents, ou transmettent d'autres informations _hors bande_. Tout ce qui se trouve dans {{HTMLElement("head")}}, y compris `<title>`, `<link>`, `<script>`, `<style>`, et le moins utilisé `<base>`, constitue du contenu de méta-données. Il existe un élément `<meta>` pour les méta-données qui ne peuvent pas être représentées par ces autres éléments.
 
-### Contenu de méta-données
+Les éléments de méta-données sont&nbsp;:
 
-Les éléments appartenant à cette catégorie modifient la présentation ou le comportement du reste du document, insèrent des liens vers d'autres documents ou comportent des informations sur la structure même des données.
+- {{HTMLElement("base")}}
+- {{HTMLElement("link")}}
+- {{HTMLElement("meta")}}
+- {{HTMLElement("noscript")}}
+- {{HTMLElement("script")}}
+- {{HTMLElement("style")}}
+- {{HTMLElement("template")}}
+- {{HTMLElement("title")}}
 
-Les éléments appartenant à cette catégories sont : {{HTMLElement("base")}}, {{HTMLElement("command")}} {{deprecated_inline}}, {{HTMLElement("link")}}, {{HTMLElement("meta")}}, {{HTMLElement("noscript")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} et {{HTMLElement("title")}}.
+Quelques-uns de ces éléments appartiennent à plus d'une catégorie de contenu. Par exemple, `<script>` est membre des catégories de contenu de méta-données, de flux et de phrasé, et est un élément supportant les scripts&nbsp;; `<script>` peut être utilisé là où du contenu de méta-données, du contenu phrasé, ou des éléments supportant les scripts sont attendus.
 
-### Contenu de flux
+## Contenu de flux
 
-Les éléments appartenant à la catégorie de contenu de flux contiennent généralement du texte ou du contenu intégré. Ces éléments sont : {{HTMLElement("a")}}, {{HTMLElement("abbr")}}, {{HTMLElement("address")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("audio")}}, {{HTMLElement("b")}},{{HTMLElement("bdo")}}, {{HTMLElement("bdi")}}, {{HTMLElement("blockquote")}}, {{HTMLElement("br")}}, {{HTMLElement("button")}}, {{HTMLElement("canvas")}}, {{HTMLElement("cite")}}, {{HTMLElement("code")}}, {{HTMLElement("command")}} {{deprecated_inline}}, {{HTMLElement("data")}}, {{HTMLElement("datalist")}}, {{HTMLElement("del")}}, {{HTMLElement("details")}}, {{HTMLElement("dfn")}}, {{HTMLElement("div")}}, {{HTMLElement("dl")}}, {{HTMLElement("em")}}, {{HTMLElement("embed")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("figure")}}, {{HTMLElement("footer")}}, {{HTMLElement("form")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("header")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("hr")}}, {{HTMLElement("i")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("input")}}, {{HTMLElement("ins")}}, {{HTMLElement("kbd")}}, {{HTMLElement("label")}}, {{HTMLElement("main")}}, {{HTMLElement("map")}}, {{HTMLElement("mark")}}, {{MathMLElement("math")}}, {{HTMLElement("menu")}}, {{HTMLElement("meter")}}, {{HTMLElement("nav")}}, {{HTMLElement("noscript")}}, {{HTMLElement("object")}}, {{HTMLElement("ol")}}, {{HTMLElement("output")}}, {{HTMLElement("p")}}, {{HTMLElement("picture")}}, {{HTMLElement("pre")}}, {{HTMLElement("progress")}}, {{HTMLElement("q")}}, {{HTMLElement("ruby")}}, {{HTMLElement("s")}}, {{HTMLElement("samp")}}, {{HTMLElement("script")}}, {{HTMLElement("section")}}, {{HTMLElement("select")}}, {{HTMLElement("small")}}, {{HTMLElement("span")}}, {{HTMLElement("strong")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{SVGElement("svg")}}, {{HTMLElement("table")}}, {{HTMLElement("template")}}, {{HTMLElement("textarea")}}, {{HTMLElement("time")}}, {{HTMLElement("ul")}}, {{HTMLElement("var")}}, {{HTMLElement("video")}}, {{HTMLElement("wbr")}} et le texte.
+Le contenu de flux est une catégorie large qui englobe la plupart des éléments pouvant se trouver à l'intérieur de l'élément {{HTMLElement("body")}}, y compris les éléments d'en-tête, les éléments sectionnants, les éléments phrasés, les éléments d'intégration, les éléments interactifs et les éléments liés aux formulaires. Il inclut aussi les noeuds de texte (mais pas ceux qui ne contiennent que des caractères d'espacement).
 
-Quelques autres éléments appartiennent à cette catégorie mais seulement sous certaines conditions :
+Les éléments de flux sont&nbsp;:
 
-- {{HTMLElement("area")}} s'il est un descendant de l'élément {{HTMLElement("map")}}
-- {{HTMLElement("link")}} si l'attribut [**itemprop**](/fr/docs/Web/HTML/Reference/Global_attributes#itemprop) est présent
-- {{HTMLElement("meta")}} si l'attribut [**itemprop**](/fr/docs/Web/HTML/Reference/Global_attributes#itemprop) est présent
-- {{HTMLElement("style")}} si l'attribut [`scoped`](/fr/docs/Web/HTML/Reference/Elements/style#scoped) {{deprecated_inline()}} est présent
+- {{HTMLElement("a")}}
+- {{HTMLElement("abbr")}}
+- {{HTMLElement("address")}}
+- {{HTMLElement("article")}}
+- {{HTMLElement("aside")}}
+- {{HTMLElement("audio")}}
+- {{HTMLElement("b")}}
+- {{HTMLElement("bdi")}}
+- {{HTMLElement("bdo")}}
+- {{HTMLElement("blockquote")}}
+- {{HTMLElement("br")}}
+- {{HTMLElement("button")}}
+- {{HTMLElement("canvas")}}
+- {{HTMLElement("cite")}}
+- {{HTMLElement("code")}}
+- {{HTMLElement("data")}}
+- {{HTMLElement("datalist")}}
+- {{HTMLElement("del")}}
+- {{HTMLElement("details")}}
+- {{HTMLElement("dfn")}}
+- {{HTMLElement("dialog")}}
+- {{HTMLElement("div")}}
+- {{HTMLElement("dl")}}
+- {{HTMLElement("em")}}
+- {{HTMLElement("embed")}}
+- {{HTMLElement("fieldset")}}
+- {{HTMLElement("figure")}}
+- {{HTMLElement("footer")}}
+- {{HTMLElement("form")}}
+- {{HTMLElement("Heading_Elements", "<code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>")}}
+- {{HTMLElement("header")}}
+- {{HTMLElement("hgroup")}}
+- {{HTMLElement("hr")}}
+- {{HTMLElement("i")}}
+- {{HTMLElement("iframe")}}
+- {{HTMLElement("img")}}
+- {{HTMLElement("input")}}
+- {{HTMLElement("ins")}}
+- {{HTMLElement("kbd")}}
+- {{HTMLElement("label")}}
+- {{HTMLElement("main")}}
+- {{HTMLElement("map")}}
+- {{HTMLElement("mark")}}
+- {{MathMLElement("math")}}
+- {{HTMLElement("menu")}}
+- {{HTMLElement("meter")}}
+- {{HTMLElement("nav")}}
+- {{HTMLElement("noscript")}}
+- {{HTMLElement("object")}}
+- {{HTMLElement("ol")}}
+- {{HTMLElement("output")}}
+- {{HTMLElement("p")}}
+- {{HTMLElement("picture")}}
+- {{HTMLElement("pre")}}
+- {{HTMLElement("progress")}}
+- {{HTMLElement("q")}}
+- {{HTMLElement("ruby")}}
+- {{HTMLElement("s")}}
+- {{HTMLElement("samp")}}
+- {{HTMLElement("script")}}
+- {{HTMLElement("search")}}
+- {{HTMLElement("section")}}
+- {{HTMLElement("select")}}
+- {{HTMLElement("slot")}}
+- {{HTMLElement("small")}}
+- {{HTMLElement("span")}}
+- {{HTMLElement("strong")}}
+- {{HTMLElement("sub")}}
+- {{HTMLElement("sup")}}
+- {{SVGElement("svg")}}
+- {{HTMLElement("table")}}
+- {{HTMLElement("template")}}
+- {{HTMLElement("textarea")}}
+- {{HTMLElement("time")}}
+- {{HTMLElement("u")}}
+- {{HTMLElement("ul")}}
+- {{HTMLElement("var")}}
+- {{HTMLElement("video")}}
+- {{HTMLElement("wbr")}}
+- [Éléments personnalisés autonomes](/fr/docs/Web/API/Web_components/Using_custom_elements)
+- Texte brut
 
-### Contenu sectionnant
+Quelques autres éléments appartiennent à cette catégorie, mais seulement si une condition spécifique est remplie&nbsp;:
 
-Les éléments appartenant à cette catégorie sont ceux créant une nouvelle [section dans le plan du document](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) qui définit la portée des éléments {{HTMLElement("header")}}, des éléments {{HTMLElement("footer")}} et du [contenu de titre](#contenu_de_titre).
+- {{HTMLElement("area")}}, s'il est un descendant de l'élément {{HTMLElement("map")}}
+- {{HTMLElement("link")}}, si l'attribut [`itemprop`](/fr/docs/Web/HTML/Reference/Global_attributes/itemprop) est présent
+- {{HTMLElement("meta")}}, si l'attribut [`itemprop`](/fr/docs/Web/HTML/Reference/Global_attributes/itemprop) est présent
 
-Les éléments appartenant à cette catégorie sont les éléments {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}} et {{HTMLElement("section")}}.
+## Contenu sectionnant
+
+Le contenu sectionnant, sous-ensemble du contenu de flux, crée une [section dans le plan du document](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) qui définit la portée des éléments {{HTMLElement("header")}} et {{HTMLElement("footer")}}.
+
+Les éléments sectionnants sont&nbsp;:
+
+- {{HTMLElement("article")}}
+- {{HTMLElement("aside")}}
+- {{HTMLElement("nav")}}
+- {{HTMLElement("section")}}
+
+## Contenu de titre
+
+Le contenu de titre, sous-ensemble du contenu de flux, définit le titre d'une section. Cette définition s'applique aussi bien aux sections marquées par un élément explicite de [contenu sectionnant](#contenu_sectionnant) qu'à celles définies implicitement par le contenu de titre lui‑même.
+
+Les éléments de titre sont&nbsp;:
+
+- {{HTMLElement("Heading_Elements", "<code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>")}}
+- {{HTMLElement("hgroup")}}
 
 > [!NOTE]
-> Il ne faut pas confondre ce modèle de contenu avec la catégorie de [racine de sectionnement](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements#racines_de_sectionnement) qui isole un contenu par rapport à la structure (ou plan) principale.
-
-### Contenu de titre
-
-Le contenu de titre définit le titre d'une section, qu'elle soit marquée par un [contenu sectionnant](#) de manière explicite ou qu'elle soit définie de manière implicite par le contenu de titre lui-même.
-
-Les éléments appartenant à cette catégorie sont {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}} et {{HTMLElement("hgroup")}}.
-
-> [!NOTE]
-> Bien qu'il soit probable qu'un élément {{HTMLElement("header")}} comporte du contenu de titre, il n'est pas lui-même un contenu de titre.
-
-> [!NOTE]
-> {{HTMLElement("hgroup")}} est supprimé du document recommandé par W3C.
+> Bien que susceptible de contenir du contenu de titre, le {{HTMLElement("header")}} n'est pas lui-même un contenu de titre.
 
 ### Contenu phrasé
 
-Le contenu phrasé définit le texte et le balisage qu'il contient. Des séquences de contenu phrasé constituent des paragraphes.
+Le contenu phrasé, sous-ensemble du contenu de flux, désigne le texte et le balisage présents dans un document. Des séquences de contenu phrasé forment des paragraphes.
 
-Les éléments appartenant à cette catégorie sont {{HTMLElement("abbr")}}, {{HTMLElement("audio")}}, {{HTMLElement("b")}}, {{HTMLElement("bdo")}}, {{HTMLElement("br")}}, {{HTMLElement("button")}}, {{HTMLElement("canvas")}}, {{HTMLElement("cite")}}, {{HTMLElement("code")}}, {{HTMLElement("command")}} {{deprecated_inline}}, {{HTMLElement("data")}}, {{HTMLElement("datalist")}}, {{HTMLElement("dfn")}}, {{HTMLElement("em")}}, {{HTMLElement("embed")}}, {{HTMLElement("i")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("input")}}, {{HTMLElement("kbd")}}, {{HTMLElement("label")}}, {{HTMLElement("mark")}}, {{MathMLElement("math")}}, {{HTMLElement("meter")}}, {{HTMLElement("noscript")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("picture")}}, {{HTMLElement("progress")}}, {{HTMLElement("q")}}, {{HTMLElement("ruby")}}, {{HTMLElement("samp")}}, {{HTMLElement("script")}}, {{HTMLElement("select")}}, {{HTMLElement("small")}}, {{HTMLElement("span")}}, {{HTMLElement("strong")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{SVGElement("svg")}}, {{HTMLElement("textarea")}}, {{HTMLElement("time")}}, {{HTMLElement("var")}}, {{HTMLElement("video")}}, {{HTMLElement("wbr")}} et du texte brut (n'étant pas une simple suite de blancs).
+Les éléments de phrasé sont&nbsp;:
 
-Quelques autres éléments appartiennent à cette catégorie mais seulement selon certaines conditions :
+- {{HTMLElement("abbr")}}
+- {{HTMLElement("audio")}}
+- {{HTMLElement("b")}}
+- {{HTMLElement("bdi")}}
+- {{HTMLElement("bdo")}}
+- {{HTMLElement("br")}}
+- {{HTMLElement("button")}}
+- {{HTMLElement("canvas")}}
+- {{HTMLElement("cite")}}
+- {{HTMLElement("code")}}
+- {{HTMLElement("data")}}
+- {{HTMLElement("datalist")}}
+- {{HTMLElement("dfn")}}
+- {{HTMLElement("em")}}
+- {{HTMLElement("embed")}}
+- {{HTMLElement("i")}}
+- {{HTMLElement("iframe")}}
+- {{HTMLElement("img")}}
+- {{HTMLElement("input")}}
+- {{HTMLElement("kbd")}}
+- {{HTMLElement("label")}}
+- {{HTMLElement("mark")}}
+- {{MathMLElement("math")}}
+- {{HTMLElement("meter")}}
+- {{HTMLElement("noscript")}}
+- {{HTMLElement("object")}}
+- {{HTMLElement("output")}}
+- {{HTMLElement("picture")}}
+- {{HTMLElement("progress")}}
+- {{HTMLElement("q")}}
+- {{HTMLElement("ruby")}}
+- {{HTMLElement("s")}}
+- {{HTMLElement("samp")}}
+- {{HTMLElement("script")}}
+- {{HTMLElement("select")}}
+- {{HTMLElement("slot")}}
+- {{HTMLElement("small")}}
+- {{HTMLElement("span")}}
+- {{HTMLElement("strong")}}
+- {{HTMLElement("sub")}}
+- {{HTMLElement("sup")}}
+- {{SVGElement("svg")}}
+- {{HTMLElement("template")}}
+- {{HTMLElement("textarea")}}
+- {{HTMLElement("time")}}
+- {{HTMLElement("u")}}
+- {{HTMLElement("var")}}
+- {{HTMLElement("video")}}
+- {{HTMLElement("wbr")}}
+- [Éléments personnalisés autonomes](/fr/docs/Web/API/Web_components/Using_custom_elements)
+- Texte brut
+
+Quelques autres éléments appartiennent à cette catégorie mais seulement selon certaines conditions&nbsp;:
 
 - {{HTMLElement("a")}} s'il contient seulement du contenu phrasé
 - {{HTMLElement("area")}} s'il est un descendant de l'élément {{HTMLElement("map")}}
 - {{HTMLElement("del")}} s'il contient seulement du contenu phrasé
 - {{HTMLElement("ins")}} s'il contient seulement du contenu phrasé
-- {{HTMLElement("link")}} si l'attribut [**itemprop**](/fr/docs/Web/HTML/Reference/Global_attributes#itemprop) est présent
+- {{HTMLElement("link")}} si l'attribut [`itemprop`](/fr/docs/Web/HTML/Reference/Global_attributes/itemprop) est présent
 - {{HTMLElement("map")}} s'il contient seulement du contenu phrasé
-- {{HTMLElement("meta")}} si l'attribut [**itemprop**](/fr/docs/Web/HTML/Reference/Global_attributes#itemprop) est présent
+- {{HTMLElement("meta")}} si l'attribut [`itemprop`](/fr/docs/Web/HTML/Reference/Global_attributes/itemprop) est présent
 
-### Contenu intégré
+## Contenu intégré
 
-Le contenu intégré importe une autre ressource ou intègre du contenu provenant d'un autre langage de balisage ou d'un autre espace de noms dans le document. Les éléments appartenant à cette catégorie sont : {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{HTMLElement("svg")}}, {{HTMLElement("video")}}.
+Le contenu intégré, sous-ensemble du contenu de flux, importe une autre ressource ou insère du contenu provenant d'un autre langage de balisage ou d'un autre espace de noms dans le document.
 
-### Contenu interactif
+Les éléments de contenu intégré sont&nbsp;:
 
-Le contenu interactif regroupe des éléments spécialement conçus pour une interaction avec l'utilisateur. Les éléments appartenant à cette catégories sont : {{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, et {{HTMLElement("textarea")}}.
+- {{HTMLElement("audio")}}
+- {{HTMLElement("canvas")}}
+- {{HTMLElement("embed")}}
+- {{HTMLElement("iframe")}}
+- {{HTMLElement("img")}}
+- {{MathMLElement("math")}}
+- {{HTMLElement("object")}}
+- {{HTMLElement("picture")}}
+- {{SVGElement("svg")}}
+- {{HTMLElement("video")}}
 
-Quelques éléments appartiennent à cette catégorie seulement sous certaines conditions :
+## Contenu interactif
 
-- {{HTMLElement("audio")}} si l'attribut [`controls`](/fr/docs/Web/HTML/Reference/Elements/audio#controls) est présent
-- {{HTMLElement("img")}} si l'attribut [`usemap`](/fr/docs/Web/HTML/Reference/Elements/img#usemap) est présent
-- {{HTMLElement("input")}} si l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) ne vaut pas `hidden`
-- {{HTMLElement("menu")}} si l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/menu#type) vaut `toolbar`
-- {{HTMLElement("object")}} si l'attribut [`usemap`](/fr/docs/Web/HTML/Reference/Elements/object#usemap) est présent
+Le contenu interactif, sous-ensemble du contenu de flux, regroupe des éléments conçus spécifiquement pour une interaction avec l'utilisateur·ice.
+
+Les éléments de contenu interactif sont&nbsp;:
+
+- {{HTMLElement("button")}}
+- {{HTMLElement("details")}}
+- {{HTMLElement("embed")}}
+- {{HTMLElement("iframe")}}
+- {{HTMLElement("label")}}
+- {{HTMLElement("select")}}
+- {{HTMLElement("textarea")}}
+
+Quelques éléments appartiennent à cette catégorie seulement sous certaines conditions&nbsp;:
+
+- {{HTMLElement("a")}}, si l'attribut [`href`](/fr/docs/Web/HTML/Reference/Elements/a#href) est présent
+- {{HTMLElement("audio")}}, si l'attribut [`controls`](/fr/docs/Web/HTML/Reference/Elements/audio#controls) est présent
+- {{HTMLElement("img")}}, si l'attribut [`usemap`](/fr/docs/Web/HTML/Reference/Elements/img#usemap) est présent
+- {{HTMLElement("input")}}, si l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) ne vaut pas `hidden`
+- {{HTMLElement("object")}}, si l'attribut [`usemap`](/fr/docs/Web/HTML/Reference/Elements/object#usemap) est présent
 - {{HTMLElement("video")}}, si l'attribut [`controls`](/fr/docs/Web/HTML/Reference/Elements/video#controls) est présent
 
-### Contenu tangible
+## Contenu tangible
 
-Un contenu peut être dit tangible lorsqu'il n'est ni vide ni caché. Les éléments dont le modèle de contenu est de flux ou phrasé devraient toujours avoir au moins un noeud dont le contenu est tangible.
+**Contenu tangible** est un contenu qui n'est ni vide ni caché&nbsp;; c'est un contenu rendu et substantiel. Le contenu tangible n'est pas utilisé pour définir des modèles de contenu mais sert à définir une règle générale&nbsp;: les éléments dont le modèle de contenu autorise du contenu de flux ou du contenu phrasé doivent comporter au moins un nœud dans leur contenu qui soit du contenu tangible et qui n'ait pas l'attribut `hidden` défini.
 
-### Contenu associé aux formulaires
+Les éléments palpables sont&nbsp;:
 
-Le contenu associé aux formulaires contient les éléments possédés par un formulaire, exposé avec un attribut **form**. Être possédé par un formulaire signifie être descendant d'un élément {{HTMLElement("form")}} ou de l'élément dont l'identifiant est référencé par la valeur de l'attribut **form**.
+- {{HTMLElement("a")}}
+- {{HTMLElement("abbr")}}
+- {{HTMLElement("address")}}
+- {{HTMLElement("article")}}
+- {{HTMLElement("aside")}}
+- {{HTMLElement("b")}}
+- {{HTMLElement("bdi")}}
+- {{HTMLElement("bdo")}}
+- {{HTMLElement("blockquote")}}
+- {{HTMLElement("button")}}
+- {{HTMLElement("canvas")}}
+- {{HTMLElement("cite")}}
+- {{HTMLElement("code")}}
+- {{HTMLElement("data")}}
+- {{HTMLElement("del")}}
+- {{HTMLElement("details")}}
+- {{HTMLElement("dfn")}}
+- {{HTMLElement("div")}}
+- {{HTMLElement("em")}}
+- {{HTMLElement("embed")}}
+- {{HTMLElement("fieldset")}}
+- {{HTMLElement("footer")}}
+- {{HTMLElement("figure")}}
+- {{HTMLElement("form")}}
+- {{HTMLElement("iframe")}}
+- {{HTMLElement("img")}}
+- {{HTMLElement("ins")}}
+- {{HTMLElement("kbd")}}
+- {{HTMLElement("label")}}
+- {{HTMLElement("main")}}
+- {{HTMLElement("map")}}
+- {{HTMLElement("mark")}}
+- {{MathMLElement("math")}}
+- {{HTMLElement("meter")}}
+- {{HTMLElement("nav")}}
+- {{HTMLElement("object")}}
+- {{HTMLElement("p")}}
+- {{HTMLElement("picture")}}
+- {{HTMLElement("pre")}}
+- {{HTMLElement("progress")}}
+- {{HTMLElement("q")}}
+- {{HTMLElement("ruby")}}
+- {{HTMLElement("s")}}
+- {{HTMLElement("samp")}}
+- {{HTMLElement("search")}}
+- {{HTMLElement("section")}}
+- {{HTMLElement("select")}}
+- {{HTMLElement("small")}}
+- {{HTMLElement("span")}}
+- {{HTMLElement("strong")}}
+- {{HTMLElement("sub")}}
+- {{HTMLElement("sup")}}
+- {{SVGElement("svg")}}
+- {{HTMLElement("table")}}
+- {{HTMLElement("textarea")}}
+- {{HTMLElement("time")}}
+- {{HTMLElement("u")}}
+- {{HTMLElement("var")}}
+- {{HTMLElement("video")}}
+- [Éléments personnalisés autonomes](/fr/docs/Web/API/Web_components/Using_custom_elements)
+- Texte brut qui n'est pas des [espaces blancs inter-éléments](/fr/docs/Glossary/Whitespace)
 
-Cette catégorie contient les éléments :
+Certains éléments appartiennent à cette catégorie seulement sous certaines conditions&nbsp;:
+
+- {{HTMLElement("audio")}}, si l'attribut [`controls`](/fr/docs/Web/HTML/Reference/Elements/audio#controls) est présent
+- {{HTMLElement("dl")}}, si les enfants de l'élément incluent au moins un groupe nom-valeur
+- {{HTMLElement("input")}}, si l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) ne vaut pas `hidden`
+- {{HTMLElement("ol")}}, si ses enfants incluent au moins un élément {{HTMLElement("li")}}
+- {{HTMLElement("ul")}}, si ses enfants incluent au moins un élément {{HTMLElement("li")}}
+
+## Éléments supports de script
+
+Les **éléments supports de script** sont des éléments qui ne contribuent pas directement à la sortie rendue d'un document. Ils servent plutôt à prendre en charge les scripts, soit en contenant ou en définissant directement du code de script, soit en définissant des données qui seront utilisées par des scripts. Presque tous les éléments, y compris ceux qui n'acceptent que des éléments spécifiques (comme {{HTMLElement("ul")}}, qui accepte des éléments {{HTMLElement("li")}}), peuvent contenir des éléments supports de script.
+
+Les éléments supports de script sont&nbsp;:
+
+- {{HTMLElement("script")}}
+- {{HTMLElement("template")}}
+
+## Contenu associé aux formulaires
+
+Le contenu associé aux formulaires est un sous-ensemble du contenu de flux comprenant des éléments qui ont un propriétaire de formulaire et qui peuvent être utilisés partout où du contenu de flux est attendu. Un propriétaire de formulaire est soit l'élément {{HTMLElement("form")}} englobant, soit le `<form>` dont l'`id` est indiqué dans l'attribut `form` de l'élément.
+
+Les éléments associés aux formulaires sont&nbsp;:
 
 - {{HTMLElement("button")}}
 - {{HTMLElement("fieldset")}}
@@ -113,46 +360,68 @@ Cette catégorie contient les éléments :
 - {{HTMLElement("select")}}
 - {{HTMLElement("textarea")}}
 
-Cette catégorie peut être subdivisée en plusieurs sous-catégories.
+This category contains several sub-categories:
 
 - listed (éléments listés)
-  - : Les éléments étant listés sont les ensembles IDL [form.elements](/fr/docs/Web/API/HTMLFormElement/elements) et fieldset.elements. Ce sont : {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, et {{HTMLElement("textarea")}}.
-- labelable (éléments étiquetables)
-  - : Les éléments pouvant être associés avec des éléments {{HTMLElement("label")}}. Ce sont : {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("meter")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}} et {{HTMLElement("textarea")}}.
+  - : Les éléments qui figurent dans les collections {{DOMxRef("HTMLFormElement.elements")}} et {{DOMxRef("HTMLFieldSetElement.elements")}}. Comprend {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}} et {{HTMLElement("textarea")}}.
 - submittable (éléments participants à l'envoi du formulaire)
-  - : Les éléments pouvant être utilisés pour construire les données du formulaires quand celui-ci est envoyé. Ce sont : {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}} et {{HTMLElement("textarea")}}.
+  - : Les éléments pouvant être utilisés pour construire l'ensemble des données du formulaire lors de son envoi. Comprend {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("select")}} et {{HTMLElement("textarea")}}.
 - resettable (éléments de ré-initialisation)
-  - : Éléments pouvant être impactés lorsqu'un formulaire est ré-initialisé. Ce sont : {{HTMLElement("input")}}, {{HTMLElement("output")}},{{HTMLElement("select")}} et {{HTMLElement("textarea")}}.
-
-## Catégories secondaires
-
-Il existe des classifications secondaires d'éléments qu'il peut être utile de connaître également.
-
-### Éléments supports de script
-
-Les éléments supports de script sont des éléments qui ne contribuent pas directement à la sortie rendue d'un document. Au lieu de cela, ils servent à prendre en charge les scripts, soit en contenant ou en spécifiant le code de script directement, soit en spécifiant les données qui seront utilisées par les scripts. Ce sont :
-
-- {{HTMLElement("script")}}
-- {{HTMLElement("template")}}
+  - : Les éléments pouvant être affectés lors de la réinitialisation d'un formulaire. Comprend {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}} et {{HTMLElement("textarea")}}.
+- autocapitalize-and-autocorrect-inheriting (éléments héritant des attributs autocapitalize et autocorrect)
+  - : Les éléments qui héritent des attributs [`autocapitalize`](/fr/docs/Web/HTML/Reference/Global_attributes/autocapitalize) et [`autocorrect`](/fr/docs/Web/HTML/Reference/Global_attributes/autocorrect) de leur propriétaire de formulaire. Comprend {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}} et {{HTMLElement("textarea")}}.
+- labelable (éléments étiquetables)
+  - : Les éléments pouvant être associés avec des éléments {{HTMLElement("label")}}. Ce sont&nbsp;: {{HTMLElement("button")}}, {{HTMLElement("input")}} (tous les types sauf `hidden`), {{HTMLElement("meter")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}} et {{HTMLElement("textarea")}}.
 
 ## Modèle de contenu transparent
 
-Si l'élément possède un modèle de contenu transparent, son contenu doit alors être structuré comme du HTML5 valide, et ce, même si l'élément transparent a été enlevé et remplacé par ses éléments fils.
+En plus des catégories de contenu énumérées, le modèle de contenu d'un élément peut aussi être défini comme «&nbsp;transparent&nbsp;». Si le contenu autorisé d'un élément X est «&nbsp;transparent&nbsp;», on examine alors le parent de X. On intersecte le contenu autorisé du parent de X avec les catégories de contenu de X, et le résultat correspond à ce que «&nbsp;transparent&nbsp;» signifie dans ce contexte. Si le parent de X a lui aussi un modèle de contenu transparent, on remonte l'arbre jusqu'à trouver un modèle non transparent. Lorsqu'il n'existe pas un tel parent, «&nbsp;transparent&nbsp;» signifie «&nbsp;contenu de flux&nbsp;».
 
-Les éléments {{HTMLElement("del")}} et {{HTMLELement("ins")}} sont des exemples d'éléments transparents.
+Par exemple, un élément {{HTMLElement("ruby")}} accepte du contenu phrasé. L'élément {{HTMLElement("ins")}} appartient à la catégorie du contenu phrasé lorsqu'il contient uniquement du contenu phrasé. Par conséquent, un élément {{HTMLElement("ins")}} peut être placé à l'intérieur d'un élément {{HTMLElement("ruby")}}. Le contenu autorisé de l'élément `<ins>` est «&nbsp;transparent&nbsp;», ce qui, lorsqu'il est imbriqué dans `<ruby>`, signifie «&nbsp;contenu phrasé&nbsp;». Toutefois, les éléments {{HTMLElement("rt")}} ne sont pas du contenu phrasé. Ainsi, un élément {{HTMLElement("rt")}} ne peut pas être imbriqué à l'intérieur de cet élément `<ins>`, même si `<rt>` et `<ins>` peuvent tous deux se trouver dans `<ruby>`, et que `<ins>` est «&nbsp;transparent&nbsp;».
 
-```html
-<p>
-  Bonjour <del><em>tout</em></del> <ins>le monde</ins>.
-</p>
+```html example-bad
+<ruby>
+  Texte avant
+  <ins>
+    <!-- Invalide : rt ne peut pas être placé à l'intérieur de ins ici -->
+    <rt>Prononciation</rt>
+  </ins>
+</ruby>
 ```
 
-Si ces éléments étaient retirés, ce fragment de code HTML serait toujours du HTML valide.
-
-```html
-<p>Bonjour <em>tout</em> le monde.</p>
+```html example-good
+<ruby>
+  Texte avant
+  <!-- Valide : ins peut être à l'intérieur de ruby, et rt peut être à l'intérieur de ruby -->
+  <ins>Texte inséré</ins>
+  <rt>Prononciation</rt>
+</ruby>
 ```
 
-## Autres modèles de contenu
+```html example-good
+<ruby>
+  Texte avant
+  <!-- Valide : rt peut être à l'intérieur de ruby, et ins peut être à l'intérieur de rt -->
+  <rt><ins>Prononciation</ins></rt>
+</ruby>
+```
 
-[Racine de sectionnement.](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements#racines_de_sectionnement)
+Le caractère transparent est un _modèle de contenu_, pas une _catégorie de contenu_, il définit uniquement ce qu'un élément peut contenir, et non l'endroit où l'élément peut être placé. Autrement dit, lorsqu'on détermine la licéité des enfants d'un élément, on ne peut pas «&nbsp;voir à travers&nbsp;» des enfants transparents. Par exemple, un élément {{HTMLElement("ul")}} n'accepte que des éléments {{HTMLElement("li")}} et des éléments supports de script, et n'autorise pas `<del>` ou `<ins>`, même si le `<del>` ne contient que des éléments `<li>`.
+
+```html example-bad
+<ul>
+  <del>
+    <li>Oranges</li>
+    <li>Papier toilette</li>
+  </del>
+  <li>Dentifrice</li>
+</ul>
+```
+
+```html example-good
+<ul>
+  <li><del>Oranges</del></li>
+  <li><del>Papier toilette</del></li>
+  <li>Dentifrice</li>
+</ul>
+```

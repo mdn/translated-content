@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
 original_slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content")}}
 
 Um dos principais objetivos do HTML é dar estrutura de texto e significado, também conhecido como {{glossary("semantics", "semântica")}}), para que um navegador possa exibi-lo corretamente. Este artigo explica a forma como {{glossary("HTML")}} pode ser usado para estruturar uma página de texto, adicionar títulos e parágrafos, enfatizar palavras, criar listas e muito mais.
 
@@ -1046,4 +1046,4 @@ Você chegou ao final deste artigo, mas consegue se lembrar das informações ma
 
 Por enquanto é isso! Este artigo deve fornecer uma boa idéia de como começar a marcar texto em HTML e apresentar alguns dos elementos mais importantes nessa área. Há muito mais elementos semânticos a serem abordados nesta área, e veremos muito mais em nosso artigo de [Formatação avançada de texto](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features), mais adiante neste curso. No próximo artigo, veremos detalhadamente como [criar links](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Creating_links), possivelmente o elemento mais importante na Web.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content")}}

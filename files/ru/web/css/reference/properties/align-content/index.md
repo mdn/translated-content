@@ -290,4 +290,4 @@ display.addEventListener("change", function (evt) {
 
 ## Смотрите также
 
-- [Использование гибких блоков CSS](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Использование гибких блоков CSS](/ru/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)

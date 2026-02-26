@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Tables
 original_slug: Learn/CSS/Building_blocks/Styling_tables
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics")}}
 
 HTML 표 스타일링은 세계에서 가장 매력적인 일이 아니지만, 때로는 우리 모두가 해야할 일입니다. 이 기사에서는 특정 표 스타일링 기술을 강조 표시하여 HTML 표를 보기좋게 만드는 방법에 대한 안내서를 제공합니다.
 
@@ -304,4 +304,4 @@ caption {
 
 지금 우리 뒤에 스타일링 표가 있기 때문에, 우리의 시간을 차지할 다른 것이 필요합니다. 다음 기사에서는 CSS 디버깅에 대해 살펴봅니다 — 레이아웃이 제대로 보이지 않거나 적용할 때 적용되지 않는 속성과 같은 문제를 해결하는 방법. 여기에는 브라우저 DevTools 를 사용하여 문제점에 대한 솔루션을 찾는 방법에 대한 정보가 포함됩니다.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics")}}

@@ -25,7 +25,7 @@ MDN 문서에는 많은 가이드가 있습니다. 이 문서는 추가 사용 �
   - : MDN 전반에 걸쳐 CSS Layout에 대한 많은 가이드가 있으며, 이 페이지는
     그것들을 모두 모았습니다.
 
-- [CSS 애니메이션 사용하기](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS 애니메이션 사용하기](/ko/docs/Web/CSS/Guides/Animations/Using)
   - : CSS 애니메이션은 사용하면 CSS 스타일 구성에서 다른 CSS 스타일 구성으로의
     전환을 애니메이션으로 만들 수 있습니다. 이 가이드는 애니메이션 속성을
     시작하는 데에 도움이 될 것입니다.

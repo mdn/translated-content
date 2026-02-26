@@ -1,12 +1,11 @@
 ---
 title: grid-row
 slug: Web/CSS/Reference/Properties/grid-row
-original_slug: Web/CSS/grid-row
 l10n:
-  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-**`grid-row`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、{{glossary("grid row", "グリッド行")}}の中におけるグリッドアイテムの寸法と位置を指定します。グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}のインライン方向の先頭と末尾の端を指定します。
+**`grid-row`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、{{glossary("grid row", "グリッド行")}}の中におけるグリッドアイテムの寸法と位置を指定します。グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}のインライン方向の先頭と末尾の端を指定します。
 
 {{InteractiveExample("CSS デモ: grid-row")}}
 
@@ -47,12 +46,12 @@ grid-row: 1 / span 2;
 }
 
 .example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 
 #example-element {
-  background-color: rgba(255, 0, 200, 0.2);
+  background-color: rgb(255 0 200 / 0.2);
   border: 3px solid rebeccapurple;
 }
 ```
@@ -61,8 +60,8 @@ grid-row: 1 / span 2;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`grid-row-end`](/ja/docs/Web/CSS/Reference/Properties/grid-row-end)
-- [`grid-row-start`](/ja/docs/Web/CSS/Reference/Properties/grid-row-start)
+- {{cssxref("grid-row-end")}}
+- {{cssxref("grid-row-start")}}
 
 ## 構文
 
@@ -110,7 +109,7 @@ grid-row: unset;
 ### 値
 
 - `auto`
-  - : プロパティをグリッドアイテムの配置に影響させず、自動的に配置し、間隔を自動的に取るか、既定の `1` とするためのキーワードです。
+  - : グリッドアイテムの配置には何も影響せず、自動配置、自動スパン、またはデフォルトのスパン値 `1` を示します。これがデフォルト値です。
 - `<custom-ident>`
   - : `<custom-ident>-start`/`<custom-ident>-end` という名前の付いた線がある場合、これはそのような線の最初がグリッドのアイテムの配置に関わります。
 
@@ -129,7 +128,7 @@ grid-row: unset;
 - `span && [ <integer> || <custom-ident> ]`
   - : グリッドアイテムのグリッド領域の列側の先頭の端が末尾の端から n 行になるように、グリッドアイテムの配置にグリッドスパンを設定します。
 
-    名前が `<custom-ident>` として与えられた場合、その名前の付いた線のみがカウントされます。その名前を持つ線の数が十分おにない場合は、検索方向に対応する明示的グリッドの側にあるすべての暗黙的グリッド線が、この区間をカウントする目的でその名前を持つと仮定されます。
+    名前が `<custom-ident>` として与えられた場合、その名前の付いた線のみがカウントされます。その名前を持つ線の数が十分にない場合は、検索方向に対応する明示的グリッドの側にあるすべての暗黙的グリッド線が、この区間をカウントする目的でその名前を持つと仮定されます。
 
     `<integer>` が省略された場合の既定値は `1` です。負の数や 0 は無効です。
 

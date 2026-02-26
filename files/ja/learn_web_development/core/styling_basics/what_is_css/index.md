@@ -2,10 +2,8 @@
 title: CSS とは何か
 slug: Learn_web_development/Core/Styling_basics/What_is_CSS
 l10n:
-  sourceCommit: eb20babb96149f98bcbf7817b58e305c5297f2e1
+  sourceCommit: 79b46675e64c9b3e7c4333c17b21b692f78b39ec
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}
 
@@ -46,26 +44,29 @@ l10n:
 
 [HTML によるコンテンツの構造化](/ja/docs/Learn_web_development/Core/Structuring_content)モジュールでは、HTML とは何か、そして文書をマークアップするためにどのように使用されるかについて説明しました。こうした文書はウェブブラウザーで表示できます。見出しは通常のテキストよりも大きく表示され、段落は改行され、段落間に空間が確保されます。リンクは色付きで下線が引かれ、他のテキストと判別できるようになっています。
 
-ここで見えているのは、ブラウザーの既定のスタイルです。これは、ページの作成者が明示的なスタイルを指定していない場合でも、ページが基本的に読みやすいように、ブラウザーが HTML に適用するとても基本的なスタイルです。これらのスタイルは、ブラウザーに含まれる既定の CSS スタイルシートで定義されています。これらは HTML とは関係がありません。
+ここで見えているのは、ブラウザーの既定のスタイルです。これは、ページの作成者が明示的なスタイルを指定していない場合でも、ページが読みやすいように、ブラウザーが HTML に適用するとても基本的なスタイルです。これらのスタイルは、ブラウザーに含まれる既定の CSS スタイルシートで定義されています。これらは HTML とは関係がありません。
 
 ![ブラウザーが既定で使用するスタイル](html-example.png)
 
-もしすべてのウェブサイトがそれと同じように見えていたら、ウェブは退屈な場所になってしまいます。これが、 CSS について学ぶ必要がある理由です。
+もしすべてのウェブサイトがそれと同じように見えていたら、ウェブはつまらない場所になってしまいます。これが、 CSS について学ぶ必要がある理由です。
 
 ## CSS は何のためのものか
 
 CSS を使用すると、 HTML 要素がブラウザー上でどのように見えるかを正確に制御でき、好きなデザインやレイアウトで文書をユーザーに表示することができます。
 
-**文書**とは通常、マークアップ言語を使用して構造化されたテキストファイルを指します。最も一般的なマークアップ言語は {{Glossary("HTML")}} ですが、 {{Glossary("SVG")}} や {{Glossary("XML")}} など、マークアップ言語は他にもあります。
-
-文書をユーザーに**表現**するということは、閲覧者が利用できる形に変換するということです。{{Glossary("browser","ブラウザー")}}、たとえば {{Glossary("Mozilla Firefox","Firefox")}}、{{Glossary("Google Chrome","Chrome")}}、{{Glossary("Microsoft Edge","Edge")}} などは、例えばコンピューター画面、プロジェクター、プリンターなど、視覚的に文書を表現するように設計されています。
+- **文書**とは通常、マークアップ言語を用いて構造化されたテキストファイルであり、最も一般的なのは {{Glossary("HTML")}} です（これらは「HTML 文書」と呼ばれます）。{{Glossary("SVG")}} や {{Glossary("XML")}} など、他のマークアップ言語で記述された文書にも遭遇する可能性があります。HTML 文書はウェブページのコンテンツを含み、その構造を規定します。
+- 文書をユーザーに**表現**するということは、閲覧者が利用できる形に変換するということです。{{Glossary("browser","ブラウザー")}}は、{{Glossary("Mozilla Firefox","Firefox")}}、{{Glossary("Google Chrome","Chrome")}}、{{Glossary("Microsoft Edge","Edge")}} などで、例えばコンピューター画面、プロジェクター、モバイル端末、プリンターなど、視覚的に文書を表現するように設計されています。ウェブの文脈では、これは一般的に「レンダリング」と呼ばれます。ウェブページがレンダリングされるプロセスについては、[ブラウザーがウェブサイトを読み込む仕組み](/ja/docs/Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites)で概要を解説しました。
 
 > [!NOTE]
 > ブラウザーは{{Glossary("User agent","ユーザーエージェント")}}と呼ばれることがあり、基本的にはコンピューターシステム内でユーザーを代理するコンピュータープログラムという意味です。
 
-CSS はテキストの装飾に使用することができます。例えば、見出しやリンクの[色](/ja/docs/Web/CSS/Reference/Values/color_value)や[サイズ](/ja/docs/Web/CSS/Reference/Properties/font-size)を変更することができます。また、 CSS はレイアウトの作成にも使用することができます。例えば、段組みのないテキストを、[メインコンテンツ領域と関連情報のサイドバーを持つレイアウトに変える](/ja/docs/Web/CSS/How_to/Layout_cookbook/Column_layouts)ことができます。さらに、 CSS は[アニメーション](/ja/docs/Web/CSS/Guides/Animations)などの効果にも使用することができます。具体的な例については、この段落内のリンクを参照してください。
+CSSは、ウェブページの見た目や操作感に関連する多くの目的に使用できます。例を示します。
 
-CSS 言語は、関連する機能を含むモジュールに分類されています。例えば、 MDN のリファレンスページで「[背景と境界線](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)」モジュールを参照すると、その目的や含まれるプロパティや機能について知ることができます。また、そのモジュールには、技術を定義する仕様書へのリンクも含まれています。
+- テキストの装飾。例えば、見出しやリンクの[色](/ja/docs/Web/CSS/Reference/Values/color_value)や[サイズ](/ja/docs/Web/CSS/Reference/Properties/font-size)の変更。
+- レイアウトの作成。たとえば[グリッドレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Grids)や[段組みレイアウト](/ja/docs/Web/CSS/How_to/Layout_cookbook/Column_layouts)など。
+- [アニメーション](/ja/docs/Web/CSS/Guides/Animations)などの特殊効果。
+
+CSS 言語は、関連する機能を含む「モジュール」に分類されています。例えば、 MDN のリファレンスページで「[背景と境界](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)」モジュールを参照すると、その目的や含まれるプロパティや機能について知ることができます。モジュールページでは、技術仕様を定義する仕様書へのリンクも含まれています。
 
 ## CSS の構文の基本
 
@@ -76,7 +77,7 @@ CSSはルールベースの言語です。つまり、ウェブページ上の�
 ```css
 h1 {
   color: red;
-  font-size: 5em;
+  font-size: 2.5em;
 }
 ```
 
@@ -92,11 +93,13 @@ CSS スタイルシートには、このようなルールが他にもたくさ�
 ```css
 h1 {
   color: red;
-  font-size: 5em;
+  font-size: 2.5em;
 }
 
 p {
-  color: black;
+  color: aqua;
+  padding: 5px;
+  background: midnightblue;
 }
 ```
 
@@ -107,89 +110,59 @@ p {
 
 ## どのように CSS は HTML に適用されるのか
 
-ブラウザーが文書を表示するとき、ブラウザーはそのコンテンツをスタイル情報と結合する必要があります。以下にリストしたいくつかの段階で文書が処理されます。これはブラウザーがウェブページを読み込むときに起こることを単純化したものであり、各ブラウザーで処理は異なるものの、おおよそ何が起こるかを示しています。
+[ブラウザーがウェブサイトを読み込む仕組み](/ja/docs/Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites)で説明したように、ウェブページにアクセスすると、ブラウザーはまずウェブページの内容を含む HTML 文書を送信され、それを **DOM ツリー**に変換します。
 
-1. ブラウザーが HTML を読み込みます。
-2. HTML を {{Glossary("DOM")}} (_Document Object Model_) ツリーと呼ばれるツリー風の構造に変換します。 DOM は文書をコンピューターのメモリー内で表現したものです。
-3. それから、ブラウザーは HTML 文書からリンクされているリソースの大部分、例えば埋め込まれた画像や動画、そして CSS を取得します。 JavaScript はもう少し後に処理されるので、話を簡単にするためここでは説明しません。
-4. ブラウザーは取得した CSS を構文解析し、適用される HTML 要素（DOM では**ノード**として表される）に基づいて、異なるルールを異なる「容器」に分類します。 その後、ブラウザーは必要に応じて異なる要素にスタイルを適用します（この中間段階は**レンダーツリー**と呼ばれます）。
-5. レンダーツリーは、ルール適用後の構造にレイアウトされます。
-6. ページが画面に表示されます（この段階は描画と呼ばれます）。
+その後、ウェブページ内で見つかった CSS ルール（HTML に直接挿入されているもの、または参照されている外部 `.css` ファイル内のもの）は、適用される要素（セレクターで指定される）に基づいて異なる「バケツ」に分類されます。CSS ルールは DOM ツリーに適用され、**レンダリングツリー**が生成されます。このレンダリングツリーはブラウザーウィンドウに描画されます。
 
-簡単に図に表すと次のとおりです。
-
-![レンダリングプロセスの概要](rendering.svg)
-
-### DOM について
-
-前述のように、 DOM はツリーのような構造です。マークアップ言語の各要素、属性、およびテキストは、このツリー構造の {{Glossary("Node/DOM","DOM ノード")}}になります。ノードは他の DOM ノードとの関係によって定義されます。要素は子ノードの親であり、子ノードには兄弟があります。
-
-DOM は CSS と文書のコンテンツが出会う場所であるため、DOM を理解すると CSS の設計、デバッグ、および保守に役立ちます。ブラウザーの開発者ツールによって、どのルールが適用されるかを確認するために、アイテムを選択することで DOM にナビゲートされます。
-
-長く退屈な説明ではなく、例を用いて実際の HTML が DOM に変換される様子を見てみましょう。
-
-以下のような HTML があります。
+例を見ていきましょう。まず、CSS を適用できる HTML スニペットを定義します。
 
 ```html
-<p>
-  Let's use:
-  <span>Cascading</span>
-  <span>Style</span>
-  <span>Sheets</span>
-</p>
+<h1>CSS は素晴らしい</h1>
+
+<p>テキストのスタイルを設定できます。</p>
+
+<p>また、レイアウトや特殊効果を生成することができます。</p>
 ```
 
-ブラウザーは HTML を構文解析し、そこから DOM を作成します。以下のようなものです。
-
-```plain
-P
-├─ "Let's use:"
-├─ SPAN
-|  └─ "Cascading"
-├─ SPAN
-|  └─ "Style"
-└─ SPAN
-    └─ "Sheets"
-```
-
-この DOM では、 `<p>` 要素に対応するノードが親ノードです。子には、テキストノードと 3 つの `<span>` 要素に対応するノードがあります。 `SPAN` ノードは親でもあり、テキストノードを子に持ちます。ブラウザーは上述の HTML をこのように構文解析し、DOM ツリーを以下のようにレンダリングし出力します。
-
-{{EmbedLiveSample('More on the DOM', '100%', 55)}}
-
-```css hidden
-p {
-  margin: 0;
-}
-```
-
-## DOM への CSS 適用
-
-文書に次の CSS を追加して、スタイルを設定したとします。
-
-```html hidden
-<p>
-  Let's use:
-  <span>Cascading</span>
-  <span>Style</span>
-  <span>Sheets</span>
-</p>
-```
+そして、前回の節から繰り返している CSS です。
 
 ```css
-span {
-  border: 1px solid black;
-  background-color: lime;
+h1 {
+  color: red;
+  font-size: 2.5em;
+}
+
+p {
+  color: aqua;
+  padding: 5px;
+  background: midnightblue;
 }
 ```
 
-この場合、ブラウザーは前の節と同様に、まず DOM ツリーを作成します。次に CSS を解釈します。 CSS で利用できるルールは `span` セレクターだけなので、ブラウザーはすばやく CSS を並べ替えます。そのルールを 3 つの `<span>` のそれぞれに適用し、最終的な視覚表現を画面へ描画します。
+この CSS は次のことをします。
 
-結果、次のとおり出力されます。
+- ページ上のすべての `<h1>` 要素を選択し、そのテキストを赤色に色付けし、デフォルトサイズより大きくします。この例の HTML には `<h1>` が 1 つしかないため、その要素のみにスタイル設定が適用されます。
+- ページ上のすべての `<p>` 要素を選択し、独自のテキストと背景色、およびテキスト周囲の余白を適用します。この例の HTML には 2 つの `<p>` 要素があり、両方にスタイル設定が適用されます。
 
-{{EmbedLiveSample('Applying CSS to the DOM', '100%', 90)}}
+CSS が HTML に適用されると、レンダリングされた出力は次のようになります。
+
+{{EmbedLiveSample('How is CSS applied to HTML?', '100%', 200)}}
+
+## CSS をいじってみよう
+
+上記の例を試してみてください。そのためには、右上の "Play" ボタンを押して、MDN Playground エディターで読み込んでください。
+
+以下のことをやってみてください。
+
+1. 既存の2つの段落のすぐ下にもう 1 つの段落を追加し、2 つ目となる CSS ルールが新しい段落に自動的に適用される様子を確認してください。
+2. `<h1>` の下のどこか、例えば段落の 1 つ後に `<h2>` の見出しを追加してください。
+3. CSS に新しいルールを追加して、`<h2>` 要素の色を変えてみましょう。`h1` ルールのコピーを作成し、セレクターを `h2` に変更し、例えば `color` の値を `red` から `purple` などに変更します。
+4. 冒険心がある場合、MDN の [CSS リファレンス](/ja/docs/Web/CSS/Reference)で新しい CSS プロパティや値を見ていき、ルールに追加してみてください。
+
+CSS の基本をさらに練習するには、Scrimba <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> の[まず CSS を書いてみよう！](https://scrimba.com/learn-html-and-css-c0p/~0j?via=mdn)（英語）をご覧ください。このスクリムでは、基本的な CSS 構文の便利な概要が説明されており、CSS 宣言の記述をさらに練習できるインタラクティブな課題が提供されています。
 
 ## まとめ
 
-CSS とは何か、またこれがどのように動作するのかについてある程度理解していただけたと思いますので、これから CSS を自分で書くことを始める方には、次のステップに進みましょう。
+CSS とは何か、その仕組みについてある程度理解できたところで、次は実際に CSS を書く練習をしながら、構文についてさらに詳しく説明していきましょう。
 
 {{NextMenu("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}

@@ -1,37 +1,48 @@
 ---
 title: "<frameset> : l'élément contenant des frames"
 slug: Web/HTML/Reference/Elements/frameset
-original_slug: Web/HTML/Element/frameset
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+{{Deprecated_Header}}
 
-> [!WARNING]
-> Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la prendre en charge, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications web l'utilisant peuvent cesser de fonctionner à tout moment.
-
-L'élément HTML **`<frameset>`** est utilisé pour contenir les éléments [`<frame>`](/fr/docs/Web/HTML/Reference/Elements/frame).
+L'élément [HTML](/fr/docs/Web/HTML) **`<frameset>`** est utilisé pour contenir les éléments {{HTMLElement("frame")}}.
 
 > [!NOTE]
-> L'utilisation de cadres étant désormais déconseillée au profit de l'utilisation de [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe), cet élément n'est généralement pas utilisé par les sites web modernes.
+> L'utilisation de cadres étant désormais déconseillée au profit de l'utilisation de {{HTMLElement("iframe")}}, cet élément n'est généralement pas utilisé par les sites web modernes.
 
 ## Attributs
 
-Comme tous les autres éléments HTML, cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
-- `cols`
+- `cols` {{Deprecated_Inline}}
   - : Cet attribut définit le nombre et la taille des espaces horizontaux dans un `<frameset>`.
-- `rows`
+- `rows` {{Deprecated_Inline}}
   - : Cet attribut définit le nombre et la taille des espaces verticaux dans un `<frameset>`.
 
 ## Exemple
 
+### Un document frameset
+
+Un document frameset possède un élément `<frameset>` au lieu d'un élément {{HTMLElement("body")}}. Les éléments {{HTMLElement("frame")}} sont placés à l'intérieur du `<frameset>`.
+
 ```html
-<frameset cols="50%,50%">
-  <frame
-    src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/frameset" />
-  <frame src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/frame" />
-</frameset>
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Métadonnées du document -->
+  </head>
+  <frameset cols="400, 500">
+    <frame
+      src="https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/iframe" />
+    <frame
+      src="https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/frame" />
+  </frameset>
+</html>
 ```
+
+Si vous souhaitez intégrer une autre page HTML dans le {{HTMLElement("body")}} d'un document, utilisez un élément {{HTMLElement("iframe")}}.
 
 ## Spécifications
 
@@ -43,5 +54,5 @@ Comme tous les autres éléments HTML, cet élément prend en charge [les attrib
 
 ## Voir aussi
 
-- L'élément [`<frame>`](/fr/docs/Web/HTML/Reference/Elements/frame)
-- L'élément [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe)
+- L'élément {{HTMLElement("frame")}}
+- L'élément {{HTMLElement("iframe")}}

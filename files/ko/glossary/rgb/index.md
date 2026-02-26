@@ -24,4 +24,4 @@ RGB가 'sRGB' 색상 공간을 표현할 수 있는 유일한 색상 모델은 �
 - [위키백과의 RGB 색상 모델](https://en.wikipedia.org/wiki/RGB_color_model)
 - [위키백과의 sRGB 색 공간](https://en.wikipedia.org/wiki/SRGB)
 - [위키백과의 Adobe RGB 색 공간](https://en.wikipedia.org/wiki/Adobe_RGB_color_space)
-- [CSS 데이터 타입: \<color>](/ko/docs/Web/CSS/color_value)
+- [CSS 데이터 타입: \<color>](/ko/docs/Web/CSS/Reference/Values/color_value)

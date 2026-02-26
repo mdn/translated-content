@@ -1,12 +1,11 @@
 ---
 title: transform-box
 slug: Web/CSS/Reference/Properties/transform-box
-original_slug: Web/CSS/transform-box
 l10n:
-  sourceCommit: b195721acf6cc4829f55168a415f3578c5b32a09
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`transform-box`** は CSS のプロパティで {{cssxref("transform")}}、独立した変換プロパティである {{cssxref("translate")}}、{{cssxref("scale")}}、{{cssxref("rotate")}}、および {{cssxref("transform-origin")}} プロパティが相対するレイアウトボックスを定義します。
+**`transform-box`** は [CSS](/ja/docs/Web/CSS) のプロパティで {{cssxref("transform")}}、独立した変換プロパティである {{cssxref("translate")}}、{{cssxref("scale")}}、{{cssxref("rotate")}}、および {{cssxref("transform-origin")}} プロパティが相対するレイアウトボックスを定義します。
 
 ## 構文
 
@@ -31,13 +30,13 @@ transform-box: unset;
 ### 値
 
 - `content-box`
-  - : コンテンツボックスを参照ボックスとして使用します。 {{htmlElement("table")}} の参照ボックスはテーブルのボックスではなく、テーブルを囲んでいるボックスの境界ボックスになります。
+  - : コンテンツボックスを参照ボックスとして使用します。 {{htmlElement("table")}} の参照ボックスは表のボックスではなく、表を囲んでいるボックスの境界ボックスになります。
 - `border-box`
-  - : 境界ボックスを参照ボックスとして使用します。 {{htmlElement("table")}} の参照ボックスはテーブルのボックスではなく、[テーブルを囲んでいるボックス](/ja/docs/Glossary/Table_Wrapper_Box)の境界ボックスになります。
+  - : 境界ボックスを参照ボックスとして使用します。 {{htmlElement("table")}} の参照ボックスは表のボックスではなく、[表を囲んでいるボックス](/ja/docs/Glossary/Table_Wrapper_Box)の境界ボックスになります。
 - `fill-box`
-  - : そのオブジェクトのバウンディングボックスを参照ボックスとして使用します。
+  - : そのオブジェクトのバウンディングボックスを参照ボックスとして使用します。関連付けられた CSS レイアウトボックスを持つ要素に対しては、`content-box` として機能します。
 - `stroke-box`
-  - : ストロークのバウンディングボックスを参照ボックスとして使用します。
+  - : ストロークのバウンディングボックスを参照ボックスとして使用します。関連付けられた CSS レイアウトボックスを持つ要素に対しては、`border-box` として機能します。
 - `view-box`
   - : 直近の {{Glossary("SVG")}} のビューポートを参照ボックスとして使用します。 SVG ビューポートに {{SVGAttr("viewBox")}} 属性が指定されていた場合、参照ボックスは `viewBox` 属性によって設定された座標系の原点に配置されます。また、参照ボックスの寸法は `viewBox` 属性の幅と高さの値に設定されます。関連する CSS レイアウトボックスを持つ要素の場合、 `border-box` として動作します。
 
@@ -82,26 +81,23 @@ svg {
   border: 1px solid #d9d9d9;
   position: absolute;
   margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
 }
 
 #box {
   transform-origin: 50% 50%; /* 効果を見るには `0 0` 以外を指定する */
   transform-box: fill-box;
-  animation: rotateBox 3s linear infinite;
+  animation: rotate-box 3s linear infinite;
 }
 
-@keyframes rotateBox {
+@keyframes rotate-box {
   to {
     transform: rotate(360deg);
   }
 }
 ```
 
-この例は [Pogany](https://codepen.io/giaco) 氏によるものです。ライブ版は[この codepen](https://codepen.io/giaco/pen/OwowJQ) をご覧ください。
+{{EmbedLiveSample("SVG transform-origin scoping", "", 400)}}
 
 ## 仕様書
 
@@ -113,7 +109,7 @@ svg {
 
 ## 関連情報
 
-- [CSS 変換の使用](/ja/docs/Web/CSS/Guides/Transforms/Using)
+- [CSS 座標変換の使用](/ja/docs/Web/CSS/Guides/Transforms/Using)
 - {{cssxref("transform")}}, {{cssxref("transform-origin")}}
 - 独立した座標変換プロパティ:
   - {{cssxref("translate")}}

@@ -19,7 +19,7 @@ l10n:
 - 위키백과의 [전송 계층 보안](https://en.wikipedia.org/wiki/Transport_Layer_Security)
 - [RFC 8446](https://datatracker.ietf.org/doc/html/rfc8446) (The Transport Layer Security Protocol, Version 1.3)
 - [RFC 5246](https://datatracker.ietf.org/doc/html/rfc5246) (The Transport Layer Security Protocol, Version 1.2)
-- [전송 계층 보안](/ko/docs/Web/Security/Transport_Layer_Security)
+- [전송 계층 보안](/ko/docs/Web/Security/Defenses/Transport_Layer_Security)
 - [OWASP: Transport Layer Protection Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html)
 - [용어 사전](/ko/docs/Glossary)
   - {{Glossary("HTTPS")}}

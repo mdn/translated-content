@@ -1,12 +1,11 @@
 ---
 title: -moz-device-pixel-ratio
 slug: Web/CSS/Reference/At-rules/@media/-moz-device-pixel-ratio
-original_slug: Web/CSS/@media/-moz-device-pixel-ratio
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{Non-standard_header}} {{Deprecated_header}}
+{{Non-standard_Header}}{{Deprecated_Header}}
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`-moz-device-pixel-ratio`** (spécifique à Gecko) permet d'appliquer des styles en fonction du nombre de pixels physiques par pixel CSS.
 
@@ -18,10 +17,10 @@ La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caracté
 
 ## Syntaxe
 
-- {{cssxref("&lt;number&gt;")}}
+- {{CSSxRef("&lt;number&gt;")}}
   - : Nombre de pixels physiques par pixel CSS.
 
-**Média&nbsp;:** {{cssxref("@media")}}<br />
+**Média&nbsp;:** {{CSSxRef("@media")}}<br />
 **Accepte les préfixes min/max&nbsp;:** oui
 
 ## Exemples
@@ -54,4 +53,4 @@ Ne fait partie d'aucun standard.
 ## Voir aussi
 
 - [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
-- {{cssxref("@media")}}
+- La règle {{CSSxRef("@media")}}

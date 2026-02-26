@@ -2,7 +2,7 @@
 title: En-tête HTTP
 slug: Glossary/HTTP_header
 l10n:
-  sourceCommit: d212f70edcac07927902d76d39eec86765ab063b
+  sourceCommit: bd348e521463e3d0d0bdc4c91d35c1de82a0f5c3
 ---
 
 Un **en-tête HTTP** est un champ de requête ou de réponse HTTP permettant de transmettre des informations supplémentaires modifiant ou précisant la sémantique du message ou de son contenu. Les en-têtes ne sont pas sensibles à la casse, commencent au début d'une ligne et sont immédiatement suivis d'un `':'` et d'une valeur dépendant de l'en-tête en question. La valeur se termine au retour chariot suivant ou à la fin du message.

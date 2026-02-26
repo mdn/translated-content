@@ -3,7 +3,7 @@ title: От <object> к <iframe> - другие технологии внедр�
 slug: Learn_web_development/Core/Structuring_content/General_embedding_technologies
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
 
 К настоящему моменту вы уже должны уметь прикреплять вложения на свои веб-страницы, включая изображения, видео и аудио. На этом этапе мы хотели бы сделать шаг в сторону, рассматривая некоторые элементы, которые позволяют встраивать в ваши веб-страницы самые разнообразные типы контента: {{htmlelement ("iframe")}}, {{htmlelement ( "embed")}} и {{htmlelement ("object")}}. \<iframe> предназначен для встраивания других веб-страниц, а два других позволяют встраивать PDF-файлы, SVG и даже Flash - устаревшую технологию, которую вы всё равно иногда увидите.
 
@@ -327,4 +327,4 @@ PDF-файлы были необходимой ступенью между бу�
 
 Существует много других технологий, которые включают в себя внедрение внешнего контента, помимо тех, которые мы обсуждали здесь. Мы видели некоторые из них в предыдущих статьях, например {{htmlelement ("video")}}, {{htmlelement ("audio")}} и {{htmlelement ("img")}}, но есть и другие. Например, {{htmlelement ("canvas")}} для 2D-и 3D-графики, сгенерированной JavaScript, и {{SVGElement ("svg")}} для встраивания векторной графики. Мы рассмотрим SVG в следующей статье модуля.
 
-{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}

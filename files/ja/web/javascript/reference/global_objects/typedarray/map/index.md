@@ -1,22 +1,21 @@
 ---
 title: TypedArray.prototype.map()
+short-title: map()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/map
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`map()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、与えられた関数を呼び出された型付き配列のすべての要素に対して呼び出し、その結果からなる新しい型付き配列を生成します。このメソッドは、 {{jsxref("Array.prototype.map()")}} と同じアルゴリズムです。
 
-{{InteractiveExample("JavaScript デモ: TypedArray.map()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.map()", "shorter")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([25, 36, 49]);
 const roots = uint8.map(Math.sqrt);
 
 console.log(roots);
-// Expected output: Uint8Array [5, 6, 7]
+// 予想される結果: Uint8Array [5, 6, 7]
 ```
 
 ## 構文

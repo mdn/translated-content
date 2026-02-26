@@ -3,7 +3,7 @@ title: Заключение
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
 ---
 
-{{Previous("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Управление_мышью")}}
+{{Previous("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
 
 Это 10-й и заключительный шаг в [Gamedev Canvas tutorial](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Вы можете найти исходный код, как он должен выглядеть, после завершения этого урока в [Gamedev-Canvas-workshop/lesson10.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html).
 

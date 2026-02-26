@@ -1,16 +1,15 @@
 ---
 title: "@container"
 slug: Web/CSS/Reference/At-rules/@container
-original_slug: Web/CSS/@container
 l10n:
-  sourceCommit: 27e3d279057ebbb559f4725641b1c431914de7b1
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@container`** est une règle conditionnelle de groupe qui applique des styles à un [contexte de conteneur](/fr/docs/Web/CSS/CSS_containment/Container_queries#nommer_les_contextes_de_conteneur).
+La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@container`** est une règle conditionnelle de groupe qui applique des styles à un [contexte de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_queries#nommer_les_contextes_de_conteneur).
 Les déclarations de style sont filtrées par une condition et appliquées au conteneur si la condition est vraie.
 La condition est évaluée lorsque la taille du conteneur interrogé, le [`<style-feature>`](#requêtes_de_style_de_conteneur) ou l'état de défilement changent.
 
-La propriété {{cssxref("container-name")}} spécifie une liste de noms de conteneurs de requête. Ces noms peuvent être utilisés par les règles `@container` pour filtrer les conteneurs ciblés. Le `<container-name>` optionnel et sensible à la casse filtre les conteneurs ciblés par la requête.
+La propriété {{CSSxRef("container-name")}} spécifie une liste de noms de conteneurs de requête. Ces noms peuvent être utilisés par les règles `@container` pour filtrer les conteneurs ciblés. Le `<container-name>` optionnel et sensible à la casse filtre les conteneurs ciblés par la requête.
 
 Une fois qu'un conteneur de requête éligible a été sélectionné pour un élément, chaque fonctionnalité de conteneur dans le `<container-condition>` est évaluée par rapport à ce conteneur.
 
@@ -66,9 +65,9 @@ Une fois qu'un conteneur de requête éligible a été sélectionné pour un él
 - `<container-condition>`
   - : Un `<container-name>` optionnel et un `<container-query>`. Les styles définis dans la `<stylesheet>` sont appliqués si la condition est vraie.
     - `<container-name>`
-      - : Optionnel. Le nom du conteneur auquel les styles seront appliqués lorsque la requête est vraie, spécifié comme un {{cssxref("ident")}}.
+      - : Optionnel. Le nom du conteneur auquel les styles seront appliqués lorsque la requête est vraie, spécifié comme un {{CSSxRef("ident")}}.
     - `<container-query>`
-      - : Un ensemble de fonctionnalités évaluées sur le conteneur interrogé lorsque la taille, le [`<style-feature>`](#container_style_queries) ou l'état de défilement du conteneur changent.
+      - : Un ensemble de fonctionnalités évaluées sur le conteneur interrogé lorsque la taille, le [`<style-feature>`](#requêtes_de_style_de_conteneur) ou l'état de défilement du conteneur changent.
 
 ### Mots-clés logiques dans les requêtes de conteneur
 
@@ -94,7 +93,7 @@ Des mots-clés logiques peuvent être utilisés pour définir la condition du co
 
 ### Contextes de conteneur nommés
 
-Un contexte de conteneur peut être nommé à l'aide de la propriété {{cssxref("container-name")}}.
+Un contexte de conteneur peut être nommé à l'aide de la propriété {{CSSxRef("container-name")}}.
 
 ```css
 .post {
@@ -103,7 +102,7 @@ Un contexte de conteneur peut être nommé à l'aide de la propriété {{cssxref
 }
 ```
 
-La syntaxe raccourcie consiste à utiliser {{cssxref("container")}} sous la forme `container: <name> / <type>`, par exemple&nbsp;:
+La syntaxe raccourcie consiste à utiliser {{CSSxRef("container")}} sous la forme `container: <name> / <type>`, par exemple&nbsp;:
 
 ```css
 .post {
@@ -111,7 +110,7 @@ La syntaxe raccourcie consiste à utiliser {{cssxref("container")}} sous la form
 }
 ```
 
-Dans les requêtes de conteneur, la propriété {{cssxref("container-name")}} permet de filtrer l'ensemble des conteneurs pour ne garder que ceux dont le nom correspond à la requête&nbsp;:
+Dans les requêtes de conteneur, la propriété {{CSSxRef("container-name")}} permet de filtrer l'ensemble des conteneurs pour ne garder que ceux dont le nom correspond à la requête&nbsp;:
 
 ```css
 @container sidebar (width > 400px) {
@@ -119,7 +118,7 @@ Dans les requêtes de conteneur, la propriété {{cssxref("container-name")}} pe
 }
 ```
 
-Les détails sur l'utilisation et les restrictions de nommage sont décrits dans la page {{cssxref("container-name")}}.
+Les détails sur l'utilisation et les restrictions de nommage sont décrits dans la page {{CSSxRef("container-name")}}.
 
 ### Descripteurs
 
@@ -142,22 +141,22 @@ Le `<container-condition>` peut inclure une ou plusieurs requêtes booléennes d
 ```
 
 - `aspect-ratio`
-  - : Le {{cssxref("aspect-ratio")}} du conteneur, calculé comme le rapport largeur/hauteur du conteneur, exprimé en {{cssxref("ratio")}}.
+  - : Le {{CSSxRef("aspect-ratio")}} du conteneur, calculé comme le rapport largeur/hauteur du conteneur, exprimé en {{CSSxRef("ratio")}}.
 
 - `block-size`
-  - : Le {{cssxref("block-size")}} du conteneur, exprimé en {{cssxref("length")}}.
+  - : Le {{CSSxRef("block-size")}} du conteneur, exprimé en {{CSSxRef("length")}}.
 
 - `height`
-  - : La hauteur du conteneur, exprimée en {{cssxref("length")}}.
+  - : La hauteur du conteneur, exprimée en {{CSSxRef("length")}}.
 
 - `inline-size`
-  - : Le {{cssxref("inline-size")}} du conteneur, exprimé en {{cssxref("length")}}.
+  - : Le {{CSSxRef("inline-size")}} du conteneur, exprimé en {{CSSxRef("length")}}.
 
 - `orientation`
   - : L'[orientation](/fr/docs/Web/CSS/Reference/At-rules/@media/orientation) du conteneur, soit `landscape`, soit `portrait`.
 
 - `width`
-  - : La largeur du conteneur, exprimée en {{cssxref("length")}}.
+  - : La largeur du conteneur, exprimée en {{CSSxRef("length")}}.
 
 #### Descripteurs d'état de défilement du conteneur
 
@@ -175,12 +174,12 @@ Les descripteurs d'état de défilement sont spécifiés dans le `<container-con
 }
 ```
 
-Les mots-clés pris en charge pour les descripteurs d'état de défilement incluent les valeurs physiques et les {{glossary("flow relative values", "valeurs relatives de flux")}}.
+Les mots-clés pris en charge pour les descripteurs d'état de défilement incluent les valeurs physiques et les {{Glossary("flow relative values", "valeurs relatives de flux")}}.
 
 - `scrollable`
   - : Vérifie si le conteneur peut être défilé dans la direction donnée par une action de l'utilisateur·ice (barre de défilement, geste tactile, etc.). Autrement dit, y a-t-il du contenu débordant dans la direction donnée qui peut être atteint par défilement&nbsp;? Les valeurs valides pour `scrollable` incluent&nbsp;:
     - `none`
-      - : Le conteneur n'est pas un {{glossary("scroll container")}} ou ne peut pas être défilé dans aucune direction.
+      - : Le conteneur n'est pas un {{Glossary("scroll container", "conteneur de défilement")}} ou ne peut pas être défilé dans aucune direction.
     - `top`
       - : Le conteneur peut être défilé vers son bord supérieur.
     - `right`
@@ -231,9 +230,9 @@ Les mots-clés pris en charge pour les descripteurs d'état de défilement inclu
     - `both`
       - : Le conteneur est à la fois une cible d'accrochage horizontale et verticale pour son conteneur parent. Il ne correspondra pas si l'accrochage ne se fait que sur un seul axe.
 
-    Pour vérifier un conteneur avec une requête `snapped` différente de `none`, il doit avoir un conteneur parent avec une valeur {{cssxref("scroll-snap-type")}} différente de `none`. Une requête `snapped: none` correspondra même s'il n'y a pas de conteneur parent de type scroll snap.
+    Pour vérifier un conteneur avec une requête `snapped` différente de `none`, il doit avoir un conteneur parent avec une valeur {{CSSxRef("scroll-snap-type")}} différente de `none`. Une requête `snapped: none` correspondra même s'il n'y a pas de conteneur parent de type scroll snap.
 
-    L'évaluation a lieu lors des événements [`scrollsnapchanging`](/fr/docs/Web/API/Element/scrollsnapchanging_event) sur le conteneur scroll snap. Si le test est réussi, les règles à l'intérieur du bloc `@container` sont appliquées aux descendants du conteneur.
+    L'évaluation a lieu lors des événements {{DOMxRef("Element.scrollsnapchanging_event", "scrollsnapchanging")}} sur le conteneur scroll snap. Si le test est réussi, les règles à l'intérieur du bloc `@container` sont appliquées aux descendants du conteneur.
 
     Pour vérifier si un conteneur est une cible d'accrochage, sans se soucier de la direction, utilisez la valeur `none` avec l'opérateur `not`&nbsp;:
 
@@ -244,7 +243,7 @@ Les mots-clés pris en charge pour les descripteurs d'état de défilement inclu
     ```
 
 - `stuck`
-  - : Vérifie si un conteneur avec la propriété {{cssxref("position")}} à [`sticky`](/fr/docs/Learn_web_development/Core/CSS_layout/Positioning#positionnement_fixe) est collé à un bord de son conteneur parent défilant. Les valeurs valides pour `stuck` incluent&nbsp;:
+  - : Vérifie si un conteneur avec la propriété {{CSSxRef("position")}} à [`sticky`](/fr/docs/Learn_web_development/Core/CSS_layout/Positioning#positionnement_fixe) est collé à un bord de son conteneur parent défilant. Les valeurs valides pour `stuck` incluent&nbsp;:
     - `none`
       - : Le conteneur n'est collé à aucun bord. À noter que les requêtes `none` correspondent même si le conteneur n'a pas `position: sticky`.
     - `top`
@@ -292,7 +291,7 @@ Les mots-clés pris en charge pour les descripteurs d'état de défilement inclu
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -354,7 +353,7 @@ span {
 }
 ```
 
-{{EmbedLiveSample("appliquer_des_styles_selon_la_taille_dun_conteneur", "100%", 230)}}
+{{EmbedLiveSample("Appliquer des styles selon la taille d'un conteneur", "100%", 230)}}
 
 ### Créer des contextes de conteneur nommés
 
@@ -370,7 +369,7 @@ Prenons l'exemple HTML suivant, un composant carte avec un titre et du texte&nbs
 ```
 
 Commencez par créer un contexte de conteneur avec les propriétés `container-type` et `container-name`.
-La syntaxe raccourcie pour cette déclaration est décrite dans la page {{cssxref("container")}}.
+La syntaxe raccourcie pour cette déclaration est décrite dans la page {{CSSxRef("container")}}.
 
 ```css
 .post {
@@ -417,7 +416,7 @@ Les requêtes de conteneur peuvent aussi évaluer le style calculé de l'éléme
 }
 ```
 
-Le paramètre de chaque `style()` est un seul `<style-feature>`. Un **`<style-feature>`** est une [déclaration CSS](/fr/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations) valide, une propriété CSS ou un [`<custom-property-name>`](/fr/docs/Web/CSS/Reference/Values/var#values).
+Le paramètre de chaque `style()` est un seul `<style-feature>`. Un **`<style-feature>`** est une [déclaration CSS](/fr/docs/Web/CSS/Guides/Syntax/Introduction#déclarations_css) valide, une propriété CSS ou un [`<custom-property-name>`](/fr/docs/Web/CSS/Reference/Values/var#valeurs).
 
 ```css
 @container style(--themeBackground),
@@ -441,7 +440,7 @@ La requête suivante vérifie si la [valeur calculée](/fr/docs/Web/CSS/Guides/C
 ```
 
 > [!NOTE]
-> Si une propriété personnalisée a pour valeur `blue`, le code hexadécimal équivalent `#0000ff` ne correspondra pas, sauf si la propriété a été définie comme une couleur avec {{cssxref("@property")}} pour que le navigateur puisse comparer correctement les valeurs calculées.
+> Si une propriété personnalisée a pour valeur `blue`, le code hexadécimal équivalent `#0000ff` ne correspondra pas, sauf si la propriété a été définie comme une couleur avec {{CSSxRef("@property")}} pour que le navigateur puisse comparer correctement les valeurs calculées.
 
 Les fonctionnalités de style qui interrogent une propriété raccourcie sont vraies si les valeurs calculées correspondent pour chacune de ses propriétés longues, et fausses sinon. Par exemple, `@container style(border: 2px solid red)` sera vrai si les 12 propriétés longues qui composent ce raccourci (`border-bottom-style`, etc.) sont toutes vraies.
 
@@ -461,12 +460,12 @@ Voir [Utiliser les requêtes d'état de défilement de conteneur](/fr/docs/Web/C
 
 ## Voir aussi
 
-- [Utiliser les requêtes de conteneur](/fr/docs/Web/CSS/CSS_containment/Container_queries)
-- [Utiliser les requêtes de taille et de style de conteneur](/fr/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
+- [Utiliser les requêtes de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_queries)
+- [Utiliser les requêtes de taille et de style de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)
 - [Utiliser les requêtes d'état de défilement de conteneur](/fr/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
-- {{Cssxref("container-name")}}
-- {{Cssxref("container-type")}}
-- {{Cssxref("contain")}}
-- {{Cssxref("content-visibility")}}
+- La propriété {{CSSxRef("container-name")}}
+- La propriété {{CSSxRef("container-type")}}
+- La propriété {{CSSxRef("contain")}}
+- La propriété {{CSSxRef("content-visibility")}}
 - Le module de [Compartimentation CSS](/fr/docs/Web/CSS/Guides/Containment)
-- [Fonctions de règles @ CSS](/fr/docs/Web/CSS/CSS_syntax/At-rule_functions)
+- [Fonctions de règles @ CSS](/fr/docs/Web/CSS/Guides/Syntax/At-rule_functions)

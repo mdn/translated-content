@@ -13,7 +13,7 @@ ul.my-things > li {
 }
 ```
 
-뒤쪽 선택자의 요소는 앞쪽 선택자 요소의 바로 아래에 위치해야 하므로, DOM 트리의 깊이에 상관하지 않고 아래의 모든 요소를 선택하는 [자손 결합자](/ko/docs/Web/CSS/Descendant_combinator)보다 더 엄격합니다.
+뒤쪽 선택자의 요소는 앞쪽 선택자 요소의 바로 아래에 위치해야 하므로, DOM 트리의 깊이에 상관하지 않고 아래의 모든 요소를 선택하는 [자손 결합자](/ko/docs/Web/CSS/Reference/Selectors/Descendant_combinator)보다 더 엄격합니다.
 
 ## 구문
 
@@ -61,4 +61,4 @@ div > span {
 
 ## 같이 보기
 
-- [자손 결합자](/ko/docs/Web/CSS/Descendant_combinator)
+- [자손 결합자](/ko/docs/Web/CSS/Reference/Selectors/Descendant_combinator)

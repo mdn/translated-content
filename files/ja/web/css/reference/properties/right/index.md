@@ -1,12 +1,11 @@
 ---
 title: right
 slug: Web/CSS/Reference/Properties/right
-original_slug: Web/CSS/right
 l10n:
-  sourceCommit: 9428e6f9ac2fd4166b5cf245fb674123209787ff
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`right`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[位置指定要素](/ja/docs/Web/CSS/Reference/Properties/position)の水平位置の決定に関与します。位置指定されていない要素には効果はありません。
+**`right`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[位置指定要素](/ja/docs/Web/CSS/Reference/Properties/position)の水平位置の決定に関与します。この{{glossary("inset properties", "インセットプロパティ")}}は、位置指定されていない要素には効果がありません。
 
 {{InteractiveExample("CSS デモ: right")}}
 
@@ -26,15 +25,12 @@ right: 10%;
 right: 20px;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section id="default-example">
   <div class="example-container">
-    <div id="example-element">I am absolutely positioned.</div>
+    <div id="example-element">これは絶対位置指定されています。</div>
     <p>
-      As much mud in the streets as if the waters had but newly retired from the
-      face of the earth, and it would not be wonderful to meet a Megalosaurus,
-      forty feet long or so, waddling like an elephantine lizard up Holborn
-      Hill.
+      まるで地球の表面から水が引き始めたかのように、通りは泥だらけで、ホルボーン通りを象のようなトカゲのようによちよち歩く、体長 12 メートルほどのメガロサウルスに出会っても不思議ではないでしょう。
     </p>
   </div>
 </section>
@@ -66,6 +62,8 @@ right: 20px;
 /* <length> 値 */
 right: 3px;
 right: 2.4em;
+right: anchor(--my-anchor 50%);
+right: anchor-size(--my-anchor height, 65px);
 
 /* 包含ブロックの幅に対する <percentage> */
 right: 10%;
@@ -85,8 +83,9 @@ right: unset;
 
 - {{cssxref("&lt;length&gt;")}}
   - : 負、null、または正の {{cssxref("&lt;length&gt;")}} で、以下のものを表します。
-    - *絶対位置指定要素*の場合は、包含ブロックの右辺までの距離。
-    - *相対位置指定要素*の場合は、通常の位置からの左方向への移動量。
+    - 絶対位置指定要素の場合は、包含ブロックの右端までの距離を表します。
+    - アンカー位置指定要素の場合は、{{cssxref("anchor()")}} 関数は、関連付けられたアンカー要素の左端または右端の位置を基準とした相対的な {{cssxref("&lt;length&gt;")}} 値に解決されます（詳細は[インセットプロパティで `anchor()` 関数値を使用](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#インセットプロパティで_anchor_関数値を使用)を参照）。また、{{cssxref("anchor-size()")}} 関数は、関連するアンカー要素の幅または高さに相対的な {{cssxref("&lt;length&gt;")}} 値に解決します（[アンカーサイズに基づく要素の位置の設定](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#アンカーサイズに基づく要素の位置の設定) を参照）。
+    - 相対位置指定要素の場合は、通常の位置からの左方向への移動量を表します。
 
 - {{cssxref("&lt;percentage&gt;")}}
   - : 包含ブロックの幅に対する {{cssxref("&lt;percentage&gt;")}} です。
@@ -95,19 +94,16 @@ right: unset;
     - *絶対位置指定要素*では、要素の位置は {{Cssxref("left")}} プロパティに基づいて決まり、 `width: auto` は内容物の幅に基づいて決まります。また、 `left` も `auto` であった場合は、要素は水平方向には静的要素が配置される場合と同様に配置されます。
     - *相対位置指定要素*では、通常の位置から要素までの距離は {{Cssxref("left")}} に基づきます。また、 `left` も `auto` であった場合は、水平方向には移動しません。
 
-- `inherit`
-  - : 値が親要素（包含ブロックとは限りません）の計算値と同じであることを示すキーワードです。そして、この計算値は {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, または `auto` キーワードと同様に扱われます。
-
 ## 解説
 
 `right` の効果は、要素がどの様に配置されているか (つまり、 {{cssxref("position")}} プロパティの値) によって変わります。
 
-- `position` が `absolute` または `fixed` に設定されている場合、 `right` プロパティは要素の右辺の外部マージンと包含ブロックの右辺の内部境界との間の距離を指定します。
+- `position` が `absolute` または `fixed` に設定されている場合、`right` プロパティは要素の右辺の外側のマージンと、包含ブロックの右辺の内側のマージンとの間の距離を指定します。位置指定要素に関連付けられた[アンカー要素](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using)があり、プロパティ値に {{cssxref("anchor()")}} 関数が含まれいる場合、`right` は位置指定要素の右端を指定された [`<anchor-side>`](/ja/docs/Web/CSS/Reference/Values/anchor#anchor-side) の辺からの相対位置を基準とします。`right` プロパティは、`left`、`right`、`start`、`end`、`self-start`、`self-end`、`center`、および `<percentage>` 値と[互換性があります](/ja/docs/Web/CSS/Reference/Values/anchor#インセットプロパティと_anchor-side_の値の互換性)。
 - `position` が `relative` に設定されている場合、 `right` プロパティは要素の右辺が通常位置から左方向へ移動する量を指定します。
-- `position` が `sticky` に設定されている場合、 `right` プロパティは要素がビューポート内にある場合は `position` が `relative` であるかのように、外の場合は `position` が `fixed` の場合と同様に動作します。
+- `position` が `sticky` に設定されている場合、 `right` プロパティは sticky 制約の矩形を計算するために使用されます。
 - `position` が `static` に設定されている場合、 `right` プロパティは*効果がありません*。
 
-{{cssxref("left")}} と `right` の両方が定義された場合、他のプロパティで制約されていなければ、要素は両方を満たすように引き伸ばされます。もし要素が両方を満たすように伸びることができない場合 — 例えば `width` が宣言されている場合 — 要素の位置は*過剰制約*になります。このような場合、コンテナーが左書きの場合は `left` の値が優先され、コンテナーが右書きの場合は `right` の値が優先されます。
+{{cssxref("left")}} と `right` の両方が定義された場合、他のプロパティで制約されていなければ、要素は両方を満たすように引き伸ばされます。もし要素が両方を満たすように伸びることができない場合 — 例えば `width` が宣言されている場合 — 要素の位置は過剰制約になります。このような場合、コンテナーが左書きの場合は `left` の値が優先され、コンテナーが右書きの場合は `right` の値が優先されます。
 
 ## 公式定義
 
@@ -124,8 +120,8 @@ right: unset;
 #### HTML
 
 ```html
-<div id="relative">Relatively positioned</div>
-<div id="absolute">Absolutely positioned</div>
+<div id="relative">相対位置指定</div>
+<div id="absolute">絶対位置指定</div>
 ```
 
 #### CSS
@@ -162,8 +158,8 @@ right: unset;
 
 ```html
 <div id="parent">
-  Parent
-  <div id="noWidth">No width</div>
+  親
+  <div id="noWidth">width なし</div>
   <div id="width">width: 100px</div>
 </div>
 ```
@@ -180,7 +176,7 @@ div {
   background-color: #ffc7e4;
   position: relative;
 }
-/* declare both a left and a right */
+/* left と right の両方を宣言 */
 #width,
 #noWidth {
   background-color: #c2ffd7;
@@ -188,7 +184,7 @@ div {
   left: 0;
   right: 0;
 }
-/* declare a width */
+/* width を宣言 */
 #width {
   width: 100px;
   top: 60px;
@@ -209,6 +205,9 @@ div {
 
 ## 関連情報
 
-- {{cssxref("inset")}}: 関連するすべてのプロパティである {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, {{cssxref("right")}} の一括指定
-- 対応する論理的プロパティ: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, {{cssxref("inset-inline-end")}} および一括指定の {{cssxref("inset-block")}} と {{cssxref("inset-inline")}}
+- {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}
+- {{cssxref("inset")}} 一括指定
+- {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, {{cssxref("inset-inline-end")}}
+- {{cssxref("inset-block")}} および {{cssxref("inset-inline")}} 一括指定
 - {{cssxref("position")}}
+- [CSS 位置指定レイアウト](/ja/docs/Web/CSS/Guides/Positioned_layout)モジュール

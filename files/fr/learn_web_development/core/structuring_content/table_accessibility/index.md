@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Table_accessibility
 original_slug: Learn/HTML/Tables/Advanced
 ---
 
-{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
 
 Dans le second article de ce module, nous examinerons quelques dispositions avancées des tableaux HTML — comme intitulés ou résumés, groupement des rangées dans l'en-tête, le corps ou le pied de page du tableau — ainsi que l'accessibilité des tableaux aux utilisateurs malvoyants.
 
@@ -350,7 +350,7 @@ Cette partie de l'article indique des techniques avancées pour rendre les table
 
 Les lecteurs d'écran identifieront tous les en-têtes et les utiliseront pour réaliser automatiquement les associations entre ces en-têtes et les cellules correspondantes. La combinaison des en-têtes des colonnes et des lignes doit permettre d'identifier et d'interpréter les données de chaque cellule. Ainsi, les utilisateurs de lecteurs d'écran peuvent accéder aux données d'une façon similaire à celle des utilisateurs voyants.
 
-Nous avons déjà traité des en-têtes dans notre article précédent — voir [Ajouter des en-têtes avec \<th>](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics#Adding_headers_with_%3Cth%3E_elements) .
+Nous avons déjà traité des en-têtes dans notre article précédent — voir [Ajouter des en-têtes avec \<th>](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics#adding_headers_with_th_elements) .
 
 ### L'attribut `scope`
 
@@ -435,4 +435,4 @@ En revenant à notre exemple de tableau des dépenses et des coûts, les deux ex
 
 Il reste encore quelques autres choses à apprendre sur les tableaux HTML, mais nous vous avons vraiment indiqué tout ce qu'il est nécessaire de savoir pour le moment. À ce stade, vous voulez peut-être en apprendre plus sur les styles de tableaux HTML — voyez alors [Décor des tableaux](/fr/docs/Learn_web_development/Core/Styling_basics/Tables).
 
-{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}

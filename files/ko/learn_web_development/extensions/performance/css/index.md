@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/html", "Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/HTML", "Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}
 
 웹 사이트를 개발할 때, 브라우저가 사이트에서 CSS를 처리하는 방식을 고려해야 합니다. CSS가 원인이 되는 성능 이슈를 완화하기 위해서는, CSS를 최적화 해야 합니다. 예를 들어, [렌더링 차단](/ko/docs/Glossary/Render_blocking)을 완화하려면 CSS를 최적화 해야 하고 리플로우 횟수를 최소화 해야 합니다. 이번 글에서는 주요한 CSS 성능 최적화 기법을 살펴봅니다.
 
@@ -65,7 +65,7 @@ CSSOM 생성을 최적화 하고 페이지 성능을 향상시키기 위해, 현
     media="screen and (max-width: 480px)" />
   ```
 
-  위 예제에서는 세 가지 스타일 유형을 제공합니다. 기본적인 스타일은 항상 로드되고 하나는 문서가 인쇄될 때만 로드되고 다른 하나는 화면이 좁을 때 로드됩니다. 기본적으로, 브라우저는 각각 지정된 스타일 시트가 렌러딩을 차단한다고 가정합니다. 스타일 시트를 적용해야 하는 것을 브라우저에게 알리려면, [media query](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries)가 포함되어 있는 `media` 특성을 추가하면 됩니다. 브라우저가 특정한 시나리오에서만 적용해야 하는 스타일 시트를 감지하면, 스타일 시트를 다운로드하지만 렌더링을 차단하지 않습니다. CSS를 여러 개의 파일로 분리하면, `styles.css` 같은 주요 렌더링 파일의 크기가 훨씬 작아져 렌더링이 차단되는 시간을 줄일 수 있습니다.
+  위 예제에서는 세 가지 스타일 유형을 제공합니다. 기본적인 스타일은 항상 로드되고 하나는 문서가 인쇄될 때만 로드되고 다른 하나는 화면이 좁을 때 로드됩니다. 기본적으로, 브라우저는 각각 지정된 스타일 시트가 렌러딩을 차단한다고 가정합니다. 스타일 시트를 적용해야 하는 것을 브라우저에게 알리려면, [media query](/ko/docs/Web/CSS/Guides/Media_queries/Using)가 포함되어 있는 `media` 특성을 추가하면 됩니다. 브라우저가 특정한 시나리오에서만 적용해야 하는 스타일 시트를 감지하면, 스타일 시트를 다운로드하지만 렌더링을 차단하지 않습니다. CSS를 여러 개의 파일로 분리하면, `styles.css` 같은 주요 렌더링 파일의 크기가 훨씬 작아져 렌더링이 차단되는 시간을 줄일 수 있습니다.
 
 - **CSS를 경량하고 압축하기**: CSS를 경량화하는 것은, 프로덕션에 코드를 배포할 때 사람의 가독성만을 위한 불필요한 공백을 파일에서 전부 제거하는 것을 의미합니다. CSS를 경량화하면 로딩 시간을 크게 줄일 수 있습니다. 경량화는 일반적으로 빌드 과정에서 수행됩니다. 예를 들어, 대부분의 JavaScript 프레임워크는 프로젝트를 배포할 준비가 되었을 때 코드를 경량화합니다. 경량화 방법 외에도, 사이트를 호스팅하는 서버가 파일을 전달하기 전에 gizp 같은 압축 방식을 사용하도록 설정하세요.
 
@@ -85,7 +85,7 @@ CSSOM 생성을 최적화 하고 페이지 성능을 향상시키기 위해, 현
 
   선택자를 덜 복잡하고 덜 구체적으로 만드는 것은 유지보수에도 좋습니다. 간단한 선택자는 역할을 쉽게 이해할 수 있고 선택자가 덜 [구체적](/ko/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#specificity_2)이면 추후 스타일을 쉽게 덮어쓸 수 있습니다.
 
-- **필요 이상으로 많은 요소에 스타일을 적용하지 마세요**: 흔한 실수는 [전체 선택자](/ko/docs/Web/CSS/Universal_selectors)를 사용하여 모든 요소 또는 필요 이상의 요소에 스타일을 적용하는 것입니다. 이러한 스타일링 방법은 특히 규모가 큰 사이트에서는 성능에 부정적인 영향을 줄 수 있습니다.
+- **필요 이상으로 많은 요소에 스타일을 적용하지 마세요**: 흔한 실수는 [전체 선택자](/ko/docs/Web/CSS/Reference/Selectors/Universal_selectors)를 사용하여 모든 요소 또는 필요 이상의 요소에 스타일을 적용하는 것입니다. 이러한 스타일링 방법은 특히 규모가 큰 사이트에서는 성능에 부정적인 영향을 줄 수 있습니다.
 
   ```css
   /* <body> 내부의 모든 요소를 선택합니다 */
@@ -128,7 +128,7 @@ CSSOM 생성을 최적화 하고 페이지 성능을 향상시키기 위해, 현
 
 가장 간단한 조언은 불필요한 모든 애니메이션을 줄이는 것입니다. 사용자가 저전력 기기나 제한된 배터리 전력을 사용 중이라면 애니메이션을 끌 수 있는 제어 장치나 사이트 환경설정을 제공할 수 있습니다. 첫 페이지에서 애니메이션 적용 여부를 JavaScript로 제어할 수도 있습니다. [`prefers-reduced-motion`](/ko/docs/Web/CSS/@media/prefers-reduced-motion)이라는 미디어 쿼리가 있으며, 사용자의 애니메이션 OS 레벨 환경설정에 따라 선택적으로 애니메이션 스타일을 제공하거나 적용하지 않을 수 있습니다.
 
-필수적인 DOM 애니메이션일 때, 가능한 경우 JavaScript 애니메이션 대신 [CSS 애니메이션](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations) 사용을 권장합니다. [웹 애니메이션 API](/ko/docs/Web/API/Web_Animations_API)는 JavaScript로 CSS 애니메이션에 직접 연결할 수 있는 방법을 제공합니다.
+필수적인 DOM 애니메이션일 때, 가능한 경우 JavaScript 애니메이션 대신 [CSS 애니메이션](/ko/docs/Web/CSS/Guides/Animations/Using) 사용을 권장합니다. [웹 애니메이션 API](/ko/docs/Web/API/Web_Animations_API)는 JavaScript로 CSS 애니메이션에 직접 연결할 수 있는 방법을 제공합니다.
 
 ### 애니메이션 속성 선택하기
 
@@ -188,7 +188,7 @@ CSS는 미디어 쿼리로 스타일을 특정 조건에 맞춰 범위를 지정
   media="screen and (max-width: 480px)" />
 ```
 
-기본적으로, 브라우저는 각각의 특정 스타일 시트를 렌더링 차단하도록 추정합니다. [media query](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries)로 `media` 특성을 추가하여 언제 스타일 시트가 적용되어야 하는지 브라우저에게 알려줄 수 있습니다. 브라우저가 특정 상황에서만 필요한 스타일 시트임을 인식하면, 해당 파일을 로드하더라도 렌더링을 차단하지 않습니다. CSS를 여러 파일로 분리하면, 렌더링 차단이 발생하는 주요 스타일 시트 `styles.css` 파일 크기를 훨씬 더 줄일 수 있어 렌더링 차단 시간이 단축됩니다.
+기본적으로, 브라우저는 각각의 특정 스타일 시트를 렌더링 차단하도록 추정합니다. [media query](/ko/docs/Web/CSS/Guides/Media_queries/Using)로 `media` 특성을 추가하여 언제 스타일 시트가 적용되어야 하는지 브라우저에게 알려줄 수 있습니다. 브라우저가 특정 상황에서만 필요한 스타일 시트임을 인식하면, 해당 파일을 로드하더라도 렌더링을 차단하지 않습니다. CSS를 여러 파일로 분리하면, 렌더링 차단이 발생하는 주요 스타일 시트 `styles.css` 파일 크기를 훨씬 더 줄일 수 있어 렌더링 차단 시간이 단축됩니다.
 
 ## 글꼴 성능 개선하기
 
@@ -198,7 +198,7 @@ CSS는 미디어 쿼리로 스타일을 특정 조건에 맞춰 범위를 지정
 
 ### 글꼴 로딩
 
-글꼴은 [`font-family`](/ko/docs/Web/CSS/font-family) 속성을 사용하여 요소에 실제로 적용될 때만 로드된다는 것을 명심하세요. [`@font-face`](/ko/docs/Web/CSS/@font-face) 규칙을 사용하여 처음 참조된다고 해서 글꼴이 로드되는 것은 아닙니다.
+글꼴은 [`font-family`](/ko/docs/Web/CSS/font-family) 속성을 사용하여 요소에 실제로 적용될 때만 로드된다는 것을 명심하세요. [`@font-face`](/ko/docs/Web/CSS/Reference/At-rules/@font-face) 규칙을 사용하여 처음 참조된다고 해서 글꼴이 로드되는 것은 아닙니다.
 
 ```css
 /* 글꼴은 여기서 로드되지 않습니다 */
@@ -249,7 +249,7 @@ h3 {
 
 ### `font-display` 설명자로 글꼴 표시 동작 정의하기
 
-`@font-face` 규칙에 적용되는 [`font-display`](/ko/docs/Web/CSS/@font-face/font-display) 설명자는 브라우저가 글꼴 파일을 어떻게 로드하고 표시할지 정의합니다. 그리고 글꼴이 로드되거나 로드되지 않을 때, 폴백 글꼴로 나타나게 합니다. 이렇게 하면 빈 화면 대신 글자를 보여줌으로써 성능을 향상시키지만, 스타일되지 않은 글자가 잠시 나타나는 절충이 발생합니다.
+`@font-face` 규칙에 적용되는 [`font-display`](/ko/docs/Web/CSS/Reference/At-rules/@font-face/font-display) 설명자는 브라우저가 글꼴 파일을 어떻게 로드하고 표시할지 정의합니다. 그리고 글꼴이 로드되거나 로드되지 않을 때, 폴백 글꼴로 나타나게 합니다. 이렇게 하면 빈 화면 대신 글자를 보여줌으로써 성능을 향상시키지만, 스타일되지 않은 글자가 잠시 나타나는 절충이 발생합니다.
 
 ```css
 @font-face {
@@ -263,7 +263,7 @@ h3 {
 
 ## CSS containment로 스타일링 재계산 최적화하기
 
-[CSS containment](/ko/docs/Web/CSS/CSS_containment) 모듈에서 정의한 속성을 사용하면 브라우저에게 페이지의 다른 부분들을 독립적으로 격리하고 렌더링을 최적화하도록 지시할 수 있습니다. 이를 통해 개별 부분 렌더링 성능을 향상시킬 수 있습니다. 하나의 예시로, 뷰포트에 보이기 전까지 특정 컨테이너를 렌더링하지 않도록 브라우저에 지시할 수 있습니다.
+[CSS containment](/ko/docs/Web/CSS/Guides/Containment) 모듈에서 정의한 속성을 사용하면 브라우저에게 페이지의 다른 부분들을 독립적으로 격리하고 렌더링을 최적화하도록 지시할 수 있습니다. 이를 통해 개별 부분 렌더링 성능을 향상시킬 수 있습니다. 하나의 예시로, 뷰포트에 보이기 전까지 특정 컨테이너를 렌더링하지 않도록 브라우저에 지시할 수 있습니다.
 
 {{cssxref("contain")}} 속성은 저자가 페이지의 개별 컨테이너에 적용할 [containment 유형](/ko/docs/Web/CSS/CSS_containment/Using_CSS_containment)을 정확하게 지정할 수 있게 합니다. 이를 통해 브라우저는 DOM의 제한된 부분에 대해 레이아웃, 스타일, 페인트, 크기 또는 이들의 조합을 재계산할 수 있습니다.
 
@@ -290,4 +290,4 @@ article {
 - [글꼴 모범 예제](https://web.dev/articles/font-best-practices) web.dev (2022)
 - [content-visibility: 렌더링 성능을 개선하는 새로운 CSS 속성](https://web.dev/articles/content-visibility) web.dev (2022)
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Performance/html", "Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/HTML", "Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}

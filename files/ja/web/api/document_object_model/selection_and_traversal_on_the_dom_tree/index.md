@@ -1,9 +1,8 @@
 ---
-title: セレクターを使用した DOM 要素の特定
+title: DOM ツリー上の選択と走査
 slug: Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree
-original_slug: Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
 l10n:
-  sourceCommit: e099e74fe5c09c46f0dfe044894692721a713d29
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -20,9 +19,9 @@ l10n:
   - : ノードのサブツリー内で一致するすべての `Element` ノードを含む {{domxref("NodeList")}} を返すか、一致するものが見つからなかった場合は空の `NodeList` を返します。
 
 > [!NOTE]
-> {{domxref("Element.querySelectorAll()", "querySelectorAll()")}} が返す {{domxref("NodeList")}} はライブではありません。すなわち、 DOM で行われた変更がコレクションに反映されません。これは他の DOM クエリーメソッドがライブのノードリストを返すのと異なります。
+> {{domxref("Element.querySelectorAll()", "querySelectorAll()")}} が返す {{domxref("NodeList")}} はライブではありません。すなわち、DOM で行われた変更がコレクションに反映されません。これは他の DOM クエリーメソッドがライブのノードリストを返すのと異なります。
 
-例や詳細については、 {{domxref("Element.querySelector()")}} および {{domxref("Element.querySelectorAll()")}} メソッドの記事を参照してください。
+例や詳細については、{{domxref("Element.querySelector()")}} および {{domxref("Element.querySelectorAll()")}} メソッドの記事を参照してください。
 
 ## セレクター
 

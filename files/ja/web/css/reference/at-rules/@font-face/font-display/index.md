@@ -1,12 +1,11 @@
 ---
 title: font-display
 slug: Web/CSS/Reference/At-rules/@font-face/font-display
-original_slug: Web/CSS/@font-face/font-display
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**`font-display`** は [`@font-face`](/ja/docs/Web/CSS/Reference/At-rules/@font-face) アットルールの記述子で、フォントがダウンロード済みで利用できるかに基づいて、どのようにフォントの種類を表示するかを定めます。
+**`font-display`** は {{cssxref("@font-face")}} アットルールの記述子で、フォントフェイスがダウンロード済みで利用可能であるかどうか、いつなのかに基づいて、どのようにフォントフェイスを表示するかを定めます。
 
 ## 構文
 
@@ -57,11 +56,11 @@ font-display: optional;
 
 ```css
 @font-face {
-  font-family: ExampleFont;
+  font-family: "ExampleFont";
   src:
     url("/path/to/fonts/example-font.woff") format("woff"),
     url("/path/to/fonts/example-font.eot") format("embedded-opentype");
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
   font-display: fallback;
 }

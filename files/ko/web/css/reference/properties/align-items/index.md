@@ -280,7 +280,7 @@ display.addEventListener("change", (evt) => {
 
 ## 같이 보기
 
-- CSS 플렉스박스의 기본 개념: [flexbox의 기본 개념](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- CSS 플렉스박스의 기본 개념: [flexbox의 기본 개념](/ko/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
 - CSS 플렉스박스 가이드: [Aligning items in a flex container](/ko/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
 - CSS 그리드 가이드: [Box alignment in CSS Grid layouts](/ko/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - [CSS Box Alignment](/ko/docs/Web/CSS/CSS_box_alignment)

@@ -54,4 +54,4 @@ l10n:
 
 ## 같이 보기
 
-- [CSS 색상](/ko/docs/Web/CSS/CSS_colors) 모듈
+- [CSS 색상](/ko/docs/Web/CSS/Guides/Colors) 모듈

@@ -1,9 +1,8 @@
 ---
 title: :has()
 slug: Web/CSS/Reference/Selectors/:has
-original_slug: Web/CSS/:has
 l10n:
-  sourceCommit: 277a8954951c900ef60a5175503976284c1d328d
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:has()`** permet de cibler un élément si au moins un des sélecteurs passés en paramètre correspond à l'élément (selon la portée, {{CSSxRef(":scope")}}, de l'élément).
@@ -37,7 +36,7 @@ Les pseudo-éléments ne sont pas non plus des sélecteurs valides dans `:has()`
 
 ### Sélectionner un élément parent
 
-Vous recherchez peut-être un "[combinator parent](/fr/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators)", qui vous permet de remonter l'arbre DOM et de sélectionner le parent d'un élément spécifique. La pseudo-classe `:has()` le fait en utilisant `parent:has(child)` (pour n'importe quel parent) ou `parent:has(> child)` (pour le parent direct). Cet exemple montre comment mettre en forme un élément `<section>` lorsqu'il contient un enfant avec la classe `featured`.
+Vous recherchez peut-être un "[combinator parent](/fr/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators#combinators)", qui vous permet de remonter l'arbre DOM et de sélectionner le parent d'un élément spécifique. La pseudo-classe `:has()` le fait en utilisant `parent:has(child)` (pour n'importe quel parent) ou `parent:has(> child)` (pour le parent direct). Cet exemple montre comment mettre en forme un élément `<section>` lorsqu'il contient un enfant avec la classe `featured`.
 
 ```html
 <section>
@@ -250,8 +249,8 @@ De même, dans le cas de la recherche négative, dans l'expression régulière `
 {{Compat}}
 
 - Les pseudo-classes CSS [`:is()`](/fr/docs/Web/CSS/Reference/Selectors/:is), [`:where()`](/fr/docs/Web/CSS/Reference/Selectors/:where), [`:not()`](/fr/docs/Web/CSS/Reference/Selectors/:not)
-- [Sélecteurs et combinateurs CSS](/fr/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
-- [Structure du sélecteur CSS](/fr/docs/Web/CSS/CSS_selectors/Selector_structure)
+- [Sélecteurs et combinateurs CSS](/fr/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators)
+- [Structure du sélecteur CSS](/fr/docs/Web/CSS/Guides/Selectors/Selector_structure)
 - [Liste des sélecteurs](/fr/docs/Web/CSS/Reference/Selectors/Selector_list)
 - [Sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors)
 - [Sélection et parcours de l'arbre DOM](/fr/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)

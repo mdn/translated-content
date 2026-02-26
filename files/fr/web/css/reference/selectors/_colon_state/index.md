@@ -1,9 +1,8 @@
 ---
 title: :state()
 slug: Web/CSS/Reference/Selectors/:state
-original_slug: Web/CSS/:state
 l10n:
-  sourceCommit: 52463eeca07031f88cdaf7c45aec5ebbb717533c
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:state()`** correspond aux [éléments personnalisés](/fr/docs/Web/API/Web_components/Using_custom_elements) qui ont l'état personnalisé spécifié.

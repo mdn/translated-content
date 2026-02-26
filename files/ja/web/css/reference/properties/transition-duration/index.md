@@ -1,9 +1,8 @@
 ---
 title: transition-duration
 slug: Web/CSS/Reference/Properties/transition-duration
-original_slug: Web/CSS/transition-duration
 l10n:
-  sourceCommit: 1608a85abb1d05dadc63f27c93fc3e4b7e630db0
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`transition-duration`** は [CSS](/ja/docs/Web/CSS) のプロパティで、トランジションによるアニメーションが完了するまでの再生時間を秒数またはミリ秒数で指定します。既定値は `0s` であり、これはアニメーションを実行しないことを示します。
@@ -30,16 +29,16 @@ transition-duration: 3s, 1s;
 transition-property: margin-right, color;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section id="default-example">
-  <div id="example-element">Hover to see<br />the transition.</div>
+  <div id="example-element">トランジションを見るには<br />ポインターを当ててください</div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
   background-color: #e4f0f5;
-  color: #000;
+  color: black;
   padding: 1rem;
   border-radius: 0.5rem;
   font: 1em monospace;
@@ -48,8 +47,8 @@ transition-property: margin-right, color;
 }
 
 #default-example:hover > #example-element {
-  background-color: #909;
-  color: #fff;
+  background-color: #990099;
+  color: white;
   margin-right: 40%;
 }
 ```
@@ -93,13 +92,13 @@ transition-duration: unset;
 #### HTML
 
 ```html
-<div class="box duration-1">0.5 seconds</div>
+<div class="box duration-1">0.5 秒</div>
 
-<div class="box duration-2">2 seconds</div>
+<div class="box duration-2">2 秒</div>
 
-<div class="box duration-3">4 seconds</div>
+<div class="box duration-3">4 秒</div>
 
-<button id="change">Change</button>
+<button id="change">変更</button>
 ```
 
 #### CSS

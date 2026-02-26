@@ -1,28 +1,27 @@
 ---
 title: "<div> : l'élément de division du contenu"
 slug: Web/HTML/Reference/Elements/div
-original_slug: Web/HTML/Element/div
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<div>`** est le conteneur générique du contenu de flux. Il n'a aucun effet sur le contenu ou la mise en page tant qu'il n'est pas mis en forme d'une manière quelconque à l'aide de {{Glossary("CSS")}} (par exemple, si la mise en forme lui est appliquée directement, ou si un modèle de mise en page tel que [Flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) est appliqué à son élément parent).
 
-L'élément HTML **`<div>`** (ou division) est le conteneur générique du contenu du flux. Il n'a aucun effet sur le contenu ou la mise en page tant qu'il n'est pas mis en forme d'une manière quelconque à l'aide de [CSS](/fr/docs/Web/CSS).
-
-{{InteractiveExample("HTML Demo: &lt;div&gt;", "tabbed-standard")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;div&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <div class="warning">
   <img
     src="/shared-assets/images/examples/leopard.jpg"
-    alt="An intimidating leopard." />
-  <p>Beware of the leopard</p>
+    alt="Un léopard intimidant." />
+  <p>Attention au léopard</p>
 </div>
 ```
 
 ```css interactive-example
 .warning {
-  border: 10px ridge #f00;
-  background-color: #ff0;
+  border: 10px ridge red;
+  background-color: yellow;
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -38,95 +37,22 @@ L'élément HTML **`<div>`** (ou division) est le conteneur générique du conte
 }
 ```
 
-En tant que conteneur « pur », l'élément `<div>` ne représente rien en soi. Il est plutôt utilisé pour regrouper le contenu afin qu'il puisse être facilement stylé à l'aide des attributs [`class`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-class) ou [`id`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-id), pour marquer une section d'un document comme étant écrite dans une langue différente (à l'aide de l'attribut [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-lang)), etc.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <dfn
-          ><a href="/fr/docs/Web/Guide/HTML/Content_categories"
-            >Catégories de contenu</a
-          ></dfn
-        >
-      </th>
-      <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"
-          >contenu tangible</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
-      <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >. Selon le WHATWG, si l'élément parent est un élément
-        <a href="/fr/docs/Web/HTML/Element/dl"><code>&#x3C;dl></code></a
-        >, un ou plusieurs éléments
-        <a href="/fr/docs/Web/HTML/Element/dt"><code>&#x3C;dt></code></a> suivis
-        par un ou plusieurs éléments
-        <a href="/fr/docs/Web/HTML/Element/dd"><code>&#x3C;dd></code></a>
-        éventuellement entrecoupés par des éléments
-        <a href="/fr/docs/Web/HTML/Element/script"
-          ><code>&#x3C;script></code></a
-        >
-        ou
-        <a href="/fr/docs/Web/HTML/Element/template"
-          ><code>&#x3C;template></code></a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont
-        obligatoires.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
-      <td>
-        Tout élément qui accepte un
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >contenu de flux</a
-        >. Selon le WHATWG, un élément
-        <a href="/fr/docs/Web/HTML/Element/dl"><code>&#x3C;dl></code></a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
-      <td><a href="https://www.w3.org/TR/wai-aria-1.2/#generic">generic</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>
-        <a href="/fr/docs/Web/API/HTMLDivElement"
-          ><code>HTMLDivElement</code></a
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+En tant que conteneur «&nbsp;pur&nbsp;», l'élément `<div>` ne représente rien en soi. Il est plutôt utilisé pour regrouper le contenu afin qu'il puisse être facilement stylé à l'aide des attributs [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class) ou [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id), pour marquer une section d'un document comme étant écrite dans une langue différente (à l'aide de l'attribut [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang)), etc.
 
 ## Attributs
 
-Comme tous les autres éléments HTML, cet élément accepte [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 > [!NOTE]
-> L'attribut **`align`** est désormais obsolète et ne doit plus être appliqué pour un `<div>`. On privilégiera l'utilisation des propriétés et outils CSS (tels que [la grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout) ou [les boîtes flexibles (flexbox)](/fr/docs/Glossary/Flexbox)) pour aligner et positionner des éléments `<div>`.
+> L'attribut `align` est désormais obsolète et ne doit plus être appliqué pour un `<div>`. On privilégiera l'utilisation des propriétés et outils CSS (tels que [la grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout) ou [les boîtes flexibles (flexbox)](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox)) pour aligner et positionner des éléments `<div>`.
 
 ## Notes d'utilisation
 
-- L'élément `<div>` doit uniquement être utilisé lorsqu'il n'existe aucun autre élément dont la sémantique permet de représenter le contenu (par exemple [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article) ou [`<nav>`](/fr/docs/Web/HTML/Reference/Elements/nav)).
+- L'élément `<div>` doit uniquement être utilisé lorsqu'il n'existe aucun autre élément dont la sémantique permet de représenter le contenu (par exemple {{HTMLElement("article")}} ou {{HTMLElement("nav")}}).
+
+## Accessibilité
+
+L'élément `<div>` possède [un rôle ARIA implicite `generic` <sup>(angl.)</sup>](https://w3c.github.io/aria/#generic) (plutôt qu'aucun rôle). Cela peut avoir un impact sur certaines combinaisons de déclarations ARIA qui nécessitent un élément descendant direct avec un rôle donné pour fonctionner correctement.
 
 ## Exemples
 
@@ -143,11 +69,11 @@ Comme tous les autres éléments HTML, cet élément accepte [les attributs univ
 
 #### Résultat
 
-{{EmbedLiveSample("", "", 80)}}
+{{EmbedLiveSample("Un exemple simple", 650, 60)}}
 
 ### Un exemple mis en forme
 
-Cet exemple crée une boîte avec une ombre en appliquant la mise en forme via du CSS sur l'élément `<div>`. On notera l'utilisation de l'attribut [`class`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-class) sur l'élément `<div>` afin d'appliquer la règle `"shadowbox"`.
+Cet exemple crée une boîte avec une ombre en appliquant la mise en forme via du CSS sur l'élément `<div>`. On notera l'utilisation de l'attribut [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class) sur l'élément `<div>` afin d'appliquer la règle `"shadowbox"`.
 
 #### HTML
 
@@ -173,11 +99,75 @@ Cet exemple crée une boîte avec une ombre en appliquant la mise en forme via d
 
 #### Résultat
 
-{{EmbedLiveSample("", "", 150)}}
+{{EmbedLiveSample("Un exemple mis en forme", 650, 120)}}
 
-## Accessibilité
+## Résumé technique
 
-L'élément `<div>` possède un rôle ARIA implicite [`generic`](https://www.w3.org/TR/wai-aria-1.2/#generic) (plutôt qu'aucun rôle). Cela peut avoir un impact sur certaines combinaisons de déclarations ARIA qui nécessitent un élément descendant direct avec un rôle donné pour fonctionner correctement.
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
+          >Catégories de contenu</a
+        >
+      </th>
+      <td>
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
+          >Contenu de flux</a
+        >,
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_tangible"
+          >contenu tangible</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Contenu autorisé</th>
+      <td>
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
+          >Contenu de flux</a
+        >.<br />Ou (dans le {{Glossary("WHATWG")}} HTML)&nbsp;: Si l'élément parent est un élément {{HTMLElement("dl")}}&nbsp;: un ou plusieurs
+        éléments {{HTMLElement("dt")}} suivis d'un ou plusieurs
+        éléments {{HTMLElement("dd")}}, éventuellement mêlés à des
+        éléments {{HTMLElement("script")}} et
+        éléments {{HTMLElement("template")}}.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omission de balises</th>
+      <td>
+        Aucune, la balise d'ouverture et la balise de fermeture sont
+        obligatoires.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Parents autorisés</th>
+      <td>
+        Tout élément qui accepte un
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
+          >contenu de flux</a
+        >.<br />Ou (dans le {{Glossary("WHATWG")}} HTML)&nbsp;: un élément {{HTMLElement("dl")}}.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <code
+          ><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
+            >generic</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôles ARIA autorisés</th>
+      <td>Tous les rôles sont autorisés.</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface DOM</th>
+      <td>{{DOMxRef("HTMLDivElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Spécifications
 
@@ -189,5 +179,5 @@ L'élément `<div>` possède un rôle ARIA implicite [`generic`](https://www.w3.
 
 ## Voir aussi
 
-- Les éléments de sectionnement sémantique : [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section), [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article), [`<nav>`](/fr/docs/Web/HTML/Reference/Elements/nav), [`<header>`](/fr/docs/Web/HTML/Reference/Elements/header), [`<footer>`](/fr/docs/Web/HTML/Reference/Elements/footer)
-- L'élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) pour la mise en forme du contenu du phrasé
+- Les éléments de sectionnement sémantique&nbsp;: {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}
+- L'élément {{HTMLElement("span")}} pour la mise en forme du contenu du phrasé

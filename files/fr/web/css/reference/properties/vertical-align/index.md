@@ -299,7 +299,7 @@ td {
 
 ## Voir aussi
 
-- [Centrer des éléments avec Flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases#centrer_des_%c3%a9l%c3%a9ments)
+- [Centrer des éléments avec Flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases#centrer_des_éléments)
 - [`line-height`](/fr/docs/Web/CSS/Reference/Properties/line-height)
 - [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align)
 - [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin)

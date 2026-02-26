@@ -1,9 +1,8 @@
 ---
 title: prefers-reduced-data
 slug: Web/CSS/Reference/At-rules/@media/prefers-reduced-data
-original_slug: Web/CSS/@media/prefers-reduced-data
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
 ---
 
 {{SeeCompatTable}}

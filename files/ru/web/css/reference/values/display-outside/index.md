@@ -58,4 +58,4 @@ span {
 - {{CSSxRef("display")}}
 - {{CSSxRef("&lt;display-inside&gt;")}}
 - [Block and Inline layout in Normal Flow](/ru/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-- [Formatting Contexts explained](/ru/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
+- [Formatting Contexts explained](/ru/docs/Web/CSS/Guides/Display/Formatting_contexts)

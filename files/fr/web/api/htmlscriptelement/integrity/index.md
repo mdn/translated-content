@@ -3,7 +3,7 @@ title: "HTMLScriptElement : propriété integrity"
 short-title: integrity
 slug: Web/API/HTMLScriptElement/integrity
 l10n:
-  sourceCommit: 49d15be653576c5f73ec527ee976c5881171b53c
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
 {{APIRef("HTML DOM")}}
@@ -43,4 +43,4 @@ console.log(el.integrity); // Affiche : "sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K
 ## Voir aussi
 
 - La propriété {{DOMxRef("HTMLLinkElement.integrity")}}
-- [Intégrité des sous-ressources](/fr/docs/Web/Security/Subresource_Integrity)
+- [Intégrité des sous-ressources](/fr/docs/Web/Security/Defenses/Subresource_Integrity)

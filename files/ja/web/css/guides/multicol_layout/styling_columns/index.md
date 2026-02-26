@@ -1,9 +1,8 @@
 ---
 title: 段のスタイル設定
 slug: Web/CSS/Guides/Multicol_layout/Styling_columns
-original_slug: Web/CSS/CSS_multicol_layout/Styling_columns
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 段組みコンテナー内に作られた段ボックスは無名ボックスなので、それぞれの段に個別にスタイルを設定することはできませんが、段の間隔とコンテナーには一般的にスタイルが設定できます。このガイドは、段の間隔および段間罫をスタイル付けする方法を説明します。

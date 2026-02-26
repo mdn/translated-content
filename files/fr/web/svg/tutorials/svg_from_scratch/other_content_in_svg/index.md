@@ -6,7 +6,7 @@ original_slug: Web/SVG/Tutorial/Other_content_in_SVG
 
 {{SVGRef}}
 
-{{ PreviousNext("Web/SVG/Tutoriel/Découpages_et_masquages", "Web/SVG/Tutoriel/filtres") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Clipping_and_masking", "Web/SVG/Tutorials/SVG_from_scratch/Filter_effects") }}
 
 En plus des formes graphiques simples comme les rectangles et les cercles, le format SVG permet d'ajouter d'autres types de contenu aux images.
 
@@ -46,4 +46,4 @@ L'élément **`foreignObject`** est donc la bonne méthode pour embarquer du **X
 
 Etant donné que le `foreignObject` est un élément SVG comme un autre, vous pouvez, comme dans le case de l'élément `image`, utiliser toute la panoplie des attributs SVG qui pourrait s'appliquer au contenu embarqué.
 
-{{ PreviousNext("Web/SVG/Tutoriel/Découpages_et_masquages", "Web/SVG/Tutoriel/filtres") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Clipping_and_masking", "Web/SVG/Tutorials/SVG_from_scratch/Filter_effects") }}

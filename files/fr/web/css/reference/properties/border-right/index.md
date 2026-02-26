@@ -1,20 +1,13 @@
 ---
 title: border-right
 slug: Web/CSS/Reference/Properties/border-right
-original_slug: Web/CSS/border-right
+l10n:
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
-{{CSSRef}}
+La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-right`** permet de définir toutes les propriétés de la [bordure](/fr/docs/Web/CSS/Reference/Properties/border) droite d'un élément.
 
-La propriété **`border-right`** est une [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) qui permet de décrire la bordure droite d'un élément.
-
-Elle définit les valeurs des propriétés suivantes :
-
-- {{cssxref("border-right-width")}},
-- {{cssxref("border-right-style")}},
-- {{cssxref("border-right-color")}}.
-
-{{InteractiveExample("CSS Demo: border-right")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: border-right")}}
 
 ```css interactive-example-choice
 border-right: solid;
@@ -33,49 +26,34 @@ border-right: thick double #32a1ce;
 ```
 
 ```css interactive-example-choice
-border-right: 4mm ridge rgba(211, 220, 50, 0.6);
+border-right: 4mm ridge rgb(211 220 50 / 0.6);
 ```
 
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    Ceci est une boîte avec une bordure autour.
   </div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #8b008b;
+  background-color: #eeeeee;
+  color: darkmagenta;
   padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 ```
 
-Ces propriétés permettent de décrire la bordure du côté droit d'un élément.
+## Propriétés constitutives
 
-> [!NOTE]
-> Les trois valeurs de la propriété raccourcie peuvent être définies dans n'importe quel ordre et une ou deux d'entre elles peuvent être absentes.
->
-> Comme pour les autres propriétés raccourcies, `border-right` définit toujours les valeurs de toutes les propriétés qu'elle peut définir, même si celles-ci ne sont pas indiquées. Pour les valeurs qui ne sont pas indiquées, on prendra les valeurs par défaut. Ainsi :
->
-> ```css
-> border-right-style: dotted;
-> border-right: thick green;
-> ```
->
-> est équivalent à :
->
-> ```css
-> border-right-style: dotted;
-> border-right: none thick green;
-> ```
->
-> et la valeur {{cssxref("border-right-style")}} fournie avant `border-right` est ignorée.
->
-> La valeur par défaut de {{cssxref("border-right-style")}} étant `none`, si on ne définit pas le style de la bordure, on aura la valeur par défaut, c'est-à-dire qu'on aura aucune bordure.
+Cette propriété est une propriété raccourcie pour les propriétés CSS suivantes&nbsp;:
+
+- {{CSSxRef("border-right-color")}}
+- {{CSSxRef("border-right-style")}}
+- {{CSSxRef("border-right-width")}}
 
 ## Syntaxe
 
@@ -83,16 +61,41 @@ Ces propriétés permettent de décrire la bordure du côté droit d'un élémen
 border-right: 1px;
 border-right: 2px dotted;
 border-right: medium dashed green;
+
+/* Valeurs globales */
+border-right: inherit;
+border-right: initial;
+border-right: revert;
+border-right: revert-layer;
+border-right: unset;
 ```
 
 ### Valeurs
 
 - `<br-width>`
-  - : Voir {{cssxref("border-right-width")}}.
+  - : Voir {{CSSxRef("border-right-width")}}.
 - `<br-style>`
-  - : Voir {{cssxref("border-right-style")}}.
-- `<color>`
-  - : Voir {{cssxref("border-right-color")}}.
+  - : Voir {{CSSxRef("border-right-style")}}.
+- {{CSSxRef("&lt;color&gt;")}}
+  - : Voir {{CSSxRef("border-right-color")}}.
+
+## Description
+
+Comme pour toutes les propriétés raccourcies, `border-right` définit toujours les valeurs de toutes les propriétés qu'elle peut définir, même si elles ne sont pas définies. Celles qui ne sont pas définies prennent leur valeur par défaut. Considérez le code suivant&nbsp;:
+
+```css
+border-right-style: dotted;
+border-right: thick green;
+```
+
+Cela revient en fait au même que&nbsp;:
+
+```css
+border-right-style: dotted;
+border-right: none thick green;
+```
+
+La valeur de {{CSSxRef("border-right-style")}} fournie avant `border-right` est ignorée. Comme la valeur par défaut de {{CSSxRef("border-right-style")}} est `none`, si vous n'indiquez pas la partie `border-style`, il n'y aura pas de bordure.
 
 ## Définition formelle
 
@@ -104,26 +107,30 @@ border-right: medium dashed green;
 
 ## Exemples
 
-### CSS
+### Appliquer une bordure à droite
+
+#### HTML
+
+```html
+<div>Ceci est une boîte avec une bordure sur le côté droit.</div>
+```
+
+#### CSS
 
 ```css
-.exemple {
-  border-right: 3px dotted orange;
+div {
+  border-right: 4px dashed blue;
+  background-color: gold;
+  height: 100px;
+  width: 100px;
+  font-weight: bold;
+  text-align: center;
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<p class="exemple">
-  En passant elle prit sur un rayon un pot de confiture portant cette étiquette,
-  « MARMELADE D’ORANGES. »
-</p>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples","200","150")}}
+{{EmbedLiveSample("Appliquer une bordure à droite")}}
 
 ## Spécifications
 
@@ -132,3 +139,9 @@ border-right: medium dashed green;
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La propriété {{CSSxRef("border")}}
+- La propriété {{CSSxRef("border-block")}}
+- La propriété {{CSSxRef("outline")}}

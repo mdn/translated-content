@@ -1,9 +1,8 @@
 ---
 title: scroll-behavior
 slug: Web/CSS/Reference/Properties/scroll-behavior
-original_slug: Web/CSS/scroll-behavior
 l10n:
-  sourceCommit: 215e1b1590b1210152e3570627933c0303171e11
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`scroll-behavior`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ナビゲーションや CSSOM のスクローリング API によってスクロールするボックスにスクロールが発生した際の、そのスクロールの振る舞いを設定します。

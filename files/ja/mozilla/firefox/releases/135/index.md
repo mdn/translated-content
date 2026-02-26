@@ -28,7 +28,7 @@ l10n:
 
 ### セキュリティ
 
-- [証明書の透明性](/ja/docs/Web/Security/Certificate_Transparency) は、ブラウザーが証明書を信頼する前に、その証明書が公開されていることを保証するための標準仕様です。デスクトップ版の Firefox でこの機能をサポートしました (Android 版は未サポート)。
+- [証明書の透明性](/ja/docs/Web/Security/Defenses/Certificate_Transparency) は、ブラウザーが証明書を信頼する前に、その証明書が公開されていることを保証するための標準仕様です。デスクトップ版の Firefox でこの機能をサポートしました (Android 版は未サポート)。
   これは、Mozilla の ルート CA プログラムに含まれている認証局が発行した証明書を使用するサーバーにのみ影響があります ([Firefox bug 1938242](https://bugzil.la/1938242))。
 
 ### API

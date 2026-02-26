@@ -11,7 +11,7 @@ l10n:
 **`getInstalledRelatedApps()`** メソッドは、ユーザーがインストールしたプラットフォーム専用のアプリや[プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps)を表すオブジェクトの配列で解決するプロミスを返します。プラットフォーム専用のアプリや PWA がすでにインストールされている場合、ウェブアプリから「アプリをインストール」のバナーが除去されるなど、コンテンツの個人設定に使用することができます。
 
 > [!NOTE]
-> このメソッドは、最上位の[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)から呼び出す必要があります。つまり、{{htmlelement("iframe")}} に埋め込まれたところからは呼び出せません。
+> このメソッドは、最上位の[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)から呼び出す必要があります。つまり、{{htmlelement("iframe")}} に埋め込まれたところからは呼び出せません。
 
 ## 解説
 

@@ -1,9 +1,8 @@
 ---
 title: grid-template-areas
 slug: Web/CSS/Reference/Properties/grid-template-areas
-original_slug: Web/CSS/grid-template-areas
 l10n:
-  sourceCommit: fb409b8972e7c03d7eb284466433a28efb850ef5
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`grid-template-areas`** は [CSS](/ja/docs/Web/CSS) のプロパティで、グリッド内でセルを確立し、名前を割り当てることにより、名前付きの {{glossary("grid areas", "グリッド領域")}} を指定します。
@@ -54,19 +53,19 @@ grid-template-areas:
 }
 
 #example-element :nth-child(1) {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   grid-area: a;
 }
 
 #example-element :nth-child(2) {
-  background-color: rgba(255, 0, 200, 0.2);
+  background-color: rgb(255 0 200 / 0.2);
   border: 3px solid rebeccapurple;
   grid-area: b;
 }
 
 #example-element :nth-child(3) {
-  background-color: rgba(94, 255, 0, 0.2);
+  background-color: rgb(94 255 0 / 0.2);
   border: 3px solid green;
   grid-area: c;
 }
@@ -98,7 +97,7 @@ grid-template-areas: unset;
 
 - `none`
   - : グリッドコンテナーは名前付きのグリッド領域を定義しません。
-- `{{cssxref("&lt;string&gt;")}}+`
+- {{cssxref("&lt;string&gt;")}}
   - : リストのすべての文字列ごとに行が生成され、文字列内の各セルごとに列が生成されます。行の中や行をまたがって同じ名前のセルトークンが複数あると、対応するグリッドセルにまたがる単一の名前付きグリッド領域を生成します。これらのセルが長方形にならないと、宣言は無効になります。
 
     グリッド内のすべての無名の領域は、ヌルセルトークンを使用して参照することができます。ヌルセルトークンは、 1 つ以上の `.` (U+002E FULL STOP) 文字の並び、例えば、`.`、`...`、`.....` などです。ヌルセルトークンは、グリッド内に空欄を作成するために使用することができます。

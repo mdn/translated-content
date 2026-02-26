@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Loops
 original_slug: Learn/JavaScript/Building_blocks/Looping_code
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "conflicting/Learn_web_development/Core/Scripting")}}
 
 As linguagens de programação são muito úteis para concluir rapidamente tarefas repetitivas, desde vários cálculos básicos até praticamente qualquer outra situação em que você tenha muitos itens semelhantes para manipular. Aqui, veremos as estruturas de loop disponíveis no JavaScript que ajudam com essas necessidades..
 
@@ -881,4 +881,4 @@ If there is anything you didn't understand, feel free to read through the articl
 - [break](/pt-BR/docs/Web/JavaScript/Reference/Statements/break) and [continue](/pt-BR/docs/Web/JavaScript/Reference/Statements/continue) references
 - [What's the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — some advanced loop best practices
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "conflicting/Learn_web_development/Core/Scripting")}}

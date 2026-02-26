@@ -1,46 +1,55 @@
 ---
 title: Fetch API
 slug: Web/API/Fetch_API
+l10n:
+  sourceCommit: 8c1bc8d99fc8301fbbe874f6dcf8d41a9f4fe5fb
 ---
 
-{{DefaultAPISidebar("Fetch API")}}Fetch API 提供了一個能獲取包含跨網路資源在的資源介面。它有點像我們所熟悉的 {{domxref("XMLHttpRequest")}} ，但這個新的 API 提供了更強更彈性的功能。
+{{DefaultAPISidebar("Fetch API")}}
 
-## 概念與應用
+Fetch API 提供了一個獲取資源（包括跨網路）的介面。它是 {{DOMxRef("XMLHttpRequest")}} 的一個更強大且更有彈性的替代品。
 
-Fetch 提供了 {{domxref("Request")}} 與 {{domxref("Response")}} 物件，還有其他牽涉網路請求的通用定義。這能讓他們在需要的時候被使用到，不管是 service worker、Cache API、還是其他處理或更動請求回應的相類事物、或是任何需要產生有序化產生回應的用例（use case）。
+## 概念與用法
 
-它也提供了諸如 CORS 與 HTTP origin 標頭語意的分散定義，能取代分散的定義。
+Fetch API 使用 {{DOMxRef("Request")}} 和 {{DOMxRef("Response")}} 物件（以及其他涉及網路請求的事物），也使用相關的概念像是 CORS 和 HTTP Origin 標頭語意。
 
-要發動請求並取得資源的話，請使用 {{domxref("GlobalFetch.fetch")}} 方法。他實作了數種介面，並指定了 {{domxref("Window")}} 與 {{domxref("WorkerGlobalScope")}}，使它可以在任何想獲取資源的環境中使用。
+若要發出請求並獲取資源，請使用 {{domxref("Window/fetch", "fetch()")}} 方法。它在 {{DOMxRef("Window")}} 和 {{DOMxRef("WorkerGlobalScope", "Worker")}} 上下文中都是全域方法。這使得它幾乎在你可能想要獲取資源的任何上下文中皆可用。
 
-`fetch()` 方法有一個強制性的參數，就是要取得資源的網址。該方法會回傳一個不論請求成敗，都會 resolve 的 promise {{domxref("Response","回應")}}。你也能選擇性地使用第二個稱為 `init` 的物件參數（請參見 {{domxref("Request")}}）。
+`fetch()` 方法接受一個強制性的引數，也就是你想要獲取的資源路徑。它會回傳一個 {{JSxRef("Promise")}}，該 Promise 會解析為該請求的 {{DOMxRef("Response")}}——只要伺服器回應了標頭——**即使伺服器回應是 HTTP 錯誤狀態**。你也可以選擇性地傳入一個 `init` 選項物件作為第二個引數（參見 {{DOMxRef("Request")}}）。
 
-當 {{domxref("Response")}} 檢索後，在請求體裡面會定義一些請求體為何，還有要如何處理的方法（請參見 {{domxref("Body")}}）。
+一旦檢索到 {{DOMxRef("Response")}}，就有許多可用的方法來定義本體內容是什麼，以及應該如何處理它。
 
-你也可以直接用 {{domxref("Request.Request","Request()")}} 與 {{domxref("Response.Response","Response()")}} 建構子來建立請求與回應，不過你不太可能直接使用他，反而更可能是以其他 API 行動的結果為形式存在。（例如來自 service worker 的 {{domxref("FetchEvent.respondWith")}}）
+你可以直接使用 {{DOMxRef("Request.Request", "Request()")}} 和 {{DOMxRef("Response.Response", "Response()")}} 建構子來建立請求和回應，但通常不常這麼做。取而代之的是，這些更有可能作為其他 API 動作的結果而建立（例如來自 service workers 的 {{DOMxRef("FetchEvent.respondWith()")}}）。
 
-> [!NOTE]
-> 你可以在[使用 Fetch](/zh-TW/docs/Web/API/Fetch_API/Using_Fetch)深入理解 Fetch，並在[Fetch 的基本概念](/zh-TW/docs/Web/API/Fetch_API/Using_Fetch)文章內理解概念。
+在[使用 Fetch](/zh-TW/docs/Web/API/Fetch_API/Using_Fetch) 中可以找到更多關於使用 Fetch API 功能的資訊。
 
-### 中斷一次 Fetch
+### 延遲獲取
 
-各家瀏覽器已經開始加入 {{DOMxRef("AbortController")}} 與 {{DOMxRef("AbortSignal")}} 介面（也就是 Abort API）的實驗性支援，讓 Fetch 和 XHR 這類的操作在完成前可以被中斷。詳情請參閱相關介面的文件。
+{{domxref("Window/fetchLater", "fetchLater()")}} API 讓開發者可以請求*延遲獲取*，它可以在指定的時間段後發送，或是當頁面關閉或導航離開時發送。參見[使用延遲獲取](/zh-TW/docs/Web/API/Fetch_API/Using_Deferred_Fetch)。
 
-## Fetch 介面
+## 介面
 
-- {{DOMxRef("fetch()")}}
-  - : 用於取得資源的 `fetch()` 方法。
-- {{domxref("Headers")}}
-  - : 代表請求/回應標頭，讓你能 query 並針對結果不同，採取不同行動。
-- {{domxref("Request")}}
-  - : 代表資源請求。
-- {{domxref("Response")}}
-  - : 代表資源請求的回應。
+- {{domxref("Window.fetch()")}} 和 {{domxref("WorkerGlobalScope.fetch()")}}
+  - : 用於獲取資源的 `fetch()` 方法。
+- {{domxref("Window.fetchLater()")}}
+  - : 用於發出延遲獲取請求。
+- {{domxref("DeferredRequestInit")}}
+  - : 代表可用於組態延遲獲取請求的選項集合。
+- {{domxref("FetchLaterResult")}}
+  - : 代表請求延遲獲取的結果。
+- {{DOMxRef("Headers")}}
+  - : 代表回應／請求標頭，允許你查詢它們並根據結果採取不同的動作。
+- {{DOMxRef("Request")}}
+  - : 代表一個資源請求。
+- {{DOMxRef("Response")}}
+  - : 代表對請求的回應。
 
-## Fetch mixin
+## HTTP 標頭
 
-- {{domxref("Body")}}
-  - : 提供請求/回應訊息體的相關方法，能宣告內容的類別為何，以及該如何處理。
+- {{HTTPHeader("Permissions-Policy/deferred-fetch", "deferred-fetch")}}
+  - : 控制 `fetchLater()` API 的[頂層配額](/zh-TW/docs/Web/API/Fetch_API/Using_Deferred_Fetch#配額)。
+- {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}}
+  - : 控制 `fetchLater()` API 的[共享跨來源子框架配額](/zh-TW/docs/Web/API/Fetch_API/Using_Deferred_Fetch#配額)。
 
 ## 規範
 
@@ -53,8 +62,6 @@ Fetch 提供了 {{domxref("Request")}} 與 {{domxref("Response")}} 物件，還�
 ## 參見
 
 - [使用 Fetch](/zh-TW/docs/Web/API/Fetch_API/Using_Fetch)
-- [ServiceWorker API](/zh-TW/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/zh-TW/docs/Web/HTTP/Guides/CORS)
+- [Service Worker API](/zh-TW/docs/Web/API/Service_Worker_API)
+- [HTTP 存取控制（CORS）](/zh-TW/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-TW/docs/Web/HTTP)
-- [Fetch polyfill](https://github.com/JakeChampion/fetch)
-- [Fetch 基本概念](/zh-TW/docs/Web/API/Fetch_API/Using_Fetch)

@@ -7,7 +7,7 @@ original_slug: Web/HTTP/Public_Key_Pinning
 {{deprecated_header}}
 
 > [!NOTE]
-> Public Key Pinning の仕組みは [Certificate Transparency](/ja/docs/Web/Security/Certificate_Transparency) および {{HTTPHeader("Expect-CT")}} ヘッダーに置き換えられ、非推奨になりました。
+> Public Key Pinning の仕組みは [Certificate Transparency](/ja/docs/Web/Security/Defenses/Certificate_Transparency) および {{HTTPHeader("Expect-CT")}} ヘッダーに置き換えられ、非推奨になりました。
 
 **HTTP Public Key Pinning** ({{Glossary("HPKP")}}) は、ウェブクライアントに特定の公開鍵をあるウェブサーバーに関連付けさせることで、偽造された証明書による{{Glossary("MITM", "中間者攻撃")}}のリスクを減少させるためのセキュリティ機能でした。これは最近のブラウザーでは削除され、対応がなくなりました。
 

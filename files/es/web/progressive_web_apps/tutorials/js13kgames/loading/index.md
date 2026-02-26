@@ -3,7 +3,7 @@ title: Carga progresiva
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Loading
 ---
 
-{{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
+{{PreviousMenu("Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
 
 En artículos anteriores cubrimos las API que nos ayudan a convertir nuestro ejemplo de [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) en una aplicación web progresiva: [El servicio workers](/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers), [Manifiestos web](/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs), [Notificaciones y Push](/es/docs/Web/Progressive_web_apps/Re-engagementable_Notifications_Push). En este artículo iremos aún más allá y mejoraremos el rendimiento de la aplicación cargando progresivamente sus recursos.
 
@@ -155,6 +155,6 @@ Eso es todo por esta serie de tutoriales: revisamos el [código fuente de la apl
 
 No dudes en experimentar con el código, mejorar tu aplicación existente con funciones de PWA o crear algo completamente nuevo por tu cuenta. Las PWAs ofrecen una gran ventaja sobre las aplicaciones web habituales.
 
-{{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
+{{PreviousMenu("Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
 
 {{QuickLinksWithSubpages("/es/docs/Web/Progressive_web_apps/")}}

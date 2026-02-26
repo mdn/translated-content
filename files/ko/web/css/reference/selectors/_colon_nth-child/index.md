@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:nth-child
 original_slug: Web/CSS/:nth-child
 ---
 
-[CSS](/ko/docs/Web/CSS) **`:nth-child()`** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 형제 사이에서의 순서에 따라 요소를 선택합니다.
+[CSS](/ko/docs/Web/CSS) **`:nth-child()`** [의사 클래스](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes)는 형제 사이에서의 순서에 따라 요소를 선택합니다.
 
 ```css
 /* 목록의 두 번째 <li> 선택 */
@@ -62,9 +62,9 @@ li:nth-child(2) {
 - `:nth-child(-n+3)`
   - : 앞에서 세 개의 요소를 나타냅니다. \[=-0+3, -1+3, -2+3]
 - `p:nth-child(n)`
-  - : 형제 그룹 내의 모든 `<p>` 요소를 나타냅니다. 단순한 `p` 선택자와 동일하지만 더 높은 [명시도](/ko/docs/Web/CSS/CSS_cascade/Specificity)를 가집니다.
+  - : 형제 그룹 내의 모든 `<p>` 요소를 나타냅니다. 단순한 `p` 선택자와 동일하지만 더 높은 [명시도](/ko/docs/Web/CSS/Guides/Cascade/Specificity)를 가집니다.
 - `p:nth-child(1)` 또는 `p:nth-child(0n+1)`
-  - : 형제 그룹 내의 모든 첫 번째 `<p>` 요소를 나타냅니다. {{cssxref(":first-child")}} 선택자와 동일하며 같은 [명시도](/ko/docs/Web/CSS/CSS_cascade/Specificity)를 가집니다.
+  - : 형제 그룹 내의 모든 첫 번째 `<p>` 요소를 나타냅니다. {{cssxref(":first-child")}} 선택자와 동일하며 같은 [명시도](/ko/docs/Web/CSS/Guides/Cascade/Specificity)를 가집니다.
 - `p:nth-child(n+8):nth-child(-n+15)`
   - : 형제 그룹 내에서 8번째부터 15번째 까지의 `<p>` 요소를 나타냅니다.
 

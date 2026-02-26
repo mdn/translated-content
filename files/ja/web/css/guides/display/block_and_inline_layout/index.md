@@ -1,9 +1,9 @@
 ---
-title: 通常フローでのブロック及びインラインレイアウト
+title: 通常フローでのブロック・インラインレイアウト
+short-title: ブロック・インラインレイアウト
 slug: Web/CSS/Guides/Display/Block_and_inline_layout
-original_slug: Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow
 l10n:
-  sourceCommit: 6d55eec58e38583da60aa635d41393ad051d1c6d
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 このガイドでは、通常フローの中でブロック及びインライン要素がどのように動作するかの基本を見てみます。

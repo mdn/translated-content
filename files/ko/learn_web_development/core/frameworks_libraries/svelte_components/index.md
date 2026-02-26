@@ -7,7 +7,7 @@ l10n:
 ---
 
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility", "Learn_web_development/Core/Frameworks_libraries")}}
 
 지난 시간에 이어 할 일(to-do) 목록 앱을 개발합니다. 이번 시간의 핵심 목표는 앱을 관리 가능한 컴포넌트로 나누고 컴포넌트 간에 정보를 공유하는 방법을 배우는 것입니다. 우리는 앱을 구성한 다음 사용자가 기존 컴포넌트를 업데이트할 수 있도록 기능을 추가할 것입니다.
 
@@ -563,4 +563,4 @@ REPL에서 코드의 현재 상태를 보려면 다음에 방문하십시오.
 
 다음 시간에는 앱의 컴포넌트화를 계속 진행하고 DOM과 작업할 때 사용하는 몇 가지 고급 기술을 살펴보겠습니다.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility", "Learn_web_development/Core/Frameworks_libraries")}}

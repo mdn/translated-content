@@ -1,9 +1,8 @@
 ---
 title: grid-row-start
 slug: Web/CSS/Reference/Properties/grid-row-start
-original_slug: Web/CSS/grid-row-start
 l10n:
-  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`grid-row-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、グリッド行の中におけるグリッドアイテムの先頭の位置を指定します。グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}のインライン方向の先頭の端を指定します。
@@ -47,12 +46,12 @@ grid-row-start: span 2;
 }
 
 .example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 
 #example-element {
-  background-color: rgba(255, 0, 200, 0.2);
+  background-color: rgb(255 0 200 / 0.2);
   border: 3px solid rebeccapurple;
 }
 ```
@@ -113,11 +112,11 @@ grid-row-start: unset;
 - `span && [ <integer> || <custom-ident> ]`
   - : グリッドアイテムのグリッド領域の行の先頭の端が終了の端から n 本になるように、グリッドアイテムの配置にグリッドスパンを設定します。
 
-    名前が `<custom-ident>` として与えられた場合、その名前の付いた線のみがカウントされます。その名前を持つ線の数が十分おにない場合は、検索方向に対応する明示的グリッドの側にあるすべての暗黙的グリッド線が、この区間をカウントする目的でその名前を持つと仮定されます。
+    名前が `<custom-ident>` として与えられた場合、その名前の付いた線のみがカウントされます。その名前を持つ線の数が十分にない場合は、検索方向に対応する明示的グリッドの側にあるすべての暗黙的グリッド線が、この区間をカウントする目的でその名前を持つと仮定されます。
 
     \<integer> が省略された場合の既定値は `1` です。負の数や `0` は無効です。
 
-    `<custom-ident>` は `span` の値を取ることができません。
+    `<custom-ident>` は `span` および `auto` の値を取ることができません。
 
 ## 公式定義
 

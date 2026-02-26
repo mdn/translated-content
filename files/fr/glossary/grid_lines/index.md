@@ -2,7 +2,7 @@
 title: Lignes de grille (grid lines)
 slug: Glossary/Grid_Lines
 l10n:
-  sourceCommit: 13839b2979cc244034ffb1fe243240778b0cd23f
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Les **lignes de grille** sont créées chaque fois que vous utilisez une [grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout).

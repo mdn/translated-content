@@ -1,9 +1,8 @@
 ---
 title: white-space
 slug: Web/CSS/Reference/Properties/white-space
-original_slug: Web/CSS/white-space
 l10n:
-  sourceCommit: 82877d5cf5a35e0a4d02b7c54aea0ce7d771d5cb
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`white-space`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素内の{{Glossary("whitespace", "ホワイトスペース")}}をどのように扱うかを設定します。
@@ -38,6 +37,8 @@ white-space: collapse;
 white-space: preserve nowrap;
 ```
 
+<!-- cSpell:ignore stept -->
+
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div id="example-element">
@@ -64,25 +65,36 @@ white-space: preserve nowrap;
 
 このプロパティは 2 つのことを指定します。
 
-- ホワイトスペースを[統合する](#ホワイトスペースの統合)かどうか、およびその方法。
+- ホワイトスペースを[統合する](/ja/docs/Web/CSS/Guides/Text/Whitespace#統合と変換)かどうか、およびその方法。
 - 行を自動折り返しの場面で折り返すことができるかどうか。
 
 > [!NOTE]
 > 要素の内部で折り返しを行うには、代わりに {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, {{CSSxRef("hyphens")}} を使用してください。
+
+## 構成要素のプロパティ
+
+このプロパティは、以下の CSS プロパティの一括指定です。
+
+- {{cssxref("white-space-collapse")}}
+- {{cssxref("text-wrap-mode")}}
+
+> [!NOTE]
+> 仕様書は 3 つ目（すなわち `white-space-trim`）の構成要素を定義していますが、これは今のところどのブラウザーでも実装されていません。
 
 ## 構文
 
 ```css
 /* キーワード値 */
 white-space: normal;
-white-space: nowrap;
 white-space: pre;
 white-space: pre-wrap;
 white-space: pre-line;
-white-space: break-spaces;
 
-/* white-space-collapse および text-wrap の一括指定値 */
-white-space: collapse balance;
+/* white-space-collapse および text-wrap-mode の一括指定値 */
+white-space: nowrap;
+white-space: wrap;
+white-space: break-spaces;
+white-space: collapse;
 white-space: preserve nowrap;
 
 /* グローバル値 */
@@ -98,22 +110,18 @@ white-space: unset;
 `white-space` プロパティの値は、以下の値のリストから選択した単一のキーワード、または {{CSSxRef("white-space-collapse")}} および {{cssxref("text-wrap")}} プロパティの一括指定を表す 2 つの値として指定できます。
 
 - `normal`
-  - : 連続するホワイトスペースを[統合し](#ホワイトスペースの統合)ます。ソース内の改行文字もホワイトスペースとして扱われます。行ボックスを埋めるために、必要なら行を折り返します。
-- `nowrap`
-  - : `normal` と同様にホワイトスペースを[統合し](#ホワイトスペースの統合)ますが、行の折り返しは行いません。
+  - : 連続するホワイトスペースを[統合します](/ja/docs/Web/CSS/Guides/Text/Whitespace#統合と変換)。ソース内の改行文字もホワイトスペースとして扱われます。行ボックスを埋めるために、必要なら行を折り返します。行は必要に応じて折り返され、行ボックスを埋めます。`collapse wrap` と同等です。
 - `pre`
-  - : 連続するホワイトスペースはそのまま残され、行の折り返しは、ソース内の改行文字と、 {{HTMLElement("br")}} 要素でのみ行います。
+  - : 連続するホワイトスペースはそのまま残され、行の折り返しは、ソース内の改行文字と、 {{HTMLElement("br")}} 要素でのみ行います。`preserve nowrap` と同等です。
 - `pre-wrap`
-  - : 連続するホワイトスペースはそのまま残されます。行の折り返しは、改行文字や {{HTMLElement("br")}} 要素のあるときか、行ボックスを埋めるのに必要なときに行います。
+  - : 連続するホワイトスペースはそのまま残されます。行の折り返しは、改行文字や {{HTMLElement("br")}} 要素のあるときか、行ボックスを埋めるのに必要なときに行います。`preserve wrap` と同等です。
 - `pre-line`
-  - : 連続するホワイトスペースは[統合して](#ホワイトスペースの統合) 1 つになります。行の折り返しは、改行文字や {{HTMLElement("br")}} 要素のあるときか、行ボックスを埋めるのに必要なときに行われます。
-- `break-spaces`
-  - : 下記の点を除いて、動作は `pre-wrap` と同じです。
-    - そのまま残された連続するホワイトスペースは、行末にあるものを含め、空間を占有します。
-    - 残されたそれぞれのホワイトスペースの後で、ホワイトスペースの間を含め、改行する可能性があります。
-    - そのような残された空白は空間を占有し、ぶら下がらず、ボックスの内在の寸法 ({{cssxref("min-content")}} および {{cssxref("max-content")}} の大きさ) に影響します。
+  - : 連続するホワイトスペースは[統合して](/ja/docs/Web/CSS/Guides/Text/Whitespace#統合と変換) 1 つにします。行の折り返しは、改行文字や {{HTMLElement("br")}} 要素のあるときか、行ボックスを埋めるのに必要なときに行われます。
 
-次の表、様座な `white-space` キーワード値の動作を統合します。
+> [!NOTE]
+> `white-space` プロパティを一括指定プロパティとして使用するのは、比較的新しい機能です（[ブラウザーの互換性](#ブラウザーの互換性)を参照）。元々、6 つのキーワード値を持っていましたが、`nowrap` の値は {{cssxref("text-wrap-mode")}} の値として解釈され、`break-spaces` の値は {{cssxref("white-space-collapse")}} の値として解釈されるようになりました。上記の 4 つのキーワードは今でも `white-space` に固有のものです が、これらは個別指定の同等表現を持っています。`white-space` を一括指定にする変更により、受け入れられる値がさらに多くのキーワードや組み合わせ（`wrap` や `collapse` など）に拡張されます。
+
+次の表は、これら 4 つの `white-space` キーワードの値の挙動をまとめたものです。
 
 <table class="standard-table">
   <thead>
@@ -132,14 +140,6 @@ white-space: unset;
       <td>統合する</td>
       <td>統合する</td>
       <td>折り返す</td>
-      <td>除去する</td>
-      <td>ぶら下げる</td>
-    </tr>
-    <tr>
-      <th><code>nowrap</code></th>
-      <td>統合する</td>
-      <td>統合する</td>
-      <td>折り返さない</td>
       <td>除去する</td>
       <td>ぶら下げる</td>
     </tr>
@@ -167,18 +167,10 @@ white-space: unset;
       <td>除去する</td>
       <td>ぶら下げる</td>
     </tr>
-    <tr>
-      <th><code>break-spaces</code></th>
-      <td>そのまま</td>
-      <td>そのまま</td>
-      <td>折り返す</td>
-      <td>折り返す</td>
-      <td>折り返す</td>
-    </tr>
   </tbody>
 </table>
 
-タブの既定値は 8 文字で、 [`tab-size`](/ja/docs/Web/CSS/Reference/Properties/tab-size) プロパティを使用して設定できます。`normal`、`nowrap`、`pre-line` の値の場合、すべてのタブは空白文字 (U+0020) 文字に変換されます。
+タブの既定値は 8 文字で、{{cssxref("tab-size")}} プロパティを使用して設定できます。`normal`、`nowrap`、`pre-line` の値の場合、すべてのタブは空白文字 (U+0020) 文字に変換されます。
 
 > [!NOTE]
 > **空白**と**その他の空白区切り**には違いがあります。以下のように定義されています。
@@ -189,10 +181,6 @@ white-space: unset;
 >   - : Unicode で定義されているその他の区切り文字で、空白として定義されているもの以外。
 >
 > ホワイトスペースが*ぶら下げる*とある場合、内在サイズを計算するときにボックスの大きさに影響することがあります。
-
-## ホワイトスペースの統合
-
-{{cssxref("white-space-collapse")}} プロパティのページにおいて、[ブラウザーのホワイトスペースの統合アリゴリズム](/ja/docs/Web/CSS/Reference/Properties/white-space-collapse#ホワイトスペースの統合)を説明しています。
 
 ## 公式定義
 
@@ -254,7 +242,7 @@ pre {
 }
 
 #css-code {
-  background-color: rgb(220 220 220);
+  background-color: gainsboro;
   font-size: 16px;
   font-family: monospace;
 }
@@ -288,16 +276,18 @@ select.addEventListener("change", (e) => {
 
 ```html
 <table>
-  <tr>
-    <td></td>
-    <td>Very long content that splits</td>
-    <td class="nw">Very long content that don't split</td>
-  </tr>
-  <tr>
-    <td class="nw">white-space:</td>
-    <td>normal</td>
-    <td>nowrap</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td></td>
+      <td>分割されるとても長いコンテンツ</td>
+      <td class="nw">分割されないとても長いコンテンツ</td>
+    </tr>
+    <tr>
+      <td class="nw">white-space:</td>
+      <td>normal</td>
+      <td>nowrap</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -365,4 +355,5 @@ text {
 ## 関連情報
 
 - 内部での折り返しを定義するプロパティ: {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, {{CSSxRef("hyphens")}}
-- [`tab-size`](/ja/docs/Web/CSS/Reference/Properties/tab-size)
+- {{cssxref("tab-size")}}
+- [CSS でのホワイトスペースの扱い](/ja/docs/Web/CSS/Guides/Text/Whitespace)

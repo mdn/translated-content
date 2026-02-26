@@ -1,15 +1,15 @@
 ---
 title: WebDAV
 slug: Glossary/WebDAV
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+**<abbr>WebDAV</abbr>** (pour <i lang="en">Web Distributed Authoring and Versioning</i> en anglais) est une extension {{Glossary("HTTP")}} qui permet aux développeur·euse·s des mises à jour de contenu à distance depuis un client.
 
-**WebDAV** (_Web Distributed Authoring and Versioning_) est une extension {{Glossary("HTTP")}} qui permet aux développeurs web de faire des mises à jour de contenu à distance depuis un client.
+WebDav est rarement utilisé seul, mais deux extensions sont très répandues&nbsp;: {{Glossary("CalDAV")}} (accès distant aux données d'agenda) et {{Glossary("CardDAV")}} (accès distant au carnet d'adresses).
 
-WebDav est rarement utilisé seul, mais deux extensions sont très répandues : {{Glossary("CalDAV")}} (accès distant aux données d'agenda) et {{Glossary("CardDAV")}} (accès distant au carnet d'adresses).
-
-WebDAV donne aux clients les possibilités suivantes
+WebDAV donne aux clients les possibilités suivantes&nbsp;:
 
 - ajout, suppression et récupération des métadonnées de pages web (e.g. auteur ou date de création)
 - création de liens dans des pages de tout type de média vers des pages qui y sont associées
@@ -19,12 +19,9 @@ WebDAV donne aux clients les possibilités suivantes
 
 ## Voir aussi
 
-### Culture générale
-
 - [WebDAV](https://en.wikipedia.org/wiki/WebDAV) sur Wikipédia
-
-### Référence technique
-
-- {{rfc(2518)}}
-- {{rfc(3253)}}
-- {{rfc(3744)}}
+- Spécifications&nbsp;:
+  - {{RFC(2518)}}
+  - {{RFC(3253)}}
+  - {{RFC(3744)}}
+  - {{RFC(4918)}} (rend obsolètes le RFC 2518)

@@ -3,7 +3,7 @@ title: "AnimationEvent: pseudoElement プロパティ"
 short-title: pseudoElement
 slug: Web/API/AnimationEvent/pseudoElement
 l10n:
-  sourceCommit: 26a4b252b196202c9923eeb11cca0cad2663005d
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{APIRef("Web Animations")}}

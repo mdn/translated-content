@@ -49,7 +49,7 @@ var life1 = "foo";
 var foo = life1;
 ```
 
-## 関連項目
+## 関連情報
 
 - [字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar)
 - [JavaScript ガイド](/ja/docs/Web/JavaScript/Guide)の[変数](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#variables)

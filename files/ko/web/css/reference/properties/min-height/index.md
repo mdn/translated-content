@@ -72,7 +72,7 @@ min-height: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : 고정 길이로 나타낸 최대 높이. 음수 값은 유효하지 않습니다.
 - {{cssxref("&lt;percentage&gt;")}}
-  - [: 컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block) 높이에 대한 백분율로 나타낸 최대 높이. 음수 값은 유효하지 않습니다.
+  - [: 컨테이닝 블록](/ko/docs/Web/CSS/Guides/Display/Containing_block) 높이에 대한 백분율로 나타낸 최대 높이. 음수 값은 유효하지 않습니다.
 
 #### 키워드 값
 
@@ -115,5 +115,5 @@ form {
 
 ## 같이 보기
 
-- [박스 모델 입문](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
+- [박스 모델 입문](/ko/docs/Web/CSS/Guides/Box_model/Introduction), {{cssxref("box-sizing")}}
 - {{ Cssxref("height") }}, {{ Cssxref("max-height") }}

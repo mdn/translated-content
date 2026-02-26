@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:active
 original_slug: Web/CSS/:active
 ---
 
-**`:active`** [CSS](/ko/docs/Web/API/CSS) [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 사용자가 활성화한 요소(버튼 등)를 나타냅니다. 마우스를 사용하는 경우, "활성"이란 보통 마우스 버튼을 누르는 순간부터 떼는 시점까지를 의미합니다.
+**`:active`** [CSS](/ko/docs/Web/API/CSS) [의사 클래스](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes)는 사용자가 활성화한 요소(버튼 등)를 나타냅니다. 마우스를 사용하는 경우, "활성"이란 보통 마우스 버튼을 누르는 순간부터 떼는 시점까지를 의미합니다.
 
 ```css
 /* 활성화된 모든 <a> 태그를 선택 */

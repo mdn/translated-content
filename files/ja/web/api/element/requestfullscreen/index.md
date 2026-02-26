@@ -55,7 +55,7 @@ _`requestFullscreen()` プロシージャは、従来の例外を発生させる
 
 ## セキュリティ
 
-[ユーザーによる一時的な有効化](/ja/docs/Web/Security/User_activation)が必要です。この機能が動作するためには、ユーザーがページまたは UI 要素と対話する必要があります。
+[ユーザーによる一時的な有効化](/ja/docs/Web/Security/Defenses/User_activation)が必要です。この機能が動作するためには、ユーザーがページまたは UI 要素と対話する必要があります。
 
 ## 使用上のメモ
 

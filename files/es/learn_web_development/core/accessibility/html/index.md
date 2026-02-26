@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Accessibility/HTML
 original_slug: Learn/Accessibility/HTML
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_accessibility","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}
 
 Se puede hacer accesible una gran cantidad de contenido web solo asegurándose de que se utilizan los elementos HTML con el propósito correcto todo el tiempo. Este artículo muestra en detalle como HTML puede ser usado para asegurar máxima accesibilidad.
 
@@ -623,4 +623,4 @@ Ha llegado al final de este artículo, pero ¿recuerdas la información más imp
 
 Ahora ya deberías conocer bien la escritura de HTML accesible para la mayoría de las ocasiones. Nuestro artículo de conceptos básicos de WAI-ARIA también llenará algunos vacíos en este conocimiento, pero este artículo se ha ocupado de los conceptos básicos. A continuación, exploraremos CSS y JavaScript, y cómo la accesibilidad se ve afectada por su buen o mal uso.
 
-{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_accessibility","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}

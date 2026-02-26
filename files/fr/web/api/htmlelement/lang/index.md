@@ -1,41 +1,37 @@
 ---
-title: element.lang
+title: "HTMLElement : propriété lang"
+short-title: lang
 slug: Web/API/HTMLElement/lang
+l10n:
+  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
 ---
 
-{{ ApiRef() }}
+{{APIRef("HTML DOM")}}
 
-## Résumé
+La propriété **`lang`** de l'interface {{DOMxRef("HTMLElement")}} indique la langue de base des valeurs d'attribut et du contenu textuel d'un élément, sous la forme d'une {{Glossary("BCP 47 language tag", "étiquette de langue BCP 47")}}. Elle reflète l'attribut [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang) de l'élément&nbsp;; l'attribut `xml:lang` n'a aucun effet sur cette propriété.
 
-Cette propriété permet d'obtenir ou de définir la langue de base des valeurs d'attribut et du contenu textuel d'un élément.
+Notez que si l'attribut `lang` n'est pas précisé, l'élément peut tout de même hériter de la langue de son parent. Cependant, cette langue héritée n'est pas reflétée par la valeur de cette propriété.
 
-## Syntaxe et valeurs
+## Valeur
 
-```js
-var langueUtilisee = référenceElement.lang; // Récupérer la valeur de lang
-référenceElement.lang = NouvelleLangue; // Définir la valeur de lang
-```
+Une chaîne de caractères. Les exemples courants sont «&nbsp;en&nbsp;» pour anglais, «&nbsp;ja&nbsp;» pour japonais, «&nbsp;es&nbsp;» pour espagnol, etc. Si non précisé, la valeur est une chaîne vide.
 
-_langueUtilisee_ est une variable chaîne de caracteres recevant la langue dans laquelle le texte de l'élément courant est écrit. _NouvelleLangue_ est une variable chaîne de caractères dont la valeur définit la langue dans laquelle le texte de l'élément courant est écrit.
-
-## Exemple
+## Exemples
 
 ```js
 // ce bout de code compare la langue de base et
 // redirige vers une autre URL suivant la langue
 if (document.documentElement.lang === "en") {
-  window.location.href = "un_document.html.en";
+  window.location.href = "Some_document.html.en";
 } else if (document.documentElement.lang === "ru") {
-  window.location.href = "un_document.html.ru";
+  window.location.href = "Some_document.html.ru";
 }
 ```
-
-## Notes
-
-Les codes de langues renvoyés par cette propriété sont définis dans la [RFC 1766](https://tools.ietf.org/html/rfc1766). Par exemple, «&nbsp;en&nbsp;» pour anglais, «&nbsp;ja&nbsp;» pour japonais, «&nbsp;es&nbsp;» pour espagnol, «&nbsp;fr&nbsp;» pour français, etc. La valeur par défaut de cet attribut est `unknown` (inconnue). Notez que cet attribut, bien que valide au niveau de chaque élément individuel, et le plus souvent spécifié pour le nœud racine du document.
-
-Ne marche qu'avec l'attribut `lang`, et non avec `xml:lang`.
 
 ## Spécifications
 
 {{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}

@@ -1,35 +1,29 @@
 ---
 title: inherits
 slug: Web/CSS/Reference/At-rules/@property/inherits
-original_slug: Web/CSS/@property/inherits
 l10n:
-  sourceCommit: 3b39e41fb9393a13b16aaf58ba25174a62205041
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`inherits`** は [CSS](/ja/docs/Web/CSS) の記述子で、 {{cssxref("@property")}} [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)を使用するときには必要であり、 `@property` で指定されたカスタムプロパティの登録を既定で継承するかどうかを制御します。
+**`inherits`** は [CSS](/ja/docs/Web/CSS) における {{cssxref("@property")}} [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)の記述子で、登録された [CSS カスタムプロパティ](/ja/docs/Web/CSS/Reference/Properties/--*)がデフォルトで継承するかどうかを制御します。
+これは必須の記述子です。なかったり無効であったりした場合、 `@property` ルール全体が無効となり無視されます。
 
 ## 構文
 
 ```css
-@property --property-name {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #c0ffee;
-}
+/* カスタムプロパティが値を継承しない */
+inherits: false;
 
-@property --property-name {
-  syntax: "<color>";
-  inherits: true;
-  initial-value: #c0ffee;
-}
+/* カスタムプロパティが値を継承する */
+inherits: true;
 ```
 
 ## 値
 
 - `true`
-  - : このプロパティは既定で継承されます。
+  - : このプロパティはデフォルトで継承されます。
 - `false`
-  - : このプロパティは既定で継承されません。
+  - : このプロパティはデフォルトで継承されません。
 
 ## 公式定義
 
@@ -41,9 +35,9 @@ l10n:
 
 ## 例
 
-`--my-color` {{cssxref('--*', 'カスタムプロパティ')}}に色としての型チェックと、既定値、そして値が継承されないことを追加します。
+### カスタムプロパティの継承動作の設定
 
-[CSS](/ja/docs/Web/CSS) の {{cssxref('@property')}} [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)を使用すると次のようになります。
+この例は、親要素から値を継承しないカスタムプロパティ `--my-color` を定義する方法を示しています。
 
 ```css
 @property --my-color {
@@ -74,6 +68,7 @@ window.CSS.registerProperty({
 
 ## 関連情報
 
+- 他の {{cssxref("@property")}} 記述子: {{cssxref("@property/initial-value", "initial-value")}} および {{cssxref("@property/syntax","syntax")}}
 - [CSS プロパティと値 API](/ja/docs/Web/API/CSS_Properties_and_Values_API)
 - [CSS 描画 API](/ja/docs/Web/API/CSS_Painting_API)
 - [CSS 型付きオブジェクトモデル](/ja/docs/Web/API/CSS_Typed_OM_API)

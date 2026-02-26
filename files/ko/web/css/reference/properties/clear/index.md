@@ -63,14 +63,14 @@ clear: both;
 }
 ```
 
-비부동 블록에 적용되는 경우, 모든 관련 부동체(floats)의 [마진 경계](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) 아래로까지 요소의 [보더 경계](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)를 아래로 내립니다. 이 움직임(이 일어나는 경우)은 [마진 상쇄](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)가 일어나지 않도록 합니다.
+비부동 블록에 적용되는 경우, 모든 관련 부동체(floats)의 [마진 경계](/ko/docs/Web/CSS/Guides/Box_model/Introduction) 아래로까지 요소의 [보더 경계](/ko/docs/Web/CSS/Guides/Box_model/Introduction)를 아래로 내립니다. 이 움직임(이 일어나는 경우)은 [마진 상쇄](/ko/docs/Web/CSS/Guides/Box_model/Margin_collapsing)가 일어나지 않도록 합니다.
 
-부동 요소에 적용되는 경우, 모든 관련 부동체의 [마진 경계](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) 아래로 요소의 [마진 경계](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)를 옮깁니다. 이는 나중(later) 부동체의 위치에 영향을 줍니다, 나중 부동체가 앞선(earlier) 부동체보다 높게 위치될 수 없기에.
+부동 요소에 적용되는 경우, 모든 관련 부동체의 [마진 경계](/ko/docs/Web/CSS/Guides/Box_model/Introduction) 아래로 요소의 [마진 경계](/ko/docs/Web/CSS/Guides/Box_model/Introduction)를 옮깁니다. 이는 나중(later) 부동체의 위치에 영향을 줍니다, 나중 부동체가 앞선(earlier) 부동체보다 높게 위치될 수 없기에.
 
 해제(cleared)와 관련된 부동체는 같은 [블록 형성 문맥](/ko/docs/Web/CSS/CSS_display/Block_formatting_context) 내 앞선 부동체입니다.
 
 > [!NOTE]
-> 요소가 그 안에 모든 부동 요소를 포함하고 싶은 경우, 컨테이너도 부동하거나 컨테이너의 {{cssxref("::after")}} 대체 [가상 요소](/ko/docs/Web/CSS/Pseudo-elements)에 `clear`를 쓸 수 있습니다.
+> 요소가 그 안에 모든 부동 요소를 포함하고 싶은 경우, 컨테이너도 부동하거나 컨테이너의 {{cssxref("::after")}} 대체 [가상 요소](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-elements)에 `clear`를 쓸 수 있습니다.
 >
 > ```css
 > #container::after {
@@ -270,4 +270,4 @@ p {
 
 ## See also
 
-- [CSS basic box model](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [CSS basic box model](/ko/docs/Web/CSS/Guides/Box_model/Introduction)

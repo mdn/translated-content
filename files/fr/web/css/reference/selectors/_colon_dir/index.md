@@ -1,9 +1,8 @@
 ---
 title: :dir()
 slug: Web/CSS/Reference/Selectors/:dir
-original_slug: Web/CSS/:dir
 l10n:
-  sourceCommit: 06bb246b52a759cc0b70c0bc2f72531afa7f8c6a
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:dir()`** permet de cibler un élément selon la direction du texte qu'il contient.
@@ -81,6 +80,6 @@ La pseudo-classe `:dir()` nécessite un paramètre qui indique la direction du t
 
 ## Voir aussi
 
-- La pseudo-classe relative à la langue&nbsp;: [`:lang`](/fr/docs/Web/CSS/Reference/Selectors/:lang)
+- La pseudo-classe relative à la langue&nbsp;: {{CSSxRef(":lang")}}
 - L'attribut HTML [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes#lang)
 - L'attribut HTML [`translate`](/fr/docs/Web/HTML/Reference/Global_attributes#translate)

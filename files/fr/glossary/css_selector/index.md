@@ -2,7 +2,7 @@
 title: Sélecteur (CSS)
 slug: Glossary/CSS_Selector
 l10n:
-  sourceCommit: 7615562a3689a3e23a2b6b623597f4391740a53e
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
 Un **sélecteur CSS** est la partie de la règle CSS qui désigne les éléments d'un document ciblés par cette règle. Les éléments correspondants se verront appliquer la mise en forme indiquée par la règle.
@@ -53,7 +53,7 @@ Nous pouvons ensuite appliquer ce CSS à du HTML, comme&nbsp;:
 </div>
 ```
 
-Le contenu de la page résultant ressemble à ceci:
+Le contenu de la page résultant ressemble à ceci&nbsp;:
 
 {{EmbedLiveSample("Exemple", 640, 240)}}
 

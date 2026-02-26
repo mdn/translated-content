@@ -3,7 +3,7 @@ title: border-color
 slug: Web/CSS/border-color
 ---
 
-{{ PreviousNext("CSS:border", "CSS:border-style") }}
+{{ PreviousNext("Web/CSS/border", "Web/CSS/border-style") }}
 
 ### Resumen
 

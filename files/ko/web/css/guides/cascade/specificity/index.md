@@ -17,11 +17,11 @@ original_slug: Web/CSS/CSS_cascade/Specificity
 
 아래 선택자는 유형별로 명시도를 증가시킵니다.
 
-1. [유형 선택자](/ko/docs/Web/CSS/Type_selectors)(`h1` 등) 및 의사 요소(`:before` 등).
-2. [클래스 선택자](/ko/docs/Web/CSS/Class_selectors)(`.example` 등), 속성 선택자(`[type="radio"]` 등), 의사 클래스(`:hover` 등).
-3. [ID 선택자](/ko/docs/Web/CSS/ID_selectors)(`#example` 등).
+1. [유형 선택자](/ko/docs/Web/CSS/Reference/Selectors/Type_selectors)(`h1` 등) 및 의사 요소(`:before` 등).
+2. [클래스 선택자](/ko/docs/Web/CSS/Reference/Selectors/Class_selectors)(`.example` 등), 속성 선택자(`[type="radio"]` 등), 의사 클래스(`:hover` 등).
+3. [ID 선택자](/ko/docs/Web/CSS/Reference/Selectors/ID_selectors)(`#example` 등).
 
-전역 선택자({{cssxref("Universal_selectors", "*")}}), 조합자({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/ko/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}) 및 부정 의사 클래스(`:not()`)는 명시도에 영향을 주지 않습니다. (`:not()` _내부에_ 선언한 선택자는 영향을 끼칩니다)
+전역 선택자({{cssxref("Universal_selectors", "*")}}), 조합자({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/ko/docs/Web/CSS/Reference/Selectors/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}) 및 부정 의사 클래스(`:not()`)는 명시도에 영향을 주지 않습니다. (`:not()` _내부에_ 선언한 선택자는 영향을 끼칩니다)
 
 <https://specifishity.com>에서 자세한 정보를 확인할 수 있습니다.
 
@@ -328,23 +328,23 @@ h1 {
 - 명시도 계산기: CSS 규칙을 테스트하고 이해할 수 있는 대화형 웹사이트 - <https://specificity.keegan.st/>
 - CSS3 선택자 명시도 - <http://www.w3.org/TR/selectors/#specificity>
 - CSS 주요 개념
-  - [CSS 문법](/ko/docs/Web/CSS/CSS_syntax/Syntax)
-  - [@규칙](/ko/docs/Web/CSS/CSS_syntax/At-rule)
-  - [주석](/ko/docs/Web/CSS/CSS_syntax/Comments)
-  - [명시도](/ko/docs/Web/CSS/CSS_cascade/Specificity)
-  - [상속](/ko/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [박스 모델](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+  - [CSS 문법](/ko/docs/Web/CSS/Guides/Syntax/Introduction)
+  - [@규칙](/ko/docs/Web/CSS/Guides/Syntax/At-rules)
+  - [주석](/ko/docs/Web/CSS/Guides/Syntax/Comments)
+  - [명시도](/ko/docs/Web/CSS/Guides/Cascade/Specificity)
+  - [상속](/ko/docs/Web/CSS/Guides/Cascade/Inheritance)
+  - [박스 모델](/ko/docs/Web/CSS/Guides/Box_model/Introduction)
   - [레이아웃 모드](/ko/docs/Glossary/Layout_mode)
   - [시각적 서식 모델](/ko/docs/Web/CSS/Visual_formatting_model)
-  - [마진 중첩](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [마진 중첩](/ko/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - 값
-    - [초깃값](/ko/docs/Web/CSS/CSS_cascade/Value_processing)
+    - [초깃값](/ko/docs/Web/CSS/Guides/Cascade/Property_value_processing)
     - [계산값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4129c9bf28ee4c2570fe2528f20c4b2cd9a30d9cf2ec4e75fb56fe903059e63e)
     - [결정값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4)
     - [지정값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
     - [사용값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)
     - [실제값](/ko/docs/Web/CSS/actual_value)
 
-  - [값 정의 구문](/ko/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
-  - [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)
+  - [값 정의 구문](/ko/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
+  - [단축 속성](/ko/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
+  - [대체 요소](/ko/docs/Web/CSS/Guides/Images/Replaced_element_properties)

@@ -2,7 +2,7 @@
 title: 207 Multi-Status
 slug: Web/HTTP/Reference/Status/207
 l10n:
-  sourceCommit: 975650c2f6ea843d6f7cbc721aee5dbc1db907b2
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 HTTP **`207 Multi-Status`** [成功回應](/zh-TW/docs/Web/HTTP/Reference/Status#成功回應)狀態碼表示有多種回應。此回應專門用於基於 Web 的分散式編寫和版本控制（{{Glossary("WebDAV")}}）的上下文中。

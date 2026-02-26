@@ -1,9 +1,8 @@
 ---
 title: mask-size
 slug: Web/CSS/Reference/Properties/mask-size
-original_slug: Web/CSS/mask-size
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`mask-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、指定したマスク画像のサイズを指定します。マスク画像のサイズは、その{{glossary("aspect ratio", "アスペクト比")}}を維持するために、完全にまたは部分的に制約することができます。
@@ -125,7 +124,7 @@ div {
   width: 200px;
   height: 400px;
   background: blue linear-gradient(red, blue);
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mdn.svg);
+  mask-image: url("/shared-assets/images/examples/mdn.svg");
 }
 ```
 
@@ -184,7 +183,7 @@ div {
   width: 200px;
   height: 400px;
   background: blue linear-gradient(red, blue);
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("/shared-assets/images/examples/mask-star.svg");
 }
 ```
 
@@ -204,7 +203,7 @@ div {
 }
 ```
 
-プロパティの値は、[生成コンテンツ](/ja/docs/Web/CSS/Guides/Generated_content) を使用して表示されます。
+プロパティの値は、[生成コンテンツ](/ja/docs/Web/CSS/Guides/Generated_content)を使用して表示されます。
 
 ```css
 section::before {
@@ -251,7 +250,7 @@ section {
 ```css hidden
 div {
   background: blue linear-gradient(red, blue);
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("/shared-assets/images/examples/mask-star.svg");
 }
 
 .auto div {
@@ -306,6 +305,7 @@ div {
 
 ## 関連情報
 
+- {{cssxref("background-size")}}
 - {{cssxref("mask")}} 一括指定
 - {{cssxref("mask-image")}}
 - {{cssxref("mask-origin")}}
@@ -314,4 +314,8 @@ div {
 - {{cssxref("mask-image")}}
 - {{cssxref("mask-border")}}
 - {{cssxref("background-size")}}
+- {{cssxref("mask-border-width")}}
+- [CSS マスク入門](/ja/docs/Web/CSS/Guides/Masking/Introduction)
+- [CSS のマスクプロパティ](/ja/docs/Web/CSS/Guides/Masking/Mask_properties)
+- [複数のマスクの宣言](/ja/docs/Web/CSS/Guides/Masking/Multiple_masks)
 - [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール

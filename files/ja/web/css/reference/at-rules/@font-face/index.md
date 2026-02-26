@@ -1,9 +1,8 @@
 ---
 title: "@font-face"
 slug: Web/CSS/Reference/At-rules/@font-face
-original_slug: Web/CSS/@font-face
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`@font-face`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、テキストを表示するための独自フォントを指定します。フォントはリモートサーバーまたはユーザー自身のコンピューターにローカルにインストールされたフォントのどちらかから読み込むことができます。
@@ -28,11 +27,11 @@ l10n:
 - {{cssxref("@font-face/descent-override", "descent-override")}}
   - : フォントのディセンダーの寸法を定義します。
 - {{cssxref("@font-face/font-display", "font-display")}}
-  - : フォントのダウンロードおよび準備状況に応じて、どのようにフォントフェイスを表示するかを特定します。
+  - : フォントのダウンロードおよび準備状況に応じて、どのようにフォントフェイスを表示するかを指定します。
 - {{cssxref("@font-face/font-family", "font-family")}}
-  - : font プロパティのフォントフェイス値で使われる名前を指定します。 `@font-face` ルールが有効であるためには、 `font-family` 名が必要です。
+  - : font プロパティのフォントフェイス値で使われる名前を指定します。 `@font-face` ルールを有効にするためには、 `font-family` 名が必要です。
 - {{cssxref("@font-face/font-stretch", "font-stretch")}}
-  - : {{cssxref("font-stretch")}} 値です。フォントフェイスで対応する範囲を指定するために、 `font-stretch: 50% 200%;` のように 2 つの値を受け付けます。
+  - : {{cssxref("font-stretch")}} 値です。フォントフェイスで対応する範囲を指定するために、`font-stretch: 50% 200%;` のように 2 つの値を受け付けます。
 - {{cssxref("@font-face/font-style", "font-style")}}
   - : {{cssxref("font-style")}} 値です。フォントフェイスで対応する範囲を指定するために、 `font-style: oblique 20deg 50deg;` のように 2 つの値を受け付けます。
 - {{cssxref("@font-face/font-weight", "font-weight")}}
@@ -62,7 +61,7 @@ l10n:
 `@font-face` で作者が独自のフォントを提供できるようになることで、「ウェブセーフ」フォント (つまり、広く利用できると考えられるほど一般的なフォント) と呼ばれる制限なしにコンテンツをデザインすることができます。ローカルにインストールされているフォントを、名前を指定して検索し使用することができる機能により、インターネット接続に頼らなくてもフォントを基本的なものからカスタマイズすることができるようになります。
 
 > [!NOTE]
-> Fallback strategies for loading fonts on older browsers are described in the [`src` descriptor page](/ja/docs/Web/CSS/Reference/At-rules/@font-face/src#specifying_fallbacks_for_older_browsers).
+> 古いブラウザーでのフォント読み込みの代替戦略については、[`src` 記述子のページ](/ja/docs/Web/CSS/Reference/At-rules/@font-face/src#古いブラウザー向けの代替の指定)で説明されています。
 
 `@font-face` アットルールは、 CSS の最上位だけでなく、 [CSS の条件付きグループアットルール](/ja/docs/Web/CSS/Guides/Conditional_rules#アットルール)の中でも使用することができます。
 

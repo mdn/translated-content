@@ -32,7 +32,7 @@ l10n:
 - {{domxref("Window.console")}} {{readOnlyInline}}
   - : 브라우저 디버깅 콘솔에 접근할 수 있는 콘솔 객체를 반환합니다.
 - {{domxref("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{Non-standard_Inline}}
-  - : 현재 문서가 자격 증명 없는 {{htmlelement("iframe")}} 내에서 불러와졌는지 나타내는 불리언입니다. [IFrame credentialless](/ko/docs/Web/Security/IFrame_credentialless)에서 자세한 정보를 확인하세요.
+  - : 현재 문서가 자격 증명 없는 {{htmlelement("iframe")}} 내에서 불러와졌는지 나타내는 불리언입니다. [IFrame credentialless](/ko/docs/Web/HTTP/Guides/IFrame_credentialless)에서 자세한 정보를 확인하세요.
 - {{domxref("crypto_property", "Window.crypto")}} {{readOnlyInline}}
   - : 브라우저 암호화 객체를 반환합니다.
 - {{domxref("Window.customElements")}} {{ReadOnlyInline}}
@@ -382,13 +382,13 @@ l10n:
 ### 트랜지션 이벤트
 
 - {{domxref("Window/transitioncancel_event", "transitioncancel")}}
-  - : [CSS 트랜지션](/ko/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)이 취소되면 발생합니다.
+  - : [CSS 트랜지션](/ko/docs/Web/CSS/Guides/Transitions/Using)이 취소되면 발생합니다.
 - {{domxref("Window/transitionend_event", "transitionend")}}
-  - : [CSS 트랜지션](/ko/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)이 끝나면 발생합니다.
+  - : [CSS 트랜지션](/ko/docs/Web/CSS/Guides/Transitions/Using)이 끝나면 발생합니다.
 - {{domxref("Window/transitionrun_event", "transitionrun")}}
-  - : [CSS 트랜지션](/ko/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)이 처음으로 생성되면 시작합니다.
+  - : [CSS 트랜지션](/ko/docs/Web/CSS/Guides/Transitions/Using)이 처음으로 생성되면 시작합니다.
 - {{domxref("Window/transitionstart_event", "transitionstart")}}
-  - : [CSS 트랜지션](/ko/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)이 시작하면 발생합니다.
+  - : [CSS 트랜지션](/ko/docs/Web/CSS/Guides/Transitions/Using)이 시작하면 발생합니다.
 
 ### Deprecated events
 

@@ -3,10 +3,10 @@ title: CSS リファレンス
 short-title: リファレンス
 slug: Web/CSS/Reference
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 93b85a5bc2b4589d93185263fd2c14381c36f821
 ---
 
-この **CSS リファレンス** は、すべての標準 [CSS](/ja/docs/Web/CSS) プロパティ、[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)、[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)、[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)、[関数記法](/ja/docs/Web/CSS/Reference/Values/Functions)、[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules) の[アルファベット順の索引](#索引)として利用できます。また、すべての CSS [種類別セレクター](#セレクター) の一覧および [重要な CSS の概念](#概念) の一覧もあります。また、簡単な [DOM-CSS / CSSOM リファレンス](#dom-css_cssom) も含まれています。
+この **CSS リファレンス** は、すべての標準 [CSS](/ja/docs/Web/CSS) プロパティ、[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)、[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)、[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)、[関数記法](/ja/docs/Web/CSS/Reference/Values/Functions)、[アットルール](/ja/docs/Web/CSS/Reference/At-rules) の[アルファベット順の索引](#索引)として利用できます。また、すべての CSS [種類別セレクター](#セレクター) の一覧および [重要な CSS の概念](#概念) の一覧もあります。また、簡単な [DOM-CSS / CSSOM リファレンス](#dom-css_cssom) も含まれています。
 
 ## 基本的なルールと構文
 
@@ -44,11 +44,11 @@ div.menu-bar li:hover > ul {
 }
 ```
 
-初心者レベルの CSS セレクター構文への入門については、 [CSS セレクターのガイド](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)をご覧ください。ルール定義内での [CSS 構文](/ja/docs/Web/CSS/Guides/Syntax/Introduction) エラーは、そのルール全体を無効にするので十分に注意してください。無効なルールはブラウザーにより無視されます。 CSS ルールの定義はすべて ({{Glossary("ASCII")}}) [テキストベース](https://www.w3.org/TR/css-syntax-3/#intro) であり、DOM-CSS / CSSOM (ルール管理システム) は [オブジェクトベース](https://www.w3.org/TR/cssom/#introduction) なので注意してください。
+初心者レベルの CSS セレクター構文への入門については、 [CSS セレクターのガイド](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)をご覧ください。ルール定義内での [CSS 構文](/ja/docs/Web/CSS/Guides/Syntax/Introduction) エラーは、そのルール全体を無効にするので十分に注意してください。無効なルールはブラウザーにより無視されます。 CSS ルールの定義はすべて (Unicode) [テキストベース](https://drafts.csswg.org/css-syntax/#intro) であり、DOM-CSS / CSSOM (ルール管理システム) は [オブジェクトベース](https://drafts.csswg.org/cssom/#introduction) なので注意してください。
 
 ### アットルールの構文
 
-アットルールの構造は様々であるため、知りたい構文について調べるには[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)のページをご覧ください。
+アットルールの構造は様々であるため、知りたい構文について調べるには[アットルール](/ja/docs/Web/CSS/Reference/At-rules)のページをご覧ください。
 
 ## 索引
 
@@ -62,7 +62,7 @@ div.menu-bar li:hover > ul {
 
 ## セレクター
 
-以下は様々な[セレクター](/ja/docs/Web/CSS/Guides/Selectors)で、DOM 内の要素の様々な特徴に基づいた条件付きのスタイル付けを可能にします。
+以下は様々な[セレクター](/ja/docs/Web/CSS/Reference/Selectors)で、DOM 内の要素の様々な特徴に基づいた条件付きのスタイル付けを可能にします。
 
 ### 基本セレクター
 
@@ -109,7 +109,7 @@ div.menu-bar li:hover > ul {
 ### 構文と意味
 
 - [CSS 構文](/ja/docs/Web/CSS/Guides/Syntax/Introduction)
-- [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)
+- [アットルール](/ja/docs/Web/CSS/Reference/At-rules)
 - [カスケード](/ja/docs/Web/CSS/Guides/Cascade/Introduction)
 - [コメント](/ja/docs/Web/CSS/Guides/Syntax/Comments)
 - [記述子](/ja/docs/Glossary/CSS_Descriptor)

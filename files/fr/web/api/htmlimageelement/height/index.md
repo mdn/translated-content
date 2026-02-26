@@ -3,19 +3,19 @@ title: "HTMLImageElement : propriété height"
 short-title: height
 slug: Web/API/HTMLImageElement/height
 l10n:
-  sourceCommit: 116577234db1d6275c74a8bb879fce54d944f4ed
+  sourceCommit: 1f00512e3c9a20b5bb927db529bb5d639e346d96
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété **`height`** de l'interface {{domxref("HTMLImageElement")}} indique la hauteur à laquelle l'image est affichée, en {{Glossary("CSS pixel", "pixels CSS")}} si l'image est affichée ou rendue sur un support visuel tel qu'un écran ou une imprimante&nbsp;; sinon, il s'agit de la hauteur naturelle de l'image, corrigée de la densité de pixels.
+La propriété **`height`** de l'interface {{DOMxRef("HTMLImageElement")}} indique la hauteur à laquelle l'image est affichée, en {{Glossary("CSS pixel", "pixels CSS")}} si l'image est affichée ou rendue sur un support visuel tel qu'un écran ou une imprimante&nbsp;; sinon, il s'agit de la hauteur naturelle de l'image, corrigée de la densité de pixels.
 
 ## Valeur
 
 Une valeur entière indiquant la hauteur de l'image. L'unité dans laquelle la hauteur est définie dépend du fait que l'image est affichée sur un support visuel ou non.
 
 - Si l'image est affichée sur un support visuel tel qu'un écran ou une imprimante, la hauteur est exprimée en {{Glossary("CSS pixel", "pixels CSS")}}.
-- Sinon, la hauteur de l'image est représentée par sa hauteur naturelle (intrinsèque), ajustée selon la densité d'affichage comme indiqué par {{domxref("HTMLImageElement.naturalHeight", "naturalHeight")}}.
+- Sinon, la hauteur de l'image est représentée par sa hauteur naturelle (intrinsèque), ajustée selon la densité d'affichage comme indiqué par {{DOMxRef("HTMLImageElement.naturalHeight", "naturalHeight")}}.
 
 ## Exemples
 
@@ -55,9 +55,9 @@ window.addEventListener("resize", updateHeight);
 
 ### Résultat
 
-{{EmbedLiveSample("exemples", 640, 450)}}
+{{EmbedLiveSample("Exemples", 640, 450)}}
 
-Vous pouvez aussi essayer cet exemple {{LiveSampleLink('exemples', 'dans une nouvelle fenêtre')}}.
+Vous pouvez aussi essayer cet exemple {{LiveSampleLink('Exemples', 'dans une nouvelle fenêtre')}}.
 
 ## Spécifications
 
@@ -69,9 +69,9 @@ Vous pouvez aussi essayer cet exemple {{LiveSampleLink('exemples', 'dans une nou
 
 ## Voir aussi
 
-- {{domxref("HTMLCanvasElement.height")}}
-- {{domxref("HTMLEmbedElement.height")}}
-- {{domxref("HTMLIFrameElement.height")}}
-- {{domxref("HTMLObjectElement.height")}}
-- {{domxref("HTMLSourceElement.height")}}
-- {{domxref("HTMLVideoElement.height")}}
+- La propriété {{DOMxRef("HTMLCanvasElement.height")}}
+- La propriété {{DOMxRef("HTMLEmbedElement.height")}}
+- La propriété {{DOMxRef("HTMLIFrameElement.height")}}
+- La propriété {{DOMxRef("HTMLObjectElement.height")}}
+- La propriété {{DOMxRef("HTMLSourceElement.height")}}
+- La propriété {{DOMxRef("HTMLVideoElement.height")}}

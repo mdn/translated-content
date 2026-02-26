@@ -1,15 +1,14 @@
 ---
 title: TypedArray.prototype.every()
+short-title: every()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/every
 l10n:
-  sourceCommit: 4e32a881872958fdf928d8b4d42189fba2e11459
+  sourceCommit: 4bfeb5a89c1528da7cb7847a9ccb93f9b00290f0
 ---
-
-{{JSRef}}
 
 **`every()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、提供された関数で実装されたテストに、型付き配列内のすべての要素が合格するかどうかをテストします。これは論理値を返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.every()")}} と同じです。
 
-{{InteractiveExample("JavaScript デモ: TypedArray.every()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.every()")}}
 
 ```js interactive-example
 function isNegative(element, index, array) {
@@ -19,7 +18,7 @@ function isNegative(element, index, array) {
 const int8 = new Int8Array([-10, -20, -30, -40, -50]);
 
 console.log(int8.every(isNegative));
-// Expected output: true
+// 予想される結果: true
 ```
 
 ## 構文

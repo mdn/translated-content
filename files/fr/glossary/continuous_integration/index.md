@@ -2,7 +2,7 @@
 title: Intégration continue
 slug: Glossary/Continuous_integration
 l10n:
-  sourceCommit: 79f65d8322a4e55e9f3f4c91441c9188dbe670e0
+  sourceCommit: 7d4f930455a349e3c73836500add3d4840c76f5d
 ---
 
 L'**intégration continue** (<i lang="en">continuous integration</i> ou <abbr>CI</abbr> en anglais) est une pratique de développement logiciel qui consiste à intégrer fréquemment les modifications du code source dans la base de code principale.

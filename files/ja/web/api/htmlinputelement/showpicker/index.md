@@ -41,7 +41,7 @@ showPicker()
 
 ## セキュリティ
 
-[一時的な活性化](/ja/docs/Web/Security/User_activation)が必要です。この機能を作業するためには、ユーザーがページや UI 要素を操作する必要があります。
+[一時的な活性化](/ja/docs/Web/Security/Defenses/User_activation)が必要です。この機能を作業するためには、ユーザーがページや UI 要素を操作する必要があります。
 
 ## 例
 

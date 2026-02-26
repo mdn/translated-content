@@ -1,22 +1,21 @@
 ---
 title: ArrayBuffer() コンストラクター
+short-title: ArrayBuffer()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer
 l10n:
-  sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
-
-{{JSRef}}
 
 **`ArrayBuffer()`** コンストラクターは {{jsxref("ArrayBuffer")}} オブジェクトを生成するために使用されます。
 
-{{InteractiveExample("JavaScript デモ: ArrayBuffer Constructor", "shorter")}}
+{{InteractiveExample("JavaScript デモ: ArrayBuffer() コンストラクター", "shorter")}}
 
 ```js interactive-example
-// Create an ArrayBuffer with a size in bytes
+// ArrayBuffer をバイト単位のサイズで作成
 const buffer = new ArrayBuffer(8);
 
 console.log(buffer.byteLength);
-// Expected output: 8
+// 予想される結果: 8
 ```
 
 ## 構文
@@ -33,9 +32,9 @@ new ArrayBuffer(length, options)
 
 - `length`
   - : 作成する配列バッファーのサイズをバイト単位で指定します。
-- `options` {{optional_inline}} {{experimental_inline}}
+- `options` {{optional_inline}}
   - : オブジェクトであり、以下のプロパティを持つことができます。
-    - `maxByteLength` {{optional_inline}} {{experimental_inline}}
+    - `maxByteLength` {{optional_inline}}
       - : 配列バッファーがサイズ変更可能な最大サイズ（バイト単位）。
 
 ### 返値
@@ -53,7 +52,7 @@ new ArrayBuffer(length, options)
 
 ### ArrayBuffer の作成
 
-この例では、バッファーを参照する {{jsxref("Global_Objects/Int32Array", "Int32Array")}} ビューを持つ 8 バイトのバッファーを作成しています。
+この例では、バッファーを参照する {{jsxref("Int32Array")}} ビューを持つ 8 バイトのバッファーを作成しています。
 
 ```js
 const buffer = new ArrayBuffer(8);
@@ -84,5 +83,5 @@ buffer.resize(12);
 ## 関連情報
 
 - [`ArrayBuffer` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("SharedArrayBuffer")}}

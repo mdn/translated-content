@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/skeleton_website
 original_slug: Learn/Server-side/Django/skeleton_website
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Ce second article de la série [didactique Django](/fr/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) va décrire comment créer le squelette du site web du projet. Ensuite, vous pourrez paramètrer et développer les composants spécifiques comme les modèles de données, les vues, les gabarits, les formulaires...
 
@@ -17,7 +17,7 @@ Ce second article de la série [didactique Django](/fr/docs/Learn_web_developmen
           >Set up a Django development environment</a
         >. Avoir pris connaissance de
         <a
-          href="/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website"
+          href="/fr/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website"
           >l'article précédent</a
         >.
       </td>
@@ -381,4 +381,4 @@ Maintenant que ceci est fait, [le site web Local Library](/fr/docs/Learn_web_dev
 - [Écriture de votre première application Django, 1ère partie](https://docs.djangoproject.com/fr/2.2/intro/tutorial01/) (Django docs)
 - [Applications](https://docs.djangoproject.com/fr/2.2/ref/applications/#configuring-applications) (Django Docs). Contains information on configuring applications.
 
-{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django")}}

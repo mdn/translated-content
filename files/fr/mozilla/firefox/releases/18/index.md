@@ -29,7 +29,7 @@ Firefox 18, basé sur Gecko 18.0, est sorti le 8 janvier 2013. Cette page résum
 - L'évènement [`visibilitychange`](/fr/docs/Web/API/Document/visibilitychange_event) et l'[API Page Visibility](/fr/docs/Web/API/Page_Visibility_API) ont été dépréfixés. ([bug Firefox 812086](https://bugzil.la/812086))
 - `TextDecoder` et `TextEncoder` ont été ajoutés. ([bug Firefox 764234](https://bugzil.la/764234))
 - `HTMLMediaElement.src` a été séparée en deux propriétés : la propriété `src` standard, qui traite {{domxref("DOMString")}}, et la propriété préfixée `mozSrcObject`, qui traite [les flux multimédia](/fr/docs/Web/API/Media_Capture_and_Streams_API). ([bug Firefox 792665](https://bugzil.la/792665))
-- Support des [objets transférables](/fr/docs/DOM/Using_web_workers#Passing_data_by_transferring_.C2.A0ownership_%28transferable_objects%29).
+- Support des [objets transférables](</fr/docs/DOM/Using_web_workers#passing_data_by_transferring_ownership_(transferable_objects)>).
 
 ### JavaScript
 

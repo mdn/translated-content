@@ -1,12 +1,11 @@
 ---
 title: :focus-within
 slug: Web/CSS/Reference/Selectors/:focus-within
-original_slug: Web/CSS/:focus-within
 l10n:
-  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:focus-within`** correspond à un élément si celui-ci ou l'un de ses descendants est sélectionné. En d'autres termes, elle représente un élément qui est lui-même correspondant à la pseudo-classe {{cssxref(":focus")}} ou qui a un descendant correspondant à `:focus`. (Cela inclut les descendants dans le [DOM sombre (<i lang="en">shadow DOM</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM)).
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:focus-within`** correspond à un élément si celui-ci ou l'un de ses descendants est sélectionné. En d'autres termes, elle représente un élément qui est lui-même correspondant à la pseudo-classe {{CSSxRef(":focus")}} ou qui a un descendant correspondant à `:focus`. (Cela inclut les descendants dans le [DOM sombre (<i lang="en">shadow DOM</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM)).
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :focus-within", "tabbed-shorter")}}
 
@@ -100,6 +99,6 @@ input {
 
 ## Voir aussi
 
-- {{cssxref(":focus")}}
+- {{CSSxRef(":focus")}}
 - {{CSSxRef(":focus-visible")}}
 - [Captez l'attention de vos utilisateur·ice·s grâce au sélecteur focus-within <sup>(angl.)</sup>](https://dev.to/vtrpldn/grab-your-user-s-attention-with-the-focus-within-css-selector-4d4)

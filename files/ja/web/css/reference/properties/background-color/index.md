@@ -1,9 +1,8 @@
 ---
 title: background-color
 slug: Web/CSS/Reference/Properties/background-color
-original_slug: Web/CSS/background-color
 l10n:
-  sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`background-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背景色を設定します。
@@ -19,19 +18,19 @@ background-color: #74992e;
 ```
 
 ```css interactive-example-choice
-background-color: rgb(255, 255, 128);
+background-color: rgb(255 255 128);
 ```
 
 ```css interactive-example-choice
-background-color: rgba(255, 255, 128, 0.5);
+background-color: rgb(255 255 128 / 0.5);
 ```
 
 ```css interactive-example-choice
-background-color: hsl(50, 33%, 25%);
+background-color: hsl(50 33% 25%);
 ```
 
 ```css interactive-example-choice
-background-color: hsla(50, 33%, 25%, 0.75);
+background-color: hsl(50 33% 25% / 0.75);
 ```
 
 ```html interactive-example
@@ -72,7 +71,7 @@ background-color: hsl(50 33% 25%); /* 不透過 */
 background-color: hsl(50 33% 25% / 75%); /* 75% 不透過、すなわち 25% 透過 */
 
 /* 特殊なキーワード値 */
-background-color: currentcolor;
+background-color: currentColor;
 background-color: transparent;
 
 /* グローバル値 */
@@ -138,7 +137,7 @@ background-color: unset;
 
 .example-three {
   background-color: #777799;
-  color: #ffffff;
+  color: white;
 }
 ```
 
@@ -154,21 +153,23 @@ background-color: unset;
 
 ```html live-sample___colorize_tables
 <table>
-  <tr id="r1">
-    <td id="c11">11</td>
-    <td id="c12">12</td>
-    <td id="c13">13</td>
-  </tr>
-  <tr id="r2">
-    <td id="c21">21</td>
-    <td id="c22">22</td>
-    <td id="c23">23</td>
-  </tr>
-  <tr id="r3">
-    <td id="c31">31</td>
-    <td id="c32">32</td>
-    <td id="c33">33</td>
-  </tr>
+  <tbody>
+    <tr id="r1">
+      <td id="c11">11</td>
+      <td id="c12">12</td>
+      <td id="c13">13</td>
+    </tr>
+    <tr id="r2">
+      <td id="c21">21</td>
+      <td id="c22">22</td>
+      <td id="c23">23</td>
+    </tr>
+    <tr id="r3">
+      <td id="c31">31</td>
+      <td id="c32">32</td>
+      <td id="c33">33</td>
+    </tr>
+  </tbody>
 </table>
 ```
 

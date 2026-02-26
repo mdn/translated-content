@@ -318,7 +318,7 @@ TODO: Revisit this PR process
 - `@sre`: MDN Web Docs を保守しているサイト信頼性技術者
 - `@yari-content`: MDN Web Docs のすべてのコンテンツレビューアーを統括するチーム
   - アクセシビリティ、アドオン、CSS、HTML、HTTP、JavaScript、SVG、Web API、WebAssembly といった様々なトピック領域に対してサブチームが存在します。例えば、`@yari-content-css` や `@yari-content-svg` があります。
-  - また、様々な言語（ブラジルのポルトガル語、中国語、フランス語、日本語、韓国語、ロシア語、スペイン語）のサブチームもあります。例えば、`@yari-content-fr` や `@yari-content-ko` があります。
+  - また、様々な言語（ブラジルのポルトガル語、中国語、フランス語、日本語、韓国語、ロシア語、スペイン語）のサブチームもあります。例えば、`@fr-content` や `@ko-content` があります。
 
 チームのメンバーになるには、以下のことが必要です。
 

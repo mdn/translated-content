@@ -1,15 +1,13 @@
 ---
-title: 高度なテキスト装飾
+title: 高度なテキスト機能
 slug: Learn_web_development/Core/Structuring_content/Advanced_text_features
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 65c873fda639b035b94db77dd0f9373f38549aa0
 ---
 
-{{LearnSidebar}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics", "Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text", "Learn_web_development/Core/Structuring_content")}}
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content")}}
-
-テキストの装飾のための HTML には他にも多くの要素がありますが、これは[強調と重要性](/ja/docs/Learn_web_development/Core/Structuring_content/Emphasis_and_importance)の記事には書かれていません。この記事で説明されている要素はあまり知られていませんが、知っていると役に立ちます（これはまだいかなる意味でも完全なリストではありません）。ここでは、注釈、説明リスト、コンピューターコードとその他の関連テキスト、下付き文字と上付き文字、連絡先情報などのマークアップについて学習します。
+HTML には他にも多くのテキストの意味付けのための要素がありますが、これは[強調と重要性](/ja/docs/Learn_web_development/Core/Structuring_content/Emphasis_and_importance)の記事には書かれていません。この記事で説明されている要素はあまり知られていませんが、知っていると役に立ちます（これはまだいかなる意味でも完全なリストではありません）。ここでは、引用、コンピューターコードとその他の関連テキスト、下付き文字と上付き文字、連絡先情報などのマークアップについて学習します。
 
 <table>
   <tbody>
@@ -59,9 +57,9 @@ HTML には引用をマークアップするための機能もあります。ど
 これをブロック引用にするには、次のようにします。
 
 ```html
-<p>こちらが引用です。</p>
+<p>こちらはブロック引用です。</p>
 <blockquote
-  cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/blockquote">
+  cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/blockquote">
   <p>
     The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
     <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
@@ -81,7 +79,8 @@ HTML には引用をマークアップするための機能もあります。ど
 ```html
 <p>
   The quote element — <code>&lt;q&gt;</code> — is
-  <q cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/q">
+  <q
+    cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/q">
     intended for short quotations that don't require paragraph breaks.
   </q>
 </p>
@@ -93,19 +92,19 @@ HTML には引用をマークアップするための機能もあります。ど
 
 ### 引用元
 
-[`cite`](/ja/docs/Web/HTML/Reference/Elements/blockquote#cite) 属性の内容は有用そうに見えますが、残念ながらブラウザーや スクリーンリーダーなどは、この属性を実際にはあまり使用してくれません。 JavaScript や CSS を使って自身の解決策を書かない限り、ブラウザーに `cite` の内容を表示させる方法はありません。もしページ上で引用元を利用できるようにしたいのであれば、リンクやその他の適切な方法で本文中に利用できるようにする必要があります。
+[`cite`](/ja/docs/Web/HTML/Reference/Elements/blockquote#cite) 属性の内容は有用そうに見えますが、残念ながらブラウザーやスクリーンリーダーなどは、この属性を実際にはあまり使用してくれません。 JavaScript や CSS を使って自身の解決策を書かない限り、ブラウザーに `cite` の内容を表示させる方法はありません。もしページ上で引用元を利用できるようにしたいのであれば、リンクやその他の適切な方法で本文中に利用できるようにする必要があります。
 
 {{htmlelement("cite")}} 要素がありますが、これは引用されたリソースのタイトル、例えば書籍の名前を格納することを意味しています。しかし、 `<cite>` 内のテキストを何らかの方法で引用元とリンクできない理由はありません。
 
 ```html-nolint
 <p>
   According to the
-  <a href="/ja/docs/Web/HTML/Element/blockquote">
+  <a href="/en-US/docs/Web/HTML/Reference/Elements/blockquote">
     <cite>MDN blockquote page</cite></a>:
 </p>
 
 <blockquote
-  cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/blockquote">
+  cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/blockquote">
   <p>
     The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
     <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
@@ -115,10 +114,10 @@ HTML には引用をマークアップするための機能もあります。ど
 
 <p>
   The quote element — <code>&lt;q&gt;</code> — is
-  <q cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/q">
+  <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/q">
     intended for short quotations that don't require paragraph breaks.
   </q>
-  — <a href="/ja/docs/Web/HTML/Element/q"><cite>MDN q page</cite></a>.
+  — <a href="/en-US/docs/Web/HTML/Reference/Elements/q"><cite>MDN q page</cite></a>.
 </p>
 ```
 
@@ -126,155 +125,70 @@ HTML には引用をマークアップするための機能もあります。ど
 
 {{EmbedLiveSample('Citations', '100%', '179px')}}
 
-### アクティブラーニング: 誰がそう言ったの？
+### 誰がそう言ったの？ ブロック引用の練習
 
-もうひとつのアクティブラーニングの例です。この例では、次のことを行ってください。
+次の課題の時間です！この課題では、以下のことを行ってください。
 
-1. 中央の段落を `cite` 属性を含むブロック引用にしましょう。
-2. 3 番目の段落の一部を、`cite` 属性を含むインライン引用に変換しましょう。
-3. 各リンクに `<cite>` 要素を含めましょう。
+1. 下記コードブロック内の **"Play"** をクリックして、MDN Playground で例を編集してください。
+2. 中央の段落を `cite` 属性を含むブロック引用にしましょう。
+3. 3 番目の段落の "The Need To Eliminate Negative Self Talk" を、`cite` 属性を含むインライン引用に変換しましょう。
+4. 各ソースのタイトルを `<cite>` タグで囲み、それぞれのソースをそのソースへのリンクに変換してください。
 
 必要な引用元は以下のとおりです。
 
 - Confucius の引用については `http://www.brainyquote.com/quotes/authors/c/confucius.html`
 - "The Need To Eliminate Negative Self Talk" には `http://example.com/affirmationsforpositivethinking`
 
-間違えた場合は、 _リセット_ ボタンを使用していつでもリセットできます。本当に動けなくなったら、_答えを表示_ ボタンを押して答えを見てください。
+間違えた場合は、MDN Playground の _Reset_ ボタンで作業内容をクリアできます。どうしても行き詰まった場合は、コードブロックの下にある解答を参照してください。
 
-```html-nolint hidden
-<h2>ライブ出力</h2>
-
-<div class="output" style="min-height: 50px;"></div>
-
-<h2>編集可能なコード</h2>
-<p class="a11y-label">
-  Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。
-</p>
-
-<textarea id="code" class="input" style="min-height: 150px; width: 95%">
+```html live-sample___advanced-text-1
 <p>Hello and welcome to my motivation page. As Confucius' quotes site says:</p>
 <p>It does not matter how slowly you go as long as you do not stop.</p>
-<p>I also love the concept of positive thinking, and The Need To Eliminate Negative Self Talk (as mentioned in Affirmations for Positive Thinking.)</p>
-</textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="リセット" />
-  <input id="solution" type="button" value="答えを表示" />
-</div>
+<p>
+  I also love the concept of positive thinking, and The Need To Eliminate
+  Negative Self Talk (as mentioned in Affirmations for Positive Thinking.)
+</p>
 ```
 
-```css hidden
-html {
-  font-family: sans-serif;
-}
+{{ EmbedLiveSample('advanced-text-1', "100%", 200) }}
 
-h2 {
-  font-size: 16px;
-}
+<details>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
-}
+完成した HTML は、次のようになるはずです。
 
-body {
-  margin: 10px;
-  background: #f5f9fa;
-}
+```html
+<p>
+  Hello and welcome to my motivation page. As
+  <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"
+    ><cite>Confucius' quotes site</cite></a
+  >
+  says:
+</p>
+
+<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">
+  <p>It does not matter how slowly you go as long as you do not stop.</p>
+</blockquote>
+
+<p>
+  I also love the concept of positive thinking, and
+  <q cite="http://example.com/affirmationsforpositivethinking"
+    >The Need To Eliminate Negative Self Talk</q
+  >
+  (as mentioned in
+  <a href="http://example.com/affirmationsforpositivethinking"
+    ><cite>Affirmations for Positive Thinking</cite></a
+  >.)
+</p>
 ```
 
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-const code = textarea.value;
-let userEntry = textarea.value;
-
-function updateCode() {
-  output.innerHTML = textarea.value;
-}
-
-const htmlSolution =
-  '<p>Hello and welcome to my motivation page. As <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Confucius\' quotes site</cite></a> says:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n <p>It does not matter how slowly you go as long as you do not stop.</p>\n</blockquote>\n\n<p>I also love the concept of positive thinking, and <q cite="http://example.com/affirmationsforpositivethinking">The Need To Eliminate Negative Self Talk</q> (as mentioned in <a href="http://example.com/affirmationsforpositivethinking"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
-let solutionEntry = htmlSolution;
-
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "答えを表示";
-  updateCode();
-});
-
-solution.addEventListener("click", () => {
-  if (solution.value === "答えを表示") {
-    textarea.value = solutionEntry;
-    solution.value = "答えを隠す";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "答えを表示";
-  }
-  updateCode();
-});
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-
-textarea.onkeydown = (e) => {
-  if (e.code === "Tab") {
-    e.preventDefault();
-    insertAtCaret("\t");
-  }
-
-  if (e.code === "Escape") {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
-
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
-}
-
-// Update the saved userCode every time the user updates the text area code
-textarea.onkeyup = () => {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "答えを表示") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-
-  updateCode();
-};
-```
-
-{{ EmbedLiveSample('Active_learning_Who_said_that', 700, 450) }}
+</details>
 
 ## 略語
 
 ウェブを見て回っているときによく出会うもう一つの要素は {{htmlelement("abbr")}} です。これは略語や頭字語を囲むために使用されます。どちらかを記載する場合、最初の使用では、略語をマークアップする `<abbr>` と共に、プレーンテキストでその用語の完全な展開を提供してください。これは、ユーザーエージェントに内容をどのように告知／表示するかのヒントを提供すると同時に、すべてのユーザーにその略語の意味を知らせます。
 
-略語に加えて展開形を提供することにあまり意味がありません。略語や頭字語がかなり短縮された用語である場合、 [`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title) 属性の値として用語の完全な展開形を提供してください。
+略語に加えて展開形を提供することにあまり意味がありません。略語や頭字語がかなり短縮された用語である場合、[`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title) 属性の値として用語の完全な展開形を提供してください。
 
 ### 略語の例
 
@@ -292,144 +206,48 @@ textarea.onkeyup = () => {
 </p>
 ```
 
-これらは次のように見えます。
+これらは次のように表示されます。
 
-{{EmbedLiveSample('Abbreviation_example', '100%', '150')}}
+{{EmbedLiveSample('Abbreviation_example', '100%', '90')}}
 
 > [!NOTE]
 > 以前のバージョンの HTML では {{htmlelement("acronym")}} 要素にも対応していましたが、省略形と頭字語の両方を表現するために `<abbr>` を使用することにしたため、 HTML 仕様から削除されました。`<acronym>` は使用すべきではありません。
 
-### アクティブラーニング: 略語のマークアップ
+### 略語をマークアップしましょう
 
-この簡単なアクティブラーニングの課題では、略語をマークアップしていただきたいと思います。以下のサンプルを使用することもできますし、自身のものに置き換えることもできます。
+この学習課題では、略語をマークアップしてください。
 
-```html hidden
-<h2>ライブ出力</h2>
+1. 下記コードブロック内の **"Play"** をクリックして、MDN Playground で例を編集してください。
+2. 含まれている略語を適切な HTML でマークアップしてください。自分自身で作成した略語に置き換えて、代わりにそれをマークアップしてみるのも自由です。
 
-<div class="output" style="min-height: 50px;"></div>
+間違えた場合は、MDN Playground の _Reset_ ボタンで作業内容をクリアできます。どうしても行き詰まった場合は、コードブロックの下にある解答を参照してください。
 
-<h2>編集可能なコード</h2>
-<p class="a11y-label">
-  Esc を押すとコード領域からフォーカスを移動させることができます（Tab
-  はタブ文字を挿入します）。
+```html-nolint live-sample___advanced-text-2
+<p>NASA sure does some exciting work.</p>
+
+<p>The new user interface design LGTM!</p>
+```
+
+{{ EmbedLiveSample('advanced-text-2', "100%", 90) }}
+
+<details>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
+
+完成した HTML は、次のコードスニペットのようになるはずです。
+
+```html
+<p>
+  <abbr>NASA</abbr> (the National Aeronautics and Space Administration) sure
+  does some exciting work.
 </p>
 
-<textarea id="code" class="input" style="min-height: 50px; width: 95%">
-<p>NASA, the National Aeronautics and Space Administration, sure does some exciting work.</p>
-</textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="リセット" />
-  <input id="solution" type="button" value="答えを表示" />
-</div>
+<p>The new user interface design <abbr title="Looks good to me">LGTM</abbr>!</p>
 ```
 
-```css hidden
-html {
-  font-family: sans-serif;
-}
+- おそらく、NASA については初出時に本文中で説明を補足すべきです。なぜなら、これは本文中に誰もが利用できる形で用意しておくべき有益な情報だからです。
+- 一方、"LGTM" のような略語は、純粋にスペースと時間を節約するために書かれるため、それを展開して書くのは意味をなしません。したがって、展開形は `title` 属性に記述します。実際のアプリケーションでは、おそらく手作業でこれを行うことはないでしょう。既知の用語に対しては、何らかのスクリプトを使って自動的に追加することになるでしょう。
 
-h2 {
-  font-size: 16px;
-}
-
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
-}
-
-body {
-  margin: 10px;
-  background: #f5f9fa;
-}
-```
-
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-const code = textarea.value;
-let userEntry = textarea.value;
-
-function updateCode() {
-  output.innerHTML = textarea.value;
-}
-
-const htmlSolution =
-  "<p><abbr>NASA</abbr>, the National Aeronautics and Space Administration, sure does some exciting work.</p>";
-let solutionEntry = htmlSolution;
-
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "答えを表示";
-  updateCode();
-});
-
-solution.addEventListener("click", () => {
-  if (solution.value === "答えを表示") {
-    textarea.value = solutionEntry;
-    solution.value = "答えを隠す";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "答えを表示";
-  }
-  updateCode();
-});
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-
-textarea.onkeydown = (e) => {
-  if (e.code === "Tab") {
-    e.preventDefault();
-    insertAtCaret("\t");
-  }
-
-  if (e.code === "Escape") {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
-
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
-}
-
-// Update the saved userCode every time the user updates the text area code
-textarea.onkeyup = () => {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "答えを表示") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-
-  updateCode();
-};
-```
-
-{{ EmbedLiveSample('Active_learning_marking_up_an_abbreviation', 700, 300) }}
+</details>
 
 ## 詳細な連絡先のマークアップ
 
@@ -466,7 +284,7 @@ HTML には連絡先の詳細をマークアップするための要素 — {{ht
 ```
 
 > [!NOTE]
-> {{htmlelement("address")}} 要素は、最も近い {{htmlelement("article")}} または {{htmlelement("body")}} 要素で含まれる文書の連絡先情報を提供するためにのみ使用すべきです。サイト全体の連絡先を記載するためにサイトのフッターに使用したり、著者の連絡先を記載するために記事の中で使用することは正しいことですが、そのページの内容に関係のないアドレスのリストをマークアップすることはできません。
+> {{htmlelement("address")}} 要素は、最も近い {{htmlelement("article")}} または {{htmlelement("body")}} 要素に含まれる文書の連絡先情報を提供するためにのみ使用すべきです。サイト全体の連絡先を記載するためにサイトのフッターに使用したり、著者の連絡先を記載するために記事の中で使用することは正しいことですが、そのページの内容に関係のないアドレスのリストをマークアップすることは正しくありません。
 
 ## 上付きと下付き
 
@@ -551,37 +369,35 @@ HTML には、時間と日付を機械可読形式でマークアップするた
 
 <!-- markdownlint-enable MD033 -->
 
-しかしこれらの異なる形式はコンピューターでは容易には認識できません。ページ内のすべてのイベントの日付を自動的に取得してカレンダーに挿入する場合はどうなりますか。 {{htmlelement("time")}} 要素を使用すると、この目的のために、明確で機械可読な日時を付けることができます。
+しかしこれらの様々な形式はコンピューターでは容易には認識できません。ページ内のすべてのイベントの日付を自動的に取得してカレンダーに挿入する場合はどうなるでしょうか。 {{htmlelement("time")}} 要素を使用すると、この目的のために、明確で機械可読な日時を付けることができます。
 
 上記の基本的な例は単純な機械可読な日付を提供するだけですが、可能な他の多くのオプションがあります。例えば、
 
 ```html
-<!-- Standard simple date -->
+<!-- 単純な標準的な日付 -->
 <time datetime="2016-01-20">20 January 2016</time>
-<!-- Just year and month -->
+<!-- 年と付きのみ -->
 <time datetime="2016-01">January 2016</time>
-<!-- Just month and day -->
+<!-- 月と日のみ -->
 <time datetime="01-20">20 January</time>
-<!-- Just time, hours and minutes -->
+<!-- 時刻、時と分だけ -->
 <time datetime="19:30">19:30</time>
-<!-- You can do seconds and milliseconds too! -->
+<!-- 秒とミリ秒も付けられる -->
 <time datetime="19:30:01.856">19:30:01.856</time>
-<!-- Date and time -->
+<!-- 日付と時刻 -->
 <time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
-<!-- Date and time with timezone offset -->
+<!-- タイムゾーン付き日付と時刻 -->
 <time datetime="2016-01-20T19:30+01:00">
   7.30pm, 20 January 2016 is 8.30pm in France
 </time>
-<!-- Calling out a specific week number -->
+<!-- 特定の週番号を呼び出す -->
 <time datetime="2016-W04">The fourth week of 2016</time>
 ```
 
-## スキルテスト
-
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルのテスト: 高度な HTML テキスト](/ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text)を見てください。
-
 ## まとめ
 
-これで HTML のテキストの意味づけに関する学習は終了です。このコースで見てきたものは、 HTML テキスト要素の完全なリストではないことに留意してください。私たちは、基本的なものと、より一般的なものをカバーしようとしました。次に、ウェブの最も重要な機能の 1 つであるリンクを見ていきます。
+これで HTML のテキストの意味づけに関する学習は終了です。このコースで見てきたものは、 HTML テキスト要素の完全なリストではないことに留意してください。私たちは、基本的なものと、より一般的なものをカバーしようとしました。
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content")}}
+次に、あまり一般的ではない HTML テキスト機能について説明した内容の理解度と定着度を調べることができるテストをいくつかご紹介します。
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics", "Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text", "Learn_web_development/Core/Structuring_content")}}

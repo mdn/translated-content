@@ -2,7 +2,7 @@
 title: Taille intrinsèque
 slug: Glossary/Intrinsic_Size
 l10n:
-  sourceCommit: bbff081938f76bdd6c6fdbf59d2e25e0a7a1cf2a
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 En CSS, la **taille intrinsèque** d'un élément est la taille qu'il aurait uniquement en fonction de son contenu, sans tenir compte des effets du contexte de mise en page dans lequel il apparaît. C'est l'opposé de la {{Glossary("extrinsic size", "taille extrinsèque")}} d'un élément, qui est déterminée par des contraintes externes comme la taille du conteneur. Les tailles intrinsèques d'un élément sont représentées par ses tailles {{CSSxRef("min-content")}} et {{CSSxRef("max-content")}}.
@@ -66,5 +66,5 @@ p {
 - La propriété CSS {{CSSxRef("interpolate-size")}}
 - La propriété CSS {{CSSxRef("aspect-ratio")}}
 - La fonction CSS {{CSSxRef("calc-size()")}}
-- [Module de dimensionnement des boîtes CSS](/fr/docs/Web/CSS/CSS_box_sizing)
+- [Module de dimensionnement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_sizing)
 - Spécification du module CSS [de dimensionnement des boîtes niveau 3 <sup>(angl.)</sup>](https://drafts.csswg.org/css-sizing-3/#intrinsic-sizes)

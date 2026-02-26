@@ -45,7 +45,7 @@ A medida que avances en este apartado verás que puede resultar menos relevante 
 
 CSS significa **hojas de estilo en cascada** (cascading style sheets), y es muy importante entender la palabra _cascada_. La forma en que se comporta la cascada es la clave para comprender el CSS.
 
-En algún momento trabajarás en un proyecto y encontrarás que el CSS que pensabas que debería aplicarse a un elemento no funciona. Por lo general, el problema suele ser que has creado dos normas que podrían aplicarse al mismo elemento. La **cascada**, y el concepto estrechamente relacionado de **especificidad** son mecanismos que controlan qué regla se aplica cuando aparecen tales conflictos. Es posible que la regla que se apliuca finalmente a tu elemento no sea la que esperas, por lo que debes comprender cómo funcionan estos mecanismos.
+En algún momento trabajarás en un proyecto y encontrarás que el CSS que pensabas que debería aplicarse a un elemento no funciona. Por lo general, el problema suele ser que has creado dos normas que podrían aplicarse al mismo elemento. La **cascada**, y el concepto estrechamente relacionado de **especificidad** son mecanismos que controlan qué regla se aplica cuando aparecen tales conflictos. Es posible que la regla que se aplica finalmente a tu elemento no sea la que esperas, por lo que debes comprender cómo funcionan estos mecanismos.
 
 También es significativo el concepto de **herencia**, que significa que algunas propiedades CSS heredan por defecto los valores establecidos en el elemento padre, pero otras no. Esto también puede causar una respuesta diferente a la que esperas.
 

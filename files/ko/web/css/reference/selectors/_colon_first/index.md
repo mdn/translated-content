@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:first
 original_slug: Web/CSS/:first
 ---
 
-[CSS](/ko/docs/Web/CSS) **`:first`** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 {{cssxref("@page")}} [@-규칙](/ko/docs/Web/CSS/CSS_syntax/At-rule)과 함께 사용되며, 출력 시의 첫 페이지를 나타냅니다.
+[CSS](/ko/docs/Web/CSS) **`:first`** [의사 클래스](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes)는 {{cssxref("@page")}} [@-규칙](/ko/docs/Web/CSS/Guides/Syntax/At-rules)과 함께 사용되며, 출력 시의 첫 페이지를 나타냅니다.
 
 ```css
 /* Selects the first page when printing */
@@ -15,7 +15,7 @@ original_slug: Web/CSS/:first
 ```
 
 > [!NOTE]
-> first 의사 클래스 안에서는 CSS 속성의 사용이 제한됩니다. 바깥 여백, {{cssxref("orphans")}}, {{cssxref("widows")}}와 페이지 넘김만 바꿀 수 있으며, 여백 지정 시 [절대길이 단위](/ko/docs/Web/CSS/length#절대길이_단위)만 사용할 수 있습니다. 다른 모든 속성은 무시합니다.
+> first 의사 클래스 안에서는 CSS 속성의 사용이 제한됩니다. 바깥 여백, {{cssxref("orphans")}}, {{cssxref("widows")}}와 페이지 넘김만 바꿀 수 있으며, 여백 지정 시 [절대길이 단위](/ko/docs/Web/CSS/Reference/Values/length#절대길이_단위)만 사용할 수 있습니다. 다른 모든 속성은 무시합니다.
 
 ## 구문
 

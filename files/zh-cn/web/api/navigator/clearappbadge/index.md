@@ -28,7 +28,7 @@ clearAppBadge()
 - `InvalidStateError` {{domxref("DOMException")}}
   - : 如果文档未完全激活，则抛出该异常。
 - `SecurityError` {{domxref("DOMException")}}
-  - : 如果调用被[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)阻止，则抛出该异常。
+  - : 如果调用被[同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)阻止，则抛出该异常。
 - `NotAllowedError` {{domxref("DOMException")}}
   - : 如果 {{domxref('PermissionStatus.state')}} 不是 `granted`，则抛出该异常。
 

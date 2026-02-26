@@ -1,12 +1,13 @@
 ---
 title: animation-play-state
 slug: Web/CSS/Reference/Properties/animation-play-state
-original_slug: Web/CSS/animation-play-state
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
 **`animation-play-state`** は [CSS](/ja/docs/Web/CSS) のプロパティで、アニメーションが実行中か停止中かを設定します。
+
+停止したアニメーションを再開すると、アニメーションの流れの最初からではなく、停止した位置からアニメーションが始まります。
 
 {{InteractiveExample("CSS デモ: animation-play-state")}}
 
@@ -30,7 +31,7 @@ animation-play-state: running;
   color: white;
   margin: auto;
   margin-left: 0;
-  border: 5px solid #333;
+  border: 5px solid #333333;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -57,8 +58,6 @@ animation-play-state: running;
   }
 }
 ```
-
-停止したアニメーションを再開すると、アニメーションの流れの最初からではなく、停止した位置からアニメーションが始まります。
 
 ## 構文
 

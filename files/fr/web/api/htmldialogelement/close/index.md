@@ -3,12 +3,12 @@ title: "HTMLDialogElement : méthode close()"
 short-title: close()
 slug: Web/API/HTMLDialogElement/close
 l10n:
-  sourceCommit: 7cd51a73ad94df604db79ccacbbe0513d0967650
+  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
 ---
 
 {{APIRef("HTML DOM")}}
 
-La méthode **`close()`** de l'interface {{domxref("HTMLDialogElement")}} ferme l'élément {{HTMLElement("dialog")}}.
+La méthode **`close()`** de l'interface {{DOMxRef("HTMLDialogElement")}} ferme l'élément {{HTMLElement("dialog")}}.
 Une chaîne de caractères optionnelle peut être passée en argument, ce qui met à jour la propriété `returnValue` de la boîte de dialogue.
 
 ## Syntaxe
@@ -20,12 +20,12 @@ close(returnValue)
 
 ### Paramètres
 
-- `returnValue` {{optional_inline}}
-  - : Chaîne de caractères représentant la nouvelle valeur de {{domxref("HTMLDialogElement.returnValue")}} de la boîte de dialogue.
+- `returnValue` {{Optional_Inline}}
+  - : Chaîne de caractères représentant la nouvelle valeur de {{DOMxRef("HTMLDialogElement.returnValue")}} de la boîte de dialogue.
 
 ### Valeur de retour
 
-Aucune ({{jsxref("undefined")}}).
+Aucune ({{JSxRef("undefined")}}).
 
 ## Exemples
 
@@ -36,7 +36,7 @@ Depuis cette boîte de dialogue, vous pouvez cliquer sur le bouton _X_ pour la f
 <!-- Boîte de dialogue simple contenant un formulaire -->
 <dialog id="favDialog">
   <form method="dialog">
-    <button id="close" aria-label="fermer" formnovalidate>X</button>
+    <button type="button" id="close" aria-label="fermer">X</button>
     <section>
       <p>
         <label for="favAnimal">Animal préféré&nbsp;:</label>
@@ -49,15 +49,17 @@ Depuis cette boîte de dialogue, vous pouvez cliquer sur le bouton _X_ pour la f
       </p>
     </section>
     <menu>
-      <button type="reset">Réinitialiser</button>
-      <button type="submit">Valider</button>
+      <li>
+        <button type="reset">Réinitialiser</button>
+      </li>
+      <li>
+        <button type="submit">Valider</button>
+      </li>
     </menu>
   </form>
 </dialog>
 
-<menu>
-  <button id="updateDetails">Mettre à jour les informations</button>
-</menu>
+<button id="updateDetails">Mettre à jour les informations</button>
 ```
 
 ```js
@@ -92,7 +94,7 @@ La soumission d'un formulaire ferme la balise `<dialog>` dans laquelle il est im
 
 ### Résultat
 
-{{ EmbedLiveSample('Examples', '100%', '200px') }}
+{{EmbedLiveSample('Examples', '100%', 200)}}
 
 ## Spécifications
 
@@ -104,5 +106,4 @@ La soumission d'un formulaire ferme la balise `<dialog>` dans laquelle il est im
 
 ## Voir aussi
 
-- Élément HTML implémentant cette interface&nbsp;:
-  - {{HTMLElement("dialog")}}
+- L'élément HTML implémentant cette interface&nbsp;: {{HTMLElement("dialog")}}

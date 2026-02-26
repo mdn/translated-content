@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/Styling_web_forms
 original_slug: Learn/Forms/Styling_web_forms
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
 > Dans cet article, nous allons apprendre comment utiliser [les CSS](/fr/docs/Web/CSS) avec les formulaires [HTML](/fr/docs/Web/HTML) pour (espérons-le) améliorer leur apparence. Étonnamment, ceci peut être délicat. Pour des raisons techniques et historiques, les widgets de formulaires ne s'allient pas très bien avec CSS. À cause de ces difficultés, de nombreux développeurs préfèrent [construire leurs propres widgets HTML](/fr/docs/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés) pour avoir plus de maîtrise sur leur apparence. Toutefois, avec les navigateurs modernes, les web designers ont de plus en plus d'emprise sur l'apparence de leurs formulaires. Voyons cela de plus près.
 
@@ -16,7 +16,7 @@ Quelques années plus tard, les CSS ont été créées et ce qui était une néc
 
 Comme les utilisateurs étaient habitués à l'apparence visuelle de leurs plateformes respectives, les fournisseurs de navigateurs étaient réticents à rendre possible la modification de l'apparence des formulaires. Et pour être honnête, il est toujours extrêmement difficile de reconstruire tous les contrôles pour que leur apparence soit modifiable.
 
-Même aujourd'hui, aucun des navigateurs n'a entièrement mis en œuvre les CSS 2.1. Avec le temps, les fournisseurs de navigateurs ont toutefois amélioré la compatibilité des CSS avec les éléments de formulaires, et bien que ce soit de mauvaise réputation pour leur utilisation, vous pouvez désormais modifier l'apparence des [formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\).
+Même aujourd'hui, aucun des navigateurs n'a entièrement mis en œuvre les CSS 2.1. Avec le temps, les fournisseurs de navigateurs ont toutefois amélioré la compatibilité des CSS avec les éléments de formulaires, et bien que ce soit de mauvaise réputation pour leur utilisation, vous pouvez désormais modifier l'apparence des [formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms).
 
 ### Tous les widgets ne sont pas égaux devant les CSS
 
@@ -399,4 +399,4 @@ Comme vous pouvez le voir, tant que nous voulons construire des formulaires avec
 
 Dans le [prochain article](/fr/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling), nous verrons comment gérer les widgets des catégories « brutes » et « truands ».
 
-{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}

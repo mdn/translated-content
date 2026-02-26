@@ -9,9 +9,9 @@ l10n:
 
 L'attribut **`min`** définit la valeur minimale acceptable et valide pour le champ de saisie qui contient cet attribut. Si la [valeur](/fr/docs/Web/HTML/Reference/Elements/input#value) de l'élément est inférieure à cette valeur, le champ échoue lors de la [validation](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation). Cette valeur doit être inférieure ou égale à la valeur de l'attribut `max`.
 
-Certains types de saisie ont une valeur minimale par défaut. Si le champ n'a pas de minimum par défaut et qu'une valeur spécifiée pour `min` ne peut pas être convertie en nombre valide (ou si aucune valeur minimale n'est définie), le champ n'a pas de valeur minimale.
+Certains types de saisie ont une valeur minimale par défaut. Si le champ n'a pas de minimum par défaut et qu'une valeur définie pour `min` ne peut pas être convertie en nombre valide (ou si aucune valeur minimale n'est définie), le champ n'a pas de valeur minimale.
 
-Cet attribut est valable pour les types de saisie suivants&nbsp;: {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} et {{HTMLElement("input/range", "range")}} ainsi que pour l'élément HTML {{HTMLElement('meter')}}.
+Cet attribut est valable pour les types de saisie suivants&nbsp;: `{{HTMLElement("input/date", "date")}}`, `{{HTMLElement("input/month", "month")}}`, `{{HTMLElement("input/week", "week")}}`, `{{HTMLElement("input/time", "time")}}`, `{{HTMLElement("input/datetime-local", "datetime-local")}}`, `{{HTMLElement("input/number", "number")}}` et `{{HTMLElement("input/range", "range")}}` ainsi que pour l'élément {{HTMLElement("meter")}}.
 
 ## Syntaxe
 
@@ -70,11 +70,11 @@ Cet attribut est valable pour les types de saisie suivants&nbsp;: {{HTMLElement(
 </table>
 
 > [!NOTE]
-> Lorsque les données saisies par l'utilisateur ne respectent pas la valeur minimale définie, la valeur est considérée comme non valide dans la validation des contraintes et correspondra aux pseudo-classes {{CSSxRef(':invalid')}} et {{CSSxRef(':out-of-range')}}.
+> Lorsque les données saisies par l'utilisateur·ice ne respectent pas la valeur minimale définie, la valeur est considérée comme non valide dans la validation des contraintes et correspondra aux pseudo-classes {{CSSxRef(":invalid")}} et {{CSSxRef(":out-of-range")}}.
 
 Voir la [validation côté client](/fr/docs/Web/HTML/Guides/Constraint_validation) et {{DOMxRef("ValidityState.rangeUnderflow", "rangeUnderflow")}} pour plus d'informations.
 
-Pour l'élément {{HTMLElement('meter')}}, l'attribut `min` définit la limite numérique inférieure de la plage mesurée. Celle-ci doit être inférieure à la valeur minimale (attribut [`max`](/fr/docs/Web/HTML/Reference/Attributes/max)), si elle est spécifiée. Dans les deux cas, si elle est omise, la valeur est égale à 1 par défaut.
+Pour l'élément {{HTMLElement("meter")}}, l'attribut `min` définit la limite numérique inférieure de la plage mesurée. Celle-ci doit être inférieure à la valeur minimale (attribut [`max`](/fr/docs/Web/HTML/Reference/Attributes/max)), si elle est définie. Dans les deux cas, si elle est omise, la valeur est égale à 1 par défaut.
 
 <table class="no-markdown">
   <caption>
@@ -104,7 +104,7 @@ Pour l'élément {{HTMLElement('meter')}}, l'attribut `min` définit la limite n
 
 Les valeurs de `min` et `step` définissent ce que sont les valeurs valides, même si l'attribut `step` n'est pas inclus, car `step` a par défaut la valeur `0`.
 
-Nous ajoutons une grande bordure rouge autour des entrées invalides :
+Nous ajoutons une grande bordure rouge autour des entrées invalides&nbsp;:
 
 ```css
 input:invalid {
@@ -126,7 +126,7 @@ S'il n'est pas explicitement inclus, `step` prend par défaut la valeur 1 pour `
 
 ## Accessibilité
 
-Fournissez des instructions pour aider les utilisateurs à comprendre comment remplir le formulaire et utiliser les contrôles individuels du formulaire. Indiquez toute entrée obligatoire et facultative, les formats de données et toute autre information pertinente. Lorsque vous utilisez l'attribut `min`, assurez-vous que cette exigence minimale est comprise par l'utilisateur. Fournir des instructions à l'intérieur des {{HTMLElement('label')}} peut être suffisant. Si vous fournissez des instructions en dehors des étiquettes, ce qui permet un positionnement et une conception plus souples, envisagez d'utiliser [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) ou [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
+Fournissez des instructions pour aider les utilisateur·ice·s à comprendre comment remplir le formulaire et utiliser les contrôles individuels du formulaire. Indiquez toute entrée obligatoire et facultative, les formats de données et toute autre information pertinente. Lorsque vous utilisez l'attribut `min`, assurez-vous que cette exigence minimale est comprise par l'utilisateur·ice. Fournir des instructions à l'intérieur des {{HTMLElement("label")}} peut être suffisant. Si vous fournissez des instructions en dehors des étiquettes, ce qui permet un positionnement et une conception plus souples, envisagez d'utiliser [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) ou [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
 
 ## Spécifications
 
@@ -143,8 +143,8 @@ Fournissez des instructions pour aider les utilisateurs à comprendre comment re
 - Les autres attributs de mesure&nbsp;: [`low`](/fr/docs/Web/HTML/Reference/Elements/meter#low), [`high`](/fr/docs/Web/HTML/Reference/Elements/meter#high), [`optimum`](/fr/docs/Web/HTML/Reference/Elements/meter#optimum)
 - [Validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation)
 - [Validation de formulaire](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- L'attribut JavaScript {{DOMxRef('validityState.rangeUnderflow')}}
-- La pseudo-classe CSS {{CSSxRef(':out-of-range')}}
-- L'élément HTML {{HTMLElement('input')}}
-- Les valeurs de l'attribut type {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} et {{HTMLElement("input/range", "range")}}
-- L'élément HTML {{HTMLElement('meter')}}
+- La propriété API {{DOMxRef("ValidityState.rangeUnderflow")}}
+- La pseudo-classe CSS {{CSSxRef(":out-of-range")}}
+- L'élément {{HTMLElement("input")}}
+- Les valeurs de l'attribut type `{{HTMLElement("input/date", "date")}}`, `{{HTMLElement("input/month", "month")}}`, `{{HTMLElement("input/week", "week")}}`, `{{HTMLElement("input/time", "time")}}`, `{{HTMLElement("input/datetime-local", "datetime-local")}}`, `{{HTMLElement("input/number", "number")}}` et `{{HTMLElement("input/range", "range")}}`
+- L'élément {{HTMLElement("meter")}}

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Loops
 original_slug: Learn/JavaScript/Building_blocks/Looping_code
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
 
 Les langages de programmation sont très utiles pour effectuer des tâches répétitives, allant de calculs basiques jusqu'à peu près n'importe quelle autre situation où vous avez un certain nombre d'actions similaires à répéter. Ici, nous allons étudier les structures de boucle disponible dans JavaScript qui répondent à un tel besoin.
 
@@ -856,4 +856,4 @@ S'il y a quelque chose que vous n'avez pas compris, n'hésitez pas à relire l'a
 - [`break`](/fr/docs/Web/JavaScript/Reference/Statements/break) et [`continue`](/fr/docs/Web/JavaScript/Reference/Statements/continue)
 - [<i lang="en">What's the Best Way to Write a JavaScript For Loop?</i> (en anglais)](https://www.impressivewebs.com/javascript-for-loop/) — quelques bonnes pratiques en matière de boucles
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}

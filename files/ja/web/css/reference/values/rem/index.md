@@ -1,9 +1,8 @@
 ---
 title: rem()
 slug: Web/CSS/Reference/Values/rem
-original_slug: Web/CSS/rem
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
 **`rem()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、最初の引数を 2 つ目の引数で割ったときの剰余を返します。これは、JavaScript の[剰余演算子 (`%`)](/ja/docs/Web/JavaScript/Reference/Operators/Remainder) と似ています。剰余は、1 つのオペランド（被除数）を 2 つ目のオペランド（除数）で割ったときに残る値です。常に被除数の符号を取ります。
@@ -42,7 +41,7 @@ transition-duration: rem(20s / 2, 3000ms * 2); /* 4s */
 
 ### 引数
 
-関数 `mod(dividend, divisor)` は、カンマで区切られた 2 つの値を引数として受け入れます。関数が有効であるためには、両方の引数は同じ型、[数値](/ja/docs/Web/CSS/Reference/Values/number)、[サイズ](/ja/docs/Web/CSS/Reference/Values/dimension)、{{cssxref("percentage")}} のいずれかである必要があります。2 つの引数の単位は同じである必要はありませんが、{{cssxref("length")}}、{{cssxref("angle")}}、{{cssxref("time")}}、{{cssxref("frequency")}} などの同じサイズの型である必要があります。
+関数 `rem(dividend, divisor)` は、カンマで区切られた 2 つの値を引数として受け入れます。関数が有効であるためには、両方の引数は同じ型、[数値](/ja/docs/Web/CSS/Reference/Values/number)、[サイズ](/ja/docs/Web/CSS/Reference/Values/dimension)、{{cssxref("percentage")}} のいずれかである必要があります。2 つの引数の単位は同じである必要はありませんが、{{cssxref("length")}}、{{cssxref("angle")}}、{{cssxref("time")}}、{{cssxref("frequency")}} などの同じサイズの型である必要があります。
 
 - `dividend`
   - : 被除数を表す {{CSSxREF("&lt;number&gt;")}}、{{CSSxREF("&lt;dimension&gt;")}}、{{CSSxREF("&lt;percentage&gt;")}} に解決される計算式。

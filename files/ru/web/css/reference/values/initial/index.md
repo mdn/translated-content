@@ -9,7 +9,7 @@ original_slug: Web/CSS/initial
 Ключевое слово **`initial`** (CSS) устанавливает свойство элемента в [начальное (или по умолчанию) значение](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing). Это может быть применимо к любому свойству CSS. Это относится также к CSS-свойству {{cssxref("all")}}, с которым `initial` может быть использовано для восстановления всех CSS-свойств до их начальных значений.
 
 > [!NOTE]
-> На [наследуемые свойства](/ru/docs/Web/CSS/CSS_cascade/Inheritance#inherited_properties) действие значения initial может быть непредвиденным. Вы должны рассмотреть возможность использования ключевых слов {{cssxref("inherit")}}, {{cssxref("unset")}} или {{cssxref("revert")}} вместо него.
+> На [наследуемые свойства](/ru/docs/Web/CSS/Guides/Cascade/Inheritance#inherited_properties) действие значения initial может быть непредвиденным. Вы должны рассмотреть возможность использования ключевых слов {{cssxref("inherit")}}, {{cssxref("unset")}} или {{cssxref("revert")}} вместо него.
 
 ## Пример
 

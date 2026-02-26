@@ -1,9 +1,8 @@
 ---
 title: font-style
 slug: Web/CSS/Reference/Properties/font-style
-original_slug: Web/CSS/font-style
 l10n:
-  sourceCommit: ad6eb6b52b4b3082397e8e011bd59a6d88a8f5f3
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`font-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{cssxref("font-family")}} の中で通常体 (normal)、筆記体 (italic)、斜体 (oblique) のどのスタイルにするか設定します。
@@ -41,13 +40,13 @@ font-style: oblique 40deg;
 ```css interactive-example
 @font-face {
   src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
-  font-family: Amstelvar;
+  font-family: "Amstelvar";
   font-style: normal;
 }
 
 section {
   font-size: 1.2em;
-  font-family: Amstelvar;
+  font-family: "Amstelvar", serif;
 }
 ```
 
@@ -79,10 +78,10 @@ font-style: unset;
   - : `italic` として分類されているフォントを選択します。 italic フェイスが使用できない場合は、代わりに `oblique` に分類されているフォントを選択します。どちらも利用できない場合は、スタイルは人工的にシミュレートされます。
 - `oblique`
   - : `oblique` として分類されているフォントを選択します。 oblique フェイスが使用できない場合は、代わりに `italic` に分類されているフォントを選択します。どちらも利用できない場合は、スタイルは人工的にシミュレートされます。
-- `oblique` [`<angle>`](/ja/docs/Web/CSS/Reference/Values/angle)
-  - : `oblique` として分類されているフォントを選択し、加えてテキストの傾きの角度を指定します。選択されたフォントファミリで１つまたは複数の oblique フェイスが利用できる場合、指定した角度に最も近いものが選択されます。 oblique フェイスが利用できない場合、ブラウザーは通常のフェイスを指定した大きさだけ傾けることで、 oblique バージョンを作成します。有効な値は-90以上90以下の角度の値です。角度が指定されない場合、14度の角度が使用されます。正の数では行末に向けて傾け、負の数では行頭に向けて傾けます。
+- `oblique` {{cssxref("angle")}}
+  - : `oblique` として分類されているフォントを選択し、加えてテキストの傾きの角度を指定します。選択されたフォントファミリで１つまたは複数の oblique フェイスが利用できる場合、指定した角度に最も近いものが選択されます。 oblique フェイスが利用できない場合、ブラウザーは通常のフェイスを指定した大きさだけ傾けることで、 oblique バージョンを作成します。有効な値は `-90deg` 以上 `90deg` 以下の角度の値です。角度が指定されない場合、 14 度の角度が使用されます。正の数では行末に向けて傾け、負の数では行頭に向けて傾けます。
 
-    一般に、要求された角度が14度以上の場合、大きな角度が推奨されます。その他の場合は、より小さい角度が推奨されます (アルゴリズムの詳細は、仕様書の [font matching section](https://drafts.csswg.org/css-fonts-4/#font-matching-algorithm) を参照してください)。
+    一般に、要求された角度が 14 度以上の場合、大きな角度が推奨されます。その他の場合は、より小さい角度が推奨されます (アルゴリズムの詳細は、仕様書の [font matching section](https://drafts.csswg.org/css-fonts-4/#font-matching-algorithm) を参照してください)。
 
 ### 可変フォント
 
@@ -110,19 +109,19 @@ TrueType または OpenType の可変フォントでは、 `"slnt"` 変数が ob
   font:
     2rem "AmstelvarAlpha",
     sans-serif;
-  /*font-variation-settings: "slnt" 12;*/
+  /* font-variation-settings: "slnt" 12; */
   font-style: oblique 23deg;
 }
 ```
 
 {{EmbedLiveSample("oblique-example", "", "200px")}}
 
-## アクセシビリティの考慮
+## アクセシビリティ
 
 テキストの長い区間に渡って `font-style` の値を `italic` に設定すると、失読症のような認知問題を抱える人にとって読むのが難しくなる可能性があります。
 
 - [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
-- [W3C Understanding WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation)
+- [W3C Understanding WCAG 2.2](https://w3c.github.io/wcag/guidelines/22/#visual-presentation)
 
 ## 公式定義
 
@@ -170,4 +169,5 @@ TrueType または OpenType の可変フォントでは、 `"slnt"` 変数が ob
 
 - {{cssxref("font-family")}}
 - {{cssxref("font-weight")}}
-- [基本的なテキストとフォントの装飾](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)
+- SVG の {{SVGAttr("font-style")}} 属性
+- [基本的なテキストとフォントのスタイル設定](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)

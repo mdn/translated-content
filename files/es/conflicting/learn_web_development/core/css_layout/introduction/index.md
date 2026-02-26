@@ -6,7 +6,7 @@ original_slug: Learn/CSS/CSS_layout/Normal_Flow
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout")}}
 
 Este artículo explica el flujo normal, o la forma en que se presentan los elementos de la página web si no cambias su compaginación.
 
@@ -106,4 +106,4 @@ span {
 
 Ahora que comprendes el flujo normal y cómo el navegador presenta las cosas por defecto, continúa para comprender cómo cambiar esta pantalla predeterminada para crear el diseño que necesitas.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout")}}
