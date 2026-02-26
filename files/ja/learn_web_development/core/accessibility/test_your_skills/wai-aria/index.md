@@ -1,5 +1,5 @@
 ---
-title: "スキルテスト: WAI-ARIA"
+title: "確認テスト: WAI-ARIA"
 slug: Learn_web_development/Core/Accessibility/Test_your_skills/WAI-ARIA
 original_slug: Learn_web_development/Core/Accessibility/WAI-ARIA_basics/Test_your_skills:_WAI-ARIA
 l10n:
@@ -8,7 +8,7 @@ l10n:
 
 {{learnsidebar}}
 
-このスキルテストの目的は、あなたが[WAI-ARIA の基本](/ja/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics)の記事を理解したかどうかを評価することです。
+この確認テストの目的は、あなたが[WAI-ARIA の基本](/ja/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics)の記事を理解したかどうかを評価することです。
 
 > [!NOTE]
 > このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
@@ -44,7 +44,7 @@ l10n:
 
 ## WAI-ARIA 3
 
-最後の WAI-ARIA の課題では、前回の [CSS と JavaScript のスキルテスト](/ja/docs/Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript)で見た例を返します。前回と同様に、動物の名前のリストを表示する単純なアプリがあります。動物の名前を 1 つクリックすると、その動物の詳細な説明がリスト以下のボックスに現れます。ここでは、マウスとキーボードでアクセスできるバージョンから始めています。
+最後の WAI-ARIA の課題では、前回の [CSS と JavaScript の確認テスト](/ja/docs/Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript)で見た例を返します。前回と同様に、動物の名前のリストを表示する単純なアプリがあります。動物の名前を 1 つクリックすると、その動物の詳細な説明がリスト以下のボックスに現れます。ここでは、マウスとキーボードでアクセスできるバージョンから始めています。
 
 ここでの問題は、 DOM が新しい説明を表示させるために変更されたとき、スクリーンリーダーは何が変更されたのかわからないということです。説明の変更がスクリーンリーダーによってアナウンスされるように更新することはできますか。
 

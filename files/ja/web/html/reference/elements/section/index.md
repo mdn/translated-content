@@ -1,32 +1,28 @@
 ---
 title: "<section>: 汎用セクション要素"
 slug: Web/HTML/Reference/Elements/section
-original_slug: Web/HTML/Element/section
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
-
-{{HTMLSidebar}}
 
 **`<section>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書の自立した一般的なセクション（区間）を表します。そのセクションを表現するより意味的に具体的な要素がない場合に使用します。少数の例外を除いて、セクションには見出しを置いてください。
 
 {{InteractiveExample("HTML デモ: &lt;section&gt;", "tabbed-standard")}}
 
-```html interactive-example
-<h1>Choosing an Apple</h1>
+```html-nolint interactive-example
+<h1>リンゴの選択方法</h1>
 <section>
-  <h2>Introduction</h2>
+  <h2>はじめに</h2>
   <p>
-    This document provides a guide to help with the important task of choosing
-    the correct Apple.
+    この文書は、適切なリンゴを正しく選ぶという重要な課題を支援するためのガイドを提供します。
   </p>
 </section>
 
 <section>
-  <h2>Criteria</h2>
+  <h2>基準</h2>
   <p>
-    There are many different criteria to be considered when choosing an Apple —
-    size, color, firmness, sweetness, tartness...
+    リンゴを選べるときには、さまざまな基準を考えてみる必要があります。
+    サイズ、色、硬さ、甘さ、酸味...
   </p>
 </section>
 ```
@@ -42,9 +38,9 @@ h2 {
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
 
-## 使用上の注意
+## 使用上のメモ
 
-前述のように、 `<section>` は汎用的な区分要素ですので、それを表現するためのより具体的な要素がない場合にのみ使用してください。例えば、ナビゲーションメニューは {{htmlelement("nav")}} 要素で囲むべきですが、検索結果のリストや地図表示とそのコントロールなどは特定の要素を持たないので、 `<section>` の中に入れることができます。
+前述のように、 `<section>` は汎用的な区分要素ですので、それを表現するためのより具体的な要素がない場合にのみ使用してください。例えば、ナビゲーションメニューは {{htmlelement("nav")}} 要素で囲むべきですが、検索結果のリストや地図表示とそのコントロールなどは特定の要素を持たないので、`<section>` の中に入れることができます。
 
 また、次のようなことも考慮してください。
 
@@ -58,7 +54,7 @@ h2 {
 
 ## 例
 
-### 単純な使い方の例
+### 基本的な使い方の例
 
 #### 導入前
 
@@ -108,16 +104,6 @@ h2 {
   <button class="fwd">転送</button>
   <button class="del">削除</button>
 </section>
-```
-
-支援技術やスクリーンリーダーに適した CSS を使って非表示にするには、次のようにします。
-
-```css
-.hidden {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-}
 ```
 
 #### 結果
@@ -178,12 +164,11 @@ h2 {
             >region</a
           ></code
         >
-        （要素に<a
-          href="https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/"
-          >アクセシブル名</a
-        >がある場合）、それ以外の場合は<a
-          href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >対応するロールなし</a
+        （要素に<a href="/ja/docs/Glossary/Accessible_name">アクセシブル名</a>がある場合）、それ以外の場合は
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
+            >generic</a
+          ></code
         >
       </td>
     </tr>

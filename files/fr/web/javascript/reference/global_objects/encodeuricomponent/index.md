@@ -1,132 +1,123 @@
 ---
 title: encodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
+l10n:
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
 
-{{jsSidebar("Objects")}}
+La fonction **`encodeURIComponent()`** encode un {{Glossary("URI")}} en remplaçant chaque occurrence de certains caractères par une, deux, trois ou quatre séquences d'échappement représentant l'encodage {{Glossary("UTF-8")}} du caractère (il n'y aura quatre séquences d'échappement que pour les caractères composés de deux demi-codets). Par rapport à {{JSxRef("encodeURI()")}}, cette fonction encode davantage de caractères, y compris ceux qui font partie de la syntaxe de l'URI.
 
-La fonction **`encodeURIComponent()`** permet d'encoder un composant d'un Uniform Resource Identifier (URI) en remplaçant chaque exemplaire de certains caractères par une, deux, trois ou quatres séquences d'échappement UTF-8 correspondantes (quatre séquences seront utilisées uniquement lorsque les caractères à encoder sont composés de deux caractères « _surrogate_ »).
-
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - encodeURIComponent()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: encodeURIComponent()", "shorter")}}
 
 ```js interactive-example
-// Encodes characters such as ?,=,/,&,:
+// Encode les caractères tels que ?,=,/,&,:
 console.log(`?x=${encodeURIComponent("test?")}`);
-// Expected output: "?x=test%3F"
+// Résultat attendu : "?x=test%3F"
 
 console.log(`?x=${encodeURIComponent("шеллы")}`);
-// Expected output: "?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+// Résultat attendu : "?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
 ```
 
 ## Syntaxe
 
-```js
-encodeURIComponent(str);
+```js-nolint
+encodeURIComponent(uriComponent)
 ```
 
 ### Paramètres
 
-- `str`
-  - : Une chaîne de caractères qui correspond à un composant d'URI.
+- `uriComponent`
+  - : Une chaîne de caractères à encoder comme composant d'URI (un chemin, une chaîne de requête, un fragment, etc.). Les autres valeurs sont [contrainte en chaînes de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#contrainte_de_chaîne_de_caractères).
 
 ### Valeur de retour
 
-Une nouvelle chaîne de caractères qui représente un composant d'URI obtenu en encodant la chaîne passée en argument.
+Une nouvelle chaîne de caractères qui représente le `uriComponent` fourni, encodé comme composant d'URI.
+
+### Exceptions
+
+- {{JSxRef("URIError")}}
+  - : Levée si `uriComponent` contient un [codet suppléant isolé](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#caractères_utf-16_points_de_code_unicode_et_clusters_de_graphèmes).
 
 ## Description
 
-`encodeURIComponent()` échappe tous les caractères sauf : les lettres de l'alphabet latin, les chiffres (arabes) et `- _ . ! ~ * ' ( )`
+`encodeURIComponent()` est une propriété de fonction de l'objet global.
 
-La méthode `encodeURIComponent()` diffère de la méthode `encodeURI()` par rapport aux caractères qui sont encodés :
+`encodeURIComponent()` utilise le même algorithme d'encodage que celui décrit dans {{JSxRef("encodeURI()")}}. Il échappe tous les caractères **sauf**&nbsp;:
 
-```js
-var set1 = ";,/?:@&=+$"; // Caractères réservés
-var set2 = "-_.!~*'()"; // Caractères non-réservés
-var set3 = "#"; // Croisillon
-var set4 = "ABC abc 123"; // Caractères alphanumériques et espace
-
-console.log(encodeURI(set1)); // ;,/?:@&=+$
-console.log(encodeURI(set2)); // -_.!~*'()
-console.log(encodeURI(set3)); // #
-console.log(encodeURI(set4)); // ABC%20abc%20123 (l'espace est encodé en %20)
-
-console.log(encodeURIComponent(set1)); // %3B%2C%2F%3F%3A%40%26%3D%2B%24
-console.log(encodeURIComponent(set2)); // -_.!~*'()
-console.log(encodeURIComponent(set3)); // %23
-console.log(encodeURIComponent(set4)); // ABC%20abc%20123 (l'espace est encodé en %20)
+```plain
+A—Z a—z 0—9 - _ . ! ~ * ' ( )
 ```
 
-Une exception {{jsxref("URIError")}} sera levée lorsqu'on utilise cette fonction sur un unique demi-codet qui est censé faire partie d'une paire de demi-codets :
+Par rapport à {{JSxRef("encodeURI()")}}, `encodeURIComponent()` échappe un ensemble plus large de caractères. Utiliser `encodeURIComponent()` sur les champs saisis par l'utilisateur·ice dans les formulaires envoyés au serveur — cela encode les symboles `&` qui peuvent être générés par inadvertance lors de la saisie de données pour {{Glossary("character reference", "la références de caractères")}} ou d'autres caractères qui nécessitent un encodage/décodage. Par exemple, si un·e utilisateur·ice écrit `Jack & Jill`, sans `encodeURIComponent()`, l'esperluette peut être interprétée par le serveur comme le début d'un nouveau champ et compromettre l'intégrité des données.
 
-```js
-// la paire de demi-codets : OK
-console.log(encodeURIComponent("\uD800\uDFFF"));
-
-// seul le demi-codet supérieur : "URIError: malformed URI sequence"
-console.log(encodeURIComponent("\uD800"));
-
-// seul le demi-codet inférieur : "URIError: malformed URI sequence"
-console.log(encodeURIComponent("\uDFFF"));
-```
-
-Afin d'éviter des requêtes inattendues vers le serveur, il est conseillé d'utiliser la fonction `encodeURIComponent()` pour n'importe quel paramètre qui aurait été saisi par l'utilisateur et qui ferait partie d'un URI. Ainsi, si un utilisateur peut saisir "`Thym &access=admin`" dans une variable `commentaire` et qu'on n'utilise pas `encodeURIComponent()`, on obtiendra la chaîne `commentaire=Thym%20&access=admin`. On voit ici que l'esperluette (&) et le signe égal forment une nouvelle paire clé/valeur. Au lieu d'avoir une clé POST `commentaire` égale à "`Thym &access=admin`", on aura deux clés POST, l'une égale à "`Thym`" et une seconde (`access`) égale à `admin`.
-
-Pour [`application/x-www-form-urlencoded`](https://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#application/x-www-form-urlencoded-encoding-algorithm), les espaces sont remplacés par un '+', aussi, dans ce cas, on pourra ajouter un remplacement supplémentaire après `encodeURIComponent()` pour remplacer "%20" par "+".
-
-Pour utiliser une fonction qui respecte la [RFC 3986](https://tools.ietf.org/html/rfc3986), plus stricte (qui réserve les caractères !, ', (, ), et \* même si ces caractères n'ont pas d'usage normalisé), on pourra utiliser la fonction suivante :
-
-```js
-function fixedEncodeURIComponent(str) {
-  return encodeURIComponent(str).replace(/[!'()*]/g, function (c) {
-    return "%" + c.charCodeAt(0).toString(16);
-  });
-}
-```
+Pour [`application/x-www-form-urlencoded` <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#application/x-www-form-urlencoded-encoding-algorithm), les espaces doivent être remplacés par `+`, il peut donc être utile de suivre un remplacement `encodeURIComponent()` par un remplacement supplémentaire de `%20` par `+`.
 
 ## Exemples
 
-Dans l'exemple qui suit, on utilise une méthode spéciale pour l'encodage afin d'utiliser les paramètres d'en-tête de réponse `Content-Disposition` et `Link` (pour, par exemple, représenter des noms de fichiers en UTF-8) :
+### Encodage pour les en-têtes `Content-Disposition` et `Link`
+
+L'exemple suivant fournit l'encodage spécial requis dans les paramètres d'en-tête de réponse du serveur UTF-8 {{HTTPHeader("Content-Disposition")}} et {{HTTPHeader("Link")}} (par exemple, des noms de fichiers en UTF-8)&nbsp;:
 
 ```js
-var nomFichier = "mon fichier(2).txt";
-var header =
-  "Content-Disposition: attachment; filename*=UTF-8''" +
-  encodeRFC5987ValueChars(nomFichier);
+const nomFichier = "mon fichier(2).txt";
+const enTete = `Content-Disposition: attachment; filename*=UTF-8''${encodeRFC5987ValueChars(
+  nomFichier,
+)}`;
 
-console.log(header);
-// affiche "Content-Disposition: attachment; filename*=UTF-8''mon%20fichier%282%29.txt"
+console.log(enTete);
+// "Content-Disposition: attachment; filename*=UTF-8''mon%20fichier%282%29.txt"
 
 function encodeRFC5987ValueChars(str) {
   return (
     encodeURIComponent(str)
-      // Bien que la RFC 3986 réserve "!", RFC 5987 ne réserve pas ce caractère,
-      // il n'est donc pas nécessaire l'échapper
-      .replace(/['()]/g, escape) // c'est-à-dire %27 %28 %29
-      .replace(/\*/g, "%2A")
-      // Selon la RFC 5987 ce qui suit n'est pas nécessairement requis
-      // on peut donc bénéficier d'un peu plus de lisibilité : |`^
-      .replace(/%(?:7C|60|5E)/g, unescape)
-  );
-}
-
-// Voici une autre version équivalente
-function encodeRFC5987ValueChars2(str) {
-  return (
-    encodeURIComponent(str)
-      // Bien que la RFC 3986 réserve "!", RFC 5987 ne réserve pas ce caractère,
-      // il n'est donc pas nécessaire l'échapper
-      .replace(/['()*]/g, (c) => "%" + c.charCodeAt(0).toString(16)) // i.e., %27 %28 %29 %2a
-      // on notera que l'encodage valide pour "*" est %2A et qui faut donc appeler toUpperCase()
-      // pour encoder exactement.
-
-      // Selon la RFC 5987 ce qui suit n'est pas nécessairement requis
-      // on peut donc bénéficier d'un peu plus de lisibilité : |`^
+      // Ce qui suit crée les séquences %27 %28 %29 %2A (Remarquez que
+      // l'encodage valide de "*" est %2A, ce qui nécessite d'appeler
+      // toUpperCase() pour encoder correctement). Bien que RFC3986
+      // réserve "!", la RFC5987 ne le fait pas, il n'est donc pas
+      // nécessaire de l'échapper.
+      .replace(
+        /['()*]/g,
+        (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`,
+      )
+      // Ce qui suit n'est pas requis pour l'encodage en pourcentage
+      // selon la RFC5987, on peut donc bénéficier d'une meilleure
+      // lisibilité sur le fil&nbsp;: |`^
       .replace(/%(7C|60|5E)/g, (str, hex) =>
         String.fromCharCode(parseInt(hex, 16)),
       )
   );
 }
 ```
+
+### Encodage pour RFC3986
+
+La [RFC3986 <sup>(angl.)</sup>](https://datatracker.ietf.org/doc/html/rfc3986) plus récente réserve `!`, `'`, `(`, `)` et `*`, même si ces caractères n'ont pas d'usage formalisé de délimitation d'URI. La fonction suivante encode une chaîne de caractères pour le format de composant d'URL conforme à RFC3986. Elle encode également `[` et `]`, qui font partie de la syntaxe URI {{Glossary("IPv6")}}. Une implémentation conforme à RFC3986 de `encodeURI` ne doit pas les échapper, ce qui est démontré dans l'[exemple `encodeURI()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/encodeURI#encodage_pour_rfc3986).
+
+```js
+function encodeRFC3986URIComponent(str) {
+  return encodeURIComponent(str).replace(
+    /[!'()*]/g,
+    (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`,
+  );
+}
+```
+
+### Encoder un codet suppléant isolé génère une exception
+
+Une {{JSxRef("URIError")}} sera levée si vous tentez d'encoder un codet suppléant qui ne fait pas partie d'une paire haut-bas. Par exemple&nbsp;:
+
+```js
+// Paire haut-bas OK
+encodeURIComponent("\uD800\uDFFF"); // "%F0%90%8F%BF"
+
+// Codet suppléant haut isolé génère "URIError: malformed URI sequence"
+encodeURIComponent("\uD800");
+
+// Codet suppléant bas isolé génère "URIError: malformed URI sequence"
+encodeURIComponent("\uDFFF");
+```
+
+Vous pouvez utiliser {{JSxRef("String.prototype.toWellFormed()")}}, qui remplace les codets suppléants isolés par le caractère de remplacement Unicode (U+FFFD), pour éviter cette erreur. Vous pouvez aussi utiliser {{JSxRef("String.prototype.isWellFormed()")}} pour vérifier si une chaîne de caractères contient des codets suppléants isolés avant de la passer à `encodeURIComponent()`.
 
 ## Spécifications
 
@@ -138,6 +129,6 @@ function encodeRFC5987ValueChars2(str) {
 
 ## Voir aussi
 
-- {{jsxref("decodeURI")}}
-- {{jsxref("encodeURI")}}
-- {{jsxref("decodeURIComponent")}}
+- La fonction {{JSxRef("decodeURI()")}}
+- La fonction {{JSxRef("encodeURI()")}}
+- La fonction {{JSxRef("decodeURIComponent()")}}
