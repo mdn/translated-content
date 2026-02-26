@@ -1,17 +1,16 @@
 ---
 title: Создание кроссбраузерного видеоплеера
 slug: Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player
-page-type: guide
-sidebar: mediasidebar
+l10n.sourceCommit: 2cfe890333cb1e081d374191ef4844f51ad0084b
 ---
 
-В этой статье описан базовый HTML-видеоплеер, использующий API Media и Fullscreen. Помимо возможности работы в полноэкранном режиме, в плеере реализованы собственные элементы управления (а не используемые по умолчанию браузерные). Элементы управления плеера будут стилизованы минимально, только для обеспечения их работоспособности; полная стилизация плеера будет рассмотрена в другой статье.
+В этой статье описывается базовый HTML-видеоплеер, использующий API Media и Fullscreen. Помимо возможности работы в полноэкранном режиме, в плеере реализованы собственные элементы управления вместо стандартных браузерных. Элементы управления плеера будут стилизованы минимально, только для обеспечения их работоспособности; полная стилизация плеера будет рассмотрена в другой статье.
 
-Предлагаемый видеоплеер показывает клип из опенсорсного видео [Tears of Steel](https://mango.blender.org/about/) и содержит в себе типовые элементы управления видео.
+Предлагаемый видеоплеер показывает фрагмент из свободного видео [Tears of Steel](https://mango.blender.org/about/) и включает типичные элементы управления видео.
 
 ## HTML-разметка
 
-Для начала давайте посмотрим на HTML-код плеера.
+Для начала рассмотрим HTML-код плеера.
 
 ### Видео
 
@@ -45,50 +44,50 @@ sidebar: mediasidebar
 </video>
 ```
 
-Несмотря на то, что в плеере будет реализован собственный набор элементов управления, атрибут `controls` всё равно добавлен в элемент {{ htmlelement("video") }} и набор элементов управления, существующий в плеере по умолчанию, будет отключен позже с помощью JavaScript. Такой подход позволяет пользователям, у которых отключён JavaScript (по любой причине), по-прежнему иметь доступ к встроенным элементам управления браузера.
+Несмотря на то, что в плеере будет реализован собственный набор элементов управления, атрибут `controls` всё равно добавлен в элемент {{ htmlelement("video") }}, набор элементов управления, существующий в плеере по умолчанию, будет отключен позже с помощью JavaScript. Такой подход позволяет пользователям, у которых отключён JavaScript (по любой причине), по-прежнему иметь доступ к встроенным элементам управления браузера.
 
 Для видео задано изображение-заставка (poster), а атрибут `preload` установлен в значение `metadata`. Это указывает браузеру, что изначально следует загружать только метаданные из видеофайла, а не весь файл целиком. Это позволяет получить плееру такие данные, как длительность видео и его формат.
 
-Для плеера предоставлены три различных источника видео: MP4, WebM и Ogg. Использование этих разных форматов обеспечивает максимальную вероятность поддержки во всех браузерах, поддерживающих воспроизведение HTML-видео. Дополнительную информацию о форматах видео и совместимости с браузерами см. [выбор видеокодека](/ru/docs/Web/Media/Guides/Formats/Video_codecs#choosing_a_video_codec).
+Для плеера предоставлены три различных источника видео: MP4, WebM и Ogg. Использование этих форматов обеспечивает максимальную вероятность поддержки во всех браузерах, поддерживающих воспроизведение HTML-видео. Дополнительную информацию о форматах видео и совместимости с браузерами см. в [выборе видеокодека](/ru/docs/Web/Media/Guides/Formats/Video_codecs#choosing_a_video_codec).
 
-Приведённый выше код позволит воспроизводить видео в большинстве браузеров с помощью стандартного набора элементов управления браузера. Следующий шаг – определение собственного набора элементов управления, который будет использоваться для управления видео, также на HTML.
+Приведённый выше код позволит воспроизводить видео в большинстве браузеров с помощью стандартного набора элементов управления браузера. Следующий шаг — определение собственного набора элементов управления, который будет использоваться для управления видео, также на HTML.
 
 ### Набор элементов управления
 
 Стандартные элементы управления видео в большинстве браузеров обладают следующим функционалом:
 
 - Воспроизведение/пауза
-- Отключение звука (Mute)
+- Отключение звука
 - Регулировка громкости
-- Индикатор прогресса (прогресс-бар)
+- Индикатор прогресса
 - Перемотка вперед
 - Полноэкранный режим
 
-Созданный набор элементов управления также будет поддерживать все эти функции, с добавлением кнопки остановки.
+Собственный набор элементов управления также будет поддерживать все эти функции, с добавлением кнопки остановки.
 
-HTML-разметка здесь довольно проста: для размещения элементов управления используется неупорядоченный список со свойством `list-style-type:none`. Каждый элемент управления представлен элементом списка с примененным стилем `float:left`. Для индикатора прогресса (прогресс-бар) используется элемент `progress`. Этот список размещается сразу после элемента {{ htmlelement("video") }}, но внутри элемента {{ htmlelement("figure") }} (это важно для работы полноэкранного режима, о чем будет рассказано далее).
+HTML-разметка довольно проста: для размещения элементов управления используется неупорядоченный список со свойством `list-style-type:none`. Каждый элемент управления представлен элементом списка с примененным стилем `float:left`. Для индикатора прогресса (прогресс-бар) используется элемент `progress`. Этот список размещается сразу после элемента {{ htmlelement("video") }}, но внутри элемента {{ htmlelement("figure") }} (это важно для работы полноэкранного режима, о чем будет рассказано далее).
 
 ```html live-sample___video-player
 <ul id="video-controls" class="controls" data-state="hidden">
-  <li><button id="play-pause" type="button">Воспр./пауза</button></li>
+  <li><button id="play-pause" type="button">Воспроизведение/пауза</button></li>
   <li><button id="stop" type="button">Стоп</button></li>
   <li class="progress">
     <progress id="progress" value="0"></progress>
   </li>
   <li><button id="mute" type="button">Звук выкл./вкл.</button></li>
-  <li><button id="vol-inc" type="button">Громк.+</button></li>
-  <li><button id="vol-dec" type="button">Громк.-</button></li>
-  <li><button id="fs" type="button">Полный экран</button></li>
+  <li><button id="vol-inc" type="button">Громкость +</button></li>
+  <li><button id="vol-dec" type="button">Громкость -</button></li>
+  <li><button id="fs" type="button">Полноэкранный режим</button></li>
 </ul>
 ```
 
-Each button is given an `id` so it can be easily accessed with JavaScript.
+Каждой кнопке присвоен `id`, чтобы к ней можно было легко получить доступ через JavaScript.
 
-The controls are initially hidden with a CSS `display:none` and will be enabled with JavaScript. Again if a user has JavaScript disabled, the custom control set will not appear and they can use the browser's default control set unhindered.
+Элементы управления изначально скрыты с помощью CSS `display:none` и будут показаны с помощью JavaScript. Опять же, если у пользователя отключён JavaScript, собственный набор элементов управления не появится, и можно будет беспрепятственно использовать стандартные элементы управления браузера.
 
-Of course, this custom control set is currently useless and doesn't do a thing: Let's improve the situation with JavaScript.
+Конечно, этот собственный набор элементов управления на данном этапе бесполезен и ничего не делает. Ситуацию можно исправить с помощью JavaScript.
 
-Finally we close off the `<figure>` element with a {{htmlelement("figcaption")}} containing the copyright information.
+В конце мы закрываем элемент `<figure>` с помощью {{htmlelement("figcaption")}}, содержащего информацию об авторских правах.
 
 ```html live-sample___video-player
   <figcaption>
@@ -98,13 +97,13 @@ Finally we close off the `<figure>` element with a {{htmlelement("figcaption")}}
 </figure>
 ```
 
-## Using the Media API
+## Использование Media API
 
-HTML comes with a JavaScript [Media API](/ru/docs/Web/API/HTMLMediaElement) that allows developers access to and control of HTML media. This API will be used to make the custom control set defined above actually do something. In addition, the fullscreen button will use the [Fullscreen API](/ru/docs/Web/API/Fullscreen_API), another W3C API that controls the ability of web browsers to show apps using your computer's full screen.
+HTML поставляется c [Media API](/ru/docs/Web/API/HTMLMediaElement) JavaScript, что позволяет разработчикам получить доступ к медиа HTML и управлять ими. Этот API будет использоваться для того, чтобы собственный набор элементов управления, определённый выше, выполнял свои функции. Кроме того, кнопка полноэкранного режима будет использовать [Fullscreen API](/ru/docs/Web/API/Fullscreen_API) — ещё один API W3C, который контролирует возможность веб-браузеров отображать приложения на всём экране компьютера.
 
-### Setup
+### Настройка
 
-Before dealing with the individual buttons, a number of initialization calls are required. Variables pointing to HTML elements are required:
+Прежде чем работать с отдельными кнопками, требуется выполнить ряд инициализирующих вызовов. Необходимы переменные, указывающие на HTML-элементы:
 
 ```js live-sample___video-player
 const videoContainer = document.getElementById("videoContainer");
@@ -119,18 +118,18 @@ const progress = document.getElementById("progress");
 const fullscreen = document.getElementById("fs");
 ```
 
-Using these handles, events can now be attached to each of the custom control buttons making them interactive. Most of these buttons require a `click` event listener to be added, and a Media API defined method and/or attributes to be called/checked on the video.
+С помощью этих ссылок можно «привязать» события к каждой из кнопок собственного набора элементов управления, сделав их интерактивными. Большинству этих кнопок требуется добавить обработчик события `click`, а также метод и/или атрибуты, определенные Media API, которые будут вызываться / проверяться на видео.
 
-As mentioned earlier, the browser's default controls now need to be disabled, and the custom controls need to be displayed:
+Как упоминалось ранее, стандартные элементы управления должны быть отключены, а собственные элементы управления — отображены:
 
 ```js live-sample___video-player
-// Hide the default controls
+// Скрыть стандартные элементы управления
 video.controls = false;
-// Display the user defined video controls
+// Отобразить собственные элементы управления видео
 videoControls.setAttribute("data-state", "visible");
 ```
 
-### Play/Pause
+### Воспроизведение/Пауза
 
 ```js live-sample___video-player
 playPause.addEventListener("click", (e) => {
@@ -142,9 +141,9 @@ playPause.addEventListener("click", (e) => {
 });
 ```
 
-When a `click` event is detected on the play/pause button, the handler first of all checks if the video is currently paused or has ended (via the Media API's `paused` and `ended` attributes); if so, it uses the `play()` method to play back the video. Otherwise the video must be playing, so it is paused using the `pause()` method.
+При обнаружении события `click` на кнопке воспроизведения/паузы обработчик сначала проверяет, приостановлено ли видео в данный момент или завершилось ли оно (через атрибуты `paused` и `ended` Media API); если да, он использует метод `play()` для воспроизведения видео. В противном случае видео должно воспроизводиться, поэтому оно приостанавливается с помощью метода `pause()`.
 
-### Stop
+### Остановка
 
 ```js live-sample___video-player
 stop.addEventListener("click", (e) => {
@@ -154,9 +153,9 @@ stop.addEventListener("click", (e) => {
 });
 ```
 
-The Media API doesn't have a `stop` method, so to mimic this the video is paused, and its `currentTime` (i.e., the video's current playing position) and the {{ htmlelement("progress") }} element's position is set to 0 (more on the {{ htmlelement("progress") }} element later).
+В Media API нет метода `stop`, поэтому для его имитации видео приостанавливается, а его `currentTime` (т.е. текущая позиция воспроизведения видео) и позиция элемента {{ htmlelement("progress") }} устанавливаются в 0 (подробнее об элементе {{ htmlelement("progress") }} ниже).
 
-### Mute
+### Отключение звука
 
 ```js live-sample___video-player
 mute.addEventListener("click", (e) => {
@@ -164,9 +163,9 @@ mute.addEventListener("click", (e) => {
 });
 ```
 
-The mute button is a toggle button that uses the Media API's `muted` attribute to mute the video: this is a Boolean indicating whether the video is muted or not. To get it to toggle, we set it to the inverse of itself.
+Кнопка отключения звука — это переключаемая кнопка, которая использует атрибут `muted` Media API для отключения звука видео: это логическое значение, указывающее: отключён звук видео или нет. Чтобы реализовать переключение, мы устанавливаем его в значение, обратное самому себе.
 
-### Volume
+### Громкость
 
 ```js live-sample___video-player
 volInc.addEventListener("click", (e) => {
@@ -177,7 +176,7 @@ volDec.addEventListener("click", (e) => {
 });
 ```
 
-Two volume control buttons have been defined, one for increasing the volume and another for decreasing it. A user-defined function, `alterVolume(direction)` has been created that deals with this:
+Определены две кнопки управления громкостью: одна для увеличения громкости, другая — для уменьшения. Для обработки создана пользовательская функция `alterVolume(direction)`:
 
 ```js live-sample___video-player
 function alterVolume(dir) {
@@ -190,13 +189,13 @@ function alterVolume(dir) {
 }
 ```
 
-This function makes use of the Media API's `volume` attribute, which holds the current volume value of the video. Valid values for this attribute are 0 and 1 and anything in between. The function checks the `dir` parameter, which indicates whether the volume is to be increased (+) or decreased (-) and acts accordingly. The function is defined to increase or decrease the video's `volume` attribute in steps of 0.1, ensuring that it doesn't go lower than 0 or higher than 1.
+Эта функция использует атрибут `volume` Media API, который хранит текущее значение громкости видео. Допустимые значения для этого атрибута — от 0 до 1 включительно. Функция проверяет параметр `dir`, который указывает: следует увеличить (+) или уменьшить (-) громкость, и действует соответствующим образом. Функция настроена на увеличение или уменьшение атрибута `volume` видео шагами по 0.1, гарантируя, что значение не опустится ниже 0 и не превысит 1.
 
-### Progress
+### Индикатор прогресса
 
-When the {{ htmlelement("progress") }} element was defined above in the HTML, only the `value` attribute was set to 0. This attribute indicates the current value of the progress element. It also needs to have a maximum value set so that it can display its range correctly, and this can be done via the `max` attribute, which needs to be set to the maximum playing time of the video. This is obtained from the video's `duration` attribute, which again is part of the Media API.
+При определении элемента {{ htmlelement("progress") }} в HTML только атрибут `value` был установлен со значением 0. Этот атрибут указывает текущее значение элемента прогресса. Ему также необходимо установить максимальное значение, чтобы он мог правильно отображать свой диапазон, и это можно сделать через атрибут `max`, который нужно установить в максимальное время воспроизведения видео. Это значение получается из атрибута видео `duration`, который также является частью Media API.
 
-Ideally, the correct value of the video's `duration` attribute is available when the `loadedmetadata` event is raised, which occurs when the video's metadata has been loaded:
+В идеале, корректное значение атрибута видео `duration` доступно при возникновении события `loadedmetadata`, которое происходит при загрузке метаданных видео:
 
 ```js live-sample___video-player
 video.addEventListener("loadedmetadata", () => {
@@ -204,9 +203,9 @@ video.addEventListener("loadedmetadata", () => {
 });
 ```
 
-Unfortunately in some mobile browsers, when `loadedmetadata` is raised — if it even _is_ raised — `video.duration` may not have the correct value, or even any value at all. So something else needs to be done. More on that below.
+К сожалению, в некоторых мобильных браузерах, когда возникает событие `loadedmetadata` — если оно _вообще_ возникает — `video.duration` может не иметь корректного или даже вообще какого-либо значения. Поэтому нужно сделать что-то ещё. Подробнее об этом ниже.
 
-Another event, `timeupdate`, is raised periodically as the video is being played through. This event is ideal for updating the progress bar's value, setting it to the value of the video's `currentTime` attribute, which indicates how far through the video the current playback is.
+Другое событие, time`timeupdate`update, возникает периодически во время воспроизведения видео. Это событие идеально подходит для обновления значения индикатора прогресса, устанавливая его в значение атрибута `currentTime` видео, который указывает, насколько далеко продвинулось текущее воспроизведение.
 
 ```js
 video.addEventListener("timeupdate", () => {
@@ -214,9 +213,9 @@ video.addEventListener("timeupdate", () => {
 });
 ```
 
-As the `timeupdate` event is raised, the `progress` element's `value` attribute is set to the video's `currentTime`. This span has a solid CSS background color, which helps it provide the same visual feedback as a {{ htmlelement("progress") }} element.
+При каждом возникновении события `timeupdate` атрибут `value` элемента `progress` приближается к значению `currentTime` видео. Фон этого элемента span окрашен в сплошной цвет в CSS, что помогает ему выглядеть как элемент {{ htmlelement("progress") }}.
 
-Coming back to the `video.duration` problem mentioned above, when the `timeupdate` event is raised, in most mobile browsers the video's `duration` attribute should now have the correct value. This can be taken advantage of to set the `progress` element's `max` attribute if it is currently not set:
+Возвращаясь к проблеме `video.duration`, упомянутой выше: при возникновении события `timeupdate` в большинстве мобильных браузеров атрибут видео `duration` должен иметь корректное значение. Это можно использовать для установки атрибута `max` элемента `progress`, если он в настоящее время не установлен:
 
 ```js live-sample___video-player
 video.addEventListener("timeupdate", () => {
@@ -227,11 +226,11 @@ video.addEventListener("timeupdate", () => {
 ```
 
 > [!NOTE]
-> For more information and ideas on progress bars and buffering feedback, read [Media buffering, seeking, and time ranges](/ru/docs/Web/Media/Guides/Audio_and_video_delivery/buffering_seeking_time_ranges).
+> Для получения дополнительной информации и идей об индикаторах прогресса и обратной связи буферизации прочитайте Буферизация медиа, перемотка и диапазоны времени. [Медиа-буферизация, поиск и временные диапазоны](/ru/docs/Web/Media/Guides/Audio_and_video_delivery/buffering_seeking_time_ranges).
 
-### Skip ahead
+### Перемотка вперёд
 
-Another feature of most browser default video control sets is the ability to click on the video's progress bar to "skip ahead" to a different point in the video. This can also be achieved by adding a `click` event listener to the `progress` element:
+Ещё одна функция большинства стандартных наборов элементов управления видео в браузерах — возможность кликнуть по индикатору прогресса видео, чтобы «перемотать вперёд» к другой точке видео. Этого можно добиться, добавив обработчик события `click` к элементу `progress`:
 
 ```js live-sample___video-player
 progress.addEventListener("click", (e) => {
@@ -242,13 +241,13 @@ progress.addEventListener("click", (e) => {
 });
 ```
 
-This piece of code uses the clicked position to (roughly) work out where in the `progress` element the user has clicked, and to move the video to that position by setting its `currentTime` attribute. It avoids setting the `currentTime` if the video's duration is {{jsxref("Global_Objects/NaN", "NaN")}} or {{jsxref("Global_Objects/Infinity", "Infinity")}}, which happens if the video is not yet loaded.
+Этот код использует позицию клика, чтобы (приблизительно) определить, где в элементе `progress` пользователь кликнул, и переместить видео в эту позицию, установив его атрибут `currentTime`. Он избегает установки `currentTime`, если продолжительность видео равна {{jsxref("Global_Objects/NaN", "NaN")}} или {{jsxref("Global_Objects/Infinity", "Infinity")}}, что происходит, если видео ещё не загружено.
 
-### Fullscreen
+### Полноэкранный режим
 
-The Fullscreen API should be straight forward to use: the user clicks a button, if the video is in fullscreen mode: cancel it, otherwise enter fullscreen mode.
+Fullscreen API должен быть прост в использовании: пользователь нажимает кнопку? если видео в полноэкранном режиме — отменить его, иначе — войти в полноэкранный режим.
 
-The fullscreen button is hidden if the Fullscreen API is not enabled:
+Кнопка полноэкранного режима скрывается, если Fullscreen API не включён:
 
 ```js live-sample___video-player
 if (!document?.fullscreenEnabled) {
@@ -256,25 +255,25 @@ if (!document?.fullscreenEnabled) {
 }
 ```
 
-The fullscreen button needs to actually do something. Like the other buttons, a `click` event handler is attached that toggles fullscreen mode:
+Кнопка полноэкранного режима должна что-то делать. Как и для других кнопок, к ней «привязывается» обработчик события `click`, который переключает полноэкранный режим:
 
 ```js live-sample___video-player
 fullscreen.addEventListener("click", (e) => {
   if (document.fullscreenElement !== null) {
-    // The document is in fullscreen mode
+    // Документ в полноэкранном режиме
     document.exitFullscreen();
   } else {
-    // The document is not in fullscreen mode
+    // Документ не в полноэкранном режиме
     videoContainer.requestFullscreen();
   }
 });
 ```
 
-If the browser is currently in fullscreen mode, then it must be exited and vice versa. Interestingly `document` must be used for exiting/cancelling fullscreen mode, whereas any HTML element can request fullscreen mode, here the `videoContainer` is used as it also contains the custom controls which should also appear with the video in fullscreen mode.
+Если браузер в полноэкранном режиме — из него нужно выйти, и наоборот. Интересно, что `document` должен использоваться для выхода/отмены полноэкранного режима, тогда как любой HTML-элемент может запросить полноэкранный режим; здесь используется `videoContainer`, так как он также содержит собственные элементы управления, которые также должны отображаться с видео в полноэкранном режиме.
 
-## Result
+## Результат
 
-The CSS part is hidden for this tutorial, but you can click "Play" to see the full source code. In the next part, [Video player styling basics](/ru/docs/Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics), we will explore some interesting CSS techniques used here, and also add new CSS to make the player look nicer.
+CSS-часть скрыта для этого руководства, но вы можете нажать «Play», чтобы увидеть полный исходный код. В следующей части, [Основы стилизации видеоплеера](/ru/docs/Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics), мы рассмотрим некоторые интересные CSS-техники, использованные здесь, а также добавим новый код CSS, чтобы сделать плеер более привлекательным.
 
 ```css hidden live-sample___video-player
 :root {
@@ -362,12 +361,12 @@ figure:fullscreen figcaption {
 ```
 
 > [!WARNING]
-> The example video may be loud!
+> Видео может быть громким!
 
 {{EmbedLiveSample("video-player", "", 400, "", "", "", "fullscreen")}}
 
 ## See also
 
-- {{ htmlelement("video") }} for reference material
-- [HTML video and audio](/ru/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) for more techniques
-- [Media formats supported by the HTML audio and video elements](/ru/docs/Web/Media/Guides/Formats)
+- {{ htmlelement("video") }} — справочные материалы
+- [Видео и аудио контент](/ru/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) — дополнительные техники
+- [Форматы медиа, поддерживаемые HTML-элементами audio и video](/ru/docs/Web/Media/Guides/Formats)
