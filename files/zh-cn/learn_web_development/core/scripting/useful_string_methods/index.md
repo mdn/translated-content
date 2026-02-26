@@ -1,6 +1,9 @@
 ---
 title: 有用的字符串方法
+short-title: 字符串方法
 slug: Learn_web_development/Core/Scripting/Useful_string_methods
+l10n:
+  sourceCommit: 003b6ceec6ecd0a3e36046a8515ab7fbc8dc220d
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting/Test_your_skills/Strings", "Learn_web_development/Core/Scripting")}}
@@ -10,11 +13,11 @@ slug: Learn_web_development/Core/Scripting/Useful_string_methods
 <table>
   <tbody>
     <tr>
-      <th scope="row">前置知识：</th>
+      <th scope="row">前提：</th>
       <td>了解 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS 的基本原理</a>以及<a href="/zh-CN/docs/Learn_web_development/Core/Scripting/Strings">字符串的基础知识</a>。</td>
     </tr>
     <tr>
-      <th scope="row">学习目标：</th>
+      <th scope="row">学习成果：</th>
       <td>使用 JavaScript 内置的常用属性和方法对字符串进行操作。</td>
     </tr>
   </tbody>
@@ -22,13 +25,13 @@ slug: Learn_web_development/Core/Scripting/Useful_string_methods
 
 ## 把字符串当作对象
 
-在 JavaScript 中，大多数值都能够当做对象来使用。当你使用如下方法创建了一个字符串
+在 JavaScript 中，大多数值都能够当做对象来使用。当你使用如下方法创建了一个字符串时：
 
 ```js
 const string = "这是我的字符串";
 ```
 
-虽然变量本身不是一个对象，但由于在对其进行属性访问时它可被作为对象使用，所以其依然拥有大量可用的属性与方法。去看看{{jsxref("String")}}对象页面，看看页面侧边的列表，你会对可用属性与方法的数量有一个直观的感受。
+虽然变量本身不是一个对象，但由于在对其进行属性访问时它可被作为对象使用，所以其依然拥有大量可用的属性与方法。去看看 {{jsxref("String")}} 对象页面，看看页面侧边的列表，你会对可用属性与方法的数量有一个直观的感受。
 
 **你现在可能会有些大脑宕机，不过别紧张**，在学习进程的早期你并不需要了解其中的大部分内容。接下来我们来学习你将会经常使用的一些知识。
 
@@ -53,13 +56,15 @@ browserType.length;
 browserType[0];
 ```
 
-记住：计算机从 0 开始计数，而不是从 1 开始！要获取*任意*字符串的最后一个字符，我们可以使用下面这行，将这个技巧与我们上面提到的 `length` 属性相结合起来：
+记住：计算机从 0 开始计数，而不是从 1 开始！
+
+要获取*任意*字符串的最后一个字符，我们可以使用下面这行代码，将这个技巧与我们上面提到的 `length` 属性相结合起来：
 
 ```js
 browserType[browserType.length - 1];
 ```
 
-字符串 "mozilla" 的长度为 7，但由于计数从 0 开始，所以最后一个字符的位置为 6，我们使用 **length-1** 来获得最后一个字符。
+字符串 "mozilla" 的长度为 7，但由于计数从 0 开始，所以最后一个字符的位置为 6，使用 `length-1` 即可获取最后一个字符。
 
 ## 检查一个字符串是否包含某个子字符串
 
@@ -110,7 +115,7 @@ const tagline = "MDN - Resources for developers, by developers";
 console.log(tagline.indexOf("developers")); // 20
 ```
 
-如果你从字符串的开头开始数字符的数量，从 `0` 开始，子字符串 `"developers"` 第一次出现是在下标 `20`。
+如果你从字符串的开头开始数字符（包括空白字符）的数量，从 `0` 开始，子字符串 `"developers"` 第一次出现是在下标 `20`。
 
 ```js
 console.log(tagline.indexOf("x")); // -1
@@ -128,7 +133,7 @@ console.log(firstOccurrence); // 20
 console.log(secondOccurrence); // 35
 ```
 
-在这里我们告诉方法在下标 `21`（`firstOccurrence + 1`）开始搜索子字符串 `"developers"` ，然后它返回了下标 `35`。
+在这里我们告诉方法在下标 `21`（`firstOccurrence + 1`）开始搜索子字符串 `"developers"`，然后它返回了下标 `35`。
 
 ## 从字符串提取子字符串
 
@@ -183,7 +188,7 @@ console.log(updated); // "vanilla"
 console.log(browserType); // "mozilla"
 ```
 
-注意，和许多字符串的方法相同，`replace()` 不会修改调用它的那一个字符串，而是返回一个新的字符串。如果你想要更新原本的 `browserType` 变量，你需要像这样做：
+注意，和许多字符串方法相同，`replace()` 不会修改调用它的那一个字符串，而是返回一个新的字符串。如果你想要更新原本的 `browserType` 变量，你需要像这样做：
 
 ```js
 let browserType = "mozilla";
@@ -401,8 +406,8 @@ for (const station of stations) {
 
 ## 总结
 
-你无法逃避掌握处理单词和句子的能力在编程中是非常重要的这一事实——尤其是在 JavaScript 中，因为网站的一切都离不开与人沟通。本文已经给出了你现在需要了解的关于操作字符串的基础知识。这对你将来学习更复杂的主题会有很大帮助。
+你无法回避这样一个事实：在编程中能够处理单词和句子至关重要——尤其是在 JavaScript 中，因为网站的一切都离不开与人沟通。本文已经给出了你现在需要了解的关于操作字符串的基础知识。这对你将来学习更复杂的主题会有很大帮助。
 
-在下一个章节，我们将给你一些测试，以便你能够检查自己对我们提供的字符串与字符串方法的知识有多深的理解与多大程度的掌握。
+在下一个章节，我们将给你一些测试，以便你能够检查自己对我们提供的字符串与字符串方法的知识的理解和掌握程度。
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting/Test_your_skills/Strings", "Learn_web_development/Core/Scripting")}}
