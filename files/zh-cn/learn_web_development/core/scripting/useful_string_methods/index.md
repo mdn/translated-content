@@ -50,7 +50,7 @@ browserType.length;
 
 ## 获取字符串中的指定字符
 
-值得一提的是，你可以使用**方括号表示法**返回字符串中的任意字符——意思是你可以在变量名的末尾添加方括号（`[]`）。在方括号内，你可以添加想要返回的字符的编号，例如，要返回第一个字母，你可以这样做：
+值得一提的是，你可以使用**方括号表示法**获取字符串中的任意字符——意思是你可以在变量名的末尾添加方括号（`[]`）。在方括号内，你可以添加想要获取的字符的编号，例如，要获取第一个字母，你可以这样做：
 
 ```js
 browserType[0];
@@ -212,7 +212,7 @@ console.log(quote); // "To code or not to code"
 
 在本节中，我们会让你尝试自行编写一些操作字符串的代码。在下面的每个练习中，我们会拿到一个字符串数组和一个处理数组中每个值并将其显示在项目符号列表的循环。你现在不需要了解数组和循环——这些会在以后的文章里解释。你需要在每个案例中做的全部事情就是编写能够以我们想要的格式输出字符串的代码。
 
-用演示示例上方的**“Play”**按钮在 MDN Playground 里打开下面的每一个示例，然后遵循指示解决问题。如果你遇到了困难，你可以查看每个案例的演示示例下方的解决方案。
+用演示示例上方的“**Play**”按钮在 MDN Playground 里打开下面的每一个示例，然后遵循指示解决问题。如果你遇到了困难，你可以查看每个案例的演示示例下方的答案。
 
 如果你犯了错误，并且无法让代码重新正常运行，你可以用 MDN Playground 的“Reset”按钮来重置代码。
 
@@ -249,7 +249,7 @@ for (const greeting of greetings) {
 {{ EmbedLiveSample("string-methods-1", "100%", 150) }}
 
 <details>
-<summary>点击此处查看解决方案</summary>
+<summary>点击此处查看答案</summary>
 
 你最终的 JavaScript 应该像这样：
 
@@ -307,7 +307,7 @@ for (const city of cities) {
 {{ EmbedLiveSample("string-methods-2", "100%", 150) }}
 
 <details>
-<summary>点击此处查看解决方案</summary>
+<summary>点击此处查看答案</summary>
 
 你最终的 JavaScript 应该像这样：
 
@@ -377,7 +377,7 @@ for (const station of stations) {
 {{ EmbedLiveSample("string-methods-3", "100%", 150) }}
 
 <details>
-<summary>点击此处查看解决方案</summary>
+<summary>点击此处查看答案</summary>
 
 你最终的 JavaScript 应该像这样：
 
