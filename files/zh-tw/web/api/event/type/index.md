@@ -1,71 +1,62 @@
 ---
-title: Event.type
+title: Event：type 屬性
+short-title: type
 slug: Web/API/Event/type
+l10n:
+  sourceCommit: 976891fb78ba24cb4ac6e58ae8a903b20eae4337
 ---
 
-{{APIRef}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
-**`Event.type`** 唯讀屬性會回傳一個代表此事件物件類型的字串。`Event.type` 屬性是於事件物件建立時被設定，而其屬性值－事件類型名稱也常被當作是特定的事件。
+{{domxref("Event")}} 介面的 **`type`** 唯讀屬性會回傳一個包含事件類型的字串。此屬性會在事件被建構時設定，且為通常用於參照特定事件的名稱，例如 `click`、`load` 或 `error`。
 
-傳至 {{ domxref("EventTarget.addEventListener()") }} 和 {{ domxref("EventTarget.removeEventListener()") }} 方法中，代表事件類型的參數 _`event`_ 是不區分大小寫的。
+## 值
 
-可用的事件類型，可參考 [event reference](/zh-TW/docs/Web/API/Document_Object_Model/Events)。
-
-## 語法
-
-```plain
-event.type
-```
+一個包含 {{domxref("Event")}} 類型的字串。
 
 ## 範例
 
+此範例會在你按下鍵盤按鍵或點擊滑鼠按鈕時，記錄事件類型。
+
+### HTML
+
 ```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-
-    <title>Event.type Example</title>
-
-    <script>
-      var currEvent = null;
-      function getEvtType(evt) {
-        console.log("//Start------------getEvtType(evt)------------ ");
-
-        currEvent = evt.type;
-        console.log(currEvent);
-
-        //document.getElementById("Etype").firstChild.nodeValue = currEvent;
-        document.getElementById("Etype").innerHTML = currEvent;
-
-        console.log("//End--------------getEvtType(evt)------------ ");
-      }
-
-      //Keyboard events
-      document.addEventListener("keypress", getEvtType, false); //[second]
-
-      document.addEventListener("keydown", getEvtType, false); //first
-      document.addEventListener("keyup", getEvtType, false); //third
-
-      //Mouse events
-      document.addEventListener("click", getEvtType, false); // third
-
-      document.addEventListener("mousedown", getEvtType, false); //first
-      document.addEventListener("mouseup", getEvtType, false); //second
-    </script>
-  </head>
-
-  <body>
-    <p>Press any key or click the mouse to get the event type.</p>
-    <p>Event type: <span id="Etype" style="color:red">-</span></p>
-  </body>
-</html>
+<p>按下任何按鍵或點擊滑鼠以取得事件類型。</p>
+<p id="log"></p>
 ```
 
-### Result
+### JavaScript
+
+```js
+function getEventType(event) {
+  const log = document.getElementById("log");
+  log.innerText = `${event.type}\n${log.innerText}`;
+}
+
+// 鍵盤事件
+document.addEventListener("keydown", getEventType); // 第一個
+document.addEventListener("keypress", getEventType); // 第二個
+document.addEventListener("keyup", getEventType); // 第三個
+
+// 滑鼠事件
+document.addEventListener("mousedown", getEventType); // 第一個
+document.addEventListener("mouseup", getEventType); // 第二個
+document.addEventListener("click", getEventType); // 第三個
+```
+
+### 結果
 
 {{EmbedLiveSample('範例')}}
 
 ## 規範
 
 {{Specifications}}
+
+## 瀏覽器相容性
+
+{{Compat}}
+
+## 參見
+
+- {{ domxref("EventTarget.addEventListener()") }}
+- {{ domxref("EventTarget.removeEventListener()") }}

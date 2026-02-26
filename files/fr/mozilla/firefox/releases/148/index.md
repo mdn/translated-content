@@ -3,7 +3,7 @@ title: Firefox 148 note de version pour les développeurs
 short-title: Firefox 148
 slug: Mozilla/Firefox/Releases/148
 l10n:
-  sourceCommit: 21638327a5baa7ecf918835c4a233a74f25b02ed
+  sourceCommit: 71bf9d9aafdab8fea55d3cde76982f94cc313013
 ---
 
 Cet article présente les informations concernant les changements de Firefox 148 qui concernent les développeur·euse·s.
@@ -45,6 +45,10 @@ Firefox 148 est sorti le [24 février 2026 <sup>(angl.)</sup>](https://whattrain
 
 ### API
 
+- [L'API HTML Sanitizer](/fr/docs/Web/API/HTML_Sanitizer_API) est désormais prise en charge, ainsi que les méthodes associées comme {{DOMxRef("Element.setHTML", "setHTML()")}}.
+  Cela permet d'assainir le HTML avant de l'insérer dans le DOM, vous donnant un contrôle total sur le contenu résultant et réduisant le risque d'attaques XSS.
+  ([bogue Firefox 1650370 <sup>(angl.)</sup>](https://bugzil.la/1650370)).
+
 - [L'API Trusted Types](/fr/docs/Web/API/Trusted_Types_API) est désormais prise en charge.
   Elle fournit des mécanismes pour garantir que les propriétés et fonctions qui peuvent potentiellement être utilisées comme vecteurs d'attaques XSS ne peuvent être appelées qu'avec des données ayant été passées par une fonction de transformation.
   Les mécanismes permettent d'auditer les utilisations qui ne sont pas sûres du code.
@@ -64,12 +68,31 @@ Firefox 148 est sorti le [24 février 2026 <sup>(angl.)</sup>](https://whattrain
 #### DOM
 
 - Les commandes «&nbsp;coller&nbsp;» peuvent désormais être utilisées avec {{DOMxRef("Document.execCommand()")}} dans le contenu web (en plus des extensions web).
-  Cela est implémenté en utilisant [l'API Clipboard](/fr/docs/Web/API/Clipboard_API) et partage les mêmes [considérations de sécurité](/fr/docs/Web/API/Clipboard_API#security_considerations), telles que l'exigence d'une activation transitoire et la reconnaissance de l'utilisateur lors du collage de contenu inter-origine.
+  Cela est implémenté en utilisant [l'API Clipboard](/fr/docs/Web/API/Clipboard_API) et partage les mêmes [considérations de sécurité](/fr/docs/Web/API/Clipboard_API#considérations_de_sécurité), telles que l'exigence d'une activation transitoire et la reconnaissance de l'utilisateur·ice lors du collage de contenu inter-origine.
   ([bogue Firefox 1998195 <sup>(angl.)</sup>](https://bugzil.la/1998195)).
 
-## Changements pour les développeur·euse·s d'extensions
+### Conformité WebDriver (WebDriver BiDi, Marionette)
 
-### Fonctionnalités web expérimentales
+#### Général
+
+- Correction d'une condition de concurrence lors de l'initialisation des fonctionnalités de navigateur requises lors de l'ouverture d'une nouvelle fenêtre, empêchant des problèmes lors d'une navigation immédiate vers une autre URL ([bogue Firefox 1891028 <sup>(angl.)</sup>](https://bugzil.la/1891028)).
+- Correction d'un problème d'interopérabilité entre Marionette et WebDriver BiDi où l'identifiant `clientWindow` de BiDi était incorrectement utilisé comme identifiant de fenêtre dans Marionette ([bogue Firefox 2002949 <sup>(angl.)</sup>](https://bugzil.la/2002949)).
+
+#### WebDriver BiDi
+
+- Ajout de la prise en charge initiale de l'interaction avec le contexte chrome du navigateur (la fenêtre Firefox elle-même). La commande `browsingContext.getTree` accepte désormais le paramètre spécifique au fournisseur `moz:scope` et retourne des contextes chrome lorsque celui-ci est défini sur `chrome` et que Firefox a été lancé avec l'argument `--remote-allow-system-access`. Ces contextes peuvent être utilisés avec `script.evaluate` et `script.callFunction` pour exécuter du JavaScript privilégié avec accès aux API Gecko. Les autres commandes ne prennent pas encore en charge les contextes chrome, mais la prise en charge sera ajoutée progressivement selon les besoins ([bogue Firefox 1944568 <sup>(angl.)</sup>](https://bugzil.la/1944568), [bogue Firefox 1944570 <sup>(angl.)</sup>](https://bugzil.la/1944570), et [bogue Firefox 1851788 <sup>(angl.)</sup>](https://bugzil.la/1851788)).
+- Mise à jour des commandes `emulation.setGeolocationOverride` et `emulation.setScreenOrientationOverride` pour implémenter le nouveau comportement de réinitialisation&nbsp;: les contextes ne sont réinitialisés que lorsque le paramètre `contexts` est fourni, et les contextes utilisateur uniquement lorsque le paramètre `userContexts` est défini ([bogue Firefox 1998732 <sup>(angl.)</sup>](https://bugzil.la/1998732) et [bogue Firefox 1998734 <sup>(angl.)</sup>](https://bugzil.la/1998734)).
+- Correction d'une condition de concurrence dans `browsingContext.create` où l'ouverture d'un nouvel onglet au premier plan pouvait retourner avant que le document ne devienne visible ([bogue Firefox 2003857 <sup>(angl.)</sup>](https://bugzil.la/2003857)).
+- Correction d'un problème survenant lorsqu'une navigation redirigeait vers une page d'erreur ([bogue Firefox 2013822 <sup>(angl.)</sup>](https://bugzil.la/2013822)).
+- Correction d'un problème dans `network.getData` qui provoquait une `RangeError` lors du décodage de corps de réponse fragmentés en raison d'une discordance de taille ([bogue Firefox 2004973 <sup>(angl.)</sup>](https://bugzil.la/2004973)).
+- Correction d'un problème où les évènements `browsingContext.userPromptOpened` et `browsingContext.userPromptClosed` rapportaient incorrectement l'identifiant du contexte de niveau supérieur au lieu de l'identifiant du contexte de l'iframe ([bogue Firefox 1964905 <sup>(angl.)</sup>](https://bugzil.la/1964905)).
+- Amélioration des performances des commandes WebDriver BiDi d'environ 100 ms lorsque le contexte sélectionné n'est plus disponible pendant l'exécution de la commande ([bogue Firefox 1934326 <sup>(angl.)</sup>](https://bugzil.la/1934326)).
+
+#### Marionette
+
+- Ajout de la commande `Reporting:GenerateTestReport` pour [générer un rapport de test via l'API Reporting <sup>(angl.)</sup>](https://www.w3.org/TR/reporting-1/#generate-test-report-command) ([bogue Firefox 1909662 <sup>(angl.)</sup>](https://bugzil.la/1909662)).
+
+## Fonctionnalités web expérimentales
 
 Ces fonctionnalités sont livrées dans Firefox 148 mais sont désactivées par défaut.
 Pour les tester, recherchez la préférence appropriée sur la page `about:config` et définissez-la sur `true`.

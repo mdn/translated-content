@@ -1,23 +1,74 @@
 ---
-title: Function.caller
+title: "Function : propriété caller"
+short-title: caller
 slug: Web/JavaScript/Reference/Global_Objects/Function/caller
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{Non-standard_Header}}{{Deprecated_Header}}
 
-La propriété **`function.caller`** renvoie la fonction qui a appelé la fonction donnée. Cette propriété est interdite en mode strict.
+> [!NOTE]
+> En [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), accéder à `caller` d'une fonction déclenche une erreur — l'API est supprimée sans remplacement. Cela vise à empêcher le code de «&nbsp;remonter la pile&nbsp;», ce qui pose des risques de sécurité et limite fortement les possibilités d'optimisations comme l'intégration et l'optimisation des appels en queue. Pour plus d'explications, vous pouvez lire [la justification de la dépréciation de `arguments.callee`](/fr/docs/Web/JavaScript/Reference/Functions/arguments/callee#description).
+
+La propriété d'accesseur **`caller`** des instances de {{JSxRef("Function")}} retourne la fonction qui a invoqué cette fonction. Pour les fonctions [strictes](/fr/docs/Web/JavaScript/Reference/Strict_mode), fléchées, asynchrones et génératrices, accéder à la propriété `caller` déclenche une {{JSxRef("TypeError")}}.
 
 ## Description
 
-Si la fonction `f` a été invoquée par du code situé au plus haut niveau, la valeur de `f.caller` sera {{jsxref("null")}}, sinon, ce sera la fonction qui a appelé `f`.
+Si la fonction `f` a été invoquée par le code de plus haut niveau, la valeur de `f.caller` est {{JSxRef("Operators/null", "null")}}&nbsp;; sinon, c'est la fonction qui a appelé `f`. Si la fonction qui a appelé `f` est en mode strict, la valeur de `f.caller` est aussi `null`.
 
-Cette propriété remplace la propriété obsolète {{jsxref("Fonctions/arguments/caller", "arguments.caller")}} de l'objet {{jsxref("Fonctions/arguments", "arguments")}}.
+Notez que le seul comportement défini par la spécification ECMAScript est que `Function.prototype` possède un accesseur initial `caller` qui déclenche inconditionnellement une {{JSxRef("TypeError")}} pour toute requête `get` ou `set` (appelé «&nbsp;pillule d'accesseur poison&nbsp;»), et que les implémentations ne sont pas autorisées à changer cette sémantique pour toute fonction sauf les fonctions simples non strictes, auquel cas elle ne doit pas avoir la valeur d'une fonction en mode strict. Le comportement réel de la propriété `caller`, s'il diffère du déclenchement d'une erreur, dépend de l'implémentation. Par exemple, Chrome la définit comme une propriété de données propre, tandis que Firefox et Safari étendent l'accesseur poison initial `Function.prototype.caller` pour gérer spécialement les valeurs `this` qui sont des fonctions non strictes.
 
-La propriété spéciale `__caller__` qui renvoyait l'objet qui dans lequel était fait l'appel a été supprimée pour des raisons de sécurités.
+```js
+(function f() {
+  if (Object.hasOwn(f, "caller")) {
+    console.log(
+      "caller est une propriété propre avec le descripteur",
+      Object.getOwnPropertyDescriptor(f, "caller"),
+    );
+  } else {
+    console.log(
+      "f ne possède pas de propriété propre nommée caller. Tentative d'accès à f.[[Prototype]].caller",
+    );
+    console.log(
+      Object.getOwnPropertyDescriptor(
+        Object.getPrototypeOf(f),
+        "caller",
+      ).get.call(f),
+    );
+  }
+})();
 
-### Notes
+// Dans Chrome :
+// caller est une propriété propre avec le descripteur {value: null, writable: false, enumerable: false, configurable: false}
 
-Dans une fonction récursive, cette propriété ne peut pas être utilisée pour reconstituer la pile d'appels (_call stack_). Par exemple, si on a :
+// Dans Firefox :
+// f ne possède pas de propriété propre nommée caller. Tentative d'accès à f.[[Prototype]].caller
+// null
+```
+
+Cette propriété remplace la propriété obsolète `arguments.caller` de l'objet {{JSxRef("Functions/arguments", "arguments")}}.
+
+La propriété spéciale `__caller__`, qui renvoyait l'objet d'activation de l'appelant permettant ainsi de reconstituer la pile, a été supprimée pour des raisons de sécurité.
+
+## Exemples
+
+### Vérifier la valeur de la propriété `caller` d'une fonction
+
+Le code suivant vérifie la valeur de la propriété `caller` d'une fonction.
+
+```js
+function maFonction() {
+  if (maFonction.caller === null) {
+    return "La fonction a été appelée au plus haut niveau !";
+  }
+  return `La fonction a été appelée par ${maFonction.caller}`;
+}
+```
+
+### Reconstituer la pile et la récursivité
+
+Notez qu'en cas de récursivité, vous ne pouvez pas reconstituer la pile d'appels avec cette propriété. Considérez&nbsp;:
 
 ```js
 function f(n) {
@@ -33,50 +84,63 @@ function g(n) {
 f(2);
 ```
 
-Au moment où `stop()` est appelé, la pile sera :
+Au moment où `stop()` est appelée, la pile d'appels sera&nbsp;:
 
-```js
+```plain
 f(2) -> g(1) -> f(1) -> g(0) -> stop()
 ```
 
-Et ceci est vrai :
+Ce qui suit est vrai&nbsp;:
 
 ```js
 stop.caller === g && f.caller === g && g.caller === f;
 ```
 
-Donc si on essaie d'obtenir la pile de cette façon :
+donc si vous essayez d'obtenir la pile dans la fonction `stop()` de cette façon&nbsp;:
 
 ```js
-var f = stop;
-var stack = "Stack trace:";
+let f = stop;
+let pile = "Trace de la pile :";
 while (f) {
-  stack += "\n" + f.name;
+  pile += `\n${f.name}`;
   f = f.caller;
 }
 ```
 
 la boucle ne s'arrêterait jamais.
 
-## Exemples
+### `caller` en mode strict
 
-### Vérifier la valeur de la propriété `caller`
-
-Dans l'exemple suivant, on verifie la propriété `caller` de la fonction.
+Si l'appelant est une fonction en mode strict, la valeur de `caller` est `null`.
 
 ```js
-function maFonction() {
-  if (maFonction.caller == null) {
-    return "Fonction appelée au plus haut niveau !";
-  } else {
-    return "Fonction appelée par " + maFonction.caller;
-  }
+function fonctionAppelante() {
+  fonctionAppellee();
 }
+
+function fonctionAppelanteStrict() {
+  "use strict";
+  fonctionAppellee();
+}
+
+function fonctionAppellee() {
+  console.log(fonctionAppellee.caller);
+}
+
+(function () {
+  fonctionAppelante();
+})();
+// Affiche [Function: fonctionAppelante]
+
+(function () {
+  fonctionAppelanteStrict();
+})();
+// Affiche null
 ```
 
 ## Spécifications
 
-Ne fait partie d'aucune spécification. Implémentée avec JavaScript 1.5.
+Ne fait partie d'aucune spécification.
 
 ## Compatibilité des navigateurs
 
@@ -84,4 +148,5 @@ Ne fait partie d'aucune spécification. Implémentée avec JavaScript 1.5.
 
 ## Voir aussi
 
-- Le bug d'implémentation pour SpiderMonkey [bug Firefox 65683](https://bugzil.la/65683)
+- La propriété {{JSxRef("Function.prototype.name")}}
+- La propriété {{JSxRef("Functions/arguments", "arguments")}}

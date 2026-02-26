@@ -3,7 +3,7 @@ title: Fonctionnalités expérimentales dans Firefox
 short-title: Fonctionnalités expérimentales
 slug: Mozilla/Firefox/Experimental_features
 l10n:
-  sourceCommit: f9531e19140a5e164fb05a036995f582c378b2d4
+  sourceCommit: a28b03ab5b7bf13809362eb0f997880e0aece45f
 ---
 
 Cette page répertorie les fonctionnalités expérimentales et partiellement implémentées de Firefox, y compris les standards de la plateforme web en évolution ou proposés.
@@ -210,21 +210,6 @@ Plus précisément, cette préférence désactivera les propriétés préfixées
 | Release           | 120                    | Oui                 |
 
 - `layout.css.prefixes.transforms`
-  - : Mettre sur `true` pour activer.
-
-### Fonction `shape()`
-
-La fonction CSS {{CSSxRef("basic-shape/shape")}} est un type de donnée {{CSSxRef("basic-shape")}} qui permet de définir une forme dans les propriétés {{CSSxRef("clip-path")}} et {{CSSxRef("offset-path")}} en utilisant une ou plusieurs «&nbsp;commandes de forme&nbsp;». Ces commandes sont très similaires aux [commandes de tracé SVG](/fr/docs/Web/SVG/Reference/Attribute/d#path_commands). La fonction `shape()` est similaire à certains égards à la fonction {{CSSxRef("basic-shape/path","path()")}}, mais contrairement à `path()`, qui utilise la syntaxe [SVG path](/fr/docs/Web/SVG/Reference/Element/path), `shape()` utilise la syntaxe CSS standard. Cela permet de créer et de modifier facilement des formes et autorise également l'utilisation des fonctions mathématiques CSS.
-Pour plus de détails, voir [le bogue Firefox 1823463 <sup>(angl.)</sup>](https://bugzil.la/1823463) pour la prise en charge de la fonction `shape()` dans `clip-path`, [le bogue Firefox 1884424 <sup>(angl.)</sup>](https://bugzil.la/1884424) pour la prise en charge de la fonction dans `offset-path`, et [le bogue Firefox 1884425 <sup>(angl.)</sup>](https://bugzil.la/1884425) pour la prise en charge de l'interpolation.
-
-| Canal de parution | Ajouté dans la version | Activé par défaut ? |
-| ----------------- | ---------------------- | ------------------- |
-| Nightly           | 126                    | Oui                 |
-| Developer Edition | 126                    | Non                 |
-| Beta              | 126                    | Non                 |
-| Release           | 126                    | Non                 |
-
-- `layout.css.basic-shape-shape.enabled`
   - : Mettre sur `true` pour activer.
 
 #### Points de contrôle relatifs dans les commandes de courbe CSS `shape()`

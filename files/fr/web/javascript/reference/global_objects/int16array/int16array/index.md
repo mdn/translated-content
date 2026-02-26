@@ -1,67 +1,69 @@
 ---
 title: Constructeur Int16Array()
+short-title: Int16Array()
 slug: Web/JavaScript/Reference/Global_Objects/Int16Array/Int16Array
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-Le **constructeur `Int16Array()`** permet de créer un nouveau tableau typé [`Int16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int16Array) dont les éléments sont des nombres entiers signés en complément à deux, représentés sur 16 bits et utilisant le boutisme de la plateforme. S'il est nécessaire de contrôler l'ordre des octets, on utilisera un objet [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView) à la place. Lors de la construction, les éléments du tableau sont initialisés avec la valeur `0`. Une fois le tableau construit, on peut faire référence aux éléments du tableau à l'aide des méthodes de l'objet ou en utilisant la notation avec les crochets et l'indice voulu.
+Le constructeur **`Int16Array()`** crée des objets {{JSxRef("Int16Array")}}. Les contenus sont initialisés à `0` sauf si des données d'initialisation sont explicitement fournies.
 
 ## Syntaxe
 
-```js
-new Int16Array(); // apparu avec ES2017
-new Int16Array(longueur);
-new Int16Array(tableauType);
-new Int16Array(object);
+```js-nolint
+new Int16Array()
+new Int16Array(length)
+new Int16Array(typedArray)
+new Int16Array(object)
 
-new Int16Array(buffer);
-new Int16Array(buffer, decalageOctets);
-new Int16Array(buffer, decalageOctets, longueur);
+new Int16Array(buffer)
+new Int16Array(buffer, byteOffset)
+new Int16Array(buffer, byteOffset, length)
 ```
+
+> [!NOTE]
+> `Int16Array()` ne peut être construit qu'avec {{JSxRef("Operators/new", "new")}}. Tenter de l'appeler sans `new` lève une erreur {{JSxRef("TypeError")}}.
 
 ### Paramètres
 
-- `longueur`
-  - : Lorsque le constructeur est appelé avec un argument `longueur`, un tableau interne de tampon de mémoire est créé avec une taille en octets de `longueur` _multipliée par `BYTES_PER_ELEMENT`_ et dont les éléments sont des zéros.
-- `tableauType`
-  - : Lorsque le constructeur est appelé avec un argument `tableauType`, qui peut être un tableau typé de n'importe quel type **non**S [`bigint`](/fr/docs/Glossary/BigInt) (comme `Int32Array`), `tableauType` est copié dans un nouveau tableau typé et chaque valeur de `tableauType` est convertie dans le type correspondant au constructeur avant d'être copiée dans le nouveau tableau. La longueur du nouveau tableau typé est égale à celle de l'argument `tableauType`.
-- `object`
-  - : Lorsque le constructeur est appelé avec un argument objet quelconque, un nouveau tableau typé est créé, de la même façon qu'avec un appel à la méthode `TypedArray.from()`.
-- `buffer`, `decalageOctets`, `longueur`
-  - : Lorsqu'il est appelé avec un argument `buffer`, et éventuellement des arguments `decalageOctets` et `longueur`, le constructeur crée une nouvelle vue sous la forme d'un tableau typé qui porte sur l'objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) donné par le paramètre `buffer`. Les paramètres `decalageOctets` et `longueur` indiquent l'intervalle de mémoire exposé à la vue formée par le tableau typé. Si ces deux derniers paramètres sont absents, c'est l'ensemble de `buffer` qui sera vu&nbsp;; si seul `longueur` est absent, c'est tout `buffer` qui sera vu à partir de `decalageOctets`.
+Voir [`TypedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#paramètres).
+
+### Exceptions
+
+Voir [`TypedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#exceptions).
 
 ## Exemples
 
 ### Plusieurs façons de créer un objet `Int16Array`
 
 ```js
-// À partir d'une longueur
+// Construction à partir d'une longueur
 const int16 = new Int16Array(2);
 int16[0] = 42;
 console.log(int16[0]); // 42
 console.log(int16.length); // 2
 console.log(int16.BYTES_PER_ELEMENT); // 2
 
-// À partir d'un tableau
-const arr = new Int16Array([21, 31]);
-console.log(arr[1]); // 31
-
-// À partir d'un autre tableau typé
+// Construction à partir d'un tableau
 const x = new Int16Array([21, 31]);
+console.log(x[1]); // 31
+
+// Construction à partir d'un autre TypedArray
 const y = new Int16Array(x);
 console.log(y[0]); // 21
 
-// À partir d'un ArrayBuffer
-const buffer = new ArrayBuffer(8);
-const z = new Int16Array(buffer, 0, 4);
+// Construction à partir d'un ArrayBuffer
+const buffer = new ArrayBuffer(16);
+const z = new Int16Array(buffer, 2, 4);
+console.log(z.byteOffset); // 2
 
-// À partir d'un itérable
+// Construction à partir d'un itérable
 const iterable = (function* () {
   yield* [1, 2, 3];
 })();
-const int16 = new Int16Array(iterable);
-// Int16Array[1, 2, 3]
+const int16FromIterable = new Int16Array(iterable);
+console.log(int16FromIterable);
+// Int16Array [1, 2, 3]
 ```
 
 ## Spécifications
@@ -72,23 +74,10 @@ const int16 = new Int16Array(iterable);
 
 {{Compat}}
 
-### Notes de compatibilité
-
-À partir d'ECMAScript 2015, le constructeur de `Int16Array` doit être appelé avec l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new). Utiliser le constructeur `Int16Array` comme une fonction, c'est-à-dire sans le mot-clé `new`, déclenchera désormais une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
-
-```js example-bad
-const dv = Int16Array([1, 2, 3]);
-// TypeError: calling a builtin Int16Array constructor
-// without new is forbidden
-```
-
-```js example-good
-const dv = new Int16Array([1, 2, 3]);
-```
-
 ## Voir aussi
 
-- [Prothèse d'émulation pour `Int16Array` avec la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-- [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView)
+- [Prothèse d'émulation de `Int16Array` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- Le guide [des tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
+- L'objet {{JSxRef("TypedArray")}}
+- L'objet {{JSxRef("ArrayBuffer")}}
+- L'objet {{JSxRef("DataView")}}
