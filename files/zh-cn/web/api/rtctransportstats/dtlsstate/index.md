@@ -14,7 +14,7 @@ l10n:
 
 ## 值
 
-字符串，取值可以是以下值的其中一项：`new`、`connecting`、`connected`、`closed`、`failed`。
+字符串，其值可以是以下值之一：`new`、`connecting`、`connected`、`closed`、`failed`。
 
 ## 规范
 
