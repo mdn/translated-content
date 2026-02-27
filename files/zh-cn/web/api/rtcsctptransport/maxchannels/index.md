@@ -8,11 +8,11 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-{{ domxref("RTCSctpTransport") }} 接口的 **`maxChannels`** 只读属性是表示可同时打开的 {{ domxref("RTCDataChannel") }} 对象的最大数量的整型。
+{{ domxref("RTCSctpTransport") }} 接口的 **`maxChannels`** 只读属性表示可同时打开的 {{ domxref("RTCDataChannel") }} 对象的最大数量。
 
 ## 值
 
-表示可同时打开的 {{ domxref("RTCDataChannel") }} 对象的最大数量的整型。在 SCTP 传输进入“connected”[状态](/zh-CN/docs/Web/API/RTCSctpTransport/state)前该值为 `null`。
+表示可同时打开的 {{ domxref("RTCDataChannel") }} 对象的最大数量的整数值，或者，在 SCTP 传输进入“connected”[状态](/zh-CN/docs/Web/API/RTCSctpTransport/state)前为 `null`。
 
 ## 规范
 
