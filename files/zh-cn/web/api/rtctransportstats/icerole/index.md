@@ -8,13 +8,13 @@ l10n:
 
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-{{domxref("RTCTransportStats")}} 字典的 **`iceRole`** 属性是指示传输所承担的 ICE 角色（控制端代理的角色，或被控制端代理的角色。）的字符串
+{{domxref("RTCTransportStats")}} 字典的 **`iceRole`** 属性是指示传输所承担的 ICE 角色（控制端代理的角色，或被控制端代理的角色）的字符串。
 
 该值与底层 {{domxref("RTCDtlsTransport.iceTransport")}} 的 {{domxref("RTCIceTransport.role")}} 属性相同。
 
 ## 值
 
-字符串，取值可以是以下值之一：`controlled`、`controlling` 或 `unknown`。
+字符串，其值可以是以下值之一：`controlled`、`controlling` 或 `unknown`。
 
 ## 规范
 
