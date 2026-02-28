@@ -1,27 +1,28 @@
 ---
 title: Constructeur Intl.DateTimeFormat()
+short-title: Intl.DateTimeFormat()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
+l10n:
+  sourceCommit: 5e0388c53dfc75003e83f79181797c3f66455971
 ---
 
-{{JSRef}}
+Le constructeur **`Intl.DateTimeFormat()`** crée des objets {{JSxRef("Intl.DateTimeFormat")}}.
 
-Le constructeur **`Intl.DateTimeFormat()`** permet de créer des objets [`Intl.DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) qui formatent des horodatages en tenant compte de la locale et des options fournies.
-
-{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat", "taller")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: constructeur Intl.DateTimeFormat()", "taller")}}
 
 ```js interactive-example
 const date = new Date(Date.UTC(2020, 11, 20, 3, 23, 16, 738));
-// Results below assume UTC timezone - your results may vary
+// Résultats ci-dessous supposent le fuseau horaire UTC - vos résultats peuvent varier
 
-// Specify default date formatting for language (locale)
+// Définir le format de date par défaut pour la langue (locale)
 console.log(new Intl.DateTimeFormat("en-US").format(date));
-// Expected output: "12/20/2020"
+// Résultat attendu : "12/20/2020"
 
-// Specify default date formatting for language with a fallback language (in this case Indonesian)
+// Définir le format de date par défaut pour la langue avec une langue de secours (dans ce cas indonésien)
 console.log(new Intl.DateTimeFormat(["ban", "id"]).format(date));
-// Expected output: "20/12/2020"
+// Résultat attendu : "20/12/2020"
 
-// Specify date and time format using "style" options (i.e. full, long, medium, short)
+// Définir le format de date et d'heure en utilisant les options "style" (c'est-à-dire full, long, medium, short)
 console.log(
   new Intl.DateTimeFormat("en-GB", {
     dateStyle: "full",
@@ -29,181 +30,247 @@ console.log(
     timeZone: "Australia/Sydney",
   }).format(date),
 );
-// Expected output: "Sunday, 20 December 2020 at 14:23:16 GMT+11"
+// Résultat attendu : "Sunday, 20 December 2020 at 14:23:16 GMT+11"
 ```
 
 ## Syntaxe
 
-```js
-new Intl.DateTimeFormat();
-new Intl.DateTimeFormat(locales);
-new Intl.DateTimeFormat(locales, options);
+```js-nolint
+new Intl.DateTimeFormat()
+new Intl.DateTimeFormat(locales)
+new Intl.DateTimeFormat(locales, options)
+
+Intl.DateTimeFormat()
+Intl.DateTimeFormat(locales)
+Intl.DateTimeFormat(locales, options)
 ```
+
+> [!NOTE]
+> `Intl.DateTimeFormat()` peut être appelé avec ou sans {{JSxRef("Operators/new", "new")}}. Les deux créent une nouvelle instance de `Intl.DateTimeFormat`. Cependant, il existe un comportement spécial lorsque la fonction est appelée sans `new` et que la valeur de `this` est une autre instance de `Intl.DateTimeFormat`&nbsp;; voir [Valeur de retour](#valeur_de_retour).
 
 ### Paramètres
 
-- `locales` {{optional_inline}}
-  - : Une chaîne de caractères représentant une balise de langue BCP 47 ou un tableau de telles balises. Pour la forme générale et l'interprétation de cet argument, voir la page [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl#identification_et_choix_de_la_locale). Les clés d'extension Unicode suivantes sont autorisées&nbsp;:
+- `locales` {{Optional_Inline}}
+  - : Une chaîne de caractères avec une {{Glossary("BCP 47 language tag", "balise de langue BCP 47")}} ou une instance {{JSxRef("Intl.Locale")}}, ou un tableau de tels identifiants de locale. La locale par défaut de l'environnement d'exécution est utilisée lorsque `undefined` est passé ou lorsqu'aucun des identifiants de locale spécifiés n'est pris en charge. Pour la forme générale et l'interprétation de l'argument `locales`, voir [la description du paramètre sur la page principale de `Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl#argument_locales).
+
+    The following Unicode extension keys are allowed:
     - `nu`
-      - : Le système de numération à utiliser. Les valeurs possibles sont&nbsp;: "`arab`", "`arabext`", "`bali`", "`beng`", "`deva`", "`fullwide`", "`gujr`", "`guru`", "`hanidec`", "`khmr`", "`knda`", "`laoo`", "`latn`", "`limb`", "`mlym`", "`mong`", "`mymr`", "`orya`", "`tamldec`", "`telu`", "`thai`", "`tibt`".
+      - : Voir [`numberingSystem`](#numberingsystem).
     - `ca`
-      - : Le calendrier à utiliser. Les valeurs possibles sont&nbsp;: "`buddhist`", "`chinese`", "`coptic`", "`ethiopia`", "`ethiopic`", "`gregory`", "`hebrew`", "`indian`", "`islamic`", "`iso8601`", "`japanese`", "`persian`", "`roc`".
+      - : Voir [`calendar`](#calendar).
     - `hc`
-      - : Le cycle horaire à utiliser. Les valeurs possibles sont&nbsp;: "`h11`", "`h12`", "`h23`", "`h24`".
+      - : Voir [`hourCycle`](#hourcycle).
 
-- `options` {{optional_inline}}
-  - : Un objet avec une ou plusieurs propriétés parmi les suivantes&nbsp;:
-    - `dateStyle`
-      - : Le style de formatage pour la date à utiliser avec `format()`. Les valeurs possibles sont&nbsp;:
-        - "`full`"
-        - "`long`"
-        - "`medium`"
-        - "`short`"
+- `options` {{Optional_Inline}}
+  - : Un objet. Pour faciliter la lecture, la liste des propriétés est divisée en sections en fonction de leur objectif, y compris [options de locale](#options_de_locale), [options des composants de date et d'heure](#options_des_composants_de_date_et_dheure) et [raccourcis de style](#raccourcis_de_style).
 
-        > [!NOTE]
-        > `dateStyle` peut être utilisée avec `timeStyle`, mais pas avec les autres options (comme `weekday`, `hour`, `month`, etc.).
+#### Options de locale
 
-    - `timeStyle`
-      - : Le style de formatage des heures à utiliser avec `format()`. Les valeurs possibles sont&nbsp;:
-        - "`full`"
-        - "`long`"
-        - "`medium`"
-        - "`short`"
+- `localeMatcher`
+  - : L'algorithme de correspondance des locales à utiliser. Les valeurs possibles sont `"lookup"` et `"best fit"`&nbsp;; la valeur par défaut est `"best fit"`. Pour plus d'information sur cette option, voir [Identification et négociation de la locale](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl#identification_et_négociation_de_locale).
+- `calendar`
+  - : Le calendrier à utiliser, tel que `"chinese"`, `"gregory"`, `"persian"`, etc. Pour une liste des types de calendriers pris en charge, voir [`Intl.supportedValuesOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#types_de_calendriers_pris_en_charge)&nbsp;; la valeur par défaut dépend de la locale. Cette option peut aussi être définie via la clé d'extension Unicode `ca`&nbsp;; si les deux sont fournies, cette propriété d'`options` prévaut.
+- `numberingSystem`
+  - : Le système de numération à utiliser pour le formatage des nombres, tel que `"arab"`, `"hans"`, `"mathsans"`, etc. Pour une liste des types de systèmes de numération pris en charge, voir [`Intl.supportedValuesOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#types_de_systèmes_de_numérotation_pris_en_charge)&nbsp;; la valeur par défaut dépend de la locale. Cette option peut aussi être définie via la clé d'extension Unicode `nu`&nbsp;; si les deux sont fournies, cette propriété de `options` prévaut.
+- `hour12`
+  - : Indique s'il faut utiliser une horloge sur 12 heures (par opposition à 24 heures). Les valeurs possibles sont `true` et `false`&nbsp;; la valeur par défaut dépend de la locale. Lorsque `true`, cette option définit `hourCycle` sur `"h11"` ou `"h12"`, selon la locale. Lorsque `false`, elle définit `hourCycle` sur `"h23"`. `hour12` surcharge à la fois la balise d'extension de locale `hc` et l'option `hourCycle`, si l'une ou l'autre ou les deux sont présentes.
+- `hourCycle`
+  - : Le cycle horaire à utiliser. Les valeurs possibles sont `"h11"`, `"h12"`, `"h23"`, et `"h24"`&nbsp;; la valeur par défaut est déduite de `hour12` et de la locale. Cette option peut aussi être définie via la clé d'extension Unicode `hc`&nbsp;; si les deux sont fournies, cette propriété de `options` prévaut.
+- `timeZone`
+  - : Le fuseau horaire à utiliser. Peut être n'importe quel [nom de fuseau horaire IANA](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#fuseaux_horaires_et_décalages), y compris des identifiants nommés comme `"UTC"`, `"America/New_York"`, et `"Etc/GMT+8"`, et des identifiants d'offset comme `"+01:00"`, `"-2359"`, et `"+23"`. La valeur par défaut est le fuseau horaire de l'environnement d'exécution, le même fuseau horaire utilisé par {{JSxRef("Date.prototype.toString()")}}.
 
-        > [!NOTE]
-        > `timeStyle` peut être utilisée avec `dateStyle`, mais pas avec les autres options (comme `weekday`, `hour`, `month`, etc.).
+#### Options des composants de date et d'heure
 
-    - `calendar`
-      - : Le calendrier à utiliser. Les valeurs possibles sont&nbsp;: "`buddhist`", "`chinese`", " `coptic`", "`ethiopia`", "`ethiopic`", "`gregory`", "`hebrew`", "`indian`", "`islamic`", "`iso8601`", "`japanese`", "`persian`", "`roc`".
-    - `dayPeriod`
-      - : Le style de formatage à utiliser pour les périodes du jour comme «&nbsp;dans la matinée&nbsp;», «&nbsp;à midi&nbsp;», etc. Les valeurs possibles sont&nbsp;:
-        "`narrow`", "`short`", " `long`".
+- `weekday`
+  - : La représentation du jour de la semaine. Les valeurs possibles sont&nbsp;:
+    - `"long"`
+      - : Par exemple, `Thursday`
+    - `"short"`
+      - : Par exemple, `Thu`
+    - `"narrow"`
+      - : Par exemple, `T`. Deux jours différents de la semaine peuvent avoir la même représentation avec ce style dans certaines locales (par exemple, les styles étroits de `Tuesday` et `Thursday` sont tous deux `T` dans la locale `en-US`).
+- `era`
+  - : La représentation d'une ère. Les valeurs possibles sont&nbsp;:
+    - `"long"`
+      - : Par exemple, `Anno Domini`
+    - `"short"`
+      - : Par exemple, `AD`
+    - `"narrow"`
+      - : Par exemple, `A`
+- `year`
+  - : La représentation de l'année. Les valeurs possibles sont `"numeric"` et `"2-digit"`.
+- `month`
+  - : La représentation du mois. Les valeurs possibles sont&nbsp;:
+    - `"numeric"`
+      - : Par exemple, `3`
+    - `"2-digit"`
+      - : Par exemple, `03`
+    - `"long"`
+      - : Par exemple, `March`
+    - `"short"`
+      - : Par exemple, `Mar`
+    - `"narrow"`
+      - : Par exemple, `M`. Deux mois différents peuvent avoir la même représentation avec ce style dans certaines locales (par exemple, les styles étroits de `March` et `May` sont tous deux `M` dans la locale `en-US`).
+- `day`
+  - : La représentation du jour. Les valeurs possibles sont `"numeric"` et `"2-digit"`.
+- `dayPeriod`
+  - : Le style de formatage utilisé pour les périodes du jour comme «&nbsp;in the morning&nbsp;», «&nbsp;am&nbsp;», «&nbsp;noon&nbsp;», «&nbsp;n&nbsp;», etc. Les valeurs possibles sont
+    `"narrow"`, `"short"` et `"long"`.
 
-        > [!NOTE]
-        > Cette option applique un effet uniquement si une horloge sur 12 heures est utilisée. De nombreuses locales utilisent la même chaîne de caractères quelle que soit la longueur indiquée.
+    > [!NOTE]
+    > Cette option applique un effet uniquement si une horloge sur 12 heures (`hourCycle: "h12"` ou `hourCycle: "h11"`) est utilisée. De nombreuses locales utilisent la même chaîne de caractères quelle que soit la longueur indiquée.
 
-    - `numberingSystem`
-      - : Le système de numération à utiliser. Les valeurs possibles sont&nbsp;: "`arab`", "`arabext`", " `bali`", "`beng`", "`deva`", "`fullwide`", " `gujr`", "`guru`", "`hanidec`", "`khmr`", "`knda`", "`laoo`", "`latn`", "`limb`", "`mlym`", " `mong`", "`mymr`", "`orya`", "`tamldec`", "`telu`", "`thai`", "`tibt`".
-    - `localeMatcher`
-      - : L'algorithme de correspondance des locales à utiliser. Les valeurs possibles sont "`lookup`" et "`best fit`"&nbsp;; la valeur par défaut est "`best fit`". Pour plus d'information, voir la page [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl#négociation_de_la_locale).
-    - `timeZone`
-      - : Le fuseau horaire à utiliser. La seule valeur que doivent nécessairement reconnaître les implémentations est "`UTC`". La valeur par défaut est le fuseau horaire de l'environnement d'exécution. Les implémentations peuvent également reconnaître les noms de fuseaux horaires tels que décrits dans [la base de données des fuseaux horaires IANA](https://www.iana.org/time-zones), comme "`Asia/Shanghai`", "`Asia/Kolkata`", "`America/New_York`".
-    - `hour12`
-      - : Indique si l'heure est exprimée sur 12 heures plutôt que sur 24. Les valeurs possibles sont `true` et `false`&nbsp;; la valeur par défaut dépend de la locale. Cette option surcharge la clé d'extension `hc` et/ou l'option `hourCycle`.
-    - `hourCycle`
-      - : Le cycle horaire à utiliser. Les valeurs possibles sont&nbsp;: "`h11`", "`h12`", "`h23`", or "`h24`". Cette option prévaut sur la clé d'extension `hc`. L'option `hour12` aura la priorité sur cette option si les deux sont utilisées.
-    - `formatMatcher`
-      - : L'algorithme de correspondance des formats à utiliser. Les valeurs possibles sont "`basic`" et "`best fit`"&nbsp;; la valeur par défaut est "`best fit`". Voir les paragraphes suivants à propos de l'utilisation de cette propriété.
+- `hour`
+  - : La représentation de l'heure. Les valeurs possibles sont `"numeric"` et `"2-digit"`.
+- `minute`
+  - : La représentation des minutes. Les valeurs possibles sont `"numeric"` et `"2-digit"`.
+- `second`
+  - : La représentation des secondes. Les valeurs possibles sont `"numeric"` et `"2-digit"`.
+- `fractionalSecondDigits`
+  - : Le nombre de chiffres utilisés pour représenter la partie décimale des secondes (tout chiffre supplémentaire sera tronqué). Les valeurs possibles sont de `1` à `3`.
+- `timeZoneName`
+  - : La représentation localisée du nom du fuseau horaire. Les valeurs possibles sont&nbsp;:
+    - `"long"`
+      - : Forme localisée longue (par exemple, `Pacific Standard Time`, `Nordamerikanische Westküsten-Normalzeit`)
+    - `"short"`
+      - : Forme localisée courte (par exemple&nbsp;: `PST`, `GMT-8`)
+    - `"shortOffset"`
+      - : Format GMT localisé court (par exemple, `GMT-8`)
+    - `"longOffset"`
+      - : Format GMT localisé long (par exemple, `GMT-08:00`)
+    - `"shortGeneric"`
+      - : Format générique court sans localisation (par exemple&nbsp;: `PT`, `Los Angeles Zeit`).
+    - `"longGeneric"`
+      - : Format générique long sans localisation (par exemple&nbsp;: `Pacific Time`, `Nordamerikanische Westküstenzeit`)
 
-    Les propriétés suivantes décrivent les composantes d'horodatage qui peuvent être utilisées pour le format de production ainsi que leurs différentes représentations. Les implémentations doivent au moins prendre en charge les sous-ensembles suivants&nbsp;:
-    - `weekday`, `year`, `month`,
-      `day`, `hour`, `minute`,
-      `second`
-    - `weekday`, `year`, `month`,
-      `day`
-    - `year`, `month`, `day`
-    - `year`, `month`
-    - `month`, `day`
-    - `hour`, `minute`, `second`
-    - `hour`, `minute`
+    > [!NOTE]
+    > L'affichage du fuseau horaire pourra basculer sur un autre format si la chaîne de caractères nécessaire n'est pas disponible. Ainsi, les formats non-localisés devraient afficher le fuseau horaire sans indication de pays/ville, à la manière de «&nbsp;Pacific Time&nbsp;». Si ce n'est pas possible, le moteur pourra utiliser un nom de fuseau horaire localisé comme «&nbsp;Los Angeles Time&nbsp;».
 
-    Les moteurs peuvent prendre en charge d'autres sous-ensembles et la recherche de la meilleure correspondance aura lieu parmi toutes les combinaisons disponibles. Deux algorithmes sont disponibles pour cette recherche et la propriété `formatMatcher` permet de choisir l'un ou l'autre&nbsp;: [un algorithme explicitement spécifié, "`basic`"](https://www.ecma-international.org/ecma-402/1.0/#BasicFormatMatcher) et un algorithme laissé à l'implémentation&nbsp;: "`best fit`".
-    - `weekday`
-      - : La représentation du jour de la semaine. Les valeurs possibles sont&nbsp;:
-        - "`long`" (par exemple, `mardi`)
-        - "`short`" (par exemple, `mar`)
-        - "`narrow`" (par exemple, `m`). Deux jours différents de la semaine peuvent avoir la même représentation avec ce style.
+##### Valeurs par défaut des composants de date et d'heure
 
-    - `era`
-      - : La représentation d'une ère. Les valeurs possibles sont&nbsp;:
-        - "`long`" (par exemple, `Anno Domini`)
-        - "`short`" (par exemple, `AD`)
-        - "`narrow`" (par exemple, `A`)
+Si l'une des options des composants de date et d'heure est spécifiée, alors `dateStyle` et `timeStyle` doivent être à `undefined`. Si toutes les options des composants de date et d'heure ainsi que `dateStyle`/`timeStyle` sont à `undefined`, certaines options par défaut pour les composants de date et d'heure sont définies, et dépendent de l'objet avec lequel la méthode de formatage a été appelée&nbsp;:
 
-    - `year`
-      - : La représentation de l'année. Les valeurs possibles sont&nbsp;:
-        - "`numeric`" (par exemple, `2012`)
-        - "`2-digit`" (par exemple, `12`)
+- Lors du formatage de {{JSxRef("Temporal.PlainDate")}} et {{JSxRef("Date")}}, `year`, `month` et `day` ont pour valeur par défaut `"numeric"`.
+- Lors du formatage de {{JSxRef("Temporal.PlainTime")}}, `hour`, `minute` et `second` ont pour valeur par défaut `"numeric"`.
+- Lors du formatage de {{JSxRef("Temporal.PlainYearMonth")}}, `year` et `month` ont pour valeur par défaut `"numeric"`.
+- Lors du formatage de {{JSxRef("Temporal.PlainMonthDay")}}, `month` et `day` ont pour valeur par défaut `"numeric"`.
+- Lors du formatage de {{JSxRef("Temporal.PlainDateTime")}} et {{JSxRef("Temporal.Instant")}}, `year`, `month`, `day`, `hour`, `minute` et `second` ont pour valeur par défaut `"numeric"`.
 
-    - `month`
-      - : La représentation du mois. Les valeurs possibles sont&nbsp;:
-        - "`numeric`" (par exemple, `3`)
-        - "`2-digit`" (par exemple, `03`)
-        - "`long`" (par exemple, `mars`)
-        - "`short`" (par exemple, `mar`)
-        - "`narrow`" (par exemple, `m`). Deux mois différents peuvent avoir la même représentation avec ce style.
+##### Correspondance de format
 
-    - `day`
-      - : La représentation du jour. Les valeurs possibles sont&nbsp;:
-        - "`numeric`" (par exemple, `1`)
-        - "`2-digit`" (par exemple, `01`)
+Les implémentations doivent prendre en charge l'affichage d'au moins les sous-ensembles suivants de composants de date et d'heure&nbsp;:
 
-    - `hour`
-      - : La représentation de l'heure. Les valeurs possibles sont&nbsp;: "`numeric`", "`2-digit`".
-    - `minute`
-      - : La représentation des minutes. Les valeurs possibles sont&nbsp;: "`numeric`", "`2-digit`".
-    - `second`
-      - : La représentation des secondes. Les valeurs possibles sont&nbsp;: "`numeric`", "`2-digit`".
-    - `fractionalSecondDigits`
-      - : Le nombre de chiffres à utiliser pour représenter la partie décimale des secondes (tout chiffre supplémentaire sera tronqué). Les valeurs possibles sont&nbsp;:
-        - `0` (la partie décimale est tronquée)
-        - `1`
-        - `2`
-        - `3`
+- `weekday`, `year`, `month`, `day`, `hour`, `minute`, `second`
+- `weekday`, `year`, `month`, `day`
+- `year`, `month`, `day`
+- `year`, `month`
+- `month`, `day`
+- `hour`, `minute`, `second`
+- `hour`, `minute`
 
-    - `timeZoneName`
-      - : La représentation localisée du nom du fuseau horaire. Les valeurs possibles sont&nbsp;:
-        - "`long`" pour le format long (par exemple, `Pacific Standard Time`, `Nordamerikanische Westküsten-Normalzeit`)
-        - "`short`" pour la forme courte localisée (par exemple, `PST`, `GMT-8`)
-        - "`shortOffset`" pour la forme courte GMT localisée (par exemple, `GMT-8`)
-        - "`longOffset`" pour la forme longue GMT localisée (par exemple, `GMT-0800`)
-        - "`shortGeneric`" pour la forme courte générique non-localisée (par exemple, `PT`, `Los Angeles Zeit`).
-        - "`longGeneric`" pour la forme longue générique non-localisée (par exemple, `Pacific Time`, `Nordamerikanische Westküstenzeit`)
+Les styles de composants de date et d'heure demandés peuvent ne pas correspondre directement à un format valide pris en charge par la locale, donc la correspondance de format permet de définir comment rapprocher les styles demandés du format pris en charge le plus proche.
 
-        > [!NOTE]
-        > L'affichage du fuseau horaire pourra basculer sur un autre format si la chaîne de caractères nécessaire n'est pas disponible. Ainsi, les formats non-localisés devraient afficher le fuseau horaire sans indication de pays ou de ville, à la manière de "Pacific Time". Si ce n'est pas possible, le moteur pourra utiliser un nom de fuseau horaire localisé comme "Los Angeles Time".
+- `formatMatcher`
+  - : L'algorithme de correspondance de format à utiliser. Les valeurs possibles sont `"basic"` et `"best fit"`&nbsp;; la valeur par défaut est `"best fit"`. L'algorithme pour `"best fit"` est défini par l'implémentation, et `"basic"` est [défini par la spécification <sup>(angl.)</sup>](https://tc39.es/ecma402/#sec-basicformatmatcher). Cette option n'est utilisée que lorsque `dateStyle` et `timeStyle` sont à `undefined` (ainsi chaque format de composant de date et d'heure peut être personnalisé individuellement).
 
-    La valeur par défaut pour chaque composante de l'horodatage est [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), et si toutes les propriétés valent [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), ce sera la valeur "`numeric`" qui sera utilisée pour `year`, `month`, et `day`.
+#### Raccourcis de style
+
+- `dateStyle`
+  - : Le [style de formatage de date <sup>(angl.)</sup>](https://cldr.unicode.org/translation/date-time/date-time-patterns#h.aa5zjyepm6vh) à utiliser. Les valeurs possibles sont `"full"`, `"long"`, `"medium"`, et `"short"`. Il s'étend à des styles pour `weekday`, `day`, `month`, `year`, et `era`, avec la combinaison exacte de valeurs dépendant de la locale. Lors du formatage d'objets tels que {{JSxRef("Temporal.PlainDate")}}, {{JSxRef("Temporal.PlainYearMonth")}}, et {{JSxRef("Temporal.PlainMonthDay")}}, `dateStyle` ne résoudra que les champs pertinents pour l'objet.
+- `timeStyle`
+  - : Le [style de formatage de l'heure <sup>(angl.)</sup>](https://cldr.unicode.org/translation/date-time/date-time-patterns#h.588vo3awdscu) à utiliser. Les valeurs possibles sont `"full"`, `"long"`, `"medium"`, et `"short"`. Il s'étend à des styles pour `hour`, `minute`, `second`, et `timeZoneName`, avec la combinaison exacte de valeurs dépendant de la locale.
+
+> [!NOTE]
+> `dateStyle` et `timeStyle` peuvent être utilisés ensemble, mais pas avec d'autres options de composants de date et d'heure (par exemple, `weekday`, `hour`, `month`, etc.).
+
+Vous pouvez formater différents types d'objets selon les raccourcis de style inclus&nbsp;:
+
+- Si `dateStyle` est défini, vous pouvez formater des objets {{JSxRef("Temporal.PlainDate")}}, {{JSxRef("Temporal.PlainYearMonth")}}, et {{JSxRef("Temporal.PlainMonthDay")}}.
+- Si `timeStyle` est défini, vous pouvez formater des objets {{JSxRef("Temporal.PlainTime")}}.
+- Si `dateStyle` ou `timeStyle` est défini, vous pouvez formater des objets {{JSxRef("Temporal.PlainDateTime")}} et {{JSxRef("Date")}}.
+
+### Valeur de retour
+
+Un nouvel objet `Intl.DateTimeFormat`.
+
+> [!NOTE]
+> Le texte ci-dessous décrit un comportement marqué comme «&nbsp;optionnel&nbsp;» par la spécification. Il se peut qu'il ne fonctionne pas dans tous les environnements. Consultez le [tableau de compatibilité des navigateurs](#compatibilité_des_navigateurs).
+
+Normalement, `Intl.DateTimeFormat()` peut être appelé avec ou sans {{JSxRef("Operators/new", "new")}}, et une nouvelle instance `Intl.DateTimeFormat` est retournée dans les deux cas. Cependant, si la valeur de {{JSxRef("Operators/this", "this")}} est un objet qui est {{JSxRef("Operators/instanceOf", "instanceOf")}} de `Intl.DateTimeFormat` (cela ne signifie pas nécessairement qu'il a été créé via `new Intl.DateTimeFormat`&nbsp;; cela signifie simplement qu'il possède `Intl.DateTimeFormat.prototype` dans sa chaîne de prototypes), alors la valeur de `this` est retournée à la place, avec le nouvel objet `Intl.DateTimeFormat` caché dans une propriété `[Symbol(IntlLegacyConstructedSymbol)]` (un symbole unique réutilisé entre les instances).
+
+```js
+const formateur = Intl.DateTimeFormat.call(
+  { __proto__: Intl.DateTimeFormat.prototype },
+  "en-US",
+  { dateStyle: "full" },
+);
+console.log(Object.getOwnPropertyDescriptors(formateur));
+// {
+//   [Symbol(IntlLegacyConstructedSymbol)]: {
+//     value: DateTimeFormat [Intl.DateTimeFormat] {},
+//     writable: false,
+//     enumerable: false,
+//     configurable: false
+//   }
+// }
+```
+
+Notez qu'il n'y a qu'une seule véritable instance `Intl.DateTimeFormat` ici&nbsp;: celle cachée dans `[Symbol(IntlLegacyConstructedSymbol)]`. Appeler les méthodes [`format()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format) et [`resolvedOptions()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions) sur `formatter` utilisera correctement les options stockées dans cette instance, mais appeler toutes les autres méthodes (par exemple, [`formatRange()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange)) échouera&nbsp;: «&nbsp;TypeError: formatRange method called on incompatible Object&nbsp;», car ces méthodes ne consultent pas les options de l'instance cachée.
+
+Ce comportement, appelé `ChainDateTimeFormat`, ne se produit pas lorsque `Intl.DateTimeFormat()` est appelé sans `new` mais avec `this` défini sur autre chose qui n'est pas un `instanceof Intl.DateTimeFormat`. Si vous l'appelez directement comme `Intl.DateTimeFormat()`, la valeur de `this` est [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl), et une nouvelle instance `Intl.DateTimeFormat` est créée normalement.
+
+### Exceptions
+
+- {{JSxRef("RangeError")}}
+  - : Levée si `locales` ou `options` contient des valeurs invalides.
 
 ## Exemples
 
-### Utiliser DateTimeFormat()
+### Utiliser `DateTimeFormat()`
 
 Voici une utilisation simple du constructeur sans indiquer de locale. `DateTimeFormat` utilise alors la locale par défaut et les options par défaut.
 
 ```js
-let date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
+// toLocaleString sans arguments dépend de l'implémentation,
+// de la locale par défaut et du fuseau horaire par défaut
 console.log(new Intl.DateTimeFormat().format(date));
-// → "20/12/2012" si exécuté sur un environnement avec la locale en fr-FR et sur le fuseau horaire (UTC+0100)
+// "12/19/2012" si exécuté avec la locale (langue) en-US et le fuseau horaire America/Los_Angeles (UTC-0800)
 ```
 
-### Utiliser timeStyle et dateStyle
+### Utiliser `timeStyle` et `dateStyle`
 
 ```js
-let o = new Intl.DateTimeFormat("fr", {
+const tempsCourt = new Intl.DateTimeFormat("fr", {
   timeStyle: "short",
 });
-console.log(o.format(Date.now())); // "09:45"
+console.log(tempsCourt.format(Date.now())); // "09:45"
 
-let o2 = new Intl.DateTimeFormat("fr", {
+const dateCourte = new Intl.DateTimeFormat("fr", {
   dateStyle: "short",
 });
-console.log(o2.format(Date.now())); // "29/12/2021"
+console.log(dateCourte.format(Date.now())); // "29/12/2021"
 
-let o3 = new Intl.DateTimeFormat("fr", {
+const tempsMoyen = new Intl.DateTimeFormat("fr", {
   timeStyle: "medium",
   dateStyle: "short",
 });
-console.log(o3.format(Date.now())); // "29/12/2021 09:46:55"
+console.log(tempsMoyen.format(Date.now())); // "29/12/2021 09:46:55"
 ```
 
-### Utiliser dayPeriod
-
-On utilise l'option `dayPeriod` pour produire une chaîne de caractères qui indique le moment de la journée («&nbsp;dans la matinée&nbsp;», «&nbsp;pendant la nuit&nbsp;», etc.). On notera que cela fonctionne uniquement avec un formatage utilisant une horloge sur 12 heures (`hourCycle: 'h12'`) et que pour de nombreuses locales, les chaînes obtenues sont les mêmes quelle que soit la valeur utilisée pour `dayPeriod`.
+Cependant, les styles exacts des composants (dépendants de la locale) auxquels ils aboutissent ne sont pas inclus dans les [options résolues](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions). Cela garantit que le résultat de `resolvedOptions()` peut être passé directement au constructeur `Intl.DateTimeFormat()` (car un objet `options` contenant à la fois `dateStyle` ou `timeStyle` et des styles individuels de composants de date ou d'heure n'est pas valide).
 
 ```js
-let date = Date.UTC(2012, 11, 17, 4, 0, 42);
+console.log(dateCourte.resolvedOptions().year); // undefined
+```
+
+### Utiliser `dayPeriod`
+
+Utilisez l'option `dayPeriod` pour produire une chaîne de caractères pour les moments de la journée («&nbsp;in the morning&nbsp;», «&nbsp;at night&nbsp;», «&nbsp;noon&nbsp;», etc.). Notez que cela fonctionne uniquement lors du formatage pour une horloge sur 12 heures (`hourCycle: 'h12'` ou `hourCycle: 'h11'`) et que pour de nombreuses locales, les chaînes sont identiques quelle que soit la valeur passée pour `dayPeriod`.
+
+```js
+const date = Date.UTC(2012, 11, 17, 4, 0, 42);
 
 console.log(
   new Intl.DateTimeFormat("en-GB", {
@@ -236,13 +303,13 @@ console.log(
 // > "4 du matin"
 ```
 
-### Utiliser timeZoneName
+### Utiliser `timeZoneName`
 
 On utilise l'option `timeZoneName` pour produire une chaîne de caractères représentant le fuseau horaire ("GMT", "Pacific Time", etc.).
 
 ```js
-var date = Date.UTC(2021, 11, 17, 3, 0, 42);
-const timezoneNames = [
+const date = Date.UTC(2021, 11, 17, 3, 0, 42);
+const nomsZoneTemps = [
   "short",
   "long",
   "shortOffset",
@@ -251,12 +318,13 @@ const timezoneNames = [
   "longGeneric",
 ];
 
-for (const zoneName of timezoneNames) {
-  var formatter = new Intl.DateTimeFormat("fr", {
+for (const nomZone of nomsZoneTemps) {
+  // Faire quelque chose avec currentValue
+  const formateur = new Intl.DateTimeFormat("fr", {
     timeZone: "Europe/Paris",
-    timeZoneName: zoneName,
+    timeZoneName: nomZone,
   });
-  console.log(zoneName + " : " + formatter.format(date));
+  console.log(`${nomZone}: ${formateur.format(date)}`);
 }
 
 // Résultat attendu :
@@ -278,6 +346,6 @@ for (const zoneName of timezoneNames) {
 
 ## Voir aussi
 
-- [`Intl.DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
-- [`Intl.supportedValuesOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf)
-- [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl)
+- L'objet {{JSxRef("Intl.DateTimeFormat")}}
+- La méthode {{JSxRef("Intl.supportedValuesOf()")}}
+- L'objet {{JSxRef("Intl")}}

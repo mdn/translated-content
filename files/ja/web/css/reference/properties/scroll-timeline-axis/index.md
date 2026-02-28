@@ -1,19 +1,11 @@
 ---
 title: scroll-timeline-axis
 slug: Web/CSS/Reference/Properties/scroll-timeline-axis
-original_slug: Web/CSS/scroll-timeline-axis
 l10n:
-  sourceCommit: 7eaac8008ebe00417314379fab2285df23322e73
+  sourceCommit: f89de66a773484024ab5d914bc88fa08d894db1c
 ---
 
-{{SeeCompatTable}}
-
-**`scroll-timeline-axis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロール可能な要素（_スクローラー_）を上下（または左右）にスクロールすることで進行する _名前付きスクロール進行タイムライン_ アニメーションのタイムラインを提供するために使用されるスクロールバーの方向を指定するために使用します。 `scroll-timeline` はタイムラインを提供するスクローラーに設定します。詳しくは [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)を参照してください。
-
-> [!NOTE]
-> スクローラー要素が軸方向のコンテナーをはみ出さないか、はみ出した部分が隠されているかクリップされている場合、スクロール進行タイムラインは作成されません。
-
-`scroll-timeline-axis` および {{cssxref("scroll-timeline-name")}} プロパティは [`scroll-timeline`](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline) 一括指定プロパティを使用して設定することもできます。
+**`scroll-timeline-axis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロール可能な要素（_スクローラー_）をスクロールすることで進行する[スクロール駆動アニメーションに使用するタイムライン](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)を提供するのに使用されるスクロールバーの方向を指定するために使用します。
 
 ## 構文
 
@@ -21,23 +13,31 @@ l10n:
 /* 論理プロパティ値 */
 scroll-timeline-axis: block;
 scroll-timeline-axis: inline;
+
 /* 非論理プロパティ値 */
 scroll-timeline-axis: y;
 scroll-timeline-axis: x;
+
+/* グローバル値 */
+scroll-timeline-axis: inherit;
+scroll-timeline-axis: initial;
+scroll-timeline-axis: revert;
+scroll-timeline-axis: revert-layer;
+scroll-timeline-axis: unset;
 ```
 
 ### 値
 
-`scroll-timeline-axis` に許可されている値は次の通りです。
+- `<axis>`
+  - : {{ cssxref("axis") }} キーワードで、スクロール駆動アニメーションを制御するスクロールポートの方向（または軸）を指定します。デフォルト値は `block` です。
 
-- `block`
-  - : スクローラー要素のブロック軸にあるスクロールバーで、行内のテキストの流れに垂直な方向の軸です。標準的な英語のような横書きモードでは `y` と同じになり、縦書きモードでは `x` と同じになります。これが既定値です。
-- `inline`
-  - : スクローラー要素のインライン軸にあるスクロールバーで、行内のテキストの流れと並行する方向の軸です。横書きモードでは `x` と同じになり、縦書きモードでは `y` と同じになります。
-- `y`
-  - : スクローラー要素の垂直軸上のスクロールバーです。
-- `x`
-  - : スクローラー要素の水平軸上のスクロールバーです。
+## 解説
+
+`scroll-timeline-axis` プロパティは、[スクロール進行タイムライン](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)アニメーションのタイムラインを提供するスクロールバーを指定します。値はスクロールバーの軸 (`<axis>`) です。`scroll-timeline` プロパティは、タイムラインを提供するスクローラーに設定します。
+
+スクローラー要素が軸方向のコンテナーをはみ出さないか、はみ出した部分が隠されているかクリップされている場合、スクロール進行タイムラインは作成されません。
+
+`scroll-timeline-axis` および {{cssxref("scroll-timeline-name")}} プロパティは {{cssxref("scroll-timeline")}} 一括指定プロパティを使用して設定することもできます。
 
 ## 公式定義
 
@@ -51,7 +51,7 @@ scroll-timeline-axis: x;
 
 ### スクロール進行タイムラインの軸の定義
 
-この例では、`--myScroller` という名前のスクロール進行タイムラインが <code>:root</code> 要素 ({{htmlelement("html")}}) の `scroll-timeline-name` プロパティを使用して定義されています。そして、このタイムラインは `animation` クラスを持つ要素のアニメーションに `animation-timeline: --myScroller` を使用して適用されます。
+この例では、`--my-scroller` という名前のスクロール進行タイムラインが <code>:root</code> 要素 ({{htmlelement("html")}}) の `scroll-timeline-name` プロパティを使用して定義されています。そして、このタイムラインは `animation` クラスを持つ要素のアニメーションに `animation-timeline: --my-scroller` を使用して適用されます。
 
 `scroll-timeline-axis` の効果を示すために、この例ではアニメーションを駆動するために水平方向の（既定値ではない）スクロールバーを使用しています。
 
@@ -68,20 +68,18 @@ scroll-timeline-axis: x;
 
 #### CSS
 
-コンテナーの CSS は、 <code>:root</code> を `--myScroller` という名前のスクロール進行タイムラインのソースとして設定するために、`scroll-timeline-name` プロパティを使用します。
-スクロール軸は `scroll-timeline-axis: x;` (Chromium) および `scroll-timeline-axis: horizontal;` (Firefox) を使用して設定します - これにより、水平スクロールバーの位置がアニメーションタイムラインを決定します。
+コンテナーの CSS は、 <code>:root</code> を `--my-scroller` という名前のスクロール進行タイムラインのソースとして設定するために、`scroll-timeline-name` プロパティを使用しています。
+スクロール軸は `scroll-timeline-axis: x;` で設定され、これにより水平スクロールバーの位置をアニメーションのタイムラインにします。同時に、標準外の古い値である `horizontal` および `vertical` に対応していて、`x` および `y` に対応していないブラウザー向けに `scroll-timeline-axis: horizontal;` も記載しています。
 
 `.content` 要素の幅を大きく設定することで、 `:root` 要素からはみ出すようにします。
 
-また、 `.animation` 要素には、 `animation-timeline: --myScroller;` を使用してタイムラインが適用されており、 Firefox でこの例がうまくいくように `animation-duration` も適用されています。
+`.animation` 要素には {{cssxref("animation")}} 一括指定を使用してアニメションを適用しており、そしてスクロールタイムラインを {{cssxref("animation-timeline")}} で設定しています。
 
 ```css
 :root {
-  scroll-timeline-name: --myScroller;
+  scroll-timeline-name: --my-scroller;
 
-  /* Chromium は新しい x/y 構文に対応 */
   scroll-timeline-axis: x;
-  /* Firefox はまだ古い horizontal/vertical 構文に対応 */
   scroll-timeline-axis: horizontal;
 }
 
@@ -106,9 +104,8 @@ body {
 }
 
 .animation {
-  animation: rotate-appear;
-  animation-timeline: --myScroller;
-  animation-duration: 1ms; /* Firefox では、アニメーションを適用するために必要 */
+  animation: rotate-appear 1ms linear;
+  animation-timeline: --my-scroller;
 }
 
 @keyframes rotate-appear {
@@ -120,6 +117,20 @@ body {
   to {
     rotate: 720deg;
     top: 100%;
+  }
+}
+```
+
+```css hidden
+@layer no-support {
+  @supports not (scroll-timeline-axis: block) {
+    body::before {
+      content: "このブラウザーは `scroll-timeline-axis` プロパティに対応していません。";
+      background-color: wheat;
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
   }
 }
 ```
@@ -140,7 +151,8 @@ body {
 
 ## 関連情報
 
-- [`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline)
-- [`scroll-timeline`](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline), [`scroll-timeline-name`](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline-name)
-- {{cssxref("timeline-scope")}}
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)
+- {{cssxref("animation-timeline")}}
+- {{cssxref("scroll-timeline")}}
+- {{cssxref("scroll-timeline-name")}}
+- [スクロール駆動アニメーションタイムライン](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
+- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)モジュール

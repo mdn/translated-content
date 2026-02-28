@@ -1,29 +1,26 @@
 ---
-title: <main>
+title: "<main> : l'élément de contenu principal"
 slug: Web/HTML/Reference/Elements/main
-original_slug: Web/HTML/Element/main
+l10n:
+  sourceCommit: 7615562a3689a3e23a2b6b623597f4391740a53e
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<main>`** représente le contenu principal du corps ({{HTMLElement("body")}}) d'un document. La zone de contenu principal se compose de contenu directement lié ou qui développe le sujet central d'un document, ou la fonctionnalité centrale d'une application.
 
-L'élément HTML **`<main>`** représente le contenu majoritaire du {{HTMLElement("body")}} du document. Le contenu principal de la zone est constitué de contenu directement en relation, ou qui étend le sujet principal du document ou de la fonctionnalité principale d'une application.
-
-Un document ne peut pas avoir plus d'un seul élément `<main>` sans attribut [`hidden`](/fr/docs/Web/HTML/Reference/Global_attributes#hidden).
-
-{{InteractiveExample("HTML Demo: &lt;main&gt;", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;main&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
-<header>Gecko facts</header>
+<header>Faits sur les geckos</header>
 
 <main>
   <p>
-    Geckos are a group of usually small, usually nocturnal lizards. They are
-    found on every continent except Antarctica.
+    Les geckos sont un groupe de lézards généralement petits et nocturnes. Ils
+    se trouvent sur tous les continents sauf l'Antarctique.
   </p>
 
   <p>
-    Many species of gecko have adhesive toe pads which enable them to climb
-    walls and even windows.
+    De nombreuses espèces de geckos possèdent des coussinets adhésifs sur leurs
+    doigts, ce qui leur permet de grimper aux murs et même aux fenêtres.
   </p>
 </main>
 ```
@@ -36,14 +33,49 @@ header {
 }
 ```
 
+Un document ne doit pas comporter plus d'un élément `<main>` qui ne possède pas l'attribut [`hidden`](/fr/docs/Web/HTML/Reference/Global_attributes/hidden) défini.
+
 ## Attributs
 
-Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes
 
-- Ce contenu doit être unique dans le document, excluant tout contenu qui est répété sur plusieurs documents comme des barres latérales, liens de navigation, informations relative au droit d'auteur, logo du site, et champs de recherche (sauf, bien entendu, si la fonctionnalité principale du document est un champ de recherche).
-- `<main>` ne contribue pas au plan du document. Autrement dit, à la différence d'éléments tels que {{HTMLElement("body")}}, les niveaux de titre comme {{HTMLElement("h2")}}, etc. `<main>` n'affecte pas la structure même de la page, c'est un élément purement informatif.
+Le contenu d'un élément `<main>` doit être unique au document. Le contenu répété dans un ensemble de documents ou de sections de document, comme les barres latérales, les liens de navigation, les informations sur le droit d'auteur, les logos du site et les formulaires de recherche, ne doit pas être inclus, sauf si le formulaire de recherche constitue la fonctionnalité principale de la page.
+
+`<main>` ne contribue pas à la structure du document&nbsp;; c'est-à-dire que, contrairement à des éléments HTML comme {{HTMLElement("body")}}, des titres comme `{{HTMLElement("Heading_Elements", "&lt;h2>")}}`, etc., `<main>` n'affecte pas la notion de structure de page du {{Glossary("DOM")}}. Il est strictement informatif.
+
+## Accessibilité
+
+### Point de repère
+
+L'élément `<main>` a le rôle d'un [repère `main`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/main_role). Les [repères](/fr/docs/Web/Accessibility/ARIA/Guides/Techniques#rôles_de_points_de_repère) peuvent être utilisées par les technologies d'assistance pour identifier et naviguer rapidement entre les grandes sections du document. Il est préférable d'utiliser l'élément `<main>` plutôt que de déclarer `role="main"`, sauf en cas de [problèmes de prise en charge des anciens navigateurs](#compatibilité_des_navigateurs).
+
+### Navigation rapide
+
+La navigation rapide (aussi appelée _skip navigation_ ou _skipnav_ en anglais) est une technique permettant aux outils d'assistance de passer certaines sections de contenu répétés (menu de navigation, bannières, etc.). Cela permet à l'utilisateur·ice d'accéder plus rapidement au contenu principal de la page.
+
+Ajouter un attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) à l'élément `<main>` lui permet d'être une cible pour la navigation rapide.
+
+```html
+<body>
+  <a href="#main-content">Aller au contenu principal</a>
+
+  <!-- Contenu relatif à la navigation et en-tête du document -->
+
+  <main id="main-content">
+    <!-- Contenu principal de la page -->
+  </main>
+</body>
+```
+
+- [WebAIM&nbsp;: Liens et navigation rapide <sup>(angl.)</sup>](https://webaim.org/techniques/skipnav/)
+
+### Mode lecture
+
+Les fonctionnalités « mode lecture » d'un navigateur vérifient la présence d'un élément `<main>` ainsi que la présence de [titres](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) et de [sections](/fr/docs/Web/HTML/Reference/Elements#sectionnement_du_contenu) lors de la convertion du document pour le mode lecture.
+
+- [Construire des sites web pour le mode lecture de Safari et pour les autres applications de lecture <sup>(angl.)</sup>](https://medium.com/@mandy.michael/building-websites-for-safari-reader-mode-and-other-reading-apps-1562913c86c9)
 
 ## Exemples
 
@@ -81,39 +113,7 @@ Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples","300","200")}}
-
-## Accessibilité
-
-### Balisage du document
-
-L'élément `<main>` a le rôle d'une [balise `main`](/fr/docs/Web/Accessibility/ARIA/Roles/Main_role). Dans le contexte de l'accessibilité, les [balises](/fr/docs/Web/Accessibility/ARIA/Guides/Techniques) peuvent être utilisées par les outils d'assistance afin d'identifier et de naviguer rapidement entre les grandes sections d'un document. On privilégiera l'élément `<main>` à l'ajout du `role="main"`, à moins qu'il faille [prendre en charge d'anciens navigateurs](#Compatibilité_des_navigateurs).
-
-### Navigation rapide
-
-La navigation rapide (aussi appelée _skip navigation_ ou _skipnav_ en anglais) est une technique permettant aux outils d'assistance de passer certaines sections de contenu répétés (menu de navigation, bannières, etc.). Cela permet à l'utilisateur d'accéder plus rapidement au contenu principal de la page.
-
-Ajouter un attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes#id) à l'élément `<main>` lui permet d'être une cible pour la navigation rapide.
-
-```html
-<body>
-  <a href="#main-content">Aller au contenu principal</a>
-
-  <!-- Contenu relatif à la navigation et en-tête du document -->
-
-  <main id="main-content">
-    <!-- Contenu principal de la page -->
-  </main>
-</body>
-```
-
-- [WebAIM : Liens et navigation rapide (en anglais)](https://webaim.org/techniques/skipnav/)
-
-### Mode lecture
-
-Les fonctionnalités « mode lecture » d'un navigateur vérifient la présence d'un élément `<main>` ainsi que la présence de [titres](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) et de [sections](/fr/docs/Web/HTML/Reference/Elements#sectionnement_du_contenu) lors de la convertion du document pour le mode lecture.
-
-- [Construire des sites web pour le mode lecture de Safari et pour les autres applications de lecture (en anglais)](https://medium.com/@mandy.michael/building-websites-for-safari-reader-mode-and-other-reading-apps-1562913c86c9)
+{{EmbedLiveSample("Exemples")}}
 
 ## Résumé technique
 
@@ -121,31 +121,26 @@ Les fonctionnalités « mode lecture » d'un navigateur vérifient la présence 
   <tbody>
     <tr>
       <th scope="row">
-        <dfn
-          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-            >Categories de contenu</a
-          ></dfn
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
+          >Categories de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
-          >contenu tangible</a
-        >.
+        >, contenu tangible.
       </td>
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
         >.
       </td>
     </tr>
     <tr>
-      <th scope="row"><dfn>Omission de balise</dfn></th>
+      <th scope="row">Omission de balise</th>
       <td>
         Aucune, les balises d'ouverture et de fermeture sont toutes les deux
         obligatoires.
@@ -155,31 +150,33 @@ Les fonctionnalités « mode lecture » d'un navigateur vérifient la présence 
       <th scope="row">Éléments parents autorisés</th>
       <td>
         Tout élément qui accepte du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >contenu de flux</a
         >, uniquement si c'est
         <a
           href="https://html.spec.whatwg.org/multipage/grouping-content.html#hierarchically-correct-main-element"
           >un élément hiérarchiquement correct pour un élément
-          <code>&#x3C;main></code></a
+          <code>&#x3C;main></code> <sup>(angl.)</sup></a
         >.
       </td>
     </tr>
     <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
+      <th scope="row">Rôle ARIA implicite</th>
       <td>
-        Le rôle <code>main</code> est appliqué à <code>&#x3C;main></code> par
-        défaut, et le rôle <code
-          ><a
-            href="https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role"
-            >presentation</a
+        <code
+          ><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/main_role"
+            >main</a
           ></code
-        > est également autorisé.
+        >
       </td>
     </tr>
     <tr>
+      <th scope="row">Rôles ARIA autorisés</th>
+      <td>Aucun <code>role</code> autorisé</td>
+    </tr>
+    <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
+      <td>{{DOMxRef("HTMLElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -194,14 +191,6 @@ Les fonctionnalités « mode lecture » d'un navigateur vérifient la présence 
 
 ## Voir aussi
 
-- Les éléments qui permettent de structurer un document HTML
-  - {{HTMLElement("html")}}
-  - {{HTMLElement("head")}}
-  - {{HTMLElement("body")}}
-
-- Les éléments liés au plan d'un document HTML :
-  - {{HTMLElement("article")}}
-  - {{HTMLElement("aside")}}
-  - {{HTMLElement("footer")}}
-  - {{HTMLElement("header")}}
-  - {{HTMLElement("nav")}}
+- Les éléments de structure de base&nbsp;: {{HTMLElement("html")}}, {{HTMLElement("head")}}, {{HTMLElement("body")}}
+- Les éléments liés aux sections&nbsp;: {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}} ou {{HTMLElement("nav")}}
+- [ARIA&nbsp;: rôle `main`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/main_role)

@@ -2,7 +2,7 @@
 title: オリジン間リソース共有 (CORS)
 slug: Web/HTTP/Guides/CORS
 l10n:
-  sourceCommit: cb8143261f5cd54788285574ab0c427ba3f01a04
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
 オリジン間リソース共有 (Cross-Origin Resource Sharing, {{Glossary("CORS")}}) は、 {{Glossary("HTTP")}} ヘッダーベースの仕組みを使用して、ある{{glossary("Origin", "オリジン")}}で動作しているウェブアプリケーションに、異なるオリジンにある選択されたリソースへのアクセス権を与えるようブラウザーに指示するための仕組みです。ウェブアプリケーションは、自分とは異なるオリジン (ドメイン、プロトコル、ポート番号) にあるリソースをリクエストするとき、オリジン間 HTTP リクエストを実行します。
@@ -20,7 +20,7 @@ CORS の仕組みは、安全なオリジン間のリクエストとブラウザ
 この [cross-origin sharing standard](https://fetch.spec.whatwg.org/#http-cors-protocol) では、以下についてオリジン間の HTTP リクエストができるようにしています。
 
 - 前述のような `fetch()` や `XMLHttpRequest` の呼び出し。
-- ウェブフォント（CSS の `@font-face` で別ドメインのフォントを利用するため）。[これによりサーバーは、許可したウェブサイトのみからオリジンをまたがって読み込んで利用できる TrueType フォントを提供することができます。](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
+- ウェブフォント（CSS の `@font-face` で別ドメインのフォントを利用するため）は、[font fetching requirements](https://drafts.csswg.org/css-fonts/#font-fetching-requirements) で書かれている通り、サーバーは、許可したウェブサイトのみからオリジンをまたがって読み込んで利用できる TrueType フォントを提供することができます。
 - [WebGL テクスチャ](/ja/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)。
 - {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}} を使用してキャンバスへ描かれた画像や映像のフレーム
 - [画像から生成する CSS シェイプ](/ja/docs/Web/CSS/Guides/Shapes/From_images)。
@@ -293,7 +293,7 @@ const fetchPromise = fetch(request);
 fetchPromise.then((response) => console.log(response));
 ```
 
-このコードは、{{domxref("Request")}} オブジェクトを作成し、コンストラクターで `credentials` オプションを `"include"` に設定し、このリクエストを `fetch()` に渡します。これは単純な `GET` リクエストなのでプリフライトは行いませんが、ブラウザーは {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true` ヘッダーを持たないレスポンスを**拒否**し、ウェブコンテンツを呼び出すレスポンスを作成**しない**でしょう。
+このコードは、{{domxref("Request")}} オブジェクトを作成し、コンストラクターで `credentials` オプションを `"include"` に設定し、このリクエストを `fetch()` に渡します。これは単純な `GET` リクエストなのでプリフライトは行いませんが、ブラウザーは {{HTTPHeader("Access-Control-Allow-Credentials")}} ヘッダーが `true` に設定されていないレスポンスを**拒否**し、ウェブコンテンツを呼び出すレスポンスを作成**しない**でしょう。
 
 ![Access-Control-Allow-Credentials を使用した単純な GET リクエストの図。](include-credentials.svg)
 
@@ -353,15 +353,18 @@ CORS のプリフライトリクエストに資格情報を含めてはいけま
 
 ただし、リクエストが（`Cookie` ヘッダーのような）資格情報を含んで行われ、そのレスポンスがワイルドカードではない実際のオリジンを含んでいる場合（例えば `Access-Control-Allow-Origin: https://example.com` など）、ブラウザーは指定されたオリジンからのレスポンスへのアクセスを許可します。
 
-また、レスポンス内の `Access-Control-Allow-Origin` レスポンスヘッダーの値が実際のオリジンではなく `*` ワイルドカードであった場合、クッキーは設定されません。
+また、レスポンス内の `Set-Cookie` レスポンスヘッダーは、そのレスポンスの `Access-Control-Allow-Origin` 値が実際のオリジンではなく `*` ワイルドカードである場合、クッキーを設定しないことに注意してください。
 
 #### サードパーティークッキー
 
-CORS のレスポンスに設定されたクッキーは、サードパーティークッキーに関する通常のポリシーに従うことに注意してください。上記の例では、ページは `foo.example` から読み込まれていますが、レスポンスの `Cookie` ヘッダーは `bar.other` から送られているので、ユーザーのブラウザーがサードパーティークッキーをすべて拒否するよう設定されていた場合は保存されません。
+CORS のレスポンスに設定されたクッキーは、サードパーティークッキーに関する通常のポリシーに従うことに注意してください。上記の例では、ページは `foo.example` から読み込まれていますが、レスポンスの `Set-Cookie` ヘッダーは `bar.other` から送られているので、ユーザーのブラウザーがサードパーティークッキーをすべて拒否するよう設定されていた場合は保存されません。
 
-リクエスト中のクッキーは、通常のサードパーティクッキーポリシーでも抑制されることがあります。したがって、クッキーポリシーが強制されていると、この章で説明されている機能が無効になり、事実上、認証されたリクエストを行うことができなくなるかもしれません。
+CORS リクエストおよびレスポンスに設定されるクッキーは、通常のサードパーティクッキーポリシーの対象となります。
 
-[SameSite](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 属性に関するクッキーポリシーは適用されます。
+サードパーティクッキーポリシーにより、リクエストでサードパーティクッキーが送信されなくなることがあります。これにより、サードパーティサーバーが許可している場合（`Access-Control-Allow-Credentials` を使用）でも、サイトが資格情報付きリクエストを実行できなくなる可能性があります。
+デフォルトのポリシーはブラウザーによって異なりますが、[SameSite](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 属性を使用して設定できます。
+
+認証済みリクエストが許可されている場合、ブラウザーはレスポンス内のすべてのサードパーティクッキーを拒否するよう設定されることがあります。
 
 ## HTTP レスポンスヘッダー
 
@@ -394,13 +397,11 @@ Vary: Origin
 Access-Control-Expose-Headers: <header-name>[, <header-name>]*
 ```
 
-例えば、以下のようになります。
+例えば、次の設定により、`X-My-Custom-Header` および `X-Another-Custom-Header` ヘッダーがブラウザーに公開されます。
 
 ```http
 Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header
 ```
-
-これは、ブラウザーに対して `X-My-Custom-Header` および `X-Another-Custom-Header` ヘッダーを許可します。
 
 ### Access-Control-Max-Age
 

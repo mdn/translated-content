@@ -80,6 +80,6 @@ Vim のようなエディターでこのコードを調査すると、実際に�
 var foo = 'bar';<200b>
 ```
 
-## 関連項目
+## 関連情報
 
 - [字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar)

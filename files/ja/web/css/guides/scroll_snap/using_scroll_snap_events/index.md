@@ -1,11 +1,11 @@
 ---
 title: スクロールスナップイベントの使用
 slug: Web/CSS/Guides/Scroll_snap/Using_scroll_snap_events
-original_slug: Web/CSS/CSS_scroll_snap/Using_scroll_snap_events
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
+pending and selected, respectively.
 [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)モジュールでは、 2 つの**スクロールスナップイベント**、 {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} と {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} が定義されています。これらは、ブラウザーが新しい[スクロールスナップのターゲット](/ja/docs/Web/CSS/Guides/Scroll_snap/Basic_concepts)がそれぞれ待機中または選択されたと判断したことに応じて、それぞれ JavaScript を実行できるようにします。
 
 このガイドでは、これらのイベントの概要と完全な例を紹介します。
@@ -145,9 +145,9 @@ h2 {
 }
 
 section {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   border-radius: 5px;
-  background: #eee;
+  background: #eeeeee;
   box-shadow:
     inset 1px 1px 4px rgb(255 255 255 / 0.5),
     inset -1px -1px 4px rgb(0 0 0 / 0.5);
@@ -186,7 +186,7 @@ section {
 
 ```css live-sample___one-dimensional_scroller_example
 .pending {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 
 .select-section {
@@ -284,9 +284,9 @@ body {
 }
 
 section {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   border-radius: 5px;
-  background: #eee;
+  background: #eeeeee;
   box-shadow:
     inset 1px 1px 4px rgb(255 255 255 / 0.5),
     inset -1px -1px 4px rgb(0 0 0 / 0.5);
@@ -343,12 +343,12 @@ main {
 }
 
 .pending {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 
 @keyframes select {
   from {
-    background: #eee;
+    background: #eeeeee;
     color: black;
   }
 
@@ -366,13 +366,13 @@ main {
   }
 
   80% {
-    background: #eee;
+    background: #eeeeee;
     color: black;
     opacity: 0.1;
   }
 
   100% {
-    background: #eee;
+    background: #eeeeee;
     color: black;
     opacity: 1;
   }

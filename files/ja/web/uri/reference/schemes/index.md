@@ -80,6 +80,6 @@ mailto:help@supercyberhelpdesk.info
 ## 関連情報
 
 - [URI](/ja/docs/Web/URI)
-- [データ URL](/ja/docs/Web/URI/Reference/Schemes/data)
+- [data URL](/ja/docs/Web/URI/Reference/Schemes/data)
 - [リソース URL](/ja/docs/Web/URI/Reference/Schemes/resource)
 - [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)

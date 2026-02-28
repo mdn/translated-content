@@ -1,9 +1,8 @@
 ---
 title: "!important"
 slug: Web/CSS/Reference/Values/important
-original_slug: Web/CSS/important
 l10n:
-  sourceCommit: a29769d6d10261f771321eb60f3990029c160924
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
 区切り文字 `!` に続く `important` キーワードは、その宣言が重要であることを示します。 `important` フラグは[カスケード](/ja/docs/Web/CSS/Guides/Cascade/Introduction)内の宣言を選択するルールを変更します。 _important_ ではない宣言は _normal_ と呼ばれます。
@@ -18,7 +17,7 @@ selector {
 }
 ```
 
-`!important` はプロパティ値のペア宣言の値の後に来ます。 important フラグは宣言の最後のトークンでなければなりません。言い換えれば、フラグと宣言の終わりのセミコロンの間には空白とコメントがあってもかまいませんが、それ以外はありません。
+`!important` は、プロパティと値のペアによる宣言の値の後に配置され、その前にはゼロ個以上の空白が置かれます。 important フラグは宣言の最後のトークンでなければなりません。言い換えれば、フラグと宣言の終わりのセミコロンの間には空白とコメントがあってもかまいませんが、それ以外はありません。
 
 ## カスケード上の影響
 
@@ -114,14 +113,14 @@ p {
 
 ```css
 :root {
-  --myColor: red !important;
-  --myColor: blue;
+  --my-color: red !important;
+  --my-color: blue;
 }
 p {
-  color: var(--myColor);
+  color: var(--my-color);
 }
 blockquote {
-  color: var(--myColor);
+  color: var(--my-color);
   color: purple;
 }
 ```

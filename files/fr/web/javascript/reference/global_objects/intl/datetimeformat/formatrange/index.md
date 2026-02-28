@@ -1,13 +1,14 @@
 ---
-title: Intl.DateTimeFormat.prototype.formatRange()
+title: "Intl.DateTimeFormat : méthode formatRange()"
+short-title: formatRange()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`formatRange()`** des instances de {{JSxRef("Intl.DateTimeFormat")}} formate un intervalle de dates de la façon la plus concise possible selon les locales et options fournies lors de l'instanciation de cet objet `Intl.DateTimeFormat`.
 
-La méthode **`Intl.DateTimeFormat.prototype.formatRange()`** permet de formater un intervalle de dates de la façon la plus concise en fonction de la **`locale`** et des **`options`** fournies lors de l'initialisation de l'objet [`Intl.DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat).
-
-{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.prototype.formatRange()", "taller")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Intl.DateTimeFormat.prototype.formatRange()", "taller")}}
 
 ```js interactive-example
 const options1 = {
@@ -23,58 +24,62 @@ const endDate = new Date(Date.UTC(2008, 0, 10, 11, 0, 0));
 
 const dateTimeFormat = new Intl.DateTimeFormat("en", options1);
 console.log(dateTimeFormat.formatRange(startDate, endDate));
-// Expected output: "Wednesday, January 10, 2007 – Thursday, January 10, 2008"
+// Résultat attendu : "Wednesday, January 10, 2007 — Thursday, January 10, 2008"
 
 const dateTimeFormat2 = new Intl.DateTimeFormat("en", options2);
 console.log(dateTimeFormat2.formatRange(startDate, endDate));
-// Expected output: "1/10/07 – 1/10/08"
+// Résultat attendu : "1/10/07 — 1/10/08"
 ```
 
 ## Syntaxe
 
-```js
-formatRange(dateDébut, dateFin);
+```js-nolint
+formatRange(startDate, endDate)
 ```
+
+### Paramètres
+
+- `startDate`
+  - : Début de l'intervalle de dates. Peut être un objet {{JSxRef("Date")}} ou {{JSxRef("Temporal.PlainDateTime")}}. Il peut également s'agir d'un objet {{JSxRef("Temporal.PlainTime")}}, {{JSxRef("Temporal.PlainDate")}}, {{JSxRef("Temporal.PlainYearMonth")}} ou {{JSxRef("Temporal.PlainMonthDay")}} si l'objet `DateTimeFormat` a été configuré pour afficher au moins une partie pertinente de la date.
+    > [!NOTE]
+    > Un objet {{JSxRef("Temporal.ZonedDateTime")}} provoquera toujours une exception `TypeError`&nbsp;; utilisez {{JSxRef("Temporal/ZonedDateTime/toLocaleString", "Temporal.ZonedDateTime.prototype.toLocaleString()")}} ou convertissez-le en objet {{JSxRef("Temporal.PlainDateTime")}} à la place.
+- `endDate`
+  - : Fin de l'intervalle de dates. Doit être du même type que `startDate`.
+
+### Valeur de retour
+
+Une chaîne de caractères représentant l'intervalle de dates donné, formatée selon la locale et les options de format de cet objet {{JSxRef("Intl.DateTimeFormat")}}. Si les dates de début et de fin sont équivalentes à la précision de la sortie, la sortie ne contiendra qu'une seule date.
 
 ## Exemples
 
 ### Utilisation simple de `formatRange()`
 
-Cette méthode reçoit comme arguments deux objets [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date) et renvoie l'intervalle de la façon la plus concise possible (selon les options fournies lors de l'instanciation du formateur [`Intl.DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)).
+Cette méthode reçoit deux objets {{JSxRef("Date")}} et formate l'intervalle de dates de la façon la plus concise possible selon la `locale` et les `options` fournies lors de l'instanciation de {{JSxRef("Intl.DateTimeFormat")}}.
 
 ```js
-let date1 = new Date(Date.UTC(2007, 0, 10, 10, 0, 0));
-let date2 = new Date(Date.UTC(2007, 0, 10, 11, 0, 0));
-let date3 = new Date(Date.UTC(2007, 0, 20, 10, 0, 0));
-// > 'Wed, 10 Jan 2007 10:00:00 GMT'
-// > 'Wed, 10 Jan 2007 11:00:00 GMT'
-// > 'Sat, 20 Jan 2007 10:00:00 GMT'
+const date1 = new Date(Date.UTC(1906, 0, 10, 10, 0, 0)); // Wed, 10 Jan 1906 10:00:00 GMT
+const date2 = new Date(Date.UTC(1906, 0, 10, 11, 0, 0)); // Wed, 10 Jan 1906 11:00:00 GMT
+const date3 = new Date(Date.UTC(1906, 0, 20, 10, 0, 0)); // Sat, 20 Jan 1906 10:00:00 GMT
 
-let fmt1 = new Intl.DateTimeFormat("en", {
+const fmt1 = new Intl.DateTimeFormat("en", {
   year: "2-digit",
   month: "numeric",
   day: "numeric",
   hour: "numeric",
   minute: "numeric",
 });
-console.log(fmt1.format(date1));
-console.log(fmt1.formatRange(date1, date2));
-console.log(fmt1.formatRange(date1, date3));
-// > '1/10/07, 10:00 AM'
-// > '1/10/07, 10:00 – 11:00 AM'
-// > '1/10/07, 10:00 AM – 1/20/07, 10:00 AM'
+console.log(fmt1.format(date1)); // '1/10/06, 10:00 AM'
+console.log(fmt1.formatRange(date1, date2)); // '1/10/06, 10:00 — 11:00 AM'
+console.log(fmt1.formatRange(date1, date3)); // '1/10/06, 10:00 AM — 1/20/07, 10:00 AM'
 
-let fmt2 = new Intl.DateTimeFormat("en", {
+const fmt2 = new Intl.DateTimeFormat("en", {
   year: "numeric",
   month: "short",
   day: "numeric",
 });
-console.log(fmt2.format(date1));
-console.log(fmt2.formatRange(date1, date2));
-console.log(fmt2.formatRange(date1, date3));
-// > 'Jan 10, 2007'
-// > 'Jan 10, 2007'
-// > 'Jan 10 – 20, 2007'
+console.log(fmt2.format(date1)); // 'Jan 10, 1906'
+console.log(fmt2.formatRange(date1, date2)); // 'Jan 10, 1906'
+console.log(fmt2.formatRange(date1, date3)); // 'Jan 10 — 20, 1906'
 ```
 
 ## Spécifications
@@ -87,4 +92,4 @@ console.log(fmt2.formatRange(date1, date3));
 
 ## Voir aussi
 
-- [`Intl.DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
+- L'objet {{JSxRef("Intl.DateTimeFormat")}}

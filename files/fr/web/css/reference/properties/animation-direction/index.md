@@ -1,14 +1,15 @@
 ---
 title: animation-direction
 slug: Web/CSS/Reference/Properties/animation-direction
-original_slug: Web/CSS/animation-direction
+l10n:
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`animation-direction`** définit si une animation doit se jouer en avant, en arrière ou alterner entre la lecture en avant et en arrière.
 
-La propriété **`animation-direction`** indique si les cycles de l'animation doivent être joués dans le sens inverse et/ou de façon alternée.
+Il est souvent pratique d'utiliser la propriété raccourcie {{CSSxRef("animation")}} pour définir toutes les propriétés d'animation en une seule fois.
 
-{{InteractiveExample("CSS Demo: animation-direction")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: animation-direction")}}
 
 ```css interactive-example-choice
 animation-direction: normal;
@@ -29,7 +30,7 @@ animation-direction: alternate-reverse;
 ```html interactive-example
 <section class="flex-column" id="default-example">
   <div id="example-element"></div>
-  <button id="play-pause">Play</button>
+  <button id="play-pause">Lecture</button>
 </section>
 ```
 
@@ -42,7 +43,7 @@ animation-direction: alternate-reverse;
   animation-timing-function: ease-in;
   background-color: #1766aa;
   border-radius: 50%;
-  border: 5px solid #333;
+  border: 5px solid #333333;
   color: white;
   height: 150px;
   margin: auto;
@@ -73,25 +74,19 @@ animation-direction: alternate-reverse;
 ```
 
 ```js interactive-example
-"use strict";
+const el = document.getElementById("example-element");
+const button = document.getElementById("play-pause");
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const button = document.getElementById("play-pause");
-
-  button.addEventListener("click", () => {
-    if (el.classList.contains("running")) {
-      el.classList.remove("running");
-      button.textContent = "Play";
-    } else {
-      el.classList.add("running");
-      button.textContent = "Pause";
-    }
-  });
+button.addEventListener("click", () => {
+  if (el.classList.contains("running")) {
+    el.classList.remove("running");
+    button.textContent = "Lecture";
+  } else {
+    el.classList.add("running");
+    button.textContent = "Pause";
+  }
 });
 ```
-
-Généralement, on passera par la propriété raccourcie {{cssxref("animation")}} qui permet de définir les différentes propriétés liées aux animations avec une déclaration.
 
 ## Syntaxe
 
@@ -109,22 +104,27 @@ animation-direction: alternate, reverse, normal;
 /* Valeurs globales */
 animation-direction: inherit;
 animation-direction: initial;
+animation-direction: revert;
+animation-direction: revert-layer;
 animation-direction: unset;
 ```
 
 ### Valeurs
 
 - `normal`
-  - : L'animation est jouée dans le sens normal à chaque cycle. Autrement dit, au début de chaque cycle, l'animation est initialisée dans l'état de début. C'est le réglage par défaut.
+  - : L'animation est jouée dans le _sens normal_ à chaque cycle. Autrement dit, au début de chaque cycle, l'animation est initialisée dans l'état de début. C'est le réglage par défaut.
 - `reverse`
-  - : L'animation est jouée dans le sens inverse à chaque cycle. Au début de chaque cycle, l'animation reprend depuis l'état de fin.
+  - : L'animation est jouée dans le _sens inverse_ à chaque cycle. Au début de chaque cycle, l'animation reprend depuis l'état de fin.
 - `alternate`
-  - : La lecture de l'animation se fait de façon alternée et change de sens à chaque cycle en commençant par le sens normal. Lorsque le sens est inversé, les étapes de l'animation sont effectuées de façon inversée et les fonctions de progression (_timing functions_) sont également inversées (`ease-in` sera ainsi remplacée par `ease-out`). Le premier cycle se fait dans le sens normal, le deuxième dans le sens inverse et ainsi de suite.
+  - : La lecture de l'animation se fait de façon alternée et change de sens à chaque cycle en commençant par le _sens normal_. Lorsque le sens est inversé, les étapes de l'animation sont effectuées de façon inversée et les fonctions de progression (_timing functions_) sont également inversées (`ease-in` sera ainsi remplacée par `ease-out`). Le premier cycle se fait dans le sens normal, le deuxième dans le sens inverse et ainsi de suite.
 - `alternate-reverse`
-  - : La lecture de l'animation se fait de façon alternée et change de sens à chaque cycle en commençant par le sens inverse (cf. ci-avant). Le premier cycle se fait dans le sens inverse, le deuxième dans le sens normal et ainsi de suite.
+  - : La lecture de l'animation se fait de façon alternée et change de sens à chaque cycle en commençant par le _sens inverse_ (cf. ci-avant). Le premier cycle se fait dans le sens inverse, le deuxième dans le sens normal et ainsi de suite.
 
 > [!NOTE]
-> Lorsqu'on utiliser plusieurs valeurs, séparées par des virgules, pour une propriété `animation-*`, selon leur quantité, elles seront différemment affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : paramétrer [les valeurs des propriétés pour plusieurs animations](/fr/docs/Web/CSS/Guides/Animations/Using).
+> Lorsque vous indiquez plusieurs valeurs séparées par des virgules sur une propriété `animation-*`, elles sont appliquées aux animations dans l'ordre d'apparition des {{CSSxRef("animation-name")}}. Si le nombre d'animations et de valeurs de propriété `animation-*` ne correspond pas, voir [Définir plusieurs valeurs de propriétés d'animation](/fr/docs/Web/CSS/Guides/Animations/Using#définir_plusieurs_valeurs_de_propriétés_danimation).
+
+> [!NOTE]
+> Lors de la création d'[animations CSS pilotées par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations), la définition d'une valeur pour `animation-direction` fonctionne comme attendu, par exemple `reverse` fait s'exécuter l'animation à l'envers au fil de la progression de la chronologie. Une valeur `alternate` (combinée avec {{CSSxRef("animation-iteration-count")}}) fait s'exécuter l'animation en avant puis en arrière à mesure que la chronologie progresse.
 
 ## Définition formelle
 
@@ -136,53 +136,47 @@ animation-direction: unset;
 
 ## Exemples
 
-### CSS
+### Inverser le sens de l'animation
 
-```css
-p {
-  animation-duration: 5s;
-  animation-name: glissement;
-  animation-iteration-count: infinite;
-}
-
-.aller {
-  animation-direction: normal;
-}
-
-.retour {
-  animation-direction: reverse;
-}
-@keyframes glissement {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
-```
-
-### HTML
+#### HTML
 
 ```html
-<p class="aller">
-  La Chenille et Alice se considérèrent un instant en silence. Enfin la Chenille
-  sortit le houka de sa bouche, et lui adressa la parole d’une voix endormie et
-  traînante.
-</p>
-
-<p class="retour">
-  «&nbsp;Revenez,&nbsp;» lui cria la Chenille. «&nbsp;J’ai quelque chose
-  d’important à vous dire&nbsp;!&nbsp;»
-</p>
+<div class="box"></div>
 ```
 
-### Résultat
+#### CSS
 
-{{EmbedLiveSample("Exemples","300","200")}}
+```css
+.box {
+  background-color: rebeccapurple;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+.box:hover {
+  animation-name: rotate;
+  animation-duration: 0.7s;
+  animation-direction: reverse;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+```
+
+#### Résultat
+
+Passez la souris sur le rectangle pour démarrer l'animation.
+
+{{EmbedLiveSample("Inverser le sens de l'animation", "100%", 150)}}
+
+Voir [Animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using) pour des exemples.
 
 ## Spécifications
 
@@ -195,4 +189,5 @@ p {
 ## Voir aussi
 
 - [Manipuler les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)
-- {{domxref("AnimationEvent", "AnimationEvent")}}
+- L'interface API {{DOMxRef("AnimationEvent")}}
+- Les autres propriétés d'animation associées&nbsp;: {{CSSxRef("animation")}}, {{CSSxRef("animation-composition")}}, {{CSSxRef("animation-delay")}}, {{CSSxRef("animation-duration")}}, {{CSSxRef("animation-fill-mode")}}, {{CSSxRef("animation-iteration-count")}}, {{CSSxRef("animation-name")}}, {{CSSxRef("animation-play-state")}}, {{CSSxRef("animation-timeline")}}, {{CSSxRef("animation-timing-function")}}

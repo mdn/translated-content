@@ -1,14 +1,13 @@
 ---
 title: text-combine-upright
 slug: Web/CSS/Reference/Properties/text-combine-upright
-original_slug: Web/CSS/text-combine-upright
 l10n:
-  sourceCommit: 997a0ec66e1514b7269076195b2419db334e876e
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`text-combine-upright`** は [CSS](/ja/docs/Web/CSS) のプロパティで、一文字分の空間に挿入する文字の組み合わせを設定します。組み合わせたテキストが 1em の幅より広い場合、ユーザーエージェントはコンテンツを 1em の幅に収めなければなりません。合成結果は、レイアウトおよび装飾においてグリフ一文字として扱われます。このプロパティは、縦書きモードでのみ効果があります。
 
-これは、日本語の縦中横、中国語の <i lang="zh-CN">直書橫向</i> として知られる効果をもたらすために使用されます。
+これは、日本語の<q lang="ja">縦中横</q>、中国語の <i lang="zh-CN">直書橫向</i> として知られる効果をもたらすために使用されます。
 
 {{InteractiveExample("CSS デモ: text-combine-upright")}}
 
@@ -45,10 +44,6 @@ p {
 text-combine-upright: none;
 text-combine-upright: all;
 
-/* Digits 値 */
-text-combine-upright: digits; /* 2 桁の数字を垂直テキスト内に水平に収めます */
-text-combine-upright: digits 4; /* 4 桁までの数字を垂直テキスト内に水平に収めます */
-
 /* グローバル値 */
 text-combine-upright: inherit;
 text-combine-upright: initial;
@@ -62,9 +57,10 @@ text-combine-upright: unset;
 - `none`
   - : 何も特別な処理をしません。
 - `all`
-  - : タイプセットのすべての文字を水平に並べてボックス内に収めます。この幅は、縦書きボックス内で一文字分の空間を取ります。
-- `digits <integer>?`
-  - : 指定した桁数 (整数値) までの連続した ASCII 数字 (U+0030–U+0039) を水平に並べてボックス内に収めます。この幅は、縦書きボックス内で一文字分の空間を取ります。整数値を省略した場合の値は 2 になります。2 ～ 4 までの範囲外の整数値は不正です。
+  - : 構成されるすべての文字を水平に並べてボックス内に収めます。この幅は、縦書き行ボックス内で一文字分の空間を取ります。
+
+> [!NOTE]
+> [CSS 書字方向](/ja/docs/Web/CSS/Guides/Writing_modes)モジュールでは、`digits <integer>` の値を `text-combine-upright` プロパティで定義しており、2 から 4 桁の連続した {{Glossary("ASCII")}} 数字 (U+0030–U+0039) を水平に並べて、縦書き行ボックスの 1 文字文の空間に収めます。しかし、これはどのブラウザーも対応していません。
 
 ## 公式定義
 

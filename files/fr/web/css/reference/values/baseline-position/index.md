@@ -3,7 +3,7 @@ title: <baseline-position>
 slug: Web/CSS/Reference/Values/baseline-position
 original_slug: Web/CSS/baseline-position
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 La valeur {{Glossary("enumerated", "énumérée")}} **`<baseline-position>`** représente le type de valeur pour le mot-clé `baseline` ainsi que les modificateurs `first` et `last`, utilisés pour les propriétés {{CSSxRef("align-content")}}, {{CSSxRef("align-items")}}, {{CSSxRef("align-self")}}, {{CSSxRef("justify-items")}} et {{CSSxRef("justify-self")}}, ainsi que pour les propriétés raccourcies {{CSSxRef("place-content")}}, {{CSSxRef("place-items")}} et {{CSSxRef("place-self")}}.

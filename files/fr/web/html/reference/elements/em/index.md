@@ -7,7 +7,7 @@ l10n:
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<em>`** marque le texte qui reçoit une emphase. L'élément `<em>` peut être imbriqué, chaque niveau d'imbrication indiquant un degré d'emphase plus élevé.
 
-{{InteractiveExample("HTML Demo: &lt;em&gt;", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;em&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>Sors du lit <em>maintenant</em>&nbsp;!</p>

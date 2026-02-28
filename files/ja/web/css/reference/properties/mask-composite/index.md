@@ -1,9 +1,8 @@
 ---
 title: mask-composite
 slug: Web/CSS/Reference/Properties/mask-composite
-original_slug: Web/CSS/mask-composite
 l10n:
-  sourceCommit: 188dfae7d6173b0fad6fd4f8656d96f02cd2eb5d
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`mask-composite`** は [CSS](/ja/docs/Web/CSS) のプロパティで、現在のマスクレイヤーとその下のマスクレイヤーとの間で使われる合成操作を表します。
@@ -81,8 +80,8 @@ div {
   background-color: red;
 
   mask-image:
-    url(https://mdn.github.io/shared-assets/images/examples/mdn.svg),
-    url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+    url("https://mdn.github.io/shared-assets/images/examples/mdn.svg"),
+    url("https://mdn.github.io/shared-assets/images/examples/mask-star.svg");
   mask-size: 100% 100%;
 
   mask-composite: subtract;
@@ -95,7 +94,7 @@ div {
 
 ### 値の比較
 
-この例では、 `mask-composite` プロパティの 4 つの `<compositing-operator>` キーワードの値を示し、 [`alpha` および `luminance`](/ja/docs/Web/SVG/Reference/Attribute/mask-type#mask) マスクモードの効果を比較しています。
+この例では、 `mask-composite` プロパティの 4 つの `<compositing-operator>` キーワードの値を示し、 [`alpha` および `luminance`](/ja/docs/Web/Web/CSS/Reference/Properties/mask-type) マスクモードの効果を比較しています。
 
 #### HTML
 
@@ -237,11 +236,11 @@ mask.alpha {
 ```css
 /* マスク画像を適用 */
 tr.alphaMaskType img {
-  mask-image: url(#heartAlpha), url(#circleAlpha);
+  mask-image: url("#heartAlpha"), url("#circleAlpha");
 }
 
 tr.luminanceMaskType img {
-  mask-image: url(#heartLuminance), url(#circleLuminance);
+  mask-image: url("#heartLuminance"), url("#circleLuminance");
 }
 ```
 
@@ -303,4 +302,7 @@ body > img {
 - {{cssxref("mask")}} 一括指定
 - {{cssxref("mask-type")}}
 - {{cssxref("mask-mode")}}
+- [CSS マスク入門](/ja/docs/Web/CSS/Guides/Masking/Introduction)
+- [CSS のマスクプロパティ](/ja/docs/Web/CSS/Guides/Masking/Mask_properties)
+- [複数のマスクの宣言](/ja/docs/Web/CSS/Guides/Masking/Multiple_masks)
 - [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール

@@ -1,21 +1,18 @@
 ---
-title: <slot>
+title: "<slot> : l'élément d'emplacement de composant web"
 slug: Web/HTML/Reference/Elements/slot
-original_slug: Web/HTML/Element/slot
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{HTMLSidebar}}
-
-L'élément HTML **`<slot>`** représente un emplacement d'un composant web qu'on peut remplir avec son propre balisage. On peut ainsi obtenir un document construit avec différents arbres DOM. Cet élément fait partie des outils relatifs [aux composants web (Web Components)](/fr/docs/Web/API/Web_components).
+L'élément [HTML](/fr/docs/Web/HTML) **`<slot>`** — qui fait partie de la suite technologique [des Composants Web](/fr/docs/Web/API/Web_components) — est un emplacement à l'intérieur d'un composant web que vous pouvez remplir avec votre propre balisage, ce qui permet de créer des arbres DOM distincts et de les présenter ensemble.
 
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `name`
-  - : Le nom de l'emplacement créé.
-
-    Un **_« slot » nommé_** est un élément `<slot>` avec un attribut `name`.
+  - : Le nom de l'emplacement (<i lang="en">slot</i> en anglais). Lorsque le composant contenant l'emplacement est affiché, l'emplacement est rendu avec l'enfant de l'élément personnalisé qui possède un attribut [`slot`](/fr/docs/Web/HTML/Reference/Global_attributes/slot) correspondant. Un _emplacement nommé_ est un élément `<slot>` avec un attribut `name`. Les emplacements sans nom ont pour valeur par défaut une chaîne vide. Les noms doivent être uniques par arbre d'ombre&nbsp;: si vous avez deux emplacements avec le même nom, tous les éléments ayant un attribut `slot` correspondant seront assignés au premier emplacement portant ce nom.
 
 ## Exemples
 
@@ -66,7 +63,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 ```
 
 > [!NOTE]
-> Vous pouvez retrouver cet exemple sur [ce dépôt GitHub](https://github.com/mdn/web-components-examples/tree/master/element-details) et observer [son fonctionnement en live ici](https://mdn.github.io/web-components-examples/element-details/). Une explication plus détaillée est également disponible avec l'article [Manipuler `template` et `slot`](/fr/docs/Web/API/Web_components/Using_templates_and_slots).
+> Vous pouvez retrouver cet exemple sur [ce dépôt GitHub <sup>(angl.)</sup>](https://github.com/mdn/web-components-examples/tree/main/element-details) et observer [son fonctionnement en live ici <sup>(angl.)</sup>](https://mdn.github.io/web-components-examples/element-details/). Une explication plus détaillée est également disponible avec l'article [Manipuler `template` et `slot`](/fr/docs/Web/API/Web_components/Using_templates_and_slots).
 
 ## Résumé technique
 
@@ -74,15 +71,14 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-          >Catégories de contenu</a
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"c          >Catégories de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
         >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
         >.
       </td>
@@ -91,14 +87,14 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
       <th scope="row">Contenu autorisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Modèle_de_contenu_transparent"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#modèle_de_contenu_transparent"
           >Contenu transparent</a
         >.
       </td>
     </tr>
     <tr>
       <th scope="row">Évènements</th>
-      <td><a href="/fr/docs/Web/API/HTMLSlotElement/slotchange_event"><code>slotchange</code></a></td>
+      <td>{{DOMxRef("HTMLSlotElement/slotchange_event", "slotchange")}}</td>
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
@@ -108,18 +104,26 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
       <th scope="row">Parents autorisés</th>
       <td>
         Tout élément qui accepte du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
         >.
       </td>
     </tr>
     <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
+          >Pas de rôle correspondant <sup>(angl.)</sup></a
+        >
+      </td>
+    </tr>
+    <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
+      <td>Aucun <code>role</code> autorisé</td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLSlotElement")}}</td>
+      <td>{{DOMxRef("HTMLSlotElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -134,4 +138,8 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 ## Voir aussi
 
-- {{HTMLElement("template")}}
+- L'élément {{HTMLElement("template")}}
+- L'attribut [`slot`](/fr/docs/Web/HTML/Reference/Global_attributes/slot)
+- Le pseudo-élément CSS {{CSSxRef("::slotted")}}
+- La pseudo-classe CSS {{CSSxRef(":has-slotted")}}
+- Le module [de portée CSS](/fr/docs/Web/CSS/Guides/Scoping)

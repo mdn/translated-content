@@ -1,14 +1,13 @@
 ---
 title: border-bottom-width
 slug: Web/CSS/Reference/Properties/border-bottom-width
-original_slug: Web/CSS/border-bottom-width
+l10n:
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`border-bottom-width`** définit l'épaisseur de la bordure pour le côté bas d'un élément.
 
-La propriété **`border-bottom-width`** définit l'épaisseur de la bordure pour le côté bas d'un élément.
-
-{{InteractiveExample("CSS Demo: border-bottom-width")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: border-bottom-width")}}
 
 ```css interactive-example-choice
 border-bottom-width: thick;
@@ -33,7 +32,7 @@ border-bottom-width: 0;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    Ceci est une boîte avec une bordure autour.
   </div>
 </section>
 ```
@@ -41,7 +40,7 @@ border-bottom-width: 0;
 ```css interactive-example
 #example-element {
   background-color: palegreen;
-  color: #000;
+  color: black;
   border: 0 solid crimson;
   padding: 0.75em;
   width: 80%;
@@ -52,32 +51,34 @@ border-bottom-width: 0;
 ## Syntaxe
 
 ```css
-/* Une valeur de longueur */
-/* Type <length>          */
-border-bottom-width: 10em;
-border-bottom-width: 3vmax;
-border-bottom-width: 6px;
-
 /* Valeurs avec un mot-clé */
 border-bottom-width: thin;
 border-bottom-width: medium;
 border-bottom-width: thick;
 
+/* Une valeur de type <length> */
+border-bottom-width: 10em;
+border-bottom-width: 3vmax;
+border-bottom-width: 6px;
+
 /* Valeurs globales */
 border-bottom-width: inherit;
 border-bottom-width: initial;
+border-bottom-width: revert;
+border-bottom-width: revert-layer;
 border-bottom-width: unset;
 ```
 
 ### Valeurs
 
 - `<line-width>`
-  - : Une valeur de longueur ({{cssxref("&lt;length&gt;")}}) positive ou un mot-clé qui indique l'épaisseur de la bordure pour le bas de la boîte. Si la valeur est un mot-clé, ce doit être l'une des valeurs suivantes :
+  - : Définit l'épaisseur de la bordure, soit comme une longueur ({{CSSxRef("&lt;length&gt;")}}) explicite et non négative, soit comme un mot-clé. Si c'est un mot-clé, il doit être l'une des valeurs suivantes&nbsp;:
     - `thin` (fin)
     - `medium` (intermédiaire)
     - `thick` (épais)
 
-    La spécification ne précise pas de façon exacte l'épaisseur correspondant à chacun de ces mots-clés (c'est donc à chaque implémentation de choisir). La spécification requiert toutefois que l'inégalité suivante soit respectée `thin ≤ medium ≤ thick` et que ces valeurs soient constantes pour un même document`.`
+> [!NOTE]
+> Comme la spécification ne définit pas l'épaisseur exacte associée à chaque mot-clé, le résultat précis lors de leur utilisation dépend de l'implémentation. Néanmoins, ils suivent toujours le schéma `thin ≤ medium ≤ thick`, et les valeurs sont constantes dans un même document.
 
 ## Définition formelle
 
@@ -89,33 +90,34 @@ border-bottom-width: unset;
 
 ## Exemples
 
-### CSS
+### Comparer les épaisseurs de bordure inférieure
 
-```css
-.element1 {
-  border-bottom: thick solid red;
-}
-.element2 {
-  border-bottom: medium solid orange;
-}
-.element3 {
-  border-bottom: thin solid green;
-}
-```
-
-### HTML
+#### HTML
 
 ```html
-<p class="element1">Une bordure épaisse rouge.</p>
+<div>Élément 1</div>
+<div>Élément 2</div>
+```
 
-<p class="element2">Une bordure moyenne orange.</p>
+#### CSS
 
-<p class="element3">Et une bordure fine verte.</p>
+```css
+div {
+  border: 1px solid red;
+  margin: 1em 0;
+}
+
+div:nth-child(1) {
+  border-bottom-width: thick;
+}
+div:nth-child(2) {
+  border-bottom-width: 2em;
+}
 ```
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples","200","300")}}
+{{EmbedLiveSample("Comparer les épaisseurs de bordure inférieure", "100%")}}
 
 ## Spécifications
 
@@ -127,14 +129,5 @@ border-bottom-width: unset;
 
 ## Voir aussi
 
-- Les autres propriétés liées à la largeur de la bordure :
-  - {{cssxref("border-left-width")}},
-  - {{cssxref("border-right-width")}},
-  - {{cssxref("border-top-width")}},
-  - {{cssxref("border-width")}}
-
-- Les autres propriétés CSS liées à la bordure du côté haut :
-  - {{cssxref("border")}},
-  - {{cssxref("border-bottom")}},
-  - {{cssxref("border-bottom-style")}},
-  - {{cssxref("border-bottom-color")}}.
+- Les autres propriétés CSS liées à la largeur de la bordure&nbsp;: {{CSSxRef("border-left-width")}}, {{CSSxRef("border-right-width")}}, {{CSSxRef("border-top-width")}} et {{CSSxRef("border-width")}}.
+- Les autres propriétés CSS liées à la bordure basse&nbsp;: {{CSSxRef("border")}}, {{CSSxRef("border-bottom")}}, {{CSSxRef("border-bottom-style")}} et {{CSSxRef("border-bottom-color")}}.

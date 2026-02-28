@@ -1,16 +1,15 @@
 ---
 title: メディアクエリーの使用
 slug: Web/CSS/Guides/Media_queries/Using
-original_slug: Web/CSS/CSS_media_queries/Using_media_queries
 l10n:
-  sourceCommit: a850ca867a8b380a53320bab6870fb7335f22d52
+  sourceCommit: 3ee2355c3c90cf92c3119b82f8ebfa5d16c91c53
 ---
 
 **メディアクエリー**によって、端末の種類（プリンターや画面など）や、画面の解像度、向き、{{glossary("aspect ratio", "アスペクト比")}}、ブラウザーの{{glossary("viewport", "ビューポート")}}の幅や高さ、ユーザーの設定（動きの軽減、データの使用、透明度など）などの機能や特徴に応じて CSS スタイルを適用することができます。
 
 メディアクエリーは以下の用途で使用されます。
 
-- [CSS](/ja/docs/Web/CSS) の {{cssxref("@media")}} および {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)により、条件付きでスタイルを適用する。
+- [CSS](/ja/docs/Web/CSS) の {{cssxref("@media")}}、{{cssxref("@custom-media")}}、{{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)により、条件付きでスタイルを適用する。
 - {{HTMLElement("style")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}} などの [HTML](/ja/docs/Web/HTML) 要素で `media=` 属性や `sizes="` 属性を付けて特定のメディアを対象とする。
 - [メディアの状態の検査と監視](/ja/docs/Web/CSS/Guides/Media_queries/Testing)をするために、 {{domxref("Window.matchMedia()")}} および {{domxref("EventTarget.addEventListener()")}} メソッドを使用する
 
@@ -201,7 +200,7 @@ l10n:
 この例は 2 つのメディア特性を結合して、スタイルを横長で幅が 30em 以上ある端末に制限します。
 
 ```css
-@media (min-width: 30em) and (orientation: landscape) {
+@media (width >= 30em) and (orientation: landscape) {
   /* … */
 }
 ```
@@ -209,7 +208,7 @@ l10n:
 スタイルを画面に限定する場合は、メディア特性に `screen` メディア種別を結合します。
 
 ```css
-@media screen and (min-width: 30em) and (orientation: landscape) {
+@media screen and (width >= 30em) and (orientation: landscape) {
   /* … */
 }
 ```
@@ -221,7 +220,7 @@ l10n:
 次のルールには 2 つのメディアクエリーが含まれています。ユーザーの端末の高さが 680px 以上である場合、またはブラウザーのビューポートが縦向きモード（ビューポートの高さがビューポートの幅よりも大きい）の場合、このブロックのスタイルが適用されます。
 
 ```css
-@media (min-height: 680px), screen and (orientation: portrait) {
+@media (height >= 680px), screen and (orientation: portrait) {
   /* … */
 }
 ```
@@ -241,7 +240,7 @@ l10n:
 }
 ```
 
-`not` は、それが適用されるメディアクエリーのみを否定します。括弧のない `not` は、それが含まれるメディアクエリー内のすべての機能を否定します。つまり、カンマで区切られたメディアクエリーのリストでは、それぞれ `not` は、それが含まれている単一のクエリーに適用され、その単一のクエリー内のすべての機能に適用されます。この例では、`not` は最初のメディアクエリーに適用され、最初のカンマで終了します。
+`not` は、それが適用されるメディアクエリーのみを否定します。括弧のない `not` は、それが含まれるメディアクエリー内のすべての機能を否定します。つまり、カンマで区切られたメディアクエリーのリストでは、それぞれ `not` は、それが含まれている単一のクエリーに適用され、その単一のクエリー内のすべての機能に適用されます。この例では、`not` は最初のメディアクエリー `screen and (color)` に適用され、最初のカンマで終了します。
 
 ```css
 @media not screen and (color), print and (color) {
@@ -249,53 +248,31 @@ l10n:
 }
 ```
 
-上記のクエリーは、次のように評価されます。
+クエリーがメディア種別 `screen` で始まるため、`screen and (color)` を括弧で囲むことはできません。一方、メディアクエリーが特性のみで構成されている場合は、クエリーを括弧で囲む必要があります。
 
 ```css
-@media (not (screen and (color))), print and (color) {
+@media not ((width > 1000px) and (color)), print and (color) {
   /* … */
 }
 ```
 
-どちらの例も有効です。メディア条件は、括弧 (`()`) で囲むことでグループ化できます。これらのグループは、単一のメディアクエリーと同じように、条件内に入れ子にすることができます。
-
-`not` はメディアクエリーの中で最後に評価されます。これは、 `not` の直後に開括弧が追加され、メディアクエリーの末尾で閉じられた場合と同様に、クエリー内の単一の機能ではなく、メディアクエリー全体に適用されるということです。
-
-次のクエリーは、
+括弧は、否定されるクエリーの要素を制限します。例えば、`(width > 1000px)` クエリーのみを否定するには次のようにします。
 
 ```css
-@media not all and (monochrome) {
+@media (not (width > 1000px)) and (color), print and (color) {
   /* … */
 }
 ```
 
-このように評価されます。
+`not` は右側のクエリーのみを否定します。この例では、`hover` メディア特性を否定しますが、`screen` メディア種別は否定しません。
 
 ```css
-@media not (all and (monochrome)) {
+@media screen and not (hover) {
   /* … */
 }
 ```
 
-次のようには評価されません。
-
-```css example-bad
-@media (not all) and (monochrome) {
-  /* … */
-}
-```
-
-メディアクエリー内の単一の機能を否定するには、括弧を使用します。`not` とメディア機能を括弧で囲むと、否定されるクエリーの要素が制限されます。
-
-この例では、`hover` メディア特性を否定しますが、`all` メディア種別は否定しません。
-
-```css
-@media all and (not(hover)) {
-  /* … */
-}
-```
-
-`not(hover)` は、端末にホバー機能がない場合に一致します。この場合、括弧があるため、`not` は `hover` に適用されますが、`all` には適用されません。
+`not (hover)` は、端末にホバー機能がない場合に一致します。この場合、括弧があるため、`not` は `hover` に適用されますが、`screen` には適用されません。
 
 ### 古いブラウザーとの互換性の維持
 

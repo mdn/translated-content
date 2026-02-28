@@ -3,7 +3,7 @@ title: ウェブのセキュリティ
 short-title: セキュリティ
 slug: Web/Security
 l10n:
-  sourceCommit: 775df1c62a1cbe555c4374ff9122d4ef15bd6f60
+  sourceCommit: dd868507df863ab4f37d53c960c76e20e9ee365f
 ---
 
 ウェブサイトには、さまざまな種類の異なる情報が含まれています。中には、例えば一般公開ページに表示させるコピーのように、機密性の低い情報もあります。また、例えば顧客のユーザー名やパスワード、銀行情報、あるいは内部アルゴリズムや非公開の製品情報など、機密性の高い情報もあります。
@@ -86,7 +86,7 @@ l10n:
 
 データを責任を持って取り扱うということは、[サードパーティクッキー](/ja/docs/Web/Privacy/Guides/Third-party_cookies)の使用を削減し、保存および共有するデータに注意を払うことに大きく関わっています。従来、ウェブ開発者はあらゆる種類のデータを保存するためにクッキーを使用してきましたが、この傾向を悪用することは攻撃者にとって容易でした。その結果、ブラウザーはサイトをまたいだクッキーでできることを制限し始め、将来的にはまったくアクセスできないようにすることを目指しています。
 
-サイトをまたいだクッキーが除去されることを想定して、信頼しているトラッキング活動の量を制限したり、あるいは他にも希望する情報の維持を実装したりするなどの準備をしておくべきです。 詳細については、「[サードパーティークッキーからの移行](/ja/docs/Web/Privacy/Guides/Third-party_cookies#transitioning_from_third-party_cookies)」および「[サードパーティークッキーの置き換え](/ja/docs/Web/Privacy/Guides/Third-party_cookies#replacing_third-party_cookies)」をご覧ください。
+サイトをまたいだクッキーが除去されることを想定して、信頼しているトラッキング活動の量を制限したり、あるいは他にも希望する情報の維持を実装したりするなどの準備をしておくべきです。 詳細については、[サードパーティークッキーからの移行](/ja/docs/Web/Privacy/Guides/Third-party_cookies#サードパーティクッキーからの移行)をご覧ください。
 
 ### ユーザーの識別の保護とログインの管理
 
@@ -158,7 +158,7 @@ CSP を使用すると、例えば、特定の信頼された元から読み込�
 次の機能はクリックジャッキング対策として役立ちます。
 
 - [HTTP X-Frame-Options](/ja/docs/Web/HTTP/Reference/Headers/X-Frame-Options)
-  - : **`X-Frame-Options`** [HTTP](/ja/docs/Web/HTTP) レスポンスヘッダーを使用して、ブラウザーがページを [`<frame>`](/ja/docs/Web/HTML/Reference/Elements/frame)、[`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe)、[`<embed>`](/ja/docs/Web/HTML/Reference/Elements/embed)、[`<object>`](/ja/docs/Web/HTML/Reference/Elements/object) でレンダリングすることを許可するかどうかを指定することができます。 サイトは、このヘッダーを使用して、コンテンツが他のサイトに埋め込まれないように確保することで、クリックジャッキング攻撃を避けることができます。
+  - : **`X-Frame-Options`** [HTTP](/ja/docs/Web/HTTP) レスポンスヘッダーを使用して、ブラウザーがページを [`<frame>`](/ja/docs/Web/HTML/Reference/Elements/frame)、{{HTMLElement("iframe")}}、[`<embed>`](/ja/docs/Web/HTML/Reference/Elements/embed)、[`<object>`](/ja/docs/Web/HTML/Reference/Elements/object) でレンダリングすることを許可するかどうかを指定することができます。 サイトは、このヘッダーを使用して、コンテンツが他のサイトに埋め込まれないように確保することで、クリックジャッキング攻撃を避けることができます。
 - [CSP: frame-ancestors](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors)
   - : HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** ディレクティブは、 {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("object")}}、{{HTMLElement("embed")}} を使用してページを埋め込むことができる有効な親を指定します。
 

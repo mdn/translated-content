@@ -1,36 +1,41 @@
 ---
-title: console.assert()
+title: "console: assert() 静的メソッド"
+short-title: assert()
 slug: Web/API/console/assert_static
+l10n:
+  sourceCommit: bcc977bc3e79a87edd64cd9ef977b515f63daa2c
 ---
 
-{{APIRef("Console API")}}
+{{APIRef("Console API")}} {{AvailableInWorkers}}
 
-**`console.assert()`** は、検査結果が false になった場合に、コンソールへエラーメッセージを出力します。検査結果が true になる場合は何も行いません。
-
-{{AvailableInWorkers}}
+**`console.assert()`** 静的メソッドは、アサーション結果が false になった場合に、コンソールへエラーメッセージを出力します。アサーション結果が true になる場合は何も行いません。
 
 ## 構文
 
-```js
-assert(assertion, obj1);
-assert(assertion, obj1, obj2);
-assert(assertion, obj1, obj2, /* … ,*/ objN);
+```js-nolint
+console.assert(assertion)
 
-assert(assertion, msg);
-assert(assertion, msg, subst1);
-assert(assertion, msg, subst1, /* … ,*/ substN);
+console.assert(assertion, val1)
+console.assert(assertion, val1, val2)
+console.assert(assertion, val1, val2, /* …, */ valN)
+
+console.assert(assertion, msg)
+console.assert(assertion, msg, subst1)
+console.assert(assertion, msg, subst1, /* …, */ substN)
 ```
 
 ### 引数
 
 - `assertion`
-  - : 任意の論理式です。結果が false になると、コンソールにメッセージを出力します。
-- `obj1` … `objN`
-  - : 出力する JavaScript オブジェクトのリスト。各オブジェクトを文字列で表現したものを、リストの並び順に追記して出力します。
+  - : 任意の論理式です。アサーション結果が false になると、アサーションに失敗したことを示す汎用的なメッセージをコンソールに出力します。
+- `val1` … `valN`
+  - : 出力する JavaScript 値のリスト。これらのそれぞれの値の表現は、汎用的なアサーション失敗メッセージ（これらの値が存在しない場合に出力されるメッセージとは異なる可能性がある）の後、指定された順序でコンソールに出力されます。メッセージ間およびそれぞれの値の間には何らかの区切りが設けられます。`val1` が文字列である場合は特別な場合があり、後述します。
 - `msg`
-  - : 0 個以上の置換文字列を含む JavaScript 文字列。
+  - : 置換文字列をゼロ個以上含む JavaScript 文字列。置換文字列は、置換文字列の数まで順に `subst1` から `substN` で置き換えられます。汎用アサーションメッセージにコロン、空白、置換後の文字列が追加され、詳細なアサーションメッセージが形成されます。結果はコンソールに出力されます。置換の仕組みについては、[文字列置換の使用](/ja/docs/Web/API/console#文字列置換の使用)を参照してください。
 - `subst1` … `substN`
-  - : `msg` 内の置換文字列を置き換える JavaScript オブジェクト。この引数で、出力形式を高度に制御できます。
+  - : `msg` 内の置換文字列を置き換える JavaScript 値。置換値が置換文字列の数より多い場合、余分な値は書式文字列が存在しない場合と同様に、詳細なアサーションメッセージの後にコンソールへ直接出力されます。
+
+詳細については、[コンソールへのテキストの出力](/ja/docs/Web/API/console#コンソールへのテキストの出力)（{{domxref("console")}} のドキュメント）を参照してください。
 
 ### 返値
 
@@ -44,7 +49,7 @@ assert(assertion, msg, subst1, /* … ,*/ substN);
 const errorMsg = "the # is not even";
 for (let number = 2; number <= 5; number++) {
   console.log(`the # is ${number}`);
-  console.assert(number % 2 === 0, { number, errorMsg });
+  console.assert(number % 2 === 0, "%o", { number, errorMsg });
 }
 // output:
 // the # is 2
@@ -55,8 +60,6 @@ for (let number = 2; number <= 5; number++) {
 // Assertion failed: {number: 5, errorMsg: "the # is not even"}
 ```
 
-詳しくは {{domxref("console")}} のドキュメントで、[コンソールへのテキストの出力](/ja/docs/Web/API/console#コンソールへのテキストの出力)をご覧ください。
-
 ## 仕様書
 
 {{Specifications}}
@@ -64,3 +67,9 @@ for (let number = 2; number <= 5; number++) {
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- [Microsoft Edge's documentation for `console.assert()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools/console/api#assert)
+- [Node.js documentation for `console.assert()`](https://nodejs.org/docs/latest/api/console.html#consoleassertvalue-message)
+- [Google Chrome's documentation for `console.dir()`](https://developer.chrome.com/docs/devtools/console/api/#dir)

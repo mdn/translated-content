@@ -65,6 +65,6 @@ Bien que la spécification n'impose aucune exigence sur le nom des classes, il e
 ## Voir aussi
 
 - [Tous les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)
-- La propriété DOM {{DOMxRef('Element.className')}}
-- La propriété DOM {{DOMxRef('Element.classList')}}
+- La propriété DOM {{DOMxRef("Element.className")}}
+- La propriété DOM {{DOMxRef("Element.classList")}}
 - [Introduction au CSS](/fr/docs/Learn_web_development/Core/Styling_basics)

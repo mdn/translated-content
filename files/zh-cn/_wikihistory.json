@@ -17169,13 +17169,6 @@
       "enem"
     ]
   },
-  "Web/API/Range/collapsed": {
-    "modified": "2019-03-23T22:22:29.507Z",
-    "contributors": [
-      "GentleMint",
-      "Smart"
-    ]
-  },
   "Web/API/Range/commonAncestorContainer": {
     "modified": "2020-10-15T22:16:13.137Z",
     "contributors": [
@@ -17192,19 +17185,6 @@
     "modified": "2019-03-18T21:44:16.852Z",
     "contributors": [
       "lbwa"
-    ]
-  },
-  "Web/API/Range/endContainer": {
-    "modified": "2019-03-18T21:42:17.127Z",
-    "contributors": [
-      "Hyiker"
-    ]
-  },
-  "Web/API/Range/endOffset": {
-    "modified": "2020-10-15T22:04:46.141Z",
-    "contributors": [
-      "Carllllo",
-      "gnepnaiL-oahZ"
     ]
   },
   "Web/API/Range/extractContents": {
@@ -17277,21 +17257,6 @@
     "modified": "2020-10-15T22:18:37.906Z",
     "contributors": [
       "loszer"
-    ]
-  },
-  "Web/API/Range/startContainer": {
-    "modified": "2019-03-23T22:02:05.516Z",
-    "contributors": [
-      "li5454yong"
-    ]
-  },
-  "Web/API/Range/startOffset": {
-    "modified": "2020-10-15T21:28:32.328Z",
-    "contributors": [
-      "Carllllo",
-      "teoli",
-      "khalid32",
-      "Losses"
     ]
   },
   "Web/API/Range/surroundContents": {

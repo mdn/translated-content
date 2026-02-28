@@ -2,7 +2,7 @@
 title: "@page"
 slug: Web/CSS/Reference/At-rules/@page
 l10n:
-  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@page`** est utilisée pour modifier différents aspects des pages imprimées. Elle permet de cibler et de modifier les dimensions, l'orientation et les marges de la page. La règle `@page` peut s'appliquer à toutes les pages d'une impression ou à un sous-ensemble grâce à ses différentes pseudo-classes.
@@ -44,8 +44,8 @@ La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) *
 
 La règle `@page` ne peut contenir que des descripteurs de page et des [règles de marge](#règles_de_marge). Les descripteurs suivants ont été implémentés par au moins un navigateur&nbsp;:
 
-- [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin)
-  - : Définit les marges de la page. Les propriétés individuelles [`margin-top`](/fr/docs/Web/CSS/Reference/Properties/margin-top), [`margin-right`](/fr/docs/Web/CSS/Reference/Properties/margin-right), [`margin-bottom`](/fr/docs/Web/CSS/Reference/Properties/margin-bottom) et [`margin-left`](/fr/docs/Web/CSS/Reference/Properties/margin-left) peuvent aussi être utilisées.
+- {{CSSxRef("margin")}}
+  - : Définit les marges de la page. Les propriétés individuelles {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}}, {{CSSxRef("margin-bottom")}} et {{CSSxRef("margin-left")}} peuvent aussi être utilisées.
 - [`page-orientation`](/fr/docs/Web/CSS/Reference/At-rules/@page/page-orientation)
   - : Définit l'orientation de la page. Cela n'affecte pas la mise en page&nbsp;: la rotation est appliquée après la mise en page sur le support de sortie.
 - [`size`](/fr/docs/Web/CSS/Reference/At-rules/@page/size)
@@ -357,7 +357,7 @@ section {
 }
 ```
 
-{{EmbedLiveSample('utiliser_la_propriété_size_pour_changer_lorientation_de_la_page', '100%', '540', , , , , "allow-modals")}}
+{{EmbedLiveSample("Utiliser la propriété size pour changer l'orientation de la page", "100%", 540, , , , , "allow-modals")}}
 
 ### Exemples de pseudo-classes @page
 
@@ -380,5 +380,5 @@ Voir les différentes [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseu
 
 - La propriété {{CSSxRef("page")}}
 - Le descripteur [`size`](/fr/docs/Web/CSS/Reference/At-rules/@page/size) de `@page`
-- Le module [Médias paginés CSS](/fr/docs/Web/CSS/Guides/Paged_media)
+- Le module [des médias paginés CSS](/fr/docs/Web/CSS/Guides/Paged_media)
 - Le ticket [\[META\] CSS Paged Media Module Level 3 <sup>(angl.)</sup>](https://bugzil.la/286443) du Bugzilla pour suivre l'avancement du sujet (compteurs par page, etc.)

@@ -1,21 +1,20 @@
 ---
-title: table.caption
+title: "HTMLTableElement : propriété caption"
+short-title: caption
 slug: Web/API/HTMLTableElement/caption
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{ ApiRef() }}
+{{APIRef("HTML DOM")}}
 
-### Résumé
+La propriété **`caption`** de l'interface {{DOMxRef("HTMLTableElement")}} représente la légende du tableau. Si aucun élément de légende n'est associé au tableau, cette propriété vaut `null`.
 
-**caption** renvoie la légende du tableau.
+## Valeur
 
-### Syntaxe
+Une chaîne de caractères.
 
-```js
-string = table.caption;
-```
-
-### Exemple
+## Exemples
 
 ```js
 if (table.caption) {
@@ -23,11 +22,14 @@ if (table.caption) {
 }
 ```
 
-### Notes
+## Spécifications
 
-Cette propriété ne renvoie rien s'il n'y a aucune légende pour le tableau.
+{{Specifications}}
 
-### Spécification
+## Compatibilité des navigateurs
 
-- [DOM Level 2 HTML&nbsp;: caption](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-14594520) ([traduction](http://www.yoyodesign.org/doc/w3c/dom2-html/html.html#ID-14594520))
-- [Interface HTMLTableCaptionElement](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-12035137) ([traduction](http://www.yoyodesign.org/doc/w3c/dom2-html/html.html#ID-12035137))
+{{Compat}}
+
+## Voir aussi
+
+- L'interface qui implémente cette propriété&nbsp;: {{DOMxRef("HTMLTableElement")}}.

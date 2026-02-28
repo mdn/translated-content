@@ -1,14 +1,13 @@
 ---
 title: list-style-position
 slug: Web/CSS/Reference/Properties/list-style-position
-original_slug: Web/CSS/list-style-position
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`list-style-position`** permet de définir la position du marqueur (cf. {{CSSxRef("::marker")}}) de liste par rapport à la boîte principale.
 
-La propriété **`list-style-position`** permet de définir la position du marqueur (cf. [`::marker`](/fr/docs/Web/CSS/Reference/Selectors/::marker)) de liste par rapport à la boîte principale.
-
-{{InteractiveExample("CSS Demo: list-style-position")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: list-style-position")}}
 
 ```css interactive-example-choice
 list-style-position: inside;
@@ -21,12 +20,12 @@ list-style-position: outside;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div>
-    <p>NASA Notable Missions</p>
+    <p>Missions remarquables de la NASA</p>
     <ul class="transition-all" id="example-element">
-      <li>Apollo 11: First Human Landing</li>
-      <li>City in Space: The International Space Station</li>
-      <li>Great Observatory: The Hubble Space Telescope</li>
-      <li>Everlasting Mars Rovers</li>
+      <li>Apollo 11&nbsp;: premier alunissage humain</li>
+      <li>Ville dans l'espace&nbsp;: la Station spatiale internationale</li>
+      <li>Grand observatoire&nbsp;: le télescope spatial Hubble</li>
+      <li>Rovers martiens éternels</li>
     </ul>
   </div>
 </section>
@@ -68,13 +67,6 @@ hr {
 }
 ```
 
-Pour définir cette propriété, on pourra aussi utiliser la propriété raccourcie [`list-style`](/fr/docs/Web/CSS/Reference/Properties/list-style).
-
-> [!NOTE]
-> Cette propriété s'applique aux éléments d'une liste (c'est-à-dire aux éléments pour lesquels [`display`](/fr/docs/Web/CSS/Reference/Properties/display) vaut `list-item`). [Par défaut](https://www.w3.org/TR/html5/rendering.html#lists), cela inclut les éléments [`<li>`](/fr/docs/Web/HTML/Reference/Elements/li). Cette propriété peut être héritée par les éléments et si on veut donc gérer une liste de façon uniforme, on pourra appliquer la propriété à l'élément parent (qui correspond en général à [`<ol>`](/fr/docs/Web/HTML/Reference/Elements/ol) ou à [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul)).
-
-Une différence de comportement existe entre les navigateurs lorsqu'un élément de bloc est placé en premier au sein d'un élément de liste avec `list-style-position: inside`. Chrome et Safari placent l'élément sur la même ligne que la boîte du marqueur. En revanche, Firefox, Internet Explorer et Opera placent l'élément sur la ligne suivante. Voir [le bug 36854 de Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=36854) pour plus d'informations.
-
 ## Syntaxe
 
 ```css
@@ -86,6 +78,7 @@ list-style-position: outside;
 list-style-position: inherit;
 list-style-position: initial;
 list-style-position: revert;
+list-style-position: revert-layer;
 list-style-position: unset;
 ```
 
@@ -94,9 +87,17 @@ La propriété `list-style-position` est définie avec l'un des mots-clés suiva
 ### Valeurs
 
 - `inside`
-  - : La boîte du marqueur ([`::marker`](/fr/docs/Web/CSS/Reference/Selectors/::marker)) est la première boîte en ligne (_inline_) de la boîte principale. Le contenu de l'élément sera appliqué à la suite de la boîte du marqueur.
+  - : La boîte du marqueur ({{CSSxRef("::marker")}}) est la première boîte en ligne (<i lang="en">inline</i>) de la boîte principale. Le contenu de l'élément sera appliqué à la suite de la boîte du marqueur.
 - `outside`
-  - : La boîte du marqueur ([`::marker`](/fr/docs/Web/CSS/Reference/Selectors/::marker)) est en dehors de la boîte principale.
+  - : La boîte du marqueur ({{CSSxRef("::marker")}}) est en dehors de la boîte principale. C'est la valeur par défaut pour {{CSSxRef("list-style")}}.
+
+## Description
+
+Cette propriété s'applique aux éléments de liste, c'est-à-dire aux éléments avec {{CSSxRef("display", "display: list-item;")}}. [Par défaut <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/rendering.html#lists), cela inclut les éléments HTML {{HTMLElement("li")}}. Parce que cette propriété est héritée, elle peut être définie sur l'élément parent (normalement {{HTMLElement("ol")}} ou {{HTMLElement("ul")}}) pour qu'elle s'applique à tous les éléments de liste.
+
+Si un élément de bloc est le premier enfant d'un élément de liste déclaré avec `list-style-position: inside`, alors l'élément de bloc est placé sur la ligne après la boîte du marqueur.
+
+Il est souvent plus pratique d'utiliser la propriété raccourcie {{CSSxRef("list-style")}}.
 
 ## Définition formelle
 
@@ -104,7 +105,7 @@ La propriété `list-style-position` est définie avec l'un des mots-clés suiva
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -157,7 +158,7 @@ La propriété `list-style-position` est définie avec l'un des mots-clés suiva
 
 #### Résultat
 
-{{EmbedLiveSample("Définition_de_la_position_des_éléments_d'une_liste", 200, 420)}}
+{{EmbedLiveSample("Définition de la position des éléments d'une liste", 200, 420)}}
 
 ## Spécifications
 
@@ -169,6 +170,9 @@ La propriété `list-style-position` est définie avec l'un des mots-clés suiva
 
 ## Voir aussi
 
-- [`list-style`](/fr/docs/Web/CSS/Reference/Properties/list-style)
-- [`list-style-type`](/fr/docs/Web/CSS/Reference/Properties/list-style-type)
-- [`list-style-image`](/fr/docs/Web/CSS/Reference/Properties/list-style-image)
+- La propriété raccourcie {{CSSxRef("list-style")}}
+- La propriété {{CSSxRef("list-style-type")}}
+- La propriété {{CSSxRef("list-style-image")}}
+- Le pseudo-élément {{CSSxRef("::marker")}}
+- Le module [des listes et compteurs CSS](/fr/docs/Web/CSS/Guides/Lists)
+- Le module [des styles de compteur CSS](/fr/docs/Web/CSS/Guides/Counter_styles)

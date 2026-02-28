@@ -44,7 +44,7 @@ transform: scale(0.5) translate(-100%, -100%);
 </section>
 ```
 
-Si la propriété est différente de `none`, un [contexte d'empilement](/fr/docs/Web/CSS/Comprendre_z-index/L'empilement_de_couches) sera créé. Dans ce cas, l'élément agira comme le bloc englobant pour les éléments qu'il contient et qui ont `position: fixed;` ou `position: absolute;`.
+Si la propriété est différente de `none`, un [contexte d'empilement](/fr/docs/Web/CSS/Guides/Positioned_layout/Understanding_z-index/L'empilement_de_couches) sera créé. Dans ce cas, l'élément agira comme le bloc englobant pour les éléments qu'il contient et qui ont `position: fixed;` ou `position: absolute;`.
 
 > [!WARNING]
 > Seuls certains éléments peuvent être transformés. Les éléments dont la disposition est gérée avec des [boîtes en ligne non-remplacées](/fr/docs/Web/CSS/Guides/Display/Visual_formatting_model#les_éléments_en_ligne_et_les_boîtes_en_ligne), des [colonnes de tableau](/fr/docs/Web/HTML/Reference/Elements/col) ou des [groupes de colonnes de tableau](/fr/docs/Web/HTML/Reference/Elements/colgroup) ne peuvent pas être transformés.

@@ -3,7 +3,7 @@ title: <number>
 slug: Web/CSS/Reference/Values/number
 original_slug: Web/CSS/number
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<number>`** représente un nombre, qu'il s'agisse d'un entier, d'un nombre avec une partie fractionnaire ou d'un exposant en base dix en notation scientifique.

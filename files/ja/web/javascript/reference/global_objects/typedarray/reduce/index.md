@@ -1,15 +1,14 @@
 ---
 title: TypedArray.prototype.reduce()
+short-title: reduce()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduce
 l10n:
-  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`reduce()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列のそれぞれの要素に対して、ユーザーが提供した「縮小」コールバック関数を呼び出します。その際、直前の要素における計算結果の返値を渡します。型付き配列のすべての要素に対して縮小関数を実行した結果が単一の値が最終結果になります。このメソッドは、{{jsxref("Array.prototype.reduce()")}}と同じアルゴリズムです。
 
-{{InteractiveExample("JavaScript デモ: TypedArray.reduce()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.reduce()")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([0, 1, 2, 3]);
@@ -19,7 +18,7 @@ function sum(accumulator, currentValue) {
 }
 
 console.log(uint8.reduce(sum));
-// Expected output: 6
+// 予想される結果: 6
 ```
 
 ## 構文

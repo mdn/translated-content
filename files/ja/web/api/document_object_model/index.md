@@ -2,7 +2,7 @@
 title: ドキュメントオブジェクトモデル (DOM)
 slug: Web/API/Document_Object_Model
 l10n:
-  sourceCommit: 231152e9a749aaeba8de45f4cc712845a470dda9
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -478,12 +478,14 @@ root.appendChild(body);
 
 ```html
 <table id="t-daddy">
-  <tr id="tbl1">
-    <td id="c1">one</td>
-  </tr>
-  <tr>
-    <td id="c2">two</td>
-  </tr>
+  <tbody>
+    <tr id="tbl1">
+      <td id="c1">one</td>
+    </tr>
+    <tr>
+      <td id="c2">two</td>
+    </tr>
+  </tbody>
 </table>
 ```
 

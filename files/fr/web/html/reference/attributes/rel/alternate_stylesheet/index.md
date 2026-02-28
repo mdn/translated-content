@@ -17,7 +17,7 @@ Firefox permet aux utilisateur·ice·s de sélectionner des {{Glossary("styleshe
 
 ### Définir des feuilles de style alternatives
 
-Les feuilles de style alternatives sont spécifiées à l'aide d'éléments {{HTMLElement("link")}} avec les attributs `rel="alternate stylesheet"` et `title="…"`. Par exemple&nbsp;:
+Les feuilles de style alternatives sont définies à l'aide d'éléments {{HTMLElement("link")}} avec les attributs `rel="alternate stylesheet"` et `title="…"`. Par exemple&nbsp;:
 
 ```html
 <link href="reset.css" rel="stylesheet" />
@@ -40,8 +40,8 @@ Quel que soit le style sélectionné, les règles de la feuille de style `reset.
 Toute feuille de style dans un document appartient à l'une des catégories suivantes&nbsp;:
 
 - **Persistante** (a `rel="stylesheet"`, pas de `title=""`)&nbsp;: toujours appliquée au document.
-- **Préférée** (a `rel="stylesheet"` avec un attribut `title="…"` spécifié)&nbsp;: appliquée par défaut, mais {{DOMxRef("StyleSheet.disabled", "désactivée", "", 1)}} si une feuille de style alternative est sélectionnée. **Il ne peut y avoir qu'une seule feuille de style préférée**, donc fournir des feuilles de style avec des attributs title différents fera que certaines seront ignorées.
-- **Alternative** (`rel="alternate stylesheet"` avec un attribut `title="…"` spécifié)&nbsp;: désactivée par défaut, peut être sélectionnée.
+- **Préférée** (a `rel="stylesheet"` avec un attribut `title="…"` défini)&nbsp;: appliquée par défaut, mais {{DOMxRef("StyleSheet.disabled", "désactivée", "", 1)}} si une feuille de style alternative est sélectionnée. **Il ne peut y avoir qu'une seule feuille de style préférée**, donc fournir des feuilles de style avec des attributs title différents fera que certaines seront ignorées.
+- **Alternative** (`rel="alternate stylesheet"` avec un attribut `title="…"` défini)&nbsp;: désactivée par défaut, peut être sélectionnée.
 
 Dans les cas où un menu de feuilles de style existe, lorsque les feuilles de style sont référencées avec un attribut `title` sur l'élément `{{HTMLElement("link", "&lt;link rel=\"stylesheet\"&gt;")}}` ou {{HTMLElement("style")}}, le titre devient l'un des choix proposés à l'utilisateur·ice. Les feuilles de style liées avec le même [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title) font partie du même choix. Les feuilles de style liées sans attribut `title` sont toujours appliquées.
 

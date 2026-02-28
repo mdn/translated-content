@@ -1,30 +1,29 @@
 ---
 title: "<section> : l'élément de section générique"
 slug: Web/HTML/Reference/Elements/section
-original_slug: Web/HTML/Element/section
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<section>`** représente une section générique et autonome d'un document, qui n'a pas d'élément sémantique plus spécifique pour la représenter. Les sections doivent toujours comporter un titre, sauf très rares exceptions.
 
-L'élément HTML **`<section>`** représente une section générique d'un document, par exemple un groupe de contenu thématique. Une section commence généralement avec un titre.
-
-{{InteractiveExample("HTML Demo: &lt;section&gt;", "tabbed-standard")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;section&gt;", "tabbed-standard")}}
 
 ```html interactive-example
-<h1>Choosing an Apple</h1>
+<h1>Choisir une pomme</h1>
 <section>
   <h2>Introduction</h2>
   <p>
-    This document provides a guide to help with the important task of choosing
-    the correct Apple.
+    Ce document propose un guide pour vous aider dans la tâche importante de
+    choisir la bonne pomme.
   </p>
 </section>
 
 <section>
-  <h2>Criteria</h2>
+  <h2>Critères</h2>
   <p>
-    There are many different criteria to be considered when choosing an Apple —
-    size, color, firmness, sweetness, tartness...
+    Il existe de nombreux critères à prendre en compte pour choisir une
+    pomme&nbsp;: taille, couleur, fermeté, douceur, acidité...
   </p>
 </section>
 ```
@@ -36,35 +35,82 @@ h2 {
 }
 ```
 
-Ainsi, un menu de navigation devrait être délimité par un élément {{htmlelement("nav")}} mais une liste de résultat de recherche, qui ne dispose pas d'élément spécifique pour être représentée, pourrait être englobée dans un élément `<section>`.
-
-> [!NOTE]
-> Si le contenu de l'élément devrait être considéré comme un fragment indépendant (qui puisse être séparée du reste du contenu), l'élément {{HTMLElement("article")}} sera plus pertinent.
-
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 
-- Chaque élément `<section>` devrait être identifié, généralement grâce à un élément de titre ({{HTMLElement('h1')}}-{{HTMLElement('h6')}}) qui est un élément fils de l'élément `<section>`.
-- S'il est plus pertinent que le contenu soit à part, on utilisera l'élément {{HTMLElement("article")}}.
-- L'élément `<section>` ne doit pas être utilisé comme un conteneur générique : c'est le rôle de {{HTMLElement("div")}}, notamment lorsque le sectionnement du contenu sert uniquement la mise en forme. Pour savoir lequel utiliser, on peut se demander si la section doit apparaître sur le plan du document : si oui, on utilisera `<section>`, sinon, `<div>`.
+Comme mentionné ci-dessus, `<section>` est un élément de sectionnement générique et ne doit être utilisé que s'il n'existe pas d'élément plus spécifique pour le représenter. Par exemple, un menu de navigation doit être englobé dans un élément {{HTMLElement("nav")}}, mais une liste de résultats de recherche ou une carte et ses contrôles, qui n'ont pas d'élément spécifique, peuvent être placés dans un élément `<section>`.
+
+Considérez aussi les cas suivants&nbsp;:
+
+- Si le contenu de l'élément représente une unité autonome et indépendante qui a du sens en tant que pièce syndiquée (par exemple, un article de blog, un commentaire de blog ou un article de journal), l'élément {{HTMLElement("article")}} sera plus approprié.
+- Si le contenu représente une information tangente utile qui accompagne le contenu principal, mais n'en fait pas directement partie (comme des liens associés ou une biographie d'auteur·ice), utilisez {{HTMLElement("aside")}}.
+- Si le contenu représente la zone principale d'un document, utilisez {{HTMLElement("main")}}.
+- Si vous utilisez l'élément uniquement comme conteneur de mise en forme, utilisez plutôt {{HTMLElement("div")}}.
+
+Pour récapituler, chaque `<section>` doit être identifiée, généralement en incluant un titre (élément {{HTMLElement("Heading_Elements", "h1")}} à {{HTMLElement("Heading_Elements", "h6")}}) comme enfant de l'élément `<section>`, autant que possible. Voir ci-dessous des exemples où un `<section>` peut apparaître sans titre.
 
 ## Exemples
 
-### HTML
+### Exemple simple d'utilisation
+
+#### Avant
+
+```html
+<div>
+  <h2>Mon super titre</h2>
+  <p>Beaucoup de contenu génial</p>
+</div>
+```
+
+##### Résultat
+
+{{EmbedLiveSample("Avant")}}
+
+#### Après
 
 ```html
 <section>
-  <h1>Titre</h1>
-  <p>Du contenu sur un thème pour ce titre</p>
+  <h2>Mon super titre</h2>
+  <p>Beaucoup de contenu génial</p>
 </section>
 ```
 
-### Résultat
+##### Résultat
 
-{{EmbedLiveSample("",'','130')}}
+{{EmbedLiveSample("Après")}}
+
+### Utiliser une section sans titre
+
+Les circonstances où vous pouvez voir `<section>` utilisé sans titre se trouvent généralement dans des sections d'applications web ou d'interfaces utilisateur, plutôt que dans des structures de documents traditionnelles. Dans un document, il n'est pas vraiment logique d'avoir une section distincte de contenu sans titre pour décrire son contenu. Ces titres sont utiles pour tous les lecteurs·rices, mais particulièrement pour les utilisateur·ice·s de technologies d'assistance comme les lecteurs d'écran, et ils sont aussi bénéfiques pour le référencement.
+
+Considérez cependant un mécanisme de navigation secondaire. Si la navigation globale est déjà englobée dans un élément `<nav>`, il est possible d'entourer un menu précédent/suivant dans un élément `<section>`&nbsp;:
+
+```html
+<section>
+  <a href="#">Article précédent</a>
+  <a href="#">Article suivant</a>
+</section>
+```
+
+Ou bien une barre de boutons pour contrôler votre application&nbsp;? Celle-ci n'a pas forcément besoin d'un titre, mais reste une section distincte du document&nbsp;:
+
+```html
+<section>
+  <button class="reply">Répondre</button>
+  <button class="reply-all">Répondre à tous</button>
+  <button class="fwd">Transférer</button>
+  <button class="del">Supprimer</button>
+</section>
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Utiliser une section sans titre")}}
+
+Selon le contenu, inclure un titre peut aussi être bénéfique pour le référencement, c'est donc une option à considérer.
 
 ## Résumé technique
 
@@ -72,18 +118,17 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Ref
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-          >Catégories de contenu</a
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories">Catégories de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
         >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_sectionnant"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_sectionnant"
           >contenu sectionnant</a
         >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_tangible"
           >contenu tangible</a
         >.
       </td>
@@ -91,7 +136,7 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Ref
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
         >.
       </td>
@@ -104,29 +149,50 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Ref
       <th scope="row">Parents autorisés</th>
       <td>
         Tout élément qui accepte du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >contenu de flux</a
         >. Un élément <code>&#x3C;section></code> ne peut pas être le descendant
         d'un élément {{HTMLElement("address")}}.
       </td>
     </tr>
     <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <code
+          ><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/region_role"
+            >region</a
+          ></code
+        >
+        si l'élément a un
+        <a
+          href="/fr/docs/Glossary/Accessible_name"
+          >nom accessible</a
+        >, sinon
+        <code
+          ><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
+            >generic</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
       <th scope="row">Rôles ARIA autorisés</th>
       <td>
-        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/alert_role">alert</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/alertdialog_role">alertdialog</a></code>,
-        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/banner_role">banner</a></code>,
-        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/complementary_role">complementary</a></code>,
-        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/contentinfo_role">contentinfo</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/dialog_role">dialog</a></code>,
-        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/document_role">document</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/feed_role">feed</a></code>,
-        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/log_role">log</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/main_role">main</a></code>,
-        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/marquee_role">marquee</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/navigation_role">navigation</a></code>,
-        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/search_role">search</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/status_role">status</a></code>,
-        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/tabpanel_role">tabpanel</a></code>
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role"><code>alert</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role"><code>alertdialog</code></a>,
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role"><code>banner</code></a>,
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role"><code>complementary</code></a>,
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/contentinfo_role"><code>contentinfo</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role"><code>dialog</code></a>,
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/document_role"><code>document</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/feed_role"><code>feed</code></a>,
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/log_role"><code>log</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/main_role"><code>main</code></a>,
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/marquee_role"><code>marquee</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role"><code>navigation</code></a>,
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/note_role"><code>note</code></a>,
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/search_role"><code>search</code></a>,
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/status_role"><code>status</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role"><code>tabpanel</code></a>
       </td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
+      <td>{{DOMxRef("HTMLElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -141,6 +207,7 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Ref
 
 ## Voir aussi
 
-- Les autres éléments HTML relatifs au plan du document : {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
-- [Structure et sections d'un document HTML5](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements)
-- [ARIA : le rôle `region`](/fr/docs/Web/Accessibility/ARIA/Roles/Region_role)
+- Les autres éléments HTML relatifs au plan du document&nbsp;: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, `{{HTMLElement("Heading_Elements", "&lt;h1&gt;")}}`, `{{HTMLElement("Heading_Elements", "&lt;h2&gt;")}}`, `{{HTMLElement("Heading_Elements", "&lt;h3&gt;")}}`, `{{HTMLElement("Heading_Elements", "&lt;h4&gt;")}}`, `{{HTMLElement("Heading_Elements", "&lt;h5&gt;")}}`, `{{HTMLElement("Heading_Elements", "&lt;h6&gt;")}}`, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
+- [Structure et sections d'un document HTML](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements)
+- [ARIA&nbsp;: le rôle `region`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/region_role)
+- [Pourquoi choisir l'élément HTML5 article plutôt que section&nbsp;? | Bruce Lawson <sup>(angl.)</sup>](https://www.smashingmagazine.com/2020/01/html5-article-section/)

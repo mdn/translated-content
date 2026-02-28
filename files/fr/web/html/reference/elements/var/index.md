@@ -1,20 +1,19 @@
 ---
 title: "<var> : l'élément de variable"
 slug: Web/HTML/Reference/Elements/var
-original_slug: Web/HTML/Element/var
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<var>`** représente une variable dans une expression mathématique ou un texte lié à la programmation. Son contenu est généralement représenté avec une version italique de la police environnante utilisée, toutefois, ce comportement peut dépendre du navigateur utilisé.
 
-L'élément HTML **`<var>`** représente une variable dans une expression mathématique ou un texte lié à la programmation. Son contenu est généralement représenté avec une version italique de la police environnante utilisée, toutefois, ce comportement peut dépendre du navigateur utilisé.
-
-{{InteractiveExample("HTML Demo: &lt;var&gt;", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;var&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>
-  The volume of a box is <var>l</var> × <var>w</var> × <var>h</var>, where
-  <var>l</var> represents the length, <var>w</var> the width and
-  <var>h</var> the height of the box.
+  Le volume d'une boîte est <var>l</var> × <var>w</var> × <var>h</var>, où
+  <var>l</var> représente la longueur, <var>w</var> la largeur et
+  <var>h</var> la hauteur de la boîte.
 </p>
 ```
 
@@ -26,30 +25,31 @@ var {
 
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 
 ### Éléments associés
 
-Voici d'autres éléments qui sont fréquemment utilisés dans les contextes où `<var>` est utilisé :
+Voici d'autres éléments qui sont fréquemment utilisés dans les contextes où `<var>` est utilisé&nbsp;:
 
-- {{HTMLElement("code")}}
-- {{HTMLElement("kbd")}}
-- {{HTMLElement("samp")}}
+- {{HTMLElement("code")}}&nbsp;: l'élément de code
+- {{HTMLElement("kbd")}}&nbsp;: l'élément de saisie au clavier
+- {{HTMLElement("samp")}}&nbsp;: l'élément de sortie d'exemple
 
-Si vous trouvez un élément `<var>` utilisé uniquement pour la mise en forme, il est préférable de remplacer celui-ci par un élément {{HTMLElement("span")}} auquel on appliquera les règles CSS souhaitées.
+Si vous trouvez du code qui utilise `<var>` par erreur à des fins de mise en forme plutôt que pour des raisons sémantiques, vous devriez utiliser un {{HTMLElement("span")}} avec la CSS appropriée ou un élément sémantique approprié parmi les suivants&nbsp;:
+
+- {{HTMLElement("em")}}
+- {{HTMLElement("i")}}
+- {{HTMLElement("q")}}
 
 ### Mise en forme par défaut
 
-La plupart des navigateurs appliquent la propriété {{cssxref("font-style")}} avec la valeur `"italic"` lors de l'affichage d'un élément `<var>`. Ce comportement peut être surchargé par la feuille de style CSS du site :
+La plupart des navigateurs appliquent la propriété {{CSSxRef("font-style")}} avec la valeur `"italic"` lors de l'affichage d'un élément `<var>`. Ce comportement peut être surchargé par la feuille de style CSS du site&nbsp;:
 
 ```css
 var {
-  font:
-    bold 15px "Courier",
-    "Courier New",
-    monospace;
+  font-style: normal;
 }
 ```
 
@@ -57,20 +57,19 @@ var {
 
 ### Exemple simple
 
-#### HTML
+Voici un exemple simple, utilisant `<var>` pour indiquer des noms de variables dans une équation mathématique.
 
 ```html
-<p>
-  Une équation simple :
-  <var>x</var> = <var>y</var> + 2
-</p>
+<p>Une équation simple&nbsp;: <var>x</var> = <var>y</var> + 2</p>
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Exemple_simple","650","80")}}
+{{EmbedLiveSample("Exemple simple", 650, 80)}}
 
 ### Surcharger la mise en forme par défaut
+
+À l'aide de CSS, vous pouvez surcharger le style par défaut de l'élément `<var>`. Dans cet exemple, les noms de variables sont affichés en gras, en utilisant Courier si disponible, sinon la police monospace par défaut est utilisée.
 
 #### CSS
 
@@ -93,9 +92,11 @@ var {
 </p>
 ```
 
+Cet exemple HTML utilise `<var>` pour entourer les noms de deux variables.
+
 #### Résultat
 
-{{EmbedLiveSample("Surcharger_la_mise_en_forme_par_défaut","650","120")}}
+{{EmbedLiveSample("Surcharger la mise en forme par défaut", 650, 140)}}
 
 ## Résumé technique
 
@@ -103,20 +104,18 @@ var {
   <tbody>
     <tr>
       <th scope="row">
-        <dfn
-          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-            >Catégories de contenu</a
-          ></dfn
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
+          >Catégories de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
         >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
         >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_tangible"
           >contenu tangible</a
         >.
       </td>
@@ -124,7 +123,7 @@ var {
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >Contenu phrasé</a
         >.
       </td>
@@ -137,9 +136,17 @@ var {
       <th scope="row">Parents autorisés</th>
       <td>
         Tout élément qui accepte du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
         >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
+          >Pas de rôle correspondant <sup>(angl.)</sup></a
+        >
       </td>
     </tr>
     <tr>
@@ -148,7 +155,7 @@ var {
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
+      <td>{{DOMxRef("HTMLElement")}}</td>
     </tr>
   </tbody>
 </table>

@@ -1,9 +1,9 @@
 ---
 title: 垂直フォームコントロールの作成
+short-title: 垂直フォームコントロール
 slug: Web/CSS/Guides/Writing_modes/Vertical_controls
-original_slug: Web/CSS/CSS_writing_modes/Vertical_controls
 l10n:
-  sourceCommit: 0f4b28bdc51e89cd25d132b9db12e3e903a9c5aa
+  sourceCommit: 32bdfdb82cf91ce9942b694286dec62be2cc20aa
 ---
 
 このガイドでは、CSS の {{cssxref("writing-mode")}} および {{cssxref("direction")}} プロパティを使用して縦書きのフォームコントロールを作成および構成する方法を説明しています。 これには以下が含まれます。
@@ -24,13 +24,13 @@ l10n:
 - `writing-mode: vertical-lr` は、ブロックフロー方向が左から右になる縦書きのフォームコントロールを作成します。つまり、折り返しや複数行のテキストを含むコントロールでは、次の行がその前の行の右側に現れるということです。
 - `writing-mode: vertical-rl` は、ブロックフロー方向が右から左になる縦書きのフォームコントロールを作成します。つまり、折り返しや複数行のテキストを含むコントロールでは、次の行がその前の行の左側に現れるということです。
 
-[座標変換](/ja/docs/Web/CSS/Reference/Properties/transform)を使用してコントロールを 90 度回転させることもできますが、コントロールを独自のレイヤーで持つことになり、他のコンテンツが重なってしまうなど、予期せぬレイアウト上の副作用が発生する可能性があります。 `writing-mode` を使用することで、より信頼性の高いソリューションが得られます。
+[座標変換](/ja/docs/Web/CSS/Reference/Properties/transform)を使用してコントロールを 90 度回転させることもできますが、コントロールを独自のレイヤーに配置することになり、他のコンテンツが重なってしまうなど、予期せぬレイアウト上の副作用が発生する可能性があります。 `writing-mode` を使用することで、より信頼性の高いソリューションが得られます。
 
 > [!NOTE]
 > {{cssxref("writing-mode")}} プロパティは十分に実装されているものの、 `writing-mode` を使用して縦書きのフォームコントロールを作成することは、 2024 年になってようやくすべてのブラウザーで対応されました。
 
 > [!NOTE]
-> 実験的な `sideways-lr` および `sideways-rl` の値は、それぞれ `vertical-lr` および `vertical-rl` 値が示すのと似た効果を持っていますが、通常、縦書きのテキスト文字（中国語や日本語など）は 90 度回転して横書きで表示されますが、横書きのテキスト文字（例えばラテン語）はこれらの値の影響を受けません。
+> 実験的な `sideways-lr` および `sideways-rl` の値は、それぞれ `vertical-lr` および `vertical-rl` 値が示すのと似た効果を持っていますが、通常、縦書きのテキスト文字（中国語や日本語など）は 90 度回転して横書きで表示されるのに対し、横書きのテキスト文字（例えばラテン語）はこれらの値の影響を受けません。
 
 さらに、 {{cssxref("direction")}} プロパティを使用して、コントロール内のコンテンツの方向を制御することができます。
 
@@ -60,7 +60,7 @@ l10n:
 ```
 
 > [!NOTE]
-> 最善の手法は、アクセシビリティの目的で、各フォームコントロールに {{htmlelement("label")}} 要素を含め、各フィールドに意味のあるテキスト説明を関連付けます（詳細は「[意味の通るテキストラベル](/ja/docs/Learn_web_development/Core/Accessibility/HTML#意味の通るテキストラベル)」を参照）。この記事ではフォームコントロールの視覚的なレンダリングに焦点を絞っているため、ここではその手法を採用していませんが、本番コードでは必ずそのようにしてください。
+> 最善の手法は、アクセシビリティの目的で、各フォームコントロールに {{htmlelement("label")}} 要素を含め、各フィールドに意味のあるテキスト説明を関連付けます（詳細は「[意味の通るテキストラベルの使用](/ja/docs/Learn_web_development/Core/Accessibility/HTML#意味の通るテキストラベルを使う)」を参照）。この記事ではフォームコントロールの視覚的なレンダリングに焦点を絞っているため、ここではその手法を採用していませんが、本番コードでは必ずそのようにしてください。
 
 次のような CSS を使用すると、コントロールを縦に表示できます。
 
@@ -149,16 +149,16 @@ input[type="range"] {
 <form>
   <select multiple>
     <option>First</option>
-    <option>Second</option>
+    <option>二つ目</option>
     <option>Third</option>
-    <option>Fourth</option>
+    <option>四つ目</option>
     <option>Fifth</option>
   </select>
   <select>
     <option>First</option>
-    <option>Second</option>
+    <option>二つ目</option>
     <option>Third</option>
-    <option>Fourth</option>
+    <option>四つ目</option>
     <option>Fifth</option>
   </select>
 </form>
@@ -180,11 +180,11 @@ select {
 
 ### テキストの方向と選択肢の順序の調整
 
-繰り返しになりますが、 {{cssxref("direction")}} プロパティを rtl の値に設定すると、既定では上から下であるテキストの方向を、下から上に設定することが可能です。
+繰り返しになりますが、 {{cssxref("direction")}} プロパティを `rtl` の値に設定すると、既定では上から下であるテキストの方向を、下から上に設定することが可能です。
 
-また、例えば、選択肢のインライン方向が右から左になっている点にも注目すべきでしょう。これは、 `writing-mode: vertical-rl` を使用しているためです。代わりに `writing-mode: vertical-lr` を使用すると、`<option>` テキストは左から右に現れます。
+また、例えば、選択肢のインライン方向が右から左になっている点にも注目すべきでしょう。これは、`writing-mode: vertical-rl` を使用しているためです。代わりに `writing-mode: vertical-lr` を使用すると、`<option>` テキストは左から右に現れます。
 
-この 2 つの用途を、 3 つのリストボックス (`multiple`) `<select>` 要素を使用して探求し、横に並んでいる効果を簡単に比較できるようにします。
+この 2 つの用途を、 3 つのリストボックス (`multiple`) `<select>` 要素を使用して検証し、横に並べて効果を比較することができるようにします。
 
 ```html
 <form>
@@ -192,9 +192,9 @@ select {
     <h2>writing-mode: vertical-lr</h2>
     <select multiple>
       <option>First</option>
-      <option>Second</option>
+      <option>二つ目</option>
       <option>Third</option>
-      <option>Fourth</option>
+      <option>四つ目</option>
       <option>Fifth</option>
     </select>
   </div>
@@ -202,9 +202,9 @@ select {
     <h2>direction: rtl & writing-mode: vertical-lr</h2>
     <select multiple>
       <option>First</option>
-      <option>Second</option>
+      <option>二つ目</option>
       <option>Third</option>
-      <option>Fourth</option>
+      <option>四つ目</option>
       <option>Fifth</option>
     </select>
   </div>
@@ -212,9 +212,9 @@ select {
     <h2>writing-mode: vertical-rl</h2>
     <select multiple>
       <option>First</option>
-      <option>Second</option>
+      <option>二つ目</option>
       <option>Third</option>
-      <option>Fourth</option>
+      <option>四つ目</option>
       <option>Fifth</option>
     </select>
   </div>
@@ -274,14 +274,14 @@ select {
 
 ## ボタン
 
-この節では、垂直方向の {{htmlelement("button")}} 要素の扱い方を示します。なお、下記の例では `<button>` 要素しか使用していませんが、ボタンを作成する他の要素、たとえば [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) の [`button`](/ja/docs/Web/HTML/Reference/Elements/input/button)、[`reset`](/ja/docs/Web/HTML/Reference/Elements/input/reset)、[`submit`](/ja/docs/Web/HTML/Reference/Elements/input/submit)なども動作は同じです。
+この節では、垂直方向の {{htmlelement("button")}} 要素の扱い方を示します。なお、下記の例では `<button>` 要素しか使用していませんが、ボタンを作成する他の要素、たとえば [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) の [`button`](/ja/docs/Web/HTML/Reference/Elements/input/button)、[`reset`](/ja/docs/Web/HTML/Reference/Elements/input/reset)、[`submit`](/ja/docs/Web/HTML/Reference/Elements/input/submit) 型なども動作は同じです。
 
 ### 基本的なボタンの例
 
 次の HTML では、単一の行のテキストの要素と、3 行のテキストを持つ要素の 2 つの `<button>` 要素を作成します。
 
 ```html
-<button>Press me</button> <button>Press me<br />Please?<br />Thanks</button>
+<button>押してね</button> <button>Press me<br />Please?<br />Thanks</button>
 ```
 
 次のような CSS を使用すると、ボタンを垂直に表示することができます。
@@ -300,7 +300,7 @@ button {
 
 ### ボタンテキストの行の順序を調整
 
-`writing-mode` の値を `vertical-rl` から `vertical-lr` に変更すると、テキストの次の行は、前回行の左ではなく、正しく右側に現れます。
+`writing-mode` の値を `vertical-rl` から `vertical-lr` に変更すると、テキストの次の行は、前行の左ではなく、正しく右側に現れます。
 
 この例では、前回使用した 3 行テキストボタンのコピーを 2 つ使用しています。そのため、テキストの方向を変更した場合の効果を簡単に確認することができます。
 
@@ -315,7 +315,7 @@ button {
 </div>
 ```
 
-CSSでは、最初のボタンに `writing-mode: vertical-rl` を設定して、正しい行順（右から左）でレイアウトします。 2 つ目のボタンには、行順を逆に（左から右）するために `writing-mode: vertical-lr` を設定します。
+CSS では、最初のボタンに `writing-mode: vertical-rl` を設定して、正しい行順（右から左）でレイアウトします。 2 つ目のボタンには、行順を逆に（左から右）するために `writing-mode: vertical-lr` を設定します。
 
 ```css hidden
 body {
@@ -360,7 +360,7 @@ button {
 
 ## テキストベースのフォームコントロール
 
-最後に、垂直方向の {{htmlelement("textarea")}} とテキスト型の `<input>` について見ていきます。なお、下記の例では `<input>` 型として `<input type="text">` 要素のみを記載していますが、他のテキストの [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) 型（[`password`](/ja/docs/Web/HTML/Reference/Elements/input/button)、[`number`](/ja/docs/Web/HTML/Reference/Elements/input/reset)、[`url`](/ja/docs/Web/HTML/Reference/Elements/input/submit) など）でも動作は同じです。
+最後に、垂直方向の {{htmlelement("textarea")}} とテキスト型の `<input>` について見ていきます。なお、下記の例では `<input>` 型として `<input type="text">` 要素のみを記載していますが、他のテキスト型の [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input)、たとえば [`password`](/ja/docs/Web/HTML/Reference/Elements/input/button)、[`number`](/ja/docs/Web/HTML/Reference/Elements/input/reset)、[`url`](/ja/docs/Web/HTML/Reference/Elements/input/submit) などでも動作は同じです。
 
 ### 基本的なテキスト入力フィールドとテキストエリアの例
 
@@ -473,5 +473,5 @@ input[type="text"] {
 
 - [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) 要素
 - 他の関連要素: {{htmlelement("button")}}, {{htmlelement("meter")}}, {{htmlelement("progress")}}, {{htmlelement("select")}}
-- [様々なテキストの方向の扱い](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)
+- [学習: 様々なテキストの方向の扱い](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)
 - [ウェブフォームのスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)

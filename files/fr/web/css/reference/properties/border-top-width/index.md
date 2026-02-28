@@ -1,14 +1,13 @@
 ---
 title: border-top-width
 slug: Web/CSS/Reference/Properties/border-top-width
-original_slug: Web/CSS/border-top-width
+l10n:
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`border-top-width`** permet de définir l'épaisseur de la bordure supérieure d'un élément.
 
-La propriété **`border-top-width`** définit l'épaisseur de la bordure pour le côté haut d'une boîte.
-
-{{InteractiveExample("CSS Demo: border-top-width")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: border-top-width")}}
 
 ```css interactive-example-choice
 border-top-width: thick;
@@ -33,7 +32,7 @@ border-top-width: 0;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    Ceci est une boîte avec une bordure autour.
   </div>
 </section>
 ```
@@ -41,7 +40,7 @@ border-top-width: 0;
 ```css interactive-example
 #example-element {
   background-color: palegreen;
-  color: #000;
+  color: black;
   border: 0 solid crimson;
   padding: 0.75em;
   width: 80%;
@@ -52,32 +51,34 @@ border-top-width: 0;
 ## Syntaxe
 
 ```css
-/* Une valeur de longueur */
-/* Type <length>          */
-border-top-width: 10em;
-border-top-width: 3vmax;
-border-top-width: 6px;
-
 /* Valeurs avec un mot-clé */
 border-top-width: thin;
 border-top-width: medium;
 border-top-width: thick;
 
+/* Valeur de type <length> */
+border-top-width: 10em;
+border-top-width: 3vmax;
+border-top-width: 6px;
+
 /* Valeurs globales */
 border-top-width: inherit;
 border-top-width: initial;
+border-top-width: revert;
+border-top-width: revert-layer;
 border-top-width: unset;
 ```
 
 ### Valeurs
 
 - `<line-width>`
-  - : Une valeur de longueur ({{cssxref("&lt;length&gt;")}}) positive ou un mot-clé qui indique l'épaisseur de la bordure pour le haut de la boîte. Si la valeur est un mot-clé, ce doit être l'une des valeurs suivantes :
+  - : Une valeur de longueur ({{CSSxRef("&lt;length&gt;")}}) positive ou un mot-clé qui indique l'épaisseur de la bordure pour le haut de la boîte. Si la valeur est un mot-clé, ce doit être l'une des valeurs suivantes&nbsp;:
     - `thin` (fin)
     - `medium` (intermédiaire)
     - `thick` (épais)
 
-    La spécification ne précise pas de façon exacte l'épaisseur correspondant à chacun de ces mots-clés (c'est donc à chaque implémentation de choisir). La spécification requiert toutefois que l'inégalité suivante soit respectée `thin ≤ medium ≤ thick` et que ces valeurs soient constantes pour un même document.
+> [!NOTE]
+> La spécification ne précise pas de façon exacte l'épaisseur correspondant à chacun de ces mots-clés (c'est donc à chaque implémentation de choisir). La spécification requiert toutefois que l'inégalité suivante soit respectée `thin ≤ medium ≤ thick` et que ces valeurs soient constantes pour un même document.
 
 ## Définition formelle
 
@@ -89,33 +90,32 @@ border-top-width: unset;
 
 ## Exemples
 
-### CSS
-
-```css
-.element1 {
-  border-top: thick solid red;
-}
-.element2 {
-  border-top: medium solid orange;
-}
-.element3 {
-  border-top: thin solid green;
-}
-```
-
 ### HTML
 
 ```html
-<p class="element1">Une bordure épaisse rouge.</p>
+<div>Élément 1</div>
+<div>Élément 2</div>
+```
 
-<p class="element2">Une bordure moyenne orange.</p>
+### CSS
 
-<p class="element3">Et une bordure fine verte.</p>
+```css
+div {
+  border: 1px solid red;
+  margin: 1em 0;
+}
+
+div:nth-child(1) {
+  border-top-width: thick;
+}
+div:nth-child(2) {
+  border-top-width: 2em;
+}
 ```
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples","200","300")}}
+{{EmbedLiveSample("Exemples", "100%")}}
 
 ## Spécifications
 
@@ -127,14 +127,5 @@ border-top-width: unset;
 
 ## Voir aussi
 
-- Les autres propriétés liées à la largeur de la bordure :
-  - {{cssxref("border-left-width")}},
-  - {{cssxref("border-right-width")}},
-  - {{cssxref("border-bottom-width")}},
-  - {{cssxref("border-width")}}
-
-- Les autres propriétés CSS liées à la bordure du côté haut :
-  - {{cssxref("border")}},
-  - {{cssxref("border-top")}},
-  - {{cssxref("border-top-style")}},
-  - {{cssxref("border-top-color")}}.
+- Les autres propriétés liées à la largeur de la bordure&nbsp;: {{CSSxRef("border-left-width")}}, {{CSSxRef("border-right-width")}}, {{CSSxRef("border-bottom-width")}} et {{CSSxRef("border-width")}}.
+- Les autres propriétés CSS liées à la bordure du côté haut&nbsp;: {{CSSxRef("border")}}, {{CSSxRef("border-top")}}, {{CSSxRef("border-top-style")}} et {{CSSxRef("border-top-color")}}.

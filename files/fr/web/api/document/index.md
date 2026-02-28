@@ -2,7 +2,7 @@
 title: Document
 slug: Web/API/Document
 l10n:
-  sourceCommit: 87440643d71bf81a5bf4b8fa21db9e3d56ead395
+  sourceCommit: ee03b8deb5423c80e1cb8f6930a6f52e3f49e678
 ---
 
 {{APIRef("DOM")}}
@@ -184,7 +184,7 @@ _Cette interface hérite également des interfaces {{DOMxRef("Node")}} et {{DOMx
   - : Insère un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou d'objets [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) après le dernier enfant du document.
 - {{DOMxRef("Document.ariaNotify()")}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : Définit qu'une chaîne de caractères donnée doit être annoncée par un lecteur d'écran.
-- {{DOMxRef("Document.browsingTopics()")}} {{Experimental_Inline}} {{Non-standard_Inline}}
+- {{DOMxRef("Document.browsingTopics()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Retourne une promesse qui se résout avec un tableau d'objets représentant les sujets principaux pour l'utilisateur·ice, un pour chacune des trois dernières époques. Par défaut, la méthode fait aussi enregistrer par le navigateur la visite de la page courante telle qu'observée par l'appelant·e, afin que le nom d'hôte de la page puisse ensuite être utilisé dans le calcul des sujets. Voir la [Topics API](/fr/docs/Web/API/Topics_API) pour plus de détails.
 - `Document.captureEvents()` {{Deprecated_Inline}}
   - : Voir {{DOMxRef("Window.captureEvents")}}.

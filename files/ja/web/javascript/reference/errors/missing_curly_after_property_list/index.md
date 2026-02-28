@@ -46,6 +46,6 @@ var obj = {
 };
 ```
 
-## 関連項目
+## 関連情報
 
 - [オブジェクト初期化子](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)

@@ -1,27 +1,29 @@
 ---
 title: view-timeline-inset
 slug: Web/CSS/Reference/Properties/view-timeline-inset
-original_slug: Web/CSS/view-timeline-inset
 l10n:
-  sourceCommit: 7eaac8008ebe00417314379fab2285df23322e73
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
-
-{{SeeCompatTable}}
 
 **`view-timeline-inset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ビュー進行タイムラインのアニメーションの主体要素が可視であるとみなされるスクロールポート（詳細は{{glossary("Scroll container", "スクロールコンテナー")}}を参照）の位置の調整を表す 1 つまたは 2 つの値を指定するために使用します。別の言い方をすると、これはタイムラインの位置をオフセットする開始値や終了値のインセット（またはアウトセット）を指定することができます。
 
 これは {{cssxref("animation-range")}} とその個別指定プロパティと組み合わせたり、その代わりに使用したりすることができ、タイムラインに沿ってアニメーションの適用範囲を設定することができます。
 詳細は [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)を参照してください。
 
+> [!NOTE]
+> スクロール要素が軸方向のサイズでコンテナーからはみ出さない場合、またはオーバーフローが非表示またはクリップされている場合、スクロール進行タイムラインは作成されません。
+
+`view-timeline-inset`、{{cssxref("view-timeline-axis")}}、{{cssxref("view-timeline-name")}} の各プロパティは、{{cssxref("view-timeline")}} 一括指定プロパティを使用することで設定することもできます。
+
 ## 構文
 
 ```css
-/* Single value */
+/* 値 1 つ */
 view-timeline-inset: auto;
 view-timeline-inset: 200px;
 view-timeline-inset: 20%;
 
-/* Two values */
+/* 値 2 つ */
 view-timeline-inset: 20% auto;
 view-timeline-inset: auto 200px;
 view-timeline-inset: 20% 200px;
@@ -52,8 +54,8 @@ view-timeline-inset: 20% 200px;
 
 ### インセットを含む名前付きビュー進行タイムラインの作成
 
-`--subjectReveal` という名前のビュー進行タイムラインを `view-timeline` プロパティを用いて、 `class` が `animation` の主体要素に定義します。
-これを同じ要素のタイムラインとして設定するには `animation-timeline: --subjectReveal;` を使用します。その結果、主体要素は文書化されたものをスクロールしながら上方向に移動してアニメーションします。
+`--subject-reveal` という名前のビュー進行タイムラインを `view-timeline` プロパティを用いて、 `class` が `animation` の主体要素に定義します。
+これを同じ要素のタイムラインとして設定するには `animation-timeline: --subject-reveal;` を使用します。その結果、主体要素は文書化されたものをスクロールしながら上方向に移動してアニメーションします。
 
 `view-timeline-inset` 宣言も設定することで、アニメーションを予想より遅く始め、早く終わらせることができます。
 
@@ -116,7 +118,7 @@ view-timeline-inset: 20% 200px;
 
 p,
 h1 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 h1 {
@@ -135,9 +137,9 @@ p {
 
 ```css
 .animation {
-  view-timeline: --subjectReveal block;
+  view-timeline: --subject-reveal block;
   view-timeline-inset: 70% -100px;
-  animation-timeline: --subjectReveal;
+  animation-timeline: --subject-reveal;
 
   animation-name: appear;
   animation-fill-mode: both;
@@ -151,7 +153,7 @@ p {
   }
 
   to {
-    opacity: 1,
+    opacity: 1;
     transform: scaleX(1);
   }
 }
@@ -173,7 +175,7 @@ p {
 
 ## 関連情報
 
-- [`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline)
+- {{cssxref("animation-timeline")}}
 - {{cssxref("timeline-scope")}}
-- [`view-timeline`](/ja/docs/Web/CSS/Reference/Properties/view-timeline), [`view-timeline-axis`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-axis), [`view-timeline-name`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-name)
+- {{cssxref("view-timeline")}}, {{cssxref("view-timeline-axis")}}, {{cssxref("view-timeline-name")}}
 - [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)

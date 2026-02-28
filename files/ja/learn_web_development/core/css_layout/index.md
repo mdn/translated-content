@@ -2,10 +2,8 @@
 title: CSS のレイアウト
 slug: Learn_web_development/Core/CSS_layout
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core")}}
 
@@ -16,7 +14,7 @@ l10n:
 このモジュールを始める前に、 [HTML](/ja/docs/Learn_web_development/Core/Structuring_content)、[CSS によるスタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)、[CSS によるテキストのスタイル設定](/ja/docs/Learn_web_development/Core/Text_styling)を理解しておいてください。
 
 > [!NOTE]
-> 使用しているコンピューター/タブレット/その他のデバイスで自分のファイルを作成できない場合は、[JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) などのオンラインコーディングプログラムで (ほとんどの) コードサンプルを試すことができます。
+> もしファイルを作成できないコンピューター、タブレット、その他の端末で作業している場合は、[CodePen](https://codepen.io/) や [JSFiddle](https://jsfiddle.net/) などのオンラインエディターでコードを実行してみてください。
 
 ## チュートリアルと課題
 
@@ -30,12 +28,16 @@ l10n:
   - : [フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases)は、アイテムを行または列にレイアウトするための 1 次元のレイアウト方式です。アイテムは余った空間を埋めるために伸ばされたり、小さな空間に収まるために縮んだりします。この記事では、基本的なことをすべて説明しています。
 - [CSS グリッドレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Grids)
   - : CSS グリッドレイアウトは、ウェブ用の 2 次元レイアウトシステムです。 これにより、コンテンツを行と列にレイアウトすることができ、複雑なレイアウトを簡単に構築できる多くの機能を備えています。この記事では、グリッドレイアウトを始めるために必要なすべてを説明します。
+- [基礎的なレイアウトの理解](/ja/docs/Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension) <sup>課題</sup>
+  - : この課題では、モジュールで指定されたレイアウト機能、すなわちフレックスボックス、浮動ボックス、グリッド、位置指定に関する知識を試します。最後には、様々な技術を使用してウェブページのレイアウトを開発することになります。
 - [レスポンシブデザイン](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)
   - : ウェブ対応端末の画面サイズが多様化するにつれ、レスポンシブウェブデザイン (RWD) という概念が登場しました。ウェブページのレイアウトや外観を、さまざまな画面幅や解像度などに合わせて変更できるようにする一連の実践方法です。これは、多数の端末に対応するウェブのデザイン方法を大きく変える考え方であり、この記事では、この概念を習得するために知っておくべき主なテクニックについてご説明します。
 - [メディアクエリーの初心者向けガイド](/ja/docs/Learn_web_development/Core/CSS_layout/Media_queries)
   - : **CSS メディアクエリー**は、ブラウザーや端末の環境が、指定したルールに合致した場合にのみ CSS を適用する方法です。メディアクエリーは、ビューポートの大きさに応じて異なるレイアウトを作成することができるため、レスポンシブウェブデザインの重要な要素となっています。このレッスンでは、まずメディアクエリーで使用される構文について学び、次にメディアクエリーを使用して、シンプルなデザインをどのようにレスポンシブにするかを示す実例を見ていきます。
-- [基礎的なレイアウトの理解](/ja/docs/Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension)
-  - : ウェブページをレイアウトすることによって、さまざまなレイアウト方法に関する知識をテストするための評価試験です。
+
+## 確認テスト
+
+チュートリアル記事の間に「確認テスト」記事が配置されています。これらは、次に進む前に最も重要な情報を理解できているかを調べるためのものです。これらを一斉に確認したい場合は、[確認テスト: CSS レイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Test_your_skills)に一覧が掲載されています。
 
 ## 追加のチュートリアル
 
@@ -43,6 +45,8 @@ l10n:
 
 - [段組みレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
   - : 段組みレイアウトの仕様では、新聞に見られるような、コンテンツを複数の段にレイアウトする方法が提供されています。 この記事では、この機能の使い方について説明します。
+- [実践的な位置指定の例](/ja/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples)
+  - : この記事では、位置指定機能でどのような操作が可能かを実例を通じて示します。
 - [過去のレイアウト方法](/ja/docs/Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods)
   - : グリッドシステムは CSS レイアウトで使用される非常に一般的な機能で、**CSS グリッドレイアウト**以前は浮動レイアウトや他のレイアウト機能を使用して実装される傾向がありました。 レイアウトをいくつかの列（4 や 6 や 12）として想像し、そしてコンテンツの列をこれらの想像上の列の中に合わせます。 この記事では、古いプロジェクトで作業した場合に、それらがどう使われたかを理解するために、これらの古い方法がどのように機能するのかを説明します。
 - [古いブラウザーの対応](/ja/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers)
@@ -50,9 +54,9 @@ l10n:
 
 ## 関連情報
 
-- [実用的な位置指定の例](/ja/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples)
-  - : この記事では、位置指定でどのようなことができるかを説明するために、実際に使用されるいくつかの例を作成する方法を示します。
 - [CSS レイアウト料理帳](/ja/docs/Web/CSS/How_to/Layout_cookbook)
   - : CSSレイアウトの料理帳は、一般的なレイアウトパターンのレシピをまとめることを目的としています。自分のプロジェクトの出発点として使用することができるコードを提供するだけでなく、これらのレシピは、レイアウト仕様を使用するさまざまな方法と、開発者として行うことができる選択を強調します。
+- [Learn Flexbox](https://scrimba.com/learn-flexbox-c0k?via=mdn) および [Learn CSS Grid](https://scrimba.com/learn-css-grid-c02k?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+  - : Scrimba のこれらのコースでは、フレックスボックスとグリッドについて知っておく必要があるすべてをインタラクティブなレッスンで学べます。
 
 {{NextMenu("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core")}}

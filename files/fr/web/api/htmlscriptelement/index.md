@@ -2,14 +2,17 @@
 title: HTMLScriptElement
 slug: Web/API/HTMLScriptElement
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: e936e7271df947f25184a5ba8a21445bbd4d056c
 ---
 
 {{APIRef("HTML DOM")}}
 
 Les éléments HTML {{HTMLElement("script")}} exposent l'interface **`HTMLScriptElement`**. Cette interface fournit des propriétés et des méthodes pour définir le comportement et l'exécution des éléments `<script>` (en plus de celles héritées de {{DOMxRef("HTMLElement")}}).
 
-Les fichiers JavaScript doivent être servis avec le type [MIME](/fr/docs/Web/HTTP/Guides/MIME_types) `text/javascript`. Les navigateurs acceptent ce type et bloquent le script uniquement s'il est servi avec un type image (`image/*`), vidéo (`video/*`), audio (`audio/*`) ou `text/csv`. Si le script est bloqué, l'élément reçoit l'événement {{DOMxRef("HTMLElement/error_event", "error")}}&nbsp;; sinon, il reçoit l'événement {{DOMxRef("Window/load_event", "load")}}.
+Les fichiers JavaScript doivent être servis avec le type [MIME](/fr/docs/Web/HTTP/Guides/MIME_types) `text/javascript`. Les navigateurs acceptent ce type et bloquent le script uniquement s'il est servi avec un type image (`image/*`), vidéo (`video/*`), audio (`audio/*`) ou `text/csv`. Si le script est bloqué, l'élément reçoit l'évènement {{DOMxRef("HTMLElement/error_event", "error")}}&nbsp;; sinon, il reçoit l'évènement {{DOMxRef("Window/load_event", "load")}}.
+
+> [!NOTE]
+> Lorsqu'ils sont insérés à l'aide de la méthode {{DOMxRef("Document.write()")}}, les éléments HTML {{HTMLElement("script")}} s'exécutent (généralement de manière synchrone), mais lorsqu'ils sont insérés à l'aide de {{DOMxRef("Element.innerHTML")}} ou {{DOMxRef("Element.outerHTML")}}, ils ne s'exécutent pas du tout.
 
 {{InheritanceDiagram}}
 
@@ -17,8 +20,8 @@ Les fichiers JavaScript doivent être servis avec le type [MIME](/fr/docs/Web/HT
 
 _Hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
 
-- {{DOMxRef("HTMLScriptElement.attributionSrc")}} {{SecureContext_Inline}} {{Experimental_Inline}}
-  - : Obtient et définit l'attribut [`attributionsrc`](/fr/docs/Web/HTML/Reference/Elements/script#attributionsrc) sur un élément {{HTMLElement("script")}} par programmation, reflétant la valeur de cet attribut. `attributionsrc` indique que vous souhaitez que le navigateur envoie un en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}} avec la requête de ressource du script. Côté serveur, cela sert à déclencher l'envoi d'un en-tête {{HTTPHeader("Attribution-Reporting-Register-Source")}} ou {{HTTPHeader("Attribution-Reporting-Register-Trigger")}} dans la réponse, afin d'enregistrer respectivement une [source d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_sources#sources_dévénements_basées_sur_javascript) ou un [déclencheur d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_triggers#déclencheurs_dattributions_basés_sur_javascript) basé sur JavaScript.
+- {{DOMxRef("HTMLScriptElement.attributionSrc")}} {{SecureContext_Inline}} {{Deprecated_Inline}}
+  - : Obtient et définit l'attribut [`attributionsrc`](/fr/docs/Web/HTML/Reference/Elements/script#attributionsrc) sur un élément {{HTMLElement("script")}} par programmation, reflétant la valeur de cet attribut. `attributionsrc` indique que vous souhaitez que le navigateur envoie un en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}} avec la requête de ressource du script. Côté serveur, cela sert à déclencher l'envoi d'un en-tête {{HTTPHeader("Attribution-Reporting-Register-Source")}} ou {{HTTPHeader("Attribution-Reporting-Register-Trigger")}} dans la réponse, afin d'enregistrer respectivement une [source d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_sources#sources_dévènements_basées_sur_javascript) ou un [déclencheur d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_triggers#déclencheurs_dattributions_basés_sur_javascript) basé sur JavaScript.
 - {{DOMxRef("HTMLScriptElement.async")}}
   - : Un booléen qui définit la façon dont le script doit être exécuté. Pour les scripts classiques, si la propriété `async` est à `true`, le script externe est récupéré en parallèle de l'analyse et évalué dès qu'il est disponible. Pour les [modules](/fr/docs/Web/JavaScript/Guide/Modules), si la propriété `async` est à `true`, le script et toutes ses dépendances sont récupérés en parallèle de l'analyse et évalués dès qu'ils sont disponibles.
 - {{DOMxRef("HTMLScriptElement.blocking")}}
@@ -28,11 +31,14 @@ _Hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
 - {{DOMxRef("HTMLScriptElement.crossOrigin")}}
   - : Une chaîne de caractères reflétant le [paramètre CORS](/fr/docs/Web/HTML/Reference/Attributes/crossorigin) pour l'élément script. Pour les scripts classiques provenant d'autres {{Glossary("Origin", "origines")}}, cela définit si les informations d'erreur seront exposées.
 - {{DOMxRef("HTMLScriptElement.defer")}}
-  - : Un booléen qui définit la façon dont le script doit être exécuté. Pour les scripts classiques, si la propriété `defer` est à `true`, le script externe est exécuté après l'analyse du document, mais avant le déclenchement de l'événement {{DOMxRef("Document/DOMContentLoaded_event", "DOMContentLoaded")}}. Pour les [modules](/fr/docs/Web/JavaScript/Guide/Modules), la propriété `defer` n'a aucun effet.
+  - : Un booléen qui définit la façon dont le script doit être exécuté. Pour les scripts classiques, si la propriété `defer` est à `true`, le script externe est exécuté après l'analyse du document, mais avant le déclenchement de l'évènement {{DOMxRef("Document/DOMContentLoaded_event", "DOMContentLoaded")}}. Pour les [modules](/fr/docs/Web/JavaScript/Guide/Modules), la propriété `defer` n'a aucun effet.
 - `HTMLScriptElement.event` {{Deprecated_Inline}}
-  - : Une chaîne de caractères ; méthode obsolète pour enregistrer des gestionnaires d'événements sur les éléments d'un document HTML.
+  - : Une chaîne de caractères&nbsp;; méthode obsolète pour enregistrer des gestionnaires d'évènements sur les éléments d'un document HTML.
 - {{DOMxRef("HTMLScriptElement.fetchPriority")}}
-  - : Une chaîne de caractères optionnelle représentant une indication donnée au navigateur sur la priorité de récupération d'un script externe par rapport aux autres scripts externes. Si cette valeur est fournie, elle doit être l'une des valeurs autorisées : `high` pour une priorité élevée, `low` pour une priorité faible, ou `auto` pour indiquer aucune préférence (valeur par défaut). Elle reflète l'attribut `fetchpriority` de l'élément {{HTMLElement("script")}}.
+  - : Une chaîne de caractères optionnelle représentant une indication donnée au navigateur sur la priorité de récupération d'un script externe par rapport aux autres scripts externes. Si cette valeur est fournie, elle doit être l'une des valeurs autorisées&nbsp;: `high` pour une priorité élevée, `low` pour une priorité faible, ou `auto` pour indiquer aucune préférence (valeur par défaut). Elle reflète l'attribut `fetchpriority` de l'élément {{HTMLElement("script")}}.
+- {{DOMxRef("HTMLScriptElement.innerText")}}
+  - : Une propriété qui représente le contenu texte en ligne de l'élément HTML {{HTMLElement("script")}} comme s'il était du texte rendu.
+    La propriété accepte soit un objet {{DOMxRef("TrustedScript")}} soit une chaîne de caractères.
 - {{DOMxRef("HTMLScriptElement.integrity")}}
   - : Une chaîne de caractères contenant des métadonnées intégrées que le navigateur peut utiliser pour vérifier qu'une ressource récupérée n'a pas été modifiée de façon inattendue. Elle reflète l'attribut `integrity` de l'élément {{HTMLElement("script")}}.
 - {{DOMxRef("HTMLScriptElement.noModule")}}
@@ -40,13 +46,15 @@ _Hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
 - {{DOMxRef("HTMLScriptElement.referrerPolicy")}}
   - : Une chaîne de caractères reflétant l'attribut HTML [`referrerPolicy`](/fr/docs/Web/HTML/Reference/Elements/script#referrerpolicy) qui définit le référent à utiliser lors de la récupération du script et des requêtes effectuées par ce script.
 - {{DOMxRef("HTMLScriptElement.src")}}
-  - : Une chaîne de caractères représentant l'URL d'un script externe ; cela peut être utilisé comme alternative à l'intégration directe d'un script dans un document. Elle reflète l'attribut `src` de l'élément {{HTMLElement("script")}}.
+  - : Un objet {{DOMxRef("TrustedScriptURL")}} ou une chaîne de caractères représentant l'URL d'un script externe&nbsp;; cela peut être utilisé comme alternative à l'intégration directe d'un script dans un document. Elle reflète l'attribut `src` de l'élément {{HTMLElement("script")}}.
 - {{DOMxRef("HTMLScriptElement.text")}}
-  - : Une chaîne de caractères qui concatène et retourne le contenu de tous les nœuds {{DOMxRef("Text")}} à l'intérieur de l'élément {{HTMLElement("script")}} (en ignorant les autres nœuds comme les commentaires) dans l'ordre de l'arbre. Lors de la définition, elle agit comme la propriété {{DOMxRef("Node.textContent")}}.
-
-    > [!NOTE]
-    > Lorsqu'ils sont insérés avec la méthode {{DOMxRef("Document.write()")}}, les éléments {{HTMLElement("script")}} s'exécutent (généralement de façon synchrone), mais lorsqu'ils sont insérés avec {{DOMxRef("Element.innerHTML")}} ou {{DOMxRef("Element.outerHTML")}}, ils ne s'exécutent pas du tout.
-
+  - : Une propriété qui représente le contenu texte en ligne de l'élément HTML {{HTMLElement("script")}}.
+    La propriété accepte soit un objet {{DOMxRef("TrustedScript")}} soit une chaîne de caractères.
+    Elle se comporte de la même manière que la propriété {{DOMxRef("HTMLScriptElement.textContent", "textContent")}}.
+- {{DOMxRef("HTMLScriptElement.textContent")}}
+  - : Une propriété qui représente le contenu texte en ligne de l'élément HTML {{HTMLElement("script")}}.
+    La propriété est redéfinie depuis l'objet {{DOMxRef("Node/textContent", "Node")}} pour prendre en charge {{DOMxRef("TrustedScript")}} comme valeur d'entrée.
+    Sur cet élément, elle se comporte exactement comme la propriété {{DOMxRef("HTMLScriptElement.text", "text")}}.
 - {{DOMxRef("HTMLScriptElement.type")}}
   - : Une chaîne de caractères représentant le type du script. Elle reflète l'attribut `type` de l'élément {{HTMLElement("script")}}.
 
@@ -60,9 +68,9 @@ _Hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
 
 _Aucune méthode spécifique&nbsp;; hérite des méthodes de son parent, {{DOMxRef("HTMLElement")}}._
 
-## Événements
+## Évènements
 
-_Aucun événement spécifique&nbsp;; hérite des événements de son parent, {{DOMxRef("HTMLElement")}}._
+_Aucun évènement spécifique&nbsp;; hérite des évènements de son parent, {{DOMxRef("HTMLElement")}}._
 
 ## Exemples
 

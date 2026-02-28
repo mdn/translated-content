@@ -1,24 +1,26 @@
 ---
 title: HTMLTimeElement
 slug: Web/API/HTMLTimeElement
+l10n:
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("HTML DOM")}}
 
-L'interface **`HTMLTimeElement`** fournit des propriétés spéciales (en plus de celles fournies en héritage par l'interface {{domxref("HTMLElement")}}) pour manipuler les éléments {{HTMLElement("time")}}.
+L'interface **`HTMLTimeElement`** fournit des propriétés particulières (en plus de l'interface {{DOMxRef("HTMLElement")}} dont elle hérite) pour manipuler les éléments HTML {{HTMLElement("time")}}.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
-## Propriétés
+## Propriétés d'instance
 
-_Hérite des propriétés de {{domxref("HTMLElement")}}._
+_Hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
 
-- {{domxref("HTMLTimeElement.dateTime")}}
-  - : C'est une {{domxref("DOMString")}} qui reflète l'attribut [`datetime`](/fr/docs/Web/HTML/Reference/Elements/time#datetime) de l'élément HTML correspondant, dans une forme interprétable par un ordinateur de la date et de l'heure.
+- {{DOMxRef("HTMLTimeElement.dateTime")}}
+  - : Une chaîne de caractères qui reflète l'attribut HTML [`datetime`](/fr/docs/Web/HTML/Reference/Elements/time#datetime), contenant une forme interprétable par un ordinateur de la valeur de date et d'heure de l'élément.
 
-## Méthodes
+## Méthodes d'instance
 
-_Pas de méthode spécifique, mais cette interface hérite des méthodes de {{domxref("HTMLElement")}}._
+_Pas de méthode spécifique&nbsp;; hérite des méthodes de son parent, {{DOMxRef("HTMLElement")}}._
 
 ## Spécifications
 
@@ -30,4 +32,4 @@ _Pas de méthode spécifique, mais cette interface hérite des méthodes de {{do
 
 ## Voir aussi
 
-- L'élément HTML {{HTMLElement("time")}} implémentant cette interface.
+- L'élément HTML implémentant cette interface&nbsp;: {{HTMLElement("time")}}.

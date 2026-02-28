@@ -1,14 +1,15 @@
 ---
 title: background-origin
 slug: Web/CSS/Reference/Properties/background-origin
-original_slug: Web/CSS/background-origin
+l10n:
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`background-origin`** définit l'origine de l'arrière-plan&nbsp;: depuis le début de la bordure, à l'intérieur de la bordure ou à l'intérieur de la zone de remplissage.
 
-La propriété **`background-origin`** détermine l'origine de l'arrière-plan [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image) à partir de la bordure, à l'intérieur de la bordure ou à l'intérieur de la zone de remplissage (<i lang="en">padding</i>).
+Attention, `background-origin` est ignorée lorsque {{CSSxRef("background-attachment")}} vaut `fixed`.
 
-{{InteractiveExample("CSS Demo: background-origin")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: background-origin")}}
 
 ```css interactive-example-choice
 background-origin: border-box;
@@ -27,7 +28,7 @@ background-repeat: no-repeat;
 
 ```html interactive-example
 <section id="default-example">
-  <div id="example-element">This is the content of the element.</div>
+  <div id="example-element">Ceci est le contenu de l'élément.</div>
 </section>
 ```
 
@@ -37,16 +38,11 @@ background-repeat: no-repeat;
   color: #d73611;
   text-shadow: 2px 2px black;
   padding: 20px;
-  border: 10px dashed #333;
+  border: 10px dashed #333333;
   font-size: 2em;
   font-weight: bold;
 }
 ```
-
-Attention, `background-origin` est ignorée lorsque [`background-attachment`](/fr/docs/Web/CSS/Reference/Properties/background-attachment) vaut `fixed`.
-
-> [!NOTE]
-> Cette propriété est rattachée à la propriété raccourcie [`background`](/fr/docs/Web/CSS/Reference/Properties/background). Aussi, si on a une déclaration `background-origin` avant la propriété raccourcie et que cette dernière ne définit pas la valeur de l'origine, ce sera la valeur initiale par défaut qui sera prise en compte pour `background-origin`.
 
 ## Syntaxe
 
@@ -60,25 +56,28 @@ background-origin: content-box;
 background-origin: inherit;
 background-origin: initial;
 background-origin: revert;
+background-origin: revert-layer;
 background-origin: unset;
 ```
+
+La propriété `background-origin` se définit à l'aide de l'une des valeurs par mot-clé listées ci-dessous.
 
 ### Valeurs
 
 - `border-box`
   - : L'arrière-plan est positionné relativement à la boîte de bordure.
 - `padding-box`
-  - : L'arrière-plan est positionné relativement à la boîte de remplissage (<i lang="en">padding</i>).
+  - : L'arrière-plan est positionné relativement à la boîte de remplissage (<i lang="en">padding</i> en anglais).
 - `content-box`
   - : L'arrière-plan est positionné relativement à la boîte de contenu.
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -119,26 +118,18 @@ div {
 
 Dans cet exemple, la boîte possède une bordure épaisse en pointillés. Le premier dégradé utilise `padding-box` pour `background-origin` et l'arrière-plan s'inscrit donc à l'intérieur de la bordure. Le second dégradé utilise `content-box` et apparaît donc uniquement derrière le contenu.
 
-#### HTML
-
-```html
-<div class="box">Coucou !</div>
-```
-
-#### CSS
-
 ```css
 .box {
   margin: 10px 0;
-  color: #fff;
+  color: white;
   background:
     linear-gradient(
       90deg,
-      rgba(131, 58, 180, 1) 0%,
-      rgba(253, 29, 29, 0.6) 60%,
-      rgba(252, 176, 69, 1) 100%
+      rgb(131 58 180 / 100%) 0%,
+      rgb(253 29 29 / 60%) 60%,
+      rgb(252 176 69 / 100%) 100%
     ),
-    radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 28%);
+    radial-gradient(circle, white 0%, black 28%);
   border: 20px dashed black;
   padding: 20px;
   width: 400px;
@@ -147,9 +138,11 @@ Dans cet exemple, la boîte possède une bordure épaisse en pointillés. Le pre
 }
 ```
 
-#### Résultat
+```html
+<div class="box">Coucou&nbsp;!</div>
+```
 
-{{EmbedLiveSample("","300","200")}}
+{{EmbedLiveSample("Utiliser deux dégradés", 300, 200)}}
 
 ## Spécifications
 
@@ -161,4 +154,4 @@ Dans cet exemple, la boîte possède une bordure épaisse en pointillés. Le pre
 
 ## Voir aussi
 
-- [`background-clip`](/fr/docs/Web/CSS/Reference/Properties/background-clip)
+- La propriété {{CSSxRef("background-clip")}}

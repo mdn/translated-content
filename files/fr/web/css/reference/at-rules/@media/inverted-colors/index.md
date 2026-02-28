@@ -68,7 +68,7 @@ p {
 
 #### Résultat
 
-{{EmbedLiveSample("appliquer_des_styles_si_une_inversion_des_couleurs_est_détectée")}}
+{{EmbedLiveSample("Appliquer des styles si une inversion des couleurs est détectée")}}
 
 ## Spécifications
 
@@ -78,7 +78,7 @@ p {
 
 {{Compat}}
 
-## See also
+## Voir aussi
 
 - La règle {{CSSxRef("@media")}}
 - Le module des [requêtes média CSS](/fr/docs/Web/CSS/Guides/Media_queries)

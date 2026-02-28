@@ -1,12 +1,11 @@
 ---
 title: column-count
 slug: Web/CSS/Reference/Properties/column-count
-original_slug: Web/CSS/column-count
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}
-
-La propriété **`column-count`** décrit le nombre de colonnes d'un élément lorsqu'on utilise une disposition en colonnes.
+La propriété [CSS](/fr/docs/Web/CSS) **`column-count`** divise le contenu d'un élément en le répartissant dans le nombre de colonnes à définir.
 
 {{InteractiveExample("CSS Demo: column-count")}}
 
@@ -30,11 +29,12 @@ column-width: 8rem;
 ```html interactive-example
 <section id="default-example">
   <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+    Londres. Le trimestre de Michaelmas venait de se terminer, et le lord
+    chancelier siégeait dans la salle de Lincoln's Inn. Un novembre implacable.
+    Tant de boue dans les rues comme si les eaux venaient tout juste de se
+    retirer de la surface de la terre, et il ne serait pas étonnant de
+    rencontrer un Megalosaurus, quarante pieds de long environ, se dandinant
+    comme un lézard éléphantesque en montant Holborn Hill.
   </p>
 </section>
 ```
@@ -52,22 +52,23 @@ column-width: 8rem;
 /* Valeurs avec un mot-clé */
 column-count: auto;
 
-/* Valeurs numériques */
-/* Type <number> */
+/* Valeurs de type <number> */
 column-count: 3;
 
 /* Valeurs globales */
 column-count: inherit;
 column-count: initial;
+column-count: revert;
+column-count: revert-layer;
 column-count: unset;
 ```
 
 ### Valeurs
 
 - `auto`
-  - : Un mot-clé qui indique que le nombre de colonnes doit être déterminé à partir d'autres propriétés CSS (par exemple à partir de {{cssxref("column-width")}}).
-- `<number>`
-  - : Un nombre (type {{cssxref("&lt;integer&gt;")}}) strictement positif qui décrit le nombre idéal de colonnes avec lequel répartir le contenu de l'élément. Si la valeur de {{cssxref("column-width")}} n'est pas `auto`, cette propriété indique simplement le nombre maximal de colonnes autorisé.
+  - : Le nombre de colonnes est déterminé par d'autres propriétés CSS, telles que {{CSSxRef("column-width")}}.
+- {{CSSxRef("&lt;integer&gt;")}}
+  - : Est un entier ({{CSSxRef("&lt;integer&gt;")}}) strictement positif décrivant le nombre idéal de colonnes dans lesquelles le contenu de l'élément est réparti. Si la largeur de colonne ({{CSSxRef("column-width")}}) est également définie sur une valeur qui n'est pas `auto`, elle indique simplement le nombre maximal de colonnes autorisé.
 
 ## Définition formelle
 
@@ -79,31 +80,29 @@ column-count: unset;
 
 ## Exemples
 
-### CSS
+### Diviser un paragraphe en trois colonnes
+
+#### HTML
+
+```html
+<p class="boite-de-contenu">
+  Il s'agit d'un bloc de texte réparti en trois colonnes grâce à la propriété
+  CSS <code>column-count</code>. Le texte est réparti également entre les
+  colonnes.
+</p>
+```
+
+#### CSS
 
 ```css
-.exemple {
-  border: 10px solid #000000;
+.boite-de-contenu {
   column-count: 3;
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<p class="exemple">
-  « Mais alors, » pensa Alice, « ne serai-je donc jamais plus vieille que je ne
-  le suis maintenant ? D’un côté cela aura ses avantages, ne jamais être une
-  vieille femme. Mais alors avoir toujours des leçons à apprendre ! Oh, je
-  n’aimerais pas cela du tout. » « Oh ! Alice, petite folle, » se répondit-elle.
-  « Comment pourriez-vous apprendre des leçons ici ? Il y a à peine de la place
-  pour vous, et il n’y en a pas du tout pour vos livres de leçons. »
-</p>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples","800","300")}}
+{{EmbedLiveSample("Exemples", "auto", 120)}}
 
 ## Spécifications
 
@@ -115,5 +114,7 @@ column-count: unset;
 
 ## Voir aussi
 
-- [Apprendre - la disposition multi-colonnes](/fr/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
+- La propriété {{CSSxRef("column-width")}} et raccourcie {{CSSxRef("columns")}}
+- Les propriétés {{CSSxRef("column-rule-color")}}, {{CSSxRef("column-rule-style")}}, {{CSSxRef("column-rule-width")}} et raccourcie {{CSSxRef("column-rule")}}
+- [Apprendre&nbsp;: La disposition multi-colonnes](/fr/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
 - [Les concepts de bases pour la disposition multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout/Basic_concepts)

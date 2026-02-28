@@ -1,9 +1,8 @@
 ---
 title: <system-color>
 slug: Web/CSS/Reference/Values/system-color
-original_slug: Web/CSS/system-color
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`<system-color>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、ウェブページの様々な部分に通常使用する既定の色を反映します。
@@ -20,69 +19,119 @@ l10n:
 
 これらのキーワードは大文字と小文字を区別しませんが、ここでは読み取り可能なように大文字と小文字を混合して掲載しています。
 
-- `AccentColor`
-  - : アクセント付きユーザーインターフェイスコントロールの背景
-- `AccentColorText`
-  - : アクセント付きユーザーインターフェイスコントロールのテキスト
-- `ActiveText`
-  - : アクティブリンクのテキスト
-- `ButtonBorder`
-  - : コントロールのベース境界色
-- `ButtonFace`
-  - : コントロールの背景色
-- `ButtonText`
-  - : コントロールのテキスト色
-- `Canvas`
-  - : アプリケーションのコンテンツや文書の背景
-- `CanvasText`
-  - : アプリケーションのコンテンツや文書のテキスト色
-- `Field`
-  - : 入力フィールドの背景
-- `FieldText`
-  - : 入力フィールドのテキスト
-- `GrayText`
-  - : 無効なアイテムの文字色（無効なコントロールなど）
-- `Highlight`
-  - : 選択項目の背景
-- `HighlightText`
-  - : 選択項目のテキスト色
-- `LinkText`
-  - : 非アクティブ、未訪問リンクのテキスト
-- `Mark`
-  - : 特別にマークされたテキストの背景（HTML の `mark` 要素など）。
-- `MarkText`
-  - : 特別にマークされたテキスト（HTML の `mark` 要素など）。
-- `VisitedText`
-  - : 訪問済みリンクのテキスト
+設定に応じて、表に表示されるサンプルカラーは変化する場合があります。また、さまざまなブラウザー、オペレーティングシステム、システム設定でこのページを表示すると、違いを調べることができます。
+
+<table>
+  <thead>
+    <tr>
+      <th>キーワード</th>
+      <th>説明</th>
+      <th>サンプル</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>AccentColor</code></td>
+      <td>アクセント付きユーザーインターフェイスコントロールの背景です。</td>
+      <td style="background-color: AccentColor;"></td>
+    </tr>
+    <tr>
+      <td><code>AccentColorText</code></td>
+      <td>アクセント付きユーザーインターフェイスコントロールのテキストです。</td>
+      <td style="background-color: AccentColorText;"></td>
+    </tr>
+    <tr>
+      <td><code>ActiveText</code></td>
+      <td>アクティブリンクのテキストです。</td>
+      <td style="background-color: ActiveText;"></td>
+    </tr>
+    <tr>
+      <td><code>ButtonBorder</code></td>
+      <td>コントロールのベース境界色です。</td>
+      <td style="background-color: ButtonBorder;"></td>
+    </tr>
+    <tr>
+      <td><code>ButtonFace</code></td>
+      <td>コントロールの背景色です。</td>
+      <td style="background-color: ButtonFace;"></td>
+    </tr>
+    <tr>
+      <td><code>ButtonText</code></td>
+      <td>コントロールのテキスト色です。</td>
+      <td style="background-color: ButtonText;"></td>
+    </tr>
+    <tr>
+      <td><code>Canvas</code></td>
+      <td>アプリケーションのコンテンツや文書の背景です。</td>
+      <td style="background-color: Canvas;"></td>
+    </tr>
+    <tr>
+      <td><code>CanvasText</code></td>
+      <td>アプリケーションのコンテンツや文書のテキスト色です。</td>
+      <td style="background-color: CanvasText;"></td>
+    </tr>
+    <tr>
+      <td><code>Field</code></td>
+      <td>入力フィールドの背景です。</td>
+      <td style="background-color: Field;"></td>
+    </tr>
+    <tr>
+      <td><code>FieldText</code></td>
+      <td>入力フィールドのテキストです。</td>
+      <td style="background-color: FieldText;"></td>
+    </tr>
+    <tr>
+      <td><code>GrayText</code></td>
+      <td>無効なアイテム（無効なコントロールなど）の文字色です。</td>
+      <td style="background-color: GrayText;"></td>
+    </tr>
+    <tr>
+      <td><code>Highlight</code></td>
+      <td>選択中のアイテムの背景です。</td>
+      <td style="background-color: Highlight;"></td>
+    </tr>
+    <tr>
+      <td><code>HighlightText</code></td>
+      <td>選択中のアイテムのテキスト色です。</td>
+      <td style="background-color: HighlightText;"></td>
+    </tr>
+    <tr>
+      <td><code>LinkText</code></td>
+      <td>非アクティブ、未訪問リンクのテキストです。</td>
+      <td style="background-color: LinkText;"></td>
+    </tr>
+    <tr>
+      <td><code>Mark</code></td>
+      <td>特別にマークされたテキストの背景（HTML の <code>mark</code> 要素など）です。</td>
+      <td style="background-color: Mark;"></td>
+    </tr>
+    <tr>
+      <td><code>MarkText</code></td>
+      <td>特別にマークされたテキスト（HTML の <code>mark</code> 要素など）です。</td>
+      <td style="background-color: MarkText;"></td>
+    </tr>
+    <tr>
+      <td><code>SelectedItem</code></td>
+      <td>選択されたアイテム（選択されたチェックボックスなど）の背景です。</td>
+      <td style="background-color: SelectedItem;"></td>
+    </tr>
+    <tr>
+      <td><code>SelectedItemText</code></td>
+      <td>選択されたアイテムのテキストです。</td>
+      <td style="background-color: SelectedItemText;"></td>
+    </tr>
+    <tr>
+      <td><code>VisitedText</code></td>
+      <td>訪問済みリンクのテキストです。</td>
+      <td style="background-color: VisitedText;"></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 非推奨のシステム色キーワード
 
-以下のキーワードは、以前のバージョンの CSS カラーモジュールで定義されていました。これらを公開ウェブページで使用することは非推奨です。
+以下のキーワードは、以前のバージョンの CSS カラーモジュールで定義されていました。これらを公開ウェブページで使用することは非推奨になりました。
 
-- `ActiveBorder` {{deprecated_inline}}
-  - : アクティブウィンドウの境界線。
-- `ActiveCaption` {{deprecated_inline}}
-  - : アクティブウィンドウのキャプション。前景色としては `CaptionText` を使用してください。
-- `AppWorkspace` {{deprecated_inline}}
-  - : 複数文書インターフェイスの背景色。
-- `Background` {{deprecated_inline}}
-  - : デスクトップの背景。
-- `ButtonHighlight` {{deprecated_inline}}
-  - : 境界線のレイヤーによって立体的に現れる 3D 要素の、光源に面する境界線の色。
-- `ButtonShadow` {{deprecated_inline}}
-  - : 境界線のレイヤーによって立体的に現れる 3D 要素の、光源から離れた境界線の色。
-- `CaptionText` {{deprecated_inline}}
-  - : キャプション、サイズボックス、スクロールバーの矢印ボックスのテキスト。 `ActiveCaption` の背景色と一緒に使用してください。
-- `InactiveBorder` {{deprecated_inline}}
-  - : 非アクティブウィンドウの境界線。
-- `InactiveCaption` {{deprecated_inline}}
-  - : 非アクティブウィンドウのキャプション。 `InactiveCaptionText` の前景色と一緒に使用してください。
-- `InactiveCaptionText` {{deprecated_inline}}
-  - : 非アクティブキャプションのテキストの色。 `InactiveCaption` の背景色と一緒に使用してください。
-- `InfoBackground` {{deprecated_inline}}
-  - : ツールチップコントロールの背景色。 `InfoText` の前景色と一緒に使用してください。
-- `InfoText` {{deprecated_inline}}
-  - : ツールチップコントロールの文字色。 `InfoBackground` の背景色と一緒に使用してください。
 - `Menu` {{deprecated_inline}}
   - : メニューの背景。 `MenuText` または `-moz-MenuBarText` の前景色と一緒に使用してください。
 - `MenuText` {{deprecated_inline}}
@@ -105,6 +154,157 @@ l10n:
   - : ウィンドウの枠です。
 - `WindowText` {{deprecated_inline}}
   - : ウィンドウ内のテキストです。ウィンドウの背景色 `Window` と共に使用してください。
+
+<table>
+  <thead>
+    <tr>
+      <th>キーワード</th>
+      <th>説明</th>
+      <th>置き換え</th>
+      <th>サンプル</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ActiveBorder</code></td>
+      <td>アクティブウィンドウの境界線。</td>
+      <td><code>ButtonBorder</code></td>
+      <td style="background-color: ActiveBorder;"></td>
+    </tr>
+    <tr>
+      <td><code>ActiveCaption</code></td>
+      <td>アクティブウィンドウのキャプション。前景色としては <code>CaptionText</code> を使用してください。</td>
+      <td><code>Canvas</code></td>
+      <td style="background-color: ActiveCaption;"></td>
+    </tr>
+    <tr>
+      <td><code>AppWorkspace</code></td>
+      <td>複数文書インターフェイスの背景色。</td>
+      <td><code>Canvas</code></td>
+      <td style="background-color: AppWorkspace;"></td>
+    </tr>
+    <tr>
+      <td><code>Background</code></td>
+      <td>デスクトップの背景。</td>
+      <td><code>Canvas</code></td>
+      <td style="background-color: Background;"></td>
+    </tr>
+    <tr>
+      <td><code>ButtonHighlight</code></td>
+      <td>境界線のレイヤーによって立体的に現れる 3D 要素の、光源に面する境界線の色。</td>
+      <td><code>ButtonFace</code></td>
+      <td style="background-color: ButtonHighlight;"></td>
+    </tr>
+    <tr>
+      <td><code>ButtonShadow</code></td>
+      <td>境界線のレイヤーによって立体的に現れる 3D 要素の、光源から離れた境界線の色。</td>
+      <td><code>ButtonFace</code></td>
+      <td style="background-color: ButtonShadow;"></td>
+    </tr>
+    <tr>
+      <td><code>CaptionText</code></td>
+      <td>キャプション、サイズボックス、スクロールバーの矢印ボックスのテキスト。 <code>ActiveCaption</code> の背景色と一緒に使用してください。</td>
+      <td><code>CanvasText</code></td>
+      <td style="background-color: CaptionText;"></td>
+    </tr>
+    <tr>
+      <td><code>InactiveBorder</code></td>
+      <td>非アクティブウィンドウの境界線。</td>
+      <td><code>ButtonBorder</code></td>
+      <td style="background-color: InactiveBorder;"></td>
+    </tr>
+    <tr>
+      <td><code>InactiveCaption</code></td>
+      <td>非アクティブウィンドウのキャプション。<code>InactiveCaptionText</code> の前景色と一緒に使用してください。</td>
+      <td><code>Canvas</code></td>
+      <td style="background-color: InactiveCaption;"></td>
+    </tr>
+    <tr>
+      <td><code>InactiveCaptionText</code></td>
+      <td>非アクティブキャプションのテキストの色。<code>InactiveCaption</code> の背景色と一緒に使用してください。</td>
+      <td><code>GrayText</code></td>
+      <td style="background-color: InactiveCaptionText;"></td>
+    </tr>
+    <tr>
+      <td><code>InfoBackground</code></td>
+      <td>ツールチップコントロールの背景色。<code>InfoText</code> の前景色と一緒に使用してください。</td>
+      <td><code>Canvas</code></td>
+      <td style="background-color: InfoBackground;"></td>
+    </tr>
+    <tr>
+      <td><code>InfoText</code></td>
+      <td>ツールチップコントロールの文字色。<code>InfoBackground</code> の背景色と一緒に使用してください。</td>
+      <td><code>CanvasText</code></td>
+      <td style="background-color: InfoText;"></td>
+    </tr>
+    <tr>
+      <td><code>Menu</code></td>
+      <td>メニューの背景。<code>MenuText</code> または <code>-moz-MenuBarText</code> の前景色と一緒に使用してください。</td>
+      <td><code>Canvas</code></td>
+      <td style="background-color: Menu;"></td>
+    </tr>
+    <tr>
+      <td><code>MenuText</code></td>
+      <td>メニューのテキスト。<code>Menu</code> の背景色と一緒に使用してください。</td>
+      <td><code>CanvasText</code></td>
+      <td style="background-color: MenuText;"></td>
+    </tr>
+    <tr>
+      <td><code>Scrollbar</code></td>
+      <td>スクロールバーの背景色です。</td>
+      <td><code>Canvas</code></td>
+      <td style="background-color: Scrollbar;"></td>
+    </tr>
+    <tr>
+      <td><code>ThreeDDarkShadow</code></td>
+      <td>境界線が同心円状に 2 層になっているために立体的に現れる 3D 要素の、光源から離れた 2 つの境界線のうち、暗い方（一般に外側）の色。</td>
+      <td><code>ButtonBorder</code></td>
+      <td style="background-color: ThreeDDarkShadow;"></td>
+    </tr>
+    <tr>
+      <td><code>ThreeDFace</code></td>
+      <td>境界線が同心円状に 2 層になっているために立体的に現れる 3D 要素の表面の背景色。<code>ButtonText</code> の前景色と一緒に使用してください。</td>
+      <td><code>ButtonFace</code></td>
+      <td style="background-color: ThreeDFace;"></td>
+    </tr>
+    <tr>
+      <td><code>ThreeDHighlight</code></td>
+      <td>境界線が同心円状に 2 層になっているために立体的に現れる 3D 要素の、光源に面する 2 つの境界線のうち、明るい方（一般に外側）の色。</td>
+      <td><code>ButtonBorder</code></td>
+      <td style="background-color: ThreeDHighlight;"></td>
+    </tr>
+    <tr>
+      <td><code>ThreeDLightShadow</code></td>
+      <td>境界線が同心円状に 2 層になっているために立体的に現れる 3D 要素の、光源に面する 2 つの境界線のうち暗い方（一般に内側）の色。</td>
+      <td><code>ButtonBorder</code></td>
+      <td style="background-color: ThreeDLightShadow;"></td>
+    </tr>
+    <tr>
+      <td><code>ThreeDShadow</code></td>
+      <td>境界線が同心円状に 2 層になっているために立体的に現れる 3D 要素の、光源から離れた 2 つの境界線のうち、明るい方（一般に内側）の色。</td>
+      <td><code>ButtonBorder</code></td>
+      <td style="background-color: ThreeDShadow;"></td>
+    </tr>
+    <tr>
+      <td><code>Window</code></td>
+      <td>ウィンドウの背景です。前景色 <code>WindowText</code> と一緒に使用してください。</td>
+      <td><code>Canvas</code></td>
+      <td style="background-color: Window;"></td>
+    </tr>
+    <tr>
+      <td><code>WindowFrame</code></td>
+      <td>ウィンドウの枠です。</td>
+      <td><code>ButtonBorder</code></td>
+      <td style="background-color: WindowFrame;"></td>
+    </tr>
+    <tr>
+      <td><code>WindowText</code></td>
+      <td>ウィンドウ内のテキストです。背景色 <code>Window</code> と共に使用してください。</td>
+      <td><code>CanvasText</code></td>
+      <td style="background-color: WindowText;"></td>
+    </tr>
+  </tbody>
+</table>
 
 ## 例
 
@@ -152,4 +352,4 @@ l10n:
 
 ## 関連情報
 
-- [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value): これらのキーワードが所属する先のデータ型
+- {{cssxref("&lt;color&gt;")}}: これらのキーワードが所属する先のデータ型

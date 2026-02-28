@@ -65,7 +65,7 @@ self.addEventListener("push", (event) => {
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
 - [プッシュ API](/ja/docs/Web/API/Push_API)
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)

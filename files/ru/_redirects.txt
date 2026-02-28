@@ -692,6 +692,7 @@
 /ru/docs/Web/API/ParentNode/childElementCount	/ru/docs/Web/API/Element/childElementCount
 /ru/docs/Web/API/PositionError	/ru/docs/Web/API/GeolocationPositionError
 /ru/docs/Web/API/RandomSource/getRandomValues	/ru/docs/Web/API/Crypto/getRandomValues
+/ru/docs/Web/API/Range/collapsed	/ru/docs/Web/API/AbstractRange/collapsed
 /ru/docs/Web/API/ServiceWorker/onstatechange	/ru/docs/Web/API/ServiceWorker/statechange_event
 /ru/docs/Web/API/URL/createObjectURL	/ru/docs/Web/API/URL/createObjectURL_static
 /ru/docs/Web/API/USB/onconnect	/ru/docs/Web/API/USB/connect_event

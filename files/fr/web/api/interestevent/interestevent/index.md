@@ -3,10 +3,10 @@ title: "InterestEvent : constructeur InterestEvent()"
 short-title: InterestEvent()
 slug: Web/API/InterestEvent/InterestEvent
 l10n:
-  sourceCommit: e00212a2a707a57b49b58b37a6a6c978aaef2bbd
+  sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
 ---
 
-{{APIRef("Popover API")}}
+{{APIRef("Popover API")}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 Le constructeur **`InterestEvent()`** crée un nouvel objet {{DOMxRef("InterestEvent")}}.
 

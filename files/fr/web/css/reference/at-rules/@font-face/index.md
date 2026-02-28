@@ -22,31 +22,31 @@ La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) *
 
 ### Descripteurs
 
-- {{cssxref("@font-face/ascent-override", "ascent-override")}}
+- {{CSSxRef("@font-face/ascent-override", "ascent-override")}}
   - : Définit la hauteur d'ascendante pour la police.
-- {{cssxref("@font-face/descent-override", "descent-override")}}
+- {{CSSxRef("@font-face/descent-override", "descent-override")}}
   - : Définit la hauteur de descendante pour la police.
-- {{cssxref("@font-face/font-display", "font-display")}}
+- {{CSSxRef("@font-face/font-display", "font-display")}}
   - : Ce descripteur détermine la façon dont une police est affichée selon qu'elle a été téléchargée et/ou si elle est prête à être utilisée.
-- {{cssxref("@font-face/font-family", "font-family")}}
+- {{CSSxRef("@font-face/font-family", "font-family")}}
   - : Ce descripteur définit un nom qui sera utilisé pour désigner cette police dans les différentes règles associées.
-- {{cssxref("@font-face/font-stretch", "font-stretch")}}
+- {{CSSxRef("@font-face/font-stretch", "font-stretch")}}
   - : Une valeur [`font-stretch`](/fr/docs/Web/CSS/Reference/Properties/font-stretch). Il est possible d'utiliser deux valeurs afin d'indiquer l'intervalle pris en charge par une police, par exemple&nbsp;: `font-stretch: 50% 200%;`.
-- {{cssxref("@font-face/font-style", "font-style")}}
+- {{CSSxRef("@font-face/font-style", "font-style")}}
   - : Une valeur [`font-style`](/fr/docs/Web/CSS/Reference/Properties/font-style). Il est possible d'utiliser deux valeurs afin d'indiquer l'intervalle pris en charge par une police, par exemple&nbsp;: `font-style: oblique 20deg 50deg;`.
-- {{cssxref("@font-face/font-weight", "font-weight")}}
+- {{CSSxRef("@font-face/font-weight", "font-weight")}}
   - : Une valeur [`font-weight`](/fr/docs/Web/CSS/Reference/Properties/font-weight). Il est possible d'utiliser deux valeurs afin d'indiquer l'intervalle pris en charge par une police, par exemple&nbsp;: `font-weight: 100 400;`.
-- {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}}
+- {{CSSxRef("@font-face/font-feature-settings", "font-feature-settings")}}
   - : Ce descripteur permet d'avoir un contrôle avancé sur les fonctionnalités typographiques relatives aux polices OpenType.
-- {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
+- {{CSSxRef("@font-face/font-variation-settings", "font-variation-settings")}}
   - : Ce descripteur permet d'avoir un contrôle de bas niveau sur les variations des polices OpenType et TrueType en indiquant les noms des axes et des fonctionnalités à faire varier.
-- {{cssxref("@font-face/line-gap-override", "line-gap-override")}}
+- {{CSSxRef("@font-face/line-gap-override", "line-gap-override")}}
   - : Définit la métrique pour l'interlignage de la police.
-- {{cssxref("@font-face/size-adjust", "size-adjust")}}
+- {{CSSxRef("@font-face/size-adjust", "size-adjust")}}
   - : Définit un multiplicateur pour les contours des glyphes et les métriques associées à cette police. Cela permet de simplifier l'harmonisation de différentes polices lorsqu'elles sont affichées avec le même corps.
-- {{cssxref("@font-face/src", "src")}}
+- {{CSSxRef("@font-face/src", "src")}}
   - : Indique les ressources à utiliser pour la police. La valeur est une liste de valeurs indiquant les ressources à tenter les unes après les autres. Chaque ressource est indiquée avec `url()` ou `local()`. C'est la première ressource de la liste qui est chargée correctement qui est utilisée. Les éléments situés après sont ignorés. Si plusieurs descripteurs `src` sont définis, seule la dernière règle déclarée capable de charger une ressource est appliquée.
-- {{cssxref("@font-face/unicode-range", "unicode-range")}}
+- {{CSSxRef("@font-face/unicode-range", "unicode-range")}}
   - : L'intervalle des points de code Unicode pour lesquels la règle `@font-face` s'applique.
 
 ## Description
@@ -92,7 +92,7 @@ La règle @ `@font-face` peut être utilisé au niveau le plus haut d'une feuill
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -123,7 +123,7 @@ body {
 
 #### Résultat
 
-{{EmbedLiveSample("web-font-example", "", "100px")}}
+{{EmbedLiveSample("web-font-example", "", 100)}}
 
 ### Indiquer des polices alternatives locales
 
@@ -149,7 +149,7 @@ Dans cet exemple, c'est l'exemplaire local de la police Helvetica Neue Bold qui 
 
 ## Voir aussi
 
-- [À propos de WOFF](/fr/docs/Web/CSS/CSS_fonts/WOFF)
+- [À propos de WOFF](/fr/docs/Web/CSS/Guides/Fonts/WOFF)
 - [Générateur `@font-face` de FontSquirrel <sup>(angl.)</sup>](https://www.fontsquirrel.com/tools/webfont-generator)
 - Le billet de blog [De belles polices avec @font-face <sup>(angl.)</sup>](https://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/) de Mozilla (2009)
 - [<i lang="en">Font Library</i> <sup>(angl.)</sup>](https://fontlibrary.org/), un site cataloguant des polices

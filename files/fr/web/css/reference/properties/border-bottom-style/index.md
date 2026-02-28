@@ -1,14 +1,16 @@
 ---
 title: border-bottom-style
 slug: Web/CSS/Reference/Properties/border-bottom-style
-original_slug: Web/CSS/border-bottom-style
+l10n:
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`border-bottom-style`** définit le style de ligne de la bordure ({{CSSxRef("border")}}) inférieure d'un élément.
 
-La propriété **`border-bottom-style`** définit le style de ligne utilisé pour mettre en forme la bordure en bas d'une boîte.
+> [!NOTE]
+> La spécification ne définit pas la façon dont les bordures de styles différents se rejoignent dans les coins.
 
-{{InteractiveExample("CSS Demo: border-bottom-style")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: border-bottom-style")}}
 
 ```css interactive-example-choice
 border-bottom-style: none;
@@ -37,15 +39,15 @@ border-bottom-style: inset;
 ```html interactive-example
 <section id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    Ceci est une boîte avec une bordure autour.
   </div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #000;
+  background-color: #eeeeee;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;
@@ -53,12 +55,9 @@ border-bottom-style: inset;
 }
 
 body {
-  background-color: #fff;
+  background-color: white;
 }
 ```
-
-> [!NOTE]
-> La spécification ne définit pas la façon dont les bordures de différents styles se rejoignent dans les coins.
 
 ## Syntaxe
 
@@ -79,10 +78,11 @@ border-bottom-style: outset;
 border-bottom-style: inherit;
 border-bottom-style: initial;
 border-bottom-style: revert;
+border-bottom-style: revert-layer;
 border-bottom-style: unset;
 ```
 
-La propriété `border-bottom-style` se définit avec l'un des mots-clés utilisés par la propriété [`border-style`](/fr/docs/Web/CSS/Reference/Properties/border-style).
+La propriété `border-bottom-style` est définie avec un seul mot-clé de type {{CSSxRef("line-style")}}.
 
 ## Définition formelle
 
@@ -90,30 +90,34 @@ La propriété `border-bottom-style` se définit avec l'un des mots-clés utilis
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
+
+### Démonstration de tous les styles de bordure
 
 ### HTML
 
 ```html
 <table>
-  <tr>
-    <td class="b1">none</td>
-    <td class="b2">hidden</td>
-    <td class="b3">petits points</td>
-    <td class="b4">tirets</td>
-  </tr>
-  <tr>
-    <td class="b5">solid</td>
-    <td class="b6">double</td>
-    <td class="b7">groove</td>
-    <td class="b8">ridge</td>
-  </tr>
-  <tr>
-    <td class="b9">inset</td>
-    <td class="b10">outset</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td class="b1">none</td>
+      <td class="b2">hidden</td>
+      <td class="b3">dotted</td>
+      <td class="b4">dashed</td>
+    </tr>
+    <tr>
+      <td class="b5">solid</td>
+      <td class="b6">double</td>
+      <td class="b7">groove</td>
+      <td class="b8">ridge</td>
+    </tr>
+    <tr>
+      <td class="b9">inset</td>
+      <td class="b10">outset</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -165,7 +169,7 @@ td {
 
 ### Résultat
 
-{{EmbedLiveSample('', 300, 200)}}
+{{EmbedLiveSample("Démonstration de tous les styles de bordure", 300, 200)}}
 
 ## Spécifications
 
@@ -177,13 +181,5 @@ td {
 
 ## Voir aussi
 
-- Les autres propriétés liées au style des bordures&nbsp;:
-  - [`border-left-style`](/fr/docs/Web/CSS/Reference/Properties/border-left-style)
-  - [`border-right-style`](/fr/docs/Web/CSS/Reference/Properties/border-right-style)
-  - [`border-top-style`](/fr/docs/Web/CSS/Reference/Properties/border-top-style)
-  - [`border-style`](/fr/docs/Web/CSS/Reference/Properties/border-style).
-
-- Les autres propriétés liées à la bordure basse&nbsp;:
-  - [`border-bottom`](/fr/docs/Web/CSS/Reference/Properties/border-bottom)
-  - [`border-bottom-color`](/fr/docs/Web/CSS/Reference/Properties/border-bottom-color)
-  - [`border-bottom-width`](/fr/docs/Web/CSS/Reference/Properties/border-bottom-width).
+- Les autres propriétés liées au style des bordures&nbsp;: {{CSSxRef("border-left-style")}}, {{CSSxRef("border-right-style")}}, {{CSSxRef("border-top-style")}} et {{CSSxRef("border-style")}}.
+- Les autres propriétés liées à la bordure basse&nbsp;: {{CSSxRef("border-bottom")}}, {{CSSxRef("border-bottom-color")}} et {{CSSxRef("border-bottom-width")}}.

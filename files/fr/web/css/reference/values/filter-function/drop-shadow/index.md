@@ -157,5 +157,5 @@ En l'absence de valeur `<color>` dans la fonction `drop-shadow()` du premier blo
 - La propriété {{CSSxRef("backdrop-filter")}}
 - La propriété {{CSSxRef("box-shadow")}}
 - La propriété {{CSSxRef("text-shadow")}}
-- [Introduction aux ombres portées sur le texte](/fr/docs/Web/CSS/CSS_text_decoration/Text_shadows)
+- [Introduction aux ombres portées sur le texte](/fr/docs/Web/CSS/Guides/Text_decoration/Text_shadows)
 - Le module des [effets de filtre CSS](/fr/docs/Web/CSS/Guides/Filter_effects)

@@ -3,7 +3,7 @@ title: HTTP リクエストメソッド
 short-title: リクエストメソッド
 slug: Web/HTTP/Reference/Methods
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 HTTP では、一連の**リクエストメソッド**を定義しています。これは、リクエストの目的と、リクエストが成功した場合に期待される結果を示しています。

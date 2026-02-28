@@ -1,51 +1,50 @@
 ---
 title: 区块格式化上下文
 slug: Web/CSS/Guides/Display/Block_formatting_context
+l10n:
+  sourceCommit: 81f8fcd666952c1782653a3675347c392cc997ca
 ---
 
 **区块格式化上下文**（Block Formatting Context，BFC）是 Web 页面的可视 CSS 渲染的一部分，是块级盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。
 
-下列方式会创建块格式化上下文：
+下列方式会创建区块格式化上下文：
 
 - 文档的根元素（`<html>`）。
 - 浮动元素（即 {{ cssxref("float") }} 值不为 `none` 的元素）。
 - 绝对定位元素（{{ cssxref("position") }} 值为 `absolute` 或 `fixed` 的元素）。
-- 行内块元素（{{ cssxref("display") }} 值为 `inline-block` 的元素）。
-- 表格单元格（{{ cssxref("display") }} 值为 `table-cell`，HTML 表格单元格默认值）。
-- 表格标题（{{ cssxref("display") }} 值为 `table-caption`，HTML 表格标题默认值）。
-- 匿名表格单元格元素（{{ cssxref("display") }} 值为 `table`（HTML 表格默认值）、`table-row`（表格行默认值）、`table-row-group`（表格体默认值）、`table-header-group`（表格头部默认值）、`table-footer-group`（表格尾部默认值）或 `inline-table`）。
-- {{ cssxref("overflow") }} 值不为 `visible` 或 `clip` 的块级元素。
-- {{ cssxref("display") }} 值为 `flow-root` 的元素。
-- {{ cssxref("contain") }} 值为 `layout`、`content` 或 `paint` 的元素。
-- 弹性元素（{{ cssxref("display") }} 值为 `flex` 或 `inline-flex` 元素的直接子元素），如果它们本身既不是[弹性](/zh-CN/docs/Glossary/Flex_Container)、[网格](/zh-CN/docs/Glossary/Grid_Container)也不是[表格](/zh-CN/docs/Web/CSS/Guides/Table)容器。
-- 网格元素（{{ cssxref("display") }} 值为 `grid` 或 `inline-grid` 元素的直接子元素），如果它们本身既不是[弹性](/zh-CN/docs/Glossary/Flex_Container)、[网格](/zh-CN/docs/Glossary/Grid_Container)也不是[表格](/zh-CN/docs/Web/CSS/Guides/Table)容器。
+- 行内块元素（具有 {{cssxref("display", "display: inline-block")}} 的元素）。这是 {{htmlelement("button")}} 和按钮 {{htmlelement("input")}} 元素的默认显示类型。
+- 表格单元格（具有 {{cssxref("display", "display: table-cell")}}（HTML 表格单元格默认值）的元素）。
+- 表格标题（具有 {{cssxref("display", "display: table-caption")}}（HTML 表格标题默认值）的元素）。
+- 匿名表格单元格元素，由包括 {{cssxref("display", "display: table")}}（HTML 表格默认值）、`table-row`（表格行默认值）、`table-row-group`（表格体默认值）、`table-header-group`（表格头部默认值）、`table-footer-group`（表格尾部默认值）的元素隐式创建，或 `inline-table`。
+- 具有 {{cssxref("display", "display: flow-root")}} 的元素。
+- 弹性项（具有 {{cssxref("display", "display: flex")}} 或 `inline-flex` 元素的直接子元素），如果它们本身既不是[弹性](/zh-CN/docs/Glossary/Flex_Container)、[网格](/zh-CN/docs/Glossary/Grid_Container)也不是[表格](/zh-CN/docs/Web/CSS/Guides/Table)容器。
+- 网格项（具有 {{cssxref("display", "display: grid")}} 或 `inline-grid` 元素的直接子元素），如果它们本身既不是[弹性](/zh-CN/docs/Glossary/Flex_Container)、[网格](/zh-CN/docs/Glossary/Grid_Container)也不是[表格](/zh-CN/docs/Web/CSS/Guides/Table)容器。
+- {{ cssxref("overflow") }} 不为 `visible` 或 `paint` 的区块元素。
+- 具有 {{cssxref("contain", "contain: layout")}}、`content` 或 `paint` 的元素。
 - 多列容器（{{ cssxref("column-count") }} 或 {{ cssxref("column-width") }} 值不为 `auto`，且含有 `column-count: 1` 的元素）。
-- `column-span` 值为 `all` 的元素始终会创建一个新的格式化上下文，即使该元素没有包裹在一个多列容器中（[规范变更](https://github.com/w3c/csswg-drafts/commit/a8634b96900279916bd6c505fda88dda71d8ec51)、[Chrome bug](https://bugs.chromium.org/p/chromium/issues/detail?id=709362)）
+- 具有 {{cssxref("column-span", "column-span: all")}} 的元素，即使该元素没有包裹在一个多列容器中。
 
-格式化上下文影响布局，通常，我们会为定位和清除浮动创建新的 BFC，而不是更改布局，因为它将：
+格式化上下文会影响布局，因为建立新区块格式化上下文的元素将：
 
 - 包含内部浮动。
 - 排除外部浮动。
-- 阻止[外边距重叠](/zh-CN/docs/Web/CSS/Guides/Box_model/Margin_collapsing)。
+- 阻止[外边距折叠](/zh-CN/docs/Web/CSS/Guides/Box_model/Margin_collapsing)。
 
-> [!NOTE]
-> 弹性/网格容器（{{ cssxref("display") }}：flex/grid/inline-flex/inline-grid）建立新的弹性/网格格式化上下文，除布局之外，它与区块格式化上下文类似。弹性/网格容器中没有可用的浮动子级，但排除外部浮动和阻止外边距重叠仍然有效。
+弹性/网格容器（通过设置元素的 {{ cssxref("display") }} 为 `flex`、`grid`、`inline-flex` 和 `inline-grid`）建立新的弹性/网格格式化上下文。这些与块格式化上下文类似，但弹性布局或网格容器内部不存在可用的浮动子元素。不过，这些格式化上下文确实会排除外部浮动元素并抑制边距合并。
 
 ## 示例
 
+让我们看看其中几个例子，以便了解创建新区块格式化上下文的效果。
+
 ### 包含内部浮动
 
-BFC 使得让浮动内容和周围的内容等高。
-
-为了更好的理解 BFC，我们先看看下面这些内容。
-
-在下面的例子中，我们让 `<div>` 元素浮动，并给它应用 `border` 效果。`<div>` 里的内容现在已经在浮动元素周围浮动起来了。由于浮动的元素比它旁边的元素高，所以 `<div>` 的边框穿出了浮动。正如我们在[应用或脱离流式布局](/zh-CN/docs/Web/CSS/Guides/Display/In_flow_and_out_of_flow)指南中解释的，浮动脱离了文档流，所以 `<div>` 的 `background` 和 `border` 仅仅包含了内容，不包含浮动。
+在下面的示例中，我们有一个浮动内容，其高度与相邻内容相同。在应用了边框的 `<div>` 内包含一个浮动元素，而该 `<div>` 的内容则与浮动元素并排浮动。由于浮动内容的高度超过了相邻内容，`<div>`的边框现在穿过了浮动区域。正如我们在[应用或脱离流式布局](/zh-CN/docs/Web/CSS/Guides/Display/In_flow_and_out_of_flow)指南中解释的，浮动脱离了文档流，所以 `<div>` 的 `background` 和 `border` 仅仅包含了内容，不包含浮动。
 
 **使用 `overflow: auto`**
 
-在创建包含浮动元素的 BFC 时，通常的做法是设置父元素 `overflow: auto` 或者其他除默认的 `overflow: visible` 以外的值。`<div>` 元素变成布局中的小型布局，任何子元素都会被包含进去。
+设置 `overflow: auto` 或除初始值 `overflow: visible` 之外的其他值，会创建一个包含浮动元素的新块级内容区块（BFC）。此时我们的 `<div>` 便成为布局中的微型布局单元，所有子元素都将被包含其中。
 
-使用 `overflow` 创建新的 BFC，是因为 `overflow` 属性会告诉浏览器应该怎样处理溢出的内容。如果使用它仅仅为了创建 BFC，你可能会遇到不希望出现的滚动条或阴影，需要注意。另外，对于后续的开发者，可能不清楚当时为什么使用 `overflow`，所以最好添加一些注释来解释为什么这样做。
+使用 `overflow` 创建新 BFC 的问题在于：该属性本意是告知浏览器如何处理溢出内容。当纯粹为创建 BFC 而使用该属性时，有时会出现多余滚动条或阴影截断的情况。此外，此类代码对后续开发者可能难以理解——他们未必能明白为何要用 `overflow` 实现此目的。若使用 `overflow`，建议添加注释说明。
 
 **使用 `display: flow-root`**
 
@@ -153,17 +152,13 @@ section {
 
 {{EmbedLiveSample("排除外部浮动", 200, 330)}}
 
-与 `inline-block` 需要设置 `width: <percentage>` 不同的是，在示例中，我们不需要设置右侧 `div` 元素的宽度。
+### 防止外边距折叠
 
-请注意，弹性盒子是在现代 CSS 中实现多列布局的更有效的方法。
+你可以创建新的 BFC 避免两个相邻元素之间的[外边距折叠](/zh-CN/docs/Web/CSS/Guides/Box_model/Margin_collapsing)。
 
-### 防止外边距重叠
+#### 外边距折叠示例
 
-你可以创建新的 BFC 避免两个相邻元素之间的[外边距重叠](/zh-CN/docs/Web/CSS/Guides/Box_model/Margin_collapsing)。
-
-#### 外边距重叠示例
-
-在这个示例中我们有两个相邻的 {{HTMLElement("div")}} 元素，每个元素在垂直方向上含有 `10px` 的外边距。由于外边距重叠作用，垂直方向上它们之间将具有 10 像素的间距，而不是所期望的 20 像素。
+在这个示例中我们有两个相邻的 {{HTMLElement("div")}} 元素，每个元素在垂直方向上含有 `10px` 的外边距。由于外边距折叠作用，垂直方向上它们之间将具有 `10px` 的间距，而不是所期望的 `20px`。
 
 ```html
 <div class="blue"></div>
@@ -186,11 +181,11 @@ section {
 }
 ```
 
-{{EmbedLiveSample("外边距重叠示例", 120, 170)}}
+{{EmbedLiveSample("外边距折叠示例", 120, 170)}}
 
-#### 防止外边距重叠
+#### 防止外边距折叠
 
-在这个示例中，我们将第二个 `<div>` 包裹在另外一个 `<div>` 之中，以创建一个新的 BFC，防止外边距重叠。
+在这个示例中，我们将第二个 `<div>` 包裹在另外一个外部 `<div>` 之中，并在外部 `<div>` 中使用 `overflow: hidden` 创建一个新的 BFC。此新 BFC 可防止嵌套 `<div>` 的边距与外部 `<div>` 的边距发生折叠。
 
 ```html
 <div class="blue"></div>
@@ -220,7 +215,7 @@ section {
 }
 ```
 
-{{EmbedLiveSample("防止外边距重叠", 120, 170)}}
+{{EmbedLiveSample("防止外边距折叠_2", 120, 170)}}
 
 ## 规范
 
@@ -228,22 +223,13 @@ section {
 
 ## 参见
 
-- {{ cssxref("float") }}、{{ cssxref("clear") }}
-- CSS 重要概念：
-  - [CSS 语法](/zh-CN/docs/Web/CSS/Guides/Syntax/Introduction)
-  - [@ 规则](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules)
-  - [注释](/zh-CN/docs/Web/CSS/Guides/Syntax/Comments)
-  - [优先级](/zh-CN/docs/Web/CSS/Guides/Cascade/Specificity)
-  - [继承](/zh-CN/docs/Web/CSS/Guides/Cascade/Inheritance)
-  - [盒模型](/zh-CN/docs/Web/CSS/Guides/Box_model/Introduction)
-  - [布局模式](/zh-CN/docs/Glossary/Layout_mode)
-  - [视觉格式化模型](/zh-CN/docs/Web/CSS/Guides/Display/Visual_formatting_model)
-  - [外边距合并](/zh-CN/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
-  - 值
-    - [初始值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#初始值)
-    - [计算值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#计算值)
-    - [应用值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#应用值)
-    - [实际值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#实际值)
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
-  - [简写属性](/zh-CN/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
-  - {{glossary("Replaced elements", "可替换元素")}}
+- [CSS 语法](/zh-CN/docs/Web/CSS/Guides/Syntax/Introduction)
+- [优先级](/zh-CN/docs/Web/CSS/Guides/Cascade/Specificity)
+- [继承](/zh-CN/docs/Web/CSS/Guides/Cascade/Inheritance)
+- [盒模型](/zh-CN/docs/Web/CSS/Guides/Box_model/Introduction)
+- [布局模式](/zh-CN/docs/Glossary/Layout_mode)
+- [视觉格式化模型](/zh-CN/docs/Web/CSS/Guides/Display/Visual_formatting_model)
+- [外边距折叠](/zh-CN/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
+- [初始值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#初始值)、[计算值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#计算值)、[应用值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#应用值)和[实际值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#实际值)
+- [值定义语法](/zh-CN/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
+- {{glossary("Replaced elements", "可替换元素")}}

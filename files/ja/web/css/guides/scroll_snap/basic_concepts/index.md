@@ -2,9 +2,8 @@
 title: スクロールスナップの基本概念
 short-title: 基本概念
 slug: Web/CSS/Guides/Scroll_snap/Basic_concepts
-original_slug: Web/CSS/CSS_scroll_snap/Basic_concepts
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 81f8fcd666952c1782653a3675347c392cc997ca
 ---
 
 [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)モジュールにあるプロパティを使用すると、ユーザーが文書をスクロールする際に、スクロールが特定の位置にスナップする方法を定義することができます。
@@ -45,7 +44,7 @@ body {
 }
 
 .scroller {
-  border: 4px solid #333;
+  border: 4px solid #333333;
   width: 300px;
 }
 
@@ -55,7 +54,7 @@ body {
 }
 
 .scroller section:nth-child(odd) {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 ```
 
@@ -125,7 +124,7 @@ body {
 }
 
 .scroller {
-  border: 4px solid #333;
+  border: 4px solid #333333;
   width: 300px;
 }
 
@@ -135,7 +134,7 @@ body {
 }
 
 .scroller section:nth-child(odd) {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 ```
 
@@ -198,7 +197,7 @@ body {
 }
 
 .scroller {
-  border: 4px solid #333;
+  border: 4px solid #333333;
   width: 300px;
 }
 
@@ -208,7 +207,7 @@ body {
 }
 
 .scroller section:nth-child(odd) {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 ```
 
@@ -254,7 +253,7 @@ body {
 }
 
 .scroller {
-  border: 4px solid #333;
+  border: 4px solid #333333;
   width: 300px;
 }
 
@@ -264,7 +263,7 @@ body {
 }
 
 .scroller section:nth-child(odd) {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 ```
 
@@ -283,7 +282,7 @@ body {
 
 {{EmbedLiveSample("scroll-padding", "", "350px")}}
 
-これは、例えばナビゲーションバーなどの[固定](/ja/docs/Web/CSS/Reference/Properties/position#fixed_positioning)要素があり、スクロールしたコンテンツと重なってしまう場合に便利です。 `scroll-padding` を使用すると、下の例のように、コンテンツがスクロールしても `<h1>` が画面上に残るように、見出しのための空間を確保することができます。パディングがないと、スナップが発生したときに見出しがコンテンツの一部と重なってしまいます。
+これは、例えばナビゲーションバーなどの[固定](/ja/docs/Web/CSS/Reference/Properties/position#固定位置指定)要素があり、スクロールしたコンテンツと重なってしまう場合に便利です。 `scroll-padding` を使用すると、下の例のように、コンテンツがスクロールしても `<h1>` が画面上に残るように、見出しのための空間を確保することができます。パディングがないと、スナップが発生したときに見出しがコンテンツの一部と重なってしまいます。
 
 ```html hidden live-sample___scroll-padding-sticky
 <article class="scroller">
@@ -306,7 +305,7 @@ body {
 }
 
 .scroller {
-  border: 4px solid #333;
+  border: 4px solid #333333;
   width: 300px;
 }
 
@@ -316,7 +315,7 @@ body {
 }
 
 .scroller section:nth-child(odd) {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 ```
 
@@ -325,8 +324,8 @@ body {
   position: sticky;
   top: 0;
   min-height: 40px;
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
   margin: 0;
   padding: 0;
 }
@@ -374,7 +373,7 @@ body {
 }
 
 .scroller {
-  border: 4px solid #333;
+  border: 4px solid #333333;
   width: 300px;
 }
 
@@ -384,7 +383,7 @@ body {
 }
 
 .scroller section:nth-child(odd) {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 ```
 

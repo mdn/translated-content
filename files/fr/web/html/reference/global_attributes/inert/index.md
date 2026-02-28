@@ -1,39 +1,54 @@
 ---
-title: inert
+title: "Attribut HTML universel : inert"
+short-title: inert
 slug: Web/HTML/Reference/Global_attributes/inert
-original_slug: Web/HTML/Global_attributes/inert
 l10n:
-  sourceCommit: 25b12ef8da856416af63a9c443e13d8f0adbca0a
+  sourceCommit: 7c28cd21b705e7b7664d53b4d7822469ea8e6e15
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`inert`** est un attribut booléen qui indique que l'élément et tous ses descendants dans l'arbre plat deviennent _inertes_. L'attribut `inert` peut être ajouté à des sections de contenu qui ne doivent pas être interactives. Lorsqu'un élément est inerte, lui et tous ses descendants, y compris les éléments normalement interactifs comme les liens, boutons et contrôles de formulaire, sont désactivés car ils ne peuvent pas recevoir la sélection ni être cliqués. L'attribut `inert` peut aussi être ajouté à des éléments qui doivent être hors écran ou masqués. Un élément inerte, ainsi que ses descendants, est retiré de l'ordre de tabulation et de l'arbre d'accessibilité.
 
-[L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`inert`** est un attribut booléen indiquant au navigateur d'ignorer l'élément en termes d'interactivité. Avec l'attribut `inert`, tous les descendants de l'élément (comme les boîtes modales créées avec [`<dialog>`](/fr/docs/Web/HTML/Reference/Elements/dialog)) sont ignorés ainsi. L'attribut `inert` indique également qu'il faut ignorer les évènements déclenchés par l'utilisatrice ou l'utilisateur, que ce soit ceux liés au focus ou provenant d'outils d'assistance.
-
-`inert` aura les effets suivants&nbsp;:
-
-- Empêche le déclenchement de l'évènement [`click`](/fr/docs/Web/API/Element/click_event) lorsque la personne clique sur l'élément.
-- Empêche le déclenchement de l'évènement [`focus`](/fr/docs/Web/API/Element/focus_event) en empêchant que l'élément reçoive le focus.
-- Masque l'élément et son contenu des outils de l'assistance en le retirant de l'arbre d'accessibilité.
-
-```html
-<body inert>
-  <!-- contenu -->
-</body>
-```
-
-L'attribut `inert` peut être ajouté à des sections de contenu qui ne devraient pas être interactives. Lorsqu'un élément est inerte, ses descendants le sont également et les éléments normalement interactifs comme les liens, les boutons et les contrôles de formulaire sont désactivés, car ils ne peuvent pas recevoir de clic ou de focus.
-
-L'attribut `inert` peut également être placé sur des éléments masqués ou en dehors de l'écran. En effet, un tel élément (avec ses descendants) est retiré de la navigation au clavier et de l'arbre d'accessibilité.
+Les {{HTMLElement("dialog")}} modaux générés avec [`showModal()`](/fr/docs/Web/API/HTMLDialogElement/showModal) échappent à l'inertie, ce qui signifie qu'ils n'héritent pas de l'inertie de leurs ancêtres, mais peuvent être rendus inertes si l'attribut `inert` leur est explicitement appliqué. Aucun autre élément ne peut échapper à l'inertie.
 
 > [!NOTE]
-> Bien qu'`inert` soit un attribut universel qui puisse être appliqué à n'importe quel élément, on l'utilisera généralement pour des sections de contenu. Pour neutraliser des contrôles de façon individuelle, mieux vaudra utiliser l'attribut HTML [`disabled`](/fr/docs/Web/HTML/Reference/Attributes/disabled) et la pseudo-classe CSS [`:disabled`](/fr/docs/Web/CSS/Reference/Selectors/:disabled).
+> Bien que `inert` soit un attribut universel et puisse être appliqué à n'importe quel élément, il est généralement utilisé pour des sections de contenu. Pour rendre des contrôles individuels «&nbsp;inertes&nbsp;», il est préférable d'utiliser l'attribut [`disabled`](/fr/docs/Web/HTML/Reference/Attributes/disabled) avec les styles CSS {{CSSxRef(":disabled")}}.
 
-## Accessibilité
+Les éléments HTML inertes et leurs descendants dans l'arbre plat&nbsp;:
 
-Par défaut, il n'existe pas de méthode visuelle pour indiquer qu'un élément (avec ses descendants) est inerte. Il faut donc indiquer clairement les parties actives et celles qui sont inertes.
+- Ne déclenchent pas d'évènements {{DOMxRef("Element/click_event", "click")}} lorsqu'on clique dessus.
+- Ne peuvent pas recevoir la sélection et les évènements {{DOMxRef("Element/focus_event", "focus")}} ne peuvent pas être déclenchés sur eux.
+- Ne sont pas trouvables avec la fonction de recherche dans la page du navigateur (aucun de leur contenu n'est trouvé ou mis en correspondance).
+- Interdisent aux utilisateur·ice·s de sélectionner le texte contenu dans leur contenu — comme si on utilisait la propriété CSS {{CSSxRef("user-select")}} pour désactiver la sélection de texte.
+- Ne peuvent pas voir leur contenu éditable modifié. Cela inclut, par exemple, le contenu des champs {{HTMLElement("input")}} textuels, et des éléments de texte avec [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable) activé.
+- Sont masqués des technologies d'assistance car ils sont exclus de l'arbre d'accessibilité.
 
-Lorsqu'on fournira des indications visuelles et non-visuelles à propos de cette inertie, il faudra se rappeler que la zone d'affichage peut ne contenir qu'une partie du contenu (les personnes peuvent avoir zoomé, ou avoir un handicap visuel par exemple). Si une section est inerte et n'est pas marquée comme telle, cela pourra être source de frustration et représenter une mauvaise ergonomie.
+Les fonctionnalités suivantes peuvent aussi être utilisées pour rendre un élément et ses descendants inertes&nbsp;:
+
+- La propriété CSS {{CSSxRef("interactivity")}}.
+- La propriété DOM {{DOMxRef("HTMLElement.inert")}}.
+
+## Problèmes d'accessibilité
+
+Faites très attention à l'accessibilité lorsque vous appliquez l'attribut `inert`. Par défaut, il n'existe aucun moyen visuel de savoir si un élément ou son sous-arbre est inerte. En tant que développeur·euse web, il est de votre responsabilité d'indiquer clairement quelles parties du contenu sont actives et lesquelles sont inertes.
+
+En fournissant des indices visuels et non visuels sur l'inertie du contenu, gardez aussi à l'esprit que la zone d'affichage visuelle peut ne contenir que des sections de contenu. Les utilisateur·ice·s peuvent être zoomé·e·s sur une petite section de contenu, ou ne pas pouvoir voir le contenu du tout. Des sections inertes qui ne sont pas clairement inertes peuvent entraîner de la frustration et une mauvaise expérience utilisateur.
+
+## Exemples
+
+Dans cet exemple, le deuxième {{HTMLElement("div")}} et tous ses descendants sont rendus inertes grâce à l'attribut `inert`&nbsp;:
+
+```html
+<div>
+  <label for="button1">Bouton 1</label>
+  <button id="button1">Je ne suis pas inerte</button>
+</div>
+<div inert>
+  <label for="button2">Bouton 2</label>
+  <button id="button2">Je suis inerte</button>
+</div>
+```
+
+{{ EmbedLiveSample("Exemples", 560, 200) }}
 
 ## Spécifications
 
@@ -45,7 +60,6 @@ Lorsqu'on fournira des indications visuelles et non-visuelles à propos de cette
 
 ## Voir aussi
 
-- L'élément [`<dialog>`](/fr/docs/Web/HTML/Reference/Elements/dialog)
-- La propriété [`HTMLElement.inert`](/fr/docs/Web/API/HTMLElement/inert) du DOM
-- [Une introduction à `inert` (en anglais)](https://web.dev/articles/inert?hl=zh-tw)
-- [L'attribut `inert` arrive enfin sur le Web (en anglais)](https://www.stefanjudis.com/blog/the-inert-attribute-is-finally-coming-to-the-web/)
+- L'élément {{HTMLElement("dialog")}}
+- La propriété DOM {{DOMxRef("HTMLElement.inert")}}
+- La propriété CSS {{CSSxRef("interactivity")}}

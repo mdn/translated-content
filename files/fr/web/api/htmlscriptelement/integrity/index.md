@@ -3,7 +3,7 @@ title: "HTMLScriptElement : propriété integrity"
 short-title: integrity
 slug: Web/API/HTMLScriptElement/integrity
 l10n:
-  sourceCommit: 49d15be653576c5f73ec527ee976c5881171b53c
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
 {{APIRef("HTML DOM")}}

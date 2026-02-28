@@ -6,17 +6,17 @@ l10n:
   sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<head>`** fournit des informations générales ({{glossary("metadata", "métadonnées")}}) sur le document, incluant son [titre](/fr/docs/Web/HTML/Reference/Elements/title), [scripts](/fr/docs/Web/HTML/Reference/Elements/script), et [feuilles de style](/fr/docs/Web/HTML/Reference/Elements/style). Il ne peut y avoir qu'un seul élément `<head>` dans un document HTML.
+L'élément [HTML](/fr/docs/Web/HTML) **`<head>`** fournit des informations générales ({{Glossary("metadata", "métadonnées")}}) sur le document, incluant son [titre](/fr/docs/Web/HTML/Reference/Elements/title), [scripts](/fr/docs/Web/HTML/Reference/Elements/script), et [feuilles de style](/fr/docs/Web/HTML/Reference/Elements/style). Il ne peut y avoir qu'un seul élément `<head>` dans un document HTML.
 
 > [!NOTE]
-> L'élément `<head>` contient principalement des données destinées au traitement automatisé et pas nécessairement lisibles par des humains. Pour afficher des informations lisibles pour les utilisateurs dans des en-têtes ou titre, voir l'élément {{HTMLElement("header")}}.
+> L'élément `<head>` contient principalement des données destinées au traitement automatisé et pas nécessairement lisibles par des humains. Pour afficher des informations lisibles pour les utilisateur·ice·s dans des en-têtes ou titre, voir l'élément {{HTMLElement("header")}}.
 
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
-- `profile`{{deprecated_inline}}
-  - : L'{{glossary("URI")}} d'un ou plusieurs profils de métadonnées, séparés par un {{Glossary("whitespace", "espace")}}.
+- `profile` {{Deprecated_Inline}}
+  - : L'{{Glossary("URI")}} d'un ou plusieurs profils de métadonnées, séparés par un {{Glossary("whitespace", "espace")}}.
 
 ## Exemples
 
@@ -74,17 +74,17 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
       <th scope="row">Rôle ARIA implicite</th>
       <td>
         <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
-          >Pas de rôle correspondant</a
+          >Pas de rôle correspondant <sup>(angl.)</sup></a
         >
       </td>
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun <code>role</code> autorisé.</td>
+      <td>Aucun <code>role</code> autorisé</td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLHeadElement")}}</td>
+      <td>{{DOMxRef("HTMLHeadElement")}}</td>
     </tr>
   </tbody>
 </table>

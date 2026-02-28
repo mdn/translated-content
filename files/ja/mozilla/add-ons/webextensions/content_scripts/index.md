@@ -36,7 +36,7 @@ l10n:
 
 > [!NOTE]
 > [ダイナミック JS モジュールインポート](/ja/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading)がコンテンツスクリプトで動作するようになりました。詳しくは[Firefox バグ 1536094](https://bugzil.la/1536094)を参照してください。
-> _moz-extension_ スキームを持つ URL のみが許可され、データ URL は除外されます ([Firefox バグ 1587336](https://bugzil.la/1587336))。
+> _moz-extension_ スキームを持つ URL のみが許可され、data URL は除外されます ([Firefox バグ 1587336](https://bugzil.la/1587336))。
 
 ## 権限、制約、制限
 

@@ -1,17 +1,18 @@
 ---
 title: clip
 slug: Web/CSS/Reference/Properties/clip
-original_slug: Web/CSS/clip
 l10n:
-  sourceCommit: 9d9a5e327327369ec52adb1225740eedf6c2e872
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{CSSRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 > [!WARNING]
-> Cette propriété est dépréciée, on utilisera [`clip-path`](/fr/docs/Web/CSS/Reference/Properties/clip-path) à la place.
+> Cette propriété est dépréciée, on utilisera {{CSSxRef("clip-path")}} à la place.
 
-La propriété [CSS](/fr/docs/Web/CSS) **`clip`** définit la portion visible d'un élément. La propriété `clip` s'applique uniquement aux éléments positionnés de façon absolue (c'est-à-dire qui ont [`position:absolute`](/fr/docs/Web/CSS/Reference/Properties/position) ou [`position:fixed`](/fr/docs/Web/CSS/Reference/Properties/position)).
+La propriété [CSS](/fr/docs/Web/CSS) **`clip`** définit la portion visible d'un élément. La propriété `clip` ne s'applique qu'aux éléments positionnés absolument — c'est-à-dire les éléments avec {{CSSxRef("position","position:absolute")}} ou {{CSSxRef("position","position:fixed")}}.
+
+## Syntaxe
 
 ```css
 /* Valeur avec un mot-clé */
@@ -28,31 +29,42 @@ clip: revert-layer;
 clip: unset;
 ```
 
-## Syntaxe
-
 ### Valeurs
 
-- [`<shape>`](/fr/docs/Web/CSS/Reference/Values/shape)
-  - : Une forme (type [`<shape>`](/fr/docs/Web/CSS/Reference/Values/shape)) rectangulaire avec la structure `rect(<haut>, <droit>, <bas>, <gauche>)`. Les valeurs `<haut>` et `<bas>` sont des décalages à partir du _bord intérieur haut de la bordure_ de la boîte, tandis que `<droit>` et `<gauche>` sont des décalages à partir du _bord intérieur gauche de la bordure_ de la boîte, c'est-à-dire la délimitation de la zone de remplissage (<i lang="en">padding</i>).
+- `rect()`
+  - : Un rectangle défini à l'aide d'une fonction `rect()` de la forme `rect(<top>, <right>, <bottom>, <left>)`. Les valeurs `<top>` et `<bottom>` sont des décalages par rapport au \_bord supérieur de la boîte, tandis que `<right>` et `<left>` sont des décalages par rapport au \_bord gauche de la boîte - c'est-à-dire l'étendue de la marge de remplissage de boîte.
 
-    Les valeurs `<haut>`, `<droit>`, `<bas>`, et `<gauche>` peuvent être exprimées avec une longueur (valeur de type [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)) ou `auto`. Si l'une des valeurs est `auto`, l'élément est rogné sur _le bord intérieur de la bordure_ du côté correspondant.
+    Les valeurs `<top>`, `<right>`, `<bottom>` et `<left>` peuvent être soit une longueur ({{CSSxRef("&lt;length&gt;")}}) soit `auto`. Si la valeur d'un côté est `auto`, l'élément est rogné sur le _bord intérieur de la bordure_ de ce côté.
+
+> [!NOTE]
+> La fonction `rect()` {{CSSxRef("shape")}} utilisée dans la propriété dépréciée `clip` est différente de la fonction CSS {{CSSxRef("basic-shape/rect","rect()")}} utilisée pour définir une {{CSSxRef("basic-shape")}} CSS.
 
 - `auto`
   - : L'élément n'est pas rogné (par défaut). Attention, le comportement est différent de celui obtenu avec `rect(auto, auto, auto, auto)`, qui rogne l'élément aux bords intérieurs de la bordure.
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
 ### Rogner une image
 
-#### CSS
+```html
+<p class="dotted-border">
+  <img src="macarons.png" title="Image originale" />
+  <img id="top-left" src="macarons.png" title="Image rognée en haut à gauche" />
+  <img id="middle" src="macarons.png" title="Image rognée au centre" />
+  <img
+    id="bottom-right"
+    src="macarons.png"
+    title="Image rognée en bas à droite" />
+</p>
+```
 
 ```css
 .dotted-border {
@@ -85,23 +97,7 @@ clip: unset;
 }
 ```
 
-#### HTML
-
-```html
-<p class="dotted-border">
-  <img src="macarons.png" title="Image originale" />
-  <img id="top-left" src="macarons.png" title="Image rognée en haut à gauche" />
-  <img id="middle" src="macarons.png" title="Image rognée au centre" />
-  <img
-    id="bottom-right"
-    src="macarons.png"
-    title="Image rognée en bas à droite" />
-</p>
-```
-
-#### Résultat
-
-{{EmbedLiveSample('','','500px')}}
+{{EmbedLiveSample("Rogner une image", "", 450)}}
 
 ## Spécifications
 
@@ -113,12 +109,8 @@ clip: unset;
 
 ## Voir aussi
 
-- Cette propriété est dépréciée, on utilisera [`clip-path`](/fr/docs/Web/CSS/Reference/Properties/clip-path) à la place.
-- Les propriétés CSS connexes&nbsp;:
-  - [`text-overflow`](/fr/docs/Web/CSS/Reference/Properties/text-overflow)
-  - [`white-space`](/fr/docs/Web/CSS/Reference/Properties/white-space)
-  - [`overflow-x`](/fr/docs/Web/CSS/Reference/Properties/overflow-x)
-  - [`overflow-y`](/fr/docs/Web/CSS/Reference/Properties/overflow-y)
-  - [`overflow`](/fr/docs/Web/CSS/Reference/Properties/overflow)
-  - [`display`](/fr/docs/Web/CSS/Reference/Properties/display)
-  - [`position`](/fr/docs/Web/CSS/Reference/Properties/position)
+- La propriété {{CSSxRef("clip-path")}}
+- La propriété {{CSSxRef("position")}}
+- La propriété {{CSSxRef("mask")}}
+- La propriété {{CSSxRef("shape-image-threshold")}}
+- La propriété {{CSSxRef("shape-outside")}}

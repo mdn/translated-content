@@ -1,21 +1,21 @@
 ---
 title: "<q> : l'élément de citation en incise"
 slug: Web/HTML/Reference/Elements/q
-original_slug: Web/HTML/Element/q
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<q>`** indique que le texte qu'il contient est une citation en incise. La plupart des navigateurs modernes entoure le texte de cet élément avec des marques de citation. Cet élément est destiné aux citations courtes qui ne nécessitent pas de sauts de paragraphe. Pour les plus grandes citations, on utilisera l'élément {{HTMLElement("blockquote")}}.
 
-L'élément HTML **`<q>`** indique que le texte qu'il contient est une citation en incise. La plupart des navigateurs modernes entoure le texte de cet élément avec des marques de citation. Cet élément est destiné aux citations courtes qui ne nécessitent pas de sauts de paragraphe. Pour les plus grandes citations, on utilisera l'élément {{HTMLElement("blockquote")}}.
-
-{{InteractiveExample("HTML Demo: &lt;q&gt;", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;q&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>
-  When Dave asks HAL to open the pod bay door, HAL answers:
+  Quand Dave demande à HAL d'ouvrir la porte de la baie des modules, HAL
+  répond&nbsp;:
   <q
     cite="https://www.imdb.com/title/tt0062622/quotes/?item=qt0396921&ref_=ext_shr_lnk">
-    I'm sorry, Dave. I'm afraid I can't do that.
+    Je suis désolé, Dave. J'ai bien peur de ne pas pouvoir faire cela.
   </q>
 </p>
 ```
@@ -26,32 +26,27 @@ q {
 }
 ```
 
-> [!NOTE]
-> La plupart des navigateurs récents ajoutent automatiquement des guillemets autours du contenu d'un élément `<q>` mais il peut être nécessaire d'ajouter une règle CSS pour les ajouter dans les anciens navigateurs.
-
 ## Attributs
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `cite`
   - : La valeur de cet attribut est une URL désignant la source du message ou de l'information citée. Cet attribut est prévu pour fournir des renseignements concernant le contexte ou la référence de cette citation.
 
 ## Exemples
 
-### HTML
-
 ```html
 <p>
   Chaque fois que Kenny est tué, Stan dira
-  <q cite="http://fr.wikipedia.org/wiki/Kenny_McCormick#Le_dialogue_rituel">
-    Oh mon Dieu, ils ont tué Kenny ! </q
-  >.
+  <q cite="https://fr.wikipedia.org/wiki/Kenny_McCormick#Le_dialogue_rituel">
+    Oh mon Dieu, ils ont tué Kenny !
+  </q>
 </p>
 ```
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples","300","120")}}
+{{EmbedLiveSample("Exemples")}}
 
 ## Résumé technique
 
@@ -60,29 +55,26 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
     <tr>
       <th scope="row">
         <dfn
-          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
+          ><a href="/fr/docs/Web/HTML/Guides/Content_categories"
             >Catégories de contenu</a
           ></dfn
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
-          >contenu tangible</a
-        >.
+        >, contenu tangible.
       </td>
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >Contenu phrasé</a
         >.
       </td>
@@ -96,9 +88,19 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
       <td>
         Tout élément acceptant du
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
         >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <code
+          ><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
+            >generic</a
+          ></code
+        >
       </td>
     </tr>
     <tr>
@@ -107,7 +109,7 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLQuoteElement")}}</td>
+      <td>{{DOMxRef("HTMLQuoteElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -122,5 +124,5 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
 ## Voir aussi
 
-- {{HTMLElement("blockquote")}} pour les citations longues
-- {{HTMLElement("cite")}} pour les sources des citations
+- L'élément {{HTMLElement("blockquote")}} pour les citations longues.
+- L'élément {{HTMLElement("cite")}} pour les citations de sources.

@@ -2,16 +2,15 @@
 title: <script type="importmap">
 short-title: importmap
 slug: Web/HTML/Reference/Elements/script/type/importmap
-original_slug: Web/HTML/Element/script/type/importmap
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
 La valeur **`importmap`** de l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/script/type) pour l'élément HTML {{HTMLElement("script")}} indique que le contenu de l'élément contient une carte d'import (<i lang="en">import map</i>).
 
-Une carte d'import est un objet JSON qui permet aux développeuses et développeurs de contrôler la façon dont le navigateur résout les spécificateurs de modules lors de l'import [des modules JavaScript](/fr/docs/Web/JavaScript/Guide/Modules).
+Une carte d'import est un objet JSON qui permet aux développeur·euse·s de contrôler la façon dont le navigateur résout les spécificateurs de modules lors de l'import [des modules JavaScript](/fr/docs/Web/JavaScript/Guide/Modules).
 Elle fournit une correspondance entre le texte utilisé comme spécificateur de module dans [une instruction `import`](/fr/docs/Web/JavaScript/Reference/Statements/import) ou [un opérateur `import()`](/fr/docs/Web/JavaScript/Reference/Operators/import) et la valeur correspondante qui remplacera le texte lors de la résolution du spécificateur.
-L'objet JSON doit respecter [le format de représentation JSON des cartes d'import](#représentation_json_des_cartes_d_import).
+L'objet JSON doit respecter [le format de représentation JSON des cartes d'import](#représentation_json_des_cartes_dimport).
 
 Une carte d'import est utilisée pour la résolution des spécificateurs de module, tant pour les imports statiques que pour les imports dynamiques. Elle doit donc être déclarée et traitée avant tout élément `<script>` important des modules utilisant des spécificateurs présents dans la carte.
 On notera que la carte d'import s'applique uniquement aux spécificateurs de module présents dans [l'instruction `import`](/fr/docs/Web/JavaScript/Reference/Statements/import) ou [l'opérateur `import()`](/fr/docs/Web/JavaScript/Reference/Operators/import)&nbsp;; elle ne s'applique pas au chemin fourni via l'attribut `src` d'un élément `<script>`.

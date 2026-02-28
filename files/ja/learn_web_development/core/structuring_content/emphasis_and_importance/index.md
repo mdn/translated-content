@@ -2,10 +2,8 @@
 title: 強調と重要性
 slug: Learn_web_development/Core/Structuring_content/Emphasis_and_importance
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: cc7ed25d67ec3df5df8cfa255e1066cb5845e293
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content/Lists", "Learn_web_development/Core/Structuring_content")}}
 
@@ -36,11 +34,11 @@ l10n:
 
 ## 強調と重要性とは
 
-人間の言語では、文の意味を変えるために特定の単語を強調することが多く、特定の単語を何らかの意味で重要または異なるものとしてマークしたい場面がよくあります。HTML は、そのような効果でテキストコンテンツをマークアップすることを可能にするためにさまざまなセマンティック要素を提供します。そしてこのセクションでは、最も一般的なもののいくつかを見ていきます。
+人間の言語では、文の意味を変えるために特定の単語を強調することが多く、特定の単語を何らかの意味で重要または異なるものとしてマークしたい場面がよくあります。HTML は、そのような効果でテキストコンテンツをマークアップすることを可能にするためにさまざまなセマンティック要素を提供します。そしてこの節では、最も一般的なもののいくつかを見ていきます。
 
 ### 強調
 
-話されている言葉を強調したいときは、ある言葉を強調して、自分の言っていることの意味を微妙に変えます。同様に、書かれた言語では、イタリック体でそれらを置くことによって単語を強調する傾向があります。たとえば、次の 2 つの文は意味が異なります。
+話し言葉で強調したいときは、特定の言葉を強く発音し、自分の言っていることの意味を微妙に変えます。同様に、書き言葉では、イタリック体にすることによって単語を強調する傾向があります。たとえば、次の 2 つの文は意味が異なります。
 
 > I am glad you weren't late.
 >
@@ -48,7 +46,7 @@ l10n:
 
 最初の文は、その人が遅刻しなかったことに純粋にほっとしているように聞こえます。これに対して 2 つ目の文は、 "glad" と "late" の両方が斜体になっており、相手が少し遅れてきたことに腹を立てている、嫌味な、あるいは受動的な表現に聞こえます。
 
-HTML では、このようなインスタンスをマークアップするために {{htmlelement("em")}} （強調）要素を使用します。文書を読みやすくするだけでなく、これらはスクリーンリーダーによって認識され、異なるトーンの音声で話されます。ブラウザーでは既定でイタリック体になっていますが、純粋にイタリック体にするだけの場合にはこのタグを使用しないでください。その場合は、 {{htmlelement("span")}} 要素と CSS、あるいは {{htmlelement("i")}} 要素（下記参照）を使用してください。
+HTML では、このようなものをマークアップするために {{htmlelement("em")}} （強調）要素を使用します。文書を読みやすくするだけでなく、これらはスクリーンリーダーによって認識され、異なるトーンの音声で話されます。ブラウザーでは既定でイタリック体になっていますが、純粋にイタリック体にするだけの場合にはこのタグを使用しないでください。その場合は、 {{htmlelement("span")}} 要素と CSS、あるいは {{htmlelement("i")}} 要素（下記参照）を使用してください。
 
 ```html
 <p>I am <em>glad</em> you weren't <em>late</em>.</p>
@@ -78,142 +76,55 @@ HTML では、このようなものをマークアップするために {{htmlel
 
 {{EmbedLiveSample('Strong importance')}}
 
-### アクティブラーニング: 重要性を付け加えましょう
+### 強調と重要性で遊んでみよう
 
-このアクティブラーニングセクションでは、編集可能な例を示しました。その中で、それらを必要としていると思う言葉に強調と強い重要性を付け加えてみてください。
+この章では、強調と重要性をつけて取り組んでください。
 
-```html-nolint hidden
-<h2>ライブ出力</h2>
+1. 下記コードブロック内の **"Play"** をクリックして、MDN Playground で例を編集してください。
+2. メインの見出しでは「強調」という語を強調し、「重要性」という語の重要性を高くしましょう。
+3. 最初の段落では、コーヒーマシンの名称を特に重要視し、コーヒーを説明する際に使用された形容詞を強調してください。
+4. 第二段落では、温度の描写（「寒い」）と取るべき措置（「風邪を引かないよう厚着する」）を特に強調してください。「風邪を引く」には追加のマークアップを施し、強調と重要性を両立させてください。
 
-<div class="output" style="min-height: 50px;"></div>
+間違えた場合は、MDN Playground の _Reset_ ボタンで作業内容をクリアできます。どうしても行き詰まった場合は、コードブロックの下にある解答を参照してください。
 
-<h2>編集可能なコード</h2>
-<p class="a11y-label">
-  Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。
+```css hidden live-sample___emphasis_importance
+h1 {
+  font-weight: normal;
+}
+```
+
+```html-nolint live-sample___emphasis_importance
+<h1>強調と重要性</h1>
+
+<p>
+  私の新しいコーヒーマシンは Percolator 2000 と言います。それは至高で素晴らしい一杯を生み出します。
 </p>
 
-<textarea id="code" class="input" style="min-height: 200px; width: 95%">
-<h1>Important notice</h1>
-<p>On Sunday January 9th 2010, a gang of goths were
-  spotted stealing several garden gnomes from a
-  shopping center in downtown Milwaukee. They were
-  all wearing green jumpsuits and silly hats, and
-  seemed to be having a whale of a time. If anyone
-   has any information about this incident, please
-    contact the police now.</p>
-</textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="リセット" />
-  <input id="solution" type="button" value="答えを表示" />
-</div>
+<p>
+  真冬の時期は寒くなります。風邪を引かないよう厚着してください。
+</p>
 ```
 
-```css hidden
-html {
-  font-family: sans-serif;
-}
+{{ EmbedLiveSample('emphasis_importance', "100%", 160) }}
 
-h2 {
-  font-size: 16px;
-}
+<details>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
-}
+完成した HTML は次のようになります。
 
-body {
-  margin: 10px;
-  background: #f5f9fa;
-}
+```html-nolint
+<h1><em>強調</em>と<strong>重要性</strong></h1>
+
+<p>
+  私の新しいコーヒーマシンは <strong>Percolator 2000</strong> と言います。それは<em>至高</em>で<em>素晴らしい</em>一杯を生み出します。
+</p>
+
+<p>
+  真冬の時期は<strong>寒く</strong>なります。<strong><em>風邪を引かない</em>よう厚着して</strong>ください。
+</p>
 ```
 
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-const code = textarea.value;
-let userEntry = textarea.value;
-
-function updateCode() {
-  output.innerHTML = textarea.value;
-}
-
-const htmlSolution =
-  "<h1>Important notice</h1>\n<p>On <strong>Sunday January 9th 2010</strong>, a gang of <em>goths</em> were spotted stealing <strong><em>several</em> garden gnomes</strong> from a shopping center in downtown <strong>Milwaukee</strong>. They were all wearing <em>green jumpsuits</em> and <em>silly hats</em>, and seemed to be having a whale of a time. If anyone has <strong>any</strong> information about this incident, please contact the police <strong>now</strong>.</p>";
-let solutionEntry = htmlSolution;
-
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "答えを表示";
-  updateCode();
-});
-
-solution.addEventListener("click", () => {
-  if (solution.value === "答えを表示") {
-    textarea.value = solutionEntry;
-    solution.value = "答えを隠す";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "答えを表示";
-  }
-  updateCode();
-});
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-
-// Stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-textarea.onkeydown = (e) => {
-  if (e.code === "Tab") {
-    e.preventDefault();
-    insertAtCaret("\t");
-  }
-
-  if (e.code === "Escape") {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
-
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
-}
-
-// Update the saved userCode every time the user updates the text area code
-textarea.onkeyup = () => {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "答えを表示") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-
-  updateCode();
-};
-```
-
-{{ EmbedLiveSample('Active_learning_Lets_be_important', 700, 520, "", "") }}
+</details>
 
 ### イタリック、太字、下線…
 

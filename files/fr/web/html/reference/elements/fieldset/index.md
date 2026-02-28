@@ -86,7 +86,7 @@ Cet exemple montre un `<fieldset>` très simple, avec un `<legend>`, et un seul 
 
 #### Résultat
 
-{{EmbedLiveSample('Exemple simple', '100%', 80)}}
+{{EmbedLiveSample("Exemple simple", "100%", 80)}}
 
 ### \<fieldset> désactivé
 
@@ -99,11 +99,11 @@ Dans cet exemple, on voit comment l'attribut `disabled` permet de désactiver un
   <fieldset disabled>
     <legend>Fieldset désactivé</legend>
     <div>
-      <label for="name">Nom : </label>
+      <label for="name">Nom&nbsp;: </label>
       <input type="text" id="name" value="Chris" />
     </div>
     <div>
-      <label for="pwd">Archétype : </label>
+      <label for="pwd">Archétype&nbsp;: </label>
       <input type="password" id="pwd" value="Wookie" />
     </div>
   </fieldset>
@@ -112,7 +112,7 @@ Dans cet exemple, on voit comment l'attribut `disabled` permet de désactiver un
 
 #### Résultat
 
-{{EmbedLiveSample('fieldset désactivé', '100%', 110) }}
+{{EmbedLiveSample("fieldset désactivé", "100%", 110) }}
 
 ## Résumé technique
 

@@ -1,25 +1,13 @@
 ---
 title: border-width
 slug: Web/CSS/Reference/Properties/border-width
-original_slug: Web/CSS/border-width
+l10n:
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-{{CSSRef}}
+La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-width`** permet de définir l'épaisseur de la bordure d'un élément.
 
-La propriété CSS **`border-width`** est une [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) qui définit la largeur de la bordure d'un élément.
-
-Cette propriété raccourcie définit les propriétés détaillées
-
-- {{cssxref("border-top-width")}},
-- {{cssxref("border-right-width")}},
-- {{cssxref("border-bottom-width")}}
-- {{cssxref("border-left-width")}}.
-
-Si on utilise les propriétés logiques, elle définit {{cssxref("border-block-start-width")}}, {{cssxref("border-block-end-width")}}, {{cssxref("border-inline-start-width")}} et {{cssxref("border-inline-end-width")}}.
-
-Afin de paramétrer une bordure de façon plus pratique, on pourra utiliser la propriété raccourcie {{cssxref("border")}}.
-
-{{InteractiveExample("CSS Demo: border-width")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: border-width")}}
 
 ```css interactive-example-choice
 border-width: thick;
@@ -44,7 +32,7 @@ border-width: 0 4px 8px 12px;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    Ceci est une boîte avec une bordure autour.
   </div>
 </section>
 ```
@@ -52,7 +40,7 @@ border-width: 0 4px 8px 12px;
 ```css interactive-example
 #example-element {
   background-color: palegreen;
-  color: #000;
+  color: black;
   border: 0 solid crimson;
   padding: 0.75em;
   width: 80%;
@@ -68,14 +56,13 @@ border-width: thin;
 border-width: medium;
 border-width: thick;
 
-/* Une largeur pour chaque côté */
 /* Valeur de type <length> */
 border-width: 5px;
 
-/* côtés haut et bas | côtés gauche et droit */
+/* haut et bas | gauche et droite */
 border-width: 2px 1.5em;
 
-/* côté haut | côtés gauche et droit | côté bas */
+/* haut | gauche et droite | bas */
 border-width: 1px 2em 1.5cm;
 
 /* haut | droite | bas | gauche */
@@ -84,25 +71,28 @@ border-width: 1px 2em 0 4rem;
 /* Valeurs globales */
 border-width: inherit;
 border-width: initial;
+border-width: revert;
+border-width: revert-layer;
 border-width: unset;
 ```
 
 La propriété `border-width` peut être définie avec une, deux, trois ou quatre valeurs.
 
-- Lorsqu'une valeur est fournie, elle est appliquée comme largeur pour les quatre côtés
-- Lorsque deux valeurs sont fournies, la première est appliquée comme largeur pour la bordure basse et haute et la seconde pour la bordure gauche et droite
-- Lorsque trois valeurs sont fournies, la première est appliquée à la bordure haute, la deuxième à la bordure gauche et à la bordure droite et la troisième à la bordure basse
-- Lorsque quatres valeurs sont fournies, elles s'appliquent respectivement aux cotés haut, droit, bas et gauche (sens des aiguilles d'une montre).
+- Lorsqu'**une** valeur est fournie, elle s'applique comme largeur à **tous les côtés**.
+- Lorsque **deux** valeurs sont fournies, la première largeur s'applique au **haut et au bas**, la seconde à la **gauche et à la droite**.
+- Lorsque **trois** valeurs sont fournies, la première largeur s'applique au **haut**, la deuxième à la **gauche et à la droite**, la troisième au **bas**.
+- Lorsque **quatre** valeurs sont fournies, les largeurs s'appliquent au **haut**, à la **droite**, au **bas** et à la **gauche** dans cet ordre (sens des aiguilles d'une montre).
 
 ### Valeurs
 
 - `<line-width>`
-  - : Une valeur de longueur (type {{cssxref("&lt;length&gt;")}} ou un mot-clé indiquant l'épaisseur de la bordure. Le mot-clé doit être l'une des valeurs suivantes :
+  - : Une valeur de longueur ({{CSSxRef("&lt;length&gt;")}}) ou un mot-clé indiquant l'épaisseur de la bordure. Le mot-clé doit être l'une des valeurs suivantes&nbsp;:
     - `thin` (fin)
     - `medium` (intermédiaire)
     - `thick` (épais)
 
-    La spécification ne définit pas précisément l'épaisseur correspondante à chacun de ces mots-clés, les rendant dépendants de l'implémentation. Toutefois, la spécification indique que l'épaisseur doit suivre la relation d'inégalité suivante : `thin ≤ medium ≤ thick` et que les valeurs pour chaque mot-clé doivent être constantes pour un même document.
+> [!NOTE]
+> La spécification ne définit pas précisément l'épaisseur correspondante à chacun de ces mots-clés, les rendant dépendants de l'implémentation. Toutefois, la spécification indique que l'épaisseur doit suivre la relation d'inégalité suivante : `thin ≤ medium ≤ thick` et que les valeurs pour chaque mot-clé doivent être constantes pour un même document.
 
 ## Définition formelle
 
@@ -114,46 +104,48 @@ La propriété `border-width` peut être définie avec une, deux, trois ou quatr
 
 ## Exemples
 
-### HTML
+### Mélange de valeurs et de longueurs
+
+#### HTML
 
 ```html
-<p id="unevaleur">Une valeur : la bordure fait 6px sur les 4 côtés.</p>
+<p id="une-valeur">Une valeur : la bordure fait 6px sur les 4 côtés.</p>
 
-<p id="deuxvaleurs">
+<p id="deux-valeurs">
   Deux valeurs différentes : elle fait 2px en haut et en bas et elle mesure 10px
   pour les bords droit et gauche.
 </p>
 
-<p id="troisvaleurs">
+<p id="trois-valeurs">
   Trois valeurs différentes : 0.3em pour le haut, 9px pour le bas et zéro pour
   la droite et la gauche.
 </p>
 
-<p id="quatrevaleurs">
+<p id="quatre-valeurs">
   Quatre valeurs différentes : "thin" pour le haut, "medium" pour la droite,
   "thick" pour le bas et 1em pour la gauche.
 </p>
 ```
 
-### CSS
+#### CSS
 
 ```css
-#unevaleur {
-  border: ridge #ccc;
+#une-valeur {
+  border: ridge #cccccc;
   border-width: 6px;
 }
 
-#deuxvaleurs {
+#deux-valeurs {
   border: solid red;
   border-width: 2px 10px;
 }
 
-#troisvaleurs {
+#trois-valeurs {
   border: dotted orange;
   border-width: 0.3em 0 9px;
 }
 
-#quatrevaleurs {
+#quatre-valeurs {
   border: solid lightgreen;
   border-width: thin medium thick 1em;
 }
@@ -165,9 +157,9 @@ p {
 }
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample('Exemples', 300, 180) }}
+{{EmbedLiveSample("Mélange de valeurs et de longueurs", 320, 320)}}
 
 ## Spécifications
 
@@ -179,13 +171,5 @@ p {
 
 ## Voir aussi
 
-- Les propriétés raccourcies liées aux bordures
-  - {{cssxref("border")}},
-  - {{cssxref("border-style")}}
-  - {{cssxref("border-color")}}
-
-- Les propriétés liées à la largeur des bordures
-  - {{cssxref("border-bottom-width")}},
-  - {{cssxref("border-left-width")}},
-  - {{cssxref("border-right-width")}},
-  - {{cssxref("border-top-width")}}
+- Les propriétés raccourcies liées aux bordures&nbsp;: {{CSSxRef("border")}}, {{CSSxRef("border-style")}}, {{CSSxRef("border-color")}}
+- Les propriétés liées à la largeur des bordures&nbsp;: {{CSSxRef("border-bottom-width")}}, {{CSSxRef("border-left-width")}}, {{CSSxRef("border-right-width")}}, {{CSSxRef("border-top-width")}}

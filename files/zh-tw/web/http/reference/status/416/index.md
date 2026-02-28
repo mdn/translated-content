@@ -2,7 +2,7 @@
 title: 416 Range Not Satisfiable
 slug: Web/HTTP/Reference/Status/416
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 HTTP **`416 Range Not Satisfiable`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示伺服器無法提供請求的範圍。該回應最可能的原因是文件不包含這樣的[範圍](/zh-TW/docs/Web/HTTP/Guides/Range_requests)，或者 {{HTTPHeader("Range")}} 標頭值雖然語法正確，但卻毫無意義。

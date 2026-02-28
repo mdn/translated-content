@@ -1,14 +1,13 @@
 ---
 title: clear
 slug: Web/CSS/Reference/Properties/clear
-original_slug: Web/CSS/clear
+l10n:
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`clear`** définit si un élément doit être déplacé sous les éléments [flottants](/fr/docs/Web/CSS/Reference/Properties/float) qui le précèdent (dégagement). La propriété `clear` s'applique aux éléments flottants comme aux éléments non flottants.
 
-La propriété **`clear`** indique si un élément peut être situé à côté d'éléments [flottants](/fr/docs/Web/CSS/Reference/Properties/float) qui le précèdent ou s'il doit être déplacé vers le bas pour être en dessous de ces éléments. La propriété `clear` s'applique aux éléments flottants comme aux éléments non-flottants.
-
-{{InteractiveExample("CSS Demo: clear")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: clear")}}
 
 ```css interactive-example-choice
 clear: none;
@@ -29,13 +28,13 @@ clear: both;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="example-container">
-    <div class="floated-left">Left</div>
-    <div class="floated-right">Right</div>
+    <div class="floated-left">Gauche</div>
+    <div class="floated-right">Droite</div>
     <div class="transition-all" id="example-element">
-      As much mud in the streets as if the waters had but newly retired from the
-      face of the earth, and it would not be wonderful to meet a Megalosaurus,
-      forty feet long or so, waddling like an elephantine lizard up Holborn
-      Hill.
+      Autant de boue dans les rues que si les eaux venaient à peine de se
+      retirer de la surface de la terre, et il ne serait pas étonnant de croiser
+      un Megalosaurus, long d'une douzaine de mètres, se dandinant comme un
+      lézard éléphantin dans Holborn Hill.
     </div>
   </div>
 </section>
@@ -51,36 +50,19 @@ clear: both;
 
 .floated-left {
   border: solid 10px #ffc129;
-  background-color: rgba(81, 81, 81, 0.6);
+  background-color: rgb(81 81 81 / 0.6);
   padding: 1em;
   float: left;
 }
 
 .floated-right {
   border: solid 10px #ffc129;
-  background-color: rgba(81, 81, 81, 0.6);
+  background-color: rgb(81 81 81 / 0.6);
   padding: 1em;
   float: right;
   height: 150px;
 }
 ```
-
-Lorsqu'elle est appliquée aux blocs non-flottants, elle déplace [le bord de la bordure](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) de l'élément sous [le bord de la marge](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) de tous les éléments flottants concernés. Il y aura [fusion des marges (_margin collapsing_)](/fr/docs/Web/CSS/Guides/Box_model/Margin_collapsing) verticales entre l'élément flottant et le bloc non-flottant mais pas entre les élément flottants.
-
-Lorsqu'elle est appliquée aux éléments flottants, elle déplace [le bord de la marge](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) de l'élément sous [le bord de la marge](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) de tous les éléments flottants concernés. Cela impacte la position des éléments flottants suivants car ceux-ci ne peuvent pas être situés plus haut que les éléments flottants qui les précèdent.
-
-Les éléments flottants qui sont dégagés sont les éléments flottants précédant l'élément ciblé, au sein de du [même contexte de formatage](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context).
-
-> [!NOTE]
-> Si un élément ne contient que des éléments flottants, sa hauteur sera nulle. Si on souhaite redimensionner l'élément afin qu'il contienne tous les éléments flottants à l'intérieur, on peut faire flotter ce conteneur ou utiliser `clear` sur un pseudo-élément remplacé {{cssxref("::after")}}.
->
-> ```css
-> #conteneur::after {
->   content: "";
->   display: block;
->   clear: both;
-> }
-> ```
 
 ## Syntaxe
 
@@ -96,6 +78,8 @@ clear: inline-end;
 /* Valeurs globales */
 clear: inherit;
 clear: initial;
+clear: revert;
+clear: revert-layer;
 clear: unset;
 ```
 
@@ -104,15 +88,32 @@ clear: unset;
 - `none`
   - : Un mot-clé qui indique que l'élément n'est pas déplacé vers le bas pour dégager le flottement.
 - `left`
-  - : Un mot-clé qui indique que l'élément est déplacé vers le bas afin de dégager les flottements à gauche.
+  - : Un mot-clé qui indique que l'élément est déplacé vers le bas afin de dégager les flottements à _gauche_.
 - `right`
-  - : Un mot-clé qui indique que l'élément est déplacé vers le bas afin de dégager les flottements à droite.
+  - : Un mot-clé qui indique que l'élément est déplacé vers le bas afin de dégager les flottements à _droite_.
 - `both`
-  - : Un mot-clé qui indique que l'élément est déplacé vers le bas afin de dégager les flottements à gauche et à droite.
+  - : Un mot-clé qui indique que l'élément est déplacé vers le bas afin de dégager les flottements _à gauche et à droite_.
 - `inline-start`
   - : Un mot-clé qui indique que l'élément est déplacé vers le bas pour dégager le contenu vers le début du bloc englobant. Autrement dit, cela dégage à gauche pour les scripts de gauche à droite (_LTR_ pour _left to right_) et dégage à droite pour les scripts de droite à gauche (_RTL_ pour _droite à gauche_).
 - `inline-end`
   - : Un mot-clé qui indique que l'élément est déplacé vers le bas pour dégager le contenu du côté de la fin du bloc englobant. Autrement dit, cela dégage à droite pour les scripts de gauche à droite (_LTR_ pour _left to right_) et dégage à gauche pour les scripts de droite à gauche (_RTL_ pour _droite à gauche_).
+
+## Description
+
+Lorsqu'elle est appliquée aux blocs non flottants, elle déplace le [bord de la bordure](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) de l'élément vers le bas jusqu'à ce qu'il soit sous le [bord de la marge](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) de tous les flottants concernés. La marge supérieure du bloc non flottant fusionne.
+
+Les marges verticales entre deux éléments flottants, en revanche, ne fusionnent pas. Lorsqu'elle est appliquée aux éléments flottants, le bord de la marge de l'élément du bas est déplacé sous le bord de la marge de tous les flottants concernés. Cela affecte la position des flottants suivants, car ils ne peuvent pas être positionnés plus haut que les flottants précédents.
+
+Les flottants concernés par le dégagement sont les flottants précédents dans le [même contexte de formatage de bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context).
+
+> [!NOTE]
+> Si un élément ne contient que des éléments flottants, sa hauteur sera nulle. Si vous souhaitez qu'il puisse toujours se redimensionner pour contenir les éléments flottants à l'intérieur, définissez la propriété {{CSSxRef("display")}} de l'élément sur [`flow-root`](/fr/docs/Web/CSS/Reference/Properties/display#flow-root).
+>
+> ```css
+> #container {
+>   display: flow-root;
+> }
+> ```
 
 ## Définition formelle
 
@@ -154,13 +155,13 @@ clear: unset;
   float: left;
   margin: 0;
   background-color: black;
-  color: #fff;
+  color: white;
   width: 20%;
 }
 .red {
   float: left;
   margin: 0;
-  background-color: red;
+  background-color: pink;
   width: 20%;
 }
 p {
@@ -168,7 +169,7 @@ p {
 }
 ```
 
-{{EmbedLiveSample('clear_left','100%','250')}}
+{{EmbedLiveSample("`clear: left`", "100%", 250)}}
 
 ### `clear: right`
 
@@ -200,13 +201,13 @@ p {
   float: right;
   margin: 0;
   background-color: black;
-  color: #fff;
+  color: white;
   width: 20%;
 }
 .red {
   float: right;
   margin: 0;
-  background-color: red;
+  background-color: pink;
   width: 20%;
 }
 p {
@@ -214,7 +215,7 @@ p {
 }
 ```
 
-{{EmbedLiveSample('clear_right','100%','250')}}
+{{EmbedLiveSample("`clear: right`", "100%", 250)}}
 
 ### `clear: both`
 
@@ -250,13 +251,13 @@ p {
   float: left;
   margin: 0;
   background-color: black;
-  color: #fff;
+  color: white;
   width: 20%;
 }
 .red {
   float: right;
   margin: 0;
-  background-color: red;
+  background-color: pink;
   width: 20%;
 }
 p {
@@ -264,7 +265,7 @@ p {
 }
 ```
 
-{{EmbedLiveSample('clear_both','100%','300')}}
+{{EmbedLiveSample("`clear: both`", "100%", 300)}}
 
 ## Spécifications
 
@@ -276,4 +277,4 @@ p {
 
 ## Voir aussi
 
-- [Le modèle de boîtes](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model)
+- [Le modèle de boîtes CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model)

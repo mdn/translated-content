@@ -1,16 +1,17 @@
 ---
 title: <number>
 slug: Web/CSS/Reference/Values/number
-original_slug: Web/CSS/number
 l10n:
-  sourceCommit: a1596fe065b9c726f9412999d2218b7b6e256e30
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-[CSS](/ja/docs/Web/CSS) の **`<number>`** [データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)は、整数または小数部分のある数値を表します。
+**`<number>`** は [CSS](/ja/docs/Web/CSS) の [データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、整数、小数部分のある数値、科学記法における 10 進数の指数を表します。
 
 ## 構文
 
-`<number>` の構文は {{CSSxRef("&lt;integer&gt;")}} 構文を拡張したものです。小数は `.` と続く1桁以上の10進数で表し、整数部に追加することができます。数値に関連付けられた単位はありません。
+`<number>` の構文は {{CSSxRef("&lt;integer&gt;")}} 構文を拡張したものです。小数は `.` と続く 1 桁以上の 10 進数で表し、整数に追加されることもあります。`<number>` は、最後に文字 `e` または `E` を続けて整数が続く形でもあり、これは科学記法における 10 進数の指数を示します。数値に関連付けられた単位はありません。
+
+整数と同様に、先頭の数字の直前に - または + を付けて、その数値の符号（正か負か）を示すことができます。
 
 ## 補間
 
@@ -50,4 +51,6 @@ l10n:
 
 ## 関連情報
 
-- {{CSSxRef("&lt;integer&gt;")}}
+- {{CSSxRef("integer")}}
+- {{CSSxRef("ratio")}}
+- [CSS 値と単位](/ja/docs/Web/CSS/Guides/Values_and_units)モジュール

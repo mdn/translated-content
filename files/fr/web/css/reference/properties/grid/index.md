@@ -1,14 +1,15 @@
 ---
 title: grid
 slug: Web/CSS/Reference/Properties/grid
-original_slug: Web/CSS/grid
+l10n:
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-{{CSSRef}}
+La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`grid`** permet de définir toutes les propriétés de grille explicites et implicites en une seule déclaration.
 
-La propriété **`grid`** est une propriété raccourcie qui permet de définir toutes les propriétés liées aux grilles CSS, qu'elles soient explicites ({{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}} et {{cssxref("grid-template-areas")}}), implicites ({{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}} et {{cssxref("grid-auto-flow")}}).
+En utilisant `grid`, vous définissez un axe avec {{CSSxRef("grid-template-rows")}} ou {{CSSxRef("grid-template-columns")}}, puis vous définissez comment le contenu doit se répéter automatiquement sur l'autre axe avec les propriétés de grille implicites&nbsp;: {{CSSxRef("grid-auto-rows")}}, {{CSSxRef("grid-auto-columns")}}, et {{CSSxRef("grid-auto-flow")}}.
 
-{{InteractiveExample("CSS Demo: grid")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: grid")}}
 
 ```css interactive-example-choice
 grid: auto-flow / 1fr 1fr 1fr;
@@ -26,9 +27,9 @@ grid: repeat(3, 80px) / auto-flow;
 <section class="default-example" id="default-example">
   <div class="example-container">
     <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
+      <div>Un</div>
+      <div>Deux</div>
+      <div>Trois</div>
     </div>
   </div>
 </section>
@@ -43,26 +44,26 @@ grid: repeat(3, 80px) / auto-flow;
 }
 
 #example-element :nth-child(1) {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 
 #example-element :nth-child(2) {
-  background-color: rgba(255, 0, 200, 0.2);
+  background-color: rgb(255 0 200 / 0.2);
   border: 3px solid rebeccapurple;
   grid-column: auto / span 3;
   grid-row: auto / span 2;
 }
 
 #example-element :nth-child(3) {
-  background-color: rgba(94, 255, 0, 0.2);
+  background-color: rgb(94 255 0 / 0.2);
   border: 3px solid green;
   grid-column: auto / span 2;
 }
 ```
 
 > [!NOTE]
-> Une seule déclaration `grid` permettra uniquement de définir les propriétés explicites ou implicites. Les propriétés qui ne sont pas définies via la propriété raccourcie prendront leurs valeurs initiales. Les propriétés d'espacement ne sont pas surchargées par cette propriété raccourcie.
+> Les sous-propriétés que vous ne définissez pas prennent leur valeur initiale, comme pour toute propriété raccourcie. De plus, les propriétés de gouttière ne sont PAS réinitialisées par cette propriété raccourcie.
 
 ## Syntaxe
 
@@ -70,7 +71,7 @@ grid: repeat(3, 80px) / auto-flow;
 /* Valeurs <'grid-template'> */
 grid: none;
 grid: "a" 100px "b" 1fr;
-grid: [linename1] "a" 100px [linename2];
+grid: [line-name1] "a" 100px [line-name2];
 grid: "a" 200px "b" min-content;
 grid: "a" minmax(100px, max-content) "b" 20%;
 grid: 100px / 200px;
@@ -93,21 +94,24 @@ grid: auto-flow dense 40% / [line1] minmax(20em, max-content);
 /* Valeurs globales */
 grid: inherit;
 grid: initial;
+grid: revert;
+grid: revert-layer;
 grid: unset;
 ```
 
 ### Valeurs
 
-Pour plus de détails, voir les pages de chacune des propriétés : {{cssxref("grid-template")}}, {{cssxref("grid-auto-flow")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}.
-
 - `<'grid-template'>`
-  - : Définit {{cssxref("grid-template")}}, ce qui inclut {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}} et {{cssxref("grid-template-areas")}}.
-- `<'grid-auto-flow'>`
-  - : Définit {{cssxref("grid-auto-flow")}} qui indique le fonctionnement de l'algorithme de placement automatique et qui détaille exactement comment les éléments placés automatiquement « coulent » dans la grille.
-- `<'grid-auto-rows'>`
-  - : Définit {{cssxref("grid-auto-rows")}} qui indique la taille des pistes créées pour les lignes de façon implicite.
-- `<'grid-auto-columns'>`
-  - : Définit {{cssxref("grid-auto-columns")}} qui indique la taille des pistes créées pour les colonnes de façon implicite.
+  - : Définit {{CSSxRef("grid-template")}}, ce qui inclut {{CSSxRef("grid-template-columns")}}, {{CSSxRef("grid-template-rows")}} et {{CSSxRef("grid-template-areas")}}.
+- `<'grid-template-rows'> / [ auto-flow && dense? ] <'grid-auto-columns'>?`
+  - : Configure un flux automatique en définissant explicitement les pistes de lignes avec la propriété {{CSSxRef("grid-template-rows")}} (et la propriété {{CSSxRef("grid-template-columns")}} à `none`) et en définissant comment répéter automatiquement les pistes de colonnes avec {{CSSxRef("grid-auto-columns")}} (et {{CSSxRef("grid-auto-rows")}} à `auto`). {{CSSxRef("grid-auto-flow")}} est également définie sur `column`, avec `dense` si elle est incluse.
+
+    Toutes les autres sous-propriétés de `grid` sont réinitialisées à leur valeur initiale.
+
+- `[ auto-flow && dense? ] <'grid-auto-rows'>? / <'grid-template-columns'>`
+  - : Configure un flux automatique en définissant explicitement les pistes de colonnes avec la propriété {{CSSxRef("grid-template-columns")}} (et la propriété {{CSSxRef("grid-template-rows")}} à `none`) et en définissant comment répéter automatiquement les pistes de lignes avec {{CSSxRef("grid-auto-rows")}} (et {{CSSxRef("grid-auto-columns")}} à `auto`). {{CSSxRef("grid-auto-flow")}} est également définie sur `row`, avec `dense` si elle est incluse.
+
+    Toutes les autres sous-propriétés de `grid` sont réinitialisées à leur valeur initiale.
 
 ## Définition formelle
 
@@ -119,22 +123,9 @@ Pour plus de détails, voir les pages de chacune des propriétés : {{cssxref("g
 
 ## Exemples
 
-### CSS
+### Créer une mise en page en grille
 
-```css
-#container {
-  display: grid;
-  grid: repeat(2, 60px) / auto-flow 80px;
-}
-
-#container > div {
-  background-color: #8ca0ff;
-  width: 50px;
-  height: 50px;
-}
-```
-
-### HTML
+#### HTML
 
 ```html
 <div id="container">
@@ -149,9 +140,24 @@ Pour plus de détails, voir les pages de chacune des propriétés : {{cssxref("g
 </div>
 ```
 
-### Résultat
+#### CSS
 
-{{EmbedLiveSample("Exemples", "100%", 150)}}
+```css
+#container {
+  display: grid;
+  grid: repeat(2, 60px) / auto-flow 80px;
+}
+
+#container > div {
+  background-color: #8ca0ff;
+  width: 50px;
+  height: 50px;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Créer une mise en page en grille", "100%", 150)}}
 
 ## Spécifications
 
@@ -163,12 +169,12 @@ Pour plus de détails, voir les pages de chacune des propriétés : {{cssxref("g
 
 ## Voir aussi
 
-- {{cssxref("grid-template")}}
-- {{cssxref("grid-template-rows")}}
-- {{cssxref("grid-template-columns")}}
-- {{cssxref("grid-template-areas")}}
-- {{cssxref("grid-auto-columns")}}
-- {{cssxref("grid-auto-rows")}}
-- {{cssxref("grid-auto-flow")}}
-- [Guide : Placer les éléments d'une grille sur les lignes](/fr/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
-- [Guide : Les zones de grilles et les propriétés raccourcies](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas#les_propriétés_raccourcies_pour_les_grilles_css)
+- La propriété raccourcie {{CSSxRef("grid-template")}}
+- La propriété {{CSSxRef("grid-template-rows")}}
+- La propriété {{CSSxRef("grid-template-columns")}}
+- La propriété {{CSSxRef("grid-template-areas")}}
+- La propriété {{CSSxRef("grid-auto-columns")}}
+- La propriété {{CSSxRef("grid-auto-rows")}}
+- La propriété {{CSSxRef("grid-auto-flow")}}
+- [Placer les éléments d'une grille sur les lignes](/fr/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+- [Les zones de grilles et les propriétés raccourcies](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas#les_propriétés_raccourcies_pour_les_grilles_css)

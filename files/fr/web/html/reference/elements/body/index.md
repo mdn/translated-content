@@ -118,7 +118,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 ### Résultat
 
-{{EmbedLiveSample('exemple')}}
+{{EmbedLiveSample("Exemples")}}
 
 ## Résumé technique
 
@@ -191,6 +191,6 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 ## Voir aussi
 
-- L'élément HTML {{HTMLElement("html")}}
-- L'élément HTML {{HTMLElement("head")}}
+- L'élément {{HTMLElement("html")}}
+- L'élément {{HTMLElement("head")}}
 - [Aperçu de la gestion des événements](/fr/docs/Web/API/Document_Object_Model/Events#enregistrer_des_gestionnaires_dévénements)

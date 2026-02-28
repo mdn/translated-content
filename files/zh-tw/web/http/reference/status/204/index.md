@@ -2,7 +2,7 @@
 title: 204 No Content
 slug: Web/HTTP/Reference/Status/204
 l10n:
-  sourceCommit: 74ab26a101ef2e4d5e5f25962033bc1042102677
+  sourceCommit: c212cfca9809021001637344831487029f1b8887
 ---
 
 HTTP **`204 No Content`** [成功回應](/zh-TW/docs/Web/HTTP/Reference/Status#成功回應)狀態碼表示請求已成功，但用戶端不需要離開當前頁面。`204` 回應預設是可快取的，在這種情況下會包含 {{HTTPHeader("ETag")}} 標頭。
@@ -39,6 +39,31 @@ Authorization: Bearer 1234abcd
 ```http
 HTTP/1.1 204 No Content
 Date: Wed, 26 Jun 2024 12:00:00 GMT
+Server: Apache/2.4.1 (Unix)
+```
+
+### 使用 PUT 更新後收到回應
+
+在此範例中，用戶端發送 `PUT` 請求來更新使用者的個人資料。該請求包含帶有權杖的 {{HTTPHeader("Authorization")}} 標頭，用以驗證請求：
+
+```http
+PUT /users/123 HTTP/1.1
+Host: example.com
+Content-Type: application/json
+Authorization: Bearer 1234abcd
+
+{
+  "name": "Jane Doe",
+  "email": "jane@example.com"
+}
+```
+
+成功更新使用者個人資料後，伺服器會以 `204` 回應。{{HTTPHeader("ETag")}} 標頭包含了更新後資源的實體標籤：
+
+```http
+HTTP/1.1 204 No Content
+Date: Wed, 26 Jun 2024 12:00:00 GMT
+ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 Server: Apache/2.4.1 (Unix)
 ```
 

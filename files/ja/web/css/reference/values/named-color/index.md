@@ -1,14 +1,13 @@
 ---
 title: <named-color>
 slug: Web/CSS/Reference/Values/named-color
-original_slug: Web/CSS/named-color
 l10n:
-  sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**`<named-color>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、 `red`, `blue`, `black`, `lightseagreen` のような色の名前です。文法的には、 `<named-color>` は [`<ident>`](/ja/docs/Web/CSS/Reference/Values/ident) の一種です。
+**`<named-color>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、 `red`, `blue`, `black`, `lightseagreen` のような色の名前です。文法的には、 `<named-color>` は {{cssxref("ident")}} の一種です。
 
-`<named-color>` 値は [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) が使用できる場所ならどこでも使用できます。
+`<named-color>` 値は {{cssxref("&lt;color&gt;")}} が使用できる場所ならどこでも使用できます。
 
 ## 構文
 
@@ -22,11 +21,11 @@ color: transparent;
 
 ### 値
 
-名前付きの色は標準色、[`transparent`](#transparent)、[`currentcolor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) のキーワードです。
+名前付きの色は標準色、[`transparent`](#transparent)、[`currentColor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード) のキーワードです。
 
 #### 標準色
 
-基本色には、標準的で覚えやすい名前があります。
+基本色には、標準の覚えやすい名前があります。
 
 <table>
   <thead>
@@ -886,15 +885,15 @@ color: transparent;
   </tbody>
 </table>
 
-当初、 [CSS Level 1](https://www.w3.org/TR/REC-CSS1/#color-units) では 16 の基本色のみが定義され、 [CSS Level 2](https://www.w3.org/TR/CSS2/syndata.html#value-def-color) では `orange` が追加されました。ウェブデザイナーはこのリストが短すぎることに気づき、ブラウザーベンダーは X11の色名をもとに多数の色の名前を追加しました。 [SVG 1.0](https://www.w3.org/TR/2001/REC-SVG-20010904/)、そして [CSS Colors Level 3](https://www.w3.org/TR/css-color-3/#svg-color) で、これらの名前は標準化され、正式に定義され、統一されました（これで別名となった異なる綴りのものもあります）。これらは拡張色キーワード、_X11 色_、*SVG 色*と呼ばれます。
+当初、 [CSS Level 1](https://www.w3.org/TR/REC-CSS1/#color-units) では 16 の基本色のみが定義され、 [CSS Level 2](https://www.w3.org/TR/CSS2/syndata.html#value-def-color) では `orange` が追加されました。ウェブデザイナーはこのリストが短すぎることに気づき、ブラウザーベンダーは X11の色名をもとに多数の色の名前を追加しました。[SVG 1](https://www.w3.org/TR/SVG11/types.html#DataTypeColor)、そして [CSS Colors Level 3](https://drafts.csswg.org/css-color-3/#svg-color) で、これらの名前は標準化され、正式に定義され、統一されました（これで別名となった異なる綴りのものもあります）。これらは拡張色キーワード、X11 色、SVG 色と呼ばれます。
 
-[CSS Colors Level 4](https://www.w3.org/TR/css-color-4/#named-colors) では、[ウェブのパイオニア Eric Meyer](https://meyerweb.com/eric/thoughts/2014/06/19/rebeccapurple/) に敬意を表して、 `rebeccapurple` という色が追加されました。
+[CSS Colors Level 4](https://drafts.csswg.org/css-color-4/#named-colors) では、[ウェブのパイオニア Eric Meyer](https://meyerweb.com/eric/thoughts/2014/06/19/rebeccapurple/) に敬意を表して、 `rebeccapurple` という色が追加されました。
 
 #### transparent
 
 `transparent` は完全な透明色を表すキーワードです。この色が付いた項目の背後の背景は完全に見えます。厳密には、`transparent` は `rgb(0 0 0 / 0%)` のショートカットです。
 
-{{cssxref("gradient","グラデーション")}}の場合の同様、予期しない動きを避けるために、現在の CSS の仕様書は `transparent` を[アルファ乗算色空間](https://www.w3.org/TR/css-color-4/#interpolation-alpha)で計算するように定めています。しかし、古いブラウザーはアルファチャンネルが `0` の値である黒として扱うかもしれません。
+{{cssxref("gradient","グラデーション")}}の場合の同様、予期しない動きを避けるために、現在の CSS の仕様書は `transparent` を[アルファ乗算色空間](https://drafts.csswg.org/css-color/#interpolation-alpha)で計算するように定めています。しかし、古いブラウザーはアルファチャンネルが `0` の値である黒として扱うかもしれません。
 
 `transparent` キーワードは CSS Level 2 (Revision 1) では色ではありませんでした。これは {{Cssxref("background")}} プロパティと {{Cssxref("border")}} プロパティの 2 つにおいて、通常の `<color>` の代わりに使用することができた特殊なキーワードでした。基本的に、継承された色を開発者が上書きすることができるように追加されたものです。 CSS Colors Level 3 でアルファチャンネルが出現し、 `transparent` は色として再定義されました。 `<color>` の値を使用することができる場所ならば、どこでも使用することができるようになりました。
 
@@ -976,4 +975,4 @@ color: transparent;
 
 ## 関連情報
 
-- [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value): その定義である `<named-color>` を構成要素とするデータ型です。
+- {{cssxref("&lt;color&gt;")}}: その定義である `<named-color>` を構成要素とするデータ型です。

@@ -22,7 +22,7 @@ La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/f
 
 ## Exemples
 
-Voir [Créer des carrousels CSS](/fr/docs/Web/CSS/CSS_overflow/CSS_carousels) et {{CSSxRef("::scroll-marker")}} pour des exemples complets qui utilisent la pseudo-classe `:target-current`.
+Voir [Créer des carrousels CSS](/fr/docs/Web/CSS/Guides/Overflow/CSS_carousels) et {{CSSxRef("::scroll-marker")}} pour des exemples complets qui utilisent la pseudo-classe `:target-current`.
 
 ### Utilisation de base
 
@@ -49,6 +49,6 @@ Voir [Créer des carrousels CSS](/fr/docs/Web/CSS/CSS_overflow/CSS_carousels) et
 - La pseudo-classe {{CSSxRef("scroll-marker-group")}}
 - La pseudo-classe {{CSSxRef("::scroll-marker")}}
 - La pseudo-classe {{CSSxRef("::scroll-marker-group")}}
-- [Créer des carrousels CSS](/fr/docs/Web/CSS/CSS_overflow/CSS_carousels)
+- [Créer des carrousels CSS](/fr/docs/Web/CSS/Guides/Overflow/CSS_carousels)
 - Le module [CSS overflow](/fr/docs/Web/CSS/Guides/Overflow)
 - [Galerie de carrousels CSS <sup>(angl.)</sup>](https://chrome.dev/carousel/) sur chrome.dev (2025)

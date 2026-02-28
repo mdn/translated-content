@@ -1,9 +1,9 @@
 ---
 title: アクセシビリティのためのメディアクエリーの使用
+short-title: アクセシビリティ
 slug: Web/CSS/Guides/Media_queries/Using_for_accessibility
-original_slug: Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility
 l10n:
-  sourceCommit: f731452fabde211bee55aedd39fc83d60c4e4918
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 [**CSS メディアクエリー**](/ja/docs/Web/CSS/Guides/Media_queries)は、障碍を持ったユーザーがウェブサイトをより理解することを支援するためにも利用することができます。

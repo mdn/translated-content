@@ -1,9 +1,8 @@
 ---
 title: negative
 slug: Web/CSS/Reference/At-rules/@counter-style/negative
-original_slug: Web/CSS/@counter-style/negative
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`negative`** は {{cssxref("@counter-style")}} アットルールの記述子で、独自のカウンタースタイルを定義する際に、負のカウンター値をどのように表すかを定義することができます。`negative` 記述子の値は、カウンターの値が負の場合に、カウンターの表現の前後に追加する記号を定義します。
@@ -89,6 +88,6 @@ ol {
 
 - {{cssxref("@counter-style")}} 記述子: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}}, {{cssxref("@counter-style/fallback", "fallback")}}
 - リストスタイルのプロパティ: {{cssxref("list-style")}}, {{cssxref("list-style-image")}}, {{cssxref("list-style-position")}}
-- {{cssxref("symbols", "symbols()")}}, 無名のカウンタースタイルを生成する関数記法。
+- {{cssxref("symbols()")}}, 無名のカウンタースタイルを生成する関数記法。
 - [CSS カウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)モジュール
 - [CSS リストとカウンター](/ja/docs/Web/CSS/Guides/Lists)モジュール

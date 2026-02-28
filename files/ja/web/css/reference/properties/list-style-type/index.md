@@ -1,12 +1,11 @@
 ---
 title: list-style-type
 slug: Web/CSS/Reference/Properties/list-style-type
-original_slug: Web/CSS/list-style-type
 l10n:
-  sourceCommit: 3b080cf77c3f906b5b965961412b6c51b5871e08
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**`list-style-type`** は [CSS](/ja/docs/Web/CSS) のプロパティで、リスト項目要素のマーカーを設定します (円、文字、独自のカウンタースタイルなど)。
+**`list-style-type`** は [CSS](/ja/docs/Web/CSS) のプロパティで、リストアイテム要素のマーカーを設定します (円、文字、独自のカウンタースタイルなど)。
 
 {{InteractiveExample("CSS デモ: list-style-type")}}
 
@@ -29,7 +28,7 @@ list-style-type: "\1F44D";
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div>
-    <p>NASA Notable Missions</p>
+    <p>NASA の有名なミッション</p>
     <ul class="transition-all unhighlighted" id="example-element">
       <li>Apollo</li>
       <li>Hubble</li>
@@ -40,12 +39,13 @@ list-style-type: "\1F44D";
   <hr />
   <div class="note">
     <p>
-      <code>space-counter</code> is defined with
+      <code>space-counter</code> は
       <a
-        href="//developer.mozilla.org/docs/Web/CSS/@counter-style"
+        href="//developer.mozilla.org/docs/Web/CSS/Reference/At-rules/@counter-style"
         target="_parent"
         ><code>@counter-style</code></a
       >
+      で定義されています
     </p>
   </div>
 </section>
@@ -87,9 +87,9 @@ hr {
 }
 ```
 
-マーカーは [`currentcolor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード)となり、適用先の要素の[色](/ja/docs/Web/CSS/Reference/Values/color_value)の計算値と同じになります。
+マーカーは [`currentColor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード)となり、適用先の要素の[色](/ja/docs/Web/CSS/Reference/Values/color_value)の計算値と同じになります。
 
-わずかな要素 ({{HTMLElement("li")}} と {{HTMLElement("summary")}}) だけが既定で `display: list-item` の値を持っています。しかし、 `list-style-type` プロパティは {{cssxref("display")}} の値が `list-item` に設定されているあらゆる要素に適用することができます。さらに、このプロパティは継承されるので、親要素（普通は {{HTMLElement("ol")}} または {{HTMLElement("ul")}}）に設定することですべてのリスト項目に適用することができます。
+わずかな要素 ({{HTMLElement("li")}} と {{HTMLElement("summary")}}) だけが既定で `display: list-item` の値を持っています。しかし、 `list-style-type` プロパティは {{cssxref("display")}} の値が `list-item` に設定されているあらゆる要素に適用することができます。さらに、このプロパティは継承されるので、親要素（普通は {{HTMLElement("ol")}} または {{HTMLElement("ul")}}）に設定することですべてのリストアイテムに適用することができます。
 
 ## 構文
 
@@ -136,7 +136,7 @@ list-style-type: unset;
 
 - {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
   - : {{cssxref("@counter-style")}} の値、または以下の定義済みスタイルのうちの一つに一致する識別子です。
-- {{cssxref("symbols", "symbols()")}}
+- {{cssxref("symbols()")}}
   - : 無名のリストスタイルを定義します。
 - {{cssxref("&lt;string&gt;")}}
   - : 特定の文字列を、リストのマーカーとして使用します。
@@ -247,7 +247,7 @@ list-style-type: unset;
 - `disclosure-closed`
   - : {{HTMLElement("details")}} などの展開ウィジェットを閉じていることを示す記号
 
-[リストスタイルのすべての種類](#リストスタイルのすべての種類)の例を参照して、上記で設定した値がどのように表示されるかを確認してください。 世界中のさまざまな文化圏で使用できる、利用できるカウンタースタイルの詳細は、 [Ready-made Counter Styles](https://www.w3.org/TR/predefined-counter-styles/) で探すことができます。
+[リストスタイルのすべての種類](#リストスタイルのすべての種類)の例を参照して、上記で設定した値がどのように表示されるかを確認してください。 世界中のさまざまな文化圏で使用できる、利用できるカウンタースタイルの詳細は、 [Ready-made Counter Styles](https://w3c.github.io/predefined-counter-styles/) で探すことができます。
 
 ### 標準外の拡張
 
@@ -278,11 +278,11 @@ Safari は、 `list-style-type` の値が `none` である場合、順序付き�
 
 ## 例
 
-### リスト項目マーカーの設定
+### リストアイテムマーカーの設定
 
 #### HTML
 
-```html live-sample___setting_list_item_markers
+```html
 リスト 1
 <ol class="normal">
   <li>Hello</li>
@@ -301,7 +301,7 @@ Safari は、 `list-style-type` の値が `none` である場合、順序付き�
 
 #### CSS
 
-```css live-sample___setting_list_item_markers
+```css
 ol.normal {
   list-style-type: upper-alpha;
 }
@@ -314,13 +314,13 @@ ol.shortcut {
 
 #### 結果
 
-{{EmbedLiveSample("Setting_list_item_markers","200","300")}}
+{{EmbedLiveSample("リストアイテムマーカーの設定","200","300")}}
 
 ### リストスタイルのすべての種類
 
 #### HTML
 
-```html live-sample___all_list_style_types
+```html
 <ol>
   <li>Apollo</li>
   <li>Hubble</li>
@@ -656,18 +656,18 @@ ol.shortcut {
       value="disclosure-closed" />disclosure-closed
   </label>
 
-  <label for="-moz-ethiopic-halehame">
+  <label for="moz-ethiopic-halehame">
     <input
       type="radio"
-      id="-moz-ethiopic-halehame"
+      id="moz-ethiopic-halehame"
       name="type"
       value="-moz-ethiopic-halehame" />-moz-ethiopic-halehame
   </label>
 
-  <label for="-moz-ethiopic-halehame-am">
+  <label for="moz-ethiopic-halehame-am">
     <input
       type="radio"
-      id="-moz-ethiopic-halehame-am"
+      id="moz-ethiopic-halehame-am"
       name="type"
       value="-moz-ethiopic-halehame-am" />-moz-ethiopic-halehame-am
   </label>
@@ -704,47 +704,47 @@ ol.shortcut {
     <input type="radio" id="urdu" name="type" value="urdu" />urdu
   </label>
 
-  <label for="-moz-ethiopic-halehame-ti-er">
+  <label for="moz-ethiopic-halehame-ti-er">
     <input
       type="radio"
-      id="-moz-ethiopic-halehame-ti-er"
+      id="moz-ethiopic-halehame-ti-er"
       name="type"
       value="-moz-ethiopic-halehame-ti-er" />-moz-ethiopic-halehame-ti-er
   </label>
 
-  <label for="-moz-ethiopic-halehame-ti-et">
+  <label for="moz-ethiopic-halehame-ti-et">
     <input
       type="radio"
-      id="-moz-ethiopic-halehame-ti-et"
+      id="moz-ethiopic-halehame-ti-et"
       name="type"
       value="-moz-ethiopic-halehame-ti-et" />-moz-ethiopic-halehame-ti-et
   </label>
 
-  <label for="-moz-hangul">
+  <label for="moz-hangul">
     <input
       type="radio"
-      id="-moz-hangul"
+      id="moz-hangul"
       name="type"
       value="-moz-hangul" />-moz-hangul
   </label>
 
-  <label for="-moz-hangul-consonant">
+  <label for="moz-hangul-consonant">
     <input
       type="radio"
-      id="-moz-hangul-consonant"
+      id="moz-hangul-consonant"
       name="type"
       value="-moz-hangul-consonant" />-moz-hangul-consonant
   </label>
 
-  <label for="-moz-urdu">
-    <input type="radio" id="-moz-urdu" name="type" value="-moz-urdu" />-moz-urdu
+  <label for="moz-urdu">
+    <input type="radio" id="moz-urdu" name="type" value="-moz-urdu" />-moz-urdu
   </label>
 </div>
 ```
 
 #### CSS
 
-```css live-sample___all_list_style_types
+```css
 ol {
   font-size: 1.2rem;
 }
@@ -764,7 +764,7 @@ input {
 
 #### JavaScript
 
-```js live-sample___all_list_style_types
+```js
 const container = document.querySelector(".container");
 const list = document.querySelector("ol");
 
@@ -775,7 +775,7 @@ container.addEventListener("change", (event) => {
 
 #### 結果
 
-{{EmbedLiveSample("All_list_style_types", "600", "800")}}
+{{EmbedLiveSample("リストスタイルのすべての種類", "600", "800")}}
 
 このページや仕様書で定義されたリストスタイル型に限定されません。 {{cssxref("@counter-style")}} アットルールにより、[任意の文字を使用したカウンター](https://r12a.github.io/app-counters/)を作成することができます。
 

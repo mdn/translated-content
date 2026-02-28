@@ -27,22 +27,20 @@
   "engines": {
     "node": ">=24"
   },
-  "dependencies": {
+  "devDependencies": {
     "autocorrect-node": "2.14.0",
     "fdir": "^6.5.0",
     "franc-min": "^6.2.0",
     "front-matter": "^4.0.2",
     "html-to-text": "^9.0.5",
-    "markdown-it": "^14.1.0",
-    "markdownlint-cli2": "0.20.0",
-    "markdownlint-rule-search-replace": "1.2.0",
-    "mdast-util-from-markdown": "^2.0.2",
-    "ora": "^9.0.0",
-    "prettier": "3.7.4",
-    "unist-util-visit": "^5.0.0",
+    "lefthook": "^2.1.1",
+    "markdown-it": "^14.1.1",
+    "markdownlint-cli2": "^0.21.0",
+    "markdownlint-rule-search-replace": "^1.2.0",
+    "mdast-util-from-markdown": "^2.0.3",
+    "ora": "^9.3.0",
+    "prettier": "^3.8.1",
+    "unist-util-visit": "^5.1.0",
     "yargs": "^18.0.0"
-  },
-  "devDependencies": {
-    "lefthook": "^2.0.12"
   }
 }

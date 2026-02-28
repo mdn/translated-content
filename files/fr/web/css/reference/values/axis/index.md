@@ -11,10 +11,10 @@ Les mots-clés du type `<axis>` sont utilisés dans les fonctions et propriété
 
 - {{CSSxRef("scroll-timeline-axis")}}
 - {{CSSxRef("scroll-timeline")}} (raccourci)
-- [`scroll()`](/fr/docs/Web/CSS/Reference/Properties/animation-timeline/scroll)
+- {{CSSxRef("animation-timeline/scroll", "scroll()")}}
 - {{CSSxRef("view-timeline-axis")}}
 - {{CSSxRef("view-timeline")}} (raccourci)
-- [`view()`](/fr/docs/Web/CSS/Reference/Properties/animation-timeline/view)
+- {{CSSxRef("animation-timeline/view", "view()")}}
 
 ## Syntaxe
 
@@ -43,6 +43,6 @@ Valeurs valides pour `<axis>`&nbsp;:
 
 ## Voir aussi
 
-- {{CSSxRef("animation-timeline")}}
+- La propriété {{CSSxRef("animation-timeline")}}
 - Le guide [des timelines d'animation dirigées par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
 - Le module [des animations CSS dirigées par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations)

@@ -1,14 +1,13 @@
 ---
 title: initial
 slug: Web/CSS/Reference/Values/initial
-original_slug: Web/CSS/initial
 l10n:
-  sourceCommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`initial`** は CSS のキーワードで、要素にプロパティの[初期値（または既定値）](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値)を設定します。どの CSS プロパティにも適用できます。これは、 CSS の一括指定プロパティ {{cssxref("all")}} を 含め、すべての CSS プロパティに適用することができます。 `all` を `initial` に設定すると、すべての CSS プロパティをそれぞれの初期値に戻すことができます。
 
-[継承プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Inheritance#inherited_properties)では、初期値は予期せぬ値になるかもしれません。代わりに {{cssxref("inherit")}}, {{cssxref("unset")}}, {{cssxref("revert")}}, {{cssxref("revert-layer")}} キーワードを使用することを検討してください。
+[継承プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Inheritance#継承プロパティ)では、初期値は予期せぬ値になるかもしれません。代わりに {{cssxref("inherit")}}, {{cssxref("unset")}}, {{cssxref("revert")}}, {{cssxref("revert-layer")}} キーワードを使用することを検討してください。
 
 ## 例
 

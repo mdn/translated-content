@@ -1,15 +1,14 @@
 ---
 title: TypedArray.prototype.reduceRight()
+short-title: reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight
 l10n:
-  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`reduceRight()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、アキュームレーターと型付き配列のそれぞれの値に対して（右から左へ）関数を適用していき、単一の値にまとめます。このメソッドは、{{jsxref("Array.prototype.reduceRight()")}}と同じアルゴリズムです。
 
-{{InteractiveExample("JavaScript デモ: TypedArray.reduceRight()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.reduceRight()")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([10, 20, 30]);
@@ -19,7 +18,7 @@ const result = uint8.reduceRight(
 );
 
 console.log(result);
-// Expected output: "30, 20, 10"
+// 予想される結果: "30, 20, 10"
 ```
 
 ## 構文

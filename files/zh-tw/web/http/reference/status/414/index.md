@@ -2,7 +2,7 @@
 title: 414 URI Too Long
 slug: Web/HTTP/Reference/Status/414
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 HTTP **`414 URI Too Long`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示用戶端請求的 URI 長度超過伺服器願意解析的範圍。
