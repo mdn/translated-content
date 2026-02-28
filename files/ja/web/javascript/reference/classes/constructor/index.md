@@ -155,7 +155,7 @@ new (class C extends class B {
 })();
 ```
 
-`constructor` メソッドは返値を持つことができます。基底クラスはコンストラクターから何らかの値を返すことができますが、派生クラスはオブジェクトまたは `undefined` を返すか、 {{jsxref("TypeError")}} を発生させなければなりません。
+`constructor` メソッドは返値を持つことができます。基底クラスではコンストラクターからどんな値を返しても構いませんが、派生クラスではオブジェクトまたは `undefined` を返さなければならず、さもなければ {{jsxref("TypeError")}} が発生します。
 
 ```js
 class ParentClass {
@@ -173,7 +173,7 @@ class ChildClass extends ParentClass {
   }
 }
 
-console.log(new ChildClass()); // TypeError: Derived constructors may only return object or undefined
+console.log(new ChildClass()); // TypeError: 派生クラスのコンストラクタが返してよいのはオブジェクトかundefinedのみ
 ```
 
 親クラスのコンストラクターがオブジェクトを返した場合、そのオブジェクトは派生クラスの[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)を定義する際の値として使用します。このトリックは[「返値の上書き」](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements#オーバーライドしたオブジェクトの返却)と呼ばれ、派生クラスのフィールド（[プライベート](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)なものも含む）を無関係なオブジェクトに定義することができます。
