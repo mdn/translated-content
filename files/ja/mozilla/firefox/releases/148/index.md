@@ -21,7 +21,7 @@ Firefox 148 は、米国時間 [2026 年 2 月 24 日](https://whattrainisitnow.
 
 - [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning) の {{cssxref("position-try-order")}} をサポートして、利用可能な領域に基づいて試行する位置指定フォールバックオプションの順序を変更できるようになりました。これは {{cssxref("position-try")}} ショートハンドプロパティにも影響を与えます ([Firefox bug 1989059](https://bugzil.la/1989059))。
 
-- {{cssxref("overflow")}}、{{cssxref("overflow-x")}}、{{cssxref("overflow-y")}} CSS プロパティが画像などの {{glossary("置換要素")}} で、ほかの要素と同じ方法で使用可能になりました。
+- {{cssxref("overflow")}}、{{cssxref("overflow-x")}}、{{cssxref("overflow-y")}} CSS プロパティが画像などの {{glossary("replaced elements", "置換要素")}} で、ほかの要素と同じ方法で使用可能になりました。
   以前は、置換要素は常にバウンディングコンテナーでクリッピングされていました ([Firefox bug 1999100](https://bugzil.la/1999100))。
 
 - {{cssxref("basic-shape/shape")}} CSS 関数がデフォルトで使用可能になりました。`shape()` は、1 つ以上の "シェイプコマンド" を使用して {{cssxref("clip-path")}} および {{cssxref("offset-path")}} プロパティでシェイプを定義できる {{cssxref("basic-shape")}} データ型です。これらのコマンドは the [SVG パスコマンド](/ja/docs/Web/SVG/Reference/Attribute/d#パスコマンド) によく似ています。`shape()` 関数はいくつかの点で {{cssxref("basic-shape/path","path()")}} 関数に似ていますが、`path()` が [SVG パス](/ja/docs/Web/SVG/Reference/Element/path) 構文を使用するのとは異なり、`shape()` は標準 CSS 構文を使用します。これにより CSS の単位や数学関数を使用することができ、シェイプの作成や編集が容易になります ([Firefox bug 1982941](https://bugzil.la/1982941))。
