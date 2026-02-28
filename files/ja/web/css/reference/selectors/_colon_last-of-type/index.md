@@ -1,12 +1,11 @@
 ---
 title: :last-of-type
 slug: Web/CSS/Reference/Selectors/:last-of-type
-original_slug: Web/CSS/:last-of-type
 l10n:
-  sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
-**`:last-of-type`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、兄弟要素のグループの中でその種類の最後の要素を表します。
+**`:last-of-type`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、兄弟要素のグループの中でその型（タグ名）の最後の要素を表します。
 
 {{InteractiveExample("CSS デモ: :last-of-type", "tabbed-shorter")}}
 
@@ -26,15 +25,15 @@ dd:last-of-type {
 
 ```html interactive-example
 <dl>
-  <dt>Vegetables:</dt>
-  <dd>1. Tomatoes</dd>
-  <dd>2. Cucumbers</dd>
-  <dd>3. Mushrooms</dd>
-  <dt>Fruits:</dt>
-  <dd>4. Apples</dd>
-  <dd>5. Mangos</dd>
-  <dd>6. Pears</dd>
-  <dd>7. Oranges</dd>
+  <dt>野菜:</dt>
+  <dd>1. トマト</dd>
+  <dd>2. キュウリ</dd>
+  <dd>3. キノコ</dd>
+  <dt>果物:</dt>
+  <dd>4. リンゴ</dd>
+  <dd>5. マンゴー</dd>
+  <dd>6. ナシ</dd>
+  <dd>7. オレンジ</dd>
 </dl>
 ```
 
