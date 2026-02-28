@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-[WebRTC API](/zh-CN/docs/Web/API/WebRTC_API) 接口的 {{domxref("RTCTrackEvent")}} 的 **`streams`** 只读属性返回一个 {{domxref("MediaStream")}} 对象的数组，其中每个对象都是构成新轨道的一个流。
+[WebRTC API](/zh-CN/docs/Web/API/WebRTC_API) {{domxref("RTCTrackEvent")}} 接口的 **`streams`** 只读属性返回 {{domxref("MediaStream")}} 对象的数组，其中的每个元素都是构成添加到 {{domxref("RTCPeerConnection")}} 上的轨道的流对象。
 
 ## 值
 
