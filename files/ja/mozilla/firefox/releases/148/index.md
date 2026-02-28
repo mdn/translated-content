@@ -57,7 +57,7 @@ Firefox 148 は、米国時間 [2026 年 2 月 24 日](https://whattrainisitnow.
 #### DOM
 
 - (ウェブ拡張機能に加えて) ウェブコンテンツで {{domxref("Document.execCommand()")}} の "paste" コマンドが使用可能になりました。
-  これは [Clipboard API](/ja/docs/Web/API/Clipboard_API) を使用して実装しており、たとえばクロスオリジンのコンテンツを貼り付けるときに一時的な許可やユーザーの承認が必要といった、[セキュリティの考慮]( /ja/docs/Web/API/Clipboard_API#セキュリティの考慮) も同じく共有します ([Firefox bug 1998195](https://bugzil.la/1998195))。
+  これは [Clipboard API](/ja/docs/Web/API/Clipboard_API) を使用して実装しており、たとえばクロスオリジンのコンテンツを貼り付けるときに一時的な許可やユーザーの承認が必要といった、[セキュリティの考慮](/ja/docs/Web/API/Clipboard_API#セキュリティの考慮) も同じく共有します ([Firefox bug 1998195](https://bugzil.la/1998195))。
 
 ### WebDriver への適合 (WebDriver BiDi, Marionette)
 
