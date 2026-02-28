@@ -2,10 +2,10 @@
 title: ファイル API
 slug: Web/API/File_API
 l10n:
-  sourceCommit: a122e87245c624ba56197641b4d7b21b643a6021
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{DefaultAPISidebar("File API")}}
+{{DefaultAPISidebar("File API")}}{{AvailableInWorkers}}
 
 ## 概念と使い方
 
@@ -16,6 +16,16 @@ l10n:
 このようにして利用可能になった一連のファイルは {{domxref("FileList")}} オブジェクトとして表され、ウェブアプリケーションが個々の {{domxref("File")}} オブジェクトを取得することができるようになっています。そして、 {{domxref("File")}} オブジェクトから、ファイル名、サイズ、型、最終更新日時などのメタデータにアクセスすることができます。
 
 {{domxref("File")}} オブジェクトを {{domxref("FileReader")}} オブジェクトに渡すことで、ファイルの内容にアクセスすることができます。 {{domxref("FileReader")}} インターフェイスは非同期ですが、[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)でのみ利用できる同期バージョンが {{domxref("FileReaderSync")}} インターフェイスで提供されています。
+
+## 他のファイル関連 API との関係
+
+ファイルを扱う主要な API は他にも 2 つあります。[ファイルとディレクトリー項目API](/ja/docs/Web/API/File_and_Directory_Entries_API) と[ファイルシステム API](/ja/docs/Web/API/File_System_API) です。
+
+ファイル API は最も基本的な API です。ユーザーがフォーム要素の入力やドラッグ＆ドロップ操作という形で明示的に指定したファイルデータの読み取りと処理に対応しています。また、Blob を介してバイナリーデータを処理することもできます。
+
+ファイルとディレクトリー項目 API は、ファイル API と同様に、ユーザーがフォーム入力やドラッグ＆ドロップ操作で提供するファイルを扱います。ただし、入力要素では単一のファイルではなく、ディレクトリーまたは複数のファイルの選択が可能になりました。この API は、ディレクトリーやファイルを処理する手段を提供します。これは主に Chrome 独自の発明です。他インターフェイスへの拡張はすべて `webkit` で始まる接頭辞が付与されていることがわかります。[ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API#歴史) には、その実装と標準化に関するより完全な経緯が記載されています。当初は完全な仮想ファイルシステムに対応するためのものでしたが、現在はユーザーが提供するデータに対する読み取り操作のみに対応しています。
+
+ファイルシステム API は、ウェブアプリケーション向けに仮想ファイルシステムを提供します。これにより、アプリケーションは文書のオリジンに固有の仮想システム（[オリジンプライベートファイルシステム (OPFS)](/ja/docs/Web/API/File_System_API/Origin_private_file_system) と呼ばれる）にデータを永続的に格納することが可能です。ファイルシステムアクセス API は、ファイルシステムAPIをさらに拡張し、ユーザーの同意を得た上でウェブサイトがユーザーファイルの読み書きをすることができるようにします。ファイル API やファイルとディレクトリー項目 API とは異なり、ファイルシステム API は純粋な JavaScript で実装され、フォーム入力の処理は行いません。
 
 ## インターフェイス
 
@@ -32,10 +42,10 @@ l10n:
 
 ### 他のインターフェイスの拡張
 
-- {{domxref("URL.createObjectURL()")}}
+- {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}
   - : {{domxref("File")}} または {{domxref("Blob")}} オブジェクトを取得するために使用できる URL を作成します。
-- {{domxref("URL.revokeObjectURL()")}}
-  - : {{domxref("URL.createObjectURL()")}} を呼び出して作成された既存のオブジェクト URL を解放します。
+- {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}}
+  - : {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} を呼び出して作成された既存のオブジェクト URL を解放します。
 
 ## 例
 
@@ -66,14 +76,11 @@ l10n:
 const fileInput = document.querySelector("input[type=file]");
 const output = document.querySelector(".output");
 
-fileInput.addEventListener("change", () => {
+fileInput.addEventListener("change", async () => {
   const [file] = fileInput.files;
+
   if (file) {
-    const reader = new FileReader();
-    reader.addEventListener("load", () => {
-      output.innerText = reader.result;
-    });
-    reader.readAsText(file);
+    output.innerText = await file.text();
   }
 });
 ```
@@ -89,4 +96,5 @@ fileInput.addEventListener("change", () => {
 ## 関連情報
 
 - [`<input type="file">`](/ja/docs/Web/HTML/Reference/Elements/input/file): file 型の入力要素
+- {{domxref("Blob.text()")}}
 - {{domxref("DataTransfer")}} インターフェイス
