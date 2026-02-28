@@ -7,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Sensor API")}}
 
-[Sensor API](/zh-CN/docs/Web/API/Sensor_APIs) 接口的 **`SensorErrorEvent`** 提供了有关 {{domxref('Sensor')}} 或其派生接口抛出的错误的信息。
+[Sensor API](/zh-CN/docs/Web/API/Sensor_APIs) 的 **`SensorErrorEvent`** 接口提供了有关 {{domxref('Sensor')}} 或其派生接口抛出的错误的信息。
 
 {{InheritanceDiagram}}
 
